@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 62f2db9adf72a0029cbf693bd0388cf3483595e47f5b7f71036c759a8e37182e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cf8dea7fb30d51140b6445642865d71af08d78de
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390105"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111196"
 ---
 # <a name="idebugengine2setexception"></a>IDebugEngine2::SetException
 Hata ayıklama altyapısının (DE) belirli bir özel durumu nasıl işlemesi gerektiğini belirtir.

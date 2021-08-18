@@ -8,14 +8,15 @@ ms.assetid: 9dbb34d9-02ea-4201-b445-c98a0eb0d6db
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e12118f2f7f5d9189ca768f7be65a35b490eb54
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3e68945d5cd58384a5ccba64bff458be51ba748d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875022"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135045"
 ---
 # <a name="xml-document-properties-properties-window"></a>XML belgesi özellikleri, Özellikler penceresi
 

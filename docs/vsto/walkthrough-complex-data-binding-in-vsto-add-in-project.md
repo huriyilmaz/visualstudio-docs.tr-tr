@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: VSTO eklenti projesinde karmaşık veri bağlama'
+title: 'izlenecek yol: VSTO eklentisi projesinde karmaşık veri bağlama'
 description: Microsoft Excel çalışma sayfasına nasıl denetim ekleneceğini ve çalışma zamanında denetimleri verilere nasıl bağlayacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
@@ -15,17 +15,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 49f87968c545e9fcca7548cd2fbda866d18b660b
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 8f9a554d485abf329a5f3a2933f306035cefa27c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826362"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032023"
 ---
-# <a name="walkthrough-complex-data-binding-in-vsto-add-in-project"></a>İzlenecek yol: VSTO eklenti projesinde karmaşık veri bağlama
-  VSTO eklenti projelerinde verileri konak denetimlerine ve Windows Forms denetimlerine bağlayabilirsiniz. Bu izlenecek yol, Microsoft Office Excel çalışma sayfasına nasıl denetim ekleneceğini ve çalışma zamanında denetimleri verilere nasıl bağlayacağınızı gösterir.
+# <a name="walkthrough-complex-data-binding-in-vsto-add-in-project"></a>izlenecek yol: VSTO eklentisi projesinde karmaşık veri bağlama
+  VSTO eklenti projelerinde konak denetimlerine ve Windows Forms denetimlerine veri bağlayabilirsiniz. bu izlenecek yol, bir Microsoft Office Excel çalışma sayfasına nasıl denetim ekleneceğini ve çalışma zamanında denetimleri verilere nasıl bağlayacağınızı gösterir.
 
  [!INCLUDE[appliesto_xlallapp](../vsto/includes/appliesto-xlallapp-md.md)]
 
@@ -44,29 +45,29 @@ ms.locfileid: "107826362"
 
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
-- Örnek veritabanının eklendiği SQL Server 2005 veya SQL Server 2005 Express 'in çalışan bir örneğine erişim `AdventureWorksLT` . `AdventureWorksLT`Veritabanını [SQL Server örnekleri GitHub deposundan](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)indirebilirsiniz. Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+- örnek veritabanının eklendiği SQL Server 2005 veya SQL Server 2005 Express 'in çalışan bir örneğine erişim `AdventureWorksLT` . `AdventureWorksLT`veritabanını [SQL Server örneklerinden GitHub depoyu](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)indirebilirsiniz. Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
   - SQL Server Management Studio veya SQL Server Management Studio Express kullanarak bir veritabanı eklemek için bkz. [nasıl yapılır: veritabanı iliştirme (SQL Server Management Studio)](/sql/relational-databases/databases/attach-a-database).
 
   - Komut satırını kullanarak bir veritabanı eklemek için, bkz. [nasıl yapılır: SQL Server Express veritabanı dosyası iliştirme](/previous-versions/sql/).
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
- İlk adım bir Excel VSTO eklenti projesi oluşturmaktır.
+ ilk adım, bir Excel VSTO eklenti projesi oluşturmaktır.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C# kullanarak **bir veritabanından çalışma sayfası doldurma** adlı BIR Excel VSTO eklentisi projesi oluşturun.
+1. Visual Basic ya da C# kullanarak **bir veritabanından çalışma sayfası doldurma** adlı bir Excel VSTO eklenti projesi oluşturun.
 
-     Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+     daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio, `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve **çalışma sayfalarını bir veritabanı** projesinden **Çözüm Gezgini** doldurma ekler.
+     Visual Studio, `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve **çalışma sayfalarını bir veritabanı** projesinden **Çözüm Gezgini** içine ekler.
 
 ## <a name="create-a-data-source"></a>Veri kaynağı oluşturma
  Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları** penceresini kullanın.
 
 ### <a name="to-add-a-typed-dataset-to-the-project"></a>Projeye türü belirtilmiş bir veri kümesi eklemek için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
+1. **veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
 2. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
@@ -93,7 +94,7 @@ ms.locfileid: "107826362"
 ## <a name="create-controls-and-bind-controls-to-data"></a>Denetim oluşturma ve verilere denetim bağlama
  Bu izlenecek yol için <xref:Microsoft.Office.Tools.Excel.ListObject> Denetim, Kullanıcı çalışma kitabını açtığında seçtiğiniz tablodaki tüm verileri görüntüler. Liste nesnesi, <xref:System.Windows.Forms.BindingSource> denetimi veritabanına bağlamak için bir kullanır.
 
- Verilere yönelik bağlama denetimleri hakkında daha fazla bilgi için bkz. [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md).
+ verilere yönelik bağlama denetimleri hakkında daha fazla bilgi için bkz. [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md).
 
 ### <a name="to-add-the-list-object-dataset-and-table-adapter"></a>Liste nesnesini, veri kümesini ve tablo bağdaştırıcısını eklemek için
 
@@ -107,7 +108,7 @@ ms.locfileid: "107826362"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelAddInDatabase_O12/ThisAddIn.cs" id="Snippet2":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelAddInDatabase_O12/ThisAddIn.vb" id="Snippet2":::
 
-3. `ThisAddIn_Startup` yöntemine aşağıdaki kodu ekleyin. Bu, çalışma sayfasını genişleten bir konak öğesi oluşturur. Daha fazla bilgi için bkz. [çalışma ZAMANıNDA VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
+3. `ThisAddIn_Startup` yöntemine aşağıdaki kodu ekleyin. Bu, çalışma sayfasını genişleten bir konak öğesi oluşturur. daha fazla bilgi için bkz. [çalışma zamanında VSTO eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelAddInDatabase_O12/ThisAddIn.cs" id="Snippet3":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelAddInDatabase_O12/ThisAddIn.vb" id="Snippet3":::
@@ -123,7 +124,7 @@ ms.locfileid: "107826362"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelAddInDatabase_O12/ThisAddIn.vb" id="Snippet5":::
 
 ## <a name="test-the-add-in"></a>Eklentiyi test etme
- Excel 'i açtığınızda <xref:Microsoft.Office.Tools.Excel.ListObject> Denetim, veri `Address` kümesinin tablosundaki verileri görüntüler `AdventureWorksLTDataSet` .
+ Excel açtığınızda <xref:Microsoft.Office.Tools.Excel.ListObject> denetim, veri `Address` kümesinin tablosundaki verileri görüntüler `AdventureWorksLTDataSet` .
 
 ### <a name="to-test-the-vsto-add-in"></a>VSTO eklentisini test etmek için
 
@@ -133,8 +134,8 @@ ms.locfileid: "107826362"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümlerindeki veriler](../vsto/data-in-office-solutions.md)
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde veri](../vsto/data-in-office-solutions.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Nasıl yapılır: çalışma sayfalarını bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
 - [Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-a-database.md)
 - [Nasıl yapılır: belgeleri hizmetlerdeki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-services.md)

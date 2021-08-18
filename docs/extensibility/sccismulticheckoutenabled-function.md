@@ -1,5 +1,5 @@
 ---
-description: Bu işlev, kaynak denetimi eklentisinin bir dosyada birden çok iadeye izin verip sağlamay olmadığını denetler.
+description: Bu işlev, kaynak denetimi eklentisinin bir dosya üzerinde birden çok iadeye izin verip sağlamay olmadığını denetler.
 title: SccIsMultiCheckoutEnabled İşlev | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 90efd3f727611492b0afe2269b5464ae303d840efe2472e987a5450022117040
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fc46414d5f48dac38c9f457f5f70ccb90698507e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121237767"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110156"
 ---
 # <a name="sccismulticheckoutenabled-function"></a>SccIsMultiCheckoutEnabled İşlevi
-Bu işlev, kaynak denetimi eklentisinin bir dosyada birden çok iadeye izin verip sağlamay olmadığını denetler.
+Bu işlev, kaynak denetimi eklentisinin bir dosya üzerinde birden çok iadeye izin verip sağlamay olmadığını denetler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,7 +43,7 @@ SCCRTN SccIsMultiCheckoutEnabled(
 [out] Bu proje için birden çok iadenin etkinleştirilip etkinleştirilmemiş olduğunu belirtir (sıfır olmayan, birden çok iadenin destekte olduğu anlamına gelir).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini geri dönmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini dönmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|

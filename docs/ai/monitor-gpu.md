@@ -5,17 +5,18 @@ ms.custom: SEO-VS-2020
 author: jillre
 ms.author: jillfra
 manager: jmartens
+ms.technology: vs-ai-tools
 monikerRange: vs-2017
 ms.date: 11/13/2017
 ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: f033b968b0e32454a22c59db09146c761ed758a6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d13c912608732ce231ac5a04253c2f4ad2559154
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841412"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122037648"
 ---
 # <a name="monitoring-gpu-utilization"></a>GPU kullanımını izleme
 

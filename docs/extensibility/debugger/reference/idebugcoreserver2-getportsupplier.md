@@ -1,5 +1,5 @@
 ---
-description: Belirli bir bağlantı noktası sağlayıcıyı alma.
+description: Belirli bir bağlantı noktası sağlayıcıyı alın.
 title: IDebugCoreServer2::GetPortSupplier | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: be2595e726b0508f481eabcf3e9cd35e7f3326b15ff2f04d2575ec22445bc827
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f6e949471e5cdac18f92634c0ee8a61ad7c9065e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377799"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079603"
 ---
 # <a name="idebugcoreserver2getportsupplier"></a>IDebugCoreServer2::GetPortSupplier
-Belirli bir bağlantı noktası sağlayıcıyı alma.
+Belirli bir bağlantı noktası sağlayıcıyı alın.
 
 ## <a name="syntax"></a>Sözdizimi
 

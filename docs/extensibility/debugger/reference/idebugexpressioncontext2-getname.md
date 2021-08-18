@@ -11,17 +11,18 @@ ms.assetid: c2b70d22-17af-4986-a7e3-930910367216
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c3aa27ba70e0b407e72a42d2904467ee85fc027b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d53463bdda25a7338aa2aa61db80d022ade4b74e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092325"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078979"
 ---
 # <a name="idebugexpressioncontext2getname"></a>IDebugExpressionContext2::GetName
 Değerlendirme bağlamının adını alır.

@@ -10,15 +10,16 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9070e515fd59f7b29427f20322ef6cb1a01afaee
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f185cf57e118c923d8fbdfda6caa30a23059b9d2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99901328"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136449"
 ---
 # <a name="add-tier-interaction-data-from-the-command-line"></a>Komut satırından katman etkileşim verileri ekleme
 
@@ -26,7 +27,7 @@ Katman etkileşimi profili oluşturma, [!INCLUDE[vstecado](../data-tools/include
 
 **Windows 8 ve Windows Server 2012**
 
-Windows 8 masaüstü uygulamaları ve Windows Server 2012 uygulamalarında katman etkileşim verilerini toplamak için, izleme yöntemini kullanmanız gerekir. UWP uygulamalarında katman etkileşimi verilerinin toplanması desteklenmez.
+Windows 8 masaüstü uygulamaları ve Windows Server 2012 uygulamalar üzerinde katman etkileşim verileri toplamak için, izleme yöntemini kullanmanız gerekir. UWP uygulamalarında katman etkileşimi verilerinin toplanması desteklenmez.
 
 **Visual Studio sürümleri**
 
@@ -34,7 +35,7 @@ Katman etkileşimi profili oluşturma, herhangi bir Visual Studio sürümü kull
 
 **Uzak makinede Ipucu verileri toplama**
 
-Uzak bir makinedeki katman etkileşimi verilerini toplamak için, **\_ vs_profiler** _\<Platform>_ **\_** _\<Language>_ **. exe** dosyasını bir Visual Studio makinesinin _% VSInstallDir%_**\Team Tools\Performance tools\kurulumları** klasöründen uzak bilgisayara kopyalamanız ve kurmanız gerekir. [Uzaktan hata ayıklama](../debugger/remote-debugging.md) indirme paketindeki profil oluşturma araçlarını kullanamazsınız.
+uzak bir makinedeki katman etkileşimi verilerini toplamak için, **\_** _\<Platform>_ **\_** _\<Language>_ bir Visual Studio makinenin _% vsınstalldir%_**\team tools\performance tools\kurulumları** klasöründen vs_profiler **.exe** dosyasını uzak bilgisayara kopyalamanız ve kurmanız gerekir. [Uzaktan hata ayıklama](../debugger/remote-debugging.md) indirme paketindeki profil oluşturma araçlarını kullanamazsınız.
 
 **Ipucu raporları**
 
@@ -46,11 +47,11 @@ VSPerfASPNETCmd komut satırı aracı, Profil Oluşturma Araçları bulunan tüm
 
 ## <a name="profile-stand-alone-applications"></a>Tek başına uygulamalar profili
 
-Bir SQLServer veritabanına zaman uyumlu çağrılar yapan bir Windows masaüstü uygulaması gibi başka bir işlem tarafından çalıştırılmayan bir uygulamaya katman etkileşim verileri eklemek için [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] , ortam değişkenlerini ayarlamak Için **VSPerfCLREnv/InteractionOn** seçeneğini ve bunları kaldırmak Için **VSPerfCLREnv/InteractionOff** seçeneğini kullanın.
+bir SQLServer veritabanına zaman uyumlu çağrılar yapan Windows masaüstü uygulaması gibi başka bir işlem tarafından çalıştırılmayan bir uygulamaya katman etkileşim verileri eklemek için [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] , ortam değişkenlerini ayarlamak için **vsperfclrenv/ınteractionon** seçeneğini ve bunları kaldırmak için **vsperfclrenv/ınteractionoff** seçeneğini kullanın.
 
-Aşağıdaki örnekte, bir Windows masaüstü uygulaması, izleme yöntemi kullanılarak profili oluşturulur ve katman etkileşim verileri toplanır.
+aşağıdaki örnekte, bir Windows masaüstü uygulaması, izleme yöntemi kullanılarak profili oluşturulur ve katman etkileşim verileri toplanır.
 
-### <a name="profile-a-windows-desktop-application-example"></a>Bir Windows masaüstü uygulaması örneği profili oluşturma
+### <a name="profile-a-windows-desktop-application-example"></a>Windows masaüstü uygulaması örneği profili oluşturma
 
 1. Yönetici ayrıcalıklarıyla bir komut istemi penceresi açın. **Başlat**' a tıklayın, **tüm programlar**' ın üzerine gelin ve **Donatılar**' ın üzerine gelin. **Komut istemi**' ne sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın.
 
@@ -89,9 +90,9 @@ Uygulamalar dahil olmak üzere Hizmetleri profili eklemek için, [!INCLUDE[vstec
 
 Web uygulamaları dahil olmak üzere profil oluştururken [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] genellikle, profil oluşturmayı etkinleştirmek için bilgisayarı yeniden başlatmanız gerekir.
 
-Aşağıdaki örnekte, bir Windows hizmeti, izleme yöntemi kullanılarak profili oluşturulur ve katman etkileşim verileri toplanır.
+aşağıdaki örnekte, bir Windows hizmeti, izleme yöntemi kullanılarak profili oluşturulur ve katman etkileşim verileri toplanır.
 
-### <a name="profile-a-windows-service-example"></a>Windows hizmeti örneği profili oluşturma
+### <a name="profile-a-windows-service-example"></a>Windows hizmet örneği profili oluşturma
 
 1. Gerekirse, hizmeti yükler.
 
@@ -143,7 +144,7 @@ Aşağıdaki örnekte, bir Windows hizmeti, izleme yöntemi kullanılarak profil
 
 Daha fazla bilgi için aşağıdaki konulardan birine bakın:
 
-[ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+[web uygulamalarının profilini ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 
 [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)
 

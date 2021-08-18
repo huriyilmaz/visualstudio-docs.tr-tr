@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ed9e2e393a1cf1a35290529244ce9e1b8c96dd10410f18f41e7285fddd16c358
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 43fdf66ffd0c01bccf994597302528ac74c57cdc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239301"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120185"
 ---
 # <a name="code_path"></a>CODE_PATH
 Bir yöntem veya işlev çağrısını açıklar.

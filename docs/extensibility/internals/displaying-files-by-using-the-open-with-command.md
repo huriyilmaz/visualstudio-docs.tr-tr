@@ -1,6 +1,6 @@
 ---
 title: Birlikte Aç komutunu kullanarak dosyaları görüntüleme | Microsoft Docs
-description: Bir projenin, dosyaları göstermek için Visual Studio tümleşik geliştirme ortamında (IDE) birlikte Aç komutunu nasıl çağırabileceğinizi öğrenin.
+description: bir projenin, dosyaları göstermek için Visual Studio tümleşik geliştirme ortamında (ıde) birlikte aç komutunu nasıl çağırabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,14 +12,15 @@ ms.assetid: 53794bc3-1b73-4d40-954e-cfade1abddcf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e45e2c601873641b5ac79c54fd6709eb3f45f95d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1930f643ee609ad101c13a7103a2c7253e7588b2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069822"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110559"
 ---
 # <a name="display-files-by-using-the-open-with-command"></a>Birlikte Aç komutunu kullanarak dosyaları görüntüleme
 Bir proje IDE 'nin **birlikte Aç** iletişim kutusunu görüntülemesini isteyebilir. Bu istek, kullanıcıdan standart düzenleyiciler seçimine sahip bir dosyayı açmasını ister. Aşağıdaki adımlarda bu işlem açıklanır:
@@ -29,7 +30,7 @@ Bir proje IDE 'nin **birlikte Aç** iletişim kutusunu görüntülemesini isteye
 2. Belgenin dosya adı uzantısına bağlı olarak IDE, kayıt defterinde listelenen düzenleyicilerin belirtilen belgeyi açabildiğini belirler ve bu bilgileri **birlikte Aç** iletişim kutusunda görüntüler.
 
     > [!NOTE]
-    > **Birlikte Aç** iletişim kutusuna dahil olması gereken bir iç düzenleyiciye sahip olan projeler, her bir düzenleyici için bir düzenleyici fabrikası kaydetmelidir. İç düzenleyiciler yalnızca belirli bir proje türüyle birlikte çalışır ve bu yöntem, yöntemi uygulamasında zorlanır <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> . IDE, çekirdek metin Düzenleyicisi ve ikili düzenleyici için yerleşik bir düzenleyici fabrikası içerir. IDE, kayıtlı her Windows dosya ilişkilendirmesi adına bir düzenleyici fabrikası örneği de oluşturur. Bu tür bir dosyaya örnek olarak Microsoft Word vardır.
+    > **Birlikte Aç** iletişim kutusuna dahil olması gereken bir iç düzenleyiciye sahip olan projeler, her bir düzenleyici için bir düzenleyici fabrikası kaydetmelidir. İç düzenleyiciler yalnızca belirli bir proje türüyle birlikte çalışır ve bu yöntem, yöntemi uygulamasında zorlanır <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> . IDE, çekirdek metin Düzenleyicisi ve ikili düzenleyici için yerleşik bir düzenleyici fabrikası içerir. ıde, her kayıtlı Windows dosya ilişkilendirmesi adına bir düzenleyici fabrikası örneği de oluşturur. Bu tür bir dosyaya örnek Microsoft Word.
 
 3. Kullanıcı **birlikte Aç** iletişim kutusundan bir öğe SEÇTIĞINDE, IDE yöntemi çağırarak belgeyi açar <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> . Daha fazla bilgi için bkz. [nasıl yapılır: standart düzenleyiciler açma](../../extensibility/how-to-open-standard-editors.md).
 

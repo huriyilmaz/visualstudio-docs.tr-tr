@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: dda0aafa554220d5b506479dac843e2b538ace1fb6fb3ae912430ff49339e2d5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c10b8818481e85cb83c7e293d90be793dd41880e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427931"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137164"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath görevi
 

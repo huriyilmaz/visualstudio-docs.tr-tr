@@ -1,6 +1,6 @@
 ---
 title: Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma
-description: Büyük kod tabanlarında, yabancı kodlarda veya eski kodlarda kayıplardan kaçınmanıza yardımcı olmak için kod haritalarını kullanmayı öğrenin.
+description: Büyük kod tabanlarında, yabancı kodlarda veya eski kodlarda kaybetmeyi önlemeye yardımcı olmak için kod haritalarını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 09/28/2018
 ms.topic: conceptual
@@ -19,16 +19,16 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 8888191a2b482aba2ff1fed2233e7156a0bf52564f1cac3339d8293d10fb36e2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b8376b7f5fa54f7c51ae9f55841778c8cbcdbdf4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121399257"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034090"
 ---
 # <a name="use-code-maps-to-debug-your-applications"></a>Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma
 
-[Kod eşlemeleri Visual Studio](../modeling/map-dependencies-across-your-solutions.md) büyük kod tabanlarında, yabancı kodlarda veya eski kodlarda kaybetmeyi önlemeye yardımcı olabilir. Örneğin, hata ayıklama sırasında birçok dosya ve proje arasında koda bakman gerekir. Kod parçaları arasında gezinmek ve aralarındaki ilişkileri anlamak için kod haritalarını kullanın. Bu şekilde, bu kodu kafanızda takip etmek veya ayrı bir diyagram çizmek zorunda değildir. Bu nedenle, çalışmanız kesintiye uğrarsa kod eşlemeleri üzerinde çalıştığınız kodla ilgili belleğinizin yenilenmesine yardımcı olur.
+[Kod eşlemeleri Visual Studio](../modeling/map-dependencies-across-your-solutions.md) büyük kod tabanlarında, yabancı kodlarda veya eski kodlarda kaybedilmekten kaçınmanıza yardımcı olabilir. Örneğin, hata ayıklama sırasında birçok dosya ve proje arasında koda bakman gerekir. Kod parçaları arasında gezinmek ve aralarındaki ilişkileri anlamak için kod haritalarını kullanın. Bu şekilde, bu kodu kafanızda takip etmek veya ayrı bir diyagram çizmek zorunda değildir. Bu nedenle, çalışmanız kesintiye uğrarsa kod eşlemeleri üzerinde çalıştığınız kodla ilgili belleğinizin yenilenmesine yardımcı olur.
 
 ![Kodda &#45; eşleme ilişkileri](../modeling/media/codemapstoryboardpaint.png)
 
@@ -39,23 +39,23 @@ Kod eşlemeleriyle çalışırken kullanabileceğiniz komutların ve eylemlerin 
 Hata Ayıklayıcı [aracıyla Visual Studio hata ayıklama hakkında daha fazla bilgi edinebilirsiniz.](../debugger/debugger-feature-tour.md)
 
 > [!NOTE]
-> Kod eşlemeleri oluşturmak ve düzenlemek için Visual Studio Enterprise gerekir. Visual Studio Community ve Professional sürümlerinde, Enterprise yayında oluşturulan diyagramları açabilirsiniz, ancak bunları düzenleyemezsiniz.
+> Kod eşlemeleri oluşturmak ve düzenlemek için Visual Studio Enterprise gerekir. Bu Visual Studio Community Professional sürümlerinde, Enterprise yayında oluşturulan diyagramları açabilirsiniz ancak bunları düzenleyemezsiniz.
 
 ## <a name="understand-the-problem"></a>Sorunu anlama
- Üzerinde çalıştığınız bir çizim programında bir hata olduğunu varsayın. Hatayı yeniden oluşturmak için çözümü Visual Studio **F5 tuşuna** basarak hata ayıklamaya başlayabilirsiniz.
+ Üzerinde çalıştığınız bir çizim programında bir hata olduğunu varsayın. Hatayı yeniden oluşturmak için çözümü Visual Studio **F5 tuşuna basarak** hata ayıklamaya başlayabilirsiniz.
 
  Bir çizgi çizin ve Son vuruşumu **geri al'ı** seçerseniz, sonraki satırı çizene kadar hiçbir şey olmaz.
 
- ![Yeniden &#45; hata kodu](../modeling/media/codemapstoryboardpaint0.png)
+ ![Yeniden &#45; kod eşlemesi hatası](../modeling/media/codemapstoryboardpaint0.png)
 
  Bu nedenle yöntemini arayarak araştırmaya `Undo` başlayabilirsiniz. Bunu sınıfında `PaintCanvas` bulabilirsiniz.
 
- ![Kod bulma &#45; kod eşlemesi](../modeling/media/codemapstoryboardpaint1.png)
+ ![Kod &#45; Bul](../modeling/media/codemapstoryboardpaint1.png)
 
 ## <a name="start-mapping-the-code"></a>Kodu eşleştirmeyi başlat
  Şimdi yöntemini ve `undo` ilişkilerini eşlemeye başlayabilirsiniz. Kod düzenleyicisinden yöntemini ve `undo` yeni bir kod haritasına başvuracak alanları eklersiniz. Yeni bir eşleme oluşturduğunuzda, kodun dizinini oluşturmak biraz zaman alabilir. Bu, sonraki işlemlerin daha hızlı çalışmasını sağlar.
 
- ![Show method &#45; ilgili alanlar için kod eşlemesi](../modeling/media/codemapstoryboardpaint3.png)
+ ![Show method &#45; ilgili alanları göstermek için kod eşlemesi](../modeling/media/codemapstoryboardpaint3.png)
 
 > [!TIP]
 > Yeşil vurgu eşlemeye eklenen son öğeleri gösterir. Yeşil ok, imlecinizin kodda konumunu gösterir. Öğeler arasındaki oklar farklı ilişkileri temsil eder. Fareyle haritadaki öğeler hakkında daha fazla bilgi almak için fareyi bunların üzerine hareket ettirerek ve araç ipucuna bakın.
@@ -63,7 +63,7 @@ Hata Ayıklayıcı [aracıyla Visual Studio hata ayıklama hakkında daha fazla 
  ![Kod haritası &#45; Araç &#45; göster](../modeling/media/codemapstoryboardpaint4.png)
 
 ## <a name="navigate-and-examine-code-from-the-map"></a>Eşlemeden koda gitme ve kodu inceleme
- Her alanın kod tanımını görmek için harita üzerinde alana çift tıklayın veya alanı seçin ve **F12 tuşuna basın.** Yeşil ok eşlemedeki öğeler arasında hareket eder. Ayrıca kod düzenleyicisindeki imleciniz de otomatik olarak hareket eder.
+ Her bir alanın kod tanımını görmek için harita üzerinde alana çift tıklayın veya alanı seçin ve **F12 tuşuna basın.** Yeşil ok eşlemedeki öğeler arasında hareket eder. Ayrıca kod düzenleyicisindeki imleciniz de otomatik olarak hareket eder.
 
  ![Geçmiş alanı seçilmiş bir kod haritası penceresinin ve tüm geçmiş örneklerinin vurgulanmış olduğu bir kod düzenleyicisi penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint5.png)
 
@@ -89,7 +89,7 @@ Hata Ayıklayıcı [aracıyla Visual Studio hata ayıklama hakkında daha fazla 
 > [!TIP]
 > Varsayılan olarak, **Artımlı** Düzen açıktır. Yeni öğeler eklediğinizde, bu eşlemeyi mümkün olduğunca az yeniden düzenler. Her yeni öğe eklerken haritanın tamamını yeniden düzenlemek için Artımlı **Düzen'i kapatın.**
 
- ![Alanlar arasında soldan sağa işaret alan ilişkilerhiop oklarının yer alan kod haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint7.png)
+ ![Alanlar arasında ilişkilerhiop oklarının soldan sağa işaret ediyor olduğu bir kod haritası penceresinin ekran görüntüsü.](../modeling/media/codemapstoryboardpaint7.png)
 
  Bu yöntemleri inceleyelim. Haritada **PaintCanvas** yöntemine çift tıklayın veya bu yöntemi seçin ve **F12 tuşuna basın.** Bu yöntemin boş listeler olarak `history` ve `paintObjects` oluşturduğunı öğrenirsiniz.
 
@@ -136,7 +136,7 @@ Hata Ayıklayıcı [aracıyla Visual Studio hata ayıklama hakkında daha fazla 
 
  ![Kod eşlemesi &#45; eksik yöntem çağrısıyla eşlemeyi güncelleştirme](../modeling/media/codemapstoryboardpaint16.png)
 
- Haritanız artık geri alma ile Yeniden Boya **arasındaki** **bağlantıyı gösterir.**
+ Haritanız artık geri alma ile Yeniden Boya **arasındaki** **bağlantıyı gösteriyor.**
 
  ![Kod eşlemesi &#45; yöntem çağrısıyla güncelleştirildi](../modeling/media/codemapstoryboardpaint17.png)
 

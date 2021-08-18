@@ -1,6 +1,6 @@
 ---
 title: SafeControl Öğesi | Microsoft Docs
-description: Bir kullanıcının bir sitenin ASPX sayfasından erişmesi için güvenli olarak işaretlenmiş BIR ASPX denetimi veya web bölümünü temsil eden SafeControl SharePoint bilgi edinin.
+description: Bir kullanıcının bir sitenin ASPX sayfasından erişmesi için güvenli olarak işaretlenmiş bir ASPX denetimi veya web bölümünü temsil eden SafeControl SharePoint bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 04db1be46cbc2ff3830b00f9c3866e2859485a6f755514ea28333cada757190d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cdcd591ff2e742296a23fdf9dfa1d6324bf1e1bf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121244179"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122092832"
 ---
 # <a name="safecontrol-element"></a>SafeControl öğesi
   Herhangi bir kullanıcının sitenin herhangi bir ASPX sayfasından erişmesi için güvenli olarak belirlenen bir ASPX SharePoint temsil eder.
@@ -57,7 +57,7 @@ ms.locfileid: "121244179"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[SafeControls](../sharepoint/safecontrols-element.md)|ASPX denetimleri koleksiyonunu temsil eder ve Web Bölümleri kullanıcının sitenin herhangi bir ASPX sayfasından erişmesi için güvenli olarak belirlenen SharePoint temsil eder.|
+|[SafeControls](../sharepoint/safecontrols-element.md)|ASPX denetimleri koleksiyonunu temsil eder ve Web Bölümleri kullanıcının SharePoint sitesinde herhangi bir ASPX sayfasına erişmesi için güvenli olarak belirlenmiştir.|
 
 ## <a name="remarks"></a>Açıklamalar
  Güvenli denetimler hakkında daha fazla bilgi için [bkz. Proje öğelerinde paketleme ve dağıtım bilgileri sağlama.](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)

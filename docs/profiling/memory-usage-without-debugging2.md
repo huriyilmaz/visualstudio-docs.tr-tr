@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f57c8a77872d38400bb45e0d8c9136869b8eefa714c01ea4c3b0a2f4aadb578c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 61f0e4a2613a8ccf66c0f5205d730a38264d8e3c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121442436"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107400"
 ---
 # <a name="analyze-memory-usage-without-debugging-in-the-performance-profiler"></a>Bellek kullanımını hata ayıklama olmadan analiz Performans Profili Oluşturucu
 
@@ -42,7 +42,7 @@ Bellek Kullanımı aracı hata [ayıklayıcı ile veya hata ayıklayıcı olmada
 
 1. Kullanılabilir **Araçlar'ın** altında Bellek **Kullanımı'ı ve** ardından Başlat'ı **seçin.**
 
-   ![Bellek Kullanımı tanılama oturumu başlatma](../profiling/media/memuse_start_diagnosticssession.png "Bellek Kullanımı tanılama oturumu başlatma")
+   ![Bellek Kullanımı tanılama oturumu başlatma](../profiling/media/memuse_start_diagnosticssession.png "Bellek kullanımı Tanılama oturumu başlatma")
 
 ### <a name="monitor-memory-use"></a>Bellek kullanımını izleme
 
@@ -62,13 +62,13 @@ Anlık görüntüleri toplamak için bellek **verilerini yakalamak** istediğini
 
 Rapor oluşturmadan izleme oturumunu durdurmak için tanılama penceresini kapatmanız gerekir. Toplamayı tamamlayan veya anlık görüntü alan bir rapor oluşturmak için Koleksiyonu **Durdur'a seçin.**
 
-![Koleksiyonu Durdurma](../profiling/media/memuse__stopcollection.png "Koleksiyonu Durdurma")
+![Koleksiyonu Durdurma](../profiling/media/memuse__stopcollection.png "Toplamayı durdur")
 
 ## <a name="memory-usage-reports"></a>Bellek Kullanımı raporları
 
 Veri toplamayı durduran Bellek **Kullanımı aracı** uygulamayı durdurur ve Bellek Kullanımına **genel bakış** sayfasını görüntüler.
 
-![Bellek kullanım grafiğini ve iki anlık görüntü bölmesini gösteren, Visual Studio Performans Profili Oluşturucu Kullanım aracında genel bakış sayfasının ekran görüntüsü.](../profiling/media/memuse__reportoverview1.png "Bellek Kullanımına genel bakış sayfası")
+![Bellek kullanım grafiğini ve iki anlık görüntü bölmesini gösteren, Visual Studio Performans Profili Oluşturucu Kullanım aracında genel bakış sayfasının ekran görüntüsü.](../profiling/media/memuse__reportoverview1.png "Bellek kullanımına genel bakış sayfası")
 
 ### <a name="memory-usage-snapshots"></a><a name="BKMK_Memory_Usage_snapshot_views"></a> Bellek Kullanımı anlık görüntüleri
 
@@ -89,7 +89,7 @@ Sayılar, ayrıntılı Bellek Kullanımı rapor **görünümlerini** yeni bellek
 
 <a name="BKMK_Snapshot_report_trees"></a> Bellek Kullanımına genel bakış sayfasındaki anlık görüntü bağlantılarından **birini** seçerek anlık görüntü raporu yeni bir sayfada açılır.
 
-![Bellek Kullanımı anlık görüntü raporu](../profiling/media/memuse_snapshotreport_all.png "Bellek Kullanımı anlık görüntü raporu")
+![Bellek Kullanımı anlık görüntü raporu](../profiling/media/memuse_snapshotreport_all.png "Bellek kullanımı anlık görüntü raporu")
 
 Anlık görüntü raporunda Nesne Türü **girişlerini genişletebilirsiniz** ve alt girişleri görüntüleyeceksiniz. Örnek adları, Bellek Kullanımı aracı tarafından oluşturulan benzersiz kimliklerdir.
 
@@ -121,14 +121,14 @@ Uygulamalarda birçok tür, uygulama geliştiricileri için pek ilgi çekici bir
 
  Anlık görüntü ayrıntıları raporu, tanılama oturumundan bir anlık görüntüyü açıklar. Raporu açmak için anlık görüntü bölmesindeki boyut veya nesneler bağlantısını seçin.
 
- ![Anlık görüntü bölmesindeki anlık görüntü raporuna bağlantılar](../profiling/media/memuse_snapshotview_snapshotdetailslinks.png "Anlık görüntü bölmesindeki anlık görüntü raporuna bağlantılar")
+ ![Anlık görüntü bölmesindeki anlık görüntü raporuna bağlantılar](../profiling/media/memuse_snapshotview_snapshotdetailslinks.png "Anlık görüntü bölmesinde anlık görüntü raporuna bağlantılar")
 
 Her iki bağlantı da aynı raporu açar. Tek fark Yönetilen Yığın ağacının başlangıç sıralama **düzenidir.** Boyut bağlantısı, raporu Kapsayıcı Boyut **(Bayt) sütununa göre** sıralar. Nesneler bağlantısı, raporu Sayı sütununa **göre** sıralar. Rapor açıldıktan sonra sıralama sütununu veya sıralamayı değiştirebilirsiniz.
 
 ### <a name="managed-heap-tree-snapshot-details-reports"></a><a name="BKMK_Managed_Heap_tree__Snapshot_details_"></a> Yönetilen Yığın ağacı (Anlık görüntü ayrıntıları raporları)
  Yönetilen **Yığın** ağacı, bellekte tutulan nesne türlerini listeler. Türün boyuta göre sıralanmış en büyük on örneğini görüntülemek için bir tür adını genişletin. Seçilen öğenin Kök ve **Başvurulan Nesneler ağaç** yollarını görüntülemek **için** bir tür veya örnek seçin.
 
- ![Yönetilen Yığın ağacı](../profiling/media/memuse__snapshotdetails_managedheaptree.png "Yönetilen Yığın ağacı")
+ ![Yönetilen Yığın ağacı](../profiling/media/memuse__snapshotdetails_managedheaptree.png "Yönetilen yığın ağacı")
 
 Anlık **görüntü ayrıntıları** raporuna ilişkin Yönetilen Yığın ağacı aşağıdaki sütunlara sahip:
 
@@ -145,12 +145,12 @@ Kök **ağacının Yolları,** bir türe veya örneke başvurulan nesnelerin zin
 
 Kök ağacının **Yolları'na bir** tür için, başvurular içeren nesne sayısı Başvuru Sayısı **sütununda** görünür.
 
-![Türler için Kök ağacın yolları](../profiling/media/memuse_snapshotdetails_type_pathstoroottree.png "Türler için Kök ağacın yolları")
+![Türler için Kök ağacın yolları](../profiling/media/memuse_snapshotdetails_type_pathstoroottree.png "Türler için kök ağacına yönelik yollar")
 
 ### <a name="referenced-types-or-referenced-objects-tree-snapshot-details-reports"></a><a name="BKMK_Referenced_Objects_tree__Snapshot_details_"></a> Başvurulan Türler veya Başvurulan Nesneler ağacı (Anlık görüntü ayrıntıları raporları)
 Başvurulan **Türler** **veya Başvurulan Nesneler** ağacı, seçilen türün veya örneğin başvuran nesneleri gösterir.
 
-![Örnekler için Başvurulan Nesneler ağacı](../profiling/media/memuse_snapshotdetails_referencedobjects_instance.png "Örnekler için Başvurulan Nesneler ağacı")
+![Örnekler için Başvurulan Nesneler ağacı](../profiling/media/memuse_snapshotdetails_referencedobjects_instance.png "Örnekler için başvurulan nesneler ağacı")
 
 Anlık **görüntü ayrıntıları raporunda** Başvurulan Türler ağacı aşağıdaki sütunlara sahip olur. Başvurulan **Nesneler ağacında** Başvuru Sayısı **sütunu** yok.
 
@@ -168,13 +168,13 @@ Anlık görüntü farkı (fark) raporu, birincil anlık görüntü ile önceki a
 
 Her iki bağlantı da aynı raporu açar. Tek fark, raporda Yönetilen Yığın **ağacının başlangıç** sıralama düzenidir. Boyut bağlantısı, raporu Kapsayıcı Boyut Fark **(Bayt) sütununa göre** sıralar. Nesneler bağlantısı, raporu Count **Diff sütununa göre** sıralar. Rapor açıldıktan sonra sıralama sütununu veya sıralamayı değiştirebilirsiniz.
 
- ![Anlık görüntü bölmesindeki fark raporunun bağlantıları](../profiling/media/memuse_snapshotview_snapshotdifflinks.png "Anlık görüntü bölmesindeki fark raporunun bağlantıları")
+ ![Anlık görüntü bölmesindeki fark raporunun bağlantıları](../profiling/media/memuse_snapshotview_snapshotdifflinks.png "Bir anlık görüntü bölmesindeki fark raporuna bağlantılar")
 
 ### <a name="managed-heap-tree-snapshot-diff-reports"></a><a name="BKMK_Managed_Heap_tree__Snapshot_diff_"></a> Yönetilen Yığın ağacı (Anlık görüntü fark raporları)
 
  Yönetilen **Yığın** ağacı, bellekte tutulan nesne türlerini listeler. Türün boyuta göre sıralanmış en büyük on örneğini görüntülemek için bir tür adını genişletabilirsiniz. Seçilen öğenin Kök ve **Başvurulan Nesneler ağaç** yollarını görüntülemek **için** bir tür veya örnek seçin.
 
- ![Fark raporu türü için Yönetilen Yığın ağacı](../profiling/media/memuse_snapshotdiff_type_heap.png "Fark raporu türü için Yönetilen Yığın ağacı")
+ ![Fark raporu türü için Yönetilen Yığın ağacı](../profiling/media/memuse_snapshotdiff_type_heap.png "Fark raporundaki bir tür için yönetilen yığın ağacı")
 
 Anlık **görüntü fark** raporunda Yönetilen Yığın ağacı aşağıdaki sütunlara sahip:
 
@@ -195,13 +195,13 @@ Kök **ağacının Yolları,** bir türe veya örneke başvurulan nesnelerin zin
 
 Kök ağacının **Yolları'na bir** tür için, başvurular içeren nesne sayısı Başvuru Sayısı **sütununda** görünür. Önceki anlık görüntüdeki sayı farkı Başvuru Farkı **sütunundadır.**
 
- ![Fark raporunda Kök ağacın yolları](../profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "Fark raporunda Kök ağacın yolları")
+ ![Fark raporunda Kök ağacın yolları](../profiling/media/memuse_snapshotdiff_pathstoroot_instance_all.png "Fark raporundaki kök ağacına yönelik yollar")
 
 ### <a name="referenced-types-or-referenced-objects-tree-snapshot-diff-reports"></a><a name="BKMK_Referenced_Objects_tree__Snapshot_diff_"></a> Başvurulan Türler veya Başvurulan Nesneler ağacı (Anlık görüntü fark raporları)
 
 Başvurulan **Türler** **veya Başvurulan Nesneler** ağacı, seçilen türün veya örneğin başvuran nesneleri gösterir.
 
-![Fark raporunda Başvurulan Türler](../profiling/media/memuse_snapshotdiff_referencedtypes.png "Fark raporunda Başvurulan Türler")
+![Fark raporunda Başvurulan Türler](../profiling/media/memuse_snapshotdiff_referencedtypes.png "Fark raporundaki başvurulan türler")
 
 Bir **anlık görüntü fark** raporunda Başvurulan Türler ağacı aşağıdaki sütunlara sahip olur. Başvurulan **Nesneler ağacında** Örnek, **Boyut** **(Bayt)**, Kapsayıcı **Boyut (Bayt)** ve Modül **sütunları** bulunur.
 
@@ -213,12 +213,12 @@ Bir **anlık görüntü fark** raporunda Başvurulan Türler ağacı aşağıdak
 |**Boyut (Bayt)**|Birincil anlık görüntüdeki nesnelerin boyutu, nesnelerdeki nesnelerin boyutunun altındadır. Bir tür için **Boyut (Bayt)** ve **Kapsayıcı Boyut (Bayt)** tür örneklerinin boyutlarının toplamlarıdır.|
 |**Toplam Boyut Fark (Bayt)**|Bir tür için, birincil anlık görüntü ile önceki anlık görüntü arasındaki tür örneklerinin toplam boyutu arasındaki fark, örneklerde nesnelerin boyutunun altındadır. |
 |**Kapsayıcı Boyut (Bayt)**|Nesnelerdeki nesnelerin boyutu da dahil olmak üzere birincil anlık görüntüdeki nesnelerin boyutu.|
-|**Kapsayıcı Boyut Farkları (Bayt)**|Bir tür için, nesnelerdeki nesnelerin boyutu da dahil olmak üzere birincil anlık görüntü ile önceki anlık görüntü arasındaki türün tüm örneklerinin boyutu arasındaki fark.|
-|**Modül**|nesnesini içeren modül.|
+|**Kapsayıcı Boyut Farkları (Bayt)**|Bir tür için, nesne içindeki nesnelerin boyutu dahil olmak üzere birincil anlık görüntü ve önceki anlık görüntü arasındaki türün tüm örneklerinin boyutuyla aradaki fark.|
+|**Modül**|Nesneyi içeren modül.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [JavaScript belleği](../profiling/javascript-memory.md)
-- [Visual Studio'de profil oluşturma](../profiling/index.yml)
+- [Visual Studio profil oluşturma](../profiling/index.yml)
 - [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)
-- [C++, C# ve Visual Basic kullanan UWP uygulamaları için performansa yönelik en iyi Visual Basic](/previous-versions/windows/apps/hh750313\(v\=win.10\))
-- [Visual Studio'de yeni Bellek Kullanımı aracıyla ilgili bellek sorunlarını tanılama](https://devblogs.microsoft.com/devops/diagnosing-memory-issues-with-the-new-memory-usage-tool-in-visual-studio/)
+- [C++, C# ve Visual Basic kullanarak UWP uygulamaları için en iyi performans uygulamaları](/previous-versions/windows/apps/hh750313\(v\=win.10\))
+- [Visual Studio yeni bellek kullanımı aracı ile bellek sorunlarını tanılama](https://devblogs.microsoft.com/devops/diagnosing-memory-issues-with-the-new-memory-usage-tool-in-visual-studio/)

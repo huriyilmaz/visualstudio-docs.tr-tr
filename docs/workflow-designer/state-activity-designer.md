@@ -9,15 +9,16 @@ f1_keywords:
 ms.assetid: 9455ab37-93a0-4c46-9eb8-b6611ca23167
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: abf4e81ecd258668c93b674410f029e6be0f5bf1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2a0d23bedea24a68285e90faf8ee39fd46de90fc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873521"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135279"
 ---
 # <a name="state-activity-designer"></a>State Etkinlik Tasarımcısı
 

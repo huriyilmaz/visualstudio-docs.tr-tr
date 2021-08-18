@@ -11,17 +11,18 @@ ms.assetid: 89a8676b-6da9-4358-91c2-039bf33f99e4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 558716cc4b857ee26b7d8bcc8b8d5ac69f96cc5b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 43e4e935e9661e3054b1da4b1d86316c563e4d3d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083953"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063895"
 ---
 # <a name="idebugproperty3getstringcharlength"></a>IDebugProperty3::GetStringCharLength
 İlişkili özelliğin dizesindeki karakter sayısını döndürür.

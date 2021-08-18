@@ -7,21 +7,22 @@ ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e1d9c257bcf0e2a88a384c22010abb08894483ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c9128a9b488c5f7ab76ce398aa2a087e7ccf1481
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99951101"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137281"
 ---
 # <a name="quick-actions"></a>Hızlı Eylemler
 
-Hızlı Eylemler, tek bir eylem ile kodu kolayca yeniden düzenleme, oluşturma veya başka şekilde değiştirmenize olanak sağlar. C#, [C++](/cpp/ide/writing-and-refactoring-code-cpp)ve Visual Basic kod dosyaları Için hızlı eylemler kullanılabilir. Bazı eylemler bir dile özeldir ve diğerleri tüm diller için geçerlidir.
+Hızlı Eylemler, tek bir eylem ile kodu kolayca yeniden düzenleme, oluşturma veya başka şekilde değiştirmenize olanak sağlar. C#, [C++](/cpp/ide/writing-and-refactoring-code-cpp)ve Visual Basic kod dosyaları için hızlı eylemler kullanılabilir. Bazı eylemler bir dile özeldir ve diğerleri tüm diller için geçerlidir.
 
 Hızlı eylemler şu Işlemler için kullanılabilir:
 
@@ -44,11 +45,11 @@ Hızlı eylemler şu Işlemler için kullanılabilir:
 - Kod oluştur (örneğin, [yerel bir değişken tanıtma](../ide/reference/introduce-local-variable.md))
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. yeniden [düzenleme (Mac için Visual Studio)](/visualstudio/mac/refactoring).
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için bkz. yeniden [düzenleme (Mac için Visual Studio)](/visualstudio/mac/refactoring).
 
-Hızlı Eylemler, ampullü ampul ![ simgesi ](media/light-bulb-icon.png) veya screwsürücü ![ , Screwdriver simgesi ](media/screwdriver-icon.png) simgeleri kullanılarak veya **CTRL**'e basılarak uygulanabilir + **.** imlecinizin bir eylemin kullanılabildiği bir kod satırundayken. ![ ](media/error-light-bulb-icon.png) Bir hatayı gösteren kırmızı renkli bir çizgi varsa ve Visual Studio 'nun bu hata için kullanılabilir bir düzeltilmesi varsa, bir hata ışığı hatası ampul simgesi görürsünüz.
+Hızlı Eylemler, ampullü ampul ![ simgesi ](media/light-bulb-icon.png) veya screwsürücü ![ , Screwdriver simgesi ](media/screwdriver-icon.png) simgeleri kullanılarak veya **CTRL**'e basılarak uygulanabilir + **.** imlecinizin bir eylemin kullanılabildiği bir kod satırundayken. ![ ](media/error-light-bulb-icon.png) bir hatayı gösteren kırmızı bir dalgalı çizgi ve Visual Studio bu hata için bir düzeltilmesi varsa, bir hata ışığı hatası ampul simgesi görürsünüz.
 
-Herhangi bir dilde üçüncü taraflar, bir SDK 'nın parçası olarak özel tanılama ve öneriler sağlayabilir ve bu kurallara göre Visual Studio Light bulbs görüntülenir.
+herhangi bir dil için üçüncü taraflar, örneğin bir SDK 'nın parçası olarak özel tanılama ve öneriler sağlayabilir ve bu kurallara göre Visual Studio hafif bulbs görünür.
 
 ## <a name="icons"></a>Simgeler
 
@@ -72,8 +73,8 @@ Olası düzeltmeleri görmek için, ampul ' ın yanındaki aşağı oku veya **o
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da kod oluşturma](../ide/code-generation-in-visual-studio.md)
+- [Visual Studio kod üretimi](../ide/code-generation-in-visual-studio.md)
 - [Yaygın Hızlı Eylemler](../ide/common-quick-actions.md)
 - [Kod stilleri ve hızlı eylemler](../ide/code-styles-and-code-cleanup.md)
 - [Kodu yazma ve yeniden düzenleme (C++)](/cpp/ide/writing-and-refactoring-code-cpp)
-- [Yeniden düzenleme (Mac için Visual Studio)](/visualstudio/mac/refactoring)
+- [yeniden düzenleme (Mac için Visual Studio)](/visualstudio/mac/refactoring)

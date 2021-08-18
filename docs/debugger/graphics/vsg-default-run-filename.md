@@ -1,5 +1,5 @@
 ---
-description: Grafik günlük dosyasının varsayılan dosya adını tanımlar.
+description: Grafik günlüğü dosyasının varsayılan dosya adını tanımlar.
 title: VSG_DEFAULT_RUN_FILENAME | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,17 +7,18 @@ ms.assetid: ea549d2f-c857-458c-93c7-bc5a2d11d15d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bf80b34ed496f06b4051a6e6a9d7d771885e1e45
-ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
+ms.openlocfilehash: ae91dc2022c1d2a56699610e8a676f9d5dcc8987
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114232472"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030821"
 ---
 # <a name="vsg_default_run_filename"></a>VSG_DEFAULT_RUN_FILENAME
-Grafik günlük dosyasının varsayılan dosya adını tanımlar.
+Grafik günlüğü dosyasının varsayılan dosya adını tanımlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -26,22 +27,22 @@ Grafik günlük dosyasının varsayılan dosya adını tanımlar.
 ```
 
 #### <a name="parameters"></a>Parametreler
- `filename` Grafik bilgileri programlı olarak yakalanarak grafik günlük dosyasına varsayılan olarak verilen dosya adı.
+ `filename` Grafik bilgileri program aracılığıyla yakalanırken varsayılan olarak grafik günlük dosyasına verilen dosya adı.
 
 ## <a name="value"></a>Değer
- Grafik günlük dosyasının dosya adını temsil eden bir dize sabit değeri. Varsayılan olarak, L "default. vsglog".
+ Grafik günlüğü dosyasının dosya adını temsil eden bir dize değişmez değeri. Varsayılan olarak, L"default.vsglog".
 
 ```C++
 #define VSG_DEFAULT_FILENAME L"default.vsglog"
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Önişlemci sembolü `DONT_SAVE_VSGLOG_TO_TEMP` tanımlanmışsa, dosya adı yakalanan uygulamanın geçerli dizinine göre değişir veya mutlak bir yoldur; Aksi takdirde, kullanıcının geçici dosyalar dizinine göredir ve mutlak bir yol olamaz.
+ Önişlemci simgesi tanımlanmışsa, dosya adı yakalanan uygulamanın geçerli diziniyle görelidir veya mutlak bir yoldur; aksi takdirde, kullanıcının geçici dosyalar dizinine göredir ve mutlak bir yol `DONT_SAVE_VSGLOG_TO_TEMP` değildir.
 
- Tanımlı dosya adını değiştirmek için, programınıza dahil etmeden önce yeniden tanımlamanız gerekir `vsgcapture.h` .
+ Tanımlanan dosya adını değiştirmek için programınıza dahilmeden önce dosyayı yeniden `vsgcapture.h` tanımlamanız gerekir.
 
 ## <a name="example"></a>Örnek
- Bu örnek, yakalama dosyasının varsayılan dosya adının nasıl değiştirileceğini gösterir:
+ Bu örnekte, yakalama dosyasının varsayılan dosya adını nasıl değiştiryebilirsiniz:
 
 ```C++
 // Redefine the default capture filename before including vsgcapture.h

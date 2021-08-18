@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fd47ef85bd1789a8ff8ccad52709405ed38c4c78e9e8efbc462aa86d02a2ced
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1428019cad4c057c41721f30c9375a60c3cbc55f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370027"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108505"
 ---
 # <a name="msbuild-transforms"></a>MSBuild dönüşümleri
 

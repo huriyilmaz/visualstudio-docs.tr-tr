@@ -1,6 +1,6 @@
 ---
-description: Uzak makine Uzak Bağlantılar iletişim kutusunda görünmüyorsa, aşağıdaki yaygın nedenleri kontrol edin.
-title: Uzak makine, Uzak Bağlantılar iletişim kutusunda | Microsoft Docs
+description: Uzak makine uzak bağlantılar iletişim kutusunda görünmüyorsa, aşağıdaki genel nedenleri kontrol edin.
+title: Uzak makine uzak bağlantılar iletişim kutusunda görünmüyor | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 dev_langs:
@@ -14,27 +14,27 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 28d4086185a99ede835f2e2a05520732fbb9e2fe43f61c34188462a971371ba0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 08802c1d24d55469b3dc47d7d68f1132baba4378
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420189"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121093"
 ---
 # <a name="error-remote-machine-does-not-appear-in-a-remote-connections-dialog"></a>Hata: Uzak Makine, Uzaktan Bağlantılar iletişim kutusunda görünmüyor
-Uzak makine Uzak Bağlantılar iletişim kutusunda görünmüyorsa, aşağıdaki yaygın nedenleri kontrol edin.
+Uzak makine uzak bağlantılar iletişim kutusunda görünmüyorsa, aşağıdaki genel nedenleri kontrol edin.
 
- Yönetilen uyumluluk modunu kullanıyorsanız lütfen Visual Studio 2010 belgelerini inceleyin: Uzaktan Hata Ayıklama Sorunlarını Giderme [- Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/2ys11ead(v=vs.100)).
+ yönetilen uyumluluk modunu kullanıyorsanız, lütfen Visual Studio 2010 belgelerine bakın: [uzaktan hata ayıklama ile sorun giderme-Visual Studio 2010](/previous-versions/visualstudio/visual-studio-2010/2ys11ead(v=vs.100)).
 
 ### <a name="common-causes-for-this-error"></a>Bu hatanın yaygın nedenleri
 
-- Uzak makine farklı bir alt ağda yer alan bir makinede çalışıyor. Bunu düzeltmek için, Niteleyici iletişim kutusuna makine adını veya IP adresini el ile yazın
+- Uzak makine, farklı bir alt ağda bulunan bir makinede çalışıyor. Bu hatayı gidermek için, niteleyici iletişim kutusunda makine adını veya IP adresini el ile yazın
 
-- Uzak hata ayıklayıcı uzak makinede çalışmıyor. Bunu düzeltmek için uzak hata ayıklayıcısını başlat.
+- Uzak makinede uzaktan hata ayıklayıcı çalışmıyor. Bu hatayı düzeltemedi, uzaktan hata ayıklayıcıyı başlatın.
 
-- Güvenlik duvarı, uzak makineyle Visual Studio arasındaki iletişimi engelliyor. Bunu düzeltmek için güvenlik duvarınızı, uzaktan Visual Studio (msvsmon) ile iletişim kurmasına izin verecek şekilde yapılandırabilirsiniz.
+- güvenlik duvarı, Visual Studio ile uzak makine arasındaki iletişimi engelliyor. bu hatayı onarmak için güvenlik duvarınızı Visual Studio ve uzaktan hata ayıklayıcı (msvsmon) iletişim kurmasına izin verecek şekilde yapılandırın.
 
-- Virüsten koruma yazılımı, Visual Studio makine arasındaki iletişimi engelliyor. Bunu düzeltmek için, uzaktan hata ayıklayıcısının (msvsmon Visual Studio iletişim kurmasına izin vermek için virüsten koruma yazılımını yapılandırabilirsiniz.
+- virüsten koruma yazılımı Visual Studio ile uzak makine arasındaki iletişimi engelliyor. bu hatayı onarmak için, virüsten koruma yazılımını Visual Studio ve uzaktan hata ayıklayıcı (msvsmon) iletişim kurmasına izin verecek şekilde yapılandırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: da5b4c98758afcc1019f0b32290173ebbf35674bef2801bb0636fa888ba05787
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2bb0cd5b231b2a626bbba687b42d11f8724d9225
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397091"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039975"
 ---
 # <a name="wpf-msbuild-reference"></a>WPF MSBuild başvurusu
 

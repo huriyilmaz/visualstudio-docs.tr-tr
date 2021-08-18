@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b4099365a1c5709c6b4c74af3eb6eec0a5eb72b2d367527ce9168ce9cc1f51bd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8c3ae7df6646fa2c24344c91c03c614b50dbad0b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121267370"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082653"
 ---
 # <a name="walkthrough-create-a-custom-tab-by-using-the-ribbon-designer"></a>İzlenecek yol: Şerit Tasarımcısını kullanarak özel sekme oluşturma
   Şerit Tasarımcısını kullanarak özel bir sekme oluşturup bu sekmeye denetim ekleyip konumlandırabilirsiniz.

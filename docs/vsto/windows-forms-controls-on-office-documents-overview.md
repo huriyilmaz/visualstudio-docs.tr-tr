@@ -1,6 +1,6 @@
 ---
-title: Office belgelerindeki Windows Forms denetimlerine genel bakış
-description: Windows Forms denetimlerinin, kullanıcıların verileri girmek veya işlemek üzere etkileşime girebileceği nesneler olduğunu öğrenin.
+title: Windows Belgelerde form Office genel bakış
+description: Formlar Windows, kullanıcıların veri girmek veya işlemek için etkileşimde buluna nesneler olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -27,141 +27,142 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b2d221cdc3e66205ef9bf3d816b6f226be69ff51
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 34de9b336138ca85e96be835ba71fc86a4797810
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937179"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135565"
 ---
-# <a name="windows-forms-controls-on-office-documents-overview"></a>Office belgelerindeki Windows Forms denetimlerine genel bakış
-  Windows Forms denetimleri, kullanıcıların verileri girmek veya işlemek için etkileşime girebileceği nesnelerdir. Excel ve Microsoft Office Word 'Ün Microsoft Office belge düzeyi projelerinde, tasarım zamanında projenizdeki belge veya çalışma kitabına Windows Forms denetimleri ekleyebilir veya çalışma zamanında bu denetimleri program aracılığıyla ekleyebilirsiniz. Excel veya Word için VSTO eklentisinde çalışma zamanında bu denetimleri herhangi bir açık belgeye veya çalışma sayfasına programlı olarak ekleyebilirsiniz.
+# <a name="windows-forms-controls-on-office-documents-overview"></a>Windows Belgelerde form Office genel bakış
+  Windows Form denetimleri, kullanıcıların veri girmek veya işlemek için etkileşimde buluna nesneleridir. Microsoft Office Excel ve Microsoft Office Word için belge düzeyi projelerde, Windows Forms denetimlerini projenizin tasarım zamanında belgeye veya çalışma kitabına ekleyebilir veya bu denetimleri çalışma zamanında programlı olarak ekleyebilirsiniz. Bu denetimleri program aracılığıyla çalışma zamanında herhangi bir açık belgeye veya çalışma sayfasına, VSTO veya Word için Excel ekleyebilirsiniz.
 
- Daha fazla bilgi için bkz. [nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).
+ Daha fazla bilgi için, [bkz. How to: Add Windows Forms controls to Office .](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
 
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
-## <a name="use-windows-forms-controls"></a>Windows Forms denetimleri kullanma
+## <a name="use-windows-forms-controls"></a>Windows Forms denetimlerini kullanma
 
-Belgelere ve Eylemler bölmeleri, özel görev bölmeleri ve Windows Forms dahil özelleştirilebilir kullanıcı arabirimi (UI) öğelerine Windows Forms denetimleri ekleyebilirsiniz. Windows Forms denetimler genellikle bu diğer kullanıcı arabirimi öğelerindeki gibi belgelerde aynı davranışa sahiptir ancak bazı farklılıklar vardır. Bilgi için bkz. [Office belgelerindeki Windows Forms denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md).
+Belgelere ve Windows bölmeleri, özel görev bölmeleri ve özelleştirilebilir kullanıcı arabirimi (UI) öğelerine form denetimleri Windows Forms. Windows Form denetimleri genellikle belgelerde bu diğer kullanıcı arabirimi öğeleriyle aynı davranışa sahiptir, ancak bazı farklar vardır. Bilgi için, [bkz. Windows Forms denetimlerinin belgelerde Office.](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
 
-Bir belgeye ya da başka bir kullanıcı arabirimi öğesine Windows Forms denetimleri ekleme kararı, çeşitli etkenlere bağlıdır. Çözümünüzün Kullanıcı arabirimini tasarlarken, aşağıdaki tabloda açıklandığı gibi Windows Forms denetimlerinin kullanımını göz önünde bulundurun.
+Bir belgeye form Windows veya başka bir kullanıcı arabirimi öğesi ekleme kararı çeşitli faktörlere bağlıdır. Çözüm arabirimini tasarlarken, aşağıdaki tabloda açıklandığı gibi Windows Forms denetimlerinin kullanımlarını göz önünde bulundurabilirsiniz.
 
-Bir belge üzerinde.
-- Denetimlerin %100 ' i görüntülemeyi istediğiniz zaman.
+Bir belgede.
+- Denetimleri %100 oranında görüntülemek istediğiniz zaman.
 
-- Kullanıcıların doğrudan belgeye veri girmesini istediğinizde, örneğin, düzen yüzeyinin kilitli olduğu form tabanlı belgelerde.
+- Düzenleme yüzeyinin kilitli olduğu form tabanlı belgeler gibi kullanıcıların doğrudan belgeye veri girmelerini istediğiniz zaman.
 
-- Denetimlerin belgedeki verilerle satır içinde görüntülenmesini istediğinizde. Örneğin, bir liste nesnesinin her satırına düğme ekliyorsanız, bunların her bir liste öğesiyle aynı hizaya olmasını istersiniz.
+- Denetimlerin belgede yer alan verilerle aynı şekilde görüntülenmelerini istediğiniz zaman. Örneğin, bir liste nesnesinin her satırına düğme ekliyorsanız, bunların her liste öğesiyle aynı sırada yer almak istemesi gerekir.
 
-Eylemler bölmesinde veya özel bir görev bölmesinde.
-- Kullanıcıya bağlamsal bilgiler sağlamak istediğinizde.
+Eylemler bölmesinde veya özel görev bölmesinde.
+- Kullanıcıya bağlamsal bilgiler sağlamak istediğiniz zaman.
 
-- Yalnızca sonuçların belgede görünmesini istediğinizde, sorgu denetimleri ve verileri değildir.
+- Sorgu denetimleri ve verileri değil, yalnızca sonuçların belgede görünmesini istediğiniz zaman.
 
-- Denetimlerin belgeyle yazdırılmadığından emin olmak istediğinizde.
+- Denetimlerin belgeyle yazdırılmış olduğundan emin olmak istediğiniz zaman.
 
-- Denetimlerin belge görünümünü etkilememesini sağlamak istediğinizde.
+- Denetimlerin belgenin görünümüne müdahale etmey olduğundan emin olmak istediğiniz zaman.
 
-Bir Windows formunda.
-- Kullanıcı arabiriminin boyutunu denetlemek istediğinizde.
+Bir Windows.
+- Kullanıcı arabiriminin boyutunu kontrol etmek istediğiniz zaman.
 
-- Kullanıcıların denetimleri gizlemesini veya silmelerini engellemek istediğinizde.
+- Kullanıcıların denetimleri gizlemesini veya silmesini engellemek istediğiniz zaman.
 
-- Kullanıcıdan giriş almak istediğinizde ve giriş alınana kadar kullanıcının belgede herhangi bir şey yapmasını önleyin.
+- Kullanıcıdan giriş almak ve giriş alınana kadar kullanıcının belgede herhangi bir şey yapmalarını engellemek istediğiniz zaman.
 
-## <a name="add-windows-forms-controls-programmatically"></a>Program aracılığıyla Windows Forms denetimleri ekleme
- Çalışma zamanında Word belgelerine ve Excel çalışma sayfalarına Windows Forms denetimleri ekleyebilirsiniz. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]En yaygın Windows Forms denetimlerini eklemek için yardımcı yöntemler sağlar. Bu yardımcı yöntemler, Office belgenize hızlı bir şekilde denetim eklemenizi ve bu denetimlerin birleştirilmiş Windows Forms denetim işlevlerine ve Office ile ilgili işlevselliğine erişmenizi sağlar.
+## <a name="add-windows-forms-controls-programmatically"></a>Form Windows program aracılığıyla ekleme
+ Word belgelerine Windows form denetimleri ekleyebilir ve çalışma Excel çalışma sayfalarına ekleyebilirsiniz. , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Formlar denetimleri için en yaygın Windows yöntemleri sağlar. Bu yardımcı yöntemler, Office belgenize hızla denetimler eklemenize ve Windows Forms denetim işlevselliğine ve bu denetimlerin Office işlevlerine erişmenize olanak sağlar.
 
- Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
+ Daha fazla bilgi için [bkz. Çalışma zamanında Office belgelerine denetim ekleme.](../vsto/adding-controls-to-office-documents-at-run-time.md)
 
-## <a name="use-windows-forms-controls-in-document-level-projects"></a>Belge düzeyi projelerinde Windows Forms denetimleri kullanma
- Belgeler üzerinde Windows Forms denetimleri kullanmanın bazı yönleri belge düzeyindeki projelere özgüdür, bu da Visual Studio tasarımcısını kullanarak belgenizin Kullanıcı arabirimini tasarlamanıza olanak tanır.
+## <a name="use-windows-forms-controls-in-document-level-projects"></a>Belge Windows projelerinde Formlar denetimlerini kullanma
+ Belgelerde Windows Forms denetimlerini kullanmanın bazı yönleri, belge düzeyi projelere özeldir ve bu da belge tasarımcısını kullanarak belgenizin kullanıcı arabirimini Visual Studio sağlar.
 
-### <a name="create-custom-user-controls"></a>Özel Kullanıcı denetimleri oluşturma
- Projenize bir kullanıcı denetimi ekleyip **araç kutusuna** ekleyebilirsiniz. Daha sonra, belgenize Windows Forms denetimi ekleyeceğiniz şekilde belgenize Kullanıcı denetimini doğrudan sürükleyebilirsiniz. Kullanıcı denetimleri oluştururken göz önünde bulundurmanız gereken bazı şeyler vardır:
+### <a name="create-custom-user-controls"></a>Özel kullanıcı denetimleri oluşturma
+ Projenize bir kullanıcı denetimi ekleyebilir ve ardından Araç Kutusuna **ekleyin.** Daha sonra, belgenize bir Windows Forms denetimi eklemek için olduğu gibi kullanıcı Windows doğrudan belgenize sürükleyebilirsiniz. Kullanıcı denetimleri 7.000.
 
-- **Korumalı** Kullanıcı denetimi oluşturmayın. Denetimi belgenize sürüklediğinizde, Visual Studio genişletmek ve belge üzerinde kullanımını desteklemek için Kullanıcı denetiminden türetilmiş bir sarmalayıcı sınıfı oluşturur. Kullanıcı denetimi **mühürlü** ise, Visual Studio sarmalayıcı sınıfı üretemiyor.
+- Korumalı bir kullanıcı **denetimi** oluşturma. Denetimi belgenize sürüklerken, Visual Studio genişletip belgede kullanımını desteklemek için kullanıcı denetiminden türetilen bir sarmalayıcı sınıfı oluşturulur. Kullanıcı denetimi korumalı **ise,** Visual Studio sarmalayıcı sınıfını oluşturamaz.
 
-- Kullanıcı denetimlerinde <xref:System.Runtime.InteropServices.ComVisibleAttribute> özniteliği **true** olarak ayarlanmalıdır. Bir Office projesi içinde oluşturulan kullanıcı denetimleri, bu özniteliği varsayılan olarak **true** olarak ayarlanmıştır, ancak dış projelerin parçası olan Kullanıcı denetimleri bu özniteliği **true** olarak ayarlanmamış olabilir.
+- Kullanıcı denetimleri özniteliğinin <xref:System.Runtime.InteropServices.ComVisibleAttribute> true olarak ayarlanmış olması **gerekir.** Office projesinde oluşturulan kullanıcı denetimleri bu özniteliği **varsayılan** olarak true olarak ayarlar, ancak dış projelerin parçası olan kullanıcı denetimleri bu özniteliği true olarak **ayarlamaz.**
 
-- Belgeye bir kullanıcı denetimi ekledikten sonra, sınıfı projeden yeniden adlandırmayın veya silmeyin <xref:System.Windows.Forms.UserControl> . Bir kullanıcı denetiminin adını değiştirmeniz gerekiyorsa, önce onu belgeden silmeniz ve ardından ad değiştirildikten sonra yeniden eklemeniz gerekir.
+- Belgeye bir kullanıcı denetimi ekledikten sonra sınıfını projeden yeniden adlandırmayın <xref:System.Windows.Forms.UserControl> veya silmeyin. Kullanıcı denetimi adını değiştirmek için önce belgeden silmeniz ve ardından ad değiştirildikten sonra yeniden eklemeniz gerekir.
 
 ### <a name="arrange-controls-at-design-time"></a>Tasarım zamanında denetimleri düzenleme
- Tasarım zamanında Word ve Excel belgelerinize birden çok denetim eklerseniz, Visual Studio 'da **Microsoft Office Word** ve **Microsoft Office Excel** araç çubuklarını kullanarak tüm seçili denetimlerin hizalamasını hızlı bir şekilde ayarlayabilirsiniz. Bu araç çubukları yalnızca Tasarımcıda bir belge veya çalışma sayfası açık olduğunda kullanılabilir.
+ Word ve Excel belgelerinize tasarım zamanında birden çok denetim eklersiniz, Microsoft Office **Word** ve Microsoft Office Excel araç çubuklarını kullanarak seçilen denetimlerin **Visual Studio.** Bu araç çubukları yalnızca tasarımcıda bir belge veya çalışma sayfası açık olduğunda kullanılabilir.
 
- Tasarımcıda birden çok denetim seçtiğinizde, denetimleri düzenlemek için bu araç çubuklarında aşağıdaki düğmeleri kullanabilirsiniz:
+ Tasarımcıda birden çok denetim seçerek denetimleri düzenlemek için bu araç çubuklarında aşağıdaki düğmeleri kullanabilirsiniz:
 
-- **Solları Hizala**
+- **Sola Hizala**
 
-- **Merkeze Hizala**
+- **Merkezleri Hizala**
 
 - **Hakları Hizala**
 
-- **Üste Hizala**
+- **Üstleri Hizala**
 
 - **Ortaları Hizala**
 
-- **Botları Hizala**
+- **Altları Hizala**
 
-- **Yatay aralığı eşit yap**
+- **Yatay Aralığı Eşit Yapma**
 
-- **Dikey aralığı eşit yap**
+- **Dikey Aralığı Eşit Yapma**
 
 > [!NOTE]
-> Word projelerinde, bu düğmeler yalnızca seçili denetimler metin ile satır içinde değilse etkinleştirilir. Varsayılan olarak, tasarım zamanında belgeye eklediğiniz denetimler metinle birlikte görüntülenir.
+> Word projelerinde bu düğmeler yalnızca seçilen denetimler metinle aynı satırda yer alamasa etkinleştirilir. Varsayılan olarak, tasarım zamanında belgeye ekley istediğiniz denetimler metinle aynı sıradadır.
 
-### <a name="prevent-old-data-from-appearing-in-excel-workbooks-during-loading"></a>Yükleme sırasında Excel çalışma kitaplarında eski verilerin görünmesini engelleyin
- Tasarım zamanında belgelere veya çalışma sayfalarına Windows Forms denetimleri eklediğinizde, Kullanıcı belgeyi kapattığında denetimler belgede kalır. Tasarım zamanında eklenen denetimlere de *Statik denetimler* denir.
+### <a name="prevent-old-data-from-appearing-in-excel-workbooks-during-loading"></a>Yükleme sırasında eski verilerin çalışma Excel görünmesini engelleme
+ Tasarım zamanında Windows form denetimleri eklerken, kullanıcı belgeyi kapatıyorsa denetimler belgede kalır. Tasarım zamanında eklenen denetimlere statik *denetimler de denir.*
 
- Statik denetimleri içeren bir Excel çalışma kitabı açıldığında, özelleştirme kodu çalıştırılıncaya ve gerçek denetim yükleninceye kadar çalışma kitabı ActiveX denetimindeki denetimin bir bit eşlemini görüntüler. Excel bu bit eşlemi oluşturur ve çalışma kitabı kaydedildiği zaman çalışma kitabında depolar. Bit eşlem, denetimin görüntülendiği tüm veriler de dahil olmak üzere, çalışma kitabının en son kaydedildiği zamanı göründüğü şekliyle görüntülenir. Windows Forms denetimleri ve bit eşlemler içeren ActiveX denetimi hakkında daha fazla bilgi için bkz. [Office belgelerindeki Windows Forms denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md).
+ Statik Excel içeren bir çalışma kitabı açıldığında, çalışma kitabı özelleştirme kodu çalıştırana ve gerçek denetimi yükinceye kadar denetimin bit eşlemi ActiveX denetiminde görüntüler. Excel bit eşlemi oluşturur ve çalışma kitabı her kaydedilebilirken çalışma kitabında depolar. Bit eşlem, denetimin görüntüde olduğu veriler de dahil olmak üzere çalışma kitabının son kayded zamanı gibi görünen denetimi gösterir. Windows Forms denetimlerini ve bit eşlemleri içeren ActiveX daha fazla bilgi için bkz. Windows Forms denetimlerinin [Office.](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
 
- Belirli koşullarda, kod yüklenmez ve yalnızca Kullanıcı çalışma kitabını tasarım modunda açtığında olduğu gibi yalnızca bit eşlem görüntülenir. Ayrıca, Kullanıcı çalışma kitabını yüklü olmayan bir bilgisayarda açarsa [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] , özelleştirme, denetimleri yüklemek için çalıştırılamaz ve bu nedenle yalnızca denetimin bit eşlemi görünür olur. Çalışma kitabını kaydetmeden ve kişisel bilgilerinizin yanlışlıkla açıklanmamasını sağlamak üzere başka bir kullanıcıya göndermeden önce, çalışma kitaplarında bulunan denetimlerden kişisel bilgileri her zaman kaldırmanız gerekir.
+ Belirli koşullarda kod yüklenmez ve örneğin kullanıcı çalışma kitabını tasarım modunda açtığında yalnızca bit eşlem görüntülenir. Ayrıca, kullanıcı çalışma kitabını yüklü olan bir bilgisayarda açarsa, özelleştirme denetimleri yüklemek için çalıştıramaz ve bu nedenle yalnızca denetimin [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] bit eşlemi görünür olur. Kişisel bilgilerinizin yanlışlıkla açığa çıkarılamaması için çalışma kitabını kaydetmeden ve başka bir kullanıcıya göndermeden önce her zaman çalışma kitaplarının denetimlerinden kişisel bilgileri kaldırmanız gerekir.
 
-### <a name="match-control-size-to-cell-size-on-an-excel-worksheet"></a>Excel çalışma sayfasındaki denetim boyutunu hücre boyutuyla Eşleştir
- Üst hücrenin boyutu değiştirildiğinde denetimi otomatik olarak yeniden boyutlandırılacak şekilde ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: çalışma sayfası hücreleri içinde denetimleri yeniden boyutlandırma](../vsto/how-to-resize-controls-within-worksheet-cells.md).
+### <a name="match-control-size-to-cell-size-on-an-excel-worksheet"></a>Denetim boyutunu çalışma sayfasındaki hücre boyutuyla Excel eşleşme
+ Üst hücrenin boyutu değiştirilirken denetimi otomatik olarak yeniden boyutlandırılmak için ayarlayın. Daha fazla bilgi için [bkz. Nasıl ekleyebilirsiniz: Çalışma sayfası hücrelerinde denetimleri yeniden boyutlandırma.](../vsto/how-to-resize-controls-within-worksheet-cells.md)
 
 ### <a name="add-components-that-are-shared-by-all-worksheets"></a>Tüm çalışma sayfaları tarafından paylaşılan bileşenleri ekleme
- Çalışma sayfaları yerine tüm çalışma sayfaları arasında paylaştırmak istediğiniz bileşenleri <xref:System.Data.DataSet> (örneğin, çalışma sayfası tasarımcısına) ekleyebilirsiniz. Bileşen, bileşen tepsisinde görünür.
+ Gibi tüm çalışma sayfaları arasında paylaşmak istediğiniz bileşenleri çalışma sayfaları yerine Çalışma Kitabı <xref:System.Data.DataSet> Tasarımcısı'nda ekleyebilirsiniz. Bileşen, bileşen tepsisinde görünür.
 
-### <a name="formula-for-embedding-controls-on-an-excel-worksheet"></a>Excel çalışma sayfasına denetim ekleme formülü
- Excel 'de bir denetim seçtiğinizde, **Formül çubuğuna** **= embed ("WinForms. Control. Host", "")** görürsünüz. Bu metin gereklidir ve silinmemelidir.
+### <a name="formula-for-embedding-controls-on-an-excel-worksheet"></a>Bir çalışma sayfasına denetim ekleme Excel formülü
+ Denetim çubuğundan bir denetim Excel Formül Çubuğunda **=EMBED("WinForms.Control.Host","")** **ifadesinin yer alır.** Bu metin gereklidir ve silinmemelidir.
 
-### <a name="layout-style-of-controls-on-a-word-document"></a>Word belgesindeki denetimlerin düzen stili
- Visual Studio tasarımcısını kullanarak belge düzeyindeki bir projede Word belgesine bir denetim eklediğinizde, denetim metinle satıra eklenir. Denetimin düzen stilini değiştirmek için denetime sağ tıklayın ve sonra **Biçim denetimi**' ne tıklayın. **Nesne biçimlendirme** Iletişim kutusunun **Düzen** sayfasında bir kaydırma stili seçin.
+### <a name="layout-style-of-controls-on-a-word-document"></a>Word belgesinde denetimlerin düzen stili
+ Visual Studio tasarımcısını kullanarak belge düzeyi projesinde Word belgesine denetim eklerken, denetim metinle satıra eklenir. Denetimin düzen stilini değiştirmek için denetime sağ tıklayın ve ardından Biçim **Denetimi'ne tıklayın.** Nesneyi Biçimlendir iletişim kutusunun **Düzen** sayfasında bir **sarmalama** stili seçin.
 
- Çalışma zamanında Word belgesine bir denetim eklediğinizde, `Add` \<*control class*> sınıfının farklı yöntem yüklerini kullanarak yeni denetimin düzen stilini belirtebilirsiniz <xref:Microsoft.Office.Tools.Word.ControlCollection> :
+ Çalışma zamanında word belgesine denetim eklerken, sınıfının farklı yöntem aşırı yüklemelerini kullanarak yeni denetimin düzen `Add` \<*control class*> stilini <xref:Microsoft.Office.Tools.Word.ControlCollection> belirtebilirsiniz:
 
-- Denetimi metin ile satıra eklemek için, denetimin konumunu belirten bir aşırı yükleme kullanın <xref:Microsoft.Office.Interop.Word.Range> .
+- Denetimi metinle satıra eklemek için, denetimin konumunu belirten <xref:Microsoft.Office.Interop.Word.Range> bir kabul eden bir aşırı yükleme kullanın.
 
-- Denetimi kayan bir şekil olarak eklemek için, denetimin sol ve üst koordinatlarını kabul eden bir aşırı yükleme kullanın.
+- Denetimi kayan şekil olarak eklemek için denetimin sol ve üst koordinatlarını kabul eden bir aşırı yükleme kullanın.
 
-  Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
+  Daha fazla bilgi için [bkz. Çalışma zamanında Office belgelerine denetim ekleme.](../vsto/adding-controls-to-office-documents-at-run-time.md)
 
-  Visual Studio tasarımcısında bir Word şablonu açarsanız, Visual Studio şablonu **normal** görünümde açtığından, şablonda satır içi olmayan denetimler görünmeyebilir. Denetimleri görüntülemek için görünümü **yazdırma düzeni** olarak değiştirin.
+  Visual Studio tasarımcısında bir Word şablonu açarsanız, Visual Studio normal görünümde açıldığından şablonda satır içi olmayan **denetimler görünür** durumda olmayacaktır. Denetimleri görüntülemek için görünümü Yazdırma Düzeni **olarak değiştirebilirsiniz.**
 
 ### <a name="controls-outside-the-main-document-body"></a>Ana belge gövdesinin dışındaki denetimler
- Windows Forms denetimleri bir üst bilgi veya alt bilgi içinde veya bir alt belge içinde desteklenmez.
+ Windows Form denetimleri bir üst bilgi veya alt bilgi içinde veya alt belge içinde desteklenmiyor.
 
 ### <a name="add-components-at-design-time"></a>Tasarım zamanında bileşen ekleme
- Belirli denetimler veya bileşenler belgede görünmez ve bunun yerine bileşen tepsisinde görüntülenir. Visual Studio, her belge penceresi için bir bileşen tepsisi sağlar. Bileşen tepsisi, yalnızca belge üzerinde bileşenler mevcutsa ekranda görüntülenir.
+ Bazı denetimler veya bileşenler belgede görünmez ve bunun yerine bir bileşen tepsisinde görüntülenir. Visual Studio belge penceresi için bir bileşen tepsisi sağlar. Bileşen tepsisi ekranda yalnızca belgede bileşenler varsa görünür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office belgelerindeki denetimler](../vsto/controls-on-office-documents.md)
-- [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
-- [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
+- [Belgelerde Office denetimler](../vsto/controls-on-office-documents.md)
+- [Çalışma zamanında Office denetimler ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [Konak öğelerine ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
 - [Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md)
 - [Windows Forms denetimleri](/dotnet/framework/winforms/controls/index)
-- [Office belgelerindeki Windows Forms denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
-- [Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
-- [Nasıl yapılır: çalışma sayfası hücreleri içinde denetimleri yeniden boyutlandırma](../vsto/how-to-resize-controls-within-worksheet-cells.md)
-- [Nasıl yapılır: yazdırırken çalışma sayfalarında denetimleri gizleme](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
-- [İzlenecek yol: CheckBox denetimlerini kullanarak çalışma sayfası biçimlendirmesini değiştirme](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)
-- [İzlenecek yol: CheckBox denetimlerini kullanarak belge biçimlendirmesini değiştirme](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)
-- [İzlenecek yol: düğme kullanarak çalışma sayfasındaki metin kutusunda metin görüntüleme](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)
-- [İzlenecek yol: düğme kullanarak bir belgedeki metin kutusunda metin görüntüleme](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)
-- [Office belgelerindeki Windows Forms denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
-- [İzlenecek yol: radyo düğmelerini kullanarak bir belgedeki grafiği güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)
-- [İzlenecek yol: radyo düğmelerini kullanarak çalışma sayfasındaki bir grafiği güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)
+- [Office Windows Form denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
+- [Nasıl kullanılır: Windows Form denetimleri Office ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
+- [Nasıl olur: Çalışma sayfası hücrelerinde denetimleri yeniden boyutlandırma](../vsto/how-to-resize-controls-within-worksheet-cells.md)
+- [Nasıl olur: Yazdırma sırasında çalışma sayfaları denetimlerini gizleme](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
+- [Adım adım kılavuz: CheckBox denetimlerini kullanarak çalışma sayfası biçimlendirmesini değiştirme](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)
+- [Adım adım kılavuz: CheckBox denetimlerini kullanarak belge biçimlendirmesini değiştirme](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)
+- [Adım adım kılavuz: Düğme kullanarak çalışma sayfasındaki metin kutusunda metin görüntüleme](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md)
+- [Adım adım kılavuz: Düğme kullanarak belge içinde metin kutusunda metin görüntüleme](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)
+- [Office Windows Form denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
+- [Adım adım kılavuz: Radyo düğmelerini kullanarak belgede bir grafiği güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)
+- [Adım adım kılavuz: Radyo düğmelerini kullanarak çalışma sayfasındaki grafiği güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)

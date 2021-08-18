@@ -1,6 +1,6 @@
 ---
 title: Metin Şablonlarında Çıkış Sıraları Kullanma
-description: Metin şablonu etiketleri oluşturmak ve yalnızca C# kodunda kaçış denetimi karakterleri ve tırnak işaretleri oluşturmak için metin şablonlarındaki kaçış dizilerini nasıl kullanabileceğinizi öğrenin.
+description: Metin şablonu etiketleri oluşturmak ve yalnızca C# kodundaki denetim karakterlerini ve tırnak işaretlerini atlamak için metin şablonlarında kaçış dizilerini nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,32 +12,32 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: b4ffb5ee7fd21b5d549a90a3c86378f2f00356287d6a54d387559fc2343a22cc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e5d77665ddc8f08a5efe2594fb41a8f7424e67b2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121316622"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033960"
 ---
 # <a name="use-escape-sequences-in-text-templates"></a>Metin şablonlarında kaçış dizilerini kullanma
 
-Metin şablonlarındaki kaçış dizilerini kullanarak metin şablonu etiketleri oluşturabilir ve (yalnızca C# kodunda) denetim karakterlerini ve tırnak işaretlerini atabilirsiniz.
+Metin şablonu etiketleri ve (yalnızca C# kodunda) denetim karakterlerini ve tırnak işaretlerini atlamak için metin şablonlarındaki kaçış dizilerini kullanabilirsiniz.
 
-Standart bir kod bloğu için açık ve kapalı etiketleri çıktı dosyasına yazdırmak için aşağıdaki gibi etiketlerin kaçışını yapın:
+Çıkış dosyasına standart bir kod bloğunun açık ve kapalı etiketlerini yazdırmak için etiketleri aşağıdaki gibi kaçış:
 
 ```
 \<# ... \#>
 ```
 
-Aynı şeyi diğer metin şablonu yönergesi ve kod bloğu etiketleriyle de kullanabilirsiniz.
+Diğer metin şablonu yönergesi ve kod bloğu etiketleriyle aynı şekilde yapabilirsiniz.
 
-Metin bloğunda metin şablonu etiketlerinden kaçış için kullanılan dizeler varsa aşağıdaki kaçış dizilerini kullanabilirsiniz:
+Metin bloğu metin şablonu etiketlerini kaçış için kullanılan dizeleri içeriyorsa, aşağıdaki kaçış dizilerini kullanabilirsiniz:
 
-- Bir metin şablonu etiketinin önünde eşit sayıda kaçış ( ) karakteri varsa, şablon ayrıştırıcı kaçış karakterlerinin yarısını içerir ve diziyi metin şablonu \\ etiketi olarak içerir. Örneğin, metin şablonunda dört kaçış karakteri varsa, oluşturulan dosyada \\ iki " " " karakteri olur.
+- Bir metin şablonu etiketinin önünde bir dizi kaçış ( \\ ) karakteri varsa şablon ayrıştırıcısı kaçış karakterlerinin yarısını içerir ve sırası metin şablonu etiketi olarak ekler. Örneğin, metin şablonunda dört kaçış karakteri varsa, \\ oluşturulan dosyada iki "" karakteri olacaktır.
 
-- Metin şablonu etiketinin önünde tek sayıda kaçış karakteri ( ) karakteri varsa, şablon ayrıştırıcısı " " karakterlerinin yarısını ve etiketinin kendisini \\ \\ () \<# or #> içerecektir. Etiket bir metin şablonu etiketi olarak kabullanmaz.
+- Metin şablonu etiketinin öncesinde tek sayıda kaçış ( \\ ) karakteri varsa, şablon ayrıştırıcısı " \\ " karakterlerinin yarısını ve etiketinin kendisini ( \<# or #> ) içerir. Etiket, bir metin şablonu etiketi olarak kabul edilmez.
 
-- Bir kaçış ( ) karakteri, bir denetim karakterinden veya tırnak karakterinden (yalnızca C# ile) kaçış karakteri dışında herhangi bir sıranın başka bir yerinde \\ görünürse, karakter doğrudan çıkış olarak görünür.
+- Bir kaçış ( \\ ) karakteri, bir denetim karakteri veya tırnak işareti (yalnızca C# ' ta) dışında herhangi bir dizide başka bir yerde görünürse, karakter doğrudan çıktı olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

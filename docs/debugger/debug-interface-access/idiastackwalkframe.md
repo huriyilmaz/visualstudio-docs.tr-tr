@@ -1,5 +1,5 @@
 ---
-description: 'IDiaFrameData:: Execute) yönteminin etkinleştirmeleri arasında yığın bağlamını korur.'
+description: IDiaFrameData::execute) yönteminin çağrıları arasında yığın bağlamını sürdürür.
 title: IDiaStackWalkFrame | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 42d82845-d6f6-4846-9ecd-9dd169216077
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 87fb733057272773d7cead9ceadbfe20020baf58
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 785766a8fb0de87b967ecebdae391a5167bca466
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156862"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121564"
 ---
 # <a name="idiastackwalkframe"></a>IDiaStackWalkFrame
-[IDiaFrameData:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md) yönteminin etkinleştirmeleri arasında yığın bağlamını korur.
+[IDiaFrameData::execute](../../debugger/debug-interface-access/idiaframedata-execute.md) yönteminin çağrıları arasında yığın bağlamını sürdürür.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,27 +30,27 @@ ms.locfileid: "102156862"
 IDiaStackWalkFrame : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaStackWalkFrame` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDiaStackWalkFrame` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)|Bir kaydın değerini alır.|
-|[IDiaStackWalkFrame::put_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)|Bir kaydın değerini ayarlar.|
-|[IDiaStackWalkFrame::readMemory](../../debugger/debug-interface-access/idiastackwalkframe-readmemory.md)|Görüntüden belleği okur.|
-|[IDiaStackWalkFrame::searchForReturnAddress](../../debugger/debug-interface-access/idiastackwalkframe-searchforreturnaddress.md)|En yakın işlev dönüş adresi için belirtilen yığın çerçevesini arar.|
-|[IDiaStackWalkFrame::searchForReturnAddressStart](../../debugger/debug-interface-access/idiastackwalkframe-searchforreturnaddressstart.md)|Belirtilen adreste veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.|
+|[IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)|Bir yazmanın değerini verir.|
+|[IDiaStackWalkFrame::put_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-put-registervalue.md)|Yazmanın değerini ayarlar.|
+|[IDiaStackWalkFrame::readMemory](../../debugger/debug-interface-access/idiastackwalkframe-readmemory.md)|Görüntüden bellek okur.|
+|[IDiaStackWalkFrame::searchForReturnAddress](../../debugger/debug-interface-access/idiastackwalkframe-searchforreturnaddress.md)|Belirtilen yığın çerçevesinde en yakın işlev dönüş adresini arar.|
+|[IDiaStackWalkFrame::searchForReturnAddressStart](../../debugger/debug-interface-access/idiastackwalkframe-searchforreturnaddressstart.md)|Belirtilen yığın çerçevesinde belirtilen adreste veya yakınında bir dönüş adresi arar.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim, kayıt ve yazma ve dönüş adreslerini okuma ve yazma için program yürütme sırasında kullanılır.
+ Bu arabirim, yazmazları okumak ve yazmak, belleğe erişmek ve dönüş adreslerini bulmak için program yürütme sırasında kullanılır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- İstemci uygulaması bu arabirimi uygular ve arabirim örneğini [IDiaFrameData:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md) yöntemine geçirir. Bu arabirimin aynı örneği yeniden kullanılır ve her yöntemin çağrılması sırasında yazmaçların durumunu korumak için yeniden kullanılır `execute` . `execute`Bu yöntem, dönüş adresini belirlemekte de bu arabirimi kullanır.
+ İstemci uygulaması bu arabirimi kullanır ve arabirimin bir örneğini [IDiaFrameData::execute yöntemine](../../debugger/debug-interface-access/idiaframedata-execute.md) iletir. Bu arabirimin aynı örneği, yönteminin her çağrılsı sırasında yazmaların durumunu korumak için tekrar tekrar `execute` kullanılır. yöntemi, `execute` dönüş adresini belirlemek için de bu arabirimi kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: dia2. h
+ Üst bilgi: Dia2.h
 
- Kitaplık: diaguid. lib
+ Kitaplık: diaguids.lib
 
  DLL: msdia80.dll
 

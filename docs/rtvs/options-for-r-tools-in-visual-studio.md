@@ -12,14 +12,15 @@ f1_keywords:
 author: kraigb
 ms.author: kraigb
 manager: jmartens
+ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: fc46d7ed1e369d31a9d0675f0595073f51f28d17
-ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
+ms.openlocfilehash: 76c6994546e380b9a599c9cdcbbc8a9392333007
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114679791"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060706"
 ---
 # <a name="r-tools-for-visual-studio-options"></a>Visual Studio için R Araçları seçenekleri
 
@@ -31,20 +32,20 @@ R'ye özgü seçeneklere ve ayarlara aşağıdaki yöntemler kullanılarak eriş
 
 - Kod biçimlendirme seçenekleri [(bkz. Düzenleyici seçenekleri:](editing-r-code-in-visual-studio.md#editor-options) **Araçlar**  >  **Seçenekler** menüsü ve ardından Metin Düzenleyicisi R   >  **Biçimlendirmesi'ni**  >  **seçin**
 - Lint seçenekleri (bkz. [Lint):](linting-r-code.md) **Araçlar**  >  **Seçenekler** menüsü ve ardından **Metin** Düzenleyici R  >    >  **Lint'i seçin**
-- Gelişmiş düzenleyici seçenekleri ([bu makalede açıklanmıştır):](#text-editor--r--advanced-options) **Araçlar**  >  **Seçenekler** menüsü ve ardından Metin Düzenleyici   >  **R Gelişmiş'i**  >  **seçin**
+- Gelişmiş düzenleyici seçenekleri ([bu makalede açıklanmıştır):](#text-editor--r--advanced-options) **Araçlar**  >  **Seçenekler** menüsü ve ardından Metin Düzenleyici R   >  **Gelişmiş'i**  >  **seçin**
 - Davranış seçenekleri ([bu makalede açıklanmıştır):](#r-tools--advanced-options) **R Araçları**  >  **Seçenekleri** menüsü veya Araçlar **Seçenekleri'ne**  >  **gidin** ve **R Araçları'ne kaydırın.**
 
-**R Araçları Veri** Bilimi Ayarlar komutu, genel olarak R Tools Veri  >   Bilimi Visual Studio etkiler. Bu komut sonraki bölümde açıklanmıştır.
+**R Araçları Veri** Bilimi Ayarlar komutu, genel olarak R Tools Veri Bilimi Visual Studio  >   etkiler. Bu komut sonraki bölümde açıklanmıştır.
 
 <a name="data-scientist-layout"></a>
 
 ## <a name="r-tools--data-science-settings"></a>R Araçları > Veri Bilimi Ayarlar
 
-R **Tools > Data Science Ayarlar** menü öğesi, Visual Studio IDE'yi veri bilimcilerinin ihtiyaçlarına en iyi duruma getirilmiş bir düzen ile yapılandırıyor. Özel olarak, bu seçenek [Etkileşimli](interactive-repl-for-r-in-visual-studio.md), [Değişken Gezgini](variable-explorer.md)ve Çalışma [Alanları pencerelerini](r-workspaces-in-visual-studio.md) açar:
+R **Araçları > Veri Bilimi Ayarlar** öğesi, Visual Studio IDE'yi veri bilimcilerinin ihtiyaçlarına göre iyileştirilmiş bir düzen ile yapılandırıyor. Özel olarak, bu seçenek [Etkileşimli](interactive-repl-for-r-in-visual-studio.md), [Değişken Gezgini](variable-explorer.md)ve Çalışma [Alanları pencerelerini](r-workspaces-in-visual-studio.md) açar:
 
 ![Veri bilimcisi pencere düzeni Visual Studio](media/installation-data-scientist-layout-result.png)
 
-Daha sonra diğer Visual Studio geri dönmek için önce Araçlar İçeri ve Dışarı Aktarma Ayarlar komutunu kullanın, Seçili ortam ayarlarını dışarı aktar'ı seçin ve  >   bir dosya adı belirtin.  Bu ayarları geri yüklemek için aynı komutu kullanın ve Seçili ortam ayarlarını **içeri aktar'ı seçin.** Veri bilimcisi düzenini değiştirir ve veri bilimi komutlarını doğrudan kullanmak yerine daha sonra buna geri dönmek için de **aynı Ayarlar** kullanabilirsiniz.
+Daha sonra diğer Visual Studio geri dönmek için önce Araçlar İçeri ve Dışarı Aktarma Ayarlar komutunu kullanın, Seçili ortam ayarlarını dışarı aktar'ı seçin ve  >   bir dosya adı belirtin.  Bu ayarları geri yüklemek için aynı komutu kullanın ve Seçili ortam ayarlarını **içeri aktar'ı seçin.** Veri bilimcisi düzenini değiştirir ve doğrudan Veri Bilimi Komut Satırı komutunu kullanmak yerine daha sonra buna geri dönmek Ayarlar **de** kullanabilirsiniz.
 
 ## <a name="text-editor--r--advanced-options"></a>R > Gelişmiş > Metin Düzenleyici
 
@@ -66,7 +67,7 @@ Aşağıdaki bölümlerde bu sayfada kullanılabilen farklı seçenekler açıkl
 
 ### <a name="debugging"></a>Hata Ayıklama
 
-Bu seçenekler, değerlerin izleme ve [Değişken Gezgini](variable-explorer.md) ve hata ayıklayıcısı pencerelerinde nasıl işlen olduğunu kontrol eder (bkz. [R kodunda hata ayıklama).](debugging-r-in-visual-studio.md)
+Bu seçenekler, değerlerin İzleme ve [Yereller Değişken Gezgini](variable-explorer.md) hata ayıklayıcısı pencerelerinde nasıl işlen olduğunu kontrol eder (bkz. [R kodunda hata ayıklama).](debugging-r-in-visual-studio.md)
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
@@ -85,13 +86,13 @@ Bu seçenekler, değerlerin izleme ve [Değişken Gezgini](variable-explorer.md)
 | --- | --- | --- |
 | F1 Web tarayıcısı | `Internal` | **Ctrl** F1 kullanarak bir terim ararken yardımın nasıl + **görüntüleniyor olduğunu kontrol eder.** olarak `Internal` ayarlanırsa, yardım bir araç penceresinde oluşturulur ve Visual Studio. olarak `External` ayarlendiğinde, yardım varsayılan web tarayıcınızda görünür. |
 | F1 Web Araması Dizesi | `R site:stackoverflow.com` | Düzenleyicide bir terimde **Ctrl** + **F1** tuşlarına basabilirsiniz. Varsayılan olarak dize, `R site:stackoverflow.com` arama teriminize `R` eklenen dizesidir. `site:stackoverflow.com`, arama altyapısına, arama kapsamını etki alanı içindeki sayfaların kapsamına almalarını söyleyen bir `stackoverflow.com` yönergedir. |
-| R Yardım Browser | `Automatic` | R belgelerinde **F1**, **?** veya ?? kullanarak arama kullanırken yardımın nasıl görüntüleniyor **olduğunu kontrol eder.** olarak `Automatic` ayarlanırsa, yardım uygun pencerede işler. Örneğin, HTML yardımı bir Visual Studio penceresinde görünürken PDF'ler varsayılan PDF programınız içinde görünür. olarak `External` ayarlanırsa, yardım varsayılan web tarayıcınızda işlenir. |
+| R Yardım Browser | `Automatic` | R belgelerinde **F1**, ? veya ?? kullanarak arama kullanırken **yardımın** nasıl görüntüleniyor **olduğunu kontrol eder.** olarak `Automatic` ayarlanırsa, yardım uygun pencerede işler. Örneğin, HTML yardımı bir Visual Studio penceresinde görünürken PDF'ler varsayılan PDF programınız içinde görünür. olarak `External` ayarlanırsa, yardım varsayılan web tarayıcınızda işlenir. |
 
 ### <a name="history"></a>Geçmiş
 
 | Seçenek | Varsayılan değer | Açıklama |
 | --- | --- | --- |
-| Geçmişi her zaman kaydet | `True` | RTVS'nin komut geçmişinizi bir 'a yazıp yazmay olmadığını kontrol *eder. Proje her kapatılan* çalışma dizininize RHistory dosyası. Çıkıştan önce projenizi kaydetmenize rağmen geçmişi kaydetmeniz gerekir. |
+| Geçmişi her zaman kaydet | `True` | RTVS'nin komut geçmişinizi bir 'a yazıp yazmay olmadığını kontrol *eder. Proje her kapatılan* çalışma dizininize RHistory dosyası. Çıkıştan önce projenizi kaydetmezsiniz bile geçmişi kaydetmeniz gerekir. |
 | Arama filtresini sıfırlama | `True` | Geçmiş penceresinin komut geçmişinizi yalnızca alt dizenin komut satırı iletişim kutusundaki filtre terimiyle eşan komutları gösterecek şekilde filtreleye R Geçmiş belirler. Bu ayar, yeni bir komut her çalıştırsanız Geçmiş arama filtrenizi sıfırlamayı veya farklı bir 'nin yükünü tetikleyen yeni bir projeye geçmeyi *belirler. RHistory* dosyası. Varsayılan ayarı, filtre kümesiyle bir komut çalıştırarak sürprizi en aza indirger ve az önce çalıştırdınız komutun Neden Geçmiş'te göstere `True` olmadığını merak ediyorsanız. |
 | Çok satırlı seçimi kullanma | `True` | Geçmiş'te tek tıklamayla çok satırlı bir deyim seçip seçey tıklamay seçeneklerden biri olup olmadığını belirtir. Ayrıca Etkileşimli gezinti bölmesinde satırlar yerine deyimlere Windows yukarı/aşağı ok gezintisi sağlar. |
 

@@ -14,12 +14,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: aae95396a213e546b74bd2c37db6c83536032dc99c348c6593934f81c52f8d8e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 163f0edd1042340f7d1abdbc73dc6099af946394
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410781"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061044"
 ---
 # <a name="how-to-collect-line-level-sampling-data"></a>Nasıl kullanılır: Satır düzeyi örnekleme verileri toplama
 Satır düzeyi örnekleme, profil oluşturma işlevinin, yüksek özel örneklere sahip bir işlev gibi yoğun işlemcili bir işlevin kodunda zamanlarının çoğunu harcaması gereken yeri belirleme becerisidir.

@@ -1,6 +1,6 @@
 ---
-title: 'nasıl yapılır: denetimleri Kasa denetimleri olarak işaretleme | Microsoft Docs'
-description: denetimleri, bir derleme eklediğinizde bir SharePoint proje öğesinin Kasa Control Entries özelliğinde veya paket tasarımcısında güvenli denetimler olarak işaretleyin.
+title: 'Nasıl |: Denetimleri Kasa Olarak İşaret | Microsoft Docs'
+description: Bir derlemeyi eklerken, Kasa proje öğesinin SharePoint Denetim Girişleri özelliğinde veya Paket Tasarımcısı'nda denetimleri güvenli denetim olarak işaretle.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,104 +17,104 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: b58cc0bb61d19925faf5b719106efb625671d82383068a1bc567028a0238c6d6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e96a27be0ae8a71125964e27da99270d9142886c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121352909"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122092988"
 ---
-# <a name="how-to-mark-controls-as-safe-controls"></a>Nasıl yapılır: denetimleri güvenli denetim olarak Işaretleme
-  güvenlik için SharePoint, betik ekleme ve web denetimlerine karşı korunan web denetimleri arasında ayrım yapar. Korumalı denetimlere veya *güvenli denetimlere* güvenilmeyen kullanıcılar erişebilir. bir derlemeyi pakete eklediğinizde bir SharePoint proje öğesinin Kasa Control Entries özelliğinde veya **paket tasarımcısında** denetimleri güvenli olarak işaretleyebilirsiniz. Daha fazla bilgi için bkz.
+# <a name="how-to-mark-controls-as-safe-controls"></a>Nasıllı: Denetimleri güvenli denetimler olarak işaretleme
+  Güvenlik için SharePoint, betik eklemeye karşı korunan Web denetimleri ile korunmaz Web denetimleri arasında ayrımlar sağlar. Korumalı denetimlere *veya güvenli denetimlere* güvenilmeyen kullanıcılar tarafından erişilebilir. Denetimleri bir SharePoint proje öğesinin Kasa Denetim Girişleri özelliğinde veya pakete bir  derleme eklerken Paket Tasarımcısı'nda güvenli olarak işaretebilirsiniz. Daha fazla bilgi için bkz.
 
-- [web.config dosya Ayarlar](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) [bir Web bölümü derlemesini Kasa denetimi olarak](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11))değiştirme ve kaydetme.
+- [web.config Denetim Ayarlar Web](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) Bölümü [Derlemesini](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11))Değiştirme ve Kaydetme Kasa.
 
 > [!IMPORTANT]
-> Bu yordamlar tanım amaçlıdır. Denetimleri yalnızca güvenli olduklarından emin olduğunuzda güvenli olarak işaretleyin.
+> Bu yordamlar, açıklayıcı amaçlara yöneliktir. Yalnızca güvenli olduklarının emin olduğunuz durumlarda denetimleri güvenli olarak işaretle.
 
-## <a name="marking-safe-controls-in-the-safe-control-entries-property"></a>Kasa denetim girdileri özelliğindeki Kasa denetimleri işaretleniyor
+## <a name="marking-safe-controls-in-the-safe-control-entries-property"></a>Kasa Denetim Girişleri Özelliğinde Kasa Denetimlerini İşaretleme
 
-#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-safe-control-entries-property"></a>Güvenli denetim girişleri özelliğinde denetimleri güvenli veya güvenli olmayan şekilde işaretlemek için
+#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-safe-control-entries-property"></a>Denetimleri güvenli denetim girdileri özelliğinde güvenli veya güvenli değil olarak işaretlemek için
 
-1. Visual Web bölümü projesiyle bir SharePoint çözümü oluşturun.
+1. Görsel Web SharePoint projesiyle bir çözüm oluşturun.
 
-2. Web bölümüne iki denetim ekleyin: metin kutusu ve düğme. Adları sırasıyla varsayılan değerlerinde, TextBox1 ve Button1 'de bırakın.
+2. Web parçasına iki denetim ekleyin: metin kutusu ve düğme. Adları sırasıyla TextBox1 ve Button1 varsayılan değerlerinde bırakın.
 
-3. Web bölümünün **Kasa denetim girdileri** özelliğine iki girdi ekleyin. bunu yapmak için, **özellikler** penceresindeki **Kasa denetim girişleri** özelliğinin yanındaki üç nokta (![mobil tasarımcı elips ASP.NET](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil tasarımcı elips")) düğmesini seçin.
+3. Web bölümü denetim girdisi özelliğine **iki Kasa ekleyin.** Bunu yapmak için, Özellikler penceresinde ASP.NET Denetim Girişleri ![özelliğinin](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil Tasarımcı üç nokta")yanındaki üç nokta ( **Kasa ASP.NET** Mobil Tasarımcı üç nokta ) **düğmesini** seçin.
 
-     **Kasa denetim girdileri** iletişim kutusu görüntülenir.
+     Kasa **Denetim Girişleri iletişim** kutusu görüntülenir.
 
-4. **Kasa denetim girdileri** iletişim kutusunda, **üyeler** bölmesine iki güvenli denetim girdisi eklemek için **ekle** düğmesini iki kez seçin: biri düğme ve diğeri metin kutusu için.
+4. Denetim **Kasa iletişim** kutusunda, Üyeler bölmesine  iki güvenli denetim girişi eklemek için  Ekle düğmesini iki kez seçin: biri düğme, biri metin kutusu için.
 
-5. ilk güvenli denetim girişini seçin ve sonra **Kasa** özelliğinin değerini, **tür adı** özelliğini **Button1** olarak ve **Kasa betik özelliğine karşı** **yanlış** **olarak değiştirin**.
+5. İlk güvenli denetim girişini seçin ve ardından **Kasa** özelliğinin değerini **False,** Type **Name** özelliğini **Button1** olarak ve Kasa **Against Script** özelliğini False olarak **değiştirir.**
 
-     Bu adım, düğme denetimini güvenli olmayan bir denetim olarak tanımlar.
+     Bu adım, düğme denetimlerini güvenli olmayan bir denetim olarak tanımlar.
 
-6. Listede ikinci güvenli denetim girişini seçin. **Kasa** özelliğinin değerini **doğru** olarak bırakın ve **tür adı** özelliğini **TextBox1** olarak ve **Kasa betik özelliğine karşı** **doğru** olarak ayarlayın.
+6. Listede ikinci güvenli denetim girişini seçin. **Kasa özelliğinin** değerini **True** olarak bırakın ve **Type Name** özelliğini **TextBox1,** **Kasa Against Script** özelliğini True olarak **ayarlayın.**
 
-     Metin kutusu denetimi artık betik eklenmesine karşı güvenli bir denetim olarak işaretlenir.
+     Metin kutusu denetimi artık betik eklemeye karşı güvenli bir denetim olarak işaretlenir.
 
-7. İletişim kutusunu kapatmak için **Tamam** düğmesini seçin.
+7. İletişim **kutusunu kapatmak** için Tamam düğmesini seçin.
 
-## <a name="marking-safe-controls-in-the-package-designer"></a>paket tasarımcısında Kasa denetimleri işaretleme
+## <a name="marking-safe-controls-in-the-package-designer"></a>Paket Kasa Denetimlerini İşaretleme
 
-#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-package-designer"></a>Denetimleri paket tasarımcısında güvenli veya güvenli olmayan şekilde işaretlemek için
+#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-package-designer"></a>Denetimleri Paket Tasarımcısı'nda güvenli veya güvenli değil olarak işaretlemek için
 
-1. Visual Web bölümü projesiyle bir SharePoint çözümü oluşturun.
+1. Görsel Web SharePoint projesiyle bir çözüm oluşturun.
 
-2. Web bölümüne iki denetim ekleyin: metin kutusu ve düğme. Adları sırasıyla varsayılan değerlerinde, TextBox1 ve Button1 'de bırakın.
+2. Web parçasına iki denetim ekleyin: metin kutusu ve düğme. Adları sırasıyla TextBox1 ve Button1 varsayılan değerlerinde bırakın.
 
-     Daha sonra kullanıldığından denetimin ad alanını bir yere göz atın.
+     Denetimin ad alanını not almak için daha sonra kullanacağız.
 
-3. Menü çubuğunda   >  Projeyi derlemek için derleme **Build Solution** ' ı seçin.
+3. Projeyi derlemek için menü çubuğunda **Derleme**  >  **Çözümü'ne** tıklayın.
 
-4. başka bir SharePoint çözümü oluşturun.
+4. Başka bir SharePoint oluşturun.
 
-5. **Çözüm Gezgini**' de *Package. Package* dosyası için kısayol menüsünü açın ve **Aç** ' ı seçerek **Paket Tasarımcısını** açın.
+5. Bu **Çözüm Gezgini** *Package.Package* dosyasının kısayol menüsünü açın ve ardından  Aç'ı seçen Paket **Tasarımcısı'ni açın.**
 
-6. **Paket tasarımcısında** **Gelişmiş** sekmesini seçin.
+6. Paket **Tasarımcısı'nda** Gelişmiş **sekmesini** seçin.
 
-7. **Ek derlemeler** altında, **Ekle** düğmesini seçin ve ardından listeden **mevcut derlemeyi Ekle** ' yi seçin.
+7. Ek **Derlemeler altında** Ekle düğmesini **seçin** ve ardından listeden Var **Olan Derlemeyi Ekle'yi** seçin.
 
-8. **varolan derlemeyi ekle** iletişim kutusunda **kaynak yolu**' nun yanındaki üç nokta (![mobil tasarımcı elips ASP.NET](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil tasarımcı elips")) düğmesini seçin.
+8. Var Olan **Derleme Ekle iletişim** kutusunda, Kaynak Yolu'ASP.NET yanındaki üç noktayı ( Mobil Tasarımcı üç nokta ) düğmesini **seçin.**![](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil Tasarımcı üç nokta")
 
-9. adım 1 ' de oluşturduğunuz SharePoint çözümünden derlemeyi seçin ve ardından **aç** düğmesini seçin.
+9. 1. Adımda oluşturduğunuz SharePoint çözümünden derlemeyi seçin ve ardından Aç **düğmesini** seçin.
 
-10. Bu örnek için **dağıtım hedefi** seçeneğini GlobalAssemblyCache olarak bırakın.
+10. Bu örnekte Dağıtım Hedefi **seçeneğini** GlobalAssemblyCache olarak bırakın.
 
-     Bu adım, derlemenin sistem genel derleme önbelleği 'ne (GAC) dağıtılmasını sağlar. Derlemenin Web uygulaması (bin) klasörüne dağıtılmasını istiyorsanız bunun yerine bu seçeneği belirleyin. daha fazla bilgi için bkz. [SharePoint Foundation 'da Web Bölümleri dağıtma](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14)).
+     Bu adım derlemenin sistem Genel Derleme Önbelleği'ne (GAC) dağıtımına neden olur. Derlemenin Web uygulaması (Bin) klasörüne dağıtması için bu seçeneği belirleyin. Daha fazla bilgi için [bkz. Web Bölümleri Foundation'SharePoint dağıtma.](/previous-versions/office/developer/sharepoint-2010/cc768621(v=office.14))
 
-11. **Kasa denetimleri** kutusunda, **yeni öğe eklemek için buraya tıklayın ' ı** seçin.
+11. Denetimler **Kasa yeni** bir öğe **eklemek için buraya tıklayın düğmesini** seçin.
 
-12. Aşağıdaki tablodan özellikler için değerleri girin.
+12. Aşağıdaki tabloda yer alan özelliklerin değerlerini girin.
 
     |Özellik Adı|Değer|
     |-------------------|-----------|
-    |Ad Alanı|Denetim için **BdcModelProject1. VisualWebPart1** gibi tam nitelikli ad alanı.|
-    |Tür adı|Button1|
-    |Bütünleştirilmiş kod adı|Güçlü bir derleme adı, örneğin: Microsoft. Office. SharePoint. Cliencizsions, sürüm = 14.0.0.0, Culture = neutral, PublicKeyToken = 71e9bce111e9429c.|
-    |Kasa|**Kasa** onay kutusunu temizleyin.|
-    |Kasa Betiğe karşı|**Kasa betikte karşı** onay kutusunu temizleyin.|
+    |Ad Alanı|Denetimin tam ad alanı, örneğin: **BdcModelProject1.VisualWebPart1.**|
+    |Tür Adı|Düğme1|
+    |Derleme Adı|Güçlü bir derleme adı, örneğin: Microsoft. Office. SharePoint. ClientExtensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c.|
+    |Kasa|Kasa **kutusunun** işaretini kaldırın.|
+    |Kasa Betikle Karşı|Komut Kasa **Karşı onay** kutusunu boş bırakın.|
 
     > [!NOTE]
-    > **Paket tasarımcısının** **Gelişmiş** sekmesinden eklenen derlemeler için **derleme adı** değeri bir belirteç olamaz, bu, kesin adlı bir derleme olmalıdır. Daha fazla bilgi için bkz. [Strong-Named derlemeleri oluşturma ve kullanma](/previous-versions/dotnet/netframework-4.0/xwb8f617(v=vs.100)).
+    > Paket **Tasarımcısı'nın** Gelişmiş sekmesi  aracılığıyla eklenen  derlemeler için Derleme Adı değeri bir belirteç olamaz, kesin adlandırılmış bir derleme olması gerekir. Daha fazla bilgi için, [bkz. Creating and Using Strong-Named Derlemeleri](/previous-versions/dotnet/netframework-4.0/xwb8f617(v=vs.100)).
 
-13. Başka bir güvenli denetim girişi oluşturmak için **sekme** tuşunu seçin.
+13. Başka bir **güvenli** denetim girişi oluşturmak için Sekme tuşuna basın.
 
-14. **Yeni bir öğe eklemek için buraya tıklayın** düğmesini seçin.
+14. Yeni öğe **eklemek için buraya tıklayın düğmesini yeniden** seçin.
 
-15. Aşağıdaki tablodan özellikler için değerleri girin.
+15. Aşağıdaki tabloda yer alan özelliklerin değerlerini girin.
 
     |Özellik Adı|Değer|
     |-------------------|-----------|
-    |Ad Alanı|Denetim için **BdcModelProject1. VisualWebPart1** gibi tam nitelikli ad alanı.|
-    |Tür adı|TextBox1|
-    |Bütünleştirilmiş kod adı|Güçlü bir derleme adı, örneğin: Microsoft. Office. SharePoint. Cliencizsions, sürüm = 14.0.0.0, Culture = neutral, PublicKeyToken = 71e9bce111e9429c.|
-    |Kasa|**Kasa** onay kutusunu seçin.|
-    |Kasa Betiğe karşı|**betiğe karşı Kasa** onay kutusunu seçin.|
+    |Ad Alanı|Denetimin tam ad alanı, örneğin: **BdcModelProject1.VisualWebPart1.**|
+    |Tür Adı|TextBox1|
+    |Derleme Adı|Güçlü bir derleme adı, örneğin: Microsoft. Office. SharePoint. ClientExtensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c.|
+    |Kasa|Veri **Kasa** kutusunu seçin.|
+    |Kasa Betikle Karşı|Komut Kasa **Karşı Onay** kutusunu seçin.|
 
-16. **Sekme** tuşunu seçin ve ardından iletişim kutusunu kapatmak için **Tamam** düğmesini seçin.
+16. Sekme **tuşuna** basın ve iletişim **kutusunu kapatmak** için Tamam düğmesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
-- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [Proje öğelerinde paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [Paket ve dağıtım SharePoint dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

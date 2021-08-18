@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a3a94c5df7281227f1bb31767258c2fd11de38e68496d940a3df972605dcc0c9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8395a35a2f0e5aa7481148562dc12b66da39e257
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452257"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064571"
 ---
 # <a name="idebugclassfieldenuminterfacesimplemented"></a>IDebugClassField::EnumInterfacesImplemented
 Bu sınıf tarafından uygulanan arabirimler için bir Numaralandırıcı oluşturur.

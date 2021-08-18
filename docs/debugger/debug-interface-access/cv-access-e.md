@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 98803034210b9897d6d40a2378791c8ce5385110589b05dd602fd27159e26059
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f784380e1c96a28c200ee2f7ab70cfd21c40a343
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121326580"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121766"
 ---
 # <a name="cv_access_e"></a>CV_access_e
 Üye işlevlerinin ve değişkenlerinin görünürlük kapsamını (erişim düzeyi) belirtir.

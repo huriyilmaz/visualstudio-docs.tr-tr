@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 926587b5579b3bf466e6cc67f5fd354106c5d2da7af06e6c3d3a42a38ef3fb69
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 815623537a8ac9f038f5405f7c8d11c1d55de8ab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362719"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121017"
 ---
 # <a name="halfquarter-texture-dimensions-variant"></a>Yarı/Çeyrek Doku Boyutları Çeşidi
 Hedef işlemeden doku boyutlarını azaltır.

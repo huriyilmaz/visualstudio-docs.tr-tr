@@ -1,6 +1,6 @@
 ---
-title: 3D modellerle çalışma
-description: Visual Studio 'da model düzenleyicisini kullanarak, DirectX tabanlı oyununuzda veya uygulamanızda kullanabileceğiniz 3B modeller oluşturma hakkında bilgi edinin.
+title: 3D Modellerle Çalışma
+description: DirectX tabanlı oyun veya uygulamanıza ek olarak Visual Studio Model Düzenleyicisi'ni kullanarak 3D model oluşturma hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,30 +8,31 @@ ms.assetid: fa035091-1354-4d1c-be44-4fb83860466f
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 9206fa8ced5ae60e58d353a9adae2234860670c8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cd58184c103b6af539a459fb5e26f7ab5a39f054
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896305"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122051397"
 ---
 # <a name="work-with-3d-models"></a>3B modeller ile çalışma
 
-Visual Studio 'da model düzenleyicisini kullanarak 3B modeller oluşturabilirsiniz. Modelleri DirectX tabanlı oyununuzda veya uygulamanızda kullanabilirsiniz.
+3D modeller oluşturmak için Visual Studio Düzenleyicisi'ni kullanabilirsiniz. Modelleri DirectX tabanlı oyun veya uygulamanıza kullanabilirsiniz.
 
 ## <a name="3d-models"></a>3B Modeller
 
-3B modeller nesnelerin şeklini 3B sahnede oldukları gibi tanımlar. Modeller temel, temel nesnelerin hiyerarşilerinden oluşturulan karmaşık nesneler, hatta tüm 3B sahneler olabilir. 3B nesne, 3B alanda ( *köşeler olarak bilinir*) noktaları, bu noktaların üzerinde oluşan üçgenler, çizgileri veya diğer temel öğeleri tanımlayan dizinleri ve köşe başına ya da basit temelinde (örneğin, yüzey normaller) uygulanabilecek öznitelikleri tanımlar. Ayrıca, bazı bilgiler nesne başına temelinde, örneğin, hangi gölgelendirici ve dokuların nesnenin benzersiz görünümünü sunabileceği için de uygulanabilir.
+3D modeller, nesnelerin 3D sahnedeki şeklini tanımlar. Modeller temel nesne, temel nesnelerin hiyerarşilerinden oluşturulan karmaşık nesneler, hatta 3D sahnelerin tamamı olabilir. 3B nesne, 3B alanda bulunan noktalardan (köşeler olarak *bilinir),* bu noktalardan oluşan üçgenleri, çizgileri veya diğer temelleri tanımlayan dizinlerden ve köşe başına veya temele göre uygulanabilecek özniteliklerden oluşur; örneğin, yüzey normalleri. Buna ek olarak, bazı bilgiler nesne başına temelinde uygulanabilir; örneğin, hangi gölgelendirici ve dokular nesneye benzersiz görünümünü verir?
 
-Model Düzenleyicisi, oyununuzda veya uygulamanızda kullanabileceğiniz temel 3B modeller oluşturmak için ihtiyacınız olan tek araçtır (malzeme özellikleri, dokular ve piksel gölgelendiricileriyle birlikte). Ya da, modelleri sonuçlandırmak için sanatçılara geçmeden önce Prototipleme ve test için kullanmak üzere yer tutucu modeller oluşturabilirsiniz.
+Model Düzenleyicisi, temel 3B modeller (malzeme özellikleri, dokular ve piksel gölgelendiricileri ile birlikte) oluşturmak için ihtiyacınız olan tek araçtır. Bu aracı oyun veya uygulamanıza ebilirsiniz. Veya, modelleri son olarak oluşturmak üzere ressamlarla etkileşim kurmadan önce, prototyping ve test için kullanmak üzere yer tutucu modeller oluşturabilirsiniz.
 
-Ayrıca, tam özellikli araçlar kullanılarak oluşturulmuş mevcut 3B modelleri görüntülemek ve resim varlıklarındaki sorunları gözlemlerseniz bunları değiştirmek için model düzenleyicisini de kullanabilirsiniz.
+Model Düzenleyicisi'ni tam özellikli araçlar kullanılarak oluşturulmuş mevcut 3D modelleri görüntülemek ve sanat varlıklarıyla ilgili sorunları gözlemlerken bunları değiştirmek için de kullanabilirsiniz.
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Model Düzenleyicisi](../designers/model-editor.md)|3B modellerle çalışmak için Model Düzenleyicisi ' nin nasıl kullanılacağını açıklar.|
-|[Model Düzenleyicisi örnekleri](../designers/how-to-create-a-basic-3-d-model.md)|Model Düzenleyicisi 'nin yaygın 3B modelleme görevlerini gerçekleştirmek için nasıl kullanılacağını gösteren konuların bağlantılarını sağlar.|
+|[Model Düzenleyicisi](../designers/model-editor.md)|3D modellerle çalışmak için Model Düzenleyicisi'ni kullanmayı açıklar.|
+|[Model Düzenleyicisi örnekleri](../designers/how-to-create-a-basic-3-d-model.md)|Yaygın 3D modelleme görevlerini gerçekleştirmek için Model Düzenleyicisi'ni kullanmayı gösteren konulara bağlantılar sağlar.|

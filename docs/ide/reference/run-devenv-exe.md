@@ -1,6 +1,6 @@
 ---
 title: -Run (devenv.exe)
-description: Belirtilen proje veya çözümü derlemek ve çalıştırmak için devenv Run komut satırı anahtarını nasıl kullanacağınızı öğrenin.
+description: Belirtilen projeyi veya çözümü derlemek ve çalıştırmak için Devenv çalıştır komut satırı anahtarını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -18,16 +18,16 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: a9dabe5c8569d18cf76f8c5c7f9d8ec16c7d1859f7b3609b72de4b78dd0854e6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7f3719ac3d0ff5f5a28a06ef25df1497e1c30d2b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121429166"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041054"
 ---
 # <a name="run-devenvexe"></a>/Run (devenv.exe)
 
-Belirtilen proje veya çözümü derler ve çalıştırır.
+Belirtilen projeyi veya çözümü derler ve çalıştırır.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -39,11 +39,11 @@ devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 
 - *SolutionName*
 
-  Bir çözüm dosyasının tam yolu ve adı.
+  Çözüm dosyasının tam yolu ve adı.
 
-- *ProjectName*
+- *Projeadı*
 
-  Bir proje dosyasının tam yolu ve adı.
+  Proje dosyasının tam yolu ve adı.
 
 - `/Out`*OutputFilename*
 
@@ -51,15 +51,15 @@ devenv {/Run|/R} {SolutionName|ProjectName} [/Out OutputFilename]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Belirtilen proje veya çözümü, etkin çözüm yapılandırması için belirtilen ayarlara göre derler ve çalıştırır. Bu anahtar, IDE 'yi başlatır ve proje veya çözüm çalışmayı tamamladıktan sonra etkin bırakır.
+Etkin çözüm yapılandırması için belirtilen ayarlara göre belirtilen projeyi veya çözümü derler ve çalıştırır. Bu anahtar IDE'nin başlatılmasını sağlar ve proje veya çözüm çalışma tamamlandıktan sonra etkin durumda bırakır.
 
-- Boşluk içeren dizeleri çift tırnak işaretleri içine alın.
+- Çift tırnak içinde boşluk içeren dizeleri içine alın.
 
-- Hatalar da dahil olmak üzere Özet bilgiler, **komut** penceresinde veya anahtarla belirtilen herhangi bir günlük dosyasında görüntülenebilir `/Out` .
+- Hatalar da dahil olmak üzere özet bilgileri Komut penceresinde **veya** anahtarıyla belirtilen herhangi bir günlük dosyasında `/Out` görüntülenebilir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, `MySolution` etkin dağıtım yapılandırması kullanılarak çözüm çalıştırılır.
+Bu örnek, etkin dağıtım `MySolution` yapılandırmasını kullanarak çözümü çalıştırır.
 
 ```shell
 devenv /run "%USERPROFILE%\source\repos\MySolution\MySolution.sln"

@@ -11,14 +11,15 @@ ms.assetid: c472830f-c3eb-46ab-9498-cd637763d241
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a7bde81aadd179e6b09b2e46e7f0789a7433232
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: fe88b4c523e71f9100c67736cfbc2f224df16c93
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155917"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121348"
 ---
 # <a name="idiasymbolget_oemid"></a>IDiaSymbol::get_oemId
 Simgenin özgün ekipman üreticisi (OEM) KIMLIĞI değerini alır.

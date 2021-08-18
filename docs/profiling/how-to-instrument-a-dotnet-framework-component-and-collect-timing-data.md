@@ -12,12 +12,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: f2df7702884071787292b335a9da9f7b6dfa43644890276035ba5b1e80de757e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 86421cef936a14b10f211c9660e9d920fa97bd3d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121333021"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107660"
 ---
 # <a name="how-to-instrument-a-stand-alone-net-framework-component-and-collect-timing-data-with-the-profiler-from-the-command-line"></a>Nasıl yapılır: Tek başına bir .NET Framework bileşenini izleme ve komut satırından profil oluşturucu ile zamanlama verileri toplama
 Bu konuda, gibi bir Profil Oluşturma Araçları için komut satırı araçlarının nasıl [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .NET Framework araçları açıklanmıştır.*exe veya* . *dll* dosyası ve ayrıntılı zamanlama verileri toplamak için.

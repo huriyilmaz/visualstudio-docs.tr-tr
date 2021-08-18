@@ -15,16 +15,16 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8d6fef099eb827f2d618a91642fc88316611edf874bff14a2dae5a6cb27610f2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 53bed31e8f927cc8687fbfb826e53712316227a1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121399099"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122040573"
 ---
 # <a name="c-code-snippets"></a>C# kod parçacıkları
 
-Kod parçacıkları, kodunuza hızla ekleyebilirsiniz hazır kod parçacıklarıdır. Örneğin, kod `for` parçacığı boş bir döngü `for` oluşturur. Bazı kod parçacıkları, kod satırlarını seçmenize ve ardından seçilen kod satırlarını içeren bir kod parçacığı seçmenize olanak sağlayan kod parçacıklarıyla çevreler. Örneğin, kod satırlarını seçerek kod parçacığını etkinleştirerek döngü bloğunda bu kod satırlarının yer alan `for` `for` bir döngü oluşturur. Kod parçacıkları program kodu yazmayı daha hızlı, daha kolay ve daha güvenilir hale getirir.
+Kod parçacıkları, kodunuza hızla ekley kodunuz için hazır kod parçacıklarıdır. Örneğin, kod `for` parçacığı boş bir döngü `for` oluşturur. Bazı kod parçacıkları, kod satırlarını seçmenize ve ardından seçilen kod satırlarını içeren bir kod parçacığı seçmenize olanak sağlayan kod parçacıklarıyla çevreler. Örneğin, kod satırlarını seçerek kod parçacığını etkinleştirerek döngü bloğunda bu kod satırlarının yer alan `for` `for` bir döngü oluşturur. Kod parçacıkları program kodu yazmayı daha hızlı, daha kolay ve daha güvenilir hale getirir.
 
 İmleç konuma bir kod parçacığı ekleyebilirsiniz veya seçili olan kodun çevresini çevreleyen kod parçacığını ekleyebilirsiniz. Kod Parçacığı Ekleme, **IntelliSense** menüsündeki Kod Parçacığı Ekle veya Surround **With** komutları aracılığıyla  veya **sırasıyla Ctrl** K , X veya Ctrl K , S klavye kısayolları kullanılarak +   + çağrılır.
 
@@ -36,7 +36,7 @@ Varsayılan olarak aşağıdaki kod parçacıkları C# Visual Studio dahil edili
 
 |Ad (veya kısayol)|Açıklama|Kod parçacığı eklemek için geçerli konumlar|
 | - |-----------------| - |
-|#if|Bir [#if](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-if) yönergesi ve bir [#endif](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endif) oluşturur.|Hiçbir yere.|
+|#if|Bir [#if](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-if) yönergesi ve bir [#endif](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endif) yönergesi oluşturur.|Hiçbir yere.|
 |#region|Bir [#region](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region) yönergesi ve bir [#endregion](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-endregion) yönergesi oluşturur.|Hiçbir yere.|
 |~|[İçeren sınıf](/dotnet/csharp/programming-guide/classes-and-structs/destructors) için bir sonlandırıcı (yıkıcı) oluşturur.|Bir sınıfın içinde.|
 |özniteliği|sınıfından türeten bir sınıf için bildirim <xref:System.Attribute> oluşturur.|Bir ad alanının içinde (genel ad alanı dahil), bir sınıf veya yapı.|
@@ -57,7 +57,7 @@ Varsayılan olarak aşağıdaki kod parçacıkları C# Visual Studio dahil edili
 |arabirim|Arabirim [bildirimi](/dotnet/csharp/language-reference/keywords/interface) oluşturur.|Bir ad alanının içinde (genel ad alanı dahil), bir sınıf veya yapı.|
 |Çağırmak|Bir olayı güvenli bir şekilde çağıran bir blok oluşturur.|Bir yöntemin, dizinenin, özellik erişimcinin veya olay erişimcinin içinde.|
 |iterator|Bir bir birerator oluşturur.|Bir sınıfın veya yapının içinde.|
-|iterindex|İç içe geçmiş bir sınıf kullanarak "adlandırılmış" bir iterator ve dizinleyici çifti oluşturur.|Bir sınıfın veya yapının içinde.|
+|iterindex|İç içe geçmiş bir sınıf kullanarak bir "adlandırılmış" iterator ve dizinleyici çifti oluşturur.|Bir sınıfın veya yapının içinde.|
 |lock|Kilit [bloğu](/dotnet/csharp/language-reference/keywords/lock-statement) oluşturur.|Bir yöntemin, dizinenin, özellik erişimcinin veya olay erişimcinin içinde.|
 |Mbox|için bir çağrı <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> oluşturur. için bir başvuru eklemeniz *System.Windows.Forms.dll.*|Bir yöntemin, dizinenin, özellik erişimcinin veya olay erişimcinin içinde.|
 |ad alanı|Bir ad [alanı bildirimi](/dotnet/csharp/language-reference/keywords/namespace) oluşturur.|Bir ad alanının içinde (genel ad alanı dahil).|

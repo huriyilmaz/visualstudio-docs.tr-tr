@@ -1,6 +1,6 @@
 ---
 title: PROFILE_CURRENTID | Microsoft Docs
-description: İşlevin, özel olarak belirtilen bir iş parçacığı veya işlem üzerinde çalışmasını sağlamak için PROFILE_CURRENTID nasıl kullanılacağını öğrenin.
+description: İşlevin özellikle PROFILE_CURRENTID iş parçacığında veya işlemde çalışmasına neden olmak için bu işlevin nasıl kullanılamayacaklarını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,28 +9,29 @@ ms.assetid: 55ccf665-a05e-48c3-adf7-7714c0a9aaef
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e5c888e1b285bb92ea44c32e26834f16668b8dd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0cb855db8f233a35567188c5f44f7e9a3d972de7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99936372"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060849"
 ---
 # <a name="profile_currentid"></a>PROFILE_CURRENTID
-PROFILE_CURRENTID, NameProfile, StartProfile, StopProfile, SuspendProfile ve ResumeProfile işlevlerine yapılan çağrıda iş parçacığı KIMLIĞI veya işlem KIMLIĞI için sözde belirteci döndürür. İşlevin, özel olarak belirtilen bir iş parçacığı veya işlem üzerinde çalışmasını sağlamak için bunu kullanın.
+Bu PROFILE_CURRENTID NameProfile, StartProfile, StopProfile, SuspendProfile ve ResumeProfile işlevlerine yapılan bir çağrıda iş parçacığı kimliği veya işlem kimliği için sahte belirteci döndürür. İşlevin, özellikle belirtilen bir iş parçacığı yerine geçerli iş parçacığında veya işlemde çalışmasına neden olmak için bunu kullanın.
 
 ## <a name="example-1"></a>Örnek 1
- PROFILE_CURRENTID, *VSPerf. h* içinde şu şekilde tanımlanır:
+ PROFILE_CURRENTID *VSPerf.h içinde şu şekilde* tanımlanır:
 
 ```cpp
 static const unsigned int PROFILE_CURRENTID = (unsigned int)-1;
 ```
 
 ## <a name="example-2"></a>Örnek 2
- Aşağıdaki örnekte PROFILE_CURRENTID gösterilmektedir. Örnek, [StartProfile](../profiling/startprofile.md) işlevine yapılan çağrıda geçerli iş parçacığını tanımlayan bir parametre olarak PROFILE_CURRENTID kullanır.
+ Aşağıdaki örnekte, aşağıdaki PROFILE_CURRENTID. Örnek, PROFILE_CURRENTID [startProfile](../profiling/startprofile.md) işlevine yapılan bir çağrıda geçerli iş parçacığını tanımlayan bir parametre olarak kullanır.
 
 ```cpp
 void ExerciseProfileCurrentID()
@@ -60,7 +61,7 @@ void ExerciseProfileCurrentID()
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Visual Studio profil oluşturma API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
 - [NameProfile](../profiling/nameprofile.md)
 - [ResumeProfile](../profiling/resumeprofile.md)
 - [StartProfile](../profiling/startprofile.md)

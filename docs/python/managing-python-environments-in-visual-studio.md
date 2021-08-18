@@ -10,12 +10,12 @@ ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2492114f03fa7da74993928ba062279fbd681b2c2ee6e61d64b012c59a59c262
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e75f433c3949ecb623dbe14ee7289060f7cc463b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121230748"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038597"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio'de Python ortamları oluşturma ve yönetme
 
@@ -94,7 +94,7 @@ Listelenen her ortamın sağ tarafından, bu ortam için etkileşimli bir **penc
 ::: moniker-end
 
 > [!Note]
-> Bu Visual Studio system-site-packages seçeneğine uygun olsa da, bunu sistem içinde değiştirmek için bir Visual Studio.
+> Bu Visual Studio system-site-packages seçeneğine uygun olsa da, bunu sistem içinde değiştirmek için bir yol Visual Studio.
 
 ### <a name="what-if-no-environments-appear"></a>Ortam görünmüyorsa ne olur?
 
@@ -105,7 +105,7 @@ Bilgisayarınızda Python yorumlayıcınız olduğunu biliyorsanız ancak Visual
 > [!Tip]
 > Visual Studio, python 2.7.11'den 2.7.14'e yükseltme gibi mevcut yorumlayıcı güncelleştirmelerini python.org. Yükleme işlemi sırasında, eski ortam güncelleştirme yerinde olmadan önce **Python** Ortamları listesinden kaybolur.
 >
-> Ancak, dosya sistemini kullanarak bir yorumlayıcıyı ve ortamını el ile Visual Studio konum hakkında bilginiz olmayacaktır. Daha fazla bilgi için [bkz. Yorumlayıcıyı taşıma.](installing-python-interpreters.md#move-an-interpreter)
+> Ancak, dosya sistemini kullanarak bir yorumlayıcıyı ve ortamını el ile Visual Studio yeni konumu bilmiyor olursanız. Daha fazla bilgi için [bkz. Yorumlayıcıyı taşıma.](installing-python-interpreters.md#move-an-interpreter)
 
 ### <a name="types-of-environments"></a>Ortam türleri
 
@@ -113,15 +113,15 @@ Visual Studio, sanal ve conda ortamları ile çalışabilirsiniz.
 
 #### <a name="global-environments"></a>Genel ortamlar
 
-Her Python yüklemesi (örneğin, Python 2.7, Python 3.6, Python 3.7, Anaconda 4.4.0 vb., bkz. [Python yorumlayıcılarını](installing-python-interpreters.md)yükleme) kendi genel ortamını *sürdürür.* Her ortam belirli Python yorumlayıcısından, standart kitaplığına, önceden yüklenmiş paket kümesine ve bu ortam etkinleştirildiğinde yüklemiş ek paketlerden oluşur. Bir paketi genel bir ortama yüklemek, paketi bu ortamı kullanan tüm projelerin kullanımına sunar. Ortam, dosya sisteminin korumalı bir alanında *(örneğin, c:\program dosyaları* içinde) bulunuyorsa, paketleri yüklemek için yönetici ayrıcalıkları gerekir.
+Her Python yüklemesi (örneğin, Python 2.7, Python 3.6, Python 3.7, Anaconda 4.4.0 vb., bkz. [Python yorumlayıcılarını](installing-python-interpreters.md)yükleme) kendi genel ortamını *sürdürür.* Her ortam belirli Python yorumlayıcısından, standart kitaplığına, önceden yüklenmiş bir paket kümesine ve bu ortam etkinleştirildiğinde yüklemiş ek paketlerden oluşur. Bir paketi genel bir ortama yüklemek, paketi bu ortamı kullanan tüm projelerin kullanımına sunar. Ortam, dosya sisteminin korumalı bir alanında *(örneğin, c:\program dosyaları* içinde) bulunuyorsa, paketleri yüklemek için yönetici ayrıcalıkları gerekir.
 
 Genel ortamlar, bilgisayar üzerinde tüm projeler tarafından kullanılabilir. Bu Visual Studio, bir proje için özel olarak farklı bir ortam seçmedikçe tüm projeler için kullanılan varsayılan olarak bir genel ortam seçersiniz. Daha fazla bilgi için [bkz. Proje için ortam seçme.](selecting-a-python-environment-for-a-project.md)
 
 #### <a name="virtual-environments"></a>Sanal ortamlar
 
-Küresel bir ortamda çalışmak, çalışmaya başlamanın kolay bir yolu olsa da, bu ortam zaman içinde farklı projeler için yüklemiş olduğunuz birçok farklı paketle karmaşık hale gelir. Bu tür dağınıklıklar, uygulamanın bilinen sürümlere sahip belirli bir paket kümesine karşı kapsamlı bir şekilde test sınanmasını zorlaştırır. Bu, derleme sunucusunda veya web sunucusunda tam olarak ayarlayışınız ortam t türlerindedir. İki proje uyumsuz paketler veya aynı paketin farklı sürümlerine ihtiyaç olduğunda da çakışmalar oluşabilir.
+Küresel bir ortamda çalışmak, çalışmaya başlamanın kolay bir yolu olsa da, bu ortam zaman içinde farklı projeler için yüklemiş olduğunuz birçok farklı paketle karmaşık hale gelir. Bu tür dağınıklıklar, uygulamanın bilinen sürümlere sahip belirli bir paket kümesine karşı kapsamlı bir şekilde test sınanmasını zorlaştırır. Bu, derleme sunucusunda veya web sunucusunda tam olarak ayarlayışınız ortam t türlerindedir. İki proje uyumsuz paketler veya aynı paketin farklı sürümlerini gerektirirken de çakışmalar oluşabilir.
 
-Bu nedenle geliştiriciler genellikle bir proje için *sanal ortam* oluşturabilir. Sanal ortam, projesinde belirli bir yorumlayıcının kopyasını içeren bir alt klasördir. Sanal ortamı etkinleştirerek, yüklemiş olduğunuz tüm paketler yalnızca o ortamın alt klasörüne yüklenir. Daha sonra bu ortamda bir Python programı çalıştırarak yalnızca bu belirli paketlerde çalıştırılanın olduğunu bilirsiniz.
+Bu nedenle geliştiriciler genellikle bir proje için *sanal ortam* oluşturabilir. Sanal ortam, projesinde belirli bir yorumlayıcının kopyasını içeren bir alt klasördir. Sanal ortamı etkinleştirerek, yüklemiş olduğunuz tüm paketler yalnızca o ortamın alt klasörüne yüklenir. Ardından bu ortamda bir Python programı çalıştırsanız, yalnızca bu belirli paketlere karşı çalıştırılı olduğunu bilirsiniz.
 
 Visual Studio proje için sanal ortam oluşturmaya yönelik doğrudan destek sağlar. Örneğin, *requirements.txt* içeren bir proje açar veya bu dosyayı içeren bir şablondan proje oluşturursanız, Visual Studio otomatik olarak bir sanal ortam oluşturmanızı ve bu bağımlılıkları yüklemeni ister.
 
@@ -131,7 +131,7 @@ Visual Studio sanal ortamdan bir *requirements.txt* dosyası oluşturmak için b
 
 #### <a name="conda-environments"></a>Conda ortamları
 
-Conda ortamı, araç kullanılarak veya `conda` 2017 sürüm 15.7 ve Visual Studio tümleşik conda yönetimi ile oluşturulur. (Anaconda veya Miniconda gerektirir; bu, Visual Studio yükleyicisi aracılığıyla kullanılabilir, [bkz. Yükleme.)](installing-python-support-in-visual-studio.md#visual-studio-2019-and-visual-studio-2017)
+Conda ortamı, araç kullanılarak veya `conda` 2017 sürüm 15.7 ve Visual Studio tümleşik conda yönetimiyle oluşturulur. (Anaconda veya Miniconda gerektirir, bu yükleyici aracılığıyla Visual Studio, bkz. [Yükleme.)](installing-python-support-in-visual-studio.md#visual-studio-2019-and-visual-studio-2017)
 
 ::: moniker range="vs-2017"
 
@@ -145,7 +145,7 @@ Conda ortamı, araç kullanılarak veya `conda` 2017 sürüm 15.7 ve Visual Stud
 
     ![Conda ortamının başarıyla oluşturulması](media/environments/environments-conda-2.png)
 
-1. Bu Visual Studio proje için Bir ortam seçin konusunda açıklandığı gibi bir proje için conda [ortamını etkinleştirebileceksiniz.](selecting-a-python-environment-for-a-project.md)
+1. Bu Visual Studio proje için bir ortam seçin konusunda açıklandığı gibi bir proje için conda ortamını etkinleştirerek diğer tüm [ortamlar gibi etkinleştirebileceksiniz.](selecting-a-python-environment-for-a-project.md)
 
 1. Ortama paket yüklemek için Paketler sekmesini [kullanın.](python-environments-window-tab-reference.md#packages-tab)
 ::: moniker-end

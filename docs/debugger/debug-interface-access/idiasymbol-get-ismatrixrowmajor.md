@@ -1,6 +1,6 @@
 ---
-description: Matrisin satır ana dalı olup olmadığını belirtir.
-title: IDiaSymbol::get_isMatrixRowMajor | Microsoft Docs
+description: Matrisin satır birincil olup olmadığını belirtir.
+title: 'IDiaSymbol:: get_isMatrixRowMajor | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fe081bea2e3bb2f7b3fd8cabbdc517e632ac6b0838fe2c612bed54468e334d65
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7cd7953e62e52ba1e5deb033f9d18cdda96d2386
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420633"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066132"
 ---
 # <a name="idiasymbolget_ismatrixrowmajor"></a>IDiaSymbol::get_isMatrixRowMajor
-Matrisin satır ana dalı olup olmadığını belirtir.
+Matrisin satır birincil olup olmadığını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT get_isMatrixRowMajor(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Matrisin satır ana `BOOL` verisi olup olmadığını belirten bir işaretçi.
+dışı `BOOL` Matrisin satır birincil olup olmadığını belirten bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

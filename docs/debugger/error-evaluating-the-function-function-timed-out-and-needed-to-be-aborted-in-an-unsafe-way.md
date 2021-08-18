@@ -1,5 +1,5 @@
 ---
-title: İşlevin &apos; değerlendirilmesi &apos; zaman | Microsoft Docs
+title: İşlevin &apos; değerlendirilmesi zaman içinde zamanlandı ve işlevin güvenli olmayan bir şekilde &apos; iptal | Microsoft Docs
 description: "Tam ileti metni: 'işlev' işlevinin değerlendirilmesi zaman doldu ve güvenli olmayan bir şekilde iptal edildi."
 ms.date: 06/18/2021
 ms.topic: error-reference
@@ -9,22 +9,23 @@ f1_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 94c308e9ec960f744a98f0f930999df36afff475
-ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
+ms.openlocfilehash: d47f16e6f428b5f36953218c0519c61fe650f72f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112925013"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121135"
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Hata: İşlevin değerlendirme &#39;zaman&#39; ve güvenli olmayan bir şekilde iptal etmek gerekiyor
 
 Tam ileti metni: 'işlev' işlevinin değerlendirilmesi zaman doldu ve güvenli olmayan bir şekilde iptal edildi. Bu, hedef işlemi bozmuş olabilir.
 
-.NET nesnelerinin durumunu incelemeyi kolaylaştırmak için hata ayıklayıcı otomatik olarak hata ayıklama işlemini ek kod çalıştırmaya zorlar (genellikle özellik getter yöntemleri ve ToString işlevleri). Çoğu senaryoda bu işlevler hızla tamamlanır ve hata ayıklama çok daha kolay hale getirir. Ancak hata ayıklayıcısı uygulamayı korumalı alanda çalıştırmaz. Sonuç olarak, yanıt vermeyi durduran yerel bir işleve çağrılan bir özellik getter veya ToString yöntemi kurtarılmayabilirsiniz uzun zaman aşımlarına yol açabilirsiniz. Bu hata iletisiyle karşılaşırsanız bu oluştu.
+.NET nesnelerinin durumunu incelemeyi kolaylaştırmak için hata ayıklayıcı otomatik olarak hata ayıklama işlemini ek kod çalıştırmaya zorlar (genellikle özellik getter yöntemleri ve ToString işlevleri). Çoğu senaryoda bu işlevler hızla tamamlanır ve hata ayıklama çok daha kolay hale getirir. Ancak hata ayıklayıcısı uygulamayı korumalı alanda çalıştırmaz. Sonuç olarak, yanıt vermeyi durduran yerel bir işleve çağrılan bir özellik alma veya ToString yöntemi kurtarılmayabilirsiniz uzun zaman aşımlarına yol açabilirsiniz. Bu hata iletisiyle karşılaşırsanız bu oluştu.
 
-Bu sorunun yaygın nedenlerinden biri, hata ayıklayıcısı bir özelliği değerlendirerek yalnızca inceleyen iş parçacığının yürütülmesinin gerekli olmasıdır. Bu nedenle özelliği hata ayıklamalı uygulamanın içinde diğer iş parçacıklarının çalışması için bekliyorsa ve .NET Çalışma Zamanı'nın kesintiye uğratmayacağı bir şekilde bekliyorsa bu sorun meydana gelir.
+Bu sorunun yaygın nedenlerinden biri, hata ayıklayıcısı bir özelliği değerlendirerek yalnızca inceleyen iş parçacığının yürütülmesinin gerekli olmasıdır. Bu nedenle, özelliği hata ayıklamalı uygulamanın içinde diğer iş parçacıklarının çalışması için bekliyorsa ve .NET Çalışma Zamanı'nın kesintiye uğratmayacağı bir şekilde bekliyorsa, bu sorun meydana gelir.
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
@@ -38,7 +39,7 @@ Hata iletisi hata ayıklayıcının çağırmaya çalıştığı işlevin adın�
   -veya-
 * (ToString için) Türünde bir [DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md) özniteliği tanımlayın ve hata ayıklayıcının ToString dışında bir şeyi değerlendirmesine sahip olabilirsiniz.
   -veya-
-* (Özellik alan için) [Özelliğine System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)](/dotnet/api/system.diagnostics.debuggerbrowsableattribute) özniteliğini koy. API uyumluluk nedenleriyle özelliğinin kalması gereken bir yönteminiz varsa, ancak gerçekten bir yöntem olması gerekirse bu yararlı olabilir.
+* (Özellik alan için) [Özelliğine System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)](/dotnet/api/system.diagnostics.debuggerbrowsableattribute) özniteliğini koymak. API uyumluluk nedenleriyle özelliğinin kalması gereken bir yönteminiz varsa, ancak gerçekten bir yöntem olması gerekirse bu yararlı olabilir.
 
 ## <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>Çözüm #2: Hedef kodun hata ayıklayıcıdan değerlendirmeyi durdurmasını istemesini iste
 

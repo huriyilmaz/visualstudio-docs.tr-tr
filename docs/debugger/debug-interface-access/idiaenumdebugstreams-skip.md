@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinde belirtilen sayıda hata ayıklama akışını atlar.
-title: 'IDiaEnumDebugStreams:: Skip | Microsoft Docs'
+description: Bir numaralama dizisinde belirtilen sayıda hata ayıklama akışını atlar.
+title: IDiaEnumDebugStreams::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7840b52f476855f1447dd0f28910b291d00872b89f882d1328707ae5677961ef
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6c6c83d059455cc6046547af079de022bb7447d3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380601"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134620"
 ---
 # <a name="idiaenumdebugstreamsskip"></a>IDiaEnumDebugStreams::Skip
-Sabit Listesi dizisinde belirtilen sayıda hata ayıklama akışını atlar.
+Bir numaralama dizisinde belirtilen sayıda hata ayıklama akışını atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT Skip (
 #### <a name="parameters"></a>Parametreler
  `celt`
 
-'ndaki Atlanacak numaralandırma dizisindeki hata ayıklama akışlarının sayısı.
+[in] Atlama için numaralama dizisinde hata ayıklama akışlarının sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, öğesini döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlanacak daha fazla kayıt yoksa döndürür.
+ Başarılı olursa; `S_OK` aksi takdirde, `S_FALSE` atlanabilecek başka kayıt yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

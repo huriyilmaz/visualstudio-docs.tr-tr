@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7788ed81379d2ec1a5ec1f392ca3a6fb51d3b0a88de6f599eee8fcdca59d7f14
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5fa8b695b624ca0edcbe64afcc0e771e51db1754
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121449176"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050578"
 ---
 # <a name="idebugprogramnode2getprogramname"></a>IDebugProgramNode2::GetProgramName
 Programın adını alır.

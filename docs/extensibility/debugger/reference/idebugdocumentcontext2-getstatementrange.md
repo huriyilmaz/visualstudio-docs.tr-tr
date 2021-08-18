@@ -11,17 +11,18 @@ ms.assetid: bc94851a-0ec4-47ea-99c7-0a585e54e726
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 37e08385c541c00e4f15f833487fc69b3acf12ce
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 74078c5b3adf4a202e4169b060a5076955c4e51a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066587"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064402"
 ---
 # <a name="idebugdocumentcontext2getstatementrange"></a>IDebugDocumentContext2::GetStatementRange
 Belge bağlamının dosya deyimleri aralığını alır.

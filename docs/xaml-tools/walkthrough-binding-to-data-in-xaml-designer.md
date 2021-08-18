@@ -13,12 +13,12 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-xaml-tools
-ms.openlocfilehash: 9b6ad5e0286a6faedf60718fd1533d83cb3a5fcd7fdf2104b89d3bb09e69da91
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 084f91e368c4addaebe53d768966459080f9d7a1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440249"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122037791"
 ---
 # <a name="walkthrough-bind-to-data-in-xaml-designer"></a>İzlenecek yol: XAML Tasarımcısı’nda verilere bağlama
 
@@ -32,7 +32,7 @@ Bu XAML Tasarımcısı, çalışma panosu ve veri bağlama özelliklerini ayarla
 
 1. Projeye **BindingTest adını ve** ardından Tamam **düğmesini** seçin.
 
-1. **MainWindow.xaml.cs** (veya **MainWindow.xaml.vb**) dosyasını açın ve aşağıdaki kodu ekleyin. C# içinde kodu ad alanına ekleyin `BindingTest` (dosyada son kapatma parantezi öncesinde). Bu Visual Basic yeni sınıfı eklemeniz gerekir.
+1. **MainWindow.xaml.cs** (veya **MainWindow.xaml.vb**) dosyasını açın ve aşağıdaki kodu ekleyin. C# içinde kodu ad alanına `BindingTest` ekleyin (dosyada son kapatma parantezi öncesinde). Bu Visual Basic yeni sınıfı eklemeniz gerekir.
 
    ```csharp
    public class ShoppingCart : DependencyObject
@@ -72,7 +72,7 @@ Bu XAML Tasarımcısı, çalışma panosu ve veri bağlama özelliklerini ayarla
 
 ## <a name="to-bind-the-itemcount-property-to-a-textblock-control"></a>ItemCount özelliğini textBlock denetimine bağlamak için
 
-1. Bu Çözüm Gezgini **MainWindow.xaml** kısayol menüsünü açın ve **Görünüm Tasarımcısı.**
+1. Bu Çözüm Gezgini **MainWindow.xaml** kısayol menüsünü açın ve öğesini **Görünüm Tasarımcısı.**
 
 1. Araç Kutusunda bir Kılavuz [denetimi seçin](xref:Windows.UI.Xaml.Controls.Grid) ve forma ekleyin.
 

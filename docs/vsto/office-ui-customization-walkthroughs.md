@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 24e65c92cacd7cbc7f3fd9cbda772e24c511cc21edfc7c465034af70557fe2a4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8ec2586cd7474feee1fbd03bec3ba6a1b0c3cd40
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121408103"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046431"
 ---
 # <a name="office-ui-customization-walkthroughs"></a>Office UI özelleştirmesi izlenecek yollar
   aşağıdaki izlenecek yollarda, belge düzeyi özelleştirmeler ve VSTO eklentileri kullanarak Microsoft Office uygulamalarının kullanıcı arabirimini (uı) özelleştirebileceğiniz yollar gösterilmektedir.

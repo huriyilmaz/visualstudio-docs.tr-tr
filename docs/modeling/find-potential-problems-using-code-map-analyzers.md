@@ -1,6 +1,6 @@
 ---
 title: Kod haritası çözümleyicilerini kullanarak olası sorunları bulma
-description: Aşırı karmaşık veya geliştirme gerektiren kodu tanımlamanıza yardımcı olması için kod eşlemeleri üzerinde çözümleyicileri nasıl çalıştırabilirsiniz?
+description: Aşırı karmaşık olabilecek veya geliştirme gerektirebilecek kodu tanımanıza yardımcı olması için kod haritaları üzerinde Çözümleyicileri nasıl çalıştırabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,39 +13,40 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 8817e50ae96a27f6b3b76e28262390271c1fdf4c
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 89bc637364a6925c201d2e6fa7061bab2b51d10d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388860"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122040339"
 ---
 # <a name="find-potential-problems-using-code-map-analyzers"></a>Kod haritası çözümleyicilerini kullanarak olası sorunları bulma
 
-Aşırı karmaşık veya geliştirme gerektiren kodu tanımlamanıza yardımcı olması için kod eşlemeleri üzerinde çözümleyicileri çalıştırın. Örneğin, şu çözümleyicileri kullanabilirsiniz:
+Aşırı karmaşık olabilecek veya geliştirme gerektirebilecek kodu tanımlamanızı sağlamak için kod haritaları üzerinde çözümleyiciler çalıştırın. Örneğin, bu Çözümleyicileri kullanabilirsiniz:
 
-|**Şu kodu bulmak için:**|**Olup olmadığını görmek için bu alanları inceleme**|
+|**Olan kodu bulmak için**|**Bu alanı inceleyerek**|
 |-|-|
-|Döngüler veya döngüsel bağımlılıklar|Bunları basitleştirebilir ve bu döngüleri bozabilir olup olmadığınızı göz önünde bulundurabilirsiniz.|
-|Çok fazla bağımlılık var|Çok fazla işlev gerçekleştirmektedir veya bu alanların değiştirilmesinin etkisini belirlemek için kullanılır. İyi oluşturulmuş bir kod haritası en az sayıda bağımlılık gösterir. Kodun bakımını, değişikliklerini, testlerini ve yeniden kullanmalarını kolaylaştırmak için, bu alanları daha net tanımlanmış olacak şekilde yeniden düzenlemeyi veya benzer işlevleri gerçekleştiren kodu birleştirip birleştiremeyeceknizi düşünün.|
-|Bağımlılık yok|Bunlar gereklidir veya bu kodu kaldırmanız gerekip gerek yoktur.|
+|Döngüler veya dairesel bağımlılıklar|Bunları basitleştirebilir ve bu döngüleri bölebilir olup olmayacağını düşünebilirsiniz.|
+|Çok fazla bağımlılık|Bunlar çok fazla işlev gerçekleştiriyor veya bu alanların değiştirilmesini belirlemede etkiler. İyi biçimlendirilmiş bir kod eşlemesi, en az sayıda bağımlılığı gösterecektir. Kodu korumak, değiştirmek, test etmek ve yeniden kullanmak daha kolay hale getirmek için, bu alanların daha açık bir şekilde tanımlanması veya benzer işlevleri gerçekleştiren kodu birleştirebilmeniz için yeniden düzenleme yapıp yapamayacağını göz önünde bulundurun.|
+|Bağımlılık yok|Bunlar gereklidir veya bu kodu kaldırmanız gerekip gerekmediğini belirtir.|
 
-## <a name="analyze-code-maps"></a>Kod haritalarını analiz etme
+## <a name="analyze-code-maps"></a>Kod eşlemelerini çözümle
 
-Harita araç çubuğunda Düzen **Çözümleyicileri'ne**  >  ve ardından çalıştırmak istediğiniz çözümleyiciyi seçin:
+Harita araç çubuğunda, **Düzen**  >  **Çözümleyicileri**' ni ve ardından çalıştırmak istediğiniz çözümleyici 'yi seçin:
 
-|**Analyzer**|**Şu düğümleri tanımlamak için:**|
+|**Analyzer**|**Olan düğümleri belirlemek için**|
 |-|-|
-|**Döngüsel Başvuru Çözümleyicisi**|Birbirlerine döngüsel bağımlılıklar olması. **Not:**  Genel Türler grubunda yer **alan döngüsel** bağımlılıklar, grubu genişleten haritada gösterilmez.|
-|**Hub'ları Bul Çözümleyicisi**|Yüksek oranda bağlı düğümlerin ilk %25'inde yer almaktadır<br /><br /> **Haritada diğer tüm düğümleri gizlemek için**<br /><br /> - Haritanın kısayol menüsünü açın, Gelişmiş, **Seç,** **Seçimi** **Kaldır'ı gizle'yi seçin.**<br />     Harita, seçilmemiş düğümleri gizler ve çözümleyici yeni düğümleri hub olarak tanımlar.|
-|**Bağlantı Olmayan Düğüm Çözümleyicisi**|Başka hiçbir düğümden başvuru yok. **Dikkat:**  Kodun kullanılmadı olduğunu varsaymadan önce bu durumların her biri doğrulayın. XAML bağımlılıkları ve çalışma zamanı bağımlılıkları gibi bazı bağımlılıklar kodda statik olarak bulunamaz.|
+|**Döngüsel başvurular Çözümleyicisi**|Birbirini dairesel bağımlılıklardır. **Note:**  Grupları genişlettiğinizde, **Genel türler** grubundaki döngüsel bağımlılıklar haritada gösterilmez.|
+|**Hub Çözümleyicisi bulma**|Yüksek oranda bağlı düğümlerin üst %25 ' i<br /><br /> **Haritadaki tüm diğer düğümleri gizlemek için**<br /><br /> -Haritanın kısayol menüsünü açın, **Gelişmiş**' i seçin, Seç ' i **seçin** ve **seçimini gizleyin**.<br />     Harita seçilmemiş düğümleri gizler ve çözümleyici yeni düğümleri hub olarak tanımlar.|
+|**Başvurulmayan düğümler Çözümleyicisi**|Diğer düğümlerden başvuruları yoktur. **Dikkat:**  Kodun kullanılmadığını varsaymadan önce bu durumların her birini doğrulayın. XAML bağımlılıkları ve çalışma zamanı bağımlılıkları gibi belirli bağımlılıklar kodda statik olarak bulunamaz.|
 
-Kod eşlemesi çözümleyicileri, bunları uygulatktan sonra çalışmaya devam eder. Eşlemeyi değiştirirsiniz, uygulanan çözümleyiciler güncelleştirilmiş eşlemeyi otomatik olarak yeniden işler. Çözümleyici çalıştırmayı durdurmak için harita araç çubuğunda Düzen **Çözümleyicileri'ne**  >  **tıklayın.** Seçilen çözümleyiciyi kapatın.
+Kod Haritası Çözümleyicileri, uygulandıktan sonra çalışmaya devam edecektir. Eşlemeyi değiştirirseniz, uygulanan tüm çözümleyiciler, güncelleştirilmiş Haritayı otomatik olarak yeniden işler. Bir çözümleyici çalıştırmayı durdurmak için harita araç çubuğunda **Düzen**  >  **Çözümleyicileri**' ni seçin. Seçili çözümleyici 'yi devre dışı bırakın.
 
 > [!TIP]
-> Çok büyük bir haritanız varsa, çözümleyiciyi çalıştırmanız yetersiz bellek özel durumuna neden olabilir. Bu durumda, kapsamını azaltmak veya daha küçük bir tane oluşturmak için eşlemeyi düzenleyin ve ardından çözümleyiciyi çalıştırın.
+> Çok büyük bir haritanız varsa, bir çözümleyici çalıştırmak yetersiz bellek özel durumuna neden olabilir. Bu durumda, kapsamını daraltmak için haritayı düzenleyin veya daha küçük bir tane oluşturun ve ardından çözümleyici 'yi çalıştırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

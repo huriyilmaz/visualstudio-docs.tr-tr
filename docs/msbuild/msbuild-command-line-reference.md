@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 5de5bc1b9c3622453aca94f9f3e9c44e82d02fa693ddd56a77c9483ff7f61111
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c179ca35cd10f944a3a4c966b02267a53550de61
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370053"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136878"
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild komut satırı başvurusu
 
@@ -59,8 +59,8 @@ MSBuild.exe [Switches] [ProjectFile]
 |-noAutoResponse|-noautorsp|Otomatik olarak herhangi bir *MSBuild.rsp* dosyası dahil etme.|
 |-nodeReuse:`value`|-nr:`value`|Düğümler için yeniden kullanımı etkinleştirin MSBuild devre dışı bırakma. Aşağıdaki değerleri belirtebilirsiniz:<br /><br /> -   **True .** Sonraki derlemelerin bunları kullanamı için derleme tamam sonrasında düğümler kalır (varsayılan).<br />-   **False .** Derleme tamamlandıktan sonra düğümler kalmaz.<br /><br /> Düğüm, yürütülen projeye karşılık gelen bir düğüm. **-maxcpucount anahtarını dahil ediyorsanız,** birden çok düğüm eşzamanlı olarak yürütülür.|
 |-nologo||Başlangıç başlığı veya telif hakkı iletisi görüntülenmez.|
-|<a name="preprocess"></a> -preprocess[: `filepath` ]|-pp[: `filepath` ]|Derleme sırasında içe aktarılmış olan ve sınırları işaretlenmiş olan tüm dosyaların geneli çizerek tek, toplu bir proje dosyası oluşturun. Hangi dosyaların içe aktarılmış olduğunu, dosyaların nereden içe aktarılmış olduğunu ve derlemeye katkıda bulunan dosyaları daha kolay belirlemek için bu anahtarı kullanabilirsiniz. Bu anahtarı kullanırken proje yerleşik olarak yer alamaz.<br /><br /> belirtirsiniz, `filepath` toplanan proje dosyası dosyaya çıktı verir. Aksi takdirde çıkış konsol penceresinde görüntülenir.<br /><br /> öğesini kullanarak başka bir proje dosyasına proje dosyası ekleme hakkında bilgi için `Import` bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md) and [How to: Use](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)same target in multiple project files .|
-|-outputResultsCache[:cacheFile]|-orc[:cacheFile]|Derlemenin derleme MSBuild önbelleklerinin içeriğini yazacak olduğu çıktı önbelleği dosyası. Bu ayar yalıtılmış derlemeleri de etkinleştirir (-yalıt).|
+|<a name="preprocess"></a> -preprocess[: `filepath` ]|-pp[: `filepath` ]|Derleme sırasında içe aktarılmış olan ve sınırları işaretlenmiş olan tüm dosyaların geneli çizerek tek, toplu bir proje dosyası oluşturun. Hangi dosyaların içe aktarılmış olduğunu, dosyaların nereden içe aktarılmış olduğunu ve derlemeye katkıda bulunan dosyaları daha kolay belirlemek için bu anahtarı kullanabilirsiniz. Bu anahtarı kullanırken proje yerleşik olarak yer alamaz.<br /><br /> belirtirsiniz, `filepath` toplanan proje dosyası dosyaya çıktı verir. Aksi takdirde çıkış konsol penceresinde görüntülenir.<br /><br /> öğesini kullanarak başka bir proje dosyasına proje dosyası ekleme hakkında bilgi için bkz. Import `Import` [element (MSBuild)](../msbuild/import-element-msbuild.md) and [How to: Use](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)same target in multiple project files .|
+|-outputResultsCache[:cacheFile]|-orc[:cacheFile]|Derlemenin derlemenin MSBuild önbelleklerinin içeriğini yazacak olduğu çıktı önbellek dosyası. Bu ayar yalıtılmış derlemeleri de etkinleştirir (-yalıt).|
 |-profileEvaluation:`<file>`|-|Profiller MSBuild değerlendirmeyi içerir ve sonucu belirtilen dosyaya yazar. Belirtilen dosyanın uzantısı '.md' ise sonuç Markdown biçiminde oluşturulur. Aksi takdirde, sekmeyle ayrılmış bir dosya üretir.|
 |-property:`name`=`value`|-p:`name`=`value`|Belirtilen proje düzeyi özellikleri ayarlayın veya geçersiz kılın; burada `name` özellik adıdır ve `value` özellik değeridir. Aşağıdaki örnekte de olduğu gibi, her özelliği ayrı ayrı belirtin veya birden çok özelliği ayırmak için noktalı virgül veya virgül kullanın:<br /><br /> `-property:WarningLevel=2;OutDir=bin\Debug`|
 |-restore|-r|Gerçek `Restore` hedeflerin yapıl öncesinde hedefi çalıştırır.|

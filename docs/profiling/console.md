@@ -1,6 +1,6 @@
 ---
 title: Konsol | Microsoft Docs
-description: Yeni bir komut istemi penceresinde belirtilen uygulamayı başlatmak için VSPerfCmd.exe konsol seçeneğini kullanın. Bunu başlatma seçeneğiyle kullanmanız gerekir.
+description: Belirtilen uygulamayı yeni bir komut VSPerfCmd.exe başlatmak için Konsol seçeneğini kullanın. Bunu Başlat seçeneğiyle birlikte kullansanız gerekir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,18 +8,19 @@ ms.assetid: e825ba66-1383-46ad-8712-396bc9c14036
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 242a5234c2b7368a992676e12ecbdcd5ea36219f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: caaadb9329ef277cc5e82e787f56f9b3b2b96696
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955417"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039520"
 ---
 # <a name="console"></a>Konsol
-VSPerfCmd.exe **konsolu** seçeneği, yeni bir komut istemi penceresinde belirtilen uygulamayı başlatır. **Konsol** yalnızca VSPerfCmd **başlatma** seçeneğiyle birlikte kullanılabilir. Uygulama bir komut satırı uygulaması değilse, **konsolunun** hiçbir etkisi olmaz.
+Konsol VSPerfCmd.exe **seçeneği,** belirtilen uygulamayı yeni bir komut istemi penceresinde başlatır. **Konsol** yalnızca VSPerfCmd Başlatma **seçeneğiyle** kullanılabilir. Uygulama bir komut satırı uygulaması yoksa **Konsol'un** hiçbir etkisi yoktur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,13 +31,13 @@ VSPerfCmd.exe /Launch:AppName /Console
 #### <a name="parameters"></a>Parametreler
  Hiçbiri
 
-## <a name="required-options"></a>Gerekli seçenekler
- **Konsol** , yalnızca **başlatma** seçeneğini de içeren bir komut satırında belirtilebilir.
+## <a name="required-options"></a>Gerekli Seçenekler
+ **Konsol** yalnızca Başlat seçeneğini de içeren bir komut satırı üzerinde **belirtilebilir.**
 
- **Başlatma:** `AppName` Profil oluşturucuyu ve tarafından belirtilen uygulamayı başlatır `AppName` .
+ **Başlatma:** `AppName` tarafından belirtilen profilleyiciyi ve uygulamayı `AppName` başlatır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Tek başına uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [Web ASP.NET profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

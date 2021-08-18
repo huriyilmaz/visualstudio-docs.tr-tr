@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 11d17abbf327a0c826c459e52f93c4c38f37037271535b10ee1d890e541ee372
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1a56d81586fa855552eb5d400c43ddd03e39098b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370170"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136917"
 ---
 # <a name="how-to-use-environment-variables-in-a-build"></a>Nasıl kullanılır: Derlemede ortam değişkenlerini kullanma
 
@@ -43,12 +43,12 @@ Projeleri derlemek için genellikle proje dosyasında veya projenizi oluşturan 
 
 #### <a name="to-provide-a-default-value-for-a-property"></a>Bir özellik için varsayılan değer sağlamak için
 
-- Yalnızca `Condition` özelliğin değeri yoksa değeri ayarlamak için bir özellikte özniteliği kullanın. Örneğin, aşağıdaki kod özelliğini yalnızca ortam değişkeni ayarlanmazsa `ToolsPath` *c:\tools* `ToolsPath` olarak ayarlar:
+- Yalnızca `Condition` özelliğin değeri yoksa, değeri ayarlamak için bir özellikte özniteliği kullanın. Örneğin, aşağıdaki kod özelliğini yalnızca ortam değişkeni ayarlanmazsa `ToolsPath` *c:\tools* `ToolsPath` olarak ayarlar:
 
      `<ToolsPath Condition="'$(TOOLSPATH)' == ''">c:\tools</ToolsPath>`
 
     > [!NOTE]
-    > Özellik adları büyük/büyük/büyük harfe duyarlı değildir, `$(ToolsPath)` bu nedenle ve aynı özellik veya ortam `$(TOOLSPATH)` değişkenine başvurur.
+    > Özellik adları büyük/büyük/büyük harfe duyarlı değildir, bu `$(ToolsPath)` nedenle hem hem de aynı özellik veya ortam `$(TOOLSPATH)` değişkenine başvurur.
 
 ## <a name="example"></a>Örnek
 

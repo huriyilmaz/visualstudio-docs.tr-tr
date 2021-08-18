@@ -1,6 +1,6 @@
 ---
 title: 'Adım adım kılavuz: Sunucu üzerinde bir çalışma kitabına veri ekleme'
-description: ServerDocument sınıfını kullanarak veri kümelerini başlatmadan Microsoft Excel çalışma kitabında önbelleğe Excel veri kümesine veri ekleme hakkında bilgi alın.
+description: ServerDocument sınıfını kullanarak veri kümelerine başlamadan Microsoft Excel çalışma kitabında önbelleğe Excel veri kümesine veri ekleme hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -19,15 +19,15 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 2a308d7d5528501e9384b1c2c2b07084f3231cde24cc651c1a1e46d14bf916bd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 82c55c17c519c50cc2397ec7011a197eb4bbd255
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384021"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046184"
 ---
 # <a name="walkthrough-insert-data-into-a-workbook-on-a-server"></a>Adım adım kılavuz: Sunucu üzerinde bir çalışma kitabına veri ekleme
-  Bu kılavuzda, sınıfını kullanmaya başlamadan bir Microsoft Office Excel çalışma kitabında önbelleğe alınmış bir veri kümesine veri Excel nasıl eklenecekleri <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> açıklanır.
+  Bu kılavuzda, sınıfını kullanarak verileri başlatmadan bir Microsoft Office Excel çalışma kitabında önbelleğe alınmış bir veri kümesine veri Excel nasıl eklenecekleri <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> açıklanır.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
@@ -55,7 +55,7 @@ ms.locfileid: "121384021"
 
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
-- AdventureWorksLT örnek veritabanının Microsoft SQL Server veya Microsoft SQL Server Express örnek veritabanına erişim. AdventureWorksLT veritabanını CodePlex web [sitesinden indirebilirsiniz.](https://archive.codeplex.com/?p=SqlServerSamples) Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+- AdventureWorksLT örnek veritabanının Microsoft SQL Server veya Microsoft SQL Server Express örneğine erişim. AdventureWorksLT veritabanını CodePlex web [sitesinden indirebilirsiniz.](https://archive.codeplex.com/?p=SqlServerSamples) Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
   - SQL Server Management Studio veya SQL Server Management Studio Express kullanarak veritabanı eklemek için [bkz. Nasıl kullanılır: Veritabanı ekleme (SQL Server Management Studio)](/sql/relational-databases/databases/attach-a-database).
 
@@ -89,7 +89,7 @@ ms.locfileid: "121384021"
 ## <a name="define-a-dataset-in-the-class-library-project"></a>Sınıf kitaplığı projesinde veri kümesi tanımlama
  SQL Server 2005 için AdventureWorksLT veritabanından veri içeren türü SQL Server tanımlayın. Bu kılavuzun devamlarında, bu veri kümesine bir Excel çalışma kitabı projesinden ve konsol uygulaması projesinden başvuracağız.
 
- Veri kümesi, AdventureWorksLT *veritabanının* Product tablosunda yer alan verileri temsil eden türü belirli bir veri kümesidir. Türü yazilen veri kümeleri hakkında daha fazla bilgi için [bkz.](../data-tools/dataset-tools-in-visual-studio.md)Visual Studio.
+ Veri kümesi, AdventureWorksLT *veritabanının* Product tablosunda yer alan verileri temsil eden türü belirli bir veri kümesidir. Türü türüne sahip veri kümeleri hakkında daha fazla bilgi için [bkz.](../data-tools/dataset-tools-in-visual-studio.md)Visual Studio.
 
 ### <a name="to-define-a-typed-dataset-in-the-class-library-project"></a>Sınıf kitaplığı projesinde türü belirli bir veri kümesi tanımlamak için
 
@@ -119,7 +119,7 @@ ms.locfileid: "121384021"
 
      Bu adım adım kılavuzda bu nesnelerin ikisini de kullanacağız.
 
-9. Içinde **Çözüm Gezgini** **AdventureWorksDataSet'e sağ tıklayın ve Derleme'ye** **tıklayın.**
+9. Bu **Çözüm Gezgini** **AdventureWorksDataSet'e sağ tıklayın ve Derleme'ye** **tıklayın.**
 
      Projenin hatasız olarak derlemesini doğrulayın.
 
@@ -130,11 +130,11 @@ ms.locfileid: "121384021"
 
 1. Bu **Çözüm Gezgini** **AdventureWorksDataSet** çözümüne sağ tıklayın, Ekle'nin üzerine **gelin** ve ardından Yeni Çalışma **Project.**
 
-2. Şablonlar bölmesinde **Visual C#** veya **Visual Basic'ı** genişletin ve sonra **Office/SharePoint.**
+2. Şablonlar bölmesinde Visual **C#** veya **Visual Basic'ı** genişletin ve sonra **Office/SharePoint.**
 
 3. Genişletilmiş **Office/SharePoint** altında, **Office düğümünü** seçin.
 
-4. Proje şablonları listesinde Excel **2010** Çalışma Kitabı'Excel **projesini** seçin.
+4. Proje şablonları listesinde, Excel **2010** Çalışma Kitabı'Excel **2013 Çalışma Kitabı projesini** seçin.
 
 5. Ad **kutusuna** **AdventureWorksReport yazın.** Konumu değiştirmeyin.
 
@@ -142,14 +142,14 @@ ms.locfileid: "121384021"
 
      Office için Visual Studio Araçları Project **Sihirbazı** açılır.
 
-7. Yeni belge **oluştur'u seçin ve** Tamam'a **tıklayın.**
+7. Yeni belge **oluştur seçeneğinin seçili olduğundan** emin olun ve Tamam'a **tıklayın.**
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**AdventureWorksReport çalışma kitabını** tasarımcıda açar ve **AdventureWorksReport** projesini **Çözüm Gezgini.**
 
 ## <a name="add-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Veri kümesi çalışma kitabı projesinde veri Excel ekleme
- Veri kümelerini çalışma kitabınızda görüntüley Excel önce çalışma kitabı projesinde veri Excel eklemeniz gerekir.
+ Veri kümelerini çalışma kitabınızda Excel önce çalışma kitabı projesinde veri Excel eklemeniz gerekir.
 
-### <a name="to-add-the-dataset-to-the-data-sources-in-the-excel-workbook-project"></a>Veri kümelerini çalışma kitabı projesinde veri kaynaklarına Excel için
+### <a name="to-add-the-dataset-to-the-data-sources-in-the-excel-workbook-project"></a>Veri kümelerini çalışma kitabı projesinde veri Excel eklemek için
 
 1. Bu **Çözüm Gezgini** **AdventureWorksReport** projesinin altında **Sheet1.cs veya Sheet1.vb'ye** çift tıklayın. 
 

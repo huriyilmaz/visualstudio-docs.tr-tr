@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ce4c351bb2226fb1fee5e574b7a35fa7f4d380898d99be1805dce42aed9b0226
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 70013e4943e256871dfe12e38b364da1cc67c94f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121347290"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036959"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>TableAdapter'ları kullanarak veri kümelerini doldurma
 
@@ -117,28 +117,28 @@ Bu doğrudan yöntemleri oluşturmak istemiyorsanız TableAdapter'ın **Generate
 
 ## <a name="tableadapter-support-for-nullable-types"></a>Null değere sahip türler için TableAdapter desteği
 
-TableAdapter'lar ve null değere sahip türleri `Nullable(Of T)` `T?` destekler. Veri verilerinde null değere değiştirilebilir türler hakkında daha fazla Visual Basic bkz. [Null DeğerLenebilir Değer Türleri.](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types) C# içinde null değere değiştirilebilir türler hakkında daha fazla bilgi için [bkz. Null değere değiştirilebilir türleri kullanma.](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types)
+TableAdapters, nullable türleri `Nullable(Of T)` ve destekler `T?` . Visual Basic null yapılabilir türler hakkında daha fazla bilgi için bkz. [nullable değer türleri](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types). C# ' de Nullable türler hakkında daha fazla bilgi için bkz. [Nullable türler kullanma](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types).
 
 <a name="tableadaptermanager-reference"></a>
 
 ## <a name="tableadaptermanager-reference"></a>TableAdapterManager başvurusu
 
-TableAdapterManager sınıfı, ilgili tabloları içeren bir veri kümesi oluşturur. Sınıfın oluşturularak önlenmesi için veri kümesi özelliğinin `Hierarchical Update` değerini false olarak değiştirebilirsiniz. İlişkisi olan bir tabloyu Windows Form veya WPF sayfasının tasarım yüzeyine sürüklerseniz, Visual Studio bir üye değişkeni bildirecektir. Veri bağlamayı kullansanız bile değişkeni el ile tanımlamanız gerekir.
+Varsayılan olarak, TableAdapterManager sınıfı ilgili tabloları içeren bir veri kümesi oluşturduğunuzda oluşturulur. Sınıfın oluşturulmasını engellemek için, `Hierarchical Update` veri kümesinin özelliğinin değerini false olarak değiştirin. bir Windows Form veya WPF sayfasının tasarım yüzeyine ilişki içeren bir tabloyu sürüklediğinizde, Visual Studio sınıfın üye değişkenini bildirir. Veri bağlamayı kullanmıyorsanız, değişkeni el ile bildirmeniz gerekir.
 
-TableAdapterManager sınıfı bir .NET türü değildir. Bu nedenle belgelere bakamazsiniz. Tasarım zamanında, veri kümesi oluşturma işleminin bir parçası olarak oluşturulur.
+TableAdapterManager sınıfı bir .NET türü değildir. Bu nedenle, belgelerde bu belgede arama yapılamaz. Veri kümesi oluşturma sürecinin bir parçası olarak tasarım zamanında oluşturulur.
 
-Aşağıda, sınıfının sık kullanılan yöntemleri ve özellikleri ve `TableAdapterManager` bulunmaktadır:
+Aşağıda, sınıfının sık kullanılan yöntemleri ve özellikleri verilmiştir `TableAdapterManager` :
 
 |Üye|Açıklama|
 |------------|-----------------|
 |`UpdateAll` yöntemi|Tüm veri tablolarından tüm verileri kaydeder.|
-|`BackUpDataSetBeforeUpdate` Özellik|yöntemi yürütülmeden önce veri kümesi yedek kopyasının oluşturulıp oluşturul olmadığını `TableAdapterManager.UpdateAll` belirler. Boolean.|
-|*tableName* `TableAdapter` Özellik|TableAdapter'i temsil eder. Oluşturulan TableAdapterManager, yönetirken her biri için `TableAdapter` bir özellik içerir. Örneğin, Customers ve Orders tablosuna sahip bir veri kümesi, ve özelliklerini içeren bir TableAdapterManager `CustomersTableAdapter` ile `OrdersTableAdapter` oluşturulur.|
-|`UpdateOrder` Özellik|Tek tek ekleme, güncelleştirme ve silme komutlarının sıralamalarını kontrol eder. Bunu, numaralamada yer alan `TableAdapterManager.UpdateOrderOption` değerlerden biri olarak ayarlayın.<br /><br /> Varsayılan olarak, `UpdateOrder` **InsertUpdateDelete olarak ayarlanır.** Bu, veri kümesinde tüm tablolar için eklemeler, güncelleştirmeler ve silmeler gerçekleştirecekleri anlamına gelir.|
+|`BackUpDataSetBeforeUpdate` özelliði|Yöntemi yürütmeden önce veri kümesinin yedek kopyasının oluşturulup oluşturulmayacağını belirler `TableAdapterManager.UpdateAll` . Boolean.|
+|*TableName* `TableAdapter` özelliði|Bir TableAdapter temsil eder. Oluşturulan TableAdapterManager, yönettiği her bir özellik içerir `TableAdapter` . Örneğin, Customers ve Orders tablosu içeren bir veri kümesi, ve özellikleri içeren bir TableAdapterManager ile `CustomersTableAdapter` oluşturulur `OrdersTableAdapter` .|
+|`UpdateOrder` özelliði|Tek tek ekleme, güncelleştirme ve silme komutlarının sırasını denetler. Bunu, Numaralandırmadaki değerlerden birine ayarlayın `TableAdapterManager.UpdateOrderOption` .<br /><br /> Varsayılan olarak, `UpdateOrder` **InsertUpdateDelete** olarak ayarlanır. Bu, daha sonra, ve sonrasında silinmeler, veri kümesindeki tüm tablolar için gerçekleştirilir.|
 
 ## <a name="security"></a>Güvenlik
 
-Bir CommandType özelliği olarak ayarlanmış veri komutlarını kullanıyorsanız, istemciden veritabanınıza geçirmeden <xref:System.Data.CommandType.Text> önce gönderilen bilgileri dikkatle kontrol edin. Kötü amaçlı kullanıcılar, yetkisiz erişim elde etmek veya veritabanına zarar SQL amacıyla değiştirilmiş veya ek deyimler göndermeye (ekleme) deneyebilir. Kullanıcı girişini bir veritabanına aktarmadan önce her zaman bilgilerin geçerli olduğunu doğrulayın. Mümkün olduğunda her zaman parametreli sorgular veya saklı yordamlar kullanmak en iyi yöntemdir.
+Olarak ayarlanmış bir CommandType özelliği ile veri komutları kullandığınızda <xref:System.Data.CommandType.Text> , veritabanınıza geçirmeden önce istemciden gönderilen bilgileri dikkatle kontrol edin. kötü amaçlı kullanıcılar, yetkisiz erişim elde etmek veya veritabanına zarar vermek için, değiştirilmiş veya ek SQL deyimlerini bir çaba göndermeye (eklemeye) çalışabilir. Kullanıcı girişini bir veritabanına aktarmadan önce, bilgilerin geçerli olduğunu her zaman doğrulayın. Mümkün olduğunda her zaman parametreli sorguları veya saklı yordamları kullanmak en iyi uygulamadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

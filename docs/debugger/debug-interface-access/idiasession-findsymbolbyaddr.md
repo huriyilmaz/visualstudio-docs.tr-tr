@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b24fe03c52107525437ecd96525e1f4d8925e58d197d07e9d2761247b5c989c0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 32fe309b649f364c4b8eb3694716f206c2b2881b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380177"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066379"
 ---
 # <a name="idiasessionfindsymbolbyaddr"></a>IDiaSession::findSymbolByAddr
 Belirtilen bir adresi içeren veya en yakın olan belirtilen sembol türünü alın.

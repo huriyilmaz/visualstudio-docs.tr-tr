@@ -24,12 +24,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8af663456e465a6cc517372a31b0ba2e80cc4170ba1b3b03b945b388fbf5203b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 74e96bf3644d57235aff82fb2b0393c1506dd653
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121264486"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122122000"
 ---
 # <a name="hierarchical-update"></a>Hiyerarşik güncelleştirme
 

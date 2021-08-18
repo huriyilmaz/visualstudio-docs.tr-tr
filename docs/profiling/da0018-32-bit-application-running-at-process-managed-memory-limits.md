@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8998445f046269691fc26ff3e0e3397881bcdcf543b9a13e9e4cb1f97348650
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e407b4273bceb7d8df7478fb518bf952bf5d822c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121257140"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039039"
 ---
 # <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: İşlem tarafından yönetilen bellek sınırlarında çalışan 32 bit uygulama
 
@@ -42,7 +42,7 @@ ms.locfileid: "121257140"
  Kural yalnızca 32 bit makinelerde çalışan 32 bit uygulamalar için kullanılmaktadır.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Yaygın Microsoft .NET çalışma zamanı (CLR), uygulamanın artık kullanmama durumuna sahip nesnelerden belleği geri alan bir atık toplayıcı kullanan otomatik bir bellek yönetimi mekanizması sağlar. Atık toplayıcı, birçok ayırmanın kısa süreli olduğu varsayımı üzerine oluşturma odaklıdır. Örneğin yerel değişkenler kısa süreli olmalı. Yeni oluşturulan nesneler nesil 0'da (0. nesil) başlar ve bir çöp toplama çalıştırması çalıştırılana kadar hayatta kalarak 1. nesile ilerler ve uygulama hala bunları kullanıyorsa son olarak 2. nesile geçişler.
+ Yaygın Microsoft .NET çalışma zamanı (CLR), uygulamanın artık kullanmama durumuna sahip nesnelerden belleği geri alan bir atık toplayıcı kullanan otomatik bir bellek yönetimi mekanizması sağlar. Atık toplayıcı, çok sayıda ayırmanın kısa süreli olduğu varsayımı üzerine oluşturma odaklıdır. Örneğin yerel değişkenler kısa süreli olmalı. Yeni oluşturulan nesneler nesil 0'da (0. nesil) başlar ve bir çöp toplama çalıştırması çalıştırılana kadar hayatta kalarak 1. nesile ilerler ve uygulama hala bunları kullanıyorsa son olarak 2. nesile geçişler.
 
  85 KB'den büyük yönetilen nesneler, daha küçük nesnelere göre daha az sıklıkta çöp toplama ve sıkıştırmaya tabi olan Büyük Nesne Yığınında ayrılır. büyük nesneler daha kalıcı olduğu varsayılır ve kalıcı ve büyük nesneleri sık ayrılan küçük nesnelerle karıştırmak yığının en kötü döküm parçalanmasına neden olabilir çünkü ayrı yönetilir.
 
@@ -61,13 +61,13 @@ ms.locfileid: "121257140"
 
 - 32 bit işlem için en büyük sanal bellek boyutu üzerinde mimari kısıtlamaları hafifletmek için gerekli adımların atılması
 
-  Uygulamanın yönetilen bellek kaynakları kullanımını iyileştirmek için, bir .NET Bellek Ayırma profil oluşturma çalıştırması içinde yönetilen bellek ayırma verilerini toplayın. Uygulamanın [bellek ayırma desenini](../profiling/dotnet-memory-data-views.md) anlamak için .NET Bellek Veri Görünümleri raporlarını gözden geçirme.
+  Uygulamanın yönetilen bellek kaynakları kullanımını iyileştirmek için, yönetilen bellek ayırma verilerini bir .NET Bellek Ayırma profil oluşturma çalıştırması içinde toplayın. Uygulamanın [bellek ayırma desenini](../profiling/dotnet-memory-data-views.md) anlamak için .NET Bellek Veri Görünümleri raporlarını gözden geçirme.
 
   Programın [veri nesnelerinden](../profiling/object-lifetime-view.md) hangilerinin nesil içinde hayatta kalarak daha sonra geri alınarak geri alınarak olduğunu belirlemek için Nesne Yaşam Süresi Görünümünü kullanın.
 
   Bu [ayırmalara neden](../profiling/dotnet-memory-allocations-view.md) olan yürütme yolunu belirlemek için Ayırmalar Görünümünü kullanın.
 
-  Çöp toplama performansını geliştirme hakkında daha fazla bilgi için MSDN [](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) Web .NET Framework Çöp Toplayıcısı Temel Bilgileri ve Performans İpuçları makalesine bakın.
+  Çöp toplama performansını geliştirme hakkında daha fazla bilgi için [](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) MSDN Web .NET Framework Çöp Toplayıcısı Temel Bilgileri ve Performans İpuçları teknik makalesine bakın.
 
   Bir işlem adres alanı özel bölümünün boyutuyla ilgili sanal bellek kısıtlamalarından mimari açıdan yardım almak için bu 32 bit işlemi 64 bit makinede çalıştırmayı deneyin.  64 bit makinede 32 bit işlem 4 GB'a kadar özel sanal bellek edinebiliyor.
 

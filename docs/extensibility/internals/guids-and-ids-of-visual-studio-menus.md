@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 471f5e2981f9b52df8af7680a23a92349264e6b0aa945282238a5c04341bc2f4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a35af9a88d42bcc413c5c926d74f34b840d4ea59
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121376176"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110494"
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Menülerin GUID'leri ve Visual Studio kimlikleri
 Bu makalede, menü çubuğundaki menülerin ve grupların GUID ve Visual Studio numaralar. Bu değerler, Visual Studio SDK'sı kapsamında yüklü olan *.vsct* dosyalarında tanımlanır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar.](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)
@@ -164,13 +164,13 @@ Bu makalede, menü çubuğundaki menülerin ve grupların GUID ve Visual Studio 
 |Grup|ID|
 |-----------|--------|
 |Yeni|IDG_VS_WINDOW_NEW|
-|Yerleştirme/Kapatma|IDG_VS_DOCKCLOSE|
-|Yerleştirme/Gizleme|IDG_VS_DOCKHIDE|
+|Yerleştir/kapat|IDG_VS_DOCKCLOSE|
+|Yerleştir/gizle|IDG_VS_DOCKHIDE|
 |Yerleştir|IDG_VS_WINDOW_ARRANGE|
 |Gezinti|IDG_VS_WINDOW_NAVIGATION|
 |Liste|IDG_VS_WINDOW_LIST|
 
-### <a name="help-menu-groups"></a>Yardım menü grupları
+### <a name="help-menu-groups"></a>Yardım menüsü grupları
 
 |Grup|ID|
 |-----------|--------|
@@ -178,11 +178,11 @@ Bu makalede, menü çubuğundaki menülerin ve grupların GUID ve Visual Studio 
 |Destek|IDG_VS_HELP_SUPPORT|
 |Hakkında|IDG_VS_HELP_ABOUT|
 
-## <a name="submenus-of-visual-studio-menus"></a>Visual Studio menülerinin alt menüsü
- Aşağıdaki hiyerarşi, menü çubuğundaki menülerle ilişkili alt menüleri Visual Studio gösterir. Yalnızca bir grubun üst öğesi olarak bir menüye sahip olması nedeniyle, her alt menü doğrudan menüden değil, bir menüden aşağı doğru iner. Menüler, gruplar ve alt menüler arasındaki ilişki hakkında daha fazla bilgi için [bkz. Menüye alt menü ekleme.](../../extensibility/adding-a-submenu-to-a-menu.md)
+## <a name="submenus-of-visual-studio-menus"></a>Visual Studio menülerinin alt menüleri
+ aşağıdaki hiyerarşi Visual Studio menü çubuğundaki menülerle ilişkili alt menüleri gösterir. Yalnızca bir grubun üst öğesi olarak bir menüsü olabileceğinden, her alt menü, doğrudan menüden değil, menüdeki bir gruptan önce olmalıdır. Menüler, gruplar ve alt menüler arasındaki ilişki hakkında daha fazla bilgi için, bkz. [menüye alt menü ekleme](../../extensibility/adding-a-submenu-to-a-menu.md).
 
 > [!NOTE]
-> Visual Studio menü çubuğundaki menülerin adları, IDE'de grupların adlandırma kuralından alınamalarından dolayı bu hiyerarşide ayrı ayrı gösterilmez: *IDG_VS_ \<Menu Name\> _ \<Group Name\>*.
+> Visual Studio menü çubuğundaki menülerin adları, ıde içindeki gruplar için adlandırma kuralından çıkarsanabileceğinden, şu şekilde bu hiyerarşide ayrı olarak gösterilmemektedir: *IDG_VS_ \<Menu Name\> _ \<Group Name\>*.
 
 |Üst grup|Alt menü|Alt gruplar|
 |------------------|-------------|------------------|
@@ -197,7 +197,7 @@ Bu makalede, menü çubuğundaki menülerin ve grupların GUID ve Visual Studio 
 |||IDG_VS_FILE_MOVE_PICKER|
 |IDG_VS_VIEW_DEV_WINDOWS|IDM_VS_CSCD_FINDRESULTS|IDG_VS_WNDO_FINDRESULTS|
 ||IDM_VS_CSCD_WINDOWS|IDG_VS_VIEW_CALLBROWSER|
-|||IDG_VS_WNDO_OTRWNDWS1... 6|
+|||IDG_VS_WNDO_OTRWNDWS1... inç|
 |||IDG_VS_WNDO_WINDOWS2|
 |IDG_VS_VIEW_TOOLBARS|IDM_VS_CSCD_COMMANDBARS||
 |IDG_VS_EDIT_GOTO|IDM_VS_EDITOR_FIND_MENU||
@@ -217,6 +217,6 @@ Bu makalede, menü çubuğundaki menülerin ve grupların GUID ve Visual Studio 
 |||IDG_VS_PGO_BUILD_CASCADE_RUN|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Araç çubuklarının GUID'Visual Studio kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)
-- [Visual Studio komutlarının GUID'leri ve kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)
-- [Visual Studio tablosu (.vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio araç çubuklarının guıd 'leri ve kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)
+- [Visual Studio komutlarının guıd 'leri ve kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)
+- [komut tablosu (. vsct) dosyaları Visual Studio](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

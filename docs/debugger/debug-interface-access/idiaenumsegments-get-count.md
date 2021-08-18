@@ -1,6 +1,6 @@
 ---
-description: Segmentlerin sayısını alır.
-title: 'IDiaEnumSegments:: get_Count | Microsoft Docs'
+description: Segment sayısını alın.
+title: IDiaEnumSegments::get_Count | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e2c6e21dc7a154d8815e85bc800d4190248643feca991bac883dcb6df610d952
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 06dbd9990f3767ccace13795319490ae5cfa3d5d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380345"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134444"
 ---
 # <a name="idiaenumsegmentsget_count"></a>IDiaEnumSegments::get_Count
-Segmentlerin sayısını alır.
+Segment sayısını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,10 +34,10 @@ HRESULT get_Count (
 
 #### <a name="parameters"></a>Parametreler
  pRetVal
-- [Out, retval] Parçaların sayısını döndürür.
+- [out, retval] Segment sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

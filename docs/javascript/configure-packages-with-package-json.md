@@ -7,16 +7,17 @@ ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-javascript
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 891822d0b79cbfd53cf14229f11e003bf740c660
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9aaade6fc17b2ec0ce36decd66cff25ee2dc9e6e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969496"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061538"
 ---
 # <a name="packagejson-configuration"></a>package.json yapılandırması
 
@@ -38,7 +39,7 @@ Bu, bazı NPM paketi özelliklerinin bağımlılıklara sahip olduğunu belirtme
 
 NPM, paket sürümü oluşturmayı yönetmeye yardımcı olmak için *üzerindepackage.js* kullanabileceğiniz çeşitli gösterimleri destekler. Uygulamanızda kabul etmek istediğiniz paket güncelleştirmelerinin türünü denetlemek için bu gösterimleri kullanabilirsiniz.
 
-Yanıt kullandığınızı **ve tepki verme ve** **tepki verme-Dom** NPM paketini dahil etmeniz gerektiğini varsayalım. Bunu, *package.js* dosyadaki çeşitli yollarla belirtebilirsiniz. Örneğin, bir paketin tam sürümünün kullanımını aşağıda gösterildiği gibi belirtebilirsiniz.
+React kullandığınızı ve **tepki** verme ve **tepki verme-dom** npm paketini dahil etmeniz gerektiğini varsayalım. Bunu, *package.js* dosyadaki çeşitli yollarla belirtebilirsiniz. Örneğin, bir paketin tam sürümünün kullanımını aşağıda gösterildiği gibi belirtebilirsiniz.
 
   ```json
   "dependencies": {
