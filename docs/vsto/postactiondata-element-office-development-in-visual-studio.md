@@ -1,6 +1,6 @@
 ---
 title: '&lt;postActionData &gt; öğesi (Office geliştirme)'
-description: Vstav3 ad alanının postActionData öğesi, Office çözümleri yüklendikten sonra çalışan dağıtım sonrası eylemleriyle ilişkili verileri belirtir.
+description: vstav3 ad alanının postActionData öğesi, herhangi bir dağıtım sonrası eylemle ilişkili olan ve Office sonra çalışan verileri belirtir.
 titleSuffix: ''
 ms.date: 02/02/2017
 ms.topic: reference
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: a75f61c6d1f80a127f49d96c4e3f4910c66dd8aa
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: 4196c3061372d46a2fad4c2b46ff8c1fe4ee2b39
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102470072"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122025894"
 ---
 # <a name="ltpostactiondatagt-element-office-development"></a>&lt;postActionData &gt; öğesi (Office geliştirme)
-  `postActionData`Ad alanı öğesi, `vstav3` Office çözümleri yüklendikten sonra çalışan dağıtım sonrası eylemleriyle ilişkili verileri belirtir.
+  Ad `postActionData` alanının öğesi, dağıtım sonrası eylemle ilişkili olan ve çözüm yüklendikten sonra `vstav3` Office verileri belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,16 +35,16 @@ ms.locfileid: "102470072"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `postActionData`Öğesi isteğe bağlıdır ve `vstav3` ad alanıdır. `postActionData`Her dağıtım sonrası eylemi için uygulama bildiriminde tanımlanan bir öğe vardır.
+ öğesi `postActionData` isteğe bağlıdır ve ad alanı `vstav3` içindedir. Her dağıtım sonrası `postActionData` eylem için bir uygulama bildiriminde tanımlanan bir öğe vardır.
 
- `postActions`Öğesinde hiç öznitelik yok.
+ öğesinin `postActions` özniteliği yoktur.
 
- `postActions` alt öğesi yok.
+ `postActions` alt öğeye sahip değil.
 
 ## <a name="post-deployment-action-example"></a>Dağıtım sonrası eylem örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneği, `postAction` kullanılarak dağıtılan bir Office çözümünün uygulama bildiriminde bulunan öğesini göstermektedir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
+ Aşağıdaki kod örneği, kullanılarak `postAction` dağıtılan bir uygulama çözümü için uygulama Office öğesini [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office örneğidir.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -55,6 +56,6 @@ ms.locfileid: "102470072"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
-- [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
+- [Uygulama çözümleri için Office bildirimleri](../vsto/application-manifests-for-office-solutions.md)
+- [Dağıtım çözümleri için Office bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
 - [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

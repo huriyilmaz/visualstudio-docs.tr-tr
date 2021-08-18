@@ -1,6 +1,6 @@
 ---
 title: Şablonları bulma
-description: Proje ve öğe şablonlarını bulmayı ve düzenlemeyi öğrenin.
+description: Proje ve öğe şablonlarını bulup düzenlemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/02/2018
 ms.topic: how-to
@@ -11,38 +11,39 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: ba986fee3f5cf6098b72f3b7a52340a61d3449d0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-general
+ms.openlocfilehash: 52851b97716d6b32cc4087f19f87d060e1c608c0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962866"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028052"
 ---
-# <a name="how-to-locate-and-organize-project-and-item-templates"></a>Nasıl yapılır: proje ve öğe şablonlarını bulma ve düzenleme
+# <a name="how-to-locate-and-organize-project-and-item-templates"></a>Nasıl kullanılır: Proje ve öğe şablonlarını bulma ve düzenleme
 
-Şablon dosyalarının yeni proje ve yeni öğe iletişim kutularında gösterilmesi için bilinen bir konuma yerleştirilmesi gerekir.
+Şablon dosyalarının yeni projede ve yeni öğe iletişim kutularında gösterilmeleri için bilinen bir konuma yerleştirilmeleri gerekir.
 
 ::: moniker range="vs-2017"
 
-Kullanıcı şablonu konumunda özel alt kategoriler de oluşturabilirsiniz ve kategoriler **Yeni proje** ve **Yeni öğe Ekle** iletişim kutularında gösterilir.
+Ayrıca, kullanıcı şablonu konumu içinde özel alt kategoriler oluşturabilirsiniz ve  kategoriler Yeni Giriş ve Project Ekle **iletişim kutularında** gösterilir.
 
 ::: moniker-end
 
 ## <a name="locate-templates"></a>Şablonları bulma
 
-Yüklü şablonlar ve Kullanıcı şablonları iki farklı konumda depolanır.
+Yüklü şablonlar ve kullanıcı şablonları iki farklı konumda depolanır.
 
 ### <a name="installed-templates"></a>Yüklü şablonlar
 
-Varsayılan olarak, Visual Studio ile yüklenen şablonlar şu konumda bulunur:
+Varsayılan olarak, Visual Studio şablonlar şu konumda bulunur:
 
 ::: moniker range="vs-2017"
 
-- *% ProgramFiles (x86)% \\ Microsoft Visual Studio \\ 2017 \\ \<edition> \\ Common7\IDE\ProjectTemplates \\<dil \> \\<yerel ayar kimliği\>*
+- *%ProgramFiles(x86)% \\ Microsoft Visual Studio \\ 2017 \\ \<edition> \\ Common7\IDE\ProjectTemplates \\<Dil<Yerel \> \\ Kimlik\>*
 
-- *% ProgramFiles (x86)% \\ Microsoft Visual Studio \\ 2017 \\ \<edition> \Common7\IDE\ItemTemplates \\<dil \> \\<yerel ayar kimliği\>*
+- *%ProgramFiles(x86)% \\ Microsoft Visual Studio \\ 2017 \\ \<edition> \Common7\IDE\ItemTemplates \\<Dil<Yerel \> \\ Kimlik\>*
 
-Örneğin, aşağıdaki dizin Ingilizce için Visual Basic öğesi şablonlarına sahiptir (LCıD 1033):
+Örneğin, aşağıdaki dizinde İngilizce (LCID 1033) Visual Basic öğe şablonları bulunur:
 
 *C: \\ Program Files (x86) \\ Microsoft Visual Studio \\ 2017 \\ Community \\ Common7 \\ IDE \\ ItemTemplates \\ VisualBasic \\ 1033*
 
@@ -50,11 +51,11 @@ Varsayılan olarak, Visual Studio ile yüklenen şablonlar şu konumda bulunur:
 
 ::: moniker range=">=vs-2019"
 
-- *% ProgramFiles (x86)% \\ Microsoft Visual Studio \\ 2019 \\ \<edition> \\ Common7\IDE\ProjectTemplates \\<dil \> \\<yerel ayar kimliği\>*
+- *%ProgramFiles(x86)% \\ Microsoft Visual Studio \\ 2019 \\ \<edition> \\ Common7\IDE\ProjectTemplates \\<\> \\ Dil<Yerel Kimlik\>*
 
-- *% ProgramFiles (x86)% \\ Microsoft Visual Studio \\ 2019 \\ \<edition> \Common7\IDE\ItemTemplates \\<dil \> \\<yerel ayar kimliği\>*
+- *%ProgramFiles(x86)% \\ Microsoft Visual Studio \\ 2019 \\ \<edition> \Common7\IDE\ItemTemplates \\<Dil<Yerel \> \\ Kimlik\>*
 
-Örneğin, aşağıdaki dizin Ingilizce için Visual Basic öğesi şablonlarına sahiptir (LCıD 1033):
+Örneğin, aşağıdaki dizinde İngilizce (LCID 1033) Visual Basic öğe şablonları bulunur:
 
 *C: \\ Program Files (x86) \\ Microsoft Visual Studio \\ 2019 \\ Community \\ Common7 \\ IDE \\ ItemTemplates \\ VisualBasic \\ 1033*
 
@@ -62,79 +63,79 @@ Varsayılan olarak, Visual Studio ile yüklenen şablonlar şu konumda bulunur:
 
 ### <a name="user-templates"></a>Kullanıcı şablonları
 
-Kullanıcı şablonu dizinine *. vstemplate* dosyasını içeren bir sıkıştırılmış (*. zip*) dosya eklerseniz, şablon yeni proje ve yeni öğe iletişim kutularında görünür. Varsayılan olarak, Kullanıcı şablonları içinde bulunur:
+Kullanıcı şablonu dizinine *bir* *.vstemplate* dosyası içeren sıkıştırılmış (.zip) dosyası eklersiniz, şablon yeni proje ve yeni öğe iletişim kutularında görünür. Varsayılan olarak, kullanıcı şablonları şu konumda bulunur:
 
 ::: moniker range="vs-2017"
 
-- *%Userprofile%\, Studio 2017 \ Templates\ProjectTemplates*
+- *%USERPROFILE%\Documents\Visual Studio 2017\Templates\ProjectTemplates*
 
-- *%Userprofile%\, Studio 2017 \ Templates\ıtemtemplates*
+- *%USERPROFILE%\Documents\Visual Studio 2017\Templates\ItemTemplates*
 
-Örneğin, aşağıdaki dizin C# için Kullanıcı projesi şablonlarına sahiptir:
+Örneğin, aşağıdaki dizinde C# için kullanıcı projesi şablonları vardır:
 
-- *C:\users\username\k\studio 2017 \ Templates\ProjectTemplates\Visual C #*
+- *C:\Users\UserName\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C #*
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- *%Userprofile%\, Studio 2019 \ Templates\ProjectTemplates*
+- *%USERPROFILE%\Documents\Visual Studio 2019\Templates\ProjectTemplates*
 
-- *%Userprofile%\, Studio 2019 \ Templates\ıtemtemplates*
+- *%USERPROFILE%\Documents\Visual Studio 2019\Templates\ItemTemplates*
 
-Örneğin, aşağıdaki dizin C# için Kullanıcı projesi şablonlarına sahiptir:
+Örneğin, aşağıdaki dizinde C# için kullanıcı projesi şablonları vardır:
 
-- *C:\users\username\k\studio 2019 \ Templates\ProjectTemplates\Visual C #*
+- *C:\Users\UserName\Documents\Visual Studio 2019\Templates\ProjectTemplates\Visual C #*
 
 ::: moniker-end
 
 > [!TIP]
-> **Araçlar**  >  **Seçenekler**  >  **projelerinde ve çözüm**  >  **konumlarında** Kullanıcı şablonlarının bilinen konumunu değiştirebilirsiniz.
+> Araç Seçenekleri Projeleri ve Çözüm Konumları'nın kullanıcı **şablonları**  >  **için**  >  **bilinen konumu**  >  **değiştirebilirsiniz.**
 
 ::: moniker range="vs-2017"
 
 ## <a name="organize-templates"></a>Şablonları düzenleme
 
-**Yeni proje** ve **Yeni öğe Ekle** iletişim kutularında bulunan kategoriler, yüklü şablonda ve Kullanıcı şablonu konumlarında bulunan dizin yapılarını yansıtır. Kullanıcı şablonları, Kullanıcı şablonu dizinine yeni klasörler eklenerek kendi kategorilerine göre düzenlenebilir. **Yeni proje** ve **Yeni öğe Ekle** iletişim kutuları, Kullanıcı şablonu kategorileriniz üzerinde yaptığınız tüm değişiklikleri gösterir.
+New **Project** ve Add New **Item** iletişim kutularında yer alan kategoriler, yüklü şablonda ve kullanıcı şablonu konumlarında mevcut olan dizin yapılarını gösterir. Kullanıcı şablonları, kullanıcı şablonu dizinine yeni klasörler ekleyerek kendi kategorilerine göre organize olabilir. Yeni **Project** ve **Yeni Öğe Ekle** iletişim kutuları, kullanıcı şablonu kategorilerinize yaptığınız değişiklikleri gösterir.
 
 > [!NOTE]
-> Programlama dili düzeyinde yeni bir kategori oluşturamazsınız. Yeni kategoriler yalnızca her bir dil içinde oluşturulabilir.
+> Programlama dili düzeyinde yeni bir kategori oluşturamazsiniz. Yeni kategoriler yalnızca her dil içinde oluşturulabilir.
 
-### <a name="create-new-user-project-template-categories"></a>Yeni Kullanıcı projesi şablon kategorileri oluştur
+### <a name="create-new-user-project-template-categories"></a>Yeni kullanıcı projesi şablon kategorileri oluşturma
 
-1. Kullanıcı projesi şablon dizinindeki programlama dili klasöründe bir klasör oluşturun. Örneğin, C# proje şablonları için **HelloWorld** kategorisi oluşturmak için aşağıdaki dizini oluşturun:
+1. Kullanıcı projesi şablon dizininde programlama dili klasöründe bir klasör oluşturun. Örneğin, C# proje şablonları **için HelloWorld** kategorisi oluşturmak için aşağıdaki dizini oluşturun:
 
-    - *\%USERPROFILE%\Documents\Visual Studio \<Version\> \Templates\projecttemplates\visual C# \helloworld*
+    - *\%USERPROFILE%\Documents\Visual Studio \<Version\> \Templates\ProjectTemplates\Visual C#\HelloWorld*
 
-1. Bu kategorinin tüm şablonlarını yeni klasöre yerleştirin.
+1. Bu kategoriye ait tüm şablonları yeni klasöre girin.
 
-1. **Dosya** menüsünde **Yeni** > **Proje**' yi seçin.
+1. Dosya menüsünde **Yeni** **dosya'Project.** > 
 
-   **HelloWorld** kategorisi, **Yeni proje** iletişim kutusunda, **yüklü** > **Visual C#** altında görünür.
+   HelloWorld **kategorisi,** Yüklü Visual **C# Project** Yeni Uygulama **iletişim** > **kutusunda görünür.**
 
-### <a name="create-new-user-item-template-categories"></a>Yeni Kullanıcı öğesi şablon kategorileri oluştur
+### <a name="create-new-user-item-template-categories"></a>Yeni kullanıcı öğesi şablon kategorileri oluşturma
 
-1. Kullanıcı öğesi şablon dizinindeki programlama dili klasöründe bir klasör oluşturun. Örneğin, C# öğe şablonları için **HelloWorld** kategorisi oluşturmak için aşağıdaki dizini oluşturun:
+1. Kullanıcı öğesi şablon dizininde programlama dili klasöründe bir klasör oluşturun. Örneğin, C# öğe şablonları **için HelloWorld** kategorisi oluşturmak için aşağıdaki dizini oluşturun:
 
-    - *\%USERPROFILE%\Documents\Visual Studio \<Version\> \Templates\ıtemtemplates\visual C# \helloworld*
+    - *\%USERPROFILE%\Documents\Visual Studio \<Version\> \Templates\ItemTemplates\Visual C#\HelloWorld*
 
-1. Bu kategorinin tüm şablonlarını yeni klasöre yerleştirin.
+1. Bu kategoriye ait tüm şablonları yeni klasöre girin.
 
-1. Proje oluşturun veya var olan bir projeyi açın. Ardından, **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. Proje oluşturun veya var olan bir projeyi açın. Ardından, **yeni** Project Ekle'yi **seçin.**
 
-   **HelloWorld** kategorisi, **Yeni öğe Ekle** iletişim kutusunda, **yüklü** > **Visual C# öğeleri** altında görünür.
+   HelloWorld **kategorisi,** Yeni Öğe **Ekle iletişim**  kutusunun Yüklü Visual C# Öğeleri > **altında görünür.**
 
-### <a name="display-templates-in-parent-categories"></a>Şablonları üst kategorilerde görüntüle
+### <a name="display-templates-in-parent-categories"></a>Şablonları üst kategorilerde görüntüleme
 
-Alt kategorilerindeki şablonları, `NumberOfParentCategoriesToRollUp` *. vstemplate* dosyasındaki öğesini kullanarak üst kategorilerinde görüntülenmek üzere etkinleştirebilirsiniz. Bu adımlar proje şablonları ve öğe şablonları için aynıdır.
+`NumberOfParentCategoriesToRollUp` *.vstemplate* dosyasındaki öğesini kullanarak alt kategorilerdeki şablonların üst kategorilerinde görüntülenebilir. Bu adımlar proje şablonları ve öğe şablonları için aynıdır.
 
-1. Şablonu içeren *. zip* dosyasını bulun.
+1. Şablonu *.zip* dosyanın konumunu bulun.
 
-1. *. Zip* dosyasını ayıklayın.
+1. .zip *ayıkla.*
 
-1. Visual Studio 'da *. vstemplate* dosyasını açın.
+1. *.vstemplate dosyasını* Visual Studio.
 
-1. `TemplateData`Öğesinde, bir `NumberOfParentCategoriesToRollUp` öğesi ekleyin. Örneğin, aşağıdaki kod, şablonu üst kategoride görünür hale getirir, ancak daha fazlasını yapmaz.
+1. öğesine `TemplateData` bir öğesi `NumberOfParentCategoriesToRollUp` ekleyin. Örneğin, aşağıdaki kod şablonu üst kategoride görünür hale ancak daha yüksek bir kategoriye sahip değildir.
 
     ```xml
     <TemplateData>
@@ -146,22 +147,22 @@ Alt kategorilerindeki şablonları, `NumberOfParentCategoriesToRollUp` *. vstemp
     </TemplateData>
     ```
 
-1. *. Vstemplate* dosyasını kaydedin ve kapatın.
+1. *.vstemplate dosyasını kaydedin ve* kapatın.
 
-1. Şablonunuzda dosyaları seçin, seçime sağ tıklayın ve  > **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin.
+1. Şablonda dosyaları seçin, seçime sağ tıklayın  ve Sıkıştırılmış > **(sıkıştırılmış) klasöre gönder'i seçin.**
 
-   Dosyalar bir *. zip* dosyasında sıkıştırılır.
+   Dosyalar bir.zip *sıkıştırılır.*
 
-1. Ayıklanan şablon dosyalarını ve eski şablon *. zip* dosyasını silin.
+1. Ayıklanan şablon dosyalarını ve eski şablon *.zip* silin.
 
-1. Yeni *. zip* dosyasını silinen *. zip* dosyasına sahip olan dizine yerleştirin.
+1. Yeni *.zip* dosyasını silinen dosyanın olduğu *dizine.zip.*
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Şablonları özelleştirme](../ide/customizing-project-and-item-templates.md)
-- [Visual Studio Şablon Şeması Başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şema başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md)
 - [NumberOfParentCategoriesToRollUp (Visual Studio şablonları)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)
-- [Nasıl yapılır: proje şablonları oluşturma](../ide/how-to-create-project-templates.md)
-- [Nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
+- [Nasıl: Proje şablonları oluşturma](../ide/how-to-create-project-templates.md)
+- [Nasıl kullanılır: Öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)

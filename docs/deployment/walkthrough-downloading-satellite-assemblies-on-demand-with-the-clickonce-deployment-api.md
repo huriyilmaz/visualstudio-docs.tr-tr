@@ -1,5 +1,5 @@
 ---
-title: Uydu derlemesini isteğe bağlı olarak indirin (ClickOnce API)
+title: uydu derlemesini isteğe bağlı olarak indirin (ClickOnce apı)
 description: Uydu derlemelerini isteğe bağlı olarak nasıl işaretleyeceğinizi ve yalnızca geçerli kültür ayarları için bir istemci makinesi için gereken derlemeyi inditireceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -21,27 +21,28 @@ ms.assetid: fdaa553f-a27e-44eb-a4e2-08c122105a87
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: d6ebcb455147b1cb014eb7aafc9f6a9e658e0131
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 1374b409fa8f4f01a521c8e2660020c2e94951f8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217014"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035585"
 ---
-# <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>İzlenecek yol: ClickOnce dağıtım API 'SI ile isteğe bağlı uydu derlemelerini Indirme
-Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
+# <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api"></a>izlenecek yol: ClickOnce dağıtım apı 'si ile isteğe bağlı uydu derlemelerini indirme
+Windows Forms uygulamaları, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
 
- [ClickOnce uygulamalarında yerelde](../deployment/localizing-clickonce-applications.md)anlatıldığı gibi, aynı dağıtımda birden çok kültür için birden çok uydu derlemesi ekleyebilirsiniz [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Tüm uydu derlemelerini istemci makinesine indirir, ancak tek bir istemci muhtemelen yalnızca bir uydu derlemesi gerektirecektir.
+ [yerellerde ClickOnce uygulamalarda](../deployment/localizing-clickonce-applications.md)anlatıldığı gibi, aynı dağıtımda birden çok kültür için birden çok uydu derlemesi ekleyebilirsiniz [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Tüm uydu derlemelerini istemci makinesine indirir, ancak tek bir istemci muhtemelen yalnızca bir uydu derlemesi gerektirecektir.
 
- Bu izlenecek yol, uydu derlemelerinizi isteğe bağlı olarak nasıl işaretleyeceğinizi ve yalnızca geçerli kültür ayarlarına yönelik bir istemci makinesi için gereken derlemeyi nasıl indileceğini gösterir. Aşağıdaki yordam, içinde bulunan araçları kullanır [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Ayrıca, bu görevi ' de gerçekleştirebilirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .  Ayrıca bkz. [Izlenecek yol: Tasarımcıyı kullanarak ClickOnce dağıtım API 'si ile isteğe bağlı uydu derlemelerini indirme](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110)) [: Tasarımcıyı kullanarak ClickOnce dağıtım API 'si Ile uydu derlemelerini indirme](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120)).
+ Bu izlenecek yol, uydu derlemelerinizi isteğe bağlı olarak nasıl işaretleyeceğinizi ve yalnızca geçerli kültür ayarlarına yönelik bir istemci makinesi için gereken derlemeyi nasıl indileceğini gösterir. Aşağıdaki yordam, içinde bulunan araçları kullanır [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)] . Ayrıca, bu görevi ' de gerçekleştirebilirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .  ayrıca bkz. [izlenecek yol: tasarımcı veya izlenecek yol ClickOnce dağıtım apı 'si ile isteğe bağlı olarak uydu derlemelerini indirme](/previous-versions/visualstudio/visual-studio-2012/ms366788(v=vs.110)) [: tasarımcıyı kullanarak ClickOnce dağıtım apı 'si ile uydu derlemelerini isteğe](/previous-versions/visualstudio/visual-studio-2013/ms366788(v=vs.120))bağlı olarak indirme.
 
 > [!NOTE]
 > Test amacıyla, aşağıdaki kod örneği program aracılığıyla kültürü olarak ayarlar `ja-JP` . Üretim ortamı için bu kodu ayarlama hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında yer alan "sonraki adımlar" bölümüne bakın.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Bu konu başlığında, Visual Studio kullanarak uygulamanıza nasıl yerelleştirilmiş kaynaklar ekleneceğini bildiğiniz varsayılmaktadır. Ayrıntılı yönergeler için bkz. [Izlenecek yol: Windows Forms 'U yerelleştirin](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100)).
+ Bu konu, Visual Studio kullanarak uygulamanıza yerelleştirilmiş kaynaklar eklemeyi bildiğinizi varsayar. ayrıntılı yönergeler için bkz. [Walkthrough: yerelWindows forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100)).
 
 ### <a name="to-download-satellite-assemblies-on-demand"></a>Uydu derlemelerini isteğe bağlı olarak indirmek için
 
@@ -52,7 +53,7 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 2. [Resgen.exe (kaynak dosya Oluşturucu)](/dotnet/framework/tools/resgen-exe-resource-file-generator) veya kullanarak uygulamanız için uydu derlemeleri oluşturun [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
-3. *MageUI.exe* kullanarak, bir uygulama bildirimi oluşturun veya mevcut uygulama bildiriminizi açın. Bu araç hakkında daha fazla bilgi için bkz. [MageUI.exe (bildirim oluşturma ve düzenleme aracı, grafik istemci)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).
+3. *MageUI.exe* kullanarak, bir uygulama bildirimi oluşturun veya mevcut uygulama bildiriminizi açın. bu araç hakkında daha fazla bilgi için bkz. [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, grafik istemci)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).
 
 4. **Dosyalar** sekmesine tıklayın.
 

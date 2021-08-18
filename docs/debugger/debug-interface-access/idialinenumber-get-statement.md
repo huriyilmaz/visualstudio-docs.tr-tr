@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fa27b5a23f87fb68f070e4f2e5a781d6e5c345a368796c88dc3226b7b8291fd9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1af9fd6462f668e23d2a24d6d7db4939322a30e4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121312159"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066554"
 ---
 # <a name="idialinenumberget_statement"></a>IDiaLineNumber::get_statement
 Bu satır bilgisinin program kaynağında bir ifade yerine bir deyimin başlangıcını açık olduğunu belirten bir bayrak alınır.

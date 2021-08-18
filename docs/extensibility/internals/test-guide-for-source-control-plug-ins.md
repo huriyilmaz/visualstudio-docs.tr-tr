@@ -1,6 +1,6 @@
 ---
 title: Kaynak denetimi eklentileri için test Kılavuzu | Microsoft Docs
-description: Visual Studio ile kaynak denetimi eklentisini test etme hakkında bilgi edinin. Bu genel bakışta ortak test bölgeleri bulunur.
+description: Kaynak denetimi eklentisini Visual Studio ile test etme hakkında bilgi edinin. Bu genel bakışta ortak test bölgeleri bulunur.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: overview
@@ -14,14 +14,15 @@ ms.assetid: 13b74765-0b7c-418e-8cd9-5f2e8db51ae5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 465378069c5ac5d5a516e94bdaa2120a843d9914
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 66d2b57b97c60b9d485a3804d13d42925bd038942f4115e68ea046e27a7958c1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090791"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121431805"
 ---
 # <a name="test-guide-for-source-control-plug-ins"></a>Kaynak Denetimi Eklentileri için Test Kılavuzu
 Bu bölüm, kaynak denetimi eklentisini ile test etmek için rehberlik sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . En yaygın test alanlarının kapsamlı bir genel bakışı ve sorunlu olabilecek daha karmaşık alanlardan bazıları sağlanır. Bu genel bakış, test çalışmalarının ayrıntılı bir listesi olmak üzere tasarlanmamıştır.
@@ -39,7 +40,7 @@ Bu bölüm, kaynak denetimi eklentisini ile test etmek için rehberlik sağlar [
 
  Web projesi dört tür Web projesi vardır: dosya sistemi, yerel IIS, uzak siteler ve FTP.
 
-- Dosya sistemi projeleri yerel bir yol üzerinde oluşturulur, ancak bir UNC yolu aracılığıyla dahili olarak erişildiği için Internet Information Services (IIS) yüklenmesini gerektirmez ve kaynak denetimi altına, istemci projeleri gibi IDE içinden yerleştirilebilecek.
+- dosya sistemi projeleri yerel bir yol üzerinde oluşturulur, ancak bir UNC yolu aracılığıyla dahili olarak erişildiği için Internet Information Services (ııs) yüklenmesini gerektirmez ve kaynak denetimi altına, istemci projeleri gibi ıde içinden yerleştirilebilecek.
 
 - Yerel IIS projeleri, aynı makinede yüklü olan ve yerel makineye işaret eden bir URL ile erişilen IIS ile çalışır.
 

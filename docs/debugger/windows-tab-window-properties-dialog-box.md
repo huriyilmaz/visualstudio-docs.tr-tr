@@ -1,6 +1,6 @@
 ---
-title: Windows Sekme, Pencere Özellikleri İletişim Kutusu | Microsoft Docs
-description: Seçilen Windows ilgili windows Windows bilgileri göstermek için Özellikler'in Windows sekmesini kullanın. Ayarlar için bu makaleye bakın.
+title: Windows Sekme, pencere özellikleri Iletişim kutusu | Microsoft Docs
+description: seçili pencereyle ilgili Windows hakkındaki bilgileri göstermek için Windows özelliklerinin Windows sekmesini kullanın. Ayarlar için bu makaleye bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,22 +13,22 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f13a9ee3f8b1ea245625b1734f4d7053e331228a29bdc4bcd78c49aafa34f7db
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ff9e7acf648e57dbb3d50a7841e06594fad35733
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378456"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112249"
 ---
 # <a name="windows-tab-window-properties-dialog-box"></a>Pencereler Sekmesi, Pencere Özellikleri İletişim Kutusu
-Seçili **Windows** pencerelerle ilgili bilgileri göstermek için Windows sekmesini kullanın. Pencere Özellikleri [İletişim Kutusunu görüntülemek için](../debugger/window-properties-dialog-box.md)odağı Görünüm [penceresine Windows](../debugger/windows-view.md) hareket ettirin. Ağaçta herhangi bir pencere düğümünü seçin ve ardından Görünüm **menüsünden** **Özellikler'i** seçin.
+seçili pencereyle ilgili Windows hakkındaki bilgileri göstermek için **Windows** sekmesini kullanın. [pencere özellikleri iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
- Aşağıdaki ayarlar Windows **kullanılabilir:**
+ **Windows** sekmesinde aşağıdaki ayarlar kullanılabilir:
 
 |Giriş|Açıklama|
 |-----------|-----------------|
-|**Sonraki Pencere**|Bir sonraki pencere ağaç görünümünde gösterilen aynı sırada (Z düzeninde) bir sonraki karpuz penceresinin tanıtıcısı ("bir sonraki pencere yoksa hiçbiri"). Sonraki pencerenin özelliklerini görüntülemek için bu girdiyi seçin.|
-|**Önceki Pencere**|Pencere ağaç görünümünde gösterilen aynı dizide (Z düzeni) önceki karpuz penceresinin tanıtıcısı ("önceki pencere yoksa hiçbiri"). Önceki pencerenin özelliklerini görüntülemek için bu girdiyi seçin.|
-|**Üst Pencere**|Bu pencerenin üst penceresinin tanıtıcısı ("üst yoksa hiçbiri"). Üst pencerenin özelliklerini görüntülemek için bu girdiyi seçin.|
-|**İlk Alt**|Bu pencerenin ilk alt penceresinin, pencere ağaç görünümünde gösterilen sırada (Z düzeni) tanıtıcısı ("alt pencere yoksa hiçbiri"). İlk alt pencerenin özelliklerini görüntülemek için bu değeri seçin.|
-|**Sahip Penceresi**|Bu pencerenin sahip penceresinin tanıtıcısı. Bir uygulamanın ana penceresi genellikle sistem kalıcı iletişim kutusu pencerelerinin sahibi olur, örneğin ("sahip yoksa hiçbiri"). Sahip penceresinin özelliklerini görüntülemek için bu girdiyi seçin.|
+|**Sonraki pencere**|Bir sonraki eşdüzey pencerenin, pencere ağaç görünümünde (bir sonraki pencere yoksa "hiçbiri") gösterilen aynı dizide (Z-Order) tanıtıcısı. Sonraki pencerenin özelliklerini görüntülemek için bu girişi seçin.|
+|**Önceki pencere**|Önceki eşdüzey pencerenin, pencere ağaç görünümünde (önceki bir pencere yoksa "hiçbiri") gösterilen aynı sırada (Z-Order) tanıtıcısı. Önceki pencerenin özelliklerini görüntülemek için bu girişi seçin.|
+|**Üst pencere**|Bu pencerenin üst penceresinin tutamacı (üst yoksa "none"). Üst pencerenin özelliklerini görüntülemek için bu girişi seçin.|
+|**İlk alt öğe**|Bu pencerenin ilk alt penceresinin, pencere ağaç görünümünde (alt Windows yoksa "hiçbiri") gösterilen sırayla (Z-Order) işleci. İlk alt pencerenin özelliklerini görüntülemek için bu değeri seçin.|
+|**Sahip penceresi**|Bu pencerenin sahip penceresinin tutamacı. Uygulamanın ana penceresi genellikle sistem tarafından kalıcı iletişim kutusu pencerelerinin (örneğin, sahip olmadığında "none") sahip olur. Sahip penceresinin özelliklerini görüntülemek için bu girişi seçin.|

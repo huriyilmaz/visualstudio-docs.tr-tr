@@ -1,6 +1,6 @@
 ---
 title: devinit ve GitHub Codespaces
-description: devinit kullanarak Visual Studio için bir codespace özelleştirmeyi öğrenin.
+description: devinit kullanarak bir codespace'ı Visual Studio öğrenin.
 ms.date: 08/28/2020
 ms.topic: reference
 author: andysterland
@@ -21,26 +21,26 @@ ms.locfileid: "121343397"
 # <a name="devinit-and-github-codespaces"></a>devinit ve GitHub Codespaces
 
 > [!IMPORTANT]
-> 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren Visual Studio 2019'dan GitHub Codespaces'a bağlanma desteklemeyecek ve bu özel önizleme sonuçlandırıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için Visual Studio geliştirici topluluğu forummize katılın.
 
-devınit [GitHub codespaces](https://github.com/features/codespaces) için harika bir tamamdır ve devinit, katkıda bulunanlar oluşturmak, çalıştırmak ve hata ayıklamak için hemen bir kod alanı kurulumu sağlamak üzere kullanılabilir.
+devinit, [Codespaces'GitHub](https://github.com/features/codespaces) için harika bir tamamlayıcıdır ve katkıda bulunanların hemen derleme, çalıştırma ve hata ayıklaması için codespace kurulumu almak için kullanılabilir.
 
 > [!IMPORTANT]
-> Devinit 'i codespace ile tümleştirmadan önce, bağımlılıklarınızı tanımlayan bir dosyaya sahip olduğunuzdan emin olmanız gerekir `.devinit.json` . Oluşturma hakkında daha fazla bilgi için Başlarken `.devinit.json` [belgelerini](getting-started-with-devinit.md)okuyun.
+> sapını codespace ile tümleştirmeden önce bağımlılıklarınızı tanımlayan bir `.devinit.json` dosyanız olduğundan emin olun. oluşturma hakkında daha fazla bilgi `.devinit.json` için, başlarken [belgelerini okuyun.](getting-started-with-devinit.md)
 
-GitHub codespace içinde uygulamanız bulutta oluşturulup çalıştırılır. Bulutta olması, uygulamanızın makinelerinizdeki yerel kaynaklara erişimi olmadığı anlamına gelir. Bunlar yerel olarak yüklediğiniz araçları veya programları içerir. Uygulamanızın herhangi bir sistem genelinde bağımlılığı veya yapılandırılması gerekiyorsa, her bir codespace üzerinde yapılması gerekir. Bunu yapmanın en kolay yolu bir `.devinit.json` Dosya kullanmaktır.
+Codespace'GitHub içinde, uygulamanız bulutta yerleşik olarak ve çalıştırabilirsiniz. Bulutta olmak, uygulamanın makineleriniz üzerinde yerel kaynaklara erişimi olmadığını anlamına gelir. Bunlar, yerel olarak yüklemiş olduğunuz araçları veya programları içerir. Uygulamanıza tüm sistem genelinde bağımlılıkların yüklenmiş veya yapılandırılmış olması gerekirse, her codespace üzerinde yapılması gerekir. Bunu başarmanın en kolay yolu bir dosya `.devinit.json` kullanmaktır.
 
-Uygulamanızın ihtiyaç duyacağı bağımlılıklarla bir codespace oluşturulduğundan emin olmak için, `devinit` codespace oluşturulduğunda çalıştırılması gerekir. Bu, `devinit init` `postCreateCommand` Depo köküne yerleştirilmiş bir dosyada tanımlanan öğesinden çağırarak yapılabilir `.devcontainer.json` . İçindeki dize (ler), `postCreateCommand` Depo codespace 'e kopyalandıktan sonra varsayılan kabukta yürütülür. `postCreateCommand`GitHub codespaces [özelleştirme belgelerindeki](https://docs.github.com/github/developing-online-with-codespaces/configuring-codespaces-for-your-project)hakkında daha fazla bilgi edinebilirsiniz. Komutu eklemek için `devinit` `devinit init` `postCreateCommand` Aşağıdaki örneklerde gösterildiği gibi öğesine ekleyebilirsiniz.
+Bir codespace'in, uygulamanıza gereken bağımlılıklarla oluşturulduktan emin olmak için `devinit` codespace oluşturulduğunda çalıştırılan olması gerekir. Bu, depo `devinit init` köküne yerleştirilen `postCreateCommand` bir dosyada `.devcontainer.json` tanımlanan çağrısıyla yapılabilir. 'daki dizeler, codespace'da repo `postCreateCommand` kopyalandıktan sonra varsayılan kabukta yürütülür. `postCreateCommand`Codespaces özelleştirme belgelerinin GitHub daha [fazla bilgi edinebilirsiniz.](https://docs.github.com/github/developing-online-with-codespaces/configuring-codespaces-for-your-project) Komutu eklemek `devinit` için, aşağıdaki `devinit init` örneklerde gösterildiği gibi `postCreateCommand` komutuna indirebilirsiniz.
 
-codespace 'e bağlandıktan `devinit init -f <path to .devinit.json>` sonra, Visual Studio tümleşik terminalden da yürütebilirsiniz.
+Codespace'inize `devinit init -f <path to .devinit.json>` bağlandıktan Visual Studio Tümleşik Terminal'den de yürütebilirsiniz.
 
 ## <a name="examples"></a>Örnekler
 
-Aşağıdaki örneklerde her iki örnekte de `.devinit.json` Depo kökünde bulunur `.devcontainer.json` .
+Aşağıdaki her iki örnekte `.devinit.json` de , ile birlikte depo kökündedir. `.devcontainer.json`
 
-### <a name="with-a-devcontainerjson-file"></a>.devcontainer.jsdosya ile
+### <a name="with-a-devcontainerjson-file"></a>Bir .devcontainer.jsdosyasıyla
 
-Bu örnekte, `.devcontainer.json` aşağıdaki dosya, dosyanın yanı sıra depo köküne yerleştirilir `.devinit.json` . Dosyalar da bir `.devcontainer` dizine yerleştirilebilir.
+Bu örnekte, `.devcontainer.json` aşağıdaki dosya, dosyanın yanı sıra repo köküne `.devinit.json` yerleştirilir. Dosyalar bir dizine de `.devcontainer` yerleştirilebilirsiniz.
 
 ```json
 {
@@ -48,7 +48,7 @@ Bu örnekte, `.devcontainer.json` aşağıdaki dosya, dosyanın yanı sıra depo
 }
 ```
 
-`.devinit.json`Başka bir dizinde olduğunda-f bayrağı kullanılabilir.
+başka `.devinit.json` bir dizinde olduğunda , -f bayrağı kullanılabilir.
 
 ```json
 {
@@ -63,11 +63,11 @@ Bu örnekte, `.devcontainer.json` aşağıdaki dosya, dosyanın yanı sıra depo
 }
 ```
 
-[belgelerimizde](sample-all-tool.md) devinit kullanmaya ilişkin daha fazla örnek ve [.net Core örneğinde](https://github.com/microsoft/devinit-example-dotnet-core) GitHub ve [örnek depolarıNode.js](https://github.com/microsoft/devinit-example-nodejs) bulabilirsiniz.
+.NET [Core](https://github.com/microsoft/devinit-example-dotnet-core) örneğinde ve örnek [](sample-all-tool.md) depolarda yer alan belgelerde ve GitHub kullanarak [daha fazlaNode.js](https://github.com/microsoft/devinit-example-nodejs) bulabilirsiniz.
 
 ### <a name="as-commands"></a>As komutları
 
-Bu örnekte, `.devcontainer.json` aşağıdaki dosya depo köküne yerleştirilir ve `devinit run` tek bir aracı çalıştırmak için komut satırından doğrudan çağırılır.  
+Bu örnekte aşağıdaki dosya, tek bir aracı çalıştırmak için doğrudan komut satırına çağrılır ve aşağıdaki `.devcontainer.json` `devinit run` dosya, bir repo köküne yerleştirilir.  
 
 ```json
 {
@@ -77,13 +77,13 @@ Bu örnekte, `.devcontainer.json` aşağıdaki dosya depo köküne yerleştirili
 
 ### <a name="from-a-terminal-prompt"></a>Terminal isteminden
 
-Geçerli çalışma dizini bir `.devinit.json` Dosya içerdiğinde.
+Geçerli çalışma dizini bir dosya `.devinit.json` içerdiğinde.
 
 ```console
 devinit init
 ```
 
-`.devinit.json`Başka bir dizinde olduğunda.
+başka `.devinit.json` bir dizinde olduğunda.
 
 ```console
 devinit init -f path/to/.devinit.json

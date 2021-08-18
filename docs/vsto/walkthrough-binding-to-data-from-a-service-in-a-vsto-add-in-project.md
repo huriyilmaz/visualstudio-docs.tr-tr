@@ -1,6 +1,6 @@
 ---
-title: VSTO eklenti projesindeki hizmetten veriye bağlama
-description: Microsoft Word belgesine denetim eklemeyi, denetimleri MSDN Içerik hizmetinden alınan verilere bağlamayı ve çalışma zamanında olaylara yanıt vermeyi öğrenin.
+title: VSTO eklentisi projesindeki hizmetten veriye bağlama
+description: Microsoft Word bir belgeye denetim eklemeyi, denetimleri MSDN içerik hizmetinden alınan verilere bağlamayı ve çalışma zamanında olaylara yanıt vermeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b6993cb3eebc7641f4486bdc617ecb78e40aa05c
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 1a80c4f6dea1861bd91cfcfe4985975fc7a5e10e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824534"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082679"
 ---
-# <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>İzlenecek yol: VSTO eklenti projesindeki bir hizmetten veriye bağlama
-  VSTO eklenti projelerinde verileri konak denetimlerine bağlayabilirsiniz. Bu izlenecek yol, Microsoft Office bir Word belgesine nasıl denetim ekleneceğini, denetimlerin MSDN Içerik hizmetinden alınan verilere nasıl bağlanacağını ve çalışma zamanında olaylara nasıl yanıt verileceğini gösterir.
+# <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>izlenecek yol: VSTO eklentisi projesindeki bir hizmetten veriye bağlama
+  VSTO eklenti projelerindeki konak denetimlerine veri bağlayabilirsiniz. bu izlenecek yol, Microsoft Office bir Word belgesine nasıl denetim ekleneceğini, denetimlerin MSDN içerik hizmetinden alınan verilere nasıl bağlanacağını ve çalışma zamanında olaylara nasıl yanıt verileceğini gösterir.
 
  **Uygulama hedefi:** Bu konudaki bilgiler Word 2010 için uygulama düzeyi projelere yöneliktir. Daha fazla bilgi edinmek için bkz. [Office Uygulaması ve Proje Türüne Göre Kullanılabilen Özellikler](../vsto/features-available-by-office-application-and-project-type.md).
 
@@ -46,13 +47,13 @@ ms.locfileid: "107824534"
 - [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] veya [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
- İlk adım, bir Word VSTO eklenti projesi oluşturmaktır.
+ ilk adım, bir Word VSTO eklentisi projesi oluşturmaktır.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C# kullanarak **MTPS Içerik hizmeti** adlı BIR Word VSTO eklentisi projesi oluşturun.
+1. Visual Basic veya C# kullanarak **MTPS içerik hizmeti** adlı bir Word VSTO eklentisi projesi oluşturun.
 
-     Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+     daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
      Visual Studio, `ThisAddIn.vb` veya `ThisAddIn.cs` dosyasını açar ve projeyi **Çözüm Gezgini** ekler.
 
@@ -117,4 +118,4 @@ ms.locfileid: "107824534"
      Bilgiler, MTPS Içerik hizmetinden indirilir ve içerik denetimi içinde görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)

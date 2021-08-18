@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, sabit listesi sabitinin adını değeri verilen olarak alır.
-title: 'Ihata ayıklama Genumfield:: GetStringFromValue | Microsoft Docs'
+description: Bu yöntem, değerine göre sabit değerinin adını elde ediyor.
+title: IDebugEnumField::GetStringFromValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 5f95fd0c-fdce-497f-9f54-2ad8749494e9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 41d004a9b226646dd1196f1debc244cdf11efe32
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 692d5fd16912be8645e99fd2b54a8fbb4871b007
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092585"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035104"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
-Bu yöntem, sabit listesi sabitinin adını değeri verilen olarak alır.
+Bu yöntem, değerine göre sabit değerinin adını elde ediyor.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +45,16 @@ int GetStringFromValue(
 
 ## <a name="parameters"></a>Parametreler
 `value`\
-'ndaki Numaralandırma sabitinin adının alınacağı değer.
+[in] Sabit sabit değerinin adını almak için gereken değer.
 
 `pbstrValue`\
-dışı Sabit Listesi sabitinin adını döndürür.
+[out] Sabit sabiti sabiti adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` değerin ilişkili bir adı yoksa veya bir hata kodu döndürürse döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde `S_FALSE` değerin ilişkili adı yoksa döndürür veya bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Aynı değerle ilişkili birden fazla ad varsa, numaralandırmada tanımlanan ilk ad döndürülür.
+ Aynı değerle ilişkili birden fazla ad varsa, numaralamada tanımlanan ad döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

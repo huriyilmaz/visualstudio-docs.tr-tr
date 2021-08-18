@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 01a46af13fc9b537c6e5255889d77add6d605a23d46d754667de78c08f9017bf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 48bbd10fa01d048e19d80095658045a2e64e411c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454451"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113071"
 ---
 # <a name="debugging-f"></a>Hata ayıklama F\#
 F # hatası ayıklamak, birkaç özel durum dışında yönetilen herhangi bir dilde hata ayıklamaya benzer:

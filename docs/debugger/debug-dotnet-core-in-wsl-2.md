@@ -1,7 +1,7 @@
 ---
-title: WSL 2 kullanarak Linux'ta .NET uygulamalarının hata ayıklaması
-description: WsL 2'de .NET uygulamalarınızı çalışmadan çalıştırmayı ve hata ayıklamayı Visual Studio.
-ms.date: 07/16/2021
+title: WSL kullanarak Linux 'ta .NET uygulamalarında hata ayıklama
+description: Visual Studio çıkmadan WSL 'de .NET uygulamalarınızı çalıştırmayı ve hata ayıklamayı öğrenin.
+ms.date: 08/06/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging, linux
@@ -9,46 +9,69 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 41bd6cf6f45862702e282691467ce1ef26137b8e
-ms.sourcegitcommit: 3c5b1a1d51b521356f42a6879c1f1745573dda65
+ms.openlocfilehash: e13cc2460ba5fa413ff17536a800a3ff125bbbcf9d46f296f853608d5eb82498
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114591988"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345903"
 ---
-# <a name="debug-net-apps-in-wsl-2-with-visual-studio"></a>WSL 2'de .NET Apps'te Visual Studio
+# <a name="debug-net-apps-in-wsl-with-visual-studio"></a>Visual Studio ile WSL 'de .NET uygulamalarında hata ayıklama
 
-WSL 2 kullanarak .NET uygulamalarınızı Linux'ta kolayca çalıştırabilir ve Visual Studio ayıklayabilirsiniz. Platformlar arası bir geliştiriciyseniz, bu yöntemi hedef ortamlarınızı daha fazla test etmek için basit bir yol olarak kullanabilirsiniz.
+wsl kullanarak Visual Studio çıkmadan, .net uygulamalarınızı Linux 'ta kolayca çalıştırabilir ve hata ayıklayabilirsiniz. Platformlar arası bir geliştiricisiyseniz, bu yöntemi hedef ortamlarınızın daha fazlasını test etmenin basit bir yolu olarak kullanabilirsiniz.
 
-Linux'Windows bir .NET kullanıcısı için WSL 2, üretim gerçekçiliği ve üretkenlik arasında güzel bir noktada yer amaktadır. Bu Visual Studio, uzaktan hata ayıklayıcısını kullanarak veya Kapsayıcı [](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)Araçları'nın kullanarak kapsayıcılarla uzak Linux ortamında zaten hata [ayıkabilirsiniz.](../containers/overview.md) Ana endişeniz üretim gerçekçiliği olduğunda bu seçeneklerden birini kullanabilirsiniz. Kolay ve hızlı bir iç döngü daha önemli olduğunda WSL 2 harika bir seçenektir.
+wsl, Linux 'u hedefleyen Windows bir .net kullanıcısı için üretim ve verimlilik arasında tatlı bir sıra yaşar. Visual Studio, uzak bir Linux ortamında, [uzaktan hata ayıklayıcıyı](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)kullanarak veya [kapsayıcı araçlarını](../containers/overview.md)kullanarak kapsayıcılarla hata ayıklaması yapabilirsiniz. Üretim için önemli bir sorun olduğunda, bu seçeneklerden birini kullanmanız gerekir. Kolay ve hızlı bir iç döngü daha önemliyse, WSL harika bir seçenektir.
 
-Tek bir yöntem seçmenize gerek yok! Aynı projede Docker ve WSL 2 için bir başlatma profiline sahip olabilir ve belirli bir çalıştırma için uygun olanı seçin. Ayrıca, uygulama dağıtıldıktan sonra, bir sorun varsa, uzak hata ayıklayıcıyı kullanarak buna iliştirebilirsiniz.
+Yalnızca bir yöntem seçmeniz gerekmez! Aynı projede Docker ve WSL için bir başlatma profili oluşturabilir ve belirli bir çalıştırma için uygun olanını seçebilirsiniz. Uygulamanız dağıtıldıktan sonra, bir sorun varsa, bu uygulamaya eklemek için her zaman uzaktan hata ayıklayıcıyı kullanabilirsiniz.
+
+>[!NOTE]
+> Visual Studio 2019 sürüm 16,11 Preview 3 ' te başlayarak, wsl 2 hata ayıklama hedefi wsl olarak yeniden adlandırıldı.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Visual Studio 2019 v16.9 Preview 1 veya sonraki sürümleri WSL 2 ile .NET Core Hata Ayıklama isteğe bağlı bileşeniyle birlikte gelir.
+- Visual Studio 2019 v 16.9 Preview 1 veya sonraki sürümleri, wsl isteğe bağlı bileşeniyle .net hata ayıklaması ile birlikte.
 
-  İsteğe bağlı bileşen varsayılan olarak .NET Core platformlar arası veya web geliştirme ASP.NET iş yüklerine dahil edilir. Bu iş yüklerinden birini veya ikisini birden yüklemeniz gerekir.
+  isteğe bağlı bileşen, .net Core platformlar arası veya ASP.NET ve web geliştirme iş yükleriyle varsayılan olarak dahil edilmiştir. Bu iş yüklerinin birini veya her ikisini de yüklemelisiniz.
 
-- [WSL 2'ye yükleyin.](/windows/wsl/about)
+- [WSL](/windows/wsl/about)'yi yükler.
 
-- Tercihe [göre](https://aka.ms/wslstore) dağıtımı yükleyin.
+- Seçtiğiniz [dağıtımı](https://aka.ms/wslstore) yükler.
 
-## <a name="start-debugging-with-wsl-2"></a>WSL 2 ile hata ayıklamayı başlatma
+## <a name="start-debugging-with-wsl"></a>WSL ile hata ayıklamayı Başlat
 
-1. Gerekli bileşenleri yükledikten sonra Visual Studio'de bir ASP.NET Core web uygulaması veya .NET Core konsol uygulaması açın. WSL 2 adlı yeni bir Başlatma Profili görüyorsunuz:
+1. gerekli bileşenleri yükledikten sonra, Visual Studio ' de bir ASP.NET Core web uygulaması veya .net Core konsol uygulaması açın, wsl adlı yeni bir başlatma profili görürsünüz:
 
-   ![Başlatma profili listesinde WSL 2 başlatma profili](media/linux-wsl2-debugging-select-launch-profile.png)
+   ![Başlatma profili listesinde WSL başlatma profili](media/linux-wsl2-debugging-select-launch-profile.png)
 
-1. Bu profili seçerek üzerindelaunchSettings.js *ekleyin.*
+1. *ÜzerindelaunchSettings.js* eklemek için bu profili seçin.
 
-   Dosyada yer alan anahtar özniteliklerden bazıları aşağıdaki örnekte gösterilmiştir.
+   Dosyadaki bazı anahtar öznitelikleri aşağıdaki örnekte gösterilmiştir.
+
+    ::: moniker range=">=vs-2022"
+
+    >[!NOTE]
+    > Visual Studio 2022 Preview 3 ' ten başlayarak, başlatma profilindeki komut adı WSL2 iken wsl olarak değiştirilmiştir.
 
     ```json
-    "WSL 2": {
+    "WSL": {
+        "commandName": "WSL",
+        "launchBrowser": true,
+        "launchUrl": "https://localhost:5001",
+        "environmentVariables": {
+            "ASPNETCORE_URLS": "https://localhost:5001;http://localhost:5000",
+            "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "distributionName": ""
+    }
+    ```
+    ::: moniker-end
+    ::: moniker range="vs-2019"
+    ```json
+    "WSL": {
         "commandName": "WSL2",
         "launchBrowser": true,
         "launchUrl": "https://localhost:5001",
@@ -59,22 +82,38 @@ Tek bir yöntem seçmenize gerek yok! Aynı projede Docker ve WSL 2 için bir ba
         "distributionName": ""
     }
     ```
+    ::: moniker-end
 
-   Yeni profili seçmenizin ardından uzantı, WSL 2 dağıtımınızı .NET uygulamalarını çalıştıracak şekilde yapılandırıldığından emin olur ve eksik bağımlılıkları yüklemenize yardımcı olur. Bu bağımlılıkları yükleyemedikten sonra WSL 2'de hata ayıklamaya hazır oluruz.
+   Yeni profili seçtiğinizde, uzantı WSL dağılımının .NET uygulamalarını çalıştıracak şekilde yapılandırılıp yapılandırılmadığını denetler ve eksik bağımlılıkları yüklemenize yardımcı olur. Bu bağımlılıkları yükledikten sonra, WSL 'de hata ayıklamaya hazırsanız.
 
-1. Hata ayıklamayı normal şekilde başlatabilirsiniz ve uygulamanız varsayılan WSL 2 dağıtımında çalıştırılıyor.
+1. Hata ayıklamayı normal olarak başlatın ve uygulamanız varsayılan WSL dağıtımında çalışacaktır.
 
-   Linux'ta çalıştırmayı doğrulamanın kolay bir yolu değerini kontrol `Environment.OSVersion` etmektir.
+   Linux 'ta çalıştırdığınız için kolay bir yol, değerini denetliyoruz `Environment.OSVersion` .
 
 >[!NOTE]
-> Yalnızca Ubuntu ve Debian test edilmiştir ve desteklenebildi. .NET tarafından desteklenen diğer dağıtımlar çalışmalı, ancak .NET Çalışma Zamanı ve [Curl'in el ile](https://aka.ms/wsldotnet) yüklemesini [gerektirir.](https://curl.haxx.se/)
+> Yalnızca Ubuntu ve deni test edilmiştir ve desteklenir. .NET tarafından desteklenen diğer dağıtımlar da çalışır, ancak [.NET çalışma zamanı](https://aka.ms/wsldotnet) ve [kıvrımlı](https://curl.haxx.se/)el ile yüklenmesi gerekir.
 
-## <a name="choose-a-specific-distribution"></a>Belirli bir dağıtımı seçme
+## <a name="choose-a-specific-distribution"></a>Belirli bir dağıtım seçin
 
-Varsayılan olarak, WSL 2 başlatma profili, 'de ayar olarak varsayılan *dağıtımıwsl.exe.* Başlatma profilinizin varsayılandan bağımsız olarak belirli bir dağıtımı hedeflemesini istiyorsanız, başlatma profilinizi değiştirebilirsiniz. Örneğin, bir web uygulamasında hata ayıklarken bunu Ubuntu 20.04'te test etmek için başlatma profiliniz şöyle olabilir:
+Varsayılan olarak, WSL 2 başlatma profili, *wsl.exe* ayarlandığı şekilde varsayılan dağıtımı kullanır. Başlatma profilinizin belirli bir dağıtımı hedeflemesini istiyorsanız, bu varsayılan değer ne olursa olsun, başlatma profilinizi değiştirebilirsiniz. Örneğin, bir Web uygulamasında hata ayıklaması yapıyorsanız ve Ubuntu 20,04 ' de test etmek istiyorsanız, başlatma profiliniz şöyle görünür:
 
+::: moniker range=">=vs-2022"
 ```json
-"WSL 2": {
+"WSL": {
+    "commandName": "WSL",
+    "launchBrowser": true,
+    "launchUrl": "https://localhost:5001",
+    "environmentVariables": {
+        "ASPNETCORE_URLS": "https://localhost:5001;http://localhost:5000",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+    },
+    "distributionName": "Ubuntu-20.04"
+}
+```
+::: moniker-end
+::: moniker range="vs-2019"
+```json
+"WSL": {
     "commandName": "WSL2",
     "launchBrowser": true,
     "launchUrl": "https://localhost:5001",
@@ -85,50 +124,69 @@ Varsayılan olarak, WSL 2 başlatma profili, 'de ayar olarak varsayılan *dağı
     "distributionName": "Ubuntu-20.04"
 }
 ```
+::: moniker-end
 
-## <a name="target-multiple-distributions"></a>Birden çok dağıtımı hedefleme
+## <a name="target-multiple-distributions"></a>Birden çok dağıtımı hedefle
 
-Bir adım daha ileri gitmek gerekirse, birden çok dağıtımda çalışması gereken bir uygulama üzerinde çalışıyorsanız ve bunların her birini test etmek için hızlı bir yol almak için birden çok başlatma profiline sahip olabilirsiniz. Örneğin konsol uygulamalarınızı Debian, Ubuntu 18.04 ve Ubuntu 20.04'te test etmek için aşağıdaki başlatma profillerini kullanabilirsiniz:
+Bir adım daha devam etmek için, birden fazla dağıtımda çalışması gereken bir uygulama üzerinde çalışıyorsanız ve bunların her birinde test etmek için hızlı bir yol istiyorsanız birden fazla başlatma profili kullanabilirsiniz. Örneğin, konsol uygulamanızı de, Ubuntu 18,04 ve Ubuntu 20,04 ' de test etmeniz gerekiyorsa aşağıdaki başlatma profillerini kullanabilirsiniz:
 
+::: moniker range=">=vs-2022"
 ```json
-"WSL 2 : Debian": {
+"WSL : Debian": {
+    "commandName": "WSL",
+    "distributionName": "Debian"
+},
+"WSL : Ubuntu 18.04": {
+    "commandName": "WSL",
+    "distributionName": "Ubuntu-18.04"
+},
+"WSL : Ubuntu 20.04": {
+    "commandName": "WSL",
+    "distributionName": "Ubuntu-20.04"
+}
+```
+::: moniker-end
+::: moniker range="vs-2019"
+```json
+"WSL : Debian": {
     "commandName": "WSL2",
     "distributionName": "Debian"
 },
-"WSL 2 : Ubuntu 18.04": {
+"WSL : Ubuntu 18.04": {
     "commandName": "WSL2",
     "distributionName": "Ubuntu-18.04"
 },
-"WSL 2 : Ubuntu 20.04": {
+"WSL : Ubuntu 20.04": {
     "commandName": "WSL2",
     "distributionName": "Ubuntu-20.04"
 }
 ```
+::: moniker-end
 
-Bu başlatma profilleriyle, hedef dağıtımlarınız arasında kolayca geçiş yapabilirsiniz. Tüm bunlar, dağıtımların rahat Visual Studio.
+Bu başlatma profilleriyle, Visual Studio rahatlığını yapmadan hedef dağıtımlarınız arasında kolayca geri ve ileri geçiş yapabilirsiniz.
 
-![Başlatma profili listesinde birden çok WSL 2 başlatma profili](media/linux-wsl2-debugging-switch-target-distribution.png)
+![Başlatma profili listesinde birden çok WSL başlatma profili](media/linux-wsl2-debugging-switch-target-distribution.png)
 
-## <a name="wsl-settings-in-the-launch-profile"></a>Başlatma profilinde WSL ayarları
+## <a name="wsl-settings-in-the-launch-profile"></a>Başlatma profilindeki WSL ayarları
 
-Aşağıdaki tabloda başlatma profilinde desteklenen ayarlar yer alır.
+Aşağıdaki tabloda, başlatma profilinde desteklenen ayarlar gösterilmektedir.
 
-|Name|Varsayılan|Amaç|Belirteçler desteklesin mi?|
+|Name|Varsayılan|Amaç|Belirteçleri destekliyor mu?|
 |-|-|-|-|
-|executablePath|dotnet|Çalıştıracak yürütülebilir dosya|Yes|
-|commandLineArgs|TargetPath MSBuild WSL ortamıyla eşlenen MSBuild değeri|executablePath'e geçirilen komut satırı bağımsız değişkenleri|Yes|
-|Workingdirectory|Konsol uygulamaları için: {*OutDir*}</br>Web uygulamaları için: {*ProjectDir*}|Hata ayıklamanın başlat başlayacağı çalışma dizini|Yes|
-|environmentVariables||Hata ayıklandı işlemi için ayar yapmak için ortam değişkenlerinin Anahtar Değer çiftleri.|Yes|
-|setupScriptPath||Hata ayıklamadan önce çalıştıracak betik. ~/.bash_profile gibi betikleri çalıştırmaya .bash_profile.|Yes|
-|distributionName||Kullanmak üzere WSL dağıtımının adı.|Hayır|
-|launchBrowser|yanlış|Tarayıcı başlatıp başlatmama|Hayır|
-|launchUrl||launchBrowser true ise başlatma URL'si|Hayır|
+|executablePath|dotnet|Çalıştırılacak yürütülebilir dosya|Yes|
+|commandLineArgs|wsl ortamıyla eşlenen MSBuild özelliğinin değeri|ExecutablePath 'e geçirilen komut satırı bağımsız değişkenleri|Yes|
+|workingDirectory|Konsol uygulamaları için: {*OutDir*}</br>Web Apps için: {*ProjectDir*}|Hata ayıklamanın başlatılacağı çalışma dizini|Yes|
+|environmentVariables||Hata ayıklanan işlem için ayarlanacak ortam değişkenlerinin anahtar değeri çiftleri.|Yes|
+|Kurulumbetiğiyolu||Hata ayıklamadan önce çalıştırılacak komut dosyası. ~/.Bash_profile gibi betikleri çalıştırmak için faydalıdır.|Yes|
+|distributionName||Kullanılacak WSL dağıtımının adı.|Hayır|
+|launchBrowser|yanlış|Tarayıcının başlatılıp başlatılmayacağını belirtir|Hayır|
+|launchUrl 'Si||LaunchBrowser doğruysa başlatılacak URL|Hayır|
 
 Desteklenen belirteçler:
 
-{*ProjectDir*} - Proje dizininin yolu
+{*ProjectDir*}-proje dizininin yolu
 
-{*OutDir*} - MSBuild özelliği`OutDir`
+{*outdir*}-MSBuild özelliğinin değeri`OutDir`
 
 >[!NOTE]
-> Tüm yollar WSL için değildir Windows.
+> Tüm yollar WSL Windows değil.

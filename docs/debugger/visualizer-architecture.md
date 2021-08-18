@@ -13,25 +13,26 @@ ms.assetid: 6aad395f-7170-4d9e-b2b8-a5faf453380e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9df1dfa1912c54d30c5c428ec59de9432fe68051
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2e73f1746bf4a5b5ee597ad905392cd1f95dc2135379e89b102cce4381c70aa7
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99884253"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121418590"
 ---
 # <a name="visualizer-architecture"></a>Görselleştirici Mimarisi
 Bir hata ayıklayıcı görselleştiricisi mimarisi iki bölümden oluşur:
 
-- *Hata ayıklayıcı tarafı* Visual Studio hata ayıklayıcısı içinde çalışır. Hata ayıklayıcı tarafı kodu, görselleştiriciniz için Kullanıcı arabirimini oluşturur ve görüntüler.
+- *hata ayıklayıcı tarafı* Visual Studio hata ayıklayıcı içinde çalışır. Hata ayıklayıcı tarafı kodu, görselleştiriciniz için Kullanıcı arabirimini oluşturur ve görüntüler.
 
-- Hata *ayıklanan yan* Işlem Visual Studio 'da çalışıyor (hata *ayıklanan*).
+- hata *ayıklanan yan* Visual Studio işlem içinde çalışıyor (hata *ayıklanan*).
 
   Görselleştirici, hata ayıklayıcının bir veri nesnesinin içeriğini anlamlı, anlaşılır bir biçimde görüntülemesini (*görselleştirmesini*) sağlayan bir hata ayıklayıcı bileşenidir. Bazı Görselleştiriciler veri nesnesini de düzenlemenizi destekler. Özel Görselleştiriciler yazarak, hata ayıklayıcıyı kendi özel veri türlerinizi işleyecek şekilde genişletebilirsiniz.
 
-  Görselleştirilebilen veri nesnesi hata ayıkladığınız işlem içinde (hata *ayıklanan* işlem) bulunuyor. Verileri görüntüleyen kullanıcı arabirimi, Visual Studio hata ayıklayıcı işlemi içinde oluşturulur:
+  Görselleştirilebilen veri nesnesi hata ayıkladığınız işlem içinde (hata *ayıklanan* işlem) bulunuyor. verileri görüntüleyen kullanıcı arabirimi Visual Studio hata ayıklayıcı işlemi içinde oluşturulur:
 
 |Hata ayıklayıcı Işlemi|Hata ayıklanan Işlem|
 |----------------------|----------------------|

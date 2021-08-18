@@ -1,6 +1,6 @@
 ---
-title: ClickOnce dağıtımında Önkoşullar için destek URL 'SI
-description: ClickOnce uygulamasının nasıl çalıştırılacağını ve dağıtımın eksik önkoşulları nasıl ele aldığı hakkında ClickOnce dağıtımı testini öğrenin.
+title: ClickOnce dağıtımındaki önkoşullar için destek URL 'si
+description: ClickOnce uygulamasına yönelik önkoşullar için ClickOnce dağıtım testlerinin nasıl çalıştırılacağını ve dağıtımın eksik önkoşullara nasıl uğraşır olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -15,17 +15,18 @@ ms.assetid: 590742c3-a286-4160-aa75-7a441bb2207b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 585ea1a558b91ac733670ad94a9a3e0be33f1348
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 048d379aa3194eb7e6fca46019e6c5a2ddbd60c5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876322"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035819"
 ---
-# <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>Nasıl yapılır: bir ClickOnce dağıtımında tek Önkoşullar için destek URL 'SI belirtme
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dağıtım, uygulamanın çalışması için istemci bilgisayarda kullanılabilir olması gereken bazı önkoşulları test edebilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu bağımlılıklar, .NET Framework gereken en düşük sürümü, işletim sisteminin sürümünü ve genel derleme önbelleğinde (GAC) önceden yüklenmiş olması gereken tüm derlemeleri içerir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Ancak, bu önkoşullardan herhangi biri yüklenemez; bir önkoşul bulunamazsa, yüklemeyi durdurur ve yüklemenin neden başarısız olduğunu açıklayan bir iletişim kutusu görüntüler.
+# <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>nasıl yapılır: ClickOnce dağıtımında bağımsız önkoşullar için destek URL 'si belirtme
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dağıtım, uygulamanın çalışması için istemci bilgisayarda kullanılabilir olması gereken bazı önkoşulları test edebilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . bu bağımlılıklar, .NET Framework gereken en düşük sürümü, işletim sisteminin sürümünü ve genel derleme önbelleğinde (GAC) önceden yüklenmiş olması gereken tüm derlemeleri içerir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Ancak, bu önkoşullardan herhangi biri yüklenemez; bir önkoşul bulunamazsa, yüklemeyi durdurur ve yüklemenin neden başarısız olduğunu açıklayan bir iletişim kutusu görüntüler.
 
  Önkoşulları yüklemek için iki yöntem vardır. Bunları bir önyükleyici uygulaması kullanarak yükleyebilirsiniz. Alternatif olarak, önkoşul bulunamazsa, iletişim kutusunda kullanıcılara görüntülenecek olan ayrı Önkoşullar için bir destek URL 'SI belirtebilirsiniz. Bu URL tarafından başvurulan sayfa, gerekli önkoşulu yüklemek için yönergelerin bağlantılarını içerebilir. Bir uygulama tek bir önkoşul için destek URL 'SI belirtmezse, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tanımlanmazsa uygulamanın dağıtım bildiriminde belirtilen destek URL 'sini bir bütün olarak görüntüler.
 
@@ -67,7 +68,7 @@ ms.locfileid: "99876322"
      </dependency>
    ```
 
-5. İsteğe bağlı. .NET Framework 4 ' ü hedefleyen uygulamalar için, bir metin düzenleyicisinde uygulamanın dağıtım bildirimini ( *. Application* dosyası) açın [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
+5. İsteğe bağlı. .NET Framework 4 ' ü hedefleyen uygulamalar için, bir metin düzenleyicisinde uygulamanın dağıtım bildirimini ( *. application* dosyası) açın [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
 6. .NET Framework 4 önkoşulu için, `supportUrl` özniteliğini `compatibleFrameworks` öğesine ekleyin:
 

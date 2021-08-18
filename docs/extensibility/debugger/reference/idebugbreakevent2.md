@@ -11,14 +11,15 @@ ms.assetid: 57dfdbc2-4e68-4dbf-9579-006cd6fb1c62
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8d2369b2219d155b2210fb2860cc868ec3813bad
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b07b7203f8ce3d557b0bbb2d4c1ca410e481aec67555da5f21f0563702e71656
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088802"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121293046"
 ---
 # <a name="idebugbreakevent2"></a>IDebugBreakEvent2
 Bu arabirim, oturum hata ayıklama Yöneticisi 'ne (SDM) zaman uyumsuz bir kesmenin başarıyla tamamlandığını söyler.

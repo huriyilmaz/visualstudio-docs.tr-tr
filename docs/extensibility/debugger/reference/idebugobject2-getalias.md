@@ -1,6 +1,6 @@
 ---
 description: Varsa, bu nesneyle ilişkili diğer adı alır.
-title: 'IDebugObject2:: GetAlias | Microsoft Docs'
+title: IDebugObject2::GetAlias | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: aa6824d5-c932-42ba-8713-950e7d1fb42f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c2cbf4a84af4001519617a7e6306c4139e763aea
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 494f76bc57ad75a8a52a7b8ce02ed3cb26861be591553e0b406ffe977695f65a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053795"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121416995"
 ---
 # <a name="idebugobject2getalias"></a>IDebugObject2::GetAlias
 Varsa, bu nesneyle ilişkili diğer adı alır.
@@ -42,13 +43,13 @@ int GetAlias(
 
 ## <a name="parameters"></a>Parametreler
 `ppAlias`\
-dışı Bu nesne için diğer adı temsil eden bir [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) nesnesi döndürür; Aksi takdirde, null bir değer döndürür.
+[out] Bu nesnenin diğer adını temsil eden bir [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md) nesnesi döndürür; aksi takdirde, bir null değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir nesne için bir diğer ad [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) yöntemi çağrısıyla oluşturulur.
+ [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) yöntemine yapılan çağrıyla bir nesnenin diğer adı oluşturulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

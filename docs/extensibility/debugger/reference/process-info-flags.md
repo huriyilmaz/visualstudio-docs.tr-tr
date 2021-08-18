@@ -1,5 +1,5 @@
 ---
-description: Bir işlemin özelliklerini açıklar veya belirtir.
+description: Bir işlem özelliklerini açıklar veya belirtir.
 title: PROCESS_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b1b72ade6d2cdc93ed3cb60ff5feba8589268f1b540692b5a9e8b3802ec31e89
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c2708f2cdf4d2bb9150eaf1b5f235ddecc4164e3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377307"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050539"
 ---
 # <a name="process_info_flags"></a>PROCESS_INFO_FLAGS
 
-Bir işlemin özelliklerini açıklar veya belirtir.
+Bir işlem özelliklerini açıklar veya belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,30 +51,30 @@ enum enum_PROCESS_INFO_FLAGS {
 ## <a name="fields"></a>Alanlar
 
 `PIFLAG_SYSTEM_PROCESS`\
-İşlemin bir sistem işlemi olduğunu gösterir.
+sürecin bir sistem işlemi olduğunu gösterir.
 
 `PIFLAG_DEBUGGER_ATTACHED`\
-İşlemin hata ayıklayıcı tarafından ayıklanmakta olduğunu gösterir. Bu bir [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı olabilir ya da başka bir hata ayıklayıcı (örneğin, WinDbg) olabilir.
+Bir hata ayıklayıcı tarafından işlemde hata ayıklandı olduğunu gösterir. Bu bir hata ayıklayıcısı veya winDbg gibi başka bir [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı olabilir.
 
 `PIFLAG_PROCESS_STOPPED`\
-İşlemin durdurulduğunu belirtir. Yalnızca `PIFLAG_DEBUGGER_ATTACHED` Ayrıca belirtilmişse geçerlidir. Visual Studio 2005 ve üzeri sürümlerde kullanılabilir.
+sürecin durdurulmuş olduğunu gösterir. Yalnızca aynı zamanda `PIFLAG_DEBUGGER_ATTACHED` belirtilmişse geçerlidir. 2005 Visual Studio sonraki bir yıl içinde kullanılabilir.
 
 `PIFLAG_PROCESS_RUNNING`\
-İşlemin çalıştığını gösterir. Yalnızca `PIFLAG_DEBUGGER_ATTACHED` Ayrıca belirtilmişse geçerlidir. Visual Studio 2005 ve üzeri sürümlerde kullanılabilir.
+İşlem çalışıyor olduğunu gösterir. Yalnızca aynı zamanda `PIFLAG_DEBUGGER_ATTACHED` belirtilmişse geçerlidir. 2005 Visual Studio sonraki bir yıl içinde kullanılabilir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Flags` [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapısının üyesi için kullanılır.
+Bu `Flags` yapının üyesi [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) kullanılır.
 
-Bu bayraklar bit düzeyinde birleştirilebilir `OR` .
+Bu bayraklar bit olarak birleştirilmiş `OR` olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

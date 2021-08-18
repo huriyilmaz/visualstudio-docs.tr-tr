@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 01dd2befec3f531609206bbd848e534ade251597041bef1ab755a618cc72f1b0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f164a002b5e2c221a10cade55c50fef120452ab6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121365098"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098820"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML hataları ve uyarıları
 

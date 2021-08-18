@@ -1,5 +1,5 @@
 ---
-description: Program yok etme bayraklarının geçerli değerlerini numaralandırır.
+description: Program yok etme bayraklarının geçerli değerlerini numaralar.
 title: PROGRAM_DESTROY_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: eb1562bec3b3699d8c9b208245aa27d7c8c7558050ca307c8b0211455038a53a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3367bf80c012fb0e29c099a5f10e0430180c219f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448578"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034519"
 ---
 # <a name="program_destroy_flags"></a>PROGRAM_DESTROY_FLAGS
-Program yok etme bayraklarının geçerli değerlerini numaralandırır.
+Program yok etme bayraklarının geçerli değerlerini numaralar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ public enum enum_PPROGRAM_DESTROY_FLAGS
 
 ## <a name="fields"></a>Alanlar
  `PROGRAM_DESTROY_CONTINUE_DEBUGGING`\
- Programı yok edin, ancak hata ayıklamaya devam edin.
+ Programı yok et ama hata ayıklamaya devam et.
 
 ## <a name="remarks"></a>Açıklamalar
- Sabit listesi [GetFlags](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md) yöntemi tarafından döndürülür.
+ Enumeration [GetFlags yöntemi tarafından](../../../extensibility/debugger/reference/idebugprogramdestroyeventflags2-getflags.md) döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: Msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

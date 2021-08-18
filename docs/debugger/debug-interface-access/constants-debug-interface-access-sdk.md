@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ebbaa42789d18b6d08cffe862e38ddcfe494eed5a7c2acd36a772986c95ce96
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3db5105f310bdb3493262965f313620b66393651
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345757"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036704"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>Sabitler (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Bu dize sabitleri, bir program hata ayıklama veritabanı (PDB) dosyasının farklı bölümlerini DIA SDK.

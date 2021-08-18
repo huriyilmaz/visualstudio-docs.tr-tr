@@ -10,14 +10,15 @@ ms.assetid: 86a66cce-3436-4532-bc3e-3b0662c8b198
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1435393f5b263ac3b8ecbdad31295d82d8c2d62b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c01ad2ee834d39a957ae2180b5d094fdc113964
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99933004"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035981"
 ---
 # <a name="view-menu-commands"></a>Görünüm Menü Komutları
 **Görünüm** menüsü, Spy + + Kullanıcı arabirimini denetlemeye yönelik komutlar sağlar.

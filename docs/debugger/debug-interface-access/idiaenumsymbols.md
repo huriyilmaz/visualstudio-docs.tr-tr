@@ -11,14 +11,15 @@ ms.assetid: 649f7bfd-86ac-49a5-8533-aff77e1bc62e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: af03a6aa730a81d5e563a28271e2606004de2562
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 6f8578ca439d32dbaae13356b0f76fb890d2d5ff
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148698"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113614"
 ---
 # <a name="idiaenumsymbols"></a>IDiaEnumSymbols
 Veri kaynağında bulunan çeşitli sembolleri numaralandırır.

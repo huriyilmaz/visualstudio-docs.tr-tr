@@ -1,6 +1,6 @@
 ---
 title: Yapılandırma seçeneklerine genel bakış | Microsoft Docs
-description: Visual Studio 'da proje yapılandırmalarına yönelik seçenekler hakkında bilgi edinin. Yapılandırma, adlandırılmış özellikler ve dosya konumları kümesiyle tanımlanan bir yapı türüdür.
+description: Visual Studio içindeki proje yapılandırmalarına yönelik seçenekler hakkında bilgi edinin. Yapılandırma, adlandırılmış özellikler ve dosya konumları kümesiyle tanımlanan bir yapı türüdür.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,17 +11,18 @@ ms.assetid: f4ad4dd3-b39e-42df-ad89-d403cdf24a2b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad30e3f7b91e8a76715f66d9f6701597f3830bd6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0bde8342961136cddf5a89bb5799abacef462e5a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057136"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028975"
 ---
 # <a name="configuration-options-overview"></a>Yapılandırma seçeneklerine genel bakış
-İçindeki projeler [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , derlenen, hata ayıklaması yapılan, çalıştırılan ve/veya dağıtılan birden fazla yapılandırmayı destekleyebilir. Yapılandırma, genellikle derleyici anahtarları ve dosya konumları gibi adlandırılmış özellikler kümesiyle tanımlanan bir yapı türüdür. Varsayılan olarak, yeni çözümler iki yapılandırma, *hata ayıklama* ve *yayın* içerir. Bu yapılandırma, varsayılan ayarları kullanılarak uygulanabilir veya özel çözümünüzü ve/veya proje gereksinimlerinizi karşılayacak şekilde değiştirilebilir. Bazı paketler iki şekilde oluşturulabilir: ActiveX Düzenleyicisi veya yerinde bileşen olarak. Ancak projelerin birden çok yapılandırmayı desteklemesi gerekmez. Yalnızca bir yapılandırma varsa, bu yapılandırma tüm çözüm yapılandırmalarına eşlenir.
+İçindeki projeler [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , derlenen, hata ayıklaması yapılan, çalıştırılan ve/veya dağıtılan birden fazla yapılandırmayı destekleyebilir. Yapılandırma, genellikle derleyici anahtarları ve dosya konumları gibi adlandırılmış özellikler kümesiyle tanımlanan bir yapı türüdür. Varsayılan olarak, yeni çözümler iki yapılandırma, *hata ayıklama* ve *yayın* içerir. Bu yapılandırma, varsayılan ayarları kullanılarak uygulanabilir veya özel çözümünüzü ve/veya proje gereksinimlerinizi karşılayacak şekilde değiştirilebilir. bazı paketler iki şekilde oluşturulabilir: ActiveX düzenleyicisi olarak veya yerinde bileşen olarak. Ancak projelerin birden çok yapılandırmayı desteklemesi gerekmez. Yalnızca bir yapılandırma varsa, bu yapılandırma tüm çözüm yapılandırmalarına eşlenir.
 
  Yapılandırmalar genellikle iki bölümden oluşur: yapılandırma adı (örneğin, *hata ayıklama* veya *Sürüm*) ve platform ayarları. Yapılandırmanın platform adı, API kümesi veya işletim sistemi platformu gibi yapılandırmanın hedeflediği ortamı tanımlar. Kullanıcıları [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir platform oluşturamaz; bir proje VSPackage izin verdiği seçimlerde seçim yapmanız gerekir. Bir Kullanıcı VSPackage yüklediğinde, paketin geliştirilmesi sırasında oluşturulan dağıtım platformu, paket Oluşturucu tarafından ayarlanan ölçütlere göre istenen platform adlarını de açabilir. Kullanıcı daha sonra özellik sayfaları örnekleniken VSPackage aracılığıyla kullanılabilir hale getirilen platformlar listesinden seçim yapabilir.
 
@@ -46,7 +47,7 @@ ms.locfileid: "105057136"
 
  Kullanıcı, hiyerarşide çözümü seçerek (Çözüm Gezgini) ve özellik sayfalarını açarak çözüm yapılandırma parametrelerini görüntüleyebilir ve ayarlayabilir. Benzer şekilde, proje yapılandırma parametrelerini, Çözüm Gezgini bir proje seçerek ve bu projenin özellik sayfalarını açarak görüntüleyebilir ve ayarlayabilirsiniz.
 
- Kullanıcı aynı zamanda yayın yapılandırma ayarlarını ve gerekirse hata ayıklama yapılandırma ayarlarıyla tüm rest 'yi kullanarak bir proje oluşturabilir. Daha fazla bilgi için bkz. [derleme Için proje yapılandırması](../../extensibility/internals/project-configuration-for-building.md).
+ Kullanıcı aynı zamanda yayın yapılandırma ayarlarını ve gerekirse hata ayıklama yapılandırma ayarlarıyla tüm rest 'yi kullanarak bir proje oluşturabilir. daha fazla bilgi için bkz. [derleme için Project yapılandırma](../../extensibility/internals/project-configuration-for-building.md).
 
  Aşağıdaki diyagramda çözümü ve proje yapılandırmasını destekleyen arabirimlerin nasıl uygulandığı gösterilmektedir:
 
@@ -68,9 +69,9 @@ ms.locfileid: "105057136"
 
 - Belirli nesneler ayrı ayrı uygulanır. Örneğin, proje ve çözüm oluşturma ayrı iş parçacıklarında ve derlemeyi yöneten nesne, derleme yapılandırmasını açıklayan nesneden ayrı olarak gerçekleşir.
 
-  Önceki diyagramda yapılandırma nesnesi arabirimleri ve yapılandırma sağlayıcısı nesne arabirimleri hakkında daha fazla bilgi için bkz. [Proje yapılandırma nesnesi](../../extensibility/internals/project-configuration-object.md). Ayrıca, derleme [Için proje yapılandırması](../../extensibility/internals/project-configuration-for-building.md) , Configuration Builder ve derleme bağımlılığı nesne arabirimleri hakkında daha fazla bilgi sağlar ve [dağıtımı yönetmeye yönelik proje yapılandırması](../../extensibility/internals/project-configuration-for-managing-deployment.md) , yapılandırma dağıtıcı ve dağıtım bağımlılığı nesnelerine eklenen arabirimleri daha da açıklar. Son olarak, çıkış [Için proje yapılandırması](../../extensibility/internals/project-configuration-for-output.md) çıktı grubunu ve çıkış nesnesi arabirimlerini ve yapılandırma bağımlı özellikleri görüntülemek ve ayarlamak için özellik sayfalarının kullanımını açıklar.
+  önceki diyagramda yapılandırma nesnesi arabirimleri ve yapılandırma sağlayıcısı nesne arabirimleri hakkında daha fazla bilgi için bkz. [Project configuration nesnesi](../../extensibility/internals/project-configuration-object.md). ayrıca, [oluşturma için Project yapılandırma](../../extensibility/internals/project-configuration-for-building.md) , configuration builder ve derleme bağımlılığı nesne arabirimleri hakkında daha fazla bilgi sağlar ve [dağıtımı yönetmeye yönelik Project yapılandırma](../../extensibility/internals/project-configuration-for-managing-deployment.md) , yapılandırma dağıtıcı ve dağıtım bağımlılığı nesnelerine eklenen arabirimleri daha da açıklar. son olarak, [çıkış için Project yapılandırma](../../extensibility/internals/project-configuration-for-output.md) , çıkış grubunu ve çıkış nesnesi arabirimlerini ve yapılandırma bağımlı özellikleri görüntülemek ve ayarlamak için özellik sayfalarının kullanımını açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>
-- [Derleme için proje yapılandırması](../../extensibility/internals/project-configuration-for-building.md)
+- [oluşturma için Project yapılandırması](../../extensibility/internals/project-configuration-for-building.md)
 - [Çözüm yapılandırması](../../extensibility/internals/solution-configuration.md)

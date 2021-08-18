@@ -11,17 +11,18 @@ ms.assetid: 0deb8ec5-d6fb-4622-bb14-0c46b9459cc6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7db319a420dc63eaec8afcdcbeaa38fe861a4bea
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 17a1ec60b6f1a60980292b4a82cb218d4ad69b15d504f9d377334369ee663c01
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064793"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338702"
 ---
 # <a name="idebugproperty2getsize"></a>IDebugProperty2::GetSize
 Özellik değerinin bayt cinsinden boyutunu alır.

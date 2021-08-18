@@ -13,12 +13,12 @@ ms.technology: vs-ide-deployment
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 2df9e608b7583e4185a0a9589a363e07e9d249f5be7cba64a8e9db3789f3019d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1a093cbf609e2226967b0879e23f13631db91a79
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435415"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035780"
 ---
 # <a name="deploy-a-net-windows-desktop-application-using-clickonce"></a>ClickOnce kullanarak bir .net Windows masaüstü uygulaması dağıtma
 

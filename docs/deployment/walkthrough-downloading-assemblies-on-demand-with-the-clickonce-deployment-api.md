@@ -1,6 +1,6 @@
 ---
-title: İsteğe bağlı derlemeleri indirme (ClickOnce API)
-description: ClickOnce uygulamanızdaki belirli derlemeleri isteğe bağlı olarak nasıl işaretleyeceğinizi ve ortak dil çalışma zamanı için gereken durumlarda onları nasıl inditireceğinizi öğrenin.
+title: Derlemeleri isteğe bağlı olarak indirme (ClickOnce API)
+description: Uygulama uygulamanıza belirli derlemeleri isteğe ClickOnce olarak işaretlemeyi ve ortak dil çalışma zamanının ihtiyacı olduğunda bunları indirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,52 +16,53 @@ ms.assetid: d20e2789-8621-4806-b5b7-841122da1456
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 316be1f0a8fa881f781d983cfe9ed663e5907749
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 046d6932e1bfcbc6f0a4b3c60fab96806b4473fd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216910"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112262"
 ---
-# <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api"></a>İzlenecek yol: ClickOnce dağıtım API 'SI ile isteğe bağlı derlemeleri Indirme
-Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil edilen tüm derlemeler [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] indirilir. Ancak, uygulamanızın küçük bir kullanıcı kümesi tarafından kullanılan bölümlerine sahip olabilirsiniz. Bu durumda, bir derlemeyi yalnızca türlerinden birini oluştururken indirmek istersiniz. Aşağıdaki izlenecek yol, uygulamanızda belirli derlemelerin "isteğe bağlı" olarak nasıl işaretleneceğini ve <xref:System.Deployment.Application> ortak dil çalışma zamanı (CLR) tarafından talep edildiğinde ad alanındaki sınıfları kullanarak nasıl indirileceğini gösterir.
+# <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api"></a>Adım adım kılavuz: Derlemeleri isteğe bağlı olarak ClickOnce API'si ile indirme
+Varsayılan olarak, bir uygulamaya dahil edilen tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] derlemeler, uygulama ilk kez çalıştırılacaksa indirilir. Ancak, uygulamanın küçük bir kullanıcı kümesi tarafından kullanılan bölümleri olabilir. Bu durumda, bir derlemeyi yalnızca türlerinden birini oluşturmadan indirmek istiyor siniz. Aşağıdaki kılavuzda, uygulamanıza bazı derlemelerin "isteğe bağlı" olarak nasıl işaretlenecekleri ve ortak dil çalışma zamanı (CLR) bunları talep eden ad alanı sınıflarını kullanarak nasıl indirecekleri <xref:System.Deployment.Application> anlatılacaktır.
 
 > [!NOTE]
-> Bu yordamı kullanmak için uygulamanızın tam güvende çalışması gerekir.
+> Bu yordamı kullanmak için, uygulamanın tam güven içinde çalışması gerekir.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlerden birine ihtiyacınız olacaktır:
+ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlerden biri gerekir:
 
-- Windows SDK. Windows SDK, Microsoft Indirme Merkezi ' nden indirilebilir.
+- Windows SDK'sı. Windows SDK'sı Microsoft İndirme Merkezi'nden indirilebilir.
 
 - Visual Studio.
 
 ## <a name="create-the-projects"></a>Projeleri oluşturma
 
-#### <a name="to-create-a-project-that-uses-an-on-demand-assembly"></a>İsteğe bağlı derleme kullanan bir proje oluşturmak için
+#### <a name="to-create-a-project-that-uses-an-on-demand-assembly"></a>Bir isteğe bağlı derleme kullanan bir proje oluşturmak için
 
 1. ClickOnceOnDemand adlı bir dizin oluşturun.
 
-2. Windows SDK komut Istemi ' ni veya komut Istemi ' ni açın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+2. Windows SDK Komut İstemi'ne veya Komut [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] İstemi'ne bakın.
 
-3. ClickOnceOnDemand dizinine geçin.
+3. ClickOnceOnDemand dizinine tıklayın.
 
-4. Aşağıdaki komutu kullanarak ortak/özel anahtar çifti oluşturun:
+4. Aşağıdaki komutu kullanarak ortak/özel anahtar çifti oluşturma:
 
    ```cmd
    sn -k TestKey.snk
    ```
 
-5. Not defteri veya başka bir metin düzenleyicisi kullanarak adlı tek bir özelliği olan adlı bir sınıf tanımlayın `DynamicClass` `Message` .
+5. Bir Not Defteri veya başka bir metin düzenleyicisi kullanarak adlı tek `DynamicClass` bir özelliği olan adlı bir sınıf `Message` tanımlayın.
 
     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceLibrary/VB/Class1.vb" id="Snippet1":::
     :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceLibrary/CS/Class1.cs" id="Snippet1":::
 
-6. Kullandığınız dile bağlı olarak, metni *ClickOnceLibrary. cs* veya *ClickOnceLibrary. vb* adlı bir dosya olarak, *ClickOnceOnDemand* dizinine kaydedin.
+6. Metni, kullandığınız dile bağlı olarak *ClickOnceLibrary.cs* veya *ClickOnceLibrary.vb* adlı bir dosya olarak *ClickOnceOnDemand dizinine* kaydedin.
 
-7. Dosyayı bir derlemede derleyin.
+7. Dosyayı bir derlemede derle.
 
    ```csharp
    csc /target:library /keyfile:TestKey.snk ClickOnceLibrary.cs
@@ -71,24 +72,24 @@ Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil 
    vbc /target:library /keyfile:TestKey.snk ClickOnceLibrary.vb
    ```
 
-8. Derlemenin ortak anahtar belirtecini almak için aşağıdaki komutu kullanın:
+8. Derlemenin ortak anahtar belirteci almak için aşağıdaki komutu kullanın:
 
    ```cmd
    sn -T ClickOnceLibrary.dll
    ```
 
-9. Metin düzenleyicinizi kullanarak yeni bir dosya oluşturun ve aşağıdaki kodu girin. Bu kod, gerekli olduğunda ClickOnceLibrary derlemesini indiren bir Windows Forms uygulaması oluşturur.
+9. Metin düzenleyicinizi kullanarak yeni bir dosya oluşturun ve aşağıdaki kodu girin. Bu kod, Windows ClickOnceLibrary derlemesi indiren bir Windows Forms uygulaması oluşturur.
 
     :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceOnDemandCmdLine/CS/Form1.cs" id="Snippet1":::
     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceOnDemandCmdLine/VB/Form1.vb" id="Snippet1":::
 
-10. Kodunda, çağrısını bulun <xref:System.Reflection.Assembly.LoadFile%2A> .
+10. Kodda çağrısının yerini <xref:System.Reflection.Assembly.LoadFile%2A> bulun.
 
-11. `PublicKeyToken`Daha önce aldığınız değere ayarlayın.
+11. değerini `PublicKeyToken` daha önce alınan değere ayarlayın.
 
-12. Dosyayı *Form1. cs* veya *Form1. vb* olarak kaydedin.
+12. Dosyayı *Form1.cs veya Form1.vb* *olarak kaydedin.*
 
-13. Aşağıdaki komutu kullanarak bir yürütülebilir dosyaya derleyin.
+13. Aşağıdaki komutu kullanarak yürütülebilir dosya olarak derle.
 
     ```csharp
     csc /target:exe /reference:ClickOnceLibrary.dll Form1.cs
@@ -98,35 +99,35 @@ Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil 
     vbc /target:exe /reference:ClickOnceLibrary.dll Form1.vb
     ```
 
-## <a name="mark-assemblies-as-optional"></a>Derlemeleri isteğe bağlı olarak işaretle
+## <a name="mark-assemblies-as-optional"></a>Derlemeleri isteğe bağlı olarak işaretleme
 
-#### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-mageuiexe"></a>MageUI.exe kullanarak derlemeleri ClickOnce uygulamanızda isteğe bağlı olarak işaretlemek için
+#### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-mageuiexe"></a>Derlemeleri ClickOnce kullanarak ClickOnce isteğe bağlı olarak işaretlemek MageUI.exe
 
-1. *MageUI.exe* kullanarak, [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)bölümünde açıklandığı gibi bir uygulama bildirimi oluşturun. Uygulama bildirimi için aşağıdaki ayarları kullanın:
+1. MageUI.exe ** kullanarak, Kılavuz: Bir uygulama bildirimini el ile dağıtma konusunda açıklandığı [gibi ClickOnce oluşturun.](../deployment/walkthrough-manually-deploying-a-clickonce-application.md) Uygulama bildirimi için aşağıdaki ayarları kullanın:
 
-    - Uygulama bildirimini adlandırın `ClickOnceOnDemand` .
+    - Uygulama bildirimine adını `ClickOnceOnDemand` girin.
 
-    - **Dosyalar** sayfasında, *ClickOnceLibrary.dll* satırında, **dosya türü** sütununu **none** olarak ayarlayın.
+    - Dosyalar **sayfasındaki** Dosya Türü *ClickOnceLibrary.dll* Hiçbiri **olarak** **ayarlayın.**
 
-    - **Dosyalar** sayfasında, *ClickOnceLibrary.dll* satırına, `ClickOnceLibrary.dll` **Grup** sütununu yazın.
+    - Dosyalar **sayfasındaki** ClickOnceLibrary.dll `ClickOnceLibrary.dll` sütununa yazın. 
 
-2. *MageUI.exe* kullanarak, [Izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)bölümünde açıklandığı gibi bir dağıtım bildirimi oluşturun. Dağıtım bildirimi için aşağıdaki ayarları kullanın:
+2. Bu *MageUI.exe* kullanarak, Adım adım: Bir uygulamanın el ile dağıtımında açıklandığı [gibi ClickOnce oluşturun.](../deployment/walkthrough-manually-deploying-a-clickonce-application.md) Dağıtım bildirimi için aşağıdaki ayarları kullanın:
 
-    - Dağıtım bildirimini adlandırın `ClickOnceOnDemand` .
+    - Dağıtım bildirimini olarak ad `ClickOnceOnDemand` girin.
 
 ## <a name="testing-the-new-assembly"></a>Yeni derlemeyi test etme
 
-#### <a name="to-test-your-on-demand-assembly"></a>İsteğe bağlı derlemenizi test etmek için
+#### <a name="to-test-your-on-demand-assembly"></a>isteğe bağlı derlemenizi test etmek için
 
-1. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dağıtımınızı bir Web sunucusuna yükleyin.
+1. Upload [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] web sunucusuna dağıtmanızı sağlar.
 
-2. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dağıtım BILDIRIMINE URL girerek bir Web tarayıcısından ile dağıtılan uygulamanızı başlatın. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Uygulamanızı çağırırsanız `ClickOnceOnDemand` ve adatum.com kök dizinine YÜKLERSENIZ, URL 'niz şöyle görünür:
+2. Dağıtım bildiriminin [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] URL'sini girerek bir Web tarayıcısında ile dağıtılan uygulamanıza başlama. Uygulamanıza çağrı yaptıysanız ve bunu uygulamanın kök dizinine [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `ClickOnceOnDemand` yükler adatum.com URL'niz şöyle olur:
 
    ```
    http://www.adatum.com/ClickOnceOnDemand/ClickOnceOnDemand.application
    ```
 
-3. Ana formunuz göründüğünde, ' a basın <xref:System.Windows.Forms.Button> . İleti kutusu penceresinde "Hello, World!" okuyan bir dize görmeniz gerekir.
+3. Ana formunuz görüntülendiğinde tuşuna <xref:System.Windows.Forms.Button> basın. İleti kutusu penceresinde "Hello, World!" ifadesini içeren bir dize görüyorsanız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Deployment.Application.ApplicationDeployment>

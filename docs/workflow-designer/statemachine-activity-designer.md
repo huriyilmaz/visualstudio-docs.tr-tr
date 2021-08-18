@@ -10,15 +10,16 @@ f1_keywords:
 ms.assetid: 474d5fb3-1049-4b3f-bc6b-7524dbbe1672
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 7fe26f8d0ea127189d115692bd01fa538bf8fb33
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b6982a3875bc09e95b6f33dd30010adf029b3a91
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99873508"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098989"
 ---
 # <a name="statemachine-activity-designer"></a>StateMachine Etkinlik Tasarımcısı
 
@@ -39,4 +40,4 @@ Aşağıdaki tabloda, <xref:System.Activities.Statements.StateMachine> iş akı�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Akış Çizelgesi](../workflow-designer/flowchart-activity-designer.md)
-- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
+- [Denetim Flow](../workflow-designer/control-flow-activity-designers.md)

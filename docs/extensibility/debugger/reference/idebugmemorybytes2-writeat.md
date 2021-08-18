@@ -12,17 +12,18 @@ ms.assetid: 61cc3704-47fa-4d9b-aa62-bb4585ac8fb1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 64e8aed5586dc6e2abf33b540654dcd24437e746
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 099da50a72150d425fca560648df743f1804776f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076816"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035026"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
 Belirtilen adresten başlayarak belirtilen sayıda belleği yazar.

@@ -1,6 +1,6 @@
 ---
-title: GPU Kod Hata Ayıklama | Microsoft Docs
-description: Grafik işleme biriminde (GPU) çalışan C++ kodunda hata ayıklama hakkında bilgi Visual Studio.
+title: GPU KoduNda Hata Ayıklama | Microsoft Docs
+description: Visual Studio'da grafik işleme biriminde (GPU) çalışan C++ kodunda hata ayıklama hakkında Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,24 +16,24 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 312387d07d87955043587dd8159e3d34d46ccf361c1a16b1c8758b2339be978e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 86e7593ff4df88efb24592fcd758156575eb9fd4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379473"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113097"
 ---
 # <a name="debugging-gpu-code"></a>GPU Kodunda Hata Ayıklama
-Grafik işleme biriminde (GPU) çalışan C++ kodunda hata ayıkabilirsiniz. Visual Studio'da GPU hata ayıklama desteği; yarış algılama, başlatma işlemleri ve buna ekleme ve hata ayıklama pencerelerine tümleştirme içerir.
+Grafik işleme biriminde (GPU) çalışan C++ kodunda hata ayıkabilirsiniz. Visual Studio'daki GPU hata ayıklama desteği; yarış algılama, başlatma işlemleri ve buna ekleme ve hata ayıklama pencerelerine tümleştirme içerir.
 
 ## <a name="supported-platforms"></a>Desteklenen Platformlar
- Hata ayıklama , [!INCLUDE[win7](../debugger/includes/win7_md.md)] , [!INCLUDE[win8](../debugger/includes/win8_md.md)] Windows 10, , [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)] ve [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] Windows Server 2016. Yazılım öykünücüsünün hata ayıklaması [!INCLUDE[win8](../debugger/includes/win8_md.md)] için, Windows 10 [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] veya Windows Server 2016 gerekir. Donanımda hata ayıklama için grafik kartınız için sürücüleri yüklemeniz gerekir. Tüm donanım satıcıları tüm hata ayıklayıcı özelliklerini uygulamaz. Sınırlamalar için satıcı belgelerine bakın.
+ Hata ayıklama , , [!INCLUDE[win7](../debugger/includes/win7_md.md)] [!INCLUDE[win8](../debugger/includes/win8_md.md)] Windows 10, , [!INCLUDE[winsvr08_r2](../debugger/includes/winsvr08_r2_md.md)] ve [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] Windows Server 2016. Yazılım öykünücüsünün hata ayıklaması [!INCLUDE[win8](../debugger/includes/win8_md.md)] için, Windows 10 [!INCLUDE[winserver8](../debugger/includes/winserver8_md.md)] veya , Windows Server 2016 gereklidir. Donanımda hata ayıklama için grafik kartınız için sürücüleri yüklemeniz gerekir. Tüm donanım satıcıları tüm hata ayıklayıcı özelliklerini uygulamaz. Sınırlamalar için satıcı belgelerine bakın.
 
 > [!NOTE]
 > Visual Studio'de GPU hata ayıklamasını desteklemek isteyen bağımsız donanım satıcılarının VSD3DDebug arabirimini uygulayan ve kendi sürücülerini hedef alan bir DLL oluşturması gerekir.
 
 ## <a name="configuring-gpu-debugging"></a>GPU Hata Ayıklamayı Yapılandırma
- Hata ayıklayıcı aynı uygulama yürütmesinde hem CPU kodunda hem de GPU kodunda kesme olamaz. Varsayılan olarak, hata ayıklayıcı CPU kodunda bozar. GPU kodunda hata ayıklamak için şu iki adımdan birini kullanın:
+ Hata ayıklayıcısı aynı uygulama yürütmesinde hem CPU kodunda hem de GPU kodunda kesme olamaz. Varsayılan olarak, hata ayıklayıcı CPU kodunda bozar. GPU kodunda hata ayıklamak için şu iki adımdan birini kullanın:
 
 - Standart araç **çubuğundaki Hata** Ayıklama Türü **listesinde Yalnızca** **GPU'su seçin.**
 
@@ -56,7 +56,7 @@ Grafik işleme biriminde (GPU) çalışan C++ kodunda hata ayıkabilirsiniz. Vis
 
 - [Görevleri Penceresini Kullanma](../debugger/using-the-tasks-window.md)
 
-- [Nasıl yapılır: Paralel İzleme Penceresini Kullanma](../debugger/how-to-use-the-parallel-watch-window.md)
+- [Nasıl: Paralel İzleme Penceresini Kullanma](../debugger/how-to-use-the-parallel-watch-window.md)
 
 - [İş Parçacıklarında ve İşlemlerde Hata Ayıklama](../debugger/debug-threads-and-processes.md) (Hata Ayıklama Konumu araç çubuğu)
 
@@ -68,7 +68,7 @@ Grafik işleme biriminde (GPU) çalışan C++ kodunda hata ayıkabilirsiniz. Vis
 ## <a name="troubleshooting"></a>Sorun giderme
 
 ### <a name="specifying-an-accelerator"></a>Hızlandırıcı belirtme
- GPU kodundaki kesme noktalarına yalnızca kod hızlandırıcıda çalışıyorsa isabet [eder::d irect3d_ref](/cpp/parallel/amp/reference/accelerator-class#direct3d_ref) (REF) hızlandırıcısı. Kodda bir hızlandırıcı belirtmezseniz, ref hızlandırıcısı proje özelliklerinde Hata Ayıklama **Hızlandırıcısı Türü olarak otomatik** olarak seçilir. Kodunuz bir hızlandırıcıyı açıkça seçerse, HATA AYıKLAMA sırasında REF hızlandırıcısı kullanılmaz ve GPU donanımınız hata ayıklama desteğine sahip olmadığı sürece kesme noktalarına isabet olmaz. Hata ayıklama sırasında REF hızlandırıcısını kullanması için kodunuzu yazarak bu sorunu giderebilirsiniz. Daha fazla bilgi için bkz. Proje özellikleri ve [C++](../debugger/project-settings-for-a-cpp-debug-configuration.md) [Hata Ayıklama Yapılandırması için accelerator_view](/cpp/parallel/amp/using-accelerator-and-accelerator-view-objects) ve Nesneleri Project Ayarlar kullanma.
+ GPU kodundaki kesme noktalarına yalnızca kod hızlandırıcıda çalışıyorsa isabet [eder::d irect3d_ref](/cpp/parallel/amp/reference/accelerator-class#direct3d_ref) (REF) hızlandırıcısı. Kodda bir hızlandırıcı belirtmezseniz, ref hızlandırıcısı proje özelliklerinde Hata Ayıklama **Hızlandırıcısı Türü olarak otomatik** olarak seçilir. Kodunuz bir hızlandırıcıyı açıkça seçerse, HATA AYıKLAMA sırasında REF hızlandırıcısı kullanılmaz ve GPU donanımınız hata ayıklama desteğine sahip olmadığı sürece kesme noktalarına isabet olmaz. Hata ayıklama sırasında REF hızlandırıcısını kullanması için kodunuzu yazarak bu sorunu giderebilirsiniz. Daha fazla bilgi için bkz. Proje özellikleri ve [C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)Hata Ayıklama Yapılandırması [accelerator_view](/cpp/parallel/amp/using-accelerator-and-accelerator-view-objects) hızlandırıcı ve Project Ayarlar nesneleri kullanma.
 
 ### <a name="conditional-breakpoints"></a>Koşullu Kesme Noktaları
  GPU kodundaki koşullu kesme noktaları desteklene, ancak cihazda her ifade değerlendirilene değildir. Bir ifade cihazda değerlendirilenene kadar hata ayıklayıcıda değerlendirilir. Hata ayıklayıcısı cihazdan daha yavaş çalışır.

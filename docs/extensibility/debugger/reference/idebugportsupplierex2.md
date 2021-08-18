@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc8909ac858bbc35fc39ea8c850729d83d9b14cb6152fa397ec37015d100b830
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b7edc27886128def39b139d139a2463223228364
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121416500"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050825"
 ---
 # <a name="idebugportsupplierex2"></a>IDebugPortSupplierEx2
 Bir bağlantı noktası sağlayıcısı için bir çekirdek sunucu seçmek ve bunlarla etkileşim kurmak için destek sağlar.

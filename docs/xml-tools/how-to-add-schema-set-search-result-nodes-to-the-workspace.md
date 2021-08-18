@@ -1,6 +1,6 @@
 ---
-title: Şema kümesi arama sonucu düğümleri ekleme
-description: Çalışma alanında anahtar sözcük araması sonucunda XML Şema Gezgini'nde vurgulanan düğümleri nasıl ekleyebilirsiniz?
+title: Şema kümesi arama sonucu düğümleri Ekle
+description: Çalışma alanında bir anahtar sözcük aramasının sonucu olarak XML şema Gezgini 'nde vurgulanan düğümleri nasıl ekleyeceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,34 +11,34 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: e9ab42d35aef489c18a12c3c738655dde1ccb9e971bf0caaf87513582645a79f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ad0144b736a57c6faae113f81f630b73eeb5143a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121351011"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098768"
 ---
-# <a name="how-to-add-schema-set-search-result-nodes-to-the-workspace"></a>Nasıl olur: Çalışma alanına şema kümesi arama sonucu düğümleri ekleme
+# <a name="how-to-add-schema-set-search-result-nodes-to-the-workspace"></a>Nasıl yapılır: şema kümesi arama sonucu düğümlerini çalışma alanına ekleme
 
-Bu konuda, çalışma alanında anahtar sözcük araması sonucu **XML Şema Gezgini'nde** vurgulanan düğümlerin nasıl ekli olduğu açıklanmıştır.
+Bu konu, çalışma alanında bir anahtar sözcük aramasının sonucu olarak **XML şema Gezgini** 'nde vurgulanan düğümlerin nasıl ekleneceğini açıklar.
 
 > [!NOTE]
-> Çalışma alanına yalnızca genel düğümler [eklenebilir.](../xml-tools/xml-schema-designer-workspace.md)
+> [Çalışma alanına](../xml-tools/xml-schema-designer-workspace.md)yalnızca genel düğümler eklenebilir.
 
-Bu örnek, örnek satın [alma siparişi şemasını kullanır.](../xml-tools/sample-xsd-file-purchase-order-schema.md)
+Bu örnek, örnek [satın alma siparişi şemasını](../xml-tools/sample-xsd-file-purchase-order-schema.md)kullanır.
 
 ## <a name="to-add-schema-set-result-nodes"></a>Şema kümesi sonuç düğümleri eklemek için
 
-1. Nasıl olur: [XSD şema dosyası oluşturma ve düzenleme adımlarını izleyin.](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)
+1. [Nasıl yapılır: xsd şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)bölümündeki adımları izleyin.
 
-2. [XML Gezgini](../xml-tools/xml-schema-explorer.md) araç çubuğunun arama metin kutusuna "purchaseOrder" yazın ve ara düğmesine tıklayın.
+2. [XML Explorer](../xml-tools/xml-schema-explorer.md) araç çubuğunun arama metin kutusuna "PurchaseOrder" yazın ve arama düğmesine tıklayın.
 
-     ![XML Şema Gezgini Anahtar Sözcük Arama](../xml-tools/media/schemaexplorersearch.gif)
+     ![XML şema Gezgini anahtar sözcük arama](../xml-tools/media/schemaexplorersearch.gif)
 
-     Arama sonuçları XML Şema Gezgini'nde **vurgulanır** ve dikey kaydırma çubuğunda tıklar ile işaretlenir.
+     Arama sonuçları, **XML şema Gezgini** 'nde vurgulanır ve dikey kaydırma çubuğundaki Tick 'ler tarafından işaretlenir.
 
-3. Özet sonuçları bölmesindeki Vurgulanan düğümleri Çalışma Alanına ekle **düğmesine tıklayarak** arama sonuçlarını çalışma alanına ekleyin.
+3. Özet sonuçlar bölmesinde, **çalışma alanına vurgulanan düğümleri Ekle** düğmesine tıklayarak arama sonuçlarını çalışma alanına ekleyin.
 
-     ![XML Şema Gezgini Arama Sonucu](../xml-tools/media/schemaexplorersearchresult.gif)
+     ![XML şema Gezgini arama sonucu](../xml-tools/media/schemaexplorersearchresult.gif)
 
-     Düğüm `purchaseOrder` ve `PurchaseOrderType` düğüm, görünüm görünümü'nin tasarım yüzeyinde Graph [görünür.](../xml-tools/graph-view.md) İki düğüm ilişkili olduğundan (öğe `purchaseOrder` `PurchaseOrderType` türündedir), aralarında bir ok çizilir.
+     `purchaseOrder`düğüm ve düğüm, `PurchaseOrderType` [Graph görünümünün](../xml-tools/graph-view.md)tasarım yüzeyinde birbirini izleyen bir şekilde görünür. İki düğüm ilişkili olduğundan ( `purchaseOrder` öğe `PurchaseOrderType` türünde olduğundan) aralarında bir ok çizilir.

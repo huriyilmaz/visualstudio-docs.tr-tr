@@ -1,6 +1,6 @@
 ---
-description: Bir liste veya dizideki öğelerin sayısını alır.
-title: 'IDiaSymbol:: get_count | Microsoft Docs'
+description: Bir liste veya dizideki öğe sayısını döndürür.
+title: IDiaSymbol::get_count | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 405e3b1a06c1dfc1bfe8756f1d990e547dc9dce65ee16448dce8ac219e909a02
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d084631be07c7f670ccf7b344afe0061ada5317a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380009"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097775"
 ---
 # <a name="idiasymbolget_count"></a>IDiaSymbol::get_count
-Bir liste veya dizideki öğelerin sayısını alır.
+Bir liste veya dizideki öğe sayısını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_count (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bir liste veya dizideki öğe sayısını döndürür.
+[out] Bir liste veya dizideki öğe sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 7.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v7.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

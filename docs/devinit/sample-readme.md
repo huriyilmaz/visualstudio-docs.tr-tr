@@ -1,6 +1,6 @@
 ---
-title: Örnek Liste
-description: devinit kullanan örnek repo özelleştirmelerinin listesi.
+title: Örnek listesi
+description: Devinit kullanan örnek depo özelleştirmeleri listesi.
 ms.date: 11/04/2020
 ms.topic: reference
 author: andysterland
@@ -21,16 +21,16 @@ ms.locfileid: "121452806"
 # <a name="sample-list"></a>Örnek listesi
 
 > [!IMPORTANT]
-> 12 Nisan 2021'den itibaren, Visual Studio 2019'dan GitHub Codespaces'a bağlanmak artık desteklemeyecek ve bu özel önizlemenin sonucuna varıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi almak Visual Studio geliştirici topluluğu forummize dahil olmak için sizi teşvik ediyoruz.
+> 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
 
-Aşağıdaki tabloda Codespaces'ta devinit kullanmaya GitHub verilmiştir.
+aşağıdaki tabloda, GitHub codespaces içinde devinit kullanmak için şu anda kullanılabilir olan tüm örneklerin bir listesi bulunur.
 
 | Örnek                                            | Açıklama                                                                                                                  |
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | [**Tüm araçlar**](sample-all-tool.md)               | Tüm araçları kullanma örneği.                                                                                              |
-| [**eShopOnWeb**](sample-eshoponweb.md)            | [dotnet-architecture/eshoponweb uygulamasını özelleştirme](https://github.com/dotnet-architecture/eShopOnWeb) örneği.          |
-| [**Özel beta**](sample-private-preview.md)     | GitHub Codespaces Visual Studio örnek.                                      |
-| [**CV'i açın**](sample-opencv.md)                   | OpenCV projesi için gereken özelleştirmelerin örneği.                                                                |
-| [**.NET Core Runtime**](sample-dotnet-runtime.md) | .NET Core Çalışma Zamanı [dotnet/runtime](https://github.com/dotnet/runtime) projesi için gereken özelleştirmelerin örneği. |
-| [**.NET Core Uygulaması**](sample-dotnet-core.md)        | Gerekli depolamayı yüklemek için devinit kullanan bir depo .NET Core SDK.                                             |
-| [**Node.js Uygulaması**](sample-nodejs.md)               | Node.js Express projesi için npm paketlerini yüklemek için devinit kullanan bir depo örneği.                             |
+| [**eShopOnWeb**](sample-eshoponweb.md)            | [DotNet-Architecture/eshoponweb](https://github.com/dotnet-architecture/eShopOnWeb) uygulamasını özelleştirme örneği.          |
+| [**Özel Beta**](sample-private-preview.md)     | GitHub codespaces özel beta Visual Studio kullanılan özelleştirmeler örneği.                                      |
+| [**CV 'yi açın**](sample-opencv.md)                   | OpenCV projesi için gereken özelleştirmeler örneği.                                                                |
+| [**.NET Core Runtime**](sample-dotnet-runtime.md) | .NET Core çalışma zamanı [DotNet/Runtime](https://github.com/dotnet/runtime) projesi için gereken özelleştirmeler örneği. |
+| [**.NET Core uygulaması**](sample-dotnet-core.md)        | Gerekli .NET Core SDK yüklemek için devinit kullanan bir depo örneği.                                             |
+| [**Node.js uygulaması**](sample-nodejs.md)               | Bir Node.js Express projesi için NPM paketlerini yüklemek için devinit kullanan bir depo örneği.                             |

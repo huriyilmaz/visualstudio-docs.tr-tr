@@ -11,14 +11,15 @@ ms.assetid: 68bfb35c-eabd-412a-bc8f-3094703b98c4
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 563e216ad7c97b9e3b448d3cdf658667039072b3
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: d72ed283fc8b7e4983838bc4b62536bf3dca69c4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157205"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066493"
 ---
 # <a name="idiasectioncontribget_read"></a>IDiaSectionContrib::get_read
 Bölümün okunup okunamayacağını gösteren bir bayrak alır.

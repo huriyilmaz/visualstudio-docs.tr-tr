@@ -1,60 +1,61 @@
 ---
 title: Yeni bağlantı ekleme
-description: Visual Studio 'da bir VERITABANıNA veya hizmete bir bağlantı ekleyin ve Sunucu Gezgini, bulut Gezgini veya SQL Server Nesne Gezgini kullanarak DB içeriğini ve şemalarını keşfedebilirsiniz.
+description: Veritabanına veya Visual Studio bir bağlantı ekleyin ve Sunucu Gezgini, Cloud Explorer veya SQL Server Nesne Gezgini kullanarak veritabanı içeriklerini ve şemalarını keşfedin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ddcc5dd06a4e71d445c94c860b2a3ab92429ab2e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0348a3ba4db339e7472fc3ff72b09fe8cc23135e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859391"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122067253"
 ---
 # <a name="add-new-connections"></a>Yeni bağlantı ekleme
 
-Bir veritabanı veya hizmetle bağlantınızı test edebilir ve **Sunucu Gezgini**, **bulut Gezgini** veya **SQL Server Nesne Gezgini** kullanarak veritabanı içeriğini ve şemalarını keşfedebilirsiniz. Bu pencerelerin işlevselliği bir ölçüde çakışıyor. Temel farklılıklar şunlardır:
+Veritabanı veya hizmetle bağlantınızı test etmek ve veritabanı içeriğini ve şemalarını keşfetmek için **Sunucu Gezgini,** **Cloud Explorer** veya **SQL Server Nesne Gezgini.** Bu pencerelerin işlevselliği bir ölçüde çakışıyor. Temel farklar:
 
 - Sunucu Gezgini
 
-   Visual Studio 'da varsayılan olarak yüklenir. Bağlantıları test etmek ve SQL Server veritabanlarını, ADO.NET sağlayıcısı yüklü diğer veritabanlarını ve bazı Azure hizmetlerini görüntülemek için kullanılabilir. Ayrıca sistem performans sayaçları, olay günlükleri ve ileti kuyrukları gibi alt düzey nesneleri gösterir. Bir veri kaynağının ADO.NET sağlayıcısı yoksa, burada gösterilmez, ancak programlı olarak bağlanarak Visual Studio 'dan kullanmaya devam edebilirsiniz.
+   Varsayılan olarak Visual Studio. Bağlantıları test etmek ve SQL Server, ADO.NET sağlayıcının yüklü olduğu diğer veritabanlarını ve bazı Azure hizmetlerini görüntülemek için kullanılabilir. Ayrıca sistem performans sayaçları, olay günlükleri ve ileti kuyrukları gibi alt düzey nesneleri gösterir. Bir veri kaynağında ADO.NET sağlayıcı yoksa burada gösterilebilir, ancak program aracılığıyla bağlanarak veri Visual Studio kullanabilirsiniz.
 
 - Cloud Explorer
 
-   Bu pencereyi [Visual Studio Market](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.CloudExplorerForVS)Visual Studio uzantısı olarak el ile yükleyebilirsiniz. , Azure hizmetlerine yönelik keşfetmeye ve bağlamaya yönelik özel işlevler sağlar.
+   Bu pencereyi Market'te Visual Studio uzantısı olarak [el Visual Studio yükleyin.](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.CloudExplorerForVS) Azure hizmetlerini keşfetmek ve bu hizmetlere bağlanmak için özel işlevler sağlar.
 
 - SQL Server Nesne Gezgini
 
-   SQL Server Veri Araçları ile yüklendi ve **Görünüm** menüsü altında görünür. Burada görmüyorsanız, Denetim Masası 'ndaki **Programlar ve Özellikler** ' e gidin, Visual Studio ' yı bulun ve ardından SQL Server veri araçları onay kutusunu seçtikten sonra yükleyiciyi yeniden çalıştırmak için **Değiştir** ' i seçin. SQL veritabanlarını görüntülemek için **SQL Server Nesne Gezgini** kullanın (bir ADO.NET sağlayıcısı varsa), yeni veritabanları oluşturun, şemaları değiştirin, saklı yordamlar oluşturun, bağlantı dizelerini alın, verileri görüntüleyin ve daha fazlasını yapın. ADO.NET sağlayıcısı yüklü olmayan SQL veritabanları burada gösterilmez, ancak yine de bunlara programlı olarak bağlanabilirsiniz.
+   Görünüm menüsünde SQL Server Veri Araçları ve görünür olarak **yüklenir.** Orada görmüyorsanız, Denetim Masası'de Programlar  ve Özellikler'e gidin, Visual Studio'i bulun ve  ardından Yenile onay kutusunu işaretledikten sonra yükleyiciyi yeniden çalıştırmak için Değiştir'i SQL Server Veri Araçları. SQL Server Nesne Gezgini  veritabanlarını görüntülemek SQL (ADO.NET sağlayıcısı varsa), yeni veritabanları oluşturma, şemaları değiştirme, saklı yordamlar oluşturma, bağlantı dizelerini alma, verileri görüntüleme ve daha fazlası için SQL Server Nesne Gezgini kullanın. SQL sağlayıcısı ADO.NET veritabanları burada gösterilebilir ancak yine de bu veritabanlarına program aracılığıyla bağlanabilirsiniz.
 
-## <a name="add-a-connection-in-server-explorer"></a>Sunucu Gezgini bağlantı ekleme
+## <a name="add-a-connection-in-server-explorer"></a>Sunucu Gezgini'a bağlantı ekleme
 
-Veritabanına bir bağlantı oluşturmak için **Sunucu Gezgini** **bağlantı ekle** simgesine tıklayın veya **veri bağlantıları** düğümünde **Sunucu Gezgini** ' a sağ tıklayıp **bağlantı ekle**' yi seçin. Buradan, başka bir sunucuda, SharePoint hizmetinde veya bir Azure hizmetinde bir veritabanına da bağlanabilirsiniz.
+Veritabanına bağlantı oluşturmak için, Sunucu Gezgini'deki Bağlantı Ekle simgesine tıklayın veya  Veri Bağlantıları düğümünde Sunucu Gezgini'ye sağ tıklayın ve Bağlantı   **Ekle'yi seçin.** Buradan başka bir sunucu, hizmet veya Azure SharePoint veritabanına da bağlanabilirsiniz.
 
-![Sunucu Gezgini yeni bağlantı simgesi](../data-tools/media/raddata-server-explorer-new-connection-icon.png)
+![Sunucu Gezgini Yeni Bağlantı simgesi](../data-tools/media/raddata-server-explorer-new-connection-icon.png)
 
-Bu, **bağlantı ekle** iletişim kutusunu açar. Burada SQL Server LocalDB örneğinin adını girdik.
+Bu, Bağlantı Ekle **iletişim kutusunu** getirir. Burada LocalDB örneğinin SQL Server girildi.
 
-![Yeni bağlantı ekle](../data-tools/media/raddata-add-new-connection-dialog.png)
+![Yeni Bağlantı Ekle](../data-tools/media/raddata-add-new-connection-dialog.png)
 
 ## <a name="change-the-provider"></a>Sağlayıcıyı değiştirme
 
-Veri kaynağı istediğiniz gibi değilse, yeni bir veri kaynağı ve/veya yeni bir ADO.NET veri sağlayıcısı seçmek için **Değiştir** düğmesine tıklayın. Yeni sağlayıcı, nasıl yapılandırdığınıza bağlı olarak kimlik bilgilerinizi isteyebilir.
+Veri kaynağı istediğiniz gibi yoksa Değiştir  düğmesine tıklayarak yeni bir veri kaynağı ve/veya yeni bir veri ADO.NET seçin. Yeni sağlayıcı, nasıl yapılandırdınıza bağlı olarak kimlik bilgilerinizi sorabilir.
 
-![AD0.NET Veri Sağlayıcısı Değiştir](../data-tools/media/raddata-change-ad0.net-data-provider.png)
+![Değişiklik AD0.NET Veri Sağlayıcısı](../data-tools/media/raddata-change-ad0.net-data-provider.png)
 
 ## <a name="test-the-connection"></a>Bağlantıyı test etme
 
-Veri kaynağını seçtikten sonra **Bağlantıyı Sına**' ya tıklayın. Başarılı olmazsa, satıcının belgelerine göre sorun gidermeniz gerekecektir.
+Veri kaynağını seçtikten sonra Bağlantıyı **Sına'ya tıklayın.** Başarılı olmazsa, satıcının belgelerine göre sorun gidermeniz gerekir.
 
 ![Bağlantıyı Sına](../data-tools/media/raddata-test-connection.png)
 
-Test başarılı olursa, aslında temel veritabanını veya hizmeti temel alan bir *veri modeli* anlamına gelen bir Visual Studio terimi olan bir *veri kaynağı* oluşturmaya hazırsınızdır.
+Test başarılı olursa, temel alınan veritabanı veya hizmeti temel alan bir veri modeli  anlamına Visual Studio bir veri kaynağı oluşturmak için hazırsınız demektir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

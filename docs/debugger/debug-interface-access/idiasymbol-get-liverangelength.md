@@ -1,6 +1,6 @@
 ---
-description: Yerel sembolün geçerli olduğu adres aralığının uzunluğunu döndürür.
-title: IDiaSymbol::get_liveRangeLength | Microsoft Docs
+description: Yerel simgenin geçerli olduğu adres aralığının uzunluğunu döndürür.
+title: 'IDiaSymbol:: get_liveRangeLength | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b19c0167d98d425bca39feb9425e3b5f5750fad8baccdb2d780b25bcc21bc9f6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 54cd8fc34147fca33e8c1dcb90dce1d1649f3500
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454674"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036074"
 ---
 # <a name="idiasymbolget_liverangelength"></a>IDiaSymbol::get_liveRangeLength
-Yerel sembolün geçerli olduğu adres aralığının uzunluğunu döndürür.
+Yerel simgenin geçerli olduğu adres aralığının uzunluğunu döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_liveRangeLength (
 #### <a name="parameters"></a>Parametreler
  `length`
 
-[out] Adres aralığının uzunluğunu döndürür.
+dışı Adres aralığının uzunluğunu döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 > [!NOTE]
-> Döndürülen hata kodu, sembolün canlı aralık bilgilerine sahip olmadığını gösterir.
+> Döndürülen bir hata kodu, simgenin canlı Aralık bilgilerine sahip olmadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Dia2.h
+ Üstbilgi: dia2. h
 
- Kitaplık: diaguids.lib
+ Kitaplık: diaguid. lib
 
  DLL: msdia100.dll
 

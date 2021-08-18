@@ -14,12 +14,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fa0720ee249c8bcb07306282d8ef11458391b23ef1a07db0a3cbabd53da16db6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 55656f03516544c9ba7b2c7c06ff24b70c0bc02f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121442131"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027558"
 ---
 # <a name="nameprofile"></a>NameProfile
 `NameProfile`İşlevi belirtilen işlem veya iş parçacığına bir dize atar.

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3dd3e7e74abac52d6d8de7b324797a836bb849a4981964a3dc0c391051add8ad
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5b7c37f0b69a3bd68c1328d37319968d19e68612
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121261469"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029274"
 ---
 # <a name="ienumdebugthreads2getcount"></a>IEnumDebugThreads2::GetCount
 Numaralamada öğe sayısını döndürür.

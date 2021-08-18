@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklama HTML ve CSS örnek kodu | Microsoft Docs
-description: Hızlı başlangıç hata ayıklama makalesinde kullanılan HTML ve CSS örnek kodunu bulun. Hızlı başlangıçta tasarıma sahip olan hatalar bu makalede düzeltilmiştir.
+title: HTML ve CSS örnek kod dosyalarında hata | Microsoft Docs
+description: Hızlı başlangıç hata ayıklama makalesinde kullanılan HTML ve CSS örnek kodunu bulun. Hızlı başlangıçta tasarıma göre mevcut olan hatalar bu makalede düzeltilmiştir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,22 +13,23 @@ ms.assetid: 51893967-98c8-4141-ba40-03646f221760
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 14d071d4ab47efd60aa31ecbffe1d7cb873ac6fd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6bfe174e5f68d86247c5007882eebec855057069
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865611"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036730"
 ---
 # <a name="debug-html-and-css-sample-code"></a>HTML ve CSS örnek kod hatalarını ayıklama
 
-Bu konudaki kod [hızlı başlangıç: hata AYıKLA HTML ve CSS](../debugger/quickstart-debug-html-and-css.md)için örnek dosyadır. Hızlı başlangıçta tasarımda bulunan hatalar kodun bu sürümünde düzeltilmiştir.
+Bu konudaki kod, Hızlı Başlangıç için örnek [dosyadır: HTML ve CSS'de hata ayıklama.](../debugger/quickstart-debug-html-and-css.md) QuickStart'ta tasarıma göre oluşan hatalar, kodun bu sürümünde düzeltilmiştir.
 
 ## <a name="sample-code"></a>Örnek Kod
-Aşağıdaki HTML kodu \<body> hızlı başlangıçtaki etiketinde kullanılır.
+Aşağıdaki HTML kodu Hızlı \<body> Başlangıç'ın etiketinde kullanılır.
 
 ```html
 <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -42,7 +43,7 @@ Aşağıdaki HTML kodu \<body> hızlı başlangıçtaki etiketinde kullanılır.
 </div>
 ```
 
-Aşağıdaki CSS, default. css ' ye yapılan eklemeleri gösterir.
+Aşağıdaki CSS, default.css'ye yapılan eklemeleri gösterir.
 
 ```css
 #fView {
@@ -52,7 +53,7 @@ Aşağıdaki CSS, default. css ' ye yapılan eklemeleri gösterir.
 }
 ```
 
-Aşağıdaki kod örneği default.js içindeki tüm JavaScript kodunu gösterir. Bu kod için WinJS ad alanlarına yapılan başvurular, şablonun default.html dosyasıdır.
+Aşağıdaki kod örneğinde, aşağıdaki kodda javascript kodunun default.js. Bu kod için WinJS ad alanlarına başvurular, şablonun default.html dosyasındadır.
 
 ```javascript
 (function () {

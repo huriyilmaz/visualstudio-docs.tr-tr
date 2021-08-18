@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e492dbae044b5051fc4de9178da981003735d24b3b0e37ba944a99aa6dd4a125
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2991ae503add55cfb8f3981eeeba5f2e6c1e0fe8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375877"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049850"
 ---
 # <a name="legacy-language-service-extensibility"></a>Eski Dil Hizmeti Genişletilebilirliği
 Dil hizmeti, IDE 'de kaynak kodu düzenlemede dile özgü destek sağlar.

@@ -18,12 +18,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bf5715983a64ea361f60978251981b1ea7325c0cec9f815f7d28a1f2a725df27
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d7210396338e93961c2a31a7e56a52a8abcf5fd7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121339222"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050955"
 ---
 # <a name="idebugpendingbreakpoint2enumboundbreakpoints"></a>IDebugPendingBreakpoint2::EnumBoundBreakpoints
 Bu bekleyen kesme noktasından bağlantılı olan tüm kesme noktalarını numaralandırır.

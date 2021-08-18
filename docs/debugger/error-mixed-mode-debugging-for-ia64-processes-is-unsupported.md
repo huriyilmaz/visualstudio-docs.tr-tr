@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c6060bf77348c7c66453b25753082cadea5a09695d3d705aeb2bd5805a85f267
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b349f61cd2c8056c56d18b20334a4d9040fd27e9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420215"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065710"
 ---
 # <a name="error-mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>Hata: IA64 işlemleri için karışık mod hata ayıklaması desteklenmiyor
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı, Itanium tabanlı bir işlemde karışık yerel ve yönetilen kod hatalarını ayıklamayı desteklemez.

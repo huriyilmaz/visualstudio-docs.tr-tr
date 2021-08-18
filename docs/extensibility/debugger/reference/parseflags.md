@@ -1,5 +1,5 @@
 ---
-description: Bir ifadenin nasıl ayrıştıralınacağını belirtir.
+description: Bir ifadenin nasıl ayrıştırılası olduğunu belirtir.
 title: PARSEFLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d4c279bdadb692007a66eed38ccd595d94be3c05f5c2777a3a30eae6af33666c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fd615c80c23ce3714208b7b09d1de8480698f52c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121433092"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034701"
 ---
 # <a name="parseflags"></a>PARSEFLAGS
-Bir ifadenin nasıl ayrıştıralınacağını belirtir.
+Bir ifadenin nasıl ayrıştırılası olduğunu belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,20 +51,20 @@ public enum enum_PARSEFLAGS {
  İfadenin bir deyim olmadığını gösterir.
 
  `PARSE_FUNCTION_AS_ADDRESS`\
- İfadenin adres olarak ayrıştırılacağını (ve daha sonra değerlendirildiğini) belirtir.
+ İfadenin bir adres olarak ayrıştır (ve daha sonra değerlendirilecek) olduğunu gösterir.
 
  `PARSE_DESIGN_TIME_EXPR_EVAL`\
- İfadenin tasarım zamanı (bir tasarımcı açık olduğunda) sırasında ayrıştırılmakta olduğunu gösterir.
+ İfadenin tasarım zamanında (yani tasarımcı açık olduğunda) ayrıştırıldı olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
- [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) ve [Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) yöntemlerine parametre olarak geçirilir.
+ ParseText ve [Parse yöntemlerine](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) [parametre olarak](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

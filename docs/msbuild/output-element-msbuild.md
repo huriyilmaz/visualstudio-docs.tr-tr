@@ -1,6 +1,6 @@
 ---
 title: Output öğesi (MSBuild) | Microsoft Docs
-description: Öğe ve özelliklerde görev çıkış değerlerini depolayan, bkz. öznitelikler, öğeler ve MSBuild output öğesi örneği.
+description: öğe ve özelliklerde görev çıkış değerlerini depolayan MSBuild çıktı öğesinin özniteliklerini, öğelerini ve bir örneğini görün.
 ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
@@ -18,14 +18,15 @@ ms.assetid: 34bc7cd1-efd3-4b57-b691-4584eeb6a0e9
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: d69f1e4960ad2f9e11b8ac0248033e5ff425262d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 07449cb310d3f362d32791c20d8e903481e68663
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905317"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027662"
 ---
 # <a name="output-element-msbuild"></a>Output öğesi (MSBuild)
 
@@ -64,7 +65,7 @@ ms.locfileid: "99905317"
 
 | Öğe | Açıklama |
 | - | - |
-| [Görev](../msbuild/task-element-msbuild.md) | MSBuild görevi örneğini oluşturur ve yürütür. |
+| [Görev](../msbuild/task-element-msbuild.md) | MSBuild bir görevin örneğini oluşturur ve yürütür. |
 
 ## <a name="example"></a>Örnek
 
@@ -89,5 +90,5 @@ ms.locfileid: "99905317"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Görevler](../msbuild/msbuild-tasks.md)

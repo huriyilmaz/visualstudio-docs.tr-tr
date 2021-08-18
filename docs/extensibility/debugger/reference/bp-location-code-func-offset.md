@@ -1,5 +1,5 @@
 ---
-description: Koddaki bir işlevdeki bir kesme noktasının konum konumunu açıklar.
+description: Kodda bir işlevde kesme noktası uzaklığı konumunu açıklar.
 title: BP_LOCATION_CODE_FUNC_OFFSET | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,15 +16,15 @@ ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: d30e83f11ea9227eb598efc27ae4852fcbf521e562873acff9f52eecd53b7eca
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 908660d606351ea37e602a285a81bdb2b6c492f5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121403291"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030353"
 ---
 # <a name="bp_location_code_func_offset"></a>BP_LOCATION_CODE_FUNC_OFFSET
-Koddaki bir işlevdeki bir kesme noktasının konum konumunu açıklar.
+Kodda bir işlevde kesme noktası uzaklığı konumunu açıklar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,22 +37,22 @@ typedef struct _BP_LOCATION_CODE_FUNC_OFFSET {
 
 ## <a name="members"></a>Üyeler
 `bstrContext`\
-Kesme noktası bağlamı, genellikle çağrı yığınında görülen bir yöntem veya işlev adıdır.
+Kesme noktası bağlamı, genellikle bir çağrı yığınında görülen bir yöntem veya işlev adıdır.
 
 `pFuncPos`\
-İşlevin adını ve işlevin başından ilgili göreli konumu açıklayan [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md) nesnesi.
+İşlevin adını ve işlevin başından itibaren göreli konumu açıklayan [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md) nesnesi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, bir birleşimin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısının bir üyesidir.
+Bu yapı, bir BP_LOCATION [parçası](../../../extensibility/debugger/reference/bp-location.md) olarak bu yapının üyesidir.
 
-`pFuncPos`Üye, işlev kesme noktasının nereye ayarlanacağını gösterir.
+Üye, `pFuncPos` işlev kesme noktası ayarlamayı gösterir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

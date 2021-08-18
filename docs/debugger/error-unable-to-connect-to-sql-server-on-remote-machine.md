@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8993e3858d95423787b05f1933a68a279f6d4363f9bc149cabe539358e9a0c84
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: db72197e407b7846a496f4996d04d2334e770302
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121419864"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112795"
 ---
 # <a name="error-unable-to-connect-to-sql-server-on-remote-machine"></a>Hata: Uzak makinede SQL Server'a bağlanılamıyor
 Uzak makine SQL Server bağlantı *kuramıyor.* Erişim reddedildi. Uzak makineye uzaktan hata ayıklayıcısını yüklemiş olduğunu doğrulayın. Uzak makine bir etki alanında yoksa veya yerel Visual Studio olarak çalışıyorsa, uzak makinenin yerel hesapla aynı kullanıcı adı ve parolası olan bir hesabı olmalıdır.

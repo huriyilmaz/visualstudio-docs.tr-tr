@@ -1,6 +1,6 @@
 ---
-description: Birçok formdan birindeki belgenin adını alır.
-title: 'IDebugDocument2:: GetName | Microsoft Docs'
+description: Belgenin adını birkaç formdan birini alır.
+title: IDebugDocument2::GetName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 6f09ff09-b0cf-4472-8fc8-143991f0ceb1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 49c9a2b4fd95fbb24b28b69003c8e462b09be38b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 214bd95d1dec9917e89c9f3cf284599ca4115c78
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066821"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096446"
 ---
 # <a name="idebugdocument2getname"></a>IDebugDocument2::GetName
-Birçok formdan birindeki belgenin adını alır.
+Belgenin adını birkaç formdan birini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +45,16 @@ int GetName(
 
 ## <a name="parameters"></a>Parametreler
 `gnType`\
-'ndaki [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) Numaralandırmadaki, döndürülecek ad türünü belirleyen bir değer.
+[in] Geri dönüş [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) belirleyen bir değerdir.
 
 `pbstrFileName`\
-dışı Belge adını içeren bir dize döndürür.
+[out] Belge adını içeren bir dize döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem Örneğin, belgenin adını bir başlık veya dosya adı olarak ya da dosya adının bir parçası olarak döndürebilir.
+ Bu yöntem, örneğin belgenin adını bir başlık olarak, dosya adı olarak, hatta dosya adının bir parçası olarak geri getirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md)

@@ -1,6 +1,6 @@
 ---
-description: 64 bitlik bir işlemde karışık yerel ve yönetilen kodda hata ayıklamak için .NET Framework sürüm 4 ' e sahip olmanız gerekir.
-title: x64 işlemlerine yönelik karışık modda hata ayıklama yalnızca Microsoft .NET Framework 4 veya daha yenisi kullanılırken desteklenir | Microsoft Docs
+description: 64 bit işlemde karışık yerel ve yönetilen kodlarda hata ayıklamak için 4. .NET Framework gerekir.
+title: x64 işlemleri için karma mod hata ayıklaması yalnızca Microsoft .NET Framework 4 veya daha büyük bir | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,23 +16,23 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30240992d9d4eef838adf33c201c7e270a7eb1c749fab37b2eb7c9d9d73f08de
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cceddd78e7ba6aa7d0cf59e61ea23230b4f555be
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121263848"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065676"
 ---
 # <a name="error-mixed-mode-debugging-for-x64-processes-is-supported-only-when-using-microsoft-net-framework-4-or-greater"></a>Hata: x64 işlemleri için karışık modda hata ayıklama yalnızca Microsoft .NET Framework 4 veya daha yenisi kullanılırken desteklenir
-64 bitlik bir işlemde karışık yerel ve yönetilen kodda hata ayıklamak için .NET Framework sürüm 4 ' e sahip olmanız gerekir. 4 ' ten önceki .NET Framework sürümleriyle 64 bitlik işlemlerin karışık modda hata ayıklaması desteklenmiyor.
+64 bit işlemde karışık yerel ve yönetilen kodlarda hata ayıklamak için 4. .NET Framework gerekir. 64 bit işlemlerde 4'den önceki .NET Framework karışık mod hata ayıklaması desteklenmiyor.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
 - Aşağıdaki adımlardan birini uygulayın:
 
-  - .NET Framework sürüm 4 ' e yükseltin.
+  - Dosyanızı .NET Framework 4'e yükseltin.
 
-  - Hata ayıklama için uygulamanızın 32 bitlik bir sürümünü oluşturun.
+  - Hata ayıklama için uygulamanın 32 bit sürümünü derleme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

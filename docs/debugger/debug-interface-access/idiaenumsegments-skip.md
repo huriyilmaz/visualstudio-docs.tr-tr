@@ -11,14 +11,15 @@ ms.assetid: ec67039f-da8c-4e70-8db7-957d7d5281e8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 46c0e9e14411b77177c14fce1629a0a32164273f
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 22479a35faf797969eb7936c6d630e91f7f6352b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159211"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113699"
 ---
 # <a name="idiaenumsegmentsskip"></a>IDiaEnumSegments::Skip
 Bir numaralandırma dizisinde belirtilen sayıda parçayı atlar.

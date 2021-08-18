@@ -20,18 +20,19 @@ ms.assetid: c0ddbe32-b99f-4425-acf1-f48842804f56
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 20f97c7597dc266fbb4334daf27d3660b351f35a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 528a34c6f9d7ecbe4ab3254e779441a4bc307239
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870837"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065585"
 ---
 # <a name="executable-for-debugging-session-dialog-box"></a>Hata Ayıklama Oturumu İçin Yürütülebilir İletişim Kutusu
 
-Bu iletişim kutusu, çalıştırılabilir dosya belirtilmediğinde bir DLL 'de hata ayıklamaya çalıştığınızda görüntülenir. Visual Studio doğrudan bir DLL başlatamıyor. Bunun yerine, Visual Studio belirtilen yürütülebiliri başlatır. Yürütülebilir dosya tarafından çağrıldığında DLL 'de hata ayıklaması yapabilirsiniz.
+Bu iletişim kutusu, çalıştırılabilir dosya belirtilmediğinde bir DLL 'de hata ayıklamaya çalıştığınızda görüntülenir. Visual Studio doğrudan DLL başlatamıyor. bunun yerine, Visual Studio belirtilen çalıştırılabiliri başlatır. Yürütülebilir dosya tarafından çağrıldığında DLL 'de hata ayıklaması yapabilirsiniz.
 
  **Yürütülebilir dosya adı** Hata ayıklaması yaptığınız DLL 'yi çağıran bir yürütülebilir dosyanın yolunu girin.
 

@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fad740b0111f909af92a3e8ccc42e10c574b321946f17d386a04ded41408c31b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a62e0714da65552eedc6ca989a5035cdcf655b8d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435796"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096836"
 ---
 # <a name="using-saved-intellitrace-data-c-visual-basic-c"></a>Kayıtlı IntelliTrace verilerini kullanma (C#, Visual Basic, C++)
 
@@ -133,115 +133,115 @@ IntelliTrace günlük (. iTrace) dosyasından hata ayıklamayı başlattığın�
 
      ![Özel durum olayından hata ayıklamayı Başlat](../debugger/media/ffr_itsummarypageexception.png "FFR_ITSummaryPageException")
 
-     Ayrıca, olayı çift tıklatabilirsiniz. Olaylar gruplandırılmamışsa, **Bu olayın hatalarını ayıkla**' yı seçin.
+     Ayrıca, olayı çift tıklatabilirsiniz. Olaylar gruplanamamışsa Bu Olayda Hata **Ayıkla'ya seçin.**
 
      Uygulama kodunuzda bir özel durum oluştuysa, Visual Studio özel durumun olduğu yere gider.
 
-     ![Özel durum olayından uygulama koduna git](../debugger/media/ffr_itsummarypageexceptiongotocode.png "FFR_ITSummaryPageExceptionGoToCode")
+     ![Bir özel durum olayından uygulama koduna gidin](../debugger/media/ffr_itsummarypageexceptiongotocode.png "FFR_ITSummaryPageExceptionGoToCode")
 
-     Artık kaydedilen diğer değerleri, çağrı yığınını gözden geçirebilir veya diğer kayıtlı olaylar, ilgili kod ve bu noktalarda kaydedilmiş değerler [arasında "zamanda" geriye veya ileri doğru gitmek](../debugger/intellitrace.md)için **IntelliTrace** penceresini kullanabilirsiniz.
+     Artık diğer kayıtlı değerleri, çağrı yığınını gözden geçirebilirsiniz veya **IntelliTrace** penceresini kullanarak diğer kayıtlı olaylar, ilgili kod ve zaman içinde bu noktalarda kaydedilen değerler arasında ["zamanda"](../debugger/intellitrace.md)geri veya ileri doğru ilerlemek için kullanabilirsiniz.
 
-    |**Sütun**|**Şunu gösterir**|
+    |**Sütun**|**Şu sayfayı gösterir:**|
     |----------------|-------------------|
     |**Tür**|Özel durumun .NET türü|
-    |Gruplandırılabilen özel durumlar veya Gruplandırılmamış özel durumlar için **ileti** Için **en yeni ileti**|Özel durum tarafından girilen ileti|
-    |Gruplanmış özel durum **sayısı**|Özel durumun kaç kez oluşturulduğu|
-    |Gruplandırılmamış özel durumlar için **Iş parçacığı kimliği**|Özel durumu oluşturan iş parçacığının KIMLIĞI|
-    |**En yeni olay saati** veya **Olay saati**|Özel durum oluştuğunda kaydedilen zaman damgası|
-    |**Çağrı yığını**|Özel durum için çağrı yığını.<br /><br /> Çağrı yığınını görmek için listeden bir özel durum seçin. Çağrı yığını, özel durum listesinin altında görüntülenir.|
+    |**Gruplanmamış özel** durumlar için en yeni ileti **veya** gruplandırlanmamış özel durumlar için İleti|Özel durum tarafından sağlanan ileti|
+    |**Gruplandı** özel durum sayısı|Özel durumun kaç kez atılan sayısı|
+    |**Gruplanmamış** özel durumlar için iş parçacığı kimliği|Özel durumun neden olduğu iş parçacığının kimliği|
+    |**En Yeni Olay Zamanı** veya **Olay Zamanı**|Özel durum atılan zaman damgası|
+    |**Çağrı Yığını**|Özel durum için çağrı yığını.<br /><br /> Çağrı yığınını görmek için listeden bir özel durum seçin. Çağrı yığını, özel durum listesinin altında görünür.|
 
-### <a name="analysis"></a><a name="Analysis"></a> Çözümlemeleri
- SharePoint bağıntı kimliği kullanarak SharePoint 2010 ve SharePoint 2013 uygulamalarıyla ilgili sorunları tanılayın veya Microsoft Monitoring Agent bulunan işlenmemiş özel durumları gözden geçirin.
+### <a name="analysis"></a><a name="Analysis"></a> Analysis
+ SharePoint bağıntı kimliği kullanarak SharePoint 2010 ve SharePoint 2013 uygulamalarıyla ilgili sorunları tanılar veya bulunan iş Microsoft Monitoring Agent gözden geçirin.
 
-- eşleşen web isteğini ve olaylarını bulmak için SharePoint bağıntı kimliği kullanın. Bir olay seçin ve sonra olayın gerçekleştiği noktada ve hata ayıklamaya başlayın.
+- Eşleşen web SharePoint ve olaylarını bulmak için bir bağıntı kimliği kullanın. Bir olay seçin ve ardından olayın nerede ve ne zaman meydana geldiğinde hata ayıklamaya başlayabilirsiniz.
 
-- işlenmemiş özel durumlar Microsoft Monitoring Agent, bir özel durum seçin ve sonra özel durumun oluştuğu noktada hata ayıklamayı başlatın.
+- İş Microsoft Monitoring Agent özel durumlar bulduysanız, bir özel durum seçin ve ardından özel durumun nerede ve ne zaman olduğu noktasında hata ayıklamaya başlayabilirsiniz.
 
 ##### <a name="start-debugging-with-a-sharepoint-correlation-id"></a>SharePoint bağıntı kimliği ile hata ayıklamayı başlat
 
-1. SharePoint bağıntı kimliğini kaynağından kopyalayın.
+1. Kaynak SharePoint kimliğini kopyalayın.
 
     Örnek:
 
-    ![ıntellitrace &#45; SharePoint hata &#45; bağıntı kimliği](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")
+    ![IntelliTrace &#45; SharePoint hatası &#45; bağıntı kimliği](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")
 
-2. . itrace dosyasını açın, **analiz** bölümüne gidin ve eşleşen web isteğini ve kayıtlı olayları gözden geçirmek için SharePoint bağıntı kimliği girin.
+2. .iTrace dosyasını açın, analiz'e gidin ve eşleşen web isteğini ve SharePoint kaydedilen olayları gözden geçirmek için veri bağıntı kimliğini girin. 
 
-    ![ıntellitrace günlük &#45; SharePoint bağıntı kimliği girin](../debugger/media/entersharepointcorrelationid.png "Entersharepointbağıntıkimliği")
+    ![IntelliTrace günlüğü &#45; bağıntı SharePoint girin](../debugger/media/entersharepointcorrelationid.png "Entersharepointbağıntıkimliği")
 
-3. **Istek olayları**' nın altında, olayları inceleyin. En üstten başlayarak olaylar gerçekleşdikleri sırada görüntülenir.
+3. Olay **İsteği altında** olayları incele. En üstten başlayarak olaylar gerçekleştik düzende görünür.
 
    1. Ayrıntılarını görmek için bir olay seçin.
 
-   2. Olayın gerçekleştiği noktada hata ayıklamayı başlatmak için **hata ayıklamayı Başlat** ' ı seçin.
+   2. Hata **ayıklamayı olayın** meydana olduğu noktada başlatmak için Hata Ayıklamayı Başlat'ı seçin.
 
-      ![IntelliTrace günlük dosyası &#45; Web isteği &#43; olaylarını görüntüleme](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")
+      ![IntelliTrace günlük dosyası &#45; Web isteği günlük &#43; görüntüleme](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")
 
-   ıntellitrace olaylarıyla birlikte bu tür SharePoint olayları görebilirsiniz:
+   IntelliTrace olaylarıyla SharePoint bu tür olayları da görebilir:
 
 - **Kullanıcı profili olayları**
 
-     bu olaylar, SharePoint bir kullanıcı profili yüklediğinde ve kullanıcı profili özellikleri okunmasından veya değiştirildiğinde gerçekleşir.
+     Bu olaylar, bir SharePoint profili yüklerken ve kullanıcı profili özellikleri okundu veya değiştiriken olur.
 
-- **Birleşik günlüğe kaydetme sistemi (ULS) olayları**
+- **Birleşik Günlük Sistemi (ULS) olayları**
 
-     Microsoft Monitoring Agent, SharePoint ULS olaylarının ve bu alanların bir alt kümesini kaydeder:
+     Microsoft Monitoring Agent ULS olaylarının SharePoint alt kümesini ve şu alanları kaydedmektedir:
 
     |**IntelliTrace alanı**|**SharePoint ULS alanı**|
     |----------------------------|------------------------------|
-    |**ID**|**Even**|
-    |**Düzeyde**|**Düzeyde**|
-    |**Kategori KIMLIĞI**|**Kategori KIMLIĞI**|
+    |**ID**|**Eventıd**|
+    |**Düzey**|**Düzey**|
+    |**Kategori Kimliği**|**Kategori Kimliği**|
     |**Kategori**|**Kategori**|
     |**Alan**|**Ürün**|
     |**Çıktı**|**İleti**|
-    |**Bağıntı KIMLIĞI**|**Bağıntı KIMLIĞI**|
+    |**Bağıntı Kimliği**|**Bağıntı Kimliği**|
 
 ##### <a name="start-debugging-from-an-unhandled-exception"></a>İşlenmemiş bir özel durumdan hata ayıklamayı başlat
 
-1. bir özel durum için SharePoint bağıntı kimliği seçin. Özel durumlar türe ve çağrı yığınına göre gruplandırılır.
+1. Özel durum SharePoint bağıntı kimliğini seçin. Özel durumlar türe ve çağrı yığınına göre gruplanır.
 
-2. Seçim Bir özel durum grubu için çağrı yığınını görmek için **çağrı yığınını** genişletin.
+2. (İsteğe bağlı) Bir **özel durum** grubu için çağrı yığınını görmek için Çağrı Yığını'yı genişletin.
 
-3. Özel durumun oluştuğu noktada hata ayıklamayı başlatmak için **hata ayıklama özel durumunu** seçin.
+3. Özel **durumun nerede ve ne** zaman olduğu noktasında hata ayıklamaya başlamak için Hata Ayıklama Özel Durumu'u seçin.
 
-    ![ıntellitrace günlüğü işlenmemiş özel durumları SharePoint &#45;](../debugger/media/sharepointunhandledexceptions_intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")
+    ![intelliTrace günlüğü &#45; SharePoint özel durumlar](../debugger/media/sharepointunhandledexceptions_intellitrace.png "SharePointUnhandledExceptions_IntelliTrace")
 
-   izlenecek yol için bkz. [izlenecek yol: SharePoint uygulamada ıntellitrace kullanarak hata ayıklama](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md). Aracının kaydettiği veri türleri için bkz. [IntelliTrace Özellikleri](../debugger/intellitrace-features.md).
+   Bir izlenecek yol için [bkz. IntelliTrace Kullanarak SharePoint Uygulamanın Hata Ayıklaması.](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md) Aracı tarafından kaydedilen veri türleri için bkz. [IntelliTrace Özellikleri.](../debugger/intellitrace-features.md)
 
-### <a name="threads-list"></a><a name="ThreadsList"></a> İş parçacıkları listesi
- Hedef işlemde çalıştırılan kayıtlı iş parçacıklarını inceleyin. Seçili bir iş parçacığında ilk geçerli IntelliTrace olayından hata ayıklamaya başlayabilirsiniz.
+### <a name="threads-list"></a><a name="ThreadsList"></a> İş Parçacıkları Listesi
+ Hedef işlemde çalışan kayıtlı iş parçacıklarını inceleme. Seçilen iş parçacığında ilk geçerli IntelliTrace olayından hata ayıklamaya başlayabilirsiniz.
 
 ##### <a name="to-start-debugging-from-a-specific-thread"></a>Belirli bir iş parçacığından hata ayıklamaya başlamak için
 
-1. **Iş parçacıkları listesinde** bir iş parçacığı seçin.
+1. İş **Parçacıkları Listesi altında** bir iş parçacığı seçin.
 
-2. **Iş parçacıkları listesinin** en altında, **hata ayıklamayı Başlat**' ı seçin. Ayrıca, bir iş parçacığına çift tıklayabilirsiniz.
+2. İş Parçacıkları **Listesi'nin alt kısmında** Hata **Ayıklamayı Başlat'ı seçin.** Ayrıca bir iş parçacığına çift tıklar.
 
-    Uygulamanın başladığı yerden hata ayıklamaya başlamak için **ana Iş parçacığı**' ne çift tıklayın. [IntelliTrace özelliklerine](../debugger/intellitrace-features.md)bakın.
+    Uygulamanın başladığı yerden hata ayıklamaya başlamak için Ana İş **Parçacığı'ya çift tıklayın.** Bkz. [IntelliTrace Özellikleri.](../debugger/intellitrace-features.md)
 
-   Kullanıcının oluşturduğu iş parçacığı verileri, bir sunucunun oluşturduğu ve IIS tarafından barındırılan Web uygulamaları için yönettiği iş parçacıklarından daha faydalı olabilir.
+   Kullanıcının oluşturduğu iş parçacığı verileri, bir sunucunun IIS tarafından barındırılan Web uygulamaları için oluşturduğu ve yönet olduğu iş parçacıklarından daha kullanışlı olabilir.
 
-|**Sütun**|**Şunu gösterir**|
+|**Sütun**|**Şu sayfayı gösterir:**|
 |----------------|-------------------|
-|**ID**|İş parçacığı KIMLIK numarası|
-|**Ad**|İş parçacığı adı. Adlandırılmamış iş parçacıkları "" olarak görünür \<No Name> .|
-|**Başlangıç Zamanı**|İş parçacığının oluşturulduğu zaman|
-|**Bitiş zamanı**|İş parçacığının tamamlandığı zaman|
+|**ID**|İş Parçacığı Kimliği numarası|
+|**Ad**|İş parçacığı adı. Adlandırlanmamış iş parçacıkları " \<No Name> olarak görünür.|
+|**Başlangıç Zamanı**|İş parçacığının oluşturulma zamanı|
+|**Bitiş Zamanı**|İş parçacığının tamamlanma zamanı|
 
-##### <a name="to-start-debugging-from-a-specific-test-step"></a>Belirli bir test adımından hata ayıklamayı başlatmak için
+##### <a name="to-start-debugging-from-a-specific-test-step"></a>Belirli bir test adımdan hata ayıklamaya başlamak için
 
-1. **Test adımları kılavuzunu** genişlet. Bir test adımı seçin.
+1. Test **Adımları Kılavuzu'alanını genişletin.** Bir test adımı seçin.
 
-2. **Test adımları kılavuzunun** en altında, **hata ayıklamayı Başlat**' ı seçin. Ayrıca, bir test adımına çift tıklayabilirsiniz.
+2. Test Adımları **Kılavuzu'nda hata ayıklamayı** **başlat'ı seçin.** Ayrıca bir test adımına çift tıklarsiniz.
 
-     Bu, seçilen test adımından sonra ilk geçerli IntelliTrace olayından hata ayıklamayı başlatır.
+     Bu, seçilen test adımından sonraki ilk geçerli IntelliTrace olayından hata ayıklamayı başlatır.
 
-     test verileri mevcut olduğunda, ıntellitrace test çalıştırmasını gerçekleştirmek için kullanılan ilişkili Team Foundation Server derlemesini çözümlemeye çalışır. Yapı bulunursa, uygulamanın ilişkili sembolleri otomatik olarak çözümlenir.
+     Test verileri mevcut olduğunda IntelliTrace, test çalıştırması gerçekleştirmek Team Foundation Server ilişkili derleme derlemesini çözümlemeye çalışır. Derleme bulunursa, uygulamanın ilişkili sembolleri otomatik olarak çözümlenir.
 
-|**Alan**|**Şunu gösterir**|
+|**Alan**|**Şu sayfayı gösterir:**|
 |---------------|-------------------|
-|**Test oturumu**|Kaydedilen test oturumları. Genellikle yalnızca bir tane vardır. Test verileri el ile araştırmacı test kullanılarak oluşturulduysa bu liste boştur.|
+|**Test Oturumu**|Kaydedilen test oturumları. Genellikle yalnızca bir tanedir. Test verileri el ile keşif testi kullanılarak oluşturulduktan sonra bu liste boş olur.|
 |**Test çalışması**|Seçili test oturumundan test çalışmaları. Test verileri el ile araştırmacı test kullanılarak oluşturulduysa bu liste boştur.|
 |**Test adımları Kılavuzu**|Pass veya fail test sonucuyla kaydedilen test adımları|
 

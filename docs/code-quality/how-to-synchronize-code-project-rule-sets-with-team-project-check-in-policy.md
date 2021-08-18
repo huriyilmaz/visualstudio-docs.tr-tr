@@ -13,14 +13,14 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: d56ed5560eb8df8083a2ca26b447e14825417775625a8daf89230549eea766ab
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 20c4d0c6fc5583686648507be2a36c5183ca70c6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121264811"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098001"
 ---
-# <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Nasıllı: Kod Project Kural Kümelerini Bir Azure DevOps Project İlkeyle Eşitleme
+# <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Nasıl edilir: Kod Project Kural Kümelerini Azure DevOps Project İlke ile Eşitleme
 
 En azından iade ilkesi için kural kümesinde belirtilen kuralları içeren bir kural kümesi belirterek kod projeleri için kod analizi ayarlarını Azure DevOps projesinin iade ilkesiyle eşitlersiniz. Geliştirici müşteri adayınız, iade ilkesi için kural kümesi adını ve konumunu size bildirebilirsiniz. Proje için kod analizinin doğru kural kümesi kullandığına emin olmak için aşağıdaki seçeneklerden birini kullanabilirsiniz:
 

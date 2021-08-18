@@ -1,6 +1,6 @@
 ---
-title: Araç Çubuğu Ekleme | Microsoft Docs
-description: Tümleşik geliştirme ortamına (IDE) komutlara bağlı düğmeler içeren Visual Studio araç çubuğu eklemeyi öğrenin.
+title: Araç çubuğu ekleme | Microsoft Docs
+description: Visual Studio tümleşik geliştirme ortamına (ıde) komutlara bağlanan düğmeleri içeren bir araç çubuğu eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,31 +14,31 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca32c96358982352d1570f916799409fbf8090a270424beaf5e1651a54d66a5d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 40d28a92e6c4c0695c21bc7271417aff2fd778f7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434977"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035325"
 ---
-# <a name="add-a-toolbar"></a>Araç Çubuğu Ekleme
-Bu kılavuzda, IDE'ye araç çubuğu Visual Studio gösterir.
+# <a name="add-a-toolbar"></a>Araç çubuğu ekle
+bu izlenecek yol, Visual Studio ıde 'ye bir araç çubuğunun nasıl ekleneceğini gösterir.
 
- Araç çubuğu, komutlara bağlı düğmeleri içeren yatay veya dikey bir şerittir. Uygulamasına bağlı olarak, IDE'de bir araç çubuğu yeniden konumlandırabilir, ana IDE penceresinin herhangi bir tarafına konumlandırabilir veya diğer pencerelerin önünde kalacak şekilde ekleyebilirsiniz.
+ Bir araç çubuğu, komutlara bağlanan düğmeleri içeren yatay veya dikey bir şerit olur. Uygulamasına bağlı olarak, IDE 'deki bir araç çubuğu, ana IDE penceresinin herhangi bir tarafına yerleştirilmiş olan veya diğer pencerelerin önünde kalmak için yeniden konumlandırılabilir.
 
- Ayrıca, kullanıcılar özelleştir iletişim kutusunu kullanarak bir araç çubuğuna komut ekleyebilir veya araç **çubuğundan komut** kaldırabilir. VSPackage'lar genellikle kullanıcı tarafından özelleştirilebilir. IDE tüm özelleştirmeleri işler ve VSPackage komutlara yanıt verir. VSPackage'ın bir komutun fiziksel olarak nerede olduğunu bilmek zorunda değildir.
+ Ayrıca, kullanıcılar bir araç çubuğuna komut ekleyebilir veya **Özelleştir** iletişim kutusunu kullanarak bunları kaldırabilir. Genellikle, VSPackages 'teki araç çubukları Kullanıcı tarafından özelleştirilebilir. IDE tüm özelleştirmeyi işler ve VSPackage, komutlara yanıt verir. VSPackage 'ın bir komutun fiziksel olarak nerede bulunduğunu bilmeleri gerekmez.
 
- Menüler hakkında daha fazla bilgi için [bkz. Komutlar, menüler ve araç çubukları.](../extensibility/internals/commands-menus-and-toolbars.md)
+ Menüler hakkında daha fazla bilgi için bkz. [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
- 2015 Visual Studio den başlayarak, Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Bu, kurulumda isteğe bağlı bir Visual Studio olarak dahil edilir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi ' nden yüklemeyin. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-an-extension-with-a-toolbar"></a>Araç çubuğu ile uzantı oluşturma
- adlı bir VSIX projesi `IDEToolbar` oluşturun. **ToolbarTestCommand** adlı bir menü komut öğesi şablonu ekleyin. Bunun nasıl olduğu hakkında bilgi için [bkz. Menü komutuyla uzantı oluşturma.](../extensibility/creating-an-extension-with-a-menu-command.md)
+## <a name="create-an-extension-with-a-toolbar"></a>Araç çubuğuyla uzantı oluşturma
+ Adlı bir VSıX projesi oluşturun `IDEToolbar` . **ToolbarTestCommand** adlı bir menü komut öğesi şablonu ekleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-## <a name="create-a-toolbar-for-the-ide"></a>IDE için araç çubuğu oluşturma
+## <a name="create-a-toolbar-for-the-ide"></a>IDE için bir araç çubuğu oluşturma
 
-1. *ToolbarTestCommandPackage.vsct* içinde Semboller bölümünü seçin. guidToolbarTestCommandPackageCmdSet adlı GuidSymbol öğesinde, bir araç çubuğu ve araç çubuğu grubu için bildirimleri aşağıdaki gibi ekleyin.
+1. *ToolbarTestCommandPackage. vsct* içinde semboller bölümüne bakın. Guıdtoolbartestcommandpackagecmdset adlı GuidSymbol öğesinde, bir araç çubuğu ve bir araç çubuğu grubu için aşağıdaki gibi bildirimler ekleyin.
 
     ```xml
     <IDSymbol name="Toolbar" value="0x1000" />
@@ -46,7 +46,7 @@ Bu kılavuzda, IDE'ye araç çubuğu Visual Studio gösterir.
 
     ```
 
-2. Komutlar bölümünün en üstünde bir Menüler bölümü oluşturun. Araç çubuğularınızı tanımlamak için Menüler bölümüne bir Menü öğesi ekleyin.
+2. Komutlar bölümünün en üstünde bir menü bölümü oluşturun. Araç çubuğinizi tanımlamak için menüler bölümüne bir menü öğesi ekleyin.
 
     ```xml
     <Menus>
@@ -61,9 +61,9 @@ Bu kılavuzda, IDE'ye araç çubuğu Visual Studio gösterir.
     </Menus>
     ```
 
-     Araç çubukları alt menüler gibi iç içe olamaz. Bu nedenle, bir üst grup atamaya gerek yok. Ayrıca, kullanıcı araç çubuklarını hareket ettirene kadar bir öncelik ayarlamak zorunda değildir. Genellikle, araç çubuğunun ilk yerleşimi program aracılığıyla tanımlanır, ancak kullanıcı tarafından yapılan sonraki değişiklikler kalıcı olur.
+     Araç çubukları alt menüler gibi iç içe geçirilemez. Bu nedenle, bir üst grup atamanız gerekmez. Ayrıca, Kullanıcı araç çubuklarını taşıyabildiğinden, öncelik ayarlamanız gerekmez. Genellikle, bir araç çubuğunun ilk yerleşimi programlı olarak tanımlanır, ancak kullanıcı tarafından sonraki değişiklikler kalıcı hale getirilir.
 
-3. Gruplar [bölümünde,](../extensibility/groups-element.md) mevcut grup girdiden sonra, araç [çubuğunun komutlarını](../extensibility/group-element.md) içeren bir Group öğesi tanımlayın.
+3. [Gruplar](../extensibility/groups-element.md) bölümünde, varolan Grup girişinden sonra, araç çubuğu komutlarını Içeren bir [Grup](../extensibility/group-element.md) öğesi tanımlayın.
 
     ```xml
     <Group guid="guidToolbarTestCommandPackageCmdSet" id="ToolbarGroup"
@@ -72,7 +72,7 @@ Bu kılavuzda, IDE'ye araç çubuğu Visual Studio gösterir.
     </Group>
     ```
 
-4. Düğmenin araç çubuğunda görünmesini sağlar. Düğmeler bölümünde, Düğme'de Üst bloğu araç çubuğuyla değiştirin. Sonuçta elde edilen Düğme bloğu şu şekilde görünüyor:
+4. Düğmenin araç çubuğunda görünmesini sağlayın. Düğmeler bölümünde, düğmedeki üst bloğu araç çubuğuna değiştirin. Ortaya çıkan düğme bloğu şöyle görünmelidir:
 
     ```xml
     <Button guid="guidToolbarTestCommandPackageCmdSet" id="ToolbarTestCommandId" priority="0x0100" type="Button">
@@ -84,13 +84,13 @@ Bu kılavuzda, IDE'ye araç çubuğu Visual Studio gösterir.
     </Button>
     ```
 
-     Varsayılan olarak, araç çubuğunda komut yoksa görünmez.
+     Varsayılan olarak, bir araç çubuğunda komut yoksa, görüntülenmez.
 
-5. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel örneğin görünmesi gerekir.
+5. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görünmelidir.
 
-6. Araç çubuklarının listesini Visual Studio menü çubuğuna sağ tıklayın. Test Araç **Çubuğu'nu seçin.**
+6. araç çubuklarının listesini almak için Visual Studio menü çubuğuna sağ tıklayın. **Test araç çubuğunu** seçin.
 
-7. Artık Dosyalarda Bul simgesinin sağ köşesinde bir simge olarak araç çubuğu görüntüleyebilirsiniz. Simgeye tıklarsanız **ToolbarTestCommandPackage iletisi görüntülenir. IDEToolbar.ToolbarTestCommand.MenuItemCallback() içinde.**
+7. Artık araç çubuğudur dosyaları bul simgesinin sağında bir simge olarak görmeniz gerekir. Simgeye tıkladığınızda, ToolbarTestCommandPackage adlı bir ileti kutusu görmeniz gerekir **. Onıtoolbar. ToolbarTestCommand. Menuıitemcallback () içinde**.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

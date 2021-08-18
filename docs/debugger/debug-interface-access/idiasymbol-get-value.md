@@ -1,6 +1,6 @@
 ---
-description: Bir sabitin değerini alır.
-title: 'IDiaSymbol:: get_value | Microsoft Docs'
+description: Sabitin değerini verir.
+title: IDiaSymbol::get_value | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a04829912fc4aef2e4ff23e4e1f586f29d3b262923faaa0ba156d541884c6914
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9801c3afa48dc7f926cb6e99ece583a4b21dbf24
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404653"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113254"
 ---
 # <a name="idiasymbolget_value"></a>IDiaSymbol::get_value
-Bir sabitin değerini alır.
+Sabitin değerini verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,16 +35,16 @@ HRESULT get_value (
 #### <a name="parameters"></a>Parametreler
 `pRetVal`
 
-[in, out] `VARIANT` Bir sabit değeri ile doldurulmuş bir nesne.
+[in, out] `VARIANT` Sabitin değeriyle doldurulan nesne.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
-Sağlanan DEĞIŞKEN bu yönteme geçirilmeden önce başlatılmalıdır. Daha fazla bilgi için örneğe bakın.
+Sağlanan VARIANT, bu yönteme geçirilemeden önce başlatlanmalıdır. Daha fazla bilgi için bkz. örnek.
 
 ## <a name="example"></a>Örnek
 

@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklama, Seçenekler Iletişim kutusu | Microsoft Docs
-description: Genel hata ayıklama, tam zamanında hata ayıklama, çıkış penceresi hata ayıklama ve Visual Studio 'da sembol hata ayıklama için Seçenekler iletişim kutusunu tanımlayan bağlantıları bulun.
+description: Genel hata ayıklama, tam zamanında hata ayıklama, çıkış penceresi hata ayıklama ve Visual Studio sembol hata ayıklama için Seçenekler iletişim kutusunu tanımlayan bağlantıları bulun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -21,14 +21,15 @@ ms.assetid: 9450589a-42ea-45bf-b128-89447225cca6
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6048ff2b86b41a2b825f87d9c9ff9078d414cb7f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d06b4caa49f67203fad3eab081d3d2de3e8f9e32
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99872514"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097434"
 ---
 # <a name="debugging-options-dialog-box"></a>Hata Ayıklama, Seçenekler İletişim Kutusu
 **Hata ayıklama** klasörü, **Araçlar** menüsündeki **Seçenekler** iletişim kutusunda, hata ayıklayıcı araç seçeneklerini belirtmenizi sağlayan aşağıdaki sayfaları sağlar.

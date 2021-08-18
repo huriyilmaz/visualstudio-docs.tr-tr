@@ -1,5 +1,5 @@
 ---
-title: Eski Dil Hizmeti Komutlarını Kesme | Microsoft Docs
+title: Eski Dil Hizmeti Komutlarını Durdurma | Microsoft Docs
 description: Eski dil hizmeti komutlarında araya Visual Studio ve dile özgü davranış eklemek için komut filtrelerini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: cc17db226176bf806a594778d6a483a713b97b606c1fa662f1c65d3cf01ee3d2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6f82e3cb15b39359c78f28a42e62d65665f34dba
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375929"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049967"
 ---
 # <a name="intercepting-legacy-language-service-commands"></a>Eski Dil Hizmeti Komutlarını Kesme
 ile, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] metin görünümünün aksi takdirde işleyebiliyor olduğu dil hizmeti kesme komutlarına sahip olursunuz. Bu, metin görünümünün yönetmez dile özgü davranış için yararlıdır. Dil hizmetinizin metin görünümüne bir veya daha fazla komut filtresi ekleyerek bu komutların yolunu kesebilirsiniz.

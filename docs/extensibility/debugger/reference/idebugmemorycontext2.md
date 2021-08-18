@@ -11,14 +11,15 @@ ms.assetid: 3a544c8b-11dc-46bb-8549-261e4ac5bbc4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5a967c992fc55065c50dbbe173495e7c1199df59
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e004939d27cbf579143716b1cc49968c1f520e7176492608706a5c0f283e6ded
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058488"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121433768"
 ---
 # <a name="idebugmemorycontext2"></a>IDebugMemoryContext2
 Bu arabirim, hata ayıklanan programı çalıştıran makinenin adres alanındaki konumu temsil eder.
@@ -47,7 +48,7 @@ IDebugMemoryContext2 : IUnknown
 |[Karşılaştır](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)|İki bağlamı karşılaştırma bayrakları tarafından belirtilen şekilde karşılaştırır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Visual Studio 'nun **bellek** penceresi, bellek adresi için kullanılan değerlendirilen ifadeyi içeren arabirimi almak Için [getmemorycontext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) ' i çağırır `IDebugMemoryContext2` . Bu bağlam daha sonra, okunacak veya yazılacak adresi belirtmek için [ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md) ve [WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md) 'a geçirilir.
+ Visual Studio **bellek** penceresi, bellek adresi için kullanılan değerlendirilen ifadeyi içeren arabirimi almak için [getmemorycontext](../../../extensibility/debugger/reference/idebugproperty2-getmemorycontext.md) yöntemini çağırır `IDebugMemoryContext2` . Bu bağlam daha sonra, okunacak veya yazılacak adresi belirtmek için [ReadAt](../../../extensibility/debugger/reference/idebugmemorybytes2-readat.md) ve [WriteAt](../../../extensibility/debugger/reference/idebugmemorybytes2-writeat.md) 'a geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg. h

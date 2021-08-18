@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama altyapısının (DE) yerel ayarını ayarlar.
-title: 'IDebugEngine2:: SetLocale | Microsoft Docs'
+description: Hata ayıklama altyapısının (DE) yerel ayar ayarlar.
+title: IDebugEngine2::SetLocale | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: cd0d2cf1-2aac-43da-a830-4bb3d696c219
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8f06ffce2d4fdda772cc29d09057499c32dd6f77
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c43a1a6952d39106db555a40bbe2d30ccee52d48
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087931"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122096381"
 ---
 # <a name="idebugengine2setlocale"></a>IDebugEngine2::SetLocale
-Hata ayıklama altyapısının (DE) yerel ayarını ayarlar.
+Hata ayıklama altyapısının (DE) yerel ayar ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int SetLocale(
 
 ## <a name="parameters"></a>Parametreler
 `wLangID`\
-'ndaki Dil yerel ayarını belirtir. Örneğin, Ingilizce için 1033.
+[in] Dil yerel ayarı belirtir. Örneğin, İngilizce için 1033.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, ve tarafından döndürülen dizelerin doğru bir şekilde yerelleştirilmesi için IDE 'nin yerel ayarlarını yaymak üzere oturum hata ayıklama Yöneticisi (SDM) tarafından çağırılır.
+ Bu yöntem, DE tarafından döndürülen dizelerin düzgün yerelleştirilmiş olması için IDE'nin yerel ayar ayarlarını yayma için oturum hata ayıklama yöneticisi (SDM) tarafından çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

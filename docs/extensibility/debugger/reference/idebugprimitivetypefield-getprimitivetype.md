@@ -1,6 +1,6 @@
 ---
-description: Bu alanla ilişkili temel türü alır.
-title: 'Idebugprimitivettypeınfo alanı:: GetPrimitiveType | Microsoft Docs'
+description: Bu alanla ilişkili ilkel türü alınır.
+title: IDebugPrimitiveTypeField::GetPrimitiveType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: a186c922-bbfe-478c-a744-b21eb4672d8f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c731ff93dae4bf605933263ffc1ca6bbef45431b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 19a96d3853a3fede97574046ed69007f1a8a567ffb58baa9ceba248996db5b20
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071720"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121416540"
 ---
 # <a name="idebugprimitivetypefieldgetprimitivetype"></a>IDebugPrimitiveTypeField::GetPrimitiveType
-Bu alanla ilişkili temel türü alır.
+Bu alanla ilişkili ilkel türü alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +42,10 @@ int GetPrimitiveType (
 
 ## <a name="parameters"></a>Parametreler
 `pdwType`\
-dışı Temel türü temsil eden [CorElementType numaralandırmasındaki](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) değer.
+[out] İlkel türü [temsil eden CorElementType Enumeration](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) değeri.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde döndürür `S_FALSE` .
+ Başarılı olursa `S_OK` döndürür; aksi takdirde `S_FALSE` döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPrimitiveTypeField](../../../extensibility/debugger/reference/idebugprimitivetypefield.md)

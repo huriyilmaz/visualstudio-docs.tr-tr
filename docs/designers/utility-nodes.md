@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 96c0fa68f72e7b30fd88ef62d9c0b330e8c03b3aa025a16fe40406d97077a982
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 924ab14d01c82879ae728b2acb6323740dce49bb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452875"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035455"
 ---
 # <a name="utility-nodes"></a>Yardımcı program düğümleri
 

@@ -1,6 +1,6 @@
 ---
 title: .NET zaman uyumsuz kodunun performansını çözümleme | Microsoft Docs
-description: Zaman uyumsuz kodun performansını çözümlemek için .NET Async aracını kullanın. Listelenen her görev için zamanlama vardır. Kodu görmek için kaynak dosyasına git ' i kullanın.
+description: zaman uyumsuz kodun performansını analiz etmek için .NET Async aracını kullanın. Listelenen her görev için zamanlama vardır. Kodu görmek için kaynak dosyasına git ' i kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 5/5/2020
 ms.topic: conceptual
@@ -11,27 +11,27 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: 86575cd71c41ac8ac874e9b62f8273ee46e02c57
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: f6d688706fbc26013badea2beb06a534bbf5932245879dfbaede609a325434d8
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205495"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121427319"
 ---
 # <a name="analyze-performance-of-net-asynchronous-code"></a>.NET zaman uyumsuz kodunun performansını çözümleme
 
-Uygulamanızda zaman uyumsuz kodun performansını çözümlemek için .NET Async aracını kullanın.
+uygulamanızdaki zaman uyumsuz kodun performansını çözümlemek için .NET Async aracını kullanın.
 
 > [!NOTE]
-> .NET Async Aracı, Visual Studio 2019 sürüm 16,7 veya üzeri ve **Async** ve **await** kullanan bir .NET projesi gerektirir.
+> .NET Async aracı, Visual Studio 2019 sürüm 16,7 veya üzeri ve **zaman uyumsuz** ve **await** kullanan bir .net projesi gerektirir.
 
 ## <a name="setup"></a>Kurulum
 
-1. Visual Studio 'da performans profil oluşturucuyu açmak için **alt + f2** ' yi seçin.
+1. Visual Studio ' de performans profil oluşturucuyu açmak için **alt + f2** ' yi seçin.
 
-1. **.Net Async** onay kutusunu seçin.
+1. **.NET Async** onay kutusunu seçin.
 
-   ![.NET zaman uyumsuz aracı seçildi](../profiling/media/async-tool-selected.png ".NET zaman uyumsuz aracı seçildi")
+   ![.NET Async araç seçildi](../profiling/media/async-tool-selected.png ".NET Async araç seçildi")
 
 1. Aracı çalıştırmak için **Başlat** düğmesine tıklayın.
 
@@ -39,7 +39,7 @@ Uygulamanızda zaman uyumsuz kodun performansını çözümlemek için .NET Asyn
 
 1. Koleksiyon durdurulduktan sonra, profil oluşturma oturumunuz sırasında gerçekleşen etkinliklerin tablosunu görürsünüz.
 
-   ![.NET Async aracı durdu](../profiling/media/async-tool-opened.png ".NET Async aracı durdu")
+   ![.NET Async araç durdu](../profiling/media/async-tool-opened.png ".NET Async araç durdu")
 
 Zaman uyumsuz olaylar kronolojik olarak Etkinlikler halinde düzenlenir. Her biri başlangıç saatini, bitiş saatini ve süresini görüntüler.
 
@@ -47,7 +47,7 @@ Bir [göreve](/dotnet/api/system.threading.tasks) karşılık gelen her satır *
 
 Belirli bir görevi veya etkinliği daha fazla araştırmak için, satıra sağ tıklayın. Ardından, kodunuzun etkinlik meydana geldiğini görmek için **kaynak dosyasına git** ' i seçin.
 
-![Kaynak dosyasına git seçiliyken .NET Async aracı seçildi](../profiling/media/async-tool-gotosource.png "Kaynak dosyasına git seçiliyken .NET Async aracı seçildi")
+![kaynak dosyasına git seçiliyken .NET Async araç](../profiling/media/async-tool-gotosource.png "kaynak dosyasına git seçiliyken .NET Async araç")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,17 +11,18 @@ ms.assetid: f2e06180-1ab3-4eb5-a428-7994cceb61b6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0b432e0373e81124d18e3bf9cc5f8ed3a4707ab6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3ed9dd2e86c04771b8bb3b6c5fa87279d7bb41738b959b22ce51ce487029851c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079728"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338247"
 ---
 # <a name="module_info"></a>MODULE_INFO
 Belirli bir modülü (DLL, EXE veya derleme) açıklar.
@@ -64,25 +65,25 @@ public struct MODULE_INFO {
 
 ## <a name="members"></a>Üyeler
  `dwValidFields`\
- [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi.
+ Hangi alanların doldurulması [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) bir bayrak birleşimi.
 
  `m_bstrName`\
  Modül adı.
 
  `m_bstrUrl`\
- Modül URL 'SI.
+ Modül URL'si.
 
  `m_bstrVersion`\
  Modül sürümü.
 
  `m_bstrDebugMessage`\
- Modülle ilgili isteğe bağlı bir ileti, örneğin "semboller yüklenemiyor".
+ Modülle ilgili isteğe bağlı bir ileti, örneğin, "Semboller yüklenemiyor."
 
  `m_addrLoadAddress`\
  Modül yükleme adresi.
 
  `m_addrPreferredLoadAddress`\
- Modülün tercih edilen yükleme adresi.
+ Modülün tercih edilen yük adresi.
 
  `m_dwSize`\
  Modül boyutu.
@@ -91,25 +92,25 @@ public struct MODULE_INFO {
  Modül yükleme sırası.
 
  `m_TimeStamp`\
- Sembol dosyasının son değiştirilme zamanı.
+ Sembol dosyasının en son değiştirilma zamanı.
 
  `m_bstrUrlSymbolLocation`\
- Modülde belirtilen sembol dosyasının konumu (örneğin, ". \\ "). Bir modülün sembollerini bulmak için başlangıç konumu olarak kullanılır.
+ Modülde belirtilen sembol dosyasının konumu (örneğin, ". \\ ") . Bir modülün sembollerini bulmak için başlangıç konumu olarak kullanılır.
 
  `m_dwModuleFlags`\
- [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) numaralandırmasından modülü tanımlayan bayrakların birleşimi.
+ Modülden gelen [bayrakların MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) modülünü açıklayan bir numaralama.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, doldurulduğu [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) yöntemine geçirilir.
+ Bu yapı, [doldurulan GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) yöntemine geçirildi.
 
- Bu yapı, **modüller** penceresinde listelenen her modüle karşılık gelir.
+ Bu yapı, Modüller penceresinde listelenen her **modüle karşılık** gelen bir yapıdır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

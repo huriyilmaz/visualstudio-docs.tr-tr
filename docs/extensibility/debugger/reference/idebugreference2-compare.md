@@ -1,6 +1,6 @@
 ---
-description: Bir başvuruyu diğerine karşılaştırır.
-title: 'IDebugReference2:: Compare | Microsoft Docs'
+description: Bir başvuru ile başka bir başvuru karşılaştırıldığında.
+title: IDebugReference2::Compare | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e56b2d5883e1c26fbfaa8657b8fed3c5236db348
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 29a437cc02f71c739ad90e0f4e1cbd975399baa44224acfd010e8ad60e40af62
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122087567"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121415994"
 ---
 # <a name="idebugreference2compare"></a>IDebugReference2::Compare
-Bir başvuruyu diğerine karşılaştırır. Daha sonraki kullanımlar için ayrılmıştır.
+Bir başvuru ile başka bir başvuru karşılaştırıldığında. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,10 +45,10 @@ int Compare (
 
 ## <a name="parameters"></a>Parametreler
 `dwCompare`\
-'ndaki Karşılaştırma işlemini belirten [REFERENCE_COMPARE](../../../extensibility/debugger/reference/reference-compare.md) numaralandırmasından bir değer, örneğin, eşittir, küçüktür veya büyüktür.
+[in] Karşılaştırma işlemi [REFERENCE_COMPARE,](../../../extensibility/debugger/reference/reference-compare.md) küçük veya daha büyük gibi bir numaralama enumerasyonundan bir değer.
 
 `pReference`\
-'ndaki Karşılaştırılacak başvuruyu temsil eden bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi.
+[in] Karşılaştır olmak için başvuruyu temsil eden [bir IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.

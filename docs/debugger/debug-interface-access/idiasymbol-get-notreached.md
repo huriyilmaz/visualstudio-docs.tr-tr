@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c9775f784491c4dbbb28ec4922d6a7717ac94fc7200e74e6c44140ad1c6cde0b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 26f695b7ab4d74bd78a3830810ac93265db83e02
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121264163"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113422"
 ---
 # <a name="idiasymbolget_notreached"></a>IDiaSymbol::get_notReached
 İşleve veya etikete hiçbir zaman ulaşıla olmadığını belirten bir bayrak verir.
