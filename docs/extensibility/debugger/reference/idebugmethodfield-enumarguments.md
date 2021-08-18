@@ -1,6 +1,6 @@
 ---
-description: Yöntemi çağırmak için gereken her bir bağımsız değişkenin türü için bir Numaralandırıcı oluşturur.
-title: 'IDebugMethodField:: EnumArguments | Microsoft Docs'
+description: yöntemini çağıran her bağımsız değişkenin türü için bir numaralayıcı oluşturur.
+title: IDebugMethodField::EnumArguments | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 3ab55488-2437-4ff6-a9ae-78ea6d7b23a8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3ba48eb4d98c1ab331ee898a219584b7a4b6cf1c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 13ae620928aa3afce92ef12b43e3ac70f49a2467
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058423"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118634"
 ---
 # <a name="idebugmethodfieldenumarguments"></a>IDebugMethodField::EnumArguments
-Yöntemi çağırmak için gereken her bir bağımsız değişkenin türü için bir Numaralandırıcı oluşturur.
+yöntemini çağıran her bağımsız değişkenin türü için bir numaralayıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,15 +43,15 @@ int EnumArguments(
 
 ## <a name="parameters"></a>Parametreler
 `ppParams`\
-dışı Bağımsız değişken türleri listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Bağımsız değişken yoksa null değeri döndürür.
+[out] Bağımsız değişken [türleri listesini temsil eden bir IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Bağımsız değişken yoksa null değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür veya bağımsız değişken yoksa S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür veya S_FALSE bağımsız değişken yoksa bu değeri döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Her öğe, her parametrenin türünü temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesidir. Her parametrenin türü hakkında bilgi almak için [GetInfo](../../../extensibility/debugger/reference/idebugfield-getinfo.md) yöntemini çağırın.
+ Her öğe, her parametrenin türlerini temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesidir. Her [parametrenin türü](../../../extensibility/debugger/reference/idebugfield-getinfo.md) hakkında bilgi almak için GetInfo yöntemini çağırma.
 
- Parametresinin adı ile birlikte gerekiyorsa, [Trsarameters](../../../extensibility/debugger/reference/idebugmethodfield-enumparameters.md) yöntemini çağırın.
+ Parametrenin adı türüyle birlikte gerekli ise [EnumParameters yöntemini](../../../extensibility/debugger/reference/idebugmethodfield-enumparameters.md) arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

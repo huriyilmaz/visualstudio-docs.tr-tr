@@ -1,6 +1,6 @@
 ---
 title: İş Akışlarında Kesme Noktası Ayarlama
-description: Grafik iş akışlarınızda Visual Basic veya C# kodunda yaptığınız gibi kesme noktaları ayarlamak için İş Akışı Tasarımcısı nasıl kullanacağınızı öğrenin.
+description: İş Akışı Tasarımcısı veya C# kodunda olduğu gibi grafik iş akışlarınıza kesme noktaları ayarlamak için Visual Basic kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,37 +8,38 @@ ms.assetid: e41b21c9-c061-4358-8e2f-eb5e412864a8
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fa7dc307dfef26bb8ab46f0df62f40bc0f4d5c2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5a40b357c71fffd1ef44be4e904cd52b583fb956
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894160"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135355"
 ---
-# <a name="how-to-set-breakpoints-in-workflows"></a>Nasıl yapılır: iş akışlarında kesme noktalarını ayarlama
+# <a name="how-to-set-breakpoints-in-workflows"></a>Nasıl kullanılır: İş akışlarında kesme noktaları ayarlama
 
-İş Akışı Tasarımcısı kullandığınızda, grafik iş akışlarınızda Visual Basic veya C# kodunda yaptığınız gibi kesme noktaları belirleyebilirsiniz. Beklenen şekilde, iş akışı yürütmesi, ayarladığınız her kesme noktasında durmaktadır.
+İş Akışı Tasarımcısı C# kodunda olduğu gibi grafik iş akışlarınız üzerinde kesme Visual Basic oluşturabilirsiniz. Beklendiği gibi, iş akışı yürütme ayar her kesme noktası durdurulur.
 
-Kesme noktasında üç durum vardır: *bekleyen*, *bağlantılı* ve *hata*. Bir kesme noktası ayarladığınızda, beklemede olur ve düz kırmızı simgeyle temsil edilir. Çalışma zamanı, iş akışı türünü yüklemiştir, bu, bağlanır olur. Kesme noktası için geçerli olmayan bir etkinlik adı gibi yanlış bir biçim belirtirseniz, bir hata penceresi görüntülenir. Kesme noktası, kesme noktası penceresine hala eklenir, ancak küçük bir "x" ile işaretlenir.
-
-> [!NOTE]
-> Çağrılan iş akışlarında kesme noktalarının ayarlanması desteklenmez.
+Kesme noktası üç eyalete sahip: *Beklemede,* *Bağlandı* ve *Hata.* Kesme noktası ayar değişiklikleri Beklemede olur ve düz kırmızı bir simgeyle gösterilir. Çalışma zamanı iş akışı türünü yüklemişse Bound olur. Kesme noktası için geçerli olmayan etkinlik adı gibi yanlış bir biçim belirtirsiniz, bir hata penceresi görüntülenir. Kesme noktası yine de kesme noktası penceresine eklenir, ancak küçük bir "x" ile işaretlenir.
 
 > [!NOTE]
-> Hata ayıklamadan önce **araç** seçenekleri hata ayıklama menüsünden **yalnızca kendi kodum etkinleştir (yalnızca yönetilen)** seçeneğini seçtiğinizden emin olun  >    >   . Seçenek seçilmezse ve başka bir sıra içinde iç içe geçmiş iki diziniz varsa ve ilk iç dizide bir kesme noktası ayarlarsanız, **F11** tuşuna basmak ikinci iç dizide hata ayıklamaz.
+> Çağrılan iş akışlarda kesme noktası ayarlama desteklenmiyor.
 
 > [!NOTE]
-> XAML dosya özelliğinin tam yolu doğru değilse, iş akışındaki kesme noktaları isabet etmez. XAML dosyasının tam yolu, proje veya çözümü başka bir klasöre veya başka bir makineye taşıdıktan sonra doğru değil.  + Tam yol özelliğini kaydetmek ve güncelleştirmek için CTRL **S** 'yi seçin.
+> Hata ayıklamadan önce Araçlar Seçenekler **Hata Yalnızca kendi kodum'dan Etkinleştir (Yalnızca Yönetilen)** seçeneğini   >    >   belirleyin. Seçenek seçili değilse ve başka bir dizi içinde iç içe geçmiş iki diziye sahipseniz ve ilk iç dizide bir kesme noktası ayarıyorsanız, **F11** tuşuna basmak ikinci iç dizide hata ayıklamaz.
 
-## <a name="to-set-a-breakpoint-on-an-activity-in-the-design-view"></a>Tasarım görünümündeki bir etkinlikte bir kesme noktası ayarlamak için
+> [!NOTE]
+> XAML dosya özelliğinin tam yolu doğru değilse iş akışında kesme noktalarına isabet olmaz. Projeyi veya çözümü başka bir klasöre veya başka bir makineye taşımanın ardından XAML dosyasının tam yolu doğru değil. Tam yol özelliğini kaydetmek ve güncelleştirmek için **Ctrl** + **S'yi** seçin.
 
-1. Hata ayıklayıcının kesilmesini istediğiniz etkinliği seçin.
+## <a name="to-set-a-breakpoint-on-an-activity-in-the-design-view"></a>Tasarım Görünümünde bir etkinlikte kesme noktası ayarlamak için
 
-2. **Hata Ayıkla** menüsünde, **kesme noktasını aç**' ı seçin. Etkinliğin sol üst köşesinde kırmızı bir simge görünür.
+1. Hata ayıklayıcının kesmesi istediğiniz etkinliği seçin.
 
-   Alternatif olarak, etkinliği seçtikten sonra **F9** tuşuna basabilir veya sağ   >  tıklama menüsünde Kesme **noktası Ekle** kesme noktası ' nı seçebilirsiniz.
+2. Hata **Ayıkla menüsünde Kesme** Noktası'nın **geçişini seçin.** Etkinliğin sol üst kenarında kırmızı bir simge görünür.
+
+   Alternatif olarak, etkinliği seçdikten sonra **F9** tuşuna basabilirsiniz veya sağ tıklama menüsünden etkinliği sağ tıklayarak Kesme Noktası  >  **Ekle Kesme** Noktası'yı seçebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

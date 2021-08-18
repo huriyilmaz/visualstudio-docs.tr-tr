@@ -1,5 +1,5 @@
 ---
-description: Bu yapı bir yöntem veya işlevden döndürülen değeri temsil eder.
+description: Bu yapı, bir yöntem veya işlevden bir dönüş değerini temsil eder.
 title: METADATA_ADDRESS_RETVAL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a323d934cceff20b5e89215dfb9a6d49020a707e07f5d3ca5f37a5fe189627c2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a95ac1b17cfec2a2b78b74233ad5f4c5addafdd0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377294"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103110"
 ---
 # <a name="metadata_address_retval"></a>METADATA_ADDRESS_RETVAL
-Bu yapı bir yöntem veya işlevden döndürülen değeri temsil eder.
+Bu yapı, bir yöntem veya işlevden bir dönüş değerini temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,26 +49,26 @@ public struct METADATA_ADDRESS_RETVAL {
 
 ## <a name="members"></a>Üyeler
  `tokMethod`\
- Bu dönüş değerinin için olan metodun KIMLIĞI.
+ Bu dönüş değerinin olduğu yöntemin kimliği.
 
  `dwCorType`\
- Dönüş değerinin temel türü. bu, `CorElementType` .NET Framework SDK corhdr. h dosyasında tanımlanan numaralandırmadaki bir değerdir.
+ Dönüş değerinin temel türü. Bu, .NET Framework `CorElementType` SDK corhdr.h dosyasında tanımlanan numaralamadan bir değerdir.
 
  `dwSigSize`\
- Dönüş değeri imzasının boyutu (içinde depolanan `rgSig` ).
+ Dönüş değeri imzasının boyutu (içinde depolandığı `rgSig` gibi).
 
  `rgSig`\
- Dönüş değerinin imzasını oluşturan bir bayt dizisi.
+ Dönüş değerinin imzasını içeren bayt dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, [](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_RETVAL` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
+ Bu yapı, yapının alanı [(DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) enumerasyonundan bir değer) olarak ayarlanırken ADDRESS_KIND `dwKind` parçası `DEBUG_ADDRESS_UNION` `ADDRESS_KIND_RETVAL` olur. [](../../../extensibility/debugger/reference/address-kind.md)
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: SH. h
+ Üst bilgi: sh.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

@@ -13,12 +13,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: d6d6144bf8fe07334f56d27188b9c4e4319cdda9f246c289bc0f5f7dfd5b813d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8735310b0c1729cec7a10d51c9708ccb18205bc2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121398638"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048186"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio NPM paketlerini yönetme
 
@@ -161,7 +161,7 @@ dosyayı kaydettiğinizde Visual Studio, paketi Çözüm Gezgini içindeki **Dep
 
 NPM 'nin dahil olduğu projeler için kullanarak NPM paketlerini yapılandırabilirsiniz `package.json` . içinde npm düğümüne sağ tıklayın ve Çözüm Gezgini **Aç'ı package.jsseçin.**
 
-![npm düğümünün Çözüm Gezgini ekran görüntüsü. Sağ tıklama bağlam menüsü açık ve Açık package.jsseçilidir.](../javascript/media/npm-add-package.png)
+![npm düğümünün Çözüm Gezgini ekran görüntüsü. Sağ tıklama bağlam menüsü açılır ve Açık olan package.jsaçılır.](../javascript/media/npm-add-package.png)
 
 *package.js'daki* IntelliSense, npm paketinin belirli bir sürümünü seçmenize yardımcı olur.
 
@@ -175,12 +175,12 @@ Paketin yüklemesi birkaç dakika sürebilir. Çıkış penceresinde **npm** ç�
 
 ## <a name="troubleshooting-npm-packages"></a>npm paketleriyle ilgili sorunları giderme
 
-* npm Node.js gerektirir Node.js, dış çerçeveler ve kitaplıklarla en iyi uyumluluk için [Node.js](https://nodejs.org/en/download/) web sitesinden LTS sürümünü yüklemenizi öneririz.
+* npm Node.js gerektirir Node.js yüklü değilse, dış çerçeveler ve kitaplıklarla en iyi uyumluluk için [ lts ](https://nodejs.org/en/download/) sürümünüNode.jsweb sitesinden yüklemenizi öneririz.
 
-* Daha Node.js için npm desteği için **Node.js geliştirme** iş yükünün yüklü olması gerekir.
+* Daha Node.js projelerinde npm desteği için **Node.js geliştirme** iş yükünün yüklü olması gerekir.
 
-* Bazı senaryolarda, Çözüm Gezgini bilinen bir sorun nedeniyle yüklü npm paketleri için doğru durumu [gösteremeyebilirsiniz.](https://github.com/aspnet/Tooling/issues/479) Örneğin, paket yüklenirken yüklenmemiş gibi görünebilir. Çoğu durumda, Çözüm Gezgini'package.jssilerek, Visual Studio yeniden başlatarak ve bu makalenin önceki sürümlerinde açıklandığı gibi *package.js* dosyada yeniden ekleyerek güncelleştirmeler gerçekleştirebilirsiniz. Veya paketleri yüklerken yükleme durumunu doğrulamak için npm Çıkış penceresini kullanabilirsiniz.
+* Bazı senaryolarda, Çözüm Gezgini bilinen bir sorun nedeniyle yüklü npm paketleri için doğru durumu [gösteremeyebilirsiniz.](https://github.com/aspnet/Tooling/issues/479) Örneğin, paket yüklenirken yüklenmemiş gibi görünebilir. Çoğu durumda, *Çözüm Gezgini'package.js* silerek, Visual Studio'ı yeniden başlatarak ve *package.js* dosyasını bu makalenin önceki sürümlerinde açıklandığı gibi yeniden ekleyerek güncelleştirebilirsiniz. Veya paketleri yüklerken yükleme durumunu doğrulamak için npm Çıkış penceresini kullanabilirsiniz.
 
-* Bazı ASP.NET Core, projenizi derlemenizin ardından Çözüm Gezgini npm düğümü görünür durumda görünmeyebiliyor. Düğümü yeniden görünür hale yapmak için proje düğümüne sağ tıklayın ve Yüklemeden **kaldır'ı Project.** Ardından proje düğümüne sağ tıklayın ve Yeniden **Yükle'yi Project.**
+* Bazı ASP.NET Core, projenizi derlemenizin ardından Çözüm Gezgini npm düğümü görünür durumda görünmeyebiliyor. Düğümü yeniden görünür yapmak için proje düğümüne sağ tıklayın ve Düğümü **kaldır'ı Project.** Ardından proje düğümüne sağ tıklayın ve Yeniden **Yükle'yi Project.**
 
 * Uygulama oluşturma veya TypeScript kodunu çeviri sırasında herhangi bir hata görüyorsanız, olası bir hata kaynağı olarak npm paketi uyumsuzluklarını denetleyin. Hataları tanımlamaya yardımcı olmak için, bu makalede daha önce açıklandığı gibi paketleri yüklerken npm Çıkış penceresini denetleyin. Örneğin, bir veya daha fazla npm paket sürümü kullanım dışı kaldı ve bir hatayla sonuçlanıyorsa, hataları düzeltmek için daha yeni bir sürüm yüklemeniz gerekir. npm paket sürümlerini *package.jsiçin* üzerinde uygulama kullanma hakkında bilgi için [bkz.package.jsyapılandırma.](../javascript/configure-packages-with-package-json.md)

@@ -1,6 +1,6 @@
 ---
-title: '[Content_types] .xml dosyasının yapısı | Microsoft Docs'
-description: VSıX paketindeki içerik türleri hakkında bilgi içeren içerik türleri dosyasının yapısı hakkında bilgi edinin.
+title: '[Content_types].xml Dosya | Microsoft Docs'
+description: VSIX paketinde içerik türleri hakkında bilgi içeren içerik türleri dosyasının yapısı hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,80 +13,81 @@ ms.assetid: 9c399598-b9fa-4da7-84b5-defbf82e9335
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 96d4d0eeea34300894674a2105d080e8a6abb607
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 681b2877983762ec0601543ae996748612fd3812
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900427"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049317"
 ---
 # <a name="the-structure-of-the-content_typesxml-file"></a>[Content_types].xml Dosyasının Yapısı
-VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paketi yüklemek için [Content_Types] .xml dosyasını kullanır, ancak dosyanın kendisini yüklemez.
+VSIX paketinde içerik türleri hakkında bilgi içerir. Visual Studio yüklemek için [Content_Types].xml dosyasını kullanır, ancak dosyanın kendisini yüklemez.
 
 > [!NOTE]
-> Bu konu yalnızca VSıX paketlerinde kullanılan [Content_Type] .xml dosya için geçerli olsa da, [Content_Types] .xml dosya türü *Açık paketleme kuralları (OPC)* standardının bir parçasıdır. Daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data) .
+> Bu konu yalnızca VSIX paketlerinde kullanılan [Content_Type].xml dosyaları için geçerli olsa da, [Content_Types].xml dosya türü Açık Paketleme Kuralları *(OPC)* standardında yer alır. Daha fazla bilgi için MSDN Web [sitesinde OPC:](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data) A New Standard For Packaging Your Data konusuna bakın.
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler
- Aşağıdaki bölümlerde kök öğe ve öznitelikleri ve alt öğeleri açıklanır.
+ Aşağıdaki bölümlerde kök öğe, öznitelikleri ve alt öğeleri açıklanmaktadır.
 
-### <a name="root-element"></a>Kök öğe
+### <a name="root-element"></a>Kök Öğe
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`Types`|VSıX paketindeki dosya türlerini numaralandırmanızı sağlayan alt öğeleri içerir.|
+|`Types`|VSIX paketinde dosya türlerini numaraya alan alt öğeleri içerir.|
 
 ### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Xmlns`|(Gerekli.) Bu [Content_Types] .xml dosyası için kullanılan şemanın konumu.|
+|`Xmlns`|(Gerekli.) Bu [Content_Types].xml dosyası için kullanılan şemanın konumu.|
 
-### <a name="attribute-name-attribute"></a>{Öznitelik adı} Özniteliğe
+### <a name="attribute-name-attribute"></a>{Öznitelik adı} Öznitelik
 
 | Değer | Açıklama |
 | - | - |
 | `http://schemas.openformats.org/package/2006/content-types` | İçerik türleri şemasının konumu. |
 
 ### <a name="child-elements"></a>Alt Öğeler
- `Types`Öğesi herhangi bir sayıda `Default` öğe içerebilir.
+ öğesi `Types` herhangi bir sayıda öğe `Default` içerebilir.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`Default`|VSıX paketindeki bir içerik türünü açıklar. Paketteki her dosya türünün kendi `Default` öğesi olmalıdır.|
+|`Default`|VSIX paketinde bir içerik türünü açıklar. Pakette her dosya türünün kendi öğesi `Default` olması gerekir.|
 
 ### <a name="attributes"></a>Öznitelikler
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Extension`|VSıX paketindeki bir dosyanın dosya adı uzantısı.|
-|`ContentType`|Dosya adı uzantısıyla ilişkili içerik türünü açıklar.|
+|`Extension`|VSIX paketinde bir dosyanın dosya adı uzantısı.|
+|`ContentType`|Dosya adı uzantısıyla ilişkili içerik türü açık bir şekilde açık bir şekilde anlattır.|
 
-### <a name="attribute-name-attribute"></a>{Öznitelik adı} Özniteliğe
- Visual Studio `ContentType` , ilişkili türler için aşağıdaki değerleri tanır `Extension` .
+### <a name="attribute-name-attribute"></a>{Öznitelik adı} Öznitelik
+ Visual Studio ilişkili `ContentType` türler için aşağıdaki değerleri `Extension` tanır.
 
-|Dahili numara|ContentType|
+|Dahili numara|Contenttype|
 |---------------|-----------------|
-|txt|metin/düz|
+|Txt|metin/düz|
 |pkgdef|metin/düz|
-|xml|metin/XML|
-|vsixmanifest|metin/XML|
-|htm veya HTML|text/html|
-|biçimindeki|Uygulama/RTF|
-|pdf|uygulama/PDF|
-|gif|resim/GIF|
-|jpg veya JPEG|resim/jpg|
-|tiff|resim/TIFF|
-|vsix|Uygulama/zip|
-|zip|Uygulama/zip|
-|dosyasını|Uygulama/sekizli-akış|
-|diğer tüm dosya türleri|Uygulama/sekizli-akış|
+|xml|text/xml|
+|vsixmanifest|text/xml|
+|html veya html|text/html|
+|Rtf|application/rtf|
+|pdf|application/pdf|
+|Gıf|image/gif|
+|jpg veya jpeg|image/jpg|
+|tiff|image/tiff|
+|vsix|uygulama/zip|
+|Zip|uygulama/zip|
+|Dll|application/octet-stream|
+|diğer tüm dosya türleri|application/octet-stream|
 
 ## <a name="example"></a>Örnek
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki [Content_Types] .xml dosyası tipik bir VSıX paketini açıklamaktadır.
+ Aşağıdaki [Content_Types].xml dosya tipik bir VSIX paketini açıklar.
 
 ### <a name="code"></a>Kod
 
@@ -103,5 +104,5 @@ VSıX paketindeki içerik türleri hakkında bilgi içerir. Visual Studio, paket
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Bir VSIX Paketinin Anatomisi](../extensibility/anatomy-of-a-vsix-package.md)
-- [VSıX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110))
-- [OPC: verilerinizi paketlemeye yönelik yeni bir standart](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data)
+- [VSIX Uzantı Şeması 1.0 Başvurusu](/previous-versions/dd393700(v=vs.110))
+- [OPC: Verilerinizi paketlemek için yeni bir standart](/archive/msdn-magazine/2007/august/opc-a-new-standard-for-packaging-your-data)

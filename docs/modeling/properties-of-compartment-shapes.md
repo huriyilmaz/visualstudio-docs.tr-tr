@@ -1,6 +1,6 @@
 ---
 title: Bölme Şekillerinin Özellikleri
-description: Bölme şekillerinin etki alanına özgü bir dilde etki alanı sınıfını görüntülemek için kullanabileceğiniz şekillerden biri olduğunu öğrenin.
+description: Bölme şekillerinin, etki alanına özgü bir dilde bir etki alanı sınıfını görüntülemek için kullanabileceğiniz şekillerden biri olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,19 +11,20 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ec84057bfe7d49760a8f95132a30e8c927f60f0
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 745101605ac4136cbb9823262367bb5bc2e2baf3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390834"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034220"
 ---
 # <a name="properties-of-compartment-shapes"></a>Bölme Şekillerinin Özellikleri
-Bölme şekilleri, etki alanına özgü bir dilde bir etki alanı sınıfı görüntülemek için kullanabileceğiniz şekillerden birisidir. Bölmeleri genişlet ve daralt.
+Bölme şekilleri, etki alanına özgü bir dilde bir etki alanı sınıfını görüntülemek için kullanabileceğiniz şekillerden birisidir. Bölmeleri genişlet ve daralt.
 
- Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, [bkz. Domain-Specific Dili Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
+ Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, bkz. Domain-Specific Dili [Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
 
  Bölme şekilleri aşağıdaki tabloda listelenen özelliklere sahiptir.
 
@@ -32,7 +33,7 @@ Bölme şekilleri, etki alanına özgü bir dilde bir etki alanı sınıfı gör
 |Varsayılan Genişletme Daraltma Durumu|ise `Expanded` bölmeler oluşturma sırasında gösterilir. ise, `Collapsed` bunlar değildir.|Genişletildi|
 |Dolgu Rengi|Bu şeklin dolgu rengi.|Beyaz|
 |Dolgu Gradyan Modu|Bu şeklin dolgu gradyan modu.|Yatay|
-|Geometri|Bu şeklin geometrisi (Dikdörtgen veya Yuvarlanmış Dikdörtgen).|Dikdörtgen|
+|Geometri|Bu şeklin geometrisi (Dikdörtgen veya Yuvarlak Dikdörtgen).|Dikdörtgen|
 |Varsayılan Bağlantı Noktalarına Sahip|ise, `True` şekil oluşturulan tasarımcıda üst, alt, sol ve sağ bağlantı noktalarını kullanır.|Yanlış|
 |Tek Bölme üst bilgisi görünür durumda mı?|ve `False` şeklinin tek bir bölmesi varsa bölmenin üst bilgisi görünmez.|Doğru|
 |Ana Hat Rengi|Bu şeklin ana hat rengi.|Siyahi|
@@ -51,8 +52,8 @@ Bölme şekilleri, etki alanına özgü bir dilde bir etki alanı sınıfı gör
 |Notlar|Bu şekille ilişkili resmi olmayan notlar.|\<none>|
 |İlk Yükseklik|Bu şeklin ilk yüksekliği inç olarak. Bölme şekilleri için bu yalnızca üst bilgi bölümünün yüksekliğidir ve yeniden boyutlandırılaamaz.|1|
 |İlk Genişlik|Bu şeklin inç olarak ilk genişliği.|1,5|
-|Dolgu Rengini Özellik Olarak Açığa Çıkar<br /><br /> Açık Dolgu Gradyan Modu<br /><br /> Ana Hat Rengi Özelliği Olarak Açık<br /><br /> Anahat Çizgi Stilini Özellik Olarak Açığa Çıkar<br /><br /> Ana Hat Kalınlığını Özellik Olarak Açığa Çıkar<br /><br /> Metin Rengini Ortaya Çıkarır|ise, `True` kullanıcı şeklin belirtilen özelliğini ayarlayabilirsiniz. Bunu ayarlamak için şekil tanımına sağ tıklayın ve Ortaya **Çıkar'ı Ekle'ye tıklayın.**|Yanlış|
-|Açıklama|Oluşturulan tasarımcıyı belgeley etmek için kullanılır.|\<none>|
+|Dolgu Rengini Özellik Olarak Açığa Çıkar<br /><br /> Açık Dolgu Gradyan Modu<br /><br /> Ana Hat Rengi Özelliği Olarak Açık<br /><br /> Anahat Çizgi Stilini Özellik Olarak Açığa Çıkar<br /><br /> Ana Hat Kalınlığını Özellik Olarak Açığa Çıkar<br /><br /> Metin Rengini Açığa Çıkarır|ise, `True` kullanıcı şeklin belirtilen özelliğini ayarlayabilirsiniz. Bunu ayarlamak için şekil tanımına sağ tıklayın ve Ortaya **Çıkar'ı Ekle'ye tıklayın.**|Yanlış|
+|Açıklama|Oluşturulan tasarımcıyı belge oluşturmak için kullanılır.|\<none>|
 |Görünen Ad|Bu şekil için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
 |Araç İpucu Metni Düzeltildi|Sabit bir araç ipucu için kullanılan metin.|\<none>|
 |Help Anahtar Sözcüğü|Bu şekil için F1 yardım dizinini dizine eklemek için kullanılan anahtar sözcük.|\<none>|

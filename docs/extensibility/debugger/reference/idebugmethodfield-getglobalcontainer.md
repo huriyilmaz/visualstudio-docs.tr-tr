@@ -11,17 +11,18 @@ ms.assetid: 041ac5aa-0b80-4310-b9ae-b88f8e7e0e5f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e35082faf076bd0242d9dcc34552c31ba159fb08
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b5cc417422b16b47ae989e86032efb43bd5d9fef
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058384"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118651"
 ---
 # <a name="idebugmethodfieldgetglobalcontainer"></a>IDebugMethodField::GetGlobalContainer
 Metodun genel kapsayıcısını alır.

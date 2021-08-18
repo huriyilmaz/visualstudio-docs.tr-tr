@@ -1,6 +1,6 @@
 ---
 title: ClickOnce güncelleştirme stratejisi seçme | Microsoft Docs
-description: ClickOnce uygulamasının otomatik güncelleştirmeleri nasıl desteklediğini ve hangi güncelleştirme stratejileri kullanabileceğinizi öğrenin.
+description: bir ClickOnce uygulamasının otomatik güncelleştirmeleri nasıl desteklediğini ve hangi güncelleştirme stratejilerinin kullanılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,14 +16,15 @@ ms.assetid: d8b6e7bb-4ea0-47f3-91cd-48580bdceccc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: d546b48ffbbb4d44fb5f2ced11f41826370403e3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cfe475c3d608acb0fb2fb513e740879e9a38bad6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99895082"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133789"
 ---
 # <a name="choose-a-clickonce-update-strategy"></a>ClickOnce güncelleştirme stratejisini seçme
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , otomatik uygulama güncelleştirmeleri sağlayabilir. Uygulama [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] güncelleştirmelerin kullanılabilir olup olmadığını görmek için uygulama düzenli aralıklarla dağıtım bildirimi dosyasını okur. Kullanılabilir olması durumunda uygulamanın yeni sürümü indirilir ve çalıştırılır. Verimlilik için, sadece değişen dosyalar indirilir.
@@ -36,7 +37,7 @@ ms.locfileid: "99895082"
 > Uygulama güncelleştirmeleri, ağ bağlantısı gerektirir. Ağ bağlantısı mevcut değilse, uygulama güncelleştirme stratejisi ne olursa olsun güncelleştirmeleri denetlemeden çalışacaktır.
 
 > [!NOTE]
-> .NET Framework 2,0 ve .NET Framework 3,0 ' de, uygulamanız güncelleştirmeleri her denetlediğinde, başlangıçtan önce veya sonra veya \<xref:System.Deployment.Application> API 'leri kullanarak, `deploymentProvider` dağıtım bildiriminde ayarlamanız gerekir. `deploymentProvider`Öğesi, **Yayımla** sekmesinin **güncelleştirmeler** Iletişim kutusundaki **konum Güncelleştir** alanına Visual Studio 'ya karşılık gelir. Bu kural .NET Framework 3,5 ' de rahat. Daha fazla bilgi için bkz. [sınama ve üretim sunucuları için teslim etmeden ClickOnce uygulamaları dağıtma](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md).
+> .NET Framework 2,0 ve .NET Framework 3,0 ' de, uygulamanız güncelleştirmeleri her denetlediğinde, başlangıçtan önce veya sonra veya \<xref:System.Deployment.Application> apı 'leri kullanarak, `deploymentProvider` dağıtım bildiriminde ayarlamanız gerekir. `deploymentProvider`öğesi, **yayımla** sekmesinin **güncelleştirmeler** iletişim kutusundaki **güncelleştirme konumu** alanına Visual Studio karşılık gelir. bu kural .NET Framework 3,5 ' de rahat. daha fazla bilgi için bkz. [sınama ve üretim sunucuları için teslim etmeden ClickOnce uygulamaları dağıtma](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md).
 
 ## <a name="check-for-updates-after-application-startup"></a>Uygulama başlangıcından sonra güncelleştirmeleri denetle
  Bu stratejiyi kullanarak, uygulama çalışırken, arka planda dağıtım dosyası bildiriminin yerini belirleyip okumayı deneyecektir. Bir güncelleştirme erişilebilirse, kullanıcının uygulamayı sonraki çalıştırmasında, kullanıcı güncelleştirmeyi indirmek ve kurmak için uyarılacaktır.
@@ -126,4 +127,4 @@ ms.locfileid: "99895082"
 - [ClickOnce dağıtım stratejisini seçme](../deployment/choosing-a-clickonce-deployment-strategy.md)
 - [ClickOnce uygulamalarını koruma](../deployment/securing-clickonce-applications.md)
 - [ClickOnce uygulama güncelleştirmelerini nasıl gerçekleştirir](../deployment/how-clickonce-performs-application-updates.md)
-- [Nasıl yapılır: ClickOnce uygulaması için güncelleştirmeleri yönetme](../deployment/how-to-manage-updates-for-a-clickonce-application.md)
+- [nasıl yapılır: ClickOnce bir uygulama için güncelleştirmeleri yönetme](../deployment/how-to-manage-updates-for-a-clickonce-application.md)

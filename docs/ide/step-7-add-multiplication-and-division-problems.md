@@ -4,8 +4,6 @@ description: Çarpma ve bölme sorunları eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: tutorial
-ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
@@ -13,14 +11,15 @@ ms.assetid: e638959e-f6a4-4eb4-b2e9-f63b7855cf8f
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 6443d80b2dba347691dd6721da19518dc86c71bf
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: 188084d8c66339edd9efe9d098f47fcbfb2524ad
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107297034"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061764"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>7. Adım: Çarpma ve bölme problemleri ekleme
 
@@ -48,7 +47,7 @@ Bu öğreticinin yedinci kısmında çarpma ve bölme sorunları ekleyeceksiniz,
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step7/vb/form1.vb" id="Snippet17":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step7/cs/form1.cs" id="Snippet17":::
 
-     Klavyeyi kullanarak çarpma işaretini (×) ve bölme işaretini (÷) kolayca giremezsiniz, böylece C# ve Visual Basic bölme için bir yıldız işareti (*) kabul eder.
+     klavyeyi kullanarak çarpma işaretini (×) ve bölme işaretini (÷) kolayca giremezsiniz, böylece C# ve Visual Basic bölme için bir yıldız işareti (*) kabul eder.
 
 4. Zamanlayıcının olay işleyicisinin son bölümünü, <xref:System.Windows.Forms.Timer.Tick> zaman dolduğunda doğru yanıtı dolduracak şekilde değiştirin.
 

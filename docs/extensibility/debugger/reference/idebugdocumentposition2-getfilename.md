@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 46e57b8e836e3a1f3de7bf12f6bd35a8b27084a79afdfec45a7acd4a85ad1438
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 93588dec17efc3ef2384ccd8d0df95d1fe8260b4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121262015"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119509"
 ---
 # <a name="idebugdocumentposition2getfilename"></a>IDebugDocumentPosition2::GetFileName
 Belge konumunu içeren kaynak dosyanın dosya adını alır.

@@ -25,12 +25,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c645186735ef8f5131b779f07647c09b457b8bcd4b13fa69ff08b25f291c43f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4f7e6b894d891004ca275fa4bead1de48ff421f3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121280492"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134142"
 ---
 # <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>Kaynak Dosyalarda Hata Ayıklama, Ortak Özellikler, Çözüm Özellik Sayfaları İletişim Kutusu
 Bu özellik sayfası, çözüm hata ayıkladığında hata ayıklayıcının kaynak dosyaları arayacağı yeri belirtir.

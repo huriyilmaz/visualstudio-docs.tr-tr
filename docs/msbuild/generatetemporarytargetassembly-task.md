@@ -1,6 +1,6 @@
 ---
-title: GenerateTemporaryTargetAssembly Görevi | Microsoft Docs
-description: bir proje yerel olarak tanımlanan bir türe başvuruyorsa bir derleme oluşturmak için MSBuild GenerateTemporaryTargetAssembly görevini kullanın.
+title: GenerateTemporaryTargetAssembly Görev | Microsoft Docs
+description: Proje yerel olarak MSBuild bir türe başvurursa derleme oluşturmak için GenerateTemporaryTargetAssembly görevini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -21,40 +21,40 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 505eb1370dd1ccbcfe782211bf9f1a4e958ef10906da4afcd9c1deb3fa4bf0bd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 513aa3ae1f14cff7958da1492819cd6321558694
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121443496"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093846"
 ---
 # <a name="generatetemporarytargetassembly-task"></a>GenerateTemporaryTargetAssembly görevi
 
-<xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly>Bir projede en az BIR XAML sayfası bu projede yerel olarak tanımlanan bir türe başvuruyorsa, görev bir derleme oluşturur. Oluşturulan derleme, derleme işlemi tamamlandıktan sonra veya yapı işlemi başarısız olursa kaldırılır.
+Bir projedeki en az bir XAML sayfası, bu projede yerel olarak bildirilen bir türe başvurursa görev <xref:Microsoft.Build.Tasks.Windows.GenerateTemporaryTargetAssembly> bir derleme üretir. Oluşturulan derleme, derleme işlemi tamamlandıktan sonra veya derleme işlemi başarısız olursa kaldırılır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 |--------------------------| - |
-| `AssemblyName` | Gerekli **dize** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını belirtir ve ayrıca geçici olarak oluşturulan hedef derlemenin adıdır. örneğin, bir proje adı *WinExeAssembly.exe* olan bir Windows çalıştırılabilir dosyası oluşturursa, **AssemblyName** parametresinin değeri **winexeassembly** olur. |
-| `CompileTargetName` | Gerekli **dize** parametresi.<br /><br /> kaynak kod dosyalarından derlemeler oluşturmak için kullanılan MSBuild hedefinin adını belirtir. **CompileTargetName** için tipik değer **CoreCompile**' dir. |
-| `CompileTypeName` | Gerekli **dize** parametresi.<br /><br /> **CompileTargetName** parametresi tarafından belirtilen hedef tarafından gerçekleştirilen derlemenin türünü belirtir. **CoreCompile** hedefi için bu değer **derlenir**. |
-| `CurrentProject` | Gerekli **dize** parametresi.<br /><br /> geçici bir hedef derleme gerektiren proje için MSBuild proje dosyasının tam yolunu belirtir. |
-| `GeneratedCodeFiles` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) görevi tarafından oluşturulan dile özgü yönetilen kod dosyalarının listesini belirtir. |
-| `IntermediateOutputPath` | Gerekli **dize** parametresi.<br /><br /> Geçici hedef derlemenin oluşturulduğu dizini belirtir. |
-| `MSBuildBinPath` | Gerekli **dize** parametresi.<br /><br /> Geçici hedef derlemeyi derlemek için gereken *MSBuild.exe* konumunu belirtir. |
-| `ReferencePath` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> Geçici hedef derlemeye derlenen türlerin başvurduğu, yola ve dosya adına göre derlemelerin bir listesini belirtir. |
-| `ReferencePathTypeName` | Gerekli **dize** parametresi.<br /><br /> Derleme başvuruları (**ReferencePath**) listesini belirten derleme hedefi (**CompileTargetName**) parametresi tarafından kullanılan parametreyi belirtir. Uygun değer **ReferencePath**' dir. |
+| `AssemblyName` | Gerekli **Dize** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını ve ayrıca geçici olarak oluşturulan hedef derlemenin adını belirtir. Örneğin, bir proje adı Windows bir yürütülebilir dosya *WinExeAssembly.exe,* **AssemblyName** parametresi **winExeAssembly değerine sahip olur.** |
+| `CompileTargetName` | Gerekli **Dize** parametresi.<br /><br /> Kaynak kod dosyalarından derlemeler MSBuild hedef hedef adını belirtir. **CompileTargetName için tipik değer** **CoreCompile değeridir.** |
+| `CompileTypeName` | Gerekli **Dize** parametresi.<br /><br /> **CompileTargetName** parametresi tarafından belirtilen hedef tarafından gerçekleştirilen derleme türünü belirtir. **CoreCompile hedefi için** bu değer Compile (Derle) **değeridir.** |
+| `CurrentProject` | Gerekli **Dize** parametresi.<br /><br /> Geçici bir hedef derleme gerektiren MSBuild proje dosyasının tam yolunu belirtir. |
+| `GeneratedCodeFiles` | İsteğe **bağlı ITaskItem[]** parametresi.<br /><br /> [MarkupCompilePass1](../msbuild/markupcompilepass1-task.md) görevi tarafından oluşturulan dile özgü yönetilen kod dosyalarının listesini belirtir. |
+| `IntermediateOutputPath` | Gerekli **Dize** parametresi.<br /><br /> Geçici hedef derlemenin üret olduğu dizini belirtir. |
+| `MSBuildBinPath` | Gerekli **Dize** parametresi.<br /><br /> Geçici hedef *derlemeyi derlemekMSBuild.exe* için gerekli olanMSBuild.exekonumunu belirtir. |
+| `ReferencePath` | İsteğe **bağlı ITaskItem[]** parametresi.<br /><br /> Geçici hedef derlemede derlenmiş türler tarafından başvurulan yol ve dosya adına göre derlemelerin listesini belirtir. |
+| `ReferencePathTypeName` | Gerekli **Dize** parametresi.<br /><br /> Derleme başvurularının listesini ( ReferencePath ) belirten derleme hedefi (**CompileTargetName**) parametresi tarafından kullanılan **parametreyi belirtir.** Uygun değer **ReferencePath değeridir.** |
 
 ## <a name="remarks"></a>Açıklamalar
 
-[MarkupCompilePass1](../msbuild/markupcompilepass1-task.md)tarafından çalıştırılan ilk biçimlendirme derleme geçişi xaml dosyalarını ikili biçime derler. Sonuç olarak, derleyicinin XAML dosyaları tarafından kullanılan türleri içeren Başvurulmuş derlemelerin bir listesine ihtiyacı vardır. Ancak, bir XAML dosyası aynı projede tanımlı bir tür kullanıyorsa, proje derlenene kadar bu proje için karşılık gelen bir derleme oluşturulmaz. Bu nedenle, ilk biçimlendirme derleme geçişi sırasında bir derleme başvurusu sağlanamaz.
+[MarkupCompilePass1](../msbuild/markupcompilepass1-task.md)tarafından çalıştır edilen ilk işaretleme derleme geçişi, XAML dosyalarını ikili biçime derler. Sonuç olarak, derleyicinin XAML dosyaları tarafından kullanılan türleri içeren başvurulan derlemelerin bir listesine ihtiyacı vardır. Ancak, bir XAML dosyası aynı projede tanımlanan bir tür kullanıyorsa, proje oluşturulana kadar bu proje için karşılık gelen bir derleme oluşturulmaz. Bu nedenle, bir derleme başvurusu ilk işaretleme derleme geçişi sırasında sağlanamıyor.
 
-Bunun yerine **MarkupCompilePass1** , [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)tarafından yürütülen ikinci bir biçimlendirme derleme geçişine aynı PROJEDEKI türlere başvuruları içeren xaml dosyalarının dönüştürülmesini erteler. **MarkupCompilePass2** yürütülmeden önce geçici bir derleme oluşturulur. Bu derleme, biçimlendirme derleme geçişinin ertelenmesi olan XAML dosyaları tarafından kullanılan türleri içerir. Oluşturulan derlemeye bir başvuru, ertelenmiş derleme XAML dosyalarının ikili biçime dönüştürülmesine izin vermek için çalıştırıldığında **MarkupCompilePass2** olarak sağlanır.
+Bunun yerine **MarkupCompilePass1,** aynı projedeki türlere başvurular içeren XAML dosyalarının [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)tarafından yürütülen ikinci bir işaretleme derleme geçişini dönüştürmesini karşılar. **MarkupCompilePass2** yürütülmeden önce geçici bir derleme oluşturulur. Bu derleme, işaretleme derlemesi geçişi ertelenmiş XAML dosyaları tarafından kullanılan türleri içerir. Ertelenen derleme XAML dosyalarının ikili biçime dönüştürülmesi için çalıştırıldıklarında **MarkupCompilePass2'ye** oluşturulan derlemeye bir başvuru sağlanır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir geçici derleme oluşturur çünkü *Sayfa1. xaml* aynı projede bulunan bir türe başvuru içeriyor.
+*Page1.xaml* aynı projede olan bir türe başvuru içerdiği için aşağıdaki örnek geçici bir derleme üretir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl kullanılır: Öğeleri program aracılığıyla Outlook'
-description: Microsoft'ta öğeleri program aracılığıyla nasıl taşıyabilirsiniz Outlook. Bu örnek okunmamış e-posta iletilerini Gelen Kutusundan Test adlı bir klasöre taşır.
+title: 'Nasıl yapılır: Outlook program aracılığıyla öğeleri taşıma'
+description: Microsoft Outlook 'da nasıl program aracılığıyla öğe taşıyabileceğinizi öğrenin. Bu örnek, okunmamış e-posta iletilerini gelen kutusundan test adlı bir klasöre taşır.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,30 +15,30 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 38804ef26d96dc7db8c69742632187c097c89553f7bb314333953f052f93e558
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c6d67712ca09fa99cd1fef00740acfda2fe34cac
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121394413"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083186"
 ---
-# <a name="how-to-programmatically-move-items-in-outlook"></a>Nasıl kullanılır: Öğeleri program aracılığıyla Outlook
-  Bu örnek okunmamış e-posta iletilerini Gelen **Kutusundan** Test adlı bir klasöre **taşır.** Örnek yalnızca alanında **Test** sözcüğü olan iletileri `Subject` taşır.
+# <a name="how-to-programmatically-move-items-in-outlook"></a>Nasıl yapılır: Outlook program aracılığıyla öğeleri taşıma
+  Bu örnek, okunmamış e-posta iletilerini **gelen kutusundan** **Test** adlı bir klasöre taşır. Örnek yalnızca alan içindeki bir kelime **testine** sahip iletileri taşıdır `Subject` .
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="example"></a>Örnek
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_OL_MoveItems/thisaddin.cs" id="Snippet1":::
 
-## <a name="compile-the-code"></a>Kodu derleme
+## <a name="compile-the-code"></a>Kodu derle
  Bu örnek şunları gerektirir:
 
-- Test Outlook adlı bir posta **klasörü.**
+- **Test** adlı Outlook posta klasörü.
 
-- Alanda Test sözcüğüyle birlikte gelen **bir e-posta** `Subject` iletisi.
+- Alanda sözcük **testine** ulaşan bir e-posta iletisi `Subject` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Klasörlerle çalışma](../vsto/working-with-folders.md)
-- [Nasıl yapılanlar: Program aracılığıyla klasör adı ile alma](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
-- [Nasıl yapılanlar: Belirli bir klasör içinde program aracılığıyla arama](../vsto/how-to-programmatically-search-within-a-specific-folder.md)
-- [Nasıl yapacaksınız: E-posta iletisi alınca program aracılığıyla eylemler gerçekleştirme](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)
+- [Nasıl yapılır: program aracılığıyla bir klasörü ada göre alma](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
+- [Nasıl yapılır: belirli bir klasör içinde program aracılığıyla arama](../vsto/how-to-programmatically-search-within-a-specific-folder.md)
+- [Nasıl yapılır: e-posta iletisi alındığında program aracılığıyla eylem gerçekleştirme](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)

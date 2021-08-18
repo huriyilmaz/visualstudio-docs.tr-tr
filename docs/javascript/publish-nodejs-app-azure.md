@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 2a3cad9500df712286c592c45c8c8ce03d96ea7f7d7eb4fca3cc1c0ecea7bb52
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 397374c1df912707d308acdf5df9fcdbc9d5221b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121398753"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061512"
 ---
 # <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>Azure 'da bir Node.js uygulaması yayımlama (Linux App Service)
 

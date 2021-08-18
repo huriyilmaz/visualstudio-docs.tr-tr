@@ -9,18 +9,19 @@ f1_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: ab1cfe921777fa75d4f69251668934e8d78d9bec
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 749bb5e57770d76dfca69af40913d8d80c006679
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106087188"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047328"
 ---
 # <a name="upgrade-from--testsettings-to-runsettings"></a>*. Testsettings* 'den *. runsettings* 'e yükselt
 
-Test yapılandırma dosyanızı. *testsettings* ' den *. runsettings* ' den Visual Studio ile birlikte yükleyen SettingsMigrator aracıyla yükseltebilirsiniz. Visual Studio yüklemesinin konumuna bağlı olarak, aşağıdaki yolda Settings Migrator aracını bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\TestPlatform\SettingsMigrator.exe`
+Test yapılandırma dosyanızı. *testsettings* ' den *. runsettings* ' den, Visual Studio birlikte yükleyen SettingsMigrator aracıyla yükseltebilirsiniz. Visual Studio yüklemesinin konumuna bağlı olarak, aşağıdaki yolda settings migrator aracını bulabilirsiniz:`C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\TestPlatform\SettingsMigrator.exe`
 
 Doğru dizin konumunda, aracı aşağıdaki biçimde çalıştırabilirsiniz:
 
@@ -35,7 +36,7 @@ SettingsMigrator.exe E:\MyTest\MyTestSettings.testsettings
 SettingsMigrator.exe E:\MyTest\MyTestSettings.testsettings E:\MyTest\MyNewRunSettings.runsettings
 ```
 
-*. Testsettings* seçeneklerinin *. runsettings* ' e nasıl dönüştürüleceği hakkında daha fazla bilgi almak istiyorsanız, GitHub 'daki [açık kaynak test platformu deposunda](https://github.com/microsoft/vstest-docs/blob/master/RFCs/0023-TestSettings-Deprecation.md#migration) daha fazla uygulama ayrıntısı bulabilirsiniz.
+*. Testsettings* seçeneklerinin *. runsettings* ' e nasıl dönüştürüleceği hakkında daha fazla bilgi almak istiyorsanız, GitHub üzerindeki [açık kaynak test platformu deposunda](https://github.com/microsoft/vstest-docs/blob/master/RFCs/0023-TestSettings-Deprecation.md#migration) daha fazla uygulama ayrıntısı bulabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

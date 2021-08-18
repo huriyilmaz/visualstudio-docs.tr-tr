@@ -1,6 +1,6 @@
 ---
-title: Profil oluşturucu komut satırı-açık istemci .NET uygulaması, eşzamanlılık verileri al
-description: .net tek başına uygulamasını başlatmak ve işlem ve iş parçacığı eşzamanlılık verilerini toplamak için Visual Studio Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağını öğrenin.
+title: Profil oluşturma komut satırı - İstemci .NET uygulamasını açın, eşzamanlılık verilerini al
+description: Tek başına bir .NET Visual Studio Profil Oluşturma Araçları başlatmak ve işlem ve iş parçacığı eşzamanlılık verileri toplamak için komut satırı araçlarını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,93 +12,93 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: f9ed0972f96ef3d9ef8a5692943ca31548e3667f4ade64812990ba20ab5186cf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2d0bc0d26c6d7232f0264455c9e4a2db987aef47
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121396519"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033479"
 ---
-# <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>nasıl yapılır: komut satırını kullanarak eşzamanlılık verileri toplamak için profil oluşturucu ile tek başına .NET Framework uygulaması başlatma
-bu konu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir .NET Framework tek başına (istemci) uygulaması başlatmak ve işlem ve iş parçacığı eşzamanlılık verilerini toplamak için Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağını açıklar
+# <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>Nasılürüm: Komut .NET Framework eşzamanlılık verileri toplamak için tek başına bir .NET Framework uygulaması başlatma
+Bu konuda tek başına (istemci) bir Profil Oluşturma Araçları başlatmak ve işlem ve iş parçacığı eşzamanlılık verileri toplamak için .NET Framework komut satırı araçlarının [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nasıl kullanımı açıklanmıştır
 
 > [!NOTE]
-> Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). 64 bit bilgisayarlarda, araçların her ikisi de 64-bit ve 32 bit sürümleri mevcuttur. Profil oluşturucu komut satırı araçlarını kullanmak için araçlar yolunu komut Istemi penceresinin PATH ortam değişkenine eklemeniz ya da komutun kendisine eklemeniz gerekir.
+> Profil oluşturma araçlarının yolunu almak için [bkz. Komut satırı araçlarının yolunu belirtme.](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md) 64 bit bilgisayarlarda, araçların hem 64 bit hem de 32 bit sürümleri kullanılabilir. Profil oluşturma komut satırı araçlarını kullanmak için, araç yolunu Komut İstemi penceresinin PATH ortam değişkenine eklemeniz veya komutun kendisine eklemeniz gerekir.
 
- Profil Oluşturucu uygulamaya iliştirirken, veri toplamayı duraklatabilir ve devam ettirebilirsiniz. Profil oluşturma oturumunu sonlandırmak için, profil oluşturucunun artık uygulamaya bağlı olmaması ve profil oluşturucunun açıkça kapatılması gerekir.
+ Profiler uygulamaya bağlıyken veri toplamayı duraklatabilir ve sürdürebilirsiniz. Profil oluşturma oturumunu sona erdirmak için, Profiler'ın artık uygulamaya bağlı olması ve Profil Oluşturma'nın açıkça kapatılamaması gerekir.
 
-## <a name="start-the-application-with-the-profiler"></a>Uygulamayı Profil Oluşturucu ile başlatma
- profil oluşturucu ile .NET Framework hedef uygulamayı başlatmak için *VSPerfClrEnv.exe* kullanarak .NET Framework profil oluşturma değişkenlerini ayarlayabilirsiniz. Ardından VSPerfCmd **/Start** ve **/Launch** seçeneklerini kullanarak profil oluşturucuyu başlatabilir ve uygulamayı başlatabilirsiniz. **/Start** ve **/Launch** seçeneklerini ve ilgili seçeneklerini tek bir komut satırında belirtebilirsiniz. Ayrıca, hedef uygulama başladığında veri toplamayı duraklatmak için komut satırına **/globaloff** seçeneğini ekleyebilirsiniz. Ardından, veri toplamaya başlamak için ayrı bir komut satırında **/GlobalOn** komutunu kullanın.
+## <a name="start-the-application-with-the-profiler"></a>Uygulamayı profil oluşturma ile başlatma
+ Profil Oluşturma .NET Framework bir hedef uygulama başlatmak için profil *oluşturma değişkenleriniVSPerfClrEnv.exe* için .NET Framework kullanın. Ardından VSPerfCmd **/start** ve **/launch** seçeneklerini kullanarak Profiler'ı başlatarak uygulamayı başlatabilirsiniz. **/start** ve **/launch seçeneklerini tek** bir komut satırı üzerinde belirtebilirsiniz. Hedef uygulama başlatıldığında veri **toplamayı duraklatmak** için komut satırına /globaloff seçeneğini de ekebilirsiniz. Ardından veri toplamaya başlamak için ayrı bir komut satırı üzerinde **/globalon** kullanırsanız.
 
-#### <a name="to-start-an-application-with-the-profiler"></a>Profil Oluşturucu ile bir uygulamayı başlatmak için
+#### <a name="to-start-an-application-with-the-profiler"></a>Bir uygulamayı profil oluşturma ile başlatmak için
 
 1. Bir komut istemi penceresi açın.
 
-2. Profil oluşturucuyu başlatın. Şunu yazın:
+2. Profilleyiciyi başlatma. Şunu yazın:
 
-    [VSPerfCmd](../profiling/vsperfcmd.md) **/Start: eşzamanlılık**[**,**{**resourceonly**&#124;**threadonly**}] **/output:** `OutputFile` [ `Options` ]
+    [VSPerfCmd](../profiling/vsperfcmd.md) **/start:concurrency**[**,**{**ResourceOnly**&#124;**ThreadOnly**}] **/output:** `OutputFile` [ `Options` ]
 
-   - [/Start](../profiling/start.md) seçeneği profil oluşturucuyu başlatır.
+   - [/start seçeneği](../profiling/start.md) profilleyiciyi başlatıyor.
 
      | Komut | Açıklama |
      |-------------------------------------| - |
-     | **/Start: eşzamanlılık** | Hem kaynak çekişmesinin hem de iş parçacığı yürütme verilerinin toplanmasını mümkün. |
-     | **/Start: eşzamanlılık, yalnızca Resource** | Yalnızca kaynak çekişme verilerinin toplanmasını mümkün. |
-     | **/Start: eşzamanlılık, threadonly** | Yalnızca iş parçacığı yürütme verilerinin toplanmasını mümkün. |
+     | **/start:concurrency** | Hem kaynak hem de iş parçacığı yürütme verilerini toplamaya olanak sağlar. |
+     | **/start:concurrency,resourceonly** | Yalnızca kaynak musiki verilerini toplamaya olanak sağlar. |
+     | **/start:concurrency,threadonly** | Yalnızca iş parçacığı yürütme verilerini toplamayı sağlar. |
 
-   - /Start ile [/output](../profiling/output.md)**:** `OutputFile` seçeneği gereklidir.  `OutputFile` profil oluşturma verileri (. vsp) dosyasının adını ve konumunu belirtir.
+   - [/output](../profiling/output.md)**: seçeneği** / start ile `OutputFile` **gereklidir.** `OutputFile` profil oluşturma verileri (.vsp) dosyasının adını ve konumunu belirtir.
 
-     Aşağıdaki seçeneklerden herhangi birini, **/Start: eşzamanlılık** seçeneğiyle kullanabilirsiniz.
+     **/start:concurrency** seçeneğiyle aşağıdaki seçeneklerden herhangi birini kullanabilirsiniz.
 
    | Seçenek | Açıklama |
    | - | - |
-   | [/User](../profiling/user-vsperfcmd.md) **:**[ `domain\` ]`username` | Profil oluşturucuya erişim verilecek hesabın isteğe bağlı etki alanını ve Kullanıcı adını belirtir. |
-   | [/CrossSession](../profiling/crosssession.md) | Diğer oturum oturumlarda işlemlerin profilini oluşturmayı mümkün. |
-   | [/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath` | profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir. |
-   | [/AutoMark](../profiling/automark.md) **:**`Interval` | Yalnızca **/WINCOUNTER** ile kullanın. Windows performans sayacı toplama olayları arasındaki milisaniye sayısını belirtir. Varsayılan değer 500 MS 'dir. |
-   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | profil oluşturma sırasında toplanacak Windows (ETW) olayı için bir olay izleme olayı belirtir. ETW olayları ayrı bir (.*ETL*) dosyası. |
+   | [/user](../profiling/user-vsperfcmd.md) **:**[ `domain\` ]`username` | Profil oluşturma için erişim izni verilen hesabın isteğe bağlı etki alanını ve kullanıcı adını belirtir. |
+   | [/crosssession](../profiling/crosssession.md) | Diğer oturum açma oturumlarında işlemlerin profil oluşturmasını sağlar. |
+   | [/wincounter:](../profiling/wincounter.md) `WinCounterPath` | Profil oluşturma Windows toplanacak bir performans sayacı belirtir. |
+   | [/automark:](../profiling/automark.md) `Interval` | Yalnızca **/wincounter ile** kullanın. Performans sayacı toplama olayları arasındaki milisaniye Windows sayısını belirtir. Varsayılan değer 500 ms'tir. |
+   | [/events](../profiling/events-vsperfcmd.md) **:**`Config` | Profil oluşturma sırasında toplanacak Windows (ETW) olayı için bir Olay İzleme belirtir. ETW olayları ayrı bir () içinde toplanır.*etl*) dosyasını seçin. |
 
-3. Hedef uygulamayı başlatın. Şunu yazın:
+3. Hedef uygulamayı başlatma. Şunu yazın:
 
-    **VSPerfCmd**  [/Launch](../profiling/launch.md) **:** `AppName` [ `Options` ] [ `Sample Event` ]
+    **VSPerfCmd**[/launch:](../profiling/launch.md)  [ ] `AppName` [ `Options` `Sample Event` ]  
 
-    Aşağıdaki seçeneklerden herhangi birini **/Launch** seçeneği ile kullanabilirsiniz.
+    **/launch** seçeneğiyle aşağıdaki seçeneklerden herhangi birini kullanabilirsiniz.
 
    |Seçenek|Açıklama|
    |------------|-----------------|
-   |[/args](../profiling/args.md) **:**`Arguments`|Hedef Uygulamaya geçirilecek komut satırı bağımsız değişkenlerini içeren bir dize belirtir.|
-   |[/Console](../profiling/console.md)|Hedef komut satırı uygulamasını ayrı bir pencerede başlatır.|
-   |[/targetclr](../profiling/targetclr.md) **:**`Version`|Bir uygulamaya çalışma zamanının birden fazla sürümü yüklendiğinde profil için ortak dil çalışma zamanının (CLR) sürümünü belirtir.|
+   |[/args:](../profiling/args.md) `Arguments`|Hedef uygulamaya geçirilen komut satırı bağımsız değişkenlerini içeren bir dize belirtir.|
+   |[/console](../profiling/console.md)|Hedef komut satırı uygulamasını ayrı bir pencerede başlatır.|
+   |[/targetclr](../profiling/targetclr.md) **:**`Version`|Bir uygulamada birden fazla çalışma zamanı sürümü yüklendiğinde profili oluşturmak için ortak dil çalışma zamanının (CLR) sürümünü belirtir.|
 
 ## <a name="control-data-collection"></a>Veri toplamayı denetleme
- Hedef uygulama çalışırken, *VSPerfCmd.exe* seçeneklerini kullanarak verileri dosyaya yazmayı başlatıp durdurarak veri toplamayı kontrol edebilirsiniz. Veri toplamayı denetlemek, program yürütmenin, uygulamanın başlatılması veya kapatılmasını gibi belirli bir bölümü için veri toplamanızı sağlar.
+ Hedef uygulama çalışırken veri toplamayı, veri toplama seçeneklerini kullanarak dosyada veri yazmayı başlatarak *ve durdurarakVSPerfCmd.exe* yapabilirsiniz. Veri toplamayı denetlemek, uygulamanın başlat veya kapatılması gibi program yürütmenin belirli bir bölümü için veri toplamaya olanak sağlar.
 
 #### <a name="to-start-and-stop-data-collection"></a>Veri toplamayı başlatmak ve durdurmak için
 
-1. Aşağıdaki *VSPerfCmd.exe* seçenek çiftleri veri toplamayı başlatır ve durdurur. Her seçeneği ayrı bir komut satırında belirtin. Veri toplamayı birden çok kez açıp kapatabilirsiniz.
+1. Aşağıdaki iki seçenek *VSPerfCmd.exe* toplamayı başlat ve durdur. Her seçeneği ayrı bir komut satırı üzerinde belirtin. Veri toplamayı birden çok kez açabilirsiniz ve kapatabilirsiniz.
 
     |Seçenek|Açıklama|
     |------------|-----------------|
-    |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Tüm süreçler için veri toplamayı başlatır (**/GlobalOn**) veya Durdur (**/globaloff**).|
-    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|İşlem KIMLIĞI () tarafından belirtilen işlem için (**/ProcessOn**) veya duraklar (**/ProcessOff**) veri toplamayı başlatır `PID` .|
-    |[/Attach](../profiling/attach.md) **:**{ `PID`&#124;`ProcName` } [/Detach](../profiling/detach.md)[**:**{ `PID`&#124;`ProcName` }]|**/Attach** işlem kimliği ( `PID` ) veya Işlem adı (ProcName) tarafından belirtilen işlem için veri toplamaya başlar. **/Detach** belirtilen işlem veya belirli bir işlem belirtilmemişse tüm işlemler için veri toplamayı durduruyor.|
+    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Tüm işlemler **için veri toplamayı** başlatır ( /globalon ) veya durdurur (**/globaloff).**|
+    |[/processon:](../profiling/processon-and-processoff.md)  `PID` [/processoff](../profiling/processon-and-processoff.md) **:**`PID`|İşlem kimliği ( ) tarafından belirtilen işlem için veri toplamayı (**/processon**) veya durdurur ( `PID` ).|
+    |[/attach:](../profiling/attach.md) { `PID`&#124;`ProcName` } [/detach](../profiling/detach.md)[**:**{ `PID`&#124;`ProcName` }]|**/attach,** işlem kimliği ( ) veya işlem adı `PID` (ProcName) tarafından belirtilen işlem için veri toplamaya başlar. **/detach,** belirtilen işlem için veya belirli bir işlem belirtilmezse tüm işlemler için veri toplamayı durdurur.|
 
-## <a name="end-the-profiling-session"></a>Profil oluşturma oturumunu Sonlandır
- Profil oluşturma oturumunu sonlandırmak için, profil oluşturucunun veri toplamamalıdır. Profili oluşturulmuş uygulamayı kapatarak veya **VSPerfCmd/detach** seçeneğini çağırarak eşzamanlılık verilerinin toplanmasını durdurabilirsiniz. Ardından, profil oluşturucuyu kapatmak ve profil oluşturma veri dosyasını kapatmak için **VSPerfCmd/shutdown** seçeneğini çağırın. **VSPerfCLREnv/off** komutu profil oluşturma ortam değişkenlerini temizler.
+## <a name="end-the-profiling-session"></a>Profil oluşturma oturumunu sona er
+ Profil oluşturma oturumunu sona erdirecek şekilde profil oluşturma, veri toplamama gerekir. Profili yapılan uygulamayı kapatarak veya **VSPerfCmd /detach** seçeneğini kullanarak eşzamanlılık verilerini toplamayı durdurabilirsiniz. Ardından **VSPerfCmd /shutdown** seçeneğini çağırarak profil oluşturma verilerini kapatabilirsiniz. **VSPerfClrEnv /off** komutu profil oluşturma ortam değişkenlerini temizler.
 
-#### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sonlandırmak için
+#### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sona erdir
 
-1. Profil oluşturucuyu hedef uygulamadan ayırmak için aşağıdakilerden birini yapın.
+1. Profilleyiciyi hedef uygulamadan ayırmak için aşağıdakilerden birini yapın.
 
     - Hedef uygulamayı kapatın.
 
          -veya-
 
-    - **VSPerfCmd/detach** yazın
+    - **VSPerfCmd /detach yazın**
 
-2. Profil oluşturucuyu kapatma
+2. Profilleyiciyi kapatma
 
-     **VSPerfCmd**  [/Shutdown](../profiling/shutdown.md)
+     **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)

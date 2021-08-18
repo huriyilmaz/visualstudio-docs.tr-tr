@@ -1,6 +1,6 @@
 ---
 title: Ek açıklama | Microsoft Docs
-description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında ek açıklama sembol türü (SymTagAnnotation) hakkında başvuru bilgileri bulun.
+description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında ek açıklama sembol türü (symtagannotation) hakkında başvuru bilgileri bulun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,15 @@ ms.assetid: eb9f759b-98a5-45fc-b085-91f1f2666e72
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e985f2ae94e0da631aed731d9cb26472f4481303
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0e1db9552311196400ef2aa9b70610c7aa9e3726
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865598"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122031360"
 ---
 # <a name="annotation"></a>Ek Açıklama
 Konum program koduna bir sembol ile açıklama eklenebilir `SymTagAnnotation` .

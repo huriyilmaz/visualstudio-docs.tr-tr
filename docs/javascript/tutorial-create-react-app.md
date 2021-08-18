@@ -14,12 +14,12 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 11d59ac05be469d19a10d68d1a0bc004460d2d385644687f0b58c49c9afd8d59
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fbf4b68c1f5f82af8af47cda7e21389b14c21bb2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121411410"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061460"
 ---
 # <a name="create-a-react-app"></a>React uygulaması oluşturma
 

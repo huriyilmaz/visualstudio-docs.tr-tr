@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 420ba1fd7cc4285d638cf4d82b4e9d1d7f0ad23bfc6d5c23331ebe1ba3964dbd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7b1f9224eafe2e2186c87ba4d503e8a78f49abc4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397273"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108245"
 ---
 # <a name="suspendtracking"></a>SuspendTracking
 

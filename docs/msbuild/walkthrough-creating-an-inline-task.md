@@ -14,16 +14,16 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: d2f48dc054a4b3523a6c2a8ac644029fa2385b6ef05c41fcc64d124ae87e2c3c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e91ba93007cb721d8045ff1253ae39796b227124
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397143"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108167"
 ---
 # <a name="walkthrough-create-an-inline-task"></a>Adım adım kılavuz: Satır içi görev oluşturma
 
-MSBuild görevleri genellikle arabirimi uygulayan bir sınıf oluşturularak <xref:Microsoft.Build.Framework.ITask> oluşturulur. 4. .NET Framework başlayarak proje dosyasında satır içi görevler oluşturabilirsiniz. Görevi barındırmak için ayrı bir derleme oluşturmanıza gerek yok. Daha fazla bilgi için [bkz. Satır içi görevler.](../msbuild/msbuild-inline-tasks.md)
+MSBuild görevleri genellikle arabirimi uygulayan bir sınıf oluşturularak <xref:Microsoft.Build.Framework.ITask> oluşturulur. 4. .NET Framework başlayarak, proje dosyasında satır içi görevler oluşturabilirsiniz. Görevi barındırmak için ayrı bir derleme oluşturmanıza gerek yok. Daha fazla bilgi için [bkz. Satır içi görevler.](../msbuild/msbuild-inline-tasks.md)
 
  Bu kılavuzda, bu satır içi görevlerin nasıl oluşturulacak ve çalıştırılır:
 
@@ -35,9 +35,9 @@ MSBuild görevleri genellikle arabirimi uygulayan bir sınıf oluşturularak <xr
 
 - İki giriş parametresine sahip bir görev ve bir çıkış parametresi, iki giriş MSBuild döndürür.
 
-Görevleri oluşturmak ve çalıştırmak için Visual Studio komut **Visual Studio komut istemi penceresini aşağıdaki** gibi kullanın:
+Görevleri oluşturmak ve çalıştırmak için Visual Studio komut **Visual Studio komut istemi penceresini** aşağıdaki gibi kullanın:
 
-1. Visual Studio kullanarak MSBuild proje dosyası Visual Studio.
+1. Visual Studio kullanarak MSBuild proje Visual Studio.
 
 2. Satır içi görevi oluşturmak Visual Studio proje dosyasını değiştirme.
 
@@ -49,7 +49,7 @@ Görevleri oluşturmak ve çalıştırmak için Visual Studio komut **Visual Stu
 
 #### <a name="to-create-and-modify-a-project-file"></a>Proje dosyası oluşturmak ve değiştirmek için
 
-1. Bu Visual Studio, C# ve Forms Uygulaması şablonunu **Windows yeni bir proje** oluşturun. **Ad** kutusuna `InlineTasks` yazın. Çözüm **için** bir Konum yazın, örneğin *D: \\*. Çözüm için **dizin oluştur'un seçili** olduğundan, **Kaynak Denetimine Ekle'nin** temiz olduğundan ve Çözüm **Adı'nın InlineTasks olduğundan emin olun.** 
+1. Bu Visual Studio C# form uygulaması şablonunu kullanarak **Windows proje** oluşturun. **Ad** kutusuna `InlineTasks` yazın. Çözüm **için** bir Konum yazın, örneğin *D: \\*. Çözüm için **dizin oluştur'un seçili** olduğundan, **Kaynak Denetimine Ekle'nin** temiz olduğundan ve Çözüm **Adı'nın InlineTasks olduğundan emin olun.** 
 
 3. Proje **dosyasını** oluşturmak için Tamam'a tıklayın.
 
@@ -71,7 +71,7 @@ Görevleri oluşturmak ve çalıştırmak için Visual Studio komut **Visual Stu
    <Project ToolsVersion="4.0" DefaultTargets="TestBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
    ```
 
-2. Aşağıdaki satır içi görevi ve hedefi etiketinin hemen öncesinde proje dosyasına `</Project>` ekleyin.
+2. Aşağıdaki satır içi görevi ve hedefi, etiketinin hemen öncesinde proje dosyasına `</Project>` ekleyin.
 
    ```xml
    <UsingTask TaskName="Hello" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" >
@@ -136,7 +136,7 @@ Görevleri oluşturmak ve çalıştırmak için Visual Studio komut **Visual Stu
    </Target>
    ```
 
-2. Komut **İstemi Penceresi'ne** komut anahtarları olmadan **msbuild** yazın ve Enter tuşuna **basın.** Varsayılan olarak, bu, Echo görevini çağıran varsayılan hedef TestBuild'i işler.
+2. Komut **İstemi Penceresi'ne** komut **anahtarları olmadan msbuild** yazın ve Enter tuşuna **basın.** Varsayılan olarak, bu, Echo görevini çağıran varsayılan hedef TestBuild'i işler.
 
 3. Komut İstemi **Penceresindeki çıktıyı inceleme.** Şu satırı görmeniz gerekir:
 
@@ -146,7 +146,7 @@ Görevleri oluşturmak ve çalıştırmak için Visual Studio komut **Visual Stu
 
 ## <a name="define-the-adder-task"></a>Adder görevini tanımlama
 
- İki tamsayı parametresi ekleyen ve toplamlarını bir tamsayı özelliği olarak yayan bir satır içi MSBuild oluşturun.
+ İki tamsayı parametresi ekleyen ve toplamlarını bir MSBuild olarak yayın bir satır içi görev oluşturun.
 
 #### <a name="to-define-the-adder-task"></a>Adder görevini tanımlamak için
 
@@ -173,7 +173,7 @@ Görevleri oluşturmak ve çalıştırmak için Visual Studio komut **Visual Stu
    </Target>
    ```
 
-2. Komut **İstemi Penceresi'ne** komut anahtarları olmadan **msbuild** yazın ve Enter tuşuna **basın.** Varsayılan olarak, bu, Echo görevini çağıran varsayılan hedef TestBuild'i işler.
+2. Komut **İstemi Penceresi'ne** komut **anahtarları olmadan msbuild** yazın ve Enter tuşuna **basın.** Varsayılan olarak, bu, Echo görevini çağıran varsayılan hedef TestBuild'i işler.
 
 3. Komut İstemi **Penceresindeki çıktıyı inceleme.** Şu satırı görmeniz gerekir:
 
@@ -229,7 +229,7 @@ Görevleri oluşturmak ve çalıştırmak için Visual Studio komut **Visual Stu
    </Target>
    ```
 
-2. Komut **İstemi Penceresi'ne** komut anahtarları olmadan **msbuild** yazın ve Enter tuşuna **basın.** Varsayılan olarak, bu, RegX görevini çağıran varsayılan hedef TestBuild'i işler.
+2. Komut **İstemi Penceresi'ne** komut **anahtarları olmadan msbuild** yazın ve Enter tuşuna **basın.** Varsayılan olarak, bu, RegX görevini çağıran varsayılan hedef TestBuild'i işler.
 
 3. Komut İstemi **Penceresindeki çıktıyı inceleme.** Şu satırları görmeniz gerekir:
 
@@ -253,7 +253,7 @@ Görevleri oluşturmak ve çalıştırmak için Visual Studio komut **Visual Stu
 
 ### <a name="handle-reserved-characters"></a>Ayrılmış karakterleri işleme
 
- Veri MSBuild satır içi görevleri XML olarak işler. XML'de ayrılmış anlamı olan karakterler (örneğin, " " ) algılanır ve .NET kaynak kodu değil XML gibi \<" and "> işlanır. gibi kod ifadelerine ayrılmış karakterleri eklemek için, içeriğinin bir CDATA ifadesinde yer alan öğesini `Files.Length > 0` `Code` aşağıdaki gibi yazın:
+ Bu MSBuild satır içi görevleri XML olarak işler. XML'de ayrılmış anlamı olan karakterler (örneğin, " " ) algılanır ve .NET kaynak kodu değil XML gibi \<" and "> işlanır. gibi kod ifadelerine ayrılmış karakterleri eklemek için, içeriğinin bir CDATA ifadesinde yer alan öğesini `Files.Length > 0` `Code` aşağıdaki gibi yazın:
 
  ```xml
 <Code Type="Fragment" Language="cs">

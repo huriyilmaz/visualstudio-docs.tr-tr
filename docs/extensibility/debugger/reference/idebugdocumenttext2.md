@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: ffb2aa817caff01b598bc789c6aaa8b7dbacfcd1d3d590a7715f6be4e18d1121
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4ffa88c04333243ba016477e98a216bf957616ab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417346"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119418"
 ---
 # <a name="idebugdocumenttext2"></a>IDebugDocumentText2
 Bu arabirim bir metin belgesini temsil eder.

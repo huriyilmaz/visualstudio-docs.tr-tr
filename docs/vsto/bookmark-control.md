@@ -1,6 +1,6 @@
 ---
 title: Yer işareti denetimi
-description: Yer Işareti denetiminin benzersiz bir ada sahip, olayları açığa çıkaran ve verilere bağlanabilen bir yer işareti olduğunu öğrenin.
+description: Yer İşareti denetimi benzersiz bir adı olan, olayları ortaya çıkaran ve verilere bağlanan bir yer işareti olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -20,83 +20,83 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: faaeae36f5c9e4ff658e79656cff0af6823d5be81673250f1b95452fdb117687
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 054019a9c683924d27963a8be6d67679c8feb65d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121286181"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047224"
 ---
 # <a name="bookmark-control"></a>Yer işareti denetimi
-  <xref:Microsoft.Office.Tools.Word.Bookmark>Denetim, benzersiz bir ada sahip, olayları ortaya çıkaran ve verilere bağlanabilen bir yer işaretidir. yer işareti, bir Microsoft Office Word belgesindeki bir öğeyi veya konumu işaretlemek için yer tutucu olarak kullanılabilir. <xref:Microsoft.Office.Tools.Word.Bookmark>Denetim bir <xref:Microsoft.Office.Interop.Word.Bookmark> nesne ve <xref:Microsoft.Office.Interop.Word.Range> nesne birleşimidir.
+  Denetim, <xref:Microsoft.Office.Tools.Word.Bookmark> benzersiz bir adı olan, olayları ortaya çıkaran ve verilere bağlanan bir yer işaretidir. Yer işareti, Word belgesinde bir öğeyi veya konumu işaretlemek için yer Microsoft Office kullanılabilir. Denetim, <xref:Microsoft.Office.Tools.Word.Bookmark> bir nesnesi ve <xref:Microsoft.Office.Interop.Word.Bookmark> nesnesinin <xref:Microsoft.Office.Interop.Word.Range> birleşimidir.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- Belge düzeyi projelerinde, <xref:Microsoft.Office.Tools.Word.Bookmark> tasarım zamanında veya çalışma zamanında belgenize denetim ekleyebilirsiniz. VSTO eklenti projelerinde, <xref:Microsoft.Office.Tools.Word.Bookmark> çalışma zamanında herhangi bir açık belgeye denetimler ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Word belgelerine yer işareti denetimleri ekleme](../vsto/how-to-add-bookmark-controls-to-word-documents.md).
+ Belge düzeyindeki projelerde, tasarım <xref:Microsoft.Office.Tools.Word.Bookmark> zamanında veya çalışma zamanında belgenize denetimler ekleyebilirsiniz. Eklenti VSTO içinde, çalışma zamanında herhangi bir <xref:Microsoft.Office.Tools.Word.Bookmark> açık belgeye denetim ekleyebilirsiniz. Daha fazla bilgi için [bkz. Nasıl kullanılır: Word belgelerine Yer İşareti denetimleri ekleme.](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
 
-## <a name="bind-data-to-the-control"></a>Verileri denetime bağlama
- Bir <xref:Microsoft.Office.Tools.Word.Bookmark> Denetim basit veri bağlamayı destekler. Yer işareti, özelliği kullanılarak bir veri kaynağına bağlanmalıdır <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> . Yer işaretinin varsayılan veri bağlama özelliği <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> özelliğidir.
+## <a name="bind-data-to-the-control"></a>Denetime veri bağlama
+ Denetim <xref:Microsoft.Office.Tools.Word.Bookmark> basit veri bağlamayı destekler. Yer işareti özelliği kullanılarak bir veri kaynağına <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> bağlanmalıdır. Yer işaretinin varsayılan veri bağlama özelliği <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> özelliğidir.
 
- Bağlantılı veri kümesindeki veriler güncelleştirilirse, <xref:Microsoft.Office.Tools.Word.Bookmark> denetimde değişiklikler gösterilir.
+ Bağlı veri kümesinde veriler güncelleştirildiğinde denetim <xref:Microsoft.Office.Tools.Word.Bookmark> değişiklikleri gösterir.
 
- Belge düzeyi projelerde veri **kaynakları** penceresini kullanarak verileri yer işaretlerine de bağlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: belgeleri nesnelerdeki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md).
+ Belge düzeyindeki projelerde, Veri Kaynakları penceresini kullanarak verileri yer işaretlerine **de bekleyebilirsiniz.** Daha fazla bilgi için, [bkz. How to: Populate documents with data from objects](../vsto/how-to-populate-documents-with-data-from-objects.md).
 
 ## <a name="formatting"></a>Biçimlendirme
- Bir denetime uygulanabilen biçimlendirme <xref:Microsoft.Office.Interop.Word.Bookmark> , bir <xref:Microsoft.Office.Tools.Word.Bookmark> denetime uygulanabilir. Bu biçimlendirme yazı tiplerini, girintileri, aralığı, numaralandırmayı ve stilleri içerir.
+ bir denetimine uygulanan <xref:Microsoft.Office.Interop.Word.Bookmark> biçimlendirme bir denetime <xref:Microsoft.Office.Tools.Word.Bookmark> uygulanabilir. Bu biçimlendirme yazı tiplerini, girintileri, boşlukları, numaralamayı ve stilleri içerir.
 
-## <a name="assign-text-to-the-bookmark"></a>Yer işaretine metin ata
- Bir <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> nesne ve bir denetim arasındaki ek bir farklılık <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> , metin yer işaretine atandığında nasıl davranacağını gösterir. Sıfır uzunlukta metin atarsanız <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> , metin yer işaretinin sağına eklenir ve yer işareti sıfır uzunlukta kalır. Ancak, sıfır uzunluklu metin atarsanız <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> , metin yer işaretine eklenir ve yer işaretinin uzunluğu, takılan toplam karakter sayısına genişletilir.
+## <a name="assign-text-to-the-bookmark"></a>Yer işaretine metin atama
+ Bir nesne ile denetim <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> arasındaki ek <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> bir fark, yer işaretine metin atandığı zaman nasıl davrandığıdır. Metni sıfır uzunluklu bir değere atarsanız, metin yer işaretinin sağ bölümüne eklenir ve <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> yer işareti sıfır uzunlukta kalır. Ancak, sıfır uzunluklu bir metne metin atarsanız, metin yer işaretine eklenir ve yer işaretinin uzunluğu eklenen toplam <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> karakter sayısına genişler.
 
- <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType>Denetimin özelliği de vardır <xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType> . Bu özellik <xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType> <xref:Microsoft.Office.Tools.Word.Bookmark.Range?displayProperty=nameWithType> <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> , bir denetimin özelliği veya <xref:Microsoft.Office.Interop.Word.Bookmark.Range?displayProperty=nameWithType> bir <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> nesnenin özelliği üzerinde kullanılabilir olan özellikten farklıdır.
+ Denetimin <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> özelliği de <xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType> vardır. Bu özellik, bir denetimin özelliği veya bir nesnenin özelliği üzerinde kullanılabilen <xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType> <xref:Microsoft.Office.Tools.Word.Bookmark.Range?displayProperty=nameWithType> <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> <xref:Microsoft.Office.Interop.Word.Bookmark.Range?displayProperty=nameWithType> özellikten <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> farklıdır.
 
-|Text özelliği|Açıklama|
+|Text Özelliği|Açıklama|
 |-------------------|-----------------|
-|<xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType>|Yer işareti içindeki metni göstermek ve yer işaretini belgede bırakmak için bu özelliği kullanın. Yer işaretine metin atama, yer işareti aralığını genişletir ve yer işaretini silmez.<br /><br /> Örneğin, `Bookmark1.Text = "Hello world"` metni yer işaretine ekler ve yer işaretini dokunulmamış olarak bırakır.|
-|<xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType>|Yer işareti konumundaki metni göstermek ve yer işaretini otomatik olarak silmek için bu özelliği kullanın. Örneğin, `Bookmark1.Range.Text = "Hello world"` metni yer işaretine ekler ve yer işaretini siler.|
+|<xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType>|Bu özelliği kullanarak yer işareti içinde metin görüntüleniyor ve yer işareti belgede bırakılacak. Yer işaretine metin atama, yer işareti aralığını genişleterek yer işaretini silemez.<br /><br /> Örneğin, `Bookmark1.Text = "Hello world"` metni yer işaretine ekler ve yer işaretini olduğu gibi bırakır.|
+|<xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType>|Yer işareti konumda metin görüntülemek ve yer işaretini otomatik olarak silmek için bu özelliği kullanın. Örneğin, `Bookmark1.Range.Text = "Hello world"` metni yer işaretine ekler ve yer işaretini siler.|
 
-## <a name="rename-the-control-at-design-time"></a>Tasarım zamanında denetimi yeniden adlandırma
- belge düzeyi projelerinde, bir <xref:Microsoft.Office.Tools.Word.Bookmark> denetimi **araç kutusundan** belgenize sürüklediğinizde Visual Studio otomatik olarak denetim için bir ad oluşturur. Denetimin adını **Özellikler** penceresinde değiştirebilirsiniz.
+## <a name="rename-the-control-at-design-time"></a>Denetimi tasarım zamanında yeniden adlandırma
+ Belge düzeyindeki projelerde, Araç Kutusundan belgenize bir denetim sürüklerken Visual Studio otomatik olarak <xref:Microsoft.Office.Tools.Word.Bookmark> bir ad oluşturulur.  Özellikler penceresinde denetimin adını **değiştirebilirsiniz.**
 
 ## <a name="overlapping-controls"></a>Çakışan denetimler
- Yer işareti denetimleri birbirini örtüşebilir. Aynı metin birden fazla yer işareti tarafından paylaşılabilir. Çakışan yer işaretlerinin birine yeni metin atadığınızda, bu yalnızca yeni metni içerir ve yer işaretleri artık çakışmayacaktır. Diğer yer işareti artık yalnızca özgün çakışan yer işaretleri arasında paylaşılmayan metni içerir.
+ Yer işareti denetimleri birbiriyle çakışabilir. Aynı metin birden fazla yer işareti tarafından paylaşılır. Çakışan yer işaretlerinden biri için yeni metin atadığınız zaman, yalnızca yeni metni içerir ve yer işaretleri artık çakışmaz. Diğer yer işareti artık yalnızca çakışan özgün yer işaretleri arasında paylaşılmaan metni içerir.
 
- Aşağıdaki tabloda, "Bunun örnek metin olan" tümcesi gösterilmektedir. iki çakışan yer işareti tarafından paylaşılır:
+ Aşağıdaki tabloda "Bu örnek metindir" cümlesini gösterir. çakışan iki yer işareti tarafından paylaşılır:
 
 |Yer işareti|Metin|
 |--------------|----------|
-|Çakışan yer işaretleri|[Bu {Sample] metindir.}|
+|Çakışan yer işaretleri|[bu {örnek] metindir.}|
 |Bookmark1|Bu örnek|
 |Bookmark2|örnek metin.|
 
- Yeni metni atarsanız "Bu değişiklik." Bookmark1 için, yer işaretleri örtüşmez ve bookmark2 yalnızca özgün olarak Bookmark1 bölümü olmayan metni korur.
+ Yeni "Bu değiştirmedir" metnini atarsanız Bookmark1 için yer işaretleri çakışmaz ve Bookmark2 yalnızca Bookmark1'in ilk parçası olan metni korur.
 
 |Yer işareti|Metin|
 |--------------|----------|
-|İki ayrı yer işareti|[Bu değişiklik.] {Text.}|
-|Bookmark1|Bu değişiklik|
-|Bookmark2|metinleri.|
+|İki ayrı yer işareti|[bu değiştirmedir] { text.}|
+|Bookmark1|Bu, değiştirmedir|
+|Bookmark2|Metin.|
 
-Başka bir yer işareti içeren bir yer işaretinin metnini değiştirirseniz, iç yer işareti silinmez. Ancak, iç yer işareti boş bir yer işaretine dönüşür ve dış yer işaretinin sonuna gider.
+Başka bir yer işareti içeren bir yer işaretinin metnini değiştirirsiniz, iç yer işareti silinmez. Ancak iç yer işareti boş bir yer işareti olur ve dış yer işaretinin sonuna taşınır.
 
-Aşağıdaki tabloda, "Bunun örnek metin olan" tümcesi gösterilmektedir. , başka bir yer işareti içinde yer alan bir yer işareti tarafından paylaşılır:
+Aşağıdaki tabloda "Bu örnek metindir" cümlesini gösterir. başka bir yer işareti içinde yer alan bir yer işareti tarafından paylaşılır:
 
 |Yer işareti|Metin|
 |--------------|----------|
-|Çakışan yer işaretleri|[Bu {Sample} metindir.]|
+|Çakışan yer işaretleri|[bu {sample} metnidir.]|
 |Bookmark1|Bu örnek metindir.|
 |Bookmark2|örnek|
 
- Yeni metni atarsanız "Bu değişiklik." Bookmark1 için, yer işaretleri artık örtüşmemelidir ve bookmark2 Bookmark1 sonunda yer alan boş bir yer işareti haline gelir.
+ Yeni "Bu değiştirmedir" metnini atarsanız Bookmark1 için yer işaretleri artık çakışmaz ve Bookmark2, Bookmark1'in sonunda bulunan boş bir yer işareti olur.
 
 |Yer işareti|Metin|
 |--------------|----------|
-|İki ayrı yer işareti|[Bu değişiklik.]{}|
-|Bookmark1|Bu değişiklik.|
+|İki ayrı yer işareti|[bu değiştirmedir.]{}|
+|Bookmark1|Bu değiştirmedir.|
 |Bookmark2|*\<empty>*|
 
 ## <a name="events"></a>Ekinlikler
 
-Denetim için aşağıdaki olaylar mevcuttur <xref:Microsoft.Office.Tools.Word.Bookmark> :
+Denetim için aşağıdaki olaylar <xref:Microsoft.Office.Tools.Word.Bookmark> kullanılabilir:
 
 - <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeDoubleClick>
 
@@ -114,8 +114,8 @@ Denetim için aşağıdaki olaylar mevcuttur <xref:Microsoft.Office.Tools.Word.B
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)
-- [Nasıl yapılır: Word belgelerine yer Işareti denetimleri ekleme](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
-- [İzlenecek yol: yer işaretleri için kısayol menüleri oluşturma](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
-- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Genişletilmiş nesneleri kullanarak Word'i otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)
+- [Nasıl kullanılır: Word belgelerine Yer İşareti denetimleri ekleme](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
+- [Adım adım kılavuz: Yer işaretleri için kısayol menüleri oluşturma](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
+- [Veri çözümlerinin denetimlerini Office bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Konak öğelerinin ve konak denetimlerinin programlı sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

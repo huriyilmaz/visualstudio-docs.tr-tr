@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 31c843d1d8a0a8a1ee06cbde33d9f229d0954d0914deb1dde912f50d2dbebfd3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 99049652ba378bf3a73a73412369145a0f695b9d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121226277"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047133"
 ---
 # <a name="create-outlook-form-regions"></a>Form Outlook bölgeleri oluşturma
   Form bölgelerini kullanarak form formlarını Microsoft Office Outlook kullanabilirsiniz. Visual Studio form bölgelerini tasarlamayı, geliştirmeyi ve hata ayıklamayı kolaylaştıran gelişmiş araçlar sağlar.
@@ -63,7 +63,7 @@ ms.locfileid: "121226277"
   Daha fazla bilgi için [bkz. Form sayfalarını ve form bölgelerini özelleştirme.](/office/vba/outlook/Concepts/Forms/customizing-form-pages-and-form-regions)
 
 ## <a name="add-an-outlook-form-region-to-your-project"></a><a name="Adding"></a>Projenize Outlook form bölgesi ekleme
- Yeni bir form **bölgesi tasarlamak Outlook form bölgesi** tasarlamak veya yeni form bölgesinde tasarlanmış bir form bölgesi içeri aktarmak için Yeni Form Bölgesi sihirbazını Outlook. Ayrıca, Başka bir Eklenti projesinde kullanılan bir form Outlook VSTO, mevcut form bölgenizi yeniden kullanabilirsiniz.
+ Yeni bir form **bölgesi Outlook için Yeni** Form Bölgesi sihirbazını kullanabilir veya yeni bir form bölgesinde tasarlanmış bir form Outlook. Ayrıca, Başka bir Eklenti projesinde kullanılan bir form Outlook VSTO, mevcut form bölgenizi yeniden kullanabilirsiniz.
 
 ### <a name="create-a-new-form-region-by-using-the-wizard"></a><a name="CreatingFormRegion"></a> Sihirbazı kullanarak yeni bir form bölgesi oluşturma
  Form bölgesi oluşturmak için bir Outlook **Form Bölgesi öğesini** bir Outlook VSTO projesine ekleyin. Bu, **Yeni Outlook Form Bölgesi sihirbazını** başlatır.
@@ -75,16 +75,16 @@ ms.locfileid: "121226277"
 |Bölge türü|Açıklama|
 |-----------------|-----------------|
 |Ayrı|Form bölgelerini yeni bir sayfa olarak yeni bir Outlook ekler.|
-|Bitişik|Form bölgelerini bir form formunun Outlook altına ekler.|
+|Bitişik|Formun varsayılan sayfasının en altına form Outlook ekler.|
 |Değiştirme|Form bölgesi, form formunun varsayılan sayfasının yerine yeni bir sayfa Outlook ekler.|
 |Hepsini değiştir|Form formunun Outlook form bölgesiyle değiştirir.|
 
- Sihirbazı, görüntüleme koşullarını belirtmek ve genişletilen form türünü seçmek için de kullanabilirsiniz. Daha fazla bilgi [için, bkz. How to: Add-in Outlook form bölgesi ekleme.](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)
+ Sihirbazı, görüntüleme koşullarını belirtmek ve genişletilen form türünü seçmek için de kullanabilirsiniz. Daha fazla bilgi [için, bkz. How to: Add-in projesinde Outlook bölge ekleme.](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)
 
- Sihirbazda yapılan seçimler, diğer sihirbaz sayfalarında kullanılabilen seçenekleri etkiler. Örneğin, Yeni Outlook  **Form** Bölgesi  Oluştur sayfasında Ekleme veya Ayırma'yi seçerse,  Açıklayıcı  metin girin ve görüntüleme tercihleri sayfanızı seçin sayfasında Başlık ve Açıklama alanları **kullanılamaz.** Bunun nedeni Outlook veya ayrı bir form bölgesi görüntülerken bu alanları kullanmamadır.
+ Sihirbazda yapılan seçimler, diğer sihirbaz sayfalarında kullanılabilen seçenekleri etkiler. Örneğin, Yeni Outlook  **Form** Bölgesi  Oluştur sayfasında Ekleme veya Ayırma'ya karar verirsiniz,  Açıklayıcı metin girin sayfasında Başlık ve Açıklama alanları kullanılamaz ve görüntüleme  **tercihleri sayfanızı** seçin. Bunun nedeni Outlook veya ayrı bir form bölgesi görüntülerken bu alanları kullanmamadır.
 
 #### <a name="form-region-files"></a>Form bölgesi dosyaları
- Yeni Form Bölgesi **sihirbazını Outlook,** Visual Studio otomatik olarak aşağıdaki dosyaları projenize ekler:
+ Yeni Form Bölgesi **sihirbazını Outlook,** Visual Studio aşağıdaki dosyaları projenize otomatik olarak ekler:
 
 - Form bölgesi kod dosyası. Bu dosya, Yeni Öğe Ekle iletişim kutusunda **Outlook Form** Bölgesi öğesi için **belirttiğiniz adı** içerir. Bu dosyaya form bölgesi olaylarını işlemek için kod ekleyin.
 
@@ -105,9 +105,9 @@ ms.locfileid: "121226277"
  Form bölgesi fabrika sınıfının çoğu form bölgesi tasarımcı dosyasında uygulanır. Ancak, `FormRegionInitializing` olay işleyicisi form bölgesi kod dosyasında ortaya çıkar. Bu olay işleyicisini, form Outlook görüntü Outlook belirtmek için kullanabilirsiniz. Daha fazla bilgi için [bkz. Form bölgesi olaylarını işleme.](#HandlingFormRegionEvents)
 
 ### <a name="add-an-existing-form-region-to-your-project"></a><a name="AddingExistingFormRegion"></a> Projenize mevcut bir form bölgesi ekleme
- Başka bir Outlook projesinde kullanılan bir Outlook form bölgeniz varsa, Mevcut Öğeyi Ekle iletişim kutusunu kullanarak Outlook VSTO Eklenti  projesinde yeniden kullanabilirsiniz.
+ Başka bir Outlook projesinde kullanılan bir Outlook form bölgeniz varsa, Mevcut Öğeyi Ekle iletişim kutusunu kullanarak geçerli  Outlook VSTO Eklenti projesinde yeniden kullanabilirsiniz.
 
- Var olan form bölgesinde bir kod dosyası (*.vb veya* *.cs) olması* gerekir; Var Olan Outlook Ekle Depolama kullanarak Form Depolama (*.ofs*) **dosyaları ek** olamaz. Ancak, bir form form dosyası içeri aktararak yeni bir form Outlook Depolama oluşturabilirsiniz. Daha fazla bilgi [için, bkz. How to: Add-in Outlook form bölgesi ekleme.](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)
+ Var olan form bölgesinde bir kod dosyası (*.vb veya* *.cs) olması* gerekir; Var Olan Öğeyi Outlook iletişim kutusunu Depolama form dosyaları (*.ofs*) **dosyaları ek** olamaz. Ancak, form form dosyası içeri aktararak yeni bir form Outlook Depolama oluşturabilirsiniz. Daha fazla bilgi [için, bkz. How to: Add-in projesinde Outlook bölge ekleme.](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)
 
 ## <a name="use-the-form-region-designer"></a><a name="UsingFormRegionDesigner"></a> Form bölgesi tasarımcısını kullanma
  Form bölgesi tasarımcısı, bir form bölgesi düzenini ve görünümünü tasarlamanıza yardımcı olur. Yönetilen denetimleri tasarımcının yüzeyine sürükleyip denetimlere çift tıklar, olay işleyicilerini açabilir ve Özellikler penceresinde özellikleri **ayarlayabilirsiniz.**
@@ -127,21 +127,21 @@ ms.locfileid: "121226277"
 
   Form bölgesi tasarımcısı yalnızca yönetilen denetimleri destekler. Yerel denetimler Outlook ekamazsiniz.
 
-## <a name="import-a-form-region-designed-in-outlook"></a><a name="UsingFormRegionDesignedOutlook"></a>Outlook'de tasarlanmış bir form bölgelerini içeri Outlook
- Tasarımını form Outlook, form Outlook yerel denetimler eklersiniz. Yerel Outlook denetimler, tasarım zamanında Outlook verilere bağlamaya olanak sağlar. Ancak, daha sonra yönetilen denetimler eklemek veya form bölgesi tasarımını değiştirmek için form bölgesi tasarımcısını kullanamazsiniz.
+## <a name="import-a-form-region-designed-in-outlook"></a><a name="UsingFormRegionDesignedOutlook"></a>Outlook'da tasarlanmış bir form bölgelerini içeri Outlook
+ Tasarımını form Outlook, form Outlook yerel denetimler eklersiniz. Yerel Outlook denetimleri, tasarım zamanında veri Outlook bağlamaya olanak sağlar. Ancak, daha sonra yönetilen denetimler eklemek veya form bölgesi tasarımını değiştirmek için form bölgesi tasarımcısını kullanamazsiniz.
 
- Yeni Form Bölgesi sihirbazını kullanarak form Outlook VSTO eklenti **projesine Outlook aktarabilirsiniz.** Form **bölgelerini nasıl oluşturmak istediğinize** bakın sayfasında Bir form formu Outlook **(.ofs) Depolama'yi seçin.** Daha sonra bir Outlook Form dosyası (*.ofs*) Depolama konuma göz atabilirsiniz. (Outlook bölgeleri *.ofs dosyaları olarak kaydeder.)*
+ Yeni Form Bölgesi sihirbazını kullanarak form Outlook VSTO eklenti **projesine Outlook aktarabilirsiniz.** Form **bölgelerini nasıl oluşturmak istediğinize** bakın sayfasında Bir form Outlook **(.ofs) dosyasını Depolama'yi seçin.** Daha sonra bir Outlook Form dosyası (*.ofs*) Depolama konuma göz atabilirsiniz. (Outlook bölgeleri *.ofs dosyaları olarak kaydeder.)*
 
  Yeni **Outlook Form** Bölgesi *sihirbazı. ofs* dosyasını proje dizinine kopyalar ve form bölgesi tasarımcı dosyasına denetim başvuruları ekler. Ardından form bölgesi kod dosyasında denetim olaylarını işebilirsiniz.
 
  Bir Visual Basic projesinde olayları işlemek için Kod Düzenleyicisi'nin en üstünde yer alan yöntem adı listesinden bir olay seçin.
 
- Bir C# projesinde olayları işlemek için yönteminde olayları denetlemeye abone <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> olun. Daha fazla bilgi için bkz. C&#35; programlama kılavuzu &#40;ve [olaylara abone&#41;. ](/dotnet/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events)
+ Bir C# projesinde olayları işlemek için yönteminde olayları denetlemeye abone <xref:Microsoft.Office.Tools.Outlook.FormRegionControl.FormRegionShowing> olun. Daha fazla bilgi için bkz. C&#35; programlama kılavuzu &#40;abone olma [ve olaylardan&#41;. ](/dotnet/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events)
 
  Form bölgesi fabrika sınıfının `InitializeManifest` yönteminde form bölgesi özelliklerini değiştirebilirsiniz.
 
 > [!NOTE]
-> Bir form bölgesini içeri aktaracaksanız, geliştirme bilgisayarına yüklemiş Outlook sürümünü hedef alan bir projede çalışıyor olun. Örneğin, Outlook 2010 yüklüyse, form bölgesi içeri aktarma işlemi yalnızca **Outlook 2010 Eklenti** proje şablonu kullanılarak oluşturulmuş bir projede çalışır.
+> Bir form bölgesini içeri aktaracaksanız, geliştirme bilgisayarına yüklemiş Outlook sürümünü hedef alan bir projede çalışıyorsanız. Örneğin, Outlook 2010 yüklüyse, form bölgesi içeri aktarma işlemi yalnızca **Outlook 2010 Eklenti** proje şablonu kullanılarak oluşturulmuş bir projede çalışır.
 
 ### <a name="update-an-imported-form-regions-design"></a>İçe aktarılan form bölgesi tasarımını güncelleştirme
  Form bölgesindeki denetimleri ekleyebilir, kaldırabilir veya değiştirebilirsiniz. Bunu yapmadan önce, form bölgesi kod dosyasına eklediğiniz kodu yedekleyin. ardından Outlook *. ofs* dosyasını açın, form bölgesini değiştirin ve değişiklikleri kaydedin. değiştirilen *. ofs* dosyasını içeri aktarmak için **yeni Outlook Form bölgesi** sihirbazı 'nı kullanın. Kodunuzu daha sonra yeni form bölgesi kod dosyasına yapıştırabilirsiniz.

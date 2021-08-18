@@ -1,6 +1,6 @@
 ---
-title: Proje yükseltme, Seçenekler iletişim kutusu
-description: Visual Studio 'nun, geliştirme bilgisayarındaki Office sürümünü hedeflemek için VSTO eklenti projelerini otomatik olarak değiştirsin öğesini belirtmek için proje yükseltme sayfasını kullanın.
+title: Project Yükseltme, Seçenekler iletişim kutusu
+description: Visual Studio Project yükseltme sayfasını kullanarak, geliştirme bilgisayarındaki Office sürümünü hedeflemek üzere VSTO eklenti projelerini otomatik olarak değiştirsin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,23 +16,24 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: c33a8f1b42cd359e96b4c5d7c8f394e9ec0e1ee4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b76b7619aa9d7d4f0adb8502fbbf1fe0f9d0dcf9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971810"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082822"
 ---
-# <a name="project-upgrade-options-dialog-box"></a>Proje yükseltme, Seçenekler iletişim kutusu
-  Visual Studio 'Nun VSTO eklenti projelerini, geliştirme bilgisayarında yüklü Office sürümünü hedeflemek üzere otomatik olarak değiştirmeyeceğini belirtmek için **Proje yükseltme** sayfasını kullanın.
+# <a name="project-upgrade-options-dialog-box"></a>Project Yükseltme, Seçenekler iletişim kutusu
+  Visual Studio geliştirme bilgisayarında yüklü olan Office sürümünü hedeflemek üzere VSTO eklenti projelerini otomatik olarak değiştirmeyeceğinizi belirtmek için **Project yükseltme** sayfasını kullanın.
 
- Bu sayfaya erişmek için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Office Araçları** klasörünü genişletin ve ardından **Proje yükseltme**' ye tıklayın.
+ Bu sayfaya erişmek için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Office araçları** klasörünü genişletin ve ardından **Project yükselt**' e tıklayın.
 
 ## <a name="uielement-list"></a>UIElement listesi
- **Office 'in yüklü sürümüne her zaman yükseltin** [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] ' Deki Office projeleri [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] yalnızca [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] veya Microsoft uygulamalarını hedefleyebilir, için bu seçenek devre dışıdır [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] . Daha fazla bilgi için bkz. [Office çözümlerini yükseltme ve geçirme](../vsto/upgrading-and-migrating-office-solutions.md).
+ **Office yüklü sürümüne her zaman yükseltin** [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]' deki Office projeleri [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] yalnızca [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] veya Microsoft uygulamalarını hedefleyebilir, için bu seçenek devre dışıdır [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] . daha fazla bilgi için bkz. [Office çözümleri yükseltme ve geçirme](../vsto/upgrading-and-migrating-office-solutions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümlerini yükseltme ve geçirme](../vsto/upgrading-and-migrating-office-solutions.md)
-- [Nasıl yapılır: Office çözümlerini yükseltme](/previous-versions/4bez6837(v=vs.140))
+- [nasıl yapılır: Office çözümlerini yükseltme](/previous-versions/4bez6837(v=vs.140))

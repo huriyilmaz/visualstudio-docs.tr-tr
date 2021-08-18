@@ -11,17 +11,18 @@ ms.assetid: 3a12fbec-7088-4cf9-8f6f-ad8ddec6009a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ca55e3de468ed61a3af32ddfe99873b90013aa16
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 77bc222e5d884fcbc464734654eca1e1535c6f0f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085513"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122030418"
 ---
 # <a name="address_kind"></a>ADDRESS_KIND
 Adres türlerini belirtir.
@@ -62,7 +63,7 @@ public enum enum_ADDRESS_KIND {
 [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) yapısıyla temsil edilen yerel bir adres.
 
 `ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`\
-Bir `this` ( `Me` Visual Basic) işaretçisine ve [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) yapısına göre temsil edilen yönetilmeyen bir adres.
+bir `this` ( `Me` Visual Basic) işaretçisine ve [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) yapısına göre temsil edilen yönetilmeyen bir adres.
 
 `ADDRESS_KIND_UNMANAGED_PHYSICAL`\
 [UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) yapısıyla temsil edilen yönetilmeyen bir fiziksel adres.

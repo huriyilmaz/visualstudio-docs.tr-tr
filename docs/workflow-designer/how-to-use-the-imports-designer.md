@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b1b83b73a02d283450d161f69353e8a72aa159b5987a393327ac4432d6fb729
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2a7ca00f988981dd7a5d1e6c0e2954ba27441499
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121393984"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135354"
 ---
 # <a name="how-to-use-the-imports-designer"></a>Nasıl Yapılır: İçeri Aktarmalar Tasarımcısını Kullanma
 

@@ -1,6 +1,6 @@
 ---
-description: Temel türü verilen bir türü alır.
-title: 'Idebugdynamicfieldcomplus:: GetTypeFromPrimitive | Microsoft Docs'
+description: İlkel türü verilen bir türü alınır.
+title: IDebugDynamicFieldCOMPlus::GetTypeFromPrimitive | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: d7f51e2a-1b72-489c-b7b6-4af7b7e4d663
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2b222546f529aca563d6e54a674d7c361111decb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c201fc97f6c401786300182577fff5d72464a788
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094048"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119185"
 ---
 # <a name="idebugdynamicfieldcomplusgettypefromprimitive"></a>IDebugDynamicFieldCOMPlus::GetTypeFromPrimitive
-Temel türü verilen bir türü alır.
+İlkel türü verilen bir türü alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +44,13 @@ int GetTypeFromPrimitive(
 
 ## <a name="parameters"></a>Parametreler
 `dwCorElementType`\
-'ndaki Temel türü temsil eden [CorElementType numaralandırmasındaki](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) değer.
+[in] İlkel türü [temsil eden CorElementType Enumeration](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) değeri.
 
 `ppType`\
-dışı Türü temsil eden [IDebugField 'ı](../../../extensibility/debugger/reference/idebugfield.md) döndürür.
+[out] Türü temsil [eden IDebugField'i](../../../extensibility/debugger/reference/idebugfield.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDynamicFieldCOMPlus](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus.md)

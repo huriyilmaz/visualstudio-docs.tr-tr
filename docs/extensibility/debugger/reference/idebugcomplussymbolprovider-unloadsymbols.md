@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b57c4f9c0e58e8757ee7b2e89ed7e6e35337e5eca4fcbd7bf66bd55be39eefa7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cca0463c2b79d42b2af6d8da9d9f9e65bba49a40
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342407"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119691"
 ---
 # <a name="idebugcomplussymbolproviderunloadsymbols"></a>IDebugComPlusSymbolProvider::UnloadSymbols
 Belirtilen modülün hata ayıklama sembollerini bellekten kaldırır.

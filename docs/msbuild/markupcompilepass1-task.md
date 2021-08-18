@@ -1,6 +1,6 @@
 ---
-title: MarkupCompilePass1 Görev | Microsoft Docs
-description: Yerelleştirilebilir MSBuild proje dosyalarını derlenmiş ikili biçime dönüştürmek için MarkupCompilePass1 görevini nasıl kullandığını öğrenin.
+title: MarkupCompilePass1 Görevi | Microsoft Docs
+description: MSBuild yerelleştirilemeyen XAML proje dosyalarını derlenmiş ikili biçime dönüştürmek için MarkupCompilePass1 görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,55 +20,55 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: d9895158e4264cee60fb966e4435776209af2e7898ee04297ce21eec71acd5bd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dba71fed7c4cc248e3e7648f264e3ccd531af5e0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427671"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093742"
 ---
 # <a name="markupcompilepass1-task"></a>MarkupCompilePass1 görevi
 
-Görev, <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> yerelleştirilebilir olmayan XAML proje dosyalarını derlenmiş ikili biçime dönüştürür.
+<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1>Görev, YERELLEŞTIRILEMEYEN xaml proje dosyalarını derlenmiş ikili biçime dönüştürür.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 | - | - |
-| `AllGeneratedFiles` | İsteğe **bağlı ITaskItem[]** çıkış parametresi.<br /><br /> Görev tarafından oluşturulan dosyaların tam listesini <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> içerir. |
-| `AlwaysCompileMarkupFilesInSeparateDomain` | İsteğe **bağlı Boole parametresi.**<br /><br /> Görevin ayrı bir içinde çalıştırıp çalıştırılamay olmadığını <xref:System.AppDomain> belirtir. Bu parametre **false döndürürse,** görev aynı şekilde MSBuild <xref:System.AppDomain> ve daha hızlı çalışır. parametresi true **döndürürse,** görev bir saniye içinde çalışır ve bu değerden <xref:System.AppDomain> yalıtılmış MSBuild yavaş çalışır. |
-| `ApplicationMarkup` | İsteğe **bağlı ITaskItem[]** parametresi.<br /><br /> Uygulama tanımı XAML dosyasının adını belirtir. |
-| `AssembliesGeneratedDuringBuild` | İsteğe **bağlı String[]** parametresi.<br /><br /> Derleme işlemi sırasında değişen derlemelere yapılan başvuruları belirtir. Örneğin, bir Visual Studio çözümü başka bir projenin derlenmiş çıkışına başvurulan bir proje içerebilir. Bu durumda, ikinci projenin derlenmiş çıktısı **AssembliesGeneratedDuringBuild parametresine eklenebilir.**<br /><br /> Not: **AssembliesGeneratedDuringBuild** parametresi, derleme çözümü tarafından oluşturulan derlemelerin tam kümesine başvurular içermesi gerekir. |
-| `AssemblyName` | Gerekli **dize** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını belirtir. Örneğin, bir proje adı Windows bir yürütülebilir dosya *WinExeAssembly.exe,* **AssemblyName** parametresi **winExeAssembly değerine sahip olur.** |
-| `AssemblyPublicKeyToken` | İsteğe **bağlı Dize** parametresi.<br /><br /> Derleme için ortak anahtar belirteci belirtir. |
-| `AssemblyVersion` | İsteğe **bağlı Dize** parametresi.<br /><br /> Derlemenin sürüm numarasını belirtir. |
-| `ContentFiles` | İsteğe **bağlı ITaskItem[]** parametresi.<br /><br /> Gevşek içerik dosyalarının listesini belirtir. |
-| `DefineConstants` | İsteğe **bağlı Dize** parametresi.<br /><br /> DefineConstants geçerli **değerinin tutul** olduğunu belirtir. hedef derleme neslini etkileyen; Bu parametre değiştirilirse, hedef derlemedeki genel API değiştirilebilir ve yerel türlere başvurulan XAML dosyalarının derlemesi etkilenebilir. |
-| `ExtraBuildControlFiles` | İsteğe **bağlı ITaskItem[]** parametresi.<br /><br /> Görev yeniden çalıştırlendiğinde yeniden oluşturmanın tetiklendiğinde tetiklenen bir yeniden oluşturma olup olmadığını kontrol edecek dosyaların listesini belirtir; bu dosyalardan biri değişirse yeniden <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> oluşturma tetiklenir. |
-| `GeneratedBamlFiles` | İsteğe **bağlı ITaskItem[]** çıkış parametresi.<br /><br /> XAML ikili biçiminde oluşturulan dosyaların listesini içerir. |
-| `GeneratedCodeFiles` | İsteğe **bağlı ITaskItem[]** çıkış parametresi.<br /><br /> Oluşturulan yönetilen kod dosyalarının listesini içerir. |
-| `GeneratedLocalizationFiles` | İsteğe **bağlı ITaskItem[]** çıkış parametresi.<br /><br /> Yerelleştirilebilir her XAML dosyası için oluşturulan yerelleştirme dosyalarının listesini içerir. |
-| `HostInBrowser` | İsteğe **bağlı Dize** parametresi.<br /><br /> Oluşturulan derlemenin bir XAML Tarayıcı Uygulaması (XBAP) olup olmadığını belirtir. Geçerli seçenekler true **ve** **false'tır.** True **ise,** tarayıcı barındırmayı desteklemek için kod oluşturulur. |
-| `KnownReferencePaths` | İsteğe **bağlı String[]** parametresi.<br /><br /> Derleme işlemi sırasında değişmeden derlemelere yapılan başvuruları belirtir. Genel derleme önbelleğinde (GAC), bir .NET yükleme dizininde bulunan derlemeleri içerir ve bu şekilde devam eder. |
-| `Language` | Gerekli **Dize** parametresi.<br /><br /> Derleyicinin desteklediği yönetilen dili belirtir. Geçerli seçenekler **C#**, **VB**, **JScript** ve **C++ seçenekleridir.** |
-| `LanguageSourceExtension` | İsteğe **bağlı Dize** parametresi.<br /><br /> Oluşturulan yönetilen kod dosyasının uzantısına eklenen uzantıyı belirtir:<br /><br /> `<Filename>.g<LanguageSourceExtension>`<br /><br /> **LanguageSourceExtension** parametresi belirli bir değerle ayarlanmazsa, dil için varsayılan kaynak dosya adı uzantısı kullanılır: Visual Basic için *.vb,* C# için *.csharp.* |
-| `LocalizationDirectivesToLocFile` | İsteğe **bağlı Dize** parametresi.<br /><br /> Her bir kaynak XAML dosyası için yerelleştirme bilgileri oluşturmanın nasıl olduğunu belirtir. Geçerli seçenekler Yok, **AçıklamalarOnlar ve** Tüm  **seçenekleridir.** |
-| `OutputPath` | Gerekli **Dize** parametresi.<br /><br /> Oluşturulan yönetilen kod dosyalarının ve XAML ikili biçim dosyalarının üretil olduğu dizini belirtir. |
-| `OutputType` | Gerekli **Dize** parametresi.<br /><br /> Bir proje tarafından oluşturulan derleme türünü belirtir. Geçerli **seçenekler: şarapxe**, **exe,** **kitaplık** ve **netmodule.** |
-| `PageMarkup` | İsteğe **bağlı ITaskItem[]** parametresi.<br /><br /> İşlen XAML dosyalarının listesini belirtir. |
-| `References` | İsteğe **bağlı ITaskItem[]** parametresi.<br /><br /> Dosyalardan XAML dosyalarında kullanılan türleri içeren derlemelere başvuru listesini belirtir. |
-| `RequirePass2ForMainAssembly` | İsteğe **bağlı Boole** çıkış parametresi.<br /><br /> Projenin, ana derlemeye eklenmiş yerel türlere başvurulan yerelleştirilebilir olmayan XAML dosyaları içerdiğini gösterir. |
-| `RequirePass2ForSatelliteAssembly` | İsteğe **bağlı Boole** çıkış parametresi.<br /><br /> Projenin ana derlemeye eklenmiş yerel türlere başvurulan yerelleştirilebilir XAML dosyaları içerdiğini gösterir. |
-| `RootNamespace` | İsteğe **bağlı Dize** parametresi.<br /><br /> Projenin içindeki sınıfların kök ad alanını belirtir. **RootNamespace,** ilgili XAML dosyası özniteliğini içermezken, oluşturulan bir yönetilen kod dosyasının varsayılan ad alanı olarak `x:Class` da kullanılır. |
-| `SourceCodeFiles` | İsteğe **bağlı ITaskItem[]** parametresi.<br /><br /> Geçerli proje için kod dosyalarının listesini belirtir. Liste, dile özgü oluşturulan yönetilen kod dosyalarını içermez. |
-| `UICulture` | İsteğe **bağlı Dize** parametresi.<br /><br /> Oluşturulan XAML ikili biçim dosyalarının ekli olduğu kullanıcı arabirimi kültürü için uydu derlemeyi belirtir. **UICulture** ayarlanmazsa, oluşturulan XAML ikili biçim dosyaları ana derlemeye katıştırıldı. |
-| `XAMLDebuggingInformation` | İsteğe **bağlı Boole parametresi.**<br /><br /> True **olduğunda,** hata ayıklamaya yardımcı olmak için tanılama bilgileri oluşturulur ve derlenmiş XAML'ye dahil edilir. |
+| `AllGeneratedFiles` | İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> Görev tarafından oluşturulan dosyaların tüm listesini içerir <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> . |
+| `AlwaysCompileMarkupFilesInSeparateDomain` | İsteğe bağlı **Boolean** parametresi.<br /><br /> Görevin ayrı ayrı çalıştırılıp çalıştırılmayacağını belirtir <xref:System.AppDomain> . bu parametre **false** döndürürse, görev MSBuild ile aynı şekilde çalışır <xref:System.AppDomain> ve daha hızlı çalışır. parametre **true** döndürürse, görev, <xref:System.AppDomain> MSBuild yalıtılmış ve daha yavaş çalışan bir saniye içinde çalışır. |
+| `ApplicationMarkup` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> Uygulama tanımı XAML dosyasının adını belirtir. |
+| `AssembliesGeneratedDuringBuild` | İsteğe bağlı **dize []** parametresi.<br /><br /> Yapı işlemi sırasında değişen derlemelere yönelik başvuruları belirtir. örneğin, bir Visual Studio çözümü başka bir projenin derlenmiş çıktısına başvuran bir proje içerebilir. Bu durumda, ikinci projenin derlenmiş çıktısı **AssembliesGeneratedDuringBuild** parametresine eklenebilir.<br /><br /> Note: **AssembliesGeneratedDuringBuild** parametresi bir yapı çözümü tarafından oluşturulan derlemelerin tamamına yönelik başvurular içermelidir. |
+| `AssemblyName` | Gerekli **dize** parametresi.<br /><br /> Bir proje için oluşturulan derlemenin kısa adını belirtir. örneğin, bir proje adı *WinExeAssembly.exe* olan Windows çalıştırılabilir bir dosya oluşturuyorsa, **AssemblyName** parametresinin değeri **winexeassembly** olur. |
+| `AssemblyPublicKeyToken` | İsteğe bağlı **dize** parametresi.<br /><br /> Derleme için ortak anahtar belirtecini belirtir. |
+| `AssemblyVersion` | İsteğe bağlı **dize** parametresi.<br /><br /> Derlemenin sürüm numarasını belirtir. |
+| `ContentFiles` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> Gevşek içerik dosyalarının listesini belirtir. |
+| `DefineConstants` | İsteğe bağlı **dize** parametresi.<br /><br /> **Definesabitleri**'nin geçerli değerinin tutulduğu belirtir. hedef derleme üretimini etkiler; Bu parametre değiştirilirse, hedef derlemedeki ortak API değiştirilebilir ve yerel türlere başvuruda bulunan XAML dosyalarının derlenmesi etkilenebilir. |
+| `ExtraBuildControlFiles` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> Görev tekrar çalıştığında yeniden oluşturma tetiklenip tetiklenmediğini denetleyen dosyaların listesini belirtir <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> ; Bu dosyalardan biri değişirse yeniden oluşturma tetiklenir. |
+| `GeneratedBamlFiles` | İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> XAML ikili biçimindeki oluşturulan dosyaların listesini içerir. |
+| `GeneratedCodeFiles` | İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> Oluşturulan yönetilen kod dosyalarının listesini içerir. |
+| `GeneratedLocalizationFiles` | İsteğe bağlı **ıtaskitem []** çıkış parametresi.<br /><br /> Her yerelleştirilebilir XAML dosyası için oluşturulan yerelleştirme dosyalarının listesini içerir. |
+| `HostInBrowser` | İsteğe bağlı **dize** parametresi.<br /><br /> Oluşturulan derlemenin bir XAML tarayıcı uygulaması (XBAP) olup olmadığını belirtir. Geçerli seçenekler **true** ve **false** şeklindedir. **True** ise tarayıcı barındırmayı desteklemek için kod üretilir. |
+| `KnownReferencePaths` | İsteğe bağlı **dize []** parametresi.<br /><br /> Yapı işlemi sırasında değiştirolmayan derlemelere yönelik başvuruları belirtir. Genel derleme önbelleğinde (GAC), bir .NET yükleme dizininde bulunan derlemeler ve bu şekilde devam eder. |
+| `Language` | Gerekli **dize** parametresi.<br /><br /> Derleyicinin desteklediği yönetilen dili belirtir. geçerli seçenekler **C#**, **VB**, **JScript** ve **C++**' dir. |
+| `LanguageSourceExtension` | İsteğe bağlı **dize** parametresi.<br /><br /> Oluşturulan yönetilen kod dosyasının uzantısına eklenen uzantıyı belirtir:<br /><br /> `<Filename>.g<LanguageSourceExtension>`<br /><br /> **languagesourceextension** parametresi belirli bir değer ile ayarlanmamışsa, dil için varsayılan kaynak dosya adı uzantısı kullanılır: Visual Basic için. *vb* , C# için *. csharp* . |
+| `LocalizationDirectivesToLocFile` | İsteğe bağlı **dize** parametresi.<br /><br /> Her kaynak XAML dosyası için yerelleştirme bilgilerinin nasıl oluşturulacağını belirtir. Geçerli seçenekler None, **CommentsOnly** ve **All** **'tur**. |
+| `OutputPath` | Gerekli **dize** parametresi.<br /><br /> Oluşturulan yönetilen kod dosyalarının ve XAML ikili biçim dosyalarının oluşturulduğu dizini belirtir. |
+| `OutputType` | Gerekli **dize** parametresi.<br /><br /> Bir proje tarafından oluşturulan derlemenin türünü belirtir. Geçerli seçenekler **winexe**, **exe**, **Library** ve **netmodule**' dir. |
+| `PageMarkup` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> İşlenecek XAML dosyalarının bir listesini belirtir. |
+| `References` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> XAML dosyalarında kullanılan türleri içeren derlemelere ait başvuruların listesini belirtir. |
+| `RequirePass2ForMainAssembly` | İsteğe bağlı **Boole** çıkış parametresi.<br /><br /> Projenin, ana derlemeye katıştırılmış yerel türlere başvuran, yerelleştirilemeyen XAML dosyaları içerip içermediğini gösterir. |
+| `RequirePass2ForSatelliteAssembly` | İsteğe bağlı **Boole** çıkış parametresi.<br /><br /> Projenin, ana derlemeye katıştırılmış yerel türlere başvuran yerelleştirilebilir XAML dosyaları içerip içermediğini gösterir. |
+| `RootNamespace` | İsteğe bağlı **dize** parametresi.<br /><br /> Projenin içindeki sınıfların kök ad alanını belirtir. **RootNamespace** , KARŞıLıK gelen xaml dosyası özniteliğini içermiyorsa oluşturulan bir yönetilen kod dosyasının varsayılan ad alanı olarak da kullanılır `x:Class` . |
+| `SourceCodeFiles` | İsteğe bağlı **ıtaskitem []** parametresi.<br /><br /> Geçerli proje için kod dosyalarının listesini belirtir. Liste, dile özgü oluşturulmuş yönetilen kod dosyalarını içermez. |
+| `UICulture` | İsteğe bağlı **dize** parametresi.<br /><br /> Oluşturulan XAML ikili biçimi dosyalarının gömülme Kullanıcı arabirimi kültürü için uydu derlemesini belirtir. **UICulture** ayarlanmamışsa, oluşturulan XAML ikili biçim dosyaları ana derlemeye katıştırılır. |
+| `XAMLDebuggingInformation` | İsteğe bağlı **Boolean** parametresi.<br /><br /> **Doğru** olduğunda, hata ayıklamaya yardımcı olması için tanılama bilgileri OLUŞTURULUP derlenmiş xaml 'e eklenir. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Görev <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> genellikle XAML'i ikili biçimde derler ve kod dosyaları üretir. Bir XAML dosyası aynı projede tanımlanan türlere başvurular içeriyorsa, ikili biçimde derlemesi **MarkupCompilePass1** tarafından ikinci bir işaretleme derleme geçişini (**MarkupCompilePass2**) erteler. Bu tür dosyaların, başvurulan yerel olarak tanımlanmış türler derlenmesine kadar beklemeleri gereken derlemeleri ertelenmiş olması gerekir. Ancak, bir XAML dosyası bir `x:Class` özniteliğine <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> sahipse, bunun için dile özgü kod dosyasını üretir.
+<xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1>Görev genellıkle xaml 'yi ikili biçimde derler ve kod dosyaları oluşturur. Bir XAML dosyası aynı projede tanımlı türlere başvurular içeriyorsa, derleme ikili biçime, **MarkupCompilePass1** tarafından ikinci bir biçimlendirme derleme geçişine (**MarkupCompilePass2**) ertelenir. Başvurulan yerel olarak tanımlanan türler derlenene kadar beklememeleri gerektiğinden, bu tür dosyaların derlenmesi ertelenmelidir. Ancak, bir XAML dosyasında bir öznitelik varsa `x:Class` , <xref:Microsoft.Build.Tasks.Windows.MarkupCompilePass1> dile özgü kod dosyasını oluşturur.
 
-Bir XAML dosyası, özniteliğini kullanan öğeler içeriyorsa `x:Uid` yerelleştirilebilir:
+XAML dosyası özniteliği kullanan öğeler içeriyorsa yerelleştirilebilir `x:Uid` :
 
 ```xml
 <Page x:Class="WPFMSBuildSample.Page1"
@@ -80,7 +80,7 @@ Bir XAML dosyası, özniteliğini kullanan öğeler içeriyorsa `x:Uid` yerelle�
 </Page>
 ```
 
-XAML dosyası, geçerli projedeki bir ad alanına başvurmak için değerini kullanan bir XML ad alanı bildirerek yerel olarak tanımlanmış `clr-namespace` bir türe başvurur:
+XAML dosyası, `clr-namespace` geçerli projedeki bir ad alanına başvurmak için değeri kullanan BIR XML ad alanı algıladığında yerel olarak tanımlanan bir türe başvurur:
 
 ```xml
 <Page x:Class="WPFMSBuildSample.Page1"
@@ -97,11 +97,11 @@ XAML dosyası, geçerli projedeki bir ad alanına başvurmak için değerini kul
 </Page>
 ```
 
-Herhangi bir XAML dosyası yerelleştirilebilirse veya yerel olarak tanımlanmış bir türe başvurursa, [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md) ve [ardından MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)çalıştırmayı gerektiren ikinci bir işaretleme derleme geçişi gereklidir.
+Herhangi bir XAML dosyası yerelleştirilebilir veya yerel olarak tanımlanmış bir türe başvuruyorsa, [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md) ve ardından [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)çalıştırılmasını gerektiren ikinci bir biçimlendirme derleme geçişi gerekir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, üç Sayfa XAML *dosyası ikili* biçim dosyalarına nasıl dönüştürülecek? *Page1,* projenin kök ad alanı içinde olan ve bu nedenle bu işaretleme derleme geçişinin ikili biçim dosyalarına dönüştürülen bir türüne başvuru `Class1` içerir. Bunun yerine [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md) yürütülür ve ardından [MarkupCompilePass2 gelir.](../msbuild/markupcompilepass2-task.md)
+Aşağıdaki örnek, üç *sayfalı* xaml dosyasının ikili biçim dosyalarına nasıl dönüştürüleceğini gösterir. *Sayfa1* , `Class1` projenin kök ad alanındaki bir türe başvuru içerir ve bu nedenle, bu biçimlendirme derleme geçişinde ikili biçim dosyalarına dönüştürülmez. Bunun yerine, [GenerateTemporaryTargetAssembly](../msbuild/generatetemporarytargetassembly-task.md) yürütülür ve ardından [MarkupCompilePass2](../msbuild/markupcompilepass2-task.md)tarafından izlenir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

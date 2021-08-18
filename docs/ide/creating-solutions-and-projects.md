@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: d7d0788a6f2ce14cf68ea82b7dacab160752119545d4b6e3008ddaa644029429
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fba43be5a5b48e39df48d7d0316dfe650e0be2f8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121413302"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109454"
 ---
 # <a name="create-work-with-and-delete-visual-studio-projects-and-solutions"></a>Visual Studio projeleri ve çözümleri oluşturun, bunlarla çalışın ve silin
 

@@ -10,12 +10,13 @@ ms.assetid: ed6ff546-acfa-4dd8-b3a2-6e7455930ca4
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: c93c636d8321affead3c3fce6f3074801cb9ae87
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 0f85602761444283f13a32ef3709a1e417c46d9a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99882654"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047419"
 ---
 # <a name="how-to-select-the-active-run-setting-for-a-load-test"></a>Nasıl yapılır: bir yük testi için etkin çalışma ayarını seçme
 
@@ -28,7 +29,7 @@ Yük testi, bir yük testinin çalışma biçimini etkileyen özellikler kümesi
 > [!NOTE]
 > Çalışma ayarları özelliklerinin ve açıklamalarının tüm listesi için bkz. [Yük testi çalıştırma ayarları özellikleri](../test/load-test-run-settings-properties.md).
 
-Yük testiniz **çalışma ayarları** klasörü altında yalnızca bir çalıştırma ayarı düğümü içeriyorsa, bu düğüm her zaman etkin düğümdür. Yük testiniz birden çok çalışma ayarları düğümü içeriyorsa, bir yük testi çalıştırdığınızda kullanılacak birini seçebilirsiniz. Bkz. [nasıl yapılır: yük testine ek çalışma ayarları ekleme](../test/how-to-add-additional-run-settings-to-a-load-test.md).
+yük testiniz **run Ayarlar** klasörü altında yalnızca bir çalıştırma ayarı düğümü içeriyorsa, bu düğüm her zaman etkin düğümdür. Yük testiniz birden çok çalışma ayarları düğümü içeriyorsa, bir yük testi çalıştırdığınızda kullanılacak birini seçebilirsiniz. bkz. [nasıl yapılır: yük testine ek çalıştırma Ayarlar ekleme](../test/how-to-add-additional-run-settings-to-a-load-test.md).
 
 **Yük Testi Düzenleyicisi**, etkin çalıştırma ayarı "[etkin]" son eki tarafından tanımlanır.
 
@@ -36,7 +37,7 @@ Yük testiniz **çalışma ayarları** klasörü altında yalnızca bir çalış
 
 1. Bir yük testi açın.
 
-2. **Çalışma ayarları** klasörünü genişletin.
+2. **çalıştır Ayarlar** klasörünü genişletin.
 
 3. Etkin düğüm olmasını istediğiniz çalışma ayarları düğümüne sağ tıklayın ve sonra **etkin olarak ayarla**' yı seçin.
 

@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: bb6716e341d62b1e49aa2986a7af666d7cb2140e0c3d0b0d145a116e22ae5a24
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ef40e3e42fed7eb9b981defabdd073e4ab9c8c9e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397299"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108440"
 ---
 # <a name="project-element-msbuild"></a>Project öğesi (MSBuild)
 

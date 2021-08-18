@@ -1,6 +1,6 @@
 ---
-description: Varsayılan dizin oluşturucunun adını alır.
-title: 'IDebugClassField:: Getdefaultındexer | Microsoft Docs'
+description: Varsayılan dizin oluşturmanın adını alır.
+title: IDebugClassField::GetDefaultIndexer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 47ce4f45-3816-4b40-909c-5032d0692d75
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8ce8a492ea4d45a54a295617d7863b0623fd6a87
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1e51d1e31cee9124ed913b1233a05fbbfb20390f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088555"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104189"
 ---
 # <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
-Varsayılan dizin oluşturucunun adını alır.
+Varsayılan dizin oluşturmanın adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +42,13 @@ int GetDefaultIndexer(
 ```
 
 ## <a name="parameters"></a>Parametreler
-`pbstrIndexer` dışı Varsayılan dizin oluşturucunun adını içeren bir dize döndürür.
+`pbstrIndexer` [out] Varsayılan dizin oluşturmanın adını içeren bir dize döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, varsayılan dizin oluşturucu yoksa S_OK döndürür veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, varsayılan S_OK dizin S_FALSE döndüren bir değer döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir sınıfın varsayılan dizin oluşturucusu, `Default` dizi erişimleri için özelliği olarak işaretlenen özelliktir. Bu öğesine özeldir [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] . Aşağıda, içinde belirtilen varsayılan dizin oluşturucunun [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] ve nasıl kullanıldığı hakkında bir örnek verilmiştir.
+ Bir sınıfın varsayılan dizineci, dizi erişimleri için özellik `Default` olarak işaretlenmiş olan özelliktir. Bu, için [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] özeldir. Burada, içinde bildirilen varsayılan bir dizin oluşturma örneği ve nasıl kullanıldıkları ve ve ardından bir örnek ve ardından ve bir dizin oluşturma [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] hakkında daha fazla açıklama bulabilirsiniz.
 
 ```vb
 Imports System.Collections;

@@ -11,14 +11,15 @@ ms.assetid: 0c4ec14d-d8dd-49c1-999c-dcbf4e8e1dc8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e147d97616f846339dc12e3941f6944f277d8318
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 527ab5a69de0698ac876adf2e7b75d540e7e51a3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906860"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060953"
 ---
 # <a name="io-time-threads-view"></a>G/Ç zamanı (İş Parçacıkları Görünümü)
 Zaman çizelgesindeki bu segmentler, g/ç olarak kategorilere ayrılan engelleyici sürelerle ilişkilendirilir. Bu, bir iş parçacığının bir g/ç işleminin bitmesini beklediği anlamına gelir. İş parçacığı bir API 'de engellenmiş olabilir veya g/ç ile ilgili bir çekirdek, eşzamanlılık görselleştiricinin g/ç olarak sayımının tamamlanmasını bekler. , Ve gibi API 'Ler `CreateFile()` `ReadFile()` `WSARecv()` Bu gruba girer.

@@ -11,17 +11,18 @@ ms.assetid: f8c15a58-da77-473e-a721-7a094e306c63
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0e353643a193b999343c762cc0ba813f652ee2a6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9e27190907911be82b2552d8ea057ed02693a356
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066314"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119443"
 ---
 # <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
 Belgedeki belirtilen konumdan metni alır.

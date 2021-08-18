@@ -1,6 +1,6 @@
 ---
 title: R kodu için IntelliSense
-description: Visual Studio IntelliSense, siz R kodu yazarak işlevler, nesne üyeleri, kod parçacıkları ve tamamlamalar hakkında bilgi görüntüler.
+description: Visual Studio Siz R kodu yazarak IntelliSense işlevler, nesne üyeleri, kod parçacıkları ve tamamlamalar hakkında bilgi görüntüler.
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 2afcb305d235f8648f56e8a4a83c566b513bb841cbd94bb64672829ce03efba9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a635ac8cc95648d1885239661c4b7edf4167692b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121395760"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060693"
 ---
 # <a name="intellisense"></a>IntelliSense
 
@@ -29,7 +29,7 @@ Bir işlev veya başka bir deyim yazarken IntelliSense, girdiğinize göre filtr
 
 Seçeneklerin nasıl **ayarlanır?** seçeneğine bağlı olarak  **Sekme** tuşuna basılarak (veya Enter veya Boşluk) açılan menüye seçilen öğeyi ekler. Seçimi ok tuşlarıyla değiştirebilirsiniz.
 
-IntelliSense, R nesnelerinin üyeleri için öneriler de sağlar:
+IntelliSense ayrıca R nesnelerinin üyeleri için öneriler sağlar:
 
 ![Nesne üyeleri için IntelliSense önerileri](media/intellisense-auto-complete-r-objects.png)
 
@@ -61,6 +61,6 @@ IntelliSense aynı dosyada ve geçerli oturumda yer alan değişkenler için de 
 
 ## <a name="code-suggestions"></a>Kod önerileri
 
-Kenar boşluğunda bir ampul (akıllı etiket olarak Visual Studio, yaygın olarak kullanılan bir eylem için kullanılabilen bir kısayol olduğunu öneren bir eylemdir. Örneğin, bir ampul görmek için düzenleyicide `library` deyimi içeren bir satırın üzerine gelin. Ampul seçerek kullanılabilir seçenekler görüntülenir:
+Kenar boşluğunda bir ampul (akıllı etiket olarak adlandırılan) Visual Studio yaygın olarak kullanılan bir eylem için bir kısayol olduğunu öneren bir durum vardır. Örneğin, bir ampul görmek için düzenleyicide `library` deyimi içeren bir satırın üzerine gelin. Ampul seçerek kullanılabilir seçenekler görüntülenir:
 
 ![Düzenleyicide R için akıllı etiketler](media/intellisense-smart-tags.png)

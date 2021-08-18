@@ -11,17 +11,18 @@ ms.assetid: ed84aa98-7ec7-48f3-97ae-821090bc3664
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ca0bb320bfe55879b290093a60c347b3a820e35d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5458ec92e121fcfe954e03a660370ec207d3ba55
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083667"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118638"
 ---
 # <a name="idebugqueryengine2getengineinterface"></a>IDebugQueryEngine2::GetEngineInterface
 Özel bir hata ayıklama altyapısı (DE) arabirimini alır.

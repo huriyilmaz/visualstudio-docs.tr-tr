@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: cb8d4889930ce15823f8b850402acfc7d5db9cecfd2c56d364a8af2a497cbce5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 482e0e3a797f0906792868a022bea4f7e5aa329e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121228759"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136137"
 ---
 # <a name="how-to-add-a-property-to-a-sharepoint-project-item-extension"></a>Nasıl yapabilirsiniz: Bir SharePoint proje öğesi uzantısına özellik ekleme
   Bir proje öğesi uzantısını kullanarak, önceden SharePoint bir proje öğesine özellik Visual Studio. özelliği, proje öğesi **Çözüm Gezgini.** 

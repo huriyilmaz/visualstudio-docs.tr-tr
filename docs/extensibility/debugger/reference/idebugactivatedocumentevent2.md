@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5eeae3a29c4e0fdfaad3808228ce6bed9cfe3d7ff2f6e56f0699ed4e051d64df
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2e2e1e516774f1acfe4041c58b97e4892aefd242
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434236"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104488"
 ---
 # <a name="idebugactivatedocumentevent2"></a>IDebugActivateDocumentEvent2
 Hata ayıklama altyapısı (DE), bir belgenin yüklenmek için bu arabirimi kullanır.

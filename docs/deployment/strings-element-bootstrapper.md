@@ -18,14 +18,15 @@ ms.assetid: d5ea3613-5fc9-4a11-bef3-46a01178bf60
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: a2c8cac705f4e6ae8d72f3a2e9bd5ec4c8ed68bd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c962435431164f78e542d9186bfe44c4659a3923
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877479"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122073714"
 ---
 # <a name="ltstringsgt-element-bootstrapper"></a>&lt;Dizeler &gt; öğesi (önyükleyici)
 Ürün adları, paket adları ve yükleme hata iletileri için yerelleştirilmiş dizeleri tanımlar.
@@ -54,7 +55,7 @@ ms.locfileid: "99877479"
 |`Name`|Gereklidir. Dizenin adı.|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, .NET Framework yükleyicisi için tüm Ingilizce dizeleri belirtir.
+ aşağıdaki kod örneği, .NET Framework yükleyicisi için tüm ingilizce dizeleri belirtir.
 
 ```xml
 <Strings>

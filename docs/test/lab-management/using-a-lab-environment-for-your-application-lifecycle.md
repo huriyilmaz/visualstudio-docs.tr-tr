@@ -1,6 +1,6 @@
 ---
 title: DevOps için laboratuvar ortamı kullanma
-description: Laboratuvar ortamları ve Azure Pipelines ile bulutu kullanmayı ve Team Foundation Server derleme ve yayınlama hakkında bilgi edinin.
+description: laboratuvar ortamları ve Azure Pipelines ile bulutu kullanmayı ve Team Foundation Server derleme ve yayınlama hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: how-to
@@ -8,15 +8,16 @@ helpviewer_keywords:
 - lab environment, test lab
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: a16b8df2539272f96f0211fdf08e32fe4e4eaac8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e411beddb093a75528e2cacd2d3eba945e134b62
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99887828"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033024"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps 'niz için laboratuvar ortamı kullanma
 
@@ -30,7 +31,7 @@ Laboratuvar ortamı, uygulama geliştirmek ve test etmek için kullanabileceğin
 
 Yaygın laboratuvar ortamı Topolojilerine örnekler aşağıda verilmiştir:
 
-| Topoloji | Description |
+| Topoloji | Açıklama |
 |---|---|
 |![Yalnızca sunucu topolojisi](../media/topology_backend.png)| Bu laboratuvar ortamında, genellikle sunucu uygulamalarında el ile testleri çalıştırmak için kullanılan ve Test edicilerin ortamdaki hataları doğrulamak için kendi istemci makinelerini kullanmasına izin veren bir *sunucu topolojisi* vardır. Bir arka uç topolojisinde, Laboratuvar ortamınız yalnızca sunucular içerir. Bu tür bir topoloji kullandığınızda, genellikle ortamı parçası olmayan bir istemci makinesini kullanarak Laboratuvar ortamındaki sunuculara bağlanırsınız.|
 |![Bulut Laboratuvarı ortamı](../media/topology_cloud.png)| Bu laboratuvar ortamı _sunucu topolojisi_ olarak benzer özellikler ve özellikler sağlar, ancak yerel bir ortamda çalışan fiziksel veya sanal makinelerin gereksinimini ortadan kaldırır; Bu, kurulum süresini azaltabilir, bakımın basitleşebilir ve maliyeti en aza indirir. Özel ağlarla birlikte birden çok Web sitesi ve sanal makine ayarlamak, Microsoft Azure gibi bir bulut ortamında hızlı ve kolaydır.|
@@ -47,11 +48,11 @@ Yaygın laboratuvar ortamı Topolojilerine örnekler aşağıda verilmiştir:
 
 ## <a name="use-the-cloud-with-azure-pipelines-or-team-foundation-server-build-and-release"></a>Azure Pipelines veya Team Foundation Server derleme ve yayınlama ile bulutu kullanın
 
-Team Foundation Server (TFS) ve Azure Test Plans içindeki [derleme ve sürüm](/azure/devops/pipelines/index?view=vsts&preserve-view=true) özelliklerini kullanarak otomatik test ve yapı-dağıtma-test Otomasyonu yapabilirsiniz. Bazı avantajlar şunlardır:
+Team Foundation Server (TFS) ve Azure Test Plans içindeki [derleme ve sürüm](/azure/devops/pipelines/index?view=vsts&preserve-view=true) özelliklerini kullanarak otomatik test ve yapı-dağıtma-test otomasyonu yapabilirsiniz. Bazı avantajlar şunlardır:
 
 * Yapı denetleyicisine veya test denetleyicisine ihtiyacınız yoktur.
 * Test Aracısı, derleme veya yayın kapsamında bir görev aracılığıyla yüklenir.
-* Dağıtım adımlarının özelleştirilmesi kolaydır. Artık tek bir betiği kullanma yetkiniz yok. Ayrıca, üründe bulunan pek çok görevden ve Visual Studio Market de yararlanabilirsiniz.
+* Dağıtım adımlarının özelleştirilmesi kolaydır. Artık tek bir betiği kullanma yetkiniz yok. ayrıca, üründe bulunan pek çok görevden ve Visual Studio marketi 'nden de yararlanabilirsiniz.
 * Test paketlerini sürdürmek zorunda değilsiniz. Testleri doğrudan ikili dosyalardan çalıştırabilirsiniz.
 * Her derleme veya sürümde çalışan testler için daha zengin bir satır içi raporlama deneyimi alırsınız.
 * Hangi varlıkların (Yayın, derleme, iş öğeleri, işlemeler) Şu anda hangi ortamlarda dağıtıldığını ve test edildiğini izleyebilirsiniz.
@@ -77,11 +78,11 @@ Laboratuvar Yönetimi System Center Virtual Machine Manager (SCVMM) ile birlikte
 
 ### <a name="standard-environments-and-scvmm-environments"></a>Standart ortamlar ve SCVMM ortamları
 
-Visual Studio Laboratuvar Yönetimi: **Standart ortamlar** ve **SCVMM ortamları** ile oluşturabileceğiniz iki tür laboratuvar ortamı vardır. Ancak, her bir ortam türünün özellikleri farklıdır.
+Visual Studio Laboratuvar Yönetimi: **standart ortamlar** ve **SCVMM ortamları** ile oluşturabileceğiniz iki tür laboratuvar ortamı vardır. Ancak, her bir ortam türünün özellikleri farklıdır.
 
 **Standart ortamlar:** sanal ve fiziksel makinelerin bir karışımını içerebilir. Ayrıca, üçüncü taraf sanallaştırma çerçeveleri tarafından yönetilen standart bir ortama sanal makineler ekleyebilirsiniz. Ayrıca, standart ortamlar bir SCVMM sunucusu gibi ek sunucu kaynakları gerektirmez.
 
-**SCVMM ortamları:** yalnızca SCVMM tarafından yönetilen sanal makineler içerebilir (System Center Virtual Machine Manager), bu nedenle SCVMM ortamlarındaki sanal makineler yalnızca Hyper-V sanallaştırma çerçevesinde çalıştırılabilir. Ancak, SCVMM ortamları standart ortamlarda kullanılamayan aşağıdaki Otomasyon ve yönetim özelliklerini sağlar:
+**scvmm ortamları:** yalnızca scvmm tarafından yönetilen sanal makineler içerebilir (System Center Virtual Machine Manager), bu nedenle scvmm ortamlarındaki sanal makineler yalnızca Hyper-V sanallaştırma çerçevesinde çalıştırılabilir. Ancak, SCVMM ortamları standart ortamlarda kullanılamayan aşağıdaki Otomasyon ve yönetim özelliklerini sağlar:
 
 - **Ortam anlık görüntüleri:** Ortam anlık görüntüleri bir laboratuvar ortamının durumunu içerir, böylece temiz bir ortamı hızlıca geri yükleyebilir veya değiştirilmiş bir ortamın durumunu kaydedebilirsiniz. Ayrıca, ortam anlık görüntülerini kaydetme ve geri yükleme işlemini otomatikleştirmek için bir yapı dağıtma test iş akışı da kullanabilirsiniz.
 
@@ -115,7 +116,7 @@ Standart ortamlar ve SCVMM ortamları, aynı özelliklerin birçoğunu destekler
 |Ortam anlık görüntülerini kullanarak laboratuvar ortamının durumunu kaydetme ve dağıtma|Desteklenir|Desteklenmez|
 |VM şablonlarından laboratuvar ortamları oluşturma|Desteklenir|Desteklenmez|
 |Başlat/Durdur/anlık görüntü ortamı|Desteklenir|Desteklenmez|
-|Ortam Görüntüleyicisi 'ni kullanarak ortama bağlanma|Desteklenir|Desteklenir|
+|ortam görüntüleyicisi 'ni kullanarak ortama Bağlan|Desteklenir|Desteklenir|
 |Ağ yalıtımı kullanarak bir ortamın birden çok kopyasını aynı anda çalıştırma|Desteklenir|Desteklenmez|
 
 ### <a name="lab-management-concepts"></a>Laboratuvar yönetimi kavramları
@@ -125,8 +126,8 @@ Devam etmeden önce bilmeniz gereken bazı ek kavramlar aşağıda verilmiştir:
 |Süre|Açıklama|
 |-|-----------------|
 |Laboratuvar Merkezi|Laboratuvar ortamlarını oluşturduğunuz ve yönettiğiniz Microsoft Test Yöneticisi alanı.|
-|Azure DevOps proje Laboratuvarı|Kendilerine bağlanıp sanal makinelerini çalıştırabilmeniz için ayarlanmış laboratuvar ortamları koleksiyonu.|
-|Azure DevOps proje kitaplığı|Projenizin konak grubuna aktarılmış olan depolanan sanal makineler, şablonlar ve depolanan laboratuvar ortamları arşivi. Kitaplığınızdaki öğeleri SCVMM ortamlarıyla kullanabilirsiniz; Ancak, bunları doğrudan standart bir ortama ekleyemezsiniz. Kitaplığınızdaki öğeleri çalıştıramazsınız; Bunun yerine, bunları yeni bir ortam dağıtmak için kullanırsınız.|
+|Azure DevOps Project laboratuvarı|Kendilerine bağlanıp sanal makinelerini çalıştırabilmeniz için ayarlanmış laboratuvar ortamları koleksiyonu.|
+|Azure DevOps Project kitaplığı|Projenizin konak grubuna aktarılmış olan depolanan sanal makineler, şablonlar ve depolanan laboratuvar ortamları arşivi. Kitaplığınızdaki öğeleri SCVMM ortamlarıyla kullanabilirsiniz; Ancak, bunları doğrudan standart bir ortama ekleyemezsiniz. Kitaplığınızdaki öğeleri çalıştıramazsınız; Bunun yerine, bunları yeni bir ortam dağıtmak için kullanırsınız.|
 |Dağıtılan ortam|Bu sunucuya bağlanıp makinelerini çalıştırabilmeniz için proje laboratuvarınıza dağıtılan bir laboratuvar ortamı.|
 
 Laboratuvar Yönetimi hakkında daha fazla bilgi için bkz.

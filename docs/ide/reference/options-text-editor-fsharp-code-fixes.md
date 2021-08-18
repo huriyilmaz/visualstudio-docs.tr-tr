@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 004a3600066faa10758eccfaa718c72916aaf0c4c115d0466f1178d08c38e6a2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2f63076cdccf2324ab85602054babecb27628ec5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387258"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041132"
 ---
 # <a name="options-text-editor--f--code-fixes"></a>Seçenekler: F# > Metin Düzenleyici > Kod Düzeltmeleri
 

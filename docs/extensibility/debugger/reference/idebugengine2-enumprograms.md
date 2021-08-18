@@ -1,6 +1,6 @@
 ---
-description: Bir hata ayıklama altyapısı (DE) tarafından hata ayıklama yapılan tüm programların listesini alır.
-title: IDebugEngine2::EnumPrograms | Microsoft Docs
+description: Hata ayıklama altyapısı (DE) tarafından hata ayıklanan tüm programların listesini alır.
+title: 'IDebugEngine2:: EnumPrograms | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8eadecaef6602d5b4c9c9f21559d26f8469cd5e38dd794b0a296fc869ebc48b5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f2e213ebb630cd87f9f9f336fd8f3092d24fca74
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121261742"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118976"
 ---
 # <a name="idebugengine2enumprograms"></a>IDebugEngine2::EnumPrograms
-Bir hata ayıklama altyapısı (DE) tarafından hata ayıklama yapılan tüm programların listesini alır.
+Hata ayıklama altyapısı (DE) tarafından hata ayıklanan tüm programların listesini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int EnumPrograms(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[out] DE tarafından hata ayıklanmış olan tüm programların listesini içeren [bir IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) nesnesi döndürür.
+dışı Bir DE tarafından hata ayıklanan tüm programların listesini içeren bir [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

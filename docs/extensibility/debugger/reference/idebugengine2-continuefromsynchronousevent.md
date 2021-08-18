@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 795de0521d4ea33b54cf8875e45a74a8ff61ab64a59eb664c73d96ac9e73822d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c1febf6a5e473d0e67b2625e0d684479ecb74890
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121261768"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119158"
 ---
 # <a name="idebugengine2continuefromsynchronousevent"></a>IDebugEngine2::ContinueFromSynchronousEvent
 Daha önce hata ayıklama altyapısı (DE) tarafından SDM 'ye gönderilen zaman uyumlu bir hata ayıklama olayının alındığını ve işlendiğini göstermek için oturum hata ayıklama Yöneticisi (SDM) tarafından çağırılır.

@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, zaman uyumsuz ifade değerlendirmesi tamamlandığında, hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi (SDM) tarafından gönderilir.
+description: Bu arabirim, zaman uyumsuz ifade değerlendirmesi tamamlandığında hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
 title: IDebugExpressionEvaluationCompleteEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: d538fc19-55bf-4231-9595-eb01e84fd1d8
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: b30b61c0b7a9a9f3e06465a6b194c882213afb34
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f6690c2bd598b0662cc5ef54170726ac8efe99e2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092208"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118742"
 ---
 # <a name="idebugexpressionevaluationcompleteevent2"></a>IDebugExpressionEvaluationCompleteEvent2
-Bu arabirim, zaman uyumsuz ifade değerlendirmesi tamamlandığında, hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi (SDM) tarafından gönderilir.
+Bu arabirim, zaman uyumsuz ifade değerlendirmesi tamamlandığında hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,31 +30,31 @@ Bu arabirim, zaman uyumsuz ifade değerlendirmesi tamamlandığında, hata ayık
 IDebugExpressionEvaluationCompleteEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bu arabirimi, [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md)çağrısıyla başlatılan bir ifade değerlendirmesinin tamamlanmasını RAPORLAMAK için de uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir. SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) kullanır `IDebugEvent2` .
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, EvaluateAsync çağrısıyla başlayan bir ifade değerlendirmesinin tamamlanmasını rapor etmek için [bu arabirimini uygulamaya almaktadır.](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak uygulanarak. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE, bir ifade değerlendirmesinin tamamlanmasını raporlamak için bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
+ DE, ifade değerlendirmesinin tamamlanmasını rapor etmek için bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklaması yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugExpressionEvaluationCompleteEvent2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugExpressionEvaluationCompleteEvent2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetExpression](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getexpression.md)|Özgün ifadeyi alır.|
-|[GetResult](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md)|İfade değerlendirmesinin sonucunu alır.|
+|[GetResult](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md)|İfade değerlendirmesinin sonucu alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Aynı değerlendirme başarılı olup olmadığı için DE bu olayı göndermelidir.
+ Değerlendirmenin başarılı olup olmadığı, DE'nin bu olayı göndermesi gerekir.
 
- Değerlendirme başarılı olmazsa, `DEBUG_PROPINFO_VALUE` ve `DEBUG_PROPINFO_ATTRIB` bayrakları [getpropertyınfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) tarafından döndürülen [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısında ayarlanmayacak ( [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi, tarafından oluşturulur ve `IDebugExpressionEvaluationCompleteEvent2` değerlendirme başarısız olursa olayda döndürülür).
+ Değerlendirme başarılı olmadı ise GetPropertyInfo tarafından döndürülen DEBUG_PROPERTY_INFO yapısında ve bayrakları ayarlanmaz `DEBUG_PROPINFO_VALUE` `DEBUG_PROPINFO_ATTRIB` [](../../../extensibility/debugger/reference/debug-property-info.md) [(IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) [](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) nesnesi DE tarafından oluşturulur ve değerlendirme başarısız olursa `IDebugExpressionEvaluationCompleteEvent2` olayda döndürülür).
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)

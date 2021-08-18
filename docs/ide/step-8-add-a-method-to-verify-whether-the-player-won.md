@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: f17d6dd777b443a79f92d038d18199a6c95ec6b8d59e406cb97de88c13f80264
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 270adddde131adf43761ce384e21ff993f161e43
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121371612"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048511"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>8. Adım: Oyuncunun kazanıp kazanmadığını doğrulamak için yöntem ekleme
 Eğlenceli bir oyun oluşturdunuz, ancak bitirmek için bir şeye daha ihtiyaç var. Oyuncu kazanırken oyun sona erer, bu nedenle oyuncunun kazanıp kazanmad `CheckForWinner()` olmadığını doğrulamak için bir yöntem eklemeniz gerekir.
@@ -34,9 +34,9 @@ Eğlenceli bir oyun oluşturdunuz, ancak bitirmek için bir şeye daha ihtiyaç 
       > [!IMPORTANT]
       > C# kod parçacığını veya kod parçacığını görüntülemek için bu sayfanın sağ üst kısmında yer alan programlama dili Visual Basic kullanın.<br><br>![Docs.Microsoft.com için programlama dili denetimi](../ide/media/docs-programming-language-control.png)     
 
-     yöntemi, içinde her `foreach` etiketin üzerinden gitmek için C# Visual Basic içinde `For Each` başka bir döngü <xref:System.Windows.Forms.TableLayoutPanel> kullanır. Her etiketin simge rengini kontrol etmek için (C# ve Visual Basic) eşitlik işlecini kullanır ve arka planla eş olup olmadığını `==` `=` doğrular. Renkler eşleşiyorsa simge görünmez halde kalır ve oyuncu kalan simgelerin tümünü eşleştirmemiştir. Bu durumda program, yönteminin `return` geri kalanını atlamak için deyimini kullanır. Döngü deyimini yürütmeden tüm etiketlerden geçiyorsa, formda tüm `return` simgeler eşleniyor demektir. Program, oyuncunun kazanmayı amaçladığını gösteren bir MessageBox gösterir ve ardından oyunu sona ererken formun `Close()` yöntemini çağıran bir ileti kutusu gösterir.
+     yöntemi, içinde her `foreach` etiketin üzerinden gitmek için C# Visual Basic içinde `For Each` başka bir döngü <xref:System.Windows.Forms.TableLayoutPanel> kullanır. Her etiketin simge rengini kontrol etmek için (C# ve Visual Basic) eşitlik işlecini kullanır ve arka planla eş olup olmadığını `==` `=` doğrular. Renkler eşleşiyorsa simge görünmez halde kalır ve oyuncu kalan simgelerin tümünü eşleştirmemiştir. Bu durumda program, yönteminin `return` geri kalanını atlamak için deyimini kullanır. Döngü deyimini yürütmeden tüm etiketlerden geçiyorsa, formda tüm `return` simgelerin eş olduğu anlamına gelir. Program, oyuncunun kazanmayı amaçladığını gösteren bir MessageBox gösterir ve ardından oyunu sona ererken formun `Close()` yöntemini çağıran bir ileti kutusu gösterir.
 
-2. Ardından, etiketin olay <xref:System.Windows.Forms.Control.Click> işleyicisini yeni yöntemi `CheckForWinner()` çağırtır. Oyuncunun seçtiği ikinci simgeyi gösterdikten hemen sonra programınızın bir kazanan olup olmadığını denetlediğinden emin olun. Seçilen ikinci simgenin rengini ayar seçtiğiniz satırı arayın ve aşağıdaki kodda gösterildiği gibi yöntemini bundan `CheckForWinner()` hemen sonra çağırabilirsiniz.
+2. Ardından, etiketin olay <xref:System.Windows.Forms.Control.Click> işleyicisini yeni yöntemi `CheckForWinner()` çağırtır. Oyuncunun seçtiği ikinci simgeyi gösterdikten hemen sonra programınızın bir kazanan olup olmadığını denetlediğinden emin olun. Seçilen ikinci simgenin rengini ayar seçtiğiniz satırı arayın ve ardından aşağıdaki kodda gösterildiği gibi yöntemini bundan `CheckForWinner()` hemen sonra çağırabilirsiniz.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step8/cs/form1.cs" id="Snippet11":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step8/vb/form1.vb" id="Snippet11":::

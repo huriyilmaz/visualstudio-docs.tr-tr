@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 67715b3f0c1b7284c40a20f05cb48fd23a57e81c4044d9792a24e5847f0c6177
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e18c7224d68642cd5afc30b59375060c30b6d767
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121455242"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134580"
 ---
 # <a name="idiaenumframedata"></a>IDiaEnumFrameData
 Veri kaynağında bulunan çeşitli çerçeve veri öğelerini numaralar.
