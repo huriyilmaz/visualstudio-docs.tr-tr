@@ -1,6 +1,6 @@
 ---
-description: Eklenen kaynakların numaralandırma dizisini başlangıca sıfırlar.
-title: 'IDiaEnumInjectedSources:: Reset | Microsoft Docs'
+description: En baştaki yeni kaynaklara bir numaralama dizisini sıfırlar.
+title: IDiaEnumInjectedSources::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c5dafd06c93866f59a125da0503823a6ef6a1b46
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 676e40a0b564b98637a36f1b1bbb1a847ea2ca85e907772baa538bb944586f72
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074935"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455138"
 ---
 # <a name="idiaenuminjectedsourcesreset"></a>IDiaEnumInjectedSources::Reset
-Bir numaralandırma dizisini başlangıca sıfırlar.
+Bir numaralama dizisini en başta sıfırlar.
 
 ## <a name="syntax"></a>Syntax
 

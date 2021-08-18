@@ -8,14 +8,15 @@ ms.assetid: 97f0bff5-7e48-4914-8f04-8015a1c6bfae
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d304e2579be2ea75cd8ff30c263c0ebdd517a4e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 50cd69ea0b46d54095faebf2981de1f1ba0299f2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99943600"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135149"
 ---
 # <a name="state-machine-activity-designers"></a>Durum Makinesi Etkinlik Tasarımcıları
 
@@ -33,7 +34,7 @@ ms.locfileid: "99943600"
 ## <a name="related-sections"></a>İlgili Bölümler
  Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın.
 
- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
+ [Denetim Flow](../workflow-designer/control-flow-activity-designers.md)
 
  [Akış Çizelgesi](../workflow-designer/flowchart-activity-designers.md)
 

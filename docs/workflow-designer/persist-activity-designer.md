@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-kalıcı etkinlik Tasarımcısı
-description: Kalıcı etkinlik ve kalıcı etkinlik tasarımcısının kalıcı etkinlik oluşturmak ve yapılandırmak için nasıl kullanılacağı hakkında bilgi edinin.
+title: İş Akışı Tasarımcısı - Kalıcı Etkinlik Tasarımcısı
+description: Kalıcı etkinlik hakkında bilgi edinmek ve Kalıcı etkinlik tasarımcısını kullanarak Bir Kalıcı etkinlik oluşturma ve yapılandırma hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,36 +10,37 @@ ms.assetid: be8648dd-3eb9-4a50-8ec1-57a8be804692
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 988c080b7b6c89baa4151858fcaf4e3320582e09
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2f0040b4c816ee55e6db7c59c3a74c53cedb51d5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99968729"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135357"
 ---
 # <a name="persist-activity-designer"></a>Persist Etkinlik Tasarımcısı
 
-**Kalıcı** etkinlik Tasarımcısı, etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.Persist> .
+Etkinlik **oluşturmak** ve yapılandırmak için Kalıcı etkinlik tasarımcısı <xref:System.Activities.Statements.Persist> kullanılır.
 
-## <a name="the-persist-activity"></a>Kalıcı etkinlik
+## <a name="the-persist-activity"></a>Kalıcı Etkinlik
 
-<xref:System.Activities.Statements.Persist>Etkinlik, mümkünse bir iş akışını diske kaydeder. <xref:System.Activities.Statements.Persist>Etkinlik, örneğin bir etkinlik içinde, kalıcılık olmayan bir bölgede yürütülemez <xref:System.Activities.Statements.TransactionScope> . <xref:System.Activities.Statements.Persist>Kalıcı olmayan bir kapsamda etkinlik kullanıyorsanız, çalışma zamanında bir özel durum oluşturulur.
+Etkinlik, <xref:System.Activities.Statements.Persist> mümkünse bir iş akışını diske kaydeder. Etkinlik, örneğin bir etkinlik içinde olduğu gibi <xref:System.Activities.Statements.Persist> kalıcılık olmayan bir bölgede <xref:System.Activities.Statements.TransactionScope> yürütülmez. Kalıcılık olmayan <xref:System.Activities.Statements.Persist> bir kapsamda etkinlik kullanırsanız, çalışma zamanında bir özel durum oluşturur.
 
-### <a name="using-the-persist-activity-designer"></a>Kalıcı etkinlik tasarımcısını kullanma
+### <a name="using-the-persist-activity-designer"></a>Kalıcı Etkinlik Tasarımcısını Kullanma
 
-**Kalıcı** etkinlik **Tasarımcısı araç kutusu sekmesine** tıklanarak erişilen (alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu veya Ctrl + Alt + X ' i seçerek **),** **çalışma alanının çalışma zamanı** kategorisinde bulunabilir.
+Kalıcı **etkinlik** tasarımcısı, Araç  Kutusu sekmesine tıklayarak erişilen Araç Kutusu'nun Çalışma Zamanı kategorisinde  bulunabilir (Alternatif olarak, Görünüm menüsünden Araç Kutusu'nı veya CTRL+ALT+X'i seçin.)  
 
-**Kalıcı** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.Persist> , varsayılan olarak **görünmeyen** bir etkinlik oluşturur. , <xref:System.Activities.Activity.DisplayName%2A> **Kalıcı** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
+**Kalıcı etkinlik** tasarımcısı Araç Kutusundan  sürüklenip bir içinde olduğu gibi, İş Akışı Tasarımcısı yerleştirildikten sonra araç yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.Persist> **DisplayName** değeri Kalıcı olan bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, Kalıcı etkinlik tasarımcısının üst  bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
 
-### <a name="the-persist-properties"></a>Devam eden özellikler
+### <a name="the-persist-properties"></a>Kalıcı Özellikler
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.Persist> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları İş Akışı Tasarımcısı yüzeyinde düzenlenebilirler.
+Aşağıdaki tablo, <xref:System.Activities.Statements.Persist> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazı özellikler yüzeyde İş Akışı Tasarımcısı düzenlenebilir.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.Activities.Statements.Persist> . Varsayılan değer korunur. Görünen ad kesinlikle gerekli olmasa da, bir görünen ad kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay <xref:System.Activities.Statements.Persist> adı. Varsayılan değer Kalıcı'dır. Görünen ad kesinlikle gerekli değildir ancak görünen ad kullanmak en iyi uygulamadır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

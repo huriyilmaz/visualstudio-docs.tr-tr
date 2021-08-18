@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, adresi bu arabirimle temsil edilen nesnenin sahibi olan işlem kimliğine erişim sağlar.
+description: Bu arabirim, adresi bu arabirim tarafından temsil edilen nesneye sahip olan işlemin KIMLIĞINE erişim sağlar.
 title: IDebugAddress2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: be12b088771484f1202fbb4cc806ae041d6d23778aa2e7efcb2ceee2cf1d1dd0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ef1058f11cc377b9c1b0ccc3a37f0d4d1ad57014
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121403188"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104436"
 ---
 # <a name="idebugaddress2"></a>IDebugAddress2
-Bu arabirim, adresi bu arabirimle temsil edilen nesnenin sahibi olan işlem kimliğine erişim sağlar.
+Bu arabirim, adresi bu arabirim tarafından temsil edilen nesneye sahip olan işlemin KIMLIĞINE erişim sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,25 +30,25 @@ Bu arabirim, adresi bu arabirimle temsil edilen nesnenin sahibi olan işlem kiml
 IDebugAddress2 : IDebugAddress
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Sembol sağlayıcısı bu arabirimi [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimini uygulayan aynı nesne üzerinde kullanır. Bu arabirim, bu adresle ilgili nesnenin sahibi olan işlem kimliğine erişim sağlar.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bir sembol sağlayıcısı, bu arabirimi [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimini uygulayan aynı nesne üzerinde uygular. Bu arabirim, bu adresle ilgili nesnenin sahibi olan işlemin KIMLIĞINE erişim sağlar.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  Bu arabirimi [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabiriminden almak için [QueryInterface](/cpp/atl/queryinterface) kullanın.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
- [Bu arabirim, IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabiriminden devralınan yöntemlere ek olarak aşağıdaki yöntemi de kullanır:
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabiriminden devralınan yöntemlere ek olarak, bu arabirim aşağıdaki yöntemi uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetProcessID](../../../extensibility/debugger/reference/idebugaddress2-getprocessid.md)|Bu arabirim tarafından temsil edilen nesnenin sahibi olan işlem kimliğini alın.|
+|[GetProcessID](../../../extensibility/debugger/reference/idebugaddress2-getprocessid.md)|Bu arabirim tarafından temsil edilen nesnenin sahibi olan işlemin KIMLIĞINI alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: sh.h
+ Üstbilgi: SH. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

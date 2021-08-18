@@ -1,6 +1,6 @@
 ---
-description: Bu diğer adla ilişkili değeri temsil eden bir yönetilen kod arabirimini alır.
-title: 'IDebugAlias:: GetICorDebugValue | Microsoft Docs'
+description: Bu diğer adla ilişkili değeri temsil eden bir yönetilen kod arabirimini verir.
+title: IDebugAlias::GetICorDebugValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: b9eb39ee-84af-4ace-9cfe-236b3d48aff5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ad6cd04d077245d3e893099aab8820ddc8ccf559
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 223414a7fea10f14fdc8e8c9d71f5b3dbb036ba2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095920"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104435"
 ---
 # <a name="idebugaliasgeticordebugvalue"></a>IDebugAlias::GetICorDebugValue
-Bu diğer adla ilişkili değeri temsil eden bir yönetilen kod arabirimini alır.
+Bu diğer adla ilişkili değeri temsil eden bir yönetilen kod arabirimini verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int GetICorDebugValue(
 
 ## <a name="parameters"></a>Parametreler
 `ppUnk`\
-[out] `IUnknown` Bu diğer adla ilişkili değeri temsil eden arabirim. Bu arabirim arabirim için sorgulanabilir `ICorDebugValue` .
+[out] `IUnknown` arabirimi, bu diğer adla ilişkili değeri temsil eder. Bu arabirim, arabirim için sorgu `ICorDebugValue` olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem yalnızca yönetilen değerler için geçerlidir ( `ICorDebugValue` .NET Framework kullanılabilir bir arabirimdir ve CorDebug. IDL dosyasındaki .NET Framework SDK 'sında tanımlanmıştır).
+ Bu yöntem yalnızca yönetilen değerler için geçerlidir (bu, .NET Framework'de kullanılabilen bir arabirimdir ve `ICorDebugValue` cordebug.idl dosyasındaki .NET Framework SDK'sı içinde tanımlanır).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

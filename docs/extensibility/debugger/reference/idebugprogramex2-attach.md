@@ -11,17 +11,18 @@ ms.assetid: 33b22b2f-431e-4205-9441-d28a9c928c97
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f4f7f6a083c37ece73be488ab0c4f6d4c25ce24c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c97b8711f788c35c4e586c43f9c95c384076831a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084161"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122071586"
 ---
 # <a name="idebugprogramex2attach"></a>IDebugProgramEx2::Attach
 Bir programa oturum iliştirme.

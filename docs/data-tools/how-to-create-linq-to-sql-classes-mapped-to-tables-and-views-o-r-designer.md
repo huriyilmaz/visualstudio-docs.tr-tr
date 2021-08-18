@@ -11,21 +11,21 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 67490346313b37b54520dc0ba8df22cf6299677a77bdd476c158dbc513630ec2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 58e6951aee44abaa4a628f39b40bae3a009f8843
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121347135"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052726"
 ---
 # <a name="how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-or-designer"></a>Nasıl yapılır: Tablolar ve görünümler ile eşlenen LINQ to SQL sınıfları oluşturma (O/R Tasarımcısı)
 
-[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]veritabanı tablolarına ve görünümlerine eşlenen sınıflara varlık sınıfları *adı verilmektedir.* Varlık sınıfı bir kayıtla eşlerken, varlık sınıfının tek tek özellikleri bir kaydın tek tek sütunlarıyla eşler. Veritabanı tablolarını veya görünümlerini temel alan varlık sınıfları oluşturmak için  Sunucu Gezgini veya **Veritabanı Gezgini'deki** LINQ to SQL [araçlarına Visual Studio.](../data-tools/linq-to-sql-tools-in-visual-studio2.md) **O/R Tasarımcısı** sınıfları üretir ve işlevselliği etkinleştirmek için belirli öznitelikleri uygular (veri iletişimi ve düzenleme [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] <xref:System.Data.Linq.DataContext> özellikleri). Sınıflar hakkında ayrıntılı [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] bilgi için [bkz. LINQ to SQL modeli.](/dotnet/framework/data/adonet/sql/linq/the-linq-to-sql-object-model)
+[!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]veritabanı tablolarına ve görünümlerine eşlenen sınıflara varlık sınıfları *adı verilmektedir.* Varlık sınıfı bir kayıtla eşlerken, varlık sınıfının tek tek özellikleri bir kaydın tek tek sütunlarıyla eşler. Veritabanı tablolarını veya görünümlerini temel alan varlık sınıfları oluşturmak için  Sunucu Gezgini **veya Veritabanı Gezgini'deki** LINQ to SQL [araçlarına Visual Studio.](../data-tools/linq-to-sql-tools-in-visual-studio2.md) **O/R Tasarımcısı** sınıfları üretir ve işlevselliği etkinleştirmek için belirli öznitelikleri uygular (veri iletişimi ve düzenleme [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] <xref:System.Data.Linq.DataContext> özellikleri). Sınıflar hakkında ayrıntılı [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] bilgi için [bkz. LINQ to SQL modeli.](/dotnet/framework/data/adonet/sql/linq/the-linq-to-sql-object-model)
 
 > [!NOTE]
 > **O/R Tasarımcısı yalnızca** 1:1 eşleme ilişkilerini desteklediği için basit bir nesne ilişkisel eşleyicidir. Başka bir deyişle, varlık sınıfı bir veritabanı tablosu veya görünümü ile yalnızca 1:1 eşleme ilişkisine sahip olabilir. Varlık sınıfını birden çok tabloyla eşleme gibi karmaşık eşleme desteklenmiyor. Ancak, bir varlık sınıfını birden çok ilişkili tabloyla bire bir görünüme eşlersiniz.
 
-## <a name="create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Veritabanı LINQ to SQL görünümlerine eşlenmiş veritabanı sınıflarını oluşturma
+## <a name="create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Veritabanı LINQ to SQL görünümlere eşlenmiş veritabanı sınıfları oluşturma
 
 Tabloları veya görünümleri **Sunucu Gezgini** veya **Veritabanı Gezgini** **O/R Tasarımcısı'na sürüklemek,** güncelleştirmeleri gerçekleştirmek için kullanılan yöntemlere ek olarak <xref:System.Data.Linq.DataContext> varlık sınıfları oluşturur.
 
@@ -33,7 +33,7 @@ Varsayılan olarak, [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.m
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-### <a name="to-create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Veritabanı LINQ to SQL görünümlere eşlenmiş bir sınıf oluşturmak için
+### <a name="to-create-linq-to-sql-classes-that-are-mapped-to-database-tables-or-views"></a>Veritabanı LINQ to SQL görünümlerine eşlenmiş veritabanı sınıfları oluşturmak için
 
 1. Sunucu **veya** **Veritabanı Gezgini'da,** **Tablolar** veya **Görünümler'i** genişletin ve uygulamanıza eklemek istediğiniz veritabanı tablosu veya görünümünü bulun.
 

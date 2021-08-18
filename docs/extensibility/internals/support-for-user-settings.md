@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 85a4e2fa7b09309d8927555e26302bcb4183e0d932cdaaf59188f4f48d69ffa2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d317809bde56132f990c11e641ae151fcbac8eff
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414382"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086514"
 ---
 # <a name="support-for-user-settings"></a>Kullanıcı Ayarları için Destek
 bir vspackage, bir kullanıcı **araçlar** menüsünde **İçeri/Dışarı Aktarma Ayarlar** komutunu seçtiğinde devam eden durum değişkenlerinin grupları olan bir veya daha fazla ayar kategorisi tanımlayabilir. Bu kalıcılığı etkinleştirmek için içindeki ayarlar API 'Lerini kullanın [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .

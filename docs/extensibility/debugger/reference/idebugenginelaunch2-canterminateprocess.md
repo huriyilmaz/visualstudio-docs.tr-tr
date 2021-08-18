@@ -11,17 +11,18 @@ ms.assetid: 7973454d-c957-4123-a0ee-80ebcdbbd2d1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 20df2c6d44e9bb0afd6610d6ded01ed637035b4b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fb9a31abda864c00cb8a50751d54244ebf2427f7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077453"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119002"
 ---
 # <a name="idebugenginelaunch2canterminateprocess"></a>IDebugEngineLaunch2::CanTerminateProcess
 Bir işlemin sonlandırılıp sonlandırılamayacağını belirler.

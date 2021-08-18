@@ -11,17 +11,18 @@ ms.assetid: 304403fd-f4f8-4096-ac2c-bd3b59663aad
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fc681ff8258988c5a7f708d9ae2342f013010bd6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3e85d08bfe0604914942f81965bc28f86e5a91f7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070940"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070877"
 ---
 # <a name="idebugthread2getthreadproperties"></a>IDebugThread2::GetThreadProperties
 Bu iş parçacığını tanımlayan özellikleri alır.

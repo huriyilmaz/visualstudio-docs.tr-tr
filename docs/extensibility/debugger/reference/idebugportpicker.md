@@ -9,14 +9,15 @@ ms.assetid: 8b7f6685-a3c5-4355-b706-c1b574f6ff84
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8390c8a055a9c919bb1a35d8f3288fc810e5329d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7800956063236055962eb295a3101b40f99f22a1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072260"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072207"
 ---
 # <a name="idebugportpicker"></a>IDebugPortPicker
 Bağlantı noktasını seçmek için özelleştirilmiş bir kullanıcı arabirimini temsil eder.

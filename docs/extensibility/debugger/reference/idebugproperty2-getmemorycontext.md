@@ -11,17 +11,18 @@ ms.assetid: 91793d25-790f-4881-a5c0-d0458e534514
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 35eff7948bc6171a0853f8772b65cf10c0b4cf1b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e66657d2bb82df284240afa65f3378cabd578995
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064975"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122071330"
 ---
 # <a name="idebugproperty2getmemorycontext"></a>IDebugProperty2::GetMemoryContext
 Özellik değerinin bellek bağlamını alır.

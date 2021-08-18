@@ -46,7 +46,7 @@ Artık nesnelerin bellek ayırmasını analizebilirsiniz.
 
 Toplama sırasında, izleme aracı profili yapılan uygulamayı yavaşlatabilirsiniz. İzleme aracının veya uygulamanın performansı yavaşsa ve her nesneyi izlemenizi gerektir yoksa örnekleme oranını ayarlayabilirsiniz. Bunu yapmak için profil oluşturma özeti sayfasında izleme aracının yanındaki dişli simgesini seçin.
 
-![Ayarlar Ayırma aracı için yeni bir araç](../profiling/media/dotnetallocsettings.png "Ayarlar Ayırma aracı için yeni bir araç")
+![Ayarlar Dotnet Ayırma aracı için yeni bir araç](../profiling/media/dotnetallocsettings.png "Ayarlar Dotnet Ayırma aracı için yeni bir araç")
 
 Örnekleme oranını istediğiniz hıza ayarlayın. Bu değişiklik, toplama ve analiz sırasında uygulama performansının hızlandır toplanmasına yardımcı olur.
 
@@ -66,7 +66,7 @@ Tablosal verileri yalnızca belirli bir zaman aralığına göre etkinlik görü
 
 ### <a name="allocation"></a>Ayırma
 
-![Genişletilmiş Ayırma görünümü](../profiling/media/allocationexpandedlight.png "Genişletilmiş Ayırma görünümü")
+![Genişletilmiş Ayırma görünümü](../profiling/media/allocationexpandedlight.png "Genişletilmiş ayırma görünümü")
 
 Ayırma **görünümü,** bellek tahsis eden nesnelerin konumunu ve bu nesnelerin ne kadar bellek ayırmasını gösterir.
 
@@ -96,7 +96,7 @@ Ayırma, Çağrı Ağacı ve **İşlevler** **sekmelerinde** aşağıdaki **semb
 
 ### <a name="call-tree"></a>Çağrı Ağacı
 
-![Çağrı Ağacı görünümü](../profiling/media/calltreelight.png "Çağrı Ağacı görünümü")
+![Çağrı Ağacı görünümü](../profiling/media/calltreelight.png "Çağrı ağacı görünümü")
 
 Çağrı **Ağacı görünümü,** çok fazla bellek alan nesneleri içeren işlev yürütme yollarını gösterir.
 
@@ -106,14 +106,14 @@ Ayırma, Çağrı Ağacı ve **İşlevler** **sekmelerinde** aşağıdaki **semb
 - Ortalama **Boyut (Bayt)** sütunu, Ayırmalar görünümündekiyle **aynı bilgileri** gösterir.
 - Modül **adı sütunu,** çağıran işlevi veya işlemi içeren modülü gösterir.
 
-   ![Genişletilmiş bir hot path](../profiling/media/hotpathlight.png "Genişletilmiş bir hot path")
+   ![Genişletilmiş bir hot path](../profiling/media/hotpathlight.png "Genişletilmiş etkin yol")
 
 - Çalışma **Yolunu Genişlet** düğmesi, bellek alan birçok nesne içeren bir işlev yürütme yolunu vurgular. Algoritma, sizin seçen bir düğümde başlar ve araştırmanıza yol gösteren en fazla ayırma yolunu vurgular.
 - Hot **Path Göster düğmesi,** hangi düğümlerin hot yolunun parçası olduğunu belirten simge simgelerini gösterir veya gizler.
 
 ### <a name="functions"></a>İşlevler
 
-![İşlevler görünümü](../profiling/media/functionslight.png "İşlevler görünümü")
+![İşlevler görünümü](../profiling/media/functionslight.png "Işlevler görünümü")
 
 **İşlevler** görünümü, bellek alan işlemleri, modülleri ve işlevleri gösterir.
 
@@ -139,6 +139,6 @@ Toplama **görünümü,** çöp toplama sırasında kaç nesne toplanmış veya 
 
 **Ayırmalar,** Çağrı **Ağacı** ve **İşlevler** görünümlerinde, Yerel Kodu **Göster Yalnızca kendi kodum** ve **bir** filtre kutusu vardır.
 
-- **Tek Yalnızca kendi kodum** sistemleri, çerçeveleri ve diğer kullanıcı olmayan kodu **[Dış Kod]** çerçevelerine daraltarak yalnızca kodunuza odaklanmanızı sağlar. Daha fazla bilgi için [bkz. Yalnızca kendi kodum ile kullanıcı kodunda hata ayıklama.](../debugger/just-my-code.md)
+- **Tek Yalnızca kendi kodum** sistemleri, çerçeveleri ve diğer kullanıcı olmayan kodu **[Dış Kod]** çerçevelerine daraltarak yalnızca kodunuz üzerinde odaklanmanızı sağlar. Daha fazla bilgi için bkz. Yalnızca kendi kodum ile [kullanıcı kodunda hata ayıklama.](../debugger/just-my-code.md)
 - **Yerel Kodu Göster,** analiz hedefinin içindeki yerel kodu gösterir ve kullanıcı dışı kod içerebilir.
 - Filtre kutusuyla, Ad veya İşlev  adı **sütununu,** sağ istediğiniz değere göre filtreleebilirsiniz. Kutuya bir dize değeri girin. Tablo daha sonra yalnızca bu dizeyi içeren türleri gösterir.

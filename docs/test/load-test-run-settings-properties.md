@@ -11,12 +11,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: f0b7dd6f8e228e0ff16d10976c64ecfacc85a73a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 1d599f910cc8fc63fe0069ca6447314d2ad9197bc751cf02c08805689717bcf3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122032933"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440922"
 ---
 # <a name="load-test-run-settings-properties"></a>Yük testi çalıştırma ayarları özellikleri
 
@@ -80,7 +80,7 @@ Daha fazla bilgi için, bkz. [nasıl yapılır: bir çalışma ayarında test yi
 |Özellik|Tanım|
 |-|----------------|
 |**Cool-azaltma süresi**|Testin hh:mm:ss biçiminde ifade edildiklerinin süresi. Yük testi tamam olduğunda bir yük testi içindeki tek tek testler hala çalışıyor olabilir. Geri çalışma süresi boyunca, bu testler tamamlayana veya geri soğutma süresi sona erinceye kadar devam eder. Varsayılan olarak, bir geri yükleme süresi yoktur ve yük testi Çalışma Süresi ayarına göre sona erer.|
-|**Çalıştırma Süresi**|Testin uzunluğu: ss:mm:ss biçiminde.|
+|**Çalışma Süresi**|Testin uzunluğu: ss:mm:ss biçiminde.|
 |**Örnek Hızı**|Ss:mm:ss biçiminde performans sayacı değerlerinin yakalanma aralığı.<br /><br /> Daha fazla bilgi için, [bkz. How to: Specify the sample rate](../test/how-to-specify-the-sample-rate-for-a-load-test.md).|
 |**Isınma Süresi**|Testin başlangıcı ile veri örneklerinin kaydediliyor olması arasındaki süre (ss:mm:ss biçiminde). Bu genellikle örnek değerleri kaydetmeden önce belirli bir yük düzeyine ulaşmak için sanal kullanıcıları yüklemek için kullanılır. Isınma süresi sona ermeden önce yakalanan örnek değerler Yük Testi **Çözümleyicisi'ne gösterilir.**|
 
@@ -88,12 +88,12 @@ Daha fazla bilgi için, bkz. [nasıl yapılır: bir çalışma ayarında test yi
 
 |Özellik|Tanım|
 |-|----------------|
-|**WebTest Bağlantı Modeli**|Bu, bir yük testi içinde çalıştıran web performans testleri için yük testi aracılarından web sunucusuna bağlantıların kullanımını kontrol eder. Üç web performansı testi bağlantı modeli seçeneği vardır:<br /><br /> - **Kullanıcı Başına Bağlantı** modeli, gerçek bir tarayıcı kullanan kullanıcının davranışının benzetimini sağlar. 6 Internet Explorer 7 Internet Explorer sanal makineniz benzetimli olduğunda, web performans testi çalıştıran her sanal kullanıcı web sunucusuna bir veya iki ayrılmış bağlantı kullanır. İlk bağlantı, web performans testinde ilk istek yayım olduğunda kurulur. Sayfa birden fazla bağımlı istek içerdiğinde ikinci bir bağlantı kullanılabilir. Bu istekler iki bağlantı kullanılarak paralel olarak verilmektedir. Bu bağlantılar, web performans testinde sonraki istekler için yeniden kullanılır. Web performans testi tamam olduğunda bağlantılar kapatılır. Bu modelin bir dezavantajı, aracı bilgisayarda açık durumdaki bağlantı sayısının yüksek olmasıdır (kullanıcı yükünün iki katı kadar). Sonuç olarak, bu yüksek bağlantı sayısını desteklemek için gereken kaynaklar, tek bir yük testi aracısına yönlendirilen kullanıcı yükünü sınırlayıcı olabilir. Sanal Internet Explorer 8 sanal olduğunda, altı eş zamanlı bağlantı de destekler.<br />- **Bağlantı Havuzu modeli,** web sunucusuna bağlantıları birden çok sanal web performansı testi kullanıcısı arasında paylaşarak yük testi aracısı üzerindeki kaynakları korumayı sağlar. Kullanıcı yükü bağlantı havuzu boyutundan büyükse, farklı sanal kullanıcılar tarafından çalıştır alınan web performansı testleri bir bağlantıyı paylaşır. Bu, bağlantıyı kullanan başka bir web performans testi olduğunda bir web performans testinin istekte başlamadan önce beklemesi gerektirebilir. Bir web performans testinin istek göndermeden önce bekleyeceği ortalama süre, yük testi performans sayacı Ortalama Bağlantı Bekleme Süresi tarafından iz olur. Bu sayı, bir sayfanın ortalama yanıt süresinden küçük olması gerekir. Bağlantı havuzu boyutu büyük olasılıkla çok küçüktür.<br />- Test **Başına Bağlantı Yinelemesi** modeli, her test yinelemesi için ayrılmış bağlantıların kullanımını belirtir.|
+|**WebTest Bağlantı Modeli**|Bu, bir yük testi içinde çalıştıran web performans testleri için yük testi aracılarından web sunucusuna bağlantıların kullanımını kontrol eder. Üç web performansı testi bağlantı modeli seçeneği vardır:<br /><br /> - **Kullanıcı Başına Bağlantı** modeli, gerçek bir tarayıcı kullanan kullanıcının davranışının benzetimini sağlar. 6 Internet Explorer veya Internet Explorer 7 sanal makine simülasyonu olduğunda, web performans testi çalıştıran her sanal kullanıcı web sunucusuna bir veya iki ayrılmış bağlantı kullanır. İlk bağlantı, web performans testinde ilk istek yayım olduğunda kurulur. Sayfa birden fazla bağımlı istek içerdiğinde ikinci bir bağlantı kullanılabilir. Bu istekler iki bağlantı kullanılarak paralel olarak verilmektedir. Bu bağlantılar, web performans testinde sonraki istekler için yeniden kullanılır. Web performans testi tamam olduğunda bağlantılar kapatılır. Bu modelin bir dezavantajı, aracı bilgisayarda açık durumdaki bağlantı sayısının yüksek olmasıdır (kullanıcı yükünün iki katı kadar). Sonuç olarak, bu yüksek bağlantı sayısını desteklemek için gereken kaynaklar, tek bir yük testi aracısına yönlendirilen kullanıcı yükünü sınırlayıcı olabilir. Sanal Internet Explorer 8 sanal olduğunda, altı eş zamanlı bağlantı de destekler.<br />- **Bağlantı Havuzu modeli,** web sunucusuna bağlantıları birden çok sanal web performansı testi kullanıcısı arasında paylaşarak yük testi aracısı üzerindeki kaynakları korumayı sağlar. Kullanıcı yükü bağlantı havuzu boyutundan büyükse, farklı sanal kullanıcılar tarafından çalıştır alınan web performansı testleri bir bağlantıyı paylaşır. Bu, bağlantıyı kullanan başka bir web performans testi olduğunda bir web performans testinin istekte başlamadan önce beklemesi gerektirebilir. Bir web performans testinin istek göndermeden önce bekleyeceği ortalama süre, yük testi performans sayacı Ortalama Bağlantı Bekleme Süresi tarafından iz olur. Bu sayı, bir sayfanın ortalama yanıt süresinden küçük olması gerekir. Bağlantı havuzu boyutu büyük olasılıkla çok küçüktür.<br />- Test **Başına Bağlantı Yinelemesi** modeli, her test yinelemesi için ayrılmış bağlantıların kullanımını belirtir.|
 |**WebTest Bağlantı Havuzu Boyutu**|Bu, yük testi aracısı ile Web sunucusu arasında en fazla bağlantı sayısını belirtir. Bu yalnızca Bağlantı Havuzu **modeli için** geçerlidir.|
 
 ## <a name="change-run-setting-properties"></a>Çalıştırma ayarı özelliklerini değiştirme
 
-Yük testini farklı koşullarda çalıştırabilirsiniz, böylece yük testini farklı özellik ayarlarıyla yük teste daha fazla çalıştırma ayarı abilirsiniz. Örneğin, yeni bir test ayarı ekleyebilir ve farklı bir örnek hızı kullanabilir veya daha uzun bir çalışma süresi belirtebilirsiniz. Aynı anda yalnızca bir çalıştırma ayarı kullanabilirsiniz ve etkin olarak işaretleyerek hangi çalıştırma ayarının kullan gerektiğini belirtmeniz gerekir. Bir örnek için, [bkz. Nasıl 2012: Yük testi için etkin çalıştırma ayarını seçme.](../test/how-to-select-the-active-run-setting-for-a-load-test.md)
+Yük testini farklı koşullar altında çalıştırarak farklı özellik ayarlarıyla yük teste daha fazla çalıştırma ayarı ekebilirsiniz. Örneğin, yeni bir test ayarı ekleyebilir ve farklı bir örnek hızı kullanabilir veya daha uzun bir çalışma süresi belirtebilirsiniz. Aynı anda yalnızca bir çalıştırma ayarı kullanabilirsiniz ve etkin olarak işaretleyerek hangi çalıştırma ayarının kullan gerektiğini belirtmeniz gerekir. Bir örnek için, [bkz. Nasıl 2012: Yük testi için etkin çalıştırma ayarını seçme.](../test/how-to-select-the-active-run-setting-for-a-load-test.md)
 
 Çalıştırma ayarlarını değiştirmek için:
 

@@ -1,5 +1,5 @@
 ---
-title: ClickOnce tasarımcısını kullanarak uydu derlemesini isteğe bağlı olarak indirme
+title: ClickOnce tasarımcısını kullanarak uydu derlemesini isteğe bağlı olarak indirin
 description: Tasarımcı kullanarak uydu derlemelerini nasıl isteğe bağlı olarak işaretleyeceğinizi ve yalnızca geçerli kültür ayarları için bir istemci makinesi için gereken derlemeyi indireceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -20,19 +20,20 @@ ms.assetid: 82b85a47-b223-4221-a17c-38a52c3fb6e2
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e9166dbd3d6cd7ba4500e2390bd611a31bcee7b
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 42973e84237de5095676809e3f861b2726f44f87
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106216884"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133594"
 ---
-# <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>İzlenecek yol: Tasarımcıyı kullanarak ClickOnce dağıtım API 'SI ile uydu derlemelerini isteğe bağlı olarak Indirme
-Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
+# <a name="walkthrough-download-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>izlenecek yol: tasarımcıyı kullanarak ClickOnce dağıtım apı 'si ile uydu derlemelerini isteğe bağlı olarak indirme
+Windows Forms uygulamaları, uydu derlemeleri kullanılarak birden çok kültür için yapılandırılabilir. *Uydu derlemesi* , uygulamanın varsayılan kültürü dışında bir kültür için uygulama kaynakları içeren bir derlemedir.
 
- [ClickOnce uygulamalarını yerelleştirme](../deployment/localizing-clickonce-applications.md)konusunda anlatıldığı gibi, aynı dağıtımda birden çok kültür için birden çok uydu derlemesi dahil edebilirsiniz [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Tüm uydu derlemelerini istemci makinesine indirir, ancak tek bir istemci muhtemelen yalnızca bir uydu derlemesi gerektirecektir.
+ [ClickOnce uygulamaları yerelleştirme](../deployment/localizing-clickonce-applications.md)bölümünde anlatıldığı gibi, aynı dağıtımda birden çok kültür için birden çok uydu derlemesi dahil edebilirsiniz [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Varsayılan olarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Tüm uydu derlemelerini istemci makinesine indirir, ancak tek bir istemci muhtemelen yalnızca bir uydu derlemesi gerektirecektir.
 
  Bu izlenecek yol, uydu derlemelerinizi isteğe bağlı olarak nasıl işaretleyeceğinizi ve yalnızca geçerli kültür ayarlarına yönelik bir istemci makinesi için gereken derlemeyi nasıl indileceğini gösterir.
 
@@ -57,7 +58,7 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
 
 ### <a name="to-download-satellite-assemblies-on-demand-in-c"></a>C 'de isteğe bağlı uydu derlemelerini indirmek için\#
 
-1. *Program. cs* dosyasını açın. Bu dosyayı Çözüm Gezgini görmüyorsanız, projenizi seçin ve **Proje** menüsünde **tüm dosyaları göster**' e tıklayın.
+1. *Program. cs* dosyasını açın. bu dosyayı Çözüm Gezgini görmüyorsanız, projenizi seçin ve **Project** menüsünde **tüm dosyaları göster**' e tıklayın.
 
 2. Uygun uydu derlemesini indirmek ve uygulamanızı başlatmak için aşağıdaki kodu kullanın.
 
@@ -81,5 +82,5 @@ Windows Forms uygulamalar, uydu derlemeleri kullanılarak birden çok kültür i
  Bir üretim ortamında, büyük olasılıkla belirli bir değere ayarlanmış kod örneklerinde satırı kaldırmanız gerekir <xref:System.Threading.Thread.CurrentUICulture%2A> , çünkü istemci makineler varsayılan olarak doğru değere sahip olacaktır. Uygulamanız bir Japonca istemci makinesinde çalıştığında, örneğin, <xref:System.Threading.Thread.CurrentUICulture%2A> `ja-JP` Varsayılan olarak olur. Uygulamanızı dağıtmadan önce programlama yoluyla ayarlama, uydu derlemelerinizi test etmenin iyi bir yoludur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: ClickOnce dağıtım API 'SI ile isteğe bağlı uydu derlemelerini Indirme](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)
+- [izlenecek yol: ClickOnce dağıtım apı 'si ile isteğe bağlı uydu derlemelerini indirme](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md)
 - [ClickOnce uygulamalarını yerelleştirme](../deployment/localizing-clickonce-applications.md)

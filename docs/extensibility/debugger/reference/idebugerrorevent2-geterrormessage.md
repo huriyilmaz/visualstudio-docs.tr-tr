@@ -1,6 +1,6 @@
 ---
-description: İnsanlar tarafından okunabilen bir hata iletisinin oluşturulmasına izin veren bilgileri döndürür.
-title: 'IDebugErrorEvent2:: GetErrorMessage | Microsoft Docs'
+description: İnsan tarafından okunabilir bir hata iletisinin yapısına olanak sağlayan bilgileri döndürür.
+title: IDebugErrorEvent2::GetErrorMessage | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c35d0bda87ded6de95b7bc744c01ea82a97ab3354a2dbf0330dd2abcd18a5097
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2cf7b18d84ae8279c5d15f9404a6d8d500d44d82
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417320"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118911"
 ---
 # <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
-İnsanlar tarafından okunabilen bir hata iletisinin oluşturulmasına izin veren bilgileri döndürür.
+İnsan tarafından okunabilir bir hata iletisinin yapısına olanak sağlayan bilgileri döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,28 +53,28 @@ int GetErrorMessage(
 
 ## <a name="parameters"></a>Parametreler
 `pMessageType`\
-dışı İleti türünü açıklayan [MessageType](../../../extensibility/debugger/reference/messagetype.md) numaralandırmasından bir değer döndürür.
+[out] [MESSAGETYPE numaralama değerinden](../../../extensibility/debugger/reference/messagetype.md) ileti türünü açıklayan bir değer döndürür.
 
 `pbstrErrorFormat`\
-dışı Kullanıcıya son iletinin biçimi (Ayrıntılar için bkz. "açıklamalar").
+[out] Kullanıcıya son iletinin biçimi (ayrıntılar için bkz. "Açıklamalar").
 
 `hrErrorReason`\
-dışı İletinin bulunduğu hata kodu.
+[out] İletinin ilgili olduğu hata kodu.
 
 `pdwType`\
-dışı Hatanın önem derecesi (için MB_XXX sabitleri kullanın `MessageBox` ; Örneğin, `MB_EXCLAMATION` veya `MB_WARNING` ).
+[out] Hatanın önem derecesi (için MB_XXX sabitlerini `MessageBox` kullanın; örneğin, `MB_EXCLAMATION` veya `MB_WARNING` ).
 
 `pbstrHelpFileName`\
-dışı Yardım dosyasının yolu (Yardım dosyası yoksa null değere ayarlanır).
+[out] Yardım dosyasının yolu (yardım dosyası yoksa null değere ayarlanır).
 
 `pdwHelpId`\
-dışı Görüntülenecek Yardım konusunun KIMLIĞI (Yardım konusu yoksa 0 olarak ayarlanır).
+[out] Görüntülemek için yardım konusunun kimliği (yardım konusu yoksa 0 olarak ayarlayın).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Hata iletisi, satırları üzerinde biçimlendirilmelidir `"What I was doing.  %1"` . `"%1"`Ardından, çağıran tarafından, hata kodundan (' de döndürülen) alınan hata iletisiyle değiştirilmelidir `hrErrorReason` . `pMessageType`Parametresi, çağıranın son hata iletisinin nasıl görüntüleneceğini söyler.
+ Hata iletisi, satırlarında biçimlendirilmiş `"What I was doing.  %1"` olmalıdır. Daha sonra , çağıranın yerine hata kodundan türetilen hata `"%1"` iletisiyle (içinde döndürülür) `hrErrorReason` değiştirilir. parametresi, `pMessageType` çağrıyı yapana son hata iletisinin nasıl görüntüleniyor olması gerektiğini söyler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)

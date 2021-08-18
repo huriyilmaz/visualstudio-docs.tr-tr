@@ -1,6 +1,6 @@
 ---
 title: Windows Forms uygulamalarında arama tabloları oluşturma
-description: Windows Forms uygulamalarında arama tabloları oluşturma makalelerini okuyun. Arama tablosu, iki ilişkili veri tablosuna bağlı denetimleri açıklar.
+description: Windows Forms uygulamalarında arama tabloları oluşturmayı okuyun. Arama tablosu, iki ilişkili veri tablosuna bağlanan denetimleri açıklar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,51 +14,51 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8d8eda7fadbf0c0e94da85442ef852c0e735d80a1b6ffdecab192ace2387d85d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4d8bfc94d98c56d525d0d2d1c7f16f98cffbc7d0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121264668"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052934"
 ---
 # <a name="create-lookup-tables-in-windows-forms-applications"></a>Windows Forms uygulamalarında arama tabloları oluşturma
 
-Arama *tablosu terimi,* iki ilişkili veri tablosuna bağlı denetimleri açıklar. Bu arama denetimleri, birinci tablodan alınan verileri, ikinci tabloda seçilen bir değere göre görüntüler.
+Terim *arama tablosu* , iki ilişkili veri tablosuna bağlanan denetimleri açıklar. Bu arama denetimleri, ikinci tabloda seçilen bir değere göre ilk tablodaki verileri görüntüler.
 
-Bir üst tablonun ana düğümünü (Veri Kaynakları [penceresinden)](add-new-data-sources.md#data-sources-window)ilgili alt tablodaki sütuna zaten bağlı olan form üzerinde bir denetime sürükleyerek arama tabloları oluşturabilirsiniz.
+Üst tablonun ana düğümünü ( [veri kaynakları penceresi](add-new-data-sources.md#data-sources-window)), formunuzdaki ilgili alt tablodaki sütuna zaten bağlı olan bir denetime sürükleyerek arama tabloları oluşturabilirsiniz.
 
-Örneğin, satış veritabanındaki `Orders` bir tablosu düşünün. Tablodaki her `Orders` kayıt, siparişi `CustomerID` hangi müşterinin yerleştiren bir içerir. `CustomerID`, tablodaki bir müşteri kaydını işaret alan yabancı bir `Customers` anahtardır. Bu senaryoda, Veri Kaynakları `Orders` penceresindeki **tabloyu genişletecek ve ana** düğümü Ayrıntılar olarak **ayarlayabilirsiniz.** Ardından sütunu bir (veya arama bağlamayı destekleyen başka bir denetim) kullanmak üzere `CustomerID` ayarlayın ve düğümü form üzerine <xref:System.Windows.Forms.ComboBox> `Orders` sürükleyin. Son olarak, düğümü ilgili sütuna (bu durumda sütununa bağlı) bağlı `Customers` <xref:System.Windows.Forms.ComboBox> olan denetime `CustomerID` sürükleyin.
+Örneğin, `Orders` bir satış veritabanındaki tablosunu düşünün. Tablodaki her kayıt `Orders` `CustomerID` , hangi müşterinin siparişi yerleştirdiğini belirten bir içerir. , `CustomerID` Tablodaki bir müşteri kaydına işaret eden bir yabancı anahtardır `Customers` . Bu senaryoda, `Orders` **veri kaynakları** penceresinde tabloyu genişlettikten sonra ana düğümü **Ayrıntılar** olarak ayarlarsınız. Sonra, `CustomerID` sütununu <xref:System.Windows.Forms.ComboBox> (veya arama bağlamasını destekleyen başka bir denetimi) kullanacak şekilde ayarlayın ve `Orders` düğümü formunuza sürükleyin. Son olarak, `Customers` düğümü ilgili sütuna bağlanan denetime sürükleyin — bu durumda, <xref:System.Windows.Forms.ComboBox> `CustomerID` sütununa bağlanır.
 
-## <a name="to-databind-a-lookup-control"></a>Arama denetimine veri bindirma
+## <a name="to-databind-a-lookup-control"></a>Arama denetimini bağlamak için
 
-1. Projeniz açıkken Veri Kaynakları penceresini **açmak için** Diğer Kaynakları   >  **Görüntüle'Windows**  >  **Seçin.**
-
-    > [!NOTE]
-    > Arama tabloları, veri kaynakları penceresinde iki ilişkili tablo veya nesne **kullanılabilir gerektirir.** Daha fazla bilgi için [bkz. Veri kümelerini ilişkileri.](relationships-in-datasets.md)
-
-2. Üst tabloyu ve  tüm sütunlarını, ilişkili alt tabloyu ve tüm sütunlarını görene kadar Veri Kaynakları penceresindeki düğümleri genişletin.
+1. projeniz açıkken, diğer Windows   >    >  **veri kaynaklarını** görüntüle ' yi seçerek veri kaynakları penceresini açın.
 
     > [!NOTE]
-    > Alt tablo düğümü, üst tabloda genişletilebilir bir alt düğüm olarak görünen düğüm olur.
+    > Arama tabloları, **veri kaynakları** penceresinde iki ilişkili tablonun veya nesnenin kullanılabilir olmasını gerektirir. Daha fazla bilgi için bkz. [veri kümelerinde ilişkiler](relationships-in-datasets.md).
 
-3. Alt tablonun düğümünde denetim **listesinden Ayrıntılar'ı**  seçerek alt tablonun bırakma türünü Ayrıntılar olarak değiştirebilirsiniz. Daha fazla bilgi için [bkz. Veri Kaynakları penceresinden sürüklenrken oluşturulacak denetimi ayarlama.](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
+2. Üst tabloyu ve tüm sütunlarını ve ilgili alt tabloyu ve tüm sütunlarını görene kadar **veri kaynakları** penceresindeki düğümleri genişletin.
 
-4. İki tabloyla (önceki örnekteki `CustomerID` düğüm) ilgili düğümü bulun. Denetim listesinden <xref:System.Windows.Forms.ComboBox> **ComboBox'ı** seçerek bırakma türünü olarak değiştirebilirsiniz.
+    > [!NOTE]
+    > Alt tablo düğümü, üst tabloda Genişletilebilir alt düğüm olarak görünen düğümdür.
 
-5. Ana alt tablo düğümünü Veri Kaynakları **penceresinden** form üzerine sürükleyin.
+3. Alt tablonun düğümünde denetim listesinden **Ayrıntılar** ' a tıklayarak alt tablonun bırakma türünü **Ayrıntılar** olarak değiştirin. Daha fazla bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-     Formda veriye bağlı denetimler (açıklayıcı etiketlerle) ve bir araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) görüntülenir. Bir [DataSet](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/create-and-configure-tableadapters.md), <xref:System.Windows.Forms.BindingSource> ve bileşen <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
+4. İki tabloyla ilişkili düğümü bulun ( `CustomerID` önceki örnekteki düğüm). <xref:System.Windows.Forms.ComboBox>Denetim listesinden **ComboBox** ' i seçerek bırakma türünü bir olarak değiştirin.
 
-6. Şimdi ana üst tablo düğümünü Veri Kaynakları **penceresinden doğrudan** arama denetimine <xref:System.Windows.Forms.ComboBox> ().
+5. Ana alt tablo düğümünü **veri kaynakları** penceresinden formunuzun üzerine sürükleyin.
 
-     Arama bağlamaları artık kurulur. Denetimde ayarlanmış belirli özellikler için aşağıdaki tabloya bakın.
+     Veri sınırlama denetimleri (açıklayıcı etiketlerle birlikte) ve formda bir araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) görünür. Bir [veri kümesi](../data-tools/dataset-tools-in-visual-studio.md), [TableAdapter](../data-tools/create-and-configure-tableadapters.md), <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> bileşen tepsisinde görünür.
+
+6. Şimdi, ana üst tablo düğümünü **veri kaynakları** penceresinden doğrudan arama denetimine ( <xref:System.Windows.Forms.ComboBox> ) sürükleyin.
+
+     Arama bağlamaları artık oluşturulmuştur. Denetimde ayarlanan belirli özellikler için aşağıdaki tabloya bakın.
 
     |Özellik|Ayarın açıklaması|
     |--------------| - |
-    |**Datasource**|Visual Studio, denetimin üzerine sürüklersiniz (denetim oluşturulduğunda oluşturulan tablosu yerine) için oluşturulan bu özelliği <xref:System.Windows.Forms.BindingSource> <xref:System.Windows.Forms.BindingSource> olarak ayarlar.<br /><br /> Ayarlama yapmak gerekirse, bunu görüntülemek istediğiniz <xref:System.Windows.Forms.BindingSource> sütunu içeren tablonun sütunu olarak ayarlayın.|
-    |**Displaymember**|Visual Studio özelliği, denetime sürüklersiniz tablosu için dize veri türüne sahip birincil anahtardan sonra ilk sütuna ayarlar.<br /><br /> Ayarlama yapmak gerekirse, bunu görüntülemek istediğiniz sütun adı olarak ayarlayın.|
-    |**Valuemember**|Visual Studio özelliği birincil anahtara katılan ilk sütuna veya tanımlanmamışsa tablodaki ilk sütuna ayarlar.<br /><br /> Bir ayarlama yapmak gerekirse, bunu görüntülemek istediğiniz sütunu içeren tablodaki birincil anahtar olarak ayarlayın.|
-    |**Selectedvalue**|Visual Studio özelliği Veri Kaynakları penceresinden bırakılan özgün **sütuna** ayarlar.<br /><br /> Ayarlama yapmak gerekirse, bunu ilgili tablodaki yabancı anahtar sütununa ayarlayın.|
+    |**DataSource**|Visual Studio, <xref:System.Windows.Forms.BindingSource> denetimin üzerine sürüklediğiniz tablo için oluşturulan (denetim oluşturulduğunda oluşturulan, ' ın aksine) bu özelliği öğesine ayarlar <xref:System.Windows.Forms.BindingSource> .<br /><br /> Bir ayarlama yapmanız gerekiyorsa, bunu, <xref:System.Windows.Forms.BindingSource> göstermek istediğiniz sütunun bulunduğu tablonun öğesine ayarlayın.|
+    |**Alınan**|Visual Studio bu özelliği, denetimin üzerine sürüklediğiniz tablo için bir dize veri türüne sahip birincil anahtardan sonraki ilk sütuna ayarlar.<br /><br /> Bir ayarlama yapmanız gerekiyorsa, bunu, göstermek istediğiniz sütun adına ayarlayın.|
+    |**ValueMember**|Visual Studio, bu özelliği birincil anahtara katılan ilk sütuna veya anahtar tanımlanmadığında tablodaki ilk sütuna ayarlar.<br /><br /> Bir ayarlama yapmanız gerekiyorsa, bunu tabloda, göstermek istediğiniz sütunu içeren birincil anahtar olarak ayarlayın.|
+    |**SelectedValue**|Visual Studio, bu özelliği **veri kaynakları** penceresinden bırakılan özgün sütuna ayarlar.<br /><br /> Bir ayarlama yapmanız gerekiyorsa, bunu ilgili tablodaki yabancı anahtar sütununa ayarlayın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3b627f410f91d591866e7817b1cebde02b02ce20e1780179b89acd04d2557a0d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 116943ce1fd85b9f4dee2dc0f1512301a900fa74
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276223"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029196"
 ---
 # <a name="provider_flags"></a>PROVIDER_FLAGS
 Bir program sağlayıcısından elde edilecek istenen özellikleri belirtir.

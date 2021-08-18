@@ -1,6 +1,6 @@
 ---
 title: IDebugProgramNode2::D etachDebugger_V7 | Microsoft Docs
-description: Bu yöntem, Visual Studio 2005 ' den önce kullanılan ayırma yönteminin eski, Kullanımdan kaldırılmış bir biçimidir.
+description: Bu yöntem, 2005'te kullanılmadan önce kullanılan ayırma yönteminin eski Visual Studio biçimidir.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,22 +11,23 @@ helpviewer_keywords:
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 16630be49dd884f8bcc82da2fead158eb3a25e5e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 47ad13cc0f3f01665535e6b9d8168af79eb299f0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053561"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029989"
 ---
 # <a name="idebugprogramnode2detachdebugger_v7"></a>IDebugProgramNode2::DetachDebugger_V7
 
 > [!Note]
-> Kullanım dışı. KULLANMAYıN.
+> Kaldırıl -mış. KULLANMAYIN.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +43,14 @@ int DetachDebugger_V7 ();
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-Bir uygulama her zaman döndürmelidir `E_NOTIMPL` .
+Bir uygulama her zaman `E_NOTIMPL` dönüşletir.
 
 ## <a name="remarks"></a>Açıklamalar
 
 > [!WARNING]
-> Visual Studio 2005 itibariyle, bu yöntem artık kullanılmamaktadır ve her zaman döndürmelidir `E_NOTIMPL` .
+> 2005 Visual Studio, bu yöntem artık kullanılmaz ve her zaman ifadesinin olması `E_NOTIMPL` gerekir.
 
-Bu yöntem, hata ayıklayıcı beklenmedik bir şekilde çıktığında çağrılır. Bu yöntem çağrıldığında, Kullanıcı onu ayırmış olsa da programı sürdürmelidir. Daha fazla hata ayıklama olayı gönderilmemelidir. Program, hata ayıklayıcının başka bir örneğinden iliştirilebileceği bir durumda olmalıdır.
+Bu yöntem, hata ayıklayıcı beklenmedik şekilde kapanıyor olduğunda çağrılır. Bu yöntem çağrıldı sıra, DE programı kullanıcıdan ayrılmış gibi sürdürebilir. Başka hata ayıklama olayları gönderilmez. Program, hata ayıklayıcının başka bir örneğinden eklenebilir durumda olması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

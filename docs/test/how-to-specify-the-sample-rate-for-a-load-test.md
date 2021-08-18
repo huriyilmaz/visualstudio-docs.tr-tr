@@ -11,12 +11,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 4655802d5a75a6b78e7ee06baeacbd3e9311cb4b51f314f6f78a9f07c3d601f1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2e397dec54a29f3a660c4cc91d21094a99986e5a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440974"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135604"
 ---
 # <a name="how-to-specify-the-sample-rate-for-a-load-test-run-setting"></a>Nasıllı: Yük testi çalıştırma ayarı için örnek hızı belirtme
 

@@ -1,6 +1,6 @@
 ---
-title: Visual Basic bir Görselleştirici yazın | Microsoft Docs
-description: Visual Basic basit bir Görselleştirici oluşturmak için izlenecek yolu izleyin. Görselleştiriciyi test etmek için bir test bandı da oluşturursunuz.
+title: Visual Basic |'da görselleştirici yazma Microsoft Docs
+description: Bir kılavuzda basit bir görselleştirici oluşturmak için Visual Basic. Ayrıca görselleştiricinizi test etmek için bir test sıyrısı da oluşturabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 05/27/2020
 ms.topic: conceptual
@@ -19,85 +19,85 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 860eee7ac6f075aa822e77121349a8af10ef48e0fdb50c3169f4669de5f8ac57
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9e9515291f15a8f59dec6d8c956bb03653ce7b3d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121308895"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133802"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-visual-basic"></a>İzlenecek Yol: Visual Basic'de Görselleştirici Yazma
 
-Bu izlenecek yol, kullanarak basit bir Görselleştirici nasıl yazılacağını gösterir [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] . bu kılavuzda oluşturacağınız görselleştirici bir Windows Forms ileti kutusu kullanarak bir dizenin içeriğini görüntüler. Bu basit dize görselleştiricisi, projelerinize daha uygun olan diğer veri türleri için Görselleştiriciler oluşturma şeklini gösteren temel bir örnektir.
+Bu kılavuzda kullanarak basit bir görselleştiricinin nasıl yaz olduğu [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] açıklanır. Bu kılavuzda oluşturacak görselleştirici, Windows Forms ileti kutusunu kullanarak bir dizenin içeriğini görüntüler. Bu basit dize görselleştiricisi, projeleriniz için daha uygun olan diğer veri türleri için nasıl görselleştirici oluşturabilirsiniz?
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak yardım bölümünde açıklananlardan farklı bir durum içerebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsüne gidin ve **Içeri aktar ve dışarı aktar** ' ı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümünüze bağlı olarak Yardım'da açıklananlardan farklı olabilir. Ayarlarınızı değiştirmek için Araçlar menüsüne gidin ve İçeri **ve** Dışarı **Aktar'ı seçin.** Daha fazla bilgi için [bkz. Ayarları sıfırlama.](../ide/environment-settings.md#reset-settings)
 
-Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye yerleştirilmelidir. İlk adım DLL için bir sınıf kitaplığı projesi oluşturmaktır.
+Görselleştirici kodu, hata ayıklayıcı tarafından okunacak bir DLL'ye yerleştirilmalıdır. İlk adım, DLL için bir sınıf kitaplığı projesi oluşturmaktır.
 
-## <a name="create-and-prepare-a-class-library-project"></a>Bir sınıf kitaplığı oluşturun ve hazırlayın Project
+## <a name="create-and-prepare-a-class-library-project"></a>Sınıf Kitaplığı Oluşturma ve Hazırlama Project
 
-### <a name="to-create-a-class-library-project"></a>Bir sınıf kitaplığı projesi oluşturmak için
+### <a name="to-create-a-class-library-project"></a>Sınıf kitaplığı projesi oluşturmak için
 
 1. Yeni bir sınıf kitaplığı projesi oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Visual Basic** yazın, **Şablonlar**' ı seçin ve ardından **Yeni bir sınıf kitaplığı oluştur (.NET Framework)** seçeneğini belirleyin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **Esc** tuşuna basın. Arama **kutusunu açmak için Ctrl + Q** tuşlarına basın, visual **basic** yazın, Şablonlar'ı **ve** ardından Yeni Sınıf Kitaplığı **oluştur (.NET Framework) seçin.** Görüntülenen iletişim kutusunda Oluştur'a **tıklayın.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    üstteki menü çubuğundan **dosya**  >  **yeni**  >  **Project** öğesini seçin. **yeni proje** iletişim kutusunun sol bölmesinde, **Visual Basic** altında **.NET Standard**' i seçin ve ardından ortadaki bölmede **sınıf kitaplığı (.NET Standard)** öğesini seçin.
+    Üst menü çubuğundan Dosya Yeni **Dosya'Project.**  >    >   Yeni proje iletişim  kutusunun sol bölmesinde, **Visual Basic** altında .NET Standard'ı seçin ve orta bölmede Sınıf Kitaplığı **(.NET Standard) seçeneğini seçin.**
     ::: moniker-end
 
-2. Sınıf kitaplığı için, gibi uygun bir ad yazın `MyFirstVisualizer` ve ardından **Oluştur** veya **Tamam**' a tıklayın.
+2. sınıf kitaplığı için gibi uygun bir ad yazın ve ardından `MyFirstVisualizer` Oluştur veya **Tamam'a** **tıklayın.**
 
-   Sınıf kitaplığını oluşturduktan sonra, burada tanımlanan sınıfları kullanabilmeniz için Microsoft.VisualStudio.DebuggerVisualizers.DLL bir başvuru eklemeniz gerekir. Ancak ilk olarak, projenize anlamlı bir ad verirsiniz.
+   Sınıf kitaplığını oluşturulduğunda, burada tanımlanan sınıfları kullanmak için Microsoft.VisualStudio.DebuggerVisualizers.DLL için bir başvuru eklemeniz gerekir. Ancak öncelikle projenize anlamlı bir ad vereceksiniz.
 
-### <a name="to-rename-class1vb-and-add-microsoftvisualstudiodebuggervisualizers"></a>Class1. vb ' i yeniden adlandırmak ve Microsoft. VisualStudio. Debuggervisualiciler eklemek için
+### <a name="to-rename-class1vb-and-add-microsoftvisualstudiodebuggervisualizers"></a>Class1.vb'yi yeniden adlandırmak ve Microsoft.VisualStudio.DebuggerVisualizers eklemek için
 
-1. **Çözüm Gezgini**, **Class1. vb** öğesine sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır**' a tıklayın.
+1. Bu **Çözüm Gezgini** **Class1.vb'ye** sağ tıklayın ve kısayol menüsünde Yeniden Adlandır'a **tıklayın.**
 
-2. Name. vb olan adı DebuggerSide. vb gibi bir anlamlı olacak şekilde değiştirin.
+2. Class1.vb olan adı DebuggerSide.vb gibi anlamlı bir adla değiştirme.
 
    > [!NOTE]
-   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DebuggerSide. vb içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
+   > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , DebuggerSide.vb dosyasındaki sınıf bildirimini yeni dosya adıyla eş olacak şekilde otomatik olarak değiştirir.
 
-3. **Çözüm Gezgini**, **ilk görselleştiricisi**' e sağ tıklayın ve kısayol menüsünde **Başvuru Ekle**' ye tıklayın.
+3. Bu **Çözüm Gezgini,** İlk **Görselleştiricim'e sağ tıklayın** ve kısayol menüsünde Başvuru Ekle'ye **tıklayın.**
 
-4. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **araştır** ' ı seçin ve Microsoft.VisualStudio.DebuggerVisualizers.DLL bulun.
+4. Başvuru **Ekle iletişim kutusundaki** Gözat sekmesinde **Gözat'ı** **seçin** ve Microsoft.VisualStudio.DebuggerVisualizers.DLL.
 
-    DLL 'yi Visual Studio yükleme dizininin *\<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* alt dizininde bulabilirsiniz.
+    DLL'yi, Visual Studio'nin yükleme dizininin *\<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* alt dizininde bulabilirsiniz.
 
 5. **Tamam**'a tıklayın.
 
-6. DebuggerSide. vb içinde, aşağıdaki deyimi `Imports` deyimlere ekleyin:
+6. DebuggerSide.vb dosyasında deyimlerine aşağıdaki `Imports` deyimi ekleyin:
 
    ```vb
    Imports Microsoft.VisualStudio.DebuggerVisualizers
    ```
 
-## <a name="add-the-debugger-side-code"></a>Hata ayıklayıcı tarafında kod ekleme
- Artık hata ayıklayıcı tarafı kodu oluşturmaya hazırsınız. Bu, görselleştirmek istediğiniz bilgileri göstermek için hata ayıklayıcı içinde çalışan koddur. İlk olarak, `DebuggerSide` nesne bildirimini temel sınıftan devrabir şekilde değiştirmeniz gerekir `DialogDebuggerVisualizer` .
+## <a name="add-the-debugger-side-code"></a>Hata Ayıklayıcı Tarafı Kodunu Ekleme
+ Artık hata ayıklayıcı tarafı kodunu oluşturmak için hazır oluruz. Bu, görselleştirmek istediğiniz bilgileri görüntülemek için hata ayıklayıcısı içinde çalışan koddur. İlk olarak, nesnesinin bildirimini `DebuggerSide` temel sınıftan devralınarak değiştirmelisiniz. `DialogDebuggerVisualizer`
 
-### <a name="to-inherit-from-dialogdebuggervisualizer"></a>DialogDebuggerVisualizer 'dan devralması için
+### <a name="to-inherit-from-dialogdebuggervisualizer"></a>DialogDebuggerVisualizer'dan devralmak için
 
-1. DebuggerSide. vb dosyasında aşağıdaki kod satırına gidin:
+1. DebuggerSide.vb dosyasında aşağıdaki kod satırına gidin:
 
    ```vb
    Public Class DebuggerSide
    ```
 
-2. Kodu aşağıdaki gibi görünecek şekilde düzenleyin:
+2. Kodu şu şekilde olacak şekilde düzenleyin:
 
    ```vb
    Public Class DebuggerSide
    Inherits DialogDebuggerVisualizer
    ```
 
-   `DialogDebuggerVisualizer` , geçersiz kılmanız gereken tek bir soyut yöntemi vardır `Show` .
+   `DialogDebuggerVisualizer` geçersiz kılmamız gereken `Show` bir soyut yöntemi vardır.
 
-### <a name="to-override-the-dialogdebuggervisualizershow-method"></a>DialogDebuggerVisualizer. Show metodunu geçersiz kılmak için
+### <a name="to-override-the-dialogdebuggervisualizershow-method"></a>DialogDebuggerVisualizer.Show yöntemini geçersiz kılmak için
 
-- İçinde `public class DebuggerSide` , aşağıdaki yöntemi ekleyin:
+- içinde `public class DebuggerSide` aşağıdaki yöntemi ekleyin:
 
   ```vb
   Protected Overrides Sub Show(ByVal windowService As Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService, ByVal objectProvider As Microsoft.VisualStudio.DebuggerVisualizers.IVisualizerObjectProvider)
@@ -105,26 +105,26 @@ Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye ye
       End Sub
   ```
 
-  `Show`Yöntemi aslında Görselleştirici iletişim kutusunu veya başka Kullanıcı arabirimini oluşturan kodu içerir ve hata ayıklayıcıdan Görselleştirici 'e geçirilmiş bilgileri görüntüler. İletişim kutusunu oluşturan kodu eklemeniz ve bilgileri görüntüetmeniz gerekir. bu izlenecek yolda, bunu bir Windows Forms ileti kutusu kullanarak yapacaksınız. İlk olarak, için bir başvuru ve `Imports` ifade eklemeniz gerekir <xref:System.Windows.Forms> .
+  yöntemi, görselleştirici iletişim kutusunu veya başka bir kullanıcı arabirimini oluşturan kodu içerir ve hata ayıklayıcıdan görselleştiriciye geçirilen `Show` bilgileri görüntüler. İletişim kutusunu oluşturan ve bilgileri görüntüleyen kodu eklemeniz gerekir. Bu kılavuzda, bunu Formlar ileti Windows kullanarak yapacaksınız. İlk olarak, için bir başvuru ve `Imports` deyimi eklemeniz <xref:System.Windows.Forms> gerekir.
 
-### <a name="to-add-systemwindowsforms"></a>Sistem eklemek için. Windows. Formlarındaki
+### <a name="to-add-systemwindowsforms"></a>Sistem eklemek için. Windows. Forms
 
-1. **Çözüm Gezgini**' de, **Başvurular**' a sağ tıklayın ve kısayol menüsünde **Başvuru Ekle**' ye tıklayın.
+1. Bu **Çözüm Gezgini,** Başvurular'a **sağ** tıklayın ve kısayol menüsünde Başvuru Ekle'ye **tıklayın.**
 
-2. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **araştır**' ı seçin ve System.Windows.Forms.DLL bulun.
+2. Başvuru **Ekle iletişim kutusundaki** Gözat sekmesinde **Gözat'ı** **seçin** ve System.Windows.Forms.DLL.
 
-    DLL dosyasını *c:\ Windows \Microsoft.NET\Framework\v4.0.30319*' de bulabilirsiniz.
+    *DLL'yi C:\Windows\Microsoft.NET\Framework\v4.0.30319 konumunda bulabilirsiniz.*
 
 3. **Tamam**'a tıklayın.
 
-4. DebuggerSide. cs dosyasında aşağıdaki deyimi `Imports` deyimlere ekleyin:
+4. DebuggerSide.cs dosyasında deyimlerine aşağıdaki `Imports` deyimini ekleyin:
 
     ```vb
     Imports System.Windows.Forms
     ```
 
-## <a name="create-your-visualizers-user-interface"></a>Görselleştirici Kullanıcı arabirimini oluşturma
- Artık Görseliniz için Kullanıcı arabirimi oluşturmak ve göstermek üzere bazı kod ekleyeceksiniz. Bu ilk görselleştiriciniz olduğundan, Kullanıcı arabirimini basit tutacaksınız ve bir Ileti kutusu kullanacaksınız.
+## <a name="create-your-visualizers-user-interface"></a>Görselleştiricinizin kullanıcı Kullanıcı Arabirimi
+ Şimdi görselleştiriciniz için kullanıcı arabirimini oluşturmak ve göstermek için kod eksersiniz. Bu ilk görselleştiriciniz olduğundan, kullanıcı arabirimini basit tutacak ve bir Message Box kullanabilirsiniz.
 
 ### <a name="to-show-the-visualizer-output-in-a-dialog-box"></a>Görselleştirici çıkışını bir iletişim kutusunda göstermek için
 
@@ -134,31 +134,31 @@ Görselleştiricisi kodu, hata ayıklayıcı tarafından okunacak bir DLL 'ye ye
     MessageBox.Show(objectProvider.GetObject().ToString())
     ```
 
-     Bu örnek kod hata işleme içermez. Hata işlemeyi gerçek bir Görselleştirici veya başka bir tür uygulama içermelidir.
+     Bu örnek kod, hata işlemeyi içermez. Hata işlemeyi gerçek bir görselleştiriciye veya başka bir tür uygulamaya dahil etmek gerekir.
 
-2. **Build** menüsünde **myfirstgörselleştirici Build**' e tıklayın. Projenin başarıyla oluşturulması gerekir. Devam etmeden önce tüm derleme hatalarını düzeltin.
+2. Build **(Derleme)** menüsünde **Build MyFirstVisualizer (Derleme MyFirstVisualizer) seçeneğine tıklayın.** Projenin başarıyla derlemesi gerekir. Devam etmeden önce derleme hatalarını düzeltin.
 
-## <a name="add-the-necessary-attribute"></a>Gerekli özniteliği ekleyin
- Hata ayıklayıcı tarafındaki kodun sonu. Ancak, başka bir adım daha vardır: hata ayıklanan tarafa hangi sınıf koleksiyonunun Görselleştirici olduğunu belirten öznitelik.
+## <a name="add-the-necessary-attribute"></a>Gerekli Özniteliği Ekleme
+ Bu, hata ayıklayıcı tarafı kodunun sonudur. Ancak bir adım daha vardır: hata ayıklayıcı tarafına sınıf koleksiyonunun görselleştiriciyi hangileri olduğunu söyleyen özniteliği.
 
-### <a name="to-add-the-type-to-visualize-for-the-debuggee-side-code"></a>Hata ayıklanan taraf kodu için görselleştirilecek türü eklemek için
+### <a name="to-add-the-type-to-visualize-for-the-debuggee-side-code"></a>Hata ayıklama tarafı kodu için görselleştirilen türü eklemek için
 
-Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ayıklanan için görselleştirilecek türü (nesne kaynağı) belirtirsiniz <xref:System.Diagnostics.DebuggerVisualizerAttribute> . `Target`Özelliği görselleştirilecek türü ayarlar.
+Hata ayıklayıcı tarafı kodunda, özniteliğini kullanarak hata ayıklayıcı için görselleştirilen türü (nesne kaynağı) <xref:System.Diagnostics.DebuggerVisualizerAttribute> belirtirsiniz. özelliği, `Target` görselleştirilen türü ayarlar.
 
-1. Aşağıdaki öznitelik kodunu DebuggerSide. vb öğesine ekleyerek deyimlerden sonra, `Imports` ancak önce `namespace MyFirstVisualizer` :
+1. Aşağıdaki öznitelik kodunu DebuggerSide.vb dosyasında deyimlerden sonra ancak `Imports` önce `namespace MyFirstVisualizer` ekleyin:
 
     ```vb
     <Assembly: System.Diagnostics.DebuggerVisualizer(GetType(MyFirstVisualizer.DebuggerSide), GetType(VisualizerObjectSource), Target:=GetType(System.String), Description:="My First Visualizer")>
     ```
 
-2. **Build** menüsünde **myfirstgörselleştirici Build**' e tıklayın. Projenin başarıyla oluşturulması gerekir. Devam etmeden önce tüm derleme hatalarını düzeltin.
+2. Build **(Derleme)** menüsünde **Build MyFirstVisualizer (Derleme MyFirstVisualizer) seçeneğine tıklayın.** Projenin başarıyla derlemesi gerekir. Devam etmeden önce derleme hatalarını düzeltin.
 
-## <a name="create-a-test-harness"></a>Test bandı oluşturma
- Bu noktada, ilk Görselleştiricinizi tamamlanmıştır. Adımlara doğru bir şekilde uyuldıysanız Görselleştirici oluşturup içine yükleyebilirsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Ancak, ' a bir Görselleştirici yüklemeden önce [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , doğru çalıştığından emin olmak için test etmeniz gerekir. Artık Görselleştirici öğesini içine yüklemeden çalıştırmak için bir test bandı oluşturacaksınız [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+## <a name="create-a-test-harness"></a>Test Sıkınları Oluşturma
+ Bu noktada, ilk görselleştiriciniz tamamdır. Adımları doğru şekilde izlediyebilirsiniz, görselleştiriciyi derlemek ve içine [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yüklemek. Ancak, içine bir görselleştirici [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yüklemeden önce doğru şekilde çalıştırıla olduğundan emin olmak için test edin. Şimdi görselleştiriciyi içine yüklemeden çalıştırmak için bir test uznum [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oluşturacak.
 
-### <a name="to-add-a-test-method-to-show-the-visualizer"></a>Görselleştiriciyi göstermek üzere bir test yöntemi eklemek için
+### <a name="to-add-a-test-method-to-show-the-visualizer"></a>Görselleştiriciyi göstermek için bir test yöntemi eklemek için
 
-1. Sınıfına aşağıdaki yöntemi ekleyin `public DebuggerSide` :
+1. sınıfına aşağıdaki yöntemi `public DebuggerSide` ekleyin:
 
    ```vb
    Shared Public Sub TestShowVisualizer(ByVal objectToVisualize As Object)
@@ -167,79 +167,79 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
    End Sub
    ```
 
-2. **Build** menüsünde **myfirstgörselleştirici Build**' e tıklayın. Projenin başarıyla oluşturulması gerekir. Devam etmeden önce tüm derleme hatalarını düzeltin.
+2. Build **(Derleme)** menüsünde **Build MyFirstVisualizer (Derleme MyFirstVisualizer) seçeneğine tıklayın.** Projenin başarıyla derlemesi gerekir. Devam etmeden önce derleme hatalarını düzeltin.
 
-   Daha sonra, görselleştiricisi DLL 'nizi çağırmak için bir yürütülebilir proje oluşturmanız gerekir. Basitlik için bir konsol uygulaması projesi kullanın.
+   Ardından görselleştirici DLL'nizi çağıracak yürütülebilir bir proje oluşturmanız gerekir. Kolaylık olması için bir konsol uygulaması projesi kullanın.
 
 ### <a name="to-add-a-console-application-project-to-the-solution"></a>Çözüme bir konsol uygulaması projesi eklemek için
 
-1. Çözüm Gezgini, çözüme sağ tıklayın, **Ekle**' yi seçin ve ardından **yeni Project**' ye tıklayın.
+1. Bu Çözüm Gezgini, çözüme sağ tıklayın, Ekle'yi **seçin** ve ardından Yeni **Project.**
 
     ::: moniker range=">=vs-2019"
-    Arama kutusunda, **Visual Basic** yazın, **Şablonlar**' ı seçin ve ardından **Yeni bir konsol uygulaması oluştur (.NET Framework)** öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Arama kutusuna visual basic yazın, Şablonlar'ı **seçin,** ardından Yeni Konsol Uygulaması oluştur (yeni konsol **uygulaması) .NET Framework.** Görüntülenen iletişim kutusunda Oluştur'a **tıklayın.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    üstteki menü çubuğundan **dosya**  >  **yeni**  >  **Project** öğesini seçin. **yeni proje** iletişim kutusunun sol bölmesinde, **Visual Basic** altında **masaüstü Windows**' ni seçin ve ardından ortadaki bölmede **konsol uygulaması (.NET Framework)** seçeneğini belirleyin.
+    Üst menü çubuğundan Dosya Yeni **Dosya'Project.**  >    >   Yeni proje iletişim  kutusunun sol bölmesinde, **Visual Basic** altında Windows **Masaüstü** seçeneğini ve orta bölmede Konsol Uygulaması **(.NET Framework) seçeneğini seçin.**
     ::: moniker-end
 
-2. Sınıf kitaplığı için, gibi uygun bir ad yazın `MyTestConsole` ve ardından **Oluştur** veya **Tamam**' a tıklayın.
+2. sınıf kitaplığı için gibi uygun bir ad yazın ve ardından `MyTestConsole` Oluştur veya **Tamam'a** **tıklayın.**
 
-   Şimdi, MyTestConsole Myfirstgörselleştirici çağırabilmesi için gerekli başvuruları eklemeniz gerekir.
+   Şimdi MyTestConsole'ın MyFirstVisualizer'ı çağırana kadar gerekli başvuruları eklemeniz gerekir.
 
-### <a name="to-add-necessary-references-to-mytestconsole"></a>MyTestConsole 'a gerekli başvuruları eklemek için
+### <a name="to-add-necessary-references-to-mytestconsole"></a>MyTestConsole'a gerekli başvuruları eklemek için
 
-1. **Çözüm Gezgini**' de, **MyTestConsole**' a sağ tıklayın ve kısayol menüsünde **Başvuru Ekle**' ye tıklayın.
+1. Bu **Çözüm Gezgini,** **MyTestConsole'a** sağ tıklayın ve kısayol menüsünde Başvuru Ekle'ye **tıklayın.**
 
-2. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, Microsoft. VisualStudio. debuggervisualiciler ' ı tıklatın.
+2. Başvuru Ekle **iletişim kutusundaki** Gözat  sekmesinde Microsoft.VisualStudio.DebuggerVisualizers'a tıklayın.
 
 3. **Tamam**'a tıklayın.
 
-4. **MyTestConsole**' a sağ tıklayın ve ardından **Başvuru Ekle** ' ye tıklayın.
+4. **MyTestConsole'a sağ tıklayın** ve ardından Başvuru **Ekle'ye yeniden** tıklayın.
 
-5. **Başvuru Ekle** iletişim kutusunda, **Projeler** sekmesine tıklayın ve ardından myfirstgörselleştirici ' ı seçin.
+5. Başvuru **Ekle iletişim kutusunda** Projeler sekmesine **tıklayın** ve ardından MyFirstVisualizer'ı seçin.
 
 6. **Tamam**'a tıklayın.
 
-## <a name="finish-your-test-harness-and-test-your-visualizer"></a>Test ortamınızı tamamlayın ve Görselleştiriciyi test edin
- Şimdi, test bandı sona ermesini sağlayacak kodu ekleyeceksiniz.
+## <a name="finish-your-test-harness-and-test-your-visualizer"></a>Test UzmaNızı Bitirin ve Görselleştiricinizi Test Sınayın
+ Şimdi testi tamamlamak için kodu eksersiniz.
 
-### <a name="to-add-code-to-mytestconsole"></a>MyTestConsole 'a kod eklemek için
+### <a name="to-add-code-to-mytestconsole"></a>MyTestConsole'a kod eklemek için
 
-1. **Çözüm Gezgini**, **program. vb** öğesine sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır**' a tıklayın.
+1. Bu **Çözüm Gezgini** **Program.vb'ye** sağ tıklayın ve kısayol menüsünde Yeniden Adlandır'a **tıklayın.**
 
-2. Bu adı, Module1. vb olan **TestConsole. vb** gibi bir değere düzenleyin.
+2. Module1.vb'den adını **TestConsole.vb gibi uygun bir adla düzenleyin.**
 
-    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]TestConsole. vb içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirdiğine dikkat edin.
+    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]TestConsole.vb dosyasındaki sınıf bildirimini yeni dosya adıyla eş olacak şekilde otomatik olarak değiştirir.
 
-3. TestConsole 'da. vb, aşağıdaki ifadeyi ekleyin `Imports` :
+3. TestConsole içinde. vb, aşağıdaki deyimi `Imports` ekleyin:
 
    ```vb
    Imports MyFirstVisualizer
    ```
 
-4. Yönteminde `Main` aşağıdaki kodu ekleyin:
+4. yönteminde `Main` aşağıdaki kodu ekleyin:
 
    ```vb
    Dim myString As String = "Hello, World"
    DebuggerSide.TestShowVisualizer(myString)
    ```
 
-   Şimdi ilk Görselleştiriciyi test etmeye hazırsınız.
+   Artık ilk görselleştiricinizi test etmeye hazır oluruz.
 
 ### <a name="to-test-the-visualizer"></a>Görselleştiriciyi test etmek için
 
-1. **Çözüm Gezgini**' de, **MyTestConsole**' a sağ tıklayın ve kısayol menüsünde **Başlangıç Project olarak ayarla**' ya tıklayın.
+1. Bu **Çözüm Gezgini,** **MyTestConsole'a** sağ tıklayın ve kısayol menüsünde Başlangıç Olarak **Ayarla'ya Project.**
 
-2. **Hata Ayıkla** menüsünde **Başlat**' a tıklayın.
+2. Hata **Ayıkla menüsünde** Başlat'a **tıklayın.**
 
-    Konsol uygulaması başlar. Görselleştirici görünür ve "Hello, World" dizesini görüntüler.
+    Konsol uygulaması başlatılır. Görselleştirici görünür ve "Hello, World" dizesini görüntüler.
 
-   Tebrikler. İlk görselleştirmeniz oluşturmuş ve test edilmiştir.
+   Tebrikler. İlk görselleştiricinizi yeni ve test ettiniz.
 
-   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Yalnızca test bandı aracılığıyla çağırmak yerine Görselleştiriciyi kullanmak istiyorsanız, onu yüklemelisiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md).
+   Görselleştiricinizi yalnızca test donanımından aramak yerine içinde kullanmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yüklemeniz gerekir. Daha fazla bilgi için, [bkz. How to: Install a Visualizer](../debugger/how-to-install-a-visualizer.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görselleştiricisi mimarisi](../debugger/visualizer-architecture.md)
-- [Nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)
+- [Görselleştirici Mimarisi](../debugger/visualizer-architecture.md)
+- [Nasıl kurulur: Görselleştirici Yükleme](../debugger/how-to-install-a-visualizer.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)

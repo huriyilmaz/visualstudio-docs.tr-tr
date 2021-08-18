@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 378dd2c8892b659f867f24f4a392cb6e099aeb477ab8044716ca0b99baddbc87
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1a90cd9ae5fa9e43a12a7b023f807aaf16ceef58
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390222"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119210"
 ---
 # <a name="idebugdocumenttextevents2"></a>IDebugDocumentTextEvents2
 bu arabirim, hata ayıklama altyapısı tarafından sağlanan kaynak belgedeki değişiklikler hakkında Visual Studio bildirmek için kullanılır.

@@ -23,12 +23,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c0e894841797064cd458eb558ce548957202dafbbdab1ed3bf1d9dfd160dde97
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ab5ff2fe9702d56ddc2c4b767ac40f3d63ddbe15
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121346706"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052570"
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>Bir veri kümesini doldururken kısıtlamaları kapatma
 
@@ -48,7 +48,7 @@ Geçici kısıtlamanın askıya alınmasına izin verecek bir mekanizma yoksa, a
 
 ## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>Güncelleştirme kısıtlamalarını askıya almak için Veri Kümesi Tasarımcısı
 
-1. veri kümenizi **Veri Kümesi Tasarımcısı.** Daha fazla bilgi için [bkz. Adım adım kılavuz:](walkthrough-creating-a-dataset-with-the-dataset-designer.md)veri kümesi oluşturma Veri Kümesi Tasarımcısı.
+1. veri kümenizi **Veri Kümesi Tasarımcısı.** Daha fazla bilgi için [bkz. Adım adım: Veri kümesi oluşturma Veri Kümesi Tasarımcısı.](walkthrough-creating-a-dataset-with-the-dataset-designer.md)
 
 2. Özellikler **penceresinde** özelliğini olarak <xref:System.Data.DataSet.EnforceConstraints%2A> `false` ayarlayın.
 

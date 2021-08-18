@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 99d015fa327992f22fbab95513102ed9e376a96a29a6ae037ac8f33acb2ea30b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8138d702fb8507cfb1da24f28995b2bc4d21341f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121403019"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119912"
 ---
 # <a name="idebugbinder3findalias"></a>IDebugBinder3::FindAlias
 Bu yöntem, ad verilen bir diğer ad bulur. Bu, programdaki tüm diğer adları arar.

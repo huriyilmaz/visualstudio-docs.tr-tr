@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim bir yönerge akışını temsil eder.
+description: Bu arabirim bir yönergelerin akışını temsil eder.
 title: IDebugDisassemblyStream2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: b03cab0c-3f0b-4cc6-88dc-acb3b48c567a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e4ffa8de4b245071f1893eae5f5427a9dccd353
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e42d8019c854ca800dd35028fe82a158bc3a428e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066886"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119522"
 ---
 # <a name="idebugdisassemblystream2"></a>IDebugDisassemblyStream2
-Bu arabirim bir yönerge akışını temsil eder.
+Bu arabirim bir yönergelerin akışını temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,35 +30,35 @@ Bu arabirim bir yönerge akışını temsil eder.
 IDebugDisassemblyStream2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bir hata ayıklama altyapısı, bir programın kodunun ayrıştırılmış derlemesini desteklemek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı, program kodunun ayrımlarını desteklemek için bu arabirimi uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [Getdisassemblystream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md) yöntemine yapılan bir çağrı bu arabirimi döndürür.
+ [GetDisassemblyStream yöntemine yapılan bir çağrı](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md) bu arabirimi döndürür.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugDisassemblyStream2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugDisassemblyStream2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Okuyamaz](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)|Ayrıştırılmış birleştirme akışındaki geçerli konumdan başlayan yönergeleri okur.|
-|[Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)|Ayırma akışındaki okuma işaretçisini, belirtilen bir konuma göre verilen sayıda yönergeye kaydırır.|
-|[GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)|Belirli bir kod bağlamı için bir kod konum tanımlayıcısı döndürür.|
+|[Okuma](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md)|Ayrık akışta geçerli konumdan başlayarak yönergeleri okur.|
+|[Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)|Disassembly akışında belirtilen konuma göre belirli sayıdaki yönergelerin okuma işaretçisini taşır.|
+|[GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md)|Belirli bir kod bağlamı için kod konumu tanımlayıcısı döndürür.|
 |[GetCodeContext](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodecontext.md)|Belirtilen kod konumu tanımlayıcısına karşılık gelen bir kod bağlamı nesnesi döndürür.|
-|[GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md)|Geçerli kod konumunu temsil eden bir kod konum tanımlayıcısı döndürür.|
-|[GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md)|Bu ayırt derleme akışıyla ilişkili kaynak belgeyi alır.|
-|[GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)|Bu ayırt derleme akışının kapsamını alır.|
-|[GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)|Bu ayırt derleme akışının boyutunu alır.|
+|[GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md)|Geçerli kod konumunu temsil eden bir kod konumu tanımlayıcısı döndürür.|
+|[GetDocument](../../../extensibility/debugger/reference/idebugdisassemblystream2-getdocument.md)|Bu ayrık akışla ilişkili kaynak belgeyi alır.|
+|[GetScope](../../../extensibility/debugger/reference/idebugdisassemblystream2-getscope.md)|Bu ayrık akışın kapsamını alır.|
+|[GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md)|Bu ayrık akışın boyutunu alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Tek derleme akışı, tüm adres alanını veya boşluk içindeki bir işlevi ya da modülü göstermek için oluşturulabilir. Her yönerge [Read](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) yöntemine yapılan bir çağrı tarafından döndürülen bir [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapısıyla temsil edilir.
+ Adres alanı tamamını veya yalnızca alan içindeki bir işlevi veya modülü temsil etmek için ayrım akışı oluşturulabilir. Her yönerge Read yöntemine yapılan bir çağrı tarafından döndürülen [bir DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) [yapısıyla temsil](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) edilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

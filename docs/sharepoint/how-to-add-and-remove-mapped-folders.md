@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl: Eşlenmiş Klasörler Ekleme ve Kaldırma | Microsoft Docs'
-description: SharePoint'da bir projeye eşlenmiş klasörler ekleyin ve SharePoint.  Eşlenen klasörün dağıtım konumunu değiştirme. Eşlenen klasörleri yeniden adlandır veya kaldır.
+title: 'Nasıl yapılır: eşlenmiş klasör ekleme ve kaldırma | Microsoft Docs'
+description: Eşlenen klasörleri SharePoint bir projeye ekleyin ve kaldırın.  Eşlenen bir klasörün dağıtım konumunu değiştirin. Eşlenen klasörleri yeniden adlandırın veya kaldırın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,80 +18,80 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 8c0187a4adfec8891bb441f18a985a597d7cb4e44e186d76b107fffea891c258
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b632b9e261b2420d932be71e0cbc1216ae94b6ef
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385256"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136111"
 ---
-# <a name="how-to-add-and-remove-mapped-folders"></a>Nasıl: Eşlenmiş klasörler ekleme ve kaldırma
+# <a name="how-to-add-and-remove-mapped-folders"></a>Nasıl yapılır: eşlenmiş klasörler ekleme ve kaldırma
 
-  Görüntüler ve Düzenler gibi SharePoint kullanılan bazı klasörler dosya hiyerarşisine derinden katıştırır. Daha kolay erişmek için bu klasörleri SharePoint bir projeyle eşlayabilirsiniz. Eşlenen klasörler, SharePoint projesinin SharePoint yüklemesinde dosyaların fiziksel konumuna karşılık gelen klasörlerdir.
+  resim ve düzen gibi SharePoint yaygın olarak kullanılan bazı klasörler dosya hiyerarşisinde derin bir şekilde katıştırılır. bu klasörleri daha kolay erişmek için bir SharePoint projesi ile eşleyebilirsiniz. eşlenen klasörler, SharePoint sunucusu yüklemesinde dosyaların fiziksel konumuna karşılık gelen SharePoint projesindeki klasörlerdir.
 
- SharePoint uygulamasını dağıtarak eşlenen klasörün ve tüm alt klasörlerinin içeriği çözüm paketi (.wsp) tarafından SharePoint klasör ağacında belirtilen konumda SharePoint çalıştıran sunucuya kopyalanır. Bu konum, **eşlenen klasör** için ayarlanmış Dağıtım Konumu özelliği tarafından belirlenir. Eşlenen klasördeki tüm alt klasörler, eşlenen **klasörün Dağıtım** Konumu ile görelidir. Öğelerin **dağıtılacağı yeri** eşlenen klasörün adı değil Dağıtım Konumu özelliğinin belirler.
-Menü çubuğundaki komutları veya projenin kısayol menüsünü kullanarak bir projeye eşlenmiş klasörler ekleyebilirsiniz. En sık kullanılan **eşlenmiş SharePoint** eklemek için Add SharePoint "Layouts" klasör komutlarını ve Add SharePoint **"Layouts"** klasör komutlarını kullanabilirsiniz. Kısayol menüsündeki SharePoint Eşlenmiş Klasör Ekle komutunu kullanarak ve ardından **SharePoint** Eşlenmiş Klasör Ekle iletişim kutusunda klasörleri belirterek kullanılabilir diğer SharePoint klasörlerini projenize **eşlersiniz.**
+ bir SharePoint uygulaması dağıttığınızda, eşlenmiş klasörün ve tüm alt klasörlerinin içeriği, SharePoint klasör ağacındaki belirtilen konumda SharePoint çalıştıran sunucuya çözüm paketi (. wsp) tarafından kopyalanır. Bu konum, eşlenen klasör için ayarlanan **dağıtım konumu** özelliği tarafından belirlenir. Eşlenen klasördeki tüm alt klasörler, eşlenmiş klasörün **dağıtım konumuyla** ilişkilidir. Eşlenen klasörün adı değil **dağıtım konumu** özelliğinin, öğelerin nereye dağıtılacağını belirlediğini unutmayın.
+Proje için menü çubuğundaki komutları veya kısayol menüsünü kullanarak, eşlenen klasörleri bir projeye ekleyebilirsiniz. en sık kullanılan eşlenmiş klasörleri eklemek için, **SharePoint "görüntüleri" eşlenmiş klasörünü** ve **SharePoint "düzenleri" klasör** komutlarını ekleyebilirsiniz. kısayol menüsündeki **SharePoint eşlenmiş klasör ekle** komutunu kullanarak ve ardından **SharePoint eşlenmiş klasör ekle** iletişim kutusunda klasörleri belirterek, diğer kullanılabilir SharePoint klasörlerinden herhangi birini projenize eşleyebilirsiniz.
 
-## <a name="add-mapped-folders-to-a-project"></a>Projeye eşlenmiş klasörler ekleme
+## <a name="add-mapped-folders-to-a-project"></a>Bir projeye eşlenmiş klasörler ekleme
 
- Aşağıdaki yordamda, bir görsel web bölümü projesine iki eşlenmiş klasörün nasıl ekli olduğu açıkmektedir. Başlamak için bir görsel web bölümü projesi oluşturun.
+ Aşağıdaki yordamda, iki eşlenmiş klasörün bir Visual Web Bölümü projesine nasıl ekleneceği açıklanmaktadır. Başlamak için bir Visual Web Bölümü projesi oluşturun.
 
-## <a name="to-add-mapped-folders-to-a-project"></a>Bir projeye eşlenmiş klasörler eklemek için
+## <a name="to-add-mapped-folders-to-a-project"></a>Eşlenen klasörleri bir projeye eklemek için
 
-1. Menü çubuğunda Dosya Yeni'yi **seçin**  >  **ve**  >  **Project.**
+1. menü çubuğunda **dosya**  >  **yeni**  >  **Project**' yi seçin.
 ::: moniker range="=vs-2017"
-2. Yeni **Project** iletişim kutusunda **Visual Basic** veya **Visual C#** düğümünü genişletin, **Office/SharePoint** düğümünü genişletin ve SharePoint **Çözüm düğümünü** seçin.
+2. **yeni Project** iletişim kutusunda, **Visual Basic** ya da **Visual C#** düğümünü genişletin, **Office/SharePoint** düğümünü genişletin ve ardından **SharePoint Solutions** düğümünü seçin.
 
-3. Proje şablonları listesinde, SharePoint **2013 Visual Web Bölümü şablonunu** seçin.
+3. proje şablonları listesinde **SharePoint 2013 Visual Web bölümü** şablonunu seçin.
 
-4. Ad **kutusuna** **TestProject1 yazın** ve tamam **düğmesini** seçin.
+4. **Ad** kutusuna **TestProject1** girin ve sonra **Tamam** düğmesini seçin.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-2. Yeni **Uygulama Oluştur Project** iletişim kutusunda, SharePoint belirli bir sürüm için SharePoint Visual *Web* Bölümü * SharePoint seçin. Örneğin, **2019 SharePoint 2019** Visual Web SharePoint şablonunu seçin.
+2. **yeni Project oluştur** iletişim kutusunda, yüklemiş olduğunuz SharePoint özgü sürümü için *Visual Web bölümü * SharePoint* seçin. örneğin, SharePoint 2019 yüklemesi varsa **SharePoint 2019 Visual Web bölümü** şablonunu seçin.
     [!INCLUDE[new-project-dialog-search](../sharepoint/includes/new-project-dialog-search-md.md)]
 
-3. Ad **kutusuna** **TestProject1 yazın**
-4. Ardından Oluştur **düğmesini** seçin.
+3. **Ad** kutusuna **TestProject1** girin.
+4. Ardından **Oluştur** düğmesini seçin.
 ::: moniker-end
 
-5. Özelleştirme **Sihirbazı SharePoint'nda,** varsayılan **ayarları korumak** için Son düğmesini seçin.
+5. **SharePoint özelleştirme sihirbazında**, varsayılan ayarları sürdürmek için **son** düğmesini seçin.
 
-6. Bu **Çözüm Gezgini** proje düğümünü seçin ve ardından menü çubuğunda "Görüntüler" Eşlenen **Project**  >  **Ekle'SharePoint 'yi seçin.**
+6. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda, **Project**  >  **SharePoint "resimleri" eşlenmiş klasör ekle**' yi seçin.
 
-     Projeniz içinde **Images** adlı bir klasör görünür ve TestProject1 adlı bir alt klasör içerir. Eşlenen bu klasör, görsel web bölümü projesinin görüntülerini içerir.
+     Projenizde **resim** adında bir klasör görünür ve TestProject1 adlı bir alt klasör içerir. Bu eşlenmiş klasör, Visual Web Bölümü projesinin görüntülerini içerir.
 
-7. Bu **Çözüm Gezgini** proje düğümünü seçin ve ardından menü çubuğunda Project Eşlenmiş Klasör Ekle iletişim kutusunu görüntülemek için SharePoint  >   **Eşlenmiş** Klasör SharePoint seçin.
+7. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda,   >  **SharePoint eşlenmiş klasör ekle** iletişim kutusunu göstermek için Project **SharePoint eşlenmiş klasör ekle** ' yi seçin.
 
-8. Eşleme için kullanılabilen klasörlerin ağaç görünümünde Kaynaklar klasörünü **ve** ardından Tamam **düğmesini** seçin.
+8. Eşleme için kullanılabilen klasörlerin ağaç görünümünde **kaynaklar** klasörünü seçin ve **Tamam** düğmesini seçin.
 
-     Projeniz içinde **Kaynaklar adlı** bir klasör görünür. Bu klasör dize kaynak dosyaları gibi öğeleri depolar. Alt klasörler eşlenen bir klasörün içeriğini düzenlemek için yararlı olabilir, ancak Eşlenen Klasör Ekle komutunu kullanarak eşlenen bir klasör SharePoint otomatik **olarak oluşturulmaz.** Alt klasör eklemek için Kaynaklar klasörünü **seçin** ve ardından menü çubuğunda Yeni **Klasör'Project**  >  **seçin.**
+     Projenizde **kaynaklar** adlı bir klasör görüntülenir. Bu klasör, dize kaynak dosyaları gibi öğeleri saklayabilir. alt klasörler eşlenmiş bir klasörün içeriğini düzenlemek için yararlı olabilir, ancak **SharePoint eşlenmiş klasör ekle** komutunu kullanarak eşlenmiş bir klasör eklediğinizde otomatik olarak oluşturulmazlar. bir alt klasör eklemek için **kaynaklar** klasörünü seçin ve ardından menü çubuğunda   >  **yeni klasör** Project ' yi seçin.
 
-## <a name="change-the-deployment-location-of-a-mapped-folder"></a>Eşlenen klasörün dağıtım konumunu değiştirme
+## <a name="change-the-deployment-location-of-a-mapped-folder"></a>Eşlenen bir klasörün dağıtım konumunu değiştirme
 
- Varsayılan olarak, eşlenen klasörler, belirteci ifade SharePoint kök yükleme yoluna göre belirli \<SharePointRoot> konumlara eklenir. Ancak, eşlenen klasörün Dağıtım konumu **özelliğini** değiştirerek bu konumu değiştirebilirsiniz. Eşlenen her klasörün kendi Dağıtım **konumu özelliği** vardır.
+ varsayılan olarak, eşlenmiş klasörler, belirtecin başvurduğu SharePoint kök yükleme yoluna göre belirli konumlara eklenir \<SharePointRoot> . Ancak, eşlenmiş klasörün **dağıtım konumu** özelliğini değiştirerek bu konumu değiştirebilirsiniz. Eşlenen her klasörün kendi **dağıtım konumu** özelliği vardır.
 
-### <a name="to-change-the-deployment-location-of-a-mapped-folder"></a>Eşlenen bir klasörün dağıtım konumunu değiştirmek için
+### <a name="to-change-the-deployment-location-of-a-mapped-folder"></a>Eşlenmiş bir klasörün dağıtım konumunu değiştirmek için
 
-1. Daha önce oluşturduğunuz projede eşlenmiş bir klasör seçin.
+1. Daha önce oluşturduğunuz projede, eşlenmiş bir klasör seçin.
 
-2. Özellikler **penceresinde** Dağıtım konumu özelliğinde üç nokta (![ASP.NET](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil Tasarımcı üç nokta")Mobil Tasarımcı üç nokta ) **düğmesini** seçin.
+2. **özellikler** penceresinde **dağıtım konumu** özelliğindeki üç nokta (![mobil tasarımcı elips ASP.NET](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil tasarımcı elips")) düğmesini seçin.
 
-3. Eşlenen **SharePoint** Ekle iletişim kutusunda, eşlenen klasörün işaret etmek istediğiniz klasöre gidin.
+3. **SharePoint eşlenmiş klasör ekle** iletişim kutusunda, eşlenen klasörün işaret olmasını istediğiniz klasöre gidin.
 
-4. Düğümü ve ardından Tamam **düğmesini** seçin.
+4. Düğümünü seçin ve ardından **Tamam** düğmesini seçin.
 
 ## <a name="rename-or-remove-mapped-folders"></a>Eşlenen klasörleri yeniden adlandırma veya kaldırma
 
 ### <a name="to-rename-or-remove-a-mapped-folder"></a>Eşlenmiş bir klasörü yeniden adlandırmak veya kaldırmak için
 
-1. Daha önce oluşturduğunuz projede eşlenmiş bir klasör seçin.
+1. Daha önce oluşturduğunuz projede, eşlenmiş bir klasör seçin.
 
-2. Eşlenen klasörü yeniden adlandırmak için kısayol menüsünü açın, Yeniden Adlandır'ı **seçin,** yeni adı girin ve Enter tuşuna basın.
+2. Eşlenen klasörü yeniden adlandırmak için, kısayol menüsünü açın, **Yeniden Adlandır**' ı seçin, yeni adı girin ve Enter tuşunu seçin.
 
-     Alternatif olarak, yeniden adlandırmak istediğiniz eşlenmiş klasörü seçebilir,  Özellikler penceresini açabilir ve ardından  Klasör adı özelliğinin değerini yeni ad olarak ayarlayın.
+     Alternatif olarak, yeniden adlandırmak istediğiniz eşlenmiş klasörü seçebilir, **Özellikler** penceresini açabilir ve ardından **klasör adı** özelliğinin değerini yeni ad olarak ayarlayabilirsiniz.
 
-3. Eşlenen bir klasörü projeden kaldırmak için kısayol menüsünü açın, Sil'i seçin ve ardından kaldırma işlemini onaylamak için iletişim kutusunda Tamam düğmesini seçin. 
+3. Eşlenen bir klasörü projeden kaldırmak için, onun kısayol menüsünü açın, **Sil**' i seçin ve ardından Iletişim kutusunda **Tamam** düğmesini seçerek kaldırma işlemini onaylayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeni SharePoint geliştirme](../sharepoint/developing-sharepoint-solutions.md)
+- [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)

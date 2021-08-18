@@ -1,5 +1,5 @@
 ---
-description: Bu yapı bir yöntemin veya işlevin parametresini temsil eder.
+description: Bu yapı, bir yöntemin veya işlevin parametresini temsil eder.
 title: METADATA_ADDRESS_PARAM | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dabcf2b31de54a5a344eaf795798e05d84bdb282b949c6b5c2b50e78a8f37f27
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d2a160789b4b5e19ffd6e9eb1974f85396b2d8f4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276236"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103123"
 ---
 # <a name="metadata_address_param"></a>METADATA_ADDRESS_PARAM
-Bu yapı bir yöntemin veya işlevin parametresini temsil eder.
+Bu yapı, bir yöntemin veya işlevin parametresini temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,23 +47,23 @@ public struct METADATA_ADDRESS_PARAM {
 
 ## <a name="members"></a>Üyeler
  `tokMethod`\
- Parametresinin bir parçası olduğu yöntemin KIMLIĞI.
+ parametresinin bir parçası olduğu yöntemin kimliği.
 
  `tokParam`\
- Parametrenin KIMLIĞI.
+ Parametrenin kimliği.
 
  `dwIndex`\
- Parametre listesindeki parametresinin dizini.
+ Parametre listesinde parametre dizini.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, [](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_PARAM` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
+ Bu yapı, yapının alanı [(DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) enumerasyonundan bir değer) olarak ayarlanırken ADDRESS_KIND `dwKind` parçası `DEBUG_ADDRESS_UNION` `ADDRESS_KIND_PARAM` olur. [](../../../extensibility/debugger/reference/address-kind.md)
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: SH. h
+ Üst bilgi: sh.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

@@ -1,6 +1,6 @@
 ---
-description: Göreli sanal adrese (RVA) göre arama yaparak numaralayıcıyı konumlar.
-title: IDiaEnumSymbolsByAddr::symbolByRVA | Microsoft Docs
+description: Göreli sanal adres (RVA) ile bir arama gerçekleştirerek numaralandırıcısı konumlandırır.
+title: 'IDiaEnumSymbolsByAddr:: symbolByRVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: de42d5c3ee1c4f91d0d2099ce3525f8ab3133e6af1e79fad5f537dc6ba492ea0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f223845e1d83a1f12c58973fa6ccb644b9902b8a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121405229"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134420"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyrva"></a>IDiaEnumSymbolsByAddr::symbolByRVA
-Göreli sanal adrese (RVA) göre arama yaparak numaralayıcıyı konumlar.
+Göreli sanal adres (RVA) ile bir arama gerçekleştirerek numaralandırıcısı konumlandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,14 +36,14 @@ HRESULT symbolByRVA (
 #### <a name="parameters"></a>Parametreler
  relativeVirtualAddress
 
-[in] Görüntünün başlangıcına göre adres.
+'ndaki Görüntünün başlangıcına göre adres.
 
  ppsymbol
 
-[out] Bulunan sembolü [temsil eden bir IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
+dışı Bulunan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Sembol `S_FALSE` bulunamasa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Simgenin bulunamadıysanız, döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)

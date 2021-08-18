@@ -1,5 +1,5 @@
 ---
-description: Bir program düğümünü hata ayıklama motorları (DEs) ve oturum hata ayıklama Yöneticisi (SDM) tarafından kullanılabilir hale getirir.
+description: Bir program düğümünü hata ayıklama altyapıları (DEs) ve oturum hata ayıklama yöneticisi (SDM) tarafından kullanılabilir yapar.
 title: IDebugProgramPublisher2::P ublishProgramNode | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f68e6a3b874617608d0155294fa3928ac51d0b2585fe39bdc25edee67cfceded
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4b004a6537eed565d1a607f99a35ea77267fa7ce
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121449137"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118664"
 ---
 # <a name="idebugprogrampublisher2publishprogramnode"></a>IDebugProgramPublisher2::PublishProgramNode
-Bir program düğümünü hata ayıklama motorları (DEs) ve oturum hata ayıklama Yöneticisi (SDM) tarafından kullanılabilir hale getirir.
+Bir program düğümünü hata ayıklama altyapıları (DEs) ve oturum hata ayıklama yöneticisi (SDM) tarafından kullanılabilir yapar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,15 +43,15 @@ int PublishProgramNode(
 
 ## <a name="parameters"></a>Parametreler
 `pProgramNode`\
-'ndaki Kullanılabilir hale getirmek için program düğümünü temsil eden bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi.
+[in] Kullanılabilir hale için program düğümünü temsil eden bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, programların hata ayıklama için seçmeden ve başlatılmadan önce bilgiler için sorgulanmasını sağlar.
+ Bu yöntem, programların hata ayıklama için bunları seçmeden ve başlatmadan önce bilgi sorgulamasını sağlar.
 
- Bir program düğümünü kullanılabilirliğinden kaldırmak için [UnpublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md) yöntemini çağırın.
+ Bir program düğümünü kullanılabilirlikten kaldırmak için [UnpublishProgramNode yöntemini](../../../extensibility/debugger/reference/idebugprogrampublisher2-unpublishprogramnode.md) çağırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)

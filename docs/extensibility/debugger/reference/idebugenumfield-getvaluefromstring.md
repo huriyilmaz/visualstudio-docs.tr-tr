@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3060fafd2c887dd79933bb1baa04644d77a1113a132c3d751b31332c7643d526
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6a7142b7d15a83ded610ead8403a0fbfa5425664
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360514"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118950"
 ---
 # <a name="idebugenumfieldgetvaluefromstring"></a>IDebugEnumField::GetValueFromString
 Bu yöntem, bir sabit sabiti adı ile ilişkili değeri döndürür.

@@ -14,12 +14,12 @@ ms.author: v-dele
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c88d75c0658c861c4631daeeb736ed7cfdb0a487
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 91021d6a3b2eb46d04ff2f65f4e623edb2b15ac8ac8712cd6bbaa438e57d3a5f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99967234"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121357108"
 ---
 # <a name="nosplash-devenvexe"></a>/NoSplash (devenv.exe)
 
@@ -35,11 +35,11 @@ devenv /NoSplash [File1[ FileN]...]
 
 - *FILE1*
 
-  İsteğe bağlı. Visual Studio 'nun mevcut bir örneğinde açılacak dosya. Visual Studio 'nun bir örneği yoksa, Basitleştirilmiş bir pencere düzeniyle yeni bir örnek oluşturulur ve araç yeni örnekte *FILE1* öğesini açar.
+  İsteğe bağlı. Visual Studio var olan bir örneğinde açılacak dosya. Visual Studio bir örneği yoksa, basitleştirilmiş bir pencere düzeniyle yeni bir örnek oluşturulur ve araç yeni örnekte *fıle1* öğesini açar.
 
 - *Dosyan*
 
-  İsteğe bağlı. Visual Studio 'nun mevcut örneğinde açmak için bir veya daha fazla ek dosya.
+  İsteğe bağlı. Mevcut Visual Studio örneğinde açmak için bir veya daha fazla ek dosya.
 
 ## <a name="remarks"></a>Açıklamalar
 

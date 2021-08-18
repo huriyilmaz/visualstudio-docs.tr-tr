@@ -1,5 +1,5 @@
 ---
-description: Ayrıştırılmış derleme bayraklarını belirtir.
+description: Ayrım için bayrakları belirtir.
 title: DISASSEMBLY_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: c1ec5a4d-5d42-4660-932c-7348550140cb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 28335176a70213f61bfbb77bf6f91cc6155902e7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d4640ee39a936318b5e200fc46135e1fc271c46b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096206"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120003"
 ---
 # <a name="disassembly_flags"></a>DISASSEMBLY_FLAGS
-Ayrıştırılmış derleme bayraklarını belirtir.
+Ayrım için bayrakları belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,31 +57,31 @@ public enum enum_DISASSEMBLY_FLAGS {
 Bu yönergenin öncekinden farklı bir belgede olduğunu gösterir.
 
 `DF_DISABLED`\
-Bu yönergenin yürütülemeyecek olduğunu gösterir.
+Bu yönergenin yürütülmayacak olduğunu gösterir.
 
 `DF_INSTRUCTION_ACTIVE`\
-Bu yönergenin yürütülecek sonraki yönergelerden biri olduğunu belirtir (birden fazla olabilir).
+Bu yönergenin yürütülecek sonraki yönergelerden biri olduğunu gösterir (birden fazla olabilir).
 
 `DF_DATA`\
 Bu yönergenin gerçekten veri (kod değil) olduğunu gösterir.
 
 `DF_HASSOURCE`\
-Bu yönergenin kaynak olduğunu gösterir. Profil oluşturma veya çöp toplama kodu gibi bazı yönergelere karşılık gelen bir kaynak yoktur.
+Bu yönergenin kaynağı olduğunu gösterir. Profil oluşturma veya çöp toplama kodu gibi bazı yönergelere karşılık gelen bir kaynak yoktur.
 
 `DF_DOCUMENT_CHECKSUM`\
-Bu `bstrDocumentUrl` alanın, belge URL 'sinden sonra sağlama toplamı verilerini içerdiğini belirtir. Sağlama toplamı verilerinin nasıl depolandığını gösteren [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapısına ilişkin açıklamalar bölümüne bakın.
+Alanın belge `bstrDocumentUrl` URL'sinin ardından sağlama toplama verilerini içerdiğini gösterir. Sağlama toplama verilerini depolama hakkında bilgi için [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapısının Açıklamalar bölümüne bakın.
 
 ## <a name="remarks"></a>Açıklamalar
-`dwFlags` [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapısının üyesi olarak kullanılır.
+`dwFlags` [DisassemblyData yapısının üyesi olarak](../../../extensibility/debugger/reference/disassemblydata.md) kullanılır.
 
-Bu bayraklar bit düzeyinde birleştirilebilir `OR` .
+Bu bayraklar bit olarak birleştirilmiş `OR` olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

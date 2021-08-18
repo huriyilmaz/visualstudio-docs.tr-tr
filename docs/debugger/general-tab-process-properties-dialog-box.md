@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e50cffecb1ef12373e8a6774efebf832aebaa9b61fdc362657474028acdb7cc9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 387d55dffe3e591874928ddbacc9ff7a5e475cf3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121391401"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133880"
 ---
 # <a name="general-tab-process-properties-dialog-box"></a>Genel Sekmesi, İşlem Özellikleri İletişim Kutusu
 Belirli bir **işlem hakkında** daha fazla bilgi için Genel sekmesini kullanın. İşlem Özellikleri [İletişim Kutusunu görüntülemek için,](../debugger/process-properties-dialog-box.md)odağı bir İşlemler Görünümü [penceresine](../debugger/processes-view.md) sürükleyin. Ağaçtan herhangi bir işlem düğümünü seçin ve ardından **Görünüm menüsünden** **Özellikler'i** seçin.

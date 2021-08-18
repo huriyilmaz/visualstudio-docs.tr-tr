@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: ca3341b252f94a4415904744840f24cb05b56b56
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 909bb9952ce788418a5372955e1df56ec719ce633685728fc7951188dac6ba87
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122026960"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121352935"
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package"></a>Nasıl SharePoint: SharePoint paketi özelleştirme
   Paket Tasarımcısı'nda paket oluşturmak ve özelleştirmek için kullanabilirsiniz (*.wsp*). Örneğin, proje öğeleri SharePoint özellikler ekleyebilir, çözüm dağıtıldığında Web sunucusunun sıfırlandırılacağı belirtebilirsiniz ve dağıtım sunucusu türünü ayarlayın.
@@ -43,7 +43,7 @@ ms.locfileid: "122026960"
 
 1. Paket **Tasarımcısı'nda Bildirim'i** **seçin.**
 
-#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Çözüm Gezgini kullanarak paketlenmiş bildirim dosyasını görüntülemek için
+#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Paket bildirim dosyasını Çözüm Gezgini kullanarak görüntülemek için
 
 1. Bu **Çözüm Gezgini** Tüm Dosyaları **Göster'i seçin.**
 
@@ -53,7 +53,7 @@ ms.locfileid: "122026960"
     > Paket şablonu için bildirim XML dosyasını açsanız, dosyalar otomatik olarak doğrulanır ve Hata Listesi penceresinde görünen uyarıları yoksayabilirsiniz.
 
 ## <a name="change-the-manifest-template"></a>Bildirim şablonunu değiştirme
- Paketlenmiş bildirim dosyasının XML kodunu xml düzenleyicisinde veya Visual Studio dosyasında değiştirebilirsiniz. XML kodunda yapılan tüm değişiklikler paketin paketlenmiş bildirim dosyasıyla birleştirilir.
+ Paketlenmiş bildirim dosyasının XML kodunu xml düzenleyicisinde Visual Studio Xml Düzenleyicisi'nde veya Bildirim Şablonu bölmesinde değiştirebilirsiniz. XML kodunda yapılan tüm değişiklikler paketin paketlenmiş bildirim dosyasıyla birleştirilir.
 
 #### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML Düzenleyicisi'ni kullanarak bildirim şablonunu değiştirmek için
 

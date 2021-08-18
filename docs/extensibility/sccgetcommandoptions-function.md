@@ -11,14 +11,15 @@ ms.assetid: bbe4aa4e-b4b0-403e-b7a0-5dd6eb24e5a9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7972d874668649b8bb86adc15008880c5fc4152e
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 6b6fc42c15900b48826422d2474fb6a8048656ae
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903937"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086358"
 ---
 # <a name="sccgetcommandoptions-function"></a>Sccgetcommandoçenişlevi
 Bu işlev, kullanıcıdan belirli bir komutun gelişmiş seçeneklerini ister.

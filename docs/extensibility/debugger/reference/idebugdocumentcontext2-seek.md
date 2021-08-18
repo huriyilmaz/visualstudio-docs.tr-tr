@@ -11,17 +11,18 @@ ms.assetid: 71501356-8a82-4d36-b354-6625bdd2baa0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c9fcc430102ec974f2492a8e65894faa45978693
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d18e00071d23e22ed2cbd99f9b88f95c13aee253
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066561"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119496"
 ---
 # <a name="idebugdocumentcontext2seek"></a>IDebugDocumentContext2::Seek
 Belge bağlamını verilen sayıda deyim veya satır olarak kaydırır.

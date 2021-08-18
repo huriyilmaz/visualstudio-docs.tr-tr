@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl kullanılır: Belgelerde bulunan öğelerde program aracılığıyla döngü'
-description: Visual Studio kullanarak bir belgedeki bulunan öğelerde programlı Microsoft Word döngü Visual Studio.
+description: Bir belgedeki bulunan öğeler arasında program aracılığıyla döngü Microsoft Word bilgi edinmek için Visual Studio.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -34,12 +34,12 @@ ms.locfileid: "121440753"
 
 1. Bir nesnesi <xref:Microsoft.Office.Interop.Word.Range> bildir.
 
-    Aşağıdaki kod örneği, belge düzeyi özelleştirmede kullanılabilir.
+    Aşağıdaki kod örneği, belge düzeyinde özelleştirmede kullanılabilir.
 
     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet79":::
     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet79":::
 
-    Aşağıdaki kod örneği bir eklentide VSTO kullanılabilir. Bu örnek etkin belgeyi kullanır.
+    Aşağıdaki kod örneği bir VSTO kullanılabilir. Bu örnek etkin belgeyi kullanır.
 
     :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet79":::
     :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet79":::

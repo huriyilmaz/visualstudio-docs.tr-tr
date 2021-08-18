@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b77564566d1f45ca860483867bc407de1e5040c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: d28eb5cc69d3cdeb8ca5da95b91d79ed9c5f46ec042d53fb0704f3b77f3ea5dc
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134468"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455202"
 ---
 # <a name="idiaenuminjectedsourcesitem"></a>IDiaEnumInjectedSources::Item
 Eklenen kaynağı bir dizin aracılığıyla alır.

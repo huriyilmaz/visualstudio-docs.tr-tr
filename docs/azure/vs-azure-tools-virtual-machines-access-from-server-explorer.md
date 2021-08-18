@@ -1,6 +1,6 @@
 ---
-title: Azure Sanal Makineler'e Sunucu Gezgini | Microsoft Docs
-description: Sanal makinelerde Azure sanal makinelerinin (VM) nasıl oluşturularak yönetildiklerinin nasıl görüntü Sunucu Gezgini genel Visual Studio.
+title: Sunucu Gezgini 'den Azure sanal makinelerine erişme | Microsoft Docs
+description: Visual Studio Sunucu Gezgini Azure sanal makinelerini (VM 'Ler) oluşturma ve yönetme hakkında genel bakış alın.
 author: ghogen
 manager: jmartens
 ms.technology: vs-azure
@@ -8,49 +8,49 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: 4f7cf0d8c51415ae70bef5a9c556a0d2bda96cbd7f95cd8c194d62ca71060c25
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 689317f3789188a4551aaee588d7f0c006bcb4f7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121312605"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122053311"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>Sunucu Gezgini'nden Azure Sanal Makineler'e erişme
 
 ::: moniker range=">=vs-2022"
 > [!Important]
-> Sunucu Gezgini Azure düğümü, 2022'Visual Studio kullanımdan kaldırıldı. Azure Portalı'nın önceki sürümlerinde azure portalını kullanabilir veya Sunucu Gezgini Azure düğümünü kullanmaya Visual Studio.
+> Sunucu Gezgini Azure düğümü Visual Studio 2022 ' de kullanımdan kaldırılmıştır. Azure portalını kullanabilir veya önceki Visual Studio sürümlerinde Sunucu Gezgini Azure düğümünü kullanmaya devam edebilirsiniz.
 >
-> Ayrıca [Microsoft Azure Depolama Gezgini,](/azure/vs-azure-tools-storage-manage-with-storage-explorer) Microsoft'un ücretsiz ve tek başına bir uygulamasıdır. Azure, macOS ve Linux'ta azure Depolama verileriyle görsel Windows için kullanabilirsiniz.
+> ayrıca, Microsoft 'tan ücretsiz ve tek başına bir uygulama [Microsoft Azure Depolama Gezgini](/azure/vs-azure-tools-storage-manage-with-storage-explorer) . Windows, macos ve Linux 'ta Azure Depolama verileriyle görsel olarak çalışmak için bu uygulamayı kullanabilirsiniz.
 >
-> 2022'Visual Studio daha fazla bilgi için sürüm [notlarımıza bakın.](/visualstudio/releases/2022/release-notes-preview/)
+> Visual Studio 2022 hakkında daha fazla bilgi için [sürüm notlarımıza](/visualstudio/releases/2022/release-notes-preview/)bakın.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2019"
 
-Azure tarafından barındırılan sanal makineleriniz varsa, sanal makinelere sanal makine Sunucu Gezgini. Mobil hizmetlerinizi görüntülemek için önce Azure aboneliğinde oturum açmanız gerekir. Oturum açmak için azure düğümü için kısayol menüsünü Sunucu Gezgini açın ve Bağlan **seçeneğini Microsoft Azure.**
+Azure tarafından barındırılan sanal makineleriniz varsa bunlara Sunucu Gezgini erişebilirsiniz. Mobil hizmetlerinizi görüntülemek için önce Azure aboneliğinizde oturum açmanız gerekir. oturum açmak için Sunucu Gezgini Azure düğümünün kısayol menüsünü açın ve **Microsoft Azure için Bağlan** öğesini seçin.
 
-1. Bulut Gezgini'nde bir sanal makine seçin ve ardından F4 anahtarını seçarak özellikler penceresini açın.
+1. Cloud Explorer 'da bir sanal makine seçin ve ardından Özellikler penceresini göstermek için F4 tuşunu seçin.
 
-    Aşağıdaki tabloda hangi özelliklerin kullanılabilir olduğu, ancak bunların hepsi salt okunurdur. Bunları değiştirmek için [Azure portal.](https://portal.azure.com)
+    Aşağıdaki tabloda kullanılabilen özellikler gösterilmektedir, ancak bunların hepsi salt okunurdur. Bunları değiştirmek için [Azure Portal](https://portal.azure.com)kullanın.
 
    | Özellik | Açıklama |
    | --- | --- |
-   | DNS Adı |Sanal makinenin İnternet adresine sahip URL. |
-   | Ortam |Bir sanal makine için bu özelliğin değeri her zaman Üretim olur. |
+   | DNS Adı |Sanal makinenin Internet adresine sahip URL. |
+   | Ortam |Bir sanal makine için, bu özelliğin değeri her zaman üretime yöneliktir. |
    | Name |Sanal makinenin adı. |
-   | Boyut |Kullanılabilir bellek ve disk alanı miktarını yansıtan sanal makinenin boyutu. Daha fazla bilgi için [bkz. Sanal Makine Boyutları.](/azure/cloud-services/cloud-services-sizes-specs) |
-   | Durum |Değerler Başlangıç, Başlatıldı, Durduruluyor, Durduruldu ve Durumu Alma'dır. Alma Durumu görüntülenirse geçerli durum bilinmiyor. Bu özelliğin değerleri, üzerinde kullanılan değerlerden [Azure portal.](https://portal.azure.com) |
-   | SubscriptionID |Azure hesabınız için abonelik kimliği. Bir aboneliğin özelliklerini görüntü [Azure portal](https://portal.azure.com) bu bilgileri abonelikte gösterebilirsiniz. |
-2. Bir uç nokta düğümü seçin ve özellikler **penceresini** açın.
-3. Aşağıdaki tabloda uç noktaların kullanılabilir özellikleri açıklasa da bunlar salt okunurdur. Bir sanal makinenin uç noktalarını eklemek veya düzenlemek için [Azure portal.](https://portal.azure.com)
+   | Boyut |Kullanılabilir bellek ve disk alanı miktarını yansıtan sanal makinenin boyutu. Daha fazla bilgi için bkz. [sanal makine boyutları](/azure/cloud-services/cloud-services-sizes-specs). |
+   | Durum |Değerler, başlatma, başlatma, durdurma, durdurma ve durum alma içerir. Durum alma görünürse, geçerli durum bilinmiyor olur. Bu özelliğin değerleri, [Azure Portal](https://portal.azure.com)kullanılan değerlerden farklıdır. |
+   | SubscriptionID |Azure hesabınızın abonelik KIMLIĞI. Bir aboneliğin özelliklerini görüntüleyerek [Azure Portal](https://portal.azure.com) bu bilgileri gösterebilirsiniz. |
+2. Bir uç nokta düğümü seçin ve ardından **Özellikler** penceresini görüntüleyin.
+3. Aşağıdaki tabloda, uç noktaların kullanılabilir özellikleri açıklanmıştır, ancak bunlar salt okunurdur. Bir sanal makineye yönelik uç noktaları eklemek veya düzenlemek için [Azure Portal](https://portal.azure.com)kullanın.
 
    | Özellik | Açıklama |
    | --- | --- |
-   | Ad |Uç noktanın tanımlayıcısı. |
-   | Özel Bağlantı Noktası |Uygulamanıza iç ağ erişimi için bağlantı noktası. |
-   | Protokol |Bu uç nokta için aktarım katmanının kullandığı protokol, TCP veya UDP. |
+   | Ad |Uç nokta için bir tanımlayıcı. |
+   | Özel bağlantı noktası |Uygulamanıza iç ağ erişimi için bağlantı noktası. |
+   | Protokol |Bu uç noktanın aktarım katmanının, TCP veya UDP kullandığı protokol. |
    | Genel Bağlantı Noktası |Uygulamanıza genel erişim için kullanılan bağlantı noktası. |
 
 ::: moniker-end

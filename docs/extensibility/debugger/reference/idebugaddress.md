@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4626e76d84b49411045578b337085d90ebee3ad5af25562443e6382801a8ac8c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ce700d7f002689d4257f93f079862504c902d0ee
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121293241"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104462"
 ---
 # <a name="idebugaddress"></a>IDebugAddress
-Bu arabirim bir öğenin adresini temsil eder. Sembol işleyicisi tarafından döndürülür.
+Bu arabirim bir öğenin adresini temsil eder. Sembol işleyici tarafından döndürülür.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,28 +30,28 @@ Bu arabirim bir öğenin adresini temsil eder. Sembol işleyicisi tarafından d�
 IDebugAddress : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Sembol sağlayıcısı, bir nesnenin adresini temsil etmek için bu arabirimi kullanır.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bir sembol sağlayıcısı, bu arabirimi bir nesnenin adresini temsil etmek için uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Birçok arabirimde birçok yöntem bu arabirimi geri döner.
+ Birçok arabirimde birçok yöntem bu arabirimi döndürür.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
- Bu arabirim aşağıdaki yöntemi kullanır:
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Bu arabirim aşağıdaki yöntemi uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)|Bir nesneyi [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) konumunu açıklayan bir nesne yapısı oluşturur.|
+|[GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)|Bir nesneyi ve konumunu açıklayan [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) yapısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Sembol sağlayıcısı bir nesneyi ve belirli bir kapsam içindeki konumunu (örneğin, işlev, yöntem veya sınıf) temsil etmek için bu arabirimi döndürür. Bu arabirim, sembol sağlayıcısının ve ifade değerlendiricinin çeşitli yöntemlerinden döndürülür ve bu yöntemlere geçirilebilir. Normalde sembol sağlayıcısı, bu arabirimin içeriğini yorumlaması gereken tek varlıktır.
+ Sembol sağlayıcısı, bir nesneyi ve belirli bir kapsam içindeki konumunu (örneğin, işlev, yöntem veya sınıf) temsil etmek için bu arabirimi döndürür. Bu arabirim öğesinden döndürülür ve sembol sağlayıcısı ve ifade değerlendiricisi 'nin çeşitli yöntemlerine geçirilir. Normal olarak, sembol sağlayıcısı bu arabirimin içeriğini yorumlamak için gereken tek varlıktır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: sh.h
+ Üstbilgi: SH. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

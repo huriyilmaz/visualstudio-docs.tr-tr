@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 429cacbc4ef87224459493b0815d9e5dcff7fac3f61ca510d334501226a08eef
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 88be8c57bac99761ac4bcfb6d92451ba0245c483
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276743"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122071993"
 ---
 # <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
 Bu yöntem, bu işlemde (ve içerdiği tüm programlarda) Düzenle ve Devam'ı açıkça devre dışı bırakıyor. Özel bir bağlantı noktası sağlayıcı her zaman geri `E_NOTIMPL` dönmeli.

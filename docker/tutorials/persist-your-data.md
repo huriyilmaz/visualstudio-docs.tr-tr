@@ -1,19 +1,20 @@
 ---
-title: 'Docker öğreticisi-4. Bölüm: verilerinizi kalıcı hale getirme'
+title: 'Docker öğreticisi-5. Bölüm: verilerinizi kalıcı hale getirme'
 description: Bir veritabanındaki verileri kalıcı hale getirme ve bir birim bağlayarak dizinleri bir kapsayıcıya paylaşma hakkında bilgi edinin.
-ms.date: 08/04/2020
+ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-docker
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: c9408e099caaef097be3fc4eea26cee2b1889e8e
-ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
+ms.openlocfilehash: 149d67bc0e4004c6207add49a84b81b5c5e80620
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "113222909"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122053429"
 ---
 # <a name="persist-your-data"></a>Verilerinizi kalıcı hale getirme
 

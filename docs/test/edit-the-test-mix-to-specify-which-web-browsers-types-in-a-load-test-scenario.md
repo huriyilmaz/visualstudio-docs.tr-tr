@@ -1,6 +1,6 @@
 ---
 title: Yük testi için tarayıcı test karışımı
-description: Yük testi senaryosunda yükü daha gerçekçi bir şekilde simüle etmek için bir yol veren tarayıcı karışımını düzenlemeyi öğrenin.
+description: Bir yük testi senaryosunda yükü daha gerçekçi bir şekilde simüle etmek için bir yol veren tarayıcı karışımını düzenlemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: conceptual
@@ -14,22 +14,22 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 08272fe7906ed98b15c7ec597ef2ac0d64e593f8435b5f5171371d81a0cf1279
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 26098ec0a63d932ed7376ca8c5245c7c39d6ba01
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384944"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026752"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario"></a>Yük testi senaryosunda hangi web tarayıcılarının türlerini belirterek test karışımını düzenleyin
 
 Tarayıcı *karışımı,* yük testi senaryosunda yükü daha gerçekçi bir şekilde simüle etmek için bir yol sağlar. Yük, tek bir web tarayıcısı yerine web tarayıcılarının heterojen bir karışımı kullanılarak oluşturulur. Uygulamalarınız ile kullanılacak web tarayıcıları hakkında daha yakın bir tahmin oluşturursanız.
 
-Tarayıcı karışımı, bir yük testi senaryosunda belirli bir web tarayıcısı türünü çalıştıran bir sanal kullanıcının olasılığını belirtir. Bir yük testi oluşturduktan sonra yükün birden fazla web tarayıcısı üzerinden oluşturularak simülasyonunu yapmak iyi olabilir. Sağlanan web tarayıcıları kümesinden karışımına bir web tarayıcısı türü eklerken, bir web performans testi tarafından gönderilen her HTTP isteğine seçilen web tarayıcısı için ilişkili üst bilgiler kümesi eklenir.
+Tarayıcı karışımı, bir yük testi senaryosunda belirli bir web tarayıcısı türünü çalıştıran bir sanal kullanıcının olasılığını belirtir. Bir yük testi oluşturduktan sonra yükün birden fazla web tarayıcısı üzerinden oluşturularak simülasyonunu yapmak iyi olabilir. Sağlanan web tarayıcısı kümesinden karışımına bir web tarayıcısı türü eklerken, bir web performans testi tarafından gönderilen her HTTP isteğine seçilen web tarayıcısı için ilişkili üst bilgiler kümesi eklenir.
 
 Tarayıcı karışımı diğer karıştırma seçenekleri gibi çalışır. Web tarayıcısı türü, tarayıcı karışımına göre rastgele bir sanal kullanıcıyla ilişkilendirildi. Bu kullanıcının testleri, karışımında belirttiğiniz olasılık temel alarak belirli bir web tarayıcısında çalışır.
 
-Bir tarayıcı karışımını belirttikten sonra, daha sonra karmaya web tarayıcısı türleri ekleyebilir ve kaldırabilirsiniz. Ayrıca, karma denetimi kullanarak tarayıcı karışımının dağıtımını değiştirebilirsiniz. Karma denetimi, bir senaryoda tarayıcıların dağıtımını kolayca ayarlamanıza olanak sağlar.
+Bir tarayıcı karışımı belirttikten sonra, daha sonra karmaya web tarayıcısı türleri ekleyebilir ve kaldırabilirsiniz. Ayrıca, karma denetimi kullanarak tarayıcı karışımının dağıtımını değiştirebilirsiniz. Karma denetimi, bir senaryoda tarayıcıların dağıtımını kolayca ayarlamanıza olanak sağlar.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -82,7 +82,7 @@ Kaydırıcıları kullanmak yerine yüzde değerlerini doğrudan **%** sütuna d
 > [!NOTE]
 > Kaydırıcılar, toplam %100'e kadar değer eklemezse veya sütuna girilen yüzde değerleri ondalık **%** olduğunda devre dışı bırakılır.
 
-Yüzde değerlerini el ile girdiğinizde, tüm öğelerin toplamının %100 olduğundan emin olmanız gerekir. Bir karışımı kaydettiğinizde, toplam %100 değilse, yüzde değerlerini oldukları gibi kabul etmeniz veya geri gidip onları ayarlamanız istenir. Bunları olduğu gibi kabul edersiniz, bunlar %100'e prorat edilir.  Örneğin, iki öğeniz varsa ve bunları el ile %80 ve %40 olarak ayarsanız, ilk öğe %66,67 (80'i 120'ye bölündü) ve ikinci öğe %33,33'e (40'a bölünmüş 120) olarak ayarlanır.
+Yüzde değerlerini el ile girdiğinizde, tüm öğelerin toplamının %100 olduğundan emin olmanız gerekir. Bir karışımı kaydettiğinizde, toplam %100 değilse, yüzde değerlerini oldukları gibi kabul etmeniz veya geri gidip onları ayarlamanız istenir. Bunları olduğu gibi kabul edersiniz, bunlar %100'e prorat edilir.  Örneğin, iki öğeniz varsa ve bunları el ile %80 ve %40 olarak ayarsanız, ilk öğe %66,67(80 bölü 120) olarak, ikinci öğe ise %33,33 (40'a bölünmüş 120) olarak ayarlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

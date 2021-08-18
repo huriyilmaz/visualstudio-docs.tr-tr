@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3d64de27d36e73f860345393f687d72b3af28d934ee2d9a662ec7ba5ead5bc3c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e10913df71cd3bebbb2ae889dc40a8c418b1d0b1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389481"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103617"
 ---
 # <a name="idebugtypefieldbuilder2createarrayoftype"></a>IDebugTypeFieldBuilder2::CreateArrayOfType
 Belirtilen türde ve boyutta bir dizi oluşturur.
@@ -49,7 +49,7 @@ int CreateArrayOfType (
 [in] Dizide yer alan öğelerin türü.
 
 `rank`\
-[in] Dizide öğe sayısı.
+[in] Dizide öğelerin sayısı.
 
 `pArrayOfTypeField`\
 [out] Yeni [diziyi temsil eden IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnelerini döndürür.

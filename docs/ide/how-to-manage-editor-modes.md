@@ -1,6 +1,6 @@
 ---
 title: Tam ekran ve sanal boşluk modu
-description: Visual Studio Düzenleyicisi modlarını, tüm araçları ve pencereleri sizin için en uygun şekilde görüntüleyecek şekilde yönetmeyi öğrenin.
+description: tüm araçların ve pencerelerin sizin için en uygun şekilde görüntülenmesi için Visual Studio düzenleyicisi modlarını nasıl yöneteceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -24,21 +24,22 @@ ms.assetid: 1fb48027-d870-439f-8b72-4a0321390748
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 112fbd727f28ce1dd3f72626c03e3cc6594da213
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 88d615cc82de737fda485a5a179ac14e0a92f607
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99935903"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086085"
 ---
 # <a name="how-to-manage-editor-modes"></a>Nasıl yapılır: düzenleyici modlarını yönetme
 
 Visual Studio kod düzenleyicisini çeşitli görüntü modlarında görüntüleyebilirsiniz.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak bu makalede açıklananlardan farklı bir durum içerebilir. Ayarlarınızı değiştirmek (örneğin, **genel** veya **Visual C++** ayarları) için **Araçlar**  >  **içeri ve dışarı aktarma ayarları**' nı seçin ve ardından **tüm ayarları Sıfırla**' yı seçin.
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak bu makalede açıklananlardan farklı bir durum içerebilir. ayarlarınızı değiştirmek (örneğin, **genel** veya **Visual C++** ayarları) için **araçlar**  >  **içeri aktar ve dışarı aktar Ayarlar**' ı seçin ve ardından **tüm ayarları sıfırla**' yı seçin.
 
 ## <a name="enable-full-screen-mode"></a>Tam ekran modunu etkinleştir
 
@@ -56,14 +57,14 @@ Tüm araç pencerelerini gizlemeyi ve yalnızca **tam ekran** modunu etkinleşti
 
 1. **Araçlar** menüsünde **Seçenekler** ' i seçin.
 
-2. **Metin düzenleyici** klasörünü genişletin ve bu seçeneği Global olarak ayarlamak Için **tüm diller** ' i seçin veya belirli bir dil klasörü seçin. Örneğin, satır numaralarını yalnızca Visual Basic açmak için **temel**  >  **metin düzenleyici** düğümünü seçin.
+2. **Metin düzenleyici** klasörünü genişletin ve bu seçeneği Global olarak ayarlamak Için **tüm diller** ' i seçin veya belirli bir dil klasörü seçin. örneğin, satır numaralarını yalnızca Visual Basic açmak için **temel**  >  **metin düzenleyici** düğümünü seçin.
 
-3. **Genel** Seçenekler ' i seçin ve **Ayarlar** altında **sanal alanı etkinleştir**' i seçin.
+3. **genel** seçenekler ' i seçin ve **Ayarlar** altında **sanal alanı etkinleştir**' i seçin.
 
     > [!NOTE]
     > **Sütun seçim** modunda **sanal alan** etkindir. **Sanal boşluk** modu etkin olmadığında, ekleme noktası bir satırın sonundan doğrudan bir sonraki ilk karaktere gider.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md)
+- [Visual Studio 'de pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md)
 - [Yazı tipleri ve renkler, ortam, Seçenekler iletişim kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)
