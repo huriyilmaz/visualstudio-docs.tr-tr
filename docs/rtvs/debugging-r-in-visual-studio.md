@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 339249a58c4b5120328ad4e549da9144a6b162a65dca38c588a020fa42154d3a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 35762badb0c3c3bd86e84d2414d99a70d53b896e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121229149"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100497"
 ---
 # <a name="debug-r-in-visual-studio"></a>Visual Studio 'de R 'de hata ayıkla
 

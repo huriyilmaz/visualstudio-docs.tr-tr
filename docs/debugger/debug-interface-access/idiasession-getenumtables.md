@@ -11,14 +11,15 @@ ms.assetid: 66e0fba2-ca63-4e24-a46a-c99c7fb61dd1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d75ac2a4bca7051c6fe80f80b7a8063ef7ec6c86
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 9a90c9938481755e2e813343b60d7bf0f3ff375d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157023"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066327"
 ---
 # <a name="idiasessiongetenumtables"></a>IDiaSession::getEnumTables
 Sembol deposunda bulunan tüm tablolar için bir Numaralandırıcı alır.

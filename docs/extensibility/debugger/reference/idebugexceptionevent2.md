@@ -1,5 +1,5 @@
 ---
-description: Hata ayıklama altyapısı (DE), yürütülmekte olan programda bir özel durum oluştuğunda bu arayüzü oturum hata ayıklama Yöneticisi 'ne (SDM) gönderir.
+description: Hata ayıklama altyapısı (DE), yürütülmektedir olan programda bir özel durum thrown olduğunda bu arabirimi oturum hata ayıklama yöneticisine (SDM) gönderir.
 title: IDebugExceptionEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 53d32e59-a84b-4710-833e-c5ab08100516
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 58a6b0beab4312b0622501e72a5d2c87ef84ccff
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9a76ee7facb47a76e7d3887c8eb391f076769edb51a9ace6b62899fe57e29e79
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087879"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121433937"
 ---
 # <a name="idebugexceptionevent2"></a>IDebugExceptionEvent2
-Hata ayıklama altyapısı (DE), yürütülmekte olan programda bir özel durum oluştuğunda bu arayüzü oturum hata ayıklama Yöneticisi 'ne (SDM) gönderir.
+Hata ayıklama altyapısı (DE), yürütülmektedir olan programda bir özel durum thrown olduğunda bu arabirimi oturum hata ayıklama yöneticisine (SDM) gönderir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,31 +30,31 @@ Hata ayıklama altyapısı (DE), yürütülmekte olan programda bir özel durum 
 IDebugExceptionEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bu arabirim, hata ayıklamakta olan programda bir özel durumun oluştuğunu bildirmek için DE uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir. SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) kullanır `IDebugEvent2` .
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, hata ayıklaması yapılan programda bir özel durum olduğunu rapor etmek için bu arabirimini uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak uygulanarak. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE, özel durum bildirmek için bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
+ DE bu olay nesnesini oluşturur ve bir özel durum bildirmeye gönderir. Olay, hata ayıklaması yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugExceptionEvent2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugExceptionEvent2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)|Bu olayı tetikleyen özel durumla ilgili ayrıntılı bilgileri alır.|
-|[GetExceptionDescription](../../../extensibility/debugger/reference/idebugexceptionevent2-getexceptiondescription.md)|Bu olayı tetikleyen özel durum için okunabilir bir açıklama alır.|
-|[CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)|Hata ayıklama altyapısının (DE), yürütme devam ettiğinde hata ayıklamakta olan programa bu özel durumu geçirme seçeneğini destekleyip desteklemediğini belirler.|
-|[PassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md)|Yürütmenin devam ettiğinde veya özel durumun atıldığında hata ayıklamakta olan programa özel durumun geçirilip geçirilmeyeceğini belirtir.|
+|[GetException](../../../extensibility/debugger/reference/idebugexceptionevent2-getexception.md)|Bu olayı neden olan özel durum hakkında ayrıntılı bilgi alır.|
+|[GetExceptionDescription](../../../extensibility/debugger/reference/idebugexceptionevent2-getexceptiondescription.md)|Bu olayı neden olan özel durum için okunabilir bir açıklama alır.|
+|[CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)|Hata ayıklama altyapısının (DE) bu özel durumu yürütme devam ettirilen programda hata ayıklandı seçeneğine geçirme seçeneğini destekleyip desteklemeyip desteklemeyeceklerini belirler.|
+|[PassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-passtodebuggee.md)|Yürütme devam ettirilen programda özel durumun hata ayıklamaya geçirip geçirilemayacak veya özel durumun atılacak olup olmadığını belirtir.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="remarks"></a>Açıklamalar
- Olayı göndermeden önce, bu özel durum olayının bir önceki [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)çağrısıyla birinci şans veya ikinci şans özel durumu belirlenip belirlenmediğini de denetler. İlk fırsat özel durumu olarak belirlendiyse, `IDebugExceptionEvent2` olay SDM 'ye gönderilir. Aksi takdirde, uygulama özel durumu işlemeye yönelik bir şans verir. Özel durum işleyicisi sağlanmazsa ve özel durum ikinci şans özel durumu olarak belirlendiyse, `IDebugExceptionEvent2` olay SDM 'ye gönderilir. Aksi takdirde, DE programın yürütülmesini sürdürür ve işletim sistemi veya çalışma zamanı özel durumu işler.
+ Olay göndermeden önce DE, bu özel durum olayına [önceki bir SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md)çağrısı tarafından birinci şans veya ikinci şans özel durumu atanarak atanma olup ola bir denetim oluşturur. Birinci şans özel durumu olarak belirlenmişse, `IDebugExceptionEvent2` olay SDM'ye gönderilir. Yoksa, DE uygulamaya özel durumu işleme şansı verir. Bir özel durum işleyicisi sağlanıyorsa ve özel durum ikinci şans özel durumu olarak belirlenmişse, `IDebugExceptionEvent2` olay SDM'ye gönderilir. Aksi takdirde, DE programın yürütülmesini sürdürür ve işletim sistemi veya çalışma zamanı özel durumu ele almaktadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

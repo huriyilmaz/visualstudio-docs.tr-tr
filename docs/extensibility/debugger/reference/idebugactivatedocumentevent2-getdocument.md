@@ -1,6 +1,6 @@
 ---
-description: Etkinleştirilen belgeyi alır.
-title: IDebugActivateDocumentEvent2::GetDocument | Microsoft Docs
+description: Etkinleştirilecek belgeyi alır.
+title: 'IDebugActivateDocumentEvent2:: GetDocument | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f7bc89983b0470bcff37eb1f4d76b16f35d07505ca1e2b1a278d75fd07b79b34
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 529f981476bd2db7655fa86a6c9182998656fe97
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121323852"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064936"
 ---
 # <a name="idebugactivatedocumentevent2getdocument"></a>IDebugActivateDocumentEvent2::GetDocument
-Etkinleştirilen belgeyi alır.
+Etkinleştirilecek belgeyi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,10 +44,10 @@ int GetDocument (
 
 ## <a name="parameters"></a>Parametreler
 `ppDoc`\
-[out] Etkinleştirilen belgeyi temsil eden bir [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi döndürür.
+dışı Etkinleştirilecek belgeyi temsil eden bir [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugActivateDocumentEvent2](../../../extensibility/debugger/reference/idebugactivatedocumentevent2.md)

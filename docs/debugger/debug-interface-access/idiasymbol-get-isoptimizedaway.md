@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fd9b614758a02dce9b40aa8806acdba38eaecbc6def4aecf46eca10ed56d6482
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 689c0e171ab08a9650e8473ada29d3ec0b6e31a8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454722"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066074"
 ---
 # <a name="idiasymbolget_isoptimizedaway"></a>IDiaSymbol::get_isOptimizedAway
 Değişkenin iyileştirilmiş olup olmadığını belirtir.

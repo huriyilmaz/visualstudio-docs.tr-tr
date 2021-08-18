@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: cfe92dbaab0e952f6e46f3ca5fd6d877717dfa44d6eaa20a821275f338a17be4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 13a45254688893e28c8b9f4eb411d01302978644
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121398306"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100848"
 ---
 # <a name="navigate-and-update-a-model-in-program-code"></a>Program Kodunda Modelde Gezinme ve Modeli Güncelleştirme
 
@@ -240,7 +240,7 @@ Bu işlem de silinecek:
 
 - Rollerdeki ve `PropagatesDelete` bayrağın doğru olduğu öğeler. Örneğin, öğesini görüntüleyen şekil silinir.
 
-Varsayılan olarak, her ekleme ilişkisi `PropagatesDelete` hedef rolde true olur. Silme `henry` işlemi , 'i `familyTree` `familyTree.Delete()` silemez, ancak tüm 'leri `Persons` siler.
+Varsayılan olarak, her ekleme ilişkisi `PropagatesDelete` hedef rolde true'ya sahip olur. Silme `henry` işlemi , 'i `familyTree` `familyTree.Delete()` silemez, ancak tüm 'leri `Persons` siler.
 
 Varsayılan `PropagatesDelete` olarak, başvuru ilişkilerinin rolleri için doğru değildir.
 
@@ -294,7 +294,7 @@ Bazı durumlarda silme işlemi, öğede veya yayma ile silinecek bir öğede kil
  Daha fazla bilgi için, [bkz. Create a Locking Policy to Create Read-Only Segmentleri](../modeling/defining-a-locking-policy-to-create-read-only-segments.md).
 
 ## <a name="copy-and-paste"></a><a name="copy"></a> Kopyala ve Yapıştır
- Öğeleri veya öğe gruplarını bir 'a <xref:System.Windows.Forms.IDataObject> kopyalayıp:
+ Öğeleri veya öğe gruplarını bir 'ye <xref:System.Windows.Forms.IDataObject> kopyalayıp:
 
 ```csharp
 Person person = personShape.ModelElement as Person;
@@ -306,7 +306,7 @@ personShape.Diagram.ElementOperations
 
  Öğeler seri hale getirili Öğe Grubu olarak depolanır.
 
- IDataObject öğeleri bir modelde birleştirebilirsiniz:
+ IDataObject öğeleri bir modelle birleştirebilirsiniz:
 
 ```csharp
 using (Transaction t = targetDiagram.Store.
@@ -334,7 +334,7 @@ using (Transaction t = targetDiagram.Store.
 |Bağlayıcı|<xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape>|
 |Diyagram|<xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram>|
 
- Diyagramda yer alan bir öğe genellikle bir model öğesini temsil eder. Genellikle (ama her zaman değil), <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> bir etki alanı sınıf örneğini temsil eder ve bir etki alanı ilişki örneğini temsil <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape> eder. İlişki, <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> bir düğümü veya şekli temsil ettiği model öğesine bağlar.
+ Diyagramda yer alan bir öğe genellikle bir model öğesini temsil eder. Genellikle (ama her zaman değil), bir <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape> etki alanı sınıf örneğini temsil eder ve bir etki alanı ilişki örneğini temsil <xref:Microsoft.VisualStudio.Modeling.Diagrams.BinaryLinkShape> eder. İlişki, <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> bir düğümü veya şekli temsil ettiği model öğesine bağlar.
 
  Her düğüm veya bağlantı şekli bir diyagrama aittir. İkili bağlantı şekli iki düğüm şeklini birbirine bağlar.
 
@@ -378,7 +378,7 @@ FamilyTreeDiagram diagram =
  `diagram.ModelElement as FamilyTreeModel`
 
 ### <a name="navigating-around-the-diagram"></a>Diyagramda gezinme
- Genel olarak diyagramda şekiller ve bağlayıcılar arasında gezinmek tavsiye edilemez. Modelde ilişkilerde gezinmek, şekiller ve bağlayıcılar arasında geçiş yapmak, yalnızca diyagramın görünümü üzerinde çalışmak gerektiğinde gezinmek daha iyidir. Bu yöntemler bağlayıcıları her bir uçta yer alan şekillere bağlayın:
+ Genel olarak diyagramda şekiller ve bağlayıcılar arasında gezinmek tavsiye edilemez. Yalnızca diyagramın görünümü üzerinde çalışmak gerektiğinde şekiller ve bağlayıcılar arasında hareket etmek için modelde ilişkilerde gezinmek daha iyidir. Bu yöntemler bağlayıcıları her bir uçta yer alan şekillere bağlayın:
 
  `personShape.FromRoleLinkShapes, personShape.ToRoleLinkShapes`
 
@@ -429,7 +429,7 @@ FamilyTreeDiagram diagram =
 
 ### <a name="creating-an-element-and-its-shape"></a><a name="merge"></a> Öğe ve Şekli Oluşturma
 
-Bir öğe oluşturulduğunda ve bunu ekleme ilişkileri ağacına bağ her zaman otomatik olarak bir şekil oluşturulur ve bu öğeyle ilişkilendirililir. Bu işlem, işlem sonunda yürütülen "düzeltme" kuralları tarafından yapılır. Ancak, şekil otomatik olarak atanan bir konumda görünür ve şekli, rengi ve diğer özellikleri varsayılan değerlere sahip olur. Şeklin nasıl oluşturulacaklarını kontrol etmek için merge işlevini kullanabilirsiniz. Önce bir ElementGroup'a eklemek istediğiniz öğeleri eklemeniz ve ardından grubu diyagramda birleştirmelisiniz.
+Bir öğe oluşturulduğunda ve bunu ekleme ilişkileri ağacına bağ her zaman otomatik olarak bir şekil oluşturulur ve bu öğeyle ilişkilendirililir. Bu işlem, işlem sonunda yürütülen "düzeltme" kuralları tarafından yapılır. Ancak, şekil otomatik olarak atanan bir konumda görünür ve şekli, rengi ve diğer özellikleri varsayılan değerlere sahip olur. Şeklin nasıl oluşturulacaklarını kontrol etmek için birleştirme işlevini kullanabilirsiniz. Önce bir ElementGroup'a eklemek istediğiniz öğeleri eklemeniz ve ardından grubu diyagramda birleştirmelisiniz.
 
 Bu yöntem:
 

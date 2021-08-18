@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 75339365340c7133a5faf9573cf65dab1bb171b91c33c3b89917c0d213e58d9e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b3153eb383e3e4ea3b0495319e8acb3904995897
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344118"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122031006"
 ---
 # <a name="debugging-a-data-bound-activex-control"></a>Veri Bağımlı ActiveX Denetiminde Hata Ayıklama
 Veri kaynağı denetimine ActiveX bir kapsayıcı denetimi geliştiriyorsanız, kendi kapsayıcı uygulamanızı oluşturabilir ve bu kapsayıcıyı kullanarak veri kaynağı denetimi hata ActiveX kullanabilirsiniz.

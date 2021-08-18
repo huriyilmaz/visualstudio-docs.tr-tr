@@ -1,6 +1,6 @@
 ---
 title: -LCID (devenv.exe)
-description: Metin, para birimi ve IDE içindeki diğer değerler için kullanılan varsayılan dili ayarlamak üzere LCıD Devenv komut satırı anahtarını nasıl kullanacağınızı öğrenin.
+description: IDE içindeki metin, para birimi ve diğer değerler için kullanılan varsayılan dili ayarlamak üzere LCID devenv komut satırı anahtarını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -18,18 +18,19 @@ ms.assetid: 3a3f4e70-ea66-4351-9d62-acb1dec30e8e
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e5aad581babafe882fccc13e8594aa60437d9df
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 35a8fa0a783817d5ad1fdc4b6bce39f873a051f1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852147"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101108"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
-Metin, para birimi ve IDE içindeki diğer değerler için kullanılan varsayılan dili ayarlar.
+IDE içindeki metin, para birimi ve diğer değerler için kullanılan varsayılan dili ayarlar.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -39,17 +40,17 @@ devenv {/LCID|/L} LocaleID
 
 ## <a name="arguments"></a>Bağımsız değişkenler
 
-- *LocaleID*
+- *Localeıd*
 
-  Gereklidir. Belirttiğiniz dilin Yerel ayar tanıtıcısı (LCıD).
+  Gereklidir. Belirttiğiniz dilin yerel dil tanımlayıcısı (LCID).
 
 ## <a name="remarks"></a>Açıklamalar
 
-IDE 'yi yükler ve ortam için varsayılan doğal dili ayarlar. Bu değişiklik oturumlar arasında kalıcıdır ve IDE, bu değişikliği **Araçlar**  >  **Seçenekler**  >  **ortamı**  >  **Uluslararası ayarlar**  >  **dil** kutusunda gösterir.
+IDE'i yükler ve ortam için varsayılan doğal dili ayarlar. Bu değişiklik oturumlar arasında kalıcıdır ve IDE bu değişikliği Araçlar Seçenekler Ortamı Uluslararası Ayarlar  >    >    >    >  **Dil kutusunda** gösterir.
 
-Belirtilen dil sisteminizde yoksa, `/LCID` anahtar yok sayılır.
+Belirtilen dil sisteminiz üzerinde kullanılamıyorsa anahtar `/LCID` yoksayılır.
 
-Aşağıdaki tabloda, Visual Studio tarafından desteklenen dillerin LCID 'Ler listelenmiştir.
+Aşağıdaki tabloda, Visual Studio tarafından desteklenen dillerin LCID'leri liste Visual Studio.
 
 |Dil|LCID|
 |--------------|----------|
@@ -70,7 +71,7 @@ Aşağıdaki tabloda, Visual Studio tarafından desteklenen dillerin LCID 'Ler l
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, IDE 'yi Ingilizce kaynak dizeleri ile yükler.
+Bu örnek, İngilizce kaynak dizeleriyle IDE'leri yükler.
 
 ```shell
 devenv /LCID 1033

@@ -1,6 +1,6 @@
 ---
-title: Kullanımından oluştur ile test-ilk geliştirme
-description: Kullanımdan oluştur özelliğinden kullanımı kullanarak test geliştirme yaklaşımını nasıl dahil leyeceğinizi öğrenin.
+title: Kullanımdan Oluştur ile ilk geliştirmeyi test edin
+description: Kullanımdan Oluştur özelliğini kullanarak Test-first geliştirme yaklaşımını nasıl dahil etmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/09/2017
 dev_langs:
@@ -16,156 +16,156 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cd2dd9610167197a8deaa1bdc88d4e5689636e75263785d92618eceee37f3bd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 323d8c68f55b1804aee20298a2e4c1d34cd9a6e0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121398507"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048368"
 ---
-# <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>İzlenecek yol: kullanımdan oluştur özelliğinden önce test geliştirme
+# <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>Adım adım kılavuz: Kullanımdan Oluştur özelliğiyle ilk geliştirmeyi test edin
 
-Bu konu başlığı altında, test-ilk geliştirmeyi destekleyen [kullanım dışı oluşturma](../ide/visual-csharp-intellisense.md#generate-from-usage) özelliğinin nasıl kullanılacağı gösterilmektedir.
+Bu konu başlığında, test öncesi [geliştirmeyi destekleyen](../ide/visual-csharp-intellisense.md#generate-from-usage) Kullanımdan Oluştur özelliğinin nasıl kullanımı gösterebilirsiniz.
 
- *Test-ilk geliştirme* , ürün belirtimlerine göre birim testlerini ilk kez yazacağınız ve sonra testlerin başarılı olması için gereken kaynak kodu yazdığınız yazılım tasarımına yönelik bir yaklaşımdır. Visual Studio, test durumlarınıza ilk kez başvurulduklarında kaynak kodunda yeni türler ve üyeler üreterek öncelikle test geliştirme desteği destekler.
+ *Test-ilk geliştirme,* yazılım tasarımına, önce ürün belirtimlerine göre birim testleri yazıp ardından testleri başarılı yapmak için gereken kaynak kodu yazarak bir yaklaşımdır. Visual Studio, tanımlanmamış test çalışmalarında ilk kez başvurarak kaynak kodda yeni türler ve üyeler oluşturarak test öncesi geliştirmeyi destekler.
 
-Visual Studio, iş akışınıza en az kesintiyle yeni türler ve üyeler üretir. Türler, Yöntemler, özellikler, alanlar veya oluşturucular için kod içinde geçerli konumunuzu bırakmadan, saplamalar oluşturabilirsiniz. Tür oluşturma seçeneklerini belirtmek için bir iletişim kutusu açtığınızda, odak iletişim kutusu kapandığında geçerli açık dosyaya hemen döner.
+Visual Studio iş akışınız çok az kesintiyle yeni türler ve üyeler üretir. Geçerli konumunu kodda bırakmadan türler, yöntemler, özellikler, alanlar veya oluşturucular için saplamalar oluşturabilirsiniz. Tür oluşturma seçeneklerini belirtmek için bir iletişim kutusu açsanız, iletişim kutusu kapanıyorsa odak hemen geçerli açık dosyaya döner.
 
-**Kullanımdan oluştur** özelliği, Visual Studio ile tümleştirilen test çerçeveleri ile birlikte kullanılabilir. Bu konuda, Microsoft birim testi çerçevesi gösterilmiştir.
+Kullanımdan **Oluştur özelliği,** verilerle tümleştirilmiş test çerçeveleriyle Visual Studio. Bu konu başlığında, Microsoft Birim Testi Çerçevesi açıklanmıştır.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-### <a name="create-a-windows-class-library-project-and-a-test-project"></a>Windows sınıf kitaplığı projesi ve Test projesi oluşturma
+### <a name="create-a-windows-class-library-project-and-a-test-project"></a>Windows Sınıf Kitaplığı projesi ve Test projesi oluşturma
 
-1. C# veya Visual Basic 'de yeni bir **Windows sınıf kitaplığı** projesi oluşturun. `GFUDemo_VB` `GFUDemo_CS` Kullandığınız dile bağlı olarak veya olarak adlandırın.
+1. C# veya Visual Basic sınıf kitaplığı **projesinde yeni Windows oluşturun.** Kullandığınız `GFUDemo_VB` dile `GFUDemo_CS` bağlı olarak veya adını girin.
 
-2. **Çözüm Gezgini**, üstteki çözüm simgesine sağ tıklayın,   >  **yeni Project** ekle ' yi seçin.
+2. Bu **Çözüm Gezgini** üst köşesindeki çözüm simgesine sağ tıklayın ve Yeni Ekle'yi **Project.**  >  
 
-3. yeni bir **birim testi Project (.NET Framework)** projesi oluşturun.
+3. Yeni bir Birim **Testi Project (.NET Framework) projesi** oluşturun.
 
    ::: moniker range="vs-2017"
 
-   aşağıdaki çizimde, C# şablonları için **yeni Project** iletişim kutusu gösterilmektedir.
+   Aşağıdaki çizimde, C# **Project** yeni özellikler iletişim kutusu gösterilmiştir.
 
-   ![birim testi Project şablonu](../ide/media/newproject_test.png)
+   ![Birim Testi Project şablonu](../ide/media/newproject_test.png)
 
    ::: moniker-end
 
-### <a name="add-a-reference-to-the-class-library-project"></a>Sınıf kitaplığı projesine bir başvuru ekleyin
+### <a name="add-a-reference-to-the-class-library-project"></a>Sınıf Kitaplığı projesine başvuru ekleme
 
-1. **Çözüm Gezgini**, birim testi projeniz altında, **Başvurular** girişine sağ tıklayın ve **Başvuru Ekle**' yi seçin.
+1. Bu **Çözüm Gezgini,** birim testi projenizin altında Başvurular **girdisini sağ tıklatın ve** Başvuru Ekle'yi **seçin.**
 
-2. **Başvuru Yöneticisi** iletişim kutusunda, **Projeler** ' i seçin ve ardından Sınıf Kitaplığı projesini seçin.
+2. Başvuru Yöneticisi **iletişim** kutusunda Projeler'i **ve** ardından sınıf kitaplığı projesini seçin.
 
-3. **Tamam ' ı** seçerek **başvuru Yöneticisi** iletişim kutusunu kapatın.
+3. Başvuru **Yöneticisi** iletişim kutusunu kapatmak **için Tamam'ı** seçin.
 
-4. Çözümünüzü kaydedin. Artık testleri yazmaya başlamaya hazırsınız.
+4. Çözümlerinizi kaydedin. Artık testleri yazmaya başlamaya hazır oluruz.
 
-### <a name="generate-a-new-class-from-a-unit-test"></a>Birim testinizden yeni bir sınıf oluşturma
+### <a name="generate-a-new-class-from-a-unit-test"></a>Birim testinde yeni bir sınıf oluşturma
 
-1. Test projesi *UnitTest1* adlı bir dosya içerir. Kod düzenleyicisinde açmak için **Çözüm Gezgini** bu dosyaya çift tıklayın. Test sınıfı ve test yöntemi üretildi.
+1. Test projesi *UnitTest1* adlı bir dosya içerir. Kod düzenleyicisinde açmak **Çözüm Gezgini** bu dosyaya çift tıklayın. Bir test sınıfı ve test yöntemi oluşturulmuş.
 
-2. Sınıfının bildirimini bulun `UnitTest1` ve olarak yeniden adlandırın `AutomobileTest` .
+2. sınıf bildirimini bulun ve `UnitTest1` olarak yeniden adlandıryın. `AutomobileTest`
 
    > [!NOTE]
-   > IntelliSense artık IntelliSense deyimin tamamlanması için iki alternatif sağlıyor: *tamamlama modu* ve *öneri modu*. Sınıfların ve üyelerin tanımlanmadan önce kullanıldığı durumlar için öneri modunu kullanın. Bir **IntelliSense** penceresi açıkken,  +  + tamamlama modu ve öneri modu arasında geçiş yapmak için Ctrl alt **alanına** basabilirsiniz. Daha fazla bilgi için bkz. [IntelliSense 'ı kullanma](../ide/using-intellisense.md) . Öneri modu, bir sonraki adımda yazarken yardımcı olur `Automobile` .
+   > IntelliSense artık IntelliSense deyimi tamamlama için iki alternatif sağlar: *tamamlama modu* ve *öneri modu.* Sınıfların ve üyelerin tanımlanmadan önce kullanıldıkları durumlar için öneri modunu kullanın. Bir **IntelliSense penceresi** açık olduğunda, tamamlama modu ile öneri modu arasında geçiş yapmak için **Ctrl** + **Alt** +  Ara Çubuğuna basabilirsiniz. Daha [fazla bilgi için bkz. IntelliSense](../ide/using-intellisense.md) kullanma. Öneri modu, bir sonraki adımda yazarken `Automobile` size yardımcı olur.
 
-3. Yöntemini bulun `TestMethod1()` ve olarak yeniden adlandırın `DefaultAutomobileIsInitializedCorrectly()` . Bu yöntemin içinde, aşağıdaki ekran görüntülerinde gösterildiği gibi adlı bir sınıfın yeni bir örneğini oluşturun `Automobile` . Bir derleme zamanı hatası gösteren dalgalı alt çizgi görünür ve sol kenar boşluğunda veya üzerine geldiğinizde doğrudan dalgalı bir [eylem](../ide/quick-actions.md) hatası ampulü görünür.
+3. yöntemini bulun `TestMethod1()` ve olarak yeniden adlandıryın. `DefaultAutomobileIsInitializedCorrectly()` Bu yöntemin içinde, aşağıdaki ekran görüntülerde gösterildiği gibi `Automobile` adlı yeni bir sınıf örneği oluşturun. Derleme zamanı hatasını gösteren dalgalı bir alt çizgi [](../ide/quick-actions.md) görüntülenir ve sol kenar boşluğunda veya üzerine gelirsiniz dalgalı çizginin hemen altında Hızlı Eylemler hata ampulü görünür.
 
-    ![Visual Basic hızlı eylemler](../ide/media/genclass_underlinevb.png)
+    ![Visual Basic'de Hızlı Eylemler](../ide/media/genclass_underlinevb.png)
 
-    ![C&#35; hızlı eylemler](../ide/media/genclass_underline.png)
+    ![C'de Hızlı Eylemler&#35;](../ide/media/genclass_underline.png)
 
-4. **Hızlı eylemler** Ampul ampul ' i seçin veya tıklayın. Türün tanımlı olmadığını belirten bir hata iletisi görürsünüz `Automobile` . Ayrıca, bazı çözümler de sunulur.
+4. Hızlı Eylemler **ampulü seçin veya** tıklayın. Türün tanımlanmamış olduğunu bir hata `Automobile` iletisiyle karşılarsınız. Ayrıca bazı çözümler de sunulmaktadır.
 
-5. **Tür oluştur** iletişim kutusunu açmak için **yeni tür oluştur** ' a tıklayın. Bu iletişim kutusu, türü farklı bir projede oluşturmayı içeren seçenekler sağlar.
+5. Tür **Oluştur iletişim kutusunu** açmak için Yeni tür **oluştur'a** tıklayın. Bu iletişim kutusu, türü farklı bir projede oluşturma gibi seçenekler sağlar.
 
-6. **Project** listesinde, test projesi yerine bir dosyayı sınıf kitaplığı projesine eklemek Visual Studio bildirmek için **gfudemo \_ VB** veya **GFUDemo_CS** ' e tıklayın. Henüz seçili değilse, **yeni dosya oluştur** ' u seçin ve *otomobil. cs* veya *otomobil. vb* olarak adlandırın.
+6. Dosya **Project** **GFUDemo \_ VB'ye** tıklayın **veya GFUDemo_CS'a** dosyayı test projesi Visual Studio sınıf kitaplığı projesine eklemesini talimat olarak ekleyin. Henüz seçilmemişse Yeni dosya oluştur'ı **seçin ve** Automobile.cs veya *Automobile.vb* *olarak ad girin.*
 
-     ![Yeni tür oluştur iletişim kutusu](../ide/media/genotherdialog.png)
+     ![Yeni Tür Oluştur iletişim kutusu](../ide/media/genotherdialog.png)
 
-7. İletişim kutusunu kapatmak ve yeni dosyayı oluşturmak için **Tamam** ' ı tıklatın.
+7. İletişim **kutusunu** kapatmak ve yeni dosyayı oluşturmak için Tamam'a tıklayın.
 
-8. **Çözüm Gezgini**, yeni *otomobil. vb* veya *otomobil. cs* dosyasının orada olduğunu doğrulamak için, **GFUDemo_VB** veya **GFUDemo_CS** proje düğümüne bakın. Kod düzenleyicisinde, odak hala içinde olduğundan `AutomobileTest.DefaultAutomobileIsInitializedCorrectly` , testinizi en az kesintiyle yazmaya devam etmenizi sağlar.
+8. Yeni **Çözüm Gezgini** *Automobile.vb* **veya** *Automobile.cs* dosyasının **orada olduğunu doğrulamak** için GFUDemo_VB veya GFUDemo_CS proje düğümünün altına bakın. Kod düzenleyicisinde odak hala içindedir ve bu sayede testlerinizi en az `AutomobileTest.DefaultAutomobileIsInitializedCorrectly` kesintiyle yazmaya devam edebilirsiniz.
 
-### <a name="generate-a-property-stub"></a>Özellik saplaması oluştur
-Ürün belirtiminin, `Automobile` sınıfının ve adında iki ortak özelliğe sahip olduğunu varsayalım `Model` `TopSpeed` . Bu özelliklerin varsayılan ve varsayılan oluşturucularla başlatılması gerekir `"Not specified"` `-1` . Aşağıdaki birim testi varsayılan oluşturucunun özellikleri doğru varsayılan değerlerine ayarladiğini doğrular.
+### <a name="generate-a-property-stub"></a>Özellik saplama oluşturma
+Ürün belirtimleri sınıfının ve adlı `Automobile` iki genel özelliği olduğunu ifade ediyor `Model` `TopSpeed` olabilir. Bu özellikler varsayılan ve değerleriyle varsayılan `"Not specified"` oluşturucu `-1` tarafından başlatmalıdır. Aşağıdaki birim testi, varsayılan oluşturucun özellikleri doğru varsayılan değerlerine ayara sahip olduğunu doğrular.
 
-1. Aşağıdaki kod satırını `DefaultAutomobileIsInitializedCorrectly` test yöntemine ekleyin.
+1. Aşağıdaki kod satırı test `DefaultAutomobileIsInitializedCorrectly` yöntemine ekleyin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/unittest1.cs" id="Snippet1":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb" id="Snippet1":::
 
-2. Kod, üzerinde iki tanımsız özelliğe başvurduğundan `Automobile` , ve altında dalgalı bir alt çizgi `Model` görünür `TopSpeed` . Üzerine gelin `Model` ve **hızlı eylemler** hatası ampul ' i seçin ve ardından **' otomobil mobil. model ' özelliğini oluştur**' u seçin.
+2. Kod, üzerinde tanımlanmamış iki özelense ve `Automobile` altında dalgalı bir alt çizgi `Model` `TopSpeed` görünür. Üzerine gelin `Model` ve Hızlı Eylemler hata **ampulü'ne** ve ardından **'Automobile.Model' özelliğini oluştur'a seçin.**
 
-3. Özelliği için aynı şekilde bir özellik saplaması oluşturun `TopSpeed` .
+3. Özelliği için aynı şekilde bir `TopSpeed` özellik saplama oluşturma.
 
-     `Automobile`Sınıfında, yeni özelliklerin türleri içerikten doğru şekilde algılanır.
+     sınıfında, `Automobile` yeni özelliklerin türleri bağlamdan doğru şekilde alıtır.
 
-### <a name="generate-a-stub-for-a-new-constructor"></a>Yeni Oluşturucu için saplama oluşturma
-Şimdi ve özelliklerini başlatmak için bir Oluşturucu saplaması oluşturacak bir test yöntemi oluşturacağız `Model` `TopSpeed` . Daha sonra, testi tamamlamaya daha fazla kod ekleyeceksiniz.
+### <a name="generate-a-stub-for-a-new-constructor"></a>Yeni oluşturucu için saplama oluşturma
+Şimdi ve özelliklerini başlatmak için bir oluşturucu saplama oluşturan bir test yöntemi `Model` `TopSpeed` oluşturacak. Daha sonra testi tamamlamak için daha fazla kod eksersiniz.
 
-1. Aşağıdaki ek test yöntemini `AutomobileTest` sınıfınıza ekleyin.
+1. Aşağıdaki ek test yöntemini sınıfınıza `AutomobileTest` ekleyin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/intermediate.cs" id="Snippet2":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/intermediate.vb" id="Snippet2":::
 
-2. Kırmızı dalgalı çizgi altındaki **hızlı eylem** hatası ampulü ve ardından **' otomobil ' içinde Oluşturucu üret**' e tıklayın.
+2. Kırmızı geçiş **altındaki Hızlı** Eylemler hata ampulü'ne ve ardından 'Automobile' içinde **oluşturucu oluştur'a tıklayın.**
 
-     `Automobile`Sınıf dosyasında, yeni oluşturucunun Oluşturucu çağrısında kullanılan yerel değişkenlerin adlarını incelediğine, sınıfta aynı adlara sahip olan özelliklerin bulunduğunu `Automobile` ve bağımsız değişken değerlerini ve özelliklerinde depolamak için Oluşturucu gövdesinde sağlanan kodu içerdiğine dikkat edin `Model` `TopSpeed` .
+     Sınıf dosyasında yeni oluşturucu, oluşturucu çağrısında kullanılan yerel değişkenlerin adlarını inceledi, sınıfta aynı adlara sahip özellikler buldu ve özelliklerinde bağımsız değişken değerlerini depolamak için oluşturucu gövdesinde sağlanan kodu `Automobile` `Automobile` `Model` `TopSpeed` inceledi.
 
-3. Yeni oluşturucuyu oluşturduktan sonra, içindeki varsayılan oluşturucuya yapılan çağrının altında dalgalı bir alt çizgi görünür `DefaultAutomobileIsInitializedCorrectly` . Hata iletisi, `Automobile` sınıfın sıfır bağımsız değişken alan bir Oluşturucusu olmadığını belirtir. Parametreleri olmayan açık bir varsayılan oluşturucu oluşturmak için **hızlı eylemler** hata ışığı ampul ' e tıklayın ve ardından **' otomobil ' içinde Oluşturucu oluştur**' a tıklayın.
+3. Yeni oluşturucuyu oluşturmanın ardından, içinde varsayılan oluşturucuya yapılan çağrının altında dalgalı bir alt çizgi `DefaultAutomobileIsInitializedCorrectly` görünür. Hata iletisi, sınıfın sıfır `Automobile` bağımsız değişken alan bir oluşturucusu olmadığını gösterir. Parametreleri olmayan açık bir varsayılan oluşturucu oluşturmak için  Hızlı Eylemler hata ampulü'ne tıklayın ve **ardından 'Automobile' içinde oluşturucu oluştur'a tıklayın.**
 
-### <a name="generate-a-stub-for-a-method"></a>Bir yöntem için saplama oluşturma
-Belirtiminin, `Automobile` `IsRunning` `Model` ve `TopSpeed` özellikleri varsayılan değerlerden başka bir şeye ayarlandıysa, bir duruma yeni bir durum koyabileceğini belirtir.
+### <a name="generate-a-stub-for-a-method"></a>Yöntem için saplama oluşturma
+belirtimi, ve özellikleri varsayılan değerlerden farklı bir değere ayarlanmışsa yeni bir `Automobile` `IsRunning` `Model` `TopSpeed` durumuna koyabilirsiniz durumunun olduğunu varsayabilirsiniz.
 
-1. Yöntemine aşağıdaki satırları ekleyin `AutomobileWithModelNameCanStart` .
+1. aşağıdaki satırları yöntemine `AutomobileWithModelNameCanStart` ekleyin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/unittest1.cs" id="Snippet3":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/unittest1.vb" id="Snippet3":::
 
-2. Yöntem çağrısı için **hızlı eylemler** hata ışığı ampul ' i tıklatın `myAuto.Start` ve ardından **' otomobil. Başlat ' metodunu üret**' e tıklayın.
+2. Yöntem çağrısı **için Hızlı Eylemler** hata ampulü'ne ve ardından `myAuto.Start` **'Automobile.Start' yöntemini oluştur'a tıklayın.**
 
-3. Özelliği için **hızlı eylemler** ampul ' i `IsRunning` ve sonra **' otomobil. IsRunning ' özelliğini oluştur**' a tıklayın.
+3. özelliği için **Hızlı Eylemler** ampulü'ne ve `IsRunning` ardından **'Automobile.IsRunning' özelliğini oluştur'a tıklayın.**
 
-     `Automobile`Sınıfı artık adlı bir yöntemi `Start()` ve adında bir özelliği içerir `IsRunning` .
+     sınıfı `Automobile` artık adlı bir yöntemi ve adlı bir özelliği `Start()` `IsRunning` içerir.
 
 ### <a name="run-the-tests"></a>Testleri çalıştırma
 
-1. **Test** menüsünde   >  **tüm testleri** Çalıştır ' ı seçin.
+1. Test menüsünde **Tüm** Testleri   >  **Çalıştır'ı seçin.**
 
-       >  **Tüm testleri** Çalıştır komutu, geçerli çözüm için yazılmış tüm test çerçevelerinden tüm testleri çalıştırır. Bu durumda, iki test vardır ve beklendiği gibi her ikisi de başarısız olur. `DefaultAutomobileIsInitializedCorrectly`Koşul döndürdüğü için test başarısız olur `Assert.IsTrue` `False` . `AutomobileWithModelNameCanStart` `Start` `Automobile` Sınıftaki yöntem bir özel durum oluşturduğundan test başarısız olur.
+     Tüm   >  **Testleri Çalıştır** komutu, geçerli çözüm için yazılmış tüm test çerçevelerinde tüm testleri çalıştırır. Bu durumda iki test vardır ve ikisi de beklendiği gibi başarısız olur. Koşul `DefaultAutomobileIsInitializedCorrectly` döndür olduğundan test başarısız `Assert.IsTrue` `False` olur. sınıfındaki `AutomobileWithModelNameCanStart` yöntemi bir özel durum oluşturur çünkü test başarısız `Start` `Automobile` olur.
 
-     **Test sonuçları** penceresi aşağıdaki çizimde gösterilmiştir.
+     Test Sonuçları  penceresi aşağıdaki çizimde gösterilmiştir.
 
      ![Başarısız olan test sonuçları](../ide/media/testsfailed.png)
 
-2. **Test sonuçları** penceresinde her bir testin konumuna gitmek için her bir test sonucu satırına çift tıklayın.
+2. Test **Test Sonuçları** her test sonucu satırına çift tıklar ve her testin konumunu gösterir.
 
-### <a name="implement-the-source-code"></a>Kaynak kodunu uygulama
+### <a name="implement-the-source-code"></a>Kaynak kodu uygulama
 
-1. , `Model` `TopSpeed` Ve `IsRunning` özelliklerinin tamamı,, ve `"Not specified"` `-1` `False` (veya `false` C# için) doğru varsayılan değerlerine başlatıldığından, varsayılan oluşturucuya aşağıdaki kodu ekleyin.
+1. , ve özelliklerinin doğru varsayılan , ve (veya C# için) değerlerine başlatılması için aşağıdaki kodu varsayılan `Model` `TopSpeed` `IsRunning` `"Not specified"` `-1` `False` `false` oluşturucuya ekleyin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/automobile.cs" id="Snippet5":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb" id="Snippet5":::
 
-2. `Start`Yöntemi çağrıldığında, `IsRunning` bayrağı true olarak ayarlamanız gerekir, `Model` Aksi takdirde veya `TopSpeed` özellikleri varsayılan değerleri dışında bir değere ayarlanır. `NotImplementedException`Yöntemini Yöntem gövdesinden kaldırın ve aşağıdaki kodu ekleyin.
+2. yöntemi çağrıldıysa, yalnızca veya özellikleri varsayılan değerlerinden farklı bir değere ayarlanmışsa `Start` `IsRunning` bayrağını true `Model` olarak `TopSpeed` ayarlaması gerekir. yönteminin `NotImplementedException` gövdesinden kaldırın ve aşağıdaki kodu ekleyin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbtddwalkthrough/cs/automobile.cs" id="Snippet6":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbtddwalkthrough/vb/automobile.vb" id="Snippet6":::
 
-### <a name="run-the-tests-again"></a>Testleri yeniden çalıştırın
+### <a name="run-the-tests-again"></a>Testleri yeniden çalıştırma
 
-- **Test** menüsünde, **Çalıştır**' ın üzerine gelin ve ardından **tüm sınamalar**' ı tıklatın.
+- Test menüsünde **Çalıştır'ın** üzerine **gelin ve** ardından Tüm **Testler'e tıklayın.**
 
-     Testlerin geçişi bu kez yapılır. **Test sonuçları** penceresi aşağıdaki çizimde gösterilmiştir.
+     Bu kez testler geçer. Test Sonuçları  penceresi aşağıdaki çizimde gösterilmiştir.
 
-     ![Geçilen test sonuçları](../ide/media/testspassed.png)
+     ![Geçen test sonuçları](../ide/media/testspassed.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kullanımdan oluştur](../ide/visual-csharp-intellisense.md#generate-from-usage)
+- [Kullanımdan oluşturma](../ide/visual-csharp-intellisense.md#generate-from-usage)
 - [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
 - [IntelliSense kullanma](../ide/using-intellisense.md)
-- [Kodunuzun birim testi](../test/unit-test-your-code.md)
+- [Kodunuzu birim testi](../test/unit-test-your-code.md)
 - [Hızlı Eylemler](../ide/quick-actions.md)

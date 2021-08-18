@@ -11,14 +11,15 @@ ms.assetid: eafcc757-b488-487d-a063-ad3703ff42e8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b19b342a799cf0db2254795133bcf1ee6569a75
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 679ec90169ed8b95fe2fd10c0e1453efbcac243b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157009"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066273"
 ---
 # <a name="idiasessiongetsymbolsbyaddr"></a>IDiaSession::getSymbolsByAddr
 Sembolleri, adreslerinin sırasına göre bulan bir Numaralandırıcı alır.

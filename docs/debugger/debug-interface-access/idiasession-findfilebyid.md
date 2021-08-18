@@ -1,6 +1,6 @@
 ---
-description: Kaynak dosya tanımlayıcısına göre bir kaynak dosyası alır.
-title: 'IDiaSession:: Findfilebyıd | Microsoft Docs'
+description: Kaynak dosya tanımlayıcısına göre bir kaynak dosyası verir.
+title: IDiaSession::findFileById | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: df38c3d18f18f7c1c2bda021a8827fe76305c4c2cdd6fd2fce3e76269acf7c5d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2e34d25ea59b20eebc986106123070dd1d23b9dd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121391859"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066403"
 ---
 # <a name="idiasessionfindfilebyid"></a>IDiaSession::findFileById
-Kaynak dosya tanımlayıcısına göre bir kaynak dosyası alır.
+Kaynak dosya tanımlayıcısına göre bir kaynak dosyası verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,17 +36,17 @@ HRESULT findFileById (
 #### <a name="parameters"></a>Parametreler
  `uniqueId`
 
-'ndaki Kaynak dosya tanımlayıcısını belirtir.
+[in] Kaynak dosya tanımlayıcısını belirtir.
 
  `ppResult`
 
-dışı Alınan kaynak dosyayı temsil eden bir [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) nesnesi döndürür.
+[out] Alınan kaynak dosyayı temsil eden bir [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kaynak dosya tanımlayıcısı, tüm kaynak dosyalarını benzersiz hale getirmek için DIA SDK dahili olarak kullanılan benzersiz bir değerdir. Bu yöntem genellikle DIA SDK için dahili olarak kullanılır.
+ Kaynak dosya tanımlayıcısı, tüm kaynak dosyaları benzersiz yapmak için DIA SDK içinde kullanılan benzersiz bir değerdir. Bu yöntem genellikle uygulamanın içinde DIA SDK.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

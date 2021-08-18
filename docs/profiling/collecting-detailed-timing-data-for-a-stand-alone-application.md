@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 138ac253be9d275cf640efdbcca4b295ced0e63e2219605df12376d674e69285
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: aea82023781bb98fcc64f80f088c6ab4e4f91e09
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121369026"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131865"
 ---
 # <a name="collect-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak tek başına bir uygulama için ayrıntılı zamanlama verileri toplama
 Bu bölümde, komut satırından izleme yöntemini kullanarak bir istemci (tek başına) bileşeni için ayrıntılı performans verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.

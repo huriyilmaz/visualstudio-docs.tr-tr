@@ -1,6 +1,6 @@
 ---
-title: Otomatik kaydetme Office çözümlerini nasıl etkiler
-description: Excel, PowerPoint ve Word 'Ün düzenlemelerinizi otomatik olarak ve sürekli olarak kaydeden bir özelliği nasıl otomatik olarak kaydedeceğini öğrenin.
+title: Otomatik Kaydetme,çözümlerini Office etkiler
+description: AutoSave'in Excel, PowerPoint ve Word için düzenlemelerinizi otomatik olarak ve sürekli kaydeden bir özellik olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/26/2018
 ms.topic: conceptual
@@ -12,21 +12,22 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: afc79f0d69da4c32c664fbb928f6e3ef2e22cf00
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b6abba8ab26670cb2c76f8208a9c57d2b4975dff7233759c4666c1051ecf9430
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99904511"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121352025"
 ---
-# <a name="how-autosave-impacts-office-solutions"></a>Otomatik kaydetme Office çözümlerini nasıl etkiler
+# <a name="how-autosave-impacts-office-solutions"></a>Otomatik Kaydetme,çözümlerini Office etkiler
 
-Otomatik kaydetme, düzenlemelerinizi otomatik olarak ve sürekli olarak kaydeden Excel, PowerPoint ve Word için bir özelliktir. Özellik kapalıysa, değişikliklerinizi korumak için dosyaları el ile kaydetmeniz gerekir. Office çözümünüzü, otomatik kaydetme açık olsa bile sorunsuz çalışacak şekilde ayarlamanız gerekebilir. Ayrıntılar için bkz. [otomatik kaydetme, eklentileri ve makroları nasıl etkiler](/office/vba/library-reference/concepts/how-autosave-impacts-addins-and-macros). Genel olarak otomatik kaydetme hakkında daha fazla bilgi için bkz. [otomatik kaydetme nedir?](https://support.office.com/en-US/article/What-is-AutoSave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5).
+Otomatik Kaydetme, Excel, PowerPoint ve Word için düzenlemeleri otomatik olarak ve sürekli olarak kaydeden bir özelliktir. Özellik kapalı ise, değişikliklerinizi tutmak için dosyaları el ile kaydetmeniz gerekir. Otomatik Kaydetme açıkken bile Office şekilde çalışmasını sağlamak için çözüm çözümlerinizi ayarlamanız gerekir. Ayrıntılar için [bkz. Otomatik Kaydetme'nin eklentileri ve makroları nasıl etkilesi.](/office/vba/library-reference/concepts/how-autosave-impacts-addins-and-macros) Genel olarak Otomatik Kaydetme hakkında daha fazla bilgi için [bkz. Otomatik Kaydetme nedir?](https://support.office.com/en-US/article/What-is-AutoSave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5).
 
 > [!NOTE]
-> Windows Masaüstü Word, Excel ve PowerPoint için otomatik kaydetme, 2017 sürümünde sunulmuştur ve şu anda Office365 aboneleri için sunulmaktadır. Office 2016 veya önceki bir sürümü için kalıcı lisans satın aldıysanız, şu anda birlikte yazma özelliğine erişiminiz yok. (Excel Online, Android için Excel, iOS için Excel ve Windows Mağazası 'nda Excel Mobile, bu özelliği de destekler.)
+> Windows Desktop Word, Excel ve PowerPoint için Otomatik Kaydetme, 2017'de tanıtıldı ve şu anda Office365 aboneleri tarafından kullanılabilir. 2016 veya önceki bir Office kalıcı lisans satın aldıysanız şu anda ortak kimlik doğrulama özelliğine erişiminiz yok. (Excel Store'daki Android için Excel, Excel, iOS ve Excel Mobile için Windows bu özelliği destekler.)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümleri geliştirme](./developing-office-solutions.md)
+- [Yeni Office geliştirme](./developing-office-solutions.md)

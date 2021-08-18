@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: ac72b8e2d023fa71e48f01c7ddd9ed662eb89fd50287bd2dd1b854d523090a14
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5f1c22bd8f7ea1c48d9b5f84f2c63cc82c3f27b5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121409671"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131033"
 ---
 # <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>nasıl yapılır: tasarımcı kullanarak SharePoint Web bölümü oluşturma
 

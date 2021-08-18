@@ -1,6 +1,6 @@
 ---
 title: ServerDocument sınıfını kullanarak bir sunucudaki belgeleri yönetme
-description: Belge düzeyi özelleştirmelerinin çeşitli yönlerini yönetmek için Office çalışma zamanının Visual Studio Araçları ServerDocument sınıfını nasıl kullanabileceğinizi öğrenin.
+description: belge düzeyi özelleştirmelerinin çeşitli yönlerini yönetmek için Office için Visual Studio Araçları çalışma zamanında ServerDocument sınıfını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -15,17 +15,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 17a25ca382cfbbc762731afacaa628de616cfe1c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6f07c19f96ef7151a8c08464388e011b371a8827
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879481"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032491"
 ---
 # <a name="manage-documents-on-a-server-by-using-the-serverdocument-class"></a>ServerDocument sınıfını kullanarak bir sunucudaki belgeleri yönetme
-  `ServerDocument` [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Microsoft Office Word ve Microsoft Office Excel yüklenmemiş olsa bile belge düzeyi özelleştirmelerinin çeşitli yönlerini yönetmek için içindeki sınıfını kullanabilirsiniz. Şu görevleri gerçekleştirebilirsiniz:
+  `ServerDocument` [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Microsoft Office Word ve Microsoft Office Excel yüklü olmasa bile belge düzeyi özelleştirmelerinin çeşitli yönlerini yönetmek için içindeki sınıfını kullanabilirsiniz. Şu görevleri gerçekleştirebilirsiniz:
 
 - Bir belge veya çalışma kitabının veri önbelleğindeki verilere erişin ve verileri değiştirin. Daha fazla bilgi için bkz. [belgedeki önbelleğe alınmış verilerle çalışma](#CachedData).
 
@@ -34,11 +35,11 @@ ms.locfileid: "99879481"
   [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
 ## <a name="understand-the-serverdocument-class"></a>ServerDocument sınıfını anlayın
- `ServerDocument`Sınıfı, Office yüklü olmayan bilgisayarlarda kullanılmak üzere tasarlanmıştır. Bu nedenle, genellikle bu sınıfı, Office projeleri yerine konsol projeleri veya Windows Forms projeleri gibi Office ile tümleştirilebilen uygulamalarda kullanırsınız. <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> *Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll* derlemesinde sınıfını kullanın.
+ `ServerDocument`sınıfı, Office yüklü olmayan bilgisayarlarda kullanılmak üzere tasarlanmıştır. bu nedenle, genellikle bu sınıfı, Office projeleri yerine konsol projeleri veya Windows Forms projeleri gibi Office tümleştirilebilen uygulamalarda kullanırsınız. <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> *Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll* derlemesinde sınıfını kullanın.
 
  `ServerDocument`Sınıfı kullanılarak oluşturulmuş belge düzeyi özelleştirmelerde işlem yapmak için kullanılabilir [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] .
 
- Office çalışma zamanı için Visual Studio 2010 araçları ve .NET Framework için Office uzantıları hakkında daha fazla bilgi için, bkz. [Office çalışma zamanına genel bakış için Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
+ Office çalışma zamanına yönelik Visual Studio 2010 araçları ve .NET Framework Office uzantıları hakkında daha fazla bilgi için bkz. [Office için Visual Studio Araçları çalışma zamanına genel bakış](../vsto/visual-studio-tools-for-office-runtime-overview.md).
 
 > [!NOTE]
 > Sisteminde sınıfını kullanan eski bir uygulamanız varsa `ServerDocument` `Visual Studio Tools for Office` (sürüm 3,0 çalışma zamanı), `Visual Studio Tools for Office` uygulamayı çalıştıran bilgisayarlarda sistem (sürüm 3,0 çalışma zamanı) yüklü olmalıdır. `Visual Studio 2010 Tools for Office runtime`Bu uygulamalar çalıştırılamaz.
@@ -68,5 +69,5 @@ ms.locfileid: "99879481"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: belgelere yönetilen kod uzantıları Iliştirme](../vsto/how-to-attach-managed-code-extensions-to-documents.md)
 - [Nasıl yapılır: belgelerden yönetilen kod uzantılarını kaldırma](../vsto/how-to-remove-managed-code-extensions-from-documents.md)
-- [Office çalışma zamanına genel bakış için Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md)
+- [Office için Visual Studio Araçları çalışma zamanına genel bakış](../vsto/visual-studio-tools-for-office-runtime-overview.md)
 - [Önbellek verileri](../vsto/caching-data.md)

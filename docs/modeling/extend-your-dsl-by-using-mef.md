@@ -7,18 +7,19 @@ ms.topic: how-to
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a4572a7210203d6c7525a278430210c954c3405
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 450a55427b9b41b8f05278c9b830acddde15608c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388886"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047900"
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF kullanarak DSL'nizi genişletme
 
-Etki alanına özgü dilinizi (DSL) Managed Extensibility Framework (MEF) kullanarak genişletebilirsiniz. Siz veya diğer geliştiriciler DSL tanımını ve program kodunu değiştirmeden DSL için uzantılar yazabileceksiniz. Bu uzantılar menü komutlarını, sürükleyip bırakma işleyicilerini ve doğrulamayı içerir. Kullanıcılar DSL'nizi yükleyebilir ve isteğe bağlı olarak bunun için uzantılar yükleyebilir.
+Etki alanına özgü dilinizi (DSL) Managed Extensibility Framework (MEF) kullanarak genişletebilirsiniz. Siz veya diğer geliştiriciler DSL tanımını ve program kodunu değiştirmeden DSL için uzantılar yazabileceksiniz. Bu tür uzantılar menü komutlarını, sürükleyip bırakma işleyicilerini ve doğrulamayı içerir. Kullanıcılar DSL'nizi yükleyebilir ve ardından isteğe bağlı olarak bunun için uzantılar yükleyebilir.
 
 Ayrıca, DSL'niz içinde MEF'yi etkinleştir yandan, DSL ile birlikte yapılmış olsalar bile DSL'nizin bazı özelliklerini yazmanız daha kolay olabilir.
 
@@ -60,7 +61,7 @@ MEF hakkında daha fazla bilgi için [bkz. Managed Extensibility Framework (MEF)
 
     Dosya adı: `ValidationExtensionRegistrar.tt`
 
-    Bu dosyayı eklersiniz, DSL Gezgini'nde EditorValidation'daki anahtarlardan en az birini kullanarak **DSL'niz için doğrulamayı** etkinleştirmeniz gerekir.
+    Bu dosyayı eklersiniz, DSL Gezgini'nde EditorValidation'daki anahtarlardan en az birini kullanarak **DSL'nizin doğrulamasını** etkinleştirmeniz gerekir.
 
     ```
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
@@ -131,7 +132,7 @@ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL'ye eri
 
    - Bu derleme genellikle ".Dsl.dll" ile biter.
 
-   - DSL projesine erişiminiz varsa derleme dosyasını Dsl bin dizininin **altında \\ bulabilirsiniz \\ \***
+   - DSL projesine erişiminiz varsa, derleme dosyasını Dsl bin dizininin **altında \\ bulabilirsiniz \\ \***
 
    - DSL VSIX dosyasına erişiminiz varsa, VSIX dosyasının dosya adı uzantısını ".zip" olarak değiştirerek derlemeyi bulabilirsiniz. Dosyanın .zip açın.
 
@@ -149,15 +150,15 @@ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL'ye eri
 
 4. Yeni bir **VSIX proje projesi** oluşturun.
 
-5. Bu **Çözüm Gezgini** VSIX projesine sağ tıklayın ve Başlangıç Projesi **Olarak Ayarla'yı seçin.**
+5. Bu **Çözüm Gezgini** VSIX projesine sağ tıklayın ve Başlangıç **Olarak** Ayarla'yı Project.
 
 6. Yeni projede **source.extension.vsixmanifest'i açın.**
 
-7. İçerik **Ekle'ye tıklayın.** İletişim kutusunda İçerik **Türü'ne** **MEF Bileşeni,** Kaynak **Proje'yi ise** sınıf kitaplığı projenize ayarlayın.
+7. İçerik **Ekle'ye tıklayın.** İletişim kutusunda İçerik **Türü'lerini** **MEF Bileşeni olarak ayarlayın** ve **Kaynak Project** sınıf kitaplığı projenize ayarlayın.
 
 8. DSL'ye vsIX başvurusu ekleyin.
 
-   1. **source.extension.vsixmanifest içinde** Başvuru **Ekle'ye tıklayın.**
+   1. **source.extension.vsixmanifest içinde** Başvuru **Ekle'ye tıklayın**
 
    2. İletişim kutusunda Yük **Ekle'ye tıklayın** ve DSL'nin VSIX dosyasını bulun. VSIX dosyası DSL çözümünde, **DslPackage bin içinde \\ yerleşiktir. \\ \***
 
@@ -169,7 +170,7 @@ Kendiniz veya başka biri tarafından oluşturulan MEF özellikli bir DSL'ye eri
 
      Herhangi bir sayıda komut, hareket ve doğrulama sınıfı eklemek için kullanabilirsiniz.
 
-11. Uzantıyı test etmek için **F5 tuşuna basın.** Visual Studio'nin deneysel örneğinde DSL'nin örnek bir dosyasını oluşturun veya açın.
+11. Uzantıyı test etmek için **F5 tuşuna basın.** Visual Studio örneğinde DSL'nin örnek bir dosyasını oluşturun veya açın.
 
 ## <a name="writing-mef-extensions-for-dsls"></a>DSL'ler için MEF uzantıları yazma
 
@@ -247,7 +248,7 @@ namespace MyMefExtension
 
 ### <a name="gesture-handlers"></a>Hareket İşleyicileri
 
-Hareket işleyicisi diyagrama sürüklenen nesneleri her yerden, her yerden, her yerden veya dış katmandan Visual Studio. Aşağıdaki örnek, kullanıcının Windows Gezgini'nde dosyaları diyagrama sürüklemesine olanak sağlar. Dosya adlarını içeren öğeler oluşturur.
+Hareket işleyicisi diyagrama sürüklenen nesneleri her yerden, her yerden, her yerden veya dış Visual Studio. Aşağıdaki örnek, kullanıcının dosyaları Windows Gezgini'nde diyagrama sürüklemesine olanak sağlar. Dosya adlarını içeren öğeler oluşturur.
 
 Diğer DSL modellerinden ve UML modellerinden sürüklenmelerle başa olmak için işleyiciler yazabilirsiniz. Daha fazla bilgi için, [bkz. How to: Add a Drag-and-Drop Handler](../modeling/how-to-add-a-drag-and-drop-handler.md).
 

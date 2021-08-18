@@ -1,6 +1,6 @@
 ---
 title: DSL'nin MSI ve VSIX Dağıtımı
-description: Kendi bilgisayarınıza veya diğer bilgisayarlara bir etki alanına özgü dili (DSL) nasıl yükleyebileceğinizi öğrenin.
+description: Kendi bilgisayarınıza veya diğer bilgisayarlara etki alanına özgü bir dili (DSL) nasıl yükleyebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,131 +10,131 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 3311e660d3d485c2a75aa1134e5c31516e39873c62fd8c05d90cdbd61169d133
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 65df491989278f768f44cb0f768a216e082a6570
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121411015"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100835"
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL'nin MSI ve VSIX Dağıtımı
-Kendi bilgisayarınıza veya diğer bilgisayarlara, etki alanına özgü bir dil yükleyebilirsiniz. Visual Studio hedef bilgisayara zaten yüklenmiş olmalıdır.
+Etki alanına özgü bir dili kendi bilgisayarınıza veya diğer bilgisayarlara yükleyebilirsiniz. Visual Studio bilgisayarda yüklü olması gerekir.
 
-## <a name="choosing-between-vsix-and-msi-deployment"></a><a name="which"></a> VSıX ve MSI dağıtımı arasında seçim yapma
+## <a name="choosing-between-vsix-and-msi-deployment"></a><a name="which"></a> VSIX ile MSI Dağıtımı arasında seçim
  Etki alanına özgü dil dağıtmanın iki yöntemi vardır:
 
 |Yöntem|Avantajlar|
 |-|-|
-|vsx (Visual Studio uzantısı)|Dağıtım çok kolay: **. vsix** dosyasını DslPackage projesinden kopyalayın ve yürütün.<br /><br /> Daha fazla bilgi için bkz. [VSX kullanarak DSL yükleme ve kaldırma](#Installing).|
-|MSI (yükleyici dosyası)|-kullanıcının bir DSL dosyasına çift tıklayarak Visual Studio açmasına izin verir.<br />-Bir simgeyi hedef bilgisayardaki DSL dosyası türüyle ilişkilendirir.<br />-Bir XSD (XML Şeması) DSL dosya türüyle ilişkilendirir. Bu, dosya Visual Studio yüklendiğinde uyarıları önler.<br /><br /> MSI oluşturmak için çözümünüze bir kurulum projesi eklemeniz gerekir.<br /><br /> Daha fazla bilgi için bkz. [MSI dosyası kullanarak DSL dağıtma](#msi).|
+|VSX (Visual Studio Uzantısı)|Dağıtımı çok kolay: DslPackage projesinden **.vsix** dosyasını kopyalayıp yürütün.<br /><br /> Daha fazla bilgi için [bkz. VSX kullanarak DSL Yükleme ve Kaldırma.](#Installing)|
+|MSI (yükleyici dosyası)|- Bir DSL dosyasına çift Visual Studio kullanıcının bir dosyayı açması için izin verir.<br />- Bir simgeyi hedef bilgisayarda DSL dosya türüyle ilişkilendirin.<br />- Dsl dosya türüyle bir XSD (XML şeması) ilişkilendirin. Bu, dosya bir dosyaya yüklendiğinde uyarılardan Visual Studio.<br /><br /> MSI oluşturmak için çözümünüze bir kurulum projesi eklemeniz gerekir.<br /><br /> Daha fazla bilgi için [bkz. MSI dosyası kullanarak DSL dağıtma.](#msi)|
 
-## <a name="install-and-uninstall-a-dsl-by-using-the-vsx"></a><a name="Installing"></a> VSX kullanarak DSL yükleme ve kaldırma
+## <a name="install-and-uninstall-a-dsl-by-using-the-vsx"></a><a name="Installing"></a> VSX kullanarak DSL Yükleme ve Kaldırma
 
-bu yöntem tarafından dsl yüklendiğinde, kullanıcı Visual Studio içinden bir DSL dosyası açabilir, ancak dosya Windows gezgini ' nden açılamaz.
+DSL'niz bu yöntem tarafından yüklenirken, kullanıcı bir DSL dosyasını Visual Studio içinde açabilir, ancak dosya Windows Explorer'dan açamaz.
 
-### <a name="to-install-a-dsl-by-using-the-vsx"></a>VSX kullanarak bir DSL yüklemek için
+### <a name="to-install-a-dsl-by-using-the-vsx"></a>VSX kullanarak DSL yüklemek için
 
-1. DSL paketi projeniz tarafından oluşturulan **. vsix** dosyasını bulun:
+1. DSL Paketi projeniz tarafından inşa edilen **.vsix** dosyasını bulun:
 
-   1. **Çözüm Gezgini**, **DslPackage** projesine sağ tıklayın ve ardından **Dosya Gezgini 'nde klasörü aç**' a tıklayın.
+   1. Bu **Çözüm Gezgini** **DslPackage** projesine sağ tıklayın ve ardından Dosya Gezgini'de **Klasörü Aç'a tıklayın.**
 
-   2. Dosya **\\ \* bin \\**_projesini_ bulun **. DslPackage. vsix**
+   2. **\\ \* \\**_YourProject dosya binini_**bulun. DslPackage.vsix**
 
-2. **. Vsix** dosyasını, DSL 'yi yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir tane olabilir.
+2. **.vsix dosyasını** DSL yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir bilgisayarınız olabilir.
 
-   - Hedef bilgisayarda, [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] çalışma zamanında DSLs 'yi destekleyen sürümlerinden biri olmalıdır. daha fazla bilgi için bkz. [görselleştirme için desteklenen Visual Studio sürümleri & modelleme SDK](../modeling/supported-visual-studio-editions-for-visualization-amp-modeling-sdk.md).
+   - Hedef bilgisayarda, çalışma zamanında [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] DSL'leri destekleyen sürümlerinden biri olmalıdır. Daha fazla bilgi için [bkz. Görselleştirme Visual Studio Için Desteklenen sürümler & SDK'sı.](../modeling/supported-visual-studio-editions-for-visualization-amp-modeling-sdk.md)
 
-   - hedef bilgisayar, **DslPackage\source.extensions.manifest** içinde belirtilen Visual Studio sürümlerinden birine sahip olmalıdır.
+   - Hedef bilgisayarda **DslPackage\source.extensions.manifest** içinde belirtilen Visual Studio sürümlerinden biri olmalıdır.
 
-3. Hedef bilgisayarda **. vsix** dosyasına çift tıklayın.
+3. Hedef bilgisayarda **.vsix dosyasına çift** tıklayın.
 
-    **Visual Studio uzantısı yükleyicisi** açılır ve uzantıyı yüklüyor.
+    **Visual Studio Yükleyicisi** açılır ve uzantı yüklenir.
 
-4. Başlatın veya yeniden başlatın [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] .
+4. başlatın veya yeniden [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] başlatın.
 
-5. dsl 'yi test etmek için Visual Studio kullanarak dsl 'niz için tanımladığınız uzantıya sahip yeni bir dosya oluşturun.
+5. DSL'i test etmek Visual Studio kullanarak DSL'niz için tanımlandığı uzantıya sahip yeni bir dosya oluşturun.
 
-### <a name="to-uninstall-a-dsl-that-was-installed-by-using-vsx"></a>VSX kullanılarak yüklenen bir DSL 'yi kaldırmak için
+### <a name="to-uninstall-a-dsl-that-was-installed-by-using-vsx"></a>VSX kullanılarak yüklenmiş bir DSL'i kaldırmak için
 
-1. **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' i seçin.
+1. Araçlar menüsünde **Uzantılar** ve **Güncelleştirmeler'i seçin.**
 
-2. **Yüklü uzantıları** genişletin.
+2. Yüklü **Uzantılar'a genişletin.**
 
-3. DSL 'nin tanımlandığı uzantıyı seçin ve ardından **Kaldır**' a tıklayın.
+3. DSL'nin tanımlandığı uzantıyı seçin ve ardından Kaldır'a **tıklayın.**
 
-   Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı öğesinden silerek uzantıyı kaldırabilirsiniz:
+   Nadiren, hatalı bir uzantı yüklenemezse ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi'nde görünmez. Bu durumda, dosyayı silerek uzantıyı kaldırabilirsiniz:
 
-   *LocalAppData* **\Microsoft\visualstudio\10.0\Extensions**
+   *LocalAppData* **\Microsoft\VisualStudio\10.0\Extensions**
 
-## <a name="deploying-a-dsl-in-an-msi"></a><a name="msi"></a> MSI içinde DSL dağıtma
- dsl 'niz için bir msı (Windows Installer) dosyası tanımlayarak, kullanıcıların Windows gezgin 'den dsl dosyalarını açmasına izin verebilirsiniz. Ayrıca, dosya adı uzantınızla bir simge ve kısa açıklama ilişkilendirebilirsiniz. Buna ek olarak, MSI DSL dosyalarını doğrulamak için kullanılabilen bir XSD 'yi de yükleyebilir. İsterseniz, diğer bileşenleri MSI 'ye aynı anda yüklenecek şekilde ekleyebilirsiniz.
+## <a name="deploying-a-dsl-in-an-msi"></a><a name="msi"></a> MSI'de DSL dağıtma
+ DSL'niz için bir MSI (Windows Yükleyicisi) dosyası tanımlayarak, kullanıcıların DSL dosyalarını Windows açabilirsiniz. Bir simgeyi ve kısa açıklamayı dosya adı uzantınız ile de ilişkilendirilebilirsiniz. Ayrıca, MSI DSL dosyalarını doğrulamak için kullanılan bir XSD yükleyebilir. Güncelleştirmeyi yapmak için MSI'ye aynı anda yüklenecek olan diğer bileşenleri güncelleştirmeyi de güncelleştirmeyi kabul etmek gerekir.
 
- MSI dosyaları ve diğer dağıtım seçenekleri hakkında daha fazla bilgi için bkz. [uygulamaları, hizmetleri ve bileşenleri dağıtma](../deployment/deploying-applications-services-and-components.md).
+ MSI dosyaları ve diğer dağıtım seçenekleri hakkında daha fazla bilgi için [bkz. Uygulamaları, Hizmetleri ve Bileşenleri Dağıtma.](../deployment/deploying-applications-services-and-components.md)
 
- bir msı oluşturmak için Visual Studio çözümünüze bir kurulum projesi eklersiniz. Bir kurulum projesi oluşturmanın en kolay yöntemi, [VMSDK sitesinden](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)indirebileceğiniz CreateMsiSetupProject.tt şablonunu kullanmaktır.
+ MSI oluşturmak için, Visual Studio çözümünüze bir Kurulum Visual Studio eklersiniz. Kurulum projesi oluşturmanın en kolay yöntemi, [VMSDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)sitesinden indirerek CreateMsiSetupProject.tt şablonu kullanmaktır.
 
-### <a name="to-deploy-a-dsl-in-an-msi"></a>MSI içinde DSL dağıtmak için
+### <a name="to-deploy-a-dsl-in-an-msi"></a>MSI'de DSL dağıtmak için
 
-1. `InstalledByMsi`Uzantı bildiriminde ayarlanır. Bu, VSX 'in MSI dışında yüklenmesini ve kaldırılmasını engeller. Bu, MSI 'ye diğer bileşenleri dahil etmek için önemlidir.
+1. Uzantı `InstalledByMsi` bildiriminde ayarlayın. Bu, VSX'in MSI dışında yük devrederek kaldırılmasını önler. MSI'ye diğer bileşenleri dahil etmek için bu önemlidir.
 
-   1. Açık DslPackage\source.extension.tt
+   1. Open DslPackage\source.extension.tt
 
-   2. Önce aşağıdaki satırı ekleyin `<SupportedProducts>` :
+   2. önce aşağıdaki satırı `<SupportedProducts>` ekler:
 
        ```xml
        <InstalledByMsi>true</InstalledByMsi>
        ```
 
-2. Windows Explorer 'da DSL 'yi temsil edecek bir simge oluşturun veya düzenleyin. Örneğin, **Dslpackage\resources\file.exe** dosyasını düzenleyin
+2. WINDOWS Explorer'da DSL'nizi temsil edecek bir simge oluşturun veya düzenleyin. Örneğin **DslPackage\Resources\File.ico dosyasını düzenleyin**
 
-3. DSL 'nizin aşağıdaki özniteliklerinin doğru olduğundan emin olun:
+3. DSL'nizin aşağıdaki özniteliklerinin doğru olduğundan emin olun:
 
-   - DSL Gezgini ' nde kök düğümüne tıklayın ve Özellikler penceresi ' de şunları gözden geçirin:
+   - DSL Gezgini'nde kök düğüme tıklayın ve Özellikler penceresi gözden geçirebilirsiniz:
 
        - Açıklama
 
        - Sürüm
 
-   - **Düzenleyici** düğümüne tıklayın ve Özellikler penceresi **simgesine** tıklayın. Değeri **Dslpackage\resources** içindeki **File. ico** gibi bir simge dosyasına başvuracak şekilde ayarlayın.
+   - Düzenleyici **düğümüne** tıklayın ve Özellikler penceresi Simgesi'ne **tıklayın.** **DslPackage\Resources** içinde **File.ico** gibi bir simge dosyasına başvuru yapmak için değeri ayarlayın
 
-   - **Yapı** menüsünde **Configuration Manager** açın ve derlemek istediğiniz yapılandırmayı (örneğin, **yayın** veya **hata ayıklama**) seçin.
+   - Build **(Derleme)** menüsünde **Yapılandırma Yöneticisi** açın ve derlemek istediğiniz yapılandırmayı (Yayın veya Hata Ayıklama **gibi)** **seçin.**
 
-4. [Görselleştirme ve modelleme SDK 'sı giriş sayfasına](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)gidin ve **indirmeler** sekmesinden **CreateMsiSetupProject.tt** indirin.
+4. Görselleştirme ve [Modelleme SDK'sı giriş sayfasına gidin](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)ve İndirmeler sekmesinden CreateMsiSetupProject.tt.  
 
-5. DSL projenize **CreateMsiSetupProject.tt** ekleyin.
+5. Dsl **CreateMsiSetupProject.tt** ekleme.
 
-    Visual Studio, **createmsısetupproject. vdproj** adlı bir dosya oluşturacak.
+    Visual Studio **CreateMsiSetupProject.vdproj adlı bir dosya oluşturacak.**
 
-6. Windows Explorer 'da Dsl \\ *. vdproj öğesini Setup adlı yeni bir klasöre kopyalayın.
+6. Bu Windows Dsl \\ *.vdproj dosyasını Kurulum adlı yeni bir klasöre kopyalayın.
 
-    (İsterseniz, CreateMsiSetupProject.tt artık DSL projenizden dışarıda bırakabilirsiniz.)
+    (Sınsın, artık Dsl projenizin CreateMsiSetupProject.tt dışlamanız gerekir.)
 
-7. **Çözüm Gezgini**, var olan bir proje olarak **Setup \\ \* . VDPROJ** öğesini ekleyin.
+7. Bu **Çözüm Gezgini,** Setup **\\ \* .vdproj'u mevcut** bir proje olarak ekleyin.
 
-8. **Project** menüsünde **Project bağımlılıklar**' a tıklayın.
+8. Project **menüsünde** Bağımlılıklar'Project **tıklayın.**
 
-    **Project bağımlılıklar** iletişim kutusunda kurulum projesini seçin.
+    **Bağımlılıklar Project** kutusunda kurulum projesini seçin.
 
-    **DslPackage** seçeneğinin yanındaki kutuyu seçin.
+    **DslPackage'ın yanındaki kutuyu seçin.**
 
 9. Çözümü yeniden derleyin.
 
-10. Windows gezgini ' nde, kurulum projenizde oluşturulan msı dosyasını bulun.
+10. Windows Gezgini'nde, Kurulum projenizin yerleşik MSI dosyasını bulun.
 
-     MSI dosyasını, DSL 'yi yüklemek istediğiniz bir bilgisayara kopyalayın. MSI dosyasına çift tıklayın. Yükleyici çalışır.
+     MSI dosyasını DSL'nizi yüklemek istediğiniz bilgisayara kopyalayın. MSI dosyasına çift tıklayın. Yükleyici çalışır.
 
-11. Hedef bilgisayarda, DSL 'niz dosya uzantısına sahip yeni bir dosya oluşturun. Şunları doğrulayın:
+11. Hedef bilgisayarda, DSL'nizin dosya uzantısına sahip yeni bir dosya oluşturun. Şunları doğrulayın:
 
-    - Windows gezgin liste görünümünde dosya, tanımladığınız simge ve açıklama ile birlikte görüntülenir.
+    - Gezgin Windows görünümünde dosya, tanımlandığı simge ve açıklamayla birlikte görüntülenir.
 
-    - dosyayı çift tıklattığınızda Visual Studio başlatılır ve dsl dosyasını dsl düzenleyicisinde açar.
+    - Dosyaya çift tıklarsanız, Visual Studio başlar ve DSL dosyasını DSL düzenleyicisinde açar.
 
-    İsterseniz, Kurulum projesini metin şablonunu kullanmak yerine el ile oluşturabilirsiniz. Bu yordamı içeren bir anlatım için [görselleştirme ve modelleme SDK laboratuvarının](https://code.msdn.microsoft.com/DSLToolsLab/Release/ProjectReleases.aspx?ReleaseId=4207)5. bölümüne bakın.
+    Tercih ederseniz, metin şablonunu kullanmak yerine Kurulum projesini el ile oluşturabilirsiniz. Bu yordamı içeren bir kılavuz için Görselleştirme ve Modelleme SDK Laboratuvarı'nın [5. Bölüm'e bakın.](https://code.msdn.microsoft.com/DSLToolsLab/Release/ProjectReleases.aspx?ReleaseId=4207)
 
-### <a name="to-uninstall-a-dsl-that-was-installed-from-an-msi"></a>MSI 'dan yüklenmiş bir DSL 'yi kaldırmak için
+### <a name="to-uninstall-a-dsl-that-was-installed-from-an-msi"></a>MSI'den yüklenmiş bir DSL'i kaldırmak için
 
-1. Windows ' de, **programlar ve özellikler** denetim masasını açın.
+1. Bu Windows Programlar ve **Özellikler denetim panelini** açın.
 
-2. DSL 'yi kaldırın.
+2. DSL'i kaldırın.
 
 3. Visual Studio’yu yeniden başlatın.

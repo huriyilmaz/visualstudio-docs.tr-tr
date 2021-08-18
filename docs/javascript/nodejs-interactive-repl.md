@@ -1,6 +1,6 @@
 ---
-title: Node.js REPL kullanma
-description: Visual Studio çalışma zamanıyla etkileşim kurmak için Node.js sağlar
+title: Node.js REPL kullanın
+description: Visual Studio, Node.js çalışma zamanına etkileşim kurma desteği sağlar
 ms.date: 12/04/2018
 ms.topic: how-to
 ms.devlang: javascript
@@ -12,41 +12,41 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: d014391510faa95c917cb6861c2c85d68ed6bf083fd51f47f3aea709bad51fe9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8dc3cbe7fef2c5940a8e87c2f085e52cdd7b2659
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121411499"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048147"
 ---
-# <a name="work-with-the-nodejs-interactive-window"></a>Node.js etkileşimli penceresiyle çalışma
+# <a name="work-with-the-nodejs-interactive-window"></a>Etkileşimli Node.js penceresiyle çalışma
 
-Node.js araçları Visual Studio çalışma zamanı için etkileşimli bir pencere Node.js içerir. Bu pencere, JavaScript kodu girmenize ve sonuçları hemen görmenize ve geçerli projeyle etkileşim kurmak için npm komutlarını yürütmenize olanak sağlar. Etkileşimli pencere rePL **(R** ead/**E** değerli/**P** rint **Loop) olarak da** bilinir.
+Visual Studio için Node.js araçları, yüklü Node.js çalışma zamanına yönelik etkileşimli bir pencere içerir. Bu pencere, JavaScript kodu girmenize ve sonuçları hemen görmenize olanak tanır. Ayrıca, geçerli projeyle etkileşimde bulunmak için NPM komutlarını yürütün. Etkileşimli pencere aynı zamanda REPL (**R** EAD/**E** valuate/**P** rint **L** OOP) olarak da bilinir.
 
-## <a name="open-the-interactive-window"></a>Etkileşimli pencereyi açma
+## <a name="open-the-interactive-window"></a>Etkileşimli pencereyi aç
 
-Etkileşimli pencereyi açmak için Node.js proje düğümüne sağ tık Çözüm Gezgini Etkileşimli Pencere'Node.js **aç'ı seçin.**
+Etkileşimli pencereyi, Çözüm Gezgini Node.js proje düğümüne sağ tıklayıp **etkileşimli pencere aç Node.js**' ı seçerek açabilirsiniz.
 
-![Node.js bağlam menüsünde etkileşimli pencereyi açma](../javascript/media/interactivewindow-open-from-project.png)
+![Proje bağlam menüsünde etkileşimli pencere Node.js](../javascript/media/interactivewindow-open-from-project.png)
 
-Etkileşimli pencereyi açmak için varsayılan kısa kesme Node.js **[CTRL] + K, N tuşlarıdır.** Veya Etkileşimli Pencere'de Görüntüle'Windows   >  **Node.js**  >  **araç çubuğundan pencereyi açabilirsiniz.**
+Node.js etkileşimli pencereyi açmak için varsayılan kısa kesme tuşları **[Ctrl] + K, N**. veya, pencereyi araç çubuğundan açmak için   >  **Windows**  >  **Node.js etkileşimli pencere**' yi seçerek açabilirsiniz.
 
-## <a name="use-the-repl"></a>REPL kullanma
+## <a name="use-the-repl"></a>REPL kullanın
 
-Açıldıktan sonra komutları girebilirsiniz.
+Açıldıktan sonra komutlar girebilirsiniz.
 
-![Node.js etkileşimli pencere](../javascript/media/interactivewindow.png)
+![Etkileşimli pencere Node.js](../javascript/media/interactivewindow.png)
 
-Etkileşimli pencerede, bunları bildiren herhangi bir JavaScript işlevinden ayırt etmek için nokta ön eki ile baş eden birkaç yerleşik komut vardır. Aşağıdaki komutlar de destekler:
+Etkileşimli pencerede, bildirdiğiniz herhangi bir JavaScript işlevinden ayırt etmek için bir nokta önekiyle başlayan birkaç yerleşik komut vardır. Aşağıdaki komutlar desteklenir:
 
-**.cls, .clear** Düzenleyici penceresinin içeriğini temizler ve geçmiş ve yürütme bağlamını olduğu gibi bırakır.
+**. CLS,. Clear** , Geçmiş ve yürütme bağlamından ayrılmadan düzenleyici penceresinin içeriğini temizler.
 
-**.help** Belirtilen komutta veya hiçbiri belirtilmezse kullanılabilir tüm komutlarda ve anahtar bağlamalarında yardım görüntüler.
+**. yardım** Belirtilen komutla ilgili yardım ya da hiçbir şey belirtilmemişse tüm kullanılabilir komutlarda ve anahtar bağlamalarında yardım görüntüler.
 
-**.info** Geçerli kullanılan dosyanın yürütülebilir dosyası Node.js gösterir.
+**. INFO** Geçerli kullanılan Node.js çalıştırılabilir dosyası hakkındaki bilgileri gösterir.
 
-**.npm** Bir npm komutu çalıştırır. Çözüm birden fazla proje içeriyorsa kullanarak hedef projeyi `.npm [projectname] <npm arguments>` belirtin.
+**. NPM** Bir NPM komutu çalıştırır. Çözüm birden fazla proje içeriyorsa, öğesini kullanarak hedef projeyi belirtin `.npm [projectname] <npm arguments>` .
 
-**.reset** Yürütme ortamını başlangıç durumuna sıfırlar, geçmişi tutma.
+**. Reset** Yürütme ortamını ilk durumuna sıfırlar, geçmişi devam edin.
 
-**.save** Geçerli REPL oturumunu bir dosyaya kaydeder.
+**. Kaydet** Geçerli REPL oturumunu bir dosyaya kaydeder.

@@ -12,12 +12,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba20d0d640aa50d79af5ec7addf3a1f84e4c6edf69125f98414b00bf873a0450
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3bcec968015913b53943e854859504196533b90a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121426912"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131423"
 ---
 # <a name="how-to-instrument-a-stand-alone-net-framework-component-and-collect-memory-data-with-the-profiler-by-using-the-command-line"></a>Nasıl yapılır: Tek başına bir .NET Framework bileşenini izleme ve komut satırını kullanarak profil oluşturucu ile bellek verileri toplama
 bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir .exe veya .dll dosyası gibi tek başına bir uygulamanın .NET Framework bileşenini işaretlemek ve profil oluşturucuyu kullanarak bellek bilgilerini toplamak için Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağı açıklanır.

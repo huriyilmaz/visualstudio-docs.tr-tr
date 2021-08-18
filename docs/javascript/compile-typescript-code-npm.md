@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 98e87e402613e73dd9a5ab8a08f3c2bdae1ab1d2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 78fa0ee7da014c73f156848ef6efd75a7f285ebdbcb20c2366e924099f270cad
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122055763"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121356237"
 ---
 # <a name="compile-typescript-code-nodejs"></a>TypeScript kodunu derleme (Node.js)
 
@@ -30,13 +30,13 @@ Daha ASP.NET Core projelerde bunun yerine NuGet [önerilir.](../javascript/compi
 
 1. [Uygulama geliştirme](../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json) iş yükünü ve Node.js çalışma zamanının yükleme Node.js izleyin.
 
-   Visual Studio ile en basit tümleştirme için, Boş Node.js Web Uygulaması şablonu gibi Node.js TypeScript şablonlarından birini kullanarak projenizi oluşturun. Aksi takdirde, Node.js bir JavaScript şablonu Visual Studio buradaki yönergeleri izleyin veya bir Klasör Aç [projesini](../javascript/develop-javascript-code-without-solutions-projects.md) kullanın.
+   Visual Studio ile en basit tümleştirme için, Boş Node.js Web Uygulaması şablonu gibi Node.js Type Node.js Script şablonlarından birini kullanarak projenizi oluşturun. Aksi takdirde, Node.js bir JavaScript şablonu Visual Studio buradaki yönergeleri izleyin veya bir Klasör Aç [projesini](../javascript/develop-javascript-code-without-solutions-projects.md) kullanın.
 
 1. Projeniz henüz dahil etmemişse [TypeScript npm paketini yükleyin.](https://www.npmjs.com/package/typescript)
 
-   Bu Çözüm Gezgini (sağ bölme) proje *kökündepackage.jsaçık* olan bölmeyi açın. Listelenen paketler, Çözüm Gezgini'daki npm düğümü altındaki paketlere karşılık Çözüm Gezgini. Daha fazla bilgi için [bkz. Npm paketlerini yönetme.](../javascript/npm-package-management.md)
+   Çözüm Gezgini (sağ bölme) proje *kökündepackage.jsaçın.* Listelenen paketler, Çözüm Gezgini'daki npm düğümü altındaki paketlere karşılık Çözüm Gezgini. Daha fazla bilgi için [bkz. Npm paketlerini yönetme.](../javascript/npm-package-management.md)
 
-   Bir Node.js için, komut satırı veya IDE kullanarak TypeScript npm paketini yükleyebilirsiniz. IDE kullanarak yüklemek için, Çözüm Gezgini'de npm düğümüne sağ tıklayın, Yeni npm paketini yükle'yi **seçin,** **TypeScript** araması yazın ve paketi yükleyin.
+   Bir Node.js için, komut satırı veya IDE kullanarak TypeScript npm paketini yükleyebilirsiniz. IDE kullanarak yüklemek için, Çözüm Gezgini'de npm düğümüne sağ tıklayın, Yeni npm paketini yükle'yi **seçin,** **TypeScript'i** arayın ve paketi yükleyin.
 
    Paket yükleme ilerlemesini görmek için **Çıkış** penceresinde **npm** seçeneğini işaretleyin. Yüklü paket, **Çözüm Gezgini'daki npm** düğümü altında Çözüm Gezgini.
 
@@ -44,7 +44,7 @@ Daha ASP.NET Core projelerde bunun yerine NuGet [önerilir.](../javascript/compi
 
    Visual Studio, *tsconfig.jsproje* köküne ekler. TypeScript derleyicisi seçeneklerini [yapılandırmak için](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) bu dosyayı kullanabilirsiniz.
 
-1. Açık *tsconfig.jsve* güncelleştirmeyi açıp istediğiniz derleyici seçeneklerini ayarlayın.
+1. Açık *tsconfig.jsaçın* ve güncelleştirin ve istediğiniz derleyici seçeneklerini ayarlayın.
 
    Aşağıda, dosyada basit birtsconfig.js *örneği ve* ardından ve bir örnek ve açıklama ve açıklama yer aleladedir.
 
@@ -99,18 +99,18 @@ Daha ASP.NET Core projelerde bunun yerine NuGet [önerilir.](../javascript/compi
 
    Webpack'i React ve webpack yapılandırma dosyasıyla kullanma örneği için bkz. Node.js ve [React.](../javascript/tutorial-nodejs-with-react-and-jsx.md)
 
-   TypeScript ile Vue.js örneği için [bkz. Vue.js uygulaması oluşturma.](/javascript/create-application-with-vuejs)
+   TypeScript ile Vue.js örneği için [bkz. Vue.js uygulama oluşturma.](/javascript/create-application-with-vuejs)
 
 1. Başlangıç sayfası, Node.js çalışma zamanı, uygulama bağlantı noktası veya çalışma zamanı bağımsız değişkenleri gibi seçenekleri yapılandırmanız gerekirse, Çözüm Gezgini proje düğümüne sağ tıklayın ve Özellikler'i **seçin.**
 
    >[!NOTE]
    > Üçüncü taraf araçları yapılandırıldığında, Node.js projeleri, Araçlar Seçenekler Projeleri ve çözümleri Web Uygulaması Dış Web Araçları altında  >    >    >  **Paket Yönetimi**  >  **yolları kullanmaz.** Bu ayarlar diğer proje türleri için kullanılır.
 
-1. Derleme **ve Derleme >'ı seçin.**
+1. Build **> Build Solution (Derleme Çözümü) seçin.**
 
    Uygulamayı çalıştırarak otomatik olarak derlemeye devam ediyor olsa da, derleme işlemi sırasında olan bir şeye göz atacağız:
 
-   Kaynak eşlemeleri oluşturduysanız *outDir* seçeneğinde belirtilen klasörü açın ve oluşturulan \*.js \* js.map dosyalarıyla birlikte bulursanız.
+   Kaynak eşlemeleri oluşturursanız *outDir* seçeneğinde belirtilen klasörü açın ve oluşturulan.js ve \* oluşturulan \* js.map dosyalarıyla birlikte bulursanız.
 
    Hata ayıklaması için kaynak eşleme [dosyaları gereklidir.](../javascript/debug-nodejs.md)
 

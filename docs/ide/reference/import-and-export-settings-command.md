@@ -1,5 +1,5 @@
 ---
-description: Visual Studio ayarlarını içeri aktarır, dışarı aktarır veya sıfırlar. vssettings dosya uzantısı
+description: İçeri aktarmalar, dışarı aktarmalar veya ayarları Visual Studio sıfırlar. vssettings dosya uzantısı
 title: Ayarları İçeri ve Dışarı Aktar komutu
 ms.date: 05/28/2021
 ms.topic: reference
@@ -15,18 +15,18 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: eb9c82d02a708d8aec49a620b836da6761594733c67b52cb04c1e4d7adfe62ae
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3074371bbf76d3f393e89655d85e2ed1a08ec58e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121372471"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101277"
 ---
-# <a name="import-and-export-settings-command-vssettings-file"></a>Ayarlar komutu (. vssettings dosyası) içeri ve dışarı aktarma
+# <a name="import-and-export-settings-command-vssettings-file"></a>Import and Export Ayarlar komutu (.vssettings dosyası)
 
-Visual Studio ayarları dosyasını içeri aktarır, dışarı aktarır veya sıfırlar `.vssettings` .
+ayarları dosyası olan Visual Studio içeri Visual Studio veya `.vssettings` sıfırlar.
 
-Dosyanın şeması açık. En yaygın olarak, şema her kategorinin bir etiket olduğu bir XML yapısına uyar ve bu, kendisini alt kategori etiketleri içerebilir. Bu alt kategori etiketleri, özellik değeri etiketleri içerebilir. çoğu paket ortak yapıyı kullandığından, Visual Studio her bir paket, seçtiği şemayı içeren bir dosyaya rastgele XML katkıda bulunabilir.
+Dosyanın şeması açık. En yaygın olarak şema, her kategorinin bir etiket olduğu ve alt kategori etiketlerini içerenin bir XML yapısını izler. Bu alt kategori etiketleri özellik değeri etiketlerini içerebilir. Paketlerin çoğu ortak yapıyı kullansa da, Visual Studio şemayla dosyaya rastgele XML katkıda bulunabilirsiniz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,25 +36,25 @@ Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
 
 ## <a name="switches"></a>Anahtarlar
 
-/Export`filename`
+/export:`filename`
 
-İsteğe bağlı. Geçerli ayarları belirtilen dosyaya dışa aktarır.
+İsteğe bağlı. Geçerli ayarları belirtilen dosyaya dışarı aktarır.
 
-/import`filename`
+/import:`filename`
 
-İsteğe bağlı. Belirtilen dosyadaki ayarları içeri aktarır.
+İsteğe bağlı. Belirtilen dosyada ayarları içeri aktarır.
 
-/Reset süpürmeden
+/reset
 
 İsteğe bağlı. Geçerli ayarları sıfırlar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-bu komutu hiçbir anahtar olmadan çalıştırmak, **Ayarlar içeri ve dışarı aktarma** sihirbazı 'nı açar. Daha fazla bilgi için bkz. ayarlarınızı ve [ortam ayarlarınızı](../environment-settings.md) [eşitler](../synchronized-settings-in-visual-studio.md) .
+Bu komutu hiçbir anahtarla çalıştırarak İçeri **ve Dışarı Aktarma Ayarlar** açılır. Daha fazla bilgi için [bkz. Ayarlarınızı ve Ortam](../synchronized-settings-in-visual-studio.md) [ayarlarınızı eşitleme.](../environment-settings.md)
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki komut geçerli ayarları dosyaya dışa aktarır `MyFile.vssettings` :
+Aşağıdaki komut, geçerli ayarları dosyasına dışarı `MyFile.vssettings` aktarır:
 
 ```cmd
 Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"
@@ -65,6 +65,6 @@ Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ortam ayarları](../../ide/environment-settings.md)
-- [Ayarlarınızı eşitler](../../ide/synchronized-settings-in-visual-studio.md)
-- [Visual Studio ıde 'yi kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md)
+- [Ayarlarınızı eşitleme](../../ide/synchronized-settings-in-visual-studio.md)
+- [IDE'Visual Studio kişiselleştirme](../../ide/personalizing-the-visual-studio-ide.md)
 - [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)

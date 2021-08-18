@@ -12,12 +12,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 960a7d4f1977dfd79ba4d80505b733eba876e38721615f364986ac0bd22b23a8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 93d20cd77d5aa6bde02a8bef922a21bdbf997e8f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121355262"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131501"
 ---
 # <a name="globalon-and-globaloff"></a>GlobalOn ve GlobalOff
 **GlobalOff** *VSPerfCmd.exe* **GlobalOn** seçenekleri, bir komut satırı profil oluşturma oturumunda tüm işlemler ve iş parçacıkları için profil oluşturmayı duraklatma ve sürdürme.
@@ -56,7 +56,7 @@ VSPerfCmd.exe {Launch:AppName|Attach:PID} /{GlobalOff|GlobalOn}[Options]
 
  **Başlatma:** `AppName` Belirtilen uygulamayı başlatır ve örnekleme yöntemiyle profil oluşturmayı başlatır.
 
- **Ekleme:** `PID` Belirtilen sürecin profilini oluşturmayı başlar.
+ **Ekleme:** `PID` Belirtilen işlem profilini oluşturmayı başlar.
 
  {**ProcessOff**&#124;**ProcessOn**} **:**`PID` Belirtilen işlem için profil oluşturmayı durdurur veya başlatır.
 

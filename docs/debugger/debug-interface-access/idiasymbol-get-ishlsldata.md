@@ -1,6 +1,6 @@
 ---
-description: Bu sembolün yüksek düzey gölgelendirici dili (HLSL) verilerini temsil edip etmediğini belirtir.
-title: 'IDiaSymbol:: get_isHLSLData | Microsoft Docs'
+description: Bu sembolün Üst Düzey Gölgelendirici Dili (HLSL) verilerini temsil edip ettiğini belirtir.
+title: IDiaSymbol::get_isHLSLData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 21f36f294a0503f0d9dce85e352c49af197257be1112e012c766eb1c7a945f94
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b5611047e3c79d6cd5d6a5951135a18d5fb3c0b3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379857"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066124"
 ---
 # <a name="idiasymbolget_ishlsldata"></a>IDiaSymbol::get_isHLSLData
-Bu sembolün yüksek düzey gölgelendirici dili (HLSL) verilerini temsil edip etmediğini belirtir.
+Bu sembolün Üst Düzey Gölgelendirici Dili (HLSL) verilerini temsil edip ettiğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT get_isHLSLData(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `BOOL` Bu sembolün HLSL verilerini temsil edip etmediğini belirten bir işaretçisi.
+[out] Bu sembolün `BOOL` HLSL verilerini temsil edip ettiğini belirten bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

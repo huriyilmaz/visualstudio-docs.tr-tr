@@ -1,6 +1,6 @@
 ---
-description: Bu programın barındırma sürecinin başlığını, kolay adını veya dosya adını alır.
-title: 'IDebugProgramHost2:: GetHostName | Microsoft Docs'
+description: Bu programın barındırma işleminin başlığını, kolay adını veya dosya adını alır.
+title: IDebugProgramHost2::GetHostName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 48bbb089-e59a-471a-9965-24b42a8dabf3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 53b4d69be1ea24f5c240b6247539f499c9fb00fb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b43d6c3edde39b137116dc5215745f066207e25d00c75e8a1dc351e8c1ccefc6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084018"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121433222"
 ---
 # <a name="idebugprogramhost2gethostname"></a>IDebugProgramHost2::GetHostName
-Bu programın barındırma sürecinin başlığını, kolay adını veya dosya adını alır.
+Bu programın barındırma işleminin başlığını, kolay adını veya dosya adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +45,16 @@ int GetHostName(
 
 ## <a name="parameters"></a>Parametreler
 `dwType`\
-'ndaki [GETHOSTNAME_TYPE](../../../extensibility/debugger/reference/gethostname-type.md) numaralandırmasından bir değer.
+[in] Bir değer [GETHOSTNAME_TYPE.](../../../extensibility/debugger/reference/gethostname-type.md)
 
 `pbstrHostName`\
-dışı Barındırma işleminin istenen adını döndürür.
+[out] Barındırma işleminin istenen adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemin tipik bir uygulamasında `dwType` parametresi yok sayılır ve konak makinenin kolay adı döndürülür. Başka bir olası uygulama, `dwType` adı almak için, parametreyi [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) yöntemine yapılan çağrıya geçirmektir.
+ Bu yöntemin tipik bir uygulamasında parametresi `dwType` yoksayılır ve konak makinenin kolay adı döndürülür. Başka bir olası uygulama, adı `dwType` almak için [GetHostName](../../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md) yöntemine bir çağrıya parametresini geçmektir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramHost2](../../../extensibility/debugger/reference/idebugprogramhost2.md)

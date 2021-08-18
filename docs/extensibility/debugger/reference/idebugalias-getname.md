@@ -1,6 +1,6 @@
 ---
 description: Bu diğer adın adını alır.
-title: 'IDebugAlias:: GetName | Microsoft Docs'
+title: IDebugAlias::GetName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 63179ad1ca7c6e5f3c2a8173439bb5a4e2c915f6e4ae22578003b18a63259df6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cad76bf7158357a8087fbf075a5682ff88e17294
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121403136"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064857"
 ---
 # <a name="idebugaliasgetname"></a>IDebugAlias::GetName
 Bu diğer adın adını alır.
@@ -43,10 +43,10 @@ int GetName(
 
 ## <a name="parameters"></a>Parametreler
 `pbstrName`\
-dışı Diğer adın adı.
+[out] Diğer adın adı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

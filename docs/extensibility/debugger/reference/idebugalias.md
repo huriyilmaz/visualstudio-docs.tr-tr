@@ -11,14 +11,15 @@ ms.assetid: 3cc4c9a4-7805-4239-b00e-eb4a024f3c55
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: d5eb9f1d4bc493779d9b42a984c8fc1577e2fe66
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 52590d62bb2bc6d9090432efe7e11a343601cfd9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059151"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064792"
 ---
 # <a name="idebugalias"></a>IDebugAlias
 > [!IMPORTANT]
@@ -33,7 +34,7 @@ IDebugAlias : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Implemenonun notları
- İfade değerlendirici (EE), değişkenler için sayısal diğer adları desteklemek üzere bu arabirimi uygular.
+ ifade değerlendirici (EE), değişkenler için sayısal diğer adları desteklemek üzere bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
 - [CreateAlias](../../../extensibility/debugger/reference/idebugobject2-createalias.md) , belirli bir nesne için bir diğer ad oluşturur. Diğer adları aramak için [FindAlias](../../../extensibility/debugger/reference/idebugbinder3-findalias.md) veya [GetAllAliases](../../../extensibility/debugger/reference/idebugbinder3-getallaliases.md)kullanın.

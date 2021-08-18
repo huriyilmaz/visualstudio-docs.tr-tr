@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 0fefdd5397fa2204fb82d92a7c312a86a7cf6f004a1a3aa138415117e4fe255d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 80b8ee2e1cb2339dea2b34af30acfcca02fbcd22
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121409546"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047588"
 ---
 # <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>SharePoint araçları uzantıları için programlama kavramları ve özellikleri
   Visual Studio SharePoint araçlarıyla ilgili birçok önemli programlama kavramı ve özelliği vardır. bu kavramlar ve özellikler çoğu SharePoint araçları uzantısı 'nda önemli bir rol oynar.

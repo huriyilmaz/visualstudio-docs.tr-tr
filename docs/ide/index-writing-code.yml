@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Kodu düzenleme ve düzenleme Visual Studio
+title: Kodda düzenleme ve düzenleme Visual Studio
 summary: Kod projeleriyle çalışma, kod düzenleyicisi özelliklerini kullanma ve tutarlı kod stilini koruma hakkında bilgi öğrenin.
 metadata:
   title: Kod düzenleyicisi özellikleri
@@ -10,12 +10,12 @@ metadata:
   author: terryglee
   ms.author: tglee
   ms.date: 10/15/2019
-  ms.openlocfilehash: 4c5fd5efd2c3473698c488357bbc512e8e43e993
-  ms.sourcegitcommit: aeed3eb503d0b282537b073ebae8c028c4fef750
+  ms.openlocfilehash: 45e648730c3d93bf63ee395ea1c75e80519ab4930fddf0e58f2698067e95956d
+  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/15/2021
-  ms.locfileid: "114232888"
+  ms.lasthandoff: 08/12/2021
+  ms.locfileid: "121357849"
 landingContent:
 - title: Proje açma veya oluşturma
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
       url: ../get-started/tutorial-open-project-from-repo.md
   - linkListType: how-to-guide
     links:
-    - text: Proje Visual Studio çözüm olmadan çalışma
+    - text: Proje Visual Studio çözüm olmadan kaynak kullanma
       url: develop-code-in-visual-studio-without-projects-or-solutions.md
     - text: Arama Visual Studio kullanma
       url: visual-studio-search.md
@@ -55,7 +55,7 @@ landingContent:
     links:
     - text: Kullanmaya başlayın C# ve ASP.NET Core ile Visual Studio
       url: ../get-started/csharp/tutorial-aspnet-core.md
-    - text: Visual Studio'da C++ konsol uygulaması oluşturma
+    - text: Visual Studio'de C++ konsol uygulaması oluşturma
       url: /cpp/get-started/tutorial-console-cpp
     - text: Kullanmaya başlayın Python ile Visual Studio
       url: quickstart-python.md

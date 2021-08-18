@@ -1,6 +1,6 @@
 ---
-title: Profil Oluşturma Yöntemi Veri Görünümleri | Microsoft Docs
-description: Örnekleme yöntemi kullanılarak oluşturulan profil oluşturma veri dosyalarının görünümleri ve raporları hakkında bilgi alın.
+title: Profiler örnekleme yöntemi veri görünümleri | Microsoft Docs
+description: Örnekleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,47 +14,47 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fd480e36b0b80ae6baaaf1c27a850c5f2867338410163fe1c6e37ab7a7ed226
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4ae6d510c68a1e3ea8e9f2c0f66b9b5bac3071c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121315895"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131228"
 ---
-# <a name="profiler-sampling-method-data-views"></a>Profil oluşturma örnekleme yöntemi veri görünümleri
-Bu bölüm, örnekleme yöntemi kullanılarak oluşturulan profil oluşturma veri dosyalarının görünümleri ve raporları için başvuru bilgilerini içerir.
+# <a name="profiler-sampling-method-data-views"></a>Profiler örnekleme yöntemi veri görünümleri
+Bu bölüm, örnekleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri içerir.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012'daki gelişmiş güvenlik özellikleri, Visual Studio profil oluşturmanın bu platformlarda veri toplaması sırasında önemli değişiklikler gerektirmektedir. UWP uygulamaları için yeni koleksiyon teknikleri de gerekir. Uygulama [ve uygulama Windows 8 performans Windows Server 2012 bakın.](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)
+> Windows 8 ve Windows Server 2012 gelişmiş güvenlik özellikleri Visual Studio profiler 'ın bu platformlarda verileri topladıkları şekilde gerekli önemli değişikliklere sahiptir. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. bkz. [Windows 8 ve Windows Server 2012 uygulamalarda performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Özet görünümü](../profiling/summary-view-sampling-data.md)
 
- Örnekler toplanmışken en sık yürütülen işlevleri ve en bireysel işi gerçekleştiren işlevleri listeler.
+ Örnekler toplandığında en sık yürütülen işlevleri ve en bireysel çalışmayı gerçekleştiren işlevleri listeler.
 
-- [Çağrı Ağacı görünümü](../profiling/call-tree-view-sampling-data.md)
+- [Çağrı ağacı görünümü](../profiling/call-tree-view-sampling-data.md)
 
  Hiyerarşik bir ağaçtaki işlevlerin yürütme yollarını görüntüler.
 
 - [Modüller görünümü](../profiling/modules-view-sampling-data.md)
 
- Profil oluşturma verilerini modüle göre düzenleyebilir ve örnekler toplanmışken yürütülen işlevleri, kaynak kod satırlarını ve yönergeleri listeler.
+ Profil oluşturma verilerini modüle göre düzenler ve örnekler toplandığında yürütülen işlevleri, kaynak kodu satırlarını ve yönergeleri listeler.
 
-- [Çağıran / Çağrılı görünümü - Örnekleme Verileri](../profiling/caller-callee-view-sampling-data.md)
+- [Çağıran/çağrılan görünümü-örnekleme verileri](../profiling/caller-callee-view-sampling-data.md)
 
- Seçili bir işlev için profil oluşturma verilerini ve seçilen işlev tarafından çağrılarak çağrılan işlevleri görüntüler.
+ Seçili işlev için profil oluşturma verilerini ve seçilen işlev tarafından çağrılan ve çağrılan işlevleri görüntüler.
 
 - [İşlevler görünümü](../profiling/functions-view-sampling-data.md)
 
- Profil oluşturmayı işleve göre düzenleyebilir ve örnekler toplanmışken yürütülen işlevleri listeler.
+ Profil oluşturmayı işleve göre düzenler ve örnekler toplandığında yürütülen işlevleri listeler.
 
-- [Satırlar görünümü](../profiling/lines-view-sampling-data.md)
+- [Satırlar Görünümü](../profiling/lines-view-sampling-data.md)
 
- Örnekler toplanmışken yürütülen kaynak kod satırlarını listeler.
+ Örnekler toplandığında yürütülen kaynak kodu satırlarını listeler.
 
-- [Yönerge İşaretçileri (PS) görünümü](../profiling/instruction-pointers-ips-view-sampling-data.md)
+- [Yönerge Işaretçileri (IP) görünümü](../profiling/instruction-pointers-ips-view-sampling-data.md)
 
- Örnekler toplanmışken yürütülen kaynak kod satırlarını listeler.
+ Örnekler toplandığında yürütülen kaynak kodu satırlarını listeler.
 
 ## <a name="reference"></a>Başvuru
 - [İşlem görünümü](../profiling/process-view.md)
@@ -67,16 +67,16 @@ Bu bölüm, örnekleme yöntemi kullanılarak oluşturulan profil oluşturma ver
 
 - [İşlev Ayrıntıları görünümü](../profiling/function-details-view.md)
 
- Seçilen işlev ile seçilen işlev tarafından çağrılarak çağrılan işlevler arasındaki ilişkinin grafik grafiğini görüntüler.
+ Seçilen işlev ve seçilen işlev tarafından çağrılan ve çağrılan işlevler arasındaki ilişkinin grafik grafiğini görüntüler.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Ölçüm izleme yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)
+- [İzleme yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)
 
- Izleme yöntemi kullanılarak oluşturulan profil oluşturma veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
+ İzleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
 
-- [.NET bellek veri görünümleri](../profiling/dotnet-memory-data-views.md)
+- [.NET bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md)
 
- .NET bellek verilerini içeren profil oluşturma veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
+ .NET bellek verileri içeren profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Örnekleme veri değerlerini anlama](../profiling/understanding-sampling-data-values.md)

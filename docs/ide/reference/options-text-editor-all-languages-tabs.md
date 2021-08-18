@@ -44,19 +44,19 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: e3d984fe1c20ae5eb036a60e6e2b2e6db23890a72a633d33946463f0bcd61034
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c8a37f493f90ee8bbc6d36e9a5d4eb9de5d57ab3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121372341"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101017"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler
 
 Bu iletişim kutusu, Kod Düzenleyicisi'nin varsayılan davranışını değiştirmenizi sağlar. Bu ayarlar, HTML Tasarımcısı'nın Kaynak görünümü gibi Kod Düzenleyicisi'ni temel alan diğer düzenleyiciler için de geçerlidir. Bu seçenekleri görüntülemek için Araçlar **menüsünden** **Seçenekler'i** seçin. Metin Düzenleyici **klasöründe Tüm** Diller alt **klasörünü genişletin** ve sekmeler'i **seçin.**
 
 > [!CAUTION]
-> Bu sayfa, tüm geliştirme dilleri için varsayılan seçenekleri ayarlar. Bu iletişim kutusundaki bir seçeneğin sıfırlanması, tüm dillerdeki Sekme seçeneklerini burada seçilen seçeneklere sıfırlar. Yalnızca bir dil için Metin Düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörlerini genişletin ve seçenek sayfalarını seçin.
+> Bu sayfa tüm geliştirme dilleri için varsayılan seçenekleri ayarlar. Bu iletişim kutusundaki bir seçeneğin sıfırlanması, tüm dillerdeki Sekme seçeneklerini burada seçilen seçeneklere sıfırlar. Yalnızca bir dil için Metin Düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörlerini genişletin ve seçenek sayfalarını seçin.
 
 Belirli programlama dillerinin Sekme seçenekleri sayfalarında farklı ayarlar seçilirse, farklı Girintileme seçenekleri için "Tek tek metin biçimleri için girintileme ayarları çakışıyor" iletisi **görüntülenir.** ve "Tek tek metin biçimleri için sekme ayarları çakışıyor" iletisi, farklı Sekme seçenekleri **için** görüntülenir. Örneğin, bu anımsatıcı,  Visual Basic için Akıllı girintileme seçeneği Visual C++. 
 
@@ -92,7 +92,7 @@ Seçildiğinde, girintileme işlemleri SEKME karakterleri değil yalnızca boşl
 
 Sekmeleri izleyin
 
-Seçildiğinde, girintileme işlemleri mümkün olduğunca çok SEKME karakteri ekler. Her SEKME karakteri, Sekme boyutu'da belirtilen boşluk **sayısını doldurur.** Girinti **boyutu Sekme** boyutunun katları arasında **yer alamasa,** aradaki farkı doldurmak için boşluk karakterleri eklenir.
+Seçildiğinde, girintileme işlemleri mümkün olduğunca çok SEKME karakteri ekler. Her SEKME karakteri, Sekme boyutu'da belirtilen boşluk **sayısını doldurur.** Girinti **boyutu Sekme** boyutunun katları arasında yer **alamasa,** aradaki farkı doldurmak için boşluk karakterleri eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

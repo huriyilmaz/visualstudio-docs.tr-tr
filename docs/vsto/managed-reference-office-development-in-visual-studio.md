@@ -1,6 +1,6 @@
 ---
-title: Yönetilen başvuru (Visual Studio 'da Office geliştirme)
-description: .NET Framework hedefleyen Office projelerinde kullanılan ad alanları ve türler için API başvuru belgeleri hakkında bilgi edinin.
+title: yönetilen başvuru (Visual Studio Office geliştirme)
+description: .NET Framework hedefleyen Office projelerinde kullanılan ad alanları ve türler için apı başvuru belgeleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 08/14/2019
@@ -14,24 +14,25 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 9364b191886408e509aa09a83bde70ce8240707e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5452ea5990b4facb108deffe87870100ec17ca0c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958758"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032517"
 ---
-# <a name="managed-reference-office-development-in-visual-studio"></a>Yönetilen başvuru (Visual Studio 'da Office geliştirme)
-  Bu bölüm, veya ' i hedefleyen Office projelerinde kullanılan ad alanları ve türleri için API başvuru belgelerini içerir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](includes/net-v45-md.md)] . .NET Framework 3,5 ' i hedefleyen Office projelerinde kullanılan ad alanları ve türler hakkında API başvuru belgeleri için, Visual Studio belgelerindeki şu başvuru bölümüne bakın: [yönetilen başvuru (Visual Studio 'Da Office geliştirme)](managed-reference-office-development-in-visual-studio.md).
+# <a name="managed-reference-office-development-in-visual-studio"></a>yönetilen başvuru (Visual Studio Office geliştirme)
+  bu bölüm, veya öğesini hedefleyen Office projelerinde kullanılan ad alanları ve türleri için apı başvuru belgelerini içerir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](includes/net-v45-md.md)] . .NET Framework 3,5 ' i hedefleyen Office projelerinde kullanılan ad alanları ve türler hakkında apı başvuru belgeleri için Visual Studio belgelerindeki şu başvuru bölümüne bakın: [yönetilen başvuru (Visual Studio Office geliştirme)](managed-reference-office-development-in-visual-studio.md).
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
 ## <a name="in-this-section"></a>Bu bölümde
  <xref:Microsoft.Office.Tools>
 
- Office çözümlerini programlamak için ortak olan sınıfları içerir. Bunlar, VSTO eklentileri için temel sınıfı, VSTO eklentilerinde özel görev bölmeleri oluşturmaya yönelik sınıfları, Excel ve Word çözümlerinde Akıllı Etiketler oluşturmaya yönelik sınıfları ve belge düzeyi özelleştirmelerde eylem bölmeleri oluşturmaya yönelik sınıfları içerir.
+ Office çözümleri programlama için ortak olan sınıfları içerir. bunlara VSTO eklentiler, VSTO eklentilerde özel görev bölmeleri oluşturmaya yönelik sınıflar, Excel ve Word çözümlerinde akıllı etiketler oluşturma sınıfları ve belge düzeyi özelleştirmelerde eylem bölmeleri oluşturmak için sınıflar dahildir.
 
  <xref:Microsoft.Office.Tools.Excel>
 
@@ -39,11 +40,11 @@ ms.locfileid: "99958758"
 
  <xref:Microsoft.Office.Tools.Excel.Controls>
 
- Excel için çözümlerinde kullanılabilen Excel denetimlerini ve Windows Forms denetimlerini içerir.
+ Excel çözümlerinde kullanılabilecek Excel denetimleri ve Windows Forms denetimleri içerir.
 
  <xref:Microsoft.Office.Tools.Outlook>
 
- Özel form bölgeleri oluşturmak için kullanılan sınıflar da dahil olmak üzere, Outlook için VSTO eklentileri tarafından kullanılan sınıfları içerir.
+ özel form bölgeleri oluşturmak için kullanılan sınıflar da dahil olmak üzere, Outlook için VSTO eklentileri tarafından kullanılan sınıfları içerir.
 
  <xref:Microsoft.Office.Tools.Ribbon>
 
@@ -55,26 +56,26 @@ ms.locfileid: "99958758"
 
  <xref:Microsoft.Office.Tools.Word.Controls>
 
- Word için çözümlerinde kullanılabilecek Word denetimleri ve Windows Forms denetimleri içerir.
+ word için çözümlerinde kullanılabilecek word denetimleri ve Windows Forms denetimleri içerir.
 
  <xref:Microsoft.VisualStudio.Tools.Applications>
 
- <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>Sınıfı ve ilgili önbelleğe alınmış veri sınıfları kümesini içerir. Bu sınıflar, Microsoft Office yüklü olmayan bilgisayarlardaki belge düzeyi özelleştirmelerinin bazı yönlerini değiştirmek için kullanılabilir.
+ <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>Sınıfı ve ilgili önbelleğe alınmış veri sınıfları kümesini içerir. bu sınıflar, Microsoft Office yüklü olmayan bilgisayarlardaki belge düzeyi özelleştirmelerinin bazı yönlerini değiştirmek için kullanılabilir.
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Deployment>
 
- <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction>Arabirimi (bir Office çözümü için *dağıtım sonrası eylemi* oluşturmak için uygulayabileceğiniz), bir Office çözümü yüklenirken oluşturulabilecek özel durumlar ve Visual Studio altyapısının parçası olan diğer API 'leri içerir.
+ <xref:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction>bir Office çözümü için *dağıtım sonrası eylemi* oluşturmak üzere uygulayabileceğiniz arabirimi içerir. bir Office çözümü yüklenirken oluşturulabilecek özel durumlar ve Visual Studio altyapısının parçası olan diğer apı 'ler.
 
  <xref:Microsoft.VisualStudio.Tools.Applications.Runtime>
 
- , [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)] Belge düzeyi özelleştirmelerde ve Visual Studio altyapısının parçası olan diğer API 'lerde verileri önbelleğe almak için kullanılabilen birkaç sınıf tarafından oluşturulabilecek özel durumların çoğunu içerir.
+ [!INCLUDE[vsto_runtime](includes/vsto-runtime-md.md)]belge düzeyi özelleştirmelerde ve Visual Studio altyapısının parçası olan diğer apı 'lerde verileri önbelleğe almak için kullanılabilen birkaç sınıf tarafından oluşturulabilecek özel durumların çoğunu içerir.
 
  <xref:Microsoft.VisualStudio.Tools.Office.BuildTasks>
 
- Office projeleri oluşturmak için kullanılan MSBuild görev sınıflarını içerir.
+ Office projelerini derlemek için kullanılan MSBuild görev sınıflarını içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çalışma zamanına genel bakış için Visual Studio Araçları](visual-studio-tools-for-office-runtime-overview.md)
-- [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](getting-started-office-development-in-visual-studio.md)
+- [Office çalışma zamanına genel bakış için Visual Studio araçları](visual-studio-tools-for-office-runtime-overview.md)
+- [Visual Studio &#40;Office geliştirmeye başlayın&#41;](getting-started-office-development-in-visual-studio.md)
 - [Office geliştirme örnekleri ve izlenecek yollar](office-development-samples-and-walkthroughs.md)
 - [Office çözümleri tasarlama ve oluşturma](designing-and-creating-office-solutions.md)

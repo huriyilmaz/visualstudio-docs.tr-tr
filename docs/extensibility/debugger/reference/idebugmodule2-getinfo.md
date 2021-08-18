@@ -18,12 +18,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 097baf7dded21c72d6e5a3a0807319e397c19f9e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: b353ff5f219364ef63a36bea9d52323051a4cf62e0beccaf702555b4ec6f8b53
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122043329"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121433508"
 ---
 # <a name="idebugmodule2getinfo"></a>IDebugModule2::GetInfo
 Bu modülle ilgili bilgileri alır.

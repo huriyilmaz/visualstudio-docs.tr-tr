@@ -11,14 +11,15 @@ ms.assetid: 062e4b5a-9c4d-4703-88da-ec13102c2b66
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 979825cd3e62c97334d55676b3bf32bf874f8445
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8f6f03339758ac3496f961313593c0b663fab30f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147606"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066215"
 ---
 # <a name="idiasessionsymbolbyid"></a>IDiaSession::symbolById
 Bir sembolü benzersiz tanımlayıcısına göre alır.

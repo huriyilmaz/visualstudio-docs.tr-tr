@@ -13,15 +13,16 @@ ms.assetid: 4314a404-2120-425b-be42-180cd4bac840
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 412b40fdb38e4931bcefb05bde8d695955d6c05a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cacb5e6a30c0406ee0b3c0738bea94f5a5ea51d773aa3da3b66e78c00ed50e47
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879742"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121354638"
 ---
 # <a name="modules-view"></a>Modüller Görünümü
 Modüller görünümü profil oluşturma verilerinin modüllerini listeler. Her modül, hiyerarşik bir ağacın kök düğümüdür. Modülün profili oluşturulan işlevleri modül düğümünün altında listelenir. Profil oluşturma verileri örnekleme yöntemi kullanılarak toplandıysa, satır bilgileri işlev düğümünün altında listelenir ve yönerge işaretçisi verileri satır düğümünün altında listelenir.

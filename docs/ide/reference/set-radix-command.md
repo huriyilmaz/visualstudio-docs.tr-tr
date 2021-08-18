@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: f693391cea9ccb17a5e5427d7508424c05c3d457
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: cccc39371ce07d0b3ee93ec422d29ee4381602e27e17ba690167a18d7bb9cb3a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122048745"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121356978"
 ---
 # <a name="set-radix-command"></a>Sayı Tabanını Ayarla Komutu
 Tamsayı değerlerini görüntülemek için kullanılan sayısal tabanı ayarlar veya döndürür.

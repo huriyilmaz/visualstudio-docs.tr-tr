@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 62303e762206762a1351a2ea267860df4152b319ddf910d2fe866def0712c90a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0cdcee9a763a7354ceca6821796f455a1a878aa3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121315336"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100458"
 ---
 # <a name="call-into-the-sharepoint-object-models"></a>SharePoint nesne modellerine çağrı
   Visual Studio SharePoint araçları için uzantılar oluşturduğunuzda, belirli görevleri gerçekleştirmek için SharePoint apı 'leri çağırmanız gerekebilir. örneğin, SharePoint projeleri için özel bir dağıtım adımı oluşturursanız, çözümleri dağıtmak üzere bazı görevleri gerçekleştirmek için SharePoint apı 'leri çağırmanız gerekebilir.

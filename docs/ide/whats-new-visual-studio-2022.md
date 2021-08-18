@@ -14,12 +14,12 @@ ms.prod: visual-studio-dev17
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 71b2915914cf2d34c7e34c861a964285a9a602bc9a9c2e99db803bf8e69c6e31
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 90e59cb5f09c78df02a166b817e1a3fa5642bda6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121444445"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048251"
 ---
 # <a name="whats-new-in-visual-studio-2022-preview"></a>Visual Studio 2022 'de (Önizleme) yapılan yeniler
 

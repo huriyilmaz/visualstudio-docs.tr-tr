@@ -14,12 +14,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 92d73f446b3c74d491ca375d10d0ef701a104e530e9bbcd7cd7159322e9dbc42
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5de9832fff0ee49b807dce73efe41274d0d3e128
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121368259"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131306"
 ---
 # <a name="instrumentation-method-data-views"></a>İzleme yöntemi veri görünümleri
 Bu bölüm, izleme yöntemi kullanılarak oluşturulan profil oluşturucu veri dosyalarının görünümleri ve raporları için başvuru bilgileri içerir.

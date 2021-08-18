@@ -15,15 +15,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a95473b7216bffec573ce46b0751c0a222f880b3cbee801cbe406a81d7948a5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f329e2b3849bc9d74ac7454c40c789df7631a342
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121333827"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131969"
 ---
 # <a name="average-cpu-utilization"></a>Ortalama CPU kullanımı
-Profili yapılan sürecin, işlem süresince sistemin mantıksal çekirdeklerinin ortalama kullanımını gösterir. Grafik belirli bir zamanda hangi çekirdeğin etkin olduğunu göstermez. Örneğin, her biri bir süre için %50 kapasitede çalışan iki çekirdek varsa, bu görünümde bir mantıksal çekirdek kullanılır.
+Profili yapılan sürecin, işlem süresince sistemin mantıksal çekirdeklerinin ortalama kullanımını gösterir. Grafik belirli bir zamanda hangi çekirdeğin etkin olduğunu göstermez. Örneğin, her biri bir zaman dönemi için %50 kapasitede çalışan iki çekirdek varsa, bu görünümde bir mantıksal çekirdek kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çekirdekler Görünümü](../profiling/cores-view.md)

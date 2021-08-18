@@ -1,6 +1,6 @@
 ---
 title: Parameter öğesi | Microsoft Docs
-description: Bir UsingTask TaskFactory tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi içeren MSBuild parametre öğesi hakkında bilgi edinin.
+description: bir usingtask taskfactory tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi içeren MSBuild Parameter öğesi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
@@ -17,14 +17,15 @@ ms.assetid: b273afff-b500-4e97-8cfd-31f39fa64a51
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 728618a6d9ff174d4d4bf7cdc20516433d06036b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d408158d203d62c562073d188dc0a5319b964738
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918861"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100744"
 ---
 # <a name="parameter-element"></a>Parameter öğesi
 
@@ -85,4 +86,4 @@ Tarafından oluşturulan bir görev için belirli bir parametre hakkında bilgi 
 
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

@@ -23,12 +23,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: cb0b8a016d6d2a48497fe12d73e64d18f0e32b8550c26c0bc4168ef63547f0e9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5d75b44792647212aeeb027259dc0cc97ab4aa97
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121365997"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032400"
 ---
 # <a name="office-development-samples-and-walkthroughs"></a>Office geliştirme örnekleri ve izlenecek yollar
   bu bölüm örnek uygulamalar, örnek kod ve Microsoft Office çözümleri oluşturmak için kullanılan sözdizimi, yapı ve teknikleri gösteren adım adım yönergeler içerir.

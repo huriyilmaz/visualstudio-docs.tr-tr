@@ -14,12 +14,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: b3134ab644ec378c5c2869c5eb35a40c119e48dabb210a0dbf552c04d51eb8ba
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0100ea9f882a95279dadba0dc06e5feb20d7de9d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121395219"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047471"
 ---
 # <a name="how-to-create-a-web-performance-test-plug-in"></a>Nasıl: Web performans testi eklentisi oluşturma
 
@@ -95,7 +95,7 @@ Web performans testleri üzerinde daha yüksek bir denetim düzeyi elde etmek i�
 17. Seçili **eklentinin Özellikler bölmesinde,** eklentinin çalışma zamanında kullanmak üzere başlangıç değerlerini ayarlayın.
 
     > [!NOTE]
-    > Eklentilerinizin istediğiniz sayıda özelliği ortaya çıkarabilirsiniz; yalnızca bunları public, settable ve Integer, Boole veya String gibi bir temel türe göre ayarlayın. Daha sonra web performans testi eklenti özelliklerini değiştirmek için aşağıdaki Özellikler penceresi.
+    > Eklentilerinizin istediğiniz sayıda özelliği ortaya çıkarabilirsiniz; yalnızca bunları public, settable ve Integer, Boole veya String gibi bir temel türe göre ayarlayın. Daha sonra web performans testi eklenti özelliklerini daha sonra aşağıdaki Özellikler penceresi.
 
 18. **Tamam'ı seçin.**
 

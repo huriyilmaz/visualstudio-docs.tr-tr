@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 90a76b448fa4670e87baee821102734391f120415a29ec66f1d021aeb70f0f78
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 75375db0abfd49e62d209c7ba7fd8139862d3553
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121429192"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132086"
 ---
 # <a name="list-modules-command"></a>Modülleri Listele Komutu
 Geçerli işlem için modülleri listeler.

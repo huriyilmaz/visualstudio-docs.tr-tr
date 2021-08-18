@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dcc91c8f7b9fa5cc33d9368d377c2a002b55107
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 84177dd5f6890e162c69de8ecbb883e5d933c028d39e13785575c97db8ec2ad5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122157793"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121429218"
 ---
 # <a name="immediate-window"></a>Komut penceresi
 
@@ -36,7 +36,7 @@ Anında **pencere** IntelliSense'i destekler.
 
 ## <a name="display-the-values-of-variables"></a>Değişkenlerin değerlerini görüntüleme
 
-Hemen **penceresi,** özellikle bir uygulamada hata ayıklarken kullanışlıdır. Örneğin değişkeninin değerini kontrol etmek için `varA` Print komutunu [kullanabilirsiniz:](../../ide/reference/print-command.md)
+Hemen **penceresi,** özellikle bir uygulamada hata ayıklarken kullanışlıdır. Örneğin değişkeninin değerini kontrol etmek için `varA` Yazdır komutunu [kullanabilirsiniz:](../../ide/reference/print-command.md)
 
 ```cmd
 >Debug.Print varA
@@ -51,7 +51,7 @@ Soru işareti (?) için bir diğer `Debug.Print` addır, bu nedenle bu komut da 
 Bu komutun her iki sürümü de değişkeninin değerini `varA` verir.
 
 > [!TIP]
-> Hemen penceresinde Visual Studio komutu yapmak **için** komutun başında işaretinden büyük bir işareti (>). Birden çok komut girmek için komutuna [Komut penceresi.](command-window.md)
+> Hemen penceresinde Visual Studio bir komut **yapmak** için komutun başında büyüktür işareti (>). Birden çok komut girmek için komutuna [Komut penceresi.](command-window.md)
 
 ## <a name="design-time-expression-evaluation"></a>Tasarım zamanı ifadesi değerlendirmesi
 
@@ -75,7 +75,7 @@ Tasarım zamanında bir **işlev** veya alt yol yürütmek için Hemen penceresi
    End Module
    ```
 
-2. Hata **Ayıkla menüsünde** Anında seçeneğini **Windows**  >  **seçin.**
+2. Hata **Ayıkla menüsünde** Hemen'i **Windows**  >  **seçin.**
 
 3. Hemen `?MyFunction(2)` penceresine **yazın** ve Enter tuşuna **basın.**
 
@@ -83,11 +83,11 @@ Tasarım zamanında bir **işlev** veya alt yol yürütmek için Hemen penceresi
 
 İşlev veya alt yol bir kesme noktası içeriyorsa, Visual Studio noktada yürütmeyi sonlar. Ardından hata ayıklayıcı pencerelerini kullanarak program durumuna bakabilirsiniz. Daha fazla bilgi için [bkz. Adım adım kılavuz: Tasarım Zamanında Hata Ayıklama.](../../debugger/walkthrough-debugging-at-design-time.md)
 
-Tasarım zamanı ifadesi değerlendirmesini, Office için Visual Studio Araçları projeleri, web projeleri, Akıllı Cihaz projeleri ve SQL yürütme ortamı başlatmayı gerektiren proje türlerinde SQL kullanabilirsiniz.
+Tasarım zamanı ifadesi değerlendirmesini, Office için Visual Studio Araçları projeleri, web projeleri, Akıllı Cihaz projeleri ve SQL gibi yürütme ortamı başlatmayı gerektiren proje türlerinde SQL kullanabilirsiniz.
 
 ### <a name="design-time-expression-evaluation-in-multi-project-solutions"></a>Çok projeli çözümlerde tasarım zamanı ifadesi değerlendirmesi
 
-Tasarım zamanı ifadesi değerlendirmesi için bağlam kurulurken, Visual Studio içinde seçili olan projeye Çözüm Gezgini. Herhangi bir proje seçili Çözüm Gezgini, Visual Studio başlangıç projesine göre değerlendirmeye çalışır. İşlev geçerli bağlamda değerlendirilenene kadar bir hata iletisi alırsınız. Çözüm için başlangıç projesi değil bir proje içinde bir işlevi değerlendirmeye çalışıyorsanız ve bir hata alırsanız, Çözüm Gezgini projesinde projeyi seçmeyi deneyin ve değerlendirmeyi yeniden deneyin.
+Tasarım zamanı ifadesi değerlendirmesi için bağlam kurulurken, Visual Studio içinde seçili olan projeye Çözüm Gezgini. Herhangi bir proje seçili Çözüm Gezgini, Visual Studio başlangıç projesine göre değerlendirmeye çalışır. İşlev geçerli bağlamda değerlendirilenene kadar bir hata iletisi alırsınız. Çözüm için başlangıç projesi değil bir proje içinde bir işlevi değerlendirmeye çalışıyorsanız ve bir hata alırsanız, Çözüm Gezgini projesini seçmeyi deneyin ve değerlendirmeyi yeniden deneyin.
 
 ## <a name="enter-commands"></a>Komutları girme
 
@@ -96,13 +96,13 @@ Hemen penceresinde komutlar > büyüktür (Visual Studio) **girin.** Daha önce 
 |Görev|Çözüm|Örnek|
 |----------|--------------|-------------|
 |Bir ifadeyi değerlendirme.|İfadenin başında soru işareti (?).|`? a+b`|
-|Anlık moddayken Komut modunu geçici olarak girin (tek bir komut yürütmek için).|Komutunu girin ve büyüktür işaretiyle önceden yazın (>).|`>alias`|
+|Anlık moddayken Komut modunu geçici olarak girin (tek bir komut yürütmek için).|Komutunu girin ve büyük bir işaretiyle önceden yazın (>).|`>alias`|
 |Anahtara Komut penceresi.|Pencereye girin ve büyüktür işaretiyle önceden `cmd` >.|`>cmd`|
 |Hemen penceresine geri dönebilirsiniz.|Pencereye `immed` büyüktür işareti olmadan girin (>).|`immed`|
 
 ## <a name="mark-mode"></a>İşaret modu
 
-Hemen penceresinde önceki satırlardan herhangi bir **satıra tıklarken** otomatik olarak İşaret moduna geçersiniz. Bu sayede herhangi bir metin düzenleyicisinde olduğu gibi önceki komutların metnini seçip düzenleyebilir ve kopyalayıp geçerli satıra yapıştırabilirsiniz.
+Anında penceresinde önceki satırlardan herhangi bir **satıra tıklarken** otomatik olarak İşaret moduna geçersiniz. Bu sayede herhangi bir metin düzenleyicisinde olduğu gibi önceki komutların metnini seçip düzenleyebilir ve kopyalayıp geçerli satıra yapıştırabilirsiniz.
 
 ## <a name="examples"></a>Örnekler
 

@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla çalışma sayfaları seçme'
-description: Çalışma sayfası konak öğesi veya Excel çalışma kitabının sayfalar koleksiyonuyla Microsoft Excel çalışma sayfalarını programlı bir şekilde seçmek için Visual Studio 'Yu kullanın.
+description: çalışma sayfası konak öğesi veya Excel çalışma kitabının sayfalar koleksiyonuyla Microsoft Excel çalışma sayfalarını program aracılığıyla seçmek için Visual Studio kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,21 +13,22 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 04f410292fff686e7604e917e6c3fa7002c65273
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 82d74fff713741208981278474b295c17975a639
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826258"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032738"
 ---
 # <a name="how-to-programmatically-select-worksheets"></a>Nasıl yapılır: program aracılığıyla çalışma sayfaları seçme
   <xref:Microsoft.Office.Tools.Excel.Worksheet.Select%2A>Yöntemi, kullanıcının seçimini yeni nesneye taşırken belirtilen nesneyi seçer. <xref:Microsoft.Office.Tools.Excel.Worksheet.Activate%2A>Kullanıcının seçimini değiştirmeden nesneye odağı getirmek istiyorsanız yöntemini kullanın.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- Bir VSTO eklentisinin içinde varolan bir çalışma sayfası seçmek istiyorsanız veya çalışma sayfası belge düzeyi özelleştirmesinde çalışma zamanında oluşturulduysa, <xref:Microsoft.Office.Interop.Excel.Sheets> Excel çalışma kitabının Excel koleksiyonunu kullanarak erişmeniz gerekir; Aksi takdirde, <xref:Microsoft.Office.Tools.Excel.Worksheet> ana bilgisayar öğesine doğrudan erişebilirsiniz.
+ bir VSTO eklentisi içinde var olan bir çalışma sayfası seçmek istiyorsanız veya çalışma sayfası bir belge düzeyi özelleştirmesindeki çalışma zamanında oluşturulduysa, Excel çalışma kitabının Excel koleksiyonunu kullanarak buna erişmeniz gerekir <xref:Microsoft.Office.Interop.Excel.Sheets> ; aksi takdirde, <xref:Microsoft.Office.Tools.Excel.Worksheet> ana bilgisayar öğesine doğrudan erişebilirsiniz.
 
 ## <a name="use-the-worksheet-host-item"></a>Çalışma sayfası konak öğesini kullan
  Belge düzeyi özelleştirmesinde, *Sheet1. vb* veya *Sayfa1. cs*' ye aşağıdaki kodu ekleyin.
@@ -56,7 +57,7 @@ ms.locfileid: "107826258"
 - [Nasıl yapılır: program aracılığıyla çalışma sayfalarını gizleme](../vsto/how-to-programmatically-hide-worksheets.md)
 - [Nasıl yapılır: program aracılığıyla çalışma sayfalarını koruma](../vsto/how-to-programmatically-protect-worksheets.md)
 - [Çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md)
-- [Office Projelerindeki Nesnelere Genel erişim](../vsto/global-access-to-objects-in-office-projects.md)
+- [Office projelerindeki nesnelere genel erişim](../vsto/global-access-to-objects-in-office-projects.md)
 - [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)

@@ -15,16 +15,16 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d65fcf4097069c48061f45d26293178cab2f379
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 3215adc8cbefc4fb9e15b3f0c3876a6fe14acddc272f3ef059fabcd816967b37
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122150995"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121356939"
 ---
 # <a name="settings-page-project-designer"></a>Ayarlar sayfası, Project Tasarımcısı
 
-Projenin **Ayarlar** ayarlarını belirtmek için Project Tasarımcısı'nın Project sayfasını kullanın. Uygulama ayarları, uygulamanıza ilişkin özellik ayarlarını ve diğer bilgileri dinamik olarak depolamanızı ve alamanızı sağlar. Ayrıca istemci bilgisayarda özel uygulama ve kullanıcı tercihlerini korumanızı sağlar. Daha fazla bilgi için [bkz. Uygulama ayarlarını yönetme.](../managing-application-settings-dotnet.md)
+Projenin **Ayarlar** ayarlarını belirtmek için Project Tasarımcısı'nın Project sayfasını kullanın. Uygulama ayarları, uygulamanıza ilişkin özellik ayarlarını ve diğer bilgileri dinamik olarak depolamanızı ve alamanızı sağlar. Ayrıca, istemci bilgisayarda özel uygulama ve kullanıcı tercihlerini korumanızı sağlar. Daha fazla bilgi için [bkz. Uygulama ayarlarını yönetme.](../managing-application-settings-dotnet.md)
 
 Giriş sayfasına **Ayarlar** için, Çözüm Gezgini'de bir **proje düğümü seçin** ve ardından Özellikler'Project   >  **seçin.** Project Tasarımcısı görüntülendiğinde, **Ayarlar** sekmesini seçin.
 
@@ -42,19 +42,19 @@ Ayarlar sayfasının üst **Ayarlar** denetimler vardır:
 
 **Kodu Görüntüle**
 
-C# projeleri için Kodu **Görüntüle** düğmesi, kodu *Ayarlar.cs dosyasında görüntülemeyi* sağlar. Bu dosya, `Settings` nesnede belirli olayları işlemeye olanak sağlayan sınıfını `Settings` tanımlar. Kullanıcı ayarlarını kalıcı Visual Basic için bu sarmalayıcı sınıfının yöntemini açıkça çağırmalı ve diğer dillerde `Save` çağırabilirsiniz. Bunu genellikle ana formun **Kapanış** olayı işleyicisinde yaparsiniz. Aşağıda, yöntemine yapılan çağrının bir örneği `Save` ve bir örneği vetir:
+C# projeleri için Kodu **Görüntüle düğmesi,** kodu *Ayarlar.cs* dosyasında görüntülemeyi sağlar. Bu dosya, `Settings` nesnede belirli olayları işlemeye olanak sağlayan sınıfını `Settings` tanımlar. Kullanıcı ayarlarını kalıcı Visual Basic için bu sarmalayıcı sınıfının yöntemini açıkça çağırmalı ve diğer dillerde `Save` çağırabilirsiniz. Bunu genellikle ana formun **Kapanış** olayı işleyicisinde yaparsiniz. Aşağıda, yöntemine yapılan çağrının bir örneği `Save` ve bir örneği vetir:
 
 ```csharp
 Properties.Settings.Default.Save();
 ```
 
-Daha Visual Basic için Kodu **Görüntüle** düğmesi, *kodu Ayarlar.vb* dosyasında görüntülemeyi sağlar. Bu dosya, `MySettings` nesnede belirli olayları işlemeye olanak sağlayan sınıfını `My.Settings` tanımlar. nesnesini kullanarak uygulama ayarlarına erişme hakkında daha fazla bilgi `My.Settings` için [bkz. Uygulama ayarlarına erişme.](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)
+Daha Visual Basic için Kodu **Görüntüle düğmesi,** kodu *Ayarlar.vb dosyasında görüntülemeyi* sağlar. Bu dosya, `MySettings` nesnede belirli olayları işlemeye olanak sağlayan sınıfını `My.Settings` tanımlar. nesnesini kullanarak uygulama ayarlarına erişme hakkında daha fazla bilgi `My.Settings` için [bkz. Uygulama ayarlarına erişme.](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings)
 
 Uygulama ayarlarına erişme hakkında daha fazla bilgi için [bkz. Windows Forms için uygulama ayarları.](/dotnet/framework/winforms/advanced/application-settings-for-windows-forms)
 
 **Erişim değiştiricisi**
 
-Erişim **değiştirici düğmesi,** Visual Studio tarafından oluşturulan yardımcı sınıfların `Properties.Settings` (C# içinde) veya `My.Settings` (Visual Basic) erişim *Ayarlar. Designer.cs* veya *Ayarlar. Designer.vb*.
+Erişim **değiştirici düğmesi,** Visual Studio tarafından oluşturulan yardımcı sınıfların `Properties.Settings` `My.Settings` (C#' içinde) veya (Visual Basic) erişim *Ayarlar. Designer.cs* veya *Ayarlar. Designer.vb*.
 
 Visual C# projeleri için erişim değiştiricisi İç veya **Genel** **olabilir.**
 

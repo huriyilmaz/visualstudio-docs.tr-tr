@@ -1,6 +1,6 @@
 ---
-title: apı başvurusu (SharePoint araçları genişletilebilirliği) | Microsoft Docs
-description: Visual Studio SharePoint araçlarını genişletmek için apı başvuru belgelerini inceleyin. Microsoft. VisualStudio gibi ilgili ad alanlarının listesini görüntüleyin. SharePoint.
+title: API Başvurusu (SharePoint Araçları Genişletilebilirliği) | Microsoft Docs
+description: Api başvuru belgelerini gözden geçirerek SharePoint araçları Visual Studio. Microsoft.VisualStudio gibi ilgili ad alanlarının listesine bakın. SharePoint.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -22,58 +22,58 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/12/2021
 ms.locfileid: "121353195"
 ---
-# <a name="api-reference-sharepoint-tools-extensibility"></a>apı başvurusu (SharePoint araçları genişletilebilirliği)
-  bu bölüm, Visual Studio SharePoint araçlarını genişletmek için apı başvuru belgelerini içerir.
+# <a name="api-reference-sharepoint-tools-extensibility"></a>API başvurusu (SharePoint araçları genişletilebilirliği)
+  Bu bölüm, SharePoint'daki uygulama araçlarını genişletmeye Visual Studio.
 
 ## <a name="in-this-section"></a>Bu bölümde
  <xref:Microsoft.VisualStudio.SharePoint>
 
- SharePoint proje sistemini genişletmek için kullandığınız türleri içerir. örneğin, yerleşik SharePoint projelerini ve proje öğelerini genişletebilir veya kendi proje öğelerinizi oluşturabilirsiniz.
+ Proje sistemini genişletmek için SharePoint içerir. Örneğin, yerleşik proje ve SharePoint genişletebilirsiniz veya kendi proje öğelerinizi oluşturabilirsiniz.
 
  <xref:Microsoft.VisualStudio.SharePoint.Commands>
 
- özel *SharePoint komutları* oluşturmak için kullanabileceğiniz türleri içerir. SharePoint komutu, bir SharePoint araçları uzantısından SharePoint server nesne modeline çağıran bir yöntemdir.
+ özel komutlarını oluşturmak için kullanabileceğiniz *türleri SharePoint içerir.* SharePoint komutu, bir SharePoint araçları uzantısından SharePoint sunucu nesne modeline çağrı SharePoint yöntemidir.
 
  <xref:Microsoft.VisualStudio.SharePoint.Deployment>
 
- SharePoint projelerine yönelik dağıtım sürecini genişletmek için kullandığınız türleri içerir.
+ Projelerde dağıtım işlemini genişletmek için kullanabileceğiniz SharePoint içerir.
 
  <xref:Microsoft.VisualStudio.SharePoint.Explorer>
 
- **Sunucu Gezgini** veya kendi düğüm türlerinizi tanımlamak için SharePoint düğümleri genişletmek için kullandığınız türleri içerir.
+ Sunucu Gezgini veya kendi SharePoint tanımlamak **için** Sunucu Gezgini düğümleri genişletmek için kullanılan türleri içerir.
 
  <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions>
 
- bir liste, alan veya içerik türünü temsil eden bir düğüm gibi, bir SharePoint sitesindeki tek tek bileşenleri temsil eden yerleşik **Sunucu Gezgini** düğümleri hakkında bilgi almak için kullanabileceğiniz türleri içerir.
+ Bir SharePoint sitesinde tek tek bileşenleri temsil  eden yerleşik Sunucu Gezgini düğümler (liste, alan veya içerik türünü temsil eden bir düğüm gibi) hakkında bilgi almak için kullanabileceğiniz türleri içerir.
 
  <xref:Microsoft.VisualStudio.SharePoint.Features>
 
- SharePoint projesindeki bir özelliğin tanımına erişmek için kullandığınız türleri içerir.
+ Bir SharePoint projesinde bir özelliğin tanımına erişmek için SharePoint içerir.
 
  <xref:Microsoft.VisualStudio.SharePoint.Packages>
 
- SharePoint projesindeki paket tanımına erişmek için kullandığınız türleri içerir.
+ Bir SharePoint projesinde paket tanımına erişmek için SharePoint içerir.
 
  <xref:Microsoft.VisualStudio.SharePoint.Remote.Authentication>
 
- uzak SharePoint sitelerine dağıtılan SharePoint yönelik uygulamalarla kimlik doğrulamak ve iletişim kurmak için kullandığınız türleri içerir.
+ Uzak sitelere dağıtılan uygulamalar için kimlik doğrulaması ve SharePoint için kullanılan türleri SharePoint içerir.
 
  <xref:Microsoft.VisualStudio.SharePoint.Remote.Commands>
 
- uzak SharePoint sitelerine dağıtılan SharePoint uygulamalar ile kullanılan SharePoint uzak komutları oluşturmak için kullandığınız türleri içerir.
+ Uzak komutlar oluşturmak için SharePoint türleri içerir. Bu komutlar, uzak SharePoint sitelere dağıtılan uygulamalarla SharePoint kullanılır.
 
  <xref:Microsoft.VisualStudio.SharePoint.Tasks>
 
- Visual Studio, SharePoint projeleri, Office uygulamaları ve SharePoint için uygulamalar için derleme görevleri olarak kullanılan türleri içerir. bu apı Office ve SharePoint altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.
+ Projeleri paketlemek Visual Studio hata ayıklamak için derleme görevleri olarak SharePoint, Office uygulamaları ve SharePoint. Bu API, Office ve SharePoint altyapısını destekler ve doğrudan kodunuzdan kullanılmak üzere amaçlanan bir api değil.
 
  <xref:Microsoft.VisualStudio.SharePoint.Validation>
 
- bir SharePoint projesi için özellik ve paket doğrulama davranışını özelleştirmek üzere kullandığınız türleri içerir.
+ Bir proje için özellik ve paket doğrulama davranışını özelleştirmek için SharePoint içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [başvuru &#40;SharePoint araçları genişletilebilirliği&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
+- [Başvuru &#40;SharePoint araçları genişletilebilirliği&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
 - [SharePoint araçları uzantılarının programlama modeline genel bakış](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
 - [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md)
-- [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
-- [paketleme ve dağıtım SharePoint uzat](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
-- [SharePoint nesne modellerine çağrı](../sharepoint/calling-into-the-sharepoint-object-models.md)
+- [Kümedeki SharePoint düğümünü Sunucu Gezgini](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [Paketleme SharePoint dağıtımı genişletme](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
+- [Nesne modellerini SharePoint çağırma](../sharepoint/calling-into-the-sharepoint-object-models.md)

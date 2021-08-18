@@ -13,12 +13,12 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 702e83e487f6d2bbfbb85d8026476ff1c3db9cbfccbbf7f6b431f0ea93b0f1ed
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 64c125736abd67b37cf84e2b67b6b54a863032b3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121315115"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100393"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>64 bitlik bir işlem olarak birim testi çalıştırma
 
@@ -41,7 +41,7 @@ ms.locfileid: "121315115"
    Yeni Visual Studio Test'i ve **ardından** **AnyCPU projeleri için İşlemci Mimarisi'ne tıklayın.** Testleri **64** bit işlem olarak çalıştırmak için x64'ü seçin.
    ::: moniker-end
    ::: moniker range="vs-2017"
-   İlkeler Visual Studio Test'i seçin, ardından **Test** Ayarlar ve ardından İşlemci **Mimarisi'ne tıklayın.** Testleri **64** bit işlem olarak çalıştırmak için x64'ü seçin.
+   Yeni Visual Studio, **Test'i** ve ardından **Test** Ayarlar ve ardından İşlemci **Mimarisi'ne tıklayın.** Testleri **64** bit işlem olarak çalıştırmak için x64'ü seçin.
    ::: moniker-end
 
    \- veya -

@@ -26,14 +26,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: a902e85f8c53aa7a3d1ebe3b6480a7c68fa60601
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: a9df9bebf1ff731b20f4a5673b3450e5ccc0c10a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827909"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122100211"
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>Nasıl yapılır: Word belgelerine Içerik denetimleri ekleme
   Belge düzeyi Word projelerinde, tasarım zamanında veya çalışma zamanında projenizdeki belgeye içerik denetimleri ekleyebilirsiniz. Word VSTO eklenti projelerinde, çalışma zamanında herhangi bir açık belgeye içerik denetimleri ekleyebilirsiniz.
@@ -46,7 +47,7 @@ ms.locfileid: "107827909"
 
 - [Belge düzeyindeki bir projede çalışma zamanında içerik denetimleri ekleme](#runtimedoclevel)
 
-- [VSTO eklenti projesindeki çalışma zamanında içerik denetimleri ekleme](#runtimeaddin)
+- [VSTO eklentisi projesindeki çalışma zamanında içerik denetimleri ekleme](#runtimeaddin)
 
   İçerik denetimleri hakkında daha fazla bilgi için bkz. [içerik denetimleri](../vsto/content-controls.md).
 
@@ -83,7 +84,7 @@ ms.locfileid: "107827909"
 > <xref:Microsoft.Office.Tools.Word.GroupContentControl> **Araç kutusunu** kullanarak bir ekleyemezsiniz. Yalnızca bir <xref:Microsoft.Office.Tools.Word.GroupContentControl> kelime veya çalışma zamanında ekleyebilirsiniz.
 
 > [!NOTE]
-> Visual Studio, araç kutusunda onay kutusu içerik denetimi sağlamaz. Belgeye bir onay kutusu içerik denetimi eklemek için <xref:Microsoft.Office.Tools.Word.ContentControl> Program aracılığıyla bir nesne oluşturmanız gerekir. Daha fazla bilgi için bkz. [içerik denetimleri](../vsto/content-controls.md).
+> Visual Studio araç kutusunda onay kutusu içerik denetimi sağlamaz. Belgeye bir onay kutusu içerik denetimi eklemek için <xref:Microsoft.Office.Tools.Word.ContentControl> Program aracılığıyla bir nesne oluşturmanız gerekir. Daha fazla bilgi için bkz. [içerik denetimleri](../vsto/content-controls.md).
 
 #### <a name="to-add-a-content-control-to-a-document-in-word"></a>Word 'de belgeye içerik denetimi eklemek için
 
@@ -105,7 +106,7 @@ ms.locfileid: "107827909"
 
 - Belgedeki yerel içerik denetimini temel alan bir denetim ekleyin.
 
-  Belge kapatıldığında dinamik olarak oluşturulan içerik denetimleri belgede kalıcı olmaz. Ancak, yerel içerik denetimi belgede kalır. Belgenin bir sonraki açılışında yerel içerik denetimine dayalı bir içerik denetimini yeniden oluşturabilirsiniz. Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
+  Belge kapatıldığında dinamik olarak oluşturulan içerik denetimleri belgede kalıcı olmaz. Ancak, yerel içerik denetimi belgede kalır. Belgenin bir sonraki açılışında yerel içerik denetimine dayalı bir içerik denetimini yeniden oluşturabilirsiniz. daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
 > [!NOTE]
 > Word 2010 projesindeki bir belgeye onay kutusu içerik denetimi eklemek için bir nesnesi oluşturmanız gerekir <xref:Microsoft.Office.Tools.Word.ContentControl> . Daha fazla bilgi için bkz. [içerik denetimleri](../vsto/content-controls.md).
@@ -137,8 +138,8 @@ ms.locfileid: "107827909"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs" id="Snippet702":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb" id="Snippet702":::
 
-## <a name="add-content-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> VSTO eklenti projesindeki çalışma zamanında içerik denetimleri ekleme
- Bir VSTO eklentisi kullanarak çalışma zamanında herhangi bir açık belgeye programlama yoluyla içerik denetimleri ekleyebilirsiniz. Bunu yapmak için, açık bir <xref:Microsoft.Office.Tools.Word.Document> belgeyi temel alan bir konak öğesi oluşturun ve ardından <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> Bu konak öğesinin özelliğinin yöntemlerini kullanın. Her yöntemin, aşağıdaki yollarla bir içerik denetimi eklemek için kullanabileceğiniz üç aşırı yüklemesi vardır:
+## <a name="add-content-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>VSTO eklentisi projesindeki çalışma zamanında içerik denetimleri ekleme
+ bir VSTO eklentisi kullanarak çalışma zamanında herhangi bir açık belgeye programlama yoluyla içerik denetimleri ekleyebilirsiniz. Bunu yapmak için, açık bir <xref:Microsoft.Office.Tools.Word.Document> belgeyi temel alan bir konak öğesi oluşturun ve ardından <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> Bu konak öğesinin özelliğinin yöntemlerini kullanın. Her yöntemin, aşağıdaki yollarla bir içerik denetimi eklemek için kullanabileceğiniz üç aşırı yüklemesi vardır:
 
 - Geçerli seçime bir denetim ekleyin.
 
@@ -146,9 +147,9 @@ ms.locfileid: "107827909"
 
 - Belgedeki yerel içerik denetimini temel alan bir denetim ekleyin.
 
-  Belge kapatıldığında dinamik olarak oluşturulan içerik denetimleri belgede kalıcı olmaz. Ancak, yerel içerik denetimi belgede kalır. Belgenin bir sonraki açılışında yerel içerik denetimine dayalı bir içerik denetimini yeniden oluşturabilirsiniz. Daha fazla bilgi için bkz. [Dinamik denetimleri Office belgelerinde kalıcı hale](../vsto/persisting-dynamic-controls-in-office-documents.md)getirme.
+  Belge kapatıldığında dinamik olarak oluşturulan içerik denetimleri belgede kalıcı olmaz. Ancak, yerel içerik denetimi belgede kalır. Belgenin bir sonraki açılışında yerel içerik denetimine dayalı bir içerik denetimini yeniden oluşturabilirsiniz. daha fazla bilgi için bkz. [Office belgelerinde dinamik denetimleri kalıcı hale](../vsto/persisting-dynamic-controls-in-office-documents.md)getirme.
 
-  VSTO eklenti projelerinde konak öğeleri oluşturma hakkında daha fazla bilgi için bkz. [çalışma ZAMANıNDA VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
+  VSTO eklentisi projelerinde konak öğeleri oluşturma hakkında daha fazla bilgi için, bkz. [VSTO eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
 > [!NOTE]
 > Bir belgeye onay kutusu içerik denetimi eklemek için bir nesnesi oluşturmanız gerekir <xref:Microsoft.Office.Tools.Word.ContentControl> . Daha fazla bilgi için bkz. [içerik denetimleri](../vsto/content-controls.md).
@@ -187,7 +188,7 @@ ms.locfileid: "107827909"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
-- [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [çalışma zamanında Office belgelere denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)
 - [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md)

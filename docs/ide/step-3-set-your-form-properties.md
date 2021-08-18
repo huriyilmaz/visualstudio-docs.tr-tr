@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: d6d67536e525e6e5d97b0e54ffdabea378e6ee10f7405016c3c7ff929664ed74
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c7f9d8153a27807c394f2d6b3f383365e4fbb65d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121399567"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132047"
 ---
 # <a name="step-3-set-your-form-properties"></a>3. Adım: Form özelliklerinizi ayarlama
 
@@ -26,7 +26,7 @@ Ardından Özellikler penceresini **kullanarak** form biçiminizi değiştirecek
 
 1. Windows **Forms Designer'a Windows olun.** Tümleşik Visual Studio ortamında (IDE) **Form1.cs [Tasarım]** sekmesini (veya **form1.vb [Tasarım]** sekmesini) Visual Basic.
 
-1. **Form1** formunun içinde herhangi bir yeri seçerek seçin. Şimdi **formun** özelliklerini gösteren Özellikler penceresine bakın. Formlar çeşitli özelliklere sahiptir. Örneğin, ön plan ve arka plan rengini, formun en üstünde görünen başlık metnini, formun boyutunu ve diğer özellikleri ayarlayın.
+1. **Form1** formunun içinde herhangi bir yerde seçim yapmak için form1'i seçin. Şimdi **formun** özelliklerini gösteren Özellikler penceresine bakın. Formlar çeşitli özelliklere sahiptir. Örneğin, ön plan ve arka plan rengini, formun en üstünde görünen başlık metnini, formun boyutunu ve diğer özellikleri ayarlayın.
 
    > [!NOTE]
    > Özellikler **penceresi** görünmüyorsa, araç çubuğunda hata ayıklamayı  durdur düğmesini seçerek veya pencereyi kapatarak uygulamayı durdurun. Uygulama durdurulursa ve Özellikler penceresini hala  görmüyorsanız, menü çubuğunda Özellikler Penceresini **Görüntüle'yi**  >  **seçin.**
@@ -39,20 +39,20 @@ Ardından Özellikler penceresini **kullanarak** form biçiminizi değiştirecek
    > [!NOTE]
    > Özellikler Kategorilere Ayrılmış veya **Alfabetik görünüme** **göre sıralanır.** Özellikler penceresindeki düğmeleri kullanarak bu iki görünüm arasında **geçişebilirsiniz.** Bu öğreticide, alfabetik görünüm aracılığıyla özellikleri **bulmak daha kolaydır.**
 
-1. Geri dön **Form Windows'e başvurur.** Formun sağ alt köşesindeki küçük beyaz kare olan ve aşağıdaki gibi görünen sağ alt tutamacı seçin.
+1. Geri dön Form **Windows'a .** Formun sağ alt köşesindeki küçük beyaz kare olan ve aşağıdaki gibi görünen sağ alt tutamacı seçin.
 
     ![Tutamacı sürükleme](../ide/media/express_bottomrt_drag.png)<br>
    *Tutamacı sürükleme*
 
     Formu daha geniş ve biraz daha uzun olacak şekilde yeniden boyutlandırmak için tutamacı sürükleyin.
 
-1. Özellikler **penceresine bakın** ve Size özelliğinin **değiştiklerini** görebilirsiniz. Formu **her** yeniden boyutlandırarak Boyut özelliği değişir. Yeniden boyutlandırmak için formun tutamacı yaklaşık **550, 350** (tam olması gerekmemektedir) olacak şekilde sürüklemeyi deneyin. Alternatif olarak, değerleri doğrudan Boyut özelliğine **girebilirsiniz ve** enter tuşuna **basın.**
+1. Özellikler **penceresine bakın** ve Size özelliğinin **değiştiklerini** görebilirsiniz. Formu **her** yeniden boyutlandırarak Boyut özelliği değişir. Formun tutamacı sürükleyerek yaklaşık **550, 350** (tam olması gerekmemektedir) bir form boyutuna yeniden boyutlandırmayı deneyin. Bu, bu projenin iyi çalışmasına neden olur. Alternatif olarak, değerleri doğrudan Boyut özelliğine **girebilirsiniz ve** ardından **Enter tuşuna basın.**
 
 1. Uygulamayı yeniden çalıştırın. Uygulama çalıştırmak için aşağıdaki yöntemlerden herhangi birini kullanabileceğinizi unutmayın.
 
    - **F5 anahtarını** seçin.
 
-   - Menü çubuğunda Hata Ayıklama Hata **Ayıklamayı**  >  **Başlat'ı seçin.**
+   - Menü çubuğunda Hata Ayıklama Hata **AyıklamaYı**  >  **Başlat'ı seçin.**
 
    - Araç çubuğunda, aşağıdaki **gibi görünen** Hata Ayıklamayı Başlat düğmesini seçin.
 
@@ -75,7 +75,7 @@ Ardından Özellikler penceresini **kullanarak** form biçiminizi değiştirecek
 
 * Sonraki öğretici adımına gitmek için **[bkz. 4. Adım: Formlarınızı TableLayoutPanel denetimiyle oluşturma.](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)**
 
-* Önceki öğretici adımına dönmek için [bkz. 2. Adım: Resim görüntüleyicisi uygulamanızı çalıştırma.](../ide/step-2-run-your-program.md)
+* Önceki öğretici adımına dönmek için [bkz. 2. Adım: Resim görüntüleyicisi uygulamasını çalıştırma.](../ide/step-2-run-your-program.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

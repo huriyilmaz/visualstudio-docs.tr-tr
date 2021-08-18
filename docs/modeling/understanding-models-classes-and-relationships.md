@@ -1,6 +1,6 @@
 ---
 title: Modelleri, Sınıfları ve İlişkileri Anlama
-description: Etki alanına özgü bir dilin (DSL) DSL Tanım dosyası tarafından nasıl tanımlandığı ve DSL çözümünde program kodunun büyük bir çoğunun bu dosyadan nasıl oluşturulu olduğunu öğrenin.
+description: Etki alanına özgü bir dilin (DSL) DSL Tanım dosyası tarafından nasıl tanımlandığı ve DSL çözümünde program kodunun büyük bir çoğunun bu dosyadan nasıl oluşturularak oluşturul olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: f267afa77bf5d1dfbe7414d2c0cf394d91360cfc8318dbbbd9d1aae50cd1e4c9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e1fed82d9a8baaf44300e002a5436a532781ed01
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121444015"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122116584"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Modelleri, Sınıfları ve İlişkileri Anlama
 Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla birlikte DSL Tanım dosyası tarafından tanımlanır. DSL çözümünde program kodunun çoğu bu dosyadan oluşturulur.
@@ -25,7 +25,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
  Bu konuda DSL tanımının merkezi özellikleri açıklanmıştır.
 
 ## <a name="the-dsl-definition"></a>DSL Tanımı
- 'i `Dsl\DslDefinition.dsl` açtınız Visual Studio pencereniz aşağıdaki resme benzer.
+ 'i `Dsl\DslDefinition.dsl` Visual Studio pencereniz aşağıdaki resme benzer.
 
  ![dsl tasarımcısı](../modeling/media/dsl_designer.png)
 
@@ -40,7 +40,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
 ### <a name="models-are-instances-of-dsls"></a>Modeller, DSL örnekleridir
  *Model,* bir kullanıcı tarafından oluşturulan DSL örneğidir. Model, tanımladığınız etki alanı sınıflarının örnekleri olan model öğelerini ve tanımladığınız etki alanı ilişkilerinin örnekleri olan öğeler arasındaki bağlantıları içerir. Modelde ayrıca diyagramda model öğelerini ve bağlantılarını görüntü alan şekiller ve bağlayıcılar da olabilir. DSL tanımı şekil sınıflarını, bağlayıcı sınıflarını ve diyagram için bir sınıfı içerir.
 
- DSL Tanımı, etki alanı modeli *olarak da bilinir.* DSL Tanımı veya etki alanı modeli, etki alanına özgü dilin tasarım zamanı gösterimidir, model ise etki alanına özgü dilin çalışma zamanı örneğidir.
+ DSL Tanımı, etki alanı modeli olarak *da bilinir.* DSL Tanımı veya etki alanı modeli, etki alanına özgü dilin tasarım zamanı gösterimidir, model ise etki alanına özgü dilin çalışma zamanı örneğidir.
 
 ## <a name="domain-classes-define-model-elements"></a>Etki Alanı Sınıfları Model Öğelerini Tanımlar
  Etki alanı sınıfları etki alanındaki çeşitli öğeleri oluşturmak için kullanılır ve etki alanı ilişkileri, öğeler arasındaki bağlantılardır. Bunlar, modellerini oluşturduklarında tasarıma özgü dilin kullanıcıları tarafından örneği oluşturulacak öğelerin ve bağlantıların tasarım zamanı gösterimidir.
@@ -57,7 +57,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
 
  Çizimde dört etki alanı sınıfı gösterilmiştir: Music, Artist ve Song. Etki alanı sınıfları Ad, Başlık gibi etki alanı özelliklerini tanımlar. Örnek modelinde bu özelliklerden bazılarının değerleri diyagramda görüntülenir.
 
- Sınıflar arasında etki alanı ilişkileri vardır: MusicHasAlbums, MusicHasArtists, ArtistbHasSongs ve ArtistAppearedOnAlbums. İlişkilerin 1...1, 0..* gibi çoklulıkları vardır. Örneğin, her Şarkı, YerkizHasSongs ilişkisi aracılığıyla tam olarak tek bir Müzikle ilgili olması gerekir. Her Every Every'da herhangi bir sayıda Şarkı olabilir.
+ Sınıflar arasında etki alanı ilişkileri vardır: MusicHasAlbums, MusicHasArtists, ArtistbHasSongs ve ArtistAppearedOnAlbums. İlişkilerde 1..1, 0..* gibi birden çok işlev vardır. Örneğin, her Şarkı, YerkizHasSongs ilişkisi aracılığıyla tam olarak tek bir Müzikle ilgili olması gerekir. Her Every Every'da herhangi bir sayıda Şarkı olabilir.
 
 ### <a name="rearranging-the-dsl-definition-diagram"></a>DSL Tanım Diyagramını Yeniden Düzenleme
  Bu resimde olduğu gibi, dsl tanımı diyagramında bir etki alanı sınıfının birkaç kez görünebilirsiniz. Her zaman bir ana görünüm vardır ve bazı başvuru *görünümleri* olabilir.
@@ -85,7 +85,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
  İki tür etki alanı ilişkisi vardır: ekleme ilişkileri ve başvuru ilişkileri. DSL Tanımı diyagramında ekleme ilişkilerinin her rolde düz çizgileri, başvuru ilişkilerinin ise kesikli çizgileri vardır.
 
 ### <a name="embedding-relationships"></a>ekleme ilişkileri
- Bir modeldeki kökü dışında her öğe, bir ekleme bağlantısının hedefidir. Bu nedenle, modelin tamamı ekleme bağlantılarının tek bir ağacını oluşturur. Ekleme ilişkisi, içeriği veya sahipliği temsil eder. Bu şekilde ilişkili iki model öğesi üst ve alt öğe olarak da bilinir. Alt öğenin üst öğeye ekli olduğu ifade edildi.
+ Bir modeldeki kökü dışında her öğe, bir ekleme bağlantısının hedefidir. Bu nedenle modelin tamamı, ekleme bağlantılarının tek bir ağacını oluşturur. Ekleme ilişkisi, içeriği veya sahipliği temsil eder. Bu şekilde ilişkili iki model öğesi üst ve alt öğe olarak da bilinir. Alt öğenin üst öğeye ekli olduğu ifade edildi.
 
  Ekleme bağlantıları genellikle diyagramda bağlayıcılar olarak açıkça gösterilmez. Bunun yerine, bunlar genellikle bir karşıtlık ile temsil edilenlerdir. Modelin kökü diyagram tarafından temsil edildi ve içine eklenmiş öğeler diyagramda şekil olarak görüntülenir.
 
@@ -126,7 +126,7 @@ Etki alanına özgü bir dil (DSL), yaz olabileceğiniz özel program koduyla bi
 
  ![Roller ve özellikler.](../modeling/media/propertycode.png)
 
- Bir ilişkiyle ilişkili adlar özellikle modelden geçen program kodu yazmanız açısından önemlidir. Örneğin DSL çözümünü derlemek için oluşturulan sınıf Publisher Koleksiyon olan bir Katalog özelliğine sahiptir. Class Class, sınıf Publisher tek bir örneği olan bir özel Publisher.
+ Bir ilişkiyle ilişkili adlar özellikle modelden geçen program kodu yazmanız açısından önemlidir. Örneğin DSL çözümünü derlemek için oluşturulan sınıf Publisher Koleksiyonu olan bir Katalog özelliğine sahiptir. Class Class, Sınıf Publisher sınıfının tek bir örneği olan bir özel Publisher.
 
  DSL Tanımında ilişki sanız, özellik ve ilişki adlara varsayılan değerler verilir. Ancak bunları değiştirebilirsiniz.
 

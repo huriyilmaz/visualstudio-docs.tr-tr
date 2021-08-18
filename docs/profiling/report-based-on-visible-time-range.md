@@ -1,6 +1,6 @@
 ---
-title: Görünür zaman aralığına dayalı rapor | Microsoft Docs
-description: Profil görünümünün, şu anda görünür olan zaman aralığına ve kanallara göre raporları nasıl görüntülediğini öğrenin.
+title: Görünür Zaman Aralığını Temel Alan Rapor | Microsoft Docs
+description: Profil görünümünün, o anda görünür olan zaman aralığını ve kanalları temel alan raporları nasıl görüntüley olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,25 +11,26 @@ ms.assetid: ef4f6259-a110-43b6-a325-364154e1ba00
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 31ad1fbdf44283a0dc7f5f6374299aab27303db1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6046e7622369e34108adc3ca8996752e86de1203
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99960266"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131215"
 ---
-# <a name="report-based-on-visible-time-range"></a>Görünür zaman aralığına dayalı rapor
-Profil görünümü, şu anda görünür zaman aralığına ve kanallara dayalı raporları görüntüler. Verilerin farklı alt kümelerine ilişkin ayrıntıları görmek için göstergedeki Öğeler ' e tıklayın.
+# <a name="report-based-on-visible-time-range"></a>Görünür zaman aralığını temel alan rapor
+Profil görünümü, o anda görünür olan zaman aralığını ve kanalları temel alan raporları görüntüler. Verilerin farklı alt kümelerinin ayrıntılarını görmek için göstergedeki öğelere tıklayın.
 
- Burada tablolardaki veriler hakkında daha fazla bilgi edinebilirsiniz.
+ Burada tablolarda veriler hakkında daha fazla bilgi bulabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Gösterilecek İş Parçacığı Etkinliği Yok](../profiling/no-thread-activity-to-show-threads-view.md)
 - [Yürütme Profil Raporu](../profiling/execution-profile-report.md)
 - [Eşitleme Zamanı](../profiling/synchronization-time.md)
-- [G/ç zamanı (Iş parçacıkları görünümü)](../profiling/i-o-time-threads-view.md)
+- [I/O Zamanı (İş Parçacıkları Görünümü)](../profiling/i-o-time-threads-view.md)
 - [Bekleme Süresi](../profiling/sleep-time.md)
 - [Bellek Yönetimi Zamanı](../profiling/memory-management-time.md)
 - [Önalım Zamanı](../profiling/preemption-time.md)

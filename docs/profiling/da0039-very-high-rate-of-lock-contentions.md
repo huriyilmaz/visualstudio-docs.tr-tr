@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 91a3394486d474ee8564ecbd2a17a718e7ed9475409b75eeb7f86352e0c60b61
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 00befa5108828b115cf3e69a5f82e3cdf31682cd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121333372"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122131735"
 ---
 # <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039: çok yüksek oranda kilit çekişmeleri
 

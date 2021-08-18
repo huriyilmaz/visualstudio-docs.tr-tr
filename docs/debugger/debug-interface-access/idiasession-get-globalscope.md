@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b05934222ac3fc8d7e0d18cf83eaf2e43424147e101b5658019f849518ca5a4c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 13fc2e75c4c59e6d42072ef933acae9f9e002fad
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344775"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066335"
 ---
 # <a name="idiasessionget_globalscope"></a>IDiaSession::get_globalScope
 Genel kapsam için bir başvuru verir.
