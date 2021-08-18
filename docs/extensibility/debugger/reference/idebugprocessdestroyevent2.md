@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb57adb1ad3e553a1045d63626841ec23f36a8fe05a1e62042ae9aefc0e51666
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 10ffcf86b4dfb110e98cb2780223c9222a9e1815
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338936"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122071945"
 ---
 # <a name="idebugprocessdestroyevent2"></a>IDebugProcessDestroyEvent2
 Bu arabirim, bir işlem sonlandırıldığında gönderilir, genellikle çıkar veya öğesinden ayrılır.

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: afecc77ef3b38c9c6e7b106ce0f76fb5c167719f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5b9e804e74ae43d15f0fc1f179295f107b65b61d5f2a3e38c7d5d4f8baa9e6bf
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122035052"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121433690"
 ---
 # <a name="idebugmethodfieldiscustomattributedefined"></a>IDebugMethodField::IsCustomAttributeDefined
 Belirli bir özel özniteliğin tanımlanıp tanımlanmadığını belirler.

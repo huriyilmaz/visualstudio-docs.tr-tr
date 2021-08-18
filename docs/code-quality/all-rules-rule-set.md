@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: b124026e6505991c89818725ec24e5114488c3d33259c205e4d5b722cddc7001
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 457fd3d56cf85a8c79599280c927dde82eab065e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121294865"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122053259"
 ---
 # <a name="all-rules-rule-set"></a>Tüm Kurallar kural kümesi
 

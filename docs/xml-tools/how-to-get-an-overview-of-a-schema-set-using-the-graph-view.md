@@ -1,6 +1,6 @@
 ---
 title: Şema kümesine genel bakış elde etme
-description: "XML Şema Tasarımcısı: Bir şema kümesinde düğümlerin üst düzey bir görünümünü ve düğümler arasındaki ilişkileri görmek için XML Şema Gezgini'nde Graph Görünümünü kullanmayı öğrenin."
+description: 'xml şema tasarımcısı: bir şema kümesindeki düğümlerin üst düzey bir görünümünü ve düğümler arasındaki ilişkileri görmek için, xml şema gezgininde Graph görünümünü nasıl kullanacağınızı öğrenin.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,33 +11,33 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: a6168ca38de71d393d0a966a03d5172a515bf21721affe782d94ba6118c2c204
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1461653dff8e757ec462a3d47eb76ba7ed4f0ed5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121266928"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135084"
 ---
-# <a name="how-to-get-an-overview-of-a-schema-set-by-using-the-graph-view"></a>Nasıl: Graph View kullanarak bir şema kümesine genel bakış elde etmek
+# <a name="how-to-get-an-overview-of-a-schema-set-by-using-the-graph-view"></a>nasıl yapılır: Graph görünümünü kullanarak bir şema kümesine genel bakış alma
 
-Bu konuda, bir [şema kümesinde düğümlerin üst](../xml-tools/graph-view.md) düzey bir görünümünü ve düğümler arasındaki ilişkileri görmek için Graph Görünümü'nin nasıl kullanımı açıklanmıştır.
+bu konu başlığı altında, bir şema kümesindeki düğümlerin üst düzey bir görünümünü ve düğümler arasındaki ilişkileri görmek için [Graph görünümünün](../xml-tools/graph-view.md) nasıl kullanılacağı açıklanmaktadır.
 
-## <a name="to-create-a-new-xsd-file-and-display-the-root-element-in-the-content-model-view"></a>Yeni bir XSD dosyası oluşturmak ve kök öğeyi İçerik Modeli Görünümünde görüntülemek için
+## <a name="to-create-a-new-xsd-file-and-display-the-root-element-in-the-content-model-view"></a>Yeni bir XSD dosyası oluşturmak ve Içerik modeli görünümünde kök öğeyi görüntülemek için
 
-1. Yeni bir XML Şeması dosyası oluşturun ve dosyayı *Relationships.xsd olarak kaydedin.*
+1. Yeni bir XML şema dosyası oluşturun ve dosyayı *relationships. xsd* olarak kaydedin.
 
-2. Başlangıç **Görünümü'nde temel XML Şeması dosyasını görüntülemek ve düzenlemek için XML** düzenleyicisini kullan bağlantısına tıklayın.
+2. Başlangıç görünümündeki **temel ALıNAN XML şema dosyası bağlantısını görüntülemek ve düzenlemek IÇIN XML düzenleyicisini kullan** ' a tıklayın.
 
-3. Örnek XML [şeması:](../xml-tools/sample-xsd-file-relationships.md) ilişkiler'den XML Şeması örnek kodunu kopyalayın ve yeni XSD dosyasına varsayılan olarak eklenen kodu değiştirmek için yapıştırın.
+3. XML şeması örnek kodunu [örnek xml şeması: ilişkiler](../xml-tools/sample-xsd-file-relationships.md) ' ten kopyalayın ve varsayılan olarak yeni xsd dosyasına eklenen kodu değiştirmek için yapıştırın.
 
-4. XML düzenleyicisinde herhangi bir yere sağ tıklayın ve öğesini **Görünüm Tasarımcısı.**
+4. XML düzenleyicisinde herhangi bir yere sağ tıklayın ve **Görünüm Tasarımcısı**' nı seçin.
 
-5. XSD araç Graph **Görünüm'leri seçin.**
+5. **XSD araç çubuğundan** Graph görünümünü seçin.
 
-6. XML **Şema Gezgini'nde** **Şema Kümesi düğümünü** seçin ve düğümü Graph Görünümü'nde tasarım yüzeyine sürükleyin. İlişkili düğümleri bağlayan tüm genel düğümleri ve okları görüyor gerekir.
+6. **XML şema gezgini** 'nde **şema kümesi** düğümünü seçin ve Graph görünümün yüzeyine sürükleyin. Tüm genel düğümleri ve ilişkileri olan düğümleri bağlayan okları görmeniz gerekir.
 
      ![Graf Görünümü](../xml-tools/media/relationshipingraphview.gif)
 
-7. Tasarım yüzeyinde herhangi bir düğüme tıklayın ve seçilen düğümün şema kümesinde nerede olduğunu görmek için iş yüzeyi çubuğuna bakın.
+7. Tasarım yüzeyinde herhangi bir düğüme tıklayın ve seçili düğümün şema kümesinde nerede olduğunu görmek için içerik haritası çubuğuna bakın.
 
-8. Rick tasarım yüzeyindeki herhangi bir öğe düğümüne tıklayın ve XML örneği **belgesini görmek için** Örnek XML Oluştur'u seçin.
+8. Rick-tasarım yüzeyinde herhangi bir öğe düğümüne tıklayın ve XML örnek belgesini görmek için **örnek XML oluştur** ' u seçin.

@@ -11,14 +11,15 @@ ms.assetid: 5eaf2ad8-3fbf-446e-b48b-5327ad3f5255
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8931590ea20373b5350d880d5fe9495dfe53c4f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 17f75a0a127b45f0fa1bc55c1399592e35cc1383
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077388"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089179"
 ---
 # <a name="idebugenginelaunch2"></a>IDebugEngineLaunch2
 Program başlatmak ve sonlandırmak için bir hata ayıklama altyapısı (DE) tarafından kullanılır.

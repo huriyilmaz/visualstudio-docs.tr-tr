@@ -1,6 +1,6 @@
 ---
 title: Özel düzenleyiciler ve tasarımcılar oluşturma | Microsoft Docs
-description: 'Visual Studio IDE tarafından barındırılabilen farklı Düzenleyici türleri hakkında bilgi edinin: Çekirdek Düzenleyici, özel düzenleyiciler, dış düzenleyiciler ve tasarımcılar.'
+description: 'Visual Studio ıde tarafından barındırılabilen farklı düzenleyici türleri hakkında bilgi edinin: çekirdek düzenleyici, özel düzenleyiciler, dış düzenleyiciler ve tasarımcılar.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,20 +11,21 @@ ms.assetid: b6a5e8b2-0ae1-4fc3-812d-09d40051b435
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c2882cfa103627672e5c96a0e3d4b2a23b4b4ba9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9510626a5e884a63e6237ffa6dd3d68a47b61047
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055784"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043693"
 ---
 # <a name="create-custom-editors-and-designers"></a>Özel düzenleyiciler ve tasarımcılar oluşturma
 
-Visual Studio tümleşik geliştirme ortamı (IDE) farklı düzenleyici türlerini barındırabilir:
+Visual Studio tümleşik geliştirme ortamı (ıde) farklı düzenleyici türlerini barındırabilir:
 
-- Visual Studio temel Düzenleyicisi
+- Visual Studio core düzenleyicisi
 
 - Özel düzenleyiciler
 
@@ -36,17 +37,17 @@ Aşağıdaki bilgiler, ihtiyacınız olan düzenleyicinin türünü seçmenize y
 
 ## <a name="types-of-editor"></a>Düzenleyici türleri
 
-Visual Studio çekirdek Düzenleyicisi hakkında daha fazla bilgi için bkz. [düzenleyiciyi ve dil hizmetlerini genişletme](../extensibility/extending-the-editor-and-language-services.md).
+Visual Studio core düzenleyicisi hakkında daha fazla bilgi için bkz. [düzenleyiciyi ve dil hizmetlerini genişletme](../extensibility/extending-the-editor-and-language-services.md).
 
 ### <a name="custom-editors"></a>Özel düzenleyiciler
- Özel bir düzenleyici, özelleştirilmiş koşullarda çalışmak üzere tasarlanan bir düzenleyicidir. Örneğin, işlevi, Microsoft Exchange Server gibi belirli bir depoya veri okuma ve yazma işlemi olan bir düzenleyici oluşturabilirsiniz. Yalnızca birkaç özel komuta sahip bir düzenleyici istiyorsanız, yalnızca proje türüyle çalışacak bir düzenleyici istiyorsanız özel bir düzenleyici seçin. Ancak, kullanıcıların standart projeleri düzenlemek için özel bir düzenleyici kullanabilebileceğine unutmayın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+ Özel bir düzenleyici, özelleştirilmiş koşullarda çalışmak üzere tasarlanan bir düzenleyicidir. örneğin, işlevi, Microsoft Exchange sunucusu gibi belirli bir depoya veri okuma ve yazma işlemi olan bir düzenleyici oluşturabilirsiniz. Yalnızca birkaç özel komuta sahip bir düzenleyici istiyorsanız, yalnızca proje türüyle çalışacak bir düzenleyici istiyorsanız özel bir düzenleyici seçin. Ancak, kullanıcıların standart projeleri düzenlemek için özel bir düzenleyici kullanabilebileceğine unutmayın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
  Özel bir düzenleyici bir düzenleyici fabrikası kullanabilir ve kayıt defterine Düzenleyici hakkında bilgi ekleyebilir. Ancak, özel düzenleyiciyle ilişkilendirilen proje türü özel düzenleyiciyi başka yollarla oluşturabilir.
 
  Özel bir düzenleyici, bir görünümü uygulamak için yerinde etkinleştirme ya da Basitleştirilmiş ekleme kullanabilir.
 
 ### <a name="external-editors"></a>Dış düzenleyiciler
- Dış düzenleyiciler, Visual Studio ile tümleştirilen, Microsoft Word, Notepad veya Microsoft FrontPage gibi düzenleyicilerlerdir. Örneğin, VSPackage 'ınızdan metin aktarıyorsanız bu tür bir düzenleyiciyi çağırabilirsiniz. Dış düzenleyiciler kendilerini kaydeder ve Visual Studio 'Nun dışında kullanılabilir. Harici bir düzenleyiciyi çağırdığınızda ve bir konak penceresine katıştırılabildiğinden, IDE 'deki bir pencerede görüntülenir. Aksi takdirde, IDE bunun için ayrı bir pencere oluşturur.
+ dış düzenleyiciler, Microsoft Word, Not Defteri veya Microsoft FrontPage gibi Visual Studio tümleştirilmeyen düzenleyicilerlerdir. Örneğin, VSPackage 'ınızdan metin aktarıyorsanız bu tür bir düzenleyiciyi çağırabilirsiniz. Dış düzenleyiciler kendilerini kaydeder ve Visual Studio dışında kullanılabilir. Harici bir düzenleyiciyi çağırdığınızda ve bir konak penceresine katıştırılabildiğinden, IDE 'deki bir pencerede görüntülenir. Aksi takdirde, IDE bunun için ayrı bir pencere oluşturur.
 
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>Yöntemi, sabit listesini kullanarak belge önceliğini ayarlar <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> . `DP_External`Değer belirtilmişse, dosya harici bir düzenleyici tarafından açılabilir.
 
@@ -59,9 +60,9 @@ Visual Studio çekirdek Düzenleyicisi hakkında daha fazla bilgi için bkz. [d�
 
    Projeniz dosyaları kullanıyorsa, standart düzenleyiciyi özelleştirmeniz gerekir. Projeniz dosyaları kullanmıyorsa, ancak bir veritabanı veya başka bir depodaki öğeleri kullanıyorsa, özel bir düzenleyici oluşturmanız gerekir.
 
-- Düzenleyicinizde ActiveX denetimleri barındırmı gerekiyor?
+- düzenleyicinizde ActiveX denetimleri barındırmı gerekiyor?
 
-   Düzenleyiciniz ActiveX denetimleri barındırıyorsa, yerinde [etkinleştirme](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015)' de açıklandığı gibi bir yerinde etkinleştirme Düzenleyicisi uygulayın. ActiveX denetimleri barındırmadığından, Basitleştirilmiş bir katıştırma düzenleyicisi kullanın veya [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] varsayılan düzenleyiciyi özelleştirin.
+   düzenleyiciniz ActiveX denetimleri barındırıyorsa, yerinde [etkinleştirme](/previous-versions/visualstudio/visual-studio-2015/misc/in-place-activation?preserve-view=true&view=vs-2015)' de açıklandığı gibi bir yerinde etkinleştirme düzenleyicisi uygulayın. ActiveX denetimleri barındırmadığından, basitleştirilmiş bir katıştırma düzenleyicisi kullanın ya da [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] varsayılan düzenleyiciyi özelleştirin.
 
 - Düzenleyiciniz birden fazla görünümü destekliyor mu? Düzenleyicinizdeki görünümlerin varsayılan düzenleyiciyle aynı anda görünür olmasını istiyorsanız birden çok görünümü desteklemeniz gerekir.
 
@@ -101,7 +102,7 @@ Belge verilerinin ve belge görünümlerinin özel düzenleyicilerde nasıl uygu
 [Eski dil hizmeti geliştirme](../extensibility/internals/developing-a-legacy-language-service.md)\
 Bir dil hizmetinin nasıl uygulanacağını açıklar.
 
-[Visual Studio 'nun diğer kısımlarını genişletme](../extensibility/extending-other-parts-of-visual-studio.md)\
+[Visual Studio diğer kısımlarını uzat](../extensibility/extending-other-parts-of-visual-studio.md)\
 Geri kalanı ile eşleşen kullanıcı arabirimi öğelerinin nasıl oluşturulacağını açıklar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.

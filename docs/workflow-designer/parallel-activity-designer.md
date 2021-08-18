@@ -10,14 +10,15 @@ ms.assetid: 0306dc3b-075a-4091-ac3a-96486fbabed5
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 3997b72105c22f10500559370d8a23faaa2f24eb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9d3f3efb6a35a87dadb1b2f70fdf59cdfb3d61691975091b2f9f7f58d557e133
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905174"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440480"
 ---
 # <a name="parallel-activity-designer"></a>Parallel Etkinlik Tasarımcısı
 
@@ -27,11 +28,11 @@ ms.locfileid: "99905174"
 
 <xref:System.Activities.Statements.Parallel>Etkinlik, alt etkinliklerini bir <xref:System.Activities.Statements.Parallel.Branches%2A> koleksiyonda depolar. <xref:System.Activities.Statements.Parallel> <xref:System.Activities.Statements.Sequence> Alt etkinliklerin bazıları boşta kalabileceğini etkinlik yerine etkinliğini kullanın.
 
-<xref:System.Activities.Statements.Parallel>Etkinlik, Kullanıcı tarafından <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> belirtilen Visual Basic ifadesi içeren bir özelliğe sahiptir. <xref:System.Activities.Statements.Parallel>Etkinlik her bir dal tamamlandıktan sonra bu özelliği değerlendirir. **True** olarak değerlendirilirse, <xref:System.Activities.Statements.Parallel> etkinlik diğer dalları yürütmeden tamamlanır. <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> **Doğru** olarak değerlendirilmiyorsa, <xref:System.Activities.Statements.Parallel> tüm alt etkinlikleri tamamlandığında etkinlik tamamlanır.
+<xref:System.Activities.Statements.Parallel>etkinlik, kullanıcı tarafından <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> belirtilen Visual Basic ifadesi içeren bir özelliğe sahiptir. <xref:System.Activities.Statements.Parallel>Etkinlik her bir dal tamamlandıktan sonra bu özelliği değerlendirir. **True** olarak değerlendirilirse, <xref:System.Activities.Statements.Parallel> etkinlik diğer dalları yürütmeden tamamlanır. <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> **Doğru** olarak değerlendirilmiyorsa, <xref:System.Activities.Statements.Parallel> tüm alt etkinlikleri tamamlandığında etkinlik tamamlanır.
 
 ### <a name="using-the-parallel-activity-designer"></a>Paralel etkinlik tasarımcısını kullanma
 
-**Araç kutusunun** **Denetim akışı** kategorisindeki **paralel** etkinlik tasarımcısına erişin.
+**araç kutusunun** **denetim Flow** kategorisindeki **paralel** etkinlik tasarımcısına erişin.
 
 **Paralel** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin bir **sıra** etkinliği Tasarımcısı içinde olan etkinlik tasarımcılarının normalde yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir. İş Akışı Tasarımcısı, bir <xref:System.Activities.Statements.Parallel> etkinlik oluşturur, varsayılan olarak bir <xref:System.Activities.Activity.DisplayName%2A> **paralel** içerir
 
@@ -51,4 +52,4 @@ Aşağıdaki tabloda, paralel etkinlik özellikleri gösterilmektedir ve bunlar�
 
 - [Sequence](../workflow-designer/sequence-activity-designer.md)
 - [ParallelForEach\<T>](../workflow-designer/parallelforeach-t-activity-designer.md)
-- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
+- [Denetim Flow](../workflow-designer/control-flow-activity-designers.md)

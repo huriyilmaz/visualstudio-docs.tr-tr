@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: belge özelliklerinden okuma ve yazma'
-description: Visual Studio 'Yu kullanarak Microsoft Excel ve Microsoft Word 'de belge özelliklerini alma veya ayarlama hakkında bilgi edinin.
+description: Microsoft Excel ve Microsoft Word belge özelliklerini almak veya ayarlamak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,26 +15,27 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 3474d86a7408e841d383c82e5ab38da90253dbbf
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 981f9da1138034dd108a438a69683f4107358ee4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826687"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032725"
 ---
 # <a name="how-to-read-from-and-write-to-document-properties"></a>Nasıl yapılır: belge özelliklerinden okuma ve yazma
-  Belge özelliklerini bir belge ile birlikte saklayabilirsiniz. Office uygulamaları yazar, başlık ve konu gibi çeşitli yerleşik özellikler sağlar. Bu konuda, Excel ve Microsoft Office Word Microsoft Office belge özelliklerinin nasıl ayarlanacağı gösterilmektedir.
+  Belge özelliklerini bir belge ile birlikte saklayabilirsiniz. Office uygulamalar yazar, başlık ve konu gibi çeşitli yerleşik özellikler sağlar. bu konuda, Microsoft Office Excel ve Word Microsoft Office belge özelliklerinin nasıl ayarlanacağı gösterilmektedir.
 
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]
 
-## <a name="set-document-properties-in-excel"></a>Excel 'de belge özelliklerini ayarlama
- Excel 'deki yerleşik özelliklerle çalışmak için aşağıdaki özellikleri kullanın:
+## <a name="set-document-properties-in-excel"></a>Excel belge özelliklerini ayarlama
+ Excel içindeki yerleşik özelliklerle çalışmak için aşağıdaki özellikleri kullanın:
 
 - Belge düzeyi projesinde, <xref:Microsoft.Office.Tools.Excel.Workbook.BuiltinDocumentProperties%2A> sınıfının özelliğini kullanın `ThisWorkbook` .
 
-- VSTO eklenti projesinde, <xref:Microsoft.Office.Interop.Excel._Workbook.BuiltinDocumentProperties%2A> nesnesinin özelliğini kullanın <xref:Microsoft.Office.Interop.Excel.Workbook> .
+- VSTO bir eklenti projesinde, <xref:Microsoft.Office.Interop.Excel._Workbook.BuiltinDocumentProperties%2A> nesnesinin özelliğini kullanın <xref:Microsoft.Office.Interop.Excel.Workbook> .
 
   Bu özellikler <xref:Microsoft.Office.Core.DocumentProperties> nesne koleksiyonu olan bir nesnesi döndürür <xref:Microsoft.Office.Core.DocumentProperty> . `Item`Belirli bir özelliği ada veya koleksiyon içindeki dizine göre almak için koleksiyonun özelliğini kullanabilirsiniz.
 
@@ -57,7 +58,7 @@ ms.locfileid: "107826687"
 
 - Belge düzeyi projesinde, <xref:Microsoft.Office.Tools.Word.Document.BuiltInDocumentProperties%2A> sınıfının özelliğini kullanın `ThisDocument` .
 
-- VSTO eklenti projesinde, <xref:Microsoft.Office.Interop.Word._Document.BuiltInDocumentProperties%2A> nesnesinin özelliğini kullanın <xref:Microsoft.Office.Interop.Word.Document> .
+- VSTO bir eklenti projesinde, <xref:Microsoft.Office.Interop.Word._Document.BuiltInDocumentProperties%2A> nesnesinin özelliğini kullanın <xref:Microsoft.Office.Interop.Word.Document> .
 
   Bu özellikler <xref:Microsoft.Office.Core.DocumentProperties> nesne koleksiyonu olan bir nesnesi döndürür <xref:Microsoft.Office.Core.DocumentProperty> . `Item`Belirli bir özelliği ada veya koleksiyon içindeki dizine göre almak için koleksiyonun özelliğini kullanabilirsiniz.
 
@@ -76,7 +77,7 @@ ms.locfileid: "107826687"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingWordVB/ThisDocument.vb" id="Snippet2":::
 
 ## <a name="robust-programming"></a>Güçlü programlama
- Örneklerde, kodu `ThisWorkbook` Excel için belge düzeyindeki bir projede ve `ThisDocument` Word için belge düzeyindeki bir proje sınıfında yazdığınız varsayılır.
+ örneklerde, kodu `ThisWorkbook` bir belge düzeyi projesinde Excel ve `ThisDocument` Word için belge düzeyindeki bir projede bulunan sınıfında yazdığınız varsayılır.
 
  Word ve Excel ve nesneleriyle çalışabilseniz de Microsoft Office kullanılabilir yerleşik belge özellikleri listesini sağlar. Tanımsız bir özelliğe erişme girişimi bir özel durum oluşturur.
 

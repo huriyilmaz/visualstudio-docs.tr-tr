@@ -1,33 +1,34 @@
 ---
 title: JavaScript ve TypeScript birim testi
-description: Visual Studio, Visual Studio için Node.js araçları kullanılarak JavaScript ve TypeScript kodu desteği sağlar
+description: Visual Studio, Visual Studio için Node.js araçlarını kullanarak JavaScript ve TypeScript kodu desteği sağlar
 ms.date: 03/18/2021
 ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-javascript
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: dc44e39223fd252ae8c4130a1b358aa6af981119
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: ee04b9e3a49af86780bc9702de5d5c128dae2173
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104671514"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122040521"
 ---
-# <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Visual Studio 'da JavaScript ve TypeScript ile birim testi
+# <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Visual Studio 'de birim testi JavaScript ve TypeScript
 
-Bir komut istemine geçiş yapmanıza gerek kalmadan, daha popüler JavaScript çerçevelerinden bazılarını kullanarak Visual Studio 'da birim testlerini yazabilir ve çalıştırabilirsiniz. Hem Node.js hem de ASP.NET Core projeleri desteklenir.
+bir komut istemine geçiş gerektirmeden daha popüler JavaScript çerçevelerinden bazılarını kullanarak Visual Studio birim testlerini yazabilir ve çalıştırabilirsiniz. hem Node.js hem de ASP.NET Core projeleri desteklenir.
 
 Desteklenen çerçeveler şunlardır:
 * Mocha ([mochajs.org](https://mochajs.org/))
 * Jasmine ([Jasmine.GitHub.io](https://jasmine.github.io/))
 * Bant ([GitHub.com/substack/Tape](https://github.com/substack/tape))
 * Jest ([jestjs.io](https://jestjs.io/))
-* Çalıştırıcısı dışarı aktar (Bu Framework, Visual Studio için Node.js araçlarına özeldir)
+* Çalıştırıcısı dışarı aktar (Bu çerçeve, Visual Studio için Node.js araçlara özeldir)
 
 ASP.NET Core ve JavaScript ya da TypeScript için bkz. [ASP.NET Core için birim testleri yazma ](#write-unit-tests-for-aspnet-core).
 
@@ -69,7 +70,7 @@ Proje özelliklerinde birim testi seçeneklerini ayarlamadıysanız, **Özellikl
 > [!Note]
 > Birim testi seçenekleri tek tek dosyalar için ayarlar üzerinde tercih edilir.
 
-Test Gezgini 'ni açtıktan sonra ( **Test**  >  **Windows**  >  **Test Gezgini**'ni seçin), Visual Studio Testleri bulur ve görüntüler. Testler başlangıçta gösterilmiyorsa, Listeyi yenilemek için projeyi yeniden derleyin.
+test gezgini 'ni açtıktan sonra ( **test**  >  **Windows**  >  **test gezginini** seçin), Visual Studio testleri bulur ve görüntüler. Testler başlangıçta gösterilmiyorsa, Listeyi yenilemek için projeyi yeniden derleyin.
 
 ![Test Gezgini](../javascript/media/UnitTestsDiscoveryMocha.png)
 
@@ -78,9 +79,9 @@ Test Gezgini 'ni açtıktan sonra ( **Test**  >  **Windows**  >  **Test Gezgini*
 
 ## <a name="run-tests-nodejs"></a>Testleri Çalıştır (Node.js)
 
-Testleri Visual Studio 'da veya komut satırından çalıştırabilirsiniz.
+testleri Visual Studio veya komut satırından çalıştırabilirsiniz.
 
-### <a name="run-tests-in-visual-studio"></a>Visual Studio 'da testleri çalıştırma
+### <a name="run-tests-in-visual-studio"></a>Visual Studio Testleri çalıştırma
 
 ::: moniker range=">=vs-2019"
 Testleri test Gezgini içindeki **Tümünü Çalıştır** bağlantısına tıklayarak çalıştırabilirsiniz. Ya da bir veya daha fazla test veya grup seçerek, sağ tıklayıp ve kısayol menüsünden **Çalıştır** ' ı seçerek testleri çalıştırabilirsiniz. Testler arka planda çalışır ve test Gezgini sonuçları otomatik olarak güncelleştirir ve gösterir. Ayrıca, sağ tıklayıp **Hata Ayıkla**' yı seçerek seçili testlerde hata ayıklaması de yapabilirsiniz.
@@ -99,7 +100,7 @@ TypeScript için, birim testleri oluşturulan JavaScript koduna karşı çalış
 
 ### <a name="run-tests-from-the-command-line"></a>Komut satırından test çalıştırma
 
-Aşağıdaki komutu kullanarak [Visual Studio için geliştirici komut istemi](../ide/reference/command-prompt-powershell.md) testlerini çalıştırabilirsiniz:
+aşağıdaki komutu kullanarak [Visual Studio için Geliştirici Komut İstemi](../ide/reference/command-prompt-powershell.md) testleri çalıştırabilirsiniz:
 
 ```
 vstest.console.exe <path to project file>\NodejsConsoleApp23.njsproj /TestAdapterPath:<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter
@@ -138,17 +139,17 @@ Test execution time: 1.5731 Seconds
 
 ## <a name="write-unit-tests-for-aspnet-core"></a>ASP.NET Core için birim testleri yazma
 
-1. Bir ASP.NET Core projesi oluşturun ve TypeScript desteği ekleyin.
+1. bir ASP.NET Core projesi oluşturun ve TypeScript desteği ekleyin.
 
-   Örnek bir proje için bkz. [TypeScript ile ASP.NET Core uygulaması oluşturma](../javascript/tutorial-aspnet-with-typescript.md). Birim testi desteği için, standart bir ASP.NET Core projesi şablonuyla başlamasını öneririz.
+   örnek bir proje için bkz. [TypeScript ile ASP.NET Core uygulaması oluşturma](../javascript/tutorial-aspnet-with-typescript.md). birim testi desteği için, standart bir ASP.NET Core projesi şablonuyla başlamasını öneririz.
 
-   NPM TypeScript paketi yerine TypeScript desteği eklemek için NuGet paketini kullanın.
+   npm typescript paketi yerine typescript desteği eklemek için NuGet paketini kullanın.
 
-1. [Microsoft. JavaScript. UnitTest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/) NuGet paketini yükler
+1. [Microsoft. JavaScript. unittest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/) NuGet paketini yükler
 
-1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve **Projeyi Kaldır**' ı seçin.
+1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve **Project kaldır**' ı seçin.
 
-   *. Csproj* dosyası Visual Studio 'da açılmalıdır.
+   *. Csproj* dosyası Visual Studio açılmalıdır.
 
 1. Aşağıdaki öğeleri öğesindeki *. csproj* dosyasına ekleyin `PropertyGroup` .
 
@@ -165,9 +166,9 @@ Test execution time: 1.5731 Seconds
 
    `JavaScriptTestRoot`Öğesi, birim testlerinizin proje kökünün *testler* klasöründe olacağını belirtir.
 
-1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve **projeyi yeniden yükle**' yi seçin.
+1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve **Project yeniden yükle**' yi seçin.
 
-1. [ASP.NET Core projeleri](../javascript/npm-package-management.md#aspnet-core-projects)altındaki NPM Paket Yönetimi makalesinde açıklandığı şekilde NPM desteği ekleyin.
+1. [ASP.NET Core projeleri](../javascript/npm-package-management.md#aspnet-core-projects)altındaki npm paket yönetimi makalesinde açıklandığı şekilde npm desteği ekleyin.
 
    Bu, NPM desteği için Node.js çalışma zamanının yüklenmesini ve proje kökünde *package.js* eklemeyi gerektirir.
 
@@ -189,11 +190,11 @@ Test execution time: 1.5731 Seconds
    ```
 
    >[!NOTE]
-   > Bazı senaryolarda Çözüm Gezgini, [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorun nedeniyle NPM düğümünü gösteremeyebilir. NPM düğümünü görmeniz gerekirse projeyi (projeye sağ tıklayıp **Projeyi Kaldır**' ı seçin) ve ardından NPM düğümü yeniden görüntülenmesini sağlamak için projeyi yeniden yükleyebilirsiniz.
+   > Bazı senaryolarda Çözüm Gezgini, [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorun nedeniyle NPM düğümünü gösteremeyebilir. npm düğümünü görmeniz gerekiyorsa projeyi (projeye sağ tıklayıp **Project kaldır**' ı seçin) ve ardından npm düğümü yeniden görüntülenmesini sağlamak için projeyi yeniden yükleyebilirsiniz.
 
 1. Sınanacak kodu ekleyin.
 
-   [TypeScript ile ASP.NET Core uygulaması oluşturma](tutorial-aspnet-with-typescript.md)bölümünde açıklanan örneği kullanıyorsanız, *komut dosyaları* klasöründe bulunan *Library. TS* dosyasının sonuna aşağıdaki kodu ekleyin.
+   [TypeScript ile ASP.NET Core uygulaması oluşturma](tutorial-aspnet-with-typescript.md)bölümünde açıklanan örneği kullanıyorsanız, *komut dosyaları* klasöründe bulunan *library. ts* dosyasının sonuna aşağıdaki kodu ekleyin.
 
    ```typescript
    function getData(value) {
@@ -234,7 +235,7 @@ Test execution time: 1.5731 Seconds
    });
    ```
 
-1. Test Gezginini açın ( **Test**  >  **Windows**  >  **Test Gezgini**' ni seçin) ve Visual Studio bunları bulur ve Testleri görüntüler. Testler başlangıçta gösterilmiyorsa, Listeyi yenilemek için projeyi yeniden derleyin.
+1. test gezgini 'ni açın ( **test**  >  **Windows**  >  **test gezgini**) seçin ve testleri bulur ve görüntüler Visual Studio. Testler başlangıçta gösterilmiyorsa, Listeyi yenilemek için projeyi yeniden derleyin.
 
    ![Test Gezgini test keşfi](../javascript/media/unit-tests-aspnet-core-discovery.png)
 
@@ -275,13 +276,13 @@ Ve uygulamalarına yönelik iyi bir örnek için `find_tests` `run_tests` , Içi
 
 `<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter\TestFrameworks\mocha\mocha.js`
 
-Kullanılabilir test çerçevelerini bulma işlemi Visual Studio başlangıcında oluşur. Visual Studio çalışırken bir çerçeve eklenirse, Framework 'ü algılamak için Visual Studio 'Yu yeniden başlatın. Ancak uygulamada değişiklik yaparken yeniden başlatmanız gerekmez.
+kullanılabilir test çerçevelerini bulma Visual Studio başlangıcında oluşur. Visual Studio çalışırken bir çerçeve eklenirse, framework 'ü algılamak için Visual Studio yeniden başlatın. Ancak uygulamada değişiklik yaparken yeniden başlatmanız gerekmez.
 
 ## <a name="unit-tests-in-net-framework"></a>.NET Framework birim testleri
 
-Yalnızca Node.js ve ASP.NET Core projelerinizde birim testlerini yazmak sınırlı değildir. TestFramework ve TestRoot özelliklerini herhangi bir C# veya Visual Basic projesine eklediğinizde, bu testler numaralandırılır ve test Gezgini penceresini kullanarak bunları çalıştırabilirsiniz.
+yalnızca Node.js ve ASP.NET Core projelerinizde birim testlerini yazmak sınırlı değildir. testframework ve testroot özelliklerini herhangi bir C# veya Visual Basic projesine eklediğinizde, bu testler numaralandırılır ve Test gezgini penceresini kullanarak bunları çalıştırabilirsiniz.
 
-Bunu etkinleştirmek için Çözüm Gezgini proje düğümüne sağ tıklayın, **Projeyi Kaldır**' ı seçin ve ardından **projeyi Düzenle**' yi seçin. Ardından proje dosyasında, bir özellik grubuna aşağıdaki iki öğeyi ekleyin.
+bunu etkinleştirmek için Çözüm Gezgini proje düğümüne sağ tıklayın, **Project kaldır**' ı seçin ve ardından **Project düzenle**' yi seçin. Ardından proje dosyasında, bir özellik grubuna aşağıdaki iki öğeyi ekleyin.
 
 > [!IMPORTANT]
 > Öğelerini eklemekte olduğunuz özellik grubunun belirtilen bir koşula sahip olmadığından emin olun.
@@ -298,7 +299,7 @@ Ardından, testlerinizi belirttiğiniz test kök klasörüne ekleyin ve test Gez
 
 ## <a name="unit-test-net-core-and-net-standard"></a>Birim testi .NET Core ve .NET Standard
 
-Yukarıdaki özelliklere ek olarak, [Microsoft. JavaScript. UnitTest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/) NuGet paketini yüklemeniz ve özelliğini ayarlamanız gerekir:
+yukarıdaki özelliklere ek olarak, [Microsoft. JavaScript. unittest](https://www.nuget.org/packages/Microsoft.JavaScript.UnitTest/) NuGet paketini yüklemeniz ve özelliğini ayarlamanız gerekir:
 
 ```xml
 <PropertyGroup>

@@ -14,26 +14,27 @@ ms.assetid: 44cebec3-0ea0-47c2-8406-4edeab6a997e
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 18e3010e9798f3c056afd5ffc7964ace3f734f53
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 05856d2443d66297da7313d57cfba9d1582cb1e4a5f2c4dc9d046c1675f2fb8f
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970848"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121357888"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>Nasıl yapılır: içeri aktarılan ad alanlarını ekleme veya kaldırma (Visual Basic)
 
 Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad alanındaki öğeleri kullanmanıza olanak sağlar. Örneğin, `Create` sınıfındaki yöntemine erişmek istiyorsanız `System.Messaging.MessageQueue` , `System.Messaging` ad alanını içeri aktarabilir ve yalnızca kodunuzda gereken öğeye başvurabilirsiniz `MessageQueue.Create` .
 
-İçeri aktarılan ad alanları, **Proje Tasarımcısı**'nın **Başvurular** sayfasında yönetilir. Bu iletişim kutusunda belirttiğiniz içeri aktarmalar doğrudan derleyiciye geçirilir (*/Imports*) ve projenizdeki tüm dosyalar için geçerlidir. Tek bir `Imports` kaynak kod dosyasında bir ad alanı kullanmak için ifadesini kullanın.
+içeri aktarılan ad alanları **Project tasarımcısının** **başvurular** sayfasında yönetilir. Bu iletişim kutusunda belirttiğiniz içeri aktarmalar doğrudan derleyiciye geçirilir (*/Imports*) ve projenizdeki tüm dosyalar için geçerlidir. Tek bir `Imports` kaynak kod dosyasında bir ad alanı kullanmak için ifadesini kullanın.
 
 ### <a name="to-add-an-imported-namespace"></a>İçeri aktarılan bir ad alanı eklemek için
 
-1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
+1. **Çözüm Gezgini**, proje için **Project** düğümüne çift tıklayın.
 
-2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
+2. **Project tasarımcısında**, **başvurular** sekmesine tıklayın.
 
 3. **Içeri aktarılan ad alanları** listesinde, eklemek istediğiniz ad alanının onay kutusunu seçin.
 
@@ -42,9 +43,9 @@ Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad 
 
 ### <a name="to-remove-an-imported-namespace"></a>İçeri aktarılan bir ad alanını kaldırma
 
-1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
+1. **Çözüm Gezgini**, proje için **Project** düğümüne çift tıklayın.
 
-2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
+2. **Project tasarımcısında**, **başvurular** sekmesine tıklayın.
 
 3. **Içeri aktarılan ad alanları** listesinde, kaldırmak istediğiniz ad alanı için onay kutusunu temizleyin.
 
@@ -55,9 +56,9 @@ Daha sonra fikrinizi değiştirirseniz ve gerçekten gereken sınıf olduğuna k
 
 ### <a name="to-add-a-user-import"></a>Kullanıcı içeri aktarma eklemek için
 
-1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
+1. **Çözüm Gezgini**, proje için **Project** düğümüne çift tıklayın.
 
-2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
+2. **Project tasarımcısında**, **başvurular** sekmesine tıklayın.
 
 3. **Içeri aktarılan ad alanları** listesinin altındaki metin kutusunda, kök ad alanı dahil olmak üzere içeri aktarmak istediğiniz ad alanının tam adını girin.
 
@@ -68,9 +69,9 @@ Daha sonra fikrinizi değiştirirseniz ve gerçekten gereken sınıf olduğuna k
 
 ### <a name="to-update-a-user-import"></a>Bir kullanıcı içeri aktarmayı güncelleştirmek için
 
-1. **Çözüm Gezgini**, proje Için **projem** düğümüne çift tıklayın.
+1. **Çözüm Gezgini**, proje için **Project** düğümüne çift tıklayın.
 
-2. **Proje tasarımcısında**, **Başvurular** sekmesine tıklayın.
+2. **Project tasarımcısında**, **başvurular** sekmesine tıklayın.
 
 3. **Içeri aktarılan ad alanları** listesinde, değiştirmek istediğiniz ad alanını seçin.
 

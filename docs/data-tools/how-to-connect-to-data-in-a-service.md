@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Bir Hizmetteki Verilere Bağlanma'
-description: Veri kaynağı Yapılandırma Sihirbazı 'nı çalıştırarak ve veri kaynağı türü seç sayfasında hizmet ' i seçerek uygulamanızı bir hizmetten döndürülen verilere bağlayın.
+description: veri kaynağı yapılandırma sihirbazı 'nı çalıştırarak ve veri kaynağı türü seç sayfasında hizmet ' i seçerek, uygulamanızı bir hizmetten döndürülen verilere Bağlan.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,16 +16,17 @@ ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d8e3692f376a502a2cd924fa9604eddab445333f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6854b1cd7647f6bc4ac7ca92c920f7454b7ab1fe
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858767"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052752"
 ---
-# <a name="how-to-connect-to-data-in-a-service"></a>Nasıl yapılır: bir hizmette verilere bağlanma
+# <a name="how-to-connect-to-data-in-a-service"></a>nasıl yapılır: bir hizmette verileri Bağlan
 
 Uygulamanızı [veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png) 'nı çalıştırarak ve **veri kaynağı türü seç** sayfasında **hizmet** ' i seçerek bir hizmetten döndürülen verilere bağlanırsınız.
 
@@ -57,9 +58,9 @@ Sihirbazı tamamladıktan sonra projenize bir hizmet başvurusu eklenir ve [veri
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Uygulamanıza işlevsellik eklemek için, **veri kaynakları** penceresinde bir öğe seçin ve bağlantılı denetimler oluşturmak için onu bir form üzerine sürükleyin. Daha fazla bilgi için bkz. [Visual Studio 'da denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
+Uygulamanıza işlevsellik eklemek için, **veri kaynakları** penceresinde bir öğe seçin ve bağlantılı denetimler oluşturmak için onu bir form üzerine sürükleyin. Daha fazla bilgi için bkz. [Visual Studio denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bir WCF veri hizmetine WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)
-- [Visual Studio 'da Windows Communication Foundation Hizmetleri ve WCF veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+- [Windows Visual Studio 'de Communication Foundation Hizmetleri ve WCF veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

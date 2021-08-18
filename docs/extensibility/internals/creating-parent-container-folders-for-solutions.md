@@ -11,14 +11,15 @@ ms.assetid: 961e68ed-2603-4479-a306-330eda2b2efa
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c9b3b5c01e9c1ad5de9fbb0a44398d3f7963295
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 88ae7686af37b601ef6c5093a035d58281f2bdca
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056850"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086709"
 ---
 # <a name="create-parent-container-folders-for-solutions"></a>Çözümler için üst kapsayıcı klasörleri oluşturma
 Kaynak denetimi eklentisi API sürümü 1,2 ' de, bir Kullanıcı Çözümdeki tüm Web projeleri için tek bir kök kaynak denetimi hedefi belirtebilir. Bu tek köke süper Birleşik kök (SUR) denir.
@@ -50,7 +51,7 @@ Kaynak denetimi eklentisi API sürümü 1,2 ' de, bir Kullanıcı Çözümdeki t
 |Özellik|Kaynak denetimi eklentisi API sürümü 1,1|Kaynak denetimi eklentisi API sürümü 1,2|
 |-------------| - | - |
 |SCC 'e çözüm ekleme|SccInitialize ()<br /><br /> SccGetProjPath ()<br /><br /> SccGetProjPath ()<br /><br /> SccOpenProject ()|SccInitialize ()<br /><br /> SccGetProjPath ()<br /><br /> Scccreatealt projesi ()<br /><br /> Scccreatealt projesi ()<br /><br /> SccOpenProject ()|
-|Kaynak denetimli çözüme proje ekleme|SccGetProjPath ()<br /><br /> OpenProject ()|SccGetParentProjectPath ()<br /><br /> SccOpenProject ()<br /><br />  **Note:**  Visual Studio, bir çözümün bir doğrudan SUR 'in alt öğesi olduğunu varsayar.|
+|Kaynak denetimli çözüme proje ekleme|SccGetProjPath ()<br /><br /> OpenProject ()|SccGetParentProjectPath ()<br /><br /> SccOpenProject ()<br /><br />  **Note:** Visual Studio, bir çözümün bir doğrudan SUR 'in alt öğesi olduğunu varsayar.  |
 
 ## <a name="examples"></a>Örnekler
  Aşağıdaki tabloda iki örnek listelenmektedir. Her iki durumda da, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]  *User_choice* hedef olarak belirtilene kadar, kullanıcıdan kaynak denetimi altındaki çözüm için bir hedef konum istenir. User_choice belirtildiğinde, çözüm ve iki proje, kullanıcıdan kaynak denetimi hedeflerine sormadan eklenir.

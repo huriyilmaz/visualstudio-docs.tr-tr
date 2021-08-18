@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 81ba8eded541cd9db41c891cae8cc6fc86eb1ff9ddd6034070bdb10101d626a1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7486f1328aea816e4442def2d7df7133149f3a68
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452504"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043641"
 ---
 # <a name="contingentproperties-class---internal-members"></a>Kıgentproperties sınıfı-iç Üyeler
 Bir nesne için ek özellikler içerir <xref:System.Threading.Tasks.Task> .

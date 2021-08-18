@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, adresler numaralandırmasından sonraki öğe kümesini döndürür.
-title: 'IEnumDebugAddresses:: Next | Microsoft Docs'
+description: Bu yöntem, adresler numaralamadan sonraki öğe kümesi döndürür.
+title: IEnumDebugAddresses::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 35fb7c1a383d879197b87da7201b10d9d07ddebae2503bc0372a372438ff371a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5715570c3dd95b6ddeede4b090afbe4205cb27f4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415508"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070623"
 ---
 # <a name="ienumdebugaddressesnext"></a>IEnumDebugAddresses::Next
-Bu yöntem, Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.
+Bu yöntem, numaralamadan sonraki öğe kümesi döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,16 +47,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
+[in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
 
 `rgelt`\
-[in, out] Doldurulacak [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) öğelerinin dizisi.
+[in, out] Doldurulması [gereken IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) öğeleri dizisi.
 
 `pceltFetched`\
-dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
+[out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugAddresses](../../../extensibility/debugger/reference/ienumdebugaddresses.md)

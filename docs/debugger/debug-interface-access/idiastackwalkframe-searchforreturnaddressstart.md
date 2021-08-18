@@ -1,6 +1,6 @@
 ---
-description: Belirtilen adreste veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.
-title: 'IDiaStackWalkFrame:: searchForReturnAddressStart | Microsoft Docs'
+description: Belirtilen yığın çerçevesinde belirtilen adreste veya yakınında bir dönüş adresi arar.
+title: IDiaStackWalkFrame::searchForReturnAddressStart | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fd8070890752e08e265ee2f526964a871e848f76
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 8bbb837fe55405b9f66dd55913a8773b5b82ad7a50f132710e2398c60776a5a9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036378"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454842"
 ---
 # <a name="idiastackwalkframesearchforreturnaddressstart"></a>IDiaStackWalkFrame::searchForReturnAddressStart
-Belirtilen adreste veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.
+Belirtilen yığın çerçevesinde belirtilen adreste veya yakınında bir dönüş adresi arar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,18 +37,18 @@ HRESULT searchForReturnAddressStart (
 #### <a name="parameters"></a>Parametreler
  `frame`
 
-'ndaki Geçerli yığın çerçevesini temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi.
+[in] Geçerli yığın çerçevesini temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi.
 
  `startAddress`
 
-'ndaki Aramanın başlatılacağı bir sanal bellek adresi.
+[in] Aramaya başlamak için bir sanal bellek adresi.
 
  `returnAddress`
 
-dışı En yakın işlev dönüş adresini döndürür `startAddress` .
+[out] için en yakın işlev dönüş adresini `startAddress` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

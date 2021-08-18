@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8190d3dea262b3d8dd7fb003eb615cf7c0c24af823e1bf3b615a94c9910a9fbe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cb559127ef421d2159261ff09c462bae2c8de24f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402018"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103643"
 ---
 # <a name="idebugtypefieldbuildercreateprimitive"></a>IDebugTypeFieldBuilder::CreatePrimitive
 Temel bir türü temsil eden bir nesne oluşturur.

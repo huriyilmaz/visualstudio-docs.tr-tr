@@ -11,17 +11,18 @@ ms.assetid: 6dcec574-a852-49fa-8c2e-2e71cbb5e3c6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1b99b5dcede7f0e40e0ff77d1e3f7f64b5943c18
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 497e412b75ee1c37c28da018e3a9f67ec2cab184
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070901"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102928"
 ---
 # <a name="text_position"></a>TEXT_POSITION
 Verilen metindeki satır ve sütun konumunu açıklar.

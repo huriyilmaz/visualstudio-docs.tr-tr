@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama paketine metin özniteliklerinin güncelleştirildiğini bildirir.
-title: 'IDebugDocumentTextEvents2:: onUpdateTextAttributes | Microsoft Docs'
+description: Metin özniteliklerinin belgede güncelleştirilmiş olduğunu hata ayıklama paketine iletir.
+title: IDebugDocumentTextEvents2::onUpdateTextAttributes | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d2645427e283dcef6a8d0f05e6f9cd9d7b847b6eb9509145bfda207a899da3f7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8317bf8374aaff625401f11c576a77d34112630b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390209"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119223"
 ---
 # <a name="idebugdocumenttextevents2onupdatetextattributes"></a>IDebugDocumentTextEvents2::onUpdateTextAttributes
-Hata ayıklama paketine metin özniteliklerinin güncelleştirildiğini bildirir.
+Metin özniteliklerinin belgede güncelleştirilmiş olduğunu hata ayıklama paketine iletir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,13 +45,13 @@ int onUpdateTextAttributes(
 
 ## <a name="parameters"></a>Parametreler
 `pos`\
-'ndaki Metin özniteliklerinin nerede güncelleştirildiğini belirten [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı.
+[in] Metin [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) güncelleştirilmiş olduğunu gösteren bir veri yapısı.
 
 `dwNumToUpdate`\
-'ndaki Güncellenen metnin karakter sayısını belirtir.
+[in] Güncelleştirilen metnin karakter sayısını belirtir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)

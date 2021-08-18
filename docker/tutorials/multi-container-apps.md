@@ -1,28 +1,29 @@
 ---
-title: 'Docker öğreticisi - Bölüm 6: Çok kapsayıcılı uygulamalar'
+title: 'Docker öğreticisi - Bölüm 7: Çok kapsayıcılı uygulamalar'
 description: Kapsayıcılar arasında ağ oluşturma ve MySQL veritabanı için kapsayıcı ekleme.
-ms.date: 08/04/2020
+ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-docker
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: d23d1f5d94729741630ee76263fd5b32041e9cfd
-ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
+ms.openlocfilehash: a006435b6513d3cecf87f61c576dd253e3a68ef6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2021
-ms.locfileid: "113222922"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045521"
 ---
 # <a name="multi-container-apps"></a>Birden çok kapsayıcılı uygulamalar
 
-Bu noktaya kadar tek kapsayıcılı uygulamalarla çalışıyordunız. Ancak şimdi uygulama yığınına MySQL eksersiniz. Şu soru sıklıkla ortaya çıkar: "MySQL nerede çalıştıracak? Aynı kapsayıcıya mı yoksa ayrı olarak mı çalıştırabilirsiniz?" Genel olarak, **her kapsayıcı bir şey yapar ve bunu iyi yapar.** Birkaç neden:
+Bu noktaya kadar tek kapsayıcılı uygulamalarla çalışıyordunız. Ancak şimdi uygulama yığınına MySQL eksersiniz. Aşağıdaki soru genellikle "MySQL nerede çalıştıracak? Aynı kapsayıcıya mı yükleyeceğiz yoksa ayrı mı çalıştırabilirsiniz?" Genel olarak, **her kapsayıcı tek bir şey yapar ve bunu iyi yapar.** Birkaç neden:
 
 - API'leri ve ön uçları veritabanlarından farklı ölçeklendirmek zorunda olma ihtimali yüksek
-- Ayrı kapsayıcılar sürüm ve güncelleştirme sürümlerini yalıtımlı olarak sağlar
+- Ayrı kapsayıcılar sürümü ve güncelleştirme sürümlerini yalıtımlı olarak sağlar
 - Veritabanı için yerel olarak bir kapsayıcı kullanabilirsiniz ancak üretimde veritabanı için yönetilen bir hizmet kullanmak da iyi olabilir. Bu şekilde veritabanı altyapınızı uygulamanıza gönderebilirsiniz.
-- Birden çok işlem çalıştırılacaksa işlem yöneticisi gerekir (kapsayıcı yalnızca bir işlem başlatır), bu da kapsayıcı başlatma/kapatma işlemlerine karmaşıklık getirir.
+- Birden çok işlem çalıştırılacaksa bir işlem yöneticisi gerekir (kapsayıcı yalnızca bir işlem başlatır), bu da kapsayıcı başlatma/kapatma işlemlerine karmaşıklık getirir.
 
 Ayrıca bunun başka nedenleri de vardır. Bu nedenle, uygulamayı şu şekilde çalışacak şekilde güncelleştirebilirsiniz:
 
@@ -30,7 +31,7 @@ Ayrıca bunun başka nedenleri de vardır. Bu nedenle, uygulamayı şu şekilde 
 
 ## <a name="container-networking"></a>Kapsayıcı ağ iletişimi
 
-Kapsayıcıların varsayılan olarak yalıtımlı bir şekilde çalıştırı ve aynı makinede yer alan diğer işlemler veya kapsayıcılar hakkında hiçbir şey bilmiyor olduğunu unutmayın. Peki, bir kapsayıcının başka bir kapsayıcıyla konuşmasına nasıl izin ve ardından? Yanıt ağ **iletişimidir.** Artık ağ mühendisi (ray!) olmak zorunda değilsiniz. Bu kuralı unutmayın...
+Kapsayıcıların varsayılan olarak yalıtımlı bir şekilde çalıştırı ve aynı makinede bulunan diğer işlemler veya kapsayıcılar hakkında hiçbir şey bilmiyor olduğunu unutmayın. Peki, bir kapsayıcının başka bir kapsayıcıyla konuşmasına nasıl izin ve ardından? Yanıt ağ **iletişimidir.** Artık ağ mühendisi (ray!) olmak zorunda değilsiniz. Bu kuralı unutmayın...
 
 > [!NOTE]
 > İki kapsayıcı aynı ağ üzerinde ise, iletişimde olabilir. Böyle bir şey yoksa, bunu geri alazlar.
@@ -45,7 +46,7 @@ Bir kapsayıcıyı ağa koymanın iki yolu vardır: en başında ata veya var ol
     docker network create todo-app
     ```
 
-1. MySQL kapsayıcısı başlatma ve ağ ekleme. Ayrıca veritabanını başlatmak için veritabanının kullanabileceği birkaç ortam değişkeni tanımlayacağız [(MySQL](https://hub.docker.com/_/mysql/)Docker Hub listesinin "Ortam Değişkenleri" bölümüne bakın) (karakterleri ` \ ` `` ` `` Windows PowerShell).
+1. MySQL kapsayıcısı başlatma ve ağ ekleme. Ayrıca veritabanını başlatmak için veritabanının [(MySQL](https://hub.docker.com/_/mysql/)Docker Hub listesinin "Ortam Değişkenleri" bölümüne bakın) birkaç ortam değişkeni tanımlayacağız (karakterlerini ` \ ` `` ` `` Windows PowerShell).
 
     ```bash
     docker run -d \
@@ -56,18 +57,18 @@ Bir kapsayıcıyı ağa koymanın iki yolu vardır: en başında ata veya var ol
         mysql:5.7
     ```
 
-    Bayrağını belirttiğinizi de `--network-alias` göreceğiz. Birkaç dakika içinde bu şekilde devam etmek istiyorum.
+    Bayrağını belirttiğinizi de `--network-alias` göreceğiz. Birazdan bu şekilde devam etmek istiyorum.
 
     > [!TIP]
-    > Burada bir birim adı kullanmakta ve bu adı `todo-mysql-data` `/var/lib/mysql` MySQL'in verilerini depolayana bağlamayı fark vardır. Ancak, hiçbir zaman bir komutta hiç komutunuz `docker volume create` olmadı. Docker adlandırılmış bir birim kullanmak istediğinizi tanır ve sizin için otomatik olarak bir birim oluşturur.
+    > Burada bir birim adı kullanmakta ve bu adı MySQL'in verilerini depo bulunduğu yere `todo-mysql-data` `/var/lib/mysql` bağlamayı fark vardır. Ancak, hiçbir zaman bir komutta hiç komutunuz `docker volume create` olmadı. Docker adlandırılmış bir birim kullanmak istediğinizi tanır ve sizin için otomatik olarak bir birim oluşturur.
 
-1. Veritabanının çalıştığını onaylamak için veritabanına bağlanarak bağlanarak bağlanarak bağlantı kurabilirsiniz.
+1. Veritabanının çalıştığını onaylamak için veritabanına bağlanarak veritabanının çalıştığını doğrulayın.
 
     ```bash
     docker exec -it <mysql-container-id> mysql -p
     ```
 
-    Parola istemi geldiğinde gizli **yazın.** MySQL kabuğunda veritabanlarını listele ve veritabanını gördüğünüzden emin `todos` olun.
+    Parola istemi geldiğinde gizli **yazın.** MySQL kabuğunda veritabanlarını listelenin ve veritabanını gördüğünüzden emin `todos` olun.
 
     ```cli
     mysql> SHOW DATABASES;
@@ -88,13 +89,13 @@ Bir kapsayıcıyı ağa koymanın iki yolu vardır: en başında ata veya var ol
     5 rows in set (0.00 sec)
     ```
 
-    Yaşasın! Veritabanınız `todos` var ve kullanıma hazır!
+    Yaşasın! Veritabanınız `todos` hazır ve kullanıma hazır!
 
 ## <a name="connect-to-mysql"></a>Bağlan MySQL'e
 
 Artık MySQL'in çalışıyor olduğunu biliyorsunuz. Şimdi bunu kullanabiliriz! Ancak soru şu: Nasıl? Aynı ağ üzerinde başka bir kapsayıcı çalıştırsanız kapsayıcıyı nasıl bulursunuz (her kapsayıcının kendi IP adresi olduğunu unutmayın)?
 
-Bunu çözmek için, ağ sorunlarını gidermek veya hata ayıklamak için yararlı olan çok  sayıda araçla birlikte birlikte gelir ve bu kapsayıcıyı [kullanılaka/netshoot](https://github.com/nicolaka/netshoot) kapsayıcısını kullanabilirsiniz.
+Bunu çözmek için, ağ sorunlarını gidermek veya hata ayıklamak için yararlı olan birçok  araçla birlikte bir çok araçla birlikte gelir ve bu kapsayıcıyı [kullanılaka/netshoot](https://github.com/nicolaka/netshoot) kapsayıcısını kullanabilirsiniz.
 
 1. Görüntüyü kullanarak yeni bir kapsayıcı `nicolaka/netshoot` başlatma. Bunu aynı ağa bağdan emin olun.
 
@@ -108,7 +109,7 @@ Bunu çözmek için, ağ sorunlarını gidermek veya hata ayıklamak için yarar
     dig mysql
     ```
 
-    Bunun gibi bir çıkışla da...
+    Bunun gibi bir çıkışla da ...
 
     ```text
     ; <<>> DiG 9.14.1 <<>> mysql
@@ -129,9 +130,9 @@ Bunu çözmek için, ağ sorunlarını gidermek veya hata ayıklamak için yarar
     ;; MSG SIZE  rcvd: 44
     ```
 
-    "CEVAPLA BÖLÜMÜNDE" olarak çözümlene bir kayıt görüyorsunuz (IP adresinizin büyük olasılıkla `A` `mysql` farklı bir değeri `172.23.0.2` olacak). Normalde geçerli bir ana bilgisayar adı olmayabilir ancak Docker bu sorunu ağ diğer adı olan kapsayıcının IP adresine çözümlemiştir (daha önce kullanılan bayrağı `mysql` `--network-alias` unutmayın).)
+    "CEVAPLA BÖLÜMÜNDE" olarak çözümlene bir kayıt (IP adresinizin büyük olasılıkla `A` `mysql` farklı bir değeri `172.23.0.2` olur) olduğunu görüyorsunuz. Normalde geçerli bir ana bilgisayar adı olmayabilir ancak Docker bu sorunu ağ diğer adı olan kapsayıcının IP adresine çözümlemiştir (daha önce kullanılan bayrağı `mysql` `--network-alias` unutmayın).)
 
-    Bunun anlamı... Uygulamanın yalnızca adlı bir ana bilgisayara bağlanması `mysql` gerekir ve veritabanıyla iletişim kuracak! Bundan çok daha basit olamaz!
+    Bunun anlamı... Yalnızca adlı bir ana bilgisayara bağlanmanız gerekiyor `mysql` ve bu da veritabanıyla iletişim kuracak! Bundan çok daha basit olamaz!
 
 ## <a name="run-your-app-with-mysql"></a>MySQL ile uygulama çalıştırma
 
@@ -143,7 +144,7 @@ Todo uygulaması, MySQL bağlantı ayarlarını belirtmek için birkaç ortam de
 - `MYSQL_DB` - bağlandıktan sonra kullanmak üzere veritabanı
 
 > [!WARNING]
-> **Ortam Değişkenleri Ayarlar Bağlantı Ayarları** Bağlantı ayarlarını ayarlamak için ortam değişkenlerini kullanmak genellikle geliştirme için uygun bir durumdur ancak üretim ortamında uygulama çalıştırmanız önerilmez. Bunun neden olduğunu anlamak [için bkz. Gizli veriler için neden ortam değişkenlerini kullanmamalısınız?](https://diogomonica.com/2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/)
+> **Ortam Değişkenleri Ayarlar Bağlantı Bağlantısını Ayarlama** Bağlantı ayarlarını ayarlamak için ortam değişkenlerini kullanmak genellikle geliştirme için uygun bir durumdur ancak üretim ortamında uygulama çalıştırmanız önerilmez. Bunun neden olduğunu anlamak [için bkz. Gizli veriler için neden ortam değişkenlerini kullanmamalısınız?](https://diogomonica.com/2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/)
 > Daha güvenli bir mekanizma, kapsayıcı düzenleme çerçeveniz tarafından sağlanan gizli destek kullanmaktır. Çoğu durumda, bu gizli diziler çalışan kapsayıcıya dosya olarak monte edilir. Birçok uygulama (MySQL görüntüsü ve todo uygulaması dahil) ayrıca dosyayı içeren bir dosyaya işaret etmek için son eke sahip env vars'ı `_FILE` da destekler.
 > Örneğin, var ayarı uygulamanın bağlantı parolası olarak başvurulan `MYSQL_PASSWORD_FILE` dosyanın içeriğini kullanmana neden olur. Docker, bu env değişkenlerini desteklemek için hiçbir şey yapmaz. Uygulamanıza değişkenin bakarak dosya içeriğinin nasıl elde olduğunu bilmek gerekir.
 
@@ -196,9 +197,9 @@ Tüm bu açıklamalarla, geliştirme için hazır kapsayıcınızı başlatabili
     +--------------------------------------+--------------------+-----------+
     ```
 
-    Tablo, öğelerinizi içerir ve tablo farklı bir görünüme sahip olur. Ancak burada depolanmış olduğunu görüyoruz!
+    Açıkça görülüyor ki tablo, öğeleriniz olduğundan farklı görünüyor. Ancak burada depolanmış olduğunu görüyoruz!
 
-Docker uzantısına hızlı bir şekilde göz atarak iki uygulama kapsayıcısı çalıştırabilirsiniz. Ancak bunların tek bir uygulamada gruplandıklarının gerçek bir göstergesi yoktur. Kısa süre içinde bunu nasıl daha iyi halelay diye bakacağız!
+Docker uzantısına hızlı bir şekilde göz atarak iki uygulama kapsayıcısı çalıştırabilirsiniz. Ancak, bunların tek bir uygulamada birlikte gruplandıklarının gerçek bir göstergesi yoktur. Kısa süre içinde bunu nasıl daha iyi halelay diye bakacağız!
 
 ![İki gruplanmamış uygulama kapsayıcısını gösteren Docker Uzantısı](media/vs-multi-container-app.png)
 
@@ -206,7 +207,7 @@ Docker uzantısına hızlı bir şekilde göz atarak iki uygulama kapsayıcısı
 
 Bu noktada, artık verilerini ayrı bir kapsayıcıda çalışan bir dış veritabanında depolar. Kapsayıcı ağı hakkında biraz bilgi edindi ve DNS kullanılarak hizmet bulmanın nasıl gerçekleştirileileceğini öğrendin.
 
-Ancak, bu uygulamayı başlatmak için ihtiyacınız olan her şeye biraz bunalmış gibi hissetmeye başlama ihtimaline sahipsiniz. Bir ağ oluşturmanız, kapsayıcıları başlatmanız, tüm ortam değişkenlerini belirtmeniz, bağlantı noktalarını açığa çıkarmanız ve daha fazlası gerekir! Anımsanacak çok şey var ve bu da işleri başka birine geçmeyi zorlaştırır.
+Ancak, bu uygulamayı başlatmak için ihtiyacınız olan her şeye biraz bunalmış gibi hissetmeye başlama ihtimaline sahipsiniz. Bir ağ oluşturmanız, kapsayıcıları başlatmanız, tüm ortam değişkenlerini belirtmeniz, bağlantı noktalarını açığa çıkarmanız ve daha fazlası gerekir! Anımsanacak çok şey vardır ve bu da kesinlikle işleri başka birine iletken daha zor hale geliyor.
 
 Sonraki bölümde bu konu hakkında Docker Compose. Bu Docker Compose, uygulama yığınlarınızı çok daha kolay bir şekilde paylaşabilir ve başkalarının tek (ve basit) bir komutla bunları döndürmesine izin veebilirsiniz!
 
@@ -215,4 +216,4 @@ Sonraki bölümde bu konu hakkında Docker Compose. Bu Docker Compose, uygulama 
 Öğreticiye devam edin!
 
 > [!div class="nextstepaction"]
-> [Docker Compose kullanma](use-docker-compose.md)
+> [Using Docker Compose](use-docker-compose.md)

@@ -16,15 +16,15 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 21723deada493dd5e3d6ab6a16c6dc6366829bbb
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 04f0dfba96ac09ff9cc87627f111f814f71d51b5554826ea524360c2af5323f3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122135578"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440935"
 ---
 # <a name="access-data-in-documents-on-the-server"></a>Sunucu belgelerde verilere erişme
-  Word veya Microsoft Office Excel'nin nesne modelini kullanmak zorunda kalmadan, belge düzeyi Microsoft Office özelleştirmede verilere karşı program Microsoft Office Excel. Bu, Word veya Excel yüklü bir sunucu üzerinde belge içinde yer alan verilere erişebilirsiniz. Örneğin, bir sunucu üzerinde kod (örneğin, bir sayfada), bir belgede verileri özelleştirilebilir ve özelleştirilmiş [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] belgeyi son kullanıcıya gönderebilir. Son kullanıcı belgeyi açtığında, çözüm derlemesinde veri bağlama kodu özelleştirilmiş verileri belgeye bağlar. Belgede yer alan veriler kullanıcı arabiriminden ayrıldığından bu mümkündür. Daha fazla bilgi için [bkz. Belge düzeyinde özelleştirmelerde önbelleğe alınmış veriler.](../vsto/cached-data-in-document-level-customizations.md)
+  Word veya Microsoft Office Excel'nin nesne modelini kullanmak zorunda kalmadan, belge düzeyi Microsoft Office özelleştirmede verilere karşı program Microsoft Office Excel. Bu, Word veya Excel yüklü olan bir sunucu üzerinde belge içinde yer alan verilere erişebilirsiniz. Örneğin, bir sunucu üzerinde kod (örneğin, bir sayfada), bir belgede verileri özelleştirilebilir ve özelleştirilmiş [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] belgeyi son kullanıcıya gönderebilir. Son kullanıcı belgeyi açtığında, çözüm derlemesinde veri bağlama kodu özelleştirilmiş verileri belgeye bağlar. Belgede yer alan veriler kullanıcı arabiriminden ayrıldığından bu mümkündür. Daha fazla bilgi için [bkz. Belge düzeyinde özelleştirmelerde önbelleğe alınmış veriler.](../vsto/cached-data-in-document-level-customizations.md)
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "122135578"
  Sunucu tarafı kodu, veri önbelleğinde herhangi bir veri nesnelerini işabilir. Önbelleğe alınan veri örneklerine bağlı denetimler kullanıcı arabirimiyle eşitlenir, böylece verilerde yapılan tüm sunucu tarafı değişiklikleri, belge istemcide açıldığında otomatik olarak ortaya açılır.
 
 ## <a name="access-data-in-the-cache"></a>Önbellekte verilere erişme
- Önbellekte yer alan verilere bir konsol Office, Windows Forms uygulaması veya Web sayfası gibi uygulamaların dışından erişebilirsiniz. Önbelleğe alınan verilere erişen uygulamanın tam güveni olması gerekir; kısmi güveni olan bir Web uygulaması, bir belgede önbelleğe alınmış verileri ek Office veya değiştiremez.
+ Önbellekte yer alan verilere, Office dışındaki uygulamalardan (örneğin, bir konsol uygulamasından, Windows Forms uygulamasından veya bir Web sayfasından) erişebilirsiniz. Önbelleğe alınan verilere erişen uygulamanın tam güveni olması gerekir; Kısmi güveni olan bir Web uygulaması, bir belgeye önbelleğe alınmış verileri ek Office veya değiştiremez.
 
  Veri önbelleğine, sınıfının özelliği tarafından ortaya çıkarılma koleksiyon <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> hiyerarşisi aracılığıyla <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> erişilebilir:
 
@@ -44,7 +44,7 @@ ms.locfileid: "122135578"
 
 - Her <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem> biri bir veya daha fazla nesne <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> içerir. , <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> önbelleğe alınmış tek bir veri nesnesini temsil eder.
 
-  Aşağıdaki kod örneği, bir Excel çalışma kitabı projesinin sınıfında `Sheet1` önbelleğe alınmış bir dizeye erişmeyi gösterir. Bu örnek, yöntemi için sağlanan daha büyük bir örneğin bir <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> parçasıdır.
+  Aşağıdaki kod örneği, bir çalışma kitabı projesinin sınıfında önbelleğe alınmış `Sheet1` bir dizeye Excel gösterir. Bu örnek, yöntemi için sağlanan daha büyük bir örneğin bir <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.Save%2A> parçasıdır.
 
   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ServerDocument/Form1.cs" id="Snippet12":::
   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ServerDocument/Form1.vb" id="Snippet12":::
@@ -75,10 +75,10 @@ ms.locfileid: "122135578"
 
 - Veri önbelleğinde herhangi bir nesneyi **null** değerine ayarsanız, belge açıldığında veri önbelleğinde yer alan tüm nesneler otomatik olarak **null** olarak ayarlanır ve belge kaydedilen ve kapatılan veri önbelleğinin tamamı temizlenir. Diğer bir ifadeyle, önbelleğe alınan tüm nesneler veri önbelleğinden kaldırılır ve <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> koleksiyon boş olur.
 
-- Veri önbelleğinde **null** nesnelere sahip bir çözüm oluşturursanız ve belge ilk kez başlatılmadan önce sınıfını kullanarak bu nesneleri başlatmak istiyorsanız, veri önbelleğinde tüm nesneleri başlatmak istediğinizden emin olmak <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> gerekir. Yalnızca bazı nesneleri başlatacak olursanız, belge açıldığında tüm nesneler **null** olarak ayarlanır ve belge kaydedilen ve kapatılan veri önbelleğinin tamamı temizlenmiş olur.
+- Veri önbelleğinde **null** nesnelere sahip bir çözüm oluşturursanız ve belge ilk kez başlatılmadan önce sınıfını kullanarak bu nesneleri başlatmak istiyorsanız, veri önbelleğinde tüm nesneleri <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> başlatabilirsiniz. Yalnızca bazı nesneleri başlatacak olursanız, belge açıldığında tüm nesneler **null** olarak ayarlanır ve belge kaydedilen ve kapatılan veri önbelleğinin tamamı temizlenmiş olur.
 
 ## <a name="access-typed-datasets-in-the-cache"></a>Önbellekte türü türü alınmış veri kümelerine erişme
- Hem Office çözümünden hem de Windows Forms uygulaması veya proje gibi Office dışındaki bir uygulamanın türüne sahip bir veri kümesinde yer alan verilere erişmek için, türüne sahip veri kümesini her iki projede de başvurulan ayrı bir derlemede tanımlamanız [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] gerekir. Veri Kaynağı Yapılandırma sihirbazını veya **Veri Kümesi Tasarımcısı'yi** kullanarak her bir projeye türü yazıldı veri kümesi eklersiniz, .NET Framework iki projede türü farklı türlerde olan veri kümelerini işler.  Türü yazılan veri kümeleri oluşturma hakkında daha fazla bilgi için bkz. Veri [kümelerini](../data-tools/create-and-configure-datasets-in-visual-studio.md)Visual Studio.
+ Hem Office çözümünden hem de Windows Forms uygulaması veya proje gibi Office dışındaki bir uygulamanın türüne sahip bir veri kümesinde yer alan verilere erişmek için, türüne sahip veri kümesini her iki projede de başvurulan ayrı bir derlemede tanımlamanız [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] gerekir. Veri Kaynağı Yapılandırma sihirbazını veya Veri Kümesi Tasarımcısı'yi  kullanarak her bir projeye türü yazıldı veri kümesi eklersiniz, .NET Framework, iki projede türü türü farklı olan veri kümelerini farklı türler olarak davranır. Türü yazılan veri kümeleri oluşturma hakkında daha fazla bilgi için bkz. Veri [kümelerini](../data-tools/create-and-configure-datasets-in-visual-studio.md)Visual Studio.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

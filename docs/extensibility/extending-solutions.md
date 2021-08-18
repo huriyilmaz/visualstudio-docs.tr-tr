@@ -1,6 +1,6 @@
 ---
-title: Çözümleri Genişletme | Microsoft Docs
-description: Çözümleri genişletme hakkında bilgi edinmek. Çözüm, uygulama oluşturmak için birlikte çalışan bir veya daha fazla projeden gruplamadır.
+title: Çözümleri genişletme | Microsoft Docs
+description: Çözümleri genişletme hakkında bilgi edinin. Bir çözüm, bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla projenin gruplandırmasıdır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,19 +11,19 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e8e886c2209ff08fe9fec5e8a06fe40f17d887552ff6f1ac8bf249b424beb59
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5c2388bc139d306ed724c750208ef65b5a835929
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360033"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087177"
 ---
 # <a name="extend-solutions"></a>Çözümleri genişletme
-Çözüm, uygulama oluşturmak için birlikte çalışan bir veya daha fazla projeden gruplamadır.
+Bir çözüm, bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla projenin gruplandırmasıdır.
 
 ## <a name="in-this-section"></a>Bu bölümde
- Aşağıdaki izlenecek yollarda, çözümleri genişletebilirsiniz.
+ Aşağıdaki izlenecek yollarda, çözümlerini genişletebilmeniz için bazı yollar gösterilmektedir.
 
-1. [Filtreyi Çözüm Gezgini, filtrenin](../extensibility/extending-the-solution-explorer-filter.md) nasıl görüntü Çözüm Gezgini açıklar.
+1. [Çözüm Gezgini filtresini genişletmek](../extensibility/extending-the-solution-explorer-filter.md) Çözüm Gezgini ne şekilde filtreleneceğini açıklar.
 
-2. [Bir çözümde proje yüklemesini yönetme,](../extensibility/managing-project-loading-in-a-solution.md) kullanıcı bir çözüm yükleyene kadar performansı artırmak için proje yüklemesini yönetmeyi açıklar.
+2. [Bir çözümde proje yüklemeyi yönetme](../extensibility/managing-project-loading-in-a-solution.md) Kullanıcı bir çözüm yüklediğinde performansı artırmak için proje yükleme 'nin nasıl yönetileceğini açıklar.

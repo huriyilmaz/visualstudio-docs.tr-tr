@@ -11,17 +11,18 @@ ms.assetid: f5de31ca-7b8d-4029-9cf9-ba860ac66af6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2125bb90693d5a4c5cc23ac1225d56dea636de2e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8ef456e484347aa278e5a3c44799eecc8949a565
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085058"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072438"
 ---
 # <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
 Hata ayıklama altyapısının (DE) durdurulması nedenini alır.

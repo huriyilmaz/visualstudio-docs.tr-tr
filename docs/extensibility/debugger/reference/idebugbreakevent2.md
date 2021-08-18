@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: b07b7203f8ce3d557b0bbb2d4c1ca410e481aec67555da5f21f0563702e71656
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1816d2a6c53c4a1840f6511676dafff7a3710394
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121293046"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119769"
 ---
 # <a name="idebugbreakevent2"></a>IDebugBreakEvent2
 Bu arabirim, oturum hata ayıklama Yöneticisi 'ne (SDM) zaman uyumsuz bir kesmenin başarıyla tamamlandığını söyler.

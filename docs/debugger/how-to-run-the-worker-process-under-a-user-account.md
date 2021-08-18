@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e9bf2b73d83f2a55bc9b8c370eff6036265dcea6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: f3fb8c2294a15aa50900e8f22b3891aef76ed6848dffae607df72f4d23a19161
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122097213"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453582"
 ---
 # <a name="how-to-run-the-worker-process-under-a-user-account"></a>Nasıl Yapılır: Çalışan İşlemi Kullanıcı Hesabı Altında Çalıştırma
 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]Bir kullanıcı hesabı altında çalışan işlemini (aspnet_wp.exe veya w3wp.exe) çalıştırabilmeniz için bilgisayarınızı ayarlamak için aşağıdaki adımları izleyin.

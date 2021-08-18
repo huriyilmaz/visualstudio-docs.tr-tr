@@ -22,12 +22,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 27e761d9a96a8ca2495e24684f9011fb6d09d7b104b75c28cda9077069698889
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2e6356a2a89fa78d02fb3f7196abd190ba12676e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121442066"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054567"
 ---
 # <a name="profile-on-hpc-high-performance-computing-clusters"></a>HPC (yüksek performanslı bilgi işlem) kümelerinde profil
 
@@ -145,9 +145,9 @@ Performans oturumu özellikleri sayfasının HPC Başlatma Özellikleri sayfası
 | **Dağıtılacak ek dosyalar** | İşlem düğümünde dağıtılacak ek dosyaların noktalı virgülle ayrılmış bir listesini belirtir. Bir iletişim kutusunu kullanarak birden çok dosya seçmek için üç nokta düğmesini (**...**) tıklayabilirsiniz. |
 | **Mpiexec komutu** | MPı uygulamasını Başlatan uygulamayı belirtir. Varsayılan değer **mpiexec.exe** |
 | **Mpiexec bağımsız değişkenleri** | mpiexec.exe komutuna geçirilecek bağımsız değişkenleri belirtir. |
-| **Kümede istenen düğümler** | Uygulamayı çalıştıracak kümedeki düğüm sayısını belirtir. |
-| **CRT dosyalarını dağıtma** | True olduğunda, kümede C/C++ çalışma zamanı dağıtır. |
-| **Profil öncesi betik** | Profil oluşturma oturumu başlamadan önce yerel geliştirme bilgisayarda çalıştıracak betiğin yolunu ve dosya adını belirtir. |
-| **Profil öncesi betik bağımsız değişkenleri** | Profil öncesi betiğine geçecek bağımsız değişkenleri belirtir. |
-| **Profil sonrası betik** | Profil oluşturma oturumu sona erdikten sonra yerel geliştirme bilgisayarda çalıştıracak betiğin yolunu ve dosya adını belirtir. |
-| **Profil sonrası betik bağımsız değişkenleri** | Profil sonrası betiğine geçecek bağımsız değişkenleri belirtir. |
+| **Kümede istenen düğümler** | Uygulamanın çalıştırılacağı kümedeki düğüm sayısını belirtir. |
+| **CRT dosyaları dağıtma** | Doğru olduğunda, kümede C/C++ çalışma süresini dağıtır. |
+| **Ön profil betiği** | Profil oluşturma oturumu başlamadan önce yerel geliştirme bilgisayarında çalıştırılacak betiğin yolunu ve dosya adını belirtir. |
+| **Profil öncesi betik bağımsız değişkenleri** | Profil öncesi betiğe geçirilecek bağımsız değişkenleri belirtir. |
+| **Profil sonrası betiği** | Profil oluşturma oturumu bittikten sonra yerel geliştirme bilgisayarında çalıştırılacak betiğin yolunu ve dosya adını belirtir. |
+| **Profil sonrası betik bağımsız değişkenleri** | Profil sonrası betiğe geçirilecek bağımsız değişkenleri belirtir. |

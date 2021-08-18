@@ -1,6 +1,6 @@
 ---
-description: IDebugEngineLaunch2::TerminateProcess bir işlemi sonlandırılır.
-title: IDebugEngineLaunch2::TerminateProcess | Microsoft Docs
+description: 'IDebugEngineLaunch2:: TerminateProcess bir işlemi sonlandırır.'
+title: 'IDebugEngineLaunch2:: TerminateProcess | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b4b13a11def20f2bc6b90133661df6e4375b4dc832e2d91ba26c24644a24aa68
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1a487bd5f79a7953f9d09a0cf57bf90e07847cfe
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390053"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118963"
 ---
 # <a name="idebugenginelaunch2terminateprocess"></a>IDebugEngineLaunch2::TerminateProcess
-Bir işlemi sonlandırılır.
+Bir işlemi sonlandırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int TerminateProcess (
 
 ## <a name="parameters"></a>Parametreler
 `pProcess`\
-[in] Sonlandırılacak işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
+'ndaki Sonlandırılacak işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemi [çağırmadan önce CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) yöntemini çağırma.
+ Bu yöntemi çağırmadan önce [CanTerminateProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-canterminateprocess.md) yöntemini çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

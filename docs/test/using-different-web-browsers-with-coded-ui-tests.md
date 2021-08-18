@@ -10,12 +10,12 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 22821e8dacca86a659d412ae85a04afd3f8b32911dfea59ef2b67ec66da0f264
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 216046727e40d9e086ffe69e312ce22ccc6b6357
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384684"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054047"
 ---
 # <a name="use-different-web-browsers-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle farklı Web tarayıcıları kullanma
 

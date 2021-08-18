@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e5902212cdfc879b32c4e547e1505b9c7fc95904a8c56c70711a8110a7ddee91
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9b2860214acc534b43c4c47ea837e74c18eb6fbe
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377229"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103058"
 ---
 # <a name="program_node_array"></a>PROGRAM_NODE_ARRAY
 İlgi programlarını açıklayan bir nesne dizisi içerir.

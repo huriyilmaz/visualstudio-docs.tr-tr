@@ -1,6 +1,6 @@
 ---
-title: Sorun giderme hataları (ClickOnce dağıtımları)
-description: Bu makalede, bir ClickOnce uygulaması dağıttığınızda oluşabilecek yaygın hatalar açıklanmakta ve her bir sorunu çözmek için adımlar sağlanmaktadır.
+title: Hataları giderme (ClickOnce dağıtımları)
+description: Bu makalede, bir ClickOnce uygulaması dağıtırken ortaya çıkabilir ve her sorunu çözme adımları açıklanmıştır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -19,119 +19,120 @@ ms.assetid: 22dfe8f1-8271-4708-9c25-6bbb13920ac8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 4697aa4869535d63c522ae25c978dd89bfe51697
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4cfbfa1c13a6006303b1fd0fa164d78c7f4e6b9f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876179"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089829"
 ---
 # <a name="troubleshoot-specific-errors-in-clickonce-deployments"></a>ClickOnce dağıtımları içinde belirli hataları giderme
-Bu makalede, bir uygulamayı dağıtırken oluşabilecek aşağıdaki yaygın hatalar listelenir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ve her bir sorunu çözmek için adımlar sağlanır.
+Bu makalede, bir uygulamayı dağıtırken ortaya çıkabilir aşağıdaki yaygın hatalar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] liste ve her sorunu çözmek için adımlar sağlar.
 
 ## <a name="general-errors"></a>Genel hatalar
 
-#### <a name="when-you-try-to-locate-an-application-file-nothing-occurs-or-xml-renders-in-internet-explorer-or-you-receive-a-run-or-save-as-dialog-box"></a>Bir uygulama dosyasını bulmaya çalıştığınızda, hiçbir şey gerçekleşmez veya Internet Explorer 'da XML oluşturma veya farklı Kaydet iletişim kutusu alıyorsunuz
- Bu hata, büyük olasılıkla içerik türlerinin (MIME türleri olarak da bilinir) sunucu veya istemciye doğru kaydedilmemesinin nedeni olabilir.
+#### <a name="when-you-try-to-locate-an-application-file-nothing-occurs-or-xml-renders-in-internet-explorer-or-you-receive-a-run-or-save-as-dialog-box"></a>Bir uygulama dosyasını bulmaya çalışsanız hiçbir şey olmaz veya XML Internet Explorer veya Farklı Çalıştır iletişim kutusu alırsınız
+ Bu hata büyük olasılıkla içerik türlerinin (MIME türleri olarak da bilinir) sunucuda veya istemcide doğru şekilde kaydedilememelerinden kaynaklandır.
 
- İlk olarak, sunucunun *. Application* uzantısını "application/x-MS-Application" içerik türüyle ilişkilendirmek için yapılandırıldığından emin olun.
+ İlk olarak, sunucunun *.application* uzantısını "application/x-ms-application" içerik türüyle ilişkilendirmek üzere yapılandırıldığından emin olun.
 
- Sunucu doğru yapılandırılmışsa, .NET Framework 2,0 ' in bilgisayarınızda yüklü olduğundan emin olun. 2,0 .NET Framework yüklüyse ve bu sorunu görmeye devam ediyorsanız, içerik türünü istemciye yeniden kaydetmek için .NET Framework 2,0 ' yi kaldırıp yeniden yüklemeyi deneyin.
+ Sunucu doğru yapılandırıldıysa, bilgisayarınızda .NET Framework 2.0'ın yüklü olup olmadığını denetleyin. .NET Framework 2.0 yüklüyse ve bu sorunu görmeye devam ediyorsanız, içerik türünü istemciye yeniden kaydetmek için .NET Framework 2.0'ı kaldırıp yeniden yüklemeyi deneyin.
 
-#### <a name="error-message-says-unable-to-retrieve-application-files-missing-in-deployment-or-application-download-has-been-interrupted-check-for-network-errors-and-try-again-later"></a>Hata iletisi şöyle, "uygulama alınamıyor. Dağıtımda eksik dosyalar "veya" uygulama indirme işlemi kesildi, ağ hatalarını kontrol edin ve daha sonra yeniden deneyin "
- Bu ileti, bildirimlerin başvurduğu bir veya daha fazla dosyanın [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] indirilebileceğini gösterir. Bu hatayı ayıklamanın en kolay yolu, indirmediği belirten URL 'YI indirmeye çalışacaktır [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Olası bazı nedenler şunlardır:
+#### <a name="error-message-says-unable-to-retrieve-application-files-missing-in-deployment-or-application-download-has-been-interrupted-check-for-network-errors-and-try-again-later"></a>Hata iletisi şöyledir: "Uygulama alınamadı. Dağıtımda eksik dosyalar" veya "Uygulama indirme kesintiye uğradı, ağ hatalarını denetleyin ve daha sonra yeniden deneyin"
+ Bu ileti, bildirim tarafından başvurulan bir veya daha fazla [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dosyanın indirilenenem olduğunu gösterir. Bu hatada hata ayıklamanın en kolay yolu, indirileyebilen [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] URL'yi indirmeyi denemektir. Olası bazı nedenler:
 
-- Günlük dosyası "(403) yasak" veya "(404) bulunamadı" diyorsa, Web sunucusunun bu dosyanın indirilmesini engellememek için yapılandırıldığını doğrulayın. Daha fazla bilgi için bkz. [ClickOnce dağıtımlarında sunucu ve Istemci Yapılandırma sorunları](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md).
+- Günlük dosyasında "(403) Yasak" veya "(404) Bulunamadı" yazıyorsa, Web sunucusunun yapılandırıldığından emin olun. Daha fazla bilgi için [bkz. Dağıtımlarda Sunucu ve ClickOnce Sorunları.](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)
 
-- *. Config* dosyası sunucu tarafından engelleniyorsa, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Bu makalenin sonraki kısımlarında yer alan ". config dosyası olan bir uygulamayı yüklemeye çalıştığınızda karşıdan yükleme hatası" bölümüne bakın.
+- .config *dosyası* sunucu tarafından engellenmişse, bu makalenin devamlarında "Bir .config dosyası olan bir uygulamayı yüklemeye çalışsanız hata [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] indir" bölümüne bakın.
 
-- `deploymentProvider`Dağıtım bildirimindeki URL, etkinleştirme için kullanılan URL 'den farklı bir konuma işaret ettiğinden, bu hatanın oluşup oluşmadığını belirleme.
+- Dağıtım bildiriminde URL etkinleştirme için kullanılan URL'den farklı bir konuma işaret ettiği için `deploymentProvider` bu hatanın olup olmadığını belirler.
 
-- Tüm dosyaların sunucuda bulunduğundan emin olun; [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] günlük, hangi dosyanın bulunamadığını anlatmalıdır.
+- Tüm dosyaların sunucuda mevcut olduğundan emin olun; [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] günlük size hangi dosyanın bulunamadı gerektiğini söylemeli.
 
-- Ağ bağlantısı sorunları olup olmadığını öğrenin; Bu iletiyi, istemci bilgisayarınız indirme sırasında çevrimdışı olursa alırsınız.
+- Ağ bağlantısı sorunları olup olmadığını denetleyin; İndirme sırasında istemci bilgisayarınız çevrimdışıysa bu iletiyi alabilirsiniz.
 
-#### <a name="download-error-when-you-try-to-install-a-clickonce-application-that-has-a-config-file"></a>. Config dosyasına sahip bir ClickOnce uygulaması yüklemeye çalıştığınızda indirme hatası
- Varsayılan olarak, Visual Basic Windows tabanlı bir uygulama App.config bir dosya içerir. Bir Kullanıcı Windows Server 2003 kullanan bir Web sunucusundan yüklemeye çalıştığında, işletim sistemi güvenlik nedenleriyle *. config* dosyalarının yüklenmesini engellediği için bir sorun olacaktır. *. Config* dosyasının yüklenmesini etkinleştirmek Için **Yayımlama seçenekleri** iletişim kutusunda **". deploy" dosya uzantısını kullan** ' a tıklayın.
+#### <a name="download-error-when-you-try-to-install-a-clickonce-application-that-has-a-config-file"></a>.config dosyası olan bir ClickOnce uygulamayı yükleme sırasında .config indirme
+ Varsayılan olarak, Visual Basic Windows tabanlı bir uygulama bir App.config içerir. Bir kullanıcı Windows Server 2003 kullanan bir Web sunucusundan yükleme yapmaya çalıştığında bir sorun olur çünkü bu işletim sistemi güvenlik *nedenleriyle*.configyüklemesini engeller. Dosyanın *.config* etkinleştirmek için Yayımlama Seçenekleri iletişim kutusunda **".deploy" dosya uzantısını** **kullan'a** tıklayın.
 
- Ayrıca,. Application,. manifest ve. deploy dosyaları için uygun içerik türlerini (MIME türleri olarak da bilinir) ayarlamanız gerekir. Daha fazla bilgi için Web sunucusu belgelerinize bakın.
+ Ayrıca içerik türlerini (MIME türleri olarak da bilinir) .application, .manifest ve .deploy dosyaları için uygun şekilde ayarlamanız gerekir. Daha fazla bilgi için Web sunucusu belgelerinize bakın.
 
- Daha fazla bilgi için, bkz. "Windows Server 2003: kilitlenmiş Içerik türleri"; [sunucu ve ClickOnce dağıtımlarında istemci yapılandırma sorunları](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md).
+ Daha fazla bilgi için, sunucu ve Windows dağıtımlarında istemci yapılandırma sorunları içinde "Windows Server 2003: [Kilitli İçerik Türleri" ClickOnce bakın.](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)
 
-#### <a name="error-message-application-is-improperly-formatted-log-file-contains-xml-signature-is-invalid"></a>Hata iletisi: "uygulama hatalı biçimlendirildi;" "XML imzası geçersiz" içeren günlük dosyası
- Bildirim dosyasını güncelleştirdiğinizden ve yeniden imzaladığınızdan emin olun. Kullanarak uygulamanızı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yeniden yayımlayın veya uygulamayı yeniden imzalamak Için Mage 'ı kullanın.
+#### <a name="error-message-application-is-improperly-formatted-log-file-contains-xml-signature-is-invalid"></a>Hata iletisi: "Uygulama yanlış biçimlendirildi;" Günlük dosyası "XML imzası geçersiz" içeriyor
+ Bildirim dosyasını güncelleştirilir ve yeniden imzalarsınız. kullanarak veya kullanarak Mage [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yeniden yayımla.
 
-#### <a name="you-updated-your-application-on-the-server-but-the-client-does-not-download-the-update"></a>Uygulamanızı sunucuda güncelleştirdiniz, ancak istemci güncelleştirmeyi indirmiyor
- Bu sorun aşağıdaki görevlerden biri tamamlanarak çözülebilir:
+#### <a name="you-updated-your-application-on-the-server-but-the-client-does-not-download-the-update"></a>Uygulamayı sunucuda güncelleştirmişsiniz ancak istemci güncelleştirmeyi indirmez
+ Bu sorun aşağıdaki görevlerden biri tamamlayarak çözülebilir:
 
-- `deploymentProvider`Dağıtım bildiriminde URL 'yi inceleyin. BITS 'yi işaret eden aynı konumda güncelleştirdiğinizden emin olun `deploymentProvider` .
+- Dağıtım `deploymentProvider` bildiriminde URL'yi inceleme. Bitleri, aynı konumda ve bu konuma göre `deploymentProvider` güncelleştirin.
 
-- Dağıtım bildiriminde güncelleştirme aralığını doğrulayın. Bu Aralık, altı saatte bir bir zaman gibi düzenli bir aralığa ayarlanırsa, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Bu Aralık geçene kadar bir güncelleştirmeyi taramayacaktır. Uygulamanın her başlayışında, bir güncelleştirmeyi taramak için bildirimi değiştirebilirsiniz. Güncelleştirme aralığının değiştirilmesi, güncelleştirmelerin yüklenmekte olduğunu doğrulamak için geliştirme zamanı sırasında kullanışlı bir seçenektir, ancak uygulama etkinleştirmeyi yavaşlatır.
+- Dağıtım bildiriminde güncelleştirme aralığını doğrulayın. Bu aralık, altı saatte bir gibi düzenli aralıklara ayarlanırsa, bu aralık geçene kadar bir güncelleştirme [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] taraması olmaz. Uygulama her başlatıldığında güncelleştirmeyi taramak için bildirimi değiştirebilirsiniz. Güncelleştirme aralığını değiştirmek, geliştirme sırasında güncelleştirmelerin yük olduğunu doğrulamak için kullanışlı bir seçenektir, ancak uygulama etkinleştirmeyi yavaşlatıyor.
 
-- Başlat menüsünde uygulamayı yeniden başlatmayı deneyin. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , arka planda güncelleştirmeyi algılamış olabilir, ancak bir sonraki etkinleştirmeye bitleri yüklemenizi ister.
+- Uygulamayı uygulamanın ilk çalışma Başlat menüsü. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] güncelleştirmeyi arka planda algımış olabilir, ancak sonraki etkinleştirmede bitleri yüklemeniz istenecek.
 
-#### <a name="during-update-you-receive-an-error-that-has-the-following-log-entry-the-reference-in-the-deployment-does-not-match-the-identity-defined-in-the-application-manifest"></a>Güncelleştirme sırasında şu günlük girişine sahip bir hata alırsınız: "dağıtımdaki başvuru, uygulama bildiriminde tanımlanan kimlikle eşleşmiyor"
- Bu hata, dağıtım ve uygulama bildirimlerini el ile düzenlediğiniz ve bir bildirimdeki derlemenin kimliğinin diğer ile eşitlenmemiş hale gelmesine neden olmuş olabileceğinden meydana gelebilir. Bir derlemenin kimliği ad, sürüm, kültür ve ortak anahtar belirtecinden oluşur. Bildirimlerinizde kimlik açıklamalarını inceleyin ve farkları düzeltin.
+#### <a name="during-update-you-receive-an-error-that-has-the-following-log-entry-the-reference-in-the-deployment-does-not-match-the-identity-defined-in-the-application-manifest"></a>Güncelleştirme sırasında şu günlük girdisini içeren bir hata alırsınız: "Dağıtımda başvuru, uygulama bildiriminde tanımlanan kimlikle eşle değil"
+ Bu hata, dağıtım ve uygulama bildirimlerini el ile düzenleyemediniz ve bir bildirimde derlemenin kimliğinin açıklamasının diğer bildirimle eşitnin dışında gerçekleşmesine neden olduğu için oluşabilir. Derlemenin kimliği adı, sürümü, kültürü ve ortak anahtar belirteclerinden oluşur. Bildirimlerinizin kimlik açıklamalarını inceler ve farkları düzeltin.
 
-#### <a name="first-time-activation-from-local-disk-or-cd-rom-succeeds-but-subsequent-activation-from-start-menu-does-not-succeed"></a>Yerel diskten veya CD-ROM ' d a n ilk kez etkinleştirme başarılı olur, ancak başlangıç menüsünden sonraki etkinleştirme başarılı olmaz
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama için güncelleştirmeleri almak üzere dağıtım sağlayıcısı URL 'sini kullanır. URL 'nin işaret ettiği konumun doğru olduğunu doğrulayın.
+#### <a name="first-time-activation-from-local-disk-or-cd-rom-succeeds-but-subsequent-activation-from-start-menu-does-not-succeed"></a>Yerel diskten veya CD-ROM'dan ilk kez etkinleştirme başarılı olur, ancak Başlat Menüsünden sonraki etkinleştirme başarılı olmaz
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , uygulama güncelleştirmelerini almak için Dağıtım Sağlayıcısı URL'sini kullanır. URL'nin işaret etmekte olduğu konumun doğru olduğunu doğrulayın.
 
-#### <a name="error-cannot-start-the-application"></a>Hata: "uygulama başlatılamıyor"
- Bu hata iletisi genellikle bu uygulamayı depoya yüklerken bir sorun olduğunu gösterir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Uygulamada bir hata ya da depo bozulmuş. Günlük dosyası sizi hatanın nerede oluştuğunu söyleyebilir.
+#### <a name="error-cannot-start-the-application"></a>Hata: "Uygulama başlatıla değil"
+ Bu hata iletisi genellikle bu uygulamayı mağazaya yüklerken bir sorun olduğunu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] gösterir. Uygulamanın bir hatası var veya depo bozuk. Günlük dosyası size hatanın nerede olduğunu söyler.
 
- Şunları yapmalısınız:
+ Şunları gerçekleştirin:
 
-- Dağıtım bildiriminin kimliğinin, uygulama bildiriminin kimliğinin ve ana uygulama EXE kimliğinin tümünün benzersiz olduğunu doğrulayın.
+- Dağıtım bildiriminin kimliğinin, uygulama bildiriminin kimliğinin ve ana uygulama EXE kimliğinin benzersiz olduğunu doğrulayın.
 
-- Dosya yollarınızın 100 karakterden uzun olmadığından emin olun. Uygulamanız çok uzun dosya yolları içeriyorsa, depolayabileceği en fazla yol üzerindeki sınırlamaları aşabilirsiniz. Yolları kısaltmayı ve yeniden yüklemeyi deneyin.
+- Dosya yollarınızı 100 karakterden uzun olmadığını doğrulayın. Uygulamanız çok uzun dosya yolları içeriyorsa depolayabilirsiniz maksimum yol sınırlamalarını aşabilirsiniz. Yolları kısaltmayı ve yeniden yüklemeyi deneyin.
 
-#### <a name="privatepath-settings-in-application-config-file-are-not-honored"></a>Uygulama yapılandırma dosyasındaki PrivatePath ayarları kabul edilmez
- PrivatePath (Fusion yoklama yolları) kullanmak için, uygulamanın tam güven izni istemesi gerekir. Uygulama bildirimini tam güven isteyecek şekilde değiştirmeyi deneyin ve sonra yeniden deneyin.
+#### <a name="privatepath-settings-in-application-config-file-are-not-honored"></a>Uygulama yapılandırma dosyasındaki PrivatePath ayarlarına onay yok
+ PrivatePath (Fusion yoklama yolları) kullanmak için uygulamanın tam güven iznini isteğine sahip olması gerekir. Uygulama bildirimini tam güven isteğine göre değiştirmeyi deneyin ve sonra yeniden deneyin.
 
-#### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>Kaldırma sırasında bir ileti görünür, "uygulama kaldırılamadı" iletisini alıyorum
- Bu ileti genellikle uygulamanın zaten kaldırıldığını veya deponun bozulduğunu gösterir. **Tamam**' a tıkladıktan sonra **Program Ekle/Kaldır** girdisi kaldırılır.
+#### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>Kaldırma sırasında "Uygulama kaldırılamadı" iletisi görüntülenir
+ Bu ileti genellikle uygulamanın zaten kaldırılmış veya deponun bozuk olduğunu gösterir. Tamam'a **tıklarken** **Program Ekle/Kaldır** girdisi kaldırılır.
 
-#### <a name="during-installation-a-message-appears-that-says-that-the-platform-dependencies-are-not-installed"></a>Yükleme sırasında, platform bağımlılıklarının yüklenmediğini belirten bir ileti görüntülenir
- Uygulamanın çalışması için gerekli olan GAC 'de (genel derleme önbelleği) bir önkoşulu eksik.
+#### <a name="during-installation-a-message-appears-that-says-that-the-platform-dependencies-are-not-installed"></a>Yükleme sırasında, platform bağımlılıkları yüklü olmadığını söyleyen bir ileti görüntülenir
+ GaC'de (genel derleme önbelleği) uygulamanın çalışması için gereken bir önkoş eksik.
 
 ## <a name="publishing-with-visual-studio"></a>Visual Studio ile yayımlama
 
-#### <a name="publishing-in-visual-studio-fails"></a>Visual Studio 'da yayımlama başarısız oluyor
- Hedeflediğiniz sunucuda yayımlama hakkına sahip olduğunuzdan emin olun. Örneğin, bir Terminal sunucusu bilgisayarında yönetici olarak değil, sıradan bir kullanıcı olarak oturum açtıysanız, muhtemelen yerel Web sunucusuna yayımlamak için gerekli haklara sahip olmayacaktır.
+#### <a name="publishing-in-visual-studio-fails"></a>Visual Studio yayımlama başarısız oluyor
+ Hedefledkniz sunucuda yayımlama hakkına sahip olduğundan emin olun. Örneğin, bir terminal sunucusu bilgisayarına yönetici olarak değil normal bir kullanıcı olarak oturum açtıysanız büyük olasılıkla yerel Web sunucusunda yayımlamak için gereken haklara sahip olmazsınız.
 
- Bir URL ile yayınlıyorsanız, hedef bilgisayarda FrontPage Server Extensions 'ın etkinleştirildiğinden emin olun.
+ Url ile yayımıyorsanız, hedef bilgisayarda FrontPage Sunucu Uzantıları'nın etkinleştirildiğinden emin olun.
 
-#### <a name="error-message-unable-to-create-the-web-site-site-the-components-for-communicating-with-frontpage-server-extensions-are-not-installed"></a>Hata iletisi: ' ' Web sitesi oluşturulamıyor \<site> . FrontPage Server uzantılarıyla iletişim kurmak için bileşenler yüklü değil.
- Yayımlamakta olduğunuz makinede Microsoft Visual Studio Web yazma bileşeninin yüklü olduğundan emin olun. Express kullanıcıları için bu bileşen varsayılan olarak yüklenmez. Daha fazla bilgi için bkz. [http://go.microsoft.com/fwlink/?LinkId=102310](https://support.microsoft.com/help/945358).
+#### <a name="error-message-unable-to-create-the-web-site-site-the-components-for-communicating-with-frontpage-server-extensions-are-not-installed"></a>Hata iletisi: 'Web sitesi \<site> oluşturulamıyor. FrontPage Sunucu Uzantıları ile iletişim kurmak için bileşenler yüklenmez.
+ Yayımlamakta Microsoft Visual Studio Web Yazma Bileşeni'nin yüklü olduğundan emin olmak. Express kullanıcıları için bu bileşen varsayılan olarak yüklenmez. Daha fazla bilgi için bkz. [http://go.microsoft.com/fwlink/?LinkId=102310](https://support.microsoft.com/help/945358).
 
-#### <a name="error-message-could-not-find-file-microsoftwindowscommon-controls-version6000-culture-publickeytoken6595b64144ccf1df-processorarchitecture-typewin32"></a>Hata iletisi: ' Microsoft. Windows. Common-Controls, Version = 6.0.0.0, Culture = *, PublicKeyToken = 6595b64144ccf1df, ProcessorArchitecture = \* , Type = Win32 ' dosyası bulunamadı
- Bu hata iletisi, görsel stiller etkinken bir WPF uygulaması yayımlamaya çalıştığınızda görüntülenir. Bu sorunu çözmek için bkz. [nasıl yapılır: görsel STILLERLE WPF uygulaması yayımlama etkin](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md).
+#### <a name="error-message-could-not-find-file-microsoftwindowscommon-controls-version6000-culture-publickeytoken6595b64144ccf1df-processorarchitecture-typewin32"></a>Hata iletisi: 'Microsoft dosyası bulunamıyor. Windows. Common-Controls, Version=6.0.0.0, Culture=*, PublicKeyToken=6595b64144ccf1df, ProcessorArchitecture= \* , Type=win32'
+ Görsel stilleri etkinleştirilmiş bir WPF uygulaması yayımlamaya çalışırken bu hata iletisi görüntülenir. Bu sorunu çözmek için [bkz. Nasıl Etkinleştirilmiş Görsel Stiller ile WPF Uygulaması Yayımlama.](../deployment/how-to-publish-a-wpf-application-with-visual-styles-enabled.md)
 
-## <a name="using-mage"></a>Mage kullanma
+## <a name="using-mage"></a>Mage
 
-#### <a name="you-tried-to-sign-with-a-certificate-in-your-certificate-store-and-a-received-blank-message-box"></a>Sertifika deponuzda bir sertifikayla oturum açmaya çalıştınız ve alınan boş ileti kutusu
- **İmzalama** iletişim kutusunda şunları yapmanız gerekir:
+#### <a name="you-tried-to-sign-with-a-certificate-in-your-certificate-store-and-a-received-blank-message-box"></a>Sertifika deponuza bir sertifika ile oturum açma denemesi ve boş ileti kutusu
+ İmzalama **iletişim** kutusunda şunları gerekir:
 
-- **Depolanan sertifikayla imzala**' yı seçin ve
+- Depolanan **bir sertifikayla imzala'ya ve**
 
-- Listeden bir sertifika seçin; ilk sertifika varsayılan seçim değildir.
+- Listeden bir sertifika seçin; İlk sertifika varsayılan seçim değildir.
 
-#### <a name="clicking-the-dont-sign-button-causes-an-exception"></a>"Oturum açma" düğmesine tıklamak özel duruma neden olur
- Bu sorun bilinen bir hatadır. Tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bildirimlerin imzalanması gerekir. İmzalama seçeneklerinden birini seçmeniz yeterlidir ve ardından **Tamam**' a tıklayın.
+#### <a name="clicking-the-dont-sign-button-causes-an-exception"></a>"İmzala" düğmesine tıklamak özel durumlara neden oluyor
+ Bu sorun bilinen bir hatadır. Tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bildirimlerin imzaya sahip olması gerekir. İmzalama seçenekleri arasında seçim yaptıktan sonra Tamam'a **tıklayın.**
 
 ## <a name="additional-errors"></a>Ek hatalar
- Aşağıdaki tabloda, Kullanıcı bir uygulama yüklediğinde istemci-bilgisayar kullanıcısının alabileceği bazı yaygın hata iletileri gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Her hata iletisi, hatanın en olası nedeni açıklamasının yanında listelenir.
+ Aşağıdaki tabloda, bir istemci-bilgisayar kullanıcı bir uygulama yükleyene kadar bazı yaygın hata iletileri [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] yer alır. Her hata iletisi, hatanın en olası nedeninin açıklamasının yanında listelenir.
 
-| Hata iletisi | Description |
+| Hata iletisi | Açıklama |
 | - | - |
-| Uygulama başlatılamıyor. Uygulama yayımcısına başvurun.<br /><br /> Uygulama başlatılamıyor. Yardım almak için uygulama satıcısına başvurun. | Bunlar, uygulama başlatılmadan oluşan genel hata iletilerdir ve başka bir özel neden bulunamamalıdır. Bu, genellikle uygulamanın bozulmuş olduğu veya deponun bozuk olduğu anlamına gelir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . |
-| Devam edilemiyor. Uygulama Hatalı biçimli. Yardım almak için uygulama yayımcısına başvurun.<br /><br /> Uygulama doğrulaması başarılı olmadı. Devam edilemiyor.<br /><br /> Uygulama dosyaları alınamıyor. Dağıtımdaki dosyalar bozuk. | Dağıtımdaki bildirim dosyalarından biri sözdizimsel olarak geçerli değil veya karşılık gelen dosyayla mutabık kılınabilecek bir karma içeriyor. Bu hata, bir derleme içine gömülü bildirimin bozuk olduğunu da gösterebilir. Dağıtımınızı yeniden oluşturun ve uygulamanızı yeniden derleyin ya da bildirimlerinizde el ile hataları bulup onarın. |
+| Uygulama başlatılamay. Uygulama yayımcısı ile iletişime geçin.<br /><br /> Uygulama başlatamaz. Yardım için uygulama satıcısına başvurun. | Bunlar, uygulama başlatılamaysa ve başka bir neden bulunamazsa oluşan genel hata iletileridir. Bu durum genellikle uygulamanın bir şekilde bozuk olduğu veya deponun [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bozuk olduğu anlamına gelir. |
+| Devam etmek yok. Uygulama yanlış biçimlendirildi. Yardım almak için uygulama yayımcısına başvurun.<br /><br /> Uygulama doğrulaması başarılı olmadı. Devam edilemiyor.<br /><br /> Uygulama dosyaları alınamıyor. Dağıtımdaki dosyalar bozuk. | Dağıtımdaki bildirim dosyalarından biri sözdizimsel olarak geçerli değil veya karşılık gelen dosyayla mutabık kılınabilecek bir karma içeriyor. Bu hata, bir derleme içine gömülü bildirimin bozuk olduğunu da gösterebilir. Dağıtımınızı yeniden oluşturun ve uygulamanızı yeniden derleyin ya da bildirimlerinizde el ile hataları bulup onarın. |
 | Uygulama alınamıyor. Kimlik doğrulama hatası.<br /><br /> Uygulama yüklemesi başarılı olmadı. Sunucudaki uygulama dosyaları bulunamıyor. Yardım için uygulama yayımcısına veya yöneticinize başvurun. | Dağıtımdaki bir veya daha fazla dosya, bunlara erişim izniniz olmadığından indirilemiyor. Bunun nedeni, bir Web sunucusu tarafından döndürülen 403 yasaklanmış bir hata olabilir. bu durum, dağıtımınızdaki dosyalardan biri Web sunucusunun korumalı bir dosya olarak kabul eden bir uzantıyla biterse meydana gelebilir. Ayrıca, bir veya daha fazla uygulama dosyasını içeren bir dizin, erişim için bir Kullanıcı adı ve parola gerektirebilir. |
 | Uygulama indirilemiyor. Uygulamada gerekli dosyalar eksik. Yardım için uygulama satıcısına veya sistem yöneticinize başvurun. | Uygulama bildiriminde listelenen bir veya daha fazla dosya sunucuda bulunamıyor. Tüm dağıtımın bağımlı dosyalarını karşıya yükleyip yüklemediğinize emin olun ve yeniden deneyin. |
 | Uygulama indirmesi başarılı olmadı. Ağ bağlantınızı denetleyin veya sistem yöneticinize veya ağ hizmeti sağlayıcısına başvurun. | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] sunucuya ağ bağlantısı kurulamıyor. Sunucunun kullanılabilirliğini ve ağınızın durumunu inceleyin. |
-| URLDownloadToCacheFile, HRESULT ' ' ile başarısız oldu \<number> . ' ' İndirilmeye çalışılırken bir hata oluştu \<file> . | Bir Kullanıcı, dağıtım hedef bilgisayarında Internet Explorer Gelişmiş Güvenlik seçeneğini "güvenli ve güvenli olmayan mod arasında değişiklik yaptıysanız uyar" olarak ayarlandıysa ve yüklenmekte olan ClickOnce uygulamasının kurulum URL 'SI güvenli bir siteye (veya tersi) yönlendirilirse, Internet Explorer uyarısı bunu kestiğinden yükleme başarısız olur.<br /><br /> Bu hatayı çözmek için aşağıdaki görevlerden birini yapabilirsiniz:<br /><br /> -Güvenlik seçeneğini temizleyin.<br />-Kurulum URL 'sinin güvenlik modlarını değiştiren bir şekilde yeniden yönlendirilmediğinden emin olun.<br />-Yeniden yönlendirmeyi tamamen kaldırın ve gerçek kurulum URL 'sini işaret edin. |
+| URLDownloadToCacheFile, HRESULT ' ' ile başarısız oldu \<number> . ' ' İndirilmeye çalışılırken bir hata oluştu \<file> . | bir kullanıcı, dağıtım hedef bilgisayarında ınternet explorer gelişmiş güvenlik seçeneğini "güvenli ve güvenli olmayan mod arasında değişiklik yaptıysanız uyar" olarak ayarlandıysa ve yüklenen ClickOnce uygulamanın kurulum URL 'si güvenli olmayan bir siteye (veya tersi) yönlendirilirse, ınternet Explorer uyarısı bunu kestiğinden yükleme başarısız olur.<br /><br /> Bu hatayı çözmek için aşağıdaki görevlerden birini yapabilirsiniz:<br /><br /> -Güvenlik seçeneğini temizleyin.<br />-Kurulum URL 'sinin güvenlik modlarını değiştiren bir şekilde yeniden yönlendirilmediğinden emin olun.<br />-Yeniden yönlendirmeyi tamamen kaldırın ve gerçek kurulum URL 'sini işaret edin. |
 | Sabit diske yazılırken bir hata oluştu. Diskte yeterli alan yok olabilir. Yardım için uygulama satıcısına veya sistem yöneticinize başvurun. | Bu, uygulamayı depolamak için yeterli disk alanı olduğunu gösterebilir, ancak uygulama dosyalarını sürücüye kaydetmeye çalışırken daha genel bir g/ç hatası da belirtebilir. |
 | Uygulama başlatılamıyor. Diskte yeterli kullanılabilir alan yok. | Sabit disk dolu. Alanı temizleyin ve uygulamayı yeniden çalıştırmayı deneyin. |
 | Çok fazla dağıtılan etkinleştirme aynı anda yüklenmeye çalışıyor. | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aynı anda başlayabilirler farklı uygulama sayısını sınırlar. Bu, yerel hizmette karşı hizmet reddi saldırılarını önlemeye yönelik kötü niyetli saldırılara karşı korunmaya yardımcı olur [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ; aynı uygulamayı art arda başlatmaya çalışan kullanıcılar, hızlı bir şekilde, uygulamanın yalnızca tek bir örneği ile sona acaktır. |

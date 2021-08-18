@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 10441f92f5bd62e701eac81de6ec76a21134d7c440e7cb4c1b653642c34b7b8a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d55cb0b436235c079fb52aa458148d154ce4f2f1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448682"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070704"
 ---
 # <a name="ienumcodepaths2getcount"></a>IEnumCodePaths2::GetCount
 Numaralamada öğe sayısını döndürür.

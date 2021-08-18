@@ -1,6 +1,6 @@
 ---
-title: IDE-Defined komutlar, menüler ve gruplar | Microsoft Docs
-description: Visual Studio tümleşik geliştirme ortamında (ıde) tanımlanan menüler, komutlar ve komut grupları hakkında bilgi edinin.
+title: IDE-Defined Komutları, Menüleri ve Grupları | Microsoft Docs
+description: Tümleşik geliştirme ortamında (IDE) tanımlanan menüler, komutlar ve Visual Studio grupları hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,41 +15,41 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: febe1d37ecd79b46771f006691dae1a3006a8709fc91599dd9562474990a6ad9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9f25616c97ed4f3b1e8402432a36db86e72edb58
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448032"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042406"
 ---
 # <a name="ide-defined-commands-menus-and-groups"></a>IDE Tanımlı Komutlar, Menüler ve Gruplar
-Birçok menü, komut ve komut grubu, IDE tarafından kullanılmak üzere zaten tanımlanmış [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu komutlar, uzatdığınızda kullanım için de kullanılabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+Birçok menü, komut ve komut grubu IDE tarafından kullanmak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] üzere önceden tanımlanmıştır. Bu komutlar, genişletildikleri zaman da [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanılabilir.
 
-## <a name="finding-environment-defined-commands"></a>Environment-Defined komutlarını bulma
- Ortam komutları bir dizi dört. vsct dosyasında tanımlanır:
+## <a name="finding-environment-defined-commands"></a>Komut Environment-Defined Bulma
+ Ortam komutları dört .vsct dosyası kümesinde tanımlanır:
 
-- SharedCmdDef. vsct
+- SharedCmdDef.vsct
 
-- SharedCmdPlace. vsct
+- SharedCmdPlace.vsct
 
-- ShellCmdDef. vsct
+- ShellCmdDef.vsct
 
-- ShellCmdPlace. vsct
+- ShellCmdPlace.vsct
 
-  Bu dosyalar \VisualStudioIntegration\Common\Inc konumunda bulunur *\<Visual Studio SDK installation path>* \\ . Bu dosyalar, VSPackage 'ın komut tablosu yapılandırma (. vsct) dosyasında kendi menü, Grup ve komutlarınız için kapsayıcı olarak kullanabileceğiniz menü ve grupların tanımlarını ve GUID 'Lerini sağlar.
+  Bu dosyalar *\<Visual Studio SDK installation path>* \VisualStudioIntegration\Common\Inc konumunda \\ bulunur. Bu dosyalar, VSPackage komut tablosu yapılandırması (.vsct) dosyasında kendi menüleriniz, gruplarınız ve komutlarınız için kapsayıcılar olarak kullanabileceğiniz menülerin ve grupların tanımlarını ve GUID'lerini sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Visual Studio Menülerinin GUID’leri ve Kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)
 
- Visual Studio menü çubuğundaki menülerin ve içerdikleri grupların guıd ve kimlik değerlerini verir.
+ Menü çubuğundaki menülerin GUID ve Visual Studio değerlerini ve içer çalıştıkları grupları verir.
 
 - [Visual Studio Araç Çubuklarının GUID’leri ve Kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)
 
- Visual Studio ıde ve içerdikleri grupların araç çubuklarının guıd ve kimlik değerlerini verir.
+ IDE'de bulunan araç çubuklarının GUID ve Visual Studio değerlerini ve içer çalıştıkları grupları verir.
 
 - [Visual Studio Komutlarının GUID’leri ve Kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)
 
- Visual Studio ıde tarafından tanımlanan komutların guıd ve ıd değerlerini verir.
+ IDE tarafından tanımlanan komutların GUID ve kimlik Visual Studio verir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio Komut Tablosu (.Vsct) Dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

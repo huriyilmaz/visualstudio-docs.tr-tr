@@ -11,14 +11,15 @@ ms.assetid: b64be708-22d6-4360-99e7-8f4e6b196de7
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 24f13fc1157dd7f3de723474091a1f80e3717504
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: fbf8d7f40f1cd3c14bd6b830a65526921f1c6ece
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102151317"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052406"
 ---
 # <a name="datakind"></a>DataKind
 Bir veri değerinin belirli kapsamını gösterir.

@@ -1,6 +1,6 @@
 ---
-title: Profil oluşturucu komut satırı-araç yerel hizmeti, zamanlama verilerini al
-description: yerel bir C/C++ hizmeti için ayrıntılı zamanlama verileri toplamak üzere Visual Studio Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağını öğrenin.
+title: Profil oluşturma komut satırı - Yerel hizmeti ölçümle, zamanlama verilerini al
+description: Yerel bir C/C++ Visual Studio Profil Oluşturma Araçları ayrıntılı zamanlama verileri toplamak için komut satırı araçlarını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,89 +12,89 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60690b36790fba3c0c239be77f086cf680b5a53c5a147b67fb521ea6f316071f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d3849137067d58d5fc641cbd26bcadc765fae747
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410716"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033531"
 ---
 # <a name="how-to-instrument-a-native-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>Nasıl yapılır: Profil oluşturucu komut satırını kullanarak yerel bir hizmeti izleme ve ayrıntılı zamanlama verileri toplama
-Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir yerel (C/C++) hizmetini işaretlemek ve ayrıntılı zamanlama verilerini toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağı açıklanır.
+Bu makalede yerel (C/C++) Profil Oluşturma Araçları ve ayrıntılı zamanlama verileri toplamak için komut satırı araçlarının nasıl [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kullanımı açıklanmıştır.
 
 > [!NOTE]
-> Hizmet, bilgisayar başladıktan sonra yalnızca işletim sistemi başladığında başlatılan bir hizmet gibi yeniden başlatılamazsa, izleme yöntemiyle bir hizmetin profilini oluşturamazsınız.
+> Bilgisayar başlatıldıktan sonra hizmet yeniden başlatılamazsa, yalnızca işletim sistemi başlatıldığında başlayan bir hizmet gibi, bir hizmetin profilini, ölçümleme yöntemiyle profillerini oluşturmazsınız.
 >
-> Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). 64 bit bilgisayarlarda, araçların her ikisi de 64-bit ve 32 bit sürümleri mevcuttur. Profil oluşturucu komut satırı araçlarını kullanmak için araçlar yolunu komut Istemi penceresinin PATH ortam değişkenine eklemeniz ya da komutun kendisine eklemeniz gerekir.
+> Profil oluşturma araçlarının yolunu almak için [bkz. Komut satırı araçlarının yolunu belirtme.](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md) 64 bit bilgisayarlarda, araçların hem 64 bit hem de 32 bit sürümleri kullanılabilir. Profil oluşturma komut satırı araçlarını kullanmak için, araç yolunu Komut İstemi penceresinin PATH ortam değişkenine eklemeniz veya komutun kendisine eklemeniz gerekir.
 
- İzleme yöntemini kullanarak yerel bir hizmetten ayrıntılı zamanlama verileri toplamak için, bileşenin belgelenmiş bir sürümünü oluşturmak için [VSInstr.exe](../profiling/vsinstr.md) aracını kullanın. Sonra, hizmetin el ile başlatılacak şekilde yapılandırıldığından emin olmak için, Service 'in belgelenmiş olmayan sürümünü belgelenmiş sürümle değiştirirsiniz. Ardından profil oluşturucuyu başlatın.
+ Bir yerel hizmetten ölçümleme yöntemini kullanarak ayrıntılı zamanlama verileri [](../profiling/vsinstr.md) toplamak içinVSInstr.exearacını kullanarak bileşenin bir araç sürümünü oluşturabilirsiniz. Ardından, hizmetin araçsız sürümünü, hizmetin el ile başlayacak şekilde yapılandırıldığından emin olarak, araçlı sürümle değiştirirsiniz. Ardından profilleyiciyi başlatabilirsiniz.
 
- Hizmet başlatıldığında, zamanlama verileri bir veri dosyasına otomatik olarak toplanır. Profil oluşturma oturumu sırasında veri toplamayı duraklatabilir ve devam ettirebilirsiniz.
+ Hizmet başlatılırken zamanlama verileri otomatik olarak bir veri dosyasına toplanır. Profil oluşturma oturumu sırasında veri toplamayı duraklatabilir ve sürdürebilirsiniz.
 
- Profil oluşturma oturumunu sonlandırmak için, hizmeti devre dışı bırakın ve ardından profil oluşturucuyu açıkça kapatın.
+ Profil oluşturma oturumunu sona erdirmak için hizmeti devre dışı bırakarak profil oluşturma profilini kapatabilirsiniz.
 
-## <a name="start-the-application-with-the-profiler"></a>Uygulamayı Profil Oluşturucu ile başlatma
+## <a name="start-the-application-with-the-profiler"></a>Uygulamayı profil oluşturma ile başlatma
 
-#### <a name="to-start-profiling-a-native-service"></a>Yerel bir hizmetin profilini oluşturmaya başlamak için
+#### <a name="to-start-profiling-a-native-service"></a>Yerel bir hizmetin profilini oluşturmayı başlatmak için
 
 1. Bir komut istemi penceresi açın.
 
-2. Service binary 'ın belgelenmiş bir sürümünü oluşturmak için **vsinstr** aracını kullanın.
+2. Hizmet ikili sürümünün bir araçlı sürümünü oluşturmak için **VSInstr** aracını kullanın.
 
-3. Özgün ikilisini belgelenmiş sürümle değiştirin. hizmet denetimi yöneticisi Windows, hizmet başlatma türünün manuel olarak ayarlandığından emin olun.
+3. Özgün ikili dosyanın yerini, araçlı sürümle değiştirin. Hizmet Windows Yöneticisi'nde, hizmetin Başlangıç Türü'nin El ile olarak ayarlanmış olduğundan emin olun.
 
-4. Profil oluşturucuyu başlatın. Şunu yazın:
+4. Profilleyiciyi başlatma. Şunu yazın:
 
-    **VSPerfCmd** [/Start](../profiling/start.md) **: Trace**  [/output](../profiling/output.md) **:** `OutputFile` [ `Options` ]
+    **VSPerfCmd** [/start](../profiling/start.md) **:trace**  [/output](../profiling/output.md) **:** [ `OutputFile` `Options` ]
 
-   - **/Start: Trace** seçeneği profil oluşturucuyu başlatır.
+   - **/start:trace** seçeneği profilleyiciyi başlatıyor.
 
-   - /Start ile **/output:** `OutputFile` seçeneği gereklidir.  `OutputFile` profil oluşturma verilerinin adını ve konumunu belirtir (.*VSP*) dosyası.
+   - **/output:** `OutputFile` seçeneği / **start ile gereklidir.** `OutputFile` profil oluşturma verisi adını ve konumunu () belirtir.*vsp*) dosyasını seçin.
 
-     Aşağıdaki seçeneklerden herhangi birini, **/Start: Trace** seçeneği ile kullanabilirsiniz.
+     **/start:trace** seçeneğiyle aşağıdaki seçeneklerden herhangi birini kullanabilirsiniz.
 
    > [!NOTE]
-   > **/user** ve **/crosssession** seçenekleri genellikle ASP.NET uygulamalar için gereklidir.
+   > /user **ve** **/crosssession** seçenekleri genellikle uygulama ASP.NET gereklidir.
 
    | Seçenek | Açıklama |
    | - | - |
-   | [/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | ASP.NET çalışan işleminin sahibi olan hesabın etki alanını ve kullanıcı adını belirtir. İşlem, oturum açmış kullanıcı dışında bir kullanıcı olarak çalışıyorsa, bu seçenek gereklidir. işlem sahibi, Windows görev yöneticisi 'nin **işlemler** sekmesinde **kullanıcı adı** sütununda listelenir. |
-   | [/CrossSession](../profiling/crosssession.md) | Diğer oturum oturumlarda işlemlerin profilini oluşturmayı mümkün. ASP.NET uygulaması farklı bir oturumda çalışıyorsa, bu seçenek gereklidir. oturum kimliği, Windows görev yöneticisi 'nin süreçler sekmesindeki oturum kimliği sütununda listelenir. **/CS** , **/CrossSession** için bir kısaltma olarak belirtilebilir. |
-   | [/WaitStart](../profiling/waitstart.md)[**:** `Interval` ] | Profil oluşturucunun hata vermeden önce başlatılması için bekleyeceği saniye sayısını belirtir. `Interval`Belirtilmezse, profil oluşturucu süresiz olarak bekler. Varsayılan olarak, **/Start** hemen döndürür. |
-   | [/globaloff](../profiling/globalon-and-globaloff.md) | Veri toplama duraklatılmış şekilde profil oluşturucuyu başlatmak için, **/Start** komut satırına **/globaloff** seçeneğini ekleyin. Profil oluşturmayı sürdürmeye yönelik **/GlobalOn** kullanın. |
-   | [/Counter](../profiling/counter.md) **:**`Config` | Yapılandırma içinde belirtilen işlemci performans sayacından bilgi toplar. Her profil oluşturma olayında toplanan verilere sayaç bilgileri eklenir. |
-   | [/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath` | profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir. |
-   | [/AutoMark](../profiling/automark.md) **:**`Interval` | Yalnızca **/WINCOUNTER** ile kullanın. Windows performans sayacı toplama olayları arasındaki milisaniye sayısını belirtir. Varsayılan değer 500 MS 'dir. |
-   | [/Events](../profiling/events-vsperfcmd.md) **:**`Config` | profil oluşturma sırasında toplanacak Windows (ETW) olayı için bir olay izleme olayı belirtir. ETW olayları ayrı bir (.*ETL*) dosyası. |
+   | [/user](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Çalışan işleminin sahibi olan hesabın etki alanını ve kullanıcı ASP.NET belirtir. İşlem oturum açmış kullanıcıdan farklı bir kullanıcı olarak çalışıyorsa bu seçenek gereklidir. İşlem sahibi, Görev **Yöneticisi'nin** İşlemler **sekmesindeki** Kullanıcı Adı Windows listelenir. |
+   | [/crosssession](../profiling/crosssession.md) | Diğer oturum açma oturumlarında işlemlerin profil oluşturmasını sağlar. Bu seçenek, ASP.NET farklı bir oturumda çalışıyorsa gereklidir. Oturum kimliği, Görev Yöneticisi'nin İşlemler sekmesindeki Oturum Windows listelenir. **/CS,** **/crosssession için bir kısaltma olarak belirtilebilir.** |
+   | [/waitstart](../profiling/waitstart.md)[**:** `Interval` ] | Profil oluşturmanın hata döndürmeden önce başlatılmasını bekleyeceği saniye sayısını belirtir. `Interval`Belirtilmezse, profil oluşturma süresiz olarak bekler. Varsayılan **olarak, /start hemen** döndürür. |
+   | [/globaloff](../profiling/globalon-and-globaloff.md) | Profilleyiciyi veri koleksiyonu duraklatılmış olarak başlatmak için **/start komut** satırına **/globaloff** seçeneğini ekleyin. Profil **oluşturmayı devam ettiren /globalon** kullanın. |
+   | [/counter](../profiling/counter.md) **:**`Config` | Yapılandırma'da belirtilen işlemci performans sayacından bilgi toplar. Sayaç bilgileri her profil oluşturma olayında toplanan verilere eklenir. |
+   | [/wincounter:](../profiling/wincounter.md) `WinCounterPath` | Profil oluşturma Windows toplanacak bir performans sayacı belirtir. |
+   | [/automark:](../profiling/automark.md) `Interval` | Yalnızca **/wincounter ile** kullanın. Performans sayacı toplama olayları arasındaki milisaniye Windows sayısını belirtir. Varsayılan değer 500 ms'tir. |
+   | [/events](../profiling/events-vsperfcmd.md) **:**`Config` | Profil oluşturma sırasında toplanacak Windows (ETW) olayı için bir Olay İzleme belirtir. ETW olayları ayrı bir () içinde toplanır.*etl*) dosyasını seçin. |
 
-5. Hizmeti Hizmet Denetim Yöneticisi 'nden başlatın.
+5. Hizmeti Service Control Manager'dan başlatabilirsiniz.
 
 ## <a name="control-data-collection"></a>Veri toplamayı denetleme
- Hizmet çalışırken, verileri profil oluşturucu veri dosyasına yazmayı başlatmak ve durdurmak için *VSPerfCmd.exe* seçeneklerini kullanabilirsiniz. Veri toplamayı denetlemek, program yürütmenin belirli bir bölümü için, hizmeti başlatma veya kapatma gibi verileri toplamanızı sağlar.
+ Hizmet çalışmaya devam ediyorsa, profil *VSPerfCmd.exe* veri dosyasına veri yazmayı başlatmak ve durdurmak için bu seçenekleri kullanabilirsiniz. Veri toplamayı denetlemek, programı yürütmenin belirli bir bölümü için hizmeti başlatma veya kapatma gibi verileri toplamaya olanak sağlar.
 
 #### <a name="to-start-and-stop-data-collection"></a>Veri toplamayı başlatmak ve durdurmak için
 
-- Aşağıdaki **VSPerfCmd** seçenek çiftleri veri toplamayı başlatır ve durdurur. Her seçeneği ayrı bir komut satırında belirtin. Veri toplamayı birden çok kez açıp kapatabilirsiniz.
+- Aşağıdaki **VSPerfCmd seçenekleri çiftleri** veri toplamayı başlatacak ve durduracak. Her seçeneği ayrı bir komut satırı üzerinde belirtin. Veri toplamayı birden çok kez açabilirsiniz ve kapatabilirsiniz.
 
     |Seçenek|Açıklama|
     |------------|-----------------|
-    |[/GlobalOn/globaloff](../profiling/globalon-and-globaloff.md)|Tüm süreçler için veri toplamayı başlatır (**/GlobalOn**) veya Durdur (**/globaloff**).|
-    |[/ProcessOn](../profiling/processon-and-processoff.md) **:** `PID` [/ProcessOff](../profiling/processon-and-processoff.md) **:**`PID`|İşlem KIMLIĞI () tarafından belirtilen işlem için (**/ProcessOn**) veya duraklar (**/ProcessOff**) veri toplamayı başlatır `PID` .|
-    |[/ThreadOn](../profiling/threadon-and-threadoff.md) **:** `TID` [/ThreadOff](../profiling/threadon-and-threadoff.md) **:**`TID`|İş parçacığı KIMLIĞI () tarafından belirtilen iş parçacığı için (**/ThreadOn**) veya Durdur (**/ThreadOff**) veri toplamayı başlatır `TID` .|
+    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Tüm işlemler **için veri toplamayı** başlatır ( /globalon ) veya durdurur (**/globaloff).**|
+    |[/processon:](../profiling/processon-and-processoff.md)  `PID` [/processoff](../profiling/processon-and-processoff.md) **:**`PID`|İşlem kimliği ( ) tarafından belirtilen işlem için veri toplamayı (**/processon**) veya durdurur ( `PID` ).|
+    |[/threadon:](../profiling/threadon-and-threadoff.md)  `TID` [/threadoff:](../profiling/threadon-and-threadoff.md) `TID`|İş parçacığı kimliği ( ) tarafından belirtilen iş parçacığı için veri toplamayı (**/threadon**) veya durdurur ( `TID` ).|
 
-## <a name="end-the-profiling-session"></a>Profil oluşturma oturumunu Sonlandır
- Profil oluşturma oturumunu sonlandırmak için, Araçlı bileşeni çalıştıran hizmeti durdurun ve ardından **VSPerfCmd**[/Shutdown](../profiling/shutdown.md) seçeneğini çağırıp profil oluşturucuyu kapatın ve profil oluşturma veri dosyasını kapatın.
+## <a name="end-the-profiling-session"></a>Profil oluşturma oturumunu sona er
+ Profil oluşturma oturumunu sona erdirecek şekilde, izlenilen bileşeni çalıştıran hizmeti durdurun ve **ardından VSPerfCmd**[/shutdown](../profiling/shutdown.md) seçeneğini çağırarak profil oluşturma veri dosyasını kapatın.
 
-#### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sonlandırmak için
+#### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sona erdir
 
-1. Hizmeti hizmet denetimi Yöneticisi 'nden durdurun.
+1. Hizmeti Service Control Manager'dan durdurun.
 
-2. Profil oluşturucuyu kapatın. Şunu yazın:
+2. Profilleyiciyi kapatın. Şunu yazın:
 
-     **VSPerfCmd/shutdown**
+     **VSPerfCmd /shutdown**
 
-3. Belgelenmiş modülün değerini özgün ile değiştirin. Gerekirse, hizmetin başlangıç türünü yeniden yapılandırın.
+3. Instrumented modülünü özgün modülle değiştirin. Gerekirse, hizmetin Başlangıç Türünü yeniden yapılandırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)
-- [İzleme yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)
+- [Ölçüm izleme yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)

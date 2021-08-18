@@ -1,6 +1,6 @@
 ---
 title: Web.Config dosyası - & profili dinamik ASP.NET uygulama
-description: Dinamik olarak derlenmiş bir web Visual Studio Profil Oluşturma Araçları için zamanlama ve bellek etkinliği verilerini toplamak için ASP.NET öğrenin.
+description: Dinamik olarak derlenmiş bir web Visual Studio Profil Oluşturma Araçları zamanlama ve bellek etkinliği verilerini toplamak için ASP.NET öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,17 +12,17 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 6243c342756c593cf39f32f52b6341414d201e2dea4f4fcf6f208e8362c12246
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 92b8acd828a89e1f120a8dc35fa3bc001193f4f4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121368363"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038805"
 ---
-# <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>Nasıl kullanılır: Web web.config dinamik olarak derlenmiş dosyaları ve profillerini ASP.NET dosyaları değiştirme
-Dinamik olarak derlenmiş Web uygulamalarından ayrıntılı zamanlama verileri, .NET bellek ayırma verileri ve .NET nesne yaşam süresi verilerini toplamak için Profil Oluşturma Araçları ölçüm [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ölçümleme yöntemini kullanabilirsiniz.
+# <a name="how-to-modify-webconfig-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications"></a>Nasıl kullanılır: Web web.config dinamik olarak derlenmiş dosyaları ve profillerini ASP.NET değiştirme
+Dinamik olarak derlenmiş Web uygulamalarından ayrıntılı zamanlama verileri, .NET bellek ayırma verileri ve .NET nesne yaşam süresi verilerini toplamak için Profil Oluşturma Araçları ölçüm ölçümleme [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] yöntemini kullanabilirsiniz.
 
- Bu konu başlığında, Web *uygulamalarınınweb.config* ve profil oluşturmayı etkinleştirmek için uygulama yapılandırma dosyasını değiştirme [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] açıklanmıştır.
+ Bu konu başlığında, Web *uygulamalarınınweb.config* ve profil oluşturmayı etkinleştirmek için uygulama yapılandırma dosyasında nasıl değişiklik [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] olduğu açıklanmıştır.
 
 > [!NOTE]
 > Örnekleme profil oluşturma yöntemini *web.config* veya önceden derlenmiş bir modülü takip etmek istediğiniz zaman dosyada değişiklik yapmak zorunda [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] değildir.
@@ -100,7 +100,7 @@ Dinamik olarak derlenmiş Web uygulamalarından ayrıntılı zamanlama verileri,
 
 ### <a name="to-add-the-profiler-post-process-step-to-the-configurationsystemwebcompilation-element"></a>İşlem sonrası profil oluşturma adımını configuration/system.web/compilation öğesine eklemek için
 
-1. Gerekirse **system.web öğesini** yapılandırma öğesinin alt öğesi **olarak** ekleyin; aksi takdirde, sonraki adıma gidin.
+1. Gerekirse **system.web öğesini** yapılandırma öğesinin alt öğesi **olarak ekleyin;** aksi takdirde, sonraki adıma gidin.
 
      **system.web öğesinin** özniteliği yoktur. Yapılandırma **öğesinde** yalnızca bir **system.web alt** öğesi olabilir.
 
@@ -178,7 +178,7 @@ Dinamik olarak derlenmiş Web uygulamalarından ayrıntılı zamanlama verileri,
 ```
 
 ## <a name="example"></a>Örnek
- Aşağıda, dinamik olarak *derlenmiş Webweb.config* ve profil oluşturma işlemini sağlayan eksiksiz bir derleme dosyası [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] velanmıştır. Bu örnekte, değişiklik öncesinde dosyada başka ayar olmadığını varsayma.
+ Aşağıda, dinamik olarak *derlenmiş Webweb.config* ve profil oluşturma işlemini sağlayan eksiksiz bir derleme dosyası [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] velanmıştır. Bu örnekte, değişiklik öncesinde dosyada başka ayar olmadığını varsayabilirsiniz.
 
 ```xml
 <?xml version="1.0"?>
@@ -224,5 +224,5 @@ Dinamik olarak derlenmiş Web uygulamalarından ayrıntılı zamanlama verileri,
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl ASP.NET: Dinamik olarak derlenmiş ASP.NET zamanlama verilerini toplama](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)
-- [Nasıl ASP.NET: Dinamik olarak derlenmiş ASP.NET verileri toplama](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)
+- [Nasıl kullanılır: Dinamik olarak derlenmiş bir ASP.NET uygulamanın ölçümlerini ve ayrıntılı zamanlama verilerini toplama](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)
+- [Nasıl kullanılır: Dinamik olarak derlenmiş bir ASP.NET uygulamanın ölçümlerini ve bellek verilerini toplama](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)

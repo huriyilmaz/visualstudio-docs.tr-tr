@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6a2211477015ea1613549795caa597294d2f0ec779588afae7b97f462a929e0f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0d6ecc116719d37337e127c56a2a026ce5af21c7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307524"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118716"
 ---
 # <a name="idebugexpressionevaluatorgetmethodproperty"></a>IDebugExpressionEvaluator::GetMethodProperty
 Bu yöntem yerelleri, bağımsız değişkenleri ve bir yöntemin diğer özelliklerini içeren bir özellik nesnesi alır.

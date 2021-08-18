@@ -1,6 +1,6 @@
 ---
-title: Nesneler farklı bağlantı kullanır
-description: Tasarımcıya eklemekte olduğunu nesneler tasarımcıdan farklı bir veri bağlantısı kullanır. Bu çalışma Visual Studio O/R Tasarımcısı iletisiyle ilgili bilgileri görüntüleme.
+title: Nesneler farklı bağlantı kullanıyor
+description: Tasarımcıya eklemekte olduğunuz nesneler tasarımcıdan farklı bir veri bağlantısı kullanır. bu Visual Studio O/R Designer iletisi hakkındaki bilgileri görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -11,32 +11,32 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c4ac9e9426d782c32a4cd75fb73a29f2839edf35ba8f94b8bd8708cc3223a622
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a93906f50fb332b05c7894c80d581d49d3f3be22
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121346784"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052583"
 ---
-# <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer"></a>Tasarımcıya eklemekte olduğunu nesneler tasarımcıdan farklı bir veri bağlantısı kullanır
+# <a name="the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer"></a>Tasarımcıya eklemekte olduğunuz nesneler tasarımcıdan farklı bir veri bağlantısı kullanır
 
-Tasarımcıya eklemekte olduğu nesneler, tasarımcının şu anda kullanmakta olduğu veri bağlantısından farklı bir veri bağlantısı kullanır. Tasarımcı tarafından kullanılan bağlantıyı değiştirmek istiyor musunuz?
+Tasarımcıya eklemekte olduğunuz nesneler, tasarımcının kullanmakta olduğundan farklı bir veri bağlantısı kullanır. Tasarımcı tarafından kullanılan bağlantıyı değiştirmek istiyor musunuz?
 
-Öğeleri Nesne İlişkisel Tasarımcısı **(** **O/R Tasarımcısı) eklerken,** tüm öğeler paylaşılan bir veri bağlantısı kullanır. (Tasarım yüzeyi, yüzeydeki <xref:System.Data.Linq.DataContext> tüm nesneler için tek bir bağlantı kullanan 'yi temsil eder.) Tasarımcı tarafından şu anda kullanılan veri bağlantısından farklı bir veri bağlantısı kullanan bir nesneyi tasarımcıya eklersiniz, bu ileti görüntülenir. Bu hatayı çözmek için mevcut bağlantıyı sürdürmeyi seçebilirsiniz. Bu seçimi yaptıysanız, seçilen nesne eklenmez. Alternatif olarak, nesnesini ekleyebilir ve bağlantıyı yeni <xref:System.Data.Linq.DataContext> bağlantıyla sıfırlayabilirsiniz.
+öğeleri **Nesne İlişkisel Tasarımcısı** eklediğinizde (**O/R Designer**), tüm öğeler paylaşılan bir veri bağlantısı kullanır. (Tasarım yüzeyi, <xref:System.Data.Linq.DataContext> yüzeyde tüm nesneler için tek bir bağlantı kullanan öğesini temsil eder.) Tasarımcıya, tasarımcı tarafından kullanılmakta olan veri bağlantısından farklı bir veri bağlantısı kullanan bir nesne eklerseniz, bu ileti görünür. Bu hatayı çözmek için var olan bağlantıyı korumayı seçebilirsiniz. Bu seçimi yaparsanız, seçilen nesne eklenmez. Alternatif olarak, nesneyi eklemeyi ve <xref:System.Data.Linq.DataContext> Yeni bağlantıyla bağlantıyı sıfırlamayı seçebilirsiniz.
 
 ## <a name="connection-options"></a>Bağlantı seçenekleri
 
-- Mevcut bağlantıyı seçilen nesne tarafından kullanılan bağlantıyla değiştirmek için Evet'e **tıklayın.**
+- Mevcut bağlantıyı seçilen nesne tarafından kullanılan bağlantıyla değiştirmek için **Evet**' e tıklayın.
 
-   Seçilen nesne **O/R Tasarımcısı'na eklenir** ve *DataContext.Connection* yeni bağlantı olarak ayarlanır.
+   Seçilen nesne **O/R tasarımcısına** eklenir ve *DataContext. Connection* yeni bağlantı olarak ayarlanır.
 
    > [!NOTE]
-   > **Evet'e** tıklarsanız, **O/R** Tasarımcısı'nda tüm varlık sınıfları yeni bağlantıyla eşlenmiş olur.
+   > **Evet**' e tıklarsanız, **O/R tasarımcısında** tüm varlık sınıfları yeni bağlantıyla eşleştirilir.
 
-- Mevcut bağlantıyı kullanmaya devam etmek ve seçilen nesneyi eklemeyi iptal etmek için Hayır'a **tıklayın.**
+- Mevcut bağlantıyı kullanmaya devam etmek ve seçili nesneyi eklemeyi iptal etmek için **Hayır**'a tıklayın.
 
-   Eylem iptal edilir. *DataContext.Connection,* mevcut bağlantı olarak ayarlanmış olarak kalır.
+   Eylem iptal edildi. *DataContext. Connection* mevcut bağlantı olarak ayarlanmış durumda kalır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to SQL araçları Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio araçlar LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

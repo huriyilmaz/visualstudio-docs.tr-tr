@@ -26,7 +26,7 @@ Mac için Visual Studio, çözümde hata ayıklarken veya çözümde hata ayıkl
 
    ![Başlangıç Projelerini Ayarlama seçeneğini belirleyin](media/startup-proj-ctx-menu.png)
 
-3. Çözüm **Çalıştırma Yapılandırması Oluştur** iletişim kutusu açılır. Bu iletişim kutusu, çözümünüz için Çözüm Çalıştırma Yapılandırması adlı yeni bir oluşturmanızı sağlar. Istediğiniz adı kullanabilirsiniz. Varsayılan ad: `Multiple Projects` .
+3. Çözüm **Çalıştırma Yapılandırması Oluştur** iletişim kutusu açılır. Bu iletişim kutusu çözümünüz için Çözüm Çalıştırma Yapılandırması adlı yeni bir oluşturmanızı sağlar. Istediğiniz adı kullanabilirsiniz. Varsayılan ad: `Multiple Projects` .
 
    ![Çözüm Çalıştırma Yapılandırması Oluştur iletişim kutusu](media/create-sln-run-config.png)
 
@@ -34,7 +34,7 @@ Mac için Visual Studio, çözümde hata ayıklarken veya çözümde hata ayıkl
 
    ![Çözüm Seçenekleri iletişim kutusu](media/sln-options-run-config-multi-projects.png)
 
-5. Uygulamanıza hata ayıklarken veya bu projelerden uygulamalarınızı çalıştırarak başlatmak istediğiniz projeleri Mac için Visual Studio:
+5. Uygulamanıza hata ayıklarken veya bu projelerden uygulamalarınızı çalıştırarak başlatmak Mac için Visual Studio:
 
    ![Seçili projelerin yer alan Çözüm Seçenekleri iletişim kutusu](media/sln-options-run-config-multi-projects-configured.png)
 

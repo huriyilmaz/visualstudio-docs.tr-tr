@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d4692d2f639d0f9feb0f47248ffaa3b7209594e97fc767136b32b422de5912a7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2e5587b3e9d03ba4e0c0f2891bbb67d856e610df
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121238833"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118690"
 ---
 # <a name="idebugmanagedobjectgetmanagedobject"></a>IDebugManagedObject::GetManagedObject
 Yönetilen nesneyi temsil eden bir arabirim döndürür.

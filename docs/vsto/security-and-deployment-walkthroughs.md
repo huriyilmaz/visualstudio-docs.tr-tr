@@ -1,6 +1,6 @@
 ---
-title: Güvenlik ve dağıtım talimatları
-description: Çözümünüzün çalışmasına ve Office çözümünüzü nasıl dağıtabileceğinizi sağlayacak güvenlik ilkesi 'ni nasıl ayarlayabileceğinizi öğrenin.
+title: Güvenlik ve dağıtım için izlenecek yollar
+description: Çözümün çalışmasına izin vermek için güvenlik ilkesi ayarlamayı ve Office dağıtmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,50 +15,51 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 9101c59dddd0f5c3488c91c0ac7054ebb56cc2f8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c8ea97bc426a460529372967ade433787c47a14d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99906575"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032205"
 ---
-# <a name="security-and-deployment-walkthroughs"></a>Güvenlik ve dağıtım talimatları
-  Aşağıdaki konularda, çözümünüzün çalışmasına ve Office çözümünüzü nasıl dağıtabileceğinizi sağlayacak güvenlik ilkesini nasıl ayarlayabileceğiniz gösterilmektedir.
+# <a name="security-and-deployment-walkthroughs"></a>Güvenlik ve dağıtım için izlenecek yollar
+  Aşağıdaki konularda, çözüme izin vermek için güvenlik ilkesi ayarlama ve çözüm dağıtma adımları Office gösterebilirsiniz.
 
 ## <a name="security-topics"></a>Güvenlik konuları
-- [Nasıl yapılır: Office çözümlerini imzalama](../vsto/how-to-sign-office-solutions.md) Bir sertifika kullanarak çözüme nasıl güven sağlayabileceğiniz hakkında bilgi sağlar.
+- [Nasıl Office: Office imzalama](../vsto/how-to-sign-office-solutions.md) Bir sertifika kullanarak çözüme nasıl güven verebilirsiniz hakkında bilgi sağlar.
 
-- [Nasıl yapılır: ekleme listesi güvenliğini yapılandırma](../vsto/how-to-configure-inclusion-list-security.md) [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] Son kullanıcılara Office çözümlerini yükleme seçeneği verilip verilmediğini denetlemek için güven isteminin nasıl yapılandırılacağını açıklar.
+- [Nasıl yapılandırılır: Ekleme listesi güvenliğini yapılandırma](../vsto/how-to-configure-inclusion-list-security.md) Son kullanıcılara yeni çözümler yükleme seçeneği olup olmadığını kontrol etmek için [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] güven isteminin nasıl Office açıklar.
 
 ## <a name="deployment-topics"></a>Dağıtım konuları
-- [Nasıl yapılır: ClickOnce kullanarak bir Office çözümünü yayımlama](/previous-versions/bb386095(v=vs.110)) Office çözümlerini yayımlamak için **Yayımla sihirbazının** veya proje Tasarımcısı ' nın **Yayımla** sayfasının nasıl kullanılacağına ilişkin bilgiler sağlar.
+- [Nasıl Office kullanarak bir Office çözümü ClickOnce](/previous-versions/bb386095(v=vs.110)) Uygulama çözümleri yayımlamak için Yayımlama  **Sihirbazı'nı** veya Project Tasarımcısı'nın Yayımla sayfasını kullanma hakkında Office sağlar.
 
-- [Nasıl yapılır: ClickOnce kullanarak belge düzeyi Office çözümünü SharePoint sunucusuna yayımlama](/previous-versions/bb608595(v=vs.110)) Bir SharePoint sunucusuna dağıtma adımlarını açıklar.
+- [Nasıl SharePoint kullanarak Office](/previous-versions/bb608595(v=vs.110)) düzeyinde bir SharePoint çözümü ClickOnce Bir SharePoint sunucusuna dağıtma adımlarını açıklar.
 
-- [Nasıl yapılır: ClickOnce Office çözümü yüklemesi](/previous-versions/bb608592(v=vs.110)) Yayımlama işlemi sırasında oluşturulan Kurulum programını çalıştırarak Office çözümlerini yükleme adımlarını sağlar; Dağıtım bildirim dosyası açılıyor; ya da özelleştirilmiş bir belge veya çalışma kitabı açılıyor.
+- [Nasıl kurulur: ClickOnce Office yükleme](/previous-versions/bb608592(v=vs.110)) Yayımlama işlemi sırasında Office Kurulum programını çalıştırarak bu çözümlerini yüklemek için adımlar sağlar; dağıtım bildirim dosyasını açma; veya özelleştirilmiş bir belge veya çalışma kitabını açma.
 
-- [Nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yükler](/previous-versions/bb608608(v=vs.110)) Çözüm bileşenlerini yüklemeden önce önkoşulları denetleyen bir kurulum programını nasıl oluşturabileceğiniz açıklanmaktadır.
+- [Nasıl kullanılır: Önkoşulları son kullanıcı bilgisayarlarına yük Office çalıştırma](/previous-versions/bb608608(v=vs.110)) Çözüm bileşenlerini yüklemeden önce önkoşulları kontrol etmek için kurulum programını nasıl oluşturabilirsiniz?
 
-- [Nasıl yapılır: Office çözümlerini dağıtmak IÇIN IIS 'Yi hazırlama](/previous-versions/bb608629(v=vs.110)) Dağıtım bildirimi için Microsoft Internet Information Services (IIS) üzerinde MIME türünün nasıl yapılandırılacağını açıklar.
+- [Nasıl: IIS'yi Office dağıtımına hazırlama](/previous-versions/bb608629(v=vs.110)) Dağıtım bildirimi için Microsoft Internet Information Services (IIS) üzerinde MIME türünün nasıl yapılandırıldığında açıklanır.
 
-- [Nasıl yapılır: dağıtılan Office çözümlerini güncelleştirme](/previous-versions/bb157871(v=vs.110)) **Yayımlama sihirbazını** kullanarak bir Office çözümünü güncelleştirme hakkında bilgi sağlar.
+- [Nasıl Office: Dağıtılan Office güncelleştirme](/previous-versions/bb157871(v=vs.110)) Yayımlama Sihirbazı'nı kullanarak bir Office çözümü güncelleştirme **hakkında bilgi sağlar.**
 
-- [Nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](/previous-versions/bb608626(v=vs.110)) Bir Office çözümünün yükleme yolunun nasıl değiştirileceği hakkında bilgi sağlar.
+- [Nasıl Office:](/previous-versions/bb608626(v=vs.110)) Bir Office değiştirme Bir uygulama çözümünün yükleme yolunu değiştirme hakkında Office sağlar.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Word kullanarak Izlenecek yollar](../vsto/walkthroughs-using-word.md) Visual Studio 'da Office çözümlerine giriş sağlayan ve Word 'den faydalanan uygulamaları nasıl oluşturabileceğiniz konusunda yardımcı olan adım adım kılavuzlarla ilgili bilgi verilmektedir.
+- [Word kullanarak izlenecek yollar](../vsto/walkthroughs-using-word.md) Visual Studio'de Office çözümlerine giriş sağlayan adım adım kılavuzları listeler ve Word'den yararlanan uygulamaları nasıl oluşturabilirsiniz?
 
-- [Excel kullanarak Izlenecek yollar](../vsto/walkthroughs-using-excel.md) Visual Studio 'da Office çözümlerine giriş sağlayan ve Excel 'den faydalanan uygulamaları nasıl oluşturabileceğiniz konusunda yardımcı olan adım adım kılavuzlarla ilgili bilgi verilmektedir.
+- [Excel kullanarak izlenecek yollar](../vsto/walkthroughs-using-excel.md) Visual Studio'daki Office çözümlerine giriş sağlayan adım adım kılavuzları listeler ve Excel'den yararlanan uygulamalar oluşturmanızı Excel.
 
-- [Office çözümlerinde verilere ilişkin izlenecek yollar](../vsto/data-in-office-solutions-walkthroughs.md) Çözümlerinizde verilerle çalışmayı gösteren adım adım kılavuzlarla birlikte listelenir.
+- [Office çözüm kılavuzlarında veriler](../vsto/data-in-office-solutions-walkthroughs.md) Çözümleriniz içinde verilerle nasıl çalışabilirsiniz? gösteren adım adım kılavuzları listeler.
 
-- [Visual Studio 'Da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md) Kurulum, proje şablonları, Office birincil birlikte çalışma derlemeleri ve Office geliştirmede yenilikler hakkında bilgi için bağlantılar sağlar.
+- [Kullanmaya başlayın &#40;Office geliştirme Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md) Kurulum, proje şablonları, birincil birlikte çalışma derlemeleri Office ve geliştirme aşamasındaki yeni Office bağlantılar sağlar.
 
-- [Office programlamada ortak görevler](../vsto/common-tasks-in-office-programming.md) Visual Studio 'da Office çözümleri ile programlama hakkında sık sorulan soruları listeler ve yaygın sorunları çözmeye yardımcı olabilecek konuların bağlantılarını sağlar.
+- [Programlamada ortak Office görevler](../vsto/common-tasks-in-office-programming.md) Office çözümlerini içeren programlama hakkında Visual Studio sık sorulan soruları listeler ve sık karşılaşılan sorunları çözmeye yardımcı olacak konuların bağlantılarını sağlar.
 
-- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md) Word ve Excel çözümlerini ve çözümünüzde derlemelerin rolünü oluşturma hakkında bilgi için bağlantılar sağlar.
+- [Yeni çözümler tasarlama Office oluşturma](../vsto/designing-and-creating-office-solutions.md) Word ve Excel çözümleri oluşturma ve çözümünüzde derlemelerin rolü hakkında bilgi bağlantıları sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
+- [Office örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)

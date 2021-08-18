@@ -17,15 +17,15 @@ ms.locfileid: "121437655"
 ---
 # <a name="testing-tools-in-visual-studio-for-mac"></a>Mac için Visual Studio'de test Mac için Visual Studio
 
-Mac için Visual Studio test araçları, siz ve takımınıza yüksek kod mükemmelliği standartları geliştirmenize ve sürdürmenize yardımcı olabilir. Birim testleri Microsoft birim testi çerçevesi (MSTest), xUnit veya NUnit kullanılarak yazıldığı ve çalıştırıldığı.
+Mac için Visual Studio test araçları, sizin ve takımınıza yüksek kod mükemmelliği standartları geliştirmenize ve sürdürmenize yardımcı olabilir. Birim testleri Microsoft birim testi çerçevesi (MSTest), xUnit veya NUnit kullanılarak yazıldığı ve çalıştırıldığı.
 
 ## <a name="creating-tests"></a>Test oluşturma
-Teste başlamanız için çözümünüze sağ tıklar ve Yeni ekle... menüsünü seçerek > **yeni bir test Project oluşturabilirsiniz.** Ardından iletişim kutusunun sol tarafındaki Test kategorilerinden birini seçin (Örneğin, Web ve Konsol **> Testler kategorisi).** Oluşturmak istediğiniz test projesi türünü seçin ve Ardından'ya tıklayın. Görünen iletişim kutularına yönergeleri izleyin ve ardından çözümünüze yeni bir test projesi eklenir.
+Teste başlamanız için çözümünüze sağ tıklar ve Yeni ekle... menüsünü seçerek > **yeni bir test Project oluşturabilirsiniz.** Ardından iletişim kutusunun sol tarafındaki Test kategorilerinden birini seçin (Örneğin, **Web ve Konsol > Testler kategorisi).** Oluşturmak istediğiniz test projesi türünü seçin ve Ardından'ya tıklayın. Görünen iletişim kutularına yönergeleri izleyin ve ardından çözümünüze yeni bir test projesi eklenir.
 
-![xUnit, MSTest ve NUnit projelerini gösteren Web ve Konsol > Testleri bölümünün seçili olduğu yeni proje iletişim kutusu](media/create-new-test-project.PNG)
+![xUnit, MSTest ve NUnit projelerini gösteren Web > Konsol Testleri bölümünün seçili olduğu yeni proje iletişim kutusu](media/create-new-test-project.PNG)
 
 > [!NOTE]
-> .NET Core uygulamalarınızı birim testi ve birim testi çerçevelerini seçme hakkında daha fazla bilgi için [.NET Core'da birim](/dotnet/core/testing/?pivots=xunit) testi ve .NET Standard bakın.
+> .NET Core uygulamalarınızı birim testi ve birim testi çerçevelerini seçme hakkında daha fazla bilgi için [.NET Core'da birim](/dotnet/core/testing/?pivots=xunit) testi ve birim testi .NET Standard bakın.
 
 ## <a name="running-tests"></a>Testleri çalıştırma
 Birim **Testleri penceresi** birim testlerini çalıştırmak için kullanılır ve Testleri Görüntüle menüsü **>** açılır. Çözümünüzde birim testleri otomatik olarak keşfedilir ve bu pencerede gösterilir. Burada tüm testleri veya seçtiğiniz bir dizi testi çalıştırabilirsiniz.
@@ -42,6 +42,6 @@ Testler çalışıyorken, **başarılı Test Sonuçları** başarısız testleri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core ve .NET Standard'da birim testi](/dotnet/core/testing)
+- [.NET Core ve .NET Standard'de birim testi](/dotnet/core/testing)
 - [Başlarken testiyle (Visual Studio üzerinde Windows)](/visualstudio/test/getting-started-with-unit-testing)
 - [Birim testi temelleri (Visual Studio üzerinde Windows)](/visualstudio/test/unit-test-basics)

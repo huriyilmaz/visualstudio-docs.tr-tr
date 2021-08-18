@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma'
-description: Özel bir çözüm kullanarak etki alanına özgü dil (DSL) Visual Studio öğrenin.
+description: özelleştirilmiş bir Visual Studio çözümü kullanarak etki alanına özgü dil (DSL) oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,112 +13,113 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: ce03349a5179e8dd78220fffd1ff6b21d1a3b495
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: dddd3df6669ed401c6097ebd5761ed9a2c5e5660
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387326"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122040248"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma
-Etki alanına özgü bir dil (DSL), özel bir çözüm kullanılarak Visual Studio oluşturulur.
+özel bir Visual Studio çözümü kullanılarak, etki alanına özgü dil (DSL) oluşturulur.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu yordama başlamadan önce şu bileşenleri yükleyin:
+Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 
 - Visual Studio
-- Visual Studio SDK (uzantı geliştirme iş **yükünün Visual Studio olarak** yüklenir)
-- Modelleme SDK'sı (Visual Studio olarak yüklenir)
+- Visual Studio SDK ( **Visual Studio uzantısı geliştirme** iş yükünün parçası olarak yüklenir)
+- modelleme SDK 'sı (Visual Studio bileşeni olarak yüklenir)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="creating-a-domain-specific-language-solution"></a>Domain-Specific Dili Çözümü Oluşturma
+## <a name="creating-a-domain-specific-language-solution"></a>Domain-Specific dil çözümü oluşturma
 
-1. DSL Sihirbazı'nı başlatmak için yeni **bir** Alana Özgü Dil Tasarımcısı başlatın.
+1. Yeni bir **alana özgü dil Tasarımcısı** PROJESI oluşturarak dsl Sihirbazı 'nı başlatın.
 
    > [!NOTE]
-   > Tercihen, proje için seçtiğiniz ad geçerli bir Visual C# tanımlayıcısı olmalıdır çünkü kod oluşturmak için kullanılabilir.
+   > Tercihen, proje için seçtiğiniz ad, kod oluşturmak için kullanılabilecek geçerli bir Visual C# tanımlayıcısı olmalıdır.
 
    ::: moniker range="vs-2017"
 
-   ![DSL Oluştur iletişim kutusu](../modeling/media/create_dsldialog.png)
+   ![DSL oluştur iletişim kutusu](../modeling/media/create_dsldialog.png)
 
    ::: moniker-end
 
 2. DSL şablonu seçin.
 
-    Dil **Seçeneklerini Domain-Specific sayfasında,** En Az Dil gibi çözüm şablonlarından **birini seçin.** Oluşturmak istediğiniz DSL'ye benzer bir şablon seçin.
+    **Domain-Specific dil seçeneklerini seçin** sayfasında, **en az dil** gibi çözüm şablonlarından birini seçin. Oluşturmak istediğiniz DSL 'ye benzer bir şablon seçin.
 
-    Çözüm şablonları hakkında daha fazla bilgi için [bkz. Domain-Specific Dil Çözümü Şablonu Seçme.](../modeling/choosing-a-domain-specific-language-solution-template.md)
+    Çözüm şablonları hakkında daha fazla bilgi için bkz. [Domain-Specific Language çözüm şablonu seçme](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
-3. Dosya Uzantısı sayfasına bir dosya **adı uzantısı** girin. Bilgisayarınızda ve DSL'i yüklemek istediğiniz tüm bilgisayarlarda benzersiz olmalıdır. Bu uzantıyı kullanan **uygulama veya Visual Studio yok iletisiyle birlikte bakabilirsiniz.**
+3. **Dosya Uzantısı** sayfasında bir dosya adı uzantısı girin. Bu, bilgisayarınızda ve DSL 'yi yüklemek istediğiniz herhangi bir bilgisayarda benzersiz olmalıdır. **hiçbir uygulama olmadığını veya Visual Studio düzenleyicilerinin bu uzantıyı kullanmamalıdır** iletisini görmeniz gerekir.
 
-   - Tam olarak yüklenmemiş olan önceki deneysel URL'lerde dosya adı uzantısını kullandıysanız,  Visual Studio SDK menüsünde bulunan Deneysel Örneği Sıfırla aracını kullanarak bunları temizlayabilirsiniz.
+   - tam olarak yüklenmemiş olan önceki deneysel dsls içindeki dosya adı uzantısını kullandıysanız, Visual Studio SDK menüsünde bulunan **deneysel örneği sıfırla** aracını kullanarak bunları temizleyebilirsiniz.
 
-   - Bu Visual Studio uzantısını kullanan başka bir Uzantı bilgisayarınızda tamamen yüklenmişse, kaldırmayı göz önünde bulundurabilirsiniz. Araçlar menüsünde **Uzantı** **Yöneticisi'ne tıklayın.**
+   - bu dosya uzantısını kullanan başka bir Visual Studio uzantısı bilgisayarınızda tamamen yüklüyse, uygulamayı kaldırmayı düşünün. **Araçlar** menüsünde, **Uzantı Yöneticisi**' ne tıklayın.
 
-4. Sihirbazın kalan sayfalarındaki alanları inceler ve gerekirse ayarlayın. Ayarlardan memnunsanız Son'a **tıklayın.** Ayarlar hakkında daha fazla bilgi için [bkz. DSL Tasarımcısı Sayfaları.](#settings)
+4. Sihirbazın kalan sayfalarındaki alanları inceleyin ve gerekirse ayarlayın. Ayarlarla ilgili memnun olduğunuzda **son**' a tıklayın. Ayarlar hakkında daha fazla bilgi için bkz. [DSL Tasarımcısı Sihirbazı sayfaları](#settings).
 
-    Sihirbaz, **Dsl** ve **DslPackage** adlı iki projesi olan bir çözüm oluşturur.
+    Sihirbaz, **DSL** ve **DslPackage** adlı iki projeye sahip bir çözüm oluşturur.
 
    > [!NOTE]
-   > Güvenilmeyen kaynaklardan metin şablonları çalıştırmamanızı uyaran bir ileti görüyorsanız Tamam'a **tıklayın.** Bu iletiyi yeniden görünmez olarak ayarlayın.
+   > Güvenilmeyen kaynaklardan metin şablonlarını çalıştıracağınızı belirten bir ileti görürseniz, **Tamam**' a tıklayın. Bu iletiyi tekrar görünmeyecek şekilde ayarlayabilirsiniz.
 
-## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a> DSL Tasarımcısı Sihirbazı Sayfaları
- Bazı alanları varsayılan değerlerinden değiştirmeden bırakın. Ancak, Dosya Uzantısı alanını ayar istediğinizden emin olun.
+## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a> DSL Tasarımcısı Sihirbazı sayfaları
+ Birçok alandan birini varsayılan değerlerinden farklı bırakabilirsiniz. Ancak, dosya uzantısı alanını ayarladığınızdan emin olun.
 
-### <a name="solution-settings-page"></a>Çözüm Ayarları sayfası
- **Etki alanına özgü dilinizi temel alan şablon hangisidir?**
-Oluşturmak istediğiniz DSL'ye benzer bir şablon seçin. Farklı şablonlar kolay başlangıç noktaları sağlar. Bir çözüm şablonu seçerek sihirbazda bir açıklama görüntülenir. Çözüm şablonları hakkında daha fazla bilgi için [bkz. Domain-Specific Dil Çözümü Şablonu Seçme.](../modeling/choosing-a-domain-specific-language-solution-template.md)
+### <a name="solution-settings-page"></a>çözüm Ayarlar sayfası
+ **Etki alanına özgü dile hangi şablonu temel almak istiyorsunuz?**
+Oluşturmak istediğiniz DSL 'ye benzer bir şablon seçin. Farklı şablonlar, uygun başlangıç noktaları sağlar. Bir çözüm şablonu seçtiğinizde, sihirbaz bir açıklama görüntüler. Çözüm şablonları hakkında daha fazla bilgi için bkz. [Domain-Specific Language çözüm şablonu seçme](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
- **Etki alanına özgü dilinizi nasıl bir adla ifade etmek istiyorsunuz?**
-Varsayılan olarak çözüm adı kullanılır. Kod bu değerden oluşturulur. C# sınıf adı olarak geçerli olmalıdır.
+ **Etki alanına özgü dilinizi ne adlandırmak istiyorsunuz?**
+Çözüm adı varsayılan olarak belirlenmiştir. Kod bu değerden oluşturulur. C# sınıf adı olarak geçerli olmalıdır.
 
-### <a name="file-extension-page"></a>Dosya Uzantısı sayfası
- **Model dosyaları hangi uzantıyı kullansın?**
+### <a name="file-extension-page"></a>Dosya uzantısı sayfası
+ **Model dosyalarının kullanması gereken uzantı nedir?**
 Yeni bir dosya uzantısı yazın.
 
- Bu dosya uzantısının bu bilgisayarda kullanmak üzere önceden kayıtlı olmadığını aşağıdaki gibi doğrulayın:
+ Bu dosya uzantısının bu bilgisayarda kullanılmak üzere zaten kayıtlı olmadığından emin olun:
 
- Bu **uzantıyı işlemek için kayıtlı diğer araçlar ve uygulamalar'ın altına bakın.** Bu uzantıyı kullanan **uygulama veya Visual Studio** yok iletisiyle görüyorsanız, bu dosya uzantısını kullanabilirsiniz.
+ **Bu uzantıyı işlemek için kayıtlı diğer araç ve uygulamalar** bölümüne bakın. **bu uzantıyı kullanan bir uygulama veya Visual Studio düzenleyici yoksa**, bu dosya uzantısını kullanabilirsiniz.
 
- Araçların veya paketlerin listesini görüyorsanız, aşağıdakilerden birini gerçekleştirin:
+ Araçların veya paketlerin bir listesini görürseniz, aşağıdakilerden birini yapmalısınız:
 
 - Farklı bir dosya uzantısı yazın.
 
-     \- veya -
+     \- veya
 
-- Deneysel Visual Studio sıfırlayın. Bu, daha önce miş olduğunu tüm DSL'lerin kaydını sildi. Başlat menüsünde **Tüm** Programlar'a **tıklayın,** **Microsoft Visual Studio 2010 SDK'sı**, **Araçlar**'ı ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın.** Yeniden kullanmak istediğiniz diğer tüm DSL'leri yeniden oluşturacağız.
+- Visual Studio deneysel örneği sıfırlayın. Bu, daha önce oluşturduğunuz tüm DSLs 'lerin kaydını siler. **başlat** menüsünde, **tüm programlar**, **Microsoft Visual Studio 2010 SDK** ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 deneysel örneğini sıfırlayın**. Yeniden kullanmak istediğiniz tüm diğer DSLs 'leri yeniden oluşturabilirsiniz.
 
-     \- veya -
+     \- veya
 
-- Bu Visual Studio uzantısını kullanan bir Uzantı bilgisayarınızda tamamen yüklüyse, kaldırın. Araçlar menüsünde **Uzantı** **Yöneticisi'ne tıklayın.**
+- bu dosya uzantısını kullanan bir Visual Studio uzantısı bilgisayarınızda tamamen yüklüyse, kaldırın. **Araçlar** menüsünde, **Uzantı Yöneticisi**' ne tıklayın.
 
-### <a name="product-settings-page"></a>Ürün Ayarları sayfası
- **Etki alanına özgü yeni dilin ait olduğu ürünün adı nedir?**
-Dsl adı varsayılan olarak kullanılır.
+### <a name="product-settings-page"></a>ürün Ayarlar sayfası
+ **Yeni etki alanına özgü dilin ait olduğu ürünün adı nedir?**
+DSL adını varsayılan olarak alır.
 
- Bu değer Windows Gezgini'nde (veya Dosya Gezgini) bu dosya uzantısına sahip dosyaları açıklamak için kullanılır.
+ bu değer, bu dosya uzantısına sahip dosyaları anlatmak için Windows Explorer 'da (veya dosya gezgini) kullanılır.
 
  **Ürünün ait olduğu şirketin adı nedir?**
-Şirket adınız.
+Şirketinizin adı.
 
- Bu değer DSL paketinizin AssemblyInfo özelliklerine dahil edildi.
+ Bu değer DSL paketinizin AssemblyInfo özelliklerine eklenir.
 
- **Bu çözümde projeler için kök ad alanı nedir?**
-Bu, varsayılan olarak şirket ve ürün adlarından oluşan bir addır.
+ **Bu çözümdeki projeler için kök ad alanı nedir?**
+Bu, varsayılan olarak şirketinizden ve ürün adınızdan oluşan bir addır.
 
 ### <a name="signing-page"></a>İmzalama sayfası
- **Bir güçlü ad anahtar dosyası oluşturma** Varsayılan seçenek, DSL derlemenizi imzalamak için yeni bir anahtar oluşturmaktır.
+ **Tanımlayıcı ad anahtar dosyası oluşturma** Varsayılan seçenek, DSL derlemenizi imzalamak için yeni bir anahtar oluşturmaktır.
 
- **Mevcut güçlü ad anahtarını kullanma** DSL'nizi başka bir derlemeyle tümleştirecekseniz bu seçeneği kullanın.
+ **Mevcut tanımlayıcı ad anahtarını kullan** DSL 'nizi başka bir derlemeyle bütünleştirmek istiyorsanız bu seçeneği kullanın.
 
- Güçlü adlandırma hakkında daha fazla bilgi için [bkz. Derlemeleri Oluşturma Strong-Named Kullanma.](/dotnet/standard/assembly/create-use-strong-named)
+ Tanımlayıcı adlandırma hakkında daha fazla bilgi için bkz. [Strong-Named derlemeleri oluşturma ve kullanma](/dotnet/standard/assembly/create-use-strong-named).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama](../modeling/how-to-define-a-domain-specific-language.md)
-- [Alana Özgü Dil Araçları Sözlüğü](/previous-versions/bb126564(v=vs.100))
+- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))

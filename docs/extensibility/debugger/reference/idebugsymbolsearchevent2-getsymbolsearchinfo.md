@@ -1,6 +1,6 @@
 ---
-description: Bir sembol yükleme işlemi hakkındaki sonuçları almak için bir olay işleyicisi tarafından çağırılır.
-title: 'IDebugSymbolSearchEvent2:: GetSymbolSearchInfo | Microsoft Docs'
+description: Sembol yükleme işlemiyle ilgili sonuçları almak için olay işleyicisi tarafından çağrılır.
+title: IDebugSymbolSearchEvent2::GetSymbolSearchInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: ae9eb72b-f2aa-43b8-87ca-da19d2e78d17
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 18ca042250d532fe886ac969df5a09bd5d1a49f1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1ccf00b144da55323281db33a1ee23814d212a79
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081249"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070929"
 ---
 # <a name="idebugsymbolsearchevent2getsymbolsearchinfo"></a>IDebugSymbolSearchEvent2::GetSymbolSearchInfo
-Bir sembol yükleme işlemi hakkındaki sonuçları almak için bir olay işleyicisi tarafından çağırılır.
+Sembol yükleme işlemiyle ilgili sonuçları almak için olay işleyicisi tarafından çağrılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,22 +47,22 @@ int GetSymbolSearchInfo(
 
 ## <a name="parameters"></a>Parametreler
 `pModule`\
-dışı Sembollerin yüklendiği modülü temsil eden bir IDebugModule3 nesnesi.
+[out] Sembollerin yükleniyor olduğu modülü temsil eden bir IDebugModule3 nesnesi.
 
 `pbstrDebugMessage`\
-[in, out] Modülden herhangi bir hata iletisi içeren bir dize döndürür. Hata yoksa, bu dize yalnızca modülün adını içerir, ancak hiçbir şekilde boştur.
+[in, out] Modülden gelen hata iletilerini içeren bir dize döndürür. Hata yoksa, bu dize yalnızca modülün adını içerir ancak hiçbir zaman boş olmaz.
 
 > [!NOTE]
-> [C++] `pbstrDebugMessage` `NULL` ile serbest bırakılmalıdır `SysFreeString` .
+> [C++] `pbstrDebugMessage` olamaz `NULL` ve ile serbest bırakılamaları `SysFreeString` gerekir.
 
 `pdwModuleInfoFlags`\
-dışı [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) numaralandırmasından herhangi bir sembolün yüklenip yüklenmediğini gösteren bayrakların birleşimi.
+[out] Herhangi bir simgenin yük [MODULE_INFO_FLAGS](../../../extensibility/debugger/reference/module-info-flags.md) işaret eden bir bayraklar birleşimi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir işleyici, bir modül için hata ayıklama sembolleri yükleme denemesinden sonra [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) olayını aldığında, işleyicinin bu yükün sonuçlarını belirlemesi için thismetodunu çağırabilir.
+ Bir işleyici bir modül için hata ayıklama sembollerini yükleme girişiminde bulunduktan sonra [IDebugSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugsymbolsearchevent2.md) olayı aldığında, işleyici bu yükün sonuçlarını belirlemek için thismethod'u çağırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugModule3](../../../extensibility/debugger/reference/idebugmodule3.md)

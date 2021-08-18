@@ -1,6 +1,6 @@
 ---
 title: ResolveNativeReference görevi | Microsoft Docs
-description: MSBuild 'in, Microsoft. Build. Tasks. ResolveNativeReference sınıfını uygulayarak yerel başvuruları çözümlemek için Resolvenatıvereference görevini nasıl kullandığını öğrenin.
+description: MSBuild, Microsoft. Build. Tasks. resolvenativereference sınıfını uygulayarak yerel başvuruları çözümlemek için resolvenativereference görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,18 +18,19 @@ ms.assetid: 56acd101-de77-4eec-92c6-f5c6d2187579
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cb987ec458e91c4190e2e0c264a80592f8133e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 212239348ba1f4caf80be1ac9feb029bb702cee3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912466"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136683"
 ---
 # <a name="resolvenativereference-task"></a>ResolveNativeReference görevi
 
-Yerel başvuruları çözümler. Sınıfını uygular <xref:Microsoft.Build.Tasks.ResolveNativeReference> . Bu sınıf, doğrudan kodunuzdan kullanılması amaçlanmayan .NET Framework altyapısını destekler.
+Yerel başvuruları çözümler. Sınıfını uygular <xref:Microsoft.Build.Tasks.ResolveNativeReference> . bu sınıf, doğrudan kodunuzdan kullanılması amaçlanmayan .NET Framework altyapısını destekler.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 

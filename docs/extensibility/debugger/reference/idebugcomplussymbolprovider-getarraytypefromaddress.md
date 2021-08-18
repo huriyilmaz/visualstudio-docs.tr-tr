@@ -1,6 +1,6 @@
 ---
-description: Belirtilen dizi hakkında hata ayıklama adresini verilen tür bilgilerini alır.
-title: 'IDebugComPlusSymbolProvider:: GetArrayTypeFromAddress | Microsoft Docs'
+description: Belirtilen diziyle ilgili tür bilgilerini hata ayıklama adresiyle birlikte verir.
+title: IDebugComPlusSymbolProvider::GetArrayTypeFromAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: cc0c53f1-8c0f-49fa-8dbe-bc155e9ce0ef
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8ef35ee307dcc971c29519a944c68eb0e07d7ffa
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6d0bd72e385542df0ae1f763f993ea41156a7d9e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088178"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104111"
 ---
 # <a name="idebugcomplussymbolprovidergetarraytypefromaddress"></a>IDebugComPlusSymbolProvider::GetArrayTypeFromAddress
-Belirtilen dizi hakkında hata ayıklama adresini verilen tür bilgilerini alır.
+Belirtilen diziyle ilgili tür bilgilerini hata ayıklama adresiyle birlikte verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,22 +48,22 @@ int GetArrayTypeFromAddress(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-'ndaki Bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi.
+[in] [IDebugAddress arabirimiyle temsil edilen hata ayıklama](../../../extensibility/debugger/reference/idebugaddress.md) adresi.
 
 `pSig`\
-'ndaki İncelenecek dizi.
+[in] İncelenecek dizi.
 
 `dwSigLength`\
-'ndaki Dizinin bayt cinsinden uzunluğu `pSig` .
+[in] Dizinin bayt cinsinden `pSig` uzunluğu.
 
 `ppField`\
-dışı Bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) arabirimiyle temsil edilen dizi türünü döndürür.
+[out] [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) arabirimi tarafından temsil edilen dizi türünü döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetArrayTypeFromAddress(

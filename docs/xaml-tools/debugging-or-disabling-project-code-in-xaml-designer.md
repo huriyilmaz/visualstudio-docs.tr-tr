@@ -9,16 +9,16 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-xaml-tools
-ms.openlocfilehash: 8e0563318600c30d595d6fd193aff48f4171d31ae95e39c48c8bb5dd02c154ae
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 07107cac541f8845b031d39976be4041a7826551
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121393290"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045703"
 ---
 # <a name="debug-or-disable-project-code-in-xaml-designer"></a>XAML Tasarımcısı’nda proje kodu hatalarını ayıklama veya proje kodunu devre dışı bırakma
 
-Çoğu durumda, XAML Tasarımcısı uygulama tasarımcısında çalışırken farklı değerler veya farklı bir şekilde çalışan özelliklere veya yöntemlere erişmeye çalışan proje kodu nedeniyle XAML Tasarımcısı'daki işlanmamış özel durumlar olabilir. Bu özel durumları çözmek için projenin başka bir örneğinde proje kodunda hata Visual Studio veya tasarımcıda proje kodunu devre dışı bırakarak özel durumları geçici olarak önleyebilirsiniz.
+Çoğu durumda, XAML Tasarımcısı uygulama tasarımcısında çalıştırıldıklarında farklı değerler veya farklı bir şekilde çalışan özelliklere veya yöntemlere erişmeye çalışan proje kodu nedeniyle XAML Tasarımcısı'daki işlanmamış özel durumlar olabilir. Bu özel durumları çözmek için projenin başka bir örneğinde proje kodunda hata Visual Studio veya tasarımcıda proje kodunu devre dışı bırakarak özel durumları geçici olarak önleyebilirsiniz.
 
 Project kod şunları içerir:
 
@@ -30,13 +30,13 @@ Project kod şunları içerir:
 
 - Proje kodundan oluşturulan tasarım zamanı verilerine karşı bağlamalar
 
-Proje kodu devre dışı bırak Visual Studio yer tutucuları gösterir. Örneğin, Visual Studio artık kullanılabilir olmayan bir bağlama için özelliğin adını veya artık çalışmayan bir denetim için yer tutucuyu gösterir.
+Proje kodu devre dışı bırak Visual Studio yer tutucuları gösterir. Örneğin, Visual Studio artık kullanılabilir olmayan bir bağlama için özelliğin adını veya artık çalıştır olmayan bir denetim için yer tutucuyu gösterir.
 
 ![İşlenemeyen özel durum iletişim kutusu](media/xaml_unhandledexception.png)
 
 ## <a name="to-determine-if-project-code-is-causing-an-exception"></a>Proje kodunun bir özel duruma neden olup olmadığını belirlemek için
 
-1. İşlenemeyen özel durum iletişim kutusunda **Tasarımcıyı yeniden yüklemek için buraya tıklayın bağlantısını** seçin.
+1. İşlenemeyen özel durum iletişim kutusunda Tasarımcı **bağlantısını yeniden yüklemek için Buraya tıklayın'ı** seçin.
 
 2. Uygulamayı derlemek ve çalıştırmak **için menü çubuğunda**  >  **Hata** AyıklamaYı Başlat Hata Ayıklama'ya tıklayın.
 
@@ -44,9 +44,9 @@ Proje kodu devre dışı bırak Visual Studio yer tutucuları gösterir. Örneğ
 
 ## <a name="to-debug-project-code-running-in-the-designer"></a>Tasarımcıda çalışan proje kodunda hata ayıklamak için
 
-1. İşlenemeyen özel durum iletişim kutusunda, Çalışan proje kodunu devre **dışı bırakmak ve tasarımcıyı** yeniden yüklemek için buraya tıklayın bağlantısını seçin.
+1. İşlenemeyen özel durum iletişim kutusunda, Çalışan proje kodunu **devre dışı bırakmak ve tasarımcıyı** yeniden yüklemek için buraya tıklayın bağlantısını seçin.
 
-2. Görev Windows'nde, görev yöneticisinin  o anda çalışan tüm örneklerini kapatmak Visual Studio XAML Tasarımcısı Düğmesini seçin.
+2. Görev Windows'nde, görev yöneticisinin o anda çalışan tüm örneklerini kapatmak Visual Studio XAML Tasarımcısı Düğmesini seçin. 
 
      ![TaskManager'da XAML tasarımcısı örnekleri](media/xaml_taskmanager.png)
 
@@ -56,9 +56,9 @@ Proje kodu devre dışı bırak Visual Studio yer tutucuları gösterir. Örneğ
 
 5. Proje kodunda bir kesme noktası ayarlayın.
 
-6. Yeni uygulama örneği Visual Studio çubuğunda İşleme Eklemede Hata **Ayıkla'ya**  >  **tıklayın.**
+6. Yeni uygulama örneği Visual Studio çubuğunda İşleme Eklemede Hata   >  **Ayıkla'ya tıklayın.**
 
-7. İşleme **Ekle iletişim kutusundaki** Kullanılabilir **İşlemler** listesinde **XDesProc.exe'ı ve** ardından Ekle **düğmesini** seçin.
+7. İşleme **Ekle iletişim kutusundaki** Kullanılabilir **İşlemler listesinde,** XDesProc.exe'ı ve ardından Ekle **düğmesini** seçin. ****
 
      ![XAML tasarımcısı işlemi](media/xaml_attach.png)
 
@@ -70,11 +70,11 @@ Proje kodu devre dışı bırak Visual Studio yer tutucuları gösterir. Örneğ
 
 ## <a name="to-disable-project-code-in-the-designer"></a>Tasarımcıda proje kodunu devre dışı bırakmak için
 
-- İşlenemeyen özel durum iletişim kutusunda, Çalışan proje kodunu devre **dışı bırakmak ve tasarımcıyı** yeniden yüklemek için buraya tıklayın bağlantısını seçin.
+- İşlenemeyen özel durum iletişim kutusunda, Çalışan proje kodunu **devre dışı bırakmak ve tasarımcıyı** yeniden yüklemek için buraya tıklayın bağlantısını seçin.
 
 - Alternatif olarak, **XAML** tasarımcısındaki araç çubuğunda Proje kodunu devre **dışı bırak düğmesini** seçin.
 
-     ![Kod Project Devre Dışı Bırak düğmesi](media/xaml_disablecode.png)
+     ![Kodu Project Devre Dışı Bırak düğmesi](media/xaml_disablecode.png)
 
      Proje kodunu yeniden etkinleştirmek için düğmeyi yeniden etkinleştirebilirsiniz.
 
@@ -84,12 +84,12 @@ Proje kodu devre dışı bırak Visual Studio yer tutucuları gösterir. Örneğ
 - Her iki seçenek de tasarımcının yeniden yüklemesini ve ardından ilişkili proje için tüm kodu devre dışı bırakmasını sağlar.
 
     > [!NOTE]
-    > Proje kodunun devre dışı bırakılması tasarım zamanı veri kaybına neden olabilir. Alternatif olarak, tasarımcıda çalışan kodda hata ayıklaması da olabilir.
+    > Proje kodunun devre dışı bırakılması tasarım zamanı veri kaybına neden olabilir. Alternatif olarak tasarımcıda çalışan kodun hata ayıklaması da kullanılır.
 
 ## <a name="control-display-options"></a>Denetim görüntüleme seçenekleri
 
 > [!NOTE]
-> **Denetim Görüntüleme Seçenekleri** yalnızca Windows (derleme 16299) veya sonraki bir Windows 10 Fall Creators Update platform uygulamaları için kullanılabilir. Denetim **Görüntüleme Seçenekleri özelliği,** 2017 Visual Studio 15.9 veya sonraki bir sürümde kullanılabilir.
+> **Denetim Görüntüleme Seçenekleri** yalnızca Windows platformunu (derleme 16299) Windows 10 Fall Creators Update Platform uygulamaları için kullanılabilir. Denetim **Görüntüleme Seçenekleri özelliği,** 2017 Visual Studio 15.9 veya sonraki bir sürümde kullanılabilir.
 
 XAML tasarımcısında, denetim görüntüleme seçeneklerinizi yalnızca Windows SDK'dan platform denetimlerini görüntü Windows değiştirebilirsiniz. Bu, XAML tasarımcısının güvenilirliğini geliştirmektedir.
 

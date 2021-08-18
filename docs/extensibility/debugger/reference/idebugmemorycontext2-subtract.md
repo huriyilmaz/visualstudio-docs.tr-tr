@@ -1,6 +1,6 @@
 ---
-description: Geçerli bağlamdan belirtilen değeri çıkartır ve yeni bir bağlam döndürür.
-title: 'IDebugMemoryContext2:: Subtract | Microsoft Docs'
+description: Belirtilen değeri geçerli bağlamdan çıkarır ve yeni bir bağlam döndürür.
+title: IDebugMemoryContext2::Subtract | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,20 +12,21 @@ ms.assetid: 63df14c7-8d7e-47c1-afa7-5a1ab5d8eaba
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1007a50ca42164cfc4e4f58c8d2c877cbba20f5c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b25e58fed406863009b72220fad4ba04b0d3b1e0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058592"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118677"
 ---
 # <a name="idebugmemorycontext2subtract"></a>IDebugMemoryContext2::Subtract
-Geçerli bağlamdan belirtilen değeri çıkartır ve yeni bir bağlam döndürür.
+Belirtilen değeri geçerli bağlamdan çıkarır ve yeni bir bağlam döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,18 +46,18 @@ int Subtract(
 
 ## <a name="parameters"></a>Parametreler
 `dwCount`\
-'ndaki Azaltılacak bellek bayt sayısı.
+[in] Azalarak kaç bellek baytı olduğunu.
 
 `ppMemCxt`\
-dışı Yeni bir [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesi döndürür.
+[out] Yeni bir [IDebugMemoryContext2 nesnesi](../../../extensibility/debugger/reference/idebugmemorycontext2.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bellek bağlamı bir adrestir, bu nedenle bir adresten değeri çıkarmak yeni bir bağlam arabirimi gerektiren yeni bir adres oluşturur.
+ Bellek bağlamı bir adrestir, bu nedenle bir adresten değer çıkararak yeni bir bağlam arabirimi gerektiren yeni bir adres üretir.
 
- Bu yöntem, sonuçta elde edilen adres bu içerikle ilişkili bellek alanının dışında olsa bile her zaman yeni bir bağlam üretmelidir. Bunun tek istisnası, yeni bağlam için bellek ayrılamaz veya `ppMemCxt` null bir değer (bir hatadır) ise olur.
+ Sonuçta elde edilen adres bu bağlamla ilişkili bellek alanı dışında olsa bile bu yöntem her zaman yeni bir bağlam üretmektedir. Bunun tek istisnası, yeni bağlam için bellek ayırılamayacak olması veya null değer `ppMemCxt` olmasıdır (bu bir hatadır).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

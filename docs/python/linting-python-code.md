@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7b391a522e9cd1f19e98aa73370d6849977d2142da43a277ae49fa8a7a3235d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c87ae1484b3c868b7f633c2550587ae0ff980c69
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121367790"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054463"
 ---
 # <a name="use-pylint-to-check-python-code"></a>Python kodunu kontrol etmek için PyLint kullanma
 
@@ -24,7 +24,7 @@ Python kodundaki hataları kontrol eden ve iyi Python kodlama desenlerini teşvi
 
 ## <a name="run-pylint"></a>PyLint'i çalıştırma
 
-Python'daki bir Python projesine sağ **tık Çözüm Gezgini** **Python Run**  >  **PyLint seçeneğini seçmeniz gerekir:**
+Çalışma alanı içinde bir Python projesine sağ **Çözüm Gezgini** **Python Run**  >  **PyLint seçeneğini seçmeniz gerekir:**
 
 ![Python projeleri için bağlam menüsünde PyLint komutu](media/code-pylint-command.png)
 
@@ -41,7 +41,7 @@ Bir hataya çift tıklarsanız doğrudan sorunu oluşturan kaynak koda ulaşabil
 
 ## <a name="set-pylint-command-line-options"></a>PyLint komut satırı seçeneklerini ayarlama
 
-PyLint [belgelerinin](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) komut satırı seçenekleri *bölümünde,pylintrc* yapılandırma dosyası aracılığıyla PyLint'in davranışını denetleme açıklanmıştır. Bu tür bir dosya, bu ayarların ne kadar geniş bir şekilde uygulanmasını istediğinize bağlı olarak Visual Studio'de veya başka bir yerde Python projesinin köküne yer değiştirebilir (ayrıntılar için komut satırı [seçeneklerine](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) bakın).
+PyLint [belgelerinin](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) komut satırı seçenekleri bölümünde, *.pylintrc* yapılandırma dosyası aracılığıyla PyLint'in davranışını denetleme açıklanmıştır. Bu tür bir dosya, bu ayarların ne kadar geniş bir şekilde uygulanması istediğinize bağlı olarak Visual Studio veya başka bir yerde Python projesinin köküne yer değiştirebilir (ayrıntılar için komut satırı [seçeneklerine](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) bakın).
 
 Örneğin, bir projede *.pylintrc* dosyasıyla önceki görüntüde gösterilen "eksik docstring" uyarılarını göstermeden önce adımları uygulayın:
 
@@ -53,7 +53,7 @@ PyLint [belgelerinin](https://pylint.readthedocs.io/en/latest/user_guide/run.htm
 
 1. Bu Visual Studio Çözüm Gezgini projenize sağ tıklayın, Var Olan Öğeyi Ekle'yi seçin, yeni  >   *.pylintrc* dosyasına gidin, seçin ve Ekle'yi **seçin.**
 
-1. Üzerinde çalışabilirsiniz çeşitli ayarları olan dosyayı düzenlemek için açın. Bir uyarıyı devre dışı bırakmak `[MESSAGES CONTROL]` için bölümünü bulun ve ilgili `disable` bölümdeki ayarı bulun. Uzun bir belirli ileti dizesi içerir ve bu dizeye istediğiniz uyarıları eklersiniz. Buradaki örnekte ekleme `,missing-docstring` (satır içi virgül dahil).
+1. Üzerinde çalışabilirsiniz çeşitli ayarlara sahip olan dosyayı düzenlemek için açın. Bir uyarıyı devre dışı bırakmak `[MESSAGES CONTROL]` için bölümünü bulun ve ilgili `disable` bölümdeki ayarı bulun. Uzun bir belirli ileti dizesi içerir ve bu dizeye istediğiniz uyarıları eklersiniz. Buradaki örnekte sonuna `,missing-docstring` (satır içi virgül de dahil) ekini eklersiniz.
 
 1. Uyarıların artık gizlenmelerini görmek için *.pylintrc* dosyasını kaydedin ve PyLint'i yeniden çalıştırın.
 

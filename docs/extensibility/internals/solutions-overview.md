@@ -10,14 +10,15 @@ ms.assetid: 3b21e3a1-170a-4485-941e-6b04b7b27886
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 914f1744accc10eb55cfb0b321a04560c27bca05
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6ea779481103042241821086d04e874d10d2ced2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069380"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028728"
 ---
 # <a name="solutions-overview"></a>Çözümlere genel bakış
 

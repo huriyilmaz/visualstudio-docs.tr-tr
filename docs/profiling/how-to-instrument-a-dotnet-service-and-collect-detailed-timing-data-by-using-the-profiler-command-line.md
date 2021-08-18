@@ -11,16 +11,16 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: ee43ad8621d1903eb7c775225f12a4a13fa68cb57b6a4166c7ec42c69131dd58
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8781170e8f934f457ae16d6193636819f12179ad
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410703"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038831"
 ---
 # <a name="how-to-instrument-a-net-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line"></a>Nasıl yapılır: Profil oluşturucu komut satırını kullanarak bir .NET hizmetini izleme ve ayrıntılı zamanlama verileri toplama
 
-Bu makalede, bir Visual Studio Profil Oluşturma Araçları hizmetini .NET Framework ayrıntılı zamanlama verileri toplamak için .NET Framework komut satırı araçlarının nasıl kullanımı açıklanmıştır.
+Bu makalede, bir hizmette Visual Studio Profil Oluşturma Araçları ve ayrıntılı zamanlama verileri toplamak için .NET Framework komut satırı araçlarının nasıl kullanımı açıklanmıştır.
 
 > [!NOTE]
 > Bilgisayar başlatıldıktan sonra hizmet yeniden başlatılamazsa, yalnızca işletim sistemi başlatıldığında başlayan bir hizmet gibi, bir hizmetin profilini, ölçümleme yöntemiyle profillerini oluşturmazsınız.
@@ -29,7 +29,7 @@ Bu makalede, bir Visual Studio Profil Oluşturma Araçları hizmetini .NET Frame
 >
 > Profil oluşturma çalıştırması için katman etkileşim verileri eklemek için komut satırı profil oluşturma araçlarıyla belirli yordamlar gerekir. Bkz. [Katman etkileşim verilerini toplama.](../profiling/adding-tier-interaction-data-from-the-command-line.md)
 
-Bir .NET Framework hizmetten ayrıntılı zamanlama verilerini toplamak için,VSInstr.exearacını [](../profiling/vsinstr.md) kullanarak bileşenin bir instrumented sürümünü oluşturabilirsiniz. Ardından, hizmetin araçsız sürümünü, hizmetin el ile başlayacak şekilde yapılandırıldığından emin olarak, araçlı sürümle değiştirirsiniz. [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) aracını kullanarak genel profil oluşturma ortam değişkenlerini başlatacak ve ardından konak bilgisayarı yeniden başlatabilirsiniz. Ardından profilleyiciyi başlatabilirsiniz.
+Ölçüm aracını kullanarak bir .NET Framework hizmetten ayrıntılı zamanlama verileri toplamak [](../profiling/vsinstr.md) içinVSInstr.exearacını kullanarak bileşenin bir instrumented sürümünü oluşturabilirsiniz. Ardından, hizmetin araçsız sürümünü, hizmetin el ile başlayacak şekilde yapılandırıldığından emin olarak, araçlı sürümle değiştirirsiniz. [VSPerfCLREnv.cmd](../profiling/vsperfclrenv.md) aracını kullanarak genel profil oluşturma ortam değişkenlerini başlatacak ve ardından konak bilgisayarı yeniden başlatabilirsiniz. Ardından profilleyiciyi başlatabilirsiniz.
 
 Hizmet başlatılırken zamanlama verileri otomatik olarak bir veri dosyasına toplanır. Profil oluşturma oturumu sırasında veri toplamayı duraklatabilir ve sürdürebilirsiniz.
 
@@ -43,7 +43,7 @@ Profil oluşturma oturumunu sona erdirmak için hizmeti devre dışı bırakarak
 
 3. Özgün ikili dosyanın yerini, araçlı sürümle değiştirin. Hizmet Windows Yöneticisi'nde, hizmetin Başlangıç Türü'nin El ile olarak ayarlanmış olduğundan emin olun.
 
-4. Profil oluşturma .NET Framework ortam değişkenlerini başlatmak. Şunu yazın:
+4. Profil oluşturma .NET Framework değişkenlerini başlatma. Şunu yazın:
 
      **VSPerfClrEnv /globaltraceon**
 

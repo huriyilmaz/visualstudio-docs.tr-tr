@@ -1,53 +1,54 @@
 ---
 title: XAML'ye genel bakış
-description: Visual Studio 'da XAML ve XAML kod Düzenleyicisi ve XAML Tasarımcısı araçları hakkında temel bilgileri öğrenin.
+description: XAML ve XAML kod düzenleyicisi hakkında temel bilgileri ve XAML Tasarımcısı araçları Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 06/23/2020
 ms.topic: overview
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 6f315573b24989e6ad3a3d451de372430b72f70f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-xaml-tools
+ms.openlocfilehash: c2bdb5fad308bfcb1f4ec843b88baa937ca77e3c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931205"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045612"
 ---
-# <a name="overview-of-xaml"></a>XAML 'ye Genel Bakış
+# <a name="overview-of-xaml"></a>XAML'ye Genel Bakış
 
-Extensible Application Markup Language (XAML), XML tabanlı bildirim temelli bir dildir. XAML, Kullanıcı arabirimleri oluşturmak için aşağıdaki uygulama türlerinde yaygın olarak kullanılır:
+Extensible Application Markup Language (XAML), XML'i temel alan bildirim temelli bir dildir. XAML, kullanıcı arabirimleri oluşturmak için aşağıdaki uygulama türlerinde kapsamlı olarak kullanılır:
 
 - [Windows Presentation Foundation (WPF) uygulamaları](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [Evrensel Windows Platformu (UWP) uygulamaları](/windows/uwp/xaml-platform/xaml-overview)
-- [Xamarin. Forms uygulamaları](/xamarin/xamarin-forms/xaml/)
+- [Xamarin.Forms uygulamaları](/xamarin/xamarin-forms/xaml/)
 
-Aşağıdaki XAML kodu bir basit düğme denetimini tanımlar.
+Aşağıdaki XAML kodu basit bir düğme denetimi tanımlar.
 
 ```xaml
 <Button Click="ButtonClick">Show updates</Button>
 ```
 
-XAML, [Windows Workflow Foundation (WF) uygulamalarında](/dotnet/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml)iş akışlarını tanımlamak için de kullanılır.
+XAML, [workflow Foundation (WF) Windows iş](/dotnet/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml)akışlarını tanımlamak için de kullanılır.
 
 ## <a name="xaml-code-editor"></a>XAML kod düzenleyici
 
-Visual Studio IDE 'deki [xaml kod Düzenleyicisi](xaml-code-editor.md) , Windows platformu ve Xamarin. Forms için WPF ve UWP uygulamaları oluşturmak için ihtiyacınız olan tüm araçları içerir. Ayrıca, Visual Studio 'daki IDE (tümleşik geliştirme ortamı), diğer platformlar için uygulama geliştirmek üzere kullanabileceğiniz birçok özelliğe sahiptir, ancak XAML için de benzersiz olan bazı özellikler de vardır.
+Visual Studio IDE'deki [XAML](xaml-code-editor.md) kod düzenleyicisi, Windows platformu ve Xamarin.Forms için WPF ve UWP uygulamaları oluşturmak için ihtiyacınız olan tüm araçları içerir. Ayrıca, Visual Studio'daki IDE 'nin (tümleşik geliştirme ortamı) diğer platformlar için uygulama geliştirmek için kullanabileceğiniz birçok özelliği olsa da, XAML'ye özgü bazı özellikleri de vardır.
 
 ## <a name="xaml-designer"></a>XAML Tasarımcısı
 
-Visual Studio ve Visual Studio için Blend WPF, UWP ve Xamarin. Forms uygulamaları için Kullanıcı arabirimleri (UI) oluşturmanıza yardımcı olan bir [XAML Tasarımcısı](creating-a-ui-by-using-xaml-designer-in-visual-studio.md) sağlar. Denetimleri araç kutusu veya varlıklar penceresinden sürükleyebilir ve Özellikler penceresi özellikleri ayarlayabilirsiniz. Bunu yaptığınızda, Visual Studio ve Visual Studio için Blend karşılık gelen XAML kodunu oluşturun. XAML kodunu doğrudan düzenlemeyi tercih ediyorsanız, bunu da yapabilirsiniz.
+Visual Studio ve Visual Studio için Blend [WPF, UWP XAML Tasarımcısı](creating-a-ui-by-using-xaml-designer-in-visual-studio.md) Xamarin.Forms uygulamaları için kullanıcı arabirimleri (UI) derlemeye yardımcı olan bir ağ arabirimi sağlar. Araç Kutusu veya Varlıklar penceresinden denetimleri sürükleyip Özellikler penceresi. Bunu yapmak için Visual Studio Visual Studio için Blend XAML kodunu oluşturun. XAML kodunu doğrudan düzenlemeyi tercih ederseniz bunu da siz de yapabiliriz.
 
 ## <a name="whats-new"></a>Yenilikler
 
 En son bilgiler için aşağıdaki kaynaklara bakın:
 
-- **[Visual Studio 2019 sürüm 16,7 Preview 1 blog GÖNDERISINE XAML araçları geliştirmeleri](https://devblogs.microsoft.com/visualstudio/improvements-to-xaml-tooling-in-visual-studio-2019-version-16-7-preview-1/)**
-- **[Visual Studio 2019 blog gönderisinden xaml geliştirici araçlarındaki](https://devblogs.microsoft.com/visualstudio/whats-new-in-xaml-developer-tools-in-visual-studio-2019-for-wpf-uwp/)** yenilikler
-- YouTube 'daki **[Visual Studio videosunun yenı xaml özellikleri](https://youtu.be/yI9OyA4ZM2E)**
+- **[Visual Studio 2019 sürüm 16.7 Önizleme 1'de XAML](https://devblogs.microsoft.com/visualstudio/improvements-to-xaml-tooling-in-visual-studio-2019-version-16-7-preview-1/)** araçlarında geliştirmeler blog gönderisi
+- **[Visual Studio 2019'daki XAML geliştirici](https://devblogs.microsoft.com/visualstudio/whats-new-in-xaml-developer-tools-in-visual-studio-2019-for-wpf-uwp/)** araçlarında yapılan Visual Studio blog gönderisi
+- **[YouTube'daki yeni Visual Studio XAML](https://youtu.be/yI9OyA4ZM2E)** özellikleri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WPF uygulamalarında XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [UWP uygulamalarında XAML](/windows/uwp/xaml-platform/xaml-overview)
-- [Xamarin. Forms uygulamalarındaki XAML](/xamarin/xamarin-forms/xaml/)
+- [Xamarin.Forms uygulamaları içinde XAML](/xamarin/xamarin-forms/xaml/)

@@ -1,6 +1,6 @@
 ---
-description: Belirtilen hata ayıklayıcı adresli kodun gizli olup olmadığını belirler.
-title: IDebugComPlusSymbolProvider::IsHiddenCode | Microsoft Docs
+description: Belirtilen hata ayıklayıcı adresindeki kodun gizli olup olmadığını belirler.
+title: 'IDebugComPlusSymbolProvider:: ıshiddencode | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e30e4b66768b249afb350be3336754b300b8089f2eb5eb429182b0601653e0bb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4e2b977144adda0ffb907bbea02e5d0374fe03c9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390339"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119704"
 ---
 # <a name="idebugcomplussymbolproviderishiddencode"></a>IDebugComPlusSymbolProvider::IsHiddenCode
-Belirtilen hata ayıklayıcı adresli kodun gizli olup olmadığını belirler.
+Belirtilen hata ayıklayıcı adresindeki kodun gizli olup olmadığını belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int IsHiddenCode(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-[in] [IDebugAddress arabirimiyle temsil edilen hata ayıklama](../../../extensibility/debugger/reference/idebugaddress.md) adresi.
+'ndaki Bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Kod gizli ise döndürür; `S_OK` aksi takdirde `S_FALSE` döndürür.
+Kod gizliyse, öğesini döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` .
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsHiddenCode(

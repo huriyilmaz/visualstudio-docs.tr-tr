@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 61fdd59aa107d7ab953916dbd7d95906345659ac
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 9141a94d1c100d798b90eeb7d0ce90d15d137b9ddefbbbd92c44a98cf356a5d7
+ms.sourcegitcommit: 29a893fb8639ee1d64922e99bf424e10ecce30d5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122026778"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121465128"
 ---
 # <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
 

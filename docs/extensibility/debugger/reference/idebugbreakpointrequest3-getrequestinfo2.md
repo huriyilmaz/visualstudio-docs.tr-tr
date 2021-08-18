@@ -11,17 +11,18 @@ ms.assetid: 33942e4a-0a0a-49e8-a693-004954f6d38a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 46c4984251d7546df5ea82f4c674b8ab849d27c8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8c889b73f231b2e31bc60be7bc5d1700b3a891ba
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054445"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072567"
 ---
 # <a name="idebugbreakpointrequest3getrequestinfo2"></a>IDebugBreakpointRequest3::GetRequestInfo2
 Bu yöntem, bu kesme noktası isteğini açıklayan kesme noktası istek bilgilerini alır.

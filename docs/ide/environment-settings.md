@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b44dfa90c56b4d4c0ee62e84f7fa68739ff515b1c75c8a051ceb18063d46356
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c4e91ce87d2bf3738fa4454b6f1410981fd7fc8e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121373393"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086176"
 ---
 # <a name="environment-settings-for-visual-studio"></a>Visual Studio için ortam ayarları
 

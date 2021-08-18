@@ -1,6 +1,6 @@
 ---
-description: Bu işlev, kullanıcıya özgü çeşitli seçenekleri alır.
-title: SccGetUserOption Işlevi | Microsoft Docs
+description: Bu işlev, kullanıcıya özgü çeşitli seçenekleri kullanır.
+title: SccGetUserOption İşlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,17 +11,18 @@ ms.assetid: 17863747-1901-4c53-a2b3-ed996085e120
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 622abc04609edf410214af6b8acf795f969e2fbc
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: c8262d971d1eb9f161693ad86fc1878d29353a79
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112901116"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028676"
 ---
 # <a name="sccgetuseroption-function"></a>SccGetUserOption İşlevi
-Bu işlev, kullanıcıya özgü çeşitli seçenekleri alır.
+Bu işlev, kullanıcıya özgü çeşitli seçenekleri kullanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,20 +35,20 @@ SCCRTN SccGetUserOption(
 ```
 
 #### <a name="parameters"></a>Parametreler
- pContext
+ Pcontext
 
-'ndaki Kaynak denetimi eklentisi bağlam işaretçisi.
+[in] Kaynak denetimi eklentisi bağlam işaretçisi.
 
  nOption
 
-'ndaki Alma seçeneği (olası seçeneklere yönelik açıklamalar bölümüne bakın).
+[in] Alma seçeneği (olası seçenekler için açıklamalara bakın).
 
  lpVal
 
-dışı Seçenekle ilişkili değer.
+[out] Seçenekle ilişkili değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini geri dönmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
@@ -56,11 +57,11 @@ dışı Seçenekle ilişkili değer.
 |SCC_E_NONSPECIFICERROR|Belirtilmeyen bir hata oluştu.|
 
 ## <a name="remarks"></a>Açıklamalar
- Aşağıdaki seçenekler bu komut tarafından desteklenir:
+ Bu komut aşağıdaki seçenekleri destekler:
 
-|Kullanıcı seçeneği|Açıklama|
+|Kullanıcı Seçeneği|Açıklama|
 |-----------------|-----------------|
-|`SCC_USEROPT_CHECKOUT_LOCALVER`|Kullanıcının dosyaların yerel sürümünü kullanıma almak isteyip istemediğini belirler. `lpVal` atandı `SCC_USEROPT_COLV_YES` (Kullanıcı yerel dosyaları kullanıma almak istiyor) veya `SCC_USEROPT_COLV_NO` .|
+|`SCC_USEROPT_CHECKOUT_LOCALVER`|Kullanıcının dosyaların yerel sürümünü kontrol etmek isteyip istediğini belirler. `lpVal` atanır `SCC_USEROPT_COLV_YES` (kullanıcı yerel dosyaları kontrol etmek ister) veya `SCC_USEROPT_COLV_NO` .|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e0624461d6f37468c0d44ace6c287bda67021bcbef7c525dd871dab691cf282
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7aa8659754091106cc3f87f13c2e58a14d6b525d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121413836"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137489"
 ---
 # <a name="supporting-multiple-versions-of-visual-studio"></a>Visual Studio'nun Birden Çok Sürümünü Destekleme
 *Yan yana* terimi, bir ürünün birden çok sürümünü aynı bilgisayara yükleyip koruyabilmeniz anlamına gelir. vspackages için, bir kullanıcının aynı bilgisayarda birden fazla Visual Studio sürümü yüklü olabileceği anlamına gelir. Ancak, Visual Studio tek bir sürümüne yüklenmiş VSPackages 'nin yan yana sürümlerine sahip olabilirsiniz.

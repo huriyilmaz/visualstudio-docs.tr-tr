@@ -11,14 +11,15 @@ ms.assetid: 00c73cf9-2933-472e-bc1d-d041f4d7e412
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0931223f8932a379a8db9aba6d1dea41a31b50f1
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 99c234b8ecafbc206dfa75cecf4402ae5007d9635982fbb4bad5fdd4958922ef
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156211"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121436438"
 ---
 # <a name="idiasymbolget_isctypes"></a>IDiaSymbol::get_isCTypes
 Sembol dosyasının C türlerini içerip içermediğini gösteren bir bayrak alır.
