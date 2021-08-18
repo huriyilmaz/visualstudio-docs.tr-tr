@@ -1,6 +1,6 @@
 ---
 title: Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama
-description: Visual Studio Görselleştirme ve Modelleme SDK'sı'nda özel kod kullanarak oluşturulan bir tasarımcının arka plan görüntüsünü ayarlayabilirsiniz.
+description: görselleştirme ve modelleme SDK Visual Studio, özel kod kullanarak oluşturulan tasarımcı için arka plan görüntüsünü ayarlayabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,57 +10,57 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 4de75e34696f7404488e804a87aa6f1d6c065860855e76b1ae1a7930f2940def
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b0e96a74b56226818c96e049df93dba8b1fa721a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121231463"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085552"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama
-Görselleştirme Visual Studio Modelleme SDK'sı içinde, özel kod kullanarak oluşturulan bir tasarımcının arka plan görüntüsünü oluşturabilirsiniz.
+görselleştirme ve modelleme SDK Visual Studio, özel kod kullanarak oluşturulan tasarımcı için arka plan görüntüsünü ayarlayabilirsiniz.
 
 ## <a name="setting-the-background-image"></a>Arka plan görüntüsünü ayarlama
 
-#### <a name="to-set-a-background-image-for-a-generated-designer"></a>Oluşturulan tasarımcı için arka plan görüntüsü ayarlamak için
+#### <a name="to-set-a-background-image-for-a-generated-designer"></a>Oluşturulmuş bir tasarımcı için arka plan görüntüsü ayarlamak için
 
-1. Diyagramın arka planı olarak kullanmak istediğiniz görüntü dosyasını geçerli projenin Dsl\Resources dizinine kopyalayın.
+1. Diyagramın arka planı olarak kullanmak istediğiniz resim dosyasını geçerli proje için Dsl\Resources dizinine kopyalayın.
 
-2. Bu **Çözüm Gezgini** Dsl\Resources klasörüne sağ tıklayın, Ekle'nin üzerine **gelin** ve ardından Mevcut Öğe'ye **tıklayın.**
+2. **Çözüm Gezgini**, Dsl\Resources klasörüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **var olan öğe**' ye tıklayın.
 
-3. Var Olan **Öğeyi Ekle iletişim** kutusunda Dsl\Resources klasörüne gidin.
+3. **Varolan öğe Ekle** iletişim kutusunda Dsl\Resources klasörüne göz atın.
 
-4. Türe **göre dosyalar listesinde** Görüntü Dosyaları'ya **tıklayın.**
+4. **Dosya türü** listesinde, **görüntü dosyaları**' na tıklayın.
 
-5. Dizinine kopyalanan görüntü dosyasına ve ardından Ekle'ye **tıklayın.**
+5. Dizine kopyaladığınız görüntü dosyasına tıklayın ve ardından **Ekle**' ye tıklayın.
 
-6. Dsl'ye sağ tıklayın ve **Özellikler'e** tıklar ve Dsl projesinin özelliklerini açın.
+6. DSL ' ye sağ tıklayın ve **Özellikler** ' e tıklayarak DSL projesinin özelliklerini açın.
 
-7. Kaynaklar **sekmesinde Bu** proje **bir varsayılan kaynak dosyası içermedi'ye tıklayın. Oluşturmak için buraya tıklayın.**
+7. **Kaynaklar** sekmesinde, **Bu proje varsayılan bir kaynak dosyası içermez öğesine tıklayın. Bir tane oluşturmak için buraya tıklayın.**
 
-8. Resim dosyasını kaynak dosyadan kaynaklar penceresine **sürükleyerek Çözüm Gezgini** dosyasına ekleyin.
+8. Resmi **Çözüm Gezgini** kaynak dosyasına sürükleyerek, resim dosyasını kaynak dosyasına ekleyin.
 
-9. Dosya menüsünü açın ve proje özelliklerini kaydetmek için seçeneğine tıklayın.
+9. Dosya menüsünü açın ve proje özelliklerini kaydetmek için seçeneğe tıklayın.
 
-10. Dsl\Properties\Resources.resx dosyasının mevcut olduğunu ve altında Resources.Designer.cs dosyasının olduğunu doğrulayın.
+10. Dsl\Properties\Resources.resx dosyasının var olduğunu ve altında. Designer. cs dosya kaynaklarını içerdiğini doğrulayın.
 
-11. Resources.Designer.cs eksikse, dosyasındaki Resources.resx **dosyasına Çözüm Gezgini.**
+11. Kaynak. tasarımcı. cs eksikse, **Çözüm Gezgini**' de resources. resx dosyasına tıklayın.
 
-12. Özellikler **penceresinde** özelliğini olarak `Custom Tool` `ResXFileCodeGenerator` ayarlayın.
+12. **Özellikler** penceresinde, `Custom Tool` özelliğini olarak ayarlayın `ResXFileCodeGenerator` .
 
-13. Bu **Çözüm Gezgini** Dsl projesine sağ tıklayın, Ekle'nin üzerine **gelin** ve Yeni Klasör'e **tıklayın.**
+13. **Çözüm Gezgini**, DSL projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' e tıklayın.
 
-14. Klasöre Özel **adını girin.**
+14. Klasörü **özel** olarak adlandırın.
 
-15. Özel klasörüne sağ tıklayın, Ekle'nin üzerine **gelin ve** Yeni **Öğe'ye tıklayın.**
+15. Özel klasöre sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni öğe**' ye tıklayın.
 
-16. Yeni **Öğe Ekle iletişim** kutusundaki Şablonlar listesinde **Kod Dosyası'nın** **üzerine tıklayın.**
+16. **Yeni öğe Ekle** iletişim kutusunda, **Şablonlar** listesinde, **kod dosyası**' na tıklayın.
 
-17. Ad **kutusuna yazın** ve `BackgroundImage.cs` Ekle'ye **tıklayın.**
+17. **Ad** kutusuna yazın `BackgroundImage.cs` ve **Ekle**' ye tıklayın.
 
-18. Ad alanını, diyagram sınıf adını ve görüntü dosyası kaynak adını ayarlayarak aşağıdaki kodu BackgroundImage.cs dosyasına kopyalayın.
+18. Aşağıdaki kodu BackgroundImage. cs dosyasına kopyalayın, ad alanı, diyagram sınıf adı ve görüntü dosyası kaynak adı ' nı ayarlama.
 
-     "MyDiagramClass" ifadesini Dsl\GeneratedCode\Diagrams.cs içinde tanımlanan diyagram kısmi sınıfının adıyla değiştirin. Dsl\GeneratedCode\Diagrams.cs dosyasından doğru ad alanını da edinebilirsiniz.
+     "MyDiagramClass" ifadesini, Dsl\GeneratedCode\Diagrams.cs. içinde tanımlanan diyagram parçalı sınıfının adıyla değiştirin Ayrıca, Dsl\GeneratedCode\Diagrams.cs. dosyasından doğru ad alanını alabilirsiniz
 
     ```csharp
     using System;
@@ -101,7 +101,7 @@ Görselleştirme Visual Studio Modelleme SDK'sı içinde, özel kod kullanarak o
     }
     ```
 
-     Modeli program koduyla özelleştirme hakkında daha fazla bilgi için bkz. Program Kodunda [Modelde Gezinme ve Güncelleştirme.](../modeling/navigating-and-updating-a-model-in-program-code.md)
+     Modeli program kodu ile özelleştirme hakkında daha fazla bilgi için bkz. [Program kodundaki bir modeli gezinme ve güncelleştirme](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

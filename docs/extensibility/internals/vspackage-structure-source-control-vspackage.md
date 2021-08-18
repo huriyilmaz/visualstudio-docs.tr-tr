@@ -11,24 +11,25 @@ ms.assetid: 92722be7-b397-48c3-a7a7-0b931a341961
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b95c382342675d79c0c6e854b5fc087d495827e2
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: d8d0ab61556e85c1ad817dd9ee454f58645ad96e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898828"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110468"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage Yapısı (Kaynak Denetimi VSPackage’ı)
 
-Kaynak Denetim Paketi SDK'sı, bir kaynak denetimi uygulayanın kendi kaynak denetimi işlevselliğini kendi kaynak denetimi işlevselliğini uygulama ortamıyla tümleştirerek vsPackage oluşturmaya Visual Studio sağlar. VSPackage, genellikle paket tarafından kayıt defteri girdilerinde tanıtılmış hizmetlere göre Visual Studio tümleşik geliştirme ortamı (IDE) tarafından isteğe bağlı olarak yüklenen bir COM bileşenidir. Her VSPackage uygulaması <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> gerekir. VSPackage genellikle Visual Studio IDE tarafından sunulan hizmetleri tüketir ve bazı hizmetleri kendi başına sunar.
+Kaynak Denetim Paketi SDK'sı, bir kaynak denetimi uygulayanın kaynak denetimi işlevselliğini kendi kaynak denetimi işlevselliğini ortamla tümleştirerek vsPackage oluşturmasına Visual Studio sağlar. VSPackage, genellikle paket tarafından kayıt defteri girdilerinde tanıtılmış hizmetlere göre Visual Studio tümleşik geliştirme ortamı (IDE) tarafından isteğe bağlı olarak yüklenen bir COM bileşenidir. Her VSPackage uygulaması <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> gerekir. VSPackage genellikle Visual Studio IDE tarafından sunulan hizmetleri tüketir ve bazı hizmetleri kendi başına sunar.
 
-VSPackage, menü öğelerini belirtir ve .vsct dosyası aracılığıyla varsayılan öğe durumu belirtir. Bu Visual Studio IDE, VSPackage yüklenene kadar bu durumdaki menü öğelerini görüntüler. Ardından VSPackage'ın yöntemi uygulaması, menü öğelerini <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> etkinleştirmek veya devre dışı bırakmak için çağrılır.
+VSPackage, menü öğelerini belirtir ve .vsct dosyası aracılığıyla varsayılan öğe durumu belirtir. IDE Visual Studio VSPackage yüklenene kadar menü öğelerini bu durumda görüntüler. Ardından VSPackage'ın yöntemi uygulaması, menü öğelerini <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> etkinleştirmek veya devre dışı bırakmak için çağrılır.
 
 ## <a name="source-control-package-characteristics"></a>Kaynak Denetim Paketi Özellikleri
 
-VsPackage kaynak denetimi, veri kaynağı ile Visual Studio. VSPackage semantiği şunları içerir:
+Kaynak denetimi VSPackage, veri kaynağı ile Visual Studio. VSPackage semantiği şunları içerir:
 
 - VSPackage (arabirim) olma sayesinde uygulanacak `IVsPackage` arabirim
 
@@ -36,7 +37,7 @@ VsPackage kaynak denetimi, veri kaynağı ile Visual Studio. VSPackage semantiğ
 
 - VSPackage'ın Visual Studio.
 
-VSPackage kaynak denetimi, aşağıdaki diğer Visual Studio kurmalıdır:
+VSPackage kaynak denetimi, bu diğer Visual Studio iletişim kurmalıdır:
 
 - Projeler
 
@@ -48,7 +49,7 @@ VSPackage kaynak denetimi, aşağıdaki diğer Visual Studio kurmalıdır:
 
 - Çalışan belge tablosu
 
-### <a name="visual-studio-environment-services-that-may-be-consumed"></a>Visual Studio Ortam Hizmetleri
+### <a name="visual-studio-environment-services-that-may-be-consumed"></a>Visual Studio Tüketilebilir Ortam Hizmetleri
 
 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>
 
@@ -68,7 +69,7 @@ SVsRegisterScciProvider Hizmeti
 
 Kaynak denetim paketi bir VSPackage'dır ve bu nedenle bu paketle kayıtlı diğer VSPackage'larla doğrudan Visual Studio. Kaynak denetimi işlevselliğinin tamamını sağlamak için VSPackage kaynak denetimi, projeler veya kabuk tarafından sağlanan arabirimlerle ilgilenebilirsiniz.
 
-IDE içinde Visual Studio proje olarak tanınması için uygulamalı <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> ve Visual Studio gerekir. Ancak, bu arabirim kaynak denetimi için yeterince özel değildir. Kaynak denetimi altında olması beklenen projeler <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> uygulanır. Bu arabirim, VSPackage kaynak denetimi tarafından bir projeyi içeriği için sorgulamak ve bu projeye glyphs ve bağlama bilgileri sağlamak için kullanılır (kaynak denetimi altındaki projenin sunucu konumu ile disk konumu arasında bağlantı kurmak için gereken bilgiler).
+IDE içinde Visual Studio proje olarak tanınması için uygulamanın Visual Studio <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> gerekir. Ancak, bu arabirim kaynak denetimi için yeterince özel değildir. Kaynak denetimi altında olması beklenen projeler <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> uygulanır. Bu arabirim, VSPackage kaynak denetimi tarafından bir projeyi içeriği için sorgulamak ve bu projeyi glyphs ve bağlama bilgileri (kaynak denetimi altındaki projenin sunucu konumu ve disk konumu arasında bağlantı kurmak için gereken bilgiler) sağlamak için kullanılır.
 
 VSPackage kaynak denetimi, projelerin kendilerini kaynak denetimine kaydetmelerine ve durum ifadelerini almalarına olanak sağlayan <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> uygulamasıdır.
 

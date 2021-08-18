@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 938515f85724008db40bdbfedc8ba6f6980a6fa46d80f9f44bb6749c25d4fac2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6a81bc133cb83e1c818ccd4bee4b93e389e3b4bb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404757"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052224"
 ---
 # <a name="idiasymbolget_isreturnvalue"></a>IDiaSymbol::get_isReturnValue
 Değişkenin bir dönüş değeri taşıdığını belirtir.

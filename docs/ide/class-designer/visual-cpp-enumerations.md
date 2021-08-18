@@ -1,6 +1,6 @@
 ---
-title: Sınıf Tasarımcısı C++ numaralandırmalar
-description: Sınıf Tasarımcısı C++ enum ve kapsamlı numaralandırma sınıfı türlerini nasıl desteklediğini öğrenin.
+title: Sınıf Tasarımcısı'de C++ Sınıf Tasarımcısı
+description: C++ enum Sınıf Tasarımcısı kapsamlı enum sınıf türlerini nasıl desteklediğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,18 +10,19 @@ ms.assetid: 11e90ba1-18cd-44f8-9e26-e3746a7a19d1
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88675bb7593a901805cc156bbb36a2f49d69ec29
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b4ab0dc47f9113e17b36617b432df1ffe5f0153e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852563"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109506"
 ---
-# <a name="c-enumerations-in-class-designer"></a>Sınıf Tasarımcısı C++ numaralandırmalar
+# <a name="c-enumerations-in-class-designer"></a>Sınıf Tasarımcısı'de C++ numara Sınıf Tasarımcısı
 
-**Sınıf Tasarımcısı** C++ `enum` ve kapsamlı `enum class` türleri destekler. Aşağıda bir örnek verilmiştir:
+**Sınıf Tasarımcısı** C++ ve `enum` kapsamlı türleri `enum class` destekler. Aşağıda bir örnek verilmiştir:
 
 ```cpp
 enum CardSuit {
@@ -40,11 +41,11 @@ enum class CardSuit {
 };
 ```
 
-Bir sınıf diyagramında C++ sabit listesi şekli bir yapı şekli gibi görünür ve çalışıyor, ancak etiket **enum** veya **enum sınıfını** okuduğu, mavi yerine pembe ve sol ve üst kenar boşluklarında renkli bir kenarlığa sahip. Hem numaralandırma şekilleri hem de yapı şekillerinin kare köşeleri vardır.
+Sınıf diyagramında C++ numaralama şekli, yapı şekli gibi görünür ve çalışır; tek fark etiketin **Enum** veya **Enum** sınıfını okuması, mavi yerine pembe olması ve sol ve üst kenar boşluklarında renkli bir kenarlık olmasıdır. Hem numaralama şekilleri hem de yapı şekilleri köşe köşelerine sahiptir.
 
-Türünü kullanma hakkında daha fazla bilgi için `enum` bkz. [numaralandırmalar](/cpp/cpp/enumerations-cpp).
+türünü kullanma hakkında daha fazla `enum` bilgi için [bkz. Numaralar.](/cpp/cpp/enumerations-cpp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C++ kodu ile çalışma](working-with-visual-cpp-code.md)
+- [C++ Kodu ile Çalışma](working-with-visual-cpp-code.md)
 - [Listelemeler](/cpp/cpp/enumerations-cpp)

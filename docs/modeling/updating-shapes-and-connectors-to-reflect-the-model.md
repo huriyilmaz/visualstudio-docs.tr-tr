@@ -1,24 +1,25 @@
 ---
 title: Modeli Yansıtacak Şekilleri ve Bağlayıcıları Güncelleştirme
-description: Visual Studio 'da alana özgü bir dilde, bir şeklin görünümünün temel alınan modelin durumunu yansıttığından emin olun.
+description: Visual Studio bir alana özgü dilde, bir şeklin görünümünün temel alınan modelin durumunu yansıttığından emin olun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 6439a01de2a02361914ce227c43d903f1b24b405
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 0f667821a9940603f887850a9b26fc1d8ca2f073
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388574"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085331"
 ---
 # <a name="update-shapes-and-connectors-to-reflect-the-model"></a>Şekilleri ve Bağlayıcıları Modeli Yansıtacak Şekilde Güncelleştirin
 
-Visual Studio 'daki alana özgü dilde, bir şeklin görünümünün temel alınan modelin durumunu yansıtmasını sağlayabilirsiniz.
+Visual Studio bir alana özgü dilde, bir şeklin görünümünün temel alınan modelin durumunu yansıtmasını sağlayabilirsiniz.
 
 Bu konudaki kod örnekleri `.cs` projenizdeki bir dosyaya eklenmelidir `Dsl` . Her bir dosyada bu yönergelere ihtiyacınız vardır:
 
@@ -86,7 +87,7 @@ Artık şekil, program kodunda veya Kullanıcı olarak ayarlayabileceğiniz bir 
 
 ## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>Şekil özelliklerini başlatmak için OnChildConfigured kullanın
 
-Bir şeklin özelliklerini ilk oluşturulduğunda ayarlamak için, `OnChildConfigured()` Diyagram sınıfınızın kısmi tanımında geçersiz kılma. Diyagram sınıfı DSL tanımınızda belirtilir ve oluşturulan kod **Dsl\generated Code\Diagram.cs**' de bulunur. Örneğin:
+Bir şeklin özelliklerini ilk oluşturulduğunda ayarlamak için, `OnChildConfigured()` Diyagram sınıfınızın kısmi tanımında geçersiz kılma. Diyagram sınıfı DSL tanımınızda belirtilir ve oluşturulan kod **Dsl\generated Code\Diagram.cs**' de bulunur. Örnek:
 
 ```csharp
 partial class MyLanguageDiagram

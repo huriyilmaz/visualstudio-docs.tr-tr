@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4fb8f3653a40078b3018487b7c06e6247daa9402746a7af824d76af460a3aa86
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6bc0ba86c14d3257452d45f830953235a9ca09fe
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360761"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064727"
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
 Bu yöntem, varsa bir nesnesiyle ilişkili özel durumu alır.

@@ -1,21 +1,22 @@
 ---
 title: Nesnelerin stilini değiştirme
 titleSuffix: Blend for Visual Studio
-description: Fırçalar uygulayıp, Görsel durumları ayarlayarak ve yeniden kullanılabilir stilleri ve şablonları uygulayarak Visual Studio için Blend nesnelerinin stilini değiştirmeyi öğrenin.
+description: fırçalar uygulayıp, görsel durumları ayarlayarak ve yeniden kullanılabilir stilleri ve şablonları uygulayarak Visual Studio için Blend nesnelerinin stilini değiştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b98f814e1f310c7d7f281457589a1a9f7d21653
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0b42efe1299d6e2a05e03de5aa99893b97603805
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966558"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122037869"
 ---
 # <a name="modify-the-style-of-objects-in-blend-for-visual-studio"></a>Visual Studio için Blend içindeki nesnelerin stilini değiştirme
 
@@ -27,9 +28,9 @@ Ayarları veya ayar gruplarını yeniden kullanmak istiyorsanız, yeniden kullan
 
 Görünümünü değiştirmek istiyorsanız nesneye bir fırça uygulayın.
 
-### <a name="paint-a-repeating-image-or-pattern-on-an-object"></a>Bir nesne üzerinde yinelenen bir görüntüyü veya kalıbı boyama
+### <a name="paint-a-repeating-image-or-pattern-on-an-object"></a>bir nesne üzerinde yinelenen bir resim veya kalıp Paint
 
-*Döşeme fırçası* kullanarak bir nesne üzerinde yinelenen bir görüntüyü veya kalıbı boyayın.
+*döşeme fırçası* kullanarak bir nesne üzerinde yinelenen bir resim veya desen Paint.
 
 Bir kutucuk fırçası oluşturmak için, bir *görüntü fırçası*, *Çizim Fırçası* veya *görsel fırça* kaynağı oluşturarak başlarsınız.
 
@@ -51,7 +52,7 @@ Bir denetimin görünümünü ve davranışını bir kez tasarlayabilir ve bu ta
 
 **Bir stil kullanmanız gerekir mi?**: yalnızca varsayılan özellikleri (örneğin, bir düğmenin rengi) ayarlamak istiyorsanız, bir *Stil* kullanın. Bir stili uyguladıktan sonra bile bir denetimi değiştirebilirsiniz.
 
-**Bir şablon kullanmanız gerekir mi?**: bir denetimin yapısını değiştirmek istiyorsanız, bir *şablon* kullanın. Bir grafiği veya logoyu bir düğmeye dönüştürmeyi düşünün. Bir şablonu ona uyguladıktan sonra bir denetimi değiştiremezsiniz.
+**Bir şablon kullanmanız gerekir mi?**: bir denetimin yapısını değiştirmek istiyorsanız, bir *şablon* kullanın. bir grafiği veya logoyu bir düğmeye dönüştürme Imagine. Bir şablonu ona uyguladıktan sonra bir denetimi değiştiremezsiniz.
 
 ### <a name="create-a-template-or-style"></a>Şablon veya stil oluşturma
 

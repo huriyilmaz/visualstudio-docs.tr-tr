@@ -1,6 +1,6 @@
 ---
-description: Belirtilen kaydı alın.
-title: IDiaEnumDebugStreamData::Item | Microsoft Docs
+description: Belirtilen kaydı alır.
+title: 'IDiaEnumDebugStreamData:: Item | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b3bf851a1221aa2553827e015df81ea5d3b789c6fb935401a6a7e79c3a9e0f5d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fdffa847b40b7e2a2d3bf961d9daa15abc82fb0b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420867"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036562"
 ---
 # <a name="idiaenumdebugstreamdataitem"></a>IDiaEnumDebugStreamData::Item
-Belirtilen kaydı alın.
+Belirtilen kaydı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,22 +38,22 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametreler
  dizin
 
-[in] Alınan kaydın dizini. Dizin 0 ile `count` -1 aralığındadır; burada `count` [IDiaEnumDebugStreamData::get_Count.](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)
+'ndaki Alınacak kaydın dizini. Dizin 0 `count` -1 aralığında, burada `count` [IDiaEnumDebugStreamData:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreamdata-get-count.md)tarafından döndürülür.
 
- Cbdata
+ cbData
 
-[in] Veri arabelleğinin bayt cinsinden boyutu.
+'ndaki Veri arabelleğinin bayt cinsinden boyutu.
 
- veri verisi
+ pcbData
 
-[out] Döndürülen bayt sayısını döndürür. ise, `data` `NULL` belirtilen `pcbData` kayıtta kullanılabilen toplam veri bayt sayısını içerir.
+dışı Döndürülen bayt sayısını döndürür. `data`İse `NULL` , `pcbData` Belirtilen kayıttaki toplam veri bayt sayısını içerir.
 
- data[]
+ veri []
 
-[out] Hata ayıklama akışı kayıt verileriyle doldurulmuş bir arabellek.
+dışı Hata ayıklama akışı kayıt verileriyle doldurulmuş bir arabellek.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Geçersiz `E_INVALIDARG` parametreler için ve parametresinin `index` sınırların dışında olması için döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_INVALIDARG`Geçersiz parametreler için döndürür ve `index` parametre sınırların dışında olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

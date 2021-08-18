@@ -1,6 +1,6 @@
 ---
-title: OPTNAMECHANGEPFN | Microsoft Docs
-description: Kaynak denetimi eklentisinden gelen ad değişikliklerini IDE'deki kaynak IDE'ye ileten OPTNAMECHANGEPFN geri çağırma işlevini Visual Studio öğrenin.
+title: SEÇENEKADı < PFN | Microsoft Docs
+description: kaynak denetim eklentisinden Visual Studio ıde 'ye olan ad değişikliklerine iletişim kuran seçeneknamechangepfn callback işlevi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,15 +15,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 15485540921f9a4dbe3ef95e0fd878eeaecc5d5a8861a3e4460999be3d3d8bb7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ecd4682058bfb024db55658d88d0e629a40881b6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414109"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122094522"
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
-Bu, [SccSetOption](../extensibility/sccsetoption-function.md) çağrısında belirtilen bir geri çağırma işlevidir (seçeneği kullanılarak) ve kaynak denetimi eklentisi tarafından yapılan ad değişikliklerini IDE'ye geri `SCC_OPT_NAMECHANGEPFN` ileterek kullanılır.
+Bu, [SccSetOption](../extensibility/sccsetoption-function.md) (kullanma seçeneği) çağrısında belirtilen bir geri çağırma işlevidir `SCC_OPT_NAMECHANGEPFN` ve kaynak denetimi eklentisi tarafından YAPıLAN ad değişikliklerini IDE 'ye geri bildirmek için kullanılır.
 
 ## <a name="signature"></a>İmza
 
@@ -38,23 +38,23 @@ typedef void (*OPTNAMECHANGEPFN)(
 ## <a name="parameters"></a>Parametreler
  pvCallerData
 
-[in] [SccSetOption'a](../extensibility/sccsetoption-function.md) önceki bir çağrıda belirtilen kullanıcı değeri (seçeneğini `SCC_OPT_USERDATA` kullanarak).
+'ndaki Daha önceki bir [SccSetOption](../extensibility/sccsetoption-function.md) çağrısında belirtilen kullanıcı değeri (using seçeneği `SCC_OPT_USERDATA` ).
 
  pszOldName
 
-[in] Dosyanın özgün adı.
+'ndaki Dosyanın özgün adı.
 
- pszNewName
+ Pszyeniad
 
-[in] Dosyanın yeniden adlandırıldı olduğu ad.
+'ndaki Dosyanın yeniden adlandırıldığını adı.
 
 ## <a name="return-value"></a>Döndürülen değer
  Yok.
 
 ## <a name="remarks"></a>Açıklamalar
- Kaynak denetimi işlemi sırasında bir dosya yeniden adlandırıldı ise, kaynak denetimi eklentisi bu geri arama aracılığıyla ad değişikliğini IDE'ye bildirebilirsiniz.
+ Kaynak denetim işlemi sırasında bir dosya yeniden adlandırılırsa, kaynak denetimi eklentisi bu geri çağırma yoluyla ad değişikliğine ilişkin IDE 'ye bildirimde bulunabilir.
 
- IDE bu geri çağırmayı desteklemezse, belirtmek için [SccSetOption'ı](../extensibility/sccsetoption-function.md) çağırmaz. Eklenti bu geri çağırmayı desteklemezse, IDE geri çağırmayı ayarlamayı denemesi `SCC_E_OPNOTSUPPORTED` `SccSetOption` için işlevden geri döner.
+ IDE bu geri çağırma işlemini desteklemiyorsa, belirtmek için [SccSetOption](../extensibility/sccsetoption-function.md) çağrısı yapmaz. Eklenti bu geri çağırma işlemini desteklemiyorsa, `SCC_E_OPNOTSUPPORTED` `SccSetOption` IDE geri aramayı ayarlamaya çalıştığında işlevinden geri döner.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDE tarafından uygulanan geri çağırma işlevleri](../extensibility/callback-functions-implemented-by-the-ide.md)

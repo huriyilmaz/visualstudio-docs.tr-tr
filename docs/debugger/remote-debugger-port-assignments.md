@@ -1,6 +1,6 @@
 ---
 title: Uzaktan hata ayıklayıcı bağlantı noktası atamaları | Microsoft Docs
-description: 32 bit işletim sistemlerinde, 64 bit işletim sistemlerinde ve Azure 'da Visual Studio uzaktan hata ayıklayıcı bağlantı noktası atamalarını anlayın. Bulma bağlantı noktası hakkında bilgi edinin.
+description: 32 bit işletim sistemlerinde, 64 bit işletim sistemlerinde ve Azure 'da uzaktan hata ayıklayıcı bağlantı noktası atamalarını Visual Studio anlayın. Bulma bağlantı noktası hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 05/18/2018
 ms.topic: reference
@@ -8,14 +8,15 @@ ms.assetid: 238bb4ec-bb00-4c2b-986e-18ac278f3959
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d7552ab67b70b3af8cfd1603462089e4fe2a209e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d07d84ce2d547a5f2910b8afa7ade652d03028c1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908221"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120796"
 ---
 # <a name="remote-debugger-port-assignments"></a>Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları
 Visual Studio Uzaktan Hata Ayıklayıcı, bir uygulama veya arka plan hizmeti olarak çalıştırılabilir. Uygulama olarak çalıştırıldığında, varsayılan olarak aşağıdaki şekilde atanmış bir bağlantı noktası kullanır:
@@ -35,10 +36,10 @@ Diğer bir deyişle, uzaktan hata ayıklayıcıya atanan bağlantı noktasının
 ## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>32 bit Işletim sistemlerinde uzaktan hata ayıklayıcı bağlantı noktası
 
 ::: moniker range=">=vs-2019"
- TCP 4024 (Visual Studio 2019 ' de) ana bağlantı noktasıdır ve tüm senaryolar için gereklidir. Bunu komut satırından ya da uzaktan hata ayıklayıcı penceresinden yapılandırabilirsiniz.
+ TCP 4024 (Visual Studio 2019) ana bağlantı noktasıdır ve tüm senaryolar için gereklidir. Bunu komut satırından ya da uzaktan hata ayıklayıcı penceresinden yapılandırabilirsiniz.
 ::: moniker-end
 ::: moniker range="vs-2017"
- TCP 4022 (Visual Studio 2017 ' de) ana bağlantı noktasıdır ve tüm senaryolar için gereklidir. Bunu komut satırından ya da uzaktan hata ayıklayıcı penceresinden yapılandırabilirsiniz.
+ TCP 4022 (Visual Studio 2017) ana bağlantı noktasıdır ve tüm senaryolar için gereklidir. Bunu komut satırından ya da uzaktan hata ayıklayıcı penceresinden yapılandırabilirsiniz.
 ::: moniker-end
 
  Uzaktan hata ayıklayıcı penceresinde **araçlar > seçenekler**' e tıklayın ve TCP/IP bağlantı noktası numarasını ayarlayın.

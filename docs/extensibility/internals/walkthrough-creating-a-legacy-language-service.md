@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2aafa7c3040534c075d5911d36dd2486c60122955dc51f28e71960b43513fff3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a0f3e497368047cec2ce1518e7b01f59a8895fbc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121321291"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110455"
 ---
 # <a name="walkthrough-creating-a-legacy-language-service"></a>İzlenecek yol: Eski Dil Hizmeti oluşturma
 içinde bir dil hizmeti uygulamak için yönetilen paket çerçevesi (MPF) dil sınıflarını [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] kullanmak oldukça kolaydır. Dil hizmetini, dil hizmetinin kendisini ve diliniz için ayrıştırıcıyı barındırmak için bir VSPackage gerekir.
@@ -43,7 +43,7 @@ içinde bir dil hizmeti uygulamak için yönetilen paket çerçevesi (MPF) dil s
 
 2. Projenin adı olarak MyLanguagePackage girin ve Tamam'a **tıklayın.**
 
-    Istediğiniz adı kullanabilirsiniz. Burada ayrıntılı olarak açıklanan bu yordamlarda adı MyLanguagePackage olduğu varsayıldı.
+    Istediğiniz adı kullanabilirsiniz. Burada açıklanan bu yordamlarda adı MyLanguagePackage olduğu varsayıldı.
 
 3. Dil [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] olarak seçin ve yeni bir anahtar dosyası oluşturma seçeneğini belirleyin. **İleri**’ye tıklayın.
 
@@ -53,7 +53,7 @@ içinde bir dil hizmeti uygulamak için yönetilen paket çerçevesi (MPF) dil s
 
     Kod parçacıklarını desteklemeyi amacınız yoksa Son'a tıklar ve sonraki adımı yoksayabilirsiniz.
 
-6. Komut **Adı olarak** Kod Parçacığı Ekle **ve** Komut Kimliği `cmdidInsertSnippet` için **girin.** **Finish (Son)** düğmesine tıklayın.
+6. Komut **Adı ve** Komut Kimliği **olarak** Kod Parçacığı `cmdidInsertSnippet` Ekle **girin.** **Finish (Son)** düğmesine tıklayın.
 
     Komut **Adı** ve **Komut Kimliği** istediğiniz gibi olabilir, bunlar yalnızca örnektir.
 
@@ -127,7 +127,7 @@ içinde bir dil hizmeti uygulamak için yönetilen paket çerçevesi (MPF) dil s
      :::code language="csharp" source="../../snippets/csharp/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/cs/mysource.cs" id="Snippet5":::
      :::code language="vb" source="../../snippets/visualbasic/VS_Snippets_VSSDK/creatingalanguageservice(managedpackageframework)/vb/mysource.vb" id="Snippet5":::
 
-6. Temel **sınıfta** uygulanması gereken soyut  yöntemler varsa Düzenle , **IntelliSense** menüsünden Soyut Sınıf Uygulay'ı seçin.
+6. Temel **sınıfta** uygulanması gereken soyut  yöntemler varsa Düzenle , **IntelliSense** menüsünden Soyut Sınıfını Uygulay'ı seçin.
 
 7. Aksi takdirde, giriş imtiyazını sınıfın içine getirin ve geçersiz kılınan yöntemi girin.
 

@@ -11,17 +11,18 @@ ms.assetid: bd08f356-cc67-4717-98c9-c3d00cad2040
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 071af90af5fe22d6f6cfa662458be660edc5d39f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9d3a8784244c35c5beb6c7711e3438d1b54386dd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064832"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063973"
 ---
 # <a name="idebugproperty3destroyobjectid"></a>IDebugProperty3::DestroyObjectID
 Bu özellik ile ilişkili benzersiz KIMLIĞI yok eder ve çağıranın artık bu özelliği diğer tüm özelliklerden benzersiz bir şekilde belirlemesine işaret eder.

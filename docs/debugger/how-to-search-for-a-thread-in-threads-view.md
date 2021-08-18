@@ -1,6 +1,6 @@
 ---
-title: İş parçacığı görünümünde Iş parçacığı arama | Microsoft Docs
-description: Visual Studio 'de hata ayıklarken iş parçacığı KIMLIĞINI veya modül dizesini arama ölçütü olarak kullanarak, Spy + + aracının Iş parçacıkları görünümünde belirli bir iş parçacığını arayın.
+title: İş Parçacıkları Görünümünde İş Parçacığı Arama | Microsoft Docs
+description: Spy++ aracının İş Parçacıkları görünümünde belirli bir iş parçacığını, hata ayıklama sırasında iş parçacığı kimliğini veya modül dizesini arama ölçütü olarak Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,33 +13,33 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7eff224614fb2a0be28258217e7d6e06a5ba7ea9d0898aeb58957e9a25610813
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 38db1aa0af80b8c2c1769c6acf864f577a1d7a2d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378989"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052050"
 ---
 # <a name="how-to-search-for-a-thread-in-threads-view"></a>Nasıl Yapılır: İş Parçacıkları Görünümünde İş Parçacığı Arama
-İş parçacığı KIMLIĞINI veya modül dizesini arama ölçütü olarak kullanarak Iş parçacıkları görünümünde belirli bir iş parçacığını arayabilirsiniz. Aramanın başlangıç yönünü de belirtebilirsiniz. İletişim kutusundaki alanlar, iş parçacığı ağacındaki seçili iş parçacığının özniteliklerini gösterir.
+İş parçacığı kimliğini veya modül dizesini arama ölçütü olarak kullanarak İş Parçacıkları görünümünde belirli bir iş parçacığını arayabilirsiniz. Ayrıca aramanın başlangıç yönünü de belirtsiniz. İletişim kutusundaki alanlar, iş parçacığı ağacında seçili iş parçacığının özniteliklerini gösterir.
 
-### <a name="to-search-for-a-thread-in-threads-view"></a>İş parçacıkları görünümünde iş parçacığı aramak için
+### <a name="to-search-for-a-thread-in-threads-view"></a>İş Parçacıkları görünümünde bir iş parçacığını aramak için
 
-1. Windows 'larınızı, Spy + + ve etkin bir [Iş parçacığı görünümü](../debugger/threads-view.md) penceresi görünür olacak şekilde düzenleyin.
+1. Spy++ ve etkin bir İş Parçacıkları Görünümü penceresinin görünür [olması için](../debugger/threads-view.md) pencerelerinizi düzenleme.
 
-2. **Arama** menüsünden **iş parçacığı bul**' u seçin.
+2. Arama menüsünde **İş** Parçacığı **Bul'a tıklayın.**
 
-    [Iş parçacığı arama Iletişim kutusu](../debugger/thread-search-dialog-box.md) açılır.
+    İş [Parçacığı Arama İletişim Kutusu](../debugger/thread-search-dialog-box.md) açılır.
 
-3. İş parçacığı KIMLIĞINI veya bir modül dizesini arama ölçütü olarak yazın.
+3. Arama ölçütü olarak iş parçacığı kimliğini veya modül dizesini yazın.
 
-4. Değerlerini belirtmek istemediğiniz tüm alanları temizleyin.
+4. Değerlerini belirtmek istemeyebilirsiniz.
 
    > [!TIP]
-   > Bir modülün sahip olduğu tüm iş parçacıklarını bulmak için, **Iş parçacığı** **metin kutusunu temizleyin ve modül kutusuna Modül** adını yazın. Sonra iş parçacığı aramaya devam etmek için **Sonrakini Bul** ' u kullanın.
+   > Bir modülün sahip olduğu tüm iş parçacıklarını bulmak için İş Parçacığı **metin** kutusunu temizleyin ve Modül kutusuna modül **adını** yazın. Ardından, iş **parçacıklarını aramaya** devam etmek için Sonrakini Bul'ı kullanın.
 
-5. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
+5. **Aramanın** ilk **yönü** için Yukarı veya Aşağı'ya seçin.
 
 6. **Tamam**'a tıklayın.
 
-   Eşleşen bir iş parçacığı bulunursa, Iş parçacıkları görünümü penceresinde vurgulanır.
+   Eşleşen bir iş parçacığı bulunursa, İş Parçacıkları görünüm penceresinde vurgulanır.

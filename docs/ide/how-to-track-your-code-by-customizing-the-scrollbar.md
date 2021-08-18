@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 59af487695addbed60f9e908ec425c7ce1b698ad6482cf367fd00d5d09a2c9eb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: eb56e1dfe2e5410761fc52e2c9edc5fa04095b91
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121233114"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086020"
 ---
 # <a name="how-to-customize-the-scroll-bar"></a>Nasıl: Kaydırma çubuğunu özelleştirme
 
@@ -45,7 +45,7 @@ Kaydırma çubuğunun bir dize araması sonrasında nasıl göründüğünü gö
 
 Dizenin tüm örneklerini değiştirdikten sonra kaydırma çubuğu aşağıdaki gibi olur. Kaydırma çubuğundaki kırmızı işaretler, metin değiştirmenin hatalara neden olduğu yeri gösterir.
 
-![Visual Studio dizeyi hatalarla değiştirdikten sonra kaydırma çubuğunu değiştirme](../ide/media/enhancedscrollbarreplace.png)
+![Visual Studio bir dizeyi hatalarla değiştirdikten sonra kaydırma çubuğunu değiştirme](../ide/media/enhancedscrollbarreplace.png)
 
 ## <a name="display-modes"></a>Görüntüleme modları
 
@@ -57,7 +57,7 @@ Kaydırma çubuğunun iki modu vardır: çubuk modu ve harita modu.
 
 ### <a name="map-mode"></a>Eşleme modu
 
-*Harita modu,* kaydırma çubuğunda kod satırlarını görüntüler. Kaynak genel bakış'ta bir değer seçerek eşleme sütununu ne kadar geniş **olduğunu seçebilirsiniz.** İşaretçiyi haritadayken kodun daha büyük bir önizlemesini etkinleştirmek için Önizleme Araç **İpucu'nı Göster seçeneğini** belirleyin. Daraltılmış bölgeler farklı şekilde gölgelidir ve çift tıklarken genişler.
+*Harita modu,* kaydırma çubuğunda kod satırlarını görüntüler. Kaynak genel bakış'ta bir değer seçerek eşleme sütununu ne kadar geniş **olduğunu seçebilirsiniz.** İşaretçiyi haritada dinleniyorken kodun daha büyük bir önizlemesini etkinleştirmek için Önizleme Araç **İpucu'nı Göster seçeneğini** belirleyin. Daraltılmış bölgeler farklı şekilde gölgeli olur ve çift tıklarken genişler.
 
 > [!TIP]
 > Kaynak genel bakış ayarını Kapalı olarak ayarerek harita modunda kod görünümünü **kapatabilirsiniz.**  Önizleme **Araç** İpucu göster seçeneği seçiliyse, işaretçinizi kaydırma çubuğuna yerleştirerek ilgili konumdaki kodun önizlemesini görmeye devam edersiniz ve imleç, tıklarsanız dosyada o konuma atlar.

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c7a621b03c235f59e8381418c8884c184808c91c1e8bdb009d6a569b90d378f6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8bcb3d8918c73bdf738cb7bcc8fe21c7799593f4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121262275"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064558"
 ---
 # <a name="idebugbreakpointunboundevent2getreason"></a>IDebugBreakpointUnboundEvent2::GetReason
 Kesme noktasının bağlanmamış olma nedenini alır.

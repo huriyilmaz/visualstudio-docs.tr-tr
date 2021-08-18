@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: dcabb4c84ea5c22074e95eb724770b61b5632806d38a9e3b3aba59ca7465f937
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8c1c5662a555531741fb0744712982a207c447a9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121403097"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119951"
 ---
 # <a name="idebugarrayobjectgetrank"></a>IDebugArrayObject::GetRank
 Dizi derecesini, yani boyut sayısını alır.

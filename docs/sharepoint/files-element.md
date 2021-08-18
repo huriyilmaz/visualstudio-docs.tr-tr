@@ -1,6 +1,6 @@
 ---
 title: Files Öğesi | Microsoft Docs
-description: Proje öğesi şemasında yer alan bir öğe olan Files öğesi SharePoint başvuru bilgilerini görüntüleme.
+description: Proje öğesi şemasında yer alan bir öğe olan Files SharePoint bilgilerini görüntüleme.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,15 +15,15 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 54344e98aaa8982143fd595ac7e6fb4245905c4ee9645953af889fafe15dde80
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 84c3ab0837680fe815f644d6b0456ce0fe066326
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121269190"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093235"
 ---
 # <a name="files-element"></a>Dosyalar öğesi
-  Özellik öğesi dosyaları ve bağımlı olmayan SharePoint projelerinin çıkışı gibi bir proje öğesiyle dağıtılacak SharePoint belirtir.
+  Özellik öğesi dosyaları ve bağımlı SharePoint olmayan projelerin çıkışı gibi, SharePoint proje öğesiyle dağıtılacak SharePoint belirtir.
 
 ## <a name="syntax"></a>Syntax
 

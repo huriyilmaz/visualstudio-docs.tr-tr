@@ -1,6 +1,6 @@
 ---
-title: 'nasıl yapılır: kaynakları olan Project oluşturma | Microsoft Docs'
-description: Kaynakları olan bir proje oluşturma ve MSBuild kullanarak kaynakları derleme hakkında bilgi edinin.
+title: 'Nasıl Project: Kaynakları | Microsoft Docs'
+description: Kaynakları olan bir proje oluşturma ve kaynakları derleme hakkında bilgi edinmek için MSBuild.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,36 +16,36 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 50d814890ae0cf134b88003150fd1ce25edb5c6941fbe13194d44227ed9ca647
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ab6002e6b9be48aed320a9cf6166b340ec0947cc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121270737"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093794"
 ---
-# <a name="how-to-build-a-project-that-has-resources"></a>Nasıl yapılır: kaynakları olan bir proje derleme
+# <a name="how-to-build-a-project-that-has-resources"></a>Nasıl yap: Kaynakları olan bir proje oluşturma
 
-Bir projenin yerelleştirilmiş sürümlerini oluşturuyorsanız, tüm Kullanıcı arabirimi öğelerinin farklı diller için kaynak dosyalarına ayrılması gerekir. Proje yalnızca dizeleri kullanıyorsa, kaynak dosyaları metin dosyalarını kullanabilir. Alternatif olarak, *. resx* dosyalarını kaynak dosyaları olarak da kullanabilirsiniz.
+Bir projenin yerelleştirilmiş sürümlerini inşa ediyorsanız, tüm kullanıcı arabirimi öğelerinin farklı diller için kaynak dosyalarına ayrılması gerekir. Proje yalnızca dizeleri kullanıyorsa, kaynak dosyaları metin dosyalarını kullanabilir. Alternatif olarak, kaynak dosyaları *olarak .resx* dosyalarını kullanabilirsiniz.
 
-## <a name="compile-resources-with-msbuild"></a>MSBuild ile kaynakları derleme
+## <a name="compile-resources-with-msbuild"></a>Kaynakları MSBuild
 
-MSBuild ile birlikte sunulan ortak görevlerin kitaplığı, `GenerateResource` *. resx* veya metin dosyalarında kaynak derlemek için kullanabileceğiniz bir görevi içerir. Bu görev, `Sources` derlenecek kaynak dosyalarını ve `OutputResources` çıkış kaynak dosyalarının adlarını belirtmek için parametresini belirten parametresini içerir. Görev hakkında daha fazla bilgi için `GenerateResource` bkz. [GenerateResource Task](../msbuild/generateresource-task.md).
+.resx veya metin MSBuild derlemek için kullanabileceğiniz bir görev, ile birlikte sağlanan ortak `GenerateResource` *görevlerin* kitaplığı. Bu görev `Sources` derlemek için kaynak dosyalarını belirtmek için parametresini ve çıkış kaynak `OutputResources` dosyalarının adlarını belirtmek için parametresini içerir. Görev hakkında daha fazla bilgi `GenerateResource` için bkz. [GenerateResource görevi.](../msbuild/generateresource-task.md)
 
-#### <a name="to-compile-resources-with-msbuild"></a>MSBuild ile kaynak derlemek için
+#### <a name="to-compile-resources-with-msbuild"></a>Kaynakları MSBuild
 
-1. Projenin kaynak dosyalarını belirleyip `GenerateResource` , öğe listeleri olarak veya dosya adları olarak görevlere geçirin.
+1. Projenin kaynak dosyalarını belirleyin ve bunları öğe listesi olarak veya `GenerateResource` dosya adı olarak göreve iletir.
 
-2. `OutputResources` `GenerateResource` Çıkış kaynak dosyaları için adları ayarlamanıza olanak sağlayan görevin parametresini belirtin.
+2. Görevin, `OutputResources` çıkış `GenerateResource` kaynak dosyalarının adlarını ayarlamaya olanak sağlayan parametresini belirtin.
 
-3. `Output` `OutputResources` Parametresinin değerini bir öğe içinde depolamak için görevin öğesini kullanın.
+3. Parametrenin `Output` değerini bir öğede depolamak için görevin öğesini `OutputResources` kullanın.
 
-4. Öğesinden oluşturulan öğeyi `Output` başka bir görevde giriş olarak kullanın.
+4. Öğesinden oluşturulan öğeyi başka `Output` bir göreve giriş olarak kullanın.
 
 ## <a name="example-1"></a>Örnek 1
 
-Aşağıdaki kod örneği, `Output` öğesinin, `OutputResources` `GenerateResource` görev özniteliğinin *Alpha. resources* ve *Beta. resources* derlenmiş kaynak dosyalarını ve bu iki dosyanın öğe listesi içine yerleştirileceğini gösterir `Resources` . Bu *. resources* dosyalarını aynı ada sahip öğelerin bir koleksiyonu olarak tanımlayarak, onları [CSC](../msbuild/csc-task.md) görevi gibi başka bir görevin girişleri olarak kolayca kullanabilirsiniz.
+Aşağıdaki kod örneği, öğesinin görevin özniteliğinin `Output` `OutputResources` alpha.resources ve `GenerateResource` *beta.resources*  derlenmiş kaynak dosyalarını içerdiğini ve bu iki dosyanın öğe listesine yerleştiril olacağını nasıl `Resources` belirtir? Bu *.resources dosyalarını* aynı adla bir öğe koleksiyonu olarak tanımerek, [bunları Csc](../msbuild/csc-task.md) görevi gibi başka bir görev için giriş olarak kolayca kullanabilirsiniz.
 
-Bu görev, [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)için **/Compile** anahtarını kullanma ile eşdeğerdir:
+Bu görev,Resgen.exeiçin **/compile** [anahtarının kullanımına eşdeğerdir:](/dotnet/framework/tools/resgen-exe-resource-file-generator)
 
 `Resgen.exe /compile alpha.resx,alpha.resources /compile beta.txt,beta.resources`
 
@@ -60,7 +60,7 @@ Bu görev, [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generat
 
 ## <a name="example-2"></a>Örnek 2
 
-Aşağıdaki örnek proje iki görev içerir: `GenerateResource` kaynakları derlemek için görev ve `Csc` hem kaynak kodu dosyalarını hem de derlenen kaynak dosyalarını derlemek için görev. Görev tarafından derlenen kaynak dosyaları `GenerateResource` , `Resources` öğede depolanır ve `Csc` göreve geçirilir.
+Aşağıdaki örnek proje iki görev içerir: kaynakları derleme görevi ve hem kaynak kodu dosyalarını hem de derlenmiş kaynak dosyalarını `GenerateResource` `Csc` derleme görevi. Görev tarafından derlenmiş olan `GenerateResource` kaynak dosyaları öğede `Resources` depolanır ve göreve `Csc` geçirebilirsiniz.
 
 ```xml
 <Project DefaultTargets = "Build"
@@ -88,4 +88,4 @@ Aşağıdaki örnek proje iki görev içerir: `GenerateResource` kaynakları der
 - [MSBuild](../msbuild/msbuild.md)
 - [GenerateResource görevi](../msbuild/generateresource-task.md)
 - [Csc görevi](../msbuild/csc-task.md)
-- [Resgen.exe (kaynak dosya Oluşturucu)](/dotnet/framework/tools/resgen-exe-resource-file-generator)
+- [Resgen.exe (Kaynak Dosya Oluşturucu)](/dotnet/framework/tools/resgen-exe-resource-file-generator)

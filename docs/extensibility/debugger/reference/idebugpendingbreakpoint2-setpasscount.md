@@ -1,6 +1,6 @@
 ---
 description: Bekleyen kesme noktasıyla ilişkili geçiş sayısını ayarlar veya değiştirir.
-title: 'IDebugPendingBreakpoint2:: SetPassCount | Microsoft Docs'
+title: IDebugPendingBreakpoint2::SetPassCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,12 +18,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6e9a91f9d78e69af8c23b8bf1c43cddd8ac0fe8fded6af9f18049974b449d0bb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0d1d72cc83d66bc0bd553db9ef392bb62d22c3af
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121339105"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050864"
 ---
 # <a name="idebugpendingbreakpoint2setpasscount"></a>IDebugPendingBreakpoint2::SetPassCount
 Bekleyen kesme noktasıyla ilişkili geçiş sayısını ayarlar veya değiştirir.
@@ -44,13 +44,13 @@ int SetPassCount(
 
 ## <a name="parameters"></a>Parametreler
 `bpPassCount`\
-'ndaki Geçiş sayısını içeren [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) yapısı.
+[in] Geçiş [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) içeren bir yapıdır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_BP_DELETED`Kesme noktasının silinip silinmediğini döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Kesme `E_BP_DELETED` noktası silinmişse döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Daha önce bekleyen kesme noktasıyla ilişkili olan tüm geçiş sayısı kaybolur. Bu bekleyen kesme noktasından bağlantılı tüm kesme noktaları, geçiş sayısını parametreye ayarlamak için çağırılır `bpPassCount` .
+ Daha önce bekleyen kesme noktasıyla ilişkili tüm geçiş sayısı kaybedilir. Bu bekleyen kesme noktasıyla ilişkili tüm kesme noktaları, geçiş sayısını parametresine ayarlamak için `bpPassCount` çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

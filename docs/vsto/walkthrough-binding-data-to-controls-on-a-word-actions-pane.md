@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: Word Eylemler bölmesindeki denetimlere veri bağlama'
-description: Microsoft Word 'de bir eylemler bölmesindeki denetimlere veri bağlama. Denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
+description: Microsoft Word bir eylemler bölmesindeki denetimlere veri bağlama. denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -18,30 +18,31 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: d94891520695117c7a395f81feda81e52f909fe6
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 34408a3f1e08165a4269c0f9741d0d645f4576cc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824503"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032140"
 ---
 # <a name="walkthrough-bind-data-to-controls-on-a-word-actions-pane"></a>İzlenecek yol: Word Eylemler bölmesindeki denetimlere veri bağlama
-  Bu izlenecek yol, Word 'de bir eylemler bölmesindeki denetimlere veri bağlamayı gösterir. Denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
+  Bu izlenecek yol, Word 'de bir eylemler bölmesindeki denetimlere veri bağlamayı gösterir. denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Verilere bağlanan Windows Forms denetimleriyle bir eylemler bölmesi oluşturma.
+- verilere bağlanan Windows Forms denetimleriyle bir eylemler bölmesi oluşturma.
 
 - Denetimlerde verileri göstermek için ana/ayrıntı ilişkisi kullanma.
 
 - Uygulama açıldığında Eylemler bölmesini göster.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. daha fazla bilgi için bkz. [Visual Studio ıde 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
@@ -61,24 +62,24 @@ ms.locfileid: "107824503"
 
 1. **Word eylemlerimi Adlandır bölmesiyle** bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
 
-     Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+     daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio, tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini** Için **My Word Actions Pane** projesini ekler.
+     Visual Studio yeni word belgesini tasarımcıda açar ve **word eylem bölmesi** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="add-controls-to-the-actions-pane"></a>Eylemler bölmesine denetim ekleme
- Bu izlenecek yol için, veri bağlantılı Windows Forms denetimleri içeren bir eylemler bölmesi denetimine ihtiyacınız vardır. Projeye bir veri kaynağı ekleyin ve ardından **veri kaynakları** penceresinden denetimleri Eylemler bölmesi denetimine sürükleyin.
+ bu izlenecek yol için, veri bağlantılı Windows Forms denetimleri içeren bir eylemler bölmesi denetimine ihtiyacınız vardır. Projeye bir veri kaynağı ekleyin ve ardından **veri kaynakları** penceresinden denetimleri Eylemler bölmesi denetimine sürükleyin.
 
 ### <a name="to-add-an-actions-pane-control"></a>Eylemler bölmesi denetimi eklemek için
 
 1. **Çözüm Gezgini**' de **My Word Actions Pane** projesini seçin.
 
-2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
+2. **Project** menüsünde, **yeni öğe ekle**' ye tıklayın.
 
 3. **Yeni öğe Ekle** iletişim kutusunda, **Eylemler bölmesi denetimi**' ni seçin, **ActionsControl** olarak adlandırın ve ardından **Ekle**' ye tıklayın.
 
 ### <a name="to-add-a-data-source-to-the-project"></a>Projeye bir veri kaynağı eklemek için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
+1. **veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
    > [!NOTE]
    > **Veri kaynaklarını göster** yoksa, Word belgesine tıklayın ve sonra yeniden kontrol edin.
@@ -87,7 +88,7 @@ ms.locfileid: "107824503"
 
 3. **Veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
-4. Northwind örnek SQL Server veritabanına yönelik bir veri bağlantısı seçin veya **Yeni bağlantı** düğmesini kullanarak yeni bir bağlantı ekleyin.
+4. Northwind örnek SQL Server veritabanına yönelik bir veri bağlantısı seçin veya **yeni bağlantı** düğmesini kullanarak yeni bir bağlantı ekleyin.
 
 5. **İleri**’ye tıklayın.
 
@@ -101,7 +102,7 @@ ms.locfileid: "107824503"
 
    Sihirbaz, **tedarikçiler** tablosu ve **Ürünler** tablosunu **veri kaynakları** penceresine ekler. Ayrıca, projenize **Çözüm Gezgini** görünür bir veri kümesi de ekler.
 
-### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>Eylemler bölmesi denetimine veriye dayalı Windows Forms denetimleri eklemek için
+### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>eylemler bölmesi denetimine veriye dayalı Windows Forms denetimleri eklemek için
 
 1. **Veri kaynakları** penceresinde **Üreticiler** tablosunu genişletin.
 
@@ -149,7 +150,7 @@ ms.locfileid: "107824503"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ActionsControl.vb" id="Snippet1":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs" id="Snippet1":::
 
-2. C# ' ta olay işleyicisini olaya bağlamanız gerekir <xref:System.Windows.Forms.UserControl.Load> . `ActionsControl`Çağrısından sonra bu kodu oluşturucuya yerleştirebilirsiniz `InitializeComponent` . Olay işleyicilerinin nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
+2. C# ' ta olay işleyicisini olaya bağlamanız gerekir <xref:System.Windows.Forms.UserControl.Load> . `ActionsControl`Çağrısından sonra bu kodu oluşturucuya yerleştirebilirsiniz `InitializeComponent` . olay işleyicilerinin nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ActionsControl.cs" id="Snippet33":::
 
@@ -234,11 +235,11 @@ ms.locfileid: "107824503"
 ## <a name="next-steps"></a>Sonraki adımlar
  Bu kılavuzda, Word 'de bir eylemler bölmesindeki denetimlere veri bağlamanın temelleri gösterilmektedir. Daha sonra gelebilecek bazı görevler şunlardır:
 
-- Excel 'de denetimlere veri bağlama. Daha fazla bilgi için bkz. [Izlenecek yol: Excel eylemler bölmesindeki denetimlere veri bağlama](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md).
+- Excel içindeki denetimlere veri bağlama. daha fazla bilgi için bkz. [izlenecek yol: Excel eylemler bölmesindeki denetimlere veri bağlama](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md).
 
-- Projeyi dağıtma. Daha fazla bilgi için bkz. [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md).
+- Projeyi dağıtma. daha fazla bilgi için bkz. [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md)
-- [Nasıl yapılır: Word belgelerine veya Excel çalışma kitaplarına eylemler bölmesi ekleme](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [nasıl yapılır: Word belgelerine veya Excel çalışma kitaplarına eylemler bölmesi ekleme](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)

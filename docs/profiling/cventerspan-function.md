@@ -24,14 +24,15 @@ ms.assetid: 91689e9c-6733-44b9-b36a-8b9b2eef7d1d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 345ed3c73f5d79a549ac24e5eb3137f83101cdda
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 784a4d7e0f4df220573b9a93e68c62336f15cea3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99912488"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136319"
 ---
 # <a name="cventerspan-function"></a>CvEnterSpan işlevi
 Yeni bir yayılımın başlangıcını işaretler.

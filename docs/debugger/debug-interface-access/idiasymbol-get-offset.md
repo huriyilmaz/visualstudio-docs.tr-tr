@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9aa71ecc2a2c2691702d0a56e3f90eb5c83bd99fcc19d9bf3e7d465952338fba
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 516e35a2b1027679336a6a32c2239fa7762a0503
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420609"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121332"
 ---
 # <a name="idiasymbolget_offset"></a>IDiaSymbol::get_offset
 Sembol konumunun uzaklığını alan. [LocationType Enumeration veya olduğunda](../../debugger/debug-interface-access/locationtype.md) `LocIsRegRel` `LocIsBitField` kullanın.

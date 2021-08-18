@@ -11,14 +11,15 @@ ms.assetid: bb47abe8-6706-4679-bc52-79f6444dae7e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 410f8b6f029f26939582d64420db0351a71c0975
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: f9f3a73d221786b08ea5fa989d5a623536ade3dd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155490"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121244"
 ---
 # <a name="idiatableget_count"></a>IDiaTable::get_Count
 Tablodaki öğelerin sayısını alır.

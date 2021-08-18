@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59af75ff289bb5e6ff81b77f632f95f961fd3d95efe032e46620bd9ae66a1f0e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 444111c4c73487eafcaee4e87c569136d232b34b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121278987"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120640"
 ---
 # <a name="add-commands-to-toolbars"></a>Araç çubuklarına komut ekleme
 Bir araç çubuğu, komutlara bağlanan düğmeleri içeren yatay veya dikey bir şerit olur. Visual Studio: ana Visual Studio penceresi, Çözüm Gezgini ve kendi özel araç penceresinizdeki birçok farklı pencere için araç çubuklarına kendi komutlarınızı ekleyebilirsiniz.

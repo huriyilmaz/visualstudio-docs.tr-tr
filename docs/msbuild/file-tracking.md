@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: fbff31884c3aa6539b286772f1517b1594462579a5992f8fa750a8e5b7b03729
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bbf72728ac4f8538e38744e54a3e0fc51f8931b7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121428087"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093950"
 ---
 # <a name="file-tracking"></a>Dosya izleme
 

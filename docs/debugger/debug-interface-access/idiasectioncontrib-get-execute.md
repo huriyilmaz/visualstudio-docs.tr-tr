@@ -11,14 +11,15 @@ ms.assetid: 66eb38ce-a5e1-467e-b845-b3dc433eda91
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 81f057e1b37f0d8ee758171da08c9c40c7808af0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 711e1a3618419f554955e458fa1f9603dea8c7de
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148019"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134284"
 ---
 # <a name="idiasectioncontribget_execute"></a>IDiaSectionContrib::get_execute
 Bölümün kod olarak yürütülebilir olup olmadığını gösteren bir bayrak alır.

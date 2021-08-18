@@ -1,5 +1,5 @@
 ---
-description: Bir bağlantılı kesme noktasının varlığını belirtir ve ayrıca etkinleştirilip etkinleştirilmediğini belirtir.
+description: Bir bağlı kesme noktası varlığını belirtir ve ayrıca etkin olup o değil belirtir.
 title: BP_STATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0d8ff002c7f17abe0f33900fb7f798405dde78ee755965bfe2d24713eaea33d6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6d4136444a1d48a5ba70a9ed138897a008bbc036
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434457"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120263"
 ---
 # <a name="bp_state"></a>BP_STATE
-Bir bağlantılı kesme noktasının varlığını belirtir ve ayrıca etkinleştirilip etkinleştirilmediğini belirtir.
+Bir bağlı kesme noktası varlığını belirtir ve ayrıca etkin olup o değil belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,26 +50,26 @@ public enum enum_BP_STATE {
 
 ## <a name="fields"></a>Alanlar
 `BPS_NONE`\
-Kesme noktası olmadığını belirtir.
+Hiçbir kesme noktası olmadığını belirtir.
 
 `BPS_DELETED`\
-Kesme noktasının silindiğini belirtir.
+Kesme noktası silindi belirtir.
 
 `BPS_DISABLED`\
-Kesme noktasının devre dışı olduğunu belirtir.
+Kesme noktası devre dışı bırakılmıştır belirtir.
 
 `BPS_ENABLED`\
-Kesme noktasının etkinleştirildiğini belirtir.
+Kesme noktası etkin olduğunu belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-[GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) yönteminden döndürüldü.
+[GetState yönteminden](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 90bb6c458d53e293cd5128e6b2b461082fd1eeb5bda593fb18a5b74f5d7867e3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ef5a8780e56da76476038605cfad957cfcd8ba0e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384138"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122099626"
 ---
 # <a name="how-to-show-add-in-user-interface-errors"></a>Nasıl kullanılır: Eklenti kullanıcı arabirimi hatalarını gösterme
   Varsayılan olarak, VSTO kullanıcı arabirimini (UI) Microsoft Office başarısız olursa hiçbir hata iletisi görüntülenmez. Ancak, kullanıcı arabirimiyle Microsoft Office için iletileri görüntülemek üzere uygulama uygulamalarını yapılandırabilirsiniz. Bu iletileri, özel bir şeridin neden görüne olmadığını veya bir şeridin neden görüntülendiğinden ancak denetim görünmeden belirlemenize yardımcı olmak için kullanabilirsiniz.

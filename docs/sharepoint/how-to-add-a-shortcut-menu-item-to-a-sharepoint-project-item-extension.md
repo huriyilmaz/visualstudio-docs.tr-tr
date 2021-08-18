@@ -1,7 +1,7 @@
 ---
-title: SharePoint proje öğesi uzantısına kısayol menü öğesi ekle
+title: Proje öğesi uzantısını SharePoint menü öğesi ekleme
 titleSuffix: ''
-description: Visual Studio bir proje öğesi uzantısı kullanarak mevcut bir SharePoint proje öğesine kısayol menü öğesi ekleyin.
+description: Bir proje öğesi uzantısını kullanarak mevcut bir SharePoint öğeye kısayol menü öğesi Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,46 +18,46 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: b3bb5137078f5768ccfb7aea02cdac02d6239b1d6b678c6989d115bda1e5d0fb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c50f6b763aa8a56aa1049c1d0394f9878a39fe83
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385347"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136098"
 ---
-# <a name="how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension"></a>nasıl yapılır: SharePoint proje öğesi uzantısına kısayol menü öğesi ekleme
-  bir proje öğesi uzantısı kullanarak var olan bir SharePoint proje öğesine kısayol menü öğesi ekleyebilirsiniz. Kullanıcı **Çözüm Gezgini** içindeki proje öğesine sağ tıkladığında menü öğesi görünür.
+# <a name="how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension"></a>Nasıl yapabilirsiniz: Bir proje öğesi uzantısına SharePoint menü öğesi ekleme
+  Bir proje öğesi uzantısını kullanarak mevcut bir SharePoint öğeye kısayol menü öğesi ekleyebilirsiniz. Bir kullanıcı, öğesinde proje öğesini sağ tıkladığında menü öğesi **Çözüm Gezgini.**
 
- Aşağıdaki adımlarda zaten bir proje öğesi uzantısı oluşturmuş olduğunuz varsayılır. daha fazla bilgi için bkz. [nasıl yapılır: SharePoint projesi öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md).
+ Aşağıdaki adımlarda, zaten bir proje öğesi uzantısı oluşturduğunuz varsayılacaktır. Daha fazla bilgi için [bkz. Nasıl SharePoint proje öğesi uzantısı oluşturma.](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)
 
-### <a name="to-add-a-shortcut-menu-item-in-a-project-item-extension"></a>Proje öğe uzantısına bir kısayol menü öğesi eklemek için
+### <a name="to-add-a-shortcut-menu-item-in-a-project-item-extension"></a>Proje öğesi uzantısına kısayol menü öğesi eklemek için
 
-1. <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension.Initialize%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> Uygulamanızın yönteminde <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemMenuItemsRequested> *projectItemType* parametresinin olayını işleyin.
+1. Uygulama <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension.Initialize%2A> yönteminde <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeExtension> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemMenuItemsRequested> *projectItemType* parametresinin olayını işle.
 
-2. Olaya yönelik olay işleyicinizde <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemMenuItemsRequested> , <xref:Microsoft.VisualStudio.SharePoint.IMenuItem> <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs.ViewMenuItems%2A> <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs.AddMenuItems%2A> olay bağımsız değişkenleri parametresinin veya koleksiyonuna yeni bir nesne ekleyin.
+2. Olay için olay <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemMenuItemsRequested> işleyicisinde, olay bağımsız <xref:Microsoft.VisualStudio.SharePoint.IMenuItem> değişkenleri parametresinin <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs.ViewMenuItems%2A> veya <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemMenuItemsRequestedEventArgs.AddMenuItems%2A> koleksiyonuna yeni bir nesne ekleyin.
 
-3. <xref:Microsoft.VisualStudio.SharePoint.IMenuItem.Click>Yeni nesne için olay işleyicisinde <xref:Microsoft.VisualStudio.SharePoint.IMenuItem> , Kullanıcı kısayol menü öğesine tıkladığında yürütmek istediğiniz görevleri gerçekleştirin.
+3. Yeni <xref:Microsoft.VisualStudio.SharePoint.IMenuItem.Click> nesnenin olay <xref:Microsoft.VisualStudio.SharePoint.IMenuItem> işleyicisinde, kullanıcı kısayol menü öğenize tıkladığında yürütmek istediğiniz görevleri gerçekleştirin.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, olay alıcısı proje öğesine nasıl kısayol menü öğesi ekleneceğini gösterir. kullanıcı **Çözüm Gezgini** içindeki proje öğesine sağ tıkladığında ve Çıkış Penceresi menü öğesine **yazma iletisi** tıkladığı zaman, Visual Studio **çıkış** penceresinde bir ileti görüntüler.
+ Aşağıdaki kod örneği, Olay Alıcısı proje öğesine kısayol menü öğesinin nasıl ekli olduğunu gösterir. Kullanıcı Çözüm Gezgini'de proje öğesine  sağ tıklar ve  Çıkış Penceresi iletiye İleti Yaz'a tıklarsa, Visual Studio penceresinde bir **ileti** görüntüler.
 
  :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemextensionmenu.vb" id="Snippet1":::
  :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemextensionmenu.cs" id="Snippet1":::
 
- bu örnek, **çıkış** penceresine ileti yazmak için SharePoint proje hizmeti kullanır. daha fazla bilgi için bkz. [SharePoint proje hizmeti kullanma](../sharepoint/using-the-sharepoint-project-service.md).
+ Bu örnekte, SharePoint proje hizmeti penceresine yazmak için aşağıdaki **örnek iletiyi** kullanır. Daha fazla bilgi için [bkz. SharePoint proje hizmeti.](../sharepoint/using-the-sharepoint-project-service.md)
 
-## <a name="compile-the-code"></a>Kodu derle
+## <a name="compile-the-code"></a>Kodu derleme
  Bu örnek, aşağıdaki derlemelere başvurular içeren bir sınıf kitaplığı projesi gerektirir:
 
-- Microsoft. VisualStudio. SharePoint
+- Microsoft.VisualStudio. SharePoint
 
-- System. ComponentModel. Composition
+- System.ComponentModel.Composition
 
 ## <a name="deploy-the-extension"></a>Uzantıyı dağıtma
- Uzantıyı dağıtmak için, [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] derleme için bir uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz diğer dosyalar oluşturun. daha fazla bilgi için bkz. [Visual Studio SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+ Uzantıyı dağıtmak için, derleme için bir uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] diğer dosyaları oluşturun. Daha fazla bilgi için [bkz. Visual Studio'de SharePoint araçları için uzantıları dağıtma.](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [nasıl yapılır: SharePoint projesi öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)
-- [nasıl yapılır: SharePoint proje öğesi uzantısına özellik ekleme](../sharepoint/how-to-add-a-property-to-a-sharepoint-project-item-extension.md)
-- [SharePoint proje öğelerini genişlet](../sharepoint/extending-sharepoint-project-items.md)
-- [izlenecek yol: SharePoint proje öğesi türünü genişletme](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)
+- [Nasıl yapabilirsiniz: SharePoint proje öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)
+- [Nasıl yapabilirsiniz: Bir SharePoint proje öğesi uzantısına özellik ekleme](../sharepoint/how-to-add-a-property-to-a-sharepoint-project-item-extension.md)
+- [Proje SharePoint genişletme](../sharepoint/extending-sharepoint-project-items.md)
+- [Adım adım kılavuz: SharePoint proje öğesi türünü genişletme](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)

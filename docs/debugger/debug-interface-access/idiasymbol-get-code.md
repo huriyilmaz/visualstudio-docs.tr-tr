@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cee98a59f3d3b3acc05ed1ec33236118ae3743b0ed137468015b0c07ad684223
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 33e44a4722de1c827d0590199481daa770c67fb6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121240555"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052280"
 ---
 # <a name="idiasymbolget_code"></a>IDiaSymbol::get_code
 Sembolün bir kod adresine başvurup başvurul olmadığını belirten bir bayrak alınır.

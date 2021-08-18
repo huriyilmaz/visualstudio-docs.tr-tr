@@ -16,14 +16,15 @@ ms.assetid: a2f0eb07-840e-4f95-a1b1-9509217e5b8f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9703ff0e79fc4b44565b933a423a1cdcd7ff6c2b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c4e6bffa006fac3408bc3b5459cdeee92c9a636f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99899359"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052063"
 ---
 # <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Nasıl yapılır: High-Performance kümesinde hata ayıklama (C#, Visual Basic, C++)
 
@@ -102,6 +103,6 @@ Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklamas
 - [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
 - [Nasıl yapılır: süreçler penceresini kullanma](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))
-- [Çoklu Iş parçacıklı uygulamalarda hata ayıklamaya başlayın](../debugger/get-started-debugging-multithreaded-apps.md)
+- [Başlarken Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/get-started-debugging-multithreaded-apps.md)
 - [İş parçacıkları ve süreçler](/previous-versions/visualstudio/visual-studio-2010/ms164740(v=vs.100))
 - [Kesme noktaları kullanma](../debugger/using-breakpoints.md)

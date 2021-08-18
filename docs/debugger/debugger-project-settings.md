@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a8767566555c77a7a9fa0e38f6255e7ec690230bb923db0e4360de398afa0256
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 959378333754f5acd1c684f4c39de89bd2a42efd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121294417"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052115"
 ---
 # <a name="debugger-project-settings"></a>Hata Ayıklayıcı Proje Ayarları
 Belirli proje ayarları hata ayıklamayı da etkiler. Bu ayarlar, hata ayıklayıcının hangi dizinlerde göründüğünü, programı başlatmak için kullanılan komut ve komut bağımsız değişkenlerini ve program için oluşturulan hata ayıklama bilgilerinin türünü tespit eden şeyleri sağlar. Bu ayarları **Özellik sayfaları** iletişim kutusunda değiştirebilirsiniz.

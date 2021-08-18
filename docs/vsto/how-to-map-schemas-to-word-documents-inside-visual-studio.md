@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 46948fe54142dcffb1b90290c01feefd770b4ae89648e98157694ccf18c3760a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e14283c61480796e58cd2f5df0b055fb66ce2ac5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121408818"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083446"
 ---
 # <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>Nasıl yapılır: Visual Studio içindeki Word belgeleriyle şemaları eşleme
   **Önemli** bu konu başlığı altında Microsoft Word, microsoft, Microsoft Word 'den özel XML ile ilgili belirli işlevlerin bir uygulamasını kaldırdıkları zaman, Birleşik Devletler ve bölgeleri dışında bulunan Microsoft Word veya 2010 microsoft tarafından lisanslanan ürünlerin ve kuruluşların kullanımı ve kullanımı için özel olarak sunulur. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler veya şirket içinde çalışan ya da şirket içinde çalışan veya Microsoft tarafından lisanslanan Microsoft Word, 10 ocak 2010 ' den sonra lisanslı ürünleri kullanan bireyler veya kuruluşlar tarafından okunamaz veya kullanılmıyor olabilir. Bu ürünler, bu tarihten önce lisanslanan ürünlerle aynı veya satın alınmadan ve Birleşik Devletler dışında kullanılmak üzere lisanslanmaz.

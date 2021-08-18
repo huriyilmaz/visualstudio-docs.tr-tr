@@ -11,17 +11,18 @@ ms.assetid: 99f17b1e-3e67-4f85-89d6-5c6cf45c8008
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 652d1423b95f923a8413bdec6fbbed528e9f624a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d47be3c63724b18b92fac9d253878b25c72c68dc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096700"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120224"
 ---
 # <a name="bpresi_fields"></a>BPRESI_FIELDS
 Bir kesme noktasının başarıyla çözümlenmesi hakkında alınacak bilgileri belirtir.

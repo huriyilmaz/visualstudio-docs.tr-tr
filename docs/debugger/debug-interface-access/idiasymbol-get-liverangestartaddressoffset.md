@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ce82f2eb649aed098508e20ebb9e7f2d6bf4fae63dd1fa3ae8f464607fbd8a7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7bf2779897b339ca4ff77cb23656fdf0e2340f10
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344514"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121404"
 ---
 # <a name="idiasymbolget_liverangestartaddressoffset"></a>IDiaSymbol::get_liveRangeStartAddressOffset
 Yerel sembolün geçerli olduğu aralığın başlangıç adresinin uzaklık bölümünü döndürür.
@@ -46,7 +46,7 @@ HRESULT get_liveRangeStartAddressOffset (
 ## <a name="remarks"></a>Açıklamalar
  Bölüm ve uzaklık tarafından oluşturulan adres, sembolün geçerli olduğu aralığın başlangıcıdır.
 
- Adresin bölüm bölümünü almak için [IDiaSymbol::get_liveRangeStartAddressSection](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddresssection.md).
+ Adresin bölüm bölümünü almak için [IDiaSymbol::get_liveRangeStartAddressSection.](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddresssection.md)
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: Dia2.h

@@ -1,6 +1,6 @@
 ---
 title: MSBuild Koşullar | Microsoft Docs
-description: MSBuild, koşul özniteliğine izin verildiğinde uygulanabilecek belirli bir koşul kümesini nasıl desteklediğini öğrenin.
+description: Bir MSBuild koşulu özniteliğine izin verilmiyorsa belirli bir koşul kümesine nasıl uygulana bir dizi koşulu desteklediğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -21,31 +21,31 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: e2f7d24b3b8a2afe3c84d9c96044fafa131ddfc869d99e7493be90188889ea24
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e0527e1c32be41a9f9bbfe906477329661e63e72
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397585"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136865"
 ---
 # <a name="msbuild-conditions"></a>MSBuild koşulları
 
-MSBuild `Condition` , bir özniteliğe izin verildiğinde uygulanabilen belirli bir koşul kümesini destekler. Aşağıdaki tabloda bu koşullar açıklanmaktadır.
+MSBuild, bir öznitelik izin verilmiyorsa uygulana belirli bir koşullar `Condition` kümesi destekler. Aşağıdaki tabloda bu koşullar açıkmaktadır.
 
 |Koşul|Açıklama|
 |---------------|-----------------|
-|'`stringA`' == '`stringB`'|Eşitse olarak `true` değerlendirilir `stringA` `stringB` .<br /><br /> Örnek:<br /><br /> `Condition="'$(Configuration)'=='DEBUG'"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir. Bu denetim büyük/küçük harfe duyarlıdır.|
-|'`stringA`' != '`stringB`'|`true` `stringA` Eşit değilse olarak değerlendirilir `stringB` .<br /><br /> Örnek:<br /><br /> `Condition="'$(Configuration)'!='DEBUG'"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir. Bu denetim büyük/küçük harfe duyarlıdır.|
-|\<, >, \<=, >=|İşlenenlerinin sayısal değerlerini değerlendirir. `true`İlişkisel değerlendirmenin doğru olup olmadığını döndürür. İşlenenler bir ondalık ya da onaltılık sayı ya da dört bölümlü noktalı bir sürüm olarak değerlendirilmelidir. Onaltılık sayıların "0x" ile başlaması gerekir. **Note:**  XML 'de karakterler `<` ve `>` kaçışlı olmalıdır. Sembol `<` olarak temsil edilir `&lt;` . Sembol `>` olarak temsil edilir `&gt;` .|
-|Var (' `stringA` ')|`true`Ada sahip bir dosya veya klasör varsa olarak değerlendirilir `stringA` .<br /><br /> Örnek:<br /><br /> `Condition="!Exists('$(Folder)')"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir.|
-|Hastrailingeðik çizgi (' `stringA` ')|`true`Belirtilen dize bir ters eğik çizgi ( \\ ) veya eğik çizgi (/) karakteri içeriyorsa olarak değerlendirilir.<br /><br /> Örnek:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir.|
-|!|İşlenen olarak değerlendirilir `true` `false` .|
-|`And`|`true`Her iki işlenen de olarak değerlendirilir `true` .|
-|`Or`|`true`İşlenenlerin en az biri olarak değerlendiriliyorsa, olarak değerlendirilir `true` .|
-|()|`true`İçinde içerilen ifadeler olarak değerlendirilen gruplandırma mekanizması `true` .|
-|$if $ (% Expression%), $else $, $endif $|Belirtilen `%expression%` özel şablon parametresinin dize değeri ile eşleşip eşleşmediğini denetler. `$if$`Koşul olarak değerlendirilirse `true` , deyimleri çalıştırılır; Aksi takdirde `$else$` koşul denetlenir. `$else$`Koşul ise `true` , deyimleri çalıştırılır; Aksi takdirde, `$endif$` koşul ifade değerlendirmesini sonlandırır.<br /><br /> kullanım örnekleri için bkz. [Visual Studio proje/öğe şablonu parametre mantığı](https://stackoverflow.com/questions/6709057/visual-studio-project-item-template-parameter-logic).|
+|'`stringA`' == '`stringB`'|ise `true` olarak `stringA` `stringB` değerlendirilir.<br /><br /> Örnek:<br /><br /> `Condition="'$(Configuration)'=='DEBUG'"`<br /><br /> Basit alfasayısal dizeler veya boole değerleri için tek tırnak gerekli değildir. Ancak boş değerler için tek tırnak gereklidir. Bu denetim büyük/harfe duyarlı değildir.|
+|'`stringA`' != '`stringB`'|ile eşit `true` olup `stringA` olmadığını `stringB` değerlendirir.<br /><br /> Örnek:<br /><br /> `Condition="'$(Configuration)'!='DEBUG'"`<br /><br /> Basit alfasayısal dizeler veya boole değerleri için tek tırnak gerekli değildir. Ancak boş değerler için tek tırnak gereklidir. Bu denetim büyük/harfe duyarlı değildir.|
+|\<, >, \<=, >=|İşlecilerin sayısal değerlerini değerlendirir. İlişkisel `true` değerlendirme doğruysa döndürür. İşleçlerin ondalık veya onaltılık sayı veya dört parçalı noktalı sürüm olarak değerlendirmesi gerekir. Onaltılık sayılar "0x" ile başlasın. **Not:**  XML'de ve `<` `>` karakterlerinin kaçmalıdır. Simgesi `<` olarak temsil `&lt;` edildi. Simgesi `>` olarak temsil `&gt;` edildi.|
+|Exists(' `stringA` ')|Adı olan `true` bir dosya veya klasörün mevcut olup olduğunu `stringA` değerlendirir.<br /><br /> Örnek:<br /><br /> `Condition="!Exists('$(Folder)')"`<br /><br /> Basit alfasayısal dizeler veya boole değerleri için tek tırnak gerekli değildir. Ancak boş değerler için tek tırnak gereklidir.|
+|HasTrailingSlash(' `stringA` ')|Belirtilen dizede sonda bir ters eğik çizgi ( ) veya eğik çizgi `true` \\ (/) karakteri bulunsa değerlendirilir.<br /><br /> Örnek:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Basit alfasayısal dizeler veya boole değerleri için tek tırnak gerekli değildir. Ancak boş değerler için tek tırnak gereklidir.|
+|!|`true`İşlecinin değerlendirmesi ise olarak `false` değerlendirilir.|
+|`And`|Her iki işlenen `true` de olarak değerlendirilirse olarak `true` değerlendirilir.|
+|`Or`|`true`İşlecilerden en az birinin değerlendirmesi ise olarak `true` değerlendirilir.|
+|()|içinde yer alan ifadelerin `true` değerlendirmesi için değerlendirilen gruplama `true` mekanizması.|
+|$if$ ( %expression% ), $else$, $endif$|Belirtilen değerin geçirilen `%expression%` özel şablon parametresinin dize değeriyle eş olup olmadığını denetler. Koşul `$if$` olarak değerlendirilirse `true` deyimleri çalıştırlır; aksi takdirde `$else$` koşul denetlenir. Koşul `$else$` ise `true` deyimleri çalıştırlır; aksi takdirde koşul ifade `$endif$` değerlendirmesini sona erer.<br /><br /> Kullanım örnekleri için bkz. [Visual Studio proje/öğe şablonu parametre mantığı.](https://stackoverflow.com/questions/6709057/visual-studio-project-item-template-parameter-logic)|
 
-aşağıdaki örnekte gösterildiği gibi, koşullarda dize yöntemlerini, .NET Framework ve .net Core hedef çerçevelerini birbirinden ayırt etmek için, dizenin yalnızca ilgili bölümünü karşılaştırmak üzere kullanılan [trimend ()](/dotnet/api/system.string.trimend) işlevinin kullanıldığı şekilde kullanabilirsiniz.
+Dize yöntemlerini, aşağıdaki örnekte gösterildiği gibi, dizenin yalnızca ilgili kısmını karşılaştırmak için [trimEnd()](/dotnet/api/system.string.trimend) işlevinin .NET Framework ve .NET Core hedef çerçeveleri arasında ayrım yapmak için kullandığı koşullarda kullanabilirsiniz.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -61,20 +61,20 @@ aşağıdaki örnekte gösterildiği gibi, koşullarda dize yöntemlerini, .NET 
 </Project>
 ```
 
-MSBuild proje dosyalarında, doğru boole türü yoktur. Boole verileri boş olabilecek veya herhangi bir değere ayarlanmış özelliklerde temsil edilir. Bu nedenle, `'$(Prop)' == 'true'` "Eğer Prop ise" anlamına gelir `true` , ancak `'$(Prop)' != 'false'` "Eğer Prop ise `true` veya ayarlandıysa ya da başka bir şekilde ayarlanırsa" anlamına gelir.
+Bu MSBuild dosyalarında gerçek bir Boole türü yoktur. Boole verileri, boş veya herhangi bir değere ayarlanmış özelliklerde temsil edildi. Bu `'$(Prop)' == 'true'` nedenle, "Prop ise" anlamına gelir, ancak "Prop ise veya başka bir şey `true` `'$(Prop)' != 'false'` `true` ayarlanmamışsa" anlamına gelir.
 
-Boolean Logic yalnızca koşulların bağlamında değerlendirilir, bu nedenle gibi özellik ayarları `<Prop2>'$(Prop1)' == 'true'</Prop>` , Boole değerleri olarak değerlendirilmez bir dize (değişken genişletmeden sonra) olarak gösterilir.  
+Boole mantığı yalnızca koşullar bağlamında değerlendirilir, bu nedenle gibi özellik ayarları bir dize olarak temsil edilen (değişken genişletmeden sonra) Boole değerleri olarak `<Prop2>'$(Prop1)' == 'true'</Prop>` değerlendirilmez.  
 
-MSBuild, Boolean değer olarak kullanılan dize özellikleriyle çalışmayı kolaylaştırmak için birkaç özel işlem kuralı uygular. Boole sabit değerleri kabul edilir `Condition="true"` ve `Condition="false"` beklendiği gibi çalışır. MSBuild Boolean olumsuzlama işlecini desteklemek için özel kurallar da içerir. Bu nedenle, `$(Prop)` ' true ' ise,, `!$(Prop)` `!true` bekledikçe, ve şuna eşit olarak karşılaştırılmaktadır `false` .
+MSBuild boole değerleri olarak kullanılan dize özellikleriyle daha kolay çalışmak için birkaç özel işleme kuralı uygulanır. Boole sabitleri kabul edilir, bu nedenle `Condition="true"` ve `Condition="false"` beklendiği gibi çalışır. MSBuild Boole olumsuzlama işlecini desteklemek için özel kurallar da içerir. Bu nedenle , 'true' ise genişletilen ve beklediğiniz `$(Prop)` gibi ile eşit olarak `!$(Prop)` `!true` `false` karşılaştıran bir değerdir.
 
 ## <a name="comparing-versions"></a>Sürümleri karşılaştırma
 
-İlişkisel işleçler `<` , `>` ,, `<=` ve `>=` tarafından ayrıştırılabilen destek sürümleri <xref:System.Version?displayProperty=fullName> , bu sayede dört sayısal parçaya sahip sürümleri birbirleriyle karşılaştırabilirsiniz. Örneğin `'1.2.3.4' < '1.10.0.0'` , `true` .
+, , ve ilişkisel işleçleri, tarafından ayrıştırıldı olarak sürümleri destekler, böylece dört sayısal parçaya sahip `<` `>` sürümleri birbirine `<=` `>=` <xref:System.Version?displayProperty=fullName> karşılaştırabiliyoruz. Örneğin: `'1.2.3.4' < '1.10.0.0'` `true` .
 
 > [!CAUTION]
-> `System.Version` bir veya iki sürüm dört parçayı de belirtmediğinde karşılaştırmalar, ortaya çıkmış sonuçlar üretebilir. Örneğin sürüm 1,1, sürüm 1.1.0 'dan daha eski.
+> `System.Version` karşılaştırmaları, bir veya her iki sürüm dört parçanın hepsini belirtmezken şaşırtıcı sonuçlar üretebilir. Örneğin, sürüm 1.1, sürüm 1.1.0'dan eskidir.
 
-MSBuild, anlamsal sürüm oluşturma (semver) ile uyumlu farklı kurallar kümesine sahip [sürümleri karşılaştırmak için özellik işlevleri](property-functions.md#msbuild-version-comparison-functions) sağlar.
+MSBuild, [semantik](property-functions.md#msbuild-version-comparison-functions) sürümle (semver) uyumlu farklı kurallar kümesine sahip sürümleri karşılaştırmak için özellik işlevleri sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

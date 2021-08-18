@@ -1,6 +1,6 @@
 ---
 title: Projelere ve çözümlere giriş
-description: Projeler ve çözümler arasındaki farkları ve bunları projelerde nasıl Visual Studio.
+description: Projeler ve çözümler arasındaki fark ve Visual Studio ' de nasıl kullanılacağı hakkında bilgi edinin.
 ms.date: 11/17/2020
 ms.technology: vs-ide-general
 ms.custom:
@@ -15,61 +15,61 @@ ms.author: meghaanand
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a3d99cd3cb3920a083c592e233947839d6d1f7d05c7dd67bc66e096e5d5bf9ab
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a7680930d6617a72db77fb6b5f3d30595faa7ec9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121273584"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109766"
 ---
 # <a name="introduction-to-projects-and-solutions"></a>Projelere ve çözümlere giriş
 
-Bu giriş makalesinde, bir çözüm ve bir  proje oluşturmanın ne anlama geldiğini incele Visual Studio.  Çözüm, bir veya daha fazla ilgili kod projesini (örneğin, sınıf kitaplığı projesini ve karşılık gelen bir test projesini) düzenlemek için kullanılan bir kapsayıcıdır. Bir projenin özelliklerine ve içerenin bazı dosyalarına göz atabilirsiniz. Ayrıca bir projeden diğerine başvuru da oluşturuz.
+Bu giriş makalesinde, Visual Studio bir *çözüm* ve *Proje* oluşturmanın ne anlama geldiğini keşfedeceğiz. Bir çözüm, bir veya daha fazla ilgili kod projesini (örneğin, bir sınıf kitaplığı projesi ve karşılık gelen bir test projesi) düzenlemek için kullanılan bir kapsayıcıdır. Projenin özelliklerine ve içerdikleri bazı dosyalara bakacağız. Ayrıca bir projeden diğerine bir başvuru oluşturacağız.
 
 ::: moniker range="vs-2017"
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yükleyin.
+Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz yükleme yapın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz yükleyin.
+Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz yükleme yapın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2022"
 
-Visual Studio 2022 Preview'Visual Studio henüz yüklememişsinizdir, ücretsiz olarak yüklemek için [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) indirmeleri sayfasına gidin.
+henüz 2022 önizleme Visual Studio yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio 2022 önizleme indirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına gidin.
 
 ::: moniker-end
 
-Bir proje kavramını anlamak için eğitim amaçlı bir alıştırma olarak sıfırdan bir çözüm ve proje oluşturmamız gerekir. Genel olarak Visual Studio Visual Studio, yeni bir proje 200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+Bir proje kavramını anlamak için eğitim alıştırması olarak sıfırdan bir çözüm ve proje oluşturacağız. Visual Studio genel kullanım ortamınızda, yeni bir proje oluşturduğunuzda Visual Studio sunduğu çeşitli proje *şablonlarından* bazılarını kullanacaksınız.
 
 > [!NOTE]
-> Bu hizmetlerde uygulama geliştirmek için çözümler ve Visual Studio. Ayrıca kod içeren bir klasör açıp kodlamaya, oluşturmaya ve hata ayıklamaya başlayabilirsiniz. Örneğin, bir GitHub [](https://github.com/) klonlarsanız, bu bir Visual Studio ve çözüm içereyem olabilir. Daha fazla bilgi için [bkz. Proje veya Visual Studio olmadan kod geliştirme.](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
+> Visual Studio içinde uygulama geliştirmek için çözümler ve projeler gerekli değildir. Ayrıca yalnızca kod içeren ve kodlamaya, oluşturmaya ve hata ayıklamaya başlayan bir klasörü açabilirsiniz. örneğin, bir [GitHub](https://github.com/) depoyu klonladığınızda, Visual Studio projeleri ve çözümleri içermeyebilir. daha fazla bilgi için bkz. [proje veya çözüm olmadan Visual Studio kod geliştirme](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
 ## <a name="solutions-and-projects"></a>Çözümler ve projeler
 
-Adına rağmen çözüm bir "yanıt" değildir. Çözüm, bir veya daha fazla ilgili Visual Studio düzenlemek için tek bir kapsayıcı tarafından kullanılan kapsayıcıdır. Bir çözümü Visual Studio, çözümün içerdiği tüm projeleri otomatik olarak yükler.
+Adına rağmen çözüm bir "yanıt" değildir. bir çözüm, yalnızca bir veya daha fazla ilgili projeyi düzenlemek için Visual Studio tarafından kullanılan bir kapsayıcıdır. bir çözümü Visual Studio açtığınızda, çözüm içerdiği tüm projeleri otomatik olarak yükler.
 
 ### <a name="create-a-solution"></a>Çözüm oluşturma
 
-Boş bir çözüm oluşturarak araştırmamıza başlayacağız. Uygulama hakkında bilgi Visual Studio, büyük olasılıkla kendinizi çok sık boş çözümler oluştururken bulamazsınız. Yeni bir proje oluşturursanız, Visual Studio açık bir çözüm yoksa projeyi otomatik olarak bir çözüm oluşturur.
+Boş bir çözüm oluşturarak araştırmayla başlayacağız. Visual Studio öğrendikten sonra, büyük olasılıkla çok sık boş çözümler oluşturmayacağız. yeni bir proje oluşturduğunuzda, zaten açık bir çözüm yoksa, Visual Studio projeyi barındırmak için otomatik olarak bir çözüm oluşturur.
 
 ::: moniker range="vs-2017"
 
 1. Visual Studio'yu açın.
 
-1. Üst menü çubuğunda Dosya Yeni **Dosya'Project.** >  > 
+1. üstteki menü çubuğunda **dosya** > **yeni** > **Project**' yi seçin.
 
-   Yeni **Project** iletişim kutusu açılır.
+   **yeni Project** iletişim kutusu açılır.
 
-1. Sol bölmede Diğer Project **Türleri'ni genişletin** ve ardından **Çözümler'Visual Studio seçin.** Orta bölmede Boş Çözüm **şablonunu** seçin. Çözüme **QuickSolution adını** ve ardından Tamam **düğmesini** seçin.
+1. sol bölmede **diğer Project türler**' i genişletin ve **Visual Studio çözümler**' i seçin. Orta bölmede **boş çözüm** şablonunu seçin. Çözümünüzü **hızlı çözümünüz** olarak adlandırın, sonra **Tamam** düğmesini seçin.
 
-   ![Visual Studio 2017'de Boş Çözüm şablonu](media/tutorial-projects-new-solution.png "Visual Studio 2017 ' deki boş çözüm şablonu.")
+   ![Visual Studio 2017 ' de boş çözüm şablonu](media/tutorial-projects-new-solution.png "Visual Studio 2017 ' deki boş çözüm şablonu.")
 
-   Başlangıç **Sayfası** kapanır ve Çözüm Gezgini **penceresinin** sağ tarafında bir Visual Studio görünür. Büyük olasılıkla **projenizin Çözüm Gezgini** göz atmak için bu bilgileri sık sık kullanacağız.
+   **başlangıç sayfası** kapanır ve Visual Studio penceresinin sağ tarafında **Çözüm Gezgini** bir çözüm görüntülenir. Genellikle **Çözüm Gezgini** , projelerinizdeki içeriğe gözatabilmeniz için çok büyük bir zaman kullanırsınız.
 
 ::: moniker-end
 
@@ -77,78 +77,78 @@ Boş bir çözüm oluşturarak araştırmamıza başlayacağız. Uygulama hakkı
 
 1. Visual Studio'yu açın.
 
-2. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
+2. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-3. Yeni **proje oluştur sayfasında** arama kutusuna **boş çözüm** girin, Boş Çözüm şablonunu seçin ve **ardından** Sonraki'yi **seçin.**
+3. **Yeni proje oluştur** sayfasında, arama kutusuna **boş çözüm** girin, **boş çözüm** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-   ![Visual Studio 2019'da Boş Çözüm şablonu](media/vs-2019/tutorial-projects-blank-solution-template.png "Visual Studio 2019 ' deki boş çözüm şablonu.")
+   ![Visual Studio 2019 ' de boş çözüm şablonu](media/vs-2019/tutorial-projects-blank-solution-template.png "Visual Studio 2019 ' deki boş çözüm şablonu.")
 
     > [!TIP]
-    > Yüklü birkaç iş yükünüz varsa, **Arama** sonuçları listenizin en üstünde Boş Çözüm şablonu görüne görünebilir. Listenin arama bölümünü **temel alarak Diğer sonuçlara kaydırmayı** deneyin. Burada görünse gerekir.
+    > Birden çok iş yükünden biri yüklüyse, **boş çözüm** şablonu arama sonuçları listenizin en üstünde görünmeyebilir. Listenin **Arama bölümüne göre diğer sonuçlara** kaydırma yapmayı deneyin. Burada görünmelidir.
 
-4. Çözüme **QuickSolution adını ve** ardından Oluştur'a **seçin.**
+4. Çözüm **hızlı çözümünü** adlandırın ve ardından **Oluştur**' u seçin.
 
-   Çözüm, **Çözüm Gezgini** penceresinin sağ tarafındaki Visual Studio görünür. Büyük olasılıkla **projenizin Çözüm Gezgini** göz atmak için bu bilgileri sık sık kullanacağız.
+   bir çözüm, Visual Studio penceresinin sağ tarafında **Çözüm Gezgini** görüntülenir. Genellikle **Çözüm Gezgini** , projelerinizdeki içeriğe gözatabilmeniz için çok büyük bir zaman kullanırsınız.
 
 ::: moniker-end
 
 ### <a name="add-a-project"></a>Proje ekleme
 
-Şimdi çözüme ilk projemizi ek o zaman. Boş bir projeyle başlayacağız ve ihtiyacımız olan öğeleri projeye ekleyebilirsiniz.
+Şimdi çözüme ilk projemizi ekleyelim. Boş bir proje ile başlayacağız ve proje için ihtiyacımız olan öğeleri ekleyeceğiz.
 
 ::: moniker range="vs-2017"
 
-1. içinde Çözüm **'QuickSolution'** öğesinin sağ tıklaması veya bağlam **menüsünden Çözüm Gezgini** Ekle'yi  > **Project.**
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden  > **yeni Project** ekle ' yi seçin.
 
-   Yeni **Veri Project** iletişim kutusu açılır.
+   **yeni Project ekle** iletişim kutusu açılır.
 
-1. Sol bölmede **Visual C# öğesini genişletin ve** Masaüstü'Windows **seçin.** Ardından orta bölmede Boş Bölme **(Project) .NET Framework** seçin. Projeye **QuickDate adını ve** ardından Tamam'ı **seçin.**
+1. sol bölmede, **Visual C#** ' ı genişletin ve **masaüstü Windows**' ni seçin. ardından ortadaki bölmede **boş Project (.NET Framework)** şablonunu seçin. Proje **Quickdate** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-   Çözüm altında QuickDate adlı bir proje görüntülenir **ve** Çözüm Gezgini. Şu andaApp.configadlı *tek bir dosya içerir.*
+   QuickDate adlı bir proje, **Çözüm Gezgini** çözümünün altında görünür. Şu anda *App.config* adlı tek bir dosya içerir.
 
    > [!NOTE]
-   > İletişim kutusunun sol bölmesinde **Visual C#** öğesini görmüyorsanız, **.NET** masaüstü geliştirmeyi iş yüküne Visual Studio gerekir. Visual Studio, yalnızca sahip olduğunuz geliştirme türü için ihtiyacınız olan bileşenleri yüklemek için iş yükü tabanlı yükleme kullanır. Yeni iş yükü yüklemenin kolay bir  yolu, Yeni Visual Studio Yükleyicisi Ekle iletişim kutusunun sol alt köşesindeki Aç **bağlantısını Project** etmektir. Uygulama Visual Studio Yükleyicisi sonra **.NET** masaüstü geliştirme iş yükünü ve ardından Değiştir **düğmesini** seçin.
+   > iletişim kutusunun sol bölmesinde **Visual C#** görmüyorsanız, **.net masaüstü geliştirme** Visual Studio iş yükünü yüklemelisiniz. Visual Studio, yalnızca sizin oluşturduğunuz geliştirme türü için gereken bileşenleri yüklemek üzere iş yükü tabanlı yükleme kullanır. yeni bir iş yükünü yüklemenin kolay bir yolu, **yeni Project ekle** iletişim kutusunun sol alt köşesindeki **aç Visual Studio Yükleyicisi** bağlantısını seçeklemektir. Visual Studio Yükleyicisi başlatıldıktan sonra, **.net masaüstü geliştirme** iş yükünü ve sonra **değiştir** düğmesini seçin.
    >
-   > ![Bağlantı Visual Studio Yükleyicisi açma](media/tutorial-projects-open-installer.png "Visual Studio 2017 ' deki yeni Project ekle iletişim kutusunda aç Visual Studio Yükleyicisi bağlantısı.")
+   > ![Visual Studio Yükleyicisi bağlantısını aç](media/tutorial-projects-open-installer.png "Visual Studio 2017 ' deki yeni Project ekle iletişim kutusunda aç Visual Studio Yükleyicisi bağlantısı.")
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. içinde Çözüm **'QuickSolution'** öğesinin sağ tıklaması veya bağlam **menüsünden Çözüm Gezgini** Ekle'yi  > **Project.**
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden  > **yeni Project** ekle ' yi seçin.
 
-   Yeni proje ekle'yi **söyleyen bir iletişim kutusu açılır.**
+   **Yeni bir proje ekleyen** bir iletişim kutusu açılır.
 
-1. En üstte **yer alan** arama kutusuna metni boş girin ve Dil'in altında **C#** öğesini **seçin.**
+1. Üstteki arama kutusuna **boş** metin girin ve ardından **dil** altında **C#** ' ı seçin.
 
-1. Boş veri **Project (.NET Framework) şablonunu** ve ardından Sonraki'yi **seçin.**
+1. **boş Project (.NET Framework)** şablonunu seçin ve ardından **ileri**' yi seçin.
 
-1. Projeye **QuickDate adını ve ardından** Oluştur'a **seçin.**
+1. Proje **Quickdate** olarak adlandırın, sonra **Oluştur**' u seçin.
 
-   Çözüm altında QuickDate adlı bir proje görüntülenir **ve** Çözüm Gezgini. Şu andaApp.configadlı *tek bir dosya içerir.*
+   QuickDate adlı bir proje, **Çözüm Gezgini** çözümünün altında görünür. Şu anda *App.config* adlı tek bir dosya içerir.
 
    > [!NOTE]
-   > Boş Yükleme **(Project) (.NET Framework)** şablonunu görmüyorsanız. **.NET masaüstü** geliştirme şablonunu Visual Studio yüklemeniz gerekir. Visual Studio, yalnızca sahip olduğunuz geliştirme türü için ihtiyacınız olan bileşenleri yüklemek için iş yükü tabanlı yükleme kullanır.
+   > **boş Project (.NET Framework)** şablonu görmüyorsanız, **.net masaüstü geliştirme** Visual Studio iş yükünü yüklemelisiniz. Visual Studio, yalnızca sizin oluşturduğunuz geliştirme türü için gereken bileşenleri yüklemek üzere iş yükü tabanlı yükleme kullanır.
    >
-   >Yeni bir proje oluştururken yeni bir iş yükü yüklemenin kolay  bir yolu, arayabilirsiniz öğesini bu değil mi? metninin altındaki Daha fazla araç ve özellik yükle **bağlantısını seçmektir.** Uygulama Visual Studio Yükleyicisi sonra **.NET** masaüstü geliştirme iş yükünü ve ardından Değiştir **düğmesini** seçin.
+   >Yeni bir proje oluştururken yeni bir iş yükü yüklemenin kolay bir yolu, **ne aradığınızı bulmadığını** belirten metin altında **daha fazla araç ve özellik yüklesin** bağlantısını seçiyoruz. Visual Studio Yükleyicisi başlatıldıktan sonra, **.net masaüstü geliştirme** iş yükünü ve sonra **değiştir** düğmesini seçin.
    >
-   > ![Bağlantı Visual Studio Yükleyicisi açma](media/vs-2019/tutorial-projects-open-installer.png "Visual Studio yeni Project oluştur iletişim kutusunda aç Visual Studio Yükleyicisi bağlantısı.")
+   > ![Visual Studio Yükleyicisi bağlantısını aç](media/vs-2019/tutorial-projects-open-installer.png "Visual Studio yeni Project oluştur iletişim kutusunda aç Visual Studio Yükleyicisi bağlantısı.")
 
 ::: moniker-end
 
 ## <a name="add-an-item-to-the-project"></a>Projeye öğe ekleme
 
-Boş bir projemiz var. Şimdi bir kod dosyası ekleriz.
+Boş bir projem var. Bir kod dosyası ekleyelim.
 
-1. Çözüm Gezgini'daki **QuickDate** projesinin sağ tıklama veya bağlam **menüsünden** Yeni Öğe **Ekle'yi**  >  **seçin.**
+1. **Çözüm Gezgini** içindeki **quickdate** projesinin sağ tıklama veya kısayol menüsünden   >  **Yeni öğe** Ekle ' yi seçin.
 
-   Yeni **Öğe Ekle iletişim** kutusu açılır.
+   **Yeni öğe Ekle** iletişim kutusu açılır.
 
-1. **Visual C# Öğeleri'ne genişletin** ve Ardından Kod'a **seçin.** Orta bölmede Sınıf öğesi **şablonunu** seçin. Sınıfa **Takvim adını** ve ardından Ekle **düğmesini** seçin.
+1. **Visual C# öğelerini** genişletin ve **kod** öğesini seçin. Orta bölmede **sınıf** öğesi şablonunu seçin. Sınıf **takvimini** adlandırın ve ardından **Ekle** düğmesini seçin.
 
-   Projeye *Calendar.cs* adlı bir dosya eklenir. Sonundaki *.cs,* C# kod dosyalarına verilen dosya uzantısıdır. Dosya, içindeki görsel proje hiyerarşisinde **Çözüm Gezgini** ve içeriği düzenleyicide açılır.
+   Projeye *Calendar. cs* adlı bir dosya eklenir. Uçtaki *. cs* , C# kod dosyalarına verilen dosya uzantısıdır. Dosya **Çözüm Gezgini**' deki görsel proje hiyerarşisinde görüntülenir ve içeriği düzenleyicide açılır.
 
-1. *Calendar.cs* dosyasının içeriğini aşağıdaki kodla değiştirin:
+1. *Calendar. cs* dosyasının içeriğini aşağıdaki kodla değiştirin:
 
    ```csharp
    using System;
@@ -172,38 +172,38 @@ Boş bir projemiz var. Şimdi bir kod dosyası ekleriz.
    }
    ```
 
-   Kodun ne yaptığını anlamanız gerek değildir, ancak **Ctrl** + **F5** tuşlarına basarak programı çalıştırabilir ve konsol (veya standart çıkış) penceresine bugünün tarihini yazdırıyor olduğunu görebilirsiniz.
+   Kodun ne yaptığını anlamanız gerekmez, ancak isterseniz, **CTRL** + **F5** tuşuna basarak ve bugünün tarihini konsola (veya standart çıkış) penceresine yazdırdığınızı görmeniz için programı çalıştırabilirsiniz.
 
-## <a name="add-a-second-project"></a>İkinci proje ekleme
+## <a name="add-a-second-project"></a>İkinci bir proje ekleyin
 
-Çözümlerin birden fazla proje içermesi yaygındır ve bu projeler genellikle birbirine başvurur. Bir çözümde bulunan bazı projeler sınıf kitaplıkları, bazı yürütülebilir uygulamalar ve bazıları birim testi projeleri veya web siteleri olabilir.
+Çözümlerin birden fazla proje içermesi ve genellikle bu projelerin birbirlerine başvurması yaygındır. Bir çözümdeki bazı projeler sınıf kitaplıkları, bazı yürütülebilir uygulamalar ve bazıları birim testi projeleri veya Web siteleri olabilir.
 
-Şimdi çözüme bir birim testi projesi ekleriz. Bu kez projeye ek bir kod dosyası eklememiz gerekmay için bir proje şablonundan başlayacağız.
+Çözümünüze bir birim testi projesi ekleyelim. Bu kez bir proje şablonundan başlayacağız, böylece projeye ek bir kod dosyası eklememiz gerekmez.
 
-1. içinde Çözüm **'QuickSolution'** öğesinin sağ tıklaması veya bağlam **menüsünden Çözüm Gezgini** Ekle'yi   >  **Project.**
+1. **Çözüm Gezgini** **' hızlı çözüm ' çözümünün** sağ tıklama veya bağlam menüsünden   >  **yeni Project** ekle ' yi seçin.
 
 ::: moniker range="vs-2017"
 
-2. Sol bölmede **Visual C# öğesini genişletin** ve Test **kategorisini** seçin. Orta bölmede MSTest Test Project **(.NET Core) proje** şablonunu seçin. Projeye **QuickTest adını ve** ardından Tamam'ı **seçin.**
+2. Sol bölmede, **Visual C#** ' yi genişletin ve **Test** kategorisini seçin. orta bölmede, **MSTest Test Project (.net Core)** proje şablonunu seçin. Projeyi **hızlı test** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
-   dosyasına ikinci bir proje **Çözüm Gezgini** *unitTest1.cs* adlı bir dosya düzenleyicide açılır.
+   **Çözüm Gezgini** ikinci bir proje eklenir ve düzenleyicide *UnitTest1. cs* adlı bir dosya açılır.
 
-   ![Visual Studio Çözüm Gezgini projeyle çalışma](media/tutorial-projects-solution-explorer.png "Visual Studio 2017 ' de iki projeyle Çözüm Gezgini.")
+   ![Visual Studio İki projeyle Çözüm Gezgini](media/tutorial-projects-solution-explorer.png "Visual Studio 2017 ' de iki projeyle Çözüm Gezgini.")
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Yeni **proje ekle iletişim kutusunda,** en üstte yer alan arama kutusuna metin birimi **testini** girin ve dil'in altında **C#** öğesini **seçin.**
+2. **Yeni Proje Ekle** iletişim kutusunda, üstteki arama kutusuna metin **birimi testini** girin ve ardından **dil** altında **C#** ' ı seçin.
 
-3. .NET Core **Project** Birim Testi proje şablonunu ve ardından Sonraki'yi **seçin.**
+3. .net Core için **birim testi Project** projesi şablonunu seçin ve ardından **ileri**' yi seçin.
 
    > [!NOTE]
-   > 2019 Visual Studio 16.9 sürümünden başlayarak, MSTest proje şablonu adı **MSTest Birim Testi Project (.NET Core)** olarak Birim **Testi** Project. Bu güncelleştirmede proje oluşturma adımlarının birkaçı değiştirildi.
+   > Visual Studio 2019 sürüm 16,9 ' den başlayarak, mstest proje şablonu adı **mstest birim testi Project (.net Core)** iken **birim testi Project** olarak değiştirildi. Bu güncelleştirmede proje oluşturma içindeki birkaç adım değişti.
 
-4. Projeye **QuickTest adını ve** ardından Sonraki'yi **seçin.**
+4. Projeyi **hızlı teste** adlandırın ve ardından **İleri**' yi seçin.
 
-5. Önerilen hedef çerçeveyi (.NET Core 3.1) veya .NET 5'i seçin ve ardından Oluştur'a **seçin.**
+5. Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
    **Çözüm Gezgini** ikinci bir proje eklenir ve düzenleyicide *UnitTest1. cs* adlı bir dosya açılır.
 

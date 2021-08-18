@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5b538fe8b9f9ab61486f49efb33fac56356ae1c2ffdd9051e39687696c392b62
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a0319b511ddc55e0a6aa0297c924fbfbe14c6c34
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121357420"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085890"
 ---
 # <a name="how-to-insert-xml-comments-for-documentation-generation"></a>Nasıl yapılır: belge oluşturmak için XML açıklamaları ekleme
 

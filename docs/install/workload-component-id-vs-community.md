@@ -3,10 +3,10 @@ title: Visual Studio Community iş yükü ve bileşen kimlikleri
 titleSuffix: ''
 description: Komut Visual Studio Community yüklerini yüklemek veya VSIX Visual Studio bağımlılık belirtmek için iş yükü ve bileşen kimliklerini kullanın.
 keywords: ''
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
-ms.date: 05/25/2021
+ms.date: 08/10/2021
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -16,12 +16,12 @@ ms.assetid: 58494fc3-12de-4761-bd4a-74b54f72bfb3
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 6ddcd0aebb1560b9b4286db814ca334687b6450c
-ms.sourcegitcommit: 4a91c63683ba1c1832b1ba96657862a849320d81
+ms.openlocfilehash: 989650764270460c64040d11254335bc29e55f01
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110565289"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085819"
 ---
 # <a name="visual-studio-community-component-directory"></a>Visual Studio Community bileşeni dizini
 

@@ -1,6 +1,6 @@
 ---
-description: Şu anda hata ayıklanan modülün adını alır.
-title: 'IDebugBeforeSymbolSearchEvent2:: GetModuleName | Microsoft Docs'
+description: Şu anda hata ayıklaması yapılan modülün adını alın.
+title: IDebugBeforeSymbolSearchEvent2::GetModuleName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: 0b4abeac-2eaf-4b2e-a2d5-c9ec303bc869
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5c2d819f8813d923fef50fa81618879d0ab64681
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d0959cc854a45b14d2c021ea0564d6275e89af72
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067444"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064714"
 ---
 # <a name="idebugbeforesymbolsearchevent2getmodulename"></a>IDebugBeforeSymbolSearchEvent2::GetModuleName
-Şu anda hata ayıklanan modülün adını alır.
+Şu anda hata ayıklaması yapılan modülün adını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +42,13 @@ public int GetModuleName (
 
 ## <a name="parameters"></a>Parametreler
 `pbstrModuleName`\
-dışı Modülün adı.
+[out] Modülün adı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) arabirimini kullanıma sunan bir **Cdebugbeforesyımbolsearcheventbase** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) arabirimini ortaya çıkaran bir **CDebugBeforeSymbolSearchEventBase** nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 STDMETHODIMP CDebugBeforeSymbolSearchEventBase::GetModuleName(BSTR *pbstrModuleName)

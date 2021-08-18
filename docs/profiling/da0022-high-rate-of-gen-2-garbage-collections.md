@@ -11,22 +11,23 @@ ms.assetid: f871a547-0e6f-4b11-b2d7-174d30fc2ed8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c0949dcf7bf55d079037ffa9cb160edeb35294d7
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: 5468035fb8a367e2e4d437243d3fb8a4700a8214
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223686"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039026"
 ---
 # <a name="da0022-high-rate-of-gen-2-garbage-collections"></a>DA0022: Yüksek oranda 2. nesil atık toplama
 
 |Öğe|Değer|
 |-|-|
 |Kural kimliği|DA0022|
-|Kategori|.NET Framework kullanımı|
+|Kategori|.NET Framework Kullanımıyla|
 |Profil oluşturma yöntemi|Tümü|
 |İleti|Gerçekleşen çok yüksek miktarda Gen 2 çöp koleksiyonu vardır. Tasarım ile programınızın veri yapılarının çoğu uzun bir süre ayrılır ve kalıcı hale getirilir, bu normalde bir sorun değildir. Ancak, bu davranış istenmeden, uygulamanız nesneleri sabitlenebilir olabilir. Emin değilseniz, uygulamanızın kullandığı bellek ayırma modelini anlamak için .NET bellek ayırma verileri ve nesne yaşam süresi bilgilerini toplayabilirsiniz.|
 |Kural türü|Uyarı|
@@ -41,7 +42,7 @@ ms.locfileid: "102223686"
 
  Nesil 0 içindeki nesneler sık ve genellikle çok verimli bir şekilde toplanır. 1. nesil nesneler daha az ve daha az verimli bir şekilde toplanır. Son olarak, kuşak 2 ' deki uzun süreli nesneler daha az sıklıkta toplanmalıdır. Eksiksiz bir atık toplama çalıştırması olan 2. nesil koleksiyon, ayrıca en pahalı işlemdir.
 
- Bu kural, çok sayıda 2. nesil atık toplama işlemi yaparken ateşlenir. İyi davranmış .NET Framework uygulamalar 2. nesil çok sayıda atık koleksiyonu 2. nesil koleksiyonlar olarak 5 ' ten fazla kez olacaktır. (10 x faktörü büyük olasılıkla idealdir.)
+ Bu kural, çok sayıda 2. nesil atık toplama işlemi yaparken ateşlenir. iyi davranmış .NET Framework uygulamalar 2. nesil çok sayıda atık koleksiyonu 2. nesil koleksiyonlar olarak 5 ' ten fazla kez olacaktır. (10 x faktörü büyük olasılıkla idealdir.)
 
 ## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
  Profil oluşturma verilerinin [Işaretler görünümüne](../profiling/marks-view.md) gitmek Için hatalar Listesi penceresinde iletiye çift tıklayın. **\\ Gen 0 KOLEKSIYONLARıNıN .NET CLR bellek** sayısını ve **\\ Genel 1 koleksiyonlar sütunlarının .NET CLR bellek sayısını** bulun. Çöp toplamanın daha sık gerçekleştiği program yürütmesinin belirli aşamaları olup olmadığını saptayın. Yönetilen bellek ayırmaları deseninin aşırı bellek yönetimi ek yüküne neden olup olmadığını görmek için bu değerleri **GC sütunundaki% Time** ile karşılaştırın.

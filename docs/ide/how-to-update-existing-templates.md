@@ -13,12 +13,12 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
-ms.openlocfilehash: 8638377137e9469ce1e47c606975281393241ee0296e9e974efe025352c2f5ed
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 140a3f8a17379a6a3887f51d2359d6515ed43cac
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121318622"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109142"
 ---
 # <a name="how-to-update-existing-templates"></a>Nasıl yapılır: mevcut şablonları güncelleştirme
 

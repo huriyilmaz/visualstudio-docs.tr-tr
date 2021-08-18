@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8dfd34859cd28113be8efcf61efe0f7769de867d4c47117888ffdef952a0e08b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 38c360dde5e857a99fb021e3f6a48aef8241ee72
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121405316"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134628"
 ---
 # <a name="idiaenumdebugstreamsget_count"></a>IDiaEnumDebugStreams::get_Count
 Hata ayıklama akışlarının sayısını alır.

@@ -1,6 +1,6 @@
 ---
-title: SetEnv görev | Microsoft Docs
-description: Belirli bir MSBuild değerini ayarlamak veya silmek için SetEnv görevini nasıl kullandığını öğrenin.
+title: SetEnv Görevi | Microsoft Docs
+description: MSBuild, belirtilen bir ortam değişkeninin değerini ayarlamak veya silmek için setenv görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/05/2018
 ms.topic: reference
@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 9de76654cb4fb0a2a8ab906a5a6bdc4223bfcbf07d6cc257cc7e50458311cf14
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c760e22842a3063036d0e4f8c2945ddefc312900
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427554"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136670"
 ---
 # <a name="setenv-task"></a>SetEnv görevi
 
@@ -35,15 +35,15 @@ Belirtilen ortam değişkeninin değerini ayarlar veya siler.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda **SetEnv** görevinin parametreleri açık almaktadır.
+ Aşağıdaki tabloda **SetEnv** görevinin parametreleri açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|**Ad**|Gerekli **Dize** parametresi.<br /><br /> Ortam değişkeninin adı.|
-|**OutputEnvironmentVariable**|İsteğe **bağlı Dize** çıkış parametresi.<br /><br /> **Name** parametresi tarafından belirtilen ortam değişkenine atanan değeri içerir.|
-|**Ön ek**|Zorunlu `Boolean` parametre.<br /><br /> ise, Name parametresi tarafından belirtilen ortam değişkeninin değerinden önce Value parametresinin değerini birler ve ardından sonucu ortam `true` değişkenine atar.   ise, `false` yalnızca Value parametresinin **değerini ortam** değişkenine atar.|
-|**Hedef**|İsteğe **bağlı Dize** parametresi.<br /><br /> Ortam değişkeninin depolandığı konumu belirtir. "Kullanıcı" veya "Makine" belirtin.<br /><br /> Daha fazla bilgi için [bkz. EnvironmentVariableTarget Sabit Sabit Bilgisi.](xref:System.EnvironmentVariableTarget)|
-|**Değer**|İsteğe **bağlı Dize** parametresi.<br /><br /> **Name** parametresi tarafından belirtilen ortam değişkenine atanan değer. **Değer boşsa** ve değişken mevcutsa değişken silinir. Değişken yoksa, işlem gerçekleştirilese bile hata oluşmaz.<br /><br /> Daha fazla bilgi için [bkz. Environment::SetEnvironmentVariable Metodu.](xref:System.Environment.SetEnvironmentVariable%2A)|
+|**Ad**|Gerekli **dize** parametresi.<br /><br /> Ortam değişkeninin adı.|
+|**OutputEnvironmentVariable**|İsteğe bağlı **dize** çıkış parametresi.<br /><br /> **Ad** parametresiyle belirtilen ortam değişkenine atanan değeri içerir.|
+|**Ön ek**|Zorunlu `Boolean` parametre.<br /><br /> İse `true` , **değer** parametresinin değerini, **ad** parametresiyle belirtilen ortam değişkeni değerinden önce birleştirir ve sonra sonucu ortam değişkenine atar. İse `false` , ortam değişkenine yalnızca **Value** parametresinin değerini atar.|
+|**Hedef**|İsteğe bağlı **dize** parametresi.<br /><br /> Bir ortam değişkeninin depolandığı konumu belirtir. "Kullanıcı" veya "makine" belirtin.<br /><br /> Daha fazla bilgi için bkz. [EnvironmentVariableTarget numaralandırması](xref:System.EnvironmentVariableTarget).|
+|**Değer**|İsteğe bağlı **dize** parametresi.<br /><br /> **Name** parametresiyle belirtilen ortam değişkenine atanan değer. **Değer** boşsa ve değişken varsa, değişken silinir. Değişken yoksa, işlem gerçekleştirilemediği halde bir hata oluşmaz.<br /><br /> Daha fazla bilgi için bkz. [Environment:: SetEnvironmentVariable yöntemi](xref:System.Environment.SetEnvironmentVariable%2A).|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

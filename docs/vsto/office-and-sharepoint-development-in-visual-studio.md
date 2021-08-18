@@ -1,6 +1,6 @@
 ---
-title: Visual Studio Office ve SharePoint geliştirme
-description: kullanıcıların Office mağazasından indirerek bir basit uygulama veya eklenti oluşturarak Microsoft Office ve SharePoint nasıl genişletebileceğinizi öğrenin.
+title: Office geliştirme SharePoint ve Visual Studio
+description: Kullanıcıların Office Store Microsoft Office'dan SharePoint basit bir uygulama veya eklenti oluşturarak uygulama ve uygulama Office nasıl genişletebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -24,39 +24,39 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b22d2975404b335583acf5fa74eb261901c31bc23ced58bd349ef96058ac35f3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3e377f9ea0a1f38eaedc2dd34e65b24f95acf1b3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121331071"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032452"
 ---
-# <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio Office ve SharePoint geliştirme
-  kullanıcıların [Office deposundan](https://store.office.com/) veya bir kuruluş kataloğundan indirerek ya da kullanıcıların bir bilgisayara yükleyen .NET Framework tabanlı bir çözüm oluşturarak Microsoft Office ve SharePoint genişletebilirsiniz.
+# <a name="office-and-sharepoint-development-in-visual-studio"></a>Office geliştirme SharePoint ve Visual Studio
+  Kullanıcıların Microsoft Office Office [Store'dan](https://store.office.com/) veya kuruluş kataloğundan indirmiş olduğu basit bir uygulama veya eklenti oluşturarak ya da kullanıcıların bir bilgisayara yüklemiş olduğu .NET Framework tabanlı bir çözüm oluşturarak .NET Framework ve SharePoint'leri genişletebilirsiniz.
 
  Bu konuda:
 
-- [Office ve SharePoint için eklentiler oluşturma](#Apps)
+- [Office ve SharePoint](#Apps)
 
-- [VSTO eklentisi oluşturma](#Add-ins)
+- [Yeni VSTO Oluşturma](#Add-ins)
 
-- [SharePoint çözümü oluşturma](#Solutions)
+- [Bir SharePoint oluşturma](#Solutions)
 
-## <a name="create-add-ins-for-office-and-sharepoint"></a><a name="Apps"></a>Office ve SharePoint için eklentiler oluşturma
- Office 2013 ve SharePoint 2013, Office ve SharePoint genişleten eklentiler oluşturmanıza, dağıtmanıza ve bunları yeniden oluşturmanıza yardımcı olan yeni bir eklenti modeli sunuyor.  bu eklentiler Office veya çevrimiçi SharePoint çalışabilir ve kullanıcılar birçok cihazdan bunlarla etkileşime girebilirler.
+## <a name="create-add-ins-for-office-and-sharepoint"></a><a name="Apps"></a>Office ve SharePoint
+ Office 2013 ve SharePoint 2013'te, Office ve SharePoint'yi genişleten eklentiler derlemenize, dağıtmanıza ve para kazanmanıza yardımcı olan yeni bir eklenti modeli SharePoint.  Bu eklentiler Office veya SharePoint Online'da çalışır ve kullanıcılar birçok cihazla etkileşime olabilir.
 
- yeni [Office eklentisi modelinin](/office/dev/add-ins/overview/office-add-ins) , kullanıcılarınız için Office deneyimini uzatmak üzere nasıl kullanılacağını öğrenin.
+ Yeni eklenti eklenti modelini kullanarak [Office deneyimini](/office/dev/add-ins/overview/office-add-ins) genişletmek Office edinebilirsiniz.
 
- bu eklentiler, VSTO eklentileri ve çözümleri ile karşılaştırıldığında küçük bir baskı ve HTML5, JavaScript, CSS3 ve XML gibi neredeyse her türlü web programlama teknolojisini kullanarak da oluşturabilirsiniz.  başlamak için, Visual Studio Office Geliştirici Araçları kullanın. bu, proje oluşturmanızı, kod yazmanızı ve eklentilerinizi bir tarayıcıda çalıştırmanızı sağlar.
+ Bu eklentiler, VSTO ve çözümlerle karşılaştırıldığında küçük ayak izine sahiptir ve HTML5, JavaScript, CSS3 ve XML gibi neredeyse tüm web programlama teknolojisini kullanarak bunları oluşturabilirsiniz.  Çalışmaya başlamanız için Office Geliştirici Araçları proje Visual Studio kod yazmanıza ve eklentilerinizi tarayıcıda çalıştırmanıza olanak sağlayan Visual Studio'de bulunan Office Geliştirici Araçları'yi kullanın.
 
- ![Office ve SharePoint kavramsal model için uygulamalar](../vsto/media/officeandsharepointapps2015.png "Office ve SharePoint kavramsal model için uygulamalar")
+ ![Kavramsal model Office SharePoint uygulamalar](../vsto/media/officeandsharepointapps2015.png "Kavramsal model Office SharePoint uygulamalar")
 
-### <a name="build-an-office-add-in"></a>Office eklentisi oluşturma
- Office işlevlerini genişletmek için bir Office eklentisi oluşturun. bu, temel olarak Excel, Word, Outlook ve PowerPoint gibi Office bir uygulamada barındırılan bir web sayfasıdır. Uygulamanız belgelere, çalışma sayfalarına, e-posta iletilerine, randevulara, sunulara ve projelere işlevsellik ekleyebilir.
+### <a name="build-an-office-add-in"></a>Office Eklenti oluşturma
+ Bir uygulamanın işlevselliğini Office için bir Office ekleyin. Bu, Office Excel, Word, Outlook ve PowerPoint gibi bir Excel uygulamasında barındırılan bir web PowerPoint. Uygulamanıza belgelere, çalışma sayfalarına, e-posta iletilerine, randevulara, sunumlara ve projelere işlevsellik ekleyebilirsiniz.
 
- uygulamanızı Office deposuna satabilirsiniz.  [Office deposu](https://store.office.com/) , eklentilerinizi izlemeyi, güncelleştirmeleri yönetmenizi ve telemetriyi izlemenizi kolaylaştırır. ayrıca, SharePoint veya Exchange Server bir uygulama kataloğu aracılığıyla uygulamanızı kullanıcılara yayımlayabilirsiniz.
+ Office Store'da Office satabilirsiniz.  Office [Store,](https://store.office.com/) eklentilerden para kazanmayı, güncelleştirmeleri yönetmeyi ve telemetri verileri izlemeyi kolaylaştırır. Ayrıca, uygulama kataloğu aracılığıyla kullanıcılara uygulama kataloğu aracılığıyla SharePoint veya Exchange Server.
 
- Office için aşağıdaki uygulama, Bing eşlemesindeki çalışma sayfası verilerini gösterir.
+ Aşağıdaki uygulama, Office çalışma sayfası verilerini bir çalışma Bing gösterir.
 
  ![Office için içerik uygulaması](../vsto/media/appforoffice.png "Office için içerik uygulaması")
 
@@ -64,48 +64,48 @@ ms.locfileid: "121331071"
 
 |Amaç|Bkz.|
 |--------|---------|
-|Office eklentileri hakkında daha fazla bilgi edinin ve ardından bir tane oluşturun.|[Office eklentiler](/office/dev/add-ins/publish/publish)|
-|Office genişletebileceğiniz farklı yolları karşılaştırın ve bir uygulama mı yoksa Office eklentisi mi kullanacağınızı belirleyin.|[Office eklentileri, VSTO ve VBA için yol haritası](/archive/blogs/officeapps/roadmap-for-apps-for-office-vsto-and-vba)|
+|Eklenti oluşturma ve Office hakkında daha fazla bilgi edinmek için bir tane oluşturma.|[Office eklentileri](/office/dev/add-ins/publish/publish)|
+|Uygulamanın süresini genişletmek için kullanabileceğiniz farklı Office uygulama mı yoksa uygulama veya uygulama Office karar verin.|[Office, VSTO ve VBA için yol haritası](/archive/blogs/officeapps/roadmap-for-apps-for-office-vsto-and-vba)|
 
-### <a name="build-a-sharepoint-add-in"></a>SharePoint eklentisi oluşturma
- kullanıcılarınız için SharePoint genişletmek için bir SharePoint eklentisi oluşturun. Bu temelde, kullanıcılarınız veya işletmeniz için ihtiyacı çözen küçük, kullanımı kolay, tek başına bir uygulamadır.
+### <a name="build-a-sharepoint-add-in"></a>SharePoint Eklenti oluşturma
+ Kullanıcılarınızı SharePoint genişletmek için bir SharePoint ekleyin. Temelde kullanıcılarınıza veya işletmenize yönelik bir ihtiyacı çözen küçük, kullanımı kolay, tek başına bir uygulamadır.
 
- uygulamanızı [Office mağazasındaki](https://store.office.com/)SharePoint satıtabilirsiniz. Ayrıca, SharePoint bir eklenti Kataloğu aracılığıyla kullanıcılarınıza eklenti yayımlayabilirsiniz.  site sahipleri, bir grup sunucusunun veya site koleksiyonu yöneticisinin yardımı olmadan, SharePoint sitelerine eklentiyi yükleyebilir, yükseltebilir ve kaldırabilir.
+ Office Store'da SharePoint [için Office satabilirsiniz.](https://store.office.com/) Eklentinizi kullanıcılara, SharePoint'daki bir eklenti kataloğu aracılığıyla da SharePoint.  Site sahipleri, bir grup sunucusu veya site koleksiyonu yöneticisinin yardımıyla SharePoint sitelerine eklentinizi yükleyebilir, yükseltebilirsiniz ve kaldırabilirsiniz.
 
- kullanıcıların iş kişilerini yönetmesine yardımcı olan SharePoint bir uygulama örneği aşağıda verilmiştir.
+ Kullanıcıların iş kişilerini yönetmeye yardımcı olan SharePoint için bir uygulama örneği burada ver.
 
- ![SharePoint için Business Contact Manager uygulaması](../vsto/media/appforsharepoint.png "SharePoint için Business Contact Manager uygulaması")
+ ![SharePoint için business contact manager uygulaması](../vsto/media/appforsharepoint.png "SharePoint için business contact manager uygulaması")
 
  **Daha fazla bilgi edinin**
 
 |Amaç|Bkz.|
 |--------|---------|
-|SharePoint eklentileri hakkında daha fazla bilgi edinin ve ardından bir tane oluşturun.|[SharePoint Eklentiler](/sharepoint/dev/sp-add-ins/sharepoint-add-ins)|
-|eklentileri geleneksel SharePoint çözümleriyle SharePoint karşılaştırın.|[SharePoint SharePoint çözümleriyle karşılaştırılan eklentiler](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|
-|SharePoint eklenti veya SharePoint çözümü oluşturulup oluşturulmayacağını seçin.|[SharePoint eklentileri ve SharePoint çözümleri arasında karar verme](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|
+|Eklenti oluşturma ve SharePoint oluşturma hakkında daha fazla bilgi.|[SharePoint Eklentiler](/sharepoint/dev/sp-add-ins/sharepoint-add-ins)|
+|SharePoint için eklentileri geleneksel SharePoint karşılaştırın.|[SharePoint Eklentiler, SharePoint çözümleriyle karşılaştırıldığında](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|
+|Bir eklenti mi yoksa SharePoint çözüm mi SharePoint seçin.|[Eklenti SharePoint çözümlerini SharePoint karar verme](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|
 
-## <a name="create-a-vsto-add-in"></a><a name="Add-ins"></a>VSTO eklentisi oluşturma
- Office 2007 veya Office 2010 ' i hedeflemek ya da Office 2013 ' ı uzatmak için VSTO bir eklenti oluşturun veya Office eklentileriyle mümkün olan işlemleri ötesinde Office 2016. VSTO eklentiler yalnızca masaüstünde çalışır. kullanıcıların VSTO eklentileri yüklemeleri gerekir, bu yüzden genellikle dağıtımı ve desteği daha zordur.  ancak, VSTO eklentisi Office daha yakından tümleştirilebilir. örneğin, Office şeridine sekmeler ve denetimler ekleyebilir ve belge birleştirme ya da grafikleri değiştirme gibi gelişmiş otomasyon görevlerini gerçekleştirebilir. .NET Framework yararlanabilir ve Office nesneleriyle etkileşimde bulunmak için C# ve Visual Basic kullanabilirsiniz.
+## <a name="create-a-vsto-add-in"></a><a name="Add-ins"></a>Yeni VSTO Oluşturma
+ Office 2007 veya Office 2010'a yönelik bir VSTO eklenti oluşturun ya da Office 2013 ve Office 2016'yi Office eklentileriyle mümkün olanın ötesinde genişletin. VSTO eklentileri yalnızca masaüstünde çalıştırın. Kullanıcıların ek VSTO yüklemesi gerekir, bu nedenle genellikle dağıtımı ve desteği daha zordur.  Ancak, VSTO eklentiniz, uygulamanıza daha yakın bir şekilde Office. Örneğin, Office Şerit'e sekmeler ve denetimler ekleyebilir ve belgeleri birleştirme veya grafikleri değiştirme gibi gelişmiş otomasyon görevlerini gerçekleştirebilir. Nesne nesneleriyle etkileşim .NET Framework için C# Visual Basic ve Office kullanabilirsiniz.
 
- işte VSTO eklentisinin yapabilecekleri bir örnek. bu VSTO eklenti, PowerPoint için şerit denetimleri, özel görev bölmesi ve iletişim kutusu ekler.
+ Burada bir eklentinin neler VSTO bir örnek veserde yer alan bir örnek ve ardından. Bu VSTO, şerit denetimleri, özel görev bölmesi ve bir iletişim kutusu ekleyen bir PowerPoint.
 
- ![PowerPoint Eklenti çözümü](../vsto/media/powerpointaddin.png "PowerPoint eklentisi çözümü")
+ ![PowerPoint Eklenti çözümü](../vsto/media/powerpointaddin.png "PowerPoint eklenti çözümü")
 
  **Daha fazla bilgi edinin**
 
 |Amaç|Okuma|
 |--------|----------|
-|Office genişletebileceğiniz farklı yolları karşılaştırın ve bir VSTO eklentisi mi yoksa Office eklentisi mi kullanacağınızı belirleyin.|[Office eklentileri, VSTO ve VBA için yol haritası](/archive/blogs/officeapps/roadmap-for-apps-for-office-vsto-and-vba)|
-|VSTO eklentisi oluşturun.|[Visual Studio VSTO eklentileri oluşturma](create-vsto-add-ins-for-office-by-using-visual-studio.md)|
+|Uygulamanın süresini genişletmenin farklı yollarını Office bir eklenti mi yoksa VSTO eklenti mi Office karar verin.|[Office, VSTO ve VBA için yol haritası](/archive/blogs/officeapps/roadmap-for-apps-for-office-vsto-and-vba)|
+|Yeni VSTO oluşturun.|[VSTO eklenti derlemesi Visual Studio](create-vsto-add-ins-for-office-by-using-visual-studio.md)|
 
-## <a name="create-a-sharepoint-solution"></a><a name="Solutions"></a>SharePoint çözümü oluşturma
- SharePoint Foundation 2010 ve SharePoint Server 2010 ' i hedeflemek veya SharePoint 2013 ve SharePoint 2016 ' i SharePoint bir eklenti ile mümkün olduğunca fazla şekilde genişletmek için SharePoint bir çözüm oluşturun.
+## <a name="create-a-sharepoint-solution"></a><a name="Solutions"></a>Bir SharePoint oluşturma
+ SharePoint Foundation 2010 ve SharePoint Server 2010'a yönelik bir SharePoint çözümü oluşturun veya SharePoint 2013 ve SharePoint 2016'nın bir SharePoint eklentiyle mümkün olanın ötesinde bir şekilde genişletebilirsiniz.
 
- SharePoint çözümleri şirket içi SharePoint grubu sunucuları gerektirir. yöneticiler bu yüklemeleri yüklemelidir ve çözümler SharePoint içinde yürütülecektir, sunucunun performansını etkileyebilir. ancak, çözümler SharePoint nesnelerine daha derin erişim sağlar. ayrıca, bir SharePoint çözümü oluşturduğunuzda .NET Framework ve C# ve Visual Basic kullanarak SharePoint nesneleriyle etkileşim kurabilirsiniz.
+ SharePoint çözümleri için şirket içi ve SharePoint sunucuları gerekir. Yöneticilerin bunları yüklemesi gerekir ve çözümler SharePoint yürütülür ve sunucunun performansını etkileyebilir. Ancak çözümler, nesnelere daha derin SharePoint sağlar. Ayrıca, bir SharePoint çözümü derlemek için .NET Framework C# ve Visual Basic kullanarak SharePoint kullanabilirsiniz.
 
  **Daha fazla bilgi edinin**
 
 |Amaç|Bkz.|
 |--------|---------|
-|SharePoint çözümlerini SharePoint eklentileriyle karşılaştırın.|[SharePoint SharePoint çözümleriyle karşılaştırılan eklentiler](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|
-|SharePoint çözümü oluşturun.|[SharePoint çözümleri oluşturma](../sharepoint/create-sharepoint-solutions.md)|
+|Diğer SharePoint eklentilerle SharePoint karşılaştırın.|[SharePoint Eklentiler, SharePoint çözümleriyle karşılaştırıldığında](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)|
+|Yeni bir SharePoint oluşturun.|[Yeni SharePoint oluşturma](../sharepoint/create-sharepoint-solutions.md)|

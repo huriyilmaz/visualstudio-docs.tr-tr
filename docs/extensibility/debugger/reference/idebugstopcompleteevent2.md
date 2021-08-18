@@ -8,14 +8,15 @@ helpviewer_keywords:
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e4fd1826f44cb1d830ef45874b1c41c21a34895
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 55e6bbe87f6b57f95cad69fcd545aef9afede6f5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087151"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095926"
 ---
 # <a name="idebugstopcompleteevent2"></a>IDebugStopCompleteEvent2
 
@@ -29,7 +30,7 @@ IDebugStopCompleteEvent2 : IUnknown
 
 ## <a name="notes-for-implementers"></a>Implemenonun notları
 
-Bu arabirim, Visual Studio 2005 ile tanıtılmıştır. Önceki yayınlar zaman uyumsuz durdurmayı desteklemiyor.
+bu arabirim Visual Studio 2005 ile tanıtılmıştı. Önceki yayınlar zaman uyumsuz durdurmayı desteklemiyor.
 
 - [Stop](../../../extensibility/debugger/reference/idebugengineprogram2-stop.md) , çok işlem veya çok program senaryolarında SDM tarafından çağırılır. Bir program SDM 'ye durdurma olayı gönderdiğinde, SDM diğer programları da durdurur.
 

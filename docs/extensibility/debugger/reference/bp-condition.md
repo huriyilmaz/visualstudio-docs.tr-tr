@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8def7604362e7c1b84adf55dad8a9e10e31e7bb09331e24730e9abbcffcdbccb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3c8b501d603008ca6b049884d30ed107c3cde20f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342706"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120523"
 ---
 # <a name="bp_condition"></a>BP_CONDITION
 Bir kesme noktasının tetiklendiği koşulları açıklar.

@@ -26,12 +26,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c96b892bac229ad783205bebf9208bbf8af0ce883992192d5835b1a77e8c16ef
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6cb6232fc642030a1e276a06b865e3112380b387
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121418551"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133815"
 ---
 # <a name="view-threads-in-the-visual-studio-debugger-by-using-the-threads-window-c-visual-basic-c"></a>iş parçacıkları penceresini kullanarak Visual Studio hata ayıklayıcıdaki iş parçacıklarını görüntüleme (C#, Visual Basic, C++)
 **Iş parçacıkları** penceresinde, hata ayıklaması yaptığınız uygulamadaki iş parçacıklarını inceleyebilir ve bunlarla çalışabilirsiniz. **Iş parçacıkları** penceresini kullanma hakkında adım adım yönergeler için bkz. [Izlenecek yol: iş parçacıkları penceresini kullanarak hata ayıklama](../debugger/how-to-use-the-threads-window.md).
@@ -158,17 +158,17 @@ Sarı ok geçerli iş parçacığını (ve yürütme işaretçisinin konumunu) g
 Çok iş parçacıklı bir programda, her iş parçacığının kendi çağrı yığını vardır. **Iş parçacıkları** penceresi, bu yığınları görüntülemek için kullanışlı bir yol sağlar.
 
 > [!TIP]
-> Her iş parçacığı için çağrı yığınının görsel bir gösterimi için Paralel [Yığınlar penceresini](../debugger/get-started-debugging-multithreaded-apps.md) kullanın.
+> Her iş parçacığının çağrı yığınının görsel temsili için [Paralel Yığınlar](../debugger/get-started-debugging-multithreaded-apps.md) penceresini kullanın.
 
 ### <a name="to-view-the-call-stack-of-a-thread"></a>Bir iş parçacığının çağrı yığınını görüntülemek için
 
-- Konum **sütununda** iş parçacığı konumunun yanındaki ters üçgeni seçin.
+- **Konum** sütununda, iş parçacığı konumunun yanındaki ters üçgeni seçin.
 
-     Konum, iş parçacığı için çağrı yığınını gösterecek şekilde genişletildi.
+     Konum, iş parçacığının çağrı yığınını gösterecek şekilde genişler.
 
-### <a name="to-view-or-collapse-the-call-stacks-of-all-threads"></a>Tüm iş parçacıklarının çağrı yığınlarını görüntülemek veya daraltabilirsiniz
+### <a name="to-view-or-collapse-the-call-stacks-of-all-threads"></a>Tüm iş parçacıklarının çağrı yığınlarını görüntülemek veya daraltmak için
 
-- İş Parçacıkları penceresinin üst kısmında yer alan araç **çubuğunda** Çağrı Yığınlarını **Genişlet veya Çağrı Yığınlarını** **Daralt'ı seçin.**
+- **Iş parçacıkları** penceresinin en üstündeki araç çubuğunda, **çağrı yığınlarını Genişlet** veya **çağrı yığınlarını Daralt**' ı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çok iş parçacıklı uygulamaların hatalarını ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)

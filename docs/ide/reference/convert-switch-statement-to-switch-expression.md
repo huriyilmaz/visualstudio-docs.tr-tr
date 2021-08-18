@@ -12,12 +12,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 284c4be79f2e1ac0450b88c7e857fdede4951e5c073439b0d359afb27a3eb204
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b7d01862774fd36bc5c9347df3fce6bd02c56263
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121430009"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122094158"
 ---
 # <a name="convert-switch-statement-to-switch-expression"></a>Switch deyimini switch ifadesine dönüştürme
 

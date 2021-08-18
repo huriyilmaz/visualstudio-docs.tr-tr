@@ -1,6 +1,6 @@
 ---
-title: DA0029 - Desteklenmeyen CLR Sürüm | Microsoft Docs
-description: .NET Framework 1.1'i kullanan ve uygulama tarafından destek almayan bir uygulamanın profilini Profil Oluşturma Araçları.
+title: DA0029-desteklenmeyen CLR sürümü | Microsoft Docs
+description: Profil Oluşturma Araçları tarafından desteklenmeyen 1,1 .NET Framework kullanan bir uygulamayı profile çalışıyorsunuz.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,28 +18,28 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 532a0ee0f429c2daebec12a0b4ea0319113376619c5908ea3f205fdb0df93502
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 608135e6600dd64e7edd14eeccfe279962e412b9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121257088"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122084330"
 ---
-# <a name="da0029-unsupported-clr-version"></a>DA0029: Desteklenmeyen CLR sürümü
+# <a name="da0029-unsupported-clr-version"></a>DA0029: desteklenmeyen CLR sürümü
 
 |Öğe|Değer|
 |-|-|
-|Kural Kimliği|DA0029|
-|Kategori|Profil Oluşturma Araçları Kullanımı|
-|Profil oluşturma yöntemi|Komut satırdan profil oluşturma|
-|İleti|Koleksiyon sırasında desteklenmeyen bir CLR sürümü algılandı. Yönetilen semboller doğru çözümlenems olabilir.|
+|Kural kimliği|DA0029|
+|Kategori|Profil Oluşturma Araçları kullanımı|
+|Profil oluşturma yöntemi|Komut satırından profil oluşturma|
+|İleti|Koleksiyon sırasında desteklenmeyen bir CLR sürümü algılandı. Yönetilen semboller doğru şekilde çözümlenmeyebilir.|
 |Kural türü|Bilgi.|
 
 ## <a name="cause"></a>Nedeni
- Uygulama tarafından destek almayan kullanan [!INCLUDE[net_v11_long](../profiling/includes/net_v11_long_md.md)] bir uygulamanın profilini Profil Oluşturma Araçları.
+ Profil Oluşturma Araçları tarafından desteklenmeyen öğesini kullanan bir uygulamayı profile çalışıyorsunuz [!INCLUDE[net_v11_long](../profiling/includes/net_v11_long_md.md)] .
 
 ## <a name="rule-description"></a>Kural açıklaması
- Profil oluşturma araçları uygulamada çalışan yönetilen kod için sembolleri çözümleyemezse bu uyarı oluşur. Profil oluşturma araçları, çalıştıran uygulamalar için yönetilen kod sembollerini çözümleyemezse. [!INCLUDE[net_v11_long](../profiling/includes/net_v11_long_md.md)]
+ Bu uyarı, profil oluşturma araçlarının uygulamada çalışan yönetilen kodun sembollerini çözemediği için oluşur. Profil oluşturma araçları, çalıştıran uygulamalar için yönetilen kod sembollerini çözemez [!INCLUDE[net_v11_long](../profiling/includes/net_v11_long_md.md)] .
 
-## <a name="how-to-fix-violations"></a>İhlalleri düzeltme
+## <a name="how-to-fix-violations"></a>İhlalleri çözme
  Yok.

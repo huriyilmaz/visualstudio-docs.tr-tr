@@ -12,14 +12,15 @@ ms.assetid: 1be36e45-01da-451c-972d-f9fc0e7d663c
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: e838460f1e42f34e92a99198b9d4a0e34ce71dcd
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d75523b50cddf5270480747345fbcf021ea655e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914380"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136956"
 ---
 # <a name="how-to-exclude-files-from-the-build"></a>Nasıl yapılır: derlemeden Dosya dışlama
 
@@ -27,7 +28,7 @@ Bir proje dosyasında, bir derleme için giriş olarak bir dizindeki veya iç i�
 
 ## <a name="exclude-a-file-or-directory-from-the-inputs-for-a-build"></a>Bir derleme için girişlerden bir dosya veya dizin dışlama
 
- Öğe listeleri, bir derleme için giriş dosyalarıdır. Dahil etmek istediğiniz öğeler ayrı olarak ya da özniteliğini kullanan bir grup olarak belirtilir `Include` . Örneğin:
+ Öğe listeleri, bir derleme için giriş dosyalarıdır. Dahil etmek istediğiniz öğeler ayrı olarak ya da özniteliğini kullanan bir grup olarak belirtilir `Include` . Örnek:
 
 ```xml
 <CSFile Include="Form1.cs"/>
@@ -66,7 +67,7 @@ Bir proje dosyasında, bir derleme için giriş olarak bir dizindeki veya iç i�
     <VBFile Include="*.vb" Exclude="Form2.vb;Form3.vb"/>
     ```
 
-#### <a name="to-include-all-jpg-files-in-subdirectories-of-the-images-directory-except-those-in-the-version2-directory"></a>Tüm *. jpg* dosyalarını *Version2* dizininde bulunanlar hariç *görüntüler* dizininin alt dizinlerinde dahil etmek için
+#### <a name="to-include-all-jpg-files-in-subdirectories-of-the-images-directory-except-those-in-the-version2-directory"></a>Tüm *.jpg* dosyalarını *Version2* dizininde bulunanlar hariç *görüntüler* dizininin alt dizinlerinde dahil etmek için
 
 - Aşağıdaki `Include` ve özniteliklerini kullanın `Exclude` :
 
@@ -95,7 +96,7 @@ Bir proje dosyasında, bir derleme için giriş olarak bir dizindeki veya iç i�
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod örneği, *Form2.cs* hariç olmak üzere dizindeki tüm *. cs* dosyalarını içeren bir proje oluşturur.
+ Aşağıdaki kod örneği, *Form2. cs* hariç dizindeki tüm *. cs* dosyalarını içeren bir proje oluşturur.
 
 ```xml
 <Project DefaultTargets="Compile"

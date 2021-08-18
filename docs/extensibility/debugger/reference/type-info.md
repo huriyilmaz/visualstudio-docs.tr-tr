@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7be107aa82ba513d20463d3db2686d0661021cdd71eee30f2ebd8de8bd57c174
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0a9c4381492e2909ab79b58ac0e9024bb7237f2a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414991"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110741"
 ---
 # <a name="type_info"></a>TYPE_INFO
 Bu yapı, bir alanın türü hakkında çeşitli bilgi türlerini belirtir.

@@ -11,17 +11,18 @@ ms.assetid: 801c5b60-acff-4822-b23d-e9c7bbca8a0f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5a9fe7c0ee2d7902d24df1bdea773b4b2745a96f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 48a4c9884f4625a938269715c5338d4040ccc8b3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067458"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119990"
 ---
 # <a name="idebugbindergetmemorycontext"></a>IDebugBinder::GetMemoryContext
 Bu yöntem bir nesne konumu ya da bellek adresini bir bellek bağlamına dönüştürür.

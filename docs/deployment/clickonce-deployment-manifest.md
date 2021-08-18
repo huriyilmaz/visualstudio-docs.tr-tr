@@ -1,6 +1,6 @@
 ---
-title: ClickOnce dağıtım bildirimi | Microsoft Docs
-description: Dağıtılacak geçerli ClickOnce uygulaması sürümü de dahil olmak üzere ClickOnce dağıtımını tanımlayan bir XML dosyası olan dağıtım bildirimi hakkında bilgi edinin.
+title: ClickOnce Dağıtım bildirimi | Microsoft Docs
+description: dağıtılacak geçerli ClickOnce uygulama sürümü de dahil olmak üzere ClickOnce dağıtımı tanımlayan bir XML dosyası olan dağıtım bildirimi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,15 @@ ms.assetid: 8457e615-e3b6-4990-8dcf-11bc590e4e9b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: c3e8737a29fed109e82240a74569011be60a586c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 68d9aa79b08f210f8d8738f4f0113aa967bbf864
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99840866"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122051631"
 ---
 # <a name="clickonce-deployment-manifest"></a>ClickOnce dağıtım bildirimi
 Dağıtım bildirimi [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , dağıtılacak geçerli uygulama sürümünün tanımlanması dahil olmak üzere bir dağıtımı açıklayan BIR XML dosyasıdır [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
@@ -35,16 +36,16 @@ Dağıtım bildirimi [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_m
 | [\<assemblyIdentity> Dosyalarında](../deployment/assemblyidentity-element-clickonce-deployment.md) | Gereklidir. Uygulamanın uygulama bildirimini tanımlar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . | `name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `culture` |
 | [\<description> Dosyalarında](../deployment/description-element-clickonce-deployment.md) | Gereklidir. Denetim Masası 'ndaki bir kabuk varlığı ve **Program Ekle/Kaldır** öğesi oluşturmak için kullanılan uygulama bilgilerini tanımlar. | `publisher`<br /><br /> `product`<br /><br /> `supportUrl` |
 | [\<deployment> Dosyalarında](../deployment/deployment-element-clickonce-deployment.md) | İsteğe bağlı. Güncelleştirmelerin dağıtımı için kullanılan öznitelikleri ve sistemde pozlandırmayı tanımlar. | `install`<br /><br /> `minimumRequiredVersion`<br /><br /> `mapFileExtensions`<br /><br /> `disallowUrlActivation`<br /><br /> `trustUrlParameters` |
-| [\<compatibleFrameworks> Dosyalarında](../deployment/compatibleframeworks-element-clickonce-deployment.md) | Gereklidir. Bu uygulamanın yükleyebildiği ve çalıştırılacağı .NET Framework sürümlerini tanımlar. | `SupportUrl` |
+| [\<compatibleFrameworks> Dosyalarında](../deployment/compatibleframeworks-element-clickonce-deployment.md) | Gereklidir. bu uygulamanın yükleyebildiği ve çalıştırılacağı .NET Framework sürümlerini tanımlar. | `SupportUrl` |
 | [\<dependency> Dosyalarında](../deployment/dependency-element-clickonce-deployment.md) | Gereklidir. Dağıtım için yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımlar. | `preRequisite`<br /><br /> `visible`<br /><br /> `dependencyType`<br /><br /> `codebase`<br /><br /> `size` |
 | [\<publisherIdentity> Dosyalarında](../deployment/publisheridentity-element-clickonce-deployment.md) | İmzalı bildirimler için gereklidir. Bu dağıtım bildirimini imzalayan yayımcı hakkındaki bilgileri içerir. | `Name`<br /><br /> `issuerKeyHash` |
-| [\<Signature> Dosyalarında](../deployment/signature-element-clickonce-deployment.md) | İsteğe bağlı. Bu dağıtım bildirimini dijital olarak imzalamak için gereken bilgileri içerir. | Yok |
+| [\<Signature> Dosyalarında](../deployment/signature-element-clickonce-deployment.md) | İsteğe bağlı. Bu dağıtım bildirimini dijital olarak imzalamak için gereken bilgileri içerir. | Hiçbiri |
 | [\<customErrorReporting> Dosyalarında](../deployment/customerrorreporting-element-clickonce-deployment.md) | İsteğe bağlı. Bir hata oluştuğunda gösterilecek URI 'yi belirtir. | Kullanılmamışsa |
 
 ## <a name="remarks"></a>Açıklamalar
  Dağıtım bildirim dosyası, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] geçerli sürüm ve diğer dağıtım ayarları dahil olmak üzere bir uygulama dağıtımını tanımlar. Uygulamanın geçerli sürümünü ve dağıtım içinde yer alan tüm dosyaları açıklayan uygulama bildirimine başvurur.
 
- Daha fazla bilgi için bkz. [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md).
+ daha fazla bilgi için bkz. [ClickOnce Security and Deployment](../deployment/clickonce-security-and-deployment.md).
 
 ## <a name="file-location"></a>Dosya konumu
  Dağıtım bildirim dosyası, uygulamanın geçerli sürümü için doğru uygulama bildirimine başvurur. Bir uygulama dağıtımının yeni bir sürümünü kullanıma hazır hale getirmek için, dağıtım bildirimini yeni uygulama bildirimine başvuracak şekilde güncelleştirmeniz gerekir.

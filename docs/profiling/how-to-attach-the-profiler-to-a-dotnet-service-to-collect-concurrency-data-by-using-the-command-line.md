@@ -1,7 +1,7 @@
 ---
 title: Eşzamanlılık verisi toplamak için .NET 'e profil oluşturucu iliştirme-komut satırı
 titleSuffix: ''
-description: Profil oluşturucuyu bir .NET Framework hizmetine eklemek ve örnekleme yöntemini kullanarak işlem ve iş parçacığı eşzamanlılık verileri almak için Visual Studio Profil Oluşturma Araçları kullanın.
+description: profil oluşturucuyu bir .NET Framework hizmetine eklemek ve örnekleme yöntemini kullanarak işlem ve iş parçacığı eşzamanlılık verileri almak için Visual Studio Profil Oluşturma Araçları kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,21 +9,22 @@ ms.assetid: ffbdfe37-8325-44be-bd36-2c8aab2dec7b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4c12db2be72e1435c840bf9d85e681536a5e2202
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2ada29b578fa08b25b0321c673ac598590bbb413
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958862"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038948"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-service-to-collect-concurrency-data-by-using-the-command-line"></a>Nasıl yapılır: komut satırını kullanarak eşzamanlılık verileri toplamak için bir .NET hizmetine profil oluşturucu Iliştirme
-Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir .NET Framework hizmetine profil oluşturucuyu iliştirmek ve örnekleme yöntemini kullanarak işlem ve iş parçacığı eşzamanlılık verilerini toplamak için profil oluşturma araçları komut satırı araçlarının nasıl kullanılacağı açıklanır.
+bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir .NET Framework hizmetine profil oluşturucuyu iliştirmek ve örnekleme yöntemini kullanarak işlem ve iş parçacığı eşzamanlılık verilerini toplamak için Profil Oluşturma Araçları komut satırı araçlarının nasıl kullanılacağı açıklanır.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Windows 8 ve Windows Server 2012 gelişmiş güvenlik özellikleri Visual Studio profiler 'ın bu platformlarda verileri topladıkları şekilde gerekli önemli değişikliklere sahiptir. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. bkz. [Windows 8 ve Windows Server 2012 uygulamalarda performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
 > [!NOTE]
 > Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md). 64 bit bilgisayarlarda, araçların her ikisi de 64-bit ve 32 bit sürümleri mevcuttur. Profil oluşturucu komut satırı araçlarını kullanmak için araçlar yolunu komut Istemi penceresinin PATH ortam değişkenine eklemeniz ya da komutun kendisine eklemeniz gerekir.
@@ -32,7 +33,7 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir .NET
 
 ## <a name="attach-the-profiler"></a>Profil oluşturucuyu iliştirme
 
-#### <a name="to-attach-the-profiler-to-a-net-framework-service"></a>Profil oluşturucuyu bir .NET Framework hizmetine eklemek için
+#### <a name="to-attach-the-profiler-to-a-net-framework-service"></a>profil oluşturucuyu bir .NET Framework hizmetine eklemek için
 
 1. Hizmeti yükler.
 
@@ -61,11 +62,11 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir .NET
 
     |Seçenek|Açıklama|
     |------------|-----------------|
-    |[/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName`|Profili oluşturulan işlemin sahibi olan hesabın etki alanını ve Kullanıcı adını belirtir. Bu seçenek yalnızca, işlem oturum açmış kullanıcı dışında bir kullanıcı olarak çalışıyorsa gereklidir. İşlem sahibi, Windows Görev Yöneticisi 'nin **işlemler** sekmesinde **Kullanıcı adı** sütununda listelenir.|
-    |[/CrossSession](../profiling/crosssession.md)|Diğer oturumlardaki işlemlerin profilini oluşturmaya izin vermez. Hizmet farklı bir oturumda çalışıyorsa, bu seçenek gereklidir. Oturum KIMLIĞI, Windows Görev Yöneticisi 'nin **süreçler** SEKMESINDEKI **oturum kimliği** sütununda listelenir. **/CS** , **/CrossSession** için bir kısaltma olarak belirtilebilir.|
-    |[/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath`|Profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir.|
+    |[/User](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName`|Profili oluşturulan işlemin sahibi olan hesabın etki alanını ve Kullanıcı adını belirtir. Bu seçenek yalnızca, işlem oturum açmış kullanıcı dışında bir kullanıcı olarak çalışıyorsa gereklidir. işlem sahibi, Windows görev yöneticisi 'nin **işlemler** sekmesinde **kullanıcı adı** sütununda listelenir.|
+    |[/CrossSession](../profiling/crosssession.md)|Diğer oturumlardaki işlemlerin profilini oluşturmaya izin vermez. Hizmet farklı bir oturumda çalışıyorsa, bu seçenek gereklidir. oturum kimliği, Windows görev yöneticisi 'nin **süreçler** sekmesindeki **oturum kimliği** sütununda listelenir. **/CS** , **/CrossSession** için bir kısaltma olarak belirtilebilir.|
+    |[/WINCOUNTER](../profiling/wincounter.md) **:**`WinCounterPath`|profil oluşturma sırasında toplanacak bir Windows performans sayacı belirtir.|
     |[/AutoMark](../profiling/automark.md) **:**`Interval`|Yalnızca **/WINCOUNTER** ile kullanın. Windows performans sayacı toplama olayları arasındaki milisaniye sayısını belirtir. Varsayılan değer 500 MS 'dir.|
-    |[/Events](../profiling/events-vsperfcmd.md) **:**`Config`|Profil oluşturma sırasında toplanacak bir Windows için olay Izleme (ETW) olayı belirtir. ETW olayları ayrı bir (.*ETL*) dosyası.|
+    |[/Events](../profiling/events-vsperfcmd.md) **:**`Config`|profil oluşturma sırasında toplanacak Windows (ETW) olayı için bir olay izleme olayı belirtir. ETW olayları ayrı bir (.*ETL*) dosyası.|
 
 6. Gerekirse, hizmeti başlatın.
 
@@ -73,7 +74,7 @@ Bu makalede [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , bir .NET
 
      **VSPerfCmd/Attach:** `PID` [[/targetclr](../profiling/targetclr.md)**:** `Version` ]
 
-    - `PID` Hizmetin işlem KIMLIĞINI veya işlem adını belirtir. Windows Görev Yöneticisi 'nde çalışan tüm işlemlerin işlem kimliklerini görüntüleyebilirsiniz.
+    - `PID` Hizmetin işlem KIMLIĞINI veya işlem adını belirtir. Windows görev yöneticisi 'nde çalışan tüm işlemlerin işlem kimliklerini görüntüleyebilirsiniz.
 
     - **targetclr:** `Version` bir uygulamaya çalışma zamanının birden fazla sürümü yüklendiğinde profil için ortak dil çalışma zamanının (CLR) sürümünü belirtir. İsteğe bağlı.
 

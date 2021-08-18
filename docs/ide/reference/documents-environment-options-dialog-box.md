@@ -34,12 +34,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: d86d2606d50d3e65adf9a651a143709d89f83650df83fb90322cac7c7b48c434
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5f6efebfb3cfe61707b14ed39f2ae4ca2ca79585
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121258960"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122094080"
 ---
 # <a name="options-dialog-box-environment--documents"></a>Seçenekler iletişim kutusu: Ortam \> Belgeleri
 
@@ -51,7 +51,7 @@ Bu seçenek seçildiğinde, IDE dışındaki bir düzenleyici tarafından yapıl
 
 **Değiştirilmemiş değişiklikler olmadığı sürece değiştirilmiş dosyaları yeniden yükleyin**
 
-Dosyanın **ortam dışında ne zaman** değiştirdiğini algıla'nın seçili olduğunu ve IDE'de açık bir dosyanın IDE dışında değiştiğini algıla seçeneğine sahip olursanız, varsayılan olarak bir uyarı iletisi oluşturulur. Bu seçenek etkinse bir uyarı görüntülenir ve belge, dış değişiklikleri almak için IDE'ye yeniden yüklenir.
+Dosyanın **ortam dışında ne zaman** değiştirdiğini algıla'nın seçili olduğunu ve IDE'de açık bir dosyanın IDE dışında değişmesi durumuna karşı varsayılan olarak bir uyarı iletisi oluşturulur. Bu seçenek etkinse bir uyarı görüntülenir ve belge, dış değişiklikleri almak için IDE'ye yeniden yüklenir.
 
 **Salt okunur dosyaların düzenlenmesine izin verme; kaydetmeye çalışırken uyar**
 

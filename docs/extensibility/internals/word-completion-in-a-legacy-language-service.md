@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60011ca0bec1b984a645960e3e55359e7dff7a00ad1956d07392c3d609b454d2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a9f32d6d99545f1daed9aed2c927c7987fe95dcd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121261144"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110312"
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Sözcük Tamamlama
 Sözcük tamamlama, kısmen yazılmış bir sözcükteki eksik karakterleri doldurur. Yalnızca bir olası tamamlama varsa, tamamlama karakteri girilirken sözcük tamamlanır. Kısmi sözcük birden fazla olasılıkla eşleniyorsa, olası tamamlamaların listesi görüntülenir. Tamamlama karakteri, tanımlayıcılar için kullanılmadan herhangi bir karakter olabilir.
@@ -32,7 +32,7 @@ Sözcük tamamlama, kısmen yazılmış bir sözcükteki eksik karakterleri dold
 
 ## <a name="implementation-steps"></a>Uygulama Adımları
 
-1. Kullanıcı **IntelliSense** **menüsünden** Tam Sözcük'i seçerek <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> dil hizmetine gönderilir.
+1. Kullanıcı **IntelliSense** **menüsünden** Tam Sözcük'i seçer <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> ve komut dil hizmetine gönderilir.
 
 2. sınıfı <xref:Microsoft.VisualStudio.Package.ViewFilter> komutunu yakalar ve ayrıştırma nedeni ile yöntemini <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> <xref:Microsoft.VisualStudio.Package.ParseReason> çağırıyor.
 
@@ -48,7 +48,7 @@ Sözcük tamamlama, kısmen yazılmış bir sözcükteki eksik karakterleri dold
  Sözcük tamamlamanın çalışması için ayrıştırıcınız, ayrıştırma nedeni değerine yanıt <xref:Microsoft.VisualStudio.Package.ParseReason> olarak bildirimlerin bir listesini iade etmek zorunda.
 
 ## <a name="implementing-complete-word-in-the-parsesource-method"></a>ParseSource Yönteminde Tam Sözcük Uygulama
- Sözcük tamamlama için <xref:Microsoft.VisualStudio.Package.Source> sınıfı, olası <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> sözcük eşleşmelerinin listesini almak için sınıfında yöntemini <xref:Microsoft.VisualStudio.Package.AuthoringScope> çağırıyor. Listesini sınıfından türetilen bir sınıfta <xref:Microsoft.VisualStudio.Package.Declarations> uygulamalı. Uygulamalı <xref:Microsoft.VisualStudio.Package.Declarations> yöntemlerle ilgili ayrıntılar için sınıfına bakın.
+ Sözcük tamamlama için, <xref:Microsoft.VisualStudio.Package.Source> sınıfı olası <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> sözcük eşleşmelerinin listesini almak için sınıfında <xref:Microsoft.VisualStudio.Package.AuthoringScope> yöntemini çağırıyor. Listesini sınıfından türetilen bir sınıfta <xref:Microsoft.VisualStudio.Package.Declarations> uygulamalı. Uygulamalı <xref:Microsoft.VisualStudio.Package.Declarations> yöntemlerle ilgili ayrıntılar için sınıfına bakın.
 
  Liste yalnızca tek bir sözcük içeriyorsa, sınıfı bu sözcüğü kısmi <xref:Microsoft.VisualStudio.Package.Source> sözcüğün yerine otomatik olarak ekler. Liste birden fazla sözcük içeriyorsa, sınıfı kullanıcının uygun seçimi <xref:Microsoft.VisualStudio.Package.Source> seçenin bir araç ipucu listesi sunar.
 
