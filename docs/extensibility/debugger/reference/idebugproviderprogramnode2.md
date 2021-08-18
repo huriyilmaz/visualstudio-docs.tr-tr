@@ -11,14 +11,15 @@ ms.assetid: f0bca1cc-afbe-44cf-b5aa-d078aa685d24
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d09046d70d6bc766d17963ea4cdd6469c0981fb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 43a66e927d2a1d2e1afc84688bb3a36451fffecc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105083680"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070998"
 ---
 # <a name="idebugproviderprogramnode2"></a>IDebugProviderProgramNode2
 Bu arabirim, programla ilgili arabirimleri işlem sınırları arasında sıralar.
@@ -29,28 +30,28 @@ Bu arabirim, programla ilgili arabirimleri işlem sınırları arasında sırala
 IDebugProviderProgramNode2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama altyapısı (DE), bu arabirimi işlem sınırları genelinde sıralama arabirimlerini desteklemek için [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) uygulayan aynı nesne üzerinde uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE), bu arabirimi işlem sınırları arasında sıralama arabirimlerini desteklemek için [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) uygulayan aynı nesnede uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [](/cpp/atl/queryinterface) `IDebugProgramNode2` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın. Bu arabirim alınamıyorsa, DE arabirimlerin sıralamasını desteklemez.
+ Bu arabirimi almak için bir arabirimde [QueryInterface](/cpp/atl/queryinterface) `IDebugProgramNode2` çağrısı yapmak. Bu arabirim alınamazsa, DE arabirimlerin sıralarını desteklemez.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Bu arabirim aşağıdaki yöntemi uygular:
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+ Bu arabirim aşağıdaki yöntemi kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[UnmarshalDebuggeeInterface](../../../extensibility/debugger/reference/idebugproviderprogramnode2-unmarshaldebuggeeinterface.md)|İşlem sınırları genelinde belirtilen bir arabirimi alır.|
+|[UnmarshalDebuggeeInterface](../../../extensibility/debugger/reference/idebugproviderprogramnode2-unmarshaldebuggeeinterface.md)|İşlem sınırları arasında belirtilen arabirimi alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim, hata ayıklanan programdan ayrı bir işlem alanında çalıştığında uygulanır: Örneğin, hata ayıklanan programın işlem alanı yerine Visual Studio işlem alanında çalışır.
+ Bu arabirim, DE hata ayıklaması yapılan programdan ayrı bir işlem alanı içinde çalıştırıldıklarında uygulanır: örneğin, DE hata ayıklaması yapılan programın işlem alanı yerine Visual Studio işlem alanı içinde çalıştırıldı olduğunda.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

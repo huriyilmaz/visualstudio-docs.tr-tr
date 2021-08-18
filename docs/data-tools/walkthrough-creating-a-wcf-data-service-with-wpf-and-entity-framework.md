@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d0609d4ee5bf4ceae69d2be57778cc80edb309e54e2e53fcf423127967a8b210
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ca3912539d8c651fd65fbcd87c809597748654cc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121346562"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036777"
 ---
 # <a name="walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework"></a>İzlenecek Yol: WPF ve Entity Framework ile WCF Veri Hizmeti Oluşturma
 bu izlenecek yol [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)] , bir web uygulamasında barındırılan basit bir oluşturma [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ve ardından bu uygulamaya Windows Forms bir uygulamadan erişme işlemlerinin nasıl yapılacağını gösterir.

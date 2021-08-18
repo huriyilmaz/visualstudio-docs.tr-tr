@@ -1,6 +1,6 @@
 ---
 title: Word çözümleri
-description: word 'ü otomatikleştirebilmek, word özelliklerini genişletmek ve word kullanıcı arabirimini (uı) özelleştirmek için Visual Studio çözümlerini nasıl kullanabileceğinizi öğrenin.
+description: Word'u otomatikleştirmek Visual Studio Word özelliklerini genişletmek ve Word kullanıcı arabirimini (UI) özelleştirmek için Visual Studio çözümlerini nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2019
 ms.topic: conceptual
@@ -29,15 +29,15 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 99db8e596032e67f2d2bc0cc4794e116af70412a225bfa201686949c53b68f9d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 89de9e72f7ac8aa178b2a76a184a564857337d74
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121225627"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046054"
 ---
 # <a name="word-solutions"></a>Word çözümleri
-  Visual Studio, Microsoft Office Word için belge düzeyi özelleştirmeler ve VSTO eklentileri oluşturmak için kullanabileceğiniz proje şablonları sağlar. Bu çözümleri, Word 'Ü otomatikleştirmek, Word özelliklerini genişletmek ve Word Kullanıcı arabirimini (UI) özelleştirmek için kullanabilirsiniz. belge düzeyi özelleştirmeleri ve VSTO eklentileri arasındaki farklılıklar hakkında daha fazla bilgi için, bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
+  Visual Studio, Word'de belge düzeyinde özelleştirmeler oluşturmak ve VSTO için Microsoft Office sağlar. Word'u otomatikleştirmek, Word özelliklerini genişletmek ve Word kullanıcı arabirimini (UI) özelleştirmek için bu çözümleri kullanabilirsiniz. Belge düzeyi özelleştirmeler ile eklenti eklentileri arasındaki farklar hakkında daha fazla VSTO için bkz. [Office çözüm geliştirmeye genel &#40;VSTO&#41;. ](../vsto/office-solutions-development-overview-vsto.md)
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -45,64 +45,64 @@ ms.locfileid: "121225627"
 
  Bu konuda, aşağıdaki bilgiler sağlanmaktadır:
 
-- [Word 'Ü otomatikleştirin](#automating).
+- [Word'i otomatikleştirin.](#automating)
 
-- [Word için belge düzeyi özelleştirmeleri geliştirin](#doclevel).
+- [Word için belge düzeyinde özelleştirmeler geliştirin.](#doclevel)
 
-- [Word için VSTO eklentileri geliştirin](#applevel).
+- [Word VSTO eklentilerini geliştirin.](#applevel)
 
-- [Word 'ün Kullanıcı arabirimini özelleştirin](#UI).
+- [Word kullanıcı arabirimini özelleştirin.](#UI)
 
-## <a name="automate-word"></a><a name="automating"></a> Word 'Ü Otomatikleştir
- Word nesne modeli, Word 'Ü otomatikleştirebilmek için kullanabileceğiniz birçok türü ortaya çıkarır. Örneğin, programlama yoluyla tablo oluşturabilir, belgeleri biçimlendirebilir ve metin aralıklarını ve paragrafları ayarlayabilirsiniz. Daha fazla bilgi için bkz. [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md).
+## <a name="automate-word"></a><a name="automating"></a> Word'i otomatikleştirme
+ Word nesne modeli, Word'leri otomatikleştirmek için kullanabileceğiniz birçok türü gösterir. Örneğin program aracılığıyla tablolar oluşturabilir, belgeleri biçimlendirebilirsiniz ve metni aralıklar ve paragraflar olarak ayarlayabilirsiniz. Daha fazla bilgi için bkz. [Word nesne modeline genel bakış.](../vsto/word-object-model-overview.md)
 
- Visual Studio ' de Word çözümleri geliştirirken, çözümlerinizde *konak öğelerini* ve *konak denetimlerini* de kullanabilirsiniz. Bunlar, ve nesneleri gibi Word nesne modelinde yaygın olarak kullanılan belirli nesneleri genişleten nesnelerdir <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Interop.Word.ContentControl> . Genişletilmiş nesneler, temel aldığı Word nesneleri gibi davranır, ancak nesnelere ek olaylar ve veri bağlama özellikleri ekler. Daha fazla bilgi için bkz. [genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md).
+ Web'de Word Visual Studio, çözümleriniz içinde *konak öğelerini ve* *konak denetimlerini* de kullanabilirsiniz. Bunlar Word nesne modelinde yaygın olarak kullanılan ve nesneleri gibi belirli nesneleri genişleten <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Interop.Word.ContentControl> nesnelerdir. Genişletilmiş nesneler, temel alınan Word nesneleri gibi davranır, ancak nesnelere ek olaylar ve veri bağlama özellikleri ekler. Daha fazla bilgi için [bkz. Genişletilmiş nesneleri kullanarak Word'i otomatikleştirme.](../vsto/automating-word-by-using-extended-objects.md)
 
-## <a name="develop-document-level-customizations-for-word"></a><a name="doclevel"></a> Word için belge düzeyi özelleştirmeleri geliştirme
- Microsoft Office Word için belge düzeyi özelleştirmesi, belirli bir belgeyle ilişkili bir derlemeden oluşur. Derleme, genellikle, Kullanıcı arabirimini özelleştirerek ve Word 'Ü otomatikleştirerek belgeyi genişletir. word ile ilişkili olan VSTO eklentisinin aksine, bir özelleştirmeye uyguladığınız işlevsellik yalnızca ilişkili belge Word 'de açık olduğunda kullanılabilir.
+## <a name="develop-document-level-customizations-for-word"></a><a name="doclevel"></a> Word için belge düzeyinde özelleştirmeler geliştirme
+ Word için belge düzeyinde Microsoft Office, belirli bir belgeyle ilişkili bir derlemeden oluşur. Derleme genellikle kullanıcı arabirimini özelleştirerek ve Word'u otomatiklaştırarak belgeyi genişleter. Word'VSTO ilişkili bir eklentiden farklı olarak, özelleştirmede uygulayan işlevler yalnızca ilişkili belge Word'de açık olduğunda kullanılabilir.
 
- word için belge düzeyi özelleştirme projesi oluşturmak için, Visual Studio **yeni Project** iletişim kutusundaki word belgesi veya word şablonu proje şablonları ' nı kullanın. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+ Word için belge düzeyinde bir özelleştirme projesi oluşturmak üzere, yeni belge oluşturma iletişim kutusundaki Word Belgesi veya Word **Project** proje şablonlarını Visual Studio. Daha fazla bilgi için, [bkz. How to: Create Office projects in Visual Studio.](../vsto/how-to-create-office-projects-in-visual-studio.md)
 
- Belge düzeyi özelleştirmelerinin nasıl çalıştığı hakkında daha fazla bilgi için [belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md).
+ Belge düzeyinde özelleştirmelerin nasıl iş olduğu hakkında daha fazla bilgi için, [Belge düzeyi özelleştirmelerin mimarisi.](../vsto/architecture-of-document-level-customizations.md)
 
-### <a name="word-customization-programming-model"></a>Word özelleştirme programlama modeli
- Word için belge düzeyi projesi oluşturduğunuzda Visual Studio, çözümünüzün temeli olan adlı bir sınıf oluşturur `ThisDocument` . Bu sınıf, çözümünüzle ilişkili belgeyi temsil eder ve kodunuzu yazmak için bir başlangıç noktası sağlar.
+### <a name="word-customization-programming-model"></a>Sözcük özelleştirme programlama modeli
+ Word için belge düzeyinde bir proje ekleyebilirsiniz Visual Studio çözüme temel oluşturan `ThisDocument` adlı bir sınıf oluşturulur. Bu sınıf çözümünüzle ilişkili belgeyi temsil eder ve kodunuzu yazmak için bir başlangıç noktası sağlar.
 
- `ThisDocument`Belge düzeyi projede kullanabileceğiniz sınıf ve diğer özellikler hakkında daha fazla bilgi için, bkz. [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md).
+ Sınıf ve belge düzeyi projesinde kullanabileceğiniz diğer özellikler hakkında daha fazla bilgi `ThisDocument` için bkz. [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md).
 
-## <a name="develop-vsto-add-ins-for-word"></a><a name="applevel"></a>Word için VSTO eklentileri geliştirin
- Microsoft Office word için VSTO eklentisi word tarafından yüklenen bir derlemeden oluşur. Derleme tipik olarak, Kullanıcı arabirimini özelleştirerek ve Word 'Ü otomatikleştirerek Word 'Ü genişletir. belirli bir belgeyle ilişkili olan belge düzeyi özelleştirmesinden farklı olarak, bir VSTO eklentisi içinde uyguladığınız işlevsellik tek bir belgeyle sınırlı değildir.
+## <a name="develop-vsto-add-ins-for-word"></a><a name="applevel"></a>Word VSTO eklentilerini geliştirme
+ VSTO Word için bir Microsoft Office, Word tarafından yüklenen bir derlemeden oluşur. Derleme genellikle kullanıcı arabirimini özelleştirerek ve Word'u otomatiklaştırarak Word'u genişleter. Belirli bir belgeyle ilişkili olan belge düzeyinde özelleştirmeden farklı olarak, VSTO eklentisinde uygulayan işlevler tek bir belgeyle sınırlı değildir.
 
- word için VSTO bir eklenti projesi oluşturmak için, Visual Studio **yeni Project** iletişim kutusundaki word eklentisi proje şablonlarını kullanın. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+ Word için VSTO eklenti projesi oluşturmak için, yeni uygulamanın Yeni Project iletişim kutusunda Word **Visual Studio.** Daha fazla bilgi için, [bkz. How to: Create Office projects in Visual Studio.](../vsto/how-to-create-office-projects-in-visual-studio.md)
 
- VSTO eklentilerin nasıl çalıştığı hakkında genel bilgi için bkz. [VSTO eklentileri mimarisi](../vsto/architecture-of-vsto-add-ins.md).
+ Eklentilerin nasıl VSTO genel bilgi için bkz. [VSTO Eklentilerinin Mimarisi.](../vsto/architecture-of-vsto-add-ins.md)
 
-### <a name="word-add-in-programming-model"></a>Word eklenti programlama modeli
- bir Word VSTO eklentisi projesi oluşturduğunuzda Visual Studio, çözümünüzün temeli olan adlı bir sınıf oluşturur `ThisAddIn` . bu sınıf, kodunuzun yazılması için bir başlangıç noktası sağlar ve ayrıca, VSTO eklentinize Word nesne modelini de gösterir.
+### <a name="word-add-in-programming-model"></a>Word Eklenti programlama modeli
+ Word VSTO Eklenti projesini Visual Studio, çözüme temel oluşturan `ThisAddIn` adlı bir sınıf üretir. Bu sınıf kodunuzu yazmak için bir başlangıç noktası sağlar ve Word'in nesne modelini eklentinizin VSTO gösterir.
 
- `ThisAddIn`bir VSTO eklentisi içinde kullanabileceğiniz sınıf ve diğer özellikler hakkında daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
+ Bir eklentide kullanabileceğiniz sınıf ve diğer özellikler hakkında daha `ThisAddIn` fazla bilgi VSTO bkz. Program VSTO [Eklentileri.](../vsto/programming-vsto-add-ins.md)
 
-## <a name="customize-the-user-interface-of-word"></a><a name="UI"></a> Word 'ün Kullanıcı arabirimini özelleştirme
- Word 'ün Kullanıcı arabirimini özelleştirmenin birkaç farklı yolu vardır. bazı seçenekler tüm proje türleri için kullanılabilir ve diğer seçenekler yalnızca VSTO eklentileri veya belge düzeyi özelleştirmeleri için kullanılabilir.
+## <a name="customize-the-user-interface-of-word"></a><a name="UI"></a> Word'in kullanıcı arabirimini özelleştirme
+ Word'in kullanıcı arabirimini özelleştirmenin birkaç farklı yolu vardır. Bazı seçenekler tüm proje türleri tarafından kullanılabilir ve diğer seçenekler yalnızca eklentilerde VSTO belge düzeyinde özelleştirmeler için kullanılabilir.
 
 ### <a name="options-for-all-project-types"></a>Tüm proje türleri için seçenekler
- aşağıdaki tabloda hem belge düzeyi özelleştirmeleri hem de VSTO eklentileri için kullanılabilen özelleştirme seçenekleri listelenmektedir.
+ Aşağıdaki tabloda hem belge düzeyi özelleştirmeler hem de eklentiler için kullanılabilen VSTO seçenekleri listelemektedir.
 
 |Görev|Daha fazla bilgi edinmek için|
 |----------|--------------------------|
-|Şeridi özelleştirin.|[Şerite genel bakış](../vsto/ribbon-overview.md)|
-|özelleştirilmiş belgeye (belge düzeyi özelleştirmesi için) veya herhangi bir açık belgeye (bir VSTO eklentisi için) Windows Forms denetimleri veya genişletilmiş sözcük denetimleri ekleyin.|[nasıl yapılır: Office belgelere Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)<br /><br /> [Nasıl yapılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md)<br /><br /> [Nasıl yapılır: Word belgelerine yer işareti denetimleri ekleme](../vsto/how-to-add-bookmark-controls-to-word-documents.md)|
+|Şeridi özelleştirin.|[Şerit'e genel bakış](../vsto/ribbon-overview.md)|
+|Özelleştirilmiş Windows (belge düzeyinde özelleştirme için) veya açık herhangi bir belgeye (bir Belge Ekle için) Form denetimleri veya genişletilmiş Word denetimleri VSTO ekleyin.|[Nasıl kullanılır: Windows Formlar denetimleri Office ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)<br /><br /> [Nasıl kullanılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md)<br /><br /> [Nasıl kullanılır: Word belgelerine yer işareti denetimleri ekleme](../vsto/how-to-add-bookmark-controls-to-word-documents.md)|
 
-### <a name="options-for-document-level-customizations"></a>Belge düzeyi özelleştirmeleri seçenekleri
- Aşağıdaki tabloda yalnızca belge düzeyinde özelleştirmeler için kullanılabilen özelleştirme seçenekleri listelenmektedir.
+### <a name="options-for-document-level-customizations"></a>Belge düzeyi özelleştirme seçenekleri
+ Aşağıdaki tabloda, yalnızca belge düzeyinde özelleştirmeler için kullanılabilen özelleştirme seçenekleri listelemektedir.
 
 |Görev|Daha fazla bilgi edinmek için|
 |----------|--------------------------|
-|Belgeye bir eylemler bölmesi ekleyin.|[Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md)<br /><br /> [nasıl yapılır: Word belgelerine veya Excel çalışma kitaplarına eylemler bölmesi ekleme](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)|
-|Belge yüzeyine genişletilmiş XMLNode ve XMLNodes denetimleri ekleyin.|[Nasıl yapılır: Word belgelerine XMLNode denetimleri ekleme](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)<br /><br /> [Nasıl yapılır: Word belgelerine XMLNodes denetimleri ekleme](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)|
+|Belgeye bir eylemler bölmesi ekleyin.|[Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md)<br /><br /> [Nasıl kullanılır: Word belgelerine veya çalışma kitaplarını Excel bölmesi ekleme](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)|
+|Belge yüzeyine genişletilmiş XMLNode ve XMLNodes denetimleri ekleyin.|[Nasıl kullanılır: Word belgelerine XMLNode denetimleri ekleme](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)<br /><br /> [Nasıl kullanılır: Word belgelerine XMLNodes denetimleri ekleme](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)|
 
-### <a name="options-for-vsto-add-ins"></a>VSTO eklentileri seçenekleri
- aşağıdaki tabloda yalnızca VSTO eklentileri için kullanılabilen özelleştirme seçenekleri listelenmektedir.
+### <a name="options-for-vsto-add-ins"></a>Eklenti VSTO seçenekleri
+ Aşağıdaki tabloda, yalnızca eklentilerde kullanılabilen özelleştirme VSTO listele.
 
 |Görev|Daha fazla bilgi edinmek için|
 |----------|--------------------------|
@@ -113,9 +113,9 @@ ms.locfileid: "121225627"
 |Başlık|Açıklama|
 |-----------|-----------------|
 |[Word nesne modeline genel bakış](../vsto/word-object-model-overview.md)|Word nesne modeli tarafından sağlanan ana türlere genel bir bakış sağlar.|
-|[Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)|Word çözümlerinde kullanabileceğiniz Genişletilmiş nesneler (tarafından sağlanan) hakkında bilgiler sağlar [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .|
-|[Windows Office belgelere genel bakış üzerinde form denetimleri](../vsto/windows-forms-controls-on-office-documents-overview.md)|Word belgelerine nasıl Windows Forms denetimleri ekleyebileceğiniz açıklanmaktadır.|
-|[İzlenecek yol: Word için ilk belge düzeyi özelleştirmeyi oluşturma](../vsto/walkthrough-creating-your-first-document-level-customization-for-word.md)|Word için temel bir belge düzeyi özelleştirmesi oluşturmayı gösterir.|
-|[izlenecek yol: Word için ilk VSTO eklentiyi oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md)|Word için temel bir VSTO eklentisinin nasıl oluşturulacağını gösterir.|
-|[izlenecek yol: bir VSTO eklentisi içinde çalışma zamanında belgeye denetim ekleme](../vsto/walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md)|bir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> VSTO eklentisi kullanarak çalışma zamanında bir Windows Forms düğme ve bir belgeye nasıl ekleneceğini gösterir.|
-|[Office geliştirmede Word 2010](/previous-versions/office/developer/office-2010/ff601860(v=office.14))|Word çözümlerini geliştirme (Visual Studio kullanarak Office geliştirmeye özgü değil) hakkındaki makalelere ve başvuru belgelerine bağlantılar sağlar.|
+|[Genişletilmiş nesneleri kullanarak Word'i otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)|Word çözümlerde kullanabileceğiniz genişletilmiş nesneler (tarafından [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] sağlanır) hakkında bilgi sağlar.|
+|[Windows Belgelerde form Office genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md)|Word belgelerine Formlar Windows nasıl ekleyebilirsiniz?|
+|[Adım adım kılavuz: Word için ilk belge düzeyi özelleştirmenizi oluşturma](../vsto/walkthrough-creating-your-first-document-level-customization-for-word.md)|Word için temel bir belge düzeyi özelleştirmesi oluşturmayı gösterir.|
+|[Kılavuz: Word için VSTO Eklentinizi oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md)|Word için Eklenti'VSTO temel bir uygulama oluşturma hakkında bilgi sağlar.|
+|[Adım adım kılavuz: Bir belgeye çalışma zamanında bir belgeye VSTO ekleme](../vsto/walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md)|Çalışma zamanında bir Windows Formlar düğmesi ve bir belgeye bir eklenti kullanarak bir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> VSTO gösterir.|
+|[Office geliştirmede Word 2010](/previous-versions/office/developer/office-2010/ff601860(v=office.14))|Word çözümleri geliştirmeyle ilgili makalelerin ve başvuru belgelerinin bağlantılarını sağlar (Office kullanarak Visual Studio).|

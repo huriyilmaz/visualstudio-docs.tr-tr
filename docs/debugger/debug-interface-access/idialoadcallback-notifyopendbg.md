@@ -11,14 +11,15 @@ ms.assetid: dbc4dcf0-4ace-4dce-9790-0fdaf3a23d3b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f1dfdc36f66a883f1c66d37eb6f4ff48b8962a0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 87b69b408d02ad4787bb006dea33b010e9420c7f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157450"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139222"
 ---
 # <a name="idialoadcallbacknotifyopendbg"></a>IDiaLoadCallback::NotifyOpenDBG
 Bir aday. dbg dosyası açıldığında çağırılır.

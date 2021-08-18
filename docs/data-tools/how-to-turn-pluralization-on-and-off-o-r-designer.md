@@ -8,20 +8,21 @@ ms.assetid: 9b693bc3-303a-40a9-97ee-9cef5ca3ae81
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 609af4ef71a6ed73bd1d9599d76d8eb64073efd8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f51d48f2d4af4ed723dbe0dcd720ee460e1feb1b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99858702"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139679"
 ---
 # <a name="how-to-turn-pluralization-on-and-off-or-designer"></a>Nasıl yapılır: Çoğullaştırmayı açıp kapatma (O/R Tasarımcısı)
-Varsayılan olarak, **Sunucu Gezgini** veya **veritabanı Gezgini** son görüntülenen adlara sahip veritabanı nesnelerini [Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)üzerine sürüklediğinizde, oluşturulan varlık sınıflarının adları plural 'den tekil 'e değiştirilir. Bu, Örneklenmiş varlık sınıfının tek bir veri kaydıyla eşlendiği olguyu daha doğru bir şekilde temsil etmek için yapılır. Örneğin, `Customers` **u/R tasarımcısına** tablo eklemek, `Customer` sınıfı yalnızca tek bir müşteri için veri tutacağından, adlı bir varlık sınıfı ile sonuçlanır.
+varsayılan olarak, **Sunucu Gezgini** veya **Veritabanı Gezgini** son görüntülenen adlara sahip veritabanı nesnelerini [Visual Studio LINQ to SQL araçlar](../data-tools/linq-to-sql-tools-in-visual-studio2.md)üzerine sürüklediğinizde, oluşturulan varlık sınıflarının adları plural 'den tekil 'e değiştirilir. Bu, Örneklenmiş varlık sınıfının tek bir veri kaydıyla eşlendiği olguyu daha doğru bir şekilde temsil etmek için yapılır. Örneğin, `Customers` **u/R tasarımcısına** tablo eklemek, `Customer` sınıfı yalnızca tek bir müşteri için veri tutacağından, adlı bir varlık sınıfı ile sonuçlanır.
 
 > [!NOTE]
-> Pluralization, varsayılan olarak yalnızca Visual Studio 'nun Ingilizce sürümünde bulunur.
+> Pluralization, varsayılan olarak yalnızca Visual Studio Türkçe dil sürümünde bulunur.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -42,6 +43,6 @@ Varsayılan olarak, **Sunucu Gezgini** veya **veritabanı Gezgini** son görünt
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Visual Studio araçlar LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
 - [Visual Studio'da verilere erişime](../data-tools/accessing-data-in-visual-studio.md)

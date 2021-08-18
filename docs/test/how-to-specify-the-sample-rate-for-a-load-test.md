@@ -1,6 +1,6 @@
 ---
-title: Yük testi çalışma ayarı için örnek hız belirtin
-description: Yük Testi Düzenleyicisi kullanarak Özellikler penceresi bir çalıştırma ayarı değerinin örnek hızını nasıl düzenleyeceğinizi öğrenin.
+title: Yük testi çalıştırma ayarı için örnek hızı belirtme
+description: Çalışma zamanlarını kullanarak bir çalıştırma ayarı için Örnek Oranı'Özellikler penceresi düzenlemeyi Yük Testi Düzenleyicisi.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -10,49 +10,50 @@ ms.assetid: 51cbe7d6-5dfd-4842-bca3-f7f8a665dc84
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 7d591ad7cc97543f9167b698b0a5f0664e59b5c1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 4655802d5a75a6b78e7ee06baeacbd3e9311cb4b51f314f6f78a9f07c3d601f1
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962658"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121440974"
 ---
-# <a name="how-to-specify-the-sample-rate-for-a-load-test-run-setting"></a>Nasıl yapılır: bir yük testi çalışma ayarı için örnek hızı belirtme
+# <a name="how-to-specify-the-sample-rate-for-a-load-test-run-setting"></a>Nasıllı: Yük testi çalıştırma ayarı için örnek hızı belirtme
 
-**Yeni Yük Testi Sihirbazı** yük testinizi oluşturduktan sonra, özellikleri test ihtiyaçlarınızı ve hedeflerinizi karşılayacak şekilde değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz.
+New Yük Testi Sihirbazı ile yük testi **oluşturduk** Yük Testi Düzenleyicisi özelliklerini test **Yük Testi Düzenleyicisi** hedeflerinizi karşılayacak şekilde değiştirebilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-**Yük Testi Düzenleyicisi** kullanarak, **Özellikler** penceresinde bir çalıştırma ayarının **örnek hızı** özelliğinin değerini düzenleyebilirsiniz. Çalışma ayarları özelliklerinin ve açıklamalarının tüm listesi için bkz. [Yük testi çalıştırma ayarları özellikleri](../test/load-test-run-settings-properties.md).
+komut **Yük Testi Düzenleyicisi** kullanarak, Özellikler penceresinde bir çalıştırma ayarının **Sample Rate** özelliğinin değerini **düzenleyebilirsiniz.** Çalıştırma ayarları özelliklerinin ve açıklamalarının tam listesi için [bkz. Test çalıştırması ayarları özelliklerini yükleme.](../test/load-test-run-settings-properties.md)
 
-Yük testinizin uzunluğuna bağlı olarak yük testi çalışma ayarı için **örnek hız** özelliği için uygun bir değer seçin. Beş saniyelik varsayılan değer gibi daha küçük bir örnek hız, yük testi sonuçları veritabanında daha fazla alan gerektirir. Daha uzun yük testleri için, örnek hızının artırılması topladığınız veri miktarını azaltır. Daha fazla bilgi için bkz. [nasıl yapılır: bir yük testi çalışma ayarı için örnek hızı belirtme](../test/how-to-specify-the-sample-rate-for-a-load-test.md).
+Yük testi çalıştırma **ayarının Örnek Hızı** özelliği için yük testinizin uzunluğuna göre uygun bir değer seçin. Varsayılan beş saniyelik değer gibi daha küçük bir örnek oranı, yük testi sonuçları veritabanında daha fazla alan gerektirir. Daha uzun yük testleri için örnek oranının artırılması, toplayan veri miktarını azaltır. Daha fazla bilgi için, [bkz. How to: Specify the sample rate for a load test run setting](../test/how-to-specify-the-sample-rate-for-a-load-test.md).
 
-Örnek ücretler için bazı yönergeler aşağıda verilmiştir:
+Örnek hızlar için bazı yönergeler şu şekildedir:
 
-|Yük testi süresi|Önerilen örnek hızı|
+|Yük Testi Süresi|Önerilen Örnek Oranı|
 |-|-----------------------------|
-|\< 1 saat|5 saniye|
-|1-8 saat|15 saniye|
-|8-24 saat|30 saniye|
-|> 24 saat|60 saniye|
+|\< 1 Saat|5 saniye|
+|1 - 8 Saat|15 saniye|
+|8 - 24 Saat|30 saniye|
+|> 24 Saat|60 saniye|
 
-## <a name="to-specify-performance-counter-sampling-rate-in-a-run-setting"></a>Bir çalışma ayarında performans sayacı örnekleme hızını belirtmek için
+## <a name="to-specify-performance-counter-sampling-rate-in-a-run-setting"></a>Bir çalıştırma ayarında performans sayacı örnekleme oranını belirtmek için
 
-1. Bir yük testi açın.
+1. Yük testi açın.
 
-     **Yük Testi Düzenleyicisi** görüntülenir. Yük testi ağacı görüntülenir.
+     Yük Testi Düzenleyicisi  görüntülenir. Yük testi ağacı görüntülenir.
 
-2. Yük testi ağacında, **çalışma ayarları** klasöründe, örnek hızını belirtmek istediğiniz çalıştırma ayarını seçin.
+2. Yük testi ağacında, Çalıştırma Ayarlar **klasöründe,** örnek oranını belirtmek istediğiniz çalıştırma ayarını seçin.
 
-3. **Görünüm** menüsünde **Özellikler penceresi**' ni seçin.
+3. Görünüm menüsünde **Özellikler** **Penceresi'ne tıklayın.**
 
-     Yük çalıştırma ayarlarının kategorileri ve özellikleri **Özellikler** penceresinde görüntülenir.
+     Yük çalıştırma ayarının kategorileri ve özellikleri Özellikler **penceresinde** görüntülenir.
 
-4. **Örnek hızı** özelliğinde, yük testinin performans sayacı verilerini toplayacağı sıklığı gösteren bir zaman değeri girin.
+4. Örnek **Hızı özelliğinde** yük testinin performans sayacı verilerini toplama sıklığını belirten bir zaman değeri girin.
 
-5. Özelliği değiştirmeyi bitirdikten sonra **Dosya** menüsünde **Kaydet** ' i seçin. Daha sonra yeni **örnek hızı** değerini kullanarak yük testinizi çalıştırabilirsiniz.
+5. Özelliği değiştirmeyi bitirdikten sonra Dosya menüsünde **Kaydet'i** seçin.  Daha sonra yeni Örnek Hızı değerini kullanarak yük **testini çalıştırarak.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi çalıştırma ayarlarını yapılandır](../test/configure-load-test-run-settings.md)
+- [Yük testi çalıştırma ayarlarını yapılandırma](../test/configure-load-test-run-settings.md)
 - [Yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md)

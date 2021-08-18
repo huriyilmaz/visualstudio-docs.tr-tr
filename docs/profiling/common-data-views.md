@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fd392884396917dbf20cc45e8960d258333ae9fea9874a6f9a38376e38cea85
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 227cdea76d9c64952ebbd7dc452bbe0e5e49f501
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121396831"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039741"
 ---
 # <a name="common-data-views"></a>Ortak veri görünümleri
 Bu bölüm, tüm profil oluşturma yöntemleri için ortak olan profil oluşturucu veri dosyalarının görünümleri ve raporları hakkında başvuru bilgileri içerir.

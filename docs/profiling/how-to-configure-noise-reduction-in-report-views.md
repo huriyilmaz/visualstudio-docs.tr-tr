@@ -1,6 +1,6 @@
 ---
-title: Rapor görünümlerinde gürültü azaltılması yapılandırma | Microsoft Docs
-description: Paraziti azaltmak ve performans sorunlarını raporlarınızda daha belirgin hale getirmek için, varsayılan olarak etkin olan kırpma ve katlama özelliğini kullanın.
+title: Rapor Görünümlerinde Gürültü Azaltmayı | Microsoft Docs
+description: Gürültüyü azaltmak ve raporlarınız için performans sorunlarını daha belirgin hale düşürmek için kırpma ve katlamanın her ikisi de varsayılan olarak etkindir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,68 +14,69 @@ ms.assetid: b07e0375-bb73-47e3-8d1d-b9b492fb16c9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 5037cf0184608829d5a86d736bead5b61f5172c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 015ea700cca87912013b5b12c3d9e2ead78a0c54
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99969340"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038857"
 ---
-# <a name="how-to-configure-noise-reduction-in-report-views"></a>Nasıl yapılır: rapor görünümlerinde gürültü azaltılması yapılandırma
-Performans raporları, çağrı ağacı görünümünde ve ayırma görünümünde sunulan veri miktarını sınırlayarak gürültü azaltma için yapılandırılabilir. Gürültü azaltma kullanarak performans sorunları daha belirgin bir şekilde yapılır. Bu, performans raporlarını analiz ettiğinizde yararlı olur.
+# <a name="how-to-configure-noise-reduction-in-report-views"></a>Nasıl yapılandırılır: Rapor görünümlerinde gürültü azaltmayı yapılandırma
+Performans raporları, Çağrı Ağacı görünümünde ve Ayırma görünümünde sunulan veri miktarını sınırlandırarak gürültü azaltma için yalıtabilirsiniz. Gürültü azaltmayı kullanarak performans sorunları daha belirgin hale geliyor. Bu, performans raporlarını analiz etmek için kullanışlıdır.
 
  Gürültü azaltma yapılandırma seçenekleri aşağıdaki ayarları içerir:
 
-- **Kırpma** Bir rapor analiz edildiğinde, görünüm, aşağıdaki kırpma yordamında açıklandığı gibi, yapılandırdığınız değer ve eşik ayarlarına denk gelen işlevleri atacaktır. Varsayılan olarak, kırpma etkindir.
+- **Kırpma** Bir rapor analiz edilirken görünüm, aşağıdaki kırpma yordamında açıklandığı gibi yapılandırmış olduğu değer ve eşik ayarlarında yer alan işlevleri atlar. Kırpma varsayılan olarak etkindir.
 
-- **Katlama** Katlamayı etkinleştirirseniz, yapılandırdığınız ayarları karşılayan bir yoldaki birbirini izleyen işlevler, aşağıdaki katlama yordamında açıklandığı gibi birleştirilir. Varsayılan olarak katlama varsayılan olarak etkindir.
+- **Katlama** Katlamayı etkinleştirirsanız, yapılandırmış olduğunuz ayarlara uygun bir yolda ardışık işlevler, aşağıdaki katlama yordamında açıklandığı gibi birleştirilir. Katlama varsayılan olarak etkindir.
 
-### <a name="to-configure-trimming-for-a-performance-report"></a>Bir performans raporu için kırpmayı yapılandırmak için
+### <a name="to-configure-trimming-for-a-performance-report"></a>Performans raporu için kırpmayı yapılandırmak için
 
-1. Oluşturulan raporda bir çağrı ağacı görünümü veya ayırma görünümü görüntülendiğinde, **Geliştirici** menüsünde **Profil Oluşturucu** ' ya ve ardından **gürültü azaltma seçenekleri**' ne tıklayın.
+1. Oluşturulan raporda bir Çağrı Ağacı görünümü veya Ayırma görünümü görüntülendiğinde, Geliştirici  menüsünde ProfilLeyici'ye ve ardından Gürültü Azaltma **Seçenekleri'ne tıklayın.** 
 
-     **Gürültü azaltma** iletişim kutusu görüntülenir.
+     Gürültü **Azaltma iletişim** kutusu görüntülenir.
 
 2. Kırpmayı etkinleştirmek için şu adımları izleyin:
 
-    1. **Kırpmayı etkinleştir**' i seçin. Bu varsayılan ayardır.
+    1. Kırpmayı **Etkinleştir'i seçin.** Bu varsayılan ayardır.
 
         > [!NOTE]
-        > Gürültü azaltma etkinleştirilirse, raporda bir bilgi çubuğu görüntülenir. Daha fazla bilgi için bkz. [çağrı ağacı görünümü](../profiling/call-tree-view.md) ve [ayırma görünümü](../profiling/dotnet-memory-allocations-view.md).
+        > Gürültü azaltma etkinleştirilirse raporda bir bilgi çubuğu görüntülenir. Daha fazla bilgi için [bkz. Çağrı Ağacı Görünümü](../profiling/call-tree-view.md) [ve Ayırmalar Görünümü.](../profiling/dotnet-memory-allocations-view.md)
 
-    2. **Değer açılan listesini** kullanarak değer ayarını yapılandırın ve uygulanabilir ayarı seçin.
+    2. Değer açılan listesini kullanarak ve **uygun** ayarı seçerek değer ayarını yapılandırabilirsiniz.
 
-    3. **Eşik** metin kutusuna bir yüzde değeri yazarak istenen eşik ayarını yapılandırın.
+    3. Eşik metin kutusuna bir yüzde değeri yazarak istenen **eşik ayarını** yapılandırma.
 
-    4. Oluşturulan raporda gürültü azaltma uyarısını etkinleştirmek için, **gürültü azaltma etkinleştirildiğinde uyarı görüntüle**' yi seçin. Bu varsayılan ayardır.
+    4. Oluşturulan raporda gürültü azaltma uyarılarını etkinleştirmek için, Gürültü Azaltma **etkinleştirildiğinde uyarıyı görüntüle'yi seçin.** Bu varsayılan ayardır.
 
-3. Kırpmayı devre dışı bırakmak için **Kırpmayı etkinleştir**' i temizleyin.
+3. Kırpmayı devre dışı bırakmak için **Kırpmayı Etkinleştir'in ().**
 
 4. **Tamam**'a tıklayın.
 
-### <a name="to-configure-folding-for-a-performance-report"></a>Performans raporu için katlamayı yapılandırmak için
+### <a name="to-configure-folding-for-a-performance-report"></a>Performans raporu için katlama yapılandırmak için
 
-1. **Geliştirici** menüsünde, **Profil Oluşturucu** ' ya ve ardından **gürültü azaltma seçenekleri**' ne tıklayın.
+1. Geliştirici  menüsünde ProfilLeyici'ye **ve ardından** Gürültü Azaltma **Seçenekleri'ne tıklayın.**
 
-     **Gürültü azaltma** iletişim kutusu görüntülenir.
+     Gürültü **Azaltma iletişim** kutusu görüntülenir.
 
 2. Katlamayı etkinleştirmek için şu adımları izleyin:
 
-    1. **Katlamayı etkinleştir**' i seçin. Bu varsayılan ayardır.
+    1. **Katlamayı Etkinleştir'i seçin.** Bu varsayılan ayardır.
 
         > [!NOTE]
-        > Gürültü azaltma etkinleştirilirse, raporda bir bilgi çubuğu görüntülenir. Daha fazla bilgi için bkz. [çağrı ağacı görünümü](../profiling/call-tree-view.md) ve [ayırma görünümü](../profiling/dotnet-memory-allocations-view.md).
+        > Gürültü azaltma etkinleştirilirse raporda bir bilgi çubuğu görüntülenir. Daha fazla bilgi için [bkz. Çağrı Ağacı Görünümü](../profiling/call-tree-view.md) [ve Ayırmalar Görünümü.](../profiling/dotnet-memory-allocations-view.md)
 
-    2. **Değer açılan listesini** kullanarak değer ayarını yapılandırın ve uygulanabilir ayarı seçin.
+    2. Değer açılan listesini kullanarak **ve** ilgili ayarı seçerek değer ayarını yapılandırabilirsiniz.
 
-    3. **Eşik** metin kutusuna bir yüzde değeri yazarak istenen eşik ayarını yapılandırın.
+    3. Eşik metin kutusuna bir yüzde değeri yazarak istenen **eşik ayarını** yapılandırma.
 
-    4. Oluşturulan raporda gürültü azaltma uyarısını etkinleştirmek için, **gürültü azaltma etkinleştirildiğinde uyarı görüntüle**' yi seçin. Bu varsayılan ayardır.
+    4. Oluşturulan raporda gürültü azaltma uyarılarını etkinleştirmek için, Gürültü Azaltma **etkinleştirildiğinde uyarıyı görüntüle'yi seçin.** Bu varsayılan ayardır.
 
-3. Katlamayı devre dışı bırakmak için **katlama özelliğini** temizleyin.
+3. Katlama özelliğini devre dışı bırakmak için **Katlamayı Etkinleştir'i temizlayın.**
 
 4. **Tamam**'a tıklayın.
 

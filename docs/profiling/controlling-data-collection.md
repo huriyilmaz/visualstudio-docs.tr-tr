@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: bb967ea2e8c3b22428217f05b49a9cb917d16abb80ea6d41cf3e8c0bea10cde3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c2716cda7e69e8a94be2c81b47d8864f39abb78d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121333489"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039533"
 ---
 # <a name="control-data-collection"></a>Veri toplamayı denetleme
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları profil oluşturmanın bir performans oturumu sırasında ne zaman toplanacaklarını denetlemeyi ve profili yapılan işlevleri belirtmenizi sağlar. Bu bölümde veri toplamayı Performans Gezgini ve  Veri Toplama Denetimi  pencerelerinden başlatmayı ve durdurmayı ve profil oluşturma verilerini topladığı nesneleri sınırlamayı açıklar.

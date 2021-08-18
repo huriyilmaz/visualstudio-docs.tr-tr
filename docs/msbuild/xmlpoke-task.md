@@ -1,6 +1,6 @@
 ---
-title: XmlPoke Görevi | Microsoft Docs
-description: MSBuild 'in XmlPoke görevini kullanarak bir XPath sorgusuyla bir XML dosyasına belirtilen değerleri nasıl kullandığını öğrenin.
+title: XmlPoke Görev | Microsoft Docs
+description: Bir XPath MSBuild xml dosyasına değerleri ayarlamak için XmlPoke görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,37 +16,38 @@ ms.assetid: 6ba1953c-be3b-4df8-8561-e133408f8270
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: d829376fcece336434fa5e816c725d5be61ac1a0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5abe59d607ef2c80ca1451da94f9cc6cd7d08688e669178848ea7fed5da183de
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99956041"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121443093"
 ---
 # <a name="xmlpoke-task"></a>XmlPoke görevi
 
-Bir XPath sorgusu tarafından belirtilen değerleri bir XML dosyasına ayarlar.
+Değerleri bir XPath sorgusu tarafından belirtilen şekilde bir XML dosyasına ayarlar.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tablo, görevin parametrelerini açıklar `XmlPoke` .
+ Aşağıdaki tabloda görevin parametreleri açık `XmlPoke` almaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Namespaces`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgu ön ekleri için ad alanlarını belirtir. `Namespaces``Namespace`özniteliği ve öznitelikleri olan öğelerinden oluşan BIR XML kod `Prefix` parçacığı `Uri` . Öznitelik, `Prefix` özniteliğinde belirtilen ad alanıyla ilişkilendirilecek ön eki belirtir `Uri` . Boş kullanmayın `Prefix` .|
-|`Query`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgusunu belirtir.|
+|`Namespaces`|İsteğe `String` bağlı parametre.<br /><br /> XPath sorgu ön ekleri için ad alanlarını belirtir. `Namespaces` , ve özniteliklerine sahip öğelerden oluşan bir XML `Namespace` kod `Prefix` `Uri` parçacığıdır. özniteliği, `Prefix` özniteliğinde belirtilen ad alanıyla ilişkilendirilen ön eki `Uri` belirtir. Boş bir `Prefix` kullanmayın.|
+|`Query`|İsteğe `String` bağlı parametre.<br /><br /> XPath sorgusunu belirtir.|
 |`Value`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Belirtilen yola eklenecek değeri belirtir.|
-|`XmlInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> XML girişini dosya yolu olarak belirtir.|
+|`XmlInputPath`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> bağlı parametre.<br /><br /> XML girişini bir dosya yolu olarak belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, tabloda listelenen parametrelerin yanı sıra sınıfından devralınan parametreleri de sınıfından <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="example"></a>Örnek
 
-Değiştirilecek bir sample.xml aşağıda verilmiştir:
+Değiştirerek şunları sample.xml:
 
 ```xml
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -57,7 +58,7 @@ Değiştirilecek bir sample.xml aşağıda verilmiştir:
 </Package>
 ```
 
-Bu örnekte, değiştirmek istiyorsanız, `/Package/mp:PhoneIdentity/PhoneProductId` şunu kullanın
+Bu örnekte, değiştirmek için `/Package/mp:PhoneIdentity/PhoneProductId` kullanın
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -79,7 +80,7 @@ Bu örnekte, değiştirmek istiyorsanız, `/Package/mp:PhoneIdentity/PhoneProduc
 </Project>
 ```
 
-`dn` Varsayılan ad alanı için yapay bir ad alanı öneki olarak kullanılır.
+`dn` burada varsayılan ad alanı için yapay ad alanı ön eki olarak kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

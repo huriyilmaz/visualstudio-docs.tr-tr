@@ -10,17 +10,18 @@ ms.assetid: 7f6cd3d3-f4da-4893-be91-8dd104be8010
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4cc8e9167085895ce4f0f10784b07aa418afd3fa
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 39fff35d412ee960f08a97d35e61d758a84a542e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094009"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064376"
 ---
 # <a name="idebugdynamicfieldcomplusgettypefromtypedef"></a>IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
 Belirteci verilen bir tür alır.

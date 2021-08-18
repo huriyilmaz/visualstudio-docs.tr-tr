@@ -1,6 +1,6 @@
 ---
-description: Çerçeve işaretçisinin mevcut olup olmadığını belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_framePointerPresent | Microsoft Docs'
+description: Çerçeve işaretçisinin mevcut olup olmadığını belirten bir bayrak alınır.
+title: IDiaSymbol::get_framePointerPresent | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 966b81e6d514e0a5f09d0b749a41d7d197d1c27571d549d5f5afe168c923237f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 55706796a929e720b749d464c422c141415e2743
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420753"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058765"
 ---
 # <a name="idiasymbolget_framepointerpresent"></a>IDiaSymbol::get_framePointerPresent
-Çerçeve işaretçisinin mevcut olup olmadığını belirten bir bayrak alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) olarak ayarlandığında kullanın `SymTagFunction` .
+Çerçeve işaretçisinin mevcut olup olmadığını belirten bir bayrak alınır. [SymTagEnum Numaralama olarak ayarlanırken](../../debugger/debug-interface-access/symtagenum.md) `SymTagFunction` kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_framePointerPresent(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out]] `TRUE` Çerçeve işaretçisinin mevcut olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] ] Çerçeve `TRUE` işaretçisi varsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: dia2. h
+ Üst bilgi: Dia2.h
 
- Kitaplık: diaguid. lib
+ Kitaplık: diaguids.lib
 
  DLL: msdia100.dll
 

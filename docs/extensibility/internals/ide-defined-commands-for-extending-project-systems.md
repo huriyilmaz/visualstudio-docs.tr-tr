@@ -1,6 +1,6 @@
 ---
-title: IDE-Defined Sistemlerini Genişletme komutlarını | Microsoft Docs
-description: Proje sistemlerini genişletmek için kullanılan tümleşik Visual Studio ortamında (IDE) tanımlanan komutlar ve komut grupları hakkında bilgi öğrenin.
+title: IDE-Defined Sistemlerini Genişletmeye Project Komutlar | Microsoft Docs
+description: Proje sistemlerini genişletmek için kullanılan tümleşik geliştirme Visual Studio (IDE) içinde tanımlanan komutlar ve komut grupları hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,14 +11,15 @@ ms.assetid: 0e33b8e9-16fa-4400-a941-e92d56120e7e
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4525802bf308d740ea5c468fac171e74bff2b34e
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: abd80c03c829e33985001cb17589369111b1aba2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112901168"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137723"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>Proje Sistemlerini Genişletmeye Yönelik IDE Tanımlı Komutlar
 Proje sistemlerini genişletmek istediğiniz zaman, IDE tarafından sağlanan komutları ve komut gruplarını [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanabilirsiniz.
@@ -30,11 +31,11 @@ Proje sistemlerini genişletmek istediğiniz zaman, IDE tarafından sağlanan ko
 
 |Komut menüsü|Açıklama|
 |------------------|-----------------|
-|IDM_VS_MENU_PROJECT|**Proje üst** düzey menüsü.|
+|IDM_VS_MENU_PROJECT|Üst **Project** menüyü seçin.|
 |IDM_VS_TOOL_PROJWIN|Araç **Çözüm Gezgini** çubuğu.|
 
 ## <a name="shortcut-menus"></a>Kısayol Menüleri
- Aşağıdaki **tabloda, Çözüm Gezgini**'de tek bir düğüm seçildiğinde veya Çözüm Gezgini'de birden çok homojen seçim olduğunda geçerli olan kısayol menüleri görüntülenir. Bu, seçilen tüm düğümlerin aynı türde olduğu durumdur.
+ Aşağıdaki tabloda, Çözüm Gezgini 'de tek bir düğüm seçildiğinde veya **Çözüm Gezgini'de** birden çok homojen seçim olduğunda geçerli olan kısayol menüleri ve bu, seçili tüm düğümlerin aynı türde olduğu durumdur.
 
 |Kısayol menüsü|Açıklama|
 |-------------------|-----------------|
@@ -45,7 +46,7 @@ Proje sistemlerini genişletmek istediğiniz zaman, IDE tarafından sağlanan ko
 |<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_REFERENCEROOT>|"Başvurular" adlı başvuru kök düğümü seçildiğinde geçerlidir.|
 |<xref:Microsoft.VisualStudio.Shell.VsMenus.IDM_VS_CTXT_REFERENCE>|Başvuru düğümleri seçildiğinde geçerlidir; Bunlar yalnızca derleme, COM ve proje başvurularını içerir. Web başvuruları dahil değildir.|
 
- Aşağıdaki tabloda, uygulamadaki seçim birden çok hiyerarşiye yay **Çözüm Gezgini** kısayol menüleri ve
+ Aşağıdaki tabloda, uygulamadaki seçim birden çok hiyerarşiye **yay Çözüm Gezgini** kısayol menüleri ve
 
 |Kısayol menüsü|Açıklama|
 |-------------------|-----------------|
@@ -69,7 +70,7 @@ Proje sistemlerini genişletmek istediğiniz zaman, IDE tarafından sağlanan ko
 |IDG_VS_CTXT_PROJECT_DEBUG|Hata ayıklama komutları.|
 |IDG_VS_CTXT_PROJECT_SCC|Kaynak denetimi için komutlar.|
 |IDG_VS_CTXT_PROJECT_TRANSFER|Kesme, kopyalama ve yapıştırma işlemleri için komutlar.|
-|IDG_VS_CTXT_PROJECT_PROPERTIES|Proje Özellikleri iletişim kutusuna **erişim sağlayan** komutlar.|
+|IDG_VS_CTXT_PROJECT_PROPERTIES|Project Özellikler iletişim **kutusuna erişim sağlayan** komutlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

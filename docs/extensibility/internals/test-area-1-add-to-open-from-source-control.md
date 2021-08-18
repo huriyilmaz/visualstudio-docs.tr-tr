@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a318574dac3370a1fe754ab1f0cf6c015531271659798dfd04972e3f7852cae6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1f404b2d4ff41482fa492eedb17261618366934c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121431857"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137619"
 ---
 # <a name="test-area-1-add-toopen-from-source-control"></a>Test Alanı 1: Kaynak Denetimine Ekleme/Kaynak Denetiminden Açma
 Bu kaynak denetimi eklentisi test alanı, çözümlerin veya projelerin kaynak denetimi altına yerleştirilmesi ve bunları kaynak denetiminden almasını içerir.

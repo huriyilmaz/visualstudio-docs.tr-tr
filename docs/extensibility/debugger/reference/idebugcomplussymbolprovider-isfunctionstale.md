@@ -15,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bf0cb10662512f4c5428e6774b3e72ef5a9fce276411afb76387fbad4098492e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f160180b9076345612f285df69e64b90f0d442b2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434067"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103760"
 ---
 # <a name="idebugcomplussymbolproviderisfunctionstale"></a>IDebugComPlusSymbolProvider::IsFunctionStale
 Belirtilen hata ayıklama adresindeki işlevin eski olarak kabul edileceğini belirler.

@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - vssdk
-ms.openlocfilehash: 106339c932b0339542fd184675448b8ec8354bf0618fbddc7e351ab11763a289
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b2a9bcd6a24edafc139cee4560fc36bfcc1b0a7f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121234765"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041548"
 ---
 # <a name="walkthrough-implement-code-snippets"></a>İzlenecek yol: kod parçacıklarını uygulama
 Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekleyerek uzantı kullanıcılarının bunları kendi koduna ekleyebilmesini sağlayabilirsiniz.
@@ -235,21 +235,21 @@ Kod parçacıkları oluşturabilir ve bunları bir düzenleyici uzantısına ekl
 
 3. Metinde bir yere sağ tıklayın ve **kod parçacığı Ekle**' ye tıklayın.
 
-4. Kod parçacığı seçici Kullanıcı arabirimi, **Test değiştirme alanlarını** belirten bir açılır pencere ile görüntülenmelidir. Açılır pencerede çift tıklayın.
+4. Kod parçacığı seçici kullanıcı arabirimi, Test değiştirme alanları olan bir açılır **pencereyle görünmektedir.** Açılan pencereye çift tıklayın.
 
-     Aşağıdaki kod parçacığı eklenmelidir.
+     Aşağıdaki kod parçacığı eklenemez.
 
     ```
     MessageBox.Show("first");
     MessageBox.Show("second");
     ```
 
-     **ENTER** veya **ESC** tuşuna basmayın.
+     **Enter** veya Esc tuşuna **basma.**
 
-5. "   + First" ve "Second" arasında geçiş yapmak için Tab ve Shift **Tab** tuşlarına basın.
+5. **"first"** **ile**"second" arasında geçiş yapmak için Sekme ve Shift +  Sekmesi'ne basın.
 
-6. **ENTER** veya **ESC** tuşuna basarak ekleme işlemini kabul edin.
+6. Enter veya Esc tuşlarına basarak **eklemeyi** **kabul edin.**
 
-7. Metnin farklı bir bölümünde "test" yazın ve ardından **sekme** tuşuna basın. "Test" kod parçacığı kısayolu olduğundan, kod parçacığı yeniden eklenmelidir.
+7. Metnin farklı bir bölümünde "test" yazın ve Sekme tuşuna **basın.** "Test" kod parçacığı kısayolu olduğundan kod parçacığı yeniden eklenemez.
 
 ## <a name="next-steps"></a>Sonraki adımlar

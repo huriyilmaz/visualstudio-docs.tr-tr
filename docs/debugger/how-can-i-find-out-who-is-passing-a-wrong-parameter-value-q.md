@@ -1,5 +1,5 @@
 ---
-title: Yanlış parametre değerini kimlerin geçirmesi olduğunu | Microsoft Docs
+title: Hatalı parametre değerini kimin geçirmesi olduğunu | Microsoft Docs
 description: İşlevini çağıran kodu ve hatalı parametre değerini geçirmeyi bulabilirsiniz. Bunu yapmak için koşullu kesme noktası kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -24,12 +24,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ea7f361905fa87630c2db2a8371975c056d8211548262fb551f6d1129d278f0d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 41f175caaf2f3e9dc4bc0843fa9d2f3a10bb1767
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453951"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043992"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>Kimin Yanlış Parametre Değeri Geçirdiğini Nasıl Bulabilirim?
 ## <a name="problem-description"></a>Sorun Açıklaması

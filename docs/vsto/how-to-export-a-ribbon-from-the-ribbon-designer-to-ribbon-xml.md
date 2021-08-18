@@ -19,14 +19,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 1514410094deaf9c77e088c3b69e2d39d29175c2
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 88c4e0be4ccab3d83c7dcd9ebe024493d2beab52
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825595"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046834"
 ---
 # <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Nasıl yapılır: Şerit Tasarımcısından Şerit XML 'ine şerit aktarma
   **Şerit (görsel Tasarımcı)** öğesi, tüm olası Şerit özelleştirmesi türlerini desteklemiyor. Şeriti gelişmiş yöntemlerle özelleştirmek için, tasarımcıyı tasarımcıdan Şerit XML 'Ine aktarabilir ve XML 'i doğrudan düzenleyebilirsiniz.
@@ -42,13 +43,13 @@ ms.locfileid: "107825595"
 
 2. Şerit Tasarımcısına sağ tıklayın ve ardından **ŞERIDI XML 'e aktar**' a tıklayın.
 
-     Visual Studio, projenize bir Şerit XML dosyası ve Şerit XML kodu dosyası ekler.
+     Visual Studio, projenize şerit xml dosyası ve şerit xml kodu dosyası ekler.
 
 3. Şerit kod sınıfında, ile başlayan açıklamaları bulun `TODO:` .
 
 4. Bu açıklamalarda kod bloğunu, geliştirmekte olduğunuz çözüm türüne bağlı olarak **ThisAddIn**, **ThisWorkbook** veya **ThisDocument** sınıfına kopyalayın.
 
-     Bu kod, Microsoft Office uygulamasının özel şeritinizi bulmasını ve yüklemesini sağlar. Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
+     bu kod, Microsoft Office uygulamasının özel şeritinizi bulmasını ve yüklemesini sağlar. Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
 
 5. **ThisAddIn**, **ThisWorkbook** veya **ThisDocument** sınıfında, kod bloğunun açıklamasını kaldırın.
 

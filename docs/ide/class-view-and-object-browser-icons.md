@@ -19,16 +19,16 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 07a97a0566b9210c0b2de74dbd7009136663e5b2b27289e756323ca862e1d379
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2eb3189afe60dbd2f797846afcd404fe487d6fb9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121260078"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124249"
 ---
 # <a name="class-view-and-object-browser-icons"></a>Sınıf Görünümü ve Nesne Tarayıcısı simgeleri
 
-**Sınıf Görünümü** ve Object **Browser,** ad alanları, sınıflar, işlevler ve değişkenler gibi kod varlıklarını temsil eden simgeler görüntüler. Aşağıdaki tablo simgeleri gösterir ve açıklar.
+**Sınıf Görünümü** ve Nesne **Tarayıcısı,** ad alanları, sınıflar, işlevler ve değişkenler gibi kod varlıklarını temsil eden simgeler görüntüler. Aşağıdaki tablo simgeleri gösterir ve açıklar.
 
 |Simge|Açıklama|Simge|Açıklama|
 |----------|-----------------|----------|-----------------|
@@ -47,7 +47,7 @@ ms.locfileid: "121260078"
 |![Tür Iletme Simgesi](../ide/media/ob_type_forward.gif)|Tür Iletme|||
 
 > [!TIP]
-> Bu sayfada simgeleri en iyi şekilde görüntülemek için, simge temanızı açık Microsoft Docs emin **olun.** Bu renk temasını, aşağıdaki ekran görüntüsünde gösterildiği gibi sayfanın sol alt kısmında bulunan denetimden geçiş yapabilirsiniz:
+> Bu sayfada simgeleri en iyi şekilde görüntülemek için, Microsoft Docs açık olarak ayarlanmış **olduğundan emin olun.** Bu renk temasını, aşağıdaki ekran görüntüsünde gösterildiği gibi sayfanın sol alt kısmında bulunan denetimden geçiş yapabilirsiniz:
 >
 > ![Docs teması](../ide/media/toggle-docs-color-theme.png "Sayfalarda renk temasını Microsoft Docs değiştirme")
 
@@ -61,11 +61,11 @@ Aşağıdaki sinyal simgeleri önceki tüm simgeler için geçerlidir ve bunlar�
 |![Sinyal Korumalı Sembol](../ide/media/vxsignal_icon_key.gif)|Korumalı. İçeren sınıftan veya türünden ya da içeren sınıf veya türden türetilenlerden erişilebilir.|
 |![Sinyal Özel Simgesi](../ide/media/vxsignal_icon_lock.gif)|Özel. Yalnızca içeren sınıfta veya türde erişilebilir.|
 |![Sinyal Korumalı Sembol](../ide/media/vxsignal_icon_envelope.gif)|Mühürlü.|
-|![Signal Friend&#47;Internal Symbol](../ide/media/vxsignal_icon_diamond.gif)|Arkadaş/Dahili. Yalnızca projeden erişilebilir.|
+|![Sinyal Arkadaş&#47;İç Simgesi](../ide/media/vxsignal_icon_diamond.gif)|Arkadaş/Dahili. Yalnızca projeden erişilebilir.|
 |![Sinyal Simgesi Ok](../ide/media/vxsignal_icon_arrow.gif)|Kısayol. Nesnenin kısayolu.|
 
 > [!NOTE]
-> Projeniz bir kaynak denetimi veritabanına dahil edildiyse, giriş veya kullanıma alındı gibi kaynak denetimi durumunu göstermek için ek sinyal simgeleri görüntülenebilir.
+> Projeniz bir kaynak denetimi veritabanına dahil edildiyse, iade edildi veya kullanıma alındı gibi kaynak denetimi durumunu göstermek için ek sinyal simgeleri görüntülenebilir.
 
 > [!TIP]
 > Uygulamasında görünen uygulama görüntülerinin ve simgelerinin daha fazlasını görüntülemek Visual Studio Görüntü [**Kitaplığı'Visual Studio indirin.**](https://www.microsoft.com/download/details.aspx?id=35825)

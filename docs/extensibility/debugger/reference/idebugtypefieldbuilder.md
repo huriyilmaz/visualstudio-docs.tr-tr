@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: fec9ec87f1cc6bfd97a4acd2d83100919505f47e797d7cb82f86fbe57879e971
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d3bd84eff7b52c48ad9f419e3d69e3a57fed485c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121291902"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103630"
 ---
 # <a name="idebugtypefieldbuilder"></a>IDebugTypeFieldBuilder
 Bir türü temsil eden bir alan oluşturma yeteneğini temsil eder.

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 843bbe19b167bbb99160a9fa853aeebb31185d012aac62d44ec8d1a1857bb01d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 13a1bcf4a4d5fed816ef467cdc15c5c6fb974f18
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121391875"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139150"
 ---
 # <a name="idiasessionfindchildren"></a>IDiaSession::findChildren
 Ad ve sembol türüyle eşan belirtilen üst tanımlayıcının tüm altlarını verir.
@@ -39,7 +39,7 @@ HRESULT findChildren (
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-[in] Üst [nesneyi temsil eden bir IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi. Bu üst simge bir işlev, modül veya blok ise, sözcüksel alt öğesi içinde `ppResult` döndürülür. Üst simge bir türse, sınıf alt öğesi döndürülür. Bu parametre ise, genel kapsamı döndüren veya olarak ayar .exe `NULL` `symtag` `SymTagExe` `SymTagNull` gerekir.
+[in] Üst [nesneyi temsil eden bir IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi. Bu üst simge bir işlev, modül veya blok ise sözcüksel alt öğesi içinde `ppResult` döndürülür. Üst simge bir türse, sınıf alt öğesi döndürülür. Bu parametre `NULL` ise, genel kapsamı döndüren veya olarak ayar `symtag` `SymTagExe` `SymTagNull` .exe.
 
  `symtag`
 

@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklayıcısında döküm dosyalarını | Microsoft Docs
-description: Döküm dosyası, yürütülen bir uygulamanın ve yüklenen modüllerin anlık görüntüsüdür. Uygulamaya hata ayıklama erişiminizin olduğu durumlar için döküm dosyası oluşturmayı göz önünde bulundurabilirsiniz.
+title: Hata ayıklayıcıda döküm dosyalarını kullanma | Microsoft Docs
+description: Döküm dosyası, yürütülen bir uygulamanın ve yüklü modüllerin anlık görüntüsüdür. Uygulamaya hata ayıklama erişiminizin olmadığı durumlar için bir döküm dosyası oluşturmayı düşünün.
 ms.custom: SEO-VS-2020
 ms.date: 11/05/2018
 ms.topic: conceptual
@@ -24,104 +24,104 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 292d767fd2d64ffc9f95ae92075c692435994bc00563d04c6782e00491d2cc1f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f446b1d7e23245739a94b1b7c99fecefb0d00c85
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378507"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090258"
 ---
-# <a name="dump-files-in-the-visual-studio-debugger"></a>Hata ayıklayıcısında Visual Studio döküm
+# <a name="dump-files-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısındaki döküm dosyaları
 
-<a name="BKMK_What_is_a_dump_file_"></a> Döküm *dosyası,* yürütülen işlemi ve uygulama için belirli bir noktada yüklenen modülleri gösteren anlık görüntüdür. Yığın bilgilerine sahip döküm, uygulamanın o noktadaki belleğinin anlık görüntüsünü de içerir.
+<a name="BKMK_What_is_a_dump_file_"></a>*Döküm dosyası* , yürütülmekte olan işlemi ve zaman içinde bir uygulama için yüklenen modülleri gösteren bir anlık görüntüdür. Yığın bilgilerine sahip bir döküm, bu noktada uygulamanın belleğinin anlık görüntüsünü de içerir.
 
-Bir döküm dosyasını yığın içinde Visual Studio, hata ayıklama oturumunda kesme noktası olarak durdurmak gibi bir şeydir. Yürütmeye devam edesiniz ancak döküm sırasında uygulamanın yığınlarını, iş parçacıklarını ve değişken değerlerini inceebilirsiniz.
+bir döküm dosyasını Visual Studio bir yığın ile açmak, bir hata ayıklama oturumunda kesme noktasında durmayla benzer bir şeydir. Yürütmeye devam edemeseniz de, döküm sırasında uygulamanın yığınlarını, iş parçacıklarını ve değişken değerlerini inceleyebilirsiniz.
 
-Dökümler çoğunlukla geliştiricilerin erişimine sahip olmadığını makinelerden hata ayıklamak için kullanılır. Kendi makineniz üzerinde kilitlenme veya yanıt vermemeye neden olan bir programı yeniden oluşturamıyorsanız müşterinin makinesine ait döküm dosyasını kullanabilirsiniz. Test ediciler ayrıca kilitlenmeyi veya yanıt vermemeyen program verilerini daha fazla test için kullanmak üzere kaydetmek için dökümler de oluşturabilir.
+Dökümler genellikle geliştiricilerin erişimi olmayan makinelerden gelen sorunları ayıklamak için kullanılır. Kendi makinenizde kilitlenme veya yanıt vermeyen bir programı yeniden oluşturamıyorsanız bir müşterinin makinesinden döküm dosyası kullanabilirsiniz. Test ediciler, daha fazla test için kullanılacak kilitlenme veya yanıt vermeyen program verilerini kaydetmek için de dökümler oluşturur.
 
-Visual Studio hata ayıklayıcı, yönetilen veya yerel kod için döküm dosyaları kaydedebilir. Uygulama tarafından veya dosyaları mini Visual Studio kaydeden diğer uygulamalar tarafından oluşturulan döküm dosyalarında *hata ayıklar.*
+Visual Studio hata ayıklayıcı, yönetilen veya yerel kod için döküm dosyaları kaydedebilir. Visual Studio veya dosyaları *mini döküm* biçiminde kaydettiğinizde diğer uygulamalar tarafından oluşturulan döküm dosyalarının hatalarını ayıklayabilirler.
 
 ## <a name="requirements-and-limitations"></a><a name="BKMK_Requirements_and_limitations"></a> Gereksinimler ve sınırlamalar
 
-- 64 bit makinelerden döküm dosyalarında hata ayıklamak Visual Studio 64 bit makinede çalışıyor olması gerekir.
+- 64 bitlik makinelerden alınan döküm dosyalarının hatalarını ayıklamak için Visual Studio 64 bit makinede çalışıyor olmalıdır.
 
 ::: moniker range=">= vs-2019"
-- Visual Studio Linux işletim sistemi tarafından yönetilen uygulamaların döküm dosyalarında hata ayıklaması olabilir. 
+- Visual Studio, Linux işletim sistemindeki yönetilen uygulamaların döküm dosyalarının hatalarını ayıklayabilir. 
 ::: moniker-end
 
-- Visual Studio, ARM cihazlarından yerel uygulamaların döküm dosyalarının hatalarını ayıklayabilir. Ayrıca arm cihazlarından yönetilen uygulamaların dökümlerinin hata ayıklamasını da yalnızca yerel hata ayıklayıcısında da ayıklar.
+- Visual Studio, ARM cihazlarından yerel uygulamaların döküm dosyalarının hatalarını ayıklayabilir. Ayrıca, yalnızca yerel hata ayıklayıcıda, ARM cihazlarından yönetilen uygulamaların dökümlerinde hata ayıklama yapabilir.
 
-- Çekirdek modu [döküm dosyalarında](/windows-hardware/drivers/debugger/kernel-mode-dump-files) hata ayıklamak [veyaSOS.dll](/dotnet/framework/tools/sos-dll-sos-debugging-extension) hata ayıklama uzantısını Visual Studio'de kullanmak için, Windows için hata ayıklama araçlarını Windows Sürücü [Seti'ne (WDK) indirin.](/windows-hardware/drivers/download-the-wdk)
+- [çekirdek modu](/windows-hardware/drivers/debugger/kernel-mode-dump-files) döküm dosyalarında hata ayıklamak veya Visual Studio [SOS.dll](/dotnet/framework/tools/sos-dll-sos-debugging-extension) hata ayıklama uzantısını kullanmak için, [Windows sürücü setinde (WDK)](/windows-hardware/drivers/download-the-wdk)Windows için hata ayıklama araçlarını indirin.
 
-- Visual Studio, eski, tam kullanıcı modu döküm biçiminde kaydedilen döküm [dosyalarında hata ayıklamasıilemiyor.](/windows/desktop/wer/collecting-user-mode-dumps) Tam kullanıcı modu döküm, yığınlı dökümle aynı değildir.
+- Visual Studio, daha eski, [tam kullanıcı modu döküm](/windows/desktop/wer/collecting-user-mode-dumps) biçiminde kaydedilen döküm dosyalarının hatalarını ayıklayamıyor. Tam Kullanıcı modu dökümü, yığın içeren bir dökümle aynı değildir.
 
-- En iyi duruma getirilmiş kodun döküm dosyalarının hatalarının ayıklanması kafa karıştırıcı olabilir. Örneğin, işlevlerin derleyicinin temel oluşturması beklenmeyen çağrı yığınlarına neden olabilir ve diğer iyileştirmeler değişkenlerin ömrünü değiştirebilir.
+- En iyi duruma getirilmiş kodun döküm dosyalarının hatalarının ayıklanması kafa karıştırıcı olabilir. Örneğin, işlevlerin derleyici girişi beklenmeyen çağrı yığınlarıyla sonuçlanabilir ve diğer iyileştirmeler değişkenlerin ömrünü değiştirebilir.
 
-## <a name="dump-files-with-or-without-heaps"></a><a name="BKMK_Dump_files__with_or_without_heaps"></a> Yığınlar ile veya yığınlar olmadan döküm dosyaları
+## <a name="dump-files-with-or-without-heaps"></a><a name="BKMK_Dump_files__with_or_without_heaps"></a> Heap 'ler içeren veya içermeyen döküm dosyaları
 
-Döküm dosyaları yığın bilgilerine sahip olabilir veya sahip değildir.
+Döküm dosyalarının yığın bilgisi olabilir veya olmayabilir.
 
-- **Yığınlar içeren döküm** dosyaları, döküm zamanında değişkenlerin değerleri de dahil olmak üzere uygulama belleğinin anlık görüntüsünü içerir. Visual Studio, yüklenen yerel modüllerin ikili dosyalarını bir yığınla döküm dosyasına kaydeder ve bu da hata ayıklamayı çok daha kolay hale getirir. Visual Studio bir uygulama ikili dosyası bulsa bile yığın ile döküm dosyasından semboller yükleyebilirsiniz.
+- **Heap Içeren döküm dosyaları** , döküm sırasında değişkenlerin değerleri de dahil olmak üzere, uygulamanın belleğinin anlık görüntüsünü içerir. Visual Studio, yüklü yerel modüllerin ikili dosyalarını bir öbek ile bir döküm dosyasına kaydeder ve bu da hata ayıklamayı çok daha kolay hale getirir. Visual Studio, bir uygulama ikilisini bulmasa bile, bir döküm dosyasındaki sembolleri bir yığın ile yükleyebilir.
 
-- **Yığınlar olmadan döküm dosyaları** yığınlar ile dökümlerden çok daha küçüktür, ancak hata ayıklayıcı sembol bilgilerini bulmak için uygulama ikili dosyalarını yüklemesi gerekir. Yüklenen ikili dosyalar, döküm oluşturma sırasında çalışan ikili dosyalar ile tam olarak eşleşmeli. Yığınlar olmadan döküm dosyaları yalnızca yığın değişkenlerinin değerlerini kaydedin.
+- **Heap Içermeyen döküm dosyaları** , Heap 'ler dökümlerinden çok daha küçüktür, ancak hata ayıklayıcının sembol bilgilerini bulmak için uygulama ikili dosyalarını yüklemesi gerekir. Yüklenen ikili dosyalar, döküm oluşturma sırasında çalışan olanlarla tam olarak eşleşmelidir. Boap içermeyen döküm dosyaları yalnızca yığın değişkenlerinin değerlerini kaydeder.
 
 ## <a name="create-a-dump-file"></a><a name="BKMK_Create_a_dump_file"></a> Döküm dosyası oluşturma
 
-Hata ayıklayıcıda bir işlemde hata Visual Studio, hata ayıklayıcı bir özel durum veya kesme noktası durdurulurken döküm kaydedebilirsiniz.
+Visual Studio bir işlemde hata ayıklaması yaparken, hata ayıklayıcı bir özel durumla veya kesme noktasında durdurulduğunda bir döküm kaydedebilirsiniz.
 
-Tam [Zamanında Hata Ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md) etkinleştirildiğinde, Visual Studio hata ayıklayıcısını Visual Studio dışında bir kilitlenme işlemine iliştirdikten sonra hata ayıklayıcısından bir döküm dosyası kaydedebilirsiniz. Bkz. [Çalışan işlemlere ekleme.](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)
+[tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md) etkinken, Visual Studio hata ayıklayıcıyı Visual Studio dışında kilitlenen bir işleme ekleyebilirsiniz ve ardından hata ayıklayıcıdan bir döküm dosyası kaydedebilirsiniz. Bkz. [çalışan Işlemlere iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
 
-**Döküm dosyasını kaydetmek için:**
+**Bir döküm dosyasını kaydetmek için:**
 
-1. Hata ayıklama sırasında bir hata veya kesme noktası durdurulurken Hata Ayıkla Döküm Dökümlerini  >  **Farklı Kaydet'i seçin.**
+1. Hata ayıklama sırasında bir hata veya kesme noktasında durdurulduğunda,   >  **döküm kaydet**' i farklı Ayıkla ' yı seçin.
 
-1. Dökümü **Farklı Kaydet iletişim** kutusundaki Farklı **Kaydet'in altında** tür olarak, Yığın ile **Minidump** veya **Minidump (varsayılan)** öğesini seçin.
+1. **Dökümü farklı kaydet** iletişim kutusunda, **farklı kaydet**' in altında, yığın Ile **mini döküm** veya **mini döküm** ' i seçin (varsayılan).
 
-1. Bir yola göz atarak döküm dosyası için bir ad seçin ve ardından Kaydet'i **seçin.**
+1. Bir yola gidin ve döküm dosyası için bir ad seçin ve ardından **Kaydet**' i seçin.
 
 >[!NOTE]
->Döküm dosyalarını, otomatik mini döküm biçimini destekleyen herhangi bir Windows oluşturabilirsiniz. Örneğin, [Sysinternals](/sysinternals/) tarafından Windows **Procdump** komut satırı yardımcı programı tetikleyicilere veya isteğe bağlı olarak işlem kilitlenme bilgi dökümü dosyaları oluşturabilir. Döküm [dosyaları oluşturmak için diğer](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations) araçları kullanma hakkında bilgi için bkz. Gereksinimler ve sınırlamalar.
+>Windows mini döküm biçimini destekleyen herhangi bir programla döküm dosyaları oluşturabilirsiniz. örneğin, [Windows Sysinternals](/sysinternals/) 'ın **procdump** komut satırı yardımcı programı, tetikleyicilere veya isteğe bağlı olarak işlem kilitlenme döküm dosyaları oluşturabilir. Döküm dosyalarını oluşturmak için diğer araçları kullanma hakkında bilgi için bkz. [gereksinimler ve sınırlamalar](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations) .
 
-## <a name="open-a-dump-file"></a><a name="BKMK_Open_a_dump_file"></a> Döküm dosyasını açma
+## <a name="open-a-dump-file"></a><a name="BKMK_Open_a_dump_file"></a> Bir döküm dosyası açın
 
-1. Dosya Visual Studio Dosya **Aç'ı**  >    >  **seçin.**
+1. Visual Studio **dosya**  >  **aç**  >  **dosya**' yı seçin.
 
-1. Dosya **Aç iletişim** kutusunda döküm dosyasını bulun ve seçin. Genellikle bir *.dmp uzantısına sahip* olur. **Tamam**’ı seçin.
+1. **Dosya Aç** iletişim kutusunda döküm dosyasını bulup seçin. Genellikle *. dmp* uzantısına sahip olur. **Tamam**’ı seçin.
 
-   Mini **döküm Dosyası Özeti penceresi döküm** dosyasıyla ilgili özet ve modül bilgilerini ve gerçekleştirebilirsiniz eylemleri gösterir.
+   **Mini döküm dosyası Özet** penceresi, döküm dosyası için Özet ve modül bilgilerini ve gerçekleştirebileceğiniz eylemleri gösterir.
 
-   ![Minidump özet sayfası](../debugger/media/dbg_dump_summarypage.png "Minidump özet sayfası")
+   ![Mini döküm Özet sayfası](../debugger/media/dbg_dump_summarypage.png "Mini döküm Özet sayfası")
 
-1. Eylemler **altında:**
-   - Sembol yükleme konumlarını ayarlamak için Sembol **yollarını ayarla'ya tıklayın.**
-   - Hata ayıklamayı başlatmak için Yönetilen Yalnızca **Hata** Ayıkla, Yalnızca Yerel Hata Ayıkla, Karma ile Hata Ayıkla veya Yönetilen Bellekle Hata **Ayıkla'yi seçin.**
+1. **Eylemler** altında:
+   - Sembol yükleme konumlarını ayarlamak için **sembol yollarını ayarla**' yı seçin.
+   - Hata ayıklamayı başlatmak için, **yalnızca yönetilen Ile hata** Ayıkla, **yalnızca yerel ile** Hata Ayıkla, **karma Ile** hata ayıklama veya **yönetilen bellekle hata ayıklama** seçeneğini belirleyin.
 
-## <a name="find-exe-pdb-and-source-files"></a><a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> .exe, .pdb ve kaynak dosyalarını bulma
+## <a name="find-exe-pdb-and-source-files"></a><a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> .exe,. pdb ve kaynak dosyalarını bul
 
-Döküm dosyasında tam hata ayıklama özelliklerini kullanmak için Visual Studio gerekir:
+bir döküm dosyasında tam hata ayıklama özelliklerini kullanmak için Visual Studio gereklidir:
 
-- Döküm *.exe* oluşturulan dosya ve döküm işleminin kullandığı diğer ikili dosyalar (DLL'ler vb.).
-- Dosya ve diğer ikili dosyalar için Sembol (*.pdb* *).exe* dosyaları.
-- Dosya *.exe* ve *.pdb* dosyaları döküm oluşturma sırasında dosyaların sürümü ve derlemesi ile tam olarak eştir.
-- İlgili modüller için kaynak dosyalar. Kaynak dosyaları bulamıyorsanız modüllerin ayrımlarını kullanabilirsiniz.
+- Döküm işleminin kullanıldığı *.exe* dosya ve diğer ikili dosyalar (dll 'ler vb.).
+- *.exe* ve diğer ikili dosyalar için sembol (*. pdb*) dosyaları.
+- Döküm oluşturma sırasında dosyaların sürümü ve derlemesi ile tam olarak eşleşen *.exe* ve *. pdb* dosyaları.
+- İlgili modüller için kaynak dosyaları. Kaynak dosyaları bulamazsanız, modüllerin ayrıştırılmış derlemesini kullanabilirsiniz.
 
-Dökümde yığın verileri varsa, Visual Studio modüller için eksik ikili dosyalar ile başa çıkabilirsiniz, ancak geçerli çağrı yığınları oluşturmak için yeterli modül ikilileri olmalıdır.
+döküm, yığın verileri içeriyorsa, bazı modüller için eksik ikili dosyalarla Visual Studio olabilir, ancak geçerli çağrı yığınları oluşturmak için yeterli modüller için ikili dosyalara sahip olmalıdır.
 
-### <a name="search-paths-for-exe-files"></a>Veri dosyaları için .exe arama
+### <a name="search-paths-for-exe-files"></a>.exe dosyaları için arama yolları
 
-Visual Studio döküm dosyasına dahil olmayan *.exe* için bu konumları otomatik olarak arar:
+Visual Studio, döküm dosyasına dahil olmayan *.exe* dosyalar için bu konumları otomatik olarak arar:
 
 1. Döküm dosyasını içeren klasör.
-2. Döküm dosyasının, dökümünü topladığı makinede modül yolu olan modül yolunu belirtir.
-3. Araçlar (veya Hata Ayıklama) **içinde belirtilen** sembol **yolları,**> **Hata Ayıklama**  >  **Seçenekleri'ne**  >  **sahiptir.** Döküm Dosyası Özeti **penceresinin** Eylemler **bölmesinden** Semboller **sayfasını da açabilirsiniz.** Bu sayfada, arama yapmak için daha fazla konum ekleyebilirsiniz.
+2. Döküm dosyasının belirttiği modül yolu, dökümü toplayan makinedeki modül yoludur.
+3. **Araç** (veya **hata ayıklama**) seçeneklerinde belirtilen sembol yolları >   >  **hata ayıklama**  >  **sembolleri**. Ayrıca, **döküm dosyası Özeti** penceresinin **Eylemler** bölmesindeki **semboller** sayfasını açabilirsiniz. Bu sayfada, aramaya daha fazla konum ekleyebilirsiniz.
 
-### <a name="use-the-no-binary-no-symbols-or-no-source-found-pages"></a>İkili Dosya Yok, Sembol Yok veya Kaynak Bulunamadı sayfalarını kullanın
+### <a name="use-the-no-binary-no-symbols-or-no-source-found-pages"></a>Hiçbir binary, simge yok veya hiçbir kaynak bulunamadı sayfası kullanın
 
-Bu Visual Studio dökümde bir modülde hata ayıklamak için gereken dosyaları bulamazsa, İkili Dosya **Bulunamadı,** Sembol Bulunamadı **veya** Kaynak Bulunamadı **sayfası** gösterir. Bu sayfalar sorunun nedeni hakkında ayrıntılı bilgi sağlar ve dosyaları bu konuda size yardımcı olacak eylem bağlantıları sağlar. Bkz. [Sembol belirtme (.pdb) ve kaynak dosyaları.](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+Visual Studio, dökümdeki bir modülün hatalarını ayıklamak için gereken dosyaları bulamazsa, **hiçbir ikili bulunamadı**, **hiçbir sembol bulunamadı** veya hiçbir **kaynak bulunamadı** sayfası görüntülenir. Bu sayfalar, sorunun nedeni hakkında ayrıntılı bilgi sağlar ve dosyaları bulmanıza yardımcı olabilecek eylem bağlantıları sağlar. Bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Tanılama Çözümleyicileri ile yönetilen bellek dökümünde hata ayıklama](../debugger/how-to-debug-managed-memory-dump.md)
-- [Tam Zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md)
-- [Sembol (.pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+- [.NET tanılama Çözümleyicileri ile yönetilen bellek dökümünde hata ayıklama](../debugger/how-to-debug-managed-memory-dump.md)
+- [Tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md)
+- [Sembol (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [IntelliTrace](../debugger/intellitrace.md)

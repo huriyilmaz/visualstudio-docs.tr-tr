@@ -11,17 +11,18 @@ ms.assetid: 06aa633b-263b-4e08-8844-9a52d5120b94
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0e3b78744d67183c368345af8c6c26e57edec8d1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4f72f0586d2d393d265aac0220b7c0c1faa64d49
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058683"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064506"
 ---
 # <a name="idebugcoreserver3enableautoattach"></a>IDebugCoreServer3::EnableAutoAttach
 Belirtilen hata ayıklama motorları için otomatik eklemeye izin vermez.

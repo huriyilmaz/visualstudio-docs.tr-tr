@@ -22,14 +22,14 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 5af73031750a19fd3fe42ae78d44540ad347d2e7848e440d444b57721dc51022
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 40ca1ca19e15e0e25e4decf6a3b932a3bcbf78b5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121332397"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122149448"
 ---
-# <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>Site sütunları, içerik türleri ve liste oluşturma SharePoint
+# <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>Site sütunları, içerik türleri ve listeler oluşturma SharePoint
   Visual Studio, her ikisi de site sütunlarını (veya alanlarını)  dahil SharePoint içerik türleri dahil olmak üzere birçok farklı temel öğe öğesi için proje öğesi *şablonları sağlar.* İçerik türleri ve listeleri için yeni tasarımcılar, bu öğelerin oluşturulmasını hiç olmadığı kadar kolaylaştırır.
 
 ## <a name="site-columns"></a>Site sütunları
@@ -40,7 +40,7 @@ ms.locfileid: "121332397"
 ## <a name="content-types-and-lists"></a>İçerik türleri ve listeleri
  İçerik türleri ve listeleri, veri kaynaklarında en sık kullanılan SharePoint.
 
- İçerik türü, bir içerik listesinde veya belge kitaplığında bir öğe kategorisine ait meta SharePoint ve davranışı tanımlar. Örneğin, bir kişi listesinde veya görev listesinde bilgi için bir içerik türü oluşturabilirsiniz. Kişi içerik türü Ad, E-posta, Telefon Numarası ve Adres gibi sütunlar içerebilir. Site düzeyinde tanımladığınız içerik türü, sitenin herhangi bir listesinden veya belge kitaplığından bağımsızdır. Aynı içerik türünü farklı listelerle veya belge kitaplıkları ile SharePoint kullanabilirsiniz. Aynı listede veya belge kitaplığında birden fazla içerik türü de kullanabilirsiniz.
+ İçerik türü, bir içerik listesinde veya belge kitaplığında bir öğe kategorisine ait meta SharePoint ve davranışı tanımlar. Örneğin, bir kişi listesinde veya görev listesinde bilgi için bir içerik türü oluşturabilirsiniz. Kişi içerik türü Ad, E-posta, Telefon Numarası ve Adres gibi sütunlar içerebilir. Site düzeyinde tanımladığınız içerik türü, sitenin herhangi bir listesinden veya belge kitaplığından bağımsızdır. Aynı içerik türünü, farklı listelerle veya belge kitaplıkları ile SharePoint kullanabilirsiniz. Aynı listede veya belge kitaplığında birden fazla içerik türü de kullanabilirsiniz.
 
  Liste, diğerleriyle paylaşabilirsiniz SharePoint bilgi koleksiyonudur. Listeler, veri içeren sütun satırlarından oluşur. Listelerden bazıları şunlardır: görev listesi, kişi listesi ve duyurular listesi.
 

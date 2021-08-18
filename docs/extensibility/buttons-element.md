@@ -1,6 +1,6 @@
 ---
-title: Düğmeler Öğesi | Microsoft Docs
-description: Düğmeler öğesi, tek tek komutları temsil eden Düğme öğelerini gruplar. Bu makale bir örnek içerir.
+title: Düğmeler öğesi | Microsoft Docs
+description: Düğmeler öğesi, tek tek komutları temsil eden düğme öğelerini gruplandırır. Bu makale bir örnek içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 9f2cf94d-dec5-4776-a836-9a89c75f0c87
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2952f9f6747e52604e9f24cd173ab07f8d5a4756
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: acb2ece6603a4b9707a02f510d50488e93c8e1de
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900804"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089764"
 ---
 # <a name="buttons-element"></a>Düğmeler öğesi
-Tek [tek](../extensibility/button-element.md) komutları temsil eden Gruplar Düğmesi öğeleri.
+Tek tek komutları temsil eden [düğme](../extensibility/button-element.md) öğelerini gruplandırır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +40,20 @@ Tek [tek](../extensibility/button-element.md) komutları temsil eden Gruplar Dü
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Düğmeler öğesi](../extensibility/buttons-element.md)|Gruplar Düğmesi öğeleri.|
-|[Düğme öğesi](../extensibility/button-element.md)|Kullanıcının etkileşim kura bir komut tanımlar.|
+|[Düğmeler öğesi](../extensibility/buttons-element.md)|Düğme öğelerini gruplandırır.|
+|[Button öğesi](../extensibility/button-element.md)|Kullanıcının etkileşime girebileceği bir komut tanımlar.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğunda komut koleksiyonunu temsil eder.|
+|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutların koleksiyonunu temsil eder.|
 
 ## <a name="example"></a>Örnek
 
@@ -69,5 +70,5 @@ Tek [tek](../extensibility/button-element.md) komutları temsil eden Gruplar Dü
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackage'lar kullanıcı arabirimi öğelerini nasıl ekler?](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages Kullanıcı arabirimi öğeleri ekleme](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

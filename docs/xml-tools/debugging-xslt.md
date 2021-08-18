@@ -1,6 +1,6 @@
 ---
 title: XSLT kodunda hata ayıklama yolları
-description: Kodda adım adım ilerler, kesme noktaları ayarlamak ve XSLT yürütme Visual Studio XSLT hata ayıklayıcısını kullanarak XSLT kodunda hata ayıklamayı öğrenin.
+description: Kodda adım adım ilerlerken, kesme noktaları ayarlamak ve XSLT yürütme Visual Studio XSLT hata ayıklayıcısını kullanarak XSLT kodunda hata ayıklamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/05/2019
 ms.topic: overview
@@ -12,16 +12,16 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 8038c954ff4abe447418247c6d99485dc081bc14299ecbc2c3a5c29b93cccba9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: de0bfdb24b3e1bb6377387385927256af8460d2b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121351116"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045573"
 ---
 # <a name="debugging-xslt"></a>XSLT Hatalarını Ayıklama
 
-XSLT kodunda hata ayıklamak için Visual Studio. XSLT hata ayıklayıcısı kesme noktaları ayarlamayı, XSLT yürütme durumları görüntülemeyi ve bu gibi durumları destekler. XSLT hata ayıklayıcısı, XSLT stil sayfalarında veya XSLT uygulamalarında hata ayıklamak için kullanılabilir.
+XSLT kodunda hata ayıklaması Visual Studio. XSLT hata ayıklayıcısı kesme noktaları ayarlamayı, XSLT yürütme durumları görüntülemeyi ve bu gibi durumları destekler. XSLT hata ayıklayıcısı, XSLT stil sayfalarında veya XSLT uygulamalarında hata ayıklamak için kullanılabilir.
 
 Kodun içine adım atarak, üzerine atarak veya koddan çıkararak kodu tek tek yürütebilirsiniz. XSLT hata ayıklayıcısının kod adımlama işlevini kullanma komutları, diğer hata ayıklayıcıları için Visual Studio aynıdır.
 

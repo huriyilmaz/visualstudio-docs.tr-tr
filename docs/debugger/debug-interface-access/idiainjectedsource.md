@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0532aa2a30c7ef70b77e4e3342d7213ec9c4bf5df68beaa39112e1ba6c92996f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6b58eae372af82a03dc2629b4b92a5e472342fdd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121455002"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139314"
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
 DIA veri kaynağında depolanan, yeni kaynak koduna erişer.

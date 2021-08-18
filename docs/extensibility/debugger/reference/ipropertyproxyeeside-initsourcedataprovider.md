@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f3048e40cd082a78282c9819d37782f9b33867ff1929299cee6ce5c0a35af636
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 18af1ffbce8d2e1dc38ecbff82bcf87e5a07160d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389078"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103162"
 ---
 # <a name="ipropertyproxyeesideinitsourcedataprovider"></a>IPropertyProxyEESide::InitSourceDataProvider
 Bu nesnenin kaynak verilerini başlatır ve ilk verileri içeren bir nesne döndürür.

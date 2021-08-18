@@ -1,7 +1,7 @@
 ---
-title: Kod analizini kapat
+title: Kod analizini kapatma
 ms.date: 09/01/2020
-description: .NET Core, .NET Standard ve .NET Framework projelerinde Visual Studio kaynak kodu analizini devre dışı bırakma hakkında bilgi edinin.
+description: .NET Core, Visual Studio projelerinde kaynak kodu analizini .NET Standard ve .NET Framework öğrenin.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -10,50 +10,51 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jmartens
-ms.openlocfilehash: 6a1f1466caa921d46ce4701f5074b98f3d5ba051
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-code-analysis
+ms.openlocfilehash: 8d86945cb39e1e6c37e62726b920ee774c0f7146
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860392"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122053064"
 ---
-# <a name="disable-source-code-analysis-for-net"></a>.NET için kaynak kodu analizini devre dışı bırak
+# <a name="disable-source-code-analysis-for-net"></a>.NET için kaynak kod analizini devre dışı bırakma
 
 ::: moniker range=">=vs-2019"
 
-Bu sayfa, Visual Studio 'da Kod analizini devre dışı bırakmanızı sağlar. Devre dışı bırakabilecekleri sınırlamalar vardır ve Kod analizini kapatma yordamı, birkaç etkene göre farklılık gösterir:
+Bu sayfa, kod analizini devre dışı bırakmanıza yardımcı Visual Studio. Devre dışı bırakabilirsiniz ve kod analizini kapatma yordamı birkaç faktöre bağlı olarak farklılık gösterir:
 
-- Proje türü (.NET Core/Standard ve .NET Framework)
+- Project türü (.NET Core/Standard ve .NET Framework)
 
-  .NET Core ve .NET Standard projelerinin kod analizi özellikleri sayfasında, bir NuGet paketi olarak yüklenen çözümleyiciler arasından Kod analizini kapatmanızı sağlayan seçenekler vardır. Daha fazla bilgi için bkz. [.NET Core ve .NET Standard projeleri](#net-core-and-net-standard-projects). .NET Framework projeler için kaynak kodu analizini devre dışı bırakmak için, bkz. [.NET Framework projeler](#net-framework-projects).
+  .NET Core ve .NET Standard projeleri, Code Analysis paket olarak yüklenmiş çözümleyicilerden kod analizini kapatmaya izin NuGet sahiptir. Daha fazla bilgi için [bkz. .NET Core ve .NET Standard.](#net-core-and-net-standard-projects) Bu projelerin kaynak kodu analizini .NET Framework için bkz. [.NET Framework projeleri.](#net-framework-projects)
 
-- Kaynak Analizi ve eski analizler
+- Kaynak analiziyle eski analiz karşılaştırması
 
-  Bu konu, eski (ikili) analizine değil kaynak kodu analizine yöneliktir. Eski Analizi devre dışı bırakma hakkında bilgi için bkz. [nasıl yapılır: etkinleştirme ve devre dışı bırakma eski kod analizi](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
+  Bu konu, eski (ikili) analiz için değil kaynak kodu analizi için geçerlidir. Eski analizi devre dışı bırakma hakkında daha fazla bilgi için bkz. Nasıl 2012: Eski kod [analizini etkinleştirme ve devre dışı bırakma.](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)
 
 ## <a name="net-core-and-net-standard-projects"></a>.NET Core ve .NET Standard projeleri
 
-Visual Studio 2019 sürüm 16,3 ' den başlayarak, kod analizi özellikleri sayfasında analizler 'in derleme zamanında ve tasarım zamanında çalışıp çalışmadığını denetlemenize olanak tanıyan iki onay kutusu bulunur. Bu seçenekler projeye özgüdür.
+2019 Visual Studio 16.3 sürümünden başlayarak, Code Analysis özellikleri sayfasında, çözümleyicilerin derleme zamanında ve tasarım zamanında çalıştırıp çalışmay olmadığını denetlemeye yönelik iki onay kutusu vardır. Bu seçenekler projeye özgü seçeneklerdir.
 
-![Visual Studio 'da Canlı Kod analizini veya derlemeyi etkinleştirme veya devre dışı bırakma](media/run-on-build-run-live-analysis.png)
+![Canlı kod analizini etkinleştirme veya devre dışı bırakma veya Visual Studio](media/run-on-build-run-live-analysis.png)
 
-Bu sayfayı açmak için **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Özellikler**' i seçin. **Kod Analizi** sekmesini seçin.
+Bu sayfayı açmak için, Çözüm Gezgini proje **düğümüne** sağ tıklayın ve **Özellikler'i seçin.** Code Analysis **sekmesini** seçin.
 
-- Derleme zamanında kaynak analizini devre dışı bırakmak için, **derlemede Çalıştır** seçeneğinin işaretini kaldırın.
-- Canlı kaynak analizini devre dışı bırakmak için **canlı olarak çalıştır analiz** seçeneğinin işaretini kaldırın.
+- Derleme zamanında kaynak analizini devre dışı bırakmak için Derlemede **çalıştır seçeneğinin işaretini** kaldırın.
+- Canlı kaynak analizini devre dışı bırakmak için Canlı **analizde çalıştır seçeneğinin işaretini** kaldırın.
 
 > [!NOTE]
-> Visual Studio 2019 sürüm 16,5 ' den başlayarak, isteğe bağlı kod analizi yürütme iş akışını tercih ediyorsanız, canlı analiz sırasında çözümleyici yürütmeyi devre dışı bırakabilir ve/veya bir proje ya da istek üzerine bir çözüm oluşturup el ile kod analizi tetikleyebilir. Kod analizini el ile çalıştırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: yönetilen kod Için kod analizini El Ile çalıştırma](how-to-run-code-analysis-manually-for-managed-code.md).
+> Visual Studio 2019 sürüm 16.5'te başlayarak, isteğe bağlı kod analizi yürütme iş akışını tercih ediyorsanız canlı analiz sırasında çözümleyici yürütmeyi devre dışı ekleyebilirsiniz ve/veya bir projede veya isteğe bağlı bir çözümde kod analizini bir kez derleme ve el ile tetikleme. Kod analizini el ile çalıştırma hakkında bilgi için [bkz. Nasıl yapılır: Yönetilen Kod Code Analysis El ile Çalıştırma.](how-to-run-code-analysis-manually-for-managed-code.md)
 
 ## <a name="net-framework-projects"></a>.NET Framework projeleri
 
-Çözümleyiciler için kaynak kodu analizini devre dışı bırakmak için, aşağıdaki MSBuild özelliklerinden birini veya daha fazlasını [proje dosyasına](../ide/solutions-and-projects-in-visual-studio.md#project-file)ekleyin.
+Çözümleyiciler için kaynak kod analizini kapatmak için, proje dosyasına aşağıdaki MSBuild bir veya daha [fazlasını ekleyin.](../ide/solutions-and-projects-in-visual-studio.md#project-file)
 
-| MSBuild özelliği | Description | Varsayılan |
+| MSBuild özelliği | Açıklama | Varsayılan |
 | - | - | - |
-| `RunAnalyzersDuringBuild` | Çözümleyicilerin derleme zamanında çalıştırılıp çalıştırılmayacağını denetler. | `true` |
-| `RunAnalyzersDuringLiveAnalysis` | Çözümleyiciler, tasarım zamanında kodu canlı olarak analiz edip etmediğini denetler. | `true` |
-| `RunAnalyzers` | Hem derleme hem de tasarım zamanında Çözümleyicileri devre dışı bırakır. Bu özellik `RunAnalyzersDuringBuild` , ve ' den önceliklidir `RunAnalyzersDuringLiveAnalysis` . | `true` |
+| `RunAnalyzersDuringBuild` | Çözümleyicilerin derleme zamanında çalıştırıp çalışmay olmadığını kontrol eder. | `true` |
+| `RunAnalyzersDuringLiveAnalysis` | Çözümleyicilerin tasarım zamanında kodu canlı olarak analiz edip etmey olmadığını kontrol eder. | `true` |
+| `RunAnalyzers` | Hem derleme hem de tasarım zamanında çözümleyicileri devre dışı bırakma. Bu özellik ve 'den `RunAnalyzersDuringBuild` `RunAnalyzersDuringLiveAnalysis` önceliklidir. | `true` |
 
 Örnekler:
 
@@ -69,17 +70,17 @@ Bu sayfayı açmak için **Çözüm Gezgini** ' de proje düğümüne sağ tıkl
 
 ## <a name="source-analysis"></a>Kaynak analizi
 
-Visual Studio 2017 ' de [kaynak analizini](roslyn-analyzers-overview.md) devre dışı bırakabilirsiniz. **Hata listesi** çözümleyici hatalarını temizlemek istiyorsanız, tüm geçerli ihlallerin   >  **Kod analizini çözümle ve menü çubuğunda etkin sorunları Gizle** ' yi seçerek gizleyebilirsiniz. Daha fazla bilgi için bkz. [Ihlalleri gösterme](use-roslyn-analyzers.md#suppress-violations).
+2017'de Visual Studio kapatamazsiniz. [](roslyn-analyzers-overview.md) Çözümleyici hatalarını Hata Listesinden temizlemek **için,** Çalıştırmayı Çözümle'yi ve menü çubuğunda Etkin Sorunları Code Analysis'yi seçerek tüm geçerli  >  **ihlalleri** bastırabilirsiniz. Daha fazla bilgi için [bkz. İhlalleri gizleme.](use-roslyn-analyzers.md#suppress-violations)
 
-Visual Studio 2019 sürüm 16,3 ' den başlayarak, kaynak kodu analizini kapatabilir veya isteğe bağlı olarak yürütebilirsiniz. Visual Studio 2019 ' e yükseltmeyi düşünün.
+2019 Visual Studio 16.3 sürümünden başlayarak kaynak kodu analizini kapatabilir veya isteğe bağlı olarak yürütebilirsiniz. Visual Studio 2019'a yükseltmeyi göz önünde bulundurarak.
 
 ## <a name="legacy-analysis"></a>Eski analiz
 
-**Kod Analizi** özellikleri sayfasında eski, derleme zamanı analizini devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Eski Kod analizini etkinleştirme ve devre dışı bırakma](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
+Eski, derleme zamanı analizini özellikler sayfasında **Code Analysis** devre dışı abilirsiniz. Daha fazla bilgi için, [bkz. How to: Enable and disable legacy code analysis](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İhlalleri gösterme](use-roslyn-analyzers.md#suppress-violations)
-- [Nasıl yapılır: Eski Kod analizini etkinleştirme ve devre dışı bırakma](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)
+- [İhlalleri gizleme](use-roslyn-analyzers.md#suppress-violations)
+- [Nasıl olur: Eski kod analizini etkinleştirme ve devre dışı bırakma](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

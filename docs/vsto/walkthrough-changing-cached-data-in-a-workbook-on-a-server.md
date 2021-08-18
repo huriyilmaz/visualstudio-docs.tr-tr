@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 03e0a76e71fd7cab0eb66ed3cd468447e9d658a253ab06f09d9e958984435653
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a98370ee84f914b5f556276a6d83d7713246d615
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384047"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122032101"
 ---
 # <a name="walkthrough-change-cached-data-in-a-workbook-on-a-server"></a>Adım adım kılavuz: Sunucu üzerinde bir çalışma kitabındaki önbelleğe alınmış verileri değiştirme
   Bu kılavuzda, sınıfını kullanarak veri kümelerini başlatmadan Microsoft Office Excel bir Excel veri kümesinde nasıl değişiklik <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> göstereceğiz.
@@ -129,7 +129,7 @@ ms.locfileid: "121384047"
 ## <a name="create-an-excel-workbook-project"></a>Çalışma kitabı Excel oluşturma
  Verilere Excel için bir çalışma kitabı projesi oluşturun. Bu kılavuzda daha sonra verileri görüntüleyen bir oluşturacak ve çalışma kitabındaki veri önbelleğine veri kümesi <xref:Microsoft.Office.Tools.Excel.ListObject> örneği eklenecektir.
 
-### <a name="to-create-the-excel-workbook-project"></a>Çalışma kitabı Excel oluşturmak için
+### <a name="to-create-the-excel-workbook-project"></a>Excel çalışma kitabı projesini oluşturmak için
 
 1. Bu **Çözüm Gezgini** **AdventureWorksDataSet** çözümüne sağ tıklayın, Ekle'nin üzerine **gelin** ve ardından Yeni Çalışma **Project.**
 
@@ -145,11 +145,11 @@ ms.locfileid: "121384047"
 
      Office için Visual Studio Araçları Project **Sihirbazı** açılır.
 
-7. Yeni belge **oluştur seçeneğinin seçili olduğundan** emin olun ve Tamam'a **tıklayın.**
+7. Yeni belge **oluştur'u seçin ve** Tamam'a **tıklayın.**
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**AdventureWorksReport çalışma kitabını** tasarımcıda açar ve **AdventureWorksReport** projesini **Çözüm Gezgini.**
 
-## <a name="add-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Veri kümesi çalışma kitabı projesinde veri Excel ekleme
+## <a name="add-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Çalışma kitabı projesinde veri Excel ekleme
  Veri kümelerini çalışma kitabınızda görüntüley Excel önce çalışma kitabı projesinde veri Excel eklemeniz gerekir.
 
 ### <a name="to-add-the-dataset-to-the-data-sources-in-the-excel-workbook-project"></a>Veri kümelerini çalışma kitabı projesinde veri kaynaklarına Excel için

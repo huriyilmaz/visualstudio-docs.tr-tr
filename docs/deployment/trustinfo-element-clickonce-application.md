@@ -1,5 +1,5 @@
 ---
-title: '&lt;TrustInfo &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+title: '&lt;trustınfo &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
 description: TrustInfo öğesi, uygulamanın istemci bilgisayarda çalışması için gereken en düşük güvenlik izinlerini açıklar. TrustInfo öğesi gereklidir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -22,16 +22,17 @@ ms.assetid: 8a813a74-e158-4308-be78-565937f6af83
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e91bdb2e842692224564374e3f9f4d23cf71cf8
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cc3d08921100d05bea77e22bbec4659862b90143
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99945025"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120692"
 ---
-# <a name="lttrustinfogt-element-clickonce-application"></a>&lt;TrustInfo &gt; öğesi (ClickOnce uygulaması)
+# <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustınfo &gt; öğesi (ClickOnce uygulaması)
 Uygulamanın istemci bilgisayarda çalışması için gereken en düşük güvenlik izinlerini açıklar.
 
 ## <a name="syntax"></a>Syntax
@@ -163,7 +164,7 @@ Uygulamanın istemci bilgisayarda çalışması için gereken en düşük güven
 
  Ve kullanılarak istenen tüm `defaultAssemblyRequest` İzinler `assemblyRequest` , dağıtım bildiriminin geçerli bir güven lisansına sahip olup olmadığını Kullanıcı istenmeden alacak şekilde verilecek.
 
- Izin yükseltme hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md). İlke dağıtımı hakkında daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md).
+ izin yükseltme hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md). İlke dağıtımı hakkında daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md).
 
 ## <a name="examples"></a>Örnekler
  Aşağıdaki üç kod örneği, `trustInfo` bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımın uygulama bildiriminde kullanılmak üzere varsayılan adlandırılmış güvenlik bölgelerinin (Internet, LocalIntranet ve FullTrust) öğelerini gösterir.
@@ -271,4 +272,4 @@ Uygulamanın istemci bilgisayarda çalışması için gereken en düşük güven
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md)
-- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [uygulama bildirimini ClickOnce](../deployment/clickonce-application-manifest.md)

@@ -1,6 +1,6 @@
 ---
 title: Özel (hata ayıklama arabirimi erişim SDK 'Sı) | Microsoft Docs
-description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında özel sembol türleri (SymTagCustom etiketiyle tanımlanır) hakkındaki başvuru bilgilerini bulun.
+description: hata ayıklama arabirimi erişim SDK 'sı Visual Studio özel sembol türleri (symtagcustom etiketiyle tanımlanır) hakkındaki başvuru bilgilerini bulun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,14 +12,15 @@ ms.assetid: a219fc83-d2a8-4bc5-b7e1-bfafeb247f16
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 322619bbfa759d97061aa3b62ddc65fde43db8e4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4d538aa004147ffbb27ed1df74dc1cbaed3b437f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857386"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122059006"
 ---
 # <a name="custom-debug-interface-access-sdk"></a>Özel (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Bazı derleyiciler, standart sözlü sembol türlerinden herhangi biri tarafından tanımlanmayan semboller sunar. Bu semboller bir `SymTagCustom` etiketle tanımlanır.

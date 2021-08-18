@@ -1,28 +1,29 @@
 ---
-title: Bağlı hizmetleri kullanarak Azure Application Insights ekleme | Microsoft Docs
-description: Bağlı hizmet eklemek için Visual Studio 'Yu kullanarak uygulamanıza Azure Application Insights ekleyin
+title: bağlı hizmetleri kullanarak Azure Application Insights ekleme | Microsoft Docs
+description: bağlı bir hizmet eklemek için Visual Studio kullanarak uygulamanıza Azure Application Insights ekleyin
 author: AngelosP
 manager: jmartens
+ms.technology: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 5b93d5b15cbbd3ffcb1f8afb65afe6e1c2c371b1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dc5bb07ef70ee5082fded77725205c1d29174ed4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841230"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122037518"
 ---
-# <a name="add-azure-application-insights-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure Application Insights ekleme
+# <a name="add-azure-application-insights-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetleri kullanarak Azure Application Insights ekleme
 
-Visual Studio ile, **bağlı hizmetler** özelliğini kullanarak aşağıdakilerden herhangi birini Azure Application Insights bağlayabilirsiniz:
+Visual Studio, **bağlı hizmetler** özelliğini kullanarak aşağıdakilerden herhangi birini Azure Application Insights 'a bağlayabilirsiniz:
 
 - .NET Framework konsol uygulaması
 - ASP.NET MVC (.NET Framework) 
 - ASP.NET Core
-- .NET Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
+- .net Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
 - .NET Core çalışan rolü
 - Azure İşlevleri
 - Evrensel Windows Platformu uygulaması
@@ -32,13 +33,13 @@ Visual Studio ile, **bağlı hizmetler** özelliğini kullanarak aşağıdakiler
 Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodlarını projenize ekler ve yapılandırma dosyalarınızı uygun şekilde değiştirir.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Azure iş yükü yüklü olan Visual Studio.
+- Azure iş yükü yüklü Visual Studio.
 - Desteklenen türlerden birinin projesi
 
-## <a name="connect-to-azure-application-insights-using-connected-services"></a>Bağlı hizmetleri kullanarak Azure Application Insights 'ye bağlanma
+## <a name="connect-to-azure-application-insights-using-connected-services"></a>bağlı hizmetleri kullanarak Azure Application Insights Bağlan
 
 1. Projenizi Visual Studio’da açın.
 
@@ -48,27 +49,27 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
     ![Hizmet bağımlılığı Ekle](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
 
-1. **Bağımlılık Ekle** sayfasında **Azure Application Insights**' yi seçin.
+1. **bağımlılık ekle** sayfasında **Azure Application Insights**' yi seçin.
 
-    ![Azure Application Insights Ekle](./media/azure-app-insights-add-connected-service/azure-app-insights.png)
+    ![Azure Application Insights ekle](./media/azure-app-insights-add-connected-service/azure-app-insights.png)
 
     Henüz oturum açmadıysanız Azure hesabınızda oturum açın. Bir Azure hesabınız yoksa, [ücretsiz deneme](https://azure.microsoft.com/account/free)için kaydolabilirsiniz.
 
-1. **Azure Application Insights Yapılandır** ekranında, var olan bir Azure Application Insights bileşenini seçin ve **İleri**' yi seçin.
+1. **azure Application Insights yapılandır** ekranında, var olan bir Azure Application Insights bileşenini seçin ve **ileri**' yi seçin.
 
     Yeni bir bileşen oluşturmanız gerekiyorsa, bir sonraki adıma gidin. Aksi takdirde 7. adıma geçin.
 
-    ![Mevcut Application Insights bileşenine Bağlan](./media/azure-app-insights-add-connected-service/created-app-insights.png)
+    ![mevcut Application Insights bileşene Bağlan](./media/azure-app-insights-add-connected-service/created-app-insights.png)
 
 1. Application Insights bileşeni oluşturmak için:
 
-   1. Ekranın alt kısmındaki **Yeni bir Application Insights bileşeni oluştur** ' u seçin.
+   1. ekranın alt kısmındaki **yeni bir Application Insights bileşeni oluştur** ' u seçin.
 
-   1. **Application Insights: yeni ekran oluştur** ' u doldurun ve **Oluştur**' u seçin.
+   1. **Application Insights: yeni ekran oluştur** ' u doldurun ve **oluştur**' u seçin.
 
-       ![Yeni Azure App Insights bileşeni](./media/azure-app-insights-add-connected-service/create-new-app-insights.png)
+       ![yeni Azure uygulama Analizler bileşeni](./media/azure-app-insights-add-connected-service/create-new-app-insights.png)
 
-   1. **Azure Application Insights Yapılandır** ekranı görüntülendiğinde, yeni bileşen listede görüntülenir. Listeden yeni bileşeni seçin ve **İleri**' yi seçin.
+   1. **Azure Application Insights yapılandır** ekranı görüntülendiğinde, yeni bileşen listede görüntülenir. Listeden yeni bileşeni seçin ve **İleri**' yi seçin.
 
 1. Bir izleme anahtarı adı girin veya varsayılanı seçin ve bağlantı dizesinin yerel bir gizli dizi dosyasında mi yoksa [Azure Key Vault](/azure/key-vault)mi depolandığını seçin.
 
@@ -85,5 +86,5 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Azure Izleyici ürün sayfası](https://azure.microsoft.com/services/monitor/)
-- [Azure Application Insights belgeleri](/azure/azure-monitor/app/app-insights-overview/)
-- [Bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)
+- [Azure uygulama Analizler belgeleri](/azure/azure-monitor/app/app-insights-overview/)
+- [bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)

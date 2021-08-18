@@ -1,6 +1,6 @@
 ---
-description: Bu bekleyen kesme noktası oluşturmak için kullanılan kesme noktası isteğini alır.
-title: IDebugPendingBreakpoint2::GetBreakpointRequest | Microsoft Docs
+description: Bu bekleyen kesme noktasını oluşturmak için kullanılan kesme noktası isteğini alır.
+title: 'IDebugPendingBreakpoint2:: GetBreakpointRequest | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e148cc38b01449c6544c805eb0c500b8398f3238f4a77e3bb0ef36aa5cceabaa
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dc4a783e1d2750bee582d8ce2e27d782c736577c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121339144"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043030"
 ---
 # <a name="idebugpendingbreakpoint2getbreakpointrequest"></a>IDebugPendingBreakpoint2::GetBreakpointRequest
-Bu bekleyen kesme noktası oluşturmak için kullanılan kesme noktası isteğini alır.
+Bu bekleyen kesme noktasını oluşturmak için kullanılan kesme noktası isteğini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,10 +44,10 @@ int GetBreakpointRequest(
 
 ## <a name="parameters"></a>Parametreler
 `ppBPRequest`\
-[out] Bekleyen bu kesme noktası oluşturmak için kullanılan kesme noktası isteğini temsil eden [bir IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) nesnesi döndürür.
+dışı Bu bekleyen kesme noktasını oluşturmak için kullanılan kesme noktası isteğini temsil eden bir [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Kesme `E_BP_DELETED` noktası silinmişse döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_BP_DELETED`Kesme noktasının silinip silinmediğini döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

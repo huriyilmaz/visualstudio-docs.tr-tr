@@ -1,6 +1,6 @@
 ---
-description: Kaynağın derlenmiş olduğu nesne dosyası adını alın.
-title: IDiaInjectedSource::get_objectFilename | Microsoft Docs
+description: Kaynağın derlendiği nesne dosya adını alır.
+title: 'IDiaInjectedSource:: get_objectFilename | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8774efa9bc1f8fe7a35883901be6d795116950e101d01f42093da692fb84d028
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cfe2dc595f541bfa7c68acbcf07cf98f84ffff55
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392275"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134308"
 ---
 # <a name="idiainjectedsourceget_objectfilename"></a>IDiaInjectedSource::get_objectFilename
-Kaynağın derlenmiş olduğu nesne dosyası adını alın.
+Kaynağın derlendiği nesne dosya adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_objectFilename (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Kaynağın derlenmiş olduğu nesne dosyası adını döndürür.
+dışı Kaynağın derlendiği nesne dosyası adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

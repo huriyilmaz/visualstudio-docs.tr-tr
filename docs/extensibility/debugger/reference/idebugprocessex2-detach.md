@@ -11,17 +11,18 @@ ms.assetid: 66d54c2c-9302-47c8-9975-f30ed988ab29
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c5ad25fe6461f1df89ada83623ab4e28194ca207
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f67ba1d07e1b92ed80e330ee279130061d0a647e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076335"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057570"
 ---
 # <a name="idebugprocessex2detach"></a>IDebugProcessEx2::Detach
 Bu yöntem, bir oturumun işlemde artık hata ayıklamayan süreci bilgilendirir.

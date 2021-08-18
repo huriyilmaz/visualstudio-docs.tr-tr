@@ -1,5 +1,5 @@
 ---
-description: Belirtilen programlama dilinde uygulanan belirtilen öznitelikle sınıfları alın.
+description: Belirtilen öznitelik belirtilen programlama dilinde uygulanan sınıfları alır.
 title: IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
 titleSuffix: ''
 ms.custom: SEO-VS-2020
@@ -18,15 +18,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f502a9249688f9d94691342ef3b9d60254a66698b64674b77b6676e01c15c881
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cdc3aaed482d765747f6eac8451990aee556cab0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377957"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103968"
 ---
 # <a name="idebugcomplussymbolprovidergetattributedclassesforlanguage"></a>IDebugComPlusSymbolProvider::GetAttributedClassesForLanguage
-Belirtilen programlama dilinde uygulanan belirtilen öznitelikle sınıfları alın.
+Belirtilen öznitelik belirtilen programlama dilinde uygulanan sınıfları alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,19 +48,19 @@ int GetAttributedClassesForLanguage (
 
 ## <a name="parameters"></a>Parametreler
 `guidLanguage`\
-[in] Dil için benzersiz tanımlayıcı.
+'ndaki Dil için benzersiz tanımlayıcı.
 
 `pstrAttribute`\
-[in] Öznitelik dizesi.
+'ndaki Öznitelik dizesi.
 
 `ppEnum`\
-[out] Öznitelik sınıflarının bir numaralama döndürür.
+dışı Öznitelik sınıflarının bir listesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetAttributedClassesForLanguage(

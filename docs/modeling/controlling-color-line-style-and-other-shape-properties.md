@@ -6,24 +6,25 @@ ms.topic: how-to
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.custom: SEO-VS-2020
 ms.workload:
 - multiple
-ms.openlocfilehash: 836c77f3651b7686e9366fe75ea7922a248fd28f
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 8f62d78e573f0fa2379fb3c36e91f0db971b8270
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112389637"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061382"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>Renk, Çizgi Stili ve Diğer Şekil Özelliklerini Denetleme
 
 Renk gibi bazı şekil özellikleri 'açık' olabilir. Başka bir ifadeyle, özellikler şeklin bir etki alanı özelliğine bağlanabilirsiniz. Diğerlerinin doğrudan denetlen olması gerekir.
 
 ## <a name="exposing-a-property"></a>Bir özelliği açığa çıkararak
- Renk gibi bazı şekil özellikleri bir etki alanı özelliğinin değerine bağlı olabilir.
+ Renk gibi bazı şekil özellikleri bir etki alanı özelliğinin değerine bağlanabilirsiniz.
 
- DSL Tanımı'da bir şekil, bağlayıcı veya diyagram sınıfı seçin. Sağ tıklama menüsünde, Açığa Çıkar **ekle'yi** ve ardından Dolgu Rengi gibi istediğiniz özelliği seçin.
+ DSL Tanımı'da bir şekil, bağlayıcı veya diyagram sınıfı seçin. Sağ tıklama menüsünde, Açığa Çıkar **ekle'yi** seçin ve ardından Dolgu Rengi gibi istediğiniz özelliği seçin.
 
  Şeklin artık program kodunda veya kullanıcı olarak ayarlayabilirsiniz bir etki alanı özelliği vardır.
 

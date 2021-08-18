@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, Görselleştirici temsil ettiği nesneyi değiştirir.
-title: 'IEEVisualizerDataProvider:: SetObjectForVisualizer | Microsoft Docs'
+description: Bu yöntem görselleştiricinin temsil ettiği nesneyi değiştirir.
+title: IEEVisualizerDataProvider::SetObjectForVisualizer | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ebd0ff5ac54e7f6c634eb4321e8f8979b562536d3ad1e46b2abf0459fe694792
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d4530b575fdd9de8dd18687c2ec7fbd676298697
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389442"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137931"
 ---
 # <a name="ieevisualizerdataprovidersetobjectforvisualizer"></a>IEEVisualizerDataProvider::SetObjectForVisualizer
-Bu yöntem, Görselleştirici temsil ettiği nesneyi değiştirir.
+Bu yöntem görselleştiricinin temsil ettiği nesneyi değiştirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,19 +47,19 @@ int SetObjectForVisualizer(
 
 ## <a name="parameters"></a>Parametreler
 `pNewObject`\
-'ndaki Ayarlanacak nesne.
+[in] Ayar için nesne.
 
 `error`\
-dışı Nesne ayarlanırken bir hata oluşursa, bu dize hata iletisini tutar.
+[out] Nesnesini ayarlarken bir hata oluştu ise, bu dize hata iletisini tutar.
 
 `pException`\
-dışı Bir hata oluşursa, bu nesne özel durum bilgilerini tutar.
+[out] Bir hata varsa, bu nesne özel durum bilgilerini tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu, hata bilgilerinin nasıl döndürüldüğünü belirleme uygulayıcısı 'na sahiptir. Ancak bazı çağıranlar yalnızca bir hata olduğunu anlamak için bir özel durum nesnesinin döndürülüp döndürülmeyeceğini görebilir, bu nedenle bir hata oluşursa bu yöntem her zaman bir özel durum nesnesi döndürmelidir. Çağıran tarafından kullanılması istediği durumlarda hata dizesi de sağlanmalıdır.
+ Hata bilgisinin nasıl döndürüleceklerini belirlemek, uygulamacıya göredir. Ancak, bazı çağıranların yalnızca bir özel durum nesnesinin bir hata olduğunu bilmek için döndürüldü mü bakarak bakabilirsiniz, bu nedenle bir hata varsa bu yöntem her zaman bir özel durum nesnesi döndürür. Hata dizesi, çağıranın bunu kullanmak istediği durumda da sağlanmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

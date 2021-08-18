@@ -1,6 +1,6 @@
 ---
-title: Windows Information Protection muaf tut
-description: hala kurumsal verileri kullanmasına izin verirken Windows Information Protection Visual Studio muaf tutma hakkında bilgi edinin.
+title: Windows Information Protection'den muaf
+description: Kurumsal verileri kullanmasına Visual Studio izin Windows Information Protection verilerden muaf tutularak nasıl muaf tutulacaklarını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/01/2018
 ms.topic: conceptual
@@ -10,33 +10,33 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bd76144ba847a3ca191bb3be55d032b9bebd8c690d57ec5c95f01861fb4b469
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: afd3473e26d7bb2c3d729cd3ea4df9a530b3a1bb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121413251"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137436"
 ---
-# <a name="configure-visual-studio-as-a-wip-exempt-app"></a>Visual Studio, wıp muaf tutulan uygulama olarak yapılandırma
+# <a name="configure-visual-studio-as-a-wip-exempt-app"></a>WiP Visual Studio uygulama olarak yapılandırma
 
-[Windows Information Protection](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) (wıp), kurumsal verilerin e-posta, sosyal medya ve genel bulut gibi uygulamalar aracılığıyla, kurumsal denetimin dışından sızmasını korumanıza yardımcı olur. WıP, ortamınızda veya diğer uygulamalarda değişiklik yapılmasına gerek kalmadan, kuruluşa ait cihazlarda ve kişisel cihazlarda yanlışlıkla veri sızıntılarına karşı korunmaya yardımcı olur.
+[Windows Information Protection](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) kurumsal verilerin e-posta, sosyal medya ve genel bulut gibi, kuruluş denetimi dışında uygulamalar aracılığıyla sızmaya karşı korunmasına yardımcı olur. WIP, ortamınız veya diğer uygulamalarınız üzerinde değişiklik yapmadan kuruluşa ait cihazlarda ve kişisel cihazlarda yanlışlıkla veri sızıntısına karşı koruma sağlar.
 
-Kurumsal verilerin korumasız ağ konumlarına gitmesini önlemek ve kişisel verileri şifrelemeyi önlemek için, WıP için *zenginetilen* uygulamalar beklenmektedir. Visual Studio, önceden bir uygulama değildir, bu nedenle muaf tutulan ortamlarda çalışmaz. Visual Studio wıp özellikli bir makinede çalışmasını sağlamak için bu makaledeki adımları izleyin.
+*WIP* için açık uygulamaların, kurumsal verilerin korumasız ağ konumlara gidip kişisel verilerin şifrelenmesini önlemesi beklenir. Visual Studio, etkin bir uygulama olmadığı için, muaf olmadığı sürece WIP özellikli ortamlarda çalışmaz. WiP özellikli bir makinede çalışma Visual Studio için bu makaledeki adımları izleyin.
 
-## <a name="configure-vs-as-a-wip-exempt-app"></a>WıP muaf tutulan uygulama olarak VS 'yi yapılandırma
+## <a name="configure-vs-as-a-wip-exempt-app"></a>VS'yi WIP muaf uygulaması olarak yapılandırma
 
-Visual Studio wıp kısıtlamalarından muaf tutabilirsiniz, ancak yine de kurumsal verileri kullanmasına izin verebilirsiniz. WıP muaf tutulan uygulamalar, bir IP adresi veya ana bilgisayar adı kullanarak kurumsal bulut kaynaklarına bağlanabilir. Hiçbir şifreleme uygulanmaz ve uygulama yerel dosyalara erişebilir.
+WiP kısıtlamalarından Visual Studio, ancak yine de kurumsal verileri kullanmasına izin veebilirsiniz. WIP muaf uygulamaları bir IP adresi veya ana bilgisayar adı kullanarak kurumsal bulut kaynaklarına bağlanabilirsiniz. Şifreleme uygulanmaz ve uygulama yerel dosyalara erişebilirsiniz.
 
-Visual Studio wıp 'ten muaf tutmak için, [bir masaüstü uygulamasını muaf tutmak için adımları](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#exempt-apps-from-a-wip-policy)izleyin.
+Bu Visual Studio WIP'den muaf etmek için, [bir masaüstü uygulamasını muaf tutulacak adımları izleyin.](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#exempt-apps-from-a-wip-policy)
 
-## <a name="create-a-wip-exempt-applocker-policy-file"></a>WıP muaf olmayan AppLocker ilke dosyası oluşturma
+## <a name="create-a-wip-exempt-applocker-policy-file"></a>WIP muaf AppLocker ilke dosyası oluşturma
 
-Visual Studio birden çok ikilisi içerdiğinden, [wıp muaf bir AppLocker ilke dosyası oluşturun](/windows/security/threat-protection/windows-defender-application-control/applocker/run-the-automatically-generate-rules-wizard). AppLocker, bir klasör içindeki tüm dosyalar için otomatik olarak kurallar oluşturmanıza olanak sağlar.
+Birden Visual Studio ikili dosya içeren bir [WIP muaf AppLocker ilke dosyası oluşturun.](/windows/security/threat-protection/windows-defender-application-control/applocker/run-the-automatically-generate-rules-wizard) AppLocker, bir klasör içindeki tüm dosyalar için otomatik olarak kurallar oluşturmanizi sağlar.
 
-## <a name="add-appcompat-to-the-enterprise-cloud-resource-policy"></a>Enterprise bulut kaynak ilkesine AppCompat ekleme
+## <a name="add-appcompat-to-the-enterprise-cloud-resource-policy"></a>AppCompat'ı bulut Enterprise ilkesine ekleme
 
-Visual Studio ağınızdaki kurumsal verilere erişebileceği yeri belirtmek için, [korumalı uygulamalarınızın kurumsal verileri bulabileceği ve gönderebileceği yeri tanımlamak üzere aşağıdaki adımları](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#choose-where-apps-can-access-enterprise-data)izleyin. Windows, bir ıp adresi aracılığıyla bulut kaynaklarına bağlantıları engellemeyi durdurmak için, bu \* ayara/AppCompat/dize eklediğinizden emin olun \* .
+Ağ üzerinde kurumsal Visual Studio erişenin nerede olduğunu belirtmek için, korumalı uygulamalarınızı kurumsal verileri nerede bulup gönderebilirsiniz [tanımlamak için bu adımları izleyin.](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure#choose-where-apps-can-access-enterprise-data) Ip Windows bulut kaynaklarına bağlantıları engellemesini engellemek için ayara / \* AppCompat \* / dizesini ekleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WıP ile uygulama davranışı](/windows/security/information-protection/windows-information-protection/app-behavior-with-wip)
+- [WIP ile uygulama davranışı](/windows/security/information-protection/windows-information-protection/app-behavior-with-wip)

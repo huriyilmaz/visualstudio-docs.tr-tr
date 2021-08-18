@@ -12,14 +12,15 @@ ms.assetid: 8d74379e-295d-452b-bd5f-0769df387d4f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ae363f1909f169d2d5dc4004a79cfe3c2919bdf3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 19dbf0acd7f3522632cce83fee90e18a21a104cf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948237"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136175"
 ---
 # <a name="cvreleaseprovider-function"></a>CvReleaseProvider işlevi
 Bırakma işareti sağlayıcısı. İşaretleyici sağlayıcının bırakılması, bu sağlayıcının daha önce oluşturulmuş işaretleyici serisini etkilemez. İşaretleyici serisinin, CvReleaseMarkerSeries çağrısıyla ayrı olarak serbest bırakılması gerekir. Sağlayıcı yayınlanamaması bellek sızıntısına neden olur.

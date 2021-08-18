@@ -11,17 +11,18 @@ ms.assetid: e5a3345b-d460-4e40-8f5b-3111c56a2ed9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0fec6984ffc30c3c368193079fdabc1752f63a65
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bcf3fe8bc0c71340681e913dcbe117146944299d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065807"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089049"
 ---
 # <a name="idebugeventcallback2event"></a>IDebugEventCallback2::Event
 Hata ayıklama olaylarının bildirimini gönderir.

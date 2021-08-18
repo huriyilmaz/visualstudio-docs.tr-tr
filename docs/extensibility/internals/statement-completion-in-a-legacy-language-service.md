@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4ba875b8835f323709926d1323a233ff148f2cb06057178c8e383cff19047483
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6b84a36b61aeed08de0aeb9c359fe9d32653e939
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121432065"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137697"
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Deyim Tamamlama
 İfade tamamlama, dil hizmetinin, kullanıcıların temel düzenleyicide yazmaya başladıkları bir dil anahtar sözcüğünü veya öğesini tamamlamada yardımcı olduğu işlemdir. Bu konuda, deyimin tamamlanmasının nasıl çalıştığı ve dil hizmetinize nasıl uygulanacağı açıklanmaktadır.

@@ -1,6 +1,6 @@
 ---
 title: Ifade değerlendirmesinin örnek uygulama | Microsoft Docs
-description: Visual Studio 'Nun bir gözcü Windows ifadesi için bir IDebugExpression2 nesnesi oluşturmak üzere ParseText 'i nasıl çağırdığı hakkında bilgi edinin.
+description: Visual Studio, bir gözcü windows ifadesi için bir IDebugExpression2 nesnesi oluşturmak üzere parsetext 'i nasıl çağıracağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: sample
@@ -12,20 +12,21 @@ ms.assetid: 2a5f04b8-6c65-4232-bddd-9093653a22c4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: de0e052fd42f1603889f7521a1e45e50b0f36eea
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 07f0db5c24f8f9251d503162f0581aad454b0b7b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902312"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102876"
 ---
 # <a name="sample-implementation-of-expression-evaluation"></a>İfade değerlendirmesinin örnek uygulama
 > [!IMPORTANT]
 > Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Bir **Gözcü** penceresi ifadesi Için, Visual Studio bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) nesnesi üretmek için [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 'i çağırır. `IDebugExpressionContext2::ParseText`bir ifade değerlendirici (EE) oluşturur ve bir [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) nesnesi almak için [ayrıştırmayı](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) çağırır.
+ bir **gözcü** penceresi ifadesi için Visual Studio, bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) nesnesi üretmek için [parsetext](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) çağırır. `IDebugExpressionContext2::ParseText`bir ifade değerlendirici (EE) başlatır ve bir [ıdebugparsedexpression](../../extensibility/debugger/reference/idebugparsedexpression.md) nesnesi almak için [ayrıştırmayı](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) çağırır.
 
  `IDebugExpressionEvaluator::Parse`Aşağıdaki görevleri gerçekleştirir:
 

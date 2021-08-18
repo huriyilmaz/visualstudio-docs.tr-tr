@@ -1,6 +1,6 @@
 ---
 title: VSPackages | Microsoft Docs
-description: UI öğeleri, hizmetler, projeler, düzenleyiciler ve tasarımcılar sağlayarak Visual Studio IDE 'yi genişleten yazılım modülleri olan VSPackages hakkında bilgi edinin.
+description: uı öğeleri, hizmetler, projeler, düzenleyiciler ve tasarımcılar sunarak Visual Studio ıde 'yi genişleten yazılım modülleri olan vspackages hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: cad0893a-9c5f-45b7-952a-e2294f83e324
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 695cddbc76f81ee606b2f19d367e503f754f1ed4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 16284ec7bb2481bbbfca758bb9ccbd0c9f062c34
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060659"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086447"
 ---
 # <a name="vspackages"></a>VSPackage’lar
 VSPackages, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI öğeleri, hizmetler, projeler, düzenleyiciler ve tasarımcılar sunarak tümleşik geliştirme ortamını (IDE) genişleten yazılım modüllerdir.
@@ -25,7 +26,7 @@ VSPackages, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI öğ
 ## <a name="in-this-section"></a>Bu Bölümde
 - [VS Kabuğuna VSPackage Dosya Konumunu Belirtme](../../extensibility/internals/specifying-vspackage-file-location-to-the-vs-shell.md)
 
- Visual Studio Kabuğu 'na VSPackage konumunun nasıl belirtilceğinizi açıklar.
+ Visual Studio kabuğu için vspackage konumunun nasıl belirtilceğinizi açıklar.
 
 - [VSPackage’lardaki Kaynaklar](../../extensibility/internals/resources-in-vspackages.md)
 

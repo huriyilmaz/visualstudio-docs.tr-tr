@@ -1,5 +1,5 @@
 ---
-description: Belirtilen sembol sağlayıcısı tarafından belirlenen modülleri önceden yükleme.
+description: Belirtilen sembol sağlayıcısı tarafından belirlenen modülleri önceden yükler.
 title: IDebugExpressionEvaluator2::P reloadModules | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ce0250a3644859953bef3f12f0a380546a0eb2aaf94139029f2ba14f0b4760e5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4e7b3ba57298f996e360236252c0a8dfe0ee1011
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307446"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138659"
 ---
 # <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
-Belirtilen sembol sağlayıcısı tarafından belirlenen modülleri önceden yükleme.
+Belirtilen sembol sağlayıcısı tarafından belirlenen modülleri önceden yükler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,16 +42,16 @@ int PreloadModules (
 
 ## <a name="parameters"></a>Parametreler
 `pSym`\
-[in] Modüllerin önceden yüklenemiyor olduğu sembol sağlayıcısı.
+'ndaki Modüllerin yükleneceği sembol sağlayıcısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu isteğe bağlı yöntem, barındırma işlemi iliştirme işlemi sırasında kullanılır. Bu, EE parçası olarak 'ısınma' fırsatı verir.
+Bu isteğe bağlı yöntem, bir barındırma-işlem iliştirme işlemi gerçekleştirdiğinizde kullanılır. EE iliştirme 'nin bir parçası olarak ' ısınma ' olanağı sağlar.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) arabirimini ortaya çıkaran **ExpressionEvaluatorPackage** nesnesi için bu yöntemin nasıl uygulandığını gösterir.
+Aşağıdaki örnek, [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) arabirimini kullanıma sunan bir **ExpressionEvaluatorPackage** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 STDMETHODIMP ExpressionEvaluatorPackage::PreloadModules

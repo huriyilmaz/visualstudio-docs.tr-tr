@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 814e0a0a5da0442f1127276c63b414cdb4ec0098968adbe41332a3868289bc58
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c9eabd426c8d59a1cfe4e2f2e8e3b9f5a33e178b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121321928"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050877"
 ---
 # <a name="idebugportex2canterminateprocess"></a>IDebugPortEx2::CanTerminateProcess
 Bir işlemin sonlandırılıp sonlandırılamayacağını belirler.

@@ -1,6 +1,6 @@
 ---
 title: Veritabanı uyumluluğu
-description: Visual Studio için Microsoft SQL Server, Oracle, MySQL, PostgreSQL, SQLite ve Firebird gibi uyumlu veritabanı sistemlerini gözden geçirin.
+description: Microsoft SQL Server, Oracle, MySQL, postgresql, SQLite ve firebird gibi Visual Studio için uyumlu veritabanı sistemlerini gözden geçirin.
 ms.custom: SEO-VS-2020
 ms.date: 09/06/2017
 ms.topic: conceptual
@@ -12,48 +12,49 @@ ms.assetid: 821de34b-eaa9-40af-b9aa-b8305de16899
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 41cf31c6cae310eb151969df0776788d6ea5b1e1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ccbf0866022e6e602938d2a5f86f8374eb73c89
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866703"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091207"
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio için uyumlu veritabanı sistemleri
 
-Visual Studio 'da veri bağlantılı bir uygulama geliştirmek için, genellikle veritabanı sistemini yerel geliştirme makinenize yüklersiniz ve sonra uygulamayı ve veritabanını, bir üretim ortamına, varsa bu ortama dağıtırsınız. Visual Studio, **veri depolama ve işleme** iş yükünün bir parçası olarak makinenize SQL Server Express LocalDB 'yi yüklüyor. Bu LocalDB örneği, veri bağlantılı uygulamaları hızla ve kolayca geliştirmek için yararlıdır.
+Visual Studio ' de veriye bağlı bir uygulama geliştirmek için, genellikle veritabanı sistemini yerel geliştirme makinenize yüklersiniz ve ardından uygulamayı ve veritabanını, bir üretim ortamına, hazırlık sırasında dağıtırsınız. Visual Studio, **veri depolama ve işleme** iş yükünün bir parçası olarak makinenizde SQL Server Express localdb 'yi yüklüyor. Bu LocalDB örneği, veri bağlantılı uygulamaları hızla ve kolayca geliştirmek için yararlıdır.
 
-Bir veritabanı sisteminin .NET uygulamalarından erişilebilir olması ve Visual Studio veri araçları Windows 'da görünür olması için, bir ADO.NET veri sağlayıcısına sahip olması gerekir. .NET uygulamanızda varlık veri modellerini kullanmayı planlıyorsanız, sağlayıcı Entity Framework özel olarak desteklemelidir. Birçok sağlayıcı, NuGet Paket Yöneticisi veya Visual Studio Market aracılığıyla sunulur.
+bir veritabanı sisteminin .net uygulamalarından erişilebilir olması ve Visual Studio veri araçları penceresinde görünür olması için, bir ADO.NET veri sağlayıcısına sahip olması gerekir. .NET uygulamanızda varlık veri modellerini kullanmayı planlıyorsanız, sağlayıcı Entity Framework özel olarak desteklemelidir. birçok sağlayıcı, NuGet Paket Yöneticisi veya Visual Studio market aracılığıyla sunulur.
 
-Azure depolama API 'Lerini kullanıyorsanız, üretime dağıtmaya hazırlanana kadar ücretlendirmeden kaçınmak için geliştirme sırasında yerel makinenize Azure Storage öykünücülerini yükleyebilirsiniz. Daha fazla bilgi için bkz. [geliştirme ve test Için Azure depolama öykünücüsünü kullanma](/azure/storage/common/storage-use-emulator).
+Azure depolama API 'Lerini kullanıyorsanız, üretime dağıtmaya hazırlanana kadar ücretlendirmeden kaçınmak için geliştirme sırasında yerel makinenize Azure Storage öykünücülerini yükleyebilirsiniz. daha fazla bilgi için bkz. [geliştirme ve test için Azure Depolama Emulator kullanma](/azure/storage/common/storage-use-emulator).
 
-Aşağıdaki listede, Visual Studio projelerinde kullanılabilecek daha popüler veritabanı sistemleri yer almaktadır. Liste ayrıntılı değildir. Visual Studio Araçları ile derin tümleştirme sağlayan ADO.NET veri sağlayıcıları sunan üçüncü taraf satıcıların bir listesi için bkz. [ADO.NET veri sağlayıcıları](/dotnet/framework/data/adonet/data-providers).
+aşağıdaki liste, Visual Studio projelerinde kullanılabilecek daha popüler veritabanı sistemlerinden bazılarını içerir. Liste ayrıntılı değildir. Visual Studio araçları ile derin tümleştirme sağlayan ADO.NET veri sağlayıcıları sunan üçüncü taraf satıcıların bir listesi için bkz. [ADO.NET veri sağlayıcıları](/dotnet/framework/data/adonet/data-providers).
 
 ## <a name="microsoft-sql-server"></a>Microsoft SQL Server
 
-SQL Server, Microsoft flaggeme veritabanı sunumudur. SQL Server 2016, performans, gelişmiş güvenlik ve zengin, tümleşik raporlama ve analizler sunar. Bu, farklı kullanımlar için tasarlanan çeşitli sürümlerde dağıtılır: yüksek düzeyde ölçeklenebilir, yüksek performanslı iş analizinden tek bir bilgisayarda kullanılmak üzere. SQL Server Express, yeniden dağıtım ve ekleme için uyarlanmış SQL Server tam özellikli bir sürümdür.  LocalDB, uygulamanızın işleminde yapılandırma ve çalıştırma gerektirmeyen SQL Server Express basitleştirilmiş bir sürümüdür. [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)ya da her iki ürünü de indirebilirsiniz. Bu bölümdeki SQL örneklerinin birçoğu SQL Server LocalDB kullanır. SQL Server Management Studio (SSMS), Visual Studio SQL Server Nesne Gezgini sağlandıklarından daha fazla işlevselliğe sahip tek başına bir veritabanı yönetim uygulamasıdır. SSMS 'yi önceki bağlantıdan edinebilirsiniz.
+SQL Server, Microsoft flaggeme veritabanı sunumudur. SQL Server 2016, performans, gelişmiş güvenlik ve zengin, tümleşik raporlama ve analizler sunar. Bu, farklı kullanımlar için tasarlanan çeşitli sürümlerde dağıtılır: yüksek düzeyde ölçeklenebilir, yüksek performanslı iş analizinden tek bir bilgisayarda kullanılmak üzere. SQL Server Express, yeniden dağıtım ve ekleme için uyarlanmış SQL Server tam özellikli bir sürümdür.  localdb, uygulamanızın işleminde yapılandırma ve çalıştırma gerektirmeyen SQL Server Express basitleştirilmiş bir sürümüdür. [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)ya da her iki ürünü de indirebilirsiniz. bu bölümdeki SQL örneklerin çoğu SQL Server localdb kullanır. SQL Server Management Studio (ssms), Visual Studio SQL Server Nesne Gezgini tarafından sağlandıklarından daha fazla işlevselliğe sahip tek başına bir veritabanı yönetim uygulamasıdır. SSMS 'yi önceki bağlantıdan edinebilirsiniz.
 
 ## <a name="oracle"></a>Oracle
 
-Oracle teknolojisinin ücretli veya ücretsiz bir sürümünü [Oracle Technology Network](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) sayfasından indirebilirsiniz. Entity Framework ve TableAdapters için tasarım zamanı desteği için, [Visual Studio Için Oracle geliştirici araçları](https://www.oracle.com/database/technologies/developer-tools/visual-studio/)gerekir. Oracle Instant Client dahil diğer resmi Oracle ürünleri, NuGet Paket Yöneticisi aracılığıyla kullanılabilir. Oracle [Online belgelerindeki](https://docs.oracle.com/cd/E11882_01/server.112/e10831/toc.htm)yönergeleri izleyerek Oracle örnek şemaları indirebilirsiniz.
+Oracle teknolojisinin ücretli veya ücretsiz bir sürümünü [Oracle Technology Network](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html) sayfasından indirebilirsiniz. Entity Framework ve TableAdapters için tasarım zamanı desteği için, [Visual Studio Için Oracle geliştirici araçlarına](https://www.oracle.com/database/technologies/developer-tools/visual-studio/)ihtiyacınız olacaktır. oracle ınstant Client dahil diğer resmi oracle ürünleri, NuGet Paket Yöneticisi üzerinden kullanılabilir. Oracle [Online belgelerindeki](https://docs.oracle.com/cd/E11882_01/server.112/e10831/toc.htm)yönergeleri izleyerek Oracle örnek şemaları indirebilirsiniz.
 
 ## <a name="mysql"></a>MySQL
 
-MySQL, kurumlar ve web sitelerinde yaygın olarak kullanılan, popüler bir açık kaynaklı veritabanı sistemidir. MySQL için karşıdan yüklemeler, Visual Studio için MySQL ve ilgili ürünler [Windows üzerinde MySQL](https://www.mysql.com/why-mysql/windows/)'de yer alır. Üçüncü taraflar, MySQL için çeşitli Visual Studio uzantıları ve tek başına yönetim uygulamaları sunar. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketlerini yönetme**).
+MySQL, kurumlar ve web sitelerinde yaygın olarak kullanılan, popüler bir açık kaynaklı veritabanı sistemidir. mysql için karşıdan yüklemeler, Visual Studio için mysql ve ilgili ürünler [Windows üzerinde mysql](https://www.mysql.com/why-mysql/windows/)' dir. üçüncü taraflar, MySQL için çeşitli Visual Studio uzantıları ve tek başına yönetim uygulamaları sunar. NuGet Paket Yöneticisi tekliflere (**araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketleri yönetme**) gidebilirsiniz.
 
 ## <a name="postgresql"></a>PostgreSQL
 
-PostgreSQL, ücretsiz, açık kaynaklı bir nesne ilişkisel veritabanı sistemidir. Windows 'a yüklemek için [PostgreSQL indirme sayfasından](https://www.postgresql.org/download/windows/)indirebilirsiniz. Kaynak koddan PostgreSQL de oluşturabilirsiniz. PostgreSQL çekirdek sistemi bir C dili arabirimi içerir. Birçok üçüncü taraf, .NET uygulamalarından PostgreSQL kullanmaya yönelik NuGet paketleri sağlar. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketlerini yönetme**). Belki de en popüler paket, [npgsql.org](http://www.npgsql.org)tarafından sağlanır.
+PostgreSQL, ücretsiz, açık kaynaklı bir nesne ilişkisel veritabanı sistemidir. Windows yüklemek için [postgresql indirme sayfasından](https://www.postgresql.org/download/windows/)indirebilirsiniz. Kaynak koddan PostgreSQL de oluşturabilirsiniz. PostgreSQL çekirdek sistemi bir C dili arabirimi içerir. birçok üçüncü taraf, .net uygulamalarından postgresql kullanmaya yönelik NuGet paketler sağlar. NuGet Paket Yöneticisi tekliflere (**araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketleri yönetme**) gidebilirsiniz. Belki de en popüler paket, [npgsql.org](http://www.npgsql.org)tarafından sağlanır.
 
 ## <a name="sqlite"></a>SQLite
 
-SQLite, uygulamanın kendi sürecinde çalışan gömülü bir SQL veritabanı altyapısıdır. Bunu, [SQLite indirme sayfasından](https://www.sqlite.org/download.html)indirebilirsiniz. SQLite için birçok üçüncü taraf NuGet paketi de mevcuttur. NuGet Paket Yöneticisi 'ndeki tekliflere gözatabilmeniz (**Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketlerini yönetme**).
+SQLite, uygulamanın kendi sürecinde çalışan gömülü bir SQL veritabanı altyapısıdır. Bunu, [SQLite indirme sayfasından](https://www.sqlite.org/download.html)indirebilirsiniz. SQLite için birçok üçüncü taraf NuGet paketi de mevcuttur. NuGet Paket Yöneticisi tekliflere (**araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet paketleri yönetme**) gidebilirsiniz.
 
 ## <a name="firebird"></a>Firebird
 
-Firebird açık kaynaklı bir SQL veritabanı sistemidir. Bunu, [Firebird indirme sayfasından](http://firebirdsql.org/en/downloads/)indirebilirsiniz. NuGet Paket Yöneticisi aracılığıyla bir ADO.NET veri sağlayıcısı mevcuttur.
+firebird açık kaynaklı bir SQL veritabanı sistemidir. Bunu, [Firebird indirme sayfasından](http://firebirdsql.org/en/downloads/)indirebilirsiniz. ADO.NET veri sağlayıcısı NuGet Paket Yöneticisi ile kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

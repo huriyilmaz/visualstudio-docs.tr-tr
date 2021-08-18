@@ -1,6 +1,6 @@
 ---
-description: Yavaş başlatılan yerleşik görevi temsil eder.
-title: AsyncTaskMethodBuilder &lt; TResult &gt; .m_task Alan | Microsoft Docs
+description: Geç tarafından başlatılan oluşturulmuş görevi temsil eder.
+title: AsyncTaskMethodBuilder &lt; TResult &gt; .m_task alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,21 +12,21 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 23a5f53a305d731bf35e4d5c9a634db86c93ac5b3f55c973ffa9808ffcfbc3a7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0ac2fdae74e497149648742dbca352f2e5d8cdb1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121293475"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089608"
 ---
 # <a name="asynctaskmethodbuilderlttresultgtm_task-field"></a>AsyncTaskMethodBuilder &lt; TResult &gt; .m_task alanı
-Yavaş başlatılan yerleşik görevi temsil eder.
+Geç tarafından başlatılan oluşturulmuş görevi temsil eder.
 
  **Ad alanı:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Derleme:** mscorlib (mscorlib.dll)
+ **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
 
- Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
+ bu iç üyeye .NET Framework erişemediği için, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,4 +36,4 @@ Yavaş başlatılan yerleşik görevi temsil eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>
-- [.NET Framework için paralel uzantı iç .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework için paralel uzantı iç işlevleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

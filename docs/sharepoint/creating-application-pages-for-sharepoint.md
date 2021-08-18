@@ -1,6 +1,6 @@
 ---
-title: SharePoint için uygulama sayfaları oluşturma | Microsoft Docs
-description: SharePoint için uygulama sayfaları oluşturun. Bir uygulama sayfası, SharePoint Web sitesinde kullanılmak üzere tasarlanan bir ASP.NET Web sayfasıdır.
+title: SharePoint | için Uygulama Sayfaları Oluşturma Microsoft Docs
+description: Uygulama sayfaları oluşturun SharePoint. Uygulama sayfası, ASP.NET web sitesinde kullanım için tasarlanmış bir web SharePoint sayfasıdır.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,64 +16,65 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 9ecd6573573d76c3e47a2c87a4f455cb9890fb31
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 035c3b952fd16dd8aa4adf3ffb95542fe39464ff
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99949187"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122149526"
 ---
 # <a name="create-application-pages-for-sharepoint"></a>SharePoint için uygulama sayfaları oluşturma
-  Bir *uygulama sayfası* , SharePoint Web sitesinde kullanılmak üzere tasarlanan bir ASP.NET Web sayfasıdır. Uygulama sayfaları, ASP.NET sayfasının özelleşmiş bir türüdür. Bir uygulama sayfası ve standart ASP.NET sayfası arasındaki birincil fark, bir uygulama sayfasının bir SharePoint ana sayfasıyla birleştirilmiş içerik içermesinden bir uygulamadır. Ana sayfa, uygulama sayfalarının bir sitedeki diğer sayfalarla aynı görünümü ve davranışı paylaşmasına olanak sağlar.
+  Uygulama *sayfası,* ASP.NET web sitesinde kullanım için tasarlanmış bir web SharePoint sayfasıdır. Uygulama sayfaları, özel bir ASP.NET t'tir. Bir uygulama sayfası ile standart bir ASP.NET arasındaki temel fark, bir uygulama sayfasının bir uygulama ana sayfasıyla birleştirilen SharePoint içeriği içerdiğidir. Ana sayfa, uygulama sayfalarının bir sitenin diğer sayfalarıyla aynı görünüm ve davranışı paylaşmalarını sağlar.
 
- Visual Studio, tasarımcı kullanarak uygulama sayfaları tasarlamanızı sağlar. Tasarımcı, ana sayfada tanımlanan her içerik yer tutucusu için bir içerik alanı görüntüler. Denetimleri bu içerik bölümlerine sürükleyerek uygulama sayfasını tasarlayabilirsiniz.
+ Visual Studio, bir tasarımcı kullanarak uygulama sayfaları tasarlamaya olanak sağlar. Tasarımcı, bir ana sayfada tanımlanan her içerik yer tutucusu için bir içerik alanı görüntüler. Denetimleri bu içerik alanlarına sürükleyerek uygulama sayfasını tasarleyebilirsiniz.
 
 ## <a name="application-pages"></a>Uygulama sayfaları
- Uygulama sayfaları, sunucudaki tüm sitelerde paylaşılır, ancak site sayfası bir siteye özeldir. Daha fazla bilgi için [SharePoint sayfa türleri](/previous-versions/office/developer/sharepoint-2010/aa979592(v=office.14)).
+ Uygulama sayfaları sunucu üzerinde tüm sitelerde paylaşılırken, site sayfası bir siteye özgü olur. Daha fazla bilgi için [SharePoint Türleri'ne bakın.](/previous-versions/office/developer/sharepoint-2010/aa979592(v=office.14))
 
- Varsayılan olarak, bir SharePoint sitesi oluştururken görüntülenen sayfaların çoğu site sayfalarıdır. Bir site sayfası, SharePoint sayfa kitaplığına eklenebilir. Kullanıcılar, SharePoint Designer gibi araçları kullanarak bir site sayfasını özelleştirebilir. Site sayfası, dinamik Web Bölümleri ve Web Bölümü bölgeleri gibi özellikleri de barındırabilir.
+ Varsayılan olarak, bir site oluşturmada görünen sayfaların SharePoint site sayfalarıdır. Site sayfası, bir site SharePoint eklenebilir. Kullanıcılar Site Tasarımcısı gibi araçları kullanarak bir site SharePoint özelleştirebilirsiniz. Bir site sayfası, dinamik veri alanları ve Web Web Bölümleri alanları gibi özellikleri de barındırabilirsiniz.
 
- Uygulama sayfaları bu işlemleri yapamazlar. Ancak, sayfanın özel kod içermesini istiyorsanız oluşturulacak en iyi sayfa türü bir uygulama sayfasıdır. Bir site sayfasına özel kod ekleyebilseniz de, kullanıcı SharePoint Designer gibi araçları kullanarak sayfayı özelleştiren kod çalışmayı durduruyor.
+ Uygulama sayfaları bunları yapılamaz. Ancak, uygulama sayfası, sayfanın özel kod içermesi için oluşturulabilir en iyi sayfa t t'dır. Bir site sayfasına özel kod ekleyebilirsiniz ancak kullanıcı sayfayı Özel Tasarımcı gibi araçları kullanarak özelleştirse de kod SharePoint durdurur.
 
 > [!NOTE]
-> Visual Studio, bir SharePoint sitesi için site sayfaları oluşturmanıza yardımcı olan şablonlar sağlamaz. Daha fazla bilgi için bkz. [SharePoint sayfa türleri](/previous-versions/office/developer/sharepoint-2010/aa979592(v=office.14)).
+> Visual Studio, bir site için site sayfaları oluşturmanıza yardımcı olacak SharePoint sağlamaz. Daha fazla bilgi için [bkz. SharePoint Türleri.](/previous-versions/office/developer/sharepoint-2010/aa979592(v=office.14))
 
 ## <a name="create-an-application-page"></a>Uygulama sayfası oluşturma
- Bir uygulama sayfası oluşturmak için bir SharePoint projesine bir **Uygulama sayfa** öğesi ekleyin. Bir uygulama sayfası oluşturduğunuzda, Visual Studio projenize aşağıdaki klasörleri ekler:
+ Uygulama sayfası oluşturmak için bir uygulama **projesine** Uygulama Sayfası SharePoint ekleyin. Bir uygulama sayfası sanız Visual Studio aşağıdaki klasörleri projenize ekler:
 
-|Klasör|Description|
+|Klasör|Açıklama|
 |------------|-----------------|
-|Düzenler|SharePoint dosya sisteminin _layouts sanal diziniyle eşlenir.|
-|Düzenler alt klasörü|Uygulama sayfasını oluşturan dosyaları içerir. Varsayılan olarak, bu klasör projenizle aynı ada sahiptir. Bu klasörü dilediğiniz zaman yeniden adlandırabilirsiniz. Projeyi çalıştırdığınızda, Visual Studio bu klasörü SharePoint dosya sisteminin _layouts sanal dizinine dağıtır.|
+|Düzenler|Haritalar sisteminin _layouts dizinine SharePoint seçin.|
+|Düzenler alt klasörü|Uygulama sayfasını içeren dosyaları içerir. Varsayılan olarak, bu klasör projenizin adıyla aynı adı kullanır. Bu klasörü istediğiniz zaman yeniden adlandırabilirsiniz. Projeyi çalıştırarak Visual Studio, bu klasörü _layouts dosya sisteminin SharePoint dizinine dağıtır.|
 
  Visual Studio projenize aşağıdaki dosyaları ekler:
 
-|Dosya|Description|
+|Dosya|Açıklama|
 |----------|-----------------|
-|ASP.NET sayfa dosyası (*. aspx*)|Sayfayı tanımlayan XML işaretlemesini içerir.|
-|Uygulama sayfası kod dosyası|Uygulama sayfasının arkasındaki kodu içerir. Bu dosyaya olayları işleyen kodu ekleyin.|
-|Uygulama sayfa Tasarımcısı kod dosyası|Tasarımcı tarafından oluşturulan kodu içerir. Bu dosyayı doğrudan düzenlemeyin.|
+|ASP.NET dosyası (*.aspx*)|Sayfayı tanımlayan XML işaretlemesini içerir.|
+|Uygulama sayfası kod dosyası|Uygulama sayfasının ardındaki kodu içerir. Bu dosyaya olayları işlemek için kod ekleyin.|
+|Uygulama sayfası tasarımcısı kod dosyası|Tasarımcı tarafından oluşturulan kodu içerir. Bu dosyayı doğrudan düzenleme.|
 
-## <a name="design-and-debug-an-application-page"></a>Uygulama sayfasında tasarım ve hata ayıklama
- Visual Studio 'daki tasarımcı görünümünü kullanarak bir uygulama sayfasının içeriğini tasarlayın. Bu tasarımcı, projenizde uygulama sayfasını açtığınızda görünür (bunu çift tıklayarak veya kısayol menüsünü açıp **Aç**' ı seçerek) ve ardından düzenleyicinin altındaki **Tasarım** düğmesini seçersiniz.
+## <a name="design-and-debug-an-application-page"></a>Uygulama sayfası tasarlama ve hata ayıklama
+ Uygulama sayfasının içeriğini, uygulama sayfasındaki tasarımcı görünümünü kullanarak Visual Studio. Bu tasarımcı, projenizin uygulama sayfasını açıp (buna çift tıklayarak veya kısayol menüsünü açıp **Aç'ı**  seçerek) ve ardından düzenleyicinin en altındaki Tasarım düğmesini seçerek görünür.
 
 > [!NOTE]
-> Sayfayı yalnızca tasarımcının **kaynak** görünümünde tasarlayabilirsiniz. Tasarımcı **Tasarım** görünümü uygulama sayfaları için devre dışı bırakılmıştır.
+> Sayfayı yalnızca tasarımcının **Kaynak görünümünde** tasarleyebilirsiniz. **Tasarımcının** Tasarım görünümü, uygulama sayfaları için devre dışı bırakıldı.
 
- Visual Studio 'da diğer SharePoint proje öğelerinde hata ayıklaması yaptığınız gibi, bir uygulama sayfasında hata ayıklayabilirsiniz. Visual Studio hata ayıklayıcısını başlattığınızda, Visual Studio SharePoint sitesini açar.
+ Uygulama sayfasındaki diğer proje öğelerinde olduğu gibi hata SharePoint hata Visual Studio. Hata ayıklayıcısını Visual Studio, Visual Studio siteyi SharePoint açar.
 
- Uygulama sayfasını görüntülemek için uygulama sayfasının konumuna el ile gitmeniz gerekir (örneğin: http://<em>SERVER_NAME</em>/_layouts/*Project_Name*/Applicationpage1.aspx).
+ Uygulama sayfasını görüntülemek için uygulama sayfasının konumunu el ile gitmelisiniz (örneğin: http://<em>Server_Name</em>/_layouts/*Project_Name*/ApplicationPage1.aspx).
 
- SharePoint projelerinde hata ayıklama hakkında daha fazla bilgi için bkz. [SharePoint Çözümlerinde Sorun giderme](../sharepoint/troubleshooting-sharepoint-solutions.md).
+ Projelerde hata ayıklama hakkında daha fazla bilgi SharePoint bkz. [SharePoint giderme.](../sharepoint/troubleshooting-sharepoint-solutions.md)
 
-## <a name="choose-a-master-page"></a>Ana sayfa seçin
- Varsayılan olarak, bir **uygulama sayfası** öğesi, projenizde hata ayıklamak için kullandığınız sitenin ana sayfasına başvurur. Bu sayfada v4. Master adı verilir ve SharePoint sitesinin **Ana sayfa galerisinde** listelenmiş olduğunu bulabilirsiniz.
+## <a name="choose-a-master-page"></a>Ana sayfa seçme
+ Varsayılan olarak, **bir Uygulama Sayfası** öğesi projenizin hata ayıklaması için kullanmakta olduğu sitenin ana sayfasına başvurur. Bu sayfa v4.master olarak adlandırılmıştır ve sitenin Ana Sayfa **Galerisinde** SharePoint bulabilirsiniz.
 
- Uygulama öğesinin özniteliğini ayarlayarak uygulama sayfası tarafından hangi ana sayfanın kullanıldığını açıkça değiştirebilirsiniz `MasterPageFile` `Page` . (Örneğin: `MasterPageFile="~/_layouts/applicationv4.master"` ). Aslında, SharePoint sunucusunda dinamik ana sayfalar etkinleştirilmemişse bu özniteliği ayarlamanız gerekir. SharePoint 'teki ana sayfalar hakkında daha fazla bilgi için bkz. [ana sayfalar](/previous-versions/office/developer/sharepoint-2010/ms443795(v=office.14)).
+ Uygulama öğesinin özniteliğini ayarerek uygulama sayfası tarafından kullanılan ana `MasterPageFile` sayfayı açıkça `Page` değiştirebilirsiniz. (Örneğin: `MasterPageFile="~/_layouts/applicationv4.master"` ). Aslında, dinamik ana sayfalar sunucu üzerinde etkinleştirilmediyse bu özniteliği SharePoint gerekir. Ana sayfalarda ana sayfalar hakkında daha fazla SharePoint bkz. [Ana Sayfalar.](/previous-versions/office/developer/sharepoint-2010/ms443795(v=office.14))
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Derinlemesine SharePoint Foundation geliştirme](/previous-versions/office/developer/sharepoint-2010/ee539092(v=office.14))
+- [SharePoint Derinlemesine Temel Geliştirme](/previous-versions/office/developer/sharepoint-2010/ee539092(v=office.14))
 - [ASP.NET’e genel bakış](/aspnet/overview)
 - [ASP.NET Web Sayfaları](/aspnet/web-pages/index)

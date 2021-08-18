@@ -1,6 +1,6 @@
 ---
-description: Geçerli modüller numaralamalarının bir kopyasını ayrı bir nesne olarak döndürür.
-title: IEnumDebugModules2::Clone | Microsoft Docs
+description: Geçerli modüller numaralandırmasının bir kopyasını ayrı bir nesne olarak döndürür.
+title: 'IEnumDebugModules2:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7ad2c824122db30d12bb6226ca8dc2589ae8710c4b6920a840f95802e95bf22b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 70574d0e75cd124e11e0e084c8fdfe7d84bd33fc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389156"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070538"
 ---
 # <a name="ienumdebugmodules2clone"></a>IEnumDebugModules2::Clone
-Geçerli numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
+Geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[out] Bu numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
+dışı Bu numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralamanın kopyası, bu yöntemin çağrıldı olduğu sırada özgün ile aynı durumla aynıdır. Ancak kopyaların ve özgünlerin durumları ayrıdır ve tek tek değiştirilebilir.
+ Numaralandırmanın kopyası, bu yöntemin çağrılışında orijinal ile aynı duruma sahiptir. Bununla birlikte, kopyanın ve özgün durumlarının durumları ayrıdır ve tek tek değiştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)

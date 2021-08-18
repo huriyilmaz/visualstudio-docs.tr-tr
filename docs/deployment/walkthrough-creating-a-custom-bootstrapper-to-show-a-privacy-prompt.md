@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: ed118f13d4c968e4cbac7c86f23eedcda09cbb19d0b9afb737a8847d9ee8852e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5f0c34a56b610ee65f2f9d8d4ac506224950c302
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390881"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133620"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>İzlenecek yol: Bir gizlilik istemiyle özel bir önyükleyici oluşturma
 yeni dosya sürümlerine ve derleme sürümlerine sahip derlemeler kullanılabilir olduğunda otomatik olarak güncelleştirilecek ClickOnce uygulamaları yapılandırabilirsiniz. Müşterilerinizin Bu davranışa izin vermesini sağlamak için bir gizlilik istemi görüntüleyebilirsiniz. Ardından, uygulamaya otomatik olarak güncelleştirme izni verip vermeyeceğinizi seçebilirler. Uygulamanın otomatik olarak güncelleştirmesine izin verilmiyorsa, yüklemez.

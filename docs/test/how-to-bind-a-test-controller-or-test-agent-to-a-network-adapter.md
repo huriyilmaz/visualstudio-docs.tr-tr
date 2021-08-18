@@ -1,6 +1,6 @@
 ---
-title: Test denetleyicisi/test aracısını bir ağ bağdaştırıcısına bağlama
-description: Birden çok ağ bağdaştırıcısı için yüklenmesi durumunda, bir IP adresi kullanarak bir test denetleyicisini veya test aracısını bir ağ bağdaştırıcısına bağlamayı öğrenin.
+title: Test denetleyicisini/test aracısını ağ bağdaştırıcısına bağlama
+description: Birden çok ağ bağdaştırıcısı için yüklenmiş olması durumunda bir IP adresi kullanarak bir test denetleyicisini veya test aracısını bir ağ bağdaştırıcısına bağlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -13,53 +13,54 @@ ms.assetid: 7eb9290a-f9f6-4e41-9caa-796fcfaf0610
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: f35e870e625a0f494692d082494ee0c2511ffd8f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: a1ea5e3729eaa9b52d825540fe392b61519a5f60
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966844"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123027"
 ---
-# <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>Nasıl yapılır: bir test denetleyicisini veya test aracısını ağ bağdaştırıcısına bağlama
+# <a name="how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter"></a>Nasıl kullanılır: Bir test denetleyicisini veya test aracısını ağ bağdaştırıcısına bağlama
 
 Test denetleyicisi veya test aracısı yazılımının yüklü olduğu bir bilgisayarda birden çok ağ bağdaştırıcısı varsa, bu test denetleyicisini veya test aracısını tanımlamak için bilgisayarın adı yerine IP adresini belirtmeniz gerekir.
 
 > [!WARNING]
-> Bir test aracısı ayarlamaya çalıştığınızda şu hatayı alabilirsiniz:
+> Bir test aracısı ayarlamaya çalışsanız aşağıdaki hatayı alabilirsiniz:
 >
-> **Hata 8110. Belirtilen denetleyici bilgisayarına bağlanılamıyor veya denetleyici nesnesine erişilemiyor**
+> **Hata 8110. Belirtilen denetleyici bilgisayara bağlanamıyor veya denetleyici nesnesine erişe**
 >
-> Bu hata, test denetleyicisinin birden fazla ağ bağdaştırıcısı olan bir bilgisayara yüklenmesi nedeniyle oluşabilir. Aracıları başarıyla yüklemek de mümkündür ve bir test çalıştırmayı deneene kadar bu sorunu görmez.
+> Bu hatanın nedeni, test denetleyicisinin birden fazla ağ bağdaştırıcısı olan bir bilgisayara yükleyerek olması olabilir. Aracıları başarıyla yüklemek de mümkündür ve siz bir test çalıştırmaya çalışmadan bu sorunu görene kadar bu sorunu görenem.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="bind-a-test-controller-to-a-specific-network-adapter"></a>Belirli bir ağ bağdaştırıcısına bir test denetleyicisi bağlama
+## <a name="bind-a-test-controller-to-a-specific-network-adapter"></a>Test denetleyicisini belirli bir ağ bağdaştırıcısına bağlama
 
 ### <a name="to-obtain-the-ip-addresses-of-the-network-adapters"></a>Ağ bağdaştırıcılarının IP adreslerini almak için
 
-1. Microsoft Windows 'da **Başlat**' ı seçin, **aramaya başla** kutusuna tıklayın, **cmd** yazın ve **ENTER**' a tıklayın.
+1. Microsoft Windows'da **Başlat'ı** seçin, Başlangıç **Araması kutusuna** seçin, **cmd yazın** ve enter tarak **seçin.**
 
 2. **ipconfig /all** yazın.
 
-     Ağ bağdaştırıcılarınız için IP adresleri görüntülenir. Denetleyicinizi bağlamak istediğiniz ağ bağdaştırıcısının IP adresini kaydedin.
+     Ağ bağdaştırıcıların IP adresleri görüntülenir. Denetleyicinizi bağlamak istediğiniz ağ bağdaştırıcısının IP adresini kaydedin.
 
 ### <a name="to-bind-a-network-adapter-to-a-test-controller"></a>Bir ağ bağdaştırıcısını bir test denetleyicisine bağlamak için
 
-1. Microsoft Windows 'da **Başlat**' ı seçin, **aramaya başla** kutusunda, **Services. msc** yazın ve ardından **ENTER**' u seçin.
+1. Microsoft Windows'den Başlat'ı seçin,  Başlangıç Araması kutusuna **seçin, services.msc** yazın ve enter tarak **seçin.**
 
      **Hizmetler** iletişim kutusu görüntülenir.
 
-2. Sonuçlar bölmesinde, **ad** sütununun altında, **Visual Studio test denetleyicisi** hizmeti ' ne sağ tıklayın ve ardından **Durdur**' u seçin.
+2. Sonuçlar bölmesinde, Ad sütununu **altında** Test Denetleyicisi hizmetinin Visual Studio **ve** ardından Durdur'u **seçin.**
 
      -veya-
 
-     Yükseltilmiş bir komut istemi açın ve aşağıdaki komutu bir komutta çalıştırın:
+     Yükseltilmiş bir komut istemi açın ve komutta aşağıdaki komutu çalıştırın:
 
      `net stop vsttcontroller`
 
-3. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017 \\ \<edition> \Common7\IDE* içinde bulunan *QTCcontroller.exe.config* XML yapılandırma dosyasını açın.
+3. *%ProgramFiles(x86)%\Microsoft Visual Studio\2017 \\ \<edition> \Common7\IDE* konumunda bulunanQTCcontroller.exe.config *XML* yapılandırma dosyasını açın.
 
-4. `<appSettings>`etiketi bulun.
+4. etiketi `<appSettings>` bulun.
 
     ```xml
     <appSettings>
@@ -73,39 +74,39 @@ Test denetleyicisi veya test aracısı yazılımının yüklü olduğu bir bilgi
     </appSettings>
     ```
 
-5. `BindTo`Bölümünde kullanılacak ağ bağdaştırıcısını belirtmek için anahtarı ekleyin `<appSettings>` .
+5. bölümünde `BindTo` hangi ağ bağdaştırıcısını kullanmak üzere belirtebilirsiniz `<appSettings>` anahtarını ekleyin.
 
     ```xml
             <add key="BindTo" value="<YOUR IP ADDRESS>"/>
     </appSettings>
     ```
 
-6. Test denetleyicisi hizmetini başlatın. Bunu yapmak için, komut isteminde aşağıdaki komutu çalıştırın:
+6. Test denetleyicisi hizmetini başlatın. Bunu yapmak için komut isteminde aşağıdaki komutu çalıştırın:
 
     `net start vsttcontroller`
 
     > [!WARNING]
     > Test aracısını denetleyiciye bağlamak için test aracısı yüklemesini yeniden çalıştırmanız gerekir. Bu kez, denetleyici adı yerine denetleyicinin IP adresini belirtin.
 
-     Bu, denetleyici, aracı hizmeti ve Aracı işlemi için geçerlidir. Özelliği, birden `BindTo` fazla ağ bağdaştırıcısı olan bir bilgisayarda çalışan her işlem için ayarlanmalıdır. Özelliği ayarlama yordamı, `BindTo` Test denetleyicisi için bu konuda daha önce belirtildiği gibi, üç işlem için de aynıdır.
+     Bu denetleyici, aracı hizmeti ve aracı işlemi için geçerlidir. özelliği, `BindTo` birden fazla ağ bağdaştırıcısına sahip bir bilgisayarda çalışan her işlem için ayar olmalıdır. Özelliğini ayarlama yordamı, test denetleyicisi için bu konuda daha önce belirtildiği gibi üç `BindTo` işlem için de aynıdır.
 
-### <a name="to-bind-a-network-interface-card-to-a-test-agent"></a>Bir ağ arabirimi kartını bir test aracısına bağlamak için
+### <a name="to-bind-a-network-interface-card-to-a-test-agent"></a>Bir ağ arabirimi kartını test aracısına bağlamak için
 
-1. Microsoft Windows 'da **Başlat**' ı seçin, **aramaya başla** kutusunda, **Services. msc** yazın ve ardından **ENTER**' u seçin.
+1. Microsoft Windows'den Başlat'ı seçin,  Başlangıç Araması kutusuna **seçin, services.msc** yazın ve enter tarak **seçin.**
 
     **Hizmetler** iletişim kutusu görüntülenir.
 
-2. Sonuçlar bölmesinde, **ad** sütununun altında, **Visual Studio Test Aracısı** hizmetine sağ tıklayın ve ardından **Durdur**' u seçin.
+2. Sonuçlar bölmesinde, Ad sütununu **altında** Test Aracısı hizmetine **sağ Visual Studio ve** ardından Durdur'u **seçin.**
 
      -veya-
 
-     Yükseltilmiş bir komut istemi açın ve aşağıdaki komutu bir komutta çalıştırın:
+     Yükseltilmiş bir komut istemi açın ve komutta aşağıdaki komutu çalıştırın:
 
-     **net stop vsttagent**
+     **net stop vsgent**
 
-3. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017 \\ \<edition> \Common7\IDE* içinde bulunan *QTAgentService.exe.config* XML yapılandırma dosyasını açın.
+3. *%ProgramFiles(x86)%\Microsoft Visual Studio\2017 \\ \<edition> \Common7\IDE* konumunda bulunanQTAgentService.exe.config *XML* yapılandırma dosyasını açın.
 
-4. `<appSettings>`etiketi bulun.
+4. etiketi `<appSettings>` bulun.
 
     ```xml
     <appSettings>
@@ -119,20 +120,20 @@ Test denetleyicisi veya test aracısı yazılımının yüklü olduğu bir bilgi
     </appSettings>  </appSettings>
     ```
 
-5. `BindTo`Bölümünde kullanılacak ağ bağdaştırıcısını belirtmek için anahtarı ekleyin `<appSettings>` .
+5. bölümünde `BindTo` hangi ağ bağdaştırıcısını kullanmak üzere belirtebilirsiniz `<appSettings>` anahtarını ekleyin.
 
     ```xml
             <add key="BindTo" value="<YOUR IP ADDRESS>"/>
     </appSettings>
     ```
 
-6. Test Aracısı hizmetini başlatın. Bunu yapmak için, komut isteminde aşağıdaki komutu çalıştırın:
+6. Test aracısı hizmetini başlatma. Bunu yapmak için komut isteminde aşağıdaki komutu çalıştırın:
 
     `net start vsttagent`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Test aracılarını yükleme ve yapılandırma](../test/lab-management/install-configure-test-agents.md)
-- [Yük testi günlük ayarlarını değiştir](../test/modify-load-test-logging-settings.md)
+- [Yük testi günlük ayarlarını değiştirme](../test/modify-load-test-logging-settings.md)
 - [Test denetleyicileri ve test aracıları için bağlantı noktalarını yapılandırma](../test/configure-ports-for-test-controllers-and-test-agents.md)
-- [Nasıl yapılır: test denetleyicileri ve test aracıları için zaman aşımı sürelerini belirtme](../test/how-to-specify-timeout-periods-for-test-controllers-and-test-agents.md)
+- [Nasıl kullanılır: Test denetleyicileri ve test aracıları için zaman aşımı dönemleri belirtme](../test/how-to-specify-timeout-periods-for-test-controllers-and-test-agents.md)
