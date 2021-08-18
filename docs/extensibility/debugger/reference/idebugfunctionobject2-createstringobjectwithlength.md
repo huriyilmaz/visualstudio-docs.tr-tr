@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 813d223931339044cc0538f891a563857a6e3d76
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5a2407caa182656f219194b3bb0ea6299c65c5d96bcb7c50021cf679cd868dd5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122138204"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121451984"
 ---
 # <a name="idebugfunctionobject2createstringobjectwithlength"></a>IDebugFunctionObject2::CreateStringObjectWithLength
 Belirtilen uzunluğa sahip bir dize nesnesi oluşturur.

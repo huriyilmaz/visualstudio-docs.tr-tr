@@ -1,6 +1,6 @@
 ---
-title: Windows görünümünde pencere ara | Microsoft Docs
-description: Visual Studio ' de onun tutamacını, başlığını, sınıfını veya başlık ve sınıfının bir birleşimini kullanarak Spy + + aracının Windows görünümünde belirli bir pencereyi arayın.
+title: Windows View | Microsoft Docs
+description: Tanıtıcısını, açıklamalı alt yazısını, sınıfını veya Windows içinde açıklamalı alt yazı ve sınıf birleşimini kullanarak Spy++ aracının Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,41 +13,41 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: afadf34d121a5746deda017041c13d170c871392cee482e55866655f485e7530
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7321a7ba358f47d02ba78769883765ebec555b4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453494"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097135"
 ---
 # <a name="how-to-search-for-a-window-in-windows-view"></a>Nasıl Yapılır: Pencereler Görünümünde Pencere Arama
-Windows görünümünde belirli bir pencereyi, onun tanıtıcısını, başlığını, sınıfını veya başlık ve sınıfının bir birleşimini arama ölçütü olarak kullanarak arayabilirsiniz. Aramanın başlangıç yönünü de belirtebilirsiniz. İletişim kutusundaki alanlar, pencere ağacındaki seçili pencerenin özniteliklerini gösterir.
+Tanıtıcısını, açıklamalı alt yazısını, sınıfını veya açıklamalı alt yazısını ve sınıfını arama ölçütü olarak kullanarak belirli bir pencereyi Windows görünümde arayabilirsiniz. Ayrıca aramanın başlangıç yönünü de belirtsiniz. İletişim kutusundaki alanlar, pencere ağacında seçili pencerenin özniteliklerini gösterir.
 
- İkinci düzeye (masaüstünün alt öğesi olan tüm pencereler) genişletilmiş ağacıyla başlayın, böylece Masaüstü düzeyi pencereleri sınıf adı ve başlığıyla tanımlayabilmenizi sağlayabilirsiniz. Masaüstü düzeyi bir pencere seçtikten sonra, belirli bir alt pencereyi bulmak için bu düzeyi genişletebilirsiniz.
+ Masaüstü düzeyindeki pencereleri sınıf adlarına ve başlığına göre tanımlayabilirsiniz. Ağacın ikinci düzeye genişleterek (masaüstünü küçük olan tüm pencereler) başlatma. Masaüstü düzeyinde bir pencere seçtikten sonra, belirli bir alt pencereyi bulmak için bu düzeyi genişletebilirsiniz.
 
-### <a name="to-search-for-a-window-in-windows-view"></a>Windows görünümünde pencere aramak için
+### <a name="to-search-for-a-window-in-windows-view"></a>Görünümde bir pencereyi Windows için
 
-1. windows 'u Spy + +, [Windows görünüm](../debugger/windows-view.md) penceresi ve hedef pencere görünür olacak şekilde düzenleyin.
+1. Pencerelerinizi Spy++, Windows [Görünümü penceresi](../debugger/windows-view.md) ve hedef pencere görünür olacak şekilde düzenleme.
 
-2. **Arama** menüsünde, **pencereyi bul**' u seçin.
+2. Arama **menüsünden** Pencere **Bul'a tıklayın.**
 
-    [Pencere arama Iletişim kutusu](../debugger/window-search-dialog-box.md) açılır.
+    Pencere [Araması İletişim Kutusu](../debugger/window-search-dialog-box.md) açılır.
 
    > [!TIP]
-   > Ekran dağınıklığını azaltmak için Spy 'ı **Gizle** seçeneğini belirleyin. Bu seçenek, ana Spy + + penceresini gizleme ve yalnızca **pencere arama** iletişim kutusunu diğer uygulamalarınızın üzerine görünür halde bırakır. **Tamam** ' ı veya **iptal**' i tıklattığınızda veya **Spy + +** seçeneğini belirlediğinizde, Spy + + ana penceresi geri yüklenir.
+   > Ekran dağınıklığı azaltmak için Spy'ı **Gizle seçeneğini** belirleyin. Bu seçenek ana Spy++ penceresini açar ve yalnızca **diğer** uygulamalarınızı görünür durumda bırakır. Spy++ ana penceresi Tamam'a veya **İptal'e** **tıklarsanız** veya Spy++ gizle seçeneğini **temizleyseniz geri** yüklenir.
 
-3. **Bulucu aracını** hedef pencerenin üzerine sürükleyin. Aracı sürüklerken **pencere ara** iletişim kutusu seçili penceredeki ayrıntıları görüntüler.
+3. Bulıcı **Aracı'nı** hedef pencerenin üzerine sürükleyin. Siz aracı sürüklerken, **Pencere Araması** iletişim kutusunda seçilen pencereyle ilgili ayrıntılar görüntülenir.
 
-   - veya
+   - veya -
 
-     İstediğiniz pencerenin tanıtıcısını biliyorsanız (örneğin, hata ayıklayıcıdan), bunu **tanıtıcı** kutusuna yazabilirsiniz.
+     Pencerenin tanıtıcısını biliyorsanız (örneğin, hata ayıklayıcısından), bunu Tanıtıcı kutusuna **yazabilirsiniz.**
 
-   - veya
+   - veya -
 
-     İstediğiniz pencerenin başlığını ve/veya sınıfını biliyorsanız, bunları **başlık** ve **sınıf** metin kutularına yazabilir ve **tanıtıcı** metin kutusunu temizleyebilirsiniz.
+     Pencerenin açıklamalı alt yazısını ve/veya sınıfını biliyorsanız, bunları  **Açıklamalı** Alt Yazı ve Sınıf metin kutularına yazarak Tutamaç metin **kutusunu** temizebilirsiniz.
 
-4. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
+4. **Aramanın** ilk **yönü** için Yukarı veya Aşağı'ya seçin.
 
 5. **Tamam**'a tıklayın.
 
-    eşleşen bir pencere bulunursa, [Windows görünümü](../debugger/windows-view.md) penceresinde vurgulanır.
+    Eşleşen bir pencere bulunursa, Görünüm penceresinde [Windows vurgulanır.](../debugger/windows-view.md)

@@ -1,5 +1,5 @@
 ---
-description: Alınacak dosyaların ad türünü belirtir.
+description: Alınan dosyaların ad türünü belirtir.
 title: GETNAME_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 2f9f1679-e9e8-4c9c-ac90-aa07bfe69914
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a65c29a1925c8d0c1de97f87707f191713c2bb03
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b95c08ab5adc5140bfcfc21b9e9fa7cc9f46c78a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054601"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065000"
 ---
 # <a name="getname_type"></a>GETNAME_TYPE
-Alınacak dosyaların ad türünü belirtir.
+Alınan dosyaların ad türünü belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,35 +56,35 @@ public enum enum_GETNAME_TYPE {
 
 ## <a name="fields"></a>Alanlar
 `GN_NAME`\
-Belge veya bağlamın kolay bir adını belirtir.
+Belgenin veya bağlamın kolay adını belirtir.
 
 `GN_FILENAME`\
 Belgenin veya bağlamın tam yolunu belirtir.
 
 `GN_BASENAME`\
-Belge veya bağlamın tam yolu yerine bir temel dosya adı belirtir.
+Belgenin veya bağlamın tam yolu yerine temel dosya adını belirtir.
 
 `GN_MONIKERNAME`\
-Bir ad biçiminde belge veya bağlamın benzersiz bir adını belirtir.
+Belgenin veya bağlamın benzersiz bir adını bilinen ad olarak belirtir.
 
 `GN_URL`\
-Belge veya bağlamın URL adını belirtir.
+Belgenin veya bağlamın URL adını belirtir.
 
 `GN_TITLE`\
-Bir belge varsa, belgenin bir başlığını belirtir.
+Varsa belgenin başlığını belirtir.
 
 `GN_STARTPAGEURL`\
-İşlem için başlangıç sayfası URL 'sini alır.
+İşlemler için başlangıç sayfası URL'sini alır.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler, döndürülecek ad türünü belirtmek için [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)ve [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) yöntemlerine parametre olarak geçirilir.
+Bu değerler, ne tür bir ad getirilsin belirtmek için [GetName,](../../../extensibility/debugger/reference/idebugdocument2-getname.md) [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)ve [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) yöntemlerine parametre olarak geçirilsin.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

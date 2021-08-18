@@ -11,14 +11,15 @@ ms.assetid: 9941d520-e203-46c0-83c3-b3a967f4fc59
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c5f887b13195bdde133c4bca845291b1255b99ea
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 94f49b793f253e0a121dbf70c4d2a506d8cc00f10e23cb14e6fce8a3f48154d0
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156988"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121344695"
 ---
 # <a name="idiasessionsymsareequiv"></a>IDiaSession::symsAreEquiv
 İki sembolün eşdeğer olup olmadığını denetler.

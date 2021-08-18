@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: abf87936b1dd439b5f0c143e7e920c3556cd9f79db540b4600ca5cf3077b55fe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8c2660c430ac18f337c61275297eb385216904cf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360527"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035156"
 ---
 # <a name="idebugengineprogram2"></a>IDebugEngineProgram2
 Bu arabirim çok iş parçacıklı hata ayıklama desteği sağlar.

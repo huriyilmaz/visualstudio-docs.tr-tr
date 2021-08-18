@@ -1,6 +1,6 @@
 ---
-description: Program veritabanı dosyası (uzantı .pdb), projeyi derleme ve bağlama sırasında toplanan tür ve sembolik hata ayıklama bilgilerini içeren bir ikili dosyadır.
-title: sorgusunu. Pdb Dosya | Microsoft Docs
+description: Program veritabanı dosyası (uzantısı. pdb), projeyi derleyip bağlama sırasında toplanan tür ve simgesel hata ayıklama bilgilerini içeren bir ikili dosyadır.
+title: Sorgulanıyor. Pdb dosyası | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,19 +15,19 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 02002589c309bcf4a639af27609e58d9688cb153c564b679b188e0535dd7d720
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4da3527b8f6834a7fb36077e73ec193204803d80
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379689"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097631"
 ---
 # <a name="querying-the-pdb-file"></a>.Pdb Dosyasını Sorgulama
-Program veritabanı dosyası (uzantı .pdb), projeyi derleme ve bağlama sırasında toplanan tür ve sembolik hata ayıklama bilgilerini içeren bir ikili dosyadır. /ZI veya **/Zi** ile bir C/C++ programı derleseniz veya  [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] **/debug** seçeneğiyle bir , veya programı derleseniz bir PDB dosyası oluşturulur. Nesne dosyaları, hata ayıklama bilgileri için .pdb dosyasına başvurular içerir. pdb dosyaları hakkında daha fazla bilgi için bkz. [PDB Dosyaları.](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)) Dia uygulaması, yürütülebilir bir görüntüdeki çeşitli semboller, nesneler ve veri öğeleri hakkında ayrıntıları almak için aşağıdaki genel adımları kullanabilir.
+Program veritabanı dosyası (uzantısı. pdb), projeyi derleyip bağlama sırasında toplanan tür ve simgesel hata ayıklama bilgilerini içeren bir ikili dosyadır. **/Zi** veya **/Zi** ya da [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] **/Debug** seçeneğiyle bir C/C++ programı derlerken bir PDB dosyası oluşturulur. Nesne dosyaları hata ayıklama bilgileri için. pdb dosyasına başvuruları içerir. Pdb dosyaları hakkında daha fazla bilgi için bkz. [pdb dosyaları](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Bir DIA uygulaması, yürütülebilir bir görüntü içindeki çeşitli semboller, nesneler ve veri öğeleri hakkında ayrıntıları almak için aşağıdaki genel adımları kullanabilir.
 
-### <a name="to-query-the-pdb-file"></a>.pdb dosyasını sorgulamak için
+### <a name="to-query-the-pdb-file"></a>. Pdb dosyasını sorgulamak için
 
-1. [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) arabirimi oluşturarak bir veri kaynağı alın.
+1. [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) arabirimi oluşturarak veri kaynağı alma.
 
     ```C++
     CComPtr<IDiaDataSource> pSource;
@@ -43,7 +43,7 @@ Program veritabanı dosyası (uzantı .pdb), projeyi derleme ve bağlama sıras�
     }
     ```
 
-2. Hata [ayıklama bilgilerini yüklemek için IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) veya [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) çağrısında bulunur.
+2. Hata ayıklama bilgilerini yüklemek için [IDiaDataSource:: loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) veya [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) öğesini çağırın.
 
     ```C++
     wchar_t wszFilename[ _MAX_PATH ];
@@ -57,7 +57,7 @@ Program veritabanı dosyası (uzantı .pdb), projeyi derleme ve bağlama sıras�
     }
     ```
 
-3. Hata [ayıklama bilgilerine erişim kazanmak için IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) çağrısıyla bir [IDiaSession](../../debugger/debug-interface-access/idiasession.md) açın.
+3. Hata ayıklama bilgilerine erişim kazanmak için [IDiaDataSource:: openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) öğesini çağırıp bir [IDiaSession](../../debugger/debug-interface-access/idiasession.md) açın.
 
     ```C++
     CComPtr<IDiaSession> psession;
@@ -67,7 +67,7 @@ Program veritabanı dosyası (uzantı .pdb), projeyi derleme ve bağlama sıras�
     }
     ```
 
-4. Veri kaynağında sembolleri `IDiaSession` sorgulamak için içinde yöntemlerini kullanın.
+4. `IDiaSession`Veri kaynağındaki sembolleri sorgulamak için içindeki yöntemleri kullanın.
 
     ```C++
     CComPtr<IDiaSymbol> pglobal;
@@ -77,7 +77,7 @@ Program veritabanı dosyası (uzantı .pdb), projeyi derleme ve bağlama sıras�
     }
     ```
 
-5. Arabirimleri `IDiaEnum*` kullanarak hata ayıklama bilgilerini veya sembolleri veya diğer öğeleri numaralar ve taramalar.
+5. `IDiaEnum*`Simgeleri veya hata ayıklama bilgilerinin diğer öğelerini numaralandırmak ve taramak için arabirimlerini kullanın.
 
     ```C++
     CComPtr<IDiaEnumTables> pTables;

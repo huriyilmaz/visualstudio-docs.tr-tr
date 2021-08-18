@@ -1,6 +1,6 @@
 ---
-description: Şu anda etkin olan tüm System.Threading.Tasks.TaskScheduler nesnelerini içeren bir diziyi döndürür.
-title: GetTaskSchedulersForDebugger Metodu | Microsoft Docs
+description: Şu anda etkin olan tüm System. Threading. Tasks. TaskScheduler nesnelerinin dizisini alır.
+title: GetTaskSchedulersForDebugger yöntemi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.lasthandoff: 08/12/2021
 ms.locfileid: "121417801"
 ---
 # <a name="gettaskschedulersfordebugger-method"></a>GetTaskSchedulersForDebugger Metodu
-Şu anda etkin olan tüm <xref:System.Threading.Tasks.TaskScheduler> nesnelerin dizisini döndürür.
+Şu anda etkin olan tüm nesnelerin bir dizisini alır <xref:System.Threading.Tasks.TaskScheduler> .
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Derleme:** mscorlib *(mscorlib.dll*)
+ **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
+ bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ ms.locfileid: "121417801"
 ```
 
 ## <a name="return-value"></a>Döndürülen değer
- Şu anda bu <xref:System.Threading.Tasks.TaskScheduler> içinde etkin olan tüm nesnelerin <xref:System.AppDomain> dizisi.
+ <xref:System.Threading.Tasks.TaskScheduler>Bu, şu anda etkin olan tüm nesneler dizisi <xref:System.AppDomain> .
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem iş parçacığı güvenli değildir ve bunu diğer örnekleriyle eşzamanlı olarak kullanmamalı. <xref:System.Threading.Tasks.TaskScheduler> Bu yöntemi yalnızca hata ayıklayıcı diğer tüm iş parçacıklarını askıya alınmış olduğunda bir hata ayıklayıcısından çağır.
+ Bu yöntem iş parçacığı açısından güvenli değildir ve diğer örnekleri ile aynı anda kullanmamalısınız <xref:System.Threading.Tasks.TaskScheduler> . Bu yöntemi hata ayıklayıcı 'dan yalnızca hata ayıklayıcı diğer tüm iş parçacıklarını askıya aldığı zaman çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [TaskScheduler sınıfı](../../extensibility/debugger/taskscheduler-class-internal-members.md)

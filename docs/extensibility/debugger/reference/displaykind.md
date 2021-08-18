@@ -1,5 +1,5 @@
 ---
-description: Bir IDebugField nesnesinden alınan ve kullanıcıya görüntülenmek için bilgi türlerini temsil eden geçerli değerleri numaralar.
+description: Bir IDebugField nesnesinden gerçekleştirilecek bilgi türlerini temsil eden geçerli değerleri sıralar ve kullanıcıya görüntüler.
 title: DisplayKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 11d6cd9390b115b583df5d83db102af0253bf13384d7e612af65edfc6536ccd6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3f491751cb3ef14537ab4be112722c957ea0fc20
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378035"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065039"
 ---
 # <a name="displaykind"></a>DisplayKind
-[Bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinden alınan ve kullanıcıya görüntülenmek için bilgi türlerini temsil eden geçerli değerleri numaralar.
+Bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinden gerçekleştirilecek bilgi türlerini temsil eden geçerli değerleri sıralar ve kullanıcıya görüntüler.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,14 +54,14 @@ Alanın değeri.
 Alanın adı.
 
 `DisplayKind_Type`\
-Alanın türü.
+Alan türü.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst Bilgi: Ee.h
+Üstbilgi: ee. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

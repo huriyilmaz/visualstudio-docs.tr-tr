@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 0579586cbc1a86c13833d5eb97765b68449390c6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 23da2e2ed7a83041b0a3372a169fe2635bc3e134fbb0f63fc49996fd980a0a41
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122054983"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121428477"
 ---
 # <a name="converttoabsolutepath-task"></a>ConvertToAbsolutePath görevi
 

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 42a42c36eef04f1e858f2025703a74501e3c785a0bb5f2e17cd3b4e891ecf793
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3676390d81e4f95d523d6164f2664ec8337c1a32
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121401901"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125952"
 ---
 # <a name="ieevisualizerservicegetcustomviewerlist"></a>IEEVisualizerService::GetCustomViewerList
 Bu yöntem, bu hizmetin bildiği tür görselleştiricilerinin listesini döndürür.
@@ -64,7 +64,7 @@ int GetCustomViewerList(
  Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-- [GetCustomViewerList,](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) tür görselleştirici desteği kapsamında isteği bu yönteme iletir. İfade değerlendirici aynı tür için özel görüntüleyiciler de sağlarsa, bu özel görüntüleyiciler için uygun şekilde [doldurulmuş DEBUG_CUSTOM_VIEWER](../../../extensibility/debugger/reference/debug-custom-viewer.md) yapıları listeye ekleyebilirsiniz. [GetCustomViewerCount'ın bu ek görüntüleyicileri](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) yansıtıyor olduğundan emin olun.
+- [GetCustomViewerList,](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) tür görselleştirici desteği kapsamında isteği bu yönteme iletir. İfade değerlendirici aynı tür için özel görüntüleyiciler de sağlarsa, bu özel görüntüleyiciler için uygun şekilde [doldurulmuş](../../../extensibility/debugger/reference/debug-custom-viewer.md) DEBUG_CUSTOM_VIEWER yapıları listeye ekleyebilirsiniz. [GetCustomViewerCount'ın bu ek görüntüleyicileri](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) yansıtıyor olduğundan emin olun.
 
  [Görselleştiricilerle görüntüleyiciler arasındaki farklar hakkında ayrıntılı](../../../extensibility/debugger/type-visualizer-and-custom-viewer.md) bilgi için bkz. Tür Görselleştirici ve Özel Görüntüleyici.
 

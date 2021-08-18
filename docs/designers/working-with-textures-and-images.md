@@ -1,6 +1,6 @@
 ---
 title: Dokularla ve Görüntülerle Çalışma
-description: Visual Studio 'da görüntü düzenleyicisini kullanarak, DirectX uygulama geliştirmede kullanılanlar gibi biçimlerdeki dokuları ve görüntüleri oluşturma ve değiştirme hakkında bilgi edinin.
+description: DirectX uygulama geliştirmede kullanılanlar gibi biçimlerdeki dokuları ve görüntüleri oluşturmak ve değiştirmek için Visual Studio görüntü düzenleyicisini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,18 +8,19 @@ ms.assetid: b9fbc8fa-66d1-4055-8460-24d8b8fbe43e
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 21d3b402bbffd9528755098131ff9ed1ee636906
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 37a5d3b0766013b127aa939943f7811202d935db
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908150"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035351"
 ---
 # <a name="work-with-textures-and-images"></a>Dokularla ve görüntülerle çalışma
 
-Dokuları ve görüntüleri oluşturmak ve değiştirmek için Visual Studio 'daki görüntü düzenleyicisini kullanabilirsiniz. Görüntü Düzenleyicisi, DirectX uygulama geliştirmede kullanılanlarla benzer zengin doku ve görüntü biçimlerini destekler.
+dokuları ve görüntüleri oluşturmak ve değiştirmek için Visual Studio görüntü düzenleyicisini kullanabilirsiniz. Görüntü Düzenleyicisi, DirectX uygulama geliştirmede kullanılanlarla benzer zengin doku ve görüntü biçimlerini destekler.
 
 > [!NOTE]
 > Görüntü Düzenleyicisi, simgeler veya imleçler gibi düşük renkli görüntüleri desteklemez. Bu tür resimleri oluşturmak veya değiştirmek için, [simgeler Için görüntü düzenleyicisini kullanın (C++)](/cpp/windows/image-editor-for-icons).

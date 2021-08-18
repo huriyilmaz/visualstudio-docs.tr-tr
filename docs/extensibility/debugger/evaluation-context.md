@@ -11,14 +11,15 @@ ms.assetid: 008a20c7-1b27-4013-bf96-d6a3f510da02
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c3ab6fe53ad288089dc88587e06547573d80cb9
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 001a7a5b1e4d044e389317900a9192586575b44ed19caa5e09aa6ceca30a9c15
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898584"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417827"
 ---
 # <a name="evaluation-context"></a>Değerlendirme bağlamı
 > [!IMPORTANT]

@@ -1,6 +1,6 @@
 ---
 title: require-nuget
-description: devinit Aracı,-NuGet gerektirir.
+description: devinit tool require-nuget.
 ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
@@ -11,33 +11,33 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: c49f77fe8b32ce6617b34d522e36cc5988d0c33c
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: fe907e78b694022a39768edf38c0f869234d51e7e1b6bdbbab62b1c797ac682d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672291"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121343233"
 ---
 # <a name="require-nuget"></a>require-nuget
 
 > [!IMPORTANT]
-> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren Visual Studio 2019'dan GitHub Codespaces'a bağlanma desteklemeyecek ve bu özel önizleme sonuçlandırıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için Visual Studio geliştirici topluluğu forummize katılın.
 
-`require-nuget`Araç NUGET CLI 'yı indirir ve öğesine ekler `PATH` . NuGet CLı, proje dosyalarında değişiklik yapmadan paketleri yüklemek, oluşturmak, yayımlamak ve yönetmek için NuGet işlevlerinin tam kapsamını sağlar. NuGet CLı hakkında [buradan](/nuget/reference/nuget-exe-cli-reference)daha fazla bilgi edinin.
+Araç, `require-nuget` NuGet CLI'sini indirir ve 'ye `PATH` ekler. NuGet CLI, proje dosyalarında hiçbir NuGet yapmadan paketleri yüklemek, oluşturmak, yayımlamak ve yönetmek için gereken tüm işlevleri sunar. CLI hakkında daha fazla NuGet burada [okuyun.](/nuget/reference/nuget-exe-cli-reference)
 
 ## <a name="usage"></a>Kullanım
 
-Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak açıklanan [varsayılan](#default-behavior) davranışı izler.
+Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak [açıklanmış varsayılan](#default-behavior) davranışı takip eder.
 
 | Ad                                             | Tür   | Gerekli | Değer                                                                                |
 |--------------------------------------------------|--------|----------|--------------------------------------------------------------------------------------|
-| **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                |
-| [**girişinin**](#input)                              | dize | No       | Yüklenecek NuGet CLı sürümü. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
-| [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.                     |
+| **yorumlar**                                     | dize | No       | İsteğe bağlı açıklamalar özelliği. Kullanılmadı.                                                |
+| [**Giriş**](#input)                              | dize | No       | NuGet Yüklensin CLI sürümü. Ayrıntılar [için](#input) aşağıdaki girişe bakın. |
+| [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar [için aşağıdaki](#additional-options) Ek seçenekler'e bakın.                     |
 
 ### <a name="input"></a>Giriş
 
-, `input` Yüklenecek NUGET CLI sürümü için kullanılan isteğe bağlı bir özelliktir. `input`Atlanırsa, en son CLI sürümü yüklenir.
+, `input` NuGet CLI sürümünün belirli bir sürümünü yüklemek için kullanılan isteğe bağlı bir özelliktir. `input`Atlanırsa, CLI'nın en son sürümü yüklenir.
 
 ### <a name="additional-options"></a>Ek seçenekler
 
@@ -45,12 +45,12 @@ Kullanılmadı.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracın varsayılan davranışı, `require-nuget` NUGET CLI 'nın en son sürümünü yüklemektir.
+Aracın varsayılan davranışı, `require-nuget` NuGet CLI'nin en son sürümünü yüklemektir.
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-nuget` `.devinit.json` .
+Aşağıda, kullanarak çalıştırmaya bir `require-nuget` örnek `.devinit.json` verilmiştir.
 
-#### <a name="devinitjson-that-will-install-a-specified-version-of-nuget"></a>.devinit.js, NuGet 'in belirtilen bir sürümünü yükleyecek:
+#### <a name="devinitjson-that-will-install-a-specified-version-of-nuget"></a>.devinit.jsbelirtilen sürümü yükecek olan NuGet:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",

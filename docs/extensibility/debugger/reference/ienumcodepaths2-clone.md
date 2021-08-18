@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d4b79db67011992d6cd6b98a419644604696f1c0475ee12af2d080de9aaab4a3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e288cc1b7ba10cfcda9fac2684ef0804b018f5b0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121291824"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125848"
 ---
 # <a name="ienumcodepaths2clone"></a>IEnumCodePaths2::Clone
 Geçerli numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.

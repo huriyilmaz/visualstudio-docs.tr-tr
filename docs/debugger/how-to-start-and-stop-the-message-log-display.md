@@ -1,6 +1,6 @@
 ---
 title: Ileti günlüğü görüntüsünü başlatma ve durdurma | Microsoft Docs
-description: Spy + + aracıyla ve Visual Studio ile hata ayıklarken ileti günlüğü görüntülemeyi başlatma ve durdurma hakkında bilgi edinin.
+description: Spy + + aracıyla hata ayıklarken ileti günlüğü görüntülemeyi başlatma ve durdurma ve Visual Studio anlayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,14 +12,15 @@ ms.assetid: 3036611c-acf3-42b6-b5d7-1a0c653f6af9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c7655a2cea41ee77cdcc3e99d5ba7bbc5fd3a3ea
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e47b99eb9e6e0eb5ca8763b6e3bc269cb216a5defd1e38c21ccc1ea62ce62008
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99896657"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453442"
 ---
 # <a name="how-to-start-and-stop-the-message-log-display"></a>Nasıl yapılır: İleti Günlüğü Görüntülemeyi Başlatma ve Durdurma
 Bir [Iletiler görünümü](../debugger/messages-view.md) penceresi etkinken, Spy + + **iletiler** menüsünde günlüğe kaydetmeyi **Başlat** veya **günlüğü durdur** seçeneği görünür ve ilgili günlük **kaydını Başlat** veya **günlüğü durdur** araç çubuğu düğmesi etkin olur.

@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 75287e487cceb485ba3a20cd96f629285db06d89ebc5019e885ff8156dedf172
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 53770eefa791fb9b54273a1ce91bdfcf62af74f2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121325836"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036234"
 ---
 # <a name="idiasymbolget_basesymbol"></a>IDiaSymbol::get_baseSymbol
 İşaretçinin temel alınarak simgeyi alan.

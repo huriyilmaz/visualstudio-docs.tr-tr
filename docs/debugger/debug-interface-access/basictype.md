@@ -1,6 +1,6 @@
 ---
 title: BasicType | Microsoft Docs
-description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında bir sembolün temel türünü belirten BasicType numaralandırması hakkında başvuru bilgileri bulun.
+description: Hata ayıklama arabirimi erişim SDK'sı içinde bir sembolün temel türünü belirten BasicType Visual Studio başvuru bilgilerini bulun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,17 +12,18 @@ ms.assetid: 19ae53ba-cd6e-47b6-9f94-27ae663ce955
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a86a25d02b1aa51e49d80b71dbd37b2aa4c2d103
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 033ab7c7d2c77470393425b0862cfbed24f7b06a1c6d6e11f364f5337c4487e3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99865591"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345693"
 ---
 # <a name="basictype"></a>BasicType
-Simgenin temel türünü belirtir.
+Sembolün temel türünü belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,47 +53,47 @@ enum BasicType {
 ```
 
 ## <a name="elements"></a>Öğeler
-btNoType temel tür belirtilmedi.
+btNoType Temel tür belirtilmemiş.
 
-btVoid temel türü bir `void` .
+btVoid Basic türü bir `void` 'dır.
 
-btChar temel türü bir `char` (C/C++ türü).
+btChar Basic türü bir `char` (C/C++ türü).
 
-btWChar temel türü, geniş bir (Unicode) karakterdir ( `WCHAR` ).
+btWChar Basic türü geniş (Unicode) bir karakterdir ( `WCHAR` ).
 
-btInt temel türü `signed int` (C/C++ türü).
+btInt Basic türü `signed int` (C/C++ türü).
 
-Btuınt temel türü `unsigned int` (C/C++ türü).
+btUInt Basic türü `unsigned int` (C/C++ türü).
 
-btFloat temel türü bir kayan noktalı sayıdır ( `FLOAT` ).
+btFloat Basic türü bir kayan nokta numarasıdır ( `FLOAT` ).
 
-btBCD temel türü ikili kodlanmış bir Decimal ( `BCD` ).
+btBCD Temel türü ikili kodlu ondalıktır ( `BCD` ).
 
-btBool temel türü bir Boole değeri ( `BOOL` ).
+btBool Basic türü bir Boolean ( ). `BOOL`
 
-btLong temel türü bir `long int` (C/C++ türü).
+btLong Basic türü bir `long int` (C/C++ türü).
 
-btULong temel türü bir `unsigned long int` (C/C++ türü).
+btULong Basic türü bir `unsigned long int` (C/C++ türü).
 
-btCurrency temel türü para birimidir.
+btCurrency Temel türü para birimidir.
 
-btDate temel türü tarih/saat ( `DATE` ).
+btDate Temel türü tarih/saat `DATE` ( ).
 
-btVariant temel türü bir değişken türü yapısıdır ( `VARIANT` ).
+btVariant Basic türü bir değişken türü yapısıdır ( `VARIANT` ).
 
-btComplex temel türü karmaşık bir sayıdır.
+btComplex Basic türü karmaşık bir sayıdır.
 
-btBit temel türü bir bittir.
+btBit Basic türü biraz.
 
-btBSTR temel türü temel veya ikili dizedir ( `BSTR` ).
+btBSTR Temel türü, temel veya ikili dizedir ( `BSTR` ).
 
-btHresult temel türü bir `HRESULT` .
+btHresult Basic türü bir `HRESULT` 'dır.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu Numaralandırmadaki değerler [IDiaSymbol:: get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) yöntemi tarafından döndürülür.
+Bu numaralamada yer alan değerler [IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md) yöntemi tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: cvconst. h
+Üst bilgi: cvconst.h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)

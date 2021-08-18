@@ -1,5 +1,5 @@
 ---
-description: Bir programın durumunun ne kadarını (örneğin, çalışan iş parçacıkları, yığın çerçeveleri ve geçerli yönerge adresi) döküm olarak belirtir.
+description: Bir programın durumunun ne kadarının (iş parçacıkları, yığın çerçeveleri ve geçerli yönerge adresi gibi) dökümünü belirtir.
 title: DUMPTYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3054d86c1d516f79cbf259eaaf4add7ae1befc51
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 10815aece24f5fd95990a71406322b5de2b634ee1a82568dd622db9edbbfd1fb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122104631"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452347"
 ---
 # <a name="dumptype"></a>DUMPTYPE
-Bir programın durumunun ne kadarını (örneğin, çalışan iş parçacıkları, yığın çerçeveleri ve geçerli yönerge adresi) döküm olarak belirtir.
+Bir programın durumunun ne kadarının (iş parçacıkları, yığın çerçeveleri ve geçerli yönerge adresi gibi) dökümünü belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,20 +46,20 @@ public enum enum_DUMPTYPE {
 
 ## <a name="fields"></a>Alanlar
 `DUMP_MINIDUMP`\
-Küçük, sıkıştırılmış bir döküm belirtir.
+Küçük, kompakt bir döküm belirtir.
 
 `DUMP_FULLDUMP`\
-Büyük ve eksiksiz bir döküm belirtir.
+Büyük ve tamamlanmış bir döküm belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-[WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md) yöntemine bağımsız değişken olarak geçirildi.
+[WriteDump](../../../extensibility/debugger/reference/idebugprogram2-writedump.md) yöntemine bir bağımsız değişken olarak geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

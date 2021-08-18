@@ -1,6 +1,6 @@
 ---
 title: Grafik olay çağrısı yığını | Microsoft Docs
-description: Sorunlu grafik olayları ve uygulamanızın kaynak kodu arasındaki ilişkiyi eşlemek için Visual Studio Grafik Çözümleyicisi 'deki grafik olay çağrı yığınını gözden geçirin.
+description: sorunlu grafik olayları ve uygulamanızın kaynak kodu arasındaki ilişkiyi eşlemek için Visual Studio grafik çözümleyicisi 'ndeki grafik olay çağrı yığınını gözden geçirin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,24 +10,25 @@ ms.assetid: 8a30168d-8b39-4de1-b094-c7356ba101a3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c7c8d415da1de7be9cafdad6e5dea531dd59a7b4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a5c69340445f36e9044557bc4dbeb60a92fcf0580178d464938022ce51ba0ece
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99845145"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121454083"
 ---
 # <a name="graphics-event-call-stack"></a>Grafik Olay Çağırma Yığını
-Visual Studio Grafik Çözümleyicisi 'deki grafik olay çağrısı yığını, sorunlu grafik olayları ve uygulamanızın kaynak kodu arasındaki ilişkiyi eşlemenizi sağlar.
+Visual Studio grafik çözümleyicisi 'ndeki grafik olay çağrısı yığını, sorunlu grafik olayları ve uygulamanızın kaynak kodu arasındaki ilişkiyi eşlemenizi sağlar.
 
  Bu olay çağrı yığını penceresidir:
 
  ![Bir DrawIndexed olayından önceki çağrı yığını.](media/gfx_diag_demo_graphics_event_call_stack_orientation.png "gfx_diag_demo_graphics_event_call_stack_orientation")
 
 ## <a name="understanding-the-graphics-event-call-stack"></a>Grafik olay çağrı yığınını anlama
- Belirli bir Direct3D olayına işaret eden yürütmenin akışını anlamak için olay çağrı yığınını kullanabilirsiniz. Visual Studio çağrı yığını penceresine benzer, ancak çalışan bir uygulamada geçerli iş parçacığının geçerli çağrı yığınını görüntülemek yerine, seçilen Direct3D olayı gerçekleştiğinde çağrı yığınını görüntüler. Olay çağrı yığınında, çevreleyen kodu incelemek için seçilen Direct3D olayının çağrı sitesine atlayabilirsiniz.
+ Belirli bir Direct3D olayına işaret eden yürütmenin akışını anlamak için olay çağrı yığınını kullanabilirsiniz. geçerli iş parçacığının geçerli çağrı yığınını, çalışan bir uygulamada görüntülemek yerine, seçilen Direct3D olayı gerçekleştiğinde çağrı yığınını göstermek yerine Visual Studio çağrı yığını penceresine benzer. Olay çağrı yığınında, çevreleyen kodu incelemek için seçilen Direct3D olayının çağrı sitesine atlayabilirsiniz.
 
  Bir sorun olayının kaynaklandığı kod yolunu tanımlamak için olay çağrı yığınını kullanarak, sorunun olası kaynaklarını belirlemek için kod tabanınızın bilgisini kullanabilir veya uygulamanın veya olay parametrelerinin durumunun hatalı davranmasına neden olduğunu incelemek üzere geleneksel hata ayıklama tekniklerini kullanabilmeniz için uygulamanızın kaynak kodunda kesme noktaları ekleyebilirsiniz. Bu İnceleme, kaynak kodda yalnızca işleme sorunları olarak bildirilen sorunları bulmanıza yardımcı olabilir.
 

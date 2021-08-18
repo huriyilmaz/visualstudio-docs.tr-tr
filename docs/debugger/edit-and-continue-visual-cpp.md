@@ -17,21 +17,22 @@ ms.assetid: 1815251e-a877-433e-9e5e-69bd9ba254c7
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c4fd6d5214211318e2271418425a117a73eb0ec
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1f4bae68781cec00a61cb67f08450cc978418099
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99871890"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065731"
 ---
 # <a name="edit-and-continue-c"></a>Düzenle ve Devam Et (C++)
 C++ projelerinde Düzenle ve devam et ' i kullanabilirsiniz. Düzenle ve devam et sınırlamaları hakkında daha fazla bilgi için bkz. [desteklenen kod değişiklikleri (C++)](../debugger/supported-code-changes-cpp.md) .
 
-Visual Studio 2015 güncelleştirme 3 geliştirmeleri hakkında daha fazla bilgi için bkz. [Visual studio 2015 güncelleştirme 3 ' te C++ Düzenle ve devam et](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/).
+Visual Studio 2015 güncelleştirme 3 geliştirmeleri hakkında daha fazla bilgi için, bkz. [Visual Studio 2015 güncelleştirme 3 ' te C++ düzenle ve devam et](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/).
 
- Visual Studio 2013 güncelleştirme 3 ' te tanıtılan [/Zo (En Iyi duruma getirilmiş hata ayıklama)](/cpp/build/reference/zo-enhance-optimized-debugging) derleyici seçeneği, [/OD (devre dışı bırak (Hata Ayıkla))](/cpp/build/reference/od-disable-debug) seçeneği olmadan derlenen ikili dosyalar için. pdb (sembol) dosyalarına ek bilgi ekler.
+ Visual Studio 2013 güncelleştirme 3 ' te tanıtılan [/zo (en iyi duruma getirilmiş hata ayıklama)](/cpp/build/reference/zo-enhance-optimized-debugging) derleyici seçeneği, [/od (devre dışı bırak (hata ayıkla))](/cpp/build/reference/od-disable-debug) seçeneği olmadan derlenen ikili dosyalar için. pdb (sembol) dosyalarına ek bilgi ekler.
 
  **/Zo** düzenleme ve devam etmeyi devre dışı bırakır. Bkz. [nasıl yapılır: Iyileştirilmiş kodda hata ayıklama](../debugger/how-to-debug-optimized-code.md).
 
@@ -39,7 +40,7 @@ Visual Studio 2015 güncelleştirme 3 geliştirmeleri hakkında daha fazla bilgi
  Geçerli hata ayıklama oturumu sırasında uygulanmasını istemediğiniz kodda düzenleme yapıyorsanız otomatik Düzenle ve devam et çağrısını devre dışı bırakmak isteyebilirsiniz. Ayrıca otomatik düzenlemeyi yeniden etkinleştirip devam edebilirsiniz.
 
 > [!IMPORTANT]
-> Gerekli derleme ayarları ve özellik uyumluluğu hakkında diğer bilgiler için bkz. [Visual Studio 2015 güncelleştirme 3 ' te C++ Düzenle ve devam et](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/).
+> gerekli derleme ayarları ve özellik uyumluluğu hakkında diğer bilgiler için, bkz. [Visual Studio 2015 güncelleştirme 3 ' te C++ düzenle ve devam et](https://devblogs.microsoft.com/cppblog/c-edit-and-continue-in-visual-studio-2015-update-3/).
 
 1. Hata ayıklama oturumundaysanız, hata ayıklamayı durdurun (**SHIFT + F5**).
 
@@ -51,7 +52,7 @@ Visual Studio 2015 güncelleştirme 3 geliştirmeleri hakkında daha fazla bilgi
 
 5. **Düzenle ve devam et** grubunda **yerel düzenlemeyi etkinleştir ve devam et** onay kutusunu işaretleyin veya temizleyin.
 
-   Bu ayarın değiştirilmesi, üzerinde çalıştığınız tüm projeleri etkiler. Bu ayarı değiştirdikten sonra uygulamanızı yeniden oluşturmanız gerekmez. Uygulamanızı komut satırından veya bir Makefile 'dan oluşturursanız, ancak Visual Studio ortamında hata ayıklaması yaparsanız, **/zı** seçeneğini ayarlarsanız Düzenle ve devam et ' i kullanmaya devam edebilirsiniz.
+   Bu ayarın değiştirilmesi, üzerinde çalıştığınız tüm projeleri etkiler. Bu ayarı değiştirdikten sonra uygulamanızı yeniden oluşturmanız gerekmez. uygulamanızı komut satırından veya bir derleme görevleri dosyasında oluşturursanız, ancak Visual Studio ortamda hata ayıklaması yaparsanız, **/zi** seçeneğini ayarlarsanız düzenle ve devam et ' i kullanmaya devam edebilirsiniz.
 
 ## <a name="how-to-apply-code-changes-explicitly"></a><a name="BKMK_How_to_apply_code_changes_explicitly"></a> Kod değişikliklerini açıkça uygulama
  C++ ' da Düzenle ve devam et, kod değişikliklerini iki şekilde uygulayabilir. Kod değişiklikleri, bir yürütme komutu seçtiğinizde ya da açıkça **kod değişikliklerini Uygula** komutu kullanılarak örtük bir şekilde uygulanabilir.

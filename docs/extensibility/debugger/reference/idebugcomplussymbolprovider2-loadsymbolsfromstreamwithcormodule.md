@@ -12,17 +12,18 @@ ms.assetid: f79b894f-52c4-43c2-9a68-c71536451f6c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e7dd252fae60c60e65d9f164739c6f9a577aa9e0
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 47a412cdd825fe85872652a5e240165af3c42524f82908fe6f2de7fa6f326349
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094152"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121342342"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromstreamwithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromStreamWithCorModule
 **ICorDebugModule** nesnesi verilen bir veri akışından hata ayıklama sembolleri yükleyin.

@@ -8,12 +8,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
-ms.openlocfilehash: 83e90eb6c0105dc21ce07bf4c12e8d8c2fbe2fb3012ad9a2df8f79942ebda6ab
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9443fbf7abe1098d56c41bf25dadca7ff60ced79
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121421200"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082315"
 ---
 # <a name="publish-webapplicationvm-windows-powershell-script"></a>Publish-WebApplicationVM (Windows PowerShell betiği)
 Bir sanal makineye bir Web uygulaması dağıtır. Komut dosyası, mevcut değilse, Azure aboneliğinizde gerekli kaynakları oluşturur.
@@ -107,7 +107,7 @@ Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
 | Joker karakter kabul edilsin mi? |yanlış |
 
 ## <a name="remarks"></a>Açıklamalar
-Geliştirme ve Test ortamları oluşturmak için betiği kullanma hakkında eksiksiz bir açıklama için bkz. Geliştirme ve Test Ortamlarına Yayımlamak Windows PowerShell [Betikleri Kullanma.](vs-azure-tools-publishing-using-powershell-scripts.md)
+Geliştirme ve Test ortamları oluşturmak için betiği kullanma hakkında eksiksiz bir açıklama için, bkz. [Using Windows PowerShell Scripts to Publish to Dev and Test Environments](vs-azure-tools-publishing-using-powershell-scripts.md).
 
 JSON yapılandırma dosyası, nelerin dağıtılacağına ilişkin ayrıntıları belirtir. Projeyi oluşturulduğunda belirttiğiniz ad, benzeşm grubu, VHD görüntüsü ve sanal makinenin boyutu gibi bilgileri içerir. Ayrıca sanal makinede uç noktaları, sağlanmayacak veritabanlarını (varsa) ve web dağıtım parametrelerini içerir. Aşağıdaki kod, örnek bir JSON yapılandırma dosyasını gösterir:
 

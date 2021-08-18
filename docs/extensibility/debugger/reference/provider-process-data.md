@@ -11,17 +11,18 @@ ms.assetid: ec2362ed-4a0c-4a09-9d66-8ff04e4f41ee
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a6c48c87f92fde487b9a008c5db45f75eb026f83
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c9345080eddebe1a7bf596263de93e46464114cc17e27b06c05a1bbe28adef6c
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079520"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121338221"
 ---
 # <a name="provider_process_data"></a>PROVIDER_PROCESS_DATA
 Bu yapı, bir makinede çalışan süreçler hakkında bilgi sağlar.

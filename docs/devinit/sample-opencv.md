@@ -1,6 +1,6 @@
 ---
 title: OpenCV
-description: OpenCV deposu için hem Linux hem de Windows 'u hedeflemek için devinit kullanan örnek özelleştirme.
+description: opencv deposu için hem Linux hem de Windows hedeflemek için devinit kullanan örnek özelleştirme.
 ms.date: 08/28/2020
 ms.topic: reference
 author: andysterland
@@ -11,21 +11,21 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 319f560e4661f12acbef941692e5fd2c257c25ee
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 2d7750d6a77965527b4bf396afd8de094762821923c543a06d184509c238b205
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672469"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452838"
 ---
 # <a name="opencv"></a>OpenCV
 
 > [!IMPORTANT]
-> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
 
-Bu örnekte, [OpenCV/OpenCV](https://github.com/opencv/opencv)gibi çok platformlu projelerle geliştirmek Için [GitHub codespaces](https://github.com/features/codespaces) 'ın nasıl özelleştirileceği gösterilmektedir.
+bu örnekte, [opencv/opencv](https://github.com/opencv/opencv)gibi çok platformlu projelerle geliştirmek için [GitHub codespaces](https://github.com/features/codespaces) 'ın nasıl özelleştirileceği gösterilmektedir.
 
-Aşağıdaki özelleştirmeler [Microsoft/OpenCV](https://github.com/microsoft/opencv) çatalından zaten uygulanmış ve Windows ve Ubuntu hedeflemesi oluşturmaya izin veriyor.
+aşağıdaki özelleştirmeler [microsoft/opencv](https://github.com/microsoft/opencv) çatalından zaten uygulanmış ve Windows ve ubuntu hedeflemesi oluşturmaya izin veriyor.
 
 ## <a name="customization-with-devcontainerjson-and-devinitjson"></a>Üzerinde devcontainer.jsve devinit.jsile özelleştirme
 
@@ -68,9 +68,9 @@ _devinit.js_ , [devinit](devinit-and-codespaces.md) aracı tarafından tüketile
 Bu örnekte, [WSL-install](tool-wsl-install.md) Aracı, Ubuntu 20,04 çalıştıran bir WSL örneği oluşturmak ve bunu temel C++ geliştirme araçlarıyla sağlamak için kullanılır.
 ## <a name="targeting-windows-or-linux"></a>Windows veya Linux 'u hedefleme
 
-Her zaman adlı bir varsayılan derleme yapılandırması hedeflemesi oluşturulur `x64-Debug` .
+Windows varsayılan derleme yapılandırması hedefleme her zaman adlı olarak oluşturulur `x64-Debug` .
 
-Yukarıdaki belirtilen dosyaları ekleyerek, Codespace örnek oluşturma sırasında, Visual Studio [Bağlantı Yöneticisi](/cpp/linux/connect-to-your-remote-linux-computer)'nde yenı bir SSH bağlantısı sağlar ve yapılandırma SEÇICIDE, SSH bağlantısı aracılığıyla Ubuntu örneğini hedefleyen yeni bir yapılandırma oluşturur.
+yukarıdaki belirtilen dosyaları ekleyerek, codespace örnek oluşturma sırasında, Visual Studio [bağlantı yöneticisi](/cpp/linux/connect-to-your-remote-linux-computer)'nde yeni bir SSH bağlantısı sağlar ve yapılandırma seçicide, ssh bağlantısı aracılığıyla ubuntu örneğini hedefleyen yeni bir yapılandırma oluşturur.
 
 ![Ubuntu 'ı hedefleyen yapılandırma](media/wsl-ssh-linux-configuration.png).
 

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9753bfa50bba639a2eba5931131be8212e0e96d3ed5024801e6e019f7ef711df
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3e1b781ed584714e149e1373f8be82e596aac464
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121292630"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035078"
 ---
 # <a name="idebugerrorevent2"></a>IDebugErrorEvent2
 Bu arabirim kullanıcıya bildirilecek bir hata iletisi belirtir.

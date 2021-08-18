@@ -13,11 +13,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 0d7cdb4487464eccfebd09792c1cbb4d78acd56a
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: ae631a4c652d2bcd28ef8888cd4db261b7ba90e0d16e92e5317a989d8092a8de
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89315451"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "122035584"
 ---
 ClickOnce

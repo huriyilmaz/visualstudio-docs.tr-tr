@@ -1,6 +1,6 @@
 ---
 title: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma
-description: Windows Communication Foundation (WCF) veri hizmeti başvurusunun nasıl ekleneceğini, güncelleştirilmesini veya kaldırılacağını inceleyin.
+description: Communication Foundation (WCF) veri hizmeti başvurusu Windows, güncelleştirme veya kaldırmayı gözden geçirme.
 ms.date: 11/04/2016
 ms.custom: SEO-VS-2020
 ms.topic: how-to
@@ -17,148 +17,148 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 46834208ab567ce4071c15a488ed14285328371e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: ffe1d6cea14568f9d8859e005ee56bf45910348488864fe65f24c8b0512890de
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036972"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121347212"
 ---
-# <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Nasıl yapılır: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma
+# <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Nasıl kullanılır: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma
 
 ::: moniker range="vs-2017"
-Bir *hizmet başvurusu* , projenin bir veya daha fazla erişmesini sağlar [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] . Yerel ağda veya Internet 'te geçerli çözümde arama yapmak için **hizmet başvurusu Ekle** iletişim kutusunu kullanın [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] .
+Hizmet *başvurusu, projenin* bir veya daha fazla 'a erişmesini [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] sağlar. Geçerli **Hizmet Başvurusu Ekle,** yerel olarak, yerel bir ağ üzerinde veya İnternet'te arama yapmak için Hizmet Başvurusu Ekle iletişim [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] kutusunu kullanın.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmenizi sağlayan **Microsoft WCF Web Service Reference Provider** erişmek için **Çözüm Gezgini** **bağlı hizmetler** düğümünü kullanabilirsiniz.
+Microsoft WCF Web Service Reference Provider'a  erişmek **için** Çözüm Gezgini'daki Bağlı Hizmetler düğümünü kullanabilirsiniz. Bu Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmenize olanak sağlar.
 ::: moniker-end
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="add-a-wcf-service-reference"></a>WCF hizmet başvurusu ekleme
+## <a name="add-a-wcf-service-reference"></a>WCF hizmeti başvurusu ekleme
 
-### <a name="to-add-a-reference-to-an-external-service"></a>Bir dış hizmete başvuru eklemek için
-
-::: moniker range="vs-2017"
-
-1. **Çözüm Gezgini**, hizmeti eklemek istediğiniz projenin adına sağ tıklayın ve ardından **hizmet başvurusu Ekle**' e tıklayın.
-
-   **Hizmet başvurusu Ekle** iletişim kutusu görüntülenir.
-
-1. **Adres** kutusuna hizmetin URL 'sini girin ve ardından hizmeti aramak için **Git** ' e tıklayın. Hizmet Kullanıcı adı ve parola güvenliği uygularsa, sizden Kullanıcı adı ve parola istenebilir.
-
-    > [!NOTE]
-    > Yalnızca güvenilir bir kaynaktan hizmetlere başvurmanız gerekir. Güvenilmeyen bir kaynaktan başvuruları eklemek güvenliği tehlikeye atabilir.
-
-     Ayrıca, geçerli hizmet meta verilerinin bulunduğu önceki 15 URL 'Leri depolayan **Adres** listesinden URL 'yi seçebilirsiniz.
-
-     Arama gerçekleştirilirken bir ilerleme çubuğu görüntülenir. **Durdur**' a tıklayarak aramayı dilediğiniz zaman durdurabilirsiniz.
-
-1. **Hizmetler** listesinde, kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
-
-1. **Ad alanı** kutusunda, başvuru için kullanmak istediğiniz ad alanını girin.
-
-1. Başvuruyu projeye eklemek için **Tamam** ' ı tıklatın.
-
-     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app.config* dosyasına eklenir.
-::: moniker-end
-::: moniker range=">=vs-2019"
-1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne çift tıklayın veya dokunun.
-
-   **Hizmetleri Yapılandır** sekmesi açılır.
-
-1. **Microsoft WCF Web Service Reference Provider** seçin.
-
-   **WCF Web Service Reference yapılandır** iletişim kutusu görüntülenir.
-
-   ![WCF Web hizmeti sağlayıcısı iletişim kutusunun ekran görüntüsü](media/vs-2019/configure-wcf-web-service-reference-dialog.png)
-
-
-1. **URI** kutusuna hizmetin URL 'sini girin ve ardından hizmeti aramak için **Git** ' e tıklayın. Hizmet Kullanıcı adı ve parola güvenliği uygularsa, sizden Kullanıcı adı ve parola istenebilir.
-
-    > [!NOTE]
-    > Yalnızca güvenilir bir kaynaktan hizmetlere başvurmanız gerekir. Güvenilmeyen bir kaynaktan başvuruları eklemek güvenliği tehlikeye atabilir.
-
-     Ayrıca, geçerli hizmet meta verilerinin bulunduğu önceki 15 URL 'Leri depolayan **URI** listesinden URL 'yi seçebilirsiniz.
-
-     Arama gerçekleştirilirken bir ilerleme çubuğu görüntülenir. **Durdur**' a tıklayarak aramayı dilediğiniz zaman durdurabilirsiniz.
-
-1. **Hizmetler** listesinde, kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
-
-1. **Ad alanı** kutusunda, başvuru için kullanmak istediğiniz ad alanını girin.
-
-1. Başvuruyu projeye eklemek için **son** ' a tıklayın.
-
-     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app.config* dosyasına eklenir.
-
-::: moniker-end
-
-### <a name="to-add-a-reference-to-a-service-in-the-current-solution"></a>Geçerli çözümde bir hizmete başvuru eklemek için
+### <a name="to-add-a-reference-to-an-external-service"></a>Dış hizmete başvuru eklemek için
 
 ::: moniker range="vs-2017"
 
-1. **Çözüm Gezgini**, hizmeti eklemek istediğiniz projenin adına sağ tıklayın ve ardından **hizmet başvurusu Ekle**' e tıklayın.
+1. Bu **Çözüm Gezgini** içinde, hizmeti eklemek istediğiniz projenin adına sağ tıklayın ve ardından **Hizmet Başvurusu Ekle.**
 
-    **Hizmet başvurusu Ekle** iletişim kutusu görüntülenir.
+   Hizmet Başvurusu Ekle  iletişim kutusu görüntülenir.
 
-1. **Bul**'a tıklayın.
-
-    Geçerli Çözümdeki tüm hizmetler (her ikisi [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] ve WCF Hizmetleri) **Hizmetler** listesine eklenir.
-
-1. **Hizmetler** listesinde, kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
-
-1. **Ad alanı** kutusunda, başvuru için kullanmak istediğiniz ad alanını girin.
-
-1. Başvuruyu projeye eklemek için **Tamam** ' ı tıklatın.
-
-    Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app.config* dosyasına eklenir.
-::: moniker-end
-::: moniker range=">=vs-2019"
-1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne çift tıklayın veya dokunun. 
-
-   **Hizmetleri Yapılandır** sekmesi açılır.
-
-1. **Microsoft WCF Web Service Reference Provider** seçin.
-
-   **WCF Web Service Reference yapılandır** iletişim kutusu görüntülenir.
-
-1. **Bul**'a tıklayın.
-
-    Geçerli Çözümdeki tüm hizmetler (her ikisi [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] ve WCF Hizmetleri) **Hizmetler** listesine eklenir.
-
-1. **Hizmetler** listesinde, kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
-
-1. **Ad alanı** kutusunda, başvuru için kullanmak istediğiniz ad alanını girin.
-
-1. Başvuruyu projeye eklemek için **son** ' a tıklayın.
-
-    Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app.config* dosyasına eklenir.
-
-::: moniker-end
-
-## <a name="update-a-service-reference"></a>Hizmet başvurusunu güncelleştirme
-
-[!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]Bazen varlık veri modeli değişir. Bu durumda, hizmet başvurusunu güncelleştirmeniz gerekir.
-
-### <a name="to-update-a-service-reference"></a>Bir hizmet başvurusunu güncelleştirmek için
-
-- **Çözüm Gezgini**' de, hizmet başvurusunu sağ tıklatın ve ardından **hizmet başvurusunu Güncelleştir**' e tıklayın.
-
-     Bir ilerleme iletişim kutusu, başvurunun özgün konumundan güncelleştirildiği sırada görüntülenir ve hizmet istemcisi meta verilerde yapılan değişiklikleri yansıtacak şekilde yeniden oluşturulur.
-
-## <a name="remove-a-service-reference"></a>Hizmet başvurusunu kaldır
-
-Bir hizmet başvurusu artık kullanılmıyorsa, çözümünüzü çözümden kaldırabilirsiniz.
-
-### <a name="to-remove-a-service-reference"></a>Bir hizmet başvurusunu kaldırmak için
-
-- **Çözüm Gezgini**, hizmet başvurusunu sağ tıklatın ve ardından **Sil**' e tıklayın.
-
-     Hizmet istemcisi çözümden kaldırılacak ve hizmeti tanımlayan meta veriler *app.config* dosyasından kaldırılacak.
+1. Adres **kutusuna** hizmetin URL'sini girin ve ardından Hizmeti aramak **için Git'e** tıklayın. Hizmet kullanıcı adı ve parola güvenliği uygulayıyorsa, sizden bir kullanıcı adı ve parola istenebilirsiniz.
 
     > [!NOTE]
-    > Hizmet başvurusuna başvuruda bulunan kodların el ile kaldırılması gerekir.
+    > Hizmetlere yalnızca güvenilir bir kaynaktan başvurabilirsiniz. Güvenilmeyen bir kaynaktan başvuru eklemek güvenliği tehlikeye atmış olabilir.
+
+     Url'yi geçerli hizmet meta **verisinin** bulunduğu önceki 15 URL'yi depolar Adres listesinden de seçebilirsiniz.
+
+     Arama gerçekleştiriliyorken bir ilerleme çubuğu görüntülenir. Durdur'a tıklayarak aramanızı istediğiniz zaman **durdurabilirsiniz.**
+
+1. Hizmetler **listesinde,** kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
+
+1. Ad **Alanı** kutusuna, başvuru için kullanmak istediğiniz ad alanını girin.
+
+1. Projeye **başvuru** eklemek için Tamam'a tıklayın.
+
+     Bir hizmet istemcisi (ara sunucu) oluşturulur ve hizmeti açıklayan meta verilerapp.config *eklenir.*
+::: moniker-end
+::: moniker range=">=vs-2019"
+1. Bu **Çözüm Gezgini** Bağlı Hizmetler düğümüne çift **tıklayın veya** dokunun.
+
+   Hizmetleri **Yapılandır** sekmesi açılır.
+
+1. **Microsoft WCF Web Service Reference Provider.**
+
+   Yapılandırma **WCF Web Service Reference** iletişim kutusu görüntülenir.
+
+   ![WCF Web Hizmeti Sağlayıcısı iletişim kutusunun ekran görüntüsü](media/vs-2019/configure-wcf-web-service-reference-dialog.png)
+
+
+1. **URI kutusuna** hizmetin URL'sini girin ve ardından Hizmeti aramak **için Git'e** tıklayın. Hizmet kullanıcı adı ve parola güvenliği uygulayıyorsa, sizden bir kullanıcı adı ve parola istenebilirsiniz.
+
+    > [!NOTE]
+    > Hizmetlere yalnızca güvenilir bir kaynaktan başvurabilirsiniz. Güvenilmeyen bir kaynaktan başvuru eklemek güvenliği tehlikeye atmış olabilir.
+
+     Url'yi geçerli hizmet meta verisinin bulunduğu önceki 15 URL'yi depolar **URI** listesinden de seçebilirsiniz.
+
+     Arama gerçekleştiriliyorken bir ilerleme çubuğu görüntülenir. Durdur'a tıklayarak aramanızı istediğiniz zaman **durdurabilirsiniz.**
+
+1. Hizmetler **listesinde,** kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
+
+1. Ad **Alanı** kutusuna, başvuru için kullanmak istediğiniz ad alanını girin.
+
+1. Projeye **başvuru** eklemek için Son'a tıklayın.
+
+     Bir hizmet istemcisi (ara sunucu) oluşturulur ve hizmeti açıklayan meta verilerapp.config *eklenir.*
+
+::: moniker-end
+
+### <a name="to-add-a-reference-to-a-service-in-the-current-solution"></a>Geçerli çözümdeki bir hizmete başvuru eklemek için
+
+::: moniker range="vs-2017"
+
+1. Bu **Çözüm Gezgini** içinde, hizmeti eklemek istediğiniz projenin adına sağ tıklayın ve ardından **Hizmet Başvurusu Ekle.**
+
+    Hizmet Başvurusu Ekle  iletişim kutusu görüntülenir.
+
+1. **Bul**'a tıklayın.
+
+    Geçerli çözümde yer alan tüm hizmetler (hem [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] hem de WCF hizmetleri) Hizmetler **listesine** eklenir.
+
+1. Hizmetler **listesinde,** kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
+
+1. Ad **Alanı** kutusuna, başvuru için kullanmak istediğiniz ad alanını girin.
+
+1. Projeye **başvuru** eklemek için Tamam'a tıklayın.
+
+    Hizmeti açıklayan bir hizmet istemcisi (ara sunucu) oluşturulur ve bu dosyayaapp.config *eklenir.*
+::: moniker-end
+::: moniker range=">=vs-2019"
+1. Bu **Çözüm Gezgini** Bağlı Hizmetler düğümüne çift **tıklayın veya** dokunun. 
+
+   Hizmetleri **Yapılandır** sekmesi açılır.
+
+1. **Microsoft WCF Web Service Reference Provider.**
+
+   Yapılandırma **WCF Web Service Reference** iletişim kutusu görüntülenir.
+
+1. **Bul**'a tıklayın.
+
+    Geçerli çözümde yer alan tüm hizmetler (hem [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] hem de WCF hizmetleri) Hizmetler **listesine** eklenir.
+
+1. Hizmetler **listesinde,** kullanmak istediğiniz hizmetin düğümünü genişletin ve bir varlık kümesi seçin.
+
+1. Ad **Alanı** kutusuna, başvuru için kullanmak istediğiniz ad alanını girin.
+
+1. Projeye **başvuru** eklemek için Son'a tıklayın.
+
+    Hizmeti açıklayan bir hizmet istemcisi (ara sunucu) oluşturulur ve bu dosyayaapp.config *eklenir.*
+
+::: moniker-end
+
+## <a name="update-a-service-reference"></a>Hizmet başvurularını güncelleştirme
+
+Bazen Varlık Veri Modeli değişikliklerin [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] en önemlileri. Bu durumda, hizmet başvurularını güncelleştirmeniz gerekir.
+
+### <a name="to-update-a-service-reference"></a>Hizmet başvurularını güncelleştirmek için
+
+- Bu **Çözüm Gezgini,** hizmet başvurusuna sağ tıklayın ve ardından Hizmet Başvurularını **Güncelleştir'e tıklayın.**
+
+     Başvuru özgün konumdan güncelleştirilirken ve hizmet istemcisi meta verilerde yapılan değişiklikleri yansıtacak şekilde yeniden oluşturulurken bir ilerleme durumu iletişim kutusu görüntülenir.
+
+## <a name="remove-a-service-reference"></a>Hizmet başvurularını kaldırma
+
+Bir hizmet başvurusu artık kullanamasa, bunu çözümünüzden kaldırabilirsiniz.
+
+### <a name="to-remove-a-service-reference"></a>Hizmet başvurularını kaldırmak için
+
+- Bu **Çözüm Gezgini,** hizmet başvurusuna sağ tıklayın ve ardından **Sil'e tıklayın.**
+
+     Hizmet istemcisi çözümden kaldırılır ve hizmeti açıklayan meta verilerapp.config *kaldırılır.*
+
+    > [!NOTE]
+    > Hizmet başvurusuna başvurulan tüm kodlar el ile kaldırılmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Visual Studio 'de Communication Foundation Hizmetleri ve WCF veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+- [Windows Visual Studio'de Communication Foundation Services ve WCF veri Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1594d7137ec6c34c794f588f7a126bdb1392462b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: da6a492b30121a429b4c1ae5f5048b41cc9dcd8921e24a312dcc056371c8d211
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081536"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121344927"
 ---
 # <a name="idiapropertystoragereadmultiple"></a>IDiaPropertyStorage::ReadMultiple
 Belirtilen özellikleri geçerli özellik kümesinden okur.
@@ -41,7 +41,7 @@ HRESULT ReadMultiple(
 
  `rgpspec`
 
-[in] Okunan özellikler dizisi. Özellikler bir özellik kimliği veya isteğe bağlı bir dize adı ile belirtilebilir. Dizide belirli bir sırada özellikleri belirtmek gerekli değildir. dizisinde yinelenen özellikler olabilir ve bu da basit özellikler için dönüşte yinelenen özellik değerlerine neden olabilir. Basit olmayan özellikler, bunları ikinci kez açma girişiminde erişim reddedildi olarak iade etmek zorunda. dizisinde özellik kimlikleri ile dize kimliklerinin bir karışımı yer alır. Bu dizinin en az sayıda `cpspec` özellik değeri olması gerekir.
+[in] Okunan bir özellik dizisi. Özellikler bir özellik kimliği veya isteğe bağlı bir dize adı ile belirtilebilir. Dizide belirli bir sırada özellikleri belirtmek gerekli değildir. dizisinde yinelenen özellikler olabilir ve bu da basit özellikler için dönüşte yinelenen özellik değerlerine neden olabilir. Basit olmayan özellikler, bunları ikinci kez açma girişiminde erişim reddedildi olarak geri dönmeli. dizisinde özellik kimlikleri ile dize kimliklerinin bir karışımı yer alır. Bu dizinin en az sayıda `cpspec` özellik değeri olması gerekir.
 
  `rgvar`
 

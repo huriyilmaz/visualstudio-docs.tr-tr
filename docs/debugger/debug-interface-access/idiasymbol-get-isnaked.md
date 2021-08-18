@@ -1,6 +1,6 @@
 ---
-description: İşlevin çıplak) özniteliğine sahip olup olmadığını belirten bir bayrak alır (başka bir ifadeyle, işlevin derleyici tarafından eklenen giriş veya son giriş kodu yoktur).
-title: IDiaSymbol::get_isNaked | Microsoft Docs
+description: İşlevin Naked) özniteliğine sahip olup olmadığını belirten bir bayrak alır (yani, işlevin derleyici tarafından eklenen giriş veya bitiş kodu yok).
+title: 'IDiaSymbol:: get_isNaked | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c1bc54c29a94c79be4dafae45128ddb63595f45aec489da7e4e3a0c59a71b45e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 68b4cf880b2b296751ec0a364d88207c35754c4a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121436422"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036138"
 ---
 # <a name="idiasymbolget_isnaked"></a>IDiaSymbol::get_isNaked
-İşlevin çıplak özniteliğine sahip olup [](/cpp/cpp/naked-cpp) olmadığını belirten bir bayrak alır (diğer bir ifade, işlevin derleyici tarafından eklenen giriş veya son giriş kodu yoktur).
+İşlevin [çıplak](/cpp/cpp/naked-cpp) özniteliğe sahip olup olmadığını belirten bir bayrak alır (yani, işlevin derleyici tarafından eklenen giriş veya bitiş kodu yok).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,21 +35,21 @@ HRESULT get_isNaked(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-[out] işlevi `TRUE` özniteliğine sahipse `naked` döndürür; aksi takdirde `FALSE` döndürür.
+dışı `TRUE` İşlevin özniteliğe sahip olup olmadığını döndürür `naked` ; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üstbilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-- [Naked İşlev Çağrıları](/cpp/cpp/naked-function-calls)
+- [Naked Işlev çağrıları](/cpp/cpp/naked-function-calls)

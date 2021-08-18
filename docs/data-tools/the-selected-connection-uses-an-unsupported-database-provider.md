@@ -22,7 +22,7 @@ ms.locfileid: "121346772"
 
 .NET Framework Veri Sağlayıcısı for SQL Server kullanmayan öğeleri Sunucu Gezgini veya **Veritabanı Gezgini'den** LINQ to SQL [araçlarına sürüklerken bu Visual Studio.](../data-tools/linq-to-sql-tools-in-visual-studio2.md) 
 
-**O/R Tasarımcısı yalnızca** veri sağlayıcısı için .NET Framework sağlayıcısını kullanan veri bağlantılarını SQL Server. Yalnızca veritabanı Microsoft SQL Server Microsoft SQL Server bağlantılar geçerlidir.
+**O/R Tasarımcısı yalnızca** veri sağlayıcısı için .NET Framework sağlayıcısını kullanan veri bağlantılarını SQL Server. Yalnızca veritabanı Microsoft SQL Server veritabanı Microsoft SQL Server bağlantılar geçerlidir.
 
 Bu hatayı düzeltmek için, yalnızca O/R Tasarımcısı'na .NET Framework Veri Sağlayıcısı SQL Server veri **bağlantılarından öğeleri ekleyin.**
 

@@ -11,14 +11,15 @@ ms.assetid: b0059407-8655-497b-81ca-025595989371
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 82d0220afe8b5946e52dfe3885a23bdc1827b2e1
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 7ac3b809bd77624cceccd476d6d025ed72454de6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156449"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036217"
 ---
 # <a name="idiasymbolget_bitposition"></a>IDiaSymbol::get_bitPosition
 Konumun bit konumunu alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) olduğunda kullanılır `LocIsBitField` .

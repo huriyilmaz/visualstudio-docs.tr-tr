@@ -68,7 +68,7 @@ Veri Kaynakları penceresinden bir sütunu veya nesnenin özelliğini  temsil ed
 
      Kullanılabilir denetimlerin listesi açık olan tasarımcıya, projenizin hangi .NET sürümünün hedeflerine ve Araç Kutusuna ekley istediğiniz veri bağlamayı destekleyen özel **denetimlere bağlıdır.** Oluşturmak istediğiniz denetim kullanılabilir denetim listesinde yer alıyorsa, denetimi listeye ekleyebilirsiniz. Daha fazla bilgi için [Bkz. Veri Kaynakları penceresine özel denetimler ekleme.](../data-tools/add-custom-controls-to-the-data-sources-window.md)
 
-     Veri Kaynakları penceresinde veri sütunları veya özellikleri için denetim listesine eklenilen  özel bir denetim oluşturma hakkında bilgi edinmek için bkz. Basit veri bağlamayı destekleyen [Windows Forms kullanıcı denetimi oluşturma.](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md)
+     Veri Kaynakları penceresinde veri sütunları veya özellikleri için denetim listesine eklenilen  özel bir denetim oluşturma hakkında bilgi edinmek için bkz. Basit veri bağlamayı destekleyen Windows Forms kullanıcı [denetimi oluşturma.](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md)
 
      Sütun veya özellik için denetim oluşturmak istemiyorsanız açılan **menüden Hiçbiri'yi** seçin. Bu, üst tabloyu veya nesneyi tasarımcıya sürüklemek ancak belirli bir sütunu veya özelliği eklemek istemiyorsanız kullanışlıdır.
 

@@ -1,6 +1,6 @@
 ---
 title: Windows Form Tasarımcısı öğreticisi
-description: Windows Form Tasarımcısı tarafından sunulan çeşitli araçları kullanarak uygulama oluşturmayı öğrenin. Uygulama, kullanılabilen birçok düzen özelliğini kullanan özel bir denetimdir.
+description: Windows Forms Designer tarafından sağlanan çeşitli araçları kullanarak Windows öğrenin. Uygulama, birçok kullanılabilir düzen özelliği kullanan özel bir denetimdir.
 ms.custom: SEO-VS-2020
 ms.date: 08/09/2019
 ms.topic: tutorial
@@ -10,301 +10,301 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-designers
-ms.openlocfilehash: 95c8d746e39fdf4c5536dd69028c5f246280ba5c76a51f69ee4c92eea21f52c3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6e43c010e84f31b39167baa60cef6cceb7b21c25
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452905"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035416"
 ---
-# <a name="tutorial-get-started-with-windows-forms-designer"></a>öğretici: Windows Form Tasarımcısı kullanmaya başlayın
+# <a name="tutorial-get-started-with-windows-forms-designer"></a>Öğretici: Kullanmaya başlayın Forms Windows ile birlikte kullanma
 
-Windows Form Tasarımcısı, Windows Forms uygulamalar oluşturmak için birçok araç sağlar. Bu makalede, aşağıdaki görevler de dahil olmak üzere tasarımcı tarafından sunulan çeşitli araçları kullanarak bir uygulamanın nasıl oluşturulacağı gösterilmektedir:
+Windows Forms Tasarımcısı, Formlar uygulamaları oluşturmak için Windows araçlar sağlar. Bu makalede, aşağıdaki görevler de dahil olmak üzere tasarımcı tarafından sağlanan çeşitli araçları kullanarak uygulama oluşturma adımları açıklanmıştır:
 
-- Denetimleri, yama çizgileri kullanarak düzenleyin.
+- Yas çizgileri kullanarak denetimleri düzenleme.
 - Akıllı etiketleri kullanarak tasarımcı görevlerini gerçekleştirin.
 - Denetimler için kenar boşluklarını ve doldurmayı ayarlayın.
-- Denetimleri bir denetim kullanarak düzenleyin <xref:System.Windows.Forms.TableLayoutPanel> .
-- Denetim kullanarak denetiminizin yerleşimini bölümleyin <xref:System.Windows.Forms.SplitContainer> .
-- Belge Anahattı penceresi ile mizanpajına gidin.
-- Boyut ve konum bilgileri görüntüsüne sahip denetimleri konumlandırın.
-- Özellikler penceresi kullanarak özellik değerlerini ayarlayın.
+- Denetim kullanarak denetimleri <xref:System.Windows.Forms.TableLayoutPanel> düzenleme.
+- Denetim kullanarak denetiminizin düzenini <xref:System.Windows.Forms.SplitContainer> bölümleme.
+- Belge Ana Hat penceresiyle düzeninize gidin.
+- Denetimleri boyut ve konum bilgileriyle birlikte konumlandırma.
+- özelliğini kullanarak özellik değerlerini Özellikler penceresi.
 
-işiniz bittiğinde, Windows Form Tasarımcısı kullanılabilen çeşitli düzen özellikleri kullanılarak birleştirilen özel bir denetiminiz olacaktır. Bu denetim, basit bir Hesaplayıcı için Kullanıcı arabirimini (UI) uygular. Aşağıdaki görüntüde Hesaplayıcı denetiminin genel yerleşimi gösterilmektedir:
+Bitirdikten sonra, Windows Forms Tasarımcısı'nda bulunan düzen özelliklerinin birçoğu kullanılarak birleştirilmiş özel bir denetime sahip oluruz. Bu denetim, basit bir hesaplayıcı için kullanıcı arabirimini (UI) uygulamaya almaktadır. Aşağıdaki görüntüde hesap makinesi denetimi genel düzeni gösterir:
 
-![Kılavuzlu Tur Hesaplayıcı Kullanıcı arabirimi](media/calculator-ui.gif)
+![Kılavuzlu Tur Hesaplayıcısı Kullanıcı Arabirimi](media/calculator-ui.gif)
 
 ## <a name="create-the-custom-control-project"></a>Özel denetim projesi oluşturma
 
-İlk adım, Demohesaplayıcı denetim projesini oluşturmaktır.
+İlk adım DemoCalculator denetim projesini oluşturmaktır.
 
-1. Visual Studio açın ve yeni bir **Windows Forms denetim kitaplığı** projesi oluşturun. Projenin **Demohesap Torlib** olarak adlandırın.
+1. Form Visual Studio'i açın ve yeni bir **Windows Forms Denetim Kitaplığı projesi** oluşturun. Projeye **DemoCalculatorLib adını girin.**
 
    ::: moniker range=">=vs-2019"
 
-   ![Windows Visual Studio 2019 ' de Forms denetim kitaplığı şablonu](media/windows-forms-control-library-template.png)
+   ![Windows Visual Studio 2019'da Forms Denetim Kitaplığı şablonu](media/windows-forms-control-library-template.png)
 
    ::: moniker-end
 
-2. Dosyayı yeniden adlandırmak için, **Çözüm Gezgini**' de, **UserControl1. vb** veya **UserControl1. cs** öğesine sağ tıklayın, **Yeniden Adlandır**' ı seçin ve dosya adını demohesaplayıcı. vb veya demohesaplayıcı. cs olarak değiştirin. "UserControl1" kod öğesiyle tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulduğunda **Evet** ' i seçin.
+2. Dosyayı yeniden adlandırmak **için Çözüm Gezgini'de** **UserControl1.vb** veya **UserControl1.cs'ye** sağ tıklayın, Yeniden Adlandır'ı seçin ve dosya adını DemoCalculator.vb veya DemoCalculator.cs olarak değiştirebilirsiniz.  "UserControl1" kod öğesine yapılan tüm başvuruları yeniden adlandırmak istediğiniz sorulması için Evet'i seçin. 
 
-Windows Form Tasarımcısı demohesaplayıcı denetimi için tasarımcı yüzeyini gösterir. Bu görünümde, araç kutusu ' ndan denetimler ve bileşenler ' i seçip tasarımcı yüzeyine yerleştirerek denetimin görünümünü grafiksel olarak tasarlayabilirsiniz. Özel denetimler hakkında daha fazla bilgi için bkz. [Özel denetimlerin değişen özellikleri](/dotnet/framework/winforms/controls/varieties-of-custom-controls).
+Windows Forms Tasarımcısı, DemoCalculator denetimi için tasarımcı yüzeyini gösterir. Bu görünümde, Araç Kutusu'nda denetimleri ve bileşenleri seçerek ve bunları tasarımcı yüzeyine yerleştirerek denetimin görünümünü grafiksel olarak tasarabilirsiniz. Özel denetimler hakkında daha fazla bilgi için [bkz. Özel denetim çeşitliliği.](/dotnet/framework/winforms/controls/varieties-of-custom-controls)
 
-## <a name="design-the-control-layout"></a>Denetim düzeni tasarlama
+## <a name="design-the-control-layout"></a>Denetim düzenini tasarlama
 
-demohesaplayıcı denetimi çeşitli Windows Forms denetimleri içerir. bu yordamda, Windows Form Tasarımcısı kullanarak denetimleri düzenleyebilirsiniz.
+DemoCalculator denetimi birçok farklı Form Windows içerir. Bu yordamda, Windows Forms Designer'ı kullanarak denetimleri düzenleysiniz.
 
-1. Windows Form Tasarımcısı, sağ alt köşedeki boyutlandırma tutamacını seçerek ve sağa sürükleyerek demohesaplayıcı denetimini daha büyük bir boyutla değiştirin. Visual Studio sağ alt köşesinde, denetimler için boyut ve konum bilgilerini bulun. Denetimi yeniden boyutlandırırken boyut bilgilerini izleyerek denetimin boyutunu Width 500 ve Height 400 olarak ayarlayın.
+1. Windows Forms Tasarımcısı'nda, sağ alt köşedeki boyutlandırma tutamacı seçerek ve aşağı ve sağa sürükleyerek DemoCalculator denetiminde daha büyük bir boyuta dokunun. Denetimin sağ alt köşesinde Visual Studio için boyut ve konum bilgilerini bulun. Denetimi yeniden boyutlandırılırken boyut bilgilerini izleyerek denetimin boyutunu 500 ve yükseklik 400 olarak ayarlayın.
 
-2. **Araç kutusu**'nda, açmak için **kapsayıcılar** düğümünü seçin. **SplitContainer** denetimini seçin ve tasarımcı yüzeyine sürükleyin.
+2. Araç **Kutusu'da** **Kapsayıcılar düğümünü** seçerek açın. **SplitContainer denetimi** seçin ve tasarımcı yüzeyine sürükleyin.
 
-   , `SplitContainer` Demohesaplayıcı denetiminin tasarımcı yüzeyine yerleştirilir.
+   `SplitContainer`, DemoCalculator denetimin tasarımcı yüzeyine yerleştirilir.
 
     > [!TIP]
-    > `SplitContainer`Denetim, Demohesaplayıcı denetiminin boyutunu sığacak şekilde boyutlandırır. Denetimin özellik ayarlarını görmek için **Özellikler** penceresine bakın `SplitContainer` . Özelliği bulun <xref:System.Windows.Forms.SplitContainer.Dock%2A> . Değeri [DockStyle. Fill](xref:System.Windows.Forms.DockStyle.Fill)' dir. Bu, `SplitContainer` denetimin kendisini her zaman demohesaplayıcı denetiminin sınırlarına göre boyutlandıracağı anlamına gelir. Bu davranışı doğrulamak için Demohesaplayıcı denetimini yeniden boyutlandırın.
+    > Denetim, `SplitContainer` kendini DemoCalculator denetimi boyutuna göre boyutlar. Denetimin **özellik** ayarlarını görmek için Özellikler penceresine `SplitContainer` bakın. özelliğini <xref:System.Windows.Forms.SplitContainer.Dock%2A> bulun. Değeri [DockStyle.Fill'tir.](xref:System.Windows.Forms.DockStyle.Fill)Bu da denetimin kendisini her zaman `SplitContainer` DemoCalculator denetimi sınırlarına göre boyutlandırması anlamına gelir. Bu davranışı doğrulamak için DemoCalculator denetimi yeniden boyutlandırılır.
 
-3. **Özellikler** penceresinde, <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğinin değerini olarak değiştirin `None` .
+3. Özellikler **penceresinde** özelliğinin değerini olarak <xref:System.Windows.Forms.SplitContainer.Dock%2A> `None` değiştirin.
 
-    `SplitContainer`Denetim varsayılan boyutunu küçültür ve artık Demohesaplayıcı denetiminin boyutunu takip eder.
+    Denetim `SplitContainer` varsayılan boyutuna küçülür ve artık DemoCalculator denetimi boyutunu takip eder.
 
-4. Denetimin sağ üst köşesinde akıllı etiket karakterini ( ![ akıllı etiket karakteri ](media/smart-tag-glyph.gif) ) seçin `SplitContainer` . Özelliği olarak ayarlamak için **üst kapsayıcıda yerleştir '** i seçin `Dock` `Fill` .
+4. Denetimin sağ üst köşesinde ![ akıllı etiket glyph ](media/smart-tag-glyph.gif) ( Akıllı Etiket Etiketi ) öğesini `SplitContainer` seçin. Özelliği **olarak ayarlamak için Üst Kapsayıcıda** `Dock` Yerleştir'i `Fill` seçin.
 
-    `SplitContainer`Denetim noktaları Demohesaplayıcı denetiminin sınırlarına göre yapılır.
+    Denetim, `SplitContainer` DemoCalculator denetimi sınırlarına yerleştirildi.
 
     > [!NOTE]
-    > Birçok denetim, tasarımı kolaylaştırmak için akıllı etiketler sunar. daha fazla bilgi için bkz. [izlenecek yol: Windows Forms denetimlerinde akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](/dotnet/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls).
+    > Tasarımı kolaylaştırmak için çeşitli denetimler akıllı etiketler sunar. Daha fazla bilgi için [bkz. Walkthrough: Windows Forms](/dotnet/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls)denetimlerini akıllı etiketler kullanarak yaygın görevleri gerçekleştirme.
 
-5. Panolar arasındaki dikey kenarlığı seçin ve sağa sürükleyin, böylece alanın çoğu sol panel tarafından alınır.
+5. Paneller arasındaki dikey kenarlığı seçin ve boşluğun büyük bir çoğunun sol panel tarafından alınması için bunu sağa sürükleyin.
 
-    `SplitContainer`Demohesaplayıcı denetimini, taşınabilir bir kenarlık ile iki panele böler. Soldaki panel, hesaplayıcı düğmelerini ve görüntülemeyi tutar ve sağdaki panel, Kullanıcı tarafından gerçekleştirilen aritmetik işlemlerin bir kaydını gösterir.
+    , `SplitContainer` DemoCalculator denetimine, bunları ayıran taşınabilir kenarlıklı iki panele böler. Sol tarafta yer alan panelde hesap makinesi düğmeleri ve ekranı, sağ tarafta ise kullanıcı tarafından gerçekleştirilen aritmetik işlemlerin kaydı gösterilir.
 
-6. **Özellikler** penceresinde, `BorderStyle` özelliğinin değerini olarak değiştirin `Fixed3D` .
+6. Özellikler **penceresinde** özelliğinin değerini olarak `BorderStyle` `Fixed3D` değiştirin.
 
-7. **Araç kutusu**' nda **ortak denetimler** düğümünü seçerek açın. Denetimi seçin `ListView` ve denetimin sağ paneline sürükleyin `SplitContainer` .
+7. Araç **Kutusu'da** Ortak **Denetimler düğümünü** seçerek açın. Denetimi `ListView` seçin ve denetimin sağ paneline `SplitContainer` sürükleyin.
 
-8. `ListView`Denetimin akıllı etiket karakterini seçin. Akıllı etiket panelinde `View` ayarı olarak değiştirin `Details` .
+8. Denetimin `ListView` akıllı etiket glyph'ini seçin. Akıllı etiket panelinde ayarını olarak `View` `Details` değiştirebilirsiniz.
 
-9. Akıllı etiket panelinde **Sütunları Düzenle**' yi seçin.
+9. Akıllı etiket panelinde Sütunları **Düzenle'yi seçin.**
 
-   **ColumnHeader koleksiyon Düzenleyicisi** iletişim kutusu açılır.
+   **ColumnHeader Koleksiyon Düzenleyicisi** iletişim kutusu açılır.
 
-10. **ColumnHeader koleksiyon Düzenleyicisi** iletişim kutusunda, denetime sütun eklemek için **Ekle** ' yi seçin `ListView` . Sütunun `Text` özelliğinin değerini **History** olarak değiştirin. Sütunu oluşturmak için **Tamam ' ı** seçin.
+10. **ColumnHeader Koleksiyon Düzenleyicisi iletişim** kutusunda Ekle'yi  seçerek denetime bir sütun `ListView` ekleyin. Sütunun özelliğinin değerini `Text` Geçmiş olarak **değiştirme.** Sütunu **oluşturmak** için Tamam'ı seçin.
 
-11. Akıllı etiket panelinde, **Ana kapsayıcıda yerleştir**' i seçin ve akıllı etiket panelini kapatmak için akıllı etiket glifi ' nı seçin.
+11. Akıllı etiket panelinde Üst Kapsayıcıya **Yerleştir'i** seçin ve akıllı etiket glyph'i seçerek akıllı etiket panelini kapatın.
 
-12. **Kapsayıcılar** düğüm **araç kutusundan** denetimin `TableLayoutPanel` sol paneline bir denetim sürükleyin `SplitContainer` .
+12. Kapsayıcılar  düğümü **Araç Kutusundan,** `TableLayoutPanel` denetimin sol paneline bir denetim `SplitContainer` sürükleyin.
 
-    `TableLayoutPanel`Denetim, akıllı etiket paneli açık olan tasarımcı yüzeyinde görünür. `TableLayoutPanel`Denetim, alt denetimlerini bir kılavuzda düzenler. `TableLayoutPanel`Denetim, Demohesaplayıcı denetiminin görüntüleme ve düğmelerini tutacaktır. Daha fazla bilgi için bkz. [Izlenecek yol: TableLayoutPanel kullanarak denetimleri düzenleme](/dotnet/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel).
+    Denetim, `TableLayoutPanel` akıllı etiket paneli açık şekilde tasarımcı yüzeyinde görünür. Denetim, `TableLayoutPanel` alt denetimlerini bir kılavuzda organize eder. Denetim, `TableLayoutPanel` DemoCalculator denetimi ekran ve düğmelerini tutar. Daha fazla bilgi için [bkz. Adım adım: TableLayoutPanel kullanarak denetimleri düzenleme.](/dotnet/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel)
 
-13. Akıllı etiket panelinde **satırları ve sütunları Düzenle** ' yi seçin.
+13. Akıllı **etiket panelinde Satırları ve** Sütunları Düzenle'yi seçin.
 
-    **Sütun ve satır stilleri** iletişim kutusu açılır.
+    Sütun **ve Satır Stilleri** iletişim kutusu açılır.
 
-14. Beş sütun görüntülenene kadar **Ekle** düğmesini seçin. Beş sütunu da seçin ve ardından **Boyut türü** kutusunda **yüzde** ' yi seçin. **Yüzde** değerini **20** olarak ayarlayın. Bu, her sütunu aynı genişliğe ayarlar.
+14. Beş **sütun görüntülenene** kadar Ekle düğmesini seçin. Beş sütunun hepsini ve ardından Boyut **Türü** kutusunda **Yüzde'yi** seçin. Yüzde **değerini** **20 olarak ayarlayın.** Bu, her sütunu aynı genişlikte ayarlar.
 
-15. **Göster** altında **Satırlar**' ı seçin.
+15. **Göster'in** altında Satırlar'ı **seçin.**
 
-16. Beş satır görüntülenene kadar **Ekle** ' yi seçin. Beş satırı ve **Boyut türü** kutusunda **yüzde** seçimini seçin. **Yüzde** değerini **20** olarak ayarlayın. Bu, her bir satırı aynı yüksekliğe ayarlar.
+16. Beş **satır görüntülenene** kadar Ekle'yi seçin. Beş satırın hepsini ve Boyut Türü **kutusunda** **Yüzde'yi** seçin. Yüzde **değerini** **20 olarak ayarlayın.** Bu, her satırı aynı yüksekliğe ayarlar.
 
-17. Değişikliklerinizi kabul etmek için **Tamam** ' ı seçin ve akıllı etiket panelini kapatmak için akıllı etiket glifi ' nı seçin.
+17. **Değişikliklerinizi** kabul etmek için Tamam'ı seçin ve akıllı etiket etiketini seçerek akıllı etiket panelini kapatın.
 
-18. **Özellikler** penceresinde, `Dock` özelliğinin değerini olarak değiştirin `Fill` .
+18. Özellikler **penceresinde** özelliğinin değerini olarak `Dock` `Fill` değiştirin.
 
-## <a name="populate-the-control"></a>Denetimi doldur
+## <a name="populate-the-control"></a>Denetimi doldurmak
 
-Artık denetimin düzeni ayarlanmış olduğuna göre, Demohesaplayıcı denetimini düğmeler ve bir ekran ile doldurabilirsiniz.
+Artık denetimin düzeni ayarlanmış olduğu için DemoCalculator denetimine düğmeler ve bir ekran sızabilirsiniz.
 
-1. **Araç kutusu**' nda `TextBox` Denetim simgesini seçin.
+1. Araç **Kutusu'da** denetim `TextBox` simgesini seçin.
 
-   Denetim, `TextBox` denetimin ilk hücresine yerleştirilir `TableLayoutPanel` .
+   Denetim, `TextBox` denetimin ilk hücresine `TableLayoutPanel` yerleştirilir.
 
-2. **Özellikler** penceresinde, `TextBox` denetimin ColumnSpan özelliğinin değerini **5** olarak değiştirin.
+2. Özellikler **penceresinde** denetimin `TextBox` ColumnSpan özelliğinin değerini 5 olarak **değiştirin.**
 
-   `TextBox`Denetim, satırında ortalanmış bir konuma gider.
+   Denetim, `TextBox` satırın ortası olan bir konuma taşınır.
 
-3. `TextBox`Denetimin `Anchor` özelliğinin değerini olarak değiştirin `Left` `Right` .
+3. Denetimin `TextBox` özelliğinin değerini `Anchor` , olarak `Left` `Right` değiştirir.
 
-   `TextBox`Denetim, beş sütunun tamamını kapsayacak şekilde yatay olarak genişletilir.
+   Denetim, `TextBox` beş sütuna da yayma için yatay olarak genişler.
 
-4. `TextBox`Denetimin `TextAlign` özelliğinin değerini olarak değiştirin `Right` .
+4. Denetimin `TextBox` özelliğinin değerini `TextAlign` olarak `Right` değiştirme.
 
-5. **Özellikler** penceresinde, `Font` özellik düğümünü genişletin. `Size` **14** olarak ayarlayın ve `Bold` Denetim için **true** olarak ayarlayın `TextBox` .
+5. Özellikler **penceresinde** özellik `Font` düğümünü genişletin. `Size` **14 olarak ayarlayın** ve denetim `Bold` için **true** olarak `TextBox` ayarlayın.
 
-6. Denetimi seçin `TableLayoutPanel` .
+6. Denetimi `TableLayoutPanel` seçin.
 
-7. **Araç kutusu**'nda simgesini seçin `Button` .
+7. Araç **Kutusu'nda** simgesini `Button` seçin.
 
-   Denetim, `Button` denetimin bir sonraki açık hücresine yerleştirilir `TableLayoutPanel` .
+   Denetim, `Button` denetimin sonraki açık hücresine `TableLayoutPanel` yerleştirilir.
 
-8. **Araç kutusu**' nda, `Button` denetimin ikinci satırını doldurmak için simgeyi dört kez daha seçin `TableLayoutPanel` .
+8. Araç **Kutusu'nda,** `Button` denetimin ikinci satırı doldurmak için simgeyi dört kez daha `TableLayoutPanel` seçin.
 
-9. `Button` **Shift** tuşunu basılı tutarken beş denetimin tamamını seçerek seçin.  + Denetimleri panoya kopyalamak için CTRL **C** tuşlarına basın `Button` .
+9. Shift tuşunu `Button` basılı tutarak bu denetimleri seçerek beş denetimi **de** seçin. Denetimleri panoya kopyalamak için **Ctrl** + **C** `Button` tuşlarına basın.
 
-10.  + Denetimlerin kopyalarını denetimin kalan satırlarına kopyalamak için CTRL **V** ' ye üç kez basın `Button` `TableLayoutPanel` .
+10. Denetimlerin kopyalarını denetimin kalan satırlarına yapıştırmak için **Ctrl** + **V** `Button` tuşlarına üç kez `TableLayoutPanel` basın.
 
-11. `Button` **Shift** tuşunu basılı tutarken tüm 20 denetimleri seçerek seçin.
+11. Shift tuşunu basılı tutarak `Button` 20 denetimin  hepsini seçin.
 
-12. Özellikler **penceresinde** özelliğinin değerini olarak `Dock` `Fill` değiştirin.
+12. **Özellikler** penceresinde, `Dock` özelliğinin değerini olarak değiştirin `Fill` .
 
-    Tüm `Button` denetimler, içeren hücreleri doldurmak için dock'a sahiptir.
+    Tüm `Button` denetimler, kapsayan hücrelerini dolduracak şekilde yerleştirme.
 
-13. Özellikler **penceresinde** özellik `Margin` düğümünü genişletin. değerini `All` **5 olarak ayarlayın.**
+13. **Özellikler** penceresinde, `Margin` özellik düğümünü genişletin. Değerini `All` **5** olarak ayarlayın.
 
-    Tüm `Button` denetimler, aralarında daha büyük bir kenar boşluğu oluşturmak için daha küçük boyutlu olur.
+    Tüm denetimler, aralarında `Button` daha büyük bir kenar boşluğu oluşturmak için daha küçük boyutlardır.
 
-14. **düğme10 ve** **düğme20'yi** seçin ve sonra **bunları düzenden** kaldırmak için Sil'e basın.
+14. **Button10** ve **button20**' i seçin ve sonra düzenden kaldırmak için **Sil** ' e basın.
 
-15. **düğme5'i** **ve düğme15'i** seçin ve ardından özelliğinin `RowSpan` değerini **2 olarak değiştirir.** Bunlar DemoCalculator **denetimi** **=** için Clear ve düğmeleridir.
+15. **Button5** ve **button15** öğesini seçin ve ardından `RowSpan` özelliğinin değerini **2** olarak değiştirin. Bu,  **=** demohesaplayıcı denetimi için açık ve düğmeler olacaktır.
 
-## <a name="use-the-document-outline-window"></a>Belge Ana Hat penceresini kullanma
+## <a name="use-the-document-outline-window"></a>Belge Anahattı penceresini kullanın
 
-Denetiminiz veya formunuz çeşitli denetimlerle doldurulduğunda, Belge Ana Hat penceresiyle düzeninize daha kolay bir şekilde gidebilirsiniz.
+Denetiminiz veya formunuz çeşitli denetimlerle doldurulduğu zaman, belge anahattı penceresi ile mizanpajınızı gezinmeyi daha kolay bulabilirsiniz.
 
-1. Menü çubuğunda, Belge Ana **Hatlarını Görüntülemek**  >  **için**  >  **Windows'yi seçin.**
+1. menü çubuğunda   >  **diğer Windows**  >  **belge anahattını** görüntüle ' yi seçin.
 
-   Belge Ana Hat penceresi DemoCalculator denetimi ve onun bağlı denetimlerinin ağaç görünümünü gösterir. gibi kapsayıcı `SplitContainer` denetimleri, alt denetimlerini ağaçta altnode olarak gösterir. Ayrıca Belge Ana Hat penceresini kullanarak denetimleri yerinde yeniden adlandırabilirsiniz.
+   Belge Anahattı penceresi, Demohesaplayıcı denetiminin ve onun bileşen denetimlerinin ağaç görünümünü gösterir. İçindeki kapsayıcı denetimleri, `SplitContainer` alt denetimlerini ağaçta alt düğümleri olarak göster. Ayrıca Belge Anahattı penceresini kullanarak yerinde denetimleri yeniden adlandırabilirsiniz.
 
-2. Belge Ana **Hat penceresinde1** düğmesine sağ tıklayın **ve** yeniden adlandır'ı **seçin.** Adını sevenButton olarak değiştirme.
+2. **Belge ana hattı** penceresinde **button1**' e sağ tıklayın ve ardından **Yeniden Adlandır**' ı seçin. Adını yeti düğmesi olarak değiştirin.
 
-3. Belge Ana **Hat penceresini** kullanarak, tasarımcı tarafından oluşturulan addan denetimleri aşağıdaki listeye göre üretim adıyla `Button` yeniden adlandırın:
+3. **Belge Anahattı** penceresini kullanarak, `Button` aşağıdaki listeye göre tasarımcı tarafından oluşturulan ad içindeki denetimleri üretim adı olarak yeniden adlandırın:
 
-   - button1'den **sevenButton'a**
+   - Button1- **on yedi düğmesi**
 
-   - button2'den **eightButton'a**
+   - Button2 to **Sektbutton**
 
-   - button3'den **nineButton'a**
+   - Button3 to **nineButton**
 
-   - button4'den **divisionButton'a**
+   - Button4 to **divisionButton**
 
-   - button5 to **clearButton**
+   - Button5 to **clearButton**
 
-   - button6 'dan **fourButton'a**
+   - Button6 to **on düğmesi**
 
-   - button7 'den **fiveButton'a**
+   - button7 to **Fıvebutton**
 
-   - button8 'den **sixButton'a**
+   - button8 to **Altbutton**
 
-   - button9'dan **çarpmadüzmesidüz**
+   - Button9 to **multiplicationButton**
 
-   - button11'den **oneButton'a**
+   - button11 to **oneButton**
 
-   - button12 'den **twoButton'a**
+   - button12- **Twobtan**
 
-   - button13 'den **threeButton'a**
+   - button13 to **threeButton**
 
    - button14 to **subtractionButton**
 
    - button15 to **equalsButton**
 
-   - button16'dan **zeroButton'a**
+   - button16 to **Zerobtan**
 
-   - **changeSignButton** için button17
+   - button17 to **changeSignButton**
 
-   - button18'den **decimalButton'a**
+   - button18 to **decimalButton**
 
-   - button19'dan **additionButton'a**
+   - button19 to **additionButton**
 
-4. Belge Ana **Hatları ve** **Özellikler** pencerelerini kullanarak her denetim adı için özellik değerini aşağıdaki listeye `Text` göre `Button` değiştirin:
+4. **Belge ana hattını** ve **Özellikler** pencerelerini kullanarak `Text` her denetim adı için özellik değerini `Button` aşağıdaki listeye göre değiştirin:
 
-   - sevenButton denetim metni özelliğini **7 olarak değiştirme**
+   - On yedi düğme denetim metni özelliğini **7** olarak değiştirin
 
-   - eightButton denetim metni özelliğini **8 olarak değiştirme**
+   - Sekizinci Tbutton denetim metni özelliğini **8** olarak değiştirme
 
-   - nineButton denetim metni özelliğini **9 olarak değiştirme**
+   - NineButton denetim metni özelliğini **9** olarak değiştirme
 
-   - divisionButton denetim metni özelliğini olarak (eğik **/** çizgi) değiştirme
+   - DivisionButton denetim metni özelliğini **/** (eğik çizgi) olarak değiştirme
 
-   - clearButton denetim metni özelliğini Clear olarak **değiştirme**
+   - ClearButton denetim metni özelliğini **Temizle** olarak değiştirme
 
-   - fourButton denetim metni özelliğini **4 olarak değiştirme**
+   - On Button denetim metni özelliğini **4** olarak değiştirin
 
-   - fiveButton denetim metni özelliğini **5 olarak değiştirme**
+   - FiveButton denetim metni özelliğini **5** olarak değiştirin
 
-   - sixButton denetim metni özelliğini **6 olarak değiştirme**
+   - Altbutton denetim metni özelliğini **6** olarak değiştirme
 
-   - multiplicationButton denetim metni özelliğini **\*** (yıldız işareti) olarak değiştirme
+   - MultiplicationButton denetim metni özelliğini **\*** (yıldız işareti) olarak değiştirme
 
-   - oneButton denetim metni özelliğini **1 olarak değiştirme**
+   - OneButton denetim metni özelliğini **1** olarak değiştirin
 
-   - twoButton denetim metni özelliğini **2 olarak değiştirme**
+   - Twobtan denetim metni özelliğini **2** olarak değiştirme
 
-   - threeButton denetim metni özelliğini **3 olarak değiştirme**
+   - ThreeButton denetim metni özelliğini **3** olarak değiştirme
 
-   - subtractionButton denetim metni özelliğini (kısa **-** çizgi) olarak değiştirme
+   - SubtractionButton denetim metni özelliğini **-** (kısa çizgi) olarak değiştirme
 
-   - equalsButton denetim metni özelliğini **=** (eşittir işareti) olarak değiştirme
+   - EqualsButton denetim metni özelliğini **=** (eşittir işareti) olarak değiştirme
 
-   - zeroButton denetim metni özelliğini **0 olarak değiştirme**
+   - Zerobtan Control Text özelliğini **0** olarak değiştirme
 
-   - changeSignButton denetim metni özelliğini olarak değiştirme **+/-**
+   - ChangeSignButton denetim metni özelliğini şu şekilde değiştirin **+/-**
 
-   - decimalButton denetim metni özelliğini olarak **değiştirme.** (nokta)
+   - DecimalButton denetim metni özelliğini olarak değiştirin **.** (nokta)
 
-   - additionButton denetim metni özelliğini (artı **+** işareti) olarak değiştirme
+   - AdditionButton denetim metni özelliğini **+** (artı işareti) olarak değiştirme
 
-5. Tasarımcı yüzeyinde, Shift tuşunu basılı `Button` tutarak tüm denetimleri  seçin.
+5. Tasarımcı yüzeyinde, `Button` **Shift** tuşunu basılı tutarken tüm denetimleri seçerek seçin.
 
-6. Özellikler **penceresinde** özellik `Font` düğümünü genişletin. `Size` **14 olarak ayarlayın** ve tüm `Bold` **denetimler için true** olarak `Button` ayarlayın.
+6. **Özellikler** penceresinde, `Font` özellik düğümünü genişletin. `Size` **14** olarak ayarlayın ve `Bold` tüm denetimler için **true** olarak ayarlayın `Button` .
 
-Bu, DemoCalculator denetimi tasarımını tamamlar. Kalan tek şey hesap makinesi mantığı sağlamaktır.
+Bu, Demohesaplayıcı denetiminin tasarımını tamamlar. Kalan şey, hesaplayıcı mantığını sağlamaktır.
 
-## <a name="implement-event-handlers"></a>Olay işleyicileri uygulama
+## <a name="implement-event-handlers"></a>Olay işleyicilerini Uygula
 
-DemoCalculator denetimi düğmeleri, hesap makinesi mantığının büyük bir sini uygulamak için kullanılan olay işleyicilerine sahip olur. Windows Forms Tasarımcısı, tek bir seçimle tüm düğmeler için tüm olay işleyicilerinin saplamalarını uygulamana olanak sağlar.
+Demohesaplayıcı denetimindeki düğmelerin, hesaplayıcı mantığının çoğunu uygulamak için kullanılabilecek olay işleyicileri vardır. Windows Form Tasarımcısı, tek bir seçimle tüm düğmelerin tüm olay işleyicilerinin saplamalarını uygulamanıza olanak sağlar.
 
-1. Tasarımcı yüzeyinde, Shift tuşunu basılı `Button` tutarak tüm denetimleri  seçin.
+1. Tasarımcı yüzeyinde, `Button` **Shift** tuşunu basılı tutarken tüm denetimleri seçerek seçin.
 
-2. Denetimlerden birini `Button` seçin.
+2. Denetimlerden birini seçin `Button` .
 
-   Kod Düzenleyicisi, tasarımcı tarafından oluşturulan olay işleyicilerini açar.
+   Kod Düzenleyicisi, tasarımcı tarafından oluşturulan olay işleyicileri için açılır.
 
-## <a name="test-the-control"></a>Denetimi test etmek
+## <a name="test-the-control"></a>Denetimi test etme
 
-DemoCalculator denetimi sınıfından devralınmış olduğundan, davranışını <xref:System.Windows.Forms.UserControl> UserControl Test Kapsayıcısı **ile test edin.** Daha fazla bilgi için, [bkz. How to: Test the run-time behavior of a UserControl](/dotnet/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol).
+Demohesaplayıcı denetimi sınıfından devraldığından <xref:System.Windows.Forms.UserControl> , onun davranışını **UserControl Test kapsayıcısı** ile test edebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: bir UserControl 'un çalışma zamanı davranışını test etme](/dotnet/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol).
 
-1. UserControl Test Kapsayıcısı içinde DemoCalculator denetimi derlemek ve çalıştırmak için **F5** **tuşuna basın.**
+1. **UserControl Test kapsayıcısında** demohesaplayıcı denetimini derlemek ve çalıştırmak için **F5** tuşuna basın.
 
-2. Paneller arasındaki `SplitContainer` kenarlığı seçin ve sola ve sağa sürükleyin. ve `TableLayoutPanel` tüm alt denetimleri kullanılabilir alana sığacak şekilde yeniden boyutlandırılır.
+2. Paneller arasındaki kenarlığı seçin `SplitContainer` ve sola ve sağa sürükleyin. `TableLayoutPanel`Ve tüm alt denetimleri, kullanılabilir alana sığacak şekilde kendilerini yeniden boyutlandırır.
 
-3. Denetimi test etme tamamlandığında Kapat'ı **seçin.**
+3. Denetimi test etmeyi bitirdiğinizde **Kapat**' ı seçin.
 
-## <a name="use-the-control-on-a-form"></a>Formda denetimi kullanma
+## <a name="use-the-control-on-a-form"></a>Form üzerinde denetimi kullanma
 
-DemoCalculator denetimi diğer bileşik denetimlerde veya bir formda kullanılabilir. Aşağıdaki yordamda bu yordamın nasıl kullanımı açık bir şekilde açıkmektedir.
+Demohesaplayıcı denetimi, diğer bileşik denetimlerde veya bir formda kullanılabilir. Aşağıdaki yordamda nasıl kullanılacağı açıklanmaktadır.
 
 ### <a name="create-the-project"></a>Proje oluşturma
 
-İlk adım, uygulama projesini oluşturmaktır. Bu projeyi kullanarak özel denetiminizi gösteren uygulamayı derlemeniz gerekir.
+İlk adım uygulama projesini oluşturmaktır. Bu projeyi, özel denetiminizi gösteren uygulamayı oluşturmak için kullanacaksınız.
 
-1. Yeni bir form **Windows Forms Uygulaması projesi** oluşturun ve bunu **DemoCalculatorTest olarak ad girin.**
+1. yeni bir **Windows Forms uygulama** projesi oluşturun ve bunu **demohesaplatortest** olarak adlandırın.
 
-2. Bu **Çözüm Gezgini,** **DemoCalculatorTest** projesine sağ tıklayın ve  başvuru ekle iletişim kutusunu açmak için Başvuru **Ekle'yi** seçin.
+2. **Çözüm Gezgini**, **Demohesaplatortest** projesine sağ tıklayın ve **sonra başvuru Ekle Iletişim kutusunu** açmak için **Başvuru Ekle** ' yi seçin.
 
-3. Projeler **sekmesine** gidin ve ardından DemoCalculatorLib projesini seçerek test projesine başvuru ekleyin.
+3. **Projeler** sekmesine gidin ve ardından başvuruyu test projesine eklemek Için Demohesaplatorlib projesini seçin.
 
-4. Bu **Çözüm Gezgini** **DemoCalculatorTest'e** sağ tıklayın ve Ardından Başlangıç Olarak **Ayarla'yı** Project.
+4. **Çözüm Gezgini**, **Demohesaplatortest** öğesine sağ tıklayın ve ardından **Başlangıç Project olarak ayarla**' yı seçin.
 
-5. Windows Form Tasarımcısı'nda formun boyutunu yaklaşık **700 x 500 olarak artırabilirsiniz.**
+5. Windows Form Tasarımcısı, formun boyutunu **700 x 500** hakkında artırın.
 
-### <a name="use-the-control-in-the-forms-layout"></a>Formun düzeninde denetimi kullanma
+### <a name="use-the-control-in-the-forms-layout"></a>Formun düzeninde denetimi kullanın
 
-Bir uygulamada DemoCalculator denetimi kullanmak için bunu bir forma yer gerekir.
+Bir uygulamada Demohesaplayıcı denetimini kullanmak için, onu bir forma yerleştirmeniz gerekir.
 
-1. Araç **Kutusunda** **DemoCalculatorLib Bileşenleri düğümünü** genişletin.
+1. **Araç kutusu**'Nda **Demohesaplatorlib bileşenleri** düğümünü genişletin.
 
-2. Araç **Kutusundan DemoCalculator** **denetiminizi form** üzerine sürükleyin. Denetimi formun sol üst köşesine taşıma. Denetim formun kenarlıklara yakın olduğunda, *yaslık çizgileri* görüntülenir. Yas çizgileri, formun özelliğinin `Padding` ve denetimin özelliğinin mesafeyi `Margin` gösteriyor. Denetimi, yaslık çizgilerinin işaret olduğu konuma konumlandırma.
+2. **Araç kutusu** ' ndan **demohesaplayıcı** denetimini formunuza sürükleyin. Denetimi formun sol üst köşesine taşıyın. Denetim formun kenarlıklarına yakınsa, yama *çizgileri* görüntülenir. Anlık görüntü çizgileri, formun `Padding` özelliğinin ve denetimin özelliğinin uzaklığını belirtir `Margin` . Denetimi, snaplines belirtilen konuma konumlandırın.
 
-   Daha fazla bilgi için [bkz. Adım adım kılavuz: Denetimleri yas çizgileri kullanarak düzenleme.](/dotnet/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines)
+   Daha fazla bilgi için bkz. [Izlenecek yol: denetimleri, yama çizgileri kullanarak düzenleme](/dotnet/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines).
 
-3. Araç `Button` Kutusundan **bir denetimi** sürükleyip forma bırakın.
+3. `Button` **Araç kutusu** ' ndan bir denetim sürükleyip form üzerine bırakın.
 
-4. Denetimi `Button` DemoCalculator denetimi çevresinde hareket ettirin ve yaslama çizgilerinin nerede görüntülenmiş olduğunu gözlemler. Bu özelliği kullanarak denetimlerinizi tam olarak ve kolayca hizalayabilirsiniz. Bitirdikten `Button` sonra denetimi silin.
+4. `Button`Denetimi Demohesaplayıcı denetiminin çevresinde taşıyın ve anlık görüntü çizgilerinin nerede göründüğünü gözlemleyin. Bu özelliği kullanarak denetimlerinizi tam ve kolay bir şekilde hizalayabilirsiniz. `Button`İşiniz bittiğinde denetimi silin.
 
-5. DemoCalculator denetimine sağ tıklayın ve Özellikler'i **seçin.**
+5. Demohesaplayıcı denetimine sağ tıklayıp **Özellikler**' i seçin.
 
-6. özelliğinin değerini `Dock` olarak `Fill` değiştirme.
+6. `Dock`Özelliğin değerini olarak değiştirin `Fill` .
 
-7. Formu seçin ve ardından özellik `Padding` düğümünü genişletin. All (Hepsi) **değerini** **20 olarak değiştirir.**
+7. Formu seçin ve ardından `Padding` özellik düğümünü genişletin. All (Hepsi) **değerini** **20 olarak değiştirir.**
 
    DemoCalculator denetimi, formun yeni değerine uyum sağlayacak `Padding` şekilde azaltıldı.
 
@@ -312,7 +312,7 @@ Bir uygulamada DemoCalculator denetimi kullanmak için bunu bir forma yer gereki
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu makalede, basit bir hesaplayıcı için kullanıcı arabiriminin nasıl inşa edildikleri açıklanmıştır. Devam etmek için hesap makinesi mantığını uygulayarak işlevselliğini genişletebilirsiniz ve ardından uygulamayı [ClickOnce.](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md) Veya , Formlar'ı kullanarak resim [görüntüleyiciyi oluşturarak farklı bir Windows devam edin.](../ide/tutorial-1-create-a-picture-viewer.md)
+Bu makalede, basit bir hesaplayıcı için kullanıcı arabiriminin nasıl inşa edildikleri açıklanmıştır. Devam etmek için hesap makinesi mantığını uygulayarak işlevselliğini genişletebilirsiniz, ardından uygulamayı [ClickOnce.](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md) Veya, Windows Forms kullanarak resim [görüntüleyici oluşturarak farklı bir öğreticiye devam edin.](../ide/tutorial-1-create-a-picture-viewer.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

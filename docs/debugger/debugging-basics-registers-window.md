@@ -1,6 +1,6 @@
 ---
-title: Yazmaçları penceresi hakkında | Microsoft Docs
-description: yalnızca seçenekler iletişim kutusunda, hata ayıklama düğümünde adres düzeyi hata ayıklama etkinse kullanılabilir olan Visual Studio kayıtları penceresi hakkında bilgi edinin.
+title: Yazmazlar penceresi hakkında | Microsoft Docs
+description: Visual Studio'daki Yazmazlar penceresi hakkında bilgi edinebilirsiniz. Bu pencere yalnızca Seçenekler iletişim kutusundaki Hata ayıklama düğümünde adres düzeyinde hata ayıklama etkinleştirildiğinde kullanılabilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,48 +20,48 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0dadd3882513ac0bdf824ab984aaca532f3bac9101ec6c81671e9c5638777586
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0ae8733c30a299123e1f0d21a43be943a24a5277
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404531"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097594"
 ---
-# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio kayıtları penceresi hakkında (C#, C++, Visual Basic, F #)
+# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Visual Studio'daki Yazmaçlar Penceresi hakkında (C#, C++, Visual Basic, F#)
 
-**Yazmaçları** penceresi yalnızca, **Seçenekler** Iletişim kutusunda, **hata ayıklama** düğümünde adres düzeyi hata ayıklama etkinse kullanılabilir.
+**Yazmazlar** penceresi yalnızca Seçenekler iletişim kutusundaki Hata ayıklama düğümünde adres düzeyinde **hata** ayıklama **etkinleştirildiyse** kullanılabilir.
 
- Yazmaçları, işlemcinin etkin bir şekilde çalıştığı küçük veri parçalarını depolamak için kullanılan bir işlemci (CPU) içindeki özel konumlardır. Kaynak kodu derlemek veya yorumlamak, verileri bellekten kayıtlara taşıdığınızda ve gerektiğinde yeniden geri alan yönergeler oluşturur. Kayıt içindeki verilere erişmek, bellekteki verilere erişirken çok hızlıdır. bu nedenle, işlemcinin verileri bir kasada bulundurmasına ve bu işlem, işlemcinin kayıtları sürekli olarak yüklemesini ve kaldırmayı gerektiren koddan daha hızlı bir şekilde çalışmasına olanak tanır. Derleyicinin verileri Yazmaçlarda tutmasını ve diğer iyileştirmeler gerçekleştirmesini kolaylaştırmak için, genel değişkenleri kullanmaktan kaçının ve yerel değişkenlere mümkün olduğunca güvenmelisiniz. Bu şekilde yazılan kod, başvurunun doğru yere sahip olduğu söylenir. C/C++ gibi bazı dillerde, programcılar bir yazmaç değişkeni bildirebilir, bu da derleyiciye değişkeni her zaman bir kasada tutmak için en iyi şekilde denemesini söyler. Daha fazla bilgi için bkz. [register anahtar sözcüğü](/previous-versions/482s4fy9(v=vs.140)).
+ Yazmacalar, işlemcinin etkin olarak üzerinde çalıştığı küçük veri parçalarını depolamak için kullanılan bir işlemci (CPU) içindeki özel konumlardır. Kaynak kodu derlemek veya yorumlamak, gerektiğinde verileri bellekten yazmamalara ve yeniden geri taşımaya yönelik yönergeler üretir. Yazmaçlarda verilere erişmek bellekte verilere erişmekle karşılaştırıldığında çok hızlıdır, bu nedenle işlemcinin verileri bir yazmaçta tutmasını ve tekrar tekrar erişmesini sağlayan kod, işlemcinin yazmaçları sürekli yüklemesini ve kaldırmasını gerektiren koddan daha hızlı yürütme eğilimindedir. Derleyicinin verileri yazmacın içinde tutması ve başka iyileştirmeler gerçekleştirmesi için genel değişkenleri kullanmaktan kaçınmanız ve mümkün olduğunca yerel değişkenlere güvenmeniz gerekir. Bu şekilde yazılmış olan kodun iyi bir başvuru yerelliği olduğu ifade edildi. C/C++ gibi bazı dillerde programcı bir yazmaç değişkeni bildirene kadar derleyiciye değişkeni her zaman yazmaçta tutması için en iyi denemeyi söyler. Daha fazla bilgi için bkz. [Register Anahtar Sözcüğü.](/previous-versions/482s4fy9(v=vs.140))
 
- Yazmaçları iki türe ayrılabilir: genel amaçlı ve özel amaç. Genel amaçlı kayıt kayıtları, iki sayı ekleme veya bir dizideki bir öğeye başvurma gibi genel işlemlere yönelik verileri tutar. Özel amaçlı kayıtların belirli amaçları ve özelleştirilmiş anlamları vardır. İyi bir örnek, işlemcinin programın çağrı yığınını izlemek için kullandığı yığın işaretçisi kayıt örneğidir. Bir programcı olarak, büyük olasılıkla yığın işaretçisini doğrudan işlemeyecektir. Ancak, yığın işaretçisi olmadığında, işlemcinin bir işlev çağrısının sonunda nereye dönebileceklerini bilmez hale getirmediği için, programınızın düzgün çalışması önemlidir.
+ Yazmacalar iki türe ayrıl olabilir: genel amaçlı ve özel amaçlı. Genel amaçlı yazmacalar, iki sayı ekleme veya dizideki bir öğeye başvuru gibi genel işlemler için verileri tutar. Özel amaçlı yazmazların belirli amaçları ve özel anlamı vardır. İyi bir örnek, işlemcinin programın çağrı yığınını izlemek için kullandığı yığın işaretçisi yazmaçtır. Programcı olarak yığın işaretçisini doğrudan işlemeyebilirsiniz. Ancak, yığın işaretçisi olmadan işlemci bir işlev çağrısının sonunda nereye geri dönerek geri dönerek geri dönebilirsiniz çünkü program düzgün çalışması için önemlidir.
 
- Çoğu genel amaçlı kayıt yalnızca tek bir veri öğesini tutar. Örneğin, tek bir tamsayı, kayan noktalı sayı veya bir dizinin öğesi. Daha yeni işlemcilerin, küçük bir veri dizisini tutabilecek vektör kayıtları olarak adlandırılan daha büyük Yazmaçları vardır. Çok fazla veri tutulduğundan, vektör kayıtları dizileri içeren işlemlere çok hızlı bir şekilde gerçekleştirilmesini sağlar. Vektör kayıtları öncelikle pahalı ve yüksek performanslı süper bilgisayarlarda kullanılmıştır, ancak artık yoğun grafik işlemlerinde çok daha fazla avantaj sağlamak için kullanıldıkları mikro işlemcilerde kullanılabilir hale geliyor.
+ Genel amaçlı yazmacaların çoğu yalnızca tek bir veri öğesi tutar. Örneğin, tek bir tamsayı, kayan nokta sayısı veya bir dizinin öğesi. Bazı yeni işlemciler, küçük bir veri dizisini tutan vektör yazmazları olarak adlandırılan daha büyük yazmamalara sahip olur. Çok fazla veriye sahip olduğundan, vektör kayıtları dizileri içeren işlemlerin çok hızlı bir şekilde gerçekleştir gerçekleştirilen işlemlere izin verir. Vektör yazmazları ilk olarak pahalı, yüksek performanslı süper bilgisayarlarda kullanılıyor ancak artık yoğun grafik operasyonlarında büyük avantaj elde etmek için kullanıldıkları mikro işlemcilerde kullanılmaya başlandı.
 
- İşlemcinin genellikle, kayan nokta işlemleri için en iyi duruma getirilmiş ve tamsayı işlemleri için bir tane olmak üzere iki genel amaçlı kayıt kümesi vardır. Bunlara göre değil, bunlar kayan nokta ve tamsayı Yazmaçları olarak adlandırılır.
+ Bir işlemci genellikle biri kayan nokta işlemleri için, diğeri de tamsayı işlemleri için iyileştirilmiş iki genel amaçlı yazmaca sahip olur. Şaşırtıcı bir şekilde, bunlar kayan nokta ve tamsayı yazmaca denir.
 
- Yönetilen kod, çalışma zamanında mikro işlemcinin fiziksel kayıtlarına erişen yerel koda derlenir. **Kayıt** penceresi, ortak dil çalışma zamanı veya yerel kod için bu fiziksel kayıtları görüntüler. betik ve SQL, kayıt kavramını desteklemeyen diller olduğundan, **yazmaçları** penceresi betik veya SQL uygulaması için kayıt bilgilerini görüntülemez.
+ Yönetilen kod, çalışma zamanında mikro işlemcinin fiziksel kayıtlarına erişen yerel koda derlenmiş. **Yazmazlar penceresinde** ortak dil çalışma zamanı veya yerel kod için bu fiziksel yazmazlar görüntülenir. **Yazmazlar** penceresi, betik ve SQL kayıt kavramını desteklemeen diller SQL betik veya uygulama için kayıt bilgilerini görüntülemez.
 
- **Yazmaçları** penceresini görüntüleme hakkında daha fazla bilgi için, bkz. [Yazmaçları penceresini kullanma](../debugger/how-to-use-the-registers-window.md).
+ Yazmanlar penceresini görüntüleme **hakkında daha fazla bilgi** için [bkz. Yazmanlar Penceresini Kullanma.](../debugger/how-to-use-the-registers-window.md)
 
- **Kayıt** penceresine baktığınızda gibi girdileri görürsünüz `EAX = 003110D8` .
+ Yazmanlar **penceresine** bakarak gibi girişler `EAX = 003110D8` görebilirsiniz.
 
- İşaretin solundaki simge, `=` kayıt adıdır, `EAX` Bu durumda. İşaretin sağ tarafındaki sayı, `=` kayıt içeriğini temsil eder.
+ Bu durumda, `=` işaretin sol tarafta yer alan simgesi yazman `EAX` adıdır. İşaretin sağı, `=` yazmaz içeriğini temsil eder.
 
- **Yazmaçları** penceresi yalnızca bir kaydın içeriğini görüntülemenizi sağlar. Yerel kodda kesme modundayken, bir kaydın içeriğine tıklayıp değeri düzenleyebilirsiniz. Bu, rastgele yapmanız gereken bir şey değildir. Düzenlemekte olduğunuz kaydı ve içerdiği verileri anlamadığınız takdirde, daha az düzenlemenin sonucu, bir program kilitlenmesi veya başka bir istenmeyen sonuç olabilir. Ne yazık ki, çeşitli Intel ve Intel uyumlu işlemcilerin kayıt kümelerinin ayrıntılı bir açıklaması, bu kısa giriş kapsamına çok daha fazla gidiyor.
+ **Yazmazlar** penceresi, bir yazmanın içeriğini görüntülemekten daha fazlasını yapmaya olanak sağlar. Yerel kodda kesme modundayken yazmaca tıklar ve değeri düzenleyebilirsiniz. Bu, rastgele bir şekilde yapmak için bir şey değildir. Düzenlemekte olduğunuz yazmaca ve içerdiği verileri anlamadıkça, dikkatsiz düzenlemenin sonucu büyük olasılıkla bir program kilitlenmesi veya başka bir istirnak sonucudur. Ne yazık ki, çeşitli Intel ve Intel uyumlu işlemcilerin kayıt kümelerinin ayrıntılı bir açıklaması, bu kısa tanıtım kapsamının çok ötesindedir.
 
-## <a name="register-groups"></a>Grupları Kaydet
+## <a name="register-groups"></a>Grupları kaydetme
 
-Dağınıklığı azaltmak için, **Yazmaçları** penceresi kayıtları gruplar halinde düzenler. **Yazmaçları** penceresine sağ tıkladığınızda, uygun gördüğünüz şekilde görüntüleyebilen veya gizleyebileceğiniz bir Grup listesi içeren bir kısayol menüsü görürsünüz.
+Dağınıklığı azaltmak için **Yazmalar penceresi** kayıtları gruplar halinde düzenleyebilir. Yazmanlar penceresine **sağ** tıklarsanız, grup listesini içeren bir kısayol menüsüyle karşınıza çıktıyı gördüğünüz şekilde ekleyebilirsiniz.
 
-## <a name="register-flags"></a>Kayıt bayrakları
+## <a name="register-flags"></a>Bayrakları kaydetme
 
-Intel x86 işlemciler için, **Yazmaçları** penceresinde aşağıdaki bayrakları görebilirsiniz. Bir hata ayıklama oturumu sırasında bu bayrakları da düzenleyebilirsiniz.
+Intel x86 işlemcileri için Yazmalar penceresinde aşağıdaki **bayrakları** görebilirsiniz. Hata ayıklama oturumu sırasında bu bayrakları da düzenleyebilirsiniz.
 
-|Bayrak|Değer ayarla|
+|Bayrak|Değer ayarlama|
 |-|-|
 |Taşma|OV = 1|
-|Yön|YUKARı = 1|
-|İsteği|EI = 1|
+|Yön|UP = 1|
+|Kesme|EI = 1|
 |İşaret|PL = 1|
 |Sıfır|ZR = 1|
 |Yardımcı taşıma|AC = 1|

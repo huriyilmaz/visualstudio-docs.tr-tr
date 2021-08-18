@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 66be01a2a6de30aa0a4b8d59cb0e3575890d0a8a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 750edd7dd48235acb4b2bc6e718999dd047ce36190a43a2468376c54beeddcd4
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122104683"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417788"
 ---
 # <a name="bp_cond_style"></a>BP_COND_STYLE
 Bekleyen ve bağlı kesme noktaları için kesme noktası koşul stilini belirtir.

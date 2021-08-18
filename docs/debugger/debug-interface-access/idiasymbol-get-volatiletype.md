@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bfde9541f787d3c573880c94f7d4b62ea09e8f7babb6c7aa7eed3a2dcb9f404
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 735c8715405f7c882154751658faca2eb389f5c6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121240451"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065935"
 ---
 # <a name="idiasymbolget_volatiletype"></a>IDiaSymbol::get_volatileType
 Kullanıcı tanımlı veri türünün (UDT) geçici olup olmadığını belirten bir bayrak alınır.

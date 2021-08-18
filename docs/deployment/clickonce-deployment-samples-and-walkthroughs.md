@@ -1,6 +1,6 @@
 ---
-title: ClickOnce Dağıtım örnekleri ve Izlenecek yollar | Microsoft Docs
-description: Windows Forms, WPF ve konsol uygulamalarını dağıtmak için kullanılan teknikleri anlamak için bu örnek uygulamalar, örnek kod ve izlenecek yol-kılavuzlarına kullanın.
+title: ClickOnce Dağıtım Örnekleri ve Kılavuzlar | Microsoft Docs
+description: Formlar, WPF ve konsol uygulamalarını dağıtmak için kullanılan teknikleri anlamak için bu örnek uygulamaları, Windows örnek kodu ve adımları kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,26 +20,26 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b4778cf4b8aa461b3c60ef6f4c6a209a2f4f597
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: bc2908a8c279e5badbf25bd79f8191be0ea13ca76adf0f56e058424386636580
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122104923"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121343540"
 ---
 # <a name="clickonce-deployment-samples-and-walkthroughs"></a>ClickOnce dağıtım örnekleri ve yönergeler
-bu bölüm örnek uygulamalar, örnek kod ve Windows Forms, WPF ve konsol uygulamalarını dağıtmak için kullanılan sözdizimi, yapı ve teknikleri gösteren adım adım yönergeler içerir.
+Bu bölümde örnek uygulamalar, örnek kod ve Windows Forms, WPF ve konsol uygulamalarını dağıtmak için kullanılan söz dizimi, yapı ve teknikleri gösteren adım adım kılavuzlar yer almaktadır.
 
- Örnek kod, yönerge amaçlarıyla yöneliktir ve dağıtılan çözümlerinde değişiklik yapılmadan kullanılmamalıdır. Özellikle, güvenliğin daha fazla dikkate alınması gerekir.
+ Örnek kod, yönerge amaçlıdır ve değişiklik yapmadan dağıtılan çözümlerde kullanılmamalı. Özellikle güvenliğin daha fazla dikkate alınması gerekir.
 
 ## <a name="clickonce-deployment"></a>ClickOnce dağıtımı
 
 |Konu|Açıklama|
 |-----------|-----------------|
-|[ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)|ClickOnce uygulamanızı dağıtmak için .NET Framework yardımcı programlarının nasıl kullanılacağını açıklar.|
-|[ClickOnce dağıtım apı 'si ile isteğe bağlı derlemeleri indirme](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api.md)|Uygulamanızdaki belirli derlemelerin "isteğe bağlı" olarak nasıl işaretleneceğini ve ad alanındaki sınıfları kullanarak nasıl indirileceğini gösterir <xref:System.Deployment.Application> .|
-|[tasarımcıyı kullanarak ClickOnce dağıtım apı 'si ile isteğe bağlı derlemeleri indirme](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)|Uygulama derlemelerinin yalnızca uygulama tarafından ilk kez kullanıldıklarında nasıl indirileceği açıklanır.|
+|[Bir ClickOnce el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)|Uygulamanızı dağıtmak için .NET Framework yardımcı programlarının nasıl ClickOnce açıklar.|
+|[Dağıtım API'sini kullanarak isteğe ClickOnce derlemeleri indirme](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api.md)|Uygulamanıza bazı derlemelerin "isteğe bağlı" olarak işaretlerini ve ad alanı sınıflarını kullanarak bunları indirmeyi <xref:System.Deployment.Application> gösteren.|
+|[Tasarımcıyı kullanarak isteğe bağlı derlemeleri ClickOnce dağıtım API'si ile indirme](../deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer.md)|Uygulama derlemelerinin yalnızca uygulama tarafından ilk kez kullanıldıkları zaman nasıl indirildiklerini açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio izlenecek yollar](/previous-versions/szatc41e(v=vs.110))
+- [Visual Studio kılavuzlar](/previous-versions/szatc41e(v=vs.110))

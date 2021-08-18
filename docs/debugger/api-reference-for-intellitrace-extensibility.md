@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c342f830842fd1cb49baf15e17b9052bded1c0c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: e757e11340a7c6dcff17bdbc86bda34424e1642a366f4a53648294e20d2f28c6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052479"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121346342"
 ---
 # <a name="api-reference-for-intellitrace-extensibility"></a>IntelliTrace genişletilebilirliği için API başvurusu
 

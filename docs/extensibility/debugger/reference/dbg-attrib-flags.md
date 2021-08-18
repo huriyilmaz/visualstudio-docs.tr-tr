@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7cf9ae3908b2edf6fbaf65c5e67ff428eb999afe
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 8137d5bad817478371fb57dcffc568db616949a1739e5d501ac4fe394d846d16
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122065130"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452452"
 ---
 # <a name="dbg_attrib_flags"></a>DBG_ATTRIB_FLAGS
 [IDebugProperty2 veya IDebugReference2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimi [için çeşitli öznitelikleri](../../../extensibility/debugger/reference/idebugreference2.md) açıklar. DEBUG_PROPERTY_INFO [üyesi.](../../../extensibility/debugger/reference/debug-property-info.md)
@@ -292,13 +292,13 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
  Bu nesnenin bir iç sınıf olduğunu gösterir.
 
  `DBG_ATTRIB_MOSTDERIVED`\
- Bu nesnenin ' en çok türetilmiş *' olduğunu* gösterir. " en türetilmiş "*terimi,* başvuru türünün değil, nesnenin gerçek türünü ifade eder.
+ Bu nesnenin ' en çok türetilmiş *' olduğunu* gösterir. " en türetilmiş "*terimi,* başvuru türü değil, nesnenin gerçek türünü ifade eder.
 
  `DBG_ATTRIB_CHILD_ALL`\
  aracılığıyla bir `DBG_ATTRIB_DATA` maskesini `DBG_ATTRIB_MOSTDERIVED` gösterir.
 
  `DBG_ATTRIB_MULTI_CUSTOM_VIEWERS`\
- Nesneyle ilişkilendirilmiş birden çok özel görüntüleyici olduğunu gösterir.
+ Nesnenin ilişkili birden çok özel görüntüleyicisi olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -307,7 +307,7 @@ public const int DBG_ATTRIB_MULTI_CUSTOM_VIEWERS = 0x0001000000000000
 
  Bu bayraklar, bir nesnenin, örneğin [EnumChildren'a](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)bağımsız değişken olarak geçiriken filtrelemek için de kullanılır. Değerler bitwise ile birleştirilmiş `OR` olabilir.
 
- bayrağı, `DBG_ATTRIB_VALUE_CUSTOM_VIEWER` [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] [IDebugProperty2 arabiriminden IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) [](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimini alma ve özel görüntüleyiciler listesi için [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) çağrısının göstergesidir.
+ bayrağı, `DBG_ATTRIB_VALUE_CUSTOM_VIEWER` [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] [IDebugProperty2 arabiriminden IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) [](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimini elde etmek ve özel görüntüleyicilerin listesi için [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) çağrısı yapmak için bir göstergedir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg.h

@@ -13,14 +13,15 @@ ms.assetid: 7cdbbce1-8b59-43ce-b6aa-a948bb4d7148
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 012de677e6b6d819df05cf0b95640fe800b63b3d
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 83a5ae51d6c7ec8dc87ac137a57b3e2bfee81c2c612329798124e8cb752e4a0d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149306"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345716"
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Arabirim Erişimi SDK Başvurusunda Hata Ayıklama
 

@@ -11,17 +11,18 @@ ms.assetid: d0d81202-8a4a-4bc3-b297-30a047c5ec60
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f754c12fc19d6ba5ed506ef3b51ee704b4160783
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0d2e5d8f9fc435740d536c4bcd33c270763c0be8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084941"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035195"
 ---
 # <a name="idebugengine2setregistryroot"></a>IDebugEngine2::SetRegistryRoot
 Hata ayıklama altyapısı (DE) için kayıt defteri kökünü ayarlar.

@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklayıcı kavramları | Microsoft Docs
-description: Visual Studio hata ayıklama paketini tasarlarken kullanılan mimari kavramlar hakkında bilgi edinin ve bu pakette derleme yapmanıza yardımcı olur.
+description: bu pakette derleme yapmanıza yardımcı olmak üzere Visual Studio hata ayıklama paketini tasarlarken kullanılan mimari kavramlar hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,17 +10,18 @@ ms.assetid: 2d371d38-f1a0-4a9a-8ea3-100e8c0149b7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 94249a6ff7c50fb054a3fc460708a8e36181bff8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: af9349492bbedc9bcf87af5eda58b19f571fa7e6cac6dcc5c6b89f05ce42ca9e
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094893"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121343188"
 ---
 # <a name="debugger-concepts"></a>Hata ayıklayıcı kavramları
-Visual Studio hata ayıklama paketi üzerinde derlemek için, paketi tasarlarken kullanılan mimari kavramlarını tanımanız gerekir.
+Visual Studio hata ayıklama paketini oluşturmak için, paketi tasarlarken kullanılan mimari kavramlara alışmalısınız.
 
 ## <a name="in-this-section"></a>Bu bölümde
  [Hata ayıklama oturumu](../../extensibility/debugger/debug-session.md) Hata ayıklama mimarisinde bir oturumun rolünü açıklar.
@@ -48,6 +49,6 @@ Visual Studio hata ayıklama paketi üzerinde derlemek için, paketi tasarlarken
 ## <a name="related-sections"></a>İlgili bölümler
  [Hata ayıklayıcı bağlamları](../../extensibility/debugger/debugger-contexts.md) Hata ayıklama altyapısının (DE) kod, belge ve ifade değerlendirme bağlamlarının eşzamanlı olarak nasıl çalıştığını açıklar. Üç bağlamın her biri için, bu konuyla ilgili konum, konum veya değerlendirmeyi açıklar.
 
- [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md) Hata ayıklama altyapısı (DE), ifade değerlendiricisi (EE) ve sembol işleyici (SH) dahil Visual Studio hata ayıklama bileşenlerine genel bakış sağlar.
+ [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md) hata ayıklama altyapısını (DE), ifade değerlendirici (EE) ve sembol işleyicisini (SH) içeren Visual Studio hata ayıklama bileşenlerine genel bakış sağlar.
 
  [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md) Bir program başlatma ve ifadeleri değerlendirme gibi çeşitli hata ayıklama görevlerinin bağlantılarını içerir.

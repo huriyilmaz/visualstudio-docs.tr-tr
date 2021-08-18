@@ -10,14 +10,15 @@ ms.assetid: 37969977-6f7d-45c9-ba03-1306ae71f5d1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: be5915d96b574336d7091239275a2aaef456a7f3
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 12adec8bbaad32d801de2dabdfb792bc1cc196ecce47a0cbfb35cb84052def21
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899374"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121452673"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>Belirli komutlar tarafından kullanılan bitflags
 Kaynak denetimi eklentisi API 'sindeki bir dizi işlevin davranışı tek bir değerde bir veya daha fazla bit ayarlanarak değiştirilebilir. Bu değerler bitflags olarak bilinir. Kaynak denetimi eklentisi API 'SI tarafından kullanılan çeşitli bitflags burada, bunları kullanan işleve göre gruplanmış olarak ayrıntılıdır.
@@ -88,24 +89,24 @@ Kaynak denetimi eklentisi API 'sindeki bir dizi işlevin davranışı tek bir de
 
 |Bayrak|Değer|Açıklama|
 |----------|-----------|-----------------|
-|`SCC_OPT_EVENTQUEUE`|0x00000001L|Olay kuyruğunun durumunu ayarlayın.|
-|`SCC_OPT_USERDATA`|0x00000002L|İçin Kullanıcı verilerini belirtin `SCC_OPT_NAMECHANGEPFN` .|
-|`SCC_OPT_HASCANCELMODE`|0x00000003L|IDE iptal işleyebilir.|
-|`SCC_OPT_NAMECHANGEPFN`|0x00000004L|Ad değişiklikleri için bir geri arama ayarlayın.|
-|`SCC_OPT_SCCCHECKOUTONLY`|0x00000005L|Kaynak denetimi eklentisi Kullanıcı arabirimi kullanıma almayı devre dışı bırakın ve çalışma dizinini ayarlamayın.|
-|`SCC_OPT_SHARESUBPROJ`|0x00000006L|Çalışma dizinini belirtmek için kaynak denetim sisteminden ekleyin. Doğrudan alt öğe ise ilişkili projeyle paylaşmayı deneyin.|
+|`SCC_OPT_EVENTQUEUE`|0x00000001L|Olay kuyruğu durumunu ayarlayın.|
+|`SCC_OPT_USERDATA`|0x00000002L|için kullanıcı verilerini `SCC_OPT_NAMECHANGEPFN` belirtin.|
+|`SCC_OPT_HASCANCELMODE`|0x00000003L|IDE iptal işlemini işebilir.|
+|`SCC_OPT_NAMECHANGEPFN`|0x00000004L|Ad değişiklikleri için bir geri çağırma ayarlayın.|
+|`SCC_OPT_SCCCHECKOUTONLY`|0x00000005L|Kaynak denetimi eklentisi kullanıcı arabirimini devre dışı bırakma ve çalışma dizini ayarlama.|
+|`SCC_OPT_SHARESUBPROJ`|0x00000006L|Çalışma dizini belirtmek için kaynak denetim sisteminden ekleyin. Doğrudan alt kullanıcı ise ilişkili projeyle paylaşmayı deneyin.|
 
 ## <a name="dwval-bitflags"></a>dwVal bitflags
- Bu bayraklar, parametresindeki [SccSetOption](../extensibility/sccsetoption-function.md) tarafından kullanılır `dwVal` .
+ Bu bayraklar parametresinde [SccSetOption](../extensibility/sccsetoption-function.md) tarafından `dwVal` kullanılır.
 
-|Bayrak|Değer|Açıklama|Değer tarafından kullanılan `nOption`|
+|Bayrak|Değer|Açıklama|Değere göre `nOption` kullanılır|
 |----------|-----------|-----------------|-----------------------------|
 |`SCC_OPT_EQ_DISABLE`|0x00L|Olay kuyruğu etkinliğini askıya alır.|`SCC_OPT_EVENTQUEUE`|
-|`SCC_OPT_EQ_ENABLE`|0x01L|Olay sırası günlüğe kaydetmeyi etkinleştir.|`SCC_OPT_EVENTQUEUE`|
-|`SCC_OPT_HCM_NO`|0L|Varsayılanını İptal moduna sahip değildir; eklentinin istenirse sağlaması gerekir.|`SCC_OPT_HASCANCELMODE`|
-|`SCC_OPT_HCM_YES`|1L|IDE, Cancel işlemini gerçekleştirir.|`SCC_OPT_HASCANCELMODE`|
-|`SCC_OPT_SCO_NO`|0L|Varsayılanını Eklenti kullanıcı arabiriminden kullanıma almak için Tamam; çalışma dizini ayarlandı.|`SCC_OPT_SCCCHECKOUTONLY`|
-|`SCC_OPT_SCO_YES`|1L|Çalışma dizini olmadan eklenti Kullanıcı arabirimi kullanıma alma yok.|`SCC_OPT_SCCCHECKOUTONLY`|
+|`SCC_OPT_EQ_ENABLE`|0x01L|Olay kuyruğu günlüğünü sağlar.|`SCC_OPT_EVENTQUEUE`|
+|`SCC_OPT_HCM_NO`|0L|(Varsayılan) İptal modu yoktur; eklentinin istenirse temini gerekir.|`SCC_OPT_HASCANCELMODE`|
+|`SCC_OPT_HCM_YES`|1L|IDE iptal işlemini işler.|`SCC_OPT_HASCANCELMODE`|
+|`SCC_OPT_SCO_NO`|0L|(Varsayılan) Eklenti kullanıcı arabiriminden kontrol etmek için tamam; çalışma dizini ayarlanmıştır.|`SCC_OPT_SCCCHECKOUTONLY`|
+|`SCC_OPT_SCO_YES`|1L|Eklenti kullanıcı arabirimini alma yok, çalışma dizini yok.|`SCC_OPT_SCCCHECKOUTONLY`|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)

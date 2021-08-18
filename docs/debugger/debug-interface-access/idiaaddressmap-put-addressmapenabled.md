@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f4c3a08361942df789c7e6bbd055464d69d056fd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 7a8cabb51b13262553d70e45ffd3e26219cb4563e597b519c79ef26a734a68cd
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122105580"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345351"
 ---
 # <a name="idiaaddressmapput_addressmapenabled"></a>IDiaAddressMap::put_addressMapEnabled
 Adres eşlemesinin sembol adreslerini çevirmek için kullanılıp kullanılmayacağını belirtir.

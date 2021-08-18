@@ -11,14 +11,15 @@ ms.assetid: 67dfbede-2678-47df-b664-5c49841d0b9b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bd074de0c44803a06d5399f2bd4dc1e3c43618a1
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 82bebfc05ac360ac2cb32eac70679805b592c4cf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155350"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065879"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 Sembol ve dosya adları için arama seçeneklerini belirtir.

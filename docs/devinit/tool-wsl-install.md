@@ -1,6 +1,6 @@
 ---
 title: wsl-install
-description: devinit aracı WSL-Install.
+description: devinit tool wsl-install.
 ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
@@ -11,67 +11,67 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 4dff121d7866918d5c30986dc9bd4c3cab039ac5
-ms.sourcegitcommit: 3fc099cdc484344c781f597581f299729c6bfb10
+ms.openlocfilehash: 448df85f9a67189d22a8d371c1d5ec30b960928a9242c05f44e07ba5eb198bc2
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104672427"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121418031"
 ---
 # <a name="wsl-install"></a>wsl-install
 
 > [!IMPORTANT]
-> 12 Nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub Codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. Bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş VDı çözümleri için gelişen deneyimlere odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için, Visual Studio için geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren Visual Studio 2019'dan GitHub Codespaces'a bağlanma desteklemeyecek ve bu özel önizleme sonuçlandırıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için Visual Studio geliştirici topluluğu forummize katılın.
 
-`wsl-install`Araç, [Linux için Windows alt sistemi](/windows/wsl/) (WSL) için Linux Distro 'lara yüklemek üzere kullanılır.
+Araç, `wsl-install` Linux için Windows Alt Sistemi (WSL) için Linux [dağıtımlarını](/windows/wsl/) yüklemek için kullanılır.
 
 > [!IMPORTANT]
-> `wsl-install`Araç, Windows üzerinde WSL 2 ' nin zaten etkinleştirilmesini gerektirir. Bazı nedenlerle WSL 2 etkinleştirilmemişse, [WSL yüklemesi belgelerini](https://docs.microsoft.com/windows/wsl/install-win10)takip edebilirsiniz. Gerekli Windows özelliklerini etkinleştirmek için [WindowsFeature-Enable](tool-windowsfeature-enable.md) aracını da kullanabilirsiniz.
+> Araç, `wsl-install` wsl 2'nin Windows. Herhangi bir nedenle WSL 2 etkinleştirilmediyse, [WSL](https://docs.microsoft.com/windows/wsl/install-win10)yükleme belgelerini takip edin. [Windowsfeature-enable aracını,](tool-windowsfeature-enable.md) gerekli tüm özellikleri etkinleştirmek için windowsfeature-enable Windows kullanabilirsiniz.
 
 ## <a name="usage"></a>Kullanım
 
-Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak açıklanan [varsayılan](#default-behavior) davranışı izler.
+Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak [açıklanmış varsayılan](#default-behavior) davranışı takip eder.
 
 | Ad                                             | Tür   | Gerekli | Değer                                                             |
 |--------------------------------------------------|--------|----------|-------------------------------------------------------------------|
-| **açıklamaları**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                             |
-| [**girişinin**](#input)                              | string | Yes      | Yüklemeyi geri çevirme. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.     |
-| [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.  |
+| **yorumlar**                                     | dize | No       | İsteğe bağlı açıklamalar özelliği. Kullanılmadı.                             |
+| [**Giriş**](#input)                              | string | Yes      | Yüklenecek dağıtım. Ayrıntılar [için](#input) aşağıdaki Giriş'e bakın.     |
+| [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar [için aşağıdaki](#additional-options) Ek seçenekler'e bakın.  |
 
 ### <a name="input"></a>Giriş
 
-Dağıtımı yapılan kapsayıcıyı içeren AppX uygulama dağıtım paketi ( `.appx` ) IÇIN URI. URI, arşiv kökünde ya da `.appx` `install.tar.gz` bir iç arşiv içinde tek bir içeren bir arşivi işaret etmelidir `.appx` . Desteklenen destekler arasında şunlar yer alır:
+Dağıtacak dağıtımı içeren AppX uygulama dağıtım paketi ( `.appx` ) için URI. URI, arşiv kökünde veya bir iç arşiv içinde tek bir içeren `.appx` `install.tar.gz` arşive işaret `.appx` etmek gerekir. Desteklenen dağıtım örnekleri şunlardır:
 
-| Distro                          | Kullanılmamışsa                                                           |
+| Dağıtım                          | Urı                                                           |
 |---------------------------------|---------------------------------------------------------------|
 | Ubuntu 20.04                    | https://aka.ms/wslubuntu2004                                  |
 | Ubuntu 18.04                    | https://aka.ms/wsl-ubuntu-1804                                |
 | Ubuntu 16.04                    | https://aka.ms/wsl-ubuntu-1604                                |
-| Borçlu GNU/Linux                | https://aka.ms/wsl-debian-gnulinux                            |
+| Debian GNU/Linux                | https://aka.ms/wsl-debian-gnulinux                            |
 | Kali Linux                      | https://aka.ms/wsl-kali-linux-new                             |
-| OpenSUSE artık 42                | https://aka.ms/wsl-opensuse-42                                |
+| OpenSUSE Leap 42                | https://aka.ms/wsl-opensuse-42                                |
 | SUSE Linux Enterprise Server 12 | https://aka.ms/wsl-sles-12                                    |
 
 > [!NOTE]
-> ARM Linux Distro 'lara, GitHub codespaces 'de Şu anda desteklenmiyor.
+> ARM Linux dağıtımları şu anda Codespaces'GitHub desteklemektedir.
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Birden çok ek seçenek desteklenir:
+Birden çok ek seçenek de kullanılabilir:
 
 | Ad                      | Tür      | Gerekli | Değer                                                                                                                                                                                    |
 |---------------------------|-----------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| --WSL-sürümü             | dize    | No       | Kullanılacak WSL sürümü. Varsayılan değer 2 ' dir.                                                                                                                                  |
-| --oluşturma sonrası-komutu     | dize    | No       | Yükleme tamamlandıktan sonra Linux 'un içinde yürütülecek komut. Komut tek bir sözcük olarak biçimlendirilmelidir veya tırnak işaretleri içine alınmalıdır. Varsayılan, komut değildir.  |
+| --wsl-version             | dize    | No       | Kullanmak için WSL sürümü. Varsayılan değer 2'dir.                                                                                                                                  |
+| --post-create-command     | dize    | No       | Yükleme tamamlandıktan sonra Linux dağıtımı içinde yürütülecek komut. Komutun tek bir sözcük olarak biçimlendirilerek veya tırnak içine alınarak sarmalanmış olması gerekir. Varsayılan değer komut değildir.  |
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracın varsayılan davranışı `wsl-install` `input` , ' nin yükleneceğine ilişkin özelliği olarak hata olur.
+Aracının varsayılan davranışı, yüklemenin dağıtım özelliği `wsl-install` `input` gerektiğinden hataya neden olmasıdır.
 
 ## <a name="example-usage"></a>Örnek kullanım
-Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `wsl-install` `.devinit.json` .
+Aşağıda, kullanarak çalıştırma örnekleri `wsl-install` `.devinit.json` verilmiştir.
 
-#### <a name="devinitjson-that-will-install-ubuntu-2004"></a>Ubuntu 20,04 ' i yükleyecek .devinit.js:
+#### <a name="devinitjson-that-will-install-ubuntu-2004"></a>.devinit.jsUbuntu 20.04'ü yükleyecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
@@ -84,7 +84,7 @@ Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda veril
 }
 ```
 
-#### <a name="devinitjson-that-will-install-ubuntu-2004-and-perform-a-post-create-command"></a>Ubuntu 20,04 yükleyecek ve oluşturma sonrası bir komut gerçekleştirecek .devinit.js.
+#### <a name="devinitjson-that-will-install-ubuntu-2004-and-perform-a-post-create-command"></a>.devinit.jsUbuntu 20.04'ü yükecek ve oluşturma sonrası komutu gerçekleştirecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
@@ -98,7 +98,7 @@ Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda veril
 }
 ```
 
-#### <a name="devinitjson-that-will-install-ubuntu-2004-and-perform-a-post-create-command-that-configures-the-packages-listed"></a>Bu, Ubuntu 20,04 yükleyecek ve listelenen paketleri yapılandıran bir Create a komutu gerçekleştirecek .devinit.js.
+#### <a name="devinitjson-that-will-install-ubuntu-2004-and-perform-a-post-create-command-that-configures-the-packages-listed"></a>.devinit.jsUbuntu 20.04'ü yükecek ve listelenen paketleri yapılandıran bir post create komutu gerçekleştirecek:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",

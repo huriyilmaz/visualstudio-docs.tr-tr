@@ -14,12 +14,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: a3ca50cb39354ca39c0b87df67cff1793e97a925
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: ffac8904b22280e8dccc2e0aae96da780ff1b86e05b1b4ae10a9b504fe486cc6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122033778"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121426969"
 ---
 # <a name="functions-view---net-memory-instrumentation-data"></a>İşlevler Görünümü - .NET bellek ölçüm verileri
 Ölçümleme yöntemi kullanılarak toplanan .NET bellek ayırma profil oluşturma verilerine ilişkin İşlevler görünümü, profil oluşturma çalıştırması sırasında bellek ayrılan işlevleri listeler. İşlev satırı, ayırmaların boyutunu, sayısını ve işlevin zamanlama verilerini raporlar.
@@ -90,18 +90,18 @@ ms.locfileid: "122033778"
 |**En Az Uygulama Dahil Süresi**|Bu işleve yapılan bir çağrının en düşük uygulama dahil süresi.|
 
 ## <a name="application-exclusive-values"></a>Uygulamaya özel değerler
- Uygulamanın dışlamalı değeri, bir işlevin çağrı yığınının en üstünde doğrudan yürütüldüğü süreyi belirtir. Süre; bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda harcanan zamanı içermez ve alt işlevlerde harcanan zamanı dahil etmez.
+ Uygulamaya özel değerler, bir işlevin çağrı yığınının en üstünde doğrudan yürütülebilir olduğu zamanı gösterir. Bu süre, bağlam anahtarları ve giriş/çıkış işlemleri gibi işletim sistemine yapılan çağrılarda harcanan zamanı veya alt işlevlerde harcanan zamanı içermez.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Dışlamalı uygulama süresi**|Bu işleve yapılan tüm çağrıların Toplam uygulama dışlamalı süresi.|
-|**Uygulama dışlamalı süresi%**|Bu işlevin toplam uygulama dışlamalı saatinde harcanan profil oluşturma çalıştırmasının toplam geçen dışlamalı sürenin yüzdesi.|
-|**Ortalama uygulama dışlamalı süresi**|Bu işleve yapılan çağrının ortalama uygulama dışlamalı süresi.|
-|**Maksimum uygulama dışlamalı süresi**|Bu işleve yapılan çağrının en büyük uygulama dışlamalı süresi.|
-|**En az uygulama dışlamalı süresi**|Bu işleve yapılan çağrının en düşük uygulama dışlamalı süresi.|
+|**Uygulamaya Özel Zaman**|Bu işleve yapılan tüm çağrıların toplam uygulama özel süresi.|
+|**Uygulamaya Özel Saat %**|Bu işlevin toplam uygulama özel süresinde harcanan profil oluşturma çalıştırması için geçen toplam özel sürenin yüzdesi.|
+|**Ortalama Uygulama Özel Süresi**|Bu işleve yapılan bir çağrının ortalama uygulama özel süresi.|
+|**En Fazla Uygulama Özel Süresi**|Bu işleve yapılan bir çağrının en uzun uygulama özel süresi.|
+|**En Az Uygulama Için Özel Süre**|Bu işleve yapılan bir çağrının uygulamaya özel en düşük süresi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
-- [İşlevler Görünümü-Örnekleme](../profiling/functions-view-dotnet-memory-sampling-data.md)
+- [Nasıl: Rapor Görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
+- [İşlevler Görünümü - örnekleme](../profiling/functions-view-dotnet-memory-sampling-data.md)
 - [İşlevler Görünümü](../profiling/functions-view-instrumentation-data.md)
 - [İşlevler Görünümü](../profiling/functions-view-sampling-data.md)

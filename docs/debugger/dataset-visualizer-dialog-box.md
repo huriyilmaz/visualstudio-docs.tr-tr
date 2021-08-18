@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 32c7867f0d392937c90d47ed17352e747b1fd3e7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: eb3c862c52e815b2ac03cb774ae5d709975e9e62eb35f0f5390e738e5c5b7d16
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066856"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121345822"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>Veri Kümesi Görselleştiricisi İletişim Kutusu
 DataSet Görselleştiricisi bir DataSet, DataTable, DataView veya DataViewManager nesnesinin içeriğini görüntülemenize olanak sağlar. Hata ayıklayıcı değişkenleri penceresinde veya DataTip'te bu nesnelerden birinin Değeri'nin yanında görünen büyüteç simgesine tıklayarak bu görselleştiriciye erişebilirsiniz.

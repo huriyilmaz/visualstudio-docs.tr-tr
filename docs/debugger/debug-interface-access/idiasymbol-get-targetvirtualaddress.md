@@ -11,14 +11,15 @@ ms.assetid: a0a5ce72-95f8-443e-bb4b-8c21194faad0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c03a5fdf1a65306e20262717715ed6b27d1c7af
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 8c9024683d25679794f3fe29ea9a01233ca9e443
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155665"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097655"
 ---
 # <a name="idiasymbolget_targetvirtualaddress"></a>IDiaSymbol::get_targetVirtualAddress
 Bir dönüştürücü hedefinin sanal adresini (VA) alır.

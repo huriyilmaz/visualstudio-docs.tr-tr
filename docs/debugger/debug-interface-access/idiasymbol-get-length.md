@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a95d21701eae7e780c8d191c6db5394170a571a91674d8d2d22975c4852b54ac
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a02dc44d8ac2af51a1feb2791ef289cb0a7ff7aa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454698"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036082"
 ---
 # <a name="idiasymbolget_length"></a>IDiaSymbol::get_length
 Bu sembol tarafından temsil edilen nesne tarafından kullanılan bit veya bayt sayısını alır.

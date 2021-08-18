@@ -11,14 +11,15 @@ ms.assetid: 5632523b-fd58-40aa-8523-f29ee9083a65
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 481ca4967e43dc1af6a994d6298f8173b96ddbf8
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: c4255b52ce045b93fa35aeb0b017935a0827b118405250364530a9593dd49db6
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102223959"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121426436"
 ---
 # <a name="marker_seriesmarker_series-destructor"></a>marker_series:: ~ marker_series yok edici
 Marker_series nesnesini yok eder ve tüm ayrılmış kaynakları serbest bırakır.

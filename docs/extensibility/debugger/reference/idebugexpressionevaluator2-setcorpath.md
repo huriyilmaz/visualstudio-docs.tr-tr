@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f49cb103dd5737e92053a2097f320bf5c24d1dea
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: a6ecfc95a45892c49a5df26215c200866ddb365b42ff62e92e8236b6b8975dc3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122138646"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121417281"
 ---
 # <a name="idebugexpressionevaluator2setcorpath"></a>IDebugExpressionEvaluator2::SetCorPath
 Hata ayıklayıcısında yüklenen ortak dil çalışma zamanının (CLR) yolunu ayarlar.

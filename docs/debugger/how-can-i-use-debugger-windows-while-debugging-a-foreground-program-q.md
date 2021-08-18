@@ -1,6 +1,6 @@
 ---
-title: Ön plan uygulamasında hata ayıklarken hata ayıklayıcı pencerelerini kullanma | Microsoft Docs
-description: Ön planda kalması gereken bir programda hata ayıklaması yapıyorsanız, arka planda yerleştirmekten kaçınmak için uzaktan hata ayıklamayı kullanın.
+title: Ön plan uygulamasında hata ayıklarken hata ayıklayıcı pencerelerini | Microsoft Docs
+description: Ön planda kalması gereken bir programda hata ayıklarsanız, bunu arka plana koymaktan kaçınmak için uzaktan hata ayıklamayı kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -21,22 +21,23 @@ ms.assetid: 9e67a308-1c81-42ab-966b-7fc3c1d2bf7a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fce51a1a28a8e03692faeee3ed723627864f4031
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 8009e7541fa848db1d1b0019eb24743bc0aca0c1e3d5bb22cb1b463aa260c3cb
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386832"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121453901"
 ---
 # <a name="how-can-i-use-debugger-windows-while-debugging-a-foreground-program"></a>Ön Plan Programında Hata Ayıklarken Hata Ayıklayıcı Penceresini Nasıl Kullanabilirim?
 ## <a name="problem-description"></a>Sorun Açıklaması
- Bir ekran boyama sorununa hata ayıklamaya çalışıyorum. Bu sorunu gözlemlemek için, programımı ön planda tutdum, yani hata ayıklama pencerelerini erişimim yok. Ne yapabilirim?
+ Ekran boyama sorununda hata ayıklamaya çalışıyorum. Bu sorunu gözlemlemek için programımı ön planda tutmam gerekiyor, yani hata ayıklama pencerelerine erişimim yok. Ne yapabilirim?
 
 ## <a name="solution"></a>Çözüm
- İkinci bir bilgisayarınız varsa, uzaktan hata ayıklamayı kullanabilirsiniz. İki bilgisayarlı bir kurulumla, ana bilgisayarda hata ayıklayıcıyı çalıştırırken uzak bilgisayar üzerinde ekran boyamayı izleyebilirsiniz. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
+ İkinci bir bilgisayarınız varsa uzaktan hata ayıklamayı kullanabilirsiniz. İki bilgisayarlı bir kurulumla, konakta hata ayıklayıcıyı çalışırken uzak bilgisayarda ekran boyamasını izleyebilirsiniz. Uzaktan hata ayıklama hakkında daha fazla bilgi için bkz. [Uzaktan Hata Ayıklama.](../debugger/remote-debugging.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
+- [Yerel Kodda Hata Ayıklama hakkında SSS](../debugger/debugging-native-code-faqs.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

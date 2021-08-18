@@ -10,17 +10,18 @@ ms.assetid: 6e7e0f95-181a-4805-adb3-c2407de0ab93
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7e03fa29071aa2e8b6f9bf517a408153876b4525
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e14c4f7c6b93cc62f65824dcfd45360ab7a081fcd7e098693603ddfc8d5bb79d
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063350"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121451981"
 ---
 # <a name="idebuggenericfieldinstancegettypearguments"></a>IDebugGenericFieldInstance::GetTypeArguments
 Bu örnek için tür parametresi bağımsız değişkenlerini alır.

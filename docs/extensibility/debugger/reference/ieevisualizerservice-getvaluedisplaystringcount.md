@@ -1,6 +1,6 @@
 ---
-description: Belirtilen özellik veya alan için görüntülenmek üzere değer dizelerinin sayısını verir.
-title: IEEVisualizerService::GetValueDisplayStringCount | Microsoft Docs
+description: Belirtilen özellik veya alan için görüntülenecek değer dizelerinin sayısını alır.
+title: 'IEEVisualizerService:: GetValueDisplayStringCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: aaabad975a57e18c9257df178b29b594d892441482db30fcd00836c322fb0169
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: eb63bfa6febf089b98ab637a1ae4ae8960e36423
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389429"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125900"
 ---
 # <a name="ieevisualizerservicegetvaluedisplaystringcount"></a>IEEVisualizerService::GetValueDisplayStringCount
-Belirtilen özellik veya alan için görüntülenmek üzere değer dizelerinin sayısını verir.
+Belirtilen özellik veya alan için görüntülenecek değer dizelerinin sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,16 +46,16 @@ int GetValueDisplayStringCount (
 
 ## <a name="parameters"></a>Parametreler
 `displayKind`\
-[in] [DisplayKind numaralama](../../../extensibility/debugger/reference/displaykind.md) değeri.
+'ndaki [Displaykind](../../../extensibility/debugger/reference/displaykind.md) numaralandırmasındaki değer.
 
 `propertyOrField`\
-[in] Bir özelliği veya alanı temsil eden [bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimi.
+'ndaki Bir özelliği veya alanı temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimi.
 
 `pcelt`\
-[out] Görüntülemek için değer dizelerinin sayısını döndürür.
+dışı Görüntülenecek değer dizelerinin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

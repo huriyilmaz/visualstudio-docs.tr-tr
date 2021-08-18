@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinde belirtilen sayıda segment alır.
-title: 'IDiaEnumSegments:: Next | Microsoft Docs'
+description: Numaralama dizisinde belirtilen sayıda segmenti alan.
+title: IDiaEnumSegments::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 53f61874-d821-47ab-a1f5-27e982804a6a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 95d4ac6d566033472d7769e4a1a5df86cdf7ff70
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 5aaed8e83a49ab31844d7fddd5f8e036fdc0d6cd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102159232"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036402"
 ---
 # <a name="idiaenumsegmentsnext"></a>IDiaEnumSegments::Next
-Sabit Listesi dizisinde belirtilen sayıda segment alır.
+Numaralama dizisinde belirtilen sayıda segmenti alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,20 +35,20 @@ HRESULT Next (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Alınmayacak Numaralandırıcı içindeki parçaların sayısı.
+[in] Numaralayıcıda alınan segmentlerin sayısı.
 
- rgelt
+ Rgelt
 
-dışı Segmentleri temsil eden istenen [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) nesneleriyle doldurulacak bir dizi.
+[out] Segmentleri temsil eden istenen [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) nesneleriyle doldurulması gereken bir dizi.
 
- Pceltfettiz
+ pceltFetched
 
-dışı Getirilen Numaralandırıcı içindeki segmentlerin sayısını döndürür.
+[out] Getirili numaralayıcıda segment sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla kesim yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` segment yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

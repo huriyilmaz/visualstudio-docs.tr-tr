@@ -1,6 +1,6 @@
 ---
 description: Bu nesnenin başvuru değerini ayarlar.
-title: IDebugObject::SetReferenceValue | Microsoft Docs
+title: 'IDebugObject:: SetReferenceValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b18af9741c4108b2638be0d55cec78d9a4fc683f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 71f1b02a48d14c01c0a28433be3d0321c2fe3855e045af839e384808be9e52a9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034896"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121451802"
 ---
 # <a name="idebugobjectsetreferencevalue"></a>IDebugObject::SetReferenceValue
 Bu nesnenin başvuru değerini ayarlar.
@@ -43,13 +43,13 @@ int SetReferenceValue(
 
 ## <a name="parameters"></a>Parametreler
 `pObject`\
-[in] Yeni [başvuru değerini temsil eden bir IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesi.
+'ndaki Yeni başvuru değerini temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, [bu IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesini, önceki başvuruları atarak parametresinde verilen `pObject` nesnenin değerine başvuru yapar. Bu nesnenin `IDebugObject` zaten bir başvuru türü olması gerektiğini unutmayın.
+ Bu yöntem, bu [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesini, parametrede verilen nesnenin değerine bir başvuru yapar `pObject` ve önceki tüm başvuruları yerine getirir. Bu `IDebugObject` nesnenin zaten bir başvuru türü olması gerektiğini unutmayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: a0421172d9f97fde3fcf558214b7325152e3c15373a70d242f9b68c013a5cc42
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 01f207d0430b17dddfdc955ae03e213fbcc2c415
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121343423"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035793"
 ---
 # <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity &gt; öğesi (ClickOnce dağıtım)
 Bu dağıtım bildirimini imzalayan yayımcı hakkında bilgi içerir.

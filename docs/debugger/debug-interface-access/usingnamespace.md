@@ -1,5 +1,5 @@
 ---
-description: Bazı semboller ad alanı tarafından adlandırılabilir ve daha sonra bir SymTagUsingNameSpace etiketiyle tanımlanabilir.
+description: Bazı semboller ad alanı tarafından başvurulsa ve daha sonra SymTagUsingNameSpace etiketiyle tanımlanır.
 title: UsingNameSpace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,31 +11,32 @@ ms.assetid: e8e1beb5-7cb9-43b4-9ff4-760d5f91ea2d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fde0be17059342c3b00ba43cab93f4464e31f1e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 04653fe964adb26f5c2df8afdf3bb0d14831bb28
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161545"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122065823"
 ---
 # <a name="usingnamespace"></a>UsingNameSpace
-Bazı semboller ad alanı tarafından adlandırılabilir ve daha sonra bir `SymTagUsingNameSpace` etiketle tanımlanır.
+Bazı semboller ad alanı tarafından başvurulsa ve daha sonra bir etiketle `SymTagUsingNameSpace` tanımlanır.
 
 > [!NOTE]
 > UsingNamespace sembol etiketi yalnızca yönetilen kodda görünür.
 
 ## <a name="properties"></a>Özellikler
- Aşağıdaki tabloda, bu sembol türü için geçerli olan özellikler gösterilmektedir.
+ Aşağıdaki tabloda bu sembol türü için geçerli olan özellikler gösterilir.
 
 |Özellik|Veri türü|Açıklama|
 |--------------|---------------|-----------------|
-|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Kapsayan compiland, Block veya Function için simge.|
-|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|Sözlü üst simgenin KIMLIĞI.|
+|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Kapsayan derleme, blok veya işlevin simgesi.|
+|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|Sözcük üst simgesinin kimliği.|
 |[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Ad alanı adı.|
-|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Simgenin dizin KIMLIĞI.|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagNameSpace` ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
+|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Sembolün dizin kimliği.|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagNameSpace` [(SymTagEnum Numaralama değerlerinden](../../debugger/debug-interface-access/symtagenum.md) biri).|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Simge Türlerinin Sözcük Hiyerarşisi](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

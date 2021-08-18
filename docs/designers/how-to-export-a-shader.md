@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl Yapılır: Gölgelendiriciyi Dışarı Aktarma'
-description: Gölgelendirici tasarımcısını kullanarak, uygulamanızda kullanabilmeniz için yönlendirilmiş bir grafik gölgelendirici dil gölgelendiriciyi dışarı aktarma hakkında bilgi edinin.
+description: gölgelendirici tasarımcısını kullanarak, uygulamanızda kullanabilmeniz için bir yönlendirilmiş Graph gölgelendirici dili gölgelendiriciyi dışarı aktarma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,26 +8,27 @@ ms.assetid: 0bd48bf4-9792-4456-a545-e462a2be668d
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f4abcdf5648031be9b76ba3f25e0a8f33d4efba
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b4559c7c8e2e5c77731e6a43e006556cf3ba4d75
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930973"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035533"
 ---
 # <a name="how-to-export-a-shader"></a>Nasıl yapılır: gölgelendiriciyi dışarı aktarma
 
-Bu makalede, uygulamanızda kullanabilmeniz için bir yönlendirilmiş grafik gölgelendirici dili (DGSL) gölgelendiriciyi dışarı aktarmak üzere **Gölgelendirici Tasarımcısının** nasıl kullanılacağı gösterilmektedir.
+bu makalede, uygulamanızda kullanabilmeniz için bir yönlendirilmiş Graph gölgelendirici dili (dgsl) gölgelendiriciyi dışarı aktarmak üzere **gölgelendirici tasarımcısının** nasıl kullanılacağı gösterilmektedir.
 
 ## <a name="export-a-shader"></a>Gölgelendiriciyi dışarı aktarma
 
 Gölgelendirici tasarımcısını kullanarak bir gölgelendirici oluşturduktan ve uygulamanızda kullanabilmeniz için, bunu grafik API 'nizin anlayacağı bir biçimde dışarı aktarmanız gerekir. Farklı ihtiyaçları karşılamak için bir gölgelendiriciyi farklı yollarla dışarı aktarabilirsiniz.
 
-1. Visual Studio 'da bir **Görsel Gölgelendirici Grafiği (. dgsl)** dosyası açın.
+1. Visual Studio, bir **görsel gölgelendirici Graph (. dgsl)** dosyası açın.
 
-     Açmak için bir **Görsel Gölgelendirici Grafiği (. dgsl)** dosyanız yoksa, [nasıl yapılır: temel renk gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-color-shader.md)bölümünde açıklandığı gibi bir tane oluşturun.
+     açmak için bir **görsel gölgelendirici Graph (. dgsl)** dosyanız yoksa, [nasıl yapılır: temel renk gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-color-shader.md)bölümünde açıklandığı gibi bir tane oluşturun.
 
 2. **Gölgelendirici Tasarımcısı** araç çubuğunda **Gelişmiş**  >  **dışarı** aktarma  >  **farklı**' ı seçin. **Gölgelendiriciyi dışarı aktar** iletişim kutusu görünür.
 

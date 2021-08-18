@@ -29,16 +29,17 @@ ms.assetid: d6a72e5e-f88d-46fc-94a3-1789d34805ef
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a9f047708383cdcf3cb8bc06ab2d835e2a2cf300
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a726f73a866fc6b275877f3a457d3b2f6ed08dc0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893197"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097083"
 ---
-# <a name="create-a-visual-map-of-the-call-stack-while-debugging-c-visual-basic-c-javascript"></a>Hata ayıklarken çağrı yığınının görsel haritasını oluşturma (C#, Visual Basic, C++, JavaScript)
+# <a name="create-a-visual-map-of-the-call-stack-while-debugging-c-visual-basic-c-javascript"></a>hata ayıklarken çağrı yığınının görsel haritasını oluşturma (C#, Visual Basic, C++, JavaScript)
 
 Hata ayıklarken çağrı yığınını görsel olarak izlemek için bir kod haritası oluşturun. Kodun ne yaptığını izlemek için haritada Not oluşturabilir, böylece hataları bulmaya odaklanırsınız.
 
@@ -47,7 +48,7 @@ Hata ayıklarken çağrı yığınını görsel olarak izlemek için bir kod har
 Kod haritaları ile kullanabileceğiniz komutların ve eylemlerin ayrıntıları için bkz. [kod haritalarını inceleyin ve yeniden düzenleyin](../modeling/browse-and-rearrange-code-maps.md).
 
 >[!IMPORTANT]
->Yalnızca [Visual Studio Enterprise sürümünde](https://visualstudio.microsoft.com/downloads)kod haritaları oluşturabilirsiniz.
+>yalnızca [Visual Studio Enterprise sürümünde](https://visualstudio.microsoft.com/downloads)kod haritaları oluşturabilirsiniz.
 
 İşte bir kod haritasına hızlı bakış:
 
@@ -55,7 +56,7 @@ Kod haritaları ile kullanabileceğiniz komutların ve eylemlerin ayrıntıları
 
 ## <a name="map-the-call-stack"></a><a name="MapStack"></a> Çağrı yığınını eşleme
 
-1. Bir Visual Studio Enterprise C#, Visual Basic, C++ veya JavaScript **projesinde hata ayıklama**  >  **Başlat hata ayıklamayı Başlat** ' ı seçerek veya **F5** tuşuna basarak hata ayıklamayı başlatın.
+1. bir Visual Studio Enterprise C#, Visual Basic, C++ veya JavaScript **projesinde hata ayıklama**  >  **başlat hata ayıklamayı başlat** ' ı seçerek veya **F5** tuşuna basarak hata ayıklamayı başlatın.
 
 1. Uygulamanız kesme moduna girdiğinde veya bir işleve adımladıktan sonra, **hata ayıklama**  >  **kod Haritası**' nı seçin veya **CTRL** + **SHIFT** tuşuna basın + **`** .
 
@@ -79,7 +80,7 @@ Varsayılan olarak, haritada yalnızca kendi kodunuz görüntülenir. Haritada d
 - **Çağrı yığını** penceresine sağ tıklayın ve **dış kodu göster**' i seçin:
 
   ![Çağrı yığını penceresini kullanarak dış kodu görüntüle](../debugger/media/debuggermap_callstackmenu.png "DebuggerMap_CallStackMenu")
-- Ya da Visual Studio **araçlarında** **yalnızca kendi kodum etkinleştir** seçimini kaldırın (veya **hata ayıklama**) > **Seçenekler**  >  **hata ayıklama**:
+- ya da Visual Studio **araçlar** (veya **hata ayıklama**) Yalnızca kendi kodum hata ayıklama > **seçeneklerini** **etkinleştir** ' i seçimden çıkar  >  :
 
   ![Seçenekler iletişim kutusunu kullanarak dış kodu göster](../debugger/media/debuggermap_debugoptions.png "DebuggerMap_DebugOptions")
 
@@ -115,7 +116,7 @@ Haritanın otomatik olarak yeni çağrı yığınları eklemesini durdurmak içi
 
 ## <a name="add-related-code-to-the-map"></a><a name="AddRelatedCode"></a> Haritaya ilgili kod ekleme
 
-Artık bir haritanız olduğuna göre, C# veya Visual Basic içinde, kodda neler olduğunu izlemek için alanlar, Özellikler ve diğer yöntemler gibi öğeleri ekleyebilirsiniz.
+artık bir haritanız olduğuna göre, C# veya Visual Basic içinde, kodda neler olduğunu izlemek için alanlar, özellikler ve diğer yöntemler gibi öğeleri ekleyebilirsiniz.
 
 Koddaki yöntemin tanımına gitmek için haritadaki yönteme çift tıklayın veya seçin, **F12** tuşuna basın veya sağ tıklayın ve **Tanıma Git**' i seçin.
 
@@ -151,7 +152,7 @@ Daha fazla kod görmek için haritayı oluşturmaya devam edin.
 
 ## <a name="share-the-map-with-others"></a>Haritayı başkalarıyla paylaşma
 
-Bir Haritayı dışarı aktarabilir, Microsoft Outlook ile başka bir kişiye gönderebilir, çözümünüze kaydedebilir ve sürüm denetimine iade edebilirsiniz.
+bir haritayı dışarı aktarabilir, Microsoft Outlook ile başkalarına gönderebilir, çözümünüze kaydedebilir ve sürüm denetimine bakabilirsiniz.
 
 Haritayı paylaştırmak veya kaydetmek için, kod Haritası araç çubuğunda **paylaşma** ' yı kullanın.
 

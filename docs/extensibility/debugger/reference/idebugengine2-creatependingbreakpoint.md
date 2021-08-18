@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9088fdc05142faca79a4d2f6b31a76b2344c7800c6920cc19927486c01957ae7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 31a138104cbaeea8eb0a2313956f5d1bba34db28
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307836"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122035298"
 ---
 # <a name="idebugengine2creatependingbreakpoint"></a>IDebugEngine2::CreatePendingBreakpoint
 Hata ayıklama altyapısında (DE) bekleyen bir kesme noktası oluşturur.

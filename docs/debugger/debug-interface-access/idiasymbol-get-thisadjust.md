@@ -1,6 +1,6 @@
 ---
-description: yöntemi için bu ayara göre mantıksal ayarı alın.
-title: IDiaSymbol::get_thisAdjust | Microsoft Docs
+description: Yöntemi için bu ayarlancı 'yi alır.
+title: 'IDiaSymbol:: get_thisAdjust | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 10ba2bbb653942a6621b7147bda7295c8091b5e7fbac1310112b907c33f3636a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7b4f166f936bef12c183eb7064d10f1c1d6217e1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362924"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036066"
 ---
 # <a name="idiasymbolget_thisadjust"></a>IDiaSymbol::get_thisAdjust
-yöntemi için `this` mantıksal ayarıcıyı alın.
+`this`Yöntemi için mantıksal ayarlanıcısı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,16 +35,16 @@ HRESULT get_thisAdjust (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] yöntemi için `this` mantıksal ayar döndürür.
+dışı `this` Yöntemi için mantıksal ayarlanıcısı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bazı birden çok devralma durumda yönteminin kendisine bir uzaklık `this` ekleyerek gerçek bir değer hesaplaması `this` gerekir.
+ Bazı çoklu devralma durumlarında yöntemin kendisi `this` için bir konum ekleyerek doğru bir değeri hesaplaması gerekir `this` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

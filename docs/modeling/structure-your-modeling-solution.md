@@ -7,14 +7,15 @@ ms.topic: how-to
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 54275c55d3d7a80dc2df1721585bc6c39ba8b06e
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 4fa1a9136d4972897231a33fe477514769b9330e38fd9fad46bac196624c5278
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112385493"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121428749"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 
@@ -22,23 +23,23 @@ Bir geliştirme projesinde modelleri etkin bir şekilde kullanmak için, takım 
 
 Bir projede veya alt projede hızlı bir şekilde başlamak için, seçtiğiniz proje yapısını izleyen bir proje şablonu olması yararlı olur. Bu konu, böyle bir şablonun nasıl oluşturulacağını ve kullanılacağını açıklar.
 
-Bu konu, birkaç takım üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığınızı ve belki de birçok takıma sahip olduğunu varsayar. Projenin kodu ve modelleri, gibi bir kaynak denetimi sisteminde depolanır [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] . En az bazı takım üyeleri, model geliştirmek için Visual Studio kullanır ve diğer takım üyeleri diğer Visual Studio sürümlerini kullanarak modelleri görüntüleyebilir.
+Bu konu, birkaç takım üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığınızı ve belki de birçok takıma sahip olduğunu varsayar. Projenin kodu ve modelleri, gibi bir kaynak denetimi sisteminde depolanır [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] . en az bazı takım üyeleri modeller geliştirmek için Visual Studio kullanır ve diğer takım üyeleri diğer Visual Studio sürümlerini kullanarak modelleri görüntüleyebilir.
 
-Hangi Visual Studio sürümlerinin her bir aracı ve modelleme özelliğini desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
+hangi Visual Studio sürümlerinin her araç ve modelleme özelliğini desteklediğini görmek için bkz. [mimari ve modelleme araçları için sürüm desteği](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 ## <a name="solution-structure"></a>Çözüm yapısı
 
-Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre belirlenir. Her takım bir Visual Studio çözümü kullanır.
+Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre belirlenir. her takım bir Visual Studio çözümü kullanır.
 
 ### <a name="to-divide-an-application-into-layers"></a>Bir uygulamayı katmanlara bölmek için
 
 1. Web uygulaması, hizmet uygulaması veya masaüstü uygulaması gibi, çözümünüzün yapısını uygulamanızın yapısına dayandırın. Birçok yaygın [mimaride, Microsoft uygulama mimarisi Kılavuzu 'Ndaki uygulama arşiv türleri](/previous-versions/msp-n-p/ee658107(v=pandp.10))bölümünde açıklanmaktadır.
 
-2. Mimari çözümünü çağıracağımız bir Visual Studio çözümü oluşturun. Bu çözüm, sistemin genel tasarımını oluşturmak için kullanılacaktır. Modeller içerir, ancak kod içermez.
+2. mimari çözümünü çağıracağımız bir Visual Studio çözümü oluşturun. Bu çözüm, sistemin genel tasarımını oluşturmak için kullanılacaktır. Modeller içerir, ancak kod içermez.
 
    Bu çözüme bir bağımlılık diyagramı ekleyin. Bağımlılık diyagramında, uygulamanız için seçtiğiniz mimariyi çizin. Örneğin, diyagram bu katmanları ve bunlar arasındaki bağımlılıkları gösterebilir: sunum; İş mantığı; ve verileri.
 
-4. Mimari bağımlılık diyagramında her katman için ayrı bir Visual Studio çözümü oluşturun.
+4. mimari bağımlılık diyagramında her bir katman için ayrı bir Visual Studio çözümü oluşturun.
 
    Bu çözümler katmanların kodunu geliştirmek için kullanılacaktır.
 
@@ -54,7 +55,7 @@ Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre bel
 
    Artık her katman için bir modeliniz ve uygulama mimarisi için bir model vardır. Her model kendi çözümünde bulunur. Bu, takım üyelerinin katmanlar üzerinde aynı anda çalışmasını sağlar.
 
-2. Mimari çözümüne her katman çözümünün modelleme projesini ekleyin. Bunu yapmak için mimari çözümünü açın. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, Ekle ' nin üzerine gelin ve ardından **Varolan proje**' ye tıklayın. Tek bir katman çözümünde modelleme projesine (. modelproj) gidin.
+2. Mimari çözümüne her katman çözümünün modelleme projesini ekleyin. Bunu yapmak için mimari çözümünü açın. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, Ekle ' nin üzerine gelin ve ardından **mevcut Project**' a tıklayın. Tek bir katman çözümünde modelleme projesine (. modelproj) gidin.
 
    Her model artık iki çözüm halinde görünür: "giriş" çözümü ve mimari çözümü.
 
@@ -64,9 +65,9 @@ Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre bel
 
    Bu diyagramlar, bu katmanda geliştirilen kodu doğrulamak için kullanılır.
 
-4. Mimari çözümde, Visual Studio 'Yu kullanarak tüm katmanların gereksinimlerini ve tasarım modellerini düzenleyin.
+4. Mimari çözümde, Visual Studio kullanarak tüm katmanların gereksinimlerini ve tasarım modellerini düzenleyin.
 
-   Her katman çözümünde, modele başvuran bu katman için kod geliştirin. Modeli güncelleştirmek için aynı bilgisayarı kullanmadan geliştirme yapmak için içeriğiniz varsa modeli okuyabilir ve model oluşturmaksızın Visual Studio sürümlerini kullanarak kodu geliştirebilirsiniz. Ayrıca, bu sürümlerdeki modelden kod oluşturabilirsiniz.
+   Her katman çözümünde, modele başvuran bu katman için kod geliştirin. modeli güncelleştirmek için aynı bilgisayarı kullanmadan geliştirme yapmak için içeriğiniz varsa modeli okuyabilir ve model oluşturamaz Visual Studio sürümlerini kullanarak kodu geliştirebilirsiniz. Ayrıca, bu sürümlerdeki modelden kod oluşturabilirsiniz.
 
    Bu yöntem, aynı anda katman modellerini düzenleyen geliştiriciler tarafından hiçbir girişim olmadığını güvence altına alır.
 
@@ -74,7 +75,7 @@ Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre bel
 
 #### <a name="use-a-separate-package-for-each-layer"></a>Her katman için ayrı bir paket kullanın
 
-1. Her katmanın çözümünde mimari modelleme projesini ekleyin. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Varolan proje**' ye tıklayın. Tek modelleme projesine artık her bir çözümden erişilebilir: mimari proje ve her katmanın geliştirme projesi.
+1. Her katmanın çözümünde mimari modelleme projesini ekleyin. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **mevcut Project**' a tıklayın. Tek modelleme projesine artık her bir çözümden erişilebilir: mimari proje ve her katmanın geliştirme projesi.
 
 2. Paylaşılan modelde, her katman için bir paket oluşturun: **Çözüm Gezgini**, modelleme projesini seçin. **UML Model Gezgini**' nde model kök düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **paket**' e tıklayın.
 
@@ -88,7 +89,7 @@ Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre bel
 
 ## <a name="create-architecture-templates"></a>Mimari şablonları oluşturma
 
-Uygulamada, tüm Visual Studio çözümlerinizi aynı anda oluşturmaz, ancak proje ilerledikçe ekleyin. Ayrıca, gelecekteki projelerde aynı çözüm yapısını da kullanacaksınız. Yeni çözümleri hızlı bir şekilde oluşturmanıza yardımcı olmak için bir çözüm veya proje şablonu oluşturabilirsiniz. Şablonu bir Visual Studio Tümleştirme Uzantısı 'nda (VSıX) yakalayıp diğer bilgisayarlara dağıtmak ve yüklemek kolay olacak şekilde yakalayabilirsiniz.
+uygulamada, tüm Visual Studio çözümlerinizi aynı anda oluşturmaz, ancak proje ilerledikçe ekleyin. Ayrıca, gelecekteki projelerde aynı çözüm yapısını da kullanacaksınız. Yeni çözümleri hızlı bir şekilde oluşturmanıza yardımcı olmak için bir çözüm veya proje şablonu oluşturabilirsiniz. şablonu bir Visual Studio tümleştirme uzantısı 'nda (vsıx) yakalayıp diğer bilgisayarlara dağıtmak ve yüklemek kolay olacak şekilde yakalayabilirsiniz.
 
 Örneğin, sunum, Iş ve veri katmanlarındaki çözümleri sıklıkla kullanıyorsanız, bu yapıya sahip yeni çözümler oluşturacak bir şablonu yapılandırabilirsiniz.
 
