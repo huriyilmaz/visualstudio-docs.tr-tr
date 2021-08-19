@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d3ccf720a9d2987e6ae4dbbbcd2572a12e62ec75d303c388f475d28b4b89e1c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ce5dda5f3fb1581e5239d9d3ffcdee8de864498a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454308"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154310"
 ---
 # <a name="general-tab-window-properties-dialog-box"></a>Genel Sekme, Pencere Özellikleri İletişim Kutusu
 Seçili pencereyle ilgili bilgileri göstermek için **genel** sekmesini kullanın. [pencere özellikleri iletişim kutusunu](../debugger/window-properties-dialog-box.md)görüntülemek için odağı [Windows görünümü](../debugger/windows-view.md) penceresine taşıyın. Ağaçta herhangi bir pencere düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.

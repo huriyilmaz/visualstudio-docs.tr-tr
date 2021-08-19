@@ -1,5 +1,5 @@
 ---
-title: Visual Studio FIPS için destek
+title: FIPS Visual Studio desteği
 titleSuffix: ''
 description: Visual Studio, Azure ve .NET için Federal Bilgi İşleme Standart Yayın 140-2 onaylı Windows modunu nasıl desteklediğini öğrenin.
 ms.custom: SEO-VS-2020
@@ -11,16 +11,16 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ac1dec82d242663f8fc12cbe418e531376dc65a771a13f1c0daa29a24e46cdeb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c4a7737bb1f0e2d38dea828a3f3191fd3d651657
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121373004"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137450"
 ---
 # <a name="visual-studio-support-for-the-fips-140-2-approved-mode-of-operation"></a>Visual Studio FIPS 140-2 onaylı çalışma modu için destek
 
-sürüm [16.4'den](/visualstudio/releases/2019/release-notes-v16.4/)başlayarak, Visual Studio 2019, Windows, Azure ve .NET için Federal Bilgi İşleme Standardı (FIPS) Yayın 140-2 onaylı işlem modunu destekler. [Ayrıca, sürüm 16.5](/visualstudio/releases/2019/release-notes-archive-v16.5)ile Visual Studio uzak bir Linux sistemini hedef alan C++ uygulamaları geliştirirken FIPS 140-2 onaylı işlem [modunu destekliyor.](/cpp/linux/set-up-fips-compliant-secure-remote-linux-development/)
+sürüm [16.4'den](/visualstudio/releases/2019/release-notes-v16.4/)başlayarak, Visual Studio 2019, Windows, Azure ve .NET için Federal Bilgi İşleme Standardı (FIPS) Yayın 140-2 onaylı işlem modunu destekler. [Ayrıca, sürüm 16.5](/visualstudio/releases/2019/release-notes-archive-v16.5)ile Visual Studio artık uzak bir Linux sistemini hedef alan C++ uygulamaları geliştirirken FIPS 140-2 onaylı [işlem modunu destekliyor.](/cpp/linux/set-up-fips-compliant-secure-remote-linux-development/)
 
 Visual Studio için FIPS 140-2 onaylı işlem modunu yapılandırmak için [.NET Framework 4.8'i](https://dotnet.microsoft.com/download/dotnet-framework/net48) yükleyin ve grup ilkesi sistem **şifrelemesi: Şifreleme,** karma ve imzalama için FIPS uyumlu algoritmalar kullanın.
 

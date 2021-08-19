@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a3d5e4b2a8014151234e009d97bca51785364a46ea91529ad5afde4f7dea653
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4492836ed06ea65a829d659ba81f261f0f99fe69
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121388245"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078368"
 ---
 # <a name="findcommand-box"></a>Bul/Komut kutusu
 

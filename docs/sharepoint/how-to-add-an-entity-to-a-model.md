@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: b4293aefb0e5730c15c259fc7367cfe3f3f566adbc8d80744846274f95706287
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7905b4b3686c10ad9c6ac019253c71f94305f0b8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121228746"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093196"
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>Nasıl kullanılır: Modele varlık ekleme
   Varlık oluşturmak için, Visual Studio **Toolbox'tan** İş Verileri Bağlantısı (BDC) tasarımcısına bir varlık denetimi ekleyin.
@@ -36,7 +36,7 @@ ms.locfileid: "121228746"
 
 2. Araç **Kutusunda,** **BusinessDataCatalog** grubundan tasarımcıya bir **Varlık** denetimi ekleyin.
 
-     Yeni varlık tasarımcıda görünür. Visual Studio `<Entity>` projenizin BDC model dosyasının XML dosyasına bir öğe ekler. Entity öğesinin öznitelikleri hakkında daha fazla bilgi için bkz. [Varlık](/previous-versions/office/developer/sharepoint-2010/ee558325(v=office.14)).
+     Yeni varlık tasarımcıda görünür. Visual Studio `<Entity>` projenizin BDC model dosyasının XML'ine bir öğe ekler. Entity öğesinin öznitelikleri hakkında daha fazla bilgi için bkz. [Varlık](/previous-versions/office/developer/sharepoint-2010/ee558325(v=office.14)).
 
 3. Tasarımcıda varlığın kısayol menüsünü açın, Ekle'yi **ve ardından** Tanımlayıcı'yı **seçin.**
 
@@ -45,7 +45,7 @@ ms.locfileid: "121228746"
     > [!NOTE]
     > Özellikler penceresinde varlığın adını ve tanımlayıcıyı **değiştirebilirsiniz.**
 
-4. Bir sınıfta varlığın alanlarını tanımlayın. Projeye yeni bir sınıf ekleyebilir veya Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) gibi diğer araçları kullanarak oluşturulmuş mevcut bir sınıfı kullanabilirsiniz. Aşağıdaki örnek Contact adlı bir varlık sınıfını gösterir.
+4. Bir sınıfta varlığın alanlarını tanımlayın. Projeye yeni bir sınıf ekleyebilir veya Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) gibi diğer araçları kullanarak oluşturulmuş mevcut bir sınıfı kullanabilirsiniz. Aşağıdaki örnekte Contact adlı bir varlık sınıfı gösterir.
 
     :::code language="csharp" source="../sharepoint/codesnippet/CSharp/sp_bdc_entity_data_class/bdcmodel1/contact.cs" id="Snippet1":::
     :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb" id="Snippet1":::

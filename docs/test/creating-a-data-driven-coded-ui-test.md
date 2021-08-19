@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: eadba1454e04c95bf1e2b3610a019e3503ec3af3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 38c1a5dc40dde5805ec9d233287b95233585f480
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964491"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140108"
 ---
 # <a name="create-a-data-driven-coded-ui-test"></a>Veri odaklı kodlanmış UI testi oluşturma
 
@@ -31,7 +32,7 @@ Farklı koşulları test etmek için testlerinizi farklı parametre değerleriyl
 
 ## <a name="create-a-test-project"></a>Test projesi oluşturma
 
-Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI testi oluşturur. İki sayıyı birbirine ekler ve toplamın doğru olduğunu doğrulamak için bir onaylama kullanır. Ardından, iki sayının onaylama ve parametre değerleri, veri odaklı ve virgülle ayrılmış değer (*. csv*) dosyasında depolanacak şekilde kodlanır.
+bu örnek, Windows hesaplayıcı uygulamasında çalışan kodlanmış bir uı testi oluşturur. İki sayıyı birbirine ekler ve toplamın doğru olduğunu doğrulamak için bir onaylama kullanır. Ardından, iki sayının onaylama ve parametre değerleri, veri odaklı ve virgülle ayrılmış bir değer (*.csv*) dosyasında depolanacak şekilde kodlanır.
 
 ### <a name="step-1---create-a-coded-ui-test"></a>1. adım-kodlanmış UI testi oluşturma
 
@@ -40,7 +41,7 @@ Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI te
     ![Kodlanmış UI test projesi oluşturma](../test/media/cuit_datadriven_.png)
 
    > [!NOTE]
-   > **KODLANMıŞ UI testi proje** şablonunu görmüyorsanız, [kodlanmış UI test bileşenini yüklemeniz](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)gerekir.
+   > **kodlanmış uı testi Project** şablonu görmüyorsanız, [kodlanmış uı test bileşenini yüklemeniz](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component)gerekir.
 
 2. **Eylemleri kaydetmeyi** seçin.
 
@@ -68,7 +69,7 @@ Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI te
 
 5. Testin çalıştığını `AddNumbers()` doğrulamak için yöntemini kullanın. İmleci yukarıda gösterilen test yöntemine yerleştirin, sağ tıklama menüsünü açın ve **Testleri Çalıştır**' ı seçin. (Klavye kısayolu: **CTRL** + **R**,**T**).
 
-    Test **Gezgini** penceresinde başarılı veya başarısız olan testin görüntülendiğini gösteren test sonucu. Test Gezgini penceresini açmak için, **Test** menüsünde **Windows** ' u ve ardından **Test Gezgini**' ni seçin.
+    Test **Gezgini** penceresinde başarılı veya başarısız olan testin görüntülendiğini gösteren test sonucu. test gezgini penceresini açmak için, **test** menüsünden **Windows** ' yi seçin ve ardından **test gezgini**' ni seçin.
 
 6. Bir veri kaynağı, beklenen değerleri doğrulamak için test tarafından kullanılan onaylama parametre değerleri için de kullanılabilir —, iki sayının toplamının doğru olduğunu doğrulamak için bir onaylama ekleyelim. İmleci yukarıda gösterilen test yöntemine yerleştirin, sağ tıklama menüsünü açın ve **KODLANMıŞ UI testi Için kod oluştur**' u seçin ve **kodlanmış UI Test Oluşturucusu**' nu kullanın.
 
@@ -104,7 +105,7 @@ Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI te
 
      ![Projeye virgülle ayrılmış bir değer dosyası ekleyin](../test/media/cuit_datadriven_addcsvfile.png)
 
-2. *. Csv* dosyasını aşağıdaki verilerle doldurun:
+2. *.csv* dosyasını aşağıdaki verilerle doldurun:
 
     |Num1|Num2|Sum|
     |-|-|-|
@@ -114,13 +115,13 @@ Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI te
 
      Veriler eklendikten sonra, dosya aşağıdaki gibi görünmelidir:
 
-     ![. Csv dosyasını verilerle doldurma](../test/media/cuit_datadriven_adddatatocsvfile.png)
+     ![.csv dosyasını veriyle doldurma](../test/media/cuit_datadriven_adddatatocsvfile.png)
 
-3. Doğru kodlamayı kullanarak *. csv* dosyasını kaydetmeniz önemlidir. **Dosya** menüsünde **Gelişmiş Kaydet seçeneklerini** belirleyin ve kodlama olarak **Unicode (imzasız UTF-8 65001)** seçeneğini belirleyin.
+3. *.csv* dosyasının doğru kodlamayı kullanarak kaydedilmesi önemlidir. **Dosya** menüsünde **Gelişmiş Kaydet seçeneklerini** belirleyin ve kodlama olarak **Unicode (imzasız UTF-8 65001)** seçeneğini belirleyin.
 
-4. *. Csv* dosyası, çıkış dizinine kopyalanmalıdır veya test çalıştırılamıyor. Kopyalamak için **Özellikler** penceresini kullanın.
+4. *.csv* dosyası, çıkış dizinine kopyalanmalıdır veya test çalıştırılamıyor. Kopyalamak için **Özellikler** penceresini kullanın.
 
-     ![. Csv dosyasını dağıtma](../test/media/cuit_datadriven_deploycsvfile.png)
+     ![.csv dosyasını dağıtma](../test/media/cuit_datadriven_deploycsvfile.png)
 
      Veri kümesi oluşturulduğuna göre, artık verileri teste bağlayalim.
 
@@ -140,7 +141,7 @@ Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI te
      Veri kaynağı artık bu test yönteminde kullanabileceğiniz şekilde kullanılabilir.
 
     > [!TIP]
-    > XML, SQL Express ve Excel gibi diğer veri kaynağı türlerini kullanma örnekleri için bkz. soru-& cevap bölümünde [veri kaynağı öznitelik örnekleri](#CreateDataDrivenCUIT_QA_DataSourceAttributes) .
+    > XML, SQL Express ve Excel gibi diğer veri kaynağı türlerini kullanma örnekleri için soru-& cevap bölümündeki [veri kaynağı öznitelik örneklerine](#CreateDataDrivenCUIT_QA_DataSourceAttributes) bakın.
 
 2. Testi çalıştırın.
 
@@ -150,7 +151,7 @@ Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI te
 
 ### <a name="step-4---use-the-data-in-the-coded-ui-test"></a>4. adım-kodlanmış UI testinde verileri kullanma
 
-1. `using Microsoft.VisualStudio.TestTools.UITesting.WinControls` *CodedUITest.cs* dosyasının en üstüne ekleyin:
+1. `using Microsoft.VisualStudio.TestTools.UITesting.WinControls` *CodedUITest. cs* dosyasının en üstüne ekleyin:
 
     ```csharp
     using System;
@@ -197,17 +198,17 @@ Bu örnek, Windows Hesaplayıcı uygulamasında çalışan kodlanmış bir UI te
 
 ### <a name="step-5---run-the-data-driven-test"></a>5. adım-veri tabanlı testi çalıştırma
 
-Testi yeniden çalıştırarak testin artık veri odaklı olduğunu doğrulayın.
+Testi yeniden çalıştırarak testin veri odaklı olduğunu doğrulayın.
 
-Test çalıştırmasını, *. csv* dosyasındaki değerleri kullanarak üç yineleme aracılığıyla görmeniz gerekir. Doğrulamanın de çalışması ve testin test Gezgini 'nde geçti olarak görüntülenmesi gerekir.
+Test çalıştırmanın,.csvdosyasındaki değerleri kullanarak *üç yinelemeden.csv* gerekir. Doğrulama da çalışmalı ve test Test Gezgini'nde geçirildi olarak görüntüleniyor.
 
 ## <a name="q--a"></a>Soru-Cevap
 
-### <a name="what-are-the-data-source-attributes-for-other-data-source-types-such-as-sql-express-or-xml"></a><a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a> SQL Express veya XML gibi diğer veri kaynağı türleri için veri kaynağı öznitelikleri nelerdir?
+### <a name="what-are-the-data-source-attributes-for-other-data-source-types-such-as-sql-express-or-xml"></a><a name="CreateDataDrivenCUIT_QA_DataSourceAttributes"></a>SQL Express veya XML gibi diğer veri kaynağı türleri için veri kaynağı öznitelikleri nedir?
 
-Y **:** Aşağıdaki tabloda bulunan örnek veri kaynağı dizelerini kodunuza kopyalayarak ve gerekli özelleştirmeleri yaparak kullanabilirsiniz.
+**A:** Aşağıdaki tabloda yer alan örnek veri kaynağı dizelerini kodunuza kopyalayıp gerekli özelleştirmeleri yaparak kullanabilirsiniz.
 
-**Veri kaynağı türleri ve öznitelikleri**
+**Veri Kaynağı Türleri ve Öznitelikleri**
 
 - CSV
 
@@ -217,7 +218,7 @@ Y **:** Aşağıdaki tabloda bulunan örnek veri kaynağı dizelerini kodunuza k
 
      `DataSource("System.Data.Odbc", "Dsn=ExcelFiles;Driver={Microsoft Excel Driver (*.xls)};dbq=|DataDirectory|\\Data.xls;defaultdir=.;driverid=790;maxbuffersize=2048;pagetimeout=5;readonly=true", "Sheet1$", DataAccessMethod.Sequential), DeploymentItem("Sheet1.xls"), TestMethod]`
 
-- Team Foundation Server 'de test çalışması
+- Team Foundation Server'de test Team Foundation Server
 
      `[DataSource("Microsoft.VisualStudio.TestTools.DataSource.TestCase", "http://vlm13261329:8080/tfs/DefaultCollection;Agile", "30", DataAccessMethod.Sequential), TestMethod]`
 
@@ -229,17 +230,17 @@ Y **:** Aşağıdaki tabloda bulunan örnek veri kaynağı dizelerini kodunuza k
 
      `[DataSource("System.Data.SqlClient", "Data Source=.\\sqlexpress;Initial Catalog=tempdb;Integrated Security=True", "Data", DataAccessMethod.Sequential), TestMethod]`
 
-### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>S: UIMap. Designer dosyasındaki kodu neden değiştiremiyorum?
+### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>S: UIMap.Designer dosyasındaki kodu neden değiştire miyim?
 
-Y **:** *UIMapDesigner.cs* dosyasında yaptığınız herhangi bir kod değişikliği, UıMAP kodlu UI test oluşturucusunu kullanarak kod oluşturduğunuzda üzerine yazılır. Bu örnekte ve çoğu durumda, bir testin bir veri kaynağını kullanmak için gereken kod değişiklikleri testin kaynak kodu dosyasına (yani, *CodedUITest1.cs*) yapılabilir.
+**A:** UIMap - Kodlanmış UI Test Oluşturucusu'nu kullanarak her kod sanız *UIMapDesigner.cs* dosyasında yaptığınız tüm kod değişikliklerinin üzerine yazılır. Bu örnekte ve çoğu durumda, bir testin veri kaynağını kullanmasına olanak sağlamak için gereken kod değişiklikleri testin kaynak kod dosyasında *(yani CodedUITest1.cs) kullanılabilir.*
 
-Kayıtlı bir yöntemi değiştirmeniz gerekiyorsa, *UIMap.cs* dosyasına kopyalamanız ve yeniden adlandırmanız gerekir. *UIMap.cs* dosyası, *UIMapDesigner.cs* dosyasındaki yöntemleri ve özellikleri geçersiz kılmak için kullanılabilir. Kodlanmış *UITest.cs* dosyasındaki özgün yönteme başvuruyu kaldırmanız ve yeniden adlandırılmış yöntem adıyla değiştirmeniz gerekir.
+Kayıtlı bir yöntemi değiştirmeniz gerekirse *UIMap.cs* dosyasına kopyalayıp yeniden adlandırmanız gerekir. *UIMap.cs* dosyası, *UIMapDesigner.cs* dosyasındaki yöntemleri ve özellikleri geçersiz kılmak için kullanılabilir. Kodlanmış *UITest.cs* dosyasındaki özgün yönteme başvuruyu kaldırmanız ve yeniden adlandırılan yöntem adıyla değiştirmeniz gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UIMap](/previous-versions/dd580454(v=vs.140))
+- [Uımap](/previous-versions/dd580454(v=vs.140))
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
-- [Kodunuzu test etmek için UI Otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md)
+- [Kodunuzu test etmek için UI otomasyonunu kullanma](../test/use-ui-automation-to-test-your-code.md)
 - [Kodlanmış UI testleri oluşturma](../test/use-ui-automation-to-test-your-code.md)
-- [Kodlanmış UI testleri için en iyi uygulamalar](../test/best-practices-for-coded-ui-tests.md)
-- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen konfigürasyonlar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Kodlanmış UI testleri için en iyi yöntemler](../test/best-practices-for-coded-ui-tests.md)
+- [Kodlanmış UI testleri ve eylem kayıtları için desteklenen yapılandırmalar ve platformlar](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

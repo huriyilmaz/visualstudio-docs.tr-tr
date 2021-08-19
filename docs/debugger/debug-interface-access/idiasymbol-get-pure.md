@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c570580b65a908ff73e5f884299cb187738b23df7b6aa71143b458b7c1d386d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e72d37c25ce1df188978eeb8a755e8cdc83cad9a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420577"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058677"
 ---
 # <a name="idiasymbolget_pure"></a>IDiaSymbol::get_pure
 İşlevin saf sanal olup olmadığını belirten bir bayrak alır.

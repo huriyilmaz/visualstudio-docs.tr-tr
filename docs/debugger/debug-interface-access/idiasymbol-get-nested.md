@@ -11,14 +11,15 @@ ms.assetid: 6ae46d43-8486-48d6-a6f2-d73ebf4023e3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 70c4b5d348c69aece9164a24e8e24a4cf4fdb86b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 12f4436316f0680e32940c0ba65d4e073d1c26ce
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147193"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121380"
 ---
 # <a name="idiasymbolget_nested"></a>IDiaSymbol::get_nested
 Kullanıcı tanımlı veri türünün iç içe olup olmadığını belirten bir bayrak alır.

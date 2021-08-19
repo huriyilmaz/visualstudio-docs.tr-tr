@@ -1,6 +1,6 @@
 ---
-description: Bağlantı noktası numaralamalarını ilk öğeye sıfırlar.
-title: IEnumDebugPorts2::Reset | Microsoft Docs
+description: Bağlantı noktası numaralandırmasını ilk öğe olarak sıfırlar.
+title: 'IEnumDebugPorts2:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 36c37361307a7215586ae85140413c51fe2095b15eb48487afa9815d8851c5bc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 885bc1c660d43b5d39af337c31adac81df409e8e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121433183"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125575"
 ---
 # <a name="ienumdebugports2reset"></a>IEnumDebugPorts2::Reset
-Numaralama öğesini ilk öğeye sıfırlar.
+Numaralandırmayı ilk öğeye sıfırlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrıldıktan sonra Next yöntemine yapılan sonraki [çağrı,](../../../extensibility/debugger/reference/ienumdebugports2-next.md) numaralamanın ilk öğesini döndürür.
+ Bu yöntem çağrıldıktan sonra [Next](../../../extensibility/debugger/reference/ienumdebugports2-next.md) yöntemine yapılan sonraki çağrı, numaralandırmanın ilk öğesini döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)
