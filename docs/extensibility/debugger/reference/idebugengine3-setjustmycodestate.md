@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, hata ayıklama altyapısına JustMyCode durum bilgilerini söyler.
-title: IDebugEngine3::SetJustMyCodeState | Microsoft Docs
+description: Bu yöntem, hata ayıklama altyapısına, Adatmycode durum bilgilerini söyler.
+title: 'IDebugEngine3:: Setadatmycodestate | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fb528d3f8c12e21f327b168a88d4df070e2863188fcc8e1580135db9685c1ca4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b3f87d8a33c4b6ea43aebc487d09dafc87169eca
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307784"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079135"
 ---
 # <a name="idebugengine3setjustmycodestate"></a>IDebugEngine3::SetJustMyCodeState
-Bu yöntem, hata ayıklama altyapısına JustMyCode durum bilgilerini söyler.
+Bu yöntem, hata ayıklama altyapısına, Adatmycode durum bilgilerini söyler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,19 +47,19 @@ int SetJustMyCodeState(
 
 ## <a name="parameters"></a>Parametreler
 `fUpdate`\
-[in] Tüm bilgileri sıfırlamak için sıfır ( ) geçerli bilgileri güncelleştirmek için sıfır ( ) olmayan `TRUE` `FALSE` (önceden ayarlanmış herhangi bir şeyi yoksayarak).
+'ndaki `TRUE`Geçerli bilgileri güncelleştirmek için sıfır olmayan () ( `FALSE` daha önce ayarlanmış herhangi bir şey yok sayılıyor).
 
 `dwModules`\
-[in] içinde bilgi yapısı sayısı `rgJMCSpec.`
+'ndaki İçindeki bilgi yapılarının sayısı `rgJMCSpec.`
 
 `rgJMCSpec`\
-[in] Kullanabileceğiniz [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) yapı dizisi.
+'ndaki Kullanılacak [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) yapıları dizisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- JustMyCode, yalnızca bir kullanıcıya ait olan kodda hata ayıklama ve sistem kodu gibi tüm ara kodları yoksayma kavramıdır( kaynak kodu söz konusu sistem kodu için kullanılabilir olsa bile).
+ Adammycode, bu sistem kodu için kaynak kodu kullanılabilir olsa bile, yalnızca bir kullanıcıya ait kodu ve sistem kodu gibi tüm ara kodları yok saymanın hata ayıklaması kavramıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

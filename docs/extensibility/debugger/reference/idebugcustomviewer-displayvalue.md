@@ -1,5 +1,5 @@
 ---
-description: Bu yöntem, belirtilen değeri göstermek için çağrılır.
+description: Belirtilen değeri görüntülemek için bu yöntem çağrılır.
 title: IDebugCustomViewer::D isplayValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a3ff715cadd6499d74d3704faa9ad0e078d0838ee931b4fc6b68c4588fb45cc2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ab561a692b4f9fa96d8138079a68064558733792
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377827"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079356"
 ---
 # <a name="idebugcustomviewerdisplayvalue"></a>IDebugCustomViewer::DisplayValue
-Bu yöntem, belirtilen değeri göstermek için çağrılır.
+Belirtilen değeri görüntülemek için bu yöntem çağrılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,24 +49,24 @@ int DisplayValue(
 
 ## <a name="parameters"></a>Parametreler
 `hwnd`\
-'ndaki Üst pencere
+[in] Üst pencere
 
 `dwID`\
-'ndaki Birden fazla türü destekleyen özel görüntüleyicilerin KIMLIĞI.
+[in] Birden fazla türü destekleyen özel görüntüleyicilerin kimliği.
 
 `pHostServices`\
-'ndaki Ayrılamadı. Her zaman null olarak ayarlayın.
+[in] Saklı -dır. Her zaman null olarak ayarlayın.
 
 `pDebugProperty`\
-'ndaki Görüntülenecek değeri almak için kullanılabilecek arabirim.
+[in] Görüntülenecek değeri almak için kullanılan arabirim.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemin gerekli pencereyi oluşturması, değeri görüntülemesi, giriş için beklemesi ve tüm arayana dönmeden önce pencereyi kapatması için ekran "kalıcı" olur. Bu yöntem, yöntemin, çıkış için pencere oluşturma işleminin, pencereyi yok etmek için, Kullanıcı girişi beklemek üzere, özelliğin değerini görüntülemenin tüm yönlerini işlemesi gerektiği anlamına gelir.
+ Görüntüleme, bu yöntemin gerekli pencereyi oluşturması, değeri görüntülemesi, girişi beklemesi ve pencereyi kapatması için "kalıcıdır". Bu, yöntemin çıkış penceresi oluşturmaktan kullanıcı girişini beklemekten pencereyi yok etmeye kadar özelliğin değerini görüntülemenin tüm yönlerini işlemesi gerektiğini gösterir.
 
- Verilen [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) nesnesindeki değerin değiştirilmesini desteklemek için, değer bir dize olarak Ifade edilebilir [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) yöntemini kullanabilirsiniz. Aksi takdirde, bu yöntemi uygulayan ifade değerlendiricisi için özel bir arabirim oluşturmak gerekir — `DisplayValue` arabirimi uygulayan nesne üzerinde `IDebugProperty3` . Bu özel arabirim, rastgele bir boyut veya karmaşıklık verilerinin değiştirilmesini sağlayacak yöntemler sağlar.
+ Verilen [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) nesnesinde değerin değiştirilmesini desteklemek için [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) yöntemini kullanabilirsiniz; değer bir dize olarak ifade edildiyse. Aksi takdirde, arabirimi uygulayan aynı nesne üzerinde özel bir arabirim (bu yöntemi uygulayan ifade değerlendiricisine `DisplayValue` özel) oluşturmak `IDebugProperty3` gerekir. Bu özel arabirim, rastgele boyutta veya karmaşıklıkta verileri değiştirmek için yöntemler sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCustomViewer](../../../extensibility/debugger/reference/idebugcustomviewer.md)

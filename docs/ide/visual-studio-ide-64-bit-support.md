@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 386333000a10e9a66d5789e1ceaa89e8d0af0320103969f9433d0015d0c3ba9e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b840060e73058561413f0214fd61eea18db15571
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121399036"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122116792"
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE 64 bit desteği
 

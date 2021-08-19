@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8b94e56c0a2a4c44139ac223b7368ee494e5aa567fd24662ce2e8814a55ae06a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e569602d6d7824f320674443be41a3a59c7bf69a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121291746"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042965"
 ---
 # <a name="ienumdebugports2getcount"></a>IEnumDebugPorts2::GetCount
 Numaralandırmadaki öğe sayısını döndürür.

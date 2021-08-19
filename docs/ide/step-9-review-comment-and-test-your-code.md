@@ -5,22 +5,21 @@ ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: f26f79ba-c91b-4164-b87f-679a1b231c09
 ms.topic: tutorial
-ms.prod: visual-studio-windows
-ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 author: j-martens
 ms.author: jmartens
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c11e13f87ab166c3e1f545dbe2a885ada5e488b5
-ms.sourcegitcommit: 6d88913a8b5a9e5eda01d3f95205b4d138f440f8
+ms.openlocfilehash: b2f285893e32d1067c67ec8d76fe41c5958f9766
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107295383"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122116922"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>9. Adım: Kodunuzu gözden geçirme, açıklama ve test etme
 
@@ -30,7 +29,7 @@ C# dilinde iki eğik çizgi (//) bir satırı açıklama olarak işaretler. Visu
 
 Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi yükleyebilir. Kodunuza bir açıklama eklemeden ve test etmeden önce, bu kavramları sık kullandığınız için kod kavramlarını gözden geçirmek için zaman alın:
 
-- **Windows form tasarımcısı** **resim göster** DÜĞMESINE çift tıkladığınızda, IDE programınızın koduna otomatik olarak bir *Yöntem* ekledi.
+- **Windows Form Tasarımcısı** **resim göster** düğmesine çift tıkladığınızda, ıde programınızın koduna otomatik olarak bir *yöntem* ekledi.
 
 - Yöntemler, kodunuzun nasıl düzenlenme yöntemleridir: kodunuz birlikte gruplandırılır.
 
@@ -85,7 +84,7 @@ Yalnızca bir şey oluşturmuş olabilirsiniz ve henüz yapılmasa da, bir resmi
 
 1. **F5** tuşunu seçin veya **hata ayıklamayı Başlat** araç çubuğu düğmesini seçin.
 
-1. Yeni yazdığınız kodu çalıştırmak için **bir resim göster** düğmesini seçin. Uygulama ilk olarak bir **Dosya Aç** iletişim kutusu açar. Filtrelerinizin, iletişim kutusunun alt kısmındaki **dosya türü** açılan listesinde göründüğünü doğrulayın. Ardından bir resme gidin ve açın. Genellikle *Belgelerim klasörünüzdeki Windows* işletim sistemiyle birlikte gelen örnek resimleri, *Resimlerim \ örnek resimler* klasörü içinde bulabilirsiniz.
+1. Yeni yazdığınız kodu çalıştırmak için **bir resim göster** düğmesini seçin. Uygulama ilk olarak bir **Dosya Aç** iletişim kutusu açar. Filtrelerinizin, iletişim kutusunun alt kısmındaki **dosya türü** açılan listesinde göründüğünü doğrulayın. Ardından bir resme gidin ve açın. genellikle *belgelerim klasörünüzdeki Windows* işletim sistemiyle birlikte gelen örnek resimleri, *resimlerim \ örnek resimler* klasörü içinde bulabilirsiniz.
 
     > [!TIP]
     > **Resim dosyası seç** iletişim kutusunda herhangi bir görüntü görmüyorsanız, iletişim kutusunun sağ alt tarafındaki aşağı açılan listede **tüm dosyalar (*. \* )** filtresinin seçili olduğundan emin olun.

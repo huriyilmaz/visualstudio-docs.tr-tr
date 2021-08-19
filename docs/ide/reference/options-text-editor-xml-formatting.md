@@ -10,12 +10,13 @@ ms.assetid: 203e60b2-7b80-4ff4-9fa1-aa9f4374377b
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: b5e3674c955b229c4c517db5d1dab3d36830da5d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-general
+ms.openlocfilehash: 4d870026d55cb092b005b0148f392cf29181380e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932325"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117143"
 ---
 # <a name="options-text-editor-xml-formatting"></a>Seçenekler, metin düzenleyici, XML, biçimlendirme
 

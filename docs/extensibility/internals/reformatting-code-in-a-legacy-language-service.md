@@ -1,5 +1,5 @@
 ---
-title: Eski Dil Hizmeti Hizmet HizmetLerinde Kodu Yeniden | Microsoft Docs
+title: Eski Dil Hizmeti Hizmet Paketinde Kodu Yeniden | Microsoft Docs
 description: Eski dil hizmeti için kaynak kodu yeniden Visual Studio etkinleştirme hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -14,16 +14,16 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0af9dc7bf25e448a1e5a128276f55016a1049db49f55e14689fce9a6e8376972
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2d0778b5f60abe8c72e12783fa65017d86c11aa7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414499"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159078"
 ---
 # <a name="reformatting-code-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Kodu Yeniden Biçimlendirme
 
-Kaynak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kodunda girintiler ve boşluk kullanımını normalleştirerek yeniden biçimlendirebilirsiniz. Buna her satırın başına boşluk veya sekme ekleme veya kaldırma, satırlar arasına yeni satırlar ekleme veya boşlukları sekmeler veya sekmelerle boşluklarla değiştirme dahildir.
+Kaynak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kodunda girintiler ve boşluk kullanımını normalleştirerek yeniden biçimlendirebilirsiniz. Bu, her satırın başına boşluk veya sekme eklemeyi, satırların arasına yeni satırlar eklemeyi veya boşlukları sekmeler veya sekmelerle boşluklarla değiştirmeyi içerebilir.
 
 > [!NOTE]
 > Yeni satır karakterleri eklemek veya silmek, kesme noktaları ve yer işaretleri gibi işaretçileri etkileyebilir, ancak boşluk veya sekme ekleme veya kaldırma, işaretçileri etkilemez.

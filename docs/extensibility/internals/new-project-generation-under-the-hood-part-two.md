@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77ee63fbc49554ad3d9037f7d5bf3d19e4cf29f16ec43d384a0489da9ec06184
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 56e1fa13846525221ec96dca3a8b744590e1dc8d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121432363"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042263"
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>Yeni Proje Oluşturma: Arka Plan, 2. Bölüm
 
@@ -80,7 +80,7 @@ namespace Simple
 
  New Project \<TemplateData> [Generation: Under the Hood, Part One bölümündeki bölümü inceledik.](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) Bu bölümdeki etiketler, Yeni Görünüm iletişim kutusunun **görünümünü Project** kullanılır.
 
- bölümündeki etiketler \<TemplateContent> yeni projelerin ve proje öğelerinin neslini kontrol ediyor. \<TemplateContent>\Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip klasöründeki cswindowsapplication.vstemplate dosyasındaki bölümü Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip.
+ bölümündeki etiketler \<TemplateContent> yeni projelerin ve proje öğelerinin neslini kontrol ediyor. \<TemplateContent>\Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip klasöründeki cswindowsapplication.vstemplate dosyasındaki bölümü Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip edinebilirsiniz.
 
 ```xml
 <TemplateContent>
@@ -114,13 +114,13 @@ namespace Simple
 </TemplateContent>
 ```
 
- Etiket \<Project> bir projenin neslini, etiket ise \<ProjectItem> proje öğesinin neslini kontrol eder. ReplaceParameters parametresi true ise şablon, proje dosyasındaki veya öğede tüm şablon parametrelerini özeller. Bu durumda, Ayarlar.settings dışında tüm proje öğeleri özelleştirilebilir.
+ Etiket \<Project> bir projenin neslini, etiket ise \<ProjectItem> proje öğesinin neslini kontrol eder. ReplaceParameters parametresi true ise şablon, proje dosyasındaki veya öğede tüm şablon parametrelerini özeller. Bu durumda, Ayarlar.settings dışındaki tüm proje öğeleri özelleştirilebilir.
 
  TargetFileName parametresi, sonuçta elde edilen proje dosyasının veya öğenin adını ve göreli yolunu belirtir. Bu, projeniz için bir klasör yapısı oluşturmanıza olanak sağlar. Bu bağımsız değişkeni belirtmezseniz, proje öğesi proje öğesi şablonuyla aynı adı verir.
 
  Elde edilen Windows klasör yapısı şöyle görünür:
 
- ![Uygulama klasöründeki 'Windows' Çözümü için uygulama klasör yapısının ekran Visual Studio Çözüm Gezgini.](../../extensibility/internals/media/simplesolution.png)
+ ![Visual Studio Çözüm Gezgini'Windows 'Basit' Çözüm için uygulama klasör yapısının ekran Visual Studio Çözüm Gezgini.](../../extensibility/internals/media/simplesolution.png)
 
  Şablonda ilk \<Project> ve tek etiket şu şekildedir:
 
@@ -146,7 +146,7 @@ namespace Simple
 </ItemGroup>
 ```
 
- Bunların, kaynakta görünen altı proje başvurusu olduğunu Çözüm Gezgini. İşte başka bir bölümünden bir \<ItemGroup> bölüm. Netlik sağlamak için birçok kod satırı silindi. Bu bölüm, Ayarlar. designer.cs, Ayarlar.settings'a bağımlıdır:
+ Bunların, veri kaynaklarında görünen altı proje başvurusu olduğunu Çözüm Gezgini. İşte başka bir bölümünden bir \<ItemGroup> bölüm. Netlik sağlamak için birçok kod satırı silindi. Bu bölüm, Ayarlar. designer.cs, Ayarlar.settings'a bağımlıdır:
 
 ```xml
 <ItemGroup>

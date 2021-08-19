@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f1b5178193ac7f2f4c7887808ff928447ed08ec420c22f65c738c52c41079e1f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ed095929201176cbfc86f9810a5d089dce52216c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121426449"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038610"
 ---
 # <a name="marker_serieswrite_alert-method"></a>marker_series:: write_alert yöntemi
 Eşzamanlılık görselleştiricisi izleme dosyasına bir uyarı yazar.

@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 234457e235a78281858a45a202fdeff9ff781a849fef5a5757ad505f368cd023
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ab15a81c0ddb03dd30a865b1a11b191bc9c7f5f9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384242"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083134"
 ---
 # <a name="how-to-programmatically-run-excel-calculations"></a>nasıl yapılır: program aracılığıyla Excel hesaplamaları çalıştırma
   bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimde veya yerel Excel aralığı nesnesinde hesaplamalar çalıştırmak için benzer bir işlem kullanırsınız.

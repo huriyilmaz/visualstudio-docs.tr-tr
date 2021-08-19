@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5ec3dcb514097f495aa323948d7491a80811fdecf95269793e61f82545f49930
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e20f4cba0d826a7a9b608f1fc56fde1a35ae54c0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121307953"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079421"
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
 Özel özniteliğin adı verilen özel öznitelik baytlarını edinir.

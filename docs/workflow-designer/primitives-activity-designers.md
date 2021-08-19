@@ -8,21 +8,22 @@ ms.assetid: 0a2b613e-dc04-49a1-a787-caec2ec63b90
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: e59e0d22d0e7ad0fac645cf1c902df9e2c6e835e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d453ef31a65f9c875a70e05b68d627c5a4d6efc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931545"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122099028"
 ---
 # <a name="primitives-activity-designers"></a>Temel Öğeler Etkinlik Tasarımcıları
 
 Temel elemanlar etkinlik tasarımcıları, <xref:System.Activities.Statements> ad alanında Assign ve Delay gibi çeşitli etkinlikleri oluşturmak ve yapılandırmak için kullanılır. Bu bölümde yer alan konular İş Akışı Tasarımcısı etkinliğinin ve Şablon tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
+ [Denetim Flow](../workflow-designer/control-flow-activity-designers.md)
 
  [Akış Çizelgesi](../workflow-designer/flowchart-activity-designers.md)
 

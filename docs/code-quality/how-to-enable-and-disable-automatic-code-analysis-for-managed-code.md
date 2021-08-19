@@ -8,12 +8,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: ff4ffe458a059cb202af61054459b349e470cbe267e95e1844ea7cdaabf22d82
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c687a8c2fd1293913670af4489dfb5c9663344c1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121455392"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147355"
 ---
 # <a name="how-to-enable-and-disable-binary-code-analysis-for-managed-code"></a>Nasıllı: Yönetilen kod için ikili kod analizini etkinleştirme ve devre dışı bırakma
 

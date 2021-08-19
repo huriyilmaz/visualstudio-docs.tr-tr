@@ -11,17 +11,18 @@ ms.assetid: 88964915-dce3-4005-b4f3-9f37415e41e4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 85e0dd1c334ce57b5e466ab66a74db4b29a40adc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d2a7236b3589666afcb99bfbc9ced356bcb06cdd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092442"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079005"
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
 Bu yöntem, ifadeyi zaman uyumlu olarak değerlendirir.
@@ -68,7 +69,7 @@ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür
 |E_EVALUATE_TIMEOUT|Değerlendirme zaman aşımına uğradı.|
 
 ## <a name="remarks"></a>Açıklamalar
-Zaman uyumlu değerlendirme için değerlendirme tamamlandıktan sonra Visual Studio 'ya bir olay gönderilmesi gerekli değildir.
+zaman uyumlu değerlendirme için, değerlendirmenin tamamlanmasından sonra Visual Studio bir olay geri gönderilmesi gerekli değildir.
 
 ## <a name="example"></a>Örnek
 Aşağıdaki örnek, `CExpression` [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.

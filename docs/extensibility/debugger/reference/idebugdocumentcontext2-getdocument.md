@@ -1,6 +1,6 @@
 ---
 description: Bu belge bağlamını içeren belgeyi alır.
-title: 'IDebugDocumentContext2:: GetDocument | Microsoft Docs'
+title: IDebugDocumentContext2::GetDocument | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a244f08c4c455edce778732d1f93bbe023e3112379480c535e0471eed0c8a4d3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e9b3616376617e6fcc88f9de7bae15bcca072130
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402863"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079226"
 ---
 # <a name="idebugdocumentcontext2getdocument"></a>IDebugDocumentContext2::GetDocument
 Bu belge bağlamını içeren belgeyi alır.
@@ -43,13 +43,13 @@ int GetDocument(
 
 ## <a name="parameters"></a>Parametreler
 `ppDocument`\
-dışı Bu belge bağlamını içeren belgeyi temsil eden bir [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi döndürür.
+[out] Bu belge bağlamını içeren belgeyi temsil eden bir [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, doğrudan IDE 'ye belge sağlayan hata ayıklama altyapılarına yöneliktir. Aksi takdirde, bu yöntem döndürmelidir `E_NOTIMPL` .
+ Bu yöntem, belgeleri doğrudan IDE'ye temin eden hata ayıklama altyapıları için kullanılır. Aksi takdirde, bu yöntem `E_NOTIMPL` dönüşletir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md)

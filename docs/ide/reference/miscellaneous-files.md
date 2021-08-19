@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: b6e70decea2458c621e1bb1f304902ea7cd299e703b5ae7071761e989c185e4d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: db9b62e2e3135045c2a4a822585f2e69fe85b02a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121334620"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041249"
 ---
 # <a name="miscellaneous-files"></a>Çeşitli dosyalar
 

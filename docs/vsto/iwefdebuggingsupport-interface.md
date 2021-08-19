@@ -1,6 +1,6 @@
 ---
 title: IWefDebuggingSupport arabirimi
-description: Microsoft Office uygulamalarında hata ayıklamayı kolaylaştırmak için Visual Studio gibi bir hata ayıklama ortamını nasıl kullanabileceğinizi öğrenin.
+description: Uygulama uygulamalarının hata ayıklamasını kolaylaştırmak için Visual Studio gibi bir hata ayıklama Microsoft Office öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: interface
@@ -10,17 +10,18 @@ dev_langs:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 9fc319429414c8976d748a30ecdd1e164ce22b63
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f6c6e039a04f8e30cec024370fed94c0f025f51f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962268"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147835"
 ---
 # <a name="iwefdebuggingsupport-interface"></a>IWefDebuggingSupport arabirimi
-  Office uygulamalarında hata ayıklamayı kolaylaştırmak için Visual Studio gibi bir hata ayıklama ortamı tarafından uygulanır. Word veya Excel gibi Office uygulaması, bu arabirimi Visual Studio 'dan alır ve ardından hata ayıklama oturumu sırasında belirli noktalarda arabirimdeki yöntemleri çağırır.
+  Uygulamalar için hata ayıklamayı kolaylaştırmak Visual Studio hata ayıklama ortamı tarafından Office. Word Office gibi bir uygulama Excel, bu arabirimi Visual Studio'den edinebilir ve ardından hata ayıklama oturumu sırasında belirli noktalarda arabirimde yöntemleri çağıran bir uygulamadır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,9 +40,9 @@ interface IWefDebuggingSupport : IUnknown
 ```
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda IWefDebuggingSupport arabiriminin tanımladığı Yöntemler listelenmiştir.
+ Aşağıdaki tabloda IWefDebuggingSupport arabiriminin tanımladığı yöntemler listeleniyor.
 
 |Ad|Açıklama|
 |----------|-----------------|
-|[Getautoınserbir yöntemi](../vsto/getautoinsertextensions-method.md)|Hata ayıklama sırasında otomatik olarak eklenecek Office uygulamaları hakkında bilgi alır.|
-|[SetWefProcessId yöntemi](../vsto/setwefprocessid-method.md)|Web uzantıları çerçevesi (WEF) içeriğini çalıştıracak işlem tanımlayıcısı sağlar.|
+|[GetAutoInsertExtensions yöntemi](../vsto/getautoinsertextensions-method.md)|Hata ayıklama sırasında otomatik Office uygulamalar hakkında bilgi alır.|
+|[SetWefProcessId yöntemi](../vsto/setwefprocessid-method.md)|Web Uzantıları Çerçevesi (WEF) içeriğini çalıştıracak işlem tanımlayıcısını sağlar.|

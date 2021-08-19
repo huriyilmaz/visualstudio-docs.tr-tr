@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 71b36a0647baa9ff7224fde5ad65ea073153497a0eaabd83feb80b6ffc0cc397
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9aca1f8ce1b8dbf4575f4ba9aecd4f714b0dbf83
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121238924"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079057"
 ---
 # <a name="idebugevent2"></a>IDebugEvent2
 Bu arabirim, kesme noktası sırasında durdurma gibi kritik hata ayıklama bilgilerini ve hata ayıklama iletisi gibi kritik olmayan bilgileri iletişim kurmak için kullanılır.
@@ -44,7 +44,7 @@ IDebugEvent2 : IUnknown
 |[GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md)|Bu hata ayıklama olayı için öznitelikleri alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)gibi daha belirli olay arabirimleri IDebugEvent2 arabiriminden türetilmez, ancak bunun yerine ile aynı nesnede ayrı bir arabirim olarak `IDebugEvent2` uygulanır.
+ [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)gibi daha belirli olay arabirimleri, IDebugEvent2 arabiriminden türetilmez, ancak bunun yerine ile aynı nesnede ayrı bir arabirim olarak `IDebugEvent2` uygulanır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg.h

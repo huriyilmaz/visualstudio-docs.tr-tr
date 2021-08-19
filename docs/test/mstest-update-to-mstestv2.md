@@ -12,19 +12,19 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 5acdcce6616b931e2b0e867baaf8cee9ed845fab028fdad07866f2308e130c41
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 68ca8dbe123fd0585a321fbefd49fd61713f4329
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121315141"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038454"
 ---
 # <a name="upgrade-from-mstestv1-to-mstestv2"></a>MSTestV1'den MSTestV2'ye yükseltme
 
-*.csproj* dosyanıza başvurulan MSTest sürümünü MSTestV1'den MSTestV2'ye yeniden hedefleerek test projenizi yükseltebilirsiniz. MSTestV1'in tüm özellikleri MSTestV2'ye getirilemezse, hataları çözmek için bazı değişiklikler gerekebilir. Hangi [özelliklerin artık çalışmaymayacak olduğunu anlamak için bkz. MSTestV2'de](#mstestv1-features-that-are-not-supported-in-mstestv2) destek görmeyen MSTestV1 özellikleri. Bunlardan bazılarının testlerden kaldırılması gerekiyor olabilir.
+*.csproj* dosyanıza başvurulan MSTest sürümünü MSTestV1'den MSTestV2'ye yeniden hedefleerek test projenizi yükseltebilirsiniz. MSTestV1'in tüm özellikleri MSTestV2'ye getirilemezse, hataları gidermek için bazı değişiklikler gerekebilir. Hangi [özelliklerin artık çalışmaymayacak olduğunu anlamak için bkz. MSTestV2'de](#mstestv1-features-that-are-not-supported-in-mstestv2) destek görmeyen MSTestV1 özellikleri. Bunlardan bazılarının testlerden kaldırılması gerekiyor olabilir.
 
 1. Birim testi projenizin Microsoft.VisualStudio.QualityTools.UnitTestFramework derleme başvurularını kaldırın.
-2. NuGet [MsTest.TestFramework](https://www.nuget.org/packages/MSTest.TestFramework) ve nuget.org üzerinde [MSTest.TestAdapter](https://www.nuget.org/packages/MSTest.TestAdapter/) paketleri dahil olmak üzere MSTestV2'ye paket başvurularını nuget.org. NuGet Paket Yöneticisi Konsolu'NuGet Paket Yöneticisi aşağıdaki komutlarla paketleri yükleyebilirsiniz:
+2. NuGet [MsTest.TestFramework](https://www.nuget.org/packages/MSTest.TestFramework) ve nuget.org üzerinde [MSTest.TestAdapter](https://www.nuget.org/packages/MSTest.TestAdapter/) paketleri dahil olmak üzere MSTestV2'ye bir paket başvurusu nuget.org. Paketleri aşağıdaki komutlarla NuGet Paket Yöneticisi konsoluna yükleyebilirsiniz:
 
     ```console
     PM> Install-Package MSTest.TestAdapter -Version 2.1.2
@@ -50,7 +50,7 @@ MsTestV2'yi hedef alan *örnek .csproj:*
 ```
 
 > [!NOTE]
-> Kodlanmış UI testleri veya Web Yükü Testleri olan test projeleri MSTestV2 ile uyumlu değildir. Bu proje türleri kullanım dışıdır. Kodlanmış UI [Testi'nin kullanımdan nasıl kullanım dışı](https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019/) bırakıldı ve [Web Yük Testi'nin kullanımdan nasıl kullanım dışı bırakıldı hakkında daha fazla bilgi edinebilirsiniz.](https://devblogs.microsoft.com/devops/cloud-based-load-testing-service-eol/)
+> Kodlanmış UI testleri veya Web Yükü Testleri olan test projeleri MSTestV2 ile uyumlu değildir. Bu proje türleri kullanım dışıdır. Kodlanmış UI [Testini kullanım dışı ve](https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019/) Web Yük [Testi'nin kullanımdan nasıl kullanım dışı bırakıldı hakkında daha fazla bilgi edinebilirsiniz.](https://devblogs.microsoft.com/devops/cloud-based-load-testing-service-eol/)
 
 ### <a name="sdk-style-csproj-net-core-and-net-5"></a>SDK stili csproj (.NET Core ve .NET 5)
 
@@ -74,7 +74,7 @@ MsTestV2'yi hedef alan *örnek .csproj:*
 * MSTestV2 açık [kaynaktır.](https://github.com/microsoft/testfx)
 * Tekdüz uygulama platformu desteği – MSTestV2, .NET Framework, .NET Core, ASP.NET Core ve UWP genelinde tekdüz uygulama platformu desteği sunan yakınsandı bir uygulamadır. [Daha fazla bilgi için:](https://blogs.msdn.microsoft.com/devops/2016/09/01/announcing-mstest-v2-framework-support-for-net-core-1-0-rtm/).
 * Uygulama tamamen platformlar arasıdır (Windows, Linux, Mac). [Daha fazla bilgi için:](https://blogs.msdn.microsoft.com/devops/2017/04/05/mstest-v2-is-open-source/).
-* MSTestV2, .NET Framework 4.5.0 ve sonraki, .NET Core 1.0 ve sonraki (Universal Windows Apps 10+), ASP.NET Core 1.0 ve sonraki ve sonraki bir 1.0 ve sonraki bir 1.
+* MSTestV2, .NET Framework 4.5.0 ve sonraki, .NET Core 1.0 ve sonraki (Universal Windows Apps 10+), ASP.NET Core 1.0 ve sonraki ve sonraki bir 1.0 ile .NET 5 ve sonrakilerini hedeflemeyi destekler.
 * Tekdüz, tek bir son kullanıcı genişletilebilirlik mekanizması sağlar. [Daha fazla bilgi için:](https://blogs.msdn.microsoft.com/devops/2017/07/18/extending-mstest-v2/).
 * Tüm `DataRow` MSTest tabanlı test projeleri için tekdüz bir destek sağlar. [Daha fazla bilgi için:](https://blogs.msdn.microsoft.com/devops/2017/02/25/mstest-v2-now-and-ahead/).
 * Özniteliğin `TestCategory` bir sınıf veya derleme düzeyine yerleştirilmesini sağlar. [Daha fazla bilgi için:](https://blogs.msdn.microsoft.com/devops/2017/02/25/mstest-v2-now-and-ahead/).
@@ -106,7 +106,7 @@ MsTestV2'yi hedef alan *örnek .csproj:*
 *   Testler "Sıralı Test" içine ek olamaz.
 *   Bağdaştırıcı bir *.testsettings* dosyası aracılığıyla yapılandırılmayı desteklemez. Test çalıştırması [ *yapılandırması için yeni .runsettings*](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md) dosyasını kullanın.
 *   Bağdaştırıcı, *.vsmdi* dosyası olarak belirtilen test listelerini desteklemez.
-*   "Kodlanmış UI Test Project" ve "Web Performansı ve Yük Testi Project" türleri desteklenmiyor. Kodlanmış UI [Testi'nin kullanımdan nasıl kullanım dışı](https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019/) bırakıldı ve [Web Yük Testi'nin kullanımdan nasıl kullanım dışı bırakıldı hakkında daha fazla bilgi edinebilirsiniz.](https://devblogs.microsoft.com/devops/cloud-based-load-testing-service-eol/)
+*   "Kodlanmış UI Test Project" ve "Web Performansı ve Yük Testi Project" türleri desteklenmiyor. Kodlanmış UI [Testini kullanım dışı ve](https://devblogs.microsoft.com/devops/changes-to-coded-ui-test-in-visual-studio-2019/) Web Yük [Testi'nin kullanımdan nasıl kullanım dışı bırakıldı hakkında daha fazla bilgi edinebilirsiniz.](https://devblogs.microsoft.com/devops/cloud-based-load-testing-service-eol/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

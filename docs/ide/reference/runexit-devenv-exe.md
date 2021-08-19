@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 67b53d02b53a49dd91b9c106537f9c6f342a947754e7bf138c7100cb4719aefb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 810aceef4e88b6cfcff11c368ba1fe5358fa1b00
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121400107"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122041067"
 ---
 # <a name="runexit-devenvexe"></a>/RunExit (devenv.exe)
 

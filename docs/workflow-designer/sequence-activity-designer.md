@@ -13,22 +13,22 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 182ee8764875de6dca5c7f9e314300e0b77988dcfac261f05f3b394febb55a87
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7980e01f23dab3ddb927af207e4e2ce67ab515a7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121393598"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122099002"
 ---
 # <a name="sequence-activity-designer"></a>Sequence Etkinlik Tasarımcısı
 
-Etkinlik, <xref:System.Activities.Statements.Sequence> sırayla yürütülen alt etkinliklerin sıralı bir koleksiyonunu içerir.
+Etkinlik, <xref:System.Activities.Statements.Sequence> sırayla yürütülen bir alt etkinlik koleksiyonu içerir.
 
-Bir dizi etkinliği sırayla yürütmenin bir diğer yolu da etkinlik <xref:System.Activities.Statements.Flowchart> kullanmaktır. Diyagram aracılığıyla modellemek istediğiniz basit bir dal oluşturma veya döngü programı akışınız olduğunda [Flowchart'ı](../workflow-designer/flowchart-activity-designer.md) kullanmayı göz önünde bulundurabilirsiniz.
+Bir etkinlik kümesi yürütmenin bir diğer yolu da etkinlik <xref:System.Activities.Statements.Flowchart> kullanmaktır. Diyagram aracılığıyla modellemek istediğiniz basit bir dal oluşturma veya döngü programı akışınız olduğunda [Flowchart'ı](../workflow-designer/flowchart-activity-designer.md) kullanmayı göz önünde bulundurabilirsiniz.
 
-## <a name="using-the-sequence-activity-designer"></a>Sıra Etkinlik Tasarımcısını Kullanma
+## <a name="using-the-sequence-activity-designer"></a>Sıra Etkinliği Tasarımcısını Kullanma
 
-Etkinlik eklemek <xref:System.Activities.Statements.Sequence> için, Araç **Kutusundan**  Sıra etkinliği tasarımcısını sürükleyin ve etkinlik tasarımcısının İş Akışı Tasarımcısı bırakın. Bu etkinlike bir alt etkinlik eklemek için Araç Kutusundan başka bir etkinlik sürükleyin ve kutu içinde "Etkinliği buraya bırak" ipucu metniyle birlikte <xref:System.Activities.Statements.Sequence> üçgenin üzerine  bırakın.
+Etkinlik eklemek <xref:System.Activities.Statements.Sequence> için, Sıra **etkinliği** tasarımcısını **Araç** Kutusundan sürükleyip İş Akışı Tasarımcısı bırakın. Bu etkinlike bir alt etkinlik eklemek için Araç Kutusundan başka bir etkinlik sürükleyin ve kutu içinde "Etkinliği buraya bırak" ipucu metniyle birlikte <xref:System.Activities.Statements.Sequence> üçgenin üzerine  bırakın.
 
 ### <a name="sequence-activity-properties-in-the-workflow-designer"></a>Etkinlik Özelliklerini İş Akışı Tasarımcısı
 

@@ -1,5 +1,5 @@
 ---
-description: Bu yapı, bir kapsam içindeki yerel bir değişkenin adresini temsil eder (genellikle bir işlev veya yöntem).
+description: Bu yapı, bir kapsam içindeki yerel değişkenin adresini (genellikle bir işlev veya yöntem) temsil eder.
 title: METADATA_ADDRESS_LOCAL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,21 +11,22 @@ ms.assetid: 635f6bc5-c486-4e0e-83db-36f15e543843
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c265f8312b9a23b3b10f06595240dae20894f001
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 71b8b4ef578646a63ec64fbbde506dd71984fe35
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061556"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042822"
 ---
 # <a name="metadata_address_local"></a>METADATA_ADDRESS_LOCAL
 
-Bu yapı, bir kapsam içindeki yerel bir değişkenin adresini temsil eder (genellikle bir işlev veya yöntem).
+Bu yapı, bir kapsam içindeki yerel değişkenin adresini (genellikle bir işlev veya yöntem) temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,22 +49,22 @@ public struct METADATA_ADDRESS_LOCAL {
 ## <a name="members"></a>Üyeler
 
 `tokMethod`\
-Yöntemin veya yerel değişkenin bir parçası olan işlevin KIMLIĞI.
+Yöntemin veya işlevin kimliği, yerel değişkenin bir parçası.
 
-[C++] `_mdToken` , `typedef` 32 bitlik bir içindir `int` .
+[C++] `_mdToken` , `typedef` 32 bit için bir'dır. `int`
 
 `pLocal`\
 Bu yapının adresini temsil eden belirteç.
 
 `dwIndex`\
-Yöntem veya işlevde bu yerel değişkenin dizini veya başka bir değer (dile özgü) olabilir.
+Bu yerel değişkenin yönteminde veya işlevinde dizini veya başka bir değer (dile özgü) olabilir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, [](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_LOCAL` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
+Bu yapı, yapının alanı [(DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) enumerasyonundan bir değer) olarak ayarlanırken ADDRESS_KIND `dwKind` parçası `DEBUG_ADDRESS_UNION` `ADDRESS_KIND_LOCAL` olur. [](../../../extensibility/debugger/reference/address-kind.md)
 
 > [!WARNING]
-> [Yalnızca C++] `pLocal` Null değilse, `Release` belirteç işaretçisi üzerinde çağırmanız gerekir ( `addr` [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) yapısındaki bir alandır):
+> [yalnızca C++ ] null `pLocal` ise, belirteç işaretçisi üzerinde çağrısı `Release` `addr` DEBUG_ADDRESS: [](../../../extensibility/debugger/reference/debug-address.md)
 >
 > ```cpp
 > if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL && addr.addr.addrLocal.pLocal != NULL)
@@ -74,11 +75,11 @@ Bu yapı, [](../../../extensibility/debugger/reference/debug-address-union.md) `
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üstbilgi: SH. h
+Üst bilgi: sh.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

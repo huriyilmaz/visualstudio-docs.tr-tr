@@ -13,14 +13,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 177b21e2278153693601adf7b7dc18b751cf184e
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: c4d8d32ea4abfd7b81e6e86bc8d1affa32d1c3b4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107824854"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122059874"
 ---
 # <a name="walkthrough-create-a-master-detail-relation-using-a-cached-dataset"></a>İzlenecek yol: önbelleğe alınmış bir veri kümesini kullanarak ana ayrıntı ilişkisi oluşturma
   Bu izlenecek yol, bir çalışma sayfasında ana/ayrıntı ilişkisi oluşturmayı ve çözümün çevrimdışı kullanılabilmesi için verileri önbelleğe almayı gösterir.
@@ -38,7 +39,7 @@ ms.locfileid: "107824854"
 - Projenizi test edin.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. daha fazla bilgi için bkz. [Visual Studio ıde 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
@@ -52,26 +53,26 @@ ms.locfileid: "107824854"
 - SQL Server veritabanına okuma ve yazma izinleri.
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
- Bu adımda, bir Excel çalışma kitabı projesi oluşturacaksınız.
+ bu adımda, bir Excel çalışma kitabı projesi oluşturacaksınız.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Visual Basic veya C# kullanarak **ana ayrıntım** adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Visual Basic veya C# kullanarak **ana ayrıntım** adlı Excel bir çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-   Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini** için **Master-Detail** projesini ekler.
+   Visual Studio yeni Excel çalışma kitabını tasarımcıda açar ve **asıl ayrıntı** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
  Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları** penceresini kullanın.
 
 ### <a name="to-create-the-data-source"></a>Veri kaynağı oluşturmak için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
+1. **veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
 
 2. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
 
 3. **Veritabanı** ' nı seçin ve ardından **İleri**' ye tıklayın.
 
-4. Northwind örnek SQL Server veritabanına yönelik bir veri bağlantısı seçin veya **Yeni bağlantı** düğmesini kullanarak yeni bir bağlantı ekleyin.
+4. Northwind örnek SQL Server veritabanına yönelik bir veri bağlantısı seçin veya **yeni bağlantı** düğmesini kullanarak yeni bir bağlantı ekleyin.
 
 5. Bir bağlantı seçtikten veya oluşturduktan sonra **İleri**' ye tıklayın.
 
@@ -175,23 +176,23 @@ ms.locfileid: "107824854"
 
 3. Düğmelere tıklayarak bazı kayıtlardan ilerleyin.
 
-4. Çalışma kitabını kaydedin ve sonra çalışma kitabını ve Visual Studio 'Yu kapatın.
+4. Çalışma kitabını kaydedin ve sonra Visual Studio çalışma kitabını kapatın.
 
-5. Veritabanına bağlantıyı devre dışı bırakın. Veritabanı bir sunucuda bulunuyorsa ağ kablosunu bilgisayarınızdan çıkarın veya veritabanı geliştirme bilgisayarınızda ise SQL Server hizmeti 'ni durdurun.
+5. Veritabanına bağlantıyı devre dışı bırakın. veritabanı bir sunucuda bulunuyorsa ağ kablosunu bilgisayarınızdan çıkarın veya veritabanı geliştirme bilgisayarınızda ise SQL Server hizmeti 'ni durdurun.
 
-6. Excel 'i açın ve ardından **Master-Detail.xlsx** *\bin* dizininden (Visual Basic *Master-Detail\bin* veya Master-Detail\bin\debug \ C# ' de *\* ) açın.
+6. Excel açın ve sonra *\bin* dizininden **Master-Detail.xlsx** *açın (C# ' deki Visual Basic* veya *\Master-Detail\bin\debug* ).
 
 7. Çalışma sayfasının, bağlantısı kesildiğinde normal şekilde çalıştığını görmek için bazı kayıtlardan ilerleyin.
 
-8. Veritabanına yeniden bağlanın. Veritabanı bir sunucuda bulunuyorsa, bilgisayarınızı ağa yeniden bağlayın veya veritabanı geliştirme bilgisayarınızda ise SQL Server hizmeti 'ni başlatın.
+8. Veritabanına yeniden bağlanın. veritabanı bir sunucuda bulunuyorsa bilgisayarınızı ağa yeniden Bağlan veya veritabanı geliştirme bilgisayarınızda ise SQL Server hizmeti 'ni başlatın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
  Bu izlenecek yol, bir çalışma sayfasında ana/ayrıntı veri ilişkisi oluşturma ve bir veri kümesini önbelleğe alma temellerini gösterir. Daha sonra gelebilecek bazı görevler şunlardır:
 
-- Çözümü dağıtın. Daha fazla bilgi için bkz. [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
+- Çözümü dağıtın. daha fazla bilgi için bkz. [Office çözüm dağıtma](../vsto/deploying-an-office-solution.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [Office çözümlerindeki veriler](../vsto/data-in-office-solutions.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde veri](../vsto/data-in-office-solutions.md)
 - [Önbellek verileri](../vsto/caching-data.md)
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)

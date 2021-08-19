@@ -1,5 +1,5 @@
 ---
-title: Satırlar Görünümü - İçerik Veri | Microsoft Docs
+title: Satırlar Görünümü - Contention Data | Microsoft Docs
 description: Sorgu verilerinin Satırlar görünümünün, profil oluşturma çalıştırması içinde örnekler toplanmış olduğunda yürütülen deyimlerin performans verilerini nasıl listele olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 34e1280b9f44bef7017afed0cc6af60852d6c1bd82f7c9667313bdee6602edb0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dd89ab925a1604adc11f57c271566ccf9b70ca1c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121426709"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038740"
 ---
 # <a name="lines-view---contention-data"></a>Satırlar Görünümü - karşıtlık verileri
 Sorgu verilerinin Satırlar görünümü, profil oluşturma çalıştırması içinde örnekler toplanmışken yürütülen deyimlerin performans verilerini listeler. Kaynak dosyada bir deyim, bir kaynak dosyada birden fazla satıra yayma ve tek bir satır birden fazla deyim içerebilir.
@@ -35,7 +35,7 @@ Sorgu verilerinin Satırlar görünümü, profil oluşturma çalıştırması i�
 
 - Deyimin bitiş yaptığı kaynak satır.
 
-- Deyimin sona erdiğinde kaynak satırda yer alan karakter.
+- Deyimin bitiş yaptığı kaynak satırda yer alan karakter.
 
   Satır Adı sütunu, tanımlayıcı verileri için sıralanabilir bir concatenation sağlar.
 
@@ -43,14 +43,14 @@ Sorgu verilerinin Satırlar görünümü, profil oluşturma çalıştırması i�
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Özel Engellenen Süre**|Bir tartışma olayı nedeniyle bu deyimin deyiminde kod yürütmesi engellenmiş olan süre. deyiminin çağırmış olduğu işlevlerde engellenen süre dahil değildir.|
+|**Özel Engellenen Süre**|Bu deyimin, bir tartışma olayı nedeniyle deyiminde kod yürütmesini engellenmiş olduğu süre. deyiminin çağırmış olduğu işlevlerde engellenen süre dahil değildir.|
 |**Özel Engellenen Saat %**|İşlemde, deyiminin yalnızca engellenen süresi olan tüm engellenen sürelerin yüzdesi.|
 |**Özel İçerikler**|Bu deyimin, bir olay nedeniyle deyiminde kod yürütmesi engellenmiş sayısı. deyiminin çağır olduğu işlevlerde yer alan contention olayları dahil değildir.|
 |**Özel İçerik %**|İşlemde yer alan ve bu deyimin özel olarak ele alan tüm olaylarının yüzdesi.|
 |**İşlev Adresi**|Bu deyimi içeren işlevin adresi.|
 |**İşlev Adı**|Bu deyimi içeren işlevin tam adı.|
 |**Kapsayıcı Engellenen Süre**|Bu deyimde engellenen süre ve deyiminde çağrılır işlevler.|
-|**Kapsayıcı Engellenen Saat %**|İşlemde engellenen tüm zamanların yüzdesi, deyiminin kapsayıcı engellenen zamanıdır.|
+|**Kapsayıcı Engellenen Saat %**|Süreçteki engellenen tüm zamanların yüzdesi, deyiminin kapsayıcı engellenen zamanıdır.|
 |**Kapsayıcı İçerikler**|Bu deyimin ve deyiminde çağrılmış işlevlerin yürütülmesinin kaç kez engellenmiş olduğu.|
 |**Kapsayıcı İçerik %**|Süreç içinde yer alan ve bu deyimin kapsayıcı olarak ele alan tüm olaylarının yüzdesi.|
 |**Satır Adı**|Çizginin profil oluşturma tanımlayıcısı. Tanımlayıcı şu söz dizimi kullanır: `SourceFile` **;[** `LineNumberStart` **,**`CharacterStart` **]->; [**`LineNumberEnd`**,**`CharacterEnd`**]**|

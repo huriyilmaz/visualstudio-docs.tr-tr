@@ -1,6 +1,6 @@
 ---
-description: Bu genel olmayan örneğin temsilcilerin bulunduğu genel Oluşturucu nesnesini temsil eder.
-title: AsyncTaskMethodBuilder.m_builder alanı | Microsoft Docs
+description: Bu genel olmayan örneğin temsilci olarak temsil ettiği genel oluşturucu nesnesini temsil eder.
+title: AsyncTaskMethodBuilder.m_builder Alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,23 +9,24 @@ ms.assetid: bfaf25a2-0f08-413f-b474-9ce0d97c0eeb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56407d5a46ea314e06d77a4743728ab4531bce24
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 3dbc7090ca937d389d993e13ec96571792c33df3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903872"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133334"
 ---
 # <a name="asynctaskmethodbuilderm_builder-field"></a>AsyncTaskMethodBuilder.m_builder alanı
-Bu genel olmayan örneğin temsilcilerin bulunduğu genel Oluşturucu nesnesini temsil eder.
+Bu genel olmayan örneğin temsilci olarak temsil ettiği genel oluşturucu nesnesini temsil eder.
 
  **Ad alanı:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
+ **Derleme:** mscorlib (mscorlib.dll)
 
- Bu iç üyeye .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
+ Bu iç üyeye dosyadan erişe .NET Framework ortak ara dil (CIL) içinde aşağıdaki söz dizimi sağlanır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,4 +38,4 @@ Bu genel olmayan örneğin temsilcilerin bulunduğu genel Oluşturucu nesnesini 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>
-- [.NET Framework için paralel uzantı iç işlevleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [Ağ için paralel uzantı iç .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

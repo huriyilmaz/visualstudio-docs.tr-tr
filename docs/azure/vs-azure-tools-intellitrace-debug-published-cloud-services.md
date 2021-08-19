@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 03/21/2017
 ms.author: mikejo
-ms.openlocfilehash: f70fd9f67c0ac13d8754266573f05856edf04fc2e2aa2c8d05e2cfaebef7a45d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d298983e3dae549b09a96873d4325011fda5f51b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121456328"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122059704"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>Visual Studio ve IntelliTrace ile yayımlanan bir Azure bulut hizmetinin hatalarını ayıklama
 IntelliTrace ile, Azure 'da çalıştırıldığında bir rol örneği için kapsamlı hata ayıklama bilgilerini günlüğe kaydedebilirsiniz. bir sorunun nedenini bulmanız gerekiyorsa, Azure 'da çalışıyor gibi Visual Studio kodunuzda adım adım ilerlemek için ıntellitrace günlüklerini kullanabilirsiniz. Aslında, IntelliTrace anahtar kodu yürütme ve ortam verilerini Azure uygulamanız Azure 'da bir bulut hizmeti olarak çalışırken kaydeder ve kaydedilen verileri Visual Studio yeniden oynamanızı sağlar.

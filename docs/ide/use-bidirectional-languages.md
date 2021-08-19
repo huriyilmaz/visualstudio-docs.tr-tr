@@ -12,29 +12,30 @@ ms.assetid: b56f9795-ed8d-4452-9d49-8ca0b0145d86
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: a16aa4d445878ac8d357fa551e46552a1465bfe1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ca94c650c88cb477e99812d87e2ff42146916bcf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971355"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122116831"
 ---
-# <a name="support-for-bidirectional-languages-in-visual-studio"></a>Visual Studio 'da çift yönlü diller için destek
+# <a name="support-for-bidirectional-languages-in-visual-studio"></a>Visual Studio Çift yönlü diller için destek
 
-Visual Studio, Arapça ve Ibranice metinleri doğru bir şekilde görüntüleyebilir ve nesne adları ve değerleri için çift yönlü metin girmenize olanak sağlar.
+Visual Studio, arapça ve ibranice metinleri doğru bir şekilde görüntüleyebilir ve nesne adları ve değerleri için çift yönlü metin girmenize olanak sağlar.
 
 > [!NOTE]
-> Çift yönlü dilleri girip görüntülemesi için, uygun dille yapılandırılmış bir Windows sürümüyle çalışmanız gerekir. Bu, uygun dil paketinin yüklü olduğu bir Windows Ingilizce sürümü ya da Windows 'un uygun şekilde yerelleştirilmiş sürümü olabilir.
+> çift yönlü dilleri girip görüntülemesi için, uygun dille yapılandırılmış bir Windows sürümüyle çalışmanız gerekir. bu, uygun dil paketinin yüklü olduğu bir Windows ingilizce sürümü ya da Windows uygun şekilde yerelleştirilmiş sürümü olabilir.
 
 ## <a name="fully-supported-features"></a>Tam olarak desteklenen özellikler
 
-Visual Studio 'da tasarım zamanında, metin girerken, nesneleri adlandırırken ve dosyaları kaydederken ve açarken çift yönlü dilleri kullanabilirsiniz.
+tasarım zamanında Visual Studio metin girerken, nesneleri adlandırırken ve dosyaları kaydederken ve açarken çift yönlü dilleri kullanabilirsiniz.
 
 ### <a name="text-entry"></a>Metin girişi
 
-Visual Studio Unicode 'U destekler, bu nedenle sisteminiz uygun yerel ayara ve giriş diline ayarlandıysa, Arapça veya Ibranice metin girebilirsiniz. (Arapça desteği keşide ve aksanlar içerir.)
+Visual Studio Unicode destekler, bu nedenle sisteminiz uygun yerel ayara ve giriş diline ayarlandıysa, arapça veya ibranice metin girebilirsiniz. (Arapça desteği keşide ve aksanlar içerir.)
 
 ### <a name="arabic-or-hebrew-object-names"></a>Arapça veya Ibranice nesne adları
 
@@ -60,7 +61,7 @@ Aşağıdaki öğeler Arapça veya Ibranice kullanılarak adlandırılabilir ve 
 
 - Özellik değerleri.
 
-   **Özellikler** penceresinde Arapça veya İbranice metin kullanabilirsiniz. Pencere, standart Windows tuş vuruşlarını kullanarak sağdan sola ve soldan sağa okuma düzeni arasında geçiş yapmanıza olanak **sağlar (** +  sağdan sola ve  + soldan sağa **kaydırma** için CTRL + SHIFT tuşlarına basın).
+   **Özellikler** penceresinde Arapça veya İbranice metin kullanabilirsiniz. pencere, standart Windows tuş vuruşlarını kullanarak sağdan sola ve soldan sağa okuma düzeni arasında geçiş yapmanıza olanak **sağlar (** +  sağdan sola ve  + soldan sağa **kaydırma** için ctrl + shıft tuşlarına basın).
 
 - Kod ve sabit metin.
 
@@ -80,9 +81,9 @@ Dosyaları dile özgü veya Unicode kodlamalı bir şekilde kaydedebilir ve aça
 
 ## <a name="right-to-left-reading-order"></a>Sağdan sola okuma düzeni
 
-Visual Studio, sağdan sola okuma düzeni için sınırlı desteğe sahiptir. Varsayılan olarak, Visual Studio 'daki metin girişi denetimleri soldan sağa okuma düzeni kullanır. Çoğu durumda, okuma düzenini değiştirmek için standart Windows hareketlerini kullanabilirsiniz. Örneğin,  + **Özellikler** penceresini özellik değerleri için sağdan sola okuma düzenini destekleyecek şekilde değiştirmek için CTRL **+ SHIFT** tuşlarına basabilirsiniz.
+Visual Studio sağdan sola okuma düzeni için sınırlı desteğe sahiptir. varsayılan olarak Visual Studio ' deki metin girişi denetimleri soldan sağa okuma sırasını kullanır. çoğu durumda, okuma düzenini değiştirmek için standart Windows hareketlerini kullanabilirsiniz. Örneğin,  + **Özellikler** penceresini özellik değerleri için sağdan sola okuma düzenini destekleyecek şekilde değiştirmek için CTRL **+ SHIFT** tuşlarına basabilirsiniz.
 
-Aşağıdaki konumlarda, Visual Studio 'da sağdan sola okuma düzeni desteklenmez:
+Sağdan sola okuma düzeni Visual Studio aşağıdaki konumlarda desteklenmez:
 
 - Visual Studio iletişim kutularındaki onay kutuları, açılan listeler ve diğer denetimler her zaman soldan sağa okuma düzeni kullanır.
 

@@ -1,6 +1,6 @@
 ---
-title: Office çözümlerinde hata giderme sorunları
-description: Visual Studio 'da Microsoft Office çözümleri geliştirirken oluşabilecek hataları nasıl giderebileceğinizi öğrenin.
+title: Office çözümleriyle ilgili sorunları giderme
+description: Uygulama geliştirme sırasında ortaya çıkabilir hataları nasıl giderebilir ve Microsoft Office çözümlerini Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: troubleshooting
@@ -20,113 +20,114 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 3bc1b674caf46dc84ff7bf57c983131b79cfde51
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: d5959df0d24db2807bead8331d04befb7f769ae8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827818"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122099496"
 ---
-# <a name="troubleshoot-errors-in-office-solutions"></a>Office çözümlerinde hata giderme sorunları
-  Visual Studio 'da Office çözümleri geliştirirken aşağıdaki görevleri gerçekleştirirken sorunlarla karşılaşabilirsiniz:
+# <a name="troubleshoot-errors-in-office-solutions"></a>Office çözümleriyle ilgili sorunları giderme
+  Aşağıdaki görevleri gerçekleştirirken, aşağıdaki görevleri gerçekleştirirken aşağıdaki Office çözümler geliştirirken sorunlarla Visual Studio:
 
-- [Projeleri oluşturun, yükseltin ve açın](#creating)
+- [Projeleri oluşturma, yükseltme ve açma](#creating)
 
 - [Tasarımcıları kullanma](#designers)
 
 - [Kod yazma](#code)
 
-- [Yapı projeleri](#building)
+- [Projeleri derleme](#building)
 
-- [Hata ayıklama projeleri](#debugging)
+- [Projelerde hata ayıklama](#debugging)
 
-## <a name="create-upgrade-and-open-projects"></a><a name="creating"></a> Projeleri oluşturun, yükseltin ve açın
- Office projelerini oluştururken veya açtığınızda aşağıdaki hatalarla karşılaşabilirsiniz.
+## <a name="create-upgrade-and-open-projects"></a><a name="creating"></a> Proje oluşturma, yükseltme ve açma
+ Yeni projeler oluşturma veya açma sırasında aşağıdaki hatalarla Office karşılaşabilirsiniz.
 
 ### <a name="the-project-cannot-be-created"></a>Proje oluşturulamıyor
- Bir Office projesi oluşturmaya veya açmaya çalışırken bir hata oluştu, ancak Visual Studio nedenini öğrenmek için yeterli bilgi yoktu. Projenizi kapatmayı, Visual Studio 'dan çıkmak ve yeniden başlatmayı deneyin.
+ Office projesini oluşturma veya açmaya Visual Studio hata oluştu ama Visual Studio nedenini belirlemek için yeterli bilgiye sahip değildi. Projenizi kapatmayı, Visual Studio ve yeniden başlatmayı deneyin.
 
- Belge düzeyi projesi oluşturmaya çalışıyorsanız, yeni projedeki belgeyle aynı ada sahip başka bir belge zaten Excel veya Word 'de açık olabilir. Tüm Excel veya Word örneklerinin kapalı olduğundan emin olun.
+ Belge düzeyinde bir proje oluşturmaya çalışıyorsanız, yeni projede belgeyle aynı adla başka bir belge zaten Excel veya Word'de açık olabilir. Excel veya Word'Excel diğer tüm örneklerinin kapalı olduğundan emin olun.
 
-### <a name="control-properties-are-lost-when-you-create-a-new-project-based-on-a-document-from-an-existing-project"></a>Mevcut bir projeden bir belgeyi temel alan yeni bir proje oluşturduğunuzda denetim özellikleri kaybolur
- Varolan bir projeden bir belgeyi temel alan yeni bir Office projesi oluşturursanız, belgedeki denetimlerin özellikleri yeni projeye kopyalanmaz. Önceden varolan denetimlerin özelliklerini el ile sıfırlamanız gerekir. Alternatif olarak, yeni bir proje oluşturmak yerine mevcut projenin bir kopyasını oluşturarak veya var olan projeyi yeni çözüme yükleyerek (tasarımcıda) ve denetimleri kopyalayıp yeni belgeye yapıştırarak denetim özelliklerini koruyabilirsiniz.
+### <a name="control-properties-are-lost-when-you-create-a-new-project-based-on-a-document-from-an-existing-project"></a>Mevcut projeden bir belgeyi temel alan yeni bir proje ekleyebilirsiniz, denetim özellikleri kaybolur
+ Mevcut bir projeden Office yeni bir proje temel alan yeni bir proje ekleyebilirsiniz, belgede yer alan denetimlerin özellikleri yeni projeye kopyalanmaz. Önceden var olan denetimlerin özelliklerini el ile sıfırlamanız gerekir. Alternatif olarak, yeni proje oluşturmak yerine mevcut projenin bir kopyasını oluşturarak veya mevcut projeyi yeni çözüme yükerek (tasarımcıda) ve mevcut belgeden denetimleri kopyalayıp yeni belgeye yapıştırarak denetim özelliklerini koruyabilirsiniz.
 
-### <a name="errors-when-you-create-an-excel-workbook-project-based-on-an-existing-workbook"></a>Var olan bir çalışma kitabına dayalı bir Excel çalışma kitabı projesi oluşturduğunuzda oluşan hatalar
- Var olan bir çalışma kitabını temel alan yeni bir Excel çalışma kitabı projesi oluşturursanız, aşağıdaki hataların bir bileşimini görebilirsiniz.
+### <a name="errors-when-you-create-an-excel-workbook-project-based-on-an-existing-workbook"></a>Mevcut çalışma kitabını temel alan Excel çalışma kitabı projesi oluşturma hataları
+ Mevcut bir çalışma kitabını Excel yeni bir çalışma kitabı projesi oluşturmanız, aşağıdaki hataların bir birleşimini görebilir.
 
- Excel 'den: "Gizlilik Uyarısı: Bu belge makrolar, ActiveX denetimleri, XML genişletme paketi bilgileri veya Web bileşenleri içerir. Bunlar belge denetçisi tarafından kaldırılamayan kişisel bilgileri içerebilir. "
+ Şu Excel: "Gizlilik uyarısı: Bu belgede makrolar, ActiveX denetimleri, XML genişletme paketi bilgileri veya Web bileşenleri yer almaktadır. Bunlar Belge Denetçisi tarafından kaldırılamaz kişisel bilgileri içerebilir."
 
- Visual Studio 'dan: "tasarımcı doğru şekilde yüklenemedi."
+ Şu Visual Studio: "Tasarımcı düzgün yüklenemedi."
 
- Bu hatalar, kendi kişisel bilgileri olan bir çalışma kitabını temel alan bir projeyi belge denetçisi kullanılarak oluşturmaya çalıştığınızda meydana gelir. Bu hatayı önlemek için, projeyi oluşturmadan önce aşağıdaki adımları gerçekleştirin.
+ Bu hatalar, Belge Denetçisi kullanılarak kişisel bilgileri kaldırılmış bir çalışma kitabını temel alan bir proje oluşturma denemesi olabilir. Bu hatayı önlemek için projeyi oluşturmadan önce aşağıdaki adımları gerçekleştirin.
 
 1. Çalışma kitabını Excel'de açın.
 
-2. Excel 'de güven merkezini açın.
+2. Bu Excel Güven Merkezi'nde açın.
 
-3. **Gizlilik seçenekleri** sekmesinde, **kaydederken kişisel bilgileri dosya özelliklerinden kaldır** onay kutusunun işaretini kaldırın.
+3. Gizlilik **Seçenekleri sekmesinde,** Kişisel bilgileri **dosya özelliklerinden kaldır'ın kaydet onay kutusunun** işaretini kaldırın.
 
-4. Çalışma kitabını kaydedin ve Excel 'i kapatın.
+4. Çalışma kitabını kaydedin ve çalışma kitabını Excel.
 
-### <a name="cannot-open-a-project-after-migration"></a>Geçişten sonra proje açılamaz
- Office çözümü Microsoft Office 2010 ' e geçirildikten sonra, proje yalnızca 2007 Microsoft Office sistemi yüklü olan bir geliştirme bilgisayarında açılamaz. Aşağıdaki hataları görebilirsiniz.
+### <a name="cannot-open-a-project-after-migration"></a>Geçiş sonrasında proje açamaz
+ Bir Office çözümü Microsoft Office 2010'a geçirildikten sonra, proje yalnızca 2007 Microsoft Office sistemi yüklü olan bir geliştirme Microsoft Office açılamıyor. Aşağıdaki hataları görebilir.
 
- "Çözümdeki bir veya daha fazla proje doğru şekilde yüklenmedi. Ayrıntılar için lütfen Çıkış Penceresi bakın. "
+ "Çözümde bir veya daha fazla proje doğru yüklenmedi. Ayrıntılar için lütfen Çıkış Penceresi bakın."
 
- "Bu proje türüyle ilişkili uygulama bu bilgisayarda yüklü olmadığından Proje oluşturulamıyor. Bu proje türüyle ilişkilendirilmiş Microsoft Office uygulamayı yüklemelisiniz. "
+ "Bu proje türüyle ilişkili uygulama bu bilgisayara yüklenmemiş olduğundan proje oluşturulamaz. Bu proje türüyle Microsoft Office uygulamanın yüklemesi gerekir."
 
- Bu sorunu çözmek için *. vbproj* veya *. csproj* dosyasını düzenleyin. Bir Word projesi için HostPackage = "{763FDC83-64E5-4651-AC9B-28C4FEB985A1}" öğesini HostPackage = "{6CE98B71-D55A-4305-87A8-0D6E368D9600}" ile değiştirin. Bir Excel projesi için HostPackage = "{B284B16A-C42C-4438-BDCD-B72F4AC43CFB}" öğesini HostPackage = "{825100CF-0BA7-47ea-A084-DCF3308DADF74}" ile değiştirin. Bir Outlook projesi için HostPackage = "{D2B20FF5-A6E5-47E1-90E8-463C6860CB05}" öğesini HostPackage = "{20A848B8-E01F-4801-962E-25DB0FF57389}" ile değiştirin.
+ Bu sorunu çözmek için *.vbproj veya* *.csproj dosyasını* düzenleyin. Bir Word projesi için HostPackage="{763FDC83-64E5-4651-AC9B-28C4FEB985A1}" yerine HostPackage="{6CE98B71-D55A-4305-87A8-0D6E368D9600}". Bir Excel projesinde HostPackage="{B284B16A-C42C-4438-BDCD-B72F4AC43CFB}" yerine HostPackage="{825100CF-0BA7-47EA-A084-DCF3308DAF74}" ifadesini kullanın. Bir Outlook projesinde HostPackage="{D2B20FF5-A6E5-47E1-90E8-463C6860CB05}" yerine HostPackage="{20A848B8-E01F-4801-962E-25DB0FF57389}".
 
- Alternatif olarak, geçirilen projelerin yalnızca Microsoft Office 2010 zaten yüklü olan geliştirme bilgisayarlarında açıldığından emin olun.
+ Alternatif olarak, geçirilen projelerin yalnızca 2010'Microsoft Office yüklü geliştirme bilgisayarlarında açıldığından emin olun.
 
-### <a name="errors-in-upgraded-office-2003-document-level-projects-that-contain-windows-forms-controls"></a>Windows Forms denetimleri içeren yükseltilen Office 2003 belge düzeyi projelerindeki hatalar
- Bir Microsoft Office 2003 belge düzeyi projesi yükseltirseniz ve belge Windows Forms denetimleri içeriyorsa, yükseltilen proje derleme veya çalışma zamanı hatalarına sahip olabilir. Bu sorundan kaçınmak için, projeyi yükseltmeden önce geliştirme bilgisayarına Visual Studio 2005 Tools for Office Second Edition çalışma zamanını yükleyin. Çalışma zamanının bu sürümü, [Office Ikinci sürüm çalışma zamanı (VSTO 2005 de) (x86) için Microsoft Visual Studio 2005 araçlarında](https://www.microsoft.com/download/details.aspx?id=2392)Microsoft İndirme Merkezi 'nden yeniden dağıtılabilir bir paket olarak sunulmaktadır.
+### <a name="errors-in-upgraded-office-2003-document-level-projects-that-contain-windows-forms-controls"></a>Windows Forms Office 2003 belge düzeyi projelerinde yükseltilen hatalar
+ Microsoft Office 2003 belge düzeyi projesini yükselter ve belge Windows Forms denetimlerini içeriyorsa, yükseltilen proje derleme veya çalışma zamanı hatalarına sahip olabilir. Bu sorunu önlemek için projeyi yükseltmeden önce Visual Studio 2005 Office İkinci Sürüm Çalışma Zamanı'nın geliştirme bilgisayarına yükleyin. Çalışma zamanının bu sürümü, Office İkinci Sürüm Çalışma Zamanı [(VSTO 2005 SE) (x86) için Microsoft Visual Studio 2005](https://www.microsoft.com/download/details.aspx?id=2392)Araçları'nda Microsoft İndirme Merkezi'nden yeniden dağıtılabilir paket olarak kullanılabilir.
 
- Projeyi yükseltmeyi tamamladıktan sonra, diğer Office çözümleri tarafından kullanılmıyorsa Office Second Edition çalışma zamanı için Visual Studio 2005 araçları 'nı geliştirme bilgisayarından kaldırabilirsiniz.
+ Projeyi yükseltmeyi bitirdikten sonra, Visual Studio 2005 Tools for Office Second Edition Runtime'ı, başka bir yazılım çözümü tarafından kullanılmazsa geliştirme bilgisayardan Office edebilirsiniz.
 
 ## <a name="use-the-designers"></a><a name="designers"></a> Tasarımcıları kullanma
- Belge düzeyi projelerde belge, çalışma kitabı veya çalışma sayfası tasarımcısı ile çalışırken aşağıdaki hatalarla karşılaşabilirsiniz.
+ Belge düzeyindeki projelerde belge, çalışma kitabı veya çalışma sayfası tasarımcısıyla birlikte çalışıyorsanız aşağıdaki hatalarla karşılaşabilirsiniz.
 
-### <a name="designer-failed-to-load-correctly"></a>Tasarımcı doğru şekilde yüklenemedi
- Visual Studio aşağıdaki durumlarda tasarımcıyı açamıyor:
+### <a name="designer-failed-to-load-correctly"></a>Tasarımcı düzgün yüklenemedi
+ Visual Studio durumda tasarımcı açamaz:
 
-- Excel veya Word zaten açık ve kalıcı bir iletişim kutusu görüntülüyor. Tasarımcıyı açmak için, Excel veya Word 'Ün kalıcı iletişim kutusu açık olup olmadığını denetleyin ve açık kalıcı iletişim kutularını kapatın. Hiçbir kalıcı iletişim kutusu açık değilse, Excel veya Word 'e yanıt vermeden önce başka bir işlem yapmanız gerekebilir.
+- Excel veya Word zaten açık ve kalıcı bir iletişim kutusu görüntüleniyor. Tasarımcıyı açmak için, word veya Word Excel de açık bir kalıcı iletişim kutusu olup ola ve açık kalıcı iletişim kutularını kapat onay kutusunu işaretleyin. Açık kalıcı iletişim kutusu yoksa, Excel veya Word yanıt vermeden önce başka bir eylem gerekebilir.
 
-- Projede Şu anda hata ayıklıyor. Tasarımcıyı açmak için, hata ayıklamayı durdurun veya sona erdirin.
+- Proje şu anda hata ayıklaması yapılıyor. Tasarımcıyı açmak için hata ayıklamayı durdurun veya bitirin.
 
-- Geliştirme bilgisayarında yüklü bir Excel VSTO eklentisi, Excel başladığında bir iletişim kutusu görüntülüyor. Excel belge düzeyi projesi oluşturmak için önce VSTO eklentisini devre dışı bırakmanız gerekir.
+- Geliştirme Excel VSTO yüklü olan bir eklenti, uygulama başlatıldığında bir iletişim Excel görüntüleniyor. Belge düzeyi Excel bir proje oluşturmak için önce eklentiyi devre dışı VSTO gerekir.
 
 ### <a name="controls-appear-as-black-rectangles-on-the-document-or-worksheet"></a>Denetimler belge veya çalışma sayfasında siyah dikdörtgenler olarak görünür
- Denetimleri bir belge veya çalışma sayfasında gruplandırdıysanız, Visual Studio artık denetimleri tanımaz. Gruplanmış denetimlere **Özellikler** penceresinden erişilemez ve belge veya çalışma sayfasında siyah dikdörtgenler olarak görünürler. İşlevlerini geri yüklemek için denetimlerin grubunu çözmeniz gerekir.
+ Denetimleri bir belge veya çalışma sayfasında gruplarsanız Visual Studio artık tanımazsınız. Özellikler penceresinde gruplenmiş denetimlere **erişilemez** ve bunlar belge veya çalışma sayfasında siyah dikdörtgenler olarak görünür. İşlevselliklerini geri yüklemek için denetimlerin grubunu çöz gerekir.
 
-### <a name="controls-on-a-word-template-are-not-visible-in-visual-studio"></a>Word şablonundaki Denetimler Visual Studio 'da görünmez
- Visual Studio tasarımcısında bir Word şablonu açarsanız, şablonda metinle birlikte olmayan denetimler görünür olmayabilir. Bunun nedeni, Visual Studio 'Nun **normal** görünümde Word şablonlarını açmasıdır. Denetimleri görüntülemek için **Görünüm** menüsüne tıklayın, **Microsoft Office Word görünümü** ' ne gelin ve ardından **yazdırma düzeni**' ne tıklayın.
+### <a name="controls-on-a-word-template-are-not-visible-in-visual-studio"></a>Bir Word şablonunda denetimler şablonda Visual Studio
+ Visual Studio tasarımcısında bir Word şablonu açarsanız, şablonda metinle aynı satırda yer alan denetimler görünür durumda olmayacaktır. Bunun nedeni, Visual Studio Word şablonlarını **Normal görünümde açmasıdır.** Denetimleri görüntülemek için Görünüm menüsüne tıklayın, **Word** Görünümü'Microsoft Office **üzerine gelin** ve ardından Yazdırma Düzeni'ne **tıklayın.**
 
-### <a name="insert-clip-art-command-does-nothing-in-the-visual-studio-designer"></a>Küçük resim Ekle komutu Visual Studio tasarımcısında hiçbir şey yapmaz
- Excel veya Word Visual Studio tasarımcısında açıldığında, Şeritteki **çizimler** sekmesinde bulunan **küçük resim** düğmesine tıklamak, **küçük resim** görev bölmesini açmaz. Küçük resim eklemek için, Visual Studio dışında ana proje klasöründeki ( *\Bin* klasöründe olan kopya değil) çalışma kitabının veya belgenin kopyasını açmanız, küçük resmi eklemeniz ve sonra çalışma kitabını veya belgeyi kaydetmeniz gerekir.
+### <a name="insert-clip-art-command-does-nothing-in-the-visual-studio-designer"></a>Küçük resim ekle komutu, küçük resim tasarımcısında Visual Studio yok
+ Görsel Excel veya Word Visual Studio açık olduğunda, şeritteki Çizimler  sekmesindeki Küçük  Resim düğmesine tıklamak Küçük Resim görev **bölmesini** açmaz. Küçük resim eklemek için, Visual Studio'nin dışında ana proje klasöründeki *(\bin* klasöründeki kopya değil) çalışma kitabının veya belgenin kopyasını açmanız, küçük resmi eklemeniz ve ardından çalışma kitabını veya belgeyi kaydetmeniz gerekir.
 
-## <a name="write-code"></a><a name="code"></a> Kod Yaz
- Office projelerinde kod yazdığınızda aşağıdaki hatalarla karşılaşabilirsiniz.
+## <a name="write-code"></a><a name="code"></a> Kod yazma
+ Farklı projelerde kod yazarken aşağıdaki hatalarla Office karşılaşabilirsiniz.
 
-### <a name="some-events-of-office-objects-are-not-accessible-when-using-c"></a>C kullanırken Office nesnelerinin bazı olaylarına erişilemez\#
- Bazı durumlarda, bir Visual C# projesinde Office birincil birlikte çalışma derlemesi (PIA) türünün bir örneğinin belirli bir olayına erişmeye çalıştığınızda aşağıdakine benzer bir derleyici hatası görebilirsiniz.
+### <a name="some-events-of-office-objects-are-not-accessible-when-using-c"></a>C kullanılırken Office nesnelerinin bazı olaylarına erişilemiyor\#
+ Bazı durumlarda, visual C# projesinde bir Office birincil birlikte çalışma derlemesi (PIA) türünün belirli bir örneğinin olayına erişmeye çalışsanız aşağıdakine benzer bir derleyici hatasıyla karşınıza çıktı.
 
- "' Microsoft.Office.Interop.Excel._Application. NewWorkbook ' ve ' Microsoft.Office.Interop.Excel.AppEvents_Event. NewWorkbook '" arasında belirsizlik
+ "'Microsoft arasındaki belirsizlik. Office. Birlikte çalış -abilir -lik. Excel._Application.NewWorkbook' ve 'Microsoft. Office. Birlikte çalış -abilir -lik. Excel. AppEvents_Event.NewWorkbook'"
 
- Bu hata, nesnenin başka bir özelliği veya yöntemiyle aynı ada sahip bir olaya erişmeye çalıştığınız anlamına gelir. Olaya erişmek için, nesneyi *olay arabirimine* atamalısınız.
+ Bu hata, nesnenin başka bir özelliği veya yöntemiyle aynı adı alan bir olaya erişmeye çalıştığı anlamına gelir. Olayına erişmek için nesnesini olay arabirimine *attırabilirsiniz.*
 
- Olayları olan Office PIA türleri iki arabirim uygular: tüm özellikleri ve yöntemleri içeren bir çekirdek arabirim ve nesne tarafından açığa çıkarılan olayları içeren bir olay arabirimi. Bu olay arabirimleri, ve gibi, *ObjectName* olayları *n* _Event adlandırma kuralını kullanır <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> <xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event> . Bir nesne üzerinde bulmayı düşündüğünüz bir olaya erişemiyorsanız, nesneyi olay arabirimine atayın.
+ Office Olaylara sahip PIA türleri iki arabirim kullanır: tüm özelliklere ve yöntemlere sahip çekirdek arabirim ve nesne tarafından ortaya konulan olayları içeren bir olay arabirimi. Bu olay arabirimleri, ve gibi *_Event* event *n* _Event adlandırma kuralı nesne adını <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> <xref:Microsoft.Office.Interop.Word.ApplicationEvents2_Event> kullanır. Bir nesnede bulmasını beklediğiniz bir olaya erişe değil, nesneyi olay arabirimine atabilirsiniz.
 
- Örneğin, <xref:Microsoft.Office.Interop.Excel.Application> nesneler bir <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> olaya ve bir özelliğe sahiptir <xref:Microsoft.Office.Interop.Excel._Application.NewWorkbook%2A> . Olayı işlemek için <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> , <xref:Microsoft.Office.Interop.Excel.Application> <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> arabirimini arabirimine atayın. Aşağıdaki kod örneği, Excel için belge düzeyindeki bir projede bunun nasıl yapılacağını göstermektedir.
+ Örneğin, <xref:Microsoft.Office.Interop.Excel.Application> nesnelerin bir olayı <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> ve özelliği <xref:Microsoft.Office.Interop.Excel._Application.NewWorkbook%2A> vardır. Olayı işlemek <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.NewWorkbook> için <xref:Microsoft.Office.Interop.Excel.Application> arabirimine <xref:Microsoft.Office.Interop.Excel.AppEvents_Event> atarak. Aşağıdaki kod örneğinde, bunu belge düzeyi projesinde nasıl gerçekleştirebilirsiniz? Excel.
 
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingExcelCS/ThisWorkbook.cs" id="Snippet1":::
 
- Office PIA 'leri içindeki olay arabirimleri hakkında daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemelerindeki sınıflara ve arabirimlere genel bakış](/previous-versions/office/office-12//ms247299(v=office.12)).
+ Office PIA'larında olay arabirimleri hakkında daha fazla bilgi için bkz. Birincil birlikte çalışma derlemeleri için [Office arabirimlere genel bakış.](/previous-versions/office/office-12//ms247299(v=office.12))
 
-### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-net_v40_short-or-the-net_v45"></a>Veya öğesini hedefleyen projelerde Office PIA sınıflarına başvuramaz [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)][!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]Ya da [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] ' i hedefleyen projelerde, BIR Office PIA ' de tanımlanan bir sınıfa başvuruda bulunan kod varsayılan olarak derlenmeyecektir. PIA 'ler içindeki sınıflar, ve gibi adlandırma kuralı *ObjectName* sınıfını kullanır <xref:Microsoft.Office.Interop.Word.DocumentClass> <xref:Microsoft.Office.Interop.Excel.WorkbookClass> . Örneğin, bir Word VSTO eklenti projesinden aşağıdaki kod derlenmeyecektir.
+### <a name="cannot-reference-office-pia-classes-in-projects-that-target-the-net_v40_short-or-the-net_v45"></a>veya Office projelerde PIA sınıflarına [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] başvurulamaz[!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]
+ veya hedefli [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] projelerde, bir piA'da tanımlanan bir sınıfa [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] Office kod varsayılan olarak derlanmaz. PIA'larda sınıflar, ve gibi adlandırma kuralı *objectname* Sınıfını <xref:Microsoft.Office.Interop.Word.DocumentClass> <xref:Microsoft.Office.Interop.Excel.WorkbookClass> kullanır. Örneğin, bir Word VSTO Eklenti projesinden aşağıdaki kod derlanmaz.
 
 ```vb
 Dim document As Word.DocumentClass = Globals.ThisAddIn.Application.ActiveDocument
@@ -138,11 +139,11 @@ Word.DocumentClass document = (Word.DocumentClass) Globals.ThisAddIn.Application
 
  Bu kod aşağıdaki derleme hatalarına neden olur:
 
-- Visual Basic: "' DocumentClass ' sınıfına yönelik başvuruya, derlemesi hiçbir PIA modu kullanılarak bağlandığında izin verilmez."
+- Visual Basic: "Derlemesi No-PIA modu kullanılarak bağlanarak 'DocumentClass' sınıfına başvuruya izin verilmiyor."
 
-- Visual C#: "Microsoft.Office.Interop.Word.DocumentClass ' birlikte çalışma türü Katıştırılamaz. Bunun yerine uygulanabilir arabirimi kullanın. "
+- Visual C#: "'Microsoft.Office.Interop.Word.DocumentClass' birlikte çalışma türü katıştırılamaz. Bunun yerine uygun arabirimi kullanın."
 
-  Bu hatayı çözmek için, kodu bunun yerine karşılık gelen arabirime başvuracak şekilde değiştirin. Örneğin, bir nesneye başvurmak yerine <xref:Microsoft.Office.Interop.Word.DocumentClass> , <xref:Microsoft.Office.Interop.Word.Document> bunun yerine arabirimin örneğine başvurun.
+  Bu hatayı çözmek için kodu ilgili arabirime başvurarak değiştirebilirsiniz. Örneğin, bir nesneye başvuru <xref:Microsoft.Office.Interop.Word.DocumentClass> yapmak yerine arabirimin bir örneğine <xref:Microsoft.Office.Interop.Word.Document> başvurun.
 
 ```vb
 Dim document As Word.Document = Globals.ThisAddIn.Application.ActiveDocument
@@ -152,71 +153,71 @@ Dim document As Word.Document = Globals.ThisAddIn.Application.ActiveDocument
 Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 ```
 
- Veya öğesini hedefleyen projeler [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] , varsayılan olarak tüm birlikte çalışma türlerini Office PIA 'ları 'ndan otomatik olarak katıştırın. Bu derleme hatası, gömülü birlikte çalışma türleri özelliği sınıflarla değil arabirimlerle birlikte çalışacağından oluşur. Office PIA 'Ları içindeki arabirimler ve sınıflar hakkında daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemelerindeki sınıflara ve arabirimlere genel bakış](/previous-versions/office/office-12/ms247299(v=office.12)). Office projelerinde gömülü birlikte çalışma türleri özelliği hakkında daha fazla bilgi için bkz. [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md).
+ veya hedefini hedef alan projeler, varsayılan olarak tüm birlikte çalışma türlerini Office [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] otomatik olarak eklenir. Katıştırılmış birlikte çalışma türleri özelliği sınıflarla değil yalnızca arabirimlerle çalışma nedeniyle bu derleme hatası oluşur. Office PIA'larında arabirimler ve sınıflar hakkında daha fazla bilgi için bkz. Birincil birlikte çalışma derlemeleri için [Office arabirimlere genel bakış.](/previous-versions/office/office-12/ms247299(v=office.12)) Office projelerinde katıştırılmış birlikte çalışma türleri özelliği hakkında daha fazla bilgi için bkz. Office [oluşturma.](../vsto/designing-and-creating-office-solutions.md)
 
-### <a name="references-to-office-classes-are-not-recognized"></a>Office sınıflarına yönelik başvurular tanınmıyor
- Örneğin, uygulama gibi bazı sınıf adları, ve gibi birden çok ad alanında <xref:Microsoft.Office.Interop.Word> bulunur <xref:System.Windows.Forms> . Bu nedenle,  / proje şablonlarının en üstündeki Imports **using** deyimleri, bir kısayol niteleyen sabiti içerir, örneğin:
+### <a name="references-to-office-classes-are-not-recognized"></a>Sınıflara Office başvurular tanınmıyor
+ Uygulama gibi bazı sınıf adları ve gibi birden çok ad alanı <xref:Microsoft.Office.Interop.Word> <xref:System.Windows.Forms> içindedir. Bu nedenle, proje **şablonlarının** üst kısmında yer alan Using deyimini içeri aktarmalar, bir /  shorthand qualifying sabiti içerir, örneğin:
 
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs" id="Snippet2":::
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb" id="Snippet2":::
 
- **Imports** / **using** ifadesinin bu kullanımı, Office sınıflarının başvurularını Word veya Excel niteleyicisi ile ayırmanızı gerektirir, örneğin:
+ deyimini kullanan İçeri Aktarmalar'ın bu kullanımı, Word veya Office niteleyicisi ile Excel  /  ayırmanızı gerektirir, örneğin:
 
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs" id="Snippet3":::
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb" id="Snippet3":::
 
- Nitelenmemiş bir bildirim kullanırsanız hata alırsınız, örneğin:
+ Uygun olmayan bir bildirim kullanırsanız hata alır, örneğin:
 
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs" id="Snippet4":::
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb" id="Snippet4":::
 
- Word veya Excel ad alanını içeri aktarmış olsanız ve içindeki tüm sınıflara erişebilseniz de, ad alanı belirsizi kaldırmak için Word veya Excel ile tüm türleri tamamen nitelemeniz gerekir.
+ Word veya Excel ad alanını içeri aktardınız ve içindeki tüm sınıflara erişiminiz olmasına rağmen ad alanı belirsizliklerini kaldırmak için word veya Excel tüm türleri tam olarak uygun hale Excel gerekir.
 
-## <a name="build-projects"></a><a name="building"></a> Yapı projeleri
- Office projelerini oluştururken aşağıdaki hatalarla karşılaşabilirsiniz.
+## <a name="build-projects"></a><a name="building"></a> Projeleri derleme
+ Yeni projeler derleme sırasında aşağıdaki hatalarla Office karşılaşabilirsiniz.
 
-### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>Kısıtlanmış izinlere sahip bir belgeyi temel alan belge düzeyi projesi oluşturulamaz
- Belge sınırlı izinlere sahipse, Visual Studio belge düzeyinde projeler derlenemez. Projeniz sınırlı izinlere sahip bir belge içeriyorsa, proje derlenmez ve **hata listesi** penceresinde aşağıdaki iletiyi alırsınız.
+### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>Kısıtlı izinlere sahip bir belgeyi temel alan belge düzeyinde proje derleme
+ Visual Studio kısıtlı izinlere sahipse belge düzeyinde projeler derlemeniz yasaktır. Projeniz kısıtlı izinlere sahip bir belge içeriyorsa proje derlanmaz ve Hata Listesi penceresinde aşağıdaki **iletiyi alırsınız.**
 
  "Özelleştirme eklenemedi."
 
- Sınırlı izinlere sahip bir belge eklemek istiyorsanız, çözümü geliştirirken ve oluştururken kısıtlanmamış bir belge kullanın. Ardından, çözümü yayımladıktan sonra, yayımlama konumundaki belgeye kısıtlı izinleri uygulayın.
+ Kısıtlı izinlere sahip bir belge eklemek için, çözümü geliştirirken ve hazırlarken kısıtlanmamış bir belge kullanın. Ardından, çözümü yayımladikten sonra belgeye yayımlama konumda kısıtlı izinleri uygulayabilirsiniz.
 
-### <a name="compiler-errors-occur-after-a-namedrange-control-is-deleted"></a>NamedRange denetimi silindikten sonra derleyici hataları oluşur
- <xref:Microsoft.Office.Tools.Excel.NamedRange>Tasarımcıda etkin çalışma sayfası olmayan bir çalışma sayfasından bir denetimi silerseniz, otomatik olarak oluşturulan kod projenizden kaldırılmayabilir ve derleyici hataları oluşabilir. Kodun kaldırıldığından emin olmak için, <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi silmeden önce etkin çalışma sayfası yapmak üzere denetimi içeren çalışma sayfasını her zaman seçmelisiniz. Denetimi sildiğinizde otomatik olarak oluşturulan kod silinmemişse, tasarımcı 'nın çalışma sayfasını etkinleştirerek ve çalışma sayfasının değiştirilmiş olarak işaretlendiğinden bir değişiklik yaparak kodu silmesine neden olabilirsiniz. Projeyi yeniden oluşturduğunuzda kod kaldırılır.
+### <a name="compiler-errors-occur-after-a-namedrange-control-is-deleted"></a>NamedRange denetimi silindikten sonra derleyici hataları oluşuyor
+ Tasarımcıda etkin çalışma sayfası olmayan bir çalışma sayfasından denetim silersiniz, otomatik olarak oluşturulan kod projenize kaldırılamaz ve derleyici <xref:Microsoft.Office.Tools.Excel.NamedRange> hataları oluşabilir. Kodun kaldırılmış olduğundan emin olmak için denetimi içeren çalışma sayfasını seçerek denetimi silmeden önce etkin çalışma sayfası <xref:Microsoft.Office.Tools.Excel.NamedRange> olarak seçmeniz gerekir. Denetimi sildikten sonra otomatik olarak oluşturulan kod silinmezse, çalışma sayfasını etkinleştirerek ve çalışma sayfasının değiştirilmiş olarak işaretlenene kadar değişiklik yaparak tasarımcının kodu silmesini silebilirsiniz. Projeyi yeniden 7.000.000'e kadar olan tüm kodlar kaldırılır.
 
-## <a name="debug-projects"></a><a name="debugging"></a> Hata ayıklama projeleri
- Office projelerinde hata ayıklarken aşağıdaki hatalarla karşılaşabilirsiniz.
+## <a name="debug-projects"></a><a name="debugging"></a> Projelerde hata ayıklama
+ Projelerde hata ayıklarken aşağıdaki hatalarla Office karşılaşabilirsiniz.
 
-### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>Geliştirme bilgisayarında bir çözüm yayımladığınızda ve yüklediğinizde yüklemeyi kaldırma istemi görüntülenir
- Bir Office çözümünde hata ayıklarken, aşağıdaki hatayı görebilirsiniz.
+### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>Geliştirme bilgisayarına bir çözüm yayımlar ve yüklenirken kaldırma istemi görüntülenir
+ Bir çözümde hata Office ayıklarsanız aşağıdaki hatayı alabilirsiniz.
 
- "Şu anda başka bir sürüm yüklü olduğundan ve bu konumdan yükseltilemediğinden özelleştirme yüklenemiyor."
+ "Başka bir sürüm şu anda yüklü olduğundan ve bu konumdan yükseltileyemeye sahip olduğundan özelleştirme yükilemiyor."
 
- Bu hata, Office çözümünü geliştirme bilgisayarınızda daha önce yayımladığınızdan ve yüklediğiniz anlamına gelir. İletinin görünmesini engellemek için, çözümü hata ayıklamadan önce bilgisayardaki yüklü programlar listesinden kaldırın. Alternatif olarak, yayımlanan çözümü yüklemeyi test etmek için geliştirme bilgisayarınızda başka bir kullanıcı hesabı da oluşturabilirsiniz.
+ Bu hata, geliştirme bilgisayarınızda daha önce Office çözümü yayımlamış ve yüklemiş olduğunu gösterir. İletinin görünmesini önlemek için, çözümde hata ayıklamadan önce çözümü bilgisayarda yüklü programlar listesinden kaldırın. Alternatif olarak, yayımlanan çözümün yüklemesini test etmek için geliştirme bilgisayarınızda başka bir kullanıcı hesabı oluşturabilirsiniz.
 
-### <a name="document-level-projects-created-at-unc-network-locations-do-not-run-from-visual-studio"></a>UNC ağ konumlarında oluşturulan belge düzeyi projeler Visual Studio 'dan çalıştırılmadı
- Bir UNC ağ konumunda Excel veya Word için belge düzeyi projesi oluşturursanız, belgenin konumunu Excel veya Word 'deki güvenilir konumlar listesine eklemeniz gerekir. Aksi takdirde, Visual Studio 'da Projeyi çalıştırmaya veya hata ayıklamanıza çalıştığınızda özelleştirme yüklenmez. Güvenilen konumlar hakkında daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
+### <a name="document-level-projects-created-at-unc-network-locations-do-not-run-from-visual-studio"></a>UNC ağ konumlarında oluşturulan belge düzeyi projeler, ağ Visual Studio
+ Excel veya Word için UNC ağ konumu için belge düzeyinde bir proje ekleyebilirsiniz. Belgenin konumunu Excel veya Word'de güvenilir konumlar listesine eklemeniz gerekir. Aksi takdirde, Visual Studio'da projeyi çalıştırmaya veya projenin hata ayıklaması yapmaya çalışsanız özelleştirme Visual Studio. Güvenilen konumlar hakkında daha fazla bilgi için [bkz. Belgelere güven izni ver.](../vsto/granting-trust-to-documents.md)
 
-### <a name="threads-are-not-stopped-correctly-after-debugging"></a>Hata ayıkladıktan sonra iş parçacıkları doğru şekilde durdurulmaz
- Visual Studio 'da Office projeleri, hata ayıklayıcının programı doğru şekilde kapatmasını sağlayan bir iş parçacığı adlandırma kuralı izler. Çözümünüzde iş parçacıkları oluşturursanız, hata ayıklamayı durdurduğunuzda bu iş parçacıklarının doğru şekilde işlendiğinden emin olmak için her bir iş parçacığını önek VSTA_ olarak adlandırın. Örneğin, `Name` bir ağ olayını bekleyen bir iş parçacığının özelliğini **VSTA_NetworkListener** olarak ayarlayabilirsiniz.
+### <a name="threads-are-not-stopped-correctly-after-debugging"></a>Hata ayıklamadan sonra iş parçacıkları doğru durdurulamıyor
+ Office projelerini Visual Studio hata ayıklayıcının programı doğru kapatmasını sağlayan bir iş parçacığı adlandırma kuralını izleyin. Çözümünüzde iş parçacıkları sanız, hata ayıklamayı durduran bu iş VSTA_ doğru iş parçacıklarının iş olduğundan emin olmak için her bir iş parçacığını ön eke sahip olarak adlandırabilirsiniz. Örneğin, bir ağ olayı için beklemesi gereken bir iş parçacığının `Name` özelliğini VSTA_NetworkListener. 
 
-### <a name="cannot-run-or-debug-any-office-solution-on-the-development-computer"></a>Geliştirme bilgisayarında herhangi bir Office çözümü çalıştırılamaz veya hata ayıklaması yapılamaz
- Geliştirme bilgisayarınızda bir Office projesi çalıştıramayabilir veya geliştirirseniz, aşağıdaki hata iletisini görebilirsiniz.
+### <a name="cannot-run-or-debug-any-office-solution-on-the-development-computer"></a>Geliştirme bilgisayarda herhangi bir Office çözümü çalıştıramaz veya hata ayıklayamaz
+ Geliştirme bilgisayarınızda bir Office proje çalıştıramaz veya geliştireyebilirsiniz, aşağıdaki hata iletisini alabilirsiniz.
 
- "Uygulama etki alanı oluşturulamadığından özelleştirme yüklenemedi."
+ "Uygulama etki alanı oluşturulamay nedeniyle özelleştirme yüklenemedi."
 
- Visual Studio, Office çözümlerini yüklemeden önce derlemeleri önbelleğe almak için .NET Framework derleme yükleyicisini Fusion kullanır. Visual Studio 'Nun Fusion önbelleğine yazabildiğinden emin olun ve yeniden deneyin. Daha fazla bilgi için bkz. [gölge kopya derlemeleri](/dotnet/framework/app-domains/shadow-copy-assemblies).
+ Visual Studio çözümlerini yüklemeden önce derlemeleri önbelleğe .NET Framework için Fusion'Office kullanır. Bu Visual Studio Fusion önbelleğine yazamaya devam etmek ve yeniden denemek. Daha fazla bilgi için [bkz. Gölge kopya derlemeleri.](/dotnet/framework/app-domains/shadow-copy-assemblies)
 
-### <a name="error-when-stopping-the-debugger-in-a-document-level-project-after-using-edit-and-continue"></a>Düzenle ve devam et kullandıktan sonra belge düzeyindeki bir projede hata ayıklayıcı durdurulurken hata oluştu
- Proje kesme modundayken Excel veya Word için belge düzeyindeki bir projedeki kodda değişiklik yapmak üzere **Düzenle** ve **devam et** ' i kullanırsanız, hata ayıklayıcıyı durdurduktan sonra aşağıdaki hata iletisiyle bir iletişim kutusu görebilirsiniz.
+### <a name="error-when-stopping-the-debugger-in-a-document-level-project-after-using-edit-and-continue"></a>Düzenle ve Devam'ı kullanmanın ardından belge düzeyi projesinde hata ayıklayıcı durduruluyorken hata oluştu
+ Proje kesme **modundayken** Excel veya Word belge düzeyi projesinde kodda değişiklik yapmak için Düzenle ve Devam'ı kullanırsanız, hata ayıklayıcıyı daha sonra durdurursanız aşağıdaki hata iletisinin yer alan bir iletişim kutusuyla karşılaşabilirsiniz. 
 
- "İşlemin geçerli durumunda sonlandırılması, veri kaybı ve sistem kararsızlığına dahil olmak üzere istenmeyen sonuçlara neden olabilir."
+ "Sürecin geçerli durumda sonlandırıcısı, veri kaybı ve sistem kararsızlığı da dahil olmak üzere, insağlanmamış sonuçlara neden olabilir."
 
- İletişim kutusunda **Evet** veya **Hayır** ' a tıkladığınızda, Visual Studio Excel veya Word işlemini sonlandırır ve hata ayıklayıcıyı durdurur. Bu iletişim kutusunu görüntülemeden projenin hata ayıklamasını durdurmak için, Visual Studio 'da hata ayıklayıcıyı durdurmak yerine Excel veya Word 'den doğrudan çıkın.
+ İletişim kutusunda **Evet veya** **Hayır'a** tıklar Visual Studio, Excel veya Word işlemini sonlandırılır ve hata ayıklayıcıyı durdurur. Bu iletişim kutusunu görüntülemeden projede hata ayıklamayı durdurmak için hata ayıklayıcıyı Excel veya Word'den doğrudan Visual Studio.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümlerinde sorun giderme](../vsto/troubleshooting-office-solutions.md)
-- [Office çözüm güvenliği sorunlarını giderme](../vsto/troubleshooting-office-solution-security.md)
-- [Office çözüm dağıtımı sorunlarını giderme](../vsto/troubleshooting-office-solution-deployment.md)
-- [Visual Studio sorunlarını giderme](/troubleshoot/visualstudio/welcome-visual-studio/)
+- [Office sorunlarını giderme](../vsto/troubleshooting-office-solutions.md)
+- [Çözüm Office sorunlarını giderme](../vsto/troubleshooting-office-solution-security.md)
+- [Çözüm Office sorunlarını giderme](../vsto/troubleshooting-office-solution-deployment.md)
+- [Visual Studio giderme](/troubleshoot/visualstudio/welcome-visual-studio/)

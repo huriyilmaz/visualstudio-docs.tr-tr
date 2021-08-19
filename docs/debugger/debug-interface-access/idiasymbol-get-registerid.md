@@ -1,6 +1,6 @@
 ---
-description: LocationType Numaralandırıcısı) LocIsEnregistered' olarak ayarlanırken konumun yazmaç belirleyicisi alınır.
-title: IDiaSymbol::get_registerId | Microsoft Docs
+description: LocationType numaralandırması) LocIsEnregistered olarak ayarlandığında konumun kayıt göstergesini alır.
+title: 'IDiaSymbol:: get_registerId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a82c9b0cc7c2db8ad7b0bc5329ab74fb7f4ef1e274c5366e71afd3ff665ce1d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 715fc20baafeaf6ed7adb8790b84daedfc9d3b19
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121240467"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147235"
 ---
 # <a name="idiasymbolget_registerid"></a>IDiaSymbol::get_registerId
-[LocationType Enumeration](../../debugger/debug-interface-access/locationtype.md) olarak ayarlanırken konumun yazmaç tasarımını `LocIsEnregistered` alan.
+[LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) olarak ayarlandığında konumun kayıt göstergesini alır `LocIsEnregistered` .
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,16 +35,16 @@ HRESULT get_registerId (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Konumun yazmaç tasarımını döndürür.
+dışı Konumun kayıt göstergesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Sembol bir yazmaçla göreli ise, yani sembolün [LocationType](../../debugger/debug-interface-access/locationtype.md) Numaralama değeri olarak ayarlanırsa, sembol bulunduğu yazmacın uzaklığı almak için `LocIsRegRel` yöntemini `get_registerId` [IDiaSymbol::get_offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md) yöntemine yapılan bir çağrıyla kullanın.
+ Sembol bir yazmaç ile ilişkili ise, yani sembolün [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) olarak ayarlandıysa `LocIsRegRel` , bu yöntemi, simgenin bulunduğu `get_registerId` kaydın sapmasını almak için [ıdiasymbol:: get_Offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md) yöntemine bir çağrı izler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

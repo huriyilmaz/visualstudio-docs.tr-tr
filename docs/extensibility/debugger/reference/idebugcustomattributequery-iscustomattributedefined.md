@@ -10,17 +10,18 @@ ms.assetid: c7425db6-4347-4f69-8f88-337ddaa34fa6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 09fc33f9fce838d04537d713d74f7d0ed17c96bc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ace63a8041a402989a4bf8c6863e0f8dff2c1b87
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054302"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122079486"
 ---
 # <a name="idebugcustomattributequeryiscustomattributedefined"></a>IDebugCustomAttributeQuery::IsCustomAttributeDefined
 Belirtilen özel özniteliğin tanımlanıp tanımlanamayacağını belirler.

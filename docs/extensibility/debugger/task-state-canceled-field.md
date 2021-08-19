@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6e20f40111f88ad304e5ce86cf4f60a8449418b7d83b6ae9879c6598f0c7f0a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8ea74eb264f6706fb02b03304e50baa4ee86207f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338091"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122042627"
 ---
 # <a name="task_state_canceled-field"></a>TASK_STATE_CANCELED alanı
 Görev, çalışma durumuna ulaşılmadan önce iptal edildi veya iptal işlemini onayladığından özel durum olmadan tamamlandı.

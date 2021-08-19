@@ -1,6 +1,6 @@
 ---
 title: Bağımlılık diyagramlarını genişletme
-description: Bağımlılık diyagramları oluşturmak ve güncelleştirmek için kod yazmayı ve program kodunuzun yapısını veri akışındaki bağımlılık diyagramlarına karşı doğrulamayı Visual Studio.
+description: Bağımlılık diyagramları oluşturmak ve güncelleştirmek için nasıl kod yazabilir ve Visual Studio ' deki bağımlılık diyagramlarına karşı program kodunuzun yapısını nasıl doğrulayabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,18 +10,19 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: c2ed8700cfb18aacf41464bfdfacaedac557bb00
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 4b51d2754ec3c48c9ca2f7a86640959221ff2a28
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388912"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122040352"
 ---
 # <a name="extend-dependency-diagrams"></a>Bağımlılık diyagramlarını genişletme
 
-Bağımlılık diyagramları oluşturmak ve güncelleştirmek ve program kodunuzun yapısını veri akışındaki bağımlılık diyagramlarına karşı doğrulamak için kod Visual Studio. Diyagramların kısayol (bağlam) menüsünde görünen komutlar ekleyebilir, sürükle ve bırak hareketlerini özelleştirilebilir ve metin şablonlarından katman modeline erişebilirsiniz. Bu uzantıları Visual Studio Integration Extension (VSIX) olarak paket haline Visual Studio.
+Bağımlılık diyagramları oluşturup güncelleştirmek ve Visual Studio içindeki bağımlılık diyagramlarına karşı program kodunuzun yapısını doğrulamak için kod yazabilirsiniz. Diyagramların kısayol (bağlam) menüsünde görünen komutları ekleyebilirsiniz, sürükle ve bırak hareketlerini özelleştirebilir ve metin şablonlarından katman modeline erişebilirsiniz. bu uzantıları bir Visual Studio tümleştirme uzantısı 'na (vsıx) paketleyebilir ve diğer Visual Studio kullanıcılarına dağıtabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -31,11 +32,11 @@ Katman uzantılarınızı geliştirmek istediğiniz bilgisayarda aşağıdakiler
 
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)
 
-- Visual Studio için Modelleme SDK'sı
+- Visual Studio için SDK modelleme
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Katman uzantılarınızı çalıştırmak istediğiniz Visual Studio uygun bir sürümü yüklü olmalıdır. Bağımlılık diyagramlarını destekleyen Visual Studio sürümleri görmek için bkz. [Mimari ve modelleme araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
+katman uzantılarınızı çalıştırmak istediğiniz bilgisayarda uygun bir Visual Studio sürümünün yüklü olması gerekir. hangi Visual Studio sürümlerinin bağımlılık diyagramlarını desteklediğini görmek için bkz. [mimari ve modelleme araçları için sürüm desteği](../modeling/analyze-and-model-your-architecture.md#VersionSupport).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

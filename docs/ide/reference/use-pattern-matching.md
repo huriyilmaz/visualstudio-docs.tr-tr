@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: a00c55496c1c86ba17a368a0521649b92839c6c2a679de489f315d8737658dd5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 93b5541ace035fb9606355865974657faf83ec32
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121412066"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122116870"
 ---
 # <a name="use-pattern-matching"></a>Desen eşleştirme kullanma
 

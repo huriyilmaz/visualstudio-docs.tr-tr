@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: özel özellik ekleme | Microsoft Docs'
-description: Visual Studio 'nun BDC Gezgini 'ndeki Özellik düzenleyicisini kullanarak SharePoint 'teki Iş verileri bağlantısı (BDC) modeline nasıl özel bir özellik ekleneceğini öğrenin.
+description: SharePoint ' deki iş verileri bağlantısı (BDC) modeline, Visual Studio BDC Explorer 'daki özellik düzenleyicisini kullanarak özel bir özelliği nasıl ekleyeceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,14 +17,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: d335cc809a8415a2b41f3de63138c113c2a78706
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d72343bff4367e813bc8e75c1afffc2be5af9742
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876608"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060134"
 ---
 # <a name="how-to-add-a-custom-property"></a>Nasıl yapılır: özel özellik ekleme
   **Özellik düzenleyicisini** kullanarak modele özel özellikler ekleyebilirsiniz. Çalışma zamanında bağlantı dizeleri ve diğer veriler gibi bilgileri almak için koddaki bu özelliklere erişebilirsiniz.
@@ -35,7 +36,7 @@ ms.locfileid: "99876608"
 
 2. Menü çubuğunda   >  **Özellikler penceresini** görüntüle ' yi seçin.
 
-3. **Özellikler** penceresinde **özel özellikler** özelliğini seçin ve ardından üç nokta düğmesini (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) seçin.
+3. **özellikler** penceresinde **özel özellikler** özelliğini seçin ve ardından üç nokta düğmesini (![ASP.NET Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil tasarımcı elips")) seçin.
 
      **Özellik Düzenleyicisi** iletişim kutusu görüntülenir.
 

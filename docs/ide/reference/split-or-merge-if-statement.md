@@ -7,17 +7,18 @@ ms.topic: reference
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30ec77382cf404bc74f2ff5fed71cff360b9f28e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9d34aa066d84deeaf4ac16f683822d539b0d1357
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893392"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117078"
 ---
 # <a name="split-or-merge-if-statements"></a>Birleştir veya ayır if deyimleri
 

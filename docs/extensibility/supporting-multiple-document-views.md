@@ -1,6 +1,6 @@
 ---
-title: Çoklu belge görünümlerini destekleme | Microsoft Docs
-description: Visual Studio SDK 'da Özel düzenleyiciniz için ayrı belge verileri ve belge görünümü nesneleri kullanarak bir belgenin birden fazla görünümünü nasıl sağlayacağınızı öğrenin.
+title: Birden Çok Belge Görüntüleme | Microsoft Docs
+description: Visual Studio SDK'daki özel düzenleyiciniz için ayrı belge verileri ve belge görünümü nesneleri kullanarak bir belgenin birden fazla görünümünü sağlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,34 +10,35 @@ ms.assetid: c7ec2366-91c4-477f-908d-e89068bdb3e3
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e54ee028c6a7db2d5d2ea1ab609be6c2887c9829
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 67c61071ee877e147d806a29f7c36c0dad1eb848
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056213"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117442"
 ---
 # <a name="supporting-multiple-document-views"></a>Birden Çok Belge Görünümünü Destekleme
-Düzenleyicinizde ayrı belge verileri ve belge görünümü nesneleri oluşturarak bir belgenin birden fazla görünümünü sağlayabilirsiniz. Ek belge görünümü yararlı olabilecek bazı durumlar şunlardır:
+Düzenleyiciniz için ayrı belge verileri ve belge görünümü nesneleri oluşturarak bir belgenin birden fazla görünümünü sekleyebilirsiniz. Ek belge görünümünün yararlı olduğu bazı durumlar:
 
-- Yeni pencere desteği: düzenleyicide zaten açık bir pencerenin bulunduğu bir kullanıcının **pencere** menüsünde **yeni pencere** komutunu seçerek yeni bir pencere açabildiğinden, Düzenleyicinizde aynı türde iki veya daha fazla görünüm sağlamayı tercih edersiniz.
+- Yeni pencere desteği: Düzenleyicinizin aynı türde iki veya daha fazla görünüm sağlamalarını, böylece düzenleyicide zaten penceresi açık olan  bir kullanıcının Pencere  menüsünden Yeni Pencere komutunu seçerek yeni bir pencere açabilirsiniz.
 
-- Form ve kod görünümü desteği: Düzenleyicinizde farklı türlerin görünümlerini sağlamasını istersiniz. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Örneğin, hem form görünümü hem de kod görünümü sağlar.
+- Form ve kod görünümü desteği: Düzenleyicinizin farklı türlerde görünümler sağlamalarını istediğiniz. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], örneğin, hem form görünümü hem de kod görünümü sağlar.
 
-  Bunun hakkında daha fazla bilgi için Visual Studio paket şablonu tarafından oluşturulan özel düzenleyici projesindeki EditorFactory. cs dosyasındaki CreateEditorInstance yordamına bakın. Bu proje hakkında daha fazla bilgi için bkz. [Izlenecek yol: özel bir düzenleyici oluşturma](../extensibility/walkthrough-creating-a-custom-editor.md).
+  Bu konuda daha fazla bilgi için, Visual Studio Paket Şablonu tarafından oluşturulan özel düzenleyici projesinde EditorFactory.cs dosyasındaki CreateEditorInstance yordamına bakın. Bu proje hakkında daha fazla bilgi için [bkz. Kılavuz: Özel Düzenleyici Oluşturma.](../extensibility/walkthrough-creating-a-custom-editor.md)
 
-## <a name="synchronizing-views"></a>Görünümler eşitleniyor
- Birden çok görünüm uyguladığınızda, tüm görünümlerin verilerle eşitlenmiş şekilde tutulması için belge verileri nesnesi sorumludur. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>Birden çok görünümü verilerle eşleştirmek için üzerinde olay işleme arabirimlerini kullanabilirsiniz.
+## <a name="synchronizing-views"></a>Görünümleri Eşitleme
+ Birden çok görünüm uygulayan belge veri nesnesi, tüm görünümlerin verilerle eşitlenmiş durumda tutmakla sorumludur. Verilerle birden çok görünüm eşitlemek için <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> üzerinde olay işleme arabirimlerini kullanabilirsiniz.
 
- <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>Birden çok görünümü eşleştirmek için nesnesini kullanmıyorsanız, belge verileri nesnesinde yapılan değişiklikleri işlemek için kendi olay sisteminizi uygulamanız gerekir. Birden fazla görünümü güncel tutmak için farklı düzeylerde ayrıntı düzeyi kullanabilirsiniz. En yüksek ayrıntı düzeyi ayarıyla, bir görünümü yazarken, diğer görünümler hemen güncellenir. Minimum ayrıntı düzeyi ile diğer görünümler etkinleştirilinceye kadar güncellenmez.
+ Birden çok görünümleri eşitlemek için nesnesini kullansanız, belge veri nesnesinde yapılan değişiklikleri işlemek için kendi olay <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> sisteminizi uygulamanız gerekir. Birden çok görünümleri güncel tutmak için farklı ayrıntı düzeyleri kullanabilirsiniz. En fazla ayrıntı ayrıntı ayarıyla, siz bir görünümde yazarak diğer görünümler hemen güncelleştirilir. Minimum ayrıntıyla, diğer görünümler etkinleştirilene kadar güncelleştirilmez.
 
-## <a name="determining-whether-document-data-is-already-open"></a>Belge verilerinin zaten açık olup olmadığını belirleme
- Tümleşik geliştirme ortamındaki (IDE) çalışan belge tablosu (RDT), aşağıdaki diyagramda gösterildiği gibi bir belge için verilerin zaten açık olup olmadığını izlemenize yardımcı olur.
+## <a name="determining-whether-document-data-is-already-open"></a>Belge Verileri'nin Zaten Açık Olup Olmadığını Belirleme
+ Tümleşik geliştirme ortamında (IDE) çalışan belge tablosu (RDT), aşağıdaki diyagramda gösterildiği gibi bir belge için verilerin zaten açık olup olmadığının izlenmesinde yardımcı olur.
 
- ![DocDataView grafiği](../extensibility/media/docdataview.gif "DocDataView") Birden çok görünüm
+ ![DocDataView grafiği](../extensibility/media/docdataview.gif "Docdataview") Birden çok görünüm
 
- Varsayılan olarak, her görünüm (belge görünümü nesnesi) kendi pencere çerçevesinde ( <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> ) bulunur. Ancak, daha önce belirtildiği gibi, belge verileri birden çok görünümde görüntülenebilir. Bu özelliği etkinleştirmek için, Visual Studio, söz konusu belgenin bir düzenleyicide zaten açık olup olmadığını öğrenmek üzere RDT 'yi denetler. IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> Düzenleyici oluşturmak için çağırdığında, parametrede null olmayan bir değer döndürülen bir `punkDocDataExisting` belgenin zaten başka bir düzenleyicide açık olduğunu gösterir. RDT işlevlerinin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [çalışma belge tablosu](../extensibility/internals/running-document-table.md).
+ Varsayılan olarak, her görünüm (belge görünümü nesnesi) kendi pencere çerçevesinde ( ) yer <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> alır. Ancak daha önce de not edildiklerine göre belge verileri birden çok görünümde görüntülenebilir. Bunu etkinleştirmek için Visual Studio ilgili belgenin zaten bir düzenleyicide açık olup olmadığını belirlemek üzere RDT'yi denetler. IDE düzenleyiciyi oluşturmak için çağırsa, parametresinde döndürülen NULL olmayan bir değer belgenin zaten başka bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> `punkDocDataExisting` düzenleyicide açık olduğunu gösterir. RDT işlevleri hakkında daha fazla bilgi için bkz. [Belge Tablosu Çalıştırma.](../extensibility/internals/running-document-table.md)
 
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>Uygulamanızda, `punkDocDataExisting` belge verilerinin düzenleyicinize uygun olup olmadığını öğrenmek için ' de döndürülen belge verileri nesnesini inceleyin. (Örneğin, HTML Düzenleyicisi tarafından yalnızca HTML verileri görüntülenmelidir.) Uygunsa, Düzenleyici fabrikanızın veri için ikinci bir görünüm sağlaması gerekir. `punkDocDataExisting`Parametre değilse `NULL` , belge veri nesnesinin başka bir düzenleyicide açık olması veya daha büyük olasılıkla belge verilerinin, düzenleyiciyle aynı şekilde farklı bir görünümde açık olması mümkündür. Belge verileri, Düzenleyici fabrikanızın desteklemediği farklı bir düzenleyicide açıksa, Visual Studio düzenleyici fabrikanızı açamaz. Daha fazla bilgi için bkz. [nasıl yapılır: belge verilerine görünüm iliştirme](../extensibility/how-to-attach-views-to-document-data.md).
+ Uygulamanıza, belge verilerini düzenleyiciniz için uygun olup olmadığını belirlemek için içinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> döndürülen belge veri nesnesini `punkDocDataExisting` incele. (Örneğin, bir HTML düzenleyicisi tarafından yalnızca HTML verileri görüntüleniyor.) Uygunsa düzenleyici fabrikanız veriler için ikinci bir görünüm sağlasa iyi olur. parametresi yoksa, belge veri nesnesinin başka bir düzenleyicide açık olması veya belge verisi büyük olasılıkla aynı düzenleyiciye sahip farklı bir görünümde zaten açık olması `punkDocDataExisting` `NULL` mümkündür. Belge verileri düzenleyici fabrikanız tarafından desteklemez farklı bir düzenleyicide açıksa Visual Studio fabrikanızı açamazsınız. Daha fazla bilgi için, [bkz. How to: Attach Views to Document Data](../extensibility/how-to-attach-views-to-document-data.md).

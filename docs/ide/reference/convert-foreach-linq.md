@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: af9d538ca2f6fd0a7610fef4548c51723cd4f75b120e59e11bedba27435f283a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 564c18a439da1f12c5be36b53839f57ad07fb440
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121430258"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117468"
 ---
 # <a name="convert-a-foreach-loop-to-linq"></a>Foreach döngüsü LINQ'ye dönüştürme
 
@@ -26,9 +26,9 @@ Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 **Ne:** IEnumerable kullanan *foreach* döngüyü bir LINQ sorgusuna veya LINQ çağrı formuna (LINQ yöntemi olarak da bilinir) kolayca dönüştürmenize olanak sağlar.
 
-**Ne zaman:** IEnumerable kullanan bir foreach döngün var ve bu döngüyü LINQ sorgusu olarak okumak istiyor.
+**Ne zaman:** IEnumerable kullanan bir foreach döngüyüz var ve bu döngüyü LINQ sorgusu olarak okumak istiyor.
 
-**Neden:** Foreach döngüsü yerine LINQ söz dizimi kullanmayı tercih edersiniz. [LINQ,](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq) C# dilinde birinci sınıf dil yapısına bir sorgu oluşturur. LINQ bir dosyada kod miktarını azaltır, kodun okunmasını kolaylaştırır ve farklı veri kaynaklarının benzer sorgu ifadesi desenlerine sahip olmasına olanak sağlar.
+**Neden:** Foreach döngüsü yerine LINQ söz dizimi kullanmayı tercih edersiniz. [LINQ,](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq) C# dilinde birinci sınıf dil yapısına bir sorgu oluşturur. LINQ, bir dosyada kod miktarını azaltır, kodun okunmasını kolaylaştırır ve farklı veri kaynaklarının benzer sorgu ifadesi desenlerine sahip olmasına olanak sağlar.
 
 > [!NOTE]
 > LINQ söz dizimi genellikle foreach döngüsünden daha az verimlidir. Kodunuzun okunabilirliğini geliştirmek için LINQ'i kullanırken ortaya çıkabilir performans farklarının farkında olmak iyi bir fikirdir.
@@ -39,7 +39,7 @@ Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
     ![IEnumerable kullanan Foreach örneği](media/convert-foreach-to-LINQ.png)
 
-2. **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+2. **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
 
    ![LINQ menü örneğine dönüştürme](media/convert-foreach-to-LINQ-codefix.png)
 

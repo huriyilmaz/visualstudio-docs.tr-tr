@@ -1,6 +1,6 @@
 ---
-title: Profil oluşturma araçlarıyla çalışmaya başlama
-description: Visual Studio ' de bulunan farklı tanılama araçlarına kısa bir bakış göz atın.
+title: Kullanmaya başlayın araçlarıyla birlikte kullanma
+description: Verilerde kullanılabilen farklı tanılama araçlarına kısa bir Visual Studio.
 ms.custom: ''
 ms.date: 02/18/2021
 ms.topic: overview
@@ -17,131 +17,131 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e390245b3e9b298254a208b2e148da43d34e45c13ae1d59376678decabb8bfa4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c0b3bb8102020e7b091ea7c6127f449b4ef70eca
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121246181"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122038701"
 ---
 # <a name="first-look-at-profiling-tools"></a>Profil oluşturma araçlarına ilk bakış
 
-Visual Studio, uygulama türüne bağlı olarak farklı türlerde performans sorunlarını tanılamanıza yardımcı olacak çeşitli profil araçları sağlar. Bu makalede, en yaygın profil oluşturma araçlarına hızlı bir bakış sunuyoruz.
+Visual Studio, uygulama türünüze bağlı olarak farklı performans sorunlarını tanılamanıza yardımcı olacak çeşitli profil oluşturma araçları sağlar. Bu makalede, en yaygın profil oluşturma araçlarına hızlı bir bakış sağlaruz.
 
-Farklı uygulama türleri için profil oluşturma araç desteğini görmek için bkz. [hangi aracı kullanmalıyım?](#which-tool-should-i-use)
+Farklı uygulama türleri için profil oluşturma aracı desteğini görmek için bkz. [Hangi aracı kullan uygulamam gerekir?](#which-tool-should-i-use)
 
-## <a name="measure-performance-while-debugging"></a>Hata ayıklarken performansı ölçme
+## <a name="measure-performance-while-debugging"></a>Hata ayıklama sırasında performansı ölçme
 
-Hata ayıklama oturumu sırasında erişebileceğiniz profil oluşturma araçları Tanılama Araçları penceresinde kullanılabilir. Tanılama Araçları penceresi devre dışı bırakılmadığı takdirde otomatik olarak görünür. pencereyi getirmek için **hata ayıkla/Windows/göster Tanılama Araçları** (veya **Ctrl**  +  **Alt**  +  **F2** tuşlarına basın) seçeneğine tıklayın. Pencereyi açık olarak kullanarak veri toplamak istediğiniz araçları seçebilirsiniz.
+Hata ayıklama oturumu sırasında erişebilirsiniz profil oluşturma araçları, Tanılama Araçları kullanılabilir. Siz Tanılama Araçları pencere otomatik olarak görüntülenir. Pencereyi açmak için Hata Ayıkla **/ Windows / Tanılama Araçları Göster'e tıklayın** (veya **Ctrl** Alt  +    +  **F2 tuşlarına basın).** Pencere açıkken, veri toplamak istediğiniz araçları seçin.
 
 ![Tanılama Araçları penceresi](../profiling/media/prof-tour-diagnostic-tools.png "Tanılama Araçları")
 
-Hata ayıklarken, CPU ve bellek kullanımını çözümlemek için **Tanılama araçları** penceresini kullanabilir ve performansla ilgili bilgileri gösteren olayları görüntüleyebilirsiniz.
+Hata ayıklarken, CPU ve **bellek Tanılama Araçları** analiz etmek için Tanılama Araçları penceresini kullanabilir ve performansla ilgili bilgileri göstermek üzere olayları görüntüebilirsiniz.
 
 ![Tanılama Araçları Özet görünümü](../profiling/media/prof-tour-cpu-and-memory-graph.gif "Tanılama Araçları Özeti")
 
-**Tanılama araçları** pencere, uygulamaları profil oluşturmanın yaygın bir yoludur, ancak yayın yapıları için bunun yerine uygulamanızın mordıtem analizini de yapabilirsiniz. Farklı yaklaşımlar hakkında daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmadan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md). Farklı uygulama türleri için profil oluşturma araç desteğini görmek için bkz. [hangi aracı kullanmalıyım?](#which-tool-should-i-use)
+Uygulama **Tanılama Araçları** profili oluşturmanın yaygın bir yolu vardır, ancak Yayın derlemeleri için bunun yerine uygulamanın son inceleme analizini de yapabiliriz. Farklı yaklaşımlar hakkında daha fazla bilgi için [bkz. Hata ayıklayıcı](../profiling/running-profiling-tools-with-or-without-the-debugger.md)ile veya hata ayıklayıcı olmadan profil oluşturma araçlarını çalıştırma. Farklı uygulama türleri için profil oluşturma aracı desteğini görmek için bkz. [Hangi aracı kullan uygulamam gerekir?](#which-tool-should-i-use)
 
-Tanılama Araçları penceresinde veya hata ayıklama oturumu sırasında bulunan araçlar şunları içerir:
+Tanılama Araçları penceresinde veya hata ayıklama oturumu sırasında kullanılabilen araçlar şunlardır:
 - [CPU kullanımı](../profiling/beginners-guide-to-performance-profiling.md)
 - [Bellek kullanımı](../profiling/memory-usage.md)
 - [PerfTips](../profiling/perftips.md)
 
 > [!NOTE]
-> hata ayıklayıcı (**Tanılama Araçları** penceresi) ile profil oluşturma araçlarını çalıştırmak için Windows 8 ve üzeri gereklidir. Windows 7 ve sonraki sürümleri ile [mortem](#post_mortem) araçları 'nı kullanabilirsiniz. 
+> Windows 8 aracı ( hata ayıklayıcısı ) ile profil oluşturma araçlarını **çalıştırmak** için Tanılama Araçları gerekir. 7. [ve sonraki bir sonraki bir](#post_mortem) Windows sonrası araçlarını kullanabilirsiniz. 
 
-## <a name="measure-performance-in-release-builds"></a><a name="post_mortem"></a> Yayın yapılarında performansı ölçme
+## <a name="measure-performance-in-release-builds"></a><a name="post_mortem"></a> Yayın derlemeleri performansını ölçme
 
-Performans Profiler 'daki Araçlar **yayın** derlemeleri için analiz sağlamak üzere tasarlanmıştır. Performans Profiler 'da, uygulama çalışırken tanılama bilgilerini toplayabilir ve ardından uygulama durdurulduktan sonra toplanan bilgileri inceleyebilirsiniz (bir post-mordıtem Analizi).
+Yayın derlemeleri Performans Profili Oluşturucu için analiz sağlamak **üzere** tasarlanmıştır. Bu Performans Profili Oluşturucu, uygulama çalışırken tanılama bilgilerini toplayabilirsiniz ve ardından uygulama durdurulduktan sonra toplanan bilgileri incelersiniz (son inceleme analizi).
 
-**Hata ayıklama**  >  **performansı profil oluşturucuyu** (veya **alt + f2**) seçerek performans profil oluşturucuyu açın.
+Hata ayıkla Performans Profili Oluşturucu **(veya**  >  Alt + F2)**Performans Profili Oluşturucu** **seçerek dosyayı açın.**
 
 ![Performans Profili Oluşturucu](../profiling/media/prof-tour-performance-profiler.png "Performans Profili Oluşturucu")
 
-Performans Profiler 'da CPU kullanımı veya bellek kullanımı aracını kullanma hakkında daha fazla bilgi için bkz. hata ayıklayıcı ile tümleşik araçlar, bkz. [profil oluşturma araçlarını hata ayıklayıcı ile veya olmadan çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md). 
+Performans Profili Oluşturucu'da CPU Kullanımı veya Bellek kullanım aracının hata ayıklayıcısıyla tümleştirilmiş araçlarla karşılaştırması hakkında daha fazla bilgi için bkz. Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma [araçlarını çalıştırma.](../profiling/running-profiling-tools-with-or-without-the-debugger.md) 
 
-Performans Profiler 'da bulunan araçlar şunları içerir:
+Aşağıdaki araçlar Performans Profili Oluşturucu:
 
 - [CPU kullanımı](../profiling/cpu-usage.md)
 - [.NET nesne ayırma](../profiling/dotnet-alloc-tool.md)
 - [Bellek kullanımı](../profiling/memory-usage-without-debugging2.md)
-- [.NET Async aracı](../profiling/analyze-async.md)
+- [.NET zaman uyumsuz aracı](../profiling/analyze-async.md)
 - [Veritabanı aracı](../profiling/analyze-database.md)
 - [GPU kullanımı](../profiling/gpu-usage.md)
 
-Farklı uygulama türleri için profil oluşturma araç desteğini görmek için bkz. [hangi aracı kullanmalıyım?](#which-tool-should-i-use)
+Farklı uygulama türleri için profil oluşturma aracı desteğini görmek için bkz. [Hangi aracı kullan uygulamam gerekir?](#which-tool-should-i-use)
 
-Bazı senaryolarda, pencere [birden çok profil oluşturma aracı](../profiling/use-multiple-profiler-tools-simultaneously.md)seçmenize olanak sağlar. CPU kullanımı gibi araçlar, analizinizdeki yardım için kullanabileceğiniz tamamlayıcı veriler sağlayabilir. Birden çok profil oluşturma aracı içeren senaryoları etkinleştirmek için [komut satırı profil oluşturucuyu](../profiling/profile-apps-from-command-line.md) de kullanabilirsiniz.
+Bazı senaryolarda pencere birden çok profil oluşturma aracı [seçmenize olanak sağlar.](../profiling/use-multiple-profiler-tools-simultaneously.md) CPU Kullanımı gibi araçlar, analizinize yardımcı olmak için kullanabileceğiniz tamamlayıcı veriler sağlar. Birden çok profil oluşturma [aracı içeren senaryoları etkinleştirmek](../profiling/profile-apps-from-command-line.md) için komut satırı profilleyiciyi de kullanabilirsiniz.
 
-## <a name="examine-performance-using-perftips"></a>PerfTips kullanarak performansı inceleyin
+## <a name="examine-performance-using-perftips"></a>PerfTips kullanarak performansı inceleme
 
-Genellikle, performans bilgilerini görüntülemenin en kolay yolu [PerfTips](../profiling/perftips.md)kullanmaktır. PerfTips kullanarak, kodunuzla etkileşim kurarken performans bilgilerini görüntüleyebilirsiniz. Olayın süresi (hata ayıklayıcının en son ne zaman duraklatıldığı veya uygulama başlatıldığında ölçülür) gibi bilgileri denetleyebilirsiniz. Örneğin, kod (F10, F11) ile adımlayın, PerfTips, önceki adım işleminden geçerli adıma uygulama çalışma zamanı süresini gösterir.
+Performans bilgilerini görüntülemenin en kolay yolu genellikle [PerfTips kullanmaktır.](../profiling/perftips.md) PerfTips'i kullanarak, kodunuzla etkileşime çalışırken performans bilgilerini görüntüebilirsiniz. Olayın süresi (hata ayıklayıcının en son ne zaman duraklatılmış olduğu veya uygulamanın ne zaman başlatılmış olduğuyla ölçülen) gibi bilgileri kontrol edin. Örneğin, kodda (F10, F11) adım adım ilerlersanız, PerfTips önceki adımdan geçerli adıma kadar olan uygulama çalışma zamanı süresini gösterir.
 
-![Profil oluşturma turu PerfTips](../profiling/media/prof-tour-perf-tips.png "Profil Oluşturma Turu PerfTips")
+![Profil Oluşturma Turu PerfTips](../profiling/media/prof-tour-perf-tips.png "Profil Oluşturma Turu PerfTips")
 
-Bir kod bloğunun yürütülmesi için ne kadar sürdüğünü veya tek bir işlevin tamamlaması için ne kadar sürdüğünü incelemek için PerfTips 'ı kullanabilirsiniz.
+PerfTips'i kullanarak bir kod bloğu için yürütmenin ne kadar zaman veya tek bir işlevin tamamlanmasının ne kadar zaman alır olduğunu inceebilirsiniz.
 
-PerfTips, Tanılama Araçları **Olaylar** görünümünde de görüntülenen olayları gösterir. **Olaylar** görünümünde, hata ayıklama sırasında oluşan farklı olayları (kesme noktası veya kod atlama işlemi gibi) görüntüleyebilirsiniz.
+PerfTips, aynı olayları aynı zamanda olay **görünümünün** Olaylar görünümünde de Tanılama Araçları. Olaylar **görünümünde,** hata ayıklama sırasında oluşan kesme noktası veya kod adımlama işlemi gibi farklı olayları görüntüebilirsiniz.
 
-![Tanılama Araçları Olaylar görünümü](../profiling/media/prof-tour-events.png "Tanılama Araçları Görüntüleme")
+![Tanılama Araçları Olayları görünümü](../profiling/media/prof-tour-events.png "Tanılama Araçları Görüntüleme")
 
  > [!NOTE]
- > Visual Studio Enterprise sahipseniz, bu sekmede [ıntellitrace olaylarını](../debugger/intellitrace.md) da görebilirsiniz.
+ > Bu sekmede Visual Studio Enterprise [IntelliTrace olaylarını da](../debugger/intellitrace.md) görebilirsiniz.
 
 ## <a name="analyze-cpu-usage"></a>CPU kullanımını analiz etme
 
-CPU kullanımı aracı, uygulamanızın performansını çözümlemeye başlamak için iyi bir yerdir. Uygulamanızın kullandığı CPU kaynakları hakkında daha fazla bilgi sağlayacaktır. [Hata ayıklayıcı ile TÜMLEŞIK CPU kullanımı aracını](../profiling/beginners-guide-to-performance-profiling.md) veya [mortem CPU kullanımı aracını](../profiling/cpu-usage.md)kullanabilirsiniz.
+CPU Kullanımı aracı, uygulama performansını analiz etmek için iyi bir yerdir. Bu, uygulamanın tüketen CPU kaynakları hakkında daha fazla bilgi sağlar. Hata [ayıklayıcısıyla tümleşik CPU Kullanımı aracını veya](../profiling/beginners-guide-to-performance-profiling.md) son işlem sonrası CPU Kullanımı aracını [kullanabilirsiniz.](../profiling/cpu-usage.md)
 
-hata ayıklayıcı ile tümleşik CPU kullanımı aracını kullanırken, tanılama araç penceresini açın (kapalıysa, **hata ayıkla/Windows/Tanılama Araçları göster**' i seçin). Hata ayıklama sırasında  **Özet** görünümünü açın ve **CPU profilini kaydet**' i seçin.
+Hata ayıklayıcısıyla tümleşik CPU Kullanımı aracını kullanırken Tanılama Aracı penceresini açın (kapalı ise Hata ayıkla / Windows **/ Göster'i Tanılama Araçları).** Hata ayıklama sırasında Özet görünümünü **açın ve** CPU Profilini **Kayded'i seçin.**
 
-![Tanılama Araçları CPU kullanımını etkinleştir](../profiling/media/prof-tour-enable-cpu-profiling.png "Tanılama Araçları CPU Kullanımını Etkinleştirme")
+![Ağ içinde CPU kullanımını Tanılama Araçları](../profiling/media/prof-tour-enable-cpu-profiling.png "Tanılama Araçları CPU Kullanımını Etkinleştirme")
 
-Araç kullanmanın bir yolu kodunuzda iki kesme noktası, bir diğeri de işlevin sonunda veya bir ya da analiz etmek istediğiniz kod bölgesi ayarlamak kullanmaktır. İkinci kesme noktasında durakladığınızda profil oluşturma verilerini inceleyin.
+Aracı kullanmanın bir yolu, kodunda biri başlangıçta, biri işlevin sonunda veya analiz etmek istediğiniz kod bölgesinde olmak üzere iki kesme noktası ayarlamaktır. İkinci kesme noktası duraklatılırken profil oluşturma verilerini inceler.
 
-**CPU kullanımı** görünümü, en uzun çalışan bir işlevle en üstte bulunan işlevlerin bir listesini gösterir. Bu, performans sorunlarının gerçekleştiği işlevlerde size rehberlik etmenize yardımcı olabilir.
+**CPU Kullanımı görünümü,** en uzun çalışana göre sıra edilen işlevlerin listesini ve en üstte en uzun çalışan işlevi gösterir. Bu, performans sorunlarının ortaya çıktı olduğu işlevlerde size yol gösterir.
 
-![Tanılama Araçları CPU kullanımı görünümü](../profiling/media/prof-tour-cpu-usage.png "Tanılama Araçları CPU Kullanımı")
+![Tanılama Araçları CPU Kullanımı görünümü](../profiling/media/prof-tour-cpu-usage.png "Tanılama Araçları CPU Kullanımı")
 
-İlgilendiğiniz bir işleve çift tıklayın ve seçilen işlevle pencerenin ortasında, sol taraftaki çağırma işlevine ve sağ tarafta işlev olarak adlandırılan daha ayrıntılı üç bölmeli "kelebek" görünümü görürsünüz. **Işlev gövdesi** bölümü, işlev gövdesinde harcanan ve çağrılan işlevlerde harcanan süre hariç toplam süreyi (ve zaman yüzdesini) gösterir. Bu veriler, işlevin kendisinin performans sorunu olup olmadığını değerlendirmenize yardımcı olabilir.
+İlgilenen bir işleve çift tıklayın; pencerenin ortasında seçili işlevi, sol tarafta çağıran işlevi ve sağ tarafta işlevleri çağıran daha ayrıntılı bir üç bölmeli "yer" görünümü görüntülenir. İşlev **Gövdesi bölümünde,** çağrı yapılan ve çağrılan işlevlerde harcanan süre hariç olmak üzere işlev gövdesinde harcanan toplam süre (ve sürenin yüzdesi) yer almaktadır. Bu veriler, işlevin kendisi performans sorunu olup olmadığını değerlendirmeye yardımcı olabilir.
 
-![Tanılama Araçları arayan "kelebek" görünümü](../profiling/media/prof-tour-cpu-usage-caller-callee.png "Tanılama Araçları Çağıran Görünümü")
+![Tanılama Araçları çağıran "yer" görünümü](../profiling/media/prof-tour-cpu-usage-caller-callee.png "Tanılama Araçları Çağıran Görünümü")
 
 ## <a name="analyze-memory-usage"></a>Bellek kullanımını analiz etme
 
-**Tanılama araçları** penceresi, **bellek kullanımı** aracını kullanarak uygulamanızdaki bellek kullanımını değerlendirmenize de olanak tanır. Örneğin, yığındaki nesnelerin sayısına ve boyutuna bakabilirsiniz. Performans Profiler 'daki [hata ayıklayıcı ile tümleşik bellek kullanımı aracını](../profiling/memory-usage.md) veya [mortem bellek kullanımı aracını](../profiling/memory-usage-without-debugging2.md) kullanabilirsiniz.
+Bu **Tanılama Araçları,** Uygulamanıza Bellek Kullanımı aracını kullanarak bellek kullanımını **değerlendirmenize de olanak** sağlar. Örneğin, yığındaki nesnelerin sayısına ve boyutuna bakabilirsiniz. Hata ayıklayıcısı [ile tümleşik Bellek Kullanımı aracını veya](../profiling/memory-usage.md) son işlem sonrası Bellek Kullanımı [aracını](../profiling/memory-usage-without-debugging2.md) Performans Profili Oluşturucu.
 
-.NET geliştiricileri, [.NET nesne ayırma aracı](../profiling/dotnet-alloc-tool.md) ya da [bellek kullanımı](../profiling/memory-usage.md) aracı arasında seçim gösterebilir.
+.NET geliştiricileri [.NET](../profiling/dotnet-alloc-tool.md) Nesne Ayırma aracı veya Bellek kullanım [aracı arasında seçim](../profiling/memory-usage.md) olabilir.
 
-- **.NET nesne ayırma** Aracı, .net kodunuzda ayırma düzenlerini ve anormallikleri belirlemenize yardımcı olur ve çöp toplama ile ilgili yaygın sorunları belirlemenize yardımcı olur. Bu araç yalnızca bir post-mordıtem aracı olarak çalışır. Bu aracı, yerel veya uzak makinelerde çalıştırabilirsiniz.
-- **Bellek kullanımı** Aracı, genellikle .NET uygulamalarında yaygın olmayan bellek sızıntılarını tanımlamaya yardımcı olur. Bellek denetlenirken hata ayıklayıcı özelliklerini kod üzerinden atlama gibi kullanmanız gerekiyorsa, [hata ayıklayıcı ile tümleşik bellek kullanım](../profiling/beginners-guide-to-performance-profiling.md) aracı önerilir.
+- **.NET Nesne Ayırma aracı,** .NET kodundaki ayırma desenlerini ve anomalilerini tanımlamanıza yardımcı olur ve atık toplama ile ilgili yaygın sorunların belirlenmesine yardımcı olur. Bu araç yalnızca son bir son durum aracı olarak çalışır. Bu aracı yerel veya uzak makinelerde çalıştırabilirsiniz.
+- Bellek **kullanım aracı,** genellikle .NET uygulamalarıyla sık karşılaşılan bellek sızıntılarını tanımlamaya yardımcı olur. Kodda adımlama gibi bellek denetimi sırasında hata ayıklayıcı özelliklerini kullanmak gerekirse hata [ayıklayıcı ile tümleşik Bellek](../profiling/beginners-guide-to-performance-profiling.md) kullanım aracı önerilir.
 
-Bellek **kullanımı** aracı ile bellek kullanımını çözümlemek için en az bir bellek anlık görüntüsü yapmanız gerekir. Genellikle belleği çözümlemenin en iyi yolu iki anlık görüntü alma yöntemidir; bir şüpheli bellek sorunundan önceki ilk sağ tarafta ve bir şüpheli bellek sorunu oluştuktan sonra ikinci anlık görüntü. Daha sonra, iki anlık görüntüye ilişkin bir farkı görüntüleyebilir ve tam olarak nelerin değiştiğini görebilirsiniz. Aşağıdaki çizimde, hata ayıklayıcı ile tümleşik aracı ile anlık görüntü alma gösterilmektedir.
+Bellek Kullanımı aracıyla bellek **kullanımını analiz etmek** için en az bir bellek anlık görüntüsü al gerekir. Genellikle, belleği analiz etmek için en iyi yol iki anlık görüntü almaktır; şüpheli bellek sorunundan hemen önce ilk anlık görüntü ve şüpheli bellek sorunundan hemen sonra ikinci anlık görüntü. Ardından iki anlık görüntü farkını görüntüp tam olarak nelerin değiştiğini görüntüln. Aşağıdaki çizimde hata ayıklayıcısıyla tümleşik araçla anlık görüntü alma adımları gösterilmiştir.
 
-![Tanılama Araçları anlık görüntü alın](../profiling/media/prof-tour-take-snapshots.gif "Tanılama Araçları Anlık Görüntü Alma")
+![Sanal makinede anlık görüntü Tanılama Araçları](../profiling/media/prof-tour-take-snapshots.gif "Tanılama Araçları Anlık Görüntü Alma")
 
-Ok bağlantılarından birini seçtiğinizde, yığının fark görünümü verilir (kırmızı yukarı ok ![bellek kullanımı artışı](../profiling/media/prof-tour-mem-usage-up-arrow.png "Bellek Kullanımı Artışı") , artan nesne sayısını (solda) veya artan yığın boyutunu (sağ) gösterir). Doğru bağlantıya tıklarsanız, yığın boyutunu en çok arttığı nesnelere göre sıralanmış bir fark yığın görünümü alırsınız. Bu, bellek sorunlarını belirlemenize yardımcı olabilir. Örneğin, aşağıdaki çizimde, nesneler tarafından kullanılan baytlar `ClassHandlersStore` ikinci anlık görüntüde 3.492 bayt artar.
+Ok bağlantılarından birini seçerek yığının fark görünümünü alırsınız (kırmızı ![](../profiling/media/prof-tour-mem-usage-up-arrow.png "Bellek Kullanımı Artışı") yukarı ok Bellek Kullanımı Artışı artan nesne sayısını (sol) veya artan yığın boyutunu (sağ) gösterir). Doğru bağlantıya tıklarsanız, yığın boyutu en fazla artan nesnelere göre sıraılmış fark yığın görünümü elde edersiniz. Bu, bellek sorunlarını tespit etmeye yardımcı olabilir. Örneğin, aşağıdaki çizimde, nesneler tarafından kullanılan baytlar ikinci anlık `ClassHandlersStore` görüntüde 3.492 bayt artmıştır.
 
-![Tanılama Araçları yığın farkı görünümü](../profiling/media/prof-tour-mem-usage-diff-heap.png "Tanılama Araçları Yığın Fark görünümü")
+![Tanılama Araçları yığın fark görünümü](../profiling/media/prof-tour-mem-usage-diff-heap.png "Tanılama Araçları Yığın Fark görünümü")
 
-**Bellek kullanımı** görünümünde, sol taraftaki bağlantıya tıklarsanız, yığın görünümü nesne sayısına göre düzenlenir; belirli bir türün en fazla sayıyı arttığı nesneler en üstte gösterilir ( **Count diff** sütununa göre sıralanır).
+Bellek Kullanımı görünümünde bunun yerine sol  tarafta yer alan bağlantıya tıklarsanız yığın görünümü nesne sayısına göre düzenlenmiştir; Sayı olarak en fazla artıran belirli bir türdeki nesneler en üstte gösterilir **(Count Diff sütununa göre sıralanmış).**
 
 ## <a name="analyze-resource-consumption-xaml"></a>Kaynak tüketimini analiz etme (XAML)
 
-Windows masaüstü WPF uygulamaları ve UWP uygulamaları gibi XAML uygulamalarında, Uygulama Zaman Çizelgesi aracını kullanarak kaynak tüketimini çözümleyebilirsiniz. Örneğin, uygulamanızın kullanıcı arabirimi çerçevelerini (düzen ve işleme) hazırlama, ağ ve disk isteklerine hizmet verme ve uygulama başlatma, sayfa yükleme ve pencere yeniden boyutlandırma gibi senaryolarda harcanan süreyi çözümleyebilirsiniz. Aracı kullanmak için, performans profil oluşturucusu 'nda **uygulama zaman çizelgesi** ' yi seçin ve ardından **Başlat**' ı seçin. Uygulamanızda, şüpheli kaynak tüketimi sorunu olan senaryoya gidin ve raporu oluşturmak için **koleksiyonu durdur** ' u seçin.
+Windows masaüstü WPF uygulamaları ve UWP uygulamaları gibi XAML uygulamalarında kaynak tüketimini analiz etmek için Uygulama Zaman Çizelgesi kullanabilirsiniz. Örneğin, kullanıcı arabirimi çerçeveleri (düzen ve işleme), ağ ve disk isteklerine hizmet verme ve uygulama başlatma, sayfa yükleme ve Pencere yeniden boyutlandırma gibi senaryolarda, uygulamanın kullanıcı arabirimi çerçevelerini hazırlaması için harcadığı zamanı analiz edebilirsiniz. Aracı kullanmak için, araç **Uygulama Zaman Çizelgesi'Performans Profili Oluşturucu** ve ardından Başlat'ı **seçin.** Uygulamanıza, şüpheli bir kaynak tüketimi sorunuyla ilgili senaryoyu gidin ve ardından Raporu oluşturmak için **Koleksiyonu durdur'a** seçin.
 
-**Görsel işleme** grafiğindeki düşük framerates, uygulamanızı çalıştırırken gördüğünüz görsel sorunlara karşılık gelebilir. Benzer şekilde, **UI iş parçacığı kullanım** grafiğinde yüksek SAYıLAR da UI yanıtlama hızı sorunlarına karşılık gelebilir. Raporda, şüpheli performans sorunuyla bir zaman aralığı seçebilir ve ardından zaman çizelgesi ayrıntıları görünümündeki (alt bölme) ayrıntılı UI iş parçacığı etkinliklerini inceleyebilirsiniz.
+Görsel aktarım hızı **grafı'nın düşük** kare hızı, uygulamanızı çalıştırarak gördüğünüz görsel sorunlara karşılık gelir. Benzer şekilde, kullanıcı arabirimi iş parçacığı **kullanım grafı içinde yüksek** sayılar kullanıcı arabirimi yanıt verme sorunlarına da karşılık geliyor olabilir. Raporda, şüpheli performans sorunu olan bir zaman dönemi seçin ve ardından Zaman Çizelgesi ayrıntıları görünümünde (alt bölme) ayrıntılı kullanıcı arabirimi iş parçacığı etkinliklerini inceleyebilirsiniz.
 
-![Uygulama Zaman Çizelgesi profil oluşturma aracı](../profiling/media/prof-tour-application-timeline.gif "Profil Oluşturma Turu Uygulama Zaman Çizelgesi")
+![Uygulama Zaman Çizelgesi profili oluşturma aracı](../profiling/media/prof-tour-application-timeline.gif "Profil Oluşturma Turu Uygulama Zaman Çizelgesi")
 
-Zaman çizelgesi ayrıntıları görünümünde etkinlik (veya dahil edilen kullanıcı arabirimi öğesi) gibi bilgileri etkinliğin süresiyle birlikte bulabilirsiniz. Örneğin, çizimde kılavuz denetimine yönelik bir **Düzen** olayı 57,53 MS alır.
+Zaman çizelgesi ayrıntıları görünümünde etkinlik türü (veya dahil olan kullanıcı arabirimi öğesi) gibi bilgileri etkinliğin süresiyle birlikte bulabilirsiniz. Örneğin çizimde Bir Kılavuz denetimi **için Düzen** olayı 57,53 ms alır.
 
-Daha fazla bilgi için bkz. [uygulama zaman çizelgesi](../profiling/application-timeline.md).
+Daha fazla bilgi için [bkz. Uygulama Zaman Çizelgesi.](../profiling/application-timeline.md)
 
 ::: moniker range=">=vs-2019"
 
 ## <a name="examine-application-events"></a>Uygulama olaylarını inceleme
 
-Genel olaylar [görüntüleyicisi,](../profiling/events-viewer.md) uygulamanın tam olarak Visual Studio profiler'da nasıl performans sergilemektedir olduğunu daha iyi tanılamanıza yardımcı olmak için modül yükü, iş parçacığı başlatma ve sistem yapılandırmaları gibi olayların bir listesi aracılığıyla uygulama etkinliğini görüntülemenize olanak sağlar. Bu araç, Performans Profili Oluşturucu. Hata ayıkla Performans Profili Oluşturucu **(veya**  >  Alt + F2)**Performans Profili Oluşturucu** **seçerek dosyayı açın.**
+Genel olaylar [görüntüleyicisi,](../profiling/events-viewer.md) uygulamanın tam olarak Visual Studio profiler'da nasıl performans sergilemektedir olduğunu daha iyi tanılamanıza yardımcı olmak için modül yükü, iş parçacığı başlatma ve sistem yapılandırmaları gibi olayların bir listesi aracılığıyla uygulama etkinliğini görüntülemenize olanak sağlar. Bu araç, Performans Profili Oluşturucu. Hata ayıkla Performans Profili Oluşturucu **(veya**  >  Alt + **F2)****Performans Profili Oluşturucu** seçerek dosyayı açın.
 
 Araç, her olayı bir liste görünümünde gösterir. Sütunlar olay adı, zaman damgası ve işlem kimliği gibi her olay hakkında bilgi sağlar.
 
@@ -149,15 +149,15 @@ Araç, her olayı bir liste görünümünde gösterir. Sütunlar olay adı, zama
 
 ## <a name="analyze-asynchronous-code-net"></a>Zaman uyumsuz kodu analiz etme (.NET)
 
-.NET Async [aracı,](../profiling/analyze-async.md) uygulamanıza zaman uyumsuz kodun performansını analiz etmenize olanak sağlar. Bu araç, Performans Profili Oluşturucu. Hata ayıkla Performans Profili Oluşturucu **(veya**  >  Alt + F2)**Performans Profili Oluşturucu** **seçerek dosyayı açın.**
+.NET Async [aracı,](../profiling/analyze-async.md) uygulamanıza zaman uyumsuz kodun performansını analiz etmenize olanak sağlar. Bu araç, Performans Profili Oluşturucu. Hata ayıkla Performans Profili Oluşturucu **(veya**  >  Alt + **F2)****Performans Profili Oluşturucu** seçerek dosyayı açın.
 
-Araç, zaman uyumsuz her işlemi bir liste görünümünde gösterir. Zaman uyumsuz bir işlem için başlangıç saati, bitiş saati ve toplam saat gibi bilgileri görebilir.
+Araç, zaman uyumsuz her işlemi bir liste görünümünde gösterir. Zaman uyumsuz bir işlem için başlangıç saati, bitiş saati ve toplam süre gibi bilgileri görebilir.
 
 ![.NET Async Araç Durduruldu](../profiling/media/async-tool-opened.png ".NET Async Araç Durduruldu")
 
 ## <a name="analyze-database-performance-net-core"></a>Veritabanı performansını analiz etme (.NET Core)
 
-Veritabanı aracı, ADO.NET veya Entity Framework Core kullanan .NET Core [](../profiling/analyze-database.md) uygulamaları için, tanılama oturumu sırasında uygulamanıza yapılan veritabanı sorgularını kaydetmenize olanak sağlar. Ardından tek tek sorgularla ilgili bilgileri analiz edip, uygulama performansının geliştirilebilir olduğu yerleri bulabilirsiniz. Bu araç, Performans Profili Oluşturucu. Hata ayıkla Performans Profili Oluşturucu **(veya**  >  Alt + F2)**Performans Profili Oluşturucu** **seçerek dosyayı açın.**
+Veritabanı aracı, ADO.NET veya Entity Framework Core kullanan .NET Core [](../profiling/analyze-database.md) uygulamaları için, tanılama oturumu sırasında uygulamanıza yapılan veritabanı sorgularını kaydetmenize olanak sağlar. Daha sonra, tek tek sorgularla ilgili bilgileri analiz edip uygulama performansınızı geliştirebilirsiniz. Bu araç, Performans Profili Oluşturucu. Hata ayıkla Performans Profili Oluşturucu **(veya**  >  Alt + **F2)****Performans Profili Oluşturucu** seçerek dosyayı açın.
 
 Araç, her sorguyu bir liste görünümünde gösterir. Sorgu başlangıç zamanı ve süresi gibi bilgileri görebilir.
 
@@ -165,7 +165,7 @@ Araç, her sorguyu bir liste görünümünde gösterir. Sorgu başlangıç zaman
 
 ## <a name="visualize-net-counters-net-core"></a>.NET sayaçlarını görselleştirme (.NET Core)
 
-2019 Visual Studio 16.7 sürümünden başlayarak, performans sayaçlarını görselleştirmek için [Visual Studio 'de .NET](../profiling/dotnet-counters-tool.md) Sayaçları aracını kullanabilirsiniz. dotnet sayaçları kullanılarak oluşturulan [sayaçları görselleştirin.](/dotnet/core/diagnostics/dotnet-counters) dotnet sayaçları CPU kullanımı ve atık toplayıcı yığın boyutu gibi birçok sayacı destekler.
+2019 Visual Studio 16.7 sürümünden başlayarak, performans sayaçlarını görselleştirmek için [.NET](../profiling/dotnet-counters-tool.md) Sayaçları Visual Studio aracını kullanabilirsiniz. dotnet sayaçları kullanılarak oluşturulan [sayaçları görselleştirin.](/dotnet/core/diagnostics/dotnet-counters) dotnet sayaçları CPU kullanımı ve atık toplayıcı yığın boyutu gibi birçok sayacı destekler.
 
 Araç, bir liste görünümünde her sayacın canlı değerlerini gösterir.
 
@@ -175,7 +175,7 @@ Araç, bir liste görünümünde her sayacın canlı değerlerini gösterir.
 
 ## <a name="examine-ui-performance-and-accessibility-events-uwp"></a>UI performans ve erişilebilirlik olaylarını inceleme (UWP)
 
-UWP uygulamalarınız için Kullanıcı Arabirimi **Analizi'Tanılama Araçları** **etkinleştirebilirsiniz.** Araç, yaygın performans veya erişilebilirlik sorunlarını arar ve hata **ayıklarken** bunları Olaylar görünümünde görüntüler. Olay açıklamaları sorunları çözmenize yardımcı olacak bilgiler sağlar.
+UWP uygulamalarınız için kullanıcı arabirimi **analizini** **Tanılama Araçları.** Araç, yaygın performans veya erişilebilirlik sorunlarını arar ve hata **ayıklarken** bunları Olaylar görünümünde görüntüler. Olay açıklamaları sorunları çözmenize yardımcı olacak bilgiler sağlar.
 
 ![Tanılama araçlarında kullanıcı arabirimi analizi olaylarını görüntüleme](../profiling/media/prof-tour-ui-analysis.png "Tanılama Araçları Ui Çözümleme Olaylarını Görüntüleme")
 
@@ -220,11 +220,11 @@ Daha fazla bilgi için [bkz. Ağ Kullanımı.](../profiling/network-usage.md)
 ## <a name="analyze-performance-legacy-tools"></a>Performansı analiz etme (eski araçlar)
 
 ::: moniker range="vs-2017"
-Şu anda CPU Kullanımı veya Bellek Kullanımı araçlarında mevcut olan ve masaüstü veya ASP.NET uygulamaları kullanıyorsanız profil oluşturmak için Performans Gezgini kullanabilirsiniz. (UWP uygulamaları için desteklenmiyor). Daha fazla bilgi için [bkz. Performans Gezgini.](../profiling/performance-explorer.md)
+Şu anda CPU Kullanımı veya Bellek Kullanımı araçlarında mevcut olan ölçüm araçları gibi özelliklere ihtiyacınız varsa ve masaüstü veya ASP.NET uygulamaları kullanıyorsanız profil oluşturmak için Performans Gezgini kullanabilirsiniz. (UWP uygulamaları için desteklenmiyor). Daha fazla bilgi için [bkz. Performans Gezgini.](../profiling/performance-explorer.md)
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-Visual Studio 2019'da, eski Performans Gezgini ve Performans Sihirbazı gibi ilgili profil oluşturma araçları Performans Profili Oluşturucu'ye katlanmış ve   >  Performans Profili Oluşturucu. Bu Performans Profili Oluşturucu, kullanılabilir tanılama araçları seçilen hedefe ve geçerli, açık başlangıç projesine bağlıdır. CPU Kullanımı aracı, daha önce Performans Sihirbazı'nda desteklenen örnekleme özelliğini sağlar. Ölçüm aracı, Performans Sihirbazı'nda yer alan ölçümli profil oluşturma özelliğini (kesin çağrı sayıları ve süreler için) sağlar. Ek bellek araçları da Performans Profili Oluşturucu.
+Visual Studio 2019'da, eski Performans Gezgini ve Performans Sihirbazı gibi ilgili profil oluşturma araçları Performans Profili Oluşturucu'ye katlandı. Bu araçta hata ayıklamayı kullanarak   >  **Performans Profili Oluşturucu.** Bu Performans Profili Oluşturucu, kullanılabilir tanılama araçları seçilen hedefe ve geçerli, açık başlangıç projesine bağlıdır. CPU Kullanımı aracı, daha önce Performans Sihirbazı'nda desteklenen örnekleme özelliğini sağlar. Ölçüm aracı, Performans Sihirbazı'nda yer alan ölçümli profil oluşturma özelliğini (kesin çağrı sayıları ve süreler için) sağlar. Ek bellek araçları da Performans Profili Oluşturucu.
 ::: moniker-end
 
 ![Performans Gezgini aracı](../profiling/media/prof-tour-performance-explorer.png "Performans Gezgini")

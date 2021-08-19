@@ -11,14 +11,15 @@ ms.assetid: fbb09c43-ebb7-4b4f-be53-ccff86eb183a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a4ef7d60db3eacc7f87699e8c6e20b93e56bcd4
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: fec2412b7b8801f1197bc53963b5166cb2cc950f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156022"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147282"
 ---
 # <a name="idiasymbolget_locationtype"></a>IDiaSymbol::get_locationType
 Bir veri sembolünün konum türünü alır.

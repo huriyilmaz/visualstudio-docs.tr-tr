@@ -12,14 +12,15 @@ ms.assetid: 8a471929-9a26-43e4-adef-d3b40f00f9e3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b18e05213ef36f1dea3011309e1ebd9def0a4ab
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dce9842df236afcbc3b060a42248fd8d9eb7c59c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99955404"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122039377"
 ---
 # <a name="cores-view-logical-cores"></a>Çekirdek görünüm Mantıksal çekirdekler
 Her kanal adı, profili oluşturulan sistemde bulunan mantıksal çekirdekleri temsil eder. Adlandırma, 0 ' dan toplam mantıksal çekirdek sayısı kadar sayılır. Örneğin, dört çekirdekli bir sistem mantıksal Core 0 ' dan mantıksal çekirdek 3 ' e kadar sayılır.

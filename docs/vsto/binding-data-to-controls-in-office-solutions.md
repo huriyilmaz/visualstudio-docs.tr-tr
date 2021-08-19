@@ -1,6 +1,6 @@
 ---
-title: Office çözümlerinde verileri denetimlere bağlama
-description: Bir Microsoft Office Word belgesi veya Excel çalışma sayfasında bir veri kaynağına Windows Forms denetimleri ve konak denetimlerini nasıl bağlayabileceğinizi öğrenin.
+title: Veri çözümlerinin denetimlerini Office bağlama
+description: Microsoft Office Word belgesinde Windows Forms denetimlerini veya çalışma sayfasını bir veri kaynağına Excel nasıl bağlayabilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,92 +18,93 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: ccc45e9ec389e265e69c81baaf569aa3eb3c978b
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 41823c40520752366f0709b2e5772585ea10196a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825634"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122059887"
 ---
-# <a name="bind-data-to-controls-in-office-solutions"></a>Office çözümlerinde verileri denetimlere bağlama
-  Denetimlerin verileri otomatik olarak görüntülemesi için bir Microsoft Office Word belgesi veya Microsoft Office Excel çalışma sayfası üzerinde Windows Forms denetimleri ve *konak denetimleri* bağlayabilirsiniz. Her iki uygulama düzeyi ve belge düzeyi projesinde, denetimlere veri bağlayabilirsiniz.
+# <a name="bind-data-to-controls-in-office-solutions"></a>Veri çözümlerinin denetimlerini Office bağlama
+  Microsoft Office Word Windows form denetimlerini ve konak denetimlerini bir Microsoft Office Excel veri kaynağına bağlayacak ve böylece denetimler verileri otomatik olarak görüntüleyebilirsiniz.  Hem uygulama düzeyinde hem de belge düzeyindeki projelerde verileri denetimlere bekleyebilirsiniz.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
- Konak denetimleri Word ve Excel nesne modelleriyle, Word 'deki içerik denetimleri ve Excel 'de adlandırılmış aralıklar gibi nesneleri genişletir. Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
+ Konak denetimleri, Word'de yer alan nesneleri genişlet Excel word'de içerik denetimleri ve word'de adlandırılmış aralıklar gibi Excel. Daha fazla bilgi için [bkz. Konak öğelerine ve konak denetimlerine genel bakış.](../vsto/host-items-and-host-controls-overview.md)
 
- Hem Windows Forms hem de konak denetimleri, hem *basit veri bağlamayı* hem de veri kümeleri ve veri tabloları gibi veri kaynaklarına *karmaşık veri bağlamayı* destekleyen Windows Forms veri bağlama modelini kullanır. Windows Forms veri bağlama modeli hakkında tüm bilgiler için bkz. [veri bağlama ve Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms).
+ Hem Windows Forms hem de konak denetimleri, veri kümeleri ve veri  tabloları gibi  veri kaynaklarına basit veri bağlamayı ve karmaşık veri bağlamayı destekleyen Windows Forms veri bağlama modelini kullanır. Windows Forms'daki veri bağlama modeli hakkında tam bilgi için bkz. Veri [bağlama ve Windows Forms.](/dotnet/framework/winforms/data-binding-and-windows-forms)
 
 ## <a name="simple-data-binding"></a>Basit veri bağlama
- Basit veri bağlama, bir denetim özelliği bir veri tablosundaki değer gibi tek bir veri öğesine bağlandığında oluşur. Örneğin, denetimin bir <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> veri kümesindeki bir alana bağlanabilen bir özelliği vardır. Veri kümesindeki alanı değiştiğinde, adlandırılmış aralıktaki değeri de değişir. Denetim haricinde tüm konak denetimleri, <xref:Microsoft.Office.Tools.Word.XMLNodes> basit veri bağlamayı destekler. <xref:Microsoft.Office.Tools.Word.XMLNodes>Denetim bir koleksiyondur ve bu nedenle veri bağlamayı desteklemez.
+ Bir denetim özelliği, veri tablodaki değer gibi tek bir veri öğesine bağlı olduğunda basit veri bağlaması vardır. Örneğin, <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimin bir <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> veri kümesinde bir alana bağlanan bir özelliği vardır. Veri kümesinde alan değişti mi, adlandırılmış aralıkta değer de değişir. Denetim dışındaki tüm konak denetimleri <xref:Microsoft.Office.Tools.Word.XMLNodes> basit veri bağlamayı destekler. Denetim <xref:Microsoft.Office.Tools.Word.XMLNodes> bir koleksiyondur ve bu nedenle veri bağlamayı desteklemez.
 
- Bir konak denetimine basit veri bağlama gerçekleştirmek için, <xref:System.Windows.Forms.Binding> `DataBindings` denetimin özelliğine bir ekleyin. <xref:System.Windows.Forms.Binding>Nesnesi, denetimin özellik değeri ve bir veri öğesinin değeri arasındaki basit bağlamayı temsil eder.
+ Bir konak denetimine basit veri bağlaması gerçekleştirmek için <xref:System.Windows.Forms.Binding> denetimin `DataBindings` özelliğine bir ekleyin. Nesne, <xref:System.Windows.Forms.Binding> denetimin özellik değeri ile veri öğesinin değeri arasındaki basit bağlamayı temsil eder.
 
- Aşağıdaki örnek, <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> özelliğinin belge düzeyindeki bir projedeki bir veri öğesine nasıl bağlanacağını gösterir.
+ Aşağıdaki örnek, özelliğin belge düzeyi <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> projedeki bir veri öğesine nasıl bağlanacağını gösterir.
 
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_BindableComponent/Sheet1.vb" id="Snippet4":::
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_BindableComponent/Sheet1.cs" id="Snippet4":::
 
- Basit veri bağlamayı gösteren izlenecek yollar için bkz. Izlenecek yol: belge düzeyindeki bir proje için [belge düzeyi projede basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md) ve bir VSTO eklentisi PROJESI Için [VSTO eklenti projesinde basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) .
+ Basit veri bağlamayı gösteren kılavuzlar için bkz. [Kılavuz:](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md) Belge düzeyi proje için belge düzeyinde bir projede basit veri bağlama ve [Kılavuz: VSTO](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md) Eklenti projesi için VSTO Eklenti projesinde basit veri bağlama.
 
 ## <a name="complex-data-binding"></a>Karmaşık veri bağlama
- Bir denetim özelliği bir veri tablosunda birden çok sütun gibi birden fazla veri öğesine bağlandığında, karmaşık veri bağlama bulunur. <xref:Microsoft.Office.Tools.Excel.ListObject>Excel için denetim, karmaşık veri bağlamayı destekleyen tek konak denetimidir. Denetim gibi karmaşık veri bağlamayı destekleyen birçok Windows Forms denetimi de vardır <xref:System.Windows.Forms.DataGridView> .
+ Bir denetim özelliği, bir veri tablosunda birden çok sütun gibi birden fazla veri öğesine bağlı olduğunda karmaşık veri bağlaması vardır. Veri <xref:Microsoft.Office.Tools.Excel.ListObject> bağlama Excel, karmaşık veri bağlamayı destekleyen tek konak denetimidir. Denetim gibi karmaşık Windows destekleyen birçok Farklı Form denetimi de <xref:System.Windows.Forms.DataGridView> vardır.
 
- Karmaşık veri bağlamayı gerçekleştirmek için `DataSource` denetimin özelliğini karmaşık veri bağlama tarafından desteklenen bir veri kaynağı nesnesi olarak ayarlayın. Örneğin, <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> <xref:Microsoft.Office.Tools.Excel.ListObject> denetimin özelliği bir veri tablosunda birden çok sütuna bağlanabilir. Veri tablosundaki tüm veriler <xref:Microsoft.Office.Tools.Excel.ListObject> denetimde görünür ve veri tablosundaki veriler değiştikçe <xref:Microsoft.Office.Tools.Excel.ListObject> de değişir. Karmaşık veri bağlama için kullanabileceğiniz veri kaynaklarının bir listesi için, bkz. [Windows Forms tarafından desteklenen veri kaynakları](/dotnet/framework/winforms/data-sources-supported-by-windows-forms).
+ Karmaşık veri bağlaması gerçekleştirmek için denetimin özelliğini karmaşık veri `DataSource` bağlama tarafından desteklenen bir veri kaynağı nesnesine ayarlayın. Örneğin, <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> denetimin özelliği <xref:Microsoft.Office.Tools.Excel.ListObject> bir veri tablosunda birden çok sütuna bağlı olabilir. Veri tablosunda yer alan tüm veriler denetimde görünür ve veri tablodaki <xref:Microsoft.Office.Tools.Excel.ListObject> veriler değiştiksinde de <xref:Microsoft.Office.Tools.Excel.ListObject> değişir. Karmaşık veri bağlama için kullanabileceğiniz veri kaynaklarının listesi için bkz. [Windows Forms tarafından desteklenen veri kaynakları.](/dotnet/framework/winforms/data-sources-supported-by-windows-forms)
 
- Aşağıdaki kod örneği, <xref:System.Data.DataSet> iki nesne ile bir oluşturur <xref:System.Data.DataTable> ve tablolardan birini verilerle doldurur. Kodu daha sonra <xref:Microsoft.Office.Tools.Excel.ListObject> verileri içeren tabloya bağlar. Bu örnek, Excel belge düzeyi projesi içindir.
+ Aşağıdaki kod örneği iki <xref:System.Data.DataSet> nesneyle <xref:System.Data.DataTable> bir oluşturur ve tablolardan birini verilerle doldurmak için kullanılır. Kod daha sonra veri <xref:Microsoft.Office.Tools.Excel.ListObject> içeren tabloya bağlar. Bu örnek, belge Excel bir projeye örnektir.
 
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ExcelListObject/Trin_ExcelListObject.cs" id="Snippet18":::
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ExcelListObject/Sheet1.vb" id="Snippet18":::
 
- Karmaşık veri bağlamayı gösteren izlenecek yollar için bkz. Izlenecek yol: belge düzeyindeki bir proje için [belge düzeyi projede karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md) ve bir VSTO eklentisi PROJESI Için [VSTO eklenti projesinde karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md) .
+ Karmaşık veri bağlamayı gösteren izlenecek yollar için [bkz.](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md) Belge düzeyi proje için belge düzeyinde bir projede karmaşık veri bağlama ve bir VSTO Eklenti projesi için [VSTO](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md) Eklenti projesinde karmaşık veri bağlama.
 
 ## <a name="display-data-in-documents-and-workbooks"></a>Belgelerde ve çalışma kitaplarında verileri görüntüleme
- Belge düzeyi projelerde, veri **kaynakları** penceresini kullanarak belgelerinize veya çalışma kitaplarınıza veri bağlantılı denetimleri, Windows Forms için kullandığınız şekilde kolayca ekleyebilirsiniz. **Veri kaynakları** penceresini kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) ve [Yeni veri kaynakları ekleme](../data-tools/add-new-data-sources.md).
+ Belge düzeyindeki projelerde Veri  Kaynakları penceresini kullanarak belgelerinize veya çalışma kitaplarınıza veriye bağlı denetimler ekleyebilirsiniz. Bu denetimler, belge veya Çalışma Kitapları için Windows kullanabilirsiniz. Veri Kaynakları penceresini kullanma hakkında daha **fazla** bilgi için bkz. [Windows Forms](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) denetimlerini Visual Studio veri kaynaklarına bağlama ve Yeni veri [kaynakları ekleme.](../data-tools/add-new-data-sources.md)
 
-### <a name="drag-controls-from-the-data-sources-window"></a>Denetimleri veri kaynakları penceresinden sürükleyin
- **Veri kaynakları** penceresinden bir nesne üzerine sürüklediğinizde belge üzerinde bir denetim oluşturulur. Oluşturulan denetimin türü, tek bir veri sütununu veya birden çok veri sütununu bağladığınıza bağlıdır.
+### <a name="drag-controls-from-the-data-sources-window"></a>Veri Kaynakları penceresinden denetimleri sürükleme
+ Bir nesneyi Veri Kaynakları penceresinden üzerine sürüklerken belgede bir **denetim** oluşturulur. Oluşturulan denetim türü, tek bir veri sütununu mu yoksa birden çok veri sütununu mı bağlamaya bağlı olarak değişir.
 
- Excel 'de, <xref:Microsoft.Office.Tools.Excel.NamedRange> her bir alan için çalışma sayfasında bir denetim oluşturulur ve <xref:Microsoft.Office.Tools.Excel.ListObject> birden çok satır ve sütun içeren her bir veri aralığı için bir denetim oluşturulur. Bu varsayılanı, **veri kaynakları** penceresinde tablo veya alanı seçerek ve ardından açılan listeden farklı bir denetim seçerek değiştirebilirsiniz.
+ Daha Excel çalışma sayfasında tek tek her alan için bir denetim oluşturulur ve birden çok satır ve sütun içeren her veri aralığı <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Tools.Excel.ListObject> için bir denetim oluşturulur. Veri Kaynakları penceresinde tabloyu veya alanı ve  ardından açılan listeden farklı bir denetim seçerek bu varsayılan ayarı değiştirebilirsiniz.
 
- <xref:Microsoft.Office.Tools.Word.ContentControl>Belgelere bir denetim eklenir. İçerik denetiminin türü, seçtiğiniz alanın veri türüne bağlıdır.
+ Belgelere <xref:Microsoft.Office.Tools.Word.ContentControl> bir denetim eklenir. İçerik denetimi türü, seçtiğiniz alanın veri türüne bağlıdır.
 
-### <a name="bind-data-in-document-level-projects-at-design-time"></a>Tasarım zamanında belge düzeyindeki projelere veri bağlama
- Aşağıdaki konularda, tasarım zamanında veri bağlama örnekleri gösterilmektedir:
+### <a name="bind-data-in-document-level-projects-at-design-time"></a>Tasarım zamanında belge düzeyi projelerde veri bağlama
+ Aşağıdaki konular tasarım zamanında veri bağlama örneklerini gösterir:
 
-- [Nasıl yapılır: çalışma sayfalarını bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
+- [Nasıl kullanılır: Çalışma sayfalarını bir veritabanındaki verilerle doldurmak](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
 
-- [Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-a-database.md)
+- [Nasıl kullanılır: Belgeleri bir veritabanındaki verilerle doldurmak](../vsto/how-to-populate-documents-with-data-from-a-database.md)
 
-- [Nasıl yapılır: belgeleri nesnelerden verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md)
+- [Nasıl kullanılır: Belgeleri nesnelerden verilerle doldurmak](../vsto/how-to-populate-documents-with-data-from-objects.md)
 
-- [Nasıl yapılır: belgeleri hizmetlerdeki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-services.md)
+- [Nasıl kullanılır: Belgeleri hizmetlerden gelen verilerle doldurmak](../vsto/how-to-populate-documents-with-data-from-services.md)
 
-- [Nasıl yapılır: çalışma sayfasındaki veritabanı kayıtlarını kaydırma](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)
+- [Nasıl kullanılır: Çalışma sayfasındaki veritabanı kayıtları arasında kaydırma](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)
 
-### <a name="bind-data-in-vsto-add-in-projects"></a>VSTO eklenti projelerinde veri bağlama
- VSTO eklenti projelerinde, yalnızca çalışma zamanında denetim ekleyebilirsiniz. Aşağıdaki konularda çalışma zamanında veri bağlama örnekleri gösterilmektedir:
+### <a name="bind-data-in-vsto-add-in-projects"></a>Eklenti projelerinde VSTO bağlama
+ Diğer VSTO projelerinde, yalnızca çalışma zamanında denetimler eklersiniz. Aşağıdaki konular çalışma zamanında veri bağlama örneklerini gösterir:
 
-- [İzlenecek yol: VSTO eklenti projesinde basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)
+- [Adım adım kılavuz: Eklenti projesinde VSTO basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)
 
-- [İzlenecek yol: VSTO eklenti projesinde karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)
+- [Adım adım kılavuz: Eklenti projesinde VSTO karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-vsto-add-in-project.md)
 
-## <a name="update-data-that-is-bound-to-host-controls"></a>Konak denetimlerine bağlanan verileri güncelleştirme
- Bir veri kaynağı ve konak denetimi arasındaki veri bağlama iki yönlü bir veri güncelleştirmesi içerir. Basit veri bağlamasında, veri kaynağındaki değişiklikler otomatik olarak konak denetimine yansıtılır, ancak konak denetimindeki değişiklikler veri kaynağını güncelleştirmek için açık bir çağrı gerektirir. Bu nedenle, bir veri bağlantılı alanda yapılan değişikliklere, başka bir veri bağlantılı alandaki değişikliklere eşlik edilmedikleri takdirde, bir veri- Örneğin, biri yaş ve diğeri de deneyim için olmak üzere iki alanı olabilir. Deneyim Age ' i aşamaz. Kullanıcılar, değişiklikleri aynı anda yapamadığı takdirde, 50 ile 25 arasında bir süre güncellenemez ve 30 ' dan 10 ' a kadar deneyim yaşar. Bu sorunu çözmek için, güncelleştirmeler kod tarafından açıkça gönderilene kadar basit veri bağlama içeren alanlar güncellenmez.
+## <a name="update-data-that-is-bound-to-host-controls"></a>Konak denetimlerine bağlı verileri güncelleştirme
+ Veri kaynağı ile konak denetimi arasındaki veri bağlama işlemi, iki yollu bir veri güncelleştirmesi içerir. Basit veri bağlamada, veri kaynağında yapılan değişiklikler konak denetimine otomatik olarak yansıtılır, ancak konak denetiminde yapılan değişiklikler, veri kaynağını güncelleştirmek için açık bir çağrı gerektirir. Bunun nedeni, bazı durumlarda bir veriye bağlı alanda yapılan değişikliklerin başka bir veriye bağlı alanda yapılan değişikliklerle birlikte kabul edilmediğidir. Örneğin, biri yaş, biri de yıllara özel deneyim olmak için olmak için iki alanız olabilir. Deneyim yaşı aşamaz. Kullanıcı 50'den 25'e kadar olan yaşı ve ardından aynı anda değişiklik olmadığı sürece 30 ile 10 arasında bir deneyimi güncelleştirememektedir. Bu sorunu çözmek için, güncelleştirmeler kod tarafından açıkça gönderilene kadar basit veri bağlaması olan alanlar güncelleştirilmez.
 
- Basit veri bağlamayı etkinleştiren konak denetimlerinden bir veri kaynağını güncelleştirmek için, çözümünüz bir tane kullanıyorsa bellek içi veri kaynağına ( <xref:System.Data.DataSet> veya gibi <xref:System.Data.DataTable> ) ve arka uç veritabanına güncelleştirmeleri göndermeniz gerekir.
+ Basit veri bağlamayı etkinleştiren konak denetimlerinden bir veri kaynağını güncelleştirmek için, çözümünüz kullanıyorsa, güncelleştirmeleri bellek içinde veri kaynağına (veya gibi) ve arka uç veritabanına <xref:System.Data.DataSet> <xref:System.Data.DataTable> göndermeniz gerekir.
 
- Denetimi kullanarak karmaşık veri bağlama gerçekleştirdiğinizde bellek içi veri kaynağını açıkça güncelleştirmeniz gerekmez <xref:Microsoft.Office.Tools.Excel.ListObject> . Bu durumda, değişiklikler ek kod olmadan bellek içi veri kaynağına otomatik olarak gönderilir.
+ Denetimi kullanarak karmaşık veri bağlama işlemi gerçekleştirecek olursanız bellek içinde veri kaynağını açıkça güncelleştirmeniz <xref:Microsoft.Office.Tools.Excel.ListObject> gerekmez. Bu durumda, değişiklikler ek kod olmadan bellek içinde veri kaynağına otomatik olarak gönderilir.
 
- Daha fazla bilgi için bkz. [nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
+ Daha fazla bilgi için, [bkz. How to: Update a data source with data from a host control](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Veri bağlama ve Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)
-- [Nasıl yapılır: bir Windows formunda basit bağlantılı denetim oluşturma](/dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form)
+- [Nasıl olur: Windows Form üzerinde basit bir Windows oluşturma](/dotnet/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form)
 - [Visual Studio'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Verileri yeniden veritabanına kaydetme](../data-tools/save-data-back-to-the-database.md)
 - [TableAdapter kullanarak verileri güncelleştirme](../data-tools/update-data-by-using-a-tableadapter.md)
 - [Önbellek verileri](../vsto/caching-data.md)
-- [Office çözümlerindeki veriler](../vsto/data-in-office-solutions.md)
+- [Veri Office verileri](../vsto/data-in-office-solutions.md)
