@@ -1,5 +1,5 @@
 ---
-title: Proje klasörünü kaynak denetimi deposu ile karşılaştırın | Microsoft Docs
+title: Project klasörünü kaynak denetimi deposu ile karşılaştırın | Microsoft Docs
 description: Kaynak denetimi eklentisi API 'sinde, yerel proje klasörü ve kaynak denetimi arasındaki karşılaştırma SccDirQueryInfo ve SccDirDiff kullanılarak gerçekleştirilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -11,14 +11,15 @@ ms.assetid: 65217e8b-15a6-4446-92b0-4cff1c6220f5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f7b334bb6e1b73dd31060020378e91b74e5af102
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 76d57b288a221b2b7e89494605aaccd4df752821
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063051"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063115"
 ---
 # <a name="optional-comparison-of-local-project-folder-to-source-control-store"></a>İsteğe Bağlı Olarak Yerel Proje Klasörünün Kaynak Denetimi Deposuyla Karşılaştırılması
 Kaynak denetimi eklentisi API 1,2 ' de, yerel proje klasörü ve kaynak denetimi arasındaki karşılaştırma [SccDirQueryInfo](../../extensibility/sccdirqueryinfo-function.md) ve [SccDirDiff](../../extensibility/sccdirdiff-function.md)işlevleri kullanılarak gerçekleştirilir.

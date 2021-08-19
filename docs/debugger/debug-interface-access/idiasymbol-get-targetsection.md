@@ -1,6 +1,6 @@
 ---
-description: Bir dönüştürücü hedefinin adres bölümünü alır.
-title: 'IDiaSymbol:: get_targetSection | Microsoft Docs'
+description: Bir thunk hedefinin adres bölümünü alan.
+title: IDiaSymbol::get_targetSection | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a7e27b26f8e5f022f5145cffe51126c6614a8c3f67000fb56432e8c2c5d7fc6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2796fb05c2279b58895d348ae96a4d8868c8753f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362956"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147041"
 ---
 # <a name="idiasymbolget_targetsection"></a>IDiaSymbol::get_targetSection
-Bir dönüştürücü hedefinin adres bölümünü alır.
+Bir thunk hedefinin adres bölümünü alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_targetSection (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Dönüştürücü hedef adresinin bölüm bölümü.
+[out] Bir thunk hedef adresinin bölüm bölümü.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

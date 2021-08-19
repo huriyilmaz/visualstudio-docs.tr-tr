@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 86b22e15cc486ee6ee3362f9588b1047dff6ff3865eb1e098a8848ee93dd0c43
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e359ad5cd4d7272661fbddb6bce263d7a7c6c202
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121365615"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045651"
 ---
 # <a name="display-data-in-blend-for-visual-studio"></a>Visual Studio için Blend verileri görüntüleme
 

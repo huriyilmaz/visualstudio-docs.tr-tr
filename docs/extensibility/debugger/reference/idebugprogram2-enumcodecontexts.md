@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7172ffbf40642e5a3c9bfe68737f6e5c4f935671682d533e81fc1a77cbeb63cd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 669c513b07e91299be7c3b9d600995eca886b9ab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276483"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132788"
 ---
 # <a name="idebugprogram2enumcodecontexts"></a>IDebugProgram2::EnumCodeContexts
 Kaynak dosyada verilen bir konum için kod bağlamlarının listesini alın.
@@ -53,7 +53,7 @@ int EnumCodeContexts(
  Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, oturum hata ayıklama yöneticisinin (SDM) veya IDE'nin bir kaynak dosya konumunu kod konumunda eşlemesine olanak sağlar. Kaynak birden çok kod bloğu (örneğin, C++ şablonları) oluşturursa birden fazla kod bağlamı döndürülür.
+ Bu yöntem, bir kaynak dosya konumunu kod konumunda eşlemek için oturum hata ayıklama yöneticisi (SDM) veya IDE sağlar. Kaynak birden çok kod bloğu (örneğin, C++ şablonları) oluşturursa birden fazla kod bağlamı döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

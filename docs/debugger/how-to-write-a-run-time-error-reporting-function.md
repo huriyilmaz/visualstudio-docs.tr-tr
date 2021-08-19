@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f36610508439dc42588923ee7824d4d9bf04e1a40c58edf769e7308d6d886d6b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9f4131f5bea3f3c1a2c880c64302fd44ab5a3535
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453225"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122146855"
 ---
 # <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Nasıl yapılır: Run-Time hata raporlama Işlevi yazma (C++)
 Çalışma zamanı hataları için özel bir raporlama işlevi, ile aynı bildirime sahip olmalıdır `_CrtDbgReportW` . Hata ayıklayıcıya 1 değerini döndürmelidir.

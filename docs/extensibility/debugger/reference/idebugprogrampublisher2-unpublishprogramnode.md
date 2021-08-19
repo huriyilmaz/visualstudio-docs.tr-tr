@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b541228a86f765044f84f72cead737ff7e688f4bfa9ef05bf16c444d002c47cb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 73a0c57baba0cd068d0950371de2e5bb14c4bd4d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121449098"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029976"
 ---
 # <a name="idebugprogrampublisher2unpublishprogramnode"></a>IDebugProgramPublisher2::UnpublishProgramNode
 Belirtilen program düğümünü, hata ayıklama motorları (DEs) ve oturum hata ayıklama Yöneticisi (SDM) olarak kullanılabilir olarak kaldırır.

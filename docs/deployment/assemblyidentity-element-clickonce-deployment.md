@@ -1,6 +1,6 @@
 ---
-title: '&lt;AssemblyIdentity &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
-description: Öğe, ClickOnce dağıtımında gereklidir. Alt öğesi içermez ve bu makalede açıklanan özniteliklere sahiptir.
+title: '&lt;assemblyıdentity &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+description: ClickOnce dağıtımında assemblyıdentity öğesi gereklidir. Alt öğesi içermez ve bu makalede açıklanan özniteliklere sahiptir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,16 +16,17 @@ ms.assetid: f4a3bb83-c800-47d0-9905-9a5ae2486838
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: bc689c80d033c6b92178f020c0d3273f6ec86ca7
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e4633b5ed024b1e43134b33827a5614bfa5f8d17
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99911345"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122146504"
 ---
-# <a name="ltassemblyidentitygt-element-clickonce-deployment"></a>&lt;AssemblyIdentity &gt; öğesi (ClickOnce dağıtımı)
+# <a name="ltassemblyidentitygt-element-clickonce-deployment"></a>&lt;assemblyıdentity &gt; öğesi (ClickOnce dağıtımı)
 Uygulamanın birincil derlemesini tanımlar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
 ## <a name="syntax"></a>Syntax
@@ -49,13 +50,13 @@ Uygulamanın birincil derlemesini tanımlar [!INCLUDE[ndptecclick](../deployment
 |`name`|Gereklidir. Bilgilendirici amaçlar için dağıtımın okunabilir adını tanımlar.<br /><br /> `name`Tek veya çift tırnak gibi özel karakterler içeriyorsa, uygulama etkinleştiremeyebilir.|
 |`version`|Gereklidir. Derlemenin sürüm numarasını şu biçimde belirtir: `major.minor.build.revision` .<br /><br /> Bu değer, bir uygulama güncelleştirmesinin tetiklenmesi için güncelleştirilmiş bir bildirimde arttırılmalıdır.|
 |`publicKeyToken`|Gereklidir. Dağıtım bildiriminin imzalandığı, ortak anahtarın SHA-1 karma değerinin son 8 baytını temsil eden 16 karakterlik bir onaltılık dize belirtir. İmzalamak için kullanılan ortak anahtar 2048 bit veya daha büyük olmalıdır.<br /><br /> Bir derlemeyi imzalamak önerilse ancak isteğe bağlı olsa da, bu öznitelik gereklidir. Bir bütünleştirilmiş kod imzasız ise, kendinden imzalı bir derlemeden bir değer kopyalamanız veya tümü sıfırlardan oluşan bir "kukla" değeri kullanmanız gerekir.|
-|`processorArchitecture`|Gereklidir. İşlemciyi belirtir. Geçerli değerler `msil` tüm işlemciler için `x86` 32 bit windows, `IA64` 64 bit Windows için ve `Itanium` Intel 64 bit Itanium işlemcilere yöneliktir.|
+|`processorArchitecture`|Gereklidir. İşlemciyi belirtir. geçerli değerler, `msil` `x86` 32 bit Windows için tüm işlemciler, `IA64` 64 bit Windows ve `Itanium` ıntel 64 bit ıtanium işlemciler için geçerlidir.|
 |`type`|Gereklidir. Windows yan yana yükleme teknolojisiyle uyumluluk için. İzin verilen tek değer `win32` .|
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneğinde bir `assemblyIdentity` dağıtım bildiriminde bir öğe gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu kod örneği, [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md) konusu için sağlanmış daha büyük bir örneğin bir parçasıdır.
+ Aşağıdaki kod örneğinde bir `assemblyIdentity` dağıtım bildiriminde bir öğe gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . bu kod örneği, [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md) konusu için sağlanmış daha büyük bir örneğin bir parçasıdır.
 
 ```xml
 <!-- Identify the deployment. -->

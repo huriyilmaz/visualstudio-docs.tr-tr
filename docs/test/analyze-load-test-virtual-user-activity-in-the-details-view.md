@@ -1,6 +1,6 @@
 ---
 title: Yük Testi Sanal Kullanıcı Etkinliğini Analiz Etme
-description: Sanal Kullanıcı Etkinlik Grafiği'nin görüntü olduğu Ayrıntılar görünümü hakkında bilgi edinebilirsiniz. Yük testi sırasında tek tek sanal kullanıcıların ne yaptığını analiz etme.
+description: Sanal Kullanıcı Etkinlik Grafiği'nin görüntü olduğu Ayrıntılar görünümü hakkında bilgi edinebilirsiniz. Yük testi sırasında tek tek sanal kullanıcıların neler yaptığını analiz etme.
 ms.custom: SEO-VS-2020
 ms.date: 10/03/2016
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 96809db56259e0a5e2225aa223ebeefcaa2e249ed567d1051c88aec04fda63bb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 567d10de947cb02ea847f84861a384ae8785c08f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121395478"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122115349"
 ---
 # <a name="analyzing-load-test-virtual-user-activity-in-the-details-view-of-the-load-test-analyzer"></a>Yük Testi Çözümleyicisi'nin Ayrıntılar görünümünde yük testi sanal kullanıcı etkinliğini analiz etme
 
@@ -59,7 +59,7 @@ Filtre sonuçları paneli, Sanal Kullanıcı **Etkinlik Grafiği'ne görünür.*
 |Görevler|İlişkili konular|
 |-|-|
 |**Yük testini çalıştırın:** Bir yük testi oluşturduktan ve sanal kullanıcı etkinliği verilerini toplamayı etkinleştiracak şekilde yapılandırdıktan sonra, Sanal Kullanıcı Etkinlik Grafiğini görüntülemek için testi tamamlayana **kadar çalıştırmanız gerekir.**||
-|**Sanal kullanıcı etkinliği verilerini içeren yük testi sonuçlarını görüntüleme:** Yük testini oluşturduktan, yapılandırdıktan ve çalıştırmayı tamamlandıktan sonra, Sanal Kullanıcı Etkinlik Grafiği'ne bakarak **sanal kullanıcı etkinliği verilerini görüntüebilirsiniz.**|-   [Yük testi sonuçlarını analiz etme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)<br />-   [Nasıl: Yük testi sırasında sanal kullanıcıların ne yaptığını analiz etme](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)|
+|**Sanal kullanıcı etkinliği verilerini içeren yük testi sonuçlarını görüntüleme:** Yük testini oluşturduktan, yapılandırdıktan ve çalıştırmayı tamamlandıktan sonra, Sanal Kullanıcı Etkinlik Grafiği'ne bakarak **sanal kullanıcı etkinlik verilerini görüntüebilirsiniz.**|-   [Yük testi sonuçlarını analiz etme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)<br />-   [Nasıl: Yük testi sırasında sanal kullanıcıların ne yaptığını analiz etme](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)|
 |**Yük testlerinde performans sorunlarını yalıtma:** Yük testinde performans **sorunlarını yalıtmak** için Sanal Kullanıcı Etkinlik Grafiği'nin kullanabilirsiniz.|-   [Adım adım kılavuz: Sorunları yalıtmak için sanal kullanıcı etkinlik grafiğini kullanma](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.

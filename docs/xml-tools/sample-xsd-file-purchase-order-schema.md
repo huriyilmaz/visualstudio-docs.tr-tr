@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 2efe7613488831b8aa765e993afe4ece9e29150f6201dc9baba38c87077622de
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 145f3b71535baae809097df9ffa4f9293bd1d307
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121350998"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098716"
 ---
 # <a name="sample-xsd-file-purchase-order-schema"></a>Örnek XSD dosyası: Satın alma siparişi şeması
 

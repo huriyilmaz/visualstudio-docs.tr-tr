@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e753e4b09116190b956889299f39fddd75aa6a8d5ee4563e8e09893bfc5ee190
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2dcbee6f04a61bb21ffc1071b200297ecd0b3890
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404877"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081304"
 ---
 # <a name="idiasymbolget_addressoffset"></a>IDiaSymbol::get_addressOffset
 Adres konumunun uzaklık bölümünü alın. [LocationType Enumeration olarak ayarlanırken](../../debugger/debug-interface-access/locationtype.md) `LocIsStatic` kullanın.

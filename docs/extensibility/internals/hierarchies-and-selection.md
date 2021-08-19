@@ -15,15 +15,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77ca0dbfd8476aae3b7dc8a12a0a449eb074da4480aa2f2546bc12c7282690ce
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f44c9449181734299e6fb46ce2b76bab1d8d453a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121376189"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063349"
 ---
 # <a name="hierarchies-and-selection"></a>Hiyerarşiler ve seçim
-'i özelleştirken, projeler gibi hiyerarşilerin nasıl işlendiğinden ve kullanıcıya neyin görüntülendiğinden belirlemek için seçim [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bağlamının nasıl kullandığını anlamanız gerekir. Bu bölümde hiyerarşi ve seçim [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kavramları ele almaktadır.
+'i özelleştirken, projeler gibi hiyerarşilerin nasıl işlendiğinden ve kullanıcıya neyin görüntülendiğinden belirlemek için seçim bağlamının [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nasıl kullandığını anlamanız gerekir. Bu bölümde hiyerarşi ve seçim [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kavramları ele almaktadır.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Visual Studio’da Hiyerarşiler](../../extensibility/internals/hierarchies-in-visual-studio.md)

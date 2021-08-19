@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 74eb8e8e210fc382ad21b3b52c02e4ef859630766648e3c6932bae90d226e743
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b4bab41a931b99ab560909e5caebb27012cd74a1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121285627"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046483"
 ---
 # <a name="how-to-programmatically-perform-actions-when-an-email-message-is-received"></a>Nasıl yapılır: e-posta iletisi alındığında program aracılığıyla eylem gerçekleştirme
   Bu örnek, Kullanıcı bir e-posta iletisi aldığında özel eylemler gerçekleştirir.

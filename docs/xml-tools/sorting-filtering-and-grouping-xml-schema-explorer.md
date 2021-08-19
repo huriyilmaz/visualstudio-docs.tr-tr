@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: ba4e53916df5a1434daee75fd2ba04f3f9348d7fecc13219c93c283d006924c9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f317ea59fd7f3318669a71d4480c5b53a182b327
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121423584"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098690"
 ---
 # <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Sıralama, filtreleme ve gruplama (XML Şema Gezgini)
 
@@ -34,7 +34,7 @@ Aşağıdaki filtre seçenekleri kullanılabilir. Varsayılan olarak, **Ad Alanl
 
 ## <a name="sorting-options"></a>Sıralama seçenekleri
 
-Aşağıdaki sıralama seçenekleri kullanılabilir. Varsayılan değer Türüne **Göre Sırala'dır.** **SıralamaYa göre** seçenekleri dosyalar ve ad alanları için geçerli değildir.
+Aşağıdaki sıralama seçenekleri mevcuttur. Varsayılan değer Türüne **Göre Sırala'dır.** **SıralamaYa göre** seçenekleri dosyalar ve ad alanları için geçerli değildir.
 
 - **Türüne Göre Sırala.**
 
@@ -82,4 +82,4 @@ Adla **Sırala** seçeneği seçildiğinde, genel düğümler aşağıdaki sıra
 
 ## <a name="persisting-sortfilter-options"></a>Kalıcı sıralama/filtreleme seçenekleri
 
-Sıralama, filtreleme ve gruplama seçenekleri, ayarlar değiştiriken hangi çözümün veya dosyaların açık olduğu fark etmez, her kullanıcı için kayıt defterine kaydedilir.
+Sıralama, filtreleme ve gruplama seçenekleri, ayarlar değiştiriken hangi çözümün veya dosyaların açık olduğu fark etmez her kullanıcı için kayıt defterine kaydedilir.

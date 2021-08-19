@@ -1,7 +1,7 @@
 ---
-title: 'İzlenecek yol: mevcut bir SharePoint sitesinden öğeleri Içeri aktarma | Microsoft Docs'
+title: 'adım adım kılavuz: Mevcut bir SharePoint Site | Microsoft Docs'
 titleSuffix: ''
-description: Bu kılavuzda, var olan bir SharePoint sitesindeki öğeleri bir Visual Studio SharePoint projesine aktarın.
+description: Bu kılavuzda, mevcut bir sitedeki öğeleri SharePoint bir Visual Studio SharePoint aktarın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -14,136 +14,137 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 861b6ff20f9ceb73c279e54fa89ee513389b6b91
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 17f16b02749fe1431f1016334c96855ee505a0a7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900950"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122115362"
 ---
-# <a name="walkthrough-import-items-from-an-existing-sharepoint-site"></a>İzlenecek yol: mevcut bir SharePoint sitesinden öğeleri Içeri aktarma
-  Bu izlenecek yol, mevcut bir SharePoint sitesinden SharePoint projesine nasıl öğe aktarılacağını gösterir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+# <a name="walkthrough-import-items-from-an-existing-sharepoint-site"></a>Adım adım kılavuz: Mevcut bir siteden öğeleri SharePoint alma
+  Bu kılavuzda, mevcut bir sitedeki öğeleri SharePoint bir SharePoint [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] gösterir.
 
- Bu izlenecek yol aşağıdaki görevleri gösterir:
+ Bu kılavuz aşağıdaki görevleri gösterir:
 
-- Özel bir site sütunu ( *alan* olarak da bilinir) ekleyerek bir SharePoint sitesini özelleştirme.
+- Özel bir SharePoint (alan olarak da bilinir) ekleyerek bir siteyi *özelleştirme.*
 
-- Bir SharePoint sitesini bir. wsp dosyasına aktarma.
+- Bir SharePoint .wsp dosyasına dışarı aktarma.
 
-- . Wsp dosyasını [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . wsp Içeri aktarma projesini kullanarak SharePoint 'e aktarma.
+- .wsp dosyasını [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .wsp import SharePoint kullanarak .wsp dosyasına aktarma.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- Ve SharePoint 'in desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] .
+- desteklenen ve [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] SharePoint.
 
 - Visual Studio.
 
-## <a name="customize-a-sharepoint-site"></a>SharePoint sitesini özelleştirme
- Bu örnekte, üzerine yeni bir site sütunu ekleyerek ve daha sonra kullanmak üzere başka bir alt site oluşturarak bir SharePoint alt sitesi oluşturup özelleştirecek. Daha sonra, ilk alt siteyi bir. wsp dosyasına aktarır ve sonra. wsp Içeri aktarma projesini kullanarak özel site sütununu ikinci alt siteye içeri aktarabilirsiniz.
+## <a name="customize-a-sharepoint-site"></a>Bir siteyi SharePoint özelleştirme
+ Bu örnekte, yeni bir site sütunu SharePoint ve daha sonra kullanmak üzere başka bir alt site oluşturarak yeni bir site oluşturacak ve özelleştirebilirsiniz. Daha sonra, ilk alt siteyi bir .wsp dosyasına aktaracak ve ardından .wsp Import projesini kullanarak özel site sütununu ikinci alt siteye içeri aktarın.
 
-### <a name="to-create-and-customize-a-sharepoint-site"></a>Bir SharePoint sitesi oluşturmak ve özelleştirmek için
+### <a name="to-create-and-customize-a-sharepoint-site"></a>Bir siteyi oluşturmak ve SharePoint için
 
-1. Web tarayıcısını kullanarak bir SharePoint sitesini açın, örneğin http://<em>sistem adı</em>/SitePages/Home.exe.
+1. <em>/Site</em>SharePoint Pages/Home.aspx gibi bir web http:// kullanarak bir web sitesi açın.
 
-2. **Site eylemleri** menüsünü açıp **Yeni site**' yi seçerek ana SharePoint sitesinden bir alt site oluşturun.
+2. Site Eylemleri menüsünü açarak ve ardından Yeni SharePoint'ı seçerek ana **sitenin** dışında bir alt **site oluşturun.**
 
-3. Sitenin **Oluştur** Iletişim kutusunda **boş site** türünü seçin.
+3. Sitenin Oluştur **iletişim** kutusunda Boş Site **türünü** seçin.
 
-4. **Başlık** kutusuna **site sütunu testi 1**' i girin. **URL adı** kutusuna **columntest1**; yazın. diğer ayarları varsayılan değerlerinde bırakın; ardından **Oluştur** düğmesini seçin.
+4. Başlık **kutusuna Site** Sütunu **Test 1** girin; URL **adı kutusuna** **columntest1** girin; diğer ayarları varsayılan değerlerinde bırakın; ve ardından Oluştur **düğmesini** seçin.
 
-5. Site oluşturulduktan sonra, tarayıcıda http://<em>sistem adı</em>/SitePages/Home.exe adlı ana siteye geri gidin.
+5. Site oluşturulduktan sonra tarayıcıda ana siteye geri gidin ve<em></em>/SitePages/Home.aspx http:// sistem adını girin.
 
-6. Daha sonra, **Site eylemleri** menüsünü açıp **Yeni site**' yi seçip **boş site** türünü seçerek ana SharePoint sitesinden boş bir alt site oluşturun.
+6. Yine Site Eylemleri menüsünü açarak, Yeni Site 'SharePoint'ı ve ardından Boş **Site** türünü seçerek ana sitenin dışında boş bir **alt site** oluşturun.
 
-7. **Başlık** kutusuna **site sütunu test 2** yazın; **URL adı** kutusuna **columntest2**; yazın. diğer ayarları varsayılan değerlerinde bırakın; ardından **Oluştur** düğmesini seçin.
+7. Başlık **kutusuna Site** Sütun **Testi 2** girin; URL **adı kutusuna** **columntest2** yazın; diğer ayarları varsayılan değerlerinde bırakın; ve ardından Oluştur **düğmesini** seçin.
 
-8. Http://<em>SystemName</em>/columntest1/default.exe adlı ilk alt siteye geri gidin.
+8. <em>SystemName</em>/columntest1/default.aspx http:// adlı ilk alt siteye dönün.
 
-9. Site **eylemleri** menüsünde, **Site Ayarları ' nı seçerek site** ayarları sayfasını görüntüleyin.
+9. Site **Eylemleri menüsünde Site** eylemleri sayfasını **görüntülemek Ayarlar** Site Eylemleri'Ayarlar seçin.
 
-10. **Galeriler** bölümünde, **site sütunları** bağlantısını seçin.
+10. Galeriler **bölümünde** Site sütunları **bağlantısını** seçin.
 
-11. **Site sütunu Galerisi** sayfasının en üstünde **Oluştur** düğmesini seçin.
+11. **Site** Sütun Galerisi sayfasının üst kısmında Oluştur **düğmesini** seçin.
 
-12. **Sütun adı** kutusuna **Test sütunu** girin, diğer varsayılan değerleri koruyun ve **Tamam** düğmesini seçin.
+12. Sütun **adı kutusuna** **Test** Sütunu yazın, diğer varsayılan değerleri tutun ve tamam **düğmesini** seçin.
 
-13. **Test sütunu** sütunu, site sütunu galerisinde özel sütunlar başlığı altında görüntülenir.
+13. **Test Sütunu sütunu,** Site Sütun Galerisi'nin Özel Sütunlar başlığı altında görünür.
 
-## <a name="exporting-the-sharepoint-site"></a>SharePoint sitesi dışarı aktarılıyor
- Ardından, SharePoint projenize aktarmak istediğiniz SharePoint öğelerini ve öğelerini içeren bir SharePoint kurulum (. wsp) dosyası edinin [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Henüz bir. wsp dosyanız yoksa, mevcut bir SharePoint sitesinden bir tane oluşturmanız gerekir. Bu örnekte, varsayılan SharePoint sitesini bir. wsp dosyasına dışarı aktarcaksınız.
+## <a name="exporting-the-sharepoint-site"></a>SharePoint dışarı aktarma
+ Ardından, SharePoint projenize içeri SharePoint öğeleri içeren bir SharePoint kurulum (.wsp) [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dosyası alın. Henüz bir .wsp dosyanız yoksa, mevcut bir siteden bir .wsp SharePoint oluşturmanız gerekir. Bu örnek için, varsayılan siteyi SharePoint bir .wsp dosyasına aktarın.
 
 > [!IMPORTANT]
-> Aşağıdaki yordamı gerçekleştirirken bir çalışma zamanı hatası alırsanız, yordamı SharePoint sitesine erişimi olan bir sistemde gerçekleştirmeniz gerekir.
+> Aşağıdaki yordamı gerçekleştiren bir çalışma zamanı hatası alırsanız, yordamı SharePoint sitesine erişimi olan bir sistemde gerçekleştirmeniz gerekir.
 
-### <a name="to-export-an-existing-sharepoint-site"></a>Var olan bir SharePoint sitesini dışarı aktarmak için
+### <a name="to-export-an-existing-sharepoint-site"></a>Mevcut bir siteyi dışarı SharePoint için
 
-1. Site Ayarları sayfasını göstermek için SharePoint sitesinde site **eylemleri** sekmesinde **site ayarları** ' nı seçin.
+1. Site SharePoint Site Eylemleri sekmesinde **site** **Ayarlar'ı** seçecek ve Site Ayarlar görüntüleyebilirsiniz.
 
-2. Site Ayarları sayfasının **Site eylemleri** bölümünde **siteyi şablon olarak kaydet** bağlantısı ' nı seçin.
+2. Site **Şablonu sayfasının** Site Eylemleri Ayarlar Siteyi şablon olarak **kaydet bağlantısını** seçin.
 
-3. **Dosya adı** kutusuna **ExampleSite** girin ve **şablon adı** kutusuna **örnek site** girin.
+3. Dosya **adı kutusuna** **ExampleSite girin** ve Şablon adı **kutusuna Örnek** Site **girin.**
 
-4. Bu örnek için **Içerik Ekle** onay kutusunu boş bırakın.
+4. Bu örnek için İçerik Dahil **Edin onay** kutusunu boş bırakın.
 
-     Bu kutuyu seçerseniz, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] tüm listeleri ve belge kitaplıklarını ve bunların içeriğini. wsp dosyasına kaydeder. Bu, bazı durumlarda yararlı olsa da bu örnek için gerekli değildir.
+     Bu kutuyu seçersiniz, tüm listeleri ve belge kitaplıklarını ve [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] içeriklerini .wsp dosyasına kaydeder. Bu bazı durumlarda yararlı olsa da, bu örnek için gerekli değildir.
 
-5. İşlem başarıyla tamamlandığında,. wsp dosyasını görüntülemek için **Çözüm Galerisi** bağlantısını seçin.
+5. İşlem başarıyla tamamlandığında, .wsp **dosyasını görüntülemek** için çözüm galerisi bağlantısını seçin.
 
-     Çözüm Galerisi sayfasını daha sonra görüntülemek için, **Site eylemleri** menüsünü açın, site **ayarları**' nı seçin, **site koleksiyonu yönetimi** bölümünde **en üst düzeye git site ayarları** bağlantısını seçin ve ardından **galeriler** bölümünde **çözümler** bağlantısını seçin.
+     Çözüm galerisi sayfasını daha sonra görüntülemek  için **Site** Eylemleri menüsünü açın, Site **Ayarlar'ı** seçin, **Site** Koleksiyonu Yönetimi bölümünde En üst düzey **site** ayarlarına git bağlantısını seçin ve galeriler bölümünde Çözümler bağlantısını seçin. 
 
-6. Çözümler galerisinde, **ExampleSite** bağlantısını seçin.
+6. Çözüm galerisinde **ExampleSite bağlantısını** seçin.
 
-7. **Dosya indirme** iletişim kutusunda, dosyayı yerel sisteminize, varsayılan olarak, indirmeler klasörünüze kaydetmek için **Kaydet** düğmesini seçin.
+7. Dosya İndirme **iletişim** kutusunda, dosyayı varsayılan **olarak** İndirilenler klasörünüzdeki yerel sisteminize kaydetmek için Kaydet düğmesini seçin.
 
-## <a name="import-the-wsp-file"></a>. Wsp dosyasını içeri aktarma
- Artık yeniden kullanmak istediğiniz bir öğeyi içeren bir *. wsp* dosyanız olduğuna göre (özel site sütunu test sütunu), dosyaya erişmek için *. wsp* dosyasını içeri aktarın.
+## <a name="import-the-wsp-file"></a>.wsp dosyasını içeri aktarma
+ Artık yeniden kullanmak istediğiniz *bir öğeyi içeren bir .wsp* dosyanız (özel site sütunu Test Sütunu) sahip olduğunuza göre, buna erişmek için *.wsp* dosyasını içeri aktarın.
 
-### <a name="to-import-a-wsp-file"></a>Bir. wsp dosyasını içeri aktarmak için
+### <a name="to-import-a-wsp-file"></a>Bir .wsp dosyasını içeri aktarma
 
-1. ' De [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , menü çubuğunda   >    >  **Yeni** proje iletişim kutusunu göstermek için dosya yeni **Proje** ' yi seçin. IDE 'niz Visual Basic geliştirme ayarlarını kullanacak şekilde ayarlandıysa, menü çubuğunda **Dosya**  >  **Yeni proje**' yi seçin.
+1. menüsünde, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Yeni Dosya iletişim kutusunu görüntülemek **için**  >    >  **Project** **Yeni Dosya'Project** seçin. IDE'niz geliştirme ayarlarını Visual Basic olarak ayarlanmışsa, menü çubuğunda Dosya **Yeni**  >  **dosya'Project.**
 
-2. **Visual C#** veya **Visual Basic** altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. Visual **C# SharePoint** altındaki  Visual Basic düğümünü **genişletin** ve **ardından 2010 düğümünü** seçin.
 
-3. **Şablonlar** bölmesinde **SharePoint 2010 çözüm paketini içeri aktar** ' ı seçin, projenin adını WspImportProject1 olarak bırakın ve **Tamam** düğmesini seçin.
+3. Şablonlar **bölmesinde SharePoint 2010** Çözüm Paketi şablonunu  seçin, projenin adını WspImportProject1 olarak bırakın ve ardından **Tamam düğmesini** seçin.
 
-    **SharePoint Özelleştirme Sihirbazı** görüntülenir.
+    SharePoint **Özelleştirme Sihirbazı** görüntülenir.
 
-4. **Hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında, [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] daha önce oluşturduğunuz ikinci SharePoint alt sitesi için öğesini girin. Http://<em>sistem adı</em>/columntest2 adlı yeni özel alan öğesini bu alt siteye eklersiniz.
+4. Hata **ayıklama için siteyi ve güvenlik düzeyini belirtin** sayfasında, daha önce oluşturduğunuz ikinci SharePoint site için [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] girin. Yeni özel Alan öğesini (http://<em>sistem</em>adı /columntest2) bu alt siteye eksersiniz.
 
-5. **Bu SharePoint çözümünün güven düzeyi nedir?** bölümünde, seçimi **bir korumalı çözüm olarak dağıt** olarak bırakın.
+5. Bu **çözüm için güven düzeyi nedir? SharePoint,** seçimi Korumalı alanlı çözüm olarak **dağıt olarak bırakın.**
 
-6. **Yeni proje kaynağını belirtin** sayfasında, daha önce *. wsp* dosyasını kaydettiğiniz sistemdeki konuma gidin ve sonra **İleri** düğmesini seçin.
+6. Yeni **proje kaynağını belirtin sayfasında,** daha önce *.wsp* dosyasını kaydedip Sonraki düğmesini seçtiğiniz sistem konumunu **bulun.**
 
    > [!NOTE]
-   > Bu sayfada **son** düğmesini seçerseniz, *. wsp* dosyasındaki tüm kullanılabilir öğeler içeri aktarılır.
+   > Bu sayfada Son **düğmesini** seçerseniz, *.wsp* dosyasındaki tüm kullanılabilir öğeler içe aktarılır.
 
-7. **İçeri aktarılacak öğeleri seçin** kutusunda, listede **Test sütunu** hariç tüm onay kutularını temizleyin ve ardından **son** düğmesini seçin.
+7. İçeri **aktar menüsünde,** **Test** Sütunu dışındaki tüm onay kutularını temizleyin ve ardından Son **düğmesini** seçin.
 
-    Listede çok sayıda öğe bulunduğundan, listedeki tüm öğeleri seçmek için **CTRL** + **tuşuna** basın ' ı seçebilirsiniz, tüm onay kutularını temizlemek için ara çubuğu tuşunu ve ardından yalnızca **Test sütunu** öğesinin yanındaki onay kutusunu seçebilirsiniz.
+    Listede çok sayıda öğe **olduğundan, Ctrl** A tuşlarını seçerek listede yer alan tüm öğeleri seçebilir, tüm onay kutularını temizlemek için Ara Çubuğu tuşunu ve ardından yalnızca Test Sütunu öğesinin yanındaki onay kutusunu +   seçebilirsiniz.
 
-    İçeri aktarma işlemi tamamlandıktan sonra, **alanlar** adlı bir klasör içeren **WspImportProject1** adlı yeni bir proje oluşturulur. Bu klasörde özel site sütunu **Test sütunu** ve tanım dosyası *Elements.xml*.
+    İçeri aktarma işlemi tamam olduktan **sonra, Alanlar** adlı bir klasör içeren **WspImportProject1** adlı yeni bir proje oluşturulur. Bu klasörde özel site sütunu Test Sütunu **ve** tanım dosyası *Elements.xml.*
 
 ## <a name="deploy-the-project"></a>Projeyi dağıtma
- Son olarak, özel site sütununu görüntülemek için daha önce oluşturduğunuz ikinci SharePoint alt sitesine **WspImportProject1** dağıtın.
+ Son olarak, özel site sütununu görüntülemek için **wspImportProject1 SharePoint** oluşturduğunuz ikinci alt siteye dağıtın.
 
 ### <a name="to-deploy-the-project"></a>Projeyi dağıtmak için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , *. wsp* içeri aktarma projesini dağıtmak ve çalıştırmak için **F5** tuşunu seçin.
+1. içinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , *.wsp* içeri aktarma projesini dağıtmak ve çalıştırmak için **F5** anahtarını seçin.
 
-2. SharePoint sitesinde, site **eylemleri** menüsünü açın ve ardından site **ayarları** ' nı seçerek site ayarları sayfasını görüntüleyin.
+2. Site SharePoint Site Eylemleri menüsünü açın ve **site** eylemleri sayfasını görüntülemek için **Site Ayarlar'Ayarlar** seçin.
 
-3. **Galeriler** bölümünde, **site sütunları** bağlantısını seçin.
+3. Galeriler **bölümünde** Site sütunları **bağlantısını** seçin.
 
-4. **Özel sütunlar** bölümüne aşağı kaydırın.
+4. Ekranı aşağı kaydırarak **Özel Sütunlar bölümüne** gidin.
 
-     İlk SharePoint sitesinden içeri aktardığınız özel site sütununun listede göründüğünü unutmayın.
+     İlk siteden içe aktarılmış özel site sütun SharePoint listede göründüğüne dikkat edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Mevcut bir SharePoint sitesinden öğeleri içeri aktar](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
-- [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)
+- [Mevcut bir siteden öğeleri SharePoint alma](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
+- [Yeni SharePoint geliştirme](../sharepoint/developing-sharepoint-solutions.md)
 - [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)

@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fed286035722618a167ff904701a4d8886aab2f1bb496ed5a1a2e9090f00766
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d12c5308513f015b7fcc99b8073e138092d43ffc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121294537"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081112"
 ---
 # <a name="idiasymbolget_subtypeid"></a>IDiaSymbol::get_subTypeId
 Alt tür KIMLIĞINI alır.

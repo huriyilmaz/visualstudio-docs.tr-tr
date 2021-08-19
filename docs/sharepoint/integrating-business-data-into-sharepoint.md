@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: a68921a43a889b8a36204e3703c2e0003618b8139639d1cfab6ae8018ddb4eca
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0f4124a88447fea1ab22f391196e0f1174141111
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121352879"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122115544"
 ---
 # <a name="integrate-business-data-into-sharepoint"></a>İş verilerini SharePoint ile tümleştirme
   İş verilerini SharePoint ile tümleştirebilirsiniz. İş verileri [!INCLUDE[TLA#tla_sqlsvr](../sharepoint/includes/tlasharptla-sqlsvr-md.md)] , Siebel, SAP veya bir Web hizmeti gibi arka uç sunucu uygulamalarından gelebilir. kullanıcılar SharePoint içindeki dış listeleri veya iş verileri Web Bölümleri kullanarak iş verilerini görüntüleyebilir, ekleyebilir, güncelleştirebilir veya silebilir.  kullanıcılar bu verilere Microsoft Outlook gibi bir Microsoft Office uygulamasına çevrimdışı de erişebilirler. Daha fazla bilgi için bkz. [dış verileri nerede gösterebileceğiniz](/previous-versions/office/developer/sharepoint-2010/ee558737(v=office.14)).

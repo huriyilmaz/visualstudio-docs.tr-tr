@@ -11,14 +11,15 @@ ms.assetid: 5d0ae226-981d-4541-a801-fc4993fe663b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bdac0233901ac8571bbfb2a5d6659adf69e35298
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 4c5ac207ec1fc66554264d14f2aa9f0dccbb3773
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149195"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036683"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
 Adres eşlemesindeki bir girişi açıklar.

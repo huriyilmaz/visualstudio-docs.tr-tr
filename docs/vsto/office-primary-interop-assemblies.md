@@ -17,28 +17,28 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: d6f610e9cd1667b84f382f7b1f48c231a69ec44797bafc343f11a7c508636df1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: af8f6e830458ea106860e3a2fc1fc0347b294746
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121394178"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122115102"
 ---
 # <a name="office-primary-interop-assemblies"></a>Office birincil birlikte çalışma derlemeleri
 
-Bir Office projesinden bir Microsoft Office uygulamasının özelliklerini kullanmak için, uygulamanın birincil birlikte çalışma derlemesini (PIA) kullansanız gerekir. PIA, yönetilen kodun bir uygulamanın COM tabanlı Microsoft Office modeliyle etkileşim kurmalarına olanak sağlar.
+Office projesinden bir Microsoft Office uygulamanın özelliklerini kullanmak için, uygulama için birincil birlikte çalışma derlemesini (PIA) kullansanız gerekir. PIA, yönetilen kodun bir uygulamanın COM tabanlı Microsoft Office modeliyle etkileşim kurmalarına olanak sağlar.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
-Yeni bir proje Office, Visual Studio oluşturmak için gereken PIA'lara başvurular ekler. Bazı senaryolarda, ek PIA'lara başvurular eklemeniz (örneğin, Microsoft Office Word özelliğini bir projesinde Microsoft Office Excel).
+Yeni bir proje Office, Visual Studio oluşturmak için gereken PIA'lara başvurular ekler. Bazı senaryolarda, ek PIA'lara başvurular eklemeniz (örneğin, Microsoft Office Word özelliğini bir projesinde Microsoft Office Excel) kullanmak için.
 
-Bu konuda, Office projelerinde Microsoft Office PIA'larını kullanmanın Office açıklanmıştır:
+Bu konuda, farklı projelerde Microsoft Office PIA'larını kullanmanın Office açıklanmıştır:
 
 - [Projeleri derlemek ve çalıştırmak için birincil birlikte çalışma derlemelerini ayırma](#separateassemblies)
 
 - [Tek bir projede birden Microsoft Office uygulamanın özelliklerini kullanma](#usingfeatures)
 
-- [Özel uygulamalar için birincil birlikte çalışma derlemelerinin Microsoft Office listesi](#pialist)
+- [Özel uygulamalar için birincil birlikte çalışma derlemelerinin tam Microsoft Office listesi](#pialist)
 
 Birincil birlikte çalışma derlemeleri hakkında daha fazla bilgi için bkz. [Birincil birlikte çalışma derlemeleri.](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))
 
@@ -46,11 +46,11 @@ Birincil birlikte çalışma derlemeleri hakkında daha fazla bilgi için bkz. [
 
 ## <a name="separate-primary-interop-assemblies-to-build-and-run-projects"></a>Projeleri derlemek ve çalıştırmak için birincil birlikte çalışma derlemelerini ayırma
 
-Visual Studio bilgisayarda farklı PIA kümeleri kullanır. Bu farklı derleme kümeleri aşağıdaki konumlardadır:
+Visual Studio geliştirme bilgisayarında farklı PIA kümeleri kullanır. Bu farklı derleme kümeleri aşağıdaki konumlardadır:
 
 - Program dosyaları dizinindeki bir klasör
 
-  Derlemelerin bu kopyaları, kod yazmanız ve proje derlemek için kullanılır. Visual Studio derlemeleri otomatik olarak yüklemez.
+  Derlemelerin bu kopyaları, kod yazmanız ve proje derlemek için kullanılır. Visual Studio derlemeleri otomatik olarak yüklür.
 
 - Genel derleme önbelleği
 
@@ -62,34 +62,34 @@ Bu dosyaları Visual Studio, PIA'lar genel derleme önbelleğinin dışında, do
 
 PIA'ların bu kopyaları, Visual Studio sürümleri genel derleme önbelleğine kaydedilene kadar ortaya çıkabilir çeşitli geliştirme sorunlarından kaçınmanıza yardımcı olur.
 
-2017'Visual Studio başlayarak, piA'ların bu kopyaları geliştirme bilgisayarında aşağıdaki paylaşılan konumlara yüklenir:
+2017 Visual Studio başlayarak, PIA'ların bu kopyaları geliştirme bilgisayarında aşağıdaki paylaşılan konumlara yüklenir:
 
 - `%ProgramFiles%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\`
 
 - (veya `%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\` 64 bit işletim sistemlerinde)
 
 > [!NOTE]
-> Önceki sürümler Visual Studio, bu PIA'lar söz Office için Visual Studio Araçları\PIA klasörüne, söz `%ProgramFiles%` Visual Studio.
+> Önceki Visual Studio sürümleri için, bu PIA'lar söz Office için Visual Studio Araçları\PIA klasörünün o sürümünün altındaki `%ProgramFiles%` Visual Studio.
 > Örneğin: `%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Visual Studio Tools for Office\PIA\`
 
 ### <a name="primary-interop-assemblies-in-the-global-assembly-cache"></a>Genel derleme önbelleğinde birincil birlikte çalışma derlemeleri
 
 Belirli geliştirme görevlerini gerçekleştirmek için PIA'ların geliştirme bilgisayarına yüklenmiş ve genel derleme önbelleğine kayıtlı olması gerekir. PiA'lar genellikle geliştirme bilgisayarına Office otomatik olarak yüklenir. Daha fazla bilgi için, [bkz. Configure a computer to develop Office .](../vsto/configuring-a-computer-to-develop-office-solutions.md)
 
-Bu Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarında farklı PIA'lar Office gerekmez. Daha fazla bilgi için, [bkz. Tasarım ve Office çözümleri.](../vsto/designing-and-creating-office-solutions.md)
+Son Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarında farklı PIA'lar Office gerekmez. Daha fazla bilgi için [bkz. Özel çözümler Office oluşturma.](../vsto/designing-and-creating-office-solutions.md)
 
 <a name="usingfeatures"></a>
 
 ## <a name="use-features-of-multiple-microsoft-office-applications-in-a-single-project"></a>Tek bir projede birden Microsoft Office uygulamanın özelliklerini kullanma
 
-Office proje şablonu Visual Studio tek bir uygulamayla çalışacak şekilde Microsoft Office tasarlanmıştır. Birden çok Microsoft Office uygulamasındaki özellikleri kullanmak veya Visual Studio'de projesiz bir uygulamada veya bileşende özellikleri kullanmak için, gerekli PIA'lara bir başvuru eklemeniz gerekir.
+Bir Office proje şablonu Visual Studio tek bir uygulamayla çalışacak şekilde Microsoft Office tasarlanmıştır. Birden çok Microsoft Office uygulamasındaki özellikleri kullanmak veya Visual Studio'de projesiz bir uygulamada veya bileşende özellikleri kullanmak için, gerekli PIA'lara bir başvuru eklemeniz gerekir.
 
-Çoğu durumda, dizin altındaki bir kullanıcı tarafından yüklenmiş PIA'lara Visual Studio eklemeniz `%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\` gerekir. Derlemelerin bu sürümleri Başvuru Yöneticisi **iletişim** kutusunun Framework **sekmesinde** görünür. Daha fazla bilgi için [bkz. Nasıl Office derlemeleri aracılığıyla uygulamaları hedefleme.](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
+Çoğu durumda, dizin altındaki bir kullanıcı tarafından yüklenmiş olan PIA'lara Visual Studio eklemeniz `%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\` gerekir. Derlemelerin bu sürümleri Başvuru Yöneticisi **iletişim** kutusunun Framework **sekmesinde** görünür. Daha fazla bilgi için [bkz. Nasıl Office derlemeleri aracılığıyla uygulamaları hedefleme.](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
 
-PIA'ları genel derleme önbelleğine yüklemiş ve kaydettiyebilirsiniz; derlemelerin bu sürümleri Başvuru Yöneticisi iletişim kutusunun **COM** **sekmesinde** görünür. Derlemelerin bu sürümlerine başvuru eklemekten kaçınmanız gerekir çünkü bunları kullanırken ortaya çıkabilir bazı geliştirme sorunları vardır. Örneğin, genel derleme önbelleğinde FARKLı PIA'ların sürümlerini kaydettiyebilirsiniz, Başvuru Yöneticisi iletişim kutusunun **COM** sekmesinde derlemenin farklı bir sürümünü belirtse bile projeniz en son kaydedilen derlemenin sürümüne otomatik olarak bağlanacaktır. 
+GENEL derleme önbelleğine PIA'ları yüklemiş ve kaydettiyebilirsiniz; derlemelerin bu sürümleri Başvuru Yöneticisi iletişim kutusunun **COM** **sekmesinde** görünür. Derlemelerin bu sürümlerine başvuru eklemekten kaçınmanız gerekir çünkü bunları kullanırken ortaya çıkabilir bazı geliştirme sorunları vardır. Örneğin, genel derleme önbelleğinde FARKLı PIA'ların sürümlerini kaydettiyebilirsiniz, Başvuru Yöneticisi iletişim kutusunun **COM** sekmesinde derlemenin farklı bir sürümünü belirtse bile projeniz en son kaydedilen derlemenin sürümüne otomatik olarak bağlanacaktır. 
 
 > [!NOTE]
-> Bazı derlemeler, bu derlemelere başvurulan bir derleme ekleniyorsa projeye otomatik olarak eklenir. Örneğin, Word, Excel, Outlook, Microsoft Forms veya Graph derlemelerine bir başvuru Graph ve `Office.dll` `Microsoft.Vbe.Interop.dll` derlemelerine başvurular otomatik olarak eklenir.
+> Bazı derlemeler, bu derlemelere başvurulan bir derleme ekleniyorsa projeye otomatik olarak eklenir. Örneğin, Word, Excel, Outlook, Microsoft Forms veya Graph derlemelerine başvuru eklerken ve `Office.dll` `Microsoft.Vbe.Interop.dll` derlemelerine yapılan Graph eklenir.
 
 <a name="pialist"></a>
 

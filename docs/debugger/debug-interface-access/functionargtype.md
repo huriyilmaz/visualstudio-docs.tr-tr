@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fcf8af92582a6fbc53a54751c0b352739ade28893c7f9b3cc8ac70cf7a04c6e4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 10fd3139fa4a6d2de26d636e0689cbedcc2559c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345383"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122036615"
 ---
 # <a name="functionargtype"></a>FunctionArgType
 Bir işlevin her parametresi bir sembolle `SymTagFunctionArgType` tanımlanır.

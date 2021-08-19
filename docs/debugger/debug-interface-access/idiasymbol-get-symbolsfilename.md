@@ -1,6 +1,6 @@
 ---
-description: Simgelerin yüklendiği dosyanın adını alır.
-title: 'IDiaSymbol:: get_symbolsFileName | Microsoft Docs'
+description: Sembollerin yükleniyor olduğu dosyanın adını alın.
+title: IDiaSymbol::get_symbolsFileName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: c1aa39ee-d645-431e-bf5f-0640c0998934
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: fe20bacc1100fc28258422626e44274813ce7253
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: d151c1ca21b1407f6edcacd7cc2bc3a7d44185c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155763"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147105"
 ---
 # <a name="idiasymbolget_symbolsfilename"></a>IDiaSymbol::get_symbolsFileName
-Simgelerin yüklendiği dosyanın adını alır.
+Sembollerin yükleniyor olduğu dosyanın adını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,16 +35,16 @@ HRESULT get_symbolsFileName (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Simgelerin yüklendiği dosyanın adını döndürür.
+[out] Sembollerin yükleniyor olduğu dosyanın adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik yalnızca bir [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değeri olan semboller için geçerlidir ve bu `SymTagExe` da genel kapsama sahiptir.
+ Bu özellik yalnızca [SymTagEnum Numaralama](../../debugger/debug-interface-access/symtagenum.md) değeri genel kapsamı olan `SymTagExe` semboller için geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

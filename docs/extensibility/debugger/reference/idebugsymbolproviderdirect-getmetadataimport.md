@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 831a95390d1a81e8fee786fb202ac79b0eb4452b64bded729130f96c8c73e727
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 504ad9f7d995376e5e7bd848fb9cdb983cddce20
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402187"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132463"
 ---
 # <a name="idebugsymbolproviderdirectgetmetadataimport"></a>IDebugSymbolProviderDirect::GetMetaDataImport
 Meta veri içeri aktarma bilgilerini alır.

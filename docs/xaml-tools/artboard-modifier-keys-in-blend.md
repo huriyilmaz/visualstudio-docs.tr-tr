@@ -1,6 +1,6 @@
 ---
 title: Blend’de çalışma yüzeyi değiştirici tuşları
-description: Çalışma yüzeyinde yakınlaştırma, yeniden boyutlandırma ve kaydırma gibi eylemleri değiştirmek için Visual Studio için Blend değiştirici tuşlarını kullanarak klavye kısayolları hakkında bilgi edinin.
+description: çalışma yüzeyinde yakınlaştırma, yeniden boyutlandırma ve kaydırma gibi eylemleri değiştirmek için Visual Studio için Blend değiştirici tuşlarını kullanarak klavye kısayolları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,14 +8,15 @@ ms.assetid: 50732733-ff49-41ba-8c44-4f6a3875ec1c
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 655a291cec967663422011ca620a15d7cb080ce2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 32e455a60ccd3e773906f3d114eb1414fcd54a5e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889232"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098833"
 ---
 # <a name="artboard-modifier-keys-in-blend"></a>Blend’de çalışma yüzeyi değiştirici tuşları
 Bazı klavye kısayolları ilişkili menü öğelerine sahip değildir, bu da [!INCLUDE[blend_subs](../debugger/includes/blend_subs_md.md)] Kullanıcı arabirimini kullanarak bunları keşfedemeyeceğiniz anlamına gelir. Aşağıdaki tabloda, bir nesneyi değiştirme gibi bir eylemi değiştiren kısayollar listelenmektedir.

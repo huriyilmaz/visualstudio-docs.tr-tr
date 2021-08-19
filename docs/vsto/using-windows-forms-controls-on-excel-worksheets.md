@@ -1,6 +1,6 @@
 ---
-title: Çalışma Windows formlarında Excel Forms denetimlerini kullanma
-description: Microsoft Excel Forms'Windows a denetimler eklerken olduğu Microsoft Excel Formlar denetimleri ekleme hakkında bilgi Windows öğrenin.
+title: Çalışma Windows Formlar denetimlerini Excel kullanma
+description: Windows Forms'Windows denetimler eklerken olduğu Microsoft Excel çalışma kitaplarınıza form formlarına nasıl Windows öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,15 +17,15 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 30c8bd62801dfa26cc53f4660948e2f75d44e974a7a7126fc71a66bd3dc8791c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 98a48f2c1f67c8758f9d5019e01f711192ab59b3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121267461"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122082718"
 ---
-# <a name="use-windows-forms-controls-on-excel-worksheets"></a>Çalışma Windows formlarında Excel Forms denetimlerini kullanma
-  Formlara Windows Formlar denetimleri Microsoft Office Excel formlara denetimler ekley istediğiniz şekilde Windows. Belgeler üzerinde denetimlerle çalışma hakkında genel bilgi için bkz. [Windows form denetimlerine Office genel bakış.](../vsto/windows-forms-controls-on-office-documents-overview.md)
+# <a name="use-windows-forms-controls-on-excel-worksheets"></a>Çalışma Windows Formlar denetimlerini Excel kullanma
+  Formlar Windows formlarına, Microsoft Office Excel formlara denetimler ekley istediğiniz şekilde Windows abilirsiniz. Belgeler üzerinde denetimlerle çalışma hakkında genel bilgi için bkz. [Windows forms denetimlerine Office genel bakış.](../vsto/windows-forms-controls-on-office-documents-overview.md)
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -36,10 +36,10 @@ ms.locfileid: "121267461"
  Üst hücrenin boyutu değiştirilirken denetimi otomatik olarak yeniden boyutlandırılmak için ayarlayın. Daha fazla bilgi için [bkz. Nasıl ekleyebilirsiniz: Çalışma sayfası hücrelerinde denetimleri yeniden boyutlandırma.](../vsto/how-to-resize-controls-within-worksheet-cells.md)
 
 ### <a name="add-components-that-are-shared-by-all-worksheets"></a>Tüm çalışma sayfaları tarafından paylaşılan bileşenleri ekleme
- Çalışma sayfaları yerine Çalışma Kitabı Tasarımcısına , gibi tüm çalışma sayfaları arasında <xref:System.Data.DataSet> paylaşmak istediğiniz bileşenleri ekleyebilirsiniz. Bileşen, bileşen tepsisinde görünür.
+ Gibi tüm çalışma sayfaları arasında paylaşmak istediğiniz bileşenleri çalışma sayfaları yerine Çalışma Kitabı <xref:System.Data.DataSet> Tasarımcısı'nda ekleyebilirsiniz. Bileşen, bileşen tepsisinde görünür.
 
 ### <a name="formula-for-embedding-controls"></a>Ekleme denetimleri için formül
- denetim çubuğunda bir denetim Excel Formül Çubuğunda **=EMBED("WinForms.Control.Host","")** **ifadesinin yer alır.** Bu metin gereklidir ve silinmemelidir.
+ Denetim çubuğundan bir denetim Excel Formül Çubuğunda **=EMBED("WinForms.Control.Host","")** **ifadesinin yer alır.** Bu metin gereklidir ve silinmemelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl olur: Çalışma sayfası hücrelerinde denetimleri yeniden boyutlandırma](../vsto/how-to-resize-controls-within-worksheet-cells.md)

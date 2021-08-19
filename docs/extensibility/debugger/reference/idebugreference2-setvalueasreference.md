@@ -11,17 +11,18 @@ ms.assetid: 94a545d2-16b9-45e9-b2e7-4e49ff90aad0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c78da74368285c3dcfe06c13fdf8e665da0b7947
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 48030e2314764767b049502ce081a2711a00111b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075789"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132541"
 ---
 # <a name="idebugreference2setvalueasreference"></a>IDebugReference2::SetValueAsReference
 Başka bir başvurudan başvurunun değerini ayarlar. Daha sonraki kullanımlar için ayrılmıştır.

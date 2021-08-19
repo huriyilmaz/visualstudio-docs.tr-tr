@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c663fda50dd6abb97dc5eb9f617e2a7ad46fc72ad5eaf59617483f03908f8858
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ff1383b8ff7fdf1557415cda2616ecbfd7d2585a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121419122"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080864"
 ---
 # <a name="vsgdbg-class"></a>VsgDbg Sınıfı
 Grafik tanılamanın uygulama içinde bileşeninin programlı denetimi için bir arabirimi temsil eder.

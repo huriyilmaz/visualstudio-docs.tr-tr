@@ -12,12 +12,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: ff348223ddbf6ee9d543542fb2280504e9f60484c520e270a5529120ac8c5f83
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6fd7ae10e576cf9c5645fb56be5e242ea926d207
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121355353"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033843"
 ---
 # <a name="net-framework-usage-performance-rules"></a>.NET Framework kullanımı performans kuralları
 the.NET Framework Kullanımı kategorisindeki performans kuralları, iyileştirilmiş olan belirli yöntemleri ve ayrıca atık toplama ve kilitleme gibi performans sorunları için araştırılacak daha genel kullanım desenlerini de tanımlamayı sağlar.

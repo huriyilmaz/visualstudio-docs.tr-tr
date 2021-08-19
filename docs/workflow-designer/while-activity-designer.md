@@ -13,16 +13,16 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: f55218e75f887d8fa3d16213fd3cbc9adbb09b43a5404826bc7c2d6d055e9ab7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f7d5859ae9841eff105b7a18f5f4730d440df94f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121365841"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098885"
 ---
 # <a name="while-activity-designer"></a>While Etkinlik Tasarımcısı
 
-Etkinlik içinde yer alan etkinliği yürütürken belirtilen true <xref:System.Activities.Statements.While> olarak <xref:System.Activities.Statements.While.Body%2A> <xref:System.Activities.Statements.While.Condition%2A> **değerlendirilir.** Söz edilen etkinlik hiçbir zaman yürütülmez. Içerdiği etkinliğin en az bir kez yürütültülürse, bunun yerine <xref:System.Activities.Statements.DoWhile> etkinliğini kullanın.
+Etkinlik içinde yer alan etkinliği yürütürken belirtilen true <xref:System.Activities.Statements.While> olarak <xref:System.Activities.Statements.While.Body%2A> <xref:System.Activities.Statements.While.Condition%2A> **değerlendirilir.** Içerdiği etkinlik hiçbir zaman yürütülmez. Içerdiği etkinliğin en az bir kez yürütültülürse, bunun yerine <xref:System.Activities.Statements.DoWhile> etkinliğini kullanın.
 
 ## <a name="while-properties-in-workflow-designer"></a>Özellikler İş Akışı Tasarımcısı
 

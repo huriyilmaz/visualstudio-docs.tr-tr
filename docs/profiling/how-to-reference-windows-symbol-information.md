@@ -1,6 +1,6 @@
 ---
-title: Başvuru pencereleri sembol bilgileri | Microsoft Docs
-description: Visual Studio Profil Oluşturma Araçları program ikili dosyalarında işlev adları gibi sembolik adları çözümlemek için sembol (. pdb) dosyalarını nasıl kullandığını öğrenin.
+title: Windows sembol bilgilerini başvuru | Microsoft Docs
+description: Visual Studio Profil Oluşturma Araçları sembol (. pdb) dosyalarını, program ikili dosyalarında işlev adları gibi sembolik adları çözümlemek için nasıl kullandığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,18 +12,19 @@ ms.assetid: b7c67318-6be2-4b1e-a161-077b1f4a7c30
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c788be648b77a36b8da7027c89a7d9cb047b57d5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6ab39590b0bf6103c9a9e6ce70f2502a2ed20f9d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99907091"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033427"
 ---
 # <a name="how-to-reference-windows-symbol-information"></a>Nasıl yapılır: Başvuru pencereleri sembol bilgileri
-Visual Studio Profil Oluşturma Araçları sembol kullanın (.*pdb*) dosyaları, program ikili dosyalarında işlev adları gibi sembolik adları çözümlemek için. Doğru şekilde indirmek ve güncelleştirmek için aşağıdaki adımları izleyebilirsiniz. Yerel bilgisayardaki Windows sürümü için *pdb* dosyaları.
+Visual Studio Profil Oluşturma Araçları sembol kullanır (.*pdb*) dosyaları, program ikili dosyalarında işlev adları gibi sembolik adları çözümlemek için. Doğru şekilde indirmek ve güncelleştirmek için aşağıdaki adımları izleyebilirsiniz. yerel bilgisayardaki Windows sürümü için *pdb* dosyaları.
 
 > [!NOTE]
 > Bu ayar varolan raporları etkilemez. Yalnızca sembol sunucusu belirttikten sonra oluşturulan raporların sembol bilgisi olacaktır.

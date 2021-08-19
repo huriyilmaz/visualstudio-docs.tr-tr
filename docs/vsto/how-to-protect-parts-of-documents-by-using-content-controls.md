@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: içerik denetimlerini kullanarak belge parçalarını koruma'
-description: Visual Studio 'Yu, içerik denetimlerini kullanarak bir Microsoft Word belgesinin parçalarını korumak için nasıl kullanabileceğinizi öğrenin.
+description: içerik denetimlerini kullanarak bir Microsoft Word belgesinin parçalarını korumak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -19,17 +19,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: cc333871d4f371530db84a0c4f07ab891db2a937
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 49988266ebee5821323ee3a9994312d99033c9f3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825478"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046496"
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>Nasıl yapılır: içerik denetimlerini kullanarak belge parçalarını koruma
-  Belgenin bir bölümünü koruduğunuzda, kullanıcıların belgenin o bölümündeki içeriği değiştirmesini veya silmesini engelleyebilirsiniz. İçerik denetimlerini kullanarak Microsoft Office Word belgesinin parçalarını koruyabileceğiniz çeşitli yollar vardır:
+  Belgenin bir bölümünü koruduğunuzda, kullanıcıların belgenin o bölümündeki içeriği değiştirmesini veya silmesini engelleyebilirsiniz. içerik denetimlerini kullanarak Microsoft Office Word belgesinin parçalarını koruyabileceğiniz çeşitli yollar vardır:
 
 - Bir içerik denetimini koruyabilirsiniz.
 
@@ -40,7 +41,7 @@ ms.locfileid: "107825478"
 ## <a name="protect-a-content-control"></a><a name="EditDeleteControl"></a> İçerik denetimini koruma
  Tasarım zamanında veya çalışma zamanında, belge düzeyindeki bir projede denetimin özelliklerini ayarlayarak kullanıcıların bir içerik denetimini düzenlemesini veya silmesini engelleyebilirsiniz.
 
- Ayrıca, bir VSTO eklenti projesi kullanarak çalışma zamanında belgeye eklediğiniz içerik denetimlerini de koruyabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md).
+ ayrıca, çalışma zamanında bir belgeye eklediğiniz içerik denetimlerini VSTO bir eklenti projesi kullanarak koruyabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md).
 
 ### <a name="to-protect-a-content-control-at-design-time"></a>Tasarım zamanında bir içerik denetimini korumak için
 
@@ -63,7 +64,7 @@ ms.locfileid: "107825478"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ContentControlHowToProtect/ThisDocument.cs" id="Snippet2":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ContentControlHowToProtect/ThisDocument.vb" id="Snippet2":::
 
-     Aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> VSTO eklenti projesindeki iki farklı nesnenin ve özelliklerinin kullanımını gösterir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> . Bu kodu çalıştırmak için `ThisAddIn` projenizdeki sınıfa kodu ekleyin ve `AddProtectedContentControls` `ThisAddIn_Startup` olay işleyicisinden yöntemi çağırın.
+     aşağıdaki kod örneği, <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> <xref:Microsoft.Office.Tools.Word.RichTextContentControl> bir VSTO eklentisi projesindeki iki farklı nesnenin ve özelliklerinin kullanımını gösterir. Bu kodu çalıştırmak için `ThisAddIn` projenizdeki sınıfa kodu ekleyin ve `AddProtectedContentControls` `ThisAddIn_Startup` olay işleyicisinden yöntemi çağırın.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet14":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet14":::
@@ -100,7 +101,7 @@ ms.locfileid: "107825478"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_ContentControlHowToProtect/ThisDocument.cs" id="Snippet1":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_ContentControlHowToProtect/ThisDocument.vb" id="Snippet1":::
 
-     Bir VSTO eklenti projesi için aşağıdaki kod örneği, etkin belgedeki ilk paragrafa metin ekler, ilk paragrafı seçer ve ardından bir başlatır <xref:Microsoft.Office.Tools.Word.GroupContentControl> . Bu kodu çalıştırmak için `ThisAddIn` projenizdeki sınıfa kodu ekleyin ve `ProtectFirstParagraph` `ThisAddIn_Startup` olay işleyicisinden yöntemi çağırın.
+     bir VSTO eklentisi projesi için aşağıdaki kod örneği, etkin belgedeki ilk paragrafa metin ekler, ilk paragrafı seçer ve ardından bir başlatır <xref:Microsoft.Office.Tools.Word.GroupContentControl> . Bu kodu çalıştırmak için `ThisAddIn` projenizdeki sınıfa kodu ekleyin ve `ProtectFirstParagraph` `ThisAddIn_Startup` olay işleyicisinden yöntemi çağırın.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb" id="Snippet15":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs" id="Snippet15":::
@@ -111,4 +112,4 @@ ms.locfileid: "107825478"
 - [Nasıl yapılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md)
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
 - [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
-- [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [çalışma zamanında Office belgelere denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)

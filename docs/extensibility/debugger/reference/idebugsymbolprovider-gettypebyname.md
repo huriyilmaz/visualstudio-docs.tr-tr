@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem bir sembol adını bir sembol türüyle eşler.
-title: IDebugSymbolProvider::GetTypeByName | Microsoft Docs
+description: Bu yöntem bir sembol adını sembol türüyle eşleştirir.
+title: 'IDebugSymbolProvider:: GetTypeByName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b4b27b5dc829ab68405c4cbcda6ece4a8a625fb7b9d4e2c7ffe86d9df0faf75d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fd14af4e9002505e422ecf53994bb183451d2c50
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121306809"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063726"
 ---
 # <a name="idebugsymbolprovidergettypebyname"></a>IDebugSymbolProvider::GetTypeByName
-Bu yöntem bir sembol adını bir sembol türüyle eşler.
+Bu yöntem bir sembol adını sembol türüyle eşleştirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,19 +47,19 @@ int GetTypeByName(
 
 ## <a name="parameters"></a>Parametreler
 `pszClassName`\
-[in] Sembol adı.
+'ndaki Sembol adı.
 
 `nameMatch`\
-[in] Eşleşme türünü (örneğin, büyük/büyük/büyük harfe duyarlı) seçer. Bir değer [NAME_MATCH.](../../../extensibility/debugger/reference/name-match.md)
+'ndaki Eşleşme türünü (örneğin, büyük/küçük harfe duyarlı) seçer. [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) numaralandırmasından bir değer.
 
 `ppField`\
-[out] Sembol türünü bir [IDebugField nesnesi olarak](../../../extensibility/debugger/reference/idebugfield.md) döndürür.
+dışı Sembol türünü bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi olarak döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem [GetClassTypeByName'in genel bir sürümüdür.](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)
+ Bu yöntem, [Getclassttypeınfo](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md)için genel bir sürümdür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

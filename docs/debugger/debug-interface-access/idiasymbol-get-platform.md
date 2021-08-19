@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 145daa38ee20c6904bb25409f2127bb585595ee06ead5a027503f115bfb6791c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3c05237056b826ec47978f01e5f2258ae19b157b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121363040"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081184"
 ---
 # <a name="idiasymbolget_platform"></a>IDiaSymbol::get_platform
 Derlemenin derlenmiş olduğu platform türünü alın.

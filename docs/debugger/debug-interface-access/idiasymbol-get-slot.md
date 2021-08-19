@@ -1,6 +1,6 @@
 ---
-description: Konumun yuva numarasını alır.
-title: 'IDiaSymbol:: get_slot | Microsoft Docs'
+description: Konumun yuva numarasını alan.
+title: IDiaSymbol::get_slot | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 97e405b8-483f-4da0-91e7-ca4d88251ecd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bd3fcbcba541ada2fabeff134fe600940a81fd9
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: a97f674378e6ac44cbff36e01e59d68d9a59b0cf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161797"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081144"
 ---
 # <a name="idiasymbolget_slot"></a>IDiaSymbol::get_slot
-Konumun yuva numarasını alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) olduğunda kullanın `LocIsSlot` .
+Konumun yuva numarasını alan. [LocationType Numaralama olduğunda](../../debugger/debug-interface-access/locationtype.md) `LocIsSlot` kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +35,13 @@ HRESULT get_slot (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Konumun yuva numarasını döndürür.
+[out] Konumun yuva numarasını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

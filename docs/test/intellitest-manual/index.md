@@ -8,22 +8,23 @@ helpviewer_keywords:
 - IntelliTest, Visual Studio IntelliTest developer testing tool
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 856c730720be83571798819feae66eb6080f200b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ca6fc65adf546506b79f7cfc1b756e87172ad08c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920590"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033102"
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Microsoft IntelliTest’e Genel Bakış
 
 IntelliTest, hataları erkenden bulmanıza olanak sağlar ve test bakımı maliyetlerini düşürür. IntelliTest, otomatikleştirilmiş ve şeffaf bir test yaklaşımı kullanarak .NET kodunuz için bir aday test paketi oluşturabilir. Belirttiğiniz *doğruluk özellikleri*, test paketi oluşturma işlemine daha fazla yol gösterebilir. IntelliTest, test edilen kod geliştikçe, otomatik olarak test paketini de geliştirir.
 
 > [!NOTE]
-> IntelliTest yalnızca Enterprise sürümünde kullanılabilir. .NET Framework hedefleyen C# kodu için desteklenir. .NET Core ve .NET Standard Şu anda desteklenmiyor.
+> ıntellitest yalnızca Enterprise sürümünde kullanılabilir. .NET Framework hedefleyen C# kodu için desteklenir. .NET Core ve .NET Standard Şu anda desteklenmiyor.
 
 **Karakterizasyon testleri** IntelliTest, geleneksel birim testi paketi açısından kodun davranışını belirlemenize olanak sağlar.
 Böyle bir test paketi, gerileme paketi olarak kullanılabilir ve eski veya bilindik olmayan kodun yeniden düzenlenmesiyle ilişkili karmaşıklığın giderilmesinde temeli oluşturur.

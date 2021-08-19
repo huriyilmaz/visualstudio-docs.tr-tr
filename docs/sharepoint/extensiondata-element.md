@@ -1,6 +1,6 @@
 ---
 title: ExtensionData Öğesi | Microsoft Docs
-description: Yeni proje öğesi şemasında bir öğe olan ExtensionData öğesi SharePoint bilgilerini görüntüleme.
+description: Proje öğesi şemasında yer alan bir öğe olan ExtensionData öğesi SharePoint başvuru bilgilerini görüntüleme.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: f175c0b4cdc4a9b5fb9537821d2ffcc646d44bf14119a132d7561439e92f5e6a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ec317073601f766dab2042ab6c77542914e87b59
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121425381"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122115752"
 ---
 # <a name="extensiondata-element"></a>ExtensionData öğesi
   Proje öğesiyle ilişkili özel veri öğeleri koleksiyonunu SharePoint temsil eder.
@@ -52,7 +52,7 @@ ms.locfileid: "121425381"
 |[ProjectItem](../sharepoint/projectitem-element.md)|Bir proje SharePoint temsil eder. Bu öğe, dosyanın gerekli kök `.spdata` öğesi.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bir nesnenin özelliğini kullanarak SharePoint bir proje öğesiyle özel verileri Visual Studio, verileri proje öğesi için <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> **dosyasındaki ExtensionData** öğesine `.spdata` kaydeder. Daha fazla bilgi için [bkz. Verileri proje sisteminin SharePoint kaydetme.](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)
+ Özel verileri bir SharePoint nesnesinin özelliğini kullanarak bir SharePoint ile ilişkilendirmek, Visual Studio proje öğesi için <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> **dosyasındaki ExtensionData** öğesine `.spdata` kaydeder. Daha fazla bilgi için [bkz. Verileri proje sisteminin SharePoint kaydetme.](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)
 
 ## <a name="element-information"></a>Öğe bilgileri
 

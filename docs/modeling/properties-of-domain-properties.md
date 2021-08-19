@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d2305e63c33e7a8fa5b3a4c7bad68f1ee4fe70039a380384712a73c69b74221
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 82fa25201813e6a4380162a11fdcfcf5736c82be
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121428893"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122034038"
 ---
 # <a name="properties-of-domain-properties"></a>Etki Alanı Özelliklerinin Özellikleri
 Bir *alan özelliği* , bir değeri tutabilecek bir model öğesinin özelliğidir. Örneğin, `Person` etki alanı sınıfının özellikleri `Name` ve olabilir `BirthDate` . DSL tanımında etki alanı özellikleri, diyagramdaki etki alanı sınıfı kutusunda ve DSL Gezgini 'ndeki etki alanı sınıfında listelenir. Daha fazla bilgi için bkz. [Domain-Specific dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).

@@ -1,6 +1,6 @@
 ---
-description: Kullanıcı tanımlı bir türün bir üyesinin boyutunu alır.
-title: 'IDiaSymbol:: get_sizeInUdt | Microsoft Docs'
+description: Kullanıcı tanımlı bir türün üyesinin boyutunu alan.
+title: IDiaSymbol::get_sizeInUdt | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cf8079880ee889a949595b9e7f325bce30ab0a03ca1bdc33b630e1638b8ba8de
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 351f74cca82ff57efa45f2314e5bbcab4dfc7751
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420545"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081160"
 ---
 # <a name="idiasymbolget_sizeinudt"></a>IDiaSymbol::get_sizeInUdt
-Kullanıcı tanımlı bir türün bir üyesinin boyutunu alır.
+Kullanıcı tanımlı bir türün üyesinin boyutunu alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT get_sizeInUdt(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `DWORD` Üyenin boyutunu belirten bir işaretçisi.
+[out] Üyenin `DWORD` boyutunu belirten bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

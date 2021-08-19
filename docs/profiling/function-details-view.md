@@ -17,12 +17,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fcc18ec69b14aef16e16d1674080bc0e06666e6505a64e34bf888abc1e4d2724
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 98771014f903b88ad57ec8713fd2867094c483b2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121301284"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122033804"
 ---
 # <a name="function-details-view"></a>İşlev Ayrıntıları Görünümü
 **Işlev Ayrıntıları görünümü** penceresi aşağıdaki bilgileri görüntüler:
@@ -106,12 +106,12 @@ ms.locfileid: "121301284"
 |Değer|Açıklama|
 |-|-|
 |**Kapsamlı ayırmalar (ayırmalar)**|-Çağıran bir **işlev** için, işlevin çağrıldığı seçili işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı, seçilen işlevin çağırdığı işlevler tarafından ayrılan nesneleri içerir.<br />- **Işlev gövdesi** için, kendi kodunu yürütürken seçili işlev tarafından ayrılan nesne sayısı. Seçili işlev tarafından çağrılan işlevlerde ayrılan nesneler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örnekleri tarafından ayrılan nesne sayısı. Bu sayı, işlevin çağırdığı işlevler tarafından ayrılan nesneleri içerir.|
-|**Kapsamlı baytlar (bayt)**|-Çağıran bir **işlev** için, işlevin çağırdığı seçili işlevin örnekleri tarafından ayrılan bayt sayısı. Bu sayı, seçilen işlevin çağırdığı işlevler tarafından ayrılan baytları içerir.<br />- **Işlev gövdesi** için, seçili işlev tarafından ayrılan ve kendi kodunu yürütürken ayrılan toplam bayt sayısı. Seçilen işlev tarafından çağrılan işlevlerde ayrılan baytlar dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örnekleri tarafından ayrılan bayt sayısı. Bu sayı, işlevin çağırdığı işlevler tarafından ayrılan baytları içerir.|
+|**Kapsamlı baytlar (bayt)**|-Çağıran bir **işlev** için, işlevin çağırdığı seçili işlevin örnekleri tarafından ayrılan bayt sayısı. Bu sayı, seçilen işlevin çağırdığı işlevler tarafından ayrılan baytları içerir.<br />- **Işlev gövdesi** için, seçili işlev tarafından ayrılan ve kendi kodunu yürütürken ayrılan toplam bayt sayısı. Seçilen işlev tarafından çağrılan işlevlerde ayrılan baytlar dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örnekleri tarafından ayrılan bayt sayısı. Sayı, işlevin çağıran işlevleri tarafından ayrılan baytları içerir.|
 
 ### <a name="concurrency"></a>Eşzamanlılık
- Aşağıdaki tabloda eşzamanlılık yöntemi kullanılarak toplanan profil oluşturma verileri için performans ölçümü listesindeki değerler açıklanmaktadır.
+ Aşağıdaki tabloda eşzamanlılık yöntemi kullanılarak toplanan verilerin profilini oluşturma için Performans Ölçümü listesinde yer alan değerler açıklanıyor.
 
 |Değer|Açıklama|
 |-|-|
-|**Kapsamlı çekişme (çekişmeler)**|-Çağıran bir **işlev** için, işlevin çağrıldığı seçili işlevin örneklerinde gerçekleşen kaynak çekişmesi olayları sayısı. Bu sayı, seçilen işlevin çağrılan işlevlerde çekişme olaylarını içerir.<br />- **Işlev gövdesi** için, işlev kendi kodunu yürütürken gerçekleşen çekişme olaylarının toplam sayısı. Seçili işlev tarafından çağrılan işlevlerde gerçekleşen çekişmeler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerinde gerçekleşen çekişme olayları sayısı. Bu sayı, işlev çağrılan işlevlerde oluşan çekişme olaylarını içerir.|
-|**Kapsamlı engellenme süresi (engellenme süresi)**|-Çağıran bir işlev için, işlevin çağrıldığı seçili işlevin örnekleri için kaynak çekişmede harcanan zaman. Süre, seçilen işlevin çağrıldığı işlevlerde engellenme süresini içerir.<br />- **Işlev gövdesi** için, işlev kendi kodunu yürütürken oluşan çekişme olaylarında harcanan toplam süre. Seçilen işlevin çağrıldığı işlevlerde oluşan çekişmeler dahil değildir.<br />-Çağrılan bir işlev için, seçilen işlevin çağrılan işlevin örnekleri için kaynak çekişmede harcanan zaman. Süre, işlevin çağrıldığı işlevlerde oluşan engellenme süresini içerir.|
+|**Kapsayıcı İçerikler (İçerikler)**|- Bir **Çağırma İşlevi** için, işlevin çağır olduğu seçili işlevin örneklerde meydana gelen kaynak mukkimlik olaylarının sayısı. Sayı, seçilen işlevin çağıran işlevlerde yer alan etkinliklerini içerir.<br />- İşlev **Gövdesi için,** işlev kendi kodunu yürütürken meydana gelen toplam olay sayısı. Seçilen işlev tarafından çağrılan işlevlerde oluşan içerikler dahil değildir.<br />- Çağrılır bir işlev için, seçilen işlev tarafından çağrılan işlevin örneklerde meydana gelen olay sayısıdır. Sayısı, işlevinin çağıran işlevlerinde meydana gelen olaylarını içerir.|
+|**Kapsayıcı Engellenen Saat (Engellenen Saat)**|- Çağıran bir işlev için, işlevin çağıran seçili işlevin örnekleri için kaynak musiki olaylarında harcanan süre. Bu süre, seçilen işlevin çağırmış olduğu işlevlerde engellenen zamanı içerir.<br />- İşlev **Gövdesi için,** işlev kendi kodunu yürütürken meydana gelen olaylarda harcanan toplam süre. Seçilen işlevin çağır olduğu işlevlerde oluşan içerikler dahil değildir.<br />- Çağrılır bir işlev için, seçilen işlevin çağır olduğu işlev örnekleri için kaynak musiki olaylarında harcanan süre. Süre, işlevin çağırmış olduğu işlevlerde meydana gelen engellenen zamanı içerir.|

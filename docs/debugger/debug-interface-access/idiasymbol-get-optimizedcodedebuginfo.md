@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 681323c2f30163662fcfc83b9175a3ef453eccb28db93cd5cc01001a5f9fdd3f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b5cd438ead3b76f2c562c1e84304ba3b2819d3fa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379809"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122081192"
 ---
 # <a name="idiasymbolget_optimizedcodedebuginfo"></a>IDiaSymbol::get_optimizedCodeDebugInfo
 İşlevin iyileştirilmiş koda özgü hata ayıklama bilgileri içerdiğini belirten bir bayrak verir.
