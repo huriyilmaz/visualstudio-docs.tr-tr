@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfası aralıklarında program aracılığıyla metin arama'
-description: Visual Studio 'Yu, Microsoft Excel çalışma sayfası aralıklarında program aracılığıyla metin aramak için nasıl kullanabileceğinizi öğrenin.
+description: Microsoft Excel çalışma sayfası aralıklarında program aracılığıyla metin aramak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -15,14 +15,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 762cb3fc35b43bfd3ad15aea669adff2d370b632
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: dd001c197f9c64c5d0fa5c89a3920a40f427cf58
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827948"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155739"
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>Nasıl yapılır: çalışma sayfası aralıklarında program aracılığıyla metin arama
   <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>Nesnesinin yöntemi, <xref:Microsoft.Office.Interop.Excel.Range> Aralık içinde metin aramanızı sağlar. Bu metin, veya gibi bir çalışma sayfası hücresinde görünebilen hata dizelerinden herhangi biri de olabilir `#NULL!` `#VALUE!` . Hata dizeleri hakkında daha fazla bilgi için bkz. [hücre hata değerleri](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values).

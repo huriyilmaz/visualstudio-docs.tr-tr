@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b70893b9fdcd3e957b8aa8bc2685e0845b49676da285c5661f477cae633311d3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 402a73f6e9f0b866c661b5508d6c785e29d6236f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239171"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145450"
 ---
 # <a name="idebugarrayobjectgetcount"></a>IDebugArrayObject::GetCount
 Dizideki öğelerin sayısını alır.

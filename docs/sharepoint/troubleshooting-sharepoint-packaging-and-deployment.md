@@ -26,12 +26,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 5ac5c6dc29380d160724d46e43222b2958f1c75b7dd5c33a2bf88f98427a6b38
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6d02271664f9a259754c19c9ae90612b76e1645c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385285"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156259"
 ---
 # <a name="troubleshoot-sharepoint-packaging-and-deployment"></a>Paketleme SharePoint dağıtım sorunlarını giderme
   Bu konu, çözümlerini paketlerken ve dağıtırken karşılaş olabileceğiniz çeşitli SharePoint kapsar.
@@ -76,9 +76,9 @@ ms.locfileid: "121385285"
 ### <a name="resolution"></a>Çözüm
  Bu sorunu çözmek için aşağıdaki adımları gerçekleştirin:
 
-1. KB967535 güncelleştirmesini DÜZELTME: Microsoft Desteği Vista ve [Windows Windows Server 2008 için IIS 7.0'daki ASP.NET'daki](https://support.microsoft.com/help/967535)iki sorunu düzeltmek için bir düzeltme kullanılabilir.
+1. DÜZELTME: Microsoft Desteği Vista ve Windows [Server 2008 için IIS 7.0'daki ASP.NET'daki](https://support.microsoft.com/help/967535)iki sorunu düzeltmek için bir düzeltme, Windows makalesinde açıklanan şekilde KB967535 güncelleştirmesini yükleyin.
 
-2. Web.config dosyasına aşağıdaki Web.config ekleyin:
+2. Aşağıdaki satırı Web.config ekleyin:
 
     ```xml
     <compilation batch="false" optimizeCompilations="true">
@@ -91,7 +91,7 @@ ms.locfileid: "121385285"
  'Çözüm Ekle' dağıtım adımlarında hata oluştu: Çözümde cab dosyası ayıklanamadı.
 
 ### <a name="resolution"></a>Çözüm
- Bu sorunu çözmek için, proje öğelerinin adlarında parantezleri SharePoint kaldırın.
+ Bu sorunu çözmek için proje öğelerinin adlarında parantezleri SharePoint kaldırın.
 
 ## <a name="error-appears-when-deploying-a-visual-web-part-to-a-site-on-a-different-web-application"></a>Farklı bir web uygulamasındaki bir siteye görsel web bölümü dağıtırken hata oluştu
  Bir görsel Web bölümünü, şu anda dağıtıldığında (görsel Web parçasının SiteUrl özelliğini değiştirerek) dışında bir Web uygulamasındaki bir siteye ilk kez dağıtıldığında bir hata alırsınız.
@@ -103,13 +103,13 @@ ms.locfileid: "121385285"
  Bu hata, görsel Web bölümü özelliklerinin geri çekiliyor olması nedeniyle SharePoint. Görsel Web bölümünü başarıyla dağıtmak için **F5** anahtarını seçerek çözümü yeniden dağıtın.
 
 ## <a name="warning-appears-when-deploying-nested-user-controls"></a>İç içe kullanıcı denetimleri dağıtırken uyarı görüntülenir
- Bu uyarı, kullanıcı denetimi içeren bir görsel Web SharePoint ya da görsel Web bölümü ya da başka bir kullanıcı denetimi içeren kullanıcı denetimi gibi iç içe kullanıcı denetimlerine sahip bir SharePoint çözümü dağıtarak oluşur. Bu uyarı, bir tasarımcıya denetim eklemek için Araç Kutusundan sürükleyerek veya Kaynak görünümünde @Register yönergesini kullanarak oluşur.
+ Bu uyarı, kullanıcı denetimi içeren bir görsel Web bölümü veya görsel Web bölümü ya da başka bir kullanıcı denetimi içeren kullanıcı denetimi gibi iç içe kullanıcı denetimlerine sahip bir SharePoint çözümü dağıtarak oluşur. Bu uyarı, bir tasarımcıya denetim eklemek için Araç Kutusundan sürükleyerek veya Kaynak görünümünde @Register yönergesini kullanarak oluşur.
 
 ### <a name="error-message"></a>Hata iletisi
  Uyarı 1 '[*Denetim Adı*]' öğesi bilinen bir öğe değil. Bu durum, Web sitesinde bir derleme hatası varsa veya web.config eksikse oluşabilir.
 
 ### <a name="resolution"></a>Çözüm
- Proje sistemi iç içe geçmiş bir kullanıcı denetimine sahip değilse [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] IntelliSense sağlayamaz ve uyarıyı yalıtır. Proje oluşturmamışsa ve tasarımcı kapat ve yeniden açmamışsa ya da otomatik geri alma seçeneği etkinse, hata ayıklamadan sonra kullanıcı denetimi SharePoint hive'dan geri çekiliyorsa proje sistemi iç içe kullanıcı denetiminden haberdar değildir.
+ Proje sistemi iç içe bir kullanıcı denetimine sahip değilse [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] IntelliSense sağlayamaz ve uyarıyı yalıtır. Proje oluşturmamışsa ve tasarımcı kapat ve yeniden açmamışsa ya da otomatik geri alma seçeneği etkinse, hata ayıklamadan sonra kullanıcı denetimi SharePoint hive'dan geri çekiliyorsa proje sistemi iç içe kullanıcı denetiminden haberdar değildir.
 
  Bu uyarıyı kaldırmak için projeyi derlemeniz, ardından tasarımcıyı kapatıp yeniden açmanız veya proje için otomatik geri çekme seçeneğini devre dışı bırakmanız gerekir. Bunu yapmak için proje özellikleri iletişim kutusunun Hata **ayıklamadan** sonra otomatik **geri SharePoint** onay kutusunun işaretini kaldırın.
 

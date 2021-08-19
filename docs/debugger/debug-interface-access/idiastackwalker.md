@@ -11,14 +11,15 @@ ms.assetid: 4a61a22a-9cf8-4ea1-9e6e-b42f96872d40
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a86609f43bb6e825dac1b595b5e32951c3313a34
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c27a18923ae5b305702994e4d76be7dd291eb8c5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147340"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113566"
 ---
 # <a name="idiastackwalker"></a>IDiaStackWalker
 . Pdb dosyasındaki bilgileri kullanarak bir yığın izlenecek yöntemler sağlar.

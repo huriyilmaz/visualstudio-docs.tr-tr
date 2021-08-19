@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 235c36be2fd6ec4ee98b2efc97ee37a0d5077425aaa4f7f2ad62d767e0eb6a67
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: feb808e98f8930582a71ba40643806cdf4ce7a73
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402707"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111001"
 ---
 # <a name="idebugprogramhost2"></a>IDebugProgramHost2
 Bu arabirim bir programla ilgili konak (işlem) bilgilerini sağlar.

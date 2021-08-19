@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7f00aebf3f079138abb9b6705c714313c712415ba3661e641be71dbc5382f8a8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 21d77611c621eca9a20f467a012395d5d509aa9f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121372561"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123911"
 ---
 # <a name="generate-a-method-in-visual-studio"></a>Visual Studio'de yöntem oluşturma
 
@@ -46,7 +46,7 @@ Bu kod oluşturma aşağıdakiler için geçerlidir:
 2. Ardından, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
+      - **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
    - **Fare**
       - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
       - Kırmızı çizginin üzerine gelin ve ![hata ampulü](media/error-bulb.png) simgesi görüntülenir.

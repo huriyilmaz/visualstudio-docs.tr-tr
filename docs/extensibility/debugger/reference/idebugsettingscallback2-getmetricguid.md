@@ -1,6 +1,6 @@
 ---
-description: Bir ölçümün adı verilen benzersiz tanımlayıcısını alır.
-title: 'IDebugSettingsCallback2:: GetMetricGuid | Microsoft Docs'
+description: Bir ölçümün adına göre benzersiz tanımlayıcısını verir.
+title: IDebugSettingsCallback2::GetMetricGuid | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,20 +9,21 @@ ms.assetid: 91092763-3362-4857-adf0-231bc1254206
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ea1c9554035993daa9b2e0b9fe23ad1ab4f839c5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 93351dc79b79818693e8f7273895b1ccc4a85c68
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071265"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126290"
 ---
 # <a name="idebugsettingscallback2getmetricguid"></a>IDebugSettingsCallback2::GetMetricGuid
-Bir ölçümün adı verilen benzersiz tanımlayıcısını alır.
+Bir ölçümün adına göre benzersiz tanımlayıcısını verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,19 +47,19 @@ private int GetMetricGuid(
 
 ## <a name="parameters"></a>Parametreler
 `pszType`\
-'ndaki Ölçüm türü.
+[in] Ölçümün türü.
 
 `guidSection`\
-'ndaki Bölümün benzersiz tanıtıcısı.
+[in] Bölümün benzersiz tanımlayıcısı.
 
 `pszMetric`\
-'ndaki Ölçümün adı.
+[in] Ölçümün adı.
 
 `pguidValue`\
-dışı Ölçümün benzersiz tanımlayıcısını döndürür.
+[out] Ölçümün benzersiz tanımlayıcısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

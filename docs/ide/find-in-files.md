@@ -1,6 +1,6 @@
 ---
 title: Dosyalarda Bul
-description: Dosya içinde Bul özelliğini ve belirli bir dosya kümesinde arama yapmak için nasıl kullanacağınızı öğrenin.
+description: Dosyalarda Bul özelliğini ve bu özelliği kullanarak belirli bir dosya kümesinde arama yapmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/02/2021
 ms.topic: conceptual
@@ -18,52 +18,53 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c2f3756b63cc07ed701a36b34a96c581acd9eb38
-ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+ms.openlocfilehash: 8bc709578539ff299647bae583f8370a3ba1b8d8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115094690"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101836"
 ---
 # <a name="find-in-files"></a>Dosyalarda Bul
 
-**Dosyalarda bul** , belirtilen dosya kümesinde arama yapmanıza olanak tanır. bulduğu Visual Studio eşleşmeler ıde 'deki **sonuçları bul** penceresinde listelenir. Sonuçların görünmesi, **Bul ve Değiştir** Iletişim kutusunun **dosyalarda bul** sekmesinde belirlediğiniz seçeneklere bağlıdır.
+**Dosyalarda Bul,** belirli bir dosya kümesinde aramanızı sağlar. Bulan Visual Studio eşleşmeleri **IDE'de** Sonuçları Bul penceresinde listelenir. Sonuçların nasıl görünmesi, Bul ve Değiştir iletişim kutusunun **Dosyalarda** Bul sekmesinde **seçtiğiniz seçeneklere** bağlıdır.
 
 ::: moniker range=">=vs-2019"
 
-:::image type="content" source="media/find-files-vs2019.png" alt-text="Visual Studio 2019 ' deki bul ve değiştir iletişim kutusunun, dosyaları bul sekmesinde açık olan ekran görüntüsü.":::
+:::image type="content" source="media/find-files-vs2019.png" alt-text="Visual Studio 2019'da Dosyalarda Bul sekmesinin açık olduğu Bul ve Değiştir iletişim kutusunun ekran görüntüsü.":::
 
 > [!IMPORTANT]
-> **Visual Studio 2019** [**sürüm 16,6**](/visualstudio/releases/2019/release-notes-v16.6/) veya önceki bir sürümünü kullanıyorsanız **bul ve değiştir** iletişim kutusu burada göründüğü gibi görünmeyebilir. ekranınızda gördüklerinize uyacak açıklamalar için bu sayfanın [Visual Studio 2017](find-in-files.md?view=vs-2017&preserve-view=true) sürümüne geçin.
+> **Visual Studio 2019** sürüm [**16.6**](/visualstudio/releases/2019/release-notes-v16.6/) veya önceki bir  sürümü kullanıyorsanız, Bul ve Değiştir iletişim kutusu burada göründüğü gibi görünmüyor olabilir. Bu sayfanın [Visual Studio 2017](find-in-files.md?view=vs-2017&preserve-view=true) sürümüne geçiş yapmak için ekranda gördüğünüzle eş olacak açıklamalara gidin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-:::image type="content" source="media/find-files-vs2017.png" alt-text="Visual Studio 2017 ' deki bul ve değiştir iletişim kutusunun, dosyaları bul sekmesinde açık olan ekran görüntüsü.":::
+:::image type="content" source="media/find-files-vs2017.png" alt-text="Visual Studio 2017'de Dosyalarda Bul sekmesinin açık olduğu Bul ve Değiştir iletişim kutusunun ekran görüntüsü.":::
 
 ::: moniker-end
 
-## <a name="how-to-display-find-in-files"></a>Dosyalarda bulma görüntüleme
+## <a name="how-to-display-find-in-files"></a>Dosyalarda Bul'ı görüntüleme
 
-**Bul ve Değiştir** iletişim kutusunu açmak için aşağıdaki adımları kullanın veya **CTRL** + **SHIFT** + **F** tuşlarına basın.
+Bul ve Değiştir iletişim kutusunu açmak **için aşağıdaki** adımları kullanın veya Ctrl Shift F  + **tuşlarına** + **basın.**
 
-1. Menü çubuğunda **Düzenle**  >  **Bul ve Değiştir**' i seçin.
+1. Menü çubuğunda Bul ve **Değiştir'i**  >  **seçin.**
 
-1. Dışarı açılan menüden **dosyalarda bul '** ı seçin.
+1. Açılır **menüden Dosyalarda** Bul'a tıklayın.
 
-Bir bul işlemini iptal etmek için **CTRL** + **Kes**' e basın.
+Bul işlemini iptal etmek için **Ctrl** Break tuşlarına + **basın.**
 
 > [!NOTE]
-> **Bul ve Değiştir** Aracı, `Hidden` veya özniteliğiyle Dizin aramaz `System` .
+> Bul **ve Değiştir** aracı, veya özniteliğine sahip dizinlerde arama `Hidden` `System` yapar.
 
 ::: moniker range="vs-2017"
 
-## <a name="find-what"></a>Şunları bulun:
+## <a name="find-what"></a>Neyi bulun:
 
-Yeni bir metin dizesi veya ifade aramak **için, bunu Aranan kutusunda belirtin** .
+Yeni bir metin dizesi veya ifade aramak için, Bunu Bul **kutusunda** belirtin.
 
 ::: moniker-end
 
@@ -71,41 +72,41 @@ Yeni bir metin dizesi veya ifade aramak **için, bunu Aranan kutusunda belirtin*
 
 ## <a name="search-box"></a>Arama kutusu
 
-Yeni bir metin dizesi veya ifade aramak için arama kutusunda belirtin. En son aradığınız 20 dizeden herhangi birini aramak için, açılan listeyi açın ve dizeyi seçin.
+Yeni bir metin dizesini veya ifadeyi aramak için Arama kutusunda belirtin. En son aramak istediğiniz 20 dizeden herhangi birini aramak için açılan listeyi açın ve dizeyi seçin.
 
-Aşağıdaki seçenekleri seçebilir veya temizleyebilirsiniz:
+Aşağıdaki seçenekleri kullanabilir veya temizebilirsiniz:
 
-- **Büyük/küçük harf eşleştir** -aramanızın büyük/küçük harfe duyarlı olduğundan emin olmak için bu seçeneği kullanın.
-- **Sözcüğün tamamını Eşleştir** -bu seçeneği kullanarak aramanızın yalnızca tam sözcük eşleşmeleri döndürdüğünden emin olun.
-- **Normal Ifadeleri kullan** -bu seçeneği, arama kutusunda (veya **Değiştir** metin kutusunda) eşleştirilecek metin desenlerini tanımlayan özel gösterimler kullanmak için kullanın. Bu gösterimlerin bir listesi için bkz. [Visual Studio normal Ifadeleri kullanma](../ide/using-regular-expressions-in-visual-studio.md).
+- **Eşleşme durumu** - Aramanızı büyük/büyük/büyük harfe duyarlı olduğundan emin olmak için bu seçeneği kullanın.
+- **Tam sözcüğü eşle** - Aramanızı yalnızca tam sözcük eşleşmeleri döndürecek şekilde emin olmak için bu seçeneği kullanın.
+- **Normal ifadeler kullan** - Bu seçeneği, Arama kutusunda (veya Değiştir metin kutusunda) eşleşmeye yönelik metin desenlerini tanımlayan özel ifadeler **kullanmak** için kullanın. Bu ifadelerin listesi için [bkz. Visual Studio.](../ide/using-regular-expressions-in-visual-studio.md)
 
     > [!Important]
-    > **Ifade Oluşturucu** düğmesi, arama kutusunun yanında görünür ve yalnızca **Normal ifadeleri kullan** onay kutusunu işaretlediyseniz görünür.
+    > İfade **Oluşturucusu** düğmesi, Arama kutusunun yanında yalnızca Normal ifadeler kullan **onay kutusunu seçtiyebilirsiniz.**
     >
-    > :::image type="content" source="media/find-files-expression-builder-vs-2019.png" alt-text="Dosya içinde bul iletişim kutusunun, Ifade Oluşturucusu düğmesine ve normal Ifadeler kullan onay kutusu etrafında anahat içeren ekran görüntüsü.":::
+    > :::image type="content" source="media/find-files-expression-builder-vs-2019.png" alt-text="İfade Oluşturucusu düğmesinin ve Normal İfadeleri Kullan onay kutusunun çevresindeki ve ana hatlarını içeren Dosyalarda Bul iletişim kutusunun ekran görüntüsü.":::
 
-## <a name="look-in"></a>Arama yeri
+## <a name="look-in"></a>Şuna bakın:
 
-**Içinde ara** açılan listesinden seçtiğiniz seçenek, **dosyalarda bul** 'un tüm çalışma alanını, tüm çözümü, geçerli projeyi, geçerli dizini, tüm açık belgeleri veya geçerli belgeyi arayacağını belirler.
+Görünüm açılan listesinden  seçtiğiniz seçenek, Dosyalarda  Bul seçeneğinin çalışma alanının tamamına, çözümün tamamına, geçerli projeye, geçerli dizine, tüm açık belgelere veya geçerli belgeye bakıp arama olmadığını belirler.
 
-Ayrıca, aramak istediğiniz yeri bulmak için bitişik **gezinme (...)** düğmesini de kullanabilirsiniz. Daha da iyi bir dizin belirttiyseniz, bu düğme değiştirmek yerine yeni dizini ekler. Örneğin, "bak" değeri ".\Code" ise, **göz at (...)** düğmesine tıklayıp "paylaşılan kod" adlı bir klasöre gidebilirsiniz. **(...)** Kutusu artık ".\Code;" öğesini gösterir. \Shared Code "ve Find komutu yürütüldüğünde, her iki klasörde da arama yapılır.
+Arama yapmak istediğiniz yeri bulmak **için bitişik Gözat (...)** düğmesini de kullanabilirsiniz. Daha da iyisi, zaten bir dizin belirttiyseniz, bu düğme yerine yeni dizini ekler. Örneğin, "Look in" değeriniz ".\Code" ise Gözat **(...)** düğmesine tıklayabilirsiniz ve "Paylaşılan Kod" adlı bir klasöre gitebilirsiniz. Gözat **(...)** kutusunda artık ".\Code;. \Shared Code" (Paylaşılan Kod) ve Find komutu yürütülürken bu klasörlerin her ikisi de aranacak.
 
-Aramanızı iyileştirmek için aşağıdaki seçenekleri seçebilir veya temizleyebilirsiniz:
+Aramanızı geliştirmek için aşağıdaki seçenekleri kullanabilir veya temizebilirsiniz:
 
-- **Dış öğe Ekle** -bu seçeneği, "Windows. h" gibi, bir çözümün parçası olmayan, örneğin "Windows. h" gibi harici öğeleri dahil etmek için kullanın.
-- **Çeşitli dosyaları dahil et** -bu seçeneği, açtığınız ve bir çözümün parçası olmayan dosyalar gibi çeşitli dosyaları dahil etmek için kullanın.
+- **Dış öğeleri dahil** etme - Başvurabilirsiniz ancak çözümün parçası olmayan "windows.h" gibi dosyalar gibi dış öğeleri dahil etmek için bu seçeneği kullanın.
+- **Çeşitli dosyaları dahil etme** - Bu seçeneği, açtığım ancak çözümün parçası olmayan dosyalar gibi çeşitli dosyaları dahil etmek için kullanın.
 
 ## <a name="file-types"></a>Dosya türleri
 
-**Dosya türleri** seçeneği, dizinde **Bakılacak** dosya türlerini gösterir. Belirli türlerin dosyalarını bulacak önceden yapılandırılmış bir arama dizesi girmek için listedeki herhangi bir öğeyi seçin.
+Dosya **türleri seçeneği,** Dizinlerde ara içinde aranan **dosya türlerini** gösterir. Bu belirli türlerde dosyaları bulacak önceden yapılandırılmış bir arama dizesi girmek için listeden herhangi bir öğeyi seçin.
 
-:::image type="content" source="media/find-file-types.png" alt-text="Dosyalarda bul iletişim kutusunun dosya türleri bölümünün ekran görüntüsü.":::
+:::image type="content" source="media/find-file-types.png" alt-text="Dosyalarda Bul iletişim kutusunun Dosya Türleri bölümünün ekran görüntüsü.":::
 
-Birden çok dosya türünü, noktalı virgül () ile ayırarak arayabilirsiniz `;` . Ayrıca, bir ünlem işaretiyle () herhangi bir yola veya dosya türüne önek ekleyerek klasörleri ve dosyaları dışlayabilirsiniz `!` .
+Bunları noktalı virgül () ile ayırarak birden çok dosya türü `;` arayabilirsiniz. Ayrıca, herhangi bir yola veya dosya türüne ünlem işareti () ön eki eklerini kullanarak klasörleri ve dosyaları hariç `!` tutabilirsiniz.
 
-### <a name="append-results"></a>Sonuçları sona Ekle
+### <a name="append-results"></a>Sonuçları ekleme
 
-Geçerli aramadan önceki arama sonuçlarına sonuçları eklemek için bu seçeneği kullanın.
+Geçerli aramanın sonuçlarını önceki arama sonuçlarına eklemek için bu seçeneği kullanın.
 
 ::: moniker-end
 
@@ -113,92 +114,92 @@ Geçerli aramadan önceki arama sonuçlarına sonuçları eklemek için bu seçe
 
 ### <a name="expression-builder"></a>İfade Oluşturucusu
 
-Arama dizenizde normal ifadeler kullanmak istiyorsanız, arama kutusunun yanındaki bitişik  **Ifade Oluşturucu** düğmesini seçin. Daha fazla bilgi için bkz. [Visual Studio normal Ifadeleri kullanma](../ide/using-regular-expressions-in-visual-studio.md).
+Arama dizesinde normal ifadeler kullanmak için, arama kutusunun yanındaki bitişik  **expression Builder** düğmesini seçin. Daha fazla bilgi için [bkz. normal ifadeleri Visual Studio.](../ide/using-regular-expressions-in-visual-studio.md)
 
 > [!NOTE]
-> **Ifade Oluşturucu** düğmesi yalnızca **Bul seçenekleri** altında **Normal ifadeleri kullan** seçeneğini belirlediyseniz etkindir.
+> İfade **Oluşturucusu** düğmesi yalnızca Bul seçenekleri altında Normal **İfadeleri Kullan'ı** **seçtiydiyseniz etkinleştirilir.**
 
 ## <a name="look-in"></a>Konum:
 
-**Arama** açılan listesinden seçilen seçenek, **dosyalarda bul '** un yalnızca şu anda etkin olan dosyalarda mi yoksa belirli klasörlerde depolanan tüm dosyalarda mı arayacağını belirler.
+Arama açılan listesinden **seçilen seçenek,** Dosyalarda  Bul seçeneğinin yalnızca şu anda etkin olan dosyalarda mı yoksa belirli klasörlerde depolanan tüm dosyalarda mı arama yaptığına karar verilsin.
 
-Listeden bir arama kapsamı seçin veya **Arama Klasörleri seç** iletişim kutusunu ve kendi dizin kümesini girmek Için, **Araştır (...)** düğmesine tıklayın. Ayrıca, doğrudan **Ara** kutusuna bir yol yazabilirsiniz.
+Listeden bir arama kapsamı seçin veya Gözat **(...)**  düğmesine tıklayarak Arama Klasörlerini Seç iletişim kutusunu görüntüleyin ve kendi dizin kümenizi girin. Ayrıca, Doğrudan Arama kutusuna bir **yol da girebilirsiniz.**
 
 > [!WARNING]
-> **tüm çözümü** veya **geçerli Project** seçeneklerini belirlerseniz, proje ve çözüm dosyaları aranmaz. Proje dosyalarına bakmak isterseniz, bir arama klasörü seçin.
+> Çözümün Tamamı **veya Geçerli Çözüm** seçeneklerini **Project** proje ve çözüm dosyaları aranır. Proje dosyalarına bakmak için bir arama klasörü seçin.
 
 > [!NOTE]
-> Kaynak kodu denetiminden kullanıma aldığınız bir dosyayı aramak için **Ara '** yı kullanırsanız, yalnızca yerel makinenize yüklenmiş olan dosyanın sürümü bulunur.
+> Kaynak kodu **denetiminden** kullanıma alınmış bir dosyayı aramak için Arama seçeneğini kullanırsanız, yalnızca yerel makinenize indirilen dosyanın sürümü bulunur.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-## <a name="include-subfolders"></a>Alt klasörleri dahil et
+## <a name="include-subfolders"></a>Alt klasörleri dahil etmek
 
-**Arama** klasörü alt klasörlerinin aranacağını belirtir.
+Look in klasörünün alt **klasörlerinin aranacak** olduğunu belirtir.
 
-## <a name="find-options"></a>Bulma seçenekleri
+## <a name="find-options"></a>Seçenekleri bulma
 
-**Seçenekleri bul** bölümünü genişletebilir veya daraltabilirsiniz. Aşağıdaki seçenekleri seçebilir veya temizleyebilirsiniz:
+Seçenekleri bul bölümünü genişletebilirsiniz **veya daraltabilirsiniz.** Aşağıdaki seçenekleri kullanabilir veya temizebilirsiniz:
 
-**Büyük/küçük harf eşleştir**
+**Eşleşme durumu**
 
-Seçildiğinde, bir **bul sonucu** arama büyük/küçük harfe duyarlı olacaktır
+Seçildiğinde, Sonuçları **Bul araması** büyük/küçük harfe duyarlı olur
 
-**Sözcüğün tamamını Eşleştir**
+**Tam sözcüğü eşle**
 
-Seçildiğinde, **sonuçları bul** penceresi yalnızca tüm sözcük eşleşmelerini döndürür.
+Seçildiğinde, Sonuçları **Bul pencereleri** yalnızca tam sözcük eşleşmeleri geri döner.
 
-**Normal Ifadeleri kullanma**
+**Normal İfadeler Kullanma**
 
-Bu onay kutusu işaretliyse, **bulma** veya **değiştirme** metin kutularında eşleşmek üzere metin desenleri tanımlamak için özel gösterimler kullanabilirsiniz. Bu gösterimlerin bir listesi için bkz. [Visual Studio normal Ifadeleri kullanma](../ide/using-regular-expressions-in-visual-studio.md).
+Bu onay kutusu seçiliyse, Bul veya Değiştir metin kutularında eşleşmek üzere metin desenlerini tanımlamak için **özel** **notalar** kullanabilirsiniz. Bu ifadelerin listesi için [bkz. Visual Studio.](../ide/using-regular-expressions-in-visual-studio.md)
 
 **Bu dosya türlerine bakın**
 
-Bu liste, dizinde **Bakılacak** dosya türlerini gösterir. Bu alan boşsa, dizinlerde **Ara içindeki** tüm dosyalar aranacaktır.
+Bu liste, Dizinlerde ara içinde aranan **dosya türlerini** gösterir. Bu alan boşsa Dizinlerde ara **dizinleri içinde yer alan** tüm dosyalar aranır.
 
-Belirli türlerin dosyalarını bulacak önceden yapılandırılmış bir arama dizesi girmek için listedeki herhangi bir öğeyi seçin.
+Bu belirli türlerde dosyaları bulacak önceden yapılandırılmış bir arama dizesi girmek için listeden herhangi bir öğeyi seçin.
 
 ## <a name="result-options"></a>Sonuç seçenekleri
 
-**Sonuç seçenekleri** bölümünü genişletebilir veya daraltabilirsiniz. **Liste sonuçları** altındaki aşağıdaki seçenekler seçilebilir veya temizlenemez:
+Sonuç seçenekleri bölümünü genişletebilirsiniz **veya daraltabilirsiniz.** Liste sonuçları altındaki **aşağıdaki seçenekler** seçilebilir veya temiz olabilir:
 
-**Arama sonuçları 1 penceresi**
+**Sonuçları bulma 1 penceresi**
 
-Seçildiğinde, geçerli aramanın sonuçları, **sonuçları Bul 1** penceresinin içeriğini değiştirir. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. bu pencereyi el ile açmak için, **görünüm** menüsünden **diğer Windows** ' yi seçin ve ardından **sonuçları bul 1**' i seçin.
+Seçildiğinde, geçerli aramanın sonuçları Sonuçları Bul **1 penceresinin içeriğinin yerini** alar. Arama sonuçlarınızı görüntülemek için bu pencere otomatik olarak açılır. Bu pencereyi el ile açmak için Görünüm **menüsünden Diğer Windows'yi** **ve** ardından Sonuçları Bul **1'i seçin.**
 
-**Sonuçları bul 2 penceresi**
+**Sonuçları bulma 2 penceresi**
 
-Seçildiğinde, geçerli aramanın sonuçları, **bulma sonuçları 2** penceresinin içeriğinin yerini alır. Bu pencere, arama sonuçlarınızı göstermek için otomatik olarak açılır. bu pencereyi el ile açmak için, **görünüm** menüsünden **diğer Windows** ' yi seçin ve **sonuçları bul 2**' yi seçin.
+Seçildiğinde, geçerli aramanın sonuçları Sonuçları Bul **2 penceresinin içeriğinin yerini** alar. Arama sonuçlarınızı görüntülemek için bu pencere otomatik olarak açılır. Bu pencereyi el ile açmak için Görünüm **menüsünden Diğer** **Windows'ı seçin** ve Sonuçları Bul **2'yi seçin.**
 
 > [!TIP]
-> **Diğer** + **1** veya **alt** + **2** tuşlarına basarak sonuçlar penceresi arasında geçiş yapabilirsiniz.
+> Alt 1 veya Alt 2 **tuşlarına** basarak sonuçlar + **pencereleri** arasında  + **geçişler yapmak için kullanabilirsiniz.**
 
-**Sonuçları bul tablosu**
+**Sonuç tablosu bulma**
 
 Aramanın sonuçlarını metin listesi yerine tablo biçiminde görüntüler.
 
-**Sonuçları sona Ekle**
+**Sonuçları ekleme**
 
-Aramadan sonuçları önceki arama sonuçlarına ekler.
+Aramanın sonuçlarını önceki arama sonuçlarına ekler.
 
-**Yalnızca dosya adlarını görüntüle**
+**Yalnızca dosya adlarını görüntüleme**
 
-Arama eşleşmeleri içeren dosyaların bir listesini görüntüler.
+Arama eşleşmelerini görüntülemek yerine arama eşleşmelerini içeren dosyaların listesini görüntüler.
 
 ::: moniker-end
 
 ## <a name="multiple-searches"></a>Birden çok arama
 
-Diğer aramaları gerçekleştirirken sonuçları tek bir aramadan tutabilirsiniz. Bu, sonuçları karşılaştırmayı ve yan yana görmeyi kolaylaştırır.
+Diğer aramaları yaparken sonuçları bir aramadan tutabilirsiniz. Bu, sonuçları karşılaştırmayı ve yan yana görmeyi kolaylaştırır.
 
-:::image type="content" source="media/find-files-search-results.png" alt-text="Üç arama sonucu olan arama sonuçları penceresinin, sekmeler olarak gösterildiği ekran görüntüsü.":::
+:::image type="content" source="media/find-files-search-results.png" alt-text="Sekmeler olarak gösterilen üç arama sonucuyla Arama Sonuçları penceresinin ekran görüntüsü.":::
 
-Birkaç arama sonucunu tutmak için, her aramadan sonra **sonuçları tut** düğmesini seçin. Daha sonra, başka bir şey aradığınızda sonuçlar yeni bir sekmede gösterilir. En fazla beş arama sonucunu izleyebilirsiniz. Gösterildiği beş arama sonucu zaten varsa, sonraki arama en eski arama sonucu sekmesini yeniden kullanacaktır.
+Çeşitli arama sonuçlarını tutmak için, her **aramadan sonra** Sonuçları Tut düğmesini seçin. Ardından, başka bir şey için arama yapınca sonuçlar yeni bir sekmede gösterilir. En fazla beş aramanın sonuçlarını tutabilirsiniz. Gösterilen beş arama sonucu varsa, sonraki arama en eski arama sonucu sekmesini yeniden kullanmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dosyalarda Değiştir](../ide/replace-in-files.md)
+- [Dosyalarda değiştirme](../ide/replace-in-files.md)
 - [Metin bulma ve değiştirme](../ide/finding-and-replacing-text.md)
 - [Visual Studio komutları](../ide/reference/visual-studio-commands.md)

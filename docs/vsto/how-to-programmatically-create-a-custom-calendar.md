@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 9ff88bcc982eb70994844559836295f441f59ce707bf1a125e378b2ae1e780db
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 144b64bd5f38cca5dda638e8c787ecdd5e09b8da
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121408766"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155934"
 ---
 # <a name="how-to-programmatically-create-a-custom-calendar"></a>Nasıl yapılanlar: Program aracılığıyla özel takvim oluşturma
   Bu örnek **PersonalCalendar** adlı yeni bir Takvim klasörü oluşturur ve ardından yeni bir Randevu öğesi oluşturur ve bunu Takvim klasörüne ekler. Kod daha sonra Calendar klasörünü görüntüler.

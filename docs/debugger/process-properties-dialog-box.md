@@ -11,19 +11,20 @@ ms.assetid: fe6c9d32-4b81-4dc4-a307-848d23af66ce
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c0036067bd2d7e45d50db0a8d4207851aa75b296
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 02cb03635aed15f39362e54a9c704a67a30decec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891533"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153829"
 ---
 # <a name="process-properties-dialog-box"></a>İşlem Özellikleri İletişim Kutusu
 Belirli bir işlem hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir [Işlem görünümü](../debugger/processes-view.md) penceresine taşıyın. Ağaçta herhangi bir işlem düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
- Windows 98 ve Windows 95 işletim sistemlerinde, **genel** sekmesinin yalnızca değiştirilmiş bir sürümü görüntülenir.
+ Windows 98 ve Windows 95 işletim sistemlerinde, yalnızca **genel** sekmesinin değiştirilmiş bir sürümü görüntülenir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Genel sekmesi, Işlem özellikleri Iletişim kutusu](../debugger/general-tab-thread-properties-dialog-box.md) Seçilen işlem hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın.

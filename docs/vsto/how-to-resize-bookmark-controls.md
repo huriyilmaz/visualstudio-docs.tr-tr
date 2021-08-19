@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: yer Işareti denetimlerini yeniden boyutlandırma'
-description: Visual Studio 'Yu bir Microsoft Word belgesine eklediğinizde bir yer Işareti denetiminin boyutunu ayarlamak için nasıl kullanabileceğinizi öğrenin.
+description: bir Microsoft Word belgesine eklediğinizde bir yer işareti denetiminin boyutunu ayarlamak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,17 +13,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b2b2bd963b2f0b4eb574630382930eb0805909be
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 34026efaa0a5f9396c5daf3eb6b987435ca9e414
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825790"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155726"
 ---
 # <a name="how-to-resize-bookmark-controls"></a>Nasıl yapılır: yer Işareti denetimlerini yeniden boyutlandırma
-  Bir <xref:Microsoft.Office.Tools.Word.Bookmark> denetimin boyutunu Microsoft Office bir Word belgesine eklediğinizde ayarlarsınız. Ayrıca, daha sonra yeniden boyutlandırabilirsiniz.
+  bir <xref:Microsoft.Office.Tools.Word.Bookmark> denetimin boyutunu Microsoft Office bir Word belgesine eklediğinizde ayarlarsınız. Ayrıca, daha sonra yeniden boyutlandırabilirsiniz.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
@@ -69,7 +70,7 @@ ms.locfileid: "107825790"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorehostcontrolsword/ThisDocument.cs" id="Snippet3":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsWordVB/ThisDocument.vb" id="Snippet3":::
 
-### <a name="to-resize-a-bookmark-in-a-vsto-add-in-project-at-run-time"></a>Çalışma zamanında VSTO eklenti projesindeki bir yer işaretini yeniden boyutlandırmak için
+### <a name="to-resize-a-bookmark-in-a-vsto-add-in-project-at-run-time"></a>çalışma zamanında VSTO eklenti projesindeki bir yer işaretini yeniden boyutlandırmak için
 
 1. <xref:Microsoft.Office.Tools.Word.Bookmark.Start%2A> <xref:Microsoft.Office.Tools.Word.Bookmark.End%2A> Çalışma zamanında oluşturduğunuz bir öğesinin ve özelliklerini değiştirin <xref:Microsoft.Office.Tools.Word.Bookmark> .
 

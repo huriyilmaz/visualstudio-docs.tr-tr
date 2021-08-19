@@ -1,6 +1,6 @@
 ---
-description: Bu programı çalıştıran hata ayıklama altyapısının (DE) adını ve GUID 'sini alır.
-title: 'IDebugProgram2:: GetEngineInfo | Microsoft Docs'
+description: Bu programı çalıştıran hata ayıklama altyapısının (DE) adını ve GUID'lerini alır.
+title: IDebugProgram2::GetEngineInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4bea94c8cc32668d8a86a63e353e5ae9392f9ba5ed833d34a3b6afcefb1488fd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 33d4fa887d24db3b7ec7922060b649748d9a0063
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338871"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126589"
 ---
 # <a name="idebugprogram2getengineinfo"></a>IDebugProgram2::GetEngineInfo
-Bu programı çalıştıran hata ayıklama altyapısının (DE) adını ve GUID 'sini alır.
+Bu programı çalıştıran hata ayıklama altyapısının (DE) adını ve GUID'lerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +45,16 @@ int GetEngineInfo(
 
 ## <a name="parameters"></a>Parametreler
 `pbstrEngine`\
-dışı Bu programın çalıştırıldığı adın adını döndürür.
+[out] Bu programı çalıştıran DE'nin adını döndürür.
 
 `pguidEngine`\
-dışı Bu programı çalıştıran öğesinin GUID 'sini döndürür.
+[out] Bu programı çalıştıran DE GUID'ini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Her ikisi DE tanımlama için kendi GUID 'INI tanımlar.
+ Her DE tanımlama için kendi GUID'sini tanımlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

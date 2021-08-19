@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, programdan diğer adların listesini alıyor.
-title: IDebugBinder3::GetAllAliases | Microsoft Docs
+description: Bu yöntem, programdan diğer adların bir listesini alır.
+title: 'IDebugBinder3:: GetAllAliases | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 72e8b174888e2484a1b065268045a7bf33194957a909fb9ec71dc7c30a716fdd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9ab2624e21723b635d6e7db6551cb370308d43d0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121293059"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145373"
 ---
 # <a name="idebugbinder3getallaliases"></a>IDebugBinder3::GetAllAliases
-Bu yöntem, programdan diğer adların listesini alıyor.
+Bu yöntem, programdan diğer adların bir listesini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,16 +47,16 @@ int GetAllAliases(
 
 ## <a name="parameters"></a>Parametreler
 `uRequest`\
-[in] Dönüş için en fazla diğer ad sayısı (içine geçirilen dizinin uzunluğunu `ppAliases` belirtir).
+'ndaki Döndürülecek diğer ad sayısı üst sınırı (geçirilen dizinin uzunluğunu belirtir `ppAliases` ).
 
 `ppAliases`\
-[in, out] Diğer adlarla doldurulacak dizi (bu bir null değerse ve 0 ise, döndürülecek diğer ad sayısı `uRequest` tarafından `puFetched` döndürülür).
+[in, out] Diğer adlarla doldurulacak dizi (Eğer bu null bir değer ise ve `uRequest` 0 ise, döndürülebilecek diğer adların sayısı tarafından döndürülecektir `puFetched` ).
 
 `puFetched`\
-[out] Alınan diğer ad sayısını döndürür.
+dışı Alınan diğer adların sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

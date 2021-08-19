@@ -1,6 +1,6 @@
 ---
 title: Yardım Görüntüleyicisi'ni Özelleştirme
-description: Yardım Görüntüleyicisi'ni özelleştirmeyi anlama. Düzeni, yazı tipi boyutunu, maksimum sonuç sayısını ve İngilizce içeriğin dahil olup olmadığını yapılandırma.
+description: Yardım Görüntüleyicisi 'ni özelleştirmeyi anlayın. Düzen, yazı tipi boyutu, en fazla sonuç sayısı ve Ingilizce içerik dahil edilip edilmeyeceğini yapılandırın.
 ms.date: 11/02/2017
 ms.topic: how-to
 f1_keywords:
@@ -15,37 +15,37 @@ manager: jmartens
 ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: f758bfe1ca4d85c7b05dba5ef2e6da8a7af128952a3956e9d3057b178b9145ba
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e7f78e7210cc93cf1548f31671e41fda735ff1bb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121358629"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124366"
 ---
-# <a name="customize-the-help-viewer"></a>Yardım görüntüleyiciyi özelleştirme
-Yardım Görüntüleyicisi pencerelerinin düzenini ve yazı tipi boyutu, maksimum sonuç sayısı ve İngilizce içeriğin dahil olup olmadığı gibi diğer seçenekleri özelleştirebilirsiniz.
+# <a name="customize-the-help-viewer"></a>Yardım Görüntüleyiciyi özelleştirme
+Yardım Görüntüleyici pencerelerinin yerleşimini, yazı tipi boyutu, en fazla sonuç sayısı ve Ingilizce içerik dahil edilip edilmeyeceğini özelleştirebilirsiniz.
 
-## <a name="customizing-window-layout"></a>Pencere düzenini özelleştirme
-Yardım Görüntüleyicisi'nin pencere düzenini özelleştirebilirsiniz. Yardım Görüntüleyicisi penceresini varsayılan düzenine geri yüklemek için Görüntüleyici Seçenekleri **iletişim** kutusunu açın ve sıfırla **düğmesini** seçin.
+## <a name="customizing-window-layout"></a>Pencere yerleşimini özelleştirme
+Yardım görüntüleyicisinin pencere yerleşimini özelleştirebilirsiniz. Yardım Görüntüleyicisi penceresini varsayılan düzenine geri yüklemek için, **Görüntüleyici seçenekleri** iletişim kutusunu açın ve ardından **Sıfırla** düğmesini seçin.
 
 ### <a name="docking-tabs"></a>Yerleştirme sekmeleri
-Yardım Görüntüleyicisi standart yerleştirme işlevini destekler. Varsayılan olarak, Yardım Görüntüleyicisi'nde tüm sekmeler yerleştirildi, ancak bunları bağımsız alt pencereler olarak görünecek şekilde hareket ettirebilir, yeniden boyutlandırabilir, başka konumlara yerleştirebilir ve "float" olarak görüntüleyebilirsiniz.
+Yardım Görüntüleyicisi, Standart yerleştirme işlevlerini destekler. Varsayılan olarak, yardım görüntüleyicisindeki tüm sekmeler yerleşik olarak bulunur, ancak bunları taşıyabilir, yeniden boyutlandırabilir, diğer konumlara sabitleyebilir ve "float" yazarak bağımsız alt pencereler olarak görünürler.
 
-### <a name="opening-a-topic-in-a-new-tab"></a>Yeni bir sekmede konu açma
-Herhangi bir gezinti sekmesinde konuyu seçin ve ardından **Ctrl+Enter tuşlarına basın.**
+### <a name="opening-a-topic-in-a-new-tab"></a>Konuyu yeni bir sekmede açma
+Herhangi bir gezinti sekmesinde konuyu seçin ve ardından **CTRL + ENTER** tuşlarına basın.
 
-### <a name="minimize-a-navigation-tab"></a>Gezinti sekmesini simge durumuna küçült
-Gezinti sekmeleri için sabitleme simgesini seçerek konuları görüntülemek için daha fazla alan oluşturun. Bu sekmeler simge durumuna küçültülmüşse, pencerenin en yakın kenarında yalnızca etiketleri görünür. Sekmeleri geri yüklemek için herhangi bir sekmenin etiketini seçin ve ardından sabitleme simgesini yeniden seçin.
+### <a name="minimize-a-navigation-tab"></a>Gezinti sekmesini en aza indirme
+Gezinti sekmeleri için PIN simgesini seçerek konuları görüntülemek için daha fazla alan oluşturun. Bu sekmeler küçültüldüğünde, pencerenin en yakın kenarında yalnızca etiketleri görüntülenir. Sekmeleri geri yüklemek için herhangi bir sekmenin etiketini seçin ve sonra PIN simgesini yeniden seçin.
 
-## <a name="changing-settings-in-viewer-options"></a>Görüntüleyici Seçenekleri'nde ayarları değiştirme
-Araç **çubuğundaki Görüntüleyici Seçenekleri** düğmesini seçerek **Görüntüleyici Seçenekleri iletişim** kutusunu açarsınız.
+## <a name="changing-settings-in-viewer-options"></a>Görüntüleyici seçeneklerinde ayarları değiştirme
+Araç çubuğundaki **Görüntüleyici seçenekleri** düğmesini seçerek **Görüntüleyici seçenekleri** iletişim kutusunu açarsınız.
 
-|Bu görevi gerçekleştirmek için:|Şu adımı at:|
+|Bu görevi gerçekleştirmek için:|Bu adımı uygulayın:|
 | - | - |
-|Metnin göründüğü yazı tipinin boyutunu değiştirme|Metin Boyutu **listesinden bir boyut** seçin.|
-|Arama sekmesinde görünen en fazla arama sonucu **sayısını** değiştirme|En Fazla Arama Sonuçları **listesinden bir değer** seçin.|
-|Sık Kullanılanlar penceresinde görünen en fazla geçmiş **girdisi sayısını** değiştirme|Kaydedilen En Fazla Geçmiş **girdileri listesinden bir değer** seçin.|
-|Bir ürünün İngilizce olmayan bir sürümünün içeriğini görüntüleyeken İngilizce içeriği dahil edin veya hariç tutabilirsiniz.|Tüm gezinti **sekmelerinde ve F1 isteklerinde İngilizce içerik dahil edin onay kutusunu seçin veya** temizleyin. **Dikkat:**  Bu özellik ayrıca İçeriği Yönet sekmesinde İngilizce içerik indirip **indireycenizi** de kontrol eder.|
+|Metnin göründüğü yazı tipinin boyutunu değiştirme|**Metin boyutu** listesinden bir boyut seçin.|
+|**Arama** sekmesinde görüntülenen en fazla arama sonucu sayısını değiştirin|**En fazla arama sonuçları** listesinde bir değer seçin.|
+|**Sık Kullanılanlar** penceresinde görüntülenen en fazla geçmiş girişi sayısını değiştirin|**En fazla geçmiş girişleri kayıtlı** listesinden bir değer seçin.|
+|Bir ürünün Ingilizce olmayan bir sürümü için içerik görüntülerken Ingilizce içeriğini dahil edin veya hariç tutun.|**Tüm gezinme sekmelerine ve F1 Isteklerine İngilizce Içeriği dahil et** onay kutusunu işaretleyin veya temizleyin. **Dikkat:**  Bu özellik, **Içerik yönetme** sekmesinde İngilizce içerik indirilip indirilmeyeceğinizi de denetler.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

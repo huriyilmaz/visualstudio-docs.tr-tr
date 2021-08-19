@@ -1,6 +1,6 @@
 ---
-title: SharePoint Çözümlerinde Sorun giderme | Microsoft Docs
-description: Visual Studio hata ayıklayıcısını kullanarak SharePoint Çözümlerinde hata ayıkladığınızda sorun veya uyarıların neler olabileceğini görün.
+title: SharePoint çözümlerinde sorun giderme | Microsoft Docs
+description: Visual Studio hata ayıklayıcısını kullanarak SharePoint çözümlerinde hata ayıkladığınızda oluşabilecek sorun veya uyarıların neler olabileceğini görün.
 ms.custom: SEO-VS-2020
 ms.date: 02/22/2017
 ms.topic: conceptual
@@ -16,20 +16,21 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: c6b0e031e96d2543ae0bb109f243824125f431a3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: f4c69d5464d23fdeacbb77fb5af7b178a70d2fa5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99892300"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156246"
 ---
-# <a name="troubleshoot-sharepoint-solutions"></a>SharePoint Çözümlerinde Sorun giderme
-  Hata ayıklayıcıyı kullanarak SharePoint Çözümlerinde hata ayıklarken aşağıdaki sorunlar veya uyarılar oluşabilir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [SharePoint 2007 Iş akışı çözümlerinde hata ayıklama](/previous-versions/bb386166(v=vs.100)).
+# <a name="troubleshoot-sharepoint-solutions"></a>SharePoint çözümlerinde sorun giderme
+  hata ayıklayıcıyı kullanarak SharePoint çözümlerinde hata ayıkladığınızda aşağıdaki sorunlar veya uyarılar oluşabilir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . daha fazla bilgi için bkz. [SharePoint 2007 iş akışı çözümlerinde hata ayıklama](/previous-versions/bb386166(v=vs.100)).
 
 ## <a name="token-restrictions-in-sandboxed-visual-web-parts"></a>Korumalı görsel Web bölümlerinde belirteç kısıtlamaları
- Korumalı çözümlerin Visual Web bölümleri, SharePoint çalışma zamanının desteklediği $SPUrl gibi standart belirteçleri işleyemez. Sonuç olarak, URL çözümlenmez ve Visual Web Bölümü Tasarımcısında Tasarım görünümü içeriği, aşağıdaki örnekte olduğu gibi doğrudan bir betik öğesinde ifade ederseniz önizleyemezsiniz:
+ korumalı çözümlerin Visual web bölümleri, SharePoint çalışma zamanının desteklediği $SPUrl gibi standart belirteçleri işleyemez. Sonuç olarak, URL çözümlenmez ve Visual Web Bölümü Tasarımcısında Tasarım görünümü içeriği, aşağıdaki örnekte olduğu gibi doğrudan bir betik öğesinde ifade ederseniz önizleyemezsiniz:
 
 ```xml
 <script src="<% $SPUrl:~site/SiteAssets/ListOperations.js %>"></script>
@@ -44,7 +45,7 @@ ms.locfileid: "99892300"
 ```
 
 ## <a name="character-restrictions-in-names-of-projects-and-project-items"></a>Projelerin ve proje öğelerinin adlarındaki karakter kısıtlamaları
- Projelerin ve proje öğelerinin adları yalnızca SharePoint 2010 ' deki bir dağıtım yolunda geçerli olan karakterleri içerebilir. Başka hiçbir karaktere izin verilmez.
+ projelerin ve proje öğelerinin adları yalnızca SharePoint 2010 ' deki bir dağıtım yolunda geçerli olan karakterleri içerebilir. Başka hiçbir karaktere izin verilmez.
 
 ### <a name="error-message"></a>Hata iletisi
  "Geçersiz karakterler" hata iletisi.
@@ -98,7 +99,7 @@ ms.locfileid: "99892300"
  Alan için kaynak XML hatalı biçimlendirilmişse, geçerli bir XML dosyası veya başka bir sorun ortaya çıkarsa, "dosya ayrıştırılamıyor" hatası oluşur.
 
 ## <a name="new-non-english-site-definitions-do-not-appear-in-site-creation-page-after-deployment"></a>Yeni Ingilizce olmayan site tanımları dağıtımdan sonra site oluşturma sayfasında görünmez
- Ingilizce olmayan bir sürümü (yani 1033 dışında bir yerel ayar) kullanarak bir site tanımı oluşturup dağıttıktan sonra [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] , **SharePoint özelleştirmeleri** sekmesi **şablon seçim** kutusunda görünmez ve yeni site şablonu **Yeni SharePoint sitesi** sayfasında görünmez.
+ ingilizce olmayan bir sürümü (yani, 1033 dışında bir yerel ayar) kullanarak bir site tanımı oluşturup dağıttıktan sonra [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] , **şablon seçim** kutusunda **SharePoint özelleştirmeler** sekmesi görünmez ve yeni site şablonu **yeni SharePoint site** sayfasında görünmez.
 
 ### <a name="error-message"></a>Hata iletisi
  Yok.
@@ -107,10 +108,10 @@ ms.locfileid: "99892300"
  Bu sorun, Webtemp site tanımı yapılandırma dosyası için **yol** özelliğindeki yanlış bir değer nedeniyle oluşur, örneğin *webtemp_SiteDefinitionProject1.xml*. **Dağıtım konumu** altında bulunan webtemp dosyasının **Path** özelliğinde, 1033 değerini uygun yerel ayara değiştirin [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] . Örneğin, Japonca yerel ayarı kullanmak için değeri 1041 olarak değiştirin. Daha fazla bilgi için bkz. [Microsoft tarafından atanan yerel kimlikler](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
 ## <a name="error-appears-when-a-workflow-project-is-deployed-on-a-clean-system"></a>Bir iş akışı projesi temiz bir sisteme dağıtıldığında hata görüntülenir
- Bu sorun, içinde bir iş akışı projesini [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] temiz bir sistemde dağıtırsanız oluşur. Temiz bir sistem, ve SharePoint 'in yeni yüklemesi olan [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ancak dağıtılan iş akışı projelerinin olmadığı bir bilgisayardır.
+ Bu sorun, içinde bir iş akışı projesini [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] temiz bir sistemde dağıtırsanız oluşur. temiz bir sistem, yeni bir yüklemesi olan [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve SharePoint ancak dağıtılmış iş akışı projeleri olmayan bir bilgisayardır.
 
 ### <a name="error-message"></a>Hata iletisi
- SharePoint listesi bulunamıyor: Iş akışı geçmişi.
+ SharePoint listesi bulunamıyor: iş akışı geçmişi.
 
 ### <a name="resolution"></a>Çözüm
  Bu hata, eksik bir Iş akışı geçmiş listesi nedeniyle oluşur. Geliştirme ortamı temiz bir sistem olduğundan, hiçbir iş akışı dağıtılmaz ve Iş akışı geçmiş listesi henüz yok. Bu sorunu çözmek için, iş akışı geçmiş listesinin oluşturulmasına neden olan iş akışı Sihirbazı 'nı yeniden açın.
@@ -122,20 +123,20 @@ ms.locfileid: "99892300"
 2. **Özellikler** penceresinde, üç nokta düğmesi olan herhangi bir özellikte üç nokta (...) düğmesini seçin.
 
 ## <a name="user-must-refresh-application-page-in-browser-while-debugging-to-view-updated-image"></a>Kullanıcı, güncelleştirilmiş görüntüyü görüntülemek için hata ayıklarken tarayıcıda uygulama sayfasını yenilemelidir
- Görüntü denetimi gibi bir görüntü görüntüleyen bir uygulama sayfası içeren bir SharePoint çözümünde hata ayıklaması yapıyorsanız, [!INCLUDE[TLA2#tla_html](../sharepoint/includes/tla2sharptla-html-md.md)] görüntüde yapılan tüm değişiklikleri göstermek için tarayıcıda sayfayı yenilemeniz gerekir.
+ görüntü denetimi gibi bir görüntü görüntüleyen bir uygulama sayfası içeren bir SharePoint çözümünde hata ayıklaması yapıyorsanız, [!INCLUDE[TLA2#tla_html](../sharepoint/includes/tla2sharptla-html-md.md)] görüntüde yapılan tüm değişiklikleri göstermek için tarayıcıda sayfayı yenilemeniz gerekir.
 
 ## <a name="error-the-site-location-is-not-valid"></a>Hata: site konumu geçerli değil
- Bu sorun, [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] yüklü değilse oluşabilir. **SharePoint Özelleştirme sihirbazında** belirtilen SharePoint Web sitesine yönetici erişiminiz yoksa da bu durum oluşabilir.
+ Bu sorun, [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] yüklü değilse oluşabilir. ayrıca, **SharePoint özelleştirme sihirbazında** belirtilen SharePoint Web sitesine yönetici erişiminiz yoksa da bu durum oluşabilir.
 
 ### <a name="error-message"></a>Hata iletisi
 
-- SharePoint sitesi konumu geçerli değil.
+- SharePoint site konumu geçerli değil.
 
 ### <a name="resolution"></a>Çözüm
 
 - [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]yükleyin.
 
-- SharePoint Web sitesine yönetici erişimi olduğundan emin olun. Daha fazla bilgi için bkz [!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)] . çevrimiçi makale [SharePoint Server 'da hizmet uygulamalarının yöneticilerini atama veya kaldırma](/sharepoint/administration/assign-or-remove-administrators-of-service-applications).
+- SharePoint Web sitesine yönetici erişiminiz olduğundan emin olun. daha fazla bilgi için bkz [!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)] . [SharePoint Server 'da hizmet uygulamalarının yöneticilerini atama veya kaldırma](/sharepoint/administration/assign-or-remove-administrators-of-service-applications).
 
 ## <a name="site-deletion-web-event-does-not-occur-in-event-receiver-project"></a>Site silme Web olayı olay alıcısı projesinde gerçekleşmez
  Bir olay alıcı projesi oluşturduğunuzda ve "bir site silinmekte" gibi belirli Web olaylarını seçtiğinizde, olay hiçbir zaman gerçekleşmez.
@@ -176,9 +177,9 @@ ms.locfileid: "99892300"
 
 - SharePoint 2010 merkezi yönetimi. Daha fazla bilgi için bkz. Microsoft TechNet Web sitesindeki [BDC model yönetimi](/previous-versions/office/sharepoint-server-2010/ee524073(v=office.14)#delete-a-bdc-model) .
 
-- Windows PowerShell. Şu komutu komut istemine yazarak modeli silebilirsiniz: **Remove-SPBusinessDataCatalogModel**. Daha fazla bilgi için bkz. Microsoft TechNet Web sitesindeki [genel cmdlet 'ler (SharePoint Server 2010)](/powershell/module/sharepoint-server) .
+- Windows PowerShell. Şu komutu komut istemine yazarak modeli silebilirsiniz: **Remove-SPBusinessDataCatalogModel**. daha fazla bilgi için bkz. Microsoft TechNet Web sitesindeki [genel cmdlet 'ler (SharePoint Server 2010)](/powershell/module/sharepoint-server) .
 
-## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>SharePoint 'te bir görsel web bölümünü görüntülemeye çalıştığınızda bir hata görüntüleniyor
+## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>SharePoint ' de bir görsel web bölümünü görüntülemeye çalıştığınızda bir hata görüntüleniyor
  Bu sorun, Kullanıcı denetiminin **Path** ÖZELLIĞI "ControlTemplates" dizesiyle başlamamasından oluşur \\ .
 
 ### <a name="error-messages"></a>Hata iletileri
@@ -221,11 +222,11 @@ ms.locfileid: "99892300"
 
  Bu sorunu çözmek için, CustomSchema özniteliğinde *schema.xml* dosyasının Dağıtım konumunun yolunu güncelleştirin.
 
-## <a name="sharepoint-debugging-session-terminated-by-iis"></a>SharePoint hata ayıklama oturumu IIS tarafından sonlandırıldı
- Bu sorun, bir SharePoint çözümünde bir kesme noktası ayarlarsanız [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , çalıştırmak Için **F5** tuşuna basarak ve sonra 90 saniyeden daha uzun bir kesme noktasında kalacağından oluşur.
+## <a name="sharepoint-debugging-session-terminated-by-iis"></a>SharePoint hata ayıklama oturumu ııs tarafından sonlandırıldı
+ bu sorun, bir SharePoint çözümünde bir kesme noktası ayarlarsanız [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , çalıştırmak için **F5** tuşunu ve ardından 90 saniyeden daha uzun bir kesme noktasında kalmasını sağlayabilirsiniz.
 
 ### <a name="error-message"></a>Hata iletisi
- Hata ayıklanan Web sunucusu işlemi Internet Information Services (IIS) tarafından sonlandırıldı. IIS 'deki uygulama havuzu ping ayarlarını yapılandırarak bu sorundan kaçınabilirsiniz. Daha fazla ayrıntı için yardıma bakın.
+ hata ayıklanan Web sunucusu işlemi Internet Information Services (ııs) tarafından sonlandırıldı. IIS 'deki uygulama havuzu ping ayarlarını yapılandırarak bu sorundan kaçınabilirsiniz. Daha fazla ayrıntı için yardıma bakın.
 
 ### <a name="resolution"></a>Çözüm
  Varsayılan olarak, IIS uygulama havuzu uygulamayı kapatmadan önce bir uygulamanın yanıt vermesi 90 saniye bekler. Bu işlem, uygulamanın "ping" olarak bilinir. Bu sorunu çözmek için, bekleme süresini artırabilir ya da uygulama için ping komutunu tamamen devre dışı bırakabilirsiniz.
@@ -234,22 +235,22 @@ ms.locfileid: "99892300"
 
 1. IIS Yöneticisi'ni açın.
 
-2. **Bağlantılar** bölmesinde, SharePoint sunucusu düğümünü genişletin ve ardından **uygulama havuzları** düğümünü seçin.
+2. **bağlantılar** bölmesinde SharePoint sunucusu düğümünü genişletin ve ardından **uygulama havuzları** düğümünü seçin.
 
-3. **Uygulama havuzları** sayfasında, SharePoint uygulama havuzunu (genellikle "SharePoint-80") seçin ve ardından **Eylemler** bölmesinde **Gelişmiş ayarlar** bağlantısını seçin.
+3. **uygulama havuzları** sayfasında, uygulama havuzunu SharePoint (genellikle "SharePoint-80") seçin ve ardından **eylemler** bölmesinde **gelişmiş Ayarlar** bağlantısını seçin.
 
 4. IIS zaman aşımından önceki bekleme süresini artırmak için, **ping en yüksek yanıt süresi (saniye)** değerini 90 saniyeden daha büyük bir değere değiştirin.
 
 5. IIS ping komutunu devre dışı bırakmak için **ping etkin** ayarını **false** olarak ayarlayın.
 
-## <a name="auto-retract-leaves-orphaned-list-instance-in-sharepoint"></a>Otomatik geri çekme, SharePoint 'te yalnız bırakılmış liste örneğini bırakır
+## <a name="auto-retract-leaves-orphaned-list-instance-in-sharepoint"></a>Otomatik geri çekme, SharePoint yalnız bırakılmış liste örneğini bırakır
  Aşağıdaki adımları uygulamanız durumunda bu sorun oluşur.
 
 1. İçinde liste örneği olan bir liste tanımı oluşturun [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 2. Çözümü çalıştırmak için **F5** tuşunu seçin.
 
-3. Hata ayıklamayı durdurun veya SharePoint sitesini kapatın.
+3. hata ayıklamayı durdurun veya SharePoint sitesini kapatın.
 
 4. SharePoint sitesini yeniden açın ve liste örneğini açın.
 
@@ -257,12 +258,12 @@ ms.locfileid: "99892300"
  '/' Uygulamasında sunucu hatası.
 
 ### <a name="resolution"></a>Çözüm
- Bu durum, bir SharePoint çözümünün hata ayıklama oturumunu kapattıktan sonra otomatik olarak geri çekin özelliğinin çözümü geri çeker. Geri çekme, liste tanımını SharePoint 'ten siler, ancak listenin örneğini silmez. Liste örneği için temel alınan liste tanımı gereklidir.
+ bu durum, bir SharePoint çözümünün hata ayıklama oturumunu kapattıktan sonra otomatik olarak geri çekin özelliğinin çözümü geri çeker. geri çekme, liste tanımını SharePoint siler, ancak listenin örneğini silmez. Liste örneği için temel alınan liste tanımı gereklidir.
 
- Bu sorunu çözmek için, menü çubuğunda **Yapı** dağıtımı ' nı seçerek çözümü dağıtın  >  . ( **F5** tuşunu seçerek çözümde hata ayıklamayın.) Ardından, SharePoint 'teki liste örneğini silin.
+ Bu sorunu çözmek için, menü çubuğunda **Yapı** dağıtımı ' nı seçerek çözümü dağıtın  >  . ( **F5** tuşunu seçerek çözümde hata ayıklamayın.) Ardından SharePoint içindeki liste örneğini silin.
 
-## <a name="original-sharepoint-solution-is-replaced-by-an-exported-version"></a>Özgün SharePoint çözümü, dışarıya aktarılmış bir sürümle değiştirilmiştir
- Bir SharePoint çözümünü dışarı aktarırsanız, çözümü içine aktarın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ardından, dışarı aktarılan siteye geri döndüğünüzde özgün SharePoint çözümü değiştirilmiştir. Çözümü, üzerinde etkin bir çözüm etkinleştirilmemiş bir sunucuya dağıtırsanız bu sorun oluşmaz.
+## <a name="original-sharepoint-solution-is-replaced-by-an-exported-version"></a>özgün SharePoint çözümü, dışarıya aktarılmış bir sürümle değiştirilmiştir
+ bir SharePoint çözümü dışarı aktarırsanız, çözümü içine aktarın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ardından, yeniden dışarı aktarılan siteye geri dağıtırsanız, özgün SharePoint çözümü değiştirilmiştir. Çözümü, üzerinde etkin bir çözüm etkinleştirilmemiş bir sunucuya dağıtırsanız bu sorun oluşmaz.
 
 ### <a name="error-message"></a>Hata iletisi
  Yok.
@@ -271,16 +272,16 @@ ms.locfileid: "99892300"
  Bir çözümün verildiği sitede üzerine yazılmasını önlemek için, SolutionId 'nin GUID 'Lerini ve projedeki tüm içeri aktarılan özelliklerin özellik kimliklerini değiştirin [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 ## <a name="error-appears-when-debugging-starts"></a>Hata ayıklama başladığında hata görüntülenir
- Visual Studio 'da bir SharePoint çözümünde hata ayıklamaya başladığınızda, belirtilen anahtar sözlükte olmadığı için Visual Studio 'Nun Web.config dosyayı yükleyemediğini belirten bir hata oluştu.
+ Visual Studio bir SharePoint çözümünde hata ayıklamaya başladığınızda, bir hata Visual Studio, belirtilen anahtarın sözlükte olmadığı için Web.config dosyayı yükleyemediğini belirtir.
 
 ### <a name="error-message"></a>Hata iletisi
  Web.config yapılandırma dosyası yüklenemedi. Hatalı biçimlendirilmiş XML öğeleri için dosyayı denetleyin ve yeniden deneyin. Şu hata oluştu: belirtilen anahtar sözlükte yoktu.
 
 ### <a name="resolution"></a>Çözüm
- Bu sorunu çözmek için, Visual Studio 'daki SharePoint projesinin site URL 'SI Özellik değerinin, Web uygulamasının alternatif erişim eşlemeleri için varsayılan bölgeye atanan URL ile eşleştiğinden emin olun. URL için Intranet gibi başka bir bölge kullanarak hatayı çözümlenemez. Projenin site URL 'SI ve varsayılan bölgedeki URL eşleşmelidir. Alternatif erişim eşlemelerine erişmek için SharePoint 2010 merkezi yönetim yardımcı programını açın, **uygulama yönetimi** bağlantısını seçin ve ardından **Web uygulamaları** altında, **Alternatif erişim eşlemelerini Yapılandır** bağlantısını seçin. Daha fazla bilgi için bkz. [Web uygulamaları için bölge oluşturma](/previous-versions/office/sharepoint-2007-products-and-technologies/cc263087(v=office.12)).
+ bu sorunu çözmek için, Visual Studio SharePoint projesinin Site URL 'si özellik değerinin, web uygulamasının alternatif erişim eşlemeleri için varsayılan bölgeye atanan url ile eşleştiğinden emin olun. URL için Intranet gibi başka bir bölge kullanarak hatayı çözümlenemez. Projenin site URL 'SI ve varsayılan bölgedeki URL eşleşmelidir. alternatif erişim eşlemelerine erişmek için SharePoint 2010 merkezi yönetim yardımcı programını açın, **uygulama yönetimi** bağlantısını seçin ve ardından **Web uygulamaları** altında, **alternatif erişim eşlemelerini yapılandır** bağlantısını seçin. Daha fazla bilgi için bkz. [Web uygulamaları için bölge oluşturma](/previous-versions/office/sharepoint-2007-products-and-technologies/cc263087(v=office.12)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SharePoint paketleme ve dağıtım sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)
-- [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [paketleme ve dağıtım SharePoint sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)
+- [SharePoint çözümleri oluşturun ve hata ayıklayın](../sharepoint/building-and-debugging-sharepoint-solutions.md)
 - [Visual Studio'da Hata Ayıklama](../debugger/debugger-feature-tour.md)

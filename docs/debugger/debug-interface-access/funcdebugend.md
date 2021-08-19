@@ -12,14 +12,15 @@ ms.assetid: 68f84fff-7cd3-4636-b929-7063a45009f8
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b28fe8f1a436dd308487187897fa62fd247a293
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 40094e48b58ee7ed5e9646afe80c6ecd5cc9a6f9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102149166"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154714"
 ---
 # <a name="funcdebugend"></a>FuncDebugEnd
 Bir işlevde hata ayıklamanın sona erdirmek için tanımlı bir nokta varsa, hata ayıklama başlangıç noktası etiketi ile bir sembol tarafından tanımlanır `SymTagFuncDebugEnd` .

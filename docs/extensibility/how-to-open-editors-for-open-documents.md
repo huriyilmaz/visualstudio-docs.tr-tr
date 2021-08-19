@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: açık belgeler için düzenleyiciler açma | Microsoft Docs'
-description: Standart veya projeye özgü bir düzenleyicide dosya açmayı öğrenin. Bir proje bir belge penceresi açtığında, dosyanın zaten açık olup olmadığını belirlemesi gerekir.
+title: 'Nasıl kullanılır: Açık Belgeler için Düzenleyicileri Açma | Microsoft Docs'
+description: Standart veya projeye özgü bir düzenleyicide dosya açmayı öğrenin. Proje bir belge penceresi açtığında dosyanın zaten açık olup olmadığını belirlemesi gerekir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -13,49 +13,49 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: bcc01a90c058e53a461b3e5d21d9f11fe0cd8c18d0ac84ee9b90e6154feee7fd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: aa669bae8cd178f70ff843c309fdbdaf9ed1bed9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121432726"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124951"
 ---
-# <a name="how-to-open-editors-for-open-documents"></a>Nasıl yapılır: açık belgeler için düzenleyiciler açma
-Proje bir belge penceresini açmadan önce, projenin, dosyanın zaten başka bir düzenleyicinin belge penceresinde açık olup olmadığını belirlemesi gerekir. Dosya projeye özgü bir düzenleyicide veya ile kaydedilen standart düzenleyicilerden birinde açılabilir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+# <a name="how-to-open-editors-for-open-documents"></a>Nasıl kullanılır: Açık belgeler için düzenleyicileri açma
+Proje bir belge penceresi açmadan önce, projenin önce dosyanın başka bir düzenleyici için belge penceresinde zaten açık olup olmadığını belirlemesi gerekir. Dosya, projeye özgü bir düzenleyicide veya ile kayıtlı standart düzenleyicilerden biri olarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] açabilirsiniz.
 
-## <a name="open-a-project-specific-editor"></a>Projeye özgü bir düzenleyici açın
- Zaten açık olan bir dosya için projeye özgü bir düzenleyici açmak için aşağıdaki yordamı kullanın.
+## <a name="open-a-project-specific-editor"></a>Projeye özgü düzenleyiciyi açma
+ Zaten açık olan bir dosya için projeye özgü bir düzenleyiciyi açmak üzere aşağıdaki yordamı kullanın.
 
-### <a name="to-open-a-project-specific-editor-for-an-open-file"></a>Açık bir dosya için projeye özgü bir düzenleyici açmak için
+### <a name="to-open-a-project-specific-editor-for-an-open-file"></a>Projeye özgü bir düzenleyiciyi açık bir dosya için açmak için
 
-1. Yöntemini çağırın <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> .
+1. yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> çağırma.
 
     Bu çağrı, uygunsa belgenin hiyerarşisine, hiyerarşi öğesine ve pencere çerçevesine işaretçiler döndürür.
 
-2. Belge açıksa, proje yalnızca bir belge veri nesnesinin bulunup bulunmadığını ya da bir belge görünümü nesnesi olup olmadığını kontrol etmelidir.
+2. Belge açıksa, proje yalnızca bir belge veri nesnesinin var olup olmadığını veya bir belge görünümü nesnesinin de mevcut olup olmadığını denetlemesi gerekir.
 
-   - Bir belge görünümü nesnesi varsa ve bu görünüm farklı bir hiyerarşi veya hiyerarşi öğesi için ise, proje, var olan pencereyi yeniden göstermek için görünümün pencere çerçevesine yönelik işaretçiyi kullanır.
+   - Bir belge görünümü nesnesi varsa ve bu görünüm farklı bir hiyerarşi veya hiyerarşi öğesi içinse proje, mevcut pencereyi yeniden ortaya değiştirmek için görünümün pencere çerçevesinin işaretçisini kullanır.
 
-   - Bir belge görünümü nesnesi varsa ve bu görünüm aynı hiyerarşi ve hiyerarşi öğesi için ise, proje temel alınan belge verisi nesnesine iliştiriuygunsa ikinci bir görünüm açabilir. Aksi takdirde, projenin var olan pencereyi yeniden göstermek için görünümün pencere çerçevesine yönelik işaretçiyi kullanması gerekir.
+   - Bir belge görünümü nesnesi varsa ve bu görünüm aynı hiyerarşi ve hiyerarşi öğesi içinse, proje temel alınan belge veri nesnesine iliştirenin ikinci bir görünümü açabilir. Aksi takdirde proje, mevcut pencereye yeniden yüzey yapmak için görünümün pencere çerçevesinin işaretçisini kullandır.
 
-   - Yalnızca belge verileri nesnesi varsa, proje, görünümü için belge veri nesnesini kullanıp kullanamayacağını belirlemelidir. Belge veri nesnesi uyumluysa, [projeye özgü düzenleyici açma](../extensibility/how-to-open-project-specific-editors.md)bölümünde açıklanan adımları uygulayın.
+   - Yalnızca belge veri nesnesi varsa proje, görünümü için belge veri nesnesini kullanıp kullana olmadığını belirlemeli. Belge veri nesnesi uyumlu ise, Projeye özgü bir düzenleyiciyi açma [konusunda ele alan adımları tamamlayın.](../extensibility/how-to-open-project-specific-editors.md)
 
-     Belge veri nesnesi uyumlu değilse, kullanıcıya dosyanın kullanımda olduğunu belirten bir hata görüntülenmelidir. Bu hata yalnızca, kullanıcının çekirdek metin Düzenleyicisi dışında bir düzenleyici kullanarak dosyayı açmaya çalıştığı sırada bir dosya derlenirken olduğu gibi geçici durumlarda görüntülenmelidir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Çekirdek metin Düzenleyicisi, belge veri nesnesini derleyici ile paylaşabilir.
+     Belge veri nesnesi uyumlu değilse, kullanıcıya dosyanın şu anda kullanımda olduğunu belirten bir hata görüntüleniyor olmalıdır. Bu hata yalnızca geçici durumlarda (örneğin, kullanıcının çekirdek metin düzenleyicisi dışında bir düzenleyici kullanarak dosyayı açmaya çalıştığı sırada bir dosya derlendiğinde) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] görüntüleniyor. Çekirdek metin düzenleyicisi, belge veri nesnesini derleyiciyle paylaşabilir.
 
-3. Belge verisi nesnesi veya belge görünümü nesnesi olmadığından belge açık değilse, [projeye özgü bir düzenleyici açma](../extensibility/how-to-open-project-specific-editors.md)bölümündeki adımları uygulayın.
+3. Belge veri nesnesi veya belge görünümü nesnesi yoksa, Projeye özgü düzenleyiciyi açma [adımlarını tamamlayın.](../extensibility/how-to-open-project-specific-editors.md)
 
-## <a name="open-a-standard-editor"></a>Standart bir düzenleyici açın
- Zaten açık olan bir dosya için standart bir düzenleyici açmak üzere aşağıdaki yordamı kullanın.
+## <a name="open-a-standard-editor"></a>Standart düzenleyiciyi açma
+ Zaten açık olan bir dosyanın standart düzenleyicisini açmak için aşağıdaki yordamı kullanın.
 
-### <a name="to-open-a-standard-editor-for-an-open-file"></a>Açık bir dosya için standart bir düzenleyici açmak için
+### <a name="to-open-a-standard-editor-for-an-open-file"></a>Açık bir dosya için standart düzenleyiciyi açmak için
 
 1. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> çağrısı yapın.
 
-     Bu yöntem ilk olarak, belgenin çağırarak zaten açık olmadığını doğrular <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> . Belge zaten açıksa, düzenleyici penceresi yeniden açılır.
+     Bu yöntem öncelikle çağrısıyla belgenin açık olmadığını <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> doğrular. Belge zaten açıksa düzenleyici penceresi yeniden açılır.
 
-2. Belge açık değilse, [nasıl yapılır: Standart düzenleyicilerin nasıl açılacağı hakkında](../extensibility/how-to-open-standard-editors.md)adımları doldurun.
+2. Belge açık değilse, Nasıl ekleyebilirsiniz: Standart düzenleyicileri [açma adımlarını tamamlayın.](../extensibility/how-to-open-standard-editors.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Proje öğelerini aç ve Kaydet](../extensibility/internals/opening-and-saving-project-items.md)
-- [Nasıl yapılır: projeye özgü düzenleyiciler açma](../extensibility/how-to-open-project-specific-editors.md)
-- [Nasıl yapılır: standart düzenleyiciler açma](../extensibility/how-to-open-standard-editors.md)
+- [Proje öğelerini açma ve kaydetme](../extensibility/internals/opening-and-saving-project-items.md)
+- [Nasıllı: Projeye özgü düzenleyicileri açma](../extensibility/how-to-open-project-specific-editors.md)
+- [Nasıl: Standart düzenleyicileri açma](../extensibility/how-to-open-standard-editors.md)

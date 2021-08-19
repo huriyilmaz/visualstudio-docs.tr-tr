@@ -8,14 +8,15 @@ ms.assetid: 8dd0f60f-88ec-4258-bc8d-233689be9997
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: cb9abf0c128022988dab7573b2e3477c10cd701a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2925b836596393b4f10e6331aa8ec2488d9cb66d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99875295"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130422"
 ---
 # <a name="transaction-activity-designers"></a>İşlem Etkinlik Tasarımcıları
 

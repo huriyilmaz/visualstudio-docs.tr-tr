@@ -1,6 +1,6 @@
 ---
 title: Bağımlılık diyagramlarına komut ve hareket ekleme
-description: Visual Studio 'da bağımlılık diyagramlarında sağ tıklama menü komutlarını ve hareket işleyicilerini nasıl tanımlayabileceğinizi öğrenin.
+description: Visual Studio ' deki bağımlılık diyagramlarında sağ tıklama menü komutlarını ve hareket işleyicilerini nasıl tanımlayabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,23 +10,24 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 43d6cf5410aed3d79814d5304705a424bcc71e89
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 0441e3711b3f8ff7ef8f6aa57cb9632e5cb96346
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112387456"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150787"
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>Bağımlılık diyagramlarına komut ve hareket ekleme
 
-Visual Studio 'da bağımlılık diyagramlarında sağ tıklama menü komutlarını ve hareket işleyicilerini tanımlayabilirsiniz. Bu uzantıları, diğer Visual Studio kullanıcılarına dağıtabileceğiniz bir Visual Studio Tümleştirme Uzantısı 'na (VSıX) paketleyebilirsiniz.
+Visual Studio ' deki bağımlılık diyagramlarında sağ tıklama menü komutlarını ve hareket işleyicilerini tanımlayabilirsiniz. bu uzantıları, diğer Visual Studio kullanıcılarına dağıtabileceğiniz bir Visual Studio tümleştirme uzantısı 'na (vsıx) paketleyebilirsiniz.
 
-İsterseniz aynı Visual Studio projesinde birkaç komut ve hareket işleyicisi tanımlayabilirsiniz. Ayrıca, bu gibi birçok projeyi tek bir VSıX içinde birleştirebilirsiniz. Örneğin, katman komutları ve etki alanına özgü dil içeren tek bir VSıX tanımlayabilirsiniz.
+isterseniz aynı Visual Studio projede birkaç komut ve hareket işleyicisi tanımlayabilirsiniz. Ayrıca, bu gibi birçok projeyi tek bir VSıX içinde birleştirebilirsiniz. Örneğin, katman komutları ve etki alanına özgü dil içeren tek bir VSıX tanımlayabilirsiniz.
 
 > [!NOTE]
-> Ayrıca, kullanıcıların kaynak kodunun bağımlılık diyagramlarıyla karşılaştırıldığı mimari doğrulamasını özelleştirebilirsiniz. Mimari doğrulamayı ayrı bir Visual Studio projesinde tanımlamanız gerekir. Diğer uzantılarla aynı VSıX 'e ekleyebilirsiniz. Daha fazla bilgi için bkz. [bağımlılık diyagramlarına özel mimari doğrulaması ekleme](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
+> Ayrıca, kullanıcıların kaynak kodunun bağımlılık diyagramlarıyla karşılaştırıldığı mimari doğrulamasını özelleştirebilirsiniz. mimari doğrulamayı ayrı bir Visual Studio projesinde tanımlamanız gerekir. Diğer uzantılarla aynı VSıX 'e ekleyebilirsiniz. Daha fazla bilgi için bkz. [bağımlılık diyagramlarına özel mimari doğrulaması ekleme](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -42,7 +43,7 @@ Uzantı oluşturmanın en hızlı yöntemi, proje şablonunu kullanmaktır. Bu, 
 
 2. Uzantıyı test etmek için **CTRL** + **F5** veya **F5** tuşlarına basın.
 
-    Visual Studio 'nun deneysel bir örneği başlar. Bu örnekte, bir bağımlılık diyagramı oluşturun. Komut veya hareket uzantınızın bu diyagramda çalışması gerekir.
+    deneysel bir Visual Studio örneği başlar. Bu örnekte, bir bağımlılık diyagramı oluşturun. Komut veya hareket uzantınızın bu diyagramda çalışması gerekir.
 
 3. Deneysel örneği kapatın ve örnek kodu değiştirin.
 
@@ -54,13 +55,13 @@ Uzantı oluşturmanın en hızlı yöntemi, proje şablonunu kullanmaktır. Bu, 
 
 ::: moniker range="vs-2017"
 
-5. Uzantıyı Visual Studio 'nun ana örneğine veya başka bir bilgisayara yüklemek için *bin* dizininde *. vsix* dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın ve çift tıklayın. Kaldırmak için, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler** ' i seçin.
+5. uzantıyı Visual Studio ana örneğine veya başka bir bilgisayara yüklemek için *bin* dizininde *. vsix* dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın ve çift tıklayın. Kaldırmak için, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler** ' i seçin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-5. Uzantıyı Visual Studio 'nun ana örneğine veya başka bir bilgisayara yüklemek için *bin* dizininde *. vsix* dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın ve çift tıklayın. Kaldırmak için **Uzantılar** menüsünde **Uzantıları Yönet** ' i seçin.
+5. uzantıyı Visual Studio ana örneğine veya başka bir bilgisayara yüklemek için *bin* dizininde *. vsix* dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın ve çift tıklayın. Kaldırmak için **Uzantılar** menüsünde **Uzantıları Yönet** ' i seçin.
 
 ::: moniker-end
 
@@ -75,7 +76,7 @@ Komutları, katman Doğrulayıcıları ve diğer uzantıları içeren bir VSıX 
 
 2. Çözümünüze VSıX projesi ekleyin veya oluşturun. VSıX projesi **kaynak. Extension. valtmanifest** adlı bir dosya içerir.
 
-3. **Çözüm Gezgini**, VSIX projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
+3. **Çözüm Gezgini**, VSIX projesine sağ tıklayın ve **Başlangıç Project olarak ayarla**' yı seçin.
 
 4. **Source. Extension. valtmanifest** Içinde, **varlıklar** altında, komut veya hareket işleyicisi projesini MEF bileşeni olarak ekleyin.
 
@@ -83,7 +84,7 @@ Komutları, katman Doğrulayıcıları ve diğer uzantıları içeren bir VSıX 
 
     2. **Türünde**, **Microsoft. VisualStudio. MefComponent** öğesini seçin.
 
-    3. **Kaynakta**, **Geçerli çözümde proje** ' yi seçin ve komut veya hareket işleyicisi projenizin adını seçin.
+    3. **kaynakta**, **geçerli çözümde Project** seçin ve komut veya hareket işleyicisi projenizin adını seçin.
 
     4. Dosyayı kaydedin.
 
@@ -91,7 +92,7 @@ Komutları, katman Doğrulayıcıları ve diğer uzantıları içeren bir VSıX 
 
    |**Başvuru**|**Bunu yapmanıza izin verir**|
    |-|-|
-   |Program Files\Microsoft Visual Studio [sürüm] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Katmanları oluşturma ve düzenleme|
+   |Program dosyaları \ Microsoft Visual Studio [sürüm] \Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Katmanları oluşturma ve düzenleme|
    |Microsoft. VisualStudio. Uml. Interfaces|Katmanları oluşturma ve düzenleme|
    |Microsoft. VisualStudio. mimari Turetools. Extensibility|Diyagramlarda şekilleri değiştirme|
    |System. ComponentModel. Composition|Managed Extensibility Framework kullanarak bileşenleri tanımlama (MEF)|
@@ -106,9 +107,9 @@ Komutları, katman Doğrulayıcıları ve diğer uzantıları içeren bir VSıX 
 
 7. Özelliği test etmek için **CTRL** + **F5** veya **F5** tuşlarına basın.
 
-   Visual Studio 'nun deneysel bir örneği açılır. Bu örnekte, bir bağımlılık diyagramı oluşturun veya açın.
+   deneysel bir Visual Studio örneği açılır. Bu örnekte, bir bağımlılık diyagramı oluşturun veya açın.
 
-8. VSıX 'i Visual Studio 'nun ana örneğine veya başka bir bilgisayara yüklemek için VSıX projesinin **bin** dizininde **. vsix** dosyasını bulun. VSıX 'i yüklemek istediğiniz bilgisayara kopyalayın. Dosya Gezgini 'nde VSıX dosyasına çift tıklayın.
+8. vsıx 'i Visual Studio ana örneğine veya başka bir bilgisayara yüklemek için vsıx projesinin **bin** dizininde **. vsix** dosyasını bulun. VSıX 'i yüklemek istediğiniz bilgisayara kopyalayın. Dosya Gezgini 'nde VSıX dosyasına çift tıklayın.
 
 ## <a name="defining-a-menu-command"></a><a name="command"></a> Menü komutu tanımlama
 
@@ -248,7 +249,7 @@ Hareket işleyicileri hakkında aşağıdaki noktalara dikkat edin:
 
      **OnDragDrop** -kullanıcı diyagram üzerine bir öğe bırakıdüğünde çağırılır.
 
-- Her yöntemin ilk bağımsız değişkeni, `IShape` katman öğesini alabileceğiniz bir öğesidir. Örneğin:
+- Her yöntemin ilk bağımsız değişkeni, `IShape` katman öğesini alabileceğiniz bir öğesidir. Örnek:
 
     ```csharp
     public void OnDragDrop(IShape target, IDataObject data)

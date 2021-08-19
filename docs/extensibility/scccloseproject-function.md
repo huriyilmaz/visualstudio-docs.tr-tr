@@ -11,14 +11,15 @@ ms.assetid: 259c2069-d349-4814-810f-1c3151b7fb84
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 859b1ddea99e74cc1c1dec999611e50216c3c98a
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 804afa6f8bdf0bd02ea25ba2fb4639048d2d5bf0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112904701"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144502"
 ---
 # <a name="scccloseproject-function"></a>SccCloseProject işlevi
 Bu işlev, belirli bir oturumun sonuna işaret eden bir projeyi kapatır.

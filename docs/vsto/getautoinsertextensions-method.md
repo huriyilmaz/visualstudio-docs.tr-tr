@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama sırasında otomatik Office uygulamalar hakkında bilgi alır.
-title: GetAutoInsertExtensions yöntemi
+description: hata ayıklama sırasında otomatik olarak eklenecek Office uygulamalar hakkında bilgi alır.
+title: Getautoınserbir yöntemi
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 7bb7a75c4bc1abd5c5fb29c55a3be42e44ff2af55403c1d9ecccbf00efb5c755
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0a4da4447af30a44c00d824120fb6733f409a6ac
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121268332"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155999"
 ---
-# <a name="getautoinsertextensions-method"></a>GetAutoInsertExtensions yöntemi
-  Hata ayıklama sırasında otomatik Office uygulamalar hakkında bilgi alır.
+# <a name="getautoinsertextensions-method"></a>Getautoınserbir yöntemi
+  hata ayıklama sırasında otomatik olarak eklenecek Office uygulamalar hakkında bilgi alır.
 
  Bu yöntem gelecekte kullanılmak üzere ayrılmıştır.
 
@@ -36,10 +36,10 @@ HRESULT GetAutoInsertExtensions(
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|*psaExtensionNames*|Uygulamalar için uzantı adları Office.|
+|*psaExtensionNames*|Office uygulamalarının uzantı adları.|
 
 ## <a name="return-value"></a>Döndürülen değer
- Yöntemin başarıyla tamamlandıktan sonra tamamlandıktan sonra bir HRESULT değeri.
+ Metodun başarıyla tamamlanıp tamamlanmadığını gösteren bir HRESULT değeri.
 
 ## <a name="remarks"></a>Açıklamalar
- Eklenecek Office her uygulama, Office altındaki bir değere karşılık gelen bir uygulama uzantısı adı **olarakHKEY_CURRENT_USER\Software\Microsoft\Office\WEF\Developer.** Ana bilgisayar bu değerleri kayıt defterinde bu şekilde olmalı ve ardından uzantıları otomatik olarak eklemeli.
+ eklenecek Office yönelik her uygulama, **HKEY_CURRENT_USER\Software\Microsoft\Office\WEF\Developer** altındaki bir değere karşılık gelen bir Office uygulama uzantısı adı olarak döndürülür. Konağın bu değerleri kayıt defterinde araması ve sonra otomatik olarak uzantıları eklemesi gerekir.

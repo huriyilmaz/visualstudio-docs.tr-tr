@@ -1,6 +1,6 @@
 ---
 title: IntelliTrace Özellikleri | Microsoft Docs
-description: Visual Studio 'da IntelliTrace özellikleri hakkında bilgi edinin. Uygulamanızdaki olayları ve Yöntem çağrılarını kaydetmek için IntelliTrace kullanın.
+description: Visual Studio IntelliTrace özellikleri hakkında bilgi edinin. Uygulamanızdaki olayları ve Yöntem çağrılarını kaydetmek için IntelliTrace kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 09/19/2018
 ms.topic: conceptual
@@ -20,14 +20,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f4c974b9056b41de2e021f5918963d1d28ffa3db
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 391ff83ccefe79a7c14ac50ecc6c508d6aedd610
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99905007"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112639"
 ---
 # <a name="intellitrace-features-c-visual-basic-c"></a>IntelliTrace Özellikleri (C#, Visual Basic, C++)
 
@@ -35,30 +36,30 @@ Uygulamanızı kaydetmek için IntelliTrace 'i kullanabilirsiniz. bu sayede, dur
 
 Adım adım bir açıklama için bkz. [Izlenecek yol: IntelliTrace kullanma](../debugger/walkthrough-using-intellitrace.md).
 
-IntelliTrace Visual Studio Enterprise sürümünde kullanılabilir, ancak Visual Studio Professional veya topluluk sürümlerinde bulunmaz.
+ıntellitrace Visual Studio Enterprise sürümünde kullanılabilir, ancak Visual Studio Professional veya Community sürümlerinde bulunmaz.
 
 IntelliTrace 'in açık olduğunu onaylamak için **araçlar > seçenekler > IntelliTrace** seçenekleri sayfasını açın. **IntelliTrace 'ı etkinleştir** ayarı varsayılan olarak denetlenmelidir.
 
 > [!NOTE]
-> **IntelliTrace** seçenekleri sayfasındaki tüm ayarların kapsamı, tek tek projeler veya çözümler değil, bir bütün olarak Visual Studio. Bu ayarlarda yapılan bir değişiklik, tüm Visual Studio örnekleri, tüm hata ayıklama oturumları ve tüm projeler veya çözümler için geçerlidir.
+> **ıntellitrace** seçenekleri sayfasındaki tüm ayarların kapsamı, tek tek projeler veya çözümler için değil, bir bütün olarak Visual Studio. bu ayarlarda yapılan bir değişiklik, tüm Visual Studio örnekleri, tüm hata ayıklama oturumları ve tüm projeler veya çözümler için geçerlidir.
 
-## <a name="choose-the-events-that-intellitrace-records-c-visual-basic"></a><a name="ChooseEvents"></a> IntelliTrace 'in kaydettiği olayları seçin (C#, Visual Basic)
+## <a name="choose-the-events-that-intellitrace-records-c-visual-basic"></a><a name="ChooseEvents"></a>IntelliTrace 'in kaydettiği olayları seçin (C#, Visual Basic)
 
 Belirli IntelliTrace olayları için kayıt açma veya kapatma yapabilirsiniz.
 
 Hata ayıklaması yapıyorsanız, hata ayıklamayı durdurun. IntelliTrace **> IntelliTrace olayları > araçlar > seçenekler**' e gidin. IntelliTrace 'in kaydetmesini istediğiniz olayları seçin.
 
-## <a name="collect-snapshots-c-visual-basic-c"></a><a name="Snapshots"></a> Anlık görüntü topla (C#, Visual Basic, C++)
+## <a name="collect-snapshots-c-visual-basic-c"></a><a name="Snapshots"></a>Anlık görüntü topla (C#, Visual Basic, C++)
 
 Bu varsayılan olarak etkin değildir, ancak IntelliTrace her kesme noktası ve hata ayıklayıcı adımı olayındaki uygulamanızın anlık görüntülerini yakalayabilir ve bu anlık görüntüleri bir geçmiş hata ayıklama oturumunda görüntüleyebilirsiniz. Anlık görüntü, tam uygulama durumlarınızın görünümünü sağlar. Anlık görüntülerin yakalanmasını etkinleştirmek için **araçlar > seçenekler > ıntellitrace > Genel**' e gidin ve **IntelliTrace anlık görüntülerini (yönetilen ve yerel)** seçin. Daha fazla bilgi için bkz. [IntelliTrace kullanarak önceki uygulama durumlarını İnceleme](../debugger/view-historical-application-state.md).
 
-Anlık görüntüler Visual Studio Enterprise 2017 sürüm 15,5 ve üzeri sürümlerde kullanılabilir ve Windows 10 yıldönümü güncelleştirmesi veya üstünü gerektirir.  .NET Core ve ASP.NET Core uygulamaları için, Visual Studio Enterprise 2017 sürüm 15,7 gereklidir. Windows 'u hedefleyen yerel uygulamalar için Visual Studio Enterprise 2017 sürüm 15,9 Preview 2 gereklidir.
+anlık görüntüler Visual Studio Enterprise 2017 sürüm 15,5 ve üzeri sürümlerde kullanılabilir ve Windows 10 yıldönümü güncelleştirmesi veya üzeri bir sürüm gerektirir.  .net Core ve ASP.NET Core uygulamaları için, Visual Studio Enterprise 2017 sürüm 15,7 gereklidir. Windows hedefleyen yerel uygulamalar için, Visual Studio Enterprise 2017 sürüm 15,9 Preview 2 gereklidir.
 
-## <a name="collect-intellitrace-events-and-call-information-c-visual-basic"></a><a name="GoingFurther"></a> IntelliTrace olayları ve çağrı bilgilerini toplayın (C#, Visual Basic)
+## <a name="collect-intellitrace-events-and-call-information-c-visual-basic"></a><a name="GoingFurther"></a>IntelliTrace olayları ve çağrı bilgilerini toplayın (C#, Visual Basic)
 
 Bu varsayılan olarak etkin değildir, ancak IntelliTrace Yöntem çağrılarını olaylarla birlikte kaydedebilir. Yöntem çağrılarını toplamayı etkinleştirmek için **araçlar > seçenekler > ıntellitrace > Genel**' e gidin ve **IntelliTrace olayları ve çağrı bilgileri ' ni seçin (yalnızca yönetilen)**.
 
-Çağrı bilgileri şu anda .NET Core ve ASP.NET Core uygulamaları için kullanılamaz.
+çağrı bilgileri şu anda .net Core ve ASP.NET Core uygulamaları için kullanılamaz.
 
 Bu, çağrı yığını geçmişini görmenizi ve kodunuzda geri ve ileri doğru ilerlemenizi sağlar. IntelliTrace, yöntem adları, yöntem girişi ve çıkış noktaları gibi verileri ve belirli parametre değerlerini ve dönüş değerlerini kaydeder.
 
@@ -94,26 +95,26 @@ Birden çok modül eklemek için dizenin başında veya sonunda * joker karakter
 
 Modül sayısını en düşük düzeyde tutmaya çalışın. Toplanabilecek daha az veri olduğundan daha iyi bir performans alırsınız. Ayrıca, alınacak daha az veri olduğu için Kullanıcı arabiriminde daha az gürültü da alırsınız.
 
-## <a name="save-intellitrace-data-to-file-c-visual-basic-c"></a><a name="SaveSession"></a> IntelliTrace verilerini dosyaya kaydet (C#, Visual Basic, C++)
+## <a name="save-intellitrace-data-to-file-c-visual-basic-c"></a><a name="SaveSession"></a>IntelliTrace verilerini dosyaya kaydet (C#, Visual Basic, C++)
 
 IntelliTrace 'in topladığı verileri, hata ayıklarken IntelliTrace **oturumunu > ıntellitrace > kaydetmek** ve uygulama bir kesme durumunda olduğu sırada kaydedebilirsiniz. Menü öğesi devre dışıdır ve uygulama hala çalışıyorsa veya hata ayıklamayı durdurduysanız veri IntelliTrace 'in topladığı verileri kaydedemeyeceksiniz.
 
-IntelliTrace ' i **> ıntellitrace > Gelişmiş ' >** e giderek ve **IntelliTrace kayıtlarını bu dizinde depola**' yı seçerek bir dosyaya otomatik olarak kaydedilecek IntelliTrace 'i yapılandırabilirsiniz. Ayrıca oluşturulan dosya için bir küme boyutu yapılandırabilirsiniz. Bu, IntelliTrace 'in boş alan tükendiği eski verileri üzerine yazmasına neden olur. Visual Studio otomatik olarak kaydedildiğinde her IntelliTrace oturumu için iki dosya oluşturur ve Visual Studio barındırma işlemi (vshost.exe) açıktır.
+IntelliTrace ' i **> ıntellitrace > Gelişmiş ' >** e giderek ve **IntelliTrace kayıtlarını bu dizinde depola**' yı seçerek bir dosyaya otomatik olarak kaydedilecek IntelliTrace 'i yapılandırabilirsiniz. Ayrıca oluşturulan dosya için bir küme boyutu yapılandırabilirsiniz. Bu, IntelliTrace 'in boş alan tükendiği eski verileri üzerine yazmasına neden olur. Visual Studio, otomatik olarak kaydedildiğinde ve Visual Studio barındırma işlemi (vshost.exe) açık olduğunda her ıntellitrace oturumunda iki dosya oluşturur.
 
 > [!TIP]
 > Disk alanından tasarruf etmek için, artık ihtiyacınız olmadığında dosyaları otomatik olarak kaydetmeyi devre dışı bırakın. Var olan tüm dosyalar silinmez. Bağlam menüsünden her zaman isteğe bağlı olarak dosya kaydedebilirsiniz.
 
-IntelliTrace verilerini dosyaya kaydettiğinizde, IntelliTrace 'in topladığı her işlem için bir. iTrace dosyası alırsınız. Daha sonra **dosya > > açıp** Dosya Aç iletişim kutusundan. iTrace dosyasını seçerek, Visual Studio 'da. iTrace dosyasını açabilirsiniz. Daha fazla bilgi için bkz. [kayıtlı IntelliTrace verilerini kullanma](../debugger/using-saved-intellitrace-data.md).
+IntelliTrace verilerini dosyaya kaydettiğinizde, IntelliTrace 'in topladığı her işlem için bir. iTrace dosyası alırsınız. daha sonra **dosya > > dosyasını açıp** dosya aç iletişim kutusundan. itrace dosyasını seçerek Visual Studio. itrace dosyasını açabilirsiniz. Daha fazla bilgi için bkz. [kayıtlı IntelliTrace verilerini kullanma](../debugger/using-saved-intellitrace-data.md).
 
 ## <a name="blogs"></a>Bloglar
 
-[Visual Studio Enterprise 2015 ' de IntelliTrace](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-ultimate-2015/)
+[Visual Studio Enterprise 2015 ' de ıntellitrace](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-ultimate-2015/)
 
-[Visual Studio 2015 ' de IntelliTrace kullanılarak canlı hata ayıklama için İzlenecek yol (metin Düzenleyicisi)](https://devblogs.microsoft.com/devops/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-text-editor/)
+[Visual Studio 2015 ' de ıntellitrace kullanılarak canlı hata ayıklama izlenecek yolu (metin düzenleyicisi)](https://devblogs.microsoft.com/devops/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-text-editor/)
 
-[Visual Studio 2015 (Sosyal Kulübü) içinde IntelliTrace kullanılarak canlı hata ayıklama hakkında izlenecek yol](https://devblogs.microsoft.com/devops/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-social-club/)
+[Visual Studio 2015 ' de ıntellitrace kullanılarak canlı hata ayıklama izlenecek yolu (sosyal kulüp)](https://devblogs.microsoft.com/devops/walkthrough-of-live-debugging-using-intellitrace-in-visual-studio-2015-social-club/)
 
-[Visual Studio Enterprise 2015 ' deki IntelliTrace artık eklemeyi destekliyor!](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach/)
+[Visual Studio Enterprise 2015 ' deki ıntellitrace artık eklemeyi destekliyor!](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-enterprise-2015-now-supports-attach/)
 
 [IntelliTrace tek başına toplayıcısı 'nı kullanarak bir Windows hizmetinden veri toplama](https://devblogs.microsoft.com/devops/collect-data-from-a-windows-service-using-the-intellitrace-standalone-collector/)
 
@@ -129,6 +130,6 @@ IntelliTrace verilerini dosyaya kaydettiğinizde, IntelliTrace 'in topladığı 
 
 ## <a name="videos"></a>Videolar
 
-[IntelliTrace deneyimi](https://channel9.msdn.com/Series/Visual-Studio-2015-Enterprise-Videos/IntelliTrace-Experience)
+[IntelliTrace Deneyimi](https://channel9.msdn.com/Series/Visual-Studio-2015-Enterprise-Videos/IntelliTrace-Experience)
 
-[Microsoft Visual Studio Ultimate 2015 ' de IntelliTrace ile geçmiş hata ayıklama](https://channel9.msdn.com/events/Ignite/2015/BRK3716)
+[Microsoft Visual Studio Ultimate 2015'te IntelliTrace ile Geçmiş Hata Ayıklama](https://channel9.msdn.com/events/Ignite/2015/BRK3716)

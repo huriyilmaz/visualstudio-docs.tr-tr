@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 29a033b5168654ebba1e5eb7d529520a1824cdfea156f878afc523b69f8b53fa
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 194e3d2a23b510dc1ce03c5797ecfd0429f7d237
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380008"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154562"
 ---
 # <a name="idiasymbolget_function"></a>IDiaSymbol::get_function
 Genel simgenin bir işleve başvurmayacağını belirten bir bayrak alır.

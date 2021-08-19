@@ -11,14 +11,15 @@ ms.assetid: 579aed0b-c57d-41a1-a94a-3bf665fd4a9d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 35e1dcb2704b4a8e76fe8d7ffb172f0846fbdc78
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 3db4b03f874a2f45c83989c01244fcba3308d334
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155532"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113278"
 ---
 # <a name="idiasymbolget_undecoratednameex"></a>IDiaSymbol::get_undecoratedNameEx
 C++ ile düzenlenmiş (bağlantı) adı için, açıklanmamalıdır bir adın bir kısmını veya tamamını alır.

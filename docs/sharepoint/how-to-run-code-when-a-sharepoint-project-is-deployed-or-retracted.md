@@ -1,7 +1,7 @@
 ---
-title: Proje dağıtıldığında SharePoint geri çekiliyorsa kod çalıştırma
+title: SharePoint projesi dağıtıldığında veya geri çekildiğinde kodu çalıştır
 titleSuffix: ''
-description: Bir SharePoint projesi dağıtıldığında veya geri çekerek bir proje tarafından ortaya çıkarılan olayları işleyene kod çalıştırmayı Visual Studio.
+description: Visual Studio tarafından oluşturulan olayları işleyebilmeniz için bir SharePoint projesi dağıtıldığında veya geri çekildiğinde kodun nasıl çalıştırılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,47 +16,47 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 9c587af0742b156b9d51f899d5a5e1cd121d4b2a50cfaa00d6b922e7c9054c2c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 76edd5250d0876a0e7ac8dfafb1d03f00dc5c89f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121367531"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156363"
 ---
-# <a name="how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>Nasıl SharePoint: Bir SharePoint dağıtıldığında veya geri çekiliyorsa kod çalıştırma
-  Bir SharePoint projesi dağıtıldığında veya geri çekiliyorsa ek görevler gerçekleştirmek için, Visual Studio. Daha fazla bilgi için [bkz. Paketleme ve SharePoint genişletme.](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
+# <a name="how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>nasıl yapılır: SharePoint projesi dağıtıldığında veya geri çekildiğinde kodu çalıştırma
+  bir SharePoint projesi dağıtıldığında veya geri çekildiğinde ek görevler gerçekleştirmek istiyorsanız, Visual Studio tarafından oluşturulan olayları işleyebilirsiniz. daha fazla bilgi için bkz. [genişletme SharePoint paketleme ve dağıtım](../sharepoint/extending-sharepoint-packaging-and-deployment.md).
 
-### <a name="to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>Bir proje dağıtıldığında veya SharePoint kodu çalıştırmak için
+### <a name="to-run-code-when-a-sharepoint-project-is-deployed-or-retracted"></a>bir SharePoint projesi dağıtıldığında veya geri çekildiğinde kodu çalıştırmak için
 
-1. Proje öğesi uzantısı, proje uzantısı veya yeni proje öğesi türünün tanımı oluşturun. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
+1. Proje öğesi uzantısı, Proje uzantısı veya yeni proje öğesi türünün tanımını oluşturun. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
-   - [Nasıl yapabilirsiniz: SharePoint proje öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)
+   - [nasıl yapılır: SharePoint projesi öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)
 
-   - [Nasıl yapabilirsiniz: SharePoint proje uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-extension.md)
+   - [nasıl yapılır: SharePoint projesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-extension.md)
 
-   - [Nasıl kullanılır: SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)
+   - [nasıl yapılır: SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)
 
-2. Uzantıda nesnesine <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> erişin. Daha fazla bilgi için, [bkz. How to: Retrieve the SharePoint proje hizmeti](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md).
+2. Uzantısında <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> nesnesine erişin. daha fazla bilgi için bkz. [nasıl yapılır: SharePoint proje hizmeti alma](../sharepoint/how-to-retrieve-the-sharepoint-project-service.md).
 
-3. <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted> İlkenin ve olaylarını proje hizmeti.
+3. <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted> proje hizmeti ve olaylarını işleyin.
 
-4. Olay işleyicileri içinde, geçerli <xref:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs> dağıtım oturumu hakkında bilgi almak için parametresini kullanın. Örneğin, geçerli dağıtım oturumunda hangi projenin olduğunu ve dağıtıldığından mı yoksa geri çekiliyor mu olduğunu belirleyebilirsiniz.
+4. Olay işleyicilerinde, <xref:Microsoft.VisualStudio.SharePoint.DeploymentEventArgs> geçerli dağıtım oturumu hakkında bilgi almak için parametresini kullanın. Örneğin, hangi projenin geçerli dağıtım oturumunda olduğunu ve dağıtılıp dağıtılmadığını veya geri çekilip dağıtılmadığını belirleyebilirsiniz.
 
-   Aşağıdaki kod örneği, bir proje uzantısındaki <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted> ve <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted> olaylarını işlemeyi gösteriyor. Bu uzantı, bir proje için **dağıtım başladığında ve** tamamlandığında Çıkış penceresine ek SharePoint yazar.
+   Aşağıdaki kod örneği, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentStarted> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.DeploymentCompleted> bir proje uzantısında ve olaylarının nasıl işleneceğini gösterir. bu uzantı, dağıtım başladığında ve bir SharePoint projesi için tamamlandığında **çıkış** penceresine ek bir ileti yazar.
 
    :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/handleprojectdeploymentevents.cs" id="Snippet12":::
    :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/handleprojectdeploymentevents.vb" id="Snippet12":::
 
-## <a name="compile-the-code"></a>Kodu derleme
- Bu örnek, aşağıdaki derlemelere başvuru gerektirir:
+## <a name="compile-the-code"></a>Kodu derle
+ Bu örnek, aşağıdaki derlemelere başvurular gerektirir:
 
-- Microsoft.VisualStudio. SharePoint
+- Microsoft. VisualStudio. SharePoint
 
-- System.ComponentModel.Composition
+- System. ComponentModel. Composition
 
 ## <a name="deploy-the-extension"></a>Uzantıyı dağıtma
- Uzantıyı dağıtmak için, derleme için bir uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] diğer dosyaları oluşturun. Daha fazla bilgi için [bkz. Visual Studio'de SharePoint araçları için Visual Studio.](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+ Uzantıyı dağıtmak için, [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] derleme için bir uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz diğer dosyalar oluşturun. daha fazla bilgi için bkz. [Visual Studio SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Paketleme SharePoint dağıtımı genişletme](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
-- [Nasıl: Dağıtım adımları yürütülürken kod çalıştırma](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)
+- [paketleme ve dağıtım SharePoint uzat](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
+- [Nasıl yapılır: dağıtım adımları yürütüldüğünde kodu çalıştırma](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)

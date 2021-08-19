@@ -1,6 +1,6 @@
 ---
-title: Görselleştirme Visual Studio Modelleme SDK'sı için Desteklenen Sürümler
-description: Yazma ve Visual Studio DSL Araçları ile desteklenen en yeni sürümler hakkında bilgi alın.
+title: görselleştirme ve modelleme SDK için desteklenen Visual Studio sürümleri
+description: yazma ve dağıtım ortamlarında DSL araçlarıyla desteklenen Visual Studio sürümleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 11/04/2016
@@ -10,46 +10,47 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: b8435f37ebe68e954af135be0f513247191ea8a9
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 661daaea4908a674e97c28f672ffc7f709429a8f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386403"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123560"
 ---
 # <a name="supported-visual-studio-editions-for-visualization--modeling-sdk"></a>Görselleştirme ve Modelleme SDK’sı için Desteklenen Visual Studio Sürümleri
 
-Aşağıdakiler, Visual Studio ve dağıtım ortamlarında desteklenen Visual Studio [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] sürümleri listesidir. Bu sürümler hakkında daha fazla bilgi için bkz. Microsoft Visual Studio [Geliştirici Merkezi.](https://visualstudio.microsoft.com/)
+aşağıda, [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] yazma ve dağıtım ortamlarında ile desteklenen Visual Studio sürümlerinin listeleri verilmiştir. bu sürümler hakkında daha fazla bilgi için Microsoft Visual Studio [geliştirici merkezi](https://visualstudio.microsoft.com/)' ne bakın.
 
-## <a name="authoring-edition"></a>Authoring Edition
+## <a name="authoring-edition"></a>Yazma sürümü
 
-DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olması gerekir:
+Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
 
 |Ürün|İndirme bağlantısı|
 |-|-|
 |Visual Studio|[http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/)|
 |Visual Studio SDK|[http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts&preserve-view=true)|
-|Visual Studio Görselleştirme ve Modelleme SDK'sı|[http://go.microsoft.com/fwlink/?LinkID=186128](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)|
+|Visual Studio Görselleştirme ve modelleme SDK 'Sı|[http://go.microsoft.com/fwlink/?LinkID=186128](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)|
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-## <a name="deployment-editions"></a>Dağıtım Sürümleri
+## <a name="deployment-editions"></a>Dağıtım sürümleri
 
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] , derlemeniz gereken etki alanına özgü dilleri dağıtmak için aşağıdaki yapılandırmaları destekler:
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] , oluşturduğunuz alana özgü dillerin dağıtımı için aşağıdaki konfigürasyonları destekler:
 
 - Visual Studio Enterprise
 
 - Visual Studio Professional
 
-- Visual Studio Kabuğu (tümleşik mod) yeniden dağıtılabilir paket yeniden dağıtılabilir paketi
+- Visual Studio Kabuk (tümleşik mod) yeniden dağıtılabilir paket yeniden dağıtılabilir paketi
 
-- Visual Studio Kabuğu (yalıtılmış mod) yeniden dağıtılabilir paket yeniden dağıtılabilir paketi
+- Visual Studio Kabuk (yalıtılmış mod) yeniden dağıtılabilir paket yeniden dağıtılabilir paketi
 
 > [!NOTE]
-> DSL'nin bir Kabuk ürününde çalıştırılaya kadar çalışması için Uzantı **Bildirimi'nin Desteklenen VS Edition** alanını ayarlamış olması gerekir. Daha fazla bilgi için, [bkz. Deploying Domain-Specific Language Solutions](msi-and-vsix-deployment-of-a-dsl.md).
+> Bir DSL 'yi bir kabuk ürününde çalışabilecek hale getirmek için, uzantı bildiriminde **desteklenen vs Edition** alanını ayarlamanız gerekir. Daha fazla bilgi için bkz. [Domain-Specific dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları Sözlüğü](/previous-versions/bb126564(v=vs.100))
+- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))

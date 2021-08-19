@@ -10,14 +10,15 @@ ms.assetid: e3611704-349f-4323-b03c-f2b0a445d781
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c23693b5ae622912695c139714c7e818ed0e868
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d03563fe84d8985ab1fd1b746a05cd0c8d43e485
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105056330"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144424"
 ---
 # <a name="single-and-multi-tab-views"></a>Tek ve Çoklu Sekme Görünümleri
 Bir düzenleyici, farklı türlerde görünümler oluşturabilir. Bir örnek, bir kod Düzenleyicisi penceresidir, diğeri ise form tasarlayıcıdır.
@@ -36,7 +37,7 @@ Bir düzenleyici, farklı türlerde görünümler oluşturabilir. Bir örnek, bi
 
  Bir düzenleyici için çok sekmeli bir görünüm oluşturmak için, <xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiViewDocumentView> arabirimini uygulayın ve ardından oluşturduğunuz her sekmeden farklı bir mantıksal görünüm GUID 'si ( <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID> ) ilişkilendirin.
 
- Visual Studio HTML Düzenleyicisi, çok sekmeli Görünüm içeren bir düzenleyiciye örnektir. **Tasarım** ve **kaynak** sekmeleri vardır. Bunu etkinleştirmek için, `LOGICALVIEWID_TextView` **Tasarım** sekmesi ve `LOGICALVIEWID_Code` **kaynak** sekmesi için her bir sekme ile farklı bir mantıksal görünüm ilişkilendirilir.
+ Visual Studio HTML düzenleyicisi, çok sekmeli görünüm içeren bir düzenleyiciye örnektir. **Tasarım** ve **kaynak** sekmeleri vardır. Bunu etkinleştirmek için, `LOGICALVIEWID_TextView` **Tasarım** sekmesi ve `LOGICALVIEWID_Code` **kaynak** sekmesi için her bir sekme ile farklı bir mantıksal görünüm ilişkilendirilir.
 
  Uygun mantıksal görünümü belirterek, bir VSPackage, form tasarlama, kod düzenlemesi veya hata ayıklama kodu gibi belirli bir amaca karşılık gelen görünüme erişebilir. Ancak, bir Windows, NULL dize tarafından tanımlanmalıdır ve bunun birincil mantıksal görünüme () karşılık gelmesi gerekir `LOGVIEWID_Primary` .
 
@@ -50,11 +51,11 @@ Bir düzenleyici, farklı türlerde görünümler oluşturabilir. Bir örnek, bi
 |`LOGVIEWID_Designer`|Görünüm **formu** komutuyla başlatılan görünüm.|
 |`LOGVIEWID_TextView`|Metin düzenleyici görünümü. Bu, ' nin erişebileceği görünümüdür <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> .|
 |`LOGVIEWID_UserChooseView`|Kullanıcıdan hangi görünümün kullanılacağını seçmesini ister.|
-|`LOGVIEWID_ProjectSpecificEditor`|**Birlikte Aç** iletişim kutusu tarafından gönderildi<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> Kullanıcı "(proje varsayılan düzenleyici)" girişini seçtiğinde.|
+|`LOGVIEWID_ProjectSpecificEditor`|**Birlikte Aç** iletişim kutusu tarafından gönderildi<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.OpenItem%2A><br /><br /> kullanıcı "(Project varsayılan düzenleyici)" girişini seçtiğinde.|
 
  Mantıksal Görünüm GUID 'Leri Genişletilebilir olsa da, yalnızca VSPackage içinde tanımlanan mantıksal görünüm GUID 'Lerini kullanabilirsiniz.
 
- Kapatılırken, Visual Studio, düzenleyici fabrikası ve belge penceresiyle ilişkili fiziksel görünüm dizelerini, çözüm yeniden açıldığında Belge pencerelerini yeniden açmak için kullanılabilecek şekilde korur. Çözüm (. suo) dosyasında yalnızca bir çözüm kapatıldığında açık olan pencereler kalıcı hale getirilir. Bu değerler, `VSFPROPID_guidEditorType` `VSFPROPID_pszPhysicalView` yöntemi içindeki parametresine geçirilen ve değerlerine karşılık gelir `propid` <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> .
+ kapatılırken Visual Studio, düzenleyici fabrikası ve belge penceresiyle ilişkili fiziksel görünüm dizelerinin guıd 'sini korur, böylece çözüm yeniden açıldığında belge pencerelerini yeniden açmak üzere kullanılabilir. Çözüm (. suo) dosyasında yalnızca bir çözüm kapatıldığında açık olan pencereler kalıcı hale getirilir. Bu değerler, `VSFPROPID_guidEditorType` `VSFPROPID_pszPhysicalView` yöntemi içindeki parametresine geçirilen ve değerlerine karşılık gelir `propid` <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> .
 
 ## <a name="example"></a>Örnek
  Bu kod parçacığı, <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView> nesnesinin uygulayan bir görünüme erişmek için nasıl kullanıldığını gösterir `IVsCodeWindow` . Bu durumda hizmet, bir <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> `LOGVIEWID_TextView` Pencere çerçevesine bir işaretçi alan çağırmak ve istemek için kullanılır. Belge görünümü nesnesine yönelik bir işaretçi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> bir değeri çağırarak ve belirtilerek elde edilir `VSFPROPID_DocView` . Belge görünümü nesnesinden `QueryInterface` için çağrılır `IVsCodeWindow` . Bu durumda beklenmek bir metin düzenleyicisinin döndürüldüğünden, bu nedenle yöntemde döndürülen belge görünümü nesnesi <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> bir kod penceresidir.

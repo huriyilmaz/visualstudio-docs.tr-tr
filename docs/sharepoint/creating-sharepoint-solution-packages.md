@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: f89bb6344ce7be130f0dc4e7d430327cc139175fa4298539855d5b37ec65f01c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d395dcbc0c1600209d6e1bd04b4c88059b9cf60e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121425550"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122149422"
 ---
 # <a name="create-sharepoint-solution-packages"></a>Çözüm SharePoint paketleri oluşturma
   Paket Tasarımcısı'nda dağıtım paketleri oluşturabilir ve özelleştirebilirsiniz. Örneğin, proje öğeleri SharePoint Özellikler ekleyebilir, IIS sunucusunu sıfırlayabilirsiniz, Özellik etkinleştirme kapsamlarını ayarlayabilirsiniz ve Özellik bağımlılıklarını tanımlayabilirsiniz. Tasarımcı ayrıca her paketi açıklayan bir XML dosyası olan bir bildirim de üretir.

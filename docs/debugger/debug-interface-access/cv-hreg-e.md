@@ -1,6 +1,6 @@
 ---
 title: CV_HREG_e | Microsoft Docs
-description: Hata ayıklama arabirimi erişim SDK 'sında bir hedef kaydı belirten CV_HREG_e numaralandırma türü hakkında başvuru bilgileri alın.
+description: Hata ayıklama arabirimi erişim SDK'sı içinde bir hedef yazmacı belirten CV_HREG_e türüyle ilgili başvuru bilgilerini elde edin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,20 +12,21 @@ ms.assetid: 3f0622f7-6790-41d8-8778-227cbbf8a212
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cbc24e8abe378a1a6c61680a797a6014efc5a91
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e2e35a4dd170d78aeda22200d4634300bdb8a184
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857344"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154803"
 ---
 # <a name="cv_hreg_e"></a>CV_HREG_e
 Bir hedef kayıt belirtir.
 
 > [!NOTE]
-> `CV_HREG_e`Sabit listesi tamamen çoğaltılamayacak kadar büyük olduğundan, kısaltılmış bir sürüm başvuru olarak sağlanır. Eksik girişler italik olarak oluşturulur. Tüm sabit listesi, cvconst. h üstbilgi dosyasında bulunur.
+> Numaralama burada tamamen çoğaltılamay çok büyük olduğundan, başvuru `CV_HREG_e` olarak kısaltılmış bir sürüm sağlanır. Eksik girişler italik olarak not edildi. Tam numaralama cvconst.h üst bilgi dosyasında mevcuttur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -411,32 +412,32 @@ enum CV_HREG_e {
 ```
 
 ## <a name="elements"></a>Öğeler
-Intel 80x86 ve ix86 işlemcileri ve p kodu tarafından kullanılan kayıt CV_REG_ *.
+CV_REG_* Intel 80x86 ve ix86 işlemciler tarafından kullanılan yazmacı ve p kodu.
 
-68K işlemcisi tarafından kullanılan kayıt CV_R68_.
+CV_R68_* 68.000 işlemci tarafından kullanılan yazmazlar.
 
-CV_M4_ * kayıt, MIPS 4000 serisi işlemcisi tarafından kullanılır.
+CV_M4_* MIPS 4000 serisi işlemci tarafından kullanılan yazmazlar.
 
-CV_ALPHA_ * kayıtları, dijital ekipman Corporation Alpha AıXP serisi işlemcisi tarafından kullanılır.
+CV_ALPHA_* Digital Equipment Corporation Alpha AXP serisi işlemci tarafından kullanılan yazmazlar.
 
-Motorola/IBM PowerPC işlemcisi tarafından kullanılan kayıt CV_PPC_ *.
+CV_PPC_* Motorola/IBM PowerPC işlemcisi tarafından kullanılan yazmazlar.
 
-CV_SH3_ * ve CV_SH_ \* , HITACHI SH3 ve HITACHI SH Serisi işlemcisi tarafından kullanılan Yazmaçları.
+CV_SH3_* ve CV_SH_ \* Hitachi SH3 ve Hitachi SH serisi işlemcisi tarafından kullanılan yazmazlar.
 
-Gelişmiş RıSC makinesi (ARM) işlemcileri tarafından kullanılan kayıt CV_ARM_ *.
+CV_ARM_* Gelişmiş RISC Makinesi (ARM) işlemcileri tarafından kullanılan yazmaçlar.
 
-Intel ıA64 serisi işlemciler tarafından kullanılan kayıt CV_IA64_ *.
+CV_IA64_* Intel IA64 serisi işlemciler tarafından kullanılan yazmazlar.
 
-Sonsuz EON teknolojileri tarafından daha karmaşık bir işlemci tarafından kullanılan kayıt CV_TRI_ *.
+CV_TRI_* Infineon Technologies TriCore işlemcisi tarafından kullanılan yazmazlar.
 
-CV_AM33_ * kayıtları, Matsushita/Panasonic AM33 ve ilgili işlemciler tarafından kullanılır.
+CV_AM33_* Matsushita/Zaman AM33 ve ilgili işlemciler tarafından kullanılan yazmaçlar.
 
-CV_M32R_ * Yazmaçları, Mitsubishi M32R işlemcisi tarafından kullanılır.
+CV_M32R_* Bellek M32R işlemcisi tarafından kullanılan yazmacı.
 
 ## <a name="remarks"></a>Açıklamalar
-Her işlemci türü kendi benzersiz kayıt kümesini kullanır.
+Her işlemci türü kendi benzersiz kayıt kümelerini kullanır.
 
-Bu Numaralandırmadaki değerler aşağıdaki yöntemlere geçirilir:
+Bu numaralamada yer alan değerler aşağıdaki yöntemlere geçirildi:
 
 - [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)
 
@@ -449,7 +450,7 @@ Bu Numaralandırmadaki değerler aşağıdaki yöntemlere geçirilir:
 - [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)
 
 ## <a name="requirements"></a>Gereksinimler:
-Üst bilgi: cvconst. h
+Üst bilgi: cvconst.h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)

@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: a10073af291f927d23974c80f244255e76c659a4fbbc8617b9d9c99514c1bb9d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b8280c29649a792839e2bc18a409e76f276b71e4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121347784"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154946"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Bir Access veritabanındaki verilere bağlanma
 
@@ -36,7 +36,7 @@ Bağlan yordamı kullanarak Microsoft 365, Access 2013, Access 2010 veya Access 
 
 1. Bir Windows Forms veya WPF uygulama projesini Visual Studio.
 
-2. Veri Kaynakları **penceresini açmak** için Görünüm menüsünde **Diğer** Veri **Kaynakları'Windows**  >  **seçin.**
+2. Veri Kaynakları **penceresini açmak için** Görünüm menüsünde **Diğer** Veri **Kaynakları'Windows**  >  **seçin.**
 
    ![Diğer Veri Windows Kaynaklarını Görüntüleme](../data-tools/media/viewdatasources.png)
 
@@ -66,7 +66,7 @@ Bağlan yordamı kullanarak Microsoft 365, Access 2013, Access 2010 veya Access 
 
 11. Bağlantı **dizesini** **Uygulama Yapılandırması dosyasına kaydet sayfasından Sonraki'yi** seçin.
 
-12. Veritabanı **Nesnelerinizi** seçin sayfasında **Tablolar düğümünü** genişletin.
+12. Veritabanı **Nesnelerinizi** seçin **sayfasında Tablolar düğümünü** genişletin.
 
 13. Veri kümenize eklemek istediğiniz tabloları veya görünümleri seçin ve ardından Son'a **seçin.**
 
@@ -74,7 +74,7 @@ Bağlan yordamı kullanarak Microsoft 365, Access 2013, Access 2010 veya Access 
 
 ## <a name="create-a-dataset-for-an-mdb-file"></a>.mdb dosyası için veri kümesi oluşturma
 
-Bağlan yordamı kullanarak Access 2000-2003 ile oluşturulan veritabanlarına erişebilirsiniz.
+Bağlan access 2000-2003 ile oluşturulan veritabanlarına aşağıdaki yordamı kullanarak erişebilirsiniz.
 
 1. Bir Windows Forms veya WPF uygulama projesini Visual Studio.
 
@@ -102,7 +102,7 @@ Bağlan yordamı kullanarak Access 2000-2003 ile oluşturulan veritabanlarına e
 
 10. Bağlantı **dizesini** **Uygulama Yapılandırması dosyasına kaydet sayfasından Sonraki'yi** seçin.
 
-11. Veritabanı **Nesnelerinizi** seçin sayfasında **Tablolar düğümünü** genişletin.
+11. Veritabanı **Nesnelerinizi** seçin **sayfasında Tablolar düğümünü** genişletin.
 
 12. Veri kümenize istediğiniz tabloları veya görünümleri seçin ve ardından Son'a **seçin.**
 
@@ -112,11 +112,11 @@ Bağlan yordamı kullanarak Access 2000-2003 ile oluşturulan veritabanlarına e
 
 Yeni oluşturduğunuz veri kümesi, Veri Kaynakları **penceresinde** kullanılabilir. Artık aşağıdaki görevlerden herhangi birini gerçekleştirebilirsiniz:
 
-- Veri Kaynakları penceresinde öğeleri **seçin** ve form veya tasarım yüzeyinize sürükleyin (bkz. [Windows Forms](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) denetimlerini Visual Studio veya WPF veri bağlamaya [genel bakış).](/dotnet/desktop-wpf/data/data-binding-overview)
+- Veri Kaynakları penceresinde öğeleri **seçin ve** form veya tasarım yüzeyinize sürükleyin (bkz. [Windows Forms](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) denetimlerini Visual Studio veya WPF veri [bağlamaya genel bakış).](/dotnet/desktop-wpf/data/data-binding-overview)
 
 - Veri kümesinde veri **Veri Kümesi Tasarımcısı** nesneleri eklemek veya düzenlemek için veri kaynağını açın.
 
-- Veri kümesinde veri tablolarının veya olayına doğrulama mantığı ekleyin <xref:System.Data.DataTable.ColumnChanging> <xref:System.Data.DataTable.RowChanging> [(bkz. Veri kümelerde verileri doğrulama).](../data-tools/validate-data-in-datasets.md)
+- Veri kümesinde veri <xref:System.Data.DataTable.ColumnChanging> <xref:System.Data.DataTable.RowChanging> tablolarının veya olayına doğrulama mantığı ekleyin [(bkz. Veri kümelerde verileri doğrulama).](../data-tools/validate-data-in-datasets.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

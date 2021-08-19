@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b59699c5ec284c2bb1d9534de8960b7706c1804ea95310f1a14b93fd7085d472
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e230937de42ebda2697fe4cc43fc77bbee340cfb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121401862"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125380"
 ---
 # <a name="machine_info"></a>MACHINE_INFO
 Belirli bir makineyi açıklar.

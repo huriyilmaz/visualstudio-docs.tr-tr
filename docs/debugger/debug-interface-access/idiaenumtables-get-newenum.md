@@ -11,14 +11,15 @@ ms.assetid: 7b1159c7-a5f0-4baa-861a-dc11437d8b93
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e301e8e25acb849bf2160b72951ccc6ef4f407be
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: e832e484a53df87b8bffa0c8fc9942562f48a1ff
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148614"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113574"
 ---
 # <a name="idiaenumtablesget__newenum"></a>IDiaEnumTables::get__NewEnum
 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>Bu Numaralandırıcı sürümünü alır.
