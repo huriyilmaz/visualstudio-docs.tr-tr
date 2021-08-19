@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: Word tablolarına program aracılığıyla satır ve sütun ekleme'
-description: Tabloya satır eklemek için Rows nesnesinin Add metodunu nasıl kullanabileceğinizi öğrenin. Sütunlar eklemek için Columns nesnesinin Add yöntemini de kullanabilirsiniz.
+title: 'Nasıl kullanılır: Word tablolarına program aracılığıyla satır ve sütun ekleme'
+description: Tabloya satır eklemek için Satırlar nesnesinin Add yöntemini kullanmayı öğrenin. Sütun eklemek için Sütunlar nesnesinin Add yöntemini de kullanabilirsiniz.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -18,68 +18,68 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: cc4064677d35ada2a03baa1b4212a101bb6bd9a6df20f797596f9c31a961567e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6bf994d622384e52aa98f0192234a749c66ebf24
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121424014"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083316"
 ---
-# <a name="how-to-programmatically-add-rows-and-columns-to-word-tables"></a>Nasıl yapılır: Word tablolarına program aracılığıyla satır ve sütun ekleme
-  Microsoft Office Word tablosunda hücreler satırlar ve sütunlar halinde düzenlenir. <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> <xref:Microsoft.Office.Interop.Word.Rows> Tabloya satır eklemek için nesnesinin yöntemini ve <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> <xref:Microsoft.Office.Interop.Word.Columns> sütun eklemek için nesne yöntemini kullanabilirsiniz.
+# <a name="how-to-programmatically-add-rows-and-columns-to-word-tables"></a>Nasıl kullanılır: Word tablolarına program aracılığıyla satır ve sütun ekleme
+  Bir Microsoft Office Word tablosunda hücreler satırlar ve sütunlar halinde düzenlenmiştir. Tabloya satır <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> eklemek için nesnesinin yöntemini ve sütun eklemek <xref:Microsoft.Office.Interop.Word.Rows> için <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> <xref:Microsoft.Office.Interop.Word.Columns> nesnesinin yöntemini kullanabilirsiniz.
 
  [!INCLUDE[appliesto_wdalldocapp](includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="document-level-customization-examples"></a>Belge düzeyi özelleştirmesi örnekleri
- Aşağıdaki kod örnekleri, belge düzeyi özelleştirmesinde kullanılabilir. Bu örnekleri kullanmak için `ThisDocument` projenizdeki sınıftan çalıştırın. Bu örneklerde, özelleştirmenizin ilişkilendirildiği belgenin en az bir tablo olduğunu varsaymaktadır.
+## <a name="document-level-customization-examples"></a>Belge düzeyi özelleştirme örnekleri
+ Aşağıdaki kod örnekleri, belge düzeyi özelleştirmede kullanılabilir. Bu örnekleri kullanmak için projenizin `ThisDocument` sınıfından çalıştırın. Bu örneklerde, özelleştirmeniz ile ilişkili belgede zaten en az bir tablo olduğu varsayıldı.
 
 > [!IMPORTANT]
-> Bu kod yalnızca aşağıdaki proje şablonlarından birini kullanarak oluşturduğunuz projelerde çalışır:
+> Bu kod yalnızca aşağıdaki proje şablonlarını kullanarak oluştursanız da çalışır:
 >
-> - Word 2013 belgesi
-> - Word 2013 şablonu
+> - Word 2013 Belgesi
+> - Word 2013 Şablonu
 > - Word 2010 Belgesi
 > - Word 2010 Şablonu
 >
->   Bu görevi başka bir proje türünde gerçekleştirmek istiyorsanız, Microsoft. Office 'ye bir başvuru eklemeniz gerekir **. Birlikte çalışma. Word** derlemesi ve sonra tablolara satırlar ve sütunlar eklemek için bu derlemedeki sınıfları kullanmanız gerekir. daha fazla bilgi için bkz. [nasıl yapılır: birincil birlikte çalışma derlemeleri](how-to-target-office-applications-through-primary-interop-assemblies.md) ve [Word 2010 birincil birlikte çalışma derleme başvurusu](office-primary-interop-assemblies.md)aracılığıyla Office uygulamaları hedefleme.
+>   Bu görevi başka bir proje türünde gerçekleştirmek için **Microsoft.Office. Interop.Word** derlemesi ve ardından tablolara satır ve sütun eklemek için bu derlemeden sınıfları kullanmelisiniz. Daha fazla bilgi için [bkz. Nasıl Office:](how-to-target-office-applications-through-primary-interop-assemblies.md) Birincil birlikte çalışma derlemeleri aracılığıyla uygulamaları hedefleme ve [Word 2010 birincil birlikte çalışma derleme başvurusu.](office-primary-interop-assemblies.md)
 
 ### <a name="to-add-a-row-to-a-table"></a>Tabloya satır eklemek için
 
-1. <xref:Microsoft.Office.Interop.Word.Rows.Add%2A>Tabloya satır eklemek için yöntemini kullanın.
+1. Tabloya <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> satır eklemek için yöntemini kullanın.
 
      :::code language="vb" source="codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet95":::
      :::code language="csharp" source="codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet95":::
 
 ### <a name="to-add-a-column-to-a-table"></a>Tabloya sütun eklemek için
 
-1. Yöntemini kullanın <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> ve sonra <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> tüm sütunları aynı genişliğe getirmek için yöntemini kullanın.
+1. yöntemini <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> ve ardından yöntemini kullanarak <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> tüm sütunları aynı genişlikte yapmak için yöntemini kullanın.
 
      :::code language="vb" source="codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet96":::
      :::code language="csharp" source="codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet96":::
 
 ## <a name="vsto-add-in-examples"></a>VSTO Eklenti örnekleri
- aşağıdaki kod örnekleri bir VSTO eklentisi içinde kullanılabilir. Örnekleri kullanmak için bunları `ThisAddIn` projenizdeki sınıftan çalıştırın. Bu örneklerde, etkin belgenin en az bir tablo olduğunu varsaymaktadır.
+ Aşağıdaki kod örnekleri bir eklentide VSTO kullanılabilir. Örnekleri kullanmak için projenizin `ThisAddIn` sınıfından çalıştırın. Bu örneklerde, etkin belgenin zaten en az bir tablosu olduğu varsayıldı.
 
 > [!IMPORTANT]
-> bu kod yalnızca Word VSTO eklenti şablonlarını kullanarak oluşturduğunuz projelerde çalışır.
+> Bu kod yalnızca Word VSTO Add-in şablonlarını kullanarak oluştursanız projelerde çalışır.
 >
-> Bu görevi başka bir proje türünde gerçekleştirmek istiyorsanız, Microsoft. Office 'ye bir başvuru eklemeniz gerekir **. Birlikte çalışma. Word** derlemesi ve sonra tablolara satırlar ve sütunlar eklemek için bu derlemedeki sınıfları kullanmanız gerekir. daha fazla bilgi için bkz. [nasıl yapılır: birincil birlikte çalışma derlemeleri](how-to-target-office-applications-through-primary-interop-assemblies.md) ve [Word 2010 birincil birlikte çalışma derleme başvurusu](office-primary-interop-assemblies.md)aracılığıyla Office uygulamaları hedefleme.
+> Bu görevi başka bir proje türünde gerçekleştirmek için **Microsoft.Office. Interop.Word** derlemesi ve ardından tablolara satır ve sütun eklemek için bu derlemeden sınıfları kullanmelisiniz. Daha fazla bilgi için [bkz. Nasıl Office:](how-to-target-office-applications-through-primary-interop-assemblies.md) Birincil birlikte çalışma derlemeleri aracılığıyla uygulamaları hedefleme ve [Word 2010 birincil birlikte çalışma derleme başvurusu.](office-primary-interop-assemblies.md)
 
 ### <a name="to-add-a-row-to-a-table"></a>Tabloya satır eklemek için
 
-1. <xref:Microsoft.Office.Interop.Word.Rows.Add%2A>Tabloya satır eklemek için yöntemini kullanın.
+1. Tabloya <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> satır eklemek için yöntemini kullanın.
 
      :::code language="vb" source="codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet95":::
      :::code language="csharp" source="codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet95":::
 
 ### <a name="to-add-a-column-to-a-table"></a>Tabloya sütun eklemek için
 
-1. Yöntemini kullanın <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> ve sonra <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> tüm sütunları aynı genişliğe getirmek için yöntemini kullanın.
+1. yöntemini <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> ve ardından yöntemini kullanarak <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> tüm sütunları aynı genişlikte yapmak için yöntemini kullanın.
 
      :::code language="vb" source="codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet96":::
      :::code language="csharp" source="codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet96":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: program aracılığıyla Word tabloları oluşturma](how-to-programmatically-create-word-tables.md)
-- [Nasıl yapılır: Word tablolarında hücrelere program aracılığıyla metin ve biçimlendirme ekleme](how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)
-- [Nasıl yapılır: program aracılığıyla Word tablolarını belge özellikleriyle doldurma](how-to-programmatically-populate-word-tables-with-document-properties.md)
+- [Nasıl yapılanlar: Program aracılığıyla Word tabloları oluşturma](how-to-programmatically-create-word-tables.md)
+- [Nasıl yapılanlar: Word tablolarında hücrelere program aracılığıyla metin ve biçimlendirme ekleme](how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)
+- [Nasıl kullanılır: Word tablolarını belge özellikleriyle program aracılığıyla doldurmak](how-to-programmatically-populate-word-tables-with-document-properties.md)

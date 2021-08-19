@@ -1,6 +1,6 @@
 ---
-title: Kaynak denetim eklentisi bulmak için anahtar olarak kullanılan dizeler
-description: Kaynak denetimi eklentisi hakkındaki bilgileri bulmak için kayıt defterine erişim anahtarları olan dizeler hakkında bilgi edinin.
+title: Kaynak denetimi eklentilerini bulmak için anahtar olarak kullanılan dizeler
+description: Kaynak Denetimi eklentisi hakkında bilgi bulmak için kayıt defterine erişmeye ilişkin anahtarlar olan dizeler hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,23 +10,24 @@ ms.assetid: c1e31f76-42a1-4c3d-afb2-664044ef12fd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f25a105c442fa4a1ff8ed0f95b9c49272d751932
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 878dc8239361b0490d17f25ad0b96f748f39cf6e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112899399"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117585"
 ---
 # <a name="strings-used-as-keys-for-finding-a-source-control-plug-in"></a>Kaynak Denetimi Eklentisi Bulmak için Anahtar Olarak Kullanılan Dizeler
-Aşağıdaki dizeler, kaynak denetimi eklentisi hakkındaki bilgileri bulmak için kayıt defterine erişim anahtarlardır.
+Aşağıdaki dizeler, kaynak denetimi eklentisiyle ilgili bilgileri bulmak için kayıt defterine erişmeye ilişkin anahtarlardır.
 
- `STR_SCC_PROVIDER_REG_LOCATION`, `STR_PROVIDERREGKEY` , `STR_SCCPROVIDERPATH` ve, `STR_SCCPROVIDERNAME` bir dll 'yi Visual Studio için kaynak denetim eklentisi olarak kaydetmek için kullanılan kayıt defteri anahtarları veya değerlerdir.
+ `STR_SCC_PROVIDER_REG_LOCATION`, `STR_PROVIDERREGKEY` , ve , bir `STR_SCCPROVIDERPATH` DLL'i bir dll dosyası için kaynak denetimi eklentisi olarak kaydetmek için kullanılan `STR_SCCPROVIDERNAME` kayıt defteri Visual Studio.
 
- `SCC_PROJECTNAME_KEY`, `SCC_PROJECTAUX_KEY` , `SCC_KEY, SCC_FILE_SIGNATURE` ve, `SCC_STATUS_FILE` Mssccprj biçimini tanımlamakta kullanılır. SCC dosyası.
+ `SCC_PROJECTNAME_KEY`, `SCC_PROJECTAUX_KEY` `SCC_KEY, SCC_FILE_SIGNATURE` , ve `SCC_STATUS_FILE` MSSCCPRJ biçimini açıklamak için kullanılır. SCC dosyası.
 
-## <a name="string-keys-and-values"></a>Dize anahtarları ve değerleri
+## <a name="string-keys-and-values"></a>Dize Anahtarları ve Değerleri
 
 |Anahtar|Değer|
 |---------|-----------|
@@ -34,15 +35,15 @@ Aşağıdaki dizeler, kaynak denetimi eklentisi hakkındaki bilgileri bulmak iç
 |`STR_PROVIDERREGKEY`|ProviderRegKey|
 |`STR_SCCPROVIDERPATH`|SCCServerPath|
 |`STR_SCCPROVIDERNAME`|SCCServerName|
-|`STR_SCC_INI_SECTION`|Kaynak kodu denetimi|
+|`STR_SCC_INI_SECTION`|Kaynak Kodu Denetimi|
 |`STR_SCC_INI_KEY`|SourceCodeControlProvider|
 |`SCC_PROJECTNAME_KEY`|SCC_Project_Name|
 |`SCC_PROJECTAUX_KEY`|SCC_Aux_Path|
-|`SCC_STATUS_FILE`|Mssccprj. SCC|
-|`SCC_KEY`|SCC|
+|`SCC_STATUS_FILE`|MSSCCPRJ. Scc|
+|`SCC_KEY`|Scc|
 |`SCC_FILE_SIGNATURE`|Kaynak kodu denetim dosyası|
 |`SCC_NSE`|Ad alanı uzantısı|
-|`SCC_NSE_PREFIX`|Protocal öneki|
+|`SCC_NSE_PREFIX`|Protocal Ön Eki|
 |`SCC_NSE_DisableOpenSCC`|DisableOpenFromSourceControl|
 |`STR_SCCHELPCOLLECTION`|HelpCollection|
 |`STR_UI_LANGUAGE`|UILanguage|
