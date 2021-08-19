@@ -1,6 +1,6 @@
 ---
 title: Otomasyon Modeline Genel Bakış | Microsoft Docs
-description: Eklenti veya Visual Studio yazarak bir dizi nesneden oluşan Visual Studio otomasyon modeli hakkında bilgi öğrenin.
+description: Bir eklenti Visual Studio uzantısını yazarak bir dizi nesneden oluşan Visual Studio otomasyon modeli hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 24fdf3e87e4e8e58237052527e595bd60908373388d1e127f2607c88a609bfac
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ed2f1491b9e692662de282e6f78f9f44c59aa5d9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121432779"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159353"
 ---
 # <a name="automation-model-overview"></a>Otomasyon modeline genel bakış
 Otomasyon modeli, eklenti veya uzantı için bir Visual Studio nesne kümesi içerir. Eklenti, uygulama ortamını yönetip ortak görevleri Visual Studio bir uygulamadır. Bir Visual Studio, özel Visual Studio bileşenleri oluşturabilir veya metin düzenleyicisi gibi standart bileşenlerin işlevselliğine ekleyebilir.
@@ -43,7 +43,7 @@ Otomasyon modeli, eklenti veya uzantı için bir Visual Studio nesne kümesi iç
 
 - Oluşturma
 
-Otomasyon hakkında daha fazla bilgi için [bkz.](/previous-versions/visualstudio/visual-studio-2015/extensibility/extensibility-in-visual-studio?preserve-view=true&view=vs-2015)Otomasyon ve Visual Studio. Bu belge ve bağlantı sağladığı belgeler, VSPackage'nız için nasıl otomasyon sağlamanız gerektiğiyle ilgili kararlar a yardımcı olur.
+Otomasyon hakkında daha fazla bilgi için bkz. Otomasyon [ve genişletilebilirlik Visual Studio.](/previous-versions/visualstudio/visual-studio-2015/extensibility/extensibility-in-visual-studio?preserve-view=true&view=vs-2015) Bu belge ve bağlantı sağladığı belgeler, VSPackage'nız için nasıl otomasyon sağlamanız gerektiğiyle ilgili kararlar a yardımcı olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl: Eklenti oluşturma](/previous-versions/80493a3w(v=vs.140))

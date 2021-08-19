@@ -1,6 +1,6 @@
 ---
-description: Çerçeve veri öğelerinin sayısını alın.
-title: IDiaEnumFrameData::get_Count | Microsoft Docs
+description: Çerçeve verisi öğelerinin sayısını alır.
+title: 'IDiaEnumFrameData:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e1ee1880f3f695799f019e1d5105ff3cc1ca5d62c5498d30141b9ef30b71f4d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c34c07cf1db2eea797f362d05caa7637ba1286c9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380577"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113715"
 ---
 # <a name="idiaenumframedataget_count"></a>IDiaEnumFrameData::get_Count
-Çerçeve veri öğelerinin sayısını alın.
+Çerçeve verisi öğelerinin sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_Count (
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-[out] Çerçeve veri öğelerinin sayısını döndürür.
+dışı Çerçeve verisi öğelerinin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

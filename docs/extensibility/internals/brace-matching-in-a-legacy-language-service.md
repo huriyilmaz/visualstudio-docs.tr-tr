@@ -1,6 +1,6 @@
 ---
-title: Eski dil hizmetinde küme ayracı eşleştirme | Microsoft Docs
-description: Parantez ve küme ayraçları gibi, birlikte oluşması gereken dil öğelerini izlemenize yardımcı olan eski dil hizmetinde küme ayracı eşleştirmesi hakkında bilgi edinin.
+title: Eski Dil Hizmeti Hizmet HizmetLerinde Küme Ayracı Eşleştirme | Microsoft Docs
+description: Parantezler ve küme ayraçları gibi birlikte gerçekleşmesi gereken dil öğelerini izlemenizi yardımcı olan eski dil hizmetlerinde küme ayracı eşleştirme hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,46 +14,46 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a172a62e993539f990bf1281095725c8d34b2fc727e4f86fc252ebe3a5191283
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e63f9c065e629d768e73cc0c9433c4467883597f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121275703"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159158"
 ---
-# <a name="brace-matching-in-a-legacy-language-service"></a>Eski dil hizmetindeki küme ayracı eşleştirme
-Ayraç eşleştirme, geliştiricinin parantez ve küme ayraçları gibi bir arada gerçekleşmesi gereken dil öğelerini izlemesine yardımcı olur. Bir geliştirici bir kapanış ayracı girdiğinde, açma küme ayracı vurgulanır.
+# <a name="brace-matching-in-a-legacy-language-service"></a>Eski dil hizmetlerinde küme ayracı eşleştirme
+Küme ayracı eşleştirme, geliştiricinin parantezler ve küme ayraçları gibi birlikte gerçekleşmesi gereken dil öğelerini izlemesine yardımcı olur. Bir geliştirici kapanış ayracı girdiği zaman açılış ayracı vurgulanır.
 
- Çiftler ve üçlü olarak adlandırılan iki veya üç birlikte bulunan öğeyi eşleştirebilirsiniz. Üçlü, üç ortak bulunan öğe kümeleridir. Örneğin, C# ' de, `foreach` ifadeyi Üçlü: `foreach()` , `{` ve olarak oluşturur `}` . Kapanış ayracı yazıldığında, üç öğe de vurgulanır.
+ Çiftler ve üçlüler olarak adlandırılan iki veya üç birlikte oluşan öğeleri eşlersiniz. Üçlüler, birlikte oluşan üç öğeden oluşan kümelerdir. Örneğin, C# içinde deyimi `foreach` üçlü oluşturur: `foreach()` , ve `{` `}` . Kapanış ayracı yazılıyorken üç öğe de vurgulanır.
 
- Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Ayraç eşleştirmeyi kullanmanın yeni yolu hakkında daha fazla bilgi edinmek için bkz. [Izlenecek yol: eşleşen ayraçları görüntüleme](../../extensibility/walkthrough-displaying-matching-braces.md).
+ Eski dil hizmetleri VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın daha yeni yolu MEF uzantılarını kullanmaktır. Küme ayracı eşleştirmeyi uygulamanın yeni yolu hakkında daha fazla bilgi için bkz. [Kılavuz: Eşleşen küme ayraçlarını görüntüleme.](../../extensibility/walkthrough-displaying-matching-braces.md)
 
 > [!NOTE]
-> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
+> Yeni düzenleyici API'sini mümkün olan en kısa sürede kullanmaya başlamayı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
- <xref:Microsoft.VisualStudio.Package.AuthoringSink>Sınıfı, ve yöntemleriyle hem çiftleri hem de engelleri destekler <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchPair%2A> <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchTriple%2A> .
+ sınıfı, <xref:Microsoft.VisualStudio.Package.AuthoringSink> ve yöntemleriyle hem çiftleri hem de <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchPair%2A> <xref:Microsoft.VisualStudio.Package.AuthoringSink.MatchTriple%2A> üçlüleri destekler.
 
 ## <a name="implementation"></a>Uygulama
- Dil hizmetinin, dildeki tüm eşleşen öğeleri tanımlaması ve ardından eşleşen tüm çiftleri bulması gerekir. Bu, genellikle <xref:Microsoft.VisualStudio.Package.IScanner> eşleşen bir dili tespit etmek ve daha sonra <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> öğeleri eşlemek için metodunu kullanarak gerçekleştirilir.
+ Dil hizmetinin, dille eşleşen tüm öğeleri tanımlaması ve ardından eşleşen tüm çiftleri bulması gerekir. Bu genellikle, eşanlı bir dili <xref:Microsoft.VisualStudio.Package.IScanner> algılamak için uygulama uygulanarak ve ardından öğeleriyle <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> eşleşmek için yöntemi kullanılarak uygulanır.
 
- <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>Yöntemi, satırı simgeleştirmek için tarayıcıyı çağırır ve yalnızca giriş işaretinden önce belirteci döndürür. Tarayıcı, geçerli belirteçte bir belirteç tetikleyici değeri ayarlanarak bir dil öğesi çiftinin bulunduğunu gösterir <xref:Microsoft.VisualStudio.Package.TokenTriggers> . <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A>Yöntemi, <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> <xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A> <xref:Microsoft.VisualStudio.Package.ParseReason> eşleşen dil öğesini bulmak için yöntemi ayrıştırma neden değeri ile çağıran yöntemi çağırır. Eşleşen dil öğesi bulunduğunda her iki öğe de vurgulanır.
+ yöntemi, <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> satırı belirteçleştirmek ve belirteci caret'in hemen öncesinde geri almak için tarayıcıyı arar. Tarayıcı, geçerli belirteçte bir belirteç tetikleyici değeri ayar tarafından dil öğesi <xref:Microsoft.VisualStudio.Package.TokenTriggers> çiftinin bulun olduğunu gösterir. yöntemi, eşleşen dil öğesini bulmak için ayrıştırma nedeni değeriyle yöntemini <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> <xref:Microsoft.VisualStudio.Package.Source.MatchBraces%2A> <xref:Microsoft.VisualStudio.Package.LanguageService.BeginParse%2A> <xref:Microsoft.VisualStudio.Package.ParseReason> çağıran yöntemini çağırmıştır. Eşleşen dil öğesi bulunca her iki öğe de vurgulanır.
 
- Küme ayracı yazmanın, küme ayracı vurgulamasını nasıl tetiklediği hakkında ayrıntılı bir açıklama için, [eski dil hizmeti ayrıştırıcısı ve tarayıcısı](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)makalesindeki *örnek ayrıştırma işlemi* bölümüne bakın.
+ Küme ayracı yazmanın küme ayracı vurgulamayı  tetiklemesine ilişkin eksiksiz bir açıklama için Eski dil hizmeti ayrıştırıcısı ve tarayıcısı makalesinde Örnek ayrıştırma [işlemi bölümüne bakın.](../../extensibility/internals/legacy-language-service-parser-and-scanner.md)
 
-## <a name="enable-support-for-brace-matching"></a>Küme ayracı eşleştirmesi desteğini etkinleştir
- <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>Özniteliği, sınıfının karşılık gelen özelliklerini ayarlayarak **matchayraçları**, **matchbracesatını** ve **showmatchingayraç** kayıt defteri girişlerini ayarlayabilir <xref:Microsoft.VisualStudio.Package.LanguagePreferences> . Dil tercihi özellikleri Kullanıcı tarafından da ayarlanabilir.
+## <a name="enable-support-for-brace-matching"></a>Küme ayracı eşleştirme desteğini etkinleştirme
+ özniteliği, sınıfın karşılık gelen özelliklerini ayarlayan <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> **MatchBraces**, **MatchBracesAtCaret** ve **ShowMatchingBrace** kayıt defteri girdilerini <xref:Microsoft.VisualStudio.Package.LanguagePreferences> ayarlayın. Dil tercihi özellikleri kullanıcı tarafından da ayarlandırabilirsiniz.
 
-|Kayıt defteri girdisi|Özellik|Açıklama|
+|Kayıt defteri girişi|Özellik|Açıklama|
 |--------------------|--------------|-----------------|
-|Matchparantezleri|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBraces%2A>|Küme ayracı eşleştirmeyi izin vermez.|
-|Matchbracesatşapka|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|Giriş işareti ile eşleşen küme ayracı eşleşmesini izin eder.|
-|Showmatchingayracın|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>|Eşleşen küme ayracını vurgular.|
+|MatchBraces|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBraces%2A>|Küme ayracı eşleştirmeyi sağlar.|
+|MatchBracesAtCaret|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableMatchBracesAtCaret%2A>|Küme ayracı hareket etti olarak küme ayracı eşleştirmeyi sağlar.|
+|ShowMatchingBrace|<xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableShowMatchingBrace%2A>|Eşleşen küme ayracı vurgular.|
 
-## <a name="match-conditional-statements"></a>Koşullu deyimleri Eşleştir
- ,,, Veya,,,, ve gibi koşullu deyimleri `if` `else if` `else` `#if` `#elif` `#else` `#endif` eşleşen sınırlayıcılarla aynı şekilde eşleştirebilirsiniz. Sınıfının sınıfını oluşturabilir <xref:Microsoft.VisualStudio.Package.AuthoringSink> ve metin yayılmaları ve eşleşen öğelerin iç dizisine sınırlayıcılar eklemek için bir yöntem sağlayabilirsiniz.
+## <a name="match-conditional-statements"></a>Koşullu deyimleri eşleşme
+ , ve veya , gibi koşullu deyimleri sınırlayıcıları `if` `else if` `else` `#if` `#elif` `#else` `#endif` eşleştirmeyle aynı şekilde eşleştirin. sınıfını alt sınıfa ekleyebilir ve eşleşen öğelerin iç dizisine metin aralıklarının yanı sıra <xref:Microsoft.VisualStudio.Package.AuthoringSink> sınırlayıcılar ek bir yöntem sebilirsiniz.
 
-## <a name="set-the-trigger"></a>Tetikleyiciyi ayarla
- Aşağıdaki örnek, eşleşen parantezler, küme ayraçları ve kare ayracın nasıl algılanacağını ve tarayıcıda onun için tetikleyiciyi ayarlamayı gösterir. <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> <xref:Microsoft.VisualStudio.Package.Source> Sınıftaki yöntem tetikleyiciyi algılar ve eşleşen çifti bulmak için ayrıştırıcısı çağırır (Bu makaledeki *eşleştirmeyi bulma* bölümüne bakın). Bu örnek yalnızca tanım amaçlıdır. Tarayıcınızın bir `GetNextToken` metin satırından belirteçleri tanımlayan ve döndüren bir yöntem içerdiğini varsayar.
+## <a name="set-the-trigger"></a>Tetikleyiciyi ayarlama
+ Aşağıdaki örnekte eşleşen parantezleri, küme ayraçlarını ve kare ayraçları algılama ve tarayıcıda bunun tetikleyicisi ayarlama işlemi gösterir. sınıfındaki yöntemi tetikleyiciyi algılar ve eşleşen çifti bulmak için ayrıştırıcıyı <xref:Microsoft.VisualStudio.Package.Source.OnCommand%2A> <xref:Microsoft.VisualStudio.Package.Source> çağırıyor *(bu makaledeki Eşleşmeyi* bulma bölümüne bakın). Bu örnek yalnızca açıklayıcı amaçlara yöneliktir. Tarayıcınızın, bir metin satırına göre `GetNextToken` belirteçleri tanımlayan ve döndüren bir yöntem içerdiğini varsayıyor.
 
 ```csharp
 using Microsoft.VisualStudio.Package;
@@ -87,8 +87,8 @@ namespace TestLanguagePackage
         }
 ```
 
-## <a name="match-the-braces"></a>Küme ayraçlarını Eşleştir
- İşte,, ve ' dil öğelerini eşleştirmek için basitleştirilmiş bir örnek, `{ }` `( )` ve bu nesnelerin içine `[ ]` yayılmaları ekleniyor <xref:Microsoft.VisualStudio.Package.AuthoringSink> . Bu yaklaşım, kaynak kodu ayrıştırmak için önerilen bir yaklaşım değildir; yalnızca tanım amaçlıdır.
+## <a name="match-the-braces"></a>Küme ayraçlarını eşleşme
+ Burada , ve dil öğelerini eşleştirmek ve bunların yayılmalarını nesnesine `{ }` `( )` eklemek için `[ ]` basitleştirilmiş bir örnek ve ardından yer <xref:Microsoft.VisualStudio.Package.AuthoringSink> almaktadır. Bu yaklaşım, kaynak kodu ayrıştırmak için önerilen bir yaklaşım değildir; Yalnızca açıklayıcı amaçlara yöneliktir.
 
 ```csharp
 using Microsoft.VisualStudio.Package;

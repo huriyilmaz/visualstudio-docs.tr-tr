@@ -11,17 +11,18 @@ ms.assetid: 1b043327-302a-4f6d-b51d-f94f9d7c7f9d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 913490588fcf739e9659318cb72a9ca74d6db99d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a9a765ec2f4c8b2f6bc2366465938d5bd8dd1614
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096232"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111716"
 ---
 # <a name="debugref_info_flags"></a>DEBUGREF_INFO_FLAGS
 Bir hata ayıklama başvuru nesnesi hakkında hangi bilgilerin yapılacağını belirtir.

@@ -1,6 +1,6 @@
 ---
 title: Visual Studio |'nin Diğer Bölümlerini Genişletme Microsoft Docs
-description: Kullanıcı arabiriminin genişlet Visual Studio bölümleri hakkında bilgi öğrenin. VSPackage oluşturabilir, Etkinlik günlüğüne yazabilir ve Araç Kutusu ile durum çubuğunu genişletebilirsiniz.
+description: Kullanıcı arabiriminin genişlet Visual Studio hakkında bilgi öğrenin. VSPackage oluşturabilir, Etkinlik günlüğüne yazabilir ve Araç Kutusu ile durum çubuğunu genişletebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,16 +13,16 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b0b3e649bba1687d89fbb3d9d5688649be143463a62525149b3148724331942b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0dd73c9a03161d34a040799ba6e0d65b909dd1d1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360020"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159457"
 ---
 # <a name="extend-other-parts-of-visual-studio"></a>Diğer bölümleri Visual Studio
 
-Kullanıcı arabiriminin genişletebilir Visual Studio daha birçok parçası vardır. Burada size yalnızca birkaç tane gösteriyoruz.
+Kullanıcı arabiriminin genişletebilir Visual Studio çok daha fazla parçası vardır. Burada size yalnızca birkaç tane gösteriyoruz.
 
 ## <a name="create-a-vspackage"></a>VSPackage oluşturma
 

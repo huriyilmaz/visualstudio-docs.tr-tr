@@ -23,12 +23,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a094f40a394df99f8498da6410ba3daf52b517c664e2ad922a173d5e44e9a8a0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f6bcb5f655b055e36a55694ba0134a7320795d8d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121263945"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112834"
 ---
 # <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Visual Studio (C#, VB, C++) kodu düzenle ve hata ayıklamaya devam et
 Düzenle ve devam et, programınız kesme modundayken kaynak kodunuzda değişiklik yapmanızı sağlayan bir zaman tasarrufu özelliğidir. **Devam et** veya **adım** gibi bir yürütme komutu seçerek program yürütmeye devam ettiğinizde, Düzenle ve devam et, kod değişikliklerini bazı sınırlamalara göre otomatik olarak uygular. Bu, hata ayıklama oturumu sırasında kodunuzda değişiklik yapmanıza, tüm programınızı yeniden derlemenize ve hata ayıklama oturumunu yeniden başlatmanıza olanak tanır.

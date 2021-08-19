@@ -11,17 +11,18 @@ ms.assetid: 2fa97d9b-c3d7-478e-ba5a-a933f40a0103
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cc8a922ad29b7f6b3ecff57ee5df7ad0e7dded1d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: be8e0b73ec8fe11a5fc5ad2eff5c1f38b2511d4a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064767"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159600"
 ---
 # <a name="idebugproperty2getreference"></a>IDebugProperty2::GetReference
 Özelliğin değerine bir başvuru döndürür.

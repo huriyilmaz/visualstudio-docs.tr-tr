@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b43d6c3edde39b137116dc5215745f066207e25d00c75e8a1dc351e8c1ccefc6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 02583eca88274dc998d2fc85fce8cadc247e8e93
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121433222"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159613"
 ---
 # <a name="idebugprogramhost2gethostname"></a>IDebugProgramHost2::GetHostName
 Bu programın barındırma işleminin başlığını, kolay adını veya dosya adını alır.
