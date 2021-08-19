@@ -1,6 +1,6 @@
 ---
 title: Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)
-description: Projenin başvurularını, Web başvurularını ve içeri aktarılan ad alanlarını yönetmek için proje Tasarımcısı ' nın başvurular sayfasını nasıl kullanacağınızı öğrenin.
+description: Projenizin başvurularını, web başvurularını ve içe aktarılan ad alanlarını yönetmek için Project Tasarımcısı'nın Başvurular sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: reference
@@ -15,36 +15,37 @@ ms.assetid: 5a47c595-e084-401c-86e1-74e0bf74fd86
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 30e3847c87559fd7a916af8ad3be48343d649671
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c56614d835da1f03c4ef44f01be8ec0493dd6b1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958147"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117156"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)
 
-Projenizdeki başvuruları, Web başvurularını ve içeri aktarılan ad alanlarını yönetmek için **Proje Tasarımcısı** ' nın **Başvurular** sayfasını kullanın. Projeler COM bileşenleri, XML Web Hizmetleri, .NET kitaplıkları veya derlemeler ya da diğer sınıf kitaplıklarına başvuru içerebilir. Başvuruları kullanma hakkında daha fazla bilgi için bkz. [bir projedeki başvuruları yönetme](../../ide/managing-references-in-a-project.md).
+Projenize **başvuruları,** web **başvurularını ve Project** ad alanlarını yönetmek için Project Tasarımcısı'nın Başvurular sayfasını kullanın. Projeler COM bileşenlerine, XML web hizmetlerine, .NET kitaplıklarına veya derlemelerine veya diğer sınıf kitaplıklarına başvurular içerebilir. Başvuruları kullanma hakkında daha fazla bilgi için [bkz. Projedeki başvuruları yönetme.](../../ide/managing-references-in-a-project.md)
 
-**Başvurular** sayfasına erişmek için **Çözüm Gezgini**' de bir proje düğümü ( **çözüm** düğümünü değil) seçin. Ardından, menü çubuğunda **Proje**, **Özellikler** ' i seçin. Proje Tasarımcısı göründüğünde, **Başvurular** sekmesine tıklayın.
+Başvurular **sayfasına erişmek** için, içinde bir proje düğümü **(Çözüm** düğümü değil) **Çözüm Gezgini.** Ardından menü **Project** **, Özellikler'i** seçin. Project Tasarımcısı göründüğünde Başvurular **sekmesine** tıklayın.
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
-Aşağıdaki seçenekler, projenizdeki başvuruları ve içeri aktarılan ad alanlarını seçmenizi veya kaldırmanızı sağlar.
+Aşağıdaki seçenekler, projenize başvuruları ve içe aktarılan ad alanlarını seçmenize veya kaldırmanıza olanak sağlar.
 
-**Başvuru yolları**
+**Başvuru Yolları**
 
-**Başvuru yolları** iletişim kutusuna erişmek için bu düğmeye tıklayın.
+Başvuru Yolları iletişim kutusuna **erişmek için bu düğmeye** tıklayın.
 
 > [!NOTE]
-> Proje sistemi bir derleme başvurusu bulduğunda, sistem aşağıdaki konumlara bakarak başvuruyu aşağıdaki sırayla çözümler:
+> Proje sistemi bir derleme başvurusu bulduğunda, sistem aşağıdaki konumlara bakarak başvuruya aşağıdaki sırayla çözümlemektedir:
 >
-> 1. Proje klasörü. **Tüm dosyalar** etkin olmadığında proje klasörü dosyaları **Çözüm Gezgini** görüntülenir.
-> 2. **Başvuru yolları** iletişim kutusunda belirtilen klasörler.
-> 3. **Başvuru Ekle** iletişim kutusunda dosyaları görüntüleyen klasörler.
-> 4. Projenin obj klasörü. (Projenize bir COM başvurusu eklediğinizde, projenin obj klasörüne bir veya daha fazla derleme eklenebilir.)
+> 1. Proje klasörü. Proje klasör dosyaları, **Çözüm Gezgini** Dosyaları **Göster'in etkili** olmadığını gösterir.
+> 2. Başvuru Yolları iletişim kutusunda **belirtilen klasörler.**
+> 3. Başvuru Ekle iletişim kutusunda **dosyaları görüntü alan** klasörler.
+> 4. Projenin obj klasörü. (Projenize com başvurusu eklerken, projenin obj klasörüne bir veya daha fazla derleme eklenebilir.)
 
  **Başvurular**
 
@@ -52,43 +53,43 @@ Bu liste, projede kullanılan veya kullanılmayan tüm başvuruları gösterir.
 
  **Ekle**
 
-**Başvurular** listesine bir başvuru veya Web başvurusu eklemek için bu düğmeye tıklayın.
+Başvurular listesine bir başvuru veya web başvurusu eklemek için **bu düğmeye** tıklayın.
 
-Başvuru Ekle iletişim kutusunu kullanarak projenize başvuru eklemek için **başvuru** ' yı seçin.
+Başvuru **Ekle** iletişim kutusunu kullanarak projenize başvuru eklemek için Başvuru'ya tıklayın.
 
-Web başvurusu **Ekle** iletişim kutusunu kullanarak projenize Web başvurusu eklemek Için **Web başvurusu** ' nu seçin.
+Web **Başvurusu Ekle** iletişim kutusunu kullanarak projenize web başvurusu eklemek için Web **Başvurusu'seçin.**
 
  **Kaldır**
 
-**Başvurular** listesinde bir veya daha fazla başvuru seçin, sonra silmek için bu düğmeye tıklayın.
+Başvurular listesinden bir veya daha **fazla başvuru** seçin ve silmek için bu düğmeye tıklayın.
 
- **Web başvurusunu Güncelleştir**
+ **Web Başvurularını Güncelleştirme**
 
-**Başvurular** listesinde bir Web başvurusu seçin ve güncelleştirmek için bu düğmeye tıklayın.
+Başvurular listesinden bir web **başvurusu seçin** ve güncelleştirmek için bu düğmeye tıklayın.
 
  **İçeri aktarılan ad alanları**
 
-Kendi ad alanınızı bu kutuya yazabilir ve **Kullanıcı Içeri aktarma Ekle** ' ye tıklayarak ad alanları listesine ekleyebilirsiniz.
+Bu kutuya kendi ad alanınızı yazarak Kullanıcı İçeri **Aktarma** Ekle'ye tıklar ve ad alanları listesine ekleyebilirsiniz.
 
-Kullanıcı tarafından içeri aktarılan ad alanları için diğer adlar oluşturabilirsiniz. Bunu yapmak için, biçim *diğer* = *ad alanındaki* diğer adı ve ad alanını girin. Bu, uzun ad alanları kullanıyorsanız faydalıdır, örneğin: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http` .
+Kullanıcı tarafından içe aktarılan ad alanları için diğer adlar oluşturabilirsiniz. Bunu yapmak için diğer adı ve ad alanını diğer ad alanı *biçiminde* = *girin.* Bu, uzun ad alanları kullanıyorsanız kullanışlıdır, örneğin: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http` .
 
- **Kullanıcı Içeri aktarma Ekle**
+ **Kullanıcı İçeri Aktarma Ekleme**
 
-**Içeri aktarılan ad alanları** kutusunda belirtilen ad alanını içeri aktarılan ad alanları listesine eklemek için bu düğmeye tıklayın. Düğme, yalnızca belirtilen ad alanı listede yoksa etkindir.
+İçeri aktarılan ad alanları kutusunda belirtilen ad alanını **içe aktarılan ad** alanları listesine eklemek için bu düğmeye tıklayın. Düğme yalnızca belirtilen ad alanı listede yoksa etkindir.
 
- **Ad alanı listesi**
+ **Ad alanları listesi**
 
-Bu liste tüm kullanılabilir ad alanlarını gösterir. Projenize dahil olan ad alanları için onay kutuları seçilidir.
+Bu listede kullanılabilir tüm ad alanları görüntülenir. Projenize dahil edilen ad alanlarının onay kutuları seçilidir.
 
- **Kullanıcı Içeri aktarmayı Güncelleştir**
+ **Kullanıcı İçeri Aktarmayı Güncelleştirme**
 
-Ad alanları listesinde Kullanıcı tarafından belirtilen bir ad alanı seçin, **Içeri aktarılan ad alanları** kutusuna değiştirmek istediğiniz adı yazın ve ardından yeni ad alanına geçmek için bu düğmeye tıklayın. Düğme, yalnızca seçilen ad alanı, **Kullanıcı Içeri aktarma Ekle** düğmesini kullanarak listeye eklediğiniz bir ise etkindir. Şunları ekleyebilirsiniz:
+Ad alanları listesinde kullanıcı tarafından belirtilen bir ad alanı seçin, İçeri aktarılan  ad alanları kutusuna ad alanını değiştirmek istediğiniz adı yazın ve ardından bu düğmeye tıklayarak yeni ad alanına değiştirin. Düğme yalnızca seçilen ad alanı, Kullanıcı İçeri Aktarma Ekle düğmesini kullanarak listeye eklenen ad **alanı olduğunda etkindir.** Şunları eklemek için:
 
-- Gibi sınıflar veya ad alanları <xref:System.Math?displayProperty=fullName> .
+- Sınıflar veya ad alanları, <xref:System.Math?displayProperty=fullName> örneğin.
 
-- Gibi diğer ad almalar `VB=Microsoft.VisualBasic` .
+- Gibi diğer adla içeri `VB=Microsoft.VisualBasic` aktarmalar.
 
-- Gibi XML ad alanları `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">` .
+- gibi XML ad `<xmlns:xsl="http://www.w3.org/1999/XSL/Transform">` alanları.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

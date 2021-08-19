@@ -1,6 +1,6 @@
 ---
 title: Veritabanı dosyası oluşturma ve tablo tasarımcısını kullanma
-description: Visual Studio 'da Tablo Tasarımcısı kullanarak bir veritabanına nasıl tablo ve yabancı anahtar ekleneceğini açıklayan öğretici. Ayrıca grafik arabiriminden nasıl veri ekleneceğini gösterir.
+description: Visual Studio Tablo Tasarımcısı kullanarak bir veritabanına nasıl tablo ve yabancı anahtar ekleneceğini açıklayan öğretici. Ayrıca grafik arabiriminden nasıl veri ekleneceğini gösterir.
 ms.date: 09/19/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,31 +11,32 @@ ms.assetid: 99c2b06f-47aa-414e-8057-a3453712fd23
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ed0df13f1dd281fcf56056809419af5d7ed6d3dc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: cecf47d023b98ce8ad3cf67799e4bdfff66f45fa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99867210"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122037154"
 ---
-# <a name="create-a-database-and-add-tables-in-visual-studio"></a>Visual Studio 'da veritabanı oluşturma ve tablo ekleme
+# <a name="create-a-database-and-add-tables-in-visual-studio"></a>Visual Studio bir veritabanı oluşturun ve tablo ekleyin
 
-SQL Server Express LocalDB 'de yerel bir veritabanı dosyası oluşturmak ve güncelleştirmek için Visual Studio 'Yu kullanabilirsiniz. Ayrıca, Visual Studio 'daki **SQL Server Nesne Gezgini** araç penceresinde Transact-SQL deyimlerini yürüterek bir veritabanı oluşturabilirsiniz. Bu konu başlığında, Tablo Tasarımcısı kullanarak bir *. mdf* dosyası oluşturacağız ve tablo ve anahtar ekleyeceğiz.
+Visual Studio, SQL Server Express localdb 'de yerel bir veritabanı dosyası oluşturmak ve güncelleştirmek için kullanabilirsiniz. ayrıca, Visual Studio içindeki **SQL Server Nesne Gezgini** araç penceresinde Transact-SQL deyimlerini yürüterek bir veritabanı oluşturabilirsiniz. Bu konu başlığında, Tablo Tasarımcısı kullanarak bir *. mdf* dosyası oluşturacağız ve tablo ve anahtar ekleyeceğiz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu izlenecek yolu tamamlamak için, Visual Studio 'da yüklü **.net masaüstü geliştirme** ve **veri depolama ve işleme** iş yükleri gerekir. Bunları yüklemek için **Visual Studio yükleyicisi** açın ve değiştirmek istediğiniz Visual Studio sürümünün yanındaki **Değiştir** ' i (veya **daha fazla**  >  **değiştirme**) seçin.
+Bu izlenecek yolu tamamlamak için, **.net masaüstü geliştirme** ve **veri depolama ve işleme** iş yüklerinin Visual Studio ' de yüklü olması gerekir. bunları yüklemek için **Visual Studio Yükleyicisi** açın ve değiştirmek istediğiniz Visual Studio sürümünün yanındaki **değiştir** ' i (veya **daha fazla**  >  **değiştir**) seçin.
 
 > [!NOTE]
-> Bu makaledeki yordamlar, .NET Core Windows Forms projelerine değil, yalnızca .NET Framework Windows Forms projelerine uygulanır.
+> bu makaledeki yordamlar, .net Core Windows Forms projelerine değil, yalnızca .NET Framework Windows Forms projelerine uygulanır.
 
 ## <a name="create-a-project-and-a-local-database-file"></a>Bir proje ve yerel veritabanı dosyası oluşturma
 
-1. Yeni bir **Windows Forms App (.NET Framework)** projesi oluşturun ve **SampleDatabaseWalkthrough** olarak adlandırın.
+1. yeni bir **Windows Forms App (.NET Framework)** projesi oluşturun ve **sampledatabasewalkthrough** olarak adlandırın.
 
-2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+2. menü çubuğunda **Project**  >  **yeni öğe ekle**' yi seçin.
 
 3. Öğe şablonları listesinde, aşağı kaydırın ve **hizmet tabanlı veritabanı**' nı seçin.
 
@@ -45,11 +46,11 @@ Bu izlenecek yolu tamamlamak için, Visual Studio 'da yüklü **.net masaüstü 
 
 ### <a name="add-a-data-source"></a>Veri kaynağı ekleme
 
-1. **Veri kaynakları** penceresi açık değilse, **SHIFT** + **alt** + **D** tuşlarına basarak veya   >  menü çubuğunda **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açın.
+1. **veri kaynakları** penceresi açık değilse, **shıft** + **Alt** + **D** tuşlarına basarak veya   >  menü çubuğunda **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek açın.
 
 1. **Veri kaynakları** penceresinde **Yeni veri kaynağı Ekle**' yi seçin.
 
-   ![Visual Studio 'da yeni veri kaynağı ekleme](media/add-new-data-source.png)
+   ![Visual Studio yeni veri kaynağı Ekle](media/add-new-data-source.png)
 
    **Veri kaynağı Yapılandırma Sihirbazı** açılır.
 
@@ -72,7 +73,7 @@ Veri bağlantısının Özellikler penceresi açarak *SampleDatabase. mdf* dosya
 - Alternatif olarak,   >  Bu pencere zaten açık değilse **Sunucu Gezgini** görüntüle ' yi seçebilirsiniz. **Veri bağlantıları** düğümünü genişleterek, *SampleDatabase. mdf*' ye sağ tıklayıp **Özellikler**' i seçerek Özellikler penceresi açın.
 
   > [!TIP]
-  > Veri bağlantıları düğümünü genişletemiyorum veya SampleDatabase. mdf bağlantısı listelenmiyorsa Sunucu Gezgini araç çubuğundaki **veritabanına Bağlan** düğmesini seçin. **Bağlantı ekle** iletişim kutusunda, **veri kaynağı** altında **Microsoft SQL Server veritabanı dosyası** ' nın seçildiğinden emin olun ve SampleDatabase. mdf dosyasına gidip seçin. **Tamam ' ı** seçerek bağlantıyı eklemeyi tamamlayın.
+  > veri bağlantıları düğümünü genişletemiyorum veya sampledatabase. mdf bağlantısı listelenmiyorsa, Sunucu Gezgini araç çubuğunda **veritabanına Bağlan** düğmesini seçin. **bağlantı ekle** iletişim kutusunda, **veri kaynağı** altında **Microsoft SQL Server veritabanı dosyası** ' nın seçildiğinden emin olun ve sampledatabase. mdf dosyasına gidip seçin. **Tamam ' ı** seçerek bağlantıyı eklemeyi tamamlayın.
 
 ## <a name="create-tables-and-keys-by-using-table-designer"></a>Tablo Tasarımcısı kullanarak tablo ve anahtarlar oluşturma
 
@@ -82,7 +83,7 @@ Bu bölümde, iki tablo, her tabloda bir birincil anahtar ve birkaç örnek veri
 
 1. **Sunucu Gezgini**' de, **veri bağlantıları** düğümünü genişletin ve **SampleDatabase. mdf** düğümünü genişletin.
 
-   Veri bağlantıları düğümünü genişletemiyorum veya SampleDatabase. mdf bağlantısı listelenmiyorsa Sunucu Gezgini araç çubuğundaki **veritabanına Bağlan** düğmesini seçin. **Bağlantı ekle** iletişim kutusunda, **veri kaynağı** altında **Microsoft SQL Server veritabanı dosyası** ' nın seçildiğinden emin olun ve SampleDatabase. mdf dosyasına gidip seçin. **Tamam ' ı** seçerek bağlantıyı eklemeyi tamamlayın.
+   veri bağlantıları düğümünü genişletemiyorum veya sampledatabase. mdf bağlantısı listelenmiyorsa, Sunucu Gezgini araç çubuğunda **veritabanına Bağlan** düğmesini seçin. **bağlantı ekle** iletişim kutusunda, **veri kaynağı** altında **Microsoft SQL Server veritabanı dosyası** ' nın seçildiğinden emin olun ve sampledatabase. mdf dosyasına gidip seçin. **Tamam ' ı** seçerek bağlantıyı eklemeyi tamamlayın.
 
 2. **Tablolar** ' a sağ tıklayıp **Yeni Tablo Ekle**' yi seçin.
 
@@ -148,11 +149,11 @@ Bu bölümde, iki tablo, her tabloda bir birincil anahtar ve birkaç örnek veri
 
 1. Siparişler tablosu için Tablo Tasarımcısı kılavuzunun sağ tarafındaki bağlam bölmesinde **yabancı anahtarlar** ' a sağ tıklayın ve **yeni yabancı anahtar Ekle**' yi seçin.
 
-   ![Visual Studio 'da Tablo Tasarımcısı yabancı anahtar ekleme](../data-tools/media/add-foreign-key.png)
+   ![Visual Studio Tablo Tasarımcısı yabancı anahtar ekleme](../data-tools/media/add-foreign-key.png)
 
 2. Görüntülenen metin kutusunda, Text **ToTable** değerini **Customers** ile değiştirin.
 
-3. T-SQL bölmesinde, son satırı aşağıdaki örnekle eşleşecek şekilde güncelleştirin:
+3. T-SQL bölmesinde son satırı aşağıdaki örnekle eşleşecek şekilde güncelleştirin:
 
    ```sql
    CONSTRAINT [FK_Orders_Customers] FOREIGN KEY ([CustomerID]) REFERENCES [Customers]([CustomerID])
@@ -166,7 +167,7 @@ Bu bölümde, iki tablo, her tabloda bir birincil anahtar ve birkaç örnek veri
 
 ## <a name="populate-the-tables-with-data"></a>Tabloları verilerle doldurma
 
-1. **Sunucu Gezgini** veya **SQL Server Nesne Gezgini**' de, örnek veritabanının düğümünü genişletin.
+1. **Sunucu Gezgini** veya **SQL Server Nesne Gezgini**, örnek veritabanının düğümünü genişletin.
 
 2. **Tablolar** düğümü için kısayol menüsünü açın, **Yenile**' yi seçin ve **Tablolar** düğümünü genişletin.
 

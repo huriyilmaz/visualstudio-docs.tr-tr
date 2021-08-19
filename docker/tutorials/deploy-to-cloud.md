@@ -6,15 +6,16 @@ author: nebuk89
 ms.author: ghogen
 manager: jmartens
 ms.technology: vs-docker
+ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: a0eecb44ae13f127e32cf0d15effdbd026d1e6c4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: faa4fe632662a9e57ab6e39573a42ad4e3da4c97
+ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122059757"
+ms.lasthandoff: 08/18/2021
+ms.locfileid: "122334499"
 ---
 # <a name="deploy-to-the-cloud"></a>Buluta dağıtın
 

@@ -1,6 +1,6 @@
 ---
 title: Grafik Olay Listesi | Microsoft Docs
-description: Oyun veya uygulamanıza bir çerçeve Visual Studio kaydedilen Direct3D olaylarını keşfetmek için Visual Studio Graphics Analyzer'daki Grafik Olay Listesi'ne tıklayın.
+description: Oyun veya uygulamanıza ait bir çerçeveyi Visual Studio Direct3D olaylarını keşfetmek için Visual Studio Graphics Analyzer'daki Grafik Olay Listesi'ne tıklayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,15 +13,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 62851bbce37529c3a2d7cb4f2920c77f52034b7bd6b5940676a7e04fedf9da5d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2cb03305b036e5954340dc04a3c14d786b7735d7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362842"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052089"
 ---
 # <a name="graphics-event-list"></a>Grafik Olay Listesi
-Oyun veya uygulamanıza bir çerçeve Visual Studio kaydedilen Direct3D olaylarını keşfetmek için Visual Studio Graphics Analyzer'daki Grafik Olay Listesi'ne tıklayın.
+Oyun veya uygulamanıza ait bir çerçeveyi Visual Studio Direct3D olaylarını keşfetmek için Visual Studio Graphics Analyzer'daki Grafik Olay Listesi'ne tıklayın.
 
  Bu, Olay Listesidir:
 
@@ -33,7 +33,7 @@ Oyun veya uygulamanıza bir çerçeve Visual Studio kaydedilen Direct3D olaylar�
  Olay listesinin özelliklerini etkili bir şekilde kullanmak, binlerce olay içerilebilecek karmaşık kareler elde etme açısından önemlidir. Olay listesini etkili bir şekilde kullanmak için en uygun görünümü seçin, olay listesini filtrelemek için arama kullanın, bir olayla ilişkili Direct3D nesneleri hakkında daha fazla bilgi edinmek için bağlantıları izleyin ve çizim çağrıları arasında hızla geçiş yapmak için ok düğmelerini kullanın.
 
 ### <a name="color-coded-events-in-direct3d-12"></a>Direct3D 12'de renk kodlu olaylar
- Direct3D 12, farklı donanım işlevlerine karşılık gelen birden çok kuyruğu ortaya çıkarır. Direct3D 12'de belirli bir grafik olayıyla ilişkili kuyruğun belirlenmesine yardımcı olmak için, Direct3D 12 uygulamasının yakalanması ile çalışırken olaylar, Olay Listesi'ne kendi kuyruğuna göre renk kodludur.
+ Direct3D 12, farklı donanım işlevlerine karşılık gelen birden çok kuyruğu ortaya çıkarır. Direct3D 12'de belirli bir grafik olayıyla ilişkili kuyruğun belirlenmesine yardımcı olmak için, Direct3D 12 uygulamasının yakalanması üzerinde çalışırken olaylar, olay listesinde kuyruklarına göre renk kodludur.
 
 |Direct3D 12 Kuyruğu|Renk|
 |-----------------------|-----------|
@@ -41,12 +41,12 @@ Oyun veya uygulamanıza bir çerçeve Visual Studio kaydedilen Direct3D olaylar�
 |İşlem kuyruğu|Yellow|
 |Kuyruğu kopyalama|Orange|
 
- Direct3D 11 birden çok kuyruğu açığa çıkarmaz, bu nedenle Direct3D 11 uygulamasının yakalaması ile çalışırken olaylar Olay Listesinde renk koduyla kodlu olarak yer değiştirmez.
+ Direct3D 11 birden çok kuyruğu açığa çıkarmaz, bu nedenle Direct3D 11 uygulamasının yakalaması üzerinde çalışırken olaylar Olay Listesinde renk kodlu olarak kodlu olarak yer değiştirmez.
 
 ### <a name="event-list-views"></a>Olay listesi görünümleri
  Olay listesi, grafik olaylarını iş akışınızı ve tercihlerinizi desteklemek için farklı şekillerde düzenleyen iki farklı görünümleri destekler. İlk görünüm, olayları *ve ilişkili durumlarını* hiyerarşik olarak düzenleyen GPU iş görünümü olur. İkinci görünüm, olayları *kronolojik* olarak düz bir listede düzenleyen zaman çizelgesi görünümüdür.
 
- **GPU çalışma görünümü** Yakalanan olayları ve bunların durumlarını bir hiyerarşide görüntüler. Hiyerarşinin en üst düzeyi çizim çağrıları, temizlemeler, mevcut ve görünümlerle ilgili olanlar gibi olaylardan oluşur. Olay listesinde, çizim çağrısı sırasında geçerli olan cihaz durumunu görüntülemek için draw çağrılarını genişletebilirsiniz; ve durumların değerlerini ayaran olayları görüntülemek için her tür durumu daha da genişletebilirsiniz. Bu düzeyde, belirli bir durum önceki çerçevede mi yoksa son çizim çağrısından bu yana birden çok kez ayarlanmış mı olduğunu da görebilir.
+ **GPU çalışma görünümü** Yakalanan olayları ve bunların durumlarını bir hiyerarşide görüntüler. Hiyerarşinin en üst düzeyi çizim çağrıları, temizlemeler, mevcut ve görünümlerle ilgili olanlar gibi olaylardan oluşur. Olay listesinde, çizim çağrısı sırasında geçerli olan cihaz durumunu görüntülemek için draw çağrılarını genişletebilirsiniz; ve değerlerini ayaran olayları görüntülemek için her tür durumu daha da genişletebilirsiniz. Bu düzeyde, belirli bir durum önceki çerçevede mi yoksa son çizim çağrısından bu yana birden çok kez ayarlanmış mı olduğunu da görebilir.
 
  Zaman **Çizelgesi** görünümü Yakalanan her olayı kronolojik sırada görüntüler. Olay listesini düzenlemenin bu yolu, olay listesinin önceki sürümlerindeki Visual Studio.
 
@@ -70,13 +70,13 @@ Oyun veya uygulamanıza bir çerçeve Visual Studio kaydedilen Direct3D olaylar�
 |----------|-----------------------|
 |(simge yok)|Genel olay<br /> Kullanıcı tanımlı olay, kullanıcı tanımlı olay grubu veya çizim olayı olmayan herhangi bir olay.|
 |![Çizim olayı simgesi](media/vsg_eventlist_icon_draw.png "vsg_eventlist_icon_draw")|Draw olayı<br /> Yakalanan kare sırasında meydana gelen bir çizim olayı işaretler.|
-|![Kullanıcı tanımlı&#45;işareti simgesi](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay grubu<br /> Uygulama tarafından tanımlanan ilgili olayları gruplar.|
-|![Kullanıcı tanımlı&#45;işareti simgesi](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay işaretçisi<br /> Uygulama tarafından tanımlanan belirli bir konumu işaretler.|
+|![Kullanıcı tanımlı&#45;işareti simgesine sahip](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay grubu<br /> Uygulama tarafından tanımlanan ilgili olayları gruplar.|
+|![Kullanıcı tanımlı&#45;işareti simgesine sahip](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay işaretçisi<br /> Uygulama tarafından tanımlanan belirli bir konumu işaretler.|
 
 ## <a name="marking-user-defined-events-in-your-app"></a>Uygulamanıza kullanıcı tanımlı olayları işaretleme
  Kullanıcı tanımlı olaylar uygulamanıza özeldir. Bunları, uygulamanıza gelen önemli olayları Grafik Olay Listesi'nin olaylarla arasında ilişkide kullanmak için kullanabilirsiniz. Örneğin, kullanıcı arabiriminizi işleyecek olaylar gibi ilgili olayları düzenlemek için kullanıcı tanımlı olay grupları oluşturabilir, böylece olay listesine daha kolay göz atabilir veya olay listesinde grafik olaylarını kolayca bulmak için belirli türdeki nesneler çizilirken işaretçiler oluşturabilirsiniz.
 
- Uygulamanıza grup ve işaretçi oluşturmak için, Direct3D'nin diğer Direct3D hata ayıklama araçları tarafından kullanımına sağladığı API'leri kullanırsanız. Bu API'ler bazen Direct3D sürümleri arasında değişir, ancak temel işlevler aynıdır.
+ Uygulamanıza grup ve işaretçi oluşturmak için, Direct3D'nin diğer Direct3D hata ayıklama araçları tarafından kullanımına yönelik olarak sağladığı API'leri kullanırsanız. Bu API'ler bazen Direct3D sürümleri arasında değişir, ancak temel işlevler aynıdır.
 
 ### <a name="user-defined-events-in-direct3d-12"></a>Direct3D 12'de kullanıcı tanımlı olaylar
  Direct3D 12'de grup ve işaretçi oluşturmak için bu bölümde açıklanan API'leri kullanın. Aşağıdaki tabloda, bir komut kuyruğunda veya komut listesinde olayları işaretlemenize bağlı olarak kullanabileceğiniz API'ler özetlenmiştir.

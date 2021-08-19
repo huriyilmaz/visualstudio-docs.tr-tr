@@ -1,51 +1,52 @@
 ---
-title: 'Docker öğreticisi-Bölüm 6: BIND takar kullanma'
-description: Ana bilgisayar üzerindeki bağlama noktasını denetlemek için bağlama bağlamalarından nasıl kullanılacağını açıklar.
+title: 'Docker öğreticisi - Bölüm 6: Bağlamaları kullanma'
+description: Konakta bağlama noktasını kontrol etmek için bağlama bağlamaları kullanmayı açıklar.
 ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
 ms.technology: vs-docker
+ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 52b8869cd5e83df81953c2d396a787a36a3268276f9843044ba3334e9401fd2b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6be724056171bd2d7b70c3d3fa726fcdad1df1f8
+ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121349136"
+ms.lasthandoff: 08/18/2021
+ms.locfileid: "122334297"
 ---
-# <a name="use-bind-mounts"></a>BIND bağlama kullanma
+# <a name="use-bind-mounts"></a>Bağlamaları kullanma
 
-Önceki bölümde, verileri veritabanınızda kalıcı hale getirmek için adlandırılmış bir **birimi** öğrenmiş ve kullandınız. Verilerin *nerede* depolandığını merak etmeniz gerekmiyorsa, yalnızca verileri depolamak istiyorsanız adlandırılmış birimler harika olur.
+Önceki bölümde, verileri veritabanınıza kalıcı yapmak için adlandırılmış **birim hakkında** bilgi öğrendiniz ve bu birimi kullandınız. Verilerin nerede depolandığı konusunda endişelenmenize gerek olmadığınız için adlandırılmış birimler yalnızca verileri *depolamak* için harikadır.
 
-**BIND** bağlamalarla, konaktaki kesin bağlama noktasını denetlersiniz. Bunu verileri kalıcı hale getirmek için kullanabilirsiniz, ancak genellikle kapsayıcılara daha fazla veri sağlamak için kullanılır. Uygulama üzerinde çalışırken, kod değişikliklerini görmek, yanıt vermek ve değişiklikleri hemen görmenizi sağlamak için kaynak kodu kapsayıcıya bağlamak üzere bir bağlama bağlama kullanabilirsiniz.
+Bağlama **bağlamaları ile** konakta tam bağlama noktası denetiminde olur. Verileri kalıcı yapmak için bunu kullanabilirsiniz, ancak genellikle kapsayıcılara ek veri sağlamak için kullanılır. Uygulama üzerinde çalışırken bağlamayı kullanarak kaynak kodu kapsayıcıya bağarak kod değişikliklerini görebilir, yanıt ve değişiklikleri hemen görebilir.
 
-Düğüm tabanlı uygulamalar için [nodemon](https://npmjs.com/package/nodemon) , dosya değişikliklerini izlemek ve sonra uygulamayı yeniden başlatmak için harika bir araçtır. Birçok diğer dil ve çerçeve için eşdeğer araçlar vardır.
+Düğüm tabanlı uygulamalar için [nodemon, dosya](https://npmjs.com/package/nodemon) değişikliklerini izlemek ve sonra uygulamayı yeniden başlatmak için harika bir araçtır. Diğer dil ve çerçevelerin çoğunda eşdeğer araçlar vardır.
 
 ## <a name="quick-volume-type-comparisons"></a>Hızlı birim türü karşılaştırmaları
 
-BIND ve adlandırılmış birimleri bağlayın, Docker altyapısıyla birlikte gelen iki ana birim türüdür. Ancak, diğer kullanım örneklerini desteklemek için ek birim sürücüleri mevcuttur ([SFTP](https://github.com/vieux/docker-volume-sshfs), [Ceph](https://ceph.com/geen-categorie/getting-started-with-the-docker-rbd-volume-plugin/), [NetApp](https://netappdvp.readthedocs.io/en/stable/), [S3](https://github.com/elementar/docker-s3-volume)ve daha fazlası).
+Bağlama bağlamaları ve adlandırılmış birimler, Docker altyapısıyla birlikte gelen iki ana birim t t'tir. Ancak, diğer kullanım durumlarını[(SFTP](https://github.com/vieux/docker-volume-sshfs), [Ceph](https://ceph.com/geen-categorie/getting-started-with-the-docker-rbd-volume-plugin/), [NetApp](https://netappdvp.readthedocs.io/en/stable/), [S3](https://github.com/elementar/docker-s3-volume)ve daha fazlası) desteklemek için ek birim sürücüleri kullanılabilir.
 
-| Özellik | Adlandırılmış birimler | BIND takar |
+| Özellik | Adlandırılmış Birimler | Bağlama bağlamaları |
 | -------- | ------------- | ----------- |
-| Ana bilgisayar konumu | Docker seçer | Kontrol edersiniz |
-| Bağlama örneği (kullanarak `-v` ) | My-Volume:/usr/local/Data | /Path/to/Data:/usr/local/Data |
-| Yeni birimi kapsayıcı içeriğiyle doldurur | Yes | Hayır |
-| Birim sürücülerini destekler | Yes | Hayır |
+| Konak Konumu | Docker seçer | Denetimi siz sağlar |
+| Bağlama Örneği `-v` (kullanarak) | my-volume:/usr/local/data | /path/to/data:/usr/local/data |
+| Yeni birimi kapsayıcı içeriğiyle doldurmak | Yes | Hayır |
+| Birim Sürücülerini Destekler | Yes | Hayır |
 
-## <a name="start-a-dev-mode-container"></a>Geliştirme modu kapsayıcısını başlatma
+## <a name="start-a-dev-mode-container"></a>Geliştirme modu kapsayıcısı başlatma
 
-Bir geliştirme iş akışını desteklemek üzere kapsayıcınızı çalıştırmak için şunları yapın:
+Geliştirme iş akışını desteklemek için kapsayıcınızı çalıştırmak için aşağıdaki adımları gerçekleştirin:
 
 - Kaynak kodunuzu kapsayıcıya bağlama
-- "Dev" bağımlılıkları da dahil olmak üzere tüm bağımlılıkları yükler
-- Dosya sistemi değişikliklerini izlemek için nodemon 'i başlatın
+- "Geliştirme" bağımlılıkları da dahil olmak üzere tüm bağımlılıkları yükleme
+- Dosya sistemi değişikliklerini izlemek için nodemon başlatma
 
-1. Çalışan bir önceki Kapsayıcınız olmadığından emin olun `getting-started` .
+1. Daha önce çalışan kapsayıcılar `getting-started` olmadığınızdan emin olun.
 
-1. Aşağıdaki komutu çalıştırın ( ` \ ` karakterleri Windows PowerShell ile değiştirin `` ` `` ). Daha sonra neler olduğunu öğreneceksiniz:
+1. Aşağıdaki komutu çalıştırın ` \ ` (dizedeki karakterleri `` ` `` ile Windows PowerShell). Daha sonra neler olduğunu öğrenirsiniz:
 
     ```bash
     docker run -dp 3000:3000 \
@@ -55,13 +56,13 @@ Bir geliştirme iş akışını desteklemek üzere kapsayıcınızı çalıştı
         sh -c "yarn install && yarn run dev"
     ```
 
-    - `-dp 3000:3000` -daha önce olduğu gibi. Ayrılmış (arka plan) modda çalıştır ve bir bağlantı noktası eşlemesi oluştur
-    - `-w /app` -"çalışma dizini" veya komutun çalıştırılacağı geçerli dizini ayarlar
-    - `-v "%cd%:/app"` -Geçerli dizini kapsayıcıdaki konaktan `/app` dizine bağlayın
-    - `node:12-alpine` -kullanılacak resim. Bunun, Dockerfile 'dan uygulamanız için temel görüntü olduğunu unutmayın.
-    - `sh -c "yarn install && yarn run dev"` -komutu. `sh`(Alçam yok) kullanarak bir kabuk başlatıyoruz `bash` ve `yarn install` *Tüm* bağımlılıkları yüklemek ve ardından çalıştırmak için çalışıyor `yarn run dev` . ' A bakarsanız, `package.json` `dev` betiğin başlatıldığını görüyoruz `nodemon` .
+    - `-dp 3000:3000` - öncekiyle aynı. Ayrılmış (arka plan) modunda çalıştırın ve bağlantı noktası eşlemesi oluşturun
+    - `-w /app` - "çalışma dizinini" veya komutun çalıştıracak geçerli dizini ayarlar
+    - `-v "%cd%:/app"` - geçerli dizini kapsayıcının konaktan dizinine `/app` bağlama
+    - `node:12-alpine` - kullanmak için görüntü. Bunun Dockerfile dosyasından uygulamanıza temel görüntü olduğunu unutmayın
+    - `sh -c "yarn install && yarn run dev"` - komutu. Kullanarak bir kabuk başlatan (alpine'da yok) ve tüm bağımlılıkları yüklemek için `sh` `bash` `yarn install` çalıştırarak ve ardından çalıştırarak  `yarn run dev` . içinde bakarsanız `package.json` betiğin başlat `dev` olduğunu `nodemon` göreceğiz.
 
-1. Kullanarak günlükleri izleyebilirsiniz `docker logs -f <container-id>` . Şunu gördüğünüzde başlamaya hazırsınız:
+1. kullanarak günlükleri `docker logs -f <container-id>` izleyebilirsiniz. Bunu gördüğünüzde gitmeye hazır olduğunu bilirsiniz:
 
     ```bash
     docker logs -f <container-id>
@@ -74,30 +75,30 @@ Bir geliştirme iş akışını desteklemek üzere kapsayıcınızı çalıştı
     Listening on port 3000
     ```
 
-    Günlükleri izlemeyi tamamladıktan sonra, vurarak çıkış yapın `Ctrl` + `C` .
+    Günlükleri izlemeyi bitirerek çıkışa `Ctrl` + `C` çıkın.
 
-1. Şimdi uygulamada bir değişiklik yapın. `src/static/js/app.js`Dosyasında, **Ekle**' yi tek yapmanız gereken **öğe Ekle** düğmesini değiştirin. Bu değişiklik 109. satırda olacaktır.
+1. Şimdi uygulamada bir değişiklik yapma. Dosyada `src/static/js/app.js` Öğe Ekle düğmesini Yalnızca **Ekle** olarak **değiştirebilirsiniz.** Bu değişiklik 109. satırda olacak.
 
     ```diff
     -                         {submitting ? 'Adding...' : 'Add Item'}
     +                         {submitting ? 'Adding...' : 'Add'}
     ```
 
-1. Yalnızca sayfayı yenilemeniz (veya açmanız) ve değişikliğin tarayıcıda neredeyse hemen yansıtıldığını görmeniz gerekir. Düğüm sunucusunun yeniden başlatılması birkaç saniye sürebilir, bu nedenle bir hata alırsanız birkaç saniye sonra yenilemeyi deneyin.
+1. Sayfayı yenileyin (veya açın) ve değişikliğin neredeyse anında tarayıcıya yansıtıldı olduğunu görebilirsiniz. Node sunucusunun yeniden başlatılması birkaç saniye sürebilir, bu nedenle bir hata alırsanız birkaç saniye sonra yenilemeyi deneyin.
 
     ![Ekle düğmesi için güncelleştirilmiş etiketin ekran görüntüsü](media/updated-add-button.png)
 
-1. Yapmak istediğiniz başka herhangi bir değişikliği yapmak için ücretsizdir. İşiniz bittiğinde kapsayıcıyı durdurun ve kullanarak yeni görüntünüzü oluşturun `docker build -t getting-started .` .
+1. Yapmak için herhangi bir değişiklik yapabilirsiniz. Bitirin, kapsayıcıyı durdurun ve kullanarak yeni görüntünizi derlemeniz `docker build -t getting-started .` gerekir.
 
-BIND takmaları kullanmak yerel geliştirme kurulumları için *çok* yaygındır. Avantajı, geliştirme makinesinin tüm derleme araçlarının ve ortamların yüklü olması gerekmez. Tek bir `docker run` komutla, geliştirme ortamı çekilir ve gönderilmeye hazırdır. Gelecekteki bir adımda Docker Compose hakkında bilgi edineceksiniz. Bu, komutlarınızı basitleştirmeye yardımcı olur (zaten çok sayıda bayrak alıyorsunuz).
+Bağlama bağlamaları, yerel *geliştirme* kurulumları için çok yaygındır. Bunun avantajı, geliştirme makinesinin tüm derleme araçlarına ve ortamlara sahip olması gerekmamadır. Tek bir `docker run` komutla geliştirme ortamı çekilir ve kullanıma hazır olur. Komutlarınızı basitleştirmenize Docker Compose (zaten çok sayıda bayrak alasınız) bu adımlardan biri hakkında bilgi edinebilirsiniz.
 
 ## <a name="recap"></a>Özet
 
-Bu noktada, veritabanınızı kalıcı hale getirebilirsiniz ve yatırımlarınızın ve temellerinizin ihtiyaçlarına ve taleplerine hızlı bir şekilde yanıt verebilirsiniz. Yaşasın! Ancak neleri tahmin edin? Harika haberler aldınız!
+Bu noktada veritabanınızı kalıcı olarak bulundurarak yatırımcıların ve kurucuların ihtiyaçlarına ve taleplerine hızla yanıt veebilirsiniz. Yaşasın! Peki tahmin edin ne olacak? Harika haberlerle karşılandınız!
 
-**Projeniz gelecekte geliştirme için seçildi!**
+**Projeniz gelecekteki geliştirme için seçildi!**
 
-Üretime hazırlanmak için, veritabanınızı SQLite ' dan biraz daha iyi ölçeklenebilen bir şeye geçirmeniz gerekir. Kolaylık olması için, ilişkisel bir veritabanıyla birlikte tutulacak ve uygulamanızı MySQL kullanacak şekilde değiştireceksiniz. Ancak, MySQL 'i nasıl çalıştırmanız gerekir? Kapsayıcıların birbirleriyle iletişim kurmasına nasıl izin verirsiniz? Bu ileri hakkında bilgi edineceksiniz!
+Üretime hazırlanmak için veritabanınızı SQLite'da çalışırken biraz daha iyi ölçeklendirilen bir şeye geçirmeniz gerekir. Kolaylık olması için ilişkisel bir veritabanı kullanmaya devam ediyor ve mySQL'i kullanmak için uygulamanıza geçişe geçebilirsiniz. Ancak MySQL'i nasıl çalıştırmalısınız? Kapsayıcıların birbirine konuşmasına nasıl izin vesersiniz? Bir sonraki adım bu olacak!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 32f828682f51c98bfd39c1f1d9d4c9bd149791cf8bd348eacd0d03eb7069c4e1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4e5ac1796a1a876a454dc976688799ba1033570e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420689"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052248"
 ---
 # <a name="idiasymbolget_intrinsic"></a>IDiaSymbol::get_intrinsic
 Bir sınıfın içsel bir tür olup olmadığını belirten bir bayrak alır.

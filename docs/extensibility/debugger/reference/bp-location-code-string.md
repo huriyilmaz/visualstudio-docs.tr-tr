@@ -11,16 +11,17 @@ ms.assetid: a4cd71c6-5052-45fe-907b-ebc6ca1df2e4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: 9c32a75e4976a81498033a656461d897e4f298a3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7b29bf10ec30452465b5e8106378d48b3086f0b9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096778"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120497"
 ---
 # <a name="bp_location_code_string"></a>BP_LOCATION_CODE_STRING
 Kullanıcının tümleşik geliştirme ortamından (IDE) girebileceği bir dizeye göre kod kesme noktaları ayarlamak için kullanılır.

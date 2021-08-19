@@ -1,6 +1,6 @@
 ---
 title: Yereller için örnek uygulama | Microsoft Docs
-description: Visual Studio 'Nun bu makaledeki ifade değerlendiricisi ' nden bir yönteme ait yerelleri nasıl aldığından öğrenin.
+description: Visual Studio, bu makaledeki ifade değerlendiricisi ' nden bir yöntemin yerelleri nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: sample
@@ -11,22 +11,23 @@ ms.assetid: 66a2e00a-f558-4e87-96b8-5ecf5509e04c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac52f1524c4be2e4a7afcbd21fb437977fb663e3
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 71b358543463e8c780a122dfa466651639f5a906
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902286"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122063635"
 ---
 # <a name="sample-implementation-of-locals"></a>Yereller için örnek uygulama
 > [!IMPORTANT]
 > Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Aşağıda, Visual Studio 'nun ifade değerlendiricisi (EE) için bir yöntemin yerelleri nasıl aldığı hakkında genel bir bakış verilmiştir:
+ aşağıda, Visual Studio ifade değerlendiricisi (EE) ' dan bir yöntemin yerelleri nasıl aldığından ilgili bir genel bakış verilmiştir:
 
-1. Visual Studio, Yereller de dahil olmak üzere yığın çerçevesinin tüm özelliklerini temsil eden bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) nesnesi almak için hata ayıklama ALTYAPıSıNıN (de) [GetDebugProperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) 'sini çağırır.
+1. Visual Studio, yereller de dahil olmak üzere yığın çerçevesinin tüm özelliklerini temsil eden bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) nesnesi almak için hata ayıklama altyapısının (DE) [getdebugproperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) öğesini çağırır.
 
 2. `IDebugStackFrame2::GetDebugProperty` kesme noktasının gerçekleştiği yöntemi açıklayan bir nesne almak için [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) ' i çağırır. DE bir sembol sağlayıcısı ([IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)), bir adres ([IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md)) ve bir Ciltçi ([ıdebugciltçi](../../extensibility/debugger/reference/idebugbinder.md)) sağlar.
 
@@ -40,11 +41,11 @@ ms.locfileid: "112902286"
 
 7. `IDebugExpressionEvaluator::GetMethodProperty` nesneyi `CFieldProperty` nesne olarak döndürür `IDebugProperty2` .
 
-8. Visual Studio, [](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) `IDebugProperty2` filtrenin `guidFilterLocalsPlusArgs` Yerellerini içeren bir [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi döndüren Filter ile döndürülen nesnede EnumChildren 'ı çağırır. Bu numaralandırma, [Enumyereller](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) ve [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md)çağrıları tarafından doldurulur.
+8. Visual Studio, [](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) döndürülen `IDebugProperty2` nesnede `guidFilterLocalsPlusArgs` , metodun yerellerini içeren bir [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi döndüren, filtre ile enumchildren 'ı çağırır. Bu numaralandırma, [Enumyereller](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) ve [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md)çağrıları tarafından doldurulur.
 
-9. Visual Studio, her yerel için [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) yapısını elde etmek üzere [İleri](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) çağrı. Bu yapı yerel için bir arabirime yönelik bir işaretçi içerir `IDebugProperty2` .
+9. Visual Studio her bir yerel için [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) yapısını elde etmek [için çağırır.](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) Bu yapı yerel için bir arabirime yönelik bir işaretçi içerir `IDebugProperty2` .
 
-10. Visual Studio, yerel sunucunun adını, değerini ve türünü almak için her bir yerel için [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) çağırır. Bu bilgiler **Yerel öğeler** penceresinde görüntülenir.
+10. Visual Studio, yerel sunucunun adını, değerini ve türünü almak için her bir yerel için [getpropertyınfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) çağırır. Bu bilgiler **Yerel öğeler** penceresinde görüntülenir.
 
 ## <a name="in-this-section"></a>Bu bölümde
  [GetMethodProperty Uygula](../../extensibility/debugger/implementing-getmethodproperty.md) [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)uygulamasının bir uygulamasını açıklar.
@@ -58,7 +59,7 @@ ms.locfileid: "112902286"
  [Yerelleri değerlendir](../../extensibility/debugger/evaluating-locals.md) Yereller nasıl değerlendirildiğini açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
- [Değerlendirme bağlamı](../../extensibility/debugger/evaluation-context.md) , İfade değerlendirici (EE) öğesini çağırdığında geçirilen bağımsız değişkenleri sağlar.
+ [Değerlendirme bağlamı](../../extensibility/debugger/evaluation-context.md) , İfade değerlendirici (EE) çağırdığında geçirilen bağımsız değişkenleri sağlar.
 
  [MyCEE örneği](/previous-versions/) MyC dili için bir ifade değerlendiricisi oluşturmaya yönelik bir uygulama yaklaşımını gösterir.
 

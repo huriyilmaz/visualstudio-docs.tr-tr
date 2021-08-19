@@ -1,6 +1,6 @@
 ---
-title: Başlangıç görünümünden çalışma alanına düğüm ekleme
-description: Başlangıç görünümündeki komutları kullanarak XML şeması Tasarımcısı çalışma alanına düğümler eklemeyi öğrenin.
+title: Başlangıç Görünümünden çalışma alanına düğüm ekleme
+description: Başlangıç Görünümündeki komutları kullanarak XML Şema Tasarımcısı çalışma alanına düğümler ekleme hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,27 +11,27 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 260a80fd2761e93ed09b1adeca54cc4d75bc5d0f5f440e1a77d890a61016fcec
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0f3a67d873da498dc453decd316e74f9331ba391
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121350959"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098794"
 ---
-# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Nasıl yapılır: başlangıç görünümünden çalışma alanına düğüm ekleme
+# <a name="how-to-add-nodes-to-the-workspace-from-the-start-view"></a>Nasıl: Başlangıç Görünümünden çalışma alanına düğüm ekleme
 
-Bu konuda, [Başlangıç görünümünden](../xml-tools/start-view.md) [XML şema Tasarımcısı çalışma alanına](../xml-tools/xml-schema-designer-workspace.md) genel düğümlerin nasıl ekleneceği açıklanmaktadır.
+Bu konuda, Başlangıç Görünümünden XML Şema Tasarımcısı çalışma alanına [genel düğümlerin](../xml-tools/xml-schema-designer-workspace.md) nasıl [ekli olduğu açıklanmıştır.](../xml-tools/start-view.md)
 
-## <a name="to-add-nodes-to-the-workspace-from-the-start-view"></a>Başlangıç görünümünden çalışma alanına düğüm eklemek için
+## <a name="to-add-nodes-to-the-workspace-from-the-start-view"></a>Başlangıç Görünümünden çalışma alanına düğüm eklemek için
 
-1. [Nasıl yapılır: xsd şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)bölümündeki adımları izleyin.
+1. Nasıl olur: [XSD şema dosyası oluşturma ve düzenleme adımlarını izleyin.](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)
 
-2. XML düzenleyicisine sağ tıklayıp **Görünüm Tasarımcısı**' nı seçin.
+2. XML düzenleyicisine sağ tıklayın ve **Görünüm Tasarımcısı.**
 
-     Başlangıç görünümü görüntülenir.
+     Başlangıç Görünümü görüntülenir.
 
-     **Şema kümesi ayrıntıları** bölümünde iki (**2**) **genel karmaşık tür** olduğunu fark edersiniz.
+     Şema **Kümesi Ayrıntıları bölümünde** iki (**2**) Genel Karmaşık Tür **olduğunu fark edin.**
 
-3. **Genel karmaşık türler** başlığının sağındaki **Ekle** bağlantısına tıklayın.
+3. Genel Karmaşık **Türler** başlığında sağ tarafa **ekle bağlantısına** tıklayın.
 
-     `USAddress`ve `PurchaseOrderType` karmaşık tür düğümleri Graph görünümünün tasarım yüzeyinde görünür.
+     ve `USAddress` `PurchaseOrderType` karmaşık tür düğümleri, görünüm görünümü'nde tasarım Graph görünür.

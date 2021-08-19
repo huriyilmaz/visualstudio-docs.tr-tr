@@ -1,8 +1,8 @@
 ---
-title: 'Öğretici: basit bir C# konsol uygulaması oluşturma '
-description: Visual Studio, adım adım ' da C# konsol uygulaması oluşturmayı öğrenin.
+title: 'Öğretici: Basit bir C# konsol uygulaması oluşturma '
+description: Visual Studio adım C# konsol uygulaması oluşturma hakkında bilgi edinin.
 ms.custom: vs-acquisition, get-started
-ms.date: 02/10/2021
+ms.date: 08/12/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -15,84 +15,84 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1db1b5f9d0a88e1587e0ffc1215e01c3f26423e579d909e995eac0ce369a9c6d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e9664af375e551b262ad4405941f82b136591fae
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121374877"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157998"
 ---
-# <a name="tutorial-create-a-simple-c-console-app-in-visual-studio-part-1-of-2"></a>öğretici: Visual Studio basit bir C# konsol uygulaması oluşturma (bölüm 1/2)
+# <a name="tutorial-create-a-simple-c-console-app-in-visual-studio-part-1-of-2"></a>Öğretici: Visual Studio'de basit bir C# konsol uygulaması oluşturma (bölüm 1/2)
 
-bu öğreticide, bir C# konsol uygulaması oluşturup çalıştırmak ve bunu yaparken Visual Studio tümleşik geliştirme ortamının (ıde) bazı özelliklerini araştırmak için Visual Studio kullanacaksınız. Bu öğretici, iki bölümden oluşan bir öğretici serisinin 1. parçasıdır.
+Bu öğreticide, C# Visual Studio oluşturmak ve çalıştırmak için Visual Studio tümleşik geliştirme ortamının (IDE) bazı özelliklerini keşfedebilirsiniz. Bu öğretici, iki bölümden bir öğretici serisinin 1. bölümü.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
-> * Visual Studio projesi oluşturun.
+> * Yeni bir Visual Studio oluşturun.
 > * Bir C# konsol uygulaması oluşturun.
-> * Uygulamanızda hata ayıklayın.
+> * Uygulamanıza hata ayıklama.
 > * Uygulamanızı kapatın.
-> * Tüm kodunuzu inceleyin.
+> * Kodunuzun tamamını inceleme.
 
-[2. bölümde](tutorial-console-part-2.md)bu uygulamayı ek projeler, hata ayıklama püf noktaları ve 3. taraf paketlerine başvuru olarak genişleteceksiniz.
+[2. bölümde,](tutorial-console-part-2.md)bu uygulamayı ek projeler, hata ayıklama püf noktaları ve üçüncü taraf paketlerine başvuru ile genişletirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Visual Studio yüklü olmalıdır.
+Yüklü bir Visual Studio gerekir.
 
 ::: moniker range="vs-2017"
 
-Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz yükleyin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz yükleyin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2022"
 
-henüz 2022 önizleme Visual Studio yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio 2022 önizleme indirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına gidin.
+Visual Studio 2022 Preview'Visual Studio henüz yüklememişsinizdir, ücretsiz olarak yüklemek için [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) indirmeleri sayfasına gidin.
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
-Başlamak için bir C# uygulama projesi oluşturacağız. Proje türü, ihtiyacınız olan tüm şablon dosyaları ile birlikte gelir, hatta herhangi bir şey eklemeden önce!
+Başlamak için bir C# uygulama projesi oluşturuz. Proje türü, herhangi bir şey eklemeden önce ihtiyacınız olan tüm şablon dosyalarıyla birlikte gelir!
 
 ::: moniker range="vs-2017"
 
 1. Visual Studio 2017'yi açın.
 
-2. üstteki menü çubuğundan **dosya**  >  **yeni**  >  **Project** öğesini seçin.
-   (Alternatif olarak, **CTRL** + tuşuna basın **SHIFT** + **N**).
+2. Üst menü çubuğundan Dosya Yeni **Dosya'Project.**  >    >  
+   (Alternatif olarak **Ctrl tuşuna basın** + **Shift ile kaydırma** + **N ).**
 
-3. **yeni Project** iletişim kutusunun sol bölmesinde, **C#**' ı genişletin ve ardından **.net Core**' u seçin. Orta bölmede **konsol uygulaması (.NET Core)** öğesini seçin. Ardından dosya **_Hesaplayıcı_** adını adlandırın.
+3. Yeni Ağ İletişim Kutusu iletişim **kutusunun sol Project** **C#** öğesini genişletin ve **.NET Core'ı seçin.** Orta bölmede Konsol Uygulaması **(.NET Core) 'ı seçin.** Ardından dosyayı Hesaplayıcı olarak **_adlayın._**
 
-   ![konsol uygulaması (.net Core) proje şablonu Visual Studio ıde 'deki yeni Project iletişim kutusu](./media/new-project-csharp-calculator-console-app.png)
+   ![Visual Studio IDE'de Yeni Project iletişim kutusundaki Konsol Uygulaması (.NET Core) Visual Studio şablonu](./media/new-project-csharp-calculator-console-app.png)
 
 ### <a name="add-a-workload-optional"></a>İş yükü ekleme (isteğe bağlı)
 
-**Konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız, **.NET Core platformlar arası geliştirme** iş yükünü ekleyerek buna ulaşabilirsiniz. Aşağıdaki adımları uygulayın:
+Konsol Uygulaması **(.NET Core)** proje şablonunu görmüyorsanız,.NET Core platformlar arası geliştirme iş yükünü ekleyerek bu şablonu **edinebilirsiniz.** Aşağıdaki adımları uygulayın:
 
-#### <a name="option-1-use-the-new-project-dialog-box"></a>seçenek 1: yeni Project iletişim kutusunu kullanma
+#### <a name="option-1-use-the-new-project-dialog-box"></a>1. Seçenek: Yeni Project iletişim kutusunu kullanın
 
-1. **yeni Project** iletişim kutusunun sol bölmesindeki **Visual Studio Yükleyicisi aç** bağlantısını seçin.
+1. Yeni **Visual Studio Yükleyicisi** iletişim kutusunun sol bölmesindeKimlik aç **Project** seçin.
 
-   ![yeni Project iletişim kutusundan Visual Studio Yükleyicisi aç bağlantısını seçin](./media/csharp-open-visual-studio-installer-generic-dark.png)
+   ![Yeni Dosya iletişim Visual Studio Yükleyicisi Aç bağlantısını Project seçin](./media/csharp-open-visual-studio-installer-generic-dark.png)
 
-1. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+1. Uygulama Visual Studio Yükleyicisi başlatıyor. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
 
-   ![Visual Studio Yükleyicisi .net Core platformlar arası geliştirme iş yükü](./media/dot-net-core-xplat-dev-workload.png)
+   ![.NET Core platformlar arası geliştirme iş yükü Visual Studio Yükleyicisi](./media/dot-net-core-xplat-dev-workload.png)
 
-#### <a name="option-2-use-the-tools-menu-bar"></a>2. seçenek: Araçlar menü çubuğunu kullanma
+#### <a name="option-2-use-the-tools-menu-bar"></a>2. Seçenek: Araçlar menü çubuğunu kullanma
 
-1. **yeni Project** iletişim kutusunu iptal edin ve üst menü çubuğundan **araçlar** > **araçlar ve özellikler al**' ı seçin.
+1. Yeni Görünüm iletişim **kutusundan Project** ve üst menü çubuğunda  Araçlar Araçları ve Özellikleri > **Al'ı seçin.**
 
-1. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+1. Uygulama Visual Studio Yükleyicisi başlatıyor. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
 
 ::: moniker-end
 
@@ -100,54 +100,54 @@ Başlamak için bir C# uygulama projesi oluşturacağız. Proje türü, ihtiyac�
 
 1. Visual Studio'yu açın.
 
-1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-   ![' Yeni proje oluştur ' penceresini görüntüleyin](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   !['Yeni proje oluştur' penceresini görüntüleme](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. **Yeni proje oluştur** penceresinde dil listesinden **C#** ' ı seçin. ardından, proje türleri listesinden Platform listesinden ve **konsolundan** **Windows** ' yi seçin. 
+1. Yeni **proje oluştur penceresinde Dil** **listesinden C#** dilini seçin. Ardından, **Windows** listesinden Platform listesinden **Ve Konsol'dan** Seç'i seçin.
 
-   Dili, platformu ve proje türü filtrelerini uyguladıktan sonra **konsol uygulaması** şablonunu seçin ve ardından **İleri**' yi seçin.
+   Dil, platform ve proje türü filtrelerini uygulayan Konsol Uygulaması şablonunu **ve** ardından Sonraki'yi **seçin.**
 
-    :::image type="content" source="./media/vs-2019/csharp-create-new-project-console-net-core.png" alt-text="Konsol uygulaması için C# şablonunu seçin (.NET Framework)":::
+    :::image type="content" source="./media/vs-2019/csharp-create-new-project-console-net-core.png" alt-text="Konsol Uygulaması için C# şablonunu seçin (.NET Framework)":::
 
    > [!NOTE]
-   > **Konsol uygulaması** şablonunu görmüyorsanız, **Yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın.
+   > Konsol Uygulaması şablonunu **görmüyorsanız,** Yeni proje oluştur **penceresinden yükleyebilirsiniz.** Neyi **bulasınız? iletisinde** Daha fazla araç ve **özellik yükle bağlantısını** seçin.
    >
-   > ![' Yeni proje oluştur ' penceresindeki ' daha fazla araç ve özellik yüklemesi ' ' ne aradığınızı bulma ' iletisi bağlantısı](../../get-started/media/vs-2019/not-finding-what-looking-for.png) 
-   > 
-   > sonra, Visual Studio Yükleyicisi **.net Core platformlar arası geliştirme** iş yükünü seçin.
+   > !['Yeni proje oluştur' penceresindeki 'Ne arıyorsanız bu değil' iletisinden 'Daha fazla araç ve özellik yükle' bağlantısı](../../get-started/media/vs-2019/not-finding-what-looking-for.png)
    >
-   > ![Visual Studio Yükleyicisi .net Core platformlar arası geliştirme iş yükü](./media/dot-net-core-xplat-dev-workload.png)
+   > Ardından, Visual Studio Yükleyicisi **.NET Core** platformlar arası geliştirme iş yükünü seçin.
    >
-   > bundan sonra Visual Studio Yükleyicisi **değiştir** düğmesini seçin. İşinizi kaydetmeniz istenebilir; Öyleyse, bunu yapın. Sonra, iş yükünü yüklemek için **devam** ' ı seçin. Ardından, bu "[Proje oluşturma](#create-a-project)" yordamında 2. adıma geri dönün.
+   > ![.NET Core platformlar arası geliştirme iş yükü Visual Studio Yükleyicisi](./media/dot-net-core-xplat-dev-workload.png)
+   >
+   > Bundan sonra, **dosyanın** üst Visual Studio Yükleyicisi. Çalışmanızı kaydetmeniz isteniyor olabilir; öyleyse, bunu yap. Ardından, iş yükünü **yüklemek için** Devam'ı seçin. Ardından bu "Proje oluşturma" yordamının[2. adımına](#create-a-project)geri dön.
 
-1. **yeni projeyi yapılandırın** penceresinde, **Project adı** kutusuna *hesaplayıcı* yazın veya girin. Ardından **İleri**' yi seçin.
+1. Yeni **projenizi yapılandır penceresine** Hesaplayıcı *yazın* veya **Project** girin. Ardından, **Sonraki'yi seçin.**
 
-    :::image type="content" source="./media/vs-2019/csharp-name-your-calculator-project.png" alt-text="' yeni projenizi yapılandırın ' penceresinde, projenizi ' Hesaplayıcı ' olarak adlandırın":::
-   
-1. **Ek bilgi** penceresinde **.NET Core 3,1** , hedef çerçeve'niz için zaten seçilmelidir. Aksi takdirde, **.NET Core 3,1**' i seçin. Ardından **Oluştur**' u seçin.
+    :::image type="content" source="./media/vs-2019/csharp-name-your-calculator-project.png" alt-text="'Yeni projenizi yapılandırma' penceresinde projenize 'Hesaplayıcı' adını girin":::
 
-    :::image type="content" source="./media/vs-2019/csharp-target-framework.png" alt-text="' ek bilgiler ' penceresinde, .NET Core 3,1 ' ın seçildiğinden emin olun":::
+1. Ek **bilgiler penceresinde** hedef **çerçeveniz için .NET Core 3.1** zaten seçilmiş olması gerekir. Yoksa **.NET Core 3.1'i seçin.** Ardından **Oluştur'a seçin.**
 
-   Visual Studio, varsayılan "Merhaba Dünya" kodunu içeren yeni projenizi açar.
+    :::image type="content" source="./media/vs-2019/csharp-target-framework.png" alt-text="'Ek bilgiler' penceresinde .NET Core 3.1'in seçili olduğundan emin olun":::
+
+   Visual Studio projenizi açar ve bu da varsayılan "Merhaba Dünya" kodunu içerir.
 
 ::: moniker-end
 
 ## <a name="create-the-app"></a>Uygulama oluşturma
 
-İlk olarak, C# ' de bazı temel tamsayı matematiğini araştıracağız. Daha sonra, temel bir Hesaplayıcı oluşturmak için kod ekleyeceğiz. Bundan sonra, hataları bulmak ve gidermek için uygulamada hata ayıklaması yapacağız. Son olarak, kodu daha verimli hale getirmek için belirginleştireceğiz.
+İlk olarak, C# ile bazı temel tamsayı matematiklerini keşfederiz. Ardından, temel hesaplayıcı oluşturmak için kod ekleyebilirsiniz. Bundan sonra, hataları bulmak ve düzeltmek için uygulamada hata ayıklayız. Son olarak da kodu geliştirin ve daha verimli hale getiririz.
 
 ### <a name="explore-integer-math"></a>Tamsayı matematiğini inceleme
 
-C# ' de bazı temel tamsayı matematiğe başlayalım.
+C# ile bazı temel tamsayı matematikleriyle başlayalım.
 
-1. Kod Düzenleyicisi 'nde varsayılan "Merhaba Dünya" kodunu silin.
+1. Kod düzenleyicisinde varsayılan "Merhaba Dünya silin.
 
-    ![Yeni Hesaplayıcı uygulamanızdan varsayılan Merhaba Dünya kodunu silme](./media/csharp-console-calculator-deletehelloworld.png)
+    ![Yeni hesaplayıcı Merhaba Dünya varsayılan kod kodunu silin](./media/csharp-console-calculator-deletehelloworld.png)
 
-   Özellikle, belirten satırı silin `Console.WriteLine("Hello World!");` .
+   Özellikle şöyle bir satır `Console.WriteLine("Hello World!");` silin: .
 
-1. Onun yerine, aşağıdaki kodu yazın:
+1. Yerine aşağıdaki kodu yazın:
 
     ```csharp
             int a = 42;
@@ -157,28 +157,28 @@ C# ' de bazı temel tamsayı matematiğe başlayalım.
             Console.ReadKey();
     ```
 
-    bunu yaptığınızda, Visual Studio ıntellisense özelliğinin girişi otomatik tamamlama seçeneğini sunduğunu unutmayın.
+    Bunu yapmak için Visual Studio IntelliSense özelliğinin girişi otomatik tamamlama seçeneği sunduğuna dikkat edin.
 
     > [!NOTE]
-    > Aşağıdaki animasyon, önceki kodun yinelenmesine yönelik değildir. Yalnızca otomatik tamamlama özelliğinin nasıl çalıştığını göstermek için tasarlanmıştır.
+    > Aşağıdaki animasyon, önceki kodu yinelemek için amaçlanan bir animasyondur. Yalnızca otomatik tamamlama özelliğinin nasıl çalıştığını göstermek için tasarlanmıştır.
 
-    ![Visual Studio ıde 'de ıntellisense otomatik tamamlama özelliğini gösteren tamsayı matematik kodu animasyonu](./media/integer-math-intellisense.gif)
+    ![IDE'de IntelliSense otomatik tamamlama özelliğini gösteren tamsayı matematik Visual Studio animasyonu](./media/integer-math-intellisense.gif)
 
-1. Çalışma **Hesaplayıcı** ' ın yanındaki yeşil **Başlat** düğmesini seçerek programınızı derleyip çalıştırın veya **F5** tuşuna basın.
+1. Programlarınızı **derlemek ve** çalıştırmak için **Hesaplayıcı'nın** yanındaki yeşil Başlat düğmesini seçin veya **F5 tuşuna basın.**
 
-   ![Uygulamayı araç çubuğundan çalıştırmak için hesaplayıcı düğmesini seçin](./media/csharp-console-calculator-button.png)
+   ![Uygulamayı araç çubuğundan çalıştırmak için Hesap makinesi düğmesini seçin](./media/csharp-console-calculator-button.png)
 
-   42 + 119 toplamını gösteren bir konsol penceresi açılır ve bu da **161**.
+   42 + **119** toplamını (161) ortaya koyan bir konsol penceresi açılır.
 
-    ![Tamsayı matematiğinin sonuçlarını gösteren konsol penceresi](./media/csharp-console-integer-math.png)
+    ![Tamsayı matematiği sonuçlarını gösteren konsol penceresi](./media/csharp-console-integer-math.png)
 
-1. **(Isteğe bağlı)** Sonucu değiştirmek için işlecini değiştirebilirsiniz. Örneğin, `+` `int c = a + b;` kod satırındaki işleci `-` çıkarma, `*` çarpma veya bölme için olarak değiştirebilirsiniz `/` . Ardından, programı çalıştırdığınızda, sonuç de değişir.
+1. **(İsteğe bağlı)** Sonucu değiştirmek için işleci değiştirebilirsiniz. Örneğin, kod satırındaki işleci çıkarma, çarpma veya `+` `int c = a + b;` bölme için olarak `-` `*` `/` değiştirebilirsiniz. Ardından programı çalıştırarak sonuç da değişir.
 
 1. Konsol penceresini kapatın.
 
-### <a name="add-code-to-create-a-calculator"></a>Hesaplayıcı oluşturmak için kod ekleme
+### <a name="add-code-to-create-a-calculator"></a>Hesap makinesi oluşturmak için kod ekleme
 
-Projenize daha karmaşık bir hesap makinesi kodu kümesi ekleyerek devam edelim.
+Projenize daha karmaşık bir hesap makinesi kodu kümesi ekleyerek devam edeceğiz.
 
 1. Kod düzenleyicisinde gördüğünüz tüm kodu silin.
 
@@ -240,23 +240,23 @@ Projenize daha karmaşık bir hesap makinesi kodu kümesi ekleyerek devam edelim
     }
     ```
 
-1. Programınızı çalıştırmak için **Hesaplayıcı** ' ı seçin veya **F5** tuşuna basın.
+1. Programınızı **çalıştırmak** için Hesap makinesi'ni seçin veya **F5 tuşuna basın.**
 
-   ![Uygulamayı araç çubuğundan çalıştırmak için hesaplayıcı düğmesini seçin](./media/csharp-console-calculator-button.png)
+   ![Uygulamayı araç çubuğundan çalıştırmak için Hesap makinesi düğmesini seçin](./media/csharp-console-calculator-button.png)
 
    Bir konsol penceresi açılır.
 
-1. Konsol penceresinde uygulamanızı görüntüleyin ve sonra **42** ve **119** sayılarını eklemek için istemleri izleyin.
+1. Konsol penceresinde uygulamalarınızı görüntüp istemleri takip edin ve **42** ve **119 numaralarını ekleyin.**
 
-   Uygulamanız aşağıdaki ekran görüntüsüne benzer görünmelidir:
+   Uygulamanın aşağıdaki ekran görüntüsüne benzer olması gerekir:
 
-    ![Hesap makinesi uygulamasını gösteren konsol penceresi ve hangi eylemlerin alınacağı hakkında komut istemleri içerir](./media/csharp-console-calculator.png)
+    ![Hesaplayıcı uygulamasını gösteren konsol penceresi ve hangi eylemlerin gerçekleştir ekli olduğu istemleri içerir](./media/csharp-console-calculator.png)
 
-### <a name="add-functionality-to-the-calculator"></a>Hesap makinesine işlevsellik ekleme
+### <a name="add-functionality-to-the-calculator"></a>Hesaplayıcıya işlev ekleme
 
-Daha fazla işlevsellik eklemek için kodu ince ayar.
+Daha fazla işlev eklemek için kodu ince ayarlayacağız.
 
-### <a name="add-decimals"></a>Ondalık sayı Ekle
+### <a name="add-decimals"></a>Ondalık basamak ekleme
 
 Hesap makinesi uygulaması şu anda tam sayıları kabul eder ve döndürür. Ancak ondalık sayılara izin veren bir kod eklerken bu daha kesin bir işlemdir.
 
@@ -296,7 +296,7 @@ Ancak uygulama yalnızca ondalık sonuç üretir. Uygulamanın ondalık sayılar
 
 Temel hesaplayıcı uygulamamızı iyileştirdik, ancak kullanıcı girişi hataları gibi özel durumları işlemek için henüz başarısız kasalar yok.
 
-Örneğin, bir sayıyı sıfıra bölmeye veya uygulama sayısal bir karakter (veya tam tersi) beklediğinizde bir alfa karakter girmeye çalışıyorsanız, uygulama çalışmayı durdurabilir, hata döndürür veya beklenmeyen bir sayısal sonuç döndürür.
+Örneğin, bir sayıyı sıfıra bölmeye veya uygulama sayısal bir karakter (veya tam tersi) beklediğinizde alfa karakter girmeye çalışıyorsanız uygulama çalışmayı durdurabilir, hata döndürür veya beklenmeyen bir sayısal sonuç döndürür.
 
 Şimdi birkaç yaygın kullanıcı girişi hatasını adım adım irdeleelim, hata ayıklayıcısında bu hataları bu hata ayıklayıcıda bulup kodda düzeltelim.
 
@@ -336,7 +336,7 @@ Bir s numarayı sıfıra bölmeye çalışırsanız konsol uygulaması donup kod
 
 Şimdi, herhangi bir s numarayı sıfıra böldükte uygulama başka bir sayı ister. Daha da iyisi: Siz sıfırdan başka bir sayı sağlayana kadar sormayı durdurmaz.
 
-   ![Sıfır olmayan Visual Studio girişi denetimiyle switch deyiminin kodunu gösteren yeni kod düzenleyicisinin ekran görüntüsü.](./media/csharp-console-calculator-dividebyzero.png)
+   ![Sıfır olmayan Visual Studio girişi denetimi eklenmiş switch deyiminin kodunu gösteren kod düzenleyicisinin ekran görüntüsü.](./media/csharp-console-calculator-dividebyzero.png)
 
 ### <a name="fix-the-format-error"></a>"Biçim" hatasını düzeltme
 
@@ -350,7 +350,7 @@ Bu hatayı düzeltmek için daha önce girdiğimiz kodu yeniden düzenlememiz ge
 
 Tüm kodu işlemek `program` için sınıfına güvenmek yerine, uygulamamızı iki sınıfa böleriz: `Calculator` ve `Program` .
 
-sınıfı hesaplamanın toplu işlerini işler ve sınıf kullanıcı arabirimini ve hata yakalama `Calculator` `Program` çalışmalarını işler.
+sınıfı hesaplamanın toplu işlerini işler ve sınıfı kullanıcı arabirimini ve hata `Calculator` `Program` yakalama çalışmalarını işler.
 
 Haydi başlayalım.
 
@@ -361,7 +361,7 @@ Haydi başlayalım.
 
     namespace Calculator
     {
-        
+
     }
     ```
 
@@ -493,13 +493,13 @@ Haydi başlayalım.
 
 1. Henüz bunu yapmadıysanız hesap makinesi uygulamasını kapatın.
 
-1. Bölmede **Çıkış** bölmesini Visual Studio.
+1. Bölmede  Çıkış bölmesini Visual Studio.
 
    ![Bölmede Çıkış bölmesini Visual Studio](./media/csharp-calculator-close-output-pane.png)
 
 1. Uygulama Visual Studio kaydetmek için **Ctrl** + **S** tuşlarına basın.
 
-1. Visual Studio’yu kapatın.
+[!INCLUDE[../includes/git-source-control.md](../includes/git-source-control.md)]
 
 ## <a name="review-code-complete"></a>Gözden geçirme: kod tamamlandı
 
@@ -648,8 +648,8 @@ Bu öğreticinin ikinci bölümüyle devam edin:
 Ayrıca ilgini:
 
 - [Daha fazla C# öğreticisi ile devam edin](/dotnet/csharp/tutorials/)
-- [Hızlı Başlangıç: web ASP.NET Core oluşturma](../../ide/quickstart-aspnet-core.md)
-- [C# kodunda hata ayıklamayı Visual Studio](tutorial-debugger.md)
+- [Hızlı Başlangıç: ASP.NET Core web uygulaması oluşturma](../../ide/quickstart-aspnet-core.md)
+- [Visual Studio'de C# kodunda hata ayıklamayı Visual Studio](tutorial-debugger.md)
 - Birim testleri oluşturma ve [çalıştırma ile ilgili izlenecek yol](../../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
 - [C# programı çalıştırma](run-program.md)
 - [C# IntelliSense](../../ide/visual-csharp-intellisense.md)

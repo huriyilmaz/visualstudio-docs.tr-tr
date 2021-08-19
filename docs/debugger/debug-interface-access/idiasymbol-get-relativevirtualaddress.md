@@ -1,6 +1,6 @@
 ---
-description: Konumun göreli sanal adresini (RVA) alan.
-title: IDiaSymbol::get_relativeVirtualAddress | Microsoft Docs
+description: Konumun göreli sanal adresini (RVA) alır.
+title: 'IDiaSymbol:: get_relativeVirtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a20a9173ab21d0f8f556a2990410eedc1e87ab57506137cc0cfd4d614d581e8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: afd85895077291bd6ab93b2b099058744d8e7987
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379801"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122147227"
 ---
 # <a name="idiasymbolget_relativevirtualaddress"></a>IDiaSymbol::get_relativeVirtualAddress
-Konumun göreli sanal adresini (RVA) alan. [LocationType Enumeration olarak ayarlanırken](../../debugger/debug-interface-access/locationtype.md) `LocIsStatic` kullanın.
+Konumun göreli sanal adresini (RVA) alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) olarak ayarlandığında kullanın `LocIsStatic` .
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_relativeVirtualAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Konumun göreli sanal adresini döndürür.
+dışı Konumun göreli sanal adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="example"></a>Örnek
 

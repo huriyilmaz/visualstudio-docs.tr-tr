@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8dcadcc4e6cc833f809254985ddb8a55815daade028a27221ded1618c9aa105d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c78e911f2d42c5a56189758f6bd1ee8df0658a18
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360189"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095393"
 ---
 # <a name="ienumdebugmodules2skip"></a>IEnumDebugModules2::Skip
 Belirtilen sayıda öğeyi atlar.

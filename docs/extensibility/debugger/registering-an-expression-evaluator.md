@@ -14,24 +14,24 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: b61f14810834e8d019811f2385b1596d2afde911825d03d81bdf233630be56dd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f928c97961076eaa9d6062d3d812963b1522451b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276158"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117936"
 ---
 # <a name="register-an-expression-evaluator"></a>İfade değerlendiriciyi kaydetme
 > [!IMPORTANT]
 > 2015 Visual Studio de ifade değerlendiricilerini uygulamanın bu yolu kullanım dışıdır. CLR ifade değerlendiricilerini uygulama hakkında bilgi için bkz. [CLR ifade değerlendiricileri ve](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) [Yönetilen ifade değerlendirici örneği.](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
- İfade değerlendiricisi (EE), kendisini hem Windows COM ortamıyla hem de Visual Studio. Bir EE, hata ayıklama altyapısı (DE) adres alanı veya Visual Studio adres alanı içine hangi varlığın örnek oluşturması bağlı olarak içine bir DLL olarak EE.
+ İfade değerlendiricisi (EE), kendisini hem Windows COM ortamıyla hem de Visual Studio. Bir EE, hangi varlığın hata ayıklama altyapısı (DE) adres alanı veya Visual Studio adres alanı içine eklemesi için DLL olarak EE.
 
 ## <a name="managed-code-expression-evaluator"></a>Yönetilen kod ifadesi değerlendiricisi
  Yönetilen kod EE, kendisini COM ortamına kaydeden bir DLL olan sınıf kitaplığı olarak uygulanır. Bu, genellikle bir VSIP programı çağrısıyla *regpkg.exe.* COM ortamı için kayıt defteri anahtarlarını yazma işlemi otomatik olarak yapılır.
 
- Main sınıfının bir yöntemi ile işaretlenir ve DLL COM'a kaydedilirken yönteminin <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> çağrıl olacağını belirtir. Genellikle olarak adlandırılan bu kayıt `RegisterClass` yöntemi, DLL'i Visual Studio. Karşılık `UnregisterClass` gelen (ile <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> işaretlenmiş), `RegisterClass` DLL'nin kaldırılmasının etkilerini geri yükler.
-Aynı kayıt defteri girdileri, bir EE olarak yazılır; Tek fark, işi sizin için yapmak gibi yardımcı `SetEEMetric` bir işlev yoktur. Kayıt ve kayıtsız kayıt işleminin bir örneği aşağıdadır.
+ Main sınıfının bir yöntemi ile işaretlenir ve DLL COM'a kaydedilirken yönteminin <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> çağrıl olacağını belirtir. Genellikle olarak adlandırılan bu kayıt `RegisterClass` yöntemi, DLL'i Visual Studio. Karşılık `UnregisterClass` gelen (ile <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> işaretlenmiş), DLL `RegisterClass` kaldırılırken etkilerini geri alınır.
+Aynı kayıt defteri girdileri, bir EE olarak yazılır; Tek fark, işi sizin için yapmak gibi yardımcı `SetEEMetric` bir işlev yoktur. Kayıt ve kayıtsız kayıt işleminin bir örneği aşağıda vemektedir.
 
 ### <a name="example"></a>Örnek
  Aşağıdaki işlev, yönetilen bir kodun kendi EE kaydını nasıl geri Visual Studio.
@@ -101,7 +101,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code-expression-evaluator"></a>Unmanaged code expression evaluator
- EE DLL, kendisini COM `DllRegisterServer` ortamına kaydetmek için işlevini ve Visual Studio.
+ EE DLL, hem kendini COM ortamına hem de diğer ortamlara `DllRegisterServer` kaydetmek için Visual Studio.
 
 > [!NOTE]
 > EnVSDK\MyCPkgs\MyCEE altındaki VSIP yüklemesinde bulunan *dllentry.cpp* dosyasında MyCEE kodu örnek kayıt defteri kodunu bulabilirsiniz.
@@ -109,9 +109,9 @@ namespace EEMC
 ### <a name="dll-server-process"></a>DLL sunucusu işlemi
  Dll sunucusunu EE dll sunucusu:
 
-1. Sınıf fabrikasını `CLSID` normal COM kurallarına göre kaydeden.
+1. Sınıf fabrikasını `CLSID` normal COM kurallarına göre kaydettirmektedir.
 
-2. Aşağıdaki tabloda gösterilen `SetEEMetric` ölçümler için Visual Studio EE yardımcı işlevini arar. İşlev ve `SetEEMetric` aşağıdaki gibi belirtilen ölçümler *dbgmetric.lib kitaplığının bir parçası.* Ayrıntılar [için bkz. Hata ayıklama için SDK](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) yardımcıları.
+2. Aşağıdaki tabloda gösterilen `SetEEMetric` ölçümlerle Visual Studio EE yardımcı işlevini arar. İşlev ve `SetEEMetric` aşağıdaki gibi belirtilen ölçümler *dbgmetric.lib kitaplığının bir parçası.* Ayrıntılar [için bkz. Hata ayıklama için SDK](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) yardımcıları.
 
     |Metric|Açıklama|
     |------------|-----------------|
@@ -121,12 +121,12 @@ namespace EEMC
     |`metricEngine`|`GUID`bu hata ayıklama altyapısıyla (DE) EE|
 
     > [!NOTE]
-    > `metricLanguage``GUID`dili adıyla tanımlar, ancak dili `guidLang` `SetEEMetric` seçen bağımsız değişkendir. Derleyici hata ayıklama bilgileri dosyasını üretirken, DE'nin hangi bilgileri kullanmayacaklarını EE `guidLang` yazması gerekir. DE genellikle hata ayıklama bilgileri dosyasında depolanan sembol `GUID` sağlayıcısına bu dili sorar.
+    > `metricLanguage``GUID`dili adıyla tanımlar, ancak dili `guidLang` `SetEEMetric` seçen bağımsız değişkendir. Derleyici hata ayıklama bilgileri dosyasını üretirken, DE'nin hangi bilgileri kullanmayacaklarını EE `guidLang` yazması gerekir. DE genellikle hata ayıklama bilgileri dosyasında depolanan `GUID` bu dili sembol sağlayıcısına sorar.
 
-3. Visual Studio X.Y altında anahtar oluşturarak HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudioile kaydolr; burada \\  *X.Y,* Visual Studio sürümüdür.
+3. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudioX.Y altında anahtar oluşturarak Visual Studio ile kaydolr. Burada \\  *X.Y,* Visual Studio sürümüdür.
 
 ### <a name="example"></a>Örnek
- Aşağıdaki işlev, bir kod (C++) tarafından EE ile kendini nasıl kaydediyor ve Visual Studio.
+ Aşağıdaki işlev, bir unmanaged kodun (C++) EE ile kendini nasıl kaydediyor ve Visual Studio.
 
 ```cpp
 /*---------------------------------------------------------

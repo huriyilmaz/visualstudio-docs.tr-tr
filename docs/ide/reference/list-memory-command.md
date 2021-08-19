@@ -14,14 +14,15 @@ ms.assetid: a84de361-a6a6-4f6d-96aa-a0d4a424371e
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fb0d62f6f4ade51fe0224917a1e3ec3a199de14
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fe86f12ffba2d61783bd858f207f00803952fe83
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99852056"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085864"
 ---
 # <a name="list-memory-command"></a>Belleği Listele Komutu
 Belirtilen bellek aralığının içeriğini görüntüler.
@@ -91,7 +92,7 @@ Tüm anahtarlarla birlikte bir **hata ayıklama. ListMemory** komutu yazmak yeri
 
 - [Çağrı yığınını Listele komutu](../../ide/reference/list-call-stack-command.md)
 - [Iş parçacıklarını Listele komutu](../../ide/reference/list-threads-command.md)
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
 - [Komut penceresi](../../ide/reference/command-window.md)
 - [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

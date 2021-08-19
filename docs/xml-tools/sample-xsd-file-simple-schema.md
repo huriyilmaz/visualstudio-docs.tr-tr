@@ -1,6 +1,6 @@
 ---
 title: 'Örnek XSD Dosyası: Basit Şema'
-description: XSD şema Tasarımcısı belgelerindeki çeşitli örneklerde kullanılan basit bir satın alma siparişi şeması için örnek XSD dosyasını görüntüleyin.
+description: XSD Şema Tasarımcısı belgelerinde çeşitli örneklerde kullanılan basit bir satın alma siparişi şeması için örnek XSD dosyasını görüntüleme.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: sample
@@ -11,16 +11,16 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 33e753d21b1272fbe0f67bf436285e7125af6b5956cdfcea02ade3e47b85f741
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 60ce74d0d9463870ea021470fb3a46909fe6416f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121314114"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122114478"
 ---
-# <a name="sample-xsd-file-simple-schema"></a>Örnek XSD dosyası: basit şema
+# <a name="sample-xsd-file-simple-schema"></a>Örnek XSD dosyası: Basit şema
 
-Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli örneklerde kullanılır. Bu dosya basit bir satın alma Siparişi şemadır.
+Aşağıdaki XSD dosyası, XSD Şema Tasarımcısı belgelerinde çeşitli örneklerde kullanılır. Bu dosya basit bir satın alma siparişi şemasıdır.
 
 ```xml
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
@@ -50,4 +50,4 @@ Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli ör
 ```
 
 > [!NOTE]
-> Burada adı geçen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, konumlar ve olaylar hayal ürünüdür. Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olay ile ilişki amaçlanmamıştır.
+> Burada gösterilen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, yerler ve olaylar kurgusaldır. Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olayla ilişki amaçlanan veya düşünülen bir ilişki yoktur.

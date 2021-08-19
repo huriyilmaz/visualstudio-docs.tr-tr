@@ -11,16 +11,17 @@ ms.assetid: b0b53fae-7007-4ad9-a604-21685937622f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: fe1adfc62e0b8b9045ec87c1a78cdd56412ff320
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 80fdb3453ec3f33ac00ea678f89b2b6d542e3895
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99964478"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148655"
 ---
 # <a name="create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine"></a>Özel veri toplamak veya bir test makinesini etkilemek için bir tanılama veri bağdaştırıcısı oluşturma
 
-Bir testi çalıştırdığınızda veri toplamak için kendi tanılama veri bağdaştırıcınızı oluşturmak veya testinizin bir parçası olarak test makinesini etkilemek isteyebilirsiniz. Örneğin, test kapsamındaki uygulamanız tarafından oluşturulan günlük dosyalarını toplamak ve bunları test sonuçlarınıza eklemek isteyebilirsiniz veya bilgisayarınızda sınırlı disk alanı kalmadığında testlerinizi çalıştırmak isteyebilirsiniz. Visual Studio Enterprise içinde sunulan API 'Leri kullanarak, test çalıştırinizdeki belirli noktalarda görevler gerçekleştirmek için kod yazabilirsiniz. Örneğin, bir test çalıştırması başlatıldığında, her bir test çalıştırılmadan önce ve sonra ve test çalıştırması tamamlandığında görevleri gerçekleştirebilirsiniz.
+Bir testi çalıştırdığınızda veri toplamak için kendi tanılama veri bağdaştırıcınızı oluşturmak veya testinizin bir parçası olarak test makinesini etkilemek isteyebilirsiniz. Örneğin, test kapsamındaki uygulamanız tarafından oluşturulan günlük dosyalarını toplamak ve bunları test sonuçlarınıza eklemek isteyebilirsiniz veya bilgisayarınızda sınırlı disk alanı kalmadığında testlerinizi çalıştırmak isteyebilirsiniz. Visual Studio Enterprise içinde sunulan apı 'leri kullanarak, test çalıştırinizdeki belirli noktalarda görevler gerçekleştirmek için kod yazabilirsiniz. Örneğin, bir test çalıştırması başlatıldığında, her bir test çalıştırılmadan önce ve sonra ve test çalıştırması tamamlandığında görevleri gerçekleştirebilirsiniz.
 
 ::: moniker range="vs-2017"
 Bir yapılandırma ayarları dosyası kullanarak özel tanılama veri bağdaştırıcınıza varsayılan giriş sağlayabilirsiniz. Örneğin, toplamak istediğiniz dosyanın konumu ve test sonuçlarınıza eklemek veya sistemde ne kadar disk alanı açmak istediğinize ilişkin bilgiler sağlayabilirsiniz. Bu veriler, oluşturduğunuz her test ayarı için yapılandırılabilir. Microsoft Test Yöneticisi ile birlikte sunulan varsayılan düzenleyici kullanılarak görüntülenebilir ve düzenlenebilir veya bir düzenleyici olarak kullanmak için kendi Kullanıcı denetiminizi oluşturabilirsiniz. Düzenleyicinizdeki bağdaştırıcı yapılandırmasında yapılan tüm değişiklikler, test ayarlarınızla birlikte depolanır.
@@ -30,7 +31,7 @@ Bir yapılandırma ayarları dosyası kullanarak özel tanılama veri bağdaşt�
 Bir yapılandırma ayarları dosyası kullanarak özel tanılama veri bağdaştırıcınıza varsayılan giriş sağlayabilirsiniz. Örneğin, toplamak istediğiniz dosyanın konumu ve test sonuçlarınıza eklemek veya sistemde ne kadar disk alanı açmak istediğinize ilişkin bilgiler sağlayabilirsiniz. Bu veriler, oluşturduğunuz her test ayarı için yapılandırılabilir. Bir düzenleyici olarak kullanmak için kendi Kullanıcı denetiminizi oluşturabilirsiniz. Düzenleyicinizdeki bağdaştırıcı yapılandırmasında yapılan tüm değişiklikler, test ayarlarınızla birlikte depolanır.
 ::: moniker-end
 
-Testlerinizi Visual Studio 'dan çalıştırıyorsanız, bu test ayarlarını etkin olacak şekilde ayarlamanız gerekir. Test ayarları hakkında daha fazla bilgi için bkz. [test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md).
+testlerinizi Visual Studio çalıştırıyorsanız, bu test ayarlarını etkin olacak şekilde ayarlamanız gerekir. Test ayarları hakkında daha fazla bilgi için bkz. [test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 

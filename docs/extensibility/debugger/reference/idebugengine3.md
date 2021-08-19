@@ -11,14 +11,15 @@ ms.assetid: 8bdf4bb7-3b5d-4991-8981-772d4f6bb656
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a10f439ba344b71cd31fd990928b7804b6c11d4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f997a177164c66ac116db407db6e3edfcc571b0a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066197"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064311"
 ---
 # <a name="idebugengine3"></a>IDebugEngine3
 Bir veya daha fazla modülün hatalarını ayıklamayı denetleyen tek bir hata ayıklama altyapısını (DE) temsil eder.

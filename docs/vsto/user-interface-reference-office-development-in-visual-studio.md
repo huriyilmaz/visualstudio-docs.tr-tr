@@ -1,6 +1,6 @@
 ---
-title: Kullanıcı arabirimi başvurusu (Visual Studio 'da Office geliştirme)
-description: Visual Studio 'da Office geliştirme ve hangi kullanıcı arabirimi öğelerinin Office projelerinin parçası olduğu hakkında bilgi edinin.
+title: Kullanıcı arabirimi başvurusu (Office geliştirme Visual Studio)
+description: Uygulama geliştirme Office hakkında Visual Studio ve hangi kullanıcı arabirimi öğelerinin Office öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -13,44 +13,45 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 19bbf3b0a2f58cbb410c695cfbb869469a7421c2
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5dec7f4802ba1ffa28131400c3aa6825fe335495
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838262"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122099470"
 ---
-# <a name="user-interface-reference-office-development-in-visual-studio"></a>Kullanıcı arabirimi başvurusu (Visual Studio 'da Office geliştirme)
-  Aşağıdaki kullanıcı arabirimi öğeleri, Visual Studio 'da Office projelerinin bir parçasıdır.
+# <a name="user-interface-reference-office-development-in-visual-studio"></a>Kullanıcı arabirimi başvurusu (Office geliştirme Visual Studio)
+  Aşağıdaki kullanıcı arabirimi öğeleri, Office projelerinin Visual Studio.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Visual Studio 'da Office geliştirme &#40;yayımlama sayfası, proje Tasarımcısı&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)
+- [Yayımlama Sayfası, Project Tasarımcısı &#40;Office geliştirme Visual Studio&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)
 
- Office çözümünü dağıtmaya yönelik özellikleri yapılandırmak için kullanılan özellik sayfasını açıklar.
+ Bir çözüm dağıtma özelliklerini yapılandırmak için kullanılan özellik sayfasını Office açıklar.
 
-- [Visual Studio 'da Office geliştirme &#40;Yayımlama Sihirbazı&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md)
+- [Visual Studio&#41;'&#40;Office geliştirmeyi yayımlama sihirbazı Visual Studio&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md)
 
- Çözüm dosyalarını belirtilen bir konuma kopyalamak, bildirim dosyalarını oluşturmak ve bir Office çözümü için Kurulum programı oluşturmak için kullanılan Sihirbazı açıklar.
+ Çözüm dosyalarını belirtilen bir konuma kopyalamak, bildirim dosyalarını oluşturmak ve bir çözüm için kurulum programı oluşturmak üzere kullanılan sihirbazı Office açıklar.
 
-- [Microsoft Office Word klavye, Microsoft Office Klavye ayarları, Seçenekler iletişim kutusu](../vsto/microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)
+- [Microsoft Office Word Klavyesi, Microsoft Office Klavye Ayarlar, Seçenekler iletişim kutusu](../vsto/microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)
 
- Word veya Visual Studio 'Nun kısayol tuşu birleşimlerine yanıt verip vermediğini belirlemeye yönelik seçenekleri açıklar.
+ Word veya Visual Studio kısayol tuş birleşimlerine yanıt verme seçeneklerini açıklar.
 
-- [Microsoft Office Excel klavye, Microsoft Office Klavye ayarları, Seçenekler iletişim kutusu](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)
+- [Microsoft Office Excel Klavye, Microsoft Office Klavye Ayarlar, Seçenekler iletişim kutusu](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)
 
- Excel veya Visual Studio 'Nun kısayol tuşu birleşimlerine yanıt verip vermediğini belirlemeye yönelik seçenekleri açıklar.
+ Kısayol tuşu birleşimlerine yanıt Excel Visual Studio seçenekleri açıklar.
 
-- [Proje yükseltme, Seçenekler iletişim kutusu](../vsto/project-upgrade-options-dialog-box.md)
+- [Project Yükseltme, Seçenekler iletişim kutusu](../vsto/project-upgrade-options-dialog-box.md)
 
- Office çözümlerini yükseltme seçeneklerini açıklar.
+ Bu çözümleri yükseltmeye yönelik Office açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Visual Studio 'da Office geliştirme &#40;Genel başvuru&#41;](../vsto/general-reference-office-development-in-visual-studio.md)
+- [Geliştirme aşamasında &#40;Office başvuru Visual Studio&#41;](../vsto/general-reference-office-development-in-visual-studio.md)
 
- Office çözümü Kullanıcı arabirimi, bildirimler ve diğer nesnelerle ilgili ayrıntılı bilgi için bağlantılar sağlar.
+ Çözüm kullanıcı arabirimi, bildirimleri Office diğer nesneler hakkında ayrıntılı bilgilere bağlantılar sağlar.
 
-- [Visual Studio ortamında Office projeleri](../vsto/office-projects-in-the-visual-studio-environment.md)
+- [Office ortamında Visual Studio projeleri](../vsto/office-projects-in-the-visual-studio-environment.md)
 
- Office projelerinin Visual Studio tümleşik geliştirme ortamında nasıl görüneceğini açıklar.
+ Tümleşik geliştirme Office projelerin Visual Studio nasıl olduğunu açıklar.
