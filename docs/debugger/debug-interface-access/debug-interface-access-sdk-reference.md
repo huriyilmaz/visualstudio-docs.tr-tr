@@ -1,6 +1,6 @@
 ---
-description: Tüm arabirimlerin ve DIA SDK Numaralandırmaların ve yapıların desteklenmesine yönelik tüm başvuru.
-title: Hata ayıklama arabirimi erişimi SDK başvurusu | Microsoft Docs
+description: Uygulamanın tüm arabirimlerine ve destekleyen numaralamalara ve yapılara eksiksiz bir DIA SDK.
+title: Arabirim Erişimi SDK'sı Başvuru | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,36 +16,36 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 83a5ae51d6c7ec8dc87ac137a57b3e2bfee81c2c612329798124e8cb752e4a0d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d3a06891aa68b8cacbb64e6d65830de86ee3bbda
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345716"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044975"
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Arabirim Erişimi SDK Başvurusunda Hata Ayıklama
 
-Tüm arabirimlerin ve DIA SDK Numaralandırmaların ve yapıların desteklenmesine yönelik tüm başvuru.
+Uygulamanın tüm arabirimlerine ve destekleyen numaralamalara ve yapılara eksiksiz bir DIA SDK.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
 [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 
-DIA SDK tarafından belirtilen tüm arabirimlerin tamamına yönelik bir başvuru.
+Uygulama tarafından sağlanan tüm arabirimlere tam DIA SDK.
 
 [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)
 
-Arabirimler için gereken tüm Numaralandırmaların ve yapıların tamamına yönelik bir başvuru.
+Arabirimler için gereken tüm numaralandırmalara ve yapılara eksiksiz bir başvuru.
 
 [Sabitler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)
 
-Arabirimler ile kullanılabilecek bir dizi dizeyi ve etiketlerini açıklar.
+Arabirimlerle kullanıla bir dizi dizeyi ve bunların etiketlerini açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
 [Simgeler ve Simge Etiketleri](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)
 
-Hangi simgelerin olduğunu ve türlerine göre nasıl tanımlandıklarınızı açıklar.
+Sembollerin ne olduğunu ve türe göre nasıl tanımlandıklarını açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,7 +1,7 @@
 ---
 title: FxCopCmd hataları
 ms.date: 10/19/2016
-description: FxCopCmd komutunun döndürdüğü hata kodları hakkında bilgi edinin. Her kodun ne tür hataların temsil ettiğini görün ve önemli hataların nasıl tanınacağını öğrenin.
+description: FxCopCmd komutunun döndüren hata kodları hakkında bilgi edinebilirsiniz. Her kodun hangi hata türünü temsil ettiğine bakın ve önemli hataların nasıl tanındığını bulun.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
@@ -10,50 +10,51 @@ ms.assetid: bb614ed0-1b7c-4b56-99ae-da50ef6cfef9
 ms.author: mikejo
 author: mikejo5000
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: efeabd85bbf2753dd3f5e37a43e0918b7f95d7fe
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c06c996245dfba796d4ab7e71fdbb28ad486f017
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860223"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122098040"
 ---
 # <a name="fxcopcmd-tool-errors"></a>FxCopCmd aracı hataları
 
-FxCopCmd tüm hataları önemli olarak kabul etmez. FxCopCmd ' nin kısmi analiz gerçekleştirmek için yeterli bilgileri varsa, Analizi gerçekleştirir ve oluşan hataları raporlar. 32 bitlik bir tamsayı olan hata kodu, hatalara karşılık gelen sayısal değerlerin bit düzeyinde birleşimini içerir.
+FxCopCmd tüm hataların önemli olduğunu düşünmez. FxCopCmd kısmi analiz gerçekleştirmek için yeterli bilgiye sahipse, analizi gerçekleştirir ve oluşan hataları raporlar. 32 bit tamsayı olan hata kodu, hatalara karşılık gelen sayısal değerlerin bit olarak bir bileşimini içerir.
 
-Aşağıdaki tabloda, FxCopCmd tarafından döndürülen hata kodları açıklanmaktadır:
+Aşağıdaki tabloda FxCopCmd tarafından döndürülen hata kodları açıklandı:
 
 |Hata|Sayısal değer|
 |-----------|-------------------|
-|Hata yok|'dır|
+|Hata yok|0x0|
 |Analiz hatası|0x1|
 |Kural özel durumları|0x2|
-|Proje yükleme hatası|4,|
+|Project hatası|0x4|
 |Derleme yükleme hatası|0x8|
 |Kural kitaplığı yükleme hatası|0x10|
-|Rapor yükleme hatasını içeri aktar|0x20|
+|Raporu içeri aktarma yükleme hatası|0x20|
 |Çıkış hatası|0x40|
-|Komut satırı anahtar hatası|0x80|
+|Komut satırı anahtarı hatası|0x80|
 |Başlatma hatası|0x100|
 |Derleme başvuruları hatası|0x200|
 |BuildBreakingMessage|0x400|
 |Bilinmeyen hata|0x1000000|
 
-Önemli hatalar için **çözümleme hatası** döndürüldü. Çözümlemenin tamamlanamayacağını gösterir. Uygun olduğunda, hata kodu önemli hatanın temel nedenini de içerir. Aşağıdaki koşullar önemli hatalar üretir:
+**Önemli hatalar** için analiz hatası döndürülür. Analizin tamamlanamadı olduğunu gösterir. Uygun olduğunda, hata kodu önemli hatanın temel nedenini de içerir. Aşağıdaki koşullar önemli hatalar üretir:
 
-- Yetersiz giriş nedeniyle analiz gerçekleştirilemedi.
+- Yetersiz giriş nedeniyle analiz gerçekleştirilmedi.
 
-- Analiz, FxCopCmd tarafından işlenmeyen bir özel durum oluşturdu.
+- Analiz FxCopCmd tarafından işlen bir özel durum oluşturdu.
 
 - Belirtilen proje dosyası bulunamadı veya bozuk.
 
-- Çıkış seçeneği belirtilmemiş veya dosya yazılamadı.
+- Çıkış seçeneği belirtilmedi veya dosya yazılamdı.
 
 > [!NOTE]
-> FxCopCmd dönüş kodu **derleme** hatası 0x200 bir hata yerine bir uyarı. Bu dönüş kodu, dolaylı başvuruların eksik olduğunu, ancak FxCopCmd 'nin bunları işleyebildiğini gösterir. Uyarı, bazı analiz sonuçlarının tehlikeye girmiş olabileceğini belirten bir olasılık anlamına gelir. **Derleme başvuruları hatasını** , başka bir dönüş koduyla birleştirildiğinde hata olarak değerlendirin.
+> FxCopCmd dönüş kodu **Derlemesi hataya** başvurur 0x200 tek başına bir hata değil uyarıdır. Bu dönüş kodu eksik dolaylı başvurular olduğunu ama FxCopCmd'nin bunları işleye olduğunu gösterir. Uyarı, bazı analiz sonuçlarının tehlikeye atılmış olma olasılığının olduğu anlamına gelir. Derleme **başvuruları hatasını,** başka bir dönüş koduyla birleştirildiklerine bir hata olarak davran.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Analizi uygulama hataları](../code-quality/code-analysis-application-errors.md)
+- [Code Analysis Uygulama Hataları](../code-quality/code-analysis-application-errors.md)

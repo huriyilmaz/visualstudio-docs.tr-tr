@@ -24,12 +24,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 553e116bf7592534e993f5c400b813abbc62ffe5bb2a3e727c8ca0699da74481
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 17285f8e5ed55cde9381d338f6f68ecd681fc8c6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387726"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028195"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Nasıl: Başvuru Yöneticisi'ni kullanarak başvuru ekleme veya kaldırma
 
@@ -102,12 +102,12 @@ Projenizin çerçeve sürümüne bağlı olarak, listede bazı bileşenler göst
 
    Bir projenin hedef çerçeve sürümünü değiştirme hakkında bilgi için bkz. [Çerçeve hedeflemeye genel bakış.](visual-studio-multi-targeting-overview.md)
 
-- .NET Framework 4 kullanan bir bileşen, 4.5'i .NET Framework bir projeyle uyumsuzdur.
+- .NET Framework 4 kullanan bir bileşen, 4.5'i .NET Framework projeyle uyumsuzdur.
 
 Bunu yapmak derleme hatalarına neden olduğundan, aynı çözümdeki başka bir projenin çıkışlarına dosya başvuruları eklemekten kaçınmanız gerekir. Bunun yerine, **projeden** projeye **başvurular oluşturmak** için Başvuru Ekle iletişim kutusunun Projeler sekmesini kullanın. Bu, projeleriniz içinde oluşturmakta olduğu sınıf kitaplıklarının daha iyi yönetimini sağlayarak takım geliştirmeyi kolaylaştırır. Daha fazla bilgi için [bkz. Bozuk başvurularla ilgili sorunları giderme.](../ide/troubleshooting-broken-references.md)
 
 > [!NOTE]
-> Visual Studio 2015 veya sonraki bir sürümde, bir projenin hedef çerçeve sürümü .NET Framework 4.5 veya sonraki bir sürümse ve diğer projenin hedef sürümü .NET Framework 2, 3, 3.5 veya 4.0 ise proje başvurusu yerine bir dosya başvurusu oluşturulur.
+> Visual Studio 2015 veya sonraki bir sürümde, bir projenin hedef çerçeve sürümü .NET Framework 4.5 veya sonraki bir sürüm ise ve diğer projenin hedef sürümü .NET Framework 2, 3, 3.5 veya 4.0 ise proje başvurusu yerine bir dosya başvurusu oluşturulur.
 
 ### <a name="to-display-an-assembly-in-the-add-reference-dialog-box"></a>Bir derlemeyi Başvuru Ekle iletişim kutusunda görüntülemek için
 
@@ -137,7 +137,7 @@ Bunu yapmak derleme hatalarına neden olduğundan, aynı çözümdeki başka bir
 
   *\<AssemblyLocation\>*, Başvuru Ekle iletişim kutusunda görünmesini istediğiniz  derlemelerin dizinidir, *örneğin, C:\MyAssemblies*.
 
-  Düğümün altında kayıt defteri anahtarının oluşturulması, tüm kullanıcıların Başvuru Ekle iletişim kutusunda `HKEY_LOCAL_MACHINE` belirtilen konumda **derlemeleri görmelerini** sağlar. Düğüm altında kayıt defteri `HKEY_CURRENT_USER` anahtarının oluşturulması yalnızca geçerli kullanıcının ayarını etkiler.
+  Düğüm altında kayıt defteri anahtarının oluşturulması, tüm kullanıcıların Başvuru Ekle iletişim kutusunda belirtilen `HKEY_LOCAL_MACHINE` konumda **derlemeleri görmelerini** sağlar. Düğüm altında kayıt defteri `HKEY_CURRENT_USER` anahtarının oluşturulması yalnızca geçerli kullanıcının ayarını etkiler.
 
   Başvuru **Ekle iletişim** kutusunu yeniden açın. Derlemelerin **.NET** sekmesinde görünmesi gerekir. Yoksa, derlemelerin belirtilen *AssemblyLocation* dizininde olduğundan emin olun, Visual Studio yeniden başlatın ve yeniden deneyin.
 
@@ -156,7 +156,7 @@ Başvuru Yöneticisi iletişim kutusunun Paylaşılan Projeler **sekmesinde payl
 
 ## <a name="universal-windows-tab"></a>Evrensel Windows sekmesi
 
-**Evrensel Windows** sekmesi, işletim sistemlerinin üzerinde çalıştırıldıkları platformlara özgü Windows TÜM SDK'leri listeler.
+Evrensel **Windows** sekmesi, işletim sistemlerinin üzerinde çalıştırıldıkları platformlara özgü tüm WINDOWS listeler.
 Bu sekmenin iki alt grubu vardır: **Çekirdek** ve **Uzantılar.**
 
 ### <a name="core-subgroup"></a>Çekirdek alt grubu
@@ -167,7 +167,7 @@ Evrensel Windows uygulama projelerinin varsayılan olarak Universal Windows SDK'
 
 **Uzantılar,** hedeflenen Windows platformunu genişleten kullanıcı WINDOWS listeler.
 
-SDK, Visual Studio'nun tek bir bileşen olarak kabul ettiği dosyalar topluluğudur. Uzantılar **sekmesinde,** Başvuru Yöneticisi iletişim kutusunun çağrıldığında projeye uygulanacak OLAN SDK'ler tek girişler olarak listelenir. Bir projeye ekildiğinde, kullanıcının IntelliSense, araç kutusu, tasarımcılar, Nesne Tarayıcısı, derleme, dağıtım, hata ayıklama ve paketleme'de SDK içeriklerini kullanmak için başka bir işlem yapmak zorunda kalmay için tüm SDK içeriği Visual Studio tarafından kullanılır.
+SDK, Visual Studio'nun tek bir bileşen olarak kabul ettiği dosyalar topluluğudur. Uzantılar **sekmesinde,** Başvuru Yöneticisi iletişim kutusunun çağrıldığında projeye uygulanacak OLAN SDK'ler tek girişler olarak listelenir. Bir projeye ekildiğinde, tüm SDK içeriği Visual Studio tarafından kullanılır; böylece kullanıcının IntelliSense, araç kutusu, tasarımcılar, Object Browser, derleme, dağıtım, hata ayıklama ve paketleme içindeki SDK içeriklerini kullanmak için başka bir işlem yapmak zorunda değildir.
 
 Uzantılar sekmesinde SDK'nızı görüntüleme hakkında **bilgi için** [bkz. Yazılım Geliştirme Seti Oluşturma.](../extensibility/creating-a-software-development-kit.md)
 

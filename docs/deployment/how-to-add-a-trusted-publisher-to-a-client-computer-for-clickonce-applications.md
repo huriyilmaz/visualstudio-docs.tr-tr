@@ -1,6 +1,6 @@
 ---
-title: Güvenilen yayımcıyı istemci kutusuna Ekle (ClickOnce)
-description: ClickOnce uygulamalarınızın kullanıcıya sormadan daha yüksek bir güven düzeyinde çalışması için bir istemci bilgisayara nasıl sertifika ekleneceğini öğrenin.
+title: İstemci kutusuna güvenilir yayımcı ekleme (ClickOnce)
+description: İstemci uygulamalarınızı kullanıcıya sormadan daha yüksek bir güven düzeyinde ClickOnce bir istemci bilgisayara sertifika eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -15,48 +15,49 @@ ms.assetid: 35fe324c-45a1-4509-b7be-5c18b4b1b4ab
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: c04b8d700d7739f0e4ef1fba259aab0595cea28c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 5005c64ba03b91a9150258e501e8ef07deac00ac
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99947826"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122146413"
 ---
-# <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Nasıl yapılır: ClickOnce uygulamaları için bir istemci bilgisayara güvenilir yayımcı ekleme
-Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalarınızın kullanıcıya sormadan daha yüksek bir güven düzeyiyle çalışmasını sağlayacak şekilde yapılandırabilirsiniz. Aşağıdaki yordamlarda, bir yayımcının sertifikasını bir istemci bilgisayarındaki Güvenilen Yayımcılar deposuna eklemek için CertMgr.exe komut satırı aracının nasıl kullanılacağı gösterilmektedir.
+# <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Nasıl kullanılır: İstemci uygulamaları için istemci bilgisayara güvenilir yayımcı ClickOnce ekleme
+Güvenilen Uygulama Dağıtımı ile istemci bilgisayarları, uygulamalarınızı kullanıcıya sorulmadan daha yüksek bir güven [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] düzeyiyle çalıştıracak şekilde yapılandırabilirsiniz. Aşağıdaki yordamlar, bir yayımcının sertifikasını istemci CertMgr.exe Güvenilen Yayımcılar deposuna eklemek için komut satırı aracının nasıl kullanılası göstermektedir.
 
- Kullandığınız komutlar, sertifikanızı veren sertifika yetkilisinin (CA) bir istemcinin güvenilen kökünün parçası olmasına bağlı olarak biraz farklılık gösterir. Bir Windows istemci bilgisayarı bir etki alanının parçasıysa, bir listede, Güvenilen kökler olarak kabul edilen CA 'Lar bulunur. Bu liste genellikle sistem yöneticisi tarafından yapılandırılır. Sertifikanız bu güvenilir köklerin biri tarafından veya bu güvenilen köklerin birine zincirde olan bir CA tarafından verildiyse, sertifikayı istemcinin güvenilen kök deposuna ekleyebilirsiniz. Diğer taraftan, sertifikanız bu güvenilir köklerin biri tarafından verilmiyorsa, sertifikayı hem istemcinin güvenilen kök deposuna hem de güvenilen yayımcı deposuna eklemeniz gerekir.
+ Kullandığınız komutlar, sertifikanızı verilen sertifika yetkilisinin (CA) bir istemcinin güvenilen kökünün parçası olup olmadığınıza bağlı olarak biraz farklılık gösterir. İstemci Windows bir etki alanının parçası ise, güvenilir kök olarak kabul edilen SERTIFIKA'ları bir listede içerir. Bu liste genellikle sistem yöneticisi tarafından yapılandırılır. Sertifikanız bu güvenilen köklerden biri veya bu güvenilen köklerden birini zincire takan bir CA tarafından verildi ise, sertifikayı istemcinin güvenilen kök deposuna indirebilirsiniz. Öte yandan, sertifikanız bu güvenilen köklerden biri tarafından verilmiyorsa, sertifikayı hem istemcinin Güvenilen Kök deposuna hem de Güvenilen kök Publisher eklemeniz gerekir.
 
 > [!NOTE]
-> Bu şekilde, yükseltilmiş izinler gerektiren bir uygulamayı dağıtmayı planladığınız her istemci bilgisayara sertifika eklemeniz gerekir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Sertifikaları el ile veya istemcilerinize dağıttığınız bir uygulama aracılığıyla eklersiniz. Bu bilgisayarları yalnızca bir kez yapılandırmanız gerekir, bu, sonrasında aynı sertifikayla imzalanmış herhangi bir sayıda uygulamayı dağıtabilmeniz gerekir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
+> Yükseltilmiş izinler gerektiren bir uygulamayı dağıtmayı planlasanız her istemci bilgisayara bu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] şekilde sertifikalar eklemeniz gerekir. Sertifikaları el ile veya istemcilerinize dağıtarak bir uygulama aracılığıyla eklersiniz. Bu bilgisayarları yalnızca bir kez yapılandırmanız gerekir. Daha sonra aynı sertifikayla imzalanan [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] herhangi bir sayıda uygulamayı dağıtabilirsiniz.
 
- Ayrıca, sınıfını kullanarak bir mağazaya bir sertifikayı programlı olarak ekleyebilirsiniz <xref:System.Security.Cryptography.X509Certificates.X509Store> .
+ Ayrıca sınıfını kullanarak bir depoya program aracılığıyla sertifika <xref:System.Security.Cryptography.X509Certificates.X509Store> indirebilirsiniz.
 
- Güvenilen uygulama dağıtımına genel bakış için bkz. [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md).
+ Güvenilen Uygulama Dağıtımına genel bakış için bkz. Güvenilen uygulama [dağıtımına genel bakış.](../deployment/trusted-application-deployment-overview.md)
 
-### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-the-trusted-root"></a>Güvenilen bir kök altında Güvenilen Yayımcılar deposuna bir sertifika eklemek için
+### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-the-trusted-root"></a>Güvenilen kök altındaki Güvenilen Yayımcılar deposuna sertifika eklemek için
 
-1. Bir CA 'dan dijital sertifika alın.
+1. CA'dan dijital sertifika alın.
 
-2. Sertifikayı Base64 X. 509.440 (*. cer*) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Sertifikayı Base64 X.509 (*.cer*) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için [bkz. Sertifikayı dışarı aktarma.](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))
 
-3. İstemci bilgisayarlardaki komut isteminden aşağıdaki komutu çalıştırın:
+3. İstemci bilgisayarlardaki komut isteminde aşağıdaki komutu çalıştırın:
 
-     **certmgr.exe-Certificate. cer-c-s-r localMachine TrustedPublisher ekleme**
+     **certmgr.exe -add certificate.cer -c -s -r localMachine TrustedPublisher**
 
-### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-a-different-root"></a>Farklı bir kök altında Güvenilen Yayımcılar deposuna bir sertifika eklemek için
+### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-a-different-root"></a>Güvenilen Yayımcılar deposuna farklı bir kök altında sertifika eklemek için
 
-1. Bir CA 'dan dijital sertifika alın.
+1. CA'dan dijital sertifika alın.
 
-2. Sertifikayı Base64 X. 509.440 (*. cer*) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [bir sertifikayı dışarı aktarma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10)).
+2. Sertifikayı Base64 X.509 (*.cer*) biçiminde dışarı aktarın. Sertifika biçimleri hakkında daha fazla bilgi için bkz. [Sertifikayı Dışarı Aktarma.](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.10))
 
-3. İstemci bilgisayarlardaki komut isteminden aşağıdaki komutu çalıştırın:
+3. İstemci bilgisayarlardaki komut isteminde aşağıdaki komutu çalıştırın:
 
-     **certmgr.exe-iyi. cer-c-s-r localMachine kökünü ekleyin**
+     **certmgr.exe -add good.cer -c -s -r localMachine Root**
 
-     **certmgr.exe-iyi. cer-c-s-r localMachine TrustedPublisher ekleyin**
+     **certmgr.exe -add good.cer -c -s -r localMachine TrustedPublisher**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
@@ -64,10 +65,10 @@ Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndpt
 - [ClickOnce uygulamaları için kod erişimi güvenliği](../deployment/code-access-security-for-clickonce-applications.md)
 - [ClickOnce ve Authenticode](../deployment/clickonce-and-authenticode.md)
 - [Güvenilir uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md)
-- [Nasıl yapılır: ClickOnce güvenlik ayarlarını etkinleştirme](../deployment/how-to-enable-clickonce-security-settings.md)
-- [Nasıl yapılır: ClickOnce uygulaması için güvenlik bölgesi ayarlama](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
-- [Nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
-- [Nasıl yapılır: kısıtlanmış izinlerle ClickOnce uygulamasında hata ayıklama](securing-clickonce-applications.md)
-- [Nasıl yapılır: ClickOnce uygulamaları için bir istemci bilgisayara güvenilir yayımcı ekleme](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)
-- [Nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
-- [Nasıl yapılır: ClickOnce güven istemi davranışını yapılandırma](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)
+- [Nasıl yapabilirsiniz: ClickOnce ayarlarını etkinleştirme](../deployment/how-to-enable-clickonce-security-settings.md)
+- [Nasıl ClickOnce uygulama için güvenlik bölgesi ayarlama](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
+- [Nasıl ClickOnce uygulama için özel izinler ayarlama](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
+- [Nasıl ClickOnce: Kısıtlanmış ClickOnce uygulamanın hata ayıklaması](securing-clickonce-applications.md)
+- [Nasıl kullanılır: İstemci uygulamaları için istemci bilgisayara güvenilir yayımcı ClickOnce ekleme](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)
+- [Nasıl: Uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md)
+- [Nasıl yapılandırılır: ClickOnce istemi davranışını yapılandırma](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)

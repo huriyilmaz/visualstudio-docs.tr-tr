@@ -8,14 +8,15 @@ ms.assetid: d6fda3ef-d465-4788-8514-2f2d528d658c
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e0d8bf1bca7917c6692d7c9c2398df47c4145e6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 103be5fd5b18778eacb47d7bff10cd3c7107748e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99926553"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122114504"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>Nasıl yapılır: kullanılacak XML şemalarını seçme
 
@@ -36,7 +37,7 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
    ![XML dosyası için Schemas özelliği](media/properties-schemas.png)
 
-   [XML şemaları iletişim kutusu](xml-schemas-dialog-box.md) açılır. İletişim kutusu, içeren tüm şemaları listeler. şema önbelleğinde ( *catalog.xml* dosyasında başvurulan şemalar dahil) *XSD* uzantısı ve ayrıca geçerli çözümdeki herhangi bir şema, bir `xsd:schemaLocation` öznitelikte başvurulan veya **şemalar** özelliğinde başvurulan Visual Studio 'da açın.
+   [XML şemaları iletişim kutusu](xml-schemas-dialog-box.md) açılır. İletişim kutusu, içeren tüm şemaları listeler. şema önbelleğinde ( *catalog.xml* dosyasında başvurulan şemalar dahil) *xsd* uzantısı ve ayrıca geçerli çözümdeki herhangi bir şema, bir `xsd:schemaLocation` öznitelikte başvurulan veya **şemalar** özelliğinde başvurulan Visual Studio açık.
 
 3. Aşağıdakilerden birini yaparak doğrulama için kullanılacak şemaları seçin:
 

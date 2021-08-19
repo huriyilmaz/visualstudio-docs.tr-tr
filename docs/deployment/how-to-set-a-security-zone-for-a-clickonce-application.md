@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 88654d1d115ee84a13d541e26e085f1acf5c03e031900dcc6ab12e67efcf0c7e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 23ec1cae88ff1545118c92c3829f0d62962dc858
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121403873"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122146335"
 ---
 # <a name="how-to-set-a-security-zone-for-a-clickonce-application"></a>nasıl yapılır: ClickOnce bir uygulama için güvenlik bölgesi ayarlama
 ClickOnce bir uygulama için kod erişimi güvenlik izinlerini ayarlarken, **Project tasarımcısının** **güvenlik** sayfasında temel bir izin kümesiyle başlamanız gerekir.

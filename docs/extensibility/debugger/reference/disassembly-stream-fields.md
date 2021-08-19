@@ -11,17 +11,18 @@ ms.assetid: cfc9b4de-c756-4844-bea7-d9f186a51d1b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9241331e4e66c4a34a3afb29b54cf2ce6aab0e0f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4a43ce4836e761e2660d52d634672f878a86bc66
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096193"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080084"
 ---
 # <a name="disassembly_stream_fields"></a>DISASSEMBLY_STREAM_FIELDS
 Ayrıştırılmış bir alan hakkında hangi bilgilerin alınması gerektiğini belirtir.

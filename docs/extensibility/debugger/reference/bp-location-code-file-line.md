@@ -1,5 +1,5 @@
 ---
-description: Bir kod kaynak dosyasındaki belirli bir satırda kesme noktası konumu için verileri içerir.
+description: Bir kod kaynağı dosyasında belirli bir satırdaki bir kesme noktasının konumunu içeren verileri içerir.
 title: BP_LOCATION_CODE_FILE_LINE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,15 +16,15 @@ ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: 09abd8d00c4f60aec0ae7086c518d4c3929679bc231886c0c942a39aa9235da0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 95fbd25cea0930cd9f545c007980217e84abcb4a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239353"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043498"
 ---
 # <a name="bp_location_code_file_line"></a>BP_LOCATION_CODE_FILE_LINE
-Bir kod kaynak dosyasındaki belirli bir satırda kesme noktası konumu için verileri içerir.
+Bir kod kaynağı dosyasında belirli bir satırdaki bir kesme noktasının konumunu içeren verileri içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,20 +37,20 @@ typedef struct _BP_LOCATION_CODE_FILE_LINE {
 
 ## <a name="members"></a>Üyeler
 `bstrContext`\
-Kesme noktası bağlamı, genellikle bir çağrı yığınında görülen bir yöntem veya işlev adıdır.
+Kesme noktası bağlamı, genellikle çağrı yığınında görülen bir yöntem veya işlev adıdır.
 
 `pDocPos`\
-Kesme noktası belge konumunu temsil eden [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) nesnesi.
+Kesme noktasının belge konumunu temsil eden [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) nesnesi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, bir BP_LOCATION [parçası](../../../extensibility/debugger/reference/bp-location.md) olarak bu yapının bir üyesidir.
+Bu yapı, bir birleşimin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısının bir üyesidir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

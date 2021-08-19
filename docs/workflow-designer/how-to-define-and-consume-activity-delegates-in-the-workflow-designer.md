@@ -1,21 +1,22 @@
 ---
 title: Etkinlik temsilcilerini tanımlama ve tüketme
-description: İş Akışı Tasarımcısı .NET Framework 4,5 ' de, etkinlik temsilcilerini tanımlamak ve tüketmek için kullanabileceğiniz InvokeDelegate etkinliğinin hazır olmayan bir tasarımcısını nasıl içerdiğini öğrenin.
+description: İş Akışı Tasarımcısı .NET Framework 4,5 ' de, etkinlik temsilcilerini tanımlamak ve tüketmek için kullanabileceğiniz ınvokedelegate etkinliğinin hazır olmayan bir tasarımcısını nasıl içerdiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 ms.assetid: c68e42ad-3ec0-4c2d-b104-fe36c6d83b5e
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 author: TerryGLee
-ms.openlocfilehash: 0ce9e59eec2cc9229a5f1104d79337b26115c92a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 150b3b3ababe9e559cc8fe07d049509348201f08
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971628"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122114725"
 ---
 # <a name="how-to-define-and-consume-activity-delegates-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında etkinlik temsilcileri tanımlama ve kullanma
 
@@ -26,7 +27,7 @@ ms.locfileid: "99971628"
 1. Yeni bir **Iş akışı konsol uygulaması** projesi oluşturun.
 
    > [!NOTE]
-   > **Iş akışı** proje şablonlarını görmüyorsanız, önce Visual Studio 'nun **Windows Workflow Foundation** bileşenini yüklemeniz gerekir. Ayrıntılı yönergeler için bkz. [ınstall Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
+   > **iş akışı** proje şablonlarını görmüyorsanız, önce Visual Studio **Windows Workflow Foundation** bileşenini yüklemeniz gerekir. ayrıntılı yönergeler için bkz. [ınstall Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
 
 3. **Çözüm Gezgini** projeye sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Iş akışı** kategorisini seçin ve ardından **etkinlik** öğesi şablonunu seçin. Yeni etkinliği **MyForEach. xaml** olarak adlandırın ve ardından **Tamam**' ı seçin.
 
@@ -46,7 +47,7 @@ ms.locfileid: "99971628"
 
 10. Tür tarayıcısında, **tür adı** alanına **ActivityAction** girin. Ağaç **görünümünde \<T> ActivityAction** öğesini seçin. **ActivityAction \<Object>** türünün bağımsız değişkenine atanması için görüntülenen açılan menüden **nesne** ' yi seçin.
 
-11. <xref:System.Activities.Statements.While>Araç kutusunun **Denetim akışı** bölümünden bir etkinliği tasarımcı yüzeyine sürükleyin.
+11. <xref:System.Activities.Statements.While>araç kutusunun **denetim Flow** bölümündeki bir etkinliği tasarımcı yüzeyine sürükleyin.
 
 12. Etkinliği seçin <xref:System.Activities.Statements.While> ve **değişkenler** sekmesini seçin.
 
@@ -64,7 +65,7 @@ ms.locfileid: "99971628"
 
 19. **Bağımsız değişkenin adlandırılmış bağımsız** değişkeninin **değer** sütununda, **[Dizin] öğesini** girin. **Temsilci bağımsız değişkenleri** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 
-20. Etkinliği <xref:System.Activities.Statements.Assign> etkinliğin altındaki yatay çizgiye sürükleyin <xref:System.Activities.Statements.InvokeDelegate> . <xref:System.Activities.Statements.Assign>Etkinlik oluşturulur ve <xref:System.Activities.Statements.Sequence> **MyForEach** etkinliğinin **Body** bölümündeki iki etkinliği içerecek şekilde otomatik olarak bir etkinlik oluşturulur. **Body** bölümü yalnızca tek bir etkinlik içerebileceğinden, bu sıra gereklidir. Otomatik olarak yeni bir <xref:System.Activities.Statements.Sequence> etkinlik oluşturulması .NET Framework 4,5 ' nin yeni bir özelliğidir.
+20. Etkinliği <xref:System.Activities.Statements.Assign> etkinliğin altındaki yatay çizgiye sürükleyin <xref:System.Activities.Statements.InvokeDelegate> . <xref:System.Activities.Statements.Assign>Etkinlik oluşturulur ve <xref:System.Activities.Statements.Sequence> **MyForEach** etkinliğinin **Body** bölümündeki iki etkinliği içerecek şekilde otomatik olarak bir etkinlik oluşturulur. **Body** bölümü yalnızca tek bir etkinlik içerebileceğinden, bu sıra gereklidir. otomatik olarak yeni bir <xref:System.Activities.Statements.Sequence> etkinlik oluşturulması .NET Framework 4,5 ' nin yeni bir özelliğidir.
 
 21. Etkinliğin **to** özelliğini <xref:System.Activities.Statements.Assign> **index** olarak ayarlayın. **Assign** etkinliğinin **Value** özelliğini **index + 1** olarak ayarlayın.
 

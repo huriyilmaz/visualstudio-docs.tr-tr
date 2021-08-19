@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6face230a71d30514f589a77964f14ef4236b90d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 494121aebb41e0582a7538a13239010baca976513f0713373b4bbc11e2215b0a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122128682"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121436478"
 ---
 # <a name="idiasymbolget_hassetjump"></a>IDiaSymbol::get_hasSetJump
 İşlevin [setjmp](/cpp/c-runtime-library/reference/setjmp) komutunun kullanımının olup olmadığını belirten bir bayrak alır [(longjmp](/cpp/c-runtime-library/reference/longjmp) komutuyla eşleştirilmiştir, bunlar özel durum işlemenin C stili yöntemini oluşturur).

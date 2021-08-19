@@ -1,5 +1,5 @@
 ---
-description: Aşağıdaki FxCop eski analiz kuralları kullanım dışıdır ve çözümleyiciler olarak uygulanmaz.
+description: Aşağıdaki FxCop eski analiz kuralları kullanım dışıdır ve çözümleyici olarak uygulanmaz.
 title: Kullanım dışı kurallar
 ms.date: 05/21/2019
 ms.topic: reference
@@ -9,18 +9,19 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 21a151f7d2da18f1c498269504f216b1f7fbd44c
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 7804d8dc3baa9df631ae721ea3a2c89328293642
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102144708"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045196"
 ---
 # <a name="deprecated-rules"></a>Kullanım dışı kurallar
 
-Aşağıdaki FxCop eski analiz kuralları kullanım dışıdır ve çözümleyiciler olarak uygulanmaz. Daha fazla bilgi için, [Roslyn-çözümleyiciler GitHub sorunları sayfasında](https://github.com/dotnet/roslyn-analyzers/issues?utf8=%E2%9C%93&q=is:issue+label:FxCop-Port)kural kimliğine göre arama yapabilirsiniz (örneğin, **CA1009**).
+Aşağıdaki FxCop eski analiz kuralları kullanım dışıdır ve çözümleyici olarak uygulanmaz. Daha fazla bilgi için [roslyn çözümleyicileri](https://github.com/dotnet/roslyn-analyzers/issues?utf8=%E2%9C%93&q=is:issue+label:FxCop-Port)sorun sayfasında kural kimliğine **(örneğin CA1009)** GitHub arayabilirsiniz.
 
 - [CA1006](ca1006.md)
 - [CA1009](ca1009.md)

@@ -11,16 +11,17 @@ ms.assetid: 86ea2c8a-54a3-48e8-83c7-18a515273129
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: 21462e7762a608e2b69a5ce32309fe0ac5cc2537
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 10c0f2dceda90184df194c2013449c97db004585
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096752"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145971"
 ---
 # <a name="bp_location_resolution"></a>BP_LOCATION_RESOLUTION
 Belirli bir konumda bir kesme noktasının çözünürlüğünü açıklar.

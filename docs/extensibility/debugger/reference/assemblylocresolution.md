@@ -11,17 +11,18 @@ ms.assetid: 0bcfe85c-5f37-4a9d-bf2b-141acd96ad67
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 191e22dc7b0a70fc6eb83e6237bdcadd25995c2b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f76437d28c9adccd3e98ab31dae4c19c0411230c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085448"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080136"
 ---
 # <a name="assemblylocresolution"></a>ASSEMBLYLOCRESOLUTION
 Bir derlemenin bulunduğu yeri belirtir.

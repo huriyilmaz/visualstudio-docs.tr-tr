@@ -7,15 +7,16 @@ ms.assetid: b877802d-c736-4047-821a-bd7733fff6de
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: eb96cdafd08825f14c83d99471356f4e3a92eea5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9e015195077c925bfb214ca9dd5f3f0ea9509c36
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922411"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027545"
 ---
 # <a name="overviews-performance-tools"></a>Genel Bakış (performans araçları)
 Bu bölümde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , geliştirme aşamasındaki bir uygulamanın performans özelliklerini ölçmek için kullanabileceğiniz profil oluşturma araçları kavramsal ve terminoloji genel bakış sunulmaktadır.
@@ -51,7 +52,7 @@ Bu bölümde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , gelişt
 
 - [CPU ve Windows sayaçları](../profiling/cpu-and-windows-counters.md)
 
- Performans oturumunda ek performans verileri sağlayabilen CPU ve Windows performans sayaçları hakkında bilgi edinin.
+ performans oturumunda ek performans verileri sağlayabilen CPU ve Windows performans sayaçları hakkında bilgi edinin.
 
 - [Profil oluşturma ve Windows Vista güvenliği](../profiling/profiling-and-windows-vista-security.md)
 

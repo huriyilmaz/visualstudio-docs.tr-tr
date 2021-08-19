@@ -1,6 +1,6 @@
 ---
-description: Açılır ve program veritabanı (. pdb) dosyasının belirtilen imza bilgilerini eşleştirdiğini doğrular ve. pdb dosyasını hata ayıklama veri kaynağı olarak hazırlar.
-title: 'IDiaDataSource:: loadAndValidateDataFromPdb | Microsoft Docs'
+description: program veritabanı (.pdb) dosyasının sağlanan imza bilgileriyle eş olduğunu açar ve doğrular ve .pdb dosyasını hata ayıklama veri kaynağı olarak hazırlar.
+title: IDiaDataSource::loadAndValidateDataFromPdb | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: d66712dd-6c24-4192-919a-cce262066f0e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d55053271e38ee87533a11a8c5f6cd30d7e7333
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 9a3d09b96f835b84399742a461b404bc4b75ddc0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158290"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122097949"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
-Açılır ve program veritabanı (. pdb) dosyasının belirtilen imza bilgilerini eşleştirdiğini doğrular ve. pdb dosyasını hata ayıklama veri kaynağı olarak hazırlar.
+program veritabanı (.pdb) dosyasının sağlanan imza bilgileriyle eş olduğunu açar ve doğrular ve .pdb dosyasını hata ayıklama veri kaynağı olarak hazırlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,40 +38,40 @@ HRESULT loadAndValidateDataFromPdb (
 #### <a name="parameters"></a>Parametreler
 `pdbPath`
 
-'ndaki . Pdb dosyasının yolu.
+[in] .pdb dosyasının yolu.
 
 `pcsig70`
 
-'ndaki . Pdb dosya imzasına göre doğrulanacak GUID imzası. Yalnızca ve sonraki sürümlerinde bulunan. pdb dosyalarının [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] GUID imzaları vardır.
+[in] .pdb dosya imzasını doğrulamak için GUID imzası. Yalnızca ve sonraki dosyalarda GUID imzaları olan .pdb [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] dosyaları.
 
 `sig`
 
-'ndaki . Pdb dosya imzasına göre doğrulanacak 32 bitlik imza.
+[in] .pdb dosya imzasını doğrulamak için 32 bit imza.
 
 `age`
 
-'ndaki Doğrulanacak yaş değeri. Yaş, bilinen bir zaman değerine karşılık gelmez; bir. pdb dosyasının karşılık gelen bir. exe dosyası ile eşitlenmemiş olup olmadığını anlamak için kullanılır.
+[in] Doğru için yaş değeri. Yaş her zaman bilinen bir saat değerine karşılık gelmez; bir .pdb dosyasının karşılık gelen bir dosyayla eşitlenen bir zaman .exe kullanılır.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri yer alır.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|E_PDB_NOT_FOUND|Dosya açılamadı veya dosya geçersiz bir biçime sahip.|
-|E_PDB_FORMAT|Eski biçimdeki bir dosyaya erişme girişiminde bulunuldu.|
-|E_PDB_INVALID_SIG|İmza eşleşmiyor.|
-|E_PDB_INVALID_AGE|Yaş eşleşmiyor.|
-|E_INVALIDARG|Geçersiz parametre.|
-|E_UNEXPECTED|Veri kaynağı zaten hazırlandı.|
+|E_PDB_NOT_FOUND|Dosya açılamadı veya dosyanın biçimi geçersiz.|
+|E_PDB_FORMAT|Eski bir biçime sahip bir dosyaya erişmeye çalışıldı.|
+|E_PDB_INVALID_SIG|İmza eşle değil.|
+|E_PDB_INVALID_AGE|Yaş eşle değil.|
+|E_ınvalıdarg|Geçersiz parametre.|
+|E_unexpected|Veri kaynağı zaten hazırlanmıştır.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bir. pdb dosyası hem imza hem de yaş değerlerini içerir. Bu değerler. pdb dosyasıyla eşleşen. exe veya. dll dosyasında çoğaltılır. Bu yöntem, veri kaynağını hazırlamadan önce adlandırılan. pdb dosyasının imzasının ve Age değerinin belirtilen değerlerle eşleştiğini doğrular.
+.pdb dosyası hem imza hem de yaş değerlerini içerir. Bu değerler.pdb dosyasıyla .exe .dll dosyada çoğaltılır. Bu yöntem, veri kaynağını hazırlamadan önce, adlandırılmış .pdb dosyasının imzası ve yaşı değerlerinin sağlanan değerlerle eşle olduğunu doğrular.
 
-Bir. pdb dosyasını doğrulama olmadan yüklemek için [IDiaDataSource:: loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) metodunu kullanın.
+Doğrulama olmadan bir .pdb dosyası yüklemek için [IDiaDataSource::loadDataFromPdb yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) kullanın.
 
-Veri yükleme işlemine (bir geri çağırma mekanizması aracılığıyla) erişim kazanmak için [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodunu kullanın.
+Veri yükleme sürecine erişim elde etmek için (bir geri çağırma mekanizması aracılığıyla), [IDiaDataSource::loadDataForExe yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) kullanın.
 
-Bir. pdb dosyasını doğrudan bellekten yüklemek için [IDiaDataSource:: Loaddatafromistreaı](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) metodunu kullanın.
+.pdb dosyasını doğrudan bellekten yüklemek için [IDiaDataSource::loadDataFromIStream yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) kullanın.
 
 ## <a name="example"></a>Örnek
 

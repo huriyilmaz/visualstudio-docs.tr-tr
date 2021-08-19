@@ -1,6 +1,6 @@
 ---
-description: Sembolün sınıf üst öğesi için bir başvuru verir.
-title: IDiaSymbol::get_classParent | Microsoft Docs
+description: Simgenin sınıf üst öğesine bir başvuru alır.
+title: 'IDiaSymbol:: get_classParent | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a0f0eb685492069c791227f7930c4e359182537
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 67c58d9cc7823729c491dc95d217e0a6a9bdbeee30b6a2d8037ac639411729b5
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081240"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121436576"
 ---
 # <a name="idiasymbolget_classparent"></a>IDiaSymbol::get_classParent
-Sembolün sınıf üst öğesi için bir başvuru verir.
+Simgenin sınıf üst öğesine bir başvuru alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,23 +35,23 @@ HRESULT get_classParent (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Sembolün sınıf üst sınıfını temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
+dışı Simgenin üst öğesini temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üstbilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
 ## <a name="remarks"></a>Açıklamalar
- Sınıf üstleri olan sembollerin türleri Sembol Türlerinin Sınıf [Hiyerarşisi'ne belgelenmiş.](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)
+ Sınıf üst öğeleri olabilecek simgelerin türleri [sembol türlerinin sınıf hiyerarşisinde](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)belgelenmiştir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

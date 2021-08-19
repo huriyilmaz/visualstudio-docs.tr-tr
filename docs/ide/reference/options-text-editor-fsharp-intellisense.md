@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 929140a744765bc69d745ccfe0e4e645a4369d675d2c0a06791afc90a8867ae3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cffc3b941bdecf6c7ff814be2c7cbef0be7e8ec7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121400185"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122062257"
 ---
 # <a name="options-text-editor-f-intellisense"></a>Seçenekler, metin düzenleyici, F #, IntelliSense
 

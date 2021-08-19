@@ -1,6 +1,6 @@
 ---
-title: Önkoşulları dahil edin (ClickOnce uygulaması)
-description: Geliştirme bilgisayarınız için ClickOnce uygulamanıza dağıtma önkoşulları için yükleyici paketlerini nasıl alasınız?
+title: Önkoşulları dahil ClickOnce uygulama)
+description: Geliştirme bilgisayarınız için uygulamanıza dağıtım yapmak amacıyla önkoşullar ClickOnce yükleyici paketlerini nasıl alasınız?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -8,20 +8,21 @@ ms.assetid: c66bf0a5-8c93-4e68-a224-3b29ac36fe4d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: b41529182b7cca8cea8f94206601b7a818d35420
-ms.sourcegitcommit: 6aa55db5e1fe19d4d17886e0bfe140dbd186f8ba
+ms.openlocfilehash: dae657a35a2fffba23a353f20d2f36a9296fb3c1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111877747"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122146387"
 ---
-# <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>Nasıl olur: ClickOnce uygulamasıyla önkoşulları dahil etmek
-Önkoşul yazılımlarını bir uygulamayla dağıtmadan önce, bu önkoşullar için yükleyici paketlerini geliştirme [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bilgisayarınıza indirmeniz gerekir. Bir uygulamayı yayımlar ve Önkoşulları uygulamam ile aynı konumdan indir'i **seçerseniz,** yükleyici paketleri Paketler klasöründe yoksa bir **hata** oluşur.
+# <a name="how-to-include-prerequisites-with-a-clickonce-application"></a>Nasıl ClickOnce: Bir uygulamanın önkoşullarını dahil
+Önkoşul yazılımlarını bir uygulamayla dağıtmadan önce, bu önkoşullar için yükleyici paketlerini geliştirme [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bilgisayarınıza indirmeniz gerekir. Bir uygulama yayımlar ve Önkoşulları uygulamam ile aynı konumdan indir'i **seçerseniz,** yükleyici paketleri Paketler klasöründe yer alamayacaksa bir **hata** oluşur.
 
 > [!NOTE]
-> Dağıtım paketine bir yükleyici paketi .NET Framework için bkz. [.NET Framework Dağıtım Kılavuzu.](/dotnet/framework/deployment/deployment-guide-for-developers)
+> Uygulama için bir yükleyici paketi eklemek .NET Framework, [bkz. .NET Framework Dağıtım Kılavuzu.](/dotnet/framework/deployment/deployment-guide-for-developers)
 
 ## <a name="to-add-an-installer-package-by-using-packagexml"></a><a name="Package"></a> Package.xml kullanarak bir yükleyici paketi eklemek için
 
@@ -34,12 +35,12 @@ ms.locfileid: "111877747"
 
 2. Eklemek istediğiniz önkoşul için klasörü açın ve ardından yüklü sürümünüz için dil klasörünü [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] açın (örneğin, İngilizce için **en).**
 
-3. Not Defteri'ni açın *vePackage.xml* açın.
+3. Bu Not Defteri dosyanın *Package.xml* açın.
 
 4. içeren **Name** öğesini bulun ve `http://go.microsoft.com/fwlink` URL'yi kopyalayın. **LinkID bölümünü dahil** edin.
 
    > [!NOTE]
-   > Name öğesi **yoksa** önkoşul içinProduct.xmlklasöründeki dosyanın adını `http://go.microsoft.com/fwlink` açın ve fwlink **dizesini**  bulun.
+   > Name öğesi **yoksa,** `http://go.microsoft.com/fwlink` **önkoşulProduct.xml** kök klasöründeki dosyanın adını açın ve **fwlink dizesini** bulun.
 
    > [!IMPORTANT]
    > Bazı ön koşullar (örneğin, 32-bit veya 64-bit sistemler için) birden çok yükleme paketine sahiptirler. Birden çok **Ad** öğeleri **fwlink içeriyorsa,** kalan adımları her biri için tekrarlamalısiniz.

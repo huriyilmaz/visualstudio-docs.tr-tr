@@ -18,12 +18,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7d25cefdc360f054f94dac4eb9c1827cb3f45a91452942178f057137ff6d2bde
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a6715129ad449e7d92ed2b74785469408973b25c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417242"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043446"
 ---
 # <a name="idebugmemorybytes2readat"></a>IDebugMemoryBytes2::ReadAt
 Verilen bir konumdan başlayarak bayt dizisini okur.

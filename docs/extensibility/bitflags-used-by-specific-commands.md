@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12adec8bbaad32d801de2dabdfb792bc1cc196ecce47a0cbfb35cb84052def21
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9cfa48cc8ef55e8fcd574055d1d0c6acc9c84935
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452673"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043836"
 ---
 # <a name="bitflags-used-by-specific-commands"></a>Belirli komutlar tarafından kullanılan bitflags
 Kaynak denetimi eklentisi API 'sindeki bir dizi işlevin davranışı tek bir değerde bir veya daha fazla bit ayarlanarak değiştirilebilir. Bu değerler bitflags olarak bilinir. Kaynak denetimi eklentisi API 'SI tarafından kullanılan çeşitli bitflags burada, bunları kullanan işleve göre gruplanmış olarak ayrıntılıdır.
@@ -93,16 +93,16 @@ Kaynak denetimi eklentisi API 'sindeki bir dizi işlevin davranışı tek bir de
 |`SCC_OPT_USERDATA`|0x00000002L|için kullanıcı verilerini `SCC_OPT_NAMECHANGEPFN` belirtin.|
 |`SCC_OPT_HASCANCELMODE`|0x00000003L|IDE iptal işlemini işebilir.|
 |`SCC_OPT_NAMECHANGEPFN`|0x00000004L|Ad değişiklikleri için bir geri çağırma ayarlayın.|
-|`SCC_OPT_SCCCHECKOUTONLY`|0x00000005L|Kaynak denetimi eklentisi kullanıcı arabirimini devre dışı bırakma ve çalışma dizini ayarlama.|
+|`SCC_OPT_SCCCHECKOUTONLY`|0x00000005L|Kaynak denetimi eklentisi kullanıcı arabirimini devre dışı bırakma ve çalışma dizinini ayarlama.|
 |`SCC_OPT_SHARESUBPROJ`|0x00000006L|Çalışma dizini belirtmek için kaynak denetim sisteminden ekleyin. Doğrudan alt kullanıcı ise ilişkili projeyle paylaşmayı deneyin.|
 
 ## <a name="dwval-bitflags"></a>dwVal bitflags
- Bu bayraklar parametresinde [SccSetOption](../extensibility/sccsetoption-function.md) tarafından `dwVal` kullanılır.
+ Bu bayraklar [parametresinde SccSetOption](../extensibility/sccsetoption-function.md) tarafından `dwVal` kullanılır.
 
 |Bayrak|Değer|Açıklama|Değere göre `nOption` kullanılır|
 |----------|-----------|-----------------|-----------------------------|
 |`SCC_OPT_EQ_DISABLE`|0x00L|Olay kuyruğu etkinliğini askıya alır.|`SCC_OPT_EVENTQUEUE`|
-|`SCC_OPT_EQ_ENABLE`|0x01L|Olay kuyruğu günlüğünü sağlar.|`SCC_OPT_EVENTQUEUE`|
+|`SCC_OPT_EQ_ENABLE`|0x01L|Olay kuyruğu günlüğünü etkinleştirme.|`SCC_OPT_EVENTQUEUE`|
 |`SCC_OPT_HCM_NO`|0L|(Varsayılan) İptal modu yoktur; eklentinin istenirse temini gerekir.|`SCC_OPT_HASCANCELMODE`|
 |`SCC_OPT_HCM_YES`|1L|IDE iptal işlemini işler.|`SCC_OPT_HASCANCELMODE`|
 |`SCC_OPT_SCO_NO`|0L|(Varsayılan) Eklenti kullanıcı arabiriminden kontrol etmek için tamam; çalışma dizini ayarlanmıştır.|`SCC_OPT_SCCCHECKOUTONLY`|

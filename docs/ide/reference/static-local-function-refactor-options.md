@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: aea122e61bec36a5e8c37ce443e4fdf0254bc6d6950cff704721e282b6dabb10
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: df6ccc1827ca67cd761d615191869bc52fecc082
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121400149"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122062075"
 ---
 # <a name="static-local-function-refactorings-and-quick-actions"></a>Statik yerel işlev yeniden düzenlemeleri ve Hızlı Eylemler
 

@@ -1,6 +1,6 @@
 ---
-title: Raporlama Raporları makroları | Microsoft Docs
-description: CRTDBG'de sağlanan _RPTn ve _RPTFn hata ayıklama makroları hakkında bilgi öğrenin. H ve kendi hata ayıklama makrolarınızı oluşturma hakkında.
+title: Raporlama için makrolar | Microsoft Docs
+description: CRTDBG içinde _RPTn hata ayıklama makroları ve _RPTFn hakkında bilgi edinin. H ve kendi hata ayıklama makrolarınızı oluşturma hakkında.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -25,20 +25,20 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c3479483b5baf1bef9d6001ff5a8bffca53a675bd9d50d916d7241c8e67ee96c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 042a1ce4b4e2c180de46bc8609000df97b422c86
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453126"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080708"
 ---
 # <a name="macros-for-reporting"></a>Raporlama Makroları
-Hata ayıklama için, CRTDBG'de **_RPTn** ve **_RPTFn** makrolarını kullanabilirsiniz. deyimlerinin kullanımını değiştirmek için `printf` H. Bunlar tanımlanmamış olduğunda yayın **#ifdef** otomatik olarak kaybolduğu için bunları _DEBUG **gerek** yok.
+Hata ayıklama için, CRTDBG içinde tanımlanan **_RPTn** ve **_RPTFn** makrolarını kullanabilirsiniz. H, deyimlerin kullanımını değiştirmek için `printf` . **_DEBUG** tanımlanmadığında yayın derlemeniz otomatik olarak kaybolduğu için **#ifdef** s 'de bunları almanız gerekmez.
 
-|Makro|Açıklama|
+|Makroya|Açıklama|
 |-----------|-----------------|
-|**_RPT0**, **_RPT1**, **_RPT2,** **_RPT3**, **_RPT4**|Bir ileti dizesi ve sıfırdan dört bağımsız değişkene çıkış verir. bu **_RPT1** için **_RPT4** dize, bağımsız değişkenler için printf stili biçimlendirme dizesi olarak görev alır.|
-|**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF3**, **_RPTF4**|ile **_RPTn,** ancak bu makrolar da makronun bulunduğu dosya adını ve satır numarasını çıkış olarak belirtir.|
+|**_RPT0**, **_RPT1**, **_RPT2**, **_RPT3**, **_RPT4**|İleti dizesi ve sıfırdan dört bağımsız değişken verir. **_RPT4** üzerinden **_RPT1** için, ileti dizesi bağımsız değişkenler için bir printf stili biçimlendirme dizesi işlevi görür.|
+|**_RPTF0**, **_RPTF1**, **_RPTF2**, **_RPTF3**, **_RPTF4**|**_RPTn** ile aynıdır, ancak bu makrolar, makronun bulunduğu dosya adı ve satır numarasını da çıktı olarak alır.|
 
  Aşağıdaki örneği inceleyin:
 
@@ -51,13 +51,13 @@ Hata ayıklama için, CRTDBG'de **_RPTn** ve **_RPTFn** makrolarını kullanabil
 #endif
 ```
 
- Bu kod, ve değerlerini `someVar` `otherVar` **stdout'a verir.** Bu değerleri ve ek olarak dosya adını ve satır numarasını rapor etmek için aşağıdaki `_RPTF2` çağrısı kullanabilirsiniz:
+ Bu kod, `someVar` ve değerlerini `otherVar` **stdout** olarak verir. `_RPTF2`Aynı değerleri ve ek olarak dosya adını ve satır numarasını raporlamak için aşağıdaki çağrısını kullanabilirsiniz:
 
 ```cpp
 if (someVar > MAX_SOMEVAR) _RPTF2(_CRT_WARN, "In NameOfThisFunc( ), someVar= %d, otherVar= %d\n", someVar, otherVar );
 ```
 
-Belirli bir uygulamanın C çalışma zamanı kitaplığıyla sağlanan makroların sağlamamasına neden olan hata ayıklama raporlaması gerektiğini bulabilirsiniz. Bu durumlarda, özel olarak kendi gereksinimlerinize uyacak şekilde tasarlanmış bir makro yazabilir. Örneğin, üst bilgi dosyalarınızın birsinde aşağıdakine benzer bir kod ekleyen ve **ALERT_IF2:**
+Belirli bir uygulamanın, C çalışma zamanı kitaplığı ile sağlanan makroların sunmadığından hata ayıklama raporlaması gerektiğini görebilirsiniz. Bu gibi durumlarda, kendi gereksinimlerinize uyacak şekilde tasarlanan bir makro yazabilirsiniz. Başlık dosyalarından birinde, örneğin, **ALERT_IF2** adlı bir makro tanımlamak için aşağıdakine benzer bir kod ekleyebilirsiniz:
 
 ```cpp
 #ifndef _DEBUG                  /* For RELEASE builds */
@@ -73,14 +73,14 @@ Belirli bir uygulamanın C çalışma zamanı kitaplığıyla sağlanan makrolar
 #endif
 ```
 
- Tek bir **ALERT_IF2** printf kodunun tüm **işlevlerini yapabiliriz:**
+ **ALERT_IF2** bir çağrı, **printf** kodunun tüm işlevlerini yapabilirim:
 
 ```cpp
 ALERT_IF2(someVar > MAX_SOMEVAR, "OVERFLOW! In NameOfThisFunc( ),
 someVar=%d, otherVar=%d.\n", someVar, otherVar );
 ```
 
- Farklı hedeflere daha fazla veya daha az bilgi rapor etmek için özel bir makroyu kolayca değiştirebilirsiniz. Hata ayıklama gereksinimleriniz geliştikçe bu yaklaşım özellikle yararlıdır.
+ Farklı hedeflere daha fazla veya daha az bilgi bildirebilmeniz için özel bir makroyu kolayca değiştirebilirsiniz. Bu yaklaşım özellikle hata ayıklama gereksinimleriniz geliştikçe yararlı olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [CRT Hata Ayıklama Teknikleri](../debugger/crt-debugging-techniques.md)
+- [CRT hata ayıklama teknikleri](../debugger/crt-debugging-techniques.md)

@@ -13,13 +13,13 @@ metadata:
   manager: jmartens
   ms.workload:
   - multiple
-  ms.openlocfilehash: 530719aafeaf617aa92b09388768a46e2ccd5bf5
-  ms.sourcegitcommit: 879ba768364f3bfdaeb9004f740478489ab15c3a
+  ms.openlocfilehash: 0a9de49d4022d4c73c2a24d77c1d1a759d47ab9a329e383472dc0cebcfd7f134
+  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/29/2021
-  ms.locfileid: "114796183"
-title: Visual Studio'de anlık görüntü hata ayıklama için sık sorulan Visual Studio
+  ms.lasthandoff: 08/12/2021
+  ms.locfileid: "121454477"
+title: Visual Studio'da anlık görüntü hata ayıklaması için sık sorulan sorular
 summary: Canlı Azure uygulamalarında hata ayıklama sırasında hata ayıklamak için aşağıdaki soruların listesini Snapshot Debugger.
 sections:
 - name: Genel
@@ -27,19 +27,19 @@ sections:
   - question: >
       Anlık görüntü almanın performans maliyeti nedir?
     answer: >
-      Uygulama Snapshot Debugger anlık görüntüsünü yakalarsa, uygulamanın işleminin bir kopyasını alır ve kopyanın kopyasını askıya alır. Bir anlık görüntüde hata ayıklarken, işlemde hata ayıklama işlemiyle hata ayıklarsiniz. Bu işlem yalnızca 10-20 milisaniye sürer ancak uygulamanın tam yığınını kopyalamaz. Bunun yerine, yalnızca sayfa tablosu kopyalanır ve yazmada kopyalanan sayfalar ayarlar. Yığındaki bazı uygulama nesneleri değişirse, ilgili sayfaları kopyalanır. Bu nedenle her anlık görüntü için küçük bir bellek içinde maliyet (çoğu uygulama için yüzlerce kilobayt sırasına göre) vardır.
+      Uygulama Snapshot Debugger anlık görüntüsünü yakalarsa, uygulamanın işleminin bir kopyasını alır ve kopyanın kopyasını askıya alır. Bir anlık görüntüde hata ayıklarken, işlemde hata ayıklarken hata ayıklar ve hata ayıklarsiniz. Bu işlem yalnızca 10-20 milisaniye sürer ancak uygulamanın tam yığınını kopyalamaz. Bunun yerine, yalnızca sayfa tablosu kopyalanır ve yazmada kopyalanan sayfalar ayarlar. Yığındaki uygulama nesnelerinin bazıları değişirse, ilgili sayfaları kopyalanır. Bu nedenle her anlık görüntü için küçük bir bellek içinde maliyet (çoğu uygulama için yüzlerce kilobayt sırasına göre) vardır.
   - question: >
       Ölçeği genişlene bir uygulamam varsa (Azure App Service birden çok örneği) ne olur?
     answer: >
-      Uygulamanın birden çok örneğine sahip olduğunda, ek bileşen noktaları her bir örnek için uygulanır. Yalnızca belirtilen koşullarla isabet etmek için ilk ek bileşen bir anlık görüntü oluşturur. Birden çok anlık görüntü noktası varsa, sonraki anlık görüntüler ilk anlık görüntüyü oluşturan aynı örnekten gelir. Çıkış penceresine gönderilen günlük noktaları yalnızca bir örnekten iletileri gösterirken, uygulama günlüklerine gönderilen günlük noktaları her örnekten ileti gönderir.
+      Uygulamanın birden çok örneğine sahip olduğunda, ek bileşen noktaları her bir örnek için uygulanır. Yalnızca belirtilen koşullarla isabet etmek için ilk ek bileşen bir anlık görüntü oluşturur. Birden çok anlık görüntü varsa, sonraki anlık görüntüler ilk anlık görüntüyü oluşturan aynı örnekten gelir. Çıkış penceresine gönderilen günlük noktaları yalnızca bir örnekten iletileri gösterirken, uygulama günlüklerine gönderilen günlük noktaları her örnekten ileti gönderir.
   - question: >
-      Veri Snapshot Debugger yükser?
+      İş yükü Snapshot Debugger yükser?
     answer: >
-      Bu Snapshot Debugger, uygulamanıza yönelik eşleşen sembollerin yerel olarak veya uygulamanıza dağıtılmasını Azure App Service. (Katıştırılmış PDB'ler şu anda desteklenmiyor.) Bu Snapshot Debugger, dosyadan sembolleri otomatik olarak Azure App Service. 2017 Visual Studio 15.2'den başlayarak, Azure App Service'ye dağıtım da uygulamanızın sembollerini dağıtır.
+      Bu Snapshot Debugger, uygulamanıza yönelik eşleşen sembollerin yerel olarak veya uygulamanıza dağıtılmasını Azure App Service. (Katıştırılmış PDB'ler şu anda desteklenmiyor.) Bu Snapshot Debugger, dosyadan sembolleri otomatik olarak Azure App Service. 2017 Visual Studio 15.2 sürümünden başlayarak, Azure App Service'a dağıtım da uygulamanızın sembollerini dağıtır.
   - question: >
       Uygulamam Snapshot Debugger derlemelerine karşı çalışıyor mu?
     answer: >
-      Evet - Snapshot Debugger derlemelere karşı çalışması amaçlanan bir uygulamadır. Bir işleve ek bileşen yerleştirilsin, işlev bir hata ayıklama sürümüne geri yeniden kodlanabilir ve bu da hata ayıklanabilir hale döner. Bu Snapshot Debugger, işlevleri yayın derlemesi sürümüne döndürür.
+      Evet - Snapshot Debugger derlemelere karşı çalışacak şekilde tasarlanmıştır. Bir işleve ek bileşen yerleştirilsin, işlev bir hata ayıklama sürümüne geri yeniden kodlanabilir ve bu da hata ayıklanabilir hale döner. Bu Snapshot Debugger, işlevleri yayın derlemesi sürümüne döndürür.
   - question: >
       Logpoint'ler üretim uygulamamda yan etkilere neden olabilir mi?
     answer: >
@@ -51,16 +51,16 @@ sections:
   - question: >
       Nasıl yaparım? kaldırabilirsiniz Snapshot Debugger?
     answer: >
-      Aşağıdaki adımları Snapshot Debugger site uzantınızı App Service site uzantısını kaldırabilirsiniz:
+      Aşağıdaki adımları Snapshot Debugger site App Service site uzantısını kaldırabilirsiniz:
 
 
-      1. Visual Studio App Service'daki Bulut Gezgini aracılığıyla Azure portal.
+      1. App Service'daki Bulut Gezgini'Visual Studio veya Azure portal.
 
-      1. Uygulamanıza App Service kudu sitesine (yani, uygulama hizmetinize) gidin.**scm**.azurewebsites.net) ve **Site uzantıları'ne gidin.**
+      1. Uygulamanıza App Service kudu sitesine (yani, uygulama hizmetinize) gidin.**scm**.azurewebsites.net) ve Site **uzantıları'ne gidin.**
 
       1. Site uzantısını kaldırmak Snapshot Debugger X'e tıklayın.
   - question: >
-      Bağlantı noktaları neden bir oturum Snapshot Debugger açıldı?
+      Bağlantı noktaları neden bir oturum Snapshot Debugger açılır?
     answer: >
       Snapshot Debugger azure'da alınan anlık görüntülerde hata ayıklamak için bir bağlantı noktası kümesi açmanız gerektiğinde, bunlar uzaktan hata ayıklama için gereken bağlantı noktalarıyla aynıdır. [Bağlantı noktalarının listesini burada bulabilirsiniz.](../debugger/remote-debugger-port-assignments.md)
   - question: >
@@ -68,9 +68,9 @@ sections:
     answer: >
       Uygulama Hizmetleri için:
 
-      1. Uzaktan Hata Ayıklayıcı uzantısını uygulamanıza Azure portal devre dışı App Service.
+      1. Uzaktan Hata Ayıklayıcı uzantısını, uygulamanıza Azure portal uzaktan App Service.
 
-      2. Azure portal > Hizmeti kaynak dikey > *uygulama Ayarlar*
+      2. Azure portal > Hizmeti kaynak dikey > uygulama *Ayarlar*
 
       3. Hata Ayıklama *bölümüne gidin* ve Uzaktan hata ayıklama *için* Kapalı *düğmesine tıklayın.*
 
@@ -91,7 +91,7 @@ sections:
 
             - Uzak Hata Ayıklayıcıyı Bulut Gezgini aracılığıyla devre dışı bırakma
 
-               - Cloud Explorer> hata ayıklamayı devre > (Cloud Explorer'da sanal makine ölçek kümesi için Hata Ayıklamayı Devre Dışı Bırak) seçeneğiyle sanal makine kaynağınızı kullanabilirsiniz.
+               - Cloud Explorer> hata ayıklamayı devre > (Cloud Explorer'da sanal makine ölçek kümesi için Hata Ayıklamayı Devre Dışı Bırakma yok) seçeneğiyle sanal makine kaynağınızı kullanabilirsiniz.
 
             - PowerShell Betikleri/Cmdlet'leri ile Uzaktan Hata Ayıklayıcıyı Devre Dışı Bırakma
 
@@ -139,7 +139,7 @@ sections:
             ```
 
          - Sunucu Sertifikası
-            - İlgili sunucu sertifikası parmak izi, Azure KeyVault'a gizli anahtar olarak dağıtılır. Visual Studio makine veya sanal makine ölçek kümeleri kaynağına karşılık gelen bölgede MSVSAZ* ön ekli bir KeyVault bulmaya veya oluşturmaya çalışacak. Bu nedenle, bu bölgeye dağıtılan tüm sanal makine veya sanal makine ölçek kümeleri kaynakları aynı KeyVault'ları paylaşır.
+            - İlgili sunucu sertifikası parmak izi, Azure KeyVault'a gizli anahtar olarak dağıtılır. Visual Studio, sanal makine veya sanal makine ölçek kümeleri kaynağına karşılık gelen bölgede MSVSAZ* ön ekli bir KeyVault bulmaya veya oluşturmaya çalışacak. Bu nedenle, bu bölgeye dağıtılan tüm sanal makine veya sanal makine ölçek kümeleri kaynakları aynı KeyVault'ları paylaşır.
             - Sunucu sertifikası parmak izi gizli anahtarını silmek için Azure portal gidin ve kaynağınızı barındıran bölgede MSVSAZ* KeyVault'unu bulun. Etiketlenmiş olması gereken gizli adı silin `remotedebugcert<<ResourceName>>`
             - Ayrıca PowerShell aracılığıyla kaynağından sunucu gizli ını da silmeniz gerekir.
 
@@ -177,9 +177,9 @@ sections:
     answer: >
       Daha App Service:
 
-      1. Kendi Snapshot Debugger için Azure portal aracılığıyla App Service.
+      1. Bu Snapshot Debugger için Azure portal aracılığıyla devre dışı App Service.
 
-      2. Azure portal > Hizmeti kaynak dikey > *uygulama Ayarlar*
+      2. Azure portal > Hizmeti kaynak dikey > uygulama *Ayarlar*
 
       3. Uygulama sayfasında aşağıdaki Uygulama ayarlarını Azure portal değişikliklerinizi kaydedin.
          - INSTRUMENTATIONENGINE_EXTENSION_VERSION
@@ -198,12 +198,12 @@ sections:
       Sanal makine/sanal makine ölçek kümeleri için:
 
 
-      Bu özelliği devre dışı bırakmanın çeşitli yolları Snapshot Debugger:
+      Bu özelliği devre dışı bırakmanın birkaç yolu Snapshot Debugger:
 
-      - Cloud Explorer> makine/sanal makine ölçek kümesi kaynağınızı ve tanılamayı devre > dışı bırakma
+      - Cloud Explorer> makine/sanal makine ölçek kümesi kaynağınızı devre dışı bırakma > Tanılamayı devre dışı bırakma
 
 
-      - Azure portal > makine/sanal makine ölçek kümesi kaynak dikey > Uzantıları'> Microsoft'u kaldırın. Analizler. VMDiagnosticsSettings uzantısı
+      - Azure portal > makine/sanal makine ölçek kümesi kaynak dikey penceresine >'> Microsoft'u kaldırın. Analizler. VMDiagnosticsSettings uzantısı
 
 
       - [Az PowerShell'den](/powershell/azure/overview) PowerShell Cmdlet'leri
@@ -220,4 +220,4 @@ sections:
             $vmss = Get-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName
             Remove-AzVmssExtension -VirtualMachineScaleSet $vmss -Name Microsoft.Insights.VMDiagnosticsSettings
          ```
-additionalContent: "\n## <a name=\"see-also\"></a>Ayrıca bkz.\n  - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)\n  - [Snapshot Debugger kullanarak ASP.NET uygulamalarda canlı Snapshot Debugger](../debugger/debug-live-azure-applications.md)\n  - [canlı ASP.NET Azure sanal makine ölçek kümeleri Snapshot Debugger kullanarak hata ayıkla](../debugger/debug-live-azure-virtual-machines.md)\n  - [Snapshot Debugger kullanarak Azure kubernetes ASP.NET hata ayıklama](../debugger/debug-live-azure-kubernetes.md)\n  - [Anlık görüntü hata ayıklaması için sorun giderme ve bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md)"
+additionalContent: "\n## <a name=\"see-also\"></a>Ayrıca bkz.\n  - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)\n  - [ASP.NET kullanarak canlı ASP.NET hata ayıklaması Snapshot Debugger](../debugger/debug-live-azure-applications.md)\n  - [Azure Sanal ASP.NET\\Sanal Makineler ölçek kümelerini kullanarak canlı hata ayıklama Snapshot Debugger](../debugger/debug-live-azure-virtual-machines.md)\n  - [Snapshot Debugger kullanarak Azure Kubernetes'te ASP.NET canlı hata ayıklaması Snapshot Debugger](../debugger/debug-live-azure-kubernetes.md)\n  - [Anlık görüntü hata ayıklama için sorun giderme ve bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md)"

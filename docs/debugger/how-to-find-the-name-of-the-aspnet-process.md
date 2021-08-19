@@ -19,20 +19,20 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - aspnet
-ms.openlocfilehash: ea5a2c954f031139c66616f80c4dc5b44d2efb5d8b0aa0329c5e043d4a75d909
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fd2bf1a08eeaf1467ae948c78f84d7bfbab67d12
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379132"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043953"
 ---
 # <a name="find-the-name-of-the-aspnet-process"></a>ASP.NET işleminin adını bulma
 
-Çalışan bir uygulamada hata [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ayıklamak için Visual Studio hata ayıklayıcısının işleme adıyla [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] eklemesi gerekir.
+Çalışan bir uygulamada hata [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ayıklamak için Visual Studio hata ayıklayıcının işleme adıyla [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] eklemesi gerekir.
 
 **Bir uygulamanın hangi işlemi ASP.NET için:**
 
-1. Uygulama çalışıyorken, uygulamanın Visual Studio İşleme **Eklemede Hata**  >  **Ayıkla'ya seçin.**
+1. Uygulama çalışıyorken, uygulamanın Visual Studio İşleme **Eklemede**  >  **Hata Ayıkla'ya seçin.**
 
 1. İşleme **Ekle iletişim** kutusunda, aşağıdaki listeden işlem adlarının ilk harflerini yazın veya arama kutusuna girin. Bu, ASP.NET uygulamasını çalıştıran ASP.NET. Uygulamanın hata ayıklaması için bu işleme ekleme.
 
@@ -43,7 +43,7 @@ ms.locfileid: "121379132"
     - *inetinfo.exe,* işlemde çalışan eski ASP uygulamalarıdır.
 
 >[!NOTE]
->Visual Studio 2012 ve önceki kodlar dosya sisteminde olabilir ve test sunucusundaWebDev.WebServer.exe[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] veya *WebDev.WebServer40.exe.* ** Bu durumda, yerel hata ayıklama için işlem *yerineWebDev.WebServer.exe* *veyaWebDev.WebServer40.exe'ye* [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] iliştirin.
+>Visual Studio 2012 ve önceki kodlar dosya sisteminde olabilir ve test sunucusunda veyaWebDev.WebServer.exe[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] üzerinde *WebDev.WebServer40.exe.*  Bu durumda, yerel hata ayıklama için işlem *yerineWebDev.WebServer.exe* *veyaWebDev.WebServer40.exe'ye* [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] iliştirin.
 
 **Ayrıca bkz:**
 

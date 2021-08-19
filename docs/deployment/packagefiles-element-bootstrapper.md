@@ -1,6 +1,6 @@
 ---
-title: '&lt;PackageFiles &gt; öğesi (önyükleyici) | Microsoft Docs'
-description: Komut öğesinin sonucu olarak yürütülen yükleme paketlerini tanımlayan PackageFile öğelerini içeren PackageFiles öğesi hakkında bilgi edinin.
+title: '&lt;PackageFiles &gt; Öğesi (Önyükleyici) | Microsoft Docs'
+description: Command öğesinin bir sonucu olarak yürütülen yükleme paketlerini tanımlayan PackageFile öğelerini içeren PackageFiles öğesini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,17 +15,18 @@ ms.assetid: 3ea252d7-18a3-47d8-af83-47feebcfe82b
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fbf76fec604819d7944a7b54fa4b2421e37c111
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d986c13a4c575fa70dd4496c0b87073baa1615f7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99925366"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080396"
 ---
 # <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles &gt; öğesi (önyükleyici)
-`PackageFiles`Öğesi, `PackageFile` öğesinin sonucu olarak yürütülen yükleme paketlerini tanımlayan öğeleri içerir `Command` .
+`PackageFiles`öğesi, `PackageFile` öğesinin sonucu olarak yürütülen yükleme paketlerini tanımlayan öğeleri `Command` içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,27 +45,27 @@ ms.locfileid: "99925366"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `PackageFiles`Öğesi aşağıdaki özniteliğe sahiptir.
+ öğesi `PackageFiles` aşağıdaki özniteliğine sahip.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`CopyAllPackageFiles`|İsteğe bağlı. Olarak ayarlanırsa `false` , yükleyici yalnızca öğeden başvurulan dosyaları indirir `Command` . Olarak ayarlanırsa `true` , tüm dosyalar indirilir.<br /><br /> Olarak ayarlanırsa `IfNotHomesite` , yükleyici, olarak ayarlanmış gibi davranır `False` `ComponentsLocation` `HomeSite` ve aksi takdirde aynı `True` şekilde çalışır. Bu ayar, kendisine ait önyükleme yapan paketlerin bir HomeSite senaryosunda kendi davranışlarını yürütmesine olanak tanımak için yararlı olabilir.<br /><br /> Varsayılan değer: `true`.|
+|`CopyAllPackageFiles`|İsteğe bağlı. olarak `false` ayarlanırsa, yükleyici yalnızca öğesinden başvurulan dosyaları `Command` indirir. olarak `true` ayarlanırsa tüm dosyalar indirilir.<br /><br /> olarak ayarlanırsa, yükleyici olarak ayarlanmışsa ile aynı şekilde davranır ve aksi takdirde gibi `IfNotHomesite` `False` `ComponentsLocation` `HomeSite` `True` davranır. Bu ayar, kendilerini önyükleyici olan paketlerin bir HomeSite senaryosunda kendi davranışlarını yürütmesine izin vermek için yararlı olabilir.<br /><br /> Varsayılan değer: `true`.|
 
 ## <a name="packagefile"></a>PackageFile
- `PackageFile`Öğesi, öğesinin bir alt öğesidir `PackageFiles` . Bir `PackageFiles` öğe en az bir öğe içermelidir `PackageFile` .
+ `PackageFile`öğesi, öğesinin alt `PackageFiles` öğesidir. Bir `PackageFiles` öğenin en az bir öğesi `PackageFile` olması gerekir.
 
- `PackageFile` Aşağıdaki özniteliklere sahiptir.
+ `PackageFile` aşağıdaki özniteliklere sahip.
 
 | Öznitelik | Açıklama |
 |---------------| - |
-| `Name` | Gereklidir. Paket dosyasının adı. Bu, `Command` bir paketin yüklendiği koşulları tanımladığında öğenin başvurulacağını olan addır. Bu değer Ayrıca, `Strings` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] paketin, paketi tanımlamakta kullanacağı yerelleştirilmiş adı almak için tabloya bir anahtar olarak da kullanılır. |
-| `HomeSite` | İsteğe bağlı. Yükleyiciye dahil değilse, uzak sunucudaki paketin konumu. |
-| `CopyOnBuild` | İsteğe bağlı. Önyükleyici 'nin, derleme zamanında paket dosyasını diske kopyalaması gerekip gerekmediğini belirtir. Varsayılan değer true 'dur. |
-| `PublicKey` | Paketin sertifika imzalayan şifreli ortak anahtar. Kullanılıyorsa gereklidir `HomeSite` ; Aksi takdirde, isteğe bağlıdır. |
-| `Hash` | İsteğe bağlı. Paket dosyasının SHA1 karması. Bu, yüklemenin zamanında dosyanın bütünlüğünü doğrulamak için kullanılır. Aynı karma paket dosyasından hesaplanamaz, paket yüklenmez. |
+| `Name` | Gereklidir. Paket dosyasının adı. Bu, `Command` öğesinin, bir paketin hangi koşullar altında yükl olduğunu tanımlarken başvuracak olan addır. Bu değer, gibi araçların paketi açıklamak için kullandığı yerelleştirilmiş adı almak için tabloda `Strings` bir anahtar olarak da [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kullanılır. |
+| `HomeSite` | İsteğe bağlı. Yükleyiciye dahil değilse, paketin uzak sunucuda konumu. |
+| `CopyOnBuild` | İsteğe bağlı. Önyükleyicinin derleme zamanında paket dosyasını diske kopyalaması gerekip gerek olmadığını belirtir. Varsayılan değer true'dır. |
+| `PublicKey` | Paketin sertifika imzaıcının şifrelenmiş ortak anahtarı. Kullanılıyorsa `HomeSite` gereklidir; aksi takdirde isteğe bağlıdır. |
+| `Hash` | İsteğe bağlı. Paket dosyasının SHA1 karması. Bu, yükleme zamanında dosyanın bütünlüğünü doğrulamak için kullanılır. Aynı karma paket dosyasından hesaplanmazsa paket yüklenmez. |
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, .NET Framework yeniden dağıtılabilir paketi için paketleri ve Windows Installer gibi bağımlılıklarını tanımlar.
+ Aşağıdaki kod örneği, yeniden dağıtılabilir .NET Framework paketi için paketleri ve Windows Yükleyicisi gibi bağımlılıklarını tanımlar.
 
 ```xml
 <PackageFiles>
@@ -76,6 +77,6 @@ ms.locfileid: "99925366"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [\<Product> dosyalarında](../deployment/product-element-bootstrapper.md)
-- [\<Package> dosyalarında](../deployment/package-element-bootstrapper.md)
+- [\<Product> Öğe](../deployment/product-element-bootstrapper.md)
+- [\<Package> Öğe](../deployment/package-element-bootstrapper.md)
 - [Ürün ve paket şema başvurusu](../deployment/product-and-package-schema-reference.md)

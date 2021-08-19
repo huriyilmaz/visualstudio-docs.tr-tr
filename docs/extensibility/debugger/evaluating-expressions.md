@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7fd3f27aaf6080a853dbacc856d0b6ac258319b81560bd002a5b562ecef6a7dc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 142c5d195990e87a7741fbbbe0eeef4a7020c63a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342849"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080344"
 ---
 # <a name="evaluate-expressions"></a>İfadeleri değerlendir
 İfadeler **,** **hızlı** bir şekilde veya **anında** Windows 'tan geçirilen dizelerden oluşturulur . Bir ifade değerlendirildiğinde, değişken veya bağımsız değişkenin adını ve türünü ve değerini içeren yazdırılabilir bir dize oluşturur. Bu dize, karşılık gelen IDE penceresinde görüntülenir.

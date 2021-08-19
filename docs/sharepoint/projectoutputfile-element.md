@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: cf1931f59db2eec4033c8aa2a5182ad0310989253884869845a334091bb01c5a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9a8ecbe4c9214487f1e5d93462bace0af1d58165
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121409351"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130903"
 ---
 # <a name="projectoutputfile-element"></a>ProjectOutputFile öğesi
   SharePoint 'e dağıtıldığında proje öğesiyle birlikte dahil edilecek ayrı bir projenin çıkışını temsil eder.

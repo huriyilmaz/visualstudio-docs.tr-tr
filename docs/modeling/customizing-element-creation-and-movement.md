@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ee0cfc7a87d8e035dfdd0f1337c1e440f710c93083dbbe4137e0469f0346d65
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5ef80f1b377acdecc32a774ebc2d8a199a6189de
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121271504"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027844"
 ---
 # <a name="customizing-element-creation-and-movement"></a>Öğe Oluşturma ve Hareketini Özelleştirme
 
@@ -41,9 +41,9 @@ Oluşturma işlemleri kopyalama işlemlerinden farklı görünse de aslında ayn
 
 EMD'nin sorumluluğu, bir nesnenin veya nesne grubunun modeldeki belirli bir konumda nasıl birleştirileceklerine karar vermektir. Özellikle, birleştirilen grubu modele bağlamaya ilişkin olarak hangi ilişkilerin örneklendirilecek olduğuna karar verir. Ayrıca özellikleri ayarlamak ve ek nesneler oluşturmak için de özelleştirebilirsiniz.
 
-![E M D yeni bir öğenin nasıl ekli olduğunu belirlerken öğe ağacına ve başvuru ilişkilerine bakmadan önce ve sonra bir gösteren diyagram.](../modeling/media/dsl-emd_merge.png)
+![E M D yeni bir öğenin nasıl ekli olduğunu belirlerken öğe ağacına ve başvuru ilişkilerinin önce ve sonraya bakarak gösteren diyagram.](../modeling/media/dsl-emd_merge.png)
 
-Ekleme ilişkisi tanımladığınız zaman BIR EMD otomatik olarak oluşturulur. Bu varsayılan EMD, kullanıcılar üst öğeye yeni alt örnekler eklese de ilişkinin bir örneğini oluşturur. Bu varsayılan EMD'leri, örneğin özel kod ekleyerek değiştirebilirsiniz.
+Ekleme ilişkisi tanımladığınız zaman bir EMD otomatik olarak oluşturulur. Bu varsayılan EMD, kullanıcılar üst öğeye yeni alt örnekler eklese de ilişkinin bir örneğini oluşturur. Bu varsayılan EMD'leri, örneğin özel kod ekleyerek değiştirebilirsiniz.
 
 Ayrıca, kullanıcıların birleştirilen ve alan sınıfların farklı birleşimlerini sürüklemesine veya yapıştırmasına izin vermeleri için DSL tanımına kendi EMD'lerinizi ekebilirsiniz.
 
@@ -313,9 +313,9 @@ Bileşen modeli çözümünde bir ileriye doğru birleştirme yönergesi oluştu
 
 10. Çözümü derleyin ve çalıştırın. Yeni bir örnek Visual Studio görüntülenir.
 
-11. Bu **Çözüm Gezgini** Sample.mydsl'i açın. Diyagram ve **ComponentLanguage Araç Kutusu** görüntülenir.
+11. **'Çözüm Gezgini** Sample.mydsl'i açın. Diyagram ve **ComponentLanguage Araç Kutusu** görüntülenir.
 
-12. Bir Giriş **Bağlantı Noktasını Araç** **Kutusundan başka bir** Giriş Bağlantı Noktasına **sürükleyin.** Ardından, bir **OutputPort'ı** **bir InputPort'a ve** ardından başka bir **OutputPort'a sürükleyin.**
+12. Bir Giriş **Bağlantı Noktasını Araç** **Kutusundan başka bir** Giriş Bağlantı Noktasına **sürükleyin.** Ardından bir **OutputPort'ı** **bir InputPort'a ve** ardından başka bir **OutputPort'a sürükleyin.**
 
      Kullanılamıyor işaretçisini görmeli ve yeni Giriş Bağlantı Noktasını mevcut **işaretçiye** bırakabilirsiniz. Yeni Giriş Bağlantı **Noktasını seçin** ve Bileşeni'nin başka bir noktasına **sürükleyin.**
 

@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: a307f3f9fc97378e0d6262a1ff538891e7a0d662a0441e66e78334bf48351888
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 946b3fca7e99bf2aaf1395d63f13626f5e5e5859
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385204"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122026973"
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>Nasıl kullanılır: Paket Tasarımcısını kullanarak pakete özellik ve öğe ekleme ve kaldırma
   Bir çözüm SharePoint, Visual Studio varsayılan SharePoint Özellikler'i çözümde pakete ekler. Son dağıtımdan önce, proje öğelerini ve SharePoint paketinde değişiklik yapmak için bu öğeleri SharePoint kaldırabilirsiniz.

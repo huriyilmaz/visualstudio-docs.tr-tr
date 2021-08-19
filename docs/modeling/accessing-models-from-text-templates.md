@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a07f6c9ad1059b9630bd578338d1c96df3875010edf29018674c71ed597f681
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 451f9963b61d213b8aa95fe83ab68806d6c88bdc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121386114"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122027831"
 ---
 # <a name="access-models-from-text-templates"></a>Metin şablonlarından modellere erişin
 

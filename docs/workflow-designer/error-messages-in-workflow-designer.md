@@ -1,6 +1,6 @@
 ---
 title: İş Akışı Tasarımcısında Hata İletileri
-description: Verilerle çalışırken karşılaşabilirsiniz hata iletisi türleri hakkında bilgi İş Akışı Tasarımcısı.
+description: İş Akışı Tasarımcısı çalışırken karşılaşabileceğiniz hata iletilerinin türleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,41 +15,41 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e7bf7553867e832c03eb921e6aff51a61ab8b460b5b38fddf10ad01d78a2bf8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 63cdfa5e371f67db2faffa7b18c0eacf4e2db411
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121407986"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122114777"
 ---
 # <a name="error-messages-in-workflow-designer"></a>İş Akışı Tasarımcısında Hata İletileri
 
-Bu konu başlığında, hata iletileriyle çalışırken karşılaşabilirsiniz hata iletisi türleri İş Akışı Tasarımcısı.
+Bu konu, İş Akışı Tasarımcısı çalışırken karşılaşılabilecek hata iletilerinin türlerini açıklar.
 
-## <a name="situations-in-which-errors-in-the-workflow-designer-occur"></a>HataNın Oluştuğu İş Akışı Tasarımcısı Durumlar
+## <a name="situations-in-which-errors-in-the-workflow-designer-occur"></a>İş Akışı Tasarımcısı hatanın oluştuğu durumlar
 
-Aşağıdaki İş Akışı Tasarımcısı hata oluşur:
+İş Akışı Tasarımcısı hatalar aşağıdaki durumlarda oluşur:
 
 1. İfadede bir hata var.
 
-2. Etkinliğin doğrulama kısıtlamaları karşılanamadı.
+2. Etkinliğin doğrulama kısıtlamaları karşılanmadı.
 
-3. XAML dosyasında bir etkinliğin yüklenemedik hatasına neden olan hatalar var.
+3. XAML dosyasında bir etkinliğin yüklenmesine neden olan hatalar vardır.
 
-4. XAML dosyasında iş akışının yüklenemedik hatalarına neden olan hatalar var.
+4. XAML dosyasında iş akışının yükleme başarısız olmasına neden olan hatalar vardır.
 
-Geçersiz ifadeler ve memnun olmayan doğrulama kısıtlamaları, iş akışının derlemenin başarısız olmasına neden olmaz. İş akışınızı oluşturma başarılı olur, <xref:System.Activities.InvalidWorkflowException> ancak çalışma zamanında bir atılan. XAML dosyasında hatalar varsa derleme başarısız olur.
+Geçersiz ifadeler ve karşılanmamış doğrulama kısıtlamaları iş akışının derlenmemesine neden olmaz. İş akışınızı oluşturma işlemi başarılı olur, ancak çalışma zamanında bir oluşturulur <xref:System.Activities.InvalidWorkflowException> . XAML dosyasında hatalar varsa, yapı başarısız olur.
 
-Bu Visual Studio, bir iş akışı yüklendiğinde, hataları Hata Listesinde **görüntülenir.** Hatanın kaynağı olan etkinlikte gezinmek için Hata Listesinde hataya **çift tıklayın.**
+Visual Studio içinde, bir iş akışı yüklendiğinde, hataları **Hata Listesi** görüntülenir. Hatanın kaynağı olan etkinliğe gitmek için **hata listesi** hataya çift tıklayın.
 
-### <a name="expression-errors"></a>İfade Hataları
- Geçersiz bir ifade, ifadenin yanında beyaz ünlem işareti olan kırmızı bir daire ile işaret edilir. Bu simgenin üzerine gelindiğinde hatanın kaynağını açıklayan bir araç ipucu görüntülenir. Hata Visual Studio altındaki satırı görüntülemek için ifadeye tıklayın. Satırlı metnin üzerine gelindiğinde hatanın kaynağını açıklayan bir araç ipucu görüntülenir.
+### <a name="expression-errors"></a>İfade hataları
+ Geçersiz bir ifade, ifadenin yanındaki beyaz ünlem işaretine sahip kırmızı bir daire ile belirtilir. Bu simgenin üzerine gelindiğinde, hatanın kaynağını açıklayan bir araç ipucu görüntülenir. Visual Studio içinde, hata kaynağının altını çizili çizgiyi görüntülemek için ifadeye tıklayın. Çizgili metnin üzerine gelindiğinde, hatanın kaynağını açıklayan bir araç ipucu görüntülenir.
 
-### <a name="activity-validation-errors"></a>Etkinlik Doğrulama Hataları
- Bir etkinliğin doğrulama kısıtlamaları karşılanmazsa, etkinliğin sağ üst köşesinde beyaz ünlem işareti olan kırmızı bir daire görünür. Bu simgenin üzerine gelindiğinde hatanın kaynağını açıklayan bir araç ipucu görüntülenir.
+### <a name="activity-validation-errors"></a>Etkinlik doğrulama hataları
+ Etkinliğin doğrulama kısıtlamaları karşılanmadığı zaman, etkinliğin sağ üst köşesinde beyaz ünlem işaretine sahip kırmızı bir daire görünür. Bu simgenin üzerine gelindiğinde, hatanın kaynağını açıklayan bir araç ipucu görüntülenir.
 
-### <a name="xaml-load-errors"></a>XAML Yükleme Hataları
- Bir etkinlik yüklenemezse, "XAML'de hatalar nedeniyle etkinlik yüklenemedi" metnine sahip kırmızı bir kutu görüntülenir. Bu durum genellikle etkinliğin türü çözümlenemezse gerçekleşir. Geçersiz etkinlik, kırmızı kutu seçilerek ve silinerek tasarımcıda silinebilir.
+### <a name="xaml-load-errors"></a>XAML yükleme hataları
+ Bir etkinlik yüklenemediğinde, "XAML içindeki hatalar nedeniyle etkinlik yüklenemedi" metnini içeren kırmızı bir kutu görünür. Bu genellikle etkinliğin türü çözümlenemediğinde oluşur. Geçersiz etkinlik, kırmızı kutuyu seçerek ve silerek tasarımcıda silinebilir.
 
-### <a name="workflow-load-errors"></a>İş Akışı Yükleme Hataları
- Bir iş akışı yüklenemezse tasarımcı yüzeyinde "İş Akışı Tasarımcısı karşılaşılan sorunlar" metni ve iş akışının yüklenemedi hatasına neden olan özel durum bilgileri görüntülenir. Bu durum genellikle XAML dosyası ayrıştırılamaysa oluşur.
+### <a name="workflow-load-errors"></a>İş akışı yükleme hataları
+ Bir iş akışı yüklemesi başarısız olduğunda, "İş Akışı Tasarımcısı metin, çalışma akışının hatasına neden olan özel durum bilgileri ve tasarımcı yüzeyinde" belgenizde sorunlarla karşılaştı "şeklinde görünür. Bu genellikle XAML dosyası ayrıştırılamadığınızda meydana gelir.

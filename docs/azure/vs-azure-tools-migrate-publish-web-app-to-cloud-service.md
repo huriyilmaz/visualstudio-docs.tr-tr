@@ -1,6 +1,6 @@
 ---
 title: Web uygulamasını bulut hizmetine geçirme ve yayımlama
-description: Visual Studio kullanarak web uygulamalarınızı azure bulut hizmetine geçirmeyi ve yayımlamayı Visual Studio
+description: Web uygulamalarınızı azure bulut hizmetine geçirmeyi ve yayımlamayı Visual Studio
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jmartens
@@ -25,9 +25,9 @@ Azure'ın barındırma hizmetlerinden ve ölçeklendirme becerilerinden yararlan
 
 ## <a name="migrate-a-project-to-cloud-services"></a>Projeyi bulut hizmetlerine geçirme
 
-1. Çözüm düğümüne sağ tıklayın ve **Ekle'> Yeni Project... öğesini** seçin ve mevcut çözüme yeni bir Azure Bulut Hizmeti **(klasik)** projesi ekleyin.
+1. Çözüm düğümüne sağ tıklayın ve **Ekle'> Yeni Project...** öğesini seçin ve mevcut çözüme yeni bir **Azure Cloud Service (klasik)** projesi ekleyin.
 1. Yeni **Bulut Microsoft Azure (klasik) iletişim kutusunda,** projeye rol eklemeden Tamam'a tıklayın.
-1. Yeni eklenen proje altındaki roller düğümüne sağ tıklayın ve Cloud Services... içinde Web Rolü **Project Ekle'yi seçin.**
+1. Yeni eklenen Cloud Services projesinin altındaki roller düğümüne sağ tıklayın ve Çözümde Web Rolü **Project Ekle... öğesini seçin.**
 1. Rol **Rolü Project** iletişim kutusunda, web rolü olarak ilişkilendirmek istediğiniz projeyi seçin.
 
    > [!Important]
@@ -43,7 +43,7 @@ Uyarılara hata olarak davranma hakkında daha fazla bilgi için bkz. [Azure Clo
 
 ### <a name="test-the-migration-locally"></a>Geçişi yerel olarak test etmek
 
-1. Bu Visual Studio **Çözüm Gezgini,** eklenen bulut hizmeti projesine sağ tıklayın ve Başlangıç Olarak **Ayarla'yı Project.**
+1. Yeni Visual Studio **Çözüm Gezgini,** eklenen bulut hizmeti projesine sağ tıklayın ve Başlangıç Olarak **Ayarla'yı Project.**
 1. Azure **hata ayıklama > başlatmak için Hata Ayıklamayı** Başlat (F5) öğesini seçin. Bu ortam özellikle çeşitli Azure hizmetlerinin öykünmelerini sağlar.
 
 ### <a name="use-an-azure-sql-database-for-your-application"></a>Uygulamanıza Azure SQL Veritabanı bir uygulama kullanma
@@ -51,17 +51,17 @@ Uyarılara hata olarak davranma hakkında daha fazla bilgi için bkz. [Azure Clo
 Web uygulamanıza şirket içi SQL Server veritabanı kullanan bir bağlantı dizeniz varsa, veritabanınızı bunun yerine Azure SQL Veritabanı'ye geçirmeniz ve bağlantı dizenizi güncelleştirmeniz gerekir. Bu işlemle ilgili rehberlik için aşağıdaki konulara bakın:
 
 - [SQL Server veritabanını buluttaki SQL Veritabanına taşıma](/azure/sql-database/sql-database-cloud-migrate)
-- [.NET (C#) ile veritabanına Visual Studio azure veritabanına bağlanmak ve sorgulamak SQL kullanın.](/azure/sql-database/sql-database-connect-query-dotnet-visual-studio)
+- [Veritabanına bağlanmak ve Azure veritabanına bağlanmak Visual Studio .NET (C#) SQL kullanın.](/azure/sql-database/sql-database-connect-query-dotnet-visual-studio)
 
 ## <a name="publish-the-application-to-azure-cloud-service"></a>Uygulamayı Azure Bulut Hizmeti'ne yayımlama
 
 1. Azure aboneliğinize gerekli bulut hizmeti ve depolama hesaplarını, Azure'dan bir Azure uygulaması yayımlamaya veya dağıtmaya hazırlama [konusunda açıklandığı gibi Visual Studio.](vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md)
-1. Bu Visual Studio, uygulama projesine sağ tıklayın ve **Microsoft Azure...'de yayımla...'yı** seçin (bu, "Yayımla..." komutu.).
+1. Bu Visual Studio, uygulama projesine sağ tıklayın ve **Microsoft Azure...'de yayımla'yı** seçin (bu, "Yayımla..." komutu.).
 1. Görüntülenen **Azure Uygulamasını Yayımla'da,** Azure aboneliğiniz ile hesabı kullanarak oturum açın ve Sonraki **adım'ı >.**
 1. Ayarlar > **Common Ayarlar** sekmesinde, seçtiğiniz ortam ve yapılandırmalarla birlikte  Bulut Hizmeti açılan listesinden hedef bulut hizmetini seçin.
-1. Gelişmiş **Ayarlar >'Ayarlar** altında, kullanmak üzere depolama hesabını seçin ve ardından **İleri'yi >.**
+1. Gelişmiş **Ayarlar >'Ayarlar'de,** kullanmak üzere depolama hesabını seçin ve ardından **İleri'yi >.**
 1. **Tanılama'da,** Application Analizler'a bilgi gönderip gönder Analizler.
-1. Özeti **görüntülemek >sonraki** adım'ı ve ardından Dağıtımı başlatmak için **Yayımla'yı** seçin.
+1. Özeti **görüntülemek >** sonraki adım'ı ve ardından Dağıtımı başlatmak için **Yayımla'yı** seçin.
 1. Visual Studio ilerlemeyi takip etmek için bir etkinlik günlüğü penceresi açar:
 
     ![VST_AzureActivityLog](./media/vs-azure-tools-migrate-publish-web-app-to-cloud-service/IC744149.png)
@@ -72,7 +72,7 @@ Web uygulamanıza şirket içi SQL Server veritabanı kullanan bir bağlantı di
 
 ## <a name="using-the-compute-emulator-and-starting-application-in-azure"></a>Azure'da işlem öykünücüsünü kullanma ve uygulamayı başlatma
 
-Hata Ayıklamayı Başlat (F5) seçerek Visual Studio hata ayıklayıcısına **bağlı bir tarayıcıda >** başlatabilirsiniz. Boş ASP.NET Uygulaması projesiyle, önce uygulamanıza bir sayfa eklemeniz ve bunu web projenizin başlangıç sayfası `.aspx` olarak ayarlamanız gerekir.
+Hata Ayıklamayı Başlat (F5) seçerek Visual Studio hata ayıklayıcısına **bağlı bir tarayıcıda >** başlatabilirsiniz. Boş ASP.NET Uygulaması projesiyle, önce uygulamanıza bir sayfa eklemeniz ve bunu web projenizin `.aspx` başlangıç sayfası olarak ayarlamanız gerekir.
 
 Aşağıdaki tabloda, Uygulamayı Azure'da başlatmayla ilgili ayrıntılar yer alır:
 
@@ -83,9 +83,9 @@ Aşağıdaki tabloda, Uygulamayı Azure'da başlatmayla ilgili ayrıntılar yer 
 | WCF Hizmet Uygulaması<br/>WCF İş Akışı Hizmeti Uygulaması | Dosyayı `.svc` WCF Hizmeti projenizin başlangıç sayfası olarak ayarlayın. Ardından şu sayfaya gidin: `<deployment_url>/<service_file>.svc` |
 | ASP.NET Dinamik Varlıklar<br/>ASP.NET Dinamik Veri Linq to SQL | Bağlantı dizesini sonraki bölümde açıklandığı gibi güncelleştirin. Ardından, 'a `<deployment_url>/<page_name>.aspx` gidin. Linq'in SQL azure veritabanı SQL gerekir. |
 
-## <a name="update-a-connection-string-for-aspnet-dynamic-entities"></a>Dinamik Varlıklar için bağlantı ASP.NET güncelleştirme
+## <a name="update-a-connection-string-for-aspnet-dynamic-entities"></a>Dinamik Varlıkların Bağlantı Dizesini ASP.NET Güncelleştirme
 
-1. Daha önce SQL Azure açıklandığı gibi ASP.NET Dinamik Varlıklar web uygulaması için (#use-an-azuresql-database-for-your-application) bir veritabanı oluşturun.
+1. Daha önce ASP.NET (#use-an-azuresql-database-for-your-application) açıklandığı gibi bir SQL Azure Dinamik Varlıklar web uygulaması için bir veritabanı oluşturun.
 1. Bu veritabanı için ihtiyacınız olan tabloları ve alanları veri Azure portal.
 1. Dosyada aşağıdaki biçimde bir `web.config` bağlantı dizesi belirtin ve dosyayı kaydedin:
 
@@ -123,5 +123,5 @@ Bulut hizmetlerinden geçirile ve yayımlana uygulamalar aşağıdaki tabloda ye
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Visual Studio bir Azure uygulaması yayımlamaya veya dağıtmaya hazırlanma](vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md)
-- [Adlandırılmış kimlik doğrulama kimlik bilgileri ayarlanıyor](vs-azure-tools-setting-up-named-authentication-credentials.md).
+- [Visual Studio'den Azure Uygulaması Yayımlamaya veya Dağıtmaya Hazırlanma](vs-azure-tools-cloud-service-publish-set-up-required-services-in-visual-studio.md)
+- [Adlandırılmış Kimlik Doğrulaması Kimlik Bilgilerini Ayarlama.](vs-azure-tools-setting-up-named-authentication-credentials.md)

@@ -1,6 +1,6 @@
 ---
 title: Visual Studio 2019 SDK 'daki yenilikler | Microsoft Docs
-description: Visual Studio SDK, Visual Studio 2019 için düzenleyici kayıt geliştirmeleri dahil yeni ve güncelleştirilmiş özellikler.
+description: Visual Studio SDK, düzenleyici kayıt geliştirmeleri dahil olmak üzere Visual Studio 2019 için yeni ve güncelleştirilmiş özellikleri içerir.
 ms.custom: SEO-VS-2020
 ms.date: 03/29/2019
 ms.topic: conceptual
@@ -8,14 +8,15 @@ ms.assetid: 4a07607b-0c87-4866-acd8-6d68358d6a47
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d8e08136eb142e5e72c08e23860bf94f01dc87c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3ca803eb330f0640910e271ec5bf531de0ccdf58
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061907"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122028403"
 ---
 # <a name="whats-new-in-the-visual-studio-2019-sdk"></a>Visual Studio 2019 SDK 'daki yenilikler
 
@@ -25,13 +26,13 @@ Visual Studio SDK, Visual Studio 2019 için aşağıdaki yeni ve güncelleştiri
 
 Kullanıcılar, yüklü uzantılarından herhangi biri zaman uyumlu olarak başlangıçta tekrar yüklenirse bir uyarı görür. [Zaman uyumlu olarak yüklenen uzantılara](synchronously-autoloaded-extensions.md)uyarı hakkında daha fazla bilgi edinebilirsiniz.
 
-## <a name="single-unified-visual-studio-sdk"></a>Tek, Birleşik Visual Studio SDK
+## <a name="single-unified-visual-studio-sdk"></a>tek, birleşik Visual Studio SDK
 
-Artık tüm Visual Studio SDK varlıklarını, [Microsoft. VisualStudio. SDK](https://www.nuget.org/packages/microsoft.visualstudio.sdk)tek bir NuGet paketi aracılığıyla edinebilirsiniz.
+artık tüm Visual Studio SDK varlıklarını, [Microsoft. VisualStudio. SDK](https://www.nuget.org/packages/microsoft.visualstudio.sdk)tek bir NuGet paketi aracılığıyla edinebilirsiniz.
 
 ## <a name="editor-registration-enhancements"></a>Düzenleyici kayıt geliştirmeleri
 
-Oluşturma işlemi nedeniyle, Visual Studio, bir düzenleyicinin belirli Uzantılar (örneğin,. xaml ve. RC) için benzeşimini bildirebileceği veya herhangi bir uzantı için uygun olduğu (. *) özel düzenleyici kaydı destekliyordu. Visual Studio 2019 sürüm 16,1 ' den başlayarak, düzenleyici kaydı desteğini genişlettik.
+oluşturulduktan sonra, Visual Studio bir düzenleyicinin belirli uzantılar (örneğin,. xaml ve. rc) için benzeşimini bildirebileceği veya herhangi bir uzantı için uygun olduğu özel düzenleyici kaydı desteklendiğinden (. *). Visual Studio 2019 sürüm 16,1 ' den başlayarak, düzenleyici kaydı desteğini genişlettik.
 
 ### <a name="filenames"></a>Dosya Adları
 

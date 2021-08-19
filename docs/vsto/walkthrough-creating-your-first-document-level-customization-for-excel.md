@@ -15,18 +15,19 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 9254aa5fd465c14e24133df59bbcee46f3c1acf4
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: bd69d27b399f237fddb2f543e28a236edfdb8603
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826908"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122114998"
 ---
 # <a name="walkthrough-create-your-first-document-level-customization-for-excel"></a>İzlenecek yol: Excel için ilk belge düzeyi özelleştirmeyi oluşturma
 
-  Bu açıklayıcı izlenecek yol, Excel Microsoft Office için belge düzeyi özelleştirmesi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler yalnızca belirli bir çalışma kitabı açık olduğunda kullanılabilir. Bir belge düzeyinde özelleştirmeyi uygulama genelinde değişiklikler yapmak için kullanamazsınız, örneğin, herhangi bir çalışma kitabı açıkken yeni bir şerit sekmesi görüntüleme.
+  bu açıklayıcı izlenecek yol, Microsoft Office Excel için belge düzeyi özelleştirmesi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler yalnızca belirli bir çalışma kitabı açık olduğunda kullanılabilir. Bir belge düzeyinde özelleştirmeyi uygulama genelinde değişiklikler yapmak için kullanamazsınız, örneğin, herhangi bir çalışma kitabı açıkken yeni bir şerit sekmesi görüntüleme.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
@@ -36,7 +37,7 @@ ms.locfileid: "107826908"
 
 - Visual Studio tasarımcısında barındırılan bir çalışma sayfasına metin ekleme.
 
-- Açıldığında özelleştirilmiş çalışma sayfasına metin eklemek için Excel nesne modelini kullanan kodu yazma.
+- açıldığında özelleştirilmiş çalışma sayfasına metin eklemek için Excel nesne modelini kullanan kodu yazma.
 
 - Test etmek için projeyi oluşturma ve çalıştırma.
 
@@ -54,26 +55,26 @@ ms.locfileid: "107826908"
 
 ## <a name="create-the-project"></a>Proje oluşturma
 
-### <a name="to-create-a-new-excel-workbook-project-in-visual-studio"></a>Visual Studio 'da yeni bir Excel çalışma kitabı projesi oluşturmak için
+### <a name="to-create-a-new-excel-workbook-project-in-visual-studio"></a>Visual Studio içinde yeni bir Excel çalışma kitabı projesi oluşturmak için
 
 1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
+2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve **Project**' ye tıklayın.
 ::: moniker range="vs-2017"
-3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**' i genişletin ve ardından **Office/SharePoint**' i genişletin.
+3. şablonlar bölmesinde, **Visual C#** veya **Visual Basic**' i genişletin ve ardından **Office/SharePoint**' yı genişletin.
 
-4. Genişletilmiş **Office/SharePoint** düğümü altında **VSTO eklentileri** düğümünü seçin.
+4. genişletilmiş **Office/SharePoint** düğümü altında **VSTO eklentileri** düğümünü seçin.
 
-5. Proje şablonları listesinde bir Excel VSTO çalışma kitabı projesi seçin.
+5. proje şablonları listesinde bir Excel VSTO çalışma kitabı projesi seçin.
 
 6. **Ad** kutusuna **FirstWorkbookCustomization** yazın.
 
 7. **Tamam**'a tıklayın.
 
-8. **Office projesi için Visual Studio Araçları** **Yeni belge oluştur** ' u seçin ve **Tamam**' ı tıklatın.
+8. **Office için Visual Studio Araçları Project sihirbazından** **yeni belge oluştur** ' u seçin ve **tamam**' ı tıklatın.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-3. **Yeni proje oluştur** Iletişim kutusunda **Excel VSTO çalışma kitabı** projesini seçin.
+3. **yeni Project oluştur** iletişim kutusunda **Excel VSTO çalışma kitabı** projesini seçin.
 
      [!INCLUDE[new-project-dialog-search](../vsto/includes/new-project-dialog-search-md.md)]
 
@@ -81,13 +82,13 @@ ms.locfileid: "107826908"
 
 5. **Yeni projenizi yapılandırma** Iletişim kutusundaki **ad** kutusuna **FirstWorkbookCustomization** yazın ve **Oluştur**' a tıklayın.
 
-6. **Office projesi için Visual Studio Araçları** **Yeni belge oluştur** ' u seçin ve **Tamam**' ı tıklatın.
+6. **Office için Visual Studio Araçları Project sihirbazından** **yeni belge oluştur** ' u seçin ve **tamam**' ı tıklatın.
 ::: moniker-end
    - [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstWorkbookCustomization** projesini oluşturur ve aşağıdaki dosyaları projeye ekler.
 
-   - *FirstWorkbookCustomization*. xlsx-projedeki Excel çalışma kitabını temsil eder. Tüm çalışma sayfalarını ve grafikleri içerir.
+   - *firstworkbookcustomization*.xlsx-projedeki Excel çalışma kitabını temsil eder. Tüm çalışma sayfalarını ve grafikleri içerir.
 
-   - Sayfa1 (Visual C# için Visual Basic veya *. cs* dosyası için *. vb* dosyası)-çalışma kitabındaki ilk çalışma sayfasına yönelik tasarım yüzeyi ve kodu sağlayan bir çalışma sayfası. Daha fazla bilgi için bkz. [çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md).
+   - sayfa1 (Visual C# için Visual Basic veya *. cs* dosyası için *. vb* dosyası)-çalışma kitabındaki ilk çalışma sayfasına yönelik tasarım yüzeyi ve kodu sağlayan bir çalışma sayfası. Daha fazla bilgi için bkz. [çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md).
 
    - Sheet2 (Visual C# için Visual Basic veya *. cs* dosyası için *. vb* dosyası)-çalışma kitabındaki ikinci çalışma sayfasına yönelik tasarım yüzeyi ve kodu sağlayan bir çalışma sayfası.
 
@@ -113,7 +114,7 @@ ms.locfileid: "107826908"
 
 ## <a name="add-text-to-a-worksheet-in-the-designer"></a>Tasarımcıda çalışma sayfasına metin ekleme
 
- Özelleştirmenizin Kullanıcı arabirimini (UI) Tasarımcıda açık olan çalışma sayfasını değiştirerek tasarlayabilirsiniz. Örneğin, hücrelere metin ekleyebilir, formüller uygulayabilir veya Excel denetimleri ekleyebilirsiniz. Tasarımcıyı kullanma hakkında daha fazla bilgi için bkz. [Visual Studio ortamında Office projeleri](../vsto/office-projects-in-the-visual-studio-environment.md).
+ Özelleştirmenizin Kullanıcı arabirimini (UI) Tasarımcıda açık olan çalışma sayfasını değiştirerek tasarlayabilirsiniz. örneğin, hücrelere metin ekleyebilir, formüller uygulayabilir veya Excel denetimleri ekleyebilirsiniz. tasarımcıyı kullanma hakkında daha fazla bilgi için, [Visual Studio ortamında Office projeler](../vsto/office-projects-in-the-visual-studio-environment.md)bölümüne bakın.
 
 ### <a name="to-add-text-to-a-worksheet-by-using-the-designer"></a>Tasarımcıyı kullanarak çalışma sayfasına metin eklemek için
 
@@ -126,17 +127,17 @@ ms.locfileid: "107826908"
 
 ## <a name="add-text-to-a-worksheet-programmatically"></a>Çalışma sayfasına programlamayla metin ekleme
 
- Ardından, Sheet1 kod dosyasına kod ekleyin. Yeni kod, çalışma kitabına ikinci bir metin satırı eklemek için Excel nesne modelini kullanır. Varsayılan olarak, Sheet1 kod dosyası aşağıdaki oluşturulan kodu içerir:
+ Ardından, Sheet1 kod dosyasına kod ekleyin. yeni kod, çalışma kitabına ikinci bir metin satırı eklemek için Excel nesne modelini kullanır. Varsayılan olarak, Sheet1 kod dosyası aşağıdaki oluşturulan kodu içerir:
 
-- `Sheet1`Çalışma sayfasının programlama modelini temsil eden ve Excel 'in nesne modeline erişim sağlayan sınıfının kısmi bir tanımı. Daha fazla bilgi için, [çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md) ve [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md). Sınıfın geri kalanı, `Sheet1` değiştirmemelisiniz bir gizli kod dosyasında tanımlanır.
+- `Sheet1`Çalışma sayfasının programlama modelini temsil eden ve Excel nesne modeline erişim sağlayan sınıfının kısmi bir tanımı. Daha fazla bilgi için, [çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md) ve [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md). Sınıfın geri kalanı, `Sheet1` değiştirmemelisiniz bir gizli kod dosyasında tanımlanır.
 
-- `Sheet1_Startup`Ve `Sheet1_Shutdown` olay işleyicileri. Bu olay işleyicileri, Excel özelleştirmeyi yüklerken ve kaldırdığınızda çağrılır. Bu olay işleyicilerini, yüklendiğinde özelleştirmenizi başlatmak ve özelleştirildiyse özelleştirme tarafından kullanılan kaynakları temizlemek için kullanın. Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
+- `Sheet1_Startup`Ve `Sheet1_Shutdown` olay işleyicileri. bu olay işleyicileri, Excel özelleştirmeyi yüklediğinde ve kaldırıldığında çağırılır. Bu olay işleyicilerini, yüklendiğinde özelleştirmenizi başlatmak ve özelleştirildiyse özelleştirme tarafından kullanılan kaynakları temizlemek için kullanın. daha fazla bilgi için bkz. [Office projelerindeki olaylar](../vsto/events-in-office-projects.md).
 
 ### <a name="to-add-a-second-line-of-text-to-the-worksheet-by-using-code"></a>Kodu kullanarak çalışma sayfasına ikinci bir metin satırı eklemek için
 
 1. **Çözüm Gezgini**, **Sheet1**' e sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
-     Kod dosyası Visual Studio 'da açılır.
+     Kod dosyası Visual Studio açılır.
 
 2. `Sheet1_Startup`Olay işleyicisini aşağıdaki kodla değiştirin. Sayfa1 açıldığında, bu kod çalışma sayfasına ikinci bir metin satırı ekler.
 
@@ -149,7 +150,7 @@ ms.locfileid: "107826908"
 
 1. Projenizi derlemek ve çalıştırmak için **F5** tuşuna basın.
 
-     Projeyi derlediğinizde kod, çalışma kitabıyla ilişkili bir derlemeye derlenir. Visual Studio, çalışma kitabının ve derlemenin bir kopyasını projenin yapı çıktı klasörüne koyar ve özelleştirmeyi çalıştırmak için geliştirme bilgisayarındaki güvenlik ayarlarını yapılandırır. Daha fazla bilgi için bkz. [Office çözümleri oluşturma](../vsto/building-office-solutions.md).
+     Projeyi derlediğinizde kod, çalışma kitabıyla ilişkili bir derlemeye derlenir. Visual Studio, çalışma kitabının ve derlemenin kopyasını projenin yapı çıkış klasörüne koyar ve özelleştirmeyi çalıştırmak için geliştirme bilgisayarındaki güvenlik ayarlarını yapılandırır. daha fazla bilgi için bkz. [derleme Office çözümleri](../vsto/building-office-solutions.md).
 
 2. Çalışma kitabında aşağıdaki metni gördiğinizi doğrulayın.
 
@@ -165,23 +166,23 @@ ms.locfileid: "107826908"
 
 ### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>Geliştirme bilgisayarınızda tamamlanmış projeyi temizlemek için
 
-1. Visual Studio 'da, **Yapı** menüsünde **Çözümü Temizle**' ye tıklayın.
+1. Visual Studio, **yapı** menüsünde **çözümü temizle**' ye tıklayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
- Excel için temel bir belge düzeyi özelleştirmesi oluşturduğumıza göre, şu konulardan nasıl özelleştirme geliştirileceği hakkında daha fazla bilgi edinebilirsiniz:
+ Excel için temel bir belge düzeyi özelleştirmesi oluşturduğumıza göre, şu konulardan özelleştirmeler geliştirme hakkında daha fazla bilgi edinebilirsiniz:
 
 - Belge düzeyi özelleştirmelerde gerçekleştirebileceğiniz genel programlama görevleri: [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md).
 
-- Excel için belge düzeyi özelleştirmelerine özgü programlama görevleri: [Excel çözümleri](../vsto/excel-solutions.md).
+- Excel: [Excel çözümleri](../vsto/excel-solutions.md)için belge düzeyi özelleştirmelerine özgü programlama görevleri.
 
 - Excel nesne modelini kullanma: [Excel nesne modeline genel bakış](../vsto/excel-object-model-overview.md).
 
-- Excel 'in Kullanıcı arabirimini özelleştirme, örneğin, Şerite özel bir sekme ekleyerek veya kendi eylemler bölmenizi oluşturarak: [OFFICE UI özelleştirmesi](../vsto/office-ui-customization.md).
+- Excel kullanıcı arabirimini özelleştirme, örneğin, şerit 'e özel bir sekme ekleyerek veya kendi eylemler bölmenizi oluşturarak: [Office uı özelleştirmesi](../vsto/office-ui-customization.md).
 
-- Excel nesne modeli kullanılarak mümkün olmayan görevleri gerçekleştirmek için Visual Studio 'da Office geliştirme araçları tarafından sunulan genişletilmiş Excel nesnelerini kullanma (örneğin, belgelerde yönetilen denetimleri barındırma ve Windows Forms veri bağlama modeli kullanarak Excel denetimlerini verilere bağlama): [genişletilmiş nesneleri kullanarak Excel 'ı otomatikleştirin](../vsto/automating-excel-by-using-extended-objects.md).
+- Excel nesne modeli kullanılarak mümkün olmayan görevleri gerçekleştirmek için Visual Studio Office geliştirme araçları tarafından sunulan genişletilmiş Excel nesneleri kullanma (örneğin, belgelerde yönetilen denetimleri barındırma ve Excel denetimleri verileri verilerle bağlama Windows Forms veri bağlama modelini kullanarak): [genişletilmiş nesneleri kullanarak Excel otomatikleştirin](../vsto/automating-excel-by-using-extended-objects.md).
 
-- Excel için belge düzeyinde özelleştirmeler oluşturma ve hata ayıklama: [Office çözümleri oluşturun](../vsto/building-office-solutions.md).
+- Excel için belge düzeyi özelleştirmeleri oluşturma ve hata ayıklama: [Office çözümleri derleme](../vsto/building-office-solutions.md).
 
 - Excel için belge düzeyi özelleştirmeleri dağıtma: [bir Office çözümü dağıtın](../vsto/deploying-an-office-solution.md).
 
@@ -191,8 +192,8 @@ ms.locfileid: "107826908"
 - [Excel çözümleri](../vsto/excel-solutions.md)
 - [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md)
 - [Excel nesne modeline genel bakış](../vsto/excel-object-model-overview.md)
-- [Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
+- [genişletilmiş nesneleri kullanarak Excel otomatikleştirin](../vsto/automating-excel-by-using-extended-objects.md)
 - [Office UI özelleştirmesi](../vsto/office-ui-customization.md)
-- [Office çözümleri oluşturma](../vsto/building-office-solutions.md)
+- [Office çözümleri oluşturun](../vsto/building-office-solutions.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
 - [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md)

@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 253284ad97e5f77eb39c416bb22d78066ebb008b84ea2c2e4d40f4bd0f9ddce2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 33058b950e7d9d0a3da0e3b12caf7592f4f54ced
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121356848"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122062062"
 ---
 # <a name="options-dialog-box-environment--startup"></a>Seçenekler iletişim kutusu: Ortam \> Başlatma
 

@@ -1,7 +1,7 @@
 ---
-title: Oluşturulan Code Analysis için güvenlik ihlallerini gizleme
+title: oluşturulan kod için Code Analysis ihlallerini gösterme
 ms.date: 05/13/2019
-description: Oluşturulan kod için kod analizi uyarılarını gizlemeyi öğrenin. Oluşturulan kodla ilgili Visual Studio eski analiz uyarılarını görüntülemesini önlemeye bakın.
+description: Üretilen kod için kod analizi uyarılarını nasıl bastıralabileceğinizi öğrenin. Visual Studio, oluşturulan kod hakkında eski analiz uyarılarını görüntülemesini nasıl önleyekullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 ms.assetid: 3a96434e-d419-43a7-81ba-95cccac835b8
@@ -11,29 +11,29 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: 214c7ca6bd7dcf648060383462fa2dfef24a3618
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 95ec7fab824160c58d259da2f2f4e5178e7b256ac7bbe310e0544bf3a835b739
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122098014"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121455328"
 ---
-# <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>Nasıl oluşturulur: Oluşturulan kod için kod analizi uyarılarını gizleme
+# <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>Nasıl yapılır: üretilen kod için kod analizi uyarılarını gösterme
 
-Oluşturulan kod, yönetilen kod derleyicileri veya üçüncü taraf araçlar tarafından projenize eklenen kodu içerir. Kod analizinin oluşturulan kodda keşfettikleri kural ihlallerini görmek istiyor olabilirsiniz. Ancak, ihlalleri içeren kodu görüntüleye ve koruyamayabilirsiniz, bunları görmek istemeyebilirsiniz.
+Oluşturulan kod, yönetilen kod derleyicileri veya üçüncü taraf araçları tarafından projenize eklenen kodu içerir. Kod analizinin üretilen kodda bulduğu kural ihlallerini görmek isteyebilirsiniz. Ancak, ihlalleri içeren kodu görüntüleyemediğinden ve koruyabileceğinizden, bunları görmek istemeyebilirsiniz.
 
-Projenin **kod analizi özellik sayfasındaki** Oluşturulan kodun sonuçlarını bastır onay kutusu, üçüncü taraf bir araç tarafından oluşturulan koddan kod analizi uyarılarını gösterme seçeneğini seçmenize olanak sağlar.
+Bir projenin kod analizi özelliği sayfasında, **üretilen koddan sonuçları gösterme** onay kutusu, üçüncü taraf bir araç tarafından oluşturulan koddan kod analizi uyarılarını gösterip göstermeyeceğinizi seçmenize olanak sağlar.
 
 > [!NOTE]
-> Bu seçenek, formlarda ve şablonlarda hatalar ve uyarılar görünürken kod analizi hatalarını ve uyarıları oluşturulan koddan gizlemez. Bir formun veya şablonun kaynak kodunu hem görüntü hem de bakım için kullanabilirsiniz.
+> Bu seçenek, hatalar ve uyarılar formlarda ve şablonlarda görüntülendiğinde, kod analizi hatalarını ve üretilen koddan gelen uyarıları göstermez. Bir form veya şablon için kaynak kodu görüntüleyebilir ve bakımını yapabilirsiniz.
 
-### <a name="to-suppress-warnings-for-generated-code-in-a-project"></a>Bir projede oluşturulan kod için uyarıları gizleme
+### <a name="to-suppress-warnings-for-generated-code-in-a-project"></a>Bir projede oluşturulan koda yönelik uyarıları gizlemek için
 
-1. Çözüm Gezgini'da projeye **sağ tıklayın ve** ardından Özellikler'e **tıklayın.**
+1. **Çözüm Gezgini** ' de projeye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. Code Analysis **sekmesini** seçin.
+2. **Code Analysis** sekmesini seçin.
 
-3. Oluşturulan **koddan sonuçları bastır onay** kutusunu seçin.
+3. **Oluşturulan koddan sonuçları bastır** onay kutusunu seçin.
 
 > [!IMPORTANT]
-> Uyarıları yalnızca eski analizden bastırılır. ayarına sahip özellik sayfası kullanım dışı bırakılmıştır ve gelecek ürün yayınlarında kaldırılacaktır. Şu anda çözümleyicilerden kod analizi uyarılarını [bastıramazsiniz.](roslyn-analyzers-overview.md)
+> Yalnızca eski analizden gelen uyarıları gizleyebilirsiniz. Ayarı olan özellik sayfası kullanım dışı bırakılmıştır ve gelecekteki bir ürün sürümünde kaldırılacak. Şu anda [çözümleyicilerin](roslyn-analyzers-overview.md)kod analizi uyarılarını gizlenemez.

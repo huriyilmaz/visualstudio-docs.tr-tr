@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: a3faf096d1cfee1bb2832ae6e0aae35eda135f0d9949c0f1b2eec9bbf49e6e03
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5d6e3667bafd4a07627bc1ad81bc2c1706ed2424
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389234"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029469"
 ---
 # <a name="ienumdebugcustomattributes"></a>IEnumDebugCustomAttributes
 Özel öznitelikleri numaralandırır.

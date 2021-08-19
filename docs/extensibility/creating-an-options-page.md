@@ -1,6 +1,6 @@
 ---
-title: Seçenekler sayfası oluşturma | Microsoft Docs
-description: Özellikleri incelemek ve ayarlamak için özellik kılavuzunu kullanan basit bir Araçlar/Seçenekler sayfası oluşturmayı öğrenin.
+title: Seçenekler Sayfası Oluşturma | Microsoft Docs
+description: Özellikleri incelemek ve ayarlamak için özellik kılavuzu kullanan basit bir Araçlar/Seçenekler sayfası oluşturma hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
@@ -10,55 +10,56 @@ ms.assetid: 9f4e210c-4b47-4daa-91fa-1c301c4587f9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: eb94554b4ac1af30d8187a8ab75aa83f65dccc72
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f7ff61649cfa9c2d78256751e9c25fb0a4b670bb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055810"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122146088"
 ---
 # <a name="create-an-options-page"></a>Seçenekler sayfası oluşturma
 
-Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu kullanan basit bir Araçlar/Seçenekler sayfası oluşturur.
+Bu kılavuz, özellikleri incelemek ve ayarlamak için bir özellik kılavuzu kullanan basit bir Araçlar/Seçenekler sayfası oluşturur.
 
- Bu özellikleri kaydetmek ve bir ayarlar dosyasından geri yüklemek için, bu adımları izleyin ve ardından [bir ayar oluştur kategorisi](../extensibility/creating-a-settings-category.md)' ne bakın.
+ Bu özellikleri bir ayarlar dosyasına kaydetmek ve bir ayarlar dosyasından geri yüklemek için bu adımları izleyin ve ardından [bkz. Ayarlar kategorisi oluşturma.](../extensibility/creating-a-settings-category.md)
 
- MPF, araç seçenekleri sayfaları, sınıfı ve sınıfı oluşturmanıza yardımcı olmak için iki sınıf sağlar <xref:Microsoft.VisualStudio.Shell.Package> <xref:Microsoft.VisualStudio.Shell.DialogPage> . Bu sayfalar için altsınıflama sınıfının kapsayıcısını sağlamak üzere bir VSPackage oluşturun `Package` . Her bir araç seçenekleri sayfasını sınıfından türeterek oluşturursunuz `DialogPage` .
+ MPF, Araçlar Seçenekleri sayfaları, sınıfı ve sınıfı oluşturmanıza yardımcı <xref:Microsoft.VisualStudio.Shell.Package> olmak için iki sınıf <xref:Microsoft.VisualStudio.Shell.DialogPage> sağlar. Sınıfını alt sınıfa göre sınıflandırarak bu sayfalar için kapsayıcı sağlamak için bir VSPackage `Package` oluşturun. Sınıftan türeterek her araç seçenekleri sayfasını `DialogPage` oluşturabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ 2015 Visual Studio den başlayarak, Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Bu, kurulumda isteğe bağlı bir Visual Studio olarak dahil edilir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
 
-## <a name="create-a-tools-options-grid-page"></a>Araç seçenekleri kılavuz sayfası oluşturma
+## <a name="create-a-tools-options-grid-page"></a>Araç Seçenekleri kılavuz sayfası oluşturma
 
- Bu bölümde, basit bir Araçlar Seçenekler özellik Kılavuzu oluşturursunuz. Bir özelliğin değerini göstermek ve değiştirmek için bu kılavuzu kullanın.
+ Bu bölümde basit bir Araçlar Seçenekleri özellik kılavuzu oluşturacağız. Bir özelliğin değerini görüntülemek ve değiştirmek için bu kılavuzu kullanırsiniz.
 
-### <a name="to-create-the-vsix-project-and-add-a-vspackage"></a>VSıX projesi oluşturmak ve bir VSPackage eklemek için
+### <a name="to-create-the-vsix-project-and-add-a-vspackage"></a>VSIX projesini oluşturmak ve bir VSPackage eklemek için
 
-1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `MyToolsOptionsExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
+1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSIX dağıtım projesiyle başlar. adlı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir VSIX projesi `MyToolsOptionsExtension` oluşturun. VSIX proje şablonunu New **Project** iletişim kutusunda "vsix" ifadesini arayarak bulabilirsiniz.
 
-2. Adlı bir Visual Studio paket öğesi şablonu ekleyerek VSPackage ekleyin `MyToolsOptionsPackage` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve   >  **Yeni öğe** Ekle ' yi seçin. **Yeni öğe Ekle iletişim kutusunda** **Visual C# öğeleri**  >  **genişletilebilirliği** ' ne gidin ve **Visual Studio paketi**' ni seçin. İletişim kutusunun alt kısmındaki **ad** alanında, dosya adını olarak değiştirin `MyToolsOptionsPackage.cs` . VSPackage oluşturma hakkında daha fazla bilgi için bkz. [VSPackage ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-vspackage.md).
+2. adlı bir Paket öğesi şablonu Visual Studio VSPackage `MyToolsOptionsPackage` ekleyin. Giriş **Çözüm Gezgini** proje düğümüne sağ tıklayın ve Yeni Öğe **Ekle'yi**  >  **seçin.** Yeni Öğe **Ekle iletişim kutusunda** Visual C# Öğeleri **Genişletilebilirliği'ne** gidin  >  **ve** Paketle'Visual Studio **seçin.** İletişim **kutusunun** altındaki Ad alanında dosya adını olarak `MyToolsOptionsPackage.cs` değiştirebilirsiniz. VSPackage oluşturma hakkında daha fazla bilgi için [bkz. VSPackage ile uzantı oluşturma.](../extensibility/creating-an-extension-with-a-vspackage.md)
 
-### <a name="to-create-the-tools-options-property-grid"></a>Araç seçenekleri özellik kılavuzunu oluşturmak için
+### <a name="to-create-the-tools-options-property-grid"></a>Araçlar Seçenekleri özellik kılavuzu oluşturmak için
 
-1. Kod düzenleyicisinde *Myaraçları Optionspackage* dosyasını açın.
+1. Kod *düzenleyicisinde MyToolsOptionsPackage* dosyasını açın.
 
-2. Aşağıdaki using ifadesini ekleyin.
+2. Aşağıdaki using deyimini ekleyin.
 
    ```csharp
    using System.ComponentModel;
    ```
 
-3. Bir `OptionPageGrid` sınıf bildirin ve öğesinden türetirsiniz <xref:Microsoft.VisualStudio.Shell.DialogPage> .
+3. Bir sınıf `OptionPageGrid` bildirin ve sınıfından türetin. <xref:Microsoft.VisualStudio.Shell.DialogPage>
 
    ```csharp
    public class OptionPageGrid : DialogPage
    {  }
    ```
 
-4. <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> `VSPackage` OptionPageGrid için bir seçenek kategorisi ve Seçenekler sayfa adı sınıfına atamak üzere sınıfına bir uygulayın. Sonuç şöyle görünmelidir:
+4. Sınıfa <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> `VSPackage` OptionPageGrid için bir seçenek kategorisi ve seçenekler sayfası adı atamak için sınıfına bir uygulama. Sonuç aşağıdaki gibi görünüyor olmalı:
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -70,13 +71,13 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
     public sealed class MyToolsOptionsPackage : Package
     ```
 
-5. Sınıfına bir `OptionInteger` özellik ekleyin `OptionPageGrid` .
+5. sınıfına `OptionInteger` bir özellik `OptionPageGrid` ekleyin.
 
-    - Property <xref:System.ComponentModel.CategoryAttribute?displayProperty=fullName> Grid kategorisi özelliğine atamak için bir uygulayın.
+    - Özelliği bir <xref:System.ComponentModel.CategoryAttribute?displayProperty=fullName> özellik kılavuzu kategorisine atamak için bir uygulama.
 
-    - <xref:System.ComponentModel.DisplayNameAttribute?displayProperty=fullName>Özelliğe bir ada atamak için bir uygulayın.
+    - Özelliğine <xref:System.ComponentModel.DisplayNameAttribute?displayProperty=fullName> bir ad atamak için bir uygulama.
 
-    - Bir <xref:System.ComponentModel.DescriptionAttribute?displayProperty=fullName> Açıklama özelliğine atamak için bir uygulayın.
+    - özelliğine <xref:System.ComponentModel.DescriptionAttribute?displayProperty=fullName> bir açıklama atamak için bir uygulama.
 
     ```csharp
     public class OptionPageGrid : DialogPage
@@ -95,29 +96,29 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
     ```
 
     > [!NOTE]
-    > Varsayılan uygulama, <xref:Microsoft.VisualStudio.Shell.DialogPage> uygun dönüştürücüleri olan veya uygun Dönüştürücülerine sahip özelliklere genişletilebilen yapılar veya diziler olan özellikleri destekler. Dönüştürücülerin listesi için bkz <xref:System.ComponentModel> . ad alanı.
+    > varsayılan uygulaması, uygun dönüştürücülere sahip olan veya uygun dönüştürücülere sahip özelliklere genişletilebilir yapılar veya <xref:Microsoft.VisualStudio.Shell.DialogPage> diziler olan özellikleri destekler. Dönüştürücülerin listesi için bkz. ad <xref:System.ComponentModel> alanı.
 
-6. Projeyi derleyin ve hata ayıklamayı başlatın.
+6. Projeyi derleme ve hata ayıklamayı başlatma.
 
-7. Visual Studio 'nun deneysel örneğinde, **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+7. Deneysel Visual Studio Araçlar menüsünde **Seçenekler'e** **tıklayın.**
 
-     Sol bölmede **kategorim**' i görmeniz gerekir. (Seçenek kategorileri alfabetik sırada listelenmiştir, bu nedenle listenin alt yarısında ilgili görünmelidir.) **Kategorim** ' i açın ve **kılavuz sayfam**' ı tıklatın. Seçenekler Kılavuzu sağ bölmede görüntülenir. Özellik kategorisi **My seçeneklerim** ve özellik adı My **Integer seçeneğim**. Özellik açıklaması, **tamsayı seçeneği**, bölmenin en altında görünür. Değeri ilk 256 olan başlangıç değerinden başka bir şeye değiştirin. **Tamam**' a tıklayın ve sonra **kılavuz sayfamı** yeniden açın. Yeni değerin devam etmediğini görebilirsiniz.
+     Sol bölmede Kategorim'i **görüyor gerekir.** (Seçenekler kategorileri alfabetik sırada listelenmiştir, bu nedenle listenin yarısı kadar görünecektir.) **Kategorim'i açın** ve Ardından **Kılavuz Sayfam'a tıklayın.** Seçenekler kılavuzu sağ bölmede görünür. Özellik kategorisi **Seçeneklerim,** özellik adı ise Tamsayım **Seçeneği'dir.** Bölmenin alt **kısmında Tamsayım** seçeneği olan özellik açıklaması görüntülenir. İlk değeri olan 256 değerini başka bir değerle değiştirir. **Tamam'a** tıklayın ve sonra **Kılavuz Sayfam'ı yeniden açın.** Yeni değerin kalıcı olduğunu görüyorsunuz.
 
-     Seçenekler sayfanız, Visual Studio 'nun arama kutusu aracılığıyla da kullanılabilir. IDE 'nin üst kısmındaki arama kutusuna **kategorim** yazın ve **kategorim > kılavuz** sayfam sonuçlar bölümünde listelenmiş olarak görürsünüz.
+     Seçenekler sayfanız, Visual Studio kutusu aracılığıyla da kullanılabilir. IDE'nin üst kısmında bulunan arama  kutusuna Kategorim yazın. Sonuçlarda **Kategorim -> Kılavuzum Sayfası'nın** listelenmiş olduğunu görebilirsiniz.
 
-## <a name="create-a-tools-options-custom-page"></a>Araç seçenekleri özel sayfası oluşturma
+## <a name="create-a-tools-options-custom-page"></a>Araç Seçenekleri özel sayfası oluşturma
 
- Bu bölümde, Özel Kullanıcı arabirimine sahip bir araç seçenekleri sayfası oluşturacaksınız. Bir özelliğin değerini göstermek ve değiştirmek için bu sayfayı kullanın.
+ Bu bölümde, özel kullanıcı arabirimine sahip bir Araç Seçenekleri sayfası oluşturabilirsiniz. Bir özelliğin değerini görüntülemek ve değiştirmek için bu sayfayı kullanırsiniz.
 
-1. Kod düzenleyicisinde *Myaraçları Optionspackage* dosyasını açın.
+1. Kod *düzenleyicisinde MyToolsOptionsPackage* dosyasını açın.
 
-2. Aşağıdaki using ifadesini ekleyin.
+2. Aşağıdaki using deyimini ekleyin.
 
     ```csharp
     using System.Windows.Forms;
     ```
 
-3. `OptionPageCustom`Sınıfından hemen önce bir sınıf ekleyin `OptionPageGrid` . Yeni sınıfını öğesinden türet `DialogPage` .
+3. Sınıfın `OptionPageCustom` hemen öncesinde bir sınıf `OptionPageGrid` ekleyin. yeni sınıfını 'den `DialogPage` türetin.
 
     ```csharp
     public class OptionPageCustom : DialogPage
@@ -132,7 +133,7 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
     }
     ```
 
-4. Bir GUID özniteliği ekleyin. Bir OptionString özelliği ekleyin:
+4. GUID özniteliği ekleyin. OptionString özelliği ekleyin:
 
     ```csharp
     [Guid("00000000-0000-0000-0000-000000000000")]
@@ -148,7 +149,7 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
     }
     ```
 
-5. <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>VSPackage sınıfına bir saniye uygulayın. Bu öznitelik bir seçenek kategorisi ve Seçenekler sayfası adı sınıfına atar.
+5. <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute>VSPackage sınıfına bir saniye uygulama. Bu öznitelik, sınıfa bir seçenek kategorisi ve seçenekler sayfası adı atar.
 
     ```csharp
     [PackageRegistration(UseManagedResourcesOnly = true)]
@@ -162,13 +163,13 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
     public sealed class MyToolsOptionsPackage : Package
     ```
 
-6. Projeye MyUserControl adlı yeni bir **Kullanıcı denetimi** ekleyin.
+6. Projeye **MyUserControl adlı** yeni bir Kullanıcı Denetimi ekleyin.
 
-7. Kullanıcı denetimine **TextBox** denetimi ekleyin.
+7. Kullanıcı **denetimine** bir TextBox denetimi ekleyin.
 
-     **Özellikler** penceresinde, araç çubuğunda, **Olaylar** düğmesine tıklayın ve ardından **bırak** olayına çift tıklayın. Yeni olay işleyicisi *MyUserControl. cs* kodunda görünür.
+     Özellikler **penceresinde,** araç çubuğunda Olaylar düğmesine tıklayın **ve** ardından Olayı bırak'a **çift** tıklayın. Yeni olay işleyicisi *MyUserControl.cs kodunda* görünür.
 
-8. `OptionsPage`Denetim sınıfına bir genel alan, bir `Initialize` yöntemi ekleyin ve olay işleyicisini, seçenek değerini metin kutusunun içeriğine ayarlamak için güncelleştirin:
+8. Denetim sınıfına bir genel alan, bir yöntem ekleyin ve seçenek değerini metin kutusunun içeriğine ayarlamak için `OptionsPage` `Initialize` olay işleyicisini güncelleştirin:
 
     ```csharp
     public partial class MyUserControl : UserControl
@@ -192,9 +193,9 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
     }
     ```
 
-     `optionsPage`Alan, üst örneğe bir başvuru içerir `OptionPageCustom` . `Initialize`Yöntemi `OptionString` **TextBox** içinde görüntülenir. Olay **işleyicisi TextBox 'ın** geçerli değerini `OptionString` odak **kutusu** dışına çıktığında içine yazar.
+     alanı, `optionsPage` üst örnek için bir başvuru `OptionPageCustom` tutar. yöntemi `Initialize` `OptionString` TextBox içinde **görüntülenir.** Olay işleyicisi, odak **TextBox'dan** ayrıldığında `OptionString` TextBox'ın geçerli **değerini üzerine yazar.**
 
-9. Paket kodu dosyasında, `OptionPageCustom.Window` `OptionPageCustom` bir örneği oluşturmak, başlatmak ve döndürmek için sınıfına özelliği için bir geçersiz kılma ekleyin `MyUserControl` . Sınıf şu şekilde görünmelidir:
+9. Paket kodu dosyasında, bir örneği oluşturmak, başlatmak ve dönmek üzere sınıfına özelliği `OptionPageCustom.Window` için bir geçersiz kılma `OptionPageCustom` `MyUserControl` ekleyin. Sınıf şimdi aşağıdaki gibi görünüyor:
 
     ```csharp
     [Guid("00000000-0000-0000-0000-000000000000")]
@@ -221,19 +222,19 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
     }
     ```
 
-10. Projeyi derleyin ve çalıştırın.
+10. Projeyi derleme ve çalıştırma.
 
-11. Deneysel örnekte **Araçlar**  >  **Seçenekler**' e tıklayın.
+11. Deneysel örnekte Araçlar **Seçenekleri'ne**  >  **tıklayın.**
 
-12. **Kategorumu** ve sonra **özel sayfamı** bul.
+12. Kategorimi **ve ardından** Özel **Sayfam'ı bulun.**
 
-13. **OptionString** değerini değiştirin. **Tamam**' a tıklayın ve ardından **özel sayfamı** yeniden açın. Yeni değerin kalıcı olduğunu görebilirsiniz.
+13. **OptionString değerini değiştirme.** **Tamam'a** tıklayın ve Özel **Sayfam'ı yeniden açın.** Yeni değerin kalıcı olduğunu görüyorsunuz.
 
 ## <a name="access-options"></a>Erişim seçenekleri
 
- Bu bölümde, bir seçeneğin değerini, ilişkili Araçlar Seçenekler sayfasını barındıran VSPackage öğesinden alırsınız. Herhangi bir ortak özelliğin değerini elde etmek için aynı teknik de kullanılabilir.
+ Bu bölümde, ilişkili Araçlar Seçenekleri sayfasını barındıran VSPackage'dan bir seçeneğin değerini elde edebilirsiniz. Herhangi bir ortak özelliğin değerini almak için aynı teknik kullanılabilir.
 
-1. Paket kodu dosyasında, **Myaraçları Optionspackage** sınıfına **optioninteger** adlı bir public özelliği ekleyin.
+1. Paket kodu **dosyasında, MyToolsOptionsPackage** sınıfına **OptionInteger** adlı bir genel özellik ekleyin.
 
     ```csharp
     public int OptionInteger
@@ -247,11 +248,11 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
 
     ```
 
-     Bu kod, <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> bir örnek oluşturmak veya almak için çağırır `OptionPageGrid` . `OptionPageGrid`<xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A>Genel Özellikler olan seçeneklerini yüklemek için çağırır.
+     Bu kod, <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> örnek oluşturmak veya almak için `OptionPageGrid` çağrısında bulundu. `OptionPageGrid` genel <xref:Microsoft.VisualStudio.Shell.DialogPage.LoadSettingsFromStorage%2A> özellikler olan seçeneklerini yüklemek için çağrısında bulundu.
 
-2. Şimdi değeri göstermek için **Myaraçları SeçenekAdı komutu** adlı özel bir komut öğesi şablonu ekleyin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *Myaraçları SeçenekAdı komut. cs* olarak değiştirin.
+2. Şimdi değeri görüntülemek için **MyToolsOptionsCommand adlı özel** bir komut öğesi şablonu ekleyin. Yeni Öğe **Ekle iletişim kutusunda** Visual **C#**  >  **Genişletilebilirliği'ne** gidin ve Özel **Komut'ı seçin.** Pencerenin **altındaki** Ad alanında, komut dosyası adını *MyToolsOptionsCommand.cs olarak değiştirebilirsiniz.*
 
-3. *Myaraçları seçenekleri komut* dosyasında, komut `ShowMessageBox` yönteminin gövdesini aşağıdaki şekilde değiştirin:
+3. *MyToolsOptionsCommand* dosyasında, komutun yönteminin `ShowMessageBox` gövdesini aşağıdakiyle değiştirin:
 
     ```csharp
     private void ShowMessageBox(object sender, EventArgs e)
@@ -262,12 +263,12 @@ Bu izlenecek yol, özellikleri incelemek ve ayarlamak için özellik kılavuzunu
 
     ```
 
-4. Projeyi derleyin ve hata ayıklamayı başlatın.
+4. Projeyi derleme ve hata ayıklamayı başlatma.
 
-5. Deneysel örnekte, Araçlar menüsünde, **Myaraçlarý Options komutunu çağır**' a tıklayın. 
+5. Deneysel örnekte, Araçlar menüsünde, **MyToolsOptionsCommand'e tıklayın.** 
 
-     Geçerli değerini görüntüleyen bir ileti kutusu `OptionInteger` .
+     Geçerli değerini görüntüleyen bir ileti `OptionInteger` kutusu.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Seçenekler ve Seçenekler sayfaları](../extensibility/internals/options-and-options-pages.md)
+- [Seçenekler ve seçenekler sayfaları](../extensibility/internals/options-and-options-pages.md)

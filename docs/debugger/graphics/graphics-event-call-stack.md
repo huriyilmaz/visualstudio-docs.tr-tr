@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a5c69340445f36e9044557bc4dbeb60a92fcf0580178d464938022ce51ba0ece
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 29bc023dcc4eae885746396f77b27f27188ada61
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454083"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122044047"
 ---
 # <a name="graphics-event-call-stack"></a>Grafik Olay Çağırma Yığını
 Visual Studio grafik çözümleyicisi 'ndeki grafik olay çağrısı yığını, sorunlu grafik olayları ve uygulamanızın kaynak kodu arasındaki ilişkiyi eşlemenizi sağlar.

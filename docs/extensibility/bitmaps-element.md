@@ -1,6 +1,6 @@
 ---
-title: Bit eşlemler öğesi | Microsoft Docs
-description: Bit eşlemler öğesi bir veya daha fazla bit eşlem öğesini gruplandırır. Bu makale, bit eşlem öğesine bir örnek içerir.
+title: Bitmaps Öğesi | Microsoft Docs
+description: Bit Eşlemler öğesi bir veya daha fazla Bit Eşlem öğesini gruplar. Bu makalede Bit Eşlemler öğesinin bir örneği yer almaktadır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 74652e1b-fcfa-421b-aa9f-fbc081d3b476
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a86943e683502bdd1cd19668e9aafcb8fe7e1bc8
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 873daaa0e491b85c001a82aec0a17e4255c64ea7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903313"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122146205"
 ---
-# <a name="bitmaps-element"></a>Bit eşlemler öğesi
-[Bit eşlem öğesi](../extensibility/bitmap-element.md) öğelerini gruplandırır.
+# <a name="bitmaps-element"></a>Bitmaps öğesi
+Bitmap [öğesi öğelerini gruplar.](../extensibility/bitmap-element.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +40,20 @@ ms.locfileid: "112903313"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Bit eşlemler öğesi](../extensibility/bitmaps-element.md)|Bit eşlem öğelerini gruplandırır.|
-|[Bit eşlem öğesi](../extensibility/bitmap-element.md)|Bit eşlemi tanımlar.|
+|[Bitmaps öğesi](../extensibility/bitmaps-element.md)|Bit Eşlem öğelerini gruplar.|
+|[Bit eşlem öğesi](../extensibility/bitmap-element.md)|Bit eşlem tanımlar.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutların koleksiyonunu temsil eder.|
+|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğunda komut koleksiyonunu temsil eder.|
 
 ## <a name="example"></a>Örnek
 
@@ -65,5 +66,5 @@ ms.locfileid: "112903313"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackages Kullanıcı arabirimi öğeleri ekleme](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackage'lar kullanıcı arabirimi öğelerini nasıl ekler?](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

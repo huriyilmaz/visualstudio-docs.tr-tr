@@ -11,17 +11,18 @@ ms.assetid: 0a647047-e2d5-4724-a0b8-68108425ecad
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 39a0dba08aa74386c442a7732b6522d8ee27652c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 02aae6a4ef4939660639004602b539b0f68c4fa2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094477"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145919"
 ---
 # <a name="bp_passcount_style"></a>BP_PASSCOUNT_STYLE
 Kesme noktasının tetiklenmesine neden olan kesme noktası geçiş sayısıyla ilişkili koşulu belirtir.

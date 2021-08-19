@@ -1,6 +1,6 @@
 ---
-title: WCF hata ayıklama sınırlamaları | Microsoft Docs
-description: WCF hizmetinde hata ayıklamaya başlama yollarını, gerekli koşulları ve hata ayıklama sınırlamalarını öğrenin.
+title: WCF Hata Ayıklama | Microsoft Docs
+description: WCF hizmetinde hata ayıklamaya başlamanın yollarını, gerekli koşulları ve hata ayıklama sınırlamalarını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,36 +16,37 @@ ms.assetid: 8e0333c4-1ddc-4abe-8f1c-d19bf6a2a07a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: aadaf90c0af8083537fdc837374ce2efa2c4a0e9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ee9709d77d5e359d14cbfa30ae23e3bfc9e94a68
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99893184"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122080747"
 ---
 # <a name="limitations-on-wcf-debugging"></a>WCE Hata Ayıklamasında Sınırlamalar
-WCF hizmetinde hata ayıklamaya başlayabilmeniz için kullanabileceğiniz üç yol vardır:
+WCF hizmetinde hata ayıklamaya başlamak için üç yol vardır:
 
-- Hizmet çağıran bir istemci işleminde hata ayıklaması yapıyorsanız. Hizmetin hata ayıklayıcı adımları. Hizmetin, istemci uygulamanızla aynı çözümde olması gerekmez.
+- Bir hizmeti çağıran bir istemci işlemi için hata ayıklayabilirsiniz. Hata ayıklayıcısı hizmete adım adım ilerler. Hizmetin istemci uygulamayla aynı çözümde olması gerek değildir.
 
-- Bir hizmete istek yapan bir istemci işlemini hata ayıklaması yapıyorsanız. Hizmet çözümünüzün bir parçası olmalıdır.
+- Bir hizmete istekte bulunduran bir istemci işleminin hatasını ayıklayabilirsiniz. Hizmetin çözüme bir parçası olması gerekir.
 
-- Şu anda çalışmakta olan bir hizmete iliştirmek için **Ekle işlemini** kullanırsınız. Hata ayıklama, hizmet içinde başlar.
+- Şu anda **çalışan bir hizmete** iliştirmek için İşleme Ekle'leri kullanırsiniz. Hata ayıklama hizmetin içinde başlar.
 
-Bu konuda bu senaryolara ilişkin sınırlamalar açıklanmaktadır.
+Bu konu başlığında bu senaryolarla ilgili sınırlamalar açıklanmıştır.
 
-## <a name="limitations-on-stepping-into-a-service"></a>Bir hizmeti adımla ilgili sınırlamalar
- Hata ayıkladığınız istemci uygulamalarından bir hizmete geçmek için aşağıdaki koşulların karşılanması gerekir:
+## <a name="limitations-on-stepping-into-a-service"></a>Hizmete Adımlama Sınırlamaları
+ Hata ayıklamakta olduğunu istemci uygulamalarından bir hizmete adımlamanız için aşağıdaki koşulların karşı olması gerekir:
 
-- İstemci, zaman uyumlu bir istemci nesnesi kullanarak hizmeti çağırmalıdır.
+- İstemcinin zaman uyumlu bir istemci nesnesi kullanarak hizmeti çağırması gerekir.
 
-- Sözleşme işlemi tek yönlü olamaz.
+- Anlaşma işlemi tek yol olamaz.
 
-- Sunucu zaman uyumsuz ise, hizmet içinde kod yürütürken tam çağrı yığınını görüntüleyemezsiniz.
+- Sunucu zaman uyumsuzsa, hizmetin içinde kod yürütürken tam çağrı yığınını görüntüamazsınız.
 
-- app.config veya Web.config dosyasında aşağıdaki kodla hata ayıklamanın etkinleştirilmesi gerekir:
+- Hata ayıklama, app.config veya Web.config etkinleştirilmelidir:
 
     ```xml
     <system.web>
@@ -53,21 +54,21 @@ Bu konuda bu senaryolara ilişkin sınırlamalar açıklanmaktadır.
     </system.web>
     ```
 
-     Bu kod yalnızca bir kez eklenmelidir. Bu kodu,. config dosyasını düzenleyerek veya **Işleme İliştir**' i kullanarak hizmete ekleyerek ekleyebilirsiniz. Bir hizmette **Işleme ekleme** kullandığınızda, hata ayıklama kodu otomatik olarak. config dosyasına eklenir. Bundan sonra,. config dosyasını düzenlemek zorunda kalmadan hata ayıklamanıza ve hizmette ilerme yapabilirsiniz.
+     Bu kodun yalnızca bir kez eklenmiş olması gerekir. Bu kodu eklemek için dosyanın .config veya İşleme Ekle'yi kullanarak **hizmete iliştirebilirsiniz.** Bir **hizmette İşleme** Ekle'leri kullanırsanız, hata ayıklama kodu otomatik olarak .config eklenir. Bundan sonra, hata ayıklar ve dosyanın hata ayıklama dosyasını düzenlemek zorunda kalmadan .config adım atabilirsiniz.
 
-## <a name="limitations-on-stepping-out-of-a-service"></a>Bir hizmetten atlama sınırlamaları
- Bir hizmetin ve istemciye geri dönme işlemi, bir hizmetin adımlaması için açıklanan sınırlamalara sahiptir. Buna ek olarak, hata ayıklayıcı istemciye eklenmelidir. Bir istemcide hata ayıklaması yapıyorsanız ve bir hizmete adımla, hata ayıklayıcı hizmete bağlı kalır. Bu, istemciyi, **hata ayıklamayı Başlat** ' i kullanarak veya istemciye Iliştirerek, **İşleme İliştir**' i kullanarak başlatmış olmanız durumunda geçerlidir. Hizmete ekleyerek hata ayıklamaya başladıysanız, hata ayıklayıcı henüz istemciye eklenmez. Bu durumda, hizmeti kullanıma almak ve istemciye geri dönmek istiyorsanız, öncelikle istemciye el ile eklemek için **Ekle işlemini** kullanmanız gerekir.
+## <a name="limitations-on-stepping-out-of-a-service"></a>Bir Hizmette Dışarı Adımlama Sınırlamaları
+ Bir hizmette adımlama ve istemciye geri dönme, hizmete adımlamayla ilgili sınırlamalarla aynıdır. Ayrıca, hata ayıklayıcısı istemciye ekli olması gerekir. Bir istemcide hata ayıklar ve bir hizmete adımlarsanız, hata ayıklayıcı hizmete bağlı kalır. Hata Ayıklamayı Başlat'ı kullanarak istemciyi **başlatsanız** veya İşleme İliştir'i kullanarak istemciye eklenmiş **de olsa bu durum doğrudur.** Hata ayıklamaya hizmete iliştirerek başladıysanız, hata ayıklayıcı henüz istemciye bağlı değildir. Bu durumda, hizmet dışında bir adım atarak istemciye geri dönmeniz  gerekirse, istemciye el ile eklemek için önce İşleme Ekle'ye ekle'sini kullanmalısınız.
 
-## <a name="limitations-on-automatic-attach-to-a-service"></a>Bir hizmete otomatik Iliştirme sınırlamaları
- Bir hizmete otomatik iliştirme aşağıdaki sınırlamalara sahiptir:
+## <a name="limitations-on-automatic-attach-to-a-service"></a>Hizmete Otomatik Ekleme Sınırlamaları
+ Bir hizmete otomatik olarak eklemenin aşağıdaki sınırlamaları vardır:
 
-- Hizmet, hata ayıkladığınız çözümün bir parçası olmalıdır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+- Hizmet, hata ayıklamakta [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] olduğunuz çözümün parçası olması gerekir.
 
-- Hizmet barındırılıyor olmalıdır. Bir Web sitesi projesinin (dosya sistemi ve HTTP), Web uygulaması projesinin (dosya sistemi ve HTTP) veya WCF hizmet kitaplığı projesinin bir parçası olabilir. WCF hizmet kitaplığı projeleri hizmet kitaplıkları veya Iş akışı hizmeti kitaplıkları olabilir.
+- Hizmetin barındırnmış olması gerekir. Bir Web Sitesi projesinin (Dosya Sistemi ve HTTP), Web Uygulaması projesinin (Dosya Sistemi ve HTTP) veya WCF Hizmet Kitaplığı projesinin parçası olabilir. WCF Hizmet Kitaplığı projeleri Hizmet Kitaplıkları veya İş Akışı Hizmet Kitaplıkları olabilir.
 
-- Hizmetin bir WCF istemcisinden çağrılması gerekir.
+- Hizmetin bir WCF istemciden çağrılsı gerekir.
 
-- app.config veya Web.config dosyasında aşağıdaki kodla hata ayıklamanın etkinleştirilmesi gerekir:
+- Hata ayıklama, app.config veya Web.config etkinleştirilmelidir:
 
   ```xml
   <system.web>
@@ -76,9 +77,9 @@ Bu konuda bu senaryolara ilişkin sınırlamalar açıklanmaktadır.
   ```
 
 ## <a name="self-hosting"></a>Self-Hosting
- *Şirket içinde barındırılan bir hizmet* , IIS 'de, WCF hizmeti ana bilgisayarında veya geliştirme sunucusunda ÇALıŞTıRMAYAN bir WCF hizmetidir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Şirket içinde barındırılan bir hizmette hata ayıklama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Self-Hosted WCF hizmetinde hata ayıklama](../debugger/how-to-debug-a-self-hosted-wcf-service.md).
+ Kendinden *konak hizmet IIS,* WCF Hizmet Ana Bilgisayarı veya Geliştirme Sunucusu içinde çalıştır olmayan bir WCF [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] hizmetidir. Kendinden konak hizmette hata ayıklama hakkında daha fazla bilgi için bkz. Nasıl 2014'Self-Hosted [WCF Hizmeti'nin hata ayıklaması.](../debugger/how-to-debug-a-self-hosted-wcf-service.md)
 
- [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]3,0 veya 3,5 uygulamalarında hata ayıklamayı etkinleştirmek için, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] önce 3,0 veya 3,5 yüklü olmalıdır [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] . [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 veya 3,5 ' den önce yüklendiyse, bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3,0 veya 3,5 uygulamasında hata ayıklamaya çalıştığınızda bir hata oluşur. "Sunucuda otomatik olarak adımla" hata iletisi görüntülenir. Bu sorunu gidermek için, Windows **Denetim Masası**  >  **Programlar ve Özellikler** ' i kullanarak yüklemenizi onarın [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] .
+ 3.0 veya 3.5 uygulamalarında hata ayıklamayı etkinleştirmek için, yüklenmeden önce [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 veya 3.5'in [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] yüklü olması gerekir. [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 3.0 veya 3.5'den önce yüklendiyse, 3.0 veya 3.5 uygulamasında hata ayıklamayı denemiş [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] olursanız bir hata oluşur. Hata iletisi şudur: "Sunucuya Otomatik Olarak Adımlama Başarısız." Bu sorunu çözmek için, yüklemenizi onarmak Windows **Denetim Masası**  >  **Programlar ve Özellikler'i** [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [WCF Hizmetlerinde Hata Ayıklama](../debugger/debugging-wcf-services.md)

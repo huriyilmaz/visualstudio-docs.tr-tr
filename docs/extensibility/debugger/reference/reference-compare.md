@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4db5f1189340e93799fc83bfb9f38e7ac1aa92c5222de6da78e27d2aa487c7cf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 419eb3927b0ee857f2a42234dae22bd605943f1a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276171"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122132346"
 ---
 # <a name="reference_compare"></a>REFERENCE_COMPARE
 Başvurular için karşılaştırma türünü belirtir.

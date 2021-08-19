@@ -1,5 +1,5 @@
 ---
-description: Bir program sağlayıcısıyla ilişkili özellikleri belirtir.
+description: Program sağlayıcısıyla ilişkili özellikleri belirtir.
 title: PROVIDER_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bbe12a51af968ccc88a1a572553e6278cc12c4890042a6777f97e45fb23a427f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 80d00d1f9c385fc4ab568c0c8051801772f0d0bd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121306328"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122029170"
 ---
 # <a name="provider_fields"></a>PROVIDER_FIELDS
-Bir program sağlayıcısıyla ilişkili özellikleri belirtir.
+Program sağlayıcısıyla ilişkili özellikleri belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,22 +46,22 @@ public enum enum_PROVIDER_FIELDS {
 
 ## <a name="fields"></a>Alanlar
  `PFIELD_PROGRAM_NODES`\
- `ProgramNodes`Alan geçerli.
+ `ProgramNodes`Alan geçerlidir.
 
  `PFIELD_IS_DEBUGGER_PRESENT`\
- `fIsDebuggerPresent`Alan geçerli.
+ `fIsDebuggerPresent`Alan geçerlidir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değerler, `Fields` yapının hangi alanlarının açıkça doldurulduğunu göstermek için [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) yapısının üyesine döndürülür.
+ Bu değerler, yapının hangi alanlarının açıkça PROVIDER_PROCESS_DATA belirtmek için PROVIDER_PROCESS_DATA `Fields` yapısının üyesinde [](../../../extensibility/debugger/reference/provider-process-data.md) döndürülür.
 
- Bu değerler, bit düzeyinde birleştirilebilir `OR` .
+ Bu değerler bit olarak `OR` birleştirebilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

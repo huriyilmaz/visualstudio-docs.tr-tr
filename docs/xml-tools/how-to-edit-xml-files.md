@@ -1,25 +1,26 @@
 ---
 title: 'Nasıl Yapılır: XML Dosyalarını Düzenleme'
 ms.date: 11/04/2016
-description: XML veya DTD içeriği içeren dosyaları düzenlemek için Visual Studio 'da XML düzenleyicisini nasıl kullanacağınızı öğrenin.
+description: xml veya DTD içeriğini içeren dosyaları düzenlemek için Visual Studio 'de xml düzenleyicisini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 ms.assetid: 07fa3ecf-6345-4d30-9d85-d5ef5b083319
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: c538e9a4da3c4bbd08c571818dbaaaca466c2471
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d308fa0298297bf91313f611bc0efe791191f9ae
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99948550"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122114491"
 ---
 # <a name="how-to-edit-xml-files"></a>Nasıl yapılır: XML dosyalarını düzenleme
 
-XML Düzenleyicisi, XML dosyaları için yeni düzenleyicidir. Tek başına bir XML dosyasında veya Visual Studio projesiyle ilişkili bir dosyada kullanılabilir. XML Düzenleyicisi şu dosya uzantılarıyla ilişkili: *. config*, *. dtd*, *. xml*, *. xsd*, *. xdr*, *. xsl*, *. XSLT* ve *. vssettings*. XML Düzenleyicisi Ayrıca, kayıtlı belirli bir düzenleyici bulunmayan ve XML veya DTD içeriği içeren başka herhangi bir dosya türü ile ilişkilendirilir.
+XML Düzenleyicisi, XML dosyaları için yeni düzenleyicidir. tek başına bir XML dosyasında veya Visual Studio projesiyle ilişkili bir dosyada kullanılabilir. XML Düzenleyicisi şu dosya uzantılarıyla ilişkili: *.config*, *. dtd*, *.xml*, *. xsd*, *. xdr*, *. xsl*, *. XSLT* ve *. vssettings*. XML Düzenleyicisi Ayrıca, kayıtlı belirli bir düzenleyici bulunmayan ve XML veya DTD içeriği içeren başka herhangi bir dosya türü ile ilişkilendirilir.
 
 > [!NOTE]
 > XHTML belgeleri HTML Düzenleyicisi tarafından işlenir.
@@ -28,7 +29,7 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyayı açın.
 
 ## <a name="add-a-new-xml-file-to-a-project"></a>Projeye yeni bir XML dosyası ekleyin
 
-1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. **Project** menüsünden **yeni öğe ekle**' yi seçin.
 
 2. **Şablonlar** bölmesinden **XML dosyası** ' nı seçin.
 
@@ -38,7 +39,7 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyayı açın.
 
 ## <a name="add-an-existing-xml-file-to-a-project"></a>Bir projeye var olan bir XML dosyası Ekle
 
-1. **Proje** menüsünden **Varolan öğe Ekle**' yi seçin.
+1. **Project** menüsünde **varolan öğe ekle**' yi seçin.
 
    **Varolan öğe Ekle** iletişim kutusu görüntülenir.
 
@@ -58,11 +59,11 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyayı açın.
 
 ::: moniker range="vs-2017"
 
-1. **Dosya** menüsünden **Yeni** > **Proje**' yi seçin.
+1. **dosya** menüsünden **yeni** > **Project**' yi seçin.
 
    **Yeni Proje** iletişim kutusu görünür.
 
-2. Seçtiğiniz kod dilini seçin ve **boş proje (.NET Framework)** şablonunu seçin.
+2. seçtiğiniz kod dilini seçin ve **boş Project (.NET Framework)** şablonunu seçin.
 
 3. **Tamam**’ı seçin.
 
@@ -70,9 +71,9 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyayı açın.
 
 ::: moniker range=">=vs-2019"
 
-1. **Dosya** menüsünden **Yeni** > **Proje**' yi seçin.
+1. **dosya** menüsünden **yeni** > **Project**' yi seçin.
 
-2. Şablon arama kutusuna **boş proje** girin, **boş proje (.NET Framework)** şablonunu seçin ve ardından **İleri**' yi seçin.
+2. şablon arama kutusuna **boş Project** girin, **boş Project (.NET Framework)** şablonunu seçin ve ardından **ileri**' yi seçin.
 
 3. **Oluştur**’u seçin.
 

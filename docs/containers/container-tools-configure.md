@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: how-to
 ms.date: 03/20/2019
 ms.technology: vs-container-tools
-ms.openlocfilehash: bf2b29df404015cbc844b5abcdb406abe10647e51da9d1763ed50d5f9d6dbb13
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 29d1753e8d0c03391d60a4985a922bfb796dc3e8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121347984"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122045079"
 ---
 # <a name="how-to-configure-visual-studio-container-tools"></a>Visual Studio Container Tools'ları yapılandırma
 
