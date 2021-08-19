@@ -459,7 +459,7 @@
               href: code-metrics-maintainability-index-range-and-meaning.md
             - name: Sınıf ilişkilendirme
               href: code-metrics-class-coupling.md
-            - name: Cyclomatic karmaşıklığı
+            - name: Döngüsel karmaşıklığı
               href: code-metrics-cyclomatic-complexity.md
             - name: Devralma derinliği
               href: code-metrics-depth-of-inheritance.md

@@ -1,6 +1,6 @@
 ---
-title: UWP uygulamaları için C++ DLL'lerini test etmek için
-description: C++ için Microsoft Test Framework ile Universal Windows Platform uygulamaları için C++ DLL'si için birim testleri oluşturma hakkında bilgi edinin.
+title: UWP uygulamaları için C++ DLL 'yi test etme
+description: c++ için Microsoft Test çerçevesi ile Evrensel Windows Platformu uygulamalar için bir c++ DLL için birim testleri oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 05/01/2019
 ms.topic: how-to
@@ -10,60 +10,60 @@ ms.technology: vs-ide-test
 ms.workload:
 - uwp
 author: corob-msft
-ms.openlocfilehash: 7cb42908ded494a2fcc3941a67b0236530e3eb1adf56a74936789608dd29eb4a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e39e2c6db8f7bc80bcc4a1f8ce267cab9b6891a0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121243789"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054086"
 ---
-# <a name="how-to-test-a-c-dll"></a>C++ DLL'lerini test etmek için
+# <a name="how-to-test-a-c-dll"></a>C++ DLL 'yi test etme
 
-Bu konuda, C++ için Microsoft Test Framework ile Evrensel Windows Platformu (UWP) uygulamaları için C++ DLL'si için birim testleri oluşturmanın bir yolu açıklanmıştır. RooterLib DLL'si, belirli bir sayanın karekökünün tahminini hesaplayıcı bir işlev kullanarak matematikten gelen sınır teorisinin belirsiz belleklerini gösterir. Daha sonra DLL, kullanıcıya matematik ile yaplandırı eğlenceli şeyleri gösteren bir UWP uygulamasına dahil olabilir.
+bu konuda, c++ için Microsoft Test çerçevesi ile Evrensel Windows Platformu (UWP) uygulamaları için bir c++ DLL için birim testleri oluşturmanın bir yolu açıklanmaktadır. RooterLib DLL 'SI, belirli bir sayının kare kökünü tahmin eden bir işlev uygulayarak, ana bilgisayardan sınır teorisi 'nin ercesini gösterir. DLL daha sonra bir UWP uygulamasına dahil edilebilir ve bu da Kullanıcı matematik ile yapılabilecek eğlenceli şeyleri gösterir.
 
-Bu konu başlığında, geliştirmenin ilk adımı olarak birim testlerini nasıl kullanabileceğiniz gösterir. Bu yaklaşımda, önce test etmekte olduğunu sistemde belirli bir davranışı doğrular ve ardından testi geçen kodu yazarak bir test yöntemi yazarsiniz. Aşağıdaki yordamların sırasına göre değişiklik yaparak, önce test etmek istediğiniz kodu yazmak ve ardından birim testlerini yazmak için bu stratejiyi tersine çevirebilirsiniz.
+Bu konu, geliştirme aşamasında ilk adım olarak birim testi kullanmayı gösterir. Bu yaklaşımda, önce test ettiğiniz sistemde belirli bir davranışı doğrulayan bir test yöntemi yazar ve ardından testi geçiren kodu yazarsınız. Aşağıdaki yordamların sırasıyla değişiklik yaparak, test etmek istediğiniz kodu yazmak ve ardından birim testlerini yazmak için bu stratejiyi ters çevirebilirsiniz.
 
-Bu konu ayrıca tek bir Visual Studio çözümü ve birim testleri ile test etmek istediğiniz DLL için ayrı projeler oluşturur. Birim testlerini doğrudan DLL projesine de dahil etmek veya birim testleri ve birim testleri için ayrı çözümler .DLL. Hangi [yapının kullanımına yardımcı olacak ipuçları için bkz.](../test/how-to-use-microsoft-test-framework-for-cpp.md) Mevcut C++ uygulamalarına birim testleri ekleme.
+bu konu ayrıca birim testleri ve test etmek istediğiniz DLL için tek bir Visual Studio çözümü ve ayrı projeler oluşturur. Birim testlerini doğrudan DLL projesine da dahil edebilir veya birim testleri ve .DLL için ayrı çözümler oluşturabilirsiniz. Hangi yapının kullanılacağı hakkında ipuçları için bkz. [var olan C++ uygulamalarına birim testleri ekleme](../test/how-to-use-microsoft-test-framework-for-cpp.md) .
 
-## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a> Çözümü ve birim testi projesini oluşturma
+## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a> Çözüm ve birim testi projesi oluşturma
 
 ::: moniker range=">=vs-2019"
 
-Yeni bir test projesi oluşturarak başlayabilirsiniz. Dosya menüsünde **Yeni** **dosya'Project.**  >   Yeni Uygulama **Oluştur iletişim Project** kutusuna "test" yazın ve Dil'i C++ olarak ayarlayın.  Ardından proje **şablonları listesinden Birim Testi Windows (Evrensel Uygulama)** seçin.
+Yeni bir test projesi oluşturarak başlayın. **dosya** menüsünde **yeni**  >  **Project**' yi seçin. **yeni Project oluştur** iletişim kutusunda, arama kutusuna "test" yazın ve ardından **dili** C++ olarak ayarlayın. ardından proje şablonları listesinden **birim Test uygulaması (evrensel Windows)** öğesini seçin.
 
-   ![Yeni UWP test projesi oluşturma](media/vs-2019/cpp-new-uwp-test-project-vs2019.png)
+   ![Yeni bir UWP test projesi oluştur](media/vs-2019/cpp-new-uwp-test-project-vs2019.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Yeni bir test projesi oluşturarak başlayabilirsiniz. Dosya menüsünde **Yeni** **dosya'Project.**  >   Yeni **Project** iletişim kutusunda Yüklü **uygulama'Visual C++** genişletin  >  **ve** **Evrensel'Windows seçin.** Ardından proje **şablonları listesinden Birim Testi Windows (Evrensel Uygulama)** seçin.
+Yeni bir test projesi oluşturarak başlayın. **dosya** menüsünde **yeni**  >  **Project**' yi seçin. **yeni Project** iletişim kutusunda, **yüklü**  >  **Visual C++** ' i genişletin ve **evrensel Windows**' yı seçin. ardından proje şablonları listesinden **birim Test uygulaması (evrensel Windows)** öğesini seçin.
 
 ::: moniker-end
 
-1. Yeni Uygulama iletişim Project, Yüklü **uygulama'Visual C++** genişletin  >  **ve** Evrensel'Windows **seçin.** Ardından proje **şablonları listesinden Birim Testi Windows (Evrensel Uygulama)** seçin.
+1. yeni Project iletişim kutusunda, **yüklü**  >  **Visual C++** ' i genişletin ve **evrensel Windows**' yı seçin. ardından proje şablonları listesinden **birim Test uygulaması (evrensel Windows)** öğesini seçin.
 
-2. Projeyi olarak `RooterLibTests` belirtin; konumu belirtin; çözümü olarak belirtin ve Çözüm için dizin `RooterLib` **oluştur'ın** işaretli olduğundan emin olun.
+2. Projeyi adlandırın; `RooterLibTests` konumu belirtin; çözümü adlandırın; `RooterLib` **çözüm için dizin oluştur** ' un işaretli olduğundan emin olun.
 
-     ![Çözüm ve proje adını ve konumunu belirtme](../test/media/ute_cpp_windows_unittestlib_createspecs.png)
+     ![Çözüm ve proje adını ve konumunu belirtin](../test/media/ute_cpp_windows_unittestlib_createspecs.png)
 
-3. Yeni projede **unittest1.cpp'yi açın.**
+3. Yeni projede, **UnitTest1. cpp**' yi açın.
 
-     ![unittest1.cpp](../test/media/ute_cpp_windows_unittest1_cpp.png)
+     ![UnitTest1. cpp](../test/media/ute_cpp_windows_unittest1_cpp.png)
 
      Şunlara dikkat edin:
 
-    - Her test kullanılarak `TEST_METHOD(YourTestName){...}` tanımlanır.
+    - Her test kullanılarak tanımlanır `TEST_METHOD(YourTestName){...}` .
 
-         Geleneksel işlev imzası yazmak zorunda değildir. İmza, makro TEST_METHOD. Makro, void döndüren bir örnek işlevi üretir. Ayrıca test yöntemi hakkında bilgi döndüren statik bir işlev de üretir. Bu bilgiler, test gezgininin yöntemini bulmasını sağlar.
+         Geleneksel bir işlev imzası yazmanız gerekmez. İmza, makro TEST_METHOD tarafından oluşturulur. Makro, void döndüren bir örnek işlevi oluşturur. Ayrıca test yöntemiyle ilgili bilgileri döndüren statik bir işlev oluşturur. Bu bilgiler, test Gezgini 'nin yöntemi bulmasını sağlar.
 
-    - Test yöntemleri kullanılarak sınıflara `TEST_CLASS(YourClassName){...}` gruplandı.
+    - Test yöntemleri kullanılarak sınıflar halinde gruplandırılır `TEST_CLASS(YourClassName){...}` .
 
-         Testler çalıştırılan her test sınıfının bir örneği oluşturulur. Test yöntemleri belirtilmemiş bir sırada çağrılır. Her modülden, sınıftan veya yöntemden önce ve sonra çağrılan özel yöntemler tanımlayabilirsiniz. Daha fazla bilgi için [bkz. Microsoft.VisualStudio.TestTools.CppUnitTestFramework kullanma.](how-to-use-microsoft-test-framework-for-cpp.md)
+         Testler çalıştırıldığında, her bir test sınıfının bir örneği oluşturulur. Test yöntemleri belirtilmemiş bir sırada çağırılır. Her modül, sınıf veya yöntemden önce ve sonra çağrılan özel yöntemler tanımlayabilirsiniz. Daha fazla bilgi için bkz. [Microsoft. VisualStudio. TestTools. CppUnitTestFramework kullanma](how-to-use-microsoft-test-framework-for-cpp.md).
 
-## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="Verify_that_the_tests_run_in_Test_Explorer"></a> Test Gezgini'nde testlerin çalıştığını doğrulama
+## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="Verify_that_the_tests_run_in_Test_Explorer"></a> Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
 
-1. Bazı test kodu ekleme:
+1. Bir test kodu ekleyin:
 
     ```cpp
     TEST_METHOD(TestMethod1)
@@ -72,34 +72,34 @@ Yeni bir test projesi oluşturarak başlayabilirsiniz. Dosya menüsünde **Yeni*
     }
     ```
 
-     sınıfının test `Assert` yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığına dikkat etmek.
+     `Assert`Sınıfının, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığını unutmayın.
 
-2. Test menüsünde **Çalıştır'ı** ve **ardından** Hepsini **Çalıştır'ı seçin.**
+2. **Test** menüsünde **Çalıştır** ' ı ve ardından **Tümünü Çalıştır**' ı seçin.
 
-     Test projesi derleme ve çalıştırma. **Test Gezgini penceresi** görüntülenir ve test Başarılı Testler altında **listelenir.** Pencerenin **en** altındaki Özet bölmesi, seçilen testle ilgili ek ayrıntılar sağlar.
+     Test projesi oluşturulup çalışır. **Test Gezgini** penceresi görünür ve test **geçilen testler** altında listelenir. Pencerenin alt kısmındaki **Özet** bölmesi, seçilen test hakkında ek ayrıntılar sağlar.
 
      ![Test Gezgini](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
-## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a> DLL projesini çözüme ekleme
+## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a> Çözüme DLL projesi ekleme
 
 ::: moniker range=">=vs-2019"
 
-Bu **Çözüm Gezgini** çözüm adını seçin. Kısayol menüsünde Ekle'yi **ve ardından** Yeni öğe'yi **Project.** Yeni Dosya **Ekle iletişim Project** Dil'i C++ olarak ayarlayın ve arama kutusuna "DLL" yazın.  Sonuç listesinden Birim Testi Uygulaması **(Evrensel uygulama - C++/CX) Windows 'yi seçin.**
+**Çözüm Gezgini**, çözüm adını seçin. Kısayol menüsünde **Ekle**' yi ve ardından **yeni Project**' yi seçin. **yeni Project ekle** iletişim kutusunda, **dili** C++ olarak ayarlayın ve arama kutusuna "DLL" yazın. sonuçlar listesinden **birim Test uygulaması (evrensel Windows-C++/cx)** öğesini seçin.
 
-![RooterLib projesini oluşturma](../test/media/vs-2019/cpp-new-uwp-test-project-vs2019.png)
+![RooterLib projesi oluşturma](../test/media/vs-2019/cpp-new-uwp-test-project-vs2019.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-Bu **Çözüm Gezgini** çözüm adını seçin. Kısayol menüsünde Ekle'yi **ve ardından** Yeni öğe'yi **Project.**
+**Çözüm Gezgini**, çözüm adını seçin. Kısayol menüsünde **Ekle**' yi ve ardından **yeni Project**' yi seçin.
 
-![RooterLib projesini oluşturma](../test/media/ute_cpp_windows_rooterlib_create.png)
+![RooterLib projesi oluşturma](../test/media/ute_cpp_windows_rooterlib_create.png)
 
 ::: moniker-end
 
-1. Yeni Uygulama **Ekle iletişim Project** DLL **(UWP uygulamaları) öğesini seçin.**
+1. **yeni Project ekle** iletişim kutusunda, **DLL (UWP uygulamaları)** öğesini seçin.
 
-2. *RooterLib.h dosyasına aşağıdaki kodu* ekleyin:
+2. Aşağıdaki kodu *RooterLib. h* dosyasına ekleyin:
 
     ```cpp
     // The following ifdef block is the standard way of creating macros which make exporting
@@ -121,21 +121,21 @@ Bu **Çözüm Gezgini** çözüm adını seçin. Kısayol menüsünde Ekle'yi **
     };
     ```
 
-     Açıklamalar, ifdef bloğuna yalnızca dll'nin geliştiricisini değil, projesinde DLL'ye başvuru yapan herkese de açıklama sağlar. DLL'ROOTERLIB_EXPORTS proje özelliklerini kullanarak komut satırına ROOTERLIB_EXPORTS simgesini ekebilirsiniz.
+     Açıklamalar IDEF bloğunu yalnızca dll geliştiricisi için değil, projesinde DLL 'ye başvuran herkese da açıklamaktadır. DLL 'nin proje özelliklerini kullanarak ROOTERLIB_EXPORTS sembolünü komut satırına ekleyebilirsiniz.
 
-     sınıfı `CRooterLib` bir oluşturucu ve tahmin yöntemi `SqareRoot` bildirer.
+     `CRooterLib`Sınıfı bir Oluşturucu ve `SqareRoot` tahmin aracı metodunu bildirir.
 
-3. Komut ROOTERLIB_EXPORTS simgesi ekleyin.
+3. ROOTERLIB_EXPORTS sembolünü komut satırına ekleyin.
 
-    1. Bu **Çözüm Gezgini** **RooterLib projesini** seçin ve ardından kısayol **menüsünden** Özellikler'i seçin.
+    1. **Çözüm Gezgini**, **RooterLib** projesini seçin ve sonra kısayol menüsünden **Özellikler** ' i seçin.
 
-         ![Ön işlemci sembol tanımı ekleme](../test/media/ute_cpp_windows_addpreprocessorsymbol.png)
+         ![Önişlemci sembol tanımı ekleme](../test/media/ute_cpp_windows_addpreprocessorsymbol.png)
 
-    2. **RooterLib Özellik Sayfası iletişim kutusunda** Yapılandırma Özellikleri'yi genişletin, C++ öğesini genişletin ve Önişlemci'yi  **seçin.**
+    2. **RooterLib Özellik sayfası** Iletişim kutusunda **yapılandırma özellikleri**' ni genişletin, **C++** ' ı genişletin ve **Önişlemci**' yi seçin.
 
-    3. **\<Edit...>** **Önişlemci Tanımları listesinden** seçin ve ardından Önişlemci `ROOTERLIB_EXPORTS` **Tanımları iletişim** kutusuna ekleyin.
+    3. Ön **\<Edit...>** **işlemci tanımları** listesinden öğesini seçin ve ardından ön `ROOTERLIB_EXPORTS` **işlemci tanımları** iletişim kutusuna ekleyin.
 
-4. Bildirilen işlevlerin en az uygulamasını ekleyin. *RooterLib.cpp'yi* açın ve aşağıdaki kodu ekleyin:
+4. Belirtilen işlevlerin minimal uygulamalarını ekleyin. *RooterLib. cpp* ' i açın ve aşağıdaki kodu ekleyin:
 
     ```cpp
     // constructor
@@ -151,25 +151,25 @@ Bu **Çözüm Gezgini** çözüm adını seçin. Kısayol menüsünde Ekle'yi **
 
     ```
 
-## <a name="make-the-dll-functions-visible-to-the-test-code"></a><a name="make_the_dll_functions_visible_to_the_test_code"></a> Dll işlevlerini test koduna görünür hale yükleme
+## <a name="make-the-dll-functions-visible-to-the-test-code"></a><a name="make_the_dll_functions_visible_to_the_test_code"></a> DLL işlevlerini test kodu için görünür hale getirme
 
-1. RooterLibTests projesine RooterLib ekleyin.
+1. RooterLib öğesini RooterLibTests projesine ekleyin.
 
-   1. Bu **Çözüm Gezgini** **RooterLibTests projesini** seçin ve ardından kısayol menüsünde   >  **Başvuru** Ekle'yi seçin.
+   1. **Çözüm Gezgini**, **RooterLibTests** projesini ve ardından   >  kısayol menüsünde **başvuru** Ekle ' yi seçin.
 
-   1. Başvuru Ekle **iletişim kutusunda** Projeler'i **seçin.** Ardından **RouterLib öğesini** seçin.
+   1. **Başvuru Ekle** Iletişim kutusunda **Projeler**' i seçin. Ardından, **Routerlib** öğesini seçin.
 
-2. rooterLib üst bilgi dosyasını *unittest1.cpp dosyasına dahil etmek.*
+2. *UnitTest1. cpp* Içinde RooterLib üstbilgi dosyasını dahil edin.
 
-   1. *unittest1.cpp'yi açın.*
+   1. *UnitTest1. cpp* öğesini açın.
 
-   2. Bu kodu satırın altına `#include "CppUnitTest.h"` ekleyin:
+   2. Bu kodu satırın altına ekleyin `#include "CppUnitTest.h"` :
 
        ```cpp
        #include "..\RooterLib\RooterLib.h"
        ```
 
-3. İçe aktarılan işlevi kullanan bir test ekleyin. *Unittest1.cpp'ye aşağıdaki kodu ekleyin:*
+3. İçeri aktarılan işlevi kullanan bir test ekleyin. Aşağıdaki kodu *UnitTest1. cpp* öğesine ekleyin:
 
    ```cpp
    TEST_METHOD(BasicTest)
@@ -191,15 +191,15 @@ Bu **Çözüm Gezgini** çözüm adını seçin. Kısayol menüsünde Ekle'yi **
 
 4. Çözümü derleyin.
 
-    Yeni test Test **Gezgini'nde Testleri** **Çalıştırmama düğümünde** görünür.
+    Yeni test, **Test Gezgini** 'Nde, **çalıştırma testleri** düğümünde görünür.
 
-5. **Test Gezgini'nde,** Hepsini **Çalıştır'ı seçin.**
+5. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
-    ![Temel Testten geçildi](../test/media/ute_cpp_testexplorer_basictest.png)
+    ![Temel test geçildi](../test/media/ute_cpp_testexplorer_basictest.png)
 
-   Testi ve kod projelerini ayarladıktan sonra kod projesinde işlevleri çalıştıran testleri çalıştırabilirsiniz. Artık gerçek testler ve kod yazmaya başlayabilirsiniz.
+   Test ve kod projelerini ayarlamış ve kod projesindeki işlevleri çalıştıran testleri çalıştıracağınızı doğruladınız. Artık gerçek testleri ve kodu yazmaya başlayabilirsiniz.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="Iteratively_augment_the_tests_and_make_them_pass"></a> Testleri çoğaltarak geliştirin ve başarıyla geçişlerini snın
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="Iteratively_augment_the_tests_and_make_them_pass"></a> Testleri tekrarlayarak ve geçiş yapın
 
 1. Yeni bir test ekleyin:
 
@@ -218,20 +218,20 @@ Bu **Çözüm Gezgini** çözüm adını seçin. Kısayol menüsünde Ekle'yi **
     ```
 
     > [!TIP]
-    > Geçen testleri değiştirmenizi önerilmez. Bunun yerine yeni bir test ekleyin, kodu test başarılı olacak şekilde güncelleştirin ve ardından başka bir test ekleyin ve bu şekilde devam ediyor.
+    > Geçilen testleri değiştirmenizi öneririz. Bunun yerine, yeni bir test ekleyin, kodu test geçişi olacak şekilde güncelleştirin ve daha sonra başka bir test ekleyin ve bu şekilde devam edin.
     >
-    > Kullanıcılarınız gereksinimlerini değiştir yaptıklarında, artık doğru olan testleri devre dışı bırak. Yeni testler yazın ve bunları aynı artımlı şekilde tek tek çalışır hale yazın.
+    > Kullanıcılarınız gereksinimlerini değiştirmelerine göre artık doğru olmayan Testleri devre dışı bırakın. Yeni testler yazın ve aynı anda bir kez, aynı şekilde çalışır hale getirin.
 
-2. **Test Gezgini'nde,** Hepsini **Çalıştır'ı seçin.**
+2. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
-3. Test başarısız olur.
+3. Test başarısız oluyor.
 
      ![RangeTest başarısız oluyor](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
     > [!TIP]
-    > Siz yazdıktan hemen sonra her testin başarısız olduğunu doğrulayın. Bu, hiçbir zaman başarısız olmayacak bir test yazma hatalarından kaçınmanıza yardımcı olur.
+    > Her testin yazıldıktan hemen sonra başarısız olduğunu doğrulayın. Bu, hiç başarısız olmayan bir testi yazmanın kolay bir hata yaşamadan kaçınmanıza yardımcı olur.
 
-4. Yeni testin başarılı olacak şekilde test altındaki kodu geliştirin. *RooterLib.cpp'ye şunları ekleyin:*
+4. Yeni testin başarılı olması için test kapsamındaki kodu geliştirin. Şunları *RooterLib. cpp* öğesine ekleyin:
 
     ```cpp
     #include <math.h>
@@ -252,7 +252,7 @@ Bu **Çözüm Gezgini** çözüm adını seçin. Kısayol menüsünde Ekle'yi **
 
     ```
 
-5. Çözümü derleme ve Test Gezgini'nde **Hepsini** **Çalıştır'ı seçin.**
+5. Çözümü derleyin ve ardından **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
      Her iki test de geçer.
 

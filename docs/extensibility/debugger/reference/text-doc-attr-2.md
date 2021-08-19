@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c479f67850af2701f68324e2270cb26e73b84458e0da5f399df0b1b26430b234
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ba69e22d55c589e758bebfe80e7836f970db19f3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121432988"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057388"
 ---
 # <a name="text_doc_attr_2"></a>TEXT_DOC_ATTR_2
 Bir belgenin özniteliklerini açıklar.

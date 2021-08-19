@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
-ms.openlocfilehash: f5d79f6db4dc7fda535693c88e799938d68bd9dfb09685baabed196b2e46a5a3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 18726b1fa7f42b46cd309cfd4edef289d9469d39
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121363899"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122053415"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Sunucu Gezgini'ni kullanarak depolama kaynaklarına göz atma ve bu kaynakları yönetme
 
@@ -142,7 +142,7 @@ Dosya geçici bir konuma indirilir ve yerel bilgisayarda açılır. değişiklik
 
 Depolama services kuyrukları bir Azure depolama hesabında barındırılır. Bunları, bulut hizmeti rollerinizin bir ileti geçirme mekanizmasıyla birbirleriyle ve diğer hizmetlerle iletişim kurmasına izin vermek için kullanabilirsiniz. Kuyruğa program aracılığıyla bir bulut hizmeti ve dış istemciler için bir web hizmeti üzerinden erişin. Ayrıca kuyrukta yer alan Sunucu Gezgini kullanarak Visual Studio.
 
-Kuyrukları kullanan bir bulut hizmeti geliştirirken, siz kodunuzu geliştirebilir ve test ederken Visual Studio oluşturmak ve onlarla etkileşimli olarak çalışmak için Visual Studio'i kullanabilirsiniz.
+Kuyrukları kullanan bir bulut hizmeti geliştirirken, siz kodunuzu geliştirirken ve test ederken Visual Studio oluşturmak ve onlarla etkileşimli olarak çalışmak için Visual Studio'i kullanabilirsiniz.
 
 Bu Sunucu Gezgini, kuyrukları bir depolama hesabında görüntüleme, kuyruk oluşturma ve silme, iletilerini görüntülemek için bir kuyruk açma ve kuyruğa ileti ekleme. Görüntülemek üzere bir kuyruk asanız, tek tek iletileri görüntüebilirsiniz ve sol üst köşedeki düğmeleri kullanarak kuyrukta aşağıdaki eylemleri gerçekleştirebilirsiniz:
 
@@ -172,7 +172,7 @@ Azure Tablo depolama, büyük miktarlarda yapısal veriyi depolar. Hizmet, Azure
 ### <a name="to-view-table-data"></a>Tablo verilerini görüntülemek için
 
 1. Cloud **Explorer'da** **Azure** düğümünü açın ve ardından azure **Depolama** açın.
-1. İlgilenilen depolama hesabı düğümünü açın ve depolama hesabı için **tabloların** listesini görmek için Tablolar düğümünü açın.
+1. İlgilenilen depolama hesabı düğümünü açın ve ardından depolama hesabı **için** tabloların listesini görmek için Tablolar düğümünü açın.
 1. Bir tablonun kısayol menüsünü açın ve Tabloyu **Görüntüle'yi seçin.**
 
     ![Çözüm Gezgini'de bir Azure tablosu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744165.png)
@@ -181,7 +181,7 @@ Tablo varlıklara (satırlarda gösterilir) ve özelliklere (sütunlarda göster
 
 ### <a name="to-edit-table-data"></a>Tablo verilerini düzenlemek için
 
-Bu **Tablo Tasarımcısı,** bir varlığın kısayol menüsünü (tek satır) veya bir özelliği (tek bir hücre) açın ve düzenle'yi **seçin.**
+Bu **Tablo Tasarımcısı** varlığın kısayol menüsünü (tek satır) veya bir özelliği (tek bir hücre) açın ve düzenle'yi **seçin.**
 
 ![Tablo varlığı ekleme veya düzenleme](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
 
@@ -211,7 +211,7 @@ Sorgu oluşturucuyu kullanıyorsanız tabloda görünen varlık kümelerini öze
 1. Sorgu oluşturucuyu açmak için görüntülemek için bir tablo açın.
 1. Tablo **Sorgu Tasarımcısı** araç çubuğundaKimlik düğmesi seçin.
 
-    Sorgu Tasarımcısı  iletişim kutusu görüntülenir. Aşağıdaki çizimde, sorgu oluşturucuda yerleşik olan bir sorgu gösterilmiştir.
+    Sorgu Tasarımcısı  iletişim kutusu görüntülenir. Aşağıdaki çizimde, sorgu oluşturucuda yerleşik olarak yer alan bir sorgu gösterilmiştir.
 
     ![Sorgu oluşturucu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC652231.png)
 1. Sorguyu oluşturma işi bittiğinde iletişim kutusunu kapatın. Sorgunun sonuçta elde edilen metin biçimi, bir metin kutusunda bir metin WCF Veri Hizmetleri görünür.
@@ -239,17 +239,17 @@ Bir Sunucu Gezgini bir depolama hesabına bağlandığında veya bu hesaptan ver
 
 ### <a name="to-refresh-queue-data"></a>Kuyruk verilerini yenilemek için
 
-öğesinin **altındaki Kuyruklar** **Depolama** seçin ve sonra  da araç çubuğunda yenile Sunucu Gezgini seçin.
+öğesinin **altındaki Kuyruklar** **Depolama** seçin ve ardından araç **çubuğunda** yenile Sunucu Gezgini seçin.
 
 ### <a name="to-refresh-all-items-in-a-storage-account"></a>Depolama hesabıdaki tüm öğeleri yenilemek için
 
-Hesap adını seçin ve ardından araç çubuğunda **yenile** Sunucu Gezgini seçin.
+Hesap adını seçin ve ardından araç **çubuğunda** yenile Sunucu Gezgini seçin.
 
 ## <a name="add-storage-accounts-by-using-server-explorer"></a>Sunucu Gezgini kullanarak depolama Sunucu Gezgini
 
-Depolama hesaplarını kullanarak depolama hesabı eklemenin iki yolu Sunucu Gezgini. Azure aboneliğinize bir depolama hesabı oluşturabilir veya var olan bir depolama hesabını iliştirebilirsiniz.
+Depolama hesaplarını, depolama hesabı eklemenin iki yolu Sunucu Gezgini. Azure aboneliğinize bir depolama hesabı oluşturabilir veya var olan bir depolama hesabını iliştirebilirsiniz.
 
-### <a name="to-create-a-storage-account-by-using-server-explorer"></a>Sunucu Gezgini kullanarak depolama hesabı oluşturmak için
+### <a name="to-create-a-storage-account-by-using-server-explorer"></a>Depolama hesabını kullanarak depolama hesabı Sunucu Gezgini
 
 1. Sunucu Gezgini düğümü için kısayol menüsünü açın **ve Depolama** Oluştur'Depolama **seçin.**
 
@@ -264,7 +264,7 @@ Depolama hesaplarını kullanarak depolama hesabı eklemenin iki yolu Sunucu Gez
 
 1. **Oluştur**’u seçin.
 
-Yeni depolama hesabı, depolama **Depolama** listesinde Çözüm Gezgini.
+Yeni depolama hesabı, Depolama **listesinde** Çözüm Gezgini.
 
 ### <a name="to-attach-an-existing-storage-account-by-using-server-explorer"></a>Var olan bir depolama hesabını Sunucu Gezgini
 

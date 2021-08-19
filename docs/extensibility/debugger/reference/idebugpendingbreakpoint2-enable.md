@@ -12,17 +12,18 @@ ms.assetid: 09e32d05-464b-40a6-a41d-76f2759cf2cd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bd3539d7be7930ecc04958c9a005ed873f8282d4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: adfbef4d8dfdf9885a62af8943e0f1caa4736a57
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087762"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153244"
 ---
 # <a name="idebugpendingbreakpoint2enable"></a>IDebugPendingBreakpoint2::Enable
 Bekleyen kesme noktasının etkin durumunu değiştirir.

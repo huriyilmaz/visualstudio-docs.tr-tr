@@ -16,28 +16,29 @@ ms.assetid: c7a48ea9-5a7f-4328-a9d7-f0e76fac399d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4f51cc979f968acf0cf1fb526d88c86a8fc09ad4
-ms.sourcegitcommit: 2430a38f23ac17b65dd8d3baa806e90433aba24f
+ms.openlocfilehash: abbb4141b4133ac2526d7922ec0e82f74d8286d6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2021
-ms.locfileid: "115094259"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058246"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Desteklenen kod değişiklikleri (C# ve Visual Basic)
-Düzenle ve Devam Etmek, yöntem gövdeleri içindeki çoğu kod değişikliği türlerini işlemeye devam eder. Ancak çoğu yöntem gövdeleri dışındaki değişiklikler ve yöntem gövdeleri içindeki birkaç değişiklik, hata ayıklama sırasında uygulanamaz. Bu desteklenmeyen değişiklikleri uygulamak için hata ayıklamayı durdurmanız ve kodun yeni bir sürümüyle yeniden başlatmanız gerekir.
+Düzenle ve Devam Etmek, yöntem gövdeleri içindeki çoğu kod değişikliği türlerini işlemeye devam eder. Ancak çoğu yöntem gövdeleri dışındaki değişiklikler ve yöntem gövdeleri içindeki birkaç değişiklik hata ayıklama sırasında uygulanamaz. Bu desteklenmeyen değişiklikleri uygulamak için hata ayıklamayı durdurmanız ve kodun yeni bir sürümüyle yeniden başlatmanız gerekir.
 
 ## <a name="supported-changes-to-code"></a>Kodda desteklenen değişiklikler
 
-Aşağıdaki tabloda, oturum yeniden başlatılmadan hata ayıklama oturumu sırasında C# Visual Basic kodda yapılan değişiklikler gösterilmiştir.
+Aşağıdaki tabloda, oturum yeniden başlatılmadan hata ayıklama oturumu sırasında C# Visual Basic kodunda yapılan değişiklikler gösterilmiştir.
 
 |Dil öğesi/özellik|Desteklenen düzenleme işlemi|Sınırlamalar|
 |-|-|-|
 |Türler|Yöntemleri, alanları, oluşturucuları ve diğer yöntemleri ekleme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
-|Yineleyiciler|Ekleme veya değiştirme|No|
+|Yineleyiciler|Ekleme veya değiştirme|Hayır|
 |async/await ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
-|Dinamik nesneler|Ekleme veya değiştirme|No|
+|Dinamik nesneler|Ekleme veya değiştirme|Hayır|
 |lambda ifadeleri|Ekleme veya değiştirme|[Evet](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 |LINQ ifadeleri|Ekleme veya değiştirme|[Lambda ifadeleri ile aynı](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 
@@ -66,10 +67,10 @@ Aşağıdaki tabloda, oturum yeniden başlatılmadan hata ayıklama oturumu sır
 |Türler|Yok etme ekleme|
 |Üyeler|Katıştırılmış birlikte çalışma türüne başvuran bir üyeyi değiştirme|
 |Üyeler|Kod yürüterek statik üyeye zaten erişildikten sonra bu üyeyi değiştirme|
-|Üyeler (Visual Basic)|On Error veya Resume deyimiyle üyeyi değiştirme|
+|Üyeler (Visual Basic)|Üyeyi On Error veya Resume deyimiyle değiştirme|
 |Üyeler (Visual Basic)|Toplama, GrupLama, Basit Birleştirme veya Grup Birleştirme LINQ sorgu yan tümcesi içeren bir üyeyi değiştirme|
 |Yöntemler|İmzaları değiştirme|
-|Yöntemler|Bir yöntem gövdesi ekleyerek soyut yöntemi soyut olmayan bir yöntem haline|
+|Yöntemler|Bir yöntem gövdesi ekleyerek soyut bir yöntemi soyut olmayan hale yapma|
 |Yöntemler|Delete yöntemi gövdesi|
 |Öznitelikler|Ekleme veya değiştirme|
 |Olaylar veya özellikler|Tür parametresini, temel türü, temsilci türünü veya dönüş türünü değiştirme |
@@ -77,18 +78,18 @@ Aşağıdaki tabloda, oturum yeniden başlatılmadan hata ayıklama oturumu sır
 |catch blokları|Etkin deyimi içerdiğinde değiştirme|
 |try-catch-finally blokları|Etkin deyimi içerdiğinde değiştirme|
 |using deyimleri|Ekle|
-|zaman uyumsuz yöntemler/lambdalar|4 ve daha düşük bir projeyi hedeflemek için zaman uyumsuz .NET Framework/lambda değiştirme [(ayrıntılara bakın)](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
-|Yineleyiciler|4 ve daha düşük bir projeyi .NET Framework bir tekrarlayıcıyı değiştirme [(ayrıntılara bakın)](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|zaman uyumsuz yöntemler/lambdalar|4 ve daha düşük bir hedefi hedef alan projede zaman uyumsuz .NET Framework/lambda değiştirme [(ayrıntılara bakın)](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
+|Yineleyiciler|4 ve daha düşük bir hedefi .NET Framework projesinde bir tekrarlayıcıyı [değiştirme (ayrıntılara bakın)](https://github.com/dotnet/roslyn/blob/master/docs/wiki/EnC-Supported-Edits.md)|
 
 ## <a name="unsafe-code"></a>Güvenli olmayan kod
  Güvenli olmayan kodda yapılan değişiklikler, güvenli kodda yapılan değişikliklerle aynı sınırlamalara sahiptir ve bir ek kısıtlama daha vardır: Düzenle ve Devam Etmek, işleci içeren bir yöntemde çıkan güvenli olmayan kodda yapılan değişiklikleri `stackalloc` desteklemez.
 
 ## <a name="unsupported-app-scenarios"></a>Desteklenmeyen uygulama senaryoları
 
-Desteklenmeyen uygulamalar ve platformlar arasında ASP.NET 5, Silverlight 5 ve Windows 8.1.
+Desteklenmeyen uygulamalar ve platformlar Silverlight 5 ve Windows 8.1. .aspx , _.ascx_, _.cshtml_ ve _.razor_ ASP.NET ve ASP.NET Core'de desteklenmeyen _senaryolar._
 
 > [!NOTE]
-> Desteklenen uygulamalar arasında Windows 10'de UWP ve .NET Framework 4.6 masaüstü veya sonraki sürümleri (.NET Framework yalnızca masaüstü sürümüdür) hedef alan x86 ve x64 uygulamaları yer alır.
+> Desteklenen uygulamalar arasında Windows 10'de UWP ve .NET Framework 4.6 veya sonraki sürümleri (.NET Framework yalnızca masaüstü sürümüdür) hedef alan x86 ve x64 uygulamaları yer alır.
 
 ## <a name="unsupported-scenarios"></a>Desteklenmeyen senaryolar
  Düzenle ve Devam Bırak, aşağıdaki hata ayıklama senaryolarında kullanılamaz:

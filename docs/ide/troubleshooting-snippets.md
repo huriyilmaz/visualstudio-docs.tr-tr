@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 4126adddbadf9e117a9070813f1bc227c0cff271f8863cb59c3b60777a775b93
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 37170a41f348a2892055aa39877c8ba74837d34d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121231944"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055919"
 ---
 # <a name="troubleshoot-snippets"></a>Kod parçacıkları sorunlarını giderme
 

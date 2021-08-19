@@ -1,5 +1,5 @@
 ---
-description: Bir alan türü için değiştiricileri belirtir.
+description: Alan türü için değiştiriciler belirtir.
 title: FIELD_MODIFIERS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fa7d151e349d67a9a7edb781bdbf07c9b8523d03cd7b974b8b5a6f3c968c87d9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8e74dec064f2603fa19745ec0abab8b7a402307a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121403214"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119977"
 ---
 # <a name="field_modifiers"></a>FIELD_MODIFIERS
-Bir alan türü için değiştiricileri belirtir.
+Alan türü için değiştiriciler belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -108,10 +108,10 @@ public enum enum_FIELD_MODIFIERS {
 
 ## <a name="fields"></a>Alanlar
 `FIELD_MOD_ACCESS_TYPE`\
-Alana erişilemediklerini gösterir.
+Alana erişilemediğini belirtir.
 
 `FIELD_MOD_ACCESS_PUBLIC`\
-Alanın genel erişime sahip olduğunu gösterir.
+Alanın genel erişimi olduğunu gösterir.
 
 `FIELD_MOD_ACCESS_PROTECTED`\
 Alanın korumalı erişimi olduğunu gösterir.
@@ -120,7 +120,7 @@ Alanın korumalı erişimi olduğunu gösterir.
 Alanın özel erişimi olduğunu gösterir.
 
 `FIELD_MOD_NOMODIFIERS`\
-Alanın değiştiricisi olmadığını gösterir.
+Alanda değiştiriciler olmadığını gösterir.
 
 `FIELD_MOD_STATIC`\
 Alanın statik olduğunu gösterir.
@@ -141,7 +141,7 @@ Alanın soyut olduğunu gösterir.
 Alanın yerel olduğunu gösterir.
 
 `FIELD_MOD_SYNCHRONIZED`\
-Alanın eşitlenmiş olduğunu gösterir.
+Alanın eşitleneceğini belirtir.
 
 `FIELD_MOD_VIRTUAL`\
 Alanın sanal olduğunu gösterir.
@@ -153,7 +153,7 @@ Alanın bir arabirim olduğunu gösterir.
 Alanın son olduğunu gösterir.
 
 `FIELD_MOD_SENTINEL`\
-Alanın sentinel olduğunu gösterir.
+Alanın Sentinel olduğunu gösterir.
 
 `FIELD_MOD_INNERCLASS`\
 Alanın bir iç sınıf olduğunu gösterir.
@@ -162,22 +162,22 @@ Alanın bir iç sınıf olduğunu gösterir.
 Alanın isteğe bağlı olduğunu gösterir.
 
 `FIELD_MOD_BYREF`\
-Alanın bir başvuru bağımsız değişkeni olduğunu gösterir. Bu özellikle yöntem bağımsız değişkenleri içindir.
+Alanın bir başvuru bağımsız değişkeni olduğunu gösterir. Bu özel olarak Yöntem bağımsız değişkenleri içindir.
 
 `FIELD_MOD_HIDDEN`\
-Alanın gizli olması veya başka bir bağlamda sun olması gerektiğini gösterir; Örneğin, [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] statik yereller.
+Alanın gizlenmesi gerektiğini veya başka bir bağlamda sunulmasını belirtir; Örneğin, [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] statik Yereller.
 
 `FIELD_MOD_MARSHALASOBJECT`\
-Alanın arabirimi olan bir nesneyi temsil ettiğini `IUnknown` gösterir.
+Alanın arabirime sahip bir nesneyi temsil ettiğini belirtir `IUnknown` .
 
 `FIELD_MOD_SPECIAL_NAME`\
-Alanın özel bir adı olduğunu gösterir; örneğin, `.ctor` bir oluşturucu için [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] (yalnızca).
+Alanın `.ctor` bir Oluşturucu (yalnızca) için özel bir ada sahip olduğunu gösterir [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] .
 
 `FIELD_MOD_HIDEBYSIG`\
-Alanda anahtar sözcüğünün `Overloads` uygulandığını gösterir [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] (yalnızca).
+Alanın `Overloads` kendisine uygulanmış anahtar sözcüğü olduğunu belirtir ( [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] yalnızca).
 
 `FIELD_MOD_WRITEONLY`\
-Alanın yalnızca yazma olduğunu gösterir. Bu tür yalnızca yazma `FIELD_MOD_ALL` alanlarının tek kullanımı işlev değerlendirmesi için olduğu için bu değer içinde dahil değildir. Kullanıcının alanları açıkça istemesi `FIELD_MOD_WRITEONLY` gerekir.
+Alanın salt yazılır olduğunu gösterir. Yalnızca bu `FIELD_MOD_ALL` tür salt yazılır alanların kullanımı işlev değerlendirmesi için olduğundan, bu değer öğesine dahil değildir. Kullanıcının alanları açıkça istemesi gerekir `FIELD_MOD_WRITEONLY` .
 
 `FIELD_MOD_ACCESS_MASK`\
 Alan erişimi için bir maske gösterir.
@@ -186,16 +186,16 @@ Alan erişimi için bir maske gösterir.
 Alan değiştiricileri için bir maske gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu `dwModifiers` yapının üyesi [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) kullanılır.
+`dwModifiers` [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısının üyesi için kullanılır.
 
-Bu değerler, belirli alanları filtrelemek [için EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md) yöntemine de geçirildi.
+Bu değerler, belirli alanları filtrelemek için [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md) yöntemine de geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: sh.h
+Üstbilgi: SH. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

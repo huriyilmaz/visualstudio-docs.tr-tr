@@ -1,6 +1,6 @@
 ---
-title: Paket Hata Ayıklama | Microsoft Docs
-description: Hata ayıklama paketinin kabukta nasıl Visual Studio ve hata ayıklama arabirimlerini kullanarak ve oturum hata ayıklama yöneticisiyle iletişim kurarak kullanıcı arabirimini nasıl işley olduğunu öğrenin.
+title: Hata ayıklama paketi | Microsoft Docs
+description: hata ayıklama paketinin Visual Studio kabuğu 'nda nasıl çalıştığını öğrenin ve hata ayıklama arabirimlerini kullanıp oturum hata ayıklama yöneticisiyle iletişim kurarak kullanıcı arabirimini işler.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,26 +10,27 @@ ms.assetid: 99947fd4-fb87-4c69-b26c-65634e17d285
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8be920ae352067a6e77593ca0a922474d68851d9
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: c2692f99388fe5cba3103605480dda1f27b62ff3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905676"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153608"
 ---
-# <a name="debug-package"></a>Pakette hata ayıklama
-Hata ayıklama paketi, Visual Studio kabuğunda çalışır ve tüm kullanıcı arabirimini işler. Hata ayıklama arabirimlerini Visual Studio ve oturum hata ayıklama yöneticisi (SDM) ile iletişim kurar.
+# <a name="debug-package"></a>Hata ayıklama paketi
+hata ayıklama paketi Visual Studio kabuğu 'nda çalışır ve tüm kullanıcı arabirimini işler. Visual Studio hata ayıklama arabirimlerini kullanır ve oturum hata ayıklama yöneticisi (SDM) ile iletişim kurar.
 
- SDM aracılığıyla gönderilen kesme olayları, hata ayıklayıcıyı çalıştırma modundan kesme moduna geçer ve odağı kesmenin meydana geldiği programla değiştirir. Hata ayıklama paketi yığın çerçevesini ve iş parçacığını olaylar tarafından gönderilen bilgilerden izler.
+ SDM aracılığıyla gönderilen olayları kes hata ayıklayıcıyı çalıştırma modundan kesme moduna geçirin ve odağı, kesmenin gerçekleştiği programa değiştirin. Hata ayıklama paketi, olaylar tarafından kendisine gönderilen bilgilerden yığın çerçevesini ve iş parçacığını izler.
 
- Hata ayıklama paketinin dil veya çalışma zamanı ortam bağımlılıkları yoktur. Hata ayıklama paketini uygulamak veya değiştirmek gerekli değildir.
+ Hata ayıklama paketinde dil veya çalışma zamanı ortamı bağımlılıkları yok. Hata ayıklama paketini uygulamak veya değiştirmek gerekli değildir.
 
- Hata ayıklama paketi, tarafından *vsdebug.dll.*
+ Hata ayıklama paketi *vsdebug.dll* tarafından uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Oturum hata ayıklama yöneticisi](../../extensibility/debugger/session-debug-manager.md)
+- [Oturum hata ayıklama Yöneticisi](../../extensibility/debugger/session-debug-manager.md)
 - [Yığın çerçeveleri](../../extensibility/debugger/stack-frames.md)
 - [İş Parçacıkları](../../extensibility/debugger/threads.md)
-- [Hata ayıklayıcısı bileşenleri](../../extensibility/debugger/debugger-components.md)
+- [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md)

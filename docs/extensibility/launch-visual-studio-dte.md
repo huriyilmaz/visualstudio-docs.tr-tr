@@ -8,18 +8,19 @@ ms.topic: how-to
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3f5aa141d73879e61a06e7a2b19f03bd53243a7
-ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
+ms.openlocfilehash: 1cea6b082a5cdb51f0de2053bbc7912cd32ce500
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "113046033"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102369"
 ---
 # <a name="launch-visual-studio-using-dte"></a>DTE kullanarak Visual Studio’yu Başlatma
 
-Visual Studio 2017'den başlayarak DTE kullanarak Visual Studio başlatma mekanizması, DTE'nin önceki sürümlerinin başlatılmasıyla Visual Studio. Visual Studio 2017 ve sonraki sürümler ana sürümlerde yan yana yüklemeleri desteklediği için bu değişiklik gereklidir (örneğin, bir önizleme ve sürüm sürümü yan yana yüklenmiş olabilir).
+Visual Studio 2017'den başlayarak DTE kullanarak Visual Studio başlatma mekanizması, DTE'nin önceki sürümlerinin başlatılmasına Visual Studio. Visual Studio 2017 ve sonraki sürümler ana sürümlerde yan yana yüklemeleri desteklediği için bu değişiklik gereklidir (örneğin, yan yana yüklenmiş bir önizleme ve sürüm sürümüne sahip olabilirsiniz).
 
 Bu makalenin geri kalanında, DTE kullanarak 2019'Visual Studio başlatmak için kullanabileceğiniz kodlar açıklanmıştır.
 
@@ -27,9 +28,9 @@ Bu makalenin geri kalanında, DTE kullanarak 2019'Visual Studio başlatmak için
 
 Başlatma kodunun nasıl olduğunu görmek için aşağıdaki adımları izleyin ve bir proje oluşturun.
 
-1. Uygulama için **yeni bir Konsol** Uygulaması .NET Framework.
+1. Yeni uygulama için **yeni bir** Konsol Uygulaması .NET Framework.
 
-2. uration [Microsoft.VisualStudio.Setup.Configyükleyin. Birlikte](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) Çalışma NuGet paketi ve derlemeye bir başvuru ekleyin.
+2. uration [Microsoft.VisualStudio.Setup.Configyükleyin. Birlikte](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) NuGet paketiyle birlikte çalışma ve derlemeye bir başvuru ekleme.
 
 3. EnvDTE'ye bir başvuru ekleyin.
 

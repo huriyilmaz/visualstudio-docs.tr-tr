@@ -1,6 +1,6 @@
 ---
 title: Öğe İşlevleri | Microsoft Docs
-description: Projedeki MSBuild bilgi almak için görev ve hedeflerde kod çağırmanın öğe işlevlerini nasıl çağırası hakkında bilgi edinebilirsiniz.
+description: Projedeki MSBuild almak için görevlerdeki ve hedeflerde yer alan kodun öğe işlevlerini nasıl çağırası hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: f75d5a0de6bedd7635ab073f7d3711ca75b07552e11b88958baf1b5d37e18727
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 534a1abf01f3b1493018c4d7adb5161e1a02cf60
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121303130"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077354"
 ---
 # <a name="item-functions"></a>Öğe işlevleri
 

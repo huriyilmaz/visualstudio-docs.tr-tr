@@ -1,6 +1,6 @@
 ---
-title: Veri Office verileri
-description: Microsoft Office kullanarak verilerle çalışmak için Microsoft Office çeşitli Visual Studio.
+title: Office çözümlerinde veri
+description: Visual Studio kullanarak Microsoft Office çözümleri oluştururken verilerle çalışmanın çeşitli yollarını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,46 +17,46 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: fe3dcc9a17e6018ce80249b8f205f910f25668cd806ce70eb5687fa833328a83
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e9cc75372da8026ea2d5adc0ca44ca6753023bbc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121424391"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122053690"
 ---
-# <a name="data-in-office-solutions"></a>Veri Office verileri
-  Birçok Office çözümü, kullanıcıların verileri almalarını veya değiştirmelerini sağlar. Office kullanarak Visual Studio çözümler sanız, verilerle çalışmanın birkaç farklı yolu vardır.
+# <a name="data-in-office-solutions"></a>Office çözümlerinde veri
+  birçok Office çözüm, kullanıcıların verileri almasına veya değiştirmesine olanak tanır. Visual Studio kullanarak Office çözümleri oluşturduğunuzda, verilerle çalışabilmeniz için birkaç farklı yol vardır.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Veri çözümlerinin denetimlerini Office bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
 
- Veri çözümlerinin denetimlere nasıl bağlanacağını Office açıklar.
+ Office çözümlerinde denetimlere veri bağlamayı açıklar.
 
 - [Özel XML bölümlerine genel bakış](../vsto/custom-xml-parts-overview.md)
 
- Özel XML parçalarının, özel çözümlerde verilerle çalışmak için Office açıklar.
+ Office çözümlerinde verilerle çalışmak için özel XML bölümlerinin nasıl kullanılacağını açıklar.
 
-- [Belge düzeyinde özelleştirmelerde önbelleğe alınmış veriler](../vsto/cached-data-in-document-level-customizations.md)
+- [Belge düzeyi Özelleştirmelerdeki önbelleğe alınmış veriler](../vsto/cached-data-in-document-level-customizations.md)
 
- Uygulamanın başlatılmadan erişilebilen ekli bir veri adasına veri Office açıklar.
+ Office uygulamasına başlamadan erişilebilen ekli bir veri adasında verilerin nasıl depolanacağını açıklar.
 
-- [Belge düzeyinde özelleştirmelerde XML şemaları ve verileri](../vsto/xml-schemas-and-data-in-document-level-customizations.md)
+- [Belge düzeyi özelleştirmelerde XML şemaları ve verileri](../vsto/xml-schemas-and-data-in-document-level-customizations.md)
 
- XML verilerine bağlı denetimler oluşturmak için belge düzeyi özelleştirmelerde XML şemalarını kullanmayı açıklar.
+ XML verilerine bağlanan denetimler oluşturmak için belge düzeyi özelleştirmelerde XML şemaları kullanmayı açıklar.
 
-- [Yerel veritabanı dosyalarını farklı çözümlerde Office genel bakış](../vsto/using-local-database-files-in-office-solutions-overview.md)
+- [Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış](../vsto/using-local-database-files-in-office-solutions-overview.md)
 
- Veritabanı dosyalarını projelerinize aktarmayı ve verileri çevrimdışı kullanım için ne zaman önbelleğe alasanız açıklar.
+ Projelerinize veritabanı dosyalarının nasıl içeri aktarılacağını ve çevrimdışı kullanım için verileri ne zaman önbellekte kullanabileceğinizi açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 - [Visual Studio'da verilere erişime](../data-tools/accessing-data-in-visual-studio.md)
 
- Veri kaynağında verilerle çalışma hakkında bilgi Visual Studio.
+ Visual Studio verilerle çalışmayı gösteren konuları listeler.
 
 - [Verileri kaydetme](../data-tools/save-data-back-to-the-database.md)
 
- Bir veri kümesinde verileri değiştirme ve değişiklikleri veri kaynağına geri yazma da dahil olmak üzere veri kümeleriyle çalışmayla ilgili konulara bağlantılar sağlar.
+ Bir veri kümesindeki verileri değiştirme ve değişiklikleri veri kaynağına yazma dahil olmak üzere veri kümeleriyle çalışma hakkındaki konuların bağlantılarını sağlar.
 
-- [Yeni çözümler tasarlama Office oluşturma](../vsto/designing-and-creating-office-solutions.md)
+- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
 
- Office kullanarak yeni projeler oluşturmaya başlama hakkında bilgi Visual Studio.
+ Visual Studio kullanarak Office projeleri oluşturmaya nasıl başlacağınız hakkında bilgi için bağlantılar sağlar.

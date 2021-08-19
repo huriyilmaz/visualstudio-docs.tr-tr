@@ -1,6 +1,6 @@
 ---
-title: İşaretler Görünümü | Microsoft Docs
-description: İşaretler görünümünün uygulamaya eklenen örnekleme ve ETW olaylarını nasıl görüntüley olduğunu öğrenin.
+title: İşaretler görünümü | Microsoft Docs
+description: Işaret görünümü ' nin uygulamaya eklenmiş örnekleme ve ETW olaylarını nasıl görüntülediğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,33 +16,33 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cf90357819457f4c1466ce111cb923b58b6bc1f6cbdcd49b73632ea90a2ef434
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9cf6b69960980507bebd036ac49332dfa42aed9a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121332709"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076444"
 ---
 # <a name="marks-view"></a>İşaretler Görünümü
-İşaretler görünümü, uygulamaya eklenen örnekleme ve ETW olaylarını görüntüler.
+Işaretler görünümü, uygulamaya eklenmiş olan örnekleme ve ETW olaylarını görüntüler.
 
- Raporda önceden doldurulan varsayılan işaretler, programın başlangıcını ve programın sonunu etiketler.
+ Rapor etiketinde önceden doldurulan varsayılan işaretler programın başlangıcını ve programın sonunu belirtir.
 
- Windows oluşturulan işaretlerden gelen sayaç verileri de bu görünümde sunulmaktadır. Daha fazla bilgi için [bkz. Nasıl Windows verileri toplama.](../profiling/how-to-collect-windows-counter-data.md)
+ bu görünümde otomatik olarak oluşturulan işaretlerin Windows sayaç verileri de sunulur. daha fazla bilgi için bkz. [nasıl yapılır: toplama Windows sayaç verileri](../profiling/how-to-collect-windows-counter-data.md).
 
- İki işaret arasında filtre oluşturmak için işaretleri seçin, sağ tıklayın ve ardından İşaretlere Göre **Filtre** Ekle veya Zaman Damgasına Göre **Filtre Ekle'ye tıklayın.**
+ İki işaret arasında bir filtre oluşturmak için, işaretleri seçin, sağ tıklayın ve sonra **işaretler** veya **zaman damgalarına göre filtre Ekle**' ye tıklayın.
 
- Aşağıdaki tablo, İşaretler görünümünde kullanılabilen sütunların tanımlarını sağlar.
+ Aşağıdaki tablo, Işaretler görünümünde kullanılabilir olan sütunların tanımlarını sağlar.
 
- **İşaret Kimliği** Profil oluşturma işaretinin benzersiz tanımlayıcısı.
+ **Işaret kimliği** Profil oluşturma işaretinin benzersiz tanıtıcısı.
 
- **İşaret Adı** Olayın adı.
+ **Işaret adı** Etkinliğin adı.
 
- **Zaman Damgası** Profil oluşturmanın başlamasından olayın kaydediliyor olduğu zamana kadar olan süre.
+ **Zaman damgası** Profil oluşturmanın başlangıcından olayın kaydedildiği zamana kadar geçen süre.
 
- Windows sayacı verileri Windows performans sayacı verileri toplendiğinde değerler sayacın adına sahip bir sütunda görüntülenir.
+ Windows performans sayacı verileri toplandığında performans sayacı verileri Windows, değerler sayacın adına sahip bir sütunda görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans raporuna genel bakış](../profiling/performance-report-overview.md)
-- [Nasıl Windows toplama](../profiling/how-to-collect-windows-counter-data.md)
-- [&#91;NIB&#93; Veri Toplama Denetimi penceresi](/previous-versions/bb385767(v=vs.110))
+- [nasıl yapılır: Windows sayaç verileri toplama](../profiling/how-to-collect-windows-counter-data.md)
+- [&#91;NIB&#93; veri toplama denetim penceresi](/previous-versions/bb385767(v=vs.110))

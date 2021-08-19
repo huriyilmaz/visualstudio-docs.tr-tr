@@ -1,6 +1,6 @@
 ---
 title: AutoRecover, Ortam, Seçenekler İletişim Kutusu
-description: Otomatik kurtarma, ortam, Seçenekler iletişim kutusu ve dosyaların otomatik olarak yedeklenip yedeklenmeyeceğini belirtmek için nasıl kullanıldığı hakkında bilgi edinin.
+description: AutoRecover, Ortam, Seçenekler iletişim kutusu ve dosyaların otomatik olarak mı yoksa otomatik olarak mı silinip silinemezseniz nasıl kullanılır hakkında bilgi edinmek için bu iletişim kutusunu seçin.
 ms.custom: SEO-VS-2020
 ms.date: 08/14/2020
 ms.topic: reference
@@ -20,47 +20,47 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: af89cfb0e47655e5deac867e5eeec1da255408c27d6037468ad8e42f8fe31c8a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f3cdde0c409dfddbfb4468cbf7a6203260a42223
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121400262"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101615"
 ---
-# <a name="autorecover-environment-options-dialog-box"></a>Otomatik kurtarma, ortam, Seçenekler iletişim kutusu
+# <a name="autorecover-environment-options-dialog-box"></a>AutoRecover, Ortam, Seçenekler iletişim kutusu
 
-Dosyaların otomatik olarak yedeklenip yedeklenmeyeceğini belirtmek için **Seçenekler** iletişim kutusunda bu sayfayı kullanın. ayrıca, Visual Studio beklenmedik şekilde kapatılırsa değiştirilen dosyaları geri yüklemek istediğinizi de belirtebilirsiniz.
+Dosyaları otomatik olarak mı yoksa **otomatik** olarak mı doğrulayacaklarını belirtmek için Seçenekler iletişim kutusunda bu sayfayı kullanın. Ayrıca, dosyanın beklenmedik şekilde kapanması Visual Studio geri yüklemek istediğiniz belirtebilirsiniz.
 
-Bu iletişim kutusuna erişmek için **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **Otomatik Kurtarma**' ya gidin.
+Bu iletişim kutusuna erişmek için Araçlar Seçenekler Ortam  >  **Otomatik**  >    >  **Kurtarma'ya gidin.**
 
-:::image type="content" source="media/autorecover-options.png" alt-text="Seçenekler iletişim kutusundaki otomatik kurtarma bölümünün ekran görüntüsü":::
+:::image type="content" source="media/autorecover-options.png" alt-text="Seçenekler iletişim kutusundaki AutoRecover bölümünün ekran görüntüsü":::
 
-**Otomatik Kurtarma bilgilerini her [n] dakikada bir Kaydet**
+**Her [n] dakikada bir AutoRecover bilgilerini kaydetme**
 
 ::: moniker range=">=vs-2022"
 
-Bir dosyanın düzenleyicide ne sıklıkta otomatik olarak kaydedileceğini özelleştirmek için bu seçeneği kullanın. daha önce kaydedilen dosyalar için, Visual Studio dosyanın bir kopyasını ***%localappdata%\microsoft\visualstudio\backupfiles \\ [projectname]*** dizinine kaydeder. dosya yeni ise ve henüz kaydetmediyseniz, Visual Studio otomatik olarak, rastgele oluşturulmuş bir dosya adı kullanarak kaydeder.
+Bir dosyanın düzenleyicide otomatik olarak ne sıklıkta kaydedilebilir olduğunu özelleştirmek için bu seçeneği kullanın. Daha önce kaydedilen dosyalar Visual Studio dosyanın bir kopyasını ***%LocalAppData%\Microsoft\VisualStudio\BackupFiles \\ [projectname] dizinine kaydeder.*** Dosya yeni ise ve henüz kaydedemediyebilirsiniz Visual Studio rastgele oluşturulan bir dosya adı kullanarak otomatik olarak otomatik olarak kodlar.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Bir dosyanın düzenleyicide ne sıklıkta otomatik olarak kaydedileceğini özelleştirmek için bu seçeneği kullanın. daha önce kaydedilen dosyalar için, Visual Studio 2019 sürüm 16,2 ve üzeri, dosyanın bir kopyasını ***%localappdata%\microsoft\visualstudio\backupfiles \\ [projectname]*** dizinine kaydeder. dosya yeni ise ve henüz kaydetmediyseniz, Visual Studio otomatik olarak, rastgele oluşturulmuş bir dosya adı kullanarak kaydeder.
+Bir dosyanın düzenleyicide otomatik olarak ne sıklıkta kaydedilebilir olduğunu özelleştirmek için bu seçeneği kullanın. Daha önce kaydedilen dosyalar için, Visual Studio 2019 sürüm 16.2 ve sonraki sürümler dosyanın bir kopyasını ***%LocalAppData%\Microsoft\VisualStudio\BackupFiles \\ [projectname] dizinine kaydeder.*** Dosya yeni ise ve henüz kaydedemediyebilirsiniz Visual Studio rastgele oluşturulan bir dosya adı kullanarak otomatik olarak otomatik olarak kodlar.
 
 > [!NOTE]
-> Visual Studio 2019 sürüm 16,1 veya önceki bir sürümü kullanıyorsanız, dosya konumu *%userprofile%\documents\ Visual Studio [version] \Backup Files \\ [projectname]* olur. daha fazla bilgi için [Visual Studio 2019 sürüm notları geçmişi](/visualstudio/releases/2019/release-notes-history/) sayfasına bakın.
+> Visual Studio 2019 sürüm 16.1 veya önceki bir sürümü kullanıyorsanız, dosya konumu *%USERPROFILE%\Documents\Visual Studio [version]\Backup Files \\ [projectname] konumundadır.* Daha fazla bilgi için Visual Studio [2019 Sürüm Notları Geçmişi sayfasına](/visualstudio/releases/2019/release-notes-history/) bakın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Bir dosyanın düzenleyicide ne sıklıkta otomatik olarak kaydedileceğini özelleştirmek için bu seçeneği kullanın. daha önce kaydedilen dosyalar için Visual Studio 2017, dosyanın bir kopyasını *%userprofile%\documents\ Visual Studio [version] \Backup files \\ [projectname]* içinde kaydeder. dosya yeni ise ve henüz kaydetmediyseniz, Visual Studio otomatik olarak, rastgele oluşturulmuş bir dosya adı kullanarak kaydeder.
+Bir dosyanın düzenleyicide otomatik olarak ne sıklıkta kaydedilebilir olduğunu özelleştirmek için bu seçeneği kullanın. Daha önce kaydedilen dosyalar için Visual Studio 2017'de dosyanın bir kopyası *%USERPROFILE%\Documents\Visual Studio [version]\Backup Files \\ [projectname]* dizinine kaydedilir. Dosya yeni ise ve henüz kaydedemediyebilirsiniz Visual Studio rastgele oluşturulan bir dosya adı kullanarak otomatik olarak otomatik olarak kodlar.
 
 ::: moniker-end
 
-**[N] gün için otomatik kurtarma bilgilerini tut**
+**AutoRecover bilgilerini [n] gün boyunca tutma**
 
-Visual Studio, otomatik kurtarma için oluşturulan dosyaları ne kadar süreyle tutacağını belirtmek için bu seçeneği kullanın.
+Otomatik kurtarma için dosyaların oluşturulma Visual Studio süre belirtmek için bu seçeneği kullanın.
 
 ### <a name="see-also"></a>Ayrıca bkz.
 

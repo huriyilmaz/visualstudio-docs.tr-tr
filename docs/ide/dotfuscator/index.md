@@ -17,12 +17,13 @@ ms.assetid: d9550502-0a82-49a6-b005-2caa791fbe02
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 75437af41cec6fd770af9dfcdb399ed51543b7ff
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.technology: vs-ide-general
+ms.openlocfilehash: 6f3a23e13d37b3c71a8ab5b7f680e16d51ca3164
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308226"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101862"
 ---
 # <a name="dotfuscator-community"></a>Dotfuscator Community
 

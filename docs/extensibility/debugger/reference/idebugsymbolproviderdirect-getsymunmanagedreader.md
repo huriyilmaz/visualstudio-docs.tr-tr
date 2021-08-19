@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 753050171fccb3491a0dc6fcba43b2ed28d5be348aabaf39ed6663b52d7c7ca4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a4d77a56dce1140f76347519dbecd93dd5b38978
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402109"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153231"
 ---
 # <a name="idebugsymbolproviderdirectgetsymunmanagedreader"></a>IDebugSymbolProviderDirect::GetSymUnmanagedReader
 Yönetilmeyen kod için bir sembol okuyucu alır.

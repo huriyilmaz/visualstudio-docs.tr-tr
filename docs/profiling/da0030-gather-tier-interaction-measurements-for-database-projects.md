@@ -15,12 +15,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 31d38347da64f0016ef85a52af2aa4fbaf8fc15b5d89005b081e137e534f07ec
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: de0de156ecd959671394679a30912f24a5aaaaf5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427151"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122084304"
 ---
 # <a name="da0030-gather-tier-interaction-measurements-for-database-projects"></a>DA0030: Veritabanı projeleri için katman etkileşim ölçümlerini toplama
 
@@ -33,14 +33,14 @@ ms.locfileid: "121427151"
 |Kural türü|Bilgi|
 
 ## <a name="cause"></a>Nedeni
- Yöntemlere yapılan çağrılar, profil oluşturma verilerinin önemli bir oranıdır ve profil oluşturma çalıştırması içinde katman <xref:System.Data> etkileşim verileri toplamaz. Yeniden profil oluşturmayı ve katman etkileşim verileri eklemeyi göz önünde bulundurabilirsiniz.
+ Yöntemlere yapılan çağrılar profil oluşturma verilerinin önemli bir oranıdır ve profil oluşturma çalıştırması içinde katman <xref:System.Data> etkileşim verilerini toplamaz. Yeniden profil oluşturmayı ve katman etkileşim verileri eklemeyi göz önünde bulundurabilirsiniz.
 
 ## <a name="rule-description"></a>Kural açıklaması
  Bu kural, dahil olmak üzere System.Data ad alanlarında bulunan işlevlerde önemli bir etkinlik olduğunda <xref:System.Data.Linq> <xref:System.Data.Linq> oluşur.
 
  Çok katmanlı uygulamalar, sunum ve veri katmanları için katmanlı hizmetler kullanır. Veri katmanı genellikle veri katmanı gibi bir veritabanı yönetim sistemi çalıştıran ayrı bir Microsoft SQL Server. Veri katmanı, uygulamanın geri kalanından ayrı bir makinede bile çalışıyor olabilir. Örnekleme profilleri, işlem yetersiz veya uzaktan çalışan işlevler ve hizmetler hakkında çok az içgörü sağlar.
 
- Profil oluşturma araçları, bir Microsoft SQL Server veri katmanıyla etkileşime ADO.NET hizmetleri için zaman uyumsuz çağrılar kullanarak çok katmanlı uygulamalar için ADO.NET toplar. Katman Etkileşim Profili Oluşturmayı açıkça etkinleştirmeniz gerekir. Varsayılan olarak açık değildir.
+ Profil oluşturma araçları, Microsoft SQL Server hizmetleri için zaman uyumsuz çağrılar kullanarak bir Microsoft SQL Server etkileşimde olan çok katmanlı uygulamalar için ADO.NET toplar. Katman Etkileşim Profili Oluşturmayı açıkça etkinleştirmeniz gerekir. Varsayılan olarak açık değildir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri düzeltme
  Bu kural yalnızca bilgi içindir ve düzeltici eylem gerektirmeyebilirsiniz.

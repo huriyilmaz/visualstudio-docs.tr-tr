@@ -8,12 +8,12 @@ ms.author: ghogen
 ms.date: 02/21/2021
 ms.technology: vs-container-tools
 ms.topic: quickstart
-ms.openlocfilehash: c009686029355fdb5c9e1d371a4d0a071bec2fc282d5fbc441bd099d52b89dba
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4c1bc184b2244de0babfd368e22de3bda3af808a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121348444"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122053025"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Hızlı Başlangıç: Docker'ı React tek sayfalı bir uygulamayla Visual Studio
 

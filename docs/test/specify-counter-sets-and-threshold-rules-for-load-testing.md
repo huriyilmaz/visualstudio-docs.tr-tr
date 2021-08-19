@@ -16,12 +16,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7c82f2f8ec61e84d5317746be4f6aaaf6994cf2778c95d7c48d22f39c96a34c2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 70e74129590f867d15c83d1419762d7162474c5e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121226545"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054203"
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>Yük testinde bilgisayarlar için sayaç kümeleri ve eşik kuralları belirtme
 
@@ -45,7 +45,7 @@ Sayaçların toplanmayacak bilgisayarlar listesine test altındaki sunucuları e
 |**Yük testi için sayaç kümelerini yönetme:** Yük testini oluşturduk sonra, sayaç kümesinde sayaç Yük Testi Düzenleyicisi. Sayaç kümelerini yönetmek, performans verilerini toplamak istediğiniz bilgisayar kümelerini seçmeyi ve her bir bilgisayardan toplamak için bir sayaç kümesi atamayı içerir. Sayaçlarınızı veri Yük Testi Düzenleyicisi.|-   [Nasıl: Sayaç kümelerini yönetme](../test/how-to-manage-counter-sets-using-the-load-test-editor.md)|
 |**Yük teste sayaç kümeleri ekleyin:** New Yük Testi Sihirbazı ile bir **yük testi** oluşturdukta, ilk sayaç kümesi eklersiniz. Bunlar, yük testi için önceden tanımlanmış sayaç kümeleri kümesi sağlar. Yük testi oluşturdukta, yeni sayaçları mevcut sayaç kümelerini kullanarak yeni sayaçlar Yük Testi Düzenleyicisi.|-   [Nasıl yapılanlar: Sayaç kümelerini ekleme](../test/how-to-add-counters-to-counter-sets-using-the-load-test-editor.md)<br />-   [Nasıl yapılanlar: Özel sayaç kümeleri ekleme](../test/how-to-add-custom-counter-sets-using-the-load-test-editor.md)|
 |**Yük testinde sayaçları kullanarak bir eşik kuralı belirtin:** Eşik kuralı, yük testi sırasında sistem kaynağı kullanımını izlemek için tek bir performans sayacında ayarlanmış bir kuraldır. Sayaç kümesi tanımları, birçok önemli performans sayacı için önceden tanımlanmış eşik kuralları içerir. Yük testlerinde eşik kuralları, performans sayacı değerini sabit değerle veya başka bir performans sayacı değeriyle karşılaştırıldığında.|-   [Nasıl: Eşik kuralı ekleme](../test/how-to-add-a-threshold-rule-using-the-load-test-editor.md)|
-|**Sayaç kümelerini eşlenen bilgisayarlara kolay adlar attayın:** Bir bilgisayara kolayca tanınan bir ad uygulamanıza olanak sağlayan bilgisayar etiketleri ekleme. Etiketler, kümedeki **ağacın** Sayaç Kümesi Eşlemeleri düğümünde Yük Testi Düzenleyicisi. Daha da önemlisi, etiketler paydaşların yük testinde bilgisayarın hangi rolüne sahip olduğunu belirlemeye yardımcı olan Excel raporlarında (örneğin, "lab2'de Web Server1" veya "Phoenix ofisinde SQL Server2" gibi) görüntülenir.<br /><br /> Daha fazla bilgi için [bkz. Test karşılaştırmaları veya eğilim analizi için yük testi sonuçlarını bildirme.](../test/compare-load-test-results.md)||
+|**Sayaç kümelerini eşlenen bilgisayarlara kolay adlar attayın:** Bir bilgisayara kolayca tanınan bir ad uygulamanıza olanak sağlayan bilgisayar etiketleri ekleme. Etiketler, kümedeki **ağacın** Sayaç Kümesi Eşlemeleri düğümünde Yük Testi Düzenleyicisi. Daha da önemlisi, paydaşların yük testinde bilgisayarın hangi rolüne sahip olduğunu tanımlamasına yardımcı olan Excel raporlarında etiketler görüntülenir; örneğin, "lab2'de Web Server1" veya "Phoenix ofisinde SQL Server2".<br /><br /> Daha fazla bilgi için [bkz. Test karşılaştırmaları veya eğilim analizi için yük testi sonuçlarını bildirme.](../test/compare-load-test-results.md)||
 
 ## <a name="use-counter-sets"></a>Sayaç kümelerini kullanma
 

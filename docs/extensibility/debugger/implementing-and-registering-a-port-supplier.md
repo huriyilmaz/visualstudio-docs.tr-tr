@@ -11,14 +11,15 @@ ms.assetid: fb057052-ee16-4272-8e16-a4da5dda0ad4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 16c1738d4059468384df7ee2e882c20c8b5a0537
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 151f14592e0987a16b3195944d3ef7ce0f972ea1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059840"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153478"
 ---
 # <a name="implement-and-register-a-port-supplier"></a>Bir bağlantı noktası sağlayıcısı uygulama ve kaydetme
 Bir bağlantı noktası tedarikçinin rolü, işlem yönetimini izleyen ve bu bağlantı noktalarını izlemek ve sağlamak için kullanılır. Bir bağlantı noktasının oluşturulması gerektiğinde, bağlantı noktası sağlayıcısının GUID 'SI ile CoCreate kullanılarak oluşturulur (oturum hata ayıklama Yöneticisi [SDM], kullanıcının seçtiği bağlantı noktası tedarikçisine veya proje sistemi tarafından belirtilen bağlantı noktası sağlayıcısına) sahip olur. SDM daha sonra herhangi bir bağlantı noktasının eklenip eklenediğine bakmak için [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) öğesini çağırır. Bir bağlantı noktası eklenediyse, [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) çağırarak ve bağlantı noktasını açıklayan bir [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) geçirerek yeni bir bağlantı noktası istenir. `AddPort` bir [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi tarafından temsil edilen yeni bir bağlantı noktasını döndürür.
@@ -26,7 +27,7 @@ Bir bağlantı noktası tedarikçinin rolü, işlem yönetimini izleyen ve bu ba
 ## <a name="discussion"></a>Tartışma
  Bir bağlantı noktası, bir makine ya da hata ayıklama sunucusu ile ilişkilendirilmiş bir bağlantı noktası sağlayıcısı tarafından oluşturulur. Sunucu, bağlantı noktası tedarikçilerini[Trksağlayıcılar](../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) yöntemiyle numaralandırır ve bir bağlantı noktası tedarikçisi, [TRTs](../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) yöntemiyle bağlantı noktalarını numaralandırır.
 
- Tipik COM kaydına ek olarak, bir bağlantı noktası tedarikçinin CLSID ve adı belirli kayıt defteri konumlarına yerleştirerek kendisini Visual Studio ile kaydetmesi gerekir. Bu adı işleyen bir hata ayıklama SDK Yardımcısı işlevi `SetMetric` : her öğe kaydedilecek şekilde çağrılır, bu nedenle:
+ tipik COM kaydına ek olarak, bir bağlantı noktası tedarikçinin clsıd ve adını belirli kayıt defteri konumlarına yerleştirerek kendisini Visual Studio kaydetmesi gerekir. Bu adı işleyen bir hata ayıklama SDK Yardımcısı işlevi `SetMetric` : her öğe kaydedilecek şekilde çağrılır, bu nedenle:
 
 ```cpp
 SetMetric(metrictypePortSupplier,

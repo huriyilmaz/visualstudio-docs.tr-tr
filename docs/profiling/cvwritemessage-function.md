@@ -1,6 +1,6 @@
 ---
-title: CvWriteMessage Işlevi | Microsoft Docs
-description: CvWriteMessage (C Kitaplığı) Eşzamanlılık Görselleştiricisi SDK işlevi için başvuru bilgilerine bakın.
+title: CvWriteMessage İşlevi | Microsoft Docs
+description: Eşzamanlılık Görselleştiricisi SDK'sı işlevi CvWriteMessage (C kitaplığı) için başvuru bilgilerine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -29,15 +29,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 59a5343ca9221990ce7661b843dfb221c602c32126e9d81940213b640de2c6fa
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 67e6b88c34520f805bffb7af5d12465d4f2ee427
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121396740"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122084447"
 ---
 # <a name="cvwritemessage-function"></a>CvWriteMessage işlevi
-Eşzamanlılık görselleştiricisi izleme dosyasına bir ileti yazar.
+Eşzamanlılık Görselleştiricisi izleme dosyasına bir ileti yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -98,23 +98,23 @@ HRESULT CvWriteMessageExVA(
 #### <a name="parameters"></a>Parametreler
  `argList` Bağımsız değişkenlerin listesi.
 
- `category` Yayılma kategorisi
+ `category` Aralığın kategorisi
 
- `level` Yayılma alanının önem düzeyi.
+ `level` Aralığın önem düzeyi.
 
- `pMarkerSeries` Geçerli işaretleyici serisi bağlamı. NULL olamaz.
+ `pMarkerSeries` Geçerli işaretçi serisi bağlamı. NULL olamaz.
 
  `pMessage` İleti biçimi dizesi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
+ S_OK başarıyla yazıldığı zaman iletiyi görüntüler. Hata varsa hata kodu. Hata koşullarını kontrol etmek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvişaretleyiciler. h*
+ **Üst bilgi:** *cvmarkers.h*
 
  **Unicode:** CvWriteMessageW, CvWriteMessageVW, CvWriteMessageExW, CvWriteMessageExVW
 
  **ANSI:** CvWriteMessageA, CvWriteMessageVA, CvWriteMessageExA, CvWriteMessageExVA
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

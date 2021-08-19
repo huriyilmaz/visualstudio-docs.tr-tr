@@ -1,6 +1,6 @@
 ---
 title: Web performansı ve yük testi projesi oluşturma
-description: Bu hızlı başlangıç ile Visual Studio 'da Web performans ve yük testi projesi oluşturma ve çalıştırma hakkında bilgi edinin.
+description: Bu hızlı başlangıç ile bir web performansı ve yük testi projesi Visual Studio ve çalıştırmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/14/2018
 ms.topic: quickstart
@@ -9,54 +9,55 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: d440b4d9fe175cb685b7e7ed3c5eb5911e541fde
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: dfc8f4835c2534c80109b3fc93eb7907bcef729d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917603"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054242"
 ---
 # <a name="quickstart-create-a-load-test-project"></a>Hızlı Başlangıç: Yük testi projesi oluşturma
 
-Bu 10 dakikalık hızlı başlangıçta, Visual Studio 'da bir Web performans ve yük testi projesi oluşturmayı ve çalıştırmayı öğreneceksiniz. Yük testleri bir sunucuya aynı anda erişen birçok kullanıcının benzetimini yapmak için Web performansını veya birim testlerini yürütür.
+Bu 10 dakikalık hızlı başlangıçta web performansı ve yük testi projesi oluşturma ve çalıştırma hakkında bilgi Visual Studio. Yük testleri, aynı anda bir sunucuya erişen birçok kullanıcının benzetimini yapmak için web performansı veya birim testleri yürütür.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="software-requirements"></a>Yazılım gereksinimleri
 
-Web performansı ve yük testi projeleri yalnızca Visual Studio **Enterprise sürümünde** kullanılabilir.
+Web performansı ve yük testi projeleri yalnızca **Enterprise'nin Visual Studio.**
 
 ## <a name="install-the-load-testing-component"></a>Yük testi bileşenini yükleme
 
-Web performans ve yük testi Araçları bileşeni yüklü değilse, Visual Studio Yükleyicisi aracılığıyla yüklemeniz gerekir.
+Web performansı ve yük testi araçları bileşeni henüz yüklü değilse, web uygulaması aracılığıyla yüklemeniz Visual Studio Yükleyicisi.
 
-1. Windows 'un **Başlat** menüsünden **Visual Studio yükleyicisi** açın. Ayrıca, Visual Studio 'da yeni proje iletişim kutusundan veya **Araçlar**  >  **' ın araç ve Özellikler Al ' i** seçerek menü çubuğundan erişebilirsiniz.
+1. Yeni **Visual Studio Yükleyicisi** başlat **menüsünden** Windows. Yeni proje iletişim kutusundan Visual Studio araç çubuğundan Araçlar Araçları ve Özellikleri Al'ı seçerek de  >   erişebilirsiniz.
 
-1. **Visual Studio yükleyicisi**, **tek tek bileşenler** sekmesini seçin ve aşağı kaydırarak **hata ayıklama ve test** bölümüne gidin. **Web performansı ve yük testi Araçları '** nı seçin.
+1. Bu **Visual Studio Yükleyicisi** Tek bileşenler **sekmesini** seçin ve hata ayıklama ve test bölümüne **inin.** Web **performansı ve yük testi araçları'ı seçin.**
 
-   ![Web performansı ve yük testi Araçları bileşeni](media/web-perf-load-testing-tools-component.png)
+   ![Web performansı ve yük testi araçları bileşeni](media/web-perf-load-testing-tools-component.png)
 
-1. **Değiştir** düğmesini seçin.
+1. Değiştir **düğmesini** seçin.
 
-   Web performans ve yük testi Araçları bileşeni yüklendi.
+   Web performansı ve yük testi araçları bileşeni yüklenir.
 
 ## <a name="create-a-load-test-project"></a>Yük testi projesi oluşturma
 
-Bu bölümde, bir C# yük testi projesi oluşturacağız. Dilerseniz, bir Visual Basic yük testi projesi de oluşturabilirsiniz.
+Bu bölümde bir C# yük testi projesi oluşturuz. Tercih ederseniz bir Visual Basic test projesi de oluşturabilirsiniz.
 
 ::: moniker range="vs-2017"
 
 1. Visual Studio'yu açın.
 
-2. Menü çubuğundan **Dosya** > **Yeni** > **Proje** ' yi seçin.
+2. Menü  > **çubuğundan** > **Project** Yeni Dosya'ya tıklayın.
 
-   **Yeni proje** iletişim kutusu açılır.
+   Yeni **Project** iletişim kutusu açılır.
 
-3. **Yeni proje** iletişim kutusunda, **yüklü** ve **Visual C#**' yi genişletin ve ardından **Test** kategorisini seçin. **Web performansı ve yük testi proje** şablonunu seçin.
+3. Yeni **Project** iletişim kutusunda Yüklü ve  Visual **C#** öğesini genişletin ve ardından **Test kategorisini** seçin. Web Performansı **ve Yük Testi Project** seçin.
 
    ![Web performansı ve yük testi proje şablonu](media/web-perf-load-test-project-template.png)
 
-4. Varsayılan adı kullanmak istemiyorsanız, proje için bir ad girin ve ardından **Tamam**' ı seçin.
+4. Varsayılan adı kullanmak istemiyorsanız proje için bir ad girin ve tamam'ı **seçin.**
 
 ::: moniker-end
 
@@ -64,53 +65,53 @@ Bu bölümde, bir C# yük testi projesi oluşturacağız. Dilerseniz, bir Visual
 
 1. Visual Studio'yu açın.
 
-2. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+2. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-3. **Yeni proje oluştur** sayfasında, arama kutusuna **Web testi** yazın ve ardından C# için **Web performansı ve yük testi projesi \[ kullanım dışı bırakıldı]** şablonunu seçin. **İleri**’yi seçin.
+3. Yeni **proje oluştur sayfasında** arama kutusuna **web testi** yazın ve C# için Web Performansı ve Yük Testi Project **Kullanım \[ Dışı]** şablonunu seçin. **İleri**’yi seçin.
 
-4. Varsayılan adı kullanmak istemiyorsanız proje için bir ad girin ve ardından **Oluştur**' u seçin.
+4. Varsayılan adı kullanmak istemiyorsanız proje için bir ad girin ve oluştur'a **basın.**
 
 ::: moniker-end
 
-   Visual Studio projeyi oluşturur ve **Çözüm Gezgini** dosyaları görüntüler. Proje başlangıçta *WebTest1. webtest* adlı bir Web testi dosyası içerir.
+   Visual Studio projeyi oluşturur ve dosyaları **Çözüm Gezgini.** Proje başlangıçta *WebTest1.webtest* adlı bir web test dosyası içerir.
 
 ## <a name="add-a-load-test-to-the-project"></a>Projeye yük testi ekleme
 
-1. **Çözüm Gezgini** içindeki proje düğümünün sağ tıklama menüsünde veya bağlam menüsünde   >  **Yük testi** Ekle ' yi seçin.
+1. Çözüm Gezgini'daki proje düğümünün sağ tıklama **menüsünden veya bağlam** menüsünden Yük Testi **Ekle'yi**  >  **seçin.**
 
-   **Yeni Yük Testi Sihirbazı** açılır.
+   Yeni **Yük Testi Sihirbazı** açılır.
 
-1. **Şirket Içi yük testi** seçeneğini belirleyin ve ardından **İleri**' yi seçin. Bulut tabanlı yük testi hakkında [buradan](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts&preserve-view=true)daha fazla bilgi edinebilirsiniz.
+1. Şirket **İçi Yük Testi seçeneğini ve** ardından Sonraki'yi **seçin.** Bulut tabanlı yük testi hakkında daha fazla bilgi için buraya [bakabilirsiniz.](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts&preserve-view=true)
 
-   ![Yeni Yük Testi Sihirbazı-ilk sayfa](media/load-test-wizard-page-1.png)
+   ![Yeni yük testi sihirbazı - ilk sayfa](media/load-test-wizard-page-1.png)
 
-1. **Yük testi senaryosuna teste ulaşana ve test karışımını düzenlemeye** kadar sihirbazda Ilerlemek için **İleri ' yi** seçin. **Ekle** düğmesini seçin.
+1. Bir **yük** testi senaryosuna test ekle ve test karışımı sayfasını düzenleyene kadar sihirbazda adım adım gitmek için **Sonraki'yi** seçin. **Ekle** düğmesini seçin.
 
-   **Testler ekle** iletişim kutusu açılır.
+   Test **Ekle iletişim** kutusu açılır.
 
-1. **Kullanılabilir testler** altında **WebTest1**' ı seçin ve ardından sağ oku seçerek **Seçili testler** kutusuna taşıyın. **Tamam** düğmesini seçin.
+1. Kullanılabilir **testler'in** altında **WebTest1'i** seçin ve ardından sağ oku seçerek Seçili testler **kutusuna taşıyın.** Tamam **düğmesini** seçin.
 
-   ![Testler Ekle iletişim kutusu](media/add-tests-dialog-box.png)
+   ![Test Ekle iletişim kutusu](media/add-tests-dialog-box.png)
 
-1. **Yeni Yük Testi Sihirbazı** geri dönüp **son** düğmesini seçin.
+1. Yeni Giriş **Yük Testi Sihirbazı,** Son **düğmesini** seçin.
 
-   Yük testi projeye eklenir ve yükleme testi dosyası düzenleyici penceresinde açılır.
+   Yük testi projeye eklenir ve yük testi dosyası düzenleyici penceresinde açılır.
 
 ## <a name="run-the-load-test"></a>Yük testini çalıştırma
 
-Çok fazla olmayan bir yük testi oluşturduk, ancak yine de çalıştıralım.
+Çok fazla bir şey yapmayan bir yük testi oluşturduk ama yine de çalıştır bakalım.
 
-Düzenleyicide açık olan yük testinin sağ tıklama menüsünde veya bağlam menüsünde **Yük testini çalıştır**' ı seçin.
+Düzenleyicide açık olan yük testinin sağ tıklama menüsünden veya bağlam menüsünden Yük Testi **Çalıştır'ı seçin.**
 
-![Yük testi menüsünü Çalıştır](media/run-load-test.png)
+![Yük Testi Çalıştır menüsü](media/run-load-test.png)
 
-Yük testi çalışmaya başlar. **Test sonuçları** pencere, testin devam ettiğini ve Yük Testi Çözümleyicisinin düzenleyici penceresinde görüntülendiğini gösterir. Test tamamlandıktan sonra, Varsayılanları kabul ettiyseniz beş dakika olması gerekir, düzenleyicide bir Özet gösterilir. Yük testinin sonuçları hakkında farklı bilgiler almak için **grafikler**, **Tablolar** veya **ayrıntı** seçeneklerini belirleyebilirsiniz.
+Yük testi çalışmaya başlar. Test Sonuçları  penceresinde testin devam ediyor olduğu ve yük testi çözümleyicisi düzenleyici penceresinde görüntüleniyor. Test tamamlandıktan sonra varsayılan değerleri kabul edersiniz beş dakika içinde düzenleyicide bir özet gösterilir. Yük **testinin sonuçları hakkında** **farklı bilgiler** almak **için** Graflar, Tablolar veya Ayrıntı'ı seçebilirsiniz.
 
-![Yük Testi Çözümleyicisi penceresi](media/load-test-analyzer.png)
+![Yük testi çözümleyicisi penceresi](media/load-test-analyzer.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık basit bir yük testi projesi oluşturduğunuza göre, bir sonraki adım senaryolar, sayaç kümeleri ve çalışma ayarları yapılandırmak için kullanılır.
+Basit bir yük testi projesi oluşturduğunuza göre, sonraki adım senaryoları, sayaç kümelerini ve çalıştırma ayarlarını yapılandırmaktır.
 
 > [!div class="nextstepaction"]
-> [Test ayarlarını Düzenle](edit-load-tests.md)
+> [Test ayarlarını düzenleme](edit-load-tests.md)

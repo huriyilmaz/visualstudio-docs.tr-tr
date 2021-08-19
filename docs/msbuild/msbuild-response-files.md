@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 0037b8ca17b8f1a3ed5756f7916b72c581b67e325f9a44b3e4b016a34ea07f88
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: abe7882e18936b169cfcd0b02e7eaa66c891f5a2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121302870"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085019"
 ---
 # <a name="msbuild-response-files"></a>MSBuild yanıt dosyaları
 

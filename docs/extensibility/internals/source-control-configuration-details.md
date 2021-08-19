@@ -1,6 +1,6 @@
 ---
 title: Kaynak denetimi yapılandırma ayrıntıları | Microsoft Docs
-description: Visual Studio 'da, proje sisteminizin veya düzenleyicinizin izin istemek üzere yapılandırılmasını içeren bir proje türü için kaynak denetimi uygulama hakkında bilgi edinin.
+description: proje sisteminizin veya düzenleyicinizin izin istemek üzere yapılandırılmasını içeren Visual Studio bir proje türü için kaynak denetimi uygulama hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: adbee9fc-7a2e-4abe-a3b8-e6615bcd797f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5c93e690922057116b395bed3881627e8a37847
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 22b4cccf05fb3f18b809d3d76cade14c57ea0188
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069355"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102356"
 ---
 # <a name="source-control-configuration-details"></a>Kaynak Denetimi Yapılandırma Ayrıntıları
 Kaynak denetimi uygulamak için, aşağıdakileri yapmak üzere proje sisteminizi veya düzenleyiciyi doğru şekilde yapılandırmanız gerekir:
@@ -45,7 +46,7 @@ Kaynak denetimi uygulamak için, aşağıdakileri yapmak üzere proje sisteminiz
 > [!NOTE]
 > Bu çağrıları her zaman preemptively yapın — diğer bir deyişle, düzenleyiciniz bir iptal alabilir.
 
-## <a name="request-permission-to-add-remove-or-rename-files-in-the-project"></a>Projede dosya ekleme, kaldırma veya yeniden adlandırma Izni iste
+## <a name="request-permission-to-add-remove-or-rename-files-in-the-project"></a>Project dosya ekleme, kaldırma veya yeniden adlandırma Izni isteme
  Bir proje bir dosya veya dizin ekleyebilmeniz, yeniden adlandırabilmeniz veya kaldırabilmesi `IVsTrackProjectDocuments2::OnQuery*` için, ortamdan izin istemek üzere uygun yöntemi çağırmalıdır. İzin verildiğinde, projenin işlemi tamamlaması ve sonra `IVsTrackProjectDocuments2::OnAfter*` işlemin tamamlandığını ortama bildirmek için uygun yöntemi çağırması gerekir. Projenin, <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> yalnızca üst dosyaları değil, tüm dosyalar (örneğin, özel dosyalar) için arabirim yöntemlerini çağırması gerekir. Dosya çağrıları zorunludur, ancak dizin çağrıları isteğe bağlıdır. Projenizde dizin bilgileri varsa, ilgili <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2> yöntemleri çağırmalıdır, ancak bu bilgileri içermiyorsa ortam dizin bilgilerini çıkarmaz.
 
  Proje, `IVsTrackProjectDocuments2` Proje Aç veya Kapat ' ın yöntemlerini çağırmamalıdır. Başlangıçta bu bilgileri isteyen dinleyiciler olay için bekleyebilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A> ve ihtiyaç duydukları bilgileri bulmak için çözüm aracılığıyla yineleyebilirsiniz. Kapatılırken, bu bilgiler gerekli değildir. `IVsTrackProjectDocuments2` , öğesinden sağlanır <xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments> .

@@ -11,14 +11,15 @@ ms.assetid: b1234216-0ac8-461d-b2a7-54f60f8f3262
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: f4dac9e7f506fdb4e6556de719aef554e47034f4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3aaed396e2038740936fd74643690b86dc80530a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105092468"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118924"
 ---
 # <a name="idebugerrorbreakpointresolution2"></a>IDebugErrorBreakpointResolution2
 Bu arabirim bir kesme noktası hatasının çözünürlüğünü temsil eder.

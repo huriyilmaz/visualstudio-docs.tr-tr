@@ -1,5 +1,5 @@
 ---
-description: Bir iş parçacığıyla ilgili hangi bilgilerin alınacağını belirtir.
+description: Bir iş parçacığı hakkında hangi bilgilerin alın olacağını belirtir.
 title: THREADPROPERTY_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 5b88acb9-03ea-4c29-a788-f0087dccbe23
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 81d185a80761e42e706dc3ef36da056bb37b0b1c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c70e331de05b3288e1105832616acb1d3359b049
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070875"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137840"
 ---
 # <a name="threadproperty_fields"></a>THREADPROPERTY_FIELDS
-Bir iş parçacığıyla ilgili hangi bilgilerin alınacağını belirtir.
+Bir iş parçacığı hakkında hangi bilgilerin alın olacağını belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,39 +56,39 @@ public enum enum_THREADPROPERTY_FIELDS {
 
 ## <a name="fields"></a>Alanlar
  `TPF_ID`\
- `dwThreadId` [Threadproperties](../../../extensibility/debugger/reference/threadproperties.md) yapısının alanını başlatın/kullanın.
+ `dwThreadId` [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısının alanını başlatma/kullanma.
 
  `TPF_SUSPENDCOUNT`\
- `dwSuspendCount`S yapısının alanını başlatın/kullanın `THREADPROPERTIE` .
+ S yapısının `dwSuspendCount` alanını `THREADPROPERTIE` başlatma/kullanma.
 
  `TPF_STATE`\
- `dwThreadState`S yapısının alanını başlatın/kullanın `THREADPROPERTIE` .
+ S yapısının `dwThreadState` alanını `THREADPROPERTIE` başlatma/kullanma.
 
  `TPF_PRIORITY`\
- `bstrPriority`S yapısının alanını başlatın/kullanın `THREADPROPERTIE` .
+ S yapısının `bstrPriority` alanını `THREADPROPERTIE` başlatma/kullanma.
 
  `TPF_NAME`\
- `bstrName`S yapısının alanını başlatın/kullanın `THREADPROPERTIE` .
+ S yapısının `bstrName` alanını `THREADPROPERTIE` başlatma/kullanma.
 
  `TPF_LOCATION`\
- `bstrLocation`S yapısının alanını başlatın/kullanın `THREADPROPERTIE` .
+ S yapısının `bstrLocation` alanını `THREADPROPERTIE` başlatma/kullanma.
 
  `TPF_ALLFIELDS`\
  Tüm alanları belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değerler, [threadproperties](../../../extensibility/debugger/reference/threadproperties.md) yapısının hangi alanlarının başlatıldığını göstermek Için [getthreadproperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) yöntemine bir bağımsız değişken olarak geçirilir.
+ Bu değerler, [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısının hangi alanlarının başlat olacağını belirtmek için [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) yöntemine bağımsız değişken olarak geçirildi.
 
- Bu değerler `dwFields` , `THREADPROPERTIES` hangi alanların kullanıldığını ve geçerli olduğunu göstermek için yapının üyesinde de kullanılır.
+ Bu değerler, hangi alanların `dwFields` ve geçerli olduğunu belirtmek için `THREADPROPERTIES` yapının üyesinde de kullanılır.
 
- Bu bayraklar bit düzeyinde birleştirilebilir `OR` .
+ Bu bayraklar bit olarak birleştirilmiş `OR` olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

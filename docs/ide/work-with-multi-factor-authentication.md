@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 737b9dbda08a1e65c7ce11163b246fe59e4042bf378743c77229e98a1ac206d3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8f9d8445f2bfac17a077ed9bf3a444350209ad58
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121371287"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055906"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>multi-factor authentication gerektiren hesaplarla Visual Studio kullanma
 

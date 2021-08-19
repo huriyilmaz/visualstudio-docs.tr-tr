@@ -1,5 +1,5 @@
 ---
-description: Bir bağlantı noktası sağlayıcı hakkında alınabilirsiniz meta verileri tanımlar.
+description: Bir bağlantı noktası sağlayıcısı hakkında alınabilecek meta verileri tanımlar.
 title: PORT_SUPPLIER_DESCRIPTION_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8cbb209600e2748378488142d0655d3856500ec186051208148f335428a7a6e9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cb0f0bdc78081bf358418df357199ca56140aafa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415162"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057427"
 ---
 # <a name="port_supplier_description_flags"></a>PORT_SUPPLIER_DESCRIPTION_FLAGS
 
-Bir bağlantı noktası sağlayıcı hakkında alınabilirsiniz meta verileri tanımlar.
+Bir bağlantı noktası sağlayıcısı hakkında alınabilecek meta verileri tanımlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,19 +46,19 @@ public enum enum_PORT_SUPPLIER_DESCRIPTION_FLAGS
 ## <a name="fields"></a>Alanlar
 
 `PSDFLAG_SHOW_WARNING_ICON`\
-Seçilirse, kullanıcı arabiriminde uyarı simgesi görüntülenir.
+Seçilirse, uyarı simgesi Kullanıcı arabiriminde görüntülenir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu numaralama [GetDescription yöntemi tarafından](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) döndürülür.
+Bu numaralandırma [GetDescription](../../../extensibility/debugger/reference/idebugportsupplierdescription2-getdescription.md) yöntemi tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üst bilgi: Msdbg.h
+Üst bilgi: msdbg. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
-description: Metnin belgeden kaldırıldığı hata ayıklama paketine bilgi verir.
-title: IDebugDocumentTextEvents2::onRemoveText | Microsoft Docs
+description: Hata ayıklama paketine metnin belgeden kaldırıldığını bildirir.
+title: 'IDebugDocumentTextEvents2:: onRemoveText | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 58e7608a82ab1867171cd8a5aed92c5723a3db0a39810d4de245d44e6b7971db
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 378510588f3b647cd7f4447797b58183f5875b32
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452140"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122119262"
 ---
 # <a name="idebugdocumenttextevents2onremovetext"></a>IDebugDocumentTextEvents2::onRemoveText
-Metnin belgeden kaldırıldığı hata ayıklama paketine bilgi verir.
+Hata ayıklama paketine metnin belgeden kaldırıldığını bildirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,13 +45,13 @@ int onRemoveText(
 
 ## <a name="parameters"></a>Parametreler
 `pos`\
-[in] Metnin [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) gösteren bir yapıdır.
+'ndaki Metnin nerede kaldırıldığını belirten [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı.
 
 `dwNumToRemove`\
-[in] Kaldırılan metnin karakter sayısını belirtir.
+'ndaki Kaldırılan metnin karakter sayısını belirtir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)

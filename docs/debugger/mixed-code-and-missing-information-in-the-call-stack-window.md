@@ -1,6 +1,6 @@
 ---
-title: Karma kodda çağrı yığını penceresinde eksik bilgi &
-description: Karma mod programlarında (yerel ve yönetilen), hata ayıklayıcı her zaman tam çağrı yığınını gösteremez. Yerel kod yönetilen kodu çağırdığında olası tutarsızlıkları öğrenin.
+title: Çağrı Yığını & eksik bilgiler için karışık kod
+description: Karma modlu programlarda (yerel ve yönetilen) hata ayıklayıcı her zaman tam çağrı yığınını gösterelemez. Yerel kod yönetilen kodu çağıran olası tutarsızlıkları öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -23,23 +23,24 @@ ms.assetid: dd628427-e8d6-4fc2-b524-9d6393ea5376
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 793d60c9bc550b0f29ac48e50a95dab601750ad4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 125eabe8e41b0ed63a8c5e4b942150d2b17d9be5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885111"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153933"
 ---
 # <a name="mixed-code-and-missing-information-in-the-call-stack-window"></a>Çağrı Yığını Penceresinde Karışık Kod ve Eksik Bilgiler
-Yönetilen ve yerel kod için çağrı yığınları arasındaki farklılıklar nedeniyle, kod türü karışımında hata ayıklayıcı her zaman tüm çağrı yığınını gösteremez. Yerel kod yönetilen kodu çağırdığında, **çağrı yığını** penceresinde aşağıdaki tutarsızlıkları fark edebilirsiniz:
+Yönetilen ve yerel kod için çağrı yığınları arasındaki farklar nedeniyle, kod türleri karma olduğunda hata ayıklayıcı her zaman tam çağrı yığınını gösteramaz. Yerel kod yönetilen kodu çağırsa, Çağrı Yığını penceresinde aşağıdaki **tutarsızlıkları görebilirsiniz:**
 
-- Yönetilen kodun hemen üzerindeki yerel çerçeve **çağrı yığını** penceresinde eksik olabilir. Daha fazla bilgi için bkz. [nasıl yapılır: yerel çerçeveler çağrı yığını penceresinde olmadığında yönetilen kodun dışına adım atın](how-to-use-the-call-stack-window.md).
+- Yönetilen kodun hemen üzerindeki yerel çerçeve Çağrı Yığını penceresinde **eksik** olabilir. Daha fazla bilgi için, [bkz. How to: Step out out Managed Code when Native Frames are Missing from the Call Stack Window](how-to-use-the-call-stack-window.md).
 
-- Hata ayıklayıcı dışında başlatılan karma mod uygulamaları için **çağrı yığını** penceresi yalnızca yönetilen kodu görüntüleyebilir ve yerel çerçevelerin hiçbiri görünür olmayacaktır.
+- Hata ayıklayıcı dışında başlatılan karma modlu uygulamalar için Çağrı Yığını penceresi yalnızca yönetilen kodu görüntüler ve yerel karelerin hiçbiri görünmez. 
 
-  Her iki durum da oldukça nadir. Yönetilen koda yapılan çoğu yerel çağrıda, çağrı yığınları doğru şekilde görünür.
+  Her iki durum da oldukça nadirdir. Yönetilen koda yapılan çoğu yerel çağrıda çağrı yığınları doğru görünür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl Yapılır: Çağrı Yığını Penceresini Kullanma](../debugger/how-to-use-the-call-stack-window.md)

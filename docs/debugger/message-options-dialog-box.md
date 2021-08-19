@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 22c6daa23ee811a26301f7c437dc480f50725d0ef53469b4864e0235193b2d59
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 31db089d32a40d660c08dc5e1c06533f171d219f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121343722"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154011"
 ---
 # <a name="message-options-dialog-box"></a>İleti Seçenekleri İletişim Kutusu
 [Iletiler görünümünde](../debugger/messages-view.md)hangi iletilerin listelendiğini seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu göstermek için **Spy** menüsünde **günlük iletileri** ' ni seçin.

@@ -16,14 +16,14 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 914ae751d500cbe90067affb21d59dad34a87cf47e8870d9587f443c7fae6dbe
-ms.sourcegitcommit: 29a893fb8639ee1d64922e99bf424e10ecce30d5
+ms.openlocfilehash: b7a7de2da143cf929b73dd4e6316c16486bc6027
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121465102"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101914"
 ---
-# <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio'da varsayılan klavye kısayolları
+# <a name="default-keyboard-shortcuts-in-visual-studio"></a>Visual Studio'de varsayılan klavye kısayolları
 
 Uygun klavye kısayolunu [seçerek Visual Studio](reference/visual-studio-commands.md) komutlara ve pencerelere erişebilirsiniz. Bu sayfada, Genel profili için varsayılan **komut** kısayolları listeledik ve bu kısayolu yüklemiş Visual Studio. Hangi profili seçtiy olursanız [](identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) seçin, Seçenekler iletişim kutusunu  açarak, Ortam  düğümünü genişleterek ve ardından Klavye'yi seçerek komutun kısayolunu **tanımlayabilirsiniz.** Ayrıca, verilen komutlardan herhangi birine farklı bir kısayol atayarak kısayollarınızı özelleştirebilirsiniz.
 
@@ -166,39 +166,39 @@ Aksi belirtilmedikçe bu bölümdeki tüm kısayollar genel olarak uygulanır. G
 
 #### <a name="view-popular-shortcuts"></a>Görünüm: popüler kısayollar
 
-|Komutlar|Klavye kısayolları [özel bağlamlar]|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları [Özel bağlamlar]|Komut Kimliği|
 |-|-|-|
-|Sınıf Görünümü|**Ctrl+Shift+C**| View.ClassView |
-|Etiketi Düzenle|**F2**| View.EditLabel |
-|Hata listesi|**CTRL + \\ , CTRL + E**<br /><br />ya da **CTRL + \\ , E**| View.ErrorList |
-|Geriye git|**CTRL +-**| View.NavigateBackward |
-|İleri git|**CTRL + SHIFT +-**| View.NavigateForward |
+|Sınıf görünümü|**Ctrl+Shift+C**| View.ClassView |
+|Etiketi düzenleme|**F2**| View.EditLabel |
+|Hata listesi|**Ctrl+ \\ , Ctrl+E**<br /><br />veya **Ctrl+ \\ , E**| View.ErrorList |
+|Geriye doğru gidin|**Ctrl+-**| View.NavigateBackward |
+|İleriye gidin|**Ctrl+Shift+-**| View.NavigateForward |
 |Nesne tarayıcısı|**Ctrl+Alt+J**| View.ObjectBrowser |
 |Çıktı|**Ctrl+Alt+O**| View.Output |
 |Özellik penceresi|**F4**| View.PropertiesWindow |
 |Yenile|**F5** [Takım Gezgini]| View.Refresh |
-|Sunucu Gezgini|**Ctrl+Alt+S**| View.ServerExplorer |
-|Akıllı etiketi göster|**CTRL +.**<br /><br />veya **SHIFT + alt + F10** [HTML Düzenleyicisi tasarım görünümü]| View.ShowSmartTag |
+|Sunucu gezgini|**Ctrl+Alt+S**| View.ServerExplorer |
+|Akıllı etiketi göster|**Ctrl+.**<br /><br />veya **Shift+Alt+F10** [HTML Düzenleyicisi Tasarım Görünümü]| View.ShowSmartTag |
 |Çözüm gezgini|**Ctrl+Alt+L**| View.SolutionExplorer |
-|TFS Takım Gezgini|**CTRL + \\ , CTRL + ı**| View.TfsTeamExplorer |
+|TFS Takım gezgini|**Ctrl+ \\ , Ctrl+M**| View.TfsTeamExplorer |
 |Araç Kutusu|**Ctrl+Alt+X**| View.Toolbox |
-|Kodu görüntüle|**ENTER** [sınıf diyagramı]<br /><br />or **F7** [Ayarlar tasarımcısı]| View.ViewCode |
-|Görünüm tasarımcısı|**SHIFT + F7** [HTML düzenleyici kaynak görünümü]| View.ViewDesigner |
+|Kodu görüntüleme|**Enter** [Sınıf Diyagramı]<br /><br />veya **F7** [Ayarlar Tasarımcısı]| View.ViewCode |
+|Görünüm tasarımcısı|**Shift+F7** [HTML Düzenleyicisi Kaynak Görünümü]| View.ViewDesigner |
 
 #### <a name="window-popular-shortcuts"></a>Pencere: popüler kısayollar
 
-|Komutlar|Klavye kısayolları [özel bağlamlar]|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları [Özel bağlamlar]|Komut Kimliği|
 |-|-|-|
-|Belge penceresini etkinleştir|**Esc**| Window.ActivateDocumentWindow |
-|Belge penceresini kapat|**Ctrl+F4**| Window.CloseDocumentWindow |
+|Belgeyi etkinleştir penceresi|**Esc**| Window.ActivateDocumentWindow |
+|Belge penceresini kapatma|**Ctrl+F4**| Window.CloseDocumentWindow |
 |Sonraki belge penceresi|**Ctrl+F6**| Window.NextDocumentWindow |
-|Sonraki belge penceresine git|**Ctrl+Sekme**| Window.NextDocumentWindowNav |
+|Sonraki belge penceresi gezintisi|**Ctrl+Sekme**| Window.NextDocumentWindowNav |
 |Sonraki bölme bölmesi|**F6**| Window.NextSplitPane |
 
 
 ## <a name="global-shortcuts"></a>Genel kısayollar
 
-bu klavye kısayolları *geneldir*, bu da Visual Studio bir pencere odağa sahip olduğunda bunları kullanabileceğiniz anlamına gelir.
+Bu klavye kısayolları *geneldir.* Başka bir ifadeyle, herhangi bir klavye Visual Studio odak noktası olduğunda bunları kullanabilirsiniz.
 
 - [Analiz](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_analyze)
 - [Düzenle](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_edit)
@@ -206,13 +206,13 @@ bu klavye kısayolları *geneldir*, bu da Visual Studio bir pencere odağa sahip
 - [Test](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_test)
 - [Mimari](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_architecture)
 - [Düzenleyici bağlam menüleri](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_editorContext)
-- [Project ve çözüm bağlam menüleri](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_projectContext)
+- [Project ve Çözüm bağlam menüleri](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_projectContext)
 - [Test Gezgini](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL)
 - [Derleme](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_build)
 - [Dosya](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_file)
 - [Yeniden düzenleme](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_refactor)
 - [Araçlar](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_tools)
-- [Bağlam menülerini Sınıf Görünümü](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_classview)
+- [Sınıf Görünümü menüleri](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_classview)
 - [Yardım](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_help)
 - [Çözüm Gezgini](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)
 - [Görünüm](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_view)
@@ -220,94 +220,94 @@ bu klavye kısayolları *geneldir*, bu da Visual Studio bir pencere odağa sahip
 - [Yük testi](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_loadtest)
 - [Team](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_team) (Takım)
 - [Pencere](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_window)
-- [Hata ayıklayıcı bağlam menüleri](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debugger)
+- [Hata ayıklayıcısı bağlam menüleri](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_debugger)
 - [Diğer bağlam menüleri](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_otherContext)
 - [Team Foundation bağlam menüleri](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_TFcontext)
 - [Azure](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_windowsazure)
 - [Tanılama hub’ı](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_diagnostics)
 
-### <a name="analyze"></a><a name="bkmk_analyze"></a> Analiz
+### <a name="analyze"></a><a name="bkmk_analyze"></a> Çözmek
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
-|Geriye doğru gidin|**Shift+Alt+3**| Analyze.NavigateBackward |
-|İleriye gidin|**Shift+Alt+4**| Analyze.NavigateForward |
+|Geriye git|**Shift+Alt+3**| Analyze.NavigateBackward |
+|İleri git|**Shift+Alt+4**| Analyze.NavigateForward |
 
-### <a name="architecture"></a><a name="bkmk_architecture"></a> Mimari
+### <a name="architecture"></a><a name="bkmk_architecture"></a> Mimarisini
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
-|Yeni diyagram|**Ctrl+ \\ , Ctrl+N**| Architecture.NewDiagram |
+|Yeni Diyagram|**CTRL + \\ , CTRL + N**| Architecture.NewDiagram |
 
-### <a name="build"></a><a name="bkmk_build"></a> Oluşturmak
+### <a name="build"></a><a name="bkmk_build"></a> Derlemeyi
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
-|Derleme seçimi|**Ctrl+B** (Visual Studio 2019)| Build.BuildSelection |
-|Çözüm oluşturma|**Ctrl+Shift+B**| Build.BuildSolution |
+|Oluşturma seçimi|**Ctrl + B** (Visual Studio 2019)| Build. BuildSelection |
+|Çözüm oluştur|**Ctrl+Shift+B**| Build.BuildSolution |
 |İptal|**Ctrl+Break tuşu**| Build.Cancel |
-|Derlemek|**Ctrl+F7**| Build.Compile |
-|Çözümde kod analizi çalıştırma|**Alt+F11**| Build.RunCodeAnalysisonSolution |
+|Se|**Ctrl+F7**| Build.Compile |
+|Çözümde Kod analizini Çalıştır|**Alt+F11**| Build.RunCodeAnalysisonSolution |
 
-### <a name="class-view-context-menus"></a><a name="bkmk_classview"></a> Sınıf Görünümü menüleri
+### <a name="class-view-context-menus"></a><a name="bkmk_classview"></a> Bağlam menülerini Sınıf Görünümü
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
 |Özellikler|**Alt+Enter**| ClassViewContextMenus.ClassViewMultiselectProjectreferencesItems.Properties |
 
-### <a name="debug"></a><a name="bkmk_debug"></a> Hata ayıklama
+### <a name="debug"></a><a name="bkmk_debug"></a> H
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
-|Kod değişikliklerini uygulama|**Alt+F10**| Debug.ApplyCodeChanges |
-|İşleme ekleme|**Ctrl+Alt+P**| Debug.AttachtoProcess |
-|Otomobil|**Ctrl+Alt+V, A**| Debug.Autos |
-|Hepsini kesme|**Ctrl+Alt+Break tuşu**| Debug.BreakAll |
+|Kod değişikliklerini Uygula|**Alt+F10**| Debug.ApplyCodeChanges |
+|İşleme İliştir|**Ctrl+Alt+P**| Debug. AttachtoProcess |
+|Otolar|**Ctrl+Alt+V, A**| Debug.Autos |
+|Tümünü kes|**Ctrl+Alt+Break tuşu**| Debug.BreakAll |
 |Kesme noktaları|**Ctrl+Alt+B**| Debug.Breakpoints |
 |Çağrı yığını|**Ctrl+Alt+C**| Debug.CallStack |
-|Tüm kesme noktaları silin|**Ctrl+Shift+F9**| Debug.DeleteAllBreakpoints |
+|Tüm kesme noktalarını Sil|**CTRL + SHIFT + F9**| Debug.DeleteAllBreakpoints |
 |Başlat|**Alt+F2**| Debug.DiagnosticsHub.Launch |
-|Demontaj|**Ctrl+Alt+D**| Debug.Disassembly |
-|Dom gezgini|**Ctrl+Alt+V, D**| Debug.DOMExplorer |
-|Kesme noktası etkinleştirme|**Ctrl+F9**| Debug.EnableBreakpoint |
+|Ayrıştırılmış kod|**Ctrl+Alt+D**| Debug.Disassembly |
+|DOM Gezgini|**Ctrl+Alt+V, D**| Debug.DOMExplorer |
+|Kesme noktasını etkinleştir|**Ctrl+F9**| Debug.EnableBreakpoint |
 |Özel durumlar|**Ctrl+Alt+E**| Debug.Exceptions |
-|İşlev kesme noktası|**Ctrl+K, B** (Visual Studio 2019)<br />**Ctrl tuşunu basılı tutarak** + **B** (Visual Studio 2017)| Debug.FunctionBreakpoint |
-|Önceki çağrıya veya IntelliTrace olayına gidin|**Ctrl+Shift+F11**| Debug.GoToPreviousCallorIntelliTraceEvent |
-|Tanılamayı başlatma|**Alt+F5**| Debug.Graphics.StartDiagnostics |
+|İşlev kesme noktası|**Ctrl + K, B** (Visual Studio 2019)<br />**CTRL** + **B** (Visual Studio 2017)| Debug. FunctionBreakpoint |
+|Önceki çağrıya veya IntelliTrace olayına git|**Ctrl+Shift+F11**| Debug.GoToPreviousCallorIntelliTraceEvent |
+|Tanılamayı Başlat|**Alt+F5**| Debug.Graphics.StartDiagnostics |
 |Hemen|**Ctrl+Alt+I**| Debug.Immediate |
 |IntelliTrace çağrıları|**Ctrl+Alt+Y, T**| Debug.IntelliTraceCalls |
 |IntelliTrace olayları|**Ctrl+Alt+Y, F**| Debug.IntelliTraceEvents |
-|JavaScript Konsolu|**Ctrl+Alt+V, C**| Debug.JavaScriptConsole |
-|Ayarlanmalıdır|**Ctrl+Alt+V, L**| Debug.Locals |
-|İşlem açılan kutusu|**Ctrl+5**| Debug.LocationToolbar.ProcessCombo |
-|Yığın çerçevesi açılan kutusu|**Ctrl+7**| Debug.LocationToolbar.StackFrameCombo |
-|İş parçacığı açılan kutusu|**Ctrl+6**| Debug.LocationToolbar.ThreadCombo |
-|Geçerli iş parçacığının bayrak durumuna geç|**Ctrl+8**| Debug.LocationToolbar.ToggleCurrentThreadFlaggedState |
-|Bayraklı iş parçacıklarını değiştirme|**Ctrl+9**| Debug.LocationToolbar.ToggleFlaggedThreads |
+|JavaScript konsolu|**Ctrl+Alt+V, C**| Debug.JavaScriptConsole |
+|Yerli|**Ctrl+Alt+V, L**| Debug.Locals |
+|İşlem birleşik giriş|**Ctrl+5**| Debug.LocationToolbar.ProcessCombo |
+|Yığın çerçevesi birleşik giriş|**Ctrl+7**| Debug.LocationToolbar.StackFrameCombo |
+|İş parçacığı birleşik giriş|**Ctrl+6**| Debug.LocationToolbar.ThreadCombo |
+|Geçerli iş parçacığı bayraklı durumunu açma//sn|**Ctrl+8**| Debug.LocationToolbar.ToggleCurrentThreadFlaggedState |
+|Bayraklı iş parçacıklarını geçişli olarak değiştir|**Ctrl+9**| Debug.LocationToolbar.ToggleFlaggedThreads |
 |Bellek 1|**Ctrl+Alt+M, 1**| Debug.Memory1 |
-|Bellek 2|**Ctrl + alt + a, 2**| Debug.Memory2 |
-|Bellek 3|**Ctrl + alt + a, 3**| Debug.Memory3 |
-|Bellek 4|**Ctrl + alt + a, 4**| Debug.Memory4 |
+|Bellek 2|**Ctrl+Alt+M, 2**| Debug.Memory2 |
+|Bellek 3|**Ctrl+Alt+M, 3**| Debug.Memory3 |
+|Bellek 4|**Ctrl+Alt+M, 4**| Debug.Memory4 |
 |Modül|**Ctrl+Alt+U**| Debug.Modules |
-|Paralel Yığınlar|**Ctrl+Shift+D, S**| Debug.ParallelStacks |
+|Paralel yığınlar|**Ctrl+Shift+D, S**| Debug.ParallelStacks |
 |Paralel izleme 1|**Ctrl+Shift+D, 1**| Debug.ParallelWatch1 |
-|Paralel izleme 2|**CTRL + SHIFT + D, 2**| Debug.ParallelWatch2 |
-|Paralel izleme 3|**CTRL + SHIFT + D, 3**| Debug.ParallelWatch3 |
-|Paralel izleme 4|**CTRL + SHIFT + D, 4**| Debug.ParallelWatch4 |
+|Paralel izleme 2|**Ctrl+Shift+D, 2**| Debug.ParallelWatch2 |
+|Paralel izleme 3|**Ctrl+Shift+D, 3**| Debug.ParallelWatch3 |
+|Paralel izleme 4|**Ctrl+Shift+D, 4**| Debug.ParallelWatch4 |
 |İşlemler|**Ctrl+Alt+Z**| Debug.Processes |
-|Hızlı Bakış|**SHIFT + F9** ya da **Ctrl + Alt + Q**| Debug.QuickWatch |
-|İşleme yeniden iliştir|**Shift+Alt+P**| Hata Ayıkla. yeniden Iliştirchtoprocess |
-|WindowsApp 'yi Yenile|**Ctrl+Shift+R**| Debug.RefreshWindowsapp |
-|Kayıtların|**Ctrl+Alt+G**| Debug.Registers |
+|Hızlı izleme|**Shift+F9** veya **Ctrl+Alt+Q**| Debug.QuickWatch |
+|İşleme yeniden ekleme|**Shift+Alt+P**| Debug.ReattachtoProcess |
+|Windowsapp'i yenileme|**Ctrl+Shift+R**| Debug.RefreshWindowsapp |
+|Kayd -eder|**Ctrl+Alt+G**| Debug.Registers |
 |Yeniden başlat|**Ctrl+Shift+F5**| Debug.Restart |
-|İmlece kadar Çalıştır|**Ctrl+F10**| Debug.RunToCursor |
-|Sonraki ifadeyi ayarla|**Ctrl+Shift+F10**| Debug.SetNextStatement |
-|Kod haritasında çağrı yığınını göster|**CTRL + SHIFT + '**| Debug.ShowCallStackonCodeMap |
-|Sonraki ifadeyi göster|**Alt + NUM** *| Debug.ShowNextStatement |
+|İmleç için çalıştır|**Ctrl+F10**| Debug.RunToCursor |
+|Sonraki deyimi ayarla|**Ctrl+Shift+F10**| Debug.SetNextStatement |
+|Kod haritasında çağrı yığınını gösterme|**Ctrl+Shift+'**| Debug.ShowCallStackonCodeMap |
+|Sonraki deyimi göster|**Alt+Num** *| Debug.ShowNextStatement |
 |Başlangıç|**F5**| Debug.Start |
-|Windows Phone uygulama analizini Başlat|**Alt+F1**| Debug.StartWindowsPhoneApplicationAnalysis |
-|Hata ayıklama olmadan Başlat|**Ctrl+F5**| Debug.StartWithoutDebugging |
-|Adımla|**F11**| Debug.StepInto |
+|Windows Phone uygulama analizini başlatma|**Alt+F1**| Debug.StartWindowsPhoneApplicationAnalysis |
+|Hata ayıklama olmadan başlatma|**Ctrl+F5**| Debug.StartWithoutDebugging |
+|içine adımla|**F11**| Debug.StepInto |
 |Geçerli işleme adımla|**Ctrl+Alt+F11**| Debug.StepIntoCurrentProcess |
 |Belirli bir adımla|**Shift+Alt+F11**| Debug.StepIntoSpecific |
 |Dışarı adımla|**Shift+F11**| Debug.StepOut |
@@ -383,212 +383,212 @@ bu klavye kısayolları *geneldir*, bu da Visual Studio bir pencere odağa sahip
 |Yinele|**Ctrl+Y**<br /><br /> veya<br /><br /> **Ctrl+Shift+Z**<br /><br /> veya<br /><br /> **Shift+Alt+Geri Al tuşu**| Edit.Redo |
 |Uzak başvuruları yenileme|**Ctrl+Shift+J**| Edit.RefreshRemoteReferences |
 |Değiştir|**Ctrl+H**| Edit.Replace |
-|Dosyalarda değiştirme|**Ctrl+Shift+H**| Edit.ReplaceinFiles |
+|Dosyalarda Değiştir|**Ctrl+Shift+H**| Edit.ReplaceinFiles |
 |Tümünü seç|**Ctrl+A**| Edit.SelectAll |
-|Sonraki denetimi seçin|**Sekme**| Edit.SelectNextControl |
-|Önceki denetimi seçme|**Shift+Sekme Tuşu**| Edit.SelectPreviousControl |
-|Kutucuk kılavuzu gösterme|**Enter**| Edit.ShowTileGrid |
-|Boyut denetimi aşağı|**Ctrl+Shift+Aşağı Ok**| Edit.SizeControlDown |
-|Boyut denetimi aşağı kılavuz|**Shift+Aşağı Ok**| Edit.SizeControlDownGrid |
-|Boyut denetimi sola|**Ctrl+Shift+Sol Ok**| Edit.SizeControlLeft |
-|Boyut denetimi sol kılavuz|**Shift+Sol Ok**| Edit.SizeControlLeftGrid |
-|Boyut denetimi hakkı|**Ctrl+Shift+Sağ Ok**| Edit.SizeControlRight |
-|Boyut denetimi sağ kılavuzu|**Shift+Sağ Ok**| Edit.SizeControlRightGrid |
-|Boyut denetimi|**Ctrl+Shift+Yukarı Ok**| Edit.SizeControlUp |
-|Boyut denetimi yukarı kılavuzu|**Shift+Yukarı Ok**| Edit.SizeControlUpGrid |
-|Arama durdurma|**Alt+F3, S**| Edit.StopSearch |
-|Çevrele|**Ctrl+K, Ctrl+S**| Edit.SurroundWith |
-|Geri Al|**Ctrl+Z**<br /><br /> veya<br /><br /> **Alt+Geri Al tuşu**| Edit.Undo |
+|Sonraki denetimi Seç|**Sekme**| Edit.SelectNextControl |
+|Önceki denetimi Seç|**Shift+Sekme Tuşu**| Edit.SelectPreviousControl |
+|Döşeme kılavuzunu göster|**Enter**| Edit.ShowTileGrid |
+|Denetimi aşağı doğru Boyutlandır|**Ctrl+Shift+Aşağı Ok**| Edit.SizeControlDown |
+|Denetimi alt kılavuza kadar Boyutlandır|**Shift+Aşağı Ok**| Edit.SizeControlDownGrid |
+|Denetimi sola Boyutlandır|**Ctrl+Shift+Sol Ok**| Edit.SizeControlLeft |
+|Denetim sol kılavuza kadar Boyutlandır|**Shift+Sol Ok**| Edit.SizeControlLeftGrid |
+|Denetimi sağa Boyutlandır|**Ctrl+Shift+Sağ Ok**| Edit.SizeControlRight |
+|Denetim sağ kılavuzunu Boyutlandır|**Shift+Sağ Ok**| Edit.SizeControlRightGrid |
+|Denetimin boyutunu ayarla|**Ctrl+Shift+Yukarı Ok**| Edit.SizeControlUp |
+|Denetimi yukarı kılavuza göre boyutlandır|**Shift+Yukarı Ok**| Edit.SizeControlUpGrid |
+|Aramayı durdur|**Alt+F3, S**| Edit.StopSearch |
+|Şununla Çevrele|**Ctrl+K, Ctrl+S**| Edit.SurroundWith |
+|Geri Al|**CTRL + Z**<br /><br /> veya<br /><br /> **Alt+Geri Al tuşu**| Edit.Undo |
 
 ### <a name="editor-context-menus"></a><a name="bkmk_editorContext"></a> Düzenleyici bağlam menüleri
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
-|Kesme noktası koşulları|**Alt+F9, C**| EditorContextMenus.CodeWindow.Breakpoint.BreakpointConditions |
-|Kesme noktası etiketleri düzenleme|**Alt+F9, L**| EditorContextMenus.CodeWindow.Breakpoint.BreakpointEditlabels |
-|Öğeyi göster|**Ctrl+'**| EditorContextMenus.CodeWindow.CodeMap.ShowItem |
+|Kesme noktası koşulları|**Alt + F9, C**| EditorContextMenus. CodeWindow. Breakpoint. BreakpointConditions |
+|Kesme noktası etiketlerini Düzenle|**Alt+F9, L**| EditorContextMenus.CodeWindow.Breakpoint.BreakpointEditlabels |
+|Öğeyi göster|**CTRL + '**| EditorContextMenus.CodeWindow.CodeMap.ShowItem |
 |Yürütme|**Ctrl+Alt+F5**| EditorContextMenus.CodeWindow.Execute |
 |Görünüme git|**Ctrl+M, Ctrl+G**| EditorContextMenus.CodeWindow.GoToView |
-|Üst bilgi kod dosyasını aç/kapat|**Ctrl+K, Ctrl+O** ('O' harfi)| EditorContextMenus.CodeWindow.ToggleHeaderCodeFile |
-|Çağrı hiyerarşisini görüntüleme|**Ctrl+K, Ctrl+T**<br /><br /> veya<br /><br /> **Ctrl+K, T**| EditorContextMenus.CodeWindow.ViewCallHierarchy |
+|Üstbilgi kodu dosyasını değiştirme|**CTRL + K, CTRL + O** (harf ' O ')| EditorContextMenus.CodeWindow.ToggleHeaderCodeFile |
+|Çağrı hiyerarşisini görüntüle|**Ctrl+K, Ctrl+T**<br /><br /> veya<br /><br /> **Ctrl+K, T**| EditorContextMenus.CodeWindow.ViewCallHierarchy |
 
-### <a name="file"></a><a name="bkmk_file"></a> Dosya
+### <a name="file"></a><a name="bkmk_file"></a> Dosyasýný
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
 |Çıkış|**Alt+F4**| File.Exit |
 |Yeni dosya|**Ctrl+N**| File.NewFile |
 |Yeni proje|**Ctrl+Shift+N**| File.NewProject |
-|Yeni web sitesi|**Shift+Alt+N**| File.NewWebSite |
-|Dosyayı açma|**Ctrl+O** ('O' harfi)| File.OpenFile |
-|Projeyi açma|**CTRL + SHIFT + O** (harf ' O ')| File.OpenProject |
-|Web sitesi aç|**SHIFT + alt + O** (harf ' O ')| File.OpenWebSite |
+|Yeni Web sitesi|**Shift+Alt+N**| File.NewWebSite |
+|Dosya Aç|**CTRL + O** (harf ' O ')| File.OpenFile |
+|Projeyi açma|**Ctrl+Shift+O** ('O' harfi)| File.OpenProject |
+|Web sitesini açma|**Shift+Alt+O** ('O' harfi)| File.OpenWebSite |
 |Yazdır|**Ctrl+P**| File.Print |
-|Tümünü Kaydet|**Ctrl+Shift+S**| File.SaveAll |
-|Seçili öğeleri kaydet|**Ctrl+S**| File.SaveSelectedItems |
+|Hepsini kaydet|**Ctrl+Shift+S**| File.SaveAll |
+|Seçili öğeleri kaydetme|**Ctrl+S**| File.SaveSelectedItems |
 |Tarayıcıda görüntüleme|**Ctrl+Shift+W**| File.ViewinBrowser |
 
 ### <a name="help"></a><a name="bkmk_help"></a> Yardım
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
 |Yardım içeriği ekleme ve kaldırma|**Ctrl+Alt+F1**| Help.AddandRemoveHelpContent |
 |F1 yardımı|**F1**| Help.F1Help |
-|Yardım 'ı görüntüle|**Ctrl+F1**| Help.ViewHelp |
+|Yardımı görüntüleme|**Ctrl+F1**| Help.ViewHelp |
 |Pencere yardımı|**Shift+F1**| Help.WindowHelp |
 
 ### <a name="load-test"></a><a name="bkmk_loadtest"></a> Yük testi
 
-|Komut|Klavye kısayolu|Komut KIMLIĞI|
+|Komut|Klavye kısayolu|Komut Kimliği|
 |-|-|-|
-|Sayaç bölmesine geç|**Ctrl+R, Q**| LoadTest.JumpToCounterPane |
+|Sayaç bölmesine atla|**Ctrl+R, Q**| LoadTest.JumpToCounterPane |
 
 ### <a name="other-context-menus"></a><a name="bkmk_otherContext"></a> Diğer bağlam menüleri
 
-|Komut|Klavye kısayolu|Komut KIMLIĞI|
+|Komut|Klavye kısayolu|Komut Kimliği|
 |-|-|-|
-|Yeni Diyagram Ekle|**Ekle**| OtherContextMenus.MicrosoftDataEntityDesignContext.AddNewDiagram |
+|Yeni diyagram ekleme|**Ekle**| OtherContextMenus.MicrosoftDataEntityDesignContext.AddNewDiagram |
 
 ### <a name="project"></a><a name="bkmk_project"></a> Proje
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Var olan öğeyi Ekle|**Shift+Alt+A**| Project.AddExistingItem |
-|Yeni öğe Ekle|**Ctrl+Shift+A**| Project.AddNewItem |
-|Sınıf Sihirbazı|**Ctrl+Shift+X**| Project.ClassWizard |
+|Var olan öğeyi ekleme|**Shift+Alt+A**| Project.AddExistingItem |
+|Yeni öğe ekleme|**Ctrl+Shift+A**| Project.AddNewItem |
+|Sınıf sihirbazı|**Ctrl+Shift+X**| Project.ClassWizard |
 |Geçersiz kıl|**Ctrl+Alt+Ins**| Project.Override |
-|Değişiklikleri Önizle|**Alt +;** sonra **alt + C**| Project.Previewchanges |
-|Seçili dosyaları Yayımla|**Alt +;** sonra **alt + P**| Project.Publishselectedfiles |
-|Seçili dosyaları sunucudan Değiştir|**Alt +;** sonra **Alt + R**| Project.Replaceselectedfilesfromserver |
+|Değişiklikleri önizleme|**Alt+;** ardından **Alt+C**| Project.Previewchanges |
+|Seçilen dosyaları yayımlama|**Alt+;** ardından **Alt+P**| Project.Publishselectedfiles |
+|Sunucudan seçilen dosyaları değiştirme|**Alt+;** ardından **Alt+R**| Project.Replaceselectedfilesfromserver |
 
 ### <a name="project-and-solution-context-menus"></a><a name="bkmk_projectContext"></a>Project ve çözüm bağlam menüleri
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
 |Aşağı taşı|**Alt+Aşağı Ok**| ProjectandSolutionContextMenus.Item.MoveDown |
 |Yukarı taşı|**Alt+Yukarı Ok**| ProjectandSolutionContextMenus.Item.MoveUp |
 
-### <a name="refactor"></a><a name="bkmk_refactor"></a> Düzenle
+### <a name="refactor"></a><a name="bkmk_refactor"></a> Yeniden düzenleme
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
 |Alanı kapsülleme|**Ctrl+R, Ctrl+E**| Refactor.EncapsulateField |
 |Ayıklama arabirimi|**Ctrl+R, Ctrl+I**| Refactor.ExtractInterface |
 |Ayıklama metodu|**Ctrl+R, Ctrl+M**| Refactor.ExtractMethod |
-|Parametreleri Kaldır|**Ctrl+R, Ctrl+V**| Refactor.RemoveParameters |
+|Parametreleri kaldırma|**Ctrl+R, Ctrl+V**| Refactor.RemoveParameters |
 |Rename|**Ctrl+R, Ctrl+R**| Refactor.Rename |
-|Parametreleri yeniden sırala|**CTRL + R, CTRL + O** (harf ' O ')| Refactor.ReorderParameters |
+|Parametreleri yeniden sıralama|**Ctrl+R, Ctrl+O** ('O' harfi)| Refactor.ReorderParameters |
 
 ### <a name="solution-explorer"></a><a name="bkmk_solutionexplorerGLOBAL"></a> Çözüm Gezgini
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Açık dosyalar filtresi|**CTRL + [**, **O** (harf ' O ')<br /><br /> veya<br /><br /> **CTRL + [**, **CTRL + O** (harf ' O ')| SolutionExplorer.OpenFilesFilter |
-|Bekleyen değişiklikler filtresi|**CTRL + [**, **P**<br /><br /> veya<br /><br /> **CTRL + [**, **CTRL + P**| SolutionExplorer.PendingChangesFilter |
-|Etkin belge ile Eşitle|**CTRL + [**, **S**<br /><br /> veya<br /><br /> **CTRL + [**, **CTRL + S**| SolutionExplorer.SyncWithActiveDocument |
+|Dosyaları aç filtresi|**Ctrl+[**, **O** (harf 'O')<br /><br /> veya<br /><br /> **Ctrl+[**, **Ctrl+O** (harf 'O')| SolutionExplorer.OpenFilesFilter |
+|Bekleyen değişiklikler filtresi|**Ctrl+[**, **P**<br /><br /> veya<br /><br /> **Ctrl+[**, **Ctrl+P**| SolutionExplorer.PendingChangesFilter |
+|Etkin belgeyle eşitleme|**Ctrl+[**, **S**<br /><br /> veya<br /><br /> **Ctrl+[**, **Ctrl+S**| SolutionExplorer.SyncWithActiveDocument |
 
 ### <a name="team"></a><a name="bkmk_team"></a> Takım
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Git dallarına git|**CTRL + 0** (sıfır), **CTRL + N**<br /><br /> veya<br /><br /> **Ctrl+0, N**| Team.Git.GoToGitBranches |
-|Git değişikliklerine git|**CTRL + 0** (sıfır), **CTRL + G**<br /><br /> veya<br /><br /> **Ctrl+0, G**| Team.Git.GoToGitChanges |
-|Git yürütmelerine git|**CTRL + 0** (sıfır), **CTRL + O** (harf ' O ')<br /><br /> veya<br /><br /> **Ctrl+0, O**| Team.Git.GoToGitCommits |
-|Takım Gezgini araması|**CTRL + '**| Team.TeamExplorerSearch |
+|Git dallarına gitme|**Ctrl+0** (sıfır), **Ctrl+N**<br /><br /> veya<br /><br /> **Ctrl+0, N**| Team.Git.GoToGitBranches |
+|Git değişikliklerine gitme|**Ctrl+0** (sıfır), **Ctrl+G**<br /><br /> veya<br /><br /> **Ctrl+0, G**| Team.Git.GoToGitChanges |
+|Git işlemeleri'ne gidin|**Ctrl+0** (sıfır), **Ctrl+O** ('O' harfi)<br /><br /> veya<br /><br /> **Ctrl+0, O**| Team.Git.GoToGitCommits |
+|Takım gezgini araması|**Ctrl+'**| Team.TeamExplorerSearch |
 
 ### <a name="team-foundation-context-menus"></a><a name="bkmk_TFcontext"></a> Team Foundation bağlam menüleri
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
-|-|-|-|
-|Derlemeler 'e git|**CTRL + 0** (sıfır), **CTRL + B**<br /><br /> veya<br /><br /> **Ctrl+0, B**| TeamFoundationContextMenus.Commands.GoToBuilds |
-|Bağlan 'a git|**CTRL + 0** (sıfır), **CTRL + C**<br /><br /> veya<br /><br /> **Ctrl+0, C**| TeamFoundationContextMenus.Commands.GoToConnect |
-|Belgelere git|**CTRL + 0** (sıfır), **CTRL + D**<br /><br /> veya<br /><br /> **Ctrl+0, D**| TeamFoundationContextMenus.Commands.GoToDocuments |
-|Girişe git|**CTRL + 0** (sıfır), **CTRL + H**<br /><br /> veya<br /><br /> **Ctrl+0, H**| TeamFoundationContextMenus.Commands.GoToHome |
-|Çalışmam 'a git|**CTRL + 0** (sıfır), **CTRL + ı**<br /><br /> veya<br /><br /> **Ctrl+0, M**| TeamFoundationContextMenus.Commands.GoToMyWork |
-|Bekleyen değişikliklere git|**CTRL + 0** (sıfır), **CTRL + P**<br /><br /> veya<br /><br /> **Ctrl+0, P**| TeamFoundationContextMenus.Commands.GoToPendingChanges |
-|Raporlara git|**CTRL + 0** (sıfır), **CTRL + R**<br /><br /> veya<br /><br /> **Ctrl+0, R**| TeamFoundationContextMenus.Commands.GoToReports |
-|Ayarlar 'a git|**CTRL + 0** (sıfır), **CTRL + S**<br /><br /> veya<br /><br /> **Ctrl+0, S**| TeamFoundationContextMenus.Commands.GoToSettings |
-|Web erişimi 'ne git|**CTRL + 0** (sıfır), **CTRL + A**<br /><br /> veya<br /><br /> **Ctrl+0, A**| TeamFoundationContextMenus.Commands.GoToWebAccess |
-|İş öğelerine git|**CTRL + 0** (sıfır), **CTRL + W**<br /><br /> veya<br /><br /> **Ctrl+0, W**| TeamFoundationContextMenus.Commands.GoToWorkItems |
-
-### <a name="test"></a><a name="bkmk_test"></a> Sınamanız
-
 |Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Kodlanmış ui test oluşturucusu kullanma|**Ctrl+ \\ , Ctrl+C**| Test.UseCodedUITestBuilder |
-|Mevcut eylem kaydını kullanma|**Ctrl+ \\ , Ctrl+A**| Test.UseExistingActionRecording |
+|Derlemelere git|**Ctrl+0** (sıfır), **Ctrl+B**<br /><br /> veya<br /><br /> **Ctrl+0, B**| TeamFoundationContextMenus.Commands.GoToBuilds |
+|Bağlanmak için gidin|**Ctrl+0** (sıfır), **Ctrl+C**<br /><br /> veya<br /><br /> **Ctrl+0, C**| TeamFoundationContextMenus.Commands.GoToConnect |
+|Belgelere gidin|**Ctrl+0** (sıfır), **Ctrl+D**<br /><br /> veya<br /><br /> **Ctrl+0, D**| TeamFoundationContextMenus.Commands.GoToDocuments |
+|Giriş'e gidin|**Ctrl+0** (sıfır), **Ctrl+H**<br /><br /> veya<br /><br /> **Ctrl+0, H**| TeamFoundationContextMenus.Commands.GoToHome |
+|Çalışmama git|**Ctrl+0** (sıfır), **Ctrl+M**<br /><br /> veya<br /><br /> **Ctrl+0, M**| TeamFoundationContextMenus.Commands.GoToMyWork |
+|Bekleyen değişikliklere gitme|**Ctrl+0** (sıfır), **Ctrl+P**<br /><br /> veya<br /><br /> **Ctrl+0, P**| TeamFoundationContextMenus.Commands.GoToPendingChanges |
+|Raporlara gitme|**Ctrl+0** (sıfır), **Ctrl+R**<br /><br /> veya<br /><br /> **Ctrl+0, R**| TeamFoundationContextMenus.Commands.GoToReports |
+|Ayarlara gidin|**Ctrl+0** (sıfır), **Ctrl+S**<br /><br /> veya<br /><br /> **Ctrl+0, S**| TeamFoundationContextMenus.Commands.GoToSettings |
+|Web erişimine gidin|**Ctrl+0** (sıfır), **Ctrl+A**<br /><br /> veya<br /><br /> **Ctrl+0, A**| TeamFoundationContextMenus.Commands.GoToWebAccess |
+|İş öğelerine gitme|**Ctrl+0** (sıfır), **Ctrl+W**<br /><br /> veya<br /><br /> **Ctrl+0, W**| TeamFoundationContextMenus.Commands.GoToWorkItems |
+
+### <a name="test"></a><a name="bkmk_test"></a> Test
+
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|-|-|-|
+|Kodlanmış UI Test Oluşturucusu kullan|**CTRL + \\ , CTRL + C**| Test.UseCodedUITestBuilder |
+|Var olan eylem kaydını kullan|**CTRL + \\ , CTRL + A**| Test.UseExistingActionRecording |
 
 ### <a name="test-explorer"></a><a name="bkmk_testexplorerGLOBAL"></a> Test Gezgini
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
-|Tüm testlerde hata ayıklama|**Ctrl+R, Ctrl+A**| TestExplorer.DebugAllTests |
-|Bağlamdaki tüm testlerde hata ayıklama|**Ctrl+R, Ctrl+T**| TestExplorer.DebugAllTestsInContext |
-|Son çalıştırmada hata ayıklama|**Ctrl+R, D**| TestExplorer.DebugLastRun |
-|Son çalıştırmayı yinele|**Ctrl+R, L**| TestExplorer.RepeatLastRun |
-|Tüm testleri çalıştırma|**Ctrl+R, A**| TestExplorer.RunAllTests |
-|Tüm testleri bağlam içinde çalıştırma|**Ctrl+R, T**| TestExplorer.RunAllTestsInContext |
-|Test gezginini göster|**Ctrl+E, T**| TestExplorer.ShowTestExplorer |
-|Sekmeyi aç|**Ctrl+E, L**| LiveUnitTesting.OpenTab |
-|Kod kapsamı sonuçları|**Ctrl+E, C**| Test.CodeCoverageResults |
+|Tüm testlerde hata ayıkla|**Ctrl+R, Ctrl+A**| TestExplorer.DebugAllTests |
+|Bağlamdaki tüm testlerde hata ayıkla|**Ctrl+R, Ctrl+T**| TestExplorer.DebugAllTestsInContext |
+|Son çalıştırmada hata ayıkla|**CTRL + R, D**| TestExplorer. DebugLastRun |
+|Son çalıştırmayı Yinele|**Ctrl+R, L**| TestExplorer.RepeatLastRun |
+|Tüm Testleri Çalıştır|**Ctrl+R, A**| TestExplorer.RunAllTests |
+|Tüm testleri bağlamda Çalıştır|**Ctrl+R, T**| TestExplorer.RunAllTestsInContext |
+|Test Gezginini göster|**CTRL + E, T**| TestExplorer. ShowTestExplorer |
+|Sekmeyi aç|**CTRL + E, L**| LiveUnitTesting. OpenTab |
+|Kod kapsamı sonuçları|**Ctrl+E, C**| Test. CodeCoverageResults |
 
-### <a name="tools"></a><a name="bkmk_tools"></a> Araçları
+### <a name="tools"></a><a name="bkmk_tools"></a> Aracı
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
 |İşleme ekle|**Ctrl+Alt+P**| Tools.AttachtoProcess |
-|Kod parçacıkları yöneticisi|**Ctrl+K, Ctrl+B**| Tools.CodeSnippetsManager |
-|Gc'ye zorlama|**Ctrl+Shift+Alt+F12, Ctrl+Shift+Alt+F12**| Tools.ForceGC |
+|Kod parçacıkları Yöneticisi|**Ctrl+K, Ctrl+B**| Tools.CodeSnippetsManager |
+|GC 'yi zorla|**Ctrl+Shift+Alt+F12, Ctrl+Shift+Alt+F12**| Tools.ForceGC |
 
-### <a name="view"></a><a name="bkmk_view"></a> Görünüm
+### <a name="view"></a><a name="bkmk_view"></a> Görünümü
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
 |Tüm pencereler|**Shift+Alt+M**| View.AllWindows |
-|Mimari gezgini|**Ctrl+ \\ , Ctrl+R**| View.ArchitectureExplorer |
-|Geri|**Alt+Sol Ok** (İşlevler, Metin Düzenleyicisi'nde View.NavigateBackward'tan farklı)| View.Backward |
+|Mimari Gezgini|**CTRL + \\ , CTRL + R**| View.ArchitectureExplorer |
+|Geri|**Alt + sol ok** (metin düzenleyicisinde View. navigategeri geriye doğru işlevler)| View.Backward |
 |Yer işareti penceresi|**Ctrl+K, Ctrl+W**| View.BookmarkWindow |
-|Sonrakine göz at|**Ctrl+Shift+1**| View.BrowseNext |
-|Öncekine göz atma|**Ctrl+Shift+2**| View.BrowsePrevious |
+|Sonrakine Git|**Ctrl+Shift+1**| View.BrowseNext |
+|Öncekine gözatamıyorum|**Ctrl+Shift+2**| View.BrowsePrevious |
 |Çağrı hiyerarşisi|**Ctrl+Alt+K**| View.CallHierarchy |
-|Sınıf görünümü|**Ctrl+Shift+C**| View.ClassView |
-|Sınıf görünümü arama birleşik giriş|**Ctrl+K, Ctrl+V**| View.ClassViewGoToSearchCombo |
-|Kod tanımı penceresi|**Ctrl+ \\ , D**<br /><br /> veya<br /><br /> **Ctrl+ \\ , Ctrl+D**| View.CodeDefinitionWindow |
+|Sınıf Görünümü|**Ctrl+Shift+C**| View.ClassView |
+|Sınıf görünümü arama Birleşik giriş kutusuna git|**Ctrl+K, Ctrl+V**| View.ClassViewGoToSearchCombo |
+|Kod tanımı penceresi|**CTRL + \\ , D**<br /><br /> veya<br /><br /> **CTRL + \\ , CTRL + D**| View.CodeDefinitionWindow |
 |Komut penceresi|**Ctrl+Alt+A**| View.CommandWindow |
 |Veri kaynakları|**Shift+Alt+D**| View.DataSources |
-|Belge ana hatları|**Ctrl+Alt+T**| View.DocumentOutline |
-|Etiketi düzenleme|**F2**| View.EditLabel |
-|Hata listesi|**Ctrl+ \\ , E**<br /><br /> veya<br /><br /> **Ctrl+ \\ , Ctrl+E**| View.ErrorList |
+|Belge ana hattı|**Ctrl+Alt+T**| View.DocumentOutline |
+|Etiketi Düzenle|**F2**| View.EditLabel |
+|Hata listesi|**CTRL + \\ , E**<br /><br /> veya<br /><br /> **CTRL + \\ , CTRL + E**| View.ErrorList |
 |F# etkileşimli|**Ctrl+Alt+F**| View.F#Interactive |
-|Sembol sonuçlarını bulma|**Ctrl+Alt+F12**| View.FindSymbolResults |
-|İleri|**Alt+Sağ Ok**  (Metin Düzenleyicisi'nde View.NavigateForward'tan farklı işlevler)| View.Forward |
-|İleri göz atma bağlamı|**Ctrl+Shift+7**| View.ForwardBrowseContext |
+|Sembol sonuçları bul|**Ctrl+Alt+F12**| View.FindSymbolResults |
+|İleri|**Alt + sağ ok**  (metin düzenleyicisinde View. navigateforward öğesinden farklı işlevler)| View.Forward |
+|İleri git bağlamı|**Ctrl+Shift+7**| View.ForwardBrowseContext |
 |Tam ekran|**Shift+Alt+Enter**| View.FullScreen |
-|Geriye doğru gidin|**Ctrl+-**| View.NavigateBackward |
-|İleriye gidin|**Ctrl+Shift+-**| View.NavigateForward |
+|Geriye git|**CTRL +-**| View.NavigateBackward |
+|İleri git|**CTRL + SHIFT +-**| View.NavigateForward |
 |Sonraki hata|**Ctrl+Shift+F12**| View.NextError |
 |Bildirimler|**Ctrl+W, N**<br /><br /> veya<br /><br /> **Ctrl+W, Ctrl+N**| View.Notifications |
 |Nesne tarayıcısı|**Ctrl+Alt+J**| View.ObjectBrowser |
-|Nesne tarayıcısı arama birleşik giriş|**Ctrl+K, Ctrl+R**| View.ObjectBrowserGoToSearchCombo |
-|Çıktı|**Ctrl+Alt+O** ('O' harfi)| View.Output |
-|Açılır göz atma bağlamı|**Ctrl+Shift+8** (yalnızca C++)| View.PopBrowseContext |
+|Nesne tarayıcısı arama açılan kutusuna git|**Ctrl+K, Ctrl+R**| View.ObjectBrowserGoToSearchCombo |
+|Çıktı|**Ctrl + Alt + O** (harf ' O ')| View.Output |
+|Pop içerik tarama bağlamı|**CTRL + SHIFT + 8** (yalnızca C++)| View. PopBrowseContext |
 |Özellik penceresi|**F4**| View.PropertiesWindow |
 |Özellik sayfaları|**Shift+F4**| View.PropertyPages |
 |Kaynak görünümü|**Ctrl+Shift+E**| View.ResourceView |
-|Sunucu gezgini|**Ctrl+Alt+S**| View.ServerExplorer |
-|Akıllı etiketi göster|**Shift+Alt+F10**<br /><br /> veya<br /><br /> **Ctrl+.**| View.ShowSmartTag |
+|Sunucu Gezgini|**Ctrl+Alt+S**| View.ServerExplorer |
+|Akıllı etiketi göster|**Shift+Alt+F10**<br /><br /> veya<br /><br /> **CTRL +.**| View.ShowSmartTag |
 |Çözüm gezgini|**Ctrl+Alt+L**| View.SolutionExplorer |
-|SQL sunucusu nesne gezgini|**Ctrl+ \\ , Ctrl+S**| View.SQLServerObjectExplorer |
-|Görev listesi|**Ctrl+ \\ , T**<br /><br /> veya<br /><br /> **Ctrl+ \\ , Ctrl+T**| View.TaskList |
-|TFS takım gezgini|**Ctrl+ \\ , Ctrl+M**| View.TfsTeamExplorer |
+|SQL server nesne gezgini|**CTRL + \\ , CTRL + S**| View.SQLServerObjectExplorer |
+|Görev listesi|**CTRL + \\ , T**<br /><br /> veya<br /><br /> **CTRL + \\ , CTRL + T**| View.TaskList |
+|TFS Takım Gezgini|**CTRL + \\ , CTRL + ı**| View.TfsTeamExplorer |
 |Araç Kutusu|**Ctrl+Alt+X**| View.Toolbox |
-|UML model gezgini|**Ctrl+ \\ , Ctrl+U**| View.UMLModelExplorer |
-|Kodu görüntüleme|**F7**| View.ViewCode |
+|UML Model Gezgini|**CTRL + \\ , CTRL + U**| View.UMLModelExplorer |
+|Kodu görüntüle|**F7**| View.ViewCode |
 |Görünüm tasarımcısı|**Shift+F7**| View.ViewDesigner |
 |Web tarayıcısı|**Ctrl+Alt+R**| View.WebBrowser |
-|Yakınlaştır|**Ctrl+Shift+.**| View.ZoomIn |
-|Uzaklaştır|**Ctrl+Shift+,**| View.ZoomOut |
-|Test Gezginini Göster|**Ctrl+E, T**| TestExplorer.ShowTestExplorer |
+|Yakınlaştır|**CTRL + SHIFT +.**| View.ZoomIn |
+|Uzaklaştır|**CTRL + SHIFT +,**| View.ZoomOut |
+|Test Gezginini göster|**Ctrl+E, T**| TestExplorer.ShowTestExplorer |
 
 ### <a name="window"></a><a name="bkmk_window"></a> Pencere
 
@@ -786,7 +786,7 @@ Bu bağlama özgü kısayollar:
 |Sağ sütun|**Ctrl+Alt+Sağ Ok**| Table.ColumntotheRight |
 |Yukarıdaki satır|**Ctrl+Alt+Yukarı Ok**| Table.RowAbove |
 |Aşağıdaki satır|**Ctrl+Alt+Aşağı Ok**| Table.RowBelow |
-|Görsel olmayan net denetimler|**Ctrl+Shift+N**| View.ASP.NETNonvisualControls |
+|Net görsel olmayan denetimler|**Ctrl+Shift+N**| View.ASP.NETNonvisualControls |
 |Ana sayfayı düzenleme|**Ctrl+M, Ctrl+M**| View.EditMaster |
 |Sonraki görünüm|**Ctrl+PgDn**| View.NextView |
 |Akıllı etiketi göster|**Shift+Alt+F10**| View.ShowSmartTag |
@@ -874,204 +874,204 @@ Bu içeriğe özgü kısayollar şunlardır:
 
 ### <a name="microsoft-sql-server-data-tools-t-sql-editor"></a>Microsoft SQL Server Veri Araçları, T-SQL Düzenleyicisi
 
-Bu bağlama özgü kısayollar:
+Bu içeriğe özgü kısayollar şunlardır:
 
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
 |CommitAllEdits|**Shift+Alt+U**|
-|Hata ayıklayıcı ile yürütme|**Alt+F5**| SQL.ExecuteWithDebugger |
-|Joker karakterleri genişletme|**Ctrl+R, E**<br /><br /> veya<br /><br /> **Ctrl+R, Ctrl+E**| SQL.ExpandWildcards |
-|Adları tam olarak nitelendirin|**Ctrl+R, Q**<br /><br /> veya<br /><br /> **Ctrl+R, Ctrl+Q**| SQL.FullyqualifyNames |
-|Şemaya taşıma|**Ctrl+R, M**<br /><br /> veya<br /><br /> **Ctrl+R, Ctrl+M**| SQL.MovetoSchema |
+|Hata ayıklayıcı ile Yürüt|**Alt+F5**| SQL.ExecuteWithDebugger |
+|Joker karakterleri Genişlet|**Ctrl+R, E**<br /><br /> veya<br /><br /> **Ctrl+R, Ctrl+E**| SQL.ExpandWildcards |
+|Adları tam olarak nitelendir|**Ctrl+R, Q**<br /><br /> veya<br /><br /> **Ctrl+R, Ctrl+Q**| SQL.FullyqualifyNames |
+|Şemaya taşı|**Ctrl+R, M**<br /><br /> veya<br /><br /> **Ctrl+R, Ctrl+M**| SQL.MovetoSchema |
 |Rename|**F2**<br /><br /> veya<br /><br /> **Ctrl+R, R**<br /><br /> veya<br /><br /> **Ctrl+R, Ctrl+R**| SQL.Rename |
-|T SQL düzenleyicisi sorguyu iptal etme|**Alt+Break**| SQL.TSqlEditorCancelQuery |
+|T SQL düzenleyicisi sorguyu iptal et|**Alt+Break**| SQL.TSqlEditorCancelQuery |
 |T SQL düzenleyicisi sorgu yürütme|**Ctrl+Shift+E**| SQL.TSqlEditorExecuteQuery |
-|Düzenleyici SQL dosya olarak T|**Ctrl+D, F**| SQL.TSqlEditorResultsAsFile |
-|Düzenleyici SQL kılavuz olarak t|**Ctrl+D, G**| SQL.TSqlEditorResultsAsGrid |
-|Düzenleyici SQL metin olarak ekleme|**Ctrl+D, T**| SQL.TSqlEditorResultsAsText |
-|T SQL düzenleyicisi tahmini planı gösterir|**Ctrl+D, E**| SQL.TSqlEditorShowEstimatedPlan |
-|T SQL düzenleyicisi yürütme planını değiştir|**Ctrl+D, A**| SQL.TSqlEditorToggleExecutionPlan |
-|T SQL düzenleyicisi sonuçlar bölmesini açma/kapatma|**Ctrl+D, R**| SQL.TSqlEditorToggleResultsPane |
-|T SQL düzenleyicisi kopyalama sorgusu|**Ctrl+Alt+N**|SQL. TSqlEditorCloneQuery |
-|T SQL düzenleyicisi veritabanı birleşik giriş|**Shift+Alt+PgDn**|SQL. TSqlEditorDatabaseCombo |
-
-### <a name="microsoft-sql-server-data-tools-t-sql-pdw-editor"></a>Microsoft SQL Server Veri Araçları, T-SQL PDW Düzenleyicisi
-
-Bu bağlama özgü kısayollar:
-
-
-|Komutlar|Klavye kısayolları|Komut Kimliği|
-|-|-|-|
-|T SQL düzenleyicisi sorguyu iptal etme|**Alt+Break**| SQL.TSqlEditorCancelQuery |
-|T SQL düzenleyicisi sorgu yürütme|**Ctrl+Shift+E**| SQL.TSqlEditorExecuteQuery |
-|Düzenleyici SQL dosya olarak T|**Ctrl+D, F**| SQL.TSqlEditorResultsAsFile |
-|Düzenleyici SQL kılavuz olarak t|**Ctrl+D, G**| SQL.TSqlEditorResultsAsGrid |
-|Düzenleyici SQL metin olarak ekleme|**Ctrl+D, T**| SQL.TSqlEditorResultsAsText |
-|T SQL düzenleyicisi tahmini planı gösterir|**Ctrl+D, E**| SQL.TSqlEditorShowEstimatedPlan |
-|T SQL düzenleyicisi yürütme planını değiştir|**Ctrl+D, A**| SQL.TSqlEditorToggleExecutionPlan |
+|dosya olarak SQL düzenleyici sonuçları|**Ctrl+D, F**| SQL.TSqlEditorResultsAsFile |
+|düzenleyici sonuçlarını kılavuz olarak SQL|**Ctrl+D, G**| SQL.TSqlEditorResultsAsGrid |
+|SQL düzenleyici sonuçları metin olarak|**Ctrl+D, T**| SQL.TSqlEditorResultsAsText |
+|T SQL düzenleyicisi tahmini planı göster|**Ctrl+D, E**| SQL.TSqlEditorShowEstimatedPlan |
+|T SQL düzenleyicisi yürütme planını değiştirme|**Ctrl+D, A**| SQL.TSqlEditorToggleExecutionPlan |
 |T SQL düzenleyicisi geçiş sonuçları bölmesi|**Ctrl+D, R**| SQL.TSqlEditorToggleResultsPane |
 |T SQL düzenleyicisi kopya sorgusu|**Ctrl+Alt+N**|SQL. Tsqtaditorclonequery |
-|T SQL düzenleyicisi kopya sorgusu|**Shift+Alt+PgDn**|SQL. Tsqtaditorclonequery |
+|T SQL düzenleyicisi veritabanı birleşik kutusu|**Shift+Alt+PgDn**|SQL. Tsqtaditordatabasecombo |
 
-### <a name="page-inspector"></a>Sayfa Denetçisi
+### <a name="microsoft-sql-server-data-tools-t-sql-pdw-editor"></a>Microsoft SQL Server Veri Araçları, T-SQL PDW Düzenleyicisi
 
 Bu içeriğe özgü kısayollar şunlardır:
 
 
-|Komut|Klavye kısayolu|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|-|-|-|
+|T SQL düzenleyicisi sorguyu iptal et|**Alt+Break**| SQL.TSqlEditorCancelQuery |
+|T SQL düzenleyicisi sorgu yürütme|**Ctrl+Shift+E**| SQL.TSqlEditorExecuteQuery |
+|dosya olarak SQL düzenleyici sonuçları|**Ctrl+D, F**| SQL.TSqlEditorResultsAsFile |
+|düzenleyici sonuçlarını kılavuz olarak SQL|**Ctrl+D, G**| SQL.TSqlEditorResultsAsGrid |
+|SQL düzenleyici sonuçları metin olarak|**Ctrl+D, T**| SQL.TSqlEditorResultsAsText |
+|T SQL düzenleyicisi tahmini planı göster|**Ctrl+D, E**| SQL.TSqlEditorShowEstimatedPlan |
+|T SQL düzenleyicisi yürütme planını değiştirme|**Ctrl+D, A**| SQL.TSqlEditorToggleExecutionPlan |
+|T SQL düzenleyicisi sonuçlar bölmesini açma/kapatma|**Ctrl+D, R**| SQL.TSqlEditorToggleResultsPane |
+|T SQL düzenleyicisi kopyalama sorgusu|**Ctrl+Alt+N**|SQL. TSqlEditorCloneQuery |
+|T SQL düzenleyicisi kopyalama sorgusu|**Shift+Alt+PgDn**|SQL. TSqlEditorCloneQuery |
+
+### <a name="page-inspector"></a>Sayfa Denetçisi
+
+Bu bağlama özgü kısayollar:
+
+
+|Komut|Klavye kısayolu|Komut Kimliği|
 |-|-|-|
 |Simge durumuna küçült|**F12**| PageInspector.Minimize |
 
 ### <a name="query-designer"></a>Sorgu Tasarımcısı
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Veri almayı iptal et|**CTRL + T**| QueryDesigner.CancelRetrievingData |
+|Veri alma işlemini iptal etme|**Ctrl+T**| QueryDesigner.CancelRetrievingData |
 |Ölçütler|**Ctrl+2**| QueryDesigner.Criteria |
-|Diyagram|**CTRL + 1**| QueryDesigner.Diagram |
-|SQL Yürüt|**Ctrl+R**| QueryDesigner.ExecuteSQL |
-|Satıra git|**Ctrl+G**| QueryDesigner.GotoRow |
-|JOIN modu|**Ctrl+Shift+J**| QueryDesigner.JoinMode |
+|Diyagram|**Ctrl+1**| QueryDesigner.Diagram |
+|Yürütme SQL|**Ctrl+R**| QueryDesigner.ExecuteSQL |
+|Satıra var|**Ctrl+G**| QueryDesigner.GotoRow |
+|Birleştirme modu|**Ctrl+Shift+J**| QueryDesigner.JoinMode |
 |Sonuçlar|**Ctrl+4**| QueryDesigner.Results |
 |Sql|**Ctrl+3**| QueryDesigner.SQL |
 
 ### <a name="query-results"></a>Sorgu sonuçları
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Sorgu sonuçları yeni satır|**Alt+End**| SQL.QueryResultsNewRow |
+|Sorgu sonuçları yeni satırı|**Alt+End**| SQL.QueryResultsNewRow |
 |Sorgu sonuçlarını yenileme|**Shift+Alt+R**| SQL.QueryResultsRefresh |
-|Sorgu sonuçları durdu|**Alt+Break**| SQL.QueryResultsStop |
+|Sorgu sonuçları durdurma|**Alt+Break**| SQL.QueryResultsStop |
 
 ### <a name="report-designer"></a>Rapor Tasarımcısı
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Çizgiyi Böl|**Enter**| Edit.BreakLine |
-|Sol karakter|**Sol Ok**| Edit.CharLeft |
-|Karakter sola Genişlet|**Shift+Sol Ok**| Edit.CharLeftExtend |
-|Sağ karakter|**Sağ Ok**| Edit.CharRight |
-|Sağ karakter Genişlet|**Shift+Sağ Ok**| Edit.CharRightExtend |
+|Kesme çizgisi|**Enter**| Edit.BreakLine |
+|Char sol|**Sol Ok**| Edit.CharLeft |
+|Char sol genişletme|**Shift+Sol Ok**| Edit.CharLeftExtend |
+|Char right|**Sağ Ok**| Edit.CharRight |
+|Karakter sağ genişletme|**Shift+Sağ Ok**| Edit.CharRightExtend |
 |Ekle sekmesi|**Sekme**| Edit.InsertTab |
-|Aşağı satır|**Aşağı Ok**| Edit.LineDown |
-|Satır aşağı genişlet|**Shift+Aşağı Ok**| Edit.LineDownExtend |
-|Satır yukarı|**Yukarı Ok**| Edit.LineUp |
-|Çizgi uzat|**Shift+Yukarı Ok**| Edit.LineUpExtend |
-|Denetimi aşağı taşı|**Ctrl+Aşağı Ok**| Edit.MoveControlDown |
-|Denetimi sola taşı|**Ctrl+Sol Ok**| Edit.MoveControlLeft |
-|Denetimi sağa taşı|**Ctrl+Sağ Ok**| Edit.MoveControlRight |
-|Denetimi yukarı taşı|**Ctrl+Yukarı Ok**| Edit.MoveControlUp |
-|Seçimi iptal et|**Esc**| Edit.SelectionCancel |
-|Denetimi aşağı doğru Boyutlandır|**Ctrl+Shift+Aşağı Ok**| Edit.SizeControlDown |
-|Denetimi sola Boyutlandır|**Ctrl+Shift+Sol Ok**| Edit.SizeControlLeft |
-|Denetimi sağa Boyutlandır|**Ctrl+Shift+Sağ Ok**| Edit.SizeControlRight |
-|Denetimin boyutunu ayarla|**Ctrl+Shift+Yukarı Ok**| Edit.SizeControlUp |
-|Sekme sola|**Shift+Sekme Tuşu**| Edit.TabLeft |
+|Satır aşağı|**Aşağı Ok**| Edit.LineDown |
+|Çizgi aşağı genişletme|**Shift+Aşağı Ok**| Edit.LineDownExtend |
+|Sırala|**Yukarı Ok**| Edit.LineUp |
+|Genişletmeyi yukarı doğru sırala|**Shift+Yukarı Ok**| Edit.LineUpExtend |
+|Denetimi aşağı taşıma|**Ctrl+Aşağı Ok**| Edit.MoveControlDown |
+|Denetimi sola taşıma|**Ctrl+Sol Ok**| Edit.MoveControlLeft |
+|Denetimi sağa taşıma|**Ctrl+Sağ Ok**| Edit.MoveControlRight |
+|Denetimi yukarı taşıma|**Ctrl+Yukarı Ok**| Edit.MoveControlUp |
+|Seçim iptali|**Esc**| Edit.SelectionCancel |
+|Boyut denetimi aşağı|**Ctrl+Shift+Aşağı Ok**| Edit.SizeControlDown |
+|Boyut denetimi sola|**Ctrl+Shift+Sol Ok**| Edit.SizeControlLeft |
+|Boyut denetimi hakkı|**Ctrl+Shift+Sağ Ok**| Edit.SizeControlRight |
+|Boyut denetimi|**Ctrl+Shift+Yukarı Ok**| Edit.SizeControlUp |
+|Sekme sol|**Shift+Sekme Tuşu**| Edit.TabLeft |
 | Rapor verileri|**Ctrl+Alt+D**| View.ReportData |
 
 ### <a name="sequence-diagram"></a>Sıralı diyagram
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Koda git|**F12**| ArchitectureDesigner.Sequence.NavigateToCode |
+|Koda gidin|**F12**| ArchitectureDesigner.Sequence.NavigateToCode |
 |Sil|**Shift+Del**| Edit.Delete |
 
 ### <a name="settings-designer"></a>Ayarlar Tasarımcısı
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Hücreyi Düzenle|**F2**| Edit.EditCell |
-|Satırı Kaldır|**Ctrl+Delete**| Edit.RemoveRow |
-|Seçimi iptal et|**Esc**| Edit.SelectionCancel |
-|Kodu görüntüle|**F7**| View.ViewCode |
+|Hücreyi düzenle|**F2**| Edit.EditCell |
+|Satırı kaldırma|**Ctrl+Delete**| Edit.RemoveRow |
+|Seçim iptali|**Esc**| Edit.SelectionCancel |
+|Kodu görüntüleme|**F7**| View.ViewCode |
 
 ### <a name="solution-explorer"></a>Çözüm Gezgini
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komut|Klavye kısayolu|Komut KIMLIĞI|
+|Komut|Klavye kısayolu|Komut Kimliği|
 |-|-|-|
 |Sayfa denetçisinde görüntüle|**Ctrl+K, Ctrl+G**| ClassViewContextMenus.ClassViewProject.View.ViewinPageInspector |
 
 ### <a name="team-explorer"></a>Ekip Gezgini
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komut|Klavye Kısayolu|Komut KIMLIĞI|
+|Komut|Klavye Kısayolu|Komut Kimliği|
 |-|-|-|
 |Sil|**Silme**| Edit.Delete |
 |Rename|**F2**| File.Rename |
-|Takım Gezgini gezintisine git|**Alt+Home**| TeamFoundationContextMenus.Commands.GoToTeamExplorerNavigation |
-|Takım Gezgini sonraki bölüm içeriğine git|**Alt+Aşağı Ok**| TeamFoundationContextMenus.Commands.GoToTeamExplorerNextSectionContent |
-|Takım Gezgini sayfa içeriğine git|**Alt + 0** (sıfır)| TeamFoundationContextMenus.Commands.GoToTeamExplorerPageContent |
-|Takım Gezgini önceki bölüm içeriğine git|**Alt+Yukarı Ok**| TeamFoundationContextMenus.Commands.GoToTeamExplorerPreviousSectionContent |
-|Takım Gezgini Bölüm 1 içeriğine git|**Alt+1**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection1Content |
-|Takım Gezgini Bölüm 2 içeriğine git|**Alt+2**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection2Content |
-|Takım Gezgini Bölüm 3 içeriğine git|**Alt+3**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection3Content |
-|Takım Gezgini Bölüm 4 içeriğine git|**Alt+4**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection4Content |
-|Takım Gezgini Bölüm 5 içeriğine git|**Alt+5**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection5Content |
-|Takım Gezgini Bölüm 6 içeriğine git|**Alt+6**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection6Content |
-|Takım Gezgini Bölüm 7 içeriğine git|**Alt+7**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection7Content |
-|Takım Gezgini Bölüm 8 içeriğine git|**Alt+8**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection8Content |
-|Takım Gezgini Bölüm 9 içeriğine git|**Alt+9**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection9Content |
-|Takım Gezgini geriye git|**Alt+Sol Ok**| TeamFoundationContextMenus.Commands.TeamExplorerNavigateBackward |
-|Takım Gezgini ileri git|**Alt+Sağ Ok**| TeamFoundationContextMenus.Commands.TeamExplorerNavigateForward |
-|TFS bağlamı My İş Sayfam Wi-Kopyala oluştur|**Shift+Alt+C**| TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageCreateCopyWI |
-|TFS bağlamı iş sayfam yeni bağlantılı Wi|**Shift+Alt+L**| TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageNewLinkedWI |
+|Takım gezgini gezintisi'ne gidin|**Alt+Home**| TeamFoundationContextMenus.Commands.GoToTeamExplorerNavigation |
+|Takım gezgini sonraki bölüm içeriğine gidin|**Alt+Aşağı Ok**| TeamFoundationContextMenus.Commands.GoToTeamExplorerNextSectionContent |
+|Takım gezgini sayfa içeriğine gidin|**Alt+0** (sıfır)| TeamFoundationContextMenus.Commands.GoToTeamExplorerPageContent |
+|Takım gezgini önceki bölüm içeriğine gidin|**Alt+Yukarı Ok**| TeamFoundationContextMenus.Commands.GoToTeamExplorerPreviousSectionContent |
+|Takım gezgini bölüm 1 içeriğine gidin|**Alt+1**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection1Content |
+|Takım gezgini bölüm 2 içeriğine gidin|**Alt+2**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection2Content |
+|Takım gezgini bölüm 3 içeriğine gidin|**Alt+3**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection3Content |
+|Takım gezgini bölüm 4 içeriğine gidin|**Alt+4**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection4Content |
+|Takım gezgini bölüm 5 içeriğine gidin|**Alt+5**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection5Content |
+|Takım gezgini bölüm 6 içeriğine gidin|**Alt+6**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection6Content |
+|Takım gezgini bölüm 7 içeriğine gidin|**Alt+7**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection7Content |
+|Takım gezgini bölüm 8 içeriğine gidin|**Alt+8**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection8Content |
+|Takım gezgini bölüm 9 içeriğine gidin|**Alt+9**| TeamFoundationContextMenus.Commands.GoToTeamExplorerSection9Content |
+|Takım gezgini geriye doğru gidin|**Alt+Sol Ok**| TeamFoundationContextMenus.Commands.TeamExplorerNavigateBackward |
+|Takım gezgini ileri gidin|**Alt+Sağ Ok**| TeamFoundationContextMenus.Commands.TeamExplorerNavigateForward |
+|TFS bağlamı çalışma sayfam create copy wi|**Shift+Alt+C**| TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageCreateCopyWI |
+|TFS bağlamı çalışma sayfam yeni bağlı wi|**Shift+Alt+L**| TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageNewLinkedWI |
 |Yenile|**F5**| View.Refresh |
 
 ### <a name="test-explorer"></a>Test Gezgini
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komut|Klavye kısayolu|Komut KIMLIĞI|
+|Komut|Klavye kısayolu|Komut Kimliği|
 |-|-|-|
-|Testi aç|**F12**| TestExplorer.OpenTest |
+|Testi açma|**F12**| TestExplorer.OpenTest |
 
 ### <a name="text-editor"></a>Metin Düzenleyici
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-| Komutlar | Klavye kısayolları |Komut KIMLIĞI|
+| Komutlar | Klavye kısayolları |Komut Kimliği|
 |-|-|-|
-|Çizgiyi Böl| **Enter**<br /><br /> veya<br /><br /> **Shift+Enter** | Edit.BreakLine |
-|Sol karakter| **Sol Ok** | Edit.CharLeft |
-|Karakter sola Genişlet| **Shift+Sol Ok** | Edit.CharLeftExtend |
-|Karakter sola Genişlet sütunu| **Shift+Alt+Sol Ok** | Edit.CharLeftExtendColumn |
-|Sağ karakter| **Sağ Ok** | Edit.CharRight |
-|Sağ karakter Genişlet| **Shift+Sağ Ok** | Edit.CharRightExtend |
-|Karakter sağ Genişlet sütunu| **Shift+Alt+Sağ Ok** | Edit.CharRightExtendColumn |
-|Yer imlerini temizle| **Ctrl+K, Ctrl+L** | Edit.ClearBookmarks |
-|Tüm anahat oluşturmayı Daralt| **Ctrl+M, Ctrl+A** | Edit.CollapseAllOutlining |
-|Geçerli bölgeyi Daralt| **Ctrl+M, Ctrl+S** | Edit.CollapseCurrentRegion |
-|Etiketi Daralt| **Ctrl+M, Ctrl+T** | Edit.CollapseTag |
-|Tanımlara Daralt| **CTRL + M, CTRL + O** (harf ' O ') | Düzenle. CollapseToDefinitions |
-|Sözleşme seçimi| **SHIFT + alt +-** | . ContractSelection öğesini Düzenle |
+|Kesme çizgisi| **Enter**<br /><br /> veya<br /><br /> **Shift+Enter** | Edit.BreakLine |
+|Char sol| **Sol Ok** | Edit.CharLeft |
+|Char sol genişletme| **Shift+Sol Ok** | Edit.CharLeftExtend |
+|Char left extend column| **Shift+Alt+Sol Ok** | Edit.CharLeftExtendColumn |
+|Char right| **Sağ Ok** | Edit.CharRight |
+|Karakter sağ genişletme| **Shift+Sağ Ok** | Edit.CharRightExtend |
+|Char right extend column| **Shift+Alt+Sağ Ok** | Edit.CharRightExtendColumn |
+|Yer işaretlerini temizleme| **Ctrl+K, Ctrl+L** | Edit.ClearBookmarks |
+|Tüm outlining'i daralt| **Ctrl+M, Ctrl+A** | Edit.CollapseAllOutlining |
+|Geçerli bölgeyi daralt| **Ctrl+M, Ctrl+S** | Edit.CollapseCurrentRegion |
+|Etiketi daralt| **Ctrl+M, Ctrl+T** | Edit.CollapseTag |
+|Tanımları daralt| **Ctrl+M, Ctrl+O** ('O' harfi) | Edit.CollapseToDefinitions |
+|Sözleşme seçimi| **Shift+Alt+-** | Edit.ContractSelection |
 |Açıklama seçimi| **Ctrl+K, Ctrl+C** | Edit.CommentSelection |
-|Sözcüğü Tamam| **Ctrl+Ara Çubuğu**<br /><br /> veya<br /><br /> **Alt+Sağ Ok** | Edit.CompleteWord |
-|Parametre ipucunu Kopyala| **Ctrl+Shift+Alt+C** | Edit.CopyParameterTip |
-|Filtre düzeyini azalt| **Alt+,** | Edit.DecreaseFilterLevel |
-|Geriye doğru Sil| **Geri Al tuşu**<br /><br /> veya<br /><br /> **Shift+Geri Al tuşu** | Edit.DeleteBackwards |
+|Tam sözcük| **Ctrl+Ara Çubuğu**<br /><br /> veya<br /><br /> **Alt+Sağ Ok** | Edit.CompleteWord |
+|Parametre ipucu kopyalama| **Ctrl+Shift+Alt+C** | Edit.CopyParameterTip |
+|Filtre düzeyini azaltma| **Alt+,** | Edit.DecreaseFilterLevel |
+|Geriye doğru silme| **Geri Al tuşu**<br /><br /> veya<br /><br /> **Shift+Geri Al tuşu** | Edit.DeleteBackwards |
 |Yatay boşluğu silme| **Ctrl+K, Ctrl+\\** | Edit.DeleteHorizontalWhiteSpace |
 |Belge sonu| **Ctrl+End** | Edit.DocumentEnd |
 |Belge sonu genişletme| **Ctrl+Shift+End** | Edit.DocumentEndExtend |
@@ -1137,110 +1137,110 @@ Bu içeriğe özgü kısayollar şunlardır:
 |Seçimi iptal et| **Esc** | Edit.SelectionCancel |
 |En son geri dönmek için seçin| **CTRL + =** | Edit.SelectToLastGoBack |
 |Kod lens menüsünü göster| **CTRL + K, CTRL +\`** | Edit.ShowCodeLensMenu |
-|Git menüsünü göster| **Alt+\`** | Edit.ShowNavigateMenu |
-|Geçerli gizlemeyi durdurma| **Ctrl+M, Ctrl+U** | Edit.StopHidingCurrent |
-|Açıklamayı durdurma| **Ctrl+M, Ctrl+P** | Edit.StopOutlining |
-|Yer değiştirme| **Ctrl+K, Ctrl+A** | Edit.SwapAnchor |
-|Sekme sol| **Shift+Sekme Tuşu** | Edit.TabLeft |
-|Tüm altı çizili düğmeyi değiştir| **Ctrl+M, Ctrl+L** | Edit.ToggleAllOutlining |
-|Yer işaretini değiştir| **Ctrl+K, Ctrl+K** | Edit.ToggleBookmark |
-|Tamamlama modunu değiştir| **Ctrl+Alt+Ara Çubuğu** | Edit.ToggleCompletionMode |
-|Altı çizili genişletmeyi değiştir| **Ctrl+M, Ctrl+M** | Edit.ToggleOutliningExpansion |
-|Görev listesi kısayolunu değiştir| **Ctrl+K, Ctrl+H** | Edit.ToggleTaskListShortcut |
-|Sözcük kaydırmayı açıp kaydırma| **Ctrl+E, Ctrl+W** | Edit.ToggleWordWrap |
-|Uncomment selection| **Ctrl+K, Ctrl+U** | Edit.UncommentSelection |
-|Alttaki görünümü| **Ctrl+PgDn** | Edit.ViewBottom |
-|Alttaki genişletmeyi görüntüleme| **Ctrl+Shift+PgDn** | Edit.ViewBottomExtend |
-|Üst görünümü| **Ctrl+PgUp** | Edit.ViewTop |
+|Git menüsünü göster| **Alt +\`** | Edit. ShowNavigateMenu |
+|Geçerli gizlemeyi durdur| **Ctrl+M, Ctrl+U** | Edit.StopHidingCurrent |
+|Anahat oluşturmayı durdur| **Ctrl+M, Ctrl+P** | Edit.StopOutlining |
+|Geçişi Değiştir| **Ctrl+K, Ctrl+A** | Edit.SwapAnchor |
+|Sekme sola| **Shift+Sekme Tuşu** | Edit.TabLeft |
+|Tüm anahatlamayı aç| **Ctrl+M, Ctrl+L** | Edit.ToggleAllOutlining |
+|Yer işaretini değiştirme| **Ctrl+K, Ctrl+K** | Edit.ToggleBookmark |
+|Tamamlama modunu aç| **Ctrl+Alt+Ara Çubuğu** | Edit.ToggleCompletionMode |
+|Anahat genişletmeyi değiştirme| **Ctrl+M, Ctrl+M** | Edit.ToggleOutliningExpansion |
+|Görev listesi kısayolunu değiştirme| **Ctrl+K, Ctrl+H** | Edit.ToggleTaskListShortcut |
+|Sözcük kaydırmayı aç| **Ctrl+E, Ctrl+W** | Edit.ToggleWordWrap |
+|Seçimi açıklama kaldır| **Ctrl+K, Ctrl+U** | Edit.UncommentSelection |
+|En Alta görüntüle| **Ctrl+PgDn** | Edit.ViewBottom |
+|Alt genişletmeyi görüntüle| **Ctrl+Shift+PgDn** | Edit.ViewBottomExtend |
+|Üst görüntüleme| **Ctrl+PgUp** | Edit.ViewTop |
 |Üst genişletmeyi görüntüle| **Ctrl+Shift+PgUp** | Edit.ViewTopExtend |
-|Boşluğu görüntüleme| **Ctrl+R, Ctrl+W** | Edit.ViewWhiteSpace |
-|Sona kadar sözcük silme| **Ctrl+Delete** | Edit.WordDeleteToEnd |
-|Başlamak için sözcük silme| **Ctrl+Geri Al tuşu** | Edit.WordDeleteToStart |
+|Boşluğu görüntüle| **Ctrl+R, Ctrl+W** | Edit.ViewWhiteSpace |
+|Sözcük sonuna kadar Sil| **Ctrl+Delete** | Edit.WordDeleteToEnd |
+|Word başlamak için Sil| **Ctrl+Geri Al tuşu** | Edit.WordDeleteToStart |
 |Sonraki sözcük| **Ctrl+Sağ Ok** | Edit.WordNext |
-|Word next extend| **Ctrl+Shift+Sağ Ok** | Edit.WordNextExtend |
-|Word next extend column| **Ctrl+Shift+Alt+Sağ Ok** | Edit.WordNextExtendColumn |
+|Sonraki sözcük Genişlet| **Ctrl+Shift+Sağ Ok** | Edit.WordNextExtend |
+|Sonraki sözcük Genişlet sütunu| **Ctrl+Shift+Alt+Sağ Ok** | Edit.WordNextExtendColumn |
 |Önceki sözcük| **Ctrl+Sol Ok** | Edit.WordPrevious |
-|Word önceki genişletme| **Ctrl+Shift+Sol Ok** | Edit.WordPreviousExtend |
-|Word önceki genişletme sütunu| **Ctrl+Shift+Alt+Sol Ok** | Edit.WordPreviousExtendColumn |
-|Sözcük dönüşüm| **Ctrl+Shift+T** | Edit.WordTranspose |
-|Etkileşimli olarak yürütme| **Alt+Enter** | EditorContextMenus.CodeWindow.ExecuteInInteractive |
-|Satırı etkileşimli olarak yürütme| **Alt+'** | EditorContextMenus.CodeWindow.ExecuteLineInInteractive |
+|Önceki sözcük uzat| **Ctrl+Shift+Sol Ok** | Edit.WordPreviousExtend |
+|Önceki sözcük Genişlet sütunu| **Ctrl+Shift+Alt+Sol Ok** | Edit.WordPreviousExtendColumn |
+|Sözcük sırasını değiştir| **Ctrl+Shift+T** | Edit.WordTranspose |
+|Etkileşimli Çalıştır| **Alt+Enter** | EditorContextMenus.CodeWindow.ExecuteInInteractive |
+|Satırı etkileşimli olarak Yürüt| **Alt + '** | EditorContextMenus.CodeWindow.ExecuteLineInInteractive |
 |Sayfa denetçisinde görüntüle| **Ctrl+K, Ctrl+G** | OtherContextMenus.HTMLContext.ViewinPageInspector |
-|TFS sonraki bölgeye taşıma ek açıklama ekleme| **Alt+PgDn** | TeamFoundationContextMenus.Annotate.TfsAnnotateMoveNextRegion |
-|TFS önceki bölgeyi taşımaya açıklama ekleme| **Alt+PgUp** | TeamFoundationContextMenus.Annotate.TfsAnnotateMovePreviousRegion |
+|TFS not ekleme sonraki bölge| **Alt+PgDn** | TeamFoundationContextMenus.Annotate.TfsAnnotateMoveNextRegion |
+|TFS not ekleme önceki bölgeyi taşıma| **Alt+PgUp** | TeamFoundationContextMenus.Annotate.TfsAnnotateMovePreviousRegion |
 
 ### <a name="uml-activity-diagram"></a>UML etkinlik diyagramı
+
+Bu içeriğe özgü kısayollar şunlardır:
+
+
+|Komut|Klavye kısayolu|Komut KIMLIĞI|
+|-|-|-|
+|Sil|**Shift+Del**| Edit.Delete |
+
+### <a name="uml-class-diagram"></a>UML sınıf diyagramı
 
 Bu bağlama özgü kısayollar:
 
 
 |Komut|Klavye kısayolu|Komut Kimliği|
 |-|-|-|
-|Sil|**Shift+Del**| Edit.Delete |
-
-### <a name="uml-class-diagram"></a>UML sınıf diyagramı
-
-Bu içeriğe özgü kısayollar şunlardır:
-
-
-|Komut|Klavye kısayolu|Komut KIMLIĞI|
-|-|-|-|
 |Modelden sil|**Shift+Del**| Edit.DeleteFromModel |
 
 ### <a name="uml-component-diagram"></a>UML bileşen diyagramı
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komut|Klavye kısayolu|Komut KIMLIĞI|
+|Komut|Klavye kısayolu|Komut Kimliği|
 |-|-|-|
 |Modelden sil|**Shift+Del**| Edit.DeleteFromModel |
 
-### <a name="uml-use-case-diagram"></a>UML Kullanım örneği diyagramı
+### <a name="uml-use-case-diagram"></a>UML kullanım durumu diyagramı
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komut|Klavye kısayolu|Komut KIMLIĞI|
+|Komut|Klavye kısayolu|Komut Kimliği|
 |-|-|-|
 |Modelden sil|**Shift+Del**| Edit.DeleteFromModel |
 
 ### <a name="vc-accelerator-editor"></a>VC Hızlandırıcı Düzenleyicisi
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Yeni Hızlandırıcı|**Ekle**| Edit.NewAccelerator |
-|Yazılan sonraki anahtar|**Ctrl+W**| Edit.NextKeyTyped |
+|Yeni hızlandırıcı|**Ekle**| Edit.NewAccelerator |
+|Sonraki anahtar türü|**Ctrl+W**| Edit.NextKeyTyped |
 
 ### <a name="vc-dialog-editor"></a>VC İletişim Kutusu Düzenleyicisi
 
-Bu içeriğe özgü kısayollar şunlardır:
+Bu bağlama özgü kısayollar:
 
 
-|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
+|Komutlar|Klavye kısayolları|Komut Kimliği|
 |-|-|-|
-|Denetimi aşağı taşı|**Aşağı Ok**| Edit.MoveControlDown |
-|Denetimi sola taşı|**Sol Ok**| Edit.MoveControlLeft |
-|Denetimi sağa taşı|**Sağ Ok**| Edit.MoveControlRight |
-|Denetimi yukarı taşı|**Yukarı Ok**| Edit.MoveControlUp |
-|Sütunu sola kaydır|**Ctrl+Sol Ok**| Edit.ScrollColumnLeft |
-|Sütun sağa kaydır|**Ctrl+Sağ Ok**| Edit.ScrollColumnRight |
-|Satırı aşağı kaydır|**Ctrl+Aşağı Ok**| Edit.ScrollLineDown |
-|Bir satır yukarı kaydır|**Ctrl+Yukarı Ok**| Edit.ScrollLineUp |
-|Denetimi aşağı doğru Boyutlandır|**Shift+Aşağı Ok**| Edit.SizeControlDown |
-|Denetimi sola Boyutlandır|**Shift+Sol Ok**| Edit.SizeControlLeft |
-|Denetimi sağa Boyutlandır|**Shift+Sağ Ok**| Edit.SizeControlRight |
-|Denetimin boyutunu ayarla|**Shift+Yukarı Ok**| Edit.SizeControlUp |
-|Botları Hizala|**Ctrl+Shift+Aşağı Ok**| Format.AlignBottoms |
-|Merkeze Hizala|**Shift+F9**| Format.AlignCenters |
-|Solları Hizala|**Ctrl+Shift+Sol Ok**| Format.AlignLefts |
-|Ortaları Hizala|**F9**| Format.AlignMiddles |
-|Hakları Hizala|**Ctrl+Shift+Sağ Ok**| Format.AlignRights |
-|Üste Hizala|**Ctrl+Shift+Yukarı Ok**| Format.AlignTops |
-|Düğme alt|**Ctrl+B**| Format.ButtonBottom |
+|Denetimi aşağı taşıma|**Aşağı Ok**| Edit.MoveControlDown |
+|Denetimi sola taşıma|**Sol Ok**| Edit.MoveControlLeft |
+|Denetimi sağa taşıma|**Sağ Ok**| Edit.MoveControlRight |
+|Denetimi yukarı taşıma|**Yukarı Ok**| Edit.MoveControlUp |
+|Sütunu sola kaydırma|**Ctrl+Sol Ok**| Edit.ScrollColumnLeft |
+|Sütunu sağa kaydırma|**Ctrl+Sağ Ok**| Edit.ScrollColumnRight |
+|Satırı aşağı kaydırma|**Ctrl+Aşağı Ok**| Edit.ScrollLineDown |
+|Yukarı doğru kaydırma|**Ctrl+Yukarı Ok**| Edit.ScrollLineUp |
+|Boyut denetimi aşağı|**Shift+Aşağı Ok**| Edit.SizeControlDown |
+|Boyut denetimi sola|**Shift+Sol Ok**| Edit.SizeControlLeft |
+|Boyut denetimi hakkı|**Shift+Sağ Ok**| Edit.SizeControlRight |
+|Boyut denetimi|**Shift+Yukarı Ok**| Edit.SizeControlUp |
+|Altları hizala|**Ctrl+Shift+Aşağı Ok**| Format.AlignBottoms |
+|Merkezleri hizalama|**Shift+F9**| Format.AlignCenters |
+|Sola hizala|**Ctrl+Shift+Sol Ok**| Format.AlignLefts |
+|Ortaları hizala|**F9**| Format.AlignMiddles |
+|Hakları hizalama|**Ctrl+Shift+Sağ Ok**| Format.AlignRights |
+|Üstleri hizala|**Ctrl+Shift+Yukarı Ok**| Format.AlignTops |
+|Alttaki düğme|**Ctrl+B**| Format.ButtonBottom |
 |Sağ düğme|**Ctrl+R**| Format.ButtonRight |
 |Yatay Ortala|**CTRL + SHIFT + F9**| Format.CenterHorizontal |
 |Dikey Ortala|**Ctrl+F9**| Format.CenterVertical |
@@ -1279,107 +1279,107 @@ Bu içeriğe özgü kısayollar şunlardır:
 |Sonraki renk|**CTRL +]**<br /><br /> veya<br /><br /> **Ctrl+Sağ Ok**| Image.NextColor |
 |Sonraki doğru renk|**CTRL + SHIFT +]**<br /><br /> veya<br /><br /> **Ctrl+Shift+Sağ Ok**| Image.NextRightColor |
 |Seviyelendirilmiş Elips aracı|**Shift+Alt+P**| Image.OutlinedEllipseTool |
-|Özetlenen dikdörtgen aracı|**Shift+Alt+R**| Image.OutlinedRectangleTool |
-|Özetlenen yuvarlanmış dikdörtgen araç|**Shift+Alt+W**| Image.OutlinedRoundedRectangleTool |
-|Kalem aracı|**Ctrl+I**| Image.PencilTool |
-|Önceki renk|**Ctrl+[**<br /><br /> veya<br /><br /> **Ctrl+Sol Ok**| Image.PreviousColor |
-|Önceki sağ renk|**Ctrl+Shift+[**<br /><br /> veya<br /><br /> **Ctrl+Shift+Sol Ok**| Image.PreviousRightColor |
+|Anahatlı dikdörtgen aracı|**Shift+Alt+R**| Image.OutlinedRectangleTool |
+|Anahatlı yuvarlatılmış dikdörtgen aracı|**Shift+Alt+W**| Image.OutlinedRoundedRectangleTool |
+|Kurşun kalem aracı|**Ctrl+I**| Image.PencilTool |
+|Önceki renk|**CTRL + [**<br /><br /> veya<br /><br /> **Ctrl+Sol Ok**| Image.PreviousColor |
+|Önceki doğru renk|**CTRL + SHIFT + [**<br /><br /> veya<br /><br /> **Ctrl+Shift+Sol Ok**| Image.PreviousRightColor |
 |Dikdörtgen seçim aracı|**Shift+Alt+S**| Image.RectangleSelectionTool |
-|Dikdörtgen araç|**Alt+R**| Image.RectangleTool |
-|90 Derece Döndür derece|**Ctrl+Shift+H**| Image.Rotate90Degrees |
-|Yuvarlanmış dikdörtgen araç|**Alt+W**| Image.RoundedRectangleTool |
+|Dikdörtgen aracı|**Alt+R**| Image.RectangleTool |
+|90 derece döndür|**Ctrl+Shift+H**| Image.Rotate90Degrees |
+|Yuvarlatılmış dikdörtgen aracı|**Alt+W**| Image.RoundedRectangleTool |
 |Kılavuzu göster|**Ctrl+Alt+S**| Image.ShowGrid |
-|Kutucuk kılavuzu gösterme|**Ctrl+Shift+Alt+S**| Image.ShowTileGrid |
-|Küçük fırça|**Ctrl+.**| Image.SmallBrush |
-|Daha küçük fırça|**Ctrl+-**| Image.SmallerBrush |
-|Metin aracı|**Ctrl+T**| Image.TextTool |
-|Seçimi fırça olarak kullanma|**Ctrl+U**| Image.UseSelectionasBrush |
-|Yakınlaştır|**Ctrl+Shift+.**<br /><br /> veya<br /><br /> **Ctrl+Yukarı Ok**| Image.ZoomIn |
-|Uzaklaştır|**Ctrl+Shift+,**<br /><br /> veya<br /><br /> **Ctrl+Aşağı Ok**| Image.ZoomOut |
+|Döşeme kılavuzunu göster|**Ctrl+Shift+Alt+S**| Image.ShowTileGrid |
+|Küçük fırça|**CTRL +.**| Image.SmallBrush |
+|Daha küçük fırça|**CTRL +-**| Image.SmallerBrush |
+|Metin aracı|**CTRL + T**| Image.TextTool |
+|Seçimi fırça olarak kullan|**Ctrl+U**| Image.UseSelectionasBrush |
+|Yakınlaştır|**CTRL + SHIFT +.**<br /><br /> veya<br /><br /> **Ctrl+Yukarı Ok**| Image.ZoomIn |
+|Uzaklaştır|**CTRL + SHIFT +,**<br /><br /> veya<br /><br /> **Ctrl+Aşağı Ok**| Image.ZoomOut |
 
 ### <a name="vc-string-editor"></a>VC Dize Düzenleyicisi
 
-Bu bağlama özgü kısayollar:
+Bu içeriğe özgü kısayollar şunlardır:
 
 
-|Komut|Klavye kısayolu|Komut Kimliği|
+|Komut|Klavye kısayolu|Komut KIMLIĞI|
 |-|-|-|
 |Yeni dize|**Ekle**| Edit.NewString |
 
 ### <a name="view-designer"></a>Görünüm Tasarımcısı
 
-Bu bağlama özgü kısayollar:
+Bu içeriğe özgü kısayollar şunlardır:
 
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
-|Veri alma işlemini iptal etme|**Ctrl+T**| QueryDesigner.CancelRetrievingData |
+|Veri almayı iptal et|**CTRL + T**| QueryDesigner.CancelRetrievingData |
 |Ölçütler|**Ctrl+2**| QueryDesigner.Criteria |
-|Diyagram|**Ctrl+1**| QueryDesigner.Diagram |
-|Yürütme SQL|**Ctrl+R**| QueryDesigner.ExecuteSQL |
-|Satıra var|**Ctrl+G**| QueryDesigner.GotoRow |
-|Birleştirme modu|**Ctrl+Shift+J**| QueryDesigner.JoinMode |
+|Diyagram|**CTRL + 1**| QueryDesigner.Diagram |
+|SQL Yürüt|**Ctrl+R**| QueryDesigner.ExecuteSQL |
+|Satıra git|**Ctrl+G**| QueryDesigner.GotoRow |
+|JOIN modu|**Ctrl+Shift+J**| QueryDesigner.JoinMode |
 |Sonuçlar|**Ctrl+4**| QueryDesigner.Results |
 |Sql|**Ctrl+3**| QueryDesigner.SQL |
 
 ### <a name="visual-studio"></a>Visual Studio
 
-Bu bağlama özgü kısayollar:
+Bu içeriğe özgü kısayollar şunlardır:
 
 
-|Komut|Klavye kısayolu|Komut Kimliği|
+|Komut|Klavye kısayolu|Komut KIMLIĞI|
 |-|-|-|
-|Yöntemleri gizle bölmesi|**Ctrl+1**| OtherContextMenus.ORDesignerContext.HideMethodsPane |
+|Yöntemler bölmesini gizle|**CTRL + 1**| OtherContextMenus.ORDesignerContext.HideMethodsPane |
 
 ### <a name="windows-forms-designer"></a>Windows Form Tasarımcısı
 
-Bu bağlama özgü kısayollar:
+Bu içeriğe özgü kısayollar şunlardır:
 
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
-|Kesme çizgisi|**Enter**| Edit.BreakLine |
-|Char sol|**Sol Ok**| Edit.CharLeft |
-|Char sol genişletme|**Shift+Sol Ok**| Edit.CharLeftExtend |
-|Char right|**Sağ Ok**| Edit.CharRight |
-|Karakter sağ genişletme|**Shift+Sağ Ok**| Edit.CharRightExtend |
+|Çizgiyi Böl|**Enter**| Edit.BreakLine |
+|Sol karakter|**Sol Ok**| Edit.CharLeft |
+|Karakter sola Genişlet|**Shift+Sol Ok**| Edit.CharLeftExtend |
+|Sağ karakter|**Sağ Ok**| Edit.CharRight |
+|Sağ karakter Genişlet|**Shift+Sağ Ok**| Edit.CharRightExtend |
 |Belge sonu|**End**| Edit.DocumentEnd |
-|Belge sonu genişletme|**Shift+End**| Edit.DocumentEndExtend |
-|Belge başlatma|**Giriş Ekranı**| Edit.DocumentStart |
-|Belge başlatma genişletme|**Shift+Home**| Edit.DocumentStartExtend |
+|Belge bitişi uzat|**Shift+End**| Edit.DocumentEndExtend |
+|Belge başlangıcı|**Giriş Ekranı**| Edit.DocumentStart |
+|Belge başlangıcını uzat|**Shift+Home**| Edit.DocumentStartExtend |
 |Ekle sekmesi|**Sekme**| Edit.InsertTab |
-|Satır aşağı|**Aşağı Ok**| Edit.LineDown |
-|Çizgi aşağı genişletme|**Shift+Yukarı Ok**| Edit.LineDownExtend |
-|Sırala|**Yukarı Ok**| Edit.LineUp |
-|Genişletmeyi yukarı doğru sırala|**Shift+Aşağı Ok**| Edit.LineUpExtend |
-|Denetimi aşağı taşıma|**Ctrl+Aşağı Ok**| Edit.MoveControlDown |
-|Denetimi sola taşıma|**Ctrl+Sol Ok**| Edit.MoveControlLeft |
-|Denetimi sağa taşıma|**Ctrl+Sağ Ok**| Edit.MoveControlRight |
-|Denetimi yukarı taşıma|**Ctrl+Yukarı Ok**| Edit.MoveControlUp |
-|Seçim iptali|**Esc**| Edit.SelectionCancel |
-|Boyut denetimi aşağı|**Ctrl+Shift+Aşağı Ok**| Edit.SizeControlDown |
-|Boyut denetimi sola|**Ctrl+Shift+Sol Ok**| Edit.SizeControlLeft |
-|Boyut denetimi hakkı|**Ctrl+Shift+Sağ Ok**| Edit.SizeControlRight |
-|Boyut denetimi|**Ctrl+Shift+Yukarı Ok**| Edit.SizeControlUp |
-|Sekme sol|**Shift+Sekme Tuşu**| Edit.TabLeft |
+|Aşağı satır|**Aşağı Ok**| Edit.LineDown |
+|Satır aşağı genişlet|**Shift+Yukarı Ok**| Edit.LineDownExtend |
+|Satır yukarı|**Yukarı Ok**| Edit.LineUp |
+|Çizgi uzat|**Shift+Aşağı Ok**| Edit.LineUpExtend |
+|Denetimi aşağı taşı|**Ctrl+Aşağı Ok**| Edit.MoveControlDown |
+|Denetimi sola taşı|**Ctrl+Sol Ok**| Edit.MoveControlLeft |
+|Denetimi sağa taşı|**Ctrl+Sağ Ok**| Edit.MoveControlRight |
+|Denetimi yukarı taşı|**Ctrl+Yukarı Ok**| Edit.MoveControlUp |
+|Seçimi iptal et|**Esc**| Edit.SelectionCancel |
+|Denetimi aşağı doğru Boyutlandır|**Ctrl+Shift+Aşağı Ok**| Edit.SizeControlDown |
+|Denetimi sola Boyutlandır|**Ctrl+Shift+Sol Ok**| Edit.SizeControlLeft |
+|Denetimi sağa Boyutlandır|**Ctrl+Shift+Sağ Ok**| Edit.SizeControlRight |
+|Denetimin boyutunu ayarla|**Ctrl+Shift+Yukarı Ok**| Edit.SizeControlUp |
+|Sekme sola|**Shift+Sekme Tuşu**| Edit.TabLeft |
 
 ### <a name="work-item-editor"></a>Çalışma Öğesi Düzenleyicisi
 
-Bu bağlama özgü kısayollar:
+Bu içeriğe özgü kısayollar şunlardır:
 
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
-|İş öğesinin kopyasını oluşturma|**Shift+Alt+C**| Edit.CreateCopyofWorkItem |
-|İş öğesini yenileme|**F5**| Edit.RefreshWorkItem |
+|İş öğesinin kopyasını oluştur|**Shift+Alt+C**| Edit.CreateCopyofWorkItem |
+|İş öğesini Yenile|**F5**| Edit.RefreshWorkItem |
 |Yeni bağlantılı iş öğesi|**Shift+Alt+L**| Team.NewLinkedWorkItem |
 
 ### <a name="work-item-query-view"></a>Çalışma Öğesi Sorgu Görünümü
 
-Bu bağlama özgü kısayollar:
+Bu içeriğe özgü kısayollar şunlardır:
 
 
-|Komutlar|Klavye kısayolları|Komut Kimliği|
+|Komutlar|Klavye kısayolları|Komut KIMLIĞI|
 |-|-|-|
 |İş öğesinin kopyasını oluşturma|**Shift+Alt+C**| Edit.CreateCopyofWorkItem |
 |Girinti|**Shift+Alt+Sağ Ok**| Edit.Indent |
@@ -1429,7 +1429,7 @@ Bu bağlama özgü kısayollar:
 |Geri Yükleme|**Ctrl+E, Ctrl+R**<br /><br /> veya<br /><br /> **Ctrl+E, R**| WorkflowDesigner.Restore |
 |Bağımsız değişken tasarımcısını gizlemeyi göster|**Ctrl+E, Ctrl+A**<br /><br /> veya<br /><br /> **Ctrl+E, A**| WorkflowDesigner.ShowHideArgumentDesigner |
 |İçeri aktarmaları gizle tasarımcısını göster|**Ctrl+E, Ctrl+I**<br /><br /> veya<br /><br /> **Ctrl+E, I**| WorkflowDesigner.ShowHideImportsDesigner |
-|Gizlemeye genel bakış haritasını gösterme|**Ctrl+E, Ctrl+O** ('O' harfi)<br /><br /> veya<br /><br /> **Ctrl+E, O**| WorkflowDesigner.ShowHideOverviewMap |
+|Gizlemeye genel bakış haritasını gösterme|**Ctrl+E, Ctrl+O** (harf 'O')<br /><br /> veya<br /><br /> **Ctrl+E, O**| WorkflowDesigner.ShowHideOverviewMap |
 |Değişken tasarımcısını gizlemeyi göster|**Ctrl+E, Ctrl+V**<br /><br /> veya<br /><br /> **Ctrl+E, V**| WorkflowDesigner.ShowHideVariableDesigner |
 |Seçimi iki durumlu olarak değiştir|**Ctrl+E, Ctrl+S**<br /><br /> veya<br /><br /> **Ctrl+E, S**| WorkflowDesigner.ToggleSelection |
 |Yakınlaştır|**Ctrl+Num +**| WorkflowDesigner.ZoomIn |

@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 87c201f40b158fda97b8fbb8d0d0e036ee897909597224ddc47b4c150f1784c6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 82346b3bd8e5b30179977554826beb95d1291e8b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121394452"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122099821"
 ---
 # <a name="how-to-programmatically-delete-outlook-contacts"></a>nasıl yapılır: program aracılığıyla Outlook kişilerini silme
   Bu örnek, bir kişiyi siler. Örnek, **kişiler** klasöründe "Armando Pinto" adlı bir kişinin bulunduğunu varsayar.

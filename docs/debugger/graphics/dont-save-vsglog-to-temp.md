@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e2413e38408405bc3b3677a2e8f691abca063676bec41e6a4bfa31cc93fdbce6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 44ffbba52a09c5d2874e51014cec9e1b755c5f32
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121436088"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154258"
 ---
 # <a name="dont_save_vsglog_to_temp"></a>DONT_SAVE_VSGLOG_TO_TEMP
 Grafik günlük dosyasının kullanıcının geçici dosyalar dizinine kaydedip kaydedile olmadığını varlığıyla tanımlar.

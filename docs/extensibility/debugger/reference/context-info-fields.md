@@ -1,5 +1,5 @@
 ---
-description: Bir bellek bağlamı hakkında hangi bilgilerin alın başkanı olduğunu belirtir.
+description: Bir bellek bağlamı hakkında hangi bilgilerin alın olduğunu belirtir.
 title: CONTEXT_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 95ca1e9e65a1fac9a9171bed1bfef90b011c44a1308f2a6eb01b9a029d1acbc3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 36adf58598248bb6e59045e80b185dd2684b64b7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360904"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120094"
 ---
 # <a name="context_info_fields"></a>CONTEXT_INFO_FIELDS
-Bir bellek bağlamı hakkında hangi bilgilerin alın başkanı olduğunu belirtir.
+Bir bellek bağlamı hakkında hangi bilgilerin alın olduğunu belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -76,7 +76,7 @@ Yapının tüm alanlarını `CONTEXT_INFO` başlat/kullan.
 ## <a name="remarks"></a>Açıklamalar
 Bu değerler, CONTEXT_INFO yapısının hangi alanlarının başlat olacağını [belirtmek için](../../../extensibility/debugger/reference/context-info.md) [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) yöntemine bir parametre geçirildi.
 
-Bu bayraklar yapının hangi alanlarının kullanıldığı `CONTEXT_INFO` ve yapı döndürülürken geçerli olduğunu belirtmek için de kullanılır.
+Bu bayraklar, yapı döndürülürken yapının hangi `CONTEXT_INFO` alanlarının ve geçerli olduğunu belirtmek için de kullanılır.
 
 Bu değerler bitwise OR ile birleştirilmiş olabilir.
 

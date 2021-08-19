@@ -1,5 +1,5 @@
 ---
-title: Office Projelerindeki Nesnelere Genel erişim
+title: Office projelerindeki nesnelere genel erişim
 description: Projedeki herhangi bir koddan çalışma zamanında çeşitli proje öğelerine erişmek için Globals sınıfını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
@@ -30,17 +30,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b939131f388642b452445e0afee0f5e38d2a5195
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 2d76e3a998923e7d6ef3a655399c2dc66c280ace
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825543"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083576"
 ---
-# <a name="global-access-to-objects-in-office-projects"></a>Office Projelerindeki Nesnelere Genel erişim
-  Bir Office projesi oluşturduğunuzda, Visual Studio otomatik olarak projede adlı bir sınıf oluşturur `Globals` . `Globals`Çalışma zamanında, projedeki herhangi bir koddan farklı proje öğelerine erişmek için sınıfını kullanabilirsiniz.
+# <a name="global-access-to-objects-in-office-projects"></a>Office projelerindeki nesnelere genel erişim
+  bir Office projesi oluşturduğunuzda, Visual Studio otomatik olarak projede adlı bir sınıf oluşturur `Globals` . `Globals`Çalışma zamanında, projedeki herhangi bir koddan farklı proje öğelerine erişmek için sınıfını kullanabilirsiniz.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
@@ -51,28 +52,28 @@ ms.locfileid: "107825543"
 
 - `ThisDocument`Word belgesi veya şablon projesindeki sınıf. Özelliğini kullanarak bu nesneye erişebilirsiniz `Globals.ThisDocument` .
 
-- `ThisAddIn`VSTO eklenti projesindeki sınıfı. Özelliğini kullanarak bu nesneye erişebilirsiniz `Globals.ThisAddIn` .
+- `ThisAddIn`bir VSTO eklentisi projesindeki sınıfı. Özelliğini kullanarak bu nesneye erişebilirsiniz `Globals.ThisAddIn` .
 
 - Projenizdeki şerit tasarımcısını kullanarak özelleştirdiğiniz tüm şeritler. Özelliğini kullanarak Şeritlere erişebilirsiniz `Globals.Ribbons` . Daha fazla bilgi için bkz. [çalışma zamanında Şerit 'e erişme](../vsto/accessing-the-ribbon-at-run-time.md).
 
-- Outlook VSTO eklenti projesindeki tüm Outlook form bölgeleri. Özelliğini kullanarak form bölgelerine erişebilirsiniz `Globals.FormRegions` . Daha fazla bilgi için bkz. [çalışma zamanında form bölgesine erişme](../vsto/accessing-a-form-region-at-run-time.md).
+- bir Outlook VSTO eklenti projesindeki tüm Outlook form bölgeleri. Özelliğini kullanarak form bölgelerine erişebilirsiniz `Globals.FormRegions` . Daha fazla bilgi için bkz. [çalışma zamanında form bölgesine erişme](../vsto/accessing-a-form-region-at-run-time.md).
 
 - Şerit denetimleri oluşturmanızı ve veya öğesini hedefleyen projelerde çalışma zamanında öğeleri barındırmanızı sağlayan bir fabrika nesnesi [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] . Özelliğini kullanarak bu nesneye erişebilirsiniz `Globals.Factory` . Bu nesne, aşağıdaki arayüzleri uygulayan bir sınıfın örneğidir:
 
-  - [Microsoft. Office. Tools. Factory](xref:Microsoft.Office.Tools.Factory)
+  - [MICROSOFT. Office. Tools. Factory](xref:Microsoft.Office.Tools.Factory)
 
-  - [Microsoft. Office. Tools. Excel. Factory](xref:Microsoft.Office.Tools.Excel.Factory)
+  - [MICROSOFT. Office. Aracı. Excel. Çar](xref:Microsoft.Office.Tools.Excel.Factory)
 
-  - [Microsoft. Office. Tools. Outlook. Factory](xref:Microsoft.Office.Tools.Outlook.Factory)
+  - [MICROSOFT. Office. Aracı. Outlook. Çar](xref:Microsoft.Office.Tools.Outlook.Factory)
 
-  - [Microsoft. Office. Tools. Word. Factory](xref:Microsoft.Office.Tools.Word.Factory)
+  - [MICROSOFT. Office. Tools. Word. Factory](xref:Microsoft.Office.Tools.Word.Factory)
 
-  Örneğin, `Globals.Sheet1` <xref:Microsoft.Office.Tools.Excel.NamedRange> `Sheet1` bir Kullanıcı, Excel için belge düzeyindeki bir projede eylemler bölmesindeki bir düğmeye tıkladığında bir denetime metin eklemek için özelliğini kullanabilirsiniz.
+  Örneğin, `Globals.Sheet1` <xref:Microsoft.Office.Tools.Excel.NamedRange> `Sheet1` bir Kullanıcı, Excel için belge düzeyi bir projede eylemler bölmesindeki bir düğmeye tıkladığında bir denetime metin eklemek için özelliğini kullanabilirsiniz.
 
   :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb" id="Snippet1":::
   :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs" id="Snippet1":::
 
- `Globals`Belge veya VSTO eklentisi başlatılmadan önce sınıfı kullanmayı deneyen kod, çalışma zamanı özel durumu oluşturabilir. Örneğin, sınıf `Globals` düzeyinde bir değişken bildirirken kullanılması başarısız olabilir çünkü `Globals` sınıf, bildirilmeyen nesne örneklendirmeden önce tüm konak öğelerinin başvuruları ile başlatılmamış olabilir.
+ `Globals`belge veya VSTO eklentisi başlatılmadan önce sınıfı kullanmayı deneyen kod, çalışma zamanı özel durumu oluşturabilir. Örneğin, sınıf `Globals` düzeyinde bir değişken bildirirken kullanılması başarısız olabilir çünkü `Globals` sınıf, bildirilmeyen nesne örneklendirmeden önce tüm konak öğelerinin başvuruları ile başlatılmamış olabilir.
 
 > [!NOTE]
 > `Globals`Sınıf tasarım zamanında hiçbir zaman başlatılmaz, ancak denetim örnekleri tasarımcı tarafından oluşturulur. Yani, bir kullanıcı denetimi sınıfının içinden sınıfının bir özelliğini kullanan bir kullanıcı denetimi oluşturursanız `Globals` , döndürülen nesneyi kullanmayı denemeden önce özelliğin **null** döndürüp döndürmediğini denetlemeniz gerekir.

@@ -1,6 +1,6 @@
 ---
 title: Sözde değişkenler | Microsoft Docs
-description: Visual Studio hata ayıklayıcısında sahte değişkenleri gözden geçirin. Sözde değişkenler, belirli verileri bir değişken penceresinde veya QuickWatch iletişim kutusunda göstermek için kullanılan terimlerdir.
+description: Visual Studio hata ayıklayıcısında sözde değişkenleri gözden geçirin. Sözde değişkenler, belirli verileri bir değişken penceresinde veya QuickWatch iletişim kutusunda göstermek için kullanılan terimlerdir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,16 +17,17 @@ ms.assetid: fae84f68-2138-4144-9bd4-c9e271b6182a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 88880110ca00141382d7038ec001f3cc4159f2b3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bc4e1d16ee7a79ed3de15ed987939a89373e5c2e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99908335"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120835"
 ---
-# <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında sahte değişkenler
+# <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında sözde değişkenler
 Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **QuickWatch** iletişim kutusunda göstermek için kullanılan terimlerdir. Bir sözde değişkeni, normal bir değişkene girebileceğiniz şekilde girebilirsiniz. Ancak sözde değişkenler, değişken değildir ve programınızdaki değişken adlarına karşılık gelmez.
 
 ## <a name="example"></a>Örnek
@@ -48,7 +49,7 @@ Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **Quick
 |`$`*RegisterName*<br /><br /> veya<br /><br /> `@`*RegisterName*|Kayıt *RegisterName*'in içeriğini görüntüler.<br /><br /> Normalde kayıt adını girerek kayıt içeriğini görüntüleyebilirsiniz. Bu söz dizimini kullanmanız gereken tek zaman, YAZMAÇ adının bir değişken adını aşırı yükleyidir. Kayıt adı, geçerli kapsamdaki bir değişken adıyla aynıysa, hata ayıklayıcı adı değişken adı olarak yorumlar. Bu, `$` *RegisterName* veya `@` *RegisterName* yararlı olarak sunulur.|
 |`$clk`|Saat döngülerinde saati görüntüler.|
 |`$user`|Uygulamayı çalıştıran hesap için hesap bilgilerine sahip bir yapı görüntüler. Güvenlik nedenleriyle parola bilgileri gösterilmez.|
-|`$exceptionstack`|Geçerli Windows Çalışma Zamanı özel durumunun yığın izlemesini görüntüler. `$ exceptionstack` yalnızca UWP uygulamalarında işe yarar. `$ exceptionstack` C++ ve SEH özel durumları için desteklenmez|
+|`$exceptionstack`|geçerli Windows Çalışma Zamanı özel durumunun yığın izlemesini görüntüler. `$ exceptionstack` yalnızca UWP uygulamalarında işe yarar. `$ exceptionstack` C++ ve SEH özel durumları için desteklenmez|
 |`$returnvalue`|Bir yöntemin dönüş değerini görüntüler.|
 
  C# ' de, aşağıdaki tabloda gösterilen sözde değişkenleri kullanabilirsiniz:
@@ -67,8 +68,8 @@ Sözde değişkenler, belirli bilgileri bir değişken penceresinde veya **Quick
 |`$delete` veya `$$delete`|**Komut** penceresinde oluşturulan örtük bir değişkeni siler. Söz dizimi `$delete,` *değişken* veya `$delete,` *değişkendir*`.`|
 |`$objectids` veya `$listobjectids`|Tüm etkin nesne kimliklerini belirtilen ifadenin alt öğesi olarak görüntüler. Söz dizimi `$objectid,` *ifade* veya `$listobjectids,` *ifadedir*`.`|
 |`$`*N*`#`|Nesne KIMLIĞIYLE birlikte *N* değerine eşit olan nesneyi görüntüler.|
-|`$dynamic`|Uygulayan bir nesne için özel **Dinamik görünüm** düğümünü görüntüler `IDynamicMetaObjectProvider` . Arayüz. Sözdizimi `$dynamic,` *Object*. Bu özellik yalnızca .NET Framework sürüm 4 veya üstünü kullanan kod için geçerlidir.|
+|`$dynamic`|Uygulayan bir nesne için özel **Dinamik görünüm** düğümünü görüntüler `IDynamicMetaObjectProvider` . Arayüz. Sözdizimi `$dynamic,` *Object*. bu özellik yalnızca .NET Framework sürüm 4 veya üstünü kullanan kod için geçerlidir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)
-- [Değişken pencereleri](../debugger/debugger-windows.md)
+- [Değişken Windows](../debugger/debugger-windows.md)

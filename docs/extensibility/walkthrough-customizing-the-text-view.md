@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 493d11fe5c024631bc333a0bea6bd834f54eefccac9e97d24c4d22d16f2de60f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fd60c6e9c6253a214de7a08173462895cdf29fc1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121400484"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078550"
 ---
 # <a name="walkthrough-customize-the-text-view"></a>Adım adım kılavuz: Metin görünümünü özelleştirme
 Düzenleyici biçim haritasında aşağıdaki özelliklerden herhangi birini değiştirerek bir metin görünümünü özelleştirebilirsiniz:

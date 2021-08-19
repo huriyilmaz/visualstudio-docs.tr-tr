@@ -1,6 +1,6 @@
 ---
-title: Nokta/bilinear/trilinear/anisotropik doku filtresi varyantları
-description: Bir noktanın, bilinear, trilinear veya anisotropik doku filtreleme varyantının performans maliyeti önemli ise, kullanımının maliyete değer olup oalcağını göz önünde bulundurabilirsiniz.
+title: Point/Bilinear/trilinear/anısotropıc doku filtresi çeşitleri
+description: Bir noktanın performans maliyeti, Bilinear, trilinear veya anısotropıc doku filtreleme varyantı önemli ise, kullanım süresinin maliyete değer olup olmadığını göz önünde bulundurun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,33 +11,33 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 34a7710de91132ae34cbb9c7532cf89c50ca21201db123af21c6dc36348862fb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bdec03536054c5f4380fc1412ff192e34b343bdd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121311511"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154089"
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Nokta, Çift Doğrusal, Üçlü Doğrusal ve Yön Bağımlı Doku Filtreleme Çeşitleri
-Uygun doku örnekleyicilerde filtreleme modunu geçersiz kılar.
+Uygun doku örnekleyicileri için filtreleme modunu geçersiz kılar.
 
 ## <a name="interpretation"></a>Yorum
- Farklı doku örnekleme yöntemleri farklı performans maliyetlerine ve görüntü kalitesine sahiptir. Maliyeti ve görsel kalitesini artırmak için filtre modları şu şekildedir:
+ Farklı doku örnekleme yöntemleri farklı performans maliyetlerine ve görüntü kalitesine sahiptir. Maliyet artırma ve görsel kaliteyi artırma gibi — filtre modları şunlardır:
 
-1. Nokta filtreleme (en ucuz, en kötü görsel kalitesi)
+1. Nokta filtreleme (en az pahalı, en kötü görsel kalite)
 
-2. Bilinear filtreleme
+2. Bilinear filtrelemesi
 
-3. Trilinear filtreleme
+3. Trilinear filtrelemesi
 
-4. Anisotropik filtreleme (en pahalı, en iyi görsel kalitesi)
+4. Anısotropıc filtrelemesi (en pahalı, en iyi görsel kalite)
 
-   Her varyantın performans maliyeti önemli olursa veya daha yoğun filtreleme modlarıyla artarsa, bunun maliyetini artan görüntü kalitesine göre ölçebilirsiniz. Değerlendirmenize bağlı olarak, görsel kalitesini artırmak için ek performans maliyetleri kabul edilebilir veya daha yüksek bir kare hızı elde etmek veya başka yollarla kullanabileceğiniz performansı geri elde etmek için görsel kalitesinin azalmalarını kabul etmiş oluruz.
+   Her bir varyantın performans maliyeti, daha yoğun filtreleme modlarıyla önemli veya artıyorsa maliyeti artan görüntü kalitesiyle karşılaştırın. Değerlendirmenize göre, görsel kaliteyi artırmak için ek performans maliyetlerini kabul edebilir veya daha yüksek bir kare hızına ulaşmak veya daha fazla şekilde kullanabileceğiniz performansı geri kazanmak için azalan görsel kaliteyi kabul edebilirsiniz.
 
-   Filtreleme modundan bağımsız olarak performans maliyetinin göz ardı edilebilir veya sabit olduğunu bulursanız (örneğin, hedeflemekte olduğu GPU'da gölgelendirici aktarım hızı ve bellek bant genişliği bolluğu olduğunda) uygulamanıza en iyi görüntü kalitesini elde etmek için anisotropik filtrelemeyi kullanmayı göz önünde bulundurabilirsiniz.
+   Filtreleme modundan bağımsız olarak performans maliyetinin göz ardı edilebilir veya kararlı olduğunu fark ederseniz — Örneğin, hedeflediğiniz GPU, gölgelendirici işleme ve bellek bant genişliğine sahip olduğunda, uygulamanızdaki en iyi görüntü kalitesini elde etmek için anısotropıc filtrelemeyi kullanmayı düşünün.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu çeşitler, uygulama tarafından sağlanan örnekleyicinin filtre modunun bunlardan biri olduğu çağrılarda örnekleyici `ID3D11DeviceContext::PSSetSamplers` durumları geçersiz kılar:
+ Bu çeşitler, `ID3D11DeviceContext::PSSetSamplers` uygulama tarafından belirtilen örnekleyici filtre modunun bunlardan biri olduğu çağrılarında örnekleyici durumlarını geçersiz kılar:
 
 - `D3D11_FILTER_MIN_MAG_MIP_POINT`
 
@@ -57,15 +57,15 @@ Uygun doku örnekleyicilerde filtreleme modunu geçersiz kılar.
 
 - `D3D11_FILTER_ANISOTROPIC`
 
-  Nokta **Doku** Filtreleme çeşidinde, uygulama tarafından sağlanan filtre modu ile `D3D11_FILTER_MIN_MAG_MIP_POINT` değiştirilir; **Bilinear Doku** Filtreleme çeşidinde ile değiştirilir `D3D11_FILTER_MIN_MAG_LINEAR_MIP_POINT` ve **Trilinear Doku** Filtreleme varyantı'nın yerine ile `D3D11_FILTER_MIN_MAG_MIP_LINEAR` değiştirilir.
+  **Nokta dokusu filtreleme** çeşidinde, uygulama tarafından sunulan filtre modu ile değiştirilmiştir `D3D11_FILTER_MIN_MAG_MIP_POINT` ; **Bilinear doku filtreleme** çeşidinde, Ile değiştirilmiştir `D3D11_FILTER_MIN_MAG_LINEAR_MIP_POINT` ve **trilinear doku filtreleme** çeşidinde ile değiştirilmiştir `D3D11_FILTER_MIN_MAG_MIP_LINEAR` .
 
-  **Anisotropik Doku** Filtreleme çeşidinde, uygulama tarafından sağlanan filtre modu ile değiştirilir ve `D3D11_FILTER_ANISOTROPIC` Maksimum Anisotropi 16 olarak ayarlanır.
+  **Anısotropıc doku filtreleme** çeşidinde, uygulama tarafından sağlanmış filtre modu ile değiştirilmiştir `D3D11_FILTER_ANISOTROPIC` ve en yüksek Anısotrokopyala 16 olarak ayarlanır.
 
 ## <a name="restrictions-and-limitations"></a>Kısıtlamalar ve sınırlamalar
- Direct3D'de özellik düzeyi 9.1, maksimum anisotropiyi 2x olarak belirtir. **Anisotropik Doku** Filtreleme varyantı özel olarak 16x anisotropi kullanmayı denemesi nedeniyle, özellik düzeyi 9.1 cihazında kare analizi çalıştırılana kadar kayıttan yürütme başarısız olur. Bu sınırlamadan etkilenen cihazlar ARM tabanlı Surface RT ve Surface 2 ve tabletler Windows içerir. Bazı bilgisayarlarda hala buluna eski GPU'lar da etkilenebilir, ancak yaygın olarak eski olduğu kabul edilir ve giderek daha yaygındır.
+ Direct3D 'de, özellik düzeyi 9,1, 2x bir en yüksek anizedetrou belirtir. **Anısotropıc dokusu filtreleme** değişkeni, tek başına 16X aniztroa 'yı kullanmayı denetiğinden, bir özellik düzeyi 9,1 cihazında Çerçeve Analizi çalıştırıldığında kayıttan yürütme başarısız olur. bu sınırlamanın etkilediği modern cihazlar ARM tabanlı yüzey RT ve surface 2 Windows tabletlerini içerir. Bazı bilgisayarlarda hala bulunan daha eski GPU 'Lar de etkilenebilir, ancak artık kullanılmıyor ve giderek daha sık görülen bir durumdur.
 
 ## <a name="example-1"></a>Örnek 1
- Nokta **Doku Filtreleme varyantı,** aşağıdaki gibi bir kod kullanılarak yeniden üretılabilir:
+ **Nokta dokusu filtreleme** değişkeni aşağıdaki gibi kod kullanılarak yeniden oluşturulabilir:
 
 ```cpp
 D3D11_SAMPLER_DESC sampler_description;
@@ -79,7 +79,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
 ## <a name="example-2"></a>Örnek 2
- **Bilinear Doku Filtreleme varyantı** aşağıdaki gibi bir kod kullanılarak yeniden üretebilirsiniz:
+ **Bilinear doku filtreleme** değişkeni aşağıdaki gibi kod kullanılarak yeniden oluşturulabilir:
 
 ```cpp
 D3D11_SAMPLER_DESC sampler_description;
@@ -93,7 +93,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
 ## <a name="example-3"></a>Örnek 3
- **Trilinear Doku Filtreleme varyantı** aşağıdaki gibi kod kullanılarak yeniden üretebilirsiniz:
+ **Trilinear doku filtreleme** değişkeni aşağıdaki gibi kod kullanılarak yeniden oluşturulabilir:
 
 ```cpp
 D3D11_SAMPLER_DESC sampler_description;
@@ -107,7 +107,7 @@ d3d_context->PSSetSamplers(0, 1, &sampler
 ```
 
 ## <a name="example-4"></a>Örnek 4
- **Anisotropik Doku Filtreleme** varyantı aşağıdaki gibi kod kullanılarak yeniden üretılabilir:
+ **Anısotropıc doku filtreleme** değişkeni, şunun gibi kod kullanılarak yeniden oluşturulabilir:
 
 ```cpp
 D3D11_SAMPLER_DESC sampler_description;

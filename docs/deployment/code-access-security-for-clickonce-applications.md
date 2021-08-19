@@ -26,12 +26,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 21d55ea85fe1075ef9c5bd8a7af238beaafc76e4ce6a142f9ecb16f639dd3cb1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1d60cc8e982e094a3deff406763c234c755a1c32
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435692"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153751"
 ---
 # <a name="code-access-security-for-clickonce-applications"></a>ClickOnce uygulamaları için kod erişimi güvenliği
 ClickOnce uygulamalar .NET Framework tabanlıdır ve kod erişimi güvenlik kısıtlamalarına tabidir. bu nedenle, kod erişimi güvenliğinin etkilerini anlamanız ve ClickOnce uygulamalarınızı buna göre yazmanız önemlidir.
