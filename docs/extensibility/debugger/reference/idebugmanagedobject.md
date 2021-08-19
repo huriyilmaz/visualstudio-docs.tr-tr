@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, ifade değerlendiricisi (EE) 'ın değer sınıfı örneklerine (örneğin, System. Decimal) Özellikler veya yöntemler çağırmasını ve hata ayıklamakta olan programda değerlendir çağrılmadan değerlerini ayarlayabilmesini sağlar.
+description: bu arabirim, ifade değerlendiricisi 'nin (EE) değer sınıfı örneklerine (örneğin, System. Decimal) özellikler veya yöntemler çağırmasını ve hata ayıklamakta olan programda değerlendir çağrılmadan değerlerini ayarlamanıza olanak sağlar.
 title: IDebugManagedObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 3ae09d34-112c-4285-80ee-9f7f8dc414d7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 88eadb33aaccc09a7c4667ad01d9acee538169f2
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6cdf99a651f91d941aab00a732b6885300d092a1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105076868"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088477"
 ---
 # <a name="idebugmanagedobject"></a>IDebugManagedObject
 > [!IMPORTANT]
 > Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Bu arabirim, ifade değerlendiricisi 'nin (EE) değer sınıfı örneklerinde özellikleri veya yöntemleri (örneğin, `System.Decimal` ) çağırmasını ve hata ayıklamakta olan programda [değerlendirilmesi](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) çağrılmadan değerlerini ayarlayabilmesini sağlar.
+ bu arabirim, ifade değerlendiricisi 'nin (EE) değer sınıfı örneklerinde özellikleri veya yöntemleri (örneğin, `System.Decimal` ) çağırmasını ve hata ayıklamakta olan programda [değerlendirilmesi](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) çağrılmadan değerlerini ayarlayabilmesini sağlar.
 
 ## <a name="syntax"></a>Syntax
 

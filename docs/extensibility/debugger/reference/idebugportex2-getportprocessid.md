@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d90705ec4aee88e06209996fc47506ec23cf545e2132b37a245ef4bc111f0cd7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 696ba253090bdec5c31ed814e465b2a5afca87f2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276951"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088243"
 ---
 # <a name="idebugportex2getportprocessid"></a>IDebugPortEx2::GetPortProcessId
 Bağlantı noktasının işlem KIMLIĞINI alır.

@@ -1,5 +1,5 @@
 ---
-description: Bir ifade değerlendirici 'nin (EE) gelişmiş bir sürümünü temsil eder.
+description: İfade değerlendiricinin gelişmiş bir sürümünü temsil eder (EE).
 title: IDebugExpressionEvaluator2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,20 +9,21 @@ ms.assetid: cebe649f-1c77-4d33-854f-30d4f00eceb4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3689f667508f6453f0e4cd4181d14f42ca7b7541
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6910b41431442819cf7641ced3763cc3ab316217
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077310"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138516"
 ---
 # <a name="idebugexpressionevaluator2"></a>IDebugExpressionEvaluator2
 > [!IMPORTANT]
-> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> 2015 Visual Studio de ifade değerlendiricilerini uygulamanın bu yolu kullanım dışıdır. CLR ifade değerlendiricilerini uygulama hakkında bilgi için bkz. [CLR İfade Değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği.](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
- Bir ifade değerlendirici 'nin (EE) gelişmiş bir sürümünü temsil eder.
+ İfade değerlendiricinin gelişmiş bir sürümünü temsil eder (EE).
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,24 +31,24 @@ ms.locfileid: "105077310"
 IDebugExpressionEvaluator2 : IDebugExpressionEvaluator
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bu arabirim, bir ifade değerlendiricisi tarafından uygulanır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bu arabirim bir ifade değerlendiricisi tarafından uygulanır.
 
 ## <a name="methods"></a>Yöntemler
- Bu arabirim, [ıdebugexpressiondeğerlendirici](../../../extensibility/debugger/reference/idebugexpressionevaluator.md) arabirimindeki yöntemlere ek olarak aşağıdaki yöntemleri uygular:
+ [Bu arabirim, IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md) arabiriminde yöntemlere ek olarak aşağıdaki yöntemleri de kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetService](../../../extensibility/debugger/reference/idebugexpressionevaluator2-getservice.md)|Benzersiz tanımlayıcısı verilen bir hizmet nesnesini alır.|
-|[PreloadModules](../../../extensibility/debugger/reference/idebugexpressionevaluator2-preloadmodules.md)|Belirtilen sembol sağlayıcısı tarafından belirlenen modülleri önceden yükler.|
-|[SetCallback](../../../extensibility/debugger/reference/idebugexpressionevaluator2-setcallback.md)|, Hata ayıklayıcı altyapısının (DE) ölçüm ayarlarını okumak için kullanacağı geri çağırma arabirimini belirtmesini sağlar.|
-|[SetCorPath](../../../extensibility/debugger/reference/idebugexpressionevaluator2-setcorpath.md)|Hata ayıklayıcıda yüklenen ortak dil çalışma zamanının (CLR) yolunu ayarlar.|
-|[SetIDebugIDECallback](../../../extensibility/debugger/reference/idebugexpressionevaluator2-setidebugidecallback.md)|Bir hata ayıklama altyapısının başlatma sırasında ifade değerlendirici öğesine geri çağırma işlemi yapmasını sağlar.|
-|[Terminate](../../../extensibility/debugger/reference/idebugexpressionevaluator2-terminate.md)|İfade değerlendiricisi 'ni durdurup temizler.|
+|[GetService](../../../extensibility/debugger/reference/idebugexpressionevaluator2-getservice.md)|Benzersiz tanımlayıcısı verilen bir hizmet nesnesini alın.|
+|[PreloadModules](../../../extensibility/debugger/reference/idebugexpressionevaluator2-preloadmodules.md)|Belirtilen sembol sağlayıcısı tarafından belirlenen modülleri önceden yükleme.|
+|[SetCallback](../../../extensibility/debugger/reference/idebugexpressionevaluator2-setcallback.md)|İfade değerlendiricinin (EE) hata ayıklayıcı altyapısının (DE) ölçüm ayarlarını okumak için kullandığı geri çağırma arabirimini belirtmesine olanak sağlar.|
+|[SetCorPath](../../../extensibility/debugger/reference/idebugexpressionevaluator2-setcorpath.md)|Hata ayıklayıcısında yüklenen ortak dil çalışma zamanının (CLR) yolunu ayarlar.|
+|[SetIDebugIDECallback](../../../extensibility/debugger/reference/idebugexpressionevaluator2-setidebugidecallback.md)|Bir hata ayıklama altyapısının başlatma sırasında ifade değerlendiricisine geri çağırmayı atmasına olanak sağlar.|
+|[Terminate](../../../extensibility/debugger/reference/idebugexpressionevaluator2-terminate.md)|İfade değerlendiriciyi durdurur ve temizler.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: ee. h
+ Üst Bilgi: Ee.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll

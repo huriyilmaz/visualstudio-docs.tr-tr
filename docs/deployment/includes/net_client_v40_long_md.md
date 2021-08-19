@@ -13,11 +13,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 6c2b604feefb0020c97c20406ff9c352ccf8bfe2
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: fd88c60b75d830702d6459d74aaae2b4262ceeccf1527584bec43426bdb1df88
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89324704"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "122138944"
 ---
 .NET Framework 4 İstemci Profili

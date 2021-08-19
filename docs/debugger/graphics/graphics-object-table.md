@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e584c1e187c95ab44c8c16e021176ab46f7fd43ad6487c76167e8414d60fdb18
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 13c702ddbb2ce3c3799ee163adc1d81790f42472
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404460"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138958"
 ---
 # <a name="graphics-object-table"></a>Grafik Nesnesi Tablosu
 grafik analizi Visual Studio grafik nesne tablosu, oyununuzun veya uygulamanızın çerçevesini destekleyen Direct3D nesnelerini anlamanıza yardımcı olur.

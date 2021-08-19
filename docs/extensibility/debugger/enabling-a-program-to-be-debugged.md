@@ -1,6 +1,6 @@
 ---
-title: Bir programın ayıklanamayacağını etkinleştirme | Microsoft Docs
-description: Hata ayıklama altyapısını başlatma veya bir programda hata ayıklamak için hata ayıklama altyapısını mevcut bir programa iliştirme hakkında bilgi edinin.
+title: Bir Programın Hata Ayıklamasını Etkinleştirme | Microsoft Docs
+description: Bir programda hata ayıklamak için hata ayıklama altyapınızı başlatmayı veya var olan bir programa hata ayıklama altyapısını iliştirme hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,26 +13,26 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c09fd6f9862fb3c3426b74bb7c0f62e947bc6050ea02edcbc81990f283bee58
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 231934a246a5ce57f87bf08b134c0e288c6f5534
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121343018"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138893"
 ---
-# <a name="enable-a-program-to-be-debugged"></a>Bir programın ayıklanamayacağını etkinleştir
-Hata ayıklama altyapısından (DE) bir programda hata ayıklamadan önce, önce bunu başlatmanız veya mevcut bir programa bağlamanız gerekir.
+# <a name="enable-a-program-to-be-debugged"></a>Bir programın hata ayıklamasını etkinleştirme
+Hata ayıklama altyapınız (DE) bir programda hata ayıklamadan önce DE'i başlatmanız veya var olan bir programa eklemeniz gerekir.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Bağlantı noktası al](../../extensibility/debugger/getting-a-port.md) Bir programın ayıklanamayacağını etkinleştirmeye yönelik ilk adım olarak bir bağlantı noktasının nasıl alınacağını açıklar.
+ [Bağlantı noktası al](../../extensibility/debugger/getting-a-port.md) Bir programın hata ayıklamasını etkinleştirmenin ilk adımı olarak bir bağlantı noktasının nasıl alınacaklarını ele almaktadır.
 
- [Programı kaydet](../../extensibility/debugger/registering-the-program.md) Bir programın hata ayıklamanın nasıl giderileceği konusunda bir sonraki adımı açıklar: bağlantı noktası ile kaydediliyor. Kaydolduktan sonra programa ekleme veya tam zamanında (JıT) hata ayıklama işlemi tarafından hata ayıklanabilir.
+ [Programı kaydetme](../../extensibility/debugger/registering-the-program.md) Bir programın hata ayıklamasını etkinleştirmenin sonraki adımını açıklar: bunu bağlantı noktasına kaydetme. Kaydedildiktan sonra, ekleme işlemi veya tam zamanında (JIT) hata ayıklama işlemiyle programda hata ayıklaması gerçek zamanlı olabilir.
 
- [Programa iliştirme](../../extensibility/debugger/attaching-to-the-program.md) Bir sonraki adımı açıklar: hata ayıklayıcıyı programa ekleme.
+ [Programa ekleme](../../extensibility/debugger/attaching-to-the-program.md) Sonraki adımı açıklar: hata ayıklayıcıyı programa ekleme.
 
- [Başlatma tabanlı iliştirme](../../extensibility/debugger/launch-based-attachment.md) , SDM tarafından başlatma sonrasında otomatik olan bir programa başlatma tabanlı ek açıklar.
+ [Başlatma tabanlı ekleme](../../extensibility/debugger/launch-based-attachment.md) SDM tarafından başlatmadan sonra otomatik olan bir programa başlatma tabanlı eki açıklar.
 
- [Gerekli olayları gönder](../../extensibility/debugger/sending-the-required-events.md) Bir hata ayıklama altyapısı (DE) oluştururken ve bir programa iliştirirken gerekli olaylarda adım adım ilerleyin.
+ [Gerekli olayları gönderme](../../extensibility/debugger/sending-the-required-events.md) Hata ayıklama altyapısı (DE) oluşturma ve bunu bir programa ekleme sırasında gerekli olaylarda size yol sağlar.
 
 ## <a name="related-sections"></a>İlgili bölümler
- [Özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md) Bir hata ayıklama altyapısı (DE) tanımlar ve ayrıca, bu arabirimler aracılığıyla uygulanan Hizmetleri ve hata ayıklayıcının farklı çalışma modları arasında geçişine neden olabilecekleri hizmetleri açıklar.
+ [Özel hata ayıklama altyapısı oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md) Bir hata ayıklama altyapısını (DE) tanımlar ve DE arabirimleri aracılığıyla uygulanan hizmetleri ve hata ayıklayıcının farklı işlem modları arasında geçişe nasıl neden olduğunu açıklar.

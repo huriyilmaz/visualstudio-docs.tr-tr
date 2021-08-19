@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5f00f5712591f1e526e053837a4a31b5dc950d88ec844f987ad8409c3595b43b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b44059371e45cd9c11ed0b81f0113934a05a3d8e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377567"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088399"
 ---
 # <a name="idebugobjectisproxy"></a>IDebugObject::IsProxy
 Nesnenin saydam bir ara sunucu olup olmadığını belirler.

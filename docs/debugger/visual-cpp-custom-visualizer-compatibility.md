@@ -19,12 +19,12 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: e985339d610c1e6000a879ca9027f8341b5d42d507e002a0b9e8a668888dad23
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4948a4a3b82e4b713d590ffc9c8f8283ca495ea4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121418629"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122051813"
 ---
 # <a name="visual-cc-custom-visualizer-compatibility"></a>Visual C/C++ Özel Görselleştirici Uyumluluğu
 

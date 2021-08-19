@@ -1,5 +1,5 @@
 ---
-description: Thunk türlerini gösterir.
+description: Dönüştürücü türlerini belirtir.
 title: THUNK_ORDINAL | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c2ed7f7945c9ab4fb51d8ad434535d48e30b26ee12cbb880ed72500330d2c966
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 30a8f8d43056011bc28113bde1ce837da0205bc2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121240443"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052176"
 ---
 # <a name="thunk_ordinal"></a>THUNK_ORDINAL
-Thunk türlerini gösterir.
+Dönüştürücü türlerini belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,25 +41,25 @@ typedef enum THUNK_ORDINAL {
 ```
 
 ## <a name="elements"></a>Öğeler
-THUNK_ORDINAL_NOTYPE standart thunk.
+Standart dönüştürücü THUNK_ORDINAL_NOTYPE.
 
-THUNK_ORDINAL_ADJUSTOR `this` ayar ayarı.
+Bir `this` ayarlancı dönüştürücü THUNK_ORDINAL_ADJUSTOR.
 
-THUNK_ORDINAL_VCALL çağrısı thunk.
+Sanal Çağrı dönüştürücü THUNK_ORDINAL_VCALL.
 
-THUNK_ORDINAL_PCODE P-code thunk.
+THUNK_ORDINAL_PCODE P kodu dönüştürücü.
 
-THUNK_ORDINAL_LOAD gecikme süresi.
+THUNK_ORDINAL_LOAD gecikme yükleme dönüştürücü.
 
-THUNK_ORDINAL_TRAMP_INCREMENTAL artımlı çizgi thunk (çağrılardan bir bellek boşluğundan diğerine geri sıçramak için bir satır thunk kullanılır).
+THUNK_ORDINAL_TRAMP_INCREMENTAL artımlı trampoline dönüştürücü (bir trampoline dönüştürücü, bir bellek alanından diğerine yapılan çağrıları sıçramalar için kullanılır).
 
-THUNK_ORDINAL_TRAMP_BRANCHISLAND dal noktası kılavuz çizgisi.
+THUNK_ORDINAL_TRAMP_BRANCHISLAND dal noktası trampoline dönüştürücü.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu numaralamada yer alan değerler [IDiaSymbol::get_thunkOrdinal yöntemi çağrısından](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) döndürülür.
+Bu Numaralandırmadaki değerler, [IDiaSymbol:: get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) metoduna yapılan çağrıdan döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: cvconst.h
+Üst bilgi: cvconst. h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)

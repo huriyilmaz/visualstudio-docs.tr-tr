@@ -1,6 +1,6 @@
 ---
-title: KeyBinding Öğesi | Microsoft Docs
-description: KeyBinding öğesi, komutlar için klavye kısayollarını belirtir. Komutlarla ilişkilendirilmiş tek ve çift anahtar bağlamaları olabilir.
+title: KeyBinding öğesi | Microsoft Docs
+description: KeyBinding öğesi komutların klavye kısayollarını belirler. Komutlarda kendileriyle ilişkilendirilmiş tek ve çift anahtar bağlamaları bulunabilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,19 +11,20 @@ ms.assetid: e55a1098-15df-42a9-9f87-e3a99cf437dd
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6afd0a9658f088b66f2c18c632ffcd7b9a09f555
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: be359809e973d8fbb0e1fe0b964d04bc3e41b5d8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898867"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152308"
 ---
 # <a name="keybinding-element"></a>KeyBinding öğesi
-KeyBinding öğesi, komutlar için klavye kısayollarını belirtir.
+KeyBinding öğesi komutların klavye kısayollarını belirler.
 
- Komutlarla ilişkilendirilmiş tek ve çift anahtar bağlamaları olabilir. Tek tuş bağlamaya örnek olarak Kaydet **komutu için Ctrl** + **S** **kullanılır.** Çift anahtar bağlamaları, bir komutu tetiklemek için iki anahtar bileşimi gerektirir. Çift tuş bağlamaya örnek olarak yer işareti <strong>ayarlamak için Ctrl *+</strong> K <strong>,</strong>Ctrl <strong>+</strong> K** kullanılır.
+ Komutlarda kendileriyle ilişkilendirilmiş tek ve çift anahtar bağlamaları bulunabilir.  +  **Kaydet** komutu için tek tuşla bağlama bir örnektir. Çift anahtar bağlamaları bir komutun tetiklenmesi için iki ardışık anahtar kombinasyonu gerektirir. Bir yer işareti ayarlamak için <strong>CTRL *+</strong> k <strong>,</strong>CTRL <strong>+</strong> k** ikili anahtar bağlamasının bir örneğidir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,13 +41,13 @@ KeyBinding öğesi, komutlar için klavye kısayollarını belirtir.
 |---------------|-----------------|
 |guid|Gereklidir.|
 |kimlik|Gereklidir.|
-|düzenleyici|Gereklidir. Düzenleyici GUID'si, bu klavye kısayolu için etkin olacak düzenleme bağlamını gösterir. Genel bağlama kapsamı değeri "guidVSStd97" şeklindedir.|
-|key1|Gereklidir. Geçerli değerler yazım hatasına neden olan tüm alfasayısal değerleri ve 0x ve öncesinde iki basamaklı onaltılık değerleri [VK_constants.](/windows/desktop/inputdev/virtual-key-codes)|
-|mod1|İsteğe bağlı. Boşlukla ayrılmış **Ctrl,** **Alt** ve **Shift** tuş bileşimi.|
-|key2|İsteğe bağlı. Geçerli değerler yazım hatasına neden olan tüm alfasayısal değerleri ve 0x ve öncesinde iki basamaklı onaltılık değerleri [VK_constants.](/windows/desktop/inputdev/virtual-key-codes)|
-|mod2|İsteğe bağlı. Boşlukla ayrılmış **Ctrl,** **Alt** ve **Shift** tuş bileşimi.|
+|düzenleyici|Gereklidir. Düzenleyici GUID 'SI, bu klavye kısayolunun etkin olacağı düzenleme bağlamını gösterir. Genel bağlama kapsamı değeri "guidVSStd97" değeridir.|
+|key1|Gereklidir. Geçerli değerler, tüm tyıılabilen alfasayısal değerleri ve bundan önce 0x ve [VK_constants](/windows/desktop/inputdev/virtual-key-codes)olan iki basamaklı onaltılık değerler içerir.|
+|mod1|İsteğe bağlı. Boşluğa göre ayrılan **CTRL**, **alt** ve **SHIFT** 'in herhangi bir birleşimi.|
+|key2|İsteğe bağlı. Geçerli değerler, tüm tyıılabilen alfasayısal değerleri ve bundan önce 0x ve [VK_constants](/windows/desktop/inputdev/virtual-key-codes)olan iki basamaklı onaltılık değerler içerir.|
+|mod2|İsteğe bağlı. Boşluğa göre ayrılan **CTRL**, **alt** ve **SHIFT** 'in herhangi bir birleşimi.|
 |öykünücü|İsteğe bağlı.|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -59,7 +60,7 @@ KeyBinding öğesi, komutlar için klavye kısayollarını belirtir.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[KeyBindings öğesi](../extensibility/keybindings-element.md)|KeyBinding öğelerini ve diğer KeyBindings gruplamalarını gruplar.|
+|[KeyBindings öğesi](../extensibility/keybindings-element.md)|Anahtar bağlama öğelerini ve diğer KeyBindings gruplandırmaları gruplandırır.|
 
 ## <a name="example"></a>Örnek
 
@@ -74,4 +75,4 @@ KeyBinding öğesi, komutlar için klavye kısayollarını belirtir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [KeyBindings öğesi](../extensibility/keybindings-element.md)
-- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

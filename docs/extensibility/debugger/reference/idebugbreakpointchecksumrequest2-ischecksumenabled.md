@@ -1,6 +1,6 @@
 ---
-description: Bu belge için sağlama toplamı etkinleştirilip etkinleştirilmediğini belirler.
-title: 'IDebugBreakpointChecksumRequest2:: ıschecksumenabled | Microsoft Docs'
+description: Sağlama sağlamam'ın bu belge için etkinleştirilip etkinleştirilmemiş olduğunu belirler.
+title: IDebugBreakpointChecksumRequest2::IsChecksumEnabled | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,20 +9,21 @@ ms.assetid: 8b1853b5-745c-4cd6-88a9-ce0673971bb0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1c09d28309eeeab77f95c8a33f19cd8cf47e9acc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 425df93d84d5a811148cffaa720adf502b04e2b8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067224"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072661"
 ---
 # <a name="idebugbreakpointchecksumrequest2ischecksumenabled"></a>IDebugBreakpointChecksumRequest2::IsChecksumEnabled
-Bu belge için sağlama toplamı etkinleştirilip etkinleştirilmediğini belirler.
+Sağlama sağlamam'ın bu belge için etkinleştirilip etkinleştirilmemiş olduğunu belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,10 +41,10 @@ public int IsChecksumEnabled(
 
 ## <a name="parameters"></a>Parametreler
 `pfChecksumEnabled`\
-dışı Sağlama toplamı etkinse doğru döndürür; Aksi takdirde, FALSE döndürür.
+[out] Sağlamam etkinse TRUE döndürür; aksi takdirde FALSE döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBreakpointChecksumRequest2](../../../extensibility/debugger/reference/idebugbreakpointchecksumrequest2.md)

@@ -1,6 +1,6 @@
 ---
-description: İşlemin üzerinde çalıştığı bağlantı noktasını alır.
-title: 'IDebugProcess2:: GetPort | Microsoft Docs'
+description: İşlem üzerinde çalışan bağlantı noktasını alır.
+title: IDebugProcess2::GetPort | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4feae4e00fb21b1092156fcaf09d3dfab863000b23d497a1067e104e5c6dfdba
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dec1b2e3965ddc55b57832308c2a560c361b16a5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121416293"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087957"
 ---
 # <a name="idebugprocess2getport"></a>IDebugProcess2::GetPort
-İşlemin üzerinde çalıştığı bağlantı noktasını alır.
+İşlem üzerinde çalışan bağlantı noktasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int GetPort(
 
 ## <a name="parameters"></a>Parametreler
 `ppPort`\
-dışı İşlemin başlatıldığı bağlantı noktasını temsil eden bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) nesnesi döndürür.
+[out] İşlem başlatan bağlantı noktasını temsil eden bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

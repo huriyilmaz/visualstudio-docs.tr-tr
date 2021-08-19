@@ -11,17 +11,18 @@ ms.assetid: a5a02b38-4e3a-4f0e-b529-f770c3485c8b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9c5b938921ce7a07eb61f1584a75d99d2955b39a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e9d0db1b5714757169e71698fe3fe681b17b7cfb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105052989"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152867"
 ---
 # <a name="ienumdebugerrorbreakpoints2skip"></a>IEnumDebugErrorBreakpoints2::Skip
 Belirtilen sayıda öğeyi atlar.

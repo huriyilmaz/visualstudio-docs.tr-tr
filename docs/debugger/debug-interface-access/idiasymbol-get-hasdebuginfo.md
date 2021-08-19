@@ -1,6 +1,6 @@
 ---
-description: Compiland' ın hata ayıklama bilgilerini içerdiğini belirten bir bayrağını alın.
-title: IDiaSymbol::get_hasDebugInfo | Microsoft Docs
+description: Compiland 'ın hata ayıklama bilgilerini içerip içerbir şekilde belirten bir bayrak alır.
+title: 'IDiaSymbol:: get_hasDebugInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a3be705a82ae0047323c6bbb6b2e09cfc3a2f6b8ecb5383dfe030afc5e444d34
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e1a395963637974abfa126a310fed0ba3d0dc09e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379969"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139142"
 ---
 # <a name="idiasymbolget_hasdebuginfo"></a>IDiaSymbol::get_hasDebugInfo
-[Compiland'ın](../../debugger/debug-interface-access/compiland.md) hata ayıklama bilgilerini içerdiğini belirten bir bayrağını alın.
+[Compiland](../../debugger/debug-interface-access/compiland.md) 'ın hata ayıklama bilgileri içerip içerne olduğunu belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_hasDebugInfo(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-[out] Derleme `TRUE` hata ayıklama bilgilerini içeriyorsa döndürür; aksi takdirde `FALSE` döndürür.
+dışı `TRUE` Compiland hata ayıklama bilgisi içeriyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üstbilgi:|dia2.h|
-|Sürüm:|DIA SDK v8.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

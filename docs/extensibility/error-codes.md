@@ -12,14 +12,15 @@ ms.assetid: d9cbd1c4-719b-467a-8100-333c1e146d3b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: eedc9311bcafdd4241e065b40079abed3977dcef
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 7e7af991cc00b482dae3475fdc9a36a9b9fde032
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898311"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122070343"
 ---
 # <a name="error-codes"></a>Hata kodları
 Bir kaynak denetimi eklentisi API işlevi bir hata döndürdüğünde, aşağıdaki hata kodlarından biri olması beklenir. Tüm hatalar negatif, uyarılar veya bilgilendirici hata kodları pozitif ve başarılı 0 ' dır.
@@ -30,7 +31,7 @@ Bir kaynak denetimi eklentisi API işlevi bir hata döndürdüğünde, aşağıd
 |`SCC_I_FILEDIFFERS`|6|Yerel dosya, kaynak denetim veritabanındaki dosyadan farklı (örneğin, [SccDiff](../extensibility/sccdiff-function.md) bu değeri döndürebilir).|
 |`SCC_I_RELOADFILE`|5|Kaynak denetim işlemi sırasında yerel dosya değiştirildi; Mümkünse, IDE dosyayı yeniden yüklemeli.|
 |`SCC_I_FILENOTAFFECTED`|4|Dosya etkilenmez.|
-|`SCC_I_PROJECTCREATED`|3|Proje, kaynak denetim işlemi sırasında oluşturulmuştur (örneğin, flag belirtildiğinde bir [SccOpenProject](../extensibility/sccopenproject-function.md) çağrısı sırasında `SCC_OP_CREATEIFNEW` ).|
+|`SCC_I_PROJECTCREATED`|3|Project, kaynak denetim işlemi sırasında oluşturulmuştur (örneğin, flag belirtildiğinde bir [sccopenproject](../extensibility/sccopenproject-function.md) çağrısı sırasında `SCC_OP_CREATEIFNEW` ).|
 |`SCC_I_OPERATIONCANCELED`|2|İşlem iptal edildi.|
 |`SCC_I_ADV_SUPPORT`|1|Eklenti, belirtilen komut için gelişmiş seçenekleri destekler. Daha fazla bilgi için bkz. [Sccgetcommandoseçenekler](../extensibility/sccgetcommandoptions-function.md).|
 |`SCC_OK`|0|Başarılı.|
@@ -56,7 +57,7 @@ Bir kaynak denetimi eklentisi API işlevi bir hata döndürdüğünde, aşağıd
 |`SCC_E_SHELLFAILURE`|-20|Bir kabuk hatası nedeniyle hata oluştu.|
 |`SCC_E_INVALIDUSER`|-21|Hata: Kullanıcı geçersiz.|
 |`SCC_E_PROJECTALREADYOPEN`|-22|Hata: proje zaten açık.|
-|`SCC_E_PROJSYNTAXERR`|-23|Proje sözdizimi hatası.|
+|`SCC_E_PROJSYNTAXERR`|-23|Project sözdizimi hatası.|
 |`SCC_E_INVALIDFILEPATH`|-24|Hata: dosya yolu geçersiz.|
 |`SCC_E_PROJNOTOPEN`|-25|Hata: proje açık değil.|
 |`SCC_E_NOTAUTHORIZED`|-26|Hata: kullanıcının bu işlemi gerçekleştirme yetkisi yok.|

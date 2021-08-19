@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 72f9920d5c2a690f9b2687c14b60ae298c4fde4feb009675d157e7158cdd5e30
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 052aa705c645ee7dc991f5311aa9d96f3b6a637d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121240547"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122052272"
 ---
 # <a name="idiasymbolget_framepadsize"></a>IDiaSymbol::get_framePadSize
 

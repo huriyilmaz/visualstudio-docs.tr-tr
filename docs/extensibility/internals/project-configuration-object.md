@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a84f6d8f635698ac02b05efac9fa3e3110d2e293f6e5ba5a3c7e3f96fe2a703c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b20d476f322a3240313ef6a851bef39f6c169623
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121321278"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152425"
 ---
 # <a name="project-configuration-object"></a>Proje Yapılandırması Nesnesi
 Proje yapılandırma nesnesi, yapılandırma bilgilerinin kullanıcı arabirimine görüntüsünü yönetir.

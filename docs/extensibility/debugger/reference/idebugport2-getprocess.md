@@ -11,17 +11,18 @@ ms.assetid: 3e2431b0-0e19-450d-8e1d-d7c314c8f872
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b2ae7031a747ac31b2ec56b78de52dbc156973e5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fa243dc13af5440ce54d9c8a98f881676f37bb26
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087359"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088230"
 ---
 # <a name="idebugport2getprocess"></a>IDebugPort2::GetProcess
 Bir bağlantı noktasında çalışan belirtilen işlemi alır.

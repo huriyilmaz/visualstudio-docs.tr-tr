@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: 8cbcb6f53f70de6f42b87551309a557f31b29f03a3bb73ea9825075bcb481a23
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fbd74301a7a7ff1299b8d9496e20793bbfabdf6f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121455510"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122122169"
 ---
 # <a name="code-metrics-values"></a>Kod ölçüm değerleri
 

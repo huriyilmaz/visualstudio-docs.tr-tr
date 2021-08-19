@@ -1,6 +1,6 @@
 ---
-description: Hizmet sağlayıcıyı ayarlar.
-title: 'Idebugportpicker:: SetSite | Microsoft Docs'
+description: Hizmet sağlayıcısını ayarlar.
+title: IDebugPortPicker::SetSite | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,20 +9,21 @@ ms.assetid: 7319e187-adfe-4b3f-aec9-521356fb5a8a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8a442c438f233187265c90e724f57e8681b95556
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c9cfc443f7c70949c2b5a12d64fd1c93aadd8160
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072266"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072225"
 ---
 # <a name="idebugportpickersetsite"></a>IDebugPortPicker::SetSite
-Hizmet sağlayıcıyı ayarlar.
+Hizmet sağlayıcısını ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,13 +41,13 @@ public int SetSite(
 
 ## <a name="parameters"></a>Parametreler
 `pSP`\
-'ndaki Hizmet sağlayıcısının arabirimine başvuru.
+[in] Hizmet sağlayıcısının arabirimine başvuru.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem diğer yöntemler çağrılmadan önce çağrılacaktır.
+ Bu yöntem, diğer yöntemler çağrılmadan önce çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortPicker](../../../extensibility/debugger/reference/idebugportpicker.md)

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ba1dc2044a255dda19d169be0569a9e417f60d15f2159d23b251b3b0cc544982
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4059a96d561fb13b18cee4752f04e9bd54a2f43e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121339014"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072075"
 ---
 # <a name="idebugprocess2getphysicalprocessid"></a>IDebugProcess2::GetPhysicalProcessId
 Sistem işlem tanımlayıcısını alır.

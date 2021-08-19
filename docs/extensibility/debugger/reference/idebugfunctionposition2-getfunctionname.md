@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: cfdc1969ad66e79a4f0f820c1ca70fcaa6d72627aa9808e87005b8b302292704
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f9b2b7a6650207425c6dc9376fe7e61c47887cdc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389767"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088568"
 ---
 # <a name="idebugfunctionposition2getfunctionname"></a>IDebugFunctionPosition2::GetFunctionName
 Bu konumun noktası olan işlevin adını alır.

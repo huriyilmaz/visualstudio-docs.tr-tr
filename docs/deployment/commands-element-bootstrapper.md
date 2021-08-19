@@ -1,6 +1,6 @@
 ---
 title: '&lt;Commands &gt; öğesi (önyükleyici) | Microsoft Docs'
-description: Komutlar öğesi, test önyükleyici testi başarısız olursa Install the The The Install The Elements The Install the The The Commands.
+description: komutlar öğesi, ınstalldenetimleri altındaki öğelerde testler uygular ve ClickOnce önyükleyici testi başarısız olursa, yüklenecek paketi bildirir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,14 +15,15 @@ ms.assetid: e61d5787-fe1f-4ebf-b0cf-0d7909be7ffb
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f53ca683e40be8e3cc428d013d2b8d3c8c5773e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a343ae58306b85a7bd6dcb0332f1b69cbe5d04a7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881236"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104956"
 ---
 # <a name="ltcommandsgt-element-bootstrapper"></a>&lt;Commands &gt; öğesi (önyükleyici)
 `Commands`Öğesi, öğesinin altındaki öğeler tarafından tanımlanan testleri uygular `InstallChecks` ve [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] test başarısız olursa önyükleyici hangi pakete yükleneceğini bildirir.
@@ -124,11 +125,11 @@ ms.locfileid: "99881236"
 |---------------|-----------------|
 |`Value`|Gereklidir. Bu öğenin uygulandığı çıkış kodu değeri `ExitCode` .|
 |`Result`|Gereklidir. Yükleme bu çıkış koduna nasıl tepki sağlamalıdır. Aşağıdaki listede geçerli değerler gösterilmektedir:<br /><br /> `Success`. Paketi başarıyla yüklendi olarak işaretler.<br /><br /> `SuccessReboot`. Paketi başarıyla yüklendi olarak işaretler ve sistemi yeniden başlatmasını söyler.<br /><br /> `Fail`. Paketi başarısız olarak işaretler.<br /><br /> `FailReboot`. Paketi başarısız olarak işaretler ve sistemi yeniden başlatmasını söyler.|
-|`String`|İsteğe bağlı. Bu çıkış koduna yanıt olarak kullanıcıya görüntülenecek değer.|
-|`FormatMessageFromSystem`|İsteğe bağlı. Çıkış koduna karşılık gelen sistem tarafından sağlanmış hata iletisinin kullanılıp kullanılmayacağını belirler veya içinde belirtilen değeri kullanın `String` . Geçerli değerler `true` , sistem tarafından sağlanmış hatanın kullanılması anlamına gelir ve `false` tarafından belirtilen dizeyi kullanmak anlamına gelir `String` . Varsayılan değer: `false`. Bu özellik `false` , ancak ayarlanmamışsa, `String` sistem tarafından belirtilen hata kullanılır.|
+|`String`|İsteğe bağlı. Bu çıkış koduna yanıt olarak kullanıcıya görüntülenme değeri.|
+|`FormatMessageFromSystem`|İsteğe bağlı. Çıkış koduna karşılık gelen sistem tarafından sağlanan hata iletisinin mi yoksa içinde sağlanan değerin kullan mı olduğunu `String` belirler. Geçerli değerler, sistem tarafından sağlanan hatayı kullanmak anlamına gelir ve tarafından sağlanan dizeyi `true` `false` kullanmak anlamına `String` gelir. Varsayılan değer: `false`. Bu özellik `false` ise ancak `String` ayarlanmazsa, sistem tarafından sağlanan hata kullanılır.|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği 2,0 .NET Framework yüklemeye yönelik komutları tanımlar.
+ Aşağıdaki kod örneği, 2.0 .NET Framework komutlarını tanımlar.
 
 ```xml
 <Commands Reboot="Immediate">
@@ -207,4 +208,4 @@ ms.locfileid: "99881236"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Ürün ve paket şema başvurusu](../deployment/product-and-package-schema-reference.md)
-- [\<InstallChecks> dosyalarında](../deployment/installchecks-element-bootstrapper.md)
+- [\<InstallChecks> Öğe](../deployment/installchecks-element-bootstrapper.md)

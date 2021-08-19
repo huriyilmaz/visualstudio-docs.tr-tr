@@ -11,17 +11,18 @@ ms.assetid: c46bf625-0a48-4cbb-8f1f-286356f2c065
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a4c6e5eb14d3fa320cb8b86c20c6d336466c42cc
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 346ca568371d1ea0dfe04d6f6854e13bb8c23ab6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058969"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072829"
 ---
 # <a name="idebugarrayfieldgetelementtype"></a>IDebugArrayField::GetElementType
 Dizideki öğe türünü alır.

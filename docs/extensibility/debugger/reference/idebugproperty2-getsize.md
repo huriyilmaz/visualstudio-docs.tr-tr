@@ -1,6 +1,6 @@
 ---
 description: Özellik değerinin bayt cinsinden boyutunu alır.
-title: 'IDebugProperty2:: GetSize | Microsoft Docs'
+title: IDebugProperty2::GetSize | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 17a1ec60b6f1a60980292b4a82cb218d4ad69b15d504f9d377334369ee663c01
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6be8ee81d38be6bb642ba4178a2793fb5d482f0b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338702"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122071291"
 ---
 # <a name="idebugproperty2getsize"></a>IDebugProperty2::GetSize
 Özellik değerinin bayt cinsinden boyutunu alır.
@@ -43,10 +43,10 @@ int GetSize (
 
 ## <a name="parameters"></a>Parametreler
 `pdwSize`\
-dışı Özellik değerinin bayt cinsinden boyutunu döndürür.
+[out] Özellik değerinin bayt cinsinden boyutunu döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür. `S_GETSIZE_NO_SIZE`Özelliğin boyutu yoksa döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür. Özelliğin `S_GETSIZE_NO_SIZE` boyutu yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

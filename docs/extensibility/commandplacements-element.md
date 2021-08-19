@@ -1,6 +1,6 @@
 ---
-title: CommandPlacements Öğesi | Microsoft Docs
-description: CommandPlacements öğesi, CommandPlacement öğelerini ve diğer CommandPlacements gruplamalarını gruplar. CommandPlacements öğesi isteğe bağlıdır.
+title: CommandPlacements öğesi | Microsoft Docs
+description: CommandPlacements öğesi, Commandyerleştirme öğelerini ve diğer CommandPlacements gruplandırmaları gruplandırır. CommandPlacements öğesi isteğe bağlıdır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,17 +16,17 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7293f1c1e6524284e11116167729f4a965d036fb12239794c97721a4302cd0d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3ee3d626536ef16bc378be647b8418bb732ad8d6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452621"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122051293"
 ---
 # <a name="commandplacements-element"></a>CommandPlacements öğesi
-CommandPlacements öğesi, CommandPlacement öğelerini ve diğer CommandPlacements gruplamalarını gruplar.
+CommandPlacements öğesi, Commandyerleştirme öğelerini ve diğer CommandPlacements gruplandırmaları gruplandırır.
 
- CommandPlacements öğesi isteğe bağlıdır. İkincil bir konuma hiçbir komut, grup veya menü dahil edilecek bir komut, grup veya menü yoksa bu bölümü *.vsct dosyanıza dahil etmek zorunda değildir.*
+ CommandPlacements öğesi isteğe bağlıdır. İkincil bir konuma hiçbir komut, Grup veya menü eklenmemelidir, bu bölümü *. vsct* dosyanıza eklemeniz gerekmez.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ CommandPlacements öğesi, CommandPlacement öğelerini ve diğer CommandPlaceme
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|CommandPlacements|CommandPlacement öğelerini ve diğer CommandPlacements gruplamalarını gruplar.|
-|[CommandPlacement öğesi](../extensibility/commandplacement-element.md)|Düğmelerin, grupların ve menülerin birden fazla gruba veya menüye dahil ekleyebilirsiniz.|
+|CommandPlacements|Commandyerleştirme öğelerini ve diğer CommandPlacements gruplamalarını gruplandırır.|
+|[Commandyerleştirme öğesi](../extensibility/commandplacement-element.md)|Düğmelerin, grupların ve menülerin birden fazla gruba veya menüye dahil edilmesini sağlar.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
@@ -71,5 +71,5 @@ CommandPlacements öğesi, CommandPlacement öğelerini ve diğer CommandPlaceme
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [CommandPlacement öğesi](../extensibility/commandplacement-element.md)
-- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Commandyerleştirme öğesi](../extensibility/commandplacement-element.md)
+- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

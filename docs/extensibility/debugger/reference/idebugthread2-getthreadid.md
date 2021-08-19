@@ -1,6 +1,6 @@
 ---
 description: Sistem iş parçacığı tanımlayıcısını alır.
-title: IDebugThread2::GetThreadId | Microsoft Docs
+title: 'IDebugThread2:: GetThreadId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5d371149fb654be02b895f1faa6d52eb5024017a08b90d253335eee66c2f9ebb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1e8ac54a27ca799f263e156d79bee057fcb90c3c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338403"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153101"
 ---
 # <a name="idebugthread2getthreadid"></a>IDebugThread2::GetThreadId
 Sistem iş parçacığı tanımlayıcısını alır.
@@ -43,16 +43,16 @@ int GetThreadId (
 
 ## <a name="parameters"></a>Parametreler
 `pdwThreadId`\
-[out] Sistem iş parçacığı tanımlayıcısını döndürür.
+dışı Sistem iş parçacığı tanımlayıcısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-bir iş parçacığı kimliği, bir işlemde diğer tüm iş parçacıkları arasında bir iş parçacığı tanımlamak için kullanılır.
+İş parçacığı KIMLIĞI, bir işlemdeki diğer tüm iş parçacıkları arasında iş parçacığı tanımlamak için kullanılır.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CProgram` [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulandığını gösterir.
+Aşağıdaki örnek, `CProgram` [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {

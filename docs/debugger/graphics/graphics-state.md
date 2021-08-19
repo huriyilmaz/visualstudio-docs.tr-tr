@@ -10,14 +10,15 @@ ms.assetid: 97e7757e-c372-4626-8149-99a81367a0e1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c6f909d7e250be193bb446d25cd4182d4f062ebe
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: a33f50be257c3e484d99ca6851d125f414edb424
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888608"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138906"
 ---
 # <a name="graphics-state"></a>Grafik Durumu
 Visual Studio grafik tanılama 'daki durum penceresi, çizim çağrısı gibi geçerli olay sırasında etkin olan grafik durumunu anlamanıza yardımcı olur.
@@ -28,7 +29,7 @@ Visual Studio grafik tanılama 'daki durum penceresi, çizim çağrısı gibi ge
 ### <a name="state-views"></a>Durum görünümleri
  Durum tablosunu birkaç farklı yolla görüntüleyebilirsiniz:
 
-|Görünüm|Description|
+|Görünüm|Açıklama|
 |----------|-----------------|
 |API giriş durumu görünümü|Bu görünüm, durumu oluşturan Direct3D nesnelerine benzer bir düzende durumu gösterir.|
 |Mantıksal giriş durumu görünümü|Bu görünüm, durumu oluşturan Direct3D nesnelerinin yerleşimini yansıtmayan bir mantıksal görünümde durumu gösterir.|

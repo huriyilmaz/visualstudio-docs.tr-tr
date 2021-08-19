@@ -13,26 +13,26 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c62658c14754a317554fd7e06960cd2f87ff3f2a43bc98811a7479b98700bd3c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: caed437da38206b351634e8f59d04463a221e267
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415006"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152516"
 ---
 # <a name="document-lock-holder-management"></a>Belge kilidi tutucu yönetimi
 
-Çalışan belge tablosu (RDT), açık belgelerin ve sahip olduğu düzenleme kilitlerinin sayısını sürdürür. Kullanıcı belge penceresinde açık belgeyi görmeden, arka planda program aracılığıyla düzenlenmiş olan bir belgeyi RDT'de düzenleme kilidi ekleyebilirsiniz. Bu işlevsellik genellikle grafik kullanıcı arabirimi aracılığıyla birden çok dosyada değişiklik yapan tasarımcılar tarafından kullanılır.
+Çalışan belge tablosu (RDT), açık belgelerin ve sahip olduğu düzenleme kilitlerinin sayısını sürdürür. Kullanıcı belge penceresinde açık belgeyi görmeden, arka planda program aracılığıyla düzenlenmiş bir belgeyi RDT'de düzenleme kilidi ekleyebilirsiniz. Bu işlevsellik genellikle grafik kullanıcı arabirimi aracılığıyla birden çok dosyada değişiklik yapan tasarımcılar tarafından kullanılır.
 
 ## <a name="document-lock-holder-scenarios"></a>Belge kilidi tutucu senaryoları
 
 ### <a name="file-a-has-a-dependence-on-file-b"></a>"a" dosyasının "b" dosyasına bağımlılığı vardır
 
-"a" dosya türü için standart bir düzenleyici "A" uygulayan bir durum düşünün ve "a" türünde her dosyanın "b" türünde bir dosyaya başvurusu (veya bağımlılığı vardır) vardır. "b" türünde dosyalar için standart bir "B" düzenleyicisi vardır. "A" düzenleyicisi "a" dosyasını açtığında ilgili "b" dosyasına başvurur. "b" dosyası görüntülenmez, ancak "A" düzenleyicisi dosyayı değiştirebilir. "A" düzenleyicisi yönteminden "b" dosyasının belge verilerine bir başvuru edinir ve "b" dosyasında bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> düzenleme kilidi bulundurrır. "A" düzenleyicisi "b" dosyasını değiştirdikten sonra yöntemini çağırarak "b" dosyasındaki düzenleme kilidi sayısını <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnlockDocument%2A> esndirebilirsiniz. parametresiyle yöntemini çağırdıysanız bu adımı <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> atlarsanız bu adımı `dwRDTLockType` [_VSRDTFLAGS. RDT_NoLock.](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS.RDT_NoLock>)
+"a" dosya türü için standart bir düzenleyici "A" uygulayan bir durum düşünün ve "a" türünde her dosyanın "b" türünde bir dosyaya başvurusu (veya bağımlılığı vardır) vardır. "b" türünde dosyalar için standart bir "B" düzenleyicisi vardır. "A" düzenleyicisi "a" dosyasını açtığında ilgili "b" dosyasına başvurur. "b" dosyası görüntülenmez, ancak "A" düzenleyicisi dosyayı değiştirebilir. "A" düzenleyicisi yöntemden "b" dosyasının belge verilerine bir başvuru edinir ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> ayrıca "b" dosyasında bir düzenleme kilidi bulundurrır. "A" düzenleyicisi "b" dosyasını değiştirdikten sonra yöntemini çağırarak "b" dosyasındaki düzenleme kilidi sayısını <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnlockDocument%2A> esndirebilirsiniz. parametresiyle yöntemini çağırdıysanız bu adımı <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> atlarsanız bu adımı `dwRDTLockType` [_VSRDTFLAGS. RDT_NoLock.](<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS.RDT_NoLock>)
 
 ### <a name="file-b-is-opened-by-a-different-editor"></a>"b" dosyası farklı bir düzenleyici tarafından açılır
 
-"A" düzenleyicisi dosyayı açmaya çalıştığında "b" dosyasının "B" düzenleyicisi tarafından zaten açılmış durumda olduğu durumda, işlemesi gereken iki ayrı senaryo vardır:
+"A" düzenleyicisi dosyayı açmaya çalıştığında "b" dosyasının "B" düzenleyicisi tarafından zaten açılmış olduğu durumda, işlemesi gereken iki ayrı senaryo vardır:
 
 - "b" dosyası uyumlu bir düzenleyicide açıksa, "A" düzenleyicisinin yöntemini kullanarak "b" dosyasına bir belge düzenleme kilidi kaydetmesi <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.RegisterDocumentLockHolder%2A> gerekir. "A" düzenleyiciniz "b" dosyasını değiştirdikten sonra, yöntemini kullanarak belge düzenleme kilidinin kaydını <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.UnregisterDocumentLockHolder%2A> açın.
 

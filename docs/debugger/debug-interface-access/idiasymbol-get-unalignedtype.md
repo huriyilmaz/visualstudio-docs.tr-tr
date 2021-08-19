@@ -1,6 +1,6 @@
 ---
-description: Kullanıcı tanımlı veri türünün hizasız olup olmadığını belirten bir bayrak alınır.
-title: IDiaSymbol::get_unalignedType | Microsoft Docs
+description: Kullanıcı tanımlı veri türünün hizalanmamış olup olmadığını belirten bir bayrak alır.
+title: 'IDiaSymbol:: get_unalignedType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4096b0a30c6bf1adc18a43218ffe3598eeb8273a11ebfe2c3ff67908010e1fc1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f623a3d6a98093a00d44b95c86d91152df179e3e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420521"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139134"
 ---
 # <a name="idiasymbolget_unalignedtype"></a>IDiaSymbol::get_unalignedType
-Kullanıcı tanımlı veri türünün hizasız olup olmadığını belirten bir bayrak alınır.
+Kullanıcı tanımlı veri türünün hizalanmamış olup olmadığını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_unalignedType (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Kullanıcı `TRUE` tanımlı veri türü hizalanmamışsa döndürür; aksi takdirde `FALSE` döndürür.
+dışı `TRUE` Kullanıcı tanımlı veri türü hizalanmamış ise döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

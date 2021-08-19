@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 91209a76acc754a900bfc88d5d488f0b4729703121d1125abc9f25990ca1c9c9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f63acf1616aa7d8c3725362851cde0df10e82d19
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435574"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122051618"
 ---
 # <a name="deploy-prerequisites-for-64-bit-applications"></a>64 bit uygulamalar için dağıtım önkoşulları
 ClickOnce dağıtımı, 64 bit platformlarda uygulama yüklemesini destekler. Hedef platformlar 32 bit platformlar için **x86,** **AMD64** ve EM64T yönerge kümelerini destekleyen makineler için x64 ve 64 bit Itanium işlemcisi için **Itanium'dır.**

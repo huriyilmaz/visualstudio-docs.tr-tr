@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, işlev parametreleri oluşturmak için kullanılan bir IDebugFunctionObject nesnesi alır.
-title: 'Idebugciltçi:: GetFunctionObject | Microsoft Docs'
+description: Bu yöntem, işlev parametrelerini oluşturmak için kullanılan bir IDebugFunctionObject nesnesini alır.
+title: IDebugBinder::GetFunctionObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5fbd978bf415565c4fab016d08bbe50729124fb2683141acdcba611659bd07a1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ecdff1d78326dd55f0b666b77611e3034e653014
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342602"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122072830"
 ---
 # <a name="idebugbindergetfunctionobject"></a>IDebugBinder::GetFunctionObject
-Bu yöntem, işlev parametreleri oluşturmak için kullanılan bir [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) nesnesi alır.
+Bu yöntem, işlev [parametrelerini oluşturmak için kullanılan bir IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) nesnesini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int GetFunctionObject(
 
 ## <a name="parameters"></a>Parametreler
 `ppFunction`\
-dışı İşlev parametreleri oluşturmak için kullanılan [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) arabirimini döndürür.
+[out] İşlev [parametrelerini oluşturmak için kullanılan IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) arabirimini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)
