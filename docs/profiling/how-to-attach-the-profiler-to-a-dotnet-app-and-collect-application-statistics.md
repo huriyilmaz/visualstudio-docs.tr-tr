@@ -12,12 +12,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 41ff72d2e23126cf5f7bc7530f556f7c28ce53c0a6ebd4185f58e9dd16478228
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ebe924374e33fe9c1fb82dd947be5244c7d0fa88
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121396571"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150488"
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>Nasıl yapılır: Komut satırını kullanarak profil oluşturucuyu tek başına bir .NET Framework uygulamasına ekleme ve uygulama istatistikleri toplama
 Bu makalede, Profil Oluşturma Araçları komut satırı araçlarını kullanarak çalışan bir .NET Framework (istemci) uygulamasına profil oluşturma ve örnekleme yöntemini kullanarak performans istatistikleri toplama [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] açıklanmıştır.
@@ -29,7 +29,7 @@ Bu makalede, Profil Oluşturma Araçları komut satırı araçlarını kullanara
 >
 > Profil oluşturma çalıştırması için katman etkileşim verileri eklemek için komut satırı profil oluşturma araçlarıyla belirli yordamlar gerekir. Bkz. [Katman etkileşim verilerini toplama.](../profiling/adding-tier-interaction-data-from-the-command-line.md)
 
- Bir uygulamanın performans verilerini .NET Framework, hedef uygulama başlatılmadan önce uygun ortam değişkenlerinin başlatılması gerekir. Profiler uygulamaya ekli olduğunda veri toplamayı duraklatabilir ve sürdürebilirsiniz.
+ Bir uygulamanın performans verilerini .NET Framework için, hedef uygulama başlatılmadan önce uygun ortam değişkenlerinin başlatılması gerekir. Profiler uygulamaya ekli olduğunda veri toplamayı duraklatabilir ve sürdürebilirsiniz.
 
  Profil oluşturma oturumunu sona ertmak için, profil oluşturmanın artık uygulamaya bağlı olması ve profilleyicinin açıkça kapatılamaması gerekir. Çoğu durumda, profil oluşturma oturumunun sonunda profil oluşturma ortam değişkenlerini temizlemenizi öneririz.
 
@@ -57,7 +57,7 @@ Bu makalede, Profil Oluşturma Araçları komut satırı araçlarını kullanara
 
    | Seçenek | Açıklama |
    | - | - |
-   | [/user](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Profili yapılan işleme sahip olan hesabın isteğe bağlı etki alanını ve kullanıcı adını belirtir. Bu seçenek yalnızca profili yapılan uygulama oturum açmış kullanıcıdan farklı bir kullanıcı olarak başlatıldı ise gereklidir. |
+   | [/user](../profiling/user-vsperfcmd.md) **:**[ `Domain` **\\** ]`UserName` | Profili yapılan işleme sahip olan hesabın isteğe bağlı etki alanını ve kullanıcı adını belirtir. Bu seçenek yalnızca profili yapılan uygulama oturum açmış olan kullanıcıdan farklı bir kullanıcı olarak başlatıldı ise gereklidir. |
    | [/crosssession](../profiling/crosssession.md) | Diğer oturum açma oturumlarında işlemlerin profil oluşturmasını sağlar. **/CS,** **/crosssession için bir kısaltma olarak belirtilebilir.** Uygulama farklı bir oturumda çalışıyorsa bu seçenek gereklidir. |
    | [/wincounter:](../profiling/wincounter.md) `WinCounterPath` | Profil oluşturma Windows bir performans sayacı belirtir. |
    | [/automark:](../profiling/automark.md) `Interval` | Yalnızca **/wincounter ile** kullanın. Performans sayacı toplama olayları arasındaki milisaniye Windows sayısını belirtir. Varsayılan değer 500 ms'tir. |
@@ -83,7 +83,7 @@ Bu makalede, Profil Oluşturma Araçları komut satırı araçlarını kullanara
    |[/counter](../profiling/counter.md) **:**`Config`|Örnekleme olayı ve aralığını, içinde belirtilen işlemci performans sayacı ve aralığı olarak `Config` değiştirir.|
 
 ## <a name="control-data-collection"></a>Veri toplamayı denetleme
- Hedef uygulama çalıştıryken, profil oluşturma seçeneklerini kullanarak veri yazmayı başlatarak ve durdurarak veri *toplamayıVSPerfCmd.exe* yapabilirsiniz. Veri toplamayı denetlemek, uygulamayı başlatma veya kapatma gibi program yürütmenin belirli bir bölümü için veri toplamaya olanak sağlar.
+ Hedef uygulama çalıştır çalıştırıcıda, profil oluşturma seçeneklerini kullanarak veri yazmayı başlatarak ve durdurarak veri *toplamayıVSPerfCmd.exe* yapabilirsiniz. Veri toplamayı denetlemek, uygulamayı başlatma veya kapatma gibi program yürütmenin belirli bir bölümü için veri toplamaya olanak sağlar.
 
 #### <a name="to-start-and-stop-data-collection"></a>Veri toplamayı başlatmak ve durdurmak için
 
@@ -92,11 +92,11 @@ Bu makalede, Profil Oluşturma Araçları komut satırı araçlarını kullanara
     |Seçenek|Açıklama|
     |------------|-----------------|
     |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Tüm işlemler **için veri toplamayı** başlatır ( /globalon ) veya durdurur (**/globaloff).**|
-    |[/processon:](../profiling/processon-and-processoff.md)  `PID` [/processoff](../profiling/processon-and-processoff.md) **:**`PID`|tarafından belirtilen **işlem için** veri koleksiyonunu başlatır ( /processon ) veya durdurur (**/processoff** `PID` ).|
+    |[/processon:](../profiling/processon-and-processoff.md)  `PID` [/processoff](../profiling/processon-and-processoff.md) **:**`PID`|tarafından belirtilen işlem için (**/processon**) veya durdurur (**/processoff**) veri toplamayı `PID` durdurur.|
     |[/attach:](../profiling/attach.md) { `PID`&#124;`ProcName` } [/detach](../profiling/detach.md)[**:**{ `PID`&#124;`ProcName` }]|**/attach,** veya işlem adı (ProcName) tarafından belirtilen işlem `PID` için veri toplamaya başlar. **/detach,** belirtilen işlem için veya belirli bir işlem belirtilmezse tüm işlemler için veri toplamayı durdurur.|
 
 ## <a name="end-the-profiling-session"></a>Profil oluşturma oturumunu sona er
- Profil oluşturma oturumunu sona erdirmak için profil oluşturma işleminin tüm profili yapılan işlemlerden ayrılmaları ve profil oluşturma işleminin açıkça kapatılmış olması gerekir. Uygulamayı kapatarak veya **VSPerfCmd /detach** seçeneğini çağırarak, örnekleme yöntemini kullanarak profil profili yapılan bir uygulamanın profillerini ayırabilirsiniz. Ardından, profil oluşturma veri dosyasını kapatmak ve profil oluşturma verilerini kapatmak için **VSPerfCmd /shutdown** seçeneğini çağırabilirsiniz. **VSPerfClrEnv /off** komutu profil oluşturma ortam değişkenlerini temizler.
+ Profil oluşturma oturumunu sona erdirmak için profil oluşturma işleminin tüm profili yapılan işlemlerden ayrılmaları ve profil oluşturma işleminin açıkça kapatılmış olması gerekir. Uygulamayı kapatarak veya **VSPerfCmd /detach** seçeneğini çağırarak, örnekleme yöntemini kullanarak profil profili yapılan bir uygulamanın profillerini ayırabilirsiniz. Ardından, profil oluşturma veri dosyasını kapatıp kapatmak için **VSPerfCmd /shutdown** seçeneğini çağırabilirsiniz. **VSPerfClrEnv /off** komutu profil oluşturma ortam değişkenlerini temizler.
 
 #### <a name="to-end-a-profiling-session"></a>Profil oluşturma oturumunu sona erdir
 

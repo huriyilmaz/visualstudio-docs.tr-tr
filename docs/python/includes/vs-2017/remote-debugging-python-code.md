@@ -1,27 +1,28 @@
 ---
 title: Uzak Linux bilgisayarlarda Python kodunda hata ayıklama
-description: Gerekli yapılandırma adımları, güvenlik ve sorun giderme dahil olmak üzere uzak Linux bilgisayarlarda çalışan Python kodunda hata ayıklamak için Visual Studio 'Yu kullanın.
+description: gerekli yapılandırma adımları, güvenlik ve sorun giderme dahil olmak üzere uzak Linux bilgisayarlarda çalışan Python kodunda hata ayıklamak için Visual Studio kullanın.
 ms.date: 12/06/2018
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a58af8098a49992e81380c6567755c31709d1dc3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7d625edfafbbf0f7cf1bdbfbf16697d401c8ec63
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916590"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140544"
 ---
-Visual Studio, Windows bilgisayarında Python uygulamalarını yerel olarak ve uzaktan başlatabilir ve hata ayıklayabilir (bkz. [Uzaktan hata ayıklama](../../../debugger/remote-debugging.md)). Ayrıca, [ptvsd kitaplığını](https://pypi.python.org/pypi/ptvsd)kullanarak, Cpıthon dışında farklı bir işletim sisteminde, cihazda veya Python uygulamasında uzaktan hata ayıklaması yapabilir.
+Visual Studio, Python uygulamalarını yerel olarak ve Windows bilgisayarda uzaktan başlatabilir ve hata ayıklayabilir (bkz. [uzaktan hata ayıklama](../../../debugger/remote-debugging.md)). Ayrıca, [ptvsd kitaplığını](https://pypi.python.org/pypi/ptvsd)kullanarak, Cpıthon dışında farklı bir işletim sisteminde, cihazda veya Python uygulamasında uzaktan hata ayıklaması yapabilir.
 
-Ptvsd kullanırken, hata ayıklamakta olan Python kodu, Visual Studio 'Nun iliştirebileceği hata ayıklama sunucusunu barındırır. Bu barındırma, kodunuzun içeri aktarılması ve etkinleştirilmesi için kodunuzda küçük bir değişiklik yapılmasını gerektirir ve TCP bağlantılarına izin vermek için uzak bilgisayar üzerinde ağ veya güvenlik duvarı yapılandırmalarının gerekli kılabilir.
+ptvsd kullanırken, hata ayıklamakta olan Python kodu, Visual Studio iliştirebileceği hata ayıklama sunucusunu barındırır. Bu barındırma, kodunuzun içeri aktarılması ve etkinleştirilmesi için kodunuzda küçük bir değişiklik yapılmasını gerektirir ve TCP bağlantılarına izin vermek için uzak bilgisayar üzerinde ağ veya güvenlik duvarı yapılandırmalarının gerekli kılabilir.
 
-![video için film kamerası simgesi](../../../install/media/video-icon.png "Nasıl yapılacağını görmek için") Uzaktan hata ayıklamaya giriş için bkz. [derinlemesine bakış: platformlar arası uzaktan hata ayıklama](https://youtu.be/y1Qq7BrV6Cc) (YouTube.com, 6m22s), hem Visual Studio 2015 hem de 2017 için geçerlidir.
+![video için film kamerası simgesi](../../../install/media/video-icon.png "Nasıl yapılacağını görmek için") uzaktan hata ayıklamaya giriş için bkz. [derinlemesine bakış: platformlar arası uzaktan hata ayıklama](https://youtu.be/y1Qq7BrV6Cc) (youtube.com, 6m22s), hem Visual Studio 2015 hem de 2017 için geçerlidir.
 
 ## <a name="set-up-a-linux-computer"></a>Linux bilgisayarı ayarlama
 
@@ -30,7 +31,7 @@ Bu yönergeyi izlemek için aşağıdaki öğeler gereklidir:
 - Mac OSX veya Linux gibi bir işletim sisteminde Python çalıştıran uzak bilgisayar.
 - Bu bilgisayarın güvenlik duvarında açılan bağlantı noktası 5678 (gelen), uzaktan hata ayıklama için varsayılandır.
 
-[Azure 'da bir Linux sanal makinesini](/azure/virtual-machines/linux/creation-choices) kolayca oluşturabilir ve Windows 'Dan [Uzak Masaüstü kullanarak erişebilirsiniz](/azure/virtual-machines/linux/use-remote-desktop) . Python varsayılan olarak yüklendiğinden, sanal makine için Ubuntu uygundur; Aksi takdirde, ek Python indirme konumları için [tercih ettiğiniz bir Python yorumlayıcısı yükleme](../../installing-python-interpreters.md) sayfasındaki listeye bakın.
+[Azure 'da bir Linux sanal makinesini](/azure/virtual-machines/linux/creation-choices) kolayca oluşturabilir ve Windows ' den [Uzak Masaüstü kullanarak erişebilirsiniz](/azure/virtual-machines/linux/use-remote-desktop) . Python varsayılan olarak yüklendiğinden, sanal makine için Ubuntu uygundur; Aksi takdirde, ek Python indirme konumları için [tercih ettiğiniz bir Python yorumlayıcısı yükleme](../../installing-python-interpreters.md) sayfasındaki listeye bakın.
 
 Bir Azure VM için bir güvenlik duvarı kuralı oluşturma hakkında ayrıntılı bilgi için, bkz. [Azure Portal kullanarak Azure 'da BIR VM 'ye bağlantı noktası açma](/azure/virtual-machines/windows/nsg-quickstart-portal).
 
@@ -81,13 +82,13 @@ Bir Azure VM için bir güvenlik duvarı kuralı oluşturma hakkında ayrıntıl
 
 Bu adımlarda, uzak işlemi durdurmak için basit bir kesme noktası ayarlayacağız.
 
-1. Yerel bilgisayarda Uzak dosyanın bir kopyasını oluşturun ve Visual Studio 'da açın. Dosyanın nerede bulunduğu, ancak adı uzak bilgisayardaki betiğin adıyla eşleşmelidir.
+1. Yerel bilgisayarda Uzak dosyanın bir kopyasını oluşturun ve Visual Studio açın. Dosyanın nerede bulunduğu, ancak adı uzak bilgisayardaki betiğin adıyla eşleşmelidir.
 
 1. Seçim Yerel bilgisayarınızda ptvsd için IntelliSense 'i sağlamak için, ptvsd paketini Python ortamınıza ekleyin.
 
 1. İşleme **Ekle hata ayıkla** öğesini seçin  >  .
 
-1. Görüntülenen **Işleme İliştir** Iletişim kutusunda **bağlantı türünü** **Python Remote (ptvsd)** olarak ayarlayın. (Visual Studio 'nun eski sürümlerinde bu komutlar **Aktarım** ve **Python uzaktan hata ayıklama** olarak adlandırılır.)
+1. Görüntülenen **Işleme İliştir** Iletişim kutusunda **bağlantı türünü** **Python Remote (ptvsd)** olarak ayarlayın. (Visual Studio eski sürümlerinde bu komutlar **aktarım** ve **Python uzaktan hata ayıklama** olarak adlandırılır.)
 
 1. **Bağlantı hedefi** alanında (eski sürümlerde **niteleyici** ), `tcp://<ip_address>:5678` `<ip_address>` uzak bilgisayarın konumunu (bir açık adres veya myvm.cloudapp.NET gibi bir ad olabilir) ve `:5678` Uzaktan hata ayıklama bağlantı noktası numarası olduğunu girin.
 
@@ -99,11 +100,11 @@ Bu adımlarda, uzak işlemi durdurmak için basit bir kesme noktası ayarlayaca�
 
 1. Hata ayıklama ve ardından **Ekle** işlemini seçin ya da işleme çift tıklayın.
 
-1. Ardından, komut dosyası uzak bilgisayarda çalışmaya devam ederken, tüm olağan [hata ayıklama](../../debugging-python-in-visual-studio.md) yeteneklerini sunarak, Visual Studio hata ayıklama moduna geçer. Örneğin, satırda bir kesme noktası ayarlayın `if guess < number:` , ardından uzak bilgisayara geçin ve başka bir tahmin girin. Bunu yaptıktan sonra, yerel bilgisayarınızdaki Visual Studio bu kesme noktasında durduktan sonra yerel değişkenleri gösterir ve bu şekilde devam eder:
+1. Visual Studio, komut dosyası uzak bilgisayarda çalışmaya devam ederken, tüm olağan [hata ayıklama](../../debugging-python-in-visual-studio.md) yeteneklerini sağlayarak hata ayıklama moduna geçer. Örneğin, satırda bir kesme noktası ayarlayın `if guess < number:` , ardından uzak bilgisayara geçin ve başka bir tahmin girin. bunu yaptıktan sonra, yerel bilgisayarınızdaki Visual Studio o kesme noktasında durduktan sonra yerel değişkenleri gösterir ve bu şekilde devam eder:
 
-    ![Kesme noktası isabet edildiğinde Visual Studio hata ayıklamayı duraklatır](../../media/remote-debugging-breakpoint-hit.png)
+    ![kesme noktası isabet edildiğinde Visual Studio hata ayıklamayı duraklatır](../../media/remote-debugging-breakpoint-hit.png)
 
-1. Hata ayıklamayı durdurduğunuzda, Visual Studio, uzak bilgisayarda çalışmaya devam eden programdan ayırır. ptvsd Ayrıca hata ayıklayıcıları iliştirmeye devam eder, bu nedenle işlemi dilediğiniz zaman yeniden ekleyebilirsiniz.
+1. hata ayıklamayı durdurduğunuzda Visual Studio, uzak bilgisayarda çalışmaya devam eden programdan ayırır. ptvsd Ayrıca hata ayıklayıcıları iliştirmeye devam eder, bu nedenle işlemi dilediğiniz zaman yeniden ekleyebilirsiniz.
 
 ### <a name="connection-troubleshooting"></a>Bağlantı sorunlarını giderme
 
@@ -112,7 +113,7 @@ Bu adımlarda, uzak işlemi durdurmak için basit bir kesme noktası ayarlayaca�
 1. **Bağlantı hedefinde** (veya **niteleyicisi**) IP adresinin uzak bilgisayarın ile eşleşip eşleşmediğini denetleyin.
 1. Uzak bilgisayarda uzaktan hata ayıklama bağlantı noktasını açtığınızdan ve bağlantı hedefinde bağlantı noktası sonekini (gibi) eklemiş olduğunuzdan emin olun `:5678` .
     - Farklı bir bağlantı noktası kullanmanız gerekiyorsa, bunu `enable_attach` `address` içinde olduğu gibi bağımsız değişkenini kullanarak çağrıda belirtebilirsiniz `ptvsd.enable_attach(address = ('0.0.0.0', 8080))` . Bu durumda, güvenlik duvarında ilgili bu bağlantı noktasını açın.
-1. `pip3 list`Aşağıdaki tabloda, Visual Studio 'da kullandığınız Python araçlarının sürümü tarafından kullanılan eşleştirmelerle döndürülen, uzak bilgisayarda bulunan ptvsd sürümünün yüklü olduğundan emin olun. Gerekirse, uzak bilgisayardaki ptvsd 'i güncelleştirin.
+1. uzak bilgisayarda yüklü olan ptvsd sürümünün, `pip3 list` aşağıdaki tabloda Visual Studio ' de kullandığınız Python araçlarının sürümü tarafından kullanılan eşleştirmelerle döndürüldüğünden emin olun. Gerekirse, uzak bilgisayardaki ptvsd 'i güncelleştirin.
 
     | Visual Studio sürüm | Python araçları/ptvsd sürümü |
     | --- | --- |
@@ -156,14 +157,14 @@ Varsayılan olarak, ptvsd 3. x uzak hata ayıklama sunucusu bağlantısı yalnı
 
 1. Uzak bilgisayarda Python programını yeniden başlatarak hata ayıklama için hazırlayın.
 
-1. Visual Studio ile Windows bilgisayarındaki güvenilen kök CA 'ya sertifika ekleyerek kanalı güvenli hale getirin:
+1. sertifikayı Visual Studio Windows bilgisayardaki güvenilen kök CA 'ya ekleyerek kanalı güvenli hale getirin:
 
     1. Sertifika dosyasını uzak bilgisayardan yerel bilgisayara kopyalayın.
     1. **Denetim Masası 'nı** açın ve **Yönetimsel Araçlar**  >  **bilgisayar sertifikalarını Yönet**' e gidin.
     1. Görüntülenen pencerede, sol taraftaki **Güvenilen kök sertifika yetkilileri** ' ni genişletin, **Sertifikalar**' a sağ tıklayın ve **Tüm görevler**  >  **içeri aktar**' ı seçin.
     1. ' A gidin ve uzak bilgisayardan kopyalanmış *. cer* dosyasını seçin ve ardından içeri aktarma işlemini gerçekleştirmek için iletişim kutularına tıklayın.
 
-1. Artık `tcps://` **bağlantı hedefi** (veya **niteleyicisi**) protokolü olarak kullanarak, daha önce açıklandığı gibi, Visual Studio 'da iliştirme işlemini yineleyin.
+1. şimdi `tcps://` **bağlantı hedefi** (veya **niteleyicisi**) protokolü olarak kullanarak, daha önce açıklandığı gibi Visual Studio iliştirme işlemini tekrarlayın.
 
     ![SSL ile uzaktan hata ayıklama aktarımını seçme](../../media/remote-debugging-qualifier-ssl.png)
 

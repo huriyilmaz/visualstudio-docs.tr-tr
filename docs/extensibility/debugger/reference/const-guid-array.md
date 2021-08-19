@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c69f45ea0ef67ee388db719dc07360c51e53bfbff82af37661750cd46b966483
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c1a4c19ee81c5684d46c9a913bdaa66f9c5d8a70
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360930"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145633"
 ---
 # <a name="const_guid_array"></a>CONST_GUID_ARRAY
 Bir listesini tutan bir yapı `GUID` .

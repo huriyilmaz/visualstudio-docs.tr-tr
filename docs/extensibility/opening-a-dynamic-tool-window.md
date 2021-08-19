@@ -10,14 +10,15 @@ ms.assetid: 21547ba7-6e81-44df-9277-265bf34f877a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 357644f67da9a3bbc468d708cf39e44f737dbf0f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 34435f3427296d9a82291275c2b74438ee60e669
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090427"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158507"
 ---
 # <a name="open-a-dynamic-tool-window"></a>Dinamik araç penceresi aç
 Araç pencereleri genellikle menüdeki bir komuttan veya eşdeğer bir klavye kısayoluna açılır. Ancak, her zaman belirli bir kullanıcı arabirimi bağlamı geçerli olduğunda açılan bir araç penceresine gerek duyabilirsiniz ve Kullanıcı arabirimi bağlamı artık geçerli olmadığında kapanır. Bu tür araç pencereleri *dinamik* veya *Otomatik görünür* olarak adlandırılır.
@@ -50,7 +51,7 @@ Araç pencereleri genellikle menüdeki bir komuttan veya eşdeğer bir klavye k�
     {. . .}
     ```
 
-     Yukarıdaki öznitelikler, Visual Studio kapatılıp yeniden açıldığı zaman kalıcı olmayan geçici bir pencere olarak DynamicWindowPane adlı araç penceresini kaydeder. DynamicWindowPane, her uygulandığı zaman açılır <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_string> ve aksi takdirde kapatılır.
+     yukarıdaki öznitelikler, Visual Studio kapatılıp yeniden açıldığı zaman kalıcı olmayan geçici bir pencere olarak dynamicwindowpane adlı araç penceresini kaydeder. DynamicWindowPane, her uygulandığı zaman açılır <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_string> ve aksi takdirde kapatılır.
 
 3. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görünmelidir. Araç penceresini görmemelisiniz.
 

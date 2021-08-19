@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 01392932831ab7ba5fec867a427b4a2c8868070abdda93de53593e9c3f27beb2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f301330cb586ff838efb4fe5278b0158a8f9129a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378226"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057921"
 ---
 # <a name="enumerate-locals"></a>Yerelleri listeleme
 > [!IMPORTANT]

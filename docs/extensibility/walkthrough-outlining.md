@@ -10,23 +10,24 @@ ms.assetid: d75a44aa-265a-44d4-9c28-457f59c4ff9f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7bf4c0cc8757ea4f034da2ac17d6c76971f86305
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 987f45f32e5fda2b1d8dfa2db1036c70288a2d66
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217235"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078524"
 ---
 # <a name="walkthrough-outlining"></a>İzlenecek Yol: Ana Hat Oluşturma
 Genişletmek veya daraltmak istediğiniz metin bölgesi türlerini tanımlayarak anahat oluşturma gibi dil tabanlı özellikleri ayarlayın. Bir dil hizmeti bağlamında bölgeleri tanımlayabilir veya kendi dosya adı uzantınızı ve içerik türünü tanımlayabilir ve bölge tanımını yalnızca bu türe uygulayabilir ya da bölge tanımlarını varolan bir içerik türüne (örneğin, "metin") uygulayabilirsiniz. Bu izlenecek yol, ana hat bölgelerini tanımlama ve görüntüleme işlemlerinin nasıl yapılacağını gösterir.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma
 
@@ -124,7 +125,7 @@ Genişletmek veya daraltmak istediğiniz metin bölgesi türlerini tanımlayarak
 
 1. Çözümü derleyin.
 
-2. Bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği başlatılır.
+2. bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio ikinci bir örneği başlatılır.
 
 3. Bir metin dosyası oluşturun. Açma köşeli ayracını ve sağ ayraçları içeren bir metin yazın.
 

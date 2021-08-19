@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c158b6ee7a00a317cdcae2f8b7d8746ea5f07ce19cd473e2a8199154f246c25c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 818a6c8fb371ca76d573c97db753f9bcf3351fcc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121312007"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128722"
 ---
 # <a name="idiasymbolget_farreturn"></a>IDiaSymbol::get_farReturn
 İşlevin uzak bir dönüş içerdiğini belirten bir bayrak verir.

@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0e2f807766851757fec7dff059dd88f2434c76083f531db76379e7fed2a03721
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6be7781323dcff005f85ab17c492570d1f7ce705
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121269632"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076210"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance-with-flask-app"></a>3. Adım: sabit dosyaları sunma, sayfa ekleme ve Flask uygulamasıyla şablon devralmayı kullanma
 

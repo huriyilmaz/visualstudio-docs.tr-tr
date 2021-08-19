@@ -1,5 +1,5 @@
 ---
-description: Bir kesme noktası başarısız çözümlemesi hakkında alınacak bilgileri belirtir.
+description: Bir kesme noktasının hatalı çözümlenmesi hakkında alınacak bilgileri belirtir.
 title: BPERESI_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: effaa705459b0009e9462898109c951df9cc4436dbee5c59222f703f04cc2b49
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 34a12b0e86b5805e97a563374506962618bf7853
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390399"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145776"
 ---
 # <a name="bperesi_fields"></a>BPERESI_FIELDS
-Bir kesme noktası başarısız çözümlemesi hakkında alınacak bilgileri belirtir.
+Bir kesme noktasının hatalı çözümlenmesi hakkında alınacak bilgileri belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,36 +54,36 @@ public enum enum_BPERESI_FIELDS {
 
 ## <a name="fields"></a>Alanlar
 `PERESI_BPRESLOCATION`\
-Kaynak yapısının `bpResLocation` (kesme noktası çözümleme konumu) alanını [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) kullanın.
+`bpResLocation` [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) yapısının (kesme noktası çözümleme konumu) alanını başlatın/kullanın.
 
 `BPERESI_PROGRAM`\
-Yapı alanını `pProgram` `BP_ERROR_RESOLUTION_INFO` başlatma/kullanma.
+Yapının alanını başlatın/kullanın `pProgram` `BP_ERROR_RESOLUTION_INFO` .
 
 `BPERESI_THREAD`\
-Yapı alanını `pThread` `BP_ERROR_RESOLUTION_INFO` başlatma/kullanma.
+Yapının alanını başlatın/kullanın `pThread` `BP_ERROR_RESOLUTION_INFO` .
 
 `BPERESI_MESSAGE`\
-Yapı alanını `bstrMessage` `BP_ERROR_RESOLUTION_INFO` başlatma/kullanma.
+Yapının alanını başlatın/kullanın `bstrMessage` `BP_ERROR_RESOLUTION_INFO` .
 
 `BPERESI_TYPE`\
-Yapının `dwType` (kesme noktası türü) alanını `BP_ERROR_RESOLUTION_INFO` başlat/kullan.
+`dwType`Yapının (kesme noktası türü) alanını başlatın/kullanın `BP_ERROR_RESOLUTION_INFO` .
 
 `BPERESI_ALLFIELDS`\
-Yapının tüm alanlarını `BP_ERROR_RESOLUTION_INFO` başlat/kullan.
+Yapının tüm alanlarını başlatın/kullanın `BP_ERROR_RESOLUTION_INFO` .
 
 ## <a name="remarks"></a>Açıklamalar
-İlke yapısının hangi alanlarının başlat olacağını belirtmek için [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) parametresi olarak geçirildi.
+[BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) yapısının hangi alanlarının başlatıldığını göstermek Için [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) yöntemine bir parametre olarak geçirilir.
 
-Bu değerler, yapıda hangi alanların kullandır ve `BP_ERROR_RESOLUTION_INFO` yapı döndürüldünde geçerli olduğunu belirtmek için de kullanılır.
+Bu değerler aynı zamanda yapıdaki hangi alanların `BP_ERROR_RESOLUTION_INFO` kullanıldığını ve bu yapı döndürüldüğünde geçerli olduğunu göstermek için kullanılır.
 
-Bu değerler bitwise ile birleştirilmiş `OR` olabilir.
+Bu değerler, bit düzeyinde birleştirilebilir `OR` .
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

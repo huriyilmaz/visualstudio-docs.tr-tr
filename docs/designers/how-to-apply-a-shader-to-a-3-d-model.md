@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: 3D Modele Gölgelendirici Uygulama'
-description: Model Düzenleyicisi'ni kullanarak 3D modele Graph görünümü vermek için Directed Graph Language gölgelendiricisi uygulama hakkında bilgi öğrenin.
+title: 'Nasıl yapılır: 3B modele gölgelendirici uygulama'
+description: Model düzenleyicisi 'ni kullanarak, ilginç bir görünüm sağlamak için bir 3b modele yönlendirilmiş Graph gölgelendirici dili gölgelendiricisi uygulama hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,36 +11,36 @@ manager: jmartens
 ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 86b6f467200b136a95afeed5740e6cdbdae991d3223df5ff2f458607d90fa50d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 08f078d07ad1a3d408c25f5cda2d8d19754ae881
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435184"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127824"
 ---
 # <a name="how-to-apply-a-shader-to-a-3d-model"></a>Nasıl yapılır. 3B modele gölgelendirici uygulama
 
-Bu makalede, 3D modele Yönlendirilen Graph Gölgelendirici Dili (DGSL) gölgelendiricisi uygulamak için Model Düzenleyicisi'ni kullanma açıklanmıştır.
+bu makalede, bir 3b modele yönlendirilmiş Graph gölgelendirici dili (dgsl) gölgelendiricisi uygulamak için Model düzenleyicisi 'nin nasıl kullanılacağı gösterilmektedir.
 
 ## <a name="apply-a-shader-to-a-3d-model"></a>3B modele gölgelendirici uygulama
 
-3D modele ilginç bir görünüm vermek için gölgelendirici etkisi uygulayabilirsiniz.
+Bir 3B modeline bir gölgelendirici efekti uygulayıp buna ilginç bir görünüm sağlayabilirsiniz.
 
-Başlamadan önce Özellikler penceresinin **görüntülendiğinden** emin olun.
+Başlamadan önce **Özellikler** penceresinin görüntülendiğinden emin olun.
 
-1. Bir veya daha fazla model içeren 3D bir sahneyle başlar. Uygun bir 3D sahne yoksa, Nasıl 3D Modeli Oluşturma konusunda açıklandığı gibi bir [tane oluşturun.](../designers/how-to-create-a-basic-3-d-model.md) Ayrıca modele uygulayabilecek bir DGSL gölgelendiricisi de olması gerekir. Uygun bir gölgelendiriciye sahip değilsanız, Nasıl [yapacaklar:](../designers/how-to-create-a-basic-color-shader.md) Temel renk gölgelendiricisi oluşturma konusunda açıklandığı gibi bir gölgelendirici oluşturun ve devam etmek için bir dosyaya kaydettiklerinden emin olun.
+1. Bir veya daha fazla model içeren bir 3B sahneye başlayın. Uygun bir 3B sahneye sahip değilseniz, [nasıl yapılır: temel 3B model oluşturma](../designers/how-to-create-a-basic-3-d-model.md)bölümünde açıklandığı gibi bir tane oluşturun. Ayrıca, modele uygulayabileceğiniz bir DGSL gölgelendiricisine sahip olmanız gerekir. Uygun bir gölgelendirici yoksa, [nasıl yapılır: temel renk gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-color-shader.md) bölümünde açıklandığı gibi bir tane oluşturun ve devam etmeden önce dosyayı bir dosyaya kaydettiğinizden emin olun.
 
-2. Seç **modunda** gölgelendiriciyi uygulamak istediğiniz modeli seçin ve özellikler penceresindeki **Etki** özellik grubunun **Dosya** adı özelliğinde, modele uygulamak istediğiniz DGSL gölgelendiriciyi belirtin. 
+2. **Seç** modunda, gölgelendirici uygulamak istediğiniz modeli seçin ve ardından **Özellikler** penceresinde, **efekt** Özellik grubunun **filename** özelliğinde, modele uygulamak istediğiniz dgsl gölgelendiriciyi belirtin.
 
-Temel renk etkisi uygulanmış bir model şu şekildedir:
+Temel renk efektinin uygulandığı bir model aşağıda verilmiştir:
 
-![3&#45;renk etkisini gösteren D sahnesi](../designers/media/digit-3d-model-effect.png)
+![3&#45;D sahneyi temel renk efektini gösterir](../designers/media/digit-3d-model-effect.png)
 
-Bir modele gölgelendiriciyi uygulattıktan sonra modeli seçerek Gölgelendirici Tasarımcısı'nda açabilir  ve ardından Özellikler penceresinde, **Etki** özellik grubunun **(Gelişmiş)** özelliğinde üç nokta (**...**) düğmesini seçerek açabilirsiniz.
+Bir modele gölgelendirici uyguladıktan sonra modeli seçerek gölgelendirici tasarımcısında açabilir ve ardından **Özellikler** penceresinde, **efekt** Özellik grubunun **(Gelişmiş)** özelliğindeki üç nokta (**...**) düğmesini seçebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: Temel 3B model oluşturma](../designers/how-to-create-a-basic-3-d-model.md)
-- [Nasıl: Temel renk gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-color-shader.md)
+- [Nasıl yapılır: temel renk gölgelendiricisi oluşturma](../designers/how-to-create-a-basic-color-shader.md)
 - [Model düzenleyicisi](../designers/model-editor.md)
 - [Gölgelendirici tasarımcısı](../designers/shader-designer.md)

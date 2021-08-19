@@ -1,6 +1,6 @@
 ---
-title: span Sınıfı | Microsoft Docs
-description: Span sınıfı ve uygulamanın aşamasını nasıl tanımladığı hakkında bilgi edinmek. Ayrıca, span sınıfı genel oluşturucuları ve devralma hiyerarşisi hakkında bilgi edinmek.
+title: Span sınıfı | Microsoft Docs
+description: Span sınıfı ve uygulamanın bir aşamasını nasıl tanımladığını öğrenin. Ayrıca, span class public oluşturucular ve devralma hiyerarşisi hakkında bilgi edinin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a1cc9c68785914f23fbb75391b2d7f6b9b9fafcf4c1da9bba4b2b38d1ac305f1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 635904a3e506db18d0a161eeb7fdf1474e0b7d23
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410274"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157312"
 ---
 # <a name="span-class"></a>span sınıfı
 Uygulamanın aşamasını tanımlar.
@@ -32,20 +32,20 @@ class span;
 
 ## <a name="members"></a>Üyeler
 
-### <a name="public-constructors"></a>Genel oluşturucular
+### <a name="public-constructors"></a>Ortak oluşturucular
 
 |Ad|Açıklama|
 |----------|-----------------|
 |[span::span Oluşturucusu](../profiling/span-span-constructor.md)|`span` sınıfının yeni bir örneğini başlatır.|
-|[span::~span Yok Edicisi](../profiling/span-tilde-span-destructor.md)|Nesneyi yok `span` eder ve kaynaklarını serbest bırakarak.|
+|[span::~span Yok Edicisi](../profiling/span-tilde-span-destructor.md)|Nesneyi yok eder `span` ve kaynaklarını serbest bırakır.|
 
 ## <a name="inheritance-hierarchy"></a>Devralma Hiyerarşisi
  `span`
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvmarkersobj.h*
+ **Üst bilgi:** *cvmarkersobj. h*
 
- **Ad alanı:** Concurrency::d iagnostic
+ **Ad alanı:** Eşzamanlılık::d ıagstik
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [tanılama ad alanı](../profiling/diagnostic-namespace.md)
+- [Tanılama ad alanı](../profiling/diagnostic-namespace.md)

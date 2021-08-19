@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f3a90d2329b9b2c4beed6c5fee3b9284b655a1fd14d78e1b15ca988a617af6e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 779a00bb93899414cda04ea5b6a3a5e15bea686f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121336882"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158768"
 ---
 # <a name="test-area-4-check-in"></a>Test Alanı 4: İade Etme
 Bu kaynak denetimi eklentisi test alanı, iade komutu aracılığıyla güncelleştirilmiş öğelerin sürüm deposuna **gönderilmesini** kapsar.
@@ -30,7 +30,7 @@ Bu kaynak denetimi eklentisi test alanı, iade komutu aracılığıyla güncelle
 ##### <a name="check-in"></a>Teslim etme:
  **Dosyası,** **Kaynak Denetimi**, **Iade Edin.**
 
- **Dosyasını** açın, **iade edin.**
+ **dosyasını** **açın, iade edin.**
 
  Kısayol menüsü, **Iade Edin.**
 
@@ -43,7 +43,7 @@ Bu kaynak denetimi eklentisi test alanı, iade komutu aracılığıyla güncelle
 - Iade edildikten sonra güncelleştirilmiş öğelerin depoda düzgün bir şekilde sürümü güncelleştirilir.
 
 ## <a name="test-cases"></a>Test Çalışmaları
- Checkin test alanı için belirli test testleri aşağıda vemektedir.
+ Checkin test alanı için belirli test testleri aşağıda ve ardından ve listelemektedir.
 
 ### <a name="case-4a-modified-items"></a>Durum 4a: Değiştirilen öğeler
  Değiştirilmiş kaynak denetimi altındaki bir dosyayı güncelleştirmek için iade eyleminin kullanımı açık bir şekilde anlattır.
@@ -58,7 +58,7 @@ Bu kaynak denetimi eklentisi test alanı, iade komutu aracılığıyla güncelle
 
 |Eylem|Test Adımları|Doğrulandı Beklenen Sonuçlar|
 |------------|----------------|--------------------------------|
-|Metin dosyası ekleme ve her şeyi iade edin **(Giriş'i Aç** iletişim kutusu)|1. Yeni bir proje oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Projeye bir metin dosyası ekleyin.<br />4. İstendiğinde projeyi iade etme onay kutusunu kabul edin.<br />5. içinde çözümü **Çözüm Gezgini.**<br />6. Iade Edin **iletişim kutusundan iade** edin.|Ortak Beklenen Davranış.|
+|Metin dosyası ekleme ve her şeyi iade edin **(Giriş'i Aç** iletişim kutusu)|1. Yeni bir proje oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Projeye bir metin dosyası ekleyin.<br />4. İstendiğinde projeyi iade etme onay kutusunu kabul edin.<br />5. içinde çözümü seçin **Çözüm Gezgini.**<br />6. Iade Edin **iletişim kutusundan iade** edin.|Ortak Beklenen Davranış.|
 |Metin dosyası ekleme ve her şeyi iade edin **(Bekleyen Iadeler** penceresi)|1. Yeni bir proje oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Projeye bir metin dosyası ekleyin.<br />4. İstendiğinde projeyi iade etme onay kutusunu kabul edin.<br />5. Bekleyen IadeLer **penceresinden çözümü iade** edin.|Ortak Beklenen Davranış|
 
 ### <a name="case-4c-adding-projects"></a>Olay 4c: Proje ekleme

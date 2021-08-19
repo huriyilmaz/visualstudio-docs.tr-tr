@@ -1,6 +1,6 @@
 ---
 title: Programlar | Microsoft Docs
-description: Bu makalede, Visual Studio'daki hata ayıklayıcı mimarisinde bir programın tanımı ve Visual Studio.
+description: Bu makalede, Visual Studio'da hata ayıklayıcı mimarisinde bir programın tanımı ve rolü Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,17 +14,17 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c19e92bdfb7a7f015cdf23fea12657e9f5813f155b761c6894bc9d943841b63
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0fcbd1d6ac01d4d67ad03193c1fa2b2e75ded6d5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434535"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160341"
 ---
 # <a name="programs"></a>Programlar
 Hata ayıklayıcısı mimarisinde bir *program:*
 
-- Hem bir dizi iş parçacığı hem de modül kümesi için bir kapsayıcıdır. Programın işletim sisteminde tek bir benzetme Windows yoktur.
+- Hem bir dizi iş parçacığı hem de modül kümesi için bir kapsayıcıdır. Bir programın işletim sisteminde tek bir Windows yoktur.
 
      Program bir tür alt işlemdir. Örneğin, bir Web sitesinde hata ayıklarken betik bir program olarak görülebilir. Betik, diğer betiklerden bağımsız olarak betik altyapısı sürecinde çalışırken kendi iş parçacığı kümesine de sahip olur. Hata ayıklama altyapısı (DE), bir işleme veya iş parçacığına değil bir programa iliştirer.
 

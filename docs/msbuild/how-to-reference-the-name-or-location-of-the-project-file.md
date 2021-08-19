@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 95d94b3fb006a717e71b5a010ad38e0b59692d6ae0ce385787f020907dd0e8bd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 06ff5cb50453557eff20b2b1ec287d4b03012abf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121443483"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085045"
 ---
 # <a name="how-to-reference-the-name-or-location-of-the-project-file"></a>Nasıl olur: Proje dosyasının adına veya konumuna başvuru
 

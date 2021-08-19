@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) geçerli kod konumunda durdurulup durdurulmayacağını sormak için kullanılır.
+description: Bu arabirim, oturum hata ayıklama yöneticisinin (SDM) geçerli kod konumda durıp durmayacaklarını sormak için kullanılır.
 title: IDebugCanStopEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,18 @@ ms.assetid: 784bd5b1-4a3f-4455-b313-c4c9a82555a5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: e73d881b1aef09d13d7b7138348d5198c8322694
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6232618832b9cf25dcec97c1b3d3048d2e39b7de
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085029"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145217"
 ---
 # <a name="idebugcanstopevent2"></a>IDebugCanStopEvent2
-Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) geçerli kod konumunda durdurulup durdurulmayacağını sormak için kullanılır.
+Bu arabirim, oturum hata ayıklama yöneticisinin (SDM) geçerli kod konumda durıp durmayacaklarını sormak için kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,33 +30,33 @@ Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) geçerli kod konumunda
 IDebugCanStopEvent2 : IUknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama altyapısı (DE), kaynak kodu üzerinden adımlamayı desteklemek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde UYGULANMALıDıR (SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) kullanır `IDebugEvent2` ).
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE), kaynak kodda adımlamayı desteklemek için bu arabirimi uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanarak (SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır).
 
- Bu arabirimin uygulanması için, SDM 'nin [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) çağrısını hata ayıklama altyapısına iletmesi gerekir. Örneğin, bu, hata ayıklama altyapısının ileti işleme iş parçacığına postalanan bir iletiyle yapılabilir veya bu arabirimi uygulayan nesne hata ayıklama altyapısına bir başvuru tutabilir ve geçirilen bayrak ile hata ayıklama altyapısına geri çağrı yapabilir `IDebugCanStopEvent2::CanStop` .
+ Bu arabirimin uygulanması, SDM'nin [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) çağrısını hata ayıklama altyapısına iletir. Örneğin, bu işlem hata ayıklama altyapısının ileti işleme iş parçacığına gönderilen bir iletiyle yapılabilir veya bu arabirimi uygulayan nesne hata ayıklama altyapısına bir başvuru tutabilir ve bayrağı geçirilirken hata ayıklama altyapısına geri çağrı `IDebugCanStopEvent2::CanStop` yapılabilir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Aynı zamanda, her seferinde yürütmeye devam etmesi istenir ve DE kod aracılığıyla adımla bu yöntem de gönderebilir. Bu olay, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
+ DE bu yöntemi, DE'nin yürütmeye devam ettiği ve DE'nin kodda adım adım ilerleye devam ettiği her durumda gönderebilir. Bu olay, hata ayıklaması yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugCanStopEvent2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugCanStopEvent2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)|Bu olayın nedenini alır.|
-|[CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)|Hata ayıklamakta olan programın bu olayın konumunda durmasının gerekip gerekmediğini belirtir (ve durdurma nedenini açıklayan bir olay gönderin) veya yürütmeye devam edin.|
+|[CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md)|Hata ayıklaması yapılan programın bu olayın bulunduğu konumda durdurulması (ve durdurma nedenini açıklayan bir olay göndermesi) veya yürütmeye devam edip edeceğini belirtir.|
 |[GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md)|Bu olayın konumunu açıklayan belge bağlamını alır.|
 |[GetCodeContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getcodecontext.md)|Bu olayın konumunu açıklayan kod bağlamını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu, Kullanıcı bir işleve bir işlev halinde gösterildiğinde ve bir hata ayıklama bilgisi yoksa veya hata ayıklama bilgileri bulursa ve bu konum için kaynak kodun görüntülenip görüntülenemediğini bilmez, bu arabirimi DE gönderir.
+ Kullanıcı bir işleve adım attığında ve DE orada hata ayıklama bilgisi veya hata ayıklama bilgisi yoksa DE bu arabirimi gönderir, ancak DE kaynak kodun bu konum için görüntülenemiyor olup olmadığını bilmiyor.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStepCompleteEvent2](../../../extensibility/debugger/reference/idebugstepcompleteevent2.md)

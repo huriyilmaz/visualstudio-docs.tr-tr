@@ -1,6 +1,6 @@
 ---
-description: Bu sembol deposuna karşılık gelen yürütülebilir dosyanın yükleme adresini alın.
-title: IDiaSession::get_loadAddress | Microsoft Docs
+description: Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini alır.
+title: 'IDiaSession:: get_loadAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f4da8cf494e4fcff8cf09909079ab19d306ce3e295c34c21a788048509acc0a2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1ab5aee87bb562ccb4bd373999d2e30ab5565e36
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344767"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122058922"
 ---
 # <a name="idiasessionget_loadaddress"></a>IDiaSession::get_loadAddress
-Bu sembol deposuna karşılık gelen yürütülebilir dosyanın yükleme adresini alın.
+Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_loadAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir dosyanın veya dosyanın yük .exe sanal .dll (VA) döndürür.
+dışı Bir .exe dosyası veya .dll dosyasının yüklendiği bir sanal adres (VA) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Döndürülen yük adresi, [özellikle IDiaSession::p ut_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemi kullanılarak ayarlanmadıkça her zaman sıfırdır.
+ Açıkça [IDiaSession::p ut_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemi kullanılarak ayarlanmamışsa döndürülen yükleme adresi her zaman sıfırdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

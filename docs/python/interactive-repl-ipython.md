@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8551d609fda85d94356528be645aff01a3a8cfe124884d9700bdd47a9cec44de
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a03216c2fbbc83af1f4a995b43ed4576716e1eb9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121367836"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140355"
 ---
 # <a name="use-ipython-in-the-interactive-window"></a>Etkileşimli pencerede IPython kullanın
 

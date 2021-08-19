@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 94f49b793f253e0a121dbf70c4d2a506d8cc00f10e23cb14e6fce8a3f48154d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2483a201da07fe45247e3ad0c389d969e2657772
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344695"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128938"
 ---
 # <a name="idiasessionsymsareequiv"></a>IDiaSession::symsAreEquiv
 İki sembolün eşdeğer olup olmadığını denetler.

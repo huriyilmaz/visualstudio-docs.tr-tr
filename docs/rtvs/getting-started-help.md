@@ -1,29 +1,30 @@
 ---
 title: R için Yardım Penceresi
-description: R için yardım, ? aracılığıyla doğrudan Visual Studio tümleşiktir Komut.
+description: R yardımı, ? aracılığıyla doğrudan Visual Studio tümleşiktir Komut.
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: jmartens
+ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 569367c04dd7413f421e04aa9067d4b0a45dcb51
-ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
+ms.openlocfilehash: b51caf0e98aeaf98e48e1018cbc9a093f8e084f4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114680058"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122076080"
 ---
-# <a name="help-in-r-tools-for-visual-studio"></a>Visual Studio için R Araçları'de yardım
+# <a name="help-in-r-tools-for-visual-studio"></a>Visual Studio için R Araçları'da yardım
 
 R yardımı, doğrudan R'de etkileşimli pencereyle Visual Studio. gibi komutunu her `?` `?mtcars` kullanırken, R belgelerinden gelen yardım bir Visual Studio görünür:
 
 ![Visual Studio'de yardım penceresi](media/help-window.png)
 
 > [!Tip]
-> Yardım penceresi, diğer tüm Visual Studio gibi düzenlenebilir ve yerleştirebilirsiniz. Bkz. ['de pencere düzenlerini Visual Studio.](../ide/customizing-window-layouts-in-visual-studio.md)
+> Yardım penceresi, diğer tüm Visual Studio gibi düzenlenebilir ve yerleştirebilirsiniz. Bkz. [Visual Studio' içinde pencere düzenlerini özelleştirme.](../ide/customizing-window-layouts-in-visual-studio.md)
 >
 > Yardım sonuçlarını bir tarayıcıda açmak için **R Araçları** Seçenekler menüsünü seçin ve R Yardım Browser özelliğini  >   **olarak** `External` ayarlayın. Bkz. [Seçenekler.](options-for-r-tools-in-visual-studio.md)
 
@@ -43,8 +44,8 @@ Yardım penceresinde ayrıca doğrudan R belgelerinde daha fazla arama yapmak i�
 
 Geliştiriciler genellikle işlev adları, veri kümeleri ve diğer öğelerle ilgili yardım için R belgelerinde arama kullanır. Visual Studio için R Araçları (RTVS), yardım aramalarını doğrudan düzenleyiciye ve etkileşimli pencerelere tümleştirerek süreci basitleştirmektedir.
 
-- Otomatik tamamlama işlemi sırasında **F1** tuşuna basılarak alt dizeyle eş değere uygun bir yardım sonuçları listesi elde edersiniz.
-- Bir arama terimine (işlev gibi) sağ tıklar ve Yardım'ı **seçerek** ilgili işlev için yardım açılır. Ayrıca, herhangi bir **seçim için Yardım'ı** da çağırarak.
+- Otomatik tamamlama işlemi sırasında **F1** tuşuna basılarak alt dizeyle eşan bir yardım sonuçları listesi elde edersiniz.
+- Bir arama terimine (işlev gibi) sağ tık tıklar ve Yardım on komutu **seçerek** ilgili işlev için yardım açılır. Ayrıca, herhangi bir **seçim için Yardım'ı** da çağırarak.
 
     ![Sağ tıklama bağlam menüsü aracılığıyla yardım faturalama](media/help-right-click.png)
 
@@ -53,7 +54,7 @@ Geliştiriciler genellikle işlev adları, veri kümeleri ve diğer öğelerle i
 
 ## <a name="integrated-stackoverflow-search"></a>Tümleşik StackOverflow araması
 
-Geliştiriciler R belgelerinde aramanın yanı sıra genellikle kod yazarken StackOverflow araması da sağlar. RTVS bu süreci de basit hale getirmek için kullanılabilir. Bir terime veya seçime sağ tıklayın, **Web'de** ara komutunu (**Ctrl** + **F1**) seçin ve Visual Studio arama sonuçlarının kapsamı StackOverflow olarak belirtilen bir pencere açılır:
+Geliştiriciler, R belgelerinde aramaya ek olarak kod yazarken stackOverflow araması da sağlar. RTVS bu süreci de basit hale getirmek için kullanılabilir. Bir terime veya seçime sağ tıklayın, **Web'de** ara komutunu (**Ctrl** + **F1**) seçin ve Visual Studio arama sonuçlarının kapsamı StackOverflow olarak belirtilen bir pencere açar:
 
 ![Web araması sonuçları Visual Studio](media/help-web-search-results.png)
 

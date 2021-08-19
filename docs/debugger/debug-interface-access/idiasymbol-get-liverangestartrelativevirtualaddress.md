@@ -11,14 +11,15 @@ ms.assetid: 1da52539-9872-4c20-8eaa-74b6cb5f3b02
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 39ee479721a7168aae5504b58495cfb536f5b38a
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: b6a6fee96546ee0ced5bd6ed7b0a9ff07f1aacf4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156043"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154554"
 ---
 # <a name="idiasymbolget_liverangestartrelativevirtualaddress"></a>IDiaSymbol::get_liveRangeStartRelativeVirtualAddress
 Yerel simgenin geçerli olduğu adres aralığının başlangıcını döndürür.

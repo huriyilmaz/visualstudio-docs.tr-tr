@@ -1,6 +1,6 @@
 ---
 title: Verileri bir nesneden veritabanına kaydetme
-description: Visual Studio 'da veri kümesi araçlarını kullanarak bir nesneden bir veritabanına veri kaydetme. Yeni kayıtları kaydetme, var olan kayıtları güncelleştirme ve var olan kayıtları silme bölümüne bakın.
+description: Visual Studio veri kümesi araçlarını kullanarak bir nesneden bir veritabanına veri kaydetme. Yeni kayıtları kaydetme, var olan kayıtları güncelleştirme ve var olan kayıtları silme bölümüne bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -15,14 +15,15 @@ ms.assetid: efd6135a-40cf-4b0d-8f8b-41a5aaea7057
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 50debf24fa691ba74d082543b1c0bb1a27b5786e
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 96e296be3bb5e591f3da9699fe15371659dddfc0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106215792"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122059209"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>Verileri bir nesneden veritabanına kaydetme
 
@@ -35,7 +36,7 @@ Varsayılan olarak, `DBDirect` Yöntemler doğrudan veritabanına karşı çalı
 > [!NOTE]
 > Bir TableAdapter yapılandırırken, ana sorgunun oluşturulacak yöntemler için yeterli bilgi sağlaması gerekir `DBDirect` . Örneğin, bir TableAdapter birincil anahtar sütunu tanımlanmış olmayan bir tablodan verileri sorgulamak üzere yapılandırılmışsa, `DBDirect` Yöntem oluşturmaz.
 
-|TableAdapter DBDirect yöntemi|Description|
+|TableAdapter DBDirect yöntemi|Açıklama|
 | - |-----------------|
 |`TableAdapter.Insert`|Veritabanına yeni kayıtlar ekler ve bağımsız sütun değerlerini Yöntem parametreleri olarak geçirmenize olanak sağlar.|
 |`TableAdapter.Update`|Bir veritabanındaki mevcut kayıtları güncelleştirir. `Update`Yöntemi, özgün ve yeni sütun değerlerini Yöntem parametreleri olarak alır. Özgün değerler özgün kaydı bulmak için kullanılır ve yeni değerler bu kaydı güncelleştirmek için kullanılır.<br /><br /> `TableAdapter.Update`Yöntemi, bir veri kümesindeki değişiklikleri <xref:System.Data.DataSet> <xref:System.Data.DataTable> <xref:System.Data.DataRow> <xref:System.Data.DataRow> yöntem parametresi olarak bir,, veya dizisi alarak veritabanına geri mutabık kılmak için de kullanılır.|

@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9562b5d89b0602140a84620b97e4ec43b9cab7b292c8698d229c8f5b604197a8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2c267d1331d1765a55347c6012f19f62030234e9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378022"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127525"
 ---
 # <a name="idebugbreakpointchecksumrequest2"></a>IDebugBreakpointChecksumRequest2
 Kesme noktası isteği için bir belge sağlama toplamını temsil eder.

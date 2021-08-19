@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f06b7b6faaa78a2543f34c4f4966e06f6e32f8a73fdf72dea128aaa457315e8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e67ccec3405dfb0cf50f914ff9e91fbec2d8d604
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121231684"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157741"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel özellikler ekleme
 

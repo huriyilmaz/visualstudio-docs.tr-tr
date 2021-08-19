@@ -11,17 +11,18 @@ ms.assetid: f51aab02-d257-4302-bb79-b7d8ba9ac4e5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3e12dc587a77e428d3d4c4740043ab5651b7897a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6cd77725906a2780f9345bb4c64131ad943e8ceb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105058007"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118144"
 ---
 # <a name="launch_flags"></a>LAUNCH_FLAGS
 Hata ayıklama başlatma bayraklarını belirtir.
@@ -49,28 +50,28 @@ public enum enum_LAUNCH_FLAGS {
 
 ## <a name="fields"></a>Alanlar
 `LAUNCH_DEBUG`\
-Hata ayıklama işlemini başlatır.
+Hata ayıklama işlemini başlatıyor.
 
 `LAUNCH_NODEBUG`\
-İşlemi hata ayıklamadan başlatır.
+Hata ayıklamadan işlemi başlatıyor.
 
 `LAUNCH_ENABLE_ENC`\
-KULLANıM DıŞı, KULLANMAYıN.
+KULLANILANDIRILDI, KULLANILANDIRMADI.
 
 `LAUNCH_MERGE_ENV`\
-İşlemi başlatır ve ortamı Başlatan ana bilgisayarla birleştirir.
+Işlemi başlatıyor ve ortamı başlatan konakla birleşiyor.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler, [Launchaskıya alındı](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemine bir bağımsız değişken olarak geçirilir.
+Bu değerler [LaunchSuspended yöntemine bağımsız değişken olarak](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) geçirildi.
 
-Bu bayraklar bit düzeyinde birleştirilebilir `OR` .
+Bu bayraklar bit olarak birleştirilmiş `OR` olabilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

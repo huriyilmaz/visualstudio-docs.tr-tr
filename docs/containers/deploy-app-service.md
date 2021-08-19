@@ -1,5 +1,5 @@
 ---
-title: Kapsayıcıya ASP.NET Core kapsayıcı Azure App Service
+title: ASP.NET Core kapsayıcısı dağıtma Azure App Service
 description: Visual Studio Kapsayıcı Araçları'ASP.NET Core docker kapsayıcısı içinde bir web uygulaması dağıtmak için Azure App Service
 ms.custom: SEO-VS-2020
 author: ghogen
@@ -9,16 +9,16 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 02/21/2021
 ms.author: ghogen
-ms.openlocfilehash: 8609c0888662a5fb0609da641e1dfb86510b8797deeeb1a79709cd36174d0936
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6dd3a1bf0dd7b40f101f95e74c18dee071b4cfc6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121348276"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122162038"
 ---
 # <a name="deploy-an-aspnet-core-container-to-azure-app-service-using-visual-studio"></a>ASP.NET Core kullanarak Azure App Service kapsayıcı Visual Studio
 
-Bu öğretici, kapsayıcılı web Visual Studio yayımlamak için ASP.NET Core bir web uygulamasına yayımlamak için [Azure App Service.](/azure/app-service) Azure App Service, Azure'da barındırılan tek kapsayıcılı bir web uygulaması için uygun bir hizmettir.
+Bu öğreticide, kapsayıcılı Visual Studio web uygulamanızı bir ASP.NET Core için yayımlamak için [Azure App Service.](/azure/app-service) Azure App Service, Azure'da barındırılan tek kapsayıcılı bir web uygulaması için uygun bir hizmettir.
 
 Azure aboneliğiniz yoksa başlamadan önce [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/?utm_source=acr-publish-doc&utm_medium=docs&utm_campaign=docs) oluşturun.
 
@@ -27,10 +27,10 @@ Azure aboneliğiniz yoksa başlamadan önce [ücretsiz bir hesap](https://azure.
 Bu öğreticiyi tamamlamak için:
 
 ::: moniker range="vs-2017"
-- "ASP.NET ve web geliştirme" [iş yüküyle Visual Studio 2017'nin](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) en son sürümünü yükleyin
+- "ASP.NET web geliştirme" iş [yüküyle Visual Studio 2017'nin](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) en son sürümünü yükleyin
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-- Visual Studio ve web geliştirme iş yükü ASP.NET [2019'un](https://visualstudio.microsoft.com/downloads) *ilk günü.*
+- Visual Studio ve web geliştirme iş yüküyle ASP.NET [2019'un](https://visualstudio.microsoft.com/downloads) *ilk günü.*
 ::: moniker-end
 - [Docker Desktop'ı yükleme](https://docs.docker.com/docker-for-windows/install/)
 
@@ -42,7 +42,7 @@ Aşağıdaki adımlar, bu öğreticide kullanılacak temel ASP.NET Core uygulama
 1. Yeni Visual Studio Yeni **dosya'>'ı > Project.**
 2. Yeni Uygulama **iletişim kutusunun** Şablonlar bölümünde **Visual C# Project** Web'i > **seçin.**
 3. Web **ASP.NET Core'ı seçin.**
-4. Yeni uygulamanıza bir ad girin (veya varsayılan değeri alır) ve Tamam'ı **seçin.**
+4. Yeni uygulamanıza bir ad girin (veya varsayılanı seçin) ve Tamam'ı **seçin.**
 5. **Web Uygulaması'ı seçin.**
 6. **Docker Desteğini Etkinleştir onay** kutusunu işaretleyin.
 7. Linux kapsayıcı **türünü seçin** ve Tamam'a **tıklayın.** Windows kapsayıcıların kapsayıcı olarak Azure App Service dağıtımı desteklenmiyor.
@@ -67,7 +67,7 @@ Aşağıdaki adımlar, bu öğreticide kullanılacak temel ASP.NET Core uygulama
 
    ![Yayımla iletişim kutusunun ekran görüntüsü](media/deploy-app-service/publish-app-service-linux-1.png)
 
-   Yeni oluştur'u Azure App Service bir Azure Container Registry yayımlamak için **Yayımla'ya** **tıklayın.**
+   Yeni oluştur'u seçin Azure App Service bir Azure Container Registry yayımlamak için **Yayımla'ya** **tıklayın.**
 
 1. Azure aboneliğiniz ile ilişkili hesapta oturum açın ve benzersiz bir ad, abonelik, kaynak grubu, barındırma planı ve kapsayıcı kayıt defteri (varsa) seçin veya varsayılan değerleri kabul edin.
 

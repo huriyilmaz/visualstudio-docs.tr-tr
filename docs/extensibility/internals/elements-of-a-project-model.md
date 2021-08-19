@@ -1,6 +1,6 @@
 ---
-title: Proje modelinin öğeleri | Microsoft Docs
-description: Proje modelinin öğeleri ve Visual Studio 'daki tüm projelere ait arabirimlerin ve uygulamaların temel yapıyı nasıl paylaştığından ilgili bilgi edinin.
+title: Project Model | Microsoft Docs
+description: Proje modelinin öğeleri ve Visual Studio'daki tüm projelerin arabirimlerinin ve Visual Studio temel bir yapıyı nasıl paylaştığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,40 +12,41 @@ ms.assetid: a1dbe0dc-68da-45d7-8704-5b43ff7e4fc4
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 85b31996a7a0636f136e43531e69fe25c6d87d8f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a3e967466bef5feabaa4e6760dfc73c2927e7b35
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061296"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110585"
 ---
 # <a name="elements-of-a-project-model"></a>Proje modelinin öğeleri
-Temel yapıyı paylaşan tüm projelerin arabirimleri ve uygulamaları [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] : proje türü için proje modeli. Geliştirmekte olduğunuz VSPackage olan proje modelinizde, tasarım kararlarınızla uyumlu olan ve IDE tarafından sunulan genel işlevlerle birlikte çalışan nesneler oluşturursunuz. Bir proje öğesinin nasıl kalıcı olduğunu denetlemenize karşın, örneğin, bir dosyanın kalıcı olması gerektiğini kontrol edersiniz. Bir Kullanıcı, odağı açık bir proje öğesine yerleştiriyor ve menü çubuğundaki **Dosya** menüsünde **Kaydet** [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ' i SEÇTIĞINDE, proje türü kodunuz IDE 'den komutu ele almalıdır, dosyayı kalıcı hale getirin ve dosyanın artık değiştirilmediğini daha sonra geri bildirim gönderir.
+'daki tüm projelerin arabirimleri ve uygulamaları [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] temel bir yapıyı paylaşır: proje türünüz için proje modeli. Geliştirdiğiniz VSPackage olan proje modelinize, tasarım kararlarınızı uygun nesneler oluşturur ve IDE tarafından sağlanan genel işlevlerle birlikte çalışır. Örneğin, bir proje öğesinin nasıl kalıcı olduğunu denetlemenizle birlikte, bir dosyanın kalıcı olması gerektiğinin bildirimini denetlemezsiniz. Kullanıcı odağı açık bir proje öğesine yer  değiştirse  ve menü çubuğundaki Dosya menüsünde Kaydet'i seçtiklerinde, proje türü kodunuz IDE'den komutu kesmeli, dosyayı kalıcı olmalı ve dosyanın artık değişmediğini IDE'ye geri [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] göndermeli.
 
- VSPackage, IDE arabirimlerine erişim sağlayan hizmetler aracılığıyla IDE ile etkileşime girer. Örneğin, belirli hizmetler aracılığıyla komutları izleyip yönlendirebilir ve projede yapılan seçimlere yönelik bağlam bilgilerini sağlarsınız. VSPackage için gereken tüm Global IDE işlevleri hizmetler tarafından sağlanmaktadır. Hizmetler hakkında daha fazla bilgi için bkz. [nasıl yapılır: hizmet alma](../../extensibility/how-to-get-a-service.md).
+ VSPackage'nız, IDE arabirimlerine erişim sağlayan hizmetler aracılığıyla IDE ile etkileşime geçiyor. Örneğin, belirli hizmetler aracılığıyla komutları izlep yönlendirin ve projede yapılan seçimler için bağlam bilgileri sağlarsınız. VSPackage'nız için gereken tüm genel IDE işlevleri hizmetler tarafından sağlanır. Hizmetler hakkında daha fazla bilgi için [bkz. Nasıl: Hizmet al.](../../extensibility/how-to-get-a-service.md)
 
  Diğer uygulama konuları:
 
-- Tek bir proje modelinde birden fazla proje türü bulunabilir.
+- Tek bir proje modeli birden fazla proje türü içerebilir.
 
-- Proje türleri ve ilgili proje fabrikaları, GUID 'lerle bağımsız olarak kaydedilir.
+- Project türler ve proje fabrikaları GUID'lerle bağımsız olarak kaydedilir.
 
-- Kullanıcı Kullanıcı arabirimi aracılığıyla yeni bir proje oluşturduğunda, her projenin yeni proje dosyasını başlatması için bir şablon dosyası veya Sihirbazı olması gerekir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Örneğin, şablonlar, son olarak [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] . vcproj dosyaları olmaya başlatırlar.
+- Kullanıcı kullanıcı arabirimi aracılığıyla yeni bir proje oluşturduğunda yeni proje dosyasını başlatmak için her projenin bir şablon dosyası veya sihirbazı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] olması gerekir. Örneğin, şablonlar [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] sonunda .vcproj dosyaları haline gelecek dosyaları başlatıyor.
 
-  Aşağıdaki çizimde, tipik bir proje uygulamasını oluşturan birincil arabirimler, hizmetler ve nesneler gösterilmektedir. `HierUtil7`Temel nesneleri ve diğer programlama ortak nesnelerini oluşturmak için uygulama yardımcısını kullanabilirsiniz. Uygulama Yardımcısı hakkında daha fazla bilgi için `HierUtil7` bkz. [bir proje türü uygulamak için HierUtil7 proje sınıflarını kullanma (C++)](/previous-versions/bb166212(v=vs.100)).
+  Aşağıdaki çizimde, tipik bir proje uygulamasını oluşturan birincil arabirimler, hizmetler ve nesneler gösterilmiştir. Temel alınan nesneleri ve diğer programlama ortaklarını oluşturmak için uygulama `HierUtil7` yardımcısını kullanabilirsiniz. Uygulama yardımcısı hakkında daha fazla bilgi için bkz. Proje türünü uygulamak için `HierUtil7` [HierUtil7 proje sınıflarını kullanma (C++)](/previous-versions/bb166212(v=vs.100)).
 
-  ![Visual Studio proje modeli grafiği](../../extensibility/internals/media/vsprojectmodel.gif "vsProjectModel") Proje modeli
+  ![Visual Studio modeli grafik Project](../../extensibility/internals/media/vsprojectmodel.gif "vsProjectModel") modeli
 
-  Önceki diyagramda listelenen arabirimler ve hizmetler ve diyagramda bulunmayan diğer isteğe bağlı arabirimler hakkında daha fazla bilgi için bkz. [proje modeli çekirdek bileşenleri](../../extensibility/internals/project-model-core-components.md).
+  Önceki diyagramda listelenen arabirimler ve hizmetler ve diyagrama dahil edilen diğer isteğe bağlı arabirimler hakkında daha fazla bilgi için [bkz. Project temel bileşenleri.](../../extensibility/internals/project-model-core-components.md)
 
-  Projeler komutları destekleyebilir ve bu nedenle komut <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> yönlendirme GUID 'leri aracılığıyla komut yönlendirmesine katılmak için arabirimi uygulamalıdır.
+  Projeler komutları destekleyeyene sahip olabilir ve bu nedenle komut bağlamı GUID'leri aracılığıyla komut <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> yönlendirmeye katılmak için arabirimini uygulaması gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Denetim listesi: yeni proje türleri oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)
+- [Denetim listesi: Yeni proje türleri oluşturma](../../extensibility/internals/checklist-creating-new-project-types.md)
 - [Proje türü uygulamak için HierUtil7 proje sınıflarını kullanma (C++)](/previous-versions/bb166212(v=vs.100))
-- [Proje modeli çekirdek bileşenleri](../../extensibility/internals/project-model-core-components.md)
+- [Project modeli temel bileşenleri](../../extensibility/internals/project-model-core-components.md)
 - [Proje fabrikalarını kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)
-- [Nasıl yapılır: hizmet alma](../../extensibility/how-to-get-a-service.md)
-- [Proje türleri oluştur](../../extensibility/internals/creating-project-types.md)
+- [Nasıl: Hizmet al](../../extensibility/how-to-get-a-service.md)
+- [Proje türleri oluşturma](../../extensibility/internals/creating-project-types.md)

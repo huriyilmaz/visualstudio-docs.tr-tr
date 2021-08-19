@@ -1,6 +1,6 @@
 ---
-title: Değişen değerlerin örnek uygulama | Microsoft Docs
-description: Yereller penceresinde görüntülenmekte olan her yerel, kendisiyle ilişkili bir IDebugProperty2 nesnesine sahiptir. Visual Studio 'Nun bellekteki yerel değerini nasıl güncelleştireceğinizi öğrenin.
+title: Örnek Değer Değiştirme | Microsoft Docs
+description: Yereller penceresinde görüntülenen her yerel ile ilişkilendirilmiş bir IDebugProperty2 nesnesi vardır. Bellekte Visual Studio değerini güncelleştirme hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: sample
@@ -11,36 +11,37 @@ ms.assetid: ee2d955b-12ca-4f27-89aa-c2d0e768b6b6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: d36cee547e455e9aeb60517b23f0026c3f38b3f3
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 190b0ae3a9b9072b666fde389a12f7979c7c5a6c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112902338"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110702"
 ---
-# <a name="sample-implementation-of-changing-values"></a>Değişen değerlerin örnek uygulama
+# <a name="sample-implementation-of-changing-values"></a>Değerleri değiştirme örneği uygulama
 > [!IMPORTANT]
-> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> 2015 Visual Studio de ifade değerlendiricilerini uygulamanın bu yolu kullanım dışıdır. CLR ifade değerlendiricilerini uygulama hakkında bilgi için bkz. [CLR ifade değerlendiricileri ve](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) [Yönetilen ifade değerlendirici örneği.](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
- **Yereller** penceresinde görüntülenmekte olan her yerel, kendisiyle Ilişkili bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) nesnesine sahiptir. Bu `IDebugProperty2` nesne, yerel adı, değeri ve türünü içerir. Bir kullanıcı yerel bir değeri değiştirdiğinde, Visual Studio, bellekteki yerel değeri güncelleştirmek için [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) ' i çağırır. Bu örnekte, yerel, `CFieldProperty` arabirimini uygulayan sınıf tarafından temsil edilir `IDebugProperty2` .
+ Yereller penceresinde görüntülenen **her yerel ile** ilişkilendirilmiş bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) nesnesi vardır. Bu `IDebugProperty2` nesne yerelin adını, değerini ve türünü içerir. Bir kullanıcı yerel değeri değiştirirse, Visual Studio yerel değerini güncelleştirmek için [SetValueAsString'i](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) arar. Bu örnekte yerel, arabirimini `CFieldProperty` uygulayan sınıfı tarafından temsil `IDebugProperty2` edildi.
 
 > [!NOTE]
-> **İzleme** ve **hızlı izleme** ifadelerinde, değiştirilmekte olan değer `CValueProperty` MyCEE örneğindeki sınıf tarafından temsil edilir. Ancak, uygulamasının uygulanması `IDebugProperty2::SetValueAsString` burada gösterilenle aynıdır.
+> **Watch** ve **QuickWatch** ifadelerinde, değiştirilen değer `CValueProperty` MyCEE örneğinde sınıfı tarafından temsil ediliyor. Ancak, uygulaması `IDebugProperty2::SetValueAsString` burada gösterilenle aynıdır.
 
- Uygulamasının uygulanması `IDebugProperty2::SetValueAsString` aşağıdaki görevleri gerçekleştirir:
+ uygulaması `IDebugProperty2::SetValueAsString` aşağıdaki görevleri gerçekleştirir:
 
-1. İfadeyi bir değer üretecek şekilde değerlendirir.
+1. Bir değer üretmek için ifadeyi değerlendirir.
 
-2. İlişkili [IDebugField](../../extensibility/debugger/reference/idebugfield.md) nesnesini bellek konumuna bağlar ve bir [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) nesnesi oluşturur.
+2. İlişkili [IDebugField nesnesini](../../extensibility/debugger/reference/idebugfield.md) bellek konumunu bağlar ve bir [IDebugObject nesnesi](../../extensibility/debugger/reference/idebugobject.md) üretir.
 
 3. Değeri bir bayt dizisine dönüştürür.
 
-4. Baytları bellekte depolamak için [DeğerBelirle](../../extensibility/debugger/reference/idebugobject-setvalue.md) çağırır.
+4. Baytları bellekte depolamak için [SetValue'ya](../../extensibility/debugger/reference/idebugobject-setvalue.md) çağrılar.
 
 ## <a name="managed-code"></a>Yönetilen kod
- Aşağıdaki kod, `IDebugProperty2::SetValueAsString` yönetilen kod içinde uygulamasıdır.
+ Aşağıdaki kod, yönetilen kodda `IDebugProperty2::SetValueAsString` uygulamasıdır.
 
 ```csharp
 namespace EEMC
@@ -224,8 +225,8 @@ namespace EEMC
 }
 ```
 
-## <a name="unmanaged-code"></a>Yönetilmeyen kod
- Aşağıdaki kod, `IDebugProperty2::SetValueAsString` yönetilen kod içinde uygulamasıdır. Yardımcı işlevi `FieldCoerceValueType` (gösterilmez) bir öğesini belirli bir `VARIANT` tür olmaya zorlar ve değerin türlerden biri olduğundan emin olur `FieldSetValue` .
+## <a name="unmanaged-code"></a>Unmanaged code
+ Aşağıdaki kod, yönetilen kodda `IDebugProperty2::SetValueAsString` uygulamasıdır. Yardımcı işlevi (gösterilmez) bir'i belirli bir türe zorlar ve değerin `FieldCoerceValueType` `VARIANT` işlebilir türlerden biri `FieldSetValue` olduğundan emin olur.
 
 ```cpp
 STDMETHODIMP CFieldProperty::SetValueAsString(

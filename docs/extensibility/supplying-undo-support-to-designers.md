@@ -1,6 +1,6 @@
 ---
 title: Tasarımcılara Geri Alma Desteği | Microsoft Docs
-description: Tasarımcılara otomatik olarak veya Visual Studio SDK'sı'nda özellikleri kullanarak Geri Alma desteği sağlamayı öğrenin.
+description: Tasarımcılara otomatik olarak veya Visual Studio SDK'daki özellikleri kullanarak Geri Al desteği sağlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,18 +13,18 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: c8801dd0e9ca740a64a94a7f8ea5f251ab78950cbf7f0829ebd86bd6607da29f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e53cf66118bbc98526c3daa029b07fba0df2d3ba
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121413927"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144411"
 ---
 # <a name="supply-undo-support-to-designers"></a>Tasarımcılara geri alma desteği sağlar
 
 Düzenleyiciler gibi tasarımcıların da genellikle kullanıcıların kod öğesini değiştirirken son değişikliklerini tersine çeviremelerini için geri alma işlemlerini desteklemesi gerekir.
 
-Bir ortamda uygulanan çoğu tasarımcı Visual Studio tarafından otomatik olarak sağlanan "geri alma" desteğine sahiptir.
+Bu hizmette uygulanan tasarımcıların Visual Studio tarafından otomatik olarak "geri alma" desteği sağlanır.
 
 Geri alma özelliği için destek sağlamaları gereken tasarımcı uygulamaları:
 
@@ -55,26 +55,26 @@ Bir tasarımcının Visual Studio otomatik ve tam geri alma desteği vardır; ta
 
  Bunun bir örneği, web tabanlı grafik tabanlı grafik arabirim yerine web tabanlı grafik tasarım arabirimine .NET Framework ürün oluşturmak olabilir.
 
- Bu gibi durumlarda, bu görünüm bağdaştırıcısını kullanarak Visual Studio ve <xref:Microsoft.VisualStudio.Shell.Design.ProvideViewAdapterAttribute> açık geri alma yönetimi sağlamak gerekebilir.
+ Bu gibi durumlarda, bu görünüm bağdaştırıcısını kullanarak Visual Studio ve açık <xref:Microsoft.VisualStudio.Shell.Design.ProvideViewAdapterAttribute> geri alma yönetimi sağlamak gerekebilir.
 
  Tasarımcıların, ad alanı içinde sağlanan kod oluşturma modelini kullanmaları Visual Studio CodeDOM ve kalıcılık <xref:System.CodeDom> desteği sağlamaları gerekir.
 
 ## <a name="undo-support-features-of-the-designer"></a>Tasarımcının Destek Özelliklerini Geri Alma
  Ortam SDK'sı, kullanıcı arabirimleri veya standart CodeDOM ve kalıcılık modeli için tabanlı sınıflar kullanmayan tasarımcılar tarafından kullanılmaktadır geri alma desteği sağlamak için gereken arabirimlerin varsayılan <xref:System.Windows.Forms.Control> uygulamalarını sağlar.
 
- sınıfı, geri alma işlemlerini .NET Framework için sınıfının bir uygulamasını kullanarak sınıf <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> <xref:System.ComponentModel.Design.UndoEngine> <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager> sınıfından türetilen.
+ sınıfı, <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> geri alma işlemlerini .NET Framework için sınıfının bir uygulamasını kullanarak sınıf <xref:System.ComponentModel.Design.UndoEngine> <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager> sınıfından türetilen bir sınıftır.
 
  Visual Studio, tasarımcıyı geri almak için aşağıdaki özelliği sağlar:
 
 - Birden çok tasarımcı arasında bağlantılı geri alma işlevi.
 
-- Bir tasarımcı içindeki alt birimler, üzerinde ve uygulanarak ebeveynleriyle <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit> <xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit> etkileşime <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit> olabilir.
+- Bir tasarımcı içindeki alt birimler, üzerinde ve kullanarak ebeveynleriyle <xref:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit> <xref:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit> etkileşime <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine.UndoUnit> olabilir.
 
 Ortam SDK'sı şunları belirterek CodeDOM ve kalıcılık desteği sağlar:
 
 - <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> uygulamasının bir uygulaması olarak <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>
 
-- Bir <xref:System.ComponentModel.Design.IComponentChangeService> tasarım Visual Studio tarafından sağlanır.
+- Bir <xref:System.ComponentModel.Design.IComponentChangeService> tasarım ana bilgisayarı Visual Studio tarafından sağlanır.
 
 ## <a name="use-the-environment-sdk-features-to-supply-undo-support"></a>Geri Alma Desteği Sağlamak için Ortam SDK'sı Özelliklerini Kullanma
 
@@ -92,11 +92,11 @@ Geri alma desteğini almak için, tasarımcı uygulayan bir nesnenin geçerli bi
 
    Visual Studio tasarım ana bilgisayarı tarafından sağlanan varsayılan değeri kullanan tasarımcıların <xref:System.ComponentModel.Design.DesignSurface> sınıfının varsayılan uygulamasına sahip olduğu <xref:System.ComponentModel.Design.IComponentChangeService> garantidir.
 
-Tabanlı bir geri alma mekanizması <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> uygulayan tasarımcılar, şu durumlarda değişiklikleri otomatik olarak izler:
+Tabanlı bir geri alma mekanizması <xref:Microsoft.VisualStudio.Shell.Design.OleUndoEngine> uygulayan tasarımcılar şu durumlarda değişiklikleri otomatik olarak izler:
 
 - Özellik değişiklikleri nesnesi aracılığıyla <xref:System.ComponentModel.TypeDescriptor> yapılır.
 
-- <xref:System.ComponentModel.Design.IComponentChangeService> olaylar, geri alınamaz bir değişiklik işlendikleri zaman el ile oluşturulur.
+- <xref:System.ComponentModel.Design.IComponentChangeService> geri alınamaz bir değişiklik işlendi olduğunda olaylar el ile oluşturulur.
 
 - Tasarımcıda yapılan değişiklikler, bir bağlamında <xref:System.ComponentModel.Design.DesignerTransaction> oluşturulmuştur.
 

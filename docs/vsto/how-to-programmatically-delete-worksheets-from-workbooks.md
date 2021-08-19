@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: çalışma kitaplarındaki çalışma sayfalarını program aracılığıyla silme'
-description: Çalışma sayfası konak öğesini kullanarak Microsoft Excel çalışma kitabındaki tüm çalışma sayfalarını program aracılığıyla nasıl silebileceğinizi öğrenin.
+description: çalışma sayfası konak öğesini kullanarak bir Microsoft Excel çalışma kitabındaki tüm çalışma sayfalarını program aracılığıyla nasıl silebileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -14,14 +14,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: f3413eaf82b323bc23164687dc3ae3ac0b9d3c48
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 783ee376cda1ca5a4e293f1e3f8ef7a5805b6edc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825946"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148109"
 ---
 # <a name="how-to-programmatically-delete-worksheets-from-workbooks"></a>Nasıl yapılır: çalışma kitaplarındaki çalışma sayfalarını program aracılığıyla silme
   Çalışma kitabındaki tüm çalışma sayfalarını silebilirsiniz. Çalışma sayfasını silmek için çalışma sayfası konak öğesini kullanın veya çalışma kitabının sayfalar koleksiyonunu kullanarak çalışma sayfasına erişin.
@@ -39,7 +40,7 @@ ms.locfileid: "107825946"
 > - Excel 2010 Çalışma Kitabı
 > - Excel 2010 Şablonu
 >
->   Bu görevi başka bir proje türünde gerçekleştirmek istiyorsanız, **Microsoft. Office. Interop. Excel** derlemesine bir başvuru eklemeniz ve ardından çalışma kitabını açmak ve bir çalışma sayfasını silmek için bu derlemedeki sınıfları kullanmanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: birincil birlikte çalışma derlemeleri](how-to-target-office-applications-through-primary-interop-assemblies.md) ve [Excel 2010 birincil birlikte çalışma derleme başvurusu](office-primary-interop-assemblies.md)aracılığıyla Office uygulamalarını hedefleme.
+>   Bu görevi başka bir proje türünde gerçekleştirmek istiyorsanız, Microsoft. Office 'ye bir başvuru eklemeniz gerekir **. Derlemesinde. Excel** derleme ve ardından bir çalışma kitabını açmak ve bir çalışma sayfasını silmek için bu derlemedeki sınıfları kullanmanız gerekir. daha fazla bilgi için bkz. [nasıl yapılır: birincil birlikte çalışma derlemeleri](how-to-target-office-applications-through-primary-interop-assemblies.md) ve [Excel 2010 birincil birlikte çalışma derleme başvurusu](office-primary-interop-assemblies.md)aracılığıyla Office uygulamaları hedefleme.
 
 ### <a name="to-delete-a-worksheet-by-using-a-worksheet-host-item"></a>Çalışma sayfası konak öğesi kullanarak çalışma sayfasını silmek için
 
@@ -49,16 +50,16 @@ ms.locfileid: "107825946"
      :::code language="vb" source="codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb" id="Snippet17":::
 
 ## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>Excel çalışma kitabının sayfalar koleksiyonunu kullanın
- Aşağıdaki durumlarda Microsoft Office Excel koleksiyonu aracılığıyla çalışma sayfalarına erişin <xref:Microsoft.Office.Interop.Excel.Sheets> :
+ aşağıdaki durumlarda Microsoft Office Excel koleksiyonuyla çalışma sayfalarına erişin <xref:Microsoft.Office.Interop.Excel.Sheets> :
 
-- Bir VSTO eklentisinin çalışma sayfasını silmek istiyorsunuz.
+- VSTO eklentideki bir çalışma sayfasını silmek istiyorsunuz.
 
 - Silmek istediğiniz çalışma sayfası, çalışma zamanında belge düzeyi özelleştirmesinde oluşturulmuştur.
 
   Aşağıdaki **kod, sayfa koleksiyonunun Dizin** numarası aracılığıyla sayfaya başvurarak çalışma kitabından bir çalışma sayfasını siler. Bu kod, yeni bir çalışma sayfasının programlı bir şekilde oluşturulduğunu varsayar.
 
 > [!IMPORTANT]
-> Bu görevi başka bir proje türünde gerçekleştirmek istiyorsanız, **Microsoft. Office. Interop. Excel** derlemesine bir başvuru eklemeniz ve ardından çalışma kitabını açmak ve bir çalışma sayfasını silmek için bu derlemedeki sınıfları kullanmanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: birincil birlikte çalışma derlemeleri](how-to-target-office-applications-through-primary-interop-assemblies.md) ve [Excel 2010 birincil birlikte çalışma derleme başvurusu](office-primary-interop-assemblies.md)aracılığıyla Office uygulamalarını hedefleme.
+> Bu görevi başka bir proje türünde gerçekleştirmek istiyorsanız, Microsoft. Office 'ye bir başvuru eklemeniz gerekir **. Derlemesinde. Excel** derleme ve ardından bir çalışma kitabını açmak ve bir çalışma sayfasını silmek için bu derlemedeki sınıfları kullanmanız gerekir. daha fazla bilgi için bkz. [nasıl yapılır: birincil birlikte çalışma derlemeleri](how-to-target-office-applications-through-primary-interop-assemblies.md) ve [Excel 2010 birincil birlikte çalışma derleme başvurusu](office-primary-interop-assemblies.md)aracılığıyla Office uygulamaları hedefleme.
 
 ### <a name="to-delete-a-worksheet-by-using-the-sheets-collection-of-the-excel-workbook"></a>Excel çalışma kitabının sayfalar koleksiyonunu kullanarak bir çalışma sayfasını silmek için
 
@@ -74,5 +75,5 @@ ms.locfileid: "107825946"
 - [Nasıl yapılır: program aracılığıyla çalışma sayfaları seçme](how-to-programmatically-select-worksheets.md)
 - [Nasıl yapılır: program aracılığıyla çalışma kitaplarına yeni çalışma sayfaları ekleme](how-to-programmatically-add-new-worksheets-to-workbooks.md)
 - [Çalışma sayfası konak öğesi](worksheet-host-item.md)
-- [Office Projelerindeki Nesnelere Genel erişim](global-access-to-objects-in-office-projects.md)
+- [Office projelerindeki nesnelere genel erişim](global-access-to-objects-in-office-projects.md)
 - [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](programmatic-limitations-of-host-items-and-host-controls.md)

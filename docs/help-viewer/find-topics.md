@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: c39c27830d7e629a2a2e19c2b34a2ebff8c17f4833c897bdf681a2e0150ac678
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7605c4b35828cc5e54d04e0b36361d7280b60847
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121358538"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122124353"
 ---
 # <a name="how-to-search-for-topics"></a>Nasıl yapılır: konu arama
 

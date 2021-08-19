@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: d974e114d9c1b1ee7680e02db8de5d23649f251266f76d86086acf2c0beb51fe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d90a286074ee26eea35e0e762781aceb339980cb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121361034"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160406"
 ---
 # <a name="m_stateflags-field"></a>m_stateFlags alanı
 Nesnenin geçerli durumu hakkında bilgi depolar <xref:System.Threading.Tasks.Task> .

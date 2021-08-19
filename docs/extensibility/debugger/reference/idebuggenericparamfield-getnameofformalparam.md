@@ -1,6 +1,6 @@
 ---
-description: Bu genel parametrenin adını alır.
-title: 'Idebuggenericparamfield:: GetNameOfFormalParam | Microsoft Docs'
+description: Bu genel parametrenin adını alan.
+title: IDebugGenericParamField::GetNameOfFormalParam | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: 05032a83-49ce-4007-b5d6-7b56945b956c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7b151d2964c011d775215b1455dc59a12a86db70
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 90ba351d9a60ea82c722799b793e6fddc0656624
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084720"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138113"
 ---
 # <a name="idebuggenericparamfieldgetnameofformalparam"></a>IDebugGenericParamField::GetNameOfFormalParam
-Bu genel parametrenin adını alır.
+Bu genel parametrenin adını alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +42,13 @@ int GetNameOfFormalParam (
 
 ## <a name="parameters"></a>Parametreler
 `pbstrName`\
-dışı Bu genel parametrenin adı.
+[out] Bu genel parametrenin adı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [ıdebuggenericparamfield](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini kullanıma sunan bir **cdebuggenericparamtcobject** için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugGenericParamField arabirimini ortaya çıkaran bir CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl [uygulandığını](../../../extensibility/debugger/reference/idebuggenericparamfield.md) gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetNameOfFormalParam(BSTR *pbstrName)

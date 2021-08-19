@@ -1,57 +1,58 @@
 ---
-title: Oluşturucu kaldırma hızlı eylemi oluştur
-description: Hızlı Eylemler ve yeniden düzenlemeler menüsünü kullanarak yeni bir Deconstructor için yöntem Saplamasının hemen nasıl oluşturulacağını öğrenin.
+title: Yok etme hızlı eylemi oluşturma
+description: Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanarak yeni bir yıkıcı için hemen yöntem saplama oluşturma hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 02/19/2019
 ms.topic: reference
 author: kendrahavens
 ms.author: kehavens
 manager: jmartens
+ms.technology: vs-ide-general
 dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4c243ab46858a4c8eb944d485900718b685bf5c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: eb6ffb06436b36382925fb33ff4fbb35626e8a21
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99897960"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151658"
 ---
-# <a name="generate-a-deconstructor-in-visual-studio"></a>Visual Studio 'da bir Deconstructor oluşturma
+# <a name="generate-a-deconstructor-in-visual-studio"></a>Visual Studio'de bir deconstructor oluşturma
 
-Bu kod üretimi için geçerlidir:
+Bu kod oluşturma aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Yeni bir Deconstructor için yöntem saplaması 'nı hemen üretmenizi sağlar.
+**Ne:** Yeni bir yıkıcı için yöntem saplamalarını hemen oluşturmana olanak sağlar.
 
-**Ne zaman:** Türü otomatik olarak doğru bir şekilde yapılandırmak istiyorsunuz.
+**Ne zaman:** Tür türlerinizi otomatik olarak düzgün bir şekilde yok etmek istediğiniz.
 
-**Neden:** Bir deoluşturucuyu el ile yazabilirsiniz, ancak bu özellik, sizin için doğru çıkış parametreleriyle saplama oluşturur.
+**Neden:** Bir yıkıcıyı el ile yazabilirsiniz, ancak bu özellik doğru out parametreleriyle saplamayı sizin için üretir.
 
-## <a name="generate-a-deconstructor"></a>Deconstructor oluştur
+## <a name="generate-a-deconstructor"></a>Yıkıcı oluşturma
 
-1. İstenen çıkış parametreleriyle yeni bir tür bildirin. Bu bildirim, bildiriğiniz ile eşleşen bir kaldırma örneği bulunamadığında hataya neden olur.
+1. İstenen out parametreleri belirtilen yeni bir tür bildirebilirsiniz. Bildiriminiz ile eşleşen bir yok etme örneği bulunamaması bu bildirimde hataya neden olur.
 
-   ![Eksik oluşturucuyu kaldırma hatası](media/deconstruct.png)
+   ![Yok etme hatası eksik](media/deconstruct.png)
 
 2. Aşağıdaki adımlardan birini uygulayın:
 
    - **Klavye**
-      - Bildirimindeki imleç ile CTRL + ' yi seçin. **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+      - İmleç bildiriminize ek olarak Ctrl+ tuşlarını seçin. hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
    - **Fare**
-      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
-      - :::image type="icon" source="media/screwdriver.png":::Metin imleci, sınıftaki boş satırda varsa sol kenar boşluğunda görünen simgeyi seçin.
+      - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
+      - Metin :::image type="icon" source="media/screwdriver.png"::: imleci sınıftaki boş satırda zaten varsa sol kenar boşluğunda görünen simgeyi seçin.
 
-      ![Deconstructor kodu düzeltmesini oluştur](media/deconstruct-codefix.png)
+      ![Yıkıcı kod düzeltmesi oluşturma](media/deconstruct-codefix.png)
 
-3. Deconstructor oluşturmak için **' Myınternalclass. Deyapýsý ' metodunu oluştur** ' u seçin.
+3. **Deconstructor'ı oluşturmak için Generate method 'MyInternalClass.Deconstruct' (MyInternalClass.Deconstruct'** yöntemini oluştur) öğesini seçin.
 
-   ![Sonuç Deconstructor kodu](media/deconstruct-result.png)
+   ![Sonuçta elde edilen yok etme kodu](media/deconstruct-result.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kod oluşturma](../code-generation-in-visual-studio.md)
-- [Değişiklikleri Önizle](../../ide/preview-changes.md)
+- [Değişiklikleri önizleme](../../ide/preview-changes.md)
 - [.NET geliştiricileri için ipuçları](../csharp-developer-productivity.md)

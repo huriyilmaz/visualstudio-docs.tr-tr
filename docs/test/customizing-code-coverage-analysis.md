@@ -10,12 +10,12 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: c380f65f9bde1e6980d6989aecaaa93d5e60a548d8805416532215a2bcf64034
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b422efc8e3f8e6ec9c39b02089e22c5eab6ed3cc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121425028"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083940"
 ---
 # <a name="customize-code-coverage-analysis"></a>Kod kapsamı analizini özelleştirme
 
@@ -31,7 +31,7 @@ Test kodunu kod kapsamı sonuçlarından dışlamak ve yalnızca uygulama kodunu
 
 Kod kapsamı özelleştirmek için şu adımları izleyin:
 
-1. Çözümünüze bir çalıştırma ayarları dosyası ekleyin. Bu **Çözüm Gezgini,** çözüm çözümlü kısayol menüsünde Yeni Öğe  >  **Ekle'yi ve** **ARDıNDAN XML Dosyası'yı seçin.** Dosyayı *CodeCoverage.runsettings gibi bir adla kaydedin.*
+1. Çözümünüze bir çalıştırma ayarları dosyası ekleyin. Bu **Çözüm Gezgini,** çözüm kısayol menüsünde Yeni Öğe   >  **Ekle'yi ve** **ARDıNDAN XML Dosyası'yı seçin.** Dosyayı *CodeCoverage.runsettings gibi bir adla kaydedin.*
 
 2. Bu makalenin sonundaki örnek dosyadan içeriği ekleyin ve ardından aşağıdaki bölümlerde açıklandığı gibi ihtiyaçlarınıza göre özelleştirin.
 
@@ -43,7 +43,7 @@ Kod kapsamı özelleştirmek için şu adımları izleyin:
 
 ::: moniker range=">=vs-2019"
 
-3. Çalıştırma ayarları dosyasını seçmek için Test **menüsünde** Dosya olarak Seç'Ayarlar **seçin.** Komut satırına test çalıştırmaya bir çalıştırma ayarları dosyası belirtmek için [bkz. Birim testlerini yapılandırma.](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file-from-the-command-line)
+3. Çalıştırma ayarları dosyasını seçmek için Test **menüsünde** Dosya olarak **seç'Ayarlar seçin.** Komut satırına test çalıştırmaya bir çalıştırma ayarları dosyası belirtmek için [bkz. Birim testlerini yapılandırma.](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file-from-the-command-line)
 
 ::: moniker-end
 
@@ -54,7 +54,7 @@ Kod kapsamı özelleştirmek için şu adımları izleyin:
 
 ::: moniker range="vs-2017"
 
-Özel ayarları kapatmak ve açmak için Test Testi Uygulama menüsünde **dosyanın** > **seçimini Ayarlar** seçin.
+Özel ayarları kapatmak ve açmak için Test Testi uygulama menüsünde **dosyanın** > **seçimini Ayarlar** seçin.
 
 ![Visual Studio 2017'de özel ayarlar dosyasıyla test ayarları menüsü](../test/media/codecoverage-settingsfile.png)
 
@@ -68,7 +68,7 @@ Kod kapsamı özelleştirmek için şu adımları izleyin:
 
 ## <a name="symbol-search-paths"></a>Sembol arama yolları
 
-Kod kapsamı, derlemeler için sembol dosyaları (*.pdb* dosyaları) gerektirir. Çözümünüz tarafından derlemeler için sembol dosyaları genellikle ikili dosyaların yanı sıra mevcuttur ve kod kapsamı otomatik olarak çalışır. Bazı durumlarda, kod kapsamı analizinize başvurulan derlemeleri dahil etmek istiyor olabilir. Böyle *durumlarda, .pdb* dosyaları ikili dosyalar ile bitişik değildir, ancak *.runsettings* dosyasında sembol arama yolunu belirtebilirsiniz.
+Kod kapsamı, derlemeler için sembol dosyaları (*.pdb* dosyaları) gerektirir. Çözümünüz tarafından derlemeler için sembol dosyaları genellikle ikili dosyaların yanı sıra mevcuttur ve kod kapsamı otomatik olarak çalışır. Bazı durumlarda, başvurulan derlemeleri kod kapsamı analizinize dahil etmek istiyor olabilir. Böyle *durumlarda, .pdb* dosyaları ikili dosyalar ile bitişik değildir, ancak *.runsettings* dosyasında sembol arama yolunu belirtebilirsiniz.
 
 ```xml
 <SymbolSearchPaths>

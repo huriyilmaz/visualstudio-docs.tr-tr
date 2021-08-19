@@ -1,6 +1,6 @@
 ---
 title: İş Parçacıklarını Listele Komutu
-description: Iş parçacıklarını Listele komutu ve geçerli programdaki iş parçacıklarının bir listesini görüntüleme hakkında bilgi edinin.
+description: İş Parçacıklarını Listele komutunu ve geçerli programda iş parçacıklarının listesini nasıl görüntüle olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c0cdd6f76a9ba1f73884127d19dd40ce2c64fb64752b04bbe5698408a84c5048
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2585399f9e63286eb6c846054eb30e80fad8fe20
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121447538"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151450"
 ---
 # <a name="list-threads-command"></a>İş Parçacıklarını Listele Komutu
-Geçerli programdaki iş parçacıklarının listesini görüntüler.
+Geçerli programda iş parçacıklarının listesini görüntüler.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -36,10 +36,10 @@ Debug.ListThreads [index]
 ## <a name="arguments"></a>Bağımsız değişkenler
 `index`
 
-İsteğe bağlı. Geçerli iş parçacığı olarak dizini tarafından bir iş parçacığı seçer.
+İsteğe bağlı. Geçerli iş parçacığı olmak için dizinine göre bir iş parçacığı seçer.
 
 ## <a name="remarks"></a>Açıklamalar
-Belirtildiğinde `index` bağımsız değişken belirtilen iş parçacığını geçerli iş parçacığı olarak işaretler. Geçerli iş parçacığının yanındaki listede bir yıldız işareti (*) görüntülenir.
+Belirtilen bağımsız `index` değişken, belirtilen iş parçacığını geçerli iş parçacığı olarak işaretler. Geçerli iş parçacığının yanındaki listede bir yıldız işareti (*) görüntülenir.
 
 ## <a name="example"></a>Örnek
 
@@ -49,9 +49,9 @@ Belirtildiğinde `index` bağımsız değişken belirtilen iş parçacığını 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çağrı yığınını Listele komutu](../../ide/reference/list-call-stack-command.md)
-- [Ayrıştırılmış kodu Listele komutu](../../ide/reference/list-disassembly-command.md)
+- [Çağrı Yığınını Listele Komutu](../../ide/reference/list-call-stack-command.md)
+- [Disassembly Komutunu Listele](../../ide/reference/list-disassembly-command.md)
 - [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
-- [Komut penceresi](../../ide/reference/command-window.md)
-- [Bul/komut kutusu](../../ide/find-command-box.md)
+- [Komut Penceresi](../../ide/reference/command-window.md)
+- [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

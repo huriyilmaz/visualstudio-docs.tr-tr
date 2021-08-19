@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 11c5c221558dbfcd69844a2420510f3026a0450fa611103ece4ce3659349fe80
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: aa270fae00a66f1ca295949855c7b7ad1a56254b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397533"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122077172"
 ---
 # <a name="msbuild-targets"></a>MSBuild hedefleri
 

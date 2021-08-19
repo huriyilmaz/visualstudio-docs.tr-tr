@@ -10,18 +10,18 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: fd9f937f20b9bbb00d1b69692320b676a5a5ca4688b6720bc798053e673cfdd0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8636166da9506e7bf3d5923167e2a449b8000462
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370742"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157442"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Nasıl yapılır: Program Kodunda Dosyadan Model Açma
 
 DSL modellerini herhangi bir uygulamada açabilirsiniz.
 
-Bir Visual Studio ModelBus'i bu amaçla kullanabilirsiniz. ModelBus, modele veya modelde öğelere başvurmak ve taşınmışsa modeli bulmak için standart mekanizma sağlar. Daha fazla bilgi için [bkz. Visual Studio Modelbus kullanarak Modelleri Tümleştirme.](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
+Bir Visual Studio ModelBus'i bu amaçla kullanabilirsiniz. ModelBus, modele veya modelde öğelere başvurmak ve taşınmışsa modeli bulmak için standart mekanizma sağlar. Daha fazla bilgi için [bkz. Modelbus kullanarak Visual Studio Tümleştirme.](../modeling/integrating-models-by-using-visual-studio-modelbus.md)
 
 ## <a name="target-framework"></a>Hedef çerçeve
 
@@ -31,7 +31,7 @@ Uygulama **projenizin Target çerçevesini** 4 veya .NET Framework olarak ayarla
 
 2. Bu **Çözüm Gezgini,** projeye sağ tıklayın ve ardından Özellikler'e **tıklayın.**
 
-3. Proje özellikleri penceresinde, Uygulama sekmesinde Hedef **çerçeve** alanını **4** (veya **sonraki** bir .NET Framework) olarak ayarlayın.
+3. Proje özellikleri penceresinde, Uygulama sekmesinde Hedef **çerçeve** alanını **4** (veya **daha** .NET Framework) olarak ayarlayın.
 
 > [!NOTE]
 > Hedef **çerçeve, 4 .NET Framework profiline sahip değil.**
@@ -68,7 +68,7 @@ Aşağıdaki örnek, önemli sınıfların aşağıdaki gibi olduğu bir DSL'i o
 
 - FamilyTreeDomainModel
 
-Bu DSL'nin diğer etki alanı sınıfı Kişi'dir.
+Bu DSL'de diğer etki alanı sınıfı Kişi'dir.
 
 ```csharp
 using System;
@@ -106,7 +106,7 @@ namespace StandaloneReadDslConsole
 } } } }
 ```
 
-## <a name="save-to-a-file"></a>Bir dosyaya kaydetme
+## <a name="save-to-a-file"></a>Dosyaya kaydetme
 
 Önceki koda aşağıdaki ekleme, modelde bir değişiklik yapar ve sonra bunu bir dosyaya kaydeder.
 

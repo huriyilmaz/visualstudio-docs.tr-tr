@@ -1,6 +1,6 @@
 ---
-title: Özellik Işlevleri | Microsoft Docs
-description: MSBuild özellik tanımlarında görüntülenen .NET Framework yöntemlerine yapılan çağrılar olan özellik işlevlerini nasıl kullanacağınızı öğrenin.
+title: Özellik İşlevleri | Microsoft Docs
+description: Özellik tanımlarında görünen .NET Framework çağrıları olan özellik işlevlerini MSBuild öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/21/2017
 ms.topic: conceptual
@@ -13,66 +13,66 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 1044391e744f1c636965c687a674fc778034ab15085eabba94436a1924cdfd56
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0a6274a4648dc204bf451aaa68dbc2e47b1ce25e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121355899"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122084902"
 ---
 # <a name="property-functions"></a>Özellik işlevleri
 
-özellik işlevleri, MSBuild özellik tanımlarında görüntülenen .NET Framework yöntemlerine yapılan çağrılardır. Görevlerin aksine, özellik işlevleri hedeflerin dışında kullanılabilir ve herhangi bir hedef çalışmadan önce değerlendirilir.
+Özellik işlevleri, .NET Framework tanımlarında görünen MSBuild çağrılarıdır. Görevlerden farklı olarak, özellik işlevleri hedeflerin dışında kullanılabilir ve herhangi bir hedef çalışmadan önce değerlendirilir.
 
-MSBuild görevleri kullanmadan, sistem saatini okuyabilir, dizeleri karşılaştırabilir, normal ifadelerle eşleştirebilir ve derleme betiğinizdeki diğer işlemleri gerçekleştirebilirsiniz. MSBuild, dizeyi sayı ve sayı olarak dizeye dönüştürmeye ve diğer dönüştürmeleri gerekli olarak yapmaya çalışacaktır.
+Bu MSBuild olmadan sistem zamanını okuyabilir, dizeleri karşılaştırabilirsiniz, normal ifadelerle eş okuyabilir ve derleme betiğinize başka eylemler gerçekleştirebilirsiniz. MSBuild sayı ve sayı dizeye dönüştürmeye ve gerektiğinde diğer dönüştürmeleri yapmaya çalışacak.
 
-Özellik işlevlerinden döndürülen dize değerleri [özel karakterlerin](msbuild-special-characters.md) atlanmalıdır. Değerin doğrudan proje dosyasına yerleştirilmiş gibi değerlendirilmesini istiyorsanız, `$([MSBuild]::Unescape())` özel karakterlerin atmasını kaldırmak için kullanın.
+Özellik işlevlerinden döndürülen dize değerlerinin özel [karakterleri vardır.](msbuild-special-characters.md) Değerin doğrudan proje dosyasına konmış gibi kabul 1000'den fazla olması için özel `$([MSBuild]::Unescape())` karakterlerin kaçışlarını kaldırabilirsiniz.
 
-özellik işlevleri .NET Framework 4 ve üzeri sürümlerde kullanılabilir.
+Özellik işlevleri 4 ve .NET Framework kullanılabilir.
 
-## <a name="property-function-syntax"></a>Özellik işlevi sözdizimi
+## <a name="property-function-syntax"></a>Özellik işlevi söz dizimi
 
-Bunlar, üç tür özellik işlevleridir; Her işlevde farklı bir sözdizimi vardır:
+Bunlar üç tür özellik işlevidir; her işlevin farklı bir söz dizimi vardır:
 
-- String (örnek) özellik işlevleri
-- Static özellik işlevleri
-- MSBuild özellik işlevleri
+- Dize (örnek) özellik işlevleri
+- Statik özellik işlevleri
+- MSBuild işlevleri
 
 ### <a name="string-property-functions"></a>Dize özelliği işlevleri
 
-Tüm derleme özelliği değerleri yalnızca dize değerleridir. Herhangi bir özellik değerinde çalışmak için dize (örnek) yöntemlerini kullanabilirsiniz. Örneğin, bu kodu kullanarak tam yolu temsil eden bir Build özelliğinden sürücü adını (ilk üç karakter) ayıklayabilirsiniz:
+Tüm derleme özelliği değerleri yalnızca dize değerleridir. Herhangi bir özellik değerinde çalıştırmak için dize (örnek) yöntemlerini kullanabilirsiniz. Örneğin, bu kodu kullanarak tam yolu temsil eden bir derleme özelliğinden sürücü adını (ilk üç karakter) ayıkabilirsiniz:
 
 ```
 $(ProjectOutputFolder.Substring(0,3))
 ```
 
-### <a name="static-property-functions"></a>Static özellik işlevleri
+### <a name="static-property-functions"></a>Statik özellik işlevleri
 
-Yapı betiğinizdeki birçok sistem sınıfının statik özelliklerine ve yöntemlerine erişebilirsiniz. Statik bir özelliğin değerini almak için aşağıdaki sözdizimini kullanın; burada, \<Class> sistem sınıfının adıdır ve \<Property> özelliğin adıdır.
+Derleme betiğinde, birçok sistem sınıflarının statik özelliklerine ve yöntemlerine erişebilirsiniz. Statik bir özelliğin değerini almak için aşağıdaki sözdizimini kullanın; burada sistem sınıfının \<Class> adıdır \<Property> ve özelliğin adıdır.
 
 ```
 $([Class]::Property)
 ```
 
-Örneğin, geçerli tarih ve saate bir Build özelliği ayarlamak için aşağıdaki kodu kullanabilirsiniz.
+Örneğin, bir derleme özelliğini geçerli tarih ve saat olarak ayarlamak için aşağıdaki kodu kullanabilirsiniz.
 
 ```xml
 <Today>$([System.DateTime]::Now)</Today>
 ```
 
-Statik bir yöntemi çağırmak için aşağıdaki sözdizimini kullanın; burada, \<Class> sistem sınıfının adıdır, \<Method> yöntemin adıdır ve ( \<Parameters> ) yöntemi için parametre listesidir:
+Statik yöntem çağrısı yapmak için aşağıdaki sözdizimini kullanın; burada sistem sınıfının adıdır, yöntemin adıdır ve ( ) yöntemin \<Class> \<Method> parametre \<Parameters> listesidir:
 
 ```
 $([Class]::Method(Parameters))
 ```
 
-Örneğin, bir yapı özelliğini yeni bir GUID 'ye ayarlamak için bu betiği kullanabilirsiniz:
+Örneğin, bir derleme özelliğini yeni bir GUID olarak ayarlamak için şu betiği kullanabilirsiniz:
 
 ```xml
 <NewGuid>$([System.Guid]::NewGuid())</NewGuid>
 ```
 
-Statik Özellik işlevlerinde, bu sistem sınıflarının herhangi bir statik yöntemini veya özelliğini kullanabilirsiniz:
+Statik özellik işlevlerinde, bu sistem sınıflarının herhangi bir statik yöntemini veya özelliğini kullanabilirsiniz:
 
 - <xref:System.Byte?displayProperty=nameWithType>
 - <xref:System.Char?displayProperty=nameWithType>
@@ -104,79 +104,79 @@ Statik Özellik işlevlerinde, bu sistem sınıflarının herhangi bir statik y�
 
 Ayrıca, aşağıdaki statik yöntemleri ve özellikleri kullanabilirsiniz:
 
-- [System. Environment:: CommandLine](xref:System.Environment.CommandLine*)
-- [System. Environment:: ExpandEnvironmentVariables](xref:System.Environment.ExpandEnvironmentVariables*)
-- [System. Environment:: GetEnvironmentVariable](xref:System.Environment.GetEnvironmentVariable*)
-- [System. Environment:: GetEnvironmentVariables](xref:System.Environment.GetEnvironmentVariables*)
-- [System. Environment:: GetFolderPath](xref:System.Environment.GetFolderPath*)
-- [System. Environment:: GetLogicalDrives](xref:System.Environment.GetLogicalDrives*)
-- [System. ıO. Directory:: Getdizinler](xref:System.IO.Directory.GetDirectories*)
-- [System. ıO. Directory:: GetFiles](xref:System.IO.Directory.GetFiles*)
-- [System. ıO. Directory:: GetLastAccessTime](xref:System.IO.Directory.GetLastAccessTime*)
-- [System. ıO. Directory:: GetLastWriteTime](xref:System.IO.Directory.GetLastWriteTime*)
-- [System. ıO. Directory:: GetParent](xref:System.IO.Directory.GetParent*)
-- [System. ıO. File:: Exists](xref:System.IO.File.Exists*)
-- [System. ıO. File:: GetCreationTime](xref:System.IO.File.GetCreationTime*)
-- [System. ıO. File:: GetAttributes](xref:System.IO.File.GetAttributes*)
-- [System. ıO. File:: GetLastAccessTime](xref:System.IO.File.GetLastAccessTime*)
-- [System. ıO. File:: GetLastWriteTime](xref:System.IO.File.GetLastWriteTime*)
-- [System. ıO. File:: ReadAllText](xref:System.IO.File.ReadAllText*)
+- [System.Environment::CommandLine](xref:System.Environment.CommandLine*)
+- [System.Environment::ExpandEnvironmentVariables](xref:System.Environment.ExpandEnvironmentVariables*)
+- [System.Environment::GetEnvironmentVariable](xref:System.Environment.GetEnvironmentVariable*)
+- [System.Environment::GetEnvironmentVariables](xref:System.Environment.GetEnvironmentVariables*)
+- [System.Environment::GetFolderPath](xref:System.Environment.GetFolderPath*)
+- [System.Environment::GetLogicalDrives](xref:System.Environment.GetLogicalDrives*)
+- [System.IO.Directory::GetDirectories](xref:System.IO.Directory.GetDirectories*)
+- [System.IO.Directory::GetFiles](xref:System.IO.Directory.GetFiles*)
+- [System.IO.Directory::GetLastAccessTime](xref:System.IO.Directory.GetLastAccessTime*)
+- [System.IO.Directory::GetLastWriteTime](xref:System.IO.Directory.GetLastWriteTime*)
+- [System.IO.Directory::GetParent](xref:System.IO.Directory.GetParent*)
+- [System.IO.File::Exists](xref:System.IO.File.Exists*)
+- [System.Io.File::GetCreationTime](xref:System.IO.File.GetCreationTime*)
+- [System.Io.File::GetAttributes](xref:System.IO.File.GetAttributes*)
+- [System.Io.File::GetLastAccessTime](xref:System.IO.File.GetLastAccessTime*)
+- [System.IO.File::GetLastWriteTime](xref:System.IO.File.GetLastWriteTime*)
+- [System.Io.File::ReadAllText](xref:System.IO.File.ReadAllText*)
 
-### <a name="calling-instance-methods-on-static-properties"></a>Statik özelliklerde örnek yöntemleri çağırma
+### <a name="calling-instance-methods-on-static-properties"></a>Statik özelliklerde örnek yöntemlerini çağırma
 
-Bir nesne örneği döndüren statik bir özelliğe eriştiğinizde, bu nesnenin örnek yöntemlerini çağırabilirsiniz. Bir örnek yöntemi çağırmak için aşağıdaki sözdizimini kullanın; burada \<Class> sistem sınıfının adıdır, özelliğin adıdır, \<Property> \<Method> yöntemin adıdır ve ( \<Parameters> ) yöntemi için parametre listesidir:
+Bir nesne örneği döndüren statik bir özellik erişersiniz, bu nesnenin örnek yöntemlerini çağırabilirsiniz. Bir örnek yöntemini çağırmak için aşağıdaki sözdizimini kullanın; burada sistem sınıfının adıdır, özelliğin adıdır, yöntemin adıdır ve ( ) yöntemin parametre \<Class> \<Property> \<Method> \<Parameters> listesidir:
 
 ```
 $([Class]::Property.Method(Parameters))
 ```
 
-Sınıfın adı ad alanıyla tam olarak nitelenmelidir.
+Sınıfın adı ad alanıyla tam olarak tam olarak ad alanına sahip olması gerekir.
 
-Örneğin, bir Build özelliğini bugün geçerli tarihe ayarlamak için aşağıdaki kodu kullanabilirsiniz.
+Örneğin, bir derleme özelliğini geçerli tarihe ayarlamak için aşağıdaki kodu kullanabilirsiniz.
 
 ```xml
 <Today>$([System.DateTime]::Now.ToString('yyyy.MM.dd'))</Today>
 ```
 
-### <a name="msbuild-property-functions"></a>MSBuild özellik işlevleri
+### <a name="msbuild-property-functions"></a>MSBuild işlevleri
 
-Derlemenize yönelik birkaç statik yönteme aritmetik, bit düzeyinde mantıksal ve çıkış karakteri desteği sağlamak için erişilebilir. Bu yöntemlere, \<Method> yöntemin adı ve ( \<Parameters> ) yöntemin parametre listesi olduğu aşağıdaki sözdizimini kullanarak erişirsiniz.
+Aritmetik, bitwise mantıksal ve kaçış karakteri desteği sağlamak için derlemenizin çeşitli statik yöntemlerine erişilebilir. Bu yöntemlere aşağıdaki sözdizimini kullanarak erişebilirsiniz; burada yöntemin \<Method> adıdır ve ( \<Parameters> ) yöntemin parametre listesidir.
 
 ```
 $([MSBuild]::Method(Parameters))
 ```
 
-Örneğin, sayısal değerlere sahip iki özelliği birlikte eklemek için aşağıdaki kodu kullanın.
+Örneğin, sayısal değerlere sahip iki özelliği bir araya eklemek için aşağıdaki kodu kullanın.
 
 ```
 $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 ```
 
-MSBuild özellik işlevlerinin bir listesi aşağıdadır:
+Özellik işlevlerinin MSBuild listesi:
 
 |İşlev imzası|Açıklama|
 |------------------------|-----------------|
-|Double Ekle (çift a, çift b)|İki Double Ekle.|
-|uzun ekleme (Long a, Long b)|İki Long ekleyin.|
-|Çift çıkarma (çift a, çift b)|İki Double öğesini çıkar.|
-|uzun çıkarma (Long a, Long b)|İki Long çıkar.|
-|Çift çarpma (çift a, çift b)|İki Double öğesini çarpın.|
-|uzun çarpma (Long a, Long b)|İki Long 'yi çarpın.|
-|Çift bölme (çift a, çift b)|İki Double öğesini bölün.|
-|Uzun bölme (Long a, Long b)|İki Long bölün.|
-|Çift modül (çift a, çift b)|İki Double modül.|
-|uzun mod (Long a, Long b)|Modül iki Long.|
-|dize kaçış (dize kaçışsız)|MSBuild kaçış kurallarına göre dizeyi kaçış.|
-|dize Unkaçış (dize kaçan)|MSBuild kaçış kurallarına göre dizenin kaçış işaretini kaldırın.|
-|int Bitwiseveya (int First, INT Second)|Birinci ve ikinci bir bit düzeyinde gerçekleştirin `OR` (ilk &#124; saniye).|
-|Int Bitwiseve (int First, int Second)|Birinci ve ikinci bir bit düzeyinde gerçekleştirin `AND` (ilk & saniye).|
-|Int BitwiseXor (int First, int Second)|Birinci ve ikinci bit düzeyinde bit düzeyinde gerçekleştirin `XOR` (ilk ^ saniye).|
-|Int Bitwıenot (ilk tamsayı)|Bit düzeyinde `NOT` (~ ilk) gerçekleştirin.|
-|bool ısosplatform (dize platformString)|Geçerli işletim sistemi platformunun olup olmadığını belirtin `platformString` . `platformString` öğesinin üyesi olması gerekir <xref:System.Runtime.InteropServices.OSPlatform> .|
-|bool ıosunixlike ()|Geçerli işletim sistemi bir UNIX sistemse true.|
-|String NormalizePath (params String [] yol)|Belirtilen yolun kurallı tam yolunu alır ve geçerli işletim sistemi için doğru dizin ayırıcı karakterlerini içerdiğinden emin olur.|
-|String NormalizeDirectory (params String [] yol)|Belirtilen dizinin kurallı tam yolunu alır ve sonunda eğik çizgi olduğundan emin olarak geçerli işletim sistemi için doğru dizin ayırıcı karakterlerini içerir.|
-|dize Ensugeri çekme bölgesi (dize yolu)|Verilen yolun sonunda eğik çizgi yoksa bir tane ekleyin. Yol boş bir dize ise, onu değiştirmez.|
+|double Add(double a, double b)|İki çift değer ekleyin.|
+|long Add(long a, long b)|İki uzun değer ekleyin.|
+|double Subtract(double a, double b)|İki çift çıkar.|
+|long Subtract(long a, long b)|İki uzun değer çıkar.|
+|double Multiply(double a, double b)|İki çarpı çarpın.|
+|long Multiply(long a, long b)|İki uzun değeri çarpın.|
+|double Divide(double a, double b)|İki çifti bölün.|
+|long Divide(long a, long b)|İki uzun bölme.|
+|double Modulo(double a, double b)|Modulo iki double.|
+|long Modulo(long a, long b)|Modulo iki longs.|
+|string Escape(dize kaçışsız)|Kaçış kurallarına göre MSBuild kaçış.|
+|string Unescape(string escaped)|Kaçış kurallarına göre dizenin MSBuild kaçışı.|
+|int BitwiseOr(int first, int second)|Birinci ve ikincide bit `OR` olarak (birinci ve ikinci &#124; gerçekleştirin.|
+|int BitwiseAnd(int first, int second)|Birinci ve ikincide bit `AND` olarak (birinci ve ikinci & gerçekleştirin.|
+|int BitwiseXor(int first, int second)|Birinci ve ikincide bit `XOR` olarak gerçekleştirin (ilk ^ saniye).|
+|int BitwiseNot(ilk olarak int)|Bitwise `NOT` (~first) gerçekleştirin.|
+|bool IsOsPlatform(string platformString)|Geçerli işletim sistemi platformunun olup olmadığını `platformString` belirtin. `platformString` , üyesi olması <xref:System.Runtime.InteropServices.OSPlatform> gerekir.|
+|bool IsOSUnixLike()|Geçerli işletim sistemi bir Unix sistemi ise True.|
+|string NormalizePath(params string[] path)|Sağlanan yolun kurallı tam yolunu alır ve geçerli işletim sistemi için doğru dizin ayırıcı karakterlerini içerdiğini sağlar.|
+|string NormalizeDirectory(params string[] path)|Sağlanan dizinin kurallı tam yolunu alır ve geçerli işletim sistemi için doğru dizin ayırıcı karakterlerini içerirken sondaki eğik çizgiye sahip olmasını sağlar.|
+|string EnsureTrailingSlash(dize yolu)|Verilen yolun sonunda eğik çizgi yoksa bir eğik çizgi ekleyin. Yol boş bir dize ise, bunu değiştirmez.|
 |String Getpathoffileyukarıdaki (dize dosyası, dize startingDirectory)|, İçin arama yapar ve geçerli derleme dosyasının konumunun üzerindeki dizin yapısındaki bir dosyanın tam yolunu ya da belirtilmişse öğesine göre döndürür `startingDirectory` .|
 |Getdirectorynameoffileyukarıdaki (dize startingDirectory, dize fileName)|Belirtilen dizinde ya da bu dizinin üzerindeki dizin yapısındaki bir konumda bulunan bir dosyanın dizinini bulun ve döndürün.|
 |String MakeRelative (dize basePath, dize yolu)|`path`Göreli hale getirir `basePath` . `basePath` mutlak bir dizin olmalıdır. `path`Göreli hale getirilmezse, harfine döndürülür. Benzer `Uri.MakeRelativeUri` .|
@@ -408,22 +408,22 @@ Bu yöntemlerde, sürümler <xref:System.Version?displayProperty=fullName> aşa�
 
 * Önünde `v` veya `V` buna karşılaştırmaya izin veren yok sayılır `$(TargetFrameworkVersion)` .
 
-* İlk '-' veya ' + ' türünden sürüm dizesinin sonuna kadar olan her şey yok sayılır. Bu, semantik sürümlerin (semver) geçirilmesine izin verir, ancak sipariş semver ile aynı değildir. Bunun yerine, ön sürüm belirticileri ve derleme meta verilerinde sıralama ağırlığı yoktur. Bu, örneğin bir özelliği açmak ve üzerinde oturum açmak için yararlı olabilir `>= x.y` `x.y.z-pre` .
+* İlk '-' veya ' + ' türünden sürüm dizesinin sonuna kadar olan her şey yok sayılır. Bu, semantik sürümlerin (semver) geçirilmesine izin verir, ancak sipariş semver ile aynı değildir. Bunun yerine, ön veri belirleyicileri ve derleme meta verileri herhangi bir sıralama ağırlığına sahip değildir. Bu, örneğin, için bir özelliği açmak ve özelliğinin üzerinde `>= x.y` devreye açması için yararlı `x.y.z-pre` olabilir.
 
-* Belirtilmeyen parçalar sıfır değer parçalarıyla aynı. (`x == x.0 == x.0.0 == x.0.0.0`).
+* Belirtilmeyen parçalar sıfır değer parçasıyla aynıdır. (`x == x.0 == x.0.0 == x.0.0.0`).
 
-* Tamsayı bileşenlerinde boşluğa izin verilmez.
+* Tamsayı bileşenlerinde boşluklara izin verilmez.
 
-* Yalnızca ana sürüm geçerlidir ( `3` eşittir `3.0.0.0` )
+* Yalnızca ana sürüm geçerlidir ( `3` `3.0.0.0` eşittir)
 
-* `+` tamsayı bileşenlerinde pozitif oturum açma izni verilmez (semver meta verisi olarak kabul edilir ve yoksayıldı)
+* `+` pozitif oturum açma tamsayı bileşenleri olarak izin verilmez (semver meta verileri olarak kabul edilir ve yoksayılır)
 
 > [!TIP]
-> [TargetFramework özelliklerinin](msbuild-target-framework-and-target-platform.md) karşılaştırmaları genellikle sürümleri ayıklamak ve karşılaştırmak yerine [ıtargetframeworkcompatible](#TargetFramework) ' i kullanmalıdır. Bu `TargetFramework` , ' ın yanı sıra sürümünde değişen ' nin karşılaştırılmasına olanak sağlar `TargetFrameworkIdentifier` .
+> [TargetFramework özelliklerinin karşılaştırmaları genellikle](msbuild-target-framework-and-target-platform.md) sürümleri ayıklamak ve karşılaştırmak yerine [IsTargetFrameworkCompatible](#TargetFramework) kullanabiliyordur. Bu, `TargetFramework` sürümle birlikte değişenleri `TargetFrameworkIdentifier` karşılaştırmaya olanak sağlar.
 
-## <a name="msbuild-condition-functions"></a>MSBuild koşul işlevleri
+## <a name="msbuild-condition-functions"></a>MSBuild koşulu işlevleri
 
-İşlevler `Exists` ve `HasTrailingSlash` özellik işlevleri değildir. Bu öznitelikler, özniteliğiyle birlikte kullanılmak üzere kullanılabilir `Condition` . [MSBuild koşullara](msbuild-conditions.md)bakın.
+ve işlevleri `Exists` `HasTrailingSlash` özellik işlevleri değildir. Bunlar özniteliğiyle `Condition` kullanılabilir. Bkz. [MSBuild koşulları.](msbuild-conditions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

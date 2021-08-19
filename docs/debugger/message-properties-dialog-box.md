@@ -11,14 +11,15 @@ ms.assetid: 58e9dc24-baf6-4ab8-916c-aea28b72e3b0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: eee5d21e013dd43a361a229a3189cc44d6294e70
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: aae199a21c2806c1472327f620507fac373e09e8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891754"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120900"
 ---
 # <a name="message-properties-dialog-box"></a>İleti Özellikleri İletişim Kutusu
 Belirli bir ileti hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir [Iletiler görünümü](../debugger/messages-view.md) penceresine taşıyın. Ağaçta herhangi bir ileti düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.

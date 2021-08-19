@@ -9,14 +9,15 @@ ms.assetid: 0a3b5653-7bc0-4a7a-8963-9020bc52b9cb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 311ab164551e46fbe1c30b5a6045a7993a900a67
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 17f009c25ce6de66a6ac4ce0ac2b1f304dd22a72
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112901376"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160562"
 ---
 # <a name="m_children-field"></a>m_children alanı
 Bu göreve kayıtlı alt görevlerin listesi.

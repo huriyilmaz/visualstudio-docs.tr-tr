@@ -12,17 +12,18 @@ ms.assetid: 46e3f307-219d-40cd-a929-d41399c60ecf
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3a99319aa4269a1f17032a30ea8df02b4f08836a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 53522a69392f52eaea2311da49ab88679a39990a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084538"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160107"
 ---
 # <a name="idebugpendingbreakpoint2bind"></a>IDebugPendingBreakpoint2::Bind
 Bu bekleyen kesme noktasını bir veya daha fazla kod konumuna bağlar.

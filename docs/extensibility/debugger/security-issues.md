@@ -1,6 +1,6 @@
 ---
-title: Güvenlik sorunları | Microsoft Docs
-description: uzaktan hata ayıklama ve diğer hizmetleri içeren durumlar dahil olmak üzere Visual Studio kullanarak bir programın hatalarını ayıklamak için gerekli izinler hakkında bilgi edinin.
+title: Güvenlik Sorunları | Microsoft Docs
+description: Uzaktan hata ayıklama ve diğer hizmetleri içeren durumlar dahil olmak üzere Visual Studio kullanarak bir programda hata ayıklamak için gereken izinler hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,21 +14,21 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: eaf0df177b59d14f07a1b71499841ffb447a45ab3df022ef03e5724d85e49310
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 63d8c78767cf6a32d541a37370a5b2742cfcc087
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377021"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057310"
 ---
 # <a name="security-issues"></a>Güvenlik sorunları
-Visual Studio kullanarak bir programda hata ayıklamak için, gerekli tek izinler, bir geliştiricinin programı çalıştırması için ihtiyaç duyduğu izinlerdir. Bu, çoğu durumda uzaktan hata ayıklamayı içerir. Internet Information Service gibi diğer hizmetlerden oluşan bazı durumlar, daha yüksek bir izin düzeyi gerektirebilir.
+Visual Studio kullanarak bir programda hata ayıklamak için gereken tek izinler, bir geliştiricinin programı çalıştırmak için gerektirdiği izinlerdir. Buna çoğu durumda uzaktan hata ayıklama dahildir. İnternet Bilgi Hizmeti gibi diğer hizmetlerle ilgili bazı durumlarda daha yüksek düzeyde izinler gerekli olabilir.
 
- Visual Studio çalışırken, işlem hata ayıklama yöneticisi (PDM) yerel makinedeki hata ayıklama işlemlerini izler. Uzaktan, *msvsmon.exe* adlı bir program, uzaktan hata ayıklamayı IŞLEMEK ve PDM kullanılabilir hale getirmek için geliştirici tarafından başlatılır. (*msvsmon.exe* bir hizmet değildir ve bu makinede uzaktan hata ayıklamayı etkinleştirmek için el ile başlatılmış olması gerekir.) Visual Studio (veya *msvsmon.exe*) çalışmadığı zaman, hata ayıklama için hiçbir işlem izlenmez.
+ İşlem Visual Studio çalışırken, işlem hata ayıklama yöneticisi (PDM) yerel makinede hata ayıklama işlemlerini izler. Uzaktan, uzaktan hata *msvsmon.exe* işlemek ve PDM'nin kullanılabilir hale geldirerek geliştirici tarafındanmsvsmon.exeadlı bir program başlatabilirsiniz. (*msvsmon.exe* bir hizmet değildir ve bu makinede uzaktan hata ayıklamayı etkinleştirmek için el ile başlatmalısınız.) Bir Visual Studio *(veyamsvsmon.exe)* çalışmazsa, hata ayıklama için hiçbir işlem izlanmaz.
 
- Geliştirici, başlattığı programlarda özel izinler olmadan hata ayıklama yapabilir. Geliştirici, başka bir kişi aynı güvenlik grubunun bir üyesi ise, başka biri tarafından başlatılan işlemlerin hatalarını ayıklamanızı bile sağlayabilir. Uzaktan hata ayıklamayı etkinleştirmek için, yalnızca gerekli dosyaları uzak makineye kopyalamak ve *msvsmon.exe* başlatmak gerekir. Daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../../debugger/remote-debugging.md).
+ Bir geliştirici, özel izinler ile başlattıları programlarda hata ayıklar. Diğer kişi aynı güvenlik grubunun üyesi ise geliştirici başka biri tarafından başlatan işlemlerde hata ayıklar. Uzaktan hata ayıklamayı etkinleştirmek için yalnızca gerekli dosyaları uzak makineye kopyalayıp uzak makineye *msvsmon.exe.* Daha fazla bilgi için [bkz. Uzaktan hata ayıklama.](../../debugger/remote-debugging.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md)
-- [İşlem hata ayıklama Yöneticisi](../../extensibility/debugger/process-debug-manager.md)
+- [İşlem hata ayıklama yöneticisi](../../extensibility/debugger/process-debug-manager.md)
 - [Uzaktan hata ayıklama](../../debugger/remote-debugging.md)

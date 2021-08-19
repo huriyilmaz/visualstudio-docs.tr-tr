@@ -11,14 +11,15 @@ ms.assetid: f24da1a1-f923-48b4-989f-18a22b581d1b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 67764a7f59c1b44e7e8cbc7a81befb120c541461
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 72f819e9500c6a553cfe7ee73079ad439e9558d6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094672"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160588"
 ---
 # <a name="launch-the-debugger"></a>Hata ayıklayıcıyı başlatma
 Hata ayıklayıcıyı başlatmak için doğru özniteliklerle doğru yöntem ve olay sırası gönderilmesi gerekir.

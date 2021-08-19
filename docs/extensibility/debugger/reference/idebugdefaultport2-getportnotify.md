@@ -1,6 +1,6 @@
 ---
 description: Bu yöntem, bu bağlantı noktası için bir IDebugPortNotify2 arabirimi alır.
-title: IDebugDefaultPort2::GetPortNotify | Microsoft Docs
+title: 'IDebugDefaultPort2:: GetPortNotify | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 96a8f103a3df275657dc191183873353c7be620f1819e7950a342e5dcf12bcb9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 32af766e0c9894ab5c1be42ef62f83d9c5d56b0a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377736"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089335"
 ---
 # <a name="idebugdefaultport2getportnotify"></a>IDebugDefaultPort2::GetPortNotify
-Bu yöntem, bu bağlantı [noktası için bir IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) arabirimi alır.
+Bu yöntem, bu bağlantı noktası için bir [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) arabirimi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetPortNotify(
 
 ## <a name="parameters"></a>Parametreler
 `ppPortNotify`\
-[out] Bir [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) nesnesi.
+dışı Bir [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Normalde, bir `QueryInterface` [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) arabirimi elde etmek için [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) arabirimini uygulayan nesnede yöntemi çağrılır. Ancak, istenen arabirimin farklı bir nesnede uygulanmasına neden olan durumlar vardır. Bu yöntem bu koşulları gizler ve arabirimi `IDebugPortNotify2` en uygun nesneden döndürür.
+ Normalde, `QueryInterface` yöntemi, bir [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) arabirimi elde etmek için [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) arabirimini uygulayan nesne üzerinde çağrılır. Ancak, istenen arabirimin farklı bir nesne üzerinde uygulandığı durumlar vardır. Bu yöntem bu koşulları gizler ve `IDebugPortNotify2` en uygun nesneden arabirimi döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)

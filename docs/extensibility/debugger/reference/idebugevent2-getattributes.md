@@ -1,6 +1,6 @@
 ---
-description: Bu hata ayıklama olayının özniteliklerini alır.
-title: 'IDebugEvent2:: GetAttributes | Microsoft Docs'
+description: Bu hata ayıklama olayı için öznitelikleri alır.
+title: IDebugEvent2::GetAttributes | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 2ac5b5fb-da17-43f7-811a-313f677e60d7
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b41e3f50b73c16c9acb28a809b8c33b535370c47
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ba1b39a74497633e7a6cd1a2655b83550ae3a51c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065859"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111066"
 ---
 # <a name="idebugevent2getattributes"></a>IDebugEvent2::GetAttributes
-Bu hata ayıklama olayının özniteliklerini alır.
+Bu hata ayıklama olayı için öznitelikleri alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int GetAttribute(
 
 ## <a name="parameters"></a>Parametreler
 `pdwAttrib`\
-dışı [EventAttributes](../../../extensibility/debugger/reference/eventattributes.md) numaralandırmasındaki bayrakların birleşimi.
+[out] [EVENTATTRIBUTES numaralamalarından gelen bayrakların](../../../extensibility/debugger/reference/eventattributes.md) birleşimi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi tüm olaylar için ortaktır. Bu yöntem, olay türünü açıklar; Örneğin, olay zaman uyumlu veya zaman uyumsuz olur ve bu bir durdurma olayıdır.
+ [IDebugEvent2 arabirimi](../../../extensibility/debugger/reference/idebugevent2.md) tüm olaylar için ortaktır. Bu yöntem olay türünü açıklar; Örneğin, olay zaman uyumlu veya zaman uyumsuz ve bir durdurma olayıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)

@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ca7eeac459aebff1a2f5f6dc23ae8553fcf4989cae41246f817733c7457d3fea
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 30619052d25cb1b3838075bf43a5d169e5e5d3dc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362048"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128576"
 ---
 # <a name="how-to-display-message-properties"></a>Nasıl yapılır: İleti Özelliklerini Görüntüleme
 [Iletiler görünümünde](../debugger/messages-view.md)listelenen bir ileti hakkında daha fazla bilgi edinmek Için [Ileti özellikleri iletişim kutusunu](../debugger/message-properties-dialog-box.md)kullanın.
