@@ -6,15 +6,16 @@ author: nebuk89
 ms.author: ghogen
 manager: jmartens
 ms.technology: vs-docker
+ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 7b8d3aeb6406b11a8bbfe2f49e39fcfa356db5f8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 495e1cedbcecef549102fd279ced077d096c2616
+ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122059691"
+ms.lasthandoff: 08/18/2021
+ms.locfileid: "122334444"
 ---
 # <a name="image-layering"></a>Resim katmanlama
 

@@ -1,6 +1,6 @@
 ---
 title: Araç Kutusu, HTML Sekmesi
-description: Araç Kutusu penceresinin HTML sekmesinde öğreneceğiz HTML bileşenleri hakkında bilgi edinebilirsiniz.
+description: Araç kutusu penceresinin HTML sekmesinde bulacağınız HTML bileşenleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 06/21/2017
 ms.topic: reference
@@ -16,48 +16,48 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 672bf1c73aa132cd07f6851256038c56a053359b2131ec224c5387c2289179bc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e650cc4d3bdcb9d7f0043c80e60620cdacae3e83
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121232412"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122048771"
 ---
 # <a name="toolbox-html-tab"></a>Araç kutusu, HTML sekmesi
 
-Araç **Kutusunun HTML** sekmesi, web sayfalarında ve web formlarında yararlı bileşenler sağlar. Bu sekmeyi görüntülemek için önce HTML tasarımcısında düzenlemek için bir belge açın. Görünüm **menüsünde** Araç **Kutusu'na ve** ardından Araç Kutusunun **HTML** sekmesine tıklayın.
+Araç kutusunun **HTML** sekmesi, Web sayfaları ve Web formlarında yararlı olan bileşenleri sağlar. Bu sekmeyi görüntülemek için önce HTML tasarımcısında düzenlenecek bir belgeyi açın. **Görünüm** menüsünde, **araç kutusu**' na tıklayın ve ardından araç kutusunun **HTML** sekmesine tıklayın.
 
-**HTML** sekmesinde bir araç örneği oluşturmak için, aracı geçerli ekleme noktasında belgenize eklemek için çift tıklayın veya aracı seçin ve düzenleme yüzeyinde istenen konuma sürükleyin.
+**HTML** sekmesinde bir aracın örneğini oluşturmak için araca çift tıklayarak geçerli ekleme noktasındaki belgenize ekleyin ya da aracı seçin ve düzen yüzeyi üzerinde istediğiniz konuma sürükleyin.
 
 ## <a name="ui-elements"></a>Kullanıcı arabirimi öğeleri
 
 Aşağıdaki araçlar HTML sekmesinde varsayılan olarak kullanılabilir.
 
-**Işaretçi**
+**Çağrısı**
 
-![ASP.NET Mobil Tasarımcı HTML Sayfası İşaretçisi](../../ide/reference/media/vxpointer.gif)
+![ASP.NET Mobile Designer HTMLpage Işaretçisi](../../ide/reference/media/vxpointer.gif)
 
-Herhangi bir Araç Kutusu sekmesi açıldığında bu araç varsayılan olarak seçilir. Silinemez. İşaretçi nesneleri sayfa veya forma sürükleyerek Tasarım görünümü, yeniden boyutlandırmanıza ve yeniden konumlandırmanıza olanak sağlar. Daha fazla bilgi için [bkz. Araç Kutusu.](../../ide/reference/toolbox.md)
+Araç kutusu sekmesi açıldığında bu araç varsayılan olarak seçilidir. Silinemez. İşaretçi, nesneleri Tasarım görünümü yüzeyi üzerine sürüklemenize, yeniden boyutlandırmanıza ve sayfa ya da form üzerinde yeniden konumlandırmanıza olanak sağlar. Daha fazla bilgi için bkz. [araç kutusu](../../ide/reference/toolbox.md).
 
-**Giriş (Düğme)**
+**Giriş (düğme)**
 
-![HTML web sayfası düğmesi](../../ide/reference/media/vxbutton.gif)
+![HTML Web sayfası düğmesi](../../ide/reference/media/vxbutton.gif)
 
-öğesinin `input` bir öğesini `type="button"` ekler. Görüntülenen metni değiştirmek için özelliğini `name` düzenleyin. Varsayılan `id="Button1"` olarak, ilk düğme için, `id="Button2"` ikinci düğme için eklenir ve bu şekilde devam edin.
+Öğesi ekler `input` `type="button"` . Görüntülenen metni değiştirmek için, `name` özelliğini düzenleyin. Varsayılan olarak, `id="Button1"` ilk düğme için, `id="Button2"` İkincisi, vb. için eklenmiştir.
 
-Giriş **(Düğme) girişini Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Giriş (düğme)** Tasarım görünümü yüzeyine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
 ```html
 <input id="Button1" type="button" value="Button" name="Button1">
 ```
 
-**Giriş (Sıfırlama)**
+**Giriş (sıfırlama)**
 
 ![HTMLpageResetButton ekran görüntüsü](../../ide/reference/media/vxreset.gif)
 
-öğesinin `input` bir öğesini `type="reset"` ekler. Görüntülenen metni değiştirmek için özelliğini `name` düzenleyin. Varsayılan `id="Reset1"` olarak, ilk sıfırlama düğmesi için `id="Reset2"` ikinciye eklenir ve bu şekilde devam edin.
+Öğesi ekler `input` `type="reset"` . Görüntülenen metni değiştirmek için, `name` özelliğini düzenleyin. Varsayılan olarak, `id="Reset1"` ilk sıfırlama düğmesine, `id="Reset2"` ikincisi için eklenir ve bu şekilde devam eder.
 
-Giriş **(Sıfırla) girişini Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Girişi (sıfırlama)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
 ```html
 <input id="Reset1" type="reset" value="Reset" name="Reset1">
@@ -67,90 +67,90 @@ Giriş **(Sıfırla) girişini Tasarım görünümü,** belgenize aşağıdaki g
 
 ![HTMLpageToolbarSubmitButton ekran görüntüsü](../../ide/reference/media/vxsubmit.gif)
 
-öğesinin `input` bir öğesini `type="submit"` ekler. Görüntülenen metni değiştirmek için özelliğini `name` düzenleyin. Varsayılan `id="Submit1"` olarak, ilk gönder düğmesi için, `id="Submit2"` ikinci düğme için eklenir ve bu şekilde devam edin.
+Öğesi ekler `input` `type="submit"` . Görüntülenen metni değiştirmek için, `name` özelliğini düzenleyin. Varsayılan olarak, `id="Submit1"` ilk Gönder düğmesine, `id="Submit2"` ikincisi için eklenir ve bu şekilde devam eder.
 
-Giriş **(Gönder) girişini Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Girişi (Gönder)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
 ```html
 <input id="Submit1" type="submit" value="Submit" name="Submit1">
 ```
 
-**Giriş (Metin)**
+**Giriş (metin)**
 
-![HTMLLpageToolbarTextField ekran görüntüsü](../../ide/reference/media/vxtextfield.gif)
+![HTMLpageToolbarTextField ekran görüntüsü](../../ide/reference/media/vxtextfield.gif)
 
-öğesini `input` `type="text"` belgenize ekler. Görüntülenen varsayılan metni değiştirmek için özniteliğini `value` düzenleyin. Varsayılan olarak, ilk metin alanı için, ikinci metin alanı için eklenir ve `id="Text1"` `id="Text2"` bu şekilde devam ediyor.
+Belgenize bir `input` öğesi ekler `type="text"` . Görüntülenen varsayılan metni değiştirmek için `value` özniteliği düzenleyin. Varsayılan olarak, `id="Text1"` ikinci için ilk metin alanı için eklenir `id="Text2"` ve bu şekilde devam eder.
 
-Giriş **(Metin) girişini Tasarım görünümü** yüzeyine sürüklerken, belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Girişi (metin)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
 ```html
 <input id="Text1" TYPE="text" value="Text Field" name="Text1">
 ```
 
 > [!IMPORTANT]
->Tüm kullanıcı girişini doğrulamanızı öneririz. Daha fazla bilgi için [bkz. Web Sayfaları (Razor) ASP.NET Kullanıcı Girişini Doğrulama.](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)
+>Tüm Kullanıcı girişlerini doğrulamanız önerilir. daha fazla bilgi için bkz. [ASP.NET Web Pages (Razor) sitelerindeki kullanıcı girişini doğrulama](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites).
 
-**Giriş (Dosya)**
+**Giriş (dosya)**
 
-![HTML sayfası Dosya Alanı](../../ide/reference/media/vxfilefield.gif)
+![HTML sayfa dosyası alanı](../../ide/reference/media/vxfilefield.gif)
 
-öğesini `input` `type="file"` belgenize ekler. Varsayılan `id="File1"` olarak, ilk dosya alanı için, `id="File2"` ikinci alan için eklenir ve bu şekilde devam ediyor.
+Belgenize bir `input` öğesi ekler `type="file"` . Varsayılan olarak, `id="File1"` ikinci için ilk dosya alanı için eklenir `id="File2"` ve bu şekilde devam eder.
 
-Giriş **(Dosya) girişini Tasarım görünümü** yüzeyine sürüklerken, belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Giriş (dosya)** Tasarım görünümü yüzeyine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
 ```html
 <input id="File1" type="file" name="File1">
 ```
 
 > [!IMPORTANT]
-> Tüm kullanıcı girişini doğrulamanızı öneririz. Daha fazla bilgi için [bkz. Web Sayfaları (Razor) ASP.NET Kullanıcı Girişini Doğrulama.](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)
+> Tüm Kullanıcı girişlerini doğrulamanız önerilir. daha fazla bilgi için bkz. [ASP.NET Web Pages (Razor) sitelerindeki kullanıcı girişini doğrulama](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites).
 
-**Giriş (Parola)**
+**Giriş (parola)**
 
-![Visual Studio Parola Alanı](../../ide/reference/media/vxpassword.gif)
+![Visual Studio Parola alanı](../../ide/reference/media/vxpassword.gif)
 
-öğesinin `input` bir öğesini `type="password"` ekler. Varsayılan `id="Password1"` olarak, ilk parola alanı için, `id="Password2"` ikinci için eklenir ve bu şekilde devam ediyor.
+Öğesi ekler `input` `type="password"` . Varsayılan olarak, `id="Password1"` ilk parola alanı için, `id="Password2"` ikincisi için eklenir ve bu şekilde devam eder.
 
-Giriş **(Parola) girişini Tasarım görünümü** yüzeyine sürüklerseniz, belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Giriş (parola)** Tasarım görünümü yüzeyine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
 ```html
 <input id="Password1" type="password" name="Password1">
 ```
 
 > [!IMPORTANT]
-> Uygulamanız kullanıcı adları ve parolalar iletirse, web sitenizi aktarımı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanmak üzere yapılandırmanız gerekir. Daha fazla bilgi için bkz. [Bağlantıların Güvenliğini Sağlama.](/previous-versions/tn-archive/bb418917(v=technet.10)) Ayrıca, tüm kullanıcı girişini doğrulamanızı öneririz. Daha fazla bilgi için [bkz. Web Sayfaları (Razor) ASP.NET Kullanıcı Girişini Doğrulama.](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)
+> Uygulamanız kullanıcı adlarını ve parolaları iletitirse, Web sitenizi, iletimi şifrelemek için Güvenli Yuva Katmanı (SSL) kullanacak şekilde yapılandırmanız gerekir. Daha fazla bilgi için bkz. [bağlantıları güvenli hale getirme](/previous-versions/tn-archive/bb418917(v=technet.10)). Ayrıca, tüm kullanıcı girişlerini doğrulamanız önerilir. daha fazla bilgi için bkz. [ASP.NET Web Pages (Razor) sitelerindeki kullanıcı girişini doğrulama](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites).
 
-**Giriş (Onay kutusu)**
+**Giriş (onay kutusu)**
 
-![HTML web sayfası Araç Kutusu Onay Kutusu Seçeneği](../../ide/reference/media/vxcheckbox.gif)
+![HTML Web sayfası araç kutusu seçeneği](../../ide/reference/media/vxcheckbox.gif)
 
-öğesinin `input` bir öğesini `type="checkbox"` ekler. Görüntülenen metni değiştirmek için özelliğini `name` düzenleyin. Varsayılan `id="Checkbox1"` olarak, ilk onay kutusu için, ikinci onay kutusu için eklenir `id="Checkbox2"` ve bu şekilde devam etmek için kullanılır.
+Öğesi ekler `input` `type="checkbox"` . Görüntülenen metni değiştirmek için, `name` özelliğini düzenleyin. Varsayılan olarak, `id="Checkbox1"` ilk onay kutusu için, `id="Checkbox2"` ikincisi için eklenmiştir ve bu şekilde devam eder.
 
-Giriş **(Onay kutusu) girişini Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Girişi (onay kutusu)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
 ```html
 <input id="Checkbox1" type="checkbox" name="Checkbox1">
 ```
 
-**Giriş (Radyo)**
+**Giriş (radyo)**
 
 ![VisualStudioHTMLpageRadioButton ekran görüntüsü](../../ide/reference/media/vxradio.gif)
 
-öğesinin `input` bir öğesini `type="radio"` ekler. Görüntülenen metni değiştirmek için özelliğini `name` düzenleyin. Varsayılan `id="Radio1"` olarak, ilk radyo düğmesi için, ikinci radyo düğmesi için eklenir `id="Radio2"` ve bu şekilde devam edin.
+Öğesi ekler `input` `type="radio"` . Görüntülenen metni değiştirmek için, `name` özelliğini düzenleyin. Varsayılan olarak, `id="Radio1"` ilk radyo düğmesine, `id="Radio2"` ikincisi için eklenir ve bu şekilde devam eder.
 
-Giriş **(Radyo) girişini Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Girişi (radyo)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
 ```html
 <input id="Radio1" type="radio" name="Radio1">
 ```
 
-**Giriş (Gizli)**
+**Giriş (gizli)**
 
-![HTML sayfası Gizli Öğe](../../ide/reference/media/vxhidden.gif)
+![HTML sayfası gizli öğesi](../../ide/reference/media/vxhidden.gif)
 
-öğesinin `input` bir öğesini `type="hidden"` ekler. Varsayılan `id="Hidden1"` olarak, ilk gizli alan için, `id="Hidden2"` ikinci için eklenir ve bu şekilde devam ediyor.
+Öğesi ekler `input` `type="hidden"` . Varsayılan olarak, `id="Hidden1"` ilk gizli alan için, `id="Hidden2"` ikincisi için eklenir ve bu şekilde devam eder.
 
-Giriş **(Gizli) girişini Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Girişi (gizli)** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
 
 ```html
 <input id="Hidden1" type="hidden" name="Hidden1">
@@ -158,26 +158,26 @@ Giriş **(Gizli) girişini Tasarım görünümü,** belgenize aşağıdaki gibi 
 
 **Metin Alanı**
 
-![HTMLpage Araç Çubuğu Metin Alanı](../../ide/reference/media/vxtextarea.gif)
+![HTMLpage araç çubuğu metin alanı](../../ide/reference/media/vxtextarea.gif)
 
-Bir öğe `textarea` ekler. Metin alanını yeniden boyutlandırabilir veya kaydırma çubuklarını kullanarak görüntüleme alanını aşan metinleri görüntüebilirsiniz. Görüntülenen varsayılan metni değiştirmek için özniteliğini `value` düzenleyin. Varsayılan `id="textarea1"` olarak, ikinci için ilk metin `id=" textarea 2"` alanı eklenir ve bu şekilde devam ediyor.
+Bir `textarea` öğesi ekler. Metin alanını yeniden boyutlandırabilir veya görüntüleme alanının ötesinde genişleyen metni görüntülemek için kaydırma çubuklarını kullanabilirsiniz. Görüntülenen varsayılan metni değiştirmek için `value` özniteliği düzenleyin. Varsayılan olarak, `id="textarea1"` ikinci için ilk metin alanı eklenir `id=" textarea 2"` ve bu şekilde devam eder.
 
-**Textarea'yı Tasarım görünümü** yüzeyine sürüklerken, aşağıdaki gibi HTML işaretlemesi belgenize eklenir:
+**Textarea** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKI gibi HTML biçimlendirmesi eklenir:
 
 ```html
 <textarea id=" textarea 1 name=" textarea 1" rows=2 cols=20></textarea>
 ```
 
 > [!IMPORTANT]
-> Tüm kullanıcı girişini doğrulamanızı öneririz. Daha fazla bilgi için [bkz. Web Sayfaları (Razor) ASP.NET Kullanıcı Girişini Doğrulama.](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)
+> Tüm Kullanıcı girişlerini doğrulamanız önerilir. daha fazla bilgi için bkz. [ASP.NET Web Pages (Razor) sitelerindeki kullanıcı girişini doğrulama](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites).
 
 **Tablo**
 
 ![HTMLpageToolbarTable ekran görüntüsü](../../ide/reference/media/vxtable.gif)
 
-Bir öğe `table` ekler.
+Bir `table` öğesi ekler.
 
-**Tablo'Tasarım görünümü** sürükleyerek belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Tabloyu** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKI gibi HTML biçimlendirmesi eklenir:
 
 ```html
 <table cellspacing="1" width="75%" border=1> <tr><td></td></tr></table>
@@ -185,11 +185,11 @@ Bir öğe `table` ekler.
 
 **Görüntü**
 
-![HTML sayfası Görüntü Öğesi](../../ide/reference/media/vximage.gif)
+![HTML sayfası resim öğesi](../../ide/reference/media/vximage.gif)
 
-Bir öğe `img` ekler. Öğesini ve metnini belirtmek için `src` bu öğeyi `alt` düzenleyin.
+Bir `img` öğesi ekler. Kendi metnini belirtmek için bu öğeyi düzenleyin `src` `alt` .
 
-**Görüntü'leri** Tasarım görünümü sürüklerken, belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Görüntüyü** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKI gibi HTML biçimlendirmesi eklenir:
 
 ```html
 <img alt="" src="">
@@ -197,37 +197,37 @@ Bir öğe `img` ekler. Öğesini ve metnini belirtmek için `src` bu öğeyi `al
 
 **Seç**
 
-![HTML sayfası Araç Kutusu Açılan Kutusu](../../ide/reference/media/vxdropdown.gif)
+![HTML sayfası araç kutusu açılan kutusu](../../ide/reference/media/vxdropdown.gif)
 
-Bir açılan öğe ekler `select` (öznitelik `size` olmadan). Varsayılan `id="select1"` olarak, ilk liste kutusu için, `id="select2"` ikinci için eklenir ve bu şekilde devam edin.
+Bir açılan `select` öğe ekler (özniteliği olmadan `size` ). Varsayılan olarak, `id="select1"` ilk liste kutusu için, `id="select2"` ikinci için eklenmiştir ve bu şekilde devam eder.
 
-**Seç'i** Tasarım görünümü sürükleyerek belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
+**Seçimi** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKILER gibi HTML biçimlendirmesi eklenir:
 
 ```html
 <select id="select1" name="select1"><option selected></option></select>
 ```
 
-Size özelliğinin değerini `select` artırarak çok satırlı bir öğe oluşturabilirsiniz.
+`select`Boyut özelliğinin değerini artırarak çok satırlı bir öğe oluşturabilirsiniz.
 
-**Yatay Kural**
+**Yatay kural**
 
-![HTML sayfası Yatay Kural Öğesi](../../ide/reference/media/vxhorizontal.gif)
+![HTML sayfası yatay kural öğesi](../../ide/reference/media/vxhorizontal.gif)
 
-Bir `hr` öğesi ekler. Çizginin kalınlığını artırmak için `size` özniteliği düzenleyin.
+Bir öğe `hr` ekler. Çizginin kalınlığını artırmak için özniteliğini `size` düzenleyin.
 
-**Yatay kuralı** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, AŞAĞıDAKI gibi HTML biçimlendirmesi belgenize eklenir:
+Yatay **Kural'ı Tasarım görünümü,** belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
 
 ```html
 <hr width="100%" size=1>
 ```
 
-**DIV**
+**Div**
 
-![HTML sayfa etiketi](../../ide/reference/media/vxlabel.gif)
+![HTML sayfası Etiketi](../../ide/reference/media/vxlabel.gif)
 
-`div`Özniteliği içeren bir öğesi ekler `ms_positioning="FlowLayout"` . genişlik ve yükseklik dışında, bu öğe Flow düzen paneliyle aynıdır. Öğe içinde bulunan metni biçimlendirmek için `div` , `class="stylename"` açma etiketine bir öznitelik ekleyin.
+Özniteliği içeren `div` bir öğe `ms_positioning="FlowLayout"` ekler. Genişlik ve yükseklik dışında, bu öğe Flow Düzeni Paneli ile aynıdır. öğesinin içinde yer alan metni biçimlendirmek `div` için açılış `class="stylename"` etiketine bir özniteliği ekleyin.
 
-**Div** Tasarım görünümü yüzeyi üzerine sürüklediğinizde, belgenize AŞAĞıDAKI gibi HTML biçimlendirmesi eklenir:
+**Div'i** Tasarım görünümü sürükleyerek belgenize aşağıdaki gibi HTML işaretlemesi eklenir:
 
 ```html
 <div ms_positioning="FlowLayout" style="width: 70px; position: relative; height: 15px">Label</div>

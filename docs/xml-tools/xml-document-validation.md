@@ -1,6 +1,6 @@
 ---
-title: XML düzenleyicisinde XML Belge Doğrulaması
-description: XML düzenleyicisinde XML belge doğrulaması hakkında bilgi edinmek, XML 1.0 söz dizimi denetimi yapmayı ve siz yazarak veri doğrulamayı nasıl gerçekleştiriyor?
+title: XML düzenleyicisinde XML belgesi doğrulaması
+description: XML düzenleyicisinde XML belge doğrulaması hakkında bilgi edinin ve XML 1,0 sözdizimini nasıl denetleyeceğinizi ve siz yazarken veri doğrulama işlemini nasıl gerçekleştireceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,28 +11,28 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 59fe8ee674bca836f25db75a828bbb807734e4b57e646b563570bae3355b766e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 19585e36094868cedad279f0f7b4d982647da1d7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121242788"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091831"
 ---
 # <a name="xml-document-validation"></a>XML belgesini doğrulama
 
-XML düzenleyicisi XML 1.0 söz dizimi denetler ve siz yazarak veri doğrulamayı gerçekleştirir. Düzenleyici, belge türü tanımı (DTD) veya şema kullanarak doğrulanabilir. Kırmızı dalgalı alt çizgiler, XML 1.0 iyi oluşturulmuş hataları vurgular. Mavi dalgalı alt çizgiler DTD veya şema doğrulamasına dayalı semantik hataları gösterir. Her hatanın hata listesinde ilişkili bir girişi vardır. Ayrıca, fareyi dalgalı alt çizginin üzerine duraklatarak da hata iletisini görüntüebilirsiniz.
+XML Düzenleyicisi, XML 1,0 söz dizimini denetler ve ayrıca siz yazarken veri doğrulaması gerçekleştirir. Düzenleyici bir belge türü tanımı (DTD) veya şema kullanarak doğrulayabilir. Kırmızı dalgalı alt çizgiler, XML 1,0 düzgün biçimlendirilmiş hataları vurgular. Mavi dalgalı alt çizgiler, DTD veya şema doğrulamasına göre anlam hataları gösterir. Her hatanın hata listesinde ilişkili bir girişi vardır. Fareyi dalgalı alt çizginin üzerinde duraklatarak hata mesajını da görüntüleyebilirsiniz.
 
-Doğrulamada kullanılan şemalar, derlenmiş bir `targetNamespace` şemanın öğesinin xmlns bildirimiyle eşleştirerek bulunur. Derlenmiş şemalar, öncelik sırasına göre listelenen aşağıdaki konumlardan biri tarafından yüklenir:
+Doğrulamada kullanılan şemalar, `targetNamespace` derlenmiş bir şemanın, öğenin xmlns bildirimiyle eşleşmesi ile bulunur. Derlenmiş şemalar, öncelik sırasına göre listelenen aşağıdaki konumlardan birinden yüklenir:
 
-- Belge Özellikleri penceresinin **Şemalar** alanında belirtilen dosya **adı.**
+- Belge **özellikleri** penceresinin **şemalar** alanında belirtilen dosya adından.
 
 - Satır içi şema veya DTD.
 
-- Dış DTD veya `xsd:schemaLocation` ve `xsd:noNamespaceSchemaLocation` özniteliği
+- Dış DTD veya `xsd:schemaLocation` and `xsd:noNamespaceSchemaLocation` özniteliği
 
-- Bir "x-schema" XDR şema ad alanı URI'si.
+- "X-Schema" XDR şema ad alanı URI 'SI.
 
-Şema boş olmayan bir hedef ad alanına sahip olduğunda şemalar aşağıdaki ek konumlarda da bulunabilir:
+Şema boş olmayan bir hedef ad alanına sahip olduğunda aşağıdaki ek konumlarda şemalar de bulunabilir:
 
 - Şemayı içeren başka bir düzenleyici penceresi.
 
@@ -41,10 +41,10 @@ Doğrulamada kullanılan şemalar, derlenmiş bir `targetNamespace` şemanın ö
 - Şema önbelleği dizininden bir şema.
 
 ## <a name="xslt-files"></a>XSLT dosyaları
-Bir XSLT dosyasını düzenlerken, doğrulama için şema önbelleğinde bulunan *xslt.xsd* dosyası kullanılır. Doğrulama hataları mavi dalgalı alt çizgi olarak gösterilir. XSLT derleyicisi hataları kırmızı dalgalı alt çizgi olarak gösterilir.
+XSLT dosyasını düzenlediğinizde, şema önbelleğinde bulunan *XSLT. xsd* dosyası doğrulama için kullanılır. Doğrulama hataları mavi dalgalı alt çizgiler olarak gösterilir. XSLT derleyicisindeki hatalar kırmızı dalgalı alt çizgiler olarak gösterilir.
 
 ## <a name="xml-schema-xsd-files"></a>XML şeması (XSD) dosyaları
-Bir XML Şema dosyasını düzenlerken, doğrulama için şema önbelleğinde bulunan *xsdschema.xsd* dosyası kullanılır. Doğrulama hataları mavi dalgalı alt çizgi olarak gösterilir. Derleme hataları kırmızı dalgalı alt çizgilerle de gösterilir.
+Bir XML şema dosyası düzenlenirken, şema önbelleğinde bulunan *XSDSchema. xsd* dosyası doğrulama için kullanılır. Doğrulama hataları mavi dalgalı alt çizgiler olarak gösterilir. Tüm derleme hataları da kırmızı dalgalı alt çizgilerle gösterilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

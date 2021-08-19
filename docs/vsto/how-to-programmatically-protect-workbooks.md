@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla çalışma kitaplarını koruma'
-description: Bir Microsoft Excel çalışma kitabını, kullanıcıların çalışma sayfaları ekleyemez veya silmesine ve ayrıca çalışma kitabının korumasını kaldırma yoluyla nasıl koruyabileceğinizi öğrenin.
+description: Microsoft Excel çalışma kitabını, kullanıcıların çalışma sayfaları ekleyememesi veya silememeleri ve ayrıca çalışma kitabının korumasını kaldırmak için nasıl koruyabileceğiniz hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,17 +17,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 9f0b479c56be6da7b14f87263c8c01d66910ac20
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 41875cb3be9ee49d696991c1eb4bc33605123cd2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827116"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122092221"
 ---
 # <a name="how-to-programmatically-protect-workbooks"></a>Nasıl yapılır: program aracılığıyla çalışma kitaplarını koruma
-  Microsoft Office bir Excel çalışma kitabını, kullanıcıların çalışma sayfaları ekleyememesi veya silememeleri ve ayrıca çalışma kitabının korumasını kaldırmak için koruyabilirsiniz. İsteğe bağlı olarak bir parola belirtebilir, yapının korunmasını isteyip istemediğinizi belirtebilir (böylece kullanıcılar, sayfaları taşıyabilir) ve çalışma kitabının pencerelerinin korunmasını isteyip istemediğinizi belirtebilirsiniz.
+  bir Microsoft Office Excel çalışma kitabını, kullanıcıların çalışma sayfası ekleyemez veya silmesine ve ayrıca çalışma kitabının korumasını programlamayla karşı koruyabilirsiniz. İsteğe bağlı olarak bir parola belirtebilir, yapının korunmasını isteyip istemediğinizi belirtebilir (böylece kullanıcılar, sayfaları taşıyabilir) ve çalışma kitabının pencerelerinin korunmasını isteyip istemediğinizi belirtebilirsiniz.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 

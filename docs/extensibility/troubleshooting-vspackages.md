@@ -1,6 +1,6 @@
 ---
-title: VSPackages sorunlarını giderme | Microsoft Docs
-description: Sorunları çözmek için VSPackage ve sorun giderme ipuçlarına sahip olabileceğiniz yaygın sorunlar hakkında bilgi edinin.
+title: VSPackage sorunlarını | Microsoft Docs
+description: VSPackage ile ilgili sık karşılaşılan sorunlar ve sorunları çözmek için sorun giderme ipuçları hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: troubleshooting
@@ -14,118 +14,118 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a097e22bb483a638e1b02a73ff31a37261d4f5ecb99aca89dc5354ea78ece0b6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ac1ff1aff18aca87f94ad1b771766401254994c0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121413901"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110026"
 ---
 # <a name="troubleshooting-vspackages"></a>VSPackage Sorunlarını Giderme
-Bu sorunları çözmek için VSPackage ve ipuçlarınız ile sahip olabileceğiniz yaygın sorunlar aşağıda verilmiştir.
+VSPackage' la ilgili sık karşılaşılan sorunlar ve sorunları çözmeye ilişkin ipuçları aşağıda ve ardından ve ardından ve ve ardından ve ve ardından yer alan bilgiler ve öneriler yer atır.
 
-### <a name="to-troubleshoot-a-vspackage-that-keeps-visual-studio-from-starting"></a>Visual Studio başlamasını engelleyen bir vspackage sorunlarını gidermek için
+### <a name="to-troubleshoot-a-vspackage-that-keeps-visual-studio-from-starting"></a>Uygulamanın başlamaya devam Visual Studio VSPackage sorunlarını gidermek için
 
-- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Güvenli modda başlatın.
+- Güvenli [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] modda başlatın.
 
-   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Güvenli modda başlamak için, bir komut isteminde **devenv.exe/safemode** yazın.
+   Güvenli modda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] başlamak için komut isteminde **/safemodedevenv.exe yazın.**
 
-   Bu işlem sırasında, ile birlikte gelen VSPackages 'lar hariç hiçbir VSPackages yüklenmez [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+   Bu işlem sırasında, içinde yer alan VSPackage'lar dışında HIÇBIR VSPackage [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yüklenmez.
 
-### <a name="to-troubleshoot-a-vspackage-that-does-not-load"></a>Yüklenmeyen bir VSPackage sorunlarını gidermek için
+### <a name="to-troubleshoot-a-vspackage-that-does-not-load"></a>Yüklenmez bir VSPackage sorunlarını gidermek için
 
-1. VSPackage 'ın çalıştırmak için kaydedildiği kayıt defteri kökünü, genellikle Deneysel kayıt defteri kökünü kullandığınızdan emin olun.
+1. VSPackage'ın çalıştırmak için kayıtlı olduğu kayıt defteri kökünü (genellikle deneysel kayıt defteri kökü) kullanırkenn emin olun.
 
-    Daha fazla bilgi için bkz. [deneysel örnek](../extensibility/the-experimental-instance.md).
+    Daha fazla bilgi için [bkz. Deneysel Örnek](../extensibility/the-experimental-instance.md).
 
-2. VSPackage, Deneysel kayıt defteri kökünde çalışmayı hedeflediyse, Deneysel sürümünü çalıştırdığınızdan emin olun [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+2. VSPackage'ın deneysel kayıt defteri kökünde çalışması hedefli ise, deneysel sürümünün çalıştırılmış olduğundan emin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] olun.
 
-    Deneysel sürümü çalıştırmak için, komut penceresine şunu yazın: **devenv/rootsuffix exp**.
+    Deneysel sürümü çalıştırmak için bir komut penceresine şunları yazın: **devenv /rootsuffix exp**.
 
-3. VSPackage kayıt defteri girdilerinizi denetleyin.
+3. VSPackage kayıt defteri girdilerinizi kontrol edin.
 
-    Daha fazla bilgi için bkz. [VSPackages 'Yi kaydetme](registering-and-unregistering-vspackages.md) ve [VSPackages 'i yönetme](../extensibility/managing-vspackages.md).
+    Daha fazla bilgi için [bkz. VSPackage'ları](registering-and-unregistering-vspackages.md) Kaydetme [ve VSPackage'ları Yönetme.](../extensibility/managing-vspackages.md)
 
-4.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage yüklemesi başarısız olan örneğinin çıkış penceresini açın. VSPackage 'ın neden yükleme başarısız olduğuna ilişkin bilgiler bu pencerede görüntülenebilir.
+4.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage'ın yüklenemedi olduğu örneğinin Çıkış penceresini açın. VSPackage'ın neden yüklenemedikleri hakkında bilgiler bu pencerede görüntülenebilir.
 
    > [!NOTE]
-   > ' In Deneysel sürümünü [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ORTAMıNDAN (IDE) başlatıyorsanız, her iki sürümün de **Çıkış** penceresini inceleyin.
+   > deneysel sürümünü tümleşik geliştirme [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ortamından [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] (IDE) başlatacaksanız, her iki **sürümün Çıkış** penceresini inceler.
 
-5. Etkinlik günlüğünü inceleyin.
+5. Etkinlik günlüğünü inceleme.
 
-    Daha fazla bilgi için bkz. [nasıl yapılır: etkinlik günlüğünü kullanma](../extensibility/how-to-use-the-activity-log.md).
+    Daha fazla bilgi için, [bkz. How to: Use the Activity Log](../extensibility/how-to-use-the-activity-log.md).
 
-6. IDE tarafından oluşturulan özel durumlar hakkında daha fazla bilgi için, özel durumları etkinleştirmek üzere **hata ayıklama** menüsündeki **özel durumlar** ' a tıklayın. **Özel durumlar** iletişim kutusunda daha fazla bilgi edinmek istediğiniz özel durum türlerini seçin.
+6. IDE tarafından özel durumlar hakkında daha fazla bilgi için, özel **durumları** etkinleştirmek için **Hata** Ayıklama menüsünde Özel Durumlar'a tıklayın. Özel **Durumlar iletişim** kutusunda, hakkında daha fazla bilgi istediğiniz özel durum türlerini seçin.
 
-### <a name="to-troubleshoot-a-vspackage-that-does-not-register"></a>Kaydolmayan bir VSPackage sorunlarını gidermek için
+### <a name="to-troubleshoot-a-vspackage-that-does-not-register"></a>Kaydolmaz bir VSPackage sorunlarını gidermek için
 
-1. VSPackage derlemesinin güvenilir bir konumda bulunduğundan emin olun. RegPkg, derlemeleri varsayılan .NET güvenlik yapılandırmasındaki ağ paylaşma gibi güvenilmeyen veya kısmen güvenilen bir konuma kaydedemez. Bir Kullanıcı güvenilmeyen bir konumda bir proje oluşturduğunda bir uyarı görünse de, "Bu iletiyi bir daha gösterme" onay kutusu bu uyarının yeniden oluşmasını engelleyebilir.
+1. VSPackage derlemenin güvenilir bir konumda yer olduğundan emin olun. RegPkg, derlemeleri varsayılan .net güvenlik yapılandırmasında bir ağ paylaşımı gibi güvenilmeyen veya kısmen güvenilen bir konuma kaydedilemez. Kullanıcı güvenilmeyen bir konumda proje oluşturduğunda bir uyarı gösterse de, "Bu iletiyi bir daha gösterme" onay kutusu bu uyarının tekrarlanmasını önlenebilir.
 
-### <a name="to-troubleshoot-a-command-that-is-not-visible-or-that-generates-an-error-when-you-click-a-command"></a>Görünür olmayan veya bir komuta tıkladığınızda hata üreten bir komutun sorunlarını gidermek için
+### <a name="to-troubleshoot-a-command-that-is-not-visible-or-that-generates-an-error-when-you-click-a-command"></a>Görünür durumda olan veya bir komuta tıklarken hata oluşturan bir komutun sorunlarını gidermek için
 
-1. Komut Istemine aşağıdaki komutu yazarak yeni veya değiştirilmiş menü komutlarını ve IDE 'de zaten var olanları birleştirin [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] : **devenv/rootsuffix exp/Setup**.
+1. Yeni veya değiştirilmiş menü komutlarını ve zaten IDE'de bulunanları Komut İstemi'ne yazarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] birleştirin: **devenv /rootsuffix Exp /setup**.
 
-2. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSPackage için UI.dll bulabileceğinizi doğrulayın.
+2. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSPackage'nıza UI.dll emin olun.
 
-   1. Kayıt defterinin paketler bölümünde VSPackage 'un CLSID 'sini bulun:
+   1. VSPackage'ın CLSID'sini kayıt defterinin Paketler bölümünde bulun:
 
-        hklm\software\microsoft\ Visual Studio \\ *\<version>* \packages
+        HKLM\Software\Microsoft\Visual Studio \\ *\<version>* \Packages
 
-   2. SatelliteDll alt anahtarı tarafından verilen yolun doğru olduğundan emin olun.
+   2. SatelliteDll alt anahtarı tarafından verilen yolun doğru olduğunu doğrulayın.
 
 ### <a name="to-troubleshoot-a-vspackage-that-behaves-unexpectedly"></a>Beklenmedik şekilde davranan bir VSPackage sorunlarını gidermek için
 
-1. Kodunuzda kesme noktaları ayarlayın.
+1. Kodunda kesme noktaları ayarlayın.
 
-     Hata ayıklama için iyi başlangıç noktaları, Oluşturucu ve başlatma yöntemidir. Ayrıca, bir menü komutu gibi değerlendirmek istediğiniz alanda kesme noktaları da ayarlayabilirsiniz. Kesme noktalarını etkinleştirmek için hata ayıklayıcı altında çalıştırmanız gerekir.
+     Hata ayıklama için iyi başlangıç noktaları oluşturucu ve başlatma yöntemidir. Ayrıca, değerlendirmek istediğiniz alanda menü komutu gibi kesme noktaları da ayarlayın. Kesme noktaları etkinleştirmek için hata ayıklayıcısı altında çalışmalı.
 
-    1. **Project** menüsünde **özellikler**' e tıklayın.
+    1. Yeni **Project** Özellikler'e **tıklayın.**
 
-    2. **Özellik sayfaları** Iletişim kutusunda **Hata Ayıkla** sekmesini seçin.
+    2. Özellik **Sayfaları iletişim** kutusunda Hata Ayıkla **sekmesini** seçin.
 
-    3. **Komut satırı bağımsız değişkenleri** kutusunda, VSPackage hedeflediği geliştirme ortamının kök sonekini yazın. Örneğin, deneysel derlemeyi seçmek için şunu yazın: **/rootsuffix exp**.
+    3. Komut **satırı bağımsız değişkenleri** kutusuna VSPackage'nizin hedeflemesi geliştirme ortamının kök soneki yazın. Örneğin deneysel derlemeyi seçmek için **/RootSuffix Exp yazın.**
 
-    4. **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat** ' a tıklayın veya F5 tuşuna basın.
+    4. Hata **Ayıkla menüsünde Hata** Ayıklamayı **Başlat'a tıklayın veya** F5'e basın.
 
         > [!NOTE]
-        > Bir projede hata ayıklaması yapıyorsanız, şimdi projenizin mevcut bir örneğini oluşturun veya yükleyin.
+        > Bir projede hata ayıklarsanız, projenizin mevcut bir örneğini şimdi oluşturun veya yüklenin.
 
 2. Etkinlik günlüğünü kullanın.
 
-     Anahtar noktalarında etkinlik günlüğüne bilgi yazarak VSPackage davranışını izleyin. Bu teknik, özellikle bir perakende ortamında VSPackage çalıştırdığınızda yararlı olur. Daha fazla bilgi için bkz. [nasıl yapılır: etkinlik günlüğünü kullanma](../extensibility/how-to-use-the-activity-log.md).
+     Önemli noktalarda etkinlik günlüğüne bilgi yazarak VSPackage davranışını izleme. Bu teknik özellikle bir perakende ortamında VSPackage çalıştırmada yararlıdır. Daha fazla bilgi için, [bkz. How to: Use the Activity Log](../extensibility/how-to-use-the-activity-log.md).
 
-3. Ortak sembolleri kullanın.
+3. Ortak sembolleri kullanma.
 
-     Hata ayıklama sırasında okunabilirliği artırmak için, hata ayıklayıcıya semboller ekleyebilirsiniz.
+     Hata ayıklama sırasında okunabilirliği artırmak için hata ayıklayıcıya semboller iliştirin.
 
-    1. **Araçlar/Seçenekler** menüsünden **hata ayıklama/Semboller** iletişim kutusuna gidin.
+    1. **Araçlar/Seçenekler menüsünden** Hata **Ayıklama/Semboller iletişim kutusuna** gidin.
 
-    2. Bu **sembol dosyası (. pdb) konumunu** ekleyin:
+    2. Bu Sembol **dosyası (.pdb) konumunu ekleyin:**
 
          `https://msdl.microsoft.com/download/symbols`
 
-    3. Performansı artırmak için, bir sembol önbellek klasörü belirtin, örneğin:
+    3. Performansı artırmak için bir sembol önbellek klasörü belirtin, örneğin:
 
         ```
         C:\symbols
         ```
 
-### <a name="to-troubleshoot-a-missing-vspackage-or-one-of-its-dependencies"></a>Eksik bir VSPackage veya bağımlılıklarından biri sorunlarını gidermek için
+### <a name="to-troubleshoot-a-missing-vspackage-or-one-of-its-dependencies"></a>Eksik VSPackage veya bağımlılıklarından birinin sorunlarını gidermek için
 
 1. Yönetilen kod için başvuru yollarının doğru olduğundan emin olun.
 
-   1. **Project** menüsünde **özellikler**' e tıklayın.
+   1. Yeni **Project** Özellikler'e **tıklayın.**
 
-   2. **Özellik sayfaları** Iletişim kutusundaki **Başvurular** sekmesini seçin ve tüm yolların doğru olduğundan emin olun. Alternatif olarak, başvurulan nesnelere gitmek için **nesne tarayıcısı** kullanabilirsiniz.
+   2. Özellik **Sayfaları iletişim** kutusunda **Başvurular sekmesini** seçin ve tüm yolların doğru olduğundan emin olun. Alternatif olarak, başvurulan **nesnelere göz atmak** için Object Browser'ı kullanabilirsiniz.
 
-        Yönetilen kod için, başarısız derleme yüklerinin ayrıntılarını göstermek üzere [Fuslogvw.exe (derleme bağlama günlük Görüntüleyicisi)](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer) kullanabilirsiniz.
+        Yönetilen kod için, başarısız derlemeFuslogvw.exe ayrıntılarını görüntülemek içinFuslogvw.exe (Derleme BağlamaSı Günlük [ Görüntüleyicisi)](/dotnet/framework/tools/fuslogvw-exe-assembly-binding-log-viewer) kullanabilirsiniz.
 
-2. Yönetilmeyen kod için, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] CLSID kayıt defteri düğümünde VSPackage CLSID 'sini bulun:
+2. Unmanaged code için CLSID kayıt defteri düğümünde VSPackage'ın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] CLSID'sini bulun:
 
-    hklm\software\microsoft\ Visual Studio \\ *\<version>* \clsıd
+    HKLM\Software\Microsoft\Visual Studio \\ *\<version>* \CLSID
 
-   Inprocserver32 girişinin VSPackage dll dosyasının doğru yoluna sahip olduğundan emin olun.
+   InprocServer32 girişinin VSPackage dll dosyasının doğru yoluna sahip olduğundan emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’lar](../extensibility/internals/vspackages.md)
-- [Visual Studio sorunlarını giderme](/troubleshoot/visualstudio/welcome-visual-studio/)
+- [Visual Studio giderme](/troubleshoot/visualstudio/welcome-visual-studio/)

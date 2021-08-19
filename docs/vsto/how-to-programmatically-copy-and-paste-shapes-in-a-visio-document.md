@@ -17,12 +17,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 25614ebc43e57f3bf21e922d6e4dd6d325dde11b4e62642f77c21ac8082a356d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fb913dc14437f9593a656a5ae4eb02368b82493b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121423897"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122046613"
 ---
 # <a name="how-to-programmatically-copy-and-paste-shapes-in-a-visio-document"></a>nasıl yapılır: Visio belgeye program aracılığıyla şekilleri kopyalama ve yapıştırma
   Bir belgenin bir sayfasında program aracılığıyla şekilleri kopyalayabilir ve bunları aynı belgede yeni bir sayfaya yapıştırabilirsiniz. Bunları varsayılan konuma (etkin pencerenin Merkezi) veya orijinal sayfada sahip oldukları şekliyle aynı koordinat konumlarına yapıştırmayı seçebilirsiniz.

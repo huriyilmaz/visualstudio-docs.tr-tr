@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce9ed39a90e467bb31f8272d9977406149a5b1ecdf3eecc390903ad0bf24c9e2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9cf2474f32e1d1cacb1d5a137f42ae30571c6d15
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121305210"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110039"
 ---
 # <a name="sccpopulatelist-function"></a>SccPopulateList İşlevi
 Bu işlev belirli bir kaynak denetimi komutu için dosyaların listesini günceller ve verilen tüm dosyalarda kaynak denetimi durumu sağlar.
@@ -81,7 +81,7 @@ SCCRTN SccPopulateList (
 |SCC_E_NONSPECIFICERROR|Belirtilmeyen hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlev, geçerli durumu için dosya listesini inceler. Bir dosya `pfnPopulate` ölçütüyle eşleşmezken çağıranı bildirmek için geri çağırma işlevini `nCommand` kullanır. Örneğin, komut ve listede bir dosya kullanıma alınmışsa, çağıranı bilgilendirmek `SCC_COMMAND_CHECKIN` için geri çağırma kullanılır. Bazen kaynak denetimi eklentisi komutun parçası olan diğer dosyaları bulabilir ve bunları ekleyebilir. Bu, örneğin bir Visual Basic kullanıcının projesi tarafından kullanılan ancak .bmp proje dosyasında görünmeen bir Visual Basic sağlar. Kullanıcı **IDE'de Al** komutunu seçer. IDE, kullanıcının aldırılanı düşündüğü tüm dosyaların listesini görüntüler, ancak liste gösterilmeden önce, görüntülenecek listenin güncel olduğundan emin olmak için `SccPopulateList` işlev çağrılır.
+ Bu işlev, geçerli durumu için dosya listesini inceler. Bir dosya `pfnPopulate` ölçütüyle eşleşmezken çağıranı bildirmek için geri çağırma işlevini `nCommand` kullanır. Örneğin, komut ve listede bir dosya kullanıma alınmışsa, çağıranı bilgilendirmek `SCC_COMMAND_CHECKIN` için geri çağırma kullanılır. Bazen kaynak denetimi eklentisi komutun parçası olan diğer dosyaları bulabilir ve bunları ekleyebilir. Bu, örneğin, Visual Basic kullanıcının projesi tarafından kullanılan ancak .bmp proje dosyasında görünmeen bir Visual Basic sağlar. Kullanıcı **IDE'de Al** komutunu seçer. IDE, kullanıcının aldırılanı düşündüğü tüm dosyaların listesini görüntüler, ancak liste gösterilmeden önce, görüntülenecek listenin güncel olduğundan emin olmak için `SccPopulateList` işlev çağrılır.
 
 ## <a name="example"></a>Örnek
  IDE, kullanıcının aldırarak elde etmek için düşündüğü dosyaların listesini derleme. Bu listeyi görüntülemeden önce işlevini çağırarak kaynak denetimi eklentisine listeden dosya ekleme ve `SccPopulateList` silme fırsatı verir. Eklenti, verilen geri çağırma işlevini çağırarak listeyi değiştiren bir işlevdir (daha fazla ayrıntı için [bkz. POPLISTFUNC).](../extensibility/poplistfunc.md)

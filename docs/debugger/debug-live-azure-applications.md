@@ -1,7 +1,7 @@
 ---
-title: Azure uygulamalarıyla ASP.NET ayıklama
+title: canlı ASP.NET Azure uygulamalarında hata ayıklama
 titleSuffix: Visual Studio Enterprise
-description: Anlık görüntü noktaları ayarlamak Snapshot Debugger azure Visual Studio canlı hata ayıklaması yaparken anlık görüntü almak için ASP.NET öğrenin.
+description: canlı ASP.NET Azure uygulamalarında hata ayıklama sırasında, anlık görüntü noktalarını ayarlamak ve anlık görüntüleri almak için Visual Studio Snapshot Debugger nasıl kullanacağınızı öğrenin.
 ms.custom: ''
 ms.date: 03/16/2018
 ms.topic: how-to
@@ -14,161 +14,161 @@ ms.technology: vs-ide-debug
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: f9e8f578efbfc0cd30edd21379f0e262e3b995a5e3ab72d513ba4a933c823c63
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 288c13dbf249bfe953f46886cc55dee6e1408515
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420448"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090959"
 ---
-# <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>Azure uygulamaları ASP.NET canlı hata ayıklaması Snapshot Debugger
+# <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>Snapshot Debugger kullanarak canlı ASP.NET Azure uygulamalarında hata ayıklama
 
-Bu Snapshot Debugger, ilgilendiğiniz kod yürütülürken üretim uygulamalarınıza bir anlık görüntü alır. Hata ayıklayıcıya anlık görüntü alma talimatı almak için kodunda anlık görüntü noktaları ve günlük noktaları ayarlayın. Hata ayıklayıcısı, üretim uygulama trafiğinizi etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Bu Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için gereken zamanı önemli ölçüde azaltmanıza yardımcı olabilir.
+Snapshot Debugger, çalışırken ilgilendiğiniz kod olduğunda üretim içi uygulamalarınızın anlık görüntüsünü alır. Hata ayıklayıcıya bir anlık görüntü almasını söylemek için kodunuzda anlık görüntü noktaları ve günlüğe kaydetme noktaları ayarlarsınız. Hata ayıklayıcı, üretim uygulamanızın trafiğini etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için geçen süreyi önemli ölçüde düşürmeye yardımcı olabilir.
 
-Anlık ek nokta ve günlük noktaları kesme noktalarına benzer, ancak kesme noktanın aksine, anlık ek nokta isabetli olduğunda uygulamayı durdurmaz. Bir anlık görüntüyü anlık görüntü yakalama genellikle 10-20 milisaniye sürer.
+Anlık görüntü noktaları ve günlüğe kaydetme noktaları, kesme noktalarıyla benzerdir, ancak kesme noktalarından farklı olarak, anlık görüntü noktaları, isabet edildiğinde uygulamayı durdurmayın. Genellikle, bir anlık görüntü noktasında anlık görüntü yakalama 10-20 milisaniye sürer.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
-> * Start the Snapshot Debugger
-> * Anlık görüntü ayarlama ve anlık görüntüyü görüntüleme
-> * Günlük noktası ayarlama
+> * Snapshot Debugger başlatın
+> * Anlık görüntü noktası ayarlama ve anlık görüntü görüntüleme
+> * Günlüğe kaydetme noktası ayarlama
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Snapshot Debugger, Azure geliştirme iş yükü Visual Studio 2017 Enterprise 15.5 veya daha yüksek bir **sürümden itibaren kullanılabilir.** (Bağımsız **bileşenler sekmesinde** Hata ayıklama ve test altında **bulabilirsiniz**  >  **Snapshot debugger**.)
+* Snapshot Debugger yalnızca **Azure geliştirme iş yükü** ile Visual Studio 2017 15,5 Enterprise veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test**  >  altında bulabilirsiniz **Anlık görüntü hata ayıklayıcısı**.)
 
    ::: moniker range=">=vs-2019"
-   Henüz yüklü değilse, [2019'Visual Studio yükleyin.](https://visualstudio.microsoft.com/downloads) Önceki bir Visual Studio yüklemesini güncelleştiriyorsanız, Visual Studio Yükleyicisi çalıştırın ve Snapshot Debugger ve web geliştirme **iş yükünde ASP.NET bileşenini kontrol edin.**
+   henüz yüklenmemişse [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)' i yükleme. önceki bir Visual Studio yüklemesinden güncelleştiriyorsanız, Visual Studio Yükleyicisi çalıştırın ve **ASP.NET ve web geliştirme iş** yükünde Snapshot Debugger bileşenini kontrol edin.
    ::: moniker-end
    ::: moniker range="<=vs-2017"
-   Henüz yüklü değilse, [2017 Visual Studio 15.5 veya Enterprise sürümünü](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) yükleyin. Önceki bir Visual Studio 2017 yüklemesini güncelleştiriyorsanız, Visual Studio Yükleyicisi'i çalıştırın ve Snapshot Debugger ve web geliştirme iş yükünde **ASP.NET bileşenini kontrol edin.**
+   henüz yüklenmemişse, [2017 Enterprise sürüm 15,5](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) veya sonraki bir sürümünü Visual Studio. önceki bir Visual Studio 2017 yüklemesinden güncelleştiriyorsanız, Visual Studio Yükleyicisi çalıştırın ve **ASP.NET ve web geliştirme iş** yükünde Snapshot Debugger bileşenini kontrol edin.
    ::: moniker-end
 
-* Temel veya daha Azure App Service plan.
+* Temel veya daha yüksek Azure App Service planı.
 
-* Anlık görüntü koleksiyonu, aşağıdaki web uygulamaları için Azure App Service:
-  * ASP.NET 4.6.1 veya .NET Framework üzerinde çalışan uygulamalar.
-  * ASP.NET Core .NET Core 2.0 veya sonraki bir üzerinde çalışan uygulamaları Windows.
+* Anlık görüntü koleksiyonu, Azure App Service çalıştıran aşağıdaki Web uygulamaları için kullanılabilir:
+  * .NET Framework 4.6.1 veya sonraki sürümlerde çalışan uygulamalar ASP.NET.
+  * Windows ASP.NET Core .net Core 2,0 veya üzeri sürümlerde çalışan uygulamalar.
 
-## <a name="open-your-project-and-start-the-snapshot-debugger"></a>Projenizi açın ve Snapshot Debugger
+## <a name="open-your-project-and-start-the-snapshot-debugger"></a>Projenizi açın ve Snapshot Debugger başlatın
 
-1. Hata ayıklamanın anlık görüntüsünü açmak için projeyi açın.
+1. Anlık görüntü hata ayıklaması yapmak istediğiniz projeyi açın.
 
    > [!IMPORTANT]
-   > Hata ayıklamanın anlık görüntüsünü ayıklamak için, kaynak *kodun* kaynak kodu sürümüyle aynı sürümünü Azure App Service.
+   > Hata ayıklamanın anlık görüntüsünü almak için Azure App Service yayımlanan *kaynak kodu sürümünü* açmanız gerekir.
 
 ::: moniker range="<=vs-2017"
 
-2. Bulut Gezgini'nde (**> Cloud Explorer'ı** görüntüle) projenizin dağıtılacağı Azure App Service sağ tıklayın ve Uygulama **ekle'yi Snapshot Debugger.**
+2. Cloud Explorer 'da (**bulut gezginini > görüntüleyin**), projenizin dağıtıldığı Azure App Service sağ tıklayın ve **Snapshot Debugger Ekle**' yi seçin.
 
-   ![Anlık görüntü hata ayıklayıcısını başlatma](../debugger/media/snapshot-launch.png)
+   ![Snapshot Debugger 'ı başlatın](../debugger/media/snapshot-launch.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Hata **Ayıkla'> Ekle... Snapshot Debugger seçin.** Projenizin Azure App Service azure depolama hesabını seçin ve ardından Ekle'ye **tıklayın.** Snapshot Debugger, Sanal [Azure Kubernetes Service](debug-live-azure-kubernetes.md) Kümeleri için [Azure Sanal Makineleri (VM) & sanal makineleri de destekler.](debug-live-azure-virtual-machines.md)
+2. **Hata ayıkla > Snapshot Debugger Ekle...** seçeneğini belirleyin. Projenizin dağıtıldığı Azure App Service seçin ve bir Azure depolama hesabına ve ardından **Ekle**' ye tıklayın. Snapshot Debugger Ayrıca, sanal makine ölçek kümeleri & [Azure Kubernetes hizmetini](debug-live-azure-kubernetes.md) ve [Azure sanal makinelerini (VM)](debug-live-azure-virtual-machines.md)destekler.
 
-   ![Hata Ayıklama menüsünden anlık görüntü hata ayıklayıcısını başlatma](../debugger/media/snapshot-debug-menu-attach.png)
+   ![Hata ayıklama menüsünden Snapshot Debugger 'ı başlatın](../debugger/media/snapshot-debug-menu-attach.png)
 
-   ![Azure Kaynağı'ı seçin](../debugger/media/snapshot-select-azure-resource-appservices.png)
+   ![Azure kaynağı seçin](../debugger/media/snapshot-select-azure-resource-appservices.png)
 
 ::: moniker-end
 
    > [!IMPORTANT]
-   > İlk olarak **Ekle'yi Snapshot Debugger,** sitenize Snapshot Debugger site uzantısını yüklemeniz Azure App Service. Bu yükleme, çalışma alanlarınızı yeniden Azure App Service.
+   > **Snapshot Debugger Ekle**' yi ilk kez seçtiğinizde, Snapshot Debugger site uzantısını Azure App Service yüklemeniz istenir. Bu yükleme Azure App Service yeniden başlatılmasını gerektirir.
 
    ::: moniker range="<=vs-2017"
    > [!NOTE]
-   > Application Analizler site uzantısı, Anlık Görüntü Hata Ayıklamayı da destekler. "Site uzantısı güncel değil" hata iletisiyle karşılaştıysanız, ayrıntıları yükseltmek için bkz. Anlık görüntü hata ayıklama ile ilgili [sorun](../debugger/debug-live-azure-apps-troubleshooting.md) giderme ipuçları ve bilinen sorunlar.
+   > Application Insights site uzantısı anlık görüntü hata ayıklamayı da destekler. "Site uzantısı güncel değil" hata iletisiyle karşılaşırsanız, ayrıntıları yükseltmek için bkz. [sorun giderme ipuçları ve anlık görüntü hata ayıklaması için bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md) .
    ::: moniker-end
    ::: moniker range=">=vs-2019"
    > [!NOTE]
-   > (Visual Studio 2019 sürüm 16.2 ve üzeri) Snapshot Debugger Azure bulut desteğini etkinleştirdi. Hem Azure kaynağının hem de Azure Depolama hesabının aynı bulutta olduğundan emin olun. Kuruma ilişkin Azure uyumluluk yapılandırmaları hakkında sorularınız varsa lütfen [Azure yöneticinize](https://azure.microsoft.com/overview/trusted-cloud/) başvurun.
+   > (Visual Studio 2019 sürüm 16,2 ve üstü) Snapshot Debugger Azure bulut desteğini etkinleştirdi. seçtiğiniz azure kaynağının ve azure Depolama hesabının aynı buluttan olduğundan emin olun. Kuruluşunuzun [Azure uyumluluk](https://azure.microsoft.com/overview/trusted-cloud/) yapılandırmalarına ilişkin sorularınız varsa lütfen Azure yöneticinize başvurun.
    ::: moniker-end
 
    Visual Studio artık anlık görüntü hata ayıklama modunda.
    ![Anlık görüntü hata ayıklama modu](../debugger/media/snapshot-message.png)
 
-   Modüller **penceresi,** modüller için tüm modüller yüklendiğinde size Azure App Service  (bu pencereyi açmak için > Windows > Modüllerde Hata Ayıkla'ya tıklayın).
+   **modüller** penceresi, tüm modüllerin Azure App Service için ne zaman yüklendiğini gösterir (bu pencereyi açmak için **hata ayıkla > Windows > modüller** ' i seçin).
 
-   ![Modüller penceresini denetleme](../debugger/media/snapshot-modules.png)
+   ![Modüller penceresini denetleyin](../debugger/media/snapshot-modules.png)
 
-## <a name="set-a-snappoint"></a>Ek bileşen ayarlama
+## <a name="set-a-snappoint"></a>Anlık görüntü noktası ayarla
 
-1. Kod düzenleyicisinde, bir ek bileşen ayarlamak için ilgilendiğimiz bir kod çizgisinin yanındaki sol olukluna tıklayın. Yürütülecek kodun bu olduğundan emin olun.
+1. Kod Düzenleyicisi 'nde, bir anlık görüntü noktası ayarlamak için ilgilendiğiniz kod satırının yanındaki sol cilt payı tıklatın. Uygulamasının çalıştırabildiğinizi bildiğiniz kodun olduğundan emin olun.
 
-   ![Ek bileşen ayarlama](../debugger/media/snapshot-set-snappoint.png)
+   ![Anlık görüntü noktası ayarla](../debugger/media/snapshot-set-snappoint.png)
 
-2. Ek **bileşeni açmak** için Koleksiyonu Başlat'a tıklayın.
+2. Anlık görüntü noktasını açmak için **toplamayı Başlat** ' a tıklayın.
 
-   ![Ek bileşen noktası açma](../debugger/media/snapshot-start-collection.png)
+   ![Anlık görüntü noktasını aç](../debugger/media/snapshot-start-collection.png)
 
    > [!TIP]
-   > Bir anlık görüntüyü görüntülerken adım adım atabilirsiniz, ancak farklı kod satırlarında yürütmeyi takip etmek için kodunuza birden çok ek bileşen yer almaktadır. Kodunda birden çok ek bileşen varsa, Snapshot Debugger anlık görüntülerin aynı son kullanıcı oturumundan olduğundan emin olun. Uygulama Snapshot Debugger çok sayıda kullanıcı olsa bile bunu yapar.
+   > Bir anlık görüntüyü görüntülerken ilerleyemiyorum, ancak farklı kod satırlarındaki yürütmeyi izlemek için kodunuza birden fazla anlık görüntü koyabilirsiniz. Kodunuzda birden fazla anlık görüntü noktanız varsa Snapshot Debugger, ilgili anlık görüntülerin aynı son kullanıcı oturumundan geldiğinden emin olur. Snapshot Debugger, uygulamanıza vurarak çok sayıda kullanıcı olsa da bunu yapar.
 
 ## <a name="take-a-snapshot"></a>Anlık görüntü alma
 
-Bir ek bileşen ayarlandıktan sonra, web sitenizin tarayıcı görünümüne gidip işaretlenmiş kod satırı çalıştırarak el ile bir anlık görüntü oluşturabilir veya kullanıcılarının site kullanımlarından bir anlık görüntü oluşturmasını bekleyebilirsiniz.
+Bir anlık görüntü noktası ayarlandıktan sonra, Web sitenizin tarayıcı görünümüne gidip, işaretlenmiş kod satırını çalıştırarak veya kullanıcılarınızın site kullanımlarından bir tane oluşturması için bekleyen bir anlık görüntüyü el ile oluşturabilirsiniz.
 
-## <a name="inspect-snapshot-data"></a>Anlık görüntü verilerini inceleme
+## <a name="inspect-snapshot-data"></a>Anlık görüntü verilerini İnceleme
 
-1. Anlık görüntü, anlık görüntüye isabet Tanılama Araçları görüntülenir. Bu pencereyi açmak için Hata **ayıkla'> Windows > Show Tanılama Araçları**.
+1. Anlık görüntü noktası isabet edildiğinde, Tanılama Araçları penceresinde bir anlık görüntü görüntülenir. bu pencereyi açmak için **hata ayıkla > Windows > Tanılama Araçları göster**' i seçin.
 
-   ![Ek bileşen noktası açma](../debugger/media/snapshot-diagsession-window.png)
+   ![Anlık görüntü noktası açma](../debugger/media/snapshot-diagsession-window.png)
 
-1. Anlık görüntüyü kod düzenleyicisinde açmak için anlık görüntüye çift tıklayın.
+1. Anlık görüntü noktasını kod düzenleyicisinde açmak için anlık görüntü noktasına çift tıklayın.
 
-   ![Anlık görüntü verilerini inceleme](../debugger/media/snapshot-inspect-data.png)
+   ![Anlık görüntü verilerini İnceleme](../debugger/media/snapshot-inspect-data.png)
 
-   Bu görünümden değişkenlerin üzerine gelerek DataTips'i görüntüleyebilirsiniz, Yereller, **İzlemeler** ve **Çağrı** Yığını pencerelerini kullanabilir ve ifadeleri değerlendirebilirsiniz.
+   Bu görünümden, veri Ipuçlarını görüntülemek, **Yereller**, **Izler** ve **çağrı yığını** pencerelerini kullanmak ve ayrıca Ifadeleri değerlendirmek için değişkenlerin üzerine geldiğinizde arama yapabilirsiniz.
 
-   Web sitesinin kendisi hala canlı ve son kullanıcılar bundan etkilenmez. Varsayılan olarak her anlık görüntüde yalnızca bir anlık görüntü yakalanır: Bir anlık görüntü yakalandikten sonra anlık görüntü kapattır. Ek bileşende başka bir anlık görüntü yakalamak için, Koleksiyonu Güncelleştir'e tıklayarak anlık görüntüyü **yeniden açabilirsiniz.**
+   Web sitesinin kendisi de canlı ve son kullanıcılar etkilenmemektedir. Varsayılan olarak, anlık görüntü noktası başına yalnızca bir anlık görüntü yakalanır: bir anlık görüntü yakalandıktan sonra, anlık görüntü açılır. Anlık görüntü noktasında başka bir anlık görüntü yakalamak istiyorsanız, **koleksiyonu Güncelleştir**' e tıklayarak anlık görüntü noktasını yeniden açabilirsiniz.
 
-Ayrıca, uygulamanıza daha fazla ek bileşen ekleyebilir ve Koleksiyonu Güncelleştir düğmesiyle **bunları açabilirsiniz.**
+Ayrıca, uygulamanıza daha fazla anlık görüntü ekleyebilir ve **koleksiyonu Güncelleştir** düğmesiyle bu noktaları açabilirsiniz.
 
-**Yardıma mı ihtiyacınız var?** Anlık görüntü [hata ayıklama sayfaları için Sorun giderme](../debugger/debug-live-azure-apps-troubleshooting.md) ve bilinen sorunlar ve [SSS bölümüne](../debugger/debug-live-azure-apps-faq.yml) bakın.
+**Yardıma mı ihtiyacınız var?** [Anlık görüntü hata ayıklama sayfaları Için](../debugger/debug-live-azure-apps-faq.yml) [sorun giderme ve bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md) ve SSS bölümüne bakın.
 
-## <a name="set-a-conditional-snappoint"></a>Koşullu ek bileşen ayarlama
+## <a name="set-a-conditional-snappoint"></a>Koşullu bir anlık görüntü noktası ayarlama
 
-Uygulamanıza belirli bir durumu yeniden oluşturmak zorsa koşullu ek bileşen kullanmayı göz önünde bulundurabilirsiniz. Koşullu ek bileşen, bir değişkenin incelemek istediğiniz belirli bir değeri içerdiği durumlarda anlık görüntü alma zamanlarını denetlemeye yardımcı olur. İfadeleri, filtreleri veya isabet sayılarını kullanarak koşulları ayarlayabilirsiniz.
+Uygulamanızda belirli bir durumu yeniden oluşturmayı zorlaştırıyorsa, koşullu bir anlık görüntü noktası kullanmayı düşünün. Koşullu anlık görüntü noktaları, bir değişken, incelemek istediğiniz belirli bir değeri içerdiğinde olduğu gibi, bir anlık görüntünün ne zaman ele alıp denetistemediğinizi denetlemenize yardımcı olur. İfadeleri ifade, filtre veya isabet sayısı kullanarak ayarlayabilirsiniz.
 
-#### <a name="to-create-a-conditional-snappoint"></a>Koşullu ek bileşen oluşturmak için
+#### <a name="to-create-a-conditional-snappoint"></a>Koşullu bir anlık görüntü noktası oluşturmak için
 
-1. Bir anlık görüntü simgesine (boş top) sağ tıklayın ve **Ayarlar.**
+1. bir anlık görüntü noktası simgesine (boş top) sağ tıklayın ve **Ayarlar**' yi seçin.
 
    ![Ayarlar'ı seçme](../debugger/media/snapshot-snappoint-settings.png)
 
-1. Ek bileşen ayarları penceresinde bir ifade yazın.
+1. Anlık görüntü noktası ayarları penceresinde bir ifade yazın.
 
-   ![İfade yazma](../debugger/media/snapshot-snappoint-conditions.png)
+   ![Bir ifade yazın](../debugger/media/snapshot-snappoint-conditions.png)
 
-   Yukarıdaki çizimde anlık görüntü yalnızca anlık görüntü için olduğunda `visitor.FirstName == "Dan"` alınır.
+   Önceki çizimde, anlık görüntü yalnızca ne zaman anlık görüntü noktası için alınır `visitor.FirstName == "Dan"` .
 
-## <a name="set-a-logpoint"></a>Günlük noktası ayarlama
+## <a name="set-a-logpoint"></a>Günlüğe kaydetme noktası ayarlama
 
-Bir anlık görüntüye isabet olduğunda anlık görüntü almaya ek olarak, bir ileti günlüğe (yani, bir günlük noktası oluşturmak) için bir anlık görüntü de yapılandırabilirsiniz. Oturum açma noktaları, uygulamanın yeniden bir şekilde yenidend bayılamanıza gerek kalmadan ayarlandırabilirsiniz. Günlük noktaları sanal olarak yürütülür ve çalışan uygulamanıza hiçbir etkisi veya yan etkisi olmaz.
+Anlık görüntü noktası isabet edildiğinde bir anlık görüntü almaya ek olarak, bir anlık görüntü noktasını bir iletiyi günlüğe kaydetmek için de yapılandırabilirsiniz (yani, bir logpoint oluşturun). Uygulamanızı yeniden dağıtmak zorunda kalmadan günlüğe kaydetme noktaları ayarlayabilirsiniz. Günlüğe kaydetme noktaları neredeyse yürütülür ve çalışan uygulamanız üzerinde hiçbir etkisi veya yan etkiye neden olmaz.
 
-#### <a name="to-create-a-logpoint"></a>Günlük noktası oluşturmak için
+#### <a name="to-create-a-logpoint"></a>Günlüğe kaydetme noktası oluşturmak için
 
-1. Bir ek bileşen simgesine (mavi altıgen) sağ tıklayın ve **Ayarlar.**
+1. bir anlık görüntü noktası simgesine (mavi altıon) sağ tıklayın ve **Ayarlar**' yi seçin.
 
-1. Ek bileşen ayarları penceresinde Eylemler'i **seçin.**
+1. Anlık görüntü noktası ayarları penceresinde **Eylemler**' i seçin.
 
-   ![Günlük noktası oluşturma](../debugger/media/snapshot-logpoint.png)
+   ![Günlüğe kaydetme noktası oluşturma](../debugger/media/snapshot-logpoint.png)
 
-1. İleti **alanına,** günlüğe almak istediğiniz yeni günlük iletiyi girebilirsiniz. Ayrıca günlük iletinizin değişkenlerini küme ayraçlarına yerleştirerek de değerlendirebilirsiniz.
+1. **İleti** alanına, günlüğe kaydetmek istediğiniz yeni günlük iletisini girebilirsiniz. Ayrıca, günlük iletinizde değişkenleri küme ayraçları içine yerleştirerek değerlendirebilirsiniz.
 
-   **Çıkış Penceresi'a** gönder'i seçerseniz, günlüğe kaydedilirse, ileti Tanılama Araçları görüntülenir.
+   **Çıkış penceresi gönder**' i seçerseniz, günlüğe kaydetme noktası isabet edildiğinde ileti, tanılama araçları penceresinde görünür.
 
-   ![Tanılama Araçları penceresinde verileri günlüğe Tanılama Araçları noktası](../debugger/media/snapshot-logpoint-output.png)
+   ![Tanılama Araçları penceresindeki logpoint verileri](../debugger/media/snapshot-logpoint-output.png)
 
-   Uygulama günlüğüne **gönder'i** seçerseniz, günlüğe kaydedilirse, ileti App Analizler gibi üzerinden `System.Diagnostics.Trace` (veya `ILogger` .NET Core'da) iletileri gördüğünüz her [yerde görüntülenir.](/azure/application-insights/app-insights-asp-net-trace-logs)
+   **uygulama günlüğüne gönder**' i seçerseniz, günlüğe kaydetme noktası isabet edildiğinde ileti, `System.Diagnostics.Trace` `ILogger` [uygulama Analizler](/azure/application-insights/app-insights-asp-net-trace-logs)gibi (veya .net Core) iletileri görebileceğiniz her yerde görüntülenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, App Services için Snapshot Debugger kullanmayı öğrendiniz. Bu özellik hakkında daha fazla ayrıntıyı okumak istiyor olabilirsiniz.
+Bu öğreticide, uygulama hizmetleri için Snapshot Debugger kullanmayı öğrendiniz. Bu özellik hakkında daha fazla ayrıntı okumak isteyebilirsiniz.
 
 > [!div class="nextstepaction"]
 > [Anlık görüntü hatalarını ayıklama hakkında SSS](../debugger/debug-live-azure-apps-faq.yml)

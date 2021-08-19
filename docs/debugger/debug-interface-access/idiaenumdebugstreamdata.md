@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a965fa5731af0fd1de4ced955d5958377d1f36b42e6e1a0f345013f716d368d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d5fc4508a7b3d1f4d035116abf6ad1042f9a21ec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392581"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074990"
 ---
 # <a name="idiaenumdebugstreamdata"></a>IDiaEnumDebugStreamData
 Hata ayıklama veri akışındaki kayıtlara erişim sağlar.

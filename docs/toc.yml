@@ -194,7 +194,7 @@
           href: ide/create-new-project.md
         - name: Çözüm ve projelerle çalışma
           href: ide/creating-solutions-and-projects.md
-        - name: Visual Studio 2017'de bir repodan proje açma
+        - name: Visual Studio 2017'de bir Visual Studio açma
           href: get-started/tutorial-open-project-from-repo-visual-studio-2017.md
         - name: Visual Studio 2019'da bir repodan proje açma
           href: get-started/tutorial-open-project-from-repo-visual-studio-2019.md
@@ -1072,7 +1072,7 @@
       items:
         - name: Çağrı Hiyerarşisi
           href: ide/reference/call-hierarchy.md
-        - name: Geliştirici Komut İstemi & Geliştirici PowerShell
+        - name: Geliştirici Komut İstemi & geliştirici PowerShell
           href: ide/reference/command-prompt-powershell.md
         - name: Değişiklikleri Önizleme
           href: ide/preview-changes.md
@@ -1426,8 +1426,12 @@
           href: ide/dotfuscator/capabilities.md
         - name: Dotfuscator Community’yi yükleme
           href: ide/dotfuscator/install.md
+        - name: Dotfuscator Community Kaydet
+          href: ide/dotfuscator/register.md
         - name: Dotfuscator Community’yi yükseltme
           href: ide/dotfuscator/upgrades.md
+        - name: dotfuscator Community 5 ' ten yükseltme
+          href: ide/dotfuscator/upgrade-from-5.md
 - name: Kaynaklar
   expanded: true
   items:
@@ -1447,16 +1451,16 @@
       href: 'https://visualstudio.microsoft.com/license-terms/'
     - name: Destek yaşam döngüsü ve bakım
       href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Müşteri deneyimini geliştirme
+    - name: Müşteri Deneyimini Geliştirme
       items:
         - name: Program hakkında
           displayName: Customer Experience Improvement Program
           href: ide/visual-studio-experience-improvement-program.md
         - name: Sistem tarafından oluşturulan günlükler
           href: ide/diagnostic-data-collection.md
-    - name: Visual Studio bağlı deneyimler
+    - name: Visual Studio'de bağlantılı deneyimler
       href: ide/reference/connected-experiences.md
-    - name: IDE hatalarında sorun giderme
+    - name: IDE hatalarını giderme
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
 - name: Geri bildirim gönder
   items:

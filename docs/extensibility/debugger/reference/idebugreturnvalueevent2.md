@@ -11,14 +11,15 @@ ms.assetid: 2daded43-e427-4fbb-a19e-f3834e3723af
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 17eafb8f974c193fd4796cd246bf7e0a1abe929a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8fb0c74c955ba27590916e3b48f801db4f6dc9ec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105075711"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126316"
 ---
 # <a name="idebugreturnvalueevent2"></a>IDebugReturnValueEvent2
 Bu arabirim, bir işlevin dışına veya sonuna kadar hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama Yöneticisi 'ne (SDM) gönderilir.

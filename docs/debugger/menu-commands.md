@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b47207852efcd9ce4e9f76420886157cbfcd4e5ee3200338dd65a0990447dc8d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e6c85fb7570659af613d9141c8f4c84dc62af841
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404432"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090674"
 ---
 # <a name="menu-commands"></a>Menü Komutları
 Bu bölümdeki yardım konuları, Spy + + menülerinde kullanılabilen komutları listeler.

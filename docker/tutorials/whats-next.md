@@ -1,44 +1,45 @@
 ---
-title: Docker öğreticisi-sonraki
-description: Bulut Yerel Bilgi Işlem altyapısı projelerini kullanarak, düzenleme ile Docker uygulamalarını genişletme seçeneklerini açıklar.
+title: Docker öğreticisi - Sırada ne var
+description: Cloud Native Computing Foundation projelerini kullanarak Docker uygulamalarını düzenleme ile genişletme seçeneklerini açıklar.
 ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
 ms.technology: vs-docker
+ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 6e1e8d23628c746c892a20e1769a7c157a425fc6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 6ba31a6d250123d4d54fa1071e9ef662aea7dae8
+ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122045443"
+ms.lasthandoff: 08/18/2021
+ms.locfileid: "122334284"
 ---
 # <a name="whats-next"></a>Sırada ne var?
 
-Öğreticinizi bitirseniz de kapsayıcılar hakkında daha fazla bilgi edinmek için çok daha fazla şey vardır!
-Buraya göz atacağız, ancak daha sonra bakabilmeniz için birkaç diğer alan aşağıda verilmiştir!
+Öğreticinizi tamamlasanız da kapsayıcılar hakkında daha fazla bilgi edinmek için çok daha fazlasını bulabilirsiniz!
+Burada derine inersiniz, ancak bir sonraki adıma göz atacak birkaç alan daha vardır!
 
 ## <a name="container-orchestration"></a>Kapsayıcı düzenleme
 
-Üretimde çalışan kapsayıcılar zor. Bir makinede oturum açmak istemezsiniz ve yalnızca bir `docker run` veya çalıştırın `docker-compose up` . Neden olmasın? Kapsayıcılar ne olursa olsun? Birçok makine genelinde nasıl ölçeklendirebilirsiniz? Kapsayıcı düzenlemesi Bu sorunu çözer. Kubernetes, Sısınma, Nomad ve AKS gibi araçlar, bu sorunu çözmek için biraz farklı yollarla yardımcı olur.
+Kapsayıcıları üretimde çalıştırma zordur. Bir makinede oturum açmak ve yalnızca veya çalıştırmak `docker run` `docker-compose up` istemiyorsiniz. Neden olmasın? Kapsayıcılar sonlanıyorsa ne olur? Çeşitli makineler arasında nasıl ölçeklendirin? Kapsayıcı düzenlemesi bu sorunu çözer. Kubernetes, Swarm, Yer ve AKS gibi araçların hepsi bu sorunun çözülmesine yardımcı olur ve hepsi biraz farklı şekillerde olur.
 
-Genel fikir, **beklenen durumu** alan "yöneticileriniz" olacaktır. Bu durum "Web uygulamamın iki örneğini çalıştırmak istiyorum ve 80 numaralı bağlantı noktasını kullanıma sunmalıyım" olabilir. Yöneticiler daha sonra kümedeki makinelere bakar ve "çalışan" düğümlerine iş temsilcisini devredebilir. Yöneticiler değişiklikleri (örneğin, bir kapsayıcı çıkma) ve **gerçek durumu** beklenen durumu yansıtacak şekilde çalışır.
+Genel fikir, beklenen durumu alan "yöneticilerin" **olmasıdır.** Bu durum "Web uygulamam için iki örnek çalıştırmak ve 80 bağlantı noktasını göstermek istiyorum" olabilir. Yöneticiler daha sonra kümedeki tüm makinelere bakar ve işi "çalışan" düğümlerine devreder. Yöneticiler değişiklikleri (kapsayıcıyı bırakma gibi) izler ve ardından gerçek durumu beklenen **durumu yansıtmak** için çalışır.
 
-## <a name="cloud-native-computing-foundation-projects"></a>Bulut Yerel Bilgi Işlem altyapısı projeleri
+## <a name="cloud-native-computing-foundation-projects"></a>Cloud Native Computing Foundation projeleri
 
-CNCF, Kubernetes, Prometheus, Envoy, Linkerd, NAT 'ler ve daha fazlası dahil olmak üzere çeşitli açık kaynaklı projeler için satıcı tarafsız bir giriş. [Şu şekilde dereceli ve yer lanan projeleri](https://www.cncf.io/projects/) ve tüm [cncf 'leri burada](https://landscape.cncf.io/)görüntüleyebilirsiniz. İzleme, günlüğe kaydetme, güvenlik, görüntü kayıt defterleri, mesajlaşma ve daha birçok konuda sorunları çözmeye yardımcı olacak çok sayıda proje vardır!
+ŞUNDAN BAĞıMSıZ bir evdir: Kubernetes, Prometheus, Envoy, Linkerd, NATS ve daha fazlası dahil olmak üzere çeşitli açık kaynak projeleri için satıcıdan bağımsız bir evdir! Burada, dereceli [ve küküvlenmiş projeleri ve](https://www.cncf.io/projects/) TÜM [ŞURUBF Yatayı'nın tamamını burada görüntüabilirsiniz.](https://landscape.cncf.io/) İzleme, günlüğe kaydetme, güvenlik, görüntü kayıt defterleri, mesajlaşma ve daha fazlası ile ilgili sorunları çözmeye yardımcı olacak çok sayıda proje vardır!
 
-Bu nedenle, yatay ve buluta yerel uygulama geliştirmeye yönelik yeni bir sürümüne sahip değilseniz hoş geldiniz! Lütfen topluluğa bağlanın, soru sorun ve öğrenimi koruyun! Size heyecanlanıyoruz!
+Bu nedenle kapsayıcı ortamını ve buluta özel uygulama geliştirmeyi yeni başladıysanız hoş geldiniz! Lütfen toplulukla bağlantı kurarak soru sorun ve öğrenmeye devam edin! Size sahip olmak için heyecanlanıyoruz!
 
-## <a name="working-with-docker-in-vs-code"></a>VS Code Docker ile çalışma
+## <a name="working-with-docker-in-vs-code"></a>VS Code'de Docker ile çalışma
 
-VS Code docker uzantısını kullanma hakkında daha fazla bilgi edinin:
+VS Code Docker uzantısını kullanma hakkında daha fazla bilgi edinmek için:
 
-- [VS Code Docker uzantısına genel bakış](https://code.visualstudio.com/docs/containers/overview)
-- [Node.jskullanmaya başlayın ](https://code.visualstudio.com/docs/containers/quickstart-node)
+- [VS Code Docker Uzantısına genel bakış](https://code.visualstudio.com/docs/containers/overview)
+- [Kullanmaya başlayın ile Node.js](https://code.visualstudio.com/docs/containers/quickstart-node)
 - [Python kullanmaya başlama](https://code.visualstudio.com/docs/containers/quickstart-python)
-- [.NET Core ile çalışmaya başlama](https://code.visualstudio.com/docs/containers/quickstart-aspnet-core)
+- [Kullanmaya başlayın NET Core ile birlikte](https://code.visualstudio.com/docs/containers/quickstart-aspnet-core)
 - [Kapsayıcılı uygulamalarda hata ayıklama](https://code.visualstudio.com/docs/containers/debug-common)

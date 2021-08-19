@@ -9,14 +9,15 @@ ms.assetid: cd504d2b-194f-4106-8de5-2de827a79cbd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 47e0f8cca09acde7f3cccf3ef1cd2d7192ac1862
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: ec2942c05840fa8139f91c08c35dd9963a9beb22
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156463"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090983"
 ---
 # <a name="idiasymbolget_basesymbolid"></a>IDiaSymbol::get_baseSymbolId
 İşaretçinin dayandığı sembol KIMLIĞINI alır.

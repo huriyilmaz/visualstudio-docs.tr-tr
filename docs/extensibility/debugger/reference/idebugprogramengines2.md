@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim program düğümleri tarafından, bu programda hata ayıklayacakları tüm olası hata ayıklama altyapılarını (DE) belirtmek için kullanılır.
+description: Bu arabirim, program düğümleri tarafından bu programda hata ayıklana tüm olası hata ayıklama altyapılarını (DE) belirtmek için kullanılır.
 title: IDebugProgramEngines2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: ed842651af84991233a5e1f61eadb16d01074972eae896ffaa178748447aebc4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: eedc4dd60ce3fbd8581e91ee14404abbe6454a62
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121433235"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126420"
 ---
 # <a name="idebugprogramengines2"></a>IDebugProgramEngines2
-Bu arabirim program düğümleri tarafından, bu programda hata ayıklayacakları tüm olası hata ayıklama altyapılarını (DE) belirtmek için kullanılır.
+Bu arabirim, program düğümleri tarafından bu programda hata ayıklana tüm olası hata ayıklama altyapılarını (DE) belirtmek için kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,29 +30,29 @@ Bu arabirim program düğümleri tarafından, bu programda hata ayıklayacaklar�
 IDebugProgramEngines2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bir DE veya özel bağlantı noktası tedarikçisi, belirli bir program için kullanılmak üzere belirli bir DE oluşturmayı desteklemek için [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) uygulayan aynı nesne üzerinde bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE veya özel bir bağlantı noktası sağlayıcı bu arabirimi belirli bir program için kullanmak üzere belirli bir DE'nin kurulmasını desteklemek üzere [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) uygulayan aynı nesne üzerinde kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [](/cpp/atl/queryinterface) `IDebugProgramNode2` Bu arabirimi edinmek Için arabirim üzerinde QueryInterface 'i çağırın.
+ Bu arabirimi almak için bir arabirimde [QueryInterface](/cpp/atl/queryinterface) `IDebugProgramNode2` çağrısı yapmak.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugProgramEngines2` .
+## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugProgramEngines2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[EnumPossibleEngines](../../../extensibility/debugger/reference/idebugprogramengines2-enumpossibleengines.md)|Bu programda hata ayıklayabileceğini tüm olası DEs 'leri gösterir.|
-|[SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)|Bu programda hata ayıklamak için kullanılacak DE seçimini seçer.|
+|[EnumPossibleEngines](../../../extensibility/debugger/reference/idebugprogramengines2-enumpossibleengines.md)|Bu programda hata ayıklayabilirsiniz tüm olası DE'leri gösterir.|
+|[SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)|Bu programda hata ayıklamak için kullanmak üzere DE'yi seçer.|
 
 ## <a name="remarks"></a>Açıklamalar
- Kullanıcı tarafından bir devre dışı seçildikten sonra, bu seçenek [SetEngine](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md)çağırarak program düğümüne kaydedilir. Seçili motor, [GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md)tarafından döndürülen altyapıya dönüşür.
+ Kullanıcı tarafından de seçildikten sonra, bu seçim SetEngine çağrılarak program [düğümüne kaydedilir.](../../../extensibility/debugger/reference/idebugprogramengines2-setengine.md) Seçilen [altyapı, GetEngineInfo](../../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md)tarafından döndürülen altyapı olur.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5acc25ecb9a370317170d6d419a931414a7dee11ed0b4bcf1c1b4442248d109a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 238c5e82a35db0f2fbc6627bd0bb09d3af8f070b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121346914"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122091194"
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>Nasıl kullanılır: İşlem kullanarak veri kaydetme
 

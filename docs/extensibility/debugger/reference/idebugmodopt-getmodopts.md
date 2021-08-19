@@ -1,6 +1,6 @@
 ---
-description: İsteğe bağlı değiştiricilerin bir listesini alır.
-title: 'Idebugmodopt:: GetModOpts | Microsoft Docs'
+description: İsteğe bağlı değiştiricilerin listesini alın.
+title: IDebugModOpt::GetModOpts | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c13c664e80fe0ea2d479911d75fbd62b5d51e97b143fcd1cd89144718a5ede86
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f2774fa214e36669dcdb9190d57dddc095696d88
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121433638"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043342"
 ---
 # <a name="idebugmodoptgetmodopts"></a>IDebugModOpt::GetModOpts
-İsteğe bağlı değiştiricilerin bir listesini alır.
+İsteğe bağlı değiştiricilerin listesini alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,16 +46,16 @@ int GetModOpts(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-'ndaki Döndürülecek öğe sayısı.
+[in] Döndürülen öğe sayısı.
 
 `rgelt`\
-dışı Seçenekleri içeren bir dizi döndürür.
+[out] Seçenekleri içeren bir dizi döndürür.
 
 `pceltFetched`\
-[in, out] Dizide döndürülen öğe sayısı `rgelt` .
+[in, out] Dizide döndürülen öğe `rgelt` sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugModOpt](../../../extensibility/debugger/reference/idebugmodopt.md)

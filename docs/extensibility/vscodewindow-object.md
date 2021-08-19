@@ -1,6 +1,6 @@
 ---
-title: VSCodeWindow nesnesi | Microsoft Docs
-description: Genellikle VsTextView nesnesi olan bir veya daha fazla metin görünümü içerebilen özelleşmiş belge pencereleri olan kod pencereleri hakkında bilgi edinin.
+title: VSCodeWindow Nesne | Microsoft Docs
+description: Genellikle VsTextView nesnesi olan bir veya daha fazla metin görünümü içeren özelleştirilmiş belge pencereleri olan kod pencerelerini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,26 +16,26 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7225345da6cda366a41e39be98209c1fdf12569751400a587d58bd1fc6e632e0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d9ce7cdc11fe44f2148f2c268e1cab554da6bffd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121413511"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122049226"
 ---
 # <a name="vscodewindow-object"></a>VSCodeWindow nesnesi
-Kod penceresi, genellikle nesnesini içeren bir veya daha fazla metin görünümü içerebilen özelleşmiş bir belge penceresidir <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> .
+Kod penceresi, genellikle nesnesi olan bir veya daha fazla metin görünümlerini içeren özel bir belge <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> penceresidir.
 
- Mimari türsel olarak, kod penceresi pencere çerçevesinin içindeki bir belge penceresidir. İşlevsellik, kod penceresi ise yalnızca ek özelliklerle bir belge penceresidir. Çoklu belge arabirimi (MDI) modunda, kod penceresi MDI alt çerçevesidir. Daha fazla bilgi için bkz. [eskı API 'yi kullanarak kod pencerelerini özelleştirme](/previous-versions/visualstudio/visual-studio-2015/extensibility/customizing-code-windows-by-using-the-legacy-api?preserve-view=true&view=vs-2015).
+ Mimari olarak, kod penceresi bir pencere çerçevesi içinde yer alan bir belge penceresidir. İşlevsel olarak, kod penceresi yalnızca ek özelliklere sahip bir belge penceresidir. Çok belgeli arabirim (MDI) modunda kod penceresi MDI alt çerçevesidir. Daha fazla bilgi için [bkz. Eski API'yi kullanarak kod pencerelerini özelleştirme.](/previous-versions/visualstudio/visual-studio-2015/extensibility/customizing-code-windows-by-using-the-legacy-api?preserve-view=true&view=vs-2015)
 
- Aşağıdaki tablo, nesnesindeki arabirimleri içerir <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> .
+ Aşağıdaki tablo nesnesinde arabirimleri <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow> içerir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>|Genel olarak benzersiz tanımlayıcı (GUID) tarafından tanımlanan bir hizmeti bulmak için genel erişim mekanizması sağlar.|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>|Bir veya daha fazla kod görünümü içeren birden çok belge arabirimi (MDI) alt öğesini temsil eder.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Pencere çerçevesini doldurur.|
+|<xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>|Genel olarak benzersiz bir tanımlayıcının (GUID) tanım sağladığı bir hizmeti bulmak için genel bir erişim mekanizması sağlar.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>|Bir veya daha fazla kod görünümleri içeren birden çok belge arabirimi (MDI) alt sınıflarını temsil eder.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|Bir pencere çerçevesini doldurur.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>
-- [Şekil düzenleme](https://www.microsoft.com/download/details.aspx?id=55984)
+- [Şekiller düzenleme](https://www.microsoft.com/download/details.aspx?id=55984)

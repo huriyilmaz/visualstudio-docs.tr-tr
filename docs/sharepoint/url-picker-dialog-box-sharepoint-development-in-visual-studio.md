@@ -18,17 +18,17 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 31cf65b473c7053dabe2f2044992fa5e66eed2a83be871bc3134f89b4a7d30d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 22f05833ca2937a44d5d731bdef06d8971a3e57d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121367401"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156207"
 ---
 # <a name="url-picker-dialog-box-sharepoint-development-in-visual-studio"></a>URL seçici iletişim kutusu (SharePoint geliştirme Visual Studio)
   URL seçici iletişim kutusunda, ana sayfa dosyaları veya projenizin içinde veya projenizin çalıştırıcısı olan yerel sunucuda bulunan görüntü dosyaları gibi dosyaları SharePoint.
 
- Özellik ayarlamak için bir dosya seçme seçeneğiniz olduğunda bu iletişim kutusu görüntülenir. Özellikler penceresinde çeşitli özelliklerin yanındaki üç nokta düğmesini (![ASP.NET](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil Tasarımcı üç nokta")Mobil Tasarımcı üç nokta ) seçerek bu iletişim kutusunu **açabilirsiniz.** Tasarımcının Kaynak görünümünde belirli özniteliklere değer atadığınız zaman, üç nokta düğmesi bir IntelliSense **istemi** olarak da görünür.
+ Özellik ayarlamak için bir dosya seçme seçeneğiniz olduğunda bu iletişim kutusu görüntülenir. Özellikler penceresinde çeşitli özelliklerin yanındaki üç nokta düğmesini (![ASP.NET](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil Tasarımcı üç nokta")Mobil Tasarımcı üç nokta ) seçerek bu iletişim **kutusunu açabilirsiniz.** Tasarımcının Kaynak görünümünde belirli özniteliklere değer atadığınız zaman, üç nokta düğmesi bir IntelliSense **istemi** olarak da görünür.
 
 ## <a name="uielement-list"></a>UIElement listesi
  **Project klasörleri** Projede veya SharePoint çalıştıran yerel sunucuda tanımlanan klasörlerin listesini SharePoint. Alt klasörleri görüntülemek için genişletme düğmesini seçin.
@@ -41,7 +41,7 @@ ms.locfileid: "121367401"
 
 - Dosya başka bir projede bulunamaz.
 
-  Bu ölçütleri karşılamadan dosyalara başvuru yapmak için dosyanın yolunu el ile girmeniz gerekir.
+  Bu ölçütleri karşılamayan dosyalara başvuru yapmak için dosyanın yolunu el ile girmeniz gerekir.
 
   sunucuyu  çalıştıran yerel sunucuda bulunan dosyaları seçmek için Sunucu düğümünü SharePoint. İletişim kutusunda seçilebilir olarak görünmesi için bu dosyaların aşağıdaki ölçütleri karşılaması gerekir:
 
@@ -49,9 +49,9 @@ ms.locfileid: "121367401"
 
 - Dosya, içerik veritabanında SharePoint bulunamaz.
 
-  Bu ölçütleri karşılamadan dosyalara başvuru yapmak için dosyanın yolunu el ile girmeniz gerekir.
+  Bu ölçütleri karşılamayan dosyalara başvuru yapmak için dosyanın yolunu el ile girmeniz gerekir.
 
-  **Klasörün içeriği** Seçilen klasördeki dosyaların listesini görüntüler. Bir dosya seçin ve iletişim kutusunu **kapatmak** ve seçiminizi çağıran işleme göndermek için Tamam düğmesini seçin.
+  **Klasörün içeriği** Seçilen klasördeki dosyaların listesini görüntüler. Bir dosya seçin ve ardından Tamam **düğmesini** seçen iletişim kutusunu kapatın ve seçiminizi çağıran işleme gönderin.
 
   **Türe göre dosyalar** Gerçekleştirmekte olduğu görev için uygun dosya listesinden seçim gerçekleştirmenizi sağlar.
 

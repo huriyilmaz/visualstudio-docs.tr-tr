@@ -1,119 +1,120 @@
 ---
-title: 'Docker öğreticisi-5. Bölüm: verilerinizi kalıcı hale getirme'
-description: Bir veritabanındaki verileri kalıcı hale getirme ve bir birim bağlayarak dizinleri bir kapsayıcıya paylaşma hakkında bilgi edinin.
+title: 'Docker öğreticisi - 5. Bölüm: Verilerinizi kalıcı yapma'
+description: Bir birim takarak veritabanındaki verileri kalıcı yapmayı ve dizinleri kapsayıcıda paylaşmayı öğrenin.
 ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
 ms.technology: vs-docker
+ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 149d67bc0e4004c6207add49a84b81b5c5e80620
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 36c7a2dbada3dd1f23b45019dc0690f3ba1ab5f1
+ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122053429"
+ms.lasthandoff: 08/18/2021
+ms.locfileid: "122334472"
 ---
-# <a name="persist-your-data"></a>Verilerinizi kalıcı hale getirme
+# <a name="persist-your-data"></a>Verilerinizi kalıcı olarak kalıcı olarak koruma
 
-Fark etmediğiniz durumlarda, kapsayıcıyı her başlattığınızda yapılacaklar listesi temizlenir. Bunun nedeni nedir? Kapsayıcının nasıl çalıştığını görelim.
+Fark etmeyebilirsiniz; kapsayıcıyı her başlatmada todo listesi temizlenir. Bu neden? Şimdi kapsayıcının nasıl çalıştığına bakalım.
 
 ## <a name="the-containers-filesystem"></a>Kapsayıcının dosya sistemi
 
-Bir kapsayıcı çalıştırıldığında, dosya sistemi için bir görüntüden çeşitli katmanları kullanır. Her kapsayıcı Ayrıca dosya oluşturmak, güncelleştirmek veya kaldırmak için kendi "karalama alanını" alır. Aynı görüntüyü kullanıyor *olsalar bile* , herhangi bir değişiklik başka bir kapsayıcıda görülmez.
+Kapsayıcı çalıştır geldiğinde, dosya sistemi için bir görüntüdeki çeşitli katmanları kullanır. Her kapsayıcının dosyaları oluşturmak, güncelleştirmek veya kaldırmak için kendi "karalama alanı" da olur. Aynı görüntüyü kullansalar bile herhangi bir *değişiklik başka* bir kapsayıcıda görülmez.
 
-### <a name="see-this-in-practice"></a>Bu uygulamada, bkz.
+### <a name="see-this-in-practice"></a>Uygulamada buna bakın
 
-Bunu eylemde görmek için iki kapsayıcıyı başlatacak ve her birinde bir dosya oluşturacaksınız. Ne göreceğiniz, bir kapsayıcıda oluşturulan dosyaların başka bir kapsayıcıda kullanılabilir olmadığı şeydir.
+Bunu uygulamalı olarak görmek için iki kapsayıcı başlatacak ve her kapsayıcıda bir dosya oluşturabilirsiniz. Bir kapsayıcıda oluşturulan dosyaların başka bir kapsayıcıda mevcut olmadığını göreceğiz.
 
-1. `ubuntu` `/data.txt` 1 ile 10000 arasında rastgele bir sayı ile adlı bir dosya oluşturacak bir kapsayıcı başlatın.
+1. 1 `ubuntu` ile 10000 arasında rastgele bir sayı ile adlı bir `/data.txt` dosya oluşturacak bir kapsayıcıyı başlatma.
 
     ```bash
     docker run -d ubuntu bash -c "shuf -i 1-10000 -n 1 -o /data.txt && tail -f /dev/null"
     ```
 
-    Komutu hakkında merak ediyorsanız, bash kabuğu başlatılıyor ve iki komut (bunun neden olduğu `&&` ) çağrılıyor. İlk bölüm tek bir rastgele sayı seçer ve bunu öğesine yazar `/data.txt` . İkinci komut, kapsayıcının çalışmasını sağlamak için yalnızca bir dosya izliyor.
+    Komutu merak ediyor olabilir, bir bash kabuğu başlatıyor ve iki komutu (neden komutu var) `&&` başlatıyorsunuz? İlk bölüm tek bir rastgele sayı seçer ve bunu 'a `/data.txt` yazar. İkinci komut, kapsayıcıyı çalıştırmaya devam etmek için bir dosyayı izlemektir.
 
-1. Bunu, kapsayıcıyı almak için kullanarak çıktıyı görebileceğiniz doğrulayın `exec` . bunu yapmak için VS Code uzantısını açın ve **kabuk ekle** seçeneğine tıklayın. bu `exec` , VS Code terminali içindeki kapsayıcıda bir kabuğu açmak için kullanılır.
+1. Kapsayıcıya almak için kullanarak çıkışı `exec` gördüğünüzi onaylar. Bunu yapmak için, VS Code uzantısını açın ve Kabuk Ekle **seçeneğine** tıklayın. Bu, `exec` terminalde kapsayıcıda bir kabuk açmak için VS Code kullanılır.
 
-    ![clı 'yi ubuntu kapsayıcısına VS Code açın](media/attach_shell.png)
+    ![VS Code CLI'sini ubuntu kapsayıcısı içine açma](media/attach_shell.png)
 
-    Ubuntu kapsayıcısında bir kabuğu çalıştıran bir Terminal görürsünüz. Dosyanın içeriğini görmek için aşağıdaki komutu çalıştırın `/data.txt` . Bu terminali daha sonra yeniden kapatın.
+    Ubuntu kapsayıcısı içinde kabuk çalıştıran bir terminali görüyorsunuz. Dosyanın içeriğini görmek için aşağıdaki komutu `/data.txt` çalıştırın. Daha sonra bu terminali tekrar kapatın.
 
     ```bash
     cat /data.txt
     ```
 
-    Komut satırını tercih ediyorsanız, `docker exec` komutunu kullanarak aynı şekilde gerçekleştirebilirsiniz. Kapsayıcının KIMLIĞINI ( `docker ps` almak için kullanın) almanız ve aşağıdaki komutla içeriğini almanız gerekir.
+    Komut satırı tercih ederseniz komutunu kullanarak `docker exec` da aynı komutu kullanabilirsiniz. Kapsayıcının kimliğini (almak için `docker ps` kullanın) ve aşağıdaki komutla içeriği alasiniz.
 
     ```bash
     docker exec <container-id> cat /data.txt
     ```
 
-    Rastgele bir sayı görmeniz gerekir!
+    Rastgele bir sayı görüyor gerekir!
 
-1. Şimdi başka bir `ubuntu` kapsayıcı (aynı görüntü) başlatın ve aynı dosyaya sahip olmadığınız görürsünüz.
+1. Şimdi başka `ubuntu` bir kapsayıcıyı (aynı görüntü) başlatarak aynı dosyaya sahip olmadığınız bir durumla karşı karşınız.
 
     ```bash
     docker run -it ubuntu ls /
     ```
 
-    Ve göz atın! `data.txt`Orada dosya yok! Bunun nedeni, yalnızca ilk kapsayıcının karalama alanına yazılmasından kaynaklanır.
+    Ve şuna bakın! Dosya `data.txt` yok! Bunun nedeni yalnızca ilk kapsayıcı için sıfırdan alana yazıldığıdır.
 
-1. Devam edin ve komutu kullanarak ilk kapsayıcıyı kaldırın `docker rm -f` .
+1. Devam edin ve komutunu kullanarak ilk kapsayıcıyı `docker rm -f` kaldırın.
 
 ## <a name="container-volumes"></a>Kapsayıcı birimleri
 
-Önceki deneyle her bir kapsayıcının her başlatıldığında görüntü tanımından başlayacağını gördünüz. Kapsayıcılar dosya oluşturabilir, güncelleştirebilir ve silebilir, bu değişiklikler kapsayıcı kaldırıldığında ve tüm değişiklikler o kapsayıcıya yalıtılarak kaybedilir. Birimlerle, tüm bunu değiştirebilirsiniz.
+Önceki denemede her kapsayıcının her başlatıldığında görüntü tanımından başlat olduğunu görmüştük. Kapsayıcılar dosyaları oluşturabilir, güncelleştire ve silebilir ancak kapsayıcı kaldırıldığı zaman bu değişiklikler kaybolur ve tüm değişiklikler bu kapsayıcıya yalıtılır. Birimlerle bunların hepsini değiştirebilirsiniz.
 
-[Birimler](https://docs.docker.com/storage/volumes/) , kapsayıcının belirli dosya sistemi yollarını konak makinesine geri bağlama yeteneği sağlar. Kapsayıcıda bir dizin bağlanmışsa, bu dizindeki değişiklikler de ana makinede görülür. Aynı dizini kapsayıcının yeniden başlatmaları arasında bağlarsanız, aynı dosyaları görürsünüz.
+[Birimler,](https://docs.docker.com/storage/volumes/) kapsayıcının belirli dosya sistemi yollarını konak makineye geri bağlama olanağı sağlar. Kapsayıcıda bir dizin bağlı ise, konak makinede bu dizinde yapılan değişiklikler de görülür. Aynı dizini kapsayıcı yeniden başlatmaları arasında bağlarsanız aynı dosyaları da görebilirsiniz.
 
-İki ana birim türü vardır. Sonunda her ikisini de kullanacaksınız, ancak **adlandırılmış birimlerle** başlayacaksınız.
+İki ana birim türü vardır. sonunda her ikisini de kullanır, ancak adlandırılmış birimlerle **başlayacaktır.**
 
-## <a name="persist-your-todo-data"></a>Todo verilerinizi kalıcı hale getirin
+## <a name="persist-your-todo-data"></a>Todo verilerinizi kalıcı olarak koruma
 
-Varsayılan olarak, ToDo uygulaması verilerini adresinde bir [SQLite veritabanına](https://www.sqlite.org/index.html) depolar `/etc/todos/todo.db` . SQLite hakkında bilginiz yoksa, hiç kimse yok! Yalnızca tüm verilerin tek bir dosyada depolandığı ilişkisel bir veritabanıdır. Büyük ölçekli uygulamalar için en iyi yöntem olmasa da, küçük tanıtımlar için geçerlidir. Bunu daha sonra gerçek bir veritabanı altyapısına geçme hakkında konuşacağız.
+Varsayılan olarak, todo uygulaması verilerini bir [SQLite](https://www.sqlite.org/index.html) Veritabanında `/etc/todos/todo.db` depolar. SQLite hakkında bilginiz yoksa endişelenmeyin! Yalnızca tüm verilerin tek bir dosyada depolandığı ilişkisel bir veritabanıdır. Bu, büyük ölçekli uygulamalar için en iyi uygulama olsa da, küçük tanıtımlar için çalışır. Bunu daha sonra gerçek bir veritabanı altyapısına değiştirme hakkında konuşacağız.
 
-Veritabanı tek bir dosya haline getirilebileceği takdirde, bu dosyayı konakta kalıcı hale getirebiliyor ve bir sonraki kapsayıcının kullanımına sunmak istiyorsanız, en son kaldığınız yeri çekebilmelidir. Bir birim oluşturup (genellikle "bağlama" olarak adlandırılır) verileri verilerin depolandığı dizine ekleyerek, verileri kalıcı hale getirebilirsiniz. Kapsayıcı `todo.db` dosyaya yazarken, birimdeki konakta kalıcı hale getirilir.
+Veritabanının tek bir dosya olmasıyla, bu dosyayı konakta kalıcı hale gelip sonraki kapsayıcı için kullanılabilir hale geliyorsanız, en son kalan dosyayı alabilecektir. Bir birim oluşturarak ve verileri depolandığı dizine iliştirerek (genellikle "bağlama" olarak adlandırılır), verileri kalıcı olarak bulundurabilirsiniz. Kapsayıcı dosyaya `todo.db` yazdığında birim içinde konakta kalıcı olur.
 
-Belirtildiği gibi, **adlandırılmış bir birim** kullanacaksınız. Adlandırılmış bir birimi yalnızca bir veri demeti olarak düşünün. Docker, diskteki fiziksel konumu korur ve yalnızca birimin adını hatırlamanız gerekir. Birimi her kullandığınızda Docker doğru verilerin sağlandığından emin olur.
+Daha önce de belirtildiği gibi, adlı bir birim **kullan kullanırsiniz.** Adlandırılmış birimi bir veri demeti olarak düşünebilirsiniz. Docker diskte fiziksel konumun bakımını yapar ve yalnızca birimin adını hatırlamamız gerekir. Birimi her kullanımında Docker doğru verilerin sağ olduğundan emin olur.
 
-1. Komutunu kullanarak bir birim oluşturun `docker volume create` .
+1. komutunu kullanarak birim `docker volume create` oluşturun.
 
     ```bash
     docker volume create todo-db
     ```
 
-1. Kalıcı Birim kullanılmadan çalışmaya devam ettiği için, Docker görünümünde (veya ile) Todo uygulama kapsayıcısını bir kez daha durdurun `docker rm -f <id>` .
+1. Docker görünümünde (veya ile) todo uygulama kapsayıcısını bir kez daha durdurun çünkü hala kalıcı birimi `docker rm -f <id>` kullanmadan çalışıyor.
 
-1. Todo uygulama kapsayıcısını başlatın, ancak `-v` bir birim bağlama belirtmek için bayrağı ekleyin. adlandırılmış birimi kullanacaksınız ve ' a bağlayacaksınız. Bu, `/etc/todos` yolda oluşturulan tüm dosyaları yakalar.
+1. Todo uygulaması kapsayıcısı'nı başlatma, ancak birim `-v` bağlaması belirtmek için bayrağını ekleyin. Adlandırılmış birimi kullanır ve yolunda oluşturulan tüm `/etc/todos` dosyaları yakalayan birimine bağlarsiniz.
 
     ```bash
     docker run -dp 3000:3000 -v todo-db:/etc/todos getting-started
     ```
 
-1. Kapsayıcı başlatıldıktan sonra, uygulamayı açın ve yapılacaklar listenize birkaç öğe ekleyin.
+1. Kapsayıcı başladıktan sonra uygulamayı açın ve todo listenize birkaç öğe ekleyin.
 
-    ![Yapılacaklar listesine eklenen öğeler](media/items-added.png)
+    ![Todo listesine eklenen öğeler](media/items-added.png)
 
-1. ToDo uygulaması için kapsayıcıyı kaldırın. `docker ps`Kodu almak ve kaldırmak Için Docker görünümünü kullanın `docker rm -f <id>` .
+1. Todo uygulaması için kapsayıcıyı kaldırın. Kimliği almak ve ardından kaldırmak için Docker görünümünü veya `docker ps` `docker rm -f <id>` kullanın.
 
-1. Yukarıdaki komutu kullanarak yeni bir kapsayıcı başlatın.
+1. Yukarıdan aynı komutu kullanarak yeni bir kapsayıcı başlatabilirsiniz.
 
-1. Uygulamayı açın. Öğelerinizi hala listenizde görmeniz gerekir!
+1. Uygulamayı açın. Öğelerinizin hala listelerde olduğunu görüyor gerekir!
 
-1. Listenizi kullanıma alırken kapsayıcıyı kaldırın.
+1. Listenizi denetlemeyi bitirin ve kapsayıcıyı kaldırın.
 
-Yaşasın! Artık verilerin nasıl kalıcı hale getirileceğini öğrendiniz!
+Yaşasın! Şimdi verilerin nasıl kalıcı olduğunu öğrendiniz!
 
 > [!TIP]
-> Adlandırılmış birimler ve BIND takmaları (bir dakika içinde konuşduğumuz), varsayılan bir Docker motoru yüklemesi tarafından desteklenen iki ana birim türü olmakla kalmaz, NFS, SFTP, NetApp ve daha fazlasını desteklemek için kullanılabilecek birçok birim sürücü eklentisi vardır! Bu, özellikle de Sısınma, Kubernetes ve benzeri bir kümelenmiş ortamda kapsayıcı çalıştırmaya başladığınızda önemli olur.
+> Adlandırılmış birimler ve bağlamalar (bir dakika içinde bahsedecek), varsayılan Docker altyapısı yüklemesi tarafından desteklenen iki ana birim türüyken NFS, SFTP, NetApp ve daha fazlasını desteklemek için birçok birim sürücüsü eklentisi vardır! Bu durum özellikle Swarm, Kubernetes gibi kümelenmiş bir ortamdaki birden çok konakta kapsayıcı çalıştırmaya başladıktan sonra önemlidir.
 
-## <a name="dive-into-your-volume"></a>Haciminizi inceleyin
+## <a name="dive-into-your-volume"></a>Biriminizi inceleme
 
-Çok sayıda kişi sıklıkla "adlandırılmış bir birim kullandığım sırada Docker *gerçekten* verileri depoluyor mu?" sorusu ister. Kullanmak istiyorsanız `docker volume inspect` komutunu kullanabilirsiniz.
+Birçok kişi sıklıkla "Adlandırılmış birim kullanılırken *Docker* verilerimi gerçekten nerede depolar?" sorusunu sorar. Bilmek için komutunu `docker volume inspect` kullanabilirsiniz.
 
 ```bash
 docker volume inspect todo-db
@@ -130,20 +131,20 @@ docker volume inspect todo-db
 ]
 ```
 
-, `Mountpoint` Verilerin depolandığı diskteki gerçek konumdur. Çoğu makinede, konaktan bu dizine erişmek için kök erişiminizin olması gerektiğini unutmayın. Ancak, bu nerede!
+`Mountpoint`, diskte verilerin depolandığı gerçek konumtur. Çoğu makinede bu dizine konaktan erişmek için kök erişiminizin olması gerekir. Ancak tam da bu şekildedir!
 
 > [!NOTE]
-> **Doğrudan Docker Desktop üzerinde birim verilerine erişme** Docker Desktop 'ta çalışırken Docker komutları aslında makinenizde küçük bir VM içinde çalışmaktadır. *Bağlamanoktası* dizininin gerçek içeriğine bakmak isterseniz, önce VM 'nin içini almanız gerekir. WSL 2 ' de bu, bir WSL 2 içinde yer alabilir ve dosya Gezgini aracılığıyla erişilebilir.
+> **Birim verilerine doğrudan Docker Desktop'ta erişme** Docker Desktop'ta çalışırken Docker komutları aslında makinenizin küçük bir VM'sinde çalışıyor. *Mountpoint* dizininin gerçek içeriklerini görmek için öncelikle VM'nin içine girebilirsiniz. WSL 2'de, bu bir WSL 2 dağıtım içindedir ve bu dağıtıma Dosya Gezgini.
 
 ## <a name="recap"></a>Özet
 
-Bu noktada, yeniden başlatmalara devam eden çalışan bir uygulamanız var! Bu uygulamayı, yatırımlarınızın dışına gösterebilirsiniz ve sizi vizyonunuzu yakalayabilirler!
+Bu noktada, yeniden başlatmalara dayanacak, işleve sahip bir uygulamanız var! Bunu yatırımcılara gösterebilir ve vizyonunu yakalayacaklarını umarız!
 
-Ancak, daha önce her değişiklik için görüntüleri yeniden oluşturma işlemi biraz zaman alır. Değişiklikler yapmak için daha iyi bir yol var mı? BIND takmaları (daha önce sunduğumuz için), daha iyi bir yoldur! Şimdi bu görünüme göz atalım!
+Ancak daha önce her değişiklik için görüntülerin yeniden oluşturmanın uzun zaman alan bir süre olduğunu görmüştük. Değişiklik yapmak için daha iyi bir yol olması gerekir, değil mi? Bağlama bağlamaları (daha önce ima ettiysek) daha iyi bir yol vardır! Şimdi buna göz at bakalım!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Öğreticiye devam edin!
 
 > [!div class="nextstepaction"]
-> [BIND takar kullanma](use-bind-mounts.md)
+> [Bağlamaları kullanma](use-bind-mounts.md)

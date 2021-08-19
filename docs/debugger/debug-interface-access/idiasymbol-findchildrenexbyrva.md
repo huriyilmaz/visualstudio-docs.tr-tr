@@ -1,6 +1,6 @@
 ---
-description: Simgenin, belirtilen göreli sanal adreste (RVA) geçerli olan alt öğelerini alır.
-title: 'IDiaSymbol:: findChildrenExByRVA | Microsoft Docs'
+description: Belirtilen bir göreli sanal adreste (RVA) geçerli olan sembolün çocuklarını alır.
+title: IDiaSymbol::findChildrenExByRVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: cbc57c6c-7d64-4469-a114-1dd6671e5ec5
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a888c29663e4d5dc9e487c9d6df283c0c13cfbf
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c51a5ded5af919bd38cf5e83c2e86dd78246da31
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102156764"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074535"
 ---
 # <a name="idiasymbolfindchildrenexbyrva"></a>IDiaSymbol::findChildrenExByRVA
-Simgenin, belirtilen göreli sanal adreste (RVA) geçerli olan alt öğelerini alır.
+Belirtilen bir göreli sanal adreste (RVA) geçerli olan sembolün çocuklarını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,34 +39,34 @@ HRESULT findChildrenExByRVA (
 #### <a name="parameters"></a>Parametreler
  `symtag`
 
-'ndaki [SymTagEnum numaralandırmasında](../../debugger/debug-interface-access/symtagenum.md)tanımlandığı şekilde alınacak alt öğelerin sembol etiketlerini belirtir. `SymTagNull`Tüm alt öğelerin alınması için olarak ayarlayın.
+[in] SymTagEnum Numaralamada tanımlandığı gibi, alınabilecek [altların sembol etiketlerini belirtir.](../../debugger/debug-interface-access/symtagenum.md) Tüm `SymTagNull` çocukların alınsı için olarak ayarlayın.
 
  `name`
 
-'ndaki Alınacak alt öğelerin adını belirtir. `NULL`Tüm alt öğelerin alınması için olarak ayarlayın.
+[in] Alın eklenecek altların adını belirtir. Tüm `NULL` çocukların alınsı için olarak ayarlayın.
 
  `compareFlags`
 
-'ndaki Ad eşleştirme için uygulanacak karşılaştırma seçeneklerini belirtir. [NameSearchOptions numaralandırma](../../debugger/debug-interface-access/namesearchoptions.md) numaralandırmasındaki değerler tek başına veya birlikte kullanılabilir.
+[in] Ad eşleştirmeye uygulanacak karşılaştırma seçeneklerini belirtir. [NameSearchOptions Enumeration enumeration](../../debugger/debug-interface-access/namesearchoptions.md) değerleri tek başına veya birlikte kullanılabilir.
 
  `address`
 
-'ndaki RVA belirtir.
+[in] RVA'yı belirtir.
 
  `ppResult`
 
-dışı Alınan alt simgelerin listesini içeren bir [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) nesnesi döndürür.
+[out] Alınan [alt sembollerin listesini içeren bir IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- `S_OK`Simgenin en az bir alt öğesi bulunursa veya `S_FALSE` alt öğe bulunmazsa öğesini döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Sembolün en az bir alt adı bulunursa veya alt alt bilgi bulunamasa döndürür; aksi takdirde `S_OK` bir hata kodu `S_FALSE` döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Döndürülen yerel semboller, canlı Aralık bilgilerini içerir.
+ Döndürülen yerel semboller canlı aralık bilgilerini içerir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: dia2. h
+ Üst bilgi: Dia2.h
 
- Kitaplık: diaguid. lib
+ Kitaplık: diaguids.lib
 
  DLL: msdia100.dll
 

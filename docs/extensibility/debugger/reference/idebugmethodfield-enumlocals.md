@@ -1,6 +1,6 @@
 ---
-description: yönteminin seçili yerel değişkenleri için bir numaralayıcı oluşturur.
-title: IDebugMethodField::EnumLocals | Microsoft Docs
+description: Metodun seçili yerel değişkenleri için bir Numaralandırıcı oluşturur.
+title: 'IDebugMethodField:: Enumyereller | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2b9ea26c91f441ee5615e86bade7e1e412d59837e28d7fe3eedab06e715540c7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4f5b89689f4ba0cbd72941aaa688d44ff565b8c9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121339602"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122043368"
 ---
 # <a name="idebugmethodfieldenumlocals"></a>IDebugMethodField::EnumLocals
-yönteminin seçili yerel değişkenleri için bir numaralayıcı oluşturur.
+Metodun seçili yerel değişkenleri için bir Numaralandırıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,18 +45,18 @@ int EnumLocals(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-[in] Yerellerin hangi bağlamı veya kapsamı seçerek hata ayıklama adresini temsil eden [bir IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi.
+'ndaki Yerelleri alacağınız bağlamı veya kapsamı seçen hata ayıklama adresini temsil eden bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi.
 
 `ppLocals`\
-[out] Yerellerin [listesini temsil eden bir IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür; aksi takdirde, yerel ayar yoksa null değer döndürür.
+dışı Yereller listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür; Aksi takdirde, Yereller yoksa null değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, S_OK döndürür veya S_FALSE yerel dil yoksa bu işlevi döndürür. Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, S_OK döndürür veya Yereller yoksa S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Yalnızca verilen hata ayıklama adresini içeren blok içinde tanımlanan değişkenler numaralandı. Derleyici tarafından oluşturulan yereller dahil olmak üzere tüm yereller gerekli ise [EnumAllLocals yöntemini](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) çağırın.
+Yalnızca verilen hata ayıklama adresini içeren blok içinde tanımlanan değişkenler numaralandırılır. Derleyicinin ürettiği Yereller dahil tüm Yereller gerekliyse, [EnumAllLocals](../../../extensibility/debugger/reference/idebugmethodfield-enumalllocals.md) metodunu çağırın.
 
-Bir yöntem birden çok kapsam bağlamı veya blok içerebilir. Örneğin, aşağıdaki contrived yöntemi üç kapsam içerir: iki iç blok ve yöntem gövdesi.
+Bir yöntem, birden fazla kapsam bağlamı veya blok içerebilir. Örneğin, aşağıdaki contrived yöntemi üç kapsam, iki iç blok ve Yöntem gövdesinin kendisini içerir.
 
 ```csharp
 public void func(int index)
@@ -76,7 +76,7 @@ public void func(int index)
 }
 ```
 
-[IDebugMethodField nesnesi](../../../extensibility/debugger/reference/idebugmethodfield.md) yöntemin `func` kendisini temsil eder. Adrese `EnumLocals` ayarlanmış [bir IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) ile yöntemini çağırma, değişkeni içeren bir `Inner Scope 1` sabit değer `temp1` döndürür, örneğin.
+[IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) nesnesi, `func` yöntemin kendisini temsil eder. `EnumLocals`Yöntemi bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) kümesi ile çağırmak `Inner Scope 1` `temp1` , örneğin değişkenini içeren bir sabit listesi döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

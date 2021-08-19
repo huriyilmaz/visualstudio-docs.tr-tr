@@ -1,6 +1,6 @@
 ---
-title: ImportGroup öğesi | Microsoft Docs
-description: MSBuild, isteğe bağlı bir koşul altında gruplanmış bir içeri aktarma öğeleri koleksiyonu içeren ımporgroup öğesini nasıl kullandığını öğrenin.
+title: ImportGroup Öğesi | Microsoft Docs
+description: İsteğe MSBuild bir İçeri Aktarma öğeleri koleksiyonunu içermek için ImportGroup öğesini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
@@ -19,17 +19,17 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 883285c2178dce3c017ac8ea1503b402e6bbebcca3c8c62f924572dd29ba4ea0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7c21f9c967203db05a68e79436204aca9878fd42
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121443340"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143319"
 ---
 # <a name="importgroup-element"></a>ImportGroup öğesi
 
   
-`Import`İsteğe bağlı bir koşul altında gruplandırılan öğelerin bir koleksiyonunu içerir. Daha fazla bilgi için bkz. [Import öğesi (MSBuild)](../msbuild/import-element-msbuild.md).
+İsteğe bağlı `Import` bir koşul altında gruplu öğeler koleksiyonunu içerir. Daha fazla bilgi için [bkz. Import öğesi (MSBuild)](../msbuild/import-element-msbuild.md).
 
 ```xml
 <Project>
@@ -53,23 +53,23 @@ ms.locfileid: "121443340"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [Koşullar.](../msbuild/msbuild-conditions.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[İçeri Aktar](../msbuild/import-element-msbuild.md)|Bir proje dosyasının içeriğini başka bir proje dosyasına aktarır.|
+|[İçeri Aktar](../msbuild/import-element-msbuild.md)|Bir proje dosyasının içeriğini başka bir proje dosyasına içeri aktarır.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Project](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
+| [Project](../msbuild/project-element-msbuild.md) | Bir proje dosyasının gerekli MSBuild öğesi. |
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki kod örneği `ImportGroup` öğesini gösterir.
+ Aşağıdaki kod örneği, öğesini `ImportGroup` gösterir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -83,5 +83,5 @@ ms.locfileid: "121443340"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [Öğeler](../msbuild/msbuild-items.md)

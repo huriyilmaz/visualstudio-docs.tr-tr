@@ -13,14 +13,15 @@ ms.assetid: 26a15d5c-ddea-4977-af7f-d795ff09c7ad
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 128b28ff77515ac4b567ecdb8f536851da4d33ce
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 2ba02fee1d647dfd1813fdc0cf33588c553b5bce
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903378"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110299"
 ---
 # <a name="keybindings-element"></a>KeyBindings öğesi
 KeyBindings öğesi, KeyBinding öğelerini ve diğer KeyBindings gruplamalarını gruplar.

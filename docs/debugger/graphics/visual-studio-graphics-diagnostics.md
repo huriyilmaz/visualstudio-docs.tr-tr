@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5487210ddf84e139c434bb33342b6cbcd21a77bf87c86755b08dbb5e5698b856
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 04cc77650572f5e3539d4b53e4602e4c16259b61
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121311550"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090843"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama
 >[!NOTE]
@@ -28,13 +28,13 @@ Visual Studio *Grafik Tanılama,* Direct3D uygulamaları içinde işleme ve perf
 
  Bu Grafik Tanılama iş akışı, davranışının hemen analiz, paylaşılan veya daha sonra kaydedilebilir olması için, uygulamanın Direct3D'yi nasıl kullandığının (canlı, çalışırken) bir kaydını yakalayarak başlar. Yakalama oturumları, Visual Studio'den veya komut satırı yakalama aracı ile el ile başlatılabilir ve **dxcap.exe.** Yakalama oturumları, yakalama API'leri kullanılarak program aracılığıyla başlat Grafik Tanılama denetlenerek de olabilir.
 
- Bir yakalama oturumu kaydedildikten sonra içeriği Visual Studio *Grafik* Çözümleyicisi tarafından herhangi bir zamanda geri çalınarak, yakalanan kareler tam olarak aynı kaynaklar kullanılarak yeniden oluşturma ve uygulamanın kullandığı komutları işleme. Ardından, Grafik Çözümleyicisi penceresinde sağlanan araçlar kullanılarak yakalanan çerçevelerden herhangi biri ayrıntılı olarak analiz edilir. Bu araçlar herhangi bir Direct3D API çağrısını, kaynağı, işlem hattı durumu nesnesini, işlem hattı aşamasını ve hatta yakalanan çerçevede herhangi bir pikselin tüm geçmişini incelemek için kullanılabilir. Bu araçlar birlikte kullanılarak, yakalanan bir çerçevede nasıl göründüğüne bakarak ve uygulamanın kaynak kodunda, gölgelendiricilerde veya grafik varlıklarında kök nedenine kadar inerek işleme sorunu sezgisel bir şekilde keşfedebilirsiniz.
+ Bir yakalama oturumu kaydedildikten sonra içeriği Visual Studio *Grafik* Çözümleyicisi tarafından herhangi bir zamanda geri çalınarak, yakalanan kareler tam olarak aynı kaynaklar kullanılarak yeniden görüntülenebilir ve uygulamanın kullandığı komutlar işilebilir. Ardından, Grafik Çözümleyicisi penceresinde sağlanan araçlar kullanılarak yakalanan çerçevelerden herhangi biri ayrıntılı olarak analiz edilir. Bu araçlar herhangi bir Direct3D API çağrısını, kaynağı, işlem hattı durumu nesnesini, işlem hattı aşamasını ve hatta yakalanan çerçevede herhangi bir pikselin tüm geçmişini incelemek için kullanılabilir. Bu araçlar birlikte kullanılarak, yakalanan bir çerçevede nasıl göründüğüne bakarak ve uygulamanın kaynak kodunda, gölgelendiricilerde veya grafik varlıklarında kök nedenine kadar inerek işleme sorunu sezgisel bir şekilde keşfedebilirsiniz.
 
  Performans sorunlarını tanılamak için, yakalanan bir çerçeve Çerçeve Analizi aracı *kullanılarak analiz* edilir. Bu araç, uygulamanın Direct3D kullanma yolunu otomatik olarak değiştirerek ve tüm varyasyonları sizin için kıyaslaarak olası performans iyileştirmelerini keşfeder. Geçmişte, yalnızca hangilerinin fark yaratmış olduğunu bulmak için bu tür değişiklikleri el ile yapmış ve kıyaslamış olabilirsiniz. Çerçeve Analizi ile yalnızca ödemesi olduğunu zaten biliyor olduğunu yaptığınız değişiklikleri yapmak gerekir.
 
  Grafik Tanılama grafik açısından zengin Direct3D uygulamanıza en iyi şekilde bakmanıza ve çalıştırmanıza yardımcı olur.
 
- Neler sunduğu [hakkında daha](overview-of-visual-studio-graphics-diagnostics.md) fazla bilgi edinmek için Genel Visual Studio Grafik Tanılama devam eder.
+ Neler sunduğu [hakkında daha](overview-of-visual-studio-graphics-diagnostics.md) fazla bilgi edinmek için Genel bakış Visual Studio Grafik Tanılama devam eder.
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Genel Bakış](overview-of-visual-studio-graphics-diagnostics.md) İş akışı Grafik Tanılama araçları hakkında bilgi sağlar.
@@ -65,7 +65,7 @@ Visual Studio *Grafik Tanılama,* Direct3D uygulamaları içinde işleme ve perf
 
  [Komut Satırı Yakalama Aracı](command-line-capture-tool.md) Komut satırı yakalama aracını kullanarak grafik bilgilerini yakalama veya program aracılığıyla yakalama Visual Studio hızlı bir şekilde oynatın. Özellikle, otomasyon için veya bir test ortamında komut satırı yakalama aracını kullanabilirsiniz.
 
- [Örnekler](graphics-diagnostics-examples.md) Farklı tür işleme sorunlarını tanılamak için Grafik Tanılama araçları birlikte kullanmayı gösteren çeşitli örnekler.
+ [Örnekler](graphics-diagnostics-examples.md) Çeşitli örnekler, farklı türlerde işleme Grafik Tanılama tanılamak için Grafik Tanılama birlikte nasıl kullanabileceğini gösteriyor.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 

@@ -1,80 +1,81 @@
 ---
-title: 'Öğretici: Kullanmaya başlayın mac üzerinde Docker & Visual Studio Code ile Windows oluşturma'
-description: Docker ile çalışmayla ilgili temel bilgileri kapsayan çok adımlı bir öğretici Visual Studio Code.
+title: "öğretici: Windows veya Mac 'te docker & Visual Studio Code kullanmaya başlama"
+description: Visual Studio Code ile Docker ile çalışmanın temellerini kapsayan çok adımlı bir öğretici.
 ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
 ms.technology: vs-docker
+ms.custom: contperf-fy22q1
 ms.topic: tutorial
 ms.workload:
 - azure
 next_page: app.md
-ms.openlocfilehash: 11bf11a0f01cb4faf93fca702d18c0801ec5fe77
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: a3ab7377f17db208347f830162d536fbe3934b9e
+ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122053507"
+ms.lasthandoff: 08/18/2021
+ms.locfileid: "122334486"
 ---
-# <a name="tutorial-get-started-with-docker"></a>Öğretici: Kullanmaya başlayın Docker ile birlikte kullanma
+# <a name="tutorial-get-started-with-docker"></a>Öğretici: Docker 'ı kullanmaya başlama
 
-Bu öğreticide, Windows veya Mac'te veritabanıyla birden çok kapsayıcı kullanma ve Visual Studio Code kullanma da dahil olmak üzere Docker uygulamaları oluşturma ve dağıtma hakkında Docker Compose. Ayrıca kapsayıcılı uygulamanızı Azure'a dağıtın.
+bu öğreticide, bir veritabanı ile birden çok kapsayıcı kullanma ve Docker Compose kullanma dahil olmak üzere Visual Studio Code kullanarak Windows veya Mac 'te docker uygulamaları oluşturma ve dağıtma hakkında bilgi edineceksiniz. Ayrıca Kapsayıcılı uygulamanızı Azure 'a dağıtırsınız.
 
-Kapsayıcılar, tam işletim sisteminin tam boyutu ve ek yükü olmadan uygulama oluşturmak ve çalıştırmaya bir platform sağlayan sanal makineler (VM) gibi küçük sanallaştırılmış ortamlardır. [Docker,](https://www.docker.com) üçüncü taraf, endüstri standardı bir kapsayıcı sağlayıcısı ve kapsayıcı yönetim sistemidir. Docker Desktop makineniz üzerinde çalışır ve yerel kapsayıcılarınızı yönetir. Visual Studio VS Code gibi geliştirme araçları, kapsayıcılı uygulamalar oluşturmak, kapsayıcılara uygulama dağıtmak ve kapsayıcılar üzerinde çalışan uygulamalarda hata ayıklamak için yerel olarak yüklenmiş bir Docker Desktop hizmetiyle çalışmanızı sağlar.
+Kapsayıcılar, uygulama oluşturmaya ve çalıştırmaya yönelik bir platform sağlayan sanal makineler (VM 'Ler) gibi kompakt sanallaştırılmış ortamlardır, ancak tam işletim sisteminin tam boyutunu ve ek yükünü ortadan kaldırır. [Docker](https://www.docker.com) , üçüncü taraf, sektör standardı kapsayıcı sağlayıcısı ve kapsayıcı yönetim sistemidir. Docker Desktop makinenizde çalışır ve yerel Kapsayıcılarınızı yönetir. Visual Studio ve VS Code gibi geliştirme araçları, kapsayıcılı uygulamalar oluşturmak, kapsayıcılara uygulama dağıtmak ve kapsayıcılarınızdan çalışan uygulamalarda hata ayıklamak için yerel olarak yüklenen bir docker Desktop hizmeti ile çalışmanıza olanak sağlayan uzantılar sunmaktadır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 - [Visual Studio Code](https://code.microsoft.com/download)
-- Windows Mac [için](https://docs.docker.com/docker-for-windows/install/) Docker [Desktop.](https://docs.docker.com/docker-for-mac/install/)
+- [Windows](https://docs.docker.com/docker-for-windows/install/) veya [Mac](https://docs.docker.com/docker-for-mac/install/)için docker Desktop.
 
 ## <a name="start-the-tutorial"></a>Öğreticiyi başlatın
 
-Öğreticiye başlamanız için komutunu zaten çalıştırdıysanız tebrikler!  Açılmazsa, bir komut istemi veya bash penceresi açın ve komutu çalıştırın:
+Öğreticiyi kullanmaya başlamak için komutunu zaten çalıştırırsanız Tebrikler!  Aksi takdirde, bir komut istemi veya bash penceresi açın ve şu komutu çalıştırın:
 
 ```cli
 docker run -d -p 80:80 docker/getting-started
 ```
 
-Kullanılan birkaç bayrak olduğunu fark edesiniz. Bu bilgiler hakkında daha fazla bilgi:
+Kullanılan birkaç bayrak görürsünüz. Bunlar hakkında daha fazla bilgi aşağıda verilmiştir:
 
-- `-d` - Kapsayıcıyı ayrılmış modda (arka planda) çalıştırma
-- `-p 80:80` - konakta 80 olan bağlantı noktasını kapsayıcının 80. bağlantı noktasına eşle
-- `docker/getting-started` - kullanmak için görüntü
+- `-d` -kapsayıcıyı ayrılmış modda çalıştırın (arka planda)
+- `-p 80:80` -Konağın 80 bağlantı noktasını kapsayıcıda bağlantı noktası 80 ' e eşleyin
+- `docker/getting-started` -kullanılacak resim
 
 > [!TIP]
-> Tam komutu kısaltmak için tek karakterli bayrakları birleştirebilirsiniz.
-> Örneğin yukarıdaki komut şöyle yazabilirsiniz:
+> Tam komutu kısaltmak için tek karakter bayraklarını birleştirebilirsiniz.
+> Örnek olarak, yukarıdaki komutu şöyle yazılabilir:
 >
 > ```cli
 > docker run -dp 80:80 docker/getting-started
 > ```
 
-## <a name="the-vs-code-extension"></a>VS Code Uzantısı
+## <a name="the-vs-code-extension"></a>VS Code uzantısı
 
-Çok ileri gitmeden önce, makineniz üzerinde çalışan kapsayıcıların hızlı bir görünümünü VS Code Docker VS Code Uzantısı'nın vurgulanır. Kapsayıcı günlüklerine hızlı erişim sağlar, kapsayıcının içinde bir kabuk alasınız ve kapsayıcı yaşam döngüsünü (durdurma, kaldırma vb.) kolayca yönetmenizi sağlar.
+çok uzakta geçmeden önce, makinenizde çalışan kapsayıcıların hızlı bir görünümünü sağlayan docker VS Code uzantısını vurgulamak istiyoruz. Kapsayıcı günlüklerine hızlı erişim sağlar, kapsayıcının içindeki bir kabuğu almanızı sağlar ve kapsayıcı yaşam döngüsünü (durdurma, kaldırma, vb.) kolayca yönetmenizi sağlar.
 
-Uzantıya erişmek için buradaki yönergeleri [izleyin.](https://code.visualstudio.com/docs/containers/overview) Sol tarafta Docker simgesini kullanarak Docker görünümünü açın. Uzantıyı şimdi açarsanız, bu öğreticinin çalıştırlı olduğunu göreceğiz! Kapsayıcı adı `angry_taussig` (aşağıda) rastgele oluşturulmuş bir addır. Bu nedenle büyük olasılıkla farklı bir adınız olacak.
+Uzantıya erişmek için [buradaki](https://code.visualstudio.com/docs/containers/overview)yönergeleri izleyin. Sol taraftaki Docker simgesini kullanarak Docker görünümünü açın. Uzantıyı şimdi açarsanız, bu öğreticiyi çalıştırıyor olursunuz! Kapsayıcı adı ( `angry_taussig` aşağıdaki) rastgele oluşturulmuş bir addır. Bu nedenle muhtemelen büyük olasılıkla farklı bir ada sahip olacaksınız.
 
-![Docker Uzantısı'da çalışan öğretici kapsayıcısı](media/vs-tutorial-in-extension.png)
+![Docker uzantısında çalışan öğretici kapsayıcısı](media/vs-tutorial-in-extension.png)
 
 ## <a name="what-is-a-container"></a>Kapsayıcı nedir?
 
-Artık bir kapsayıcı çalıştırabilirsiniz, *kapsayıcı* nedir? Basitçe ifade edin; kapsayıcı, makineniz üzerinde konak makinede yer alan diğer tüm işlemlerden yalıtılmış olan başka bir işlemdir. Bu yalıtım, uzun [süredir Linux'ta olan](https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504)çekirdek ad alanlarını ve cgroup'ları kullanır. Docker, bu özellikleri kolay ve kolay bir şekilde yaklaşmak için çalıştı.
+Artık bir kapsayıcı çalıştırdığınıza göre, *kapsayıcı nedir?* Yalnızca bir kapsayıcı, makinenizde ana makinedeki diğer işlemlerden yalıtılmış başka bir işlemdir. Bu yalıtım, Linux 'ta uzun bir süredir bulunan [çekirdek ad alanları ve cgroups](https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504)özelliklerinden yararlanır. Docker bu özellikleri ulaşılabilir ve kullanımı kolay hale getirmek için çalıştı.
 
 > [!NOTE]
-> **Sıfırdan Kapsayıcı Oluşturma** Kapsayıcıların sıfırdan nasıl derlendiklerini görmek için Aqua Security'den Liz Aqua Security'nin Go'da sıfırdan kapsayıcı oluşturduğu bir video vardır:
+> **Sıfırdan kapsayıcılar oluşturma** Kapsayıcıların sıfırdan nasıl oluşturulduğunu görmek isterseniz, deniz mavisi güvenlik 'teki Liz, go 'dan sıfırdan bir kapsayıcı oluşturan bir videoya sahiptir:
 >
 > [!VIDEO https://www.youtube-nocookie.com/embed/8fi7uSYlOdc]
 
 ## <a name="what-is-a-container-image"></a>Kapsayıcı görüntüsü nedir?
 
-Kapsayıcıyı çalıştırarak yalıtılmış bir dosya sistemi kullanır. Bu özel dosya sistemi bir kapsayıcı görüntüsü **tarafından sağlanır.** Görüntü kapsayıcının dosya sistemi içerdiği için bir uygulamayı çalıştırmak için gereken her şeyi (tüm bağımlılıklar, yapılandırma, betikler, ikili dosyalar gibi) içermesi gerekir. Görüntü ayrıca kapsayıcı için ortam değişkenleri, çalıştıracak varsayılan komut ve diğer meta veriler gibi başka yapılandırmalar da içerir.
+Bir kapsayıcı çalıştırırken, yalıtılmış bir dosya sistemi kullanır. Bu özel dosya sistemi bir **kapsayıcı görüntüsü** tarafından sağlanır. Görüntü kapsayıcının dosya sistemini içerdiğinden, bir uygulamayı çalıştırmak için gereken her şeyi içermesi gerekir-tüm bağımlılıklar, yapılandırma, betikler, ikili dosyalar, vb. Görüntü Ayrıca, kapsayıcı için ortam değişkenleri, çalıştırılacak varsayılan komut ve diğer meta veriler gibi diğer yapılandırmaları da içerir.
 
-Daha sonra katmanlama, en iyi yöntemler ve daha fazlası gibi konuları kapsayan görüntüleri daha derinlemesine inceleeceğiz.
+Daha sonra, katman, en iyi uygulamalar ve daha fazlası gibi konuları kapsayan görüntüleri daha ayrıntılı bir şekilde inceleyeceğiz.
 
 > [!NOTE]
-> hakkında bilgi sahibiysanız `chroot` kapsayıcıyı genişletilmiş sürümü olarak `chroot` düşünabilirsiniz. Dosya sistemi yalnızca görüntüden gelir. Ancak, bir kapsayıcı yalnızca chroot kullanılırken ek yalıtım ek olarak kullanılamaz.
+> `chroot`' İ tanıyorsanız, bir kapsayıcıyı genişletilmiş bir sürümü olarak düşünün `chroot` . Dosya sistemi yalnızca görüntüden geliyor. Ancak, bir kapsayıcı yalnızca chroot kullanılırken kullanılabilir ek yalıtım ekler.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d6c2d5271c3fb6a944f33a880cc335d872ad626a359575cb3840a8a67bad26f6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b7030c8bc6f8df01579640f02fc22dce07f46d5f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121419186"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122090544"
 ---
 # <a name="processes-view"></a>İşlemler Görünümü
 Süreçler görünümü sisteminizdeki tüm etkin işlemlerin ağacını görüntüler. İşlem KIMLIĞI ve modül adı gösterilir. Genellikle yürütülen bir programa karşılık gelen belirli bir sistem işlemini incelemek istiyorsanız Işlemler görünümünü kullanın. Süreçler modül adlarıyla tanımlanır veya "sistem süreçler" olarak belirlenir.

@@ -13,11 +13,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 833a911a66e8aef5e04edb5b7fcf30c7188c5918
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 29bcc17f13fdc1aa7a713632fb24287713076e76c858c5f71a5323ec9f99bbb3
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89324393"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "122075270"
 ---
 WPF

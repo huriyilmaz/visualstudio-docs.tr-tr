@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: b8dd8c40aa1abe61589b1c8c71a9a83477db07fa7af90131bd2b1b5d06027a55
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d4968cd181a05cdfabce5eb3ae772afe42423291
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121356456"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047965"
 ---
 # <a name="map-dependencies-with-code-maps"></a>Bağımlılıkları kod eşlemeleriyle eşleme
 
@@ -122,7 +122,7 @@ Daha fazla bilgi edinin:
    Bu örnekte mor bağlantılar çağrı, noktalı bağlantılar başvuru, açık mavi bağlantılar ise alan erişimidir. Yeşil bağlantılar devralma olabilir veya birden fazla ilişki *türünü* (veya kategorisini) gösteren toplu bağlantılar *olabilir.*
 
    > [!TIP]
-   > Yeşil bir bağlantı görüyorsanız yalnızca devralma ilişkisi olduğu anlamına geliyor olabilir. Yöntem çağrıları da olabilir, ancak bunlar devralma ilişkisi tarafından gizlenir. Belirli bağlantı türlerini görmek için Filtreler bölmesindeki  onay kutularını kullanarak ilgilendiğiniz türleri gizleyebilirsiniz.
+   > Yeşil bir bağlantı görüyorsanız, bu yalnızca devralma ilişkisi olduğu anlamına geliyor olabilir. Yöntem çağrıları da olabilir, ancak bunlar devralma ilişkisi tarafından gizlenir. Belirli bağlantı türlerini görmek için Filtreler bölmesindeki  onay kutularını kullanarak ilgilendiğiniz türleri gizleyebilirsiniz.
 
 7. Bir öğe veya bağlantı hakkında daha fazla bilgi almak için bir araç ipucu görünene kadar işaretçiyi üzerine sürükleyin. Bu, kod öğesinin ayrıntılarını veya bağlantının temsil ettiği kategorileri gösterir.
 
@@ -138,7 +138,7 @@ Daha fazla bilgi edinin:
 
     ![Seçilen öğeleri yeni bir kod haritasında gösterme](../modeling/media/codemapsshowonnewmap.png)
 
-11. İçeren bağlam yeni haritaya iletir. Filtreler bölmesini kullanarak Çözüm Klasörlerini ve görmek istemeyebilirsiniz diğer **kapsayıcıları** gizleyebilirsiniz.
+11. İçeren bağlam yeni haritaya iletir. Filtreler bölmesini kullanarak Çözüm Klasörlerini ve görmek istemeyebilirsiniz diğer kapsayıcıları **gizleyebilirsiniz.**
 
     ![Görünümü basitleştirmek için kapsayıcıları filtreleme](../modeling/media/codemapsexpandnewgroups.png)
 
@@ -162,7 +162,7 @@ Bekleyen değişikliklere sahip bazı dosyalarda gerçekleştirmek için bir kod
 
    ![Eşlemek istediğiniz öğeleri seçin](../modeling/media/codemapsselectinsolutionexplorer.png)
 
-1. Uygulama araç **Çözüm Gezgini,** Kod **Haritasında Göster** Yeni Oluştur'Graph ![ Düğümlerden Düğmesi'ne ](../modeling/media/createnewgraphfromselectedbutton.gif) tıklayın. Veya bir veya bir öğe grubunun kısayol menüsünü açın ve Kod Haritasında **Göster'i seçin.**
+1. Uygulama araç **Çözüm Gezgini,** Kod **Haritasında Göster'i seçin** ![ Yeni Graph Seçili Düğümlerden Oluştur ](../modeling/media/createnewgraphfromselectedbutton.gif) Düğmesi. Veya bir veya bir öğe grubunun kısayol menüsünü açın ve Kod Haritasında **Göster'i seçin.**
 
    Ayrıca **Çözüm Gezgini**, **sınıf görünümü** veya **nesne tarayıcısı** öğeleri [Yeni](#add-a-code-map) veya varolan bir kod haritasına sürükleyebilirsiniz. Öğelerinizin üst hiyerarşisini dahil etmek için, öğeleri sürüklerken **CTRL** tuşuna basın ve basılı tutun ya da varsayılan eylemi belirtmek için kod Haritası araç çubuğundaki **üst öğeleri dahil et** düğmesini kullanın. derleme dosyalarını, **Windows gezgini** gibi Visual Studio dışından da sürükleyebilirsiniz.
 

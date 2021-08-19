@@ -1,6 +1,6 @@
 ---
-description: 'IDiaFrameData:: get_lengthSavedRegisters, yığında gönderilen kayıtlı yazmaçların bayt sayısını alır.'
-title: 'IDiaFrameData:: get_lengthSavedRegisters | Microsoft Docs'
+description: IDiaFrameData::get_lengthSavedRegisters yığına gönderilen kayıtlı yazmaçların bayt sayısını alınır.
+title: IDiaFrameData::get_lengthSavedRegisters | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: dfda4e91-9bfa-4b9d-9133-b73015bfa4d5
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 1dc5ebbd9cff11b6cc2f8e3b75fbea7fcb8db61e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: fc5f3ef7a27ef367c1f48bb17bf346322eff6434
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157723"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074863"
 ---
 # <a name="idiaframedataget_lengthsavedregisters"></a>IDiaFrameData::get_lengthSavedRegisters
-Yığına gönderilen kaydedilmiş yazmaçların bayt sayısını alır.
+Yığına gönderilen kaydedilmiş yazmazların bayt sayısını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,13 +35,13 @@ HRESULT get_lengthSavedRegisters (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Kaydedilen yazmaçların bayt sayısını döndürür.
+[out] Kaydedilen yazmazların bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemin döndürdüğü değer genellikle program dizesinin yorumu içinde kullanılır (program dizesinin tanımı için [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) metoduna bakın).
+ Bu yöntem tarafından döndürülen değer genellikle bir program dizesinin yorumlanmasında kullanılır (program dizesinin tanımı için [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) yöntemine bakın).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

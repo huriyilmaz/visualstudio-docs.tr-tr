@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: fb93d255a210c12625554ed184dcc38d97093c2c46feb838ecb33bb6b1f66cea
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c076f0f5fbf591e0ca7ca6f91a7700185a2aea05
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121397272"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142903"
 ---
 # <a name="stoptrackingandcleanup"></a>StopTrackingAndCleanup
 

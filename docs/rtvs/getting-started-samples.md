@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 3686a472c6a3d83158b42b253944fbdec87e22a4f4ba8771947da45d78572b44
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b52d548f250df47c120d656f763f75e56d3ee742
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121229240"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156376"
 ---
 # <a name="r-tools-for-visual-studio-sample-projects"></a>Visual Studio için R Araçları örnek projeleri
 

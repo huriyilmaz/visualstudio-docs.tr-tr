@@ -1,5 +1,5 @@
 ---
-title: UnregisterAssembly Task | Microsoft Docs
+title: UnregisterAssembly Görev | Microsoft Docs
 description: Com birlikte MSBuild için belirtilen derlemelerin kaydını silen UnregisterAssembly görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -21,16 +21,16 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 7111c6628193f1574597e20b00fef63746de3174e24cafa29f4f6cfb930c1cd5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 79b9b607de3a8b4d8eafe46817612c62995d3a51
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121369650"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142786"
 ---
 # <a name="unregisterassembly-task"></a>UnregisterAssembly görevi
 
-Com birlikte çalışma amacıyla belirtilen derlemeleri geri alma. [RegisterAssembly görevinin tersini gerçekleştirir.](../msbuild/registerassembly-task.md)
+Belirtilen derlemeleri COM birlikte çalışma amaçlarıyla geri alma. [RegisterAssembly görevinin tersini gerçekleştirir.](../msbuild/registerassembly-task.md)
 
 ## <a name="parameters"></a>Parametreler
 
@@ -40,7 +40,7 @@ Com birlikte çalışma amacıyla belirtilen derlemeleri geri alma. [RegisterAss
 |---------------|-----------------|
 |`Assemblies`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı parametre.<br /><br /> Kaydı silinen derlemeleri belirtir.|
 |`AssemblyListFile`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> bağlı parametre.<br /><br /> Görev ile görev arasındaki durum `RegisterAssembly` hakkında bilgi `UnregisterAssembly` içerir. Bu, görevin göreve kaydedileemeyen bir derlemenin kaydını silenleri denemesini `RegisterAssembly` önler.<br /><br /> Bu parametre belirtilirse ve `Assemblies` `TypeLibFiles` parametreleri yoksayılır.|
-|`TypeLibFiles`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Belirtilen tür kitaplığını belirtilen derlemeden geri alan. **Not:**  Bu parametre yalnızca tür kitaplığı dosya adı derleme adı farklı ise gereklidir.|
+|`TypeLibFiles`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Belirtilen tür kitaplığını belirtilen derlemeden kurtarıyor. **Not:**  Bu parametre yalnızca tür kitaplığı dosya adı derleme adı farklı ise gereklidir.|
 
 ## <a name="remarks"></a>Açıklamalar
 

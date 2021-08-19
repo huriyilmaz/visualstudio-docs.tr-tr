@@ -1,6 +1,6 @@
 ---
 title: Office çözümleri için olay günlüğü
-description: Çalışma zamanı tarafından yakalanan özel durum iletilerini görmek için Windows görüntüleyiciyi nasıl kullanabileceğiniz Office için Visual Studio Araçları öğrenin.
+description: Çalışma zamanı tarafından yakalanan özel durum iletilerini Windows için olay görüntüleyiciyi nasıl kullanabileceğiniz Office için Visual Studio Araçları öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 4a73923fa79fd0fe140ccb57029547d60628b52526ef45eeba69f7ca2b388ad1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9dedf882fcd149c2eecc04d712df19af980b5c48
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121394725"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122047094"
 ---
 # <a name="event-logging-for-office-solutions"></a>Office çözümleri için olay günlüğü
   Çözüm yükleme veya kaldırma işlemi Windows tarafından yakalanan özel durum iletilerini görmek için olay görüntüleyicisini Office [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] kullanabilirsiniz. Yükleme ve dağıtım sorunlarını çözmek için olay günlükleyiciden bu iletileri kullanabilirsiniz.

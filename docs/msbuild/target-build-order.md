@@ -1,6 +1,6 @@
 ---
-title: Hedef Derleme Sırası | Microsoft Docs
-description: Bir hedefin girişi başka bir hedefi MSBuild n çıkışına bağlı ise, hedef hedeflerinin hangi sırayla çalıştırılamayacaklarını belirtmeyi öğrenin.
+title: Hedef derleme sırası | Microsoft Docs
+description: tek bir hedefin girişi başka bir hedefin çıktısına bağımlıysa MSBuild hedeflerinin çalıştırıldığı sırayı belirtmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 05/02/2019
 ms.topic: conceptual
@@ -13,82 +13,82 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e2f5df6b5700127f6e10b8bb3f5fea758c1c1ca1ed5c86a9d88fa2331ca4dd0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e7f2f1cdbaefb282e43bf1c42bdf5855778549f7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121334048"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142877"
 ---
 # <a name="target-build-order"></a>Hedef derleme sırası
 
-Bir hedefe yapılan giriş başka bir hedefin çıkışına bağlı ise hedefler sıralanıyor. Hedeflerin çalıştırıma sırası belirtmek için bu öznitelikleri kullanabilirsiniz:
+Bir hedefin girişi, başka bir hedefin çıktısına bağımlıysa, hedefler sıralanmalıdır. Bu öznitelikleri, hedeflerin çalıştırıldığı sırayı belirtmek için kullanabilirsiniz:
 
-- `InitialTargets`. Bu öznitelik, hedefler komut satırı veya öznitelikte belirtilmiş olsa bile ilk `Project` olarak çalıştıracak hedefleri `DefaultTargets` belirtir.
+- `InitialTargets`. Bu `Project` öznitelik, hedefler komut satırında veya özniteliğinde belirtilmiş olsa bile ilk olarak çalışacak hedefleri belirtir `DefaultTargets` .
 
-- `DefaultTargets`. Bu `Project` öznitelik, bir hedef komut satırı üzerinde açıkça belirtilmezse çalıştıracak hedefleri belirtir.
+- `DefaultTargets`. Bu `Project` öznitelik, bir hedef açık olarak komut satırında belirtilmemişse hangi hedeflerin çalıştırılacağını belirtir.
 
-- `DependsOnTargets`. Bu `Target` öznitelik, bu hedefin çalıştırılamadan önce çalışması gereken hedefleri belirtir.
+- `DependsOnTargets`. Bu `Target` öznitelik, bu hedefin çalıştırılabilmesi için çalıştırılması gereken hedefleri belirtir.
 
-- `BeforeTargets` ve `AfterTargets` . Bu öznitelikler, bu hedefin belirtilen hedeflerden önce veya sonra çalışması gerektiğini `Target` belirtir (MSBuild 4.0).
+- `BeforeTargets` ve `AfterTargets` . bu `Target` öznitelikler, bu hedefin belirtilen hedeflerden önce veya sonra çalışması gerektiğini belirtir (MSBuild 4,0).
 
-Derlemede sonraki bir hedef buna bağlı olsa bile bir hedef hiçbir zaman derleme sırasında iki kez çalıştırılamaz. Bir hedef çalıştırlandıktan sonra, derlemeye olan katkısı tamamlanır.
+Bir hedef, derleme sırasında bir sonraki hedefe bağlı olsa bile, hiçbir şekilde bir derleme sırasında iki kez çalıştırılmaz. Bir hedef çalıştırıldığında, derleme katkısı tamamlanmıştır.
 
-Hedeflerin bir özniteliği `Condition` olabilir. Belirtilen koşul olarak değerlendirilirse `false` hedef yürütülmez ve derleme üzerinde hiçbir etkisi olmaz. Koşullar hakkında daha fazla bilgi için bkz. [Koşullar.](../msbuild/msbuild-conditions.md)
+Hedeflerin bir özniteliği olabilir `Condition` . Belirtilen koşul olarak değerlendirilirse `false` , hedef yürütülmez ve derleme üzerinde hiçbir etkisi olmaz. Koşullar hakkında daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).
 
 ## <a name="initial-targets"></a>İlk hedefler
 
-Project öğesinin özniteliği, komut satırı veya öznitelikte hedefler belirtilmiş olsa bile ilk `InitialTargets` olarak çalıştıracak hedefleri [](../msbuild/project-element-msbuild.md) `DefaultTargets` belirtir. İlk hedefler genellikle hata denetimi için kullanılır.
+`InitialTargets` [Project](../msbuild/project-element-msbuild.md) öğesinin özniteliği, hedefler komut satırında veya özniteliğinde belirtilmiş olsa bile öncelikle çalıştırılacak hedefleri belirtir `DefaultTargets` . İlk hedefler genellikle hata denetimi için kullanılır.
 
-Özniteliğin `InitialTargets` değeri noktalı virgülle ayrılmış, sıraılmış bir hedef listesi olabilir. Aşağıdaki örnek, hedefin `Warm` çalıştırı ve ardından hedef çalışır `Eject` olduğunu belirtir.
+Özniteliğin değeri, `InitialTargets` noktalı virgülle ayrılmış bir hedef listesi olabilir. Aşağıdaki örnek, `Warm` hedefin çalıştığını ve ardından `Eject` hedefin çalıştığını belirtir.
 
 ```xml
 <Project InitialTargets="Warm;Eject" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 ```
 
-İçe aktarılan projelerin kendi `InitialTargets` öznitelikleri olabilir. Tüm ilk hedefler birlikte toplanır ve sırayla çalıştırıldı.
+İçeri aktarılan projelerin kendi öznitelikleri olabilir `InitialTargets` . Tüm başlangıç hedefleri birlikte toplanır ve sırayla çalıştırılır.
 
-Daha fazla bilgi için, [bkz. How to: Specify which target to build first](../msbuild/how-to-specify-which-target-to-build-first.md).
+Daha fazla bilgi için bkz. [nasıl yapılır: önce hangi hedefin oluşturulacağını belirtme](../msbuild/how-to-specify-which-target-to-build-first.md).
 
 ## <a name="default-targets"></a>Varsayılan hedefler
 
-Project öğesinin özniteliği, bir hedef bir komut satırı içinde açıkça belirtilmezse hangi hedefin veya hedeflerin `DefaultTargets` yerleşik olduğunu belirtir. [](../msbuild/project-element-msbuild.md)
+`DefaultTargets` [Project](../msbuild/project-element-msbuild.md) öğesinin özniteliği, bir hedef açıkça bir komut satırında belirtilmemişse hangi hedefin veya hedeflerin derlenmediğini belirtir.
 
-Özniteliğin `DefaultTargets` değeri noktalı virgülle ayrılmış, sıraılmış varsayılan hedefler listesi olabilir. Aşağıdaki örnek, hedefin `Clean` çalıştırı ve ardından hedef çalışır `Build` olduğunu belirtir.
+Özniteliğin değeri, `DefaultTargets` noktalı virgülle ayrılmış, varsayılan hedeflerin sıralı bir listesi olabilir. Aşağıdaki örnek, `Clean` hedefin çalıştığını ve ardından `Build` hedefin çalıştığını belirtir.
 
 ```xml
 <Project DefaultTargets="Clean;Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 ```
 
-Komut satırına **-target** anahtarını kullanarak varsayılan hedefleri geçersiz kılabilirsiniz. Aşağıdaki örnek, hedefin `Build` çalıştırı ve ardından hedef çalışır `Report` olduğunu belirtir. Hedefleri bu şekilde belirttiğinizde varsayılan hedefler yoksayılır.
+Komut satırında **-target** anahtarını kullanarak varsayılan hedefleri geçersiz kılabilirsiniz. Aşağıdaki örnek, `Build` hedefin çalıştığını ve ardından `Report` hedefin çalıştığını belirtir. Bu şekilde hedefleri belirttiğinizde, varsayılan tüm hedefler yok sayılır.
 
  `msbuild -target:Build;Report`
 
-Hem ilk hedefler hem de varsayılan hedefler belirtilirse ve hiçbir komut satırı hedefi belirtilmezse, MSBuild önce ilk hedefleri çalıştırır ve ardından varsayılan hedefleri çalıştırır.
+hem ilk hedefler hem de varsayılan hedefler belirtilirse ve komut satırı hedefi belirtilmemişse, MSBuild önce ilk hedefleri çalıştırır ve ardından varsayılan hedefleri çalıştırır.
 
-İçe aktarılan projelerin kendi `DefaultTargets` öznitelikleri olabilir. Karşılaşılan `DefaultTargets` ilk öznitelik, hangi varsayılan hedeflerin çalıştıracaklarını belirler.
+İçeri aktarılan projelerin kendi öznitelikleri olabilir `DefaultTargets` . Karşılaşılan ilk `DefaultTargets` öznitelik, hangi varsayılan hedeflerin çalıştırılacağını belirler.
 
-Daha fazla bilgi için, [bkz. How to: Specify which target to build first](../msbuild/how-to-specify-which-target-to-build-first.md).
+Daha fazla bilgi için bkz. [nasıl yapılır: önce hangi hedefin oluşturulacağını belirtme](../msbuild/how-to-specify-which-target-to-build-first.md).
 
 ## <a name="first-target"></a>İlk hedef
 
-İlk hedefler, varsayılan hedefler veya komut satırı hedefleri yoksa, MSBuild proje dosyasında veya içe aktarılan proje dosyalarında karşılaştığı ilk hedefi çalıştırır.
+ilk hedef, varsayılan hedef veya komut satırı hedefi yoksa, MSBuild proje dosyasında veya içeri aktarılan proje dosyalarında karşılaştığı ilk hedefi çalıştırır.
 
 ## <a name="target-dependencies"></a>Hedef bağımlılıklar
 
-Hedefler, bağımlılık ilişkilerini açıklar. özniteliği, `DependsOnTargets` bir hedefin diğer hedeflere bağlı olduğunu gösterir. Örneğin,
+Hedefler, bağımlılık ilişkilerini birbirleriyle tanımlayabilir. `DependsOnTargets`Özniteliği bir hedefin diğer hedeflere bağlı olduğunu gösterir. Örneğin,
 
 ```xml
 <Target Name="Serve" DependsOnTargets="Chop;Cook" />
 ```
 
-MSBuild hedefin `Serve` hedefe ve hedefe bağlı olduğunu `Chop` `Cook` söyler. MSBuild, hedefi `Chop` çalıştırmadan önce `Cook` hedefi `Serve` çalıştırır.
+hedefin `Serve` `Chop` hedefe ve hedefe bağlı olduğunu MSBuild söyler `Cook` . MSBuild hedefi çalıştırır `Chop` ve hedefi `Cook` çalıştırmadan önce hedefi çalıştırır `Serve` .
 
 ## <a name="beforetargets-and-aftertargets"></a>BeforeTargets ve AfterTargets
 
-4 MSBuild 4.0'da ve özniteliklerini kullanarak hedef `BeforeTargets` `AfterTargets` sırayı belirtsiniz.
+MSBuild 4,0 ' de, ve özniteliklerini kullanarak hedef sırasını belirtebilirsiniz `BeforeTargets` `AfterTargets` .
 
-Aşağıdaki betiği göz önünde bulundurarak.
+Aşağıdaki betiği göz önünde bulundurun.
 
 ```xml
 <Project DefaultTargets="Compile;Link" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -101,7 +101,7 @@ Aşağıdaki betiği göz önünde bulundurarak.
 </Project>
 ```
 
-Hedeften sonra ancak hedeften önce çalışan bir ara hedef `Optimize` oluşturmak için aşağıdaki hedefi `Compile` `Link` öğesinde herhangi bir yere `Project` ekleyin.
+Hedeften sonra çalışan bir ara hedef oluşturmak için, `Optimize` `Compile` hedeften önce, `Link` aşağıdaki hedefi öğesinde bir yere ekleyin `Project` .
 
 ```xml
 <Target Name="Optimize"
@@ -110,28 +110,28 @@ Hedeften sonra ancak hedeften önce çalışan bir ara hedef `Optimize` oluştur
 </Target>
 ```
 
-## <a name="determine-the-target-build-order"></a>Hedef derleme siparişini belirleme
+## <a name="determine-the-target-build-order"></a>Hedef derleme sırasını belirleme
 
-MSBuild aşağıdaki gibi hedef derleme sırası belirler:
+MSBuild hedef derleme sırasını aşağıdaki gibi belirler:
 
-1. `InitialTargets` hedefler çalıştır.
+1. `InitialTargets` hedefler çalıştırılır.
 
-2. **-target** anahtarı tarafından komut satırına belirtilen hedefler çalıştırlanır. Komut satırı üzerinde hedef belirtmezsiniz, `DefaultTargets` hedefler çalıştırabilirsiniz. Hiçbiri yoksa, karşılaşılan ilk hedef çalıştırıldı.
+2. Komut satırında **-target** anahtarı tarafından belirtilen hedefler çalıştırılır. Komut satırında hiçbir hedef belirtmezseniz, `DefaultTargets` hedefler çalıştırılır. Hiçbiri yoksa, karşılaşılan ilk hedef çalıştırılır.
 
-3. `Condition`Hedefin özniteliği değerlendirilir. Özniteliği `Condition` mevcutsa ve olarak `false` değerlendirilirse, hedef yürütülmez ve derleme üzerinde başka bir etkisi yoktur.
+3. `Condition`Hedefin özniteliği değerlendirilir. `Condition`Öznitelik varsa ve olarak değerlendirilirse `false` , hedef yürütülmez ve derleme üzerinde başka etkiye sahip olmaz.
 
-   Koşullu hedefi içinde listelene veya `BeforeTargets` yine de belirtilen sırada `AfterTargets` yürüten diğer hedefler.
+   Koşullu hedefi ' de listeleyecek `BeforeTargets` veya `AfterTargets` hala tanımlanmış sırada yürütülen diğer hedefler.
 
-4. Hedef yürütülmeden veya atlanmadan önce, özniteliği hedefe uygulanmadıkça ve olarak değerlendirilmediği `DependsOnTargets` `Condition` sürece hedefin hedefleri `false` çalıştırıldı.
+4. Hedef yürütülmeden veya atlanmadan önce, `DependsOnTargets` `Condition` özniteliği hedefe uygulanmadığından ve olarak değerlendirilmediği takdirde, hedefleri çalıştırılır `false` .
 
    > [!NOTE]
-   > Çıkış öğeleri güncel olduğundan bir hedef yürütülmezse atlandı olarak kabul edilir (bkz. [artımlı derleme).](../msbuild/incremental-builds.md) Bu denetim, görevlerin hedef içinde yürütülmeden hemen önce yapılır ve hedeflerin yürütülmesini etkilemez.
+   > Bir hedef, çıkış öğeleri güncel olduğu için yürütülmediği kabul edilir (bkz. [Artımlı derleme](../msbuild/incremental-builds.md)). Bu denetim, hedef içinde görevleri yürütmeden önce yapılır ve hedeflerin yürütülme sırasını etkilemez.
 
-5. Hedef yürütülmeden veya atlanmadan önce, bir öznitelikte hedefi listelayan diğer `BeforeTargets` herhangi bir hedef çalıştırıldı.
+5. Hedef yürütülmeden veya atlanmadan önce, bir öznitelikte hedefi listeleyen diğer tüm hedefler `BeforeTargets` çalıştırılır.
 
-6. Hedef yürütülmeden önce özniteliği `Inputs` ve `Outputs` özniteliği karşılaştırıldı. Bu MSBuild, karşılık gelen giriş dosyasına veya dosyalara göre herhangi bir çıkış dosyasının güncel olmadığını belirlerse, MSBuild hedef yürütülür. Aksi MSBuild hedefi atlar.
+6. Hedef yürütülmeden önce `Inputs` özniteliği ve `Outputs` özniteliği karşılaştırılır. MSBuild, herhangi bir çıkış dosyasının ilgili giriş dosyası veya dosyalarına göre güncel olmadığını belirlerse, MSBuild hedefi yürütür. aksi takdirde, MSBuild hedefi atlar.
 
-7. Hedef yürütülür veya atlandıktan sonra, bir öznitelikte listelene diğer `AfterTargets` tüm hedefler çalıştırıldı.
+7. Hedef yürütüldükten veya atlandıktan sonra, bir özniteliğinde onu listeleyen diğer tüm hedefler `AfterTargets` çalıştırılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

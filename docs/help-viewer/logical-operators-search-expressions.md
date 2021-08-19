@@ -1,6 +1,6 @@
 ---
-title: Arama İfadelerindeki mantıksal işleçler (Yardım Görüntüleyicisi)
-description: Microsoft Yardım Görüntüleyicisi içinde arama ifadelerini iyileştirmek için mantıksal işleçler ve gelişmiş arama işleçlerini nasıl kullanacağınızı anlayın.
+title: Arama ifadelerinde mantıksal işleçler (Yardım Görüntüleyicisi)
+description: Mantıksal işleçleri ve gelişmiş arama işleçlerini kullanarak veri kaynaklarında arama ifadelerini iyileştirmeyi Microsoft Yardım Görüntüleyicisi.
 ms.custom: SEO-VS-2020
 ms.date: 11/02/2017
 ms.topic: reference
@@ -14,50 +14,50 @@ manager: jmartens
 ms.technology: vs-help-viewer
 ms.workload:
 - multiple
-ms.openlocfilehash: 5302c5a59595b98c601f98b1fbe6ca1168106f52aceb12081a4cf37875cf258e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0a3580bdc4d91d2f09fc066919aa5bc66755f23c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121358408"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122109701"
 ---
 # <a name="logical-and-advanced-operators-in-search-expressions"></a>Arama ifadelerinde mantıksal ve gelişmiş işleçler
 
-**Yardım görüntüleyicisindeki** yardım içeriği aramanızı iyileştirmek için mantıksal işleçleri ve gelişmiş arama işleçlerini kullanabilirsiniz.
+Yardım Görüntüleyicisi'nde Yardım içeriği aramanızı geliştirmek için mantıksal işleçleri ve gelişmiş arama **işleçlerini kullanabilirsiniz.**
 
 ## <a name="logical-operators"></a>Mantıksal işleçler
 
-Mantıksal işleçler, birden çok arama terimlerinin bir arama sorgusunda nasıl birleştirilmesi gerektiğini belirtir. Aşağıdaki tabloda, mantıksal işleçler ve, veya, DEĞIL ve YAKıNıNDA gösterilmektedir.
+Mantıksal işleçler, birden çok arama terimlerinin bir arama sorgusunda nasıl birleştir olacağını belirtir. Aşağıdaki tabloda AND, OR, NOT ve NEAR mantıksal işleçleri gösterir.
 
 |Arama yapmak için|Kullanın|Örnek|Sonuç|
 |-------------------|---------|-------------|------------|
-|Aynı makalede her iki terim|AND|DIB ve palet|Hem "DIB" hem de "palet" içeren konular.|
-|Bir makalede her iki terim|OR|Raster veya vektör|"Tarama" ya da "vektör" içeren konular.|
-|Aynı makalede ikinci terim olmadan ilk terim|NOT|"işletim sistemi" DOS DEĞIL|"İşletim sistemi" ("DOS" değil) içeren konular.|
-|Her iki terim de bir makalede birlikte yakın|KALEMIN|çekirdeğin YAKıNıNDA Kullanıcı|"Kernel" öğesinin yakın yakınına "user" içeren konular.|
+|Aynı makaledeki her iki terim de|AND|dib AND paleti|Hem "dib" hem de "palette" içeren konular.|
+|Makaledeki terimler|OR|raster OR vektörü|"Tarama" veya "vektör" içeren konular.|
+|Aynı makalede ikinci terim olmadan ilk dönem|NOT|"işletim sistemi" NOT DOS|"İşletim sistemi" içeren ancak "DOS" içeren konular.|
+|Her iki terim de bir makalede birbirine yakın|Yakın -ındaki|user NEAR kernel|"Çekirdek" yakınlığı içinde "kullanıcı" içeren konular.|
 
 > [!IMPORTANT]
-> Arama altyapısının bunları tanıması için tüm büyük harflerle mantıksal işleçler girmeniz gerekir.
+> Arama motorunun bunları tanıması için mantıksal işleçleri tüm büyük harflerle girmeniz gerekir.
 
 ## <a name="advanced-operators"></a>Gelişmiş işleçler
 
-Gelişmiş Arama işleçleri, arama terimini nerede araytığın bir makalesinde belirterek içerik Aramanızı iyileştirin. Aşağıdaki tabloda, kullanılabilen dört gelişmiş arama işleci açıklanmaktadır.
+Gelişmiş arama işleçleri, bir makalede arama teriminin aranma yeri belirterek içerik aramanızı daraltıyor. Aşağıdaki tabloda dört kullanılabilir gelişmiş arama işleci açık almaktadır.
 
 |Arama yapmak için|Kullanın|Örnek|Sonuç|
 |-------------------|---------|-------------|------------|
-|Makalenin başlığındaki bir terim|`title:`|`title:binaryreader`|Başlıklarında "BinaryReader" içeren konular.|
-|Kod örneğinde bir terim|`code:`|`code:readdouble`|Kod örneğinde "readDouble" içeren konular.|
-|Belirli bir programlama diline örnek olarak bir terim|`code:vb:`|`code:vb:string`|Visual Basic bir kod örneğinde "string" içeren konular.|
-|Belirli bir dizin anahtar sözcüğüyle ilişkili bir makale|`keyword:`|`keyword:readbyte`|"ReadByte" Dizin anahtar sözcüğüyle ilişkili konular.|
+|Makale başlığında bir terim|`title:`|`title:binaryreader`|Başlıklarında "binaryreader" içeren konular.|
+|Kod örneğinde terim|`code:`|`code:readdouble`|Kod örneğinde "readdouble" içeren konular.|
+|Belirli bir programlama dilinin örneğinde yer alan terim|`code:vb:`|`code:vb:string`|Bir kod örneğinde "dize" Visual Basic konu başlıkları.|
+|Belirli bir dizin anahtar sözcüğüyle ilişkili bir makale|`keyword:`|`keyword:readbyte`|"Readbyte" index anahtar sözcüğüyle ilişkili konular.|
 
 > [!IMPORTANT]
-> Gelişmiş arama işleçlerini, son iki nokta ile ve arama altyapısının bunları tanıması için iki nokta üst üste gelmeden önce boşluk olmadan girmeniz gerekir.
+> Arama motorunun bunları tanıması için iki nokta üst üste olmadan son iki nokta üst üste ile gelişmiş arama işleçleri girmeniz gerekir.
 
 ### <a name="programming-languages-for-code-examples"></a>Kod örnekleri için programlama dilleri
 
-`code:`Birkaç programlama dilinin içeriğini bulmak için işlecini kullanabilirsiniz. Belirli bir programlama diline yönelik örnekleri döndürmek için aşağıdaki programlama dili değerlerinden birini kullanın:
+çeşitli programlama `code:` dillerinin herhangi biri hakkında içerik bulmak için işleci kullanabilirsiniz. Belirli bir programlama diline yönelik örnekler dönmek için aşağıdaki programlama dili değerlerinden birini kullanın:
 
-|Programlama Dili|Arama işleci sözdizimi|
+|Programlama Dili|Arama işleci söz dizimi|
 | - |---------|
 |Visual Basic|`code:vb`<br/>`code:visualbasic`|
 |C#|`code:c#`<br/>`code:csharp`|
@@ -67,9 +67,9 @@ Gelişmiş Arama işleçleri, arama terimini nerede araytığın bir makalesinde
 |XAML|`code:xaml`|
 
 > [!NOTE]
-> `code:`İşleci yalnızca bir programlama dili etiketiyle işaretlenmiş içeriği bulur. Bu, kod olarak genel olarak işaretlenmiş içeriğin aksine.
+> işleci, genel olarak kod olarak işaretlenmiş içeriğin aksine yalnızca bir programlama `code:` dili etiketiyle işaretlenmiş içeriği bulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: konu arama](../help-viewer/find-topics.md)
+- [Nasıl yapılanlar: Konu arama](../help-viewer/find-topics.md)
 - [Microsoft Yardım Görüntüleyicisi](../help-viewer/overview.md)

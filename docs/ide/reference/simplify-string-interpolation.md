@@ -1,6 +1,6 @@
 ---
 title: Dize ilişkilendirmesini basitleştirme
-description: Dize ilişkilendirmeyi basitleştirmek için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+description: Dize ilişkilendirmesini basitleştirmek için Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/10/2020
 ms.topic: reference
@@ -13,34 +13,34 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 74dfca28e59ddfe0b8d699ea742fdc2f23702885a5e55cc2d74bb7dadd58937c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c9b4c1c6caf43bcdb51ecb09e7dc09ebad3ab1d4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121446874"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143566"
 ---
-# <a name="simplify-string-interpolation-refactoring"></a>Dize ilişkilendirme yeniden düzenlemesi Basitleştir
+# <a name="simplify-string-interpolation-refactoring"></a>Dize ilişkilendirme yeniden düzenlemesini basitleştirme
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Bir [dize ilişkilendirmeyi](/dotnet/csharp/tutorials/string-interpolation)basitleştirmenizi sağlar.
+**Ne:** Bir dize ilişkilendirmesini [basitleştirmenizi sağlar.](/dotnet/csharp/tutorials/string-interpolation)
 
-**Ne zaman:** Basitleştirilen bir dize ilişkilendirmeden sahipsiniz.
+**Ne zaman:** Basitleştirilmiş bir dize ilişkilendirmeye sahipsiniz.
 
-**Neden:** Bir dize ilişkilendirmesiyle basitleştirmek, daha fazla açıklık ve kısa sözdizimi sağlayabilir. Bu yeniden düzenleme aracı, el ile yapmak yerine görevi otomatik olarak gerçekleştirir.
+**Neden:** Dize ilişkilendirmesini basitleştirmek daha net ve kısa söz dizimi sağlar. Bu yeniden düzenleme aracı, görevi el ile yapmak zorunda kalmadan otomatik olarak gerçekleştirecek.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Giriş işaretini dize ilişkilendirme üzerine yerleştirin:
+1. Dize ilişkilendirmesi üzerine caret'inizi yer:
 
-2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
 
-3. **Ilişkilendirmeyi Basitleştir** ' i seçin
+3. İlişki **ilişkilendirmeyi basitleştir'i seçin**
 
     ![Dize ilişkilendirmesini basitleştirme](media/simplify-string-interpolation.png)
 

@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama altyapısının (DE) hangi program veya program düğümüne bu programda hata ayıklaması için kullanılacağını söyler.
-title: 'IDebugProgramEngines2:: SetEngine | Microsoft Docs'
+description: Programa veya program düğümüne, bu programda hata ayıklamak için hangi hata ayıklama altyapısını (DE) kullanabileceğini söyler.
+title: IDebugProgramEngines2::SetEngine | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: c05857ee-89cf-455e-8f1e-300cce4a2eab
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e938cd63c88d0d58866b36528a1342983dc457f1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 04df0fe2c61b28eeb44ded883df4b0053633da0d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084187"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126433"
 ---
 # <a name="idebugprogramengines2setengine"></a>IDebugProgramEngines2::SetEngine
-Hata ayıklama altyapısının (DE) hangi program veya program düğümüne bu programda hata ayıklaması için kullanılacağını söyler.
+Programa veya program düğümüne, bu programda hata ayıklamak için hangi hata ayıklama altyapısını (DE) kullanabileceğini söyler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,10 +43,10 @@ int SetEngine(
 
 ## <a name="parameters"></a>Parametreler
 `guidEngine`\
-'ndaki DE öğesinin GUID 'SI.
+[in] DE'nin GUID'si.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)

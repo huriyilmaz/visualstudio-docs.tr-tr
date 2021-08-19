@@ -13,14 +13,15 @@ ms.assetid: a15767f1-5a3d-44f5-8c77-7b0f1157f340
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c3149b55c2b5b3a5ca666fbd780e4efbd03ef22
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 1bac4730717257954144569c9a557c416178000f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958069"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143579"
 ---
 # <a name="replace-command"></a>Değiştir Komutu
 Dosyalardaki metni **Bul ve Değiştir** penceresinin **dosyaları değiştir** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak değiştirir.
@@ -107,5 +108,5 @@ Bu örnek `btnSend` , `btnSubmit` tüm açık belgelerde ile değiştirilir.
 - [Metin Bulma ve Değiştirme](../../ide/finding-and-replacing-text.md)
 - [Komut penceresi](../../ide/reference/command-window.md)
 - [Bul/komut kutusu](../../ide/find-command-box.md)
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

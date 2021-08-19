@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4c42edbaaacc05b56ee9debdfcbee8623895717ed75fe365277038f6f609f305
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 571845c313a0712a10383a1cb718fea4bc4817f2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392750"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122075300"
 ---
 # <a name="run-code-analysis-manually-for-net"></a>.NET için kod analizini el ile çalıştırın
 varsayılan olarak, .NET Compiler Platform ("roslyn") çözümleyicileri, derleme sırasında ve canlı analizler yaparak C# veya Visual Basic kodunuzu sizin yazarken analiz eder. Bu nedenle normalde Kod analizini el ile tetiklemeniz gerekmez. Ancak, Kod analizini el ile tetiklemek isteyebileceğiniz bazı senaryolar vardır:

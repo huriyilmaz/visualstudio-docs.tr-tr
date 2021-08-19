@@ -1,6 +1,6 @@
 ---
 title: Hedefin görev öğesi (MSBuild) | Microsoft Docs
-description: MSBuild hedefinin bir örneğini oluşturan ve yürüten MSBuild hedefinin görev öğesi hakkında bilgi edinin.
+description: bir MSBuild görevinin örneğini oluşturan ve yürüten MSBuild hedefinin görev öğesi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 03/13/2017
 ms.topic: reference
@@ -16,18 +16,19 @@ ms.assetid: d82e2485-e5f0-4936-a357-745bacccc299
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: a4b8e3cb3acccc2e7ae4c6c2d93353bec79a3690
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c95fc838337b5e1af288312daf840ac9c394b2dc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99966051"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142838"
 ---
 # <a name="task-element-of-target-msbuild"></a>Hedefin görev öğesi (MSBuild)
 
-MSBuild görevi örneğini oluşturur ve yürütür. Öğe adı, oluşturulmakta olan görevin adına göre belirlenir.
+MSBuild bir görevin örneğini oluşturur ve yürütür. Öğe adı, oluşturulmakta olan görevin adına göre belirlenir.
 
  \<Project> \<Target>
 
@@ -63,7 +64,7 @@ MSBuild görevi örneğini oluşturur ve yürütür. Öğe adı, oluşturulmakta
 
 | Öğe | Açıklama |
 | - | - |
-| [Hedef](../msbuild/target-element-msbuild.md) | MSBuild görevleri için kapsayıcı öğesi. |
+| [Hedef](../msbuild/target-element-msbuild.md) | MSBuild görevler için kapsayıcı öğesi. |
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -93,4 +94,4 @@ MSBuild görevi örneğini oluşturur ve yürütür. Öğe adı, oluşturulmakta
 
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)

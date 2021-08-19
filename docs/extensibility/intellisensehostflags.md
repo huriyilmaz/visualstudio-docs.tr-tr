@@ -1,6 +1,6 @@
 ---
 title: IntelliSenseHostFlags | Microsoft Docs
-description: IntelliSenseHostFlags numaralama, IntelliSense konak bayraklarını belirtir. Bu makalede enum değerleri açıklanmıştır.
+description: IntelliSenseHostFlags numaralandırması, IntelliSense ana bilgisayar bayraklarını belirtir. Bu makalede, Enum değerleri açıklanmaktadır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,15 +16,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0672f7a4d8788c0efac9e11b5ae3359338791ebbf572fed0a9b12d0e185f00b8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4ca23fb8a388619afda5b23f437a87627e05baea
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121376462"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122050253"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
-IntelliSense konak bayraklarını belirtir.
+IntelliSense ana bilgisayar bayraklarını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,14 +43,14 @@ enum IntellisenseHostFlags
 
 |Üyeler|Açıklama|
 |-------------|-----------------|
-|`IHF_READONLYCONTEXT`|Bağlam arabelleği salt okunur.|
-|`IHF_NOSEPARATESUBJECT`|Konu metni yok. Bağlam arabelleği IntelliSense hedefi içerir (anlamına `!IHF_READONLYCONTEXT` gelir).|
-|`IHF_SINGLELINESUBJECT`|Konu metni çok satırlı değildir.|
-|`IHF_FORCECOMMITTOCONTEXT`|ile `CanCommitIntoReadOnlyBuffer` aynı.|
-|`IHF_OVERTYPE`|Düzenleme (konu veya bağlam) üzerine yazma modunda yapılmalı.|
+|`IHF_READONLYCONTEXT`|Bağlam arabelleği salt okunurdur.|
+|`IHF_NOSEPARATESUBJECT`|Konu metni yok. Bağlam arabelleği IntelliSense-target (anlamına gelir `!IHF_READONLYCONTEXT` ) içerir.|
+|`IHF_SINGLELINESUBJECT`|Konu metni çok satırlı özellikli değil.|
+|`IHF_FORCECOMMITTOCONTEXT`|Aynı `CanCommitIntoReadOnlyBuffer` .|
+|`IHF_OVERTYPE`|Düzenlemenin (konu veya bağlamda) üzerine yazma modunda yapılması gerekir.|
 
 ## <a name="requirements"></a>Gereksinimler
- SingleFileeditor.idl
+ SingleFileeditor. IDL
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.TextManager.Interop>
