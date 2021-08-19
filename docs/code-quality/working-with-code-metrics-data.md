@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: d68f8b43e675aa3e07b392ca8e0dfa77232245b0d8e652ee6570cd3869350e5c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 316f03d737f2e7d294eb5d743496652f8635d58d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121405389"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113958"
 ---
 # <a name="use-the-code-metrics-results-window"></a>Kod Ölçümleri Sonuçları penceresini kullanma
 
@@ -57,7 +57,7 @@ Filtre  açılan kutusu, sonuç sütunlarının adlarını içerir. Bir filtre t
 
 3. Maksimum **'a** görüntülenecek maksimum değeri yazın.
 
-4. Filtre **Uygula düğmesine** tıklayın.
+4. Filtre Uygula **düğmesine** tıklayın.
 
 5. Sonuç ayrıntılarını görmek için hiyerarşi ağacını genişletin.
 
@@ -81,7 +81,7 @@ Kod Ölçümleri Sonuçları penceresinden sonuç sütunları **ekleyebilir veya
 
 ## <a name="copy-data-to-the-clipboard-or-excel"></a>Panoya veya panoya veri Excel
 
-Her veri sütunlarının adı ve değeri için bir satır içeren bir metin dizesi olarak seçili bir kod ölçümü satırı seçerek panoya kopyalayabilirsiniz. Ayrıca tüm kod ölçümleri **sonuçlarını bir Microsoft Excel** elektronik tablosuna dışarı aktararak Seçimi Aç'a Excel tıklayabilirsiniz.
+Her veri sütunlarının adı ve değeri için bir satır içeren bir metin dizesi olarak, seçilen bir kod ölçümü satırı seçerek panoya kopyalayabilirsiniz. Ayrıca tüm kod ölçümleri **sonuçlarını bir Microsoft Excel** elektronik tablosuna dışarı aktararak Seçimi Aç'a Excel tıklayabilirsiniz.
 
 ## <a name="create-a-work-item-based-on-code-metric-results"></a>Kod ölçümü sonuçlarını temel alan bir iş öğesi oluşturma
 

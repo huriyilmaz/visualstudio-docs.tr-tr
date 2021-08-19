@@ -1,6 +1,6 @@
 ---
-description: Hatayı açıklayan kesme noktası hata çözümünü alır.
-title: 'IDebugErrorBreakpoint2:: GetBreakpointResolution | Microsoft Docs'
+description: Hatayı açıklayan kesme noktası hata çözümlemesi alır.
+title: IDebugErrorBreakpoint2::GetBreakpointResolution | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8106a6572009f02eb340d7987c5b984b50e647ef8a9bb43f34cfe96351e1484a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bdddec920dd23bb6bf4d2d9d0c1cf487a1824d4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417333"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089088"
 ---
 # <a name="idebugerrorbreakpoint2getbreakpointresolution"></a>IDebugErrorBreakpoint2::GetBreakpointResolution
-Hatayı açıklayan kesme noktası hata çözümünü alır.
+Hatayı açıklayan kesme noktası hata çözümlemesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int GetBreakpointResolution(
 
 ## <a name="parameters"></a>Parametreler
 `ppErrorResolution`\
-dışı Hatayı açıklayan bir [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) nesnesi döndürür.
+[out] Hatayı açıklayan [bir IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)

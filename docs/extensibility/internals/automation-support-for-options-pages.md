@@ -1,6 +1,6 @@
 ---
-title: Seçenekler Sayfaları için Otomasyon Desteği | Microsoft Docs
-description: VSPackage'larda özel Araç Seçenekleri sayfalarınızı otomatik otomasyon modeline Visual Studio öğrenin.
+title: Seçenekler sayfaları için Otomasyon desteği | Microsoft Docs
+description: Visual Studio otomasyon modeli için kullanılabilir vspackages içindeki özel araç seçenekleri sayfalarınızı nasıl yapacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,30 +14,30 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f8157f94121799d9b75874f4a5ee9a4724162247c9ff8dea3bdf52ff87e210d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 789239eb2d11ed2abaec3d031dd7bce0da2cbfce
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121432728"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159275"
 ---
-# <a name="automation-support-for-options-pages"></a>Seçenekler sayfaları için otomasyon desteği
-VSPackage'lar'  içinde Araçlar  menüsüne **(Araçlar** Seçenekler sayfaları) özel Seçenekler iletişim kutuları sağlar ve bunları otomasyon modeli için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanılabilir hale ayarlayabilir.
+# <a name="automation-support-for-options-pages"></a>Seçenekler sayfaları için Otomasyon desteği
+VSPackages, ' de **Araçlar** menüsüne (**Araçlar seçenekleri** sayfaları) özel **Seçenekler** iletişim kutuları sunabilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve bunları otomasyon modeli için kullanılabilir hale getirir.
 
 ## <a name="tools-options-pages"></a>Araçlar Seçenekler sayfaları
- Bir Araç **Seçenekleri sayfası oluşturmak** için VSPackage, vsPackage'ın yöntemi uygulaması aracılığıyla ortama döndürülen bir kullanıcı denetimi uygulaması <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> sağlamalıdır. (Veya yönetilen kod için <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> yöntemi.)
+ Bir **araç seçenekleri** sayfası oluşturmak için, bir VSPackage, yöntemin VSPackage 'un uygulamasıyla bir kullanıcı denetimi uygulamasını döndürmelidir <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> . (Veya, yönetilen kod için <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> yöntemi için.)
 
- Otomasyon modeli aracılığıyla bu yeni sayfaya erişim izni vermek isteğe bağlıdır ancak kesinlikle teşvik edilecektir. Bunu aşağıdaki adımlarla yapabilirsiniz:
+ Bu yeni sayfaya otomasyon modeli aracılığıyla erişime izin vermek için isteğe bağlıdır, ancak önemle önerilir. Bunu aşağıdaki adımlarla yapabilirsiniz:
 
-1. <xref:EnvDTE._DTE.Properties%2A>IDispatch türetilmiş bir nesnenin uygulaması aracılığıyla nesneyi genişletin.
+1. <xref:EnvDTE._DTE.Properties%2A>Nesneyi IDispatch ile türetilmiş bir nesnenin uygulamasıyla genişletin.
 
-2. Yöntemin bir uygulamasını <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> (veya yönteminin yönetilen kodu <xref:Microsoft.VisualStudio.Shell.Package.GetAutomationObject%2A> için) IDispatch türetilmiş nesnesine geri döner.
+2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A>Metodun (veya yönetilen kod için) bir uygulamasını <xref:Microsoft.VisualStudio.Shell.Package.GetAutomationObject%2A> IDispatch 'ten türetilmiş nesneye döndürün.
 
-3. Otomasyon tüketicisi özel bir Seçenek özellik sayfasında yöntemini çağırsa, ortam özel Araçlar Seçenekleri sayfasının otomasyon uygulamasını almak <xref:EnvDTE._DTE.Properties%2A> için yöntemini  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> kullanır. 
+3. Bir Otomasyon tüketicisi <xref:EnvDTE._DTE.Properties%2A> özel bir **seçenek** özelliği sayfasında yöntemini çağırdığında, ortam <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetAutomationObject%2A> yöntemini kullanarak özel bir **araç seçenekleri** sayfasının otomasyon uygulamasını elde eder.
 
-4. VsPackage otomasyon nesnesi daha sonra tarafından döndürülen her bir sağlamak <xref:EnvDTE.Property> için <xref:EnvDTE._DTE.Properties%2A> kullanılır.
+4. VSPackage Otomasyon nesnesi, tarafından döndürülen her bir sağlamak için kullanılır <xref:EnvDTE.Property> <xref:EnvDTE._DTE.Properties%2A> .
 
-   Özel Araçlar Seçenekleri sayfasını uygulayan **bir örnek için** bkz. [VSSDK Örnekleri](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
+   Özel bir **Araçlar Seçenekler** sayfası uygulayan bir örnek için bkz. [VSSDK örnekleri](https://github.com/Microsoft/VSSDK-Extensibility-Samples).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Proje nesnelerini açığa çıkarma](../../extensibility/internals/exposing-project-objects.md)
+- [Proje nesnelerini kullanıma sunma](../../extensibility/internals/exposing-project-objects.md)

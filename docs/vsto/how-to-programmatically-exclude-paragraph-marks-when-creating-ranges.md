@@ -1,6 +1,6 @@
 ---
 title: Aralıkları programlama yoluyla oluştururken paragraf işaretlerini hariç tut
-description: Bir Microsoft Word belgesinde aralıklar oluştururken programlama yoluyla paragraf işaretlerini nasıl dışarıda bırakacağınızı öğrenin.
+description: bir Microsoft Word belgesinde aralıklar oluştururken program aracılığıyla paragraf işaretlerini nasıl dışarıda bırakacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -16,14 +16,15 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: c0929ccf3bb2567099dc7f3b795ad2257da0edb3
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: b5dbe9a51a41cca82dad43207eb103e51c6f1797
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107825803"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148070"
 ---
 # <a name="how-to-programmatically-exclude-paragraph-marks-when-creating-ranges"></a>Nasıl yapılır: Aralık oluştururken program aracılığıyla paragraf işaretlerini hariç tutma
   <xref:Microsoft.Office.Interop.Word.Range>Paragrafı temel alan bir nesne oluşturduğunuzda, paragraf işaretleri gibi tüm yazdırılamayan karakterler aralığa dahil edilir. Kaynak paragraftan bir hedef paragrafa metin eklemek isteyebilirsiniz. Hedef paragrafı ayrı paragraflara bölmek istemiyorsanız, önce paragraf işaretini kaynak paragrafından kaldırmanız gerekir. Ayrıca, paragraf biçimlendirme bilgileri paragraf işareti içinde depolandığından, aralığı varolan bir paragrafa eklediğinizde bunu dahil etmek istemeyebilirsiniz.
@@ -41,7 +42,7 @@ ms.locfileid: "107825803"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet27":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet27":::
 
-     Aşağıdaki kod örneği, uygulama düzeyinde bir VSTO eklentisi içinde kullanılabilir. Bu kod etkin belgeyi kullanır.
+     aşağıdaki kod örneği, uygulama düzeyinde bir VSTO eklentisi içinde kullanılabilir. Bu kod etkin belgeyi kullanır.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet27":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet27":::
@@ -109,11 +110,11 @@ ms.locfileid: "107825803"
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet26":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet26":::
 
-## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
+## <a name="vsto-add-in-example"></a>VSTO Eklenti örneği
 
-### <a name="to-control-paragraph-structure-when-inserting-text-in-a-vsto-add-in"></a>VSTO eklentideki metin eklerken paragraf yapısını denetlemek için
+### <a name="to-control-paragraph-structure-when-inserting-text-in-a-vsto-add-in"></a>VSTO bir eklentiye metin eklerken paragraf yapısını denetlemek için
 
-1. Aşağıdaki örnek, bir VSTO eklentisi için tam yöntemi gösterir. Bu kodu kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
+1. aşağıdaki örnek, bir VSTO eklentisi için tam yöntemi gösterir. Bu kodu kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb" id="Snippet26":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs" id="Snippet26":::

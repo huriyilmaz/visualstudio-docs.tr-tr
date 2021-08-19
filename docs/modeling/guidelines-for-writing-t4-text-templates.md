@@ -1,6 +1,6 @@
 ---
 title: T4 Metin Şablonları Yazma Yönergeleri
-description: Visual Studio ' de program kodu veya diğer uygulama kaynakları oluşturuyorsanız yararlı olan genel yönergeleri öğrenin.
+description: Uygulama içinde program kodu veya diğer uygulama kaynakları oluşturmak için yardımcı olacak genel Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,76 +10,76 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a3a7722792c652eb03e607c39e3f70d618b25be9dd63667bff2f3ed559d4b94
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b0cb319b488bf080b95ce2651ccf21bad3c33d6a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121411041"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157520"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 Metin Şablonları Yazma Yönergeleri
 
-Visual Studio içinde program kodu veya diğer uygulama kaynakları oluşturuyorsanız bu genel yönergeler yararlı olabilir. Bunlar sabit kurallar değildir.
+Bu genel yönergeler, program kodu veya diğer uygulama kaynaklarını Visual Studio. Bunlar sabit kurallar değildir.
 
-## <a name="guidelines-for-design-time-t4-templates"></a>T4 şablonları Design-Time yönergeleri
+## <a name="guidelines-for-design-time-t4-templates"></a>T4 Design-Time yönergeleri
 
-tasarım zamanı T4 şablonları, tasarım zamanında Visual Studio projenizde kod üreten şablonlardır. Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
+Tasarım zamanı T4 şablonları, tasarım zamanında Visual Studio kod oluşturan şablonlardır. Daha fazla bilgi için [bkz. T4 Metin Şablonları kullanarak Tasarım Zamanı Kodu Oluşturma.](../modeling/design-time-code-generation-by-using-t4-text-templates.md)
 
-Uygulamanın değişken yönlerini oluşturun.
+Uygulamanın değişken yönlerini oluşturma.
 
-Kod üretimi, uygulamanın proje sırasında değişebilir ya da uygulamanın farklı sürümleri arasında değişiklik gösterebilir. Ne üretilecektir daha kolay bir şekilde belirleyebilmeniz için bu değişken yönlerini daha değişmez açılardan ayırın. Örneğin, uygulamanız bir Web sitesi sağlıyorsa, standart sayfayı bir sayfadan diğerine gezinti yollarını tanımlayan mantığdan ayırın.
+Kod oluşturma, uygulamanın proje sırasında değişebilir veya uygulamanın farklı sürümleri arasında değişecek olan yönleri için kullanışlıdır. Bu değişken yönlerini, nelerin üreteceklerini daha kolay belirleyecek şekilde daha sabit yönlerden ayırabilirsiniz. Örneğin, uygulamanız bir web sitesi sağlarsa, standart sayfa sunan işlevleri gezinti yollarını bir sayfadan diğerine tanımlayan mantıktan ayırabilirsiniz.
 
-Değişken yönlerini bir veya daha fazla kaynak modelinde kodlayın.
+Değişken yönlerini bir veya daha fazla kaynak modelde kodlar.
 
-Model, oluşturulacak kodun değişken bölümlerinin belirli değerlerini almak için her şablonun okuduğu bir dosya veya veritabanıdır. Modeller veritabanları, kendi tasarımınızın, diyagramlarınızın veya etki alanına özgü dillerinizin XML dosyaları olabilir. genellikle, bir Visual Studio projesinde birçok dosya oluşturmak için bir model kullanılır. Her dosya ayrı bir şablondan oluşturulur.
+Model, her şablonun oluşturulacağız kodun değişken bölümlerine yönelik belirli değerleri almak için okuduğu bir dosya veya veritabanıdır. Modeller veritabanları, kendi tasarımınıza ait XML dosyaları, diyagramlar veya etki alanına özgü diller olabilir. Genellikle, bir model bir Visual Studio projesinde birçok dosya oluşturmak için kullanılır. Her dosya ayrı bir şablondan oluşturulur.
 
-Bir projede birden fazla model kullanabilirsiniz. Örneğin, Web sayfaları arasında gezinti için bir model ve sayfaların düzeni için ayrı bir model tanımlayabilirsiniz.
+Projede birden fazla model kullanabilirsiniz. Örneğin, web sayfaları arasında gezinmek için bir model ve sayfaların düzeni için ayrı bir model tanımlayabilirsiniz.
 
-Modeli, uygulamanızda değil, kullanıcıların ihtiyaçlarını ve sözlüğünü odaklayın.
+Modeli uygulamanıza değil, kullanıcıların ihtiyaçlarına ve sözlüğüne odaklanın.
 
-Örneğin, bir Web sitesi uygulamasında, modelin Web sayfalarına ve köprülere başvurmasını beklemeniz gerekir.
+Örneğin, bir web sitesi uygulamasında modelin web sayfalarına ve köprülere bakarak bakabilirsiniz.
 
-İdeal olarak, modelin gösterdiği bilgi türüne uyan bir sunum formu seçin. Örneğin, bir Web sitesi üzerinden gezinti yollarının bir modeli, kutu ve okların diyagramı olabilir.
+İdeal olarak, modelin temsil ettiği bilgi türlerine uyan bir sunum biçimi seçin. Örneğin, bir web sitesi üzerinden gezinti yolları modeli kutular ve oklar diyagramı olabilir.
 
-Oluşturulan kodu test edin.
+Oluşturulan kodu test etmek.
 
-Elde edilen kodun, kullanıcıların gerektirdiği şekilde çalıştığını doğrulamak için el ile veya otomatikleştirilmiş testleri kullanın. Kodun oluşturulduğu modelden test oluşturmaktan kaçının.
+Elde edilen kodun kullanıcılara gereken şekilde çalıştığını doğrulamak için el ile veya otomatikleştirilmiş testler kullanın. Kodun oluşturularak aynı modelden test oluşturmaktan kaçının.
 
-Bazı durumlarda, Genel testler doğrudan modelde gerçekleştirilebilir. Örneğin, Web sitesindeki her sayfanın başka bir gezinmede erişilebilir olmasını sağlayan bir test yazabilirsiniz.
+Bazı durumlarda, model üzerinde doğrudan genel testler yapılabilir. Örneğin, web sitesinin tüm sayfalarına gezinti ile diğer sayfalardan ulaşılamı sağlayan bir test yazabilirsiniz.
 
-Özel koda izin ver: kısmi sınıflar oluşturun.
+Özel koda izin ver: kısmi sınıflar oluşturma.
 
-Oluşturulan koda ek olarak el ile yazdığınız koda izin verin. Kod oluşturma şemasının ortaya çıkabilecek tüm olası Çeşitlemeler için hesap yapabilmesi olağan dışı bir durum olabilir. Bu nedenle, oluşturulan kodların bazılarını eklemek veya geçersiz kılmak için beklemeniz gerekir. oluşturulan malzemenin C# veya Visual Basic gibi bir .net dilinde olması halinde, iki strateji özellikle yararlı olur:
+Oluşturulan koda ek olarak el ile yazacak kodlara izin ver. Bir kod oluşturma şemasının ortaya çıkabilecek tüm olası varyasyonları hesaba çıkarabiliyor olması olağan dışıdır. Bu nedenle, oluşturulan kodun bir bazına ekleme veya geçersiz kılmayı beklemelisiniz. Oluşturulan malzemenin C# veya Visual Basic .NET dilinde olduğu durumlarda, özellikle iki strateji yararlıdır:
 
-- Oluşturulan sınıflar kısmi olmalıdır. Bu, oluşturulan koda içerik eklemenize olanak sağlar.
+- Oluşturulan sınıflar kısmi olabilir. Bu, oluşturulan koda içerik eklemenize olanak sağlar.
 
-- Sınıfların, diğeri öğesinden devralan çiftler halinde oluşturulması gerekir. Temel sınıf, oluşturulan tüm yöntemleri ve özellikleri içermeli ve türetilmiş sınıf yalnızca oluşturucuları içermelidir. Bu, el ile yazılmış kodunuzun oluşturulan yöntemlerin herhangi birini geçersiz kılmasını sağlar.
+- Sınıflar, biri diğer tarafından devralınan çiftler halinde oluşturularak oluşturulabilir. Temel sınıf, oluşturulan tüm yöntemleri ve özellikleri içermeli ve türetilmiş sınıf yalnızca oluşturucuları içermeli. Bu, el ile yazılmış kodunuzun oluşturulan yöntemlerden herhangi birini geçersiz kıldığına olanak sağlar.
 
-XML gibi diğer oluşturulmuş dillerde, `<#@include#>` el ile yazılmış ve oluşturulmuş içeriğin basit birleşimlerini oluşturmak için yönergesini kullanın. Daha karmaşık durumlarda, oluşturulan dosyayı el ile yazılmış dosyalarla birleştiren bir işlem sonrası adımı yazmanız gerekebilir.
+XML gibi diğer oluşturulan dillerde, el ile yazılmış ve oluşturulan `<#@include#>` içeriğin basit birleşimlerini yapmak için yönergesini kullanın. Daha karmaşık durumlarda, oluşturulan dosyayı el ile yazılmış herhangi bir dosyayla birleştiren bir işlem sonrası adımı yazmanız gerekir.
 
-Ortak malzemeleri içerme dosyalarına veya çalışma zamanı şablonlarına taşıyın.
+Ortak malzemeleri dosyaları veya çalışma zamanı şablonlarını içine taşıma.
 
-Benzer metin ve kod bloklarını birden çok şablonlarda tekrarlamadan kaçınmak için `<#@ include #>` yönergesini kullanın. Daha fazla bilgi için bkz. [T4 Içerme yönergesi](../modeling/t4-include-directive.md).
+Benzer metin ve kod bloklarını birden çok şablonda tekrarlamamak için yönergesini `<#@ include #>` kullanın. Daha fazla bilgi için bkz. [T4 Include Yönergesi.](../modeling/t4-include-directive.md)
 
-Ayrıca, ayrı bir projede çalışma zamanı metin şablonları oluşturabilir ve bunları tasarım zamanı şablonundan çağırabilirsiniz. Bunu yapmak için, `<#@ assembly #>` farklı projeye erişmek üzere yönergesini kullanın.
+Ayrıca, ayrı bir projede çalışma zamanı metin şablonları oluşturabilir ve ardından bunları tasarım zamanı şablonundan çağırabilirsiniz. Bunu yapmak için, ayrı projeye `<#@ assembly #>` erişmek için yönergesini kullanın.
 
-Büyük kod bloklarını ayrı bir derlemeye taşımayı düşünün.
+Büyük kod bloklarını ayrı bir derlemeye taşımayı göz önünde bulundurabilirsiniz.
 
-Büyük kod bloklarında ve sınıf özellik bloklarınız varsa, bu kodların bazılarını ayrı bir projede derleyebileceğiniz yöntemlere taşımak yararlı olabilir. `<#@ assembly #>`Şablondaki koda erişmek için yönergesini kullanabilirsiniz. Daha fazla bilgi için bkz. [T4 derleme yönergesi](../modeling/t4-assembly-directive.md).
+Büyük kod bloklarına ve sınıf özellik bloklarına sahipsanız, bu kodun bir adımını ayrı bir projede derleyilen yöntemlere taşımak yararlı olabilir. Şablonda `<#@ assembly #>` koda erişmek için yönergesi kullanabilirsiniz. Daha fazla bilgi için bkz. [T4 Derleme Yönergesi.](../modeling/t4-assembly-directive.md)
 
-Yöntemleri şablonun devraldığı bir soyut sınıfa koyabilirsiniz. Soyut sınıf öğesinden devralması gerekir <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> . Daha fazla bilgi için bkz. [T4 şablon yönergesi](../modeling/t4-template-directive.md).
+Yöntemleri, şablonun devralınabilir olduğu soyut bir sınıfa koyabilirsiniz. Soyut sınıf, 'den <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> devralmalıdır. Daha fazla bilgi için bkz. [T4 Şablon Yönergesi.](../modeling/t4-template-directive.md)
 
-Yapılandırma dosyaları değil, kod oluştur.
+Yapılandırma dosyaları değil kod oluşturma.
 
-Bir değişken uygulama yazmanın bir yöntemi, bir yapılandırma dosyasını kabul eden genel program kodunu yazmaktır. Bu şekilde yazılmış bir uygulama çok esnektir ve uygulamanın yeniden oluşturulması gerekmeden iş gereksinimleri değiştiğinde yeniden yapılandırılabilir. Ancak, bu yaklaşımın bir dezavantajı uygulamanın daha belirli bir uygulamadan daha az iyi bir şekilde gerçekleştirilecektir. Ayrıca, kısmen en genel türler ile ilgilendiğinden, program kodunun okunması ve saklanması daha zor olacaktır.
+Değişken uygulama yazma yöntemlerinden biri, yapılandırma dosyasını kabul eden genel program kodu yazmaktır. Bu şekilde yazılmış bir uygulama çok esnektir ve iş gereksinimleri değişerek uygulamayı yeniden oluşturmadan yeniden yalıtabilirsiniz. Ancak bu yaklaşımın dezavantajı, uygulamanın daha belirli bir uygulamaya göre daha az iyi performans sergileyemesindedir. Ayrıca program kodunu okumak ve bakımını yapmak daha zor olur çünkü kısmen her zaman en genel türlerle başa olması gerekir.
 
-Bunun aksine, derleme öncesinde değişken parçaları oluşturulan bir uygulama kesin bir şekilde yazılabilir. Bu, el ile yazılmış kodu yazmayı ve yazılımın oluşturulan bölümleriyle tümleştirmeyi çok daha kolay ve güvenilir hale getirir.
+Buna karşılık, derlemeden önce değişken bölümleri oluşturulan bir uygulama kesin olarak yazabilirsiniz. Bu, el ile yazılmış kod yazmayı ve yazılımın oluşturulan bölümleriyle tümleştirin, çok daha kolay ve daha güvenilir hale getirir.
 
-Kod oluşturmanın tam avantajlarından yararlanabilmek için yapılandırma dosyaları yerine program kodu oluşturmayı deneyin.
+Kod oluşturmanın tam avantajını elde etmek için yapılandırma dosyaları yerine program kodu üretmeyi deneyin.
 
-Oluşturulmuş bir kod klasörü kullanın.
+Oluşturulan Kod klasörünü kullanın.
 
-Şablonları ve oluşturulan dosyaları **oluşturulan kod** adlı bir proje klasörüne yerleştirin, bunların doğrudan düzenlenmesi gereken dosyalar olmadığını net bir şekilde yapın. Oluşturulan sınıflara geçersiz kılmak veya bunları eklemek için özel kod oluşturursanız, bu sınıfları **özel kod** olarak adlandırılan bir klasöre yerleştirin. Tipik bir projenin yapısı şöyle görünür:
+Şablonları ve oluşturulan dosyaları, doğrudan düzenlemesi gereken dosyalar olmadığını net bir şekilde ifade etmek için Oluşturulan Kod adlı bir proje klasörüne girin. Geçersiz kılmak veya oluşturulan sınıflara eklemek için özel kod oluşturursanız, bu sınıfları Özel Kod adlı bir **klasöre ekleyin.** Tipik bir projenin yapısı şöyledir:
 
 ```
 MyProject
@@ -94,40 +94,40 @@ MyProject
    AnotherClass.cs
 ```
 
-## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>Run-Time (önceden Işlenmiş) T4 şablonları için yönergeler
+## <a name="guidelines-for-run-time-preprocessed-t4-templates"></a>Run-Time (Önceden İşlenmemiş) T4 Şablonları için Yönergeler
 
-Ortak malzemeleri devralınan şablonlara taşıyın.
+Ortak malzemeleri devralınan şablonlara taşıma.
 
-T4 Metin şablonları arasında yöntemleri ve metin bloklarını paylaşmak için devralmayı kullanabilirsiniz. Daha fazla bilgi için bkz. [T4 şablon yönergesi](../modeling/t4-template-directive.md).
+T4 metin şablonları arasında yöntemleri ve metin bloklarını paylaşmak için devralmayı kullanabilirsiniz. Daha fazla bilgi için bkz. [T4 Şablon Yönergesi.](../modeling/t4-template-directive.md)
 
-Ayrıca, çalışma zamanı şablonlarına sahip olan içerme dosyalarını kullanabilirsiniz.
+Çalışma zamanı şablonlarına sahip ekleme dosyalarını da kullanabilirsiniz.
 
-Büyük kod gövdelerini kısmi bir sınıfa taşıyın.
+Büyük kod gövdelerini kısmi bir sınıfa taşıma.
 
-Her çalışma zamanı şablonu, şablonla aynı ada sahip kısmi bir sınıf tanımı oluşturur. Aynı sınıfın başka bir kısmi tanımını içeren bir kod dosyası yazabilirsiniz. Bu şekilde sınıfa Yöntemler, alanlar ve oluşturucular ekleyebilirsiniz. Bu Üyeler şablondaki kod bloklarından çağrılabilir.
+Her çalışma zamanı şablonu, şablonla aynı adı alan kısmi bir sınıf tanımı oluşturur. Aynı sınıfın başka bir kısmi tanımını içeren bir kod dosyası yazabilirsiniz. Sınıfına bu şekilde yöntemler, alanlar ve oluşturucular ekebilirsiniz. Bu üyeler şablonda kod bloklarından çağrılabilir.
 
-Bunu yapmanın avantajı, IntelliSense 'in kullanılabildiği için kodun daha kolay yazılması. Ayrıca, sunum ve temel alınan mantık arasında daha iyi bir ayrım elde edebilirsiniz.
+IntelliSense kullanılabilir olduğundan, bunu yapmanın bir avantajı kodun daha kolay yaz kolay hale getirir. Ayrıca sunu ile temel alınan mantık arasında daha iyi bir ayrım elde etmek de gerekir.
 
-Örneğin, **MyReportText.tt** içinde:
+Örneğin, **MyReportText.tt:**
 
 `The total is: <#= ComputeTotal() #>`
 
-**MyReportText-Methods. cs** dosyasında:
+**MyReportText-Methods.cs içinde:**
 
 `private string ComputeTotal() { ... }`
 
-Özel koda izin ver: uzantı noktaları sağlayın.
+Özel koda izin ver: Uzantı noktaları girin.
 
-İçinde sanal yöntemler oluşturmayı düşünün \<#+ class feature blocks #> . Bu, tek bir şablonun değişiklik yapılmadan birçok bağlamda kullanılmasına izin verir. Şablonu değiştirmek yerine, en düşük ek mantığı sağlayan bir türetilmiş sınıf oluşturabilirsiniz. Türetilmiş sınıf, normal bir kod olabilir veya bir çalışma zamanı şablonu olabilir.
+içinde sanal yöntemler oluşturmayı göz önünde \<#+ class feature blocks #> bulundurarak. Bu, tek bir şablonun değişiklik yapmadan birçok bağlamda kullanılmaya olanak sağlar. Şablonu değiştirmek yerine, minimum ek mantık sağlar türetilmiş bir sınıf oluşturabilirsiniz. Türetilmiş sınıf normal kod veya bir çalışma zamanı şablonu olabilir.
 
-Örneğin, MyStandardRunTimeTemplate.tt içinde:
+Örneğin, MyStandardRunTimeTemplate.tt:
 
 ```
 This page is copyright <#= CompanyName() #>.
 <#+ protected virtual string CompanyName() { return ""; } #>
 ```
 
-Bir uygulamanın kodunda:
+Uygulamanın kodunda:
 
 ```
 class FabrikamTemplate : MyStandardRunTimeTemplate
@@ -138,23 +138,23 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
   string PageToDisplay = new FabrikamTemplate().TextTransform();
 ```
 
-## <a name="guidelines-for-all-t4-templates"></a>Tüm T4 şablonları için yönergeler
+## <a name="guidelines-for-all-t4-templates"></a>Tüm T4 Şablonları için Yönergeler
 
-Metin oluşturma işleminden ayrı veri toplamayı ayırın.
+Veri toplamayı metin oluşturmadan ayırma.
 
-Hesaplama ve metin bloklarını karıştırmaktan kaçının. Her metin şablonunda, \<# code block #> değişkenleri ayarlamak ve karmaşık hesaplamalar gerçekleştirmek için ilkini kullanın. İlk metin bloğundan önce şablonun sonuna veya birinciden, \<#+ class feature block #> uzun ifadelerden kaçının ve metin blokları içermedikçe döngülerin ve koşullarından kaçının. Bu uygulama, şablonu okumayı ve bakımını daha kolay hale getirir.
+Hesaplama ve metin bloklarını karıştırmamaya çalışma. Her metin şablonunda, değişkenleri ayarlamak \<# code block #> ve karmaşık hesaplamalar gerçekleştirmek için ilki kullanın. Şablonun veya ilk bloğun sonuna kadar olan ilk metin bloğundan uzun ifadelerden kaçının ve metin blokları içermediği sürece döngülerden ve \<#+ class feature block #> koşullulardan kaçının. Bu uygulama, şablonun okunma ve bakımının daha kolay hale getirir.
 
-`.tt`İçerme dosyaları için kullanmayın.
+Dahil etme dosyaları `.tt` için kullanma.
 
-İçerme dosyaları için gibi farklı bir dosya adı uzantısı kullanın `.ttinclude` . `.tt`Yalnızca çalışma zamanı veya tasarım zamanı metin şablonları olarak işlenmesini istediğiniz dosyalar için kullanın. bazı durumlarda, Visual Studio dosyaları tanır `.tt` ve işlemek için özelliklerini otomatik olarak ayarlar.
+Include dosyaları için gibi farklı bir dosya `.ttinclude` adı uzantısı kullanın. Yalnızca çalışma zamanı veya tasarım zamanı metin şablonları olarak `.tt` işlenmesini istediğiniz dosyalar için kullanın. Bazı durumlarda, Visual Studio dosyaları `.tt` tanır ve bunların işleme özelliklerini otomatik olarak ayarlar.
 
-Her şablonu sabit bir prototip olarak başlatın.
+Her şablonu sabit bir prototip olarak başlatabilirsiniz.
 
-Oluşturmak istediğiniz kod veya metnin bir örneğini yazın ve doğru olduğundan emin olun. Ardından uzantısını. tt olarak değiştirin ve modeli okuyarak içeriği değiştiren kodu artımlı olarak ekleyin.
+Oluşturmak istediğiniz kodun veya metnin bir örneğini yazın ve doğru olduğundan emin olun. Ardından uzantısını .tt olarak değiştirebilir ve modeli okuyarak içeriği değiştiren kodu artımlı olarak ekler.
 
-Yazılan modeller kullanmayı düşünün.
+Türü türüne sahip modelleri kullanmayı göz önünde bulundurabilirsiniz.
 
-Modelleriniz için bir XML veya veritabanı şeması oluşturabilseniz de, etki alanına özgü dil (DSL) oluşturmak faydalı olabilir. DSL, şemada her düğümü temsil eden bir sınıf oluşturma avantajına ve öznitelikleri temsil eden özelliklere sahiptir. Bu, iş modeli açısından programlayabilirsiniz anlamına gelir. Örnek:
+Modelleriniz için bir XML veya veritabanı şeması oluşturabilirsiniz, ancak etki alanına özgü bir dil (DSL) oluşturmak yararlı olabilir. DSL, şemada her düğümü temsil eden bir sınıf oluşturma avantajına ve öznitelikleri temsil eden özelliklere sahiptir. Bu, iş modeli açısından programlayabilirsiniz anlamına gelir. Örnek:
 
 ```
 Team Members:

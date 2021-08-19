@@ -1,6 +1,6 @@
 ---
-title: CallTarget görevi | Microsoft Docs
-description: MSBuild CallTarget görevinin proje dosyası içinde belirtilen hedefleri çağırmak için nasıl kullanılacağını öğrenin.
+title: CallTarget Görev | Microsoft Docs
+description: Proje dosyasında belirtilen hedefleri çağırmak MSBuild CallTarget görevini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,43 +16,44 @@ ms.assetid: bb1fe2c4-4383-436f-8326-c24cc4a46150
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a2f124fa7e83e9f85e572276eed1851f42f7047
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ceafb3a687d533705d278fb0ca76496f1d27acdf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99939558"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150618"
 ---
 # <a name="calltarget-task"></a>CallTarget görevi
 
-Proje dosyası içinde belirtilen hedefleri çağırır.
+Proje dosyasında belirtilen hedefleri çağırır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki tablo, görevin parametrelerini açıklar `CallTarget` .
+ Aşağıdaki tabloda görevin parametreleri açık `CallTarget` almaktadır.
 
 | Parametre | Açıklama |
 |---------------------------| - |
-| `RunEachTargetSeparately` | İsteğe bağlı `Boolean` giriş parametresi.<br /><br /> İse `true` , MSBuild altyapısı her hedef için bir kez çağırılır. İse `false` , tüm hedefleri derlemek Için MSBuild altyapısı bir kez çağırılır. `false` varsayılan değerdir. |
-| `TargetOutputs` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Tüm oluşturulan hedeflerin çıkışlarını içerir. |
-| `Targets` | İsteğe bağlı `String[]` parametre.<br /><br /> Derlenecek hedefi veya hedefleri belirtir. |
-| `UseResultsCache` | İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa `true` , önbelleğe alınan sonuç varsa döndürülür.<br /><br /> **Göz önünde** Bir MSBuild görevi çalıştırıldığında, çıktısı derleme öğelerinin listesi olarak bir kapsamda (ProjectFileName, GlobalProperties) [TargetNames] önbelleğe alınır. |
+| `RunEachTargetSeparately` | İsteğe `Boolean` bağlı giriş parametresi.<br /><br /> ise, `true` MSBuild başına bir kez çağrılır. ise, `false` MSBuild tüm hedefleri oluşturmak için bir kez çağrılır. `false` varsayılan değerdir. |
+| `TargetOutputs` | İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Tüm yerleşik hedeflerin çıkışlarını içerir. |
+| `Targets` | İsteğe `String[]` bağlı parametre.<br /><br /> Derlemek için hedefi veya hedefleri belirtir. |
+| `UseResultsCache` | İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `true` önbelleğe alınan sonuç varsa döndürülür.<br /><br /> **Not** Bir MSBuild çalıştırıldıklarında, çıktısı derleme öğelerinin listesi olarak bir kapsamda (ProjectFileName, GlobalProperties)[TargetNames] önbelleğe alınmış olur. |
 
 ## <a name="remarks"></a>Açıklamalar
 
- Başarısız ' de belirtilen bir hedef `Targets` ve `RunEachTargetSeparately` ise `true` , görev kalan hedefleri oluşturmaya devam eder.
+ içinde belirtilen hedef başarısız `Targets` olursa `RunEachTargetSeparately` ve `true` ise, görev kalan hedefleri derlemeye devam eder.
 
- Varsayılan hedefleri derlemek istiyorsanız, [MSBuild görevini](../msbuild/msbuild-task.md) kullanın ve `Projects` parametresini değerine ayarlayın `$(MSBuildProjectFile)` .
+ Varsayılan hedefleri oluşturmak için MSBuild [kullanın](../msbuild/msbuild-task.md) ve parametresini `Projects` değerine eşit olarak `$(MSBuildProjectFile)` ayarlayın.
 
-Kullanırken `CallTarget` , MSBuild, çağrılan hedefi yeni bir kapsamda olduğu gibi değerlendirir. Bu, çağrılan hedefteki herhangi bir öğe ve özellik değişikliklerinin çağıran hedefe görünmeyeceği anlamına gelir.  Çağıran hedefe bilgi geçirmek için `TargetOutputs` Çıkış parametresini kullanın.
+kullanırken, MSBuild hedef yeni bir kapsamda değerlendirilir, ancak `CallTarget` çağrılmış olan kapsamdan farklı olarak değerlendirilir. Bu, çağrılı hedefte yapılan herhangi bir öğe ve özellik değişikliğinin, çağıran hedef için görünür olmadığını gösterir.  Çağrı hedefine bilgi geçmek için çıkış `TargetOutputs` parametresini kullanın.
 
- Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+ Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek içinden çağrı yapılır `TargetA` `CallOtherTargets` .
+ Aşağıdaki örnek içinden `TargetA` çağrısında `CallOtherTargets` dır.
 
 ```xml
 <Project DefaultTargets="CallOtherTargets"

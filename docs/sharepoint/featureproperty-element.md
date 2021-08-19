@@ -1,6 +1,6 @@
 ---
 title: FeatureProperty öğesi | Microsoft Docs
-description: SharePoint proje öğesi şemasındaki bir öğe olan FeatureProperty öğesi hakkında başvuru bilgilerini görüntüleyin.
+description: SharePoint proje öğesi şemasındaki bir öğe olan featureproperty öğesi hakkında başvuru bilgilerini görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -12,17 +12,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 070866b9dd14d974eb976b22bf7a79907e2c5d9e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 01536094bdb9fd084b32ce56429d085f5f377f8f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876673"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122149227"
 ---
 # <a name="featureproperty-element"></a>FeatureProperty öğesi
-  SharePoint 'e dağıtıldığında bir özelliğe dahil olan özel bir özelliği temsil eder. Bir özellik dağıtıldıktan sonra, kodunuzda özelliğine erişebilirsiniz.
+  SharePoint dağıtıldığında bir özelliğe dahil olan özel bir özelliği temsil eder. Bir özellik dağıtıldıktan sonra, kodunuzda özelliğine erişebilirsiniz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +49,7 @@ ms.locfileid: "99876673"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[FeatureProperties](../sharepoint/featureproperties-element.md)|SharePoint 'e dağıtıldığında bir özelliğe dahil olan özellik değerlerinin koleksiyonunu temsil eder.|
+|[FeatureProperties](../sharepoint/featureproperties-element.md)|SharePoint dağıtıldığında bir özelliğe dahil edilen özellik değerleri koleksiyonunu temsil eder.|
 
 ## <a name="remarks"></a>Açıklamalar
  Özellik özellikleri hakkında daha fazla bilgi için bkz. [Proje öğelerinde paket ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).
@@ -58,7 +59,7 @@ ms.locfileid: "99876673"
 |Özellik|Değer|
 |-|-|
 |**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
-|**Şema adı**|SharePoint proje öğesi şeması|
+|**Şema adı**|SharePoint Project öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
 |**Boş olabilir**|Hayır|
 

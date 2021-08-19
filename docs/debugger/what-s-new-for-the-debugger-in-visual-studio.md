@@ -1,7 +1,7 @@
 ---
-title: Visual Studio 2017 ' de hata ayıklayıcıdaki yenilikler | Microsoft Docs
+title: Visual Studio 2017'de Hata Ayıklayıcısı | Microsoft Docs
 titleSuffix: ''
-description: "Hata ayıklayıcı sürüm 15,5 ' deki yeni özelliklere bakın. Dahil: seçili ürün içi uygulamalar kodunun anlık görüntüleri ve IntelliTrace adım geri."
+description: "Hata ayıklayıcısı sürüm 15.5'te yeni özelliklere bakın. Dahil edilenler: Üretim içi uygulamaların seçili kodunun anlık görüntüleri ve Intellitrace geri adımı."
 ms.custom: SEO-VS-2020
 ms.date: 01/22/2018
 ms.topic: conceptual
@@ -23,55 +23,55 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: 5d31f08475389bc68191b0b6b4a5348d25cae2aee632bc1adf76d0d1887e0ece
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7a743d43459e124d2377339a57756d8c0410a344
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404132"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112275"
 ---
-# <a name="whats-new-for-the-debugger-in-visual-studio-2017"></a>Visual Studio 2017 ' de hata ayıklayıcıdaki yenilikler
+# <a name="whats-new-for-the-debugger-in-visual-studio-2017"></a>Visual Studio 2017'de Hata Ayıklayıcısı'nın Visual Studio
 
-Hata ayıklayıcı şu yeni özellikleri içerir:
+Hata ayıklayıcısı şu yeni özellikleri içerir:
 
-- Sürüm 15,5 ' deki yenilikler **Snapshot Debugger** , çalışırken ilgilendiğiniz kod olduğunda üretim içi uygulamalarınızın anlık görüntüsünü alır. Hata ayıklayıcıya bir anlık görüntü almasını söylemek için kodunuzda anlık görüntü noktaları ve günlüğe kaydetme noktaları ayarlarsınız. Hata ayıklayıcı, üretim uygulamanızın trafiğini etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için geçen süreyi önemli ölçüde düşürmeye yardımcı olabilir.
+- Sürüm 15.5'te yeni **olan Snapshot Debugger,** ilgilendiğiniz kod yürütülürken üretim uygulamalarınıza bir anlık görüntü alır. Hata ayıklayıcıya anlık görüntü alma talimatı almak için kodunda anlık görüntü noktaları ve günlük noktaları ayarlayın. Hata ayıklayıcısı, üretim uygulama trafiğinizi etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Bu Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için gereken zamanı önemli ölçüde azaltmanıza yardımcı olabilir.
 
-    Anlık görüntü koleksiyonu, Azure App Service çalıştıran aşağıdaki Web uygulamaları için kullanılabilir:
+    Anlık görüntü koleksiyonu, aşağıdaki web uygulamaları için kullanılabilir ve Azure App Service:
 
-  * .NET Framework 4.6.1 veya sonraki sürümlerde çalışan uygulamalar ASP.NET.
-  * Windows ASP.NET Core .net Core 2,0 veya üzeri sürümlerde çalışan uygulamalar.
+  * ASP.NET 4.6.1 veya .NET Framework üzerinde çalışan uygulamalar.
+  * ASP.NET Core .NET Core 2.0 veya sonraki bir üzerinde çalışan uygulamaları Windows.
 
-    daha fazla bilgi için bkz. [Snapshot Debugger kullanarak canlı ASP.NET uygulamalarda hata ayıklama](../debugger/debug-live-azure-applications.md).
+    Daha fazla bilgi için [bkz. ASP.NET kullanarak canlı Snapshot Debugger.](../debugger/debug-live-azure-applications.md)
 
-- sürüm 15,5 ' deki yenilikler yalnızca Visual Studio Enterprise sürümünde, **ıntellitrace adım geri** otomatik olarak her kesme noktası ve hata ayıklayıcı adım olayında uygulamanızın anlık görüntüsünü alır. Kaydedilen anlık görüntüler, önceki kesme noktalarına veya adımlara geri dönmenize ve uygulamanın geçmişte olduğu gibi durumunu görüntülemenize imkan tanır. IntelliTrace adım geri dönüş, önceki uygulama durumunu görmek istediğinizde, ancak hata ayıklamayı yeniden başlatmak veya istenen uygulama durumunu yeniden oluşturmak istemediğinizde size zaman kazandırabilir.
+- Yalnızca 15.5 sürümünde yeni Visual Studio Enterprise **IntelliTrace** geri adımı, her kesme noktası ve hata ayıklayıcısı adım olayında otomatik olarak uygulamanın anlık görüntüsünü alır. Kaydedilen anlık görüntüler, önceki kesme noktalarına veya adımlara geri dönmenizin yanı sıra uygulamanın geçmişte olduğu gibi durumunu görüntülemeye olanak sağlar. IntelliTrace geri adımı önceki uygulama durumunu görmek istediğiniz ancak hata ayıklamayı yeniden başlatmak veya istenen uygulama durumunu yeniden oluşturmak istemeyebilirsiniz.
 
-    Hata ayıklama araç çubuğundaki **geri** ve **adım ileri** düğmelerini kullanarak anlık görüntülerle gezinerek görüntüleyebilirsiniz. Bu düğmeler **Tanılama araçları** penceresindeki **Olaylar** sekmesinde görüntülenen olaylara gider.
+    Hata Ayıklama araç çubuğundaki Geri Adım ve İleri **Adım** düğmelerini **kullanarak** anlık görüntülerde gezinebilirsiniz ve görüntüleyebilirsiniz. Bu düğmeler, Tanılama Araçları **penceresindeki** Olaylar **sekmesinde görünen Tanılama Araçları** gezinebilirsiniz.
 
-    ![Geri adımla ve Ilet düğmeleri](../debugger/media/intellitrace-step-back-icons-description.png  "Geri adımla ve Ilet düğmeleri")
+    ![Geri ve İleri Adım Düğmeleri](../debugger/media/intellitrace-step-back-icons-description.png  "Geri ve İleri Adım düğmeleri")
 
-    Daha fazla bilgi için bkz. [IntelliTrace kullanarak önceki uygulama durumlarını İnceleme](view-historical-application-state.md) sayfası.
+    Daha fazla bilgi için [IntelliTrace kullanarak önceki uygulama eyaletlerini inceleme sayfasına](view-historical-application-state.md) bakın.
 
-- **Özel** durum Yardımcısı özel durum yardımcısını değiştirir ve hatanın gerçekleştiği kalıcı olmayan bir iletişim kutusunda görünür. **özel durum yardımcısı** , tüm iç özel durumlara daha hızlı erişim sağlar, hata ayıklayıcı tarafından ek analizler (varsa) ve özel durum **Ayarlar özel duruma** anında erişim sağlar. Özel durum Yardımcısı, görmeniz gereken bir şeyi engelliyorsa, bir kayan görünüme de sürüklenebilir.
+- Özel **Durum Yardımcısı,** Özel Durum Yardımcısı'nın yerini alır ve hatanın meydana geldiği kalıcı olmayan bir iletişim kutusunda görünür. Özel **Durum Yardımcısı herhangi** bir iç özel durum için daha hızlı erişim, hata ayıklayıcı tarafından ek analiz (varsa) ve özel durum için Özel Durum Ayarlar erişim sağlar.  Özel Durum Yardımcı, görmen gereken bir şeyi engelliyorsa kayan görünüme de sürüklenerek.
 
-    Örneğin, bir **NullReferenceException** artık null başvurusu olan değişkeni gösterir (ek bilgi).
+    Örneğin, **NullReferenceException** artık null başvurusu olan değişkeni gösterir (ek bilgi).
 
-    ![Hata ayıklayıcının özel durum Yardımcısı](../debugger/media/dbg-exception-helper.png "DbgExceptionHelper")
+    ![Hata Ayıklayıcısının Özel Durum Yardımcısı](../debugger/media/dbg-exception-helper.png "DbgExceptionHelper")
 
-    daha fazla bilgi için Visual Studio blog gönderisine yönelik [yeni özel durum yardımcısını kullanma](https://devblogs.microsoft.com/devops/using-the-new-exception-helper-in-visual-studio-15-preview/) bölümüne bakın.
+    Daha fazla bilgi için Visual Studio blog gönderisinde [Yeni Özel Durum Visual Studio](https://devblogs.microsoft.com/devops/using-the-new-exception-helper-in-visual-studio-15-preview/) bakın.
 
-- Şimdi, **yürütmeyi buraya kadar Çalıştır** yeşil ok simgesine seçerek hata ayıklayıcıda duraklayana bir kod satırına çalıştırabilirsiniz (bir kod satırının üzerine gelindiğinde simgeyi görürsünüz). Bu, geçici kesme noktaları ayarlama gereksinimini ortadan kaldırır.
+- Artık Yürütmeyi buraya kadar çalıştır yeşil ok simgesini seçerek  hata ayıklayıcıda duraklatılmış bir kod satırına çalıştırabilirsiniz (bir kod çizgisinin üzerine gelindiğinde simgeyi görüyorsunuz). Bu, geçici kesme noktaları ayarlama ihtiyacının ortadan kaldırılmasını sağlar.
 
-    ![Hata ayıklayıcının tıklama için Çalıştır](../debugger/media/dbg-run-to-click.png "DbgRunToClick")
+    ![Hata Ayıklayıcının Tıklamak için Çalıştır](../debugger/media/dbg-run-to-click.png "DbgRunToClick")
 
-- özel durum **Ayarlar** iletişim kutusunda özel durumlar için koşullar ayarlayabilirsiniz (özel durum Ayarlar iletişim kutusundaki **koşulu düzenle** simgesini veya özel durum üzerinde sağ tıklama menüsünü kullanarak bunu yapabilirsiniz.) Şu anda desteklenen koşullar, özel durum için dahil edilecek veya hariç tutulacak modül adlarını içerir.
+- Özel durumlarla ilgili koşulları Özel **Durum Ayarlar** iletişim kutusunda ayarlayabilirsiniz (Özel  Durum Ayarlar iletişim kutusundaki Koşulu düzenle simgesini kullanarak veya özel durumda sağ tıklama menüsünü kullanarak bunu yapabilirsiniz.) Şu anda desteklenen koşullar, özel durum için dahil etmek veya hariç tutmak için modül adlarını içerir.
 
-    ![Özel durum koşulları](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
+    ![Özel Durum Koşulları](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
 
-- Işleme İliştir iletişim kutusu, iliştirilebilmeniz gereken işlemi daha hızlı tanımanıza yardımcı olabilecek yeni bir arama özelliği içerir.
+- İşleme Ekle iletişim kutusu, iliştirmek istediğiniz işlemi daha hızlı tanımlamanıza yardımcı olacak yeni bir arama özelliği içerir.
 
-    ![Işleme Iliştir içinde ara](../debugger/media/dbg-attach-to-process-search.png "DbgAttachToProcessSearch")
+    ![İşleme Ekle içinde arama](../debugger/media/dbg-attach-to-process-search.png "DbgAttachToProcessSearch")
 
-Bu yeni özellikler hakkında daha fazla bilgi için [sürüm notlarına [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] ](/visualstudio/releasenotes/vs2017-relnotes)bakın.
+Bu yeni özellikler hakkında daha fazla bilgi için bkz. [sürüm notları. [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] ](/visualstudio/releasenotes/vs2017-relnotes)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

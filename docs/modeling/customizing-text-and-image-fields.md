@@ -1,6 +1,6 @@
 ---
 title: Metin ve Görüntü Alanlarını Özelleştirme
-description: Metin ve görüntü dosyalarını özelleştirme hakkında bilgi öğrenin. Ayrıca, bir metin dekoratörü bir şekilde tanımladığınız zaman, bunun textField ile temsil edilen olduğunu da öğrenin.
+description: Metin ve resim dosyalarını özelleştirme hakkında bilgi edinin. Ayrıca bir şekildeki metin dekoratörü tanımladığınızda, TextField tarafından temsil edilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,20 +10,20 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f56c67a16b59b17de5a4bd95ad9a074203b097224844f541adc8b658d60edea
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 13cde2406402f6afc2d61deca4e6e95e838e5dff
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121386062"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085643"
 ---
 # <a name="customizing-text-and-image-fields"></a>Metin ve Görüntü Alanlarını Özelleştirme
-Bir metin dekoratörü şekilde tanımladığınız zaman, metin dekoratörü bir TextField ile temsil edilen. TextFields ve diğer ShapeFields başlatma örnekleri için DSL çözümde Dsl\GeneratedCode\Shapes.cs'yi inceleyin.
+Bir şekildeki metin dekoratörü tanımladığınızda, bir TextField tarafından temsil edilir. TextFields ve diğer şekil alanlarının başlatılmasının örnekleri için DSL çözümünüzdeki Dsl\GeneratedCode\Shapes.cs inceleyin.
 
- TextField, bir etikete atanan alan gibi bir şekil içindeki alanı yöneten bir nesnedir. Bir TextField örneği aynı sınıfın birçok şekli arasında paylaşılır. TextField örneği etiketin metnini her örnek için ayrı depolamaz: bunun yerine yöntemi şekli parametre olarak alır ve şeklin ve model öğesinin geçerli durumuna bağlı olarak metni `GetDisplayText(ShapeElement)` indirebilirsiniz.
+ TextField, bir şeklin içindeki bir alanı, etikete atanan boşluk gibi yöneten bir nesnedir. Bir TextField örneği aynı sınıfın birçok şekli arasında paylaşılır. TextField örneği, etiketin metnini her örnek için ayrı olarak depolamaz: bunun yerine, `GetDisplayText(ShapeElement)` yöntemi şekli bir parametre olarak alır ve bu metni, şeklin ve model öğesinin geçerli durumuna bağlı olarak arayabilir.
 
-## <a name="how-the-appearance-of-a-text-field-is-determined"></a>Metin alanı görünümü nasıl belirlenir?
- `DoPaint()`yöntemini çağırarak alanı ekranda görüntüler. Varsayılanı geçersiz `DoPaint(),` kılarak veya çağıran bazı yöntemleri geçersiz kılarak. Varsayılan yöntemlerin aşağıdaki basitleştirilmiş sürümü, varsayılan davranışı geçersiz kılmayı anlamanıza yardımcı olabilir:
+## <a name="how-the-appearance-of-a-text-field-is-determined"></a>Bir metin alanının görünümü nasıl belirlenir
+ `DoPaint()`Yöntemi, ekranda alanı görüntülenecek şekilde çağrılır. Varsayılanı geçersiz kılabilir `DoPaint(),` ya da çağrı yaptığı yöntemlerin bazılarını geçersiz kılabilirsiniz. Varsayılan yöntemlerin aşağıdaki Basitleştirilmiş sürümü, varsayılan davranışı nasıl geçersiz kılacağınızı anlamanıza yardımcı olabilir:
 
 ```csharp
 // Simplified version:
@@ -83,17 +83,17 @@ public virtual StyleSetResourceId GetFontId(ShapeElement parentShape)
 { return DefaultFontId; }
 ```
 
- gibi birkaç yöntem ve `Get` özellik `Default` çifti daha `DefaultMultipleLine/GetMultipleLine()` vardır. Şeklin tüm örneklerinin değerini değiştirmek için Default özelliğine bir değer atabilirsiniz. Değerin bir şekil örneğinden diğerine değişiklik gösterebiliyor veya şeklin veya model öğesinin durumuna bağlı olarak yöntemini geçersiz `Get` kılın.
+ Gibi birkaç farklı `Get` Yöntem ve özellik çifti vardır `Default` `DefaultMultipleLine/GetMultipleLine()` . Şekil alanının tüm örnekleri için değeri değiştirmek üzere varsayılan özelliğe bir değer atayabilirsiniz. Değeri bir şekil örneğinden diğerine, ya da şeklin ya da model öğesinin durumuna bağlı yapmak için yöntemini geçersiz kılın `Get` .
 
 ## <a name="static-customizations"></a>Statik özelleştirmeler
- Bu şekil alanı örneklerini değiştirmek için önce DSL Tanımı'nın özelliğini ayar olup olmadığı hakkında bir karara varabilirsiniz. Örneğin, yazı tipi boyutunu ve stilini Özellikler penceresi.
+ Bu şekil alanının her örneğini değiştirmek istiyorsanız, önce DSL tanımında özelliği ayarlayıp ayarlayamayacağını öğrenin. Örneğin, Özellikler penceresi yazı tipi boyutunu ve stilini ayarlayabilirsiniz.
 
- Yoksa, şekil sınıfınıza ait yöntemi geçersiz kılın ve `InitializeShapeFields` metin alanı için uygun `Default...` özellik için bir değer attayabilirsiniz.
+ Aksi takdirde, `InitializeShapeFields` Şekil sınıfınızın yöntemini geçersiz kılın ve metin alanının uygun özelliğine bir değer atayın `Default...` .
 
 > [!WARNING]
-> 'i geçersiz kılmak için DSL Tanımında şekil sınıfının Çift Türetilmiş `InitializeShapeFields()` özelliğini olarak  `true` ayarlayabilirsiniz.
+> Geçersiz kılmak için `InitializeShapeFields()` , şekil sınıfının **Double TÜRETILMIŞ** özelliğini dsl tanımında öğesine ayarlamanız gerekir `true` .
 
- Bu örnekte, şeklin kullanıcı yorumları için kullanılacak bir metin alanı vardır. Standart açıklama yazı tipini kullanmak istiyorum. Stil kümesinden standart bir yazı tipi olduğundan varsayılan yazı tipi kimliğini de değiştirebiliriz:
+ Bu örnekte, bir şeklin Kullanıcı açıklamaları için kullanılacak bir metin alanı vardır. Standart açıklama yazı tipini kullanmak istiyoruz. Stil kümesinden standart bir yazı tipi olduğundan, varsayılan yazı tipi kimliğini ayarlayabiliriz:
 
 ```csharp
 
@@ -109,13 +109,13 @@ public virtual StyleSetResourceId GetFontId(ShapeElement parentShape)
 ```
 
 ## <a name="dynamic-customizations"></a>Dinamik özelleştirmeler
- Görünümün şeklin veya model öğesinin durumuna bağlı olarak değişiklik göstersin, kendi alt sınıfını türetin ve bir veya daha fazla `TextField` yöntemi `Get...` geçersiz kılın. Ayrıca şeklinizin InitializeShapeFields yöntemini geçersiz kılmanız ve TextField örneğini kendi sınıfınıza ait bir örnekle değiştirmeniz gerekir.
+ Görünümün, bir şeklin veya model öğesinin durumuna bağlı olarak değişmesini sağlamak için kendi alt sınıfını türetirsiniz `TextField` ve bir veya daha fazla yöntemi geçersiz kılın `Get...` . Ayrıca, şeklinizin ınitialeshapefields yöntemini geçersiz kılmanız ve TextField öğesinin örneğini kendi sınıfınızın bir örneğiyle değiştirmeniz gerekir.
 
- Aşağıdaki örnek, metin alanının yazı tipini şeklin model öğesinin Boole etki alanı özelliğinin durumuna bağımlı hale gelir.
+ Aşağıdaki örnek, bir metin alanının yazı tipini şeklin model öğesinin bir Boolean etki alanı özelliğinin durumuna bağımlı hale getirir.
 
- Bu örnek kodu çalıştırmak için Minimum Dil şablonunu kullanarak yeni bir DSL çözümü oluşturun. ExampleElement etki alanı sınıfına bir Boole `AlternateState` etki alanı özelliği ekleyin. ExampleShape sınıfına bir simge dekoratör ekleyin ve görüntüsünü bit eşlem dosyasına ayarlayın. Tüm **Şablonları Dönüştür'e tıklayın.** DSL projesine yeni bir kod dosyası ekleyin ve aşağıdaki kodu ekleyin.
+ Bu örnek kodu çalıştırmak için, en az dil şablonunu kullanarak yeni bir DSL çözümü oluşturun. `AlternateState`ExampleElement etki alanı sınıfına bir Boole alanı özelliği ekleyin. ExampleShape sınıfına bir simge dekoratör ekleyin ve görüntüsünü bir bit eşlem dosyası olarak ayarlayın. **Tüm Şablonları Dönüştür**' e tıklayın. DSL projesine yeni bir kod dosyası ekleyin ve aşağıdaki kodu ekleyin.
 
- Kodu test etmek için F5 tuşuna basın ve hata ayıklama çözümünde bir örnek diyagram açın. Simgenin varsayılan durumu görüntü gerekir. Şekli seçin ve Özellikler penceresi **AlternateState** özelliğinin değerini değiştirme. Öğe adının yazı tipi değişsin.
+ Kodu test etmek için F5 tuşuna basın ve hata ayıklama çözümünde örnek bir diyagram açın. Simgenin varsayılan durumu görünmelidir. Şekli seçin ve Özellikler penceresi **AlternateState** özelliğinin değerini değiştirin. Öğe adının yazı tipi değişmelidir.
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -171,38 +171,38 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ```
 
 ## <a name="style-sets"></a>Stil kümeleri
- Yukarıdaki örnekte, metin alanını kullanılabilen herhangi bir yazı tipiyle nasıl değiştirebilirsiniz? Ancak tercih edilen yöntem, şekliyle veya uygulamayla ilişkilendirilmiş bir stil kümesiyle değiştirmektir. Bunu yapmak için veya <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField.GetFontId%2A> GetTextBrushId() geçersiz kılın.
+ Yukarıdaki örnek, metin alanını kullanılabilen herhangi bir yazı tipiyle nasıl değiştirekullanabileceğinizi gösterir. Bununla birlikte, tercih edilen bir yöntem, şekli şekille veya uygulamayla ilişkili bir stil kümesinden biriyle değiştirmek olur. Bunu yapmak için, <xref:Microsoft.VisualStudio.Modeling.Diagrams.TextField.GetFontId%2A> veya Gettextbrühıd () öğesini geçersiz kılın.
 
- Alternatif olarak, geçersiz karak şeklinizin stil kümesini değiştirmeyi <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.InitializeResources%2A> düşünün. Bu, tüm şekil alanları için yazı tiplerini ve fırçaları değiştirme etkisine sahiptir.
+ Alternatif olarak, geçersiz kılarak şekillerinizin Stil kümesini değiştirmeyi göz önünde bulundurun <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.InitializeResources%2A> . Bu, tüm şekil alanları için yazı tiplerini ve fırçaları değiştirme etkisine sahiptir.
 
-## <a name="customizing-image-fields"></a>Görüntü Alanlarını Özelleştirme
- Bir şekil içinde görüntü dekoratör tanımladığınız zaman ve görüntü şeklini tanımladığınız zaman şeklin görüntü olduğu alan bir ImageField tarafından yönetilir. ImageFields ve diğer ShapeFields başlatma örnekleri için DSL çözümde Dsl\GeneratedCode\Shapes.cs'yi inceleyin.
+## <a name="customizing-image-fields"></a>Görüntü alanlarını özelleştirme
+ Bir şekildeki görüntü dekoratörü tanımladığınızda ve bir resim şekli tanımladığınızda, şeklin görüntülendiği alan bir ImageField tarafından yönetilir. ImageFields ve diğer şekil alanlarının başlatılmasının örnekleri için DSL çözümünüzdeki Dsl\GeneratedCode\Shapes.cs inceleyin.
 
- ImageField, bir dekoratöre atanan alan gibi bir şekil içindeki alanı yöneten bir nesnedir. Bir ImageField örneği, aynı şekil sınıfının birçok şekli arasında paylaşılır. ImageField örneği her şekil için ayrı bir görüntü depolamaz: bunun yerine yöntemi şekli parametre olarak alır ve şeklin geçerli durumuna ve model öğesinin durumuna bağlı olarak görüntüyü bu şekilde `GetDisplayImage(ShapeElement)` indirebilirsiniz.
+ ImageField, bir dekorata atanmış alan gibi bir şekil içindeki alanı yöneten bir nesnedir. Tek bir ImageField örneği, aynı şekil sınıfının birçok şekli arasında paylaşılır. ImageField örneği her şekil için ayrı bir görüntü depolamaz: bunun yerine, `GetDisplayImage(ShapeElement)` yöntemi şekli bir parametre olarak alır ve resmin geçerli durumuna ve model öğesine bağlı olarak görüntüyü arayabilir.
 
- Değişken görüntü gibi özel bir davranışa sahip olmak için ImageField'den türetilen kendi sınıfınızı oluşturabilirsiniz.
+ Değişken görüntü gibi özel davranışları isterseniz, ImageField 'dan türetilmiş kendi sınıfınızı oluşturabilirsiniz.
 
-#### <a name="to-create-a-subclass-of-imagefield"></a>ImageField alt sınıfı oluşturmak için
+#### <a name="to-create-a-subclass-of-imagefield"></a>ImageField öğesinin bir alt sınıfını oluşturmak için
 
-1. DSL **Tanımınız içinde üst** şekil sınıfının İki Kez Türetilen Özelliğini Üretir özelliğini ayarlayın.
+1. DSL tanımınızda üst Şekil sınıfının **Double türetilmiş** özelliğini oluştur ' u ayarlayın.
 
-2. Şekil `InitializeShapeFields` sınıfınıza göre yöntemini geçersiz kılın.
+2. `InitializeShapeFields`Şekil sınıfınızın yöntemini geçersiz kılın.
 
     - DSL projesinde yeni bir kod dosyası oluşturun ve şekil sınıfı için kısmi bir sınıf tanımı yazın. Burada yöntem tanımını geçersiz kılın.
 
-3. `InitializeShapeFields`DSL\GeneratedCode\Shapes.cs içinde kodunu inceleyin.
+3. DSL\GeneratedCode\Shapes.cs. içindeki kodu inceleyin `InitializeShapeFields`
 
-     Geçersiz kılma yönteminde temel yönteminizi çağırarak kendi görüntü alanı sınıfı örneğinizi oluşturun. Listede normal görüntü alanını değiştirmek için bunu `shapeFields` kullanın.
+     Geçersiz kılma yönteminde, temel yöntemi çağırın ve ardından kendi görüntü alanı sınıfınızın bir örneğini oluşturun. Listedeki normal görüntü alanını değiştirmek için bunu kullanın `shapeFields` .
 
 ## <a name="dynamic-icons"></a>Dinamik simgeler
- Bu örnek, şeklin model öğesinin durumuna bağlı olarak bir simge değişikliği yapar.
+ Bu örnek, bir simge değişikliğini şeklin model öğesinin durumuna bağımlı hale getirir.
 
 > [!WARNING]
-> Bu örnekte, dinamik görüntü dekoratörü yapma hakkında bilgi ve içerikler yer almaktadır. Ancak model değişkeninin durumuna bağlı olarak yalnızca bir veya iki görüntü arasında geçiş yapmak için birkaç görüntü dekoratör oluşturmak, bunları şekilde aynı konumda bulmak ve ardından Görünürlük filtresini model değişkeninin belirli değerlerine bağlı olarak ayarlamak daha kolaydır. Bu filtreyi ayarlamak için DSL Tanımı'nın şekil haritasını seçin, DSL Ayrıntıları penceresini açın ve Dekoratörler sekmesine tıklayın.
+> Bu örnek, dinamik görüntü dekoratörü yapmayı gösterir. Ancak, bir model değişkeninin durumuna bağlı olarak yalnızca bir veya iki görüntü arasında geçiş yapmak istiyorsanız, birkaç görüntü dekoratlayıcısı oluşturmak, şekildeki aynı konumda bulmak ve sonra görünürlük filtresini model değişkeninin belirli değerlerine göre ayarlamak daha basittir. Bu filtreyi ayarlamak için DSL tanımında şekil eşlemesini seçin, DSL ayrıntıları penceresini açın ve dekoratörler sekmesine tıklayın.
 
- Bu örnek kodu çalıştırmak için Minimum Dil şablonunu kullanarak yeni bir DSL çözümü oluşturun. ExampleElement etki alanı sınıfına bir Boole `AlternateState` etki alanı özelliği ekleyin. ExampleShape sınıfına bir simge dekoratör ekleyin ve görüntüsünü bit eşlem dosyasına ayarlayın. Tüm **Şablonları Dönüştür'e tıklayın.** DSL projesine yeni bir kod dosyası ekleyin ve aşağıdaki kodu ekleyin.
+ Bu örnek kodu çalıştırmak için, en az dil şablonunu kullanarak yeni bir DSL çözümü oluşturun. `AlternateState`ExampleElement etki alanı sınıfına bir Boole alanı özelliği ekleyin. ExampleShape sınıfına bir simge dekoratör ekleyin ve görüntüsünü bir bit eşlem dosyası olarak ayarlayın. **Tüm Şablonları Dönüştür**' e tıklayın. DSL projesine yeni bir kod dosyası ekleyin ve aşağıdaki kodu ekleyin.
 
- Kodu test etmek için F5 tuşuna basın ve hata ayıklama çözümünde bir örnek diyagram açın. Simgenin varsayılan durumu görüntü gerekir. Şekli seçin ve Özellikler penceresi **AlternateState** özelliğinin değerini değiştirme. Simge daha sonra bu şekilde 90 dereceye kadar döndürülmüş olarak görünerek görünür.
+ Kodu test etmek için F5 tuşuna basın ve hata ayıklama çözümünde örnek bir diyagram açın. Simgenin varsayılan durumu görünmelidir. Şekli seçin ve Özellikler penceresi **AlternateState** özelliğinin değerini değiştirin. Bu durumda, simgenin bu şekle göre 90 derece döndürüldüğü gösterilmelidir.
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;

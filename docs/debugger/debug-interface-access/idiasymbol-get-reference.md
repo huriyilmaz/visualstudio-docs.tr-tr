@@ -11,14 +11,15 @@ ms.assetid: 6a97cb74-6a14-41fd-8e24-2a42d7a1e529
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 278a146da28b3402c8586b96ab1053250bf8f2c0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c0aa98ec2e1c59f8dc919cf061711e9744a2dd10
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155812"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121300"
 ---
 # <a name="idiasymbolget_reference"></a>IDiaSymbol::get_reference
 Bir işaretçi türünün bir başvuru olup olmadığını belirten bir bayrak alır.

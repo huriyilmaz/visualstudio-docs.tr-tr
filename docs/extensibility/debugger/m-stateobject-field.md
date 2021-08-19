@@ -1,6 +1,6 @@
 ---
-description: Eylemin kullanacağı verileri temsil eden nesne.
-title: m_stateObject alanı | Microsoft Docs
+description: Eylemin kullanabileceği verileri temsil eden bir nesne.
+title: m_stateObject Alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,21 +12,21 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0268f5a76d73f6546d2b916c9dd7e542109338d24a8ed6e5dbe0372391721ce1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fad86acc86043e58bfa68f0cf8687b7c439b7ad6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378087"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160354"
 ---
 # <a name="m_stateobject-field"></a>m_stateObject alanı
-Eylemin kullanacağı verileri temsil eden nesne.
+Eylemin kullanabileceği verileri temsil eden bir nesne.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
+ **Derleme:** mscorlib *(mscorlib.dll*)
 
- bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
+ Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ Eylemin kullanacağı verileri temsil eden nesne.
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Bu, `state` <xref:System.Threading.Tasks.Task.%23ctor%2A> kurucudaki parametredir. Ayrıca, özelliği için de yedekleme alanıdır <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=fullName> .
+ Bu, `state` oluşturucuda <xref:System.Threading.Tasks.Task.%23ctor%2A> parametresidir. Ayrıca özelliği için de destek <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=fullName> alanıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md)

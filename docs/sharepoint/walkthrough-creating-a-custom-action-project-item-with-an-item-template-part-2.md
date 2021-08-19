@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 961b2c42f7c676271e9cf7d75418e9b9b66047534aed2abf0087809bf6957871
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 21dc546890bf8e7e75a32c8b00246bec915098bc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121367414"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083992"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>İzlenecek yol: öğe şablonu, Bölüm 2 ile özel bir eylem proje öğesi oluşturma
   SharePoint proje öğesi özel bir türünü tanımladıktan ve Visual Studio bir öğe şablonuyla ilişkilendirdikten sonra, şablon için bir sihirbaz sağlamak da isteyebilirsiniz. Bir projeye proje öğesinin yeni bir örneğini eklemek için şablonunuzu kullandıklarında kullanıcılardan bilgi toplamak için Sihirbazı kullanabilirsiniz. Topladığınız bilgiler Proje öğesini başlatmak için kullanılabilir.
@@ -193,7 +193,7 @@ ms.locfileid: "121367414"
     sn.exe -T PathToWizardAssembly
     ```
 
-     ItemTemplateWizard.dll *derlemesi için ortak* anahtar belirteci, Visual Studio komut istemi penceresine yazılır.
+     *ItemTemplateWizard.dllderlemesi için* ortak anahtar belirteci, Visual Studio istemi penceresine yazılır.
 
 2. Visual Studio İstemi penceresini açık tutma. Sonraki yordamı tamamlamak için ortak anahtar belirteci gerekir.
 
@@ -214,12 +214,12 @@ ms.locfileid: "121367414"
 
 3. Dosyayı kaydedin ve kapatın.
 
-## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-item-template"></a>Öğe şablonundaElements.xml *parametresi* ekleme
+## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-item-template"></a>Öğe şablonundaElements.xml *parametreleri* ekleme
  ItemTemplate projesinde Elements.xmldeğiştirilebilir parametreler ekleyin. Bu parametreler, daha önce `PopulateReplacementDictionary` tanımlandığı `CustomActionWizard` sınıftaki yönteminde başlatılır. Kullanıcı bir projeye Özel Eylem proje öğesi ekleyirken, Visual Studio yeni proje öğesinde yer alan *Elements.xml* dosyasındaki bu parametreleri sihirbazda belirtilen değerlerle otomatik olarak değiştirir.
 
  Değiştirilebilir parametre, dolar işareti ($) karakteriyle başlayan ve sona eren bir belirteçtir. Kendi değiştirilebilir parametrelerinizi tanımlamaya ek olarak, proje sisteminin tanımladığı ve SharePoint yerleşik parametreleri de kullanabilirsiniz. Daha fazla bilgi için [bkz. Değiştirilebilir parametreler.](../sharepoint/replaceable-parameters.md)
 
-#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>Elements.xmldosyasına değiştirilebilir *parametreler* eklemek için
+#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>Elements.xmldosyasına *değiştirilebilir parametreler* eklemek için
 
 1. ItemTemplate projesinde, dosyanın içeriğini *Elements.xml* XML ile değiştirin.
 
@@ -246,7 +246,7 @@ ms.locfileid: "121367414"
 
 #### <a name="to-add-the-wizard-to-the-vsix-package"></a>Sihirbazı VSIX paketine eklemek için
 
-1. **Çözüm Gezgini'da** CustomActionProjectItem projesinde **source.extension.vsixmanifest** dosyasındaki kısayol menüsünü açın ve  aç'ı seçen dosyayı bildirim düzenleyicisinde açın.
+1. **Çözüm Gezgini'da** CustomActionProjectItem projesinde **source.extension.vsixmanifest** dosyasındaki kısayol menüsünü açın ve  dosyayı bildirim düzenleyicisinde açmak için Aç'ı seçin.
 
 2. Bildirim düzenleyicisinde Varlıklar sekmesini **ve** ardından Yeni **düğmesini** seçin.
 
@@ -275,17 +275,17 @@ ms.locfileid: "121367414"
 
 5. **F5** anahtarını seçerek veya menü çubuğunda Hata AyıklamaYı Başlat hata ayıklamayı **seçerek**  >  **hata ayıklamayı başlatabilirsiniz.**
 
-     Visual Studio %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Action Project Item\1.0 uzantısını yüklüp deneysel bir Visual Studio. Proje öğesini bu örnek içinde test Visual Studio.
+     Visual Studio %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Action Project Item\1.0 uzantısını yüker ve deneysel Visual Studio. Proje öğesini bu örnek içinde test Visual Studio.
 
 #### <a name="to-test-the-wizard-in-visual-studio"></a>Sihirbazı test etmek için Visual Studio
 
-1. Deneysel Visual Studio örneğinde, menü çubuğunda Dosya Yeni Dosya'Project.  >    >  
+1. Deneysel Visual Studio örneğinde, menü çubuğunda Dosya Yeni   >    >  Dosya'Project.
 
 2. Visual **C#** **veya Visual Basic** düğümünü genişletin (öğe şablonunuz tarafından kullanılan dile bağlı olarak), **SharePoint** düğümünü genişletin ve **ardından 2010 düğümünü** seçin.
 
-3. Proje şablonları listesinde SharePoint **2010 Project'ı** seçin, projeye **CustomActionWizardTest** adını ve ardından **Tamam düğmesini** seçin.
+3. Proje şablonları listesinde, SharePoint **2010 Project'ı** seçin, projeyi **CustomActionWizardTest** olarak adlanın ve ardından **Tamam düğmesini** seçin.
 
-4. SharePoint **Özelleştirme** Sihirbazı'nda, hata ayıklama için kullanmak istediğiniz sitenin URL'sini girin ve ardından Son **düğmesini** seçin.
+4. SharePoint **Özelleştirme Sihirbazı'nda,** hata ayıklama için kullanmak istediğiniz sitenin URL'sini girin ve ardından Son **düğmesini** seçin.
 
 5. Bu **Çözüm Gezgini** proje düğümünün kısayol menüsünü açın, Ekle'yi **ve** ardından Yeni **Öğe'yi seçin.**
 
@@ -311,7 +311,7 @@ ms.locfileid: "121367414"
 
      Visual Studio **CustomAction1** adlı bir öğeyi projenize ekler ve *Elements.xml* dosyasını düzenleyicide açar. Bu *Elements.xml* sihirbazda belirttiğiniz değerleri içerdiğini doğrulayın.
 
-#### <a name="to-test-the-custom-action-in-sharepoint"></a>Özel eylemi SharePoint
+#### <a name="to-test-the-custom-action-in-sharepoint"></a>Özel eylemi test etmek için SharePoint
 
 1. Deneysel örnek Visual Studio **F5** anahtarını seçin veya menü çubuğunda Hata Ayıklama Hata AyıklamaYı   >  **Başlat'ı seçin.**
 
@@ -339,7 +339,7 @@ ms.locfileid: "121367414"
 
      Uzantılar **ve Güncelleştirmeler** iletişim kutusu açılır.
 
-2. Uzantı listesinde, Özel Eylem Öğesi **uzantısını Project ve** ardından Kaldır **düğmesini** seçin.
+2. Uzantılar listesinde, Özel Eylem Ve Öğe **Project'ı seçin** ve ardından Kaldır **düğmesini** seçin.
 
 3. Görüntülenen iletişim kutusunda, uzantıyı  kaldırmak istediğinizden emin olmak için Evet düğmesini  seçin ve ardından kaldırma işlemini tamamlamak için Şimdi Yeniden Başlat düğmesini seçin.
 

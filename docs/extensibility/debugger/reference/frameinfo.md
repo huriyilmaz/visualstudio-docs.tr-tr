@@ -11,17 +11,18 @@ ms.assetid: 95001b89-dddb-45bb-889d-8327994e38a5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0df1689a6d72e972c2bb0f18082041997511843b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6c2f2da572c18dfce5aac6a8aa748a07347ff088
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105059255"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104618"
 ---
 # <a name="frameinfo"></a>FRAMEINFO
 Yığın çerçevesini açıklar.

@@ -11,14 +11,15 @@ ms.assetid: 892b80ff-5957-4233-b4d7-6144167be289
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 73060b77eddff157d24194c1051bece2fa67d4b0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 93efcf7412835fa9a4f1146d293d2d4e4d25e05f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147319"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105452"
 ---
 # <a name="idiasymbolget_liverangestartaddresssection"></a>IDiaSymbol::get_liveRangeStartAddressSection
 Yerel sembolün geçerli olduğu aralığın başlangıç adresinin bölüm bölümünü döndürür.

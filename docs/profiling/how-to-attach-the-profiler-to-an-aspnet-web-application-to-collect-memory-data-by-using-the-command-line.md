@@ -12,12 +12,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - aspnet
-ms.openlocfilehash: 7a28943bbca2ace833b1381a7316ca672715eabc25587fe3ed0bbcc198399e4b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6681a2d778709391c8912d54af7ba40051dbdb63
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121355236"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150267"
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line"></a>Nasıl kullanılır: Komut satırı kullanarak ASP.NET verileri toplamak için profil oluşturma web uygulamasına profil oluşturma
 Bu makalede, profil Profil Oluşturma Araçları web uygulamasına eklemek ve veri kaynağı bellek ayırmalarının sayısı ve boyutu hakkında veri toplamak için .NET Framework [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] açıklanmıştır. Ayrıca, bellek nesnelerinin kullanım ömrü hakkında .NET Framework toplayabilirsiniz.
@@ -116,18 +116,18 @@ Bu makalede, profil Profil Oluşturma Araçları web uygulamasına eklemek ve ve
 
      **IISReset /stop**
 
-2. Profilleyiciyi kapatın. Şunu yazın:
+2. Profil oluşturucuyu kapatın. Şunu yazın:
 
-    **VSPerfCmd /shutdown**
+    **VSPerfCmd/shutdown**
 
-3. (İsteğe bağlı) Profil oluşturma ortam değişkenlerini temizleme. Şunu yazın:
+3. Seçim Profil oluşturma ortamı değişkenlerini temizleyin. Şunu yazın:
 
-    **VSPerfCmd /globaloff**
+    **VSPerfCmd/globaloff**
 
-4. Bilgisayarı yeniden başlatın. Gerekirse, (IIS) Internet Information Services yeniden başlatın. Şunu yazın:
+4. Bilgisayarı yeniden başlatın. gerekirse Internet Information Services (ııs) yeniden başlatın. Şunu yazın:
 
-    **IISReset /start**
+    **IISReset/Start**
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Web ASP.NET profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)
-- [.NET bellek veri görünümleri](../profiling/dotnet-memory-data-views.md)
+- [web uygulamalarının profilini ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [.NET bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md)

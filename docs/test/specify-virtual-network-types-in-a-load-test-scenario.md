@@ -15,12 +15,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: c2830b7bc78dd3b900692ca99b5fcc83b724e774736d7d2e2bdd8fee9a7cdbfc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 829272d73792e1b9c6d6e61b653ab85c78ca0508
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121424807"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054190"
 ---
 # <a name="specify-virtual-network-types-in-a-load-test-scenario"></a>Yük testi senaryosunda sanal ağ türlerini belirtme
 

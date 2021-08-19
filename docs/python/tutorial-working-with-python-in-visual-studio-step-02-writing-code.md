@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c7b6b985e53809bb3941246e66c2bdb24df3c9cdb4adecdc58b8eedec910113a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3198ed207c09c593e6e2bc0444499556c16ae206
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121229500"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054333"
 ---
 # <a name="step-2-write-and-run-code"></a>2. Adım: kodu yazma ve çalıştırma
 

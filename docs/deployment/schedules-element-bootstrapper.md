@@ -1,6 +1,6 @@
 ---
-title: '&lt;Zamanlamalar &gt; öğesi (önyükleyici) | Microsoft Docs'
-description: Zamanlamalar öğesi, komut öğesi tarafından tanımlanan komutların çalıştırılması gereken belirli zamanları tanımlayan Schedule öğelerini içerir.
+title: '&lt;Schedules &gt; Öğesi (Önyükleyici) | Microsoft Docs'
+description: Schedules öğesi, Command öğesi tarafından tanımlanan komutların hangi zamanlarda çalıştır gerektiğini tanımlayan Schedule öğelerini içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -18,15 +18,15 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b7ca1fb76480738240f2c6a1240e1f243ef534c37fe8f1dd3e9dba4c5b5da10
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8f9430dd814ba76f0a8e688d6a198c8715fc4d99
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435328"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120718"
 ---
-# <a name="ltschedulesgt-element-bootstrapper"></a>&lt;Zamanlamalar &gt; öğesi (önyükleyici)
-`Schedules`Öğesi, `Schedule` öğesi tarafından tanımlanan komutların çalıştırılması gereken belirli zamanları tanımlayan öğeleri içerir `Command` .
+# <a name="ltschedulesgt-element-bootstrapper"></a>&lt;Schedules &gt; öğesi (önyükleyici)
+`Schedules`öğesi, `Schedule` öğesi tarafından tanımlanan komutların çalışması gereken belirli saatleri `Command` tanımlayan öğeleri içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,28 +43,28 @@ ms.locfileid: "121435328"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `Schedules`Öğesi, öğesinin bir alt öğesidir `Product` . Her `Product` öğenin en fazla bir öğesi olabilir `Schedules` . `Schedules`Öğesinde hiç öznitelik yok.
+ `Schedules`öğesi, öğesinin alt `Product` öğesidir. Her `Product` öğe en fazla bir `Schedules` öğeye sahip olabilir. öğesinin `Schedules` özniteliği yoktur.
 
 ## <a name="schedule"></a>Zamanla
- `Schedule`Öğesi, öğesinin bir alt öğesidir `Schedules` . Bir `Schedules` öğe en az bir öğe içermelidir `Schedule` .
+ `Schedule`öğesi, öğesinin alt `Schedules` öğesidir. Bir `Schedules` öğenin en az bir öğesi `Schedule` olması gerekir.
 
- `Schedule` aşağıdaki özniteliğe sahiptir.
+ `Schedule` aşağıdaki özniteliğine sahip.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Name`|Gereklidir. Zamanlama öğesinin adı. Bu `ScheduleName` , öğesinin özelliğine karşılık gelir `Command` . Bir `Command` , adlandırılmış zamanlamaya başvurduğunda, yalnızca bu öğe tarafından belirtilen zamanda yürütülür `Schedule` . Zamanlamalar Ayrıca, `FailIf` `BypassIf` Bu koşullu testlerin belirtilen zamanlamaya göre yürütülmesini kısıtlayan ve öğeleriyle ilişkili olabilir. Daha fazla bilgi için bkz. [ \<Commands> öğesi](../deployment/commands-element-bootstrapper.md).|
+|`Name`|Gereklidir. Zamanlama öğesinin adı. Bu öğenin `ScheduleName` özelliğine `Command` karşılık gelen. Bir `Command` adlandırılmış zaman çizelgesine başvuracaksa, yalnızca bu öğe tarafından belirtilen zamanda `Schedule` yürütülür. Zamanlamalar ayrıca ve öğeleriyle de `FailIf` `BypassIf` ilişkilendirilerek bu koşullu testlerin belirtilen zamanlamada yürütülmesini kısıtlar. Daha fazla bilgi için bkz. [ \<Commands> Öğesi.](../deployment/commands-element-bootstrapper.md)|
 
- Verilen bir `Schedule` öğe aşağıdaki alt öğelerden tam olarak birine sahip olabilir.
+ Verilen bir `Schedule` öğenin tam olarak aşağıdakilerden biri olabilir.
 
 ## <a name="buildlist"></a>BuildList
- `BuildList`Öğesi, yükleyiciyi önyükleme uygulaması başlatıldıktan hemen sonra bir komut yürütmesini söyler.
+ öğesi, `BuildList` yükleyiciye önyükleme uygulaması başlatıldıktan hemen sonra bir komut yürütmesini belirtir.
 
 ## <a name="beforepackage"></a>BeforePackage
- `BeforePackage`Öğesi, belirtilen paket yüklenmeden önce yükleyiciye bir komut yürütmesini söyler.
+ öğesi, `BeforePackage` belirtilen paket yüklenmeden önce yükleyiciye bir komut yürütmesini belirtir.
 
 ## <a name="afterpackage"></a>AfterPackage
- `AfterPackage`Öğesi, belirtilen paket yüklendikten sonra yükleyiciye bir komut yürütmesini söyler.
+ öğesi, `AfterPackage` yükleyiciye belirtilen paket yüklendikten sonra bir komut yürütmesini belirtir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [\<Product> dosyalarında](../deployment/product-element-bootstrapper.md)
+- [\<Product> Öğe](../deployment/product-element-bootstrapper.md)
 - [Ürün ve paket şema başvurusu](../deployment/product-and-package-schema-reference.md)

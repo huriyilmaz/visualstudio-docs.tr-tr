@@ -1,5 +1,5 @@
 ---
-description: Kesme noktası konumunu açıklamak için kullanılan yapı türünü belirtir.
+description: Kesme noktasının konumunu anlatmak için kullanılan yapının türünü belirtir.
 title: BP_LOCATION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 23319123066e4c78525f2fb57b07da982a8aef1763d97a66a123d44d876e2eba
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9c8f1a59f252f2fd1eb22bc289f3bc9982d3ba92
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434483"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120445"
 ---
 # <a name="bp_location"></a>BP_LOCATION
-Kesme noktası konumunu açıklamak için kullanılan yapı türünü belirtir.
+Kesme noktasının konumunu anlatmak için kullanılan yapının türünü belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,58 +57,58 @@ public struct BP_LOCATION {
 
 ## <a name="members"></a>Üyeler
 `bpLocationType`\
-Birliğin veya [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) yorumlamak için kullanılan bir `bpLocation` değerdir. `unionmemberX`
+Birleşim veya üyeleri yorumlamak için kullanılan [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) numaralandırmasından bir değer `bpLocation` `unionmemberX` .
 
 `bpLocation`.`bplocCodeFileLine`\
-[yalnızca C++ ] ise [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md) yapısını `bpLocationType`  =  `BPLT_CODE_FILE_LINE` içerir.
+[Yalnızca C++] İse [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md) yapısını içerir `bpLocationType`  =  `BPLT_CODE_FILE_LINE` .
 
 `bpLocation.bplocCodeFuncOffset`\
-[yalnızca C++ ] ise [BP_LOCATION_CODE_FUNC_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md) yapısını `bpLocationType`  =  `BPLT_CODE_FUNC_OFFSET` içerir.
+[Yalnızca C++] İse [BP_LOCATION_CODE_FUNC_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md) yapısını içerir `bpLocationType`  =  `BPLT_CODE_FUNC_OFFSET` .
 
 `bpLocation.bplocCodeContext`\
-[yalnızca C++ ] ise [BP_LOCATION_CODE_CONTEXT](../../../extensibility/debugger/reference/bp-location-code-context.md) yapısını `bpLocationType`  =  `BPLT_CODE_CONTEXT` içerir.
+[Yalnızca C++] İse [BP_LOCATION_CODE_CONTEXT](../../../extensibility/debugger/reference/bp-location-code-context.md) yapısını içerir `bpLocationType`  =  `BPLT_CODE_CONTEXT` .
 
 `bpLocation.bplocCodeString`\
-[yalnızca C++ ] ise [BP_LOCATION_CODE_STRING](../../../extensibility/debugger/reference/bp-location-code-string.md) yapısını `bpLocationType`  =  `BPLT_CODE_STRING` içerir.
+[Yalnızca C++] İse [BP_LOCATION_CODE_STRING](../../../extensibility/debugger/reference/bp-location-code-string.md) yapısını içerir `bpLocationType`  =  `BPLT_CODE_STRING` .
 
 `bpLocation.bplocCodeAddress`\
-[yalnızca C++ ] ise [BP_LOCATION_CODE_ADDRESS](../../../extensibility/debugger/reference/bp-location-code-address.md) yapısını `bpLocationType`  =  `BPLT_CODE_ADDRESS` içerir.
+[Yalnızca C++] İse [BP_LOCATION_CODE_ADDRESS](../../../extensibility/debugger/reference/bp-location-code-address.md) yapısını içerir `bpLocationType`  =  `BPLT_CODE_ADDRESS` .
 
 `bpLocation.bplocDataString`\
-[yalnızca C++ ] ise [BP_LOCATION_DATA_STRING](../../../extensibility/debugger/reference/bp-location-data-string.md) yapısını `bpLocationType`  =  `BPLT_DATA_STRING` içerir.
+[Yalnızca C++] İse [BP_LOCATION_DATA_STRING](../../../extensibility/debugger/reference/bp-location-data-string.md) yapısını içerir `bpLocationType`  =  `BPLT_DATA_STRING` .
 
 `bpLocation.bplocResolution`\
-[yalnızca C++ ] ise [BP_LOCATION_RESOLUTION](../../../extensibility/debugger/reference/bp-location-resolution.md) yapısını `bpLocationType`  =  `BPLT_RESOLUTION` içerir.
+[Yalnızca C++] İse [BP_LOCATION_RESOLUTION](../../../extensibility/debugger/reference/bp-location-resolution.md) yapısını içerir `bpLocationType`  =  `BPLT_RESOLUTION` .
 
 `unionmember1`\
-[yalnızca C# ] Yorumlama hakkında daha fazla açıklama için bkz. Açıklamalar.
+[Yalnızca C#] Yorumlama hakkında açıklamalar bölümüne bakın.
 
 `unionmember2`\
-[yalnızca C# ] Yorumlama hakkında daha fazla açıklama için bkz. Açıklamalar.
+[Yalnızca C#] Yorumlama hakkında açıklamalar bölümüne bakın.
 
 `unionmember3`\
-[yalnızca C# ] Yorumlama hakkında daha fazla açıklama için bkz. Açıklamalar.
+[Yalnızca C#] Yorumlama hakkında açıklamalar bölümüne bakın.
 
 `unionmember4`\
-[yalnızca C# ] Yorumlama hakkında daha fazla açıklama için bkz. Açıklamalar.
+[Yalnızca C#] Yorumlama hakkında açıklamalar bölümüne bakın.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, BP_REQUEST_INFO [ve](../../../extensibility/debugger/reference/bp-request-info.md) [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) üyesidir.
+Bu yapı, [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) ve [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapılarının bir üyesidir.
 
- [yalnızca C# ] Üyeler `unionmemberX` aşağıdaki tabloya göre yorumlanır. Değerin sol sütununa bakın ve her üyenin neyi temsil ettiğini belirlemek için diğer sütunlara `bpLocationType` bakın ve uygun şekilde `unionmemberX` `unionmemberX` sıralayabilirsiniz. Bu yapının bir bölümünü C# ile yorumlamanın bir yolu için örneğine bakın.
+ [Yalnızca C#] `unionmemberX` Üyeler aşağıdaki tabloya göre yorumlanır. Değerin sol sütununu arayın `bpLocationType` ve ardından her üyenin ne kadar temsil ettiğini belirlemek için diğer sütunlara bakın `unionmemberX` `unionmemberX` . C# ' de bu yapının bir parçasını yorumlamak için bir yol örneğine bakın.
 
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|
 |----------------------|--------------------|--------------------|--------------------|--------------------|
-|`BPLT_CODE_FILE_LINE`|`string` (bağlam)|[IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)|-|-|
-|`BPLT_CODE_FUNC_OFFSET`|`string` (bağlam)|[IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)|-|-|
+|`BPLT_CODE_FILE_LINE`|`string` (bir bağlam)|[IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)|-|-|
+|`BPLT_CODE_FUNC_OFFSET`|`string` (bir bağlam)|[IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)|-|-|
 |`BPLT_CODE_CONTEXT`|[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)|-|-|-|
-|`BPLT_CODE_STRING`|`string` (bağlam)|`string` (koşullu ifade)|-|-|
-|`BPLT_CODE_ADDRESS`|`string` (bağlam)|`string` (modül URL'si)|`string` (işlev adı)|`string` (adres)|
-|`BPLT_DATA_STRING`|[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)|`string` (bağlam)|`string` (veri ifadesi)|`uint` (öğe sayısı)|
+|`BPLT_CODE_STRING`|`string` (bir bağlam)|`string` (koşullu ifade)|-|-|
+|`BPLT_CODE_ADDRESS`|`string` (bir bağlam)|`string` (modül URL 'SI)|`string` (işlev adı)|`string` adrestir|
+|`BPLT_DATA_STRING`|[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)|`string` (bir bağlam)|`string` (veri ifadesi)|`uint` (öğe sayısı)|
 |`BPLT_RESOLUTION`|[IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)|-|-|-|
 
 ## <a name="example"></a>Örnek
-Bu örnekte, türü için `BP_LOCATION` C# içinde yapının nasıl yorumlandır olduğu `BPLT_DATA_STRING` gösterir. Bu özel tür, dört üyenin de tüm olası biçimlerde (nesne, dize ve `unionmemberX` sayı) nasıl yorumlandırılır.
+Bu örnek `BP_LOCATION` , türü Için C# ' deki yapının nasıl yorumlanacağı gösterilmektedir `BPLT_DATA_STRING` . Bu belirli tür `unionmemberX` , tüm olası biçimlerdeki dört üyenin (nesne, dize ve sayı) nasıl yorumlanacağı gösterilmektedir.
 
 ```csharp
 using System;
@@ -134,11 +134,11 @@ namespace MyPackage
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

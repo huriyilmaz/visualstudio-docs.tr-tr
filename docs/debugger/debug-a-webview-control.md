@@ -17,12 +17,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: cdf7632e28e0055b874ef54ae7c6379f623ca6b365a88018641501f56ab40fa9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3198685acc8ad33a545bf55628c99e78d104d251
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345977"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122059157"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>UWP Uygulamasında WebView denetiminde hata ayıklama
 
@@ -42,14 +42,14 @@ ms.locfileid: "121345977"
 
      ![Betik hata ayıklayıcısını ekleme](../debugger/media/js_dom_webview_script_debugger.png "JS_DOM_WebView_Script_Debugger")
 
-4. (İsteğe bağlı) Visual Studio'nin Express olmayan sürümleri için Araçlar > Seçenekler > Hata Ayıklama **>** Tam Zamanında ' yi seçerek ve ardından Betik için JIT hata ayıklamasını devre dışı bırakarak tam zamanında (JIT) hata ayıklamayı devre dışı edin.
+4. (İsteğe bağlı) Visual Studio'nin Express olmayan sürümleri için Araçlar > Seçenekler > Hata Ayıklama **>** Tam Zamanında 'ı seçerek ve ardından Betik için JIT hata ayıklamasını devre dışı bırakarak tam zamanında (JIT) hata ayıklamayı devre dışı edin.
 
     > [!NOTE]
     > JIT hata ayıklamayı devre dışı bırakarak, bazı web sayfalarında oluşan işlanmamış özel durumlar için iletişim kutularını gizleyebilirsiniz. Bu Visual Studio Express, JIT hata ayıklaması her zaman devre dışı bırakılır.
 
 5. Hata ayıklamaya başlamak için F5'e basın.
 
-### <a name="use-the-dom-explorer-to-inspect-and-debug-a-webview-control"></a>WebView DOM Gezgini incelemek ve hata ayıklamak için DOM Gezgini'i kullanma
+### <a name="use-the-dom-explorer-to-inspect-and-debug-a-webview-control"></a>WebView DOM Gezgini incelemek ve hata ayıklamak için web sitesini kullanma
 
 1. (C#, Visual Basic, C++) Betik hata ayıklayıcısını uygulamanıza ekleme. Yönergeler için ilk bölüme bakın.
 
@@ -57,11 +57,11 @@ ms.locfileid: "121345977"
 
 3. Denetimlerini içeren `Webview` sayfaya gidin.
 
-4. Hata DOM Gezgini, hata ayıkla , Windows , DOM Gezgini ve ardından incelemek istediğiniz `WebView` URL'nin URL'sini   `WebView` seçerek denetimin DOM Gezgini penceresini açın.
+4. Hata ayıkla DOM Gezgini , Windows , DOM Gezgini ve ardından incelemek istediğiniz URL'nin URL'sini seçerek denetimin DOM Gezgini `WebView` penceresini   `WebView` açın.
 
      ![DOM Gezgini](../debugger/media/js_dom_webview.png "JS_DOM_WebView")
 
-     ile DOM Gezgini, `WebView` dosyanın içinde yeni bir sekme olarak Visual Studio.
+     ile DOM Gezgini, `WebView` yeni bir sekme olarak görüntülenir ve Visual Studio.
 
 5. Kullanarak CSS stillerini ayıklama konusunda açıklandığı gibi canlı DOM öğelerini ve [CSS stillerini DOM Gezgini.](quickstart-debug-html-and-css.md)
 

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 38fde9a0bfed0a915cdb4ea16e95d04597931c8c13975b866adce95dde4e2ac4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3f9372e921bbd804c7867928a9090fb6b5aae27e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377840"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127395"
 ---
 # <a name="idebugcoreserver2getmachineinfo"></a>IDebugCoreServer2::GetMachineInfo
 Çekirdek sunucunun üzerinde çalıştığı makinenin açıklamasını alır.

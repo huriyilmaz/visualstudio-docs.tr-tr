@@ -1,6 +1,6 @@
 ---
 title: Önbellek verileri
-description: verilerin çevrimdışı olarak veya Microsoft Office kelime veya Excel açılmadan veya açmadan veri nesnelerini bir belge düzeyi özelleştirmesinde nasıl önbelleğe alabileceğinizi öğrenin.
+description: Verilere çevrimdışı olarak veya Word veya Microsoft Office açmadan erişilebilir olması için belge düzeyinde bir özelleştirmede veri nesnelerini Excel.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,77 +17,77 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 547c2be11a2c52baf7d5d2c7d3ac1be4b06ed5999d3bb16e3e626c37ba3eed9b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f8779089fc4987d600f3860151782d0322f9d1fd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384554"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122083740"
 ---
 # <a name="cache-data"></a>Önbellek verileri
-  verilerin çevrimdışı olarak erişilebilmesi veya Microsoft Office kelime ya da Microsoft Office Excel açılmadan, veri nesnelerini belge düzeyi özelleştirmesinde önbelleğe alabilirsiniz. Bir nesneyi önbelleğe almak için, nesnenin belirli gereksinimleri karşılayan bir veri türü olması gerekir. .NET Framework birçok ortak veri türü,, ve dahil olmak üzere bu gereksinimleri karşılar <xref:System.String> <xref:System.Data.DataSet> <xref:System.Data.DataTable> .
+  Verilere çevrimdışı olarak veya Word veya Microsoft Office açmadan erişilebilir olması için veri nesnelerini belge düzeyinde Microsoft Office Excel. Bir nesneyi önbelleğe alan nesnenin belirli gereksinimleri karşılayacak bir veri türüne sahip olması gerekir. , ve dahil olmak üzere .NET Framework çoğu yaygın veri türü bu <xref:System.String> gereksinimleri <xref:System.Data.DataSet> <xref:System.Data.DataTable> karşılar.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Veri önbelleğine bir nesne eklemenin iki yolu vardır:
+ Veri önbelleğine nesne eklemenin iki yolu vardır:
 
-- Çözüm oluşturulduğunda veri önbelleğine bir nesne eklemek için <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> özniteliği nesne bildirimine uygulayın. Daha fazla bilgi için bkz. [nasıl yapılır: çevrimdışı kullanım için verileri önbelleğe alma veya bir sunucu üzerinde](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md).
+- Çözüm yerleşik olduğunda veri önbelleğine bir nesnesi eklemek için <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> özniteliğini nesne bildirimine ekleyin. Daha fazla bilgi için [bkz. Nasıl kullanılır: Verileri çevrimdışı veya bir sunucuda kullanmak üzere önbelleğe alın.](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
 
-- Çalışma zamanında veri önbelleğine program aracılığıyla bir nesne eklemek için, `StartCaching` veya sınıfları gibi bir konak öğesinin yöntemini kullanın `ThisDocument` `ThisWorkbook` . daha fazla bilgi için bkz. [nasıl yapılır: program aracılığıyla bir veri kaynağını bir Office belgesinde önbelleğe alma](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md).
+- Çalışma zamanında veri önbelleğine program aracılığıyla bir nesne eklemek için, veya sınıfları gibi bir `StartCaching` konak öğesinin `ThisDocument` yöntemini `ThisWorkbook` kullanın. Daha fazla bilgi için bkz. Nasıl kullanılır: Bir veri kaynağını program aracılığıyla bir [veri Office önbelleğe alın.](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
 
-  Veri önbelleğine bir nesne ekledikten sonra, Word veya Excel başlatmadan önbelleğe alınmış verilere erişebilir ve değişiklik yapabilirsiniz. Daha fazla bilgi için bkz. [sunucudaki belgelerdeki verilere erişme](../vsto/accessing-data-in-documents-on-the-server.md).
+  Veri önbelleğine bir nesnesi ekledikten sonra Word'e veya kullanıcıya erişmeden önbelleğe alınmış verilere erişebilirsiniz Excel. Daha fazla bilgi için [bkz. sunucusundaki belgelerde verilere erişme.](../vsto/accessing-data-in-documents-on-the-server.md)
 
-## <a name="requirements-for-data-objects-to-be-cached"></a>Önbelleğe alınacak veri nesneleri için gereksinimler
- Çözümünüzde bir veri nesnesini önbelleğe almak için, nesnenin şu gereksinimleri karşılaması gerekir:
+## <a name="requirements-for-data-objects-to-be-cached"></a>Veri nesnelerinin önbelleğe alınma gereksinimleri
+ Çözümünüzde bir veri nesnesini önbelleğe alan nesnenin şu gereksinimleri karşılaması gerekir:
 
-- Veya sınıfları gibi bir konak öğesinin okuma/yazma ortak alanı veya özelliği olun `ThisDocument` `ThisWorkbook` .
+- Veya sınıfları gibi bir konak öğesinin okuma/yazma ortak alanı veya `ThisDocument` özelliği `ThisWorkbook` olabilir.
 
-- Bir Dizin Oluşturucu veya başka parametreli bir özellik değil.
+- Dizin oluşturma veya diğer parametreli özellik değildir.
 
-  Ayrıca, veri nesnesi sınıf tarafından seri hale getirilebilir olmalıdır <xref:System.Xml.Serialization.XmlSerializer> , bu da nesnenin türünün bu özelliklere sahip olması anlamına gelir:
+  Buna ek olarak, veri nesnesinin sınıfı tarafından seri hale getirilebilir olması gerekir, yani <xref:System.Xml.Serialization.XmlSerializer> nesne türünün şu özelliklere sahip olması gerekir:
 
-- Ortak bir tür olun.
+- Genel tür olarak.
 
-- Parametresi olmayan ortak bir oluşturucuya sahip.
+- Parametresiz bir ortak oluşturucuya sahip olmalıdır.
 
-- Ek güvenlik ayrıcalıkları gerektiren kodu yürütmüyor.
+- Ek güvenlik ayrıcalıkları gerektiren kodu yürütmez.
 
-- Yalnızca okuma/yazma genel özelliklerini kullanıma sunma (diğer özellikler yok sayılır).
+- Yalnızca okuma/yazma ortak özelliklerini açığa çıkarma (diğer özellikler yoksayılır).
 
-- Çok boyutlu dizileri kullanıma sunmuyor (iç içe diziler kabul edilir).
+- Çok boyutlu dizileri açığa çıkarma (iç içe diziler kabul edilir).
 
-- Özelliklerden ve alanlardan arabirimler döndürmez.
+- Özelliklerden ve alanlardan arabirimler dönmez.
 
-- <xref:System.Collections.IDictionary>Bir koleksiyon ise uygulamaz.
+- Bir koleksiyon <xref:System.Collections.IDictionary> ise uygulanmaz.
 
-  Bir veri nesnesini önbelleğe aldığınızda, nesne, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] belgedeki *özel bir XML bölümünde* depolanan bir XML dizesinde seri hale getirir. Daha fazla bilgi için bkz. [özel XML bölümlerine genel bakış](../vsto/custom-xml-parts-overview.md).
+  Bir veri nesnesini önbelleğe alır, nesneyi belgede özel bir XML bölümünde depolanan bir [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] *XML dizesine* seri hale getirme. Daha fazla bilgi için bkz. [Özel XML bölümlerine genel bakış.](../vsto/custom-xml-parts-overview.md)
 
 ## <a name="cached-data-size-limits"></a>Önbelleğe alınmış veri boyutu sınırları
- Belgedeki veri önbelleğine ekleyebileceğiniz toplam veri miktarına yönelik bazı sınırlar vardır ve veri önbelleğindeki her bir nesnenin boyutu. Bu sınırları aşarsanız, veri veri önbelleğine kaydedildiğinde uygulama beklenmedik şekilde kapatılabilir.
+ Bir belgede veri önbelleğine ekleyebilirsiniz toplam veri miktarı ve veri önbelleğinde tek tek herhangi bir nesnenin boyutu için bazı sınırlar vardır. Bu sınırları aşarsanız, veriler veri önbelleğine kaydedilirken uygulama beklenmedik şekilde kapanıyor olabilir.
 
- Bu limitlerden kaçınmak için şu yönergeleri izleyin:
+ Bu sınırları önlemek için şu yönergeleri izleyin:
 
-- Veri önbelleğine 10 MB 'tan daha büyük bir nesne eklemeyin.
+- Veri önbelleğine 10 MB'den büyük hiçbir nesne ekleme.
 
-- Tek bir belgedeki veri önbelleğine 100 MB 'tan fazla veri eklemeyin.
+- Tek bir belgede veri önbelleğine toplam 100 MB'den fazla veri eklemeyebilirsiniz.
 
-  Bunlar yaklaşık değerlerdir. Tam sınırlar, kullanılabilir RAM ve çalışan işlem sayısı dahil olmak üzere çeşitli etkenlere bağlıdır.
+  Bunlar yaklaşık değerlerdir. Tam sınırlar, kullanılabilir RAM ve çalışan işlem sayısı gibi çeşitli faktörlere bağlıdır.
 
-## <a name="control-the-behavior-of-cached-objects"></a>Önbelleğe alınmış nesnelerin davranışını denetleme
- Önbelleğe alınmış bir nesnenin davranışı üzerinde daha fazla denetim kazanmak için <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType> arabirimini önbelleğe alınmış nesnenin türüne uygulayabilirsiniz. Örneğin, nesne değiştirildiğinde kullanıcının nasıl bildirileceğini denetlemek istiyorsanız bu arabirimi uygulayabilirsiniz. nasıl uygulanacağını gösteren kod örnekleri için <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType> , `ControlCollection` [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)içindeki dinamik denetimler örneği ve Word dinamik denetimleri örneği Excel.
+## <a name="control-the-behavior-of-cached-objects"></a>Önbelleğe alınan nesnelerin davranışını denetleme
+ Önbelleğe alınmış bir nesnenin davranışı üzerinde daha fazla denetim elde etmek için, önbelleğe <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType> alınan nesnenin türüne arabirimini uygulayabilirsiniz. Örneğin, nesne değiştirilse kullanıcıya nasıl bildirildiğini kontrol etmek için bu arabirimi gerçekleştirebilirsiniz. 'nin nasıl uygulandığını gösteren kod örnekleri için, geliştirme örnekleri ve kılavuzlarında Excel Dinamik Denetimler Örneği ve <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType> Word Dinamik Denetimleri Office `ControlCollection` [sınıfına bakın.](../vsto/office-development-samples-and-walkthroughs.md)
 
-## <a name="persist-changes-to-cached-data-in-password-protected-documents"></a>Parola korumalı belgelerde önbelleğe alınmış verilerde yapılan değişiklikleri kalıcı hale getirme
- Bir parolayla korunan bir belgedeki veri nesnelerini önbelleğe alırsanız, önbelleğe alınmış verilerde yapılan değişiklikler kaydedilmez. Önbelleğe alınmış verilere yapılan değişiklikleri iki yöntemi geçersiz kılarak kaydedebilirsiniz. Belge kaydedildiğinde korumayı geçici olarak kaldırmak için bu yöntemleri geçersiz kılın ve Kaydet işlemi tamamlandıktan sonra korumayı yeniden uygulayın.
+## <a name="persist-changes-to-cached-data-in-password-protected-documents"></a>Parola korumalı belgelerde önbelleğe alınan verilerde yapılan değişiklikleri kalıcı olarak koruma
+ Parola ile korunan bir belgedeki veri nesnelerini önbelleğe asanız, önbelleğe alınan verilerde yapılan değişiklikler kaydedlanmaz. İki yöntemi geçersiz karak önbelleğe alınan verilerde yapılan değişiklikleri kaydedebilirsiniz. Belge kaydedilirken korumayı geçici olarak kaldırmak için bu yöntemleri geçersiz kılın ve kaydetme işlemi tamamlandıktan sonra korumayı yeniden kullanın.
 
- Daha fazla bilgi için bkz. [nasıl yapılır: parola korumalı bir belgedeki verileri önbelleğe alma](../vsto/how-to-cache-data-in-a-password-protected-document.md).
+ Daha fazla bilgi için [bkz. Nasıl kullanılır: Parola korumalı bir belgede verileri önbelleğe ekleme.](../vsto/how-to-cache-data-in-a-password-protected-document.md)
 
-## <a name="prevent-data-loss-when-adding-null-values-to-the-data-cache"></a>Veri önbelleğine null değerler eklenirken veri kaybını önleme
- Veri önbelleğine nesne eklediğinizde, belge kaydedilmeden ve kapatılmadan önce önbelleğe alınmış nesnelerin tümünün **null** olmayan bir değere başlatılması gerekir. Önbelleğe alınan herhangi bir nesne, belge kaydedilip kapatıldığında **null** değere sahipse, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] önbelleğe alınan tüm nesneleri veri önbelleğinden otomatik olarak kaldırır.
+## <a name="prevent-data-loss-when-adding-null-values-to-the-data-cache"></a>Veri önbelleğine null değerler eklerken veri kaybını önleme
+ Veri önbelleğine nesne eklerken, belge kaydedi ve kapatmadan önce önbelleğe alınan tüm nesnelerin **null** olmayan bir değere başlatılması gerekir. Belge kaydedilir ve kapatılırken önbelleğe alınmış herhangi bir nesne **null** değere sahipse, önbelleğe alınan tüm nesneleri veri [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] önbelleğinden otomatik olarak kaldırır.
 
- Tasarım zamanında özniteliğini kullanarak veri önbelleğine **null** değeri olan bir nesne eklerseniz <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> , <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> belge açılmadan önce önbelleğe alınmış veri nesnelerini başlatmak için sınıfını kullanabilirsiniz. belge son kullanıcı tarafından açılmadan önce, Word veya Excel yüklü olmayan bir sunucuda önbelleğe alınmış verileri başlatmak istiyorsanız bu kullanışlıdır. Daha fazla bilgi için bkz. [sunucudaki belgelerdeki verilere erişme](../vsto/accessing-data-in-documents-on-the-server.md).
+ Tasarım zamanında özniteliğini kullanarak veri önbelleğine **null** değere sahip bir nesne eklersiniz, önbelleğe alınan veri nesnelerini belge açık olmadan önce başlatmak için <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfını kullanabilirsiniz. Belge son kullanıcı tarafından başlatılmadan önce Word veya Excel yüklü olmayan bir sunucuda önbelleğe alınmış verileri başlatmak için bu yararlı olur. Daha fazla bilgi için [bkz. sunucusundaki belgelerde verilere erişme.](../vsto/accessing-data-in-documents-on-the-server.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: çevrimdışı veya sunucuda kullanmak üzere verileri önbelleğe alma](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
-- [nasıl yapılır: bir Office belgesinde program aracılığıyla veri kaynağını önbelleğe alma](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
-- [Nasıl yapılır: parola korumalı bir belgedeki verileri önbelleğe alma](../vsto/how-to-cache-data-in-a-password-protected-document.md)
-- [İzlenecek yol: önbelleğe alınmış bir veri kümesini kullanarak ana ayrıntı ilişkisi oluşturma](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)
+- [Nasıl kullanılır: Verileri çevrimdışı veya sunucuda kullanmak üzere önbelleğe alın](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
+- [Nasıl kullanılır: Bir veri kaynağını program aracılığıyla bir veri Office önbelleğe ekleme](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)
+- [Nasıl kullanılır: Parola korumalı bir belgede verileri önbelleğe ekleme](../vsto/how-to-cache-data-in-a-password-protected-document.md)
+- [Adım adım kılavuz: Önbelleğe alınmış bir veri kümesi kullanarak ana ayrıntı ilişkisi oluşturma](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)

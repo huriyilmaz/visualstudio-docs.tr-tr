@@ -16,12 +16,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 76d6f06582c5a9b596a3084e519041982e0a9de3d07eee7e10330b6bdb86a882
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 56dee60e63ce2f6d3d298c3c70e57f59910a16ab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121396467"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150228"
 ---
 # <a name="how-to-set-permissions"></a>Nasıl ayarlanır: İzinleri ayarlama
 
@@ -31,7 +31,7 @@ Temel bir güvenlik ilkesi, uygulamaların ihtiyaç fazlası olan izinlerle çal
 
 Kullanıcılar grubunun üyelerinin, disk üzerinde ekibin diğer üyeleriyle paylaşılan klasörlere ve dosyalara erişmesi gerekir. İkinci yordam olan "Paylaşılan proje dosyalarına erişim izni vermek için" bu erişimin nasıl verilmesini açıklar.
 
-Bir yönetici profil oluşturma araçları için yazılım sürücüsüne erişim izni verdiyseniz Kullanıcılar grubunun üyeleri profil oluşturma araçlarını çalıştırabilirsiniz. Son yordam olan "Profil oluşturma sürücüsüne erişim izni vermek için", bu sürücüye nasıl erişim ver ver windows.
+Bir yönetici profil oluşturma araçları için yazılım sürücüsüne erişim izni verdiyseniz Kullanıcılar grubunun üyeleri profil oluşturma araçlarını çalıştırabilirsiniz. Son yordam olan "Profil oluşturma sürücüsüne erişim izni vermek için" bu sürücüye nasıl erişim ver ver windows.
 
 > [!NOTE]
 > Bu yordamlarda verilen adımları takip etmek için yönetici izinlerine ihtiyacınız vardır.
@@ -48,7 +48,7 @@ Bir yönetici profil oluşturma araçları için yazılım sürücüsüne erişi
 
      Yeni **Kullanıcı iletişim** kutusu görüntülenir.
 
-4. Bu iletişim kutusundaki alanları, oluşturmakta olan kullanıcı hesabının bilgileriyle doldurun. Parola belirtin. İsteğe bağlı olarak, kullanıcının bir sonraki oturumda parolayı değiştirmesini gerektiren onay kutusunu seçin.
+4. Bu iletişim kutusundaki alanları, oluşturmakta olan kullanıcı hesabının bilgileriyle doldurun. Bir parola belirtin. İsteğe bağlı olarak, kullanıcının bir sonraki oturumda parolayı değiştirmesini gerektiren onay kutusunu seçin.
 
 5. **Oluştur'a** ve ardından Kapat'a **tıklayın.**
 
@@ -56,7 +56,7 @@ Bir yönetici profil oluşturma araçları için yazılım sürücüsüne erişi
 
 ## <a name="to-grant-access-to-shared-project-files"></a>Paylaşılan proje dosyalarına erişim izni vermek için
 
-1. Bu Windows (veya Dosya Gezgini), bu kullanıcı tarafından kullanılan ve proje ekibi tarafından paylaşılan proje dosyaları için klasör ağacının kökünü bulun.
+1. Windows Gezgini'nde (Dosya Gezgini), bu kullanıcı tarafından kullanılan ve proje ekibi tarafından paylaşılan proje dosyaları için klasör ağacının kökünü bulun.
 
      Bu klasörün yolu aşağıdakine benzer olabilir:
 
@@ -96,7 +96,7 @@ Bir yönetici profil oluşturma araçları için yazılım sürücüsüne erişi
 
      Bu komut profil oluşturma araçlarının sürücüsünü yükler ve başlatır.
 
-     Bu komut, yönetici olmayan kullanıcıların Kullanıcı işlem alanlarına profil oluşturma özelliklerini kullanamalarını için profil oluşturma sürücüsünü ve hizmetini başlatır. Komutu yalnızca bir Yönetici çalıştırabilirsiniz; ve yönetici olmayan Kullanıcılar için başarısız olur.
+     Bu komut, yönetici olmayan kullanıcıların Kullanıcı işlem alanı içinde kullanılabilen profil oluşturma özelliklerini kullanamalarını için profil oluşturma sürücüsünü ve hizmetini başlatır. Komutu yalnızca bir Yönetici çalıştırabilirsiniz; ve yönetici olmayan Kullanıcılar için başarısız olur.
 
      Bu yordamın son adımını da gerçekleştirmedikçe, bilgisayar yeniden başlatıldıktan sonra bu adımın etkilerinin geri alınarak geri alın dikkat edin.
 

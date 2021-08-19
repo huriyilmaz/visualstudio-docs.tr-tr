@@ -12,18 +12,18 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b9b8e13846c423d73bbb58bd41deae20345c63c5862bb2ec54005f1acfbf519b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 528471301c1de6d44d5de6464fa24c81f13b8b36
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121230540"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122054515"
 ---
 # <a name="tutorial-get-started-with-the-flask-web-framework-in-visual-studio"></a>Öğretici: Kullanmaya başlayın Flask web çerçevesiyle Visual Studio
 
 [Flask,](https://palletsprojects.com/p/flask/) WEB uygulamaları için URL yönlendirme ve sayfa işleme ile ilgili temel bilgileri sağlayan basit bir Python çerçevesidir.
 
-Flask,form doğrulaması, veritabanı soyutlama, kimlik doğrulaması gibi özellikleri doğrudan sağlamayarak "mikro" çerçeve olarak adlandırılan bir çerçevedir. Bu tür özellikler bunun yerine Flask uzantıları olarak adlandırılan özel Python *paketleriyle sağlanır.* Uzantılar Flask ile sorunsuz bir şekilde tümleştirildi ve flask'in bir parçası gibi görünür. Örneğin Flask'in kendisi bir sayfa şablonu altyapısı sağlamaz. Templating, bu öğreticide de olduğu gibi Jinja ve Jade gibi uzantılar tarafından sağlanır.
+Flask, form doğrulama, veritabanı soyutlama, kimlik doğrulaması gibi özellikleri doğrudan sağlamayarak "mikro" çerçeve olarak adlandırılan bir çerçevedir. Bu tür özellikler bunun yerine Flask uzantıları olarak adlandırılan özel Python *paketleriyle sağlanır.* Uzantılar Flask'in kendi parçası gibi görünmesi için Flask ile sorunsuz bir şekilde tümleştirildi. Örneğin Flask'in kendisi bir sayfa şablonu altyapısı sağlamaz. Templating, bu öğreticide de olduğu gibi Jinja ve Jade gibi uzantılar tarafından sağlanır.
 
 ::: moniker range="vs-2017"
 Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
@@ -54,9 +54,9 @@ Bu adımlar boyunca iki ayrı proje içeren tek bir Visual Studio çözüm oluş
 
 - Visual Studio 2017 veya sonraki Windows seçenekleriyle birlikte kullanın:
   - **Python geliştirme iş** yükü (**Yükleyicide** İş yükü sekmesi). Yönergeler için [bkz. Python desteğini Visual Studio.](installing-python-support-in-visual-studio.md)
-  - **Kod araçları Windows** GitHub **bileşenler sekmesinde Visual Studio** için Git ve  uzantı uzantısı. 
+  - **Kod araçları'Windows** GitHub **bileşenler sekmesinde Visual Studio** için Git ve uzantı **uzantısı.** 
 
-Flask proje şablonları tüm önceki Visual Studio için Python Araçları dahil edilir, ancak ayrıntılar bu öğreticide ele alınanlardan farklı olabilir.
+Flask proje şablonları tüm önceki Visual Studio için Python Araçları dahil edilir ancak ayrıntılar bu öğreticide ele alınanlardan farklı olabilir.
 
 Python geliştirmesi şu anda bu Mac için Visual Studio. Mac ve Linux'ta python [uzantısını kullanarak Visual Studio Code.](https://code.visualstudio.com/docs/python/python-tutorial)
 
@@ -66,15 +66,15 @@ Python geliştirmesi şu anda bu Mac için Visual Studio. Mac ve Linux'ta python
 
     ![Boş Flask Web Visual Studio için yeni proje iletişim Project](media/flask/step01-new-blank-project.png)
 
-1. İletişim kutusunun en altındaki alanlara aşağıdaki bilgileri girin (önceki grafikte gösterildiği gibi) ve tamam'ı **seçin:**
+1. İletişim kutusunun altındaki alanlara aşağıdaki bilgileri girin (önceki grafikte gösterildiği gibi) ve tamam'ı **seçin:**
 
     - **Ad:** Projeniz için Visual Studio **BasicProject olarak ayarlayın.** Bu ad Flask projesi için de kullanılır.
-    - **Konum:** Uygulama çözümünün ve projenin oluşturul Visual Studio bir konum belirtin.
+    - **Konum:** Uygulama çözümünün ve projesinin oluşturul Visual Studio bir konum belirtin.
     - **Çözüm adı:** **LearningFlask** olarak ayarlanır. Bu, bu öğreticide çözüm için birden çok proje için kapsayıcı olarak uygundur.
     - **Çözüm için dizin oluşturma:** Ayarlanmış (varsayılan) bırakın.
-    - **Yeni Git deposu oluşturma:** Çözümü oluşturduğunda yerel bir Git deposu Visual Studio için bu seçeneği (varsayılan olarak açıktır) seçin. Bu seçeneği görmüyorsanız, Visual Studio yükleyicisini çalıştırın ve Kod araçları altındaki Bağımsız bileşenler sekmesinde Windows ve GitHub için  **GitHub** **Uzantısı'Visual Studio'ı ekleyin.** 
+    - **Yeni Git deposu oluşturma:** Çözümü oluşturduğunda yerel bir Git deposu Visual Studio için bu seçeneği (varsayılan olarak açıktır) seçin. Bu seçeneği görmüyorsanız, Visual Studio yükleyicisini çalıştırın ve Kod araçları altındaki Bağımsız bileşenler sekmesinde Windows ve GitHub için  **Visual Studio** Uzantısı'Visual Studio **Git'i** **ekleyin.**
 
-1. Bir süre sonra Visual Studio Bu proje dış paketler gerektiriyor (aşağıda gösterilmiştir) iletişim **kutusunu** girmenizi sağlar. Şablonda en son Flask 1.x *paketine başvuran* birrequirements.txtdosyası olduğundan bu iletişim kutusu görüntülenir. (Tam **bağımlılıkları görmek için** Gerekli paketleri göster'i seçin.)
+1. Bir süre sonra Visual Studio Bu proje dış paketler gerektiriyor (aşağıda gösterilmiştir) iletişim **kutusunu** size sorabilirsiniz. Şablonda en son Flask 1.x *paketine* başvuran birrequirements.txtdosyası olduğundan bu iletişim kutusu görüntülenir. (Tam **bağımlılıkları görmek için** Gerekli paketleri göster'i seçin.)
 
     ![Projenin dış paketler gerektirdiğini söyleyen istem](media/tutorials-common/step01-requirements-prompt-install-myself.png)
 
@@ -82,7 +82,7 @@ Python geliştirmesi şu anda bu Mac için Visual Studio. Mac ve Linux'ta python
 
 ## <a name="step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository"></a>1-2. Adım: Git denetimlerini inceleme ve uzak depoda yayımlama
 
-New **Project** iletişim kutusunda **Yeni Git** deposu oluştur'Project proje, oluşturma işlemi tamamlandıktan hemen sonra yerel kaynak denetimine zaten kaydedilmiştir. Bu adımda, Visual Studio Git denetimleri ve kaynak **denetimiyle Takım Gezgini** pencere hakkında bilgi sahibi olursunuz.
+New **Project** iletişim kutusunda **Yeni Git** deposu oluştur'Project proje, oluşturma işlemi tamamlandıktan hemen sonra yerel kaynak denetimine zaten kaydedilmiştir. Bu adımda, Visual Studio Git denetimlerini ve kaynak **denetimiyle Takım Gezgini** pencereyi tanımanız gerekir.
 
 1. Ana pencerenin alt köşesindeki Git denetimlerini Visual Studio. Soldan sağa doğru bu denetimler, işlenmiş olmayan işlemeleri, işlanmamış değişiklikleri, deponun adını ve geçerli dalı gösterir:
 
@@ -91,21 +91,21 @@ New **Project** iletişim kutusunda **Yeni Git** deposu oluştur'Project proje, 
     > [!Note]
     > Yeni Depo oluştur iletişim kutusunda **Yeni Git** deposu oluştur **Project** Git denetimleri yalnızca yerel  depo oluşturan bir Kaynak denetimine ekle komutunu gösterir.
     >
-    > ![Kaynak Denetimine Ekle, Visual Studio depo oluşturmadıysanız kaynakta görünür](media/tutorials-common/step01-git-add-to-source-control.png)
+    > ![Depo oluşturmadıysanız kaynak Visual Studio Denetimine Ekle görüntülenir](media/tutorials-common/step01-git-add-to-source-control.png)
 
-1. Değişiklikler düğmesini seçin ve Visual Studio sayfasında **Takım Gezgini** penceresini **açın.** Yeni oluşturulan proje otomatik olarak kaynak denetimine zaten bağlı olduğundan, bekleyen hiçbir değişiklik görmüyoruz.
+1. Değişiklikler düğmesini seçin ve Visual Studio açılan **Takım Gezgini** penceresinden **seçim** yapın. Yeni oluşturulan proje otomatik olarak kaynak denetimine zaten bağlı olduğundan, bekleyen hiçbir değişiklik görmüyoruz.
 
     ![Takım Gezgini sayfasındaki Takım Gezgini penceresi](media/flask/step01-team-explorer-changes.png)
 
-1. İlke Visual Studio çubuğunda, atlanmamış işlemeler düğmesini **(2** ile yukarı ok) seçerek eşitleme sayfasını  **Takım Gezgini.** Yalnızca yerel bir depoya sahip olduğunuz için sayfa, depoyu farklı uzak depolarda yayımlamak için kolay seçenekler sağlar.
+1. İlke Visual Studio çubuğunda, atlanmamış işlemeler düğmesini **(2** ile yukarı ok)  seçerek eşitleme sayfasını **Takım Gezgini.** Yalnızca yerel bir depoya sahip olduğunuz için sayfa, depoyu farklı uzak depolarda yayımlamak için kolay seçenekler sağlar.
 
     ![Takım Gezgini denetimi için kullanılabilir Git deposu seçeneklerini gösteren bir pencere](media/flask/step01-team-explorer.png)
 
-    Kendi projeleriniz için istediğiniz hizmeti seçebilirsiniz. Bu öğreticide, GitHub için tamamlanmış örnek [kodun Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask) deposunda tutularak bulunduğu GitHub'nin kullanımı açıklanmıştır.
+    Kendi projeleriniz için istediğiniz hizmeti seçebilirsiniz. Bu öğreticide, GitHub tamamlanan örnek [kodun Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask) deposunda tutularak bulunduğu GitHub kullanımı açıklanmıştır.
 
-1. Yayımla denetimlerden birini **seçerek** **Takım Gezgini** bilgi girmenizi sağlar. Örneğin, bu öğreticinin örneğini yayımlarken önce deponun kendisi oluşturulacak ve  bu durumda deponun URL'si ile Uzak Depoya Itme seçeneği kullanılmıştır.
+1. Yayımla denetimlerden birini **seçerek** **Takım Gezgini** daha fazla bilgi isteminde bulundurabilirsiniz. Örneğin, bu öğreticinin örneğini yayımlarken önce deponun kendisi oluşturulacak ve  bu durumda deponun URL'si ile Uzak Depoya Itme seçeneği kullanılmıştır.
 
-    ![Takım Gezgini uzak depoya itme penceresi](media/flask/step01-push-to-github.png)
+    ![Takım Gezgini uzak depoya itmeye uygun bir pencere](media/flask/step01-push-to-github.png)
 
     Mevcut bir depoya sahip değilsanız, **GitHub'da yayımla ve** Azure DevOps'a Azure DevOps seçenekleri doğrudan deponun içinde bir depo Visual Studio. 
 
@@ -140,7 +140,7 @@ Artık projeniz için kaynak denetimi yapılandırdınıza göre, sanal ortamı 
 
 1. İstendiğinde yönetici ayrıcalıklarına onay ve ardından birkaç dakika bekleyin Visual Studio paketleri indirir ve yüklür. Flask ve bağımlılıkları için bu, 100'den fazla alt klasöre yaklaşık bin dosyanın genişletilmesi anlamına gelir. İlerlemeyi Çıkış penceresinde Visual Studio **görebilirsiniz.** Beklerken, aşağıdaki Soru bölümlerine daha fazla bakın. Flask'in bağımlılıklarının açıklamasını [Flask](https://flask.palletsprojects.com/en/1.0.x/installation/#installation) yükleme sayfasında da görebilirsiniz (flask.pcocoo.org).
 
-1. Git Visual Studio (durum çubuğunda) değişiklik göstergesini **(99**&#42;gösterir) seçin. Bu,  **Takım Gezgini.**
+1. Git Visual Studio (durum çubuğunda), değişiklikler sayfasını Takım Gezgini'da açan değişiklik göstergesini **(99**&#42;)  **seçin.**
 
     Sanal ortamın oluşturulması yüzlerce değişiklikle getirildi ancak siz (veya projeyi başka herhangi biri) ortamı her zamanrequirements.txt'den yeniden ** oluşturasınız.
 
@@ -158,9 +158,9 @@ Cevap: Sanal ortam, uygulama bağımlılıklarınızı tam olarak yalıtmak içi
 
 ### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>Soru: Nasıl yaparım? denetimine zaten bağlı olan bir sanal ortamı kaldırmak mı gerekiyor?
 
-Cevap: İlk *olarak, .gitignore* dosyanızı düzenleyemez ve klasörü dışlamak için en sonundaki bölümünü açıklamayla bulun ve gibi sanal ortam klasörü için yeni `# Python Tools for Visual Studio (PTVS)` bir satır `/BasicProject/env` ekleyin. (Visual Studio dosya dosyada **Çözüm Gezgini,** dosyayı doğrudan Dosya kullanarak **açın**  >  **Aç**  >  **Dosya** menüsü komutu. Dosyayı Takım Gezgini sayfasından da açabilirsiniz: **Ayarlar** sayfasında Depo **Ayarlar'yi** seçin, **&** Öznitelik Dosyalarını Yoksay bölümüne gidin ve **.gitignore öğesinin** yanındaki Düzenle bağlantısını seçin.  
+Cevap: İlk *olarak, .gitignore* dosyanızı düzenleyemez ve klasörü dışlamak için en sonundaki bölümünü açıklamayla bulun ve gibi sanal ortam klasörü için yeni bir `# Python Tools for Visual Studio (PTVS)` satır `/BasicProject/env` ekleyin. (Visual Studio dosya dosyada **Çözüm Gezgini,** dosyayı doğrudan Dosya kullanarak **açın**  >  **Aç**  >  **Dosya** menüsü komutu. Dosyayı Takım Gezgini sayfasından da açabilirsiniz: **Ayarlar** sayfasında Depo **Ayarlar'ı** seçin, **&** Öznitelik Dosyalarını Yoksay bölümüne gidin ve **.gitignore öğesinin** yanındaki Düzenle bağlantısını seçin.  
 
-İkinci olarak, bir komut penceresi açın, *basicProject* gibi env gibi sanal ortam klasörünü içeren *klasöre* gidin ve komutunu `git rm -r env` çalıştırın. Ardından bu değişiklikleri komut satırı ( `git commit -m 'Remove venv'` )  veya Takım Gezgini'nin Değişiklikler **sayfasından işleyebilirsiniz.**
+İkinci olarak, bir komut penceresi açın, *basicProject* gibi env gibi sanal ortam klasörünü içeren *klasöre* gidin ve komutunu `git rm -r env` çalıştırın. Ardından, bu değişiklikleri komut satırı ( ) veya Takım Gezgini'nin `git commit -m 'Remove venv'` **Değişiklikler sayfasından işleyebilirsiniz.** 
 
 ## <a name="step-1-4-examine-the-boilerplate-code"></a>1-4. Adım: Ortak kodu inceleme
 
@@ -193,7 +193,7 @@ Cevap: İlk *olarak, .gitignore* dosyanızı düzenleyemez ve klasörü dışlam
         app.run(HOST, PORT)
     ```
 
-1. Üçüncüsü, url yolu için bir işlev ataan kısa bir kod bitidir, yani işlevin URL tarafından tanımlanan kaynağı sağladığı anlamına gelir. Yolları Flask'in dekoratörünü kullanarak tanımlar ve bağımsız `@app.route` değişkeni site kökünden göreli URL'dir. Kodda gördüğünüz gibi buradaki işlev yalnızca bir metin dizesi döndürür ve bu da tarayıcının işlemesi için yeterlidir. Aşağıdaki adımlarda HTML ile daha zengin sayfalar işlersiniz.
+1. Üçüncüsü, url yolu için bir işlev ataan kısa bir kod bitidir, yani işlevin URL tarafından tanımlanan kaynağı sağladığı anlamına gelir. Yolları, bağımsız değişkeni site kökünden göreli URL olan Flask'in `@app.route` dekoratörünü kullanarak tanımlarsiniz. Kodda gördüğünüz gibi buradaki işlev yalnızca bir metin dizesi döndürür ve bu da tarayıcının işlemesi için yeterlidir. Aşağıdaki adımlarda HTML ile daha zengin sayfalar işlersiniz.
 
     ```python
     @app.route('/')
@@ -222,7 +222,7 @@ def hello():
 
 ### <a name="question-how-does-flask-work-with-variable-url-routes-and-query-parameters"></a>Soru: Flask, değişken URL yolları ve sorgu parametreleriyle nasıl çalışır?
 
-Cevap: Bir yolda, herhangi bir değişkeni ile işaretleyebilirsiniz ve Flask, URL yolundaki adlandırılmış bağımsız değişkeni kullanarak değişkeni `<variable_name>` işleve iletir. Örneğin, şeklinde bir yol `/hello/<name>` işlevine çağrılır bir dize `name` bağımsız değişkeni üretir. Sorgu parametreleri özelliği `request.args` aracılığıyla, özellikle yöntemi aracılığıyla `request.args.get` kullanılabilir. Daha fazla bilgi için Flask [belgelerinde](https://flask.palletsprojects.com/en/1.1.x/quickstart/#the-request-object) request nesnesine bakın.
+Yanıt: Bir yolda, herhangi bir değişkeni ile işaretleyebilirsiniz ve Flask, URL yolundaki adlandırılmış bağımsız değişkeni kullanarak değişkeni `<variable_name>` işleve iletir. Örneğin, şeklinde bir yol, `/hello/<name>` işlevine çağrılır bir dize `name` bağımsız değişkeni üretir. Sorgu parametreleri özelliği `request.args` aracılığıyla, özellikle yöntemi aracılığıyla `request.args.get` kullanılabilir. Daha fazla bilgi için Flask [belgelerinde](https://flask.palletsprojects.com/en/1.1.x/quickstart/#the-request-object) request nesnesine bakın.
 
 ```python
 # URL: /hello/<name>?message=Have%20a%20nice%20day
@@ -236,7 +236,7 @@ Türü değiştirmek için değişkene , , (klasör adlarının satırlarını �
 
 ### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>Soru: Visual Studio paketleri yükledikten requirements.txt bir sanal ortamdan bir dosya oluşturamıyor musunuz?
 
-Yanıt: Evet. Python Ortamları **düğümünü** genişletin, sanal ortamınıza sağ tıklayın ve Sanal makine oluştur **requirements.txt** seçin. Ortamı değiştirirken bu komutu düzenli aralıklarla kullanmak ve değişiklikleri  kaynak denetiminerequirements.txtve bu ortama bağlı diğer kod değişiklikleriyle birlikte işlemek iyi bir fikirdir. Derleme sunucusunda sürekli tümleştirmeyi ayar ediyorsanız, ortamı her değiştirerek dosyayı oluşturmalı ve değişiklikleri işlemelisiniz.
+Yanıt: Evet. Python Ortamları **düğümünü** genişletin, sanal ortamınıza sağ tıklayın ve Oluştur komutunu **requirements.txt** seçin. Ortamı değiştirirken bu komutu düzenli aralıklarla kullanmak ve değişiklikleri  kaynak denetiminerequirements.txtortamdaki diğer kod değişiklikleriyle birlikte işlemek iyi bir fikirdir. Derleme sunucusunda sürekli tümleştirmeyi ayar ediyorsanız, ortamı her değiştirerek dosyayı oluşturmalı ve değişiklikleri işlemelisiniz.
 
 ## <a name="step-1-5-run-the-project"></a>1-5. Adım: Projeyi çalıştırma
 
@@ -244,7 +244,7 @@ Yanıt: Evet. Python Ortamları **düğümünü** genişletin, sanal ortamınız
 
     ![Web sunucusu araç çubuğu düğmesini Visual Studio](media/tutorials-common/run-web-server-toolbar-button.png)
 
-1. İki komut da PORT ortam değişkenine rastgele bir bağlantı noktası numarası atar ve `python app.py` çalıştırır. Kod, Flask'in geliştirme sunucusundaki bu bağlantı noktasını kullanarak uygulamayı başlatır. Bir Visual Studio **dosyası** olmadığını iletiyle hata ayıklayıcısı başlatılamadı iletisiyle belirtiyorsa, app.py'e sağ tıklayın Çözüm Gezgini Başlangıç Dosyası **Olarak** **Ayarla'yı seçin.** 
+1. İki komut da PORT ortam değişkenine rastgele bir bağlantı noktası numarası atar ve `python app.py` çalıştırır. Kod, Flask'in geliştirme sunucusundaki bu bağlantı noktasını kullanarak uygulamayı başlatır. Hata Visual Studio **dosyası** yok iletisiyle hata ayıklayıcı başlatılamadı ifadesinin yer  alırsa, app.py'a sağ tıklayın Çözüm Gezgini Başlangıç Dosyası **Olarak** **Ayarla'yı seçin.**
 
 1. Sunucu başlatıldığında, sunucu günlüğünü görüntüleyen bir konsol penceresi açılır. Visual Studio, işlevin işlenen `http://localhost:<port>` iletiyi göreceğiniz bir tarayıcıyı otomatik olarak `hello` açar:
 
@@ -266,4 +266,4 @@ Bu noktada temel Flask projesi, başlangıç kodunu ve sayfa kodunu aynı dosyad
 ## <a name="go-deeper"></a>Daha derine gitme
 
 - [Flask Hızlı Başlangıç](https://flask.palletsprojects.com/en/1.0.x/quickstart/) (flask.pocoo.org)
-- GitHub öğreticisi: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)
+- GitHub öğretici kaynak kodu: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

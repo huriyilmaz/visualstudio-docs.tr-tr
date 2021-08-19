@@ -1,6 +1,6 @@
 ---
-title: Hata Hataları SharePoint Ek | Microsoft Docs
-description: Uygulama araçlarında oluşan hataları ve uyarıları giderme hakkında ek Visual Studio SharePoint edinebilirsiniz.
+title: SharePoint hataları için ek bilgiler | Microsoft Docs
+description: Visual Studio SharePoint araçlarında oluşan hata giderme ve uyarılarla ilgili ek bilgiler alın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -19,35 +19,35 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 5c4eac1e41ca7cf12003e28723bcc3889c787f15460e6a334f1328aa7111b141
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2343212faa44d2085f216e8e44ba3e45eb807f5d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385477"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122060433"
 ---
-# <a name="additional-information-for-sharepoint-errors"></a>Hatalara ilişkin SharePoint bilgiler
-  Sorun giderme konu başlıklarında ve [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] genel forumlarda SharePoint hataları ve uyarılarını giderme konusunda yardım bulabilirsiniz.
+# <a name="additional-information-for-sharepoint-errors"></a>SharePoint hatalar için ek bilgiler
+  sorun giderme [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] konuları ve genel forumlarda SharePoint araçları hatalarını ve uyarılarını sorun gidermeye yönelik yardım bulabilirsiniz.
 
-## <a name="troubleshoot-errors-and-issues"></a>Hataları ve sorunları giderme
- Bu araçlarda bazı yaygın hatalar ve diğer sorunlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint için aşağıdaki konulara bakın:
+## <a name="troubleshoot-errors-and-issues"></a>Hata ve sorunları giderme
+ bazı sık karşılaşılan hatalar ve SharePoint araçlarındaki diğer sorunlar hakkında yardım almak için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] aşağıdaki konulara bakın:
 
-- [Sorun SharePoint giderme](../sharepoint/troubleshooting-sharepoint-solutions.md)
+- [SharePoint çözümlerinde sorun giderme](../sharepoint/troubleshooting-sharepoint-solutions.md)
 
-- [Hata ayıklama SharePoint çözümleri](../sharepoint/debugging-sharepoint-solutions.md)
+- [SharePoint çözümlerinde hata ayıklama](../sharepoint/debugging-sharepoint-solutions.md)
 
-- [Paketleme SharePoint dağıtım sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)
+- [paketleme ve dağıtım SharePoint sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)
 
 ## <a name="other-resources"></a>Diğer kaynaklar
- Aşağıdaki tabloda, SharePoint [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] araçları forumları ve diğer kaynaklar liste almaktadır.
+ aşağıdaki tabloda [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint araçları forumları ve kullanılabilir diğer kaynaklar listelenmektedir.
 
 |Süre|Tanım|
 |----------|----------------|
-|[SharePoint Geliştirme](https://social.msdn.microsoft.com/Forums/office/home?forum=sharepointdevelopmentprevious)|'de geliştirmeyle ilgili sorular SharePoint forumu [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sağlar.|
-|[Visual Studio Forum](https://social.msdn.microsoft.com/Forums/vstudio/home?category=visualstudio)|hakkında sorular için bir forum [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sağlar.|
+|[SharePoint Geliştirmeye](https://social.msdn.microsoft.com/Forums/office/home?forum=sharepointdevelopmentprevious)|içinde SharePoint geliştirme hakkında sorular için bir forum sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
+|[Visual Studio Forumları](https://social.msdn.microsoft.com/Forums/vstudio/home?category=visualstudio)|Hakkında sorularınız için bir forum sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[Microsoft Yardım ve Destek](https://support.microsoft.com/)|Bilgi Bankası (BB) makalelerine, indirmeler ve güncelleştirmelere, destek Web yayınlarına ve diğer hizmetlere erişimi sağlar.|
 
- Hala ihtiyacınız olan yanıtları bulamıyorsanız, Microsoft Ürün Destek Hizmetleri ile iletişim kurma veya KnowledgeBase makalelerini arama gibi çevrimiçi destek seçeneklerine erişebilirsiniz. Daha fazla bilgi için [Bkz. Microsoft Yardım ve Destek](https://support.microsoft.com/) sayfası.
+ İhtiyacınız olan yanıtları hala bulamıyorsanız, Microsoft Ürün Destek Hizmetleri 'ne başvurma veya Bilgi Bankası makalelerini arama gibi çevrimiçi destek seçeneklerine erişebilirsiniz. Daha fazla bilgi için bkz. [Microsoft Yardım ve destek](https://support.microsoft.com/) sayfası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çözüm oluşturma ve SharePoint ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [SharePoint çözümleri oluşturun ve hata ayıklayın](../sharepoint/building-and-debugging-sharepoint-solutions.md)

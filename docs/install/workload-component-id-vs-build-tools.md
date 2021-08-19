@@ -1,12 +1,12 @@
 ---
 title: Visual Studio Derleme Araçları iş yükü ve bileşen kimlikleri
 titleSuffix: ''
-description: Klasik Windows tabanlı uygulamalar oluşturmak için Visual Studio iş yükünü ve bileşen kimliklerini kullanma
+description: klasik Windows tabanlı uygulamalar oluşturmak için Visual Studio iş yükü ve bileşen kimliklerini kullanma
 keywords: ''
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
-ms.date: 05/25/2021
+ms.date: 08/10/2021
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -16,12 +16,12 @@ ms.assetid: b99298df-0280-47fc-af73-44cd7a8ac553
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 696dae30cdbe242772c9277f534283339c6c329b
-ms.sourcegitcommit: 4a91c63683ba1c1832b1ba96657862a849320d81
+ms.openlocfilehash: 047e59d2b2e41e006c6b128b1c2616a610bbdada
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110565199"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122055861"
 ---
 # <a name="visual-studio-build-tools-component-directory"></a>Visual Studio Derleme Araçları bileşen dizini
 
@@ -31,7 +31,7 @@ ms.locfileid: "110565199"
 
 [!INCLUDE[workloads-components-header-2017_md](includes/workloads-components-header-2017_md.md)]
 
-El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio Için derleme araçları](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)'nı indirip çalıştırın.
+El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio Için derleme araçlarını](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)indirip çalıştırın.
 
 [!INCLUDE[Visual Studio Build Tools 2017](includes/vs-2017/workload-component-id-vs-build-tools.md)]
 
@@ -41,7 +41,7 @@ El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio I�
 
 [!INCLUDE[workloads-components-header-2019_md](includes/workloads-components-header-2019_md.md)]
 
-El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio Için derleme araçları](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)' nı indirip çalıştırın.
+El ile yükleyiciyi kullanarak bu bileşenleri yüklemek için [Visual Studio Için derleme araçlarını](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)indirip çalıştırın.
 
 [!INCLUDE[Visual Studio Build Tools 2019](includes/vs-2019/workload-component-id-vs-build-tools.md)]
 

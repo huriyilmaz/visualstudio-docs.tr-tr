@@ -14,11 +14,11 @@
       href: ../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json
     - name: Vue.js projesi oluşturma
       href: quickstart-vuejs-with-nodejs.md
-    - name: React uygulaması oluşturma
+    - name: React oluşturma
       href: tutorial-create-react-app.md
-    - name: Angular uygulaması oluşturma
+    - name: Angular oluşturma
       href: tutorial-create-angular-app.md
-    - name: Vue.js uygulaması oluşturma
+    - name: Vue.js oluşturma
       href: tutorial-create-vue-app.md
 - name: Öğreticiler
   items:
@@ -30,6 +30,8 @@
       href: tutorial-asp-net-core-with-react.md
     - name: Angular ASP.NET Core uygulama oluşturma
       href: tutorial-asp-net-core-with-angular.md
+    - name: Vue ile ASP.NET Core uygulama oluşturma
+      href: tutorial-asp-net-core-with-vue.md
     - name: TypeScript ile ASP.NET Core uygulaması oluşturma
       href: tutorial-aspnet-with-typescript.md
     - name: Linux App Service’e bir Node.js uygulaması yayımlama

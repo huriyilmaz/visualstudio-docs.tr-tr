@@ -1,7 +1,7 @@
 ---
-title: Proje şablonu, bölüm 2 ile site sütunu proje öğesi oluşturma
+title: Proje şablonu, Bölüm 2 ile site sütunu proje öğesi oluştur
 titleSuffix: ''
-description: Proje öğesini içeren bir proje oluşturmak üzere şablonu kullanan kullanıcılardan veri toplamak için bir site sütunu proje şablonuna SharePoint sihirbaz ekleyin.
+description: proje öğesini içeren bir SharePoint projesi oluşturmak için şablondan veri toplamak üzere bir site sütunu proje şablonuna sihirbaz ekleyin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,120 +15,120 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: c4530a43787b2e29c2600476a44c808132d668ceaa89b851efeddd403c2c30e6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f82d6ca09e67cd2911a0dc9803e65f14b85cca6c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121352829"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123313"
 ---
-# <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>Adım adım kılavuz: Proje şablonuyla site sütunu proje öğesi oluşturma, Bölüm 2
-  Proje öğesi için özel bir SharePoint tanımladığınız ve bunu Visual Studio proje şablonuyla ilişkilendirmeniz sonrasında, şablon için bir sihirbaz sağlamak da iyi olabilir. Proje öğesini içeren yeni bir proje oluşturmak üzere şablonlarınızı kullanan kullanıcılardan bilgi toplamak için sihirbazı kullanabilirsiniz. Toplayan bilgiler proje öğesini başlatmak için kullanılabilir.
+# <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-2"></a>İzlenecek yol: proje şablonu, Bölüm 2 ile bir site sütunu proje öğesi oluşturma
+  SharePoint proje öğesi özel bir türünü tanımladıktan ve Visual Studio bir proje şablonuyla ilişkilendirdikten sonra, şablon için bir sihirbaz sağlamak da isteyebilirsiniz. Sihirbazı kullanarak, Proje öğesini içeren yeni bir proje oluşturmak için şablonunuzu kullandıklarında kullanıcılardan bilgi toplayabilirsiniz. Topladığınız bilgiler Proje öğesini başlatmak için kullanılabilir.
 
- Bu kılavuzda, Site Sütunu proje şablonuna, Adım 1: Bir Site Sütunu Project Öğesi Oluşturma bölümünde Project sihirbazı [eklenecektir.](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md) Kullanıcı bir Site Sütunu projesi oluşturduğunda sihirbaz, site sütunu (temel türü ve grubu gibi) hakkında bilgi toplar ve bu bilgileri *yeni projedeElements.xml* dosyasına ekler.
+ bu kılavuzda, site sütunu proje şablonuna [izlenecek yol: Project bir Project şablonuyla, 1. bölüm olan bir site sütunu oluşturma adlı](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)bir sihirbaz ekleyeceksiniz. Bir Kullanıcı bir site sütunu projesi oluşturduğunda, sihirbaz site sütunuyla ilgili bilgileri (temel türü ve grubu gibi) toplar ve bu bilgileri yeni projedeki *Elements.xml* dosyasına ekler.
 
- Bu kılavuz aşağıdaki görevleri gösterir:
+ Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Özel bir proje şablonu SharePoint bir proje şablonuyla ilişkili proje öğesi türü için sihirbaz oluşturma.
+- bir proje şablonuyla ilişkili özel SharePoint proje öğesi türü için sihirbaz oluşturma.
 
-- SharePoint projelerinin yerleşik sihirbazlara benzeyen özel bir sihirbaz kullanıcı arabirimi Visual Studio.
+- Visual Studio SharePoint projelerine yönelik yerleşik sihirbazlara benzer bir özel sihirbaz kullanıcı arabirimi tanımlama.
 
-- Sihirbaz *SharePoint yerel* siteye çağrı yapmak için kullanılan iki SharePoint komut oluşturma. SharePoint komutları, Visual Studio sunucu nesne modelinde API'SharePoint çağıran yöntemlerdir. Daha fazla bilgi için [bkz. nesne SharePoint çağırma.](../sharepoint/calling-into-the-sharepoint-object-models.md)
+- sihirbaz çalışırken yerel SharePoint sitesine çağırmak için kullanılan iki *SharePoint komutları* oluşturma. SharePoint komutlar, SharePoint server nesne modelindeki apı 'leri çağırmak için Visual Studio uzantıları tarafından kullanılabilecek yöntemlerdir. daha fazla bilgi için bkz. [SharePoint nesne modellerini çağırma](../sharepoint/calling-into-the-sharepoint-object-models.md).
 
-- Proje dosyalarını sihirbazda toplayan SharePoint başlatmak için değiştirilebilir parametreleri kullanma.
+- SharePoint proje dosyalarını sihirbazda topladığınız verilerle başlatmak için değiştirilebilen parametreleri kullanma.
 
-- Her yeni Site Sütunu proje örneğinde yeni bir .snk dosyası oluşturma. Bu dosya, çözüm derlemesini genel derleme önbelleğine SharePoint proje çıktısını imzalamak için kullanılır.
+- Her yeni site sütunu proje örneğinde yeni bir. snk dosyası oluşturuluyor. bu dosya, SharePoint çözüm derlemesinin genel derleme önbelleğine dağıtılması için proje çıkışını imzalamak için kullanılır.
 
-- Sihirbazda hata ayıklama ve test etme.
+- Hata ayıklama ve Sihirbazı test etme.
 
 > [!NOTE]
-> Bir dizi örnek iş akışı için bkz. [SharePoint örnekleri.](/sharepoint/dev/general-development/sharepoint-workflow-samples)
+> örnek iş akışları serisi için bkz. [SharePoint iş akışı örnekleri](/sharepoint/dev/general-development/sharepoint-workflow-samples).
 
 ## <a name="prerequisites"></a>Önkoşullar
- Bu izlenecek yolu gerçekleştirmek için öncelikle Adım Adım: Bir Site Sütunu Project Öğesi Oluşturma, Bölüm 1'i tamamlayarak SiteColumnProjectItem çözümünü [Project oluşturmanız gerekir.](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)
+ bu yönergeyi gerçekleştirmek için, önce [izlenecek yol: Project bir Site sütunu oluşturma Project şablonuyla, bölüm 1 '](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)i tamamlayarak sitecolumnprojectıtem çözümünü oluşturmanız gerekir.
 
- Bu izlenecek yolu tamamlamak için geliştirme bilgisayarda aşağıdaki bileşenlere de ihtiyacınız vardır:
+ Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere de ihtiyacınız vardır:
 
-- Desteklenen Windows, SharePoint ve Visual Studio.
+- Windows, SharePoint ve Visual Studio desteklenen sürümleri.
 
-- Visual Studio SDK'sı. Bu kılavuzda, **proje öğesini Project** bir VSIX paketi oluşturmak için SDK'daki VSIX uygulama şablonu kullanılır. Daha fazla bilgi için [bkz. SharePoint'de Visual Studio.](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- Visual Studio SDK. bu izlenecek yol SDK 'daki **vsıx Project** şablonunu, proje öğesini dağıtmak için bir vsıx paketi oluşturmak için kullanır. daha fazla bilgi için bkz. [Visual Studio SharePoint araçlarını genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md).
 
-  Aşağıdaki kavramlar hakkında bilgi sahibi olmak, izlenecek yolu tamamlamak için faydalıdır ancak gerekli değildir:
+  İzlenecek yolu tamamlamak için aşağıdaki kavramların bilgisi yararlıdır, ancak gerekli değildir:
 
-- Proje ve öğe şablonları için sihirbazlar Visual Studio. Daha fazla bilgi için, [bkz. How to: Use Wizards with Project templates](../extensibility/how-to-use-wizards-with-project-templates.md) and <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> the interface.
+- Visual Studio içindeki proje ve öğe şablonları için sihirbazlar. daha fazla bilgi için bkz. [nasıl yapılır: sihirbazları Project şablonları](../extensibility/how-to-use-wizards-with-project-templates.md) ve arabirimiyle kullanma <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> .
 
-- SharePoint. Daha fazla bilgi için bkz. [Sütunlar.](/previous-versions/office/developer/sharepoint-2010/ms196085(v=office.14))
+- SharePoint içindeki site sütunları. Daha fazla bilgi için bkz. [sütunlar](/previous-versions/office/developer/sharepoint-2010/ms196085(v=office.14)).
 
 ## <a name="understand-the-wizard-components"></a>Sihirbaz bileşenlerini anlama
- Bu kılavuzda gösteren sihirbaz çeşitli bileşenler içerir. Aşağıdaki tabloda bu bileşenler açıkmektedir.
+ Bu izlenecek yolda gösterilen sihirbaz çeşitli bileşenleri içerir. Aşağıdaki tabloda bu bileşenler açıklanmaktadır.
 
 |Bileşen|Açıklama|
 |---------------|-----------------|
-|Sihirbaz uygulaması|Bu, arabirimini uygulayan `SiteColumnProjectWizard` adlı bir <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> sınıftır. Bu arabirim, sihirbaz başlatıldığında Visual Studio ve sihirbaz çalışırken belirli zamanlarda çağıran yöntemleri tanımlar.|
-|Sihirbaz kullanıcı arabirimi|Bu, adlı WPF tabanlı bir `WizardWindow` penceredir. Bu pencere, ve adlı iki kullanıcı denetimi `Page1` `Page2` içerir. Bu kullanıcı denetimleri sihirbazın iki sayfalarını temsil eder.<br /><br /> Bu kılavuzda, sihirbaz <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> uygulamasının yöntemi sihirbaz kullanıcı arabirimini görüntüler.|
-|Sihirbaz veri modeli|Bu, sihirbaz kullanıcı arabirimi ile sihirbaz uygulaması arasında bir katman sağlayan adlı `SiteColumnWizardModel` bir ara sınıftır. Bu örnek, sihirbaz uygulamasını ve sihirbaz kullanıcı arabirimini diğerlerinden soyutlamanıza yardımcı olmak için bu sınıfı kullanır; Bu sınıf, tüm sihirbazların gerekli bir bileşeni değildir.<br /><br /> Bu kılavuzda, sihirbaz uygulaması sihirbaz kullanıcı arabirimini `SiteColumnWizardModel` görüntülerken bir nesneyi sihirbaz penceresine iletir. Sihirbaz kullanıcı arabirimi, kullanıcı arabiriminde denetimlerin değerlerini kaydetmek ve giriş sitesi URL'sinin geçerli olduğunu doğrulama gibi görevleri gerçekleştirmek için bu nesnenin yöntemlerini kullanır. Kullanıcı sihirbazı tamamladikten sonra sihirbaz uygulaması, kullanıcı `SiteColumnWizardModel` arabiriminin son durumunu belirlemek için nesnesini kullanır.|
-|Project yöneticisi|Bu, sihirbaz uygulaması tarafından her yeni proje örneğinde yeni bir key.snk dosyası oluşturmak için kullanılan adlı bir `ProjectSigningManager` yardımcı sınıftır.|
-|SharePoint komutları|Bunlar, sihirbaz çalışırken yerel SharePoint için sihirbaz veri modeli tarafından kullanılan yöntemlerdir. Bu SharePoint 3.5'i .NET Framework gerekir, çünkü bu komutlar sihirbaz kodunun geri kalanından farklı bir derlemede uygulanır.|
+|Sihirbaz uygulama|Bu, arabirimini uygulayan adlı bir sınıftır `SiteColumnProjectWizard` <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> . bu arabirim, sihirbaz başlatıldığında ve tamamlandığında ve sihirbaz çalışırken belirli zamanlarda Visual Studio çağıran yöntemleri tanımlar.|
+|Sihirbaz kullanıcı arabirimi|Bu, adlı WPF tabanlı bir pencere `WizardWindow` . Bu pencere, ve adlı iki kullanıcı denetimini `Page1` içerir `Page2` . Bu Kullanıcı denetimleri, sihirbazın iki sayfasını temsil eder.<br /><br /> Bu kılavuzda, <xref:Microsoft.VisualStudio.TemplateWizard.IWizard.RunStarted%2A> sihirbaz uygulamasının yöntemi sihirbaz kullanıcı arabirimini görüntüler.|
+|Sihirbaz veri modeli|Bu, `SiteColumnWizardModel` Sihirbaz kullanıcı arabirimi ve sihirbaz uygulamasıyla bir katman sağlayan adlı bir aracı sınıfıdır. Bu örnek, sihirbaz uygulamasının ve sihirbaz Kullanıcı arabiriminin birbirinden soyut olarak yardımcı olması için bu sınıfı kullanır; Bu sınıf, tüm sihirbazların gerekli bir bileşeni değildir.<br /><br /> Bu kılavuzda, sihirbaz uygulamasının sihirbaz `SiteColumnWizardModel` Kullanıcı arabirimini görüntülediğinde sihirbaz penceresine bir nesne geçirir. Sihirbaz kullanıcı arabirimi bu nesnenin yöntemlerini kullanarak Kullanıcı arabirimindeki denetim değerlerini kaydeder ve giriş site URL 'sinin geçerli olduğunu doğrulama gibi görevleri gerçekleştirir. Kullanıcı Sihirbazı tamamladıktan sonra, sihirbaz uygulaması `SiteColumnWizardModel` Kullanıcı arabiriminin son durumunu öğrenmek için nesnesini kullanır.|
+|Project imzalama yöneticisi|Bu, `ProjectSigningManager` sihirbaz uygulamasının her yeni proje örneğinde yeni bir Key. snk dosyası oluşturmak için kullanılan adlı bir yardımcı sınıftır.|
+|SharePoint komutları|bunlar, sihirbaz çalışırken, sihirbaz veri modeli tarafından yerel SharePoint sitesine çağrı yapmak için kullanılan yöntemlerdir. SharePoint komutlarının .NET Framework 3,5 ' i hedeflemesi gerektiğinden, bu komutlar, sihirbaz kodunun geri kalanından farklı bir derlemede uygulanır.|
 
 ## <a name="create-the-projects"></a>Projeleri oluşturma
- Bu izlenecek yolu tamamlamak için, Izlenecek Yol: Proje şablonuyla site sütunu proje öğesi oluşturma bölümünde oluşturduğunuz SiteColumnProjectItem çözümüne birkaç proje eklemeniz [gerekir, Bölüm 1:](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)
+ Bu yönergeyi tamamlamak için, [Izlenecek yol: proje şablonu ile bir site sütunu proje öğesi oluşturma, 1. Bölüm](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md):
 
-- WPF projesi. Bu projede <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> arabirimini uygulayacak ve sihirbaz kullanıcı arabirimini tanımlayabilirsiniz.
+- Bir WPF projesi. <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>Bu projede arabirimini uygular ve sihirbaz kullanıcı arabirimini tanımlayacaksınız.
 
-- Uygulama komutlarını tanımlayan bir sınıf SharePoint projesi. Bu proje, the.NET Framework 3.5'i hedeflemeli.
+- SharePoint komutlarını tanımlayan bir sınıf kitaplığı projesi. Bu proje the.NET Framework 3,5 ' i hedeflemelidir.
 
-  Projeleri oluşturarak izlenecek yolu başlatma.
+  Projeleri oluşturarak yönergeyi başlatın.
 
 #### <a name="to-create-the-wpf-project"></a>WPF projesini oluşturmak için
 
-1. içinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SiteColumnProjectItem çözümünü açın.
+1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , SiteColumnProjectItem çözümünü açın.
 
-2. Bu **Çözüm Gezgini** **SiteColumnProjectItem** çözüm düğümünün kısayol menüsünü açın, Ekle'yi seçin ve ardından Yeni **oluştur'Project.** 
+2. **Çözüm Gezgini**, **SiteColumnProjectItem** çözüm düğümünün kısayol menüsünü açın, **Ekle**' yi ve ardından **yeni Project**' ı seçin.
 
-3. Yeni Sürüm Ekle iletişim **Project** üst kısmında, .NET Framework sürüm listesinde **.NET Framework 4.5'in** .NET Framework.
+3. **yeni Project ekle** iletişim kutusunun üst kısmında .NET Framework sürümleri listesinde **.NET Framework 4,5** ' nin seçildiğinden emin olun.
 
-4. Visual **C# düğümünü** veya **Visual Basic** düğümünü genişletin ve **Windows** seçin.
+4. **Visual C#** düğümünü veya **Visual Basic** düğümünü genişletin ve **Windows** düğümünü seçin.
 
-5. Proje şablonları listesinde **WPF** Kullanıcı Denetim Kitaplığı'ı seçin, projeye **ProjectTemplateWizard adını ve** ardından Tamam **düğmesini** seçin.
+5. Proje şablonları listesinde **WPF Kullanıcı denetimi kitaplığı**' nı seçin, Project **ProjectTemplateWizard**' ı adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ProjectTemplateWizard** projesini çözüme ekler ve varsayılan UserControl1.xaml dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme **ProjectTemplateWizard** projesini ekler ve varsayılan UserControl1. xaml dosyasını açar.
 
-6. Projeden UserControl1.xaml dosyasını silin.
+6. Projedeki UserControl1. xaml dosyasını silin.
 
-#### <a name="to-create-the-sharepoint-commands-project"></a>SharePoint komutları projesini oluşturmak için
+#### <a name="to-create-the-sharepoint-commands-project"></a>SharePoint komutları projesi oluşturmak için
 
-1. Bu **Çözüm Gezgini** SiteColumnProjectItem çözüm düğümünün kısayol menüsünü açın, Ekle'yi ve ardından Yeni **Oluştur'u Project.**
+1. **Çözüm Gezgini**, SiteColumnProjectItem çözüm düğümünün kısayol menüsünü açın, **Ekle**' yi ve ardından **yeni Project**' ı seçin.
 
-2. Yeni Uygulama Ekle iletişim **kutusunun Project,** .NET Framework sürümleri **listesinden 3.5'i** .NET Framework.
+2. **yeni Project ekle** iletişim kutusunun üst kısmında .NET Framework sürümleri listesinde **.NET Framework 3,5** ' ı seçin.
 
-3. Visual **C# düğümünü** veya **Visual Basic** düğümünü genişletin ve ardından **Windows** seçin.
+3. **Visual C#** düğümünü veya **Visual Basic** düğümünü genişletin ve **Windows** düğümünü seçin.
 
-4. Sınıf Kitaplığı **proje şablonunu** seçin, projeye **SharePointCommands adını ve** ardından Tamam **düğmesini** seçin.
+4. **Sınıf kitaplığı** proje şablonu ' nu seçin, projeyi **SharePointCommands** olarak adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**SharePointCommands projesini** çözüme ekler ve varsayılan Class1 kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] çözüme **SharePointCommands** projesini ekler ve varsayılan Class1 kod dosyasını açar.
 
-5. Projeden Class1 kod dosyasını silin.
+5. Class1 kod dosyasını projeden silin.
 
 ## <a name="configure-the-projects"></a>Projeleri yapılandırma
  Sihirbazı oluşturmadan önce, projelere bazı kod dosyaları ve derleme başvuruları eklemeniz gerekir.
 
 #### <a name="to-configure-the-wizard-project"></a>Sihirbaz projesini yapılandırmak için
 
-1. Bu **Çözüm Gezgini** **ProjeTemplateWizard** proje düğümü için kısayol menüsünü açın ve Özellikler'i **seçin.**
+1. **Çözüm Gezgini**, **ProjectTemplateWizard** proje düğümünün kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
-2. Project **Tasarımcısı'nda,** bir Visual  C# projesinin Uygulama sekmesini  veya bir Visual Basic seçin.
+2. **Project tasarımcısında**, bir Visual C# projesi için **uygulama** sekmesini veya bir Visual Basic projesi için **derle** sekmesini seçin.
 
-3. Hedef çerçevenin .NET Framework 4.5 İstemci Profili'ne değil .NET Framework 4.5'e ayarlanmış olduğundan emin olun.
+3. hedef framework 'ün .NET Framework 4,5 istemci profiline değil .NET Framework 4,5 ' e ayarlandığından emin olun.
 
-     Daha fazla bilgi için, [bkz. How to: Target a Version of the .NET Framework](../ide/visual-studio-multi-targeting-overview.md).
+     Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md).
 
-4. **ProjectTemplateWizard projesinin kısayol** menüsünü açın, Ekle'yi **ve** ardından Yeni Öğe'yi **seçin.**
+4. **ProjectTemplateWizard** projesinin kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni öğe**' yi seçin.
 
-5. Pencere **(WPF) öğesini** seçin, öğeye **SihirbazWindow** adını ve ardından Ekle **düğmesini** seçin.
+5. **Pencere (WPF)** öğesini seçin, öğe **WizardWindow** adını adlandırın ve ardından **Ekle** düğmesini seçin.
 
-6. Projeye iki **Kullanıcı Denetimi (WPF)** öğe ekleyin ve bunları **Page1** ve **Page2 olarak adlarına ekleyin.**
+6. Projeye iki **Kullanıcı denetimi (WPF)** öğesi ekleyin ve bunları **Sayfa1** ve **Page2** olarak adlandırın.
 
-7. Projeye dört kod dosyası ekleyin ve aşağıdaki adları ekleyin:
+7. Projeye dört kod dosyası ekleyin ve aşağıdaki adları verin:
 
     - SiteColumnProjectWizard
 
@@ -136,23 +136,23 @@ ms.locfileid: "121352829"
 
     - ProjectSigningManager
 
-    - Commandıds
+    - CommandIds
 
-8. **ProjectTemplateWizard proje** düğümünün kısayol menüsünü açın ve Başvuru **Ekle'yi seçin.**
+8. **ProjectTemplateWizard** proje düğümünün kısayol menüsünü açın ve ardından **Başvuru Ekle**' yi seçin.
 
-9. Derlemeler **düğümünü** genişletin, **Uzantılar düğümünü** seçin ve ardından aşağıdaki derlemelerin yanındaki onay kutularını seçin:
+9. **Derlemeler** düğümünü genişletin, **Uzantılar** düğümünü seçin ve ardından aşağıdaki derlemelerin yanındaki onay kutularını seçin:
 
-    - Envdte
+    - EnvDTE
 
-    - Microsoft.visualstudio.ole
+    - Microsoft. VisualStudio. OLE. Interop
 
-    - Microsoft.VisualStudio. SharePoint
+    - Microsoft. VisualStudio. SharePoint
 
-    - Microsoft.VisualStudio.Shell.11.0
+    - Microsoft. VisualStudio. Shell. 11.0
 
-    - Microsoft.VisualStudio.Shell.Interop.10.0
+    - Microsoft. VisualStudio. Shell. Interop. 10.0
 
-    - Microsoft.VisualStudio.Shell.Interop.11.0
+    - Microsoft. VisualStudio. Shell. Interop. 11.0
 
     - Microsoft.VisualStudio.TemplateWizardInterface
 
@@ -256,11 +256,11 @@ ms.locfileid: "121352829"
 
 1. ProjectTemplateWizard projesinde Page1.xaml dosyasının kısayol menüsünü açın ve  ardından Aç'ı seçerek kullanıcı denetimi tasarımcıda açın.
 
-2. Tasarımcının XAML görünümünde geçerli XAML'i aşağıdaki XAML ile değiştirin. XAML, kullanıcıların hata ayıklama için kullanmak istediğiniz yerel sitelerin URL'sini girebilirsiniz metin kutusu içeren bir kullanıcı arabirimi tanımlar. Kullanıcı arabirimi, kullanıcıların projenin korumalı alan olarak kabul edip olmadığını belirte seçen düğmelerini de içerir.
+2. Tasarımcının XAML görünümünde geçerli XAML'i aşağıdaki XAML ile değiştirin. XAML, kullanıcıların hata ayıklama için kullanmak istediğiniz yerel sitelerin URL'sini girebilirsiniz metin kutusu içeren bir kullanıcı arabirimi tanımlar. Kullanıcı arabiriminde ayrıca kullanıcıların projenin korumalı alanla mı ilgili olduğunu belirterek seçenk düğmeleri bulunur.
 
      :::code language="xml" source="../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page1.xaml" id="Snippet11":::
 
-3. Bir Visual Basic projesi geliştiriyorsanız, `ProjectTemplateWizard` öğenin `Page1` özniteliğinde sınıf `x:Class` adı'dan ad alanını `UserControl` kaldırın. Bu, XAML'nin ilk satırıdır. Bitirin, ilk satır aşağıdaki gibi görünüyor.
+3. Yeni bir Visual Basic geliştiriyorsanız, `ProjectTemplateWizard` öğenin `Page1` özniteliğinde sınıf `x:Class` adı'dan ad alanını `UserControl` kaldırın. Bu, XAML'nin ilk satırıdır. Bitirin, ilk satır aşağıdaki gibi görünüyor.
 
     ```xml
     <UserControl x:Class="Page1"
@@ -273,7 +273,7 @@ ms.locfileid: "121352829"
 
 #### <a name="to-create-the-second-wizard-page-ui"></a>İkinci sihirbaz sayfası kullanıcı arabirimini oluşturmak için
 
-1. ProjectTemplateWizard projesinde Page2.xaml dosyasının kısayol menüsünü açın ve aç'ı **seçin.**
+1. ProjectTemplateWizard projesinde Page2.xaml dosyasının kısayol menüsünü açın ve Aç'ı **seçin.**
 
      Kullanıcı denetimi tasarımcıda açılır.
 
@@ -281,7 +281,7 @@ ms.locfileid: "121352829"
 
      :::code language="xml" source="../sharepoint/codesnippet/Xaml/sitecolumnprojectitem/projecttemplatewizard/page2.xaml" id="Snippet12":::
 
-3. Bir Visual Basic projesi geliştiriyorsanız, `ProjectTemplateWizard` öğenin `Page2` özniteliğinde sınıf `x:Class` adı'dan ad alanını `UserControl` kaldırın. Bu, XAML'nin ilk satırıdır. Bitirin, ilk satır aşağıdaki gibi görünüyor.
+3. Yeni bir Visual Basic geliştiriyorsanız, `ProjectTemplateWizard` öğenin `Page2` özniteliğinde sınıf `x:Class` adı'dan ad alanını `UserControl` kaldırın. Bu, XAML'nin ilk satırıdır. Bitirin, ilk satır aşağıdaki gibi görünüyor.
 
     ```xml
     <UserControl x:Class="Page2"
@@ -324,11 +324,11 @@ ms.locfileid: "121352829"
 1. Menü çubuğunda Derleme   >  **Çözümü'ne tıklayın.**
 
 ## <a name="removing-the-keysnk-file-from-the-project-template"></a>Proje şablonundan key.snk dosyasını kaldırma
- Kılavuz: Proje şablonu olan [1.](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)Bölüm ile bir site sütunu proje öğesi oluşturma bölümünde, oluşturduğunuz proje şablonu her Site Sütunu proje örneğini imzalamak için kullanılan bir key.snk dosyası içerir. Sihirbaz artık her proje için yeni bir key.snk dosyası oluştur olduğundan bu key.snk dosyası artık gerekli değildir. proje şablonundan key.snk dosyasını kaldırın ve bu dosyaya yapılan başvuruları kaldırın.
+ Kılavuz: Proje şablonu olan [1.](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)Bölüm ile bir site sütunu proje öğesi oluşturma bölümünde, oluşturduğunuz proje şablonu her Site Sütunu proje örneğini imzalamak için kullanılan bir key.snk dosyası içerir. Sihirbaz artık her proje için yeni bir key.snk dosyası oluştursa da bu key.snk dosyası artık gerekli değildir. proje şablonundan key.snk dosyasını kaldırın ve bu dosyaya yapılan başvuruları kaldırın.
 
 #### <a name="to-remove-the-keysnk-file-from-the-project-template"></a>Key.snk dosyasını proje şablonundan kaldırmak için
 
-1. Bu **Çözüm Gezgini** **SiteColumnProjectTemplate** düğümünün altında **key.snk** dosyasının kısayol menüsünü açın ve Sil'i **seçin.**
+1. Bu **Çözüm Gezgini,** **SiteColumnProjectTemplate** düğümünün altında **key.snk** dosyasının kısayol menüsünü açın ve Sil'i **seçin.**
 
 2. Görüntülenen onay iletişim kutusunda Tamam **düğmesini** seçin.
 
@@ -368,7 +368,7 @@ ms.locfileid: "121352829"
 
 #### <a name="to-sign-the-wizard-assembly-with-a-strong-name"></a>Sihirbaz derlemeyi güçlü bir adla imzalamak için
 
-1. Bu **Çözüm Gezgini** projesinde **ProjectTemplateWizard projesinin kısayol** menüsünü açın ve Özellikler'i **seçin.**
+1. Bu **Çözüm Gezgini** **ProjectTemplateWizard projesinin** kısayol menüsünü açın ve Özellikler'i **seçin.**
 
 2. İmzalama **sekmesinde** Derlemeyi **imzala onay** kutusunu seçin.
 
@@ -376,11 +376,11 @@ ms.locfileid: "121352829"
 
 4. Güçlü **Ad Anahtarı Oluştur** iletişim kutusunda yeni anahtar dosyası için  bir ad girin, Anahtar dosyamı parolayla koru onay kutusunun işaretini kaldırın ve ardından Tamam **düğmesini** seçin.
 
-5. **ProjectTemplateWizard projesinin kısayol** menüsünü açın ve derleme dosyasını oluşturmak **için** Oluştur'ProjectTemplateWizard.dll seçin.
+5. **ProjectTemplateWizard** projesinin kısayol menüsünü açın ve  derleme dosyasını oluşturmak için Oluştur'ProjectTemplateWizard.dll seçin.
 
 #### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>Sihirbaz derlemesi için ortak anahtar belirteci almak için
 
-1. Başlat Menüsünde Tüm  **Programlar'ı** seçin, Microsoft Visual Studio' **Visual Studio Araçları** **seçin** ve **Geliştirici Komut İstemi.**
+1. Başlat Menüsünde Tüm  **Programlar'ı** seçin, **Microsoft Visual Studio'ı** seçin, Visual Studio Araçları'yi seçin ve sonra da Geliştirici Komut İstemi. 
 
      Bir Visual Studio komut istemi penceresi açılır.
 
@@ -390,7 +390,7 @@ ms.locfileid: "121352829"
     sn.exe -T PathToWizardAssembly
     ```
 
-     ProjectTemplateWizard.dll derlemesi için ortak anahtar belirteci, Visual Studio istemi penceresine yazılır.
+     ProjectTemplateWizard.dll derlemesi için ortak anahtar belirteci, Visual Studio komut istemi penceresine yazılır.
 
 3. Visual Studio İstemi penceresini açık tutma. Sonraki yordam sırasında ortak anahtar belirtecin gerekir.
 
@@ -407,18 +407,18 @@ ms.locfileid: "121352829"
     </WizardExtension>
     ```
 
-     öğesi hakkında daha fazla bilgi `WizardExtension` için bkz. [WizardExtension Öğesi &#40;Visual Studio Şablonları&#41;. ](../extensibility/wizardextension-element-visual-studio-templates.md)
+     öğesi hakkında daha fazla `WizardExtension` bilgi için bkz. [WizardExtension Öğesi &#40;Visual Studio&#41;. ](../extensibility/wizardextension-element-visual-studio-templates.md)
 
 3. Dosyayı kaydedin ve kapatın.
 
-## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-project-template"></a>Proje şablonunda Elements.xml parametresi ekleme
- SiteColumnProjectTemplate projesindeElements.xmlbirçok değiştirilebilir parametre ekleyin.  Bu parametreler, daha önce `RunStarted` tanımlandığı `SiteColumnProjectWizard` sınıftaki yönteminde başlatılır. Bir kullanıcı bir Site Sütunu projesi oluşturduğunda, Visual Studio yeni projede yer alan *Elements.xml* bu parametreleri sihirbazda belirtilen değerlerle otomatik olarak değiştirir.
+## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-project-template"></a>Proje şablonunda yer alan Elements.xml değiştirilebilir parametreler ekleme
+ SiteColumnProjectTemplate *projesinde* Elements.xmlbirkaç değiştirilebilir parametre ekleyin. Bu parametreler, daha önce `RunStarted` tanımlandığı `SiteColumnProjectWizard` sınıftaki yönteminde başlatılır. Bir kullanıcı bir Site Sütunu projesi oluşturduğunda, Visual Studio yeni projede yer alan *Elements.xml* dosyasındaki bu parametreleri sihirbazda belirtilen değerlerle otomatik olarak değiştirir.
 
  Değiştirilebilir parametre, dolar işareti ($) karakteriyle başlayan ve sona eren bir belirteçtir. Kendi değiştirilebilir parametrelerinizi tanımlamaya ek olarak, proje sistemi tarafından tanımlanan ve başlatılan yerleşik SharePoint kullanabilirsiniz. Daha fazla bilgi için [bkz. Değiştirilebilir parametreler.](../sharepoint/replaceable-parameters.md)
 
 #### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>Elements.xml dosyasına değiştirilebilir parametreler eklemek için
 
-1. SiteColumnProjectTemplate projesinde, *Elements.xml* dosyasının içeriğini aşağıdaki XML ile değiştirin.
+1. SiteColumnProjectTemplate projesinde, *dosyanın içeriğiniElements.xml* XML ile değiştirin.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -521,7 +521,7 @@ ms.locfileid: "121352829"
 
 2. Site Eylemleri **menüsünde Site** **eylemleri'Ayarlar.**
 
-3. Site Sütunları Ayarlar Galeriler'in altında Site sütunları **bağlantısını** seçin.
+3. Site Sütunları Ayarlar **Galeriler'in** altında **Site** sütunları bağlantısını seçin.
 
 4. Site sütunları listesinde, Özel **Evet/Hayır** Sütunları grubunun **Evet/Hayır** Sütunum adlı bir sütun içerdiğini doğrulayın ve ardından web tarayıcısını kapatın.
 
@@ -538,9 +538,9 @@ ms.locfileid: "121352829"
 
 3. Görüntülenen iletişim kutusunda, uzantıyı  kaldırmak istediğinizden emin olmak için Evet düğmesini  seçin ve ardından kaldırma işlemini tamamlamak için Şimdi Yeniden Başlat düğmesini seçin.
 
-4. Hem deneysel Visual Studio hem de CustomActionProjectItem çözümünün açık olduğu örneği kapatın.
+4. Hem deneysel Visual Studio customActionProjectItem çözümünün açık olduğu örneği kapatın.
 
-     Uzantıları dağıtma hakkında bilgi [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] için bkz. [Gönderim Visual Studio uzantıları.](../extensibility/shipping-visual-studio-extensions.md)
+     Uzantıları dağıtma hakkında bilgi [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] için bkz. [Gönderim Visual Studio Uzantıları.](../extensibility/shipping-visual-studio-extensions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Adım adım kılavuz: Proje şablonuyla site sütunu proje öğesi oluşturma, Bölüm 1](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)

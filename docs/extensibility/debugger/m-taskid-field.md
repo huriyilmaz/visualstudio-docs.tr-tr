@@ -1,5 +1,5 @@
 ---
-description: System.Threading.Tasks.Task.Id için destek alanı.
+description: System.Threading.Tasks.Task.Id için System.Threading.Tasks.Task.Id.
 title: m_taskId Alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 53048bbdd46e1d8eefa6bae7376a7bf653ccfd7076dc8cecedd4d2140f0945ea
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 46ad2b7bc2fad41821b60c7c7aa428b75fe25d49
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121308174"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160328"
 ---
 # <a name="m_taskid-field"></a>m_taskId alanı
 özelliği için backing <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> alanı.

@@ -1,6 +1,6 @@
 ---
 title: SDK öğesi (MSBuild) | Microsoft Docs
-description: MSBuild proje SDK 'Sına başvuran MSBuild SDK öğesi için sözdizimi, öznitelikler ve öğeler hakkında bilgi edinin.
+description: MSBuild proje Sdk 'sına başvuran MSBuild Sdk öğesi için sözdizimi, öznitelikler ve öğeler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 01/25/2018
 ms.topic: reference
@@ -17,14 +17,15 @@ helpviewer_keywords:
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: cd5f66cc6500a3320e0da962985f5b7fff1e86dc
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2f4af21014bd749897bf8872fc09c934f1e6ecf9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99937907"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108362"
 ---
 # <a name="sdk-element-msbuild"></a>SDK öğesi (MSBuild)
 
@@ -62,6 +63,6 @@ MSBuild proje SDK 'sına başvurur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: MSBuild proje SDK 'sına başvurma](../msbuild/how-to-use-project-sdk.md)
-- [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
+- [nasıl yapılır: MSBuild projesi SDK 'ya başvurma](../msbuild/how-to-use-project-sdk.md)
+- [Project dosya şeması başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
 - [MSBuild](../msbuild/msbuild.md)

@@ -6,22 +6,23 @@ ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 08ae2e13f094535eae0447cc3b8d4acf4c806a99
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 920822cca275f0285f922fc49a60af3a3b152d6b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99920622"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140316"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Cookiecutter uzantısını kullanma
 
-[Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) şablonları, giriş şablonu seçeneklerini bulmaya ve proje ve dosya oluşturmaya yönelik grafik kullanıcı arabirimi sağlar. Visual Studio 2017 ve üzeri sürümlerde bulunur ve Visual Studio 'nun önceki sürümlerinde ayrı olarak yüklenebilir.
+[Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) şablonları, giriş şablonu seçeneklerini bulmaya ve proje ve dosya oluşturmaya yönelik grafik kullanıcı arabirimi sağlar. Visual Studio 2017 ve üzeri sürümlerde bulunur ve Visual Studio önceki sürümlerinde ayrı olarak yüklenebilir.
 
-Cookiecutter, Python 3,3 veya üzeri (32-bit veya 64-bit) veya Anaconda 3 4,2 veya üzeri (32-bit veya 64-bit) gerektirir. Uygun bir Python yorumlayıcı yoksa, Visual Studio bir uyarı görüntüler. Visual Studio çalışırken bir Python yorumlayıcı yüklerseniz, yeni yüklenen yorumlayıcı algılamak için Cookiecutter araç çubuğundaki **giriş** düğmesini seçin. (Genel olarak ortamlar hakkında daha fazla bilgi için bkz. [Python ortamları](managing-python-environments-in-visual-studio.md) .)
+Cookiecutter, Python 3,3 veya üzeri (32-bit veya 64-bit) veya Anaconda 3 4,2 veya üzeri (32-bit veya 64-bit) gerektirir. uygun bir Python yorumlayıcı yoksa Visual Studio bir uyarı görüntüler. Visual Studio çalışırken bir Python yorumlayıcı yüklerseniz, yeni yüklenen yorumlayıcı algılamak için Cookiecutter araç çubuğundaki **giriş** düğmesini seçin. (Genel olarak ortamlar hakkında daha fazla bilgi için bkz. [Python ortamları](managing-python-environments-in-visual-studio.md) .)
 
 Yüklendikten sonra,   >  **Cookiecutter Gezginini** görüntüle ' yi seçerek penceresini açın:
 
@@ -39,19 +40,19 @@ Cookiecutter giriş sayfasında, aşağıdaki gruplar halinde düzenlenmiş, ara
 | --- | --- |
 | **Yüklendi** | Yerel bilgisayarınıza yüklenmiş şablonlar. Çevrimiçi bir şablon kullanıldığında, deposu otomatik olarak *~/. tanımlama bilgisi ecutters* alt klasörüne kopyalanır. Seçili yüklü bir şablonu **Sil**' i tıklatarak silebilirsiniz. |
 | **Önerilen** | Önerilen akıştan yüklenen şablonlar. Varsayılan akış Microsoft tarafından yapılır. Akışı özelleştirme hakkında daha fazla bilgi için aşağıdaki [Cookiecutter seçeneklerine](#cookiecutter-options) bakın. |
-| **GitHub** | Cookiecutter anahtar sözcüğü için GitHub arama sonuçları. GitHub sonuçları, daha fazla sonuç varsa, listenin sonunda **daha fazla yükle** görüntülenir. |
+| **GitHub** | cookiecutter anahtar sözcüğü için arama sonuçları GitHub. GitHub sonuçları geri dönüp, daha fazla sonuç varsa, daha **fazla yükleme** listenin sonunda görüntülenir. |
 | **Özel** | Arama kutusuna özel bir konum girildiğinde, bu grupta görünür. GitHub deposunun tam yolunu ya da yerel diskinizdeki bir klasöre tam yolu yazabilirsiniz. |
 
 ### <a name="cloning"></a>Kopyalama
 
 Bir şablonu seçip **İleri**' yi seçtiğinizde, Cookiecutter yerel bir kopyanın çalışmasına neden olur.
 
-**Önerilen** veya **GitHub** gruplarından bir şablon seçerseniz veya arama kutusuna özel bir URL girerseniz ve bu şablonu seçerseniz, kopyalanıp yerel bilgisayarınıza yüklenir. Bu şablon, Visual Studio 'nun önceki oturumunda yüklüyse, otomatik olarak silinir ve en son sürüm klonlanır.
+**önerilen** veya **GitHub** gruplarından bir şablon seçerseniz veya arama kutusuna özel bir URL girerseniz ve bu şablonu seçerseniz, bu şablon kopyalanır ve yerel bilgisayarınıza yüklenir. bu şablon Visual Studio önceki bir oturumunda yüklüyse, otomatik olarak silinir ve en son sürüm klonlanır.
 
-**Yüklü** gruptan bir şablon seçer veya arama kutusuna özel bir klasör yolu girip bu şablonu seçerseniz, Visual Studio bu şablonu kopyalamaya gerek kalmadan yükler.
+**yüklü** gruptan bir şablon seçer veya arama kutusuna özel bir klasör yolu girip bu şablonu seçerseniz, Visual Studio bu şablonu kopyalamaya gerek kalmadan yükler.
 
 > [!Important]
-> Cookiecutter şablonları tek bir klasör altına kopyalanır *~/. tanımlama bilgisi ecutters*. Her alt klasör, GitHub Kullanıcı adını içermeyen git deposu adından sonra adlandırılır. Farklı yazarlardan gelen aynı ada sahip farklı şablonları klonladığınızda çakışmalar ortaya çıkabilir. Bu durumda, Cookiecutter, var olan şablonun aynı ada sahip farklı bir şablonla üzerine yazılmasını engeller. Diğer şablonu yüklemek için, önce mevcut olanı silmeniz gerekir.
+> Cookiecutter şablonları tek bir klasör altına kopyalanır *~/. tanımlama bilgisi ecutters*. her alt klasör, GitHub kullanıcı adını içermeyen git deposu adından sonra adlandırılır. Farklı yazarlardan gelen aynı ada sahip farklı şablonları klonladığınızda çakışmalar ortaya çıkabilir. Bu durumda, Cookiecutter, var olan şablonun aynı ada sahip farklı bir şablonla üzerine yazılmasını engeller. Diğer şablonu yüklemek için, önce mevcut olanı silmeniz gerekir.
 
 ### <a name="set-template-options"></a>Şablon seçeneklerini ayarla
 
@@ -63,7 +64,7 @@ Her bir Cookiecutter şablonu kendi seçenek kümesini tanımlar ve her biri iç
 
 Bir Kullanıcı yapılandırma dosyası ile belirli seçenekler için varsayılan değerleri özelleştirmek mümkündür. Cookiecutter uzantısı bir Kullanıcı yapılandırma dosyası algıladığında, şablonun varsayılan değerlerini kullanıcı yapılandırmasının varsayılan değerleriyle geçersiz kılar. Bu davranış, Cookiecutter belgelerinin [Kullanıcı Yapılandırması](https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html) bölümünde ele alınmıştır.
 
-Şablon, kod üretimi sonrasında çalıştırılacak belirli Visual Studio görevlerini belirtiyorsa, bu görevleri kapatmanıza izin veren ek bir ek **Görevler Çalıştır** seçeneği görüntülenir. Görevlerin en yaygın kullanımı, bir Web tarayıcısını açmak, düzenleyicide dosyaları açmak, bağımlılıkları yüklemek ve bu şekilde devam eder.
+şablon, kod üretimi sonrasında çalıştırılacak belirli Visual Studio görevlerini belirtiyorsa, bu görevleri kapatmanıza izin veren ek bir ek **görevler çalıştır** seçeneği görüntülenir. Görevlerin en yaygın kullanımı, bir Web tarayıcısını açmak, düzenleyicide dosyaları açmak, bağımlılıkları yüklemek ve bu şekilde devam eder.
 
 ### <a name="create"></a>Oluştur
 
@@ -81,10 +82,10 @@ Cookiecutter seçenekleri **Araçlar**  >  **Seçenekler**  >  **Cookiecutter** 
 
 | Seçenek | Açıklama |
 | --- | --- |
-| **Önerilen akış URL 'SI** | Önerilen şablonlar akışı konumu. Bu bir URL veya yerel bir dosyanın yolu olabilir. Varsayılan Microsoft seçkin akışını kullanmak için URL 'YI boş bırakın. Akış, newlines ile ayrılmış, şablon konumlarının basit bir listesini sağlar. Seçkin akışta değişiklik istemek için [GitHub 'da kaynak](https://github.com/Microsoft/PTVS/blob/master/Python/Product/Cookiecutter/CookiecutterFeed.txt)üzerinde bir çekme isteği oluşturun. |
+| **Önerilen akış URL 'SI** | Önerilen şablonlar akışı konumu. Bu bir URL veya yerel bir dosyanın yolu olabilir. Varsayılan Microsoft seçkin akışını kullanmak için URL 'YI boş bırakın. Akış, newlines ile ayrılmış, şablon konumlarının basit bir listesini sağlar. Seçkin akışta değişiklik istemek için [GitHub Kaynak üzerinde](https://github.com/Microsoft/PTVS/blob/master/Python/Product/Cookiecutter/CookiecutterFeed.txt)bir çekme isteği yapın. |
 | **Yardımı Göster** | Cookiecutter penceresinin en üstündeki yardım bilgileri çubuğunun görünürlüğünü denetler. |
 
-## <a name="optimize-cookiecutter-templates-for-visual-studio"></a>Visual Studio için Cookiecutter şablonlarını iyileştirme
+## <a name="optimize-cookiecutter-templates-for-visual-studio"></a>Visual Studio için Cookiecutter şablonlarını iyileştirin
 
 Cookiecutter şablonu yazma temelleri için bkz. [Cookiecutter belgeleri](https://cookiecutter.readthedocs.io/en/latest/first_steps.html). Visual Studio için Cookiecutter uzantısı, Cookiecutter v 1.4 için oluşturulan şablonları destekler.
 
@@ -93,12 +94,12 @@ Cookiecutter şablonu yazma temelleri için bkz. [Cookiecutter belgeleri](https:
 - String: değişken adı için etiket, değer girmek için metin kutusu ve varsayılan değeri gösteren bir filigran. Metin kutusundaki araç ipucu varsayılan değeri gösterir.
 - List: değişken adı için etiket, bir değer seçmek için Birleşik giriş kutusu. Birleşik giriş kutusundaki araç ipucu varsayılan değeri gösterir.
 
-Bu işleme üzerinde, Visual Studio 'ya özgü (ve Cookiecutter CLı tarafından yoksayılan) dosya *cookiecutter.js* ek meta verileri belirterek geliştirmek mümkündür. Tüm özellikler isteğe bağlıdır:
+Visual Studio özgü (ve Cookiecutter clı tarafından yoksayılmış) dosyadaki *cookiecutter.js* ek meta verileri belirterek bu işleme üzerinde geliştirme mümkündür. Tüm özellikler isteğe bağlıdır:
 
 | Özellik | Açıklama |
 | --- | --- |
 | Etiketle | Değişken için, değişkenin adı yerine düzenleyicinin üzerinde ne göründüğünü belirtir. |
-| Description | Bu değişken için varsayılan değer yerine, düzenleme denetiminde görünen araç ipucunu belirtir. |
+| Açıklama | Bu değişken için varsayılan değer yerine, düzenleme denetiminde görünen araç ipucunu belirtir. |
 | URL | Etiketi, URL 'YI gösteren bir araç ipucuyla birlikte köprü haline geçirir. Köprü seçildiğinde kullanıcının varsayılan tarayıcısı Bu URL 'ye açılır. |
 | Seçici | Bir değişken için düzenleyicinin özelleştirilmesine izin verir. Şu seçiciler Şu anda desteklenmektedir:<ul><li>`string`: Standart metin kutusu, dizeler için varsayılan.</li><li>`list`: Standart Birleşik giriş kutusu, listeler için varsayılan.</li><li>`yesno`: `y` Dizeler için ve arasında seçim yapabileceğiniz Birleşik giriş kutusu `n` .</li><li>`odbcConnection`: Bir veritabanı bağlantısı iletişim kutusu getiren **...** düğmesini içeren metin kutusu.</li></ul> |
 
@@ -129,13 +130,13 @@ Bu işleme üzerinde, Visual Studio 'ya özgü (ve Cookiecutter CLı tarafından
 }
 ```
 
-### <a name="run-visual-studio-tasks"></a>Visual Studio görevlerini çalıştırma
+### <a name="run-visual-studio-tasks"></a>Visual Studio görevleri çalıştırma
 
-Cookiecutter, dosyalar oluşturulduktan sonra rastgele Python kodu çalıştırmaya izin veren, *oluşturma sonrası kancalar* adlı bir özelliğe sahiptir. Esnek olsa da, Visual Studio 'ya kolay erişime izin vermez.
+Cookiecutter, dosyalar oluşturulduktan sonra rastgele Python kodu çalıştırmaya izin veren, *oluşturma sonrası kancalar* adlı bir özelliğe sahiptir. Esnek olmasına rağmen Visual Studio kolay erişime izin vermez.
 
-Örneğin, Visual Studio düzenleyicisinde veya Web tarayıcısında bir dosyayı açmak ya da kullanıcıdan bir sanal ortam oluşturmasını ve paket gereksinimlerini yüklemesini isteyen Visual Studio Kullanıcı arabirimini tetiklemeniz gerekebilir.
+örneğin, Visual Studio düzenleyicisinde veya web tarayıcısında bir dosyayı açmak veya kullanıcıdan bir sanal ortam oluşturmasını ve paket gereksinimlerini yüklemesini isteyen Visual Studio kullanıcı arabirimini tetiklemeniz gerekebilir.
 
-Bu senaryolara izin vermek için, Visual Studio, Kullanıcı oluşturulan dosyaları **Çözüm Gezgini** açtıktan sonra veya var olan bir projeye eklendikten sonra çalıştırılacak komutları açıklayan, *üzerindecookiecutter.js* genişletilmiş meta verileri arar. (Yine de Kullanıcı, şablon seçeneklerinde **tamamlandığında ek görevleri Çalıştır** ' ı temizleyerek görevleri çalıştırmayı tercih edebilir.)
+bu senaryolara izin vermek için Visual Studio, kullanıcı **Çözüm Gezgini** içinde oluşturulan dosyaları açtıktan sonra veya var olan bir projeye eklendikten sonra çalıştırılacak komutları açıklayan *cookiecutter.jsüzerinde* genişletilmiş meta verileri arar. (Yine de Kullanıcı, şablon seçeneklerinde **tamamlandığında ek görevleri Çalıştır** ' ı temizleyerek görevleri çalıştırmayı tercih edebilir.)
 
 Örnek:
 
@@ -156,7 +157,7 @@ Bu senaryolara izin vermek için, Visual Studio, Kullanıcı oluşturulan dosyal
 ]
 ```
 
-Komutlar ad ile belirtilir ve Visual Studio 'nun yerelleştirilmiş yüklemeleri üzerinde çalışmak için yerelleştirilmemiş (Ingilizce) adı kullanmalıdır. Visual Studio **komut** penceresinde komut adlarını test edebilir ve keşfedebilirsiniz.
+Komutlar ad ile belirtilir ve yerelleştirilmiş Visual Studio yüklemeleri üzerinde çalışmak için yerelleştirilmemiş (Ingilizce) adı kullanmalıdır. komut adlarını Visual Studio **komut** penceresinde test edebilir ve keşfedebilirsiniz.
 
 Tek bir bağımsız değişken geçirmek istiyorsanız, önceki örnekte olduğu gibi bir dize olarak belirtin.
 
@@ -170,7 +171,7 @@ Bir bağımsız değişken iletmeniz gerekmiyorsa, boş bir dize bırakın veya 
 ]
 ```
 
-Birden çok bağımsız değişken için bir dizi kullanın. Anahtarlar için anahtarı ve değerini ayrı bağımsız değişkenlere böler ve uygun tırnak içine kullanın. Örneğin:
+Birden çok bağımsız değişken için bir dizi kullanın. Anahtarlar için anahtarı ve değerini ayrı bağımsız değişkenlere böler ve uygun tırnak içine kullanın. Örnek:
 
 ```json
 "_visual_studio_post_cmds": [
@@ -199,9 +200,9 @@ Bazı şablonlar, *üzerindecookiecutter.js*, Boolean gibi geçersiz veri türle
 
 Bazı şablonlar, Cookiecutter Kullanıcı arabirimiyle uyumlu olmayan oluşturma sonrası betikleri kullanabilir. Örneğin, Kullanıcı girişi için sorgulama yapan betikler, Terminal konsoluna sahip olmadığı için başarısız olur.
 
-### <a name="hook-script-not-supported-on-windows"></a>Kanca betiği Windows üzerinde desteklenmez
+### <a name="hook-script-not-supported-on-windows"></a>Kanca betiği Windows desteklenmiyor
 
-Post betiği *. sh* Ise, Windows bilgisayarınızdaki bir uygulamayla ilişkili olmayabilir. Windows Mağazası 'nda uyumlu bir uygulama bulmanızı isteyen bir Windows iletişim kutusu görebilirsiniz.
+post betiği *. sh* ise, Windows bilgisayarınızdaki bir uygulamayla ilişkili olmayabilir. Windows deposunda uyumlu bir uygulama bulmanızı isteyen bir Windows iletişim kutusu görebilirsiniz.
 
 ### <a name="templates-with-known-issues"></a>Bilinen sorunları olan şablonlar
 

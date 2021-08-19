@@ -1,5 +1,5 @@
 ---
-description: Numaralama dizisinde belirtilen sayıda bölüm katkısını alma.
+description: Numaralama dizisinde belirtilen sayıda bölüm katkısını alan.
 title: IDiaEnumSectionContribs::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 66771f984a5ba0ed7e6061dc133768e7fbd959a7c273cd273bb299a424900063
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d6377b8ee02a48878228e89ad277e4bc78b969c0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392483"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113707"
 ---
 # <a name="idiaenumsectioncontribsnext"></a>IDiaEnumSectionContribs::Next
-Numaralama dizisinde belirtilen sayıda bölüm katkısını alma.
+Numaralama dizisinde belirtilen sayıda bölüm katkısını alan.
 
 ## <a name="syntax"></a>Sözdizimi
 

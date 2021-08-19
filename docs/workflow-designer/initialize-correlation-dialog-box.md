@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 123fa7a3b9a9cbc65ed458ab5b412268f00dd15001148db26915c4ddf882845a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 391ff86b47b766b01066913b492d4f963361d49c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121267058"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155180"
 ---
 # <a name="initialize-correlation-dialog-box"></a>Bağıntıyı Başlat İletişim Kutusu
 
@@ -29,7 +29,7 @@ Aşağıdaki tabloda Bağıntı Başlat iletişim kutusunun kullanıcı arabirim
 |Arabirim Öğesi|Açıklama|
 |-|-----------------|
 |**Correlation (Bağıntı)** |Başlatılmayacak <xref:System.ServiceModel.Activities.CorrelationHandle> bağıntının .|
-|**Başlatma Başlangıcı**|Başlatılmayacak verileri içeren bir anahtar/değer çifti. Bu değer özelliğine <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> karşılık gelen değerdir. Geçerli anahtar/değer çiftinin bir örneği, OrderID adlı bir değişkenle eşleştirilmiş "OrderID" adlı anahtardır.|
+|**Başlat**|Başlatılmayacak verileri içeren bir anahtar/değer çifti. Bu değer özelliğine <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> karşılık gelen değerdir. Geçerli anahtar/değer çiftinin bir örneği, OrderID adlı bir değişkenle eşleştirilmiş "OrderID" adlı anahtardır.|
 
 ## <a name="to-launch-the-initialize-correlation-dialog-box"></a>Bağıntı Başlat iletişim kutusunu başlatmak için
 

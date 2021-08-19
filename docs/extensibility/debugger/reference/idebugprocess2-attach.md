@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ebada428727dd356584de0a50cf31d3e407e7515295bede2d0957717054eaed
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 82251c831b1649d65939079244291d93eddb85d1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121416527"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122057673"
 ---
 # <a name="idebugprocess2attach"></a>IDebugProcess2::Attach
 Oturum hata ayıklama yöneticisini (SDM) işleme iliştirir.

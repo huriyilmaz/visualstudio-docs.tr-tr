@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ca17b821cc5cedb38ec3405404921a5d759018b80ce313f06a0dc6b20768279a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dd670e24fc10c2df445a66c5112e8c8d10eac79a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417632"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122120432"
 ---
 # <a name="bp_passcount"></a>BP_PASSCOUNT
 Koşullu kesme noktasının tetikleneceği sayı ve koşulları açıklar.

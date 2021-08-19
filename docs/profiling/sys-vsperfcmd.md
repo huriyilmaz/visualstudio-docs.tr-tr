@@ -7,15 +7,16 @@ ms.assetid: 294a6f9e-b49f-4c83-b322-5ac5411b66fb
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 66815265544afdee263490ed5eec92301911e3cb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c5f1f0908e3696f2f1172b50fb793b030100a9a0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99868172"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157078"
 ---
 # <a name="sys-vsperfcmd"></a>Sys (VSPerfCmd)
 *VSPerfCmd.exe* **sys** seçeneği, sistem çağrısı olaylarına örneklenmiş profil oluşturma olayını (profili oluşturulan uygulamadan işletim sistemine işlev çağrıları) ayarlar ve isteğe bağlı olarak, örnekleme aralığındaki sistem çağrılarının sayısını varsayılan değer olan 10 ' dan değiştirir.
@@ -64,5 +65,5 @@ VSPerfCmd.exe /Launch:TestApp.exe /Sys:20
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
 - [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [web uygulamalarının profilini ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

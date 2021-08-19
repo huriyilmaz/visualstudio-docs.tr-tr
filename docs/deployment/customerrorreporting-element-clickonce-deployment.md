@@ -1,5 +1,5 @@
 ---
-title: '&lt;customErrorReporting &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+title: '&lt;customerrorreporting &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
 description: CustomErrorReporting öğesi, özel durum yığınını gösteren bir hata iletişim kutusu yerine bir hata oluştuğunda gösterilecek URI 'yi belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -14,16 +14,17 @@ ms.assetid: 7d31816e-c692-46b5-9cc9-753284b3bcda
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: b168b3bcb90ae758609698de306928eb7e13d909
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b296e87accb896f25fe1d83d859e46b0e1d89755
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99888491"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122153764"
 ---
-# <a name="ltcustomerrorreportinggt-element-clickonce-deployment"></a>&lt;customErrorReporting &gt; öğesi (ClickOnce dağıtımı)
+# <a name="ltcustomerrorreportinggt-element-clickonce-deployment"></a>&lt;customerrorreporting &gt; öğesi (ClickOnce dağıtımı)
 Bir hata oluştuğunda gösterilecek URI 'yi belirtir.
 
 ## <a name="syntax"></a>Syntax

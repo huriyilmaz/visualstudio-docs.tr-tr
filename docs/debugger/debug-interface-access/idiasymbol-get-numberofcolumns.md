@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 74461bf97f176b6906537e01f4dd9082ea82fe81cf196b25a82a465fe7424e1c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1f73a66e836af382b3e00292baff03a28cc9ccf1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121264155"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121372"
 ---
 # <a name="idiasymbolget_numberofcolumns"></a>IDiaSymbol::get_numberOfColumns
 Matristeki sütun sayısını alır.

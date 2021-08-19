@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: b08127e5e0cd175d600685fc407573e0770fa61d78e15c9d0df0c35add4e7e77
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 75938513834b98789aa2b9501a9face06c7c1697
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387739"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101810"
 ---
 # <a name="how-to-add-an-application-configuration-file-to-a-c-project"></a>Nasıl olur: C# projesine uygulama yapılandırma dosyası ekleme
 
@@ -28,7 +28,7 @@ Bir C# projesine bir *uygulamaapp.config* dosyası ekleyerek, ortak dil çalış
 > [!NOTE]
 > UWP uygulamaları birapp.config *içermez.*
 
-Projenizi derlemek için geliştirme *ortamı* app.configdosyanızı otomatik olarak kopyalar, kopyanın dosya adını yürütülebilir dosyanıza göre değiştirir ve ardından kopyayı **bin dizinine** taşır.
+Projenizi derlemeniz sırasında geliştirme ortamı, *app.config* dosyanızı otomatik olarak kopyalar, kopyanın dosya adını yürütülebilir dosyanıza göre değiştirir ve ardından kopyayı **bin dizinine** taşır.
 
 ## <a name="to-add-an-application-configuration-file-to-a-c-project"></a>Bir C# projesine uygulama yapılandırma dosyası eklemek için
 
@@ -40,7 +40,7 @@ Projenizi derlemek için geliştirme *ortamı* app.configdosyanızı otomatik ol
 
 1. Ad **metin** kutusuna bir ad girin ve ekle **düğmesini** seçin.
 
-     projenize *app.config* adlı bir dosya eklenir.
+     Projenize *app.config* adlı bir dosya eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

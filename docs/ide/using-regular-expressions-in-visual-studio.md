@@ -1,6 +1,6 @@
 ---
 title: Normal ifadeler kullanma
-description: Visual Studio 'da kullanabileceğiniz bazı normal ifade karakterleri, işleçler, yapılar ve model örnekleri hakkında bilgi edinin.
+description: Visual Studio için kullanabileceğiniz bazı normal ifade karakterleri, işleçler, yapılar ve model örnekleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 09/13/2019
 ms.topic: conceptual
@@ -16,16 +16,17 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: e2314bb8fdb44d769a5067a39b01b40b0a74734f
-ms.sourcegitcommit: 99b66b0f4ced46ead0b2506a103f974f40cc0076
+ms.openlocfilehash: 4e024dbebaa0c1efef096f8d9b594971a6af8047
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2021
-ms.locfileid: "103295753"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122078043"
 ---
-# <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio 'da normal ifadeler kullanma
+# <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio içindeki normal ifadeleri kullanma
 
 Visual Studio, metni bulmak ve değiştirmek için [.net normal ifadelerini](/dotnet/standard/base-types/regular-expressions) kullanır.
 
@@ -63,7 +64,7 @@ Aşağıdaki tabloda bazı normal ifade karakterleri, işleçler, yapılar ve mo
 Bazı işleçleri ve yapıları bir onaltılık sayıyla eşleşecek şekilde birleştiren örnek bir normal ifade `\b0[xX]([0-9a-fA-F]+)\b` . Bu ifade "0xc67f" ile eşleşir ancak "0xc67g" olarak eşleşmez.
 
 > [!TIP]
-> Windows işletim sistemlerinde, çoğu satır "\r\n" (bir satır başı ve ardından yeni bir satır) ile biter. Bu karakterler görünmez, ancak düzenleyicide bulunur ve .NET normal ifade hizmetine geçirilir.
+> Windows işletim sistemlerinde, çoğu satır "\r\n" içinde (bir satır başı, ardından yeni bir satır) biter. Bu karakterler görünmez, ancak düzenleyicide bulunur ve .NET normal ifade hizmetine geçirilir.
 
 ## <a name="capture-groups-and-replacement-patterns"></a>Yakalama grupları ve değiştirme desenleri
 
@@ -73,33 +74,33 @@ Numaralandırılmış bir yakalama grubu oluşturmak için, alt ifadeyi normal i
 
 - **normal ifade içinde**: kullanın `\number` . Örneğin, `\1` normal ifadede `(\w+)\s\1` ilk yakalama grubuna başvuru yapılır `(\w+)` .
 
-- **değiştirme** düzeninde: kullanın `$number` . Örneğin, gruplanmış normal ifade `(\d)([a-z])` iki grup tanımlar: ilk grup tek bir ondalık basamak içerir ve ikinci grup, ve **z** arasında tek bir karakter içerir.  İfade şu dizede dört eşleşme bulur: **1a 2b 3c 4d**. Değiştirme dizesi `z$1` yalnızca ilk gruba ( `$1` ) başvurur ve dizeyi **Z1 Z2 Z3 Z4** öğesine dönüştürür.
+- **değiştirme** düzeninde: kullanın `$number` . Örneğin, gruplanmış normal ifade `(\d)([a-z])` iki grup tanımlar: ilk grup tek bir ondalık basamak içerir ve ikinci grup, ve **z** arasında tek bir karakter içerir.  ifadesi şu dizede dört eşleşme bulur: **1a 2b 3c 4d.** Değiştirme dizesi yalnızca `z$1` ilk gruba ( ) `$1` başvurur ve dizeyi **z1 z2 z3 z4'e dönüştürür.**
 
-Aşağıdaki görüntüde bir normal ifade `(\w+)\s\1` ve bir değiştirme dizesi gösterilmektedir `$1` . Normal ifade ve değiştirme deseninin her ikisi de otomatik olarak numaralandırılan ilk yakalama grubuna başvurur. Visual Studio 'daki **hızlı değiştirme** iletişim kutusunda **Tümünü Değiştir** ' i seçtiğinizde, yinelenen sözcükler metinden kaldırılır.
+Aşağıdaki görüntüde normal bir ifade ve `(\w+)\s\1` yerine bir dize yer `$1` alır. Hem normal ifade hem de değiştirme deseni, otomatik olarak 1 numaralı ilk yakalama grubuna başvurur. Hızlı Değiştir **iletişim kutusundaki** Tüm sözcükleri **değiştir'i** Visual Studio yinelenen sözcükler metinden kaldırılır.
 
-![Visual Studio 'da Numaralandırılmış yakalama grubunu gösteren hızlı değiştirme](media/numbered-capture-group.png)
+![Hızlı Değiştirme, Visual Studio'de numaralı yakalama grubunu Visual Studio](media/numbered-capture-group.png)
 
 > [!TIP]
-> **Hızlı değiştirme** Iletişim kutusunda **Normal ifadeleri kullan** düğmesinin seçili olduğundan emin olun.
+> Hızlı Değiştir **iletişim kutusunda Normal** İfadeleri Kullan düğmesinin seçili **olduğundan** emin olun.
 
 ### <a name="named-capture-groups"></a>Adlandırılmış yakalama grupları
 
-Bir yakalama grubunun otomatik numaralandırmasına güvenmek yerine, buna bir ad verebilirsiniz. Adlandırılmış bir yakalama grubunun sözdizimi vardır `(?<name>subexpression)` .
+Bir yakalama grubunun otomatik numaralama özelliğine güvenmek yerine bir ad ve ardından bu gruba bir ad vesersiniz. Adlandırılmış yakalama grubunun söz dizimi şu `(?<name>subexpression)` şekildedir: .
 
-Numaralandırılmış yakalama grupları gibi adlandırılmış yakalama grupları, normal ifadenin içinde veya değiştirme düzeninde kullanılabilir. Adlandırılmış yakalama grubuna erişmek için:
+Numaralı yakalama grupları gibi adlandırılmış yakalama grupları normal ifadenin içinde veya değiştirme düzeninde kullanılabilir. Adlandırılmış yakalama grubuna erişmek için:
 
-- **normal ifade içinde**: kullanın `\k<name>` . Örneğin, `\k<repeated>` normal ifadede, `(?<repeated>\w+)\s\k<repeated>` adlandırılmış ve alt ifadesi olan yakalama grubuna başvuruda `repeated` bulunur `\w+` .
+- **normal ifadenin içinde:** `\k<name>` kullanın. Örneğin, normal ifadede adlı ve alt ifadesi olan `\k<repeated>` `(?<repeated>\w+)\s\k<repeated>` yakalama grubuna `repeated` `\w+` başvurur.
 
-- **değiştirme** düzeninde: kullanın `${name}` . Örneğin, `${repeated}`.
+- **değiştirme desenini kullanın:** `${name}` kullanın. Örneğin, `${repeated}`.
 
-Örnek olarak, aşağıdaki görüntüde bir normal ifade `(?<repeated>\w+)\s\k<repeated>` ve bir değiştirme dizesi gösterilmektedir `${repeated}` . Hem normal ifade hem de değiştirme deseninin adlı yakalama grubu başvurusu `repeated` . Visual Studio 'daki **hızlı değiştirme** iletişim kutusunda **Tümünü Değiştir** ' i seçtiğinizde, yinelenen sözcükler metinden kaldırılır.
+Örnek olarak, aşağıdaki görüntüde normal bir ifade ve `(?<repeated>\w+)\s\k<repeated>` değiştirme dizesi yer `${repeated}` alır. Hem normal ifade hem de değiştirme deseni adlı yakalama grubuna `repeated` başvurur. Hızlı Değiştir **iletişim kutusundaki** Tüm sözcükleri **değiştir'i** Visual Studio yinelenen sözcükler metinden kaldırılır.
 
-![Visual Studio 'da adlandırılmış bir yakalama grubunu gösteren hızlı değiştirme](media/named-capture-group.png)
+![Hızlı Değiştirme, Visual Studio'de adlandırılmış yakalama grubunu Visual Studio](media/named-capture-group.png)
 
 > [!TIP]
-> **Hızlı değiştirme** Iletişim kutusunda **Normal ifadeleri kullan** düğmesinin seçili olduğundan emin olun.
+> Hızlı Değiştir **iletişim kutusunda Normal** İfadeleri Kullan düğmesinin seçili **olduğundan** emin olun.
 
-Adlandırılmış yakalama grupları hakkında daha fazla bilgi için bkz. [eşleşen alt Ifadeler adlandırılmış](/dotnet/standard/base-types/grouping-constructs-in-regular-expressions#named-matched-subexpressions). Değiştirme desenlerinde kullanılan normal ifadeler hakkında daha fazla bilgi için bkz. [normal Ifadelerde değişimler](/dotnet/standard/base-types/substitutions-in-regular-expressions).
+Adlandırılmış yakalama grupları hakkında daha fazla bilgi için [bkz. Adlandırılmış eşleşmeli alt ifadeler.](/dotnet/standard/base-types/grouping-constructs-in-regular-expressions#named-matched-subexpressions) Değiştirme desenlerinde kullanılan normal ifadeler hakkında daha fazla bilgi için [bkz. Normal ifadelerde Değiştirmeler.](/dotnet/standard/base-types/substitutions-in-regular-expressions)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,14 +11,15 @@ ms.assetid: d416b095-917e-475e-b796-ec0a03ffb8da
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: a52856cfa70491b7a7daa9079c111b1430475d22
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 96de5582c4ae60c9775af5ca72e5a15b8a370a7e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105053717"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160081"
 ---
 # <a name="idebugpendingbreakpoint2"></a>IDebugPendingBreakpoint2
 Bu arabirim, bir kod konumuna bağlanmaya yönelik bir kesme noktasını temsil eder.

@@ -1,6 +1,6 @@
 ---
 title: VSıX paketinin anatomumu | Microsoft Docs
-description: Visual Studio 'daki bir VSıX paketinin içerikleri, bir veya daha fazla Visual Studio uzantısı ve bir meta veri bildirim dosyası içeren bir dosya hakkında bilgi edinin.
+description: bir veya daha fazla Visual Studio uzantısı ve meta veri bildirim dosyası içeren Visual Studio, bir vsıx paketinin içerikleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,19 +12,20 @@ ms.assetid: 8b86d62f-c274-4e91-82e0-38cdb9a423d5
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 67b3775509e330ad55a2531a9e42a7cca93c50a6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9485aeba7d531c0a05f33ad759688e9fd05a29f9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097506"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111989"
 ---
 # <a name="anatomy-of-a-vsix-package"></a>VSıX paketinin anatomumu
-VSıX paketi, Visual Studio 'Nun uzantıları sınıflandırmak ve yüklemek için kullandığı meta verilerle birlikte bir veya daha fazla Visual Studio uzantısı içeren bir *. VSIX* dosyasıdır. Bu meta veriler VSıX bildiriminde ve *[Content_Types]. xml* dosyasında bulunur. Bir VSıX paketi ayrıca yerelleştirilmiş kurulum metni sağlamak için bir veya daha fazla *extension. valtlangpack* dosyası içerebilir ve bağımlılıkları yüklemek IÇIN ek VSIX paketleri içerebilir.
+vsıx paketi bir veya daha fazla Visual Studio uzantısı içeren bir *. VSIX* dosyasıdır, Visual Studio meta verileri, uzantıları sınıflandırmak ve yüklemek için kullanır. Bu meta veriler VSıX bildiriminde ve *[Content_Types] .xml* dosyasında bulunur. Bir VSıX paketi ayrıca yerelleştirilmiş kurulum metni sağlamak için bir veya daha fazla *extension. valtlangpack* dosyası içerebilir ve bağımlılıkları yüklemek IÇIN ek VSIX paketleri içerebilir.
 
- VSıX paketi biçimi açık paketleme kuralları (OPC) standardını izler. Paket, bir *[Content_Types]. xml* dosyası ve bir *. vsix* bildirim dosyası ile birlikte ikili dosyaları ve destekleyici dosyaları içerir. Bir VSıX paketi birden çok projenin çıkışını ya da kendi bildirimlerine sahip birden çok paketi içerebilir.
+ VSıX paketi biçimi açık paketleme kuralları (OPC) standardını izler. Paket, bir *[Content_Types] .xml* dosyası ve *. vsix* bildirim dosyası ile birlikte ikili dosyaları ve destekleyici dosyaları içerir. Bir VSıX paketi birden çok projenin çıkışını ya da kendi bildirimlerine sahip birden çok paketi içerebilir.
 
 > [!NOTE]
 > VSıX paketlerine dahil edilen dosyaların adları, [ \[ rfc2396 \] ](https://www.rfc-editor.org/rfc/rfc2396.txt)altında tanımlandığı gibi Tekdüzen Kaynak tanımlayıcılarında (URI) ayrılan boşluk veya karakterleri içermemelidir.
@@ -56,7 +57,7 @@ VSıX paketi, Visual Studio 'Nun uzantıları sınıflandırmak ve yüklemek iç
 
  Varsayılan olarak, yükleme yalnızca geçerli kullanıcı için geçerlidir, çünkü *% LocalAppData%* kullanıcıya özgü bir dizindir. Ancak, bildirimin [ALLUSERS](/previous-versions/ee191547(v=vs.110)) öğesini olarak ayarlarsanız `True` , uzantı altına yüklenir <em>. \\ </em> VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> ve bilgisayarın tüm kullanıcıları tarafından kullanılabilir.
 
-## <a name="content_typesxml"></a>[Content_Types]. xml
- *[Content_Types]. xml* dosyası Genişletilmiş *. vsix* dosyasındaki dosya türlerini tanımlar. Visual Studio, paketin yüklenmesi sırasında bu dosyayı kullanır, ancak dosyanın kendisini yüklemez. Bu dosya hakkında daha fazla bilgi için bkz. [[Content_Types]. xml dosyasının yapısı](the-structure-of-the-content-types-dot-xml-file.md).
+## <a name="content_typesxml"></a>[Content_Types] .xml
+ *[Content_Types] .xml* dosyası Genişletilmiş *. vsix* dosyasındaki dosya türlerini tanımlar. Visual Studio, paketin yüklenmesi sırasında bu dosyayı kullanır, ancak dosyanın kendisini yüklemez. Bu dosya hakkında daha fazla bilgi için bkz. [[Content_Types] .xml dosyasının yapısı](the-structure-of-the-content-types-dot-xml-file.md).
 
- Açık paketleme kuralları (OPC) standardı için bir *[Content_Types]. xml* dosyası gereklidir. OPC hakkında daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](/archive/blogs/msdnmagazine/opc-a-new-standard-for-packaging-your-data) .
+ Açık paketleme kuralları (OPC) standardı için bir *[Content_Types] .xml* dosyası gereklidir. OPC hakkında daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](/archive/blogs/msdnmagazine/opc-a-new-standard-for-packaging-your-data) .

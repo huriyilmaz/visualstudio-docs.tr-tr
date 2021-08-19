@@ -27,12 +27,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f2bbeaaf88c482b89fc9832d5b80a4df2a6425db061159fadda446a83fcd46ba
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 51f2a04621f81fa4ea56b2598f48a2eefb4899ef
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362230"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161147"
 ---
 # <a name="how-to-debug-injected-code"></a>Nasıl Yapılır: Püskürtülen Kodda Hata Ayıklama
 
@@ -51,7 +51,7 @@ ms.locfileid: "121362230"
 
 - Ayır penceresine **sağ tıklayın ve** kısayol **menüsünden Kaynak Kodunu Göster'i** seçin.
 
-     Bir özniteliğin kaynak penceresindeki konumunu biliyorsanız, eklenilen kodu **Disassembly** penceresinde bulmak için kısayol menüsünü kullanabilirsiniz.
+     Kaynak penceredeki bir özniteliğin konumunu biliyorsanız, eklenilen kodu **Disassembly** penceresinde bulmak için kısayol menüsünü kullanabilirsiniz.
 
 ## <a name="to-view-injected-code"></a>Yeni kod görüntülemek için
 
@@ -61,13 +61,13 @@ ms.locfileid: "121362230"
 
 3. Sağ tıklayın ve kısayol **menüsünden Deassembly'ye** Git'i seçin.
 
-     Öznitelik konumu geçerli yürütme noktasına yakınsa Hata  Ayıklama menüsünden Ayır penceresini **seçebilirsiniz.**
+     Öznitelik konumu geçerli yürütme noktasına yakınsa Hata Ayıklama menüsünden Ayır **penceresini** **seçebilirsiniz.**
 
 ## <a name="to-view-the-disassembly-code-at-the-current-execution-point"></a>Geçerli yürütme noktasındaki ayrık kodu görüntülemek için
 
 1. Hata ayıklayıcısı kesme modunda olması gerekir.
 
-2. Hata **Ayıkla menüsünden** Hata **Ayıkla'Windows'ye** **tıklayın.**
+2. Hata **Ayıkla menüsünden** Hata **Ayıkla'Windows'ye** tıklayın. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
