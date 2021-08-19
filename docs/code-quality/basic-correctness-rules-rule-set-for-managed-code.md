@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: e0c8d23c6370f1869c514875119ddb6504b9a9a02eca2694af6405e002a3fbcf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 02c7b660c6aba7f25e631a14146582f08c3d5117
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121456225"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155154"
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>Yönetilen kod için Temel Doğruluk Kuralları kural kümesi
 

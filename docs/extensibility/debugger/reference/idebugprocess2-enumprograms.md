@@ -1,6 +1,6 @@
 ---
-description: Bu işlemin içerdiği tüm programların listesini alır.
-title: 'IDebugProcess2:: EnumPrograms | Microsoft Docs'
+description: Bu işlemde yer alan tüm programların listesini alın.
+title: IDebugProcess2::EnumPrograms | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: f5b7295d-487d-464f-a4c6-d54175b07705
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1967415ba70e28f19bc251297ada07ea430a3202
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a70a750c8e4e72405cbc3a02860e0beeefde9d73
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105071655"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159873"
 ---
 # <a name="idebugprocess2enumprograms"></a>IDebugProcess2::EnumPrograms
-Bu işlemin içerdiği tüm programların listesini alır.
+Bu işlemde yer alan tüm programların listesini alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,10 +43,10 @@ int EnumPrograms(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-dışı İşlemdeki tüm programların listesini içeren bir [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) nesnesi döndürür.
+[out] İşlemde yer alan tüm programların listesini içeren bir [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: b17d7b79fcdcaf43242c1b619cd2c08f3f576040f67e8f708a75237f194709ab
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0b3f49a6e1ff74eda4561b4fc0283ca9196f8040
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121285380"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155635"
 ---
 # <a name="office-ui-customization"></a>Office UI özelleştirmesi
   Microsoft Office uygulamalarının kullanıcı arabirimini (uı), Visual Studio Office geliştirici araçlarını kullanarak özelleştirebilirsiniz. Bu konuda, aşağıdaki bölümlerde özelleştirebileceğiniz Kullanıcı arabirimi özellikleri açıklanmaktadır:
@@ -89,14 +89,14 @@ ms.locfileid: "121285380"
  daha fazla bilgi için bkz. [Outlook form bölgeleri oluşturma](../vsto/creating-outlook-form-regions.md).
 
 ## <a name="controls-on-documents"></a><a name="Controls"></a> Belgeler üzerinde denetimler
- Word belgelerine çeşitli denetimler ekleyebilir ve çalışma Excel ekleyebilirsiniz. Örneğin, kullanıcının tarihleri standart biçimde giresin veya çalışma sayfasına bir düğme koyarak bir veritabanına veri gönderesin diye belgeye tarih seçici denetimi eklemek istiyor olabilirsiniz.
+ Word belgelerine ve çalışma sayfalarına çeşitli denetimler Excel ekleyebilirsiniz. Örneğin, kullanıcının tarihleri standart biçimde gire bir belgeye tarih seçici denetimi eklemek veya bir veritabanına veri göndermek için çalışma sayfasına bir düğme koymak istiyor olabilirsiniz.
 
- Excel veya Word için belge düzeyi projeler geliştirirken, tasarım zamanında projenizin belge veya çalışma kitabına denetim eklemek için Visual Studio tasarımcısını kullanabilir veya çalışma zamanında program aracılığıyla denetimler ekleyebilirsiniz. VSTO veya Word için Excel projelerini geliştirirken, çalışma zamanında herhangi bir açık belgeye veya çalışma kitabına programlı olarak denetimler ekleyebilirsiniz.
+ Excel veya Word için belge düzeyi projeler geliştirirken, tasarım zamanında projenizin belge veya çalışma kitabına denetim eklemek için Visual Studio tasarımcısını kullanabilir veya çalışma zamanında program aracılığıyla denetimler ekleyebilirsiniz. Excel veya Word VSTO eklenti projeleri geliştirirken, çalışma zamanında herhangi bir açık belgeye veya çalışma kitabına programlı olarak denetimler ekleyebilirsiniz.
 
  Daha fazla bilgi için [bkz. Konak öğelerine ve konak denetimlerine genel](../vsto/host-items-and-host-controls-overview.md) [bakış Windows belgelerine genel Office form denetimleri.](../vsto/windows-forms-controls-on-office-documents-overview.md)
 
 ## <a name="shortcut-menus"></a><a name="Shortcut"></a> Kısayol Menüleri
- Bir belgeye veya uygulama penceresine sağ tıklarken kısayol menüsü görüntülenir. Kullanıcı bir belgeye, çalışma kitabına veya konak denetimine sağ tıkladığında gibi bir olay gerçekleştikten sonra görünecek bir kısayol menüsü ayarlayın. Kısayol menüsüne bir dizi farklı menü komutu veya denetim ekleyebilirsiniz. XML kullanarak kısayol menüleri oluşturun. Office projenize şerit **(XML)** öğesi eklersiniz, kısayol menüleri oluşturmak için Şerit XML dosyasına XML eklersiniz. Kısayol menüleri oluşturmak için XML kullanma hakkında daha fazla bilgi için [bkz. Nasıl kullanılır: Kısayol menülerine komut ekleme.](../vsto/how-to-add-commands-to-shortcut-menus.md)
+ Bir belgeye veya uygulama penceresine sağ tıklarken kısayol menüsü görüntülenir. Kullanıcı bir belgeye, çalışma kitabına veya konak denetimine sağ tıkladığında gibi bir olay gerçekleştikten sonra görünecek bir kısayol menüsü ayarlayın. Kısayol menüsüne bir dizi farklı menü komutu veya denetim ekleyebilirsiniz. XML kullanarak kısayol menüleri oluşturun. Office projenize Şerit **(XML)** öğesi eklersiniz, kısayol menüleri oluşturmak için Şerit XML dosyasına XML eklersiniz. Kısayol menüleri oluşturmak için XML kullanma hakkında daha fazla bilgi için [bkz. Nasıl kullanılır: Kısayol menülerine komut ekleme.](../vsto/how-to-add-commands-to-shortcut-menus.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Şerit'e genel bakış](../vsto/ribbon-overview.md)

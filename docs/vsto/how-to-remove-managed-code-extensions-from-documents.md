@@ -16,23 +16,23 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: cf087b0c9da0197327b2fb548365ce6e4d00d5967be118f211916d6d6df34f81
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 233024b9e5dbd42908f8cd4b7a76cfd5a6901977
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121408186"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155713"
 ---
 # <a name="how-to-remove-managed-code-extensions-from-documents"></a>Nasıl yapabilirsiniz: Belgelerden yönetilen kod uzantılarını kaldırma
-  Word veya Microsoft Office için belge düzeyinde özelleştirmenin parçası olan bir belge veya çalışma kitabından özelleştirme derlemelerini program Microsoft Office Excel. Kullanıcılar daha sonra belgeleri açıp içeriği görüntülemeye devam ediyor ancak belgelere ekli özel kullanıcı arabirimi (UI) görüntüleniyor ve kodunuz çalıştırılamayacak.
+  Word veya Microsoft Office için belge düzeyinde özelleştirmenin parçası olan bir belgeden veya çalışma kitabından özelleştirme derlemelerini program Microsoft Office Excel. Kullanıcılar daha sonra belgeleri açıp içeriği görüntülemeye devam ediyor ancak belgelere ekli özel kullanıcı arabirimleri (UI) görüntüleniyor ve kodunuz çalıştırılamayacak.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- özelleştirme derlemesi tarafından sağlanan yöntemlerden `RemoveCustomization` birini kullanarak [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] kaldırebilirsiniz. Hangi yöntemi kullandığınız, özelleştirmeyi çalışma zamanında kaldırmak istediğinize (Word belgesi veya Excel çalışma kitabı açıkken özelleştirmede kod çalıştırarak) veya özelleştirmeyi kapalı bir belgeden veya yüklü yüklü bir sunucuda yer alan bir belgeden kaldırmak Microsoft Office bağlıdır.
+ özelleştirme derlemesi tarafından sağlanan yöntemlerden `RemoveCustomization` birini kullanarak [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] kaldırebilirsiniz. Hangi yöntemi kullandığınız, özelleştirmeyi çalışma zamanında kaldırmak istediğinize (Word belgesi veya Excel çalışma kitabı açıkken özelleştirmede kod çalıştırarak) veya özelleştirmeyi kapalı bir belgeden veya yüklü yüklü bir sunucuda yer alan bir belgeden kaldırmak isteyip Microsoft Office bağlıdır.
 
 ## <a name="to-remove-the-customization-assembly-at-run-time"></a>Özelleştirme derlemeyi çalışma zamanında kaldırmak için
 
-1. Özelleştirme kodunda yöntemini <xref:Microsoft.Office.Tools.Word.Document.RemoveCustomization%2A> (Word için) veya yöntemini <xref:Microsoft.Office.Tools.Excel.Workbook.RemoveCustomization%2A> (word için) Excel. Bu yöntem ancak özelleştirme artık gerekli olmadığı için çağrılmalı.
+1. Özelleştirme kodunda yöntemini <xref:Microsoft.Office.Tools.Word.Document.RemoveCustomization%2A> (Word için) veya yöntemini <xref:Microsoft.Office.Tools.Excel.Workbook.RemoveCustomization%2A> (örneğin, Excel). Bu yöntem ancak özelleştirme artık gerekli olmadığı için çağrılmalı.
 
      Kodunda bu yöntemi çağırma yöntemi, özelleştirmenizin nasıl kullanılana bağlıdır. Örneğin, müşteriler belgeyi yalnızca belgenin kendisine (özelleştirmeye değil) ihtiyacı olan diğer istemcilere göndermeye hazır olana kadar özelleştirmenizin özelliklerini kullanıyorsa, müşteri tıkladığında çağıran bazı kullanıcı arabirimi `RemoveCustomization` sekleyebilirsiniz. Alternatif olarak, özelleştirmeniz ilk açıldığında belgeyi verilerle doldurmakta ancak özelleştirme doğrudan müşteriler tarafından erişilen başka bir özellik sağlanmıyorsa, özelleştirmeniz belgeyi başlatmayı tamamlar bitirmez RemoveCustomization çağırabilirsiniz.
 

@@ -1,6 +1,6 @@
 ---
 title: EvaluateStatement
-description: Deyimi Değerlendir komutunu ve verilen deyimi nasıl değerlendirip görüntüleyeni hakkında bilgi alın.
+description: Değerlendirme yöntemi komutu ve verilen deyimin nasıl değerlendirildiği ve görüntülendiği hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/25/2019
 ms.topic: reference
@@ -16,16 +16,16 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 91c528c5b7538508d9cbd987e03e4b3b250055ebca675f53aff92ad824e89dda
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 77f9f87bfc745770b6df728ac33d24e36d364052
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121429465"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122101459"
 ---
 # <a name="evaluate-statement-command"></a>Deyimi Değerlendir komutu
 
-Verilen deyimi değerlendirir ve görüntüler.
+Verilen ifadeyi değerlendirir ve görüntüler.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -37,7 +37,7 @@ Verilen deyimi değerlendirir ve görüntüler.
 
 `text`
 
-Gereklidir. Değerlendirilecek deyim.
+Gereklidir. Değerlendirilecek olan ifade.
 
 ## <a name="example"></a>Örnek
 
@@ -47,8 +47,8 @@ Gereklidir. Değerlendirilecek deyim.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yazdır Komutu](../../ide/reference/print-command.md)
+- [Yazdır komutu](../../ide/reference/print-command.md)
 - [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c0e96007303ee3bdd95f11ae6be784bd95804022fa1e1fb06458ba64ba42184
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4e215954edfafa1463739431e0b422ae7521ab35
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121359032"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158391"
 ---
 # <a name="save-data-in-project-files"></a>Proje dosyalarına veri kaydetme
 Proje alt türü, proje dosyasına alt türe özgü verileri kaydedip alabilir. Yönetilen Paket Çerçevesi (MPF), bu görevi gerçekleştirmek için iki arabirim sağlar:

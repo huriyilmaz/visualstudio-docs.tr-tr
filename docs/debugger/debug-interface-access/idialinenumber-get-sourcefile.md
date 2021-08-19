@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 84f5ca0f18414b0e9d808599ec845608171fdfe63ff7d8a842974bb560c53f7d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f7a1a04e48df59afa43152688c15e90a82da451d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392179"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066570"
 ---
 # <a name="idialinenumberget_sourcefile"></a>IDiaLineNumber::get_sourceFile
 Kaynak dosyaya bir başvuru verir.

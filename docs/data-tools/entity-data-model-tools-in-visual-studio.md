@@ -1,6 +1,6 @@
 ---
 title: Entity Framework Tools
-description: Visual Studio 'da Entity Framework Tools anlayın. Entity Framework Tools, Entity Framework (EF) uygulamaları oluşturmanıza yardımcı olacak şekilde tasarlanmıştır.
+description: Bu Entity Framework Tools an Visual Studio. Entity Framework Tools, bir (EF) uygulaması Entity Framework yardımcı olacak şekilde tasarlanmıştır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,53 +8,54 @@ ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ee4bb5e56c5ae9ffb5f5266c8ef80804c8e96597
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 28a703518405bfedd4a786a583e8688dcb7db134
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99866989"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161981"
 ---
-# <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio 'da Entity Framework Tools
+# <a name="entity-framework-tools-in-visual-studio"></a>Entity Framework Tools Visual Studio
 
-Entity Framework, .NET geliştiricilerin, etki alanına özgü nesneleri kullanarak ilişkisel verilerle çalışmasını sağlayan, nesne ilişkisel bir eşleme teknolojisidir. Geliştiricilerin genellikle yazması gereken çoğu veri erişim kodu gereksinimini ortadan kaldırır. Entity Framework, yeni .NET uygulamaları için önerilen nesne ilişkisel eşleme (ORM) modelleme teknolojisidir.
+Entity Framework, .NET geliştiricilerinin etki alanına özgü nesneleri kullanarak ilişkisel verilerle çalışmasına olanak sağlayan bir nesne ilişkisel eşleme teknolojisidir. Geliştiricilerin genellikle yazması gereken çoğu veri erişim kodu gereksinimini ortadan kaldırır. Entity Framework yeni .NET uygulamaları için önerilen nesne ilişkisel eşleme (ORM) modelleme teknolojisidir.
 
-Entity Framework Tools, Entity Framework (EF) uygulamaları oluşturmanıza yardımcı olacak şekilde tasarlanmıştır. Entity Framework için tam belgeler şunlardır: [genel bakış-EF 6](/ef/ef6/).
-
-  > [!NOTE]
-  > Bu sayfada açıklanan Entity Framework Tools, EF Core desteklenmeyen *. edmx* dosyalarını oluşturmak için kullanılır. Varolan bir veritabanından bir EF Core modeli oluşturmak için bkz. [ters mühendislik-EF Core](/ef/core/managing-schemas/scaffolding). EF 6 ve EF Core arasındaki farklar hakkında daha fazla bilgi için bkz. [EF 6 ve EF Core karşılaştırma](/ef/efcore-and-ef6/).
-
-Entity Framework Tools, var olan bir veritabanından *kavramsal model* oluşturabilir ve ardından kavramsal modelinizi grafiksel olarak görselleştirebilir ve düzenleyebilirsiniz. Ya da önce bir kavramsal model oluşturabilir, ardından modelinizi destekleyen bir veritabanı oluşturabilirsiniz. Her iki durumda da, temel alınan veritabanı değiştiğinde modelinizi otomatik olarak güncelleştirebilir ve uygulamanız için otomatik olarak nesne katmanı kodu oluşturur. Veritabanı oluşturma ve nesne katmanı kod üretimi özelleştirilebilir.
-
-Entity Framework araçları, Visual Studio Yükleyicisi **veri depolama ve işleme** iş yükünün parçası olarak yüklenir. Ayrıca, bunları **SDK 'lar, kitaplıklar ve çerçeveler** kategorisi altında ayrı bir bileşen olarak da yükleyebilirsiniz.
-
-Visual Studio 'da Entity Framework araçları oluşturan özel araçlar şunlardır:
-
-- [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Tasarımcı** (**Entity Desisgner**) kullanarak varlıklar, ilişkilendirmeler, eşlemeler ve devralma ilişkilerini görsel olarak oluşturabilir ve değiştirebilirsiniz. **Entity Desisgner** Ayrıca, [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)] veya [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] nesne katmanı kodu oluşturur.
-
-- **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] Sihirbazı** , mevcut bir veritabanından kavramsal bir model oluşturmak ve uygulamanıza veritabanı bağlantı bilgilerini eklemek için kullanabilirsiniz.
-
-- Önce kavramsal model oluşturmak için **veritabanı oluşturma Sihirbazı 'nı** kullanabilir, sonra da modeli destekleyen bir veritabanı oluşturabilirsiniz.
-
-- Temel veritabanında değişiklik yapıldığında kavramsal modelinizi, depolama modelinizi ve eşlemelerinizi güncelleştirmek için **model güncelleştirme sihirbazını** kullanabilirsiniz.
+Entity Framework Tools, bir (EF) uygulaması Entity Framework yardımcı olacak şekilde tasarlanmıştır. Entity Framework belgeleri şu şekildedir: [Genel Bakış - EF 6](/ef/ef6/).
 
   > [!NOTE]
-  > Visual Studio 2010 ile başlayarak Entity Framework araçları desteklemez [!INCLUDE[ss2k](../data-tools/includes/ss2k_md.md)] .
+  > Bu Entity Framework Tools açıklanan dosyalar, bu dosyalarda desteklenen *.edmx* dosyaları oluşturmak EF Core. Mevcut veritabanından EF Core modeli oluşturmak için bkz. [Tersine Mühendislik - EF Core.](/ef/core/managing-schemas/scaffolding) EF 6 ile EF Core arasındaki farklar hakkında daha fazla bilgi için bkz. [EF 6 ile EF Core.](/ef/efcore-and-ef6/)
 
-Araçlar bir *. edmx* dosyası oluşturur veya değiştirir. Bu *. edmx* dosyası kavramsal modeli, depolama modelini ve bunlar arasındaki eşlemeleri açıklayan bilgiler içerir. Daha fazla bilgi için bkz. [edmx](/ef/ef6/).
+Bu Entity Framework Tools, var olan bir veritabanından kavramsal *bir model* oluşturabilir ve ardından kavramsal modelinizi grafiksel olarak görselleştirebilirsiniz ve düzenleyebilirsiniz. Veya grafiksel olarak önce kavramsal bir model oluşturabilir ve ardından modelinizi destekleyen bir veritabanı oluşturabilirsiniz. Her iki durumda da, temel alınan veritabanı değişirken modelinizi otomatik olarak güncelleştirebilir ve uygulamanız için otomatik olarak nesne katmanı kodu oluşturabilirsiniz. Veritabanı oluşturma ve nesne katmanı kod oluşturma özelleştirilebilir.
 
-[Entity Framework güç araçları](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4) , varlık veri modeli kullanan uygulamalar oluşturmanıza yardımcı olur. Güç araçları kavramsal model oluşturabilir, var olan bir modeli doğrulayabilir, kavramsal modeli temel alan nesne sınıfları içeren kaynak kodu dosyaları üretebilir ve modelin oluşturduğu görünümleri içeren kaynak kodu dosyaları üretebilir. Ayrıntılı bilgi için bkz. [önceden oluşturulmuş eşleme görünümleri](/ef/ef6/fundamentals/performance/pre-generated-views).
+Entity Framework araçları, veri depolama ve işleme iş **yükünün bir parçası** olarak Visual Studio Yükleyicisi. Ayrıca, bunları TEK bir bileşen olarak **DADK'ler,** kitaplıklar ve çerçeveler kategorisi altında yükleyebilirsiniz.
+
+Aşağıdaki araçlar, Entity Framework araçları Visual Studio:
+
+- Varlıkları, [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] ilişkilendirmeleri,** **eşlemeleri ve** devralma ilişkilerini görsel olarak oluşturmak ve değiştirmek için Tasarımcı 'Entity Desisgner ) kullanabilirsiniz. Uygulama **Entity Desisgner** veya nesne [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)] katmanı kodu da [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] oluşturur.
+
+- Var olan bir **[!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] veritabanından** kavramsal model oluşturmak ve uygulamanıza veritabanı bağlantı bilgileri eklemek için Sihirbazı kullanabilirsiniz.
+
+- Veritabanı Oluşturma **Sihirbazı'nı kullanarak önce** kavramsal bir model oluşturabilir ve ardından modeli destekleyen bir veritabanı oluşturabilirsiniz.
+
+- Model Güncelleştirme **Sihirbazı'nı kullanarak** kavramsal modelinizi, depolama modelinizi ve temel alınan veritabanında değişiklikler yapıldıklarında eşlemelerinizi güncelleştirebilirsiniz.
+
+  > [!NOTE]
+  > Visual Studio 2010'dan Entity Framework araçları [!INCLUDE[ss2k](../data-tools/includes/ss2k_md.md)] desteklemez.
+
+Araçlar bir *.edmx dosyası üretir veya* değiştirir. Bu *.edmx* dosyası kavramsal modeli, depolama modelini ve aralarındaki eşlemeleri açıklayan bilgiler içerir. Daha fazla bilgi için bkz. [EDMX](/ef/ef6/).
+
+[Entity Framework Power Tools,](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4) power tools'ları kullanan uygulamalar Varlık Veri Modeli. Güç araçları kavramsal bir model oluşturabilir, var olan bir modeli doğrular, kavramsal modeli temel alan nesne sınıflarını içeren kaynak kod dosyaları oluşturabilir ve modelin ürettiği görünümleri içeren kaynak kodu dosyaları üretebilir. Ayrıntılı bilgi için [bkz. Önceden Oluşturulmuş Eşleme Görünümleri.](/ef/ef6/fundamentals/performance/pre-generated-views)
 
 ## <a name="related-topics"></a>İlgili konular
 
 | Başlık | Açıklama |
 | - | - |
-| [ADO.NET Entity Framework](/dotnet/framework/data/adonet/ef/index) | [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)] Uygulamaları oluşturmak için sağlayan araçların nasıl kullanılacağını açıklar. |
-| [Varlık Veri Modeli](/dotnet/framework/data/adonet/entity-data-model) | Üzerinde oluşturulan uygulamalar tarafından kullanılan verilerle çalışmaya yönelik bağlantılar ve bilgiler sağlar [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)] . |
-| [Entity Framework (EF) belgeleri)](/ef/ef6/get-started) | Entity Framework en iyi duruma getirmenize yardımcı olmak için bir videolar, öğreticiler ve gelişmiş belge dizini sağlar. |
-| [ASP.NET 5 uygulamasını yeni veritabanına](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html) | Entity Framework 7 kullanarak yeni bir ASP.NET 5 uygulamasının nasıl oluşturulduğunu açıklar. |
+| [ADO.NET Entity Framework](/dotnet/framework/data/adonet/ef/index) | Uygulama oluşturmak için [!INCLUDE[adonet_edm](../data-tools/includes/adonet_edm_md.md)] araçları kullanma hakkında bilgi [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)] sağlar. |
+| [Varlık Veri Modeli](/dotnet/framework/data/adonet/entity-data-model) | üzerinde yerleşik uygulamalar tarafından kullanılan verilerle çalışmaya ilişkin bağlantılar ve bilgiler [!INCLUDE[adonet_ef](../data-tools/includes/adonet_ef_md.md)] sağlar. |
+| [Entity Framework (EF) Belgeleri)](/ef/ef6/get-started) | Videolardan, öğreticilerden ve gelişmiş belgelerden bir dizine sahip olmak, bu hizmetlerden en iyi şekilde Entity Framework. |
+| [ASP.NET 5 Uygulamayı Yeni Veritabanına](https://docs.efproject.net/en/latest/platforms/aspnetcore/new-db.html) | Entity Framework 7 kullanarak ASP.NET 5 uygulaması oluşturma hakkında Entity Framework açıklar. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

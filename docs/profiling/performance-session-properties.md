@@ -10,15 +10,16 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 59d69843aee2aeb0354ba3adc8a8f9e77de8eaa0
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0fb9846958700e89ea4bc7cf12815ccf6335e39c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99922147"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107153"
 ---
 # <a name="performance-session-properties"></a>Performans oturumu özellikleri
 
@@ -71,7 +72,7 @@ Daha fazla bilgi için bkz. [Katman etkileşimi verilerini toplama](../profiling
 
 ## <a name="instrumentation"></a>İzleme
 
-Bu ayarlar, Web sayfalarında JScript kodu için performans verileri toplamanıza olanak sağlar [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ve izleme işleminden önce veya sonra gerçekleşmesini istediğiniz herhangi bir **araç öncesi** ve **sonrası** olay belirtebilirsiniz.
+bu ayarlar, Web sayfalarındaki JScript kod için performans verilerini toplamanıza [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ve izleme işleminden önce veya sonra gerçekleşmesini istediğiniz herhangi bir **araç öncesi** ve **sonrası** olay belirtmenize olanak sağlar.
 
 Daha fazla bilgi için bkz.
 
@@ -87,19 +88,19 @@ Daha fazla bilgi için bkz [. nasıl yapılır: CPU sayacı verilerini toplama](
 
 ## <a name="windows-events"></a>Windows olayları
 
-Profil oluşturma sırasında, olay izleme sağlayıcılarından veri toplayabilirsiniz. *VSPerfReport.exe* komut satırı araç seçeneğini kullanarak verileri görüntüleyebilirsiniz `/calltrace` . Windows için olay Izleme (ETW) hakkında daha fazla bilgi için bkz. [olay Izleme hakkında](/windows/win32/etw/about-event-tracing).
+Profil oluşturma sırasında, olay izleme sağlayıcılarından veri toplayabilirsiniz. *VSPerfReport.exe* komut satırı araç seçeneğini kullanarak verileri görüntüleyebilirsiniz `/calltrace` . Windows (ETW) için olay izleme hakkında daha fazla bilgi için bkz. [olay izleme hakkında](/windows/win32/etw/about-event-tracing).
 
 Daha fazla bilgi için bkz.
 
-[Nasıl yapılır: Windows için olay izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
+[nasıl yapılır: Windows (ETW) verileri için olay izlemeyi toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
 
 [VSPerfReport](../profiling/vsperfreport.md).
 
 ## <a name="windows-counters"></a>Windows sayaçları
 
-Bu seçenek, Windows performans Izleyicisi sayaçlarından veri toplamanıza olanak sağlar. Bu verileri toplamak için **Windows performans sayaçlarını topla** etiketli onay kutusunu seçin. Koleksiyon aralığı, **koleksiyon aralığı** kutusunda ayarlanabilir. **Sayaç kategorisi** ve **örneği** de kullanılabilir olabilir. Bazı varsayılan Windows performans Izleyicisi sayaçları kullanılabilir.
+bu seçenek Windows performans izleyicisi sayaçlarından veri toplamanıza olanak sağlar. bu verileri toplamak için **Windows performans sayaçlarını topla** etiketli onay kutusunu seçin. Koleksiyon aralığı, **koleksiyon aralığı** kutusunda ayarlanabilir. **Sayaç kategorisi** ve **örneği** de kullanılabilir olabilir. bazı varsayılan Windows performans izleyicisi sayaçları kullanılabilir.
 
- Daha fazla bilgi için bkz. [nasıl yapılır: Windows sayaç verilerini toplama](../profiling/how-to-collect-windows-counter-data.md).
+ daha fazla bilgi için bkz. [nasıl yapılır: toplama Windows sayaç verileri](../profiling/how-to-collect-windows-counter-data.md).
 
 ## <a name="advanced"></a>Gelişmiş
 

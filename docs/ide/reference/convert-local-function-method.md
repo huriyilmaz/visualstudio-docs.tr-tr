@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 32808364220cea253d0cc085115bd58de11bedb768e3583dacab833474dd1581
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7068c7cb8edf7f44c981496aa2ac81cea7e82903
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121430147"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085916"
 ---
 # <a name="convert-a-local-function-to-a-method"></a>Yerel işlevi yönteme dönüştürme
 

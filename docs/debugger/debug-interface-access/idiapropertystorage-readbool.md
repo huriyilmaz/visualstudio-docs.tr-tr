@@ -1,6 +1,6 @@
 ---
-description: Bir özellik kümesinde BOOL değerlerini okur.
-title: IDiaPropertyStorage::ReadBOOL | Microsoft Docs
+description: Bir özellik kümesindeki BOOL değerlerini okur.
+title: 'IDiaPropertyStorage:: ReadBOOL | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b7e04906d5e809538c5cb99b9b43d66701020b5d387ff3ab824367b72a94508
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e9b2ba2f6e86522f5770aec30b1617742054cd9a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344999"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074759"
 ---
 # <a name="idiapropertystoragereadbool"></a>IDiaPropertyStorage::ReadBOOL
-Bir `BOOL` özellik kümesinde değerleri okur.
+`BOOL`Bir özellik kümesindeki değerleri okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,17 +36,17 @@ HRESULT ReadBOOL (
 #### <a name="parameters"></a>Parametreler
  `id`
 
-[in] Okunacak özelliğin tanımlayıcısı ( `PROPID` WTypes.h içinde bir olarak `ULONG` tanımlanır).
+'ndaki Okunacak özelliğin tanımlayıcısı ( `PROPID` WTypes. h olarak bir olarak tanımlanır `ULONG` ).
 
  `pValue`
 
-[out] Özellik değerini döndürür.
+dışı Özellik değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. özelliği `E_INVALIDARG` türünde değilse `BOOL` döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür. `E_INVALIDARG`Özelliğin tür olup olmadığını döndürür `BOOL` .
 
 ## <a name="remarks"></a>Açıklamalar
- Tutarlı sonuçlar için, sıfır `BOOL` olmayan değerlerin ve sıfır değerinin olması için `TRUE` değeri yorumlun. `FALSE`
+ Tutarlı sonuçlar için `BOOL` değeri sıfır olmayan değerler ve sıfır olacak şekilde yorumlayın `TRUE` `FALSE` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

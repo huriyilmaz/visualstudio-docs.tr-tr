@@ -11,14 +11,15 @@ ms.assetid: 1f0e9ac0-6dfb-461a-976c-888d82144cdb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6e32c4798ad1bea65a9aadcf8a0d73052acc238
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bacc450f29e950f5fd2d339244ad3715dead711a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105066158"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089192"
 ---
 # <a name="idebugengine2"></a>IDebugEngine2
 Bu arabirim bir hata ayıklama altyapısını (DE) temsil eder. Bir hata ayıklama oturumunun çeşitli yönlerini yönetmek için kullanılır, özel durumları ayarlamak ve temizlemek için kesme noktaları oluşturma.

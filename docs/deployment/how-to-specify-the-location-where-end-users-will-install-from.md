@@ -1,6 +1,6 @@
 ---
-title: Son kullanıcıların yükleneceği konumu belirtin
-description: Yayımlanan bir ClickOnce uygulamasının yüklenmek üzere barındırıldığı, yükleme URL özelliğini ayarlamayı öğrenin.
+title: Son kullanıcıların yüklemenin bulunduğu konumu belirtme
+description: Yayımlanmış bir uygulamanın yükleme için barındır bulunduğu Yükleme URL'si ClickOnce özelliğini ayarlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,35 +17,36 @@ ms.assetid: 04a804bf-ed55-4a7a-a1e6-f63ed99c0276
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 61c81ab15a3f4f6ec89d1b37a2c96d963bbdf67b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: dae59aa3fb9bde3d2ed43cf7d8c41da4079cf408
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99900415"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160614"
 ---
-# <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Nasıl yapılır: son kullanıcıların yükleneceği konumu belirtme
+# <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Nasıl kurulur: Son kullanıcıların yükleyecekleri konumu belirtme
 
-Bir uygulamayı yayımlarken [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , kullanıcıların uygulamayı indirmek ve yüklemek için gideceği konum, uygulamayı ilk olarak yayımladığınız konum değildir. Örneğin, bazı kuruluşlarda bir geliştirici bir uygulamayı hazırlama sunucusuna yayımlayabilir ve ardından Yönetici uygulamayı bir Web sunucusuna taşır.
+Bir uygulamayı yayımlarken, kullanıcıların uygulamayı indirmeye ve yüklemeye gideceği konum, uygulamayı ilk kez [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] yayımlay konumunuz olmayabilir. Örneğin, bazı kuruluşlarda bir geliştirici bir uygulamayı hazırlama sunucusuna yayımlar ve ardından bir yönetici uygulamayı bir Web sunucusuna taşımaya devam eder.
 
-Bu durumda, `Installation URL` kullanıcıların uygulamayı indirmek için Gideceleceği Web sunucusunu belirtmek için özelliğini kullanabilirsiniz. Bu, uygulama bildiriminin güncelleştirmelerin nerede bakacağını bilmesini sağlamak için gereklidir.
+Bu durumda, kullanıcıların uygulamayı `Installation URL` indirmek için gideceği Web sunucusunu belirtmek için özelliğini kullanabilirsiniz. Bu, uygulama bildiriminin güncelleştirmeleri nerede baktırılabızı bildiği için gereklidir.
 
-`Installation URL`Özelliği, **Proje Tasarımcısı**' nın **Yayımla** sayfasında ayarlanabilir.
+özelliği, `Installation URL` Project  **Designer'ın Yayımla sayfasından ayarlanır.**
 
 > [!NOTE]
-> `Installation URL`Özelliği **publishwizard** kullanılarak da ayarlanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
+> özelliği `Installation URL` **PublishWizard kullanılarak da ayarlandırabilirsiniz.** Daha fazla bilgi için [bkz. Yayımlama Sihirbazı'nı ClickOnce uygulama yayımlama.](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
 
-### <a name="to-specify-an-installation-url"></a>Yükleme URL 'SI belirtmek için
+### <a name="to-specify-an-installation-url"></a>Yükleme URL'si belirtmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. içinde bir proje **seçiliyken Çözüm Gezgini** menüsünde **Project'a** **tıklayın.**
 
-2. **Yayımla** sekmesine tıklayın.
+2. Yayımla **sekmesine** tıklayın.
 
-3. Yükleme URL 'SI alanında, biçimi kullanarak tam URL 'YI veya biçimi kullanarak bir UNC yolunu kullanarak yükleme konumunu girin `https://www.contoso.com/ApplicationName` `\Server\ApplicationName` .
+3. Yükleme URL'si alanına, biçimini kullanan tam URL'yi veya biçimini kullanan `https://www.contoso.com/ApplicationName` bir UNC yolunu kullanarak yükleme konumunu `\Server\ApplicationName` girin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Visual Studio 'Nun dosyaları nereye kopyaladığını belirtme](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)
-- [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
-- [Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Nasıl kullanılır: Dosyaların Visual Studio olduğunu belirtme](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)
+- [Uygulama ClickOnce yayımlama](../deployment/publishing-clickonce-applications.md)
+- [Nasıl ClickOnce: ClickOnce Sihirbazı'nı kullanarak bir uygulama yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

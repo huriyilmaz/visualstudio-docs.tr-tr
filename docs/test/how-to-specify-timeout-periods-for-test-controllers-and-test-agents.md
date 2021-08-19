@@ -13,12 +13,13 @@ ms.assetid: 777d0db5-0073-458a-a2a3-58b1c1f24c60
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: 3cca59fc165871e24269723635a1393d2f859178
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 32497ccd5158c7155fc95f925d578520c5eff9ab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99879572"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148499"
 ---
 # <a name="how-to-specify-timeout-periods-for-test-controllers-and-test-agents"></a>Nasıl yapılır: test denetleyicileri ve test aracıları için zaman aşımı sürelerini belirtme
 
@@ -30,7 +31,7 @@ Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarla
 
 - Test denetleyicisi: *QTController.exe.config*
 
-    |Anahtar adı|Description|Değer|
+    |Anahtar adı|Açıklama|Değer|
     |-|-----------------|-|
     |AgentConnectionTimeoutInSeconds|Bağlantının kaybolduğu kabul edilmeden önce aracı ping isteği için beklenecek saniye sayısı.|"n" saniye.|
     |Agentsynctimeoutınseconds|Bir eşitleme testi çalıştırması başlattığınızda, çalıştırmayı iptal etmeden önce tüm aracıların eşitlenmesi için beklenecek saniye sayısı.|"n" saniye.|
@@ -39,7 +40,7 @@ Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarla
 
 - Test Aracısı: *QTAgentService.exe.config*
 
-    |Anahtar adı|Description|Değer|
+    |Anahtar adı|Açıklama|Değer|
     |-|-----------------|-|
     |ControllerConnectionPeriodInSeconds|Denetleyiciye bağlanma denemeleri arasındaki saniye sayısı.|"n" saniye. Varsayılan: "30" (otuz saniye).|
     |RemotingTimeoutSeconds|Uzaktan iletişim çağrısının en uzun süre (saniye cinsinden).|"n" saniye. Varsayılan: "600" (on dakika).|
@@ -48,7 +49,7 @@ Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarla
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-controller"></a>Bir test denetleyicisi için aracı zaman aşımı seçeneklerini belirtmek için
 
-1. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE* içinde bulunan *QTCcontroller.exe.config* XML yapılandırma dosyasını açın.
+1. *% ProgramFiles (x86)% \ Microsoft Visual Studio \ 2017 \ Enterprise \Common7\IDE* içinde bulunan *QTCcontroller.exe.config* XML yapılandırma dosyasını açın.
 
 2. `<appSettings>`Etiketi bulun.
 
@@ -82,7 +83,7 @@ Bir test denetleyicisini veya test aracısının çeşitli zaman aşımı ayarla
 
 ## <a name="to-specify-agent-timeout-options-for-a-test-agent"></a>Bir test aracısı için aracı zaman aşımı seçeneklerini belirtmek için
 
-1. *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE* içinde bulunan *QTAgentService.exe.config* XML yapılandırma dosyasını açın.
+1. *% ProgramFiles (x86)% \ Microsoft Visual Studio \ 2017 \ Enterprise \Common7\IDE* içinde bulunan *QTAgentService.exe.config* XML yapılandırma dosyasını açın.
 
 2. `<appSettings>`Etiketi bulun.
 

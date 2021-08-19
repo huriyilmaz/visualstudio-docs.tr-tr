@@ -26,12 +26,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: c34a56c9dc1a66750c5e924a904b9f96e0253b997eec8c61f77a7815ff0f7133
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 23172ee92923faab31a6b5c534076ddf067dc0a0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121267487"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155557"
 ---
 # <a name="ribbon-xml"></a>Şerit XML
   Şerit (XML) öğesi, XML kullanarak bir şeridi özelleştirmenize olanak sağlar. Şeriti şerit (görsel Tasarımcı) öğesi tarafından desteklenmeyen bir şekilde özelleştirmek istiyorsanız şerit (XML) öğesini kullanın. Her öğe ile yapabileceklerinize ilişkin bir karşılaştırma için bkz. [Şerit 'e genel bakış](../vsto/Ribbon-overview.md).
@@ -142,11 +142,11 @@ ms.locfileid: "121267487"
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|`GetCustomUI`|Şerit XML dosyasının içeriğini döndürür. Microsoft Office uygulamalar, özel şeritlerinizin kullanıcı arabirimini tanımlayan bir XML dizesi almak için bu yöntemi çağırır. Bu yöntem yöntemini uygular <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> . **Note:** `GetCustomUI` yalnızca Şerit XML dosyasının içeriğini döndürmek için uygulanmalıdır; VSTO eklentisini başlatmak için kullanılmamalıdır.   Özellikle, uygulamanızda iletişim kutularını veya diğer pencereleri görüntülemeyi denememelisiniz `GetCustomUI` . Aksi takdirde, özel şerit düzgün çalışmayabilir. VSTO eklentiyi başlatan kodu çalıştırmanız gerekiyorsa, kodu `ThisAddIn_Startup` olay işleyicisine ekleyin.|
-|`OnLoad`|<xref:Microsoft.Office.Core.IRibbonControl>Parametreyi `Ribbon` alana atar. Microsoft Office uygulamalar, özel şeridi yüklediklerinde bu yöntemi çağırır. Özel şeridi dinamik olarak güncelleştirmek için bu alanı kullanabilirsiniz. daha fazla bilgi için bkz. [geliştiriciler için Office (2007) şerit kullanıcı arabirimini özelleştirme (bölüm 1/3)](/previous-versions/office/developer/office-2007/aa338202(v=office.12))teknik makalesi.|
-|`GetResourceText`|`GetCustomUI`ŞERIT XML dosyasının içeriğini almak için yöntemi tarafından çağırılır.|
+|`GetCustomUI`|Şerit XML dosyasının içeriğini döndürür. Microsoft Office uygulamalar, özel şeritlerinizin kullanıcı arabirimini tanımlayan bir XML dizesi almak için bu yöntemi çağırır. Bu yöntem yöntemini uygular <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> . **Note:** `GetCustomUI` yalnızca Şerit XML dosyasının içeriğini döndürmek için uygulanmalıdır; VSTO eklentisini başlatmak için kullanılmamalıdır.   Özellikle, uygulamanıza iletişim kutularını veya diğer pencereleri görüntülemeyi `GetCustomUI` denemeyebilirsiniz. Aksi takdirde, özel şerit düzgün çalışmayabilir. Eklentinizi başlatan kodu çalıştırmanız VSTO, kodu olay `ThisAddIn_Startup` işleyiciye ekleyin.|
+|`OnLoad`|parametresini <xref:Microsoft.Office.Core.IRibbonControl> alana `Ribbon` atar. Microsoft Office uygulamaları özel şeridi yükleyemedikleri zaman bu yöntemi çağırtır. Özel şeridi dinamik olarak güncelleştirmek için bu alanı kullanabilirsiniz. Daha fazla bilgi için Geliştiriciler için Office [(2007) Şerit](/previous-versions/office/developer/office-2007/aa338202(v=office.12))kullanıcı arabirimini özelleştirme (Bölüm 1/ 3) teknik makalesine bakın.|
+|`GetResourceText`|Şerit `GetCustomUI` XML dosyasının içeriğini almak için yöntemi tarafından çağrılır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Şerite genel bakış](../vsto/ribbon-overview.md)
-- [İzlenecek yol: Şerit XML kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)
-- [Office UI özelleştirmesi](../vsto/office-ui-customization.md)
+- [Şerit'e genel bakış](../vsto/ribbon-overview.md)
+- [Adım adım kılavuz: Şerit XML kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md)
+- [Office Kullanıcı arabirimi özelleştirmesi](../vsto/office-ui-customization.md)

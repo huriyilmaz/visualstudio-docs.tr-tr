@@ -11,17 +11,17 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: efc59328fbc89179a6d3d533facdccf3f92030463763a31f0670021ac2cc8771
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5d342cc26ae920f343c1336abc2d52792187c9fb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410391"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157299"
 ---
 # <a name="shutdown"></a>Kapat
 Kapat **seçeneği,** profili şu anda profili yapılan işlemlerin bitim veya ayırmasını bekler, ardından profil oluşturma veri dosyasını kapatır ve profil oluşturma işlemini kapatır. Kapatma **seçeneği,** profil oluşturma çalıştırması için son komut olabilir.
 
- Bir zaman out parametresi belirtilmezse Kapat **seçeneği** süresiz olarak bekler. Bir zaman out parametresi belirtilirse, seçenek profil oluşturmayı kapatmadan veya veri dosyasını kapatmadan belirtilen sayıda saniye sonra döndürür.
+ Bir zaman out parametresi belirtilmezse Kapat **seçeneği** süresiz olarak bekler. Bir zaman out parametresi belirtilirse, seçenek profilleyiciyi kapatmadan veya veri dosyasını kapatmadan belirtilen sayıda saniye sonra döndürür.
 
  Kapatma  seçeneği, komut satırı üzerinde belirtilen tek seçenek olmalı.
 

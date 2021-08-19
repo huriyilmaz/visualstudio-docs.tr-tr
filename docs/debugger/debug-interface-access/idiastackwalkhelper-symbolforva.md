@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f607d33fa516f3c1f61b4fb4c3b472c1e485321208faac70b95aeb9ea26af7b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8b7696e5a7982c68f1520534d41473ccc3b89d68
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454834"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122074551"
 ---
 # <a name="idiastackwalkhelpersymbolforva"></a>IDiaStackWalkHelper::symbolForVA
 Belirtilen sanal adresi içeren simgeyi alın.

@@ -1,6 +1,6 @@
 ---
-title: Özellik ve paket bildirimlerinde XML birleştirme | Microsoft Docs
-description: SharePoint özellik ve paket bildirimlerinde tasarımcı tarafından oluşturulan ve kullanıcı tarafından eklenen XML kodu birleştirme. Özellik ve paket bildirim öğelerini öğrenin ve özel durumları birleştirin.
+title: Özellik ve Paket Bildirimleri belgesinde XML'i birleştirme | Microsoft Docs
+description: Tasarımcı tarafından oluşturulan ve kullanıcı tarafından eklenen XML kodunu, SharePoint ve paket bildirimlerini birleştirin. Özellik ve paket bildirimi öğelerini öğrenin ve özel durumları birleştirin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -15,72 +15,72 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: c4af8e25fa998804e56359faa29cd7e5651336218003100f60fac379fcc5f641
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1e2150995946039bef9dbb4d77c64f8bbb33bf8f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121244322"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156298"
 ---
-# <a name="merge-xml-in-feature-and-package-manifests"></a>Özellik ve paket bildirimlerinde XML 'yi birleştirme
-  Özellikler ve paketler, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim dosyaları tarafından tanımlanır. Bu paketlenmiş bildirimler, tasarımcılardan oluşturulan verilerin ve [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim şablonunda kullanıcılar tarafından girilen özel bir birleşimidir. Paketleme sırasında, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] paketlenmiş bildirim dosyasını oluşturmak için özel deyimleri tasarımcı tarafından belirtilen şekilde birleştirir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . Daha sonra birleştirme özel durumları 'nda belirtilen özel durumlarla benzer öğeler, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] dosyaları SharePoint dağıttıktan sonra doğrulama hatalarından kaçınmak ve bildirim dosyalarını daha küçük ve daha verimli hale getirmek için birleştirilir.
+# <a name="merge-xml-in-feature-and-package-manifests"></a>Özellik ve paket bildirimlerini XML birleştirme
+  Özellikler ve paketler bildirim dosyaları [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] tarafından tanımlanır. Bu paketlenmiş bildirim, tasarımcılar tarafından oluşturulan ve kullanıcılar tarafından bildirim şablonuna girilen özel [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] verilerin bir birleşimidir. Paketleme zamanında, paketlenmiş bildirim dosyasını oluşturmak için özel deyimleri tasarımcı tarafından sağlanan [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] deyimlerle birler. Benzer öğeler, Özel Durumları Birleştir'de daha sonra not ettiği özel durumlarla birlikte, dosyaları SharePoint'ye dağıtarak doğrulama hatalarını önlemek ve bildirim dosyalarını daha küçük ve daha verimli hale [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] getirir.
 
 ## <a name="modify-the-manifests"></a>Bildirimleri değiştirme
- Özelliği veya paket tasarımcılarını devre dışı bırakana kadar paketlenmiş bildirim dosyalarını doğrudan değiştiremezsiniz. Ancak, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] özellik ve paket tasarımcıları ya da düzenleyici aracılığıyla bildirim şablonuna el ile özel öğeler ekleyebilirsiniz [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . daha fazla bilgi için bkz. [nasıl yapılır: özelleştirme SharePoint özellikleri](../sharepoint/how-to-customize-a-sharepoint-feature.md) ve [nasıl yapılır: SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md).
+ Özellik veya paket tasarımcıları devre dışı bırakmadan paketli bildirim dosyalarını doğrudan değiştiremezsiniz. Ancak, özellik ve paket [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] tasarımcıları veya düzenleyici aracılığıyla bildirim şablonuna el ile özel öğeler [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ekleyebilirsiniz. Daha fazla bilgi için [bkz. Nasıl SharePoint:](../sharepoint/how-to-customize-a-sharepoint-feature.md) SharePoint Özelliği [Özelleştirme: Bir SharePoint paketini özelleştirme.](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)
 
 ## <a name="feature-and-package-manifest-merge-process"></a>Özellik ve paket bildirimi birleştirme işlemi
- Özel öğeleri tasarımcı tarafından belirtilen öğelerle birlikte birleştirilirken [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] aşağıdaki işlemi kullanır. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Her bir öğenin benzersiz bir anahtar değeri olup olmadığını denetler. Bir öğenin benzersiz anahtar değeri yoksa, paketlenmiş bildirim dosyasına eklenir. Benzer şekilde, birden fazla anahtara sahip öğeler birleştirilemez. Bu nedenle, bildirim dosyasına eklenir.
+ Özel öğeleri tasarımcı tarafından sağlanan öğelerle birlikte birleştirerek [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] aşağıdaki işlemi kullanır. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] her öğenin benzersiz bir anahtar değeri olup olmadığını denetler. Bir öğenin benzersiz anahtar değeri yoksa, paketli bildirim dosyasına eklenir. Benzer şekilde, birden çok anahtara sahip öğeler birleştirilemez. Bu nedenle, bildirim dosyasına eklenirler.
 
- Bir öğe benzersiz bir anahtara sahipse, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Tasarımcı ve özel anahtarların değerlerini karşılaştırır. Değerler eşleşiyorsa, tek bir değer birleştirir. Değerler farklıysa, tasarımcı anahtar değeri atılır ve özel anahtar değeri kullanılır. Koleksiyonlar da birleştirilir. Örneğin, tasarımcı tarafından oluşturulan [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ve Custom [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] her ikisi de bir derlemeler koleksiyonu içeriyorsa, paketlenmiş bildirim yalnızca bir derlemeler koleksiyonu içerir.
+ Bir öğe benzersiz bir anahtara [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sahipse, tasarımcının ve özel anahtarların değerlerini karşılar. Değerler eşleşiyorsa, tek bir değerde birleşiyor. Değerler farklı olursa tasarımcı anahtarı değeri atılır ve özel anahtar değeri kullanılır. Koleksiyonlar da birleştirilir. Örneğin, tasarımcı tarafından oluşturulan ve özel her ikisi de bir Derlemeler koleksiyonu içeriyorsa, paketlenmiş bildirim yalnızca [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bir Derleme koleksiyonu içerir.
 
-## <a name="merge-exceptions"></a>Özel durumları Birleştir
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] birçok tasarımcı [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] öğesini, benzer özel öğelerle birlikte birleştirerek [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] , tek, benzersiz bir tanımlayıcı özniteliği oldukları sürece. Ancak, bazı öğeler birleştirme için gerekli benzersiz tanımlayıcı olmamasıdır [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] . Bu öğeler *birleştirme özel durumları* olarak bilinir. Bu durumlarda, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] özel [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] öğeleri tasarımcı tarafından sağlanmış öğelerle birleştirmez [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] , bunun yerine bunları paketlenmiş bildirim dosyasına ekler.
+## <a name="merge-exceptions"></a>Birleştirme özel durumları
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] tek, benzersiz bir tanımlayıcı özniteliği olduğu sürece çoğu tasarımcı öğelerini benzer [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] özel öğelerle bir araya sağlar. Ancak, bazı öğeler birleştirme için gereken benzersiz [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] tanımlayıcıya sahip değildir. Bu öğeler birleştirme özel *durumları olarak bilinir.* Bu durumlarda, özel öğeleri tasarımcı tarafından sağlanan öğelerle birleştirmez, bunun yerine bunları paketlenmiş [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] bildirim dosyasına [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ekler.
 
- Özellik ve paket bildirim dosyaları için birleştirme özel durumlarının listesi aşağıda verilmiştir [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] .
+ Aşağıda, özellik ve paket bildirim dosyaları için birleştirme özel durumlarının [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] listesi ve ardından yer almaktadır.
 
-|Tasarımcı|XML öğesi|
+|Tasarımcı|XML Öğesi|
 |--------------|-----------------|
-|Özellik Tasarımcısı|ActivationDependency|
-|Özellik Tasarımcısı|UpgradeAction|
-|Paket Tasarımcısı|SafeControl|
-|Paket Tasarımcısı|CodeAccessSecurity|
+|Özellik tasarımcısı|ActivationDependency|
+|Özellik tasarımcısı|UpgradeAction|
+|Paket tasarımcısı|SafeControl|
+|Paket tasarımcısı|CodeAccessSecurity|
 
-## <a name="feature-manifest-elements"></a>Özellik bildirim öğeleri
- Aşağıdaki tablo, birleştirilebilen tüm özellik bildirim öğelerinin ve eşleme için kullanılan benzersiz anahtarının bir listesidir.
+## <a name="feature-manifest-elements"></a>Özellik bildirimi öğeleri
+ Aşağıdaki tablo, birleştirilecek tüm özellik bildirimi öğelerinin ve eşleştirme için kullanılan benzersiz anahtarlarının bir listesidir.
 
 |Öğe Adı|Benzersiz Anahtar|
 |------------------|----------------|
-|Özellik (tüm öznitelikler)|*Öznitelik adı* (özellik öğesinin her öznitelik adı, benzersiz bir anahtardır.)|
+|Özellik (tüm öznitelikler)|*Öznitelik Adı* (Özellik öğesinin her öznitelik adı benzersiz bir anahtardır.)|
 |ElementFile|Konum|
-|Elementbildirimleri/ElementManifest|Konum|
-|Özellikler/özellik|Anahtar|
+|ElementManifests/ElementManifest|Konum|
+|Özellikler/Özellik|Anahtar|
 |CustomUpgradeAction|Name|
 |CustomUpgradeActionParameter|Name|
 
 > [!NOTE]
-> CustomUpgradeAction öğesini değiştirmek için tek yol özel [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] düzenleyicide olduğu için, birleştirmenin etkisi düşüktür.
+> CustomUpgradeAction öğesini değiştirmenin tek yolu özel düzenleyicide olduğu için [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] birleştirmeme etkisi düşüktür.
 
-## <a name="package-manifest-elements"></a>Paket bildirim öğeleri
- Aşağıdaki tablo, birleştirilebilen tüm paket bildirim öğelerinin ve eşleme için kullanılan benzersiz anahtarının bir listesidir.
+## <a name="package-manifest-elements"></a>Paket bildirimi öğeleri
+ Aşağıdaki tablo, birleştirilecek tüm paket bildirimi öğelerinin ve eşleştirme için kullanılan benzersiz anahtarlarının bir listesidir.
 
 |Öğe Adı|Benzersiz Anahtar|
 |------------------|----------------|
-|Çözüm (tüm öznitelikler)|*Öznitelik adı* (çözüm öğesinin her öznitelik adı benzersiz bir anahtardır.)|
+|Çözüm (tüm öznitelikler)|*Öznitelik Adı* (Çözüm öğesinin her öznitelik adı benzersiz bir anahtardır.)|
 |ApplicationResourceFiles/ApplicationResourceFile|Konum|
-|Derlemeler/derleme|Konum|
+|Derlemeler/Derlemeler|Konum|
 |ClassResources/ClassResource|Konum|
 |DwpFiles/DwpFile|Konum|
-|Özellik bildirimleri/FeatureManifest|Konum|
-|Kaynaklar/kaynak|Konum|
+|FeatureManifests/FeatureManifest|Konum|
+|Kaynaklar/Kaynak|Konum|
 |RootFiles/RootFile|Konum|
-|Sitedefinitionbildirimleri/SiteDefinitionManifest|Konum|
+|SiteDefinitionManifests/SiteDefinitionManifest|Konum|
 |WebTempFile|Konum|
 |TemplateFiles/TemplateFile|Konum|
-|SolutionDependency|SolutionID|
+|Çözüm Bağımlılığı|SolutionID|
 
 ## <a name="manually-add-deployed-files"></a>Dağıtılan dosyaları el ile ekleme
- ApplicationResourceFile ve DwpFiles gibi bazı bildirim öğeleri, dosya adı içeren bir konum belirtir. Ancak, bildirim şablonuna bir dosya adı girdisi eklemek, temeldeki dosyayı pakete eklemez. Dosyayı pakete dahil etmek için projeye eklemeniz ve dağıtım türü özelliğini buna göre ayarlamanız gerekir.
+ ApplicationResourceFile ve DwpFiles gibi bazı bildirim öğeleri, dosya adı içeren bir konum belirtir. Ancak, bildirim şablonuna dosya adı girişi eklemek, temel alınan dosyayı pakete eklemez. Paketin içinde yer alan dosyayı projeye eklemeniz ve Dağıtım Türü özelliğini uygun şekilde ayarlamanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint çözümleri paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
-- [SharePoint çözümleri oluşturun ve hata ayıklayın](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [Dağıtım çözümlerini SharePoint dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [Çözüm oluşturma ve SharePoint ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)

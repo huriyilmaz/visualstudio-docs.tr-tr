@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e7cf66a625260d5880edc39a685d7e7fa533ba454aabd16c93cdee82aae06d4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b3334b2be145dd01bd89fcc0b0d792238e9a684f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121314647"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155310"
 ---
 # <a name="compensableactivity-activity-designer"></a>CompensableActivity Etkinlik Tasarımcısı
 
@@ -41,8 +41,8 @@ ms.locfileid: "121314647"
 |<xref:System.Activities.Activity%601.Result%2A>|Yanlış|değerinin dönüş değerini <xref:System.Activities.Statements.CompensableActivity> belirtir. Bu özellik, özellik kılavuzunda düzenlenemez.|
 |<xref:System.Activities.Statements.CompensableActivity.Body%2A>|Doğru|Telafi, iptal ve onay mantığının sağlandı olduğu etkinliği belirtir. Etkinliği eklemek <xref:System.Activities.Statements.CompensableActivity.Body%2A> için Araç Kutusundan  **CompensableActivity** etkinlik tasarımcısının Gövde kutusuna bir etkinlik bırakın.  "Etkinliği buraya bırak" ipucu metnini ekleyin.|
 |<xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>|Yanlış|İptal olduğunda yürütülen etkinliği belirtir. Etkinliği eklemek için Araç Kutusundan **CompensableActivity** etkinlik tasarımcısının **CancellationHandler** kutusuna tasarımcısını bırakın.  "Etkinliği Buraya Bırak" ipucu metni ekleyin.|
-|<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>|Yanlış|Etkinlik için telafi yapmak için yürütülecek etkinliği <xref:System.Activities.Statements.CompensableActivity.Body%2A> belirtir. Bu işleyici, etkinliği kullanılarak açıkça <xref:System.Activities.Statements.Compensate> çağrılabilir.<br /><br /> Etkinliği eklemek için Araç Kutusu'nda etkinlik **tasarımcısını** **CompensableActivity** etkinlik tasarımcısının **CompensationHandler** kutusuna bırakın. "Etkinliği Buraya Bırak" ipucu metni ekleyin.|
-|<xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>|Yanlış|Etkinliği onaylarken yürütülecek etkinliği <xref:System.Activities.Statements.CompensableActivity.Body%2A> belirtir. Bu işleyici, etkinliği kullanılarak açıkça <xref:System.Activities.Statements.Confirm> çağrılabilir.<br /><br /> Etkinliği eklemek için Araç Kutusu'nda etkinlik **tasarımcısını** **CompensableActivity** etkinlik tasarımcısının **ConfirmationHandler** kutusuna bırakın. "Etkinliği Buraya Bırak" ipucu metni ekleyin.|
+|<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>|Yanlış|Etkinlik için telafi yapmak için yürütülecek etkinliği <xref:System.Activities.Statements.CompensableActivity.Body%2A> belirtir. Bu işleyici etkinlik kullanılarak açıkça <xref:System.Activities.Statements.Compensate> çağrılabilir.<br /><br /> Etkinliği eklemek için Araç Kutusu'nda etkinlik **tasarımcısını** **CompensableActivity** etkinlik tasarımcısının **CompensationHandler** kutusuna bırakın. "Etkinliği Buraya Bırak" ipucu metni ekleyin.|
+|<xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>|Yanlış|Etkinliği onaylarken yürütülecek etkinliği <xref:System.Activities.Statements.CompensableActivity.Body%2A> belirtir. Bu işleyici etkinlik kullanılarak açıkça <xref:System.Activities.Statements.Confirm> çağrılabilir.<br /><br /> Etkinliği eklemek için Araç Kutusu'nda etkinlik **tasarımcısını** **CompensableActivity** etkinlik tasarımcısının **ConfirmationHandler** kutusuna bırakın. "Etkinliği Buraya Bırak" ipucu metni ekleyin.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

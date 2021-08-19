@@ -1,6 +1,6 @@
 ---
-description: Dia2dump örnek, Microsoft hata ayıklama arabirimi erişim yazılım geliştirme seti 'nin (DIA SDK) bilgi için bir PDB dosyasını sorgulamak için nasıl kullanılacağını gösterir.
-title: Dia2dump örneği | Microsoft Docs
+description: Dia2dump örneği, bilgi için bir PDB dosyasını sorgulamak üzere Microsoft Debug Interface Access Software Development Kit'in (DIA SDK) nasıl kullanabileceğinizi gösterir.
+title: Dia2dump Örnek | Microsoft Docs
 ms.date: 07/24/2018
 ms.topic: reference
 dev_langs:
@@ -15,67 +15,67 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 796ad78bfe8337db7bf177235284624877a7ed555da025fff8728b9cc2ce8b6b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cdf5e84eaeace022d733d7f8521aecdbc2cd58d1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345495"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105595"
 ---
 # <a name="dia2dump-sample"></a>Dia2dump Örneği
 
-Dia2dump örnek, Microsoft hata ayıklama arabirimi erişim yazılım geliştirme seti 'nin (DIA SDK) bilgi için bir PDB dosyasını sorgulamak için nasıl kullanılacağını gösterir.
+Dia2dump örneği, bilgi için bir PDB dosyasını sorgulamak üzere Microsoft Debug Interface Access Software Development Kit'in (DIA SDK) nasıl kullanabileceğinizi gösterir.
 
-Dia2dump örneği Visual Studio ile yüklenir ve çözümü ve kaynak dosyalarını içerir. Derlenmiş yürütülebilir dosya komut satırından çalışır. Tüm program veritabanı (. pdb) dosyasının veya ilgilendiğiniz bölümlerin içeriğini gösterebilir.
+Dia2dump örneği, Visual Studio ile birlikte yüklenir ve çözüm ve kaynak dosyalarını içerir. Derlenmiş yürütülebilir dosya komut satırdan çalışır. Bir program veritabanı (.pdb) dosyasının tamamının veya yalnızca ilgilendiğin bölümlerin içeriğini görüntüler.
 
-## <a name="install-the-sample"></a>Örneği yükler
+## <a name="install-the-sample"></a>Örneği yükleme
 
-örnek, Visual Studio Yükleyicisi C++ iş yüküne **sahip masaüstü geliştirmeyi** seçtiğinizde yüklenir. Visual Studio yüklemek ve belirli iş yüklerini ve bireysel bileşenleri seçmek hakkında bilgi için bkz. [install Visual Studio](../../install/install-visual-studio.md).
+Örnek, masaüstünde **C++** ile masaüstü geliştirme iş yükünü Visual Studio Yükleyicisi. Belirli iş yüklerini ve Visual Studio bileşenleri seçme hakkında bilgi için bkz. [Yükleme Visual Studio.](../../install/install-visual-studio.md)
 
-yüklendiğinde, örnek, \dia sdk\samples\dia2dumpadlı bir alt dizinde Visual Studio yükleme dizininizde bulunur.
+Bu örnek, yüklendikten sonra Visual Studio\DIA SDK\Samples\DIA2Dump adlı alt dizindedir.
 
 ## <a name="build-the-sample"></a>Örneği oluşturma
 
-Varsayılan olarak, yükleme dizini korumalı bir dizindir. yani, bu konumda örnek çözümü derlemek ve düzenlemek için yükseltilmiş bir geliştirici komut istemi veya Visual Studio örneğini kullanmanız gerekir. Derlemeyi basitleştirmek için, önce dosyaları örnek dizinden belgeler klasörünüzdeki bir klasör gibi başka bir dizine kopyalamanız ve sonra örneği oluşturmanız önerilir.
+Varsayılan olarak, yükleme dizini korumalı bir dizindir. Bu, bu konumda örnek çözümü derlemek ve düzenlemek için yükseltilmiş bir Geliştirici komut istemi Visual Studio örnek bir örnek kullan anlamına gelir. Derlemeyi basitleştirmek için, önce dosyaları örnek dizinden Belgeler klasörünüzdeki bir klasör gibi başka bir dizine kopyalamanızı ve ardından örneği derlemenizi öneririz.
 
-### <a name="to-build-the-dia2dump-sample-in-visual-studio"></a>Visual Studio içinde Dia2Dump örneğini oluşturmak için
+### <a name="to-build-the-dia2dump-sample-in-visual-studio"></a>Visual Studio'de Dia2Dump örneğini derlemek için
 
-1. Visual Studio içinde DIA2Dump. sln dosyasını açın. çözümü başka bir dizine kopyalamadıysanız, Visual Studio yükseltilmiş izinlerle yeniden başlatmanız istenebilir.
+1. DIA2Dump.sln dosyasını Visual Studio. Çözümü başka bir dizine kopyalamadıysanız, yükseltilmiş izinlerle Visual Studio başlatmanız istenebilirsiniz.
 
-1. **Çözüm Gezgini**, Dia2Dump projesini seçin (çözümü değil).
+1. Bu **Çözüm Gezgini** Dia2Dump projesini (çözümü değil) seçin.
 
-1. Projenin **Özellik sayfaları** iletişim kutusunu açın. ayrıntılar için bkz. [Project özellikleriyle çalışma](/cpp/build/working-with-project-properties).
+1. Projenin Özellik Sayfaları **iletişim** kutusunu açın. Ayrıntılar için [bkz. Project Ile Çalışma.](/cpp/build/working-with-project-properties)
 
-1. **Yapılandırma özellikleri**  >  **C/C++**  >  **genel** özellik sayfasını açın.
+1. Yapılandırma **Özellikleri**  >  **C/C++ Genel**  >  **özellik** sayfasını açın.
 
-1. **Ek Içerme dizinleri** özelliğinde, açılan denetimi seçin ve ardından **Düzenle**' yi seçin.
+1. Ek Dahil **Dizinleri özelliğinde** açılan liste denetimi ve ardından Düzenle'yi **seçin.**
 
-1. **Ek Içerik dizinleri** iletişim kutusunda, Düzenle alanına, `$(VSInstallDir)DIA SDK\include` dizini girin. Derleyicinin dia2. h dosyasını bulabileceği garantilemek için bu dizini ekleyin. Değişikliklerinizi kaydetmek için **Tamam ' ı** seçin.
+1. Ek **Dahil Dizinleri iletişim** kutusunda, düzenleme alanına dizini `$(VSInstallDir)DIA SDK\include` girin. Derleyicinin dia2.h dosyasını bulmalarını garanti etmek için bu dizini ekleyin. Değişikliklerinizi **kaydetmek** için Tamam'ı seçin.
 
-1. Değişikliklerinizi proje özelliklerine kaydetmek için **Tamam ' ı** seçin.
+1. Proje **özelliklerinde** yaptığınız değişiklikleri kaydetmek için Tamam'ı seçin.
 
-1. **Derle** menüsünde **çözümü yeniden derle**' yi seçin. varsayılan olarak Visual Studio, çözüm dizininin bir hata ayıklama alt dizininde bulunan örneğin bir hata ayıklama sürümü oluşturur.
+1. Derleme menüsünde **Çözümü Yeniden** **Oluştur'a tıklayın.** Varsayılan olarak Visual Studio çözüm dizininin Bir Hata Ayıklama alt dizininde bulunan örneğin Hata ayıklama sürümünü derlemek için kullanılır.
 
 1. Visual Studio’yu kapatın.
 
-### <a name="to-build-the-dia2dump-sample-at-the-command-line"></a>Komut satırında Dia2Dump örneğini oluşturmak için
+### <a name="to-build-the-dia2dump-sample-at-the-command-line"></a>Komut satırına Dia2Dump örneğini derlemek için
 
-1. Geliştirici komut istemi penceresinde, örnek dosyaları kopyaladığınız dizine geçin. Örneği başka bir dizine kopyalamadıysanız yükseltilmiş (yönetici olarak çalıştır) Geliştirici komut istemi penceresi kullanmanız gerekir.
+1. Geliştirici komut istemi penceresinde, örnek dosyaları kopyalanan dizine geçin. Örneği başka bir dizine kopyalamadıysanız yükseltilmiş (yönetici olarak çalıştır) Geliştirici komut istemi penceresi kullansanız iyi olur.
 
-1. `nmake makefile`dia2dump.exe varsayılan hata ayıklama yapılandırmasını derlemek için komutunu girin.
+1. Varsayılan Hata `nmake makefile` Ayıklama yapılandırmasını derlemek için komutunu girin dia2dump.exe.
 
 ## <a name="run-the-dia2dump-sample"></a>Dia2Dump örneğini çalıştırma
 
-Dia2Dump.exe, hizmetlerini sağlamak için MSDIA *sürümüne*.dll com sunucusuna bağımlıdır. Visual Studio 2015 ' den başlayarak sürüm msdia140.dll. MSDIA *sürümü*.dll com sunucusu başlatılmazsa, dia2dump.exe çalışmadan önce kaydolmanız gerekir. DIA SDK dizininde DLL 'nin x86 sürümünü içeren bir bin alt dizini vardır. X64 mimari makineler için bir sürüm, bin\amd64 ' te ve ARM için bir sürüm de bin\arm. Dll 'yi kaydetmek için, yükseltilmiş bir geliştirici komut istemi penceresi açın ve makine mimarinizin sürümünü içeren dizine geçin. `regsvr32 msdia140.dll`Com sunucusunu kaydetmek için komutunu girin.
+Dia2Dump.exe hizmetleri sağlamak için *msdia*.dll COM sunucusuna bağlı olur. 2015 Visual Studio sürümünden itibaren sürüm msdia140.dll. COM *sunucusunun* msdia.dll başlatılmamışsa, çalışmadan önce dia2dump.exe gerekir. DIA SDK dizininde DLL'nin x86 sürümünü içeren bir bin alt dizini vardır. x64 mimari makinelerinin sürümü bin\amd64, ARM sürümü ise bin\arm dizinindedir. Dll'i kaydetmek için yükseltilmiş bir Geliştirici komut istemi penceresi açın ve makine mimarinizin sürümünü içeren dizine geçin. COM sunucusunu `regsvr32 msdia140.dll` kaydetmek için komutunu girin.
 
 ### <a name="to-run-the-sample"></a>Örnek çalıştırmak için
 
-1. Bir komut istemi açın ve derlediniz dia2dump.exe içeren dizine geçin.
+1. Bir komut istemi açın ve kendi dia2dump.exe dizinine yazın.
 
-1. `dia2dump filename` *Dosya adının* , incelenecek bir pdb dosyasının adı olduğu komutu girin. PDB dosyası başka bir dizinse dosya *adı* olarak dosyanın tam yolunu kullanın. Bu komut PDB dosyasındaki tüm verileri listeler.
+1. Dosya adının `dia2dump filename` *incelenecek* PDB dosyasının adı olduğu komutu girin. PDB dosyası başka bir dizinde ise dosya adı olarak dosyanın tam *yolunu kullanın.* Bu komut PDB dosyasındaki tüm verileri listeler.
 
-1. Dia2Dump yalnızca seçilen bilgileri görüntülemeye yönelik başka seçeneklere sahiptir. `dia2dump -?`Tüm kullanılabilir seçenekleri listelemek için komutunu kullanın.
+1. Dia2Dump'un yalnızca seçili bilgileri görüntülemek için başka seçenekleri vardır. Kullanılabilir `dia2dump -?` tüm seçenekleri listeleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio projelerini bağlantı noktası, geçirme ve yükseltme](../../porting/port-migrate-and-upgrade-visual-studio-projects.md)
+- [Visual Studio Projelerini Taşıma, Geçirme ve Yükseltme](../../porting/port-migrate-and-upgrade-visual-studio-projects.md)

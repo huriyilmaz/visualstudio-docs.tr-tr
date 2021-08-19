@@ -1,6 +1,6 @@
 ---
 title: DGML dosyalarını düzenleyerek kod haritalarını özelleştirme
-description: Yönlendirilmiş grafik biçimlendirme dili (. dgml) dosyasını düzenleyerek bir kod haritasını özelleştirmeyi öğrenin.
+description: bir kod haritasını, yönlendirilmiş Graph biçimlendirme dili (. dgml) dosyasını düzenleyerek nasıl özelleştireceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,23 +20,24 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b7c94834aeb6aa82efdb53dead97e26daa667c0
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 8b38af7e21d6aab6def7858bc251e5886a40bd57
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112389494"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157546"
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>DGML dosyalarını düzenleyerek kod haritalarını özelleştirme
 
-Bir kod eşlemesini özelleştirmek için, onun yönlendirilmiş grafik biçimlendirme dili (. dgml) dosyasını düzenleyebilirsiniz. Örneğin, özel stilleri belirlemek, kod öğelerine ve bağlantılarına Özellikler ve kategoriler atamak ya da belge veya URL 'Leri kod öğelerine ya da bağlantılara bağlamak için öğeleri düzenleyebilirsiniz. DGML öğeleri hakkında daha fazla bilgi için bkz. [yönlendirilmiş grafik biçimlendirme dili (DGML) başvurusu](../modeling/directed-graph-markup-language-dgml-reference.md).
+bir kod eşlemesini özelleştirmek için, onun yönlendirilmiş Graph biçimlendirme dili (. dgml) dosyasını düzenleyebilirsiniz. Örneğin, özel stilleri belirlemek, kod öğelerine ve bağlantılarına Özellikler ve kategoriler atamak ya da belge veya URL 'Leri kod öğelerine ya da bağlantılara bağlamak için öğeleri düzenleyebilirsiniz. DGML öğeleri hakkında daha fazla bilgi için bkz. [yönlendirilmiş Graph biçimlendirme dili (DGML) başvurusu](../modeling/directed-graph-markup-language-dgml-reference.md).
 
-Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenleyin. Eşleme, Visual Studio çözümünüzün bir parçasıysa, **Çözüm Gezgini** seçin, kısayol menüsünü açın ve **birlikte Aç**, **XML (metin) Düzenleyicisi**' ni seçin.
+Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenleyin. eşleme Visual Studio çözümünüzün bir parçasıysa, **Çözüm Gezgini** içinde seçin, kısayol menüsünü açın ve **birlikte aç**, **XML (metin) düzenleyicisi**' ni seçin.
 
 > [!NOTE]
-> Kod eşlemeleri oluşturmak için Visual Studio Enterprise sürüme sahip olmanız gerekir. Visual Studio 'da bir kod haritasını düzenlediğinizde,. dgml dosyasını kaydettiğinizde kullanılmayan DGML öğelerini ve özniteliklerini temizler. Ayrıca, el ile yeni bağlantılar eklediğinizde kod öğeleri otomatik olarak oluşturulur. .dgml dosyasını kaydettiğinizde, bir öğeye eklediğiniz tüm öznitelikler kendilerini alfabetik sırada yeniden düzenleyebilir.
+> kod eşlemeleri oluşturmak için Visual Studio Enterprise sürüme sahip olmanız gerekir. Visual Studio bir kod haritasını düzenlediğinizde,. dgml dosyasını kaydettiğinizde kullanılmayan DGML öğelerini ve özniteliklerini temizler. Ayrıca, el ile yeni bağlantılar eklediğinizde kod öğeleri otomatik olarak oluşturulur. .dgml dosyasını kaydettiğinizde, bir öğeye eklediğiniz tüm öznitelikler kendilerini alfabetik sırada yeniden düzenleyebilir.
 
 ## <a name="group-code-elements"></a><a name="OrganizeNodes"></a> Kod öğelerini Gruplandır
  Yeni gruplar ekleyebilir veya varolan düğümleri bir gruba dönüştürebilirsiniz.
@@ -49,7 +50,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
     Yeni bir grup eklemek için `<Nodes>` bölümünü bulun. Yeni bir `<Node/>` öğe ekleyin.
 
-3. `<Node/>`Öğesinde, `Group` grubun genişletilmiş mı yoksa daraltılmış mi göründüğünü belirtmek için bir öznitelik ekleyin. Örneğin:
+3. `<Node/>`Öğesinde, `Group` grubun genişletilmiş mı yoksa daraltılmış mi göründüğünü belirtmek için bir öznitelik ekleyin. Örnek:
 
    ```xml
    <Nodes>
@@ -66,7 +67,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
    - `Category` `Contains` Grup kodu öğesi ve onun alt kod öğesi arasındaki ilişkiyi belirten bir öznitelik
 
-     Örneğin:
+     Örnek:
 
    ```xml
    <Links>
@@ -98,7 +99,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
     Stroke="StrokeValue"
     ```
 
-     Örneğin:
+     Örnek:
 
     ```xml
     <DirectedGraph Background="Green" xmlns="http://schemas.microsoft.com/vs/2009/dgml" >
@@ -203,7 +204,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
     Shape="ShapeFilePathLocation"
     ```
 
-     Örneğin:
+     Örnek:
 
     ```xml
     <Nodes>
@@ -238,7 +239,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
     StrokeDashArray="StrokeArrayValues"
     ```
 
-     Örneğin:
+     Örnek:
 
     ```xml
     <Links>
@@ -268,7 +269,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 2. `<Style/>`Öğesinde, `<Condition/>` `Expression` Boole değeri döndüren bir ifade belirtmek için özniteliği içeren bir öğesi ekleyin.
 
-    Örneğin:
+    Örnek:
 
    ```xml
    <Condition Expression="MyCategory"/>
@@ -316,7 +317,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 3. Öğesinden sonraki satırda `<Condition/>` , bir veya daha fazla öğe eklemek için bir `<Setter/>` `Property` özniteliği, sabit bir özniteliği `Value` veya `Expression` eşleme, kod öğeleri veya koşulu karşılayan bağlantılara uygulamak üzere hesaplanan bir özniteliği belirtin.
 
-    Örneğin:
+    Örnek:
 
    ```xml
    <Setter Property="BackGround" Value="Green"/>
@@ -444,7 +445,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 1. . Dgml dosyasını bir metin veya XML düzenleyicisinde açın.
 
-2. `<Node/>`Bu kod öğesi için öğeyi bulun. Özelliğin adını ve değerini belirtin. Örneğin:
+2. `<Node/>`Bu kod öğesi için öğeyi bulun. Özelliğin adını ve değerini belirtin. Örnek:
 
     ```xml
     <Nodes>
@@ -466,7 +467,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 2. `<Link/>`Hem kaynak kodu öğesi hem de hedef kod öğesi adlarını içeren öğeyi bulun.
 
-3. `<Node/>`Öğesinde, özelliğin adını ve değerini belirtin. Örneğin:
+3. `<Node/>`Öğesinde, özelliğin adını ve değerini belirtin. Örnek:
 
     ```xml
     <Links>
@@ -491,7 +492,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 - İstediğiniz `<Node/>` kod öğesi için öğesini bulun.
 
-- `<Node/>`Öğesinde, `Category` kategorinin adını belirtmek için bir öznitelik ekleyin. Örneğin:
+- `<Node/>`Öğesinde, `Category` kategorinin adını belirtmek için bir öznitelik ekleyin. Örnek:
 
     ```xml
     <Nodes>
@@ -513,7 +514,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 2. `<Link/>`Hem kaynak kodu öğesi hem de hedef kod öğesi adlarını içeren öğeyi bulun.
 
-3. `<Link/>`Öğesinde, `Category` kategorinin adını belirtmek için bir öznitelik ekleyin. Örneğin:
+3. `<Link/>`Öğesinde, `Category` kategorinin adını belirtmek için bir öznitelik ekleyin. Örnek:
 
     ```xml
     <Links>
@@ -535,7 +536,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 2. `<Category/>`Üst kategori için bir öğe ekleyin ve sonra `BasedOn` özniteliği alt kategorinin `<Category/>` öğesine ekleyin.
 
-     Örneğin:
+     Örnek:
 
     ```xml
     <Nodes>
@@ -567,7 +568,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
 - Bir arabirimi kullanıma sunan bir bileşen hakkında daha fazla bilgi görüntülemek için, bu arabirim için kod öğesine bir bileşen diyagramı bağlayabilirsiniz.
 
-- Bir kod öğesini Team Foundation Server iş öğesine veya hataya veya kod öğesiyle ilgili diğer bazı bilgilere bağlayın.
+- bir kod öğesini Team Foundation Server iş öğesine veya hataya veya kod öğesiyle ilgili diğer bazı bilgilere bağlayın.
 
 #### <a name="to-link-a-document-or-url-to-a-code-element"></a>Bir belge veya URL 'YI bir kod öğesine bağlamak için
 
@@ -584,7 +585,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
      > [!NOTE]
      > Öğe başına yalnızca bir özniteliğe sahip olabilirsiniz `Reference` .
 
-     Örneğin:
+     Örnek:
 
    ```xml
    <Nodes>
@@ -609,7 +610,7 @@ Kod haritasının. dgml dosyasını bir metin veya XML düzenleyicisinde düzenl
 
       4. `Label`Kod öğesinin **başvuruya git** kısayol menüsünde görüntü metnini belirtmek için özniteliğini kullanın.
 
-      Örneğin:
+      Örnek:
 
    ```xml
    <Nodes>

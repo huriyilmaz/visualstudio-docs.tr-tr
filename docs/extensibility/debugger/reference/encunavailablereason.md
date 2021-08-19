@@ -1,6 +1,6 @@
 ---
-description: Düzenle ve devam et 'in kullanılamayan nedenleri temsil eder.
-title: Haksız Blereason | Microsoft Docs
+description: Düzenle ve Devam'ın kullanılabilir olmadığının nedenlerini temsil eder.
+title: EncUnavailableReason | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5a47c29f07a590667a22ed123ba660202b4de9c449e606a8d921dd02eb0b7f52
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d14b48d4cc3e32c48886222919b5e1f80f72fc69
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434405"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160223"
 ---
 # <a name="encunavailablereason"></a>EncUnavailableReason
-`This is for internal use only!`**Düzenle ve devam et** 'in kullanılamayan nedenleri temsil eder.
+`This is for internal use only!` Düzenle ve **Devam'ın kullanılabilir olmadığının** nedenlerini temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,35 +56,35 @@ public enum EncUnavailableReason {
 
 ## <a name="fields"></a>Alanlar
 `ENCUN_NONE`\
-Düzenleme ve devam etme işleminin neden kullanılamadığı belirli bir neden yoktur.
+Düzenle ve Devam'ın kullanılabilir olmadığının belirli bir nedeni yoktur.
 
 `ENCUN_INTEROP`\
-Birlikte çalışma çağrısı sırasında Düzenle ve devam et kullanılamaz.
+Düzenle ve Devam' bir InterOp çağrısı sırasında kullanılamaz.
 
 `ENCUN_SQLCLR`\
-düzenle ve devam et, ortak dil çalışma zamanını (CLR) kullanan bir SQL yordam çağrısı sırasında kullanılamaz.
+Düzenle ve Devam Edin, Ortak Dil Çalışma SQL (CLR) kullanan bir yordam çağrısı sırasında kullanılamaz.
 
 `ENCUN_MINIDUMP`\
-Bir mini döküm işlenirken Düzenle ve devam et kullanılamaz.
+Mini döküm işleme sırasında Düzenle ve Devam Etmek kullanılamaz.
 
 `ENCUN_EMBEDDED`\
-Katıştırılmış kodu işlerken Düzenle ve devam et kullanılamaz.
+Katıştırılmış kod işlenemezken Düzenle ve Devam Etmek kullanılamaz.
 
 `ENCUN_ATTACH`\
-Oturum, hata ayıklayıcı tarafından başlatılmamış olarak eklendiği için Düzenle ve devam et kullanılamıyor.
+Oturum hata ayıklayıcıya bağlı olduğundan, tarafından başlatılamay olduğundan Düzenle ve Devam Etmek kullanılamıyor.
 
 `ENCUN_WIN64`\
-64 bit Windows kodu işlenirken düzenle ve devam et kullanılamaz.
+64 bitlik kod iş alırken Düzenle ve Devam Windows kullanılamaz.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu numaralandırma yalnızca tarafından iç kullanım içindir [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] . Özel bir bağlantı noktası sağlayıcısı tarafından uygulanan [Getencavailablestate](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) ve [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) yöntemleri her zaman döndürmelidir `E_NOTIMPL` .
+Bu numaralama yalnızca tarafından iç kullanım [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] içindir. Özel [bir bağlantı noktası sağlayıcı tarafından uygulanan GetENCAvailableState](../../../extensibility/debugger/reference/idebugprocess3-getencavailablestate.md) ve [DisableENC](../../../extensibility/debugger/reference/idebugprocess3-disableenc.md) yöntemleri her zaman dönüş gerçekleştirebilir. `E_NOTIMPL`
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. IDL
+Üst bilgi: msdbg.idl
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

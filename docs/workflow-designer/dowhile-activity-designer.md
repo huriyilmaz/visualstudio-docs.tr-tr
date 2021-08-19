@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 13434292f4b053dffae2775e71387e6f6ce4ba110956d4e7b64436b8aae604d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 942552f127cebaff4c0f923118fb8be0ac9b141a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121383826"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068096"
 ---
 # <a name="dowhile-activity-designer"></a>DoWhile Etkinlik Tasarımcısı
 

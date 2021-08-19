@@ -8,14 +8,15 @@ ms.assetid: 0222e8bf-d29f-421b-9b1f-123d500fa179
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ac90077831d852ba0361c46186d18fe39cf9e81
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bd312e8934d14a986606020558adc57339250706
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99931077"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112067"
 ---
 # <a name="how-to-create-a-basic-texture"></a>Nasıl yapılır: Temel doku oluşturma
 
@@ -69,7 +70,7 @@ Başlamadan önce **Özellikler** penceresinin görüntülendiğinden emin olun.
 11. **Elips** aracını kullanarak piksel koordinatından `(3, 3)` piksel koordinatına bir daire çizin `(508, 508)` . Daireyi daha kolay çizmek için, çizerken **SHIFT** tuşuna basılı tutabilirsiniz.
 
     > [!NOTE]
-    > Geçerli işaretçi konumunun piksel koordinatları, Visual Studio durum çubuğunda görüntülenir.
+    > geçerli işaretçi konumunun piksel koordinatları Visual Studio durum çubuğunda görüntülenir.
 
 12. Arka plan rengini değiştirin. **R** - `44` , **G** - `165` , **B** - `211` ve **A** ' yı ayarlayın `255` .
 

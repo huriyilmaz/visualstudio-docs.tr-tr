@@ -1,5 +1,5 @@
 ---
-description: Visual Studio hata ayıklayıcı kullanıcı arabirimine, başlatılan yürütülebilir dosya için simgelerin konumlandırılamadığından kullanıcıyı uyarmasını sağlar.
+description: Kullanıcıya Visual Studio yürütülebilir dosya için sembollerin bulunamayy olduğunu uyarısı için hata ayıklayıcı kullanıcı arabirimini gönderir.
 title: IDebugNoSymbolsEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9740f0026977bd865e6493733ca50348e2fb0843b7f3b2fe2ac41e2744dad659
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d3f2eed2c6ea1e50ede7ec539e9ecc80afec2b7b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121277510"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160224"
 ---
 # <a name="idebugnosymbolsevent2"></a>IDebugNoSymbolsEvent2
-[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı Kullanıcı arabirimine, başlatılan yürütülebilir dosya için simgelerin konumlandırılamadığından kullanıcıyı uyarmasını sağlar.
+Hata [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ayıklayıcısı kullanıcı arabirimine, başlatılan yürütülebilir dosya için sembollerin bulunamay tarafından uyarılmaya yönelik sinyaller gönderir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,12 +28,12 @@ ms.locfileid: "121277510"
 IDebugNoSymbolsEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama motorları tarafından uygulanır ve [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı kullanıcı arabirimi tarafından kullanılır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapıları tarafından uygulanır ve hata ayıklayıcı kullanıcı [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] arabirimi tarafından tüketilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: Msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll

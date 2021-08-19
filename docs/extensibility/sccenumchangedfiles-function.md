@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 500d0072ffca6f0ada6d035aa59c60b8358a13aec9230077b64a724f5faf4747
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8d1f2cac97ee883ddca7fec7a2f5d0725459c029
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121273689"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158313"
 ---
 # <a name="sccenumchangedfiles-function"></a>SccEnumChangedFiles işlevi
 Yerel dosyaların listesi verildiğinde, bu işlev kaynak kodu denetim veritabanındaki ilgili sürümlerden farklı olan dosyaları belirler.

@@ -1,6 +1,6 @@
 ---
-title: Şablon Ilkesi ve Özellikler penceresi | Microsoft Docs
-description: Özellikler için varsayılan değerleri ayarlamak için şablon İlkesi kullanma, özellikleri gizleme ve Özellikler penceresi özellikler ekleme hakkında bilgi edinin.
+title: Şablon İlkesi ve Özellikler Penceresi | Microsoft Docs
+description: Şablon ilkesi kullanarak özellikler için varsayılan değerleri ayarlama, özellikleri gizleme ve özellikler ekleme hakkında bilgi Özellikler penceresi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,25 +10,26 @@ ms.assetid: 1d8019d3-5e57-47ba-b358-526b0796a63b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: b415054f65c41f03556f7d87be5b12d92ced399c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 84f08740ac47701506f37e3e3aababa329f1ef61
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078675"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158807"
 ---
 # <a name="template-policy-and-the-properties-window"></a>Şablon İlkesi ve Özellikler Penceresi
-Bir proje kurumsal şablon projesinde yer aldığı zaman, bu kurumsal şablon proje ilkeyi uygulayabilir. Şablon İlkesi, özellikler için varsayılan değerleri ayarlamak, özellikleri gizlemek, özellik eklemek vb. için kullanılabilen bir kısıtlayan sistem haline gelir.
+Bir proje bir kurumsal şablon projesinin içinde olduğunda, bu kurumsal şablon projesi ilkeyi zorlar. Şablon ilkesi, özellikler için varsayılan değerleri ayarlamak, özellikleri gizlemek, özellik eklemek ve daha pek çok işlem yapmak için kullanılmaktadır.
 
- **Özellikler** penceresinde bilgilerin görüntülenmesini denetlemek için şablon İlkesi kullanmak, uygulama uygulamalarından farklıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> bileşen düzeyinde nesne özelliklerini işler, ancak şablon İlkesi çözüm veya proje düzeyindeki nesne özelliklerini kısıtlamak için kullanılabilir. Diğer bir deyişle
+ Özellikler penceresindeki bilgilerin display'ini kontrol etmek **için** şablon ilkesi kullanmak, uygulamaktan <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> farklıdır. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> nesne özelliklerini bileşen düzeyinde, şablon ilkesi ise nesne özelliklerini çözüm veya proje düzeyinde sınırlamak için kullanılabilir. Başka bir deyişle
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>Belirli nesneler Için **Özellikler** penceresinde neyin görüntülendiğini belirlemek için üzerinde yöntemleri uygulayın
+- Belirli nesneler için <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing> Özellikler penceresinde nelerin görüntülendiğinden **belirlemek için** yöntemleri uygulama
 
-- Daha önce belirtilen nesneler için **Özellikler** penceresinde neyin görüntülendiğini belirlemek için çözüm ve proje düzeyinde şablon ilkesini kullanın
+- Daha önce belirtilen nesneler için Özellikler penceresinde nelerin görüntülendiğinden belirlemek için çözüm ve **proje** düzeyinde şablon ilkesi kullanın
 
-  Belirli bir türdeki bir proje öğesi **Çözüm Gezgini** ' de seçildiğinde, **Özellikler** penceresindeki belirli özellikleri seçmeli olarak kısıtlamak için şablon İlkesi kullanmak, geliştirme ekibinin bir proje üzerinde çalıştığı tüm üyelerine faydalı olabilir. Örneğin, şablon ilkesini kullanarak, geliştiricileriniz için bir veritabanındaki tüm bağlantı dizesi bilgilerini ayarlayabilir ve bağlantı dizesini salt okunurdur hale getirebilirsiniz. Bu şekilde, her geliştiricinin veri erişimi için doğru yolu kullanmasını güvence altına almak için basit bir yol sağlayabilirsiniz.
+  Çözüm Gezgini'de belirtilen türde bir proje  öğesi seçildiğinde Özellikler penceresinde belirli özellikleri seçmeli  olarak sınırlamak için şablon ilkesi kullanmak, bir proje üzerinde çalışan geliştirme ekibinin tüm üyeleri için yararlı olabilir. Örneğin, şablon ilkesi kullanarak, bir veritabanında geliştiricileriniz için tüm bağlantı dizesi bilgilerini oluşturabilir ve bağlantı dizesini salt okunur hale babilirsiniz. Bu şekilde, her geliştiricinin veri erişimi için doğru yolu kullandığından emin olmak için basit bir yol sebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>

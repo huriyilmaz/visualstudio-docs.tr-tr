@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2afe24d879b0bfa27f3397d08bfd5f3d85c3ae29734038181ba1dc7d1c67e51b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 17221f1ac28ff3f0f7e587b78900ee3ece83b713
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360605"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064636"
 ---
 # <a name="idebugbreakpointrequest2getrequestinfo"></a>IDebugBreakpointRequest2::GetRequestInfo
 Bu kesme noktası isteğini açıklayan kesme noktası isteği bilgilerini alır.

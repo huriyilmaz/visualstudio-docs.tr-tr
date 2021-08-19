@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70ee15328b6f89c5df5323951a11a0ce26d9d2393d25ced6b6434c098354a19e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 01ecd11c47edf00fb6e7126d496bb55c24f74973
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121431831"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158833"
 ---
 # <a name="template-directory-description-vsdir-files"></a>Şablon Dizin Açıklaması (.Vsdir) Dosyaları
 Şablon dizin açıklama dosyası (. vsdir), tümleşik geliştirme ortamının (IDE), iletişim kutularındaki projenizle ilişkili klasörleri, sihirbaz. vsz dosyalarını ve şablon dosyalarını görüntülemesini sağlayan bir metin dosyasıdır. İçerikler dosya veya klasör başına bir kayıt içerir. Başvurulan bir konumdaki tüm. VSDir dosyaları birleştirilir, ancak birden çok klasörü, Sihirbazı veya şablon dosyasını anlatmak için genellikle yalnızca bir. vsdir dosyası sağlanır.

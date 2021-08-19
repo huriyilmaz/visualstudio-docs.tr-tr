@@ -1,6 +1,6 @@
 ---
-title: "Nasıl yapılır: MSBuild projesi SDK 'sına başvurma | Microsoft Docs"
-description: Özellikler ve hedeflerin içeri aktarılmasını gerektiren yazılım geliştirme setlerini kullanmayı basitleştirmek için MSBuild proje SDK 'larını nasıl kullanacağınızı öğrenin.
+title: Nasıl MSBuild Project SDK | Microsoft Docs
+description: Özelliklerin ve hedeflerin MSBuild yazılım geliştirme setlerinin kullanımını basitleştirmek için proje SDK'lerini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/25/2018
 ms.topic: conceptual
@@ -9,18 +9,19 @@ helpviewer_keywords:
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: e6303efce016a9e678e4c9e8aa62c91aa116e44f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b26c8704be6770954849a440f15683be68ce82aa
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914227"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122069170"
 ---
-# <a name="how-to-use-msbuild-project-sdks"></a>Nasıl yapılır: MSBuild proje SDK 'larını kullanma
+# <a name="how-to-use-msbuild-project-sdks"></a>Nasıllı: MSBuild PROJE SDK'lerini kullanma
 
-MSBuild 15,0, özellik ve hedeflerin içeri aktarılmasını gerektiren yazılım geliştirme setleri kullanımını kolaylaştıran "proje SDK" kavramını sunmuştur.
+MSBuild 15.0'da, özelliklerin ve hedeflerin içe aktarılmış olması gereken yazılım geliştirme setlerinin kullanımı kolaylaştıran "proje SDK'sı" kavramı tanıtıldı.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -30,7 +31,7 @@ MSBuild 15,0, özellik ve hedeflerin içeri aktarılmasını gerektiren yazılı
 </Project>
 ```
 
-Proje değerlendirmesi sırasında MSBuild, proje dosyasının en üstünde ve altında örtük içeri aktarmalar ekler:
+Projenin değerlendirmesi sırasında MSBuild dosyanın üst ve alt kısmında örtülü içeri aktarmalar ekler:
 
 ```xml
 <Project>
@@ -46,11 +47,11 @@ Proje değerlendirmesi sırasında MSBuild, proje dosyasının en üstünde ve a
 </Project>
 ```
 
-## <a name="reference-a-project-sdk"></a>Proje SDK 'Sı başvurusu
+## <a name="reference-a-project-sdk"></a>Proje SDK'sı başvurusu
 
-Proje SDK 'sına başvurmak için üç yol vardır:
+Bir proje SDK'sı için üç yol vardır:
 
-- `Sdk`Öğesindeki özniteliğini kullanın `<Project/>` :
+- öğesinde `Sdk` özniteliğini `<Project/>` kullanın:
 
     ```xml
     <Project Sdk="My.Custom.Sdk">
@@ -58,9 +59,9 @@ Proje SDK 'sına başvurmak için üç yol vardır:
     </Project>
     ```
 
-    Daha önce anlatıldığı gibi projenin üst ve alt kısmına örtük bir içeri aktarma eklenir.
+    Daha önce tartıştığımız gibi projenin üst ve alt kısmında örtülü bir içeri aktarma eklenir.
     
-    SDK 'nın belirli bir sürümünü belirtmek için, `Sdk` özniteliğe ekleyin:
+    SDK'nın belirli bir sürümünü belirtmek için özniteliğine `Sdk` bunu ekleme:
 
     ```xml
     <Project Sdk="My.Custom.Sdk/1.2.3">
@@ -68,7 +69,7 @@ Proje SDK 'sına başvurmak için üç yol vardır:
     </Project>
     ```
 
-- En üst düzey öğeyi kullanın `<Sdk/>` :
+- Üst düzey öğesini `<Sdk/>` kullanın:
 
     ```xml
     <Project>
@@ -77,11 +78,11 @@ Proje SDK 'sına başvurmak için üç yol vardır:
     </Project>
    ```
 
-   Daha önce anlatıldığı gibi projenin üst ve alt kısmına örtük bir içeri aktarma eklenir.
+   Daha önce tartıştığımız gibi projenin üst ve alt kısmında örtülü bir içeri aktarma eklenir.
    
-   `Version`Öznitelik gerekli değil.
+   `Version`özniteliği gerekli değildir.
 
-- `<Import/>`Öğesini projenizde herhangi bir yerde kullanın:
+- öğesini `<Import/>` projenizin herhangi bir yerinde kullanın:
 
     ```xml
     <Project>
@@ -94,25 +95,25 @@ Proje SDK 'sına başvurmak için üç yol vardır:
     </Project>
    ```
 
-   İçeri aktarmaların projenize açıkça dahil edilmesi, sipariş üzerinde tam denetim sağlar.
+   İçeri aktarmaları projenize açıkça dahil etmek, sipariş üzerinde tam denetime sahip olur.
 
-   `<Import/>`Öğesini kullanırken, isteğe bağlı bir `Version` özniteliği de belirtebilirsiniz. Örneğin, belirtebilirsiniz `<Import Project="Sdk.props" Sdk="My.Custom.Sdk" Version="1.2.3" />` .
+   öğesini `<Import/>` kullanırken, isteğe bağlı bir öznitelik `Version` de belirtebilirsiniz. Örneğin, `<Import Project="Sdk.props" Sdk="My.Custom.Sdk" Version="1.2.3" />` belirtesiniz.
 
-## <a name="how-project-sdks-are-resolved"></a>Proje SDK 'Ları nasıl çözümlenir
+## <a name="how-project-sdks-are-resolved"></a>Proje SDK'ları nasıl çözümlenir?
 
-İçeri aktarma değerlendirilirken, MSBuild, belirtilen adı ve sürümü temel alarak proje SDK 'sının yolunu dinamik olarak çözer.  MSBuild Ayrıca, makinenizde proje SDK 'larını belirleyen eklentiler olan kayıtlı SDK çözümleyicilerine sahiptir. Bu eklentiler şunları içerir:
+İçeri aktarmayı değerlendirirken MSBuild proje SDK'sı yolunu belirttiğiniz ad ve sürüme göre dinamik olarak çözümler.  MSBuild, makineniz üzerinde proje SDK'larını bulan eklentiler olan kayıtlı SDK çözümleyicilerinin bir listesine de sahip olur. Bu eklentiler şunları içerir:
 
-- Belirttiğiniz SDK 'nın KIMLIĞI ve sürümüyle eşleşen NuGet paketleri için yapılandırılmış paket akışlarınızı sorgulayan bir NuGet tabanlı çözümleyici.
+- Yapılandırılan NuGet, belirttiğiniz SDK kimliği ve sürümüyle NuGet paketleri için yapılandırılan paket akışlarınızı sorguleyen bir çözümleyici.
 
-   Bu çözümleyici yalnızca isteğe bağlı bir sürüm belirttiyseniz etkindir. Bu, herhangi bir özel proje SDK 'Sı için kullanılabilir.
+   Bu çözümleyici yalnızca isteğe bağlı bir sürüm belirttiysteğe bağlı olarak etkindir. Herhangi bir özel proje SDK'sı için kullanılabilir.
    
-- [.NET SDK](/dotnet/core/sdk/)Ile yüklenen MSBuild SDK 'larını çözen BIR .NET SDK Çözümleyicisi.
+- .NET SDK ile yüklü MSBuild SDK'ları çözümleye bir .NET SDK [çözümleyicisi.](/dotnet/core/sdk/)
 
-   Bu çözümleyici, `Microsoft.NET.Sdk` ürününün bir parçası olan ve gibi proje SDK 'larını bulur `Microsoft.NET.Sdk.Web` .
+   Bu çözümleyici, ürünün parçası olan ve gibi `Microsoft.NET.Sdk` `Microsoft.NET.Sdk.Web` proje SDK'lerini bularak.
    
-- MSBuild ile yüklenen SDK 'Ları çözen varsayılan çözümleyici.
+- Birlikte yüklenmiş OLAN SDK'ları çözümleen varsayılan çözümleyici MSBuild.
 
-NuGet tabanlı SDK Çözümleyicisi, proje SDK sürümünü her bir proje yerine tek bir yerde denetlemenize olanak tanıyan [global.js](/dotnet/core/tools/global-json) dosyadaki bir sürümü belirtmeyi destekler:
+NuGet SDK çözümleyicisi, [global.json](/dotnet/core/tools/global-json) dosyasında bir sürüm belirtmeyi destekler; böylece proje SDK'sı sürümünü tek tek proje yerine tek bir yerde denetlemenize olanak sağlar:
 
 ```json
 {
@@ -123,7 +124,7 @@ NuGet tabanlı SDK Çözümleyicisi, proje SDK sürümünü her bir proje yerine
 }
 ```
 
-Bir derleme sırasında her bir proje SDK 'sının yalnızca bir sürümü kullanılabilir. Aynı proje SDK 'sının iki farklı sürümüne başvurdıysanız, MSBuild bir uyarı yayar. *global.js* dosyadaki bir sürüm belirtilmişse, projelerinizde bir sürüm **belirtmemelidir** .
+Derleme sırasında her proje SDK'sı yalnızca bir sürümü kullanılabilir. Aynı proje SDK'sı için iki farklı sürüme başvurursanız MSBuild uyarı verir. Dosyanın **dosyasındaki** dosyada bir sürüm belirtilirse projelerinize bir sürüm *global.jsönerilir.*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

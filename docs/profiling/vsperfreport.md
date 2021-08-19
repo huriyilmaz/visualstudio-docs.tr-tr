@@ -18,12 +18,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f8e249601ada0304e074872dbe04b7a2653af79226faa8fb60493447174c365
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ef7d9f356cd0babe78e1364aacb3657f762f31ef
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121230618"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156766"
 ---
 # <a name="vsperfreport"></a>VSPerfReport
 VSPerfReport komut satırı aracı, Profil Oluşturma Araçları profil oluşturma veri dosyalarını kullanarak rapor oluşturmak için kullanılır  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Varsayılan rapor biçimi bir. *CSV* dosyası.
@@ -88,9 +88,9 @@ VSPerfReport [/U] /diff vspfilename1 vspfilename2 [/options]
 |-------------|-----------------|
 |**Fark**  `vspfile1 vspfile2`|İki rapor dosyasını karşılaştırın (.*VSP* veya. *vsps*) dosyalarý. Özet seçenekleri fark seçeneği kullanılarak yok sayılacak.|
 |**Fark:**[*değer*]|Bu eşik değerinin altında iki değer arasındaki fark yok sayıardı edilir. Ayrıca, bu eşiğin altındaki değerlere sahip yeni veriler gösterilmeyecektir.|
-|**Difftable:**[*tabloadı*]|Dosyaları karşılaştırmak için bu belirli tabloyu kullanın. Varsayılan değer işlevler tablosudur.|
-|**Diffcolumn:**[*ColumnName*]|Bu özel sütun Compare değerlerini kullanın. Varsayılan değer, özel örnek yüzdesi sütunudur.|
-|**QueryDiffTables**|Belirtilen iki rapor dosyası için geçerli tabloları ve sütunları listeleyin.|
+|**Difftable:**[*tabloadı*]|Dosyaları karşılaştırmak için bu tabloyu kullanın. Varsayılan değer işlevler tablosudur.|
+|**DiffColumn:**[*columnname*]|Değerleri karşılaştırmak için bu sütunu kullanın. Varsayılan değer, özel örnekler yüzde sütunu'dır.|
+|**QueryDiffTables**|Sağlanan iki rapor dosyası için geçerli tabloları ve sütunları listele.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans raporu görünümleri](../profiling/performance-report-views.md)

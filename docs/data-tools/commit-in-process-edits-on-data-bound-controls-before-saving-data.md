@@ -1,6 +1,6 @@
 ---
-title: Kaydedilmemiş düzenlemeler
-description: veri kaydedilmeden önce veriye bağlı Windows Forms denetimlerinde işlem içi düzenlemeleri yürütün. Form üzerindeki tüm BindingSource bileşenleri için EndEdit 'u çağırın.
+title: İşlenemez düzenlemeler
+description: Verileri kaydetmeden önce, veriye bağlı Windows Formlar denetimlerini işleme. Bir formda tüm BindingSource bileşenleri için EndEdit çağrısı.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -21,34 +21,34 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1cee28208d40de90039306acff40ffdd650cd236aa6935e473e8389efa232302
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9e69734b43a0c959a724ee9116f919597c14002d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121347811"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154933"
 ---
 # <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>Verileri kaydetmeden önce verilere bağlı denetimler üzerinde işlem içi düzenlemeler yürütme
 
-Veri bağlantılı denetimlerde değerler düzenlenirken, kullanıcılar, güncelleştirilmiş değeri denetimin bağlandığı temel alınan veri kaynağına uygulamak için geçerli kaydın üzerinde gezinmelidir. Öğeleri [veri kaynakları penceresinden](add-new-data-sources.md) bir form üzerine sürüklediğinizde, sürüklediğiniz ilk öğe, **Kaydet** düğmesine tıklama olayına kodu oluşturur <xref:System.Windows.Forms.BindingNavigator> . Bu kod <xref:System.Windows.Forms.BindingSource.EndEdit%2A> , yöntemini çağırır <xref:System.Windows.Forms.BindingSource> . Bu nedenle, yöntemine yapılan çağrı <xref:System.Windows.Forms.BindingSource.EndEdit%2A> yalnızca forma eklenen ilk için oluşturulur <xref:System.Windows.Forms.BindingSource> .
+Veriye bağlı denetimlerde değerleri düzenlerken, kullanıcıların güncelleştirilmiş değeri denetimin bağlı olduğu temel alınan veri kaynağına kaydetmek için geçerli kayıttan inmiş olması gerekir. Veri Kaynakları Penceresindeki [öğeleri](add-new-data-sources.md) bir forma sürüklerken, bıraktığınızda ilk öğe Kaydet düğmesine **tıklayarak** olayına kod <xref:System.Windows.Forms.BindingNavigator> üretir. Bu kod yöntemini <xref:System.Windows.Forms.BindingSource.EndEdit%2A> <xref:System.Windows.Forms.BindingSource> çağıran. Bu nedenle, <xref:System.Windows.Forms.BindingSource.EndEdit%2A> yöntemine yapılan çağrı yalnızca forma <xref:System.Windows.Forms.BindingSource> eklenen ilk için oluşturulur.
 
-<xref:System.Windows.Forms.BindingSource.EndEdit%2A>Çağrı, şu anda düzenlenmekte olan herhangi bir veri bağlantılı denetimlerde, işlemdeki tüm değişiklikleri kaydeder. Bu nedenle, bir veri bağlantılı denetim hala odağa sahipse ve **Kaydet** düğmesine tıklarsanız, o denetimdeki tüm bekleyen düzenlemeler gerçek kaydetme işleminden ( `TableAdapterManager.UpdateAll` yöntemi) önce işlenir.
+Çağrısı, <xref:System.Windows.Forms.BindingSource.EndEdit%2A> devam eden tüm değişiklikleri, şu anda düzende olan veriye bağlı denetimlerde işler. Bu nedenle, veriye bağlı bir denetimin  odağı hala varsa ve Kaydet düğmesine tıklarsanız, bu denetimdeki bekleyen tüm düzenlemeler gerçek kaydetmeden önce (yöntem) `TableAdapterManager.UpdateAll` işlendi.
 
-Bir Kullanıcı, değişiklikleri kaydetmeden, kaydetme işleminin bir parçası olarak verileri kaydetmeye çalışırsa bile, uygulamanızı otomatik olarak değişiklikleri işleyecek şekilde yapılandırabilirsiniz.
+Kullanıcı değişiklikleri işlemeden verileri kaydetmeye çalışsa bile, kaydetme işleminin bir parçası olarak, değişiklikleri otomatik olarak işleyene kadar uygulamanızı yapılandırabilirsiniz.
 
 > [!NOTE]
-> Tasarımcı `BindingSource.EndEdit` kodu yalnızca bir form üzerine bırakılan ilk öğe için ekler. Bu nedenle, <xref:System.Windows.Forms.BindingSource.EndEdit%2A> form üzerinde her biri için yöntemini çağırmak üzere bir kod satırı eklemeniz gerekir <xref:System.Windows.Forms.BindingSource> . Her biri için yöntemi çağırmak üzere bir kod satırı el ile ekleyebilirsiniz <xref:System.Windows.Forms.BindingSource.EndEdit%2A> <xref:System.Windows.Forms.BindingSource> . Alternatif olarak, `EndEditOnAllBindingSources` Bu yöntemi forma ekleyebilirsiniz ve Kaydet işlemini gerçekleştirmeden önce çağırabilirsiniz.
+> Tasarımcı yalnızca `BindingSource.EndEdit` forma bırakılan ilk öğenin kodunu ekler. Bu nedenle, formda her biri için yöntemini çağıran <xref:System.Windows.Forms.BindingSource.EndEdit%2A> bir kod satırı eklemeniz <xref:System.Windows.Forms.BindingSource> gerekir. Her için yöntemini çağıran bir kod satırı el <xref:System.Windows.Forms.BindingSource.EndEdit%2A> ile <xref:System.Windows.Forms.BindingSource> ekleyebilirsiniz. Alternatif olarak, kaydetme işlemi `EndEditOnAllBindingSources` gerçekleştirmeden önce forma yöntemini ekleyebilir ve çağırabilirsiniz.
 
-Aşağıdaki kod, bir [LINQ (dil Ile tümleşik sorgu)](/dotnet/csharp/linq/) sorgusunu kullanarak tüm bileşenleri yineleyebilir <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingSource.EndEdit%2A> her bir form için yöntemini çağırır <xref:System.Windows.Forms.BindingSource> .
+Aşağıdaki kod bir [LINQ (Language-Integrated Query)](/dotnet/csharp/linq/) sorgusu kullanarak tüm bileşenleri yeniden kullanır ve formda her <xref:System.Windows.Forms.BindingSource> biri için yöntemini <xref:System.Windows.Forms.BindingSource.EndEdit%2A> <xref:System.Windows.Forms.BindingSource> çağırabilir.
 
-## <a name="to-call-endedit-for-all-bindingsource-components-on-a-form"></a>Form üzerindeki tüm BindingSource bileşenleri için EndEdit 'u çağırmak için
+## <a name="to-call-endedit-for-all-bindingsource-components-on-a-form"></a>Bir formda tüm BindingSource bileşenleri için EndEdit çağrısı yapmak için
 
-1. Bileşenleri içeren forma aşağıdaki kodu ekleyin <xref:System.Windows.Forms.BindingSource> .
+1. Bileşenleri içeren forma aşağıdaki kodu <xref:System.Windows.Forms.BindingSource> ekleyin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VSProDataOrcasEndEditOnAll/CS/Form1.cs" id="Snippet1":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VSProDataOrcasEndEditOnAll/VB/Form1.vb" id="Snippet1":::
 
-2. Form verilerini kaydetmek için herhangi bir çağrının hemen öncesine aşağıdaki kod satırını ekleyin ( `TableAdapterManager.UpdateAll()` yöntemi):
+2. Formun verilerini kaydetmek için çağrılardan hemen önce aşağıdaki kod satırı ekleyin `TableAdapterManager.UpdateAll()` (yöntemi):
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VSProDataOrcasEndEditOnAll/CS/Form1.cs" id="Snippet2":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VSProDataOrcasEndEditOnAll/VB/Form1.vb" id="Snippet2":::

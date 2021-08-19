@@ -12,12 +12,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 92f44305d22790efbcb76d7c5559bde1a8b2166a9a12d03f7d462cf7e04644cc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 86d4d897fb7ea4000ed60f4c9c1047a21ab74c7f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121425916"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156662"
 ---
 # <a name="configure-python-web-apps-for-iis"></a>IIS için Python Web Apps 'i yapılandırma
 

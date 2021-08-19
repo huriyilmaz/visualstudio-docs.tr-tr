@@ -1,6 +1,6 @@
 ---
-title: 'Test alanı 6: silme | Microsoft Docs'
-description: Bu kaynak denetimi test alanı, Visual Studio kaynak denetimi eklentiniz için Çözüm Gezgini silme eylemlerini içerir.
+title: 'Test Alanı 6: Silme | Microsoft Docs'
+description: Bu kaynak denetimi test alanı, kaynak denetimi Çözüm Gezgini için Visual Studio silme eylemlerini kapsar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,21 +11,22 @@ ms.assetid: 6f2e872c-5ba2-4303-9f50-a90cef9a6225
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e405df704dfbba14413bd3787a9fb9f959c62a46
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: dd27a0ac99faf9ec2ab4b53fcbae31257e72202f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078597"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158755"
 ---
 # <a name="test-area-6-delete"></a>Test Alanı 6: Sil
-Bu kaynak denetimi eklentisi test alanı silme eylemlerini içerir.
+Bu kaynak denetimi eklentisi test alanı silme eylemlerini kapsar.
 
- Kaynak denetimi **Çözüm Gezgini** eylemleri silme işlemlerine yanıt verir.
+ Kaynak denetimi, içinde silme eylemlerine yanıt **Çözüm Gezgini.**
 
- Silinebilecek öğelerin listesi aşağıda verilmiştir:
+ Silinebilir öğelerin listesi aşağıda ve ardından görüntülenir:
 
 - Dosyalar
 
@@ -33,26 +34,26 @@ Bu kaynak denetimi eklentisi test alanı silme eylemlerini içerir.
 
 - Project
 
-  Proje türüne bağlı olarak, projeyi kaldırma (dosyaları diskte bırakır) veya projeyi **silme** (diskteki dosyaları **kaldırma** ) seçeneğiniz olabilir. Her iki eylem de **Çözüm Gezgini** proje veya öğeyi kaldırır.
+  Proje türüne bağlı olarak Projeyi kaldırma  (dosyaları diskte bırakır) veya  Projeyi silme (diskte dosyaları kaldırır) seçeneğiniz olabilir. Eylemlerden biri projeyi veya öğeyi öğesinden **Çözüm Gezgini.**
 
-## <a name="expected-behavior"></a>Beklenen davranış
- Silme testi alanındaki test çalışmaları için beklenen davranış:
+## <a name="expected-behavior"></a>Beklenen Davranış
+ Silme testi alanında test testleri için beklenen davranış şudur:
 
-- Silinen öğe artık **Çözüm Gezgini** içinde görünür değil.
+- Silinen öğe artık öğesi içinde **Çözüm Gezgini.**
 
-- Silinen projenin veya öğenin üst öğesi gerektiğinde kullanıma alındı (muhtemelen bir istem ile.)
+- Silinen projenin veya öğenin üst öğesi gerektiğinde kullanıma alınmış (büyük olasılıkla bir istem ile).)
 
-- Kullanıma alınmış veya eklenen bir öğeyi sildikten sonra, **bekleyen checkins** penceresinde görüntülenmez.
+- Kullanıma alınmış veya eklenen bir öğeyi sildikten sonra, bekleyen Iadeler **penceresinde GÖRÜNMEZ.**
 
-- Öğe, silme işleminden sonra bile kaynak denetim deposu içinde hala var ve el ile temizlenmelidir.
+- Öğe, silme sonrasında bile kaynak denetim deposu içinde mevcut olur ve el ile temizlenir.
 
-|Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|
+|Eylem|Test Adımları|Doğrulandı Beklenen Sonuçlar|
 |------------|----------------|--------------------------------|
-|İstemci projesini silme|1. bir istemci projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. tüm projeyi çözümden kaldır|Ortak beklenen davranış.|
-|Boş bir dosyayı Sil|1. bir istemci projesi oluşturun.<br />2. projeye sıfır baytlık bir dosya ekleyin.<br />3. çözümü kaynak denetimine ekleyin.<br />4. dosyayı seçin, silin.|Ortak beklenen davranış.|
-|Tek dosya içeren bir klasörü silme|1. tek proje çözümü oluşturun.<br />2. bir klasör ekleyin.<br />3. klasöre bir dosya ekleyin.<br />4. çözümü kaynak denetimine ekleyin.<br />5. istemden kaçınmak için projeye göz atın.<br />6. klasörü silin.|Ortak beklenen davranış.|
-|Dosya sistemi Web projesini silme|1. bir dosya sistemi Web projesi oluşturun (bir UNC yolu belirtmek için Gözatılacak düğmeyi kullanın).<br />2. çözümü kaynak denetimine ekleyin.<br />3. tüm projeyi çözümden kaldırın.<br />4. yerel Web projesi için 1 ile 3 arasındaki adımları yineleyin (kod üzerinden farklı yollar alıştırmaları, ancak aynı dış arabirime ve davranışa sahiptir).|Ortak beklenen davranış.|
-|Dosya sistemi Web projesinden dosya silme|1. bir dosya sistemi Web projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. bir dosyayı projeden silin.<br />4. yerel Web projesi için 1 ile 3 arasındaki adımları yineleyin (kod üzerinden farklı yollar alıştırmaları, ancak aynı dış arabirime ve davranışa sahiptir).|Ortak beklenen davranış.|
+|İstemci projesini silme|1. İstemci projesi oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Projenin tamamını çözümden kaldırma|Ortak Beklenen Davranış.|
+|Boş bir dosyayı silme|1. İstemci projesi oluşturun.<br />2. Projeye sıfır bir byte dosyası ekleyin.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Dosyayı seçin, silin.|Ortak Beklenen Davranış.|
+|Tek dosya içeren bir klasörü silme|1. Tek proje çözümü oluşturun.<br />2. Klasör ekleyin.<br />3. Klasöre bir dosya ekleyin.<br />4. Çözümü kaynak denetimine ekleyin.<br />5. İstemleri önlemek için projeyi kontrol edin.<br />6. Klasörü silin.|Ortak Beklenen Davranış.|
+|Dosya Sistemi Web projesini silme|1. Bir Dosya Sistemi Web projesi oluşturun (GÖZAT düğmesini kullanarak bir UNC yolu belirtin).<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Projenin tamamını çözümden kaldırın.<br />4. Yerel bir Web projesi için 1 ile 3 arasında adımları tekrarlayın (kodda farklı yollar üzerinde alıştırmalar ama aynı dış arabirim ve davranışa sahiptir).|Ortak Beklenen Davranış.|
+|Dosya Sistemi Web projesinden dosya silme|1. Dosya Sistemi Web projesi oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Projeden bir dosyayı silin.<br />4. Yerel bir Web projesi için 1 ile 3 arasında adımları tekrarlayın (kodda farklı yollar üzerinde alıştırmalar ama aynı dış arabirim ve davranışa sahiptir).|Ortak Beklenen Davranış.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentileri için Test Kılavuzu](../../extensibility/internals/test-guide-for-source-control-plug-ins.md)

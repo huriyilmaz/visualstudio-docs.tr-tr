@@ -1,6 +1,6 @@
 ---
 title: SuspendProfile | Microsoft Docs
-description: SuspendProfile yönteminin, belirtilen profil oluşturma düzeyi için askıya alma/bekleme sayacını nasıl artırdığı hakkında bilgi edinin.
+description: SuspendProfile yönteminin belirtilen profil oluşturma düzeyi için Askıya Al/Sürdür sayacını nasıl artır aldığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 05b3ed78dc22a713c5d567e9b29f8616ceee63c2366e170d008d6e7d0a9716f7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0826afe211de54723f49fa29b40fb0f91ede026f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121441702"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157156"
 ---
 # <a name="suspendprofile"></a>SuspendProfile
-`SuspendProfile`Yöntemi, belirtilen profil oluşturma düzeyi Için askıya al/sürdürüm sayacını artırır.
+yöntemi, `SuspendProfile` belirtilen profil oluşturma düzeyi için Askıya Al/Sürdür sayacını artırır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,46 +34,46 @@ PROFILE_COMMAND_STATUS PROFILERAPI SuspendProfile(
 #### <a name="parameters"></a>Parametreler
  `Level`
 
- Performans veri koleksiyonunun uygulanabileceğini gösteren profil düzeyini gösterir. Aşağıdaki **PROFILE_CONTROL_LEVEL** Numaralandırıcılar, performans verileri koleksiyonunun uygulanabileceği üç düzeyden birini göstermek için kullanılabilir:
+ Performans verisi toplamanın uygulana profil düzeyini gösterir. Aşağıdaki **PROFILE_CONTROL_LEVEL** numaralandırıcıları, performans verisi toplamanın uygulan olduğu üç düzeyden birini belirtmek için kullanılabilir:
 
-|Sının|Açıklama|
+|Numaralayıcı|Açıklama|
 |----------------|-----------------|
-|PROFILE_GLOBALLEVEL|Genel düzey ayarı, profil oluşturma çalıştırmasında tüm işlem ve iş parçacıklarını etkiler.|
-|PROFILE_PROCESSLEVEL|İşlem düzeyi ayarı, belirtilen işlemin parçası olan tüm iş parçacıklarını etkiler.|
-|PROFILE_THREADLEVEL|İş parçacığı profil oluşturma düzeyi ayarı belirtilen iş parçacığını etkiler.|
+|PROFILE_GLOBALLEVEL|Genel düzey ayarı, profil oluşturma çalıştırması sırasındaki tüm işlemleri ve iş parçacıklarını etkiler.|
+|PROFILE_PROCESSLEVEL|İşlem düzeyi ayarı, belirtilen sürecin parçası olan tüm iş parçacıklarını etkiler.|
+|PROFILE_THREADLEVEL|İş parçacığı profil oluşturma Düzeyi ayarı belirtilen iş parçacığını etkiler.|
 
  `dwId`
 
  Sistem tarafından oluşturulan işlem veya iş parçacığı tanımlayıcısı.
 
 ## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
- İşlev, **PROFILE_COMMAND_STATUS** numaralandırma kullanılarak başarılı veya başarısız olduğunu gösterir. Dönüş değeri aşağıdakilerden biri olabilir:
+ işlevi, bir veya daha fazla **numaralama kullanarak PROFILE_COMMAND_STATUS** gösterir. Dönüş değeri aşağıdakilerden biri olabilir:
 
-|Sının|Açıklama|
+|Numaralayıcı|Açıklama|
 |----------------|-----------------|
-|PROFILE_ERROR_ID_NOEXIST|Profil oluşturma öğesi KIMLIĞI yok.|
+|PROFILE_ERROR_ID_NOEXIST|Profil oluşturma öğesi kimliği yok.|
 |PROFILE_ERROR_LEVEL_NOEXIST|Belirtilen profil oluşturma düzeyi yok.|
-|PROFILE_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında hiçbir zaman olarak ayarlanmıştır.|
-|PROFILE_ERROR_NOT_YET_IMPLEMENTED|Profil oluşturma işlev çağrısı, profil oluşturma düzeyi veya çağrının ve düzeyin birleşimi henüz uygulanmadı.|
+|PROFILE_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldıken NEVER olarak ayarlanmıştır.|
+|PROFILE_ERROR_NOT_YET_IMPLEMENTED|Profil oluşturma işlevi çağrısı, profil oluşturma düzeyi veya çağrı ve düzey birleşimi henüz uygulanmamıştır.|
 |PROFILE_OK|Çağrı başarılı oldu.|
 
 ## <a name="remarks"></a>Açıklamalar
- Askıya alma/sürdürülme sayacının başlangıç değeri 0 ' dır. Her SuspendProfile çağrısı, askıya alma/sürdürülme sayısına 1 ekler; Her ResumeProfile çağrısı 1 ' i çıkartır.
+ Askıya Al/Sürdür sayacının ilk değeri 0'dır. SuspendProfile'a yapılan her çağrı Askıya Alma/Sürdürme sayısına 1 ekler; ResumeProfile'a yapılan her çağrı 1'i çıkarır.
 
- Askıya alma/sürdürülme sayısı 0 ' dan büyükse, düzeyin askıya alma/bırakma durumu kapalı olur. Sayı 0 ' dan küçük veya buna eşit olduğunda, askıya alma/bekleme durumu açık olur.
+ Askıya Alma/Sürdürme sayısı 0'dan büyükse, düzey için Askıya Al/Sürdür durumu OFF olur. Sayı 0'dan küçük veya 0'a eşit olduğunda Askıya Al/Sürdür durumu ON olur.
 
- Başlat/Durdur durumu ve askıya alma/bekleme durumu her ikisi de olduğunda, düzeyin profil oluşturma durumu açık olur. Bir iş parçacığının profili oluşturmak için, iş parçacığının genel, işlem ve iş parçacığı düzeyi durumları açık olmalıdır.
+ Başlatma/Durdurma durumu ve Askıya Alma/Sürdürme durumu açık olduğunda, düzeyin profil oluşturma durumu ON olur. Bir iş parçacığının profilinin profili oluşturmak için iş parçacığının genel, işlem ve iş parçacığı düzeyi durumları açık olması gerekir.
 
-## <a name="net-framework-equivalent"></a>.NET Framework eşdeğeri
+## <a name="net-framework-equivalent"></a>.NET Framework eşdeğer
  *Microsoft.VisualStudio.Profiler.dll*
 
 ## <a name="function-information"></a>İşlev bilgileri
- Üst bilgi: *VSPerf. h* içinde bildiriliyor
+ Üst Bilgi: *VSPerf.h içinde bildirildi*
 
- İçeri aktarma kitaplığı: *VSPerf. lib*
+ İçeri aktarma kitaplığı: *VSPerf.lib*
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte SuspendProfile yöntemi gösterilmektedir. Bu örnek, [PROFILE_CURRENTID](../profiling/profile-currentid.md)tarafından tanımlanan işlem veya iş parçacığı Için StartProfile 'e yapılan önceki çağrının yapıldığını varsayar.
+ Aşağıdaki örnek SuspendProfile yöntemini göstermektedir. Bu örnekte, tarafından tanımlanan işlem veya iş parçacığı için startProfile'a daha önce bir çağrı [PROFILE_CURRENTID.](../profiling/profile-currentid.md)
 
 ```cpp
 void ExerciseSuspendProfile()
@@ -108,4 +108,4 @@ void ExerciseSuspendProfile()
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio profil oluşturucu apı başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Visual Studio profil oluşturma API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)

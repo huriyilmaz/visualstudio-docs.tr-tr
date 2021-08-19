@@ -9,12 +9,13 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.openlocfilehash: 842e34ce18767f5d16cc55d16b8346369fe6cef9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-general
+ms.openlocfilehash: 00580c7a1e63dd3c68fc9a86b67812ed3a1dfa8b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869121"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085968"
 ---
 # <a name="how-to-troubleshoot-templates"></a>Nasıl yapılır: şablonlarda sorun giderme
 
@@ -24,23 +25,23 @@ Bir şablon geliştirme ortamında yüklenemezse, sorunu bulmanın birkaç yolu 
 
 ::: moniker range="vs-2017"
 
-Şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı değilse, şablon **Yeni proje** iletişim kutusunda görünmeyebilir.
+bir şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı değilse, şablon **yeni Project** iletişim kutusunda görünmeyebilir.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Bir şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı değilse, şablon yeni projeler oluşturduğunuz iletişim kutusunda görünmeyebilir.
+bir şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı değilse, şablon yeni projeler oluşturduğunuz iletişim kutusunda görünmeyebilir.
 
 ::: moniker-end
 
 ### <a name="to-validate-the-vstemplate-file"></a>Vstemplate dosyasını doğrulamak için
 
-1. Şablonu içeren *. zip* dosyasını bulun.
+1. Şablonu içeren *.zip* dosyasını bulun.
 
-1. *. Zip* dosyasını ayıklayın.
+1. *.zip* dosyasını ayıklayın.
 
-1. Visual Studio 'daki **Dosya** menüsünde Dosya **Aç**' ı seçin  >  .
+1. Visual Studio **dosya** menüsünde dosya aç ' ı seçin   >  .
 
 1. Şablon için *vstemplate* dosyasını seçin ve **Aç**' ı seçin.
 
@@ -51,11 +52,11 @@ Bir şablondaki *vstemplate* dosyası Visual Studio şablon şemasına bağlı d
 
 1. *Vstemplate* dosyasını kaydedin ve kapatın.
 
-1. Şablonunuza dahil olan dosyaları seçin, sağ tıklayın ve   >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin. Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
+1. Şablonunuza dahil olan dosyaları seçin, sağ tıklayın ve   >  **Sıkıştırılmış (daraltılmış) klasöre** Gönder ' i seçin. Seçtiğiniz dosyalar bir *.zip* dosyasında sıkıştırılır.
 
-1. Yeni *. zip* dosyasını eski *. zip* dosyası ile aynı dizine yerleştirin.
+1. Yeni *.zip* dosyasını eski *.zip* dosyası ile aynı dizine yerleştirin.
 
-1. Ayıklanan şablon dosyalarını ve eski şablon *. zip* dosyasını silin.
+1. Ayıklanan şablon dosyalarını ve eski şablon *.zip* dosyasını silin.
 
 ## <a name="enable-diagnostic-logging"></a>Tanılama günlüğünü etkinleştirme
 

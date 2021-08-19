@@ -1,6 +1,6 @@
 ---
 title: Nesneler | Microsoft Docs
-description: Bu bölümdeki makaleler, Visual Studio SDK 'da çekirdek metin Düzenleyicisi 'nin bir örneğini oluşturmak için kullanılan nesnelerle ilgili başvuru bilgileri sağlar.
+description: Bu bölümdeki makaleler, Visual Studio SDK'sı içinde çekirdek metin düzenleyicisi örneği oluşturmak için kullanılan nesneler hakkında başvuru bilgileri sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,26 +10,27 @@ ms.assetid: 8a5ab7a4-3668-4f78-9c08-04c5af7090f2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: dba3e410934211e72599a30fff02f875c288c33c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: af3a945af061674fd4bd44a312cbaf48b8d0cc1a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090414"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158534"
 ---
 # <a name="objects"></a>Nesneler
-Aşağıdaki başvuru bilgileri, çekirdek metin düzenleyicisinin bir örneğini oluşturmak için kullanılan nesneleri açıklar.
+Aşağıdaki başvuru bilgileri, temel metin düzenleyicisinin bir örneğini oluşturmak için kullanılan nesneleri açıklar.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [VsCodeWindow nesnesi](../extensibility/vscodewindow-object.md) Bir veya daha fazla metin görünümünü kapsayan özelleşmiş bir belge penceresi olan kod penceresi nesnesini açıklar.
+- [VSCodeWindow Nesnesi](../extensibility/vscodewindow-object.md) Bir veya daha fazla metin görünümlerini kapsayan özel bir belge penceresi olan kod penceresi nesnesini açıklar.
 
-- [VSCodeWindowManager nesnesi](../extensibility/vscodewindowmanager-object.md) Dil hizmeti tarafından uygulanan ve donatılanların yönetiminden sorumlu kod penceresi Yöneticisi nesnesini açıklar.
+- [VSCodeWindowManager nesnesi](../extensibility/vscodewindowmanager-object.md) Dil hizmeti tarafından uygulanan ve donatma yönetiminden sorumlu olan kod penceresi yöneticisi nesnesini açıklar.
 
-- [VsTextBuffer nesnesi](../extensibility/vstextbuffer-object.md) Bir dosyanın verileri olan Unicode metin akışını temsil eden metin arabelleği nesnesini açıklar.
+- [VSTextBuffer nesnesi](../extensibility/vstextbuffer-object.md) Dosyanın verileri olan Unicode metin akışını temsil eden metin arabelleği nesnesini açıklar.
 
-- [VSTextView nesnesi](../extensibility/vstextview-object.md) Kullanıcıların metin arabelleğinin Unicode metnini görüntülemesine ve düzenlemesine izin veren bir pencere olan metin görünümünü açıklar.
+- [VSTextView nesnesi](../extensibility/vstextview-object.md) Kullanıcıların metin arabelleğinin Unicode metnini görüntülemesini ve düzenlemesini sağlayan bir pencere olan metin görünümünü açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Visual STUDIO SDK başvurusu](../extensibility/visual-studio-sdk-reference.md) Başvuru konularının bir listesini gösterir.
+- [Visual Studio SDK başvurusu](../extensibility/visual-studio-sdk-reference.md) Başvuru konularının listesini sunar.
