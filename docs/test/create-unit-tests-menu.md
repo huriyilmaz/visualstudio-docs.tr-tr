@@ -2,7 +2,7 @@
 title: Birim testi yöntemi saplamaları oluşturma
 description: Bir test projesinin, test sınıfının ve test yöntemi saplamanın kolayca yapılandırmasını sağlayan Birim Testleri Oluştur komutunu kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 07/26/2021
+ms.date: 08/19/2021
 ms.topic: how-to
 helpviewer_keywords:
 - unit testing, create unit tests
@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: b32cdf6da48b1becc9aed825f6e14127e31ee30b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 35eb729b08e969ded00bb2f6eb428ccdfece1032
+ms.sourcegitcommit: e6aeefef5b659a56e6e433d155bfd269c46bceb0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122135825"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122603586"
 ---
 # <a name="create-unit-test-method-stubs-from-code"></a>Koddan birim testi yöntemi saplamaları oluşturma
 
@@ -29,7 +29,7 @@ Birim **Testleri Oluştur komutu** birim testi yöntemi saplamaları oluşturur.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 > [!NOTE]
-> Birim **Testleri Oluştur menü** komutu yalnızca C# kodu için kullanılabilir.
+> Birim **Testleri Oluştur menü** komutu yalnızca C# kodu için kullanılabilir. Bu yöntemi .NET Core veya .NET Standard kullanmak için Visual Studio 2019 gerekir.
 ::: moniker-end
 
 Birim **Testleri Oluştur menü** komutu genişletilebilir ve MSTest, MSTest V2, NUnit ve xUnit için testler oluşturmak için kullanılabilir.
@@ -44,7 +44,7 @@ NUnit veya xUnit için test çerçevesi seçeneklerini görmüyorsanız bkz. Ü�
 
 ## <a name="set-unit-test-traits"></a>Birim testi niteliklerini ayarlama
 
-Bu testleri test otomasyonu işleminin bir parçası olarak çalıştırmayı planlıyorsanız, testin başka bir test projesinde (yukarıdaki iletişim kutusunda ikinci seçenek) oluşturulmuş ve birim testi için birim testi niteliklerini ayarlamayı düşünebilirsiniz. Bu, bu belirli testleri sürekli tümleştirme veya sürekli dağıtım işlem hattının bir parçası olarak dahil etmek veya dışlamak için daha kolay bir şekilde olanak sağlar. Nitelikler, aşağıda gösterildiği gibi doğrudan birim testinde meta veriler eklenmiştir.
+Bu testleri test otomasyonu işleminin bir parçası olarak çalıştırmayı planlıyorsanız, testin başka bir test projesinde (yukarıdaki iletişim kutusundaki ikinci seçenek) oluşturulmuş ve birim testi için birim testi niteliklerini ayarlamayı düşünebilirsiniz. Bu, bu belirli testleri sürekli tümleştirme veya sürekli dağıtım işlem hattının bir parçası olarak dahil etmek veya dışlamak için daha kolay bir şekilde olanak sağlar. Nitelikler, aşağıda gösterildiği gibi doğrudan birim testinde meta veriler eklenmiştir.
 
 ![Birim testi niteliklerini ayarlama](media/createunittest.png)
 
