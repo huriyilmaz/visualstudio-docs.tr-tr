@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: cc62ff5f6b09d2fde79e2267b294bb2e87328884a3f6ef1b5807ddc2216fd8f0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d35a2ee77341ab97209a41084751a0093b37a818
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121386946"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061738"
 ---
 # <a name="step-9-try-other-features"></a>9. Adım: Diğer özellikleri deneme
 Daha fazla bilgi edinmek için simgeleri ve renkleri değiştirmeyi, oyun zamanlayıcısı ve sesler eklemeyi deneyin. Oyunu daha zorlu hale getirmek için tahtayı büyütmeyi ve zamanlayıcıyı ayarlamayı deneyin.

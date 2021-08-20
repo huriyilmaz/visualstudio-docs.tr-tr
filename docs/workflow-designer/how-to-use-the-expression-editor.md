@@ -10,20 +10,21 @@ ms.assetid: b5f961dd-6dda-41a9-9cae-0383d479ef3d
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 192418439bc25e6ac1b969483c0c48a030caa024
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9cba7dfc832eca703991b110254a60edc3bae054
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894081"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130461"
 ---
 # <a name="how-to-use-the-expression-editor"></a>Nasıl Yapılır: İfade Düzenleyicisini Kullanma
 
 Ifade Düzenleyicisi, ifadeleri girmek ve değerlendirmek için birçok iş akışı aktivitelerinde kullanılan bir İş Akışı Tasarımcısı denetimidir. Ifade Düzenleyicisi, diğer özelliklerin yanı sıra IntelliSense, renklendirme, ParamInfo, Error dalgalı çizgiler dahil olmak üzere tam kapsamlı bir IDE düzenleme deneyimi sağlar. Derleyici, ifadeyi girdikten sonra doğrular. İfade geçersizse, bir hata simgesi görüntülenir. Düzenleyici Ayrıca bir **Ifade Düzenleyicisi** iletişim kutusu olarak açılabilir.
 
-İfadeler değişmez değerlerdir veya bağımsız değişkenlere veya özelliklere göre Visual Basic kodudur. Bunlar, yeni bir değer sağlamak için işlemlerle birleştirilmiş değer öğeleri (örneğin, değişkenler, sabitler, sabit değerler, Özellikler) içerirler. Uygulamalar C# kullanan bir programda olsa bile, VB.NET sözdizimi kullanılarak ifadeler yazılır. Bu, büyük/küçük harf, tek bir eşittir işareti ("=" yerine "=") kullanılarak gerçekleştirilmiş olması anlamına gelir, Boole işleçleri "&&" ve "| |" sembolleri yerine "and" ve "veya" kelimeleridir ve **null** yerine **hiçbir şey** kullanılmaz. Visual Basic ifade ve işleçler hakkında daha fazla bilgi için ve bazı örnekler için bkz. [Visual Basic işleçler ve ifadeler](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100)).
+ifadeler değişmez değerlerdir veya bağımsız değişkenlere veya özelliklere göre Visual Basic kodudur. Bunlar, yeni bir değer sağlamak için işlemlerle birleştirilmiş değer öğeleri (örneğin, değişkenler, sabitler, sabit değerler, Özellikler) içerirler. Uygulamalar C# kullanan bir programda olsa bile, VB.NET sözdizimi kullanılarak ifadeler yazılır. Bu, büyük/küçük harf, tek bir eşittir işareti ("=" yerine "=") kullanılarak gerçekleştirilmiş olması anlamına gelir, Boole işleçleri "&&" ve "| |" sembolleri yerine "and" ve "veya" kelimeleridir ve **null** yerine **hiçbir şey** kullanılmaz. Visual Basic ifade ve işleçler hakkında daha fazla bilgi için ve bazı örnekler için bkz. [Visual Basic işleçler ve ifadeler](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100)).
 
 **Ifade Düzenleyicisi** aşağıdaki gibi davranır:
 
@@ -34,11 +35,11 @@ Ifade Düzenleyicisi, ifadeleri girmek ve değerlendirmek için birçok iş akı
 - Yeniden barındırılan bir iş akışı tasarımcısında Ifade düzenleyicisine odaklanıyorsanız, bir metin kutusu gibi davranır. Yeniden barındırılan iş akışı tasarımcısında odak kaybedildiği zaman, Ifade Düzenleyicisi normal bir TextBlock gibi görünür.
 
 > [!NOTE]
-> Ifade Düzenleyicisi için IntelliSense yalnızca Visual Studio içinde kullanılabilir. Hem Visual Studio 'da hem de yeniden barındırılan senaryolarda, derleyici girildikten sonra ifadeyi doğrular ve ifade geçersizse ifade Düzenleyicisi bir hata simgesi görüntüler.
+> Ifade Düzenleyicisi için IntelliSense yalnızca Visual Studio içinde kullanılabilir. hem Visual Studio hem de yeniden barındırılan senaryolarda, derleyici girildikten sonra ifadeyi doğrular ve ifade geçersizse ifade düzenleyicisi bir hata simgesi görüntüler.
 
 ## <a name="use-the-expression-editor"></a>İfade Düzenleyicisini Kullanma
 
-1. Visual Studio 'da yeni veya var olan bir iş akışı projesi açın.
+1. Visual Studio ' de, yeni veya mevcut bir iş akışı projesi açın.
 
 2. <xref:System.Activities.Statements.Assign>İş akışınıza etkinlik ekleyin.
 

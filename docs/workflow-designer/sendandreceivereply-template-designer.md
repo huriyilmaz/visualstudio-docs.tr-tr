@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: b39383e23f917f3f19c590e20f96dcdf8d611239ed6b1477aee4cd93bbcb12e9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6a6a91c562750898fd085f1b32d8c299a8604d93
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440428"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135292"
 ---
 # <a name="sendandreceivereply-template-designer"></a>SendAndReceiveReply Şablon Tasarımcısı
 

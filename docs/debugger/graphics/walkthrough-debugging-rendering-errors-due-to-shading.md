@@ -1,5 +1,5 @@
 ---
-title: 'Adım adım kılavuz: Gölgelendirme Hataları Nedeniyle Hata Ayıklama | Microsoft Docs'
+title: 'adım adım kılavuz: Gölgelendirme Hataları Nedeniyle Hata Ayıklama | Microsoft Docs'
 description: Gölgelendirici hatası bulan bir araştırmayı izleyin. Grafik Piksel Geçmişi ve HLSL Visual Studio Grafik Tanılama dahil olmak üzere uygulamanın kullanımını gösterir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -11,15 +11,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b8e62cbf7d1dfb931c96a280c7b9bfcc1f73468f4944c438db6ff3e7d2546f9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6f359715bebdab4323bba21637f8a3f4be0f98f1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362666"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133919"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama
-Bu kılavuzda gölgelendirici hatası Grafik Tanılama yanlış renklendirilmiş bir nesneyi araştırmak için Grafik Tanılama'nin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nasıl kullanıldığı açıklandı.
+Bu kılavuzda gölgelendirici hatası Grafik Tanılama yanlış renklendirilmiş bir nesneyi araştırmak için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Grafik Tanılama'nin nasıl kullanıldığı açıklandı.
 
  Bu izlenecek yol şunların nasıl olduğunu gösteriyor:
 
@@ -32,12 +32,12 @@ Bu kılavuzda gölgelendirici hatası Grafik Tanılama yanlış renklendirilmiş
 ## <a name="scenario"></a>Senaryo
  Bir köşe gölgelendiricisi piksel gölgelendiricisi yanlış veya tamamlanmamış bilgileri geçtiğinde, nesnelerde yanlış renklendirme yaygın olarak oluşur.
 
- Bu senaryoda, yakın zamanda uygulamanıza bir nesnesi eklediniz. Ayrıca nesneyi dönüştürmek ve benzersiz bir görünüm vermek için yeni bir köşe ve piksel gölgelendiricileri ekledik. Bir test sırasında uygulamayı çalıştırsanız, nesne düz siyah olarak işlenir. Bu Grafik Tanılama kullanarak, uygulamanın hata ayıklaması için sorunu bir grafik günlüğüne yakalarsiniz. Sorun uygulamada şu görüntüye benzer:
+ Bu senaryoda, yakın zamanda uygulamanıza bir nesnesi eklediniz. Ayrıca nesneyi dönüştürmek ve benzersiz bir görünüm vermek için yeni bir köşe ve piksel gölgelendiricileri ekledik. Bir test sırasında uygulamayı çalıştırsanız, nesne düz siyah olarak işlenir. Bu Grafik Tanılama kullanarak, uygulamanın hata ayıklaması için sorunu bir grafik günlüğüne yakalarsanız. Sorun uygulamada şu görüntüye benzer:
 
  ![Nesnesi yanlış renklerle işlenir.](media/gfx_diag_demo_render_error_shader_problem.png "gfx_diag_demo_render_error_shader_problem")
 
 ## <a name="investigation"></a>Araştırma
- Aşağıdaki Grafik Tanılama kullanarak, test sırasında yakalanan kareleri incelemek için grafik günlüğü belgesini yükleyebilirsiniz.
+ Test Grafik Tanılama kullanarak, test sırasında yakalanan kareleri incelemek için grafik günlüğü belgesini yükleyebilirsiniz.
 
 #### <a name="to-examine-a-frame-in-a-graphics-log"></a>Grafik günlüğünde bir çerçeveyi incelemek için
 
@@ -47,11 +47,11 @@ Bu kılavuzda gölgelendirici hatası Grafik Tanılama yanlış renklendirilmiş
 
     ![Grafik günlüğü belgesi Visual Studio.](media/gfx_diag_demo_render_error_shader_step_1.png "gfx_diag_demo_render_error_shader_step_1")
 
-   Sorunu gösteren bir çerçeveyi seçmenizin ardından, tanılamak için **Grafik Piksel Geçmişi** penceresini kullanabilirsiniz. Grafik **Piksel Geçmişi penceresi** belirli bir pikseli, gölgelendiricilerini ve işleme hedefi üzerindeki etkilerini kronolojik olarak etkilemiş olan temelleri gösterir.
+   Sorunu gösteren bir çerçeveyi seçdikten sonra, tanılamak için **Grafik Piksel Geçmişi** penceresini kullanabilirsiniz. Grafik **Piksel Geçmişi penceresi** belirli bir pikseli, gölgelendiricilerini ve işleme hedefi üzerindeki etkilerini kronolojik olarak etkilemiş olan temelleri gösterir.
 
 #### <a name="to-examine-a-pixel"></a>Pikseli incelemek için
 
-1. Grafik Piksel **Geçmişi penceresini** açın. Yeni araç **Grafik Tanılama** Piksel Geçmişi'ne **tıklayın.**
+1. Grafik Piksel **Geçmişi penceresini** açın. Yeni araç **Grafik Tanılama** Piksel **Geçmişi'ne tıklayın.**
 
 2. İncelenecek pikseli seçin. Grafik günlüğü belge penceresinde, nesnesinde yanlış renklendirilmiş piksellerden birini seçin:
 
@@ -67,7 +67,7 @@ Bu kılavuzda gölgelendirici hatası Grafik Tanılama yanlış renklendirilmiş
 
 #### <a name="to-examine-the-pixel-shader"></a>Piksel gölgelendiriciyi incelemek için
 
-1. Piksel gölgelendiricisinde hata ayıklamaya başlama. Grafik Piksel **Geçmişi penceresinde,** nesnenin temel öğenin altında Piksel Gölgelendiricisi'nin **yanındaki** Hata **Ayıklamayı Başlat düğmesini** seçin.
+1. Piksel gölgelendiricisinde hata ayıklamaya başlama. Grafik Piksel **Geçmişi penceresinde,** nesnenin temel öğenin altında, **Piksel Gölgelendiricisi'nin yanındaki** Hata **Ayıklamayı Başlat düğmesini** seçin.
 
 2. Bu senaryoda, piksel gölgelendiricisi yalnızca köşe gölgelendiricisi üzerinden rengi geçtiğinden, piksel gölgelendiricinin sorunun kaynağı olmadığını gözlemlemek kolaydır.
 
@@ -101,7 +101,7 @@ output.color = float3(0.0f, 0.0f, 0.0f);
 output.color = input.color;
 ```
 
- Bu kod, köşe rengini nesnenin köşelerinden değiştirilmeden geçer; daha karmaşık köşe gölgelendiricileri, içinden geçirmeden önce rengi değiştirebilir. Düzeltilmiş köşe gölgelendiricisi kodu şu şekildedir:
+ Bu kod, köşe rengini nesnenin değiştirilmeden köşelerinden geçer; daha karmaşık köşe gölgelendiricileri, geçirmeden önce rengi değiştirebilir. Düzeltilmiş köşe gölgelendiricisi kodu şu şekildedir:
 
  ![Düzeltilmiş köşe gölgelendiricisi kodu.](media/gfx_diag_demo_render_error_shader_step_8.png "gfx_diag_demo_render_error_shader_step_8")
 

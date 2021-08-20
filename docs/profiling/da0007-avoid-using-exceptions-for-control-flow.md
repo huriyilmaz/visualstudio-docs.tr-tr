@@ -16,12 +16,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b6dcf3fe5246a3a0281868f4b7ddf753fcd9511afc48028b4a2a69129892c13
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1ec3f859c5ebb2bec91574b7700004a9b03e310b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121396753"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107881"
 ---
 # <a name="da0007-avoid-using-exceptions-for-control-flow"></a>DA0007: Denetim akışı için özel durumlar kullanmaktan kaçının
 

@@ -8,14 +8,15 @@ ms.assetid: f779b1fd-82a9-4a11-8ab7-c1c9caabc883
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-designers
 ms.workload:
 - multiple
-ms.openlocfilehash: 969dd229d8d6cd6bdbe9d53eaabd63f1eedd6570
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e0c992cb071b0a74a9c7d6c5bc3ab93cd17ad1b6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99930856"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122133581"
 ---
 # <a name="how-to-model-3d-terrain"></a>Nasıl yapılır: 3B terbotları modelleme
 

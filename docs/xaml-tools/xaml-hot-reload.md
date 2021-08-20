@@ -1,6 +1,6 @@
 ---
-title: XAML Çalışırken Yeniden Yükleme kullanarak XAML yazma ve hata XAML Çalışırken Yeniden Yükleme
-description: XAML Çalışırken Yeniden Yükleme veya XAML düzenle ve devam edin, uygulamaları çalışırken XAML kodunuz üzerinde değişiklik yapmanızı sağlar
+title: XAML 'yi dinamik yeniden yükleme kullanarak yazma ve hata ayıklama
+description: XAML çalışırken yeniden yükleme veya XAML düzenleme ve devam etme, uygulamaları çalıştırırken XAML kodunuzda değişiklik yapmanıza olanak sağlar
 ms.date: 09/23/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,60 +12,60 @@ manager: jmartens
 ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 50fa8c216da426172a30d7b3b1adf2254dad4e28adeac9b05055de5e9bfa094b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4baea5effc0670a8366074187475c7c09c5b39ef
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121351529"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130279"
 ---
-# <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Visual Studio'de XAML Çalışırken Yeniden Yükleme ile XAML kodu Visual Studio
+# <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Visual Studio xaml üzerinde çalışan XAML kodu yazma ve hata ayıklama
 
-XAML Çalışırken Yeniden Yükleme çalışırken XAML kodunda değişiklik yapmanıza izin vererek WPF veya UWP uygulaması kullanıcı arabiriminizi (UI) derlemenize yardımcı olur. Çalışırken Yeniden Yükleme hem Visual Studio hem de Visual Studio için Blend. Bu özellik, çalışan uygulamanın veri bağlamı, kimlik doğrulama durumu ve tasarım zamanında benzetimini yapmak zor olan diğer gerçek dünya karmaşıklığının avantajıyla XAML kodunu artımlı olarak derlemeye ve teste olanak sağlar. Sorun giderme adımlarıyla ilgili yardıma ihtiyacınız XAML Çalışırken Yeniden Yükleme, bunun [yerine sorun XAML Çalışırken Yeniden Yükleme](xaml-hot-reload-troubleshooting.md) bakın.
+XAML çalışırken yeniden yükleme, uygulamanızın çalışırken XAML kodunda değişiklik yapmanıza izin vererek WPF veya UWP uygulama kullanıcı arabirimi (UI) oluşturmanıza yardımcı olur. sık yeniden yükleme, hem Visual Studio hem de Visual Studio için Blend kullanılabilir. Bu özellik, çalışan uygulamanın veri bağlamının, kimlik doğrulama durumunun ve tasarım zamanı sırasında benzetim yapmak zor olan diğer gerçek hayklığın avantajıyla XAML kodunu artımlı olarak derleyip test etmenizi sağlar. XAML dinamik yeniden yükleme sorunlarını gidermek için yardıma ihtiyacınız varsa bkz. bunun yerine [xaml etkin yeniden yükleme sorunlarını giderme](xaml-hot-reload-troubleshooting.md) .
 
 > [!NOTE]
-> Xamarin.Forms kullanıyorsanız bkz. [Xamarin.Forms için XAML Çalışırken Yeniden Yükleme.](/xamarin/xamarin-forms/xaml/hot-reload)
+> Xamarin. Forms kullanıyorsanız, bkz. [Xamarin. Forms Için xaml etkin yeniden yükleme](/xamarin/xamarin-forms/xaml/hot-reload).
 
-XAML Çalışırken Yeniden Yükleme bu senaryolarda özellikle yararlıdır:
+XAML dinamik yeniden yükleme, özellikle bu senaryolarda yararlı olur:
 
-* Uygulama hata ayıklama modunda başlatıldıktan sonra XAML kodunda bulunan kullanıcı arabirimi sorunlarını düzeltme.
+* Uygulama hata ayıklama modunda başlatıldıktan sonra XAML kodunuzda bulunan Kullanıcı arabirimi sorunlarını düzeltme.
 
-* Geliştirme aşamasında olan bir uygulama için yeni bir kullanıcı arabirimi bileşeni oluşturma ve uygulamanın çalışma zamanı bağlamından yararlanma.
+* Uygulamanın çalışma zamanı bağlamından yararlanarak geliştirme aşamasındaki bir uygulama için yeni bir kullanıcı arabirimi bileşeni oluşturma.
 
-|Desteklenen Uygulama Türleri|İşletim Sistemi ve Araçlar|
+|Desteklenen uygulama türleri|İşletim sistemi ve araçlar|
 |-|-|-|
-|Windows Presentation Foundation (WPF) |.NET Framework 4.6+ ve .NET Core</br>Windows 7 ve üzeri |
-|Evrensel Windows uygulamaları (UWP)|Windows 10 SDK 14393+ [ile Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk) ve üzeri |
+|Windows Presentation Foundation (WPF) |.NET Framework 4.6 + ve .net Core</br>Windows 7 ve üzeri |
+|evrensel Windows uygulamaları (UWP)| [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) 14393 + ile Windows 10 ve üzeri |
 
-Aşağıdaki çizimde, kaynak kodunuzu açmak için Canlı Görsel Ağaç kullanımı ve ardından XAML Çalışırken Yeniden Yükleme ve düğme rengini değiştirme adımları gösterilmiştir.
+Aşağıdaki çizim, kaynak kodunuzu açmak için canlı görsel ağaç kullanımını ve sonra düğme metnini ve düğme rengini değiştirmek için XAML etkin yeniden yüklemeyi gösterir.
 
 ![XAML Çalışırken Yeniden Yükleme](../debugger/media/xaml-hot-reload-using.gif)
 
 > [!NOTE]
-> Visual Studio XAML Çalışırken Yeniden Yükleme şu anda yalnızca, Visual Studio veya Visual Studio için Blend ekli (**F5** veya Hata ayıklamayı başlat) ile birlikte **çalıştırıldı.** El ile bir ortam değişkeni ayarlamadıkça [İşleme ekle'yi](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) [kullanarak bu deneyimi etkinleştirebilirsiniz.](xaml-hot-reload-troubleshooting.md#verify-that-you-use-start-debugging-rather-than-attach-to-process)
+> Visual Studio XAML etkin yeniden yüklemesi şu anda yalnızca uygulamanız Visual Studio veya hata ayıklayıcı ekli Visual Studio için Blend çalıştırılırken desteklenir (**F5** veya **hata ayıklamayı başlat**). [Bir ortam değişkenini el ile](xaml-hot-reload-troubleshooting.md#verify-that-you-use-start-debugging-rather-than-attach-to-process)ayarlamadığınız sürece, [İşleme İliştir](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) ' i kullanarak bu deneyimi etkinleştiremezsiniz.
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-Aşağıdakiler, bilinen XAML Çalışırken Yeniden Yükleme. Karşılaşacak herhangi bir sınırlamaya çözüm olarak hata ayıklayıcıyı durdurmanız ve ardından işlemi tamamlamanız gerekir.
+XAML sık yeniden yükleme 'nin bilinen kısıtlamaları aşağıda verilmiştir. ' De çalıştırdığınız herhangi bir sınırlamaya geçici bir çözüm bulmak için, hata ayıklayıcıyı durdurmanız ve sonra işlemi doldurmanız yeterlidir.
 
 |Sınırlama|WPF|UWP|Notlar|
 |-|-|-|-|
-|Uygulama çalışırken olayları denetimlere kablolama|Desteklenmiyor|Desteklenmez|Hataya bakın: *Olayın Başarısız Olduğundan Emin Oldu.* WPF'de mevcut bir olay işleyiciye başvurabilirsiniz. UWP uygulamaları için mevcut bir olay işleyiciye başvuru desteklenmiyor.|
-|Kaynak sözlüğünde, uygulamanın Sayfa/Pencere veya *App.xaml'sinde* bulunanlar gibi kaynak nesneleri oluşturma|Visual Studio 2019 Güncelleştirme 2'den itibaren desteklemektedir|Desteklenir|Örnek: olarak `SolidColorBrush` kullanmak üzere bir kaynak sözlüğüne `StaticResource` ekleme.</br>Not: Statik kaynaklar, stil dönüştürücüler ve kaynak sözlüğüne yazılan diğer öğeler, kaynak sözlüğünü kullanırken XAML Çalışırken Yeniden Yükleme. Yalnızca kaynağın oluşturulması desteklenmiyor.</br> Kaynak sözlüğü özelliğini `Source` değiştirme.|
+|Uygulama çalışırken denetimlere yönelik bağlantı olayları|Desteklenmiyor|Desteklenmez|Bkz. hata: *olayın başarısız olduğundan emin olun*. WPF 'de, var olan bir olay işleyicisine başvurabilirsiniz. UWP uygulamalarında, var olan bir olay işleyicisine başvurulması desteklenmez.|
+|Uygulamanızın sayfa/pencere veya *app. xaml* gibi bir kaynak sözlüğünde kaynak nesneleri oluşturma|Visual Studio 2019 güncelleştirme 2 ' den itibaren desteklenir|Desteklenir|Örnek: `SolidColorBrush` olarak kullanmak için bir kaynak sözlüğüne ekleme `StaticResource` .</br>Note: statik kaynaklar, stil dönüştürücüler ve bir kaynak sözlüğüne yazılan diğer öğeler XAML etkin yeniden yükleme kullanılırken uygulanabilir/kullanılabilir. Yalnızca kaynağın oluşturulması desteklenmez.</br> Kaynak sözlüğü Özelliği değiştiriliyor `Source` .|
 |Uygulama çalışırken projenize yeni denetimler, sınıflar, pencereler veya diğer dosyalar ekleme|Desteklenmiyor|Desteklenmiyor|Hiçbiri|
-|Paket NuGet yönetme (paket ekleme/kaldırma/güncelleştirme)|Desteklenmiyor|Desteklenmiyor|Hiçbiri|
-|{x:Bind} işaretleme uzantısını kullanan veri bağlamayı değiştirme|Yok|Visual Studio 2019'dan itibaren destekle|Bunun için Windows 10 1809 (derleme 10.0.17763) gerekir. 2017 Visual Studio önceki sürümlerde desteklenmiyor.|
-|x:Uid yönergelerini değiştirme desteklenmiyor|Yok|Desteklenmiyor|Hiçbiri|
-|Birden çok işlem | Desteklenir | Desteklenir | Visual Studio 2019 [sürüm 16.6 ve sonraki sürümlerde](/visualstudio/releases/2019/release-notes-v16.6) destekle |
+|NuGet paketlerini yönetme (paket ekleme/kaldırma/güncelleştirme)|Desteklenmiyor|Desteklenmiyor|Hiçbiri|
+|{X:Bind} biçimlendirme uzantısını kullanan veri bağlamasını değiştirme|Yok|Visual Studio 2019 ' den itibaren desteklenir|bunun için Windows 10 sürüm 1809 (derleme 10.0.17763) gerekir. Visual Studio 2017 veya önceki sürümlerde desteklenmez.|
+|X:Uid yönergelerinin değiştirilmesi desteklenmiyor|Yok|Desteklenmiyor|Hiçbiri|
+|Birden çok işlem | Desteklenir | Desteklenir | Visual Studio 2019 [sürüm 16,6](/visualstudio/releases/2019/release-notes-v16.6) ve üzeri sürümlerde desteklenir |
 
 ## <a name="error-messages"></a>Hata iletileri
 
-Uygulama kullanırken aşağıdaki hatalara XAML Çalışırken Yeniden Yükleme.
+XAML sık yükleme 'yi kullanırken aşağıdaki hatalarda gelebiliriz.
 
 |Hata iletisi|Açıklama|
 |-|-|
-|Olayın Başarısız Olduğundan Emin Olmak|Hata, bir olayı denetimlerinden biri ile bağlantıya çalıştığınıza işaret ediyor ve bu durum uygulama çalışırken desteklenmiyor.|
-|Bu değişiklik uygulama tarafından XAML Çalışırken Yeniden Yükleme ve hata ayıklama oturumu sırasında uygulanmaz.|Hata, yapmaya çalıştığınız değişikliğin uygulama tarafından destek XAML Çalışırken Yeniden Yükleme. Hata ayıklama oturumunu durdurun, değişikliğin ardından hata ayıklama oturumunu yeniden başlatın. Destekleneni görmek istediğiniz desteklenmeyen bir senaryo bulursanız, Visual Studio [Developer](https://aka.ms/feedback/suggest?space=8)Community . |
+|Olayın başarısız olduğundan emin olun|Hata, sizin uygulamanız çalışırken desteklenmeyen denetimlerinizin birine bir olay gönderilmeye çalıştığınız anlamına gelir.|
+|Bu değişiklik XAML Hot Reload tarafından desteklenmiyor ve hata ayıklama oturumu sırasında uygulanmayacak.|Hata, denediğiniz değişikliğin XAML etkin yeniden yükleme tarafından desteklenmediğini gösterir. Hata ayıklama oturumunu durdurun, değişikliği yapın ve hata ayıklama oturumunu yeniden başlatın. desteklendiğini görmek istediğiniz desteklenmeyen bir senaryo bulursanız, [Visual Studio geliştirici Community](https://aka.ms/feedback/suggest?space=8)yeni "özellik öner" seçeneğini kullanın. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 18da5073284255da66afcc8ae0ebe65eec9f52892bab726585d8c993f58a1bac
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 42b5811169a7138cda0d292793bb1ccbaca7316c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415000"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110754"
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
 Bir iş parçacığının özelliklerini açıklar.
@@ -55,35 +55,35 @@ public struct THREADPROPERTIES {
 
 ## <a name="members"></a>Üyeler
  `dwFields`\
- Bu yapıda hangi [alanların geçerli olduğunu açıklayan](../../../extensibility/debugger/reference/threadproperty-fields.md) THREADPROPERTY_FIELDS bayrağının bir birleşimi.
+ Bu yapıdaki hangi alanların geçerli olduğunu açıklayan [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) Numaralandırmadaki bayrakların birleşimi.
 
  `dwThreadId`\
- İş parçacığı kimliği.
+ İş parçacığı KIMLIĞI.
 
  `dwSuspendCount`\
  İş parçacığı askıya alma sayısı.
 
  `dwThreadState`\
- [İş parçacığının durumunu](../../../extensibility/debugger/reference/threadstate.md) gösteren THREADSTATE numaralama değerinden bir değer.
+ İş parçacığının durumunu gösteren [ThreadState](../../../extensibility/debugger/reference/threadstate.md) sabit listesinden bir değer.
 
  `bstrPriority`\
- İş parçacığı önceliğini belirten bir dize; örneğin, "NormalIn Üzerinde", "Normal" veya "Kritik Zaman".
+ İş parçacığı önceliğini belirten bir dize; Örneğin, "normalin üzerinde", "normal" veya "zaman kritik".
 
  `bstName`\
  İş parçacığı adı.
 
  `bstrLocation`\
- İş parçacığı konumu (genellikle en üstteki yığın çerçevesi), genellikle yürütmenin durdurulduğu yöntemin adı olarak ifade edildi.
+ Genellikle yürütmenin Şu anda sonlandırıldığı yöntemin adı olarak ifade edilen iş parçacığı konumu (genellikle en üstteki yığın çerçevesi).
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, [GetThreadProperties yöntemine yapılan bir çağrıyla](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) doldurulur. Döndürülen bilgiler genellikle İş Parçacıkları penceresini doldurmak **için** kullanılır.
+ Bu yapı, [Getthreadproperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) yöntemine yapılan bir çağrı ile doldurulur. Döndürülen bilgiler genellikle **Iş parçacıkları** penceresini doldurmak için kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

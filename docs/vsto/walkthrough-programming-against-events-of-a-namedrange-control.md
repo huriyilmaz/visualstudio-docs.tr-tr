@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 8dcea6c0a963acfec784af11ca19e1623cdecce84ca88d1a6d8d318aa31a3fa3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8a6b5ca7d884fbece6795f63d668aa04a8ba6f80
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121383956"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068484"
 ---
 # <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>İzlenecek yol: NamedRange denetimi olaylarına karşı programlama
   bu izlenecek yol <xref:Microsoft.Office.Tools.Excel.NamedRange> , Visual Studio Office geliştirme araçlarını kullanarak Microsoft Office Excel çalışma sayfasına ve programa yönelik bir denetimin nasıl ekleneceğini gösterir.

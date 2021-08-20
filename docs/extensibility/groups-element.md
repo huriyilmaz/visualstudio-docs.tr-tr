@@ -1,6 +1,6 @@
 ---
-title: Groups öğesi | Microsoft Docs
-description: Groups öğesi bir VSPackage komut gruplarını tanımlayan girdileri içerir. Bu makale bir örnek içerir.
+title: Groups Öğesi | Microsoft Docs
+description: Groups öğesi, VSPackage'ın komut gruplarını tanımlayan girdileri içerir. Bu makale bir örnek içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 465340b0252acf75fc9a083e2990e4857d300c911e939ea8d4bb726c1fff6a3e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 703c0717a93cd2a201bad708830c42497758edb3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121275794"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122087008"
 ---
 # <a name="groups-element"></a>Groups öğesi
-VSPackage 'un komut gruplarını tanımlayan girişleri içerir.
+VSPackage'ın komut gruplarını tanımlayan girdileri içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,20 +40,20 @@ VSPackage 'un komut gruplarını tanımlayan girişleri içerir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
 |[Group öğesi](../extensibility/group-element.md)|Tek bir komut grubunu temsil eder.|
-|[Groups öğesi](../extensibility/groups-element.md)|VSPackage 'un komut gruplarını tanımlayan girişleri içerir.|
+|[Groups öğesi](../extensibility/groups-element.md)|VSPackage'ın komut gruplarını tanımlayan girdileri içerir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutların koleksiyonunu temsil eder.|
+|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğunda komut koleksiyonunu temsil eder.|
 
 ## <a name="example"></a>Örnek
 
@@ -66,5 +66,5 @@ VSPackage 'un komut gruplarını tanımlayan girişleri içerir.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackages Kullanıcı arabirimi öğeleri ekleme](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackage'lar kullanıcı arabirimi öğelerini nasıl ekler?](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

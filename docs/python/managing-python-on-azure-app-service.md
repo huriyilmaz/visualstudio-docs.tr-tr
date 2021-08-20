@@ -1,27 +1,28 @@
 ---
-title: Azure App Service (Windows) üzerinde Python yapılandırma
+title: Azure App Service üzerinde Python yapılandırma (Windows)
 description: Azure App Service bir Python yorumlayıcı ve kitaplıklarını yüklemek ve Web uygulamalarını bu yorumlayıcıya doğru şekilde başvuracak şekilde yapılandırmak.
 ms.date: 01/07/2019
 ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jmartens
+ms.technology: vs-python
 ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: f7c874a5cd2742f795c6d8b04db88b98b19a556d
-ms.sourcegitcommit: 8590cf6b3351e82827fd21159beefef0c02bf162
+ms.openlocfilehash: 7d571a490d93e57084a9b372b385eb406a592208
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102470020"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106893"
 ---
-# <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Azure App Service (Windows) üzerinde Python ortamı ayarlama
+# <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Azure App Service bir Python ortamı ayarlama (Windows)
 
 > [!Important]
-> Microsoft, [Linux üzerinde App Service](publishing-python-web-applications-to-azure-from-visual-studio.md)doğrudan dağıtımı için bu makalede açıklandığı gibi Windows üzerinde App Service için Python uzantılarını kullanımdan kaldırılmıştır.
+> Microsoft, [Linux üzerinde App Service](publishing-python-web-applications-to-azure-from-visual-studio.md)doğrudan dağıtımı için bu makalede açıklandığı gibi Windows App Service için Python uzantılarını kullanımdan kaldırılmıştır.
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/) Web uygulamalarına yönelik bir hizmet olarak platform sunumudur, bir tarayıcı aracılığıyla erişilen sitelere, kendi istemcileriniz tarafından kullanılan REST API 'lerine veya olay tarafından tetiklenen bir işleme sahip olsun. App Service, uygulamaları uygulamak için Python kullanmayı tamamen destekler.
 
@@ -200,7 +201,7 @@ Paketleri doğrudan sunucu ortamına yüklemek için aşağıdaki yöntemlerden 
 
 ### <a name="kudu-rest-api"></a>Kudu REST API
 
-Azure portal aracılığıyla kudu konsolunu kullanmak yerine, komutu ' e göndererek kudu REST API aracılığıyla komutları uzaktan çalıştırabilirsiniz `https://yoursite.scm.azurewebsites.net/api/command` . Örneğin, paketini yüklemek için `bottle` AŞAĞıDAKI JSON 'ı öğesine gönderin `/api/command` :
+Azure portal aracılığıyla Kudu konsolunu kullanmak yerine, kudu REST API komutuna göndererek uzaktan `https://yoursite.scm.azurewebsites.net/api/command` çalıştırabilirsiniz. Örneğin, paketini yüklemek için `bottle` aşağıdaki JSON'u 'a `/api/command` gönderin:
 
 ```json
 {
@@ -209,6 +210,6 @@ Azure portal aracılığıyla kudu konsolunu kullanmak yerine, komutu ' e gönde
 }
 ```
 
-Komutlar ve kimlik doğrulama hakkında daha fazla bilgi için bkz. [kudu belgeleri](https://github.com/projectkudu/kudu/wiki/REST-API).
+Komutlar ve kimlik doğrulaması hakkında bilgi için [Kudu belgelerine bakın.](https://github.com/projectkudu/kudu/wiki/REST-API)
 
-Ayrıca, `az webapp deployment list-publishing-profiles` Azure CLI aracılığıyla komutunu kullanarak kimlik bilgilerini görebilirsiniz (bkz. [az WebApp Deployment](/cli/azure/webapp/deployment?view=azure-cli-latest&preserve-view=true#az-webapp-deployment-list-publishing-profiles)). [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)'Da kudu komutlarının nakledilmesi için bir yardımcı kitaplık kullanılabilir.
+Azure CLI aracılığıyla komutunu kullanarak kimlik bilgilerini de bulabilirsiniz `az webapp deployment list-publishing-profiles` (bkz. [az webapp deployment](/cli/azure/webapp/deployment?view=azure-cli-latest&preserve-view=true#az-webapp-deployment-list-publishing-profiles)). kudu komutlarını göndermeye yardımcı kitaplığı [GitHub.](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)

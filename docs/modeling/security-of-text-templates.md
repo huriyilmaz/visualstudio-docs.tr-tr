@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 65c068df87a47ce956f35c9bbc41893d77f001faeae6a1ce34d232a937ea1a7a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 376abb9674519cc87afdfd9af81bea4a6d495903
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121398222"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085539"
 ---
 # <a name="security-of-text-templates"></a>Metin Şablonlarının Güvenliği
 Metin şablonlarının güvenlikle ilgili sorunları vardır:
@@ -34,4 +34,4 @@ Metin şablonlarının güvenlikle ilgili sorunları vardır:
 ## <a name="malicious-directive-processor"></a>Kötü Amaçlı Yönerge İşlemcisi
  Metin şablonu altyapısı bir dönüştürme ana bilgisayarı ve bir veya daha fazla yönerge işlemcisi ile etkileşim kurarak şablon metnini bir çıkış dosyasına dönüştürmektedir. Daha fazla bilgi için [bkz. Metin Şablonu Dönüştürme İşlemleri.](../modeling/the-text-template-transformation-process.md)
 
- Ana bilgisayar tarafından bir yönerge işlemcisini bulmak için kullanan mekanizma güvenli değildir, kötü amaçlı yönerge işlemcisi çalıştırma riskini çalıştırır. Kötü amaçlı yönerge işlemcisi, şablon çalıştır olduğunda `FullTrust` modunda çalıştıran kod sağlar. Özel bir metin şablonu dönüştürme ana bilgisayarı oluşturursanız, altyapının yönerge işlemcilerini bulması için kayıt defteri gibi güvenli bir mekanizma kullansanız gerekir.
+ Ana bilgisayar tarafından bir yönerge işlemcisini bulmak için kullanan mekanizma güvenli değildir, kötü amaçlı yönerge işlemcisi çalıştırma riskini çalıştırır. Kötü amaçlı yönerge işlemcisi, şablon çalıştır `FullTrust` çalıştırıken modunda çalıştıran kod sağlar. Özel bir metin şablonu dönüştürme ana bilgisayarı oluşturursanız, altyapının yönerge işlemcilerini bulması için kayıt defteri gibi güvenli bir mekanizma kullansanız gerekir.

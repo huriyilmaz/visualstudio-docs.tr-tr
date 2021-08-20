@@ -1,6 +1,6 @@
 ---
-title: Modüller görünümü | Microsoft Docs
-description: Modüller görünümünün profil oluşturma verilerinin modüllerini nasıl listeleyeceğinizi öğrenin. Her modül, hiyerarşik bir ağacın kök düğümüdür.
+title: Modüller Görünümü | Microsoft Docs
+description: Modüller görünümünün profil oluşturma verileri modüllerini nasıl listeleyeni olduğunu öğrenin. Her modül, hiyerarşik ağacın kök düğümüdür.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -17,25 +17,25 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: cacb5e6a30c0406ee0b3c0738bea94f5a5ea51d773aa3da3b66e78c00ed50e47
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e03c12722f6a35dae70b5cbe789524adf78b18a7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121354638"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107360"
 ---
 # <a name="modules-view"></a>Modüller Görünümü
-Modüller görünümü profil oluşturma verilerinin modüllerini listeler. Her modül, hiyerarşik bir ağacın kök düğümüdür. Modülün profili oluşturulan işlevleri modül düğümünün altında listelenir. Profil oluşturma verileri örnekleme yöntemi kullanılarak toplandıysa, satır bilgileri işlev düğümünün altında listelenir ve yönerge işaretçisi verileri satır düğümünün altında listelenir.
+Modüller görünümü, profil oluşturma verileri modüllerini listeler. Her modül, hiyerarşik ağacın kök düğümüdür. Modülün profili lenmiş işlevleri modül düğümünün altında listelenir. Profil oluşturma verileri örnekleme yöntemi kullanılarak toplanmışsa, satır bilgileri işlev düğümünün altında listelenir ve yönerge işaretçisi verileri satır düğümünün altında listelenir.
 
- Modül performans verilerinin görünümünü görüntülemek veya kapatmak için modül adını genişletin veya daraltın.
+ Modül performans verilerini görüntülemek veya kapatmak için modül adını genişletin veya daraltabilirsiniz.
 
- Sütun eklemek veya kaldırmak için, rapor penceresinde sağ tıklayın ve ardından **sütun Ekle/Kaldır**' ı seçin. Bir sütun adına tıklayarak verileri sıralayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md).
+ Sütun eklemek veya kaldırmak için rapor penceresine sağ tıklayın ve Ardından Sütun **Ekle/Kaldır'ı seçin.** Bir sütun adına tıklayarak verileri sıraabilirsiniz. Daha fazla bilgi için [bkz. Nasıl ekleyebilirsiniz: Rapor Görünümü sütunlarını özelleştirme.](../profiling/how-to-customize-report-view-columns.md)
 
- Modüller görünümünde kullanılabilen sütunlar, verileri toplamak için kullanılan profil oluşturma yöntemine (örnekleme veya izleme) ve .NET bellek verilerinin profil oluşturma çalıştırmasında toplanıp toplanmadığına bağlıdır.
+ Modüller görünümünde kullanılabilen sütunlar, verileri toplamak için kullanılan profil oluşturma yöntemine (örnekleme veya ölçüm) ve profil oluşturma çalıştırması içinde .NET bellek verisi toplanmış olup olmadığını bağlıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Modüller Görünümü](../profiling/modules-view-sampling-data.md)
 - [Modüller Görünümü](../profiling/modules-view-instrumentation-data.md)
-- [Modüller görünümü-izleme](../profiling/modules-view-dotnet-memory-instrumentation-data.md)
-- [Modüller görünümü-örnekleme](../profiling/modules-view-dotnet-memory-sampling-data.md)
+- [Modüller Görünümü - ölçüm](../profiling/modules-view-dotnet-memory-instrumentation-data.md)
+- [Modüller Görünümü - örnekleme](../profiling/modules-view-dotnet-memory-sampling-data.md)
 - [Modüller Görünümü](../profiling/modules-view-contention-data.md)

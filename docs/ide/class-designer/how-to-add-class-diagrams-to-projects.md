@@ -1,6 +1,6 @@
 ---
 title: Projelere sınıf diyagramları ekleme (Sınıf Tasarımcısı)
-description: Sınıfları ve diğer türleri tasarlama, düzenleme ve yeniden düzenleme, C#, Visual Basic veya C++ projenize bir sınıf diyagramı ekleme hakkında bilgi edinin.
+description: sınıfları ve diğer türleri tasarlama, düzenleme ve yeniden düzenleme, C#, Visual Basic veya C++ projenize bir sınıf diyagramı ekleme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 05/08/2018
 ms.topic: how-to
@@ -11,18 +11,19 @@ ms.assetid: 0eac1b54-2711-4e4b-9654-a0c429c08c8f
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 0af2717efec7cab8594f193c06e8813bd556b01f
-ms.sourcegitcommit: c3713f284c4fe10b10996d5eb67077ddd8641424
+ms.openlocfilehash: 539c3f9bbd59de6bc1df1bf60f39d96b1b1f439b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112375792"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122069514"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>Nasıl yapılır: projelere sınıf diyagramları ekleme
 
-Sınıfları ve diğer türleri tasarlamak, düzenlemek ve yeniden düzenlemek için C#, Visual Basic veya C++ projenize bir sınıf diyagramı ekleyin. Projedeki kodun farklı kısımlarını görselleştirmek için projeye birden çok sınıf diyagramı ekleyin.
+sınıfları ve diğer türleri tasarlamak, düzenlemek ve yeniden düzenlemek için C#, Visual Basic veya C++ projenize bir sınıf diyagramı ekleyin. Projedeki kodun farklı kısımlarını görselleştirmek için projeye birden çok sınıf diyagramı ekleyin.
 
 Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları oluşturamazsınız. UML sınıf diyagramları oluşturmak için bkz. [UML modelleme projeleri ve diyagramları oluşturma](https://devblogs.microsoft.com/devops/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/).
 
@@ -30,9 +31,9 @@ Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları o
 
 **Sınıf Tasarımcısı** bileşenini yüklemediyseniz, yüklemek için aşağıdaki adımları izleyin.
 
-1. Windows Başlat menüsünden **Visual Studio yükleyicisi** açın veya **Araçlar**' ı seçerek  >  Visual Studio 'daki menü çubuğundan Araçlar **ve Özellikler al** ' ı seçin.
+1. Windows Başlat menüsü **Visual Studio Yükleyicisi** açın veya **araçlar**'  >  ın menü çubuğundan **araçlar ve özellikler al** ' ı seçerek Visual Studio.
 
-   **Visual Studio yükleyicisi** açılır.
+   **Visual Studio Yükleyicisi** açılır.
 
 1. **Ayrı bileşenler** sekmesini seçin ve ardından **kod araçları** kategorisine gidin.
 

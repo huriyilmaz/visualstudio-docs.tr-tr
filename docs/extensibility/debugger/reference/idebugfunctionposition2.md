@@ -11,14 +11,15 @@ ms.assetid: a835f65b-91b0-48ad-8485-04534c814b1b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: e5afd44827d8d9b6f244bc914728bd090261ab25
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ab8fd2348ce7c8e84e38d8b8029c23712620816b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063480"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064168"
 ---
 # <a name="idebugfunctionposition2"></a>IDebugFunctionPosition2
 Bu arabirim, kaynak belgedeki bir işlevin soyut konumunu temsil eder.

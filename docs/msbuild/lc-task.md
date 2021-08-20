@@ -1,6 +1,6 @@
 ---
 title: LC görevi | Microsoft Docs
-description: MSBuild 'in bir. licx dosyasından bir. License dosyası oluşturan LC.exe kaydırmak için LC görevini nasıl kullandığını öğrenin.
+description: MSBuild,. licx dosyasından bir. license dosyası üreten LC.exe kaydırmak için LC görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,15 @@ ms.assetid: d5a53472-6f2a-42b8-a6db-593ca99c9790
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 881eb0cc8a3c872ed7166f8aff30420730f88c0d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 215fe806f8cf2843589c53d89100cf5055319959
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913758"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122069054"
 ---
 # <a name="lc-task"></a>LC görevi
 

@@ -12,12 +12,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: a4675e679dc62ae999553b5dd7de37dd9e89cf8a0dd5f75c7c5c6a45be452e15
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 10bab04db18962c592cac96eb707b0303874d5b3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384957"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135643"
 ---
 # <a name="how-to-create-an-add-in-for-the-web-performance-test-results-viewer"></a>Nasıl yapılır: Web performans Test Sonuçları Görüntüleyicisi için eklenti oluşturma
 
@@ -196,7 +196,7 @@ Bu makalenin sonundaki **eklenti yöneticisini** kullanacaksınız.
     using WebPerfTestResultsViewerControl;
     ```
 
-14. *Bağlan. cs* dosyasının en altına doğru kaydırın. Web Performansı Görüntüleyicisi'nin birden fazla örneğinin açık durumda olduğu durumlarda <xref:System.Windows.Forms.UserControl> **guid'Test Sonuçları eklemeniz** gerekir. Daha sonra bu listeyi kullanan kodu eksersiniz.
+14. *Bağlan. cs* dosyasının en altına doğru kaydırın. Web Performansı Test Sonuçları Görüntüleyicisi'nin açık durumda olduğu durumlarda <xref:System.Windows.Forms.UserControl> **guid'ler listesi** eklemeniz gerekir. Daha sonra bu listeyi kullanan kodu eksersiniz.
 
      OnDiscconection yönteminde ikinci bir dize listesi kullanılır ve bu yöntemi daha sonra kodlayabilirsiniz.
 
@@ -241,7 +241,7 @@ Bu makalenin sonundaki **eklenti yöneticisini** kullanacaksınız.
     }
     ```
 
-18. LoadTestPackageExt.WebTestResultViewerExt.WindowClosed için olay işleyicisi için WebTesResultViewer_WindowClosed yöntemini oluşturmak için connect sınıfına aşağıdaki kodu ekleyin. OnConnection yöntemine eklediniz:
+18. OnConnection yöntemine ekleyişle birlikte loadTestPackageExt.WebTestResultViewerExt.WindowClosed için olay işleyicisi için WebTesResultViewer_WindowClosed yöntemini oluşturmak için connect sınıfına aşağıdaki kodu ekleyin:
 
     ```csharp
     void WebTesResultViewer_WindowClosed(object sender, WebTestResultViewerExt.WindowClosedEventArgs e)
@@ -253,7 +253,7 @@ Bu makalenin sonundaki **eklenti yöneticisini** kullanacaksınız.
     }
     ```
 
-     Kod, Visual Studio için tamamlandı. Artık WebPerfTestResultsViewerControl projesinde resultControl'a Update yöntemini eklemeniz gerekir.
+     Visual Studio için kod tamamlandı. Artık WebPerfTestResultsViewerControl projesinde resultControl'a Update yöntemini eklemeniz gerekir.
 
 ## <a name="add-code-to-the-webperftestresultsviewercontrol"></a>WebPerfTestResultsViewerControl'a Kod Ekleme
 
@@ -278,7 +278,7 @@ Bu makalenin sonundaki **eklenti yöneticisini** kullanacaksınız.
     using Microsoft.VisualStudio.TestTools.WebTesting.Rules;
     ```
 
-8. çağrılan ve *Bağlan.cs* dosyasındaki WebPerfTestResultsViewerAddin WebTestResultViewer_SelectedChanged yönteminden bir WebTestRequestResult geçirilen Update yöntemini ekleyin. Update yöntemi, DataGridView'u WebTestRequestResult içinde geçirilen çeşitli özelliklerle doldurmak için kullanılır.
+8. çağrılır ve *Bağlan.cs* dosyasındaki WebPerfTestResultsViewerAddin WebTestResultViewer_SelectedChanged yönteminden bir WebTestRequestResult geçirilen Update yöntemini ekleyin. Update yöntemi, DataGridView'u WebTestRequestResult içinde geçirilen çeşitli özelliklerle doldurmak için kullanılır.
 
     ```csharp
     public void Update(WebTestRequestResult WebTestResults)
@@ -327,7 +327,7 @@ Bu makalenin sonundaki **eklenti yöneticisini** kullanacaksınız.
 
 Kötü amaçlı eklentilerin otomatik olarak etkinleştirmesini engelerek güvenliği artırmak için  Visual Studio/Makrolar Güvenliği adlı bir Araç Seçenekleri sayfasında **ayarlar sağlar.**
 
-Ayrıca, bu seçenekler sayfası, uygulamanın içinde arama yaptığı klasörleri Visual Studio *sağlar. AddIn* kayıt dosyaları. Bu, bulunduğu konumları sınırlamanıza olanak sağlayarak güvenliği *iyiler. AddIn* kayıt dosyaları okunabilir. Bu, kötü amaçlı yazılım önlemeye yardımcı *olur. AddIn* dosyaları, insoral olarak kullanılıyor.
+Ayrıca, bu seçenekler sayfası, uygulamanın içinde arama yaptığı Visual Studio belirtmenize olanak *sağlar. AddIn* kayıt dosyaları. Bu, bulunduğu konumları sınırlamanıza olanak sağlayarak güvenliği *iyiler. AddIn* kayıt dosyaları okunabilir. Bu, kötü amaçlı yazılım önlemeye yardımcı *olur. AddIn* dosyaları, insoral olarak kullanılıyor.
 
 **Eklenti Güvenlik Ayarlar**
 

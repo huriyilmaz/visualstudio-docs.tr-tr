@@ -1,6 +1,6 @@
 ---
-title: CreatePkgDef Yardımcı Programı | Microsoft Docs
-description: Parametre olarak bir Visual Studio uzantısı için bir .dll dosyası alan ve .dll dosyasıyla eşlik edecek bir .pkgdef dosyası oluşturan CreatePkgDef yardımcı programı hakkında bilgi .dll öğrenin.
+title: CreatePkgDef yardımcı programı | Microsoft Docs
+description: bir Visual Studio uzantısı için bir .dll dosyasını parametre olarak alan ve .dll dosyasına eşlik eden bir. pkgdef dosyası oluşturan CreatePkgDef yardımcı programı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,20 +13,21 @@ ms.assetid: c745cb76-47a6-49ff-9eed-16af0f748e35
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: bfbd4b42d9ceddd40e08c28926a59aecba719fe9
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 17e561a155e13b7857573894041e79e4d6ca90c1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898129"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086761"
 ---
 # <a name="createpkgdef-utility"></a>CreatePkgDef yardımcı programı
-parametre olarak .dll uzantısı için bir Visual Studio dosyası alır ve dosyanın eşlik etmesi için *bir .pkgdef* *.dll* oluşturur. *.pkgdef* dosyası, uzantı yüklenirken aksi takdirde sistem kayıt defterine yazabilecek tüm bilgileri içerir.
+bir Visual Studio uzantısı için bir .dll dosyasını parametre olarak alır ve *.dll* dosyasına eşlik eden bir *. pkgdef* dosyası oluşturur. *. Pkgdef* dosyası, uzantı yüklendiğinde sistem kayıt defterine yazılabilecek tüm bilgileri içerir.
 
 > [!NOTE]
-> Visual Studio SDK'sı içinde yer alan proje şablonlarının çoğu derleme işleminin bir parçası olarak otomatik olarak *.pkgdef* dosyaları oluşturur. Bu belge, el ile paket oluşturmak veya mevcut paketleri *.pkgdef*  dağıtımını kullanmak üzere dönüştürmek isteyen kullanıcılara yöneliktir.
+> Visual Studio SDK 'ya dahil edilen proje şablonlarının çoğu, yapı sürecinin bir parçası olarak *. pkgdef* dosyalarını otomatik olarak oluşturur. Bu belge, paketleri el ile oluşturmak isteyen veya var olan paketleri *. pkgdef*  dağıtımını kullanacak şekilde dönüştürecek şekilde hazırlanmıştır.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -35,52 +36,52 @@ CreatePkgDef /out=<FileName> [/codebase] [/assembly] <AssemblyPath>
 ```
 
 ## <a name="arguments"></a>Bağımsız değişkenler
-**/out= &lt; DosyaAdı&gt;**\
-Gereklidir. *.pkgdef çıkış dosyasının adını* &lt; FileName olarak &gt; ayarlar.
+**/Out = &lt; filename&gt;**\
+Gereklidir. *. Pkgdef* çıkış dosyasının adını filename olarak ayarlar &lt; &gt; .
 
-**/codebase**\
-İsteğe bağlı. CodeBase yardımcı **programıyla kaydı** güçler.
+**/CodeBase**\
+İsteğe bağlı. **Kod temeli** yardımcı programıyla kayıt işlemini zorlar.
 
-**/assembly**\
-Derleme yardımcı **programıyla kaydı** güçler.
+**/Assembly**\
+**Derleme** yardımcı programıyla kayıt işlemini zorlar.
 
-**&lt;Assemblypath&gt;**\
-*.pkgdef* *.dll* istediğiniz dosyanın yolu.
+**&lt;AssemblyPath&gt;**\
+*. Pkgdef* oluşturmak istediğiniz *.dll* dosyanın yolu.
 
 ## <a name="remarks"></a>Açıklamalar
-*.pkgdef dosyalarını kullanarak uzantı dağıtımı,* önceki sürümlerinin kayıt defteri gereksinimlerini Visual Studio.
+*. Pkgdef* dosyaları kullanılarak Uzantı dağıtımı, Visual Studio önceki sürümlerinin kayıt defteri gereksinimlerinin yerini alır.
 
 ::: moniker range=">=vs-2019"
 
-*.pkgdef* dosyalarının aşağıdaki konumlardan biri içinde yüklü olması gerekir:
+*. Pkgdef* dosyalarının aşağıdaki konumlardan birinde yüklü olması gerekir:
 
-- *%localappdata%\Microsoft\Visual Studio\16.0\Extensions\\*
+- *%localappdata%\microsoft\ Visual Studio \16.0\extensions\\*
 
-- *%vsinstalldir%\Common7\IDE\Extensions\\*
+- *%VSInstallDir%\common7\ide\extensions\\*
 
-Yükleme klasörü *%localappdata%\Microsoft\Visual Studio\16.0\Extensions \\* ise, uzantı Visual Studio tarafından tanınır ancak varsayılan olarak devre dışıdır. Kullanıcı, Uzantıları Yönet'i kullanarak **uzantıyı etkinleştirerek.**
+yükleme klasörü *%localappdata%\microsoft\ Visual Studio \16.0\extensions \\* ise, uzantı Visual Studio tarafından tanınır ancak varsayılan olarak devre dışıdır. Kullanıcı, **Uzantıları Yönet**' i kullanarak uzantıyı etkinleştirebilir.
 
-Yükleme klasörü *%vsinstalldir%\Common7\IDE\Extensions \\* ise uzantı varsayılan olarak etkindir.
+Yükleme klasörü *%VSInstallDir%\common7\ide\extensions \\* ise, uzantı varsayılan olarak etkinleştirilir.
 
 > [!NOTE]
-> Uzantıları **Yönet aracı,** vsIX paketinin bir parçası olarak yüklenmediği sürece bir uzantıya erişmek için kullanılamaz.
+> **Uzantıları Yönet** Aracı, bir VSIX paketinin parçası olarak yüklenmediği sürece bir uzantıya erişmek için kullanılamaz.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-*.pkgdef* dosyalarının aşağıdaki konumlardan biri içinde yüklü olması gerekir:
+*. Pkgdef* dosyalarının aşağıdaki konumlardan birinde yüklü olması gerekir:
 
-- *%localappdata%\Microsoft\Visual Studio\15.0\Extensions\\*
+- *%localappdata%\microsoft\ Visual Studio \15.0\extensions\\*
 
-- *%vsinstalldir%\Common7\IDE\Extensions\\*
+- *%VSInstallDir%\common7\ide\extensions\\*
 
-Yükleme klasörü *%localappdata%\Microsoft\Visual Studio\15.0\Extensions \\* ise, uzantı Visual Studio tarafından tanınır ancak varsayılan olarak devre dışıdır. Kullanıcı Uzantılar ve Güncelleştirmeler'i **kullanarak uzantıyı etkinleştirerek.**
+yükleme klasörü *%localappdata%\microsoft\ Visual Studio \15.0\extensions \\* ise, uzantı Visual Studio tarafından tanınır ancak varsayılan olarak devre dışıdır. Kullanıcı **uzantıları ve güncelleştirmeleri** kullanarak uzantıyı etkinleştirebilir.
 
-Yükleme klasörü *%vsinstalldir%\Common7\IDE\Extensions \\* ise uzantı varsayılan olarak etkindir.
+Yükleme klasörü *%VSInstallDir%\common7\ide\extensions \\* ise, uzantı varsayılan olarak etkinleştirilir.
 
 > [!NOTE]
-> Uzantılar **ve Güncelleştirmeler** aracı, vsIX paketinin bir parçası olarak yüklenmediği sürece bir uzantıya erişmek için kullanılamaz.
+> **Uzantılar ve güncelleştirmeler** Aracı, bir VSIX paketinin parçası olarak yüklenmediği sürece bir uzantıya erişmek için kullanılamaz.
 
 ::: moniker-end
 

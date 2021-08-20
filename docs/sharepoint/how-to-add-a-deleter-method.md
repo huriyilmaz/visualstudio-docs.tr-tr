@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 2ecdb9a9dde1ac10e1d4037078fe272f7e3229952830bc6fca3308e8f7bf4105
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b4c42d5020ff78a2d2e66715edb913fe8cea127e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121385321"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122149240"
 ---
 # <a name="how-to-add-a-deleter-method"></a>Nasıl yapılır: bir silici yöntemi ekleme
   son kullanıcının, modele bir deleter yöntemi ekleyerek bir SharePoint sitesindeki dış listeden bir veri kaydını silmesine olanak sağlayabilirsiniz. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).

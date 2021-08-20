@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 1859c5d7fa5a365161362a2bbd4ae5d8ca46b95c69f3f66db3241aa6fab380ab
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4a44f9861e13c8a04be68f589dd974fca95940ee
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121409865"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122149721"
 ---
 # <a name="create-sharepoint-solutions"></a>SharePoint çözümleri oluşturma
 

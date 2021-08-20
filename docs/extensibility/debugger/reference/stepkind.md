@@ -1,5 +1,5 @@
 ---
-description: Adımlama için adım türünü belirtir.
+description: Adımlama için adım tür belirtir.
 title: STEPKIND | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9a972617b071f3c6f45a289a5fc01647bf3adee7fd9ebfa4ba4e2712c4774816
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 521a185b3733ef8f5c4f862b992d1953031fd5fb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276184"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110780"
 ---
 # <a name="stepkind"></a>STEPKIND
-Adımlama için adım türünü belirtir.
+Adımlama için adım tür belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,23 +53,23 @@ public enum enum_STEPKIND {
  Bir işlevin adımları.
 
  `STEP_OVER`\
- Bir işlev üzerindeki adımlar.
+ Bir işlevin adımları.
 
  `STEP_OUT`\
- Bir işlevin adımları.
+ Bir işlevin dışında adımlar.
 
  `STEP_BACKWARDS`\
  Bir işleve geri doğru adımlar.
 
 ## <a name="remarks"></a>Açıklamalar
- [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) yöntemine bir bağımsız değişken olarak geçirilir.
+ Step yöntemine bağımsız değişken [olarak](../../../extensibility/debugger/reference/idebugprocess3-step.md) geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

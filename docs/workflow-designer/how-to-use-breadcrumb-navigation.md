@@ -8,14 +8,15 @@ ms.assetid: 4a688056-37dc-406a-9071-be2141e192fe
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e33ea580f46f09ab3bd4d75ba58a35518c3583c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b0daeebb7db8ca87ebd225f683b171b56e28822d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99894146"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122067981"
 ---
 # <a name="how-to-use-breadcrumb-navigation"></a>Nasıl Yapılır: İçerik Haritası Gezintisini Kullanma
 

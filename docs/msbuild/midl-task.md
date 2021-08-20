@@ -1,6 +1,6 @@
 ---
-title: MıDL görevi | Microsoft Docs
-description: Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını midl.exe sarmalayan MSBuild MıDL görevi hakkında bilgi edinin.
+title: MIDL Görev | Microsoft Docs
+description: Microsoft Arabirim Tanımlama Dili (MIDL) derleyici aracını sarmalayıcı olan MSBuild MIDL görevi hakkında bilgi midl.exe.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -26,163 +26,164 @@ ms.assetid: 727efa8c-3336-40b8-8bef-ae6cbd77a422
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: eadec17e7c5221f0b169d38b15b9601cec746fa4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 89d9469c2e81572f66a70b5f61881b4baa9fde68
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094984"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108674"
 ---
 # <a name="midl-task"></a>MIDL görevi
 
-Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını *midl.exe* sarmalanmış olarak kaydırır. Daha fazla bilgi için bkz. [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference).
+Microsoft Arabirim Tanımlama Dili (MIDL) derleyici aracını *sarmalarmidl.exe.* Daha fazla bilgi için bkz. [MIDL komut satırı başvurusu.](/windows/desktop/Midl/midl-command-line-reference)
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıda, **MIDL** görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelir.
+ Aşağıda **MIDL** görevinin parametreleri açık almaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelen bir seçenektir.
 
 - **AdditionalIncludeDirectories**
 
-     İsteğe bağlı **dize []** parametresi.
+     İsteğe **bağlı String[]** parametresi.
 
-     İçeri aktarılan IDL dosyaları, eklenen üst bilgi dosyaları ve uygulama yapılandırma dosyaları (ACF) için aranan dizin listesine bir dizin ekler.
+     İçe aktarılan IDL dosyaları, dahil edilen üst bilgi dosyaları ve uygulama yapılandırma dosyaları (ACF) aranacak dizin listesine bir dizin ekler.
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/ı** seçeneğine bakın.
+     Daha fazla bilgi için MIDL komut satırı başvurusunda **/I** [seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
 - **AdditionalOptions**
 
-     İsteğe bağlı **dize** parametresi.
+     İsteğe **bağlı Dize** parametresi.
 
-     Komut satırı seçeneklerinin listesi. Örneğin,/ \<option1>  / \<option2>  / \<option#> . Diğer bir MıDL görev parametresi tarafından temsil edilmeyen komut satırı seçeneklerini belirtmek için bu parametreyi kullanın.
+     Komut satırı seçeneklerinin listesi. Örneğin, / \<option1>  / \<option2>  / \<option#> . Başka bir MIDL görev parametresiyle temsil etmeyen komut satırı seçeneklerini belirtmek için bu parametreyi kullanın.
 
-     Daha fazla bilgi için bkz. [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference).
+     Daha fazla bilgi için bkz. [MIDL komut satırı başvurusu.](/windows/desktop/Midl/midl-command-line-reference)
 
 - **ApplicationConfigurationMode**
 
-     İsteğe bağlı **Boolean** parametresi.
+     İsteğe **bağlı Boole parametresi.**
 
-     İse `true` , IDL dosyasında bazı ACF anahtar sözcüklerini kullanmanıza izin verir.
+     ise, `true` IDL dosyasında bazı ACF anahtar sözcükleri kullanmana olanak sağlar.
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference)içindeki **/app_config** seçeneğine bakın.
+     Daha fazla bilgi için MIDL komut app_config içinde **/app_config** [seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
 - **ClientStubFile**
 
-     İsteğe bağlı **dize** parametresi.
+     İsteğe **bağlı Dize** parametresi.
 
-     RPC arabirimi için istemci saplama dosyasının adını belirtir.
+     Rpc arabirimi için istemci saplama dosyasının adını belirtir.
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference)' nda **/cstub** seçeneğine bakın. Ayrıca bkz. bu tablodaki **ServerStubFile** parametresi.
+     Daha fazla bilgi için MIDL komut satırı başvurusunda **/cstub** [seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference) Ayrıca bu **tablodaki ServerStubFile** parametresine de bakın.
 
 - **CPreprocessOptions**
 
-     İsteğe bağlı **dize** parametresi.
+     İsteğe **bağlı Dize** parametresi.
 
-     C/C++ ön işlemcisi 'ne geçirilecek seçenekleri belirtir. Önişlemci seçeneklerinin boşlukla ayrılmış bir listesini belirtin. `/E`Seçeneği içermelidir.
+     C/C++ ön işlemciye geçiş seçeneklerini belirtir. Ön işlemci seçeneklerinin boşlukla ayrılmış listesini belirtin. seçeneğini `/E` içermesi gerekir.
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusu](/windows/desktop/Midl/midl-command-line-reference)içindeki **/cpp_opt** seçeneğine bakın.
+     Daha fazla bilgi için MIDL komut cpp_opt başvurusunda **/cpp_opt** [seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
 - **DefaultCharType**
 
-     İsteğe bağlı **dize** parametresi.
+     İsteğe **bağlı Dize** parametresi.
 
-     C derleyicisinin üretilen kodu derlemek için kullanacağı varsayılan karakter türünü belirtir.
+     C derleyicisi tarafından oluşturulan kodu derlemek için kullanabileceği varsayılan karakter türünü belirtir.
 
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
     |Değer|Komut satırı araçları|
     |-----------|--------------------------|
-    |**İmza**|**/Char imzalandı**|
-    |**İşaretlenmemiş**|**/Char işaretsiz**|
-    |**ASCII**|**/Char ascii7**|
+    |**Imzalı**|**/char imzalı**|
+    |**Imzasız**|**/char imzasız**|
+    |**Ascıı**|**/char ascii7**|
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/char** seçeneğine bakın.
+     Daha fazla bilgi için MIDL komut satırı başvurusunda **/char** [seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
 - **DllDataFileName**
 
-     İsteğe bağlı **dize** parametresi.
+     İsteğe **bağlı Dize** parametresi.
 
-     Bir proxy DLL 'si için oluşturulan *dlldata* dosyasının dosya adını belirtir.
+     Proxy DLL için oluşturulan *dlldata dosyasının* dosya adını belirtir.
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/dlldata** seçeneğine bakın.
+     Daha fazla bilgi için MIDL komut satırı başvurusunda **/dlldata** [seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
-- **Enableerrordenetimleri**
+- **EnableErrorChecks**
 
-     İsteğe bağlı **dize** parametresi.
+     İsteğe **bağlı Dize** parametresi.
 
-     Oluşturulan saplamalarının çalışma zamanında gerçekleştireceği hata denetimini belirtir.
+     Oluşturulan saplamaların çalışma zamanında gerçekleştirecekleri hata denetimi türünü belirtir.
 
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
     |Değer|Komut satırı araçları|
     |-----------|--------------------------|
-    |**Hiçbiri**|**/hata yok**|
-    |**EnableCustom**|**/Error**|
-    |**Tümü**|**/Error tümü**|
+    |**Hiçbiri**|**/error none**|
+    |**EnableCustom**|**/error**|
+    |**Tümü**|**/error all**|
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/Error** seçeneğine bakın.
+     Daha fazla bilgi için MIDL komut satırı başvurusunda **/error** [seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
 - **ErrorCheckAllocations**
 
-     İsteğe bağlı **Boolean** parametresi.
+     İsteğe **bağlı Boole parametresi.**
 
-     İse `true` bellek yetersiz hatalarını kontrol edin.
+     ise, `true` yetersiz bellek hatalarını denetleyin.
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/Error Allocation** seçeneğine bakın.
+     Daha fazla bilgi için MIDL **komut satırı başvurusunda /error** [ayırma seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
-- **Errorchecksınır**
+- **ErrorCheckBounds**
 
-     İsteğe bağlı **Boolean** parametresi.
+     İsteğe **bağlı Boole parametresi.**
 
-     `true`, Uyumlu ve değişen dizilerin boyutunu iletim uzunluğu belirtimine göre denetler.
+     ise, uyumlu değişken ve değişen dizilerin boyutunu iletim `true` uzunluğu belirtimine göre denetler.
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/Error bounds_check** seçeneğine bakın.
+     Daha fazla bilgi için MIDL **komut satırı bounds_check /error** bounds_check [seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
 - **ErrorCheckEnumRange**
 
-     İsteğe bağlı **Boolean** parametresi.
+     İsteğe **bağlı Boole parametresi.**
 
-     İse `true` , sabit listesi değerlerinin izin verilen aralıkta olup olmadığını denetler.
+     ise, `true` enum değerlerinin izin verilebilir bir aralıkta olduğunu denetler.
 
-     Daha fazla bilgi için, *midl.exe* için komut satırı yardımı 'nda (**/?**) **/Error sabit listesi** seçeneğine bakın.
+     Daha fazla bilgi için, komut satırı yardımı (**/?**) içinde **/error enum** seçeneğine bakın ve *midl.exe.*
 
-- **Errorcheckrefişaretçiler**
+- **ErrorCheckRefPointers**
 
-     İsteğe bağlı **Boolean** parametresi.
+     İsteğe **bağlı Boole parametresi.**
 
-     İse `true` , istemci saplamasına hiçbir null başvuru işaretçisi iletildiğini kontrol edin.
+     ise, `true` hiçbir null başvuru işaretçisinin istemci saplamalara geçirilene olmadığını kontrol edin.
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/Error ref** seçeneğine bakın.
+     Daha fazla bilgi için MIDL komut satırı başvurusunda **/error ref** [seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
 - **ErrorCheckStubData**
 
-     İsteğe bağlı **Boolean** parametresi.
+     İsteğe **bağlı Boole parametresi.**
 
-     `true`, Sunucu tarafında özel durumları hazırlamayı ve istemciye geri yayan bir saplama oluşturur.
+     ise, sunucu tarafında şekillendirilen özel durumları yakalayacak ve bunları istemciye geri `true` yayılayacak bir saplama oluşturur.
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/Error stub_data** seçeneğine bakın.
+     Daha fazla bilgi için MIDL komut stub_data içinde **/error** stub_data [seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
 - **GenerateClientFiles**
 
-     İsteğe bağlı **dize** parametresi.
+     İsteğe **bağlı Dize** parametresi.
 
-     Derleyicinin bir RPC arabirimi için istemci tarafı C kaynak dosyaları oluşturup oluşturmayacağını belirtir.
+     Derleyicinin bir RPC arabirimi için istemci tarafı C kaynak dosyaları oluşturıp oluşturmay olmadığını belirtir.
 
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
     |Değer|Komut satırı araçları|
     |-----------|--------------------------|
-    |**Hiçbiri**|**/Client yok**|
-    |**Saplama**|**/Client saplama**|
+    |**Hiçbiri**|**/client none**|
+    |**Saplama**|**/client stub**|
 
-     Daha fazla bilgi için [MIDL komut satırı başvurusunda](/windows/desktop/Midl/midl-command-line-reference) **/Client** seçeneğine bakın.
+     Daha fazla bilgi için MIDL **komut satırı** başvurusunda [/client seçeneğine bakın.](/windows/desktop/Midl/midl-command-line-reference)
 
 - **GenerateServerFiles**
 
-     İsteğe bağlı **dize** parametresi.
+     İsteğe **bağlı Dize** parametresi.
 
-     Derleyicinin bir RPC arabirimi için sunucu tarafı C kaynak dosyaları oluşturup oluşturmayacağını belirtir.
+     Derleyicinin bir RPC arabirimi için sunucu tarafı C kaynak dosyaları oluşturıp oluşturmay olmadığını belirtir.
 
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 

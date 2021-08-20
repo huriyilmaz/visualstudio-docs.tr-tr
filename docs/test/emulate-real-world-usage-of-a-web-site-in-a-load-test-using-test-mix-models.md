@@ -12,12 +12,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 74ec63a85657ad91982627a3b717547df07b469e93b33aaf3e2ef99109c78d49
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a6d01648998e02797e4b7c069e2096aa54b3e353
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121366738"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135799"
 ---
 # <a name="test-mix-models-overview"></a>Test karışımı modellerini genel bakış
 
@@ -31,7 +31,7 @@ Test Yük Testi Düzenleyicisi veya test karışımı modeli sihirbazını kulla
 
 Yük testi senaryo için aşağıdaki test karışımı modeli seçeneklerine birini belirtebilirsiniz:
 
-- **Toplam test sayısına göre:** Sanal kullanıcı bir test yinelemesi başlatırken hangi web performansının veya birim testinin çalıştırılı olduğunu belirler. Yük testinin sonunda, belirli bir test çalıştırması atanan test dağıtımıyla kaç kez eşlendi? Bir IIS günlüğünde veya üretim verisinde işlem yüzdeleri üzerinde test karışımını kullanıyorken bu test karışımı modelini kullanın. Daha fazla bilgi için [bkz. Başlatan testleri temel alan yüzde.](#BasedOnTestsStarted)
+- **Toplam test sayısına göre:** Sanal kullanıcı bir test yinelemesi başlatırken hangi web performansının veya birim testinin çalıştırılı olduğunu belirler. Yük testinin sonunda, belirli bir test çalıştırmanın atanan test dağıtımıyla kaç kez eş olduğu. Test karışımını IIS günlüğünde veya üretim verisinde işlem yüzdelerini kullanıyorken bu test karışımı modelini kullanın. Daha fazla bilgi için [bkz. Başlatan testleri temel alan yüzde.](#BasedOnTestsStarted)
 
 - **Sanal kullanıcı sayısına göre:** Belirli bir web performansını veya birim testini çalıştıracak sanal kullanıcıların yüzdesini belirler. Yük testinin herhangi bir noktasında, belirli bir testi çalıştıran kullanıcı sayısı atanan dağıtımla eştir. Test karışımını belirli bir testi çalıştıran kullanıcıların yüzdesine bağlıyken bu test karışımı modelini kullanın. Daha fazla bilgi için [bkz. Sanal kullanıcıları temel alan yüzde.](#PercentageBasedonVirtualUsers)
 
@@ -44,7 +44,7 @@ Yük testi senaryo için aşağıdaki test karışımı modeli seçeneklerine bi
 
 ### <a name="percentage-based-on-tests-started"></a><a name="BasedOnTestsStarted"></a> Başlatan testleri temel alan yüzde
 
-Karmada yer alan her test için, testin çalıştırilecek bir sonraki test olarak ne sıklıkta seçileceklerini belirleyen bir yüzde belirtsiniz. Örneğin, üç teste aşağıdaki yüzde değerlerini at uygun olabilir:
+Karmada yer alan her test için, testin çalıştırilecek bir sonraki test olarak ne sıklıkta seçileceklerini belirleyen bir yüzde belirtesiniz. Örneğin, üç teste aşağıdaki yüzde değerlerini at uygun olabilir:
 
 - TestA (%50)
 
@@ -52,7 +52,7 @@ Karmada yer alan her test için, testin çalıştırilecek bir sonraki test olar
 
 - TestC (%15)
 
-Bu ayarı kullanırsanız, başlatacak bir sonraki test atanan yüzdeleri temel almaktadır. Bunu, şu anda her testi çalıştıran sanal kullanıcı sayısını dikkate almadan yapacaksınız.
+Bu ayarı kullanırsanız, başlatacak sonraki test atanan yüzdeleri temel almaktadır. Bunu, şu anda her testi çalıştıran sanal kullanıcı sayısını dikkate almadan yapacaksınız.
 
 ### <a name="percentage-based-on-virtual-users"></a><a name="PercentageBasedonVirtualUsers"></a> Sanal kullanıcıları temel alan yüzde
 Bu test karışımı modeli, belirli bir testi çalıştıracak sanal kullanıcıların yüzdesini belirler. Bu test karışımı modelini kullanırsanız, başlatacak sonraki test yalnızca atanan yüzdeleri değil, aynı zamanda belirli bir testi çalıştıran sanal kullanıcıların yüzdesini de temel almaktadır. Yük testinin herhangi bir noktasında, belirli bir testi çalıştıran kullanıcı sayısı atanan dağıtımla mümkün olduğunca yakından eştir.
@@ -80,7 +80,7 @@ Bir yük testi **senaryosunda Dağıtımı Pacing Delay'e** Uygula özelliğinin
 
 - **Yanlış:** Testler, Test Karışımını Düzenle iletişim kutusundaki  Kullanıcı Başına Test Sayısı sütununda belirtilen değer için belirttiğiniz **hızda** ecek. Daha fazla bilgi için, [test çalıştıran bir sanal kullanıcının olasılığını belirtmek için bkz. Metin karışımı modellerini düzenleme.](../test/edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md)
 
-   Örneğin, test karışımını düzenle **iletişim** kutusunda Test  Karışımını Düzenle iletişim kutusunda Kullanıcı Başına Test Sayısı değerinin saatte 2 kullanıcı olarak ayar olduğunu varsayalım. Pacing **Delay'e Dağıtımı** Uygula özelliği **False** olarak ayarlanırsa, testlerinizi çalıştıracaksanız temel olarak hiçbir şey vermiyor olursanız. Test 30 dakikada bir çalıştıracak. Bu, saatte 2 test yürütmeyi sağlar.
+   Örneğin, test karışımını düzenle **iletişim** kutusunda Test  Karışımını Düzenle iletişim kutusunda Kullanıcı Başına Test Sayısı değerinin saatte 2 kullanıcı olarak ayar olduğunu varsayalım. Pacing **Delay'e Dağıtımı** Uygula özelliği **False** olarak ayarlanırsa, testlerinizi çalıştıracaksanız temel olarak hiçbir şey vermiyor olursanız. Test 30 dakikada bir ecek. Bu, saatte 2 test yürütmeyi sağlar.
 
   Daha fazla bilgi için, [bkz. How to: Apply distribution to pacing delay when using a user pace test mix model](../test/how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md).
 

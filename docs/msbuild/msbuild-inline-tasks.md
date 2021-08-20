@@ -1,6 +1,6 @@
 ---
 title: MSBuild Satır Içi Görevler | Microsoft Docs
-description: Microsoft.Build.Framework.ITask arabirimini uygulayan bir sınıf derleerek satır içi MSBuild görevleri oluşturma hakkında bilgi öğrenin.
+description: Microsoft.Build.Framework.ITask arabirimini uygulayan bir sınıf derleerek satır içi görevlerin nasıl oluşturulacaklarını öğrenin. MSBuild
 ms.custom: SEO-VS-2020
 ms.date: 09/21/2017
 ms.topic: conceptual
@@ -13,18 +13,18 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 99ec3bb66c9d65507d5b2cc9139d6d120c8fe6120ab5fe7ec5591cb6d52a0c9c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5180ca730b8caba06e31cc3a17443988578b1877
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121316298"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068926"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild satır içi görevleri
 
 MSBuild görevleri genellikle arabirimi uygulayan bir sınıf oluşturularak <xref:Microsoft.Build.Framework.ITask> oluşturulur. Daha fazla bilgi için bkz. [Görevler.](../msbuild/msbuild-tasks.md)
 
- 4. .NET Framework başlayarak proje dosyasında satır içi görevler oluşturabilirsiniz. Görevi barındırmak için ayrı bir derleme oluşturmanıza gerek yok. Bu, kaynak kodu izleme ve görevi dağıtmayı kolaylaştırır. Kaynak kodu betikle tümleştirilmiştir.
+ 4. .NET Framework başlayarak proje dosyasında satır içi görevler oluşturabilirsiniz. Görevi barındırmak için ayrı bir derleme oluşturmanıza gerek yok. Bu, kaynak kodu izlemenizi ve görevi dağıtmayı kolaylaştırır. Kaynak kodu betikle tümleştirilmiştir.
 
  15.8 MSBuild de, platformlar arası satır içi görevler oluşturan [RoslynCodeTaskFactory](../msbuild/msbuild-roslyncodetaskfactory.md) .NET Standard eklendi.  .NET Core'da satır içi görevler kullanıyorsanız RoslynCodeTaskFactory'i kullansanız iyi olur.
 ## <a name="the-structure-of-an-inline-task"></a>Satır içi görevin yapısı
@@ -59,7 +59,7 @@ MSBuild görevleri genellikle arabirimi uygulayan bir sınıf oluşturularak <xr
 
 Görevin kalan öğeleri boştur ve satır içi görevin sıralama ve `DoNothing` yapısını göstermek için sağlanır. Bu konunun ilerleyenlarında daha sağlam bir örnek ve sunulmuştur.
 
-- öğesi `ParameterGroup` isteğe bağlıdır. Belirtilen görev için parametreleri belirtir. Giriş ve çıkış parametreleri hakkında daha fazla bilgi için bu [konunun devamlarında yer alan Giriş ve](#input-and-output-parameters) çıkış parametreleri'ne bakın.
+- öğesi `ParameterGroup` isteğe bağlıdır. Belirtilen, görev için parametreleri belirtir. Giriş ve çıkış parametreleri hakkında daha fazla bilgi için bu [konunun devamlarında yer alan Giriş ve](#input-and-output-parameters) çıkış parametreleri'ne bakın.
 
 - öğesi `Task` görev kaynak kodunu açıklar ve içerir.
 
@@ -67,7 +67,7 @@ Görevin kalan öğeleri boştur ve satır içi görevin sıralama ve `DoNothing
 
 - `Using`öğesi, erişmek istediğiniz ad alanlarını listeler. Bu, `Using` Visual C# içinde deyimine benzer. özniteliği, `Namespace` dahil etmek için ad alanını belirtir.
 
-`Reference` ve `Using` öğeleri dilden bağımsızdır. Satır içi görevler desteklenen .NET CodeDom dillerinden herhangi biri (örneğin, Visual Basic veya Visual C# dilinde yazabilir.
+`Reference` ve `Using` öğeleri dilden bağımsızdır. Satır içi görevler desteklenen .NET CodeDom dillerinden herhangi biri (örneğin, Visual Basic veya Visual C# ile yazabilir.
 
 > [!NOTE]
 > öğesi tarafından yer alan `Task` öğeler görev fabrikasına, bu durumda ise kod görev fabrikasına özeldir.

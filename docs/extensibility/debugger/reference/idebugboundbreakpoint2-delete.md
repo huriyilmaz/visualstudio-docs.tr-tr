@@ -12,17 +12,18 @@ ms.assetid: 7088dc66-f24a-446f-a52a-397d02457a41
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a6dbe1877144813ab36c437f8163dc64fcdcc78d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 66ebbc0b34ba213dda63f7ddcdc02da9c693a4ec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088971"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064753"
 ---
 # <a name="idebugboundbreakpoint2delete"></a>IDebugBoundBreakpoint2::Delete
 Kesme noktasını siler.

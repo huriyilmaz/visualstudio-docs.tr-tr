@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: abdd04428695e105b7e9f3e14e740beef3a347574171296768af9a9637eaa592
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c3e75ec051787cfb08754e459012e4df3556e113
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415287"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122110767"
 ---
 # <a name="module_info_fields"></a>MODULE_INFO_FIELDS
 Hata ayıklama modülü bilgileri için bayrakları belirtir.

@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f987a524d3184bbfc6a019d4e6061f5b14f3b78fe4682cdab225f7c4a9b292e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 53abd38178770ddff46216dbba2cd1548e204fec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121369987"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068754"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates görevi
 

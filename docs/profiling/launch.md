@@ -7,15 +7,16 @@ ms.assetid: f81bde5c-3394-4b79-a315-c2f6491689b3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: c6072fe7e3387f19669861e5ede945ab3f0c417a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 57c7cbe1ee119489171417515e557b46ee2755ed
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99917987"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107426"
 ---
 # <a name="launch"></a>Başlat
 **Başlatma** seçeneği, örnekleme yöntemini kullanarak profil oluşturucuyu başlatır ve ayrıca belirtilen uygulamayı başlatır.
@@ -40,7 +41,7 @@ VSPerfCmd.exe /Launch:AppName [Options]
 
  **ProcessOn:** `PID` ve **ProcessOff**: `PID` belirtilen işlem için özgeçmişler (**ProcessOn**) veya duraklama (**ProcessOff**) profili oluşturma.
 
- **Targetclr** Profil oluşturma oturumunda birden fazla sürüm yüklendiğinde profile yapılacak .NET Framework ortak dil çalışma zamanının (CLR) sürümünü belirtir. Varsayılan olarak, ilk yüklenen sürüm profili oluşturulur.
+ **Targetclr** profil oluşturma oturumunda birden fazla sürüm yüklendiğinde profile yapılacak .NET Framework ortak dil çalışma zamanının (CLR) sürümünü belirtir. Varsayılan olarak, ilk yüklenen sürüm profili oluşturulur.
 
 ## <a name="exclusive-options"></a>Dışlamalı seçenekler
  Aşağıdaki seçenekler yalnızca **başlatma** seçeneği ile kullanılabilir.
@@ -77,5 +78,5 @@ VSPerfCmd.exe /Launch:TestApp.exe
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
 - [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [web uygulamalarının profilini ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

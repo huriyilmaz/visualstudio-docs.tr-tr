@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d7da0fc91cd32ffedbf36f98f736c99db21c7a2e1904fe8af6aec2dec323e309
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b181e91bf06538b09a12a394404926e30e00ca91
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121292539"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111055"
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
 Bu olayı tetikleyen özel durumun ayrıntılı bir açıklamasını alır.

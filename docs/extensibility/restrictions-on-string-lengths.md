@@ -1,6 +1,6 @@
 ---
-title: Dize Uzunlukları Kısıtlamaları | Microsoft Docs
-description: Kaynak Denetimi Eklentisi API'si tarafından dayatılan çeşitli işlevler tarafından kullanılan dizelerin uzunluklarının sınırları hakkında bilgi edinin.
+title: Dize uzunlukları için kısıtlamalar | Microsoft Docs
+description: Kaynak denetimi eklentisi API 'SI tarafından uygulanan çeşitli işlevler tarafından kullanılan dizelerin uzunluklarının sınırları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,17 +10,18 @@ ms.assetid: 877173d2-ca27-43b3-b1f4-8379f7c5e268
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7fd0d88a50f64aee1f0bc5c273d7a3cd50c6f53f
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 5322ff52097a55994cec569597841202677d7dfd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112900258"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122086397"
 ---
 # <a name="restrictions-on-string-lengths"></a>Dize uzunlukları kısıtlamaları
-Kaynak Denetimi Eklentisi API'si, çeşitli işlevlerde kullanılan dizelerin uzunluklarını sınırlar.
+Kaynak denetimi eklentisi API 'SI, çeşitli işlevlerde kullanılan dizelerin uzunluklarının sınırlarını sınırlar.
 
 ## <a name="string-length-values"></a>Dize uzunluğu değerleri
 
@@ -32,7 +33,7 @@ Kaynak Denetimi Eklentisi API'si, çeşitli işlevlerde kullanılan dizelerin uz
 |`SCC_PRJPATH_LEN`|300|
 
 > [!NOTE]
-> Uzunluk, sonlandıran 'i `null` içermez. "_LEN" yerine "_SIZE" soneki olan diğer sabitler, sonlandıran için alan `null` içerir.
+> Uzunluk Sonlandırıcı içermez `null` . "_LEN" yerine "_SIZE" sonekine sahip diğer sabitler, Sonlandırıcı için alan içerir `null` .
 
 |Sabit|Değer|
 |--------------|-----------|

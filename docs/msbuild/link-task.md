@@ -33,16 +33,16 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: e225ca9b342b7808a5cc30beb69a63bc543c62def756ecd1754b908f9e49f0b0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6a7f986674aa215e2fae98dc469bd1807afcedbc
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121443353"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122108700"
 ---
 # <a name="link-task"></a>Bağlantı görevi
 
-Microsoft C++ bağlama aracını sarmalar ve *link.exe.* Bağlantı aracı, yürütülebilir (.exe) dosyası veya dinamik bağlantı kitaplığı (DLL) oluşturmak için Ortak Nesne *Dosyası* Biçimi (COFF) nesne dosyalarını ve kitaplıklarını bağlar. Daha fazla bilgi için, [bkz. Linker](/cpp/build/reference/linker-options) [seçenekleri ve Komut MSBuild'i](/cpp/build/msbuild-visual-cpp) kullanma ve komut [satırına ait Microsoft C++ araç kümesi kullanma.](/cpp/build/building-on-the-command-line)
+Microsoft C++ bağlama aracını sarmalar ve *link.exe.* Bağlantı aracı, yürütülebilir (.exe *)* dosyası veya dinamik bağlantı kitaplığı (DLL) oluşturmak için Ortak Nesne Dosyası Biçimi (COFF) nesne dosyalarını ve kitaplıklarını bağlar. Daha fazla bilgi için, [bkz. Linker](/cpp/build/reference/linker-options) [seçenekleri ve Komut MSBuild'i](/cpp/build/msbuild-visual-cpp) kullanma ve [komut satırına ait Microsoft C++ araç kümesi kullanma.](/cpp/build/building-on-the-command-line)
 
 ## <a name="parameters"></a>Parametreler
 
@@ -108,7 +108,7 @@ Microsoft C++ bağlama aracını sarmalar ve *link.exe.* Bağlantı aracı, yür
 
   İsteğe **bağlı String[]** parametresi.
 
-  Çıkış dosyasında .NET Framework kaynağına bir bağlantı oluşturur; kaynak dosyası çıkış dosyasına yerleştirilmaz. Kaynağın adını belirtin.
+  Çıkış dosyasında .NET Framework bir bağlantı oluşturur; kaynak dosyası çıkış dosyasına yerleştirilmaz. Kaynağın adını belirtin.
 
   Daha fazla bilgi için bkz. [/ASSEMBLYLINKRESOURCE (.NET Framework bağlantısı)](/cpp/build/reference/assemblylinkresource-link-to-dotnet-framework-resource).
 
@@ -392,195 +392,195 @@ Microsoft C++ bağlama aracını sarmalar ve *link.exe.* Bağlantı aracı, yür
 
   İsteğe **bağlı String[]** parametresi.
 
-  Yoksaymak için bir veya daha fazla varsayılan kitaplık adı belirtir. Noktalı virgülle ayırarak birden çok kitaplığı ayırın.
+  Yoksaymak için bir veya daha fazla varsayılan kitaplık adı belirtir. Noktalı virgül kullanarak birden çok kitaplığı ayırma.
 
-  Daha fazla bilgi için bkz. [/nodefaultlib (kitaplıkları Yoksay)](/cpp/build/reference/nodefaultlib-ignore-libraries).
+  Daha fazla bilgi için bkz. [/NODEFAULTLIB (Kitaplıkları yoksay)](/cpp/build/reference/nodefaultlib-ignore-libraries).
 
-- **Imagehassafeexceptionhandlers**
+- **ImageHasSafeExceptionHandlers**
 
-  İsteğe bağlı **Boolean** parametresi.
+  İsteğe **bağlı Boole parametresi.**
 
-  Varsa `true` , bağlayıcı yalnızca görüntünün güvenli özel durum işleyicilerinin bir tablosunu da üretebilir bir görüntü oluşturur.
+  ise, yalnızca görüntünün güvenli özel durum işleyicilerinin bir tabloyu da `true` üreteci bir görüntü üretir.
 
-  Daha fazla bilgi için bkz. [/SafeSEH (görüntü güvenli özel durum işleyicilerine sahiptir)](/cpp/build/reference/safeseh-image-has-safe-exception-handlers).
+  Daha fazla bilgi için bkz. [/SAFESEH (Görüntüde güvenli özel durum işleyicileri vardır)](/cpp/build/reference/safeseh-image-has-safe-exception-handlers).
 
 - **ImportLibrary**
 
-  Varsayılan kitaplık adının yerini alan, Kullanıcı tarafından belirtilen bir içeri aktarma kitaplığı adı.
+  Varsayılan kitaplık adının yerini alan, kullanıcı tarafından belirtilen içeri aktarma kitaplığı adı.
 
-  Daha fazla bilgi için bkz. [/ımplib (ad içeri aktarma kitaplığı)](/cpp/build/reference/implib-name-import-library).
+  Daha fazla bilgi için bkz. [/IMPLIB (İçeri aktarma kitaplığını adla)](/cpp/build/reference/implib-name-import-library).
 
-- **KeyContainer**
+- **Keycontainer**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  İmzalı bir derleme için anahtarı içeren kapsayıcı.
+  İmzalı derlemenin anahtarını içeren kapsayıcı.
 
-  Daha fazla bilgi için bkz. [/keycontainer (bir derlemeyi imzalamak için bir anahtar kapsayıcısı belirtin)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly). Ayrıca bkz. bu tablodaki **keyfile** parametresi.
+  Daha fazla bilgi için bkz. [/KEYCONTAINER (Derlemeyi imzalamak için anahtar kapsayıcısı belirtin)](/cpp/build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly). Ayrıca, bu **tablodaki KeyFile** parametresine bakın.
 
-- **Dosyasına**
+- **Keyfile**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  İmzalı bir derleme için anahtarı içeren bir dosyayı belirtir.
+  İmzalı derlemenin anahtarını içeren bir dosyayı belirtir.
 
-  Daha fazla bilgi için bkz. [/keyfile (bir derlemeyi imzalamak için anahtar veya anahtar çiftini belirtin)](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly). Ayrıca, bkz. **keycontainer** parametresi.
+  Daha fazla bilgi için bkz. [/INILE (Derlemeyi imzalamak için anahtar veya anahtar çifti belirtin)](/cpp/build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly). Ayrıca bkz. **KeyContainer** parametresi.
 
 - **LargeAddressAware**
 
-  İsteğe bağlı **Boolean** parametresi.
+  İsteğe **bağlı Boole parametresi.**
 
-  `true`Uygulama, 2 gigabayt 'tan daha büyük adresleri işleyebilir.
+  ise, `true` uygulama 2 gigabayttan büyük adresleri işebilir.
 
-  Daha fazla bilgi için bkz. [/LARGEADDRESSAWARE (büyük adresleri işleme)](/cpp/build/reference/largeaddressaware-handle-large-addresses).
+  Daha fazla bilgi için bkz. [/LARGEADDRESSAWARE (Büyük adresleri işleme)](/cpp/build/reference/largeaddressaware-handle-large-addresses).
 
 - **LinkDLL**
 
-  İsteğe bağlı **Boolean** parametresi.
+  İsteğe **bağlı Boole parametresi.**
 
-  İse `true` , ana çıkış dosyası olarak BIR DLL oluşturur.
+  ise, `true` ana çıkış dosyası olarak bir DLL oluşturur.
 
-  Daha fazla bilgi için bkz. [/dll (dll derleme)](/cpp/build/reference/dll-build-a-dll).
+  Daha fazla bilgi için bkz. [/DLL (DLL Derleme)](/cpp/build/reference/dll-build-a-dll).
 
 - **LinkErrorReporting**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  İç derleyici hatası (ıCE) bilgilerini doğrudan Microsoft 'a sağlamanıza olanak tanır.
+  İç derleyici hatası (ICE) bilgilerini doğrudan Microsoft'a sağlamayı sağlar.
 
   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **Noerrorreport**  -  **/errorreport: yok**
+  - **NoErrorReport**  -  **/ERRORREPORT:NONE**
 
-  - **Hemen sor**  -  **/errorreport: Prompt**
+  - **PromptImmediately**  -  **/ERRORREPORT:PROMPT**
 
-  - **Queuefornextlogin**  -  **/errorreport: kuyruk**
+  - **QueueForNextLogin**  -  **/ERRORREPORT:QUEUE**
 
-  - **Senderrorreport**  -  **/errorreport: gönder**
+  - **SendErrorReport**  -  **/ERRORREPORT:SEND**
 
-  Daha fazla bilgi için bkz. [/errorreport (iç bağlayıcı hatalarını raporla)](/cpp/build/reference/errorreport-report-internal-linker-errors).
+  Daha fazla bilgi için bkz. [/ERRORREPORT (İç bağlantı hatalarını raporla)](/cpp/build/reference/errorreport-report-internal-linker-errors).
 
-- **Linkıncreıncre**
+- **LinkIncremental**
 
-  İsteğe bağlı **Boolean** parametresi.
+  İsteğe **bağlı Boole parametresi.**
 
-  İse `true` , artımlı bağlamayı mümkün.
+  ise, `true` artımlı bağlamayı sağlar.
 
-  Daha fazla bilgi için bkz. [/ıncreıncre(artımlı bağlantı)](/cpp/build/reference/incremental-link-incrementally).
+  Daha fazla bilgi için bkz. [/INCREMENTAL (Artımlı olarak bağlantı)](/cpp/build/reference/incremental-link-incrementally).
 
 - **LinkLibraryDependencies**
 
-  İsteğe bağlı **Boolean** parametresi.
+  İsteğe **bağlı Boole parametresi.**
 
-  İse `true` , proje bağımlılıklarından kitaplık çıktılarının otomatik olarak bağlandığını belirtir.
+  ise, `true` proje bağımlılıklarından kitaplık çıkışların otomatik olarak içinde bağlanacaklarını belirtir.
 
-  Bu parametre bir bağlayıcı seçeneğine karşılık gelmiyor.
+  Bu parametre bir bağlantı seçeneğine karşılık gelen bir parametre değildir.
 
-- **Bağlantı durumu**
+- **LinkStatus**
 
-  İsteğe bağlı **Boolean** parametresi.
+  İsteğe **bağlı Boole parametresi.**
 
-  İse `true` , bağlayıcının bağlantının yüzdesini gösteren bir ilerleme göstergesi görüntüleneceğini belirtir.
+  ise, `true` bağlantının tamamlandıktan yüzdesini gösteren bir ilerleme göstergesi görüntülemek için bağlantının olduğunu belirtir.
 
-  Daha fazla bilgi için `STATUS` [/LTCG (bağlama zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation)bağımsız değişkenine bakın.
+  Daha fazla bilgi için `STATUS` bkz. [/LTCG (Bağlantı zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation)bağımsız değişkeni.
 
 - **LinkTimeCodeGeneration**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  Profil temelli iyileştirme seçeneklerini belirtir.
+  Profil destekli iyileştirme seçeneklerini belirtir.
 
   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **Varsayılanını** - *\<none>*
+  - **Varsayılan** - *\<none>*
 
-  - **Uselinktimecodegeneration**  -  **/LTCG**
+  - **UseLinkTimeCodeGeneration**  -  **/LTCG**
 
-  - **PGINSTRUMENT**  -  **/LTCG: PGINSTRUMENT**
+  - **PGInstrument**  -  **/LTCG:PGInstrument**
 
-  - **Pgoptimization**  -  **/LTCG: PGOptimize**
+  - **PGOptimization**  -  **/LTCG:PGOptimize**
 
   - **PGUpdate**
 
-    \-**/LTCG: PGUpdate**
+    \-**/LTCG:PGUpdate**
 
-  Daha fazla bilgi için bkz. [/LTCG (bağlama zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation).
+  Daha fazla bilgi için bkz. [/LTCG (Bağlantı zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation).
 
-- **MANIFESTFILE**
+- **ManifestFile**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  Varsayılan bildirim dosyası adını belirtilen dosya adı olarak değiştirir.
+  Varsayılan bildirim dosyası adını belirtilen dosya adıyla değiştirir.
 
-  Daha fazla bilgi için bkz. [/ManifestFile (ad bildirim dosyası)](/cpp/build/reference/manifestfile-name-manifest-file).
+  Daha fazla bilgi için bkz. [/MANIFESTFILE (Bildirim dosyasını ad)](/cpp/build/reference/manifestfile-name-manifest-file).
 
-- **Mapdışarı aktarmalar**
+- **MapExports**
 
-  İsteğe bağlı **Boolean** parametresi.
+  İsteğe **bağlı Boole parametresi.**
 
-  İse `true` , bağlayıcının bir eşleme dosyasına aktarılmış işlevleri içermesini söyler.
+  ise, `true` bağlantıcıya dışarı aktaran işlevleri bir eşleme dosyasına dahil eder.
 
-  Daha fazla bilgi için bkz `EXPORTS` . [/MapInfo bağımsız değişkeni (mapfile Içinde bilgi ekleme)](/cpp/build/reference/mapinfo-include-information-in-mapfile).
+  Daha fazla bilgi için `EXPORTS` [/MAPINFO (Bilgileri eşlem dosyasına dahil edin) bağımsız değişkenine bakın.](/cpp/build/reference/mapinfo-include-information-in-mapfile)
 
 - **MapFileName**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
   Varsayılan eşleme dosyası adını belirtilen dosya adıyla değiştirir.
 
 - **MergedIDLBaseFileName**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  *. IDL* dosyasının dosya adı ve dosya adı uzantısını belirtir.
+  *.idl* dosyasının dosya adını ve dosya adı uzantısını belirtir.
 
-  Daha fazla bilgi için bkz. [/IDLOUT (MıDL çıktı dosyalarını Adlandır)](/cpp/build/reference/idlout-name-midl-output-files).
+  Daha fazla bilgi için bkz. [/IDLOUT (MIDL çıkış dosyalarını adla)](/cpp/build/reference/idlout-name-midl-output-files).
 
 - **MergeSections**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  Bir görüntüdeki bölümleri birleştirir. `from-section=to-section` belirtin.
+  Bir görüntüde bölümleri birleştirir. `from-section=to-section` belirtin.
 
-  Daha fazla bilgi için bkz. [/merge (bölümleri birleştirme)](/cpp/build/reference/merge-combine-sections).
+  Daha fazla bilgi için bkz. [/MERGE (Bölümleri birleştir)](/cpp/build/reference/merge-combine-sections).
 
-- **Mıdlcommandfile**
+- **MidlCommandFile**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  MıDL komut satırı seçeneklerini içeren bir dosyanın adını belirtin.
+  MIDL komut satırı seçeneklerini içeren bir dosyanın adını belirtin.
 
   Daha fazla bilgi için bkz. [/MIDL (MIDL komut satırı seçeneklerini belirtin)](/cpp/build/reference/midl-specify-midl-command-line-options).
 
 - **MinimumRequiredVersion**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  Alt sistemin gerekli en düşük sürümünü belirtir. Bağımsız değişkenler 0 ile 65535 aralığındaki ondalık sayılardır.
+  Alt sistemin gereken en düşük sürümünü belirtir. Bağımsız değişkenler 0 ile 65535 aralığındaki ondalık sayılardır.
 
 - **ModuleDefinitionFile**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  [Modül tanım dosyasının](/cpp/build/reference/module-definition-dot-def-files)adını belirtir.
+  Modül tanım dosyasının [adını belirtir.](/cpp/build/reference/module-definition-dot-def-files)
 
-  Daha fazla bilgi için bkz. [/def (modül tanım dosyasını belirt)](/cpp/build/reference/def-specify-module-definition-file).
+  Daha fazla bilgi için bkz. [/DEF (Modül tanımı dosyasını belirtin)](/cpp/build/reference/def-specify-module-definition-file).
 
 - **MSDOSStubFileName**
 
-  İsteğe bağlı **dize** parametresi.
+  İsteğe **bağlı Dize** parametresi.
 
-  Belirtilen MS-DOS saplama programını bir Win32 programına iliştirir.
+  Belirtilen MS-DOS saplama programını win32 programına iliştirer.
 
-  Daha fazla bilgi için bkz. [/stub (MS-DOS saplama dosyası adı)](/cpp/build/reference/stub-ms-dos-stub-file-name).
+  Daha fazla bilgi için bkz. [/STUB (MS-DOS saplama dosyası adı)](/cpp/build/reference/stub-ms-dos-stub-file-name).
 
 - **NoEntryPoint**
 
-  İsteğe bağlı **Boolean** parametresi.
+  İsteğe **bağlı Boole parametresi.**
 
-  İse `true` yalnızca kaynak dll 'i belirtir.
+  ise, `true` yalnızca kaynak DLL'lerini belirtir.
 
-  Daha fazla bilgi için bkz. [/NOENTRY (giriş noktası yok)](/cpp/build/reference/noentry-no-entry-point).
+  Daha fazla bilgi için bkz. [/NOENTRY (Giriş noktası yok)](/cpp/build/reference/noentry-no-entry-point).
 
 - **ObjectFiles**
 
@@ -638,7 +638,7 @@ Microsoft C++ bağlama aracını sarmalar ve *link.exe.* Bağlantı aracı, yür
 
   Çalışan programla ilgili bilgileri tutmak için kullanılacak *.pgd* dosyasının adını belirtir
 
-  Daha fazla bilgi için bkz. [/PGD (Profil destekli iyileştirmeler için veritabanını belirtin)](/cpp/build/reference/pgd-specify-database-for-profile-guided-optimizations).
+  Daha fazla bilgi için bkz. [/PGD (Profil kılavuzlu iyileştirmeler için veritabanını belirtin)](/cpp/build/reference/pgd-specify-database-for-profile-guided-optimizations).
 
 - **ProgramDatabaseFile**
 
@@ -706,7 +706,7 @@ Microsoft C++ bağlama aracını sarmalar ve *link.exe.* Bağlantı aracı, yür
 
   Gerekli `ITaskItem[]` parametre.
 
-  Görevler tarafından MSBuild kaynak dosya öğeleri içeren bir dizi tanımlar.
+  Görevler tarafından tüketilebilir MSBuild kaynak dosya öğeleri içeren bir dizi tanımlar.
 
 - **SpecifySectionAttributes**
 
@@ -774,159 +774,159 @@ Microsoft C++ bağlama aracını sarmalar ve *link.exe.* Bağlantı aracı, yür
 
   İsteğe **bağlı Boole parametresi.**
 
-  ise, `true` bağlayıcıya son görüntüye bağlanabilir bir İçeri Aktarma Adresi Tablosu (IAT) dahil edilemez.
+  ise, bağlayıcıya son görüntüye bağlanabilir bir İçeri Aktarma `true` Adresi Tablosu (IAT) dahil edilemez.
 
   Daha fazla bilgi için `NOBIND` [/DELAY (Gecikme yükü içeri aktarma ayarları) bağımsız değişkenine bakın.](/cpp/build/reference/delay-delay-load-import-settings)
 
 - **SupportUnloadOfDelayLoadedDLL**
 
-  İsteğe **bağlı Boole parametresi.**
+  İsteğe bağlı **Boolean** parametresi.
 
-  ise, `true` gecikme yüklemesi yardımcı işlevine DLL'nin açık olarak kaldırmayı desteklemesi söyler.
+  İse `true` , gecikme Yükleme Yardımcısı IŞLEVINE dll 'nin açıkça kaldırılmasını desteklediğini söyler.
 
-  Daha fazla bilgi için `UNLOAD` [/DELAY (Gecikme yükü içeri aktarma ayarları) bağımsız değişkenine bakın.](/cpp/build/reference/delay-delay-load-import-settings)
+  Daha fazla bilgi için `UNLOAD` [/Delay (yük içeri aktarma ayarlarını geciktir)](/cpp/build/reference/delay-delay-load-import-settings)bağımsız değişkenine bakın.
 
 - **SuppressStartupBanner**
 
-  İsteğe **bağlı Boole parametresi.**
+  İsteğe bağlı **Boolean** parametresi.
 
-  ise, `true` görev başlatıldığında telif hakkı ve sürüm numarası iletinin görüntülenmesini önler.
+  İse `true` , görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.
 
-  Daha fazla bilgi için bkz. [/NOLOGO (Başlangıç başlığı gizleme) (bağlantılayıcı)](/cpp/build/reference/nologo-suppress-startup-banner-linker).
+  Daha fazla bilgi için bkz. [/nologo (başlangıç başlığını gösterme) (bağlayıcı)](/cpp/build/reference/nologo-suppress-startup-banner-linker).
 
 - **SwapRunFromCD**
 
-  İsteğe **bağlı Boole parametresi.**
+  İsteğe bağlı **Boolean** parametresi.
 
-  ise, işletim sistemine önce bağlantıcı çıktısını bir takas dosyasına kopyalamasını ve ardından `true` görüntüyü orada çalıştırmasını söyler.
+  `true`, İşletim sistemine önce bağlayıcı çıkışını bir takas dosyasına kopyalamasını söyler ve sonra görüntüyü oradan çalıştırır.
 
-  Daha fazla bilgi için `CD` [/SWAPRUN (Bağlantıcı çıktısını takas dosyasına yükle) bağımsız değişkenine bakın.](/cpp/build/reference/swaprun-load-linker-output-to-swap-file) Ayrıca bkz. **SwapRunFromNET** parametresi.
+  Daha fazla bilgi için bkz `CD` . [/SWAPRUN (bağlayıcı çıktısını takas dosyasına yükle)](/cpp/build/reference/swaprun-load-linker-output-to-swap-file)bağımsız değişkeni. Ayrıca bkz. **SwapRunFromNet** parametresi.
 
 - **SwapRunFromNET**
 
-  İsteğe **bağlı Boole parametresi.**
+  İsteğe bağlı **Boolean** parametresi.
 
-  ise, işletim sistemine önce bağlantıcı çıktısını bir takas dosyasına kopyalamasını ve ardından `true` görüntüyü orada çalıştırmasını söyler.
+  `true`, İşletim sistemine önce bağlayıcı çıkışını bir takas dosyasına kopyalamasını söyler ve sonra görüntüyü oradan çalıştırır.
 
-  Daha fazla bilgi için `NET` [/SWAPRUN (Bağlantıcı çıktısını takas dosyasına yükle) bağımsız değişkenine bakın.](/cpp/build/reference/swaprun-load-linker-output-to-swap-file) Ayrıca, bu **tablodaki SwapRunFromCD** parametresine bakın.
+  Daha fazla bilgi için bkz `NET` . [/SWAPRUN (bağlayıcı çıktısını takas dosyasına yükle)](/cpp/build/reference/swaprun-load-linker-output-to-swap-file)bağımsız değişkeni. Ayrıca bkz. bu tablodaki **SwapRunFromCD** parametresi.
 
 - **TargetMachine**
 
-  İsteğe **bağlı Dize** parametresi.
+  İsteğe bağlı **dize** parametresi.
 
   Program veya DLL için hedef platformu belirtir.
 
   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **Notset** - *\<none>*
+  - **NotSet** - *\<none>*
 
-  - **MachineARM**  -  **/MACHINE:ARM**
+  - **Machineard**  -  **/Machine: ARM**
 
-  - **MachineEBC**  -  **/MACHINE:EBC**
+  - **Machineebc**  -  **/Machine: EBC**
 
-  - **MachineIA64**  -  **/MACHINE:IA64**
+  - **MachineIA64**  -  **/MACHINE: IA64**
 
-  - **MachineMIPS**  -  **/MACHINE:MIPS**
+  - **Machinemıps**  -  **/MACHINE: MIPS**
 
-  - **MachineMIPS16**  -  **/MACHINE:MIPS16**
+  - **MachineMIPS16**  -  **/MACHINE: kayıtlardan biri mıps16**
 
-  - **MachineMIPSFPU**  -  **/MACHINE:MIPSFPU**
+  - **Machinemıpsfpu**  -  **/MACHINE: MIPSFPU**
 
-  - **MachineMIPSFPU16**  -  **/MACHINE:MIPSFPU16**
+  - **MachineMIPSFPU16**  -  **/MACHINE: MIPSFPU16**
 
-  - **MachineSH4**  -  **/MACHINE:SH4**
+  - **MachineSH4**  -  **/MACHINE: sh4**
 
-  - **MachineTHUMB**  -  **/MACHINE:THUMB**
+  - **Machinethumb**  -  **/MACHINE: Thumb**
 
-  - **MachineX64**  -  **/MACHINE:X64**
+  - **MachineX64**  -  **/Machine: x64**
 
-  - **MachineX86**  -  **/MACHINE:X86**
+  - **MachineX86**  -  **/Machine: x86**
 
-  Daha fazla bilgi için bkz. [/MACHINE (Hedef platformu belirtin)](/cpp/build/reference/machine-specify-target-platform).
+  Daha fazla bilgi için bkz. [/Machine (hedef platformu belirt)](/cpp/build/reference/machine-specify-target-platform).
 
 - **TerminalServerAware**
 
-  İsteğe **bağlı Boole parametresi.**
+  İsteğe bağlı **Boolean** parametresi.
 
-  ise, `true` program görüntüsünün isteğe IMAGE_OPTIONAL_HEADER dllCharacteristics alanında bir bayrak ayarlar. Bu bayrak ayarlanırsa, Terminal Sunucusu uygulamada belirli değişiklikler yapmaz.
+  `true`, Program görüntüsünün isteğe bağlı üst bilgisindeki IMAGE_OPTIONAL_HEADER Dllözellikler alanında bir bayrak ayarlar. Bu bayrak ayarlandığında, Terminal sunucusu uygulamada belirli değişiklikler yapmayacak.
 
-  Daha fazla bilgi için bkz. [/TSAWARE (Terminal Sunucusu'na uygun uygulama oluşturma)](/cpp/build/reference/tsaware-create-terminal-server-aware-application).
+  Daha fazla bilgi için bkz. [/T saware (Terminal Server 'ı algılayan uygulama oluşturma)](/cpp/build/reference/tsaware-create-terminal-server-aware-application).
 
 - **TrackerLogDirectory**
 
-  İsteğe **bağlı Dize** parametresi.
+  İsteğe bağlı **dize** parametresi.
 
   İzleyici günlüğünün dizinini belirtir.
 
 - **TreatLinkerWarningAsErrors**
 
-  İsteğe **bağlı Boole parametresi.**
+  İsteğe bağlı **Boolean** parametresi.
 
-  ise, `true` bağlantıcı bir uyarı oluşturursa hiçbir çıkış dosyası oluşturulmaz.
+  İse `true` , bağlayıcı bir uyarı oluşturursa çıkış dosyası üretilmez.
 
-  Daha fazla bilgi için bkz. [/WX (Bağlantıcı uyarılarını hata olarak davran)](/cpp/build/reference/wx-treat-linker-warnings-as-errors).
+  Daha fazla bilgi için bkz. [/WX (bağlayıcı uyarılarını hata olarak işle)](/cpp/build/reference/wx-treat-linker-warnings-as-errors).
 
 - **TurnOffAssemblyGeneration**
 
-  İsteğe **bağlı Boole parametresi.**
+  İsteğe bağlı **Boolean** parametresi.
 
-  ise, `true` geçerli çıkış dosyası için bir derleme derlemesi olmadan .NET Framework oluşturur.
+  varsa `true` , geçerli çıkış dosyası için .NET Framework derlemesi olmadan bir görüntü oluşturur.
 
-  Daha fazla bilgi için bkz. [/NOASSEMBLY (MSIL modülü oluşturma)](/cpp/build/reference/noassembly-create-a-msil-module).
+  Daha fazla bilgi için bkz. [/NOASSEMBLY (MSIL Modülü oluşturma)](/cpp/build/reference/noassembly-create-a-msil-module).
 
 - **TypeLibraryFile**
 
-  İsteğe **bağlı Dize** parametresi.
+  İsteğe bağlı **dize** parametresi.
 
-  *.tlb* dosyasının dosya adını ve dosya adı uzantısını belirtir. Bir dosya adı veya yol ve dosya adı belirtin.
+  *. Tlb* dosyasının dosya adı ve dosya adı uzantısını belirtir. Bir dosya adı veya yol ve dosya adı belirtin.
 
-  Daha fazla bilgi için bkz. [/TLBOUT (.tlb dosyasını adı)](/cpp/build/reference/tlbout-name-dot-tlb-file).
+  Daha fazla bilgi için bkz. [/Tlhakkında (ad. tlb dosyası)](/cpp/build/reference/tlbout-name-dot-tlb-file).
 
 - **TypeLibraryResourceID**
 
-  İsteğe **bağlı Tamsayı** parametresi.
+  İsteğe bağlı **tamsayı** parametresi.
 
-  Bir bağlantıcı tarafından oluşturulan tür kitaplığı için kullanıcı tarafından belirtilen değeri verir. 1 ile 65535 arasında bir değer belirtin.
+  Bağlayıcı tarafından oluşturulan tür kitaplığı için Kullanıcı tarafından belirtilen bir değer belirtir. 1 ile 65535 arasında bir değer belirtin.
 
-  Daha fazla bilgi için bkz. [/TLBID (TypeLib için kaynak kimliğini belirtin)](/cpp/build/reference/tlbid-specify-resource-id-for-typelib).
+  Daha fazla bilgi için bkz. [/Tldeklarasyon (TypeLib için kaynak Kimliğini Belirt)](/cpp/build/reference/tlbid-specify-resource-id-for-typelib).
 
-- **UACExecutionLevel**
+- **Uıacexecutionlevel**
 
-  İsteğe **bağlı Dize** parametresi.
+  İsteğe bağlı **dize** parametresi.
 
-  Kullanıcı Hesabı Denetimi altında çalıştırıldıklarından uygulama için istenen yürütme düzeyini belirtir.
+  Kullanıcı hesabı denetimiyle birlikte çalıştırıldığında, uygulama için istenen yürütme düzeyini belirtir.
 
   Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.
 
-  - **Asınvoker** - `level='asInvoker'`
+  - **AsInvoker** - `level='asInvoker'`
 
   - **HighestAvailable** - `level='highestAvailable'`
 
   - **RequireAdministrator** - `level='requireAdministrator'`
 
-  Daha fazla bilgi için `level` bkz. [/MANIFESTUAC bağımsız değişkeni (Bildirime UAC bilgileri ekleme)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
+  Daha fazla bilgi için bkz `level` . [/Bildiriestuac bağımsız değişkeni (bildirimdeki UAC bilgilerini katıştırır)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
 
-- **UACUIAccess**
+- **Uıacuıaccess**
 
-  İsteğe **bağlı Boole parametresi.**
+  İsteğe bağlı **Boolean** parametresi.
 
-  ise, uygulama kullanıcı arabirimi koruma düzeylerini atlar ve `true` masaüstünde daha yüksek izinli pencerelere giriş sürücüleri; aksi takdirde, `false` .
+  `true`Uygulama, Kullanıcı arabirimi koruma düzeylerini ve sürücüler girişini masaüstündeki daha yüksek izin üzerine atlar; Aksi takdirde, `false` .
 
-  Daha fazla bilgi için `uiAccess` bkz. [/MANIFESTUAC bağımsız değişkeni (Bildirime UAC bilgileri ekleme)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
+  Daha fazla bilgi için bkz `uiAccess` . [/Bildiriestuac bağımsız değişkeni (bildirimdeki UAC bilgilerini katıştırır)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
 
-- **UseLibraryDependencyInputs**
+- **Uselibrarydependencygirdileri**
 
-  İsteğe **bağlı Boole parametresi.**
+  İsteğe bağlı **Boolean** parametresi.
 
-  ise, kitaplık dosyasının kendisi yerine kitaplık aracına yapılan girişler, proje bağımlılıklarının kitaplık çıkışları içinde `true` bağlı olduğunda kullanılır.
+  İse `true` , proje bağımlılıklarının kitaplık çıkışları ile bağlantılı olduğunda kitaplık dosyasının kendisi yerine kütüphaneian aracının girişleri kullanılır.
 
 - **Sürüm**
 
-  İsteğe **bağlı Dize** parametresi.
+  İsteğe bağlı **dize** parametresi.
 
-  .exeveya.dll *üst bilgisinde bir.dll* girin.  " " `major[.minor]` belirtin. ve `major` bağımsız `minor` değişkenleri 0 ile 65535 arasında ondalık sayılardır.
+  *.exe* veya *.dll* dosyasının üstbilgisine bir sürüm numarası koyun. " `major[.minor]` " Belirtin. `major`Ve `minor` bağımsız değişkenleri 0 ile 65535 arasında ondalık sayılardır.
 
-  Daha fazla bilgi için bkz. [/VERSION (Sürüm bilgileri)](/cpp/build/reference/version-version-information).
+  Daha fazla bilgi için bkz. [/Version (sürüm bilgileri)](/cpp/build/reference/version-version-information).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
