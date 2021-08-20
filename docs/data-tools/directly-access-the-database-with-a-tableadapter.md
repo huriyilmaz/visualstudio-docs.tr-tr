@@ -1,6 +1,6 @@
 ---
 title: Bir TableAdapter ile veritabanına doğrudan erişme
-description: Doğrudan veritabanındaki verileri işlemek için Ekle, Güncelleştir ve Sil gibi yöntemleri kullanarak TableAdapter ile veritabanına doğrudan erişin.
+description: Doğrudan veritabanındaki verileri işlemek için INSERT, Update ve DELETE gibi yöntemleri kullanarak bir TableAdapter ile veritabanına doğrudan erişin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -26,49 +26,49 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f676e64dc8f79afb6ff9256b0f85d19054f4a00594a5d8fd420e543b048a6e6f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 18abf137354f6b5a752c217a68e7d70e74dd13fb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121264616"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154894"
 ---
 # <a name="directly-access-the-database-with-a-tableadapter"></a>Bir TableAdapter ile veritabanına doğrudan erişme
 
-, ve `InsertCommand` `UpdateCommand` `DeleteCommand` ,TableAdapter'lara ek olarak, doğrudan veritabanına karşı çalıştırılan yöntemlerle oluşturulur. Verileri doğrudan veritabanında işlemek için bu yöntemleri ( `TableAdapter.Insert` `TableAdapter.Update` , ve ) `TableAdapter.Delete` çağırabilirsiniz.
+, Ve ' a ek olarak, `InsertCommand` `UpdateCommand` `DeleteCommand` TableAdapters doğrudan veritabanına karşı çalıştırılabilen yöntemlerle oluşturulur. `TableAdapter.Insert` `TableAdapter.Update` `TableAdapter.Delete` Verileri doğrudan veritabanında işlemek için bu yöntemleri (, ve) çağırabilirsiniz.
 
-Bu doğrudan yöntemleri oluşturmak istemiyorsanız, Özellikler penceresinde TableAdapter'ın `GenerateDbDirectMethods` `false` özelliğini  olarak ayarlayın. TableAdapter'ın ana sorgusuna ek olarak TableAdapter'a sorgu eklenirse, bunlar bu yöntemleri üretemeyen tek başına `DbDirect` sorgulardır.
+Bu doğrudan yöntemleri oluşturmak istemiyorsanız, TableAdapter `GenerateDbDirectMethods` özelliğini `false` **Özellikler** penceresinde olarak ayarlayın. TableAdapter 'ın ana sorgusuna ek olarak bir TableAdapter 'a herhangi bir sorgu eklenirse, bu yöntemleri oluşturan tek başına sorgular vardır `DbDirect` .
 
-## <a name="send-commands-directly-to-a-database"></a>Komutları doğrudan bir veritabanına gönderme
+## <a name="send-commands-directly-to-a-database"></a>Komutları doğrudan bir veritabanına gönder
 
-Gerçekleştirmeye çalıştığın görevi gerçekleştiren TableAdapter `DbDirect` yöntemini çağırma.
+`DbDirect`Gerçekleştirmeyi denediğiniz görevi gerçekleştiren TableAdapter metodunu çağırın.
 
 ### <a name="to-insert-new-records-directly-into-a-database"></a>Yeni kayıtları doğrudan bir veritabanına eklemek için
 
-- TableAdapter yöntemini `Insert` çağırarak her sütunun değerlerini parametre olarak geçirme. Aşağıdaki yordam `Region` northwind veritabanındaki tabloyu örnek olarak kullanır.
+- TableAdapter `Insert` metodunu, her bir sütunun değerlerini parametre olarak geçirerek çağırın. Aşağıdaki yordam `Region` bir örnek olarak Northwind veritabanındaki tabloyu kullanır.
 
     > [!NOTE]
-    > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini seçin.
+    > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini oluşturun.
 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb" id="Snippet15":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs" id="Snippet15":::
 
-### <a name="to-update-records-directly-in-a-database"></a>Doğrudan bir veritabanındaki kayıtları güncelleştirmek için
+### <a name="to-update-records-directly-in-a-database"></a>Kayıtları doğrudan bir veritabanında güncelleştirmek için
 
-- TableAdapter yöntemini çağırarak her sütun için yeni ve `Update` özgün değerleri parametre olarak geçirme.
+- `Update`Her sütun için yeni ve orijinal değerlerini parametre olarak geçirerek TableAdapter metodunu çağırın.
 
     > [!NOTE]
-    > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini seçin.
+    > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini oluşturun.
 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb" id="Snippet18":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs" id="Snippet18":::
 
-### <a name="to-delete-records-directly-from-a-database"></a>Kayıtları doğrudan bir veritabanından silmek için
+### <a name="to-delete-records-directly-from-a-database"></a>Kayıtları doğrudan veritabanından silmek için
 
-- TableAdapter yöntemini `Delete` çağırarak her sütunun değerlerini yönteminin parametreleri olarak `Delete` geçirme. Aşağıdaki yordam `Region` northwind veritabanındaki tabloyu örnek olarak kullanır.
+- `Delete`Her bir sütunun değerlerini metodun parametreleri olarak geçirerek TableAdapter metodunu çağırın `Delete` . Aşağıdaki yordam `Region` bir örnek olarak Northwind veritabanındaki tabloyu kullanır.
 
     > [!NOTE]
-    > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini seçin.
+    > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini oluşturun.
 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Class1.vb" id="Snippet21":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Class1.cs" id="Snippet21":::

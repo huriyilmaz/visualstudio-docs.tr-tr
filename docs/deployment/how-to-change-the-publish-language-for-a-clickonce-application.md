@@ -1,6 +1,6 @@
 ---
-title: ClickOnce uygulaması için yayımlama dilini değiştirme
-description: Geliştirme bilgisayarınızın dilini/kültürünü varsayılan olarak kullanmak yerine, ClickOnce 'ta yerelbir uygulama için bir dil/kültür belirtmeyi öğrenin.
+title: Uygulama için yayımlama dilini ClickOnce değiştirme
+description: Geliştirme bilgisayarınızın dilini/kültürünü varsayılan olarak belirlemek ClickOnce yerelleştirme uygulaması için dil/kültür belirtmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,37 +16,38 @@ ms.assetid: ef5024c4-cda1-4970-bc75-32a2a10c92c3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: c0d9c3d49dde0bdef41e89ee71139fb1ab621297
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 4e34b5a28df05758eb24d6af2c907e99d0f9b9f7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99851471"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160841"
 ---
-# <a name="how-to-change-the-publish-language-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için yayımlama dilini değiştirme
+# <a name="how-to-change-the-publish-language-for-a-clickonce-application"></a>Nasıl ClickOnce uygulama için yayımlama dilini değiştirme
 
-Bir uygulamayı yayımlarken [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , yükleme sırasında görüntülenecek kullanıcı arabirimi, geliştirme bilgisayarınızın diline ve kültürünü varsayılan olarak alır. Yerelleştirilmiş bir uygulama yayımlıyorsanız, yerelleştirilmiş sürümle eşleşecek bir dil ve kültür belirtmeniz gerekecektir. Bu, `Publish language` projeniz için özelliği tarafından belirlenir.
+Bir uygulamayı [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] yayımlarken, yükleme sırasında görüntülenen kullanıcı arabirimi varsayılan olarak geliştirme bilgisayarınızın dilini ve kültürünü kullanır. Yerelleştirilmiş bir uygulama yayımlarsanız, yerelleştirilmiş sürümle eşleşmesi için bir dil ve kültür belirtmeniz gerekir. Bu, projenizin `Publish language` özelliği tarafından belirlenir.
 
-`Publish language`Özelliği, **Proje Tasarımcısı**' nın **Yayımla** sayfasından erişilebilen **Yayımla Seçenekleri** iletişim kutusunda ayarlanabilir.
+özelliği, `Publish language` Yayımlama Seçenekleri iletişim **kutusunda,** Project **Tasarımcısı'nın** Yayımla **sayfasından erişilebilir.**
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünde İçeri ve Dışarı  **Ayarlar'yi** seçin. Daha fazla bilgi için [bkz. Ayarları sıfırlama.](../ide/environment-settings.md#reset-settings)
 
-## <a name="to-change-the-publish-language"></a>Yayımla dilini değiştirmek için
+## <a name="to-change-the-publish-language"></a>Yayımlama dilini değiştirmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
+1. içinde bir proje **seçiliyken Çözüm Gezgini** menüsünde **Project'a** **tıklayın.**
 
-2. **Yayımla** sekmesine tıklayın.
+2. Yayımla **sekmesine** tıklayın.
 
-3. **Yayımla Seçenekleri** iletişim kutusunu açmak için **Seçenekler** düğmesine tıklayın.
+3. Seçenekleri **Yayımla** iletişim kutusunu açmak **için Seçenekler düğmesine** tıklayın.
 
-4. **Açıklama**' ya tıklayın.
+4. **Açıklama'ya tıklayın.**
 
-5. **Yayımla Seçenekleri** iletişim kutusunda, **yayınlama dili** açılır listesinden bir dil ve kültür seçin ve ardından **Tamam**' a tıklayın.
+5. Yayımlama **Seçenekleri iletişim** kutusunda, Dili yayımla açılan listesinden bir dil **ve** kültür seçin ve ardından Tamam'a **tıklayın.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
-- [Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Nasıl ClickOnce: ClickOnce Sihirbazı'nı kullanarak bir uygulama yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

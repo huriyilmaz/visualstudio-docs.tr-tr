@@ -1,6 +1,6 @@
 ---
-description: Sınır kesme noktaları numaralarından sonraki öğe kümesi döndürür.
-title: IEnumDebugBoundBreakpoints2::Next | Microsoft Docs
+description: Bağlantılı kesme noktaları numaralandırmasındaki sonraki öğe kümesini döndürür.
+title: 'IEnumDebugBoundBreakpoints2:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f0bd654abca7f13ab212c804a11cbcf9064aed65d475f3bd93f106662309d465
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 96f5ab7a9c07f8a4999c82374bdaace5ea5b8466
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389349"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095653"
 ---
 # <a name="ienumdebugboundbreakpoints2next"></a>IEnumDebugBoundBreakpoints2::Next
-Numaralamadan sonraki öğe kümesi döndürür.
+Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,16 +47,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
+'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
 
 `rgelt`\
-[in, out] Doldurulması [gereken IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) öğelerinin dizisi.
+[in, out] Doldurulacak [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) öğelerinin dizisi.
 
 `pceltFetched`\
-[out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
+dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md)

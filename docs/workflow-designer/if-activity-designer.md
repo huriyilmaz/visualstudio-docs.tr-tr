@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-If etkinlik Tasarımcısı
-description: Etkinliğin bir koşulu nasıl değerlendirdiğine ve bu değerlendirmenin sonuçlarına bağlı olarak bir etkinliği nasıl yürüttüğünü öğrenin.
+title: İş Akışı Tasarımcısı - If Etkinlik Tasarımcısı
+description: If etkinliğinin bir koşulu nasıl değerlendirip bu değerlendirmenin sonuçlarına bağlı olarak bir etkinlik yürütmesini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,31 +10,32 @@ ms.assetid: 930a8fa2-db98-43e9-ad6d-a85cc7a6519a
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: 93f36a3c2b587718fe6889688baa50224f663c1c
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 6abacbe5f5212a062c9f23cdc7cfab3e27d7cb6b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99881366"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155167"
 ---
 # <a name="if-activity-designer"></a>If Etkinlik Tasarımcısı
 
-<xref:System.Activities.Statements.If>Etkinlik bir koşulu değerlendirir ve bu değerlendirmenin sonuçlarına bağlı olarak bir etkinliği yürütür. Bu etkinlik, programlama için bir yordamsal modelleme stili kullanırken faydalıdır. <xref:System.Activities.Statements.If>Etkinlik, örneğin bir etkinliğin veya etkinliğin içinde iç içe olabilir <xref:System.Activities.Statements.Sequence> <xref:System.Activities.Statements.Parallel> . Bir <xref:System.Activities.Statements.Flowchart> etkinlik kullanıyorsanız <xref:System.Activities.Statements.FlowDecision> bunun yerine bir etkinlik kullanmayı düşünün.
+Etkinlik <xref:System.Activities.Statements.If> bir koşulu değerlendirir ve bu değerlendirmenin sonuçlarına bağlı olarak bir etkinliği yürütür. Bu etkinlik en çok programlamanın yordamsal modelleme stilini kullanırken kullanışlıdır. Bir <xref:System.Activities.Statements.If> etkinlik, örneğin bir etkinliğin <xref:System.Activities.Statements.Sequence> veya <xref:System.Activities.Statements.Parallel> etkinliğin içinde iç içe yer alan bir etkinlik olabilir. Bir etkinlik kullanıyorsanız <xref:System.Activities.Statements.Flowchart> bunun yerine bir etkinlik kullanmayı göz önünde <xref:System.Activities.Statements.FlowDecision> bulundurarak.
 
-## <a name="if-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı Özellikler
+## <a name="if-properties-in-the-workflow-designer"></a>If Properties in the İş Akışı Tasarımcısı
 
-Aşağıdaki tabloda en yararlı <xref:System.Activities.Statements.If> etkinlik özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanılacağı açıklanmaktadır.
+Aşağıdaki tabloda en kullanışlı etkinlik <xref:System.Activities.Statements.If> özellikleri ve bunların tasarımcıda nasıl kullanacağız açık bulunmaktadır.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Statements.If.Condition%2A>|Doğru|Hangi alt etkinliğin çalıştırılacağını belirleyen koşul. Ayarlamak için, <xref:System.Activities.Statements.If.Condition%2A> **IF** Etkinlik tasarımcısında veya özellik kılavuzunda **koşul** kutusuna bir Visual Basic ifadesi yazın.|
-|<xref:System.Activities.Statements.If.Else%2A>|Yanlış|False ise yürütülecek etkinlik <xref:System.Activities.Statements.If.Condition%2A> .  Dal tarafından yürütülen bir etkinlik eklemek için <xref:System.Activities.Statements.If.Else%2A> , **araç kutusundan** bir etkinliği, ipucu metin olarak "etkinliği buraya bırak" Ipucu metni ile **IF** Etkinlik tasarımcısında **Else** kutusuna bırakın.|
-|<xref:System.Activities.Statements.If.Then%2A>|Yanlış|True ise yürütülecek etkinlik <xref:System.Activities.Statements.If.Condition%2A> .  Dal tarafından yürütülen bir etkinlik eklemek için <xref:System.Activities.Statements.If.Then%2A> , **araç kutusundan** bir etkinliği, ipucu metin olarak "etkinliği buraya  bırak" ipucu metni ile **IF** Etkinlik tasarımcısında bulunan kutuya bırakın.|
+|<xref:System.Activities.Statements.If.Condition%2A>|Doğru|Hangi alt etkinliğin yürütülecek olduğunu belirleyen koşul. ayarlamak için, If Visual Basic tasarımcısında veya özellik kılavuzunda Koşul kutusuna bir Visual Basic <xref:System.Activities.Statements.If.Condition%2A> ifadesi yazın.  |
+|<xref:System.Activities.Statements.If.Else%2A>|Yanlış|false ise <xref:System.Activities.Statements.If.Condition%2A> yürütülecek **etkinlik.** Dal tarafından yürütülen bir etkinliği eklemek için Araç Kutusundan If etkinlik tasarımcısının Else kutusuna "Etkinliği Buraya Bırak" ipucu metniyle bir <xref:System.Activities.Statements.If.Else%2A> etkinlik bırakın.   |
+|<xref:System.Activities.Statements.If.Then%2A>|Yanlış|true ise <xref:System.Activities.Statements.If.Condition%2A> yürütülecek **etkinlik.** Dal tarafından yürütülen bir etkinliği eklemek için Araç Kutusundan If etkinlik tasarımcısının Ardından kutusuna "Etkinliği Buraya Bırak" ipucu metniyle bir <xref:System.Activities.Statements.If.Then%2A> etkinlik bırakın.   |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sequence](../workflow-designer/sequence-activity-designer.md)
-- [Dir](../workflow-designer/parallel-activity-designer.md)
-- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
+- [Paralel](../workflow-designer/parallel-activity-designer.md)
+- [Denetim Flow](../workflow-designer/control-flow-activity-designers.md)

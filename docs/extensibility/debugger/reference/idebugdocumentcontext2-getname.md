@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9a5318276276afd9bc6939a44cbed876447fbe3de26625e252c2fdfffde42d43
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c84bb0d1ad5f04bde3b2c060a8f8c0d820c6aca2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121238963"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122089244"
 ---
 # <a name="idebugdocumentcontext2getname"></a>IDebugDocumentContext2::GetName
 Bu belge bağlamını içeren belgenin görüntülenebilen adını alır.

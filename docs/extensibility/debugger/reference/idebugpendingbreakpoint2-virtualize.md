@@ -12,17 +12,18 @@ ms.assetid: 58c8e9a5-4494-47c2-bddb-56f628da6a2d
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fa2d3dcab7e5e71140b308dc825417c03e79d356
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 14e3fc459288e9119c47d6a3256c961cf893197f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084525"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126875"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
 Bu bekleyen kesme noktasının sanallaştırılmış durumuna geçiş yapar. Bekleyen bir kesme noktası sanallaştırılmış olduğunda, hata ayıklama altyapısı, programa her yeni kod yüklendiğinde bağlamayı dener.

@@ -1,6 +1,6 @@
 ---
-title: Görselleştirici API başvurusu | Microsoft Docs
-description: Görselleştirici belirli bir veri öğesi türünü görüntüler ve ayrıca düzenlenmesine izin verebilir. Bir tane oluşturmak için, bu bölümde belgelenen görselleştiricisi API 'sini kullanın.
+title: Görselleştirici API'si Başvuru | Microsoft Docs
+description: Görselleştirici belirli bir veri öğesi türünü görüntüler ve düzenlemeye de izin veli olabilir. Bir tane oluşturmak için bu bölümde belgelenmiş Olan Görselleştirici API'sini kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -20,16 +20,16 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 86e5d3aeb1290bc5067897d693d1b6c218bb42db233631fa3ee3206369a938ef
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7dbf4105320531a21f478ef8947129e0fa754c28
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121418603"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112235"
 ---
 # <a name="visualizer-api-reference"></a>Görselleştirici API Başvurusu
 
-görselleştiricisi apı 'leri, Visual Studio hata ayıklayıcı için görselleştirici yazmak isteyen kullanıcılar için sağlanır. görselleştirici, Visual Studio hata ayıklayıcı kullanıcı arabiriminin işlevlerini genişleten küçük bir uygulamadır. Görselleştirici, Görselleştirici tasarlandığı belirli bir türün veri nesnesini görüntüleyebilir (ve isteğe bağlı olarak düzenleyebilir).
+Görselleştirici API'leri, Visual Studio hata ayıklayıcısı için görselleştirici yazmak isteyen kullanıcılara sağlanır. Görselleştirici, hata ayıklayıcı kullanıcı arabiriminin işlevselliğini genişleten Visual Studio bir uygulamadır. Görselleştirici, görselleştiricinin tasar olduğu belirli bir türe sahip bir veri nesnesini görüntüleyemez (ve isteğe bağlı olarak düzenleyebilir).
 
 ## <a name="in-this-section"></a>Bu Bölümde
 

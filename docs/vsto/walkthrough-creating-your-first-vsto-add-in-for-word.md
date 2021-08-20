@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Word için ilk VSTO eklentisini oluşturma'
+title: 'izlenecek yol: Word için ilk VSTO eklentiyi oluşturma'
 description: Microsoft Word için uygulama düzeyi eklentisi oluşturun. Bu özellik, hangi belgelerin açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
@@ -15,17 +15,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: fd3509ab674faa220ed7bbea15a9762f52b1a525
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 0c6f06400e1f35af9cce874d601c03f6cf1dc4a1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828286"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155466"
 ---
-# <a name="walkthrough-create-your-first-vsto-add-in-for-word"></a>İzlenecek yol: Word için ilk VSTO eklentisini oluşturma
-  Bu açıklayıcı izlenecek yol, Microsoft Office Word için VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi belgelerin açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir.
+# <a name="walkthrough-create-your-first-vsto-add-in-for-word"></a>izlenecek yol: Word için ilk VSTO eklentiyi oluşturma
+  bu açıklayıcı izlenecek yol, Microsoft Office Word için VSTO eklentisinin nasıl oluşturulacağını gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi belgelerin açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir.
 
  [!INCLUDE[appliesto_wdallapp](../vsto/includes/appliesto-wdallapp-md.md)]
 
@@ -37,7 +38,7 @@ ms.locfileid: "107828286"
 
 - Test etmek için projeyi oluşturma ve çalıştırma.
 
-- VSTO eklentisinin geliştirme bilgisayarınızda artık otomatik olarak çalışmamasını sağlamak için tamamlanmış projeyi Temizleme.
+- VSTO eklentisinin geliştirme bilgisayarınızda artık otomatik olarak çalışmamasını sağlamak için tamamlanmış projeyi temizleme.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -50,17 +51,17 @@ ms.locfileid: "107828286"
 
 ## <a name="create-the-project"></a>Proje oluşturma
 
-### <a name="to-create-a-new-word-vsto-add-in-project-in-visual-studio"></a>Visual Studio 'da yeni bir Word VSTO eklentisi projesi oluşturmak için
+### <a name="to-create-a-new-word-vsto-add-in-project-in-visual-studio"></a>Visual Studio yeni bir Word VSTO eklentisi projesi oluşturmak için
 
 1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
+2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve **Project**' ye tıklayın.
 
-3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**' i genişletin ve ardından **Office/SharePoint**' i genişletin.
+3. şablonlar bölmesinde, **Visual C#** veya **Visual Basic**' i genişletin ve ardından **Office/SharePoint**' yı genişletin.
 
-4. Genişletilmiş **Office/SharePoint** düğümü altında **Office eklentileri** düğümünü seçin.
+4. genişletilmiş **Office/SharePoint** düğümü altında **Office eklentileri** düğümünü seçin.
 
-5. Proje şablonları listesinde bir Word VSTO eklenti projesi seçin.
+5. proje şablonları listesinde, bir Word VSTO eklentisi projesi seçin.
 
 6. **Ad** kutusuna **FirstWordAddIn** yazın.
 
@@ -71,9 +72,9 @@ ms.locfileid: "107828286"
 ## <a name="write-code-to-add-text-to-the-saved-document"></a>Kaydedilen belgeye metin eklemek için kod yazın
  Ardından, ThisAddIn kod dosyasına kod ekleyin. Yeni kod, kaydedilen her belgeye ortak metin eklemek için Word nesne modelini kullanır. Varsayılan olarak, ThisAddIn kod dosyası aşağıdaki oluşturulan kodu içerir:
 
-- Sınıfın kısmi tanımı `ThisAddIn` . Bu sınıf, kodunuz için bir giriş noktası sağlar ve Word nesne modeline erişim sağlar. Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md). Sınıfın geri kalanı, `ThisAddIn` değiştirmemelisiniz bir gizli kod dosyasında tanımlanır.
+- Sınıfın kısmi tanımı `ThisAddIn` . Bu sınıf, kodunuz için bir giriş noktası sağlar ve Word nesne modeline erişim sağlar. daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md). Sınıfın geri kalanı, `ThisAddIn` değiştirmemelisiniz bir gizli kod dosyasında tanımlanır.
 
-- `ThisAddIn_Startup`Ve `ThisAddIn_Shutdown` olay işleyicileri. Bu olay işleyicileri, Word VSTO eklentinizi yüklediğinde ve kaldırdığında çağrılır. Bu olay işleyicilerini, yüklendiğinde VSTO eklentisini başlatmak ve bu etkinlik kaldırıldığında VSTO eklentisi tarafından kullanılan kaynakları temizlemek için kullanın. Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
+- `ThisAddIn_Startup`Ve `ThisAddIn_Shutdown` olay işleyicileri. bu olay işleyicileri, Word VSTO eklentinizi yüklediğinde ve kaldırıldığında çağrılır. bu olay işleyicilerini, yüklendiğinde VSTO eklentisini başlatmak ve VSTO eklentisi tarafından kullanılan kaynakları temizleyene kadar temizlemek için kullanın. daha fazla bilgi için bkz. [Office projelerindeki olaylar](../vsto/events-in-office-projects.md).
 
 ### <a name="to-add-a-paragraph-of-text-to-the-saved-document"></a>Kaydedilen belgeye metin paragrafı eklemek için
 
@@ -85,7 +86,7 @@ ms.locfileid: "107828286"
     :::code language="csharp" source="../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs" id="Snippet1":::
 
    > [!NOTE]
-   > Bu kod, koleksiyondaki ilk paragrafa erişmek için 1 olan bir dizin değeri kullanır <xref:Microsoft.Office.Interop.Word._Document.Paragraphs%2A> . Visual Basic ve Visual C# 0 tabanlı diziler kullanmasına karşın, Word nesne modelindeki çoğu koleksiyonun alt dizi sınırları 1 ' dir. Daha fazla bilgi için bkz. [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md).
+   > Bu kod, koleksiyondaki ilk paragrafa erişmek için 1 olan bir dizin değeri kullanır <xref:Microsoft.Office.Interop.Word._Document.Paragraphs%2A> . Visual Basic ve Visual C# 0 tabanlı diziler kullanmasına karşın, Word nesne modelindeki çoğu koleksiyonun alt dizi sınırları 1 ' dir. daha fazla bilgi için bkz. [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md).
 
 2. C# kullanıyorsanız, olay işleyicisine aşağıdaki gerekli kodu ekleyin `ThisAddIn_Startup` . Bu kod `Application_DocumentBeforeSave` olay işleyicisini olayla bağlamak için kullanılır <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> .
 
@@ -103,7 +104,7 @@ ms.locfileid: "107828286"
 
 1. Projenizi derlemek ve çalıştırmak için **F5** tuşuna basın.
 
-     Projeyi derlediğinizde kod, projenin yapı çıkış klasörüne dahil olan bir derlemeye derlenir. Visual Studio Ayrıca, Word 'Ün VSTO eklentisini bulmasını ve yüklemesini sağlayan bir kayıt defteri girişi kümesi oluşturur ve VSTO eklentisinin çalışmasını sağlamak için geliştirme bilgisayarındaki güvenlik ayarlarını yapılandırır. Daha fazla bilgi için bkz. [Office çözümleri oluşturma](../vsto/building-office-solutions.md).
+     Projeyi derlediğinizde kod, projenin yapı çıkış klasörüne dahil olan bir derlemeye derlenir. Visual Studio ayrıca, Word 'ün VSTO eklentisini bulmasını ve yüklemesini sağlayan bir kayıt defteri girişi kümesi oluşturur ve VSTO eklentisinin çalışmasına olanak tanımak için geliştirme bilgisayarındaki güvenlik ayarlarını yapılandırır. daha fazla bilgi için bkz. [derleme Office çözümleri](../vsto/building-office-solutions.md).
 
 2. Word 'de etkin belgeyi kaydedin.
 
@@ -114,24 +115,24 @@ ms.locfileid: "107828286"
 4. Word 'Ü kapatın.
 
 ## <a name="clean-up-the-project"></a>Projeyi temizle
- Projeyi geliştirmeyi bitirdiğinizde, VSTO eklenti derlemesini, kayıt defteri girişlerini ve güvenlik ayarlarını geliştirme bilgisayarınızdan kaldırın. Aksi halde, VSTO eklentisi geliştirme bilgisayarınızda Word 'Ü her açışınızda çalışmaya devam edecektir.
+ projeyi geliştirmeyi bitirdiğinizde, VSTO eklenti derlemesini, kayıt defteri girişlerini ve güvenlik ayarlarını geliştirme bilgisayarınızdan kaldırın. aksi halde, VSTO eklentisi, geliştirme bilgisayarınızda Word 'ü her açışınızda çalışmaya devam edecektir.
 
 ### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>Geliştirme bilgisayarınızda tamamlanmış projeyi temizlemek için
 
-1. Visual Studio 'da, **Yapı** menüsünde **Çözümü Temizle**' ye tıklayın.
+1. Visual Studio, **yapı** menüsünde **çözümü temizle**' ye tıklayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Word için temel bir VSTO eklentisi oluşturduğunuza göre, şu konulardan VSTO eklentileri geliştirme hakkında daha fazla bilgi edinebilirsiniz:
+ Word için temel bir VSTO eklentisi oluşturduğunuza göre, şu konulardan VSTO eklentilerin nasıl geliştirileceği hakkında daha fazla bilgi edinebilirsiniz:
 
 - VSTO eklentilerde gerçekleştirebileceğiniz genel programlama görevleri: [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
 
-- Word VSTO eklentilerine özgü programlama görevleri: [Word çözümleri](../vsto/word-solutions.md).
+- word VSTO eklentiler: [word çözümleri](../vsto/word-solutions.md)' ne özel programlama görevleri.
 
 - Word nesne modelini kullanma: [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md).
 
-- Word 'ün Kullanıcı arabirimini özelleştirme, örneğin, şerit 'e özel bir sekme ekleme veya kendi özel görev bölmenizi oluşturma: [OFFICE UI özelleştirmesi](../vsto/office-ui-customization.md).
+- Word 'ün kullanıcı arabirimini özelleştirme, örneğin, şerit 'e özel bir sekme ekleyerek veya kendi özel görev bölmenizi oluşturarak: [uı özelleştirmesi Office](../vsto/office-ui-customization.md).
 
-- Word için VSTO eklentileri oluşturma ve hata ayıklama: [Office çözümleri oluşturma](../vsto/building-office-solutions.md).
+- Word için VSTO eklentileri oluşturma ve hata ayıklama: [derleme Office çözümleri](../vsto/building-office-solutions.md).
 
 - Word için VSTO eklentileri dağıtma: [bir Office çözümü dağıtın](../vsto/deploying-an-office-solution.md).
 
@@ -141,6 +142,6 @@ ms.locfileid: "107828286"
 - [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)
 - [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md)
 - [Office UI özelleştirmesi](../vsto/office-ui-customization.md)
-- [Office çözümleri oluşturma](../vsto/building-office-solutions.md)
+- [Office çözümleri oluşturun](../vsto/building-office-solutions.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
 - [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md)

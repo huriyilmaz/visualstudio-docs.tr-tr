@@ -1,6 +1,6 @@
 ---
-title: Yakınlaştırma Denetimi (Kullanım Görünümü) | Microsoft Docs
-description: Yakınlaştırma denetimi, belirli ilgi alanlarına odaklanmak için CPU kullanım grafiğini yakınlaştırmanıza nasıl yardımcı olduğunu öğrenin.
+title: Yakınlaştırma denetimi (kullanım görünümü) | Microsoft Docs
+description: Yakınlaştırma denetiminin, belirli bir ilgilendiğiniz alanlara odaklanmak için CPU kullanımı grafiğini yakınlaştırmanıza nasıl yardımcı olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,17 +14,17 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8de198380ece1244d92cfe93f5ad859826b8a0eba2bcf7683a79d40b0f41b604
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d85d43fe69969f61af2082d49c8f0b35a5462b08
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121426189"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156675"
 ---
 # <a name="zoom-control-utilization-view"></a>Yakınlaştırma denetimi (kullanım görünümü)
-Yakınlaştırma denetimi, belirli ilgi alanlarına odaklanmak için CPU kullanım grafiğini yakınlaştırmanıza yardımcı olur. Bu denetim görünümün merkezini yakınlaştırıyor. Bu nedenle, yakınlaştırmadan önce ilgi alanı ortalanın.
+Yakınlaştırma denetimi, belirli bir ilgilendiğiniz alanlara odaklanmak için CPU kullanımı grafiğini yakınlaştırmanıza yardımcı olur. Bu denetim, görünümün merkezinde yakınlaştırılır. Bu nedenle, yakınlaştırmadan önce ilgilendiğiniz alanı ortamalısınız.
 
- Fare işaretçisini CPU kullanım grafiğine veya GPU etkinlik grafiğine sürükleyerek vurgulanmış bir alan oluşturabilirsiniz. Fare düğmesi serbest bırakıldığında görünüm seçili aralığı yakınlaştırıyor.
+ Vurgulanan bir alan oluşturmak için, CPU kullanım grafiğinde veya GPU etkinlik grafiğinde fare işaretçisini sürükleyebilirsiniz. Fare düğmesi serbest bırakıldığında, görünüm seçilen aralığa göre yakınlaştırılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kullanım görünümü](../profiling/utilization-view.md)

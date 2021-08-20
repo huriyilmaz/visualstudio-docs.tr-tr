@@ -1,6 +1,6 @@
 ---
-description: Bir numaralama dizisinde belirtilen sayıda özel özniteliği alan.
-title: IEnumDebugCustomAttributes::Next | Microsoft Docs
+description: Bir numaralandırma dizisinde belirtilen sayıda özel öznitelik alır.
+title: 'IEnumDebugCustomAttributes:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e6dfd5f316f6cf5d1db9cc923fbdddc38328e539d3c330a7b1f47c80fefb418b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d840d079df50d6df9fa08235dcf19f47c7d08f89
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360267"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103383"
 ---
 # <a name="ienumdebugcustomattributesnext"></a>IEnumDebugCustomAttributes::Next
-Bir numaralama dizisinde belirtilen sayıda özel özniteliği alan.
+Bir numaralandırma dizisinde belirtilen sayıda özel öznitelik alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,16 +47,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
+'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
 
 `rgelt`\
-[out] Doldurulması [gereken IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md) nesneleri dizisi.
+dışı Doldurulacak bir [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md) nesneleri dizisi.
 
 `pceltFetched`\
-[out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
+dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür, aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)

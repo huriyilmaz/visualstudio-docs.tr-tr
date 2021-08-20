@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 5abe59d607ef2c80ca1451da94f9cc6cd7d08688e669178848ea7fed5da183de
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b57e71c407d8ea671ec076a5432fd4f0b3ab612a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121443093"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093675"
 ---
 # <a name="xmlpoke-task"></a>XmlPoke görevi
 

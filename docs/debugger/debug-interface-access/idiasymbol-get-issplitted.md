@@ -1,6 +1,6 @@
 ---
-description: Veri sembolünün diğer sembollerin toplama veya toplama göre bölünmeyeceğini belirten bir bayrak alır; Derleyici, sembolleri büyük bir sembolün gerçekten bir parçası olsalar bile ayrı varlıklar olarak değerlendirir.
-title: 'IDiaSymbol:: get_isSplitted | Microsoft Docs'
+description: Veri simgesinin bir toplamaya mı yoksa diğer sembollerin koleksiyonuna mı bölündü? derleyici, daha büyük bir sembolün gerçekten parçası olsalar bile sembolleri ayrı varlıklar olarak davranır.
+title: IDiaSymbol::get_isSplitted | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: ff160cf6-003b-4ef5-a406-20a7b287b2bf
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 5dd9807928ca5f1b8d2e3b20c5de3ec30adc70db
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: c025460f04cbd2d9eb5546f434ff990584fa7e26
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102162056"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121476"
 ---
 # <a name="idiasymbolget_issplitted"></a>IDiaSymbol::get_isSplitted
-Veri sembolünün diğer sembollerin toplama veya toplama göre bölünmeyeceğini belirten bir bayrak alır; Derleyici, sembolleri büyük bir sembolün gerçekten bir parçası olsalar bile ayrı varlıklar olarak değerlendirir.
+Veri simgesinin bir toplamaya mı yoksa diğer sembollerin koleksiyonuna mı bölündü? derleyici, daha büyük bir sembolün gerçekten parçası olsalar bile sembolleri ayrı varlıklar olarak davranır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,23 +35,23 @@ HRESULT get_isSplitted(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE` Simgenin bir sembol toplamasına bölündüğünü döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] Sembol `TRUE` bir sembol toplamaya bölündü ise döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- [IDiaSymbol:: get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md) yöntemi, `TRUE` bölünmüş bir simgenin parçası olan tüm semboller için döndürülür.
+ [IDiaSymbol::get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md) yöntemi, bölünmüş bir sembolün parçası `TRUE` olan tüm semboller için döndürür.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

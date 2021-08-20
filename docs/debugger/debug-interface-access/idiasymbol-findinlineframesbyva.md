@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 98a591428c0ae33bf3fc07bacd1da1f75bb7280bcb69665d6991aa1b52b23516
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ff742a57fecf4a8443bbd1de02be17e0ff5a62d8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454818"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128818"
 ---
 # <a name="idiasymbolfindinlineframesbyva"></a>IDiaSymbol::findInlineFramesByVA
-Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçeveler üzerinde devamını sağlayan bir sabit adı alır.
+Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçeveler üzerinde devamını sağlayan bir sabit değer alır.
 
 ## <a name="syntax"></a>Sözdizimi
 

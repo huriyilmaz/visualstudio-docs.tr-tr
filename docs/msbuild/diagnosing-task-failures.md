@@ -17,16 +17,16 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 75ae93a5bf1b82d2101643512f2fa80da9d0271a51462181b7260c3652abdeed
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ab44e4e54c78f36fe4598771ca43847fc692150d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370313"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123352"
 ---
 # <a name="diagnosing-task-failures"></a>Görev başarısızlıklarını tanılama
 
-`MSB6006` , türetilen bir sınıf, görev daha belirli bir hata günlüğe kayıt edemedi ise sıfır olmayan bir çıkış kodu döndüren bir <xref:Microsoft.Build.Utilities.ToolTask> araç işlemi çalıştırdığı zaman yayımlar.
+`MSB6006` , türetilen bir sınıf, görev daha belirli bir hata günlüğe daha özel bir hata günlüğe kaydedilirse sıfır olmayan bir çıkış kodu döndüren bir <xref:Microsoft.Build.Utilities.ToolTask> araç işlemi çalıştırdığı zaman yayımlar.
 
 ## <a name="identifying-the-failing-task"></a>Başarısız görevi tanımlama
 
@@ -60,7 +60,7 @@ Aynı bilgiler , ve Visual Studio hata listesinde `Project` de `File` `Line` mev
 
 ## <a name="finding-more-failure-information"></a>Daha fazla hata bilgisi bulma
 
-Bu hata, görev belirli bir hatayı günlüğe günlüğe kaydedilirken yayımlar. Bir hatayı günlüğe kaydetme hatası genellikle görevin çağırdığı araç tarafından yayılan hata biçimini anlamak için yapılandırılmamış bir durumdur.
+Bu hata, görev belirli bir hatayı günlüğe kaydedilirken yayımlar. Bir hatayı günlüğe kaydetme hatası genellikle görevin çağırdığı araç tarafından yayılan hata biçimini anlamak için yapılandırılmamış bir durumdur.
 
 İyi davranan araçlar genellikle bazı bağlamsal veya hata bilgilerini standart çıkışlarına veya hata akışına yayır ve görevler bu bilgileri varsayılan olarak yakalar ve günlüğe alır. Ek bilgi için hatanın meydana gelmeden önceki günlük girişlerine bakın. Bu bilgileri korumak için derlemeyi daha yüksek bir günlük düzeyiyle yeniden çalıştırmanız gerekebilir.
 
@@ -68,4 +68,4 @@ Bu hata, görev belirli bir hatayı günlüğe günlüğe kaydedilirken yayımla
 
 Umarız günlük kaydında tanımlanan ek bağlam veya hatalar, sorunun kök nedenini ortaya çıkartır.
 
-Yoksa, başarısız göreve giriş olan özellikleri ve öğeleri inceerek olası nedenleri daraltmanız gerekir.
+Yoksa, başarısız göreve giriş olan özellikleri ve öğeleri incelerken olası nedenleri daraltmanız gerekir.

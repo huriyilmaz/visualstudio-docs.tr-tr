@@ -1,6 +1,6 @@
 ---
-title: Office projelerindeki Özellikler
-description: Özellikler penceresi aracılığıyla Visual Studio 'da Office projeleri için kullanılabilen özellikler hakkında bilgi edinin.
+title: Office projelerinde özellikler
+description: Office'daki Visual Studio için kullanılabilen özellikler hakkında bilgi Özellikler penceresi.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -18,42 +18,43 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 5f7a2ab04e1926a53c3d3aa05023103206c6aa01
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b26826769c86bc23064f9475df595a10abd47050
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99971771"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155596"
 ---
-# <a name="properties-in-office-projects"></a>Office projelerindeki Özellikler
-  Visual Studio 'da Office projeleri için kullanılabilen çeşitli önemli özellikler vardır. Bu özelliklere **Özellikler** penceresinden erişilebilir.
+# <a name="properties-in-office-projects"></a>Office projelerinde özellikler
+  Visual Studio'daki projelerin Office birçok önemli Visual Studio. Bu özelliklere Özellikler **penceresinden erişilebilir.**
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
 ## <a name="namespace-for-host-item"></a>Konak öğesi için ad alanı
- Visual C# projelerindeki konak öğesi sınıflarının (örneğin,, veya sınıfların) ad alanını değiştirmek için **konak öğesi özelliği Için ad alanını** kullanın `ThisAddIn` `ThisWorkbook` `ThisDocument` . Bu özellik, belge düzeyindeki bir projede belge düğümünü ( *ExcelWorkbook1.xlsx* veya *WordDocument1.docx*) veya **Çözüm Gezgini** Içindeki bir VSTO eklenti projesindeki (Excel veya Word gibi) uygulama düğümünü seçerken **Özellikler** penceresinde görünür.
+ Visual C# **projelerinde** konak öğesi sınıfları (örneğin, , veya sınıfları) için ad alanını değiştirmek üzere Konak Öğesi için Ad `ThisAddIn` Alanı özelliğini `ThisWorkbook` `ThisDocument` kullanın. Bu özellik,  bir belge düzeyi projedeki belge düğümünü *(ExcelWorkbook1.xlsx* veya *WordDocument1.docx* gibi) veya bir VSTO Eklenti projesinde (Excel veya Word gibi) uygulama düğümünü **Çözüm Gezgini.**
 
- Visual C# Office projesi oluşturduğunuzda, ana bilgisayar öğelerine projenin adına göre ad alanı verilir. Kod dosyalarını doğrudan düzenlemek yerine, ad alanını değiştirmek için **konak öğesi özelliği Için ad alanını** kullanmanız önerilir. Bu özelliği kullandığınızda, ad alanı oluşturulan (gizli) kod dosyalarında ve görünür kod dosyalarında değiştirilir.
+ Visual C# Office projesini 7.000.000'e kadar tamamlarsınız. Kod dosyalarını doğrudan düzenlemek yerine ad **alanını değiştirmek** için Konak Öğesi için Ad Alanı özelliğini kullanmanız önerilir. Bu özelliği kullanırken, hem oluşturulan (gizli) kod dosyalarında hem de görünür kod dosyalarında ad alanı değiştirilir.
 
 ## <a name="cacheindocument"></a>CacheInDocument
- Visual Studio tasarımcısında bir örneğini seçtiğinizde, belge düzeyi projeleri için **Özellikler** penceresinde **CacheInDocument** özelliği görüntülenir <xref:System.Data.DataSet> . Yalnızca ortak Üyeler önbelleğe alınabilir; bir önbelleğe almak istiyorsanız **değiştiriciler** özelliğinin **ortak** olarak ayarlandığından emin olun <xref:System.Data.DataSet> .
+ Önbellek tasarımcısında bir örneği  seçerek belge düzeyi projelerin Özellikler penceresinde **CacheInDocument** <xref:System.Data.DataSet> Visual Studio görünür. Yalnızca genel üyeler önbelleğe alınarak; Bir **önbelleğe almak için** Değiştiriciler **özelliğinin Genel** olarak ayarlanmış olduğundan emin <xref:System.Data.DataSet> olmak.
 
- Bu özellik bir Boolean değeri alır:
+ Bu özellik bir Boole değeri alır:
 
-- Veri kümesini belgede önbelleğe almak için **true** seçeneğini belirleyin.
+- Belgede veri kümesi önbelleğe eklemek için **true'yi** seçin.
 
-- Veri kümesinin belgede önbelleğe alınmasını istemiyorsanız **false** ' ı seçin.
+- Veri  kümesinde belgede önbelleğe alınmak istemiyorsanız false seçeneğini kullanın.
 
-  Verileri önbelleğe alma hakkında daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerde önbelleğe alınmış veriler](../vsto/cached-data-in-document-level-customizations.md).
+  Verileri önbelleğe alma hakkında daha fazla bilgi için [bkz. Belge düzeyinde özelleştirmelerde önbelleğe alınmış veriler.](../vsto/cached-data-in-document-level-customizations.md)
 
-## <a name="value2"></a>Value2
- **Değer2** özelliği yalnızca Excel çalışma kitabı veya şablon projeleri için kullanılabilir. Çalışma sayfası tasarımcısında bir denetim seçtiğinizde **Özellikler** penceresindeki **DataBindings** Özelliği düğümünün altında görüntülenir <xref:Microsoft.Office.Tools.Excel.NamedRange> .
+## <a name="value2"></a>Değer2
+ **Value2 özelliği** yalnızca çalışma kitabı Excel şablon projelerinde kullanılabilir. Çalışma sayfası tasarımcısında bir denetim seçerek Özellikler **penceresindeki** **Databindings** <xref:Microsoft.Office.Tools.Excel.NamedRange> özellik düğümü altında görünür.
 
- Öğesinin özelliğini   <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> <xref:Microsoft.Office.Tools.Excel.NamedRange> veri kaynağınızdaki bir alana bağlamak için Özellikler penceresindeki değer2 özelliğini kullanın.
+ özelliğini veri kaynağınız **içinde** bir alana bağlamak için Özellikler **penceresindeki Value2** <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> özelliğini <xref:Microsoft.Office.Tools.Excel.NamedRange> kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
-- [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md)
-- [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md)
+- [Yeni çözümler tasarlama Office oluşturma](../vsto/designing-and-creating-office-solutions.md)
+- [Office şablonlarına genel bakış](../vsto/office-project-templates-overview.md)
+- [Office projelerinde olaylar](../vsto/events-in-office-projects.md)

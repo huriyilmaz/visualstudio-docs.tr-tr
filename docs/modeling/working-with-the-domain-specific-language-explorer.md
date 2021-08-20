@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: f261cb9005a9433d8596003585522c5223c7f340adedde237e4944fd894b281c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 744722b40912f67ddee1de0558470a8727a1660c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410820"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123456"
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>Etki Alanına Özgü Dil Gezgini ile Çalışma
 **DSL Gezgini,** ağaç görünümünde çeşitli türlerde bilgiler görüntüler. DSL Gezgini'nde öğelerin çoğu hakkında daha fazla bilgi için [bkz.](../modeling/how-to-define-a-domain-specific-language.md)How to Define a Domain-Specific Language .
@@ -42,7 +42,7 @@ ms.locfileid: "121410820"
 
 - **Şekiller.** Modelde şekil diyagramı öğelerinin listesi.
 
-- **Xml Serileştirme Davranışı.** Modelin serileştirme ayarları. Serileştirme hakkında daha fazla bilgi için, [bkz. Dosya Depolama ve XML Serileştirme özelleştirme.](../modeling/customizing-file-storage-and-xml-serialization.md)
+- **Xml Serileştirme Davranışı.** Modelin serileştirme ayarları. Serileştirme hakkında daha fazla bilgi için [bkz. Dosya Depolama ve XML Serileştirmesini Özelleştirme.](../modeling/customizing-file-storage-and-xml-serialization.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

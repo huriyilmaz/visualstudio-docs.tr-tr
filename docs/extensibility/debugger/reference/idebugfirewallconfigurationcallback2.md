@@ -1,5 +1,5 @@
 ---
-description: Güvenlik duvarının uzaktan hata ayıklamayı engellemey olduğundan emin olmak için Visual Studio kullanıcı arabirimini istemek için DCOM kullanan bir hata ayıklama altyapısını sağlar.
+description: Visual Studio kullanıcı arabirimine, güvenlik duvarının uzaktan hata ayıklamayı engellemediğinden emin olmak için DCOM kullanan bir hata ayıklama altyapısını sağlar.
 title: IDebugFirewallConfigurationCallback2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,15 +12,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 18dd45fa041732f733d121d7304650ea82cf5983a76fa58e434b088ba8fcb684
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 899413fa9064b463732fd2985bb0ddaf8dddf5a4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402772"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088750"
 ---
 # <a name="idebugfirewallconfigurationcallback2"></a>IDebugFirewallConfigurationCallback2
-Kullanıcı arabiriminden güvenlik duvarının uzaktan hata ayıklamayı engellemey olduğundan emin olmak için DCOM [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] kullanan bir hata ayıklama altyapısını sağlar.
+[!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]Kullanıcı arabirimine, güvenlik duvarının uzaktan hata ayıklamayı engellememesini istemek IÇIN DCOM kullanan bir hata ayıklama altyapısı sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,19 +28,19 @@ Kullanıcı arabiriminden güvenlik duvarının uzaktan hata ayıklamayı engell
 IDebugFirewallConfigurationCallback2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+## <a name="notes-for-implementers"></a>Implemenonun notları
  Oturum hata ayıklama yöneticisinin bağlantı noktası nesnesi tarafından uygulanır.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda yöntemlerini `IDebugFirewallConfigurationCallback2` gösterir.
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugFirewallConfigurationCallback2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[EnsureDCOMUnblocked](../../../extensibility/debugger/reference/idebugfirewallconfigurationcallback2-ensuredcomunblocked.md)|Güvenlik duvarının uzaktan hata ayıklamayı engellemez.|
+|[EnsureDCOMUnblocked](../../../extensibility/debugger/reference/idebugfirewallconfigurationcallback2-ensuredcomunblocked.md)|Güvenlik duvarının uzaktan hata ayıklamayı engellememe isteklerini ister.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

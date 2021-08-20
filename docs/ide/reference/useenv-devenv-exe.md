@@ -1,6 +1,6 @@
 ---
 title: -UseEnv (devenv.exe)
-description: Visual Studio başlatmak için useenv devenv komut satırı anahtarını kullanmayı ve derleme için belirli ortam değişkenlerini yüklemeyi öğrenin.
+description: Derleme için belirli ortam değişkenlerini başlatmak ve yüklemek üzere UseEnv devenv komut Visual Studio anahtarını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/10/2019
 ms.topic: reference
@@ -22,19 +22,19 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: a8c4cd8b54ab7127fb9503cc461281bd176d15aff4320424eb5641eb4929d6ff
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a8a2b8e0ed2c02a4d912eacd93c82236332e72c9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121400081"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123755"
 ---
 # <a name="useenv-devenvexe"></a>/UseEnv (devenv.exe)
 
-Visual Studio başlatır ve derleme için belirli ortam değişkenlerini yükler.
+Derleme Visual Studio ve belirli ortam değişkenlerini yükler.
 
 > [!NOTE]
-> Bu anahtar, C++ iş yüküne **sahip masaüstü geliştirmeyle** birlikte yüklenir.
+> Bu anahtar C++ ile **Masaüstü geliştirme iş yüküyle** birlikte yüklenir.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -46,24 +46,24 @@ devenv /UseEnv {SolutionName|ProjectName}
 
 - *SolutionName*
 
-  Bir çözüm dosyasının tam yolu ve adı.
+  Çözüm dosyasının tam yolu ve adı.
 
-- *ProjectName*
+- *Projeadı*
 
-  Bir proje dosyasının tam yolu ve adı.
+  Proje dosyasının tam yolu ve adı.
 
 ## <a name="remarks"></a>Açıklamalar
 
-bu anahtar, **VC + + dizinleri** için proje özelliklerinde Visual Studio ıde 'yi etkiler. `/UseEnv`Anahtarı belirtirseniz, **VC + + DIZINLERI** düğümü Path, INCLUDE, LıBPATH ve LIB ortam değişkenlerinin değerlerini gösterir. (Ayrıca, **kaynak dizinlerin** ve **Dışlanan dizinlerin** değerlerini gösterir.) Aksi halde düğüm, ortam değişkenlerini beş dizin değeriyle değiştirir: **yürütülebilir dizinler**, **dizinleri**, **başvuru dizinleri**, **kitaplık dizinleri** ve **kitaplık WinRT dizinleri**.
+Bu anahtar, VC++ Visual Studio proje özelliklerinde IDE'nin **performansını etkiler.** Anahtarı `/UseEnv` belirtirsiniz, **VC++ Dizinleri** düğümü PATH, INCLUDE, LIBPATH ve LIB ortam değişkenleri için değerleri gösterir. (Ayrıca Kaynak Dizinler ve **Dışlama Dizinleri** **değerlerini de gösterir.)** Aksi takdirde düğüm, ortam değişkenlerini beş dizin değeriyle değiştirir: **Yürütülebilir** Dizinler, Dizinleri Dahil Edin, **Başvuru** Dizinleri, Kitaplık Dizinleri ve Kitaplık **WinRT Dizinleri.**
 
 > [!TIP]
-> C++ projesine sağ tıklayıp **Özellikler**' i seçerek Proje özelliklerine erişirsiniz. **Özellik sayfaları** Iletişim kutusunda **yapılandırma özellikleri** ' ni ve ardından **VC + + dizinleri**' ni seçin.
+> Bir C++ projesine sağ tıklar ve Özellikler'i seçerek proje özelliklerine **erişebilirsiniz.** Özellik Sayfaları **iletişim kutusunda** Yapılandırma Özellikleri'ne **ve ardından** **VC++ Dizinleri'ne tıklayın.**
 
-Bu anahtarla bir proje adı belirtildiğinde araç, projenin üst çözümündeki tüm projeler için ortam değişkenlerini görüntüler.
+Bu anahtarla bir proje adı belirtilirse, araç projenin üst çözümü içindeki tüm projeler için ortam değişkenlerini görüntüler.
 
 ## <a name="example"></a>Örnek
 
-aşağıdaki örnek Visual Studio başlar ve, ortam değişkenlerini çözümün özellik sayfalarına yükler `MySolution` .
+Aşağıdaki örnek, Visual Studio ve ortam değişkenlerini çözümün özellik sayfalarına `MySolution` yükler.
 
 ```shell
 devenv.exe /useenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
@@ -72,4 +72,4 @@ devenv.exe /useenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)
-- [VC + + dizinleri Özellik sayfası (Windows)](/cpp/build/reference/vcpp-directories-property-page)
+- [VC++ Dizinleri Özellik Sayfası (Windows)](/cpp/build/reference/vcpp-directories-property-page)

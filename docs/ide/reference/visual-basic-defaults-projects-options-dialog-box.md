@@ -1,6 +1,6 @@
 ---
 title: Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu
-description: Visual Basic projesi seçeneklerinin varsayılan ayarlarını belirtmek için projeler ve Çözümler bölümündeki Visual Basic Varsayılanları sayfasını nasıl kullanacağınızı öğrenin.
+description: Proje seçeneklerinin varsayılan Visual Basic belirtmek için Projeler ve Çözümler bölümündeki Varsayılanlar sayfasını Visual Basic öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,36 +14,37 @@ ms.assetid: 2465cd9d-18b6-4c4a-b1ea-86dbab23fc79
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3de415f99dbb9a91f2fa0e30ffc5e40727d10303
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8252581f7255e8fd04ee6e01bfed7fb7e7fe08c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99889764"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123716"
 ---
 # <a name="visual-basic-defaults-projects-options-dialog-box"></a>Visual Basic Varsayılanları, Projeler, Seçenekler İletişim Kutusu
-Visual Basic proje seçenekleri için varsayılan ayarları belirtir. Yeni bir proje oluşturulduğunda, belirtilen seçenek deyimleri kod düzenleyicisinde proje başlığına eklenecektir. Seçenekler tüm Visual Basic projelerine uygulanır.
+Proje seçenekleri için varsayılan Visual Basic belirtir. Yeni bir proje oluşturulduğunda, belirtilen seçenek deyimleri Kod Düzenleyicisi'nde proje üst bilgisinde eklenir. Seçenekler tüm projelerde Visual Basic geçerlidir.
 
-Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler**' e tıklayın, **Projeler ve çözümler** klasörünü genişletin ve ardından **vb Varsayılanları**' na tıklayın.
+Bu iletişim kutusuna erişmek  için Araçlar menüsünde Seçenekler'e **tıklayın,** Projeler ve Çözümler klasörünü **genişletin** ve ardından VB **Varsayılanları'ne tıklayın.**
 
- **Seçenek açık**
+ **Seçenek Açık**
 
-Doğrudan değişken bildirimlerinin gerekli olduğu şekilde derleyici varsayılanını ayarlar. Varsayılan olarak, **explicit seçeneği** **Açık olarak ayarlanır.** Daha fazla bilgi için bkz. [/OptionExplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit).
+Değişkenlerin açık bildirimlerinin gerekli olması için derleyici varsayılanı ayarlar. Varsayılan olarak Seçenek **Belirtik** ayarı Açık olarak **ayarlanır.** Daha fazla bilgi için bkz. [/optionexplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit).
 
  **Option Strict**
 
-Açık daraltma dönüştürmelerini zorunlu ve geç bağlamaya izin verilmediğinden, derleyici varsayılanını varsayılan olarak ayarlar. Varsayılan olarak, **Strict seçeneği** **off** olarak ayarlanır. Daha fazla bilgi için bkz. [/OptionStrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict).
+Açık daraltma dönüştürmeleri gerekli olacak ve geç bağlamaya izin verilmeyecek şekilde derleyici varsayılanı ayarlar. Varsayılan olarak, **Option Strict** kapalı olarak **ayarlanır.** Daha fazla bilgi için bkz. [/optionstrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict).
 
- **Option Compare**
+ **Seçenek Karşılaştırması**
 
-Dize karşılaştırmaları için derleyici varsayılanını ayarlar: ikili (büyük/küçük harfe duyarlı) veya metin (büyük/küçük harfe duyarsız.) Varsayılan olarak, **Option Compare** **binary** olarak ayarlanır. Daha fazla bilgi için bkz. [/OptionCompare](/dotnet/visual-basic/reference/command-line-compiler/optioncompare).
+Dize karşılaştırmaları için derleyici varsayılan değeri ayarlar: ikili (büyük/büyük/büyük harfe duyarlı) veya metin (büyük/büyük/harfe duyarlı değil.) Varsayılan olarak, **Seçenek Karşılaştırması** İkili olarak **ayarlanır.** Daha fazla bilgi için bkz. [/optioncompare](/dotnet/visual-basic/reference/command-line-compiler/optioncompare).
 
- **Seçenek çıkarımı**
+ **Seçenek Çıkar**
 
-Yerel tür çıkarımı için varsayılan derleyicisini ayarlar. Varsayılan olarak, **seçenek çıkarımı** yeni oluşturulan projeler için **Açık** olarak ayarlanır ve Visual Basic önceki sürümlerinde oluşturulan geçirilmiş projeler için **devre dışı bırakır** . Daha fazla bilgi için bkz. [/optionfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer).
+Yerel tür çıkarı için derleyici varsayılanı ayarlar. Varsayılan olarak, **Yeni oluşturulan**  projeler için Seçenek Çıkar  seçeneği On, önceki sürümlerinde oluşturulan geçirilen projeler için Kapalı olarak Visual Basic. Daha fazla bilgi için bkz. [/optioninfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çözümler ve projeler](../../ide/solutions-and-projects-in-visual-studio.md)
+- [Çözümler ve Projeler](../../ide/solutions-and-projects-in-visual-studio.md)

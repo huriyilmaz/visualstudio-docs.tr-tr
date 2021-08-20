@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: db8d6ab713b745e63c2ab419fbb6d134a2e0284b521e9633cdda45185e1e3505
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 72ad42572eadff6434677d0a67357ed684758a20
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378664"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161160"
 ---
 # <a name="how-to-view-script-documents-javascript"></a>Nasıl kullanılır: Betik Belgelerini Görüntüleme (JavaScript)
 
@@ -36,7 +36,7 @@ Sayfaları dinamik olarak oluşturan bazı uygulama türleri için, tarayıcıda
 
 ### <a name="to-view-a-server-side-script-document"></a>Sunucu tarafı betik belgesini görüntülemek için
 
-1. Bu **Çözüm Gezgini** düğümü **\<Website Pathname>** açın.
+1. Bu **Çözüm Gezgini** düğümünü **\<Website Pathname>** açın.
 
 2. Görüntülemek istediğiniz betik dosyasına çift tıklayın.
 

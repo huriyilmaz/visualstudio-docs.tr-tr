@@ -1,5 +1,5 @@
 ---
-description: Bir ifade dizesini, sembol sağlayıcısı ve değerlendirme çerçevesinin adresine göre ayrıştırıldı bir ifadeye dönüştürür.
+description: Bir ifade dizesini sembol sağlayıcısı ve değerlendirme çerçevesinin adresi verilen ayrıştırılmamış ifadeye dönüştürür.
 title: IDebugExpressionEvaluator3::P arse2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5a10db1315249a78ebbc786dec3e54da92532ba7262294490c76c145c9a11fc6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6d8a227bb8cf340dd0b3dc3125bd67a3d9108a66
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360397"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088971"
 ---
 # <a name="idebugexpressionevaluator3parse2"></a>IDebugExpressionEvaluator3::Parse2
-Bir ifade dizesini, sembol sağlayıcısı ve değerlendirme çerçevesinin adresine göre ayrıştırıldı bir ifadeye dönüştürür.
+Bir ifade dizesini sembol sağlayıcısı ve değerlendirme çerçevesinin adresi verilen ayrıştırılmamış ifadeye dönüştürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -55,37 +55,37 @@ HRESULT Parse2 (
 
 ## <a name="parameters"></a>Parametreler
 `upstrExpression`\
-[in] Ayrıştırıla ifade dizesi.
+'ndaki Ayrıştırılacak ifade dizesi.
 
 `dwFlags`\
-[in] İfadenin nasıl ayrıştır olacağını belirleyen [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) sabitleri koleksiyonu.
+'ndaki İfadenin nasıl ayrıştırılaceğini tespit eden bir [Parseflags](../../../extensibility/debugger/reference/parseflags.md) sabitleri koleksiyonu.
 
 `nRadix`\
-[in] Tüm sayısal bilgileri yorumlamak için kullanılacak radix.
+'ndaki Sayısal bilgileri yorumlamak için kullanılacak taban tabanı.
 
 `pSymbolProvider`\
-[in] Sembol sağlayıcısının arabirimi.
+'ndaki Sembol sağlayıcısının arabirimi.
 
 `pAddress`\
-[in] Değerlendirme çerçevesinin adresi.
+'ndaki Değerlendirme çerçevesinin adresi.
 
 `pbstrError`\
-[out] Hatayı insan tarafından okunabilir metin olarak döndürür.
+dışı Hatayı insanlarca okunabilir metin olarak döndürür.
 
 `pichError`\
-[out] İfade dizesinde hatanın başlangıcının karakter konumunu döndürür.
+dışı İfade dizesinde hatanın başlangıcı olan karakter konumunu döndürür.
 
 `ppParsedExpression`\
-[out] [IDebugParsedExpression nesnesinde ayrıştırılmış ifadeyi](../../../extensibility/debugger/reference/idebugparsedexpression.md) döndürür.
+dışı Bir [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) nesnesinde ayrıştırılmış ifadeyi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yöntem gerçek bir değer değil ayrıştıran bir ifade üretir. Ayrıştırıldı ifadesi değerlendirilmeye, yani bir değere dönüştürül etmeye hazırdır.
+Bu yöntem, gerçek bir değer değil ayrıştırılmamış bir ifade oluşturur. Ayrıştırılmış bir ifade değerlendirilmeye, yani bir değere dönüştürülecek.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) arabirimini ortaya çıkaran bir **CEE** nesnesi için bu yöntemin nasıl uygulandığını gösterir.
+Aşağıdaki örnek, [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) arabirimini kullanıma sunan bir **Cee** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CEE::Parse2 ( LPCOLESTR in_szExprText,

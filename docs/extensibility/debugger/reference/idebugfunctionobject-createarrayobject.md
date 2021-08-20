@@ -1,6 +1,6 @@
 ---
 description: Bir dizi nesnesi oluşturur.
-title: 'IDebugFunctionObject:: CreateArrayObject | Microsoft Docs'
+title: IDebugFunctionObject::CreateArrayObject | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 822a00dcfb4b4ba6a5b9739135ae756f92d2fe7437d8f9dcc8407fd17624a2fc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2138a6ae51d24f099665eb2ec0a58aa60437a4d2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417268"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138334"
 ---
 # <a name="idebugfunctionobjectcreatearrayobject"></a>IDebugFunctionObject::CreateArrayObject
-Bir dizi nesnesi oluşturur. Bu dizi, ilkel ya da nesne örneği değerleri içerebilir.
+Bir dizi nesnesi oluşturur. Bu dizi, ilkel veya nesne örneği değerlerini içerebilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,28 +53,28 @@ int CreateArrayObject(
 
 ## <a name="parameters"></a>Parametreler
 `ot`\
-'ndaki Yeni dizi nesnesinin türünü gösteren [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) numaralandırmasından bir değer belirtir.
+[in] Yeni dizi nesnesinin [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) gösteren sabit veri sabit değerinden bir değer belirtir.
 
 `pClassField`\
-'ndaki Nesne örneği değerlerinin dizisini oluşturmak için bir nesnenin sınıfını temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi. Temel nesnelerin bir dizisini oluşturuyorsanız, bu parametre null bir değerdir.
+[in] Nesne örneği değerleri dizisi oluşturuyorsanız nesnenin sınıfını temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi. İlkel nesneler dizisi oluşturuyorsanız, bu parametre null değerdir.
 
 `dwRank`\
-'ndaki Dizinin boyut derecesi veya sayısı.
+[in] Dizinin boyutlarının derece veya sayısı.
 
 `dwDims`\
-'ndaki Dizinin her boyutunun boyutları.
+[in] Dizinin her boyutunun boyutları.
 
 `dwLowBounds`\
-'ndaki Her boyutun kaynağı (genellikle 0 veya 1).
+[in] Her boyutun kaynağı (genellikle 0 veya 1).
 
 `ppObject`\
-dışı Yeni oluşturulan diziyi temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesi döndürür. Bu aslında bir [Ihata ayıklama Garrayobject](../../../extensibility/debugger/reference/idebugarrayobject.md) nesnesidir.
+[out] Yeni oluşturulan diziyi temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesnesi döndürür. Bu aslında bir [IDebugArrayObject nesnesidir.](../../../extensibility/debugger/reference/idebugarrayobject.md)
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) arabirimi tarafından temsil edilen işleve bir dizi parametresini temsil eden bir nesne oluşturmak için bu yöntemi çağırın.
+ [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) arabirimi tarafından temsil edilen işleve bir dizi parametresini temsil eden bir nesne oluşturmak için bu yöntemi arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

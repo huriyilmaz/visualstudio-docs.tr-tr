@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 69969fb51d3394d8e4b071190927b32c53369b431ff01104841f10babe7e477f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0ac5e8d61264696c463084dc39bcdff01240b4c5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121263783"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161369"
 ---
 # <a name="error-mixed-mode-debugging-is-supported-only-when-using-microsoft-net-framework-20-or-greater"></a>Hata: Karışık modda hata ayıklama yalnızca Microsoft .NET Framework 2.0 veya daha yenisi kullanılırken desteklenir
 Karışık yerel ve yönetilen kodda hata ayıklamak için .NET Framework 2.0, 3.0, 3.5 veya 4.0 sürümüne sahipsiniz. Uygulamanın önceki sürümleriyle karma mod .NET Framework hata ayıklaması desteklenmiyor.

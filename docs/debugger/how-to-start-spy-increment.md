@@ -1,6 +1,6 @@
 ---
-title: Spy + + Başlat | Microsoft Docs
-description: bir çözümde hata ayıklamak istediğinizde Visual Studio veya bir komut isteminden Spy + + aracının nasıl başlatılacağını öğrenin.
+title: Spy++ | Microsoft Docs
+description: Bir çözümde hata ayıklamak Visual Studio bir komut isteminden spy++ aracını başlatmayı biliyorsunuz.
 ms.custom: SEO-VS-2020
 ms.date: 12/16/2018
 ms.topic: how-to
@@ -13,45 +13,45 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b295246db8429689d0eedad7616ccff2f7c0010dd18c08a78a642a5abf886531
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 470d9676ed2bb908b04f4bbddc905ddede97802d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378755"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128123"
 ---
 # <a name="how-to-start-spy"></a>Nasıl Yapılır: Spy++ Hizmetini Başlatma
 
-Spy + + ' dan Visual Studio veya bir komut isteminde başlatabilirsiniz.
+Spy++ 'i bir komut Visual Studio komut isteminden başlatabilirsiniz.
 
- Spy + + ' ı başlattığınızda, bilgisayarda değişiklik yapma izni istemek üzere bir ileti görüntülenirse **Evet**' i seçin.
+ Spy++'ı başlatınca, bilgisayarda değişiklik yapma iznini istemek için bir ileti görüntüleniyorsa Evet'i **seçin.**
 
 > [!NOTE]
-> Spy + + ' un yalnızca bir örneğini çalıştırabilirsiniz. İkinci bir örnek başlatmaya çalışırsanız, yalnızca şu anda çalışan örneğin odağı almasına neden olur.
+> Spy++'ın yalnızca bir örneğini çalıştırarak. İkinci bir örneği başlatmayı denersiniz, bu yalnızca o anda çalışan örneğin odak noktası elde uzer.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Spy + + aşağıdaki bileşenleri gerektirir. **tek tek bileşenler** sekmesini seçerek ve ardından aşağıdaki bileşenleri seçerek Visual Studio Yükleyicisi bu bileşenleri seçebilirsiniz.
+Spy++ aşağıdaki bileşenleri gerektirir. Bağımsız Bileşenler sekmesini ve ardından Visual Studio Yükleyicisi bileşenleri  seçerek bu bileşenleri listeden seçin.
 
-* Hata ayıklama ve test altında **C++ profil oluşturma araçları** ' nı seçin.
-* Geliştirme Etkinlikleri altında **C++ Core özellikleri** ' ni seçin.
+* Hata ayıklama ve test altında **C++ profil oluşturma araçları'ı seçin**
+* Geliştirme etkinlikleri'nin altında **C++ temel özellikleri'i seçin**
 
 Herhangi bir değişiklik yaptıysanız, bu bileşenleri yüklemek için istemleri izleyin.
 
-## <a name="start-spy-from-visual-studio"></a>Visual Studio Spy + + Başlat
+## <a name="start-spy-from-visual-studio"></a>Visual Studio'dan Spy++ başlatma
 
-**Araçlar** menüsünde **Spy + +**' yı seçin.
+Araçlar menüsünde **Spy++** **öğesini seçin.**
 
-Spy + + bağımsız olarak çalıştığı için, başlattıktan sonra Visual Studio kapatabilirsiniz.
+Spy++ bağımsız olarak çalıştırılalı olduğundan, başladıktan sonra Visual Studio.
 
 > [!NOTE]
-> Spy + + ile iletileri günlüğe kaydettiğinizde, işletim sisteminin daha yavaş çalışmasına neden olabilir.
+> İletileri Spy++ ile günlüğe kaydedilirken, bu durum işletim sisteminin daha yavaş performansa neden olabilir.
 
-## <a name="start-spy-at-a-command-prompt"></a>Komut isteminde Spy + + ' yı Başlat
+## <a name="start-spy-at-a-command-prompt"></a>Komut isteminde Spy++ başlatma
 
-1. Bir komut Istemi penceresinde dizinleri spyxx.exe içeren klasör olarak değiştirin. Genellikle, bu klasörün yolu... \\ *yükleme klasörü*\Common7\Tools Visual Studio \\ .
+1. Bir Komut İstemi penceresinde dizinleri, dizinleri yeni bir spyxx.exe. Bu klasörün yolu genellikle olur. \\ *Visual Studio klasörü*\Common7\Tools \\ .
 
-2. **spyxx.exe** girin.
+2. **spyxx.exe.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Spy++ Kullanma](../debugger/using-spy-increment.md)

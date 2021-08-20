@@ -1,6 +1,6 @@
 ---
-description: Belirtilen modül için verilen üst özniteliğe sahip hata ayıklama sembollerini alır.
-title: 'IDebugComPlusSymbolProvider:: GetSymAttribute | Microsoft Docs'
+description: Belirtilen modül için verilen üst öznitelikle hata ayıklama sembollerini alın.
+title: IDebugComPlusSymbolProvider::GetSymAttribute | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: 6cbaac92-a60b-4165-a7f5-c34407770f3c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a79cf50aed14bc236224228eaff4b35ae2845ce6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4224d819a84d062b9ea92e8af8817781c86f5289
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095673"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103890"
 ---
 # <a name="idebugcomplussymbolprovidergetsymattribute"></a>IDebugComPlusSymbolProvider::GetSymAttribute
-Belirtilen modül için verilen üst özniteliğe sahip hata ayıklama sembollerini alır.
+Belirtilen modül için verilen üst öznitelikle hata ayıklama sembollerini alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,31 +54,31 @@ int GetSymAttribute (
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-'ndaki Uygulama etki alanının tanımlayıcısı.
+[in] Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-'ndaki Modülün benzersiz tanıtıcısı.
+[in] Modülün benzersiz tanımlayıcısı.
 
 `tokParent`\
-'ndaki Üst öznitelik için belirteç.
+[in] Üst öznitelik için belirteç.
 
 `pstrName`\
-'ndaki Modülün adı.
+[in] Modülün adı.
 
 `cBuffer`\
-'ndaki Çıktı için gereken bayt sayısı `buffer` .
+[in] çıktısı için gereken bayt `buffer` sayısı.
 
 `pcBuffer`\
-dışı Çıkışın uzunluğu `buffer` .
+[out] Çıktının `buffer` uzunluğu.
 
 `buffer`\
-dışı Sembolleri içeren dizi.
+[out] Sembolleri içeren dizi.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::GetSymAttribute(

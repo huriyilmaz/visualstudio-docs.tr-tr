@@ -1,6 +1,6 @@
 ---
-description: Belirtilen geri çağırma yöntemini kullanarak hata ayıklama sembolleri yükler.
-title: 'IDebugComPlusSymbolProvider2:: LoadSymbolsFromCallback | Microsoft Docs'
+description: Belirtilen geri çağırma yöntemini kullanarak hata ayıklama sembollerini yükler.
+title: IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 619cebac835d7bf851cc52f325fa9dd34e3924eb4431b0c85889c266c5d67f23
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0084784c6b308de51eb25e68a30c6fb4ff74cef8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342355"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103721"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolsfromcallback"></a>IDebugComPlusSymbolProvider2::LoadSymbolsFromCallback
-Belirtilen geri çağırma yöntemini kullanarak hata ayıklama sembolleri yükler.
+Belirtilen geri çağırma yöntemini kullanarak hata ayıklama sembollerini yükler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -54,31 +54,31 @@ int LoadSymbolsFromCallback(
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-'ndaki Uygulama etki alanının tanımlayıcısı.
+[in] Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-'ndaki Modülün benzersiz tanıtıcısı.
+[in] Modülün benzersiz tanımlayıcısı.
 
 `pUnkMetadataImport`\
-'ndaki Sembol meta verilerini içeren nesne.
+[in] Sembol meta verilerini içeren nesne.
 
 `pUnkCorDebugModule`\
-'ndaki [ICorDebugModule arabirimini](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)uygulayan nesne.
+[in] [ICorDebugModule Arabirimini uygulayan nesne.](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface)
 
 `bstrModuleName`\
-'ndaki Modülün adı.
+[in] Modülün adı.
 
 `bstrSymSearchPath`\
-'ndaki Sembol dosyasının aranacağı yol.
+[in] Sembol dosyasını arama yolu.
 
 `pCallback`\
-'ndaki Geri çağırma yöntemini temsil eden nesne.
+[in] Geri çağırma yöntemini temsil eden nesne.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider2** arabirimini ortaya çıkaran bir [CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::LoadSymbolsFromCallback(

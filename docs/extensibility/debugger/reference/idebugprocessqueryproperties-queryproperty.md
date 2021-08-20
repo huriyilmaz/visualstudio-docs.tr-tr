@@ -15,12 +15,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a749bc4f86d773c2f052733a570bc70c1f0fd696bc01acf00c8fd262b94d5a9d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f244dd06076e93ff594712260929fdee6167cf79
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121433404"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159834"
 ---
 # <a name="idebugprocessquerypropertiesqueryproperty"></a>IDebugProcessQueryProperties::QueryProperty
 Bu yöntem, hata ayıklama işleminin belirtilen özellik değerini sorgular.

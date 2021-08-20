@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama işleminin arabirimine bir başvuru alır.
-title: 'IDebugCodeContext3:: GetProcess | Microsoft Docs'
+description: Hata ayıklama işleminin arabirimine bir başvuru verir.
+title: IDebugCodeContext3::GetProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 68338a582bbdc3246522abaf510265d9bb051bcacede99cc0d58397448751211
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 35ba535178bffbd35ee1fbf9b0d8d67264980437
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121292799"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111534"
 ---
 # <a name="idebugcodecontext3getprocess"></a>IDebugCodeContext3::GetProcess
-Hata ayıklama işleminin arabirimine bir başvuru alır.
+Hata ayıklama işleminin arabirimine bir başvuru verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ public int GetProcess(
 
 ## <a name="parameters"></a>Parametreler
 `ppProcess`\
-dışı Hata ayıklama işlemi arabirimine başvuru.
+[out] Hata ayıklama işlemi arabirimine başvuru.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) arabirimini kullanıma sunan bir **Cdebugcodecontext** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) arabirimini ortaya çıkaran **bir CDebugCodeContext** nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugCodeContext::GetProcess(IDebugProcess2** ppProcess)

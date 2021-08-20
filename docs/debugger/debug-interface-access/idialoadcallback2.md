@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 22ba3b2d81664de900919a208aa2e03d31b0610c12e4c0e309a4d3b74a7105d8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: adf24a1790e40e9ebdd885e6eaec73e152013b5f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345007"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129090"
 ---
 # <a name="idialoadcallback2"></a>IDiaLoadCallback2
 ,, Bulma işleminde kısıtlamaların bulunmasına izin veren bir ÇYA sembol yordamının yerini alan geri çağırmaları alır.

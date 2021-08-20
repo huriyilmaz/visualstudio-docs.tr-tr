@@ -1,7 +1,7 @@
 ---
-title: Kod kusurları için yönetilen kodu çözümlemek için İzlenecek yol | Microsoft Docs
+title: Kod Hataları ve Hataları için Yönetilen Kodu Analiz Etme | Microsoft Docs
 ms.date: 01/29/2018
-description: Eski Kod analizini kullanarak .NET yönetilen kod derlemelerini nasıl analiz edeceğinizi öğrenin. Bkz. hataları denetleme ve .NET tasarım yönergeleriyle uyumluluk.
+description: .NET yönetilen kod derlemelerini analiz etmek için eski kod analizini kullanmayı öğrenin. Hataları denetleme ve .NET tasarım yönergeleriyle uyumluluk için bkz.
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,30 +10,31 @@ helpviewer_keywords:
 author: mikadumont
 ms.author: midumont
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: b9895dc8926f1bb5c7d33e792168ca46297c8196
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: b93e0cb2a3b74fe26b60094eb74d010e0b1f77ad
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99859612"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122162012"
 ---
-# <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>İzlenecek yol: kod kusurlarını bulmak için statik Kod analizini kullanın
+# <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>adım adım kılavuz: Kod hatalarını bulmak için statik kod analizi kullanma
 
-Bu kılavuzda, Eski Kod analizini kullanarak kod kusurları için yönetilen bir proje çözümleyebilirsiniz.
+Bu kılavuzda, eski kod analizini kullanarak yönetilen bir projeyi kod hataları için analiz edersiniz.
 
-Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kılavuzlarından uyum sağlamak üzere çözümlemek için eski analizler kullanma sürecinde adım adım açıklanır.
+Bu makale, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım yönergeleriyle uyumlu olacak şekilde analiz etmek için eski analizi kullanma sürecinde size yol sunar.
 
 ## <a name="create-a-class-library"></a>Sınıf kitaplığı oluşturma
 
-1. Visual Studio 'Yu açın ve **sınıf kitaplığı (.NET Framework)** şablonundan yeni bir proje oluşturun.
+1. Sınıf Visual Studio 'i açın ve Sınıf Kitaplığı **(.NET Framework) şablonundan yeni bir proje** oluşturun.
 
-1. Projeyi **CodeAnalysisManagedDemo** olarak adlandırın.
+1. Projeye **CodeAnalysisManagedDemo adını girin.**
 
-1. Proje oluşturulduktan sonra, *Class1.cs* dosyasını açın.
+1. Proje oluşturulduktan sonra *Class1.cs dosyasını* açın.
 
-1. Class1.cs içindeki var olan metni şu kodla değiştirin:
+1. Class1.cs'de var olan metni aşağıdaki kodla değiştirin:
 
    ```csharp
    using System;
@@ -51,91 +52,91 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
 
 1. Class1.cs dosyasını kaydedin.
 
-## <a name="analyze-the-project-for-code-defects"></a>Kod kusurları için projeyi analiz etme
+## <a name="analyze-the-project-for-code-defects"></a>Projeyi kod hataları için analiz etme
 
-1. **Çözüm Gezgini**' de CodeAnalysisManagedDemo projesini seçin.
+1. içinde CodeAnalysisManagedDemo projesini **Çözüm Gezgini.**
 
-2. **Proje** menüsünde **Özellikler**' e tıklayın.
+2. Yeni **Project** Özellikler'e **tıklayın.**
 
    CodeAnalysisManagedDemo özellikleri sayfası görüntülenir.
 
-3. **Kod Analizi** sekmesini seçin.
+3. İlke **sekmesini Code Analysis** seçin.
 
 ::: moniker range="vs-2017"
 
-4. **Derlemede Kod analizini etkinleştir '** in seçildiğinden emin olun.
+4. Derlemede **Etkinleştir'Code Analysis seçildiğinden** emin olun.
 
-5. **Bu kural kümesini Çalıştır** açılan listesinden **Microsoft tüm kurallar**' ı seçin.
+5. Bu kuralı **çalıştır kümesi açılan** listesinden Microsoft Tüm **Kurallar'ı seçin.**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. **İkili çözümleyiciler** bölümünde **derlemede Çalıştır** ' ın seçili olduğundan emin olun.
+4. İkili **çözümleyiciler bölümünde Derlemede** çalıştır'ın **seçili olduğundan emin** olun.
 
-5. **Etkin kurallar** açılan listesinden **Microsoft tüm kurallar**' ı seçin.
+5. Etkin kurallar **açılan** listesinden Microsoft Tüm **Kurallar'ı seçin.**
 
 ::: moniker-end
 
-6. **Dosya** menüsünde, **Seçili öğeleri kaydet**' e tıklayın ve ardından Özellikler sayfalarını kapatın.
+6. Dosya menüsünde **Seçili** Öğeleri **Kaydet'e tıklayın** ve ardından özellikler sayfalarını kapatın.
 
-7. **Build** menüsünde **CodeAnalysisManagedDemo oluştur**' a tıklayın.
+7. Derleme menüsünde **Kod** **DerlemeAnalysisManagedDemo'ya tıklayın.**
 
-    CodeAnalysisManagedDemo proje derleme uyarıları **hata listesi** ve **Çıkış** penceresinde gösterilir.
+    CodeAnalysisManagedDemo proje derleme uyarıları Hata Listesi **ve Çıkış** **pencerelerde** gösterilir.
 
-## <a name="correct-the-code-analysis-issues"></a>Kod Analizi sorunlarını düzeltin
+## <a name="correct-the-code-analysis-issues"></a>Kod analizi sorunlarını düzeltme
 
-1. **Görünüm** menüsünde **hata listesi**' yi seçin.
+1. Görünüm menüsünde **Hata** **Listesi'ne tıklayın.**
 
-    Seçtiğiniz geliştirici profiline bağlı olarak, **Görünüm** menüsünde **diğer pencereler** ' i işaret etmeniz ve ardından **hata listesi**' yi seçmeniz gerekebilir.
+    Seçtiğiniz geliştirici profiline bağlı olarak, Görünüm menüsünde  Diğer Windows'ye işaret  etmek ve ardından Hata Listesi'ne **seçmek zorundayabilirsiniz.**
 
-1. **Çözüm Gezgini**, **tüm dosyaları göster**' i seçin.
+1. Bu **Çözüm Gezgini** Tüm Dosyaları **Göster'i seçin.**
 
-1. Özellikler düğümünü genişletin ve ardından *AssemblyInfo.cs* dosyasını açın.
+1. Özellikler düğümünü genişletin ve *ardından AssemblyInfo.cs dosyasını* açın.
 
 1. Uyarıları düzeltmek için aşağıdaki ipuçlarını kullanın:
 
-   [CA1014: Derlemeleri CLSCompliantAttribute Ile işaretle](/dotnet/fundamentals/code-analysis/quality-rules/ca1014): kodu `[assembly: CLSCompliant(true)]` AssemblyInfo.cs dosyasının sonuna ekleyin.
+   [CA1014: Derlemeleri CLSCompliantAttribute](/dotnet/fundamentals/code-analysis/quality-rules/ca1014)ile işaretle: `[assembly: CLSCompliant(true)]` Kodu AssemblyInfo.cs dosyasının sonuna ekleyin.
 
-   [CA1032: Standart özel durum oluşturucuları uygulayın](/dotnet/fundamentals/code-analysis/quality-rules/ca1032): oluşturucuyu `public demo (String s) : base(s) { }` sınıfına ekleyin `demo` .
+   [CA1032: Standart özel durum oluşturucularını uygulama:](/dotnet/fundamentals/code-analysis/quality-rules/ca1032)oluşturucusu `public demo (String s) : base(s) { }` sınıfına `demo` ekleyin.
 
-   [CA1032: Standart özel durum oluşturucuları uygulayın](/dotnet/fundamentals/code-analysis/quality-rules/ca1032): oluşturucuyu `public demo (String s, Exception e) : base(s, e) { }` sınıfına ekleyin `demo` .
+   [CA1032: Standart özel durum oluşturucularını uygulama:](/dotnet/fundamentals/code-analysis/quality-rules/ca1032)oluşturucusu `public demo (String s, Exception e) : base(s, e) { }` sınıfına `demo` ekleyin.
 
-   [CA1032: Standart özel durum oluşturucuları uygulayın](/dotnet/fundamentals/code-analysis/quality-rules/ca1032): oluşturucuyu `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` sınıf tanıtımı 'na ekleyin. Ayrıca için bir ifade eklemeniz gerekir `using` <xref:System.Runtime.Serialization?displayProperty=fullName> .
+   [CA1032: Standart özel durum oluşturucularını uygulama:](/dotnet/fundamentals/code-analysis/quality-rules/ca1032)Oluşturucuyu `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` sınıf demosüne ekleyin. ayrıca için bir deyimi de `using` eklemeniz <xref:System.Runtime.Serialization?displayProperty=fullName> gerekir.
 
-   [CA1032: Standart özel durum oluşturucuları uygulayın](/dotnet/fundamentals/code-analysis/quality-rules/ca1032): oluşturucuyu `public demo () : base() { }` sınıfına ekleyin `demo` .
+   [CA1032: Standart özel durum oluşturucularını uygulama:](/dotnet/fundamentals/code-analysis/quality-rules/ca1032)oluşturucusu `public demo () : base() { }` sınıfına `demo` ekleyin.
 
-   [CA1709: tanımlayıcılar doğru şekilde eşit olmalıdır](../code-quality/ca1709.md): ad alanının büyük küçük harflerini olarak değiştirin `testCode` `TestCode` .
+   [CA1709: Tanımlayıcılar doğru büyük/büyük/büyük](../code-quality/ca1709.md)harfe sahip olmalıdır: Ad alanının büyük/büyük/alt harflerini olarak `testCode` `TestCode` değiştirerek.
 
-   [CA1709: tanımlayıcılar doğru şekilde olmalıdır](../code-quality/ca1709.md): üyenin adını olarak değiştirin `Demo` .
+   [CA1709: Tanımlayıcılar doğru şekilde büyük/büyük](../code-quality/ca1709.md)harfe sahip olmalıdır: Üyenin adını olarak `Demo` değiştir.
 
-   [CA1709: tanımlayıcılar doğru şekilde olmalıdır](../code-quality/ca1709.md): üyenin adını olarak değiştirin `Item` .
+   [CA1709: Tanımlayıcılar doğru şekilde büyük/büyük](../code-quality/ca1709.md)harfe sahip olmalıdır: Üyenin adını olarak `Item` değiştir.
 
-   [CA1710: tanımlayıcılar doğru sonekine sahip olmalıdır](/dotnet/fundamentals/code-analysis/quality-rules/ca1710): sınıfın ve oluşturucularının adını olarak değiştirin `DemoException` .
+   [CA1710: Tanımlayıcılar](/dotnet/fundamentals/code-analysis/quality-rules/ca1710)doğru son eke sahip olmalıdır: Sınıfın adını ve oluşturucularını olarak `DemoException` değiştirme.
 
-   [CA2237: ISerializable türlerini SerializableAttribute Ile işaretleyin](/dotnet/fundamentals/code-analysis/quality-rules/ca2237): `[Serializable ()]` özniteliği sınıfına ekleyin `demo` .
+   [CA2237: ISerializable türlerini SerializableAttribute](/dotnet/fundamentals/code-analysis/quality-rules/ca2237)ile işaretle: `[Serializable ()]` sınıfına özniteliğini `demo` ekleyin.
 
-   [CA2210: derlemeler geçerli tanımlayıcı adlara sahip olmalıdır](../code-quality/ca2210.md): ' CodeAnalysisManagedDemo ' öğesini bir tanımlayıcı ad anahtarıyla imzalayın:
+   [CA2210: Derlemeler](../code-quality/ca2210.md)geçerli güçlü adlara sahip olmalıdır: 'CodeAnalysisManagedDemo' imzasını bir güçlü ad anahtarıyla imzalar:
 
-   1. **Proje** menüsünde **CodeAnalysisManagedDemo özellikleri**' ni seçin.
+   1. Yeni **Project** **CodeAnalysisManagedDemo Özellikleri'ne tıklayın.**
 
       Proje özellikleri görüntülenir.
 
-   1. **İmzalama** sekmesini seçin.
+   1. İmzalama **sekmesini** seçin.
 
-   1. **Derlemeyi imzala** onay kutusunu seçin.
+   1. Derlemeyi **imzala onay** kutusunu seçin.
 
-   1. **Bir dize adı seçin anahtar dosyası** listesinde, öğesini seçin **\<New>** .
+   1. Dize **adı anahtar dosyası seçin listesinde öğesini** **\<New>** seçin.
 
-      **Tanımlayıcı ad anahtarı oluştur** iletişim kutusu görüntülenir.
+      Güçlü **Ad Anahtarı Oluştur** iletişim kutusu görüntülenir.
 
-   1. **Anahtar dosya adı** Için **TestKey** girin.
+   1. Anahtar **dosya adı için** **TestKey girin.**
 
-   1. Bir parola girin ve **Tamam**' ı seçin.
+   1. Bir parola girin ve ardından Tamam'ı **seçin.**
 
-   1. **Dosya** menüsünde, **Seçili öğeleri kaydet**' i seçin ve sonra özellik sayfalarını kapatın.
+   1. Dosya menüsünde **Seçili** Öğeleri **Kaydet'i seçin** ve ardından özellik sayfalarını kapatın.
 
-   Tüm değişiklikleri tamamladıktan sonra, Class1.cs dosyası aşağıdaki gibi görünmelidir:
+   Tüm değişiklikleri tamamlandıktan sonra Class1.cs dosyası aşağıdaki gibi görünüyor:
 
    ```csharp
    using System;
@@ -158,19 +159,19 @@ Bu makalede, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım kıla
    }
    ```
 
-1. Projeyi yeniden derleyin.
+1. Projeyi yeniden oluşturma.
 
-## <a name="exclude-code-analysis-warnings"></a>Kod Analizi uyarılarını hariç tut
+## <a name="exclude-code-analysis-warnings"></a>Kod analizi uyarılarını hariç tut
 
-1. Kalan uyarıların her biri için aşağıdakileri yapın:
+1. Kalan uyarıların her biri için şunları yapın:
 
-    1. **Hata listesi** uyarıyı seçin.
+    1. Hata Listesinden **uyarıyı seçin.**
 
-    1. Sağ tıklama menüsünde (bağlam menüsü),   >  **gizleme dosyasında** Gizle ' yi seçin.
+    1. Sağ tıklama menüsünden (bağlam menüsünde) Gizleme Dosyasında   >  **Bastır'ı seçin.**
 
-1. Projeyi yeniden derleyin.
+1. Projeyi yeniden oluşturma.
 
-     Proje herhangi bir uyarı veya hata olmadan oluşturulur.
+     Proje herhangi bir uyarı veya hata olmadan derleme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

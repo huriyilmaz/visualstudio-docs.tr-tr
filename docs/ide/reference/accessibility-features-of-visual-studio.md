@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c71c28cde3a24aa1cc97a2ffeb7f1fa84eb16ffc1b857f36492cb0facff6f59b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 880863d483845f75d316db0f088ab8bcc6f98972
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121372861"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137203"
 ---
 # <a name="accessibility-features-of-visual-studio"></a>Visual Studio'nin erişilebilirlik özellikleri
 
@@ -50,7 +50,7 @@ Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 - [Nasıl kullanılır: Yazı tiplerini ve renkleri değiştirme](../../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
 
 > [!IMPORTANT]
-> Bu sayfada yer alan bilgiler yalnızca microsoft ürün lisansı veren kullanıcılar için Birleşik Devletler. Bu ürünü ürünün dışında aldınız Birleşik Devletler [Microsoft](https://www.microsoft.com/accessibility/) destek hizmetleri telefon numaralarının ve adreslerinin listesi için Microsoft Erişilebilirlik web sitesini ziyaret edin. Bu sayfada açıklanan ürün ve hizmet türünün bölgenize uygun olup olmadığını bulmak için yan kuruluşa başvurabilirsiniz. Erişilebilirlikle ilgili bilgiler diğer dillerde de kullanılabilir.
+> Bu sayfada yer alan bilgiler yalnızca microsoft ürün lisansına sahip kullanıcılar için Birleşik Devletler. Bu ürünü özel bir Birleşik Devletler microsoft destek hizmetleri [](https://www.microsoft.com/accessibility/) telefon numaralarının ve adreslerinin listesi için Microsoft Erişilebilirlik web sitesini ziyaret edin. Bu sayfada açıklanan ürün ve hizmet türünün bölgenize uygun olup olmadığını bulmak için yan kuruluşa başvurabilirsiniz. Erişilebilirlikle ilgili bilgiler diğer dillerde de kullanılabilir.
 
 ::: moniker range="vs-2017"
 

@@ -1,6 +1,6 @@
 ---
-title: Bağlantı noktasına bildiriliyor | Microsoft Docs
-description: Program başlatıldıktan sonra bağlantı noktasının nasıl bildirileceğini öğrenin. Bu makale ayrıntılı bir açıklama içerir.
+title: Bağlantı Noktası Bildirimi | Microsoft Docs
+description: Program başlattıktan sonra bağlantı noktasının nasıl bildirileceklerini öğrenin. Bu makale ayrıntılı bir açıklama içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,41 +13,41 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: eedd180f00844c6f38dd57b1c106d51a77b8ad1557bbcff21ddf15bb9be597c9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1aaa319f0c6cd545e1f319ab7c8c510f694529d7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342719"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160393"
 ---
-# <a name="notify-the-port"></a>Bağlantı noktasına bildir
-Bir program başlatıldıktan sonra, bağlantı noktasına aşağıdaki şekilde bildirilmesi gerekir:
+# <a name="notify-the-port"></a>Bağlantı noktasına bildirme
+Programı başlattıktan sonra bağlantı noktasına aşağıdaki gibi bildirilecek:
 
-1. Bir bağlantı noktası yeni bir program düğümü aldığında, bir program oluşturma olayını hata ayıklama oturumuna geri gönderir. Olay, programı temsil eden bir arabirimle birlikte taşınır.
+1. Bağlantı noktası yeni bir program düğümü aldığında, program oluşturma olayı hata ayıklama oturumuna geri gönderir. Olayı, programı temsil eden bir arabirimle birlikte taşır.
 
-2. Hata ayıklama oturumu programı, iliştireme bir hata ayıklama altyapısının (DE) tanımlayıcısı için sorgular.
+2. Hata ayıklama oturumu, programda iliştirilen bir hata ayıklama altyapısının (DE) tanımlayıcısını sorgular.
 
-3. Hata ayıklama oturumu, bu program için izin verilen DEs listesinde DE olup olmadığını denetler. Hata ayıklama oturumu bu listeyi çözümün etkin program ayarlarından alır, başlangıçta hata ayıklama paketi tarafından kendisine geçirilir.
+3. Hata ayıklama oturumu, DE'nin bu program için izin verilebilir DE'ler listesinde olup değildir. Hata ayıklama oturumu, çözümün etkin program ayarlarından bu listeyi alır ve başlangıçta hata ayıklama paketi tarafından bu listeye geçiri.
 
-    DE, izin verilen listede olmalıdır, aksi takdirde DE programa iliştirilmeyecektir.
+    DE izin verilebilir listesinde yer alalır, yoksa DE programa bağlı olmaz.
 
-   Programlı olarak, bir bağlantı noktası ilk olarak yeni bir program düğümü aldığında, programı temsil eden bir [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) arabirimi oluşturur.
-
-> [!NOTE]
-> Bu `IDebugProgram2` , daha sonra hata ayıklama altyapısı (de) tarafından oluşturulan arabirimle karıştırılmamalıdır.
-
- Bağlantı noktası bir COM arabirimi aracılığıyla oturum hata ayıklama Yöneticisi 'ne (SDM) bir [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) program oluşturma olayı gönderir `IConnectionPoint` .
+   Program aracılığıyla, bir bağlantı noktası yeni bir program düğümü aldığında, programı temsil etmek için [bir IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) arabirimi oluşturur.
 
 > [!NOTE]
-> Bu, `IDebugProgramCreateEvent2` daha sonra de tarafından gönderilen arabirimiyle karıştırılmamalıdır.
+> Bu, daha sonra hata ayıklama `IDebugProgram2` altyapısı (DE) tarafından oluşturulan arabirimle karıştırılmamalıdır.
 
- Olay arabiriminin kendisiyle birlikte bağlantı noktası, sırasıyla bağlantı noktasını, işlemi ve programı temsil eden [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md), [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)ve [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) arabirimlerini gönderir. SDM, programda hata ayıklayacağınız DE GUID 'sini almak için [IDebugProgram2:: GetEngineInfo](../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md) çağırır. GUID ilk olarak [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) arabiriminden elde edildi.
+ Bağlantı noktası bir COM arabiriminden oturum hata ayıklama yöneticisine (SDM) [bir IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) program oluşturma olayı `IConnectionPoint` gönderir.
 
- SDM, izin verilen DEs listesinde DE olup olmadığını denetler. SDM Bu listeyi çözümün etkin program ayarlarından alır, başlangıçta hata ayıklama paketi tarafından kendisine geçirilir. DE, izin verilen listede olmalıdır, aksi takdirde programa eklenmez.
+> [!NOTE]
+> Bu, daha sonra `IDebugProgramCreateEvent2` DE tarafından gönderilen arabirimle karıştırılmamalıdır.
 
- DE kimliği bilindiğinde, SDM programa eklenmeye hazırdır.
+ Olay arabiriminin kendisiyle birlikte, bağlantı noktası sırasıyla bağlantı noktasını, işlemi ve programı temsil eden [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md), [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)ve [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) arabirimlerini gönderir. SDM, programda hata ayıklayabilmesi için DE GUID'lerini almak için [IDebugProgram2::GetEngineInfo'yu](../../extensibility/debugger/reference/idebugprogram2-getengineinfo.md) arar. GUID ilk olarak [IDebugProgramNode2 arabiriminden alındı.](../../extensibility/debugger/reference/idebugprogramnode2.md)
+
+ SDM, DE'nin izin verilebilir DE'ler listesinde olup olduğunu denetler. SDM, çözümün etkin program ayarlarından bu listeyi alır ve başlangıçta hata ayıklama paketi tarafından bu listeye geçiritir. DE izin verilebilir listede olmalı, yoksa programa bağlı olmaz.
+
+ DE kimliği bilindiği zaman, SDM bunu programa eklemeye hazırdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Program başlatma](../../extensibility/debugger/launching-a-program.md)
-- [Bir başlatma işleminden sonra iliştirme](../../extensibility/debugger/attaching-after-a-launch.md)
+- [Programı başlatma](../../extensibility/debugger/launching-a-program.md)
+- [Başlatmadan sonra ekleme](../../extensibility/debugger/attaching-after-a-launch.md)
 - [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md)

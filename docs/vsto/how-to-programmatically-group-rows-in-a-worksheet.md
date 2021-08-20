@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfasında program aracılığıyla satırları gruplama'
-description: Bir NamedRange denetimi veya yerel Excel Range nesnesi kullanarak Microsoft Excel 'de bir veya daha fazla satırı programlı bir şekilde nasıl gruplandıralabileceğinizi öğrenin.
+description: NamedRange denetimi veya yerel bir Excel range nesnesi kullanarak Microsoft Excel bir veya daha fazla satırı programlı olarak nasıl gruplandıralabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -20,17 +20,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: eaa0bbcc2c26a36e43e862cbe5a8f117c2a1fb26
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 89d71b501dc7c9c65e2cf1d0d167b34233c30383
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885423"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148005"
 ---
 # <a name="how-to-programmatically-group-rows-in-a-worksheet"></a>Nasıl yapılır: çalışma sayfasında program aracılığıyla satırları gruplama
-  Bir veya daha çok tam satırı gruplandırabilirsiniz. Çalışma sayfasında bir grup oluşturmak için, bir <xref:Microsoft.Office.Tools.Excel.NamedRange> Denetim veya yerel Excel Aralık nesnesi kullanın.
+  Bir veya daha çok tam satırı gruplandırabilirsiniz. çalışma sayfasında bir grup oluşturmak için, bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetim veya yerel Excel range nesnesi kullanın.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -47,10 +48,10 @@ ms.locfileid: "99885423"
     > [!NOTE]
     > Satırları çözmek için <xref:Microsoft.Office.Tools.Excel.NamedRange.Ungroup%2A> yöntemini çağırın.
 
-## <a name="use-native-excel-ranges"></a>Yerel Excel aralıklarını kullan
- Kod,, `data2001` `data2002` , ve bir çalışma sayfasında adlı üç Excel aralığınız olduğunu varsayar `dataAll` .
+## <a name="use-native-excel-ranges"></a>yerel Excel aralıklarını kullan
+ kod, `data2001` `data2002` bir çalışma sayfasında, ve adında üç Excel aralığa sahip olduğunuzu varsayar `dataAll` .
 
-### <a name="to-create-a-group-of-excel-ranges-in-a-worksheet"></a>Çalışma sayfasında Excel aralıkları grubu oluşturmak için
+### <a name="to-create-a-group-of-excel-ranges-in-a-worksheet"></a>çalışma sayfasında bir Excel aralığı grubu oluşturmak için
 
 1. Her bir aralığın yöntemini çağırarak üç adlandırılmış aralığı gruplayın <xref:Microsoft.Office.Interop.Excel.Range.Group%2A> . Aşağıdaki örnek,, <xref:Microsoft.Office.Interop.Excel.Range> ve adlı üç denetimin `data2001` `data2002` `dataAll` aynı çalışma sayfasında olduğunu varsayar. Her bir adlandırılmış aralık çalışma sayfasındaki tüm bir satırı ifade eder.
 

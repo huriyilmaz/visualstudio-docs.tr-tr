@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 06759e3b67136e97b8c20af9b7047e62790348944a1c46b7c60d065d9d2a0b79
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 330c36eb7f9437316f87d858cc758fdc4c89d846
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392115"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161560"
 ---
 # <a name="idiasectioncontribget_notcached"></a>IDiaSectionContrib::get_notCached
 Bölümün önbelleğe alınıp alınamay olmadığını belirten bir bayrak alınır.

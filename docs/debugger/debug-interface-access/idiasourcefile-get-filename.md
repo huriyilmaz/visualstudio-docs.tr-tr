@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f005187f4256f773b43dc0ae88a5bf586e4206266476ca9efc4efc7f0008e4c1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5f9bb3ba8834c58fc7f4317afef689b34f48075a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454906"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128930"
 ---
 # <a name="idiasourcefileget_filename"></a>IDiaSourceFile::get_fileName
 Kaynak dosya adını alın.

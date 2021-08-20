@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f80e4742b400120f6187619e9a8c6ada17a1d45b0b7d2f0dadc9910f078872d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b3afd2b860d56fd78d01cf9509c7e3c75fc9c4e5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121370092"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136891"
 ---
 # <a name="item-metadata-in-task-batching"></a>Toplu görev işlemede öğe meta verileri
 
