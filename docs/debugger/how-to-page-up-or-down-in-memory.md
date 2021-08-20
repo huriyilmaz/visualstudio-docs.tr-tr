@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7838f6088764939a4a93c0c723c5e06e5c9ed8f51c2d5bedc1c522b00e7238fb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9cbf5ddba4244481efe42fe0818989b2a384d092
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379106"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128227"
 ---
 # <a name="how-to-page-up-or-down-in-memory"></a>Nasıl Yapılır: Bellekte Sayfa Yukarı veya Aşağı Gitme
 
@@ -37,9 +37,9 @@ Bellek penceresinde veya Ayır  penceresinde bellek  içeriklerini görüntüley
 
 1. Sayfayı aşağı kaydırmak için (daha yüksek bir bellek adresine gidin), kaydırma kutusunun altındaki dikey kaydırma çubuğuna tıklayın.
 
-2. Sayfa yukarı (daha düşük bir bellek adresine taşıma) için, başparmak üzerindeki dikey kaydırma çubuğuna tıklayın.
+2. Sayfa yukarı (daha düşük bir bellek adresine taşıma) için başparmak üzerindeki dikey kaydırma çubuğuna tıklayın.
 
-   Ayrıca dikey kaydırma çubuğunun standart olmayan bir şekilde çalışma olduğunu da fark edersiniz. Modern bir bilgisayarın adres alanı çok büyüktür ve kaydırma çubuğu başparmaklarını alıp rastgele bir konuma sürükleyerek kolayca kaybolabilirsiniz. Bu nedenle başparmak "springloaded" olur ve her zaman kaydırma çubuğunun merkezinde kalır. Yerel kod uygulamalarında sayfa yukarı veya aşağı kaydırabilirsiniz, ancak serbestçe kaydıramazsiniz.
+   Ayrıca dikey kaydırma çubuğunun standart olmayan bir şekilde çalışma olduğunu da fark edersiniz. Modern bir bilgisayarın adres alanı çok büyüktür ve kaydırma çubuğu başparmaklarını alıp rastgele bir konuma sürükleyerek kolayca kaybolabilirsiniz. Bu nedenle başparmak "springloaded" olur ve her zaman kaydırma çubuğunun merkezinde kalır. Yerel kod uygulamalarında sayfa yukarı veya aşağı kaydırabilirsiniz ancak sayfayı serbestçe kaydıramazsiniz.
 
    Yönetilen uygulamalarda, disassembly tek bir işlevle sınırlıdır ve normal şekilde kaydırabilirsiniz.
 

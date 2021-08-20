@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 891af8c8f6196fcafa8f623fa0fd81c44548b81c9a3294001312c2a7c6e341d1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5dd391950b3f5441d9f6d2b4e6030abfa5a399b2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420377"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121167"
 ---
 # <a name="memorytypeenum"></a>MemoryTypeEnum
 Erişilen bellek türünü belirtir.

@@ -12,12 +12,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: ee12dc8fd92767f600c33c63bac98e039b76007db3ceb9b4da27e1584ab4cef2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8269651b9cb5453f0ecd9c40b214b560b09570be
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384995"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140030"
 ---
 # <a name="edit-load-tests"></a>Yük testlerini Düzenle
 

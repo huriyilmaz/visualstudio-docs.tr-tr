@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3178d4a78b91d862dd6c222dbec6277a31fe9c75a9c7ebf97cbd4a4d2ec6dbfc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 60a31056683c636d202b391ac9dbfba46a90121e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121430856"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151736"
 ---
 # <a name="clean-devenvexe"></a>/Clean (devenv.exe)
 

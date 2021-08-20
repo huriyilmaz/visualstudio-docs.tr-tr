@@ -1,6 +1,6 @@
 ---
-title: Seçenekler, Metin Düzenleyici, U-SQL, IntelliSense
-description: U-SQL bölümündeki IntelliSense sayfasını kullanarak U-SQL için metin düzenleyicisi IntelliSense ayarlarını değiştirmeyi öğrenin.
+title: seçenekler, metin düzenleyici, U-SQL, ıntellisense
+description: U-SQL için metin düzenleyicisi ıntellisense ayarlarını değiştirmek üzere U-SQL bölümünde ıntellisense sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/17/2019
 ms.topic: reference
@@ -13,50 +13,50 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 09a81ae9a5dbb0392026d6e63e4b430a4f9a1bee5dcadb83843d5f2fd0b7b63c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0455aa2420e260af0239100513cd7a042a8bcaf6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387232"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151203"
 ---
-# <a name="options-text-editor-u-sql-intellisense"></a>Seçenekler, Metin Düzenleyici, U-SQL, IntelliSense
+# <a name="options-text-editor-u-sql-intellisense"></a>seçenekler, metin düzenleyici, U-SQL, ıntellisense
 
-**IntelliSense seçenekleri sayfasını** kullanarak bir uygulamanın bazı metin düzenleyici ayarlarını U-SQL. Bu seçenekler sayfasına erişmek için Araçlar **Seçenekleri'ni** ve ardından  >  Metin **Düzenleyici'yi ve**  >    >  **IntelliSense'U-SQL seçin.**
+U-SQL için bazı metin Düzenleyicisi ayarlarını değiştirmek üzere **IntelliSense** seçenekleri sayfasını kullanın. bu seçenekler sayfasına erişmek için **araçlar**  >  **seçenekler**' i seçin ve ardından ıntellisense **U-SQL metin düzenleyici**' yi seçin  >    >  .
 
-## <a name="intellisense-settings"></a>IntelliSense Ayarlar
+## <a name="intellisense-settings"></a>ıntellisense Ayarlar
 
-Hızlı Bilgi veya **IntelliSense'i etkinleştirmek için** **bir onay kutusu seçin.** Hızlı Bilgi, fare imlecini bir değişkenin üzerine geldiğinde bildirimin tamamlandıktan sonra görüntülenir.
+**Hızlı bilgi** veya **IntelliSense**'i etkinleştirmek için bir onay kutusu seçin. Hızlı bilgi, fare imlecini bir değişken üzerine getirdiğinizde tüm bildirimi görüntüler.
 
-## <a name="completion-lists"></a>Tamamlama Listeleri
+## <a name="completion-lists"></a>Tamamlanma listeleri
 
 - **Bir karakter yazıldıktan sonra tamamlanma listesini göster**
 
-   Bu seçenek seçildiğinde, yazmaya başladığınızda IntelliSense tamamlama listesini otomatik olarak görüntüler. Bu seçeneği seçerek IntelliSense tamamlaması IntelliSense menüsünden veya **Ctrl** Ara Çubuğu tuşlarına basarak  +  kullanılabilir.
+   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense, tamamlanma listesini otomatik olarak görüntüler. Bu seçeneği seçmezseniz, IntelliSense tamamlanmasında IntelliSense menüsünde veya **CTRL** boşluk tuşlarına basarak hala kullanılabilir  +  .
 
-- **Anahtar sözcükleri tamamlama listelerine ekleyin**
+- **Anahtar sözcükleri tamamlanma listelerine yerleştir**
 
-   Bu seçenek seçildiğinde, IntelliSense tamamlama listesine anahtar sözcükler içerir.
+   Bu seçenek belirlendiğinde, IntelliSense tamamlama listesinde anahtar sözcükler içerir.
 
-- **Kod parçacıklarını tamamlama listelerine ekleme**
+- **Kod parçacıklarını tamamlama listelerine yerleştir**
 
-   Bu seçenek seçildiğinde, IntelliSense tamamlama listesine kod parçacıkları içerir.
+   Bu seçenek belirlendiğinde, IntelliSense tamamlama listesinde kod parçacıkları içerir.
 
-## <a name="selection-in-completion-list"></a>Tamamlama Listesinde Seçim
+## <a name="selection-in-completion-list"></a>Tamamlanma listesinde seçim
 
-- **Aşağıdaki karakterleri yazarak işleme**
+- **Aşağıdaki karakterleri yazarak işleyin**
 
-   Bu alan, şu anda vurgulanan tamamlama listesi önerisinin işlanmasını neden olan karakterleri gösterir. Bu listeden karakter ekleyebilir veya kaldırabilirsiniz.
+   Bu alan, şu anda vurgulanmış olan tamamlama listesi önerisine neden olan karakterleri gösterir. Bu listeden karakter ekleyebilir veya kaldırabilirsiniz.
 
-- **Ara Çubuğuna basarak işleme**
+- **Ara çubuğuna basarak işleyin**
 
-   Bu seçenek seçildiğinde, ara çubuğuna basarak vurgulanan tamamlama listesi önerisini işebilirsiniz.
+   Bu seçenek belirlendiğinde, ara çubuğuna basarak, vurgulanan tamamlanma listesi önerilerini uygulayabilirsiniz.
 
-- **Enter tarak tam olarak yazarak sözcük sonuna yeni bir satır ekleyin**
+- **ENTER 'ta tam yazılmış kelimenin sonuna yeni bir satır ekle**
 
-   Seçildiğinde, otomatik olarak yeni bir satır eklenir ve bir tamamlama listesi önerisi için tüm karakterleri yazarak imleci yeni satıra taşır.
+   Seçildiğinde, yeni bir satır otomatik olarak eklenir ve bir tamamlanma listesi önerisi için tüm karakterleri yazdığınızda imleç yeni satıra gider.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genel, Ortam, Seçenekler İletişim Kutusu](../../ide/reference/general-environment-options-dialog-box.md)
-- [IntelliSense'i kullanma](../../ide/using-intellisense.md)
+- [IntelliSense kullanma](../../ide/using-intellisense.md)

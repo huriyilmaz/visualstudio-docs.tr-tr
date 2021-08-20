@@ -1,6 +1,6 @@
 ---
-description: bölümünün yürütülebilir kod içerdiğini belirten bir bayrak alınır.
-title: IDiaSectionContrib::get_code | Microsoft Docs
+description: Bölümün yürütülebilir kod içerip içermediğini gösteren bir bayrak alır.
+title: 'IDiaSectionContrib:: get_code | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d5db11e983107b6e0a86822676753afab89f6c097cff49570bdd69d18f6153a1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 90bafdeddef52679a515444eb625d94eaa37ef5a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121405069"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161576"
 ---
 # <a name="idiasectioncontribget_code"></a>IDiaSectionContrib::get_code
-bölümünün yürütülebilir kod içerdiğini belirten bir bayrak alınır.
+Bölümün yürütülebilir kod içerip içermediğini gösteren bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_code (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] bölümü `TRUE` yürütülebilir kod içeriyorsa döndürür; aksi takdirde `FALSE` döndürür.
+dışı `TRUE` Bölüm yürütülebilir kod içeriyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

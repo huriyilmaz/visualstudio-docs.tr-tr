@@ -22,16 +22,17 @@ ms.assetid: ecf62568-8b65-4a41-b8a4-e962ff2dfb71
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4636c3b5150bd04b8a776b28d210be1cef79dcda
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d4336c741aac8eded2ce529f5a3fa57dd5abf1d6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877648"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128370"
 ---
-# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Nasıl yapılır: programınızın hangi DLL 'de kilitlendiğini bulma (C#, C++, Visual Basic, F #)
+# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>nasıl yapılır: programınızın hangi DLL 'de kilitlendiğini bulma (C#, C++, Visual Basic, F #)
 
  Uygulamanız bir sistem DLL 'SI veya başka birinin kodu çağrısı sırasında kilitlenirse, kilitlenme oluştuğunda hangi DLL 'nin etkin olduğunu bulmanız gerekir. Kendi programınızın dışında bir DLL 'de kilitlenmeyle karşılaşırsanız, bu konumu **modüller** penceresini kullanarak belirleyebilirsiniz.
 
@@ -41,7 +42,7 @@ ms.locfileid: "99877648"
 
     Adres hata iletisinde gösterilmiyorsa, DLL 'yi tanımlamak için alternatif yöntemler kullanmanız gerekebilir. Bir sistem DLL 'inin şüpheli olması halinde, hata ayıklama sırasında Microsoft sembol sunucularından [sembolleri](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) yükleyebilirsiniz. Aksi takdirde, bunun yerine yığın bilgileriyle [bir döküm dosyası oluşturmanız](../debugger/using-dump-files.md) gerekebilir. Döküm dosyaları oluşturmak için çeşitli [Araçlar](https://blogs.msdn.microsoft.com/andrehal/2009/12/31/what-is-a-dump-and-how-do-i-create-one/) mevcuttur.
 
-2. **Hata Ayıkla** menüsünde **Windows**' u seçin ve **modüller**' e tıklayın.
+2. **hata ayıkla** menüsünde, **Windows** öğesini seçin ve **modüller**' e tıklayın.
 
 3. **Modüller** penceresinde **Adres** sütununu bulun. Bunu görmek için kaydırma çubuğunu kullanmanız gerekebilir.
 

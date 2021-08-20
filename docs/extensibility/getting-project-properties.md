@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3244fde5689bc81431f4e14bd6322fd61f9594e01e088156c6781225b0c7b2b2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 434f45bcf06fc46b9cbafe1b8ecd267619fec405
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121376618"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125068"
 ---
 # <a name="get-project-properties"></a>Proje özelliklerini al
 

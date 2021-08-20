@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
-ms.openlocfilehash: cca5d41db47c2cc59bd36f7114395f86ccb057ee4c251419130763a30bfc91f7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f655a80fd25d7cf8e1f9fefdf329f62319cbc842
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440272"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122130370"
 ---
 # <a name="workflow-designer-shell-features"></a>İş Akışı Tasarımcısı Kabuk Özellikleri
 

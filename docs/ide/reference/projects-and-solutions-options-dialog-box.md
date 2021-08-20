@@ -1,6 +1,6 @@
 ---
-title: Projeler ve çözümler, Seçenekler iletişim kutusu
-description: projeler ve çözümlerle ilgili Visual Studio davranışını tanımlamak için projeler ve çözümler bölümünde genel sayfasını nasıl kullanacağınızı öğrenin.
+title: Projeler ve Çözümler, Seçenekler iletişim kutusu
+description: Projeler ve Çözümler bölümündeki Genel sayfasını kullanarak proje ve çözümlerle ilgili Visual Studio davranışını tanımlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 07/26/2019
 ms.topic: reference
@@ -16,91 +16,91 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c8b686b13fcd4289c70d6b6b89c7d7c96affaf92cbec2623805604cbc3e93998
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 14a37e634dea3ae40e78f02c82937a5d03c73e3f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121372067"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151177"
 ---
-# <a name="options-dialog-box-projects-and-solutions--general"></a>Seçenekler iletişim kutusu: projeler ve çözümler \> genel
+# <a name="options-dialog-box-projects-and-solutions--general"></a>Seçenekler iletişim kutusu: Projeler ve Çözümler \> Genel
 
-projeler ve çözümlerle ilgili Visual Studio davranışını tanımlamak için bu sayfayı kullanın. Bu seçeneklere erişmek için **Araçlar**  >  **Seçenekler**, **Projeler ve çözümler**' i seçin ve ardından **genel**' i seçin.
+Projelerin proje ve Visual Studio davranışını tanımlamak için bu sayfayı kullanın. Bu seçeneklere erişmek için Araçlar **Seçenekleri'ne**  >  **tıklayın,** Projeler ve **Çözümler'i genişletin** ve ardından Genel'i **seçin.**
 
-**Genel** sayfasında aşağıdaki seçenekler bulunur.
+Genel sayfasında aşağıdaki seçenekler **kullanılabilir.**
 
-## <a name="always-show-error-list-if-build-finishes-with-errors"></a>Derleme hatalarla sonlandıysanız her zaman Hata Listesi göster
+## <a name="always-show-error-list-if-build-finishes-with-errors"></a>Derleme hatalarla bitse her zaman Hata Listesini göster
 
-Yapı tamamlamada **hata listesi** penceresini açar, yalnızca bir proje derlenbir şekilde başarısız olursa. Oluşturma işlemi sırasında oluşan hatalar görüntülenir. Bu seçenek kaldırıldığında hatalar yine oluşur ancak yapı tamamlandığında pencere açılmaz. Bu seçenek varsayılan olarak etkindir.
+Yalnızca **bir projenin derlemesi** başarısız olursa, derleme tamamlandığında Hata Listesi penceresini açar. Derleme işlemi sırasında oluşan hatalar görüntülenir. Bu seçenek temiz olduğunda hatalar yine de oluşur ancak derleme tamamlandığında pencere açılmaz. Bu seçenek varsayılan olarak etkindir.
 
-## <a name="track-active-item-in-solution-explorer"></a>Çözüm Gezgini etkin öğeyi izle
+## <a name="track-active-item-in-solution-explorer"></a>Etkin öğeyi Çözüm Gezgini
 
-Seçildiğinde, **Çözüm Gezgini** otomatik olarak açılır ve etkin öğe seçilir. Seçilen öğe, bir proje veya çözümde farklı dosyalarla veya bir tasarımcıda farklı bileşenlere çalışırken değişir. Bu seçenek temizlenmiş olduğunda **Çözüm Gezgini** seçimi otomatik olarak değişmez. Bu seçenek varsayılan olarak etkindir.
+Seçildiğinde, **Çözüm Gezgini** olarak açılır ve etkin öğe seçilir. Bir proje veya çözümde farklı dosyalarla veya tasarımcıda farklı bileşenlerle çalışabilirsiniz. Bu seçenek temizlenirken, Çözüm Gezgini **otomatik** olarak değişmez. Bu seçenek varsayılan olarak etkindir.
 
-## <a name="show-advanced-build-configurations"></a>Gelişmiş derleme yapılandırmasını göster
+## <a name="show-advanced-build-configurations"></a>Gelişmiş derleme yapılandırmalarını gösterme
 
-seçildiğinde, yapı yapılandırma seçenekleri **Project özellik sayfaları** iletişim kutusunda ve **çözüm özellik sayfaları** iletişim kutusunda görünür. temizlenme sırasında, derleme yapılandırma seçenekleri **Project özellik sayfaları** iletişim kutusunda ve bir yapılandırma ya da iki yapılandırma hata ayıklaması ve sürümü içeren Visual Basic ve C# projelerinin **çözüm özellik sayfaları** iletişim kutusunda görünmez. Bir projede Kullanıcı tanımlı bir yapılandırma varsa, derleme yapılandırma seçenekleri gösterilir.
+Bu seçildiğinde, derleme yapılandırma seçenekleri Project **Sayfaları iletişim** kutusunda ve Çözüm Özellik Sayfaları **iletişim kutusunda** görüntülenir. Temizlenince, derleme yapılandırma seçenekleri Project Özellik Sayfaları iletişim kutusunda ve  **bir** yapılandırma veya iki yapılandırma içeren Visual Basic ve C# projeleri için Çözüm Özellik Sayfaları iletişim kutusunda görünmez. Proje kullanıcı tanımlı bir yapılandırmaya sahipse, derleme yapılandırma seçenekleri gösterilir.
 
-Seçilmediğinde, oluşturma **çözümü**, **çözümü yeniden oluşturma** ve **çözümü Temizleme** gibi **derleme** menüsündeki komutlar, sürüm yapılandırması üzerinde gerçekleştirilir ve hata **ayıklamayı Başlat** ve hata ayıklama **olmadan Başlat** gibi **hata** ayıklama menüsündeki komutlar hata ayıklama yapılandırmasında gerçekleştirilir.
+Seçimi kaldırıldığında Derleme menüsündeki  Derleme Çözümü, Çözümü Yeniden Derleme ve Çözümü Temizle gibi komutlar Yayın yapılandırmasında ve Hata  Ayıklama menüsünde Hata Ayıklamayı Başlat ve Hata Ayıklama Olmadan Başlat gibi komutlar Hata Ayıklama yapılandırmasında gerçekleştirilir. 
 
 ## <a name="always-show-solution"></a>Çözümü her zaman göster
 
-Seçildiğinde, çözüm ve çözümler üzerinde işlem yapan tüm komutlar her zaman IDE 'de gösterilir. Temizlenme sırasında, tüm projeler tek başına projeler olarak oluşturulur ve çözüm yalnızca bir proje içeriyorsa IDE 'deki çözümler üzerinde çalışan Çözüm Gezgini veya komutlarda çözümü görmezsiniz.
+Seçildiğinde, çözüm ve çözümler üzerinde eyleme geçen tüm komutlar her zaman IDE'de gösterilir. Temizlenin, tüm projeler tek başına projeler olarak oluşturulur ve çözümde yalnızca bir proje Çözüm Gezgini IDE'de çözümler üzerinde eyleme geçen komutlarda çözümü görmüyorsunuz.
 
 ::: moniker range="vs-2017"
 
-## <a name="save-new-projects-when-created"></a>Oluşturulduğunda yeni projeleri Kaydet
+## <a name="save-new-projects-when-created"></a>Oluşturulduğunda yeni projeleri kaydetme
 
-seçildiğinde, **yeni Project** iletişim kutusunda projeniz için bir konum belirtebilirsiniz. Kaldırıldığında, tüm yeni projeler geçici proje olarak oluşturulur. Geçici projelerle çalışırken bir disk konumu belirtmek zorunda kalmadan bir proje oluşturup deneyebilirsiniz.
+Seçildiğinde, Yeni Çalışma Alanı iletişim kutusunda projeniz **için bir Project** belirtebilirsiniz. Temiz olduğunda, tüm yeni projeler geçici projeler olarak oluşturulur. Geçici projelerle çalışırken, disk konumu belirtmek zorunda kalmadan bir proje oluşturabilir ve bu projeyle denemeler oluşturabilirsiniz.
 
 ::: moniker-end
 
-## <a name="warn-user-when-the-project-location-is-not-trusted"></a>Proje konumu güvenilir olmadığında kullanıcıyı uyar
+## <a name="warn-user-when-the-project-location-is-not-trusted"></a>Proje konumu güvenilir değilken kullanıcıya uyarı uygulama
 
-Yeni bir proje oluşturmaya veya var olan bir projeyi tam güvenilir olmayan bir konumda açmaya çalışırsanız (örneğin, bir UNC yolu veya HTTP yolu üzerinde), bir ileti görüntülenir. Tam güvenilir olmayan bir konumda bir projeyi oluşturma veya açma girişiminde bulunan her seferinde iletinin görüntülenip görüntülenmeyeceğini belirtmek için bu seçeneği kullanın.
+Yeni bir proje oluşturmak veya mevcut projeyi tam olarak güvenilir olmayan bir konumda (örneğin, BIR UNC yolunda veya HTTP yolunda) açmaya çalışırken bir ileti görüntülenir. Tam olarak güvenilir bir konumda proje oluşturma veya açma girişiminde bulundurarak iletinin her görüntülendiğinde görüntülendiğinden emin olmak için bu seçeneği kullanın.
 
-## <a name="show-output-window-when-build-starts"></a>Derleme başladığında çıkış penceresini göster
+## <a name="show-output-window-when-build-starts"></a>Derleme başladığında Çıkış penceresini göster
 
-, [Çıkış penceresini](../../ide/reference/output-window.md) otomatik olarak IDE 'de, çözüm derlemelerinin bilinemeyebilir öğesinde görüntüler.
+Çözüm [derlemelerinin başlangıcında](../../ide/reference/output-window.md) IDE'de Çıkış penceresini otomatik olarak görüntüler.
 
-## <a name="prompt-for-symbolic-renaming-when-renaming-files"></a>Dosyaları yeniden adlandırırken sembolik yeniden adlandırma iste
+## <a name="prompt-for-symbolic-renaming-when-renaming-files"></a>Dosyaları yeniden görüntülerken sembolik yeniden başlatma istemi
 
-seçildiğinde, Visual Studio projedeki tüm başvuruları kod öğesine de yeniden adlandırmasının gerekip gerekmediğini soran bir ileti kutusu görüntüler.
+Seçildiğinde, Visual Studio olup olmadığını soran bir ileti kutusu görüntüler. Ayrıca projedeki tüm başvuruları kod öğesi olarak yeniden adlandırması gerekir.
 
 ## <a name="prompt-before-moving-files-to-a-new-location"></a>Dosyaları yeni bir konuma taşımadan önce sor
 
-seçildiğinde, dosya konumları **Çözüm Gezgini** eylemler tarafından değiştirilmeden önce Visual Studio bir onay iletisi kutusu görüntüler.
+Bu seçildiğinde, Visual Studio konumlarının bir onay iletisi kutusu ile değiştirilemeden önce bir onay iletisi **Çözüm Gezgini.**
 
-## <a name="reopen-documents-on-solution-load"></a>Çözüm yükünden belgeleri yeniden aç
+## <a name="reopen-documents-on-solution-load"></a>Çözüm yükü üzerinde belgeleri yeniden açma
 
-Seçildiğinde, çözüm açıldığında kalan bir önceki sefer açık olan belgeler otomatik olarak açılır.
+Seçildiğinde, çözüm kapatılan önceki sefer açık kalan belgeler çözüm açıldığında otomatik olarak açılır.
 
-Belirli dosya veya tasarımcı türlerini yeniden açmak çözüm yükünü geciktirebilirler. Çözümün önceki bağlamını geri yüklemek istemiyorsanız [çözüm yükleme performansını artırmak](../../ide/visual-studio-performance-tips-and-tricks.md#disable-automatic-file-restore) için bu seçeneğin işaretini kaldırın.
+Belirli dosya veya tasarımcıların yeniden açılması çözüm yüklemesini geciktirebilirsiniz. Çözümün önceki [bağlamını geri yüklemek istemiyorsanız](../../ide/visual-studio-performance-tips-and-tricks.md#disable-automatic-file-restore) çözüm yükleme performansını geliştirmek için bu seçeneğin işaretini kaldırın.
 
 ::: moniker range=">=vs-2019"
 
-## <a name="restore-solution-explorer-project-hierarchy-state-on-solution-load"></a>Çözüm yükünden Çözüm Gezgini proje hiyerarşisi durumunu geri yükle
+## <a name="restore-solution-explorer-project-hierarchy-state-on-solution-load"></a>Çözüm Çözüm Gezgini proje hiyerarşisi durumunu geri yükleme
 
-Seçildiğinde, Çözüm Gezgini düğümlerin durumunu, çözümün en son açılışında genişletilmekte veya daraltılıp daraltıldıklarından bağımsız olarak geri yükler. Büyük çözümler için çözüm yükleme süresini azaltmak üzere bu seçeneğin seçimini kaldırın.
+Seçildiğinde, çözümün en son Çözüm Gezgini genişletilen veya daraltılmış olup olmadığıyla ilgili olarak düğümler içinde düğümlerin durumunu geri yükleme. Büyük çözümler için çözüm yükleme sürelerini azaltmak için bu seçeneğin seçimini kaldırın.
 
 > [!TIP]
-> Bu seçeneği devre dışı bırakırsanız, Çözüm Gezgini ' deki etkin belgeye gitmek için kolay bir yol **Çözüm Gezgini** araç çubuğunda **etkin belge ile Eşitle** ' yi seçmektir.
+> Bu seçeneği devre dışı bıraksanız, Çözüm Gezgini araç çubuğunda Etkin Belgeyle Eşitle'yi seçerek etkin belgeye **Çözüm Gezgini** olur. 
 >
-> ![Çözüm Gezgini etkin belge ile Eşitle](media/sync-active-document.png)
+> ![Çözüm Gezgini'de etkin belgeyle eşitleme](media/sync-active-document.png)
 
-## <a name="open-sdk-style-project-files-with-double-click-or-the-enter-key"></a>Çift tıklama veya ENTER tuşu ile SDK stili proje dosyaları açın
+## <a name="open-sdk-style-project-files-with-double-click-or-the-enter-key"></a>SDK stili proje dosyalarını çift tıklamayla veya Enter tuşuyla açma
 
-Bu seçenek belirlendiğinde ve Çözüm Gezgini bir SDK stili proje düğümüne çift tıkladığınızda veya seçin ve ardından **ENTER** tuşuna basarsanız proje dosyası (örneğin, \* . csproj dosyası) düzenleyicide XML olarak açılır. Seçimi kaldırıldığında, Çözüm Gezgini bir SDK stili proje düğümüne çift tıklayarak veya onu seçip **ENTER** tuşuna basarak yalnızca düğümü genişletme veya daraltma etkisi vardır.
+Bu seçenek seçildiğinde ve Çözüm Gezgini'de SDK stili bir proje düğümüne çift tıklar veya bunu seçin ve **Enter** tuşuna basın. Proje dosyası \* (örneğin, .csproj dosyası) düzenleyicide XML olarak açılır. Seçimi kaldırıldığında, Çözüm Gezgini sdk stili proje düğümüne çift tıklar veya bunu seçerek **Enter** tuşuna basıldığında düğüm genişlet veya daraltılabilir.
 
-bu seçenek seçilmezse ve bir SDK stili proje dosyasını düzenlemek istiyorsanız, Çözüm Gezgini ' de proje düğümüne sağ tıklayın ve **Project dosyayı düzenle**' yi seçin. Diğer proje türleri için önce projeyi Visual Studio düzenlemeden önce kaldırmanız gerekir.
+Bu seçeneği belirtmiş değilseniz ve SDK stili bir proje dosyasını düzenlemek için, Çözüm Gezgini'de proje düğümüne sağ tıklayın ve Dosyada **Düzenle'Project seçin.** Diğer proje türleri için, projeyi çalışma alanı içinde düzenlemeden önce Visual Studio.
 
 > [!TIP]
-> bir *sdk stili proje* veya [proje SDK](../../msbuild/how-to-use-project-sdk.md)'sı, MSBuild 15,0 ile tanıtılan daha yeni, daha kolay bir proje dosyası biçimine sahiptir. SDK stili bir proje `Sdk` , öğe üzerinde bir özniteliği içerir `Project` , örneğin `<Project Sdk="Microsoft.NET.Sdk">` . Visual Studio, örneğin Visual Studio şablonlarından birinden yeni bir .net Core projesi oluşturduğunuzda bir SDK stili proje oluşturur.
+> SDK *stili bir proje* veya proje SDK'sı, 15.0 ile birlikte tanıtıldı daha yeni, daha kolaylaştırılmış bir MSBuild biçimine sahiptir. [](../../msbuild/how-to-use-project-sdk.md) SDK stilinde bir proje `Sdk` öğesinde bir öznitelik `Project` içerir, örneğin `<Project Sdk="Microsoft.NET.Sdk">` . Visual Studio şablonlarından birini kullanarak yeni bir .NET Core projesi oluşturursanız sdk Visual Studio proje oluşturabilirsiniz.
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Seçenekler iletişim kutusu: projeler ve çözüm \> konumları](projects-solutions-locations-options.md)
+- [Seçenekler iletişim kutusu: Projeler ve \> Çözümler Konumları](projects-solutions-locations-options.md)
 - [Seçenekler İletişim Kutusu, Projeler ve Çözümler, Derleme ve Çalıştırma](../../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md)
 - [Seçenekler İletişim Kutusu, Projeler ve Çözümler, Web Projeleri](../../ide/reference/options-dialog-box-projects-and-solutions-web-projects.md)

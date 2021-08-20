@@ -1,6 +1,6 @@
 ---
 title: Visual Studio menü çubuğuna menü ekleme | Microsoft Docs
-description: Visual Studio tümleşik geliştirme ortamının (IDE) menü çubuğuna bir menü eklemeyi öğrenin.
+description: Visual Studio tümleşik geliştirme ortamının (ıde) menü çubuğuna bir menü eklemeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
@@ -11,20 +11,21 @@ ms.assetid: 58fc1a31-2aeb-441c-8e48-c7d5cbcfe501
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22ce9bc00f24278fd2c0533052d7bd5e944b1ebf
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f622200066192304b2d066ad3bd3839ab2cbc0c9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105078350"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112015"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio menü çubuğuna bir menü ekleyin
 
-Bu izlenecek yol, Visual Studio tümleşik geliştirme ortamının (IDE) menü çubuğuna bir menünün nasıl ekleneceğini gösterir. IDE menü çubuğu, **Dosya**, **düzenleme**, **görüntüleme**, **pencere** ve **Yardım** gibi menü kategorilerini içerir.
+bu izlenecek yol, Visual Studio tümleşik geliştirme ortamının (ıde) menü çubuğuna bir menünün nasıl ekleneceğini gösterir. IDE menü çubuğu, **Dosya**, **düzenleme**, **görüntüleme**, **pencere** ve **Yardım** gibi menü kategorilerini içerir.
 
-Visual Studio menü çubuğuna yeni bir menü eklemeden önce, komutlarınızın mevcut bir menü içine yerleştirilmesi gerekip gerekmediğini göz önünde bulundurun. Komut yerleşimi hakkında daha fazla bilgi için bkz. [Visual Studio Için menüler ve komutlar](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md).
+Visual Studio menü çubuğuna yeni bir menü eklemeden önce, komutlarınızın mevcut bir menü içine yerleştirilmesi gerekip gerekmediğini göz önünde bulundurun. Komut yerleşimi hakkında daha fazla bilgi için bkz. [Visual Studio menüleri ve komutları](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md).
 
 Menüler, projenin *. vsct* dosyasında bildirilmiştir. Menüler ve *. vsct* dosyaları hakkında daha fazla bilgi için bkz. [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).
 
@@ -32,16 +33,16 @@ Bu yönergeyi tamamlayarak, bir komut içeren **Test menüsü** adlı bir menü 
 
 :::moniker range=">=vs-2019"
 > [!NOTE]
-> Visual Studio 2019 ' den başlayarak, uzantılara göre katkıda bulunulan üst düzey menüler **Uzantılar** menüsüne yerleştirilir.
+> Visual Studio 2019 ' den başlayarak, uzantılara göre katkıda bulunulan üst düzey menüler **uzantılar** menüsünün altına yerleştirilir.
 :::moniker-end
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
+Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezi ' nden yüklemeyin. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-vsix-project-that-has-a-custom-command-item-template"></a>Özel bir komut öğesi şablonu olan bir VSıX projesi oluşturma
 
-1. Adlı bir VSıX projesi oluşturun `TopLevelMenu` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.  Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. Adlı bir VSıX projesi oluşturun `TopLevelMenu` . vsıx proje şablonunu, **yeni Project** iletişim kutusunda "vsıx" arayarak bulabilirsiniz.  Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
 ::: moniker range="vs-2017"
 
@@ -83,7 +84,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
     `guid`Menünün ve `id` değerleri komut kümesindeki komut kümesini ve belirli menüyü belirler.
 
-    `guid` `id` Üst öğesi ve değerleri, Visual Studio menü çubuğunun araç ve eklenti menülerini içeren bölümündeki menüyü konumlandırır.
+    `guid` `id` üst öğesi ve değerleri, araç ve eklenti menülerini içeren Visual Studio menü çubuğunun bölümünde yer alan menüyü konumlandırır.
 
     `<ButtonText>`Öğesi, metnin menü öğesinde görünmesi gerektiğini belirtir.
 
@@ -127,7 +128,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
     `guid`Menünün ve `id` değerleri komut kümesindeki komut kümesini ve belirli menüyü belirler.
 
-    `guid` `id` Üst öğesi ve değerleri, Visual Studio menü çubuğunun araç ve eklenti menülerini içeren bölümündeki menüyü konumlandırır.
+    `guid` `id` üst öğesi ve değerleri, araç ve eklenti menülerini içeren Visual Studio menü çubuğunun bölümünde yer alan menüyü konumlandırır.
 
     `<ButtonText>`Öğesi, metnin menü öğesinde görünmesi gerektiğini belirtir.
 

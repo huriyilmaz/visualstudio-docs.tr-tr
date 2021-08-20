@@ -19,17 +19,18 @@ ms.assetid: 70f9b531-44c7-4d77-980d-5eddbf2bff41
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cc17892697e16c24e3bb1fae5aa956123ee4e7bf
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 33a7e5eedf849f576a89df73f6e0b23bbcc27bbf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99870798"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154336"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısındaki ifadeler
-Visual Studio hata ayıklayıcı, **QuickWatch** iletişim kutusunda, **Gözcü** penceresinde veya **anında** pencereye bir ifade girdiğinizde çalışan ifade değerlendiricileri içerir. Değerlendiricileri ifadesi Ayrıca **kesme noktaları** penceresinde ve hata ayıklayıcıda birçok diğer yerde de çalışır.
+Visual Studio hata ayıklayıcı, **quickwatch** iletişim kutusunda, **gözcü** penceresinde veya **anında** pencereye bir ifade girdiğinizde çalışan ifade değerlendiricileri içerir. Değerlendiricileri ifadesi Ayrıca **kesme noktaları** penceresinde ve hata ayıklayıcıda birçok diğer yerde de çalışır.
 
 Aşağıdaki bölümlerde, Visual Studio tarafından desteklenen diller için ifade değerlendirmesinin sınırlamaları açıklanmaktadır.
 
@@ -105,7 +106,7 @@ Hata ayıklayıcı iç işlevleri:
 |**Dize karşılaştırması**|[strcmp, wcscmp](/cpp/c-runtime-library/reference/strcmp-wcscmp-mbscmp), [stricmp, wcsıcmp](/cpp/c-runtime-library/reference/stricmp-wcsicmp), [_stricmp, _strcmpi, _wcsicmp, _wcscmpi](/cpp/c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l), [strncmp, wcsncmp](/cpp/c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l), [strnıcmp, wcsnıcmp](/cpp/c-runtime-library/reference/strnicmp-wcsnicmp), [_strnicmp, _wcsnicmp](/cpp/c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l)|
 |**Dize arama**|[strchr, wcschr](/cpp/c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l), [memchr, wmemchr](/cpp/c-runtime-library/reference/memchr-wmemchr), [strstr, wcsstr](/cpp/c-runtime-library/reference/strstr-wcsstr-mbsstr-mbsstr-l)|
 |**Win32**|[Codecodeproxy](/windows/win32/api/combaseapi/nf-combaseapi-codecodeproxy), [DecodePointer](/previous-versions/bb432242(v=vs.85)), [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror), [TlsGetValue](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)|
-|**Windows 8**|[Roınspectcapturedstackbacktrace](/windows/win32/api/roerrorapi/nf-roerrorapi-roinspectcapturedstackbacktrace), [windowscomparestringordinal](/windows/win32/api/winstring/nf-winstring-windowscomparestringordinal), [windowsgetstringlen](/windows/win32/api/winstring/nf-winstring-windowsgetstringlen), [windowsgetstrıngrawbuffer](/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer)<br /><br /> Bu işlevler, hata ayıklamakta olan işlemin Windows 8 üzerinde çalışıyor olmasını gerektirir. Windows 8 cihazından oluşturulan döküm dosyalarının hata ayıklaması, Visual Studio bilgisayarının Windows 8 çalıştırıyor olmasını da gerektirir. Ancak, Windows 8 cihazının uzaktan hata ayıklaması yapıyorsanız, Visual Studio bilgisayarı Windows 7 çalıştırıyor olabilir.|
+|**Windows 8**|[Roınspectcapturedstackbacktrace](/windows/win32/api/roerrorapi/nf-roerrorapi-roinspectcapturedstackbacktrace), [windowscomparestringordinal](/windows/win32/api/winstring/nf-winstring-windowscomparestringordinal), [windowsgetstringlen](/windows/win32/api/winstring/nf-winstring-windowsgetstringlen), [windowsgetstrıngrawbuffer](/windows/win32/api/winstring/nf-winstring-windowsgetstringrawbuffer)<br /><br /> Bu işlevler, hata ayıklamakta olan işlemin Windows 8 üzerinde çalışıyor olmasını gerektirir. Windows 8 bir cihazdan oluşturulan döküm dosyalarının hata ayıklaması, Visual Studio bilgisayarın Windows 8 çalıştırılmasını gerektirir. ancak, Windows 8 bir cihazın uzaktan hata ayıklaması yapıyorsanız, Visual Studio bilgisayar Windows 7 ' yi çalıştırıyor olabilir.|
 |**Çeşitli**|__log2//, belirtilen bir tamsayının, en yakın küçük tamsayıya yuvarlanmış 2 günlük tabanı döndürür.<br /><br />__findNonNull, DecodeHString, Decodewinrtkısıttedexception, DynamicCast, DynamicMemberLookup, GetEnvBlockLength<br /><br />Stdext_HashMap_Int_OperatorBracket_idx, Std_UnorderedMap_Int_OperatorBracket_idx<br /><br />ConcurrencyArray_OperatorBracket_idx//concurrency:: Array<>:: operator [Dizin<>] ve işleç (Dizin<>)<br /><br />ConcurrencyArray_OperatorBracket_int//concurrency:: Array<>:: operator (int, int,...)<br /><br />ConcurrencyArray_OperatorBracket_tidx//concurrency:: Array<>:: operator [tiled_index<>] and işleci (tiled_index<>)<br /><br />ConcurrencyArrayView_OperatorBracket_idx//concurrency:: array_view<>:: operator [Dizin<>] ve işleç (Dizin<>)<br /><br />ConcurrencyArrayView_OperatorBracket_int//concurrency:: array_view<>:: operator (int, int,...)<br /><br />ConcurrencyArrayView_OperatorBracket_tidx//concurrency:: array_view<>:: operator [tiled_index<>] and işleci (tiled_index<>)<br /><br />Yeni bir ağaç geçişi TreeTraverse_Init//başlatır<br /><br />Bir ağaçtaki düğümleri TreeTraverse_Next//döndürür<br /><br />Bekleyen bir ağaç geçişinin içindeki düğümleri TreeTraverse_Skip//atlıyor|
 
 ## <a name="ccli---unsupported-expressions"></a>C++/CLı-desteklenmeyen Ifadeler
@@ -144,7 +145,7 @@ Dinamik nesnelerin aşağıdaki özellikleri desteklenmez:
 ### <a name="anonymous-methods"></a>Anonim Yöntemler
 Yeni anonim yöntemlerin oluşturulması desteklenmez.
 
-## <a name="visual-basic---unsupported-expressions"></a>Visual Basic-desteklenmeyen Ifadeler
+## <a name="visual-basic---unsupported-expressions"></a>Visual Basic-desteklenmeyen ifadeler
 
 ### <a name="dynamic-objects"></a>Dinamik nesneler
 Statik olarak dinamik olarak yazılan hata ayıklayıcı ifadelerinde değişkenleri kullanabilirsiniz. Uygulayan nesneler <xref:System.Dynamic.IDynamicMetaObjectProvider> İzleme penceresi değerlendirildiğinde, dinamik bir görünüm düğümü eklenir. Dinamik görünüm düğümü nesne üyelerini gösterir ancak üyelerin değerlerini düzenlememe izin vermez.

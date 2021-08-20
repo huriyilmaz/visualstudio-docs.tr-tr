@@ -1,6 +1,6 @@
 ---
-title: Kod Türü Seç İletişim Kutusu | Microsoft Docs
-description: Dosyanın Kod Türünü Seç iletişim kutusu hakkında Visual Studio. Bu iletişim kutusunu açmak için İşleme Ekle iletişim kutusunu açın ve seç düğmesine tıklayın.
+title: Kod türünü seç Iletişim kutusu | Microsoft Docs
+description: Visual Studio kod türünü seç iletişim kutusu hakkında bilgi edinin. Bu iletişim kutusunu açmak için Işleme Iliştir iletişim kutusunu açın ve ardından Seç düğmesine tıklayın.
 ms.custom: SEO-VS-2020
 ms.date: 06/12/2020
 ms.topic: reference
@@ -26,42 +26,42 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 66b7d9d5b63bad3d94accc8a87bbbdbcf1c49dbccdbde9b84fb21cd34362b6a8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5ecffb2bb8a6cf616b75386cac5823763534bb30
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121435835"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112483"
 ---
 # <a name="select-code-type-dialog-box"></a>Kod Türünü Seç İletişim Kutusu
 
-Bu iletişim kutusunu açmak için İşleme **Ekle iletişim** kutusunu açın ve seç **düğmesine** tıklayın.
+Bu iletişim kutusunu açmak için **Işleme İliştir** iletişim kutusunu açın ve ardından **Seç** düğmesine tıklayın.
 
-**Hata ayıklamak için kod türünü otomatik olarak belirleme** Uygun hata ayıklayıcı, çalışan koda göre seçilir.
+**Hata ayıklaması yapılacak kodun türünü otomatik olarak belirle** Uygun hata ayıklayıcı, çalıştıran kod türüne göre seçilir.
 
-**Şu kod türlerinde hata ayıklama:** Sağlanan listeden, hata ayıklamak istediğiniz kod türünü seçin. Bu, ekleme [hatasıyla ilgili sorunları giderirken yararlı olabilir.](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md#BKMK_Troubleshoot_attach_errors) Bu seçenek, algılamayı yalnızca hata ayıklamak istediğiniz kod türleriyle kısıtlar.
+**Bu kod türlerinde hata ayıkla:** Belirtilen listeden, hata ayıklamak istediğiniz kodun türlerini seçin. Bu, [iliştirme hatası giderirken](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md#BKMK_Troubleshoot_attach_errors)yararlı olabilir. Bu seçenek, algılamayı yalnızca hata ayıklamak istediğiniz kod türleri olarak kısıtlar.
 
 ::: moniker range=">=vs-2019"
-- Blazor WebAssembly - İstemci tarafı Blazor WebAssembly
-- GPU - Yazılım Emulator - GPU yazılım öykünücüsünü çalıştıran C++ kodu
-- JavaScript (Chrome) - Chrome'da çalışan JavaScript
-- JavaScript (Microsoft Edge - Chromium) - Chromium tabanlı Microsoft Edge JavaScript Windows 10
-- Bir CDP istemcisinde hata ayıklama için kullanılan JavaScript CDP (V3) Hata Ayıklayıcısı - Chrome DevTools Protokolü sürüm 3
-- Yönetilen (CoreCLR) - .NET Core
-- Yönetilen (Yerel derleme) - C++/CLR kodu
-- Yönetilen (v3.5, v3.0, v2.0) - .NET Framework 2.0 ve daha yüksek (3.5'e kadar) için .NET Framework kodu
-- Yönetilen (v.4.6, v4.5, v4.0) - .NET Framework 4.0 ve .NET Framework için .NET Framework kodu
-- Yerel - C/C++
-- Node.js Ayıklama - Node.js çalışma zamanı tarafından barındırılan kod
-- Python - Python 
-- Betik - JavaScript için genel betik hata ayıklayıcısını belirtir. Senaryo için geçerli olan JavaScript (Chrome) gibi daha kısıtlayıcı seçenekleri kullanın.
-- T-SQL - Transact-SQL
-- Unity - Unity
-- Yönetilen Uyumluluk Modu - Yönetilen kod için, genellikle C++/CLR koduyla karışık modda hata ayıklamada kullanmak (karma mod için Düzenle ve Devam'ı sağlar) veya eski hata ayıklayıcıyı hedef alan uzantıları desteklemek için eski hata ayıklayıcısını belirtir. Çoğu karma mod hata ayıklama senaryosunda, Yönetilen **Uyumluluk** Modu yerine Yerel **ve** uygun Yönetilen kod türlerini seçin.
+- Blazor WebAssembly -İstemci tarafı Blazor WebAssembly
+- gpu-yazılım Emulator-bir GPU yazılım öykünücüsü üzerinde çalışan C++ kodu
+- JavaScript (Chrome)-Chrome 'da çalışan JavaScript
+- javascript (Microsoft Edge-Chromium)-Windows 10 için Chromium tabanlı Microsoft Edge çalışan javascript
+- JavaScript CDP (v3) hata ayıklayıcı-bir CDP istemcisinde hata ayıklama için kullanılan Chrome DevTools protokol sürüm 3
+- Yönetilen (CoreCLR)-.NET Core
+- Yönetilen (yerel derleme)-C++/CLR kodu
+- yönetilen (v 3.5, v 3.0, v 2.0)-.NET Framework 2,0 ve üzeri için .NET Framework kodu (3,5 ' e kadar)
+- yönetilen (v. 4.6, v 4.5, v 4.0)-.NET Framework 4,0 ve üzeri için .NET Framework kodu
+- Yerel-C/C++
+- Node.js hata ayıklama-Node.js çalışma zamanı tarafından barındırılan kod
+- Python-python 
+- Betik-JavaScript için genel betik hata ayıklayıcısını belirtir. Senaryolarınız için JavaScript (Chrome) gibi daha kısıtlayıcı seçenekleri kullanın.
+- T-SQL-Transact-SQL
+- Unity-Unity
+- Yönetilen Uyumluluk modu-yönetilen kod için eski hata ayıklayıcıyı, genellikle C++/CLR kodu ile karışık modda hata ayıklamada kullanılmak üzere (karışık mod için Düzenle ve devam et ' i sağlar) veya eski hata ayıklayıcıyı hedefleyen uzantıları desteklemek için belirtir. Çoğu karma mod hata ayıklama senaryosunda, **Yerel** ve yönetilen uyumluluk modu yerine uygun **yönetilen** kod türlerini seçin.
 ::: moniker-end
 
-Çoğu senaryo için, aynı hata ayıklama oturumunda birden çok hata ayıklayıcısı eklemek desteklenmiyor. Bunu, uygulamanın ikinci bir örneğini kullanarak Visual Studio.
+Çoğu senaryoda, aynı hata ayıklama oturumunda birden çok hata ayıklayıcıları eklemek desteklenmez. Bunu, Visual Studio ikinci bir örneğini kullanarak yapabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklayıcı Güvenliği](../debugger/debugger-security.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Çalıştırma İşlemine İliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)

@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bc2ebc0422dcffeb682f7ac9eb02216d5adf6505b1799d6f33c22e192aa184c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 110c2cde3a65c5e9aa9f06c08e384c8cc604f5ec
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121389780"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138217"
 ---
 # <a name="idebugfunctionobject2"></a>IDebugFunctionObject2
 > [!IMPORTANT]

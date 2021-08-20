@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, belirtilen sayıda IDebugObject öğesi üzerinde atlar.
-title: 'IEnumDebugObjects:: Skip | Microsoft Docs'
+description: Bu yöntem, belirtilen sayıda IDebugObject öğelerini atlar.
+title: IEnumDebugObjects::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 33360dfb411945063b9066180ffdab9ea146faf662890ea02b715293be0e9062
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d7c4708e8fee84b136a77903873006cb5d27d509
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121276379"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125601"
 ---
 # <a name="ienumdebugobjectsskip"></a>IEnumDebugObjects::Skip
-Bu yöntem, belirtilen sayıda öğeyi atlar.
+Bu yöntem, belirtilen sayıda öğenin üzerine atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int Skip(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-'ndaki Atlanacak öğe sayısı.
+[in] Atlana öğe sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE` `celt` Kalan öğelerin sayısından büyükse döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. kalan `S_FALSE` `celt` öğe sayısından büyükse döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `celt`Kalan öğelerin sayısından daha büyük bir değer belirtiyorsa, numaralandırma sonuna ayarlanır ve `S_FALSE` döndürülür.
+ Kalan öğe sayısından büyük bir değer belirtirse, en sona ayarlanır `celt` ve `S_FALSE` döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)

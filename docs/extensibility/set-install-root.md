@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 145fb9e4b94bb641ae0f491a09bc5b5c3cd0bc20bc8d9b2cc76c85e65170fa28
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f09b6d8a586a03aea8401a9125d6d1c43b77c845
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121431518"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158261"
 ---
 # <a name="install-outside-the-extensions-folder"></a>Uzantılar klasörünün dışına yükleme
 

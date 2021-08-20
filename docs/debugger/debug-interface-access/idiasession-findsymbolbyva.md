@@ -1,5 +1,5 @@
 ---
-description: Belirtilen sanal adresi içeren veya buna en yakın olan belirtilen sembol türünü alın.
+description: Belirtilen bir sanal adresi içeren veya en yakın olan simge türünü alın.
 title: IDiaSession::findSymbolByVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 14764b3836509957a4f35d42b404f6842734acf8b59dfbde8544ede7e44cfff1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1a76c3e03e38ff48501b9cc20fb580a41cdb9d55
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380176"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161544"
 ---
 # <a name="idiasessionfindsymbolbyva"></a>IDiaSession::findSymbolByVA
-Belirtilen sanal adresi içeren veya buna en yakın olan belirtilen sembol türünü alın.
+Belirtilen bir sanal adresi içeren veya en yakın olan simge türünü alın.
 
 ## <a name="syntax"></a>Sözdizimi
 

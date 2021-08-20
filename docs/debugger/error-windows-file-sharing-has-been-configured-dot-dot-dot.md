@@ -1,6 +1,6 @@
 ---
-description: Windows dosya paylaşımı, uzak bilgisayara farklı bir kullanıcı adı kullanarak bağlanacak şekilde yapılandırılmıştır.
-title: Windows dosya paylaşımı yapılandırıldı... | Microsoft Docs
+description: Windows paylaşımı, uzak bilgisayara farklı bir kullanıcı adı kullanarak bağlanacak şekilde yapılandırıldı.
+title: Windows paylaşımı yapılandırıldı... | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,34 +16,34 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 19574e8b77c163c96ab63617a84703806fd145e881058e6d6037618d675642d2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2c0ea67f32474b124d4f6e4987de6a0491b6aaba
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121362863"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154362"
 ---
 # <a name="error-windows-file-sharing-has-been-configured"></a>Hata: Windows dosya paylaşımı yapılandırıldı...
-Windows dosya paylaşımı, uzak bilgisayara farklı bir kullanıcı adı kullanarak bağlanacak şekilde yapılandırılmıştır. Bu, uzaktan hata ayıklama ile uyumsuzdur
+Windows paylaşımı, uzak bilgisayara farklı bir kullanıcı adı kullanarak bağlanacak şekilde yapılandırıldı. Bu, uzaktan hata ayıklamayla uyumsuzdur
 
- Geçerli dosya paylaşım yapılandırması, uzak bilgisayara farklı bir Kullanıcı adı kullanılarak bağlanacak şekilde ayarlanır. Bu senaryoda Uzaktan hata ayıklama mümkün değildir.
+ Geçerli dosya paylaşımı yapılandırması, farklı bir kullanıcı adı kullanarak uzak bilgisayara bağlanacak şekilde ayarlanır. Bu senaryoda uzaktan hata ayıklama mümkün değildir.
 
- Bu hatayı düzeltmek için, diğer hesap adını kullanarak bilgisayarda oturum açın veya dosya paylaşımını, altında hata ayıkladığınız hesap adını kullanacak şekilde değiştirin.
+ Bu hatayı düzeltmek için, diğer hesap adını kullanarak bilgisayarda oturum açın veya dosya paylaşımını, hata ayıklamak istediğiniz hesap adını kullanmak üzere değiştirebilirsiniz.
 
- Bu Kullanıcı adını kullanarak uzak bilgisayara bağlanmak istiyorsanız, öncelikle uzak bilgisayar bağlantısını kesmeniz gerekir.
+ Bu kullanıcı adını kullanarak uzak bilgisayara bağlanmak için önce uzak bilgisayar bağlantısını kesmelisiniz.
 
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-1. Diğer hesap adını kullanarak yerel makinenizde, hata ayıkladığınız makinede oturum açın.
+1. Diğer hesap adını kullanarak yerel makinede( hata ayıklarken) oturum açın.
 
      —veya—
 
-     . Uzak bilgisayarla bağlantısını kesin ve ardından, hesap adınızı kullanarak diğer makineye bağlanmak için dosya paylaşımını yeniden yapılandırın:
+     . Uzak bilgisayarla bağlantıyı kesin ve ardından dosya paylaşımını hesap adınızla diğer makineye bağlanmak için yeniden yapılandırabilirsiniz:
 
-    1. **Başlat** menüsünde, **Donatılar**' ın üzerine gelin ve ardından **komut istemi**' ne tıklayın.
+    1. Başlat menüsünde **Donatılar'ın** üzerine **gelin** ve ardından Komut **İstemi'ne tıklayın.**
 
-    2. Windows komut isteminde şunu yazın:
+    2. Komut Windows yazın:
 
          `net use /delete computer_name`
 
-    3. dosya paylaşım ayarlarınızı Windows yardım altında belgelenen yöntemlerden birini kullanarak değiştirin.
+    3. Dosya paylaşım ayarlarınızı, yardım için belgelenmiş yöntemlerden birini Windows değiştirin.

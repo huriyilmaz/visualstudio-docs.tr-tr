@@ -1,6 +1,6 @@
 ---
-title: Görevleri SharePoint bir çözüm paketi MSBuild oluşturma
-description: Geliştirme bilgisayarında komut satırı görevleri kullanarak SharePoint çözüm paketini (.wsp) derlemeyi, MSBuild temizlemeyi ve doğrulamayı öğrenin.
+title: Görev SharePoint kullanarak bir çözüm MSBuild oluşturma
+description: Geliştirme bilgisayarında komut satırı görevleri kullanarak bir SharePoint çözüm paketini (.wsp) derlemeyi, MSBuild temizlemeyi ve doğrulamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -15,23 +15,23 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: e35c4d407f9a09af2714ece6972fcb9e76595e0d0dc59c680a82dbb2ec776f86
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 781281c6abce5031166b00d9cdde0b175619f79b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121367622"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135929"
 ---
-# <a name="how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks"></a>Nasıl SharePoint: SharePoint görevleri kullanarak MSBuild oluşturma
+# <a name="how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks"></a>Nasıl MSBuild kullanarak SharePoint Çözüm Paketi oluşturma
   Bir geliştirme bilgisayarında komut satırı SharePoint bir paket (*.wsp)* MSBuild, temiz ve doğrularsınız. Derleme bilgisayarına yükleme kullanarak derleme işlemini otomatikleştirmek için bu Team Foundation Server da kullanabilirsiniz.
 
-## <a name="build-a-sharepoint-package"></a>Bir SharePoint oluşturma
+## <a name="build-a-sharepoint-package"></a>SharePoint paketi oluşturma
 
-#### <a name="to-build-a-sharepoint-package"></a>Bir paket SharePoint için
+#### <a name="to-build-a-sharepoint-package"></a>Bir SharePoint derlemek için
 
-1. Başlat menüsünde, Windows **Programlar** **Donatılar Komut İstemi'ne**  >    >  **tıklayın.**
+1. Başlat menüsünde Windows **Programlar** Donatılar **Komut İstemi'ne**  >    >  **tıklayın.**
 
-2. Projenizin bulunduğu dizine SharePoint olun.
+2. SharePoint projenizin bulunduğu dizine seçin.
 
 3. Proje için bir paket oluşturmak için aşağıdaki komutu girin. *ProjectFileName'i* projenin adıyla değiştirin.
 
@@ -52,7 +52,7 @@ ms.locfileid: "121367622"
 
 1. Bir komut istemi penceresi açın.
 
-2. Projenizin bulunduğu dizine SharePoint olun.
+2. SharePoint projenizin bulunduğu dizine seçin.
 
 3. Proje için bir paketi temizlemek için aşağıdaki komutu girin. *ProjectFileName'i* projenin adıyla değiştirin.
 
@@ -73,7 +73,7 @@ ms.locfileid: "121367622"
 
 1. Bir komut istemi penceresi açın.
 
-2. Projenizin bulunduğu dizine SharePoint olun.
+2. SharePoint projenizin bulunduğu dizine seçin.
 
 3. Proje için bir paketi doğrulamak için aşağıdaki komutu girin. *ProjectFileName'i* projenin adıyla değiştirin.
 
@@ -94,7 +94,7 @@ ms.locfileid: "121367622"
 
 1. Bir komut istemi penceresi açın.
 
-2. Projenizin bulunduğu dizine SharePoint olun.
+2. SharePoint projenizin bulunduğu dizine seçin.
 
 3. Proje için bir pakette özellik ayarlamak için aşağıdaki komutu girin. *PropertyName'i* ayarlamak istediğiniz özellikle değiştirin.
 

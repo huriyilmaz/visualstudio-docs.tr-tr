@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e4835b4bfecccb6c83bc5532663d5d7b6d86dedb7ccdd8b48def273f11e04efe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 06d7e33daafc87f93637ae4acbe2049b31c71237
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121455098"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129362"
 ---
 # <a name="idiaenumsymbolsclone"></a>IDiaEnumSymbols::Clone
 Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.

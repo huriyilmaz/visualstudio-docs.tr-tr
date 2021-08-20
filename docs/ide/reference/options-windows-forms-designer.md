@@ -1,6 +1,6 @@
 ---
-title: seçenekler, Windows Form Tasarımcısı, genel
-description: kılavuzlar ve Visual Studio Windows Form Tasarımcısı diğer özelliklerine yönelik tercihleri ayarlamak için genel sayfasını kullanmayı öğrenin.
+title: Seçenekler, Windows Forms Tasarımcısı, Genel
+description: Windows Forms Tasarımcısı'nın kılavuzlara ve diğer özelliklerine tercihleri ayarlamak için Genel sayfasını Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 08/09/2019
 ms.topic: reference
@@ -13,52 +13,52 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
-ms.openlocfilehash: e263976523b85d5705bd9bbe324fa7e58c406c74381ead10c395ca935b9f7e9b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: df8b064277d57ab0696ad48fa7a5778654701009
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121447408"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143722"
 ---
-# <a name="options-dialog-box-windows-forms-designer"></a>seçenekler iletişim kutusu: Windows Form Tasarımcısı
+# <a name="options-dialog-box-windows-forms-designer"></a>Seçenekler iletişim kutusu: Windows Forms Tasarımcısı
 
-Windows Form Tasarımcısı seçenekleri sayfası, kılavuz ve Visual Studio Windows Form Tasarımcısı diğer özelliklerine yönelik tercihleri ayarlamanıza olanak sağlar. **Araçlar** menüsünden **Seçenekler** iletişim kutusunu açın.
+Windows Forms Tasarımcısı seçenekler sayfası, Windows Forms Tasarımcısı'nın kılavuzlar ve diğer özellikleri için tercihleri Visual Studio. Araçlar **menüsünden** Seçenekler iletişim **kutusunu** açın.
 
-## <a name="code-generation-settings"></a>kod oluşturma Ayarlar
+## <a name="code-generation-settings"></a>Kod Oluşturma Ayarlar
 
-**İyileştirilmiş kod oluşturma**\
-İyileştirilmiş kod oluşturmayı sunar. Bazı denetimler bu modla uyumlu olmayabilir. bu değişikliğin etkili olabilmesi için Visual Studio kapatılıp yeniden açılması gerekir.
+**İyileştirilmiş Kod Oluşturma**\
+İyileştirilmiş kod oluşturma sağlar. Bazı denetimler bu modla uyumlu olabilir. Bu değişikliğin etkili olması için Visual Studio yeniden açılması gerekir.
 
-## <a name="high-dpi-support"></a>Yüksek DPı desteği
+## <a name="high-dpi-support"></a>Yüksek DPI Desteği
 
-**DPı ölçeklendirme bildirimleri**\
-Windows Form tasarımcısında, %100 ölçeklendirmeyle Visual Studio yeniden başlatabileceği bir ileti gösterin. Daha fazla bilgi için bkz. [VISUAL STUDIO DPI tanımayı devre dışı bırakma](/dotnet/framework/winforms/disable-dpi-awareness-visual-studio).
+**DPI Ölçeklendirme Bildirimleri**\
+Form Tasarımcısı'nda Windows %100 ölçeklendirmeyle Visual Studio başlatan bir ileti gösterir. Daha fazla bilgi için [bkz. DPI farkındalığını Visual Studio.](/dotnet/framework/winforms/disable-dpi-awareness-visual-studio)
 
-## <a name="layout-settings"></a>düzen Ayarlar
+## <a name="layout-settings"></a>Düzen Ayarlar
 
-**Varsayılan Kılavuz hücre boyutu**\
-Tasarımcıda yatay ve dikey kılavuz çizgileri arasındaki boşluğu piksel cinsinden ayarlar. Varsayılan boyut 8, 8 ' dir. En büyük boyut 200, 200 ' dir.
+**Varsayılan Kılavuz Hücre Boyutu**\
+Tasarımcıda yatay ve dikey kılavuz çizgileri arasındaki boşlukları piksel cinsinden ayarlar. Varsayılan boyut 8, 8'tir. En büyük boyut 200, 200'dır.
 
-**Düzen modu**\
-Düzen için kullanılacak hizalama sistemini belirtir. SnapToGrid veya snaplines seçeneklerinden birini belirleyebilirsiniz.
+**Düzen Modu**\
+Düzen için kullanmak üzere hizalama sistemini belirtir. SnapToGrid veya Snaplines'ı seçebilirsiniz.
 
-**Kılavuzu göster**\
-Tasarımcıların boyutlandırma kılavuzunu görüntüleyip görüntülememediğini belirtir. Varsayılan olarak, kılavuz açık olur.
+**Kılavuzu Göster**\
+Tasarımcıların boyutlandırma kılavuzlarını görüntüp görüntülemey olmadığını belirtir. Kılavuz varsayılan olarak açıktır.
 
-**Kılavuza yasla**\
-Tasarımcıların nesneleri ve denetimleri kılavuza yapışıp uydurmayacağını belirler. Diğer bir deyişle, tasarımcıda öğelerin yeniden boyutlandırılması ve taşınması, bu özellik açık olduğunda GridSize artıcıyla sınırlıdır. SnapToGrid 'in açık olması, Kullanıcı arabiriminin çeşitli yönlerini kesin bir şekilde yerleştirmeyi kolaylaştırır, ancak bir denetimin yerleştirebileceği özgürlüğü kısıtlar. Varsayılan olarak, SnapToGrid açıktır.
+**Kılavuza Yasla**\
+Tasarımcıların nesneleri ve denetimleri kılavuza yasıp yaslamayacaklarını belirler. Başka bir deyişle, tasarımcıda öğelerin yeniden boyutlandırması ve hareketi, bu özellik açık olduğunda GridSize artışıyla kısıtlanmış olur. SnapToGrid'in açık olması, kullanıcı arabiriminin çeşitli yönlerini tam olarak sıralaymalarını kolaylaştırır, ancak denetimlerin hangileriyle birlikte yer alacazı özgürlüğü sınırlar. SnapToGrid varsayılan olarak açıktır.
 
-## <a name="object-bound-smart-tag-settings"></a>nesne ile bağlantılı akıllı etiket Ayarlar
+## <a name="object-bound-smart-tag-settings"></a>Nesne Bağlı Akıllı Etiket Ayarlar
 
-**Akıllı etiketleri otomatik olarak aç**\
-Denetimlerin ve bileşenlerin Akıllı Etiketler görüntüleyip görüntülemediğini belirler. Tüm denetimler ve bileşenler akıllı etiketleri desteklemez.
+**Akıllı Etiketleri Otomatik Olarak Aç**\
+Denetimlerin ve bileşenlerin akıllı etiketleri görüntüp görüntülemey olmadığını belirler. Tüm denetimler ve bileşenler akıllı etiketleri desteklemez.
 
 ## <a name="refactoring"></a>Yeniden Düzenle
 
-**Yeniden adlandırma sırasında yeniden düzenlemeyi etkinleştir**\
-Olarak ayarlandığında `true` , Özellikler penceresi veya belge anahattı penceresinden bir bileşeni yeniden adlandırdığınızda yeniden adlandırma yeniden düzenleme işlemi gerçekleştirilir.
+**Yeniden Adlandırmada Yeniden Düzenlemeyi Etkinleştirme**\
+olarak ayarlanırsa, bir bileşeni ana hat penceresinden veya Belge Ana Hat penceresinden yeniden `true` Özellikler penceresi yeniden adlandırma işlemi gerçekleştirilir.
 
 ## <a name="toolbox"></a>Araç Kutusu
 
-**Araç kutusunu otomatik olarak doldur**\
-Araç kutusu penceresinin, proje tarafından oluşturulan bileşenler ve denetimlerle otomatik olarak doldurulup doldurulmayacağını belirler.
+**Araç Kutusunu Otomatik Olarak Doldurmak**\
+Araç Kutusu penceresinin proje tarafından oluşturulurken bileşenler ve denetimlerle otomatik olarak doldurulıp doldurulmaması gerekir.

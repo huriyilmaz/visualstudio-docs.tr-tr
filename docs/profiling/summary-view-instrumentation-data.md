@@ -13,12 +13,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 31e69ec5ae15b0e47a3810623da8aa89156f64145d8f09b90e621743224d7049
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c5d8579b68eeceed3843a8dd6a6fe71e9f9015c2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121353961"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122141239"
 ---
 # <a name="summary-view---instrumentation-data"></a>Özet görünümü-izleme verileri
 Özet görünümü, bir profil oluşturma çalıştırmasında en fazla performans maliyeti olan işlevlerle ilgili bilgileri görüntüler. Bildirim bağlantılarının ve rapor listelerinin açıklaması dahil daha fazla bilgi için bkz. [Özet görünümü](../profiling/summary-view.md).

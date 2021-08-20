@@ -1,6 +1,6 @@
 ---
 title: Özel Ana sayfa & site sayfasını görüntüyle al
-description: Bu kılavuzda, bir SharePoint özel ana sayfasını ve bir Visual Studio SharePoint projesine görüntü içeren bir site sayfasını içeri aktarın.
+description: bu izlenecek yolda, bir SharePoint özel ana sayfa ve bir Visual Studio SharePoint projesine görüntü içeren bir site sayfası içeri aktarın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,49 +13,50 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 503ffc733a408787e7ecf188d893039759819c6d
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 7694c80d47e7dd16c603eaedd0527ac4ec4d9031
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99952583"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135838"
 ---
 # <a name="walkthrough-import-a-custom-master-page-and-site-page-with-an-image"></a>İzlenecek yol: bir görüntü ile özel ana sayfa ve site sayfasını Içeri aktarma
-  Bu izlenecek yol, bir SharePoint özel ana sayfasının ve bir SharePoint projesine görüntü içeren bir site sayfasının nasıl içeri aktarılacağını göstermektedir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+  bu izlenecek yolda, bir SharePoint özel ana sayfanın ve bir SharePoint projesine görüntü içeren bir site sayfasının nasıl içeri aktarılacağı gösterilmektedir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
  Bu izlenecek yol, aşağıdaki görevlerin nasıl gerçekleştirileceğini gösterir:
 
 - SharePoint tasarımcısında bir görüntü kullanarak özel bir ana sayfa ve site sayfası oluşturun.
 
-- Özel bir ana sayfa, resim ve site sayfasını bir SharePoint çözüm (*. wsp*) dosyasına aktarın.
+- özel bir ana sayfa, resim ve site sayfasını bir SharePoint çözümü (*. wsp*) dosyasına aktarın.
 
-- SharePoint çözüm paketini Içeri aktar projesini kullanarak *. wsp* dosyasını içeri aktarın ve bir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint projesine dağıtın.
+- *. wsp* dosyasını içeri aktar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint çözüm paketi projesini kullanarak. wsp dosyasını bir SharePoint projesine aktarın ve dağıtın.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere sahip olmanız gerekir:
 
-- Ve SharePoint 'in desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] .
+- [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]Ve SharePoint desteklenen sürümleri.
 
 - Visual Studio.
 
-- SharePoint Designer 2010.
+- SharePoint Tasarımcı 2010.
 
 ## <a name="create-items-in-sharepoint-designer"></a>SharePoint tasarımcısında öğe oluşturma
- Bu örnek, bir özel ana sayfa, özel ana sayfaya başvuruda bulunan bir site sayfası ve site sayfasında görünecek bir görüntü dosyası olmak üzere, dışarı aktarmak için SharePoint Designer 'da üç öğenin nasıl oluşturulacağını gösterir. Görüntü, SharePoint 'teki/images/klasörüne eklenir.
+ bu örnek, dışarı aktarma için SharePoint tasarımcısında üç öğenin nasıl oluşturulacağını gösterir: özel ana sayfa, özel ana sayfaya başvuran bir site sayfası ve site sayfasında görünecek bir görüntü dosyası. Görüntü, SharePoint ' deki/images/klasörüne eklenir.
 
-#### <a name="to-create-a-custom-master-page-in-sharepoint-designer"></a>SharePoint Designer 'da özel ana sayfa oluşturmak için
+#### <a name="to-create-a-custom-master-page-in-sharepoint-designer"></a>SharePoint tasarımcısında özel ana sayfa oluşturmak için
 
-1. SharePoint Designer 'da, gezinti bölmesinde, **ana sayfalar** site nesnesini seçin.
+1. SharePoint tasarımcısı ' nda, gezinti bölmesinde, **ana sayfalar** site nesnesini seçin.
 
 2. **Ana sayfalar** şeridinde **boş ana sayfa**' yı seçin.
 
 3. Yeni ana sayfayı seçin, sonra **ana sayfalar** şeridinde **dosyayı Düzenle**' yi seçin.
 
-4. SharePoint Designer ' ın altında **kod** sekmesini seçin.
+4. SharePoint tasarımcısı ' nın altında **kod** sekmesini seçin.
 
 5. Varolan biçimlendirmeyi aşağıdaki biçimlendirme ile değiştirin.
 
@@ -80,10 +81,10 @@ ms.locfileid: "99952583"
 
 6. Sayfayı kaydedin, **ana sayfalar** sekmesini seçin ve ana sayfayı **mybasic1. Master** olarak yeniden adlandırın.
 
-## <a name="add-an-image-to-the-content-database-in-sharepoint-designer"></a>SharePoint Designer 'da içerik veritabanına resim ekleme
- Artık site sayfasında görüntülenecek bir resim ekleyebilirsiniz. Görüntü, SharePoint içerik veritabanına dağıtılır.
+## <a name="add-an-image-to-the-content-database-in-sharepoint-designer"></a>SharePoint tasarımcısında içerik veritabanına resim ekleme
+ Artık site sayfasında görüntülenecek bir resim ekleyebilirsiniz. görüntü, SharePoint içerik veritabanına dağıtılır.
 
-#### <a name="to-add-an-image-to-the-content-database-in-sharepoint-designer"></a>SharePoint Designer 'da içerik veritabanına görüntü eklemek için
+#### <a name="to-add-an-image-to-the-content-database-in-sharepoint-designer"></a>SharePoint tasarımcısında içerik veritabanına görüntü eklemek için
 
 1. Gezinti bölmesinde, **tüm dosyalar** site nesnesini seçin ve ardından ağaç görünümünde **görüntüler** klasörünü seçin.
 
@@ -128,12 +129,12 @@ ms.locfileid: "99952583"
 
 6. Güncelleştirilmiş site sayfasını kaydedin.
 
-## <a name="export-the-items-from-sharepoint"></a>SharePoint 'ten öğeleri dışarı aktarma
- Öğeleri SharePoint 'ten bir SharePoint çözüm (*. wsp*) dosyasına aktarın.
+## <a name="export-the-items-from-sharepoint"></a>Öğeleri SharePoint dışarı aktarma
+ öğeleri SharePoint SharePoint çözüm (*. wsp*) dosyasına dışarı aktarın.
 
-#### <a name="to-export-items-from-sharepoint-designer"></a>SharePoint Designer 'dan öğeleri dışarı aktarmak için
+#### <a name="to-export-items-from-sharepoint-designer"></a>öğeleri SharePoint tasarımcıdan dışarı aktarmak için
 
-1. SharePoint Designer 'da, gezinti bölmesinde, **ekip sitesi** nesnesini seçin ve ardından **site** şeridinde, **şablon olarak kaydet**' i seçin.
+1. SharePoint tasarımcısı ' nda, gezinti bölmesinde, **ekip sitesi** nesnesini seçin ve ardından **site** şeridinde, **şablon olarak kaydet**' i seçin.
 
 2. **Şablon olarak kaydet** iletişim kutusunda bir dosya adı ve şablon adı girin, **İçerik Ekle** onay kutusunu seçin ve ardından **Tamam** düğmesini seçin.
 
@@ -143,12 +144,12 @@ ms.locfileid: "99952583"
 
 4. Yeni *. wsp* dosyası için kısayol menüsünü açın ve ardından sisteme kaydetmek için **hedefi farklı kaydet** ' i seçin.
 
-## <a name="import-the-items-into-visual-studio"></a>Öğeleri Visual Studio 'ya aktarma
+## <a name="import-the-items-into-visual-studio"></a>Öğeleri Visual Studio içeri aktar
  *. Wsp* dosyasını içine aktarın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . İçerik içeri aktarıldıktan sonra, onu özelleştirebilir, daha fazla öğe ekleyebilir ve dağıtabilirsiniz.
 
-#### <a name="to-import-items-from-the-wsp-file-into-visual-studio"></a>. Wsp dosyasındaki öğeleri Visual Studio 'ya aktarmak için
+#### <a name="to-import-items-from-the-wsp-file-into-visual-studio"></a>Öğeleri. wsp dosyasından Visual Studio içine aktarmak için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir **SharePoint 2010 çözüm paketi** projesi oluşturun.
+1. içinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir **içeri aktarma SharePoint 2010 çözüm paketi** projesi oluşturun.
 
 2. **İçeri aktarılacak öğeleri seçin** sayfasında, **tür** sütunundaki **Modül** altında, içeri aktarma için yalnızca aşağıdaki tablodaki dosyalar için onay kutularını seçin.
 
@@ -164,21 +165,21 @@ ms.locfileid: "99952583"
 
     Bu, tüm dağıtım çakışmalarının otomatik olarak çözümlendiğinden emin olmanıza yardımcı olur.
 
-5. Yeni ana sayfanız var olan bir sayfayla aynı ada sahipse, mevcut sayfanın varsayılan ana sayfa veya SharePoint Designer 'da özel ana sayfa olarak işaretlenmemiş olduğundan emin olun.
+5. yeni ana sayfanız varolan bir sayfayla aynı ada sahipse, mevcut sayfanın bir varsayılan ana sayfa veya SharePoint tasarımcısında özel ana sayfa olarak işaretlenmemiş olduğundan emin olun.
 
     Varolan bir ana sayfa varsayılan ana sayfa veya özel ana sayfa olarak işaretlenmişse, ana sayfanın silinemediğini belirten bir dağıtım hatası alırsınız. Bu sorundan kaçınmak için şunları yapın:
 
-   - Varolan ana sayfa varsayılan ana sayfa olarak ayarlandıysa, geçici olarak başka bir ana sayfayı varsayılan ana sayfa olarak ayarlayın. Dosyaları SharePoint 'e dağıttıktan sonra, yeni ana sayfanızı varsayılan ana sayfa olarak ayarlayın.
+   - Varolan ana sayfa varsayılan ana sayfa olarak ayarlandıysa, geçici olarak başka bir ana sayfayı varsayılan ana sayfa olarak ayarlayın. dosyaları SharePoint ' a dağıttıktan sonra, yeni ana sayfanızı varsayılan ana sayfa olarak ayarlayın.
 
-   - Mevcut ana sayfa özel ana sayfa olarak ayarlandıysa, geçici olarak başka bir ana sayfayı özel ana sayfa olarak ayarlayın. Dosyaları SharePoint 'e dağıttıktan sonra, yeni ana sayfanızı özel ana sayfa olarak ayarlayın.
+   - Mevcut ana sayfa özel ana sayfa olarak ayarlandıysa, geçici olarak başka bir ana sayfayı özel ana sayfa olarak ayarlayın. dosyaları SharePoint ' a dağıttıktan sonra, yeni ana sayfanızı özel ana sayfa olarak ayarlayın.
 
 6. Menü çubuğunda **Yapı**  >  **dağıtım çözümü**' ni seçin.
 
-7. Dağıtılan öğeleri görüntülemek için SharePoint sitesini açın.
+7. dağıtılan öğeleri görüntülemek için SharePoint sitesini açın.
 
-   Dosyaları içine almanın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve SharePoint 'e dağıtmanın alternatif bir yolu, dosyalarını içindeki modüllere eklemektir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][Nasıl yapılır: bir ana sayfa veya temayı Içeri aktarma](../sharepoint/how-to-import-a-master-page-or-theme.md) ve [çözümdeki dosyaları dahil etmek için modülleri kullanma](../sharepoint/using-modules-to-include-files-in-the-solution.md).
+   dosyaları içine aktarmak ve SharePoint dağıtmak için alternatif bir yol da [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dosyaları ' de modüllere eklemektir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][Nasıl yapılır: bir ana sayfa veya temayı Içeri aktarma](../sharepoint/how-to-import-a-master-page-or-theme.md) ve [çözümdeki dosyaları dahil etmek için modülleri kullanma](../sharepoint/using-modules-to-include-files-in-the-solution.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Mevcut bir SharePoint sitesinden öğeleri içeri aktarma](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
+- [mevcut bir SharePoint sitesinden öğeleri içeri aktarma](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
 - [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)
 - [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)

@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1ff8a09c70fd352d96df85189aa8cc13bb9f093150077f77ed4e44c9071f0e5b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ec08fbc30f6a03929e778361c08b03281d997d1b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121353752"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140381"
 ---
 # <a name="python-environments-window-tabs-reference"></a>Python ortamları pencere sekmeleri başvurusu
 
@@ -134,41 +134,41 @@ paketleri dosya sisteminin korunan bir alanında bulunan *c:\Program files\anaco
 
 **Şimdi Yükselt** , tek bir işlem için PIP 'ye yönetim ayrıcalıkları verir ve aynı zamanda herhangi bir işletim sistemi için izin ister. **Yönetici ayrıcalıkları olmadan devam et** seçeneği, paketi yüklemeye çalışır, ancak hata gibi çıktıyı içeren klasörler oluşturmaya çalışırken PIP başarısız olur: **' C:\Program Files\anaconda3\lib\site-packages\png.exe ': izin reddedildi.**
 
-**Paketleri yükleme veya kaldırma sırasında her zaman Yükselt** seçeneğinin belirlenmesi, iletişim kutusunun söz konusu ortamda görüntülenmesini önler. İletişim kutusunun yeniden görünmesini sağlamak için, **Araçlar**  >  **Seçenekler**  >  **Python**  >  **genel** ' e gidin ve düğmeyi seçin, **tüm kalıcı gizli iletişimleri sıfırlayın**.
+**Paketleri yükleme veya kaldırma sırasında her zaman Yükselt** seçeneğinin belirlenmesi, iletişim kutusunun söz konusu ortamda görüntülenmesini önler. İletişim kutusunun yeniden görünmesini için Araçlar Seçenekleri Python Genel'e gidin ve düğmesini seçerek Kalıcı olarak  >    >    >   **gizlenen tüm iletişim kutularını sıfırlayın.**
 
-Aynı **Seçenekler** sekmesinde, tüm ortamların iletişim kutusunu gizlemek Için **her zaman PIP 'yi yönetici olarak çalıştır** ' ı da seçebilirsiniz. Bkz. [Seçenekler-Genel sekmesi](python-support-options-and-settings-in-visual-studio.md#general-options).
+Aynı Seçenekler **sekmesinde, tüm** ortamlar için iletişim kutusunu **gizlemesi için Her** zaman pip'i yönetici olarak çalıştır'ı da seçebilirsiniz. Bkz. [Seçenekler - Genel sekmesi.](python-support-options-and-settings-in-visual-studio.md#general-options)
 
-### <a name="security-restrictions-with-older-versions-of-python"></a>Python 'un eski sürümleriyle güvenlik kısıtlamaları
+### <a name="security-restrictions-with-older-versions-of-python"></a>Python'ın eski sürümleriyle ilgili güvenlik kısıtlamaları
 
-python 2,6, 3,1 ve 3,2 kullanılırken Visual Studio, **yeni güvenlik kısıtlamaları nedeniyle, python 'un bu sürümünde internet 'ten yükleme çalışmayabilir**:
+Python 2.6, 3.1 ve 3.2 kullanırken Visual Studio, yeni güvenlik kısıtlamaları nedeniyle internetten yükleme python'ın bu sürümünde çalışmayabilirsiniz uyarıyı **gösterir:**
 
-![Python 'un eski sürümüyle birlikte PIP yüklemesi kısıtlamaları hakkında ileti](media/environments/environments-old-version-restriction.png)
+![Python'ın eski sürümüyle ilgili pip yükleme kısıtlamalarıyla ilgili ileti](media/environments/environments-old-version-restriction.png)
 
-Uyarının nedeni bu Python 'un eski sürümleriyle, `pip install` pypi.org paket kaynağından paketleri indirmek için gerekli olan aktarım güvenliği katmanı (TLS) 1,2 için destek içermez. Özel Python yapıları, TLS 1,2 ' i destekleyebilir ve bu durumda `pip install` çalışmayabilir.
+Bu uyarının nedeni, Python'ın bu eski sürümlerinde paket kaynağından paket indirmek için gerekli olan Aktarım Güvenlik Katmanı `pip install` (TLS) 1.2 için destek içerme pypi.org. Özel Python derlemeleri TLS 1.2'yi destekleyene kadar devam `pip install` ediyor olabilir.
 
-[Bootstrap.pypa.io](https://bootstrap.pypa.io/)adresinden bir paket için uygun *get-pip.py* indirmek ve [pypi.org](https://pypi.org/)'den bir paketi el ile indirmek ve ardından paketi o yerel kopyadan yüklemek mümkün olabilir.
+bir paket için uygun  [get-pip.py'ı bootstrap.pypa.io'dan](https://bootstrap.pypa.io/)el ile [indirmek, pypi.org'den](https://pypi.org/)el ile indirmek ve ardından paketi bu yerel kopyadan yüklemek mümkün olabilir.
 
-Ancak, öneri yalnızca Python 2,7 veya 3.3 + sürümüne yükseltilmesinin yanı, uyarının görünmemelidir.
+Ancak öneri yalnızca Python 2.7 veya 3.3+ sürümüne yükseltmektir. Bu durumda uyarı görünmez.
 
 ::: moniker range="vs-2017"
 ## <a name="intellisense-tab"></a>IntelliSense sekmesi
 
-IntelliSense tamamlanma veritabanının geçerli durumunu gösterir:
+IntelliSense tamamlama veritabanının geçerli durumunu gösterir:
 
-![Python ortamları IntelliSense sekmesi](media/environments/environments-intellisense-tab.png)
+![Python Ortamları IntelliSense sekmesi](media/environments/environments-intellisense-tab.png)
 
-- Visual Studio 2017 sürüm 15,5 ve önceki sürümlerde, ıntellisense, bu kitaplık için derlenen bir veritabanına bağlıdır. Bir kitaplık yüklendiğinde veritabanının oluşturulması arka planda yapılır, ancak bir süre zaman alabilir ve kod yazmaya başladığınızda tamamlanmamış olabilir.
-- Visual Studio 2017 sürüm 15,6 ve sonraki sürümleri, varsayılan olarak veritabanına bağımlı olmayan tamamlamalar sağlamak için daha hızlı bir yöntem kullanır. Bu nedenle sekmenin **IntelliSense [veritabanı devre dışı]** olarak etiketlenir. **Araç** seçeneklerini temizleyerek veritabanını etkinleştirebilirsiniz  >    >  **Python**  >  **deneysel**  >  **ortamlar için yeni stil IntelliSense kullanın**.
+- 2017 Visual Studio 15.5 ve önceki sürümlerde IntelliSense tamamlamaları, bu kitaplık için derlenmiş bir veritabanına bağlıdır. Veritabanı oluşturma işlemi bir kitaplık yüklenirken arka planda yapılır, ancak biraz zaman alır ve kod yazmaya başlanırken tamamlanmadı olabilir.
+- Visual Studio 2017 sürüm 15.6 ve sonrası varsayılan olarak veritabanına bağımlı olan tamamlamalar sağlamak için daha hızlı bir yöntem kullanır. Bu nedenle sekme **IntelliSense [veritabanı devre dışı] olarak etiketlenmiş.** Ortamlar için Araçlar Seçenekleri Python Deneysel Yeni stil  >    >    >    >  **IntelliSense kullan seçeneğini temizerek veritabanını etkinleştirebilirsiniz.**
 
-Visual Studio yeni bir ortam algıladığında (veya bir tane eklediğinizde), kitaplık kaynak dosyalarını çözümleyerek otomatik olarak veritabanını derlemeye başlar. Bu işlem, nelerin yüklü olduğuna bağlı olarak bir dakikadan bir saate veya daha fazlasına kadar zaman alabilir. (Örneğin, Anaconda, birçok kitaplığı ile birlikte gelir ve veritabanını derlemek biraz zaman alır.) Tamamlandıktan sonra ayrıntılı IntelliSense alırsınız ve daha fazla kitaplık yükleyene kadar veritabanını yeniden yenilemeniz gerekmez (DB 'yi **Yenile** düğmesi ile).
+Yeni Visual Studio algılayan bir ortam algılasanız (veya bir ortam eklerken), kitaplık kaynak dosyalarını analiz ederek veritabanını otomatik olarak derlemeye başlar. Bu işlem, yüklü olan işleme bağlı olarak bir dakika ile bir saat veya daha fazla zaman alır. (Örneğin Anaconda birçok kitaplıkla birlikte gelir ve veritabanını derlemek biraz zaman alır.) Tamamlandıktan sonra ayrıntılı IntelliSense alırsınız ve daha fazla kitaplık  yükleyene kadar veritabanını yeniden yenilemeniz (Db'yi Yenile düğmesiyle) ihtiyacınız olmayacaktır.
 
-Derlenmeyen verilerin kitaplıkları bir **!**; ile işaretlenir ortamın veritabanı tamamlanmadıysa, **!** ana ortam listesinde bunun yanında da görünür.
+Verilerin derlenmiş olduğu kitaplıklar ! ;  bir ortamın veritabanı tam değilse, **bir !** , ana ortam listesinde yanında da görünür.
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Python ortamlarını yönetme](managing-python-environments-in-visual-studio.md)
+- [Python ortamlarını Visual Studio](managing-python-environments-in-visual-studio.md)
 - [Proje için yorumlayıcıyı seçme](selecting-a-python-environment-for-a-project.md)
-- [Bağımlılıklar için requirements.txt kullanma](managing-required-packages-with-requirements-txt.md)
+- [Bağımlılıklar requirements.txt kullanım](managing-required-packages-with-requirements-txt.md)
 - [Arama yolları](search-paths.md)

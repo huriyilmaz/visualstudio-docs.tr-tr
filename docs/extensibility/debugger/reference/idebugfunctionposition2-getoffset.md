@@ -1,6 +1,6 @@
 ---
-description: Kaynak belgedeki işlevin konumunu alır.
-title: 'IDebugFunctionPosition2:: GetOffset | Microsoft Docs'
+description: kaynak belgesinde işlevin konumunu verir.
+title: IDebugFunctionPosition2::GetOffset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c21f2f69a8995d3b1467c4a77d1b782894b8f325947877bc1b34014770ab6074
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7fe6ec380682da6ff0bccc85d2d2d9398cc549de
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121451959"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138152"
 ---
 # <a name="idebugfunctionposition2getoffset"></a>IDebugFunctionPosition2::GetOffset
-Kaynak belgedeki işlevin konumunu alır.
+kaynak belgesinde işlevin konumunu verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int GetOffset(
 
 ## <a name="parameters"></a>Parametreler
 `pPosition`\
-[in, out] Bir belgedeki işlevin konumuyla doldurulmuş [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı.
+[in, out] Bir [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) işlevin konumuyla doldurulmuş bir yapıdır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)

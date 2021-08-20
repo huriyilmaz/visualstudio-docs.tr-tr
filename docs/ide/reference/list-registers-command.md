@@ -1,6 +1,6 @@
 ---
 title: Yazmaçları Listele Komutu
-description: Yazmazları Listele komutunu ve seçilen yazmaların değerini nasıl görüntülemektedir ve kayıt listesini gösterilecek şekilde değiştirmenizi sağlar.
+description: Liste Yazmaçları komutu ve seçilen yazmaçların değerini nasıl görüntüleyeceği ve gösterilecek kayıt listesini değiştirmenize izin veren hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 37ec0e5211cebda7c2497c069bcb72a7e56ae2bb1987b5dbec71c67ff6274526
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7bf6d9526e61327b1ff582a74c1624f1bfd7b8c5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387518"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151437"
 ---
 # <a name="list-registers-command"></a>Yazmaçları Listele Komutu
-Seçilen yazmaların değerini görüntüler ve kayıt listesini gösterecek şekilde değiştirmenize olanak sağlar.
+Seçili yazmaçların değerini görüntüler ve gösterilecek kayıt listesini değiştirmenize izin verir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ Debug.ListRegisters [/Display [{register|registerGroup}...]] [/List]
 ## <a name="switches"></a>Anahtarlar
 /Display [{ `register`&#124;`registerGroup` }...]
 
-Belirtilen veya değerlerini `register` `registerGroup` görüntüler. Yoksa `register` veya `registerGroup` belirtilmezse, varsayılan yazmaz listesi görüntülenir. Anahtar belirtilmezse davranış aynıdır. Örnek:
+Belirtilen veya değerlerini görüntüler `register` `registerGroup` . `register`Veya `registerGroup` belirtilmemişse, varsayılan kayıt listesi görüntülenir. Anahtar belirtilmemişse, davranış aynıdır. Örnek:
 
 `Debug.ListRegisters /Display eax`
 
@@ -48,21 +48,21 @@ eşdeğerdir
 
 /List
 
-Listede tüm yazmam gruplarını görüntüler.
+Listedeki tüm kayıt gruplarını görüntüler.
 
 /Watch [{ `register`&#124;`registerGroup` }...]
 
-Listeye bir veya `register` daha `registerGroup` fazla değer ekler.
+Listeye bir veya daha fazla `register` veya `registerGroup` değer ekler.
 
 /Unwatch [{ `register`&#124;`registerGroup` }...]
 
-Listeden bir veya `register` daha fazla veya değeri `registerGroup` kaldırır.
+Listeden bir veya daha fazla `register` veya `registerGroup` değeri kaldırır.
 
 ## <a name="remarks"></a>Açıklamalar
-yerine `r` diğer ad `Debug.ListRegisters` kullanılabilir.
+Diğer ad, yerine `r` kullanılabilir `Debug.ListRegisters` .
 
 ## <a name="example"></a>Örnek
-Bu örnek, `Debug.ListRegisters` kayıt grubunun değerlerini görüntülemek için diğer adını `r` `Flags` kullanır.
+Bu örnek, `Debug.ListRegisters` `r` yazmaç grubunun değerlerini göstermek için diğer adı kullanır `Flags` .
 
 ```cmd
 r /Display Flags

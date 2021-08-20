@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: f7e5540f186e712df27fa41817e34da68363380f2d733f526ef71f858d96e8d6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f924f979516f4331162687a165674953339a4374
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239028"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111507"
 ---
 # <a name="idebugcoreserver2enumports"></a>IDebugCoreServer2::EnumPorts
 Kullanılabilir tüm bağlantı noktalarının listesini alın.

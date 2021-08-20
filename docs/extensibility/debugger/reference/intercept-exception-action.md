@@ -1,6 +1,6 @@
 ---
 title: INTERCEPT_EXCEPTION_ACTION | Microsoft Docs
-description: Uygulama INTERCEPT_EXCEPTION_ACTION, hata ayıklama sırasında özel durumların araya geldiğinde hangi eylemin Visual Studio belirtir.
+description: INTERCEPT_EXCEPTION_ACTION numaralandırması Visual Studio hata ayıklamada özel durumları kesintiye uğradığında gerçekleştirilecek eylemi belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,15 +18,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 0b704e8f6379312eee25be7106f4d4db6c64bf626aee4e0dfe0b899a735fe9a7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0fddfa37457a4783066a2319b081bf4372e7e06d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121377255"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125393"
 ---
 # <a name="intercept_exception_action"></a>INTERCEPT_EXCEPTION_ACTION
-Özel durumlara müdahale etmek için hangi eylemlerin gerçekleştirin olduğunu belirtir.
+Özel durumları kesintiye girilirken gerçekleştirilecek eylemleri belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,17 +48,17 @@ public enum enum_INTERCEPT_EXCEPTION_ACTION
 ## <a name="parameters"></a>Parametreler
 
 `IEA_INTERCEPT`\
-Geçerli özel durumun araya müdahalesini sağlar. Şu anda desteklenen tek değer bu ve belirtilmelidir.
+Geçerli özel durumu kesintiye uğratan izin vermez. Bu, şu anda desteklenen tek değerdir ve belirtilmelidir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler [InterceptCurrentException yöntemine](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) geçirildi.
+Bu değerler, [Yakatcurrentexception](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) yöntemine geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

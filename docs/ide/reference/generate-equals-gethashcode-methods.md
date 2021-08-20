@@ -10,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: c89c5296ced84b887c7acc5d190030cb9710305b5f066dea7bee008e6f6245b9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 36f26e9ecbbd77cac7967f09d241f19ae158a36f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121372627"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122143943"
 ---
 # <a name="generate-equals-and-gethashcode-method-overrides-in-visual-studio"></a>Visual Studio içinde Equals ve GetHashCode metot geçersiz kılmaları oluşturma
 

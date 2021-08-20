@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: e3573ac862006122c9e77deea6317610482840da944413ca6e70d967052ed96d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3d398dd937bad3af548f1a32a4b9a5964ddb31fb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121326790"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129668"
 ---
 # <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>Visual Studio yüklü bir UWP uygulama paketinin hatalarını ayıklama
 

@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: f7b9b6f73f1cf3add4d7d11a9cbcc6c44ebb834ae82fbeca489539403164a2c0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3af93de5ad31e17786a75ac6183d18d66b3aa1a1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121304781"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122157806"
 ---
 # <a name="how-to-create-inheritance-between-types-in-class-designer"></a>Nasıl yapılır: Sınıf Tasarımcısı türler arasında devralma oluşturma
 

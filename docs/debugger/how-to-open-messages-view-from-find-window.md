@@ -11,14 +11,15 @@ ms.assetid: 601a193e-432a-417b-9406-6fec9e401264
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7bdfb59d6232706551534d0b8b395cd476dcf2d3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 852769189cf7294696f562d4d7ed6e89ce962cbd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99918455"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128240"
 ---
 # <a name="how-to-open-messages-view-from-find-window"></a>Nasıl yapılır: Bul Penceresinden İletiler Görünümünü Açma
 Bir hedef pencere seçmek için **pencere bul** iletişim kutusunu kullanmayı ve ardından söz konusu pencerenin iletiler görünümünü açmayı kullanışlı bulabilirsiniz.
@@ -31,7 +32,7 @@ Bir hedef pencere seçmek için **pencere bul** iletişim kutusunu kullanmayı v
 
     [Pencereyi bul Iletişim kutusu](../debugger/find-window-dialog-box.md) açılır.
 
-3. **Windows** sekmesinden, hedef pencerenin üzerine **Bulucu aracını** sürükleyin. Aracı sürüklerken, **pencereyi bul** iletişim kutusu seçili penceredeki ayrıntıları görüntüler.
+3. **Windows** sekmesinden **bulucu aracını** hedef pencerenin üzerine sürükleyin. Aracı sürüklerken, **pencereyi bul** iletişim kutusu seçili penceredeki ayrıntıları görüntüler.
 
    - veya
 

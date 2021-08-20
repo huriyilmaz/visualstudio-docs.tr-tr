@@ -26,12 +26,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: ce9f00bf31013450c25dd3bac6325e7288be50a2b866989fd3b0b9d301b30410
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e76b25516001143842422481eb6055be95a99178
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121225757"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135591"
 ---
 # <a name="walkthrough-synchronize-a-custom-task-pane-with-a-ribbon-button"></a>İzlenecek yol: özel görev bölmesini Şerit düğmesi ile senkronize etme
   Bu izlenecek yol, Şeritteki iki durumlu düğmeye tıklayarak kullanıcıların gizleyebileceğiniz veya görüntüleyeceği özel bir görev bölmesi oluşturmayı gösterir. Microsoft Office uygulamalar, kullanıcıların özel görev bölmelerini göstermek veya gizlemek için varsayılan bir yol sağlamadığından, bir düğme gibi her zaman bir kullanıcı arabirimi (uı) öğesi oluşturmalısınız.

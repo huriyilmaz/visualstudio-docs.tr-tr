@@ -1,6 +1,6 @@
 ---
-title: 'İzlenecek yol: SharePoint uygulama sayfası oluşturma | Microsoft Docs'
-description: Bu kılavuzda, bir uygulama sayfası (bir ASP.NET sayfasının özelleştirilmiş formu) oluşturun ve ardından yerel bir SharePoint sitesi kullanarak hata ayıklayın.
+title: 'izlenecek yol: SharePoint uygulama sayfası oluşturma | Microsoft Docs'
+description: bu kılavuzda, bir uygulama sayfası (ASP.NET sayfanın özelleştirilmiş bir biçimi) oluşturun ve ardından yerel bir SharePoint sitesini kullanarak hata ayıklayın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,49 +13,50 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 6640373dac6d08144f1ef7fd230afa172540afe6
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: 7aa99f3d9fb333d9d7b1177eae39a5f5800cb4e1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106217768"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148863"
 ---
-# <a name="walkthrough-create-a-sharepoint-application-page"></a>İzlenecek yol: SharePoint uygulama sayfası oluşturma
+# <a name="walkthrough-create-a-sharepoint-application-page"></a>izlenecek yol: SharePoint uygulama sayfası oluşturma
 
-Uygulama sayfası, ASP.NET sayfasının özelleşmiş bir biçimidir. Uygulama sayfaları bir SharePoint ana sayfasıyla birleştirilmiş içerik içerir. Daha fazla bilgi için bkz. [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md).
+uygulama sayfası, ASP.NET sayfanın özelleşmiş bir biçimidir. uygulama sayfalarında bir SharePoint ana sayfasıyla birleştirilmiş içerik bulunur. Daha fazla bilgi için bkz. [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md).
 
-Bu izlenecek yol, bir uygulama sayfasının nasıl oluşturulduğunu ve sonra yerel bir SharePoint sitesi kullanarak nasıl hata ayıklaması yapılacağını gösterir. Bu sayfa, her kullanıcının sunucu grubundaki tüm sitelerde oluşturduğu veya değiştirdiği tüm öğeleri gösterir.
+bu izlenecek yol, bir uygulama sayfasının nasıl oluşturulduğunu ve sonra yerel bir SharePoint sitesini kullanarak hata ayıklamanın nasıl yapılacağını gösterir. Bu sayfa, her kullanıcının sunucu grubundaki tüm sitelerde oluşturduğu veya değiştirdiği tüm öğeleri gösterir.
 
 Bu izlenecek yol aşağıdaki görevleri gösterir:
 
 - SharePoint projesi oluşturma.
-- SharePoint projesine bir uygulama sayfası ekleniyor.
-- Uygulama sayfasına ASP.NET denetimleri ekleme.
+- SharePoint projesine bir uygulama sayfası ekleme.
+- uygulama sayfasına ASP.NET denetimleri ekleme.
 - ASP.NET denetimlerinin arkasına kod ekleme.
 - Uygulama sayfasını test etme.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. daha fazla bilgi için bkz. [Visual Studio ıde 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Desteklenen Windows ve SharePoint sürümleri.
+- Windows ve SharePoint desteklenen sürümleri.
 
 ## <a name="create-a-sharepoint-project"></a>SharePoint projesi oluşturma
 
-İlk olarak, **boş bir SharePoint projesi** oluşturun. Daha sonra, bu projeye bir **uygulama sayfası** öğesi eklersiniz.
+ilk olarak, **boş bir SharePoint Project** oluşturun. Daha sonra, bu projeye bir **uygulama sayfası** öğesi eklersiniz.
 
 1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. **Yeni proje** iletişim kutusunu açın, kullanmak istediğiniz dilin altındaki **Office/SharePoint** düğümünü genişletin ve **SharePoint çözümleri** düğümünü seçin.
+2. **yeni Project** iletişim kutusunu açın, kullanmak istediğiniz dilin altındaki **Office/SharePoint** düğümünü genişletin ve ardından **SharePoint Solutions** düğümünü seçin.
 
-3. **Visual Studio yüklü şablonlar** bölmesinde, **SharePoint 2010-boş proje** şablonunu seçin. Projeyi **MySharePointProject** olarak adlandırın ve ardından **Tamam** düğmesini seçin.
+3. **Visual Studio yüklü şablonlar** bölmesinde, **SharePoint 2010-boş Project** şablonunu seçin. Projeyi **MySharePointProject** olarak adlandırın ve ardından **Tamam** düğmesini seçin.
 
-     **SharePoint Özelleştirme Sihirbazı** görüntülenir. Bu sihirbaz, projenin hatalarını ayıklamak için kullanacağınız siteyi ve çözümün güven düzeyini seçmenizi sağlar.
+     **SharePoint özelleştirme sihirbazı** görüntülenir. Bu sihirbaz, projenin hatalarını ayıklamak için kullanacağınız siteyi ve çözümün güven düzeyini seçmenizi sağlar.
 
-4. **Grup çözümü olarak dağıt** seçenek düğmesini seçin ve ardından varsayılan yerel SharePoint sitesini kabul etmek için **son** düğmesini seçin.
+4. **grup çözümü olarak dağıt** seçenek düğmesini seçin ve ardından varsayılan yerel SharePoint sitesini kabul etmek için **son** düğmesini seçin.
 
 ## <a name="create-an-application-page"></a>Uygulama sayfası oluşturma
 
@@ -63,7 +64,7 @@ Bir uygulama sayfası oluşturmak için projeye bir **Uygulama sayfa** öğesi e
 
 1. **Çözüm Gezgini**, **MySharePointProject** projesini seçin.
 
-2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+2. menü çubuğunda **Project**  >  **yeni öğe ekle**' yi seçin.
 
 3. **Yeni öğe Ekle** iletişim kutusunda, **uygulama sayfasını (yalnızca Grup çözümü** şablonu) seçin.
 
@@ -73,7 +74,7 @@ Bir uygulama sayfası oluşturmak için projeye bir **Uygulama sayfa** öğesi e
 
 ## <a name="design-the-layout-of-the-application-page"></a>Uygulama sayfasının yerleşimini tasarlama
 
-Uygulama sayfası öğesi, uygulama sayfasına ASP.NET denetimleri eklemek için bir tasarımcı kullanmanıza olanak sağlar. Bu tasarımcı, Visual Web Developer 'da kullanılan tasarlayıcıdır. Tasarımcı **kaynak** görünümüne bir etiket, radyo düğmesi listesi ve tablo ekleyin ve ardından, herhangi bir standart ASP.NET sayfası tasarlarken yaptığınız gibi özellikleri ayarlayın.
+uygulama sayfası öğesi, uygulama sayfasına ASP.NET denetimleri eklemek için bir tasarımcı kullanmanıza olanak sağlar. Bu tasarımcı, Visual Web Developer 'da kullanılan tasarlayıcıdır. tasarımcı **kaynak** görünümüne bir etiket, radyo düğmesi listesi ve tablo ekleyin ve ardından, herhangi bir standart ASP.NET sayfası tasarlarken yaptığınız gibi özellikleri ayarlayın.
 
 1. Menü çubuğunda **Görünüm**  >  **araç kutusunu** seçin.
 
@@ -99,7 +100,7 @@ Uygulama sayfası öğesi, uygulama sayfasına ASP.NET denetimleri eklemek için
 
 ## <a name="handle-the-events-of-controls-on-the-page"></a>Sayfadaki denetimlerin olaylarını işleyin
 
-Bir uygulama sayfasındaki denetimleri herhangi bir ASP.NET sayfasında olduğu gibi işleyin. Bu yordamda, `SelectedIndexChanged` açılan listenin olayını işleyirsiniz.
+herhangi bir ASP.NET sayfasında olduğu gibi, bir uygulama sayfasında denetimleri işleyin. Bu yordamda, `SelectedIndexChanged` açılan listenin olayını işleyirsiniz.
 
 1. **Görünüm** menüsünde **kod**' u seçin.
 
@@ -127,13 +128,13 @@ Bir uygulama sayfasındaki denetimleri herhangi bir ASP.NET sayfasında olduğu 
 
 ## <a name="test-the-application-page"></a>Uygulama sayfasını test etme
 
-Projeyi çalıştırdığınızda, SharePoint sitesi açılır ve uygulama sayfası görüntülenir.
+projeyi çalıştırdığınızda, SharePoint sitesi açılır ve uygulama sayfası görüntülenir.
 
 1. **Çözüm Gezgini**' de, uygulama sayfası için kısayol menüsünü açın ve **Başlangıç öğesi olarak ayarla**' yı seçin.
 
 2. **F5** tuşunu seçin.
 
-     SharePoint sitesi açılır.
+     SharePoint site açılır.
 
 3. Uygulama sayfasında **benim tarafımdan değiştirildi** seçeneğini belirleyin.
 
@@ -147,7 +148,7 @@ Projeyi çalıştırdığınızda, SharePoint sitesi açılır ve uygulama sayfa
 
 SharePoint uygulama sayfaları hakkında daha fazla bilgi için bkz. [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md).
 
-Aşağıdaki konulardan Visual Web Tasarımcısı 'nı kullanarak SharePoint sayfası içeriğini tasarlama hakkında daha fazla bilgi edinebilirsiniz:
+aşağıdaki konulardan Visual Web tasarımcısı 'nı kullanarak SharePoint sayfası içeriğini tasarlama hakkında daha fazla bilgi edinebilirsiniz:
 
 - [SharePoint için Web bölümleri oluşturun](../sharepoint/creating-web-parts-for-sharepoint.md).
 

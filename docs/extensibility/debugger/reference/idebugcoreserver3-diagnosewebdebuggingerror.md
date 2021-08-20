@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ec4af56afce3568577279fb1cefc09da0be22c974eb9acf1dd7d364e7c272d1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a9745c3027ef9e6d86f831f4a1773c27268d90fb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417528"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127382"
 ---
 # <a name="idebugcoreserver3diagnosewebdebuggingerror"></a>IDebugCoreServer3::DiagnoseWebDebuggingError
 Otomatik eklemenin neden başarısız olduğunu belirlemeye çalışır.

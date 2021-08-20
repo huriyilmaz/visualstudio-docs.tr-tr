@@ -1,6 +1,6 @@
 ---
 title: Yönetilen koddaki Onaylamalar | Microsoft Docs
-description: "Visual Studio 'da C#, Visual Basic veya F # yönetilen kodu için hata ayıklama aracı olarak onaylar hakkında bilgi edinin."
+description: 'Visual Studio bir C#, Visual Basic veya F # yönetilen kodu için hata ayıklama aracı olarak onaylar hakkında bilgi edinin.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,14 +22,15 @@ ms.assetid: 70ab2522-6486-4076-a1a9-e0f11cd0f3a1
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 626f86c2a1d370a7f31e47f86d8adafc3f905672
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: 937c6474aab6ea1171eccf6914e4e850a8e4bb3b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101684230"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129876"
 ---
 # <a name="assertions-in-managed-code"></a>Yönetilen Koddaki Onaylar
 Bir onay veya `Assert` deyimi, `Assert` deyimine bağımsız değişken olarak belirttiğiniz bir koşulu test eder. Koşul true olarak değerlendirilirse işlem yapmanız gerekmez. Koşul false olarak değerlendirilirse onay başarısız olur. Hata ayıklama derlemesiyle çalışıyorsanız programınız kesme moduna girer.
@@ -146,19 +147,19 @@ Debug.Assert ( temp != 0 );
 
  Aksi halde, <xref:System.Diagnostics.Trace> yöntemlerin çalışması için programınızın kaynak dosyanın en üstünde aşağıdakilerden birine sahip olması gerekir:
 
-- `#Const TRACE = True` Visual Basic
+- `#Const TRACE = True`Visual Basic
 
 - `#define TRACE` Visual C# ve C++ içinde
 
   Ya da programınızın Izleme seçeneğiyle oluşturulması gerekir:
 
-- `/d:TRACE=True` Visual Basic
+- `/d:TRACE=True`Visual Basic
 
 - `/d:TRACE` Visual C# ve C++ içinde
 
-  Bir C# veya Visual Basic sürüm derlemesinde hata ayıklama yöntemlerini kullanmanız gerekiyorsa, sürüm yapılandırmanızda hata ayıklama sembolünü tanımlamanız gerekir.
+  bir C# veya Visual Basic sürüm derlemesinde hata ayıklama yöntemlerini kullanmanız gerekiyorsa, sürüm yapılandırmanızda hata ayıklama sembolünü tanımlamanız gerekir.
 
-  C++, <xref:System.Diagnostics.Debug> sınıf yöntemlerini desteklemez. Aynı etkiyi, <xref:System.Diagnostics.Trace> koşullu derleme ile, örneğin `#ifdef DEBUG` . `#endif` .. ile kullanarak elde edebilirsiniz. Bu sembolleri **\<Project> Özellik sayfaları** iletişim kutusunda tanımlayabilirsiniz. Daha fazla bilgi için bkz. [Visual Basic hata ayıklama yapılandırması Için proje ayarlarını değiştirme](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) veya [bir C veya C++ hata ayıklama yapılandırması Için proje ayarlarını değiştirme](../debugger/project-settings-for-a-cpp-debug-configuration.md).
+  C++, <xref:System.Diagnostics.Debug> sınıf yöntemlerini desteklemez. Aynı etkiyi, <xref:System.Diagnostics.Trace> koşullu derleme ile, örneğin `#ifdef DEBUG` . `#endif` .. ile kullanarak elde edebilirsiniz. Bu sembolleri **\<Project> Özellik sayfaları** iletişim kutusunda tanımlayabilirsiniz. daha fazla bilgi için, bkz. [Visual Basic hata ayıklama yapılandırması için Project Ayarlar değiştirme](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) veya [bir C veya C++ hata ayıklama yapılandırması için Project Ayarlar değiştirme](../debugger/project-settings-for-a-cpp-debug-configuration.md).
 
 ## <a name="assert-arguments"></a><a name="BKMK_Assert_arguments"></a> Onaylama bağımsız değişkenleri
  <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> ve <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> en çok üç bağımsız değişken alın. Zorunlu olan ilk bağımsız değişken, denetlemek istediğiniz durumdur. <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName>Veya <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> yalnızca bir bağımsız değişken kullanırsanız, `Assert` yöntemi koşulu denetler ve sonuç yanlış ise, çağrı yığınının içeriğini **Çıkış** penceresine çıkarır. Aşağıdaki örnek ve gösterir <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> :

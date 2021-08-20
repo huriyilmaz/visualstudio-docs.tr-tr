@@ -1,6 +1,6 @@
 ---
-title: Kod bağlamı | Microsoft Docs
-description: Visual Studio hata ayıklamada kod bağlamı hakkında bilgi edinin. Bu, bir program kesme noktasında durdurulduğunda mevcut olan koddaki bir konumu açıklar.
+title: Kod Bağlamı | Microsoft Docs
+description: Hata ayıklamada program Visual Studio bir kesme noktası olduğunda var olan bir konumu açıklayan hata ayıklamada kod bağlamı hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,28 +10,29 @@ ms.assetid: 65e4d37a-086b-426e-9394-a3534967fd59
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e3bd252990e52f4ecaede0cc5026067b28434bc
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 774daabac461c00998048455f4e23bd2ab7bd379
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112905728"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111807"
 ---
 # <a name="code-context"></a>Kod bağlamı
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Hata ayıklama sırasında **kod bağlamı**:
+Hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ayıklamada bir **kod bağlamı:**
 
-- Hata ayıklama altyapısı (DE) tarafından bilinen kodda bir konumun soyutlamasını sağlar. Günümüzde çoğu çalışma zamanı mimarilerinde, bir programın yönerge akışında bir kod bağlamı adres olarak düşünülebilir. Geleneksel olmayan diller için kodun yönergelerle temsil edilebileceği durumlarda, bir kod bağlamı başka yollarla temsil edilebilir.
+- Hata ayıklama altyapısı (DE) olarak bilinen kodda bir konumun özetlerini sağlar. Günümüzde çoğu çalışma zamanı mimarisinde kod bağlamı, bir programın yönerge akışında adres olarak düşünebilirsiniz. Kodun yönergelerle temsili olmayan, koşulsuz diller için, kod bağlamı başka bir şekilde temsil olabilir.
 
-- Hata ayıklamakta olduğunuz programın yürütme akışındaki geçerli konumu açıklar.
+- Hata ayıklamakta olduğunu programın yürütme akışındaki geçerli konumu açıklar.
 
-- Yalnızca bir program kesme noktasında durdurulduğunda vardır.
+- Yalnızca bir program kesme noktası durdurulmuşsa var olur.
 
-- , İlişkili bir belge içeriğine sahiptir.
+- İlişkili bir belge bağlamına sahip.
 
-- , Bir [IDebugCodeContext2](../../extensibility/debugger/reference/idebugcodecontext2.md) arabirimi tarafından uygulanır.
+- [IDebugCodeContext2 arabirimi tarafından](../../extensibility/debugger/reference/idebugcodecontext2.md) uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Belge bağlamı](../../extensibility/debugger/document-context.md)
-- [Hata ayıklayıcı bağlamları](../../extensibility/debugger/debugger-contexts.md)
+- [Hata ayıklayıcısı bağlamları](../../extensibility/debugger/debugger-contexts.md)

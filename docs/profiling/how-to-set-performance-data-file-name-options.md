@@ -7,15 +7,16 @@ ms.assetid: d7a8d6b9-ab23-46fb-98ed-774781157860
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 110199375aef4f4a1168c761a5dad9d77da215b6
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 57c02081d31aa90e4b3c4c2415d515cf94d80aea
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99907009"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150293"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>Nasıl yapılır: Performans veri dosyası adlandırma seçeneklerini ayarlama
 

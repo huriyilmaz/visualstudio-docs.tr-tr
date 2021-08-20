@@ -1,5 +1,5 @@
 ---
-title: Symbol-Browsing Tools | Microsoft Docs
+title: Symbol-Browsing Araçları | Microsoft Docs
 description: Visual Studio' içinde sembol tarama Visual Studio. Bileşenlerinizin sembolleri için kitaplıklarla bu özellikleri genişletmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -21,18 +21,18 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 560134da26f7123da56426caaa06641cfacd64103c05f6fe681eb7aa34f47ba5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9b8383158773e088b1bfd2e5c955ff224c6800ad
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121414225"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158911"
 ---
 # <a name="supporting-symbol-browsing-tools"></a>Sembol Tarama Araçlarını Destekleme
-**Object Browser**, **Sınıf Görünümü**, **Çağrı Tarayıcısı** **ve Sembol** Sonuçlarını Bul araçları, Visual Studio. Bu araçlar sembollerin hiyerarşik ağaç görünümlerini görüntüler ve ağaçtaki semboller arasındaki ilişkileri gösterir. Semboller ad alanlarını, nesneleri, sınıfları, sınıf üyelerini ve çeşitli bileşenlerde bulunan diğer dil öğelerini temsil eder. Bileşenler arasında Visual Studio, dış .NET Framework bileşenleri ve tür (.tlb) kitaplıkları yer almaktadır. Daha fazla bilgi için [bkz. Kod Yapısını Görüntüleme.](../../ide/viewing-the-structure-of-code.md)
+**Object Browser**, **Sınıf Görünümü**, **Çağrı Tarayıcısı** ve **Sembol** Sonuçlarını Bul araçları, sembol tarama özelliklerini Visual Studio. Bu araçlar sembollerin hiyerarşik ağaç görünümlerini görüntüler ve ağaçtaki semboller arasındaki ilişkileri gösterir. Semboller ad alanlarını, nesneleri, sınıfları, sınıf üyelerini ve çeşitli bileşenlerde bulunan diğer dil öğelerini temsil eder. Bileşenler arasında Visual Studio, dış .NET Framework bileşenleri ve tür (.tlb) kitaplıkları yer almaktadır. Daha fazla bilgi için [bkz. Kod Yapısını Görüntüleme.](../../ide/viewing-the-structure-of-code.md)
 
 ## <a name="symbol-browsing-libraries"></a>Symbol-Browsing Kitaplıkları
- Dil uygulayıcısı olarak, Visual Studio bileşenlerinizin simgelerini takip eden kitaplıklar oluşturarak ve arabirim kümesi aracılığıyla Visual Studio nesne yöneticisine sembol listesi sağlayan kitaplıklar oluşturarak Visual Studio sembol tarama özelliklerini genişletebilirsiniz. Kitaplık, arabirim tarafından <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2> açıklanmıştır. Nesne Visual Studio yöneticisi, kitaplıklardan veri edinerek ve düzenleyerek sembol tarama araçlarından yeni veri isteklerine yanıt verir. Daha sonra araçları istenen verilerle doldurmak veya güncelleştirmek için kullanılır. nesne yöneticisine bir Visual Studio almak <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> için, hizmet <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> kimliğini yöntemine `GetService` iletir.
+ Dil uygulayıcı olarak, Visual Studio bileşenlerinizin simgelerini takip eden kitaplıklar oluşturarak ve arabirim kümesi aracılığıyla Visual Studio nesne yöneticisine sembol listesi sağlayan kitaplıklar oluşturarak Visual Studio sembol tarama özelliklerini genişletebilirsiniz. Kitaplık, arabirim tarafından <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2> açıklanmıştır. Nesne Visual Studio yöneticisi, kitaplıklardan veri edinerek ve düzenleyerek sembol tarama araçlarından yeni veri isteklerine yanıt verir. Daha sonra araçları istenen verilerle doldurmak veya güncelleştirmek için kullanılır. nesne yöneticisine bir Visual Studio almak <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2> için, hizmet <xref:Microsoft.VisualStudio.Shell.Interop.SVsObjectManager> kimliğini yöntemine `GetService` iletir.
 
  Her kitaplığın, tüm Visual Studio toplayan nesne yöneticisine kaydolması gerekir. Bir kitaplığı kaydetmek için yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> arayın. İstek hangi aracın başlattığına bağlı olarak, Visual Studio nesne yöneticisi uygun kitaplığı bulur ve verileri talep eder. Veriler, arabirim tarafından açıklanan sembollerin [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] listelerinde kitaplıklar ve nesne yöneticisi arasında <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> ilerler.
 
@@ -42,7 +42,7 @@ ms.locfileid: "121414225"
 
  ![Kitaplık ve nesne yöneticisi arasındaki veri akışı](../../extensibility/internals/media/callbrowserdiagram.gif "CallBrowserDiagram")
 
- Visual Studio nesne yöneticisine simge listelerini sağlamak için, önce yöntemini çağırarak kitaplığı Visual Studio nesne yöneticisine kaydetmeniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> gerekir. Kitaplık kaydedildikten sonra, Visual Studio yöneticisi kitaplığın özellikleri hakkında belirli bilgileri talep eder. Örneğin, ve yöntemlerini çağırarak kitaplık bayraklarını ve desteklenen kategorileri <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetLibFlags2%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetSupportedCategoryFields2%2A> talep ediyor. Bir noktada, araçlardan biri bu kitaplıktan veri isteğinde bulundurarak nesne yöneticisi yöntemini çağırarak en üst düzey sembollerin listesini <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetList2%2A> ister. Yanıt olarak, kitaplık sembollerin bir listesini üretir ve arabirim aracılığıyla Visual Studio nesne yöneticisine <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> gösterir. Nesne [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yöneticisi, yöntemini çağırarak listede kaç öğe olduğunu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetItemCount%2A> belirler. Aşağıdaki tüm istekler, listede yer alan bir öğeyle ilgilidir ve her istekte öğe dizini numarasını sağlar. Nesne Visual Studio yöneticisi, yöntemini çağırarak öğenin türü, erişilebilirliği ve diğer özellikleriyle ilgili bilgileri toplamaya <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetCategoryField2%2A> devam eder.
+ Visual Studio nesne yöneticisine simge listelerini sağlamak için, önce yöntemini çağırarak kitaplığı Visual Studio nesne yöneticisine kaydetmeniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsObjectManager2.RegisterSimpleLibrary%2A> gerekir. Kitaplık kaydedildikten sonra, Visual Studio yöneticisi kitaplığın özellikleri hakkında belirli bilgileri talep eder. Örneğin, ve yöntemlerini çağırarak kitaplık bayraklarını ve desteklenen kategorileri <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetLibFlags2%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetSupportedCategoryFields2%2A> talep ediyor. Bir noktada, araçlardan biri bu kitaplıktan veri isteğinde bulundurarak nesne yöneticisi yöntemini çağırarak en üst düzey sembollerin listesini <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleLibrary2.GetList2%2A> ister. Yanıt olarak, kitaplık bir sembol listesi üretir ve arabirim aracılığıyla Visual Studio nesne yöneticisine <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2> gösterir. Nesne [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yöneticisi, yöntemini çağırarak listede kaç öğe olduğunu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetItemCount%2A> belirler. Aşağıdaki tüm istekler, listede yer alan bir öğeyle ilgilidir ve her istekte öğe dizini numarasını sağlar. Nesne Visual Studio yöneticisi, yöntemini çağırarak öğenin türü, erişilebilirliği ve diğer özellikleriyle ilgili bilgileri toplamaya <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetCategoryField2%2A> devam eder.
 
  yöntemini çağırarak öğenin adını belirler <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetTextWithOwnership%2A> ve yöntemini çağırarak simge bilgilerini talep <xref:Microsoft.VisualStudio.Shell.Interop.IVsSimpleObjectList2.GetDisplayData%2A> ediyor. Simge öğe adının sol tarafından görüntülenir ve öğenin türünü, erişilebilirliği ve diğer özellikleri gösterir.
 

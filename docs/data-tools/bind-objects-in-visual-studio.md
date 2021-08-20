@@ -1,6 +1,6 @@
 ---
 title: Veri bağlama özel nesneleri
-description: Nesneleri Visual Studio 'da veri kaynakları olarak bağlayın. Uygulamanızda veri kaynağı olarak özel nesnelerle çalışmaya yönelik tasarım zamanı araçlarını kullanın.
+description: Nesneleri Visual Studio veri kaynakları olarak bağlayın. Uygulamanızda veri kaynağı olarak özel nesnelerle çalışmaya yönelik tasarım zamanı araçlarını kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,16 +16,17 @@ ms.assetid: ed743ce6-73af-45e5-a8ff-045eddaccc86
 author: ghogen
 ms.author: ghogen
 manager: jmartens
+ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 140700615759404f02109c4506f4c27d083a74b1
-ms.sourcegitcommit: 80fc9a72e9a1aba2d417dbfee997fab013fc36ac
+ms.openlocfilehash: b837cf77103efa7cf07bdc6f32aabb5028670638
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106215545"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139598"
 ---
-# <a name="bind-objects-as-data-sources-in-visual-studio"></a>Nesneleri Visual Studio 'da veri kaynakları olarak bağlama
+# <a name="bind-objects-as-data-sources-in-visual-studio"></a>Nesneleri Visual Studio veri kaynakları olarak bağlama
 
 Visual Studio, uygulamanızda veri kaynağı olarak özel nesnelerle çalışmaya yönelik tasarım zamanı araçları sağlar. UI denetimlerine bağladığınızda bir nesnedeki verileri bir veritabanından depolamak istediğinizde, önerilen yaklaşım, sınıfı veya sınıfları oluşturmak için Entity Framework kullanmaktır. Entity Framework, tüm ortak değişiklik izleme kodunu otomatik olarak oluşturur, bu da DbSet nesnesinde AcceptChanges çağırdığınızda yerel nesnelerdeki tüm değişikliklerin otomatik olarak veritabanına kalıcı hale geldiğini gösterir. Daha fazla bilgi için bkz. [Entity Framework belgeleri](https://ef.readthedocs.org/en/latest/).
 
@@ -34,13 +35,13 @@ Visual Studio, uygulamanızda veri kaynağı olarak özel nesnelerle çalışmay
 
 ## <a name="object-requirements"></a>Nesne gereksinimleri
 
-Özel nesnelerin Visual Studio 'daki veri tasarımı araçlarıyla çalışması için tek gereksinim, nesnenin en az bir ortak özelliğe ihtiyacı vardır.
+özel nesnelerin Visual Studio içindeki veri tasarımı araçlarıyla çalışması için tek gereksinim, nesnenin en az bir ortak özelliğe ihtiyacı vardır.
 
-Genellikle, özel nesneler bir uygulama için veri kaynağı olarak görev yapacak belirli arabirimlerin, oluşturucuların veya özniteliklerin gerekli olmasını gerektirmez. Ancak, veri **kaynakları** penceresinden nesneyi bir tasarım yüzeyine sürükleyerek veri bağlantılı bir denetim oluşturun ve nesne <xref:System.ComponentModel.ITypedList> veya arabirimini uygularsa <xref:System.ComponentModel.IListSource> , nesnenin varsayılan bir oluşturucusu olması gerekir. Aksi halde, Visual Studio veri kaynağı nesnesini örneklemez ve öğeyi tasarım yüzeyine sürüklediğinizde bir hata görüntüler.
+Genellikle, özel nesneler bir uygulama için veri kaynağı olarak görev yapacak belirli arabirimlerin, oluşturucuların veya özniteliklerin gerekli olmasını gerektirmez. Ancak, veri **kaynakları** penceresinden nesneyi bir tasarım yüzeyine sürükleyerek veri bağlantılı bir denetim oluşturun ve nesne <xref:System.ComponentModel.ITypedList> veya arabirimini uygularsa <xref:System.ComponentModel.IListSource> , nesnenin varsayılan bir oluşturucusu olması gerekir. aksi takdirde, Visual Studio veri kaynağı nesnesini örneklemez ve öğeyi tasarım yüzeyine sürüklediğinizde bir hata görüntüler.
 
 ## <a name="examples-of-using-custom-objects-as-data-sources"></a>Özel nesneleri veri kaynağı olarak kullanma örnekleri
 
-Bir veri kaynağı olarak nesnelerle çalışırken uygulama mantığınızı uygulamak için çok daha az yol olsa da, SQL veritabanları için Visual Studio tarafından oluşturulan TableAdapter nesneleri kullanılarak Basitleştirilen birkaç standart işlem vardır. Bu sayfada, TableAdapters kullanarak bu standart işlemlerin nasıl uygulanacağı açıklanmaktadır. Özel nesnelerinizi oluşturmaya yönelik bir kılavuz olarak tasarlanmamıştır. Örneğin, genellikle nesnelerinizin belirli bir uygulamasına veya uygulamanın mantığına bakılmaksızın aşağıdaki standart işlemleri gerçekleştirirsiniz:
+uygulama mantığınızı bir veri kaynağı olarak nesnelerle çalışırken uygulamanın mantığını uygulamak için sayısız yol olsa da, SQL veritabanları için Visual Studio tarafından oluşturulan TableAdapter nesneleri kullanılarak basitleştirilen birkaç standart işlem vardır. Bu sayfada, TableAdapters kullanarak bu standart işlemlerin nasıl uygulanacağı açıklanmaktadır. Özel nesnelerinizi oluşturmaya yönelik bir kılavuz olarak tasarlanmamıştır. Örneğin, genellikle nesnelerinizin belirli bir uygulamasına veya uygulamanın mantığına bakılmaksızın aşağıdaki standart işlemleri gerçekleştirirsiniz:
 
 - Nesnelere veri yükleme (genellikle bir veritabanından).
 
@@ -65,7 +66,7 @@ Bu örnekte, TableAdapters kullanarak nesnelerinizi veri yüklersiniz. Varsayıl
 Özel nesnelerinizi verilerle yüklemenin en kolay yolu, `TableAdapter.GetData` yöntemi çağırmak, döndürülen veri tablosundaki satır koleksiyonunda döngü yapmak ve her bir nesneyi her satırdaki değerlerle doldurmaktır. `GetData`Bir TableAdapter 'a eklenen herhangi bir sorgu için, doldurulmuş bir veri tablosu döndüren bir yöntem oluşturabilirsiniz.
 
 > [!NOTE]
-> Visual Studio, TableAdapter sorgularını `Fill` ve `GetData` Varsayılan olarak adlandırır, ancak bu adları geçerli bir yöntem adıyla değiştirebilirsiniz.
+> Visual Studio TableAdapter sorgularını `Fill` ve `GetData` varsayılan olarak adlarını, ancak bu adları geçerli bir yöntem adıyla değiştirebilirsiniz.
 
 Aşağıdaki örnek, bir veri tablosundaki satırlarda nasıl döngü yapılacağını ve bir nesneyi verilerle doldurmayı gösterir:
 
@@ -76,7 +77,7 @@ Aşağıdaki örnek, bir veri tablosundaki satırlarda nasıl döngü yapılaca�
 
 Nesneleriniz için koleksiyon sınıfları oluşturabilir veya [BindingSource bileşeni](/dotnet/framework/winforms/controls/bindingsource-component)tarafından otomatik olarak sağlanmış olan türsüz koleksiyonları kullanabilirsiniz.
 
-Nesneler için özel bir koleksiyon sınıfı oluştururken, ' den devralmayı öneririz <xref:System.ComponentModel.BindingList%601> . Bu genel sınıf, koleksiyonunuzu yönetmek için işlevsellik ve Windows Forms ' de veri bağlama altyapısına bildirim gönderen olayları tetikleyebilme olanağı sağlar.
+Nesneler için özel bir koleksiyon sınıfı oluştururken, ' den devralmayı öneririz <xref:System.ComponentModel.BindingList%601> . bu genel sınıf, koleksiyonunuzu yönetmek için işlevsellik ve Windows Forms ' de veri bağlama altyapısına bildirim gönderen olayları tetikleyebilme olanağı sağlar.
 
 İçinde otomatik olarak oluşturulan koleksiyon, <xref:System.Windows.Forms.BindingSource> <xref:System.ComponentModel.BindingList%601> türü belirlenmiş koleksiyon için bir kullanır. Uygulamanız ek işlevsellik gerektirmiyorsa, koleksiyonunuzu içinde koruyabilirsiniz <xref:System.Windows.Forms.BindingSource> . Daha fazla bilgi için bkz <xref:System.Windows.Forms.BindingSource.List%2A> <xref:System.Windows.Forms.BindingSource> . sınıfının özelliği.
 
@@ -134,9 +135,9 @@ Uygulamanız değişikliklerin izlenmesini gerektiriyorsa ve önerilen değişik
 
 Nesnelerinizle olan verileri TableAdapter DBDirect yöntemlerine geçirerek verileri veritabanına geri kaydedin.
 
-Visual Studio doğrudan veritabanına karşı yürütülebilecek DBDirect yöntemleri oluşturur. Bu yöntemler veri kümesi veya DataTable nesneleri gerektirmez.
+Visual Studio doğrudan veritabanına karşı yürütülebilecek dbdirect yöntemleri oluşturur. Bu yöntemler veri kümesi veya DataTable nesneleri gerektirmez.
 
-|TableAdapter DBDirect yöntemi|Description|
+|TableAdapter DBDirect yöntemi|Açıklama|
 | - |-----------------|
 |`TableAdapter.Insert`|Bir veritabanına yeni kayıtlar ekler ve tek tek sütun değerlerini Yöntem parametreleri olarak geçirmenize olanak sağlar.|
 |`TableAdapter.Update`|Bir veritabanındaki mevcut kayıtları güncelleştirir. Update yöntemi, özgün ve yeni sütun değerlerini Yöntem parametreleri olarak alır. Özgün değerler özgün kaydı bulmak için kullanılır ve yeni değerler bu kaydı güncelleştirmek için kullanılır.<br /><br /> `TableAdapter.Update`Yöntemi, bir veri kümesindeki değişiklikleri <xref:System.Data.DataSet> <xref:System.Data.DataTable> <xref:System.Data.DataRow> <xref:System.Data.DataRow> yöntem parametresi olarak bir,, veya dizisi alarak veritabanına geri mutabık kılmak için de kullanılır.|

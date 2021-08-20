@@ -1,6 +1,6 @@
 ---
-description: Bir nesne konumu ya da 64 bitlik bir bellek adresini bir bellek bağlamına dönüştürür.
-title: 'IDebugBinder3:: GetMemoryContext64 | Microsoft Docs'
+description: Nesne konumunu veya 64 bit bellek adresini bir bellek bağlamına dönüştürür.
+title: IDebugBinder3::GetMemoryContext64 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,20 +10,21 @@ ms.assetid: f021fd16-9fc7-4c41-86af-e54e6224cfbb
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 263d50a0c9f3f9b2ab0aa74a05647abc1930970c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cd51a8e916372d1daa63a86132269b0afa60c355
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094230"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145347"
 ---
 # <a name="idebugbinder3getmemorycontext64"></a>IDebugBinder3::GetMemoryContext64
-Bir nesne konumu ya da 64 bitlik bir bellek adresini bir bellek bağlamına dönüştürür.
+Nesne konumunu veya 64 bit bellek adresini bir bellek bağlamına dönüştürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,19 +46,19 @@ int GetMemoryContext64 (
 
 ## <a name="parameters"></a>Parametreler
 `pField`\
-'ndaki Bulacak nesneyi açıklayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) . Varsa `NULL` , `dwConstant` bunun yerine kullanın.
+[in] Buluna nesneyi açıklayan bir [IDebugField.](../../../extensibility/debugger/reference/idebugfield.md) ise, `NULL` bunun yerine `dwConstant` kullanın.
 
 `uConstant`\
-'ndaki 0x50000000 gibi 64 bitlik bir bellek adresi.
+[in] 64 bit bellek adresi, örneğin 0x50000000.
 
 `ppMemCxt`\
-dışı Nesnenin adresini veya bellekteki adresi temsil eden [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimini döndürür.
+[out] Nesnenin adresini veya bellekte adresi temsil eden [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnekler [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) arabirimini uygulayan bir nesne oluşturur ve bu yöntemi bellek bağlamını almak için kullanır.
+Aşağıdaki örnekler [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) arabirimini uygulayan bir nesnesi oluşturur ve bellek bağlamını almak için bu yöntemi kullanır.
 
 ```cpp
 HRESULT CValueProperty::GetMemoryContext ( IDebugMemoryContext2** out_ppMemoryContext )

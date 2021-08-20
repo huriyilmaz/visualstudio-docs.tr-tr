@@ -10,22 +10,23 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 8126d2331e126cf9162a0334b59be239684754c5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2949dcb0c7a1343a066599fa6c1950bc757aea2f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99886099"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140901"
 ---
 # <a name="understand-performance-collection-methods"></a>Performans toplama yöntemlerini anlama
 
-Visual Studio profil oluşturma araçları, performans verilerini toplamak için beş yöntem sağlar. Bu makalede, farklı yöntemler açıklanmakta ve belirli bir yöntemle verilerin toplanması için uygun olabilecek senaryolar önerilir.
+Visual Studio Profil oluşturma araçları, performans verilerini toplamak için beş yöntem sağlar. Bu makalede, farklı yöntemler açıklanmakta ve belirli bir yöntemle verilerin toplanması için uygun olabilecek senaryolar önerilir.
 
 > [!NOTE]
-> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
+> Windows 8 ve Windows Server 2012 gelişmiş güvenlik özellikleri Visual Studio profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. bkz. [Windows 8 ve Windows Server 2012 uygulamalarda performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -33,7 +34,7 @@ Visual Studio profil oluşturma araçları, performans verilerini toplamak için
 |[Yapısı](#instrumentation)|Her işlev çağrısıyla ilgili ayrıntılı zamanlama bilgilerini toplar.|
 |[Eşzamanlılık](#concurrency)|Çok iş parçacıklı uygulamalarla ilgili ayrıntılı bilgi toplar.|
 |[.NET belleği](#net-memory)|.NET bellek ayırma ve çöp toplama hakkında ayrıntılı bilgiler toplar.|
-|[Katman etkileşimi](#tier-interaction)|SQL Server veritabanına yönelik zaman uyumlu ADO.NET işlev çağrıları hakkında bilgi toplar.<br /><br /> Herhangi bir Visual Studio sürümü, katman etkileşimi profil verileri toplayabilir. Ancak, bu verileri yalnızca Visual Studio Enterprise görüntüleyebilirsiniz.|
+|[Katman etkileşimi](#tier-interaction)|bir SQL Server veritabanına yönelik zaman uyumlu ADO.NET işlev çağrıları hakkında bilgi toplar.<br /><br /> Visual Studio herhangi bir sürümü, katman etkileşim profili verilerini toplayabilir. Ancak, bu verileri yalnızca Visual Studio Enterprise görüntüleyebilirsiniz.|
 
 Profil oluşturma yöntemlerinden bazılarını kullanarak, yazılım ve donanım performans sayaçları gibi ek veriler de toplayabilirsiniz. Daha fazla bilgi için bkz. [ek performans verileri toplama](../profiling/collecting-additional-performance-data.md).
 
@@ -41,14 +42,14 @@ Profil oluşturma yöntemlerinden bazılarını kullanarak, yazılım ve donanı
 
 Örnekleme profili oluşturma yöntemi, bir uygulamanın profil oluşturma çalışması sırasında çalıştığı iş hakkındaki istatistiksel verileri toplar. Örnekleme yöntemi hafif ve uygulama yöntemlerinin yürütülmesi üzerinde çok daha etkilidir.
 
-Örnekleme, Visual Studio profil oluşturma araçlarının varsayılan yöntemidir. Aşağıdaki görevler için kullanışlıdır:
+örnekleme, Visual Studio profil oluşturma araçlarının varsayılan yöntemidir. Aşağıdaki görevler için kullanışlıdır:
 
 - Uygulamanızın performansının ilk araştırması
 - Mikro işlemcinin (CPU) kullanımı ile ilgili performans sorunlarını araştırma
 
 Örnekleme profili oluşturma yöntemi, küme aralıklarında bilgisayar CPU 'sunu keser ve işlev çağrı yığınını toplar. Çalışan işlev için dışlamalı örnek sayımlar artırılır. Dahil edilen sayımlar, Çağrı yığınındaki tüm çağırma işlevleri için artırılır. Örnekleme raporları, profili oluşturulmuş modüller, işlevler, kaynak kodu satırları ve yönergeler için bu sayımların toplamlarını sunar.
 
-Varsayılan olarak, profil oluşturucu örnekleme aralığını CPU döngüleri olarak ayarlar. Aralık türünü başka bir CPU performans sayacı olarak değiştirebilir veya Aralık için sayaç olaylarının sayısını ayarlayabilirsiniz. Katman etkileşimi profil oluşturma (tıp) verilerini de toplayabilirsiniz. Bu veriler, ADO.NET aracılığıyla SQL Server veritabanına yapılan sorgular hakkında bilgiler sağlar.
+Varsayılan olarak, profil oluşturucu örnekleme aralığını CPU döngüleri olarak ayarlar. Aralık türünü başka bir CPU performans sayacı olarak değiştirebilir veya Aralık için sayaç olaylarının sayısını ayarlayabilirsiniz. Katman etkileşimi profil oluşturma (tıp) verilerini de toplayabilirsiniz. bu veriler, ADO.NET aracılığıyla bir SQL Server veritabanına yapılan sorgular hakkında bilgiler sağlar.
 
 [Örnekleme kullanarak performans istatistikleri toplama](../profiling/collecting-performance-statistics-by-using-sampling.md)
 
@@ -103,7 +104,7 @@ Eşzamanlılık görselleştiricisi şunları bulmanıza yardımcı olacak grafi
 - Eşitleme gecikmeleri.
 - Çakışan g/ç 'nin alanı.
 
-  Mümkün olduğunda, grafik çıkışı çağrı yığınından ve kaynak kodundaki verilere bağlantı sağlar. Eşzamanlılık görselleştirme verileri, yalnızca komut satırı uygulamaları ve Windows uygulamaları için toplanabilir.
+  Mümkün olduğunda, grafik çıkışı çağrı yığınından ve kaynak kodundaki verilere bağlantı sağlar. eşzamanlılık görselleştirme verileri, yalnızca komut satırı uygulamaları ve Windows uygulamaları için toplanabilir.
 
 [Kaynak çakışması veri değerlerini anlama](../profiling/understanding-resource-contention-data-values.md)
 
@@ -115,7 +116,7 @@ Eşzamanlılık görselleştiricisi şunları bulmanıza yardımcı olacak grafi
 
 ## <a name="net-memory"></a>.NET belleği
 
-.NET bellek ayırma profil oluşturma yöntemi, profili oluşturulmuş bir uygulamadaki bir .NET Framework nesnesinin her ayırmada CPU 'YU keser. Profil Oluşturucu ayrıca nesne yaşam süresi verilerini toplarken, .NET Framework her bir çöp toplama işleminden sonra CPU 'YU keser.
+.net bellek ayırma profil oluşturma yöntemi, profili oluşturulmuş bir uygulamadaki bir .NET Framework nesnesinin her ayırmada CPU 'yu keser. profil oluşturucu ayrıca nesne yaşam süresi verilerini toplarken, .NET Framework her bir çöp toplama işleminden sonra CPU 'yu keser.
 
 Profiler, bir ayırma içinde oluşturulan veya atık toplamada yok edilen nesnelerin türü, boyutu ve sayısı hakkında bilgi toplar.
 

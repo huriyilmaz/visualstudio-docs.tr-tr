@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a16e48b1be5015a5fe7999ede767202569d89ba19b0224f3bd193b211af45f5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ec18cce8cb99eccf4ae38bd3f49f14d8fce67b39
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121266317"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122135032"
 ---
 # <a name="xml-schema-designer-overview"></a>XML şema tasarımcısına genel bakış
 

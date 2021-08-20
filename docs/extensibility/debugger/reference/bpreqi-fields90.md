@@ -9,17 +9,18 @@ ms.assetid: bf6f7efc-39f2-46a2-906d-c3647bf89995
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e977d6e85430dbd9f1931bd4fb62c02f22181d5a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 859da0750f3522ae8a889612ae13db43816aa4d1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105067614"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145750"
 ---
 # <a name="bpreqi_fields90"></a>BPREQI_FIELDS90
 Kesme noktası isteği hakkında alınacak bilgileri belirten geçerli değerleri sıralar. Bu sabit listesi [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) numaralandırmayı genişletir.

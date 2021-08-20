@@ -11,14 +11,15 @@ ms.assetid: b101853e-2bcf-47c1-acef-e13984c7ea9d
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ef5fd04d3c56918885bd9301f1f821c01c018b9b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: ce245c8c9797aaff8ed65759b8b06e4334567df5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157541"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122134316"
 ---
 # <a name="idialinenumberget_linenumberend"></a>IDiaLineNumber::get_lineNumberEnd
 Deyim veya ifadenin bittiği tek tabanlı kaynak satır numarasını alır.

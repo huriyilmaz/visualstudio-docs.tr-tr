@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e97fb25d9d0d3f91914d3e8d965796877b77a8dfc41a0812b1b6cc0a93aba794
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 57871318596335544c518b948ec93680b07f6335
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121400887"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144593"
 ---
 # <a name="scccheckin-function"></a>SccCheckin işlevi
 Bu işlev, önceden kullanıma alınmış dosyaları kaynak denetim sistemine iade eder, değişiklikleri depolayarak ve yeni bir sürüm oluşturuyor. Bu işlev bir sayı ve iade edilecek dosyaların bir adı dizisiyle çağrılır.

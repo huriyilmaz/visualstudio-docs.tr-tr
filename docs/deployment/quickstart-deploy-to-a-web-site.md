@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 825908633e12727d3c792cfa9793486f2d9f005203a8e17646fdbf1b349d7d85
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 17cd220c3c04c36f0870f6644b63a3abb190f81a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453044"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127850"
 ---
 # <a name="publish-a-web-app-to-a-web-site-using-visual-studio"></a>Bir Web uygulamasını Visual Studio kullanarak Web sitesinde yayımlama
 

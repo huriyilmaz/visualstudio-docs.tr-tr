@@ -1,6 +1,6 @@
 ---
 title: Görünümü Yenile | Microsoft Docs
-description: Visual Studio 'da hata ayıklarken Spy + + aracında bir görünümü yenileme bölümüne bakın. Spy + +, sistem tablolarının bir anlık görüntüsünü alır ve bu bilgilere göre bir görünümü yeniler.
+description: Visual Studio hata ayıklarken Spy + + aracında görünümü yenileme bölümüne bakın. Spy + +, sistem tablolarının bir anlık görüntüsünü alır ve bu bilgilere göre bir görünümü yeniler.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -10,14 +10,15 @@ ms.assetid: 2ed0ba66-7259-486b-a518-aab6e45030aa
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e750662c08ecd9b289e61410d1fdd40c8739ed24
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 0ce476104f745b430fee72129577b02438d62dd0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99885176"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112769"
 ---
 # <a name="how-to-refresh-the-view"></a>Nasıl yapılır: Görünümü Yenileme
 Spy + + sistem tablolarının bir "anlık görüntüsünü" alır ve bu bilgilere göre bir görünümü yeniler. Düzenli aralıklarla sistem görünümlerinizi yenilemeniz önemlidir. Açık bir Spy + + görünümleriniz varsa ve görünümü yenilememişse, daha sonra oluşturulan bu işlem, iş parçacığı ve pencereleri görmezsiniz. Ayrıca, artık mevcut olmayan öğeleri de görebilirsiniz. **Yenile** komutu iletiler görünümü dışındaki tüm görünümlerde kullanılabilir.

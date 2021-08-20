@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9fc8d82f914b77799dc4fa2c3b744b654b0e34cf117580526fe8effc318a71d5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e508ef56dd6b3a52e8c65431a263d3bda9a47caf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380121"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128978"
 ---
 # <a name="idiasessionfindsymbolsforacceleratorpointertag"></a>IDiaSession::findSymbolsForAcceleratorPointerTag
 Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık gelen değişkeni için simgelerin bir sabit değerini döndürür.

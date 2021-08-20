@@ -12,12 +12,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: c1133e5d840e1d5e13a8d184c9459fd8757e8d7932c3580d5d44e2ac5dce2b35
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d563c8ecfcdd52020e8adb1dfc04856d027fddc8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121409065"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148538"
 ---
 # <a name="how-to-specify-the-timing-details-storage-property-for-a-load-test-run-setting"></a>Nasıllı: Yük testi çalıştırma ayarı için zamanlama ayrıntıları depolama özelliğini belirtme
 

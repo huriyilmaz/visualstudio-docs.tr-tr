@@ -11,14 +11,15 @@ ms.assetid: e3e6e88b-0594-4d82-9457-480239a2e85a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c0bbc7c90a83dde58a76f17a29a70b03419e11ea
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 5e109eb52fc03f68befd57f13bb58461553b7392
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147494"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161432"
 ---
 # <a name="idiastackframeget_functionstart"></a>IDiaStackFrame::get_functionStart
 Bloğun bir işlevin giriş noktasını içerip içermediğini gösteren bir bayrak alır.

@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: radyo düğmelerini kullanarak bir belgedeki grafiği güncelleştirme'
-description: Kullanıcılara belgedeki grafik stillerini seçme seçeneği sunmak üzere Microsoft Word için belge düzeyi özelleştirmesinde radyo düğmelerini nasıl kullanabileceğinizi öğrenin.
+description: kullanıcılara belgedeki grafik stillerini seçme seçeneğini sunmak için Microsoft Word için belge düzeyi özelleştirmesinde radyo düğmelerini nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -14,17 +14,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 4d6689d82051ef5f8c887c19ec91cbb6d513b8b8
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: d95ab38581945c61000b3cfcca26ed1ba3fd2c5d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107828208"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155416"
 ---
 # <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>İzlenecek yol: radyo düğmelerini kullanarak bir belgedeki grafiği güncelleştirme
-  Bu izlenecek yol, kullanıcılara belgedeki grafik stillerini seçme seçeneği sunmak üzere Microsoft Office Word için belge düzeyi özelleştirmesinde radyo düğmelerinin nasıl kullanılacağını gösterir.
+  bu izlenecek yol, kullanıcılara belgedeki grafik stillerini seçme seçeneği sunmak üzere Microsoft Office Word için belge düzeyi özelleştirmesinde radyo düğmelerinin nasıl kullanılacağını gösterir.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
@@ -36,7 +37,7 @@ ms.locfileid: "107828208"
 
 - Bir seçenek belirlendiğinde grafik stilini değiştirme.
 
-  Sonucu tamamlanmış bir örnek olarak görmek için bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)Içindeki Word denetimleri örneği.
+  sonucu tamamlanmış bir örnek olarak görmek için [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)' da Word denetimleri örneğine bakın.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -52,21 +53,21 @@ ms.locfileid: "107828208"
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. **Grafiğim** adıyla bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **Grafiğim** adıyla bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini** Için **My Chart Options** projesini ekler.
+     Visual Studio yeni Word belgesini tasarımcıda açar ve **grafik seçenekleri** projesini **Çözüm Gezgini** ekler.
 
 ## <a name="add-a-chart-to-the-document"></a>Belgeye grafik ekleme
 
 ### <a name="to-add-a-chart"></a>Grafik eklemek için
 
-1. Visual Studio tasarımcısında barındırılan Word belgesinde, şeritte **Ekle** sekmesine tıklayın.
+1. Visual Studio tasarımcısında barındırılan Word belgesinde, şeritte **ekle** sekmesine tıklayın.
 
 2. **Metin** grubunda, **nesne Ekle** açılır düğmesine tıklayın ve **nesne**' ye tıklayın.
 
      **Nesne** iletişim kutusu açılır.
 
-3. **Yeni oluştur** sekmesinin **nesne türü** listesinde **grafik Microsoft Graph** seçin ve ardından **Tamam**' a tıklayın.
+3. **yeni oluştur** sekmesinin **nesne türü** listesinde **grafik Microsoft Graph** seçin ve ardından **tamam**' a tıklayın.
 
      Ekleme noktasındaki belgeye bir grafik eklenir ve **veri sayfası** penceresi bazı varsayılan verilerle birlikte görüntülenir.
 
@@ -83,11 +84,11 @@ ms.locfileid: "107828208"
 
 1. **Çözüm Gezgini** Içindeki **My Chart Options** projesini seçin.
 
-2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
+2. **Project** menüsünde, **yeni öğe ekle**' ye tıklayın.
 
 3. **Yeni öğe Ekle** Iletişim kutusunda **Kullanıcı denetimi**' ne tıklayın, denetimi **ChartOptions olarak** adlandırın ve **Ekle**' ye tıklayın.
 
-### <a name="to-add-windows-form-controls-to-the-user-control"></a>Kullanıcı denetimine Windows form denetimleri eklemek için
+### <a name="to-add-windows-form-controls-to-the-user-control"></a>kullanıcı denetimine Windows Form denetimleri eklemek için
 
 1. Kullanıcı denetimi tasarımcıda görünmüyorsa, **Çözüm Gezgini**' de **ChartOptions** ' a çift tıklayın.
 
@@ -122,13 +123,13 @@ ms.locfileid: "107828208"
 ## <a name="add-references"></a>Başvuru Ekle
  Bir belgedeki Kullanıcı denetiminden grafiğe erişmek için, projenizdeki derlemeye bir başvurunuz olması gerekir `Microsoft.Office.Interop.Graph` .
 
-### <a name="to-add-a-reference-to-the-microsoftofficeinteropgraph-assembly"></a>Microsoft. Office. Interop. Graph derlemesine bir başvuru eklemek için
+### <a name="to-add-a-reference-to-the-microsoftofficeinteropgraph-assembly"></a>Microsoft 'a bir başvuru eklemek için. Office. Derlemesinde. Graph derlemesi
 
-1. **Proje** menüsünde, **Başvuru Ekle**' ye tıklayın.
+1. **Project** menüsünde **başvuru ekle**' ye tıklayın.
 
      **Başvuru Ekle** iletişim kutusu görüntülenir.
 
-2. **.Net** sekmesinde, **Microsoft. Office. Interop. Graph** ' i seçin ve **Tamam**' a tıklayın. Derlemenin 14.0.0.0 sürümünü seçin.
+2. **.Net** sekmesinde, **Microsoft. Office ' yi seçin. Derlemesinde. Graph** **Tamam**' a tıklayın. Derlemenin 14.0.0.0 sürümünü seçin.
 
 ## <a name="change-the-chart-style-when-a-radio-button-is-selected"></a>Bir radyo düğmesi seçildiğinde grafik stilini değiştirme
  Düğmelerin doğru çalışmasını sağlamak için Kullanıcı denetiminde genel bir olay oluşturun, seçim türünü ayarlamak için bir özellik ekleyin ve radyo düğmelerinin her birinin olayı için bir yordam oluşturun `CheckedChanged` .
@@ -164,7 +165,7 @@ ms.locfileid: "107828208"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet13":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb" id="Snippet13":::
 
-5. C# dilinde radyo düğmeleri için olay işleyicileri eklemeniz gerekir. `ChartOptions`Öğesine çağrısının altında kodu oluşturucuya ekleyebilirsiniz `InitializeComponent` . Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
+5. C# dilinde radyo düğmeleri için olay işleyicileri eklemeniz gerekir. `ChartOptions`Öğesine çağrısının altında kodu oluşturucuya ekleyebilirsiniz `InitializeComponent` . olay işleyicileri oluşturma hakkında bilgi için bkz. [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs" id="Snippet14":::
 
@@ -198,24 +199,24 @@ ms.locfileid: "107828208"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs" id="Snippet16":::
 
 ## <a name="test-the-application"></a>Uygulamayı test edin
- Artık bir radyo düğmesini seçtiğinizde grafik stilinin doğru şekilde güncelleştirildiğinden emin olmak için belgenizi test edebilirsiniz.
+ Artık bir radyo düğmesini seçerek grafik stilinin doğru güncelleştirilmiş olduğundan emin olmak için belgenizi test edin.
 
 ### <a name="to-test-your-document"></a>Belgenizi test etmek için
 
-1. Projenizi çalıştırmak için **F5** tuşuna basın.
+1. Projenizi **çalıştırmak için F5** tuşuna basın.
 
-2. Çeşitli radyo düğmeleri seçin.
+2. Çeşitli radyo düğmelerini seçin.
 
-3. Grafik stilinin seçimle eşleşecek şekilde değişiklik olduğunu onaylayın.
+3. Grafik stilinin seçime uygun şekilde değiştiklerini onaylayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Daha sonra gelebilecek bazı görevler şunlardır:
+ Bir sonraki görevlerden bazıları:
 
-- Bir metin kutusunu doldurmak için düğme kullanma. Daha fazla bilgi için bkz. [Izlenecek yol: bir düğme kullanarak bir belgedeki metin kutusunda metni görüntüleme](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md).
+- Bir metin kutusunu doldurmak için düğme kullanma. Daha fazla bilgi için [bkz. Adım adım: Düğme kullanarak belge içinde metin görüntüleme.](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)
 
-- Birleşik giriş kutusundan bir stil seçerek biçimlendirmeyi değiştirin. Daha fazla bilgi için bkz. [Izlenecek yol: CheckBox denetimlerini kullanarak belge biçimlendirmesini değiştirme](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md).
+- Birleşik giriş kutusundan bir stil seçerek biçimlendirmeyi değiştirme. Daha fazla bilgi için [bkz. Adım adım: CheckBox denetimlerini kullanarak belge biçimlendirmesini değiştirme.](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Word kullanarak izlenecek yollar](../vsto/walkthroughs-using-word.md)
-- [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
-- [Office belgelerindeki Windows Forms denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
+- [Office örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
+- [Office Windows Form denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
