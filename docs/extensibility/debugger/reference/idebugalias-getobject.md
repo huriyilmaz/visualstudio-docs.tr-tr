@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 7a92702163d0430e732f27f7155f2114137d00593bca90d13c49088158c08835
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 686209a07caaf06ec39bb3c3e4f2c9688e6cb392
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434210"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104449"
 ---
 # <a name="idebugaliasgetobject"></a>IDebugAlias::GetObject
 Bu diğer adın için olduğu nesneyi alır.

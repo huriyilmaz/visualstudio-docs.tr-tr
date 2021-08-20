@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: af6773dab502c1e75a274915154008cf9f947bcf1d0192d5fb4ad438d59333c7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c77bf1f7157837b92d7dafe97b5a802fe34baf5a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121361047"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160484"
 ---
 # <a name="m_contingentproperties-field"></a>m_contingentProperties alanı
 Nesnenin ek özelliklerini <xref:System.Threading.Tasks.Task> depolar.

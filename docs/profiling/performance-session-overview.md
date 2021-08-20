@@ -1,6 +1,6 @@
 ---
 title: Performans Oturumuna Genel Bakış | Microsoft Docs
-description: Hızlı bir şekilde üretken olmak ve kodunuzun performansını artırmak için Performans Araçları'nın nasıl kullanılacı olduğunu öğrenin.
+description: Hızlı bir şekilde üretken olmak ve kod kodunuzun performansını artırmak için Performans Araçlarını kullanmayı öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +14,17 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b25024a71607690f4895027e3d3952741007f3cc8314ea879ad26c8f0dea756
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 877fff149234b091792035ade25cb18da7980fd1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121246402"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122107166"
 ---
 # <a name="performance-session-overview"></a>Performans oturumuna genel bakış
 Bu genel bakış, profil oluşturmanın temellerini açıklar. Performans çalışmalarına yeni yeni sahip olan geliştiriciler, bu Profil Oluşturma Araçları hızla üretken olmalarına ve kodlarının performansını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] artırmalarına nasıl yardımcı olduğunu görebilir. Profil oluşturmada deneyimli olan geliştiriciler, belirli yazılım özelliklerine ve işlemlerine Profil Oluşturma Araçları genel bakış elde ediyor olabilir.
 
- Bu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları kaynak kodundaki performans sorunlarını tanımlamanıza ve olası çözümlerin performansını karşılaştırmanıza yardımcı olur. Profil Oluşturma Araçları sihirbazları ve varsayılan ayarlar, birçok performans sorunuyla ilgili hemen içgörüler sağlar. Uygulamanın özellikleri ve seçenekleri Profil Oluşturma Araçları profil oluşturma işlemi üzerinde tam denetim sağlar. Bu denetim, kod bölümlerinin kesin hedefini, blok düzeyinde zamanlama bilgilerini toplamayı ve verilerinize ek işlemci ve sistem performansı verileri eklenmesini içerir.
+ Bu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları kaynak kodundaki performans sorunlarını tanımlamanıza ve olası çözümlerin performansını karşılaştırmanıza yardımcı olur. Profil Oluşturma Araçları sihirbazları ve varsayılan ayarlar, birçok performans sorunu hakkında hemen içgörüler sağlar. Uygulamanın özellikleri ve seçenekleri Profil Oluşturma Araçları profil oluşturma işlemi üzerinde tam denetim sağlar. Bu denetim, kod bölümlerinin kesin hedefini, blok düzeyinde zamanlama bilgilerini toplamayı ve verilerinize ek işlemci ve sistem performansı verileri eklenmesini içerir.
 
  Aşağıdaki adımlar, aşağıdaki adımları kullanarak temel Profil Oluşturma Araçları:
 
@@ -40,10 +40,10 @@ Bu genel bakış, profil oluşturmanın temellerini açıklar. Performans çalı
 
 6. Performans artışını belgeleen bir rapor oluşturma.
 
-   Profil oluşturma tarafından sağlanan bilgilerle çalışmak için, profili oluşturmak istediğiniz ikili dosyalar ve profil oluşturma işletim sisteminin ikilileri için simge Windows sahipsiniz.
+   Profil oluşturma tarafından sağlanan bilgilerle çalışmak için, profili oluşturmak istediğiniz ikili dosyalar ve profil oluşturma işletim sisteminin ikilileri için simge Windows gerekir.
 
 ## <a name="configure-the-performance-session"></a>Performans oturumunu yapılandırma
- Profil oluşturma oturumu yapılandırmak için kullanmak istediğiniz profil oluşturma yöntemini ve toplamak istediğiniz verileri seçin. Performans Profil Oluşturma Araçları **Sihirbazı temel** yapılandırmada size yol gösterir ve daha fazla seçenek eklemek için Performans Oturumu özellik sayfalarını kullanabilirsiniz:
+ Profil oluşturma oturumu yapılandırmak için kullanmak istediğiniz profil oluşturma yöntemini ve toplamak istediğiniz verileri seçin. Performans Profil Oluşturma Araçları **Sihirbazı** temel yapılandırmada size yol gösterir ve daha fazla seçenek eklemek için Performans Oturumu özellik sayfalarını kullanabilirsiniz:
 
 - Profil oluşturma yöntemleri örnekleme, izleme ve bellek ayırmayı içerir.
 
@@ -70,7 +70,7 @@ Bu genel bakış, profil oluşturmanın temellerini açıklar. Performans çalı
 ## <a name="modify-the-application-code"></a>Uygulama kodunu değiştirme
  Bir veya daha fazla ilgili performans sorunu yalıttıktan sonra, IDE kullanarak kodu değiştirebilir ve ardından değişiklikleriniz için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profil oluşturma verilerini toplayabilirsiniz.
 
-## <a name="collect-profiling-data-again-and-compare-the-data-between-the-profiling-runs"></a>Profil oluşturma verilerini yeniden toplayın ve verileri profil oluşturma çalıştırmaları arasında karşılaştırın
+## <a name="collect-profiling-data-again-and-compare-the-data-between-the-profiling-runs"></a>Profil oluşturma verilerini yeniden toplayın ve profil oluşturma çalıştırmaları arasındaki verileri karşılaştırın
  Karşılaştırma Profil Oluşturma Araçları Görünümü, seçilen iki profil oluşturma veri dosyası arasındaki modül, işlev veya satır performansı farkını görüntüler. Karşılaştırmak istediğiniz profil oluşturma veri değerlerini belirtebilirsiniz ve Karşılaştırma Görünümü ile tek tek dosyaların görünümleri arasında geçişebilirsiniz.
 
 ## <a name="generate-a-report-of-the-results"></a>Sonuçların raporunu oluşturma

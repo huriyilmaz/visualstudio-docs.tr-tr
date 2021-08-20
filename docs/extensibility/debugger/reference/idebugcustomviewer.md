@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 45ddf6c4d2c017e397e13c8f98dd4aa60a4f233aa24afb85ea03d19912f9b659
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: deb9e1e50ee8b63e29a409756bdcc09cb4ecc8e7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402980"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111430"
 ---
 # <a name="idebugcustomviewer"></a>IDebugCustomViewer
 bu arabirim, bir ifade değerlendiricisi 'nin (EE) bir özelliğin değerini herhangi bir biçimde görüntülemesini sağlar.

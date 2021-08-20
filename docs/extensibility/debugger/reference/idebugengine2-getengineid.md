@@ -11,17 +11,18 @@ ms.assetid: 0d5674c8-a9b9-4b72-8211-d2d68695775a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2d7a483517f89c91005f465c539d2af4b9d442a8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 079e3b0316bb06edb383dc74ed0e71f157d29a00
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105088035"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122064337"
 ---
 # <a name="idebugengine2getengineid"></a>IDebugEngine2::GetEngineID
 Hata ayıklama altyapısının (DE) GUID 'INI alır.

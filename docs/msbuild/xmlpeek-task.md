@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: cace2a1ac5ecca3a209e242e2341bd6201f4996e785402dd6178ec14ddf90f19
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8bf7e5548223733574b49322dfca21a51d758de5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121257452"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122136592"
 ---
 # <a name="xmlpeek-task"></a>XmlPeek görevi
 

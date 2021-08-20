@@ -7,14 +7,15 @@ ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: jmartens
+ms.technology: vs-rtvs
 ms.workload:
 - data-science
-ms.openlocfilehash: 8091da95ae28d872ef6d3f947beb720dbb009308
-ms.sourcegitcommit: fdba1b294b94e1f6a8e897810646873422393fff
+ms.openlocfilehash: 26a7c3ed6db4ceda5128bee93c607e45a0db3ef0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114679950"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122068689"
 ---
 # <a name="get-started-with-r-tools-for-visual-studio"></a>Visual Studio için R Araçları kullanmaya başlayın
 

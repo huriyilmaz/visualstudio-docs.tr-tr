@@ -1,6 +1,6 @@
 ---
 title: Yapılandırma seçeneklerini yönetme | Microsoft Docs
-description: Visual Studio 'da proje ve çözüm yapılandırma ayarlarını yönetme hakkında bilgi edinmek için, projenizin nasıl oluşturulduğunu, paketleneceğini, dağıtılacağını ve çalıştırılacağını denetleyin.
+description: projenizin nasıl oluşturulacağını, paketleneceğini, dağıtıldığını ve çalıştırılacağını denetlemek için Visual Studio içinde proje ve çözüm yapılandırma ayarlarını yönetmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,14 +10,15 @@ ms.assetid: 596c28ee-f48d-4252-a5c4-f730c43a39e6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: f773148f11a115ee82c8ee84a8d4668001908000
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 067584e222765af13d5e331f71020cfa54954b54
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095205"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122069698"
 ---
 # <a name="managing-configuration-options"></a>Yapılandırma Seçeneklerini Yönetme
 Yeni bir proje türü oluşturduğunuzda, projenizin nasıl oluşturulup paketlenceğini, dağıtıldığını, dağıtılacağını ve çalıştırılacağını belirleyecek proje ve çözüm yapılandırma ayarlarını yönetmeniz gerekir. Aşağıdaki konularda proje ve çözüm yapılandırması ele alınmaktadır.

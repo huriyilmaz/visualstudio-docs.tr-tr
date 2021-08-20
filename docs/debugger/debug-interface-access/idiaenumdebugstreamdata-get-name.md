@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama veri akışının adını alır.
-title: 'IDiaEnumDebugStreamData:: get_name | Microsoft Docs'
+description: Hata ayıklama veri akışının adını alın.
+title: IDiaEnumDebugStreamData::get_name | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: e6cf2bed-ee2b-4122-886d-c20d93df7ff2
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 50a3209a9ba73bc83aa24b26575ad04617453254
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 3641137248b46e43ac1c5c11b1bcc0998e78d384
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158171"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105603"
 ---
 # <a name="idiaenumdebugstreamdataget_name"></a>IDiaEnumDebugStreamData::get_name
-Hata ayıklama veri akışının adını alır.
+Hata ayıklama veri akışının adını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,10 +35,10 @@ HRESULT get_Name (
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-dışı Hata ayıklama veri akışının adını döndürür.
+[out] Hata ayıklama veri akışının adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

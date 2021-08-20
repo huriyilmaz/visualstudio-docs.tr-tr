@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 29b7c2789e9d244f5255f975b11262e2852000b4e18a62bc153f3aa5800777c6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8f2903308d65893ee2c8838174c9086fc62518c5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415201"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144853"
 ---
 # <a name="ienumdebugprograms2clone"></a>IEnumDebugPrograms2::Clone
 Geçerli numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.

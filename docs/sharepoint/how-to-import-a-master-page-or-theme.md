@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: bir ana sayfa veya temayı Içeri aktarma | Microsoft Docs'
-description: SharePoint Designer 'da ana sayfalar ve Temalar için şablonlar oluşturun ve ardından SharePoint sitenizdeki sayfalara tutarlı bir görünüm sağlamak için Visual Studio 'ya aktarın.
+title: 'Nasıl: Ana Sayfayı veya Tema Sayfasını | Microsoft Docs'
+description: SharePoint Designer'da ana sayfalar ve temalar için şablonları oluşturun, ardından Visual Studio sitenize tutarlı bir görünüm SharePoint sayfaları içeri aktarın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,50 +13,51 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 331ae3964de40e6590345aadae59776fe37f467a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 69d304d476be4b1e0ab97500b1f13b04bd68ff1f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99913678"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122093014"
 ---
-# <a name="how-to-import-a-master-page-or-theme"></a>Nasıl yapılır: bir ana sayfa veya temayı Içeri aktarma
-  SharePoint sitenizde sayfalara, ana sayfalar ve Temalar oluşturup kullanarak tutarlı bir görünüm verebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Bu öğeler için şablon sağlamıyor, ancak bunları SharePoint Designer 'da oluşturabilir ve sonra içine aktarabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. Microsoft Web sitesinde [yapı taşı: sayfalar ve Kullanıcı arabirimi](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) .
+# <a name="how-to-import-a-master-page-or-theme"></a>Nasıl olur: Ana sayfayı veya temayı içeri aktarma
+  Ana sayfalar ve temalar oluşturarak SharePoint tutarlı bir görünüm elde edebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]bu öğeler için şablonlar sağlamaz, ancak bunları SharePoint Designer'da oluşturabilir ve içine [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] aktarabilirsiniz. Daha fazla bilgi için Microsoft [web sitesinde Building Block: Pages Kullanıcı Arabirimi](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) ve Kullanıcı Arabirimi makaleye bakın.
 
-### <a name="to-import-a-master-page-or-theme"></a>Ana sayfa veya temayı içeri aktarmak için
+### <a name="to-import-a-master-page-or-theme"></a>Ana sayfayı veya temayı içeri aktarma
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir SharePoint projesi oluşturun veya açın.
+1. içinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir proje oluşturun veya SharePoint açın.
 
-     SharePoint projesi oluşturma hakkında daha fazla bilgi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md).
+     Bir proje oluşturma hakkında bilgi SharePoint için [bkz. SharePoint proje ve proje öğesi şablonları.](../sharepoint/sharepoint-project-and-project-item-templates.md)
 
-2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
+2. Menü çubuğunda Yeni Öğe **Ekle'Project**  >  **seçin.**
 
-3. **Yeni öğe Ekle** iletişim kutusunda, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+3. Yeni Öğe **Ekle iletişim** kutusunda, SharePoint **düğümünü** genişletin ve **ardından 2010 düğümünü** seçin.
 
-4. SharePoint şablonları listesinde **Modül** şablonunu seçin ve ardından modül için bir ad belirleyin.
+4. Modül şablonları SharePoint modül şablonunu **seçin** ve ardından modül için bir ad belirtin.
 
-     Modül, SharePoint 'te belirttiğiniz bir konuma dağıtım için dosyaları (örneğin, ana sayfa veya Tema dosyaları) içerir.
+     Modül, dağıtım sırasında belirttiğiniz bir konuma dağıtım için dosyalar (ana sayfa veya tema dosyaları gibi) SharePoint.
 
-5. Modülünde, *Sample.txt* adlı varsayılan dosyayı silin.
+5. Modülde,Sample.txtadlı varsayılan *Sample.txt.*
 
 6. Modül düğümünü seçin.
 
-7. Menü çubuğunda, **Proje**  >  **Varolan öğe Ekle**' yi seçin ve ardından ana sayfayı veya tema dosyasını seçin.
+7. Menü çubuğunda Var Olan Öğe  >  **Project'ı ve** ardından ana sayfayı veya tema dosyasını seçin.
 
-     Ana sayfa dosyalarının. Master uzantısı vardır ve tema dosyalarında. thmx uzantısı vardır.
+     Ana sayfa dosyalarının bir .master uzantısı ve tema dosyalarının .thmx uzantısı vardır.
 
-8. Ana sayfa eklediyseniz, modülün özelliklerinde **dağıtım çakışma çözümü** ayarını **Otomatik** olarak değiştirin.
+8. Bir ana sayfa eklediyseniz, **modülün özelliklerinde** Dağıtım **ÇakışmaSı** Çözümleme ayarını Otomatik olarak değiştirin.
 
     > [!NOTE]
-    > Ana sayfanın adı, varsayılan ana sayfa veya özel ana sayfa olarak işaretlenen varolan bir ana sayfanın adı ile aynıysa hatalar oluşabilir. Bu sorunu çözme hakkında daha fazla bilgi için bkz. [Izlenecek yol: özel bir ana sayfa ve site sayfasını bir görüntüyle Içeri aktarma](../sharepoint/walkthrough-import-a-custom-master-page-and-site-page-with-an-image.md).
+    > Ana sayfanın adı Varsayılan Ana Sayfa veya Özel Ana Sayfa olarak işaretlenmiş mevcut bir ana sayfanın adıyla aynı olduğunda hatalar oluşabilir. Bu sorunun nasıl çözülecekleri hakkında bilgi için bkz. Adım adım: Özel bir ana sayfayı ve site sayfasını [görüntüsüyle içeri aktarma.](../sharepoint/walkthrough-import-a-custom-master-page-and-site-page-with-an-image.md)
 
-9. Modülünde *Elements.xml*' yi açın.
+9. Modülde, *Elements.xml.*
 
-     *Elements.xml* dosyasını, eklediğiniz ana sayfaya veya temaya başvuracak şekilde güncelleştirmeniz gerekir.
+     Bu dosyanın *Elements.xml* ana sayfaya veya temaya başvurarak güncelleştirmeniz gerekir.
 
-10. Ana sayfa için, var olan modül işaretlemesini aşağıdaki biçimlendirme ile değiştirin.
+10. Ana sayfa için mevcut modül işaretlemesini aşağıdaki işaretlemeyle değiştirin.
 
     ```xml
     <Module Name="[Module Name]" Url="_catalogs/masterpage">
@@ -65,7 +66,7 @@ ms.locfileid: "99913678"
     </Module>
     ```
 
-     Bir tema için, var olan modül işaretlemesini aşağıdaki biçimlendirme ile değiştirin.
+     Bir tema için mevcut modül işaretlemesini aşağıdaki işaretlemeyle değiştirin.
 
     ```xml
     <Module Name="[Module Name]" Url="_catalogs/theme"
@@ -74,25 +75,25 @@ ms.locfileid: "99913678"
     </Module>
     ```
 
-     Yer tutucu değerlerini modülün gerçek adlarıyla ve ana sayfa ya da temaya değiştirdiğinizden emin olun.
+     Yer tutucu değerlerini modülün gerçek adları ve ana sayfa veya tema ile değiştirebilirsiniz.
 
-     Özniteliği, `Type="GhostableInLibrary"` öğenin içerik veritabanına eklendiğini ve `Url` modülün özniteliği dosyanın SharePoint içerik veritabanında nerede depolanacağını belirtir.
+     özniteliği `Type="GhostableInLibrary"` öğenin içerik veritabanına ekli olduğunu gösterir ve modülün özniteliği, dosyanın içerik veritabanında `Url` nereye SharePoint belirtir.
 
-11. Ana sayfanın dağıtım kapsamını değiştirmek için, **Çözüm Gezgini**, özellik tasarımcısında Özellik dosyasını açın ve ardından **kapsam** listesinden yeni bir dağıtım kapsamı seçin.
+11. Ana sayfanın dağıtım kapsamını değiştirmek için, **Çözüm Gezgini** sayfasında özellik dosyasını Özellik Tasarımcısı'nda açın ve Kapsam listesinden yeni bir dağıtım **kapsamı** seçin.
 
-     **Web** değeri, ana sayfanın yalnızca projede belirtilen Web sitesi için geçerli olduğu anlamına gelir. **Site** değeri, ana sayfanın tüm alt siteleri ve kök Web 'i içeren geçerli site koleksiyonuna uygulandığı anlamına gelir. Diğer değerler uygulanmaz.
+     **Web değeri,** ana sayfanın yalnızca projede belirtilen web sitesi için geçerli olduğu anlamına gelir. **Site değeri,** ana sayfanın tüm alt siteleri ve kök web'i içeren geçerli site koleksiyonu için geçerli olduğu anlamına gelir. Diğer değerler geçerli değildir.
 
     > [!NOTE]
-    > Temalar yalnızca site koleksiyonu düzeyine uygulanabileceğinden, bir temanın kapsamını **site** dışında bir şeyle ayarlamanıza gerek kalmaz. Bir tema alt sitede kullanılıyorsa hatalar oluşabilir.
+    > Temalar yalnızca site koleksiyonu düzeyi için geçerli olduğundan, bir temanın kapsamını Site dışında bir şey olarak ayarlamamanizi **öneririz.** Bir tema bir alt sitede kullanılıyorsa hatalar oluşabilir.
 
-12. Menü çubuğunda **Yapı**  >  **dağıtım çözümü**' ni seçin.
+12. Menü çubuğunda Çözümü **Dağıtın'ı**  >  **seçin.**
 
-13. Dosyaların doğru şekilde dağıtılıp dağıtılmadığını doğrulamak için SharePoint sitesini açın, **Site eylemleri** menüsünü seçin, **site ayarları** komutunu seçin ve ardından **ana sayfalar** bağlantısını ya da **Temalar** bağlantısını seçin.
+13. Dosyaların doğru dağıtıldığından emin olmak için SharePoint sitesini açın, **Site** Eylemleri menüsünü seçin, **Site** Ayarlar komutunu seçin ve  ardından Ana Sayfalar bağlantısını veya Temalar bağlantısını **seçin.**
 
-     Ana sayfaların veya temaların listesi görüntülenir ve içeri aktardığınız ana sayfa ya da temayı içerir.
+     Ana sayfaların veya temaların listesi görünür ve ana sayfayı veya içe aktarılmış temayı içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Ana Sayfalar](/previous-versions/office/developer/sharepoint-2010/ms443795(v=office.14))
-- [Mevcut bir SharePoint sitesinden öğeleri içeri aktarma](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
-- [SharePoint için sayfa oluşturma](../sharepoint/creating-pages-for-sharepoint.md)
-- [Çözümdeki dosyaları dahil etmek için modülleri kullanma](../sharepoint/using-modules-to-include-files-in-the-solution.md)
+- [Mevcut bir siteden öğeleri SharePoint alma](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)
+- [SharePoint için sayfalar oluşturma](../sharepoint/creating-pages-for-sharepoint.md)
+- [Çözüme dosya eklemek için modülleri kullanma](../sharepoint/using-modules-to-include-files-in-the-solution.md)

@@ -1,6 +1,6 @@
 ---
-description: Bu bekleyen kesme noktasını ve onunla bağlantılı tüm kesme noktalarını siler.
-title: IDebugPendingBreakpoint2::D Sil | Microsoft Docs
+description: Bekleyen bu kesme noktası ve buna bağlı tüm kesme noktaları silinir.
+title: IDebugPendingBreakpoint2::D elete | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -12,20 +12,21 @@ ms.assetid: 4cb5ed81-6f0c-41ce-a770-5adb6b4bf5d9
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 25152c5a49ccef84f44d8c3fde3217367c0e334b
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c67d624182cdc040c71676b4f99e5dadf8ad90d2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105087775"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160133"
 ---
 # <a name="idebugpendingbreakpoint2delete"></a>IDebugPendingBreakpoint2::Delete
-Bu bekleyen kesme noktasını ve onunla bağlantılı tüm kesme noktalarını siler.
+Bekleyen bu kesme noktası ve buna bağlı tüm kesme noktaları silinir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +41,10 @@ int Delete();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_BP_DELETED`Kesme noktasının silinip silinmediğini döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Kesme `E_BP_DELETED` noktası silinmişse döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CPendingBreakpoint::Delete(void)

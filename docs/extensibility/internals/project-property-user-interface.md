@@ -1,6 +1,6 @@
 ---
-title: Proje Özelliği Kullanıcı Arabirimi | Microsoft Docs
-description: Proje alt türlerinden, temel proje tarafından sağlanan proje Özellik Sayfaları iletişim kutusunu nasıl değiştiryebilirsiniz?
+title: Project Özellik Kullanıcı arabirimi | Microsoft Docs
+description: Proje alt türlerini temel proje tarafından sağlanan proje özellik sayfaları iletişim kutusunu nasıl değiştirebileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/22/2018
 ms.topic: reference
@@ -12,36 +12,37 @@ ms.assetid: b6aec634-8533-476c-9ebd-36536a2288e2
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77e3554f2a3fd3b0dc1d608bb7d0a1198116a4e3
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 6b1a854488be852c23fcfcc3287fc8a35c5adb6e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112903595"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122094613"
 ---
 # <a name="project-property-user-interface"></a>Proje Özelliği Kullanıcı Arabirimi
 
-Bir proje alt türü, temel  proje tarafından sağlanan şekilde proje Özellik Sayfaları iletişim kutusundaki öğeleri kullanabilir, sağlanan şekilde salt okunur denetimleri ve tam  sayfaları gizler veya oluşturabilir ya da Özellik Sayfaları iletişim kutusuna proje alt türüne özgü sayfalar ekleyebilir.
+Proje alt türü, proje **Özellik sayfaları** iletişim kutusundaki öğeleri temel proje tarafından sağlandıklarında kullanabilir, salt okuma denetimlerini ve tüm sayfaları gizler veya belirtilen şekilde **Özellik sayfaları** iletişim kutusuna ekler.
 
-## <a name="extending-the-project-property-dialog-box"></a>Proje Özelliğini Genişletme İletişim Kutusu
+## <a name="extending-the-project-property-dialog-box"></a>Project özelliği iletişim kutusunu genişletme
 
-Proje alt türü otomasyon genişleticileri ve proje yapılandırması göz atma nesnelerini kullanır. Bu genişleticiler, <xref:EnvDTE.IFilterProperties> belirli özellikleri gizli veya salt okunur yapmak için arabirimini uygulamaya ekler. Temel **proje** tarafından uygulanan temel projenin Özellik Sayfaları iletişim kutusu, Otomasyon Genişleticileri tarafından gerçekleştirilen filtrelemeye onaylar.
+Proje alt türü Otomasyon Genişleticilerini ve proje yapılandırma nesneleri 'ni uygular. Bu Extender 'lar, <xref:EnvDTE.IFilterProperties> belirli özellikleri gizli veya salt okunurdur hale getirmek için arabirimini uygular. Temel proje tarafından uygulanan temel projenin **Özellik sayfaları** iletişim kutusu, Otomasyon Genişleticileri tarafından gerçekleştirilen filtrelemeyi geliştirir.
 
-Proje Özelliği iletişim kutusunu **genişletme** işlemi aşağıda özetlenmiştir:
+**Project özelliği** iletişim kutusunu genişletme işlemi aşağıda özetlenmiştir:
 
-- Temel proje, arabirimini kullanarak proje alt türünden genişleticileri <xref:EnvDTE80.IInternalExtenderProvider> alın. Temel projenin göz atma, proje otomasyonu ve proje yapılandırması göz atma nesneleri bu arabirimi kullanır.
+- Temel proje, arabirimini uygulayarak proje alt türünden Extender 'lar alır <xref:EnvDTE80.IInternalExtenderProvider> . Bu arabirimi Uygula ' ya kadar, Proje Otomasyonu ve temel projenin proje yapılandırma nesnelerine Gözat edin.
 
-- proje göz atma nesnesi için uygulaması ve proje otomasyonu nesnesi, proje alt türü toplayıcısı <xref:EnvDTE80.IInternalExtenderProvider> uygulamasına (yani, proje nesnesinde için) <xref:EnvDTE80.IInternalExtenderProvider> `QueryInterface` temsilci olarak temsil <xref:EnvDTE80.IInternalExtenderProvider> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> eder.
+- Proje için uygulama <xref:EnvDTE80.IInternalExtenderProvider> ve Proje Otomasyonu nesne temsilcisi, <xref:EnvDTE80.IInternalExtenderProvider> Proje alt türü toplayıcısı (yani, `QueryInterface` <xref:EnvDTE80.IInternalExtenderProvider> Proje nesnesi üzerinde için) uygulamasına Gözatılacak <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> .
 
-- Temel proje yapılandırması göz atma nesnesi, proje alt türü yapılandırma nesnesinden <xref:EnvDTE80.IInternalExtenderProvider> Otomasyon Genişleticisi'ne doğrudan kablo eklemek için de uygulanır. Uygulaması, proje alt <xref:EnvDTE80.IInternalExtenderProvider> türü toplayıcısı tarafından uygulanan arabirime temsilci olarak görev gösterir.
+- Temel proje yapılandırması gezinme nesnesi Ayrıca, <xref:EnvDTE80.IInternalExtenderProvider> Proje alt türü yapılandırma nesnesinden Otomasyon genişleticisini doğrudan bağlamak için de uygular. Uygulama, <xref:EnvDTE80.IInternalExtenderProvider> Proje alt türü toplayıcısı tarafından uygulanan arabirime temsilciler.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetProjectItem%2A>, proje yapılandırması gözatma nesnesi tarafından uygulanan nesnesini <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> döndürür.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetProjectItem%2A>Proje yapılandırması nesnesine göre uygulanan nesnesi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> nesnesini döndürür.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetCfg%2A>, ayrıca proje yapılandırması gözatma nesnesi tarafından uygulanan nesnesini <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> döndürür.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetCfg%2A>Ayrıca, proje yapılandırması nesnesi tarafından uygulanan <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> nesne, nesnesini döndürür.
 
-- Bir proje alt türü, aşağıdaki değerleri alarak çalışma zamanında temel projenin çeşitli değiştirilebilir nesneleri için uygun CATID'leri <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> belirler:
+- Proje alt türü, aşağıdaki değerleri alarak, çalışma zamanında temel projenin farklı Genişletilebilir nesnelerinin uygun kasalarını belirleyebilir <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> :
 
   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2.VSHPROPID_ExtObjectCATID>
 
@@ -49,17 +50,17 @@ Proje Özelliği iletişim kutusunu **genişletme** işlemi aşağıda özetlenm
 
   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2.VSHPROPID_CfgBrowseObjectCATID>
 
-Proje kapsamı için CATID'leri belirlemek üzere, proje alt türü VSITEMID için yukarıdaki [özellikleri almaktadır. kökünden.](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>) `VSITEMID typedef` Proje alt türü, hem yapılandırmaya bağımlı hem de yapılandırmadan bağımsız olarak proje için hangi Özellik Sayfaları iletişim kutusu sayfalarının görüntülendiğinden emin olmak istiyor olabilir.  Bazı proje alt türlerinden yerleşik sayfaları kaldırması ve proje alt türüne özgü sayfalar eklemesi gerekir. Bunu etkinleştirmek için, yönetilen istemci projesi aşağıdaki özellikler <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> için yöntemini çağırtır:
+Proje kapsamı için CATIDs 'yi belirlemekte, proje alt türü [Vsitemıd için yukarıdaki özellikleri alır. Kaynağından kök](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>) `VSITEMID typedef` . Proje alt türü Ayrıca, yapılandırma bağımlı ve yapılandırmaya bağımsız olarak proje için hangi **Özellik sayfaları** iletişim kutusu sayfalarının görüntülendiğini denetlemek isteyebilir. Bazı proje alt türleri, yerleşik sayfaları kaldırmak ve Project Subtype 'a özgü sayfaları eklemek zorunda kalabilir. Bunu etkinleştirmek için, yönetilen istemci projesi <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> aşağıdaki özellikler için yöntemini çağırır:
 
-- `VSHPROPID_PropertyPagesCLSIDList` — yapılandırmadan bağımsız özellik sayfalarının CLSID'lerinin noktalı virgülle ayrılmış listesi.
+- `VSHPROPID_PropertyPagesCLSIDList` — yapılandırma bağımsız özellik sayfalarının CLSID 'leri için noktalı virgülle ayrılmış bir liste.
 
-- `VSHPROPID_CfgPropertyPagesCLSIDList —` yapılandırmaya bağımlı özellik sayfalarının CLSID'lerinin noktalı virgülle ayrılmış listesi.
+- `VSHPROPID_CfgPropertyPagesCLSIDList —` yapılandırmaya bağlı özellik sayfalarının CLSID 'lerin noktalı virgülle ayrılmış listesi.
 
-Proje alt türü nesneyi toplasa da, hangi Özellik Sayfaları iletişim kutularının görüntülendiğinden emin olmak <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> için bu özelliklerin **tanımını** geçersiz kılamaz. Proje alt türü, bu özellikleri iç temel projeden alabilir ve ardından gerektiğinde CLSID'leri ekleyebilir veya kaldırabilir.
+Proje alt türü nesneyi topladığından <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> , hangi **Özellik sayfaları** iletişim kutularının görüntülendiğini denetlemek için bu özelliklerin tanımını geçersiz kılabilir. Proje alt türü, bu özellikleri iç temel projeden alabilir ve ardından gerekirse CLSID 'leri ekleyebilir veya kaldırabilir.
 
-Bir proje alt türü tarafından eklenen yeni özellik sayfalarına, temel proje uygulamasından bir proje yapılandırması göz atma nesnesi eklenir. Bu proje yapılandırması göz atma nesnesi Otomasyon Genişleticileri destekler. AutomationExtenders hakkında daha fazla bilgi için [bkz. Otomasyon Genişleticilerini Uygulama ve Kullanma.](/previous-versions/0y92k2w2(v=vs.140)) Temel projenin yapılandırma göz atma nesnesini genişleten kendi proje alt türü yapılandırma göz atma nesnesini almak için proje alt türü çağrısı tarafından <xref:EnvDTE.Project.Extender%2A> uygulanan özellik sayfaları.
+Bir proje alt türü tarafından eklenen yeni özellik sayfaları, temel proje uygulamasından bir proje yapılandırması nesnesine sahiptir. Bu proje yapılandırma nesnesi Otomasyon Genişleticilerini destekler. Automationextender 'Lar hakkında daha fazla bilgi için bkz. [Otomasyon Genişleticilerini uygulama ve kullanma](/previous-versions/0y92k2w2(v=vs.140)). Proje alt türü tarafından uygulanan Özellik sayfaları, <xref:EnvDTE.Project.Extender%2A> temel projenin yapılandırma Gözat nesnesini genişleten kendi proje alt tür yapılandırması nesnesine gözatabiliyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:EnvDTE.IFilterProperties>
-- [Özellik Sayfaları İletişim Kutusu](/previous-versions/visualstudio/visual-studio-2010/as5chysf(v=vs.100))
+- [Özellik sayfaları Iletişim kutusu](/previous-versions/visualstudio/visual-studio-2010/as5chysf(v=vs.100))

@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5b8cc87ccc4fd6118a8c04fcfb1786aab4012f4a3a9a6805e272c397f8d9cd75
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 54bf0a3161fda86699b2bec07034b8732a099168
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121337909"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122094795"
 ---
 # <a name="manifest-to-code"></a>Manifest to Code
 Manifest to Code aracı, Visual Studio Görüntü Hizmeti için bir .imagemanifest dosyası alan ve Visual Studio uzantıları için C++, C#, VB veya .vsct dosyalarında görüntü bildiriminin değerlerine başvurmak için bir sarmalayıcı dosyası veya dosyası oluşturan bir konsol uygulamasıdır. Bu araç, doğrudan Visual Studio Görüntü Hizmeti'den görüntü isteğinde veya kod kendi kullanıcı arabirimini ve işlemesini işlemezse bildirim değerlerini API'ler aracılığıyla geçirme için kullanılmaktadır.
@@ -31,9 +31,9 @@ Manifest to Code aracı, Visual Studio Görüntü Hizmeti için bir .imagemanife
 |**Anahtar adı**|**Notlar**|**Gerekli veya İsteğe Bağlı**|
 |-|-|-|
 |/manifest|Kod sarmalayıcıyı oluşturmak veya güncelleştirmek için görüntü bildiriminin yolu.|Gerekli|
-|/language|Kod sarmalayıcının oluşturul dili.<br /><br /> Geçerli değerler: CPP, C++, CS, CSharp, C#, VB veya VSCT Değerler büyük/yeni harfe duyarlı değildir.<br /><br /> VSCT dil seçeneği için /monikerClass, /classAccess ve /namespace seçenekleri yoksayılır.|Gerekli|
+|/language|Kod sarmalayıcının oluşturul dili.<br /><br /> Geçerli değerler: CPP, C++, CS, CSharp, C#, VB veya VSCT Değerler büyük/harfe duyarlı değildir.<br /><br /> VSCT dil seçeneği için /monikerClass, /classAccess ve /namespace seçenekleri yoksayılır.|Gerekli|
 |/imageIdClass|imageIdClass'ın adı ve araç tarafından oluşturulan ilişkili dosya. C++ dil seçeneği için yalnızca .h dosyaları oluşturulur.<br /><br /> Varsayılan: \<Manifest Path> \MyImageIds.\<Lang Ext>|İsteğe Bağlı|
-|/monikerClass|monikerClass'ın adı ve araç tarafından oluşturulan ilişkili dosya. C++ dil seçeneği için yalnızca .h dosyaları oluşturulur. Bu, VSCT dili için yoksayılır.<br /><br /> Varsayılan: \<Manifest Path> \MyMonikers.\<Lang Ext>|İsteğe Bağlı|
+|/monikerClass|monikerClass adı ve araç tarafından oluşturulan ilişkili dosya. C++ dil seçeneği için yalnızca .h dosyaları oluşturulur. Bu, VSCT dili için yoksayılır.<br /><br /> Varsayılan: \<Manifest Path> \MyMonikers.\<Lang Ext>|İsteğe Bağlı|
 |/classAccess|imageIdClass ve monikerClass için erişim değiştiricisi. Erişim değiştiricinin verilen dil için geçerli olduğundan emin olun. Bu, VSCT dil seçeneği için yoksayılır.<br /><br /> Varsayılan: Genel|İsteğe Bağlı|
 |/namespace|Kod sarmalayıcıda tanımlanan ad alanı. Bu, VSCT dil seçeneği için yoksayılır. '.' veya '::' seçilen dil seçeneğine bakılmaksızın geçerli ad alanı ayırıcılarıdır.<br /><br /> Varsayılan: MyImages|İsteğe Bağlı|
 |/noLogo|Bu bayrağın ayarı ürün ve telif hakkı bilgilerini yazdırmayı durdurur.|İsteğe Bağlı|
@@ -159,7 +159,7 @@ __declspec(selectany) const ImageMoniker MyMonikers::MyImage2 = { MyImageIds::As
 
  **Visual Basic sarmalayıcılar**
 
- Örnek için bir çift basit görüntü kimliği ve Visual Basic sınıfı aşağıdaki koda benzer:
+ Bir çift basit görüntü kimliği ve görüntü bilinen adı Visual Basic aşağıdaki koda benzer:
 
 ```vb
 ' -----------------------------------------------------------------------------

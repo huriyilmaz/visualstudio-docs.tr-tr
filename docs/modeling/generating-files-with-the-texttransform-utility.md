@@ -13,16 +13,16 @@ manager: jmartens
 ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: d230256d988c16d86e01fc04e363d40473b1ac1a35e1c9bdc45faa3de3c43b25
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 82a0a5ec91b532e96c795ad65910061b0d5f946e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121271335"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085617"
 ---
 # <a name="generate-files-with-the-texttransform-utility"></a>TextTransform yardımcı programıyla dosya oluşturma
 
-TextTransform.exe, metin şablonunu dönüştürmek için kullanabileceğiniz bir komut satırı aracıdır. Bir metin TextTransform.exe, bir metin şablonu dosyasının adını bağımsız değişken olarak belirtirsiniz. TextTransform.exe dönüştürme altyapısını çağırarak metin şablonunu işlemesini sağlar. TextTransform.exe genellikle betiklerden çağrılır. Ancak genellikle gerekli değildir çünkü metin dönüştürme işlemini hem Visual Studio işlemiyle gerçekleştirebilirsiniz.
+TextTransform.exe, metin şablonunu dönüştürmek için kullanabileceğiniz bir komut satırı aracıdır. Bir metin TextTransform.exe, bir metin şablonu dosyasının adını bağımsız değişken olarak belirtirsiniz. TextTransform.exe dönüştürme altyapısını çağırarak metin şablonunu işlemesini sağlar. TextTransform.exe genellikle betiklerden çağrılır. Ancak genellikle gerekli değildir çünkü metin dönüştürme işlemini hem Visual Studio işlemde gerçekleştirebilirsiniz.
 
 > [!NOTE]
 > Derleme işleminin bir parçası olarak metin dönüşümü gerçekleştirmek için metin dönüştürme görevini MSBuild düşünün. Daha fazla bilgi için [bkz. Derleme İşlemsinde Kod Oluşturma.](../modeling/code-generation-in-a-build-process.md) Uygulamanın yük Visual Studio makinede, metin şablonlarını dönüştüren bir uygulama veya Visual Studio Uzantısı da yazabilirsiniz. Daha fazla bilgi için [bkz. Özel Ana Bilgisayar Kullanarak Metin Şablonlarını İşleme.](../modeling/processing-text-templates-by-using-a-custom-host.md)
@@ -79,7 +79,7 @@ TextTransform [<options>] <templateName>
 |**-I**\<includedirectory>|Belirtilen metin şablonuna dahil edilen metin şablonlarını içeren bir dizin.|
 |**-P**\<referencepath>|Metin şablonu içinde belirtilen derlemeleri aramak veya -r seçeneğini kullanmak için **bir dizin.**<br /><br /> Örneğin, Visual Studio API'si için kullanılan derlemeleri dahil etmek için kullanın<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|
 |**-dp** \<processorName> ! \<className> !\<assemblyName&#124;codeBase>|Metin şablonu içindeki özel yönergeleri işlemede kullanılan yönerge işlemcisinin adı, tam tür adı ve derlemesi.|
-|**-a** [processorName]! [directiveName]! \<parameterName> !\<parameterValue>|Yönerge işlemcisi için bir parametre değeri belirtin. Yalnızca parametre adını ve değerini belirtirsiniz, parametre tüm yönerge işlemcileri tarafından kullanılabilir. Bir yönerge işlemcisi belirtirsiniz, parametresi yalnızca belirtilen işlemci tarafından kullanılabilir. Bir yönerge adı belirtirsiniz, parametresi yalnızca belirtilen yönerge işlenirken kullanılabilir.<br /><br /> Parametre değerlerine yönerge işlemcisi veya metin şablonundan erişmek için [ITextTemplatingEngineHost.ResolveParameterValue kullanın.](/previous-versions/visualstudio/visual-studio-2012/bb126369\(v\=vs.110\)) Bir metin şablonunda, şablon `hostspecific` yönergesine dahil edilir ve iletiyi üzerinde `this.Host` çağırır. Örnek:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`.<br /><br /> İsteğe bağlı işlemci ve yönerge adlarını atlasanız bile her zaman '!' işaretlerini yazın. Örnek:<br /><br /> `-a !!param!value`|
+|**-a** [processorName]! [directiveName]! \<parameterName> !\<parameterValue>|Yönerge işlemcisi için bir parametre değeri belirtin. Yalnızca parametre adını ve değerini belirtirsiniz, parametre tüm yönerge işlemcileri tarafından kullanılabilir. Bir yönerge işlemcisi belirtirsiniz, parametresi yalnızca belirtilen işlemci tarafından kullanılabilir. Bir yönerge adı belirtirsiniz, parametresi yalnızca belirtilen yönerge işlenirken kullanılabilir.<br /><br /> Parametre değerlerine yönerge işlemcisi veya metin şablonundan erişmek için [ITextTemplatingEngineHost.ResolveParameterValue kullanın.](/previous-versions/visualstudio/visual-studio-2012/bb126369\(v\=vs.110\)) Bir metin şablonunda, şablon `hostspecific` yönergesine dahil edilir ve üzerinde iletiyi `this.Host` çağırır. Örnek:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`.<br /><br /> İsteğe bağlı işlemci ve yönerge adlarını atlasanız bile her zaman '!' işaretlerini yazın. Örnek:<br /><br /> `-a !!param!value`|
 |**-h**|Yardım sağlar.|
 
 ## <a name="related-topics"></a>İlgili konular

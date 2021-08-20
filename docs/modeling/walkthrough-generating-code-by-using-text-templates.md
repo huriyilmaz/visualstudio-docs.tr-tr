@@ -10,14 +10,15 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 22940fb86ab0cfd7262a3ca7845521847add2dff
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: f01a19b1329c994e8f76a549e7f5dbbf70542adf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112388132"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122123495"
 ---
 # <a name="walkthrough-generate-code-by-using-text-templates"></a>Metin Şablonları kullanarak Kod Oluşturma
 
@@ -30,7 +31,7 @@ System.Xml ad alanı, bir XML belgesi yüklemek ve ardından bellekte serbestçe
 Bu örnek projede, bir şablon örnek bir XML dosyası okur ve her bir düğüm türüne karşılık gelen sınıflar oluşturur. El ile yazılmış kodda, XML dosyasında gezinmek için bu sınıfları kullanabilirsiniz. Uygulamanızı aynı düğüm türlerini kullanan başka herhangi bir dosya üzerinde de çalıştırabilirsiniz. Örnek XML dosyasının amacı, uygulamanızın ilgilenmesi için istediğiniz tüm düğüm türlerine örnekler sağlamaktır.
 
 > [!NOTE]
-> Visual Studio ile birlikte gelen uygulama [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe), XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
+> Visual Studio dahil olan uygulama [xsd.exe](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe), XML dosyalarından kesin türü belirtilmiş sınıflar oluşturabilir. Burada gösterilen şablon bir örnek olarak sunulmaktadır.
 
 Örnek dosya aşağıda verilmiştir:
 
@@ -79,13 +80,13 @@ Türü kesin belirlenmiş sürümde, XML şemasında yapılan bir değişiklik s
 
 Bu projede, türü belirlenmiş sürümü mümkün kılan sınıfları oluşturmak için tek bir şablon dosyası kullanılır.
 
-## <a name="set-up-the-project"></a>Projeyi ayarlama
+## <a name="set-up-the-project"></a>Project ayarlama
 
 ### <a name="create-or-open-a-c-project"></a>C# projesi oluşturma veya açma
 
 Bu tekniği, herhangi bir kod projesine uygulayabilirsiniz. Bu izlenecek yol bir C# projesi kullanır ve test amaçları için bir konsol uygulaması kullanıyoruz.
 
-1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Proje**' ye tıklayın.
+1. **Dosya** menüsünde **Yeni** ' ye ve ardından **Project**' ye tıklayın.
 
 2. **Visual C#** düğümüne tıklayın ve ardından **Şablonlar** bölmesinde **konsol uygulaması** ' na tıklayın.
 
@@ -105,7 +106,7 @@ Bu dosyanın amacı, uygulamanızın okuyabilmesini istediğiniz XML düğüm t�
 
 ### <a name="add-a-test-code-file"></a>Test kodu dosyası Ekle
 
-Projenize bir C# dosyası ekleyin ve yazmak istediğiniz kodun bir örneğini yazın. Örneğin:
+Projenize bir C# dosyası ekleyin ve yazmak istediğiniz kodun bir örneğini yazın. Örnek:
 
 ```csharp
 using System;
@@ -142,7 +143,7 @@ Bir metin şablonu dosyası ekleyin ve çıktı uzantısını *. cs* olarak ayar
 
 3. Dosyasında, şablon yönergesinde `hostspecific` özniteliğini olarak değiştirin `true` .
 
-     Bu değişiklik, şablon kodunun Visual Studio hizmetlerine erişim elde etmesine imkan sağlar.
+     bu değişiklik, şablon kodunun Visual Studio hizmetlerine erişim sağlamasına olanak sağlar.
 
 4. Output yönergesinde uzantı özniteliğini ". cs" olarak değiştirin, böylece şablon bir C# dosyası oluşturur. Visual Basic bir projede, bunu ". vb" olarak değiştirirsiniz.
 
@@ -270,9 +271,9 @@ public partial class Song {}
 
 Alt düğümlerin, özniteliklerin ve iç metnin özellikleri gibi ayrıntılar aynı yaklaşım kullanılarak eklenebilir.
 
-### <a name="access-the-visual-studio-api"></a>Visual Studio API 'sine erişme
+### <a name="access-the-visual-studio-api"></a>Visual Studio apı 'sine erişme
 
-`hostspecific`Yönergesinin özniteliği ayarlandığında, `<#@template#>` şablonun VISUAL Studio API 'sine erişimi elde etmesine izin verir. Şablon, Şablon kodunda mutlak bir dosya yolu kullanmaktan kaçınmak için bunu proje dosyalarının konumunu almak için kullanabilir.
+`hostspecific`yönergesinin özniteliği ayarlandığında, `<#@template#>` şablonun Visual Studio apı 'sine erişimi elde etmesine izin verir. Şablon, Şablon kodunda mutlak bir dosya yolu kullanmaktan kaçınmak için bunu proje dosyalarının konumunu almak için kullanabilir.
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -286,9 +287,9 @@ XmlDocument doc = new XmlDocument();
 doc.Load(System.IO.Path.Combine(dte.ActiveDocument.Path, "exampleXml.xml"));
 ```
 
-## <a name="complete-the-text-template"></a>Metin şablonunu doldurun
+## <a name="complete-the-text-template"></a>Metin Şablonunu Tamamlama
 
-Aşağıdaki şablon içeriği, test kodunun derleyip çalıştırmasına izin veren kodu oluşturur.
+Aşağıdaki şablon içeriği, test kodunun derleye ve çalıştırmasına olanak sağlayan kod oluşturur.
 
 ```
 <#@ template debug="false" hostspecific="true" language="C#" #>
@@ -384,7 +385,7 @@ using System;using System.Collections.Generic;using System.Linq;using System.Xml
 
 ### <a name="run-the-test-program"></a>Test programını çalıştırma
 
-Konsol uygulamasının ana öğesinde, aşağıdaki satırlar test yöntemini yürütür. Programı hata ayıklama modunda çalıştırmak için F5 tuşuna basın:
+Konsol uygulamasının ana hattında aşağıdaki satırlar test yöntemini yürütür. Programı hata ayıklama modunda çalıştırmak için F5 tuşuna basın:
 
 ```csharp
 using System;
@@ -404,31 +405,31 @@ namespace MyProject
 
 ### <a name="write-and-update-the-application"></a>Uygulamayı yazma ve güncelleştirme
 
-Uygulama artık, genel XML kodu kullanmak yerine, oluşturulan sınıflar kullanılarak kesin türü belirtilmiş stilde yazılabilir.
+Uygulama artık genel XML kodu yerine oluşturulan sınıflar kullanılarak kesin türü kesin olarak yazılmış bir stilde yazabilir.
 
-XML şeması değiştiğinde yeni sınıflar kolayca oluşturulabilir. Derleyici, uygulama kodunun güncelleştirilmeleri gereken geliştiriciyi bildirir.
+XML şeması değiştinde, yeni sınıflar kolayca oluşturulabilir. Derleyici, geliştiriciye uygulama kodunun nerede güncelleştirilmiş olması gerektiğini söyler.
 
-Örnek XML dosyası değiştirildiğinde sınıfları yeniden oluşturmak için **Çözüm Gezgini** araç çubuğunda **Tüm Şablonları Dönüştür** ' e tıklayın.
+Örnek XML dosyası değiştiriken sınıfları yeniden oluşturmak için, araç **çubuğundaki** Tüm **Şablonları Dönüştür'Çözüm Gezgini** tıklayın.
 
 ## <a name="conclusion"></a>Sonuç
 
-Bu izlenecek yol, kod oluşturmanın çeşitli tekniklerini ve avantajlarını göstermektedir:
+Bu kılavuzda kod oluşturmanın çeşitli teknikleri ve avantajları anlatmaktadır:
 
-- *Kod üretimi* , bir *modelden* uygulamanızın kaynak kodunun bir kısmının oluşturulması. Model, uygulama etki alanına uygun bir formda bilgi içerir ve uygulamanın kullanım ömrü boyunca değişebilir.
+- *Kod oluşturma,* bir modelden uygulama kaynak kodunun bir parçasının *oluşturulmasıdır.* Model, uygulama etki alanına uygun bir formda bilgiler içerir ve uygulamanın ömrü boyunca değişebilir.
 
-- Güçlü yazma kod oluşturmanın bir avantajıdır. Model, bir formdaki bilgileri kullanıcıya daha uygun bir biçimde temsil ederken, oluşturulan kod uygulamanın diğer bölümlerinin bir tür kümesi kullanarak bilgilerle ilgilenmesi için izin verir.
+- Güçlü yazma, kod oluşturmanın bir avantajıdır. Model bilgileri kullanıcıya daha uygun bir formda temsil ederken, oluşturulan kod uygulamanın diğer bölümlerinin bir tür kümesi kullanarak bilgilerle başa iner.
 
-- IntelliSense ve derleyici, her ikisi de yeni kod yazdığınızda ve şema güncelleniyorsa modelin şemasına uygun kod oluşturmanıza yardımcı olur.
+- IntelliSense ve derleyici, hem yeni kod hem de şema güncelleştirildiğinde modelin şemasına uygun kod oluşturmanıza yardımcı olur.
 
-- Bir projeye, karmaşık olmayan tek bir şablon dosyası eklenmesi bu avantajları sağlayabilir.
+- Bir projeye tek bir karmaşık olmayan şablon dosyası ekleme bu avantajları sağlar.
 
-- Bir metin şablonu hızlı ve artımlı olarak geliştirilebilir ve test edilebilir.
+- Metin şablonu hızlı ve artımlı olarak geliştirilecek ve test edilebilir.
 
-Bu kılavuzda, program kodu aslında modelin bir örneğinden oluşturulur ve uygulamanın işlem kullanacağı XML dosyalarının temsili bir örneğidir. Daha resmi bir yaklaşımda XML şeması, bir. xsd dosyası veya etki alanına özgü dil tanımı biçiminde şablon girişi olacaktır. Bu yaklaşım, şablonun bir ilişkinin çoğulluğu gibi özellikleri belirlemesine daha kolay hale getirir.
+Bu kılavuzda program kodu aslında uygulamanın işleyeceğim XML dosyalarının temsili bir örneği olan modelin bir örneğinden oluşturulur. Daha resmi bir yaklaşımda XML şeması, .xsd dosyası veya etki alanına özgü dil tanımı biçiminde şablona giriş olacaktır. Bu yaklaşım, şablonun bir ilişkinin çokluğu gibi özellikleri belirlemesine yardımcı olur.
 
-## <a name="troubleshoot-the-text-template"></a>Metin şablonunda sorun giderme
+## <a name="troubleshoot-the-text-template"></a>Metin Şablonu sorunlarını giderme
 
-**Hata listesi** şablon dönüştürme veya derleme hatalarıyla karşılaşdıysanız veya çıkış dosyası doğru şekilde oluşturulmediyse, metin şablonunda, [TextTransform yardımcı programıyla dosya oluşturma](../modeling/generating-files-with-the-texttransform-utility.md)bölümünde açıklanan tekniklerle sorun giderebilirsiniz.
+Hata Listesinde şablon dönüştürme veya derleme hataları gördünüz veya çıkış dosyası doğru oluşturulmadıysa, TextTransform Yardımcı Programı ile Dosya Oluşturma konusunda açıklanan tekniklerle metin şablonunun sorunlarını [giderebilirsiniz.](../modeling/generating-files-with-the-texttransform-utility.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

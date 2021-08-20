@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a91b98a831b9d6a6b7137155b6a12c0cd1b49b20f4403dfc0b3d4654d3018cb4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 07899b06ce8973462b5dd01fade1fceb26af3bbb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121292461"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088919"
 ---
 # <a name="idebugextendedfieldgetextendedkind"></a>IDebugExtendedField::GetExtendedKind
 Belirtilen genişletilmiş alan türünü alır.

@@ -1,6 +1,6 @@
 ---
-description: Bir blokta bayt sayısını alan.
-title: IDiaLineNumber::get_length | Microsoft Docs
+description: Bir bloktaki bayt sayısını alır.
+title: 'IDiaLineNumber:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f05dc1a378651fa565aa744d6b80aa096a870e4714e816a2659f404379a3afd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 699e508d0952e275f8122dbbbd91132de8679c9d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454994"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129130"
 ---
 # <a name="idialinenumberget_length"></a>IDiaLineNumber::get_length
-Bir blokta bayt sayısını alan.
+Bir bloktaki bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_length (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir blokta bayt sayısını döndürür.
+dışı Bir bloktaki bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Blok, [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesnesiyle temsil edilen satırda kaynak kodun uzunluğudur.
+ Blok, [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesnesi tarafından temsil edilen satırdaki kaynak kodunun uzunluğudur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

@@ -1,6 +1,6 @@
 ---
-title: Raporları komut satırından filtrele | Microsoft Docs
-description: Raporlamayı belirli bir zaman dönemine veya seçili işlemlere ve iş parçacıklarıyla kısıtlamak için VSPerfReport.exe kullanın. Bu makalede, açıklamalar ile birlikte seçenekler listelenmektedir.
+title: Komut Satırı Komut Satırı | Microsoft Docs
+description: Raporlamayı VSPerfReport.exe belirli bir zaman dönemiyle veya seçilen işlemler ve iş parçacıklarıyla sınırlamak için bu ayarları kullanın. Bu makalede seçenekler ve açıklamalar listelanmıştır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,22 +12,22 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 68bd357454b7f8aa3daf2a29e4a9a9b818eaf5ea0213e895fcc9530d9193484e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 39471e7006cfe49a8c03c0d4d0f34bb3b149aad6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121396532"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122061005"
 ---
 # <a name="how-to-filter-reports-from-the-command-line"></a>Nasıl yapılır: Komut satırından raporları filtreleme
-**VSPerfReport** komutu seçeneklerini kullanarak, profil oluşturma veri dosyasının belirli bir zaman segmentine rapor filtreleyebilir veya verileri bir veya daha fazla işlem ya da iş parçacığı ile kısıtlayabilirsiniz. Bu komut hakkında daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).
+**VSPerfReport** komutuna yönelik seçenekleri kullanarak, raporları profil oluşturma veri dosyasının belirli bir zaman segmentine filtre oluşturabilir veya verileri bir veya daha fazla işlem ya da iş parçacığıyla kısıtabilirsiniz. Bu komut hakkında daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).
 
 |Seçenekler|Açıklama|
 |-------------|-----------------|
-|**StartTime:**[*değer*]|Yalnızca değerden sonra toplanan verileri göster (milisaniye cinsinden)|
-|**Bitişsaati:**[*değer*]|Yalnızca değerden önce toplanan verileri göster (milisaniye cinsinden)|
-|**Filtredosyası:**`VSPFFile`|**Visual Studio performans raporu** penceresinden oluşturulan bir filtre dosyasının konumunu belirtir.|
-|**Msfilter:**[*başlangıçsaati, süre*]|Yalnızca `StartTime` uzunluğu `Duration` (milisaniye cinsinden) kadar olan verileri göster|
-|**İşlem:**[*pid*]|Yalnızca belirtilen işlemden verileri göster.|
-|**Iş parçacığı:**[*ThreadID*]|Yalnızca belirtilen iş parçacığından verileri göster.|
-|**Iş parçacığı:**[*ThreadID, ProcessId*]|Belirtilen işlemle ilişkili iş parçacığından yalnızca verileri göster.|
+|**StartTime:**[*Değer*]|Yalnızca değerden sonra toplanan verileri göster (milisaniye cinsinden).)|
+|**EndTime:**[*Değer*]|Yalnızca değerden önce toplanan verileri göster (milisaniye cinsinden).)|
+|**FilterFile:**`VSPFFile`|Performans Raporu penceresinden oluşturulan filtre dosyasının **Visual Studio belirtir.**|
+|**MsFilter:**[*StartTime,Duration*]|Yalnızca uzunluğuna `StartTime` kadar olan verileri göster `Duration` (milisaniye cinsinden).)|
+|**İşlem:**[*Pid*]|Yalnızca belirtilen işlemden gelen verileri göster.|
+|**İş Parçacığı:**[*ThreadID*]|Yalnızca belirtilen iş parçacığından verileri gösterir.|
+|**İş Parçacığı:**[*ThreadID,ProcessID*]|Yalnızca belirtilen işlemle ilişkili belirtilen iş parçacığından verileri gösterir.|

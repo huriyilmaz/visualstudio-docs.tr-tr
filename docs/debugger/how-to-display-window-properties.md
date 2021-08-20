@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e79709c3525a64466e7555aab0f439e7ff6e69d19a35844f42e88da25a4d5803
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f64b4f6183b6878eb934c0125fe85ada86b697c0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379301"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128513"
 ---
 # <a name="how-to-display-window-properties"></a>Nasıl yapılır: Pencere Özelliklerini Görüntüleme
 [Windows görünümünde](../debugger/windows-view.md)listelenen bir pencere hakkında daha fazla bilgi edinmek için [pencere özellikleri iletişim kutusunu](../debugger/window-properties-dialog-box.md)kullanın.

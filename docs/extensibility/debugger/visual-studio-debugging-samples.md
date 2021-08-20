@@ -1,6 +1,6 @@
 ---
-title: Visual Studio Hata Ayıklama Örnekleri | Microsoft Docs
-description: Hata Ayıklayıcı İfade Değerlendirici Örneği ve Visual Studio Hata Ayıklama Altyapısı Örneği, Visual Studio SDK'sını kullanarak Visual Studio genişletmeyi gösterir.
+title: Visual Studio Hata ayıklama örnekleri | Microsoft Docs
+description: hata ayıklayıcı ifade değerlendirici örneği ve Visual Studio hata ayıklama altyapısı örneği, Visual Studio SDK kullanarak Visual Studio hata ayıklayıcının nasıl genişletileceğini gösterir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,16 +15,16 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d578cf61a1201881aef74968ab33ffe97c5d4dd9b573c3ac97f5e89fa2a723c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: be01acb11c9f3314a12383acafce465bfad5603c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448474"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122102837"
 ---
-# <a name="visual-studio-debugging-samples"></a>Visual Studio ayıklama örnekleri
-İki örnek kullanarak hata ayıklayıcının Visual Studio [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] gösterir.
+# <a name="visual-studio-debugging-samples"></a>Visual Studio hata ayıklama örnekleri
+iki örnek kullanarak Visual Studio hata ayıklayıcının nasıl uzatıleceği gösterilmektedir [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .
 
-- Yönetilen diller için Hata Ayıklayıcı İfade Değerlendirici Örneği içinde yer [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] almaktadır. Pencerede [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Örnekler sekmesine  tıklayın, dil listesinde **All** veya **C# (Tüm) veya C# (C#** ) ve ardından Debugger (Hata Ayıklayıcısı) **öğesini tıklatın.**
+- Yönetilen diller için hata ayıklayıcı Ifade değerlendirici örneği, içinde bulunur [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] . [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]Penceresinde, **örnekler** sekmesine tıklayın, diller listesinde **Tümü** veya **C#** ' ye tıklayın ve ardından **hata ayıklayıcı ' ya** tıklayın.
 
-- Yerel Visual Studio hata ayıklama altyapısı örneği MSDN Kod Galerisi'nde bulunabilir. Daha fazla bilgi için [bkz. Visual Studio](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e) Microsoft Web sitesinde hata ayıklama altyapısı örneği.
+- yerel diller için Visual Studio hata ayıklama altyapısı örneği MSDN kod galerisinde kullanılabilir. daha fazla bilgi için bkz. Microsoft Web sitesindeki [hata ayıklama altyapısı örneği Visual Studio](https://code.msdn.microsoft.com/Visual-Studio-Debug-Engine-c2e21c0e) .

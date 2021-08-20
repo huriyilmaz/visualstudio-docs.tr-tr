@@ -1,6 +1,6 @@
 ---
-description: İşlem yürütmeye devam eder.
-title: 'IDebugEngineLaunch2:: ResumeProcess | Microsoft Docs'
+description: İşlem yürütmeyi sürdürür.
+title: IDebugEngineLaunch2::ResumeProcess | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 61ccc14e-75c6-44e7-aae4-57a9aac52089
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 05c53be36884f60585025cf73da8301b9e51df14
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ae6abb2817a59602205c765a3934acb4e5b0813e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105065978"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111027"
 ---
 # <a name="idebugenginelaunch2resumeprocess"></a>IDebugEngineLaunch2::ResumeProcess
-İşlem yürütmeye devam eder.
+İşlem yürütmeyi sürdürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int ResumeProcess (
 
 ## <a name="parameters"></a>Parametreler
 `pProcess`\
-'ndaki Devam ettirilebilecek işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
+[in] Devam ettirilen işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, bir işlem başlatıldıktan sonra [Launchaskıya alındı](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemine çağrısıyla çağrılır.
+ Bu yöntem, [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemi çağrısıyla bir işlem başlatıldıktan sonra çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)

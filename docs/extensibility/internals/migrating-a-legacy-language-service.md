@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8530cb857310b20b8bcc83a654232df65d703fa23c61ee77913bf25f2f28740f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e31f3d39e5a05a0d2ea22b1bdc520682c05d6eef
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121321239"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117884"
 ---
 # <a name="migrating-a-legacy-language-service"></a>Eski Dil Hizmetini Geçirme
 projeyi güncelleştirerek ve projeye bir source. extension. valtmanifest dosyası ekleyerek eski bir dil hizmetini Visual Studio sonraki bir sürümüne geçirebilirsiniz. dil hizmetinin kendisi daha önce olduğu gibi çalışmaya devam eder, çünkü Visual Studio düzenleyicisi bu dosyayı uyarlayan.

@@ -1,6 +1,6 @@
 ---
-description: İşlevin noreturn) özniteliğiyle hiçbir şekilde döndürülmeyeceğini belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_noReturn | Microsoft Docs'
+description: İşlevin noreturn) özniteliğiyle hiçbir zaman döndüren olarak işaretlenen olup olmadığını belirten bir bayrak verir.
+title: IDiaSymbol::get_noReturn | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 704c1cc0-5b84-4334-a02a-70f43aff39d5
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d3d140afd80855be7afeeef11481d5df20c057b
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 2acc5f7e725d31c0b2afe3e47ed09c641199df63
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102147186"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113438"
 ---
 # <a name="idiasymbolget_noreturn"></a>IDiaSymbol::get_noReturn
-İşlevin [noreturn](/cpp/cpp/noreturn) özniteliğiyle hiçbir şekilde döndürülmediği olarak işaretlenip işaretlenmediğini belirten bir bayrak alır.
+İşlevin [noreturn](/cpp/cpp/noreturn) özniteliğiyle hiçbir zaman döndüren olarak işaretlenen olup olmadığını belirten bir bayrak verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,20 +35,20 @@ HRESULT get_noReturn(
 #### <a name="parameters"></a>Parametreler
  pFlag
 
-dışı `TRUE` İşlevin özniteliği ile hiçbir şekilde döndürülmediği olarak bildirilirse, `noreturn` Aksi takdirde döndürür `FALSE` .
+[out] İşlev `TRUE` özniteliğiyle hiçbir zaman döndüren olarak bildirildi ise `noreturn` döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

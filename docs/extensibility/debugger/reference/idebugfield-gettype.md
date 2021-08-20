@@ -1,6 +1,6 @@
 ---
 description: Bu yöntem alan türünü alır.
-title: 'IDebugField:: GetType | Microsoft Docs'
+title: IDebugField::GetType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 68bfc7654824285e6fe99d51e17dbf9f73e67c914786b3a03459cb9506b0b207
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 07c1739067de0ebb8a0f260db506a9a1cc48e380
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121417255"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088802"
 ---
 # <a name="idebugfieldgettype"></a>IDebugField::GetType
 Bu yöntem alan türünü alır.
@@ -43,10 +43,10 @@ int GetType(
 
 ## <a name="parameters"></a>Parametreler
 `ppType`\
-dışı Alan türünü başka bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi olarak döndürür.
+[out] Alan türünü başka bir [IDebugField nesnesi olarak](../../../extensibility/debugger/reference/idebugfield.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

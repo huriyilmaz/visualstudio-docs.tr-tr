@@ -1,6 +1,6 @@
 ---
 description: Belirtilen ilkel türden bir tür oluşturur.
-title: IDebugComPlusSymbolProvider::CreateTypeFromPrimitive | Microsoft Docs
+title: 'IDebugComPlusSymbolProvider:: CreateTypeFromPrimitive | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c3ea09912859ef36a3be8dac4444fb523771f7442b8a6cea3fedf19814d393f4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d8026ef21608feb3a8867fbb0d33ac51bdf20e2d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121342459"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104150"
 ---
 # <a name="idebugcomplussymbolprovidercreatetypefromprimitive"></a>IDebugComPlusSymbolProvider::CreateTypeFromPrimitive
 Belirtilen ilkel türden bir tür oluşturur.
@@ -46,19 +46,19 @@ int CreateTypeFromPrimitive(
 
 ## <a name="parameters"></a>Parametreler
 `dwPrimType`\
-[in] İlkel türü [temsil eden CorElementType Enumeration](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) değeri.
+'ndaki Temel türü temsil eden [CorElementType numaralandırmasındaki](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) değer.
 
 `pAddress`\
-[in] [IDebugAddress arabirimiyle temsil edilen bir adres](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi.
+'ndaki Bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen bir adres nesnesi.
 
 `ppType`\
-[in] Türü açıklayan [bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi döndürür.
+'ndaki Türü tanımlayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::CreateTypeFromPrimitive(

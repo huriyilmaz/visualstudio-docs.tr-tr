@@ -1,6 +1,6 @@
 ---
 title: Visual Studio IDE’ye ilk bakış
-description: windows, menüler ve en sık kullanılan diğer kullanıcı arabirimi özellikleri de dahil olmak üzere Visual Studio tümleşik geliştirme ortamı (ıde) hakkında bilgi edinin.
+description: Windows, menüler ve en Visual Studio kullanıcı arabirimi özellikleri dahil olmak üzere tümleşik geliştirme ortamı (IDE) hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/05/2019
@@ -11,26 +11,26 @@ manager: jmartens
 ms.technology: vs-javascript
 ms.workload:
 - multiple
-ms.openlocfilehash: 0801f2748a94aac09faa56148340796baf19e30e99706ea5faf007d13aef9401
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 724c6bb1a106fad6d6ceac0cae6f6e7968175447
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121398960"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122085851"
 ---
 # <a name="first-look-at-the-visual-studio-ide"></a>Visual Studio IDE’ye ilk bakış
 
-bu 5-10 dakikalık Visual Studio tümleşik geliştirme ortamına (ıde) giriş bölümünde bazı pencereler, menüler ve diğer kullanıcı arabirimi özellikleri için bir tura çıkacağız.
+Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişte windows, menüler ve diğer kullanıcı arabirimi özelliklerinden bazılarında bir tura çıkarsınız.
 
 ::: moniker range="vs-2017"
 
-Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
@@ -38,15 +38,15 @@ Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visua
 
 ## <a name="start-window"></a> Başlangıç penceresi
 
-Visual Studio başlattıktan sonra ilk şey başlangıç penceresidir. Başlangıç penceresi, "koda ulaşmak" için daha hızlı yardımcı olacak şekilde tasarlanmıştır. Kodu kapatma veya kullanıma alma, var olan bir projeyi veya çözümü açma, yeni bir proje oluşturma veya yalnızca bazı kod dosyalarını içeren bir klasörü açma seçeneklerine sahiptir.
+Uygulamayı başlattıktan sonra göreceğimiz ilk şey Visual Studio penceresidir. Başlangıç penceresi, "koda daha hızlı" başlamanıza yardımcı olmak için tasarlanmıştır. Kodu kapatma veya denetleme, mevcut bir proje veya çözümü açma, yeni proje oluşturma veya yalnızca bazı kod dosyaları içeren bir klasörü açma seçenekleri vardır.
 
-[![Visual Studio 2019 ' deki başlangıç penceresi](media/vs-2019/start-window.png)](media/vs-2019/start-window.png)
+[![Visual Studio 2019'daki başlangıç penceresi](media/vs-2019/start-window.png)](media/vs-2019/start-window.png)
 
-Visual Studio ilk kez kullanıyorsanız, son projeler listeniz boş olur.
+İlk kez bir uygulama kullanıyorsanız Visual Studio proje listeniz boş olur.
 
-MSBuild tabanlı olmayan kod tabanlarında çalışıyorsanız, kodunuzu Visual Studio açmak için **yerel klasör aç** seçeneğini kullanacaksınız. daha fazla bilgi için bkz. [proje veya çözüm olmadan Visual Studio kod geliştirme](develop-javascript-code-without-solutions-projects.md). aksi takdirde, yeni bir proje oluşturabilir veya GitHub veya Azure DevOps gibi bir kaynak sağlayıcıdan bir proje kopyalayabilirsiniz.
+Veri tabanlı olmayan kod MSBuild çalışıyorsanız, kodunuzu yerel klasör  aç seçeneğini kullanarak Visual Studio. Daha fazla bilgi için [bkz. Proje veya Visual Studio olmadan kod geliştirme.](develop-javascript-code-without-solutions-projects.md) Aksi takdirde, yeni bir proje oluşturabilir veya kaynak sağlayıcısından yeni bir proje kopya GitHub veya Azure DevOps.
 
-**kod olmadan devam et** seçeneği, yalnızca belirli bir proje veya kod yüklenmeden Visual Studio geliştirme ortamını açar. bir [Live Share](/visualstudio/liveshare/) oturumuna katmak veya hata ayıklama için bir işleme iliştirmek üzere bu seçeneği belirleyebilirsiniz. Başlangıç penceresini kapatmak ve IDE 'yi açmak için **ESC** tuşuna da basabilirsiniz.
+Kod **olmadan devam seçeneği,** herhangi bir Visual Studio veya kod yüklenmeden geliştirme ortamını açar. Bir oturuma katılmak veya hata ayıklama [Live Share](/visualstudio/liveshare/) eklemek için bu seçeneği kullanabilirsiniz. Başlangıç penceresini  kapatıp IDE'ye açmak için Esc tuşuna da basabilirsiniz.
 
 ::: moniker-end
 
@@ -54,113 +54,113 @@ MSBuild tabanlı olmayan kod tabanlarında çalışıyorsanız, kodunuzu Visual 
 
 ## <a name="start-page"></a>Başlangıç Sayfası
 
-Visual Studio başlattıktan sonra göreceğiniz ilk şey, büyük olasılıkla **başlangıç sayfasıdır**. **Başlangıç sayfası** , ihtiyacınız olan komutları ve proje dosyalarını hızlı bir şekilde bulmanıza yardımcı olmak için "Hub" olarak tasarlanmıştır. **Son** bölümde, son zamanlarda çalıştığınız projeler ve klasörler görüntülenir. **yeni proje** altında, **yeni Project** iletişim kutusunu açmak için bir bağlantıya tıklayabilir veya **aç**' ın altında var olan bir kod projesini veya klasörünü açabilirsiniz. Sağ tarafta en son geliştirici haberlerinin bir akışı bulunur.
+Uygulamayı başlattıktan sonra göreceğimiz ilk şey Visual Studio büyük olasılıkla Başlangıç **Sayfası'dır.** Başlangıç **Sayfası,** ihtiyacınız olan komutları ve proje dosyalarını daha hızlı bulmanıza yardımcı olmak için bir "hub" olarak tasarlanmıştır. Son **bölüm,** son zamanlarda üzerinde çalıştığın projeleri ve klasörleri görüntüler. Yeni **proje altında** bir bağlantıya tıklayarak Yeni  Project iletişim kutusunu açabilir veya Aç'ın altında mevcut bir kod projesini veya klasörünü açabilirsiniz. Sağda, en son geliştirici haberlerinin akışı yer alan bir akış yer alan.
 
-![Visual Studio başlangıç sayfası](media/start-page.png)
+![Visual Studio'de Başlangıç Sayfası](media/start-page.png)
 
-**Başlangıç sayfasını** kapatır ve yeniden görmek Isterseniz **dosyayı dosya** menüsünden yeniden açabilirsiniz.
+Başlangıç Sayfasını kapatıp **yeniden** görmek için Dosya menüsünden yeniden **açabilirsiniz.**
 
-![Visual Studio dosya menüsü](media/quickstart-IDE-file-menu-large.png)
+![Dosya menüsündeki Visual Studio](media/quickstart-IDE-file-menu-large.png)
 
 ::: moniker-end
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
-Visual Studio özelliklerini araştırmaya devam etmek için yeni bir proje oluşturalım.
+Bu özelliklerin Visual Studio devam etmek için yeni bir proje oluştur o zaman.
 
 ::: moniker range=">=vs-2019"
 
-1. Başlangıç penceresinde, **Yeni proje oluştur**' u seçin ve ardından Proje türleri listesini ad veya dil türünde "JavaScript" içeren olanlarla filtrelemek için **JavaScript** 'teki arama kutusuna yazın.
+1. Başlangıç penceresinde Yeni proje oluştur'a tıklayın ve ardından arama kutusuna **javascript** yazarak proje türleri listesini adlarında veya dil türlerinde "javascript" ifadesini içerenlere filtre ekleyin.
 
-   Visual Studio hızla kodlamaya başlamanıza yardımcı olan çeşitli türlerde proje şablonları sağlar. (Alternatif olarak, bir TypeScript geliştiricisiyseniz bu dilde bir proje oluşturmayı ücretsiz olarak kullanabilirsiniz. Bakılacak Kullanıcı arabirimi tüm programlama dilleri için benzerdir.)
+   Visual Studio hızla kodlamaya başlamanıza yardımcı olacak çeşitli türlerde proje şablonları sağlar. (Alternatif olarak, TypeScript geliştiricisiyseniz, bu dilde bir proje oluşturabilirsiniz. Bakarak tüm programlama dillerinde de benzer bir kullanıcı arabirimine sahip oluruz.)
 
-   ![Visual Studio başlangıç penceresinde proje şablonları ara](media/vs-2019/create-new-project.png)
+   ![Başlangıç penceresinde proje Visual Studio arama](media/vs-2019/create-new-project.png)
 
-1. Boş bir **Node.js Web uygulaması** projesi şablonu seçin ve **İleri**' ye tıklayın.
+1. Web Uygulaması **proje Node.js boş bir** şablon seçin ve Ardından'ya **tıklayın.**
 
-1. Görüntülenen **yeni projeyi Yapılandır** iletişim kutusunda, varsayılan proje adını kabul edin ve **Oluştur**' u seçin.
+1. Görüntülenen **Yeni projenizi yapılandır iletişim** kutusunda varsayılan proje adını kabul et ve Oluştur'a **tıklayın.**
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-1. **Başlangıç sayfasında**, **Yeni proje** altındaki arama kutusuna, proje türleri listesini ad veya dil türlerine "JavaScript" içeren olanlarla filtrelemek için **JavaScript** yazın.
+1. Başlangıç **Sayfasında,** Yeni proje'nin altındaki arama kutusuna **javascript** yazarak proje türleri listesini adlarında veya dil türlerinde "javascript" ifadesini içerenlerle filtreleyebilirsiniz.
 
-   ![Visual Studio başlangıç sayfasında proje şablonları ara](media/start-page-search-templates.png)
+   ![Başlangıç Sayfasında proje Visual Studio arama](media/start-page-search-templates.png)
 
-   Visual Studio hızla kodlamaya başlamanıza yardımcı olan çeşitli türlerde proje şablonları sağlar. Boş bir **Node.js Web uygulaması** proje şablonu seçin. (Alternatif olarak, bir TypeScript geliştiricisiyseniz bu dilde bir proje oluşturmayı ücretsiz olarak kullanabilirsiniz. Bakılacak Kullanıcı arabirimi tüm programlama dilleri için benzerdir.)
+   Visual Studio hızla kodlamaya başlamanıza yardımcı olacak çeşitli türlerde proje şablonları sağlar. Boş Bir **Node.js Web Uygulaması proje** şablonu seçin. (Alternatif olarak, TypeScript geliştiricisiyseniz, bu dilde bir proje oluşturabilirsiniz. Bakarak tüm programlama dillerinde de benzer bir kullanıcı arabirimine sahip oluruz.)
 
-1. görüntülenen **yeni Project** iletişim kutusunda, varsayılan proje adını kabul edin ve **tamam**' ı seçin.
+1. Görüntülenen **Yeni Project** iletişim kutusunda varsayılan proje adını kabul et ve Tamam'ı **seçin.**
 ::: moniker-end
 
-   Proje oluşturulur ve **Düzenleyici** penceresinde *server.js* adlı bir dosya açılır. **Düzenleyici** , dosyaların içeriğini gösterir ve Visual Studio kodlarınızın büyük bir kısmını.
+   Proje oluşturulur ve Düzenleyici penceresinde *server.js* adlı bir **dosya** açılır. **Düzenleyici,** dosyaların içeriğini gösterir ve kod yazma çalışmanızı büyük bir Visual Studio.
 
-   ![Visual Studio Düzenleyicisi](media/editor.png)
+   ![Visual Studio'de düzenleyici](media/editor.png)
 
 ## <a name="solution-explorer"></a>Çözüm Gezgini
 
-genellikle Visual Studio sağ tarafında bulunan **Çözüm Gezgini**, projenizde, çözümünüzde veya kod klasörünüzdeki dosya ve klasörler hiyerarşisinin grafik gösterimini gösterir. Hiyerarşiye gözatabilir ve **Çözüm Gezgini** bir dosyaya gidebilirsiniz.
+**Çözüm Gezgini** genellikle Visual Studio'nin sağ tarafında yer alan Visual Studio proje, çözüm veya kod klasörünüzdeki dosya ve klasörler hiyerarşisinin grafiksel bir gösterimini gösterir. Hiyerarşiye göz atabilir ve içinde bir dosyaya **Çözüm Gezgini.**
 
-![Visual Studio Çözüm Gezgini](media/quickstart-IDE-solution-explorer.png)
+![Çözüm Gezgini Visual Studio](media/quickstart-IDE-solution-explorer.png)
 
 ## <a name="menus"></a>Menüler
 
-Visual Studio gruplar komutlarının üst kısmında bulunan menü çubuğu kategoriler halinde. örneğin **Project** menü, üzerinde çalıştığınız projeyle ilgili komutları içerir. **araçlar** menüsünde **seçenekler**' i seçerek Visual Studio davranışını özelleştirebilir veya **araçlar ve özellikler al**' ı seçerek yüklemenize özellikler ekleyebilirsiniz.
+Komutların üst kısmında yer alan menü Visual Studio kategorilere ayrılır. Örneğin, **Project** menüsünde çalışmakta olan projeyle ilgili komutlar vardır. Araçlar **menüsünde Seçenekler'i** seçerek Visual Studio özelliklerini özelleştirebilirsiniz veya Araçları ve Özellikleri Al'ı seçerek **yüklemenize özellikler ekleyebilirsiniz.**
 
-![Visual Studio menü çubuğu](media/quickstart-IDE-menu-bar.png)
+![Visual Studio'de menü çubuğu](media/quickstart-IDE-menu-bar.png)
 
-**Görünüm** menüsünü seçip **hata listesi** **hata listesi** penceresini açalım.
+Görünüm menüsünü ve ardından **Hata Listesi'ne** **seçerek** Hata Listesi penceresini **açabilirsiniz.**
 
 ## <a name="error-list"></a>Hata Listesi
 
-**Hata listesi** , kodunuzun geçerli durumuyla ilgili hataları, uyarıları ve iletileri gösterir. Dosyanızda veya projenizde herhangi bir yerde bir hata (eksik küme ayracı veya noktalı virgül) varsa, burada listelenir.
+Hata **Listesi,** kodunuzun geçerli durumuyla ilgili hataları, uyarıyı ve iletileri gösterir. Dosyanız veya projenizin herhangi bir yerinde hatalar (eksik ayraç veya noktalı virgül gibi) varsa bunlar burada listelenir.
 
-![Visual Studio Hata Listesi](media/quickstart-IDE-error-list.png)
+![Visual Studio'de Hata Listesi](media/quickstart-IDE-error-list.png)
 
 ## <a name="output-window"></a>Çıktı penceresi
 
-**Çıkış** penceresinde, projenizi ve kaynak denetimi sağlayıcınızdan oluşturduğunuz çıkış iletileri görüntülenir.
+Çıkış **penceresi,** projenizi ve kaynak denetim sağlayıcınızdan gelen çıkış iletilerini gösterir.
 
-Ayrıca, bazı derleme çıktısını görmek için projeyi derlim. **Build** menüsünde **Build Solution** öğesini seçin. **Çıkış** penceresi, odağı otomatik olarak edinir ve başarılı bir derleme iletisi görüntüler.
+Bazı derleme çıkışlarını görmek için projeyi derlemeye bakalım. Derleme **menüsünden** Çözümü **Derleme'yi seçin.** Çıkış **penceresi** otomatik olarak odağı alır ve başarılı bir derleme iletisi görüntüler.
 
-![Visual Studio çıkış penceresi](media/build-output-minimal.png)
+![Visual Studio'da çıkış penceresi](media/build-output-minimal.png)
 
 ## <a name="search-box"></a>Arama kutusu
 
-Arama kutusu, Visual Studio çok çeşitli şeyleri yapmanın hızlı ve kolay bir yoludur. Yapmak istediğiniz konuyla ilgili bir metin girebilirsiniz ve bu, metne ait seçeneklerin bir listesini gösterir. Örneğin, yapı çıkışının ayrıntı düzeyini arttırmak istediğinizi, tam olarak oluşturma işlemi hakkında ek ayrıntılar görüntüleyecek şekilde düşünün. Şunları yapabilirsiniz:
+Arama kutusu, herhangi bir şey yapmak için hızlı ve kolay bir Visual Studio. Yapmak istediğinizle ilgili bazı metinler girebilirsiniz ve metinle ilgili seçeneklerin listesini gösterir. Örneğin, tam olarak derlemenin ne yaptığı hakkında ek ayrıntılar görüntülemek için derleme çıkışının ayrıntısını artırmak istediğinizi düşünün. Bunu şu şekilde yapabiliriz:
 
-1. Arama kutusuna **ayrıntı düzeyi** yazın. Görünen sonuçlardan projeler ve çözümler ' i seçin. > **Seçenekler** kategorisi altında **derleyin ve çalıştırın** .
+1. Arama **kutusuna ayrıntılı** yazın. Görüntülenen sonuçlardan, Seçenekler kategorisi **altında Projeler ve Çözümler --> Ve Çalıştır'ı** seçin. 
 
-   ![Visual Studio arama kutusu](media/quickstart-IDE-quick-launch.png)
+   ![Visual Studio'de arama kutusu](media/quickstart-IDE-quick-launch.png)
 
-   **Seçenekler** iletişim kutusu, **derleme ve çalıştırma** seçenekleri sayfasına açılır.
+   Seçenekler **iletişim** kutusu, Oluşturma ve **Çalıştırma seçenekleri** sayfası açılır.
 
-1. **MSBuild proje derlemesi çıktı ayrıntı düzeyi** altında **Normal**' i seçin ve ardından **tamam**' a tıklayın.
+1. Proje **MSBuild çıkış ayrıntılılığı altında Normal**'i seçin ve ardından Tamam'a **tıklayın.** 
 
-1. **Çözüm Gezgini** ' de **NodejsWebApp1** projesine sağ tıklayıp bağlam menüsünden **yeniden oluştur** ' u seçerek projeyi yeniden derleyin.
+1. Projenizi yeniden derlemek için **nodejsWebApp1** projesine sağ **tıklayın Çözüm Gezgini** menüden **Yeniden** Oluştur'a tıklayın.
 
-   Bu kez **Çıkış** penceresinde, hangi dosyaların nereye kopyalandığı de dahil olmak üzere yapı işleminden daha ayrıntılı günlük gösterilir.
+   Bu kez **Çıkış** penceresi, hangi dosyaların nereye kopyalanmış olduğu da dahil olmak üzere derleme sürecinden daha ayrıntılı günlük kaydı gösterir.
 
-   ![Visual Studio ayrıntılı derleme çıkışı](media/build-output-verbose.png)
+   ![Derlemede ayrıntılı derleme çıkışı Visual Studio](media/build-output-verbose.png)
 
-## <a name="send-feedback-menu"></a>Geri bildirim Gönder menüsü
+## <a name="send-feedback-menu"></a>Geri Bildirim Gönder menüsü
 
-Visual Studio kullanırken herhangi bir sorunla karşılaşmanız gerekir veya ürünün nasıl geliştirileceğine ilişkin önerileriniz varsa, Visual Studio penceresinin en üstündeki **geri bildirim gönder** menüsünü kullanabilirsiniz.
+Visual Studio kullanırken herhangi bir sorunla karşılaşırsanız veya ürünü geliştirme hakkında önerileriniz varsa, ürün penceresinin üst kısmında yer alan Geri Bildirim Gönder Visual Studio kullanabilirsiniz. 
 
-![Visual Studio geri bildirim menüsünü gönder](../ide/media/quickstart-ide-send-feedback.png)
+![Visual Studio'da Geri Bildirim Gönder menüsü](../ide/media/quickstart-ide-send-feedback.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-kullanıcı arabirimiyle tanışmanız için Visual Studio özelliklerinden yalnızca birkaçını inceledik. Daha fazla incelemek için:
+Kullanıcı arabirimi hakkında bilgi almak için Visual Studio özelliklerini inceledik. Daha fazla bilgi için:
 
 > [!div class="nextstepaction"]
-> [Kod Düzenleyicisi hakkında bilgi edinin](write-and-edit-code.md)
+> [Kod düzenleyicisi hakkında bilgi](write-and-edit-code.md)
 
 > [!div class="nextstepaction"]
-> [Projeler ve çözümler hakkında bilgi edinin](../get-started/tutorial-projects-solutions.md)
+> [Projeler ve çözümler hakkında bilgi](../get-started/tutorial-projects-solutions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio ıde 'ye genel bakış](../get-started/visual-studio-ide.md)
-- [Visual Studio 2017 ' nin daha fazla özelliği](../ide/advanced-feature-overview.md)
-- [Temayı ve yazı tipi renklerini değiştirme](../ide/quickstart-personalize-the-ide.md)
+- [Visual Studio IDE'ye genel bakış](../get-started/visual-studio-ide.md)
+- [Visual Studio 2017'nin diğer özellikleri](../ide/advanced-feature-overview.md)
+- [Tema ve yazı tipi renklerini değiştirme](../ide/quickstart-personalize-the-ide.md)

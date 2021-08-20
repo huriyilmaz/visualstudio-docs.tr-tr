@@ -4,25 +4,25 @@
     - name: VS Code kullanıcıları için Docker’a giriş
       expanded: true
       items:
-        - name: Başlarken
+        - name: '1. kısım: Başlarken'
           href: tutorials/docker-tutorial.md
-        - name: 'Bölüm 1: Uygulama'
+        - name: 'Bölüm 2: uygulama'
           href: tutorials/your-application.md
-        - name: 'Bölüm 2: Uygulamanızı güncelleştirme'
+        - name: '3. kısım: uygulamanızı güncelleştirme'
           href: tutorials/update-your-app.md
-        - name: 'Bölüm 3: Uygulamanızı paylaşma'
+        - name: '4. Bölüm: uygulamanızı paylaşma'
           href: tutorials/share-your-app.md
-        - name: 'Bölüm 4: Veritabanınızı sürdürme'
+        - name: '5. Bölüm: veritabanınızı kalıcı hale getirme'
           href: tutorials/persist-your-data.md
-        - name: 'Bölüm 5: Bağlamaları kullanma'
+        - name: '6. Bölüm: BIND bağlama kullanma'
           href: tutorials/use-bind-mounts.md
-        - name: 'Bölüm 6: Birden çok kapsayıcılı uygulamalar'
+        - name: '7. Bölüm: çok Kapsayıcılı uygulamalar'
           href: tutorials/multi-container-apps.md
-        - name: 'Bölüm 7: Docker Compose kullanma'
+        - name: '8. Bölüm: Docker Compose kullanma'
           href: tutorials/use-docker-compose.md
-        - name: 'Bölüm 8: Görüntü oluşturmanın en iyi yöntemleri'
+        - name: '9. Bölüm: görüntü oluşturma en iyi uygulamalar'
           href: tutorials/image-building-best-practices.md
-        - name: 'Bölüm 9: Buluta dağıtma'
+        - name: '10. kısım: buluta dağıtma'
           href: tutorials/deploy-to-cloud.md
         - name: Sırada ne var?
           href: tutorials/whats-next.md

@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 13c09c3755a71342544bf18bc0b8836b19aec6acbd25917b44c4efd6d325d3a7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f9d28e897af9493e499b69a6748793de45ba3a69
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121321369"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118157"
 ---
 # <a name="ipropertyproxyprovidergetpropertyproxy"></a>IPropertyProxyProvider::GetPropertyProxy
 Belirtilen proxy KIMLIĞI için özellik proxy arabirimini alır.

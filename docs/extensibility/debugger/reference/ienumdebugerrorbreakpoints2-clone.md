@@ -1,5 +1,5 @@
 ---
-description: Geçerli hata kesme noktası numaralamalarının bir kopyasını ayrı bir nesne olarak döndürür.
+description: Geçerli hata kesme noktaları numaralamalarının bir kopyasını ayrı bir nesne olarak döndürür.
 title: IEnumDebugErrorBreakpoints2::Clone | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2c17406c74fc6f3516fea14f3f8ecccc26be9795ba1d6289f0bcda59c8640d57
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 009d4c6de9143be6cc9d6d202278a4767cac5c47
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415552"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095601"
 ---
 # <a name="ienumdebugerrorbreakpoints2clone"></a>IEnumDebugErrorBreakpoints2::Clone
 Geçerli numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.

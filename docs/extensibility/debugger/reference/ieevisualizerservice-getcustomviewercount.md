@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, bu hizmetten kullanılabilecek tür görselleştiricilerin sayısını alır.
-title: 'IEEVisualizerService:: GetCustomViewerCount | Microsoft Docs'
+description: Bu yöntem, bu hizmetten kullanılabilen tür görselleştirici sayısını alır.
+title: IEEVisualizerService::GetCustomViewerCount | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: f7b095c2-e538-4352-8cad-d4c6d4f6bdbc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: ea7ec50f3affc415d0a0fdab448cd3d812d5f84c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 39855c4c6e37aa5e1240d15a0ad76518d60b3af4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061751"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103474"
 ---
 # <a name="ieevisualizerservicegetcustomviewercount"></a>IEEVisualizerService::GetCustomViewerCount
-Bu yöntem, bu hizmetten kullanılabilecek tür görselleştiricilerin sayısını alır.
+Bu yöntem, bu hizmetten kullanılabilen tür görselleştirici sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int GetCustomViewerCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcelt`\
-dışı Kullanılabilir Görselleştiriciler türü sayısını döndürür.
+[out] Kullanılabilir tür görselleştiricilerinin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-- [GetCustomViewerCount](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) , bu yönteme istek tür Görselleştiriciler için destek içinde geçirir.
+- [GetCustomViewerCount,](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) tür görselleştirici desteğinde isteği bu yönteme iletir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

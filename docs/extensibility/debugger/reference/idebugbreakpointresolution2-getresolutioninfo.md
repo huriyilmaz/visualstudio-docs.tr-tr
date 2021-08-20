@@ -11,17 +11,18 @@ ms.assetid: 828cbdf6-b87d-4c45-be87-d87087b04a60
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e4e0f042cc619fcd5016cf493f32ba661af4a449
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4e7ab8cd36ac17ba0f85e5f2e1924e813c7d3d20
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095686"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145269"
 ---
 # <a name="idebugbreakpointresolution2getresolutioninfo"></a>IDebugBreakpointResolution2::GetResolutionInfo
 Bu kesme noktasını açıklayan kesme noktası çözümleme bilgilerini alır.

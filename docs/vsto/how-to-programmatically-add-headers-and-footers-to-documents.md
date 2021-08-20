@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 5ae22cd1f04e49dd697bd9a791973b0038a54710bc505746d49f813cf280d7bb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b2ddbc24bcd567ce56326a4b96d9c97f1e50061c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121384398"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122106295"
 ---
 # <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>Nasıl kullanılır: Belgelere program aracılığıyla üst bilgiler ve alt bilgiler ekleme
   özelliğini ve özelliğini kullanarak belgenizin üst bilgilerine ve alt <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> bilgilerine <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> metin <xref:Microsoft.Office.Interop.Word.Section> ekleyebilirsiniz. Belgenin her bölümü üç üst bilgi ve alt bilgi içerir:

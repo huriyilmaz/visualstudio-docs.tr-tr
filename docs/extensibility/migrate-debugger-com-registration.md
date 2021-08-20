@@ -1,6 +1,6 @@
 ---
-title: 64 bit hata ayıklayıcı COM sınıf kaydını geçir | Microsoft Docs
-description: HKEY_CLASSES_ROOT yazmadan hata ayıklayıcı uzantıları için COM sınıflarını msvsmon 'e kaydetmeyi öğrenin.
+title: 64 bit hata ayıklayıcı COM sınıf kaydını geçirme| Microsoft Docs
+description: Hata ayıklayıcısı uzantıları için, hata ayıklayıcıya yazmadan msvsmon'a COM sınıflarını HKEY_CLASSES_ROOT.
 ms.custom: SEO-VS-2020
 ms.date: 11/10/2016
 ms.topic: conceptual
@@ -11,24 +11,24 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - greggm
-ms.openlocfilehash: cd02fe3e8df0372a2a5503c455c706c0006fcef1d14b1ccacfb1695036646415
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a9b569f78720d59bf6321ff972bd7f2668ca6729
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121375162"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122152126"
 ---
-# <a name="migrate-64-bit-debugger-com-class-registration"></a>64 bit hata ayıklayıcı COM sınıfı kaydını geçirme
+# <a name="migrate-64-bit-debugger-com-class-registration"></a>64 bit hata ayıklayıcı COM sınıf kaydını geçirme
 
-RegAsm, regsvr32 veya doğrudan kayıt defterine (uzaktan hata ayıklayıcı) *msvsmon.exe* yüklenen HKEY_CLASSES_ROOT com sınıflarını kaydeden hata ayıklayıcı uzantıları için, artık bu kaydı, HKEY_CLASSES_ROOT yazmaya gerek kalmadan msvsmon 'ye sağlamak mümkündür. Bu, eski .NET Debugger ifadesi değerlendiricileri veya *msvsmon.exe* işleminde yüklenecek şekilde yapılandırılmış hata ayıklama altyapılarını etkiler.
+regasm, regsvr32 kullanarak veya doğrudan kayıt defterine yazarak HKEY_CLASSES_ROOT'de COM sınıflarını kaydeden ve *msvsmon.exe'ye* (uzaktan hata ayıklayıcısı) yüklenen hata ayıklayıcı uzantıları için, artık bu kaydı HKEY_CLASSES_ROOT'ye yazmaya gerek kalmadan msvsmon'a sağlamak mümkündür. Bu, eski .NET hata ayıklayıcısı ifade değerlendiricilerini veya bu işlemde yükleyebilecek şekilde yapılandırılmış *hata ayıklamamsvsmon.exe* etkiler.
 
-## <a name="msvsmon-comclass-def"></a>Msvsmon-ComClass-def
+## <a name="msvsmon-comclass-def"></a>msvsmon-comclass-def
 
-Bu tekniği kullanmak için *msvsmon (InstallDir:* \Common7\IDE\Remote Debugger\x64 *) yanına bir dosyaya.msvsmon-comclass-def.jsekleyin.
+Bu tekniği kullanmak için **msvsmon'.msvsmon-comclass-def.js* (InstallDir:* \Common7\IDE\Remote Debugger\x64*) yanına bir dosya ekleyin.
 
-Aşağıda, bir yönetilen ve bir yerel sınıf kaydeden örnek bir msvsmon-ComClass-def dosyası verilmiştir:
+Bir yönetilen ve bir yerel sınıfı kaydeden örnek bir msvsmon-comclass-def dosyası şöyledir:
 
-Dosya adı: *MyCompany.MyExample.msvsmon-comclass-def.json*
+FileName: *MyCompany.MyExample.msvsmon-comclass-def.jsaçık*
 
 ```json
 {

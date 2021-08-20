@@ -9,14 +9,15 @@ ms.assetid: 61ff7431-1994-4f7e-a182-1817f16f60a9
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: ad43e11f45c005aad923cbb27e23865978d047d7
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: a7906879f00fcb53c91d297aa3a3e97e3f74efed
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155938"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113382"
 ---
 # <a name="idiasymbolget_numberofmodifiers"></a>IDiaSymbol::get_numberOfModifiers
 Özgün türe uygulanan değiştiricilerin sayısını alır.

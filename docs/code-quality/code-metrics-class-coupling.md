@@ -1,35 +1,36 @@
 ---
-title: Kod ölçümleri-sınıf bağlantısı
+title: Kod ölçümleri - Sınıf bağlantısı
 ms.date: 1/8/2021
-description: Visual Studio 'da kod ölçümleri için bir ders ölçüm sınıfı hakkında bilgi edinin.
+description: Visual Studio'da kod ölçümleri için sınıf eşleştirme ölçümü hakkında Visual Studio.
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: 0853b807d3287eb584e76d9640ac98f930edb1a7
-ms.sourcegitcommit: cc66c898ce82f9f1159bd505647f315792cac9fc
+ms.openlocfilehash: 6c9ff474cfdc8c572143145c642bc42e899b6516
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "109666815"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129967"
 ---
-# <a name="code-metrics---class-coupling"></a>Kod ölçümleri-sınıf bağlantısı
+# <a name="code-metrics---class-coupling"></a>Kod ölçümleri - Sınıf bağlantısı
 
-Sınıf bağlantısı, ilk olarak [CK94](#ck94)tarafından tanımlanan nesneler (CBO) arasında bir ad ile geçer. Temel olarak sınıf bağlantısı, tek bir sınıfın kaç sınıf kullandığını gösteren bir ölçüdür. Yüksek bir sayı hatalı ve bu ölçümle genellikle düşük bir sayı vardır. Sınıf bağlantısı, yazılım hatasının doğru bir öngörüsi olacak şekilde gösterilmiştir ve son çalışmalar en verimli [S2010](#s2010)bir 9 üst sınır değeri olduğunu göstermiştir.
+Sınıf eşleştirmesi, başlangıçta [CK94](#ck94)tarafından tanımlandığı gibi Nesneler Arasında Eşleştirme (CBO) adıyla da gider. Temel olarak, sınıf eşleştirmesi tek bir sınıfın kaç sınıf kullandığına bir ölçüdür. Yüksek bir sayı kötüdür ve düşük bir sayı genellikle bu ölçümde iyidir. Sınıf bağlantısı, yazılım hatasına yönelik doğru bir tahmin olarak gösterilmiştir ve son çalışmalar 9 üst sınır değerinin en verimli [S2010](#s2010)olduğunu göstermiştir.
 
-Sınıf bağlantısı, Microsoft belgelerine göre parametreler, yerel değişkenler, dönüş türleri, Yöntem çağrıları, genel veya şablon örneklemeleri, temel sınıflar, arabirim uygulamaları, dış türlerde tanımlı alanlar ve öznitelik dekorasyonu aracılığıyla benzersiz sınıflara yapılan eşlenenleri ölçer. İyi yazılım tasarımı, türlerin ve yöntemlerin yüksek düzeyde ve düşük bir eşlencede sahip olması gerektiğini belirler. Yüksek bağlantı, diğer türler üzerinde birçok bağımlılığı nedeniyle yeniden kullanılması zor olan bir tasarımın olduğunu gösterir. "
+Microsoft belgelerine göre, sınıf eşleştirmesi "parametreler, yerel değişkenler, dönüş türleri, yöntem çağrıları, genel veya şablon örneklemeleri, temel sınıflar, arabirim uygulamaları, dış türlerde tanımlanan alanlar ve öznitelik süslemesi aracılığıyla benzersiz sınıflarla eşleşmeyi ölçür. İyi bir yazılım tasarımı, türlerin ve yöntemlerin yüksek uyum ve düşük eşleşmeye sahip olması gerektiğini dikte ediyor. Yüksek bağlantı, diğer türlerde birçok bağımlılıkları nedeniyle yeniden kullanılması ve korunması zor bir tasarım olduğunu gösterir."
 
-Eşlenme ve cohema kavramlarının kavramları net bir şekilde ilgilidir. Bu tartışmayı konu başlığı altında tutmak için, [KKLS2000](#kkls2000)adresinden kısa bir tanım vermek yerine, bir kaplama ile ilgili derinliğe karşılaşamayız:
+Eşleştirme ve uyum kavramları net bir şekilde ilişkilidir. Bu tartışmayı konu başlığında tutmak için [KKLS2000'den](#kkls2000)kısa bir tanım vermekten başka bir uyumla daha derine inmayacaktır:
 
-"Modül cohema, bir modülün iç öğelerinin bire bir ' [YC79](#yc79)ne kadar sıkı bir şekilde bağlandığını veya ilgili olduğunu olarak, Yourdon ve Constantine tarafından tanıtılmıştı. Bir modülün tam olarak bir görevi (...]) temsil ediyorsa ve tüm öğeleri bu tek göreve katkıda bulunursa güçlü bir cohemi vardır. Bunlar, kod yerine tasarımın bir özniteliği olarak ve yeniden kullanılabilirlik, bakım ve değişiklik sağlamak için kullanılabilecek bir öznitelik olarak birlikte tanımlanır. "
+"Modül uyumu Yourdon ve Constantine tarafından 'bir modülün iç öğelerinin ne kadar sıkı bir şekilde bağlı olduğu veya ilişkili olduğu' [YC79 olarak tanıtıldı.](#yc79) Bir modülün tam olarak tek bir görevi temsil ettiği ve tüm öğelerinin bu tek göreve katkıda bulunan güçlü bir uyumu vardır. Bunlar, uyumu kod yerine tasarım özniteliği ve yeniden kullanılabilirlik, bakım ve değişiklikle ilgili tahminde etmek için kullanılan bir öznitelik olarak tanımlar."
 
-## <a name="class-coupling-example"></a>Sınıf kuponu örneği
+## <a name="class-coupling-example"></a>Sınıf Eşleştirme Örneği
 
-Şimdi sınıf bağlantısı ' na bakın. İlk olarak, yeni bir konsol uygulaması oluşturun ve içinde bazı özelliklere sahip kişi adlı yeni bir sınıf oluşturun ve ardından kod ölçümlerini hemen hesaplayın:
+Şimdi sınıf eşleştirmenin nasıl bir işlemde olduğunu bakalım. İlk olarak yeni bir konsol uygulaması oluşturun ve içinde bazı özellikler bulunan Person adlı yeni bir sınıf oluşturun ve ardından kod ölçümlerini hemen hesap edin:
 
-![Sınıf bağlantısı örnek 1](media/class-coupling-example-1.png)
+![Sınıf eşleştirme örneği 1](media/class-coupling-example-1.png)
 
 Bu sınıf başka sınıf kullanmaz çünkü sınıf eşleştirmesi 0'dır. Şimdi personstuff adlı başka bir sınıf oluşturmak için Person örneği oluşturan ve özellik değerlerini ayaran bir yöntem kullanın. Kod ölçümlerini yeniden hesapla:
 
@@ -41,7 +42,7 @@ Başka bir sınıf kullanılan oluşturucuya kod koysanız ne olur? Elde şunlar
 
 ![Sınıf eşleştirme örneği 3](media/class-coupling-example-3.png)
 
-Oluşturucu artık açıkça başka bir sınıf kullanan koda sahip ve sınıf eşleştirme ölçümü bu durumu gösteriyor. Yine için genel sınıf eşleştirmenin 1 olduğunu ve aynı zamanda 1 olduğunu görebilir ve bunu kullanan iç kodunuz ne kadar olursa olsun yalnızca bir dış sınıfın `PersonStuff()` `DoSomething()` kullan olduğunu gösterir.
+Oluşturucu artık açıkça başka bir sınıf kullanan koda sahip ve sınıf eşleştirme ölçümü bu durumu gösteriyor. Yine için genel sınıf eşleştirmenin 1 olduğunu ve ayrıca 1 olduğunu görebilir ve bunu kullanan iç kodunuz ne kadar olursa olsun yalnızca bir dış sınıfın `PersonStuff()` `DoSomething()` kullan olduğunu gösterir.
 
 Ardından, başka bir yeni sınıf oluşturun. Bu sınıfa bir ad girin ve içinde bazı özellikler oluşturun:
 
@@ -51,39 +52,39 @@ Ardından, başka bir yeni sınıf oluşturun. Bu sınıfa bir ad girin ve için
 
 ![Sınıf eşleştirme örneği 4](media/class-coupling-example-4.png)
 
-Gördüğünüz gibi PersonStuff sınıfı için sınıf eşleştirmesi 2'ye kadar gider ve sınıfa detaya gidersiniz, yöntemin içinde en çok eşleşmeye sahip olduğunu, ancak oluşturucu hala 1 sınıf `DoSomething()` tüketir.  Bu ölçümleri kullanarak, belirli bir sınıf için genel en büyük sayıyı görebilir ve her üye için ayrıntıların ayrıntılarına gidebilirsiniz.
+Gördüğünüz gibi PersonStuff sınıfı için sınıf eşleştirmesi 2'ye kadar gider ve sınıfa detaya gidersiniz, yöntemin içinde en çok eşleşmeye sahip olduğunu, ancak oluşturucu hala 1 sınıf `DoSomething()` tüketir.  Bu ölçümleri kullanarak, bir sınıfın genel maksimum sayısını görebilir ve üye başına ayrıntıya inebilirsiniz.
 
-## <a name="the-magic-number"></a>Sihirli sayı
+## <a name="the-magic-number"></a>Sihirli Sayı
 
-Döngüsel karmaşıklıkta olduğu gibi, tüm kuruluşlara uyan bir sınır yoktur. Ancak [S2010](#s2010) , 9 sınırının en iyi olduğunu belirtir:
+Cyclomatic karmaşıklığında olduğu gibi, tüm kuruluşlara uyan bir sınır yoktur. Ancak [S2010,](#s2010) 9 sınırının en uygun olduğunu gösteriyor:
 
-"Bu nedenle, [...] eşik değerlerini göz önünde bulunduruyoruz en etkili şekilde. Bu eşik değerleri (tek bir üye için), BHA = 9 [...]. " (vurgu eklendi)
+"Bu nedenle eşik değerlerini dikkate alırz . en etkilisi olarak. Bu eşik değerleri (tek bir üye için) CBO = 9 şeklindedir." (vurgu eklendi)
 
 ## <a name="code-analysis"></a>Kod Çözümleme
 
-Kod Analizi bir bakım kuralları kategorisi içerir. Daha fazla bilgi için bkz. [Bakımlamama kuralları](/dotnet/fundamentals/code-analysis/quality-rules/maintainability-warnings). Eski Kod analizini kullanırken, genişletilmiş tasarım kılavuz kuralı kümesi bir bakım alanı içerir:
+Kod analizi, Bakım kuralları kategorisini içerir. Daha fazla bilgi için [bkz. Bakım kuralları.](/dotnet/fundamentals/code-analysis/quality-rules/maintainability-warnings) Eski kod analizini kullanırken, Genişletilmiş Tasarım Kılavuzu kural kümesi bir bakım alanı içerir:
 
-![Sınıf eşlenmiş tasarım kılavuzu kuralları](media/class-coupling-extended-design-guideline-rules.png)
+![Sınıf eşleştirme Genişletilmiş Tasarım Kılavuzu kuralları](media/class-coupling-extended-design-guideline-rules.png)
 
-Bakım alanının içinde, sınıf bağlantısı için bir kuraldır:
+Bakım alanı, sınıf eşleştirmesi için bir kuraldır:
 
-![Sınıf bağlantısı](media/class-coupling-maintainability-area-rules.png)
+![Sınıf eşleştirme kuralı](media/class-coupling-maintainability-area-rules.png)
 
-Bu kural, bir sınıf bağlantısı aşırı olduğunda bir uyarı verir. Daha fazla bilgi için bkz. [CA1506: aşırı sınıf bağlantısından kaçının](/dotnet/fundamentals/code-analysis/quality-rules/ca1506).
+Bu kural, sınıf bağlantısı aşırı olduğunda bir uyarı sağlar. Daha fazla bilgi için bkz. [CA1506: Aşırı sınıf bağlantısından kaçının.](/dotnet/fundamentals/code-analysis/quality-rules/ca1506)
 
 ## <a name="citations"></a>Alıntı
 
 ### <a name="ck94"></a>CK94
 
-Oyduklik, S. R. & Kemerer, C. F. (1994). Nesne Odaklı Tasarım için Ölçüm Paketi (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 20, Hayır. 6). 14 Mayıs 2011, University of Pittsburgh web sitesinden alındı: [http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf](http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf)
+Chidamber, S. R. & ZamanEr, C. F. (1994). Nesne Odaklı Tasarım için Ölçüm Paketi (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 20, Hayır. 6). 14 Mayıs 2011, University of Pittsburgh web sitesinden alındı: [http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf](http://www.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf)
 
 ### <a name="kkls2000"></a>KKLS2000
 
-Kabaili, H., Keller, R., Saintman, F., and Saint-Denis, G. (2000). Sınıf Uyumu Yeniden Değerlendirildi: Endüstriyel Sistemlerle ilgili Ampirik Bir Çalışma (Object-Oriented Yazılım Mühendisliğinde Nicel Yaklaşımlar Atölyesinde Proceedings of the Workshop). 20 Mayıs 2011' tarihindeKiré de Montréal web sitesinden alındı [http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf](http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf)
+Kabaili, H., Keller, R., Saintman, F., and Saint-Denis, G. (2000). Sınıf Uyumu Yeniden Değerlendirildi: Endüstriyel Sistemlerle ilgili Ampirik Bir Çalışma (Object-Oriented Software Engineering'de Nicel Yaklaşımlar Üzerine AtölyeNin DevamLarı). 20 Mayıs 2011 tarihindeKiré de Montréal web sitesinden alındı [http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf](http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf)
 
 ### <a name="sk2003"></a>SK2003
 
-Subramanyam, R. & Ancak, M. S. (2003). Object-Oriented Tasarım Karmaşıklığı için CK Ölçümlerinin Ampirik Analizi: Yazılım Hatalarının Etkileri (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 29, Hayır. 4). 14 Mayıs 2011, University of University of University Of Sonay web sitesinden alındı [http://moosehead.cis.umassd.edu/cis580/readings/OO_Design_Complexity_Metrics.pdf](http://moosehead.cis.umassd.edu/cis580/readings/OO_Design_Complexity_Metrics.pdf)
+Subramanyam, R. & Ancak, M. S. (2003). Object-Oriented Tasarım Karmaşıklığı için CK Ölçümlerinin Ampirik Analizi: Yazılım Hatalarının Etkileri (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 29, Hayır. 4). 14 Mayıs 2011 tarihinde, University of University of Sonadea web sitesinden alındı [http://moosehead.cis.umassd.edu/cis580/readings/OO_Design_Complexity_Metrics.pdf](http://moosehead.cis.umassd.edu/cis580/readings/OO_Design_Complexity_Metrics.pdf)
 
 ### <a name="s2010"></a>S2010
 

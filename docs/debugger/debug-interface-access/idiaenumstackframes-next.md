@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinden belirtilen sayıda yığın çerçevesi öğesi alır.
-title: 'IDiaEnumStackFrames:: Next | Microsoft Docs'
+description: Numaralama dizisinde belirtilen sayıda yığın çerçevesi öğelerini alan.
+title: IDiaEnumStackFrames::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cb9be1d000b60a1854cc953724bd213ce4f2f2f00e73122586a69ec779a4b3d6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 76248ef1feb330157895ccd24d8fa071b3e857bd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121312207"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129482"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
-Sabit Listesi dizisinden belirtilen sayıda yığın çerçevesi öğesi alır.
+Numaralama dizisinde belirtilen sayıda yığın çerçevesi öğelerini alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT Next(
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Alınacak numaralandırıcıdaki StackFrame öğelerinin sayısı.
+[in] Numaralayıcıda alınan stackframe öğelerinin sayısı.
 
- rgelt
+ Rgelt
 
-dışı İstenen [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) nesneleriyle doldurulacak bir dizi.
+[out] İstenen [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) nesneleriyle doldurulması gereken bir dizi.
 
- Pceltfettiz
+ pceltFetched
 
-dışı Getirilen Numaralandırıcı içindeki yığın çerçevesi öğelerinin sayısını döndürür.
+[out] Getirili numaralayıcıda yığın çerçevesi öğelerinin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla yığın çerçevesi yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` yığın çerçevesi yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)

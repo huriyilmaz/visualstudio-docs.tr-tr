@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 139cfe87a543285d8b16b7283dc6651143d9a3d7f2a3e693767e7f903028feec
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5a61a11c9aa7f9d2f6a3af54cd85d642b083916a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121346003"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129707"
 ---
 # <a name="create-custom-data-visualizers"></a>Özel veri Görselleştiriciler oluşturma
 

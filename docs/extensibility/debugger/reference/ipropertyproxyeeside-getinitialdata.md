@@ -11,17 +11,18 @@ ms.assetid: 36cceb19-2604-4ef9-b42b-5dd30cbe24b1
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 96129d254ad153b6a0ad754931cd18abba803849
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bee25b2857d06b49a97a20789f6708e678cc15af
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082536"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118183"
 ---
 # <a name="ipropertyproxyeesidegetinitialdata"></a>IPropertyProxyEESide::GetInitialData
 Bu nesne için ilk verileri döndürür.

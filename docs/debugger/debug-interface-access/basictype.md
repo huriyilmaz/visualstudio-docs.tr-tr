@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 033ab7c7d2c77470393425b0862cfbed24f7b06a1c6d6e11f364f5337c4487e3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9c59e66b73767b5ee5c6787fe0155ad1a2345161
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345693"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129522"
 ---
 # <a name="basictype"></a>BasicType
 Sembolün temel türünü belirtir.
