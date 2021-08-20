@@ -1,6 +1,6 @@
 ---
-description: İşlevin özel bir çağırma kuralına sahip olup olmadığını belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_customCallingConvention | Microsoft Docs'
+description: İşlevin özel bir çağırma kuralına sahip olup olmadığını belirten bir bayrak verir.
+title: IDiaSymbol::get_customCallingConvention | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 09421e68e727378be4a9bce20652b9aab9e5706544f84c103967192b59a9061b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f599463d31d79b6c4080fad032a86ba579c44e4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121420752"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128738"
 ---
 # <a name="idiasymbolget_customcallingconvention"></a>IDiaSymbol::get_customCallingConvention
-İşlevin özel bir çağırma kuralına sahip olup olmadığını belirten bir bayrak alır.
+İşlevin özel bir çağırma kuralına sahip olup olmadığını belirten bir bayrak verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_customCallingConvention(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE` İşlevin özel bir çağırma kuralına sahip olup olmadığını döndürür; Aksi takdirde, `FALSE` işlevinin bilinen bir çağırma kuralı vardır.
+[out] İşlevin `TRUE` özel bir çağırma kuralı varsa döndürür; aksi takdirde `FALSE` işlevi, bilinen bir çağırma kuralına sahiptir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

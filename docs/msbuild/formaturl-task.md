@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 601adcb918be3efad897ff1a1479b1613e56336fc5582b6d5dc1e2ad1d2e99fb
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 300b64f3de940d7be3c28a8a13afe7b1bfc7b0e4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121427905"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122137138"
 ---
 # <a name="formaturl-task"></a>FormatUrl görevi
 

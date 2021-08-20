@@ -14,14 +14,15 @@ ms.assetid: f116066a-4f65-4f2c-94ef-12cbd8cfb598
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 32980161281cf36c54ad15d536870a96694a461a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c4c71b73ccfd26a0b2e890bbd5014bcbcf932b7b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99958017"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122151099"
 ---
 # <a name="replace-in-files-command"></a>Dosyalarda Değiştir Komutu
 Dosyalardaki metni **Bul ve Değiştir** penceresinin **dosyaları değiştir** sekmesinde bulunan seçeneklerin bir alt kümesini kullanarak değiştirir.
@@ -113,5 +114,5 @@ Bu örnek, `btnCancel` `btnReset` "My Visual Studio Projects" klasöründe bulun
 - [Dosyalarda Değiştir](../../ide/replace-in-files.md)
 - [Komut penceresi](../../ide/reference/command-window.md)
 - [Bul/komut kutusu](../../ide/find-command-box.md)
-- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

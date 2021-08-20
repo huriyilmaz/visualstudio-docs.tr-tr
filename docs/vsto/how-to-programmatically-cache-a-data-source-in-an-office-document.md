@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: eeede798542499d6a482b1a42b626e73170d024e864ec941c66e72a1b131bba3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2737cd7ff10ffff4623fa50a2382d8887293b6ab
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121408779"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122148096"
 ---
 # <a name="how-to-programmatically-cache-a-data-source-in-an-office-document"></a>Nasıl kullanılır: Bir veri kaynağını program aracılığıyla bir veri Office önbelleğe ekleme
   , veya gibi bir konak öğesinin yöntemini çağırarak program aracılığıyla bir veri nesnesini bir belgede `StartCaching` veri önbelleğine <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Tools.Excel.Workbook> <xref:Microsoft.Office.Tools.Excel.Worksheet> ekleyebilirsiniz. Bir konak öğesinin yöntemini çağırarak veri `StopCaching` önbelleğinden bir veri nesnesini kaldırın.

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: f2b62950b93249eae2cc81c5e1d4859a12a349daf37b9c634fa3fbd7560217c5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: da3fdc1c8f3c9c836519ba45d39df0aeca326d05
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121292851"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104137"
 ---
 # <a name="idebugcodecontext2"></a>IDebugCodeContext2
 Bu arabirim, bir kod yönergesi başlangıç konumunu temsil eder. Günümüzde çoğu çalışma zamanı mimarisinde kod bağlamı, bir programın yürütme akışındaki bir adres olarak düşünebilirsiniz.
@@ -34,7 +34,7 @@ IDebugCodeContext2 : IDebugMemoryContext2
  Hata ayıklama altyapısı, bir kod yönergesi konumunu belge konumuyla ilişkilendirmek için bu arabirimi uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Birçok arabirimde kullanılan yöntemler bu arabirimi, genellikle [GetCodeContext olarak kullanır.](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) Ayrıca [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md) arabirimi ve kesme noktası çözümleme bilgileriyle kapsamlı olarak kullanılır.
+ Birçok arabirimde kullanılan yöntemler, bu arabirimi genellikle [GetCodeContext olarak kullanır.](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) Ayrıca [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md) arabirimi ve kesme noktası çözümleme bilgileriyle kapsamlı olarak kullanılır.
 
 ## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
  [Bu arabirim, IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabiriminde yöntemlere ek olarak aşağıdaki yöntemleri de kullanır:
@@ -45,7 +45,7 @@ IDebugCodeContext2 : IDebugMemoryContext2
 |[GetLanguageInfo](../../../extensibility/debugger/reference/idebugcodecontext2-getlanguageinfo.md)|Bu kod bağlamı için dil bilgilerini alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Arabirim ile `IDebugCodeContext2` [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimi arasındaki temel fark, bir arabiriminin her zaman `IDebugCodeContext2` yönergeyle hizalanmış olduğudur. Bu, bir her zaman yönergenin başlangıcına işaret ediyor, ancak bir çalışma zamanı mimarisinde herhangi bir bellek baytı `IDebugCodeContext2` `IDebugMemoryContext2` işaret ediyor olabilir. `IDebugCodeContext2` temel depolama boyutu (genellikle byte) yerine yönergelerle artırılır.
+ Arabirim ile `IDebugCodeContext2` [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) arabirimi arasındaki temel fark, bir arabiriminin her zaman `IDebugCodeContext2` yönergeyle hizalanmış olduğudur. Bu, bir her zaman bir yönergenin başlangıcına işaret ediyor, ancak bir çalışma zamanı mimarisinde herhangi bir bellek `IDebugCodeContext2` `IDebugMemoryContext2` baytı işaret ediyor olabilir. `IDebugCodeContext2` temel depolama boyutu (genellikle byte) yerine yönergelerle artırılır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg.h

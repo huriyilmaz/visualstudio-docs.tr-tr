@@ -1,6 +1,6 @@
 ---
-title: 'İzlenecek yol: VSTO eklenti projesinde basit veri bağlama'
-description: Bir Microsoft Word belgesine nasıl denetim ekleyebileceğiniz ve çalışma zamanında denetimleri verilere nasıl bağlayabileceğinizi öğrenin.
+title: 'Adım adım kılavuz: Eklenti projesinde VSTO basit veri bağlama'
+description: Çalışma zamanında bir belgeye denetimler Microsoft Word ve bu denetimleri verilere bağlamayı öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -15,28 +15,29 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: e1891173f10acfff74e0f7ef7ab17e29b258b80e
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: 10ecb5b04198a0937b06876760862c7b9cf415c0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107826843"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155453"
 ---
-# <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>İzlenecek yol: VSTO eklenti projesinde basit veri bağlama
+# <a name="walkthrough-simple-data-binding-in-vsto-add-in-project"></a>Adım adım kılavuz: Eklenti VSTO basit veri bağlama Project
 
-VSTO eklenti projelerinde verileri konak denetimlerine ve Windows Forms denetimlerine bağlayabilirsiniz. Bu izlenecek yol, Microsoft Office bir Word belgesine nasıl denetim ekleneceğini ve çalışma zamanında denetimleri verilere nasıl bağlayacağınızı gösterir.
+Eklenti projelerinde verileri konak denetimlerine Windows Forms VSTO bağlanabilirsiniz. Bu kılavuzda, word word belgesine denetimler Microsoft Office ve çalışma zamanında verilere nasıl bağlanacağını gösterir.
 
 [!INCLUDE[appliesto_wdallapp](../vsto/includes/appliesto-wdallapp-md.md)]
 
 Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Çalışma zamanında <xref:Microsoft.Office.Tools.Word.ContentControl> belgeye ekleme.
+- Çalışma zamanında <xref:Microsoft.Office.Tools.Word.ContentControl> belgeye bir ekleme.
 
-- Denetimi bir <xref:System.Windows.Forms.BindingSource> veri kümesinin örneğine bağlayan bir oluşturma.
+- Denetimi <xref:System.Windows.Forms.BindingSource> bir veri kümesi örneğine bağlayan bir oluşturma.
 
-- Kullanıcının kayıtlarda gezinmelerini ve denetimde görüntülemesini sağlama.
+- Kullanıcının kayıtlarda kaydırma ve denetimde görüntülemesini etkinleştirme.
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -48,90 +49,90 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 - [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] veya [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
 
-- Örnek veritabanının eklendiği SQL Server 2005 veya SQL Server 2005 Express 'in çalışan bir örneğine erişim `AdventureWorksLT` . `AdventureWorksLT`Veritabanını [SQL Server örnekleri GitHub deposundan](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)indirebilirsiniz. Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+- Örnek veritabanının bağlı olduğu SQL Server 2005 veya SQL Server 2005 Express çalıştıran `AdventureWorksLT` bir örneğine erişim. veritabanını SQL Server `AdventureWorksLT` [Samples GitHub indirebilirsiniz.](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) Veritabanı ekleme hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
-  - SQL Server Management Studio veya SQL Server Management Studio Express kullanarak bir veritabanı eklemek için bkz. [nasıl yapılır: veritabanı iliştirme (SQL Server Management Studio)](/sql/relational-databases/databases/attach-a-database).
+  - SQL Server Management Studio veya SQL Server Management Studio Express kullanarak veritabanı eklemek için [bkz. Nasıl kullanılır: Veritabanı ekleme (SQL Server Management Studio)](/sql/relational-databases/databases/attach-a-database).
 
-  - Komut satırını kullanarak bir veritabanı eklemek için, bkz. [nasıl yapılır: SQL Server Express veritabanı dosyası iliştirme](/previous-versions/sql/).
+  - Komut satırı kullanarak veritabanı eklemek için bkz. [Nasıl kullanılır:](/previous-versions/sql/)Veritabanı dosyasını SQL Server Express.
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
-İlk adım, bir Word VSTO eklenti projesi oluşturmaktır.
+İlk adım, Word VSTO Eklenti projesi oluşturmaktır.
 
-### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
+### <a name="to-create-a-new-project"></a>Yeni proje oluşturmak için
 
-1. Visual Basic veya C# kullanarak **bir veritabanından belge doldurma** adlı BIR Word VSTO eklentisi projesi oluşturun.
+1. VSTO veya C# kullanarak Bir Veritabanından Belgeleri Doldurmak adıyla bir Word Visual Basic Eklenti projesi oluşturun.
 
-     Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+     Daha fazla bilgi için, [bkz. How to: Create Office projects in Visual Studio.](../vsto/how-to-create-office-projects-in-visual-studio.md)
 
-     Visual Studio, *ThisAddIn. vb* veya *ThisAddIn. cs* dosyasını açar ve bir veritabanı projesinden **Çözüm Gezgini** **belge doldurmayı** ekler.
+     Visual Studio *ThisAddIn.vb* veya *ThisAddIn.cs* dosyasını açar ve  Veritabanı projesinden Belgeleri Doldurmak için **Çözüm Gezgini.**
 
-2. Projeniz [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] ' i hedefliyorsa, *Microsoft.Office.Tools.Word.v4.0.Utilities.dll* derlemesine bir başvuru ekleyin. Bu izlenecek yolda daha sonra belgeye Windows Forms denetimleri eklemek için bu başvuru gerekir.
+2. Projeniz veya [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] hedefini [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] hedeflese, derleme derlemesi için *Microsoft.Office.Tools.Word.v4.0.Utilities.dll* ekleyin. Bu başvuru, bu kılavuzun sonraki Windows Formlar denetimlerini program aracılığıyla eklemek için gereklidir.
 
 ## <a name="create-a-data-source"></a>Veri kaynağı oluşturma
 
-Projenize türü belirtilmiş bir veri kümesi eklemek için **veri kaynakları** penceresini kullanın.
+Projenize **türü** türüne göre bir veri kümesi eklemek için Veri Kaynakları penceresini kullanın.
 
-### <a name="to-add-a-typed-dataset-to-the-project"></a>Projeye türü belirtilmiş bir veri kümesi eklemek için
+### <a name="to-add-a-typed-dataset-to-the-project"></a>Projeye türü türüne göre bir veri kümesi eklemek için
 
-1. **Veri kaynakları** penceresi görünür değilse, menü çubuğunda,   >  **diğer Windows**  >  **veri kaynaklarını** görüntüle ' yi seçerek bunu görüntüleyin.
+1. Veri **Kaynakları penceresi görünmüyorsa,** menü çubuğunda Diğer Kaynakları Görüntüle'Windows   >    >  **görüntüleniyor.**
 
-2. **Veri kaynağı Yapılandırma Sihirbazı 'nı** başlatmak Için **Yeni veri kaynağı Ekle** ' yi seçin.
+2. Veri **Kaynağı Yapılandırma Sihirbazı'nı başlatmak** için Yeni Veri Kaynağı **Ekle'yi seçin.**
 
-3. **Veritabanı**' na ve ardından **İleri**' ye tıklayın.
+3. Veritabanı **'ne** ve ardından Sonraki'ye **tıklayın.**
 
-4. Veritabanına var olan bir bağlantınız varsa `AdventureWorksLT` , bu bağlantıyı seçin ve **İleri**' ye tıklayın.
+4. Veritabanıyla mevcut bir bağlantınız varsa `AdventureWorksLT` bu bağlantıyı seçin ve Ardından'ya **tıklayın.**
 
-    Aksi takdirde, **Yeni bağlantı**' ya tıklayın ve yeni bağlantıyı oluşturmak Için **bağlantı ekle** iletişim kutusunu kullanın. Daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
+    Aksi takdirde, **Yeni Bağlantı'ya** tıklayın **ve yeni bağlantıyı** oluşturmak için Bağlantı Ekle iletişim kutusunu kullanın. Daha fazla bilgi için [bkz. Yeni bağlantı ekleme.](../data-tools/add-new-connections.md)
 
-5. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında, **İleri**' ye tıklayın.
+5. Bağlantı **Dizesini Uygulama Yapılandırma Dosyasına Kaydet sayfasında, Sonraki** 'ye **tıklayın.**
 
-6. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** ' ı genişletin ve müşteri ' yi **(SalesLT)** seçin.
+6. Veritabanı **Nesnelerinizi Seçin sayfasında Tablolar'ı** genişletin ve **Müşteri** **(SalesLT) öğesini seçin.**
 
 7. **Finish (Son)** düğmesine tıklayın.
 
-    *AdventureWorksLTDataSet. xsd* dosyası **Çözüm Gezgini** eklenir. Bu dosya aşağıdaki öğeleri tanımlar:
+    *AdventureWorksLTDataSet.xsd* dosyası **Çözüm Gezgini.** Bu dosya aşağıdaki öğeleri tanımlar:
 
-   - Adında bir türü belirtilmiş veri kümesi `AdventureWorksLTDataSet` . Bu veri kümesi AdventureWorksLT veritabanındaki **Customer (SalesLT)** tablosunun içeriğini temsil eder.
+   - adlı türüne göre bir veri `AdventureWorksLTDataSet` kümesi. Bu veri kümesi, **AdventureWorksLT veritabanındaki Customer (SalesLT)** tablosu içeriğini temsil eder.
 
-   - Adında bir TableAdapter `CustomerTableAdapter` . Bu TableAdapter, içindeki verileri okumak ve yazmak için kullanılabilir `AdventureWorksLTDataSet` . Daha fazla bilgi için bkz. [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
+   - adlı bir TableAdapter. `CustomerTableAdapter` Bu TableAdapter, içinde veri okumak ve yazmak için `AdventureWorksLTDataSet` kullanılabilir. Daha fazla bilgi için bkz. [TableAdapter'a genel bakış.](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview)
 
-     Bu iki nesneyi daha sonra Bu izlenecek yolda kullanacaksınız.
+     Bu adım adım kılavuzda bu nesnelerin ikisini de kullanacağız.
 
-## <a name="create-controls-and-binding-controls-to-data"></a>Verilere denetimler oluşturma ve denetimleri bağlama
+## <a name="create-controls-and-binding-controls-to-data"></a>Denetimler oluşturma ve verilere denetimler bağlama
 
-Bu izlenecek yolda veritabanı kayıtlarını görüntüleme arabirimi temel ve belge içinde oluşturulur. <xref:Microsoft.Office.Tools.Word.ContentControl>Tek seferde tek bir veritabanı kaydını görüntüler ve iki <xref:Microsoft.Office.Tools.Word.Controls.Button> Denetim kayıtlarda ileri ve geri kaydıramanıza imkan tanır. İçerik denetimi, <xref:System.Windows.Forms.BindingSource> veritabanına bağlanmak için bir kullanır.
+Bu kılavuzda veritabanı kayıtlarını görüntüleme arabirimi temeldir ve belgenin içinde oluşturulur. Bunlardan <xref:Microsoft.Office.Tools.Word.ContentControl> biri aynı anda tek bir veritabanı kaydı görüntüler ve iki <xref:Microsoft.Office.Tools.Word.Controls.Button> denetim, kayıtlarda ileri ve geri kaydırmanız için olanak sağlar. İçerik denetimi veritabanına <xref:System.Windows.Forms.BindingSource> bağlanmak için kullanır.
 
-Verilere yönelik bağlama denetimleri hakkında daha fazla bilgi için bkz. [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md).
+Verilere denetimler bağlama hakkında daha fazla bilgi için [bkz. Veri bağlama çözümlerini Office bağlama.](../vsto/binding-data-to-controls-in-office-solutions.md)
 
-### <a name="to-create-the-interface-in-the-document"></a>Belgede arabirim oluşturmak için
+### <a name="to-create-the-interface-in-the-document"></a>Belgede arabirimi oluşturmak için
 
-1. `ThisAddIn`Sınıfında, veritabanı tablosunu göstermek ve kaydırmak için aşağıdaki denetimleri bildirin `Customer` `AdventureWorksLTDataSet` .
+1. sınıfında, `ThisAddIn` görüntülemek ve veritabanının tablosunda kaydırmak için `Customer` aşağıdaki denetimleri `AdventureWorksLTDataSet` bildirin.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet1":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet1":::
 
-2. `ThisAddIn_Startup`Yönteminde, veri kümesini başlatmak için aşağıdaki kodu ekleyin, veri kümesini veritabanından alınan bilgilerle doldurabilirsiniz `AdventureWorksLTDataSet` .
+2. `ThisAddIn_Startup`yönteminde, veri kümesi başlatmak için aşağıdaki kodu ekleyin, veri kümelerini veritabanındaki bilgilerle `AdventureWorksLTDataSet` doldurun.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet2":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet2":::
 
-3. `ThisAddIn_Startup` yöntemine aşağıdaki kodu ekleyin. Bu, belgeyi genişleten bir konak öğesi oluşturur. Daha fazla bilgi için bkz. [çalışma ZAMANıNDA VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
+3. `ThisAddIn_Startup` yöntemine aşağıdaki kodu ekleyin. Bu, belgeyi genişleten bir konak öğesi üretir. Daha fazla bilgi için bkz. Word belgelerini genişletme Excel çalışma VSTO çalışma [kitaplarını çalışma zamanında genişletme.](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet3":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet3":::
 
-4. Belgenin başlangıcında birkaç Aralık tanımlayın. Bu aralıklar, metin eklemek ve denetimlerin yerleştirileceği yeri belirler.
+4. Belgenin başında birkaç aralık tanımlayın. Bu aralıklar, metin ekli ve denetimlerin nereye ekli olduğunu gösterir.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet4":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet4":::
 
-5. Arabirim denetimlerini daha önce tanımlı aralıklara ekleyin.
+5. Arabirim denetimlerini önceden tanımlanmış aralıklara ekleyin.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet5":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet5":::
 
-6. Kullanarak içerik denetimini bağlayın `AdventureWorksLTDataSet` <xref:System.Windows.Forms.BindingSource> . C# geliştiricileri için, denetimler için iki olay işleyicisi ekleyin <xref:Microsoft.Office.Tools.Word.Controls.Button> .
+6. kullanarak içerik `AdventureWorksLTDataSet` denetimine <xref:System.Windows.Forms.BindingSource> bağlayın. C# geliştiricileri için denetimler için iki olay <xref:Microsoft.Office.Tools.Word.Controls.Button> işleyicisi ekleyin.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet6":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet6":::
@@ -141,34 +142,34 @@ Verilere yönelik bağlama denetimleri hakkında daha fazla bilgi için bkz. [Of
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddindatabase/ThisAddIn.vb" id="Snippet7":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddindatabase/ThisAddIn.cs" id="Snippet7":::
 
-## <a name="test-the-add-in"></a>Eklentiyi test etme
+## <a name="test-the-add-in"></a>Eklentiyi Test Etmek
 
-Word 'Ü açtığınızda içerik denetimi veri kümesinden verileri görüntüler `AdventureWorksLTDataSet` . **Sonraki** ve **önceki** düğmelere tıklayarak veritabanı kayıtlarında ilerleyin.
+Word'i açabilirsiniz. İçerik denetimi, veri `AdventureWorksLTDataSet` kümesinden verileri görüntüler. Sonraki ve Önceki düğmelerine tıklayarak **veritabanı kayıtlarını** **kaydırın.**
 
-### <a name="to-test-the-vsto-add-in"></a>VSTO eklentisini test etmek için
+### <a name="to-test-the-vsto-add-in"></a>Eklentiyi VSTO için
 
-1. **F5** tuşuna basın.
+1. **F5 tuşuna basın.**
 
-     Adlı bir içerik denetimi `customerContentControl` oluşturulur ve verilerle doldurulur. Aynı zamanda, adlı ve adlı bir veri kümesi nesnesi `adventureWorksLTDataSet` <xref:System.Windows.Forms.BindingSource> `customerBindingSource` projeye eklenir. , <xref:Microsoft.Office.Tools.Word.ContentControl> ' A bağlanır ve <xref:System.Windows.Forms.BindingSource> veri kümesi nesnesine bağlanır.
+     adlı bir içerik `customerContentControl` denetimi oluşturulur ve verilerle doldurulur. Aynı zamanda, ve adlı bir veri `adventureWorksLTDataSet` kümesi <xref:System.Windows.Forms.BindingSource> nesnesi projeye `customerBindingSource` eklenir. <xref:Microsoft.Office.Tools.Word.ContentControl>, veri kümesi <xref:System.Windows.Forms.BindingSource> nesnesine bağlı olan nesnesine bağlı olur.
 
-2. Veritabanı kayıtlarında gezinmek için **İleri** ve **önceki** düğmelere tıklayın.
+2. Veritabanı **kayıtlarında** kaydırma **yapmak için** Sonraki ve Önceki düğmelerine tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümlerindeki veriler](../vsto/data-in-office-solutions.md)
-- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [Nasıl yapılır: çalışma sayfalarını bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
-- [Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-a-database.md)
-- [Nasıl yapılır: belgeleri hizmetlerdeki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-services.md)
-- [Nasıl yapılır: belgeleri nesnelerden verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md)
-- [Nasıl yapılır: çalışma sayfasındaki veritabanı kayıtlarını kaydırma](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)
-- [Nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
-- [İzlenecek yol: belge düzeyi projede basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)
-- [İzlenecek yol: belge düzeyi projede karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)
-- [Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış](../vsto/using-local-database-files-in-office-solutions-overview.md)
+- [Veri Office verileri](../vsto/data-in-office-solutions.md)
+- [Veri çözümlerinin denetimlerini Office bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Nasıl kullanılır: Çalışma sayfalarını bir veritabanındaki verilerle doldurmak](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
+- [Nasıl kullanılır: Belgeleri bir veritabanındaki verilerle doldurmak](../vsto/how-to-populate-documents-with-data-from-a-database.md)
+- [Nasıl kullanılır: Belgeleri hizmet verileriyle doldurmak](../vsto/how-to-populate-documents-with-data-from-services.md)
+- [Nasıl kullanılır: Belgeleri nesnelerden verilerle doldurmak](../vsto/how-to-populate-documents-with-data-from-objects.md)
+- [Nasıl kullanılır: Çalışma sayfasındaki veritabanı kayıtları arasında kaydırma](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)
+- [Nasıl kullanılır: Bir veri kaynağını konak denetiminden verilerle güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
+- [Adım adım kılavuz: Belge düzeyi projesinde basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-a-document-level-project.md)
+- [Adım adım kılavuz: Belge düzeyi projesinde karmaşık veri bağlama](../vsto/walkthrough-complex-data-binding-in-a-document-level-project.md)
+- [Çözümlerde yerel veritabanı dosyalarını Office genel bakış](../vsto/using-local-database-files-in-office-solutions-overview.md)
 - [Yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md)
 - [Visual Studio'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
-- [Nasıl yapılır: belgeleri nesnelerden verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-objects.md)
-- [Nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
-- [Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış](../vsto/using-local-database-files-in-office-solutions-overview.md)
-- [BindingSource Bileşenine Genel Bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview)
+- [Nasıl kullanılır: Belgeleri nesnelerden verilerle doldurmak](../vsto/how-to-populate-documents-with-data-from-objects.md)
+- [Nasıl kullanılır: Bir veri kaynağını konak denetiminden verilerle güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
+- [Çözümlerde yerel veritabanı dosyalarını Office genel bakış](../vsto/using-local-database-files-in-office-solutions-overview.md)
+- [BindingSource bileşenine genel bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview)

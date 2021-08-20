@@ -13,12 +13,13 @@ ms.assetid: 716c2af5-8737-4d31-956f-a0273f7c5c0c
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
-ms.openlocfilehash: a0e7d00949686cd7d52400c2d71123b86d28625b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.technology: vs-ide-test
+ms.openlocfilehash: 63524dac80bd40febc33cb779c0046a3226f717b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99961514"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139952"
 ---
 # <a name="how-to-export-load-test-results-from-a-repository"></a>Nasıl yapılır: bir depodan yük testi sonuçlarını dışarı aktarma
 

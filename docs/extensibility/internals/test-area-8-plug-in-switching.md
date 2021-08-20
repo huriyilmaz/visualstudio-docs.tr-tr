@@ -1,6 +1,6 @@
 ---
 title: 'Test Alanı 8: Eklenti Değiştirme | Microsoft Docs'
-description: Bu kaynak denetimi test alanı, kaynak denetiminde çözüm kaynağı denetimi için hangi eklentinin kullanacağız seçkisi süreci için test Visual Studio.
+description: Bu kaynak denetimi test alanı, kaynakta çözüm kaynağı denetimi için hangi eklentinin kullanacağız seçkisi süreci için test Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd1c1bf3c7419e101d40878c8016ddf6e2a78a85494aad910e0b7dd40c1e618b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: de08444c91ed0ab9bebc828873b7485ba97e6584
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121336843"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158638"
 ---
 # <a name="test-area-8-plug-in-switching"></a>Test Alanı 8: Eklenti Değiştirme
 Tümleşik [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] geliştirme ortamı (IDE), geçerli kaynak denetimi eklentisini değiştirmek için kullanıcı arabirimine (UI) sahiptir. Bu test alanı, çözüm kaynağı denetimi için hangi eklentinin kullanacağız seçkisi için test işlemleri sağlar.
@@ -35,7 +35,7 @@ Tümleşik [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] gelişti
  Çözüm için kaynak denetimi eklentisini değiştirmek, çözümden çık Visual Studio yeniden yüklemeden mümkündür. Ayrıca, geçerli kaynak denetimi eklentisi çözüm yüklendiğinde bir çözüm tarafından kullanılan eklentiye otomatik olarak değişir.
 
 ## <a name="test-cases"></a>Test Çalışmaları
- Eklenti değiştirme test alanı için belirli test testleri aşağıda ve aşağıda ve liste listelemektedir.
+ Eklenti değiştirme test alanı için belirli test testleri aşağıda ve aşağıda ve listelemektedir.
 
 ### <a name="case-8a-automatic-change"></a>Durum 8a: Otomatik Değişiklik
 
@@ -44,7 +44,7 @@ Tümleşik [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] gelişti
 
 | Eylem | Test Adımları | Doğrulandı Beklenen Sonuçlar |
 | - | - | - |
-| Otomatik kaynak denetimi eklentisi değişikliği | 1. Test altındaki eklentiyi geçerli olarak seçin (**Araçlar**  ->  **Seçenekler**  ->  **Kaynak Denetimi** Eklenti  ->  **Seçimi**.)<br />2. Yeni bir proje oluşturun.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Başka bir eklenti seçin (örneğin, [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] ).<br />5. Çözüm istemini kaldırmayı kabul et.<br />6. Çözümü diskten yeniden açın. | Çözüm açılır.<br /><br /> Test altındaki eklenti, geçerli kaynak denetimi eklentisidir. |
+| Otomatik kaynak denetimi eklentisi değişikliği | 1. Testin altındaki eklentiyi geçerli olarak seçin (**Araçlar**  ->  **Seçenekler**  ->  **Kaynak Denetimi** Eklenti  ->  **Seçimi**.)<br />2. Yeni bir proje oluşturun.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Başka bir eklenti seçin (örneğin, [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] ).<br />5. Çözüm istemini kaldırmayı kabul et.<br />6. Çözümü diskten yeniden açın. | Çözüm açılır.<br /><br /> Test altındaki eklenti, geçerli kaynak denetimi eklentisidir. |
 
 ### <a name="case-8b-solution-based-change"></a>Durum 8b: Çözüm Tabanlı Değişiklik
 

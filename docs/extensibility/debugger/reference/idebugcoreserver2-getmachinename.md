@@ -11,17 +11,18 @@ ms.assetid: 693bd794-7215-4f07-8651-b57366d39953
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 1577ca12ca2fa0ed7d626907e925ec6c3fcddc31
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: abb259d2914abab0929e70c7da3c7f92bce5fe7b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105077895"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144931"
 ---
 # <a name="idebugcoreserver2getmachinename"></a>IDebugCoreServer2::GetMachineName
 Çekirdek sunucunun üzerinde çalıştığı makinenin adını alır.

@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama veri akışı numaralayıcının System.Runtime.InteropServices.ComTypes.IEnumVARIANT sürümünü alın.
-title: IDiaEnumDebugStreamData::get__NewEnum | Microsoft Docs
+description: Hata ayıklama veri akışı numaralandırıcısının System. Runtime. InteropServices. ComTypes. IEnumVARIANT sürümünü alır.
+title: 'IDiaEnumDebugStreamData:: get__NewEnum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 41cf1d018e38723551010c3762ab2bb281e0d36043c74dfca46324bda5ecdd48
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: aceae51fac51e3bc6ff2838024d958f536b0f4f0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121312215"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154682"
 ---
 # <a name="idiaenumdebugstreamdataget__newenum"></a>IDiaEnumDebugStreamData::get__NewEnum
-Bu <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> numaralayıcının sürümünü alın.
+<xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>Bu Numaralandırıcı sürümünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get__NewEnum (
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-[out] Bu `IUnknown` numaralayıcının <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> sürümünü temsil eden arabirimi döndürür.
+dışı `IUnknown` Bu Numaralandırıcı sürümünü temsil eden arabirimi döndürür <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

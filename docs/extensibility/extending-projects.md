@@ -1,6 +1,6 @@
 ---
-title: Projeleri genişletme | Microsoft Docs
-description: Visual Studio SDK 'da kendi özel proje türlerinizi oluşturmayı ve farklı türlerde Visual Studio çözümlerin nasıl yönetileceğini öğrenin.
+title: Projeleri Genişletme | Microsoft Docs
+description: Visual Studio SDK'sı ile kendi özel proje türlerinizi oluşturma ve farklı türlerde Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,33 +14,33 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6d7d93f4cd805db5bd161517c0af9a862457edb47aff912e6eab0afa7de0dbf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 429c408fb54d77e9eb8705302f24880e27e84080
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448357"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159366"
 ---
 # <a name="extend-projects"></a>Projeleri genişletme
-projeler ve çözümler, kod ve kaynak dosyalarını derleme ve dağıtım birimlerine göre düzenler Visual Studio yollar. projeler [(Visual Studio SDK)](../extensibility/extending-projects.md)hakkında daha fazla bilgi edinebilirsiniz.
+Projeler ve çözümler, kod ve Visual Studio derleme ve dağıtım birimlerinde düzenlemenin yollarıdır. Projeler (Visual Studio SDK) içinde [projeler hakkında daha fazla bilgi bulabilirsiniz.](../extensibility/extending-projects.md)
 
- [projeler için yönetilen paket çerçevesinde](https://github.com/tunnelvisionlabs/MPFProj10)indirebileceğiniz Visual Studio SDK ve projeler için yönetilen paket çerçevesi ile kendi proje türlerinizi oluşturabilirsiniz. Özel projelerin nasıl uygulandığını anlamak için, bkz. [Yeni proje oluşturma: devlet, bölüm bir](../extensibility/internals/new-project-generation-under-the-hood-part-one.md) ve [Yeni proje oluşturma altında: birinci, ikinci bölüm](../extensibility/internals/new-project-generation-under-the-hood-part-two.md).
+ Visual Studio SDK'sı ve Projeler için Yönetilen Paket Çerçevesi ile kendi proje türlerinizi oluşturabilirsiniz. Bunu Projeler için [Yönetilen Paket Çerçevesi'nde indirebilirsiniz.](https://github.com/tunnelvisionlabs/MPFProj10) Özel projelerin nasıl uygulandığını anlamak için [bkz. Yeni proje oluşturma:](../extensibility/internals/new-project-generation-under-the-hood-part-one.md) Başlık altında, bölüm 1 ve [Yeni proje oluşturma: Başlık altında, ikinci bölüm.](../extensibility/internals/new-project-generation-under-the-hood-part-two.md)
 
- bu bölümdeki konularda özel projeler oluşturma ve farklı Visual Studio çözüm türlerinin nasıl yönetileceği açıklanır.
+ Bu bölümdeki konu başlıkları, özel projelerin nasıl oluşturularak farklı türlerde bir çözüm Visual Studio anlattır.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Temel proje sistemi oluşturma, Bölüm 1](../extensibility/creating-a-basic-project-system-part-1.md) Özel bir proje sisteminin nasıl oluşturulacağını açıklar.
+- [Temel proje sistemi oluşturma, bölüm 1](../extensibility/creating-a-basic-project-system-part-1.md) Özel bir proje sisteminin nasıl oluşturularak ilgili açıklamayı açıklar.
 
-- [Temel proje sistemi oluşturma, Bölüm 2](../extensibility/creating-a-basic-project-system-part-2.md) Özel bir proje sisteminin nasıl oluşturulacağını açıklar.
+- [Temel proje sistemi oluşturma, bölüm 2](../extensibility/creating-a-basic-project-system-part-2.md) Özel bir proje sisteminin nasıl oluşturularak ilgili açıklamayı açıklar.
 
-- [Verileri proje dosyalarına kaydet](../extensibility/saving-data-in-project-files.md) Projenin nasıl ekleneceğini açıklar (<em>.</em> PROJ *) dosyaları.
+- [Proje dosyalarına veri kaydetme](../extensibility/saving-data-in-project-files.md) Projeye eklemeyi açıklar (<em>.</em> proj*) dosyaları.
 
-- [Çalışma zamanında bir projenin alt türlerini doğrulama](../extensibility/verifying-subtypes-of-a-project-at-run-time.md) Çalışma zamanında bir projenin alt türünün nasıl doğrulandığını açıklar.
+- [Çalışma zamanında projenin alt türlerini doğrulama](../extensibility/verifying-subtypes-of-a-project-at-run-time.md) Bir projenin çalışma zamanında alt türün nasıl doğrulanacaklarını açıklar.
 
-- [Özellik sayfaları ekleme ve kaldırma](../extensibility/adding-and-removing-property-pages.md) Özel projeniz için özellik sayfalarının nasıl özelleştirileceğini açıklar.
+- [Özellik sayfaları ekleme ve kaldırma](../extensibility/adding-and-removing-property-pages.md) Özel projeniz için özellik sayfalarını özelleştirmeyi açıklar.
 
-- [Proje öğesine öznitelik ekleme](../extensibility/adding-an-attribute-to-a-project-item.md) Özel proje öğesine bir özniteliğin nasıl ekleneceğini açıklar.
+- [Proje öğesine öznitelik ekleme](../extensibility/adding-an-attribute-to-a-project-item.md) Özel bir proje öğesine öznitelik eklemeyi açıklar.
 
-- [Proje öğesinin özelliğini kalıcı hale](../extensibility/persisting-the-property-of-a-project-item.md) getirme Özel bir proje öğesinin özelliklerinin nasıl kalıcı yapılacağını açıklar.
+- [Proje öğesinin özelliğini kalıcı olarak kalıcı olarak](../extensibility/persisting-the-property-of-a-project-item.md) Özel bir proje öğesinin özelliklerini kalıcı olarak nasıl kalıcı olarak bulundurabilirsiniz?
 
-- [evrensel Windows projelerini yönetme](../extensibility/managing-universal-windows-projects.md) Evrensel projelerin nasıl yönetileceğini açıklar.
+- [Evrensel Windows yönetme](../extensibility/managing-universal-windows-projects.md) Evrensel projeleri yönetmeyi açıklar.

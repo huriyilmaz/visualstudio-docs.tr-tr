@@ -11,14 +11,15 @@ ms.assetid: 2e54deb7-7744-428e-913c-1d47a2aa89b0
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 824c224fa84318f6bd6fd2c590992cff89839af0
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: dfd891aff03616acdec3a199a847b1d3ca1c90d8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102148572"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139313"
 ---
 # <a name="idiaframedataget_lengthblock"></a>IDiaFrameData::get_lengthBlock
 Çerçeve tarafından tanımlanan kod bloğunun uzunluğunu bayt cinsinden alır.

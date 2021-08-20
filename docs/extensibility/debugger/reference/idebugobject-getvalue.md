@@ -1,6 +1,6 @@
 ---
-description: Nesnenin değerini ardışık bir bayt dizisi olarak alır.
-title: 'IDebugObject:: GetValue | Microsoft Docs'
+description: Nesnenin değerini ardışık bayt dizisi olarak alır.
+title: IDebugObject::GetValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: eec6051e-8ecb-49fa-bdd4-dd786f211692
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d957743a725ad462a9ed95fca6ebdffbecb6de16
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 232fdb9165121921a0828abc4dbd2de0ee286f47
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054133"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126914"
 ---
 # <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
-Nesnenin değerini ardışık bir bayt dizisi olarak alır.
+Nesnenin değerini ardışık bayt dizisi olarak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +45,16 @@ int GetValue(
 
 ## <a name="parameters"></a>Parametreler
 `pValue`\
-[in, out] Nesnenin değerini temsil eden ardışık bir bayt serisi ile doldurulmuş dizi.
+[in, out] Nesnenin değerini temsil eden ardışık bir bayt dizisiyle doldurulan bir dizi.
 
 `nSize`\
-'ndaki Getirilecek en fazla bayt sayısı.
+[in] Getirilsin en fazla bayt sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) yöntemi çağırarak getirilen toplam değer baytı sayısını alır.
+ [GetSize](../../../extensibility/debugger/reference/idebugobject-getsize.md) yöntemi çağrılarak getirilemedi değer baytlarının toplam sayısını alın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

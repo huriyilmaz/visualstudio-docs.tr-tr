@@ -1,6 +1,6 @@
 ---
-title: Özet görünümü-.NET bellek verileri | Microsoft Docs
-description: Özet görünümünün, en fazla belleği ayrılan .NET işlevleri ve türleri hakkında bilgi görüntülemesini öğrenin.
+title: Özet Görünümü - .NET Bellek Verileri | Microsoft Docs
+description: Özet görünümünün en fazla bellek ayrılan .NET işlevleri ve türleri hakkında nasıl bilgi görüntüley olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,43 +13,43 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - dotnet
-ms.openlocfilehash: 41607d18aeae9d0b1abbf9999b839c12100f099ed13b292c56c045fc28a4c5fa
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b5c63a0133e8883d4626e78805b86299cfbee3f2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121410222"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122141226"
 ---
-# <a name="summary-view---net-memory-data"></a>Özet görünümü-.NET bellek verileri
-Özet görünümü, en fazla belleği alan .NET işlevleri ve türleri ve profil oluşturma çalıştırmasında en çok oluşturulan türleri görüntüler. Bildirim bağlantılarının ve rapor listelerinin açıklaması dahil daha fazla bilgi için bkz. [Özet görünümü](../profiling/summary-view.md).
+# <a name="summary-view---net-memory-data"></a>Özet görünümü - .NET bellek verileri
+Özet görünümü, en fazla bellek ayrılan .NET işlevleri ve türleri ve profil oluşturma çalıştırması içinde en çok oluşturulan türler hakkında bilgi görüntüler. Bildirim Bağlantıları ve Rapor listelerinin açıklaması da dahil olmak üzere daha fazla bilgi için bkz. [Özet görünümü.](../profiling/summary-view.md)
 
 ## <a name="timeline-graph"></a>Zaman çizelgesi Graph
- Özet görünümündeki zaman çizelgesi grafiği, profil oluşturma sırasında profili oluşturulan uygulamanın işlemci (CPU) kullanımını gösterir. Görünümü seçili bir zaman aralığına filtrelemek için zaman çizelgesi grafiğini kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: rapor görünümlerini Özet zaman çizelgesinden filtreleme](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).
+ Özet görünümündeki zaman çizelgesi grafiği, profil oluşturmanın meydana geldiği zaman içinde profili profili yapılan uygulamanın işlemci (CPU) kullanımını gösterir. Zaman çizelgesi grafiğini kullanarak görünümü seçilen bir zaman aralığına göre filtre görebilirsiniz. Daha fazla bilgi için [bkz. Nasıl ekleyebilirsiniz: Özet Zaman Çizelgesi'nde rapor görünümlerini filtreleme.](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)
 
-## <a name="functions-allocating-most-memory"></a>Çoğu belleği ayıran işlevler
- Profil oluşturma çalıştırmasında en fazla bellek bayt sayısını ayrılan işlevleri listeler.
+## <a name="functions-allocating-most-memory"></a>En Fazla Bellek Alan İşlevler
+ Profil oluşturma çalıştırması içinde en fazla bayt bellek ayrılan işlevleri listeler.
 
 |Sütun|Açıklama|
 |------------|-----------------|
 |**Ad**|İşlevin adı.|
-|**Sayacının**|Bu işlev tarafından veya bu işlev tarafından çağrılan bir alt işlev tarafından ayrılan, profil oluşturma çalıştırmasında ayrılan tüm baytların yüzdesi.|
+|**Bayt %**|Profil oluşturma çalıştırması içinde bu işlev veya bu işlev tarafından çağrılan bir alt işlev tarafından ayrılan tüm ayrılan baytların yüzdesi.|
 
-## <a name="types-with-most-memory-allocated"></a>En fazla bellek ayrılmış türler
- Profil oluşturma çalıştırmasında en fazla bellek bayt sayısı ayrıldığı türleri listeler.
-
-|Sütun|Açıklama|
-|------------|-----------------|
-|**Ad**|Türün adı.|
-|**Sayacının**|Bu tür için ayrılan profil oluşturma çalıştırmasında ayrılan tüm baytların yüzdesi.|
-
-## <a name="types-with-most-instances"></a>En çok örneği olan türler
- Profil oluşturma çalışması sırasında en fazla oluşturulan türleri listeler. sey
+## <a name="types-with-most-memory-allocated"></a>En Fazla Bellek Ayrılan Türler
+ Profil oluşturma çalıştırması içinde en fazla bayt bellek ayrılan türleri listeler.
 
 |Sütun|Açıklama|
 |------------|-----------------|
 |**Ad**|Türün adı.|
-|**Larında**|Bu türün örnekleri olan profil oluşturma çalıştırmasında oluşturulan toplam of.NET nesne sayısı yüzdesi.|
+|**Bayt %**|Profil oluşturma çalıştırması içinde bu tür için ayrılan tüm ayrılan baytların yüzdesi.|
+
+## <a name="types-with-most-instances"></a>Çoğu Örneği Olan Türler
+ Profil oluşturma çalıştırması sırasında en çok oluşturulan türleri listeler. Hda
+
+|Sütun|Açıklama|
+|------------|-----------------|
+|**Ad**|Türün adı.|
+|**Örnek %**|Profil oluşturma çalıştırması of.NET bu türün örnekleri olan nesnelerin toplam sayısının yüzdesi.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özet görünümü-örnekleme verileri](../profiling/summary-view-sampling-data.md)
-- [Özet görünümü-izleme verileri](../profiling/summary-view-instrumentation-data.md)
+- [Özet görünümü - örnekleme verileri](../profiling/summary-view-sampling-data.md)
+- [Özet görünümü - ölçüm verileri](../profiling/summary-view-instrumentation-data.md)

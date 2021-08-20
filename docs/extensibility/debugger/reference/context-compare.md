@@ -11,17 +11,18 @@ ms.assetid: 701ed61c-a320-4c20-a335-0b840024abc0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: fd74516c3f687f05b2d5fb33dc2b94455114bbc6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 49c8975a93d54d9138cbdcf510e7ee18d5bc55d2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094451"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145620"
 ---
 # <a name="context_compare"></a>CONTEXT_COMPARE
 İki bellek bağlamlarını karşılaştırma ölçütlerini belirtir.

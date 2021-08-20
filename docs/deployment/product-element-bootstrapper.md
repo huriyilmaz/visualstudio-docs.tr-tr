@@ -1,6 +1,6 @@
 ---
-title: '&lt;Ürün &gt; öğesi (önyükleyici) | Microsoft Docs'
-description: Ürün öğesi, bir ürün dosyasının içindeki en üst düzey XML öğesidir. Ürün öğesi bir ürün dosyasında gereklidir.
+title: '&lt;Product &gt; Öğesi (Önyükleyici) | Microsoft Docs'
+description: Product öğesi, bir ürün dosyasının içindeki en üst düzey XML öğesidir. Product öğesi bir ürün dosyasında gereklidir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,17 +15,18 @@ ms.assetid: 52b414af-ec80-4d2f-ad14-902543cd268e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 6424c2280f3f5eaaedadc6a2f1afebfd1109f1c3
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ba4096c9e0a3f4f949d8d8705c012b4867567b0a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99891312"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122127863"
 ---
 # <a name="ltproductgt-element-bootstrapper"></a>&lt;Ürün &gt; öğesi (önyükleyici)
-`Product`Öğesi, bir ürün dosyasının içindeki en üst düzey xml öğesidir.
+`Product`öğesi, bir ürün dosyasının içindeki en üst düzey XML öğesidir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -140,14 +141,14 @@ ProductCode
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `Product`Öğe bir ürün dosyasında gereklidir. Aşağıdaki özniteliğe sahiptir.
+ `Product`öğesi bir ürün dosyasında gereklidir. Aşağıdaki özniteliğine sahip.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |`ProductCode`|Ürün için benzersiz bir tanımlayıcı.|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, .NET Framework yüklemek için tüm ürün dosyalarını gösterir.
+ Aşağıdaki kod örneğinde, uygulamanın yüklemesi için eksiksiz bir ürün .NET Framework.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

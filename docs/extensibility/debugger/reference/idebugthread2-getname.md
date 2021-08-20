@@ -11,17 +11,18 @@ ms.assetid: eec54b8f-4a0e-4919-b0f9-81d4bd1e0b6f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d38c2cb5b56893c01652316aa54dbd14382ae9c9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7028a22b391fc1ba79c4d47a9a348086db9dfea7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105081184"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126095"
 ---
 # <a name="idebugthread2getname"></a>IDebugThread2::GetName
 Bir iş parçacığının adını alır.

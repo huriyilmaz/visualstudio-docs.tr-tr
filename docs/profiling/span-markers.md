@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: b1d11a74c8a0a7d52bc0b8257337dfbf775d9324f779874ba0a673929bbe7db6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 98fc9241a8f0bdcf4b92dfd4f1f745a1bfc8ea4f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121354527"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122141538"
 ---
 # <a name="span-markers"></a>Aralık işaretçileri
 Yayılma işareti, bir uygulamanın anlamlı bir aşamasını temsil eder. Örneğin, belirli bir iş öğesinin işlendiği zaman aralığını temsil eden bir Aralık kullanabilirsiniz. Uzunluğu, ilgili uygulama aşamasının süresini temsil eder. Bu çizimde eşzamanlılık görselleştiricisi içindeki bir yayılma gösterilmektedir:

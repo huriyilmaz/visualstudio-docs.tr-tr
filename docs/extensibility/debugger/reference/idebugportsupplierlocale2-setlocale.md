@@ -1,6 +1,6 @@
 ---
-description: Bağlantı noktası sağlayıcı için yerel ayar ayarlar.
-title: IDebugPortSupplierLocale2::SetLocale | Microsoft Docs
+description: Bağlantı noktası sağlayıcısı için yerel ayarı ayarlar.
+title: 'IDebugPortSupplierLocale2:: SetLocale | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 698277be15cc0c338e5a313809b3befc2f80744aaea1d987274a0443938f3ed2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6240f730023780bddc4a904b2e4ae8f96c54e7e7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121416499"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122126784"
 ---
 # <a name="idebugportsupplierlocale2setlocale"></a>IDebugPortSupplierLocale2::SetLocale
-Bağlantı noktası sağlayıcı için yerel ayar ayarlar.
+Bağlantı noktası sağlayıcısı için yerel ayarı ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,10 +41,10 @@ int SetLocale(
 
 ## <a name="parameters"></a>Parametreler
 `wLangID`\
-Ayar için yerel ayar tanımlayıcısı.
+Ayarlanacak yerel ayar için tanımlayıcı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPortSupplierLocale2](../../../extensibility/debugger/reference/idebugportsupplierlocale2.md)

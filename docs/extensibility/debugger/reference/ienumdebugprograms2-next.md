@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 74d604df42779755093518472b0d70d0983c0da9c39ad2e559eeac5cc087f324
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8e1709d8b55224fc4eb221cd65766f6d70fb3ccf
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415253"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125471"
 ---
 # <a name="ienumdebugprograms2next"></a>IEnumDebugPrograms2::Next
 Numaralamadan sonraki öğe kümesi döndürür.
@@ -50,13 +50,13 @@ int Next(
 [in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
 
 `rgelt`\
-[in, out] Doldurulması [gereken IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) öğelerinin dizisi.
+[in, out] Doldurulması [gereken IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) öğeleri dizisi.
 
 `pceltFetched`\
 [out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür, aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md)

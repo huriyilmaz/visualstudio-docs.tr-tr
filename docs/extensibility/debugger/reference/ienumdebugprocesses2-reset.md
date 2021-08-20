@@ -1,6 +1,6 @@
 ---
-description: İşlem numaralandırmayı ilk öğe olarak sıfırlar.
-title: 'IEnumDebugProcesses2:: Reset | Microsoft Docs'
+description: İşlemlerin numaralamalarını ilk öğeye sıfırlar.
+title: IEnumDebugProcesses2::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2f4bb871bdcbee6ae2f3114e95037ce4e5faf17092683141843925a24a800d1b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 88989657081287c9c4e15e4a2c88c91866445d87
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360111"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125510"
 ---
 # <a name="ienumdebugprocesses2reset"></a>IEnumDebugProcesses2::Reset
-Numaralandırmayı ilk öğeye sıfırlar.
+Numaralama öğesini ilk öğeye sıfırlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ int Reset();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem çağrıldıktan sonra [Next](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md) yöntemine yapılan sonraki çağrı, numaralandırmanın ilk öğesini döndürür.
+ Bu yöntem çağrıldıktan sonra Next yöntemine yapılan sonraki [çağrı,](../../../extensibility/debugger/reference/ienumdebugprocesses2-next.md) numaralamanın ilk öğesini döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugProcesses2](../../../extensibility/debugger/reference/ienumdebugprocesses2.md)
