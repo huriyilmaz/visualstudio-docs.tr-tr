@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fd938ff87b7060287e03a7facb6bf3582c20d9fb77ffad1a7a3606308e6f420
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 699ad3a289ff790c414a4c3e8a552436a22ab633
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380311"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129194"
 ---
 # <a name="idiaimagedataget_imagebase"></a>IDiaImageData::get_imageBase
 Görüntünün temel alınarak bellek konumunu alınır.

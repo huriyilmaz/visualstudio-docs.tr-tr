@@ -1,6 +1,6 @@
 ---
-title: Belirli dll 'Lerde Izleme sınırlandırma | Microsoft Docs
-description: Bir uygulamadaki bir veya daha fazla dll 'ye profil oluşturma verileri toplamayı sınırlamak için izleme profili oluşturma yöntemini nasıl kullanacağınızı öğrenin.
+title: Ölçüm ölçümlerini Belirli URL'ler ile | Microsoft Docs
+description: Profil oluşturma verisi toplamayı bir uygulamada bir veya daha fazla URL ile sınırlamak için ölçümleme profil oluşturma yöntemini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,68 +9,69 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 170a701e4eb8d42a15a475b1336a0ba33c20b01a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: fcd80eb5501a86bd046a5917e2fc5ed9366f573f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860782"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122141837"
 ---
 # <a name="how-to-limit-instrumentation-to-specific-dlls"></a>Nasıl yapılır: İzlemeyi belirli DLL'ler ile sınırlama
 
-İzleme profili oluşturma yöntemini kullanarak, bir uygulamadaki bir veya daha fazla dll ile profil oluşturma verilerinin toplanmasını sınırlayabilirsiniz. Bir uygulamada bir veya daha fazla dll profili oluşturmak için, içeren bir performans oturumu oluşturursunuz. hedef olarak *DLL* dosyaları. Bir Visual Studio çözümünde veya bağımsız ikili dosyalarda proje olarak profil eklemek istediğiniz dll 'Leri belirtebilirsiniz.
+Ölçüm aracı profil oluşturma yöntemini kullanarak, profil oluşturma verisi koleksiyonunu bir uygulamanın bir veya daha fazla DL'sinde sınırabilirsiniz. Bir uygulamada bir veya daha fazla URL profili oluşturmak için, içeren bir performans oturumu oluşturmanız gerekir. *hedef* olarak dll dosyaları. Profil oluşturmak istediğiniz URL'leri bir çözümde proje olarak Visual Studio bağımsız ikili dosyalar olarak belirtebilirsiniz.
 
-## <a name="to-limit-instrumentation-to-specific-dlls-in-a-visual-studio-solution"></a>Bir Visual Studio çözümünde belirli dll 'Leri izleme ile sınırlamak için
+## <a name="to-limit-instrumentation-to-specific-dlls-in-a-visual-studio-solution"></a>Ölçümlü araçları bir çözümde belirli VISUAL STUDIO sınırlamak için
 
-1. Visual Studio 'da DLL dosyasını içeren çözümü açın.
+1. Dll dosyasını içeren çözümü Visual Studio.
 
-2. **Çözümle** menüsünde, **Performans Sihirbazını Başlat**' ı seçin.
+2. Analiz menüsünde **Performans** Sihirbazı'nı **Başlat'ı seçin.**
 
-3. Profil oluşturma yöntemi olarak **Araçlar** ' ı seçin ve ardından **İleri**' ye tıklayın.
+3. Profil **oluşturma yöntemi olarak** Ölçümler'i seçin ve ardından Sonraki'ye **tıklayın.**
 
-4. **Aşağıdaki kullanılabilir hedeflerden hangisi profilini oluşturmak istersiniz?** altında, adını seçin.  tıklayın ve ardından **İleri**' ye tıklayın.
+4. Profili **oluşturmak istediğiniz aşağıdaki kullanılabilir hedeflerden hangisidir?** içinde öğesinin adını seçin. *dll projesine* tıklayın ve ardından Sonraki **'ye tıklayın.**
 
-5. Sihirbazdan çıkmak için **son** ' a tıklayın ve yeni performans oturumunu **Performans Gezgini** penceresinde görüntüleyin.
+5. Sihirbazdan çıkmak için Son'a tıklayın ve yeni performans oturumunu **Performans Gezgini** açın. 
 
-6. **Hedefler** ' e sağ tıklayın ve ardından **hedef proje Ekle**' yi seçin.
+6. Hedefler'e **sağ tıklayın ve** hedef **ekle'yi Project.**
 
-7. **Hedef proje Ekle** LISTESINDEN, dll 'yi kullanmak için kullanmak istediğiniz çalıştırılabilir projeyi seçin.
+7. Hedef **Ekle Project** listesinden, DLL'yi alıştırmak için kullanmak istediğiniz yürütülebilir projeyi seçin.
 
-     İsteğe bağlı. Profil eklemek istediğiniz herhangi bir DLL projesini ekleyebilirsiniz.
+     İsteğe bağlı. Profili oluşturmak istediğiniz dll projelerini ekebilirsiniz.
 
-8. Eklenen bir proje için veri toplamayı engellemek için, projenin adına sağ tıklayın ve ardından **gereç** onay kutusunu temizleyin.
+8. Eklenen bir proje için veri toplamayı önlemek için projenin adına sağ tıklayın ve ardından Ölçüm kutusu **işaretini** kaldırın.
 
-## <a name="to-specify-specific-dlls-to-profile-as-independent-binaries"></a>Belirli dll 'Lerin bağımsız ikili dosyalar olarak profilini belirtmek için
+## <a name="to-specify-specific-dlls-to-profile-as-independent-binaries"></a>Profilde bağımsız ikili dosyalar olarak belirli DLL'ler belirtmek için
 
 1. Visual Studio'yu açın.
 
-2. **Çözümle** menüsünde, **Performans Sihirbazını Başlat**' ı seçin.
+2. Analiz menüsünde **Performans** Sihirbazı'nı **Başlat'ı seçin.**
 
-3. **Aşağıdaki kullanılabilir hedeflerden hangisi profilini oluşturmak** istersiniz, **bir dinamik bağlantı kitaplığı profili seçin (. DLL)** ve ardından **İleri**' ye tıklayın.
+3. Aşağıdaki **kullanılabilir hedeflerden hangilerinin** profilini oluşturmak istediğinizi seçin, Dinamik bağlantı kitaplığı profili **(.DLL)** seçin ve ardından Sonraki 'ye **tıklayın.**
 
-4. Sihirbazın ikinci sayfasında, aşağıdaki adımları uygulayın:
+4. Sihirbazın ikinci sayfasında aşağıdaki adımları gerçekleştirin:
 
-    - Yolunu ve dosya adını yazın. dll dosyasında, **DLL yolunda** profil yapmak istediğiniz *DLL* dosyası. Ayrıca, dosyayı **profile olan dinamik bağlantı kitaplığı** iletişim kutusunda bulmak için üç nokta düğmesini (...) de tıklayabilirsiniz. Kopyasını belirtmeniz gerektiğini unutmayın. yürütülebilir dosya tarafından başlatılacak *DLL* dosyası (.*exe*) dosyasını seçin.
+    - yolunu ve dosya adını yazın. *Dll* yolunda profilini oluşturmak istediğiniz **dll dosyası.** Ayrıca, dosyayı Profil için Dinamik bağlantı kitaplığı iletişim kutusunda bulmak için üç nokta düğmesine (...) **tıklayabilirsiniz.** kopyasını belirtmeniz gerektiğini unutmayın. *yürütülebilir* dosyası tarafından başlatacak dll dosyası ( .*exe*) dosyasını seçin.
 
-    - Yürütülebilir dosyanın yolunu ve adını yazın (.*exe*) dosyası ile çalışır. *DLL* **yürütülebilir dosya yolu**. Ayrıca, **başlatılacak yürütülebilir** iletişim kutusunda dosyayı bulmak için üç nokta düğmesini (...) de tıklayabilirsiniz.
+    - Yürütülebilir dosyanın yolunu ve dosya adını yazın (.*exe*) dosyasını kullanın. *yürütülebilir* **yolunda** dll. Ayrıca, başlatmak üzere Yürütülebilir iletişim kutusunda dosyayı bulmak için üç nokta düğmesine (...) **tıklayabilirsiniz.**
 
-    - İsteğe bağlı. **Komut satırı bağımsız değişkenlerinde** yürütülebilir dosyaya geçirmek istediğiniz komut satırı bağımsız değişkenlerini yazın. Gerekirse, **çalışma dizinindeki** uygulama için çalışma dizinini belirtin.
+    - İsteğe bağlı. Komut satırı bağımsız değişkenleri'ne yürütülebilir dosyaya geçmek istediğiniz komut satırı **bağımsız değişkenlerini yazın.** Gerekirse, çalışma dizininde uygulamanın çalışma **dizinini belirtin.**
 
     - **İleri**’ye tıklayın.
 
-5. Profil oluşturma yöntemi olarak **Araçlar** ' ı seçin ve ardından **İleri**' ye tıklayın.
+5. Profil **oluşturma yöntemi olarak** Ölçümler'i seçin ve ardından Sonraki'ye **tıklayın.**
 
-6. Sihirbazdan çıkmak için **son** ' a tıklayın ve yeni performans oturumunu **Performans Gezgini** penceresinde görüntüleyin.
+6. Sihirbazdan çıkmak için Son'a tıklayın ve yeni performans oturumunu **Performans Gezgini** açın. 
 
-7. İsteğe bağlı. Daha fazlasını ekleyin. *DLL* dosyaları, **hedefler** ' e sağ tıklayın ve ardından **hedef ikilisi Ekle**' yi seçin. **Hedef Ikili Ekle** iletişim kutusundan dosyaları seçin.
+7. İsteğe bağlı. Daha fazla eklemek için. *dll* dosyalarında Hedefler'e **sağ tıklayın ve hedef** ikili dosya **ekle'yi seçin.** Hedef İkili Ekle iletişim **kutusundan dosyaları** seçin.
 
     > [!NOTE]
-    > Yürütülebilir dosyayı belirtmeyin (.*exe*) dosyası dll 'leri uygulayan dosya.
+    > Yürütülebilir dosyayı () belirtme.*EXE*) dosyasını kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Denetim verileri toplama](../profiling/controlling-data-collection.md) 
- [Nasıl yapılır: belirli işlevlerle Izleme sınırlandırma](../profiling/how-to-limit-instrumentation-to-specific-functions.md)
+[Veri toplamayı denetleme](../profiling/controlling-data-collection.md) 
+ [Nasıl kullanılır: Araçları belirli işlevlerle sınırlama](../profiling/how-to-limit-instrumentation-to-specific-functions.md)

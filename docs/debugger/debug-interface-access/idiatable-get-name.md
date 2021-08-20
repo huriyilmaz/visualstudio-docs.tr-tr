@@ -1,6 +1,6 @@
 ---
 description: Tablonun adını alır.
-title: 'IDiaTable:: get_name | Microsoft Docs'
+title: IDiaTable::get_name | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 86ed12ba66e34e624c5161e80fc4127d31f862f8f96643fbb75080934d8405de
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a54db09dced33aed000466be5cb6f75c13ca7f4c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379652"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121228"
 ---
 # <a name="idiatableget_name"></a>IDiaTable::get_name
 Tablonun adını alır.
@@ -35,10 +35,10 @@ HRESULT get_name (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Tablonun adını döndürür.
+[out] Tablonun adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

@@ -1,6 +1,6 @@
 ---
-description: Alanın kapalı bir türü temsil ettiğini belirler.
-title: IDebugExtendedField::IsClosedType | Microsoft Docs
+description: Alanın kapalı bir türü temsil edip etmediğini belirler.
+title: 'Idebugextendedfield:: ısclosedtype | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 47844555c2f900e46dd0218fe3763a877d9fa711b562b5601be8adc27a98b0a9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 00cb69073f3e975d170578c8b026d40440341502
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360371"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138438"
 ---
 # <a name="idebugextendedfieldisclosedtype"></a>IDebugExtendedField::IsClosedType
-Alanın kapalı bir türü temsil ettiğini belirler.
+Alanın kapalı bir türü temsil edip etmediğini belirler.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ int IsClosedType();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Alan kapalı bir türse döndürür; `S_OK` aksi takdirde `S_FALSE` döndürür.
+ Alan kapalı bir tür ise, öğesini döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExtendedField](../../../extensibility/debugger/reference/idebugextendedfield.md)

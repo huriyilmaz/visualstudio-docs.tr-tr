@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f912441fbcc12953f9fd3d1bdf4fbc3f11d466292405113744e2104fdf54c2a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: de1d636f236b3c3d90508070525b1b8632991cb2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121415708"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118391"
 ---
 # <a name="idebugthreadcreateevent2"></a>IDebugThreadCreateEvent2
 Hata ayıklama yapılan bir programda iş parçacığı oluşturulduğunda bu arabirim, hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.

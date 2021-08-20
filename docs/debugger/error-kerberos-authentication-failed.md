@@ -1,6 +1,6 @@
 ---
-title: Kerberos kimlik doğrulaması başarısız oldu | Microsoft Docs
-description: bu hata, Visual Studio Uzaktan Hata Ayıklama İzleyicisi yerel sistem veya ağ hizmeti hesabı altında çalışırken oluşur.
+title: Kerberos Kimlik Doğrulaması Başarısız | Microsoft Docs
+description: Bu hata, yerel Visual Studio Uzaktan Hata Ayıklama İzleyicisi veya Ağ Hizmeti hesabı altında çalıştırıldıklarından oluşur.
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -16,50 +16,50 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f21ff098132d934d94cace2f4c43dc9ad3a392bda6f7b273a1b58ef6822e05b3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e884e92ad5ad6669746cee28adc3dccf60d2c468
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121280293"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161395"
 ---
 # <a name="error-kerberos-authentication-failed"></a>Hata: Kerberos Kimlik Doğrulaması Başarısız
-Uzaktan hata ayıklama yapmayı denediğinizde aşağıdaki hata iletisini alabilirsiniz:
+Uzaktan hata ayıklamayı deneerek aşağıdaki hata iletisini alabilirsiniz:
 
 ```cmd
 Error: The Visual Studio Remote Debugger on the target computer cannot connect back to this computer. Kerberos authentication failed.
 ```
 
- bu hata, Visual Studio Uzaktan Hata Ayıklama İzleyicisi yerel sistem veya ağ hizmeti hesabı altında çalışırken oluşur. bu hesaplardan birinde, uzaktan hata ayıklayıcı Visual Studio hata ayıklayıcı ana bilgisayarına geri iletişim kurmak için bir Kerberos kimlik doğrulaması bağlantısı kurmalıdır.
+ Bu hata, yerel Visual Studio Uzaktan Hata Ayıklama İzleyicisi veya Ağ Hizmeti hesabı altında çalıştırıldıklarından oluşur. Bu hesaplardan biri altında, uzak hata ayıklayıcısı, hata ayıklayıcısı ana bilgisayarına geri iletişim kurmak için bir Kerberos Visual Studio bağlantısı kurması gerekir.
 
  Kerberos kimlik doğrulaması şu koşullarda kullanılamaz:
 
-- Hedef bilgisayar veya hata ayıklayıcı Konak bilgisayar, etki alanı yerine bir çalışma grubunda bulunuyor
+- Hedef bilgisayar veya hata ayıklayıcı konak bilgisayarı etki alanı yerine bir çalışma grubunda
 
-   \- veya
+   \- veya -
 
-- Kerberos, etki alanı denetleyicisinde devre dışı bırakıldı.
+- Etki alanı denetleyicisinde Kerberos devre dışı bırakıldı.
 
-  Kerberos kimlik doğrulaması kullanılamıyorsa, Visual Studio Uzaktan Hata Ayıklama İzleyicisi çalıştırmak için kullanılan hesabı değiştirin. yordam için bkz. [hata: hedef bilgisayardaki Visual Studio Uzaktan Hata Ayıklayıcı hizmeti bu bilgisayara geri bağlanamıyor](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md).
+  Kerberos kimlik doğrulaması kullanılamıyorsa, hesabı çalıştırmak için kullanılan hesabı Visual Studio Uzaktan Hata Ayıklama İzleyicisi. Yordam için [bkz. Hata: Hedef Visual Studio Uzaktan Hata Ayıklayıcı hizmet bu bilgisayara geri bağlanamıyor.](../debugger/error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md)
 
-  Her iki bilgisayar aynı etki alanına bağlıysa ve yine de bu iletiyi alırsanız hedef bilgisayardaki DNS 'nin hata ayıklayıcı ana bilgisayar adını doğru bir şekilde çözümlediğinden emin olun. Aşağıdaki yordama bakın.
+  Her iki bilgisayar da aynı etki alanına bağlıysa ve bu iletiyi almaya devam ediyorsanız, hedef bilgisayardaki DNS'nin hata ayıklayıcı konak bilgisayarının adını doğru çözümlemediğini doğrulayın. Aşağıdaki yordama bakın.
 
-### <a name="to-verify-that-dns-on-the-target-computer-is-correctly-resolving-the-debugger-host-computer-name"></a>Hedef bilgisayardaki DNS 'in hata ayıklayıcı ana bilgisayar adını doğru bir şekilde çözdüğünü doğrulamak için
+### <a name="to-verify-that-dns-on-the-target-computer-is-correctly-resolving-the-debugger-host-computer-name"></a>Hedef bilgisayardaki DNS'nin hata ayıklayıcı ana bilgisayar adını doğru çözümlemediğini doğrulamak için
 
-1. Hedef bilgisayarda **Başlat** menüsünü açın, **Donatılar** ' ın üzerine gelin ve ardından **komut istemi**' ne tıklayın.
+1. Hedef bilgisayarda Başlat menüsünü açın, **Donatılar'ın** üzerine **gelin ve** Komut İstemi'ne **tıklayın.**
 
-2. **Komut istemi** penceresinde şunu yazın:
+2. Komut **İstemi penceresine** şunları yazın:
 
     ```cmd
     ping <debugger_host_computer_name>
     ```
 
-3. Yanıtın ilk satırı, `ping` belirtilen bilgisayar IÇIN DNS tarafından döndürülen tam bilgisayar adını ve IP adresini gösterir.
+3. Yanıtın ilk `ping` satırı, belirtilen bilgisayar için DNS tarafından döndürülen tam bilgisayar adını ve IP adresini gösterir.
 
-4. Hata ayıklayıcı ana bilgisayarında, bir **komut istemi** penceresi açın ve komutunu çalıştırın `ipconfig` .
+4. Hata ayıklayıcı konak bilgisayarda bir Komut **İstemi penceresi açın** ve komutunu `ipconfig` çalıştırın.
 
 5. IP adresi değerlerini karşılaştırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uzaktan hata ayıklama hataları ve sorun giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
-- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

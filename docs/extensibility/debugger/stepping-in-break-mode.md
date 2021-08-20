@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a67a3e38c8a1b492f851b575d7c92740f68b7225e16fb56dd3759eb5e0ae482
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 928340634c7b34e5f731704961803b4cab85db21
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448487"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122117923"
 ---
 # <a name="stepping-in-break-mode"></a>Kesme modunda adımla
 Aşağıdaki bölümde, hata ayıklayıcı kesme modundayken gerçekleşen işlem açıklanmakta ve kodun adım adım olması gerekir:

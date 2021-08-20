@@ -11,14 +11,15 @@ ms.assetid: 7a6c7d03-1ff1-4059-bd54-5f407eeebc26
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 483854d0bea61af1bf8bd1f5338770fcc49b37be
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 6774cd500d4282acaebefe3e2dc1f2edee8f55ff
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157814"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139640"
 ---
 # <a name="idiaframedataexecute"></a>IDiaFrameData::execute
 Yığın geri sarma gerçekleştirir ve sonuçları bir yığın ilerleme çerçevesi arabiriminde döndürür.

@@ -1,6 +1,6 @@
 ---
-description: Bu ilişkili kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.
-title: 'IDebugBoundBreakpoint2:: SetCondition | Microsoft Docs'
+description: Bu sınır kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.
+title: IDebugBoundBreakpoint2::SetCondition | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5491dd67851c645762512736eac3ed6b1db820f53b2eb1299d7c1199d9ae29bf
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6c419b081c756af9ec0dd4eafc1c7400af339c96
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360644"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111690"
 ---
 # <a name="idebugboundbreakpoint2setcondition"></a>IDebugBoundBreakpoint2::SetCondition
-Bu ilişkili kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.
+Bu sınır kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,13 +44,13 @@ int SetCondition(
 
 ## <a name="parameters"></a>Parametreler
 `bpCondition`\
-'ndaki Koşulu açıklayan [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) Numaralandırmadaki bir değer.
+[in] Koşulu açıklayan [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) bir değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. , `E_BP_DELETED` Bağlantılı kesme noktası nesnesinin durumunun `BPS_DELETED` ( [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) sabit listesinin parçası) olarak ayarlanmış olup olmadığını döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Bağlı kesme noktası nesnesinin durumu olarak `E_BP_DELETED` ayarlanırsa `BPS_DELETED` (varsayılan değer BP_STATE [](../../../extensibility/debugger/reference/bp-state.md) döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Daha önce bu kesme noktasıyla ilişkilendirilmiş olan herhangi bir koşul kaybolur.
+ Daha önce bu kesme noktasıyla ilişkili tüm koşullar kaybolur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)

@@ -1,6 +1,6 @@
 ---
-description: Geçerli FRAMEıNFO numaralandırmasının bir kopyasını ayrı bir nesne olarak döndürür.
-title: 'IEnumDebugFrameInfo2:: Clone | Microsoft Docs'
+description: Geçerli FRAMEINFO numaralamalarının bir kopyasını ayrı bir nesne olarak döndürür.
+title: IEnumDebugFrameInfo2::Clone | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: cdd10489-1772-47e3-815f-a6cfd32a3c60
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: bfd98e66bd498799c33009064b0a48a25fad2b94
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1059b7ba4e25b6536aba59092755643a6c530822
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105080092"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122095562"
 ---
 # <a name="ienumdebugframeinfo2clone"></a>IEnumDebugFrameInfo2::Clone
-Geçerli numaralandırmanın ayrı bir nesne olarak kopyasını döndürür.
+Geçerli numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +43,13 @@ int Clone(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-dışı Bu numaralandırmanın bir kopyasını ayrı bir nesne olarak döndürür.
+[out] Bu numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırmanın kopyası, bu yöntemin çağrılışında orijinal ile aynı duruma sahiptir. Bununla birlikte, kopyanın ve özgün durumlarının durumları ayrıdır ve tek tek değiştirilebilir.
+ Numaralamanın kopyası, bu yöntemin çağrıldı olduğu sırada özgün ile aynı durumla aynıdır. Ancak kopyaların ve özgünlerin durumları ayrıdır ve tek tek değiştirilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)

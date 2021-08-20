@@ -1,6 +1,6 @@
 ---
-title: Ayarlar şelale | Microsoft IntelliTest Geliştirici Test Aracı
-description: Ayarları Derleme, Düzen ve Keşif düzeyinde düzenleyen ayarlar şelalesi hakkında bilgi edinebilirsiniz.
+title: Ayarlar şelale | Microsoft IntelliTest geliştirici test aracı
+description: Derleme, Armakod ve keşif düzeyinde ayarları düzenleyen, şelale ayarları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: conceptual
@@ -12,24 +12,24 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: da67c83dc7b8eeec327dc2541e5dfde4fe60a4ac5577f34baaf57f0cecb53553
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 88d8ed6df537c46f810f765c3b7d1b23eab9a3e4
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121440961"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139926"
 ---
 # <a name="settings-waterfall"></a>Ayarlar şelalesi
 
-Ayarlar şelalesi kavramı, kullanıcının **Derleme,** Ev ve Keşif **düzeyinde** ayarları belirteçenek **olduğu anlamına** gelir:
+Ayarlar şelale kavramı, kullanıcının **derlemeyi**, **armatürü** ve **araştırma** düzeyinde ayarları belirleyebileceği anlamına gelir:
 
-* Derleme - [PexAssemblySettings](attribute-glossary.md#pexassemblysettings)
-* Yer - [PexClass](attribute-glossary.md#pexclass)
-* Keşif - [PexExplorationAttributeBase](attribute-glossary.md#pexexplorationattributebase)
+* Assembly- [Pexassemblysettings](attribute-glossary.md#pexassemblysettings)
+* Fixture- [PexClass](attribute-glossary.md#pexclass)
+* Araştırma- [Pexaraştırması Ationattributebase](attribute-glossary.md#pexexplorationattributebase)
 
-Ayarlar düzeyinde belirtilen **her şey,** o derlemenin altındaki tüm çalışma ve keşifleri etkiler. Ayarlar Düzeyi'nde **belirtilen** her şey, bu evle ilgili tüm incelemeleri etkiler. Alt &mdash; ayarlar, Derleme ve Gizlilik düzeylerinde  **bir ayar** tanımlanırsa Kazanır, **Ayar ayarları** kullanılır.
+**derleme** düzeyinde belirtilen Ayarlar, bu derleme altındaki tüm armatürleri ve araştırmayı etkiler. **fixture** düzeyinde belirtilen Ayarlar, bu armaün altındaki tüm araştırmaları etkiler. Alt ayarlar Win &mdash; bir ayar derleme ve **armadeğer** düzeylerinde tanımlandıysa, **armakod** ayarları kullanılır. 
 
-Bazı ayarların Derleme düzeyine veya **Gizlilik düzeyine** özgü **olduğunu** unutmayın.
+Bazı ayarların **derleme** düzeyi veya **armatürü** düzeyine özgü olduğunu unutmayın.
 
 **Örnek**
 

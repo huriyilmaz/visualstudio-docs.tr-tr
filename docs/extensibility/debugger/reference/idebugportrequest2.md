@@ -11,14 +11,15 @@ ms.assetid: 556e610d-7c4b-44a8-965a-76a9d02b601a
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 035b6364b3a1dea400c96bcf179d57d6b4808ad5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4c9ebd27ca070a8cc4f7d34099193356aa038811
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072227"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160016"
 ---
 # <a name="idebugportrequest2"></a>IDebugPortRequest2
 Bu arabirim bir bağlantı noktasını tanımlar. Bu açıklama, bağlantı noktasını bir bağlantı noktası sağlayıcısına eklemek için kullanılır.
@@ -30,7 +31,7 @@ IDebugPortRequest2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Implemenonun notları
- Visual Studio, genellikle bir bağlantı noktası tedarikçiden bir hata ayıklama bağlantı noktası alma sürecinde bu arabirimi uygular.
+ Visual Studio genellikle bu arabirimi bir bağlantı noktası tedarikçiden hata ayıklama bağlantı noktası alma sürecinde uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  Bu arabirim, hata ayıklama bağlantı noktası oluşturmak için [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) 'a geçirilir. [Getportrequest](../../../extensibility/debugger/reference/idebugport2-getportrequest.md) çağrısı, ilk yerde bağlantı noktasını oluşturmak için kullanılan isteği temsil eden bu arabirimi döndürür.

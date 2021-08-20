@@ -11,14 +11,15 @@ ms.assetid: 2e441103-a266-407b-88c3-fb58716257a3
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 77655e2e040b6a14a5c82151dac451e8373ea674
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 9c715267fe002b136ee07e2a925b979437fe97b0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99876985"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122141122"
 ---
 # <a name="threads-view-in-the-concurrency-visualizer"></a>Eşzamanlılık görselleştiricisi içindeki iş parçacıkları görünümü
 
@@ -113,31 +114,31 @@ Zaman çizelgesi grafiğinin altında, **profil raporu**, **geçerli** ve **yı�
 
 - **Yürütme** **Yürütme** raporu, uygulamanın yürütülürken harcadığı sürenin dökümünü gösterir.
 
-  Yürütme zamanının harcadığı kod satırını bulmak için çağrı ağacını genişletin ve çağrı ağacı girişinin kısayol menüsünde **kaynağı görüntüle** veya **çağrı sitelerini görüntüle**' yi seçin. **Kaynağı görüntüle** yürütülen kod satırını konumlandırır. **Çağrı sitelerini görüntüle** , yürütülen satırı çağıran kod satırını konumlandırır. Yalnızca bir adet çağrı site satırı varsa, kodu vurgulanır. Çeşitli çağrı siteleri varsa, iletişim kutusunda istediğiniz birini seçin ve ardından **Kaynağa Git**' i seçin. En çok örnek olan çağrı sitesini, en son saati veya her ikisini de bulmak en iyi seçenektir. Daha fazla bilgi için bkz. [yürütme profili raporu](../profiling/execution-profile-report.md).
+  Yürütme zamanının harcadığı kod satırını bulmak için çağrı ağacını genişletin ve çağrı ağacı girişinin kısayol menüsünde **kaynağı görüntüle** veya **çağrı sitelerini görüntüle**' yi seçin. **Kaynağı görüntüle** yürütülen kod satırını konumlandırır. **Çağrı sitelerini görüntüle** , yürütülen satırı çağıran kod satırını konumlandırır. Yalnızca bir adet çağrı site satırı varsa, kodu vurgulanır. Çeşitli çağrı siteleri varsa, iletişim kutusunda istediğiniz birini seçin ve ardından **Kaynağa Git**' i seçin. Çoğu zaman en çok örneği, en çok zamanı veya her ikisini de olan çağrı sitesini bulmak yararlıdır. Daha fazla bilgi için [bkz. Yürütme profili raporu.](../profiling/execution-profile-report.md)
 
-- **Eşitleme** **Eşitleme** raporu, her bir çağrı yığınının toplam engellenme süreleriyle birlikte, eşitleme bloklarından sorumlu çağrıları gösterir. Daha fazla bilgi için bkz. [eşitleme süresi](../profiling/synchronization-time.md).
+- **Eşitleme** Eşitleme **raporu,** eşitleme bloklarının yanı sıra her çağrı yığınının toplam engelleme sürelerini de gösterir. Daha fazla bilgi için [bkz. Eşitleme zamanı.](../profiling/synchronization-time.md)
 
-- **g/ç** **G/ç** raporu, her bir çağrı yığınının toplam engellenme süreleriyle birlikte g/ç bloklarından sorumlu olan çağrıları gösterir. Daha fazla bilgi için bkz. [g/ç zamanı (Iş parçacıkları görünümü)](../profiling/i-o-time-threads-view.md).
+- **I/O** **I/O raporu,** her çağrı yığınının toplam engelleme süreleriyle birlikte, I/O bloklarının sorumlu olduğu çağrıları gösterir. Daha fazla bilgi için [bkz. I/O zamanı (İş Parçacıkları görünümü)](../profiling/i-o-time-threads-view.md).
 
-- **Sleep** **Uyku** raporu, her bir çağrı yığınının toplam engellenme süreleriyle birlikte, uyku bloklarında sorumlu olan çağrıları gösterir. Daha fazla bilgi için bkz. [uyku süresi](../profiling/sleep-time.md).
+- **Uyku** Uyku **raporu,** her çağrı yığınının toplam engelleme süreleriyle birlikte uyku bloklarının sorumlu olduğu çağrıları gösterir. Daha fazla bilgi için bkz. [Uyku süresi.](../profiling/sleep-time.md)
 
-- **Bellek yönetimi** **Bellek** yönetimi raporu, bellek yönetimi bloklarının gerçekleştiği, her bir çağrı yığınının toplam engellenme süreleriyle birlikte aramaları gösterir. Aşırı sayfalama veya atık toplama sorunları olan bölgeleri belirlemek için bu bilgileri kullanın.  Daha fazla bilgi için bkz. [bellek yönetimi zamanı](../profiling/memory-management-time.md).
+- **Bellek Yönetimi** Bellek **Yönetimi raporu,** bellek yönetim bloklarının meydana geldiği çağrıları ve her çağrı yığınının toplam engelleme zamanlarını gösterir. Aşırı disk belleği veya atık toplama sorunları olan alanları belirlemek için bu bilgileri kullanın.  Daha fazla bilgi için [bkz. Bellek yönetim zamanı.](../profiling/memory-management-time.md)
 
-- **Önalım** **Önalım** raporu, sistemdeki işlemlerin geçerli işlemi ve geçerli işlemde iş parçacıklarının değiştirildiği bireysel iş parçacıklarını gösterir. Bu bilgileri, önalım için en çok sorumlu olan işlem ve iş parçacıklarını belirlemek için kullanabilirsiniz. Daha fazla bilgi için bkz. [önalım Time](../profiling/preemption-time.md).
+- **Ön önklere çıkma** **Preemption raporu,** sistem üzerinde işlemlerin geçerli işlemi önleyenin nerede olduğunu ve geçerli işlemde iş parçacıklarının yerini alan tek tek iş parçacıklarını gösterir. Bu bilgileri, önkesmeden en çok sorumlu olan işlemleri ve iş parçacıklarını tanımlamak için kullanabilirsiniz. Daha fazla bilgi için [bkz. Önmserlik süresi.](../profiling/preemption-time.md)
 
-- **UI işleme** **UI işleme** raporu, her bir çağrı yığınının toplam engellenme SÜRELERIYLE birlikte UI işleme bloklarında sorumlu olan çağrıları gösterir. Daha fazla bilgi için bkz. [UI işleme süresi](../profiling/ui-processing-time.md).
+- **UI İşleme** UI **İşleme raporu,** ui işleme bloklarının yanı sıra her çağrı yığınının toplam engelleme sürelerini de gösterir. Daha fazla bilgi için [bkz. UI işleme süresi.](../profiling/ui-processing-time.md)
 
-- **Her Iş parçacığı Özeti** Seçili zaman aralığı için iş parçacıklarının durumunu gösteren bir grafik göstermek üzere **Iş parçacığı Özeti başına** ' yı seçin. Renk kodlu sütunlar, her iş parçacığının çalıştırma, engelleme, g/ç ve diğer durumlar için harcadığı toplam süreyi gösterir. İş parçacıkları alt kısımdaki etiketlidir. Zaman çizelgesi grafiğinde yakınlaştırma düzeyini ayarlarken bu grafik otomatik olarak güncelleştirilir.
+- **İş Parçacığı Başına Özet** İş **Parçacığı Başına Özet'i** seçerek o anda seçili olan zaman aralığına göre iş parçacıklarının durumunu gösteren bir grafik görüntüleyin. Renk kodlu sütunlar her iş parçacığının çalışma, engellenen, I/O ve diğer eyaletlerde harcadığı toplam zamanı gösterir. İş parçacıkları en altta etiketlenmiş. Zaman çizelgesi grafiğinde yakınlaştırma düzeyini ayar her zaman bu grafik otomatik olarak ekleyebilirsiniz.
 
-  Bazı yakınlaştırma düzeylerinde bazı iş parçacıkları grafikte gösterilmeyebilir. Bu durumda, üç nokta (**...**) sağda görüntülenir. İstediğiniz iş parçacığı görünmezse, diğer iş parçacıklarını gizleyebilirsiniz. Daha fazla bilgi için bkz. [iş parçacığı özet raporu başına](../profiling/per-thread-summary-report.md).
+  Bazı yakınlaştırma düzeylerinde bazı iş parçacıkları grafikte gösternemmektedir. Bu durumda, sağda üç nokta (**...**) görünür. Istediğiniz iş parçacığı görünmüyorsa diğer iş parçacıklarını gizleyebilirsiniz. Daha fazla bilgi için [bkz. İş parçacığı başına özet raporu.](../profiling/per-thread-summary-report.md)
 
-- **Disk işlemleri** Geçerli işlem için disk g/ç 'ye dahil olan işlemleri ve iş parçacıklarını, dokundukları dosyaları (örneğin, yüklendikleri dll 'Ler), okudukları bayt sayısını ve diğer bilgileri göstermek için **disk işlemlerini** seçin. Bu raporu, yürütme sırasında dosyalara erişirken harcanan süreyi değerlendirmek için, özellikle de işleminiz g/ç ile bağlantılı gibi durumlarda kullanabilirsiniz. Daha fazla bilgi için bkz. [Disk işlemleri raporu](../profiling/disk-operations-report-threads-view.md).
+- **Disk İşlemleri** Geçerli **işlem için** disk girişine dahil olan işlemleri ve iş parçacıklarını, dokunduğu dosyaları (örneğin, yüklemiş olduğu DLL'ler), okunan bayt sayısını ve diğer bilgileri göstermek için Disk İşlemleri'ne seçin. Bu raporu, özellikle de işleminiz I/O'ya bağlı gibi görünüyorsa, yürütme sırasında dosyalara erişirken harcanan zamanı değerlendirmek için kullanabilirsiniz. Daha fazla bilgi için bkz. [Disk işlemleri raporu.](../profiling/disk-operations-report-threads-view.md)
 
 ### <a name="current-tab"></a>Geçerli sekme
-Bu sekme, zaman çizelgesi grafiğindeki iş parçacığı kesimindeki seçili bir nokta için çağrı yığınını gösterir. Çağrı yığınları, yalnızca uygulamanızla ilgili etkinlikleri gösterecek şekilde kırpılır.
+Bu sekme, zaman çizelgesi grafiğinde bir iş parçacığı segmentinde seçili bir noktanın çağrı yığınını gösterir. Çağrı yığınları yalnızca uygulamanıza ilişkin etkinlikleri gösterecek şekilde kırpıldı.
 
-### <a name="unblocking-stack-tab"></a>Yığın sekmesinin engellemesini kaldırma
-Bu sekme, seçilen iş parçacığının hangi iş parçacığının engellemesini ve engellemeyi kaldırma çağrı yığınını gösterir.
+### <a name="unblocking-stack-tab"></a>Yığın sekmesinin engelini kaldırma
+Bu sekme, seçilen iş parçacığının engelini kaldıran iş parçacığını ve engellemesini kaldıran çağrı yığınını gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eşzamanlılık Görselleştiricisi](../profiling/concurrency-visualizer.md)

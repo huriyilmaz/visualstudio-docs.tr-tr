@@ -1,6 +1,6 @@
 ---
 title: Projeleri genişletmek için genellikle kullanılan nesneler için CATID'ler
-description: Visual Basic, Visual C# ve Visual C++ projelerinde Project ve ProjectItem otomasyon nesnelerini genişletmek için kullanılan nesnelere yönelik CATID'Visual C++ öğrenin.
+description: Project, Visual C# ve Visual Basic projelerinde ProjectItem otomasyon nesnelerini genişletmek için kullanılan nesnelerin CATID'Visual C++ öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,14 +12,15 @@ ms.assetid: 0c7fdb66-ed96-4b36-89f6-021bca573572
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: abc0df47c243cff4bf80ab18b15f1cbaa9526cdd
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 04253f9bfe45cd893ecbf1401fc9d7e12391a4c9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112898683"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122159210"
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>Projeleri genişletmek için genellikle kullanılan nesneler için CATID'ler
 Aşağıdaki tabloda , ve projeleri için nesneleri genişletmek ve `Project` otomasyonu `ProjectItem` yapmak için kullanılan CATID'ler [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] listelemektedir. Bu CATID'ler *VSLangProj.olb içinde tanımlanır.*
@@ -62,7 +63,7 @@ Aşağıdaki tabloda , ve projeleri için nesneleri genişletmek ve `Project` ot
 |`CVCFolderNode`|{EE8299CA-19B6-4f20-ABEA-E1FD9A33B683}|
 |`CVCFileNode`|{EE8299C9-19B6-4f20-ABEA-E1FD9A33B683}|
 
- Aşağıdaki kod örneği, kodunda bu CATID'leri nasıl programlaycazını gösteriyor.
+ Aşağıdaki kod örneği, bu CATID'leri kodunuz içinde nasıl programlaycazını gösteriyor.
 
 ```
 const LPOLESTR CVCProjectNode::s_wszCATID = L"{EE8299CB-19B6-4f20-ABEA-E1FD9A33B683}";
@@ -79,7 +80,7 @@ const LPOLESTR CVCFileNode::s_wszCATID = L"{EE8299C9-19B6-4f20-ABEA-E1FD9A33B683
 |`CVCActiveXReferenceNode`|{9E8182D3-C60A-44f4-A74B-14C90EF9CACE}|
 |`CVCReferences`|{FE8299CA-19B6-4f20-ABEA-E1FD9A33B683}|
 
- Aşağıdaki kod örneğinde, bu CATID'leri kodunuz içinde nasıl programlandırabilirsiniz:
+ Aşağıdaki kod örneği, bu CATID'leri kodunuz içinde nasıl programlaycazını gösteriyor:
 
 ```
 const LPOLESTR CVCAssemblyReferenceNode::s_wszCATID = L"{FE8299C9-19B6-4f20-ABEA-E1FD9A33B683}";

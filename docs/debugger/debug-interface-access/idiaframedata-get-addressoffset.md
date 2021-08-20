@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6013b4b50001393c071dbf0cfa38faebe9d729dc305b2963cdece4cc5ec5ed57
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fca93e47227cd6e1578a9cbb88a13237835650fb
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345055"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154586"
 ---
 # <a name="idiaframedataget_addressoffset"></a>IDiaFrameData::get_addressOffset
 Çerçeve için kod adresinin konum kısmını alır.

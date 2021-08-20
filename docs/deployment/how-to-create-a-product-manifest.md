@@ -1,6 +1,6 @@
 ---
-title: Ürün bildirimi oluşturun | Microsoft Docs
-description: Tek bir ürün bildirimi ve her yerel ayar için bir paket bildirimi içeren bir paket ile ClickOnce uygulamanız için önkoşulları dağıtmayı öğrenin.
+title: Ürün Bildirimi Oluşturma | Microsoft Docs
+description: Tek bir ürün bildirimi ve her yerel ClickOnce paket bildirimi içeren bir paketle uygulamanızın önkoşullarını dağıtmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -18,29 +18,30 @@ ms.assetid: 2d316aaa-8bc0-4ce5-90ab-23b3eac0b5dd
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 40a620023dad754e3de4fedb9bc4fdbe7b7835a5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e58dbabb15b0d0a3643b38693d614aaf16a4a60c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99861237"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160744"
 ---
-# <a name="how-to-create-a-product-manifest"></a>Nasıl yapılır: Ürün bildirimi oluşturma
-Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi oluşturabilirsiniz. Önyükleyici paketi tek bir ürün bildirim dosyası, ancak her yerel ayar için bir paket bildirimi içerir. Paket bildirimi, paketinizin yerelleştirmeye özgü yönlerini içerir. Buna dizeler, son kullanıcı lisans sözleşmeleri ve dil paketleri dahildir.
+# <a name="how-to-create-a-product-manifest"></a>Nasıl: Ürün bildirimi oluşturma
+Uygulamanıza önkoşulları dağıtmak için bir önyükleyici paketi oluşturabilirsiniz. Önyükleyici paketi tek bir ürün bildirim dosyası ama her yerel bölge için bir paket bildirimi içerir. Paket bildirimi, paketinizin yerelleştirmeye özgü yönlerini içerir. Bu dizeleri, son kullanıcı lisans sözleşmelerini ve dil paketlerini içerir.
 
- Paket bildirimleri hakkında daha fazla bilgi için bkz. [nasıl yapılır: paket bildirimi oluşturma](../deployment/how-to-create-a-package-manifest.md).
+ Paket bildirimleri hakkında daha fazla bilgi için [bkz. Nasıl: Paket bildirimi oluşturma.](../deployment/how-to-create-a-package-manifest.md)
 
 ## <a name="create-the-product-manifest"></a>Ürün bildirimini oluşturma
 
 #### <a name="to-create-the-product-manifest"></a>Ürün bildirimini oluşturmak için
 
-1. Önyükleyici paketi için bir dizin oluşturun. Bu örnek C:\packagekullanır.
+1. Önyükleyici paketi için bir dizin oluşturun. Bu örnek C:\package kullanır.
 
-2. Visual Studio 'da *product.xml* adlı yenı bir XML dosyası oluşturun ve *c:\Package* klasörüne kaydedin.
+2. Bu Visual Studio,product.xmladlı yeni ** bir XML dosyası oluşturun ve *C:\package klasörüne* kaydedin.
 
-3. Aşağıdaki XML 'i, paketin XML ad alanını ve ürün kodunu tanımlayacak şekilde ekleyin. Ürün kodunu paket için benzersiz bir tanımlayıcı ile değiştirin.
+3. Paketin XML ad alanını ve ürün kodunu açıklamak için aşağıdaki XML'yi ekleyin. Ürün kodunu paket için benzersiz bir tanımlayıcıyla değiştirin.
 
     ```xml
     <Product
@@ -48,7 +49,7 @@ Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi olu
     ProductCode="Custom.Bootstrapper.Package">
     ```
 
-4. Paketin bir bağımlılığı olduğunu belirtmek için XML ekleyin. Bu örnek Microsoft Windows Installer 3,1 ' de bir bağımlılık kullanır.
+4. Paketin bir bağımlılığı olduğunu belirtmek için XML ekleyin. Bu örnekte, Microsoft Windows Installer 3.1'e bağımlılık 2.
 
     ```xml
     <RelatedProducts>
@@ -56,7 +57,7 @@ Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi olu
       </RelatedProducts>
     ```
 
-5. Önyükleyici paketindeki tüm dosyaları listelemek için XML ekleyin. Bu örnek *CorePackage.msi* paket dosyası adını kullanır.
+5. Önyükleyici paketinde yer alan tüm dosyaları listeleye XML ekleyin. Bu örnekte, paket dosyası adı *CorePackage.msi.*
 
     ```xml
     <PackageFiles>
@@ -64,16 +65,16 @@ Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi olu
     </PackageFiles>
     ```
 
-6. *CorePackage.msi* dosyasını kopyalayın veya *c:\Package* klasörüne taşıyın.
+6. CorePackage.msi *C:\package klasörüne* kopyalayın veya taşıyın. 
 
-7. Önyükleyici komutlarını kullanarak paketi yüklemek için XML ekleyin. Önyükleyici, sessizce yüklenecek *. msi* dosyasına **/qn** bayrağını otomatik olarak ekler. Dosya bir *. exe* ise, önyükleyici kabuğu kullanarak *. exe* dosyasını çalıştırır. Aşağıdaki XML *CorePackage.msi* için bir bağımsız değişken göstermez, ancak komut satırı bağımsız değişkenini `Arguments` özniteliğe yerleştirebilirsiniz.
+7. Önyükleyici komutlarını kullanarak paketi yüklemek için XML ekleyin. Önyükleyici, **/qn bayrağını** *.msi* olarak yüklenir. Dosya bir *.exe* ise, önyükleyici.exe *kabuğunu* kullanarak dosyayı çalıştırır. Aşağıdaki XML, komut satırı ** CorePackage.msibağımsız değişkenlerini gösterir, ancak komut satırı bağımsız değişkenlerini özniteliğine `Arguments` koyabilirsiniz.
 
     ```xml
     <Commands>
         <Command PackageFile="CorePackage.msi" Arguments="">
     ```
 
-8. Bu Önyükleyici paketinin yüklü olup olmadığını denetlemek için aşağıdaki XML 'i ekleyin. Ürün kodunu yeniden dağıtılabilir bileşen için GUID ile değiştirin.
+8. Bu önyükleyici paketinin yüklü olup olduğunu kontrol etmek için aşağıdaki XML'yi ekleyin. Yeniden dağıtılabilir bileşen için ürün kodunu GUID ile değiştirin.
 
     ```xml
     <InstallChecks>
@@ -83,7 +84,7 @@ Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi olu
     </InstallChecks>
     ```
 
-9. Önyükleyici bileşeninin zaten yüklü olup olmadığı öğesine bağlı olarak önyükleyici davranışını değiştirmek için XML ekleyin. Bileşen yüklüyse, önyükleyici paketi çalıştırılmaz. Aşağıdaki XML, bu bileşen yönetici ayrıcalıkları gerektirdiğinden geçerli kullanıcının yönetici olup olmadığını denetler.
+9. Önyükleyici bileşeninin zaten yüklü olup bu duruma bağlı olarak önyükleyici davranışını değiştirmek için XML ekleyin. Bileşen yüklüyse önyükleyici paketi çalıştırlanmaz. Aşağıdaki XML, bu bileşen yönetim ayrıcalıkları gerektirdiği için geçerli kullanıcının yönetici olup olduğunu denetler.
 
     ```xml
     <InstallConditions>
@@ -96,7 +97,7 @@ Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi olu
     </InstallConditions>
     ```
 
-10. Yükleme başarılı olursa ve yeniden başlatma gerekliyse çıkış kodlarını ayarlamak için XML ekleyin. Aşağıdaki XML, önyükleyicinin paketleri yüklemeye devam edemeyeceğini belirten başarısız ve FailReboot çıkış kodlarını gösterir.
+10. Yükleme başarılı olursa ve yeniden başlatma gerekiyorsa çıkış kodlarını ayarlamak için XML ekleyin. Aşağıdaki XML, önyükleyicinin paketleri yüklemeye devam edeceğini belirten Fail ve FailReboot çıkış kodlarını gösteriyor.
 
     ```xml
     <ExitCodes>
@@ -107,17 +108,17 @@ Uygulamanız için önkoşulları dağıtmak üzere bir önyükleyici paketi olu
     </ExitCodes>
     ```
 
-11. Önyükleyici komutlarının bölümünü sonlandırmak için aşağıdaki XML 'i ekleyin.
+11. Önyükleyici komutlarının bölümünü sona ert için aşağıdaki XML'yi ekleyin.
 
     ```xml
         </Command>
     </Commands>
     ```
 
-12. *C:\Package* klasörünü Visual Studio önyükleyici dizinine taşıyın. Visual Studio 2010 için bu, *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages* dizinidir.
+12. *C:\package klasörünü* Visual Studio önyükleyici dizinine taşıma. 2010'Visual Studio için *bu\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages dizinidir.*
 
 ## <a name="example"></a>Örnek
- Ürün bildirimi, özel önkoşullara yönelik yükleme yönergelerini içerir.
+ Ürün bildirimi, özel önkoşullar için yükleme yönergelerini içerir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

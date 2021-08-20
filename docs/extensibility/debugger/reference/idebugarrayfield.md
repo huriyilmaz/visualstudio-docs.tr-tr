@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8de1ca4c8de27ab72087db7add6a75f4f7b77a940c7478c45e4647f37d74177
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6a14c4379abff21d97c5936914937f897942e010
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121239158"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145464"
 ---
 # <a name="idebugarrayfield"></a>IDebugArrayField
 Bu arabirim bir dizi sembolünü veya türünü açıklar.
@@ -37,7 +37,7 @@ IDebugArrayField : IDebugContainerField
  [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) bayrağını döndürürse [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabiriminden bu arabirimi almak için [QueryInterface](/cpp/atl/queryinterface) `FIELD_TYPE_ARRAY` kullanın.
 
 ## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
- [Bu arabirim, IDebugField](../../../extensibility/debugger/reference/idebugfield.md) ve [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimleri üzerinde yöntemlere ek olarak şunları da sunar:
+ [Bu arabirim, IDebugField](../../../extensibility/debugger/reference/idebugfield.md) ve [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimleri üzerinde yöntemlere ek olarak şunları da kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|

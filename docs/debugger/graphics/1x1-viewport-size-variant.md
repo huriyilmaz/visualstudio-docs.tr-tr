@@ -1,5 +1,5 @@
 ---
-title: 1x1 GörünümPort Boyutu Varyantı | Microsoft Docs
+title: 1x1 Görünüm Açısı Boyutu Çeşitleme | Microsoft Docs
 description: Tüm işleme hedeflerine yönelik görünüm açısı boyutlarını 1x1 piksele düşürmek için 1x1 görünüm açısı boyut çeşidini uygulama.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c9cda1347a0f1293165b5cbb553f1102eac615c67d3659a000c263bd762d17fe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bf619c6f9499916971620e3d428cf3545fd4cea1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121263666"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121106"
 ---
 # <a name="1x1-viewport-size-variant"></a>1x1 Görünüm Penceresi Boyut Çeşidi
 Tüm işleme hedeflerine yönelik görünüm açısı boyutlarını 1x1 piksele azaltır.

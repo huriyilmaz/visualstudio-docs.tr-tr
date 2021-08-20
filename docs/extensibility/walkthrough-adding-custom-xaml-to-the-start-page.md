@@ -1,6 +1,6 @@
 ---
 title: 'İzlenecek yol: başlangıç sayfasına özel XAML ekleme | Microsoft Docs'
-description: Bu yönergeyi kullanarak Web tarayıcısı içeren özel bir Visual Studio başlangıç sayfası oluşturmayı öğrenin.
+description: bu yönergeyi kullanarak web tarayıcısı içeren özel bir Visual Studio başlangıç sayfası oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -11,19 +11,20 @@ ms.assetid: 9af4d5f9-1cfc-4221-aea7-c8cd3f7571a6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 monikerRange: vs-2017
-ms.openlocfilehash: 972f8c477a62078b14d16ff61d3f6b8c7978616d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 4da513c5040b6da97a9a545b5b40892d8cdc4c30
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062037"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122158053"
 ---
 # <a name="walkthrough-add-custom-xaml-to-the-start-page"></a>İzlenecek yol: başlangıç sayfasına özel XAML ekleme
 
-Bu izlenecek yol, bir Web tarayıcısı içeren özel bir Visual Studio başlangıç sayfası oluşturmayı gösterir.
+bu izlenecek yol, bir Web tarayıcısı içeren özel bir Visual Studio başlangıç sayfası oluşturmayı gösterir.
 
 ## <a name="add-custom-xaml"></a>Özel XAML Ekle
 
@@ -65,9 +66,9 @@ Bu izlenecek yol, bir Web tarayıcısı içeren özel bir Visual Studio başlang
 
 1. **F5** tuşuna basın.
 
-     Visual Studio 'nun deneysel örneği, özel başlangıç sayfası yüklenmiş ancak seçilmemiş olarak açılır.
+     Visual Studio deneysel örneği, özel başlangıç sayfası yüklüyken, ancak seçilmediğinden açılır.
 
-2. Visual Studio 'nun deneysel örneğinde **Araçlar/Seçenekler/ortam** sayfasını açın.
+2. Visual Studio deneysel örneğinde **araçlar/seçenekler/ortam** sayfasını açın.
 
 3. **Başlatma**' yı seçin. **Başlangıç sayfası Özelleştir** listesinde, *. xaml* dosyanızı seçin ve **Tamam**' a tıklayın.
 
@@ -75,11 +76,11 @@ Bu izlenecek yol, bir Web tarayıcısı içeren özel bir Visual Studio başlang
 
 5. **Bing** sekmesine tıklayın.
 
-     Bing Web sayfası görmeniz gerekir.
+     bir Bing web sayfası görmeniz gerekir.
 
 6. **MyButton** sekmesine tıklayın.
 
-     **Yeni proje** iletişim kutusunu açan bir **MyProject** düğmesi görmeniz gerekir.
+     **yeni Project** iletişim kutusunu açan bir **myproject** düğmesi görmeniz gerekir.
 
 7. Deneysel örneği kapatın.
 
@@ -87,7 +88,7 @@ Bu izlenecek yol, bir Web tarayıcısı içeren özel bir Visual Studio başlang
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Visual Studio başlangıç sayfasında artık bir Web tarayıcısı sekmesi ve MyButton sekmesi görüntülenen bir sekme bulunur. [Başlangıç sayfasına kullanıcı denetimi ekleme](../extensibility/adding-user-control-to-the-start-page.md)bölümünde gösterildiği *gibi, özel* bir. dll eklemek için başka işlevlere sahip özel başlangıç sayfaları oluşturabilirsiniz. Elde edilen. vsix dosyasını [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesine veya başka bir Web sitesi ya da ağ paylaşımında yayımlayarak, özel başlangıç sayfalarını diğer kullanıcılarla paylaşabilirsiniz. Daha fazla bilgi için bkz. [özel başlangıç sayfaları dağıtma](../extensibility/deploying-custom-start-pages.md).
+Visual Studio başlangıç sayfası şimdi bir Web tarayıcısı sekmesi ve MyButton sekmesini görüntüleyen bir sekme içerir. [Başlangıç sayfasına kullanıcı denetimi ekleme](../extensibility/adding-user-control-to-the-start-page.md)bölümünde gösterildiği gibi özel bir .dll eklemek için  başka işlevlere sahip özel başlangıç sayfaları oluşturabilirsiniz. elde edilen. vsix dosyasını [Visual Studio market](https://marketplace.visualstudio.com/) Web sitesinde veya başka bir web sitesi veya ağ paylaşımında yayımlayarak özel başlangıç sayfalarını diğer kullanıcılarla paylaşabilirsiniz. Daha fazla bilgi için bkz. [özel başlangıç sayfaları dağıtma](../extensibility/deploying-custom-start-pages.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,54 +1,54 @@
 ---
 title: Docker Compose kullanarak birden çok kapsayıcıyla çalışma
 author: ghogen
-description: Docker Compose ile birden çok kapsayıcı kullanmayı Docker Compose
+description: Docker Compose ile birden çok kapsayıcıyı kullanmayı öğrenin
 ms.custom: SEO-VS-2020
 ms.author: ghogen
 ms.date: 03/15/2021
 ms.technology: vs-container-tools
 ms.topic: tutorial
-ms.openlocfilehash: 49a207b1a2234b12cebb95e9019fe15da28846ca6e4e7666fb5bf57c86ff1aff
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f2185bf025bc880a7461a9e1618953f734a7083a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121363424"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155063"
 ---
-# <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Öğretici: Docker Compose ile çok kapsayıcılı uygulama oluşturma
+# <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Öğretici: Docker Compose ile çok kapsayıcılı bir uygulama oluşturma
 
-Bu öğreticide, birden fazla kapsayıcıyı yönetmeyi ve kapsayıcılar arasında iletişim kurarken kapsayıcılar arasında iletişim Visual Studio.  Birden çok kapsayıcının *yönetilmesi için kapsayıcı düzenlemesi* gerekir ve Docker Compose, Kubernetes veya Service Fabric. Burada bu bilgileri Docker Compose. Docker Compose, geliştirme döngüsü sırasında yerel hata ayıklama ve test etme için harikadır.
+Bu öğreticide, birden fazla kapsayıcıyı yönetmeyi ve Visual Studio kapsayıcı araçlarını kullanırken aralarında iletişim kurmayı öğreneceksiniz.  Birden çok kapsayıcıyı yönetmek için *kapsayıcı düzenlemesi* gerekir ve Docker Compose, Kubernetes veya Service Fabric gibi bir Orchestrator gerekir. Burada Docker Compose kullanacağız. Docker Compose, geliştirme döngüsünün üzerinde yerel hata ayıklama ve test için harika bir yoldur.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range="vs-2017"
 
-* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* Visual Studio Geliştirme, **Azure** Araçları iş yükü veya **.NET Core platformlar** arası geliştirme iş yükü yüklü olarak [2017'ye](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) geçiş
+* [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+* **Web geliştirme**, **Azure araçları** iş yükü veya **.net Core platformlar arası geliştirme** iş yükü yüklü [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* Visual Studio Geliştirme, **Azure** Araçları iş yükü ve/veya **.NET Core platformlar** arası geliştirme iş yükünün yüklü olduğu [2019](https://visualstudio.microsoft.com/downloads) sürümü
-* [.NET Core 2.2 ile geliştirme](https://dotnet.microsoft.com/download/dotnet-core/2.2) için .NET Core 2.2 Geliştirme Araçları
-* [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) ile geliştirme için .NET Core 3 Geliştirme Araçları.
+* [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+* **Web geliştirme**, **Azure araçları** iş yükü ve/veya **.net Core platformlar arası geliştirme** iş yükü yüklü [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
+* .NET Core 2,2 ile geliştirme için [.net core 2,2 geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+* .NET Core 3,1 ile geliştirme için [.NET Core 3 geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/3.1) .
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* Visual Studio **Geliştirme,** **Azure** Araçları iş yükü ve/veya **.NET Core platformlar** arası geliştirme iş yükü yüklü [2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) sürümü
-* [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) ile geliştirme için .NET Core 3 Geliştirme Araçları.
-* [.NET 5 Geliştirme .NET](https://dotnet.microsoft.com/download/dotnet-core/5.0) 5 ile geliştirme için çok fazla.
+* [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+* **Web geliştirme**, **Azure araçları** iş yükü ve/veya **.net Core platformlar arası geliştirme** iş yükü yüklü [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022)
+* .NET Core 3,1 ile geliştirme için [.NET Core 3 geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/3.1) .
+* .NET 5 ile geliştirme için [.NET 5 geliştirme Toos](https://dotnet.microsoft.com/download/dotnet-core/5.0) .
 ::: moniker-end
 
-## <a name="create-a-web-application-project"></a>Web Uygulaması projesi oluşturma
+## <a name="create-a-web-application-project"></a>Web uygulaması projesi oluşturma
 
-Bu Visual Studio, Razor **ASP.NET Core bir web** uygulaması oluşturmak için adlı bir web uygulaması projesi `WebFrontEnd` oluşturun.
+Visual Studio ' de, Razor sayfaları olan bir web uygulaması oluşturmak için adlı bir **ASP.NET Core web uygulaması** projesi oluşturun `WebFrontEnd` .
   
 ::: moniker range="vs-2017"
 
-Docker Desteğini **Etkinleştir'i seçme.** Docker desteğini daha sonra eksersiniz.
+**Docker desteğini etkinleştir**' i seçmeyin. Docker desteğini daha sonra ekleyeceksiniz.
 
 ![Web projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/docker-tutorial-enable-docker-support.png)
 
@@ -56,28 +56,28 @@ Docker Desteğini **Etkinleştir'i seçme.** Docker desteğini daha sonra eksers
 
 ::: moniker range=">=vs-2019"
 
-![Web ASP.NET Core projesi oluşturma](./media/tutorial-multicontainer/vs-2019/create-web-project1.png)
+![ASP.NET Core Web uygulaması projesi oluştur](./media/tutorial-multicontainer/vs-2019/create-web-project1.png)
 
-Docker Desteğini **Etkinleştir'i seçme.** Docker desteğini daha sonra eksersiniz.
+**Docker desteğini etkinleştir**' i seçmeyin. Docker desteğini daha sonra ekleyeceksiniz.
 
-![Web projesi oluştururken Ek bilgiler ekran görüntüsü. Docker Desteğini Etkinleştir seçeneği seçilmez.](./media/tutorial-multicontainer/vs-2019/create-web-project-additional-information.png)
+![Web projesi oluştururken ek bilgi ekranının ekran görüntüsü. Docker desteğini etkinleştirme seçeneği seçili değil.](./media/tutorial-multicontainer/vs-2019/create-web-project-additional-information.png)
 
 ::: moniker-end
 
-## <a name="create-a-web-api-project"></a>Web API'si projesi oluşturma
+## <a name="create-a-web-api-project"></a>Web API projesi oluşturma
 
-Aynı çözüme bir proje ekleyin ve *myWebAPI olarak buna çağrıyın.* Proje türü olarak **API'yi** seçin ve HTTPS için yapılandır **onay kutusunu temizleyin.** Bu tasarımda, aynı web uygulamasındaki kapsayıcılar arasındaki iletişim için değil, yalnızca istemciyle iletişim için SSL kullanıyoruz. Yalnızca `WebFrontEnd` HTTPS gerekir ve örneklerde yer alan kodda bu onay kutusunun işaretinin temiz olduğu varsayıldı. Genel olarak, Visual Studio tarafından kullanılan .NET geliştirici sertifikaları kapsayıcıdan kapsayıcıya istekler için değil yalnızca dıştan kapsayıcıya istekler için desteklemektedir.
+Aynı çözüme bir proje ekleyin ve *Mywebapi* olarak çağırın. Proje türü olarak **API** ' yi SEÇIN ve **https için yapılandırma** onay kutusunu temizleyin. Bu tasarımda, aynı Web uygulamasındaki kapsayıcılar arasında iletişim için değil, yalnızca istemciyle iletişim için SSL kullandık. Yalnızca `WebFrontEnd` https gerektirir ve örneklerdeki kod bu onay kutusunu temizlemiş olduğunu varsayar. genel olarak, Visual Studio tarafından kullanılan .net geliştirici sertifikaları, kapsayıcı istekleri için değil, yalnızca dış kapsayıcı istekleri için desteklenir.
 
 ::: moniker range="vs-2017"
-   ![Web API'si projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/docker-tutorial-mywebapi.png)
+   ![Web API projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/docker-tutorial-mywebapi.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-   ![Web API'si projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/vs-2019/create-webapi-project.png)
+   ![Web API projesi oluşturma ekran görüntüsü](./media/tutorial-multicontainer/vs-2019/create-webapi-project.png)
 ::: moniker-end
 
-## <a name="add-code-to-call-the-web-api"></a>Web API'sini çağıran kod ekleme
+## <a name="add-code-to-call-the-web-api"></a>Web API 'sini çağırmak için kod ekleme
 
-1. Projede `WebFrontEnd` *Index.cshtml.cs* dosyasını açın ve yöntemini `OnGet` aşağıdaki kodla değiştirin.
+1. `WebFrontEnd`Projede *Index. cshtml. cs* dosyasını açın ve `OnGet` yöntemi aşağıdaki kodla değiştirin.
 
    ```csharp
     public async Task OnGet()
@@ -97,11 +97,11 @@ Aynı çözüme bir proje ekleyin ve *myWebAPI olarak buna çağrıyın.* Proje 
    ```
    
     > [!NOTE]
-    > Gerçek dünya kodunda, her istekten sonra `HttpClient` atmama gerekir. En iyi yöntemler [için, bkz. Use HttpClientFactory to implementsilient HTTP requests](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
+    > Gerçek dünyada kodda, `HttpClient` her istekten sonra atılamaz. En iyi uygulamalar için bkz. [Esnek http isteklerini uygulamak Için HttpClientFactory kullanma](/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests).
 
-   Visual Studio 2019 veya sonraki bir sonraki bir yıl içinde .NET Core 3.1 için Web API şablonu weatherForecast API'si kullanır, bu nedenle bu satırı açıklamadan çıkararak ASP.NET 2.x için satırı açıklama satırına yazın.
+   Visual Studio 2019 veya üzeri sürümlerde .net Core 3,1 için Web apı şablonu bir azthertahmini apı kullanır. bu nedenle, bu satırın açıklamasını kaldırın ve ASP.NET 2. x için satırı açıklama olarak yapın.
 
-1. *Index.cshtml dosyasında,* dosyanın aşağıdaki koda benser şekilde benzlemesi `ViewData["Message"]` için görüntülemek için bir satır ekleyin:
+1. *Index. cshtml* dosyasında, `ViewData["Message"]` dosyanın aşağıdaki koda benzeymek üzere görüntülenecek bir satır ekleyin:
     
       ```cshtml
       @page
@@ -117,7 +117,7 @@ Aynı çözüme bir proje ekleyin ve *myWebAPI olarak buna çağrıyın.* Proje 
       </div>
       ```
 
-1. (ASP.NET 2.x) Şimdi Web API projesinde, *webfrontend'den* eklenen çağrı için API tarafından döndürülen iletiyi özelleştirmek için Değerler denetleyicisine kod ekleyin.
+1. (yalnızca ASP.NET 2. x) Şimdi Web API projesinde, *webön* ucunda eklediğiniz çağrı için API tarafından döndürülen iletiyi özelleştirmek üzere değerler denetleyicisine kod ekleyin.
     
       ```csharp
         // GET api/values/5
@@ -128,25 +128,25 @@ Aynı çözüme bir proje ekleyin ve *myWebAPI olarak buna çağrıyın.* Proje 
         }
       ```
 
-    .NET Core 3.1 ile buna ihtiyacınız yok çünkü zaten orada olan WeatherForecast API'sini kullanabilirsiniz. Ancak, <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> `Configure` *çağrısının Startup.cs'de* yönteminde açıklamalarını açıklama olarak almanız gerekir çünkü bu kod Web API'sini aramak için HTTPS değil HTTP kullanır.
+    .NET Core 3,1 ile, zaten orada olan dalgalı tahmin API 'sini kullanabilmeniz için buna ihtiyacınız yoktur. Ancak, <xref:Microsoft.AspNetCore.Builder.HttpsPolicyBuilderExtensions.UseHttpsRedirection*> `Configure` Bu kod Web API 'sini ÇAĞıRMAK için https değil http 'yi kullandığından, *Başlangıç. cs* içindeki yönteminde öğesine yapılan çağrıyı açıklamanız gerekir.
 
     ```csharp
                 //app.UseHttpsRedirection();
     ```
 
-1. Proje içinde `WebFrontEnd` Kapsayıcı **Orchestrator Desteğine >'yi seçin.** **Docker Destek Seçenekleri iletişim** kutusu görüntülenir.
+1. `WebFrontEnd`Projede **> kapsayıcı Orchestrator desteği ekle**' yi seçin. **Docker destek seçenekleri** iletişim kutusu görüntülenir.
 
-1. 'yi **Docker Compose.**
+1. **Docker Compose** seçin.
 
-1. Hedef işletim sisteminizi (örneğin, Linux) seçin.
+1. Hedef işletim sistemini (örneğin, Linux) seçin.
 
-   ![Hedef işletim sistemi seçme ekran görüntüsü](media/tutorial-multicontainer/docker-tutorial-docker-support-options.PNG)
+   ![Hedef işletim sistemini seçme ekran görüntüsü](media/tutorial-multicontainer/docker-tutorial-docker-support-options.PNG)
 
-   Visual Studio *çözümün docker-compose düğümünde bir docker-compose.yml* dosyası ve *bir .dockerignore* dosyası oluşturur ve bu proje başlangıç projesi olduğunu gösteren kalın yazı tipiyle gösterilir. 
+   Visual Studio çözümdeki **docker-compose** düğümünde bir *docker-compose. yıml* dosyası ve *. dockerıgnore* dosyası oluşturur ve bu proje, başlangıç projesi olduğunu gösteren kalýn yazı tipinde görünür.
 
-   ![docker-compose Çözüm Gezgini eklenmiş bir dosyanın ekran görüntüsü](media/tutorial-multicontainer/multicontainer-solution-explorer.png)
+   ![Docker-Compose projesi eklenen Çözüm Gezgini ekran görüntüsü](media/tutorial-multicontainer/multicontainer-solution-explorer.png)
 
-   *docker-compose.yml aşağıdaki* gibi görünür:
+   *Docker-Compose. yml* şu şekilde görünür:
 
    ```yaml
    version: '3.4'
@@ -159,16 +159,16 @@ Aynı çözüme bir proje ekleyin ve *myWebAPI olarak buna çağrıyın.* Proje 
           dockerfile: WebFrontEnd/Dockerfile
    ```
 
-   *.dockerignore* dosyası, Docker'ın kapsayıcıya dahil etmelerini istemeyebilirsiniz dosya türlerini ve uzantılarını içerir. Bu dosyalar genellikle geliştirme ortamı ve kaynak denetimiyle ilişkilendirilmektedir, geliştirmekte olan uygulamanın veya hizmetin bir parçası değildir.
+   *. Dockerıgnore* dosyası, Docker 'ın kapsayıcıya dahil etmesini istemediğiniz dosya türlerini ve uzantılarını içerir. Bu dosyalar genellikle geliştirme ortamı ve kaynak denetimiyle ilişkilendirilir, geliştirmekte olduğunuz uygulamanın veya hizmetin bir parçası değildir.
 
-   Çalıştırı **olan komutların** ayrıntıları için çıkış bölmesinin Kapsayıcı Araçları bölümüne bakın.  Çalışma zamanı kapsayıcılarını yapılandırmak ve oluşturmak için docker-compose komut satırı aracının kullan olduğunu görüyorsunuz.
+   Çalıştırılmakta olan komutların ayrıntıları için çıkış bölmesinin **kapsayıcı araçları** bölümüne bakın.  Docker-Compose, çalışma zamanı kapsayıcılarını yapılandırmak ve oluşturmak için kullanılan komut satırı aracını görebilirsiniz.
 
-1. Web API'si projesinde proje düğümüne tekrar sağ tıklayın ve Kapsayıcı Orchestrator **Desteği**  >  **Ekle'yi seçin.** Bir **Docker Compose** ve ardından aynı hedef işletim sistemi seçin.  
+1. Web API projesinde, proje düğümüne sağ tıklayın ve   >  **kapsayıcı Orchestrator desteği** Ekle ' yi seçin. **Docker Compose** öğesini seçin ve ardından aynı hedef işletim sistemini seçin.  
 
     > [!NOTE]
-    > Bu adımda, Visual Studio dockerfile oluşturma teklifi sunmayacak. Docker desteği olan bir projede bunu yaparsanız, mevcut Dockerfile dosyasının üzerine yazmak isteyip istemediğiniz sorabilirsiniz. Dockerfile dosyanız üzerinde tutmak istediğiniz değişiklikler yaptısanız hayır'ı seçin.
+    > bu adımda Visual Studio bir dockerfile oluşturmak için teklif edilecek. Bunu zaten Docker desteği olan bir projede yaparsanız, var olan Dockerfile dosyasının üzerine yazmak isteyip istemediğiniz sorulur. Sürdürmek istediğiniz Dockerfile dosyanızda değişiklik yaptıysanız Hayır ' ı seçin.
 
-    Visual Studio docker compose YML dosyanız üzerinde bazı değişiklikler yapar. Artık her iki hizmet de dahil edildi.
+    Visual Studio docker compose yılml dosyanızda bazı değişiklikler yapar. Artık her iki hizmet de dahildir.
 
     ```yaml
     version: '3.4'
@@ -187,25 +187,25 @@ Aynı çözüme bir proje ekleyin ve *myWebAPI olarak buna çağrıyın.* Proje 
           dockerfile: MyWebAPI/Dockerfile
     ```
 
-1. Siteyi şimdi yerel olarak (F5 veya Ctrl+F5) çalıştırarak beklendiği gibi çalıştığını doğrulayın. Her şey .NET Core 2.x sürümüyle doğru şekilde yapılandırıldıysa "Hello from webfrontend and webapi (1 değeriyle)" (Hello from webfrontend and webapi)" (Hello from webfrontend and webapi (1 değeriyle) iletisiyle birlikte gelirsiniz.  .NET Core 3 ile hava durumu tahmin verilerini görüyorsunuz.
+1. Siteyi, beklendiği gibi çalıştığını doğrulamak için şimdi yerel olarak çalıştırın (F5 veya CTRL + F5). Her şey .NET Core 2. x sürümü ile doğru şekilde yapılandırıldıysa, "Web ön ucu ve WebApi 'den (değer 1 ile) Merhaba" iletisini görürsünüz.  .NET Core 3 ile hava durumu tahmin verilerini görürsünüz.
 
-   Kapsayıcı düzenlemesi eklerken kullanmakta olduğu ilk proje, çalıştırma veya hata ayıklama adımlarını başlatacak şekilde ayarlanır. Başlatma eylemlerini docker-compose **Project** Özellikler'de yapılandırabilirsiniz.  docker-compose proje düğümünde bağlam menüsünü açmak için sağ tıklayın ve özellikler'i **seçin** veya Alt+Enter tuşlarına basın.  Aşağıdaki ekran görüntüsü, burada kullanılan çözüm için istediğiniz özellikleri gösterir.  Örneğin, Hizmet URL'si özelliğini özelleştirerek yüklenen **sayfayı değiştirebilirsiniz.**
+   Kapsayıcı düzenlemesi eklediğinizde kullandığınız ilk proje, çalıştırdığınızda veya hata ayıkladığınızda başlatılacak şekilde ayarlanır. başlatma eylemini docker-compose projesi için **Project özelliklerinde** yapılandırabilirsiniz.  Docker-Compose projesi düğümünde bağlam menüsünü açmak için sağ tıklayın, ardından **Özellikler**' i seçin veya alt + ENTER ' u kullanın.  Aşağıdaki ekran görüntüsünde, burada kullanılan çözüm için istediğiniz özellikler gösterilmektedir.  Örneğin, **hizmet URL 'si** özelliğini özelleştirerek yüklenen sayfayı değiştirebilirsiniz.
 
-   ![docker-compose proje özelliklerinin ekran görüntüsü](media/tutorial-multicontainer/launch-action.png)
+   ![Docker-Compose proje özelliklerinin ekran görüntüsü](media/tutorial-multicontainer/launch-action.png)
 
-   İlk kez (.NET Core 2.x sürümü) şu şekildedir:
+   Başlatıldığında gördüğünüz Özellikler (.NET Core 2. x sürümü):
 
-   ![Web uygulamasını çalıştırma ekran görüntüsü](media/tutorial-multicontainer/webfrontend.png)
+   ![Çalışan Web uygulamasının ekran görüntüsü](media/tutorial-multicontainer/webfrontend.png)
 
-   .NET 3.1 için web uygulaması, hava durumu verilerini JSON biçiminde gösterir.
+   .NET 3,1 için Web uygulaması, hava durumu verilerini JSON biçiminde gösterir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kapsayıcılarınızı Azure'a dağıtma [seçeneklerine bakın.](/azure/containers)
+[Kapsayıcılarınızı Azure 'a](/azure/containers)dağıtmaya yönelik seçeneklere bakın.
 
-Hata ayıklama oturumu sırasında hangi hizmetlerin başlatıldığında daha fazla denetim için, hata ayıklama sırasında Docker Compose başlatma profillerini kullanmayı öğrenin. Bkz. [Docker Compose için başlatma profillerini yönetme](launch-profiles.md)
+Hata ayıklama oturumu sırasında hangi hizmetlerin başlatıldığını daha fazla denetim için, hata ayıklama sırasında hangi hizmetlerin çalıştırılacağını yapılandırmak üzere Docker Compose başlatma profillerini nasıl kullanacağınızı öğrenin. Bkz. [Docker Compose için başlatma profillerini yönetme](launch-profiles.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
   
 [Docker Compose](https://docs.docker.com/compose/)  
-[Kapsayıcı Araçları](./index.yml)
+[Kapsayıcı araçları](./index.yml)

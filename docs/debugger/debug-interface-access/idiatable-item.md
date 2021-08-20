@@ -1,6 +1,6 @@
 ---
-description: Tablodaki belirtilen girdiye bir başvuru alır.
-title: 'IDiaTable:: Item | Microsoft Docs'
+description: Tablodaki belirtilen girişe bir başvuru alır.
+title: IDiaTable::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: eae11b26-4807-400c-be25-e85bbc0c6b20
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9693a1d16666dcb23f97d918807f9c2fea31c186
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 384aab56a17faa4ada1ff99fc43f13032d18db3d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161678"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122121204"
 ---
 # <a name="idiatableitem"></a>IDiaTable::Item
-Tablodaki belirtilen girdiye bir başvuru alır.
+Tablodaki belirtilen girişe bir başvuru alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,19 +36,19 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametreler
  `index`
 
-'ndaki 0 ile-1 aralığındaki tablo girişinin dizini `count` , burada `count` [IDiaTable:: get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)yöntemi tarafından döndürülür.
+[in] 0 ile -1 aralığındaki tablo girişinin dizini; burada `count` `count` [IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)yöntemi tarafından döndürülür.
 
  `element`
 
-dışı `IUnknown` Belirtilen tablo girdisini temsil eden bir nesne döndürür.
+[out] Belirtilen tablo `IUnknown` girişini temsil eden bir nesne döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir tablo, nesne koleksiyonunu temsil eder. Bu nesnelere bağlı olarak, öğe parametresi uygun arabirime dönüşebilir. Örneğin, bir tablo [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) nesneleri içeriyorsa, öğe parametresi `IDiaSegment` arabirime dönüşebilir.
+ Tablo, bir nesne koleksiyonunu temsil eder. Bu nesnelere bağlı olarak, öğe parametresi uygun arabirime atabilirsiniz. Örneğin, bir tablo [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) nesneleri içeriyorsa, öğe parametresi arabirime `IDiaSegment` atabilirsiniz.
 
- `QueryInterface`Uygun Numaralandırıcı arabirimi Için [IDiaTable](../../debugger/debug-interface-access/idiatable.md) arabirimindeki yöntemi çağırmak için daha yaygın bir yaklaşımdır ve tablo içeriğine erişmek için Numaralandırıcının özel yöntemlerini kullanın. Bir örnek için bkz. [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimi.
+ Uygun numaralayıcı arabirimi için IDiaTable arabiriminde yöntemini çağırma ve tablo içeriğine erişmek için numaralayıcının belirli yöntemlerini kullanma daha yaygın bir `QueryInterface` yaklaşımdır. [](../../debugger/debug-interface-access/idiatable.md) Örnek için [bkz. IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

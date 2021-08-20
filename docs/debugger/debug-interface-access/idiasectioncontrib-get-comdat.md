@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bf353b244fef82fc519ce264e259026e308275a7e39d1da374406b8268b25115
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: abf3d900714d94dc051cca2b601cf041820de865
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344871"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161584"
 ---
 # <a name="idiasectioncontribget_comdat"></a>IDiaSectionContrib::get_comdat
 Bölümünün bir COMDAT kaydı olup olmadığını belirten bir bayrak alınır.
@@ -41,7 +41,7 @@ HRESULT get_comdat (
  Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- COMDAT kaydı, paketlenmiş işlevlerin bağlantıcıya görünür hale geldiği Ortak Nesne Dosyası Biçimi (COFF) kaydıdır.
+ COMDAT kaydı, paketlenmiş işlevlerin bağlantıcıya görünür hale geldiği Ortak Nesne Dosya Biçimi (COFF) kaydıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

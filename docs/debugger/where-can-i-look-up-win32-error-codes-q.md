@@ -1,6 +1,6 @@
 ---
 title: Win32 Hata Kodlarına Nereden Bakabilirim? | Microsoft Belgeleri
-description: Bir Win32 hata kodu aramak için, bunu Watch veya QuickWatch 'a girin. Örneğin, "0x80000004, HR". Hata kodu tanımları ıNCLUDE\WINERROR.exe şeklindedir.
+description: Win32 hata kodunu aramak için Watch veya QuickWatch'a girin. Örneğin, "0x80000004,hr". Hata kodu tanımları INCLUDE\WINERROR.H konumundadır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -18,22 +18,23 @@ ms.assetid: 8fb4ff42-b8eb-4152-b49e-b802d194b05e
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c4eb61a6eda5848277a1da95f9282b396b413ad5
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 570b36b67fffbc65f5622601260b30dfb80a95bd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99883837"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112236"
 ---
 # <a name="where-can-i-look-up-win32-error-codes"></a>Win32 Hata Kodlarına Nereden Bakabilirim?
-WINERROR. Varsayılan sistem yüklemenizin IÇERME dizinindeki H, Win32 API işlevleri için hata kodu tanımlarını içerir.
+Wınerror. Varsayılan sistem yüklemenizin INCLUDE dizininde H, sanal ağ işlevleri için hata Win32 API içerir.
 
- **İzleme** penceresinde veya **QuickWatch** iletişim kutusunda kodu yazarak bir hata kodu arayabilirsiniz. Örneğin:
+ Kodu İzleme penceresine veya QuickWatch iletişim kutusuna **yazarak** hata **koduna bakabilirsiniz.** Örnek:
 
 `0x80000004,hr`
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)
+- [Yerel Kodda Hata Ayıklama hakkında SSS](../debugger/debugging-native-code-faqs.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

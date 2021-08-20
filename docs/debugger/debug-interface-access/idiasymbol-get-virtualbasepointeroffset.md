@@ -1,6 +1,6 @@
 ---
-description: Sanal Taban işaretçisinin konumunu alır.
-title: 'IDiaSymbol:: get_virtualBasePointerOffset | Microsoft Docs'
+description: Sanal temel işaretçinin uzaklığını alan.
+title: IDiaSymbol::get_virtualBasePointerOffset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c1fc4c90b232575bdb37b4e06db2b173591363ef38d9d3bfd53a88e66ced484a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9f29cf0c069c5a2fd96ee2aae796a8e6943c2990
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379668"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113222"
 ---
 # <a name="idiasymbolget_virtualbasepointeroffset"></a>IDiaSymbol::get_virtualBasePointerOffset
-Sanal Taban işaretçisinin konumunu alır.
+Sanal temel işaretçinin uzaklığını alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_virtualBasePointerOffset (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Sanal Taban işaretçisinin sapmasını döndürür.
+[out] Sanal temel işaretçinin uzaklığını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -11,20 +11,20 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 345edfd27db70e9581951428b0a76067256e0afe5021e91e8cd336d278c1c6f4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ebfcd80440ca7cf9ea318c117681e5b2deef9f01
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121240919"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122114010"
 ---
 # <a name="unported-rules"></a>Kaldırılmış kurallar
 
 ## <a name="overview"></a>Genel Bakış
 
-Roslyn Çözümleyicileri olarak uygulanmayan FxCop eski analiz kuralları kümesi aşağıdaki iki demetden oluşur:
-- Henüz hiç eklenmemiş [ancak hala bir](fxcop-unported-rules-may-get-ported.md)yandan
-- Kullanım dışı [olan ve olmayan](fxcop-unported-deprecated-rules.md)kurallar.
+Roslyn çözümleyicileri olarak uygulanmamış fxCop eski analiz kuralları kümesi aşağıdaki iki demeti içerir:
+- Henüz bağlantı noktası henüz belirlenmedi, ancak yine [de taşınabilir.](fxcop-unported-rules-may-get-ported.md)
+- Kullanım dışı olan ve [bağlantı noktası ile bağlantılanmayacak kurallar.](fxcop-unported-deprecated-rules.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

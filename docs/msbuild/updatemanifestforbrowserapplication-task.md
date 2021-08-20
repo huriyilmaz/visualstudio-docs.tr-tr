@@ -1,6 +1,6 @@
 ---
-title: UpdateManifestForBrowserApplication görevi | Microsoft Docs
-description: MSBuild, uygulama bildirimine hostınbrowser öğesini eklemek için updatemanifestforbrowserapplication görevinin nasıl çalıştığını öğrenin.
+title: UpdateManifestForBrowserApplication Görev | Microsoft Docs
+description: HostInBrowser MSBuild uygulama bildirimine eklemek için UpdateManifestForBrowserApplication görevini nasıl çalıştırabilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -21,29 +21,29 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 50c71a2d33449324543baa4d98f1edbb8b67d26e0e901210322acbb9290c4f5e
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2bedda1d9d923a7c01cde21ae4404038e956f9e5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121369533"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122142591"
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication görevi
 
-<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> **\<hostInBrowser />** Bir XAML tarayıcı UYGULAMASı (XBAP) projesi yapılandırıldığında, görev, uygulama bildirimine (*\<projectname>.exe. manifest*) eklemek için çalıştırılır.
+Görev, <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> bir XAML Tarayıcı Uygulaması (XBAP) projesi yerleşik olduğunda öğesini uygulama bildirimine **\<hostInBrowser />** (*\<projectname>.exe.manifest)* eklemek için çalışır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`ApplicationManifest`|Gerekli **ıtaskitem []** parametresi.<br /><br /> Öğesini eklemek istediğiniz uygulama bildirim dosyasının yolunu ve adını belirtir `<hostInBrowser />` .|
-|`HostInBrowser`|Gerekli **Boolean** parametresi.<br /><br /> Uygulama bildiriminin öğesini dahil etmek için değiştirip değiştirmeyeceğinizi belirtir **\<hostInBrowser />** . **True** ise, öğesine yeni bir **\<hostInBrowser />** öğesi dahil edilir **\<entryPoint />** . Öğe içerme birikimlidir: bir **\<hostInBrowser />** öğe zaten varsa, kaldırılmaz veya üzerine yazılmaz. Bunun yerine, ek bir **\<hostInBrowser />** öğe oluşturulur. **False** ise, uygulama bildirimi değiştirilmez.|
+|`ApplicationManifest`|Gerekli **ITaskItem[]** parametresi.<br /><br /> Öğesini eklemek istediğiniz uygulama bildirim dosyasının yolunu ve adını `<hostInBrowser />` belirtir.|
+|`HostInBrowser`|Gerekli **Boole parametresi.**<br /><br /> Uygulama bildiriminin öğesini içerecek şekilde değiştirip değiştirilene olmadığını **\<hostInBrowser />** belirtir. true **ise,** öğesine **\<hostInBrowser />** yeni bir öğe dahil **\<entryPoint />** edilir. Öğe ekleme kümülatiftir: **\<hostInBrowser />** Bir öğe zaten varsa, öğenin kaldırılması veya üzerine yazılmaz. Bunun yerine, ek **\<hostInBrowser />** bir öğe oluşturulur. False **ise,** uygulama bildirimi değiştirilmez.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- xbap 'ler ClickOnce dağıtım kullanılarak çalıştırılır, bu nedenle destekleyici dağıtım ve uygulama bildirimleri ile yayımlanmaları gerekir. MSBuild, bir uygulama bildirimi oluşturmak için [generateapplicationmanifest](generateapplicationmanifest-task.md) görevini kullanır.
+ XBAP'ler, ClickOnce dağıtım kullanılarak çalıştırıldık, bu nedenle desteklenen dağıtım ve uygulama bildirimleriyle yayımlanırlar. MSBuild bir uygulama [bildirimi oluşturmak için GenerateApplicationManifest](generateapplicationmanifest-task.md) görevini kullanır.
 
- Ardından, bir uygulamayı bir tarayıcıdan barındırılacak şekilde yapılandırmak için, **\<hostInBrowser />** Aşağıdaki örnekte gösterildiği gibi, uygulama bildirimine ek bir öğe eklenmelidir:
+ Ardından, bir uygulamayı tarayıcıdan barındırılan bir uygulamayı yapılandırmak için, aşağıdaki örnekte gösterildiği gibi uygulama bildirimine **\<hostInBrowser />** ek bir öğe eklenmiştir:
 
 ```xml
 <!--MyXBAPApplication.exe.manifest-->
@@ -59,11 +59,11 @@ ms.locfileid: "121369533"
 />
 ```
 
- <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication>Öğe eklemek için BIR XBAP projesi yapılandırıldığında görev çalıştırılır `<hostInBrowser />` .
+ Görevi, <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> öğesi eklemek için bir XBAP projesi yerleşik olduğunda `<hostInBrowser />` çalıştır.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `<hostInBrowser />` öğesinin bir uygulama bildirim dosyasına dahil edildiğini nasıl sağlamak gerektiğini gösterir.
+ Aşağıdaki örnekte, öğesinin bir uygulama bildirim `<hostInBrowser />` dosyasına dahil olduğundan nasıl emin olunarak ilgili bilgiler ve bilgiler yer almaktadır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

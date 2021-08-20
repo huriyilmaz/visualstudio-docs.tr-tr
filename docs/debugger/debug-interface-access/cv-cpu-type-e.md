@@ -15,18 +15,18 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 497d3c29ad49fe3995245f2bd19e1cf2860dfb830682f56231e5a09b8b24581d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7cf2450701ed3543b7bd210a268875ef7e4b04b1
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345743"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105611"
 ---
 # <a name="cv_cpu_type_e"></a>CV_CPU_TYPE_e
 Hedef işlemciyi belirtir.
 
 > [!NOTE]
-> İşlemci, önek sonrasındaki numaralama öğesinde `CV_CFL_*` tanımlanır.
+> İşlemci, önekten sonra numaralama öğesinde `CV_CFL_*` tanımlanır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -99,7 +99,7 @@ typedef enum CV_CPU_TYPE_e {
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Bu numaralamada yer alan değerler, [IDiaSymbol::get_platform yöntemine yapılan bir çağrıyla](../../debugger/debug-interface-access/idiasymbol-get-platform.md) döndürülür.
+Bu numaralamada yer alan değerler [IDiaSymbol::get_platform yöntemine yapılan bir çağrıyla](../../debugger/debug-interface-access/idiasymbol-get-platform.md) döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 Üst bilgi: cvconst.h

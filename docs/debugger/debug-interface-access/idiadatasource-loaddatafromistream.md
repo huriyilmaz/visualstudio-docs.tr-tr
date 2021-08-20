@@ -1,6 +1,6 @@
 ---
-description: Bellek içi veri akışı aracılığıyla erişilen bir program veritabanı (. pdb) dosyasında depolanan hata ayıklama verilerini hazırlar.
-title: 'IDiaDataSource:: Loaddatafromistread | Microsoft Docs'
+description: Bellek içinde veri akışı aracılığıyla erişilen bir program veritabanı (.pdb) dosyasında depolanan hata ayıklama verilerini hazırlar.
+title: IDiaDataSource::loadDataFromIStream | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 8fe33eea-1457-4b8c-ae19-f1ede5578483
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f68c3e11b07ef4be2824b4795291dfbc793c945
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 005c423df13f2d1b906a229665c79d6ee52627a7
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102158269"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113763"
 ---
 # <a name="idiadatasourceloaddatafromistream"></a>IDiaDataSource::loadDataFromIStream
-Bellek içi veri akışı aracılığıyla erişilen bir program veritabanı (. pdb) dosyasında depolanan hata ayıklama verilerini hazırlar.
+Bellek içinde veri akışı aracılığıyla erişilen bir program veritabanı (.pdb) dosyasında depolanan hata ayıklama verilerini hazırlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,25 +35,25 @@ HRESULT loadDataFromIStream (
 #### <a name="parameters"></a>Parametreler
  pIStream
 
-'ndaki <xref:IStream> Kullanılacak veri akışını temsil eden nesne.
+[in] Kullanmak <xref:IStream> üzere veri akışını temsil eden nesne.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri yer alır.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|E_PDB_FORMAT|Eski biçimdeki bir dosyaya erişme girişiminde bulunuldu.|
-|E_INVALIDARG|Geçersiz parametre.|
-|E_UNEXPECTED|Veri kaynağı zaten hazırlandı.|
+|E_PDB_FORMAT|Eski bir biçime sahip bir dosyaya erişmeye çalışıldı.|
+|E_ınvalıdarg|Geçersiz parametre.|
+|E_unexpected|Veri kaynağı zaten hazırlanmıştır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, bir yürütülebilir dosya için hata ayıklama verilerinin bir nesne aracılığıyla bellekten elde etmesine olanak tanır <xref:IStream> .
+ Bu yöntem, yürütülebilir dosyanın hata ayıklama verilerini bir nesnesi aracılığıyla bellekten elde <xref:IStream> edek sağlar.
 
- Bir. pdb dosyasını doğrulama olmadan yüklemek için [IDiaDataSource:: loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) metodunu kullanın.
+ Doğrulama olmadan bir .pdb dosyası yüklemek için [IDiaDataSource::loadDataFromPdb yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) kullanın.
 
- . Pdb dosyasını belirli ölçütlere karşı doğrulamak için [IDiaDataSource:: loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) metodunu kullanın.
+ .pdb dosyasını belirli ölçütlere göre doğrulamak için [IDiaDataSource::loadAndValidateDataFromPdb yöntemini](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) kullanın.
 
- Veri yükleme işlemine (bir geri çağırma mekanizması aracılığıyla) erişim kazanmak için [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodunu kullanın.
+ Veri yükleme sürecine erişim elde etmek için (bir geri çağırma mekanizması aracılığıyla), [IDiaDataSource::loadDataForExe yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md)

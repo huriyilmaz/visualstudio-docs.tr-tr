@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Geçerli Seçime Erişme ve Seçimi Kısıtlama'
-description: Etki alanına özgü diliniz için bir komut veya hareket işleyicisi yazarak kullanıcının sağ tıklımlı olduğu öğeyi nasıl belirleyebilirsiniz?
+description: Etki alanına özgü diliniz için bir komut veya hareket işleyicisi yazarak kullanıcının hangi öğeye sağ tık yaptığını nasıl belirleyebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -9,14 +9,15 @@ helpviewer_keywords:
 author: mgoertz-msft
 ms.author: mgoertz
 manager: jmartens
+ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
-ms.openlocfilehash: 28d0f99743535965b3cf203d461fac5d0193607c
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 692e730135bd1f62ef98c83669d133da552d6b3e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386611"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150566"
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>Nasıl yapılır: Geçerli Seçime Erişme ve Seçimi Kısıtlama
 
@@ -34,7 +35,7 @@ Komuta bağlı olarak, komut işleyicisi model tasarımcısında, model gezginin
 
     |Üye|Açıklama|
     |-|-|
-    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> yöntemi|Model `true` tasarımcısında seçilen öğelerden herhangi biri bir bölme şekliyse, aksi takdirde `false` döndürür.|
+    |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsAnyDocumentSelectionCompartment%2A> yöntemi|Model tasarımcısında seçilen öğelerden herhangi biri bölme şekliyse , değilse `true` `false` döndürür.|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsDiagramSelected%2A> yöntemi|Diyagram `true` model tasarımcısında seçiliyse döndürür; aksi takdirde `false` döndürür.|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleDocumentSelection%2A> yöntemi|Model `true` tasarımcısında tam olarak bir öğe seçilirse döndürür; aksi takdirde `false` döndürür.|
     |<xref:Microsoft.VisualStudio.Modeling.Shell.CommandSetLibrary.IsSingleSelection%2A> yöntemi|Etkin `true` pencerede tam olarak bir öğe seçilirse döndürür; aksi takdirde `false` döndürür.|
@@ -91,7 +92,7 @@ Arabirimi, <xref:Microsoft.VisualStudio.Modeling.Shell.IMonitorSelectionService>
 
 ## <a name="constrain-the-selection"></a>Seçimi Kısıtla
 
-Seçim kuralları ekleyerek, kullanıcı modeldeki bir öğeyi seçerken hangi öğelerin seçileceklerini kontrol etmek için kullanılabilirsiniz. Örneğin, kullanıcının bir dizi öğeye tek bir birim olarak davranmasına izin vermek için bir seçim kuralı kullanabilirsiniz.
+Seçim kuralları ekleyerek, kullanıcı modeldeki bir öğeyi seçerken hangi öğelerin seçileceklerini kontrol etmek için kullanılabilirsiniz. Örneğin, kullanıcının birkaç öğeye tek bir birim olarak davranmasına izin vermek için bir seçim kuralı kullanabilirsiniz.
 
 ### <a name="to-create-a-selection-rule"></a>Seçim kuralı oluşturmak için
 
@@ -111,7 +112,7 @@ Seçim kuralları ekleyerek, kullanıcı modeldeki bir öğeyi seçerken hangi �
 
 ### <a name="example"></a>Örnek
 
-Aşağıdaki kod dosyası, ilk seçilen etki alanı şekillerinin tüm örneklerini içerecek şekilde seçimi genişleten bir seçim kuralı oluşturur.
+Aşağıdaki kod dosyası, seçimi başlangıçta seçilen etki alanı şekillerinin tüm örneklerini içerecek şekilde genişleten bir seçim kuralı oluşturur.
 
 ```csharp
 using System;

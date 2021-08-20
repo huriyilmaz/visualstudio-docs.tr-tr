@@ -11,14 +11,15 @@ ms.assetid: 2f18c64c-2cf0-43fc-a447-21e82702ca2a
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a283a40ae39c53a4a96f80adb633b92ba68f637
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 9b5ef4523aa2b8acd098f8a9e46d5aa0009f9b37
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102157471"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139198"
 ---
 # <a name="idialoadcallback"></a>IDiaLoadCallback
 DIA sembol konumlandırma yordamının geri çağırmaları alır, böylece bir kullanıcı arabiriminin konum denemesinin ilerlemesini raporlemelerini sağlar.
@@ -34,7 +35,7 @@ IDiaLoadCallback : IUnknown
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaLoadCallback::NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md)|. Exe dosyasında bir hata ayıklama dizini bulunduğunda çağırılır.|
+|[IDiaLoadCallback::NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md)|.exe dosyasında bir hata ayıklama dizini bulunduğunda çağırılır.|
 |[IDiaLoadCallback::NotifyOpenDBG](../../debugger/debug-interface-access/idialoadcallback-notifyopendbg.md)|Bir aday. dbg dosyası açıldığında çağırılır.|
 |[IDiaLoadCallback::NotifyOpenPDB](../../debugger/debug-interface-access/idialoadcallback-notifyopenpdb.md)|Bir aday. pdb dosyası açıldığında çağırılır.|
 |[IDiaLoadCallback::RestrictRegistryAccess](../../debugger/debug-interface-access/idialoadcallback-restrictregistryaccess.md)|Simge arama yollarını bulmak için kayıt defteri sorgularının kullanılabileceğini belirler.|

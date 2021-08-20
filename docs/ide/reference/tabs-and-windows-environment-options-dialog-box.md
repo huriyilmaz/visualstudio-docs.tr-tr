@@ -1,6 +1,6 @@
 ---
 title: Sekmeler ve Pencereler, Ortam, Seçenekler İletişim Kutusu
-description: Sekmeli pencerelerin Düzenleyici bölmesinde nasıl davranacağını ve araç pencerelerinin nasıl davrandığını belirlemek için ortam bölümündeki sekmeleri ve Windows sayfasını nasıl kullanacağınızı öğrenin.
+description: sekmeli pencerelerin düzenleyici bölmesinde nasıl davranacağını ve araç pencerelerinin nasıl davrandığını belirlemek için ortam bölümündeki sekmeleri ve Windows sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,15 +10,16 @@ ms.assetid: f5167564-0a4e-4f98-9580-fc6cb7d9dd8d
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
+ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: d69bfae35d610928a95f2db1b071bb2cde37ea56
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 19960b5bb8f429e974fdd0571efa64e4ddd07f5a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99838559"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150917"
 ---
-# <a name="options-dialog-box-environment--tabs-and-windows"></a>Seçenekler iletişim kutusu: ortam \> sekmeleri ve pencereler
+# <a name="options-dialog-box-environment--tabs-and-windows"></a>Seçenekler iletişim kutusu: ortam \> sekmeleri ve Windows
 
-Sekmeli pencerelerin Düzenleyici bölmesinde nasıl davrandığına ve araç pencerelerinin nasıl davrandığına ilişkin seçenekleri ayarlamak için bu sayfayı kullanın. Daha fazla bilgi için bkz. [Visual Studio 'da pencere düzenlerini özelleştirme](../../ide/customizing-window-layouts-in-visual-studio.md)
+Sekmeli pencerelerin Düzenleyici bölmesinde nasıl davrandığına ve araç pencerelerinin nasıl davrandığına ilişkin seçenekleri ayarlamak için bu sayfayı kullanın. Daha fazla bilgi için bkz. [Visual Studio pencere düzenlerini özelleştirme](../../ide/customizing-window-layouts-in-visual-studio.md)

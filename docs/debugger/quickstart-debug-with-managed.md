@@ -10,43 +10,44 @@ ms.assetid: f4cea2e1-08dc-47ac-aba2-3b8c338e607f
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: f790d30dc97d5549737c3c1cd003086477ce984f
-ms.sourcegitcommit: 5654b7a57a9af111a6f29239212d76086bc745c9
+ms.openlocfilehash: b6b1bf99c7961c2ca8a9d162e2de173a9dd0a41c
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101683010"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122112587"
 ---
-# <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>Hızlı başlangıç: Visual Studio hata ayıklayıcısını kullanarak C# veya Visual Basic hatalarını ayıklama
+# <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>hızlı başlangıç: Visual Studio hata ayıklayıcıyı kullanarak C# veya Visual Basic hatalarını ayıklama
 
-Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardımcı olmak için birçok güçlü özellik sunar. Bu konu, temel özelliklerden bazılarını öğrenmenin hızlı bir yolunu sağlar.
+Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardımcı olmak için birçok güçlü özellik sağlar. Bu konu, temel özelliklerden bazılarını öğrenmenin hızlı bir yolunu sağlar.
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
-1. Visual Studio 'Yu açın ve yeni bir proje oluşturun.
+1. Visual Studio açın ve yeni bir proje oluşturun.
 
     ::: moniker range=">=vs-2019"
     Başlangıç penceresi açık değilse **Dosya**  >  **Başlangıç penceresi**' ni seçin. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-    **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. Ardından, dil listesinden **C#** öğesini seçin ve ardından platform listesinden **Windows** ' u seçin.
+    **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. ardından, dil listesinden **C#** öğesini seçin ve ardından Platform listesinden **Windows** öğesini seçin.
 
     Dil ve platform filtrelerini uyguladıktan sonra .NET Core **konsol uygulaması** şablonunu seçin ve ardından **İleri**' yi seçin.
 
     Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
 
-    .NET Core için **konsol uygulaması** proje şablonunu görmüyorsanız, **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açan araçlar ' a gidin. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    .net Core için **konsol uygulaması** proje şablonunu görmüyorsanız, **araçlar**  >  **ve özellikler al.**.. ' a giderek Visual Studio Yükleyicisi açan araçlar ' a gidin. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında **.NET Core**' u seçin ve ardından Ortadaki bölmede **konsol uygulaması (.NET Core)** seçeneğini belirleyin. Ardından, **Mydbgapp** gibi bir ad yazın ve **Tamam**' a tıklayın.
+    üstteki menü çubuğundan **dosya**  >  **yeni**  >  **Project** öğesini seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında **.NET Core**' u seçin ve ardından Ortadaki bölmede **konsol uygulaması (.NET Core)** seçeneğini belirleyin. Ardından, **Mydbgapp** gibi bir ad yazın ve **Tamam**' a tıklayın.
 
-    **Konsol uygulaması (.NET Core)** proje şablonunu görmüyorsanız **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açan araçlar ' a gidin. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    **konsol uygulaması (.net Core)** proje şablonunu görmüyorsanız **araçlar**  >  **ve özellikler al.**.. ' a giderek Visual Studio Yükleyicisi açan araçlar ' a gidin. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
     ::: moniker-end
 
     Visual Studio projeyi oluşturur.
 
-1. *Program.cs* veya *Module1. vb* dosyasında aşağıdaki kodu değiştirin
+1. *Program. cs* veya *Module1. vb* dosyasında aşağıdaki kodu değiştirin
 
     ```csharp
     class Program
@@ -132,11 +133,11 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
     ```
 
     > [!NOTE]
-    > Visual Basic, başlangıç nesnesinin `Sub Main` (**Özellikler > uygulama > başlangıç nesnesi**) olarak ayarlandığından emin olun.
+    > Visual Basic, başlangıç nesnesinin `Sub Main` (**özellikler > uygulama > başlangıç nesnesi**) olarak ayarlandığından emin olun.
 
 ## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
 
-*Kesme noktası* , Visual Studio 'nun çalışan kodunuzu askıya alması gerektiğini belirten bir işaretleyicidir, böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz. Hata ayıklamada en temel özelliktir.
+*kesme noktası* , değişkenlerin değerlerini veya bellek davranışını ya da kodun bir dalının çalıştırılıp çalıştırılmadığını görmek için Visual Studio çalışan kodunuzun askıya alınması gerektiğini belirten bir işaretleyicidir. Hata ayıklamada en temel özelliktir.
 
 1. Kesme noktasını ayarlamak için, işlev çağrısının solundaki cilt payın içine tıklayın `doWork` (veya kod satırını seçip **F9** tuşuna basın).
 
@@ -153,7 +154,7 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
 
 ## <a name="navigate-code"></a>Koda git
 
-Hata ayıklayıcının devam etmesini bildirmek için farklı komutlar vardır. Visual Studio 2017 ' den başlayarak kullanılabilecek yararlı bir kod Gezinti komutu gösteririz.
+Hata ayıklayıcının devam etmesini bildirmek için farklı komutlar vardır. Visual Studio 2017 ' den başlayarak kullanılabilecek yararlı bir kod gezinti komutu gösteririz.
 
 Kesme noktasında duraklalarken, tıklama `c1.AddLast(20)` düğmesine tıklayarak ve ardından tıklama düğmesine tıklayarak  deyimin üzerine gelin ve ![](../debugger/media/dbg-tour-run-to-click.png "RunToClick") sonra da **Çalıştır** düğmesine basın.
 

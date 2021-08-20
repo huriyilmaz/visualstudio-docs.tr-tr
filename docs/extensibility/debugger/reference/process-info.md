@@ -11,17 +11,18 @@ ms.assetid: 260c33cc-a05e-4645-84b6-536d0b3b0537
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b6fe223d67b876dca1604b2617a33a888ec8180c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e2fc29833c8d3f6b64e5bbc683ad6f5fc82231ef
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079650"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118105"
 ---
 # <a name="process_info"></a>PROCESS_INFO
 Bir işlem hakkındaki bilgileri içerir.

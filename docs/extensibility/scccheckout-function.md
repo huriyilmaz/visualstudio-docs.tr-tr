@@ -11,14 +11,15 @@ ms.assetid: 06e9ecd7-fc09-40c1-9dd1-2b56c622c80b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 72d36ccaf5c6dcddb6730f52b0ce1c3074c605a7
-ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
+ms.openlocfilehash: 6168b2683f0201be2a4b140428b10fa9946bccf3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112904727"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122144515"
 ---
 # <a name="scccheckout-function"></a>SccCheckout işlevi
 Tam nitelikli dosya adlarının listesi verildiğinde, bu işlev bunları yerel sürücüye iade eder. Yorum, kullanıma alınan tüm dosyalar için geçerlidir. Açıklama bağımsız değişkeni bir dize olabilir `null` .

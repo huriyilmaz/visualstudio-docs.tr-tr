@@ -16,12 +16,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
-ms.openlocfilehash: 90f2ed785c0edd90ae7ad6fc9614d134f6b557f2f7af24a9e9901de88c676507
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c12affe5d2979aefbc8776264fade321e4950818
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121227823"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122140069"
 ---
 # <a name="configure-ports-for-test-controllers-and-test-agents"></a>Test denetleyicileri ve test aracıları için bağlantı noktalarını yapılandırma
 

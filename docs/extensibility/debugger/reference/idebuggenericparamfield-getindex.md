@@ -1,6 +1,6 @@
 ---
-description: Bu genel parametrenin dizinini alan.
-title: IDebugGenericParamField::GetIndex | Microsoft Docs
+description: Bu genel parametrenin dizinini alır.
+title: 'Idebuggenericparamfield:: GetIndex | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5296d1c8a726903bdc35b4fd510e7821b0e51d3faaa86c4ddf788e22ae357eef
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4795221956ae7801bf99b9161e13357e2e2e4ea9
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360306"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122138139"
 ---
 # <a name="idebuggenericparamfieldgetindex"></a>IDebugGenericParamField::GetIndex
-Bu genel parametrenin dizinini alan.
+Bu genel parametrenin dizinini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +41,16 @@ int GetIndex(
 
 ## <a name="parameters"></a>Parametreler
 `pIndex`\
-[out] Bu genel parametrenin dizin değeri.
+dışı Bu genel parametrenin dizin değeri.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Örneğin, Sözlük (K,V), K dizin 0, V ise dizin 1'tir.
+Örneğin, sözlük (K, V) için, K dizini 0, V Dizin 1 ' dir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, **IDebugGenericParamField arabirimini ortaya çıkaran bir CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl [uygulandığını](../../../extensibility/debugger/reference/idebuggenericparamfield.md) gösterir.
+Aşağıdaki örnek, [ıdebuggenericparamfield](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini kullanıma sunan bir **cdebuggenericparamtcobject** için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetIndex(DWORD* pIndex)

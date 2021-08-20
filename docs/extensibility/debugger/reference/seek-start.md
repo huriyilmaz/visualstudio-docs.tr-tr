@@ -1,5 +1,5 @@
 ---
-description: Ayrıştırılmış bir akışta arama başlatma konumunu belirtir.
+description: Bir ayrık akışta aramaya başlama konumunu belirtir.
 title: SEEK_START | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,20 +11,21 @@ ms.assetid: 55bd8901-626e-428b-a263-23b14417f4c6
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a15635f2cf56f3be1e9955af4ee79782ed3c85fa
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a7940ca7689da1dab20141191489800c2a3810c3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061530"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122125237"
 ---
 # <a name="seek_start"></a>SEEK_START
-Ayrıştırılmış bir akışta arama başlatma konumunu belirtir.
+Bir ayrık akışta aramaya başlama konumunu belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,29 +52,29 @@ public enum enum_SEEK_START {
 
 ## <a name="fields"></a>Alanlar
  `SEEK_START_BEGIN`\
- Geçerli belgenin başlangıcında aramayı başlatır.
+ Geçerli belgenin başında aramaya başlar.
 
  `SEEK_START_END`\
- Geçerli belgenin sonunda aramayı başlatır.
+ Geçerli belgenin sonunda aramaya başlar.
 
  `SEEK_START_CURRENT`\
- Geçerli belgenin geçerli konumunda aramayı başlatır.
+ Geçerli belgenin geçerli konumunda aramaya başlar.
 
  `SEEK_START_CODECONTEXT`\
- Geçerli belgenin verilen kod bağlamına aramayı başlatır.
+ Geçerli belgenin verilen kod bağlamında aramaya başlar.
 
  `SEEK_START_CODELOCID`\
- Belirtilen kod konumu tanımlayıcıda aramayı başlatır. Kod konumu tanımlayıcıları, [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md)çağırarak elde edilir.
+ Verilen kod konumu tanımlayıcısında aramaya başlar. Kod konumu tanımlayıcıları [GetCurrentLocation çağrılarak elde edilir.](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md)
 
 ## <a name="remarks"></a>Açıklamalar
- [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) yöntemine bir bağımsız değişken olarak geçirilir.
+ Seek yöntemine bağımsız değişken [olarak](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

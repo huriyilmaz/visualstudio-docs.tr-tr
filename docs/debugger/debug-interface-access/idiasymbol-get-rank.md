@@ -1,6 +1,6 @@
 ---
-description: Bir FORTRAN çok boyutlu dizisinin derecesini (boyut sayısı) alır.
-title: 'IDiaSymbol:: get_rank | Microsoft Docs'
+description: ForTRAN çok boyutlu dizisinin derecesini (boyut sayısı) alır.
+title: IDiaSymbol::get_rank | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,17 +11,18 @@ ms.assetid: 14cc9c4b-a5ec-414a-b01f-4a142c17b7cc
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4da2bb7dc41d06e113e0bd278ef08917771cfb2e
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 03c61eea4e46f1e9223ee296f8728e8f4284bf31
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102161916"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105436"
 ---
 # <a name="idiasymbolget_rank"></a>IDiaSymbol::get_rank
-Bir FORTRAN çok boyutlu dizisinin derecesini (boyut sayısı) alır.
+ForTRAN çok boyutlu dizisinin derecesini (boyut sayısı) alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,16 +35,16 @@ HRESULT get_rank (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bir FORTRAN çok boyutlu dizisindeki boyut sayısını döndürür.
+[out] BIR FORTRAN çok boyutlu dizisinde boyut sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Rank, dizinin olarak bildirildiği bir dizideki boyut sayısını ifade eder `myarray[1,2,3]` . Bu örnekte 3 ve 3 boyutlu bir sıralama vardır. Sıralama, her boyut için dizi dizisi kavramını kullanan C++ için geçerlidir (yani, `myarray[1][2][3]` ).
+ Derece, dizisinin olarak bildir olduğu bir dizide boyut sayısını ifade `myarray[1,2,3]` eder. Bu örnekte 3 ve 3 boyut derecesi vardır. Sıralama, her boyut için dizi dizisi kavramını kullanan C++ için geçerli değildir (yani `myarray[1][2][3]` ).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

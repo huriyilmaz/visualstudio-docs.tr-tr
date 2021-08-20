@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 21acc912a391f7fcc46a568df95be23a3e44c7d7e54ab8d5f77af7aecda5d283
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b462e63ec64fec9de292ee7f497f8b62333dd7ba
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338260"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122103136"
 ---
 # <a name="metadata_address_method"></a>METADATA_ADDRESS_METHOD
 Bu yapı, bir sınıfın bir yönteminin adresini temsil eder.

@@ -11,17 +11,18 @@ ms.assetid: 6b513f4e-e7b0-4969-adf0-2205ccc1e09b
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 58b524de5d2d230e240ae7338190568ccfe6fb2a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1f0e47ae5651f928894d42e2e06c015315fa037a
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096492"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145555"
 ---
 # <a name="context_info"></a>CONTEXT_INFO
 Bu yapı bir bellek bağlamını veya kod bağlamını açıklar.

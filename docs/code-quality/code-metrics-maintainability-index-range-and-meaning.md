@@ -1,7 +1,7 @@
 ---
-title: Kod ölçümleri - Bakım dizin aralığı ve anlamı
+title: Kod ölçümleri-Bakımdışı dizin aralığı ve anlamı
 ms.date: 1/8/2021
-description: Visual Studio'da kod ölçümleri için bakım dizin aralığı ölçümü hakkında Visual Studio.
+description: Visual Studio kod ölçümleri için bakım dizini Aralık ölçümü hakkında bilgi edinin.
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
@@ -9,27 +9,27 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: 5149f1620fb371bb13b09566b38001cb35cd4da72871cb404a325c076a1619a1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8ab6115dd0c0a17bf6bb302d7c160e969d11773e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121264941"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122105788"
 ---
-# <a name="code-metrics---maintainability-index-range-and-meaning"></a>Kod ölçümleri - Bakım dizin aralığı ve anlamı
+# <a name="code-metrics---maintainability-index-range-and-meaning"></a>Kod ölçümleri-Bakımdışı dizin aralığı ve anlamı
 
-Soru: Bakım dizini 0 ile 100 arasında olacak şekilde sıfırlandı. Bu nasıl ve neden yapıldı?
+Soru: bakımma dizini 0 ile 100 arasında olacak şekilde sıfırlandı. Bu nasıl ve neden tamamlandı?
 
-Ölçüm başlangıçta aşağıdaki gibi hesaplanmıştır: `Maintainability Index = 171 - 5.2 * ln(Halstead Volume) - 0.23 * (Cyclomatic Complexity) - 16.2 * ln(Lines of Code)`
+İlk olarak ölçüm şu şekilde hesaplanır: `Maintainability Index = 171 - 5.2 * ln(Halstead Volume) - 0.23 * (Cyclomatic Complexity) - 16.2 * ln(Lines of Code)`
 
-Bu formülün kullanımı 171 ile sınırsız negatif sayı arasında olduğu anlamına geliyor.  Kod 0'a doğru ilerler ve kodun 0 ile bazı negatif değerleri arasındaki farkı korumak oldukça zordur.  Negatif sayıların kullanışlılığını azaltmanın ve ölçümü mümkün olduğunca net tutma isteğinin bir sonucu olarak, 0 veya daha az dizinin hepsini 0 olarak işleye karar verdik ve ardından 171 veya daha az aralığı 0 ile 100 arasında olacak şekilde yeniden tabanına yeniden sildik. Bu nedenle formül şu şekildedir:
+Bu formülün kullanımı, 171 ' den sınırlandırılmamış negatif bir sayıya kadar derecelendirçalıştığını belirtir.  Kodu 0 ' a katdığından, kod bakımı oldukça zordur ve kod arasındaki fark 0 ve bazı negatif bir değer yararlı değildir.  Negatif sayıların azalan kullanışlılığı ve ölçüyü mümkün olduğunca net bir şekilde korumak için, 0 veya daha az dizini 0 olarak kabul etmeye karar verdik ve sonra 171 veya daha az aralığı 0 ile 100 arasında olacak şekilde yeniden temellendirtik. Bu nedenle, kullandığımız formül:
 
    `Maintainability Index = MAX(0,(171 - 5.2 * ln(Halstead Volume) - 0.23 * (Cyclomatic Complexity) - 16.2 * ln(Lines of Code))*100 / 171)`
 
-Buna ek olarak eşiklerle birlikte tutucu olmaya karar verdik.  Dizin kırmızı gösterse kodla ilgili bir sorun olduğunu yüksek derecede güven derecesiyle ifade etmek istiyoruz.  Bu bize aşağıdaki eşikleri verdi:
+Bunlara ek olarak, eşiklerle koruyucu olduğuna karar verdik.  Bunun yerine, Dizin kırmızı gösterilirse, kodla ilgili bir sorun olduğunu yüksek ölçüde güvenle söyliyoruz.  Bu, aşağıdaki eşikleri vermiştir:
 
-Eşikler için bu 0-100 aralığını 80-20 aralığında kesmeye karar verdik ve yalnızca şüpheli olan kodu işaretledık. Aşağıdaki eşikleri kullandık:
+Eşikler için bu 0-100 Aralık 80-20 ' i kesintiye uğramaya karar verdik ve yalnızca şüpheli kod işaretlendi. Aşağıdaki eşikleri kullandık:
 
-- 0-9 = Kırmızı
-- 10-19 = Sarı
-- 20-100 = Yeşil
+- 0-9 = kırmızı
+- 10-19 = sarı
+- 20-100 = yeşil

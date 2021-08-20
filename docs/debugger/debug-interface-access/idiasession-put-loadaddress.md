@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: cd5e8e6e4343584280f9031920f2f126f8526b9e2aba1d622185452b718430a5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 692ab9f7a1d792de504478349bd1fe58908485a5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121391811"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122128970"
 ---
 # <a name="idiasessionput_loadaddress"></a>IDiaSession::put_loadAddress
 Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini ayarlar.

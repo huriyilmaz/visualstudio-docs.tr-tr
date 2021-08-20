@@ -1,6 +1,6 @@
 ---
-description: Bu sınıfın temel sınıfları için bir Numaralandırıcı oluşturur.
-title: 'IDebugClassField:: EnumBaseClasses | Microsoft Docs'
+description: Bu sınıfın temel sınıfları için bir numaralayıcı oluşturur.
+title: IDebugClassField::EnumBaseClasses | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -11,20 +11,21 @@ ms.assetid: 78749674-ef75-46d3-a1f4-ff33afd90e32
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9ba31ead00ad2312b66273a2ddfaeebd252e0981
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7bd7f742e057107e02d05934d62bab4747417588
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105084993"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122145191"
 ---
 # <a name="idebugclassfieldenumbaseclasses"></a>IDebugClassField::EnumBaseClasses
-Bu sınıfın temel sınıfları için bir Numaralandırıcı oluşturur.
+Bu sınıfın temel sınıfları için bir numaralayıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +44,13 @@ int EnumBaseClasses(
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
 
-dışı Temel sınıfların listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Temel sınıf yoksa, null değeri döndürür.
+[out] Temel sınıflar [listesini temsil eden bir IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Temel sınıf yoksa null değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür, temel sınıflar yoksa (ve `ppEnum` parametresi null değere ayarlanmışsa) S_SH_NO_BASE_CLASSES döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür, S_SH_NO_BASE_CLASSES (ve parametresi null değere ayarlanırsa) bir hata kodu döndürür. Aksi takdirde `ppEnum` bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırıcı nesnesindeki temel sınıflar, en yakın (veya en türetilmiş) taban sınıfının en uzak taban sınıfına göre belirtilen şekilde belirtilir. Örneğin, C++ sınıfları verildiğinde:
+ Numaralayıcı nesnesinde temel sınıflar en hızlı (veya en türetilmiş) en uzak temel sınıfa sırasıyla belirtilir. Örneğin, C++ sınıfları verildi:
 
 ```
 class Root { }
@@ -58,7 +59,7 @@ class Level2 : Level1 { }
 class MyClass : Level2 { }
 ```
 
- Sabit Listesi temel sınıfları, `Level2` `Level1` ,, sırasıyla döndürür `Root` .
+ Numaralama , , sırasına göre temel `Level2` `Level1` sınıfların dönüşlerini `Root` sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

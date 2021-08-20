@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3329c805ab1e5f6f45f82a2789fdec242c83931f18e525a50fd883f3601c63da
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 766f745a88e178a82627ed24da761dec4560989e
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360826"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122104644"
 ---
 # <a name="doccontext_compare"></a>DOCCONTEXT_COMPARE
 İki belge içeriğini karşılaştırma ölçütlerini belirtir.

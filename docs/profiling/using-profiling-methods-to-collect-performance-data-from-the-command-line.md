@@ -11,12 +11,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: adb738b453ed8f26a59953daa3f1e7096ccdf24b1a8ef47bda19433a1ef4269c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 71cc4ceceb2ef9b09ccc72102f0a38f5f98eeee2
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121270074"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122156948"
 ---
 # <a name="use-profiling-methods-to-collect-performance-data-from-the-command-line"></a>Komut satırından performans verileri toplamak için profil oluşturma metotlarını kullanma
 Komut Profil Oluşturma Araçları araçları ve seçenekleri seçiminiz, profil oluşturmakta olduğunuz uygulama türü, kullanmak istediğiniz profil oluşturma yöntemi ve hedef uygulamanın yerel kodda mı yoksa yerel kodda mı yazıldığı .NET Framework [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bağlıdır.
@@ -24,7 +24,7 @@ Komut Profil Oluşturma Araçları araçları ve seçenekleri seçiminiz, profil
  Bu konu, komut satırı yordam konularını seçtiğiniz profil oluşturma yöntemine göre düzenletir.
 
 ## <a name="use-the-sampling-method-to-collect-performance-statistics"></a>Performans istatistikleri toplamak için örnekleme yöntemini kullanma
- Örnek Profil Oluşturma Araçları yöntemi, profil oluşturma çalıştırması içinde belirli aralıklarla performans verilerini toplar. Örnekleme verileri, CPU'ya bağlı performans sorunlarıyla ilgili içgörüler sağlar ve bir uygulamanın performansını keşfetmeye başlamanın iyi bir yolu olabilir.
+ Örnek Profil Oluşturma Araçları yöntemi, profil oluşturma çalıştırması içinde belirtilen aralıklarla performans verilerini toplar. Örnekleme verileri, CPU'ya bağlı performans sorunlarıyla ilgili içgörüler sağlar ve bir uygulamanın performansını keşfetmeye başlamanın iyi bir yolu olabilir.
 
  Profilleyiciyi ve uygulamayı aynı anda başlatabilirsiniz veya profilleyiciyi bir uygulamanın çalışan örneğine iliştirebilirsiniz.
 
@@ -40,13 +40,13 @@ Komut Profil Oluşturma Araçları araçları ve seçenekleri seçiminiz, profil
 
  **Hedef Uygulama Türü**
 
-- [.NET Framework tek başına bileşenler](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)
+- [.NET Framework tek başına bileşenleri](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)
 
 - [Yerel tek başına bileşenler](../profiling/how-to-instrument-a-native-component-and-collect-timing-data.md)
 
 - [Web uygulamaları için ASP.NET derlenmiş](../profiling/how-to-instrument-statically-compiled-aspnet-and-collect-detailed-timing-data.md)
 
-- [Web uygulamalarında ASP.NET olarak derlenmiş](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)
+- [Web uygulamaları ASP.NET olarak derlenmiş](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-app-and-collect-timing-data.md)
 
 - [.NET hizmetleri](../profiling/how-to-instrument-a-dotnet-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md)
 
@@ -61,10 +61,10 @@ Komut Profil Oluşturma Araçları araçları ve seçenekleri seçiminiz, profil
 |----------|-----------------------------|
 |**Uygulama başlatma**|-   [Tek başına .NET Framework uygulamalar](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-memory-data.md)|
 |**Çalışan bir işleme ekleme**|-   [.NET Framework tek başına uygulamalar](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md)<br />-   [ASP.NET web uygulamaları](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md)<br />-   [.NET hizmetleri](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-memory-data-by-using-the-command-line.md)|
-|**Ölçüm modülleri**|-   [.NET Framework tek başına bileşenler](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)<br />-   [Web uygulamaları için ASP.NET derlenmiş](../profiling/how-to-instrument-a-statically-compiled-aspnet-app-and-collect-memory-data.md)<br />-   [Web uygulamalarında ASP.NET olarak derlenmiş](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)<br />-   [.NET hizmetleri](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|
+|**Ölçüm modülleri**|-   [.NET Framework tek başına bileşenler](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)<br />-   [Web uygulamaları için ASP.NET derlenmiş](../profiling/how-to-instrument-a-statically-compiled-aspnet-app-and-collect-memory-data.md)<br />-   [Web uygulamaları ASP.NET olarak derlenmiş](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)<br />-   [.NET hizmetleri](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|
 
 ## <a name="use-the-concurrency-method-to-collect-resource-contention-and-thread-activity-data"></a>Kaynak ve iş parçacığı etkinlik verilerini toplamak için eşzamanlılık yöntemini kullanma
- Eşzamanlılık Profil Oluşturma Araçları yöntemi, çok iş parçacıklı uygulamalardan kaynak ve iş parçacığı ve işlem etkinlik verilerini toplamaya olanak sağlar.
+ Eşzamanlılık Profil Oluşturma Araçları yöntemi, çok iş parçacıklı uygulamalardan kaynak ve iş parçacığı ve işlem etkinliği verilerini toplamaya olanak sağlar.
 
  Profiler'ı kullanarak uygulamayı başlatabilirsiniz veya profilleyiciyi bir uygulamanın çalışan örneğine iliştirebilirsiniz.
 

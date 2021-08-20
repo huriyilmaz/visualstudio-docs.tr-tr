@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 27826db10e6ef7265416d83cf37fb38c0706c452076223e7027b0ef1a7034f58
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 908b952be10f5789c1bdbdec007540e83393b8e3
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121388961"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122118131"
 ---
 # <a name="ipropertyproxyeesideinplaceupdateobject"></a>IPropertyProxyEESide::InPlaceUpdateObject
 Nesnenin verilerini verilen veri nesnesiyle günceller ve nesnenin yeni verilerini temsil eden yeni bir veri nesnesi döndürür.

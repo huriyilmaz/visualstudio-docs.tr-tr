@@ -1,6 +1,6 @@
 ---
-description: Bir dizin veya ad aracılığıyla hata ayıklama akışı alır.
-title: 'IDiaEnumDebugStreams:: öğe | Microsoft Docs'
+description: Bir dizin veya ad ile bir hata ayıklama akışı alınır.
+title: IDiaEnumDebugStreams::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 122e1f83542e276a931390e5155dcaed4692e0eb47311d996c59eaebd7a920ee
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d12d191c67a295672fd75f1c73c0a1af8a19196f
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121455234"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122154674"
 ---
 # <a name="idiaenumdebugstreamsitem"></a>IDiaEnumDebugStreams::Item
-Bir dizin veya ad aracılığıyla hata ayıklama akışı alır.
+Bir dizin veya ad ile bir hata ayıklama akışı alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,14 +36,14 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametreler
 dizin
 
-'ndaki Alınacak hata ayıklama akışının dizini veya adı. Bir tamsayı değişkeni kullanılırsa, bu, `count` `count` [IDiaEnumDebugStreams:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) yöntemi tarafından döndürülen 0 ile-1 aralığında olmalıdır.
+[in] Alınan hata ayıklama akışının dizini veya adı. Bir tamsayı varyantı kullanılırsa, 0 ile `count` -1 aralığında olmalıdır; burada `count` [IDiaEnumDebugStreams::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) yöntemi tarafından döndürülen değerdir.
 
 akış
 
-dışı Belirtilen hata ayıklama akışını temsil eden bir [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesnesi döndürür.
+[out] Belirtilen hata [ayıklama akışını temsil eden bir IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

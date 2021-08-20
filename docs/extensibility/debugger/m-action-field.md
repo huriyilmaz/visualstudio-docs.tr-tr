@@ -1,6 +1,6 @@
 ---
-description: System.Threading.Tasks.Task nesnesinde yürütülecek kodu temsil eden temsilci.
-title: m_action Alanı | Microsoft Docs
+description: System. Threading. Tasks. Task nesnesinde yürütülecek kodu temsil eden temsilci.
+title: m_action alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,21 +12,21 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b2c5b4927a07bcb05c0ada97d4aed9f6c6da8c6cc65e21aa65fc3e40af1996c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3da9d8da2a5ebeac580a66844ff08cb5a6010715
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121361060"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160601"
 ---
 # <a name="m_action-field"></a>m_action alanı
-Nesnesinde yürütülecek kodu temsil eden <xref:System.Threading.Tasks.Task> temsilci.
+Nesnede yürütülecek kodu temsil eden temsilci <xref:System.Threading.Tasks.Task> .
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Derleme:** mscorlib *(mscorlib.dll*)
+ **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
+ bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ Nesnesinde yürütülecek kodu temsil eden <xref:System.Threading.Tasks.Task> te
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Bu, `action` oluşturucuda <xref:System.Threading.Tasks.Task.%23ctor%2A> parametresidir.
+ Bu, `action` <xref:System.Threading.Tasks.Task.%23ctor%2A> kurucudaki parametredir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md)

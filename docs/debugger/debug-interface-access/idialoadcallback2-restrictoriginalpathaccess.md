@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 173f7762b212f5aaa876f87a78e72432d8829e84c63946eccea686e6abe777dc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ed1c3cb17a8f1e3e43f0798bce4c18bd0457370d
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121405149"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122066562"
 ---
 # <a name="idialoadcallback2restrictoriginalpathaccess"></a>IDiaLoadCallback2::RestrictOriginalPathAccess
 Özgün hata ayıklama dizininde bir. pdb dosyası olup olmadığını belirler.

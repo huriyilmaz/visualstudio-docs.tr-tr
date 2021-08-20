@@ -1,6 +1,6 @@
 ---
-description: Benzersiz tanımlayıcısı verilen bir hizmet nesnesini alır.
-title: 'IDebugExpressionEvaluator2:: GetService | Microsoft Docs'
+description: Benzersiz tanımlayıcısı verilen bir hizmet nesnesini alın.
+title: IDebugExpressionEvaluator2::GetService | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 34a432be96d0511128a5466c2fd771f0682129bb3ddf4087a129831ace8be491
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 78719dbd33ea20e03fefd44f00cba3dd8b7f28e8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121360436"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122088984"
 ---
 # <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
-Benzersiz tanımlayıcısı verilen bir hizmet nesnesini alır.
+Benzersiz tanımlayıcısı verilen bir hizmet nesnesini alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +44,16 @@ int GetService (
 
 ## <a name="parameters"></a>Parametreler
 `uid`\
-'ndaki Alınacak hizmetin benzersiz tanıtıcısı.
+[in] Alınan hizmetin benzersiz tanımlayıcısı.
 
 `ppService`\
-dışı Hizmeti temsil eden bir nesne döndürür.
+[out] Hizmeti temsil eden bir nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu, başka bir ifade değerlendiricisinde hizmet elde etmek için üçüncü taraf bir ifade değerlendirici tarafından tüketilebilir. Örneğin, bu yöntem varsayılan ifade değerlendiricisi ' nden Görselleştirici hizmeti arabirimini almak için kullanılabilir. Üçüncü taraf ifadesi değerlendiricileri bu arabirimin uygulanması için gerekli değildir.
+ Bu, başka bir ifade değerlendiriciden hizmet almak için bir üçüncü taraf ifade değerlendiricisi tarafından tüketilebilir. Örneğin, bu yöntem görselleştirici hizmetinin arabirimini varsayılan ifade değerlendiriciden almak için kullanılabilir. Üçüncü taraf ifade değerlendiricilerin bu arabirimi uygulaması pek olası değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

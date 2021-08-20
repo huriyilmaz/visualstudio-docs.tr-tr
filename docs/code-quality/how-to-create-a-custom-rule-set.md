@@ -1,7 +1,7 @@
 ---
 title: Özel kod analizi kural kümesi oluşturma
 ms.date: 11/02/2018
-description: Visual Studio 'da kod analizi kural kümelerini özelleştirmeyi öğrenin. Bkz. sıfırdan veya mevcut kümelerden yeni kümeler oluşturma. Kural önceliğini anlayın.
+description: Visual Studio 'de kod analizi kural kümelerini özelleştirmeyi öğrenin. Bkz. sıfırdan veya mevcut kümelerden yeni kümeler oluşturma. Kural önceliğini anlayın.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 f1_keywords:
@@ -11,14 +11,15 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: dda89e9822e361438346300a2f60c05bcfd64d6f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 181f94ccc9b83053673e49746d757708afdbf966
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99860158"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122139619"
 ---
 # <a name="customize-a-rule-set"></a>Bir kural kümesini özelleştirme
 
@@ -30,7 +31,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-2. **Özellikler** sayfalarında **Kod Analizi** sekmesini seçin.
+2. **özellikler** sayfalarında **Code Analysis** sekmesini seçin.
 
 ::: moniker range="vs-2017"
 
@@ -53,7 +54,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 4. Kural kümesi düzenleyicisinde kuralları göstermek için **Aç** ' ı seçin.
 
 > [!NOTE]
-> .NET Core veya .NET Standard projeniz varsa, proje özelliklerindeki **Kod Analizi** sekmesi aynı seçenekleri desteklemediğinden işlem biraz farklıdır. [Önceden tanımlanmış bir kural kümesini projenize kopyalamak ve etkin kural kümesi olarak ayarlamak](/dotnet/fundamentals/code-analysis/code-quality-rule-options)için adımları izleyin. Bir kural kümesi üzerinden kopyaladıktan sonra, [bunu Visual Studio kural kümesi düzenleyicisinde](working-in-the-code-analysis-rule-set-editor.md) **Çözüm Gezgini** açarak düzenleyebilirsiniz.
+> .net Core veya .NET Standard projeniz varsa, proje özelliklerindeki **Code Analysis** sekmesi aynı seçenekleri desteklemediğinden işlem biraz farklıdır. [Önceden tanımlanmış bir kural kümesini projenize kopyalamak ve etkin kural kümesi olarak ayarlamak](/dotnet/fundamentals/code-analysis/code-quality-rule-options)için adımları izleyin. bir kural kümesi üzerinden kopyaladıktan sonra, bunu **Çözüm Gezgini** açarak [Visual Studio kural kümesi düzenleyicisinde düzenleyebilirsiniz](working-in-the-code-analysis-rule-set-editor.md) .
 
 ## <a name="create-a-new-rule-set"></a>Yeni bir kural kümesi oluştur
 
@@ -61,7 +62,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 1. **Dosya**  >  **Yeni**  >  **Dosya**' yı seçin veya **CTRL** + **N** tuşuna basın.
 
-2. **Yeni dosya** iletişim kutusunda, sol taraftaki **genel** kategorisini seçin ve ardından **kod analizi kural kümesi**' ni seçin.
+2. **yeni dosya** iletişim kutusunda sol taraftaki **genel** kategorisini seçin ve ardından **Code Analysis kural kümesi**' ni seçin.
 
 3. **Aç**’ı seçin.
 
@@ -70,11 +71,11 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 ## <a name="create-a-custom-rule-set-from-multiple-rule-sets"></a>Birden çok kural kümesinden özel bir kural kümesi oluşturma
 
 > [!NOTE]
-> Aşağıdaki yordam, .NET Core veya .NET Standard projelerine uygulanmaz. Bu, **Kod Analizi** Özellik sekmesindeki özellikleri desteklemezler.
+> aşağıdaki yordam, .net Core veya .NET Standard projelerine uygulanmaz, bu da **Code Analysis** özellik sekmesindeki özellikleri desteklemez.
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-2. **Özellikler** sayfalarında **Kod Analizi** sekmesini seçin.
+2. **özellikler** sayfalarında **Code Analysis** sekmesini seçin.
 
 ::: moniker range="vs-2017"
 
@@ -100,7 +101,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 ## <a name="rule-precedence"></a>Kural önceliği
 
-- Aynı kural, farklı önem derecelerine sahip bir kural kümesinde iki veya daha fazla kez listeleniyorsa, derleyici bir hata oluşturur. Örneğin:
+- Aynı kural, farklı önem derecelerine sahip bir kural kümesinde iki veya daha fazla kez listeleniyorsa, derleyici bir hata oluşturur. Örnek:
 
    ```xml
    <RuleSet Name="Rules for ClassLibrary21" Description="Code analysis rules for ClassLibrary21.csproj." ToolsVersion="15.0">
@@ -115,7 +116,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
    **CA0063: ' \[ sizin]. RuleSet ' kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi. Dosya, kural kümesi şemasıyla uyumlu değil.**
 
-- Kural kümesi bir **içerme** etiketi kullanarak ayarlanmış bir alt kural içeriyorsa ve alt ve üst kural her ikisi de aynı kuralı, ancak farklı önem derecelerine sahip olarak ayarlarsa, üst kural kümesindeki önem derecesi önceliklidir. Örneğin:
+- Kural kümesi bir **içerme** etiketi kullanarak ayarlanmış bir alt kural içeriyorsa ve alt ve üst kural her ikisi de aynı kuralı, ancak farklı önem derecelerine sahip olarak ayarlarsa, üst kural kümesindeki önem derecesi önceliklidir. Örnek:
 
    ```xml
    <!-- Parent rule set -->

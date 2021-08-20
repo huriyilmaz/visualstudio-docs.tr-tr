@@ -1,6 +1,6 @@
 ---
-description: C++ AMP saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.
-title: 'IDiaSymbol:: get_numberOfAcceleratorPointerTags | Microsoft Docs'
+description: Bir saplama işlevinde hızlandırıcı işaretçisi C++ AMP döndürür.
+title: IDiaSymbol::get_numberOfAcceleratorPointerTags | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -9,17 +9,18 @@ ms.assetid: 1886e3ec-b227-4187-8d93-c5144b4b77ae
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d428ea0a4837d8a1ddf79e6749d852279bb1c115
-ms.sourcegitcommit: 4b323a8a8bfd1a1a9e84f4b4ca88fa8da690f656
+ms.openlocfilehash: 0a7d072d4c3df5321ce07435a316221499b1dbc0
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102155931"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122113414"
 ---
 # <a name="idiasymbolget_numberofacceleratorpointertags"></a>IDiaSymbol::get_numberOfAcceleratorPointerTags
-C++ AMP saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.
+Bir saplama işlevinde hızlandırıcı işaretçisi C++ AMP döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,13 +32,13 @@ HRESULT get_numberOfAcceleratorPointerTags(
 #### <a name="parameters"></a>Parametreler
  `count`
 
-dışı Bir `DWORD` C++ amp saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını tutan bir işaretçisi.
+[out] Bir saplama `DWORD` işlevinde hızlandırıcı işaretçisi etiketlerinin sayısını tutan C++ AMP işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, `IDiaSymbol` C++ amp Hızlandırıcı saplama işlevine karşılık gelen bir arabirim üzerinde çağrılır.
+ Bu yöntem, bir C++ AMP `IDiaSymbol` hızlandırıcı saplama işlevine karşılık gelen bir arabirimde çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

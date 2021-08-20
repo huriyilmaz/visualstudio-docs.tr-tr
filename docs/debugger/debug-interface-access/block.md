@@ -1,6 +1,6 @@
 ---
 title: Engelle | Microsoft Docs
-description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında işlevler içinde iç içe kapsamları tanımlayan blok sembol türü (SymTagBlock) hakkında bilgi edinin.
+description: Visual Studio hata ayıklama arabirimi erişim SDK 'sında işlevler içinde iç içe kapsamları tanımlayan blok sembol türü (symtagblock) hakkında bilgi bulun.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,14 +14,15 @@ ms.assetid: 95b7b0c1-ecc9-405f-8456-5f9cfb866498
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 441f147720a7d9a08422d1633e924d511799393f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 2c0fd63382495e87925df8f6f19f9824aad250f5
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99857459"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122129514"
 ---
 # <a name="block"></a>Blok
 Her kod bloğu bir sembol tarafından tanımlanır `SymTagBlock` . Blok sembolleri, işlevler içinde iç içe kapsamları belirlemek için kullanılır.

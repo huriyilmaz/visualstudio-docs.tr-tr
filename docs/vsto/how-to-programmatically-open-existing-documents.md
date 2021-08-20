@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: program aracılığıyla varolan belgeleri açma'
-description: Tam nitelenmiş bir yol ve dosya adı tarafından belirtilen mevcut bir Microsoft Word belgesini açmak için Open metodunu nasıl kullanacağınızı öğrenin.
+description: tam nitelenmiş bir yol ve dosya adı tarafından belirtilen mevcut bir Microsoft Word belgeyi açmak için open metodunu nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -13,17 +13,18 @@ helpviewer_keywords:
 author: John-Hart
 ms.author: johnhart
 manager: jmartens
+ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 0153413a357a122b4bb5a1f1cbfb44079f78e128
-ms.sourcegitcommit: 4b40aac584991cc2eb2186c3e4f4a7fcd522f607
+ms.openlocfilehash: e1785053c4342144e56cb67e1f75adbef484058b
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107827311"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122155856"
 ---
 # <a name="how-to-programmatically-open-existing-documents"></a>Nasıl yapılır: program aracılığıyla varolan belgeleri açma
-  <xref:Microsoft.Office.Interop.Word.Documents.Open%2A>Yöntemi, tam nitelenmiş bir yol ve dosya adı tarafından belirtilen varolan Microsoft Office Word belgesini açar. Bu yöntem <xref:Microsoft.Office.Interop.Word.Document> , açılan belgeyi temsil eden bir döndürür.
+  <xref:Microsoft.Office.Interop.Word.Documents.Open%2A>yöntemi, tam nitelenmiş bir yol ve dosya adı tarafından belirtilen varolan Microsoft Office Word belgesini açar. Bu yöntem <xref:Microsoft.Office.Interop.Word.Document> , açılan belgeyi temsil eden bir döndürür.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 

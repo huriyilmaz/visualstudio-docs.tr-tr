@@ -11,17 +11,18 @@ ms.assetid: 17fe4698-b04e-4798-8412-80e0da60c387
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
+ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 74a320cbe9f2414de754b5844aa645bffb857568
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ed068e3f0a5e1a595b9f93fec5d19de8b30690fd
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105093905"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122111236"
 ---
 # <a name="idebugengine2causebreak"></a>IDebugEngine2::CauseBreak
 Bu hata ayıklama altyapısı (DE) tarafından hata ayıklamakta olan tüm programları, iş parçacıklarından birinin bir sonraki çalıştırılışında yürütmeyi durdurmak için ister.

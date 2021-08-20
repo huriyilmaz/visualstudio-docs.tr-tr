@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e5eceb34e8d82853289663a6b6795a266444d8635e34f33c490fe2a53307c1f2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 102cdc751d7c18339e02c6d3ece37f07ec65bed6
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121339066"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122160055"
 ---
 # <a name="idebugportrequest2getportname"></a>IDebugPortRequest2::GetPortName
 Bağlantı noktasının adını alır.

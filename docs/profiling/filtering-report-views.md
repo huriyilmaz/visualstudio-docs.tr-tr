@@ -1,6 +1,6 @@
 ---
 title: Rapor Görünümlerini Filtreleme | Microsoft Docs
-description: Visual Studio 'da, performans rapor görünümlerinde görüntülenen ve rapor dosyalarına aktarılmış profil oluşturma verilerini sınırlamak için profil oluşturma veri dosyalarına filtre uygulayın.
+description: Visual Studio ' de, performans rapor görünümlerinde görüntülenen ve rapor dosyalarına aktarılmış profil oluşturma verilerini sınırlamak için profil oluşturma veri dosyalarına filtre uygulayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,15 +10,16 @@ ms.assetid: 820cf192-7fd6-4bee-9a51-aa69154aca85
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
+ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: a6f4ea9b713cf582a13ce2105bcc5bfd32754d3b
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 22ec32af90a67d40c4f753bf3c1aea3f3f0010b8
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99916730"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122150384"
 ---
 # <a name="filter-report-views"></a>Rapor görünümlerini filtrele
 Performans raporu görünümlerinde görüntülenen profil oluşturma verilerini sınırlandırmak ve rapor dosyalarına aktarmak için profil oluşturma veri dosyalarına filtre uygulayabilirsiniz. Zaman damgası değerleri arasındaki verilerle bir raporu sınırlayabilir ve verileri belirli işlemlerle ve iş parçacıklarıyla sınırlayabilirsiniz. Filtreleri bir dosyaya kaydedebilir ve sonra kaydedilen filtreyi içeri aktararak farklı bir profil oluşturma veri dosyasında bir filtre oluşturabilirsiniz.

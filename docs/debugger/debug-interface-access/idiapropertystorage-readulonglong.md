@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bae3cc21ae6c54912279bbc283235c25fb47c20cb6b5bc0b58b8f8bf2bf2eb5a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5434587770fb632cc353bc5254902a9fb3614c37
+ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344935"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122161632"
 ---
 # <a name="idiapropertystoragereadulonglong"></a>IDiaPropertyStorage::ReadULONGLONG
 `ULONGLONG`Bir özellik kümesindeki değerleri okur.
