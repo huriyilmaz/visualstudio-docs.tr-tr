@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 08/17/2021
+ms.date: 08/20/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen Azure devtest bireysel kredi avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: 6c2eb72e49a71ace82f8331fad10deddf63fd28d
-ms.sourcegitcommit: ed472824f47cbb913fa30e3e67317af57a05e397
+ms.openlocfilehash: a783d0b95c8b64474e19bfae412378c17583a633
+ms.sourcegitcommit: bb1487ef906875ee83f2dc8567bd0bad823d727b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "122399238"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122621771"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Microsoft Azure kullanma
 Visual Studio abone olarak, ek ücret ödemeden Microsoft Azure kullanabilirsiniz.  [Aylık Azure DevTest krediniz](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)sayesinde Azure, geliştirme ve test için kişisel korumalı alanınız.  Sanal makineleri, bulut hizmetlerini ve diğer Azure kaynaklarını sağlayabilirsiniz.  Kredi tutarları abonelik düzeyine göre farklılık gösterir.
@@ -108,6 +108,9 @@ Tüm ayrıntılar için lütfen [Teknik destek](vs-tech-support.md) belgelerini 
 
 ### <a name="q-who-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>s: Azure devtest bireysel kredimi kullanarak oluşturduğum fikri mülkiyet özelliğine sahip Who.
 Y: Bu şirket tarafından sağlanan kaynaklar üzerinde oluşturulan bir çalışan tarafından üretilen fikri mülkiyet özelliği, bu nedenle kaynağı sağlayan şirketin fikri mülkiyet özelliğidir. bu nedenle, Visual Studio aboneliğinizi işvereniniz aracılığıyla aldıysanız fikri mülkiyet ilkeleri uygulanır. 
+
+### <a name="q-how-can-i-find-out-what-my-azure-credit-balance-is"></a>S: Azure kredi bakiyimin ne olduğunu nasıl öğrenebilirim?
+Y: bakiyenizi izlemek ve Azure kredileriniz hakkında diğer yararlı bilgileri öğrenmek Için, [Microsoft Müşteri Sözleşmesi Azure kredi bakiyesine](https://docs.microsoft.com/azure/cost-management-billing/manage/mca-check-azure-credits-balance?tabs=portal)göz atın.
 
 ## <a name="support-resources"></a>Destek kaynakları
 - Azure ile ilgili yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
