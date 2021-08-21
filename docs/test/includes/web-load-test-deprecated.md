@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: a2ceafbbd204083fc421a05488dd67185f68d9d8
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.openlocfilehash: 913afaadbbf183afbc0f78c4b5b2079885202e93
+ms.sourcegitcommit: 0ac22f45b3240081c4a219fc96f9d630e5de59a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190244"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122442276"
 ---
 > [!NOTE]
-> Web performansı ve yük testi işlevleri kullanım dışıdır. Visual Studio 2019, Web performansının ve yük testinin kullanılabilir olacağı son sürümdür. Daha fazla bilgi için bkz. [bulut tabanlı yük testi hizmeti ömür sonu](https://devblogs.microsoft.com/devops/cloud-based-load-testing-service-eol/) blog gönderisi.
+> Web performansı ve yük testi işlevleri kullanım dışıdır. Visual Studio 2019, web performansı ve yük testinin tam olarak kullanılabilir olduğu son sürümdür. Daha fazla bilgi için bulut tabanlı yük testi hizmeti yaşam sonu blog [gönderisi'ne](https://devblogs.microsoft.com/devops/cloud-based-load-testing-service-eol/) bakın. Kullanıcılar üzerindeki etkiyi azaltmak için 2022 Preview 3 veya Visual Studio bazı minimum destekler hala kullanılabilir.
