@@ -1,8 +1,8 @@
 ---
-title: Test araçları
+title: Birim testi araçları
 description: Test araçlarının Visual Studio ve takımınıza yüksek kod mükemmelliği standartları geliştirmenize ve sürdürmenize nasıl yardımcı olduğunu öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 03/16/2018
+ms.date: 08/19/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - testing tools [Visual Studio]
@@ -13,19 +13,19 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 7cfb71071efab7e119c04d32f3362e00add4bdc2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 987c9928fecb3ad752656c065bd369b9844da864
+ms.sourcegitcommit: e6aeefef5b659a56e6e433d155bfd269c46bceb0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122148525"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122603599"
 ---
 # <a name="first-look-at-testing-tools-in-visual-studio"></a>Visual Studio'daki test araçlarına ilk bakış
 
 Visual Studio test araçları, sizin ve takımınızın kod mükemmelliğinde yüksek standartlar geliştirmenize ve bu standartları sürdürmenize yardımcı olabilir.
 
 > [!NOTE]
-> Birim testi, uygulamanın tüm sürümlerinde Visual Studio. Live Unit Testing ve IntelliTest gibi diğer test araçları yalnızca Visual Studio Enterprise kullanılabilir. Sürümler hakkında daha fazla bilgi için [bkz. IDE'Visual Studio karşılaştırma.](https://visualstudio.microsoft.com/vs/compare/)
+> Birim testi, uygulamanın tüm sürümlerinde Visual Studio. Live Unit Testing ve IntelliTest gibi diğer test araçları yalnızca Visual Studio Enterprise kullanılabilir. Sürümler hakkında daha fazla bilgi için [bkz. Visual Studio IDE'leri karşılaştırma.](https://visualstudio.microsoft.com/vs/compare/)
 
 ## <a name="test-explorer"></a>Test Gezgini
 
@@ -40,11 +40,12 @@ Test **Gezgini penceresi geliştiricilerin** birim testleri oluşturmasına, yö
 ::: moniker-end
 
 * [Birim testini kullanmaya başlama](unit-test-your-code.md)
+* [Birim testi temel bilgileri](unit-test-basics.md)
 * [Test Gezgini ile birim testleri çalıştırma](run-unit-tests-with-test-explorer.md)
 * [Test Gezgini Hakkında SSS](test-explorer-faq.md)
 * [Nasıl yapılır: Üçüncü taraf birim test çerçevelerini yükleme](install-third-party-unit-test-frameworks.md)
 
-Visual Studio da genişletilebilir ve NUnit ve xUnit.net gibi üçüncü taraf birim test bağdaştırıcıları için xUnit.net. Ayrıca kod kopyalama özelliği, yaygın hata düzeltmeleri veya yeniden düzenleme için adaylar olarak semantantik olarak benzer kod bloklarını tanımlamanıza yardımcı olarak yüksek kaliteli yazılım sunma konusunda da el ile ilerler.
+Visual Studio da genişletilebilir ve NUnit ve xUnit.net gibi üçüncü taraf birim test bağdaştırıcıları için xUnit.net. Ayrıca kod kopyalama özelliği, yaygın hata düzeltmeleri veya yeniden düzenleme için adaylar olarak semantanttik olarak benzer kod bloklarını tanımlamanıza yardımcı olarak yüksek kaliteli yazılım sunma konusunda da el ile ilerler.
 
 ![Üçüncü taraf test tümleştirmesi](media/devtest-thirdparty.png)
 
@@ -92,7 +93,7 @@ Test yöntemlerini Test Gezgini'ni kullanarak çalıştırdığınızda kod kaps
 
 ## <a name="user-interface-testing-with-coded-ui-and-selenium"></a>Kodlanmış KULLANıCı Arabirimi ve Selenium ile kullanıcı arabirimi testi
 
-Kodlanmış UI testleri, uygulama kullanıcı arabiriminizin işlevselliğini ve davranışını doğrulamak için tam otomatik testler oluşturmanın bir yolunu sağlar. XAML tabanlı UWP uygulamaları, tarayıcı uygulamaları ve kullanıcı arabirimi uygulamaları gibi çeşitli teknolojilerde kullanıcı arabirimi testini SharePoint olabilir.
+Kodlanmış UI testleri, uygulama kullanıcı arabiriminizin işlevselliğini ve davranışını doğrulamak için tam otomatikleştirilmiş testler oluşturmanın bir yolunu sağlar. XAML tabanlı UWP uygulamaları, tarayıcı uygulamaları ve kullanıcı arabirimi uygulamaları gibi çeşitli teknolojilerde kullanıcı arabirimi testini SharePoint olabilir.
 
 > [!NOTE]
 > Kodlanmış kullanıcı arabirimi kullanım dışı bir özelliktir.

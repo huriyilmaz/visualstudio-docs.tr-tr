@@ -9,13 +9,13 @@ metadata:
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
-  ms.date: 03/23/2020
-  ms.openlocfilehash: 1c9922a773faed5eb3fb05c6b8926409256d3a087ac3abb257f5758cca185e27
-  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+  ms.date: 08/19/2021
+  ms.openlocfilehash: a3eddd7c6373023f3e678e66cc66a12b77247653
+  ms.sourcegitcommit: e6aeefef5b659a56e6e433d155bfd269c46bceb0
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/12/2021
-  ms.locfileid: "121409026"
+  ms.lasthandoff: 08/20/2021
+  ms.locfileid: "122603560"
 landingContent:
 - title: Test araçları hakkında
   linkLists:
@@ -23,8 +23,10 @@ landingContent:
     links:
     - text: Test araçlarına ilk bakış
       url: improve-code-quality.md
-    - text: Birim test araçları & görevleri
+    - text: Birim testi araçları & görevler
       url: unit-test-your-code.md
+    - text: Birim testi temel bilgileri
+      url: unit-test-basics.md
     - text: Live Unit Testing genel bakış (.NET)
       url: live-unit-testing-intro.md
 - title: başlarken
@@ -37,8 +39,6 @@ landingContent:
       url: run-unit-tests-with-test-explorer.md
   - linkListType: how-to-guide
     links:
-    - text: Birim testi temel bilgileri
-      url: unit-test-basics.md
     - text: Kod kapsamı - Ne kadar kodun test edildiğini belirleme
       url: using-code-coverage-to-determine-how-much-code-is-being-tested.md
 - title: .NET birim testi
