@@ -1,7 +1,7 @@
 ---
 title: koyu Visual Studio temasını ayarlama ve metin renklerini değiştirme
 description: varsayılan Visual Studio color temasını koyu moda değiştirme ve kod düzenleyicisinde yazı tipi renklerini değiştirme hakkında bilgi edinin.
-ms.date: 08/20/2020
+ms.date: 08/19/2021
 ms.topic: how-to
 ms.custom: contperf-fy21q1
 author: TerryGLee
@@ -10,16 +10,19 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 945a2e1c7650e43afa9d9e0562371545ca09746d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 8dd4e56ececf68b9bd53b5530f8ccfe0c906a975
+ms.sourcegitcommit: 7c06c7e4f0a69d90b21dcf4d5c5b5caa17464bf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122137229"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122464839"
 ---
 # <a name="how-to-personalize-the-visual-studio-ide-and-the-editor"></a>nasıl yapılır: Visual Studio ıde ve düzenleyiciyi kişiselleştirme
 
 bu nasıl yapılır makalesinde, varsayılan mavi temadan koyu temaya Visual Studio color temasını özelleştireceğiz. Daha sonra, kod düzenleyicisinde iki farklı metin türünün renklerini özelleştireceğiz.
+
+> [!NOTE]
+> [Visual Studio 2022 Preview](/visualstudio/releases/2022/release-notes-preview)sürümünde, renk temaları işlevini Windows ayarlarınızdaki bir şekilde kullanıma sunduk. daha fazla bilgi için bkz. [**Visual Studio blog gönderisi için esnek tema özellikleri**](https://devblogs.microsoft.com/visualstudio/flexible-theming-visual-studio/) .
 
 ::: moniker range="vs-2017"
 

@@ -5,7 +5,7 @@ author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
-ms.date: 07/22/2021
+ms.date: 08/18/2021
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.PathTrustOptions
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mark of the web
 - trusted files
 - trusted folders
-ms.openlocfilehash: 900e6c829234c534e01e1512aef9ca3ba4a41447
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 47cfd8c689699367336a3b4dafb9d72771e8b9b9
+ms.sourcegitcommit: 0ac22f45b3240081c4a219fc96f9d630e5de59a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122048667"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122423556"
 ---
 # <a name="configure-trust-settings-for-files-and-folders"></a>Dosyalar ve klasörler için güven ayarlarını yapılandırma
 
@@ -30,7 +30,7 @@ Visual Studio 2022 ' de (önizleme 2), dosyalarda, klasörlerde, projelerde ve �
 
 :::image type="content" source="media/vs-2022/trusted-settings-warning-message.png" alt-text="güven Ayarlar uyarı iletisinin ekran görüntüsü":::
 
-Özelliği güncelleştirmeye devam ettiğimiz için buraya daha fazla bilgi ekleyeceğiz. Bizi izlemeye devam edin!
+Özelliği güncelleştirmeye devam ettiğimiz için bu sayfaya daha fazla bilgi ekleyeceğiz. bu arada, en son haberler için son blog gönderimize göz atın ve [Visual Studio 2022 ile geliştirici güvenliğini geliştirir](https://devblogs.microsoft.com/visualstudio/improving-developer-security-with-visual-studio-2022/).
 
 ::: moniker-end
 
@@ -42,7 +42,7 @@ Visual Studio, [Web 'e işaret](/previous-versions/windows/internet-explorer/ie-
 > Dosyayı, klasörü veya çözümü onaylamadan önce güvenilen bir kişiden veya güvenilir bir konumdan geldiğinden emin olmalısınız.
 
 > [!NOTE]
-> Visual Studio 2022 ' de (önizleme), dosyalarda, klasörlerde, projelerde ve çözümlerde güvenilir olmayan kodların ıde 'de açılmasına her seferinde bir uyarı göstermek için güven Ayarlar işlevselliğini yeniden yaptık. daha fazla bilgi için, [Visual Studio 2022 Preview sürüm notlarının](/visualstudio/releases/2022/release-notes-preview#trustedlocations-170P2)"güvenilen konumlar" bölümüne bakın.
+> Visual Studio 2022 ' de (önizleme), dosyalarda, klasörlerde, projelerde ve çözümlerde güvenilir olmayan kodların ıde 'de açılmasına her seferinde bir uyarı göstermek için güven Ayarlar işlevselliğini yeniden yaptık. daha fazla bilgi edinmek için, [Visual Studio 2022 Preview sürüm notlarının](/visualstudio/releases/2022/release-notes-preview#trustedlocations-170P2)"güvenilen konumlar" bölümüne ve en son geliştirme [Visual Studio 2022](https://devblogs.microsoft.com/visualstudio/improving-developer-security-with-visual-studio-2022/) web günlüğü gönderisine bakın.
 
 ## <a name="configure-trust-settings"></a>Güven ayarlarını yapılandırma
 
