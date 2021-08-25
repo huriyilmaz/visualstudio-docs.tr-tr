@@ -1,37 +1,37 @@
 ---
-title: gerektir-Winget
-description: devinit aracı için-Winget gereklidir.
+title: require-winget
+description: devinit tool require-winget.
 ms.date: 02/08/2021
 ms.topic: reference
 author: andysterland
 ms.author: andster
-manager: jillfra
+manager: jmartens
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 615f1d59413414e94f6a4565be7bb1f99c676bc6a00af36d933de3a134d685c6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3cc07190f125b071bae40587552e25cc9515fd6d
+ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121378276"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122785721"
 ---
-# <a name="require-winget"></a>gerektir-Winget
+# <a name="require-winget"></a>require-winget
 
 > [!IMPORTANT]
-> 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren, Visual Studio 2019'dan GitHub Codespaces'a bağlanmak artık desteklemeyecek ve bu özel önizlemenin sonucuna varıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi almak Visual Studio geliştirici topluluğu forummize dahil olmak için sizi teşvik ediyoruz.
 
-`require-winget`Araç [Winget](https://docs.microsoft.com/windows/package-manager/winget/)'i yüklemek için kullanılır. 
+araç, `require-winget` [winget'i yüklemek için kullanılır.](/windows/package-manager/winget/) 
 ## <a name="usage"></a>Kullanım
 
-Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak açıklanan [varsayılan](#default-behavior) davranışı izler.
+Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak [açıklanmış varsayılan](#default-behavior) davranışı takip eder.
 
 | Ad                                             | Tür   | Gerekli | Değer                                                                                |
 |--------------------------------------------------|--------|----------|--------------------------------------------------------------------------------------|
-| **yorumlar**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                                |
-| [**girişinin**](#input)                              | dize | No       | Kullanılmadı.                                                                            |
+| **yorumlar**                                     | dize | No       | İsteğe bağlı açıklamalar özelliği. Kullanılmadı.                                                |
+| [**Giriş**](#input)                              | dize | No       | Kullanılmadı.                                                                            |
 | [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı.                                                                            |
 
 ### <a name="input"></a>Giriş
@@ -44,7 +44,7 @@ Kullanılmadı.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracın varsayılan davranışı, `require-winget` [ `winget-cli` Git deposunu](https://github.com/microsoft/winget-cli)kullanarak en son sürümü yüklemektir.
+Aracın Varsayılan `require-winget` davranışı, git deposunu kullanarak en son [ `winget-cli` sürümü yüklemektir.](https://github.com/microsoft/winget-cli)
 
 ## <a name="example-usage"></a>Örnek kullanım
 

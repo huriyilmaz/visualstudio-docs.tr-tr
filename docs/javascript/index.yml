@@ -8,14 +8,14 @@ metadata:
   ms.technology: vs-javascript
   author: mikejo5000
   ms.author: mikejo
-  manager: jillfra
+  manager: jmartens
   ms.date: 10/15/2019
-  ms.openlocfilehash: 40df43cc350a5fa4b8964038ff664411fd1e702157b0d585afa8e1f1f886197d
-  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+  ms.openlocfilehash: 31db0087a3261a39c344a26784eb33cf550e6623
+  ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/12/2021
-  ms.locfileid: "121356055"
+  ms.lasthandoff: 08/24/2021
+  ms.locfileid: "122785653"
 landingContent:
 - title: Kullanmaya başlayın
   linkLists:
@@ -35,7 +35,7 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Angular Oluşturma
+    - text: Angular Uygulaması Oluşturma
       url: tutorial-create-angular-app.md?view=vs-2022
     - text: React Oluşturma
       url: tutorial-create-react-app.md

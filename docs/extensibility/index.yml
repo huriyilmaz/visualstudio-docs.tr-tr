@@ -8,15 +8,15 @@ metadata:
   ms.date: 02/24/2020
   author: madskristensen
   ms.author: madsk
-  manager: jillfra
+  manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: 1c39405b7dbece5145427173431ea4d3363d165e93dbb9928441c5d676b88696
-  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+  ms.openlocfilehash: cc63b6d9b96e297b985e2eb3afe6a654e18b6a00
+  ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/12/2021
-  ms.locfileid: "121359812"
+  ms.lasthandoff: 08/24/2021
+  ms.locfileid: "122785915"
 landingContent:
 - title: Başlarken
   linkLists:

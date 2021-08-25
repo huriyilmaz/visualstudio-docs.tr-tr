@@ -4,18 +4,18 @@ metadata:
   title: Azure Geliştirme
   description: Uygulama ve hizmetleri Azure’a bağlama ve Azure hizmetleri geliştirmeye ilişkin öğreticiler ve kavramsal makaleler.
   author: ghogen
-  manager: jillfra
+  manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-azure
   ms.topic: landing-page
   ms.date: 12/05/2019
   ms.author: ghogen
-  ms.openlocfilehash: 18b59cf46e5a4c35b543c48cba60ae5135b91379
-  ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+  ms.openlocfilehash: c0edb595d8e03495c43c76cd191dcf3ab01c4341
+  ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/13/2021
-  ms.locfileid: "122082432"
+  ms.lasthandoff: 08/24/2021
+  ms.locfileid: "122785640"
 landingContent:
 - title: Azure App Service'e dağıtma
   linkLists:
