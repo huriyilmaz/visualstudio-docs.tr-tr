@@ -2,7 +2,7 @@
 title: Visual Studio kaldır
 titleSuffix: ''
 description: Visual Studio bilgisayarınızdan tamamen kaldırmayı öğrenin, adım adım.
-ms.date: 08/17/2021
+ms.date: 08/24/2021
 ms.custom: seodec18
 ms.topic: how-to
 f1_keywords:
@@ -22,12 +22,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 82545d775d03b13ce87ea11682124f43e70856cf
-ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
+ms.openlocfilehash: 4662eb0470811e3cf4047e1d51106734369ddf34
+ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "122334706"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122785734"
 ---
 # <a name="remove-visual-studio"></a>Visual Studio kaldır
 
@@ -40,10 +40,10 @@ Visual Studio çok önemli bir hatayla karşılaşırsanız ve `InstallCleanup.e
 
 Araçla aşağıdaki komut satırı anahtarlarından birini kullanabilirsiniz `InstallCleanup.exe` :
 
-| Anahtar | Davranış                                                                                                                                                                                                                                                                                                                 |
-|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `-i`   | Başka bir anahtar geçirilmezse bu anahtar varsayılandır. Yalnızca ana yükleme dizinini ve ürün bilgilerini kaldırır. aracı çalıştırdıktan sonra aynı Visual Studio sürümünü yeniden yüklemek istiyorsanız bu anahtarı kullanın `InstallCleanup.exe` .                                                              |
-| `-f`   | bu anahtar, ana yükleme dizinini, ürün bilgilerini ve yükleme dizini dışında yüklenen diğer birçok özelliği kaldırır, diğer Visual Studio yüklemeleri veya diğer ürünlerle de paylaşılabilir. daha sonra yeniden yüklemeden Visual Studio kaldırmak istiyorsanız bu anahtarı kullanın. |
+| Anahtar | Davranış |
+|-----------------|--------------------|
+|  `-i [version]`   | Başka bir anahtar geçirilmezse bu anahtar varsayılandır. Yalnızca ana yükleme dizinini ve ürün bilgilerini kaldırır. aracı çalıştırdıktan sonra aynı Visual Studio sürümünü yeniden yüklemek istiyorsanız bu anahtarı kullanın `InstallCleanup.exe` . Bir `[version]` değer belirtilmişse, yalnızca bu dize değeriyle başlayan bir sürümü olan ürünler kaldırılır. |
+|   `-f`           | bu anahtar, ana yükleme dizinini, ürün bilgilerini ve yükleme dizini dışında yüklenen diğer birçok özelliği kaldırır, diğer Visual Studio yüklemeleri veya diğer ürünlerle de paylaşılabilir. daha sonra yeniden yüklemeden Visual Studio kaldırmak istiyorsanız bu anahtarı kullanın. |
 
 Aracın nasıl çalıştırılacağı aşağıda verilmiştir `InstallCleanup.exe` :
 

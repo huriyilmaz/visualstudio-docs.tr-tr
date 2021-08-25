@@ -6,14 +6,14 @@ ms.date: 06/11/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
-ms.manager: jillfra
+ms.manager: jmartens
 monikerRange: <=vs-2019
-ms.openlocfilehash: 1a5191febfa4913316e120ef5d4c0d3fdf2f48bc3d44b68594580800b730d4a7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fd95da37fc0f6dcf5d7c735bc1e8b1afe050b9f8
+ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121233933"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122785747"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Ekip Gezgini'nde projelere bağlanma
 
