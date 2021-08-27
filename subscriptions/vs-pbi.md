@@ -1,89 +1,89 @@
 ---
-title: Power BI Pro Visual Studio aboneliklerde avantaj | Microsoft Docs
+title: Power BI Pro Abonelikler Visual Studio avantajı | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
-ms.date: 03/17/2021
+ms.date: 08/26/2021
 ms.topic: how-to
-description: seçili Visual Studio aboneliklerine dahil Power BI Pro aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 6e5e5faa7a8d42ea8524237e6f337db986e8dd1cdf6194b7ff5efec7d36150d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+description: Seçili aboneliklere Power BI Pro aboneliği hakkında bilgi Visual Studio edinin.
+ms.openlocfilehash: 92a276deaebd7f0d008caca6dc1fad24b4e9542e
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121265424"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122980655"
 ---
-# <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Power BI Pro
+# <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Power BI Pro aboneliklerde Visual Studio seçin
 
-Verilerinizi toplayıp organize etmeniz için zengin görsellere dönüştürün.
+Toplamanız ve düzenlemeniz için verilerinizi zengin görsellere dönüştürebilirsiniz.
 
 > [!Note]
-> bu Power BI lisansı, daha büyük üretim/geliştirme ve Test ortamlarını etkilemeden Power BI yeteneklerini güvenli bir yerde öğrenmek ve denemek için kullanılabilir hale getirilir.  Power BI geçerli teklifi, abonenin ayırmayı zorlamak için kendi kiracılarını oluşturmasını gerektirir. şirket kiracınızdaki kurumsal kimlik bilgilerinizle ilişkili bir Power BI lisansınızın olması gerekiyorsa lütfen bir lisans satın alıp atamak için şirket yöneticinizle birlikte çalışın.
+> Bu Power BI, daha büyük Üretim/Geliştirme/Test ortamlarını etkilemeden güvenli bir yerde, Power BI özellikleri hakkında bilgi edinmek ve denemeler yapmak için kullanılabilir.  Ayrımı zorlamak için geçerli teklif Power BI abonenin kendi kiracısına Power BI veya yeni bir kiracı oluşturması gerekir. Şirket kiracınız içinde şirket Power BI ilişkili bir lisansa sahip olmak gerekirse lütfen lisans satın almak ve atamak için şirket yöneticinizle birlikte çalışın.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
-Power BI Pro kullanmak için, bir hesap ayarlamanız veya mevcut bir hesabı kullanarak oturum açmanız gerekir.
+Bu Power BI Pro kullanmak için bir hesap ayarlamanız veya var olan bir hesabı kullanarak oturum açmanız gerekir.
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
-2. avantajlar sayfasındaki araçlar bölümünde Power BI Pro kutucuğunu bulun. Avantaj kutucuğunun altındaki **kodu al** bağlantısına tıklayın.   Kodun başarıyla alındığını belirten bir bildirim alırsınız.  **Etkinleştir**' e tıklayın.
+2. Avantajlar Power BI Pro Araçlar bölümünde aşağıdaki kutucuğu bulun. Avantaj **kutucuğunun** altındaki Kod Al bağlantısına tıklayın.   Kodun başarıyla alınmıştır bildirimi alırsınız.  **Etkinleştir'e tıklayın.**
    > [!div class="mx-imgBorder"]
-   > ![Power BI Pro Avantaj kutucuğu](_img/vs-pbi/vs-pbi-tile.png "Power BI Pro kutucuğunda, başlamak için ' kodu al ' ve sonra ' etkinleştir ' seçeneğine tıklayın.")
+   > ![Power BI Pro Avantaj Kutucuğu](_img/vs-pbi/vs-pbi-tile.png "Power BI Pro kutucuğunda, başlamak için ' kodu al ' ve sonra ' etkinleştir ' seçeneğine tıklayın.")
 
-3. Microsoft 365 geliştirici aboneliği veya Enterprise Mobility + Security gibi bazı abonelik avantajlarını etkinleştirdiyseniz zaten bir hesabınız olabilir.  mevcut bir hesap bulunursa, mevcut hesabınıza Power BI Pro aboneliğinizi ekleme veya yeni bir hesap için kaydolma seçeneğiniz vardır.  Farklı avantajlarınıza tek bir Kullanıcı KIMLIĞIYLE erişebilmek için, bunu mevcut hesabınıza eklemeniz önemle tavsiye ederiz.
+3. Microsoft 365 Developer Subscription veya Enterprise Mobility + Security gibi bazı abonelik avantajlarını etkinleştirdikten sonra zaten bir hesabınız Enterprise Mobility + Security.  Mevcut bir hesap bulunursa, mevcut hesabınıza Power BI Pro aboneliğinizi ekleme veya yeni bir hesap için kaydolma seçeneğine sahip olurnuz.  Tek bir kullanıcı kimliğiyle çeşitli avantajlarınıza erişebilirsiniz.
    > [!div class="mx-imgBorder"]
-   > ![Power BI Pro Mevcut hesap avantajını](_img/vs-pbi/vs-pbi-existing-account.png "varsa, var olan hesabınıza Power BI Pro ekleyin.")
+   > ![Power BI Pro Mevcut Hesap avantajı](_img/vs-pbi/vs-pbi-existing-account.png "varsa, var olan hesabınıza Power BI Pro ekleyin.")
 
-4. Yeni bir hesap oluşturmak için, iletişim bilgilerinizi girip **İleri**' ye tıklayın.
+4. Yeni bir hesap oluşturmak için, iletişim bilginizi sildiniz ve ardından Sonraki'ye **tıklayın.**
 
-5. Sonra, Kullanıcı KIMLIĞINIZI ve parolanızı oluşturun.  Zaten bir hesabınız varsa ve yeni bir hesap oluşturuyorsanız, mevcut hesapta kullanılandan farklı bir şirket adı sağlamanız gerekir.  **Hesabımı oluştur**' a tıklayın.
+5. Ardından kullanıcı kimliği ve parolanızı oluşturun.  Zaten bir hesabınız varsa ve yeni bir hesap oluşturuyorsanız, mevcut hesapta kullanılandan farklı bir şirket adı sağlamış olursanız.  Hesabımı **oluştur'a tıklayın.**
    > [!div class="mx-imgBorder"]
-   > ![Power BI Pro Avantaj Kullanıcı kimliği oluşturma](_img/vs-pbi/vs-pbi-create-user-id-cropped.png "Yeni hesaplar için bir kullanıcı KIMLIĞI ve parola girin.")
+   > ![Power BI Pro Avantaj KullanıcıKimlik Oluşturma](_img/vs-pbi/vs-pbi-create-user-id-cropped.png "Yeni hesaplar için bir kullanıcı KIMLIĞI ve parola girin.")
 
-6. Gerçek bir kişinin hesap oluşturduğundan emin olmak için sizden bir onay kodu girmenizi isteyeceğiz.  Lütfen bir telefon numarası girin ve bir telefon araması veya kısa mesaj yoluyla kodunuzu alıp almamanız seçin.  **Bana metin** olarak tıklayın veya **beni çağırın**.
+6. Gerçek bir kişinin hesap oluşturması için sizden bir onay kodu girmenizi isteriz.  Lütfen bir telefon numarası girin ve kodunuzu telefon çağrısı veya kısa mesajla mı alasınız?  Bana **Kısa Mesaj At veya** Beni **Ara'ya tıklayın.**
    > [!div class="mx-imgBorder"]
-   > ![Power BI Pro Bir robot değil avantajı](_img/vs-pbi/vs-pbi-robot1-cropped.png "Onay kodunuzu almak için ' metin Me ' veya ' beni çağır ' seçeneğini belirleyin.")
+   > ![Power BI Pro Robot değil avantaj](_img/vs-pbi/vs-pbi-robot1-cropped.png "Onay kodunuzu almak için ' metin Me ' veya ' beni çağır ' seçeneğini belirleyin.")
 
-7. Aldığınız kodu girin ve **İleri**' ye tıklayın.
+7. Size gelen kodu girin ve Sonraki'ye **tıklayın.**
 
-8. İletişim bilgilerinizi girip **İleri**' ye tıklayın.
+8. İletişim bilginizi stiklanin ve ardından Sonraki 'ye **tıklayın.**
    > [!div class="mx-imgBorder"]
-   > ![Power BI Pro Avantaj Iletişim bilgileri](_img/vs-pbi/vs-pbi-contact-cropped.png "Hesabınız için iletişim bilgilerinizi sağlayın.")
+   > ![Power BI Pro Avantaj İletişim Bilgileri](_img/vs-pbi/vs-pbi-contact-cropped.png "Hesabınız için iletişim bilgilerinizi sağlayın.")
 
-9. sonraki sayfa Power BI Pro geliştirici (MSDN) aboneliğinizin $0,00 fiyatı olduğunu doğrulayacaktır.  **İleri**’ye tıklayın.
+9. Sonraki sayfada, Power BI Pro Developer (MSDN) aboneliğinizin 0,00 ABD doları fiyatı olduğunu onaylar.  **İleri**’ye tıklayın.
 
-10. Son olarak, bazı ödeme bilgilerini toplayacağız.  Endişelenmeyin, hiçbir şey ücretlendirilmezsiniz.  Fiyatın hala $0,00 olduğuna dikkat edin.  Bir kredi kartı, banka hesabı veya fatura bir ödeme formu olarak seçebilirsiniz.  **Fatura**' yı seçerseniz, bu ödeme yöntemini neden tercih edemediğiniz hakkında bazı geri bildirimler istenebilir.  Lütfen tercih ettiğiniz ödeme yönteminiz için istenen bilgileri sağlayın ve **siparişi yerleştir**' e tıklayın.
+10. Son olarak, bazı ödeme bilgilerini toplayabilriz.  Endişelenmeyin; herhangi bir ücret ödemezsiniz.  Fiyatın hala 0,00 ABD doları olduğunu fark ediyor.  Ödeme biçimi olarak kredi kartı, banka hesabı veya fatura seçebilirsiniz.  Fatura **'yi seçerseniz,** neden bu ödeme yöntemini tercih ettiğine yönelik geri bildirim istenebilirsiniz.  Lütfen tercih ettiğiniz ödeme yöntemi için istenen bilgileri sağlayarak Sipariş **ekle'ye tıklayın.**
     > [!div class="mx-imgBorder"]
-    > ![Power BI Pro Avantaj Ödemant bilgileri](_img/vs-pbi/vs-pbi-payment-blurred-cropped.png "Ödeme yönteminizi seçin.  Bu teklif için ücretlendirilmeyecek olduğunu unutmayın.")
+    > ![Power BI Pro Paymant Bilgileri](_img/vs-pbi/vs-pbi-payment-blurred-cropped.png "Ödeme yönteminizi seçin.  Bu teklif için ücretlendirilmeyecek olduğunu unutmayın.")
 
-11. Sonraki sayfa, Power BI Pro kullanmaya başlamak için ayarlandığınızı onaylar.  Bu sayfa, oturum açma sayfasına bir bağlantı sağlar.  Bağlantı, oturum açma sayfasının yanı sıra Kullanıcı KIMLIĞINIZ için de kaydedilmesini öneririz.  (Ayrıca, hesabı ayarlarken verdiğiniz adreste bir hoş geldiniz e-postası da alacaksınız.)  sorularınız varsa kullanabileceğiniz otomatik bir Microsoft 365 yardımcısı penceresi de görebilirsiniz.  Devam etmeye **başlayın ' a** tıklayın.
+11. Sonraki sayfada, tüm girişlerini kullanmaya başlamaya hazır Power BI Pro.  Sayfa, oturum açma sayfasına bir bağlantı sağlar.  Oturum açma sayfasının bağlantısını ve kullanıcı kimliğini kaydetmenizi öneririz.  (Ayrıca, hesabı ayar bulundurarak adreste bir hoş geldiniz e-postası alırsınız.)  Ayrıca, sorularınız varsa kullanabileceğiniz Microsoft 365 otomatik bir Microsoft 365 Yardımcısı penceresi de görebilirsiniz.  Devam **etmek için Şimdi başla'ya** tıklayın.
 
-12. Power BI Pro hesabınız ayarlandığına göre, kullanıcı ve etki alanlarını yönetebileceğiniz, Office yazılım yükleyebileceğiniz ve Microsoft 365 hakkında bilgi edinmek için Microsoft 365 Yönetici merkezini görürsünüz.  Bu kadar!  Başlamaya hazırsınız.
+12. Power BI Pro hesabınız ayar bulunduğuna göre kullanıcıları Microsoft 365 Yönetici ve etki alanlarını yönetebilirsiniz, Office yazılımını yükleyebilir ve Microsoft 365 hakkında bilgi edinebilirsiniz.  Bu kadar!  Hazır mısınız?
 
-## <a name="eligibility"></a>Önceliği
+## <a name="eligibility"></a>Uygunluk
 
-| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
+| Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes|
-| GitHub Enterprise aboneliği Visual Studio Enterprise  | VL | Kullanılabilir       |  Yes|
-| Visual Studio Professional (standart, aylık bulut) | VL, Azure, perakende                                       | Kullanılamaz                                                            |NA         |
-| GitHub Enterprise aboneliği Visual Studio Professional | VL                                      | Kullanılamaz                                                            |NA         |
-| Visual Studio Test Professional (standart)                         | VL, perakende                                              | Kullanılamaz                                                            |NA         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir       |  Yes|
+| Visual Studio Enterprise (Standart)   | VL, Azure, Perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes|
+| Visual Studio Enterprise ile abonelik GitHub Enterprise  | VL | Kullanılabilir       |  Yes|
+| Visual Studio Professional (Standart, aylık bulut) | VL, Azure, Perakende                                       | Kullanılamaz                                                            |NA         |
+| Visual Studio Professional ile abonelik GitHub Enterprise | VL                                      | Kullanılamaz                                                            |NA         |
+| Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | Kullanılamaz                                                            |NA         |
+| MSDN Platformları (Standart)                                          | VL, Perakende                                              | Kullanılabilir       |  Yes|
 | Visual Studio Enterprise (aylık bulut) | Azure                                       | Kullanılamaz                                  |NA|
 ||
 
-<sup>1</sup>*şunları içerir: for satıs (nfr), Visual Studio sektör ortağı (vsıp), BizSpark, mct software & Services geliştiricisi, mct software & Service, en değerli Professional (MVP), bölgesel yönetmen (RD).  dışlar: Microsoft İş Ortağı Ağı (mpn), fte, Imagine, nfr Basic.*  
+<sup>1</sup>*Şunları içerir: Resale (NFR), Visual Studio Industry Partner (VSIP), BizSpark, MCT Software & Services Developer, MCT Software & Service, Most Valuable Professional (MVP), Regional Director (RD).  Dışlar: Microsoft İş Ortağı Ağı (MPN), FTE, Imagine, NFR Basic.*  
 
 > [!NOTE]
-> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)Visual Studio satın alma konusunda farklı seçenekleri araştırmak için yeni müşterilerin ' e gitmesi önerilir.
+> Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
 
-Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)e-posta adresinize atanan tüm abonelikleri görmek için Bağlan. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) e-posta adresinize atanan tüm abonelikleri görmek için adresine tıklayın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla aboneliğiniz olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-### <a name="q--if-the-benefit-is-free-why-do-i-have-to-supply-a-credit-card-number"></a>S: avantaj ücretsizdir, neden kredi kartı numarası sağlamam gerekir?
-Y: avantaj ücretsizdir, ancak etkinleştirme ücretli siparişleri işlemek için kullanılan sistemi kullanır.  İki ödeme türü mevcuttur.
-- Kredi kartı.  Kredi kartı numarası sağlarsanız, kartınız ücretlendirilmeyecektir.
-- Faturalayabilirsiniz.  Ödeme türü olarak "fatura" seçeneğini belirlerseniz, kredi kartı numarası sağlamanız gerekmez.  Aralığı "yıllık" olarak da ayarlayabilirsiniz.  Bu şekilde, bir faturanın sizin için hazırlanmaya yönelik olduğunu bilmenizi sağlayan tek bir e-posta alacaksınız.  Fatura miktarı $0,00 olacaktır.
+### <a name="q--if-the-benefit-is-free-why-do-i-have-to-supply-a-credit-card-number"></a>S: Avantaj ücretsizse neden kredi kartı numarası sağlamak zorunda musunuz?
+A: Avantajı ücretsizdir, ancak etkinleştirme, ücretli siparişleri işlemede kullanılan sistemi kullanır.  İki ödeme türü vardır.
+- Kredi kartı.  Kredi kartı numarası sağlarsanız kartınız ücret ödemeZ.
+- Fatura.  Ödeme türü olarak "Fatura" seçeneğiniz varsa kredi kartı numarası sağlamanız gerekli değil.  Aralığı "yıllık" olarak da ayarlayın.  Bu şekilde, faturanın sizin için hazır olduğunu size haber alan tek bir e-posta alırsınız.  Fatura tutarı 0,00 ABD doları olur.
 
 ### <a name="q--is-the-power-bi-pro-benefit-included-in-my-subscription-licensed-for-use-in-a-production-environment"></a>s: bir üretim ortamında kullanılmak üzere lisanslanmy aboneliğime dahil Power BI Pro avantajı mı var?
 Y: Evet, iki önemli uyarılarla onu bir üretimde kullanabilirsiniz:

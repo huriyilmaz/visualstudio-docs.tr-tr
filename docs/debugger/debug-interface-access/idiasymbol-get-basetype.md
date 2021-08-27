@@ -1,5 +1,6 @@
 ---
-title: IDiaSymbol::get_baseType | Microsoft Docs
+title: IDiaSymbol::get_baseType
+description: Bu simge için temel türü alma
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: eb60845afddae32351cef3bdbb8ca302bc02a886
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: f3fe85f37d75db8a86f544908e23a0a229992e89
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036242"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122980488"
 ---
 # <a name="idiasymbolget_basetype"></a>IDiaSymbol::get_baseType
-Bu sembol için temel türü<em>alınır.</em>
+Bu simge için temel türü alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,7 +44,7 @@ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kod
 > dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bir sembolün temel türü, önce sembolün türünü alma ve ardından temel tür için döndürülen tür sorgulandırarak belirlenecektir. Bazı sembollerin temel türü (yapı adı gibi) olmadığını unutmayın.
+Bir simgenin temel türü, önce sembolün türünü alma ve ardından temel tür için döndürülen türü sorgulama ile belirlenecektir. Bazı sembollerin bir temel türü (yapı adı gibi) olmadığını unutmayın.
 
 ## <a name="example"></a>Örnek
 

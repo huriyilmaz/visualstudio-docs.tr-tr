@@ -14,16 +14,16 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: cde476569626270fb7c27f6e49abe8b33a953751
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 46330c69b89b297b82ce70d3fb6eb0b7bd7d95df
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122026726"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122981079"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio kullanarak Office için VSTO Eklentileri oluşturma
 > [!IMPORTANT]
-> VSTO [.NET Framework](https://docs.microsoft.com/dotnet/framework/get-started/overview)bağlıdır. COM eklentileri de .NET Framework yazılabilir. Office Eklentiler .net [Core ve .NET 5 +](https://docs.microsoft.com/dotnet/core/dotnet-five)ile birlikte oluşturulamaz ve en son .net sürümleridir. bunun nedeni, .net Core/. NET 5 + ' ın aynı işlemde .NET Framework birlikte çalışamadığı ve eklenti yükleme hatalarına neden olabilir. Office için VSTO ve COM eklentilerini yazmak üzere .NET Framework kullanmaya devam edebilirsiniz. Microsoft, .net Core veya .net 5 + kullanacak şekilde VSTO veya COM eklentisi platformunu güncelleştirmemelidir. [Office Web](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)eklentilerinin sunucu tarafını oluşturmak için ASP.NET Core dahil .net Core ve .net 5 + avantajlarından faydalanabilirsiniz.
+> VSTO [.NET Framework](/dotnet/framework/get-started/overview)bağlıdır. COM eklentileri de .NET Framework yazılabilir. Office Eklentiler .net [Core ve .NET 5 +](/dotnet/core/dotnet-five)ile birlikte oluşturulamaz ve en son .net sürümleridir. bunun nedeni, .net Core/. NET 5 + ' ın aynı işlemde .NET Framework birlikte çalışamadığı ve eklenti yükleme hatalarına neden olabilir. Office için VSTO ve COM eklentilerini yazmak üzere .NET Framework kullanmaya devam edebilirsiniz. Microsoft, .net Core veya .net 5 + kullanacak şekilde VSTO veya COM eklentisi platformunu güncelleştirmemelidir. [Office Web](/office/dev/add-ins/overview/office-add-ins)eklentilerinin sunucu tarafını oluşturmak için ASP.NET Core dahil .net Core ve .net 5 + avantajlarından faydalanabilirsiniz.
 
   Office genişleten .NET Framework uygulamalar oluşturmak için Visual Studio Microsoft Office geliştirici araçlarını kullanabilirsiniz. bu uygulamalar *Office çözümleri* olarak da adlandırılır.
 

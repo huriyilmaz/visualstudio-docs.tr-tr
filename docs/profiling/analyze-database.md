@@ -11,23 +11,23 @@ ms.author: esherrer
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: a8518e3f43bec3a9d5f696a07613dee84829dbc2
-ms.sourcegitcommit: a436ba564717b992eb1984b28ea0aec801eacaec
+ms.openlocfilehash: 758fad160bad89b5e8a4305bf4757302b05732e1
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98205469"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122981092"
 ---
 # <a name="analyze-database-performance-using-the-database-tool"></a>Veritabanı aracını kullanarak veritabanı performansını çözümleme
 
 Tanılama oturumu sırasında uygulamanızın yaptığı veritabanı sorgularını kaydetmek için veritabanı aracını kullanın. Daha sonra, uygulamanızın performansını iyileştirecek yerleri bulmak üzere ayrı sorgular hakkındaki bilgileri çözümleyebilirsiniz.
 
 > [!NOTE]
-> Veritabanı aracı, [ADO.net]( https://docs.microsoft.com/dotnet/framework/data/adonet/ado-net-overview) veya [Entity Framework Core](/ef/core/)kullanarak Visual Studio 2019 sürüm 16,3 veya üstünü ve Windows üzerinde .NET Core projesi gerektirir.
+> veritabanı aracı, [ADO.NET](/dotnet/framework/data/adonet/ado-net-overview) veya [Entity Framework Core](/ef/core/)kullanarak Windows Visual Studio 2019 sürüm 16,3 veya üzeri ve bir .net Core projesi gerektirir.
 
 ## <a name="setup"></a>Kurulum
 
-1. Visual Studio 'da performans profil oluşturucuyu açmak için **alt + f2** ' yi seçin.
+1. Visual Studio ' de performans profil oluşturucuyu açmak için **alt + f2** ' yi seçin.
 
 1. **Veritabanı** onay kutusunu seçin.
 

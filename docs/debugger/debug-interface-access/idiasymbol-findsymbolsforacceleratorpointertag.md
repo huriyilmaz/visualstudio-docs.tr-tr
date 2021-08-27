@@ -1,5 +1,5 @@
 ---
-description: C++ AMP saplama işlevindeki hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.
+description: Karşılık gelen bir etiket değeri verildiğinde, bu yöntem bu saplama işlevinde bulunan simgelerin bir listesini döndürür.
 title: 'IDiaSymbol:: Findsymbolsforivatorpointertag | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,15 +12,16 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 31dbdad20ec5d00ee08e817cfd0beebd3e02a994
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: b5ccf90584cfc948fc4ecb886dd20ada5cbf6036
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122097807"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122980702"
 ---
 # <a name="idiasymbolfindsymbolsforacceleratorpointertag"></a>IDiaSymbol::findSymbolsForAcceleratorPointerTag
-C++ AMP saplama işlevindeki hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.
+
+Karşılık gelen bir etiket değeri verildiğinde, bu yöntem bu saplama işlevinde bulunan simgelerin bir listesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 

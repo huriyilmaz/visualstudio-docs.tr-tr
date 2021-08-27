@@ -1,6 +1,6 @@
 ---
 title: Desen eşleştirme kullanma
-description: C# desen eşleştirmeyi kullanmayı öğrenin.
+description: C# düzeniyle eşleştirmeyi nasıl kullanacağınızı öğrenin.
 ms.date: 11/03/2020
 ms.topic: reference
 author: mikadumont
@@ -11,30 +11,30 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93b5541ace035fb9606355865974657faf83ec32
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: fb989c2ba3567e161f3576a6a654f0f27f9b55a3
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122116870"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122980923"
 ---
 # <a name="use-pattern-matching"></a>Desen eşleştirme kullanma
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
-**Ne:** Desen eşleştirmeyi kullanın.
+**Ne:** Model eşleştirmeyi kullanın.
 
-**Ne zaman:** Yeni [C#](https://docs.microsoft.com/dotnet/csharp/whats-new/csharp-9#pattern-matching-enhancements) desen eşleştirme özelliklerini kullanmak istediğiniz.
+**Ne zaman:** Yeni [C# deseninin eşleşen](/dotnet/csharp/whats-new/csharp-9#pattern-matching-enhancements) yeteneklerini kullanmak istiyorsunuz.
 
-**Neden:** Bu yeniden düzenleme, kodunuzu daha net ve kısa hale gelecektir.
+**Neden:** Bu yeniden düzenleme, kodunuzu daha net ve kısa hale getirir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Caret'inizi deyiminin içine girin.
+1. Giriş işaretini deyimin içine yerleştirin.
 
-2. **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
 3. **Desen eşleştirme kullan**'ı seçin.
 

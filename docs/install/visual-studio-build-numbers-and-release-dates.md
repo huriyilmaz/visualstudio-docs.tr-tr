@@ -12,12 +12,12 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 18f7da8bf8c3e2bd115891a5fb6a49f5381aacff
-ms.sourcegitcommit: 27cf209a0f9bb8579fee2066ef46d03a74f18dd7
+ms.openlocfilehash: caf09654a3e1efa6e0743641c87bfea455acb649
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2021
-ms.locfileid: "122233799"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122981066"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio derleme numaraları ve yayın tarihleri
 
@@ -25,7 +25,7 @@ ms.locfileid: "122233799"
 
 ## <a name="visual-studio-2022-preview"></a>Visual Studio 2022 Preview
 
-Aşağıdaki tabloda, 2022 Preview sürümü için Visual Studio numaraları ve yayın tarihleri listelemektedir.
+Aşağıdaki tabloda, Visual Studio 2022 Preview sürümü için derleme numaraları ve yayın tarihleri listelemektedir.
 
 | **Sürüm**| **Kanal** | **Sürüm tarihi** | **Derleme sürümü** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
@@ -49,6 +49,7 @@ Aşağıdaki tabloda, 2019'dan bugüne kadar Visual Studio numaraları ve yayın
 
 | **Sürüm**| **Kanal** | **Sürüm tarihi** | **Derleme sürümü** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.11.2 | Yayınla | 25 Ağustos 2021 | 16.11.31624.102 |
 | 16.11.1 | Yayınla | 16 Ağustos 2021 | 16.11.31613.86 |
 | 16.11.0 | Yayınla | 10 Ağustos 2021 | 16.11.31605.320 |
 | 16.9.10 | Yayınla | 10 Ağustos 2021 | 16.9.31529.145|
@@ -75,7 +76,7 @@ Aşağıdaki tabloda, 2019'dan bugüne kadar Visual Studio numaraları ve yayın
 | 16.9.5 | Yayınla | 11 Mayıs 2021 | 16.9.31229.75 |
 | 16.7.15 | Yayınla | 11 Mayıs 2021 | 16.7.31229.181 |
 | 16.4.22| Yayınla | 11 Mayıs 2021 | 16.4.31229.387 |
-| 16.10.0 | Önizleme 2,1 | 22 Nisan 2021 | 16.10.31220.234 |
+| 16.10.0 | Önizleme 2.1 | 22 Nisan 2021 | 16.10.31220.234 |
 | 16.10.0 | Önizleme 2 | 14 Nisan 2021 | 16.10.31213.239 |
 | 16.9.4 | Yayınla | 13 Nisan 2021 | 16.9.31205.134 |
 | 16.7.14 | Yayınla | 13 Nisan 2021 | 16.7.31205.176 |
@@ -119,15 +120,15 @@ Aşağıdaki tabloda, 2019'dan bugüne kadar Visual Studio numaraları ve yayın
 | 16.8.0 | Preview 4 | 13 Ekim 2020 | 16.8.30608.117 |
 | 16.0.19 | Yayınla | 13 Ekim 2020 | 16.0.28803.846 |
 | 16.4.14 | Yayınla | 13 Ekim 2020 | 16.4.30607.51 |
-| 16.8.0 | Önizleme 3,2 | 29 Eylül 2020 | 16.8.30524.135 |
+| 16.8.0 | Önizleme 3.2 | 29 Eylül 2020 | 16.8.30524.135 |
 | 16.7.5 | Yayınla | 29 Eylül 2020 |  16.7.30523.141 |
-| 16.8.0 | Önizleme 3,1 | 22 Eylül 2020 | 16.8.30516.212 |
+| 16.8.0 | Önizleme 3.1 | 22 Eylül 2020 | 16.8.30516.212 |
 | 16.7.4 | Yayınla | 21 Eylül 2020 | 16.7.30517.126 |
 | 16.8.0 | Preview 3 | 14 Eylül 2020 | 16.8.30509.190 |
 | 16.7.3 | Yayınla | 8 Eylül 2020 | 16.7.30503.244 |
 | 16.4.13 | Yayınla | 8 Eylül 2020 | 16.4.30427.197 |
 | 16.0.18 | Yayınla | 8 Eylül 2020 | 16.0.28803.826 |
-| 16.8.0 | Önizleme 2,1 | 31 Ağustos 2020 | 16.8.30428.66 |
+| 16.8.0 | Önizleme 2.1 | 31 Ağustos 2020 | 16.8.30428.66 |
 | 16.8.0 | Önizleme 2 | 25 Ağustos 2020 | 16.8.30420.98 |
 | 16.7.2 | Yayınla | 18 Ağustos 2020 | 16.7.30413.136 |
 | 16.7.1 | Yayınla | 11 Ağustos 2020 | 16.7.30406.217 |
@@ -143,7 +144,7 @@ Aşağıdaki tabloda, 2019'dan bugüne kadar Visual Studio numaraları ve yayın
 | 16.4.11 | Yayınla | 14 Temmuz 2020 | 16.4.30308.118 |
 | 16.0.16 | Yayınla | 14 Temmuz 2020 | 16.0.28803.791 |
 | 16.6.3 | Yayınla | 30 Haziran 2020 | 16.6.30225.117 |
-| 16.7.0 | Önizleme 3,1 | 25 Haziran 2020 | 16.7.30223.230 |
+| 16.7.0 | Önizleme 3.1 | 25 Haziran 2020 | 16.7.30223.230 |
 | 16.7.0 | Preview 3 | 23 Haziran 2020 | 16.7.30218.91 |
 | 16.0.15 | Yayınla | 9 Haziran 2020 | 16.0.28803.753 |
 | 16.6.2 | Yayınla | 9 Haziran 2020 | 16.6.30204.135 |
@@ -238,29 +239,29 @@ Aşağıdaki tabloda, 2019'dan bugüne kadar Visual Studio numaraları ve yayın
 | 16.0.1 | Önizleme 1 | 9 Nisan 2019 | 16.0.28803.156 |
 | 16.0.0 | Yayınla | 2 Nisan 2019 | 16.0.28729.10 |
 | 16.0.0 | Preview 5 | 2 Nisan 2019 | 16.0.28729.10 |
-| 16.0.0 | Sürüm Adayı 4 (RC.4) | 26 Mart 2019 | 16.0.28721.148 |
-| 16.0.0 | Önizleme 4.4 | 26 Mart 2019 | 16.0.28721.148 |
-| 16.0.0 | Sürüm Adayı 3 (RC.3) | 19 Mart 2019 | 16.0.28714.193 |
-| 16.0.0 | Önizleme 4.3 | 19 Mart 2019 | 16.0.28714.193 |
-| 16.0.0 | Sürüm Adayı 2 (RC.2) | 12 Mart 2019 | 16.0.28711.60 |
-| 16.0.0 | Önizleme 4.2 | 12 Mart 2019 | 16.0.28711.60 |
-| 16.0.0 | Sürüm Adayı 1 Svc1 (RC.1 Svc1) | 6 Mart 2019 | 16.0.28705.295 |
-| 16.0.0 | Önizleme 4.1 Svc1 | 6 Mart 2019 | 16.0.28705.295 |
-| 16.0.0 | Sürüm Adayı 1 (RC.1) | 5 Mart 2019 | 16.0.28701.123 |
-| 16.0.0 | Önizleme 4.1 | 5 Mart 2019 | 16.0.28701.123 |
-| 16.0.0 | Sürüm Adayı (RC) | 27 Şubat 2019 | 16.0.28625.133 |
+| 16.0.0 | Sürüm adayı 4 (RC. 4) | 26 Mart 2019 | 16.0.28721.148 |
+| 16.0.0 | Önizleme 4,4 | 26 Mart 2019 | 16.0.28721.148 |
+| 16.0.0 | Sürüm adayı 3 (RC. 3) | 19 Mart 2019 | 16.0.28714.193 |
+| 16.0.0 | Önizleme 4,3 | 19 Mart 2019 | 16.0.28714.193 |
+| 16.0.0 | Sürüm adayı 2 (RC. 2) | 12 Mart 2019 | 16.0.28711.60 |
+| 16.0.0 | Önizleme 4,2 | 12 Mart 2019 | 16.0.28711.60 |
+| 16.0.0 | Release Candidate 1 Svc1 (RC. 1 Svc1) | 6 Mart 2019 | 16.0.28705.295 |
+| 16.0.0 | Önizleme 4,1 Svc1 | 6 Mart 2019 | 16.0.28705.295 |
+| 16.0.0 | Sürüm adayı 1 (RC. 1) | 5 Mart 2019 | 16.0.28701.123 |
+| 16.0.0 | Önizleme 4,1 | 5 Mart 2019 | 16.0.28701.123 |
+| 16.0.0 | Sürüm adayı (RC) | 27 Şubat 2019 | 16.0.28625.133 |
 | 16.0.0 | Preview 4 | 27 Şubat 2019 | 16.0.28625.133 |
 | 16.0.0 | Preview 3 | 13 Şubat 2019 | 16.0.28608.199 |
-| 16.0.0 | Önizleme 2.2 | 5 Şubat 2019 | 16.0.28602.52 |
-| 16.0.0 | Önizleme 2.1 | 31 Ocak 2019 | 16.0.28529.54 |
+| 16.0.0 | Önizleme 2,2 | 5 Şubat 2019 | 16.0.28602.52 |
+| 16.0.0 | Önizleme 2,1 | 31 Ocak 2019 | 16.0.28529.54 |
 | 16.0.0 | Önizleme 2 | 23 Ocak 2019 | 16.0.28522.59 |
-| 16.0.0 | Önizleme 1.1 | 10 Aralık 2018 | 16.0.28408.50 |
+| 16.0.0 | Önizleme 1,1 | 10 Aralık 2018 | 16.0.28408.50 |
 | 16.0.0 | Önizleme 1 | 4 Aralık 2018 | 16.0.28329.73 |
 
 > [!NOTE]
-> Önceki sürüme göre verileri *görüntülemek* için [bkz. Visual Studio 2017 derleme numaraları ve yayın tarihleri.](visual-studio-build-numbers-and-release-dates.md?view=vs-2017&preserve-view=true)
+> *önceki* sürümün verilerini görüntülemek için, bkz. [Visual Studio 2017 derleme numaraları ve sürüm tarihleri](visual-studio-build-numbers-and-release-dates.md?view=vs-2017&preserve-view=true).
 >
->Sonraki sürüme göre verileri *görüntülemek* için [bkz. Visual Studio 2022](visual-studio-build-numbers-and-release-dates.md?view=vs-2022&preserve-view=true)derleme numaraları ve yayın tarihleri.
+>*sonraki* sürümün verilerini görüntülemek için, bkz. [Visual Studio 2022 derleme numaraları ve sürüm tarihleri](visual-studio-build-numbers-and-release-dates.md?view=vs-2022&preserve-view=true).
 
 ::: moniker-end
 
@@ -268,9 +269,9 @@ Aşağıdaki tabloda, 2019'dan bugüne kadar Visual Studio numaraları ve yayın
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-Aşağıdaki tabloda, 2017'den bugüne kadar Visual Studio numaraları ve yayın tarihleri listelemektedir.
+aşağıdaki tabloda Visual Studio 2017 için derleme numaraları ve sürüm tarihleri listelenmektedir.
 
-| **Sürüm**      | **Kanal** | **Sürüm tarihi**   | **Derleme sürümü** |
+| **Sürüm**      | **Kanal** | **Yayın tarihi**   | **Derleme sürümü** |
 |------------------|-------------|--------------------|-------------------|
 | 15.9.38          | Yayınla     | 10 Ağustos 2021    | 15.9.28307.1622   |
 | 15.9.37          | Yayınla     | 13 Temmuz 2021      | 15.9.28307.1585   |
@@ -327,31 +328,31 @@ Aşağıdaki tabloda, 2017'den bugüne kadar Visual Studio numaraları ve yayın
 | 15.9.0 Preview 4 | Önizleme     | 23 Ekim 2018   | 15.9.28219.56     |
 | 15.8.7           | Yayınla     | 10 Ekim 2018   | 15.8.28010.2046   |
 | 15.0.19          | Yayınla     | 10 Ekim 2018   | 15.0.26228.57     |
-| 15.9.0 Preview 3 | Önizleme     | 2 Ekim 2018    | 15.9.28128.56     |
+| 15.9.0 Önizleme 3 | Önizleme     | 2 Ekim 2018    | 15.9.28128.56     |
 | 15.8.6           | Yayınla     | 2 Ekim 2018    | 15.8.28010.2041   |
 | 15.8.5           | Yayınla     | 20 Eylül 2018 | 15.8.28010.2036   |
-| 15.9.0 Preview 2 | Önizleme     | 11 Eylül 2018 | 15.9.28107.0      |
+| 15.9.0 Önizleme 2 | Önizleme     | 11 Eylül 2018 | 15.9.28107.0      |
 | 15.8.4           | Yayınla     | 11 Eylül 2018 | 15.8.28010.2026   |
 | 15.8.3           | Yayınla     | 6 Eylül 2018  | 15.8.28010.2019   |
 | 15.8.2           | Yayınla     | 28 Ağustos 2018    | 15.8.28010.2016   |
 | 15.0.18          | Yayınla     | 28 Ağustos 2018    | 15.0.26228.52     |
-| 15.9.0 Preview 1 | Önizleme     | 20 Ağustos 2018    | 15.9.28016.0      |
+| 15.9.0 Önizleme 1 | Önizleme     | 20 Ağustos 2018    | 15.9.28016.0      |
 | 15.8.1           | Yayınla     | 17 Ağustos 2018    | 15.8.28010.2003   |
 | 15.8.0           | Yayınla     | 14 Ağustos 2018    | 15.8.28010.0      |
 | 15.0.17          | Yayınla     | 14 Ağustos 2018    | 15.0.26228.49     |
 | 15.7.6           | Yayınla     | 2 Ağustos 2018     | 15.7.27703.2047   |
 | 15.0.16          | Yayınla     | 2 Ağustos 2018     | 15.0.26228.48     |
-| 15.8.0 Preview 5 | Önizleme     | 26 Temmuz 2018      | 15.8.27924.0      |
-| 15.8.0 Preview 4 | Önizleme     | 10 Temmuz 2018      | 15.8.27906.1      |
+| 15.8.0 Önizleme 5 | Önizleme     | 26 Temmuz 2018      | 15.8.27924.0      |
+| 15.8.0 Önizleme 4 | Önizleme     | 10 Temmuz 2018      | 15.8.27906.1      |
 | 15.7.5           | Yayınla     | 10 Temmuz 2018      | 15.7.27703.2042   |
 | 15.0.15          | Yayınla     | 10 Temmuz 2018      | 15.0.26228.43     |
-| 15.8.0 Preview 3 | Önizleme     | 26 Haziran 2018      | 15.8.27825.0      |
+| 15.8.0 Önizleme 3 | Önizleme     | 26 Haziran 2018      | 15.8.27825.0      |
 | 15.7.4           | Yayınla     | 18 Haziran 2018      | 15.7.27703.2035   |
 | 15.7.3           | Yayınla     | 31 Mayıs 2018       | 15.7.27703.2026   |
 | 15.0.14          | Yayınla     | 31 Mayıs 2018       | 15.0.26228.37     |
-| 15.8.0 Preview 2 | Önizleme     | 31 Mayıs 2018       | 15.8.27729.1      |
+| 15.8.0 Önizleme 2 | Önizleme     | 31 Mayıs 2018       | 15.8.27729.1      |
 | 15.7.2           | Yayınla     | 21 Mayıs 2018       | 15.7.27703.2018   |
-| 15.8.0 Preview 1 | Önizleme     | 8 Mayıs 2018        | 15.8.27705.2000   |
+| 15.8.0 Önizleme 1 | Önizleme     | 8 Mayıs 2018        | 15.8.27705.2000   |
 | 15.7.1           | Yayınla     | 8 Mayıs 2018        | 15.7.27703.2000   |
 | 15.8.0 Önizleme 1 | Önizleme     | 7 Mayıs 2018        | 15.8.27705.0      |
 | 15.7.0           | Yayınla     | 7 Mayıs 2018        | 15.7.27703.1      |
@@ -377,31 +378,31 @@ Aşağıdaki tabloda, 2017'den bugüne kadar Visual Studio numaraları ve yayın
 | 15.6.0 Önizleme 6 | Önizleme     | 23 Şubat 2018  | 15.6.27421.1      |
 | 15.0.10          | Yayınla     | 21 Şubat 2018  | 15.0.26228.28     |
 | 15.5.7           | Yayınla     | 20 Şubat 2018  | 15.0.27130.2036   |
-| 15.6.0 Önizleme 5 | Önizleme     | 14 Şubat 2018  | 15.6.27413.0      |
-| 15.6.0 Önizleme 4 | Önizleme     | 7 Şubat 2018   | 15.6.27406.0      |
+| 15.6.0 Preview 5 | Önizleme     | 14 Şubat 2018  | 15.6.27413.0      |
+| 15.6.0 Preview 4 | Önizleme     | 7 Şubat 2018   | 15.6.27406.0      |
 | 15.0.9           | Yayınla     | 2 Şubat 2018   | 15.0.26228.23     |
 | 15.5.6           | Yayınla     | 29 Ocak 2018   | 15.0.27130.2027   |
 | 15.5.5           | Yayınla     | 25 Ocak 2018   | 15.0.27130.2026   |
-| 15.6.0 Önizleme 3 | Önizleme     | 25 Ocak 2018   | 15.6.27323.2      |
+| 15.6.0 Preview 3 | Önizleme     | 25 Ocak 2018   | 15.6.27323.2      |
 | 15.5.4           | Yayınla     | 16 Ocak 2018   | 15.0.27130.2024   |
-| 15.6.0 Önizleme 2 | Önizleme     | 10 Ocak 2018   | 15.6.27309.0      |
+| 15.6.0 Preview 2 | Önizleme     | 10 Ocak 2018   | 15.6.27309.0      |
 | 15.5.3           | Yayınla     | 9 Ocak 2018    | 15.0.27130.2020   |
 | 15.0.8           | Yayınla     | 9 Ocak 2018    | 15.0.26228.21     |
 | 15.5.2           | Yayınla     | 14 Aralık 2017  | 15.0.27130.2010   |
-| 15.6.0 Önizleme 1 | Önizleme     | 14 Aralık 2017  | 15.6.27205.2004   |
+| 15.6.0 Preview 1 | Önizleme     | 14 Aralık 2017  | 15.6.27205.2004   |
 | 15.5.1           | Yayınla     | 7 Aralık 2017   | 15.0.27130.2003   |
-| 15.6.0 Önizleme 1 | Önizleme     | 7 Aralık 2017   | 15.6.27205.0      |
+| 15.6.0 Preview 1 | Önizleme     | 7 Aralık 2017   | 15.6.27205.0      |
 | 15.0.7           | Yayınla     | 6 Aralık 2017   | 15.0.26228.18     |
 | 15.5.0           | Yayınla     | 4 Aralık 2017   | 15.0.27130.0      |
-| 15.5.0 Önizleme 5 | Önizleme     | 30 Kasım 2017  | 15.0.27128.1      |
+| 15.5.0 Preview 5 | Önizleme     | 30 Kasım 2017  | 15.0.27128.1      |
 | 15.4.5           | Yayınla     | 27 Kasım 2017  | 15.0.27004.2010   |
-| 15.5.0 Önizleme 4 | Önizleme     | 14 Kasım 2017  | 15.0.27110.0      |
+| 15.5.0 Preview 4 | Önizleme     | 14 Kasım 2017  | 15.0.27110.0      |
 | 15.4.4           | Yayınla     | 14 Kasım 2017  | 15.0.27004.2009   |
 | 15.0.6           | Yayınla     | 14 Kasım 2017  | 15.0.26228.17     |
 | 15.4.3           | Yayınla     | 8 Kasım 2017   | 15.0.27004.2008   |
-| 15.5.0 Önizleme 3 | Önizleme     | 6 Kasım 2017   | 15.0.27102.0      |
+| 15.5.0 Preview 3 | Önizleme     | 6 Kasım 2017   | 15.0.27102.0      |
 | 15.4.2           | Yayınla     | 31 Ekim 2017   | 15.0.27004.2006   |
-| 15.5.0 Önizleme 2 | Önizleme     | 23 Ekim 2017   | 15.0.27019.1      |
+| 15.5.0 Preview 2 | Önizleme     | 23 Ekim 2017   | 15.0.27019.1      |
 | 15.4.1           | Yayınla     | 19 Ekim 2017   | 15.0.27004.2005   |
 | 15.5 Önizleme 1   | Önizleme     | 11 Ekim 2017   | 15.0.27009.1      |
 | 15.4.0           | Yayınla     | 9 Ekim 2017    | 15.0.27004.2002   |
@@ -428,34 +429,34 @@ Aşağıdaki tabloda, 2017'den bugüne kadar Visual Studio numaraları ve yayın
 | 15.2.6           | Yayınla     | 17 Temmuz 2017      | 15.0.26430.16     |
 | 15.3 Önizleme 4   | Önizleme     | 12 Temmuz 2017      | 15.0.26711.1      |
 | 15.2.5           | Yayınla     | 6 Temmuz 2017       | 15.0.26430.15     |
-| 15.3 Önizleme 3   | Önizleme     | 26 Haziran 2017      | 15.0.26621.2      |
+| 15,3 Preview 3   | Önizleme     | 26 Haziran 2017      | 15.0.26621.2      |
 | 15.2.4           | Yayınla     | 21 Haziran 2017      | 15.0.26430.14     |
-| 15.3 Önizleme 2.1 | Önizleme     | 20 Haziran 2017      | 15.0.26608.5      |
+| 15,3 Preview 2,1 | Önizleme     | 20 Haziran 2017      | 15.0.26608.5      |
 | 15.2.3           | Yayınla     | 9 Haziran 2017       | 15.0.26430.13     |
-| 15.3 Önizleme 2   | Önizleme     | 8 Haziran 2017       | 15.0.26606.0      |
+| 15,3 Preview 2   | Önizleme     | 8 Haziran 2017       | 15.0.26606.0      |
 | 15.2.2           | Yayınla     | 30 Mayıs 2017       | 15.0.26430.12     |
 | 15.0.4           | Yayınla     | 23 Mayıs 2017       | 15.0.26228.13     |
 | 15.2.1           | Yayınla     | 12 Mayıs 2017       | 15.0.26430.6      |
-| 15.3 Önizleme 1.1 | Önizleme     | 11 Mayıs 2017       | 15.0.26510.0      |
-| 15.3 Önizleme 1   | Önizleme     | 10 Mayıs 2017       | 15.0.26507.0      |
+| 15,3 Preview 1,1 | Önizleme     | 11 Mayıs 2017       | 15.0.26510.0      |
+| 15,3 Preview 1   | Önizleme     | 10 Mayıs 2017       | 15.0.26507.0      |
 | 15.2.0           | Yayınla     | 10 Mayıs 2017       | 15.0.26430.4      |
-| 15.2 Önizleme 4   | Önizleme     | 3 Mayıs 2017        | 15.0.26430.1      |
-| 15.2 Önizleme 3   | Önizleme     | 26 Nisan 2017     | 15.0.26424.2      |
-| 15.2 Önizleme 2   | Önizleme     | 20 Nisan 2017     | 15.0.26419.1      |
-| 15.2 Önizleme 1   | Önizleme     | 17 Nisan 2017     | 15.0.26412.1      |
+| 15,2 Preview 4   | Önizleme     | 3 Mayıs 2017        | 15.0.26430.1      |
+| 15,2 Preview 3   | Önizleme     | 26 Nisan 2017     | 15.0.26424.2      |
+| 15,2 Preview 2   | Önizleme     | 20 Nisan 2017     | 15.0.26419.1      |
+| 15,2 Preview 1   | Önizleme     | 17 Nisan 2017     | 15.0.26412.1      |
 | 15.1.2           | Yayınla     | 17 Nisan 2017     | 15.0.26403.7      |
 | 15.1.1           | Yayınla     | 10 Nisan 2017     | 15.0.26403.3      |
 | 15.1.0           | Yayınla     | 5 Nisan 2017      | 15.0.26403.0      |
 | 15.0.3           | Yayınla     | 31 Mart 2017     | 15.0.26228.12     |
 | 15.0.2           | Yayınla     | 28 Mart 2017     | 15.0.26228.10     |
-| 15.1 Önizleme 3   | Önizleme     | 27 Mart 2017     | 15.0.26323.1      |
-| 15.1 Önizleme 2   | Önizleme     | 16 Mart 2017     | 15.0.26315.0      |
+| 15,1 Preview 3   | Önizleme     | 27 Mart 2017     | 15.0.26323.1      |
+| 15,1 Preview 2   | Önizleme     | 16 Mart 2017     | 15.0.26315.0      |
 | 15.0.1           | Yayınla     | 14 Mart 2017     | 15.0.26228.9      |
-| 15.1 Önizleme 1   | Önizleme     | 7 Mart 2017      | 15.0.26304.0      |
+| 15,1 Preview 1   | Önizleme     | 7 Mart 2017      | 15.0.26304.0      |
 | 15.0.0           | Yayınla     | 7 Mart 2017      | 15.0.26228.4      |
 
 > [!NOTE]
-> daha yeni sürümlere yönelik verileri görüntülemek için, [Visual Studio 2019 derleme numarası ve sürüm tarihleri](?preserve-view=true&view=vs-2019) veya [Visual Studio 2022 derleme numaraları ve sürüm tarihleri](?preserve-view=true&view=vs-2022)' ne bakın.
+> Daha yeni sürümlere yönelik verileri görüntülemek [için bkz. Visual Studio 2019](?preserve-view=true&view=vs-2019) derleme numaraları ve yayın tarihleri [veya Visual Studio 2022](?preserve-view=true&view=vs-2022)derleme numaraları ve yayın tarihleri.
 
 ::: moniker-end
 

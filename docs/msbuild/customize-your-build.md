@@ -1,6 +1,6 @@
 ---
 title: Derlemenizi özelleştirme | Microsoft Docs
-description: Standart derleme işlemini kullanan projeleri özelleştirmek için kullanabileceğiniz MSBuild genişletilebilirlik kancaları hakkında bilgi öğrenin.
+description: Standart derleme işlemini kullanan projeleri özelleştirmek için kullanabileceğiniz MSBuild genişletilebilirlik kancaları hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: conceptual
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: bf19be21d95c4ac271772e8101e0c077e5af7f55
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 89ea3e2b08507e2bf6724f12951e0a35d76dfd08
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122123365"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122980694"
 ---
 # <a name="customize-your-build"></a>Derlemenizi özelleştirme
 
@@ -31,7 +31,7 @@ Kaynak *dizininizin veya üzerindeki Bir Directory.Build.rsp* dosyası projenizi
 
 ## <a name="directorybuildprops-and-directorybuildtargets"></a>Directory.Build.props ve Directory.Build.targets
 
-Sürüm 15 MSBuild i oluşturmadan önce, çözümdeki projelere yeni, özel bir özellik sağlamak istediyebilirsiniz. Bu özellik için çözümdeki her proje dosyasına el ile başvuru eklemeniz gerekirdi. Veya özelliğini bir *.props* dosyasında tanımlamanız ve ardından çözümde yer alan her projede *.props* dosyasını açıkça içeri aktarmanız gerekirdi.
+Sürüm 15 MSBuild den önce, çözümünüzdeki projelere yeni, özel bir özellik sağlamak istediyebilirsiniz. Bu özellik için çözümdeki her proje dosyasına el ile başvuru eklemeniz gerekirdi. Ya da özelliğini *bir .props* dosyasında tanımlamanız ve ardından çözümde yer alan her projede *.props* dosyasını açıkça içeri aktarmanız gerekirdi.
 
 Ancak, artık bir adımda her projeye, kaynağınızı içeren kök klasörde *Directory.Build.props* adlı tek bir dosyada tanımlayarak yeni bir özellik ekebilirsiniz. Bu MSBuild *Microsoft.Common.props,* *Directory.Build.props* dosyası için dizin yapınızı arar *(ve Microsoft.Common.targets,* *Directory.Build.targets dosyasını arar).* Bir tane bulursa, özelliğini içeri aktarıyor. *Directory.Build.props,* bir dizin altındaki projelere özelleştirmeler sağlayan kullanıcı tanımlı bir dosyadır.
 
@@ -59,7 +59,7 @@ Ancak, artık bir adımda her projeye, kaynağınızı içeren kök klasörde *D
 
 ### <a name="search-scope"></a>Arama kapsamı
 
-*Bir Directory.Build.props* dosyasını ararken, MSBuild dizin yapısını proje konumunuzdan () yukarı doğru ilerler ve `$(MSBuildProjectFullPath)` Bir *Directory.Build.props* dosyasını bu bulunduktan sonra durduruluyor. Örneğin, `$(MSBuildProjectFullPath)` *c:\users\username\code\test\case1* ise MSBuild, aşağıdaki dizin yapısında olduğu gibi *bir Directory.Build.props* dosyasını bulana kadar dizin yapısını yukarı doğru aramaya başlar.
+*Bir Directory.Build.props* dosyasını ararken, MSBuild dizin yapısını proje konumunuzdan () yukarı doğru ilerler ve `$(MSBuildProjectFullPath)` Bir *Directory.Build.props* dosyasını bu bulunduktan sonra durduruluyor. Örneğin, `$(MSBuildProjectFullPath)` *c:\users\username\code\test\case1* ise MSBuild, aşağıdaki dizin yapısında olduğu gibi *bir Directory.Build.props* dosyası bulunana kadar dizin yapısını yukarı doğru aramaya başlar.
 
 ```
 c:\users\username\code\test\case1
@@ -83,7 +83,7 @@ c:\
 Bir özellik ayarlamanız veya önceki ayarları geçersiz kacak tek bir proje için hedef tanımlamanız gerekirken, bu mantığı son içeri aktarmadan sonra proje dosyasına ekleyin. Bunu SDK stili bir projede yapmak için önce SDK stili özniteliğini eşdeğer içeri aktarmalarla değiştirmeniz gerekir. Bkz. [MSBuild proje SDK'lerini kullanma.](how-to-use-project-sdk.md)
 
 > [!NOTE]
-> MSBuild altyapısı, herhangi bir proje için derleme yürütmeyi başlatmadan önce değerlendirme sırasında içe aktarılan tüm dosyalarda okur (herhangi biri dahil), dolayısıyla bu dosyaların derleme işleminin veya başka bir bölümü tarafından `PreBuildEvent` `PreBuildEvent` değiştirilmeleri beklenmiyor. Herhangi bir değişiklik, bir sonraki derleme  veya sonrakiMSBuild.exeçağrılıncaya kadar Visual Studio olmaz.
+> MSBuild altyapısı, herhangi bir proje için derleme yürütmeyi başlatmadan önce değerlendirme sırasında tüm içe aktarılan dosyalarda okur (herhangi biri dahil), dolayısıyla bu dosyaların derleme işleminin veya başka bir bölümü tarafından `PreBuildEvent` `PreBuildEvent` değiştirilmeleri beklenmiyor. Herhangi bir değişiklik, bir sonraki derleme  veya sonrakiMSBuild.exeçağrılıncaya kadar Visual Studio olmaz.
 
 ### <a name="use-case-multi-level-merging"></a>Kullanım durumu: çok düzeyli birleştirme
 
@@ -128,7 +128,7 @@ Açık içeri aktarmaları kullanırken herhangi bir noktada *bir .props* veya *
 
 - *.targets*  dosyaları derleme sırasına geç aktarıldı.
 
-Bu kural içeri aktarmalar tarafından zorunlu kılınır (diğer bir ifadeyle Sdk.props içeri aktarması önce, dosyanın tüm içeriği `<Project Sdk="SdkName">` öncesinde, *sdk.targets* ise dosyanın tüm içeriklerinin ardından son olarak  gelir).
+Bu kural içeri aktarmalar tarafından zorunlu kılınır (diğer bir ifadeyle Sdk.props içeri aktarması önce, dosyanın tüm içeriği `<Project Sdk="SdkName">` öncesinde, *sdk.targets* ise dosyanın tüm içeriklerinin ardından en son  gelir).
 
 Özellikleri nereye koyarak karar verirken aşağıdaki genel yönergeleri kullanın:
 
@@ -150,7 +150,7 @@ Bu kural içeri aktarmalar tarafından zorunlu kılınır (diğer bir ifadeyle S
 
 ## <a name="msbuildprojectextensionspath"></a>MSBuildProjectExtensionsPath
 
-Varsayılan *olarak, Microsoft.Common.props* içeri `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.props` aktarmaları ve *Microsoft.Common.targets içeri* aktarıyor. `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.targets` Varsayılan değeri `MSBuildProjectExtensionsPath` `$(BaseIntermediateOutputPath)` , 'dır. `obj/` NuGet paketlerle birlikte gelen derleme mantığına başvurmak için bu mekanizmayı kullanır; diğer bir ifadeyle, geri yükleme `{project}.nuget.g.props` zamanında paket içeriğine başvuran dosyalar oluşturur.
+Varsayılan olarak, *Microsoft.Common.props* içeri `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.props` aktarmalarını ve *Microsoft.Common.targets içeri* aktarmalarını `$(MSBuildProjectExtensionsPath)$(MSBuildProjectFile).*.targets` sağlar. Varsayılan değeri `MSBuildProjectExtensionsPath` `$(BaseIntermediateOutputPath)` , 'dır. `obj/` NuGet paketlerle birlikte gelen derleme mantığına başvurmak için bu mekanizmayı kullanır; diğer bir ifadeyle, geri yükleme `{project}.nuget.g.props` zamanında paket içeriğine başvuran dosyalar oluşturur.
 
 Özelliğini Directory.Build.props içinde olarak ayarerek veya Microsoft.Common.props'ı içeri aktarmadan önce bu genişletilebilirlik `ImportProjectExtensionProps` `false` mekanizmasını *devre dışı genişletilebilirlik mekanizmasını devre dışı abilirsiniz.* 
 
@@ -166,7 +166,7 @@ Varsayılan *olarak, Microsoft.Common.props* içeri `$(MSBuildProjectExtensionsP
 > [!WARNING]
 > Bu uzantı mekanizmalarını kullanmak, makineler arasında yinelenebilir derlemeler elde etmek daha zor hale geldi. Kaynak denetim sisteminize iade edilen ve kod tabanınızı tüm geliştiriciler arasında paylaştıran bir yapılandırma kullanmayı deneyin.
 
-Kural gereği, birçok temel derleme mantığı dosyası içeri aktar
+Kurala göre, birçok temel derleme mantığı dosyası içeri aktar
 
 ```xml
 $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportBefore\*.targets
@@ -178,16 +178,16 @@ içeriklerinden önce ve
 $(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\{TargetFileName}\ImportAfter\*.targets
 ```
 
-Sonra. Bu kural, ortak proje türlerinin derleme mantığını artırmak için yüklü OLAN SDK'lere olanak sağlar.
+Sonra. Bu kural, ortak proje türlerinin derleme mantığını artırmak için yüklü OLAN SDK'lara olanak sağlar.
 
 `$(MSBuildUserExtensionsPath)` *%LOCALAPPDATA%\Microsoft\MSBuild*. Bu klasöre yerleştirilen dosyalar, ilgili proje türünün ilgili kullanıcının kimlik bilgileri altında çalıştırılmış olan tüm derlemeleri için içe aktarılır. desende içeri aktarma dosyasından sonra adlı özellikleri ayarerek kullanıcı uzantılarını devre dışı `ImportUserLocationsByWildcardBefore{ImportingFileNameWithNoDots}` abilirsiniz. Örneğin, olarak `ImportUserLocationsByWildcardBeforeMicrosoftCommonProps` `false` ayarı, içeri aktarmayı `$(MSBuildUserExtensionsPath)\$(MSBuildToolsVersion)\Imports\Microsoft.Common.props\ImportBefore\*` önler.
 
 ## <a name="customize-the-solution-build"></a>Çözüm derlemeyi özelleştirme
 
 > [!IMPORTANT]
-> Çözüm derlemesini bu şekilde özelleştirmek yalnızcaMSBuild.exeile komut *satırı derlemeleri için geçerlidir.* Uygulamanın **içindeki** derlemeler için Visual Studio. Bu nedenle, özelleştirmenin çözüm düzeyinde kullanılması önerilmez. Bir çözümdeki tüm projeleri özelleştirmenin daha iyi bir alternatifi, bu makalenin başka bir yerinde ele alınarak çözüm *klasöründeki Directory.Build.props* ve *Directory.build.targets* dosyalarını kullanmaktır.
+> Çözüm derlemesini bu şekilde özelleştirmek yalnızcaMSBuild.exeile komut satırı *derlemeleri için geçerlidir.* Uygulamanın **içindeki** derlemeler için Visual Studio. Bu nedenle, özelleştirmenin çözüm düzeyinde kullanılması önerilmez. Bir çözümdeki tüm projeleri özelleştirmenin daha iyi bir alternatifi, bu makalenin başka bir yerinde ele alınarak çözüm *klasöründeki Directory.Build.props* ve *Directory.build.targets* dosyalarını kullanmaktır.
 
-Bu MSBuild bir çözüm dosyası derlemesi, önce bir proje dosyasına dahili olarak çevirir ve sonra bunu derlemeye devam ediyor. Oluşturulan proje dosyası, herhangi bir hedefi tanımlamadan önce ve ve dizinlerine yüklenmiş hedefler de dahil olmak üzere hedefleri içeri `before.{solutionname}.sln.targets` `after.{solutionname}.sln.targets` aktarmadan `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore` önce içeri aktarma `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter` işlemidir.
+Bu MSBuild bir çözüm dosyası derlemesi, önce bir proje dosyasına dahili olarak çevirir ve sonra bunu derlemeye devam ediyor. Oluşturulan proje dosyası, herhangi bir hedefi tanımlamadan önce ve ve dizinlerine yüklenmiş hedefler de dahil olmak üzere hedefleri içeri `before.{solutionname}.sln.targets` `after.{solutionname}.sln.targets` `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore` `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter` aktarıyor.
 
 Örneğin, *myCustomizedSolution.sln* dosyasını oluşturduktan sonra aynı dizinde adlı bir dosya oluşturarak özel günlük iletisi yazmak için yeni bir hedef *tanımlayabilirsiniz. Içeren MyCustomizedSolution.sln.targets*
 
@@ -203,11 +203,11 @@ Bu MSBuild bir çözüm dosyası derlemesi, önce bir proje dosyasına dahili ol
 
 ## <a name="customize-all-net-builds"></a>Tüm .NET derlemelerini özelleştirme
 
-Derleme sunucusunu korurken, sunucu üzerinde tüm derlemeler MSBuild genel olarak yapılandırmaniz gerekebilir.  Prensipte, genel *Microsoft.Common.Targets* veya *Microsoft.Common.Props* dosyalarını değiştirebilirsiniz, ancak daha iyi bir yol vardır. Belirli bir proje türünün (tüm C# projeleri gibi) tüm derlemelerini, belirli MSBuild ve dosyaları ekleyerek `.targets` `.props` etkileyebilirsiniz.
+bir yapı sunucusu korunurken, sunucudaki tüm derlemeler için MSBuild ayarlarını küresel olarak yapılandırmanız gerekebilir.  Prensibi, genel *Microsoft. Common. targets* veya *Microsoft. Common. props* dosyalarını değiştirebilir, ancak daha iyi bir yoldur. belirli bir proje türünün (tüm C# projeleri gibi) tüm yapılarını, bazı MSBuild özelliklerini kullanarak ve belirli özel ve dosyaları ekleyerek etkileyebilirsiniz `.targets` `.props` .
 
-MSBuild veya Visual Studio yüklemesi tarafından yönetilen tüm C# veya Visual Basic derlemelerini etkilemesi için, *Microsoft.Common.targets* öncesinde veya sonrasında çalıştıracak hedeflerle *Custom.Before.Microsoft.Common.Targets* veya *Custom.After.Microsoft.Common.Props* dosyası ya da Microsoft.Common.props öncesinde veya sonrasında işlenecek özelliklerle  *Custom.Before.Microsoft.Common.Props* dosyası oluşturun. 
+bir MSBuild veya Visual Studio yüklemesiyle yönetilen tüm C# veya Visual Basic yapılarını etkilemek için özel bir dosya oluşturun. *microsoft. common. targets* veya *custom. after. microsoft. common.* targets, *microsoft. common. targets* ya da bir dosya *custom* . before. microsoft. common. props ya da özel. after. microsoft *. common. props* , *microsoft. common. props*'dan önce veya sonra işlenecek özelliklerle birlikte çalışır.
 
-Bu dosyaların konumlarını belirtmek için aşağıdaki MSBuild kullanabilirsiniz:
+aşağıdaki MSBuild özelliklerini kullanarak bu dosyaların konumlarını belirtebilirsiniz:
 
 - CustomBeforeMicrosoftCommonProps
 - CustomBeforeMicrosoftCommonTargets
@@ -218,43 +218,46 @@ Bu dosyaların konumlarını belirtmek için aşağıdaki MSBuild kullanabilirsi
 - CustomAfterMicrosoftCSharpTargets
 - CustomAfterMicrosoftVisualBasicTargets
 
-Bu *özelliklerin* Ortak sürümleri hem C# hem de Visual Basic etkiler. Bu özellikleri komut satırına MSBuild kurabilirsiniz.
+bu özelliklerin *ortak* sürümleri hem C# hem de Visual Basic projelerini etkiler. bu özellikleri MSBuild komut satırında ayarlayabilirsiniz.
 
 ```cmd
 msbuild /p:CustomBeforeMicrosoftCommonTargets="C:\build\config\Custom.Before.Microsoft.Common.Targets" MyProject.csproj
 ```
 
-En iyi yaklaşım senaryoya bağlıdır. Genişletilebilirlik Visual Studio kullanarak derleme sistemini özelleştirilebilir ve özelleştirmeleri yüklemek ve yönetmek için bir mekanizma sebilirsiniz.
+En iyi yaklaşım senaryonuza bağlıdır. Visual Studio genişletilebilirliği kullanarak, yapı sistemini özelleştirebilir ve özelleştirmeleri yüklemek ve yönetmek için bir mekanizma sağlayabilirsiniz.
 
-Ayrılmış bir derleme sunucunuz varsa ve belirli hedeflerin her zaman bu sunucuda yürütülen uygun proje türüne sahip tüm derlemelerde yürütülür olmasını sağlamak için genel bir özel veya dosya `.targets` `.props` kullanmak mantıklıdır.  Özel hedeflerin yalnızca belirli koşullar geçerli olduğunda yürütmesi için, başka bir dosya konumu kullanın ve MSBuild komut satırına uygun MSBuild özelliğini yalnızca gerektiğinde ayarerek bu dosyanın yolunu ayarlayın.
+Adanmış bir yapı sunucunuz varsa ve belirli hedeflerin bu sunucuda yürütülen uygun proje türünün tüm yapılarında her zaman yürütülememesini sağlamak istiyorsanız, genel bir özel `.targets` veya `.props` dosya kullanmak mantıklı olur.  özel hedeflerin yalnızca belirli koşullar geçerli olduğunda yürütmesini istiyorsanız, başka bir dosya konumu kullanın ve MSBuild komut satırındaki uygun MSBuild özelliğini yalnızca gerektiğinde ayarlayarak bu dosyanın yolunu ayarlayın.
 
 > [!WARNING]
-> Visual Studio, eşleşen türde herhangi bir proje derlemesinde MSBuild klasöründe bulursa özel `.targets` `.props` veya dosyaları kullanır. Bu, yanlışlıkla sonuçlar doğurabilir ve yanlış yapılırsa, bilgisayarınızda derleme Visual Studio devre dışı bırakabilir.
+> Visual Studio `.targets` `.props` , eşleşen türde herhangi bir projeyi her oluşturduğunda MSBuild klasörde bulursa, özel veya dosyaları kullanır. bu, istenmeyen sonuçlara neden olabilir ve yanlış yapıldıysa, Visual Studio bilgisayarınızda derleme yeteneğini devre dışı bırakabilir.
 
 ## <a name="customize-c-builds"></a>C++ derlemelerini özelleştirme
 
-C++ projeleri için, daha önce bahsedilen *özel .targets* ve *.props* dosyaları varsayılan ayarları geçersiz kılmak için aynı şekilde kullanılamaz. *Directory.Build.props,* *Microsoft.Common.props* tarafından içe aktarılır. Varsayılanların çoğu `Microsoft.Cpp.Default.props` *Microsoft.Cpp.props* içinde tanımlanırken ve bir dizi özellik için "henüz tanımlanmamışsa" koşulu kullanılamaz, çünkü özellik zaten tanımlanmıştır, ancak ile tanımlanan belirli proje özellikleri için varsayılan değerin farklı olması gerekir `PropertyGroup` (bkz. `Label="Configuration"` [.vcxproj ve .props dosya yapısı).](/cpp/build/reference/vcxproj-file-structure)
+C++ projeleri için, daha önce bahsedilen özel *. targets* ve *. props* dosyaları varsayılan ayarları geçersiz kılmak için aynı şekilde kullanılamaz. *Directory. Build. props* , Microsoft tarafından içeri aktarılır. varsayılan olarak ' de Içeri aktarılan *ortak. props*, `Microsoft.Cpp.Default.props` *Microsoft. cpp. props* içinde tanımlanmıştır ve bir dizi özellik için, özelliği zaten tanımlandığından, varsayılan olarak, içinde tanımlanan belirli proje özellikleri için farklı olması gerekir `PropertyGroup` `Label="Configuration"` (bkz [. vcxproj ve. props dosya yapısı](/cpp/build/reference/vcxproj-file-structure)).
 
-Ancak, *Microsoft.Cpp dosyalarından \** önce/sonra otomatik olarak içe aktar edilecek *.props* dosyalarını belirtmek için aşağıdaki özellikleri kullanabilirsiniz:
+Ancak, *Microsoft. cpp. \** Files 'dan önce/sonra otomatik olarak içeri aktarılacak *. props* dosyalarını belirtmek için aşağıdaki özellikleri kullanabilirsiniz:
 
-- ForceImportAfterCppDefaultProps
+- Forceımportaftercppdefaultprops
 - ForceImportBeforeCppProps
-- ForceImportAfterCppProps
+- Forceımportaftercppprops
 - ForceImportBeforeCppTargets
-- ForceImportAfterCppTargets
+- Forceımportaftercpptargets
 
-Tüm C++ derlemeleri için özelliklerin varsayılan değerlerini özelleştirmek için, başka bir *.props* dosyası *(örneğin, MyProps.props)* oluşturun ve özelliği işaret ediyor `ForceImportAfterCppProps` olarak `Directory.Build.props` tanımlayın:
+Tüm C++ Derlemeleriyle ilgili özelliklerin varsayılan değerlerini özelleştirmek için, başka bir *. props* dosyası (deyin, *MyProps. props*) oluşturun ve `ForceImportAfterCppProps` `Directory.Build.props` bunu işaret eden özelliği tanımlayın:
 
-<PropertyGroup><ForceImportAfterCppProps>$(MsbuildThisFileDirectory)\MyProps.props<ForceImportAfterCppProps>
+```xml
+<PropertyGroup>
+  <ForceImportAfterCppProps>$(MsbuildThisFileDirectory)\MyProps.props<ForceImportAfterCppProps>
 </PropertyGroup>
+```
 
-*MyProps.props,* *Microsoft.Cpp.props'ın en sonunda otomatik olarak içe aktarılır.*
+*MyProps. props* , *Microsoft. cpp. props*'un en sonunda otomatik olarak içeri aktarılacaktır.
 
-## <a name="customize-all-c-builds"></a>Tüm C++ derlemelerini özelleştirme
+## <a name="customize-all-c-builds"></a>Tüm C++ derlemelerini özelleştirin
 
-Visual Studio yüklemesini özelleştirmeniz önerilmez çünkü bu tür özelleştirmeleri izlemek kolay değildir, ancak Visual Studio'yi belirli bir platform için C++ derlemelerini özelleştirmek üzere genişletıyorsanız, her platform için dosya oluşturabilir ve bunları bir Visual Studio uzantısının parçası olarak bu platformlar için uygun içeri aktarma klasörlerine yer `.targets` veebilirsiniz.
+Visual Studio yüklemesinin özelleştirilmesi önerilmez, çünkü bu tür özelleştirmeleri izlemek kolaydır, ancak belirli bir platform için C++ derlemelerini özelleştirmek üzere Visual Studio uzatıyorsanız, `.targets` her platform için dosya oluşturabilir ve bu platformları bir Visual Studio uzantısının parçası olarak uygun içeri aktarma klasörlerine yerleştirebilirsiniz.
 
-`.targets`Win32 platformu *Microsoft.Cpp.Win32.targets* dosyası aşağıdaki öğeyi `Import` içerir:
+`.targets` *Microsoft. cpp. Win32. targets* Win32 platformunun dosyası aşağıdaki `Import` öğeyi içerir:
 
 ```xml
 <Import Project="$(VCTargetsPath)\Platforms\Win32\ImportBefore\*.targets"
@@ -262,7 +265,7 @@ Visual Studio yüklemesini özelleştirmeniz önerilmez çünkü bu tür özelle
 />
 ```
 
-Aynı dosyanın sonuna yakın benzer bir öğe vardır:
+Aynı dosyanın ucunun yakınında benzer bir öğe vardır:
 
 ```xml
 <Import Project="$(VCTargetsPath)\Platforms\Win32\ImportAfter\*.targets"
@@ -270,21 +273,21 @@ Aynı dosyanın sonuna yakın benzer bir öğe vardır:
 />
 ```
 
-*%ProgramFiles32%\MSBuild\Microsoft.Cpp\v{version}\Platforms içinde diğer hedef platformlar için benzer içeri aktarma öğeleri \* vardır.
+*% ProgramFiles32% \ MSBuild \Microsoft.Cpp\v{version}\Platforms içindeki diğer hedef platformlar için benzer içeri aktarma öğeleri var \* .
 
-Dosyayı platforma göre uygun klasöre yer MSBuild platform için her `.targets` `ImportAfter` C++ derlemesine içeri aktarabilirsiniz. Gerekirse buraya `.targets` birden çok dosya koyabilirsiniz. 
+`.targets`dosyayı platforma göre uygun klasöre yerleştirdikten sonra `ImportAfter` , MSBuild dosyanızı bu platform için her C++ derlemesine içeri aktarır. Gerekirse, birden çok `.targets` Dosya koyabilirsiniz. 
 
-Genişletilebilirlik Visual Studio yeni bir platform tanımlama gibi başka özelleştirmeler de mümkündür. Daha fazla bilgi için [bkz. C++ proje genişletilebilirliği.](../extensibility/visual-cpp-project-extensibility.md)
+Visual Studio genişletilebilirliği kullanarak, yeni bir platform tanımlama gibi daha fazla özelleştirme mümkündür. Daha fazla bilgi için bkz. [C++ proje genişletilebilirliği](../extensibility/visual-cpp-project-extensibility.md).
 
-### <a name="specify-a-custom-import-on-the-command-line"></a>Komut satırı üzerinde özel içeri aktarma belirtme
+### <a name="specify-a-custom-import-on-the-command-line"></a>Komut satırında özel bir içeri aktarma belirtin
 
-C++ projesinin belirli bir derlemesi için dahil etmek istediğiniz özel için, ve komut satırı özelliklerinin `.targets` birini veya ikisini birden `ForceImportBeforeCppTargets` `ForceImportAfterCppTargets` ayarlayın.
+`.targets`C++ projesinin belirli bir derlemesi için eklemek istediğiniz özel için, özelliklerden birini veya her ikisini de `ForceImportBeforeCppTargets` ve `ForceImportAfterCppTargets` komut satırını ayarlayın.
 
 ```cmd
 msbuild /p:ForceImportBeforeCppTargets="C:\build\config\Custom.Before.Microsoft.Cpp.Targets" MyCppProject.vcxproj
 ```
 
-Genel bir ayar için (örneğin, derleme sunucusundaki bir platform için tüm C++ derlemelerini etkiler), iki yöntem vardır. İlk olarak, bu özellikleri her zaman ayarlanmış bir sistem ortam değişkeni kullanarak ayarlayabilirsiniz. Bu, MSBuild her zaman ortamı okuduğu ve tüm ortam değişkenleri için (veya geçersiz kılmalar) özellikler oluşturduğu için çalışır.
+Genel bir ayar (bir yapı sunucusundaki bir platform için tüm C++ derlemelerini etkilemek, söylemek amacıyla) için iki yöntem vardır. İlk olarak, bu özellikleri her zaman ayarlanmış bir sistem ortam değişkeni kullanarak ayarlayabilirsiniz. bu, MSBuild her zaman ortamı okuduğundan ve tüm ortam değişkenlerine yönelik özellikler oluşturduğundan (veya geçersiz kıldığından), bu işe yarar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

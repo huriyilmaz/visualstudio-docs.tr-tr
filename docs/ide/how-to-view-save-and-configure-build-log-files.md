@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma | Microsoft Docs'
-description: Derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma hakkında bilgi edinin. Bu dosyalar, derleme hatasına sorun giderme gibi görevler için yararlı bilgiler sağlar.
+title: Nasıl yapı günlüğü dosyaları görüntüleme, kaydetme ve yapılandırma | Microsoft Docs
+description: Derleme günlüğü dosyalarını görüntülemeyi, kaydetmeyi ve yapılandırmayı öğrenin. Bu dosyalar, derleme hatasıyla ilgili sorunları giderme gibi görevler için yararlı bilgiler sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 08/28/2019
 ms.technology: vs-ide-compile
@@ -11,67 +11,67 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 8bca2ae08037a63cfbf8647808c7b1c7329ad2aa
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 3316bf26f660b04c4f003b02523be3f9c408e73f
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99914924"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122980936"
 ---
-# <a name="how-to-view-save-and-configure-build-log-files"></a>Nasıl yapılır: derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma
+# <a name="how-to-view-save-and-configure-build-log-files"></a>Nasıl kullanılır: Derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma
 
-Visual Studio IDE 'de bir proje oluşturduktan sonra, bu yapı hakkındaki bilgileri **Çıkış** penceresinde görüntüleyebilirsiniz. Bu bilgileri kullanarak, örneğin, bir derleme hatası ile ilgili sorun giderme yapabilirsiniz.
+IDE'de bir proje Visual Studio, bu derlemeyle ilgili bilgileri Çıkış penceresinde **görüntüebilirsiniz.** Bu bilgileri kullanarak, örneğin bir derleme hatasının sorunlarını giderebilirsiniz.
 
-- C++ projeleri için aynı bilgileri bir proje oluşturduğunuzda oluşturulup kaydettiğiniz bir günlük dosyasında da görüntüleyebilirsiniz. 
+- C++ projeleri için, bir proje oluşturulduğunda oluşturulan ve kaydedilen günlük dosyasında da aynı bilgileri görüntüebilirsiniz. 
 
-- Yönetilen kod projeleri için, derleme çıkış penceresinde ' ne tıklayabilir ve **CTRL** + **S**' ye basabilirsiniz. Visual Studio, bilgileri **Çıkış** penceresinden bir günlük dosyasına kaydetmek için size bir konum sorar.
+- Yönetilen kod projeleri için derleme çıkış penceresine tıklar ve Ctrl S **tuşlarına** + **basabilirsiniz.** Visual Studio, Çıkış penceresindeki bilgileri bir günlük dosyasına **kaydetmenizi** istediğiniz konumu girmenizi istiyor.
 
-Ayrıca, her derleme hakkında görüntülemek istediğiniz bilgi türlerini belirtmek için IDE 'yi de kullanabilirsiniz.
+Her derleme hakkında ne tür bilgileri görüntülemek istediğinizi belirtmek için IDE'leri de kullanabilirsiniz.
 
-MSBuild kullanarak her türlü proje oluşturuyorsanız, derleme hakkında bilgi kaydetmek için bir günlük dosyası oluşturabilirsiniz. Daha fazla bilgi için bkz. [Derleme günlüklerini alma](../msbuild/obtaining-build-logs-with-msbuild.md).
+MSBuild kullanarak herhangi bir tür proje MSBuild, derlemeyle ilgili bilgileri kaydetmek için bir günlük dosyası oluşturabilirsiniz. Daha fazla bilgi için [bkz. Derleme günlüklerini alma.](../msbuild/obtaining-build-logs-with-msbuild.md)
 
-## <a name="to-view-the-build-log-file-for-a-c-project"></a>Bir C++ projesi için derleme günlük dosyasını görüntülemek için
+## <a name="to-view-the-build-log-file-for-a-c-project"></a>C++ projesinin derleme günlük dosyasını görüntülemek için
 
-1. **Windows Gezgini** veya **Dosya Gezgini**'nde, aşağıdaki dosyayı açın (proje kök klasörüne göre): *yayın* \\ <ProjectName> \> . Günlük * veya *hata ayıklama \\<ProjectName \> . log*
+1. Windows **Gezgini'nde** **Dosya Gezgini** dosyasını açın (proje kök klasörüne göre):  \\ {ProjectName}. Log* veya *Debug \\ {ProjectName}.log*
 
-## <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>Yönetilen kod projesi için bir yapı günlük dosyası oluşturmak için
+## <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>Yönetilen kod projesi için derleme günlüğü dosyası oluşturmak için
 
-1. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin.
+1. Menü çubuğunda Derleme   >  **Çözümü'ne tıklayın.**
 
-2. **Çıkış** penceresinde, metinde herhangi bir yere tıklayın.
+2. Çıkış **penceresinde metinde** bir yere tıklayın.
 
-3. **CTRL** + **S** tuşuna basın.
+3. **Ctrl** + **S tuşlarına basın.**
 
-   Visual Studio, derleme çıktısının kaydedileceği bir konum ister.
+   Visual Studio çıkışını kaydetmek için bir konum girmenizi istiyor.
 
-Ayrıca, `-fileLogger` ( `-fl` ) komut satırı seçeneğini kullanarak doğrudan komut satırından MSBuild 'i çalıştırarak da Günlükler oluşturabilirsiniz. Bkz. [MSBuild ile derleme günlükleri alma](../msbuild/obtaining-build-logs-with-msbuild.md).
+Ayrıca , () komut satırı MSBuild doğrudan komut satırı kullanarak `-fileLogger` `-fl` günlükler de çalıştırabilirsiniz. Bkz. [MSBuild ile derleme günlüklerini alma.](../msbuild/obtaining-build-logs-with-msbuild.md)
 
-## <a name="to-change-the-amount-of-information-included-in-the-build-log"></a>Yapı günlüğünde bulunan bilgi miktarını değiştirmek için
+## <a name="to-change-the-amount-of-information-included-in-the-build-log"></a>Derleme günlüğüne dahil edilen bilgi miktarını değiştirmek için
 
-1. Menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekleri'ne**  >  **tıklayın.**
 
-2. **Projeler ve çözümler** sayfasında, **derleme ve çalıştırma** sayfasını seçin.
+2. Projeler **ve Çözümler sayfasında** Derleme ve **Çalıştırma sayfasını** seçin.
 
-3. **MSBuild proje derleme çıkışı ayrıntı** listesinde, aşağıdaki değerlerden birini seçin ve ardından **Tamam** düğmesini seçin.
+3. Proje **MSBuild çıkış ayrıntılılığı** listesinde aşağıdaki değerlerden birini seçin ve ardından Tamam **düğmesini** seçin.
 
-    |Ayrıntı düzeyi|Description|
+    |Ayrıntılılık düzeyi|Description|
     | - |-----------------|
-    |**Sess**|Yalnızca yapı özetini görüntüler.|
-    |**En az**|Derleme ve hataların, uyarıların ve son derece önemli olarak sınıflandırılan mesajların özetini görüntüler.|
-    |**Olağan**|Derleme özetini görüntüler; yüksek oranda önemli olarak sınıflandırılan hatalar, uyarılar ve iletiler ve yapı ana adımları. En sık bu ayrıntı düzeyini kullanacaksınız.|
-    |**Ayrıntılı**|Derleme özetini görüntüler; yüksek oranda önemli olarak sınıflandırılan hatalar, uyarılar ve iletiler Tüm Yapı adımları; ve normal önem derecesine göre sınıflandırılan mesajlar.|
-    |**Tanılama**|Yapı için kullanılabilen tüm verileri görüntüler. Özel derleme betiklerine ve diğer yapı sorunlarıyla ilgili sorunları ayıklamanıza yardımcı olması için bu ayrıntı düzeyini kullanabilirsiniz.|
+    |**Sessiz**|Yalnızca derlemenin özetini görüntüler.|
+    |**En az**|Derlemenin özetini ve son derece önemli olarak sınıflandırılan hataların, uyarıların ve iletilerin özetini görüntüler.|
+    |**Normal**|Derlemenin özetini görüntüler; son derece önemli olarak sınıflandırılan hatalar, uyarılar ve iletiler; ve derlemenin ana adımları. Bu ayrıntı düzeyini en sık kullanacağız.|
+    |**Ayrıntılı**|Derlemenin özetini görüntüler; son derece önemli olarak sınıflandırılan hatalar, uyarılar ve iletiler; derlemenin tüm adımları; ve normal öneme sahip olarak kategorilere ayrılmış iletiler.|
+    |**Tanılama**|Derleme için kullanılabilen tüm verileri görüntüler. Özel derleme betikleri ve diğer derleme sorunlarıyla ilgili sorunlarda hata ayıklamaya yardımcı olmak için bu ayrıntı düzeyini kullanabilirsiniz.|
 
-     Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu, projeler ve çözümler, oluşturma ve çalıştırma](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) <xref:Microsoft.Build.Framework.LoggerVerbosity> .
+     Daha fazla bilgi için [bkz. Seçenekler iletişim kutusu, Projeler ve Çözümler, Derleme ve Çalıştırma ve](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) <xref:Microsoft.Build.Framework.LoggerVerbosity> .
 
     > [!IMPORTANT]
-    > Değişikliklerinizin **Çıkış** penceresinde (tüm projeler) ve *\<ProjectName> . txt* dosyasında (yalnızca C++ projeleri) etkili olması için projeyi yeniden oluşturmanız gerekir.
+    > Değişikliklerinizin Çıkış penceresinde (tüm projeler)  ve.txt(yalnızca C++ projeleri) etkili olması *\<ProjectName> için* projeyi yeniden oluşturmanız gerekir.
 
-## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>Büyük günlük dosyalarına gözatmaya daha kolay hale getirmek için ikili günlükleri kullanın
+## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>Büyük günlük dosyalarına göz atmayı kolaylaştırmak için ikili günlükleri kullanma
 
-İkili Günlükler, büyük günlüklerde bilgi bulmayı kolaylaştıran daha zengin bir günlük tarama deneyimine sahip olmanızı sağlayan, .NET projeleri için isteğe bağlı bir özelliktir. İkili günlükleri kullanmak için, [Proje sistemi araçları](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProjectSystemTools)'nı yükler. Daha fazla bilgi için bkz. [https://msbuildlog.com](https://msbuildlog.com) ve [ikili günlük](https://github.com/microsoft/msbuild/blob/master/documentation/wiki/Binary-Log.md)
+İkili günlükler, .NET projeleri için büyük günlüklerde bilgi bulmanızı kolaylaştıracak daha zengin bir günlük tarama deneyimine sahip olmak için isteğe bağlı bir özelliktir. İkili günlükleri kullanmak için, Project [System Tools'larını yükleyin.](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProjectSystemTools) Daha fazla bilgi için [https://msbuildlog.com](https://msbuildlog.com) bkz. ve [İkili Günlük](https://github.com/microsoft/msbuild/blob/master/documentation/wiki/Binary-Log.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+- [Visual Studio'da proje ve çözüm oluşturma ve Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)

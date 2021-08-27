@@ -15,23 +15,23 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 95b1d4e68f6508751d79fab2970d79cb74577e55
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: e508781cfad49a81751c2ab1f828cc5ce74a303d
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122090011"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122980668"
 ---
 # <a name="how-to-create-a-localized-bootstrapper-package"></a>Nasıl yapılır: Yerelleştirilmiş önyükleyici paketi oluşturma
 Bir önyükleyici paketi oluşturduktan sonra, her yerel seçim için iki dosya daha oluşturarak önyükleyici paketinin yerelleştirilmiş sürümlerini oluşturabilirsiniz: bir yazılım lisans koşulları dosyası *(eula.rtf* gibi) ve bir paket bildirimi (*package.xml*).
 
- varsayılan olarak, Visual Studio 2010 yalnızca .NET Framework 4, .NET Framework 4 İstemci Profili, F# Çalışma Zamanı 2.0 ve F# Çalışma Zamanı 4.0 için yerelleştirilmiş önyükleyici paketlerini içerir. Üç adımı tamamlayarak diğer önyükleyiciler için yerelleştirilmiş paketler oluşturabilirsiniz.
+ Varsayılan olarak, Visual Studio 2010 yalnızca .NET Framework 4, .NET Framework 4 İstemci Profili, F# Çalışma Zamanı 2.0 ve F# Çalışma Zamanı 4.0 için yerelleştirilmiş önyükleyici paketlerini içerir. Üç adımı tamamlayarak diğer önyükleyiciler için yerelleştirilmiş paketler oluşturabilirsiniz.
 
-1. *\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages \\ \<BootstrapperPackageName>* konumunda yerel olarak yerel olarak adlandırılmış bir klasör oluşturun.
+1. *\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages \\ \<BootstrapperPackageName>* dizininde yerel olarak adlandırılmış bir klasör oluşturun.
 
 2. Önyükleyici paketi için yazılım lisans koşullarını içeren bir dosya oluşturun ve yeni klasöre yazın.
 
-3. package.xmladlı bir *paket* bildirimi oluşturun, dizeleri ve kültürü güncelleştirin ve dosyayı yeni klasöre yazın. Hedef dilde önceden Visual Studio önyükleyicisi oluşturduysanız, Visual Studio *package.xml* dosyasını kopyalayıp bu adımda değiştirebilirsiniz.
+3. package.xmladlı *bir paket* bildirimi oluşturun, dizeleri ve kültürü güncelleştirin ve dosyayı yeni klasöre yazın. Hedef dilde önceden Visual Studio önyükleyicisi oluşturduysanız, Visual Studio *package.xml* dosyasını kopyalayıp bu adımda değiştirebilirsiniz.
 
 > [!NOTE]
 > Uygulamaları dağıtmak için bir Kurulum projesi kullanıyorsanız, Yerelleştirme özelliğini değiştirerek uygulamanızı **yerelleştirebilirsiniz.**
@@ -42,11 +42,11 @@ Bir önyükleyici paketi oluşturduktan sonra, her yerel seçim için iki dosya 
 
 1. Yerel seçim adından sonra adlı bir klasör oluşturun.
 
-     32 bit *bilgisayarlarda, \Program Files\Microsoft SDKs\ClickOnce Bootstrapper\Packages klasöründe \\ \<BootstrapperPackageName> \\ klasörü* oluşturun.
+     32 bit *bilgisayarlarda, \Program Files\Microsoft SDKs\ClickOnce Bootstrapper\Packages klasöründe klasörü \\ \<BootstrapperPackageName> \\* oluşturun.
 
      64 bit *bilgisayarlarda, \Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages klasöründe \\ \<BootstrapperPackageName> \\ klasörü* oluşturun.
 
-     Aşağıdaki tabloda yerel bir bölgeyle eşleşmek için kullanabileceğiniz klasör adları yer alır.
+     Aşağıdaki tabloda, yerel bir bölgeyle eşleşmek için kullanabileceğiniz klasör adları yer alır.
 
     |Yerel Ayar|Klasör adı|
     |------------|-----------------|
@@ -75,13 +75,13 @@ Bir önyükleyici paketi oluşturduktan sonra, her yerel seçim için iki dosya 
 
 6. package.xml *kaydedin.*
 
-### <a name="to-create-a-bootstrapper-package-for-net-framework-35-service-pack-1-localized-in-french"></a>.NET Framework 3.5 Service Pack 1 için Fransızca yerelleştirilmiş bir önyükleyici paketi oluşturmak için
+### <a name="to-create-a-bootstrapper-package-for-net-framework-35-service-pack-1-localized-in-french"></a>Fransızca yerelleştirilmiş .NET Framework 3.5 Service Pack 1 için önyükleyici paketi oluşturmak için
 
 1. fr adlı bir klasör *oluşturun.* Klasör adı, yerel adla eşleşmeli.
 
      32 bit *bilgisayarlarda\Program \\ Files\Microsoft SDKs\ClickOnce Bootstrapper\Packages\DotNetFX35SP1* klasöründe klasörü oluşturun.
 
-     64 bit *bilgisayarlarda\Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages\DotNetFX35SP1 \\* klasöründe klasörü oluşturun.
+     64 bit *bilgisayarlarda\ Program Files (x86)\Microsoft SDKs\ClickOnce Bootstrapper\Packages\DotNetFX35SP1 \\* klasöründe klasörü oluşturun.
 
 2. Yazılım lisansı koşullarının yerelleştirilmiş bir sürümünü *fr klasörüne* yazın.
 
@@ -94,7 +94,7 @@ Bir önyükleyici paketi oluşturduktan sonra, her yerel seçim için iki dosya 
 6. package.xml *kaydedin.*
 
 >[!NOTE]
-> Visual Studio 2019 Güncelleştirme 7 yayın önyükleyici paketleri *<VS Install Path> de \MSBuild\Microsoft\VisualStudio\BootstrapperPackages yolunda keşfedildi.*
+> Visual Studio 2019 Güncelleştirme 7 yayın önyükleyici paketleri ile başlayarak *{VS Yükleme Yolu}\MSBuild\Microsoft\VisualStudio\BootstrapperPackages* yolunda da bulunacak.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Önyükleyici paketleri oluşturma](../deployment/creating-bootstrapper-packages.md)

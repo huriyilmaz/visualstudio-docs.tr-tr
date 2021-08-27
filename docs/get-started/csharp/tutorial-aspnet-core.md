@@ -1,7 +1,7 @@
 ---
-title: 'Öğretici: Kullanmaya başlayın C# ve ASP.NET Core'
+title: 'Öğretici: C# ve ASP.NET Core kullanmaya başlama'
 titleSuffix: ''
-description: C# ile ASP.NET Core adım Visual Studio web uygulaması oluşturma hakkında bilgi edinebilirsiniz.
+description: C# ile Visual Studio bir ASP.NET Core web uygulamasının nasıl oluşturulacağını öğrenin ve adım adım.
 ms.custom: vs-acquisition, get-started
 ms.date: 06/12/2021
 ms.technology: vs-ide-general
@@ -16,170 +16,170 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 5490a0d4bdc6a0b980fdf19a1f63259a22b8a572
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: e744ef4ed6888673e6e412a197f6f941c0d0ae80
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122028364"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122981053"
 ---
-# <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Öğretici: Kullanmaya başlayın C# ve ASP.NET Core ile Visual Studio
+# <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>öğretici: Visual Studio ' de C# ve ASP.NET Core kullanmaya başlama
 
-ASP.NET Core kullanarak C# geliştirme Visual Studio bu öğreticide bir C# ASP.NET Core web uygulaması oluşturacak, üzerinde değişiklikler yapacak, IDE'nin bazı özelliklerini keşfeder ve ardından uygulamayı çalıştırabilirsiniz.
+Visual Studio kullanarak c# ASP.NET Core geliştirme için bu öğreticide, bir c# ASP.NET Core web uygulaması oluşturacaksınız, bu uygulamada değişiklikler yapmanız, ıde 'nin bazı özelliklerini araştırıp ve ardından uygulamayı çalıştırmanız gerekir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 1. Visual Studio'yu yükleme
    ::: moniker range="vs-2017"
    
-   Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz olarak yükleyin.
+   Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz yükleme yapın.
    
    ::: moniker-end
    
    ::: moniker range="vs-2019"
    
-   Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin.
+   Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz yükleme yapın.
    
    ::: moniker-end
 
    ::: moniker range="vs-2022"
 
-   Visual Studio 2022 Preview'Visual Studio yüklemediyebilirsiniz. [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) indirmeleri sayfasına gidin.
+   henüz 2022 önizleme Visual Studio yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio 2022 önizleme indirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına gidin.
 
    ::: moniker-end
 
-1. Güncelleştirme Visual Studio - Daha önce Visual Studio, en son sürümü çalıştırmış olduğundan emin olun. Yüklemenizi güncelleştirme hakkında daha fazla bilgi için Güncelleştirme Visual Studio [en son sürüm sayfasına](../../install/update-visual-studio.md) bakın.
+1. güncelleştirme Visual Studio-Visual Studio zaten yüklediyseniz en son sürümü çalıştırdığınızdan emin olun. yüklemenizi güncelleştirme hakkında daha fazla bilgi için [güncelleştirme Visual Studio en son sürüm](../../install/update-visual-studio.md) sayfasına bakın.
 
-1. Temanızı seçin (isteğe bağlı) - Bu öğreticide koyu temayı kullanan ekran görüntüleri yer almaktadır. Nasıl olduğunu [öğrenmek Visual Studio IDE ve Düzenleyici sayfasını](../../ide/quickstart-personalize-the-ide.md) kişiselleştirebilirsiniz.
+1. Temanızı seçin (isteğe bağlı)-Bu öğretici, koyu temayı kullanan ekran görüntülerini içerir. [Visual Studio ıde ve düzenleyici sayfasını kişiselleştirerek](../../ide/quickstart-personalize-the-ide.md) nasıl yapılacağını öğrenebilirsiniz.
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
-İlk olarak yeni bir ASP.NET Core oluştur. Proje türü, herhangi bir şey eklemeden önce tam işlevsel bir web sitesi için ihtiyacınız olacak tüm şablon dosyalarıyla birlikte gelir!
+ilk olarak, bir ASP.NET Core projesi oluşturacaksınız. Proje türü, tam olarak işlevsel bir Web sitesi için ihtiyacınız olan tüm şablon dosyaları ile birlikte gelir, hatta herhangi bir şey eklenmeyecektir.
 
 ::: moniker range="vs-2017"
 
 1. Visual Studio 2017'yi açın.
 
-2. Üst menü çubuğundan Dosya Yeni **Dosya'Project.** >  > 
+2. üstteki menü çubuğundan **dosya** > **yeni** > **Project** öğesini seçin.
 
-3. Sol **bölmede yeni Project** iletişim kutusunda **Visual C#** öğesini genişletin, **Web'i** genişletin ve **ardından .NET Core'ı seçin.** Orta bölmede Web **Uygulaması'ASP.NET Core seçin.** Ardından, dosyayı *MyCoreApp olarak adlandırarak* Tamam'ı **seçin.**
+3. sol bölmedeki **yeni Project** iletişim kutusunda, **Visual C#**' ı genişletin, **Web**' i genişletin ve ardından **.net Core**' u seçin. orta bölmede **ASP.NET Core Web uygulaması**' nı seçin. Ardından, dosyayı *Mycoreapp* olarak adlandırın ve **Tamam**' ı seçin.
 
-   ![ASP.NET Core Visual Studio IDE'de Yeni Project iletişim kutusundaki Web Uygulaması proje şablonu](media/csharp-aspnet-choose-template-name-razor-mycoreapp-file.png)
+   ![ASP.NET Core Visual Studio ıde 'deki yeni Project iletişim kutusunda Web uygulaması proje şablonu](media/csharp-aspnet-choose-template-name-razor-mycoreapp-file.png)
 
 ### <a name="add-a-workload-optional"></a>İş yükü ekleme (isteğe bağlı)
 
-ASP.NET Core **Web Uygulaması** proje şablonunu görmüyorsanız, web uygulaması ve web geliştirme ASP.NET ekleyerek **bunu elde** edin. Makinenize 2017 güncelleştirmelerinin hangi Visual Studio bağlı olarak bu iş yükünü aşağıdaki yöntemlerden birini kullanabilirsiniz.
+**ASP.NET Core web uygulaması** proje şablonunu görmüyorsanız, **ASP.NET ve web geliştirme** iş yükünü ekleyerek alabilirsiniz. makinenizde hangi Visual Studio 2017 güncelleştirmelerinin yüklü olduğuna bağlı olarak, bu iş yükünü aşağıdaki iki yönden birine ekleyebilirsiniz.
 
-#### <a name="option-1-use-the-new-project-dialog-box"></a>1. Seçenek: Yeni Project iletişim kutusunu kullanın
+#### <a name="option-1-use-the-new-project-dialog-box"></a>seçenek 1: yeni Project iletişim kutusunu kullanma
 
-1. Yeni **Visual Studio Yükleyicisi** iletişim kutusunun sol bölmesindeKimlik aç **Project** seçin. (Görüntü ayarlarınıza bağlı olarak, bunu görmek için kaydırmanız gerekebilir.)
+1. **yeni Project** iletişim kutusunun sol bölmesindeki **Visual Studio Yükleyicisi aç** bağlantısını seçin. (Görüntü ayarlarınıza bağlı olarak, görmek için kaydırmanız gerekebilir.)
 
-   ![Yeni Dosya iletişim Visual Studio Yükleyicisi Aç bağlantısını Project seçin](../media/open-visual-studio-installer-mycoreapp.png)
+   ![yeni Project iletişim kutusundan Visual Studio Yükleyicisi aç bağlantısını seçin](../media/open-visual-studio-installer-mycoreapp.png)
 
-1. Uygulama Visual Studio Yükleyicisi başlatıyor. Web geliştirme **ASP.NET iş yükünü seçin** ve ardından Değiştir'i **seçin.**
+1. Visual Studio Yükleyicisi başlatılır. **ASP.NET ve web geliştirme** iş yükünü seçin ve ardından **değiştir**' i seçin.
 
-   ![.NET Core platformlar arası geliştirme iş yükü Visual Studio Yükleyicisi](../media/tutorial-aspnet-workload.png)
+   ![Visual Studio Yükleyicisi .net Core platformlar arası geliştirme iş yükü](../media/tutorial-aspnet-workload.png)
 
-   (Yeni iş yükünü yüklemeye Visual Studio önce uygulamayı kapatmanız gerekir.)
+   (yeni iş yükünü yüklemeye devam edebilmeniz için önce Visual Studio kapatmanız gerekebilir.)
 
-#### <a name="option-2-use-the-tools-menu-bar"></a>2. Seçenek: Araçlar menü çubuğunu kullanma
+#### <a name="option-2-use-the-tools-menu-bar"></a>2. seçenek: Araçlar menü çubuğunu kullanma
 
-1. Yeni Project iletişim **kutusundan** iptal edin. Ardından üst menü çubuğundan Araçlar Araçları ve **Özellikleri**  >  **Al'ı seçin.**
+1. **yeni Project** iletişim kutusunu iptal edin. Ardından, üstteki menü çubuğunda **Araçlar**  >  **ve Özellikler al**' ı seçin.
 
-1. Uygulama Visual Studio Yükleyicisi başlatıyor. Web geliştirme **ASP.NET iş yükünü seçin** ve ardından Değiştir'i **seçin.**
+1. Visual Studio Yükleyicisi başlatılır. **ASP.NET ve web geliştirme** iş yükünü seçin ve ardından **değiştir**' i seçin.
 
-   (Yeni iş yükünü yüklemeye Visual Studio önce uygulamayı kapatmanız gerekir.)
+   (yeni iş yükünü yüklemeye devam edebilmeniz için önce Visual Studio kapatmanız gerekebilir.)
 
 ### <a name="add-a-project-template"></a>Proje şablonu ekleme
 
-1. Yeni **Web ASP.NET Core iletişim** kutusunda Web Uygulaması proje **şablonunu** seçin.
+1. **yeni ASP.NET Core web uygulaması** iletişim kutusunda **web uygulaması** proje şablonunu seçin.
 
-1. Üst **ASP.NET Core 2.1'in** görüntülendiğinden emin olmak. Ardından **Tamam'ı seçin.**
+1. **ASP.NET Core 2,1** ' nin üst açılan menüde göründüğünü doğrulayın. Ardından **Tamam**' ı seçin.
 
-   ![Yeni ASP.NET Core Web Uygulaması iletişim kutusu](media/new-project-csharp-aspnet-razor-web-app.png)
+   ![yeni ASP.NET Core Web uygulaması iletişim kutusu](media/new-project-csharp-aspnet-razor-web-app.png)
 
    > [!NOTE]
-   > Üst açılan **menüden ASP.NET Core 2.1'i** görmüyorsanız, en son sürüm 2.1'i Visual Studio. Yüklemenizi güncelleştirme hakkında daha fazla bilgi için Güncelleştirme Visual Studio [en son sürüm sayfasına](../../install/update-visual-studio.md) bakın.
+   > üst açılan menüden **ASP.NET Core 2,1** ' u görmüyorsanız, en son Visual Studio sürümünü çalıştırdığınızdan emin olun. yüklemenizi güncelleştirme hakkında daha fazla bilgi için [güncelleştirme Visual Studio en son sürüm](../../install/update-visual-studio.md) sayfasına bakın.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
+1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-   :::image type="content" source="../../get-started/media/vs-2019/create-new-project-dark-theme.png" alt-text="'Yeni proje oluştur' penceresini görüntüleme":::
+   :::image type="content" source="../../get-started/media/vs-2019/create-new-project-dark-theme.png" alt-text="' Yeni proje oluştur ' penceresini görüntüleyin":::
 
-1. Yeni **proje oluştur penceresinde Dil** **listesinden C#** dilini seçin. Ardından, **Windows** Listesinden Web'i ve proje türleri listesinden **Web'i** seçin.
+1. **Yeni proje oluştur** penceresinde dil listesinden **C#** ' ı seçin. ardından, Platform listesinden **Windows** ve proje türleri listesinden **Web** ' i seçin.
 
-      Dil, platform ve proje türü filtrelerini uygulayan web **uygulaması ASP.NET Core** ve ardından Sonraki'yi **seçin.**
+      dili, platformu ve proje türü filtrelerini uyguladıktan sonra, **ASP.NET Core Web uygulaması** şablonunu seçin ve ardından **ileri**' yi seçin.
 
-   :::image type="content" source="./media/vs-2019/csharp-create-new-project-aspnet-core.png" alt-text="ASP.NET Core Web Uygulaması için C# şablonunu seçin":::
+   :::image type="content" source="./media/vs-2019/csharp-create-new-project-aspnet-core.png" alt-text="ASP.NET Core Web uygulaması için C# şablonunu seçin":::
 
    > [!NOTE]
-   > ASP.NET Core **Web Uygulaması** şablonunu görmüyorsanız Yeni proje oluştur **penceresinden yükleyebilirsiniz.** Neyi **bulasınız? iletisinde** Daha fazla araç ve **özellik yükle bağlantısını** seçin.
+   > **ASP.NET Core Web uygulaması** şablonunu görmüyorsanız, **yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın.
    >
-   > !['Yeni proje oluştur' penceresindeki 'Ne arıyorsanız bu değil' iletisinden 'Daha fazla araç ve özellik yükle' bağlantısı](../../get-started/media/vs-2019/not-finding-what-looking-for.png)
+   > ![' Yeni proje oluştur ' penceresindeki ' daha fazla araç ve özellik yüklemesi ' ' ne aradığınızı bulma ' iletisi bağlantısı](../../get-started/media/vs-2019/not-finding-what-looking-for.png)
    >
-   > Ardından, Visual Studio Yükleyicisi web geliştirme **ASP.NET iş yükünü** seçin.
+   > ardından, Visual Studio Yükleyicisi **ASP.NET ve web geliştirme** iş yükünü seçin.
    >
-   > ![.NET Core platformlar arası geliştirme iş yükü Visual Studio Yükleyicisi](../../get-started/media/aspnet-core-web-dev-workload.png)
+   > ![Visual Studio Yükleyicisi .net Core platformlar arası geliştirme iş yükü](../../get-started/media/aspnet-core-web-dev-workload.png)
    >
-   > Bundan sonra, **dosyanın** üst Visual Studio Yükleyicisi. Çalışmanızı kaydetmeniz istenirse bunu yap. Ardından, iş yükünü **yüklemek için** Devam'ı seçin. Ardından bu "Proje oluşturma" yordamının[2. adımına](#create-a-project)geri dön.
+   > bundan sonra Visual Studio Yükleyicisi **değiştir** düğmesini seçin. İşinizi kaydetmeniz istenirse, bunu yapın. Sonra, iş yükünü yüklemek için **devam** ' ı seçin. Ardından, bu "[Proje oluşturma](#create-a-project)" yordamında 2. adıma geri dönün.
 
-1. Yeni **projenizi yapılandır penceresine** *MyCoreApp yazın* veya **Project** girin. Ardından, **Sonraki'yi seçin.**
+1. **yeni projeyi yapılandırın** penceresinde, **Project adı** kutusuna *mycoreapp* yazın veya girin. Ardından **İleri**' yi seçin.
 
-   :::image type="content" source="./media/vs-2019/csharp-name-your-aspnet-app.png" alt-text="'Yeni projenizi yapılandırma' penceresinde projenize 'MyCoreApp' adını girin":::
+   :::image type="content" source="./media/vs-2019/csharp-name-your-aspnet-app.png" alt-text="' yeni projenizi yapılandırın ' penceresinde, ' MyCoreApp ' projenizi adlandırın":::
 
-1. Ek **bilgiler penceresinde** üst açılan **menüde .NET Core 3.1'in** görüntülendiğinden emin olur. Kutuyu işaret ederek Docker desteğini etkinleştirmeyi seçebilirsiniz. Kimlik doğrulamasını değiştir düğmesine tıklayarak da kimlik doğrulaması desteği ebilirsiniz. Buradan şunları seçebilirsiniz:
-    - Hiçbiri: Kimlik doğrulaması yok.
+1. **Ek bilgi** penceresinde, **.NET Core 3,1** ' ın üst açılan menüde göründüğünü doğrulayın. Kutuyu işaretleyerek Docker desteğini etkinleştirmeyi seçebileceğinizi unutmayın. Kimlik doğrulamasını Değiştir düğmesine tıklayarak da kimlik doğrulama desteği ekleyebilirsiniz. Buradan buradan seçim yapabilirsiniz:
+    - Hiçbiri: kimlik doğrulaması yok.
     - Bireysel hesaplar: Bunlar yerel veya Azure tabanlı bir veritabanında depolanır.
-    - Microsoft kimlik platformu: Bu seçenek kimlik doğrulaması için Active Directory, Azure AD veya Microsoft 365 kullanır.
-    - Windows: intranet uygulamaları için uygundur.
+    - Microsoft kimlik platformu: bu seçenek, kimlik doğrulaması için Active Directory, Azure AD veya Microsoft 365 kullanır.
+    - Windows: intranet uygulamaları için uygun.
     
-    **Docker'ı Etkinleştir kutusunun** işaretini kaldırın ve Kimlik Doğrulama Türü **için Hiçbiri'ne** tıklayın. Ardından **Oluştur**’u seçin.
+    **Docker 'ı etkinleştir** kutusunu işaretsiz bırakın ve kimlik doğrulama türü için **hiçbiri** ' ni seçin. Ardından **Oluştur**’u seçin.
 
-   :::image type="content" source="./media/vs-2019/aspnet-core-additional-information.png" alt-text="'Ek bilgiler' penceresinde .NET Core 3.1'in seçili olduğundan emin olun ve tüm varsayılan değerleri bırakın":::
+   :::image type="content" source="./media/vs-2019/aspnet-core-additional-information.png" alt-text="' ek bilgi ' penceresinde, .NET Core 3,1 ' in seçildiğinden emin olun ve tüm varsayılanları bırakın":::
 
-   Visual Studio projenizi açar.
+   Visual Studio, yeni projenizi açacak.
 
 ::: moniker-end
 
 ### <a name="about-your-solution"></a>Çözümünüz hakkında
 
-Bu çözüm, **Razor Sayfası tasarım desenini** izler. [Model-Görünüm-Denetleyici (MVC)](/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.1&tabs=aspnetcore2x&preserve-view=true) tasarım modelinden farklıdır ve razor sayfasının içinde model ve denetleyici kodunun dahil basitleştirilmiştir.
+Bu çözüm **Razor sayfası** tasarım modelini izler. Model ve denetleyici kodunu Razor sayfasının kendisine dahil etmek için kolaylaştırılmış olan [Model-View-Controller (MVC)](/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.1&tabs=aspnetcore2x&preserve-view=true) tasarım düzeninden farklıdır.
 
 ::: moniker range="vs-2017"
-## <a name="tour-your-solution"></a>Çözümde tura çıkıyor
+## <a name="tour-your-solution"></a>Çözümünüze tura katılın
 
- 1. Proje şablonu, _MyCoreApp_ adlı tek ASP.NET Core bir çözüm oluşturur. İçeriğini **görüntülemek Çözüm Gezgini** sekmeyi seçin.
+ 1. proje şablonu, _mycoreapp_ adlı tek bir ASP.NET Core projesiyle bir çözüm oluşturur. İçeriğini görüntülemek için **Çözüm Gezgini** sekmesini seçin.
 
-    ![ASP.NET Çözüm Gezgini MyCoreApp Visual Studio Razor Pages çözüm için Razor Pages'de](media/csharp-aspnet-razor-solution-explorer-mycoreapp.png)
+    ![ASP.NET mycoreapp adlı Razor Pages çözümü için Visual Studio Çözüm Gezgini](media/csharp-aspnet-razor-solution-explorer-mycoreapp.png)
 
- 1. Sayfalar **klasörünü ve** ardından *About.cshtml dosyasını genişletin.*
+ 1. **Sayfalar** klasörünü genişletin ve ardından *. cshtml* dosyasını genişletin.
 
-     ![Çözüm Gezgini'de yer alan About.cshtml Visual Studio](media/csharp-aspnet-razor-solution-explorer-aboutcshtml.png)
+     ![Visual Studio Çözüm Gezgini. cshtml dosyası](media/csharp-aspnet-razor-solution-explorer-aboutcshtml.png)
 
- 1. Kod **düzenleyicisinde About.cshtml** dosyasını görüntüleme.
+ 1. Kod düzenleyicisinde **About. cshtml** dosyasını görüntüleyin.
 
-     ![Visual Studio kod düzenleyicisinde About.cshtml dosyasının ilk on Visual Studio gösteren ekran görüntüsü.](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code.png)
+     ![Visual Studio kod düzenleyicisinde About. cshtml dosyasının ilk on satırını gösteren ekran görüntüsü.](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code.png)
 
- 1. **About.cshtml.cs dosyasını** seçin.
+ 1. **About. cshtml. cs** dosyasını seçin.
 
-     ![Kod düzenleyicisinde About.cshtml.cs Visual Studio seçin](media/csharp-aspnet-razor-solution-explorer-aboutcshtmlcs.png)
+     ![Visual Studio kod düzenleyicisinde About. cshtml. cs dosyasını seçin](media/csharp-aspnet-razor-solution-explorer-aboutcshtmlcs.png)
 
- 1. Kod **düzenleyicisinde About.cshtml.cs** dosyasını görüntüleme.
+ 1. Kod düzenleyicisinde **About. cshtml. cs** dosyasını görüntüleyin.
 
-     ![Visual Studio kod düzenleyicisinde About.cshtml.cs dosyasının ilk 18 Visual Studio ekran görüntüsü. ](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
+     ![Visual Studio kod düzenleyicisinde About. cshtml. cs dosyasının ilk 18 satırını gösteren ekran görüntüsü. ](media/csharp-aspnet-razor-aboutcshtmlcs-mycoreapp-code.png)
 
- 1. Proje, web sitenizin kökü olan bir **wwwroot** klasörü içerir. İçeriğini görüntülemek için klasörü genişletin.
+ 1. Proje, Web siteniz için kök olan bir **Wwwroot** klasörü içerir. İçeriğini görüntülemek için klasörü genişletin.
 
-     ![Visual Studio'de Çözüm Gezgini wwwroot klasörü](media/csharp-aspnet-razor-solution-explorer-wwwroot.png)
+     ![Visual Studio Çözüm Gezgini Wwwroot klasörü](media/csharp-aspnet-razor-solution-explorer-wwwroot.png)
 
-    CSS, görüntüler ve JavaScript kitaplıkları gibi statik site içeriğini doğrudan &mdash; &mdash; istediğiniz yollara koyabilirsiniz.
+    &mdash;CSS, resim ve JavaScript kitaplıkları gibi statik site içeriğini &mdash; doğrudan istediğiniz yollarla yerleştirebilirsiniz.
 
- 1. Proje ayrıca çalışma zamanında web uygulamasını yöneten yapılandırma dosyalarını da içerir. Varsayılan uygulama [yapılandırması,](/aspnet/core/fundamentals/configuration) üzerindeappsettings.js *depolanır.* Ancak, üzerinde bir uygulama kullanarak buappsettings.Development.js *geçersiz kılabilirsiniz.* Dosyanın **appsettings.jsdosyasını** genişletmek için **appsettings.Development.jsgenişletin.**
+ 1. Proje, çalışma zamanında Web uygulamasını yöneten yapılandırma dosyalarını da içerir. Varsayılan uygulama [yapılandırması](/aspnet/core/fundamentals/configuration) *üzerindeappsettings.js* depolanır. Ancak, *üzerindeappsettings.Development.js* kullanarak bu ayarları geçersiz kılabilirsiniz. Dosyadaki **appsettings.Development.js** görüntülemek için **appsettings.jsdosya '** yı genişletin.
 
-     ![Yapılandırma dosyaları Çözüm Gezgini Visual Studio](media/csharp-aspnet-razor-solution-explorer-appsettingsjson.png)
+     ![Visual Studio Çözüm Gezgini yapılandırma dosyaları](media/csharp-aspnet-razor-solution-explorer-appsettingsjson.png)
 
 ## <a name="run-debug-and-make-changes"></a>Çalıştırma, hata ayıklama ve değişiklik yapma
 
@@ -188,19 +188,19 @@ Bu çözüm, **Razor Sayfası tasarım desenini** izler. [Model-Görünüm-Denet
      ![Dosyanın IIS Express düğmesini Visual Studio](media/csharp-aspnet-razor-iisexpress.png)
 
      > [!NOTE]
-     > **'IIS Express' web** sunucusuna bağlanamıyor şeklinde bir hata iletisi alırsanız, Visual Studio'yi kapatın ve ardından  sağ tıklama veya bağlam menüsünden Yönetici olarak çalıştır seçeneğini kullanarak açın. Ardından uygulamayı yeniden çalıştırın.
+     > **'IIS Express' web** sunucusuna bağlanamıyor hata iletisi alırsanız, Visual Studio'ı kapatın ve ardından sağ tıklama  veya bağlam menüsünden Yönetici olarak çalıştır seçeneğini kullanarak açın. Ardından uygulamayı yeniden çalıştırın.
      >
      > Iis SSL Express sertifikasını kabul etmek istiyor sanız soran bir ileti de alabilirsiniz. Kodu bir web tarayıcısında görüntülemek için Evet'i seçin ve ardından bir **güvenlik** uyarısı iletisi alırsanız Evet'i seçin.
 
 1. Visual Studio tarayıcı penceresi açar. Ardından menü çubuğunda **Giriş**, **Hakkında** ve **Kişi** sayfalarını görüyorsanız. (Bunu yapmak zorunda değilsanız görüntülemek için "hamburger" menü öğesini seçin.)
 
-    ![Web uygulamanıza gelen menü çubuğundan "hamburger" menü öğesini seçin](media/csharp-aspnet-razor-browser-page.png)
+    ![Web uygulamanıza menü çubuğundan "hamburger" menü öğesini seçin](media/csharp-aspnet-razor-browser-page.png)
 
 1. Menü **çubuğundan** Hakkında'ya tıklayın.
 
    ![Uygulamanıza uygun tarayıcı penceresinin menü çubuğunda Hakkında'ya tıklayın](media/csharp-aspnet-razor-browser-page-about-menu.png)
 
-   Diğer şeylerin arasında, **tarayıcının** Hakkında sayfası *About.cshtml* dosyasında ayarlanmış metni işler.
+   Diğer şeylerin dışında, **tarayıcının** Hakkında sayfası *About.cshtml* dosyasında ayarlanmış olan metni işler.
 
    ![Hakkında sayfasındaki metni görüntüleme](media/csharp-aspnet-razor-browser-page-about.png)
 
@@ -210,7 +210,7 @@ Bu çözüm, **Razor Sayfası tasarım desenini** izler. [Model-Görünüm-Denet
 
     ![About.cshtml dosyasındaki metni değiştirme](media/csharp-aspnet-razor-aboutcshtml-mycoreapp-code-changed.png)
 
-1. **About.cshtml.cs dosyasını seçin.** Ardından, aşağıdaki `using` kısayolu kullanarak dosyanın en üstünde yer alan yönergeleri temizleyin:
+1. **About.cshtml.cs dosyasını seçin.** Ardından, aşağıdaki `using` kısayolu kullanarak dosyanın üst kısmında yer alan yönergeleri temizleyin:
 
    Gri renkli yönergelerden birini seçin; bir Hızlı Eylemler ampulü, sağ altta veya sol kenar `using` boşluğunda görünür. [](../../ide/quick-actions.md) Ampulü ve ardından Gereksiz Kullanımı **Kaldır'ı seçin.**
 
@@ -228,21 +228,21 @@ Bu çözüm, **Razor Sayfası tasarım desenini** izler. [Model-Görünüm-Denet
      }
     ```
 
-1. Ortam ve Dize altında iki dalgalı alt **çizgi görünür.**  Dalgalı alt çizgiler görünür çünkü bu türler kapsamda yer alan değil.
+1. Ortam ve Dize altında iki dalgalı alt **çizgi görünür.**  Dalgalı alt çizgiler görünür çünkü bu türler kapsam içinde yer alan değil.
 
    ![OnGet yönteminde dalgalı alt çizgilerle işaretlenmiş hatalar](media/csharp-aspnet-razor-add-new-on-get-method.png)
 
     Burada listelenen **hataları görmek** için Hata Listesi araç çubuğunu açın. (Hata Listesi araç çubuğunu **görmüyorsanız Görüntüle'yi** **seçin**  >  **Üst menü** çubuğundan Hata Listesi.)
 
-   ![Visual Studio'da Hata Listesi](media/csharp-aspnet-razor-error-list.png)
+   ![Visual Studio'de Hata Listesi](media/csharp-aspnet-razor-error-list.png)
 
-1. Şimdi bu sorunu çözeceğiz. Kod düzenleyicisinde imlecinizi hatayı içeren herhangi bir satıra yerleştirerek sol kenar boşluğundaki Hızlı Eylemler ampulü seçin. Ardından, açılan menüden Sistem'i kullan'ı **seçin;** bu yönergeyi dosyanın en üstüne ekleyin ve hataları giderin.
+1. Şimdi bu sorunu çözeceğiz. Kod düzenleyicisinde imlecinizi hatayı içeren herhangi bir satıra yerleştirerek sol kenar boşluğundaki Hızlı Eylemler ampulü seçin. Ardından, açılan menüden Sistem'i kullan'ı **seçin;** bu yönergeyi dosyanın en üstüne ekleyin ve hataları düzeltin.
 
    !["using System;" yönergesi ekleme](media/csharp-aspnet-razor-add-usings.png)
 
 1. **Değişikliklerinizi kaydetmek için Ctrl** + **S** tuşlarına basın ve **ardından F5** tuşuna basarak projenizi web tarayıcısında açın.
 
-1. Yaptığınız değişiklikleri görüntülemek için web sitesi üst **kısmında Hakkında'ya** tıklayın.
+1. Web sitesi üst kısmında, değişikliklerinizi görüntülemek **için Hakkında'ya** tıklayın.
 
    ![Yaptığınız değişiklikleri içeren güncelleştirilmiş Hakkında sayfasını görüntüleme](media/csharp-aspnet-razor-browser-page-about-changed.png)
 
@@ -272,15 +272,15 @@ Bu çözüm, **Razor Sayfası tasarım desenini** izler. [Model-Görünüm-Denet
 
  1. Kod **düzenleyicisinde Index.cshtml.cs** dosyasını görüntüleme.
 
-     ![About.cshtml dosyasını Visual Studio düzenleyicisinde görüntüleme](media/vs-2019/csharp-aspnet-index-cshtml-editing.png)
+     ![About.cshtml dosyasını kod düzenleyicisinde Visual Studio görüntüleme](media/vs-2019/csharp-aspnet-index-cshtml-editing.png)
 
  1. Proje, web sitenizin kökü olan bir **wwwroot** klasörü içerir. İçeriğini görüntülemek için klasörü genişletin.
 
-     ![Visual Studio'de Çözüm Gezgini wwwroot klasörü](media/csharp-aspnet-razor-solution-explorer-wwwroot.png)
+     ![Visual Studio'daki Çözüm Gezgini wwwroot Visual Studio](media/csharp-aspnet-razor-solution-explorer-wwwroot.png)
 
     CSS, görüntüler ve JavaScript kitaplıkları gibi statik site içeriğini doğrudan &mdash; &mdash; istediğiniz yollara koyabilirsiniz.
 
- 1. Proje ayrıca çalışma zamanında web uygulamasını yöneten yapılandırma dosyalarını da içerir. Varsayılan uygulama [yapılandırması,](/aspnet/core/fundamentals/configuration) üzerindeappsettings.js *depolanır.* Ancak, üzerinde bir uygulama kullanarak buappsettings.Development.js *geçersiz kılabilirsiniz.* Dosyanın **appsettings.jsdosyasını** görüntülemek içinappsettings.Development.js **genişletin.**
+ 1. Proje ayrıca çalışma zamanında web uygulamasını yöneten yapılandırma dosyalarını da içerir. Varsayılan uygulama [yapılandırması,](/aspnet/core/fundamentals/configuration) üzerinde *appsettings.jsdepolanır.* Ancak, üzerinde bir uygulama kullanarak buappsettings.Development.js *geçersiz kılabilirsiniz.* Dosyanın **appsettings.jsdosyasını** görüntülemek için **appsettings.Development.jsgenişletin.**
 
      ![Çözüm Gezgini Visual Studio](media/csharp-aspnet-razor-solution-explorer-appsettingsjson.png)
 
@@ -291,7 +291,7 @@ Bu çözüm, **Razor Sayfası tasarım desenini** izler. [Model-Görünüm-Denet
      ![Dosyanın IIS Express düğmesini Visual Studio](media/csharp-aspnet-razor-iisexpress.png)
 
      > [!NOTE]
-     > **'IIS Express' web** sunucusuna bağlanamıyor şeklinde bir hata iletisi alırsanız, Visual Studio'yi kapatın ve ardından  sağ tıklama veya bağlam menüsünden Yönetici olarak çalıştır seçeneğini kullanarak açın. Ardından uygulamayı yeniden çalıştırın.
+     > **'IIS Express' web** sunucusuna bağlanamıyor hata iletisi alırsanız, Visual Studio'ı kapatın ve ardından sağ tıklama  veya bağlam menüsünden Yönetici olarak çalıştır seçeneğini kullanarak açın. Ardından uygulamayı yeniden çalıştırın.
      >
      > Iis SSL Express sertifikasını kabul etmek istiyor sanız soran bir ileti de alabilirsiniz. Kodu bir web tarayıcısında görüntülemek için Evet'i seçin ve ardından bir **güvenlik** uyarısı iletisi alırsanız Evet'i seçin.
 
@@ -305,11 +305,11 @@ Bu çözüm, **Razor Sayfası tasarım desenini** izler. [Model-Görünüm-Denet
 
 1. Hata ayıklama Visual Studio geri dönüp **Shift+F5** tuşlarına basın. Bu, tarayıcı penceresinde projeyi de kapatır.
 
-1. Bu Visual Studio **privacy.cshtml dosyasını düzenlemek için** açın. Ardından, Sitenizin  gizlilik ilkesine ayrıntı eklemek için bu sayfayı kullan sözcüklerini silin ve _@ViewData ["TimeStamp"]_ ile bu sayfa inşa aşamasındadır sözcüklerini ekleyin.
+1. Bu Visual Studio **privacy.cshtml dosyasını düzenlemek** için açın. Ardından Bu sayfayı kullanın sözcüklerini silin _ve sitenin_ gizlilik ilkesine ayrıntı ekleyin ve _@ViewData ["TimeStamp"]_ ile bu sayfa inşa aşamasındadır sözcüklerini ekleyin.
 
     ![Privacy.cshtml dosyasındaki metni değiştirme](media/vs-2019/csharp-aspnet-privacy-cshtml-code-changed.png)
 
-1. Şimdi bir kod değişikliğine bakalım. **Privacy.cshtml.cs dosyasını seçin.** Ardından, aşağıdaki `using` kısayolu kullanarak dosyanın en üstünde yer alan yönergeleri temizleyin:
+1. Şimdi bir kod değişikliğine bakalım. **Privacy.cshtml.cs dosyasını seçin.** Ardından, aşağıdaki `using` kısayolu kullanarak dosyanın üst kısmında yer alan yönergeleri temizleyin:
 
    Gri renkli yönergelerden birini seçin; bir Hızlı Eylemler ampulü, sağ altta veya sol kenar `using` boşluğunda görünür. [](../../ide/quick-actions.md) Ampulü seçin ve gereksiz kullanmaları **kaldır'ın üzerine gelin.**
 
@@ -337,19 +337,19 @@ Bu çözüm, **Razor Sayfası tasarım desenini** izler. [Model-Görünüm-Denet
 
     Burada listelenen **hataları görmek** için Hata Listesi araç çubuğunu açın. (Hata Listesi araç çubuğunu **görmüyorsanız Görüntüle'yi** **seçin**  >  **Üst menü** çubuğundan Hata Listesi.)
 
-   ![Visual Studio'da Hata Listesi](media/vs-2019/csharp-aspnet-error-list.png)
+   ![Visual Studio'de Hata Listesi](media/vs-2019/csharp-aspnet-error-list.png)
 
-1. Şimdi bu sorunu çözeceğiz. Kod düzenleyicisinde imlecinizi hatayı içeren herhangi bir satıra yerleştirerek sol kenar boşluğundaki Hızlı Eylemler ampulü seçin. Ardından, açılan menüden Sistem'i kullan'ı **seçin;** bu yönergeyi dosyanın en üstüne ekleyin ve hataları giderin.
+1. Şimdi bu sorunu çözeceğiz. Kod düzenleyicisinde imlecinizi hatayı içeren herhangi bir satıra yerleştirerek sol kenar boşluğundaki Hızlı Eylemler ampulü seçin. Ardından, açılan menüden Sistem'i kullan'ı **seçin;** bu yönergeyi dosyanın en üstüne ekleyin ve hataları düzeltin.
 
    !["using System;" yönergesi ekleme](media/vs-2019/csharp-aspnet-add-usings.png)
 
 1. Projenizi web tarayıcısında açmak için **F5** tuşuna basın.
 
-1. Değişikliklerinizi görüntülemek için web sitesi üst **kısmında Gizlilik'i** seçin.
+1. Yaptığınız değişiklikleri görüntülemek için web sitesi üst **kısmında Gizlilik'i** seçin.
 
    ![Yaptığınız değişiklikleri içeren güncelleştirilmiş Gizlilik sayfasını görüntüleme](media/vs-2019/csharp-aspnet-browser-page-privacy-changed.png)
 
-1. Web tarayıcısını kapatın, Hata Ayıklama modunu durdurmak için **Shift** + **F5** tuşuna basın ve ardından Visual Studio.
+1. Web tarayıcısını kapatın, **Shift** + **F5 tuşuna** basarak Hata Ayıklama modunu durdurun ve ardından Visual Studio.
 ::: moniker-end
 
 ## <a name="quick-answers-faq"></a>Hızlı yanıtlar hakkında SSS
@@ -358,11 +358,11 @@ Bazı temel kavramları vurgulamak için burada hızlı bir SSS bulabilirsiniz.
 
 ### <a name="what-is-c"></a>C# nedir?
 
-[C#](https://docs.microsoft.com/dotnet/csharp/tour-of-csharp/) hem sağlam hem de öğrenmesi kolay olacak şekilde tasarlanmış, tür kullanımı güvenli ve nesne odaklı bir programlama dilidir.
+[C#](/dotnet/csharp/tour-of-csharp/) hem sağlam hem de öğrenmesi kolay olacak şekilde tasarlanmış tür kullanımı güvenli ve nesne odaklı bir programlama dilidir.
 
 ### <a name="what-is-aspnet-core"></a>ASP.NET Core nedir?
 
-ASP.NET Core, web uygulamaları ve hizmetleri gibi İnternet'e bağlı uygulamalar için açık kaynak ve platformlar arası bir çerçevedir. ASP.NET Core uygulamalar .NET Core veya .NET Framework. ASP.NET Core, Mac ve Linux üzerinde platformlar arası Windows geliştirebilir ve çalıştırabilirsiniz. ASP.NET Core açık kaynaktır ve [GitHub.](https://github.com/aspnet/home)
+ASP.NET Core, web uygulamaları ve hizmetleri gibi İnternet'e bağlı uygulamalar için açık kaynak ve platformlar arası bir çerçevedir. ASP.NET Core uygulamaları .NET Core veya .NET Framework. ASP.NET Core, Mac ve Linux'ta platformlar arası Windows geliştirebilir ve çalıştırabilirsiniz. ASP.NET Core açık kaynaktır ve [GitHub.](https://github.com/aspnet/home)
 
 ### <a name="what-is-visual-studio"></a>Hangi Visual Studio?
 
@@ -370,11 +370,11 @@ Visual Studio, geliştiriciler için tümleşik bir üretkenlik araçları geli�
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler, bu öğreticiyi tamamladıktan sonra! C#, ASP.NET Core ve Visual Studio IDE hakkında bilgi Visual Studio umuyoruz. C# ve ASP.NET ile web uygulaması veya web sitesi oluşturma hakkında daha fazla bilgi edinmek için aşağıdaki öğreticilerle devam edin:
+Tebrikler, bu öğreticiyi tamamladıktan sonra! C#, ASP.NET Core ve Visual Studio IDE hakkında bilgi Visual Studio umuyoruz. C# ve ASP.NET ile web uygulaması veya web sitesi oluşturma hakkında daha fazla ASP.NET aşağıdaki öğreticilerle devam edin:
 
 > [!div class="nextstepaction"]
-> [ASP.NET Core ile Razor Pages web uygulaması ASP.NET Core](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)
+> [ASP.NET Core Razor Pages web uygulaması oluşturma](/aspnet/core/tutorials/razor-pages/?view=aspnetcore-2.1&preserve-view=true)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Visual Studio kullanarak web Azure App Service web Visual Studio](../../deployment/quickstart-deploy-to-azure.md)
+[Visual Studio kullanarak web Azure App Service yayımlama](../../deployment/quickstart-deploy-to-azure.md)

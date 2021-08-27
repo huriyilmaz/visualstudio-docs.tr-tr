@@ -12,12 +12,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bf5c7a87dd2fd5a7e9e3b7884865961df0d98e2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5f1978ba849840ffe8177c51e054b43a3978514d
+ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122150072"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122980681"
 ---
 # <a name="how-to-specify-symbol-file-locations-from-the-command-line"></a>Nasıl yapılır: Komut satırından sembol dosyası konumlarını belirtme
 İşlev adları ve satır numaraları gibi simge bilgilerini göstermek için, VSPerfReport komut satırı aracının simgeye erişimi olması gerekir (.*pdb*) profili oluşturulan bileşenlerin ve Windows sistem dosyalarının dosyalarını. Sembol dosyaları bir bileşen derlendiğinde oluşturulur. Daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md). VSPerfReport sembol dosyaları için aşağıdaki konumları otomatik olarak arar:
@@ -49,9 +49,9 @@ ms.locfileid: "122150072"
 
 2. **_NT_SYMBOL_PATH** ortam değişkenini veya VSPerfReport/SymbolPath seçeneğini ayarlamak için aşağıdaki sözdizimini kullanın:
 
-    `srv*<LocalStore>*https://msdl.microsoft.com/download/symbols`
+    `srv*{LocalStore}*https://msdl.microsoft.com/download/symbols`
 
-    Burada *<LocalStore>* , oluşturduğunuz yerel dizinin yoludur.
+    Burada *{LocalStore}* , oluşturduğunuz yerel dizinin yoludur.
 
 ## <a name="specify-component-symbol-files"></a>Bileşen sembol dosyalarını belirt
  Profil Oluşturma Araçları arar. içinde veya profil oluşturma veri dosyasını içeren klasörde depolanan özgün konumlarında profil uygulamak istediğiniz bileşenlerin *pdb* dosyaları. **_NT_SYMBOL_PATH** veya **/SymbolPath** seçeneğine bir veya daha fazla yol ekleyerek arama yapmak için başka konumlar belirleyebilirsiniz. Yolları noktalı virgülle ayırın.
