@@ -1,17 +1,17 @@
 ---
-title: Visual Studio ASP.NET Core ile kapsayıcı araçları
+title: Visual Studio Windows ASP.NET docker için kapsayıcı araçları
 author: ghogen
 description: Visual Studio 2017 araçları ve Docker for Windows kullanmayı öğrenin
 ms.author: ghogen
 ms.date: 02/01/2019
 ms.technology: vs-container-tools
 ms.topic: include
-ms.openlocfilehash: cc9df8638e72e2175aa55b5b8ab819d4b476d5dd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: d403572e60d29c3af5197cc3bb647fa47bf8c0aa
+ms.sourcegitcommit: 8f8804b885c3a68f20bf0e9fe3729f2764145815
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122147388"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "123122988"
 ---
 Visual Studio, kapsayıcılı ASP.NET Core uygulamaları kolayca oluşturabilir, ayıklayabilir ve çalıştırabilir ve bunları Azure Container Registry, docker Hub, Azure App Service veya kendi kapsayıcı kayıt defterinizde yayımlayabilirsiniz. Bu makalede, Container Registry yayımlanacak.
 
@@ -111,7 +111,7 @@ Uygulamanın geliştirme ve hata ayıklama döngüsünü tamamladıktan sonra uy
     | ------------ |  ------- | -------------------------------------------------- |
     | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
     | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
-    | **[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
+    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
     | **Kayıt Defteri Konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
 

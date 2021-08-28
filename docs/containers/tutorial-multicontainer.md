@@ -7,12 +7,12 @@ ms.author: ghogen
 ms.date: 03/15/2021
 ms.technology: vs-container-tools
 ms.topic: tutorial
-ms.openlocfilehash: f2185bf025bc880a7461a9e1618953f734a7083a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 437663a4c3f1af07d5137aacb32e26e6021597ed
+ms.sourcegitcommit: 8f8804b885c3a68f20bf0e9fe3729f2764145815
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122155063"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "123096997"
 ---
 # <a name="tutorial-create-a-multi-container-app-with-docker-compose"></a>Öğretici: Docker Compose ile çok kapsayıcılı bir uygulama oluşturma
 
@@ -203,7 +203,7 @@ Aynı çözüme bir proje ekleyin ve *Mywebapi* olarak çağırın. Proje türü
 
 [Kapsayıcılarınızı Azure 'a](/azure/containers)dağıtmaya yönelik seçeneklere bakın.
 
-Hata ayıklama oturumu sırasında hangi hizmetlerin başlatıldığını daha fazla denetim için, hata ayıklama sırasında hangi hizmetlerin çalıştırılacağını yapılandırmak üzere Docker Compose başlatma profillerini nasıl kullanacağınızı öğrenin. Bkz. [Docker Compose için başlatma profillerini yönetme](launch-profiles.md)
+Her bir hata ayıklama görevi için gerekli olmayan çok sayıda mikro hizmetlerle çalışıyorsanız, hata ayıklama oturumu sırasında hangi hizmetlerin başlatıldığı üzerinde daha fazla denetim için Docker Compose başlatma profillerini kullanabilirsiniz. Bkz. [Docker Compose için başlatma profillerini yönetme](launch-profiles.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
   

@@ -1,27 +1,29 @@
 ---
-title: Docker kapsayıcıları ve resimlerini görüntüleyin ve tanılayın
-description: uygulamanızı barındıran kapsayıcılar içinde neler olduğunu görmek için bir araç penceresi kullanarak Visual Studio kapsayıcı tabanlı uygulamalarınızı hata ayıklama ve tanılama olanağından nasıl iyileştirebileceğinizi açıklar.
+title: Visual Studio içindeki kapsayıcılar penceresini kullanın
+description: ortam değişkenlerini, dosyaları, günlükleri, bağlantı noktalarını ve uygulamanızı barındıran kapsayıcıları ve yerel olarak kullanılabilir docker görüntülerini görmek için kapsayıcılar araç penceresini kullanarak Visual Studio kapsayıcı tabanlı uygulamalarınızı hata ayıklama ve tanılama olanağından nasıl iyileştirebileceğinizi açıklar.
 author: ghogen
 ms.author: ghogen
 ms.topic: how-to
 ms.date: 01/20/2020
 ms.technology: vs-container-tools
 monikerRange: vs-2019
-ms.openlocfilehash: 63f21f83e677e391c14b71a8cccec6c49ee6f60e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: d6e4ce1e92afea971d02242c03595020d27c23e3
+ms.sourcegitcommit: 8f8804b885c3a68f20bf0e9fe3729f2764145815
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122122013"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "123096855"
 ---
-# <a name="how-to-view-and-diagnose-containers-and-images-in-visual-studio"></a>Visual Studio kapsayıcıları ve görüntüleri görüntüleme ve tanılama
+# <a name="use-the-containers-window"></a>Kapsayıcılar penceresini kullanma
 
 **Kapsayıcılar** penceresini kullanarak uygulamanızı barındıran kapsayıcılar içinde neler olduğunu görüntüleyebilirsiniz. kapsayıcılarınız ile neler olduğunu görüntülemek ve tanılamak için docker komutlarını çalıştırmak üzere komut istemi 'ni kullanmak üzere kullandıysanız, bu pencere, Visual Studio ıde 'den çıkmadan kapsayıcıları izlemek için daha uygun bir yol sağlar.
+
+**Kapsayıcılar** penceresini kullanarak kapsayıcı görüntüleri hakkındaki bilgileri de görüntüleyebilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 - [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-- [Visual Studio 2019 sürüm 16,4 Preview 2](https://visualstudio.microsoft.com/downloads) veya üzeri ya da Visual Studio 2019 'nin önceki bir sürümünü kullanıyorsanız [kapsayıcılar pencere uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vs-containers-tools-extensions)yükleyebilirsiniz.
+- [Visual Studio 2019 sürüm 16,4](https://visualstudio.microsoft.com/downloads) veya üzeri.
 
 ## <a name="view-information-about-your-containers"></a>Kapsayıcılarınız hakkındaki bilgileri görüntüleyin
 
@@ -29,7 +31,7 @@ Kapsayıcılı bir .NET projesi başlattığınızda **kapsayıcılar** penceres
 
 ![sol bölmede seçili bir kapsayıcıya ve sağ bölmede seçili ortam sekmesine sahip Visual Studio kapsayıcılar penceresinin ekran görüntüsü.](media/view-and-diagnose-containers/container-window.png)
 
-Sol tarafta, yerel makinenizde kapsayıcı listesini görürsünüz. Çözümünüz ile ilişkili kapsayıcılar **çözüm kapsayıcıları** altında gösterilir. Sağ tarafta, **ortam**, **bağlantı noktaları**, **Günlükler** ve **dosyalar** için sekmeler içeren bir bölme görürsünüz.
+Sol tarafta, yerel makinenizde kapsayıcı listesini görürsünüz. Çözümünüz ile ilişkili kapsayıcılar **çözüm kapsayıcıları** altında gösterilir. Sağ tarafta, **ortam**, **Etiketler**, **bağlantı noktaları**, **birimler**, **Günlükler** ve **dosyalar** için sekmeler içeren bir bölme görürsünüz.
 
 > [!TIP]
 > **Kapsayıcılar** araç penceresinin Visual Studio nereye yerleştirildiğini kolayca özelleştirebilirsiniz. Bkz. [Visual Studio pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md). Varsayılan olarak, **kapsayıcı** penceresi, hata ayıklayıcı çalışırken **izleme** penceresiyle birlikte yerleştirilir.
@@ -38,10 +40,16 @@ Sol tarafta, yerel makinenizde kapsayıcı listesini görürsünüz. Çözümün
 
 **Ortam** sekmesi, kapsayıcıdaki ortam değişkenlerini gösterir. Uygulamanızın kapsayıcısı için, bu değişkenleri birçok şekilde ayarlayabilirsiniz. Örneğin, Dockerfile, bir. env dosyası veya bir Docker komutu kullanarak bir kapsayıcı başlattığınızda-e seçeneğini kullanabilirsiniz.
 
-![kapsayıcı WebApplication11 için ortam değişkenlerini gösteren Visual Studio kapsayıcılar penceresinin ekran görüntüsü.](media/view-and-diagnose-containers/containers-environment-vars.png)
+![kapsayıcının ortam değişkenlerini gösteren Visual Studio kapsayıcılar penceresinin ekran görüntüsü.](media/view-and-diagnose-containers/containers-environment-vars.png)
 
 > [!NOTE]
 > Ortam değişkenlerinde yapılan değişiklikler gerçek zamanlı olarak yansıtılmaz. Ayrıca, bu sekmedeki ortam değişkenleri, kapsayıcıdaki sistem ortam değişkenleridir ve yerel olarak, uygulamanın kullanıcı ortam değişkenlerini yansıtmaz.
+
+## <a name="view-labels"></a>Etiketleri görüntüle
+
+**Etiketler** sekmesi kapsayıcının etiketlerini gösterir. Etiketler, Docker nesnelerinde özel meta verileri ayarlamanın bir yoludur. Bazı Etiketler Visual Studio tarafından otomatik olarak ayarlanır.
+
+![etiketler sekmesini gösteren Visual Studio kapsayıcılar penceresinin ekran görüntüsü](media/view-and-diagnose-containers/containers-labels.png)
 
 ## <a name="view-port-mappings"></a>Bağlantı noktası eşlemelerini görüntüle
 
@@ -50,6 +58,12 @@ Sol tarafta, yerel makinenizde kapsayıcı listesini görürsünüz. Çözümün
 ![Kapsayıcılar penceresindeki bağlantı noktaları sekmesinin ekran görüntüsü](media/view-and-diagnose-containers/containers-ports.png)
 
 İyi bilinen bağlantı noktaları bağlanır, bu nedenle bir bağlantı noktasında kullanılabilir içerik varsa, tarayıcıyı açmak için bağlantıya tıklayabilirsiniz.
+
+## <a name="view-volumes"></a>Birimleri görüntüle
+
+**Birimler** sekmesi, kapsayıcıdaki birimleri (bağlı dosya sistemi düğümleri) gösterir.
+
+![Kapsayıcılar penceresindeki birimler sekmesinin ekran görüntüsü](media/view-and-diagnose-containers/containers-volumes.png)
 
 ## <a name="view-logs"></a>Günlükleri görüntüleme
 
@@ -78,6 +92,8 @@ Visual Studio dosyaları açmak için dosyaya gidin ve çift tıklayın ya da sa
 
 **Kapsayıcılar** penceresinde, varsayılan olarak Docker 'ın yönettiği makinedeki tüm kapsayıcılar gösterilir. Artık istemediğiniz bir kapsayıcıyı başlatmak, durdurmak veya kaldırmak (silmek) için araç çubuğu düğmelerini kullanabilirsiniz.  Kapsayıcılar oluşturulduğu veya kaldırıldığı için bu liste dinamik olarak güncelleştirilir.
 
+Birden çok kapsayıcıyı seçmek için örneğin, bir seferde birden fazla tane kaldırmak için **CTRL + tıklama** kullanın. 10 ' dan fazla kapsayıcıyı başlatmaya çalışırsanız, bunu onaylamanız istenir. İsterseniz onay istemi 'ni devre dışı bırakabilirsiniz.
+
 ## <a name="open-a-terminal-window-in-a-running-container"></a>Çalışan kapsayıcıda bir Terminal penceresi açın
 
 **Kapsayıcı** penceresinde **Terminal penceresi aç** düğmesini kullanarak kapsayıcıda bir Terminal penceresi (komut istemi veya etkileşimli kabuk) açabilirsiniz.
@@ -100,9 +116,29 @@ Kapsayıcıda yönetilen işlemlere iliştirebilirsiniz. Başka bir kapsayıcıd
 
 ## <a name="viewing-images"></a>Görüntüleri görüntüleme
 
-Ayrıca, **kapsayıcılar** penceresindeki **görüntüler** sekmesini kullanarak yerel makinedeki görüntüleri görüntüleyebilirsiniz. Dış depolardan çekilen görüntüler bir TreeView içinde birlikte gruplandırılır. Görüntünün ayrıntılarını incelemek için bir görüntü seçin.
+Ayrıca, **kapsayıcılar** penceresindeki **görüntüler** sekmesini kullanarak yerel makinedeki görüntüleri görüntüleyebilirsiniz. Dış depolardan çekilen görüntüler bir TreeView içinde birlikte gruplandırılır.
+
+![Kapsayıcı görüntülerini gösteren kapsayıcılar penceresini gösteren ekran görüntüsü](media/view-and-diagnose-containers/containers-images.png)
+
+Pencerede yalnızca görüntüler için geçerli olan sekmeler vardır: **Etiketler** ve **Ayrıntılar**. **Ayrıntılar** SEKMESI, JSON biçimindeki görüntünün yapılandırma ayrıntılarını gösterir.
+
+![Kapsayıcılar penceresinin görüntüler > Ayrıntılar sekmesini gösteren ekran görüntüsü](media/view-and-diagnose-containers/containers-images-details.png)
 
 Bir görüntüyü kaldırmak için TreeView 'daki görüntüye sağ tıklayın ve **Kaldır**' ı seçin veya görüntüyü seçin ve araç çubuğundaki **Kaldır** düğmesini kullanın.
+
+## <a name="prune-containers-and-images"></a>Kapsayıcıları ve görüntüleri Ayıkla
+
+**Kapsayıcılar** penceresi araç çubuğunda **Ayıkla** düğmesini kullanarak, artık kullanmadığınız kapsayıcıları ve görüntüleri kolayca kaldırabilirsiniz.
+
+![Ayıkla düğmesini gösteren ekran görüntüsü](media/view-and-diagnose-containers/container-window-prune.png)
+
+Kullanılmayan kapsayıcılarınızın tümünü kaldırmak istediğinizi onaylamanız istenir.
+
+**Görüntüler** sekmesi **seçildiğinde, tüm** salgze görüntülerini kaldırmak isteyip istemediğinizi sorar. Salgze görüntüleri, artık etiketli bir görüntüyle ilişkili olmayan katmanların görüntüleridir. Bunların kaldırılması, disk alanının korunmasına yardımcı olur.
+
+## <a name="configuration-options"></a>Yapılandırma seçenekleri
+
+Kapsayıcıları ve görüntüleri kaldırma veya aynı anda 10 ' dan fazla kapsayıcı başlatma gibi çeşitli görevler için onay iletişim kutuları yapılandırılabilir. İletişim kutusunda onay kutusunu kullanarak her bir istemi devre dışı bırakabilirsiniz. Ayrıca, **Araçlar**  >  **Seçenekler**  >  **kapsayıcı araç**  >  **kapsayıcıları araç penceresinde** ayarlar ' da bu seçenekleri etkinleştirebilir veya devre dışı bırakabilirsiniz. Bkz. [kapsayıcı araçlarını yapılandırma](container-tools-configure.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -111,5 +147,3 @@ Bir görüntüyü kaldırmak için TreeView 'daki görüntüye sağ tıklayın v
 ## <a name="see-also"></a>Ayrıca bkz.
 
 [Visual Studio 'da kapsayıcı geliştirme](./index.yml)
-
-[Visual Studio için uzantıları marketi](https://marketplace.visualstudio.com/)

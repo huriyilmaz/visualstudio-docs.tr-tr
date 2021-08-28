@@ -17,21 +17,22 @@
         - name: Docker Compose ile çok kapsayıcılı uygulama
           href: tutorial-multicontainer.md
     - name: Nasıl Yapılır?
+      expanded: true
       items:
         - name: Yerel Docker kapsayıcısındaki uygulamada hata ayıklama
           href: edit-and-refresh.md
+        - name: Kapsayıcılar penceresini kullanma
+          href: view-and-diagnose-containers.md
+        - name: Oluşturma hizmetleri alt kümesini Başlat
+          href: launch-profiles.md
+        - name: Kapsayıcı Araçları’nı yapılandırma
+          href: container-tools-configure.md
         - name: Bir kapsayıcı kayıt defteri dağıtma
           href: hosting-web-apps-in-docker.md
         - name: Azure App Service'e dağıtma
           href: deploy-app-service.md
         - name: Docker Hub’a dağıtma
           href: deploy-docker-hub.md
-        - name: Başlatma profillerini yönetme
-          href: launch-profiles.md
-        - name: Kapsayıcı ve resimleri görüntüleyip tanılama
-          href: view-and-diagnose-containers.md
-        - name: Kapsayıcı Araçları’nı yapılandırma
-          href: container-tools-configure.md
     - name: Kavramlar
       items:
         - name: Visual Studio’nun kapsayıcılı uygulama oluşturma şekli

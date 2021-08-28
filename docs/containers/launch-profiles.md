@@ -9,14 +9,14 @@ ms.topic: how-to
 ms.date: 05/10/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: f1176a106abaad7a5806f91e0fbf8a515e6c20e4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 3b7872707c450c393c5bbeb654d65c0dbee60052
+ms.sourcegitcommit: 8f8804b885c3a68f20bf0e9fe3729f2764145815
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122105650"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "123096959"
 ---
-# <a name="manage-launch-profiles-for-docker-compose"></a>Docker Compose için başlatma profillerini yönetme
+# <a name="launch-a-subset-of-compose-services"></a>Oluşturma hizmetleri alt kümesini Başlat
 
 Birden çok hizmetten oluşan ve Docker Compose kullanan bir uygulamanız varsa, Docker Compose başlatma ayarları ' nda var olan bir başlatma profili oluşturarak veya düzenleyerek hangi hizmetlerin çalıştırılacağını ve hata ayıklamasını yapılandırabilirsiniz. Başlatma profilleri, yalnızca geçerli senaryonuza bağlı olan hizmetleri dinamik olarak çalıştırmanızı sağlar. Hata ayıklama deneyiminizi özelleştirmek ve gibi belirli başlatma eylemlerini ayarlamak için başlatma profilleri ' nden oluşturabilir ve seçim yapabilirsiniz `Browser Launch URL` . Ayrıca, her bir hizmeti ayrı ayrı seçme ya da bir Docker Compose profili seçerek, çalıştırılacak hizmet grubunu belirlemek için oluşturma dosyanıza de bakacaksınız.
 
@@ -25,7 +25,7 @@ Docker Compose profilleri hakkında daha fazla bilgi için bkz. [oluşturma ile 
 ## <a name="prerequisites"></a>Önkoşullar
 
 - [Visual Studio 2019 sürüm 16,10](https://visualstudio.microsoft.com/vs/) veya üzeri
-- [Docker Compose Ile kapsayıcı düzenlemesi](tutorial-multicontainer.md) olan bir çözüm
+- [Docker Compose Ile kapsayıcı düzenlemesi](tutorial-multicontainer.md) olan bir .NET çözümü
 
 ## <a name="manage-launch-settings"></a>Başlatma ayarlarını yönetme
 
