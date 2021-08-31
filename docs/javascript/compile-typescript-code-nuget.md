@@ -1,6 +1,6 @@
 ---
 title: NuGet kullanarak TypeScript kodu derleme ve derleme
-description: NuGet paketini kullanarak Visual Studio projelerinize Typescript desteğinin nasıl ekleneceğini öğrenin.
+description: NuGet paketini kullanarak Visual Studio projelerinize TypeScript desteğinin nasıl ekleneceğini öğrenin.
 ms.date: 7/23/2020
 ms.topic: conceptual
 author: mikejo5000
@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: b18f7503dd090856b48b6b6fa17af7af34886706
-ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
+ms.openlocfilehash: 1bf1deb271d7a20527f53260813e35e0de9daa19
+ms.sourcegitcommit: 409a750a944a72c5931f6094deb4dc9a2635a984
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122980741"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "123262081"
 ---
 # <a name="compile-typescript-code-aspnet-core"></a>TypeScript kodunu derle (ASP.NET Core)
 
