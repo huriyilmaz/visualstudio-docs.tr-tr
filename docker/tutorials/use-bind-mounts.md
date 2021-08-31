@@ -6,15 +6,16 @@ author: nebuk89
 ms.author: ghogen
 manager: jmartens
 ms.technology: vs-docker
+ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: a33f185152e147b804d561a0511ebde62dcbc717
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 870bc951d9f05c0075140cca22481685dc88ed01
+ms.sourcegitcommit: 0c6cecf1b973a33003d924abeb382f23e62c134d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122067846"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "123230371"
 ---
 # <a name="use-bind-mounts"></a>BIND bağlama kullanma
 
@@ -45,19 +46,15 @@ Bir geliştirme iş akışını desteklemek üzere kapsayıcınızı çalıştı
 
 1. Çalışan bir önceki Kapsayıcınız olmadığından emin olun `getting-started` .
 
-1. Aşağıdaki komutu çalıştırın ( ` \ ` karakterleri Windows PowerShell ile değiştirin `` ` `` ). Daha sonra neler olduğunu öğreneceksiniz:
+1. `getting-started`Klasöründe, aşağıdaki komutu çalıştırın ( ` \ ` karakterleri Windows PowerShell ile değiştirin `` ` `` ). Daha sonra neler olduğunu öğreneceksiniz:
 
     ```bash
-    docker run -dp 3000:3000 \
-        -w /app \
-        -v "%cd%:/app" \
-        node:12-alpine \
-        sh -c "yarn install && yarn run dev"
+    docker run -dp 3000:3000 -w /app -v ${PWD}:/app node:12-alpine sh -c "yarn install && yarn run dev"
     ```
 
     - `-dp 3000:3000` -daha önce olduğu gibi. Ayrılmış (arka plan) modda çalıştır ve bir bağlantı noktası eşlemesi oluştur
     - `-w /app` -"çalışma dizini" veya komutun çalıştırılacağı geçerli dizini ayarlar
-    - `-v "%cd%:/app"` -Geçerli dizini kapsayıcıdaki konaktan `/app` dizine bağlayın
+    - `-v ${PWD}:/app"` -Geçerli dizini kapsayıcıdaki konaktan `/app` dizine bağlayın
     - `node:12-alpine` -kullanılacak resim. Bunun, Dockerfile 'dan uygulamanız için temel görüntü olduğunu unutmayın.
     - `sh -c "yarn install && yarn run dev"` -komutu. `sh`(Alçam yok) kullanarak bir kabuk başlatıyoruz `bash` ve `yarn install` *Tüm* bağımlılıkları yüklemek ve ardından çalıştırmak için çalışıyor `yarn run dev` . ' A bakarsanız, `package.json` `dev` betiğin başlatıldığını görüyoruz `nodemon` .
 
