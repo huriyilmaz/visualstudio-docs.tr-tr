@@ -402,3 +402,5 @@
       href: lab-management/use-build-or-rm-instead-of-lab-management.md
     - name: Test aracılarını ve test denetleyicilerini yükleme
       href: lab-management/install-configure-test-agents.md
+- name: Visual Studio'da uzaktan test
+  href: remote-testing.md
