@@ -1,101 +1,101 @@
 ---
-title: Üretkenlik kılavuzu
-description: Kod yazmanıza, kod hatalarını ayıklamanıza ve hataları işlemeye Visual Studio klavye kısayolları ve üretkenlik özellikleri hakkında bilgi edinebilirsiniz.
+title: Üretkenlik Kılavuzu
+description: kodu verimli bir şekilde yazmanıza, kodda hata ayıklamanıza ve hataları işlemeye yardımcı olabilecek Visual Studio ' deki klavye kısayolları ve üretkenlik özellikleri hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 4/29/2020
 ms.topic: conceptual
-author: j-martens
-ms.author: jmartens
+author: TerryGLee
+ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 42316256751a61b468198eb09472fe4c8c24f280
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: ab3f07f0b9ec86ad1ec854ba5960099a084fb234
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122062465"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123398448"
 ---
-# <a name="productivity-guide-for-visual-studio"></a>Visual Studio için üretkenlik kılavuzu
+# <a name="productivity-guide-for-visual-studio"></a>Visual Studio için üretkenlik Kılavuzu
 
-Kod yazarken zaman kazanmak için doğru yerdesiniz. Bu üretkenlik kılavuzu, tek bir sayfada Visual Studio, kod yazma, kodda hata ayıklama, hataları işleme ve klavye kısayollarını kullanmaya başlamanıza &mdash; yardımcı olacak ipuçları içerir.
+Kodu yazarken zaman kazanmak istiyorsanız, doğru yerde olursunuz. bu üretkenlik kılavuzu Visual Studio, kod yazma, hata ayıklama kodu, hataları işleme ve klavye kısayollarını tek bir sayfada kullanma konusunda yardımcı olabilecek ipuçları içerir &mdash; .
 
-Yararlı klavye kısayolları hakkında bilgi için [bkz. Üretkenlik kısayolları.](../ide/productivity-shortcuts.md) Komut kısayollarının tam listesi için bkz. [Varsayılan klavye kısayolları.](../ide/default-keyboard-shortcuts-in-visual-studio.md)
+Faydalı klavye kısayolları hakkında daha fazla bilgi için bkz. [üretkenlik kısayolları](../ide/productivity-shortcuts.md). Komut kısayollarının tüm listesi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
 ## <a name="get-started"></a>başlarken
 
-Komutlar, ayarlar, belgeler ve yükleme seçenekleri gibi ihtiyacınız olan her şeyi hızla arayarak menülerde zaman kazanmak. Daha kolay ezberlemek için arama sonuçlarınız içindeki Visual Studio klavye kısayollarına bakın. 
+Komutlar, ayarlar, belgeler ve Install seçenekleri de dahil olmak üzere ihtiyacınız olan her şeyi hızlıca arayarak menüler aracılığıyla zaman ayırarak tasarruf edin. arama sonuçlarınızda bulunan komutlara yönelik klavye kısayollarına bakın Visual Studio, böylece daha kolay bir şekilde daha fazla bilgi alabilirsiniz. 
 
-- **Görev listesini kullanan sahte kod.** Bir kod parçasını tamamlamak için yeterli gereksinimleriniz yoksa, Görev Listesi gibi belirteçleri veya özel belirteçleri kullanan kod açıklamalarını izlemek ve sizi doğrudan kodda önceden tanımlanmış bir konuma alan kısayolları yönetmek için Görev Listesi `TODO` `HACK` kullanın. Daha fazla bilgi için [bkz. Görev Listesi.](../ide/using-the-task-list.md)
+- **Görev listesini kullanan sahte kod**. Kod parçasını tamamlamaya yetecek kadar gereksinimleriniz yoksa, ve gibi belirteçleri kullanan kod açıklamalarını izlemek için Görev Listesi kullanın `TODO` `HACK` ve sizi doğrudan kodda önceden tanımlanmış bir konuma götürür kısayolları yönetin. Daha fazla bilgi için bkz. [görev listesi kullanma](../ide/using-the-task-list.md).
 
-- **kısayollarını Çözüm Gezgini kullanın.** Yeni bir kod Visual Studio yeni bir kod tabanına hız kazanmak için bu kısayollar kullanışlı olacaktır. Kısayolların tam listesi için [bkz. Visual Studio.](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL)
+- **Çözüm Gezgini kısayollarını kullanın**. Visual Studio yeni başladıysanız, bu kısayollar yararlı olur ve yeni bir kod tabanında hızlanırken size zaman kazandırır. Kısayolların tam listesi için, bkz. [Visual Studio varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL).
 
-- **[içinde klavye kısayollarını tanımlama ve Visual Studio.](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)** Visual Studio komutları için kısayollar tanımlayabilir, bu kısayolları özelleştirebilir ve başkalarının kullanması için dışarı aktarabilirsiniz. Seçenekler iletişim kutusunda klavye kısayolunu istediğiniz zaman bulabilir ve değiştirebilirsiniz.
+- **[Visual Studio klavye kısayollarını belirleyip özelleştirin](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)**. Visual Studio komutları için kısayollar tanımlayabilir, bu kısayolları özelleştirebilir ve başkalarının kullanması için dışarı aktarabilirsiniz. Seçenekler iletişim kutusunda her zaman bir klavye kısayolunu bulabilir ve değiştirebilirsiniz.
 
-- **Daha Visual Studio hale.** Visual Studio ekran okuyucularla ve diğer yardımcı teknolojilerle uyumlu yerleşik erişilebilirlik özelliklerine sahiptir. Kullanılabilir [özelliklerin tam listesi için Visual Studio](../ide/reference/accessibility-tips-and-tricks.md) ipuçları ve püf noktalarına bakın. 
+- **Visual Studio daha erişilebilir hale getirin**. Visual Studio, ekran okuyucular ve diğer yardımcı teknolojilerle uyumlu yerleşik erişilebilirlik özelliklerine sahiptir. kullanılabilir özelliklerin tam listesi için bkz. [Visual Studio için erişilebilirlik ipuçları ve püf noktaları](../ide/reference/accessibility-tips-and-tricks.md) . 
 
-- **Ürün Yaşam Döngüsü Visual Studio Bakım'a göz at.** Visual Studio güncelleştirmelerini, Enterprise ve Professional müşterileri için destek seçeneklerini, Visual Studio'nin eski sürümlerini ve Visual Studio hizmeti kapsamında yer almayan bileşenlerin nasıl alın hakkında bilgi için bkz. [Visual Studio Ürün](/visualstudio/releases/2019/servicing)Yaşam Döngüsü ve Bakım. 
+- **ürün yaşam döngüsünü ve bakımını Visual Studio** göz atın. Visual Studio güncelleştirmelerini alma hakkında daha fazla bilgi için Enterprise ve Professional müşterilere yönelik destek seçenekleri, Visual Studio daha eski sürümleri ve Visual Studio hizmeti kapsamında bulunmayan bileşenler için bkz. [Visual Studio ürün yaşam döngüsü ve bakımı](/visualstudio/releases/2019/servicing). 
 
-- **Visual Studio'NuGet yükleme ve yönetme.** NuGet Paket Yöneticisi üzerinde Visual Studio kullanıcı arabirimi Windows proje ve çözümlerde paketleri kolayca yüklemenizi, kaldırmanızı ve NuGet güncelleştirmenizi sağlar. Daha fazla bilgi için bkz. Visual Studio [kullanarak NuGet Paket Yöneticisi.](/nuget/consume-packages/install-use-packages-visual-studio)
+- **Visual Studio NuGet paketlerini yükleyip yönetin**. Windows üzerinde Visual Studio NuGet Paket Yöneticisi kullanıcı arabirimi, projelerinde ve çözümlerinde NuGet paketlerini kolayca yüklemenize, kaldırmanıza ve güncelleştirmenize olanak tanır. daha fazla bilgi için, [NuGet Paket Yöneticisi kullanarak Visual Studio paketleri yükleyip yönetme](/nuget/consume-packages/install-use-packages-visual-studio)konusuna bakın.
 
 ## <a name="write-code"></a>Kod yazma
 
-Aşağıdaki özellikleri kullanarak kodu daha hızlı yazın.
+Aşağıdaki özellikleri kullanarak daha hızlı bir şekilde kod yazın.
 
-- **Kolaylık komutlarını kullanın.** Visual Studio düzenleme görevlerini daha hızlı gerçekleştirmeye yardımcı olacak çeşitli komutlar içerir. Örneğin, bir kod satırı kopyalamak zorunda kalmadan kolayca yinelemek, imleci yeniden konumlandırmak ve ardından yapıştırmak için bir komut seçebilirsiniz. Yineleneni   >  **Düzenle'yi** seçin veya **Ctrl** + **E**,**V tuşlarına basın.** Ayrıca, Gelişmiş Genişletme Seçimini Düzenle veya Gelişmiş Anlaşma Seçimini Düzenle'yi seçerek ya da Shift Alt veya Shift Alt tuşlarına basarak bir metin seçimini hızla genişletebilirsiniz  >    >     >    >    +  + **=** veya  + **daraltmak için** + **-** .
+- **Kullanışlı komutları kullanın**. Visual Studio, yaygın düzenlenen görevleri daha hızlı gerçekleştirmenize yardımcı olacak çeşitli komutlar içerir. Örneğin, bir kod satırını kopyalamak zorunda kalmadan kolayca çoğaltmak için bir komut seçebilirsiniz, imleci yeniden konumlandırabilirsiniz ve yapıştırın. Yinelemeyi **Düzenle**  >   ' yi seçin veya **CTRL** + **E**,**V** tuşlarına basın. Ayrıca   >  ,**Gelişmiş**  >  **Genişlet seçimini** Düzenle veya   >  **Gelişmiş**  >  **sözleşme seçimini** Düzenle ' yi seçerek veya **SHIFT** + **alt** + **=** veya **SHIFT** + **alt** + **-** tuşlarına basarak bir metin seçimini hızlıca genişletebilir veya dağıtabilirsiniz.
 
-- **IntelliSense kullanın.** Düzenleyiciye kod girerken Liste Üyeleri, Parametre Bilgileri, Hızlı Bilgi, İmza Yardımı ve Tam Sözcük gibi IntelliSense bilgileri görüntülenir. Bu özellikler metinlerin belirsiz eşleşmesini destekler; Örneğin, Liste Üyeleri için sonuç listeleri yalnızca girdiğiniz karakterlerle başlamayı değil, aynı zamanda adlarının herhangi bir yerinde karakter birleşimini içeren girişleri de içerir. Daha fazla bilgi için [bkz. IntelliSense kullanma.](../ide/using-intellisense.md)
+- **IntelliSense kullanın**. Düzenleyicide kod girerken, liste üyeleri, parametre bilgileri, hızlı bilgi, Imza yardımı ve tüm kelime gibi IntelliSense bilgileri görüntülenir. Bu özellikler, metnin belirsiz eşleşmesini destekler; Örneğin, liste üyeleri için sonuç listeleri yalnızca girdiğiniz karakterlerle başlayan girişleri değil, aynı zamanda adlarının herhangi bir yerindeki karakter kombinasyonunu içeren girdileri de içerir. Daha fazla bilgi için bkz. [IntelliSense 'ı kullanma](../ide/using-intellisense.md).
 
-- **Kod girerken IntelliSense seçeneklerinin otomatik olarak eklemesini değiştirme.** IntelliSense'i öneri moduna değiştirerek, IntelliSense seçeneklerinin yalnızca açıkça seçerseniz ekli olduğunu belirtebilirsiniz.
+- **Kod girerken IntelliSense seçeneklerinin otomatik olarak eklenmesini değiştirin**. IntelliSense 'i öneri moduna geçirerek, IntelliSense seçeneklerinin yalnızca açıkça seçtiğiniz durumlarda ekleneceğini belirtebilirsiniz.
 
-     Öneri modunu etkinleştirmek için **Ctrl** Alt Ara Çubuğu tuşlarını seçin veya menü çubuğunda IntelliSense Tamamlama Modunu +  +    >    >  **Düzenle'yi seçin.**
+     Öneri modunu etkinleştirmek için **CTRL** + **alt** + **Ara çubuğu** tuşlarını seçin veya menü çubuğunda IntelliSense **Düzenle**  >    >  **tamamlama modunu** seçin.
 
-- **Kod parçacıklarını kullanın.** Yerleşik kod parçacıklarını kullanabilir veya kendi kod parçacıklarınızı oluşturabilirsiniz.
+- **Kod parçacıklarını kullanın**. Yerleşik kod parçacıklarını kullanabilir veya kendi kod parçacıklarınızı oluşturabilirsiniz.
 
-     Kod parçacığı eklemek için menü çubuğunda IntelliSense Kod ParçacığıNı Düzenle veya Ile Çevrele'yi seçin ya da kısayol menüsünü bir dosyada açıp Kod Parçacığı Ekleme Kod Parçacığı veya Ile Çevrele'yi  >    >      >   **seçin.** Daha fazla bilgi için [bkz. Kod Parçacıkları.](../ide/code-snippets.md)
+     Bir kod parçacığı eklemek için, menü çubuğunda IntelliSense **düzenleme**  >    >  **kod parçacığı Ekle** veya **ile Çevrele**' yi seçin veya kısayol menüsünü bir dosyada açın ve **kod parçacığı**  >  **Ekle parçacık** veya **ile çevreleyin**' i seçin. Daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md).
 
-- **Satır içi kod hatalarını düzeltin.** Hızlı Eylemler, tek bir eylemle kodu kolayca yeniden düzenlemenizi, oluşturmanizi veya başka bir şekilde değiştirmenizi sağlar. Bu eylemler, tornavida Tornavida simgesi veya ampul Ampul simgesi simgeleri kullanılarak veya Alt Enter veya ![ ](media/screwdriver-icon.png) ![ ](media/light-bulb-icon.png)  +  Ctrl tuşlarına basılarak  + **uygulanabilir.** İmleciniz uygun kod satırına geldiğinde. Daha [fazla bilgi için](quick-actions.md) bkz. Hızlı Eylemler.
+- **Kod hatalarını satır Içinde düzeltir**. Hızlı Eylemler, tek bir eylem ile kodu kolayca yeniden düzenleme, oluşturma veya başka şekilde değiştirmenize olanak sağlar. Bu eylemler, Screwdriver ![ screwsürücü simgesi ](media/screwdriver-icon.png) veya hafif Ampul ampul ![ simgesi ](media/light-bulb-icon.png) simgeleri kullanılarak veya **alt** + **ENTER** ya da **CTRL** tuşlarına basarak uygulanabilir + **.** imlecinizin uygun kod satırında olması durumunda. Daha fazla bilgi için bkz. [hızlı eylemler](quick-actions.md) .
 
-- **Kod öğesinin tanımını gösterme ve düzenleme.** Üye, değişken veya yerel gibi bir kod öğesinin tanımlandığı modülü hızlıca gösterebilir ve düzenleyebilirsiniz.
+- **Bir kod öğesinin tanımını görüntüleyin ve düzenleyin**. Üye, değişken veya yerel gibi bir kod öğesinin tanımlandığı modülü hızlıca gösterebilir ve düzenleyebilirsiniz.
 
-    Açılır pencerede bir tanım açmak için, öğesini vurgulayın, **ardından Alt** F12 tuşlarını seçin veya öğenin kısayol menüsünü açıp Tanıma Göz +  **At'ı seçin.** Bir tanımı ayrı bir kod penceresinde açmak için öğenin kısayol menüsünü açın ve Tanıma **Git'i seçin.**
+    Bir tanımı açılır pencerede açmak için, öğeyi vurgulayın, sonra **alt** + **F12** tuşlarını seçin veya öğe için kısayol menüsünü açın ve ardından **Gözat**' ı seçin. Ayrı bir kod penceresinde bir tanımı açmak için, öğe için kısayol menüsünü açın ve ardından **Tanıma Git**' i seçin.
 
-- **Örnek uygulamaları kullanın.** Microsoft Geliştirici Network'den örnek uygulamaları indirip [yükleyerek uygulama geliştirmeyi hızlandırabilirsiniz.](https://code.msdn.microsoft.com/) Ayrıca belirli bir teknoloji veya programlama kavramını öğrenmek için bu alana yönelik bir Örnek Paketi indirip keşfedersiniz.
+- **Örnek uygulamaları kullanın**. [Microsoft Developer Network](https://code.msdn.microsoft.com/)'ten örnek uygulamalar indirerek ve yükleyerek uygulama geliştirmeyi hızlandırabilirsiniz. Ayrıca, bu alana yönelik bir örnek paketi indirerek ve inceleyerek belirli bir teknoloji veya programlama kavramı de öğrenebilirsiniz.
 
-- **Biçimlendirme/Yeni Satırlar ile küme ayracı biçimlendirmesini değiştirme.** Yeni **satırlar**  da dahil olmak üzere kod düzenleyicisinde kod biçimlendirme seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını kullanın. C# içinde bu ayarı kullanma hakkında daha fazla bilgi için bkz. Seçenekler iletişim kutusu: Metin Düzenleyici [> C# > Kod Stili > Biçimlendirme.](../ide/reference/options-text-editor-csharp-formatting.md) C++ için [bkz. C++ kodlama tercihlerinizi Visual Studio.](/cpp/ide/how-to-set-preferences) Python için bkz. [Python kodunu biçimlendirme.](../python/formatting-python-code.md)
+- **Biçimlendirme/yeni satırlarla küme ayracı biçimlendirmesini değiştirin**. Yeni satırlar dahil olmak üzere kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme**  seçenekleri sayfasını kullanın. Bu ayarın C# ' de nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: metin düzenleyici > C# > kod stili > biçimlendirme](../ide/reference/options-text-editor-csharp-formatting.md). C++ için bkz. [Visual Studio c++ kodlama tercihlerinizi ayarlama](/cpp/ide/how-to-set-preferences). Python için bkz. [Python kodunu biçimlendirme](../python/formatting-python-code.md).
 
-- **Girintilemenizi Sekmeler ile değiştirme.** Farklı düzenleyicilerde ve IDE'lerde aynı proje üzerinde çalışan birden çok geliştirici için tutarlı kodlama stilleri uygulamak için her kod tabanına uyarlanmış özel düzenleyici ayarlarını kullanın. Tüm takımınız aynı dil kurallarına, adlandırma kurallarına ve biçimlendirme kurallarına uygun olduğundan emin olur. Bu özel ayarlar taşınabilir ve kodunuzla birlikte ilerlene bir uygulama olduğu için kod stillerini uygulamanın dışında bile Visual Studio. Daha fazla bilgi için [bkz. Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler.](../ide/reference/options-text-editor-all-languages-tabs.md#tabs)
+- **Girintilerinizi sekmelerle değiştirin**. Farklı düzenleyicilerde ve sdes 'lerde aynı projede çalışan birden çok geliştirici için tutarlı kodlama stillerini zorlamak üzere her kod tabanına uyarlanmış özel düzenleyici ayarlarını kullanın. Tüm takımınızın aynı dil kurallarına, adlandırma kurallarına ve biçimlendirme kurallarına uyduğundan emin olun. Bu özel ayarlar taşınabilir olduğundan ve kodunuzla birlikte gezindiğinden, Visual Studio dışında bile kodlama stillerini zorunlu kılabilirsiniz. Daha fazla bilgi için bkz. [Seçenekler, metin düzenleyici, tüm diller, sekmeler](../ide/reference/options-text-editor-all-languages-tabs.md#tabs).
 
-## <a name="navigate-within-your-code-and-the-ide"></a>Kodunuz ve IDE içinde gezinme
+## <a name="navigate-within-your-code-and-the-ide"></a>Kodunuzda ve IDE 'de gezinme
 
-Çeşitli teknikleri kullanarak kodundaki belirli konumları daha hızlı bulabilir ve bu konumlara geçebilirsiniz. Ayrıca, tercihlerinize bağlı olarak Visual Studio pencerenizin düzenini değiştirebilirsiniz. 
+Kodunuzda belirli konumları daha hızlı bir şekilde bulmak ve taşımak için çeşitli teknikler kullanabilirsiniz. tercihlerinize göre Visual Studio pencerelerinin yerleşimini de değiştirebilirsiniz. 
 
-- **Kod satırlarını yer işaretlerine ekleyin.** Bir dosyadaki belirli kod satırlarına hızla gitmek için yer işaretlerini kullanabilirsiniz.
+- **Kod satırları yer işareti**. Bir dosyadaki belirli kod satırlarına hızlıca gezinmek için yer işaretlerini kullanabilirsiniz.
 
-    Yer işareti ayarlamak için menü çubuğunda Yer İşaretlerini Düzenle Yer  >  **İşaretlerini**  >  **Değiştir'i seçin.** Bir çözümün tüm yer işaretlerini Yer İşaretleri **penceresinde görüntüebilirsiniz.** Daha fazla bilgi için [bkz. Kodda yer işaretlerini ayarlama.](../ide/setting-bookmarks-in-code.md)
+    Bir yer işareti ayarlamak için, menü çubuğunda   >  **yer imlerini** Düzenle yer işaretlerini Seç  >  **yer işaretini** seçin. Bir çözümün tüm yer imlerini **yer işaretleri** penceresinde görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [koddaki yer Imlerini ayarlama](../ide/setting-bookmarks-in-code.md).
 
-- **bir dosyasında sembol tanımları için arama.** Sembol tanımlarını ve dosya adlarını bulmak için bir çözüm içinde arama yapmak için aramanız gerekir, ancak arama sonuçları ad alanlarını veya yerel değişkenleri içermez.
+- **Bir dosyada sembol tanımlarını arayın**. Sembol tanımlarını ve dosya adlarını bulmak için bir çözüm içinde arama yapabilirsiniz, ancak arama sonuçları ad alanları veya yerel değişkenler içermez.
 
-   Bu özele erişmek için menü çubuğunda Düzenle'yi  >  **seçin.**
+   Bu özelliğe erişmek için, menü çubuğunda,   >  **Git 'e git**' i seçin.
 
-- **Kodunuzun genel yapısına göz atma.** Bu **Çözüm Gezgini** projelerinde sınıflarda, türleriyle üyelerinde arama ve göz atabilirsiniz. Ayrıca sembolleri arayabilir, bir yöntemin Çağrı Hiyerarşisi'ne bakabilirsiniz, sembol başvurularını bulabilir ve diğer görevleri gerçekleştirebilirsiniz. içinde bir kod öğesi **Çözüm Gezgini,** ilişkili dosya **önizleme** sekmesinde açılır ve imleç dosyasındaki öğeye taşınır. Daha fazla bilgi için [bkz. Kodun yapısını görüntüleme.](../ide/viewing-the-structure-of-code.md)
+- **Kodunuzun genel yapısına gözatın**. **Çözüm Gezgini**, Koleksiyonlarınızda sınıfları ve bunların türlerini ve üyelerini arayabilir ve bunlara gözatabilirler. Ayrıca sembolleri arayabilir, yöntemin Çağrı hiyerarşisini görüntüleyebilir, sembol başvurularını bulabilir ve diğer görevleri gerçekleştirebilirsiniz. **Çözüm Gezgini** bir kod öğesi seçerseniz, ilişkili dosya bir **Önizleme** sekmesinde açılır ve imleç dosyadaki öğeye gider. Daha fazla bilgi için bkz. [kod yapısını görüntüleme](../ide/viewing-the-structure-of-code.md).
 
-- **Eşleme moduyla dosyada bir konuma atlayın.** Harita modu, kaydırma çubuğunda kod satırlarını görüntüler. Bu görüntüleme modu hakkında daha fazla bilgi için [bkz. Nasıl 2. Sayfa: Kaydırma çubuğunu özelleştirme.](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md#map-mode)
+- **Eşleme modundaki bir dosyadaki konuma atlayın**. Harita modu, kod satırlarını, kaydırma çubuğunda küçük olarak görüntüler. Bu görüntü modu hakkında daha fazla bilgi için bkz. [nasıl yapılır: kaydırma çubuğunu özelleştirme](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md#map-mode).
 
-- **Kod eşlemesi ile kod yapınızı anlama.** Kod eşlemeleri, kodunuz genelinde bağımlılıkları görselleştirmenize ve dosya ve kod satırlarını okumadan nasıl uyum içinde olduğunu görmenize yardımcı olabilir. Daha fazla bilgi için [bkz. Kod eşlemeleri ile bağımlılıkları eşleme.](../modeling/map-dependencies-across-your-solutions.md)
+- Kod **eşlemesiyle kod yapınızı anlayın**. Kod haritaları kodunuzda bağımlılıkları görselleştirmenize yardımcı olabilir ve dosya ve kod satırları arasında okuma yapmadan nasıl sığdığını görürsünüz. Daha fazla bilgi için bkz. [kod eşlemeleriyle harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md).
 
-- **Düzenle/Son Dosyaya Git ile sık kullanılan dosyalara bakın.** Belirtilen öğeleri hızla bulumanıza Visual Studio için kodda odaklanmış bir arama gerçekleştirmek için git komutlarını kullanın. Ayrıntılı yönergeler için [bkz. Git komutlarını kullanarak kod bulma.](../ide/go-to.md)
+- **En son dosyayı Düzenle/git ile sık kullanılan dosyalara bakın**. belirtilen öğeleri hızlı bir şekilde bulmanıza yardımcı olması için kodunuzda odaklanmış bir arama gerçekleştirmek üzere Visual Studio içindeki komutlara git ' i kullanın. Ayrıntılı yönergeler için bkz. [Go komutunu kullanarak kodu bulma](../ide/go-to.md).
 
-- **Sol [Özellikler penceresi](../ide/reference/properties-window.md) sağ tarafa doğru hareket ettirin.** Daha tanıdık bir pencere düzeni arıyorsanız, F4 tuşuna basarak Özellikler penceresi **Visual Studio'yi hareket ettirebilirsiniz.**
+- **[Özellikler penceresi](../ide/reference/properties-window.md) sağ tarafa taşıyın**. daha tanıdık bir pencere düzeni arıyorsanız **F4** tuşuna basarak Visual Studio Özellikler penceresi taşıyabilirsiniz.
 
-## <a name="find-items-faster"></a>Öğeleri daha hızlı bulma
+## <a name="find-items-faster"></a>Öğeleri daha hızlı bulun
 
-Yalnızca geçerli göreviniz için ilgili bilgileri göstermek için araç pencerelerinin içeriğini filtrelemeye ek olarak IDE'de komutlar, dosyalar ve seçenekler için arama yapabilirsiniz.
+Araç pencerelerinin içeriğini yalnızca geçerli göreviniz için ilgili bilgileri gösterecek şekilde filtrelemeye ek olarak komutlar, dosyalar ve seçenekler için IDE genelinde arama yapabilirsiniz.
 
-- **Araç pencerelerinin içeriğini filtrele.** Araç **Kutusu,** Özellikler penceresi ve Çözüm Gezgini gibi birçok araç  penceresinin içeriğinde arama Çözüm Gezgini, ancak yalnızca adları belirttiğiniz karakterleri içeren öğeleri görüntüebilirsiniz.
+- **Araç pencerelerinin Içeriğini filtreleyin**. **Araç kutusu**, **özellikler** penceresi ve **Çözüm Gezgini** gibi birçok araç penceresinin içeriği içinde arama yapabilirsiniz ancak yalnızca adları belirttiğiniz karakterleri içeren öğeleri görüntüleyebilirsiniz.
 
-- **Yalnızca ele almak istediğiniz hataları görüntüler.** Hata Listesi araç **çubuğunda** Filtre **düğmesini seçerseniz,** Hata Listesi penceresinde görünen hata **sayısını azaltabilirsiniz.** Yalnızca düzenleyicide açık olan dosyalardaki hataları, yalnızca geçerli dosyadaki hataları veya yalnızca geçerli projedeki hataları görüntüleyebilirsiniz. Ayrıca, belirli hataları bulmak için **hata listesi** penceresi içinde arama yapabilirsiniz.
+- **Yalnızca ele almak istediğiniz hataları görüntüleyin**. **Hata listesi** araç çubuğunda **filtre** düğmesini seçerseniz, **hata listesi** penceresinde görüntülenen hata sayısını azaltabilirsiniz. Yalnızca düzenleyicide açık olan dosyalardaki hataları, yalnızca geçerli dosyadaki hataları veya yalnızca geçerli projedeki hataları görüntüleyebilirsiniz. Ayrıca, belirli hataları bulmak için **hata listesi** penceresi içinde arama yapabilirsiniz.
 
 - **İletişim kutularını, menü komutlarını, seçenekleri ve daha fazlasını bulun**. Arama kutusuna bulmaya çalıştığınız öğeler için anahtar sözcükler veya ifadeler girin. Örneğin, **Yeni proje** girdiğinizde aşağıdaki seçenekler görüntülenir:
 

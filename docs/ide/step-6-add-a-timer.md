@@ -8,18 +8,18 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 09e7930b-cab6-4a22-9a6f-72e23f489585
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 964f49c6a149ccf0f5af46456005ff0e1f82826b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5a38a368297662a5204fd52948f9736c39e1311a
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122078056"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123398373"
 ---
 # <a name="step-6-add-a-timer"></a>6. Adım: Süreölçer ekleme
 Ardından, eşleştirme <xref:System.Windows.Forms.Timer> oyununa bir denetim eklersiniz. Süreölçer belirtilen sayıda milisaniye bekler ve ardından değer işareti olarak adlandırılan bir olayı *sağlar.* Bu olay, bir eylemi başlatmak veya eylemi düzenli aralıklarla yinelemek için kullanışlıdır. Bu durumda, oyuncuların iki simge seçmesini sağlamak ve simgeler eşleşmez ise, kısa bir süre sonra bu iki simgeyi yeniden gizlemek için bir zamanlayıcı kullanacaksınız.
@@ -47,16 +47,16 @@ Ardından, eşleştirme <xref:System.Windows.Forms.Timer> oyununa bir denetim ek
      Tick olayı işleyicisi üç şey yapar: İlk olarak, yöntemini çağırarak zamanlayıcının çalışmay olduğundan emin <xref:System.Windows.Forms.Timer.Stop> olur. Ardından, oyuncunun seçtiği iki etiketin simgelerini yeniden görünmez yapmak için ve olmak `firstClicked` için iki başvuru değişkeni `secondClicked` kullanır. Son olarak, ve başvuru `firstClicked` `secondClicked` değişkenlerini C# içinde ve `null` `Nothing` Visual Basic. Programın kendini sıfırlama şekli olması nedeniyle bu adım önemlidir. Artık herhangi bir denetimi izlemez ve oynatıcının bir etiketi yeniden <xref:System.Windows.Forms.Label> seçmesi için hazırdır.
 
     > [!NOTE]
-    > Zamanlayıcı nesnesinin `Start()` zamanlayıcıyı başlatan bir yöntemi ve onu `Stop()` durduran bir yöntemi vardır. Özellikler penceresinde zamanlayıcının **Etkin** özelliğini **True**  olarak ayarlıyorsa, program başlar başlamaz tıklanır. Ancak False olarak bırakarak **yöntemi** çağrılana kadar `Start()` tıklar. Normalde zamanlayıcı, tıklar arasında kaç milisaniye bekleyeceğini belirlemek için **Interval** özelliğini kullanarak Tick olayını tekrar tekrar verir. Zamanlayıcının yönteminin Tick olayı içinde `Stop()` nasıl çağrıldını fark etmişsinizdir. Bu, zamanlayıcıyı tek bir atış moduna *koyar.* Başka bir ifadeyle yöntem çağrıldında belirtilen aralığı bekler, tek bir Tick olayı tetikler ve `Start()` ardından durur.
+    > Zamanlayıcı nesnesinin `Start()` zamanlayıcıyı başlatan bir yöntemi ve onu `Stop()` durduran bir yöntemi vardır. Özellikler penceresinde zamanlayıcının **Etkin** özelliğini **True**  olarak ayarlıyorsa, program başlar başlamaz tıklanır. Ancak false olarak bırakarak **yöntemi** çağrılana kadar `Start()` tıklar. Normalde zamanlayıcı, tıklar arasında kaç milisaniye bekleyeceğini belirlemek için **Interval** özelliğini kullanarak Tick olayını tekrar tekrar verir. Zamanlayıcının yönteminin Tick olayı içinde `Stop()` nasıl çağrıldını fark etmişsinizdir. Bu, zamanlayıcıyı tek bir atış moduna *koyar.* Başka bir ifadeyle yöntem çağrıldında belirtilen aralığı bekler, tek bir Tick olayı tetikler ve `Start()` ardından durur.
 
 4. Yeni zamanlayıcıyı iş başında görmek için kod düzenleyicisine gidin ve olay işleyicisi yönteminin üst ve alt `label_Click()` kısmında aşağıdaki kodu ekleyin. (En üstüne iki deyim ve en alta üç deyim ekliyoruz; yöntemin `if` geri kalanı aynı kalır.)
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial4step6/cs/form1.cs" id="Snippet8":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial4step6/vb/form1.vb" id="Snippet8":::
 
-     Yöntemin en üstünde yer alan kod, Enabled özelliğinin değerini kontrol ederek zamanlayıcının başlat olup **olmadığını** denetler. Böylece, oyuncu birinci ve ikinci Etiket denetimlerini seçerse zamanlayıcı başlatılırsa üçüncü bir etiket seçmek hiçbir şey yapmaz. Ayrıca, oyun başka bir ilk tıklama için hazır olmadan önce oyuncunun üçüncü kez hızlı bir şekilde tıklamasını da önler. 
+     Yöntemin en üstünde yer alan kod, Enabled özelliğinin değerini kontrol ederek zamanlayıcının başlatıp **başlatılama olmadığını** denetler. Böylece, oyuncu birinci ve ikinci Etiket denetimlerini seçerse zamanlayıcı başlatılırsa üçüncü bir etiket seçmek hiçbir şey yapmaz. Ayrıca, oyuncunun bir kez daha ilk tıklamaya hazır olmadan önce üçüncü kez hızlı bir şekilde tıklamasını da önler. 
 
-     Yöntemin alt kısmında yer alan kod, başvuru değişkenini oynatıcının seçtiği ikinci Etiket denetimine göre ayarlar ve ardından etiketin simge rengini siyah olarak ayararak görünür `secondClicked` hale gelir. Daha sonra, 750 milisaniye bekler ve tek bir Tick olayı tetiklemesi için zamanlayıcıyı tek sefer modunda başlatır. Zamanlayıcının Tick olayı işleyicisi iki simgeyi gizler ve ve başvuru değişkenlerini sıfırlar, böylece form, oyuncunun başka bir simge `firstClicked` `secondClicked` çifti seçmesi için hazır olur.
+     Yöntemin alt kısmında yer alan kod, başvuru değişkenini oynatıcının seçtiği ikinci Etiket denetimine göre ayarlar ve ardından etiketin simge rengini siyah olarak ayararak görünür `secondClicked` hale gelir. Daha sonra, 750 milisaniye bekler ve tek bir Tick olayı tetiklemesi için zamanlayıcıyı tek sefer modunda başlatır. Zamanlayıcının Tick olayı işleyicisi iki simgeyi gizler ve ve başvuru değişkenlerini sıfırlar, böylece form, oyuncunun başka bir simge çifti `firstClicked` `secondClicked` seçmesi için hazır olur.
 
 5. Programınızı kaydedin ve çalıştırın. Bir simge seçin; bu simge görünür duruma gelir.
 

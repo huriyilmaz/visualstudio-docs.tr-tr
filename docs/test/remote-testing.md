@@ -1,6 +1,6 @@
 ---
 title: Visual Studio'de Uzaktan Test
-description: Kapsayıcılar, WSL2 veya SSH bağlantıları Visual Studio uzak ortamlardan testleri çalıştırmak için Visual Studio Test Gezgini'nde uzaktan testi kullanmayı öğrenin. Bu konu, yerel kapsayıcılar, WSL2 veya SSH bağlantıları testenvironments.jsuzaktan test yapılandırmayı kapsar.
+description: Kapsayıcılar, WSL2 veya SSH bağlantıları Visual Studio uzak ortamlardan testleri çalıştırmak için Test Gezgini'nde uzaktan testi kullanmayı öğrenin. Bu konu, yerel kapsayıcılar, WSL2 veya SSH bağlantıları testenvironments.jsuzaktan test yapılandırmayı kapsar.
 ms.date: 08/26/2021
 ms.topic: how-to
 author: mikejo5000
@@ -10,16 +10,16 @@ ms.technology: vs-ide-test
 monikerRange: '>= vs-2022'
 ms.workload:
 - multiple
-ms.openlocfilehash: ff31dd7e6f5b45c316e3cd094a2728b085180e0b
-ms.sourcegitcommit: f4e975cb5755b4a3ff207f9bde74e79f6db5c643
+ms.openlocfilehash: 3ca874c4f1f3fb8942d8a09789000edf0cd7c040
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "123361135"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123397771"
 ---
 # <a name="remote-testing-experimental-preview"></a>Uzaktan Test (deneysel önizleme)
 
-Uzaktan test, geliştiricilerin testleri çalıştırmaya Visual Studio hata ayıklamak için 2022'den uzak ortamlara bağlanmasını sağlar. Bu işlevsellik, farklı işletim sistemleri veya Linux işletim sistemleri gibi birden çok farklı hedef ortamına kod dağıtan platformlar Windows geliştiriciler için kullanışlıdır. Örneğin, normalde bir geliştiricinin Linux üzerinde çalışan bir testten geri bildirim almak için değişiklikleri CI işlem hattına göndermesi gerekir. Bu özellikle, Test Gezgini'ni uzak bir ortama bağlayarak Visual Studio Linux testlerini çalıştırabilirsiniz.
+Uzaktan test, geliştiricilerin 2022 Visual Studio ve hata ayıklama testleri için uzak ortamlara bağlanmasına olanak tanır. Bu işlevsellik, farklı işletim sistemleri veya Linux işletim sistemleri gibi birden çok farklı hedef ortamına kod dağıtan platformlar Windows geliştiriciler için yararlıdır. Örneğin, normalde bir geliştiricinin Linux üzerinde çalışan bir testten geri bildirim almak için değişiklikleri CI işlem hattına göndermesi gerekir. Bu özellik sayesinde Test Gezgini'ni uzak bir ortama Visual Studio Linux testlerini çalıştırabilirsiniz.
 
 Uzaktan testin bu deneysel sürümünü kullanma gereksinimleri:
 * Visual Studio 2022 Güncelleştirme 17.0 Önizleme 3 veya sonraki bir sürümü
@@ -82,7 +82,7 @@ Kapsayıcının yerel makineniz üzerinde yerleşik bir görüntüsü olması ge
 ### <a name="local-wsl2-connections"></a>Yerel WSL2 bağlantıları
 WSL2'de testleri uzaktan çalıştırmak için yerel [makineniz üzerinde WSL2 tümleştirmeyi](/windows/wsl/install-win10) etkinleştirmeniz gerekir.
 
-Ortam, aşağıdaki şema kullanılarak çözümünün kökünde belirtilebilir ve yerine hangi `testEnvironments.json` \<Ubuntu\> WSL2 Dağıtımını yüklemiş olursanız kullanın.
+Ortam, aşağıdaki şema kullanılarak çözümünün kökünde belirtilebilir ve yerine yüklemiş `testEnvironments.json` \<Ubuntu\> olduğunuz WSL2 Dağıtımını kullanabilirsiniz.
 ```json
 {
 "version": "1",
@@ -97,7 +97,7 @@ Ortam, aşağıdaki şema kullanılarak çözümünün kökünde belirtilebilir 
 ```
 
 ### <a name="ssh-connections"></a>SSH bağlantıları
- Araçlar ve Seçenekler'de SSH bağlantıları ekleyebilir veya **> Platformlar > SSH bağlantılarını > Bağlantı Yöneticisi.** "Ekle"yi seçmek konak adını, bağlantı noktasını ve ihtiyacınız olan kimlik bilgilerini girmenize olanak sağlar.
+ Araçlar ve Seçenekler'de Platformlar Arası > SSH **> ekleyebilir veya kaldırabilirsiniz > Bağlantı Yöneticisi.** "Ekle"yi seçmek konak adını, bağlantı noktasını ve ihtiyacınız olan kimlik bilgilerini girmenize olanak sağlar.
 
 Ortam, aşağıdaki şema kullanılarak çözümünün kökünde belirtilebilir ve yerine `testEnvironments.json` `\<ssh://user@hostname:22\>` SSH remoteUri'nizi kullanabilirsiniz.
 ```json
@@ -116,15 +116,15 @@ Ortam, aşağıdaki şema kullanılarak çözümünün kökünde belirtilebilir 
 ## <a name="use-the-test-explorer-to-run-and-debug-remote-tests"></a>Uzak testleri çalıştırmak ve hata ayıklamak için Test Gezgini'ni kullanma
 * Etkin ortam, Test Gezgini araç çubuğundaki bir açılan liste aracılığıyla seçilir. Şu anda aynı anda yalnızca bir test ortamı etkin olabilir.
 
-  ![Test Gezgini'nde uzaktan test ortamı açılan listesinde](media/remote_test_drop_down.png)
+  ![Test Gezgini'nde uzaktan test ortamı açılan listesinde](media/remote-test-drop-down.png)
 
 * Ortam seçildikten sonra testler yeni ortamda keşfedilecek ve çalıştırilecek.
 
-  ![Testler uzak ortamlarda keşfedildi ve yürütülür](media/remote_test_linux_discovery.png)
+  ![Testler uzak ortamlarda keşfedildi ve yürütülür](media/remote-test-linux-discovery.png)
 
 * Artık testlerinizi uzak ortamda çalıştırabilir ve ortamlarda testlerinizi ayıkabilirsiniz!
 
-  ![Test gezgininde uzak ortamdan test sonuçlarını görüntüleme](media/remote_test_linux_passing.png)
+  ![Test gezgininde uzak ortamdan test sonuçlarını görüntüleme](media/remote-test-linux-passing.png)
 
 * Test Gezgini bazı eksik ortam önkoşullarını yükleme ve eksik bağımlılıkları yükleme denemesi istendiğinde. Ancak, uzak ortamın sağlanmasının büyük bir kısmını kullanıcının belirtimleri sağlar.
 

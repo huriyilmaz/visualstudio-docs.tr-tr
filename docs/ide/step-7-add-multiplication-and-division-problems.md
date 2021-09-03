@@ -8,18 +8,18 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: e638959e-f6a4-4eb4-b2e9-f63b7855cf8f
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 188084d8c66339edd9efe9d098f47fcbfb2524ad
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 54faace3a5b9ea17f56e8dc691d1ff3466e087e6
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122061764"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123398043"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>7. Adım: Çarpma ve bölme problemleri ekleme
 

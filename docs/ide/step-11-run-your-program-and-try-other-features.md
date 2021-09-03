@@ -5,18 +5,18 @@ ms.date: 09/11/2019
 ms.custom: SEO-VS-2020
 ms.assetid: 656614d0-4fe7-4a67-8edc-c10919377d09
 ms.topic: tutorial
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 39bd1f97408f81b486a7c5f4128c71dca686608f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 7b6784c96c8915c0d80149023a786e8c4bc20680
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122078121"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123398409"
 ---
 # <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>11. Adım: Resim görüntüleyicisi uygulamanızı çalıştırma ve diğer özellikleri deneme
 
@@ -24,17 +24,17 @@ Resim görüntüleyicisi uygulamanız tamamlandı ve çalıştırmaya hazır. Uy
 
 ## <a name="how-to-run-your-app-and-set-the-background-color"></a>Uygulama çalıştırma ve arka plan rengini ayarlama
 
-1. **F5'i** seçin veya menü çubuğunda Hata Ayıklama Başlat **Hata**  >  **Ayıklama'ya tıklayın.**
+1. **F5'i** seçin veya menü çubuğunda Hata AyıklamaYı **Başlat Hata**  >  **Ayıklama'ya tıklayın.**
 
 1. Bir resmi açmadan önce Arka plan **rengini ayarla düğmesini** seçin. Renk **iletişim** kutusu açılır.
 
      ![Renk iletişim kutusu](../ide/media/express_colordialog.png)<br/>
-***Renk** _ _dialog kutusu*
+***Color** _ _dialog box*
 
 1. PictureBox arka plan rengini ayarlamak için bir renk seçin. Nasıl çalıştığını anlamak `backgroundButton_Click()` için (veya `BackgroundButton_Click()` ) yöntemine yakından bakın.
 
     > [!NOTE]
-    > Url'sini Dosya Aç iletişim kutusuna yapıştırarak İnternet'e **bir resim** abilirsiniz. Arka plan renginizin olması için saydam arka plana sahip bir görüntü bulmaya çalışabilirsiniz.
+    > Url'sini Dosya Aç iletişim kutusuna yapıştırarak İnternet'e **bir resim** abilirsiniz. Arka plan renginiz gösterilsin diye saydam arka plana sahip bir görüntü bulmaya çalışabilirsiniz.
 
 1. Temiz **olduğundan emin olmak** için Resmi temizle düğmesini seçin. Ardından Kapat düğmesini seçerek **uygulamadan çıkın.**
 
@@ -42,11 +42,11 @@ Resim görüntüleyicisi uygulamanız tamamlandı ve çalıştırmaya hazır. Uy
 
 * **BackColor** özelliğini kullanarak formun rengini ve düğmeleri değiştirme.
 
-* Font ve ForeColor özelliklerini kullanarak **düğmelerinizi** **ve onay kutularınızı özelleştirin.**
+* Font ve ForeColor özelliklerini kullanarak **düğmelerinizi** ve **onay kutularınızı özelleştirin.**
 
 * Form'nizin **FormBorderStyle ve** **ControlBox özelliklerini** değiştirin.
 
-* Kullanıcı Enter veya Esc tuşuna bassa düğmelerin otomatik olarak seçilecek  şekilde form'nizin AcceptButton ve **CancelButton** **özelliklerini** kullanın.  Kullanıcı Enter tuşuna **basınca** uygulamayı Dosya Aç iletişim **kutusunu** açın ve kullanıcı Esc'yi seçerken kutuyu **kapatın.**
+* Kullanıcı Enter veya Esc tuşuna bassa düğmelerin otomatik olarak seçilecek  şekilde form'nizin AcceptButton ve **CancelButton** **özelliklerini** kullanın.  Kullanıcı Enter tuşuna **basınca** uygulamayı Dosya  Aç iletişim kutusunu açın ve kullanıcı Esc'yi seçerken kutuyu **kapatın.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

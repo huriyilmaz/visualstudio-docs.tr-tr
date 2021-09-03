@@ -1,83 +1,83 @@
 ---
 title: '3. Adım: Form özelliklerinizi ayarlama'
-description: Form biçiminizi değiştirmek için Özellikler penceresi kullanmayı öğrenin.
+description: Formunuzun görünüşünü değiştirmek için Özellikler penceresi nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: 634ef037-1525-48c8-ac7f-abf04be69376
 ms.topic: tutorial
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c7f9d8153a27807c394f2d6b3f383365e4fbb65d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 2c61c1aa0fc28e1971b2add6c684a4ae3cd4e048
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122132047"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123398069"
 ---
 # <a name="step-3-set-your-form-properties"></a>3. Adım: Form özelliklerinizi ayarlama
 
-Ardından Özellikler penceresini **kullanarak** form biçiminizi değiştireceksiniz.
+Daha sonra, formunuzun görünüşünü değiştirmek için **Özellikler** penceresini kullanın.
 
 ## <a name="how-to-set-your-form-properties"></a>Form özelliklerinizi ayarlama
 
-1. Windows **Forms Designer'a Windows olun.** Tümleşik Visual Studio ortamında (IDE) **Form1.cs [Tasarım]** sekmesini (veya **form1.vb [Tasarım]** sekmesini) Visual Basic.
+1. **Windows Form Tasarımcısı** baktığınızdan emin olun. Visual Studio tümleşik geliştirme ortamında (ıde), **form1. cs [design]** sekmesini (veya Visual Basic **form1. vb [design]** sekmesini) seçin.
 
-1. **Form1** formunun içinde herhangi bir yerde seçim yapmak için form1'i seçin. Şimdi **formun** özelliklerini gösteren Özellikler penceresine bakın. Formlar çeşitli özelliklere sahiptir. Örneğin, ön plan ve arka plan rengini, formun en üstünde görünen başlık metnini, formun boyutunu ve diğer özellikleri ayarlayın.
+1. Seçmek için **Form1** form içinde herhangi bir yeri seçin. Şimdi form özelliklerini göstermeli **Özellikler** penceresine bakın. Formlarda çeşitli özellikler vardır. Örneğin, ön plan ve arka plan rengini, formun üstünde görünen başlık metnini, formun boyutunu ve diğer özellikleri ayarlayabilirsiniz.
 
    > [!NOTE]
-   > Özellikler **penceresi** görünmüyorsa, araç çubuğunda hata ayıklamayı  durdur düğmesini seçerek veya pencereyi kapatarak uygulamayı durdurun. Uygulama durdurulursa ve Özellikler penceresini hala  görmüyorsanız, menü çubuğunda Özellikler Penceresini **Görüntüle'yi**  >  **seçin.**
+   > **Özellikler** penceresi görünmezse, araç çubuğunda kare **ayıklamayı Durdur** düğmesini seçerek uygulamanızı durdurun veya yalnızca pencereyi kapatın. Uygulama durdurulmuşsa ve yine de **Özellikler** penceresini görmüyorsanız, menü çubuğunda   >  **Özellikler penceresini** görüntüle ' yi seçin.
 
-1. Form seçildikten sonra Özellikler **penceresinde Text** **özelliğini** bulun. Listenin nasıl sıralanmış olduğunu bağlı olarak, aşağı kaydırmak için ihtiyacınız olabilir. **Metin'i** seçin, **Resim Görüntüleyici yazın** ve enter tarak **seçin.**  Formunuz artık başlık çubuğunda **Resim** Görüntüleyici metnine sahip olmalı ve **Özellikler** penceresi aşağıdaki ekran görüntüsüne benzer şekilde görünür.
+1. Form seçildikten sonra, **Özellikler** penceresinde **Text** özelliğini bulun. Listenin nasıl sıralandığına bağlı olarak aşağı kaydırmanız gerekebilir. **Metin**' i seçin, **resim görüntüleyici** yazın ve ardından **ENTER**' u seçin.  Formunuz artık başlık çubuğunda metin **resmi görüntüleyicisine** sahip olmalıdır ve **Özellikler** penceresi aşağıdaki ekran görüntüsüne benzer görünmelidir.
 
     ![Özellik penceresi](../ide/media/express_edittextproperty.png)<br>
-   ***Özellikler** _ _window*
+   ***Özellikler** _ _window *
 
    > [!NOTE]
-   > Özellikler Kategorilere Ayrılmış veya **Alfabetik görünüme** **göre sıralanır.** Özellikler penceresindeki düğmeleri kullanarak bu iki görünüm arasında **geçişebilirsiniz.** Bu öğreticide, alfabetik görünüm aracılığıyla özellikleri **bulmak daha kolaydır.**
+   > Özellikler, **kategorilere ayrılmış** veya **alfabetik** bir görünüme göre sıralanabilir. **Özellikler** penceresindeki düğmeleri kullanarak bu iki görünüm arasında geçiş yapabilirsiniz. Bu öğreticide, **alfabetik** görünüm aracılığıyla özellikleri bulmak daha kolay.
 
-1. Geri dön Form **Windows'a .** Formun sağ alt köşesindeki küçük beyaz kare olan ve aşağıdaki gibi görünen sağ alt tutamacı seçin.
+1. **Windows Form Tasarımcısı**'e geri dönün. Formun sağ alt kısmındaki küçük beyaz kare olan ve aşağıdaki gibi görünen formun sağ alt sürükleme tutamacını seçin.
 
-    ![Tutamacı sürükleme](../ide/media/express_bottomrt_drag.png)<br>
-   *Tutamacı sürükleme*
+    ![Sürükleme tutamacı](../ide/media/express_bottomrt_drag.png)<br>
+   *Sürükleme tutamacı*
 
-    Formu daha geniş ve biraz daha uzun olacak şekilde yeniden boyutlandırmak için tutamacı sürükleyin.
+    Formu daha geniş ve biraz uzun olacak şekilde yeniden boyutlandırmak için tutamacı sürükleyin.
 
-1. Özellikler **penceresine bakın** ve Size özelliğinin **değiştiklerini** görebilirsiniz. Formu **her** yeniden boyutlandırarak Boyut özelliği değişir. Formun tutamacı sürükleyerek yaklaşık **550, 350** (tam olması gerekmemektedir) bir form boyutuna yeniden boyutlandırmayı deneyin. Bu, bu projenin iyi çalışmasına neden olur. Alternatif olarak, değerleri doğrudan Boyut özelliğine **girebilirsiniz ve** ardından **Enter tuşuna basın.**
+1. **Özellikler** penceresine bakın ve **Boyut** özelliğinin değiştiğini unutmayın. Formu her yeniden boyutlandırışınızda **size** özelliği değişir. Formun tutamacını, yaklaşık **550, 350** (tam olması gerekmez) form boyutuyla yeniden boyutlandırmak için, bu proje için iyi bir şekilde çalışacak şekilde sürüklemeyi deneyin. Alternatif olarak, değerleri doğrudan **Boyut** özelliğine girebilir ve ardından **ENTER** tuşunu seçebilirsiniz.
 
-1. Uygulamayı yeniden çalıştırın. Uygulama çalıştırmak için aşağıdaki yöntemlerden herhangi birini kullanabileceğinizi unutmayın.
+1. Uygulamanızı yeniden çalıştırın. Uygulamanızı çalıştırmak için aşağıdaki yöntemlerden herhangi birini kullanacağınızı unutmayın.
 
-   - **F5 anahtarını** seçin.
+   - **F5** tuşunu seçin.
 
-   - Menü çubuğunda Hata Ayıklama Hata **AyıklamaYı**  >  **Başlat'ı seçin.**
+   - Menü çubuğunda **hata**  >  **ayıklamayı Başlat hata** Ayıkla ' yı seçin.
 
-   - Araç çubuğunda, aşağıdaki **gibi görünen** Hata Ayıklamayı Başlat düğmesini seçin.
+   - Araç çubuğunda, aşağıdaki gibi görünen **hata ayıklamayı Başlat** düğmesini seçin.
 
-      ![Hata Ayıklamayı Başlat araç çubuğu düğmesi](../ide/media/express_icondebug.png)<br>
-     ***Hata Ayıklamayı Başlat** _ _toolbar düğmesi*
+      ![Hata ayıklamayı Başlat araç çubuğu düğmesi](../ide/media/express_icondebug.png)<br>
+     ***Hata ayıklamayı Başlat** _ _toolbar düğmesi *
 
-     Daha önce olduğu gibi, IDE uygulamanızı derlemek ve çalıştırır ve bir pencere görünür.
+     Daha önce olduğu gibi, IDE uygulamanızı oluşturup çalıştırır ve bir pencere görüntülenir.
 
-1. Bir sonraki adıma gitmeden önce, IDE çalışırken uygulamanızı değiştirmenize izin vermey olduğundan, uygulamayı durdurun. Uygulamayı durdurmak için aşağıdaki yöntemlerden herhangi birini kullanabileceğinizi unutmayın.
+1. Bir sonraki adıma geçmeden önce, IDE çalışırken uygulamanızı değiştirmenize izin vermediğinden uygulamanızı durdurun. Uygulamanızı durdurmak için aşağıdaki yöntemlerden herhangi birini kullanacağınızı unutmayın.
 
-   - Araç çubuğunda Hata Ayıklamayı **Durdur düğmesini** seçin.
+   - Araç çubuğunda **hata ayıklamayı Durdur** düğmesini seçin.
 
-   - Menü çubuğunda Hata Ayıklama Hata **Ayıklamayı**  >  **Durdur'u seçin.**
+   - Menü çubuğunda **hata**  >  **ayıklamayı Durdur hata** Ayıkla ' yı seçin.
 
-   - Klavyenizi kullanın ve **Shift** + **F5 tuşuna basın.**
+   - Klavyenizi kullanın ve **SHIFT** + **F5** tuşuna basın.
 
-   - Resim **Görüntüleyicisi** penceresinin üst köşesindeki X **düğmesini** seçin.
+   - **Resim görüntüleyici** penceresinin üst köşesindeki **X** düğmesini seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* Sonraki öğretici adımına gitmek için **[bkz. 4. Adım: Formlarınızı TableLayoutPanel denetimiyle oluşturma.](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)**
+* Sonraki öğretici adımına gitmek için bkz. 4. **[Adım: TableLayoutPanel denetimi ile formunuzu düzenleme](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)**.
 
-* Önceki öğretici adımına dönmek için [bkz. 2. Adım: Resim görüntüleyicisi uygulamasını çalıştırma.](../ide/step-2-run-your-program.md)
+* Önceki öğretici adımına dönmek için bkz. 2. [Adım: resim görüntüleyici uygulamanızı çalıştırma](../ide/step-2-run-your-program.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Öğretici 2: Zamanlı matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
-* [Öğretici 3: Eşleştirme oyunu oluşturma](tutorial-3-create-a-matching-game.md)
+* [Öğretici 2: süreli bir matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
+* [Öğretici 3: eşleşen oyun oluşturma](tutorial-3-create-a-matching-game.md)

@@ -1,7 +1,7 @@
 ---
 title: Yayımlama ayarlarını içeri aktararak Azure 'da yayımlayın
 description: Visual Studio Azure App Service ' dan bir uygulama dağıtmak için yayımlama profili oluşturma ve içeri aktarma
-ms.date: 05/06/2020
+ms.date: 08/27/2021
 ms.topic: tutorial
 helpviewer_keywords:
 - deployment, publish settings
@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: fbb2f336d318216de178ca295c5d9d56c91175da
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 7d2807480741ff40df82156eea563843bec07712
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122133672"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123398541"
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>Visual Studio 'de yayımlama ayarlarını içeri aktararak bir uygulamayı Azure App Service yayımlayın
 
@@ -91,7 +91,7 @@ Bir yayımlama ayarları dosyası (*\* . publishsettings*) Visual Studio oluştu
         msdeploySite="DeployASPDotNetCore"
         userName="$DeployASPDotNetCore"
         userPWD="abcdefghijklmnopqrstuzwxyz"
-        destinationAppUrl="http://deployaspdotnetcore20180508031824.azurewebsites.net"
+        destinationAppUrl="http://deployaspdotnetcore2021.azurewebsites.net"
         SQLServerDBConnectionString=""
         mySQLDBConnectionString=""
         hostingProviderForumLink=""

@@ -62,6 +62,10 @@
           href: ../python/publishing-python-web-applications-to-azure-from-visual-studio.md
 - name: Nasıl yapılır kılavuzları
   items:
+    - name: GitHub Eylemler CI/CD yayımlama
+      items:
+        - name: GitHub eylemleri kullanarak Azure 'a dağıtma
+          href: azure-deployment-using-github-actions.md
     - name: ClickOnce güvenliği ve dağıtımı
       items:
         - name: ClickOnce güvenliğine ve dağıtımına genel bakış

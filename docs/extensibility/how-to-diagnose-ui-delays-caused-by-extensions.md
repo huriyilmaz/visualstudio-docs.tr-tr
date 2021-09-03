@@ -4,17 +4,17 @@ description: Visual Studio, kullanıcı arabirimi gecikmelerini bir uzantının 
 ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: conceptual
-author: j-martens
-ms.author: jmartens
+author: leslierichardson95
+ms.author: lerich
 manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload: multiple
-ms.openlocfilehash: 6309d014e2ec2c520a7cba24c8642c27fbb6f339
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 8ddb58405125b53c955324be55ccb5eec93000e4
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122125016"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123398593"
 ---
 # <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>Nasıl yapılır: Uzantılardan kaynaklanan kullanıcı arabirimi gecikmelerini tanılama
 
@@ -149,14 +149,14 @@ Ayrıca, bu görünümü yalnızca paketinizdeki modüller içeren yığınlar d
 * Varsayılan olarak eklenen tüm Gruplandırmayı kaldırmak için **Grouppats** 'leri boş metin olarak ayarlayın.
 * **Inpats** 'yi, var olan işlem filtresine ek olarak, derleme adınızın bir kısmını içerecek şekilde ayarlayın. Bu durumda, **devenv olmalıdır; UIDelayR2**.
 
-![İş Parçacığı Zaman Yığınları görünümünde GroupPath ve IncPath'i ayarlama](media/perfview-tts-group-path-inc-path.png)
+![Iş parçacığı zaman yığınları görünümünde GroupPath ve InPath ayarlama](media/perfview-tts-group-path-inc-path.png)
 
-PerfView, Yardım **menüsünün** altında koddaki performans sorunlarını belirlemek için kullanabileceğiniz ayrıntılı kılavuza sahip. Ayrıca, aşağıdaki bağlantılar kodunuzu iyileştirmek için iş parçacığı api'Visual Studio kullanma hakkında daha fazla bilgi sağlar:
+PerfView, kodunuzda performans sorunlarını belirlemek için kullanabileceğiniz **Yardım** menüsü altında ayrıntılı rehberlik içerir. ayrıca, aşağıdaki bağlantılar kodunuzu iyileştirmek için Visual Studio iş parçacığı apı 'lerinin nasıl kullanılacağına ilişkin daha fazla bilgi sağlar:
 
 * [https://github.com/Microsoft/vs-threading/blob/master/doc/index.md](https://github.com/Microsoft/vs-threading/blob/master/doc/index.md)
 * [https://github.com/Microsoft/vs-threading/blob/master/doc/cookbook_vs.md](https://github.com/Microsoft/vs-threading/blob/master/doc/cookbook_vs.md)
 
-Ayrıca, etkili uzantılar yazmaya Visual Studio en iyi yöntemlerle ilgili rehberlik sağlayan uzantılar (burada NuGet [paketi)](https://www.nuget.org/packages/microsoft.visualstudio.sdk.analyzers)için yeni statik çözümleyicileri de kullanabilirsiniz. VS SDK [çözümleyicilerinin ve iş parçacığı](https://github.com/Microsoft/VSSDK-Analyzers/blob/master/doc/index.md) [çözümleyicilerinin listesine bakın.](https://github.com/Microsoft/vs-threading/blob/master/doc/analyzers/index.md)
+ayrıca, etkin uzantıları yazmak için en iyi yöntemler hakkında rehberlik sağlayan uzantılar için yeni Visual Studio statik çözümleyicileri ( [burada](https://www.nuget.org/packages/microsoft.visualstudio.sdk.analyzers)NuGet paket) kullanabilirsiniz. [Vs SDK Çözümleyicileri](https://github.com/Microsoft/VSSDK-Analyzers/blob/master/doc/index.md) ve [iş parçacığı Çözümleyicileri](https://github.com/Microsoft/vs-threading/blob/master/doc/analyzers/index.md)listesini görüntüleyin.
 
 > [!NOTE]
-> Üzerinde denetime sahip olmadığınız bağımlılıklar nedeniyle yanıt vermemeye devam ediyorsanız (örneğin, uzantınız kullanıcı arabirimi iş parçacığında zaman uyumlu VS hizmetlerini çağırıyorsa) bunu bilmek istiyoruz. İş Ortağı programımızın bir Visual Studio, geliştirici destek isteği göndererek bizimle iletişim kurabilirsiniz. Aksi takdirde, geri bildiriminizi göndermek ve başlığına eklemek için 'Sorun Bildir' `"Extension UI Delay Notifications"` aracını kullanın. Ayrıca analizinizin ayrıntılı açıklamasını da dahil edin.
+> Denetim sahibi olmayan bağımlılıklar nedeniyle yanıt verme süresini adreslemezseniz (örneğin, uzantınızın UI iş parçacığında zaman uyumlu VS hizmetlerini çağırması gerekiyorsa), bunun hakkında bilgi almak istiyoruz. Visual Studio iş ortağı programımızın bir üyesiyseniz, geliştirici destek isteği göndererek bizimle iletişim kurun. Aksi takdirde, görüşlerinizi göndermek ve başlığa eklemek için ' bir sorun bildir ' aracını kullanın `"Extension UI Delay Notifications"` . Lütfen analizlerinizin ayrıntılı bir açıklamasını da ekleyin.

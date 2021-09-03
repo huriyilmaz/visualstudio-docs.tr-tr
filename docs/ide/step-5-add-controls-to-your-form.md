@@ -1,93 +1,93 @@
 ---
 title: '5. Adım: Formunuza denetimler ekleme'
-description: <xref:System.Windows.Forms.PictureBox>Formunuza denetim ve denetim gibi denetimler eklemeyi öğrenin <xref:System.Windows.Forms.CheckBox> .
+description: Formnize denetim ve denetim <xref:System.Windows.Forms.PictureBox> gibi denetimleri <xref:System.Windows.Forms.CheckBox> nasıl ekleyebilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 08/30/2019
 ms.assetid: dc2746f4-0b5c-4674-9ef7-f40f94150f52
 ms.topic: tutorial
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: a8653bdc5b16e244247c15755d3e018ecb9b6b5114b6242661648f219fb58de5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 638d7e32a522523cf53213fee1194c7a1a1bbc4e
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121447050"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123398422"
 ---
 # <a name="step-5-add-controls-to-your-form"></a>5. Adım: Formunuza denetimler ekleme
 
-Bu adımda, <xref:System.Windows.Forms.PictureBox> Formunuza denetim ve denetim gibi denetimler eklersiniz <xref:System.Windows.Forms.CheckBox> . Ardından <xref:System.Windows.Forms.Button> formunuza denetimler eklersiniz.
+Bu adımda, formunuza denetim ve <xref:System.Windows.Forms.PictureBox> denetim <xref:System.Windows.Forms.CheckBox> gibi denetimler eklersiniz. Ardından <xref:System.Windows.Forms.Button> formnize denetimler eklersiniz.
 
-## <a name="how-to-add-controls-to-your-form"></a>Formunuza denetimler ekleme
+## <a name="how-to-add-controls-to-your-form"></a>Formnize denetimler ekleme
 
-1. Visual Studio ıde 'nin sol tarafındaki **araç kutusu** sekmesini seçin (veya **Ctrl** + **Alt** + **X** tuşlarına basın) ve ardından **ortak denetimler** grubunu genişletin. Bu, formlarda gördüğünüz en yaygın denetimleri gösterir.
+1. **IDE'nin** sol tarafındaki Araç Kutusu sekmesini Visual Studio (veya **Ctrl** Alt X tuşlarına basın) ve ardından +  +  **Ortak Denetimler grubunu** genişletin. Bu, formlarda gördüğünüz en yaygın denetimleri gösterir.
 
-1. Formunuza PictureBox denetimi eklemek için **PictureBox** öğesine çift tıklayın. TableLayoutPanel formunuzu dolduracak şekilde yerleştirilmiş olduğundan, IDE, PictureBox denetimini ilk boş hücreye (sol üst köşe) ekler.
+1. **Formnize bir PictureBox** denetimi eklemek için PictureBox öğesini çift tıklatın. TableLayoutPanel formlarınızı dolduracak şekilde yerleştirildi. IDE, PictureBox denetimine ilk boş hücreye (sol üst köşede) ekler.
 
-1. Yeni PictureBox denetimini seçin ve ardından yeni **PictureBox denetimindeki siyah** üçgeni seçerek aşağıdaki ekran görüntüsünde gösterildiği gibi görev listesini görüntüleyin.
+1. Yeni **PictureBox denetimlerini** seçerek seçin ve ardından aşağıdaki ekran görüntüsünde gösterildiği gibi yeni PictureBox denetiminde siyah üçgeni seçerek görev listesini görüntülenin.
 
     ![PictureBox görevleri](../ide/media/express_pictureboxtasks.png)<br/>PictureBox **_ _tasks**
 
     > [!NOTE]
-    > Yanlışlıkla TableLayoutPanel içinde yanlış denetim türü eklerseniz, bunu silebilirsiniz. Denetime sağ tıklayın ve sonra bağlam menüsünde **Sil** ' i seçin. Ayrıca, menü çubuğunu kullanarak formdan denetimleri kaldırabilirsiniz. Menü çubuğunda,   >  **geri al** Düzenle ' yi seçin veya Sil ' i **düzenleyin**  >  .
+    > TableLayoutPanel denetiminize yanlışlıkla yanlış denetim türü eklersiniz, silebilirsiniz. Denetime sağ tıklayın ve bağlam menüsünde **Sil'i** seçin. Menü çubuğunu kullanarak da formda denetimleri kaldırabilirsiniz. Menü çubuğunda, Geri Almayı **Düzenle'yi**  >  **veya** Sil'i **Düzenle'yi**  >  **seçin.**
 
-1. **PictureBox** denetimindeki **PictureBox görevleri** menüsünde, **ana kapsayıcı içinde yerleştir** bağlantısını seçin. Bu, PictureBox **Dock** özelliğini **Fill** olarak ayarlar. Bunu görmek için **PictureBox** denetimini seçip seçin, **Özellikler** penceresine gidin ve **Dock** özelliğinin **Fill** olarak ayarlandığından emin olun.
+1. **PictureBox** **denetiminden PictureBox** Görevleri menüsünde Üst kapsayıcıya **yerleştir bağlantısını** seçin. Bu, PictureBox **Dock** özelliğini otomatik olarak Fill olarak **ayarlar.** Bunu görmek için **PictureBox** denetimlerini seçerek Özellikler  penceresine gidin ve **Dock** özelliğinin Fill olarak ayarlanmış olduğundan emin **olun.**
 
-1. Yalnızca **ColumnSpan** özelliğini değiştirerek PictureBox 'ı her iki sütuna da yayın. **PictureBox**'da **PictureBox** denetimini seçin ve **ColumnSpan** özelliğini **2** olarak ayarlayın. Ayrıca, PictureBox boş olduğunda boş bir çerçeve göstermek istersiniz. **BorderStyle** özelliğini **Fixed3D** olarak ayarlayın.
-
-    > [!NOTE]
-    > PictureBox 'niz için bir **ColumnSpan** özelliği görmüyorsanız, PictureBox 'ın TableLayoutPanel yerine forma eklenmesi olasıdır. Bu hatayı onarmak için, **PictureBox**'ı seçin, silin, **TableLayoutPanel** öğesini seçin ve ardından yeni bir PictureBox ekleyin.
-
-1. Formda **TableLayoutPanel** öğesini seçin ve ardından forma onay kutusu denetimi ekleyin. Tablodaki bir sonraki boş hücreye yeni bir CheckBox denetimi eklemek için **araç kutusu** ' nda **onay** kutusu öğesine çift tıklayın. PictureBox, TableLayoutPanel içindeki ilk iki hücreyi kullandığından, CheckBox denetimi sol alt hücreye eklenir. Aşağıdaki görüntüde gösterildiği gibi **metin** özelliğini seçin ve sözcük **uzatılmasına** yazın.
-
-    ![Esnetme özelliği ile TextBox denetimi](../ide/media/express_pictureviewercheckbox.png)<br/>*_* ***Esnetme**_ _Property * ile **metin kutusu** _ denetimi
-
-1. Formda **TableLayoutPanel** öğesini seçin ve ardından **araç kutusundaki** **kapsayıcılar** grubuna gidin (TableLayoutPanel denetiminizi aldığınız yerdir) ve **FlowLayoutPanel** öğesine çift tıklayarak son hücreye (sağ alt) yeni bir denetim ekleyin. Ardından, TableLayoutPanel içindeki FlowLayoutPanel 'i yerleştirin. Bunu, FlowLayoutPanel 'in siyah üçgen görev listesinde **Ana kapsayıcıda yerleştir** ' i seçerek ya da FlowLayoutPanel **Dock** özelliğini **Fill** olarak ayarlayarak yapabilirsiniz.
+1. PictureBox'ın ColumnSpan özelliğini değiştirerek her iki **sütunu da yayma.** **PictureBox'ta** **PictureBox denetimi seçin** ve **ColumnSpan** özelliğini **2 olarak ayarlayın.** Ayrıca, PictureBox boş olduğunda boş bir çerçeve göstermek de gerekir. **BorderStyle özelliğini** **Fixed3D olarak ayarlayın.**
 
     > [!NOTE]
-    > <xref:System.Windows.Forms.FlowLayoutPanel>, Bir satırdaki diğer denetimleri izleyen bir kapsayıcıdır. Bir FlowLayoutPanel 'i yeniden boyutlandırdığınızda, tüm denetimlerini tek bir satırda yerleştirir. Aksi takdirde, bunları diğer satırlarda, biri diğerinin üstüne yerleştirir. <br/><br/>Burada dört düğme tutacak bir FlowLayoutPanel kullanacaksınız. Düğmeleri eklediğinizde düğmeler bir üst üste düzenlensin, düğmeleri eklemeden önce FlowLayoutPanel 'i seçtiğinizden emin olun. <br/><br/>(Genellikle, her hücrede yalnızca bir denetim bulunur. Bu örnekte, TableLayoutPanel 'in sağ alt hücresi dört düğme denetimi içerir. Neden?  FlowLayoutPanel, diğer denetimleri tutan bir hücrede bir denetim olan bir kapsayıcı denetimi olduğundan.)
+    > PictureBox'niz için **ColumnSpan** özelliğini görmüyorsanız büyük olasılıkla PictureBox, TableLayoutPanel yerine forma eklenmiş olabilir. Bunu düzeltmek için **PictureBox'ı** seçin, silin, **TableLayoutPanel'i** seçin ve ardından yeni bir PictureBox ekleyin.
+
+1. Formda **TableLayoutPanel'i** seçin ve forma bir CheckBox denetimi ekleyin. Tablodaki sonraki boş hücreye yeni bir **CheckBox** denetimi eklemek için Araç Kutusunda **CheckBox** öğesini çift tıklatın. Bir PictureBox, TableLayoutPanel'de ilk iki hücreyi üstleniyorsa, CheckBox denetimi sol alt hücreye eklenir. Text **özelliğini** seçin ve aşağıdaki görüntüde gösterildiği gibi **Stretch** sözcüğüne yazın.
+
+    ![Stretch özelliğiyle TextBox denetimi](../ide/media/express_pictureviewercheckbox.png)<br/>*_***Stretch** _property*_ ile **TextBox** _ denetimi
+
+1. Formda **TableLayoutPanel'i** seçin ve ardından  **Araç** Kutusunda Kapsayıcılar grubuna (TableLayoutPanel denetiminizi edinmişsiniz) gidin ve son hücreye (sağ alt) yeni bir denetim eklemek için **FlowLayoutPanel** öğesini çift tıklatın. Ardından FlowLayoutPanel'i TableLayoutPanel'e yerleştirin. Bunu, FlowLayoutPanel'in siyah üçgen görev listesinde üst kapsayıcıda **Dock'ı** seçerek veya FlowLayoutPanel'in **Dock** özelliğini Fill olarak ayarerek **bunu yapabiliriz.**
+
+    > [!NOTE]
+    > , <xref:System.Windows.Forms.FlowLayoutPanel> diğer denetimleri bir satırda, arka arkaya yerleştiren bir kapsayıcıdır. FlowLayoutPanel'i yeniden boyutlandırırsanız, tüm denetimlerini tek bir satırda (buna yer varsa) sağlar. Aksi takdirde, bunları bir diğeri üzerinde satırlar olarak düzenlenmiştir. <br/><br/>Burada flowLayoutPanel kullanarak dört düğmeyi tutabilirsiniz. Düğmeleri eklerken düğmelerin üst kısmında düzenlemesi varsa, düğmeleri eklemeden önce FlowLayoutPanel'i seçin. <br/><br/>(Genellikle her hücre yalnızca bir denetim içerir. Bu örnekte TableLayoutPanel'in sağ alt hücresinde dört düğme denetimi vardır. Neden?  FlowLayoutPanel, diğer denetimleri tutan bir hücrede bulunan bir denetim olan kapsayıcı denetimi olduğundan.)
 
 ## <a name="to-add-buttons"></a>Düğme eklemek için
 
-1. Eklediğiniz yeni FlowLayoutPanel 'i seçin. **Araç kutusundaki** **ortak denetimlere** gidin ve FlowLayoutPanel 'e **button1** adlı bir düğme denetimi eklemek için **düğme** öğesine çift tıklayın. Başka bir düğme eklemek için tekrarlayın. IDE zaten **button1** **adlı bir düğme** olduğunu belirler ve bir sonraki bir sonrakini çağırır.
+1. Eklemiş olduğunu yeni FlowLayoutPanel'i seçin. Araç Kutusunda  Ortak **Denetimler'e gidin** ve FlowLayoutPanel dosyanıza **button1** adlı bir düğme denetimi eklemek için Düğme öğesini çift tıklatın.  Başka bir düğme eklemek için tekrarlayın. IDE, **button1** adlı bir düğme olduğunu belirler ve bir sonraki **düğmeyi2 olarak belirler.**
 
-1. Genellikle, **araç kutusunu** kullanarak diğer düğmeleri eklersiniz. Bu kez, **button2**' ı seçin ve ardından menü çubuğundan kopyayı **Düzenle**' yi seçin  >   (veya **CTRL** + **C** tuşlarına basın). Sonra,   >   düğme kopyasını yapıştırmak için menü çubuğundan Yapıştırmayı Düzenle ' yi (veya **CTRL** + **V** tuşlarına basın) seçin. Şimdi yapıştırın. IDE 'nin FlowLayoutPanel 'e **Button3** ve **Button4** eklediğine dikkat edin.
-
-    > [!NOTE]
-    > Herhangi bir denetimi kopyalayabilir ve yapıştırabilirsiniz. IDE adları ve yeni denetimleri mantıksal bir şekilde koyar. Bir kapsayıcıya bir denetim yapıştırırsanız, IDE yerleştirme için bir sonraki mantıksal alanı seçer.
-
-1. İlk düğmeyi seçin ve **Text** özelliğini **bir resim gösterecek** şekilde ayarlayın. Sonra, **resmi temizlemek**, **arka plan rengini ayarlamak** ve **kapatmak** için sonraki üç düğmenin **Text** özelliklerini ayarlayın.
-
-1. Düğmeleri boyutlandıralım ve panelin sağ tarafına hizalanacak şekilde düzenlemenizi sağlar. **FlowLayoutPanel** ' i seçin ve **FlowDirection** özelliğine bakın. Bunu, **RightToLeft** olarak ayarlanmış olacak şekilde değiştirin.
-
-   Düğmeler, hücrenin sağ tarafına hizalanmalıdır ve **bir resim göster** düğmesi sağ tarafta olacak şekilde sıralarını tersine çevirir.
+1. Genellikle, Araç Kutusunu kullanarak diğer düğmeleri **eklersiniz.** Bu kez **düğme2'yi seçin** ve ardından menü çubuğundan Kopyayı Düzenle'yi  >   seçin (veya Ctrl C  + **tuşlarına basın).** Ardından menü **çubuğundan**  >  **Yapıştır'ı** Düzenle'yi seçin **(veya Ctrl** + **V tuşlarına** basarak) düğmenizin bir kopyasını yapıştırın. Şimdi tekrar yapıştırın. IDE'nin FlowLayoutPanel'e **button3** ve **button4** ekli olduğunu fark etmek.
 
     > [!NOTE]
-    > Düğmeler hala yanlış sıralamayla varsa, bunları herhangi bir sırada yeniden düzenlemek için FlowLayoutPanel etrafında düğmeleri sürükleyebilirsiniz. Bir düğme seçip sola veya sağa sürükleyebilirsiniz.
+    > Herhangi bir denetimi kopyalayıp yapıştırarak. IDE, yeni denetimleri mantıksal bir şekilde adlar ve yerler. Bir kapsayıcıya denetim yapıştırırsanız, IDE yerleştirme için bir sonraki mantıksal alanı seçer.
 
-1. Kapatmak için **Kapat** düğmesini seçin. Daha sonra düğmeleri aynı anda seçmek için **CTRL** tuşuna basın ve basılı tutun ve bunları da seçin.
+1. İlk düğmeyi seçin ve Text özelliğini **Resim** göster **olarak ayarlayın.** Ardından, sonraki **üç** düğmenin Metin özelliklerini Resmi **temizle,** Arka plan rengini ayarla ve **Kapat** olarak **ayarlayın.**
 
-   Tüm düğmeleri seçtikten sonra **Özellikler** penceresine gidin ve **AutoSize** özelliğine kaydırın. Bu özellik, düğmesine metnin tümüne sığacak şekilde otomatik olarak yeniden boyutlandırılacağını söyler. Bunu **true** olarak ayarlayın.
+1. Şimdi düğmelerin boyutunu ve panelin sağ tarafına hizalanması için bunları düzenleyebilirsiniz. **FlowLayoutPanel'i seçin** ve **FlowDirection özelliğine** bakın. RightToLeft olarak ayar **yapmak için bunu değiştirebilirsiniz.**
 
-   Düğmeleriniz artık doğru şekilde boyutlandırılıp doğru sırada olmalıdır. (Dört düğme seçildiği sürece, tüm dört **AutoSize** özelliklerini de aynı anda değiştirebilirsiniz.) Aşağıdaki görüntüde dört düğme gösterilmektedir.
+   Düğmelerin hücrenin sağ tarafına hizalanması ve sıralarını ters çevirarak Resim göster **düğmesinin** sağ tarafta olması gerekir.
 
-    ![Dört düğme içeren resim görüntüleyici](../ide/media/express_autosize.png)<br/>***Resim görüntüleyici** _ _with dört düğme *
+    > [!NOTE]
+    > Düğmeler hala yanlış sırada ise, herhangi bir sırada yeniden düzenlemek için düğmeleri FlowLayoutPanel'in etrafına sürükleyebilirsiniz. Bir düğmeyi seçebilir ve sola veya sağa sürükleyebilirsiniz.
 
-1. Şimdi yaptığınız değişiklikleri görmek için programınızı yeniden çalıştırın.
+1. Kapatmak **için** Kapat düğmesini seçin. Ardından, düğmelerin geri kalanını aynı anda seçmek için **Ctrl** tuşuna basın ve basılı tutun ve bunları da seçin.
 
-   Düğmelerin ve onay kutusunun hiçbir şey yapmadığına &mdash; , ancak yakında yapacağından emin olun.
+   Tüm düğmeleri seçtikten sonra Özellikler penceresine **gidin** ve **AutoSize özelliğine kaydırın.** Bu özellik, düğmeye tüm metni sığacak şekilde otomatik olarak yeniden boyutlandırmasını söyler. True olarak **ayarlayın.**
+
+   Düğmeleriniz artık düzgün boyutlandır olmalı ve doğru sırada olmalıdır. (Dört düğmenin de seçili olduğu sürece, dört **AutoSize** özelliğini de aynı anda değiştirebilirsiniz.) Aşağıdaki görüntüde dört düğme bulunur.
+
+    ![Dört düğmeli Resim Görüntüleyici](../ide/media/express_autosize.png)<br/>***Picture Viewer** _ _with dört düğme*
+
+1. Şimdi değişikliklerinizi görmek için programınızı yeniden çalıştırın.
+
+   Düğmelerin ve onay kutusunun henüz bir şey yapmasa da kısa süre &mdash; içinde yapacaklarını fark edin.
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-* Sonraki öğretici adımına gitmek için bkz. 6. **[Adım: düğme denetimlerinizi adlandırma](../ide/step-6-name-your-button-controls.md)**.
+* Sonraki öğretici adımına gitmek için bkz. **[6. Adım: Düğme denetimlerinizi olarak ad girin.](../ide/step-6-name-your-button-controls.md)**
 
-* Önceki öğretici adımına dönmek için bkz. 4. [Adım: TableLayoutPanel denetimi ile formunuzu düzenleme](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md).
+* Önceki öğretici adımına dönmek için [bkz. 4. Adım: Formlarınızı TableLayoutPanel denetimiyle oluşturma.](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Öğretici 2: süreli bir matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
-* [Öğretici 3: eşleşen oyun oluşturma](tutorial-3-create-a-matching-game.md)
+* [Öğretici 2: Zamanlı matematik testi oluşturma](tutorial-2-create-a-timed-math-quiz.md)
+* [Öğretici 3: Eşleştirme oyunu oluşturma](tutorial-3-create-a-matching-game.md)

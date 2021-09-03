@@ -1,22 +1,24 @@
 ---
-ms.openlocfilehash: a292b37a50bbf667fa5b23f18879cd79c3f76805
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 09f6e03fa38c8f953ea5d70aedf81cd09c065a08
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85292110"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123397876"
 ---
 Barındırma sunucuları için Web Dağıtımı 3,6, kullanıcı arabiriminden yayımlama ayarları dosyası oluşturulmasına olanak tanıyan ek yapılandırma özellikleri sağlar.
 
-1. Windows Server 'da zaten yüklü Web dağıtımı varsa, **Denetim Masası**programları ' nı kullanarak  >  **Programs**  >  **programı**kaldırın.
+IIS için Web Platformu Yükleyicisi, bu makalede önerdiğimiz sürüm olan 4,0 değil, sürüm 3,6 ' in yüklenmesine izin verir.
 
-2. Ardından, Windows Server 'da barındırma sunucuları için Web Dağıtımı 3,6 ' ü yükler.
+1. Windows sunucuda zaten yüklü Web Dağıtımı varsa, **denetim masası** programları ' nı kullanarak  >    >  **programı** kaldırın.
 
-    Barındırma sunucularına yönelik Web Dağıtımı yüklemek için Web Platformu Yükleyicisi (WebPI) kullanın. (Web Platformu Yükleyicisi bağlantısını IIS 'den bulmak için, Sunucu Yöneticisi sol bölmesinde **IIS** ' yi seçin. Sunucu bölmesinde, sunucuya sağ tıklayın ve **Internet Information Services (IIS) Yöneticisi**' ni seçin. Ardından **Eylemler** penceresinde **Yeni Web Platformu bileşenlerini al** bağlantısını kullanın.) Web Platformu Yükleyicisi 'ni (WebPI) [indirmelerden](https://www.microsoft.com/web/downloads/platform.aspx)de edinebilirsiniz.
+2. sonra, Windows sunucusundaki barındırma sunucuları için Web Dağıtımı 3,6 ' ü yükler.
+
+    Barındırma sunucularına yönelik Web Dağıtımı yüklemek için Web Platformu Yükleyicisi (WebPI) kullanın. (Web Platformu Yükleyicisi bağlantısını IIS 'den bulmak için, Sunucu Yöneticisi sol bölmesinde **IIS** ' yi seçin. sunucu bölmesinde, sunucuya sağ tıklayın ve **Internet Information Services (ııs) yöneticisi**' ni seçin. Ardından **Eylemler** penceresinde **Yeni Web Platformu bileşenlerini al** bağlantısını kullanın.) Web Platformu Yükleyicisi 'ni (WebPI) [indirmelerden](https://www.microsoft.com/web/downloads/platform.aspx)de edinebilirsiniz.
 
     Web platformu yükleyicisinde, uygulamalar sekmesinde **barındırma sunucuları için Web Dağıtımı 3,6** ' i bulabilirsiniz.
 
-3. **Daha önce IIS Yönetim betikleri ve araçları**yüklemediyseniz, şimdi yükleyebilirsiniz.
+3. **Daha önce IIS Yönetim betikleri ve araçları** yüklemediyseniz, şimdi yükleyebilirsiniz.
 
     **Sunucu rolleri**  >  **Web sunucusu (IIS)**  >  **Yönetim Araçları**' nı seçin ve ardından **IIS Yönetim betikleri ve araçları** rolünü seçin, **İleri**' ye tıklayın ve ardından rolü yükler.
 
@@ -30,6 +32,6 @@ Barındırma sunucuları için Web Dağıtımı 3,6, kullanıcı arabiriminden y
 
     * **Web yönetimi hizmeti** çalışıyor.
 
-    Aracı hizmetlerinden biri çalışmıyorsa, **Web Deployment Agent hizmetini**yeniden başlatın.
+    aracı hizmetlerinden biri çalışmıyorsa, **Web Deployment Agent hizmetini** yeniden başlatın.
 
-    Web Deployment Agent hizmeti hiç yoksa, **Denetim masası > programlar > bir programı Kaldır ' a**gidin, **Microsoft Web dağıtımı \<version> **bulun. Yüklemeyi **değiştirmeyi** seçin ve Web dağıtımı bileşenleri için  **yerel sabit diske yüklenediğinizden** emin olun. Değişiklik yükleme adımlarını doldurun.
+    Web Deployment Agent hizmeti hiç yoksa, **denetim masası > programlar > bir programı kaldır ' a** gidin, **Microsoft Web Dağıtımı \<version>** bulun. Yüklemeyi **değiştirmeyi** seçin ve Web dağıtımı bileşenleri için  **yerel sabit diske yüklenediğinizden** emin olun. Değişiklik yükleme adımlarını doldurun.

@@ -8,18 +8,18 @@ dev_langs:
 - CSharp
 - vb
 ms.assetid: 16bdbc7c-4129-411d-bace-f4a3e5375975
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 088a6a3b3f606b2c857afc624d044f5d4a8f0b04
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 074fcc385c9b98c5abcefddfdd8c20ba8ab493af
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122132060"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123398361"
 ---
 # <a name="step-4-add-a-click-event-handler-to-each-label"></a>4. Adım: Her etikete bir tıklama olayı işleyicisi ekleme
 

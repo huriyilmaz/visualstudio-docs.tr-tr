@@ -5,18 +5,18 @@ ms.custom: SEO-VS-2020
 ms.date: 10/15/2019
 ms.topic: tutorial
 ms.assetid: f44e50be-a5f5-4d77-9cff-dd52374c3f74
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: cb535463f2f7213923e6c7964d5663dcad5dc2a5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: ab057ad8cad8c03045c8c1af323a5ba7c2537023
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122150943"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123398658"
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>1. Adım: Proje oluşturma ve formunuza etiketler ekleme
 
@@ -197,18 +197,18 @@ Bu testi geliştirmenin ilk adımı olarak, projeyi oluşturur ve bir forma Etik
 6. **StartButton** denetimi için **TabIndex** özelliğinin değerini **1** olarak ayarlayın.
 
     > [!NOTE]
-    > **TabIndex** özelliği, test Taklayıcı **sekme** tuşunu seçtiğinde denetimlerin sırasını ayarlar. Nasıl çalıştığını görmek için herhangi bir iletişim kutusunu açın (örneğin, menü çubuğunda **Dosya**  >  **Aç**' ı seçin) ve ardından **sekme** tuşuna birkaç kez tıklayın. Sekme tuşuna her seçimde imlecinizin denetimden nasıl hareket **ettiğinden emin** olmak. Bu formu oluştururken sırayı programcı verdi.
+    > **TabIndex** özelliği, test Taklayıcı **sekme** tuşunu seçtiğinde denetimlerin sırasını ayarlar. Nasıl çalıştığını görmek için herhangi bir iletişim kutusunu açın (örneğin, menü çubuğunda **Dosya**  >  **Aç**' ı seçin) ve ardından **sekme** tuşuna birkaç kez tıklayın. Her **sekme** tuşunu seçtiğiniz her seferinde imlecinizin denetim ' e nasıl taşındığını izleyin. Bir programcı bu formu oluştururken bir sıraya karar verdi.
 
-7. NumericUpDown toplam denetimi **için TabIndex** özelliğinin değerini **2,** fark denetimi **için 3,** ürün denetimi için **4** ve bölüm denetimi için **5** olarak ayarlayın.
+7. Değer denetimi için **TabIndex** özelliğinin değerini **2**, fark denetimi için **3**, ürün denetimi için **4** ve bölüm denetimi için **5** olarak ayarlayın.
 
-     Formun aşağıdaki ekran görüntüsüne benzer olması gerekir.
+     Form aşağıdaki ekran görüntüsüne benzer şekilde görünmelidir.
 
      ![İlk matematik testi formu](../ide/media/express_formlaidout.png)
 
-8. **TabIndex özelliğinin** beklediğiniz gibi çalıştığını doğrulamak için **F5** anahtarını seçerek veya menü çubuğunda Hata AyıklamaYı Başlat'ı seçerek programınızı kaydedin ve çalıştırın ve ardından Sekme tuşuna birkaç  >   kez basın. 
+8. **TabIndex** özelliğinin beklendiği gibi çalışıp çalışmadığını doğrulamak için **F5** tuşunu seçerek veya menü çubuğunda Hata **Ayıkla** Başlat ' ı seçerek programınızı kaydedip çalıştırın  >   ve ardından **sekme** tuşuna birkaç kez tıklayın.
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Sonraki öğretici adımına gitmek için **[bkz. 2. Adım: Rastgele toplama sorunu oluşturma.](../ide/step-2-create-a-random-addition-problem.md)**
+- Sonraki öğretici adımına gitmek için bkz. 2. **[Adım: rastgele bir ek sorun oluşturma](../ide/step-2-create-a-random-addition-problem.md)**.
 
-- Genel bakış konu başlığına dönmek için [bkz. Öğretici 2: Zamanlı matematik testi oluşturma.](../ide/tutorial-2-create-a-timed-math-quiz.md)
+- Genel bakış konusuna dönmek için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).

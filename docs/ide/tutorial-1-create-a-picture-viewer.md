@@ -5,18 +5,18 @@ ms.custom: SEO-VS-2020
 ms.date: 10/16/2019
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 ms.topic: tutorial
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fb876a9b242c5984cda2cfb6c813bde6a6059f6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: e19a66adaf2123879e07f784bfbc6b953956001d
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122150839"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123397700"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>Öğretici 1: resim görüntüleyici oluşturma
 

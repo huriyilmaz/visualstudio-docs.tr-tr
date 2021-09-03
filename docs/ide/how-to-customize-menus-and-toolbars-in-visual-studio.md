@@ -1,8 +1,8 @@
 ---
 title: Menüleri ve araç çubuklarını özelleştirme
-description: Menüleri ve araç Visual Studio nasıl özelleştirebileceğinizi ve ayrıca menülere ve araç çubuklarına dahil edilen komutları özelleştirmeyi öğrenin.
+description: Menüleri ve araç Visual Studio özelleştirmeyi ve ayrıca menülere ve araç çubuklarına dahil edilen komutları özelleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 09/01/2021
 ms.topic: how-to
 f1_keywords:
 - vs.renametoolbar
@@ -30,19 +30,19 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ecd720eac25f6f3cc7baedc3119e38d2fe9953a5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 8223dfb14ab626e6509cf0df32cba05526fc707f
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122028169"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123397344"
 ---
-# <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>Nasıl yapabilirsiniz: Visual Studio'de menüleri ve araç Visual Studio
+# <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>Nasıl yapabilirsiniz: Visual Studio'da menüleri ve araç Visual Studio
 
-Menü çubuğunda Visual Studio menüleri ve menüleri ekleyerek ve kaldırarak değil, aynı zamanda herhangi bir araç çubuğuna veya menüye komut ekleyerek ve kaldırarak da bu öğeleri özelleştirebilirsiniz.
+Menü çubuğuna Visual Studio menüleri ve menüleri ekleyerek ve kaldırarak değil, aynı zamanda herhangi bir araç çubuğuna veya menüye komut ekleyerek ve kaldırarak da bu öğeleri özelleştirebilirsiniz.
 
-> [!WARNING]
-> Bir araç çubuğunu veya menüyü özelleştirdikten sonra Özelleştir iletişim kutusunda onay kutusunun seçili **olduğundan** emin olun. Aksi takdirde, Visual Studio'yu kapatıp yeniden açtıktan sonra değişiklikleriniz kalıcı olmaz.
+> [!TIP]
+> Araç çubuğunu size uygun hale getirebileceğiniz şekilde kişiselleştirme hakkında daha fazla bilgi edinmek için iş akışınız için araç çubuklarını iyileştirme blog [**gönderimize bakın.**](https://devblogs.microsoft.com/visualstudio/optimizing-toolbars-for-your-workflow/)
 
 ## <a name="add-remove-or-move-a-menu-on-the-menu-bar"></a>Menü çubuğunda menü ekleme, kaldırma veya taşıma
 
@@ -72,7 +72,7 @@ Menü çubuğunda Visual Studio menüleri ve menüleri ekleyerek ve kaldırarak 
 
         ![Araç çubuğu eklemeyi gösteren Özelleştirme iletişim kutusu](../ide/media/addtoolbar.png)
 
-    - Özel bir araç çubuğunu kaldırmak için Araç Çubukları **listesinden bunu** seçin ve sil **düğmesini** seçin.
+    - Özel bir araç çubuğunu kaldırmak için Araç Çubukları **listesinden** bunu seçin ve sil **düğmesini** seçin.
 
         > [!IMPORTANT]
         > Kendi oluşturduğunuz araç çubuklarını silebilir, ancak varsayılan araç çubuklarını silemezsiniz.
@@ -85,6 +85,9 @@ Menü çubuğunda Visual Studio menüleri ve menüleri ekleyerek ve kaldırarak 
         > Araç çubuklarının kullanılabilirliğini ve erişilebilirliğini geliştirme hakkında daha fazla bilgi için [bkz. Nasıl ayarlanır: IDE erişilebilirlik seçeneklerini ayarlama.](../ide/reference/how-to-set-ide-accessibility-options.md)
 
 ## <a name=""></a><a name="customizing_menu">Menü veya araç çubuğunu özelleştirme</a>
+
+> [!WARNING]
+> Bir araç çubuğunu veya menüyü özelleştirdikten sonra Özelleştir iletişim kutusunda onay kutusunun seçili **olduğundan** emin olun. Aksi takdirde, Visual Studio'yu kapatıp yeniden açtıktan sonra değişiklikleriniz kalıcı olmaz.
 
 1. Menü çubuğunda Araçlar   >  **Özelleştir'i seçin.**
 

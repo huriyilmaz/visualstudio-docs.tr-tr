@@ -8,18 +8,18 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 62670a2b-efdc-45c6-9646-9b17eeb33dcb
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 40716f502366d93fd48760173c29db1bf69bee4e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 629a9cd94296b746a1eeeec4ea6b7514f15440b6
+ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122040846"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123397687"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>3. Adım: Geri sayım zamanlayıcısı ekleme
 
@@ -58,7 +58,7 @@ Bu öğreticinin üçüncü bölümünde, sınav sınavlarının bitimini takip 
 
      Zamanlayıcı, eklediklerine bağlı olarak **timeLeft** tamsayı değişkeninin 0'dan büyük olup olmadığını belirleyerek her saniyenin zaman bitip bit olmadığını denetler. Varsa, süre yine de kalır. Zamanlayıcı önce timeLeft'in 1'ini çıkarır ve **ardından timeLabel** **denetimine** ait Text özelliğini test sınav zamanı kaç saniye kalarak gösterir.
 
-     Zaman kalmazsa zamanlayıcı durur ve **timeLabel** denetimi metnini **Time's up** olarak gösterir! İleti kutusu testin tamam olduğunu duyurur ve yanıt ortaya çıkar (bu durumda addend1 ve addend2 ekleriyle). startButton denetimin **Enabled** **özelliği** true olarak **ayarlanır,** böylece sınava alan kullanıcı başka bir testi başlatabilirsiniz.
+     Zaman kalmazsa zamanlayıcı durur ve **timeLabel** denetimi metnini **Time's up** olarak gösterir! İleti kutusu testin tamam olduğunu duyurur ve yanıt ortaya çıkar (bu durumda addend1 ve addend2 ekleriyle). **startButton denetimin** **Enabled** özelliği true olarak **ayarlanır,** böylece sınava alan kullanıcı başka bir testi başlatabilirsiniz.
 
      Az önce `if else` programlara karar vermelerini nasıl söylersiniz? deyimini ekledik. Deyimi `if else` aşağıdakine benzer.
 
@@ -93,9 +93,9 @@ Bu öğreticinin üçüncü bölümünde, sınav sınavlarının bitimini takip 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/vbexpresstutorial3step3/vb/form1.vb" id="Snippet24":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/vbexpresstutorial3step3/cs/form1.cs" id="Snippet24":::
 
-     deyimi, `addend1 + addend2` değerleri iki değişkene ekler. İlk bölüm ( `sum.Value` ), doğru yanıtı görüntülemek için sum NumericUpDown denetimine ait **Value** özelliğini kullanır. Daha sonra testin yanıtlarını kontrol etmek için aynı özelliği kullanacağız.
+     deyimi, `addend1 + addend2` değerleri iki değişkene ekler. İlk bölüm ( `sum.Value` ), doğru yanıtı görüntülemek için sum NumericUpDown denetimin **Value** özelliğini kullanır. Daha sonra testin yanıtlarını kontrol etmek için aynı özelliği kullanacağız.
 
-     Sınava girenler, bir denetim kullanarak sayıları daha kolay bir şekilde girebiliyor. Bu nedenle matematik problemlerinin <xref:System.Windows.Forms.NumericUpDown> yanıtları için bir denetim kullanabilirsiniz. Olası yanıtların hepsi 0 ile 100 arasında tam sayılardır. **Minimum** **,** Maksimum ve **DecimalPlaces** özelliklerinin varsayılan değerlerini bırakarak, sınava girenlerin ondalık, negatif sayı veya sayı girileyemlerinin çok yüksek olmasını sağlarsınız. (Sınava girenlerin 3.141 girmesine izin vermek, ancak 3.1415'i girmek için **DecimalPlaces** özelliğini 3 olarak ayarlayabilirsiniz.)
+     Sınava girenler, bir denetim kullanarak sayıları daha kolay bir şekilde girebiliyor. Bu nedenle matematik problemlerinin <xref:System.Windows.Forms.NumericUpDown> yanıtları için bir denetimden birini kullanabilirsiniz. Olası yanıtların hepsi 0 ile 100 arasında tam sayılardır. **Minimum** **,** Maksimum ve **DecimalPlaces** özelliklerinin varsayılan değerlerini bırakarak, sınava girenlerin ondalık, negatif sayı veya sayı girileyemlerinin çok yüksek olmasını sağlarsınız. (Sınava girenlerin 3.141 girmesine izin vermek, ancak 3.1415'i girmek için **DecimalPlaces** özelliğini 3 olarak ayarlayabilirsiniz.)
 
 6. Yönteminin sonuna üç satır `StartTheQuiz()` ekleyin, böylece kod aşağıdaki gibi olur.
 
