@@ -2,7 +2,7 @@
 title: Proje ve çözüm özelliklerini yönetme
 description: Hem proje özelliklerini hem de çözüm özelliklerini yönetim hakkında bilgi Visual Studio.
 ms.custom: SEO-VS-2020
-ms.date: 09/01/2021
+ms.date: 09/02/2021
 ms.topic: conceptual
 author: TerryGLee
 ms.author: tglee
@@ -10,19 +10,19 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: fa70c86c768ed37150e70454c12c5889aa820523
-ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
+ms.openlocfilehash: 3e65917302d877c3b21d5f380d5dcdcc0a622732
+ms.sourcegitcommit: 9a340611faaaa143946b3ede66ee84ec19108b09
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "123398435"
+ms.lasthandoff: 09/03/2021
+ms.locfileid: "123419857"
 ---
 # <a name="manage-project-and-solution-properties"></a>Proje ve çözüm özelliklerini yönetme
 
 Projelerin derleme, hata ayıklama, test etme ve dağıtma gibi birçok yönü yöneten özellikleri vardır. Bazı özellikler tüm proje türleri arasında ortaktır ve bazıları belirli diller veya platformlar için benzersizdir.
 
 > [!TIP]
-> [2022](/visualstudio/releases/2022/release-notes-preview)Visual Studio'de, proje özelliklerine yeni işlevler ekledik ve kullanıcı arabirimini yenilediz. Daha fazla bilgi edinmek için Özellikler [**kullanıcı arabirimini Project yenilendi blog gönderisi'ne**](https://devblogs.microsoft.com/visualstudio/flexible-theming-visual-studio/) bakın.
+> [Visual Studio 2022](/visualstudio/releases/2022/release-notes-preview)Preview'da, proje özelliklerine yeni işlevler ekledik ve kullanıcı arabirimini yeniledi. Daha fazla bilgi edinmek için Özellikler [**kullanıcı arabirimini Project yenilendi blog gönderisi'ne**](https://devblogs.microsoft.com/visualstudio/revamped-project-properties-ui/) bakın.
 
 Proje özelliklerine erişmek için Çözüm Gezgini'daki  proje düğümüne sağ tıklar ve Özellikler'i seçersiniz veya menü çubuğundaki arama kutusuna özellikler yazarak ve sonuçlardan **Özellikler Penceresi'ne** tıklayarak erişebilirsiniz. 
 
@@ -60,7 +60,7 @@ C++ proje özellikleri hakkında bilgi için [bkz. Proje özellikleriyle çalı�
 
 ## <a name="solution-properties"></a>Çözüm özellikleri
 
-Çözümdeki özelliklere erişmek için, Çözüm Gezgini **'de çözüm** düğümüne sağ tıklayın ve **Özellikler'i seçin.** İletişim kutusunda Hata Ayıklama veya  Yayın derlemeleri için proje yapılandırmalarını ayarlayabilir, **F5'e** basıldığında hangi projelerin başlangıç projesi olması gerektiğini seçebilir ve kod analizi seçeneklerini ayarlayabilirsiniz. 
+Çözümdeki özelliklere erişmek için, Çözüm Gezgini **'de çözüm** düğümüne **tıklayın.** İletişim kutusunda Hata Ayıklama veya  Yayın derlemeleri için proje yapılandırmalarını ayarlayabilir, **F5'e** basıldığında hangi projelerin başlangıç projesi olması gerektiğini seçebilir ve kod analizi seçeneklerini ayarlayabilirsiniz. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
