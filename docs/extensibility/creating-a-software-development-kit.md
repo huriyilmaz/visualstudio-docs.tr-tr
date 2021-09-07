@@ -2,7 +2,7 @@
 title: Yazılım geliştirme kiti oluşturma | Microsoft Docs
 description: SDK 'ların genel altyapısı ve bir platform SDK 'sı ve uzantı SDK 'Sı oluşturma hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 08/31/2021
 ms.topic: how-to
 ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
 author: leslierichardson95
@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab8110670b03bac73fa5a27d205e0a28fc6fe0ad
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 88a888bfcaa868fba0b259fbb7037d30f756784e
+ms.sourcegitcommit: 8d529614652d902f265de4a6d9419bc0dfab97ee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122051176"
+ms.lasthandoff: 09/07/2021
+ms.locfileid: "123501606"
 ---
 # <a name="create-a-software-development-kit"></a>Yazılım geliştirme seti oluşturma
 
@@ -53,7 +53,7 @@ Platform SDK 'Ları aşağıdaki düzene sahiptir:
                         \[arch]
 ```
 
-| Düğüm | Açıklama |
+| Düğüm | Description |
 |------------------------| - |
 | *Başvurular* klasörü | İle kodlanması yapabilen API 'Leri içeren ikili dosyaları içerir. bunlar Windows meta veri (WinMD) dosyaları veya derlemeleri içerebilir. |
 | *Tasarım zamanı* klasörü | Yalnızca çalıştırma öncesi/hata ayıklama zamanında gereken dosyaları içerir. bunlar XML docs, kitaplıklar, üst bilgiler, araç kutusu tasarım zamanı ikilileri, MSBuild yapıtlar ve benzeri olabilir.<br /><br /> XML belgeleri, ideal olarak *\Designtime* klasörüne yerleştirilecektir, ancak başvurular için xml belgeleri Visual Studio içindeki referans dosyası ile birlikte yerleştirilmeye devam edecektir. Örneğin, bir başvurunun XML belgesi <em>\ başvurular [ \\ config] \\ [Arch] \sample.dll</em> *\references [config] [Arch] \\ \\ \sample.xml* ve bu belgeye ait yerelleştirilmiş sürüm *\ başvurular \\ [config] \\ [Arch] \\ [locale] \sample.xml* olur. |
@@ -141,24 +141,23 @@ Uzantı SDK 'Ları aşağıdaki yükleme düzenine sahiptir:
 *SDKManifest.xml* dosyası, Visual Studio SDK 'nın nasıl kullanılacağını açıklar. Aşağıda bir örnek verilmiştir:
 
 ```
-<FileList>
-DisplayName = "My SDK"
-ProductFamilyName = "My SDKs"
-TargetFramework = ".NETCore, version=v4.5.1; .NETFramework, version=v4.5.1"
-MinVSVersion = "14.0"
-MaxPlatformVersion = "8.1"
-AppliesTo = "WindowsAppContainer + WindowsXAML"
-SupportPrefer32Bit = "True"
-SupportedArchitectures = "x86;x64;ARM"
-SupportsMultipleVersions = "Error"
-CopyRedistToSubDirectory = "."
-DependsOn = "SDKB, version=2.0"
-MoreInfo = "https://msdn.microsoft.com/MySDK">
-<File Reference = "MySDK.Sprint.winmd" Implementation = "XNASprintImpl.dll">
-<Registration Type = "Flipper" Implementation = "XNASprintFlipperImpl.dll" />
-<Registration Type = "Flexer" Implementation = "XNASprintFlexerImpl.dll" />
-<ToolboxItems VSCategory = "Toolbox.Default" />
-</File>
+<FileList DisplayName = "My SDK"
+          ProductFamilyName = "My SDKs"
+          TargetFramework = ".NETCore, version=v4.5.1; .NETFramework, version=v4.5.1"
+          MinVSVersion = "14.0"
+          MaxPlatformVersion = "8.1"
+          AppliesTo = "WindowsAppContainer + WindowsXAML"
+          SupportPrefer32Bit = "True"
+          SupportedArchitectures = "x86;x64;ARM"
+          SupportsMultipleVersions = "Error"
+          CopyRedistToSubDirectory = "."
+          DependsOn = "SDKB, version=2.0"
+          MoreInfo = "https://msdn.microsoft.com/MySDK">
+  <File Reference = "MySDK.Sprint.winmd" Implementation = "XNASprintImpl.dll">
+    <Registration Type = "Flipper" Implementation = "XNASprintFlipperImpl.dll" />
+    <Registration Type = "Flexer" Implementation = "XNASprintFlexerImpl.dll" />
+    <ToolboxItems VSCategory = "Toolbox.Default" />
+  </File>
 </FileList>
 ```
 
@@ -174,9 +173,9 @@ Aşağıdaki liste, dosyanın öğelerini verir:
 
 5. minvsversion: en düşük Visual Studio sürümü.
 
-6. MaxPlatformVerson: Uzantı SDK 'sının çalışmayacak platform sürümlerini belirtmek için en fazla hedef platform sürümü kullanılmalıdır. örneğin, Microsoft Visual C++ çalışma zamanı paketi v 11.0 yalnızca Windows 8 projeleri tarafından başvurulmalıdır. Bu nedenle Windows 8 MaxPlatformVersion 8.0'dır. Bu, Başvuru Yöneticisi'nin Windows 8.1 proje için Microsoft Visual C++ Çalışma Zamanı Paketi'ni filtreler ve MSBuild bir proje buna başvurarak [!INCLUDE[win81](../debugger/includes/win81_md.md)] hata verir. Not: Bu öğe, 'den başlayarak de destekleni. [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]
+6. MaxPlatformVerson: Uzantı SDK 'sının çalışmayacak platform sürümlerini belirtmek için en fazla hedef platform sürümü kullanılmalıdır. örneğin, Microsoft Visual C++ çalışma zamanı paketi v 11.0 yalnızca Windows 8 projeleri tarafından başvurulmalıdır. Bu nedenle Windows 8 MaxPlatformVersion 8.0'dır. Bu, Başvuru Yöneticisi'nin bir Microsoft Visual C++ proje için Windows 8.1 Çalışma Zamanı Paketi'ni filtrele MSBuild bir proje ona başvurarak [!INCLUDE[win81](../debugger/includes/win81_md.md)] hataya neden olduğu anlamına gelir. Not: Bu öğe, 'den başlayarak de destekleni. [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]
 
-7. AppliesTo: Başvuru Yöneticisi'nde kullanılabilir OLAN SDK'ları, proje türleri için geçerli Visual Studio belirtir. Dokuz değer tanınır: WindowsAppContainer, VisualC, VB, CSharp, WindowsXAML, JavaScript, Managed ve Native. SDK yazarı (" +') veya ("&#124;" kullanabilir), ("!") tam olarak SDK için geçerli proje türlerinin kapsamını belirtmek için işleçler.
+7. AppliesTo: Başvuru Yöneticisi'nde kullanılabilir OLAN SDK'ları, proje türleri için geçerli Visual Studio belirtir. Dokuz değer tanınır: WindowsAppContainer, VisualC, VB, CSharp, WindowsXAML, JavaScript, Managed ve Native. SDK yazarı ve ("+') veya ("&#124;") kullanabilir, ("!") kullanmaz tam olarak SDK için geçerli proje türlerinin kapsamını belirtmek için işleçler.
 
     WindowsAppContainer, uygulamalar için projeleri [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] tanımlar.
 
@@ -184,7 +183,7 @@ Aşağıdaki liste, dosyanın öğelerini verir:
 
 9. SupportedArchitectures: SDK'nın desteklediği mimarilerin noktalı virgülle ayrılmış listesi. MSBuild, tüketen projede hedeflenen SDK mimarisi desteklenmiyorsa bir uyarı görüntüler. Bu öznitelik belirtilmezse, MSBuild hiçbir zaman bu tür bir uyarı görüntülemez.
 
-10. SupportsMultipleVersions: Bu öznitelik Hata  veya Uyarı olarak ayarlanırsa, MSBuild aynı projenin aynı SDK ailesinin birden çok sürümüne başvura olmadığını gösterir. Bu öznitelik yoksa veya İzin Ver olarak ayarlanırsa MSBuild bu tür bir hata veya uyarı görüntülemez.
+10. SupportsMultipleVersions: Bu öznitelik **Hata** veya Uyarı olarak ayarlanırsa, MSBuild aynı projenin aynı SDK ailesinin birden çok sürümüne başvura olmadığını gösterir. Bu öznitelik yoksa veya İzin Ver olarak ayarlanırsa MSBuild bu tür bir hata veya uyarı görüntülemez.
 
 11. AppX: Diskte bileşen kitaplığı için Windows paketlerinin yolunu belirtir. Bu değer, yerel hata ayıklama sırasında Windows kitaplığının kayıt bileşenine geçirilir. Dosya adı için adlandırma kuralı : *\<Company> . . . \<Product> . \<Architecture> \<Configuration> \<Version> . appx*. Yapılandırma ve Mimari, bileşen kitaplığı için geçerli yoksa öznitelik adı ve öznitelik Windows isteğe bağlıdır. Bu değer yalnızca bileşen kitaplıkları Windows geçerlidir.
 
@@ -200,13 +199,18 @@ Aşağıdaki liste, dosyanın öğelerini verir:
 
 ## <a name="specify-the-location-of-toolbox-items"></a><a name="ToolboxItems"></a> Araç kutusu öğelerinin konumunu belirtme
 
-SDKManifest.xmlşemasının **ToolBoxItems** öğesi, hem platform hem de uzantı SDK'larında araç kutusu öğelerinin kategorisini ve konumunu belirtir.  Aşağıdaki örneklerde, farklı konumların nasıl belirtn istediğinize yer verilmiştir. Bu, WinMD veya DLL başvuruları için geçerlidir.
+*SDKManifest.xml* şemasının **ToolBoxItems** öğesi, hem platform hem de uzantı SDK'lerinde araç kutusu öğelerinin denetim adlarını, kaynak derlemelerini ve araç kutusu sekme adlarını belirtir. Aşağıdaki örneklerde çeşitli senaryolar yer almaktadır. Bu, WinMD veya DLL başvuruları için geçerlidir.
+
+Visual Studio 2019 ve önceki sürümlerinde, bildirimde araç kutusu denetim adlarını listelemek yerine SDK'Visual Studio derlemelerinde denetim türlerini dinamik olarak numaralandırmış olduğunu unutmayın. 2022'Visual Studio başlayarak bu artık desteklenmiyor; araç kutusu öğeleri, 'de açıkça *SDKManifest.xml.*
 
 1. Denetimleri araç kutusu varsayılan kategorisine yer.
 
     ```xml
     <File Reference = "sample.winmd">
-        <ToolboxItems VSCategory = "Toolbox.Default"/>
+      <ToolboxItems VSCategory = "Toolbox.Default">
+        <Item Type = "Namespace.ControlName1" />
+        <Item Type = "Namespace.ControlName2" />
+      </ToolboxItems>
     </File>
     ```
 
@@ -214,7 +218,10 @@ SDKManifest.xmlşemasının **ToolBoxItems** öğesi, hem platform hem de uzant�
 
     ```xml
     <File Reference = "sample.winmd">
-        <ToolboxItems VSCategory= "MyCategoryName"/>
+      <ToolboxItems VSCategory= "MyCategoryName">
+        <Item Type = "Namespace.ControlName1" />
+        <Item Type = "Namespace.ControlName2" />
+      </ToolboxItems>
     </File>
     ```
 
@@ -222,10 +229,12 @@ SDKManifest.xmlşemasının **ToolBoxItems** öğesi, hem platform hem de uzant�
 
     ```xml
     <File Reference = "sample.winmd">
-        <ToolboxItems VSCategory = "Graph">
-        <ToolboxItems/>
-        <ToolboxItems VSCategory = "Data">
-        <ToolboxItems />
+      <ToolboxItems VSCategory = "Graph">
+        <Item Type = "Namespace.ControlName1" />
+      </ToolboxItems>
+      <ToolboxItems VSCategory = "Data">
+        <Item Type = "Namespace.ControlName2" />
+      </ToolboxItems>
     </File>
     ```
 
@@ -234,39 +243,47 @@ SDKManifest.xmlşemasının **ToolBoxItems** öğesi, hem platform hem de uzant�
     ```xml
     // Blend accepts a slightly different structure for the category name because it allows a path rather than a single category.
     <File Reference = "sample.winmd">
-        <ToolboxItems VSCategory = "Graph" BlendCategory = "Controls/sample/Graph">
-        <ToolboxItems />
+      <ToolboxItems VSCategory = "Graph" BlendCategory = "Controls/sample/Graph">
+        <Item Type = "Namespace.ControlName1" />
+        <Item Type = "Namespace.ControlName2" />
+      </ToolboxItems>
     </File>
     ```
 
-5. Blend ve Visual Studio'da belirli denetimleri farklı Visual Studio.
+5. Blend ve Visual Studio'da belirli denetimleri farklı şekilde Visual Studio.
 
     ```xml
     <File Reference = "sample.winmd">
-        <ToolboxItems VSCategory = "Graph">
-        <ToolboxItems/>
-        <ToolboxItems BlendCategory = "Controls/sample/Graph">
-        <ToolboxItems/>
+      <ToolboxItems VSCategory = "Graph">
+        <Item Type = "Namespace.ControlName1" />
+      </ToolboxItems>
+      <ToolboxItems BlendCategory = "Controls/sample/Graph">
+        <Item Type = "Namespace.ControlName2" />
+      </ToolboxItems>
     </File>
     ```
 
-6. Belirli denetimleri numaradan seçin ve Ortak Yol'un Visual Studio veya yalnızca Tüm Denetimler Grubu'nda yer alan uygulamanın altına yer seçin.
+6. Belirli denetimleri numaradan seçin ve ortak yol Visual Studio veya yalnızca Tüm Denetimler Grubu'nda yer alan alt grubuna yer seçin.
 
     ```xml
     <File Reference = "sample.winmd">
-        <ToolboxItems VSCategory = "Toolbox.Common">
-        <ToolboxItems />
-        <ToolboxItems VSCategory = "Toolbox.All">
-        <ToolboxItems />
+      <ToolboxItems VSCategory = "Toolbox.Common">
+        <Item Type = "Namespace.ControlName1" />
+      </ToolboxItems>
+      <ToolboxItems VSCategory = "Toolbox.All">
+        <Item Type = "Namespace.ControlName2" />
+      </ToolboxItems>
     </File>
     ```
 
-7. Belirli denetimleri numaraya ayarlayın ve araç kutusunda olmadan ChooseItems içinde yalnızca belirli bir kümeyi gösterir.
+7. Belirli denetimleri numaraya ayarlayın ve araç kutusunda yer almadan ChooseItems içinde yalnızca belirli bir kümeyi gösterir.
 
     ```xml
     <File Reference = "sample.winmd">
-        <ToolboxItems VSCategory = "Toolbox.ChooseItemsOnly">
-        <ToolboxItems />
+      <ToolboxItems VSCategory = "Toolbox.ChooseItemsOnly">
+        <Item Type = "Namespace.ControlName1" />
+        <Item Type = "Namespace.ControlName2" />
+      </ToolboxItems>
     </File>
     ```
 
