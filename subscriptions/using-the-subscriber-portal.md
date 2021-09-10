@@ -1,57 +1,57 @@
 ---
-title: Visual Studio aboneliklerinde abone portalını kullanma | Microsoft Docs
+title: Aboneliklerde Abone Visual Studio kullanma| Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 8470f035-2a82-4052-9a12-6f24ce796861
 ms.date: 02/19/2021
 ms.topic: overview
-description: Visual Studio abonelikleri portalında kullanabileceğiniz tüm avantajlar hakkında bilgi edinin
-ms.openlocfilehash: e5e3033c6fbc30627086f1ab04aa702d26b69f4deb24a97b1f3e9ef47ee8234c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+description: Visual Studio abonelikler portalında size Visual Studio hakkında bilgi edinin
+ms.openlocfilehash: 6ce759b3ef6a73980e7bd477e36479d65a61b3c8
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121421479"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966464"
 ---
-# <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Abone portalını kullanma-my.visualstudio.com
+# <a name="using-the-subscriber-portal---myvisualstudiocom"></a>Abone portalını kullanma - my.visualstudio.com
 
-Visual Studio abonelikleri portalı, [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) Visual Studio aboneliğiniz aracılığıyla sunulan tüm avantajların avantajlarından yararlanmak için hepsi bir arada kaynaktır.
+Visual Studio Abonelikler Portalı, aboneliğiniz aracılığıyla sağlanan tüm avantajlardan yararlanan hepsi bir Visual Studio [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) kaynaktır.
 
-Portalın kullanılması için aboneliğinizle ilişkili kimlikle oturum açmanız gerekir.  Bu, Microsoft hesabınız (MSA) veya bir kuruluş tarafından, işvereniniz veya okulunuz gibi size sağlanmış bir e-posta adresi olabilir.  [Oturum açma](./index.yml)hakkında bilgi edinin.
+Portalı kullanmak için aboneliğiniz ile ilişkili kimlikle oturum açmanız gerekir.  Bu, Microsoft Hesabınız (MSA) veya işvereniniz veya okulunuz gibi bir kuruluş tarafından size sağlanan bir e-posta adresi olabilir.  'de oturum açma [hakkında bilgi.](./index.yml)
 
-Portal altı sayfada düzenlenir.  Her sayfa, aboneliğinize dahil edilen farklı ürün veya hizmetlere erişmenizi sağlar.  Altı sayfa avantajlardır, Indirmeler, ürün anahtarları, abonelikler, destek ve Market.
+Portal altı sayfada düzenlenmiştir.  Her sayfa, aboneliğinize dahil edilen farklı ürün veya hizmetlere erişmenizi sağlar.  Altı sayfa Avantajlar, İndirmeler, Ürün Anahtarları, Abonelikler, Destek ve Market sayfalarıdır.
 
 ## <a name="benefits"></a>[Avantajlar](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-Aboneliklerinize dahil edilen araçlar ve hizmetler, avantajlar sayfasında "kutucuklar" olarak görüntülenir.  Tüm avantajlar tüm aboneliklere dahil değildir. kutucuklar üç kategoride gruplandırılır: araçlar, Professional geliştirme ve destek.  
+Aboneliğinize dahil edilen araçlar ve hizmetler, Avantajlar sayfasında "kutucuklar" olarak görüntülenir.  Tüm avantajlar tüm aboneliklere dahil değildir. Kutucuklar üç kategoriye ayrılır: Araçlar, Professional Geliştirme ve Destek.  
 
 ### <a name="tools"></a>Araçlar
-araçlar kategorisi, Visual Studio ıde, Azure DevOps ve iş ortaklarımız tarafından sunulan araçların yanı sıra temel geliştirme araçlarını bulabileceğiniz yerdir.  ayrıca Azure ve Visual Studio App Center gibi hizmetleri de görürsünüz.
+Araçlar kategorisi, Visual Studio IDE, Azure DevOps gibi temel geliştirme araçlarının yanı sıra iş ortaklarımız tarafından sağlanan araçları da bulabilirsiniz.  Azure ve Visual Studio App Center gibi hizmetleri de Visual Studio App Center.
 
 ### <a name="professional-development"></a>Profesyonel Geliştirme
-Bu kategori, Microsoft ve iş ortaklarımız tarafından sağlanan çevrimiçi eğitim ve MSDN Magazine aboneliği gibi avantajların yanı sıra geliştirme becerilerinizi geliştirmenize ve tüm işlem kodlarınızın tamamen sürekli olarak kalmanıza yardımcı olacak şekilde bir avantaj içerir.
+Bu kategori Microsoft'un ve iş ortaklarımızın çevrimiçi eğitimi gibi avantajların yanı sıra MSDN Dergisi aboneliğine de sahip. Bunların hepsi geliştirme becerilerinizi geliştirmenize ve koda olan tüm şeylerden geri kalmanıza yardımcı olur.
 
 ### <a name="support"></a>Destek
-Azure hakkında bir sorunuz mu var?  azure Community forumları aracılığıyla yardım alın veya azure danışmanlık sohbetlerinden (önizleme) yararlanın.  Danışman sohbet hizmeti, teknik belgeleri ve ürün bilgilerini bulmanıza ve abonelikle ilgili sorularla yardım almanıza yardımcı olmak için kullanılabilir.  Abonelikler ' i seçin, geliştirme ve test ortamlarında çalışan çok çeşitli Microsoft ürünleriyle ilgili sorunları çözmenize yardımcı olması için olay tabanlı teknik destek de içerir.
+Azure hakkında bir soru mu var?  Forumlar aracılığıyla Azure Community veya Azure Danışmanlık Sohbeti'nden (önizleme) faydalanın.  Concierge Sohbet hizmeti, teknik belgeleri ve ürün bilgilerini bulamanıza ve abonelikle ilgili sorulara yardımcı olmak için kullanılabilir.  Geliştirme ve test ortamlarında çalışan çok çeşitli Microsoft ürünleriyle ilgili sorunları çözmenize yardımcı olmak için belirli abonelikler olay tabanlı Teknik Destek de içerir.
 
 ## <a name="downloads"></a>[İndirmeler](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)
-Sahip olduğunuz aboneliğe veya programa bağlı olarak, güncelleştirmeler ve düzeltme eklerinden, güncel ürünlerin kapsamlı bir kitaplığına ve daha eski sürümlere karşı, uygulamalarınızı çok çeşitli senaryolarda test edebilmeniz için yazılım indirmelerine erişebilirsiniz.
+Sahip olduğunuz aboneliğe veya programa bağlı olarak, uygulamalarınızı çok çeşitli senaryolarda test etmek için güncelleştirmeler ve düzeltme eklerinden güncel ürünlerin kapsamlı bir kitaplığına ve eski sürümlere kadar çeşitli yazılım indirmelerine erişebilirsiniz.
 
-Tek bir hesapla ilişkilendirilmiş birden çok aboneliği olan aboneler için basit hale getirmek amacıyla, Indirmeler sayfasını ziyaret ettiğinizde, sahip olduğunuz en yüksek abonelikle sunulan İndirmeleri görürsünüz.  Bu şekilde, şu anda kullanmakta olduğunuz aboneliği bağımsız olarak tüm indirmelerinizi görebilirsiniz.
+Tek bir hesapla ilişkilendirilmiş birden çok aboneliği olan aboneler için basit bir işlem yapmak için İndirmeler sayfasını ziyaret edin, indirmeleri sahip olunan en yüksek abonelikte görebilirsiniz.  Bu şekilde, şu anda hangi aboneliği kullanıyor olursanız olsun tüm indirmelerinizi bulabilirsiniz.
 
-## <a name="product-keys"></a>[Ürün anahtarları](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)
-Ürünleri yüklemek ve etkinleştirmek için anahtar almak ve daha önce istemiş olduğunuz anahtarları görmek için ürün anahtarları sayfasını ziyaret edin.  Tüm anahtarlarınızın bir listesini, safekeeping için de dışarı aktarabilirsiniz.
+## <a name="product-keys"></a>[Ürün Anahtarları](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs)
+Ürünleri yüklemek ve etkinleştirmek için anahtarları almak ve hangi anahtarları zaten talep ettiğinizi görmek için Ürün Anahtarları sayfasını ziyaret edin.  Hatta tüm anahtarlarınızı güvenli tutmak için dışarı aktarabilirsiniz.
 
 ## <a name="subscriptions"></a>[Abonelikler](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)
-Abonelikler sayfası size sahip olduğunuz abonelikleri görmenizi, abonelikler arasında geçiş yapma, bunları yenileme ve yeni abonelikleri etkinleştirme olanakları sağlar. ayrıca, Microsoft hesabınızı kullanarak erişim yaptığınız abonelikleri, mevcut Visual Studio ıde, Azure DevOps veya Azure kaynaklarıyla zaten ilişkilendirilmiş alternatif bir hesapla ilişkilendirebilirsiniz.
+Abonelikler sayfası, sahip olduğunuz abonelikleri görme, abonelikler arasında geçiş yapmak, abonelikleri yenilemek ve yeni abonelikleri etkinleştirmek için size özellikler sağlar. Ayrıca, Microsoft Hesabınızla erişen abonelikleri mevcut IDE, Azure DevOps veya Azure kaynaklarıyla zaten ilişkili alternatif bir Visual Studio hesabıyla da ilişkilendirilebilirsiniz.
 
 ## <a name="support"></a>Destek
 
-avantajlar sayfasındaki destek kategorisinde bulunan bireysel avantajlara ek olarak, destek sayfası Visual Studio aboneliğinizden en iyi şekilde yararlanmanıza yardımcı olmak için kaynaklara erişim sağlar. Abonelik satışları, hesapları ve faturalandırmayla ilgili teknik sorunları veya soruları çözümlemek için [destek kaynaklarına](https://aka.ms/vssubscriberhelp) erişin.
+Avantajlar sayfasındaki Destek kategorisinde bulunan bireysel avantajlara ek olarak, Destek sayfası kaynak aboneliğinizin en iyi şekilde yararlanmanıza yardımcı olmak için kaynaklara Visual Studio sağlar. Abonelik [satışları,](https://aka.ms/vssubscriberhelp) hesaplar ve faturalama ile ilgili teknik sorunları veya soruları çözmek için destek kaynaklarına erişin.
 
 ## <a name="marketplace"></a>[Mağaza](https://marketplace.visualstudio.com/)
 
-Visual Studio bulut aboneliğini yenilemeniz mı gerekiyor?  Visual Studio ürün ailesi için en son uzantıları indirmek ister misiniz?  market, kullanıcıların Azure DevOps, Azure DevOps Server ve Visual Studio Code daha da iyi hale getirmek için uzantıları, araçları ve hizmetleri bulmasına yardımcı olur. Hatta bir Yayımcı olabilir ve Market 'te kendi uzantılarınızı yayımlayabilirsiniz.
+Bulut aboneliğini yenilemeniz Visual Studio mı?  Ürün ailesini en son Visual Studio istiyor musunuz?  Market, kullanıcıların daha da iyi hale Azure DevOps, Azure DevOps Server, araçlar ve Visual Studio Code yardımcı olur. Hatta yayımcı olabilir ve kendi uzantılarınızı Market'te yayımlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -60,4 +60,4 @@ Visual Studio bulut aboneliğini yenilemeniz mı gerekiyor?  Visual Studio ürü
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Adresinde portalda oturum açın [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) ve avantajlarınıza göz atın.  ayrıca, portalda [Microsoft hesabınızla](sign-in-msa.md) oturum açma hakkında daha fazla bilgi edinebilirsiniz (MSA), [iş veya okul hesabınız](sign-in-work.md)ve hatta [GitHub hesabınız](sign-in-github.md).
+portalında oturum açın ve [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) avantajlarınıza göz atabilirsiniz.  Portalda [Microsoft](sign-in-msa.md) Hesabınız (MSA), iş veya okul hesabınız [](sign-in-work.md)ve hatta hesabınızla oturum açma hakkında daha fazla [bilgi GitHub edinebilirsiniz.](sign-in-github.md)

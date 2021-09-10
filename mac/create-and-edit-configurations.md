@@ -7,12 +7,12 @@ ms.date: 09/18/2019
 ms.assetid: CC1B72D6-12FF-4CCC-A9D4-00F2DC14589F
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 07fa7721b1154ede493cdc4eac1bd23de5814e339c40a68e4bea3d3ef30f5db4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: eb3ceed624e3bbba67564bb8f7c359841c0e496d
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121381887"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964766"
 ---
 # <a name="creating-and-editing-build-configurations"></a>Derleme yapılandırmalarını oluşturma ve düzenleme
 
@@ -31,7 +31,7 @@ Proje derleme yapılandırması oluşturmak için şu adımları izleyin:
 
 2. Yapılandırma Seçenekleri Project Yapılandırmaları **oluştur'> seçin:**
 
-    ![Proje seçeneklerinde yapılandırma yöneticisi](media/create-and-edit-configurations-image2.png)
+    ![Proje seçeneklerinde Yapılandırmalar yöneticisi](media/create-and-edit-configurations-image2.png)
 
 3. Yeni **bir yapılandırma** oluşturmak için Ekle'yi seçin. Ayrıca mevcut yapılandırmalardan herhangi birini kopya da kullanabilirsiniz.
 
@@ -57,7 +57,7 @@ Yapılandırmayı oluşturduktan sonra, yapılandırmanıza  uygun özellikleri 
 
 ## <a name="renaming-a-build-configuration"></a>Derleme yapılandırmasını yeniden oluşturma
 
-Yapılandırmayı yeniden adlandırmak için Yapılandırma listesinden Yapılandırma listesinden, Yapılandırmalar veya Çözüm **Seçenekleri'nde >** Yapılandırmalar Project a giderek yapılandırmayı seçin:
+Yapılandırmayı yeniden adlandırmak için Yapılandırma listesinden Yapılandırma listesinden Yapılandırmalar veya Çözüm **Seçenekleri'nde >** Yapılandırmalar Project a giderek yapılandırmayı seçin:
 
 ![yapılandırma listesi](media/create-and-edit-configurations-image4.png)
 

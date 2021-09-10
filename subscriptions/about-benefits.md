@@ -1,50 +1,50 @@
 ---
-title: Visual Studio aboneliklerinde avantajları anlayın | Microsoft Docs
+title: Abonelikler ve Visual Studio avantajlarını | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 0a02232c-437f-4c48-85c1-93ca7887236b
 ms.date: 03/19/2021
 ms.topic: how-to
-description: Aboneliklerde nelerin dahil olduğu ve bunların nasıl etkinleştirileceği hakkında bilgi edinin.
+description: Aboneliklere dahil edilen avantajları ve bunları etkinleştirmeyi öğrenin.
 ms.openlocfilehash: 13c0633c7d775b082bf10cf21421ec843092231d
-ms.sourcegitcommit: d8d230791890cda532c263d04288dc13d2261c7f
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104757639"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966234"
 ---
 # <a name="about-your-subscription-benefits"></a>Abonelik avantajlarınız hakkında
-Bir Visual Studio abonesi olarak, abonelik düzeyinize bağlı olarak çeşitli avantajlara erişebilirsiniz. Avantajlar hakkında dikkat etmeniz gereken birkaç önemli nokta vardır.
+Bir Visual Studio olarak, abonelik düzeyinize bağlı olarak çeşitli avantajlara erişebilirsiniz. Avantajlar hakkında dikkat etmek gereken birkaç önemli şey vardır.
 
-## <a name="benefits-that-vary-based-on-your-subscription"></a>Aboneliğinize göre farklılık gösteren avantajlar 
-Aboneliğinize dahil edilen avantajlar, sahip olduğunuz abonelik türüne göre farklılık gösterir. Çeşitli aboneliklerde hangi avantajların dahil edildiğini görmek için lütfen [Visual Studio abonelik avantajları sayfasını](https://visualstudio.microsoft.com/vs/benefits/)ziyaret edin. İhtiyaç duyduğunuz belirli bilgilere ulaşmak için görünümü abonelik düzeyine ve avantaj kategorisine göre filtreleyebilirsiniz. 
+## <a name="benefits-that-vary-based-on-your-subscription"></a>Aboneliğinize göre değişen avantajlar 
+Aboneliğinize dahil edilen avantajlar sahip olduğu abonelik türüne göre değişiklik gösterir. Çeşitli aboneliklere hangi avantajların dahil olduğunu görmek için lütfen abonelik avantajları [Visual Studio sayfasını ziyaret edin.](https://visualstudio.microsoft.com/vs/benefits/) Size gereken belirli bilgileri almak için görünümü abonelik düzeyine ve avantaj kategorisine göre filtre edebilirsiniz. 
 
-Ayrıca, bu sitedeki makaleleri aboneliğinizde belirli bir avantajın dahil olup olmadığını anlamak için de kullanabilirsiniz. Avantaja sahip olan her makale, hangi aboneliklerin dahil edileceğini gösteren bir "uygunluk" bölümü içerir.
+Ayrıca, belirli bir avantajın aboneliğinize dahil olup olmadığını belirlemek için bu sitenin makalelerini de kullanabilirsiniz. Bir avantajı kapsayan her makalede, hangi aboneliklerin dahil olduğunu gösteren bir "Uygunluk" bölümü yer almaktadır.
 
-## <a name="use-categories-to-help-find-benefits"></a>Avantajları bulmaya yardımcı olması için kategorileri kullanın
-Sizi en çok ilgilendiren avantajları bulmayı kolaylaştırmak için bunları üç kategoride gruplandırtık: 
+## <a name="use-categories-to-help-find-benefits"></a>Avantajları bulmaya yardımcı olmak için kategorileri kullanma
+Sizi en çok ilgi alan avantajları kolayca bulmak için bunları üç kategoriye grupla gruplamış oluruz: 
 - Araçlar
 - Profesyonel Geliştirme
 - Destek
 
-Varsayılan olarak, ziyaret ettiğiniz tüm avantajlarınız görüntülenir <https://my.visualstudio.com/benefits> . Ancak, üç kategoriden birini seçerek listeye filtre uygulayabilirsiniz.
+Varsayılan olarak, tüm avantajlarınız ziyaret edince <https://my.visualstudio.com/benefits> görüntülenir. Ancak, üç kategoriden birini seçerek listeyi filtreleebilirsiniz.
 
    > [!div class="mx-imgBorder"]
-   > ![Kategoriye göre avantajlar listesini filtrele](_img/about-benefits/categories.png "Kullanılabilir avantajlar listesini filtrelemek için bir kategori seçin.")
+   > ![Avantaj listesini kategoriye göre filtreleme](_img/about-benefits/categories.png "Kullanılabilir avantajlar listesini filtrelemek için bir kategori seçin.")
 
-## <a name="benefits-and-offers-provided-by-partners"></a>İş ortakları tarafından sunulan avantajlar ve teklifler
-Eğitim ve araçlar gibi bazı popüler avantajlar dahil olmak üzere Visual Studio aboneliklerine dahil edilen avantajlardan bazıları iş ortaklarımız tarafından sağlanmaktadır. Bu tekliflerin ayrıntıları iş ortakları tarafından belirlenir. Örnek:
-- Avantajdaki süre, Visual Studio aboneliğinizin süresiyle eşleşmeyebilir. Örneğin, bir 12 aylık Visual Studio aboneliğiniz olabilir, ancak iş ortağının sağladığı avantajlardan birçoğu üç veya altı ay gibi daha kısa bir dönem için en son olabilir.
-- Bu avantajlar veya teklifler için kullanılabilen tüm destek iş ortakları tarafından da sağlanır.
-- Visual Studio aboneliğiniz yenilendiğinde bazı avantajlar yenilenir. Diğer durumlarda, iş ortağı teklifi "bir yaşam süresi içinde" olur ve yenilenmez. Bireysel avantajlar hakkında daha fazla bilgi için, içindekiler tablosundaki ilgili makaleye göz atın.
-- İş ortakları teklifleri bırakabilir. 
+## <a name="benefits-and-offers-provided-by-partners"></a>İş ortakları tarafından sağlanan avantajlar ve teklifler
+Eğitim ve araçlar gibi popüler Visual Studio dahil olmak üzere aboneliklere dahil edilen avantajlardan bazıları iş ortaklarımız tarafından sağlanır. Bu tekliflerin ayrıntıları iş ortakları tarafından belirlenir. Örnek:
+- Avantajın süresi, aboneliğinizin süresiyle Visual Studio olabilir. Örneğin, 12 aylık Visual Studio aboneliğiniz olabilirken, iş ortağı tarafından sağlanan avantajların çoğu üç veya altı ay gibi daha kısa bir süre sürebilir.
+- Bu avantajlar veya teklifler için sağlanan tüm destekler iş ortakları tarafından da sağlanır.
+- Bazı avantajlar, Visual Studio yenilendi. Diğer durumlarda iş ortağı teklifi "yaşam süresinde bir kez" olur ve yenilenmez. Bireysel avantajlar hakkında daha fazla bilgi için içindekiler tablosunda ilgili makaleye göz atabilirsiniz.
+- İş ortakları teklifleri sona erdir kullanmayı seçebilir. 
 
-## <a name="benefits-that-become-temporarily-unavailable"></a>Geçici olarak kullanılamayan avantajlar
-Nadiren de olsa, bazen teknik sorunlar kısa bir süre için kullanım dışı bir avantaj sağlayabilir. Bu gibi durumlarda, sorun çözümlenene kadar "geçici olarak kullanılamıyor" avantajı olduğunu göstermek için [Visual Studio abonelikleri portalındaki](https://my.visualstudio.com/benefits) avantaj kutucuğunu değiştireceksiniz ve bu süre kutucuğunu geri yükleyeceğiz ve avantajların yeniden kullanılabilmesi gerekir.
+## <a name="benefits-that-become-temporarily-unavailable"></a>Geçici olarak kullanılamayacak avantajlar
+Nadir olsa da, bazen teknik sorunlar avantajı kısa bir süre için kullanılamaz hale getirir. Böyle durumlarda, sorun çözülene kadar Visual Studio Abonelikler [portalında](https://my.visualstudio.com/benefits) avantajın "Geçici Olarak Kullanılamıyor" olduğunu belirtmek için avantaj kutucuğunu değiştirecek ve kutucuğu geri yükleyinceye kadar avantajı yeniden kullanacağız.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için [Visual Studio abonelikleri desteğiyle](https://aka.ms/vssubscriberhelp)görüşün.
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için Visual Studio [ile iletişime geçin.](https://aka.ms/vssubscriberhelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -53,5 +53,5 @@ Nadiren de olsa, bazen teknik sorunlar kısa bir süre için kullanım dışı b
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Bir abonelik satın almayı düşünüyorsanız, her abonelikte nelerin avantajlarının ayrıntılı bir listesi için fiyatlandırma sayfamıza göz atın. Daha ayrıntılı bilgileri görmek için [Visual Studio abonelik avantajları sayfasını](https://visualstudio.microsoft.com/vs/benefits/) da kullanabilirsiniz.
-- Zaten bir aboneliğiniz var mı?  Nelerin sağlandığını, nasıl etkinleştireceğinizi ve sorunlarla karşılaşırsanız nasıl yardım alınacağını öğrenmek için her avantaj için belgelerimizin makalelerini inceleyin. 
+- Abonelik satın almayı düşünüyorsanız, her aboneliğe hangi avantajların dahil olduğunu ayrıntılı bir liste için fiyatlandırma sayfamızı ziyaret edin. Daha ayrıntılı bilgi için [Visual Studio abonelik avantajları](https://visualstudio.microsoft.com/vs/benefits/) sayfasını da kullanabilirsiniz.
+- Aboneliğiniz zaten var mı?  Sağlananları, nasıl etkinleştirilenleri ve sorunlarla karşılaşırsanız yardım almak için her avantaja ilişkin belgelerimizde yer alan makalelere göz atabilirsiniz. 

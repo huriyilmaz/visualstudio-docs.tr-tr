@@ -1,30 +1,30 @@
 ---
 title: ASP.NET Core Kullanmaya Başlama
-description: Bu makalede, yükleme ve yeni proje oluşturma ASP.NET Mac için Visual Studio'da Mac için Visual Studio ile çalışmaya başlama işlemi açıklanmıştır.
+description: Bu makalede, yükleme ve yeni bir proje ASP.NET dahil Mac için Visual Studio'da Mac için Visual Studio ile çalışmaya başlama işlemi açıklanmıştır.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 07/13/2017
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: 6c1c045cef4c4368f7bcb0c5c1beb552ab6674bbda9509151338fbb43a79b601
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2e921ac1e9c85216bebf1626e1454b9fb764f129
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121423441"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123962073"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core Kullanmaya Başlama
 
- Mac için Visual Studio, en yeni web geliştirme platformu desteğiyle uygulama hizmetinizi geliştirmenizi ASP.NET Core kolaylaştırır. ASP.NET Core .NET Core üzerinde çalışır. Bu, .NET Framework çalışma zamanının en son evrimidir. Hızlı performans için ayarlanmıştır, küçük yükleme boyutlarına göre ayarlanmıştır ve Linux ve macOS üzerinde çalıştıracak şekilde yeniden tasarlanmıştır ve Windows.
+ Mac için Visual Studio, en yeni web geliştirme platformu desteğiyle uygulama hizmetinizi geliştirmenizi ASP.NET Core kolaylaştırır. ASP.NET Core .NET Core'da çalışır. Bu, .NET Framework çalışma zamanıdır. Hızlı performans için ayarlanmıştır, küçük yükleme boyutlarına göre ayarlanmıştır ve Linux ve macOS üzerinde çalıştıracak şekilde yeniden tasarlanmıştır ve Windows.
 
 ## <a name="installing-net-core"></a>.NET Core'u yükleme
 
 .NET Core 1.1, yükleme sırasında otomatik olarak Mac için Visual Studio.
 
-## <a name="creating-an-aspnet-core-app-in-visual-studio-for-mac"></a>ASP.NET Core uygulama Mac için Visual Studio
+## <a name="creating-an-aspnet-core-app-in-visual-studio-for-mac"></a>Mac için Visual Studio'ASP.NET Core bir Mac için Visual Studio
 
-Yeni Mac için Visual Studio. Hoş geldiniz sayfasında Yeni **Giriş... Project**
+Yeni Mac için Visual Studio. Hoş geldiniz sayfasında Yeni **Giriş... Project.**
 
 ![Yeni Proje İletişim Kutusu](media/asp-net-core-image1.png)
 
@@ -43,7 +43,7 @@ Boş **Web ASP.NET Core seçin ve Ardından** tuşuna **basın.** Kullanıcıya 
 
 ![Yeni ASP.NET Core Boş Project görünümü](media/asp-net-core-image4.png)
 
-Boş ASP.NET Core Uygulaması iki varsayılan dosyayla bir web uygulaması oluşturur: **Program.cs** ve **Startup.cs**, aşağıda açıklanmıştır. Ayrıca projenizin ASP.NET Core, .NET Core çerçevesi ve projeyi oluşturan MSBuild hedeflerini içeren NuGet paketi bağımlılıklarını içeren bir Dependencies klasörü oluşturur:
+Boş ASP.NET Core Uygulaması iki varsayılan dosyayla bir web uygulaması oluşturur: **Program.cs** ve **Startup.cs**, aşağıda açıklanmıştır. Ayrıca projenizin ASP.NET Core, .NET Core çerçevesi ve projeyi oluşturan MSBuild gibi NuGet paketi bağımlılıklarını içeren bir Dependencies klasörü oluşturur:
 
 ![Çözüm Bölmesi görüntüleme](media/asp-net-core-image12.png)
 
@@ -115,7 +115,7 @@ Bu Başlangıç sınıfının her zaman aşağıdaki kurallara uyması gerekir:
 
 üzerinde , ve yöntemlerini kullanarak temsilcileri yapılandırebilirsiniz, ancak yöntemi hiçbir zaman bir sonraki temsilciyi çağırmaz ve her zaman işlem `Run` `Map` `Use` `IApplicationBuilder` `Run` hattınız sonunda kullanılmalıdır.
 
-Önceden `Configure` yapılmış şablonun yöntemi, birkaç işlem yapmak için hazır edilmiştir. İlk olarak, geliştirme sırasında kullanmak üzere bir özel durum işleme sayfası yapılandırıyor. Ardından, istekte bulunan web sayfasına basit bir "Merhaba Dünya" gönderir.
+Önceden `Configure` yapılmış şablonun yöntemi, birkaç işlem yapmak için hazır edilmiştir. İlk olarak, geliştirme sırasında kullanmak üzere bir özel durum işleme sayfası yapılandırıyor. Ardından, istekte bulunan web sayfasına basit bir "Merhaba Dünya.
 
 Bu basit Merhaba Dünya projesi artık ek kod eklenmeden çalıştırabilir. Uygulamayı çalıştırmak ve tarayıcınızda görüntülemek için araç çubuğundaki Oynat (Üçgen) düğmesine basın:
 
@@ -137,7 +137,7 @@ ASP.NET Core Uygulamalar, uygulamanın her parçası için mantıksal bir soruml
 - **Görünüm:** Uygulamanın kullanıcı arabirimini (genellikle model verileridir) görüntüler.
 - **Denetleyici:** Tarayıcı isteklerini ele alan, kullanıcı girişine ve etkileşimine yanıt veren bir sınıf.
 
-MVC kullanma hakkında daha fazla bilgi için [bkz. MVC ASP.NET Core](/aspnet/core/mvc/overview) genel bakış.
+MVC kullanma hakkında daha fazla bilgi için [bkz. MVC ASP.NET Core genel](/aspnet/core/mvc/overview) bakış.
 
 Denetleyici eklemek için şunları yapın:
 
@@ -223,7 +223,7 @@ Denetleyici eklemek için şunları yapın:
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-.NET Core'un 10.11 (El Capitan) Mac OS ve sonraki bir sürümüne el ile yüklemeniz gerekirse, şunları yapın:
+10.11 (El Capitan) ve sonraki bir sürümüne .NET Core'Mac OS el ile yüklemeniz gerekirse, şunları yapın:
 
 1. .NET Core'u yüklemeye başlamadan önce tüm işletim sistemi güncelleştirmelerini en son kararlı sürüme güncelleştirilmiş olduğundan emin olun. Bunu kontrol etmek için App Store ve Güncelleştirmeler sekmesini seçin.
 
@@ -233,12 +233,12 @@ Denetleyici eklemek için şunları yapın:
 
 ## <a name="summary"></a>Özet
 
-Bu kılavuzda, ASP.NET Core. Bu, ne olduğunu, ne zaman ne zaman kullanıLL'nin nasıl bir hizmet olduğunu açıklar ve Mac için Visual Studio.
-Sonraki adımlar hakkında daha fazla bilgi için aşağıdaki kılavuzlara bakın:
-- [ASP.NET Core](/aspnet/core/) belgeleri.
-- [Yerel Mobil Uygulamalar için Arka](/aspnet/core/mobile/native-mobile-backend)Uç Hizmetleri oluşturma: Bir Xamarin.Forms uygulaması için ASP.NET Core rest hizmeti derlemeyi gösterir.
-- [ASP.NET Core bir laboratuvar.](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started)
+Bu kılavuzda, ASP.NET Core. ne olduğunu, ne zaman kullanılacağını ve Mac için Visual Studio ' de kullanma hakkında bilgi sağlandığını açıklar.
+Buradaki sonraki adımlar hakkında daha fazla bilgi için aşağıdaki kılavuzlara bakın:
+- belgeleri [ASP.NET Core](/aspnet/core/) .
+- [yerel mobil uygulamalar için arka uç hizmetleri oluşturma](/aspnet/core/mobile/native-mobile-backend), bir Xamarin. Forms uygulaması için ASP.NET Core kullanarak REST hizmeti oluşturmayı gösterir.
+- [uygulamalı laboratuvar ASP.NET Core](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
 
-## <a name="related-video"></a>İlgili Video
+## <a name="related-video"></a>İlgili video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Build-Your-First-App/player]

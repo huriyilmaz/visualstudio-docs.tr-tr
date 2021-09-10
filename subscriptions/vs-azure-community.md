@@ -1,18 +1,18 @@
 ---
-title: Visual Studio Aboneliği aboneliğinde Azure Community Desteği | Microsoft Docs
+title: Visual Studio Aboneliği Community Azure | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
 ms.date: 03/18/2021
 ms.topic: conceptual
-description: Seçili aboneliklere dahil olan Azure Community Desteği avantajı hakkında Visual Studio öğrenin.
-ms.openlocfilehash: 558b2010353982130c3d060e76184134bd748ea47d69dceda129c3250603ea60
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+description: Seçili aboneliklere dahil edilen Azure Community Desteği avantajı hakkında Visual Studio öğrenin.
+ms.openlocfilehash: 43633e20bbf10988092a2d98d7d0a5ddd9b08601
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121241517"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966474"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Azure Community Desteği forumu
 Azure destek forumları aracılığıyla doğrudan Azure ekibinden yardım alın Community.  Azure Community avantajı, Azure ile ilgili konulara odaklanan bir forum koleksiyonuna erişmeniz için size erişim sağlar.
@@ -55,28 +55,28 @@ Azure Community'i kolayca kullanabilirsiniz.
 
 2. Destek bölümünde Azure Community kutucuğunu bulun ve Yardım Alın **tıklayın.**
     > [!div class="mx-imgBorder"]
-    >![Azure Community Kutucuğu](_img/vs-azure-community/vs-azure-community-tile.png "Başlamanız için Azure Yardım Alın kutucuğunun 'Community' düğmesine tıklayın.")
+    >![Azure Community Kutucuğu](_img/vs-azure-community/vs-azure-community-tile.png "Azure Yardım Alın kutucuğunun 'Community' düğmesine tıklayın.")
 
 3. Kullanılabilir forumların listesini bulabilirsiniz.  İstediğiniz foruma tıklamanız tek yapmanız gereken.
     > [!div class="mx-imgBorder"]
-    > ![Azure Community Forumları](_img/vs-azure-community/vs-azure-community-forums.png "Azure Community Sayfasında, tercihlerinizi forumlar olarak seçin.")
+    > ![Azure Community Forumları](_img/vs-azure-community/vs-azure-community-forums.png "Azure Community Destek sayfasında, tercihlerinizi forumlar olarak seçin.")
 
 4. Forumda konu başlıklarını ve yanıtlarını görüntüleme, soru cevaplarını arama veya yeni bir soru gönderisi yayınlayabilirsiniz.
     > [!div class="mx-imgBorder"]
     > ![Azure Community Örneği](_img/vs-azure-community/vs-azure-community-example.png "Forumda konu başlıklarını görüntüleme, yanıt arama veya yeni sorular paylaşabilirsiniz.")
 
 ## <a name="eligibility"></a>Uygunluk
-Azure Community kullanılabilirliği aşağıda gösterildiği gibi abonelik düzeyinize bağlıdır:
+Azure Community avantajının kullanılabilirliği aşağıda gösterildiği gibi abonelik düzeyinize bağlıdır:
 
 |                                          Abonelik Düzeyi                                           |     Kanallar      |    Avantaj    | Yenilen -ebilir? |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
 |                           Visual Studio Enterprise (Standart), NFR<sup>1</sup>                            | VL, Azure, Perakende |   Kullanılabilir    |    Yes     |
 |                           Visual Studio Enterprise ile abonelik GitHub Enterprise                           | VL, Azure, Perakende |   Kullanılabilir    |    Yes     |
 |                          Visual Studio Professional (Standart)                          | VL, Azure, Perakende |   Kullanılabilir    |    Yes     |
-|                          Visual Studio Professional aboneliği GitHub Enterprise                          | VL, Azure, Perakende |   Kullanılabilir    |    Yes     |
+|                          Visual Studio Professional ile abonelik GitHub Enterprise                          | VL, Azure, Perakende |   Kullanılabilir    |    Yes     |
 |                              Visual Studio Test Professional (Standart)                               |    VL, Perakende     |   Kullanılabilir    |    Yes     |
 |                                       MSDN Platformları (Standart)                                       |    VL, Perakende     |   Kullanılabilir    |    Yes     |
-| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut)|        Tümü        | Kullanılamaz |     Hayır     |
+| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut)|        Tümü        | Kullanılamaz |     No     |
 
 <sup>1</sup>*Şunları içerir: Resale (NFR), Microsoft FTE, En Değerli Professional (MVP), Bölgesel Direktörü (RD), Visual Studio Endüstri İş Ortağı (VSIP), BizSpark, Imagine, Microsoft Sertifikalı Eğitimci (MCT) için değil. Dışlar: NFR Basic*  
 
@@ -86,10 +86,10 @@ Azure Community kullanılabilirliği aşağıda gösterildiği gibi abonelik dü
 Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) e-posta adresinize atanan tüm abonelikleri görmek için adresine tıklayın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla aboneliğiniz olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="support-resources"></a>Destek Kaynakları
-- Diğer Azure Community için lütfen Azure Community [Destek sayfasını ziyaret edin.](https://azure.microsoft.com/support/forums/)
+- Diğer Azure Community kaynakları için lütfen Azure Community [Sayfasını ziyaret edin.](https://azure.microsoft.com/support/forums/)
 - [Azure belgeleri.](/azure/)
 - Visual Studio Abonelikleri için satışlar, abonelikler, hesaplar ve faturalama konusunda yardıma mı ihtiyacınız var?  Abonelikler Visual Studio [ile iletişime geçin.](https://aka.ms/vssubscriberhelp)
-- IDE, Azure DevOps Services veya Visual Studio ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -98,4 +98,4 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Azure DevTest bireysel kredisi Visual Studio çok sayıda abonelik olduğunu biliyor mmusunuz?  Kendi kullanıcılarınızı [etkinleştirmeyi](vs-azure.md) öğrenin.
+Birçok farklı abonelikte Azure DevTest Visual Studio kredisi olduğunu biliyor mmusunuz?  Kendi kullanıcılarınızı [etkinleştirmeyi](vs-azure.md) öğrenin.

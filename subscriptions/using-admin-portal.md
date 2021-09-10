@@ -1,5 +1,5 @@
 ---
-title: Kullanmaya başlayın abonelikleri Visual Studio Portal sayfasından | Visual Studio Pazar
+title: Kullanmaya başlayın abonelikleri Visual Studio Yönetim Portalı | Visual Studio Pazar
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,27 +7,27 @@ ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 10/28/2020
 ms.topic: overview
 description: Abonelikler Yönetici Portalı ile Visual Studio aboneliğinizi yönetmeye nasıl başlayabilirsiniz?
-ms.openlocfilehash: 98a90e16a7284f2ff52010a63ccd2435d4f08d215cb790cd2d771b377cd17fc8
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3ac02dcd49af1c3277be0c3a15a2e3bf9c735f04
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121421533"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966349"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio Abonelikleri Yönetici Portalına Genel Bakış
 
-Visual Studio Abonelikler Yönetim Portalı, size, kuruluş aboneliklerini tek bir yerde yönetmek için araçlar sağlar. 
+Visual Studio Abonelikler Yönetim Portalı, size, kuruluş aboneliklerini tek bir yerde yönetmenizi sağlar. 
 
 Portal turuna göz atabilirsiniz.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4t9aW]
 
 ## <a name="important-considerations"></a>Önemli noktalar
-Visual Studio Subscriptions Admin Portal'Visual Studio şu noktaları unutmayın:
+Abonelikler Yönetim Portalı'nın Visual Studio unutmayın:
 - **Visual Studio abonelikler kullanıcı başına lisansa sahip olur.** Her abone, geliştirme ve test için gereken sayıda bilgisayarda yazılımı kullanabilir.
 - **Her abone için yalnızca bir abonelik düzeyi atarak,** Visual Studio aboneliğine karşılık gelen bir abonelik düzeyi attayabilirsiniz. Birden fazla abonelik düzeyi atanmış aboneniz varsa, bunların ayarlarını yalnızca bir tane olacak şekilde düzenleyin.
 - **Abonelik yükseltilirken** (bir "yükseltme" lisansı satın alındıktan sonra) veya daha düşük bir düzeyde yenilendikten sonra abonenin abonelik düzeyi güncelleştirilecek.
-- **Abonelikleri aboneler arasında paylaşmayın.** Aboneliklerin adlandırılmış bireylere atanmaları gerekir.  Aboneliklerin ekiplere atamaya izin verilmez.  Abonelik avantajlarının (geliştirme ve test, yazılım, e-öğrenme vb.) hepsini veya bir kısmını kullanan herkese bir Microsoft Azure atamanız gerekir.
+- **Abonelikleri aboneler arasında paylaşmayın.** Aboneliklerin adlandırılmış bireylere atanmaları gerekir.  Aboneliklerin ekiplere atamaya izin verilmez.  Abonelik avantajlarını (geliştirme ve test, yazılım, e-öğrenme vb.) kullanan herkese bir abonelik Microsoft Azure atamanız gerekir.
 
 ## <a name="the-subscribers-page"></a>Aboneler sayfası
 Abonelikleri atadıktan sonra, Aboneleri yönet sekmesi aboneleriniz hakkında aşağıdakiler dahil olmak üzere ayrıntılı bilgiler sağlar:

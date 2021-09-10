@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 11/06/2020
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
 ms.custom: video
-ms.openlocfilehash: 710f4f9b941719deecbc516ba4d14a1976f3fcfb312b341fd915b0f5c4acb1c7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 05fd1091a279a085c2a727eb36cbc56fcb201057
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121439501"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964740"
 ---
 # <a name="customizing-the-ide"></a>IDE’yi Özelleştirme
 

@@ -7,19 +7,19 @@ ms.assetid: abf271b5-7547-4695-a46f-72b2878ba8d4
 ms.date: 03/21/2021
 ms.topic: conceptual
 description: Abonelikler için yazılım indirmelerde ürün kullanılabilirliği Visual Studio öğrenin
-ms.openlocfilehash: 76ce7e4eca2463dadebef093ff8bce93a90ac7f2c3249c89ea0f369348971369
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8188395c236ae116c36da7f60f0afb8042cb81b3
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121381035"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966549"
 ---
 # <a name="product-availability-for-software-downloads-in-visual-studio-subscriptions"></a>Aboneliklerde yazılım indirmeleri için Visual Studio kullanılabilirliği
 Abone avantajlarınız kapsamında çok çeşitli yazılım indirmelerine erişiminiz olur.
 İndirmeler sekmesine erişmek için aboneliğinde oturum [açmanız](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs) gerekir.
 
 ## <a name="product-availability"></a>Ürün kullanılabilirliği
-Genel olarak, yazılım geliştirme projeleriyle ilgili tüm ticari ve tüketici Microsoft ürünleri, Visual Studio kullanılabilir. Yeni Visual Studio ile, müşterilerin eski uygulamaları geliştirmesine ve test sına ve daha yeni platformlara geçişini sağlamak için ürünler genellikle uzun gelecekte (uzatılmış ürün destek süresi sona erdikten sonra bile) indirilebilir durumda kalır. Aşağıda özetlenen şekilde abonelere belirli ürünler sağlayamadığımız durumlar vardır ama bu oluşumları en aza indirmek için her türlü çabayı gösteriyoruz.
+Genel olarak, yazılım geliştirme projeleriyle ilgili tüm ticari ve tüketici Microsoft ürünleri, Visual Studio kullanılabilir. Yeni Visual Studio ile, müşterilerin eski uygulamaları geliştirmesine, test sına ve daha yeni platformlara geçişe olanak sağlamak için ürünler genellikle uzun gelecekte (uzatılmış ürün destek süresi sona erdikten sonra bile) indirilemez. Aşağıda özetlenen şekilde abonelere belirli ürünler sağlayamadığımız durumlar vardır ama bu oluşumları en aza indirmek için her türlü çabayı gösteriyoruz.
 
 Belirli ürünlerin aboneler tarafından kullanılabilir durumda olmadığının birkaç nedeni vardır:
 
@@ -28,18 +28,18 @@ Belirli ürünlerin aboneler tarafından kullanılabilir durumda olmadığının
 - **Ürün genel kullanıma açık.** Bazı araçlar, SDK'lar, DDK'lar ve hizmet paketleri Microsoft İndirme [Merkezi'nden genel kullanıma sunulmaktadır.](https://www.microsoft.com/download) Bu tür ürünlerin bazıları İndirmeler'de yayımlanamaz.
 - **Ürün henüz yayımlanmadı.**  Birçok yayın öncesi (beta) sürümü ve yayın adayı İndirmeler'den kullanılabilir. Ancak, tüm betalar dahil değildir; Örneğin, bazı beta'lar özel kayıt veya uygunluk gerektirir. Açık teknik beta programları hakkında daha fazla bilgi için lütfen [Microsoft](https://connect.microsoft.com/)Bağlan.
 - **Ürün ülkeniz/bölgeniz için kullanılamaz.** Bölgesel kısıtlamalar nedeniyle bazı Microsoft ürünleri kullanılamaz.
-- **Yedekli yazılım.** Yeni Office ve tek başına Office indirmeler ve ürün anahtarları artık abonelikler dahil olmak Office. İndirmeler ve ürün anahtarları, ilgili en yüksek Office sürüm paketi için kullanılabilir.  Örneğin, 2010 PowerPoint aramanız herhangi bir sonuç üretmez.  Ancak, Office 2010'Office içeren PowerPoint 2010 için arama ve paketi indirebilirsiniz.
+- **Yedekli yazılım.** Yeni Office ve tek başına Office ve ürün anahtarları artık abonelikler dahil olmak Office. İndirmeler ve ürün anahtarları, aynı sürüme Office en yüksek sürüm paketi için kullanılabilir.  Örneğin, 2010'PowerPoint aramanız herhangi bir sonuç üretmez.  Ancak, Office 2010'Office içeren Office paketi için arama PowerPoint ve paketi indirebilirsiniz.
 
 ## <a name="what-do-i-get"></a>Ne elde miyim?
-İndirme sayısı ve türü, abonelik düzeyinize ve program üyeliklerinize bağlıdır.  Örneğin, Visual Studio Enterprise standart abonelikleri olan abonelerin, aboneliklerini bir Microsoft İş Ortağı Ağı veya BizSpark programı aboneliği aracılığıyla alan abonelerden farklı indirmeleri olabilir.  Her abonelik düzeyinde hangi indirmelerin kullanılabilir olduğu hakkında daha fazla bilgi edinmek için Avantaj Düzeyine [Göre Ürünler listesini indirin.](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx)
+İndirme sayısı ve türü, abonelik düzeyinize ve program üyeliklerinize bağlıdır.  Örneğin, Visual Studio Enterprise standart aboneliklere sahip aboneler, aboneliklerini bir Microsoft İş Ortağı Ağı veya BizSpark programı aboneliği aracılığıyla edinen abonelerden farklı indirmelere sahip olabilir.  Her abonelik düzeyinde hangi indirmelerin kullanılabilir olduğu hakkında daha fazla bilgi edinmek için Avantaj Düzeyine [Göre Ürünler listesini indirin.](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx)
 
 > [!NOTE]
-> Aynı e-posta adresiyle ilişkilendirilmiş birden çok aboneliğiniz varsa, kullanılabilir yazılım başlıkları sahip olduğunuz en **üst** düzey abonelik tarafından belirlenir.  Örneğin, Visual Studio Enterprise aboneliğiniz ve Visual Studio Test Professional aboneliğiniz varsa, abonelikler portalında şu anda hangi aboneliğin kullanımda olduğuna bakılmaksızın Visual Studio Enterprise aboneliğine dahil edilen yazılım başlıklarına erişebilirsiniz. 
+> Aynı e-posta adresiyle ilişkilendirilmiş birden çok aboneliğiniz varsa, kullanılabilir yazılım başlıkları sahip olduğunuz en **üst** düzey abonelik tarafından belirlenir.  Örneğin, bir Visual Studio Enterprise aboneliğiniz ve Visual Studio Test Professional aboneliğiniz varsa, abonelikler portalında şu anda hangi aboneliğin hangi aboneliğin kullanımda olduğuna bakılmaksızın, Visual Studio Enterprise aboneliğine dahil edilen yazılım başlıklarına erişebilirsiniz. 
 
 Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) e-posta adresinize atanan tüm abonelikleri görmek için adresine tıklayın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla aboneliğiniz olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Abonelikler için satış, abonelikler, hesaplar ve faturalama konusunda yardım Visual Studio abonelik [desteği için Visual Studio iletişim kurun.](https://aka.ms/vssubscriberhelp)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için Visual Studio [ile iletişime geçin.](https://aka.ms/vssubscriberhelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

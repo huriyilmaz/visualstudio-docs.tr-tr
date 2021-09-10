@@ -7,12 +7,12 @@ ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
 ms.date: 03/21/2021
 ms.topic: conceptual
 description: Aboneliklerde ürün anahtarlarını bulma, talep ve dışarı aktarma Visual Studio öğrenin
-ms.openlocfilehash: 02850ca8fb3135617bf40dc5f7c5ff8ed923efc3f3c802c16c74ab0734fcf04a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 2e74269c3e5e49e776b00484de790472030dc1c1
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121381128"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966399"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Aboneliklerde ürün anahtarlarını bulma Visual Studio talep ediyor
 Bu makalede, ürününden ürün anahtarlarını bulma, talep ve dışarı aktarma https://my.visualstudio.com/productkeys açıklanmıştır.  Anahtarı olan bir ürünü etkinleştirme, anahtarların perakende ve toplu lisans sürümleri ve günlük ürün anahtarı talep sınırları hakkında daha fazla bilgi için ürün anahtar genel [bakışını ziyaret edin.](product-keys.md)
@@ -29,7 +29,7 @@ Bazı anahtarlar otomatik olarak sağlanır( örneğin, "statik" anahtarlar) ve 
 
 ### <a name="product-key-types"></a>Ürün anahtarı türleri
 
-|    Anahtar Türü           |    Açıklama                                                                                                                                                                                                           |
+|    Anahtar Türü           |    Description                                                                                                                                                                                                           |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Geçerli değil                    |    Bu ürünü yüklemek için anahtar gerekmez.                                                       |
 |    Retail                     |    Perakende anahtarları birden çok etkinleştirmeye olanak sağlar ve ürünün perakende derlemeleri için kullanılır. Çoğu durumda anahtar başına 10 etkinleştirmeye izin verilir, ancak genellikle aynı makinede daha fazla etkinleştirmeye izin verilir.                                                       |
@@ -46,7 +46,7 @@ Bazı anahtarlar otomatik olarak sağlanır( örneğin, "statik" anahtarlar) ve 
 Ürünün indirme sayfasından bir anahtar talep edebilirsiniz veya ihtiyacınız olan anahtarı Ürün Anahtarları sayfasında [arayabilirsiniz.](https://my.visualstudio.com/productkeys)
 
 ### <a name="claiming-product-keys"></a>Ürün anahtarlarını talep
-Yalnızca etkin abonelikleri olan aboneler ürünleri indirebilir ve ürün anahtarlarını talep eder.  Aboneliğiniz etkinken ürün anahtarları [sayfasından talepte bulunarak](https://my.visualstudio.com/productkeys) anahtarlarınızı dışarı aktarabilirsiniz.
+Yalnızca etkin abonelikleri olan aboneler ürünleri indirebilir ve ürün anahtarlarını talep eder.  Aboneliğiniz etkinken, talepte bulunan [anahtarlarınızı Ürün](https://my.visualstudio.com/productkeys) Anahtarları sayfasından dışarı aktarabilirsiniz.
 
 Bir ürün anahtarı talep etmek için:
 1. Visual Studio oturum açma.  Ürünleri indirmek veya ürün anahtarlarını talep etmek için oturum açık olması gerekir.
@@ -55,10 +55,10 @@ Bir ürün anahtarı talep etmek için:
 > [!div class="mx-imgBorder"]
 > ![Ürün Anahtarı ara](_img/product-keys/search-keys.png "İstediğiniz ürüne kaydırın veya herhangi bir ürünü hızla bulmak için arama kutusunu kullanın.")
    
-Bu örnekte, Visual Studio Enterprise 2019 için bir ürün anahtarını bulmak için arama çubuğunu kullandık.
-Gördüğünüz gibi, listelenen birkaç sürüm vardır.  2019 sürüm 16.0 Visual Studio Enterprise ve 16.1 için her biri için zaten bir anahtar talep edildi.  Her iki sürüm için de farklı türlerde ek anahtarlar kullanılabilir. Notlar sütunundaki talep eden anahtarlar hakkında kısa bir not **kaydedebilirsiniz.**  Bunu Talep Edildi sütunundaki **tarihle birlikte** kullanarak talepte bulundurarak anahtarlara göz edebilirsiniz.  Örneğin, anahtarını kullanarak ürünün yüklemesini etkinleştiren notlar ekleyebilirsiniz.
+Bu örnekte, 2019'daki bir ürün anahtarını bulmak için arama çubuğunu Visual Studio Enterprise kullandık.
+Gördüğünüz gibi, listelenen birkaç sürüm vardır.  2019 sürüm 16.0 Visual Studio Enterprise 16.1 için her biri zaten bir anahtar talep edildi.  Her iki sürüm için de farklı türlerde ek anahtarlar kullanılabilir. Notlar sütunundaki talep eden anahtarlar hakkında kısa bir not **kaydedebilirsiniz.**  Bunu Talep Edildi sütunundaki **tarihle birlikte** kullanarak talepte bulundurarak anahtarlara göz edebilirsiniz.  Örneğin, anahtarını kullanarak ürünün yüklemesini etkinleştiren notlar ekleyebilirsiniz.
 
-### <a name="exporting-your-claimed-keys"></a>Talep eden anahtarlarınızı dışarı aktarma
+### <a name="exporting-your-claimed-keys"></a>Talepte bulundurarak anahtarlarınızı dışarı aktarma
 Talepte bulundurarak anahtarların listesini dışarı aktarabilirsiniz.  Buna, sizin için otomatik olarak "talep edildi" olarak işaretlenen büyük bir statik anahtar seçimi ve diğer anahtarlar dahildir.
 
 > [!IMPORTANT]

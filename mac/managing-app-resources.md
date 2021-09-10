@@ -1,17 +1,17 @@
 ---
 title: Uygulama kaynaklarını yönetme
-description: Bu makale, Mac için Visual Studio ' deki çeşitli platformlar için uygulama kaynaklarının nasıl yönetileceğini betimleyen çeşitli kılavuzlara bağlantı sağlar
+description: bu makale, Mac için Visual Studio ' deki çeşitli platformlar için uygulama kaynaklarının nasıl yönetileceğini betimleyen çeşitli kılavuzlara bağlantı sağlar
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 61EAAB8F-3C32-4574-924F-CFC616604089
 ms.topic: overview
 ms.openlocfilehash: 987a337941ba2a180045e64c5ba26dfd54284bec
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "85938380"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964819"
 ---
 # <a name="managing-app-resources"></a>Uygulama kaynaklarını yönetme
 
@@ -40,4 +40,4 @@ Xamarin. Forms kodu birden çok platformda çalışarak, her biri kendi dosya si
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama kaynaklarını yönetme (Windows üzerinde Visual Studio)](/visualstudio/ide/managing-application-resources-dotnet)
+- [uygulama kaynaklarını yönetme (Windows Visual Studio)](/visualstudio/ide/managing-application-resources-dotnet)

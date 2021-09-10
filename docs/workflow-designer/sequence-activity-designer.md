@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - Sıra Etkinliği Tasarımcısı
-description: Sıra etkinliğinin sıralı bir alt etkinlik koleksiyonu içerdiğini ve bu koleksiyonun sırayla yürütülür olduğunu öğrenin.
+title: İş Akışı Tasarımcısı dizisi etkinlik Tasarımcısı
+description: Sıra etkinliğinin sırayla yürüttüğünde bir sıralı alt etkinlik koleksiyonunu nasıl içerdiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,29 +14,29 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 7980e01f23dab3ddb927af207e4e2ce67ab515a7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122099002"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963741"
 ---
 # <a name="sequence-activity-designer"></a>Sequence Etkinlik Tasarımcısı
 
-Etkinlik, <xref:System.Activities.Statements.Sequence> sırayla yürütülen bir alt etkinlik koleksiyonu içerir.
+<xref:System.Activities.Statements.Sequence>Etkinlik, sırayla çalıştırdığı alt etkinliklerin sıralı bir koleksiyonunu içerir.
 
-Bir etkinlik kümesi yürütmenin bir diğer yolu da etkinlik <xref:System.Activities.Statements.Flowchart> kullanmaktır. Diyagram aracılığıyla modellemek istediğiniz basit bir dal oluşturma veya döngü programı akışınız olduğunda [Flowchart'ı](../workflow-designer/flowchart-activity-designer.md) kullanmayı göz önünde bulundurabilirsiniz.
+Bir etkinlik kümesini sırayla yürütmeye yönelik başka bir yöntem de bir <xref:System.Activities.Statements.Flowchart> etkinlik kullanmaktır. Diagram, modellemek istediğiniz basit bir dallandırma veya döngü programı akışınız varsa, [akış çizelgesini](../workflow-designer/flowchart-activity-designer.md) kullanmayı düşünün.
 
-## <a name="using-the-sequence-activity-designer"></a>Sıra Etkinliği Tasarımcısını Kullanma
+## <a name="using-the-sequence-activity-designer"></a>Sıra etkinliği tasarımcısını kullanma
 
-Etkinlik eklemek <xref:System.Activities.Statements.Sequence> için, Sıra **etkinliği** tasarımcısını **Araç** Kutusundan sürükleyip İş Akışı Tasarımcısı bırakın. Bu etkinlike bir alt etkinlik eklemek için Araç Kutusundan başka bir etkinlik sürükleyin ve kutu içinde "Etkinliği buraya bırak" ipucu metniyle birlikte <xref:System.Activities.Statements.Sequence> üçgenin üzerine  bırakın.
+Etkinlik eklemek için <xref:System.Activities.Statements.Sequence> , **dizi** etkinlik tasarımcısını **araç kutusundan** sürükleyin ve iş akışı Tasarımcısı yüzeyine bırakın. Bu etkinliğe bir alt etkinlik eklemek için <xref:System.Activities.Statements.Sequence> , başka bir etkinliği **araç** kutusundan sürükleyin ve kutuya "etkinliği buraya bırak" ipucu metni ile kutudaki üçgeni bırakın.
 
-### <a name="sequence-activity-properties-in-the-workflow-designer"></a>Etkinlik Özelliklerini İş Akışı Tasarımcısı
+### <a name="sequence-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı dizi etkinliği özellikleri
 
-Aşağıdaki tablo, <xref:System.Activities.Statements.Sequence> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. Bu özellikler özellik kılavuzunda veya tasarımcı yüzeyinde düzenlenebilir.
+Aşağıdaki tabloda <xref:System.Activities.Statements.Sequence> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, özellik kılavuzunda veya tasarımcı yüzeyinde düzenlenebilir.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Üst bilgide etkinlik <xref:System.Activities.Statements.Sequence> tasarımcısının kolay adını belirtir. Varsayılan değer Sıra'dır. Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir.<br /><br /> kesinlikle <xref:System.Activities.Activity.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Başlıktaki etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.Sequence> . Varsayılan değer dizidir. Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

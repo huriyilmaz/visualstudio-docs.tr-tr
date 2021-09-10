@@ -8,40 +8,40 @@ helpviewer_keywords:
 - unit tests [Visual Studio for Mac]
 ms.author: jomatthi
 author: jmatthiesen
-ms.openlocfilehash: e3c35eae5b3ad48dbbde3b343aaec72573f2b9f4e0aee4f99a0b930d7420bb27
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3956c3158fd4ec1ad32b76882ac3f9d4cf1ea9bf
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121437655"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964827"
 ---
-# <a name="testing-tools-in-visual-studio-for-mac"></a>Mac için Visual Studio'de test Mac için Visual Studio
+# <a name="testing-tools-in-visual-studio-for-mac"></a>Mac için Visual Studio 'de test araçları
 
-Mac için Visual Studio test araçları, sizin ve takımınıza yüksek kod mükemmelliği standartları geliştirmenize ve sürdürmenize yardımcı olabilir. Birim testleri Microsoft birim testi çerçevesi (MSTest), xUnit veya NUnit kullanılarak yazıldığı ve çalıştırıldığı.
+Mac için Visual Studio test araçları, sizin ve ekibinizin yüksek standartlara sahip kod mükemmelliği geliştirmelerine ve bu konuda yardımcı olabilir. Birim testleri, Microsoft birim testi çerçevesi (MSTest), xUnit veya NUnit kullanılarak yazılabilir ve çalıştırılabilir.
 
-## <a name="creating-tests"></a>Test oluşturma
-Teste başlamanız için çözümünüze sağ tıklar ve Yeni ekle... menüsünü seçerek > **yeni bir test Project oluşturabilirsiniz.** Ardından iletişim kutusunun sol tarafındaki Test kategorilerinden birini seçin (Örneğin, **Web ve Konsol > Testler kategorisi).** Oluşturmak istediğiniz test projesi türünü seçin ve Ardından'ya tıklayın. Görünen iletişim kutularına yönergeleri izleyin ve ardından çözümünüze yeni bir test projesi eklenir.
+## <a name="creating-tests"></a>Testler oluşturma
+teste başlamak için çözümünüze sağ tıklayıp yeni **> Project ekle...** menüsünü seçerek çözümünüzde yeni bir test projesi oluşturabilirsiniz. Ardından, iletişim kutusunun sol tarafındaki test kategorisinden birini seçin (örneğin, **Web ve konsol > testleri** kategorisi). Oluşturmak istediğiniz test projesi türünü seçin ve Ileri ' ye tıklayın. Görüntülenen iletişim kutularındaki yönergeleri izleyin ve ardından çözümünüze yeni bir test projesi eklenir.
 
-![xUnit, MSTest ve NUnit projelerini gösteren Web > Konsol Testleri bölümünün seçili olduğu yeni proje iletişim kutusu](media/create-new-test-project.PNG)
+![Web ve konsol > Testleri bölümü seçiliyken xUnit, MSTest ve NUnit projelerini gösteren yeni proje iletişim kutusu](media/create-new-test-project.PNG)
 
 > [!NOTE]
-> .NET Core uygulamalarınızı birim testi ve birim testi çerçevelerini seçme hakkında daha fazla bilgi için [.NET Core'da birim](/dotnet/core/testing/?pivots=xunit) testi ve birim testi .NET Standard bakın.
+> .NET Core uygulamalarınızın birim testi ve birim testi çerçeveleri seçme hakkında daha fazla bilgi için bkz. [.NET Core 'Da birim testi ve .NET Standard](/dotnet/core/testing/?pivots=xunit) belgeleri.
 
 ## <a name="running-tests"></a>Testleri çalıştırma
-Birim **Testleri penceresi** birim testlerini çalıştırmak için kullanılır ve Testleri Görüntüle menüsü **>** açılır. Çözümünüzde birim testleri otomatik olarak keşfedilir ve bu pencerede gösterilir. Burada tüm testleri veya seçtiğiniz bir dizi testi çalıştırabilirsiniz.
+Birim **Testleri penceresi,** birim testlerini çalıştırmak için kullanılır ve **> testleri görüntüle** menüsü kullanılarak açılır. Çözümünüzdeki birim testleri otomatik olarak bulunur ve bu pencerede gösterilir. burada, seçtiğiniz tüm testleri veya testlerin bir kümesini çalıştırabilirsiniz.
 
-![Birim testlerinin listesini ve testleri çalıştırmaya veya durdurmaya yönelik araç çubuğunu gösteren Test Penceresi.](media/test-window.PNG)
+![Testleri çalıştırmaya veya durdurmayla ilgili bir araç çubuğunun ve birim testlerinin listesini gösteren test penceresi.](media/test-window.PNG)
 
-Birim testleri içeren bir C# sınıfını düzenlerken, test sınıfına veya bir test yöntemine sağ tıklar ve Testleri Çalıştır **veya** Testlerde Hata Ayıkla menüsünü seçerek **testleri çalıştırabilirsiniz.** Testleri **Çalıştır menü** öğesinin seçimi test penceresinde testleri çalıştıracak, Hata Ayıklama **Testlerinin** menüsü seçerek aynı işlem yapılacak ve kodda sorun giderebilirsiniz.
+Birim testlerini içeren bir C# sınıfını düzenlediğinizde, test sınıfı veya test yöntemi ' ne sağ tıklayarak ve Testleri **Çalıştır** veya **Hata Ayıkla test** et menüsünü seçerek testleri çalıştırabilirsiniz. **Test Çalıştır** menü öğesini seçme, test penceresindeki testleri çalıştıracak ve **hata ayıklama test (ler)** menüsünün belirlenmesi aynı olur ve kodunuzla ilgili sorunları gidermek için hata ayıklayıcıyı ekler.
 
-![Çalıştır ve Testlerde Hata Ayıkla seçeneklerinin yer alan düzenleyici sağ tıklama menüsü](media/run-tests-context-menu.PNG)
+![Düzenleyici, Çalıştır ve hata ayıkla test seçenekleri ile sağ tıklama menüsü](media/run-tests-context-menu.PNG)
 
-Testler çalışıyorken, **başarılı Test Sonuçları** başarısız testleri ve bu testleri çalıştırmanın çıkışını gözden geçirebilirsiniz.
+Testler çalışırken, başarılı veya başarısız testleri gözden geçirebilmeniz için **test sonuçları** bir pencere görünür ve bu testleri çalıştırmanın çıkışı.
 
-![Bir başarısız test ve 21 başarılı test ve 1 başarısız test sayısını gösteren test sonuçları penceresi.](media/test-results-window.PNG)
+![Başarısız bir testi ve 21 geçilen test sayısını ve 1 başarısız testi gösteren test sonuçları penceresi.](media/test-results-window.PNG)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core ve .NET Standard'de birim testi](/dotnet/core/testing)
-- [Başlarken testiyle (Visual Studio üzerinde Windows)](/visualstudio/test/getting-started-with-unit-testing)
-- [Birim testi temelleri (Visual Studio üzerinde Windows)](/visualstudio/test/unit-test-basics)
+- [.NET Core ve .NET Standard birim testi](/dotnet/core/testing)
+- [birim testi ile Başlarken (Windows Visual Studio)](/visualstudio/test/getting-started-with-unit-testing)
+- [birim testi temelleri (Windows Visual Studio)](/visualstudio/test/unit-test-basics)

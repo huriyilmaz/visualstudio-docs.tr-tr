@@ -7,17 +7,17 @@ ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
 ms.date: 02/18/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerde Microsoft yazılım başlıklarını bulma ve indirme hakkında bilgi edinin
-ms.openlocfilehash: c1267f431f54effc9de6b6b9e99fbab9790e5890d430411be7066112b32b9a03
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c53429f7fe7d88c1c75642d9f820c8a6fa444eb9
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121421618"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966419"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Yazılım başlıklarını aboneliklere Visual Studio indirme
 Sahip olduğunuz Visual Studio bağlı olarak, çok çeşitli Microsoft yazılım başlıklarını kullanabilirsiniz.  Bu makalede, aboneliğinizi en iyi şekilde elde etmek için ihtiyacınız olan yazılımı nasıl bulup indiryebilirsiniz? 
 
-İndirmeler sayfasında yalnızca aboneliğinize dahil edilen indirmeler [görüntülenir.](https://my.visualstudio.com/downloads/featured)  Birden fazla aboneliğiniz veya program üyeliğiniz varsa, gösterilen  indirmeler şu anda farklı bir abonelik görüntülese bile en yüksek aboneliğiniz için gösterilir.  Örneğin, hem Visual Studio Enterprise aboneliğiniz hem de aynı oturum açma kimliğiyle ilişkilendirilmiş bir Visual Studio Professional aboneliğiniz varsa, gösterilen indirmeler şu anda Professional aboneliği avantajlarınızı görüntülse bile Enterprise aboneliğine dahil edilir.  
+İndirmeler sayfasında yalnızca aboneliğinize dahil edilen indirmeler [görüntülenir.](https://my.visualstudio.com/downloads/featured)  Birden fazla aboneliğiniz veya program üyeliğiniz varsa, gösterilen  indirmeler şu anda farklı bir abonelik görüntülese bile en yüksek aboneliğiniz için gösterilir.  Örneğin, hem Visual Studio Enterprise aboneliğiniz hem de aynı oturum açma kimliğiyle ilişkili bir Visual Studio Professional aboneliğiniz varsa, gösterilen indirmeler şu anda Professional aboneliği avantajlarınızı görüntülse bile Enterprise aboneliğine dahil edilenler olur.  
 
 Aboneliğiniz iş veya okulunuz tarafından sağlanıyorsa, indirmelere erişiminizin olup olmadığını abonelik yöneticiniz kontrol eder. İndirmelere erişimi devre dışı bırakmak ürün anahtarlarına erişimi de devre dışı bıraktır. İndirmelere ve ürün anahtarlarına erişiminiz yoksa ve bu anahtarlara ihtiyacınız varsa [yöneticinize ulaşın.](contact-my-admin.md)
 
@@ -33,7 +33,7 @@ Aboneliğiniz iş veya okulunuz tarafından sağlanıyorsa, indirmelere erişimi
 > [!div class="mx-imgBorder"]
 > ![Visual Studio 2019 indirmeleri](_img/subscriber-downloads/vs2019-product-list.png "Bir ürün seçerek kullanılabilir sürümlerin listesi görüntülenir.")
 
-Kullanılabilir açılan menüleri kullanarak mimarinizi, dilinizi ve dosya türünü kolayca seçersiniz. Tercih ettiğiniz seçenekleri belirleyin ve ürünü **indirmeye** başlamak için İndir'i seçin.
+Kullanılabilir açılan menüleri kullanarak mimarinizi, dilinizi ve dosya türlerinizi kolayca seçersiniz. Tercih ettiğiniz seçenekleri belirleyin ve ürünü **indirmeye** başlamak için İndir'i seçin.
 
 > [!NOTE]
 > Tüm başlıklar tüm mimarilerde, dillerde veya dosya biçimlerinde kullanılamaz.  

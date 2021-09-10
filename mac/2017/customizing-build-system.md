@@ -1,42 +1,42 @@
 ---
 title: Derleme Sistemini Özelleştirme
-description: Bu makale, Mac için Visual Studio tarafından kullanılan MSBuild derleme sistemine kısa bir giriş niteliğindedir
+description: Bu makale, Mac için Visual Studio tarafından kullanılan MSBuild derleme sistemine kısa bir Mac için Visual Studio
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
 ms.openlocfilehash: 97416ef126ee77f9955d8fa486d7bb7e2ceb725e
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "74983442"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123962123"
 ---
-# <a name="customizing-the-build-system"></a>Yapı sistemini özelleştirme
+# <a name="customizing-the-build-system"></a>Derleme sistemini özelleştirme
 
-MSBuild, Microsoft tarafından geliştirilen ve öncelikle .NET uygulamalarının oluşturulmasına olanak tanıyan bir yapı altyapısıdır. Mono çerçevesinin Ayrıca, **xbuild**adlı Microsoft Build Engine uygulamasına sahip olması gerekir. Ancak, xbuild, tüm işletim sistemlerinde MSBuild kullanılması için kullanıma hazır.
+MSBuild, microsoft tarafından geliştirilen ve öncelikli olarak .NET uygulamalarının derlemeye olanak sağlayan bir derleme altyapısıdır. Mono çerçevesinin microsoft'un Derleme Altyapısı'nın xbuild adlı kendi **uygulaması da vardır.** Ancak xbuild, tüm işletim sistemlerinde MSBuild kullanımdan çıkarıldı.
 
-**MSBuild** öncelikle Mac için Visual Studio projeler için yapı sistemi olarak kullanılır.
+**MSBuild** için birincil olarak projelerde derleme sistemi olarak Mac için Visual Studio.
 
-MSBuild, kaynak dosyalar gibi bir giriş kümesi alarak ve bunları yürütülebilir dosyalar gibi çıkışlara dönüştüren şekilde yapılır. Derleyici gibi araçları çağırarak bu çıktıyı elde eder.
+MSBuild, kaynak dosyalar gibi bir dizi giriş alıp yürütülebilir dosyalar gibi çıkışlara dönüştürerek çalışır. Derleyici gibi araçları kullanarak bu çıkışı elde ediyor.
 
 ## <a name="msbuild-file"></a>MSBuild dosyası
 
-MSBuild, projenizin bir parçası olan *öğeleri* (görüntü kaynakları gibi) ve projenizi oluşturmak Için gereken *özellikleri* tanımlayan bir proje dosyası adlı bir XML dosyası kullanır. Bu proje dosyası `proj` , `.csproj` C# projeleri için gibi her zaman bir dosya uzantısına sahip olacaktır.
+MSBuild projenizin parçası olan Öğeleri (görüntü kaynakları gibi) ve projenizi derlemek için gereken Özellikleri  tanımlayan proje dosyası olarak adlandırılan bir XML dosyası kullanır.  Bu proje dosyası, C# projeleri gibi ile biten `proj` bir dosya `.csproj` uzantısına her zaman sahip olur.
 
-### <a name="viewing-the-msbuild-file"></a>MSBuild dosyasını görüntüleme
+### <a name="viewing-the-msbuild-file"></a>MSBuild görüntüleme
 
-Proje adına sağ tıklayıp **Finder 'Da göster '** i seçerek MSBuild dosyasını bulun. Finder penceresinde, `.csproj` aşağıdaki görüntüde gösterildiği gibi, dosyası dahil olmak üzere projenizle ilgili tüm dosya ve klasörler görüntülenir:
+Proje MSBuild sağ tıklar ve Bulıcı'da Ortaya Çıkar'ı seçerek **bir dosya bulun.** Bulıcı penceresi, aşağıdaki görüntüde gösterildiği gibi dosya dahil olmak üzere projeniz ile `.csproj` ilgili tüm dosyaları ve klasörleri görüntüler:
 
-![Finder 'da csproj konumu](media/customizing-build-system-image1.png)
+![Bulıcı'da csproj konumu](media/customizing-build-system-image1.png)
 
-`.csproj`Mac için Visual Studio yeni bir sekmede göstermek için, proje adına sağ tıklayın ve **dosyayı Düzenle > araçlar**'a gidin:
+dosyasını yeni bir sekmede görüntülemek Mac için Visual Studio proje adınıza sağ tıklayın ve Dosya Düzenle'ye > `.csproj` **göz atabilirsiniz:**
 
-![Kaynak düzenleyicisinde csproj açılıyor](media/customizing-build-system-image2.png)
+![kaynak düzenleyicisinde csproj'ı açma](media/customizing-build-system-image2.png)
 
-### <a name="composition-of-the-msbuild-file"></a>MSBuild dosyasının oluşturulması
+### <a name="composition-of-the-msbuild-file"></a>Dosyanın MSBuild oluşturma
 
-Tüm MSBuild dosyaları, şöyle bir zorunlu kök `Project` öğesi içerir:
+Tüm MSBuild zorunlu bir kök öğe `Project` içerir, şöyle:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,25 +44,25 @@ Tüm MSBuild dosyaları, şöyle bir zorunlu kök `Project` öğesi içerir:
 </Project>
 ```
 
-Genellikle proje de bir dosyayı içeri aktarır `.targets` . Bu dosya, çeşitli dosyaların nasıl işleyeceğini ve oluşturulacağını betimleyen kuralların çoğunu içerir. İçeri aktarma genellikle dosyanızın en altına doğru görünür `proj` ve C# projeleri için şuna benzer şekilde görünür:
+Genellikle, proje bir dosyayı da içeri `.targets` aktarır. Bu dosya, çeşitli dosyaları işlemeyi ve derlemeyi açıklayan birçok kuralı içerir. İçeri aktarma işlemi genellikle dosyanın alt `proj` kısmında görünür ve C# projeleri için aşağıdaki gibi görünür:
 
 ```xml
 <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 ```
 
-Hedef dosya başka bir MSBuild dosyasıdır. Bu dosya, birden fazla proje tarafından yeniden kullanılabilen MSBuild kodunu içerir. Örneğin, `Microsoft.CSharp.targets` Özelliği (veya değişkeni) tarafından temsil edilen bir dizinde bulunan dosyası `MSBuildBinPath` , c# kaynak dosyalarından c# derlemeleri oluşturmaya yönelik mantığı içerir.
+Hedefler dosyası bir diğer MSBuild dosyasıdır. Bu dosya MSBuild proje tarafından yeniden kullanılabilir bir kod içerir. Örneğin, özelliğiyle (veya değişkeniyle) temsil edilen bir dizinde bulunan dosya, C# kaynak dosyalarından C# derlemeleri derleme `Microsoft.CSharp.targets` `MSBuildBinPath` mantığını içerir.
 
-### <a name="items-and-properties"></a>Öğeler ve Özellikler
+### <a name="items-and-properties"></a>Öğeler ve özellikler
 
-MSBuild 'de iki temel veri türü vardır: *öğeler* ve *Özellikler*aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmıştır.
+Veri verilerinde iki temel veri MSBuild *vardır: öğeler* ve *özellikler*, aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmıştır.
 
 #### <a name="properties"></a>Özellikler
 
-Özellikler, derleme seçenekleri gibi derlemeyi etkileyen ayarları depolamak için kullanılan anahtar/değer çiftleridir.
+Özellikler, derlemeyi etkileyen ayarları (derleyici seçenekleri gibi) depolamak için kullanılan anahtar/değer çiftleridir.
 
-Bunlar bir PropertyGroup kullanılarak ayarlanırlar ve herhangi bir sayıda özellik içerebilen herhangi bir sayıda PropertiesGroups içerebilir.
+Bir PropertyGroup kullanılarak ayarlanır ve herhangi bir sayıda özellik içeren herhangi bir sayıda PropertiesGroup içerebilir.
 
-Örneğin, bir basit konsol uygulaması için PropertyGroup aşağıdaki XML gibi görünebilir:
+Örneğin, basit bir konsol uygulaması için PropertyGroup aşağıdaki XML'ye benzer olabilir:
 
 ```xml
 <PropertyGroup>
@@ -76,15 +76,15 @@ Bunlar bir PropertyGroup kullanılarak ayarlanırlar ve herhangi bir sayıda öz
 </PropertyGroup>
 ```
 
-Özellikler, söz dizimi kullanılarak ifadelerden ifade edilebilir `$()` . Örneğin, `$(Foo)` özelliğinin değeri olarak değerlendirilir `Foo` . Özellik ayarlanmamışsa, herhangi bir hata olmadan boş bir dize olarak değerlendirilir.
+Özellikler, söz dizimi kullanılarak ifadelerden `$()` başvurulabilirsiniz. Örneğin, `$(Foo)` özelliğinin değeri olarak `Foo` değerlendirilir. Özellik ayarlanmazsa, herhangi bir hata olmadan boş bir dize olarak değerlendirilir.
 
 #### <a name="items"></a>Öğeler
 
-Öğeler, derleme sistemine listeler veya kümeler olarak giriş ile ilgili bir yol sağlar ve genellikle dosyaları temsil eder. Her öğenin bir öğe *türü*, bir öğe *belirtimi*ve isteğe bağlı rastgele *meta veriler*vardır. MSBuild 'in ayrı öğeler üzerinde çalışmadığına, belirli bir türün tüm öğelerini (öğe *kümesi* olarak adlandırılır) aldığını unutmayın.
+Öğeler, derleme sistemine girişlerle listeler veya kümeler olarak ilgilenmek için bir yol sağlar ve genellikle dosyaları temsil eder. Her öğenin bir öğe *türü, öğe* özellikleri *ve* isteğe bağlı rastgele meta verileri *vardır.* Tek MSBuild üzerinde çalışmayabilirsiniz; öğe kümesi olarak adlandırılan bir türdeki tüm öğeleri *alır*
 
-Öğeler bir bildirerek oluşturulur `ItemGroup` . Herhangi bir sayıda öğe içerebilen herhangi bir sayıda ItemGroups olabilir.
+Öğeler bir bildirerek `ItemGroup` oluşturulur. Herhangi bir sayıda öğe içeren herhangi bir sayıda ItemGroup olabilir.
 
-Örneğin, aşağıdaki kod parçacığı iOS başlatma ekranlarını oluşturur. Başlatma ekranları yapı türüne sahiptir ve bu özellik, `BundleResource` görüntünün yolu olarak belirtimdir:
+Örneğin, aşağıdaki kod parçacığı iOS Başlatma Ekranlarını oluşturur. Başlatma Ekranları, görüntünün yolu `BundleResource` olarak spec ile derleme türüne sahip olur:
 
 ```xml
  <ItemGroup>
@@ -97,11 +97,11 @@ Bunlar bir PropertyGroup kullanılarak ayarlanırlar ve herhangi bir sayıda öz
   </ItemGroup>
  ```
 
- Öğe kümelerine sözdizimi kullanılarak deyimlerden başvurulabilir `@()` . Örneğin, paketleme `@(BundleResource)` leresource öğe kümesi olarak değerlendirilir. Bu, tüm paket \ kaynak öğeleri anlamına gelir. Bu türden bir öğe yoksa, herhangi bir hata olmadan boş olur.
+ Öğe kümeleri, söz dizimi kullanılarak ifadelerden `@()` başvurulabilirsiniz. Örneğin, `@(BundleResource)` Tüm BundleResource öğeleri anlamına gelen BundleResource öğe kümesi olarak değerlendirilir. Bu türde bir öğe yoksa, herhangi bir hata olmadan boş olur.
 
-## <a name="resources-for-learning-msbuild"></a>Öğrenme MSBuild için kaynaklar
+## <a name="resources-for-learning-msbuild"></a>Öğrenme kaynakları MSBuild
 
-Aşağıdaki kaynaklar MSBuild hakkında daha ayrıntılı bilgi edinmek için kullanılabilir:
+Aşağıdaki kaynaklar, daha ayrıntılı bir şekilde MSBuild için kullanılabilir:
 
-* [MSBuild genel bakış](/visualstudio/msbuild/msbuild)
-* [MSBuild kavramları](/visualstudio/msbuild/msbuild-concepts)
+* [MSBuild Genel bakış](/visualstudio/msbuild/msbuild)
+* [MSBuild Kavram](/visualstudio/msbuild/msbuild-concepts)

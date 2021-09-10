@@ -1,47 +1,47 @@
 ---
 title: launchSettings.json desteği
-description: bu belge Mac için Visual Studio ' de launchSettings.jsdesteğini içerir
+description: Bu belge, launchSettings.js'de Mac için Visual Studio
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 09/18/2019
 ms.assetid: a556f9d7-86a8-408e-aa54-392584845889
-ms.openlocfilehash: 0a334cde66d77af8867e3673773f6545fe5117a2b22ad4f387f82b00debb4bed
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: df702b5d49e5204e65675c1c57d222e490a33824
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121349598"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964810"
 ---
 # <a name="launchsettingsjson"></a>launchSettings.json
 
-ASP.NET Core projeleri geliştirirken, dosyadaki launchSettings.jsiçeriğini özelleştirerek geliştirme senaryolarında projenizin nasıl başlatılacağını yapılandırabilirsiniz. Mac için Visual Studio, bu dosyayı proje seçenekleri kullanıcı arabirimini kullanarak veya doğrudan düzenleyerek güncelleştirebilirsiniz. bu dosya, Windows Visual Studio ya da ile komut satırından çalıştırırken kullanabileceğiniz yapılandırma dosyasıdır `dotnet` . Bu dosya projenizde Özellikler klasörü altında depolanır.
+Bir ASP.NET Core geliştirme aşamasında, dosyada yer alan uygulamanın içeriğini özelleştirerek projenizin geliştirme senaryolarında nasıl launchSettings.jsyapılandırabilirsiniz. Bu Mac için Visual Studio, proje seçenekleri kullanıcı arabirimini kullanarak veya doğrudan düzenleyerek bu dosyayı güncelleştirebilirsiniz. Bu dosya, dosya üzerinde veya aracılığıyla komut Visual Studio Windows çalıştırarak kullanabileceğiniz yapılandırma `dotnet` dosyasıdır. Bu dosya, Projenizin Özellikler klasörü altında depolanır.
 
-Daha ayrıntılı bilgi için bkz. [ASP.NET Core birden çok ortam kullanma](/aspnet/core/fundamentals/environments). bu makalede, Mac için Visual Studio ' de bu dosyayı nasıl güncelleştireceğiz.
+Daha ayrıntılı bilgi için [bkz. Birden çok ortam kullanma ASP.NET Core.](/aspnet/core/fundamentals/environments) Bu makalede, bu dosyanın nasıl güncelleştirilmektedir? makalesinde Mac için Visual Studio.
 
 ## <a name="update-the-start-configuration-by-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak başlangıç yapılandırmasını güncelleştirme
 
-Mac için Visual Studio dosyasında launchSettings.jsdoğrudan düzenleyebilir veya proje seçeneklerini kullanarak düzenleyebilirsiniz. Proje seçeneklerine ulaşmak için projenize sağ tıklayın ve **Seçenekler**' i seçin.
+Dosyada yer alan launchSettings.jsdoğrudan düzenleyebilir Mac için Visual Studio proje seçeneklerini kullanarak düzenleyebilirsiniz. Proje seçeneklerine almak için projenize sağ tıklayın ve Seçenekler'i **seçin.**
 
-!["seçenekler" seçiliyken kısayol menüsü Project](media/vsmac-ctx-proj-options.png)
+![Project "Seçenekler" seçeneğinin seçili olduğu bir kısayol menüsü](media/vsmac-ctx-proj-options.png)
 
-Varsayılan **çalıştırma**  >  **yapılandırması**' nı seçin  >  .
+Yapılandırmaları **Çalıştır**  >  **Varsayılan'ı**  >  **seçin.**
 
-![Proje seçeneklerinde "Çalıştır," "Configurations" ve "default"](media/vsmac-run-config-default.png)
+![Proje seçeneklerinde "Çalıştır", "Yapılandırmalar" ve "Varsayılan"](media/vsmac-run-config-default.png)
 
-Öncelikle, burada iki şeyi yapılandıracaksınız:
+Öncelikle burada iki şeyi yapılandırmış oluruz:
 
 - Ortam değişkenleri
-- Projenin uygulama URL 'SI
+- Proje için uygulama URL'si
 
 ## <a name="configure-environment-variables"></a>Ortam değişkenlerini yapılandırma
 
-Ortam değişkenlerinin değerlerini belirtmek için kılavuzunu kullanabilirsiniz. bu ortam değişkenleri, uygulamanızı Mac için Visual Studio ' de başlattığınızda ayarlanır. ASP.NET Core uygulamalar geliştirirken, özel `ASPNETCORE_ENVIRONMENT` ortam değişkenini bilmelisiniz. Daha fazla bilgi için bkz. [ASP.NET Core birden çok ortam kullanma](/aspnet/core/fundamentals/environments).
+Ortam değişkenlerinin değerlerini belirtmek için kılavuzu kullanabilirsiniz. Bu ortam değişkenleri, uygulamanıza yeni bir başlangıç Mac için Visual Studio. Uygulama geliştirme ASP.NET Core, özel ortam değişkeninin farkında `ASPNETCORE_ENVIRONMENT` olmak gerekir. Daha fazla bilgi edinmek için [bkz. Birden çok ortam kullanma ASP.NET Core.](/aspnet/core/fundamentals/environments)
 
 
-## <a name="configure-the-start-url"></a>Başlangıç URL 'sini yapılandırın
+## <a name="configure-the-start-url"></a>Başlangıç URL'sini yapılandırma
 
-uygulamanın başlatıldığı URL 'yi yapılandırmak için **ASP.NET Core** sekmesine gidin.
+Uygulamanın başlatılamayacak URL'sini yapılandırmak için uygulamanın **ASP.NET Core** gidin.
 
-![Proje seçeneklerindeki uygulama URL 'SI](media/vsmac-run-config-default-aspnetcore.png)
+![Proje seçeneklerinde uygulama URL'si](media/vsmac-run-config-default-aspnetcore.png)
 
-Burada, uygulamanın başlatıldığında dinleyeceği URL 'YI belirtebilirsiniz.
+Burada, uygulamanın başlatılana kadar dinleyecekleri URL'yi belirtebilirsiniz.

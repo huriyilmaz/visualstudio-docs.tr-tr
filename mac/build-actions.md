@@ -6,22 +6,22 @@ ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 5399BCB1-E317-4C7B-87B1-C531E985DE6E
 ms.openlocfilehash: d089f38bd91eda2565f215e8d15a74cc119b8767
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "73714394"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964761"
 ---
 # <a name="build-actions"></a>Derleme eylemleri
 
-Bir Mac için Visual Studio projesindeki tüm dosyaların bir yapı eylemi vardır. Yapı eylemi, derleme sırasında dosyaya ne olacağını denetler. 
+bir Mac için Visual Studio projesindeki tüm dosyaların bir yapı eylemi vardır. Yapı eylemi, derleme sırasında dosyaya ne olacağını denetler. 
 
 >[!NOTE]
->Bu konu Mac için Visual Studio için geçerlidir. Windows üzerinde Visual Studio için bkz. [derleme eylemleri](/visualstudio/ide/build-actions).
+>bu konu Mac için Visual Studio için geçerlidir. Windows Visual Studio için bkz. [derleme eylemleri](/visualstudio/ide/build-actions).
 
 ## <a name="set-a-build-action"></a>Yapı eylemi ayarla
 
-Mac için Visual Studio bir dosyaya yönelik derleme eylemi ayarlamak için, aşağıda gösterildiği gibi herhangi bir dosyaya sağ tıklayıp **derleme eylemine**göz atarak:
+Mac için Visual Studio bir dosyaya yönelik derleme eylemi ayarlamak için, aşağıda gösterildiği gibi herhangi bir dosyaya sağ tıklayıp **derleme eylemine** göz atarak:
 
 ![Çözüm Gezgini 'nden derlemeyi derle eylemini seçme](media/projects-and-solutions-image1.png)
 
@@ -31,10 +31,10 @@ Bu dosya için derleme eylemleri, açılır menüde gösterilir.
 
 Mac için Visual Studio oluşturabileceğiniz projeler için bazı yaygın derleme eylemleri şunlardır:
 
-|Derleme eylemi | Proje türleri | Description |
+|Derleme eylemi | Project türleri | Description |
 |--|--|--|
 | **Se** | herhangi biri | Dosya, C# derleyicisine kaynak dosya olarak geçirilir.|
-| **İçerik** | .NET, Xamarin | ASP.NET projelerinde, bu dosyalar, dağıtıldığı sırada sitenin bir parçası olarak dahil edilir. Xamarin. iOS ve Xamarin. Mac projeleri için uygulama paketi 'ne dahil edilecek.|
+| **İçerik** | .NET, Xamarin | ASP.NET projeleri için, bu dosyalar dağıtıldığında sitenin bir parçası olarak dahil edilir. Xamarin. iOS ve Xamarin. Mac projeleri için uygulama paketi 'ne dahil edilecek.|
 | **Gömülü kaynak** | .NET | Dosya, derlemeye gömülebilen bir kaynak olarak C# derleyicisine geçirilir. Ad alanından [Assembly. GetManifestResourceStream](/dotnet/api/system.reflection.assembly.getmanifestresourcestream), `System.Reflection` derlemeden dosyayı okumak için kullanılabilir.|
 | **Hiçbiri** | herhangi biri | Dosya, herhangi bir şekilde derleme kapsamında değildir ve IDE 'den kolay erişim için projeye dahil edilmiştir. Bu değer, örneğin "Benioku" dosyaları gibi belge dosyaları için kullanılabilir.|
 
@@ -47,4 +47,4 @@ Xamarin. iOS projeleri, dosyayı uygulama paketinin bir parçası olarak ekleyec
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme eylemleri (Windows üzerinde Visual Studio)](/visualstudio/ide/build-actions)
+- [derleme eylemleri (Windows Visual Studio)](/visualstudio/ide/build-actions)

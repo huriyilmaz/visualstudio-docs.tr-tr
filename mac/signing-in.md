@@ -7,11 +7,11 @@ ms.date: 01/21/2020
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
 ms.topic: how-to
 ms.openlocfilehash: 42db2efef077fcb95590ea061e47cd1b52bb6311
-ms.sourcegitcommit: 7c06c7e4f0a69d90b21dcf4d5c5b5caa17464bf5
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122464826"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964780"
 ---
 # <a name="sign-in-to-visual-studio-for-mac"></a>Mac için Visual Studio oturum açın
 

@@ -14,11 +14,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 5508555d2e4347a96e1eaf7319270cf3f95f3177
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122130435"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963763"
 ---
 # <a name="rethrow-activity-designer"></a>Rethrow Etkinlik Tasarımcısı
 
@@ -30,7 +30,7 @@ Etkinlik <xref:System.Activities.Statements.Rethrow> daha önce bir özel durum 
 
 ### <a name="use-the-rethrow-activity-designer"></a>ReThrow Etkinlik Tasarımcısını Kullanma
 
-Araç Kutusunun Hata İşleme kategorisindeki **Rethrow** etkinlik  **tasarımcısına erişin.** **Rethrow etkinlik** tasarımcısı Araç Kutusundan  sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirildikten sonra araç yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Etkinlik tasarımcısı bırakarak, varsayılan <xref:System.Activities.Statements.Rethrow> **Throw DisplayName değerine sahip bir** etkinlik oluşturur. Değer Rethrow etkinlik tasarımcısının üst bilgisinde veya <xref:System.Activities.Activity.DisplayName%2A> özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir. 
+Araç Kutusunun Hata İşleme kategorisindeki **Rethrow** etkinlik  **tasarımcısına erişin.** **Rethrow etkinlik** tasarımcısı Araç Kutusundan  sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirilmelerinden sonra araç yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Etkinlik tasarımcısı bırakarak, varsayılan <xref:System.Activities.Statements.Rethrow> **Throw DisplayName değerine sahip bir** etkinlik oluşturur. Değer Rethrow etkinlik tasarımcısının üst bilgisinde veya <xref:System.Activities.Activity.DisplayName%2A> özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir. 
 
 ### <a name="the-rethrow-properties"></a>Rethrow özellikleri
 

@@ -14,11 +14,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: ca9c66d68913e0791daea6736c7bb5aeeead4df2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122068109"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963719"
 ---
 # <a name="compensate-activity-designer"></a>Compensate Etkinlik Tasarımcısı
 
@@ -26,7 +26,7 @@ Etkinliği **oluşturmak** ve yapılandırmak için Telafi etkinliği tasarımc�
 
 ## <a name="the-compensate-activity"></a>Telafi Etkinliği
 
-Etkinliği, <xref:System.Activities.Statements.Compensate> içinde yer alan bir etkinlik için açıkça <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> <xref:System.Activities.Statements.CompensableActivity> çağırır. Etkinlik <xref:System.Activities.Statements.Compensate> , veya içinde <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> kullanılmazsa, <xref:System.Activities.Statements.CompensableActivity> özelliğini belirtmeniz <xref:System.Activities.Statements.Compensate.Target%2A> gerekir.
+Etkinliği, <xref:System.Activities.Statements.Compensate> içinde yer alan bir etkinlik için açıkça <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> <xref:System.Activities.Statements.CompensableActivity> çağırır. Etkinlik <xref:System.Activities.Statements.Compensate> , veya içinde <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> kullanılmazsa, <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> özelliğini belirtmeniz <xref:System.Activities.Statements.CompensableActivity> <xref:System.Activities.Statements.Compensate.Target%2A> gerekir.
 
 <xref:System.Activities.Statements.CompensationToken>tarafından belirtilen, <xref:System.Activities.Statements.Compensate.Target%2A> bir başarıyla tamamlandıktan sonra açıkça onaylamak veya telafi <xref:System.Activities.Statements.CompensableActivity> etmek için bir yol <xref:System.Activities.Statements.CompensableActivity.Body%2A> <xref:System.Activities.Statements.CompensableActivity> sağlar.
 
@@ -34,7 +34,7 @@ Etkinliği, <xref:System.Activities.Statements.Compensate> içinde yer alan bir 
 
 Telafi  etkinliği tasarımcısı, Araç Kutusunun **İşlem** kategorisinde **bulunabilir.** Araç **Kutusu'nı** açmak **için, araç** kutusunun sol tarafındaki Araç Kutusu İş Akışı Tasarımcısı. Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
 
-**Telafi etkinliği** tasarımcısı Araç Kutusundan  sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirildikten sonra bu yüzeyde <xref:System.Activities.Statements.Sequence> bırakılır. Etkinlik tasarımcısını bırakarak, Varsayılan <xref:System.Activities.Statements.Compensate> Telafi ile bir etkinlik <xref:System.Activities.Activity.DisplayName%2A> oluşturur. Değer, Telafi etkinlik tasarımcısının üst bilgisinde <xref:System.Activities.Activity.DisplayName%2A> veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir. 
+**Telafi etkinliği** tasarımcısı Araç Kutusundan  sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirildikten sonra araç yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Etkinlik tasarımcısını bırakarak, Varsayılan <xref:System.Activities.Statements.Compensate> Telafi ile bir etkinlik <xref:System.Activities.Activity.DisplayName%2A> oluşturur. Değer, Telafi etkinlik tasarımcısının üst bilgisinde <xref:System.Activities.Activity.DisplayName%2A> veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir. 
 
 ### <a name="the-compensate-properties"></a>Özellikleri Telafi
 

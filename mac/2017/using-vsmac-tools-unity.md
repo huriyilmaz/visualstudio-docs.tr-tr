@@ -1,114 +1,114 @@
 ---
-title: Unity için Mac için Visual Studio araçları kullanma
-description: bu kılavuzda, Unity uzantısı için Mac için Visual Studio araçları 'nın nasıl kullanılacağı açıklanmaktadır
+title: Unity Mac için Visual Studio Araçları Kullanma
+description: Bu kılavuzda Unity uzantısı için Mac için Visual Studio Araçları'nın nasıl kullanacağız?
 author: therealjohn
 ms.author: johmil
 ms.date: 07/17/2017
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: 159929c2fcf4f6dc8fff28c4e88d8296a7a6ad8baa01c578d046b688b726d69d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d4df59273db1fab8492b36e87e48e0e770072f17
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121422367"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123962162"
 ---
-# <a name="using-visual-studio-for-mac-tools-for-unity"></a>Unity için Mac için Visual Studio araçları kullanma
+# <a name="using-visual-studio-for-mac-tools-for-unity"></a>Unity Mac için Visual Studio Araçları Kullanma
 
-bu bölümde, unity 'nin tümleştirme ve üretkenlik özellikleri için Mac için Visual Studio araçları kullanmayı ve unity geliştirme için Mac için Visual Studio hata ayıklayıcıyı kullanmayı öğreneceksiniz.
+Bu bölümde, Unity'nin tümleştirme ve üretkenlik özellikleri için Mac için Visual Studio Araçları'nın nasıl ve Unity geliştirmesi için Mac için Visual Studio hata ayıklayıcısını kullanmayı öğrenirsiniz.
 
-## <a name="opening-unity-scripts-in-visual-studio-for-mac"></a>Mac için Visual Studio Unity betikleri açılıyor
+## <a name="opening-unity-scripts-in-visual-studio-for-mac"></a>Unity betiklerini Mac için Visual Studio
 
-Mac için Visual Studio [unity için dış betik düzenleyicisi olarak](setup-vsmac-tools-unity.md#configure-unity-for-use-with-visual-studio-for-mac)ayarlandıktan sonra, unity düzenleyiciden herhangi bir betiği açmak, seçilen komut dosyası açık olarak otomatik olarak başlatılır veya Mac için Visual Studio.
+Bu Mac için Visual Studio [Unity için](setup-vsmac-tools-unity.md#configure-unity-for-use-with-visual-studio-for-mac)dış betik düzenleyicisi olarak ayarlanırsa, Unity düzenleyicisinden herhangi bir betiğin açılması otomatik olarak başlatılır veya seçilen betik açık Mac için Visual Studio geçiş yapılır.
 
-alternatif olarak, Mac için Visual Studio Unity 'de **varlıklar** menüsünden **C# Project aç** ' ı seçerek kaynak düzenleyicide açık betik olmadan açılabilir.
+Alternatif olarak Mac için Visual Studio Unity'de Varlıklar menüsünden C# Project aç'ı seçerek kaynak **düzenleyicide betik** açık değilken de açılabilir. 
 
-![C# projesini aç](media/using-vsmac-tools-unity-image1.png)
+![C# projesini açma](media/using-vsmac-tools-unity-image1.png)
 
-## <a name="unity-documentation-access"></a>Unity belge erişimi
+## <a name="unity-documentation-access"></a>Unity belgelerine erişim
 
-Mac için Visual Studio Unity araçları, Unity API belgelerine erişim için bir kısayol içerir. Mac için Visual Studio unity apı belgelerine erişmek için, imleci hakkında bilgi almak istediğiniz unity apı 'sine yerleştirin ve **⌘ command + '** tuşlarına basın.
+Mac için Visual Studio Unity araçları, Unity API belgelerine erişmek için bir kısayol içerir. Mac için Visual Studio'den Unity API belgelerine erişmek için imleci öğrenmek istediğiniz Unity API'sini üzerine yerleştirerek **+ ' ⌘ tuşlarına basın.**
 
 ## <a name="intellisense-for-unity-messages"></a>Unity iletileri için IntelliSense
-Unity motoru, tek davranış betiklerine ileti yayınlar, geliştiricilerin OnMouseDown, OnTriggerEnter vb. gibi iletilere yeniden davranan kodu yazmasına izin verir. Bunlar, temel Monodavranış sınıfında sanal metotlar olmadığından, MonoDevelop gibi bazı IDE 'Ler Unity iletileri için kod tamamlama işlevselliği olmamasıdır.
+Unity altyapısı iletileri MonoBehaviour betiklerine yayınlar ve geliştiricilerin OnMouseDown, OnTriggerEnter gibi iletilere tepki veren kodlar yazmasına olanak sağlar. Bunlar temel MonoBehaviour sınıfındaki sanal yöntemler olmadığı için MonoDevelop gibi bazı IDE'ler Unity iletileri için kod tamamlama işlevine sahip değildir.
 
-ancak unity için Mac için Visual Studio araçları, ıntellisense işlevselliğini unity iletilerine genişletir. Bu, tek davranış betiklerine Unity iletilerinin uygulanmasını kolaylaştırır ve Unity API 'sini öğrenmeye yardımcı olur. Unity iletileri için IntelliSense 'i kullanmak için:
+Ancak, Mac için Visual Studio Araçları, IntelliSense işlevselliğini Unity iletilerine genişlettir. Bu, MonoBehaviour betikleri içinde Unity iletilerinin uygulanmasını kolaylaştırır ve Unity API'sini öğrenme konusunda yardımcı olur. Unity iletileri için IntelliSense kullanmak için:
 
-1. İmleci Monodavranış sınıfından türetilen bir sınıf gövdesinin içine yeni bir satıra yerleştirin.
+1. İmleci MonoBehaviour'dan türeten bir sınıfın gövdesinin içindeki yeni bir satıra yerleştirin.
 
-2. Bir Unity iletisinin adını yazmaya başlayın, örneğin `OnTriggerEnter` .
+2. Gibi bir Unity iletinin adını yazmaya `OnTriggerEnter` başlayın.
 
-3. "**Azı tipi**" harfleri yazıldıktan sonra, IntelliSense önerilerindeki bir liste görüntülenir.
+3. **"ont**" harfleri yazıldıktan sonra IntelliSense önerilerinin listesi görüntülenir.
 
    ![IntelliSense Kullanma](media/using-vsmac-tools-unity-image2.png)
 
-4. Listedeki seçim üç şekilde değiştirilebilir:
+4. Liste seçimi üç şekilde değiştirilebilir:
 
-   * **Yukarı** ve **aşağı** ok tuşlarıyla.
+   * Yukarı **ve Aşağı** **ok tuşlarıyla.**
 
-   * İstenen öğenin üzerine fareyle tıklanarak.
+   * fareyle istenen öğenin üzerine tıklayarak.
 
-   * İstenen öğenin adını yazmaya devam edin.
+   * İstenen öğenin adını yazarak.
 
-5. IntelliSense, gerekli parametreler dahil olmak üzere seçili Unity iletisini ekleyebilir:
+5. IntelliSense, gerekli parametreler de dahil olmak üzere seçili Unity iletiyi ekler:
 
-   * **Sekmesine** basarak.
+   * Sekme tuşuna **basarak.**
 
-   * **Return** tuşuna basarak.
+   * Return tuşuna **basarak.**
 
-   * Seçili öğeye çift tıklayarak.
+   * Seçilen öğeye çift tıklayarak.
 
-   ![IntelliSense 'den Unity iletisi Ekle](media/using-vsmac-tools-unity-image3.png)
+   ![IntelliSense'den Unity iletisi ekleme](media/using-vsmac-tools-unity-image3.png)
 
 ## <a name="adding-new-unity-files-and-folders"></a>Yeni Unity dosyaları ve klasörleri ekleme
 
-unity düzenleyicisinde bir unity projesine her zaman yeni dosyalar ekleyebilmeniz için Mac için Visual Studio Visual Studio içinden kolayca yeni Unity betikleri, gölgelendiriciler ve klasörler oluşturulmasına olanak sağlar.
+Unity düzenleyicisinde bir Unity projesine her zaman yeni dosyalar ekleyebiliyorsanız Mac için Visual Studio kolayca yeni Unity betikleri, gölgelendiriciler ve klasörler oluşturmanıza olanak Visual Studio.
 
-### <a name="add-a-new-c-monobehaviour-script"></a>Yeni bir C# monodavranış betiği ekleyin
+### <a name="add-a-new-c-monobehaviour-script"></a>Yeni bir C# MonoBehaviour betiği ekleme
 
-Yeni bir C# monodavranış betiği eklemek için, **varlıklar klasörüne** veya alt dizinlerinden birine sağ tıklayıp çözüm panelinde bir tane **ekleyin ve yeni > monodavranış Ekle**' yi seçin.
+Yeni bir C# MonoBehaviour betiği eklemek için, Çözüm panelinin **Assets** klasörüne veya alt dizinlerinden birine sağ tıklayın ve Yeni **MonoBehaviour'a >'yi seçin.**
 
-![Yeni Monodavranış Ekle](media/using-vsmac-tools-unity-image4.png)
+![Yeni MonoBehaviour ekleme](media/using-vsmac-tools-unity-image4.png)
 
 ### <a name="add-a-new-unity-shader"></a>Yeni bir Unity gölgelendiricisi ekleme
 
-Yeni bir Unity gölgelendiricisi eklemek için, **varlıklar klasörüne** veya çözüm panelindeki bir alt dizine sağ tıklayın ve **Yeni > gölgelendirici Ekle**' yi seçin.
+Yeni bir Unity gölgelendiricisi eklemek için, Çözüm panelinin **Assets** klasörüne veya alt dizinine sağ tıklayın ve Yeni **Gölgelendiriciye Ekle'> seçin.**
 
-### <a name="add-a-new-folder"></a>Yeni klasör ekle
+### <a name="add-a-new-folder"></a>Yeni klasör ekleme
 
-Yeni bir klasör eklemek için, **varlıklar klasörüne** veya çözüm panelindeki bir alt dizine sağ tıklayın ve **Yeni > klasör ekle**' yi seçin.
+Yeni klasör eklemek için Çözüm **panelinin Assets** klasörüne veya alt dizinine sağ tıklayın ve Yeni Klasöre **Ekle'> seçin.**
 
-bu eklemeler, Unity düzenleyicisinin Project penceresinde yansıtılır.
+Bu eklemeler Unity düzenleyicisinin Project penceresinde yansıtıldı.
 
-### <a name="to-rename-a-file-or-folder"></a>Bir dosya veya klasörü yeniden adlandırmak için
-Çözüm panelinde yeniden adlandırılacak öğeye **sağ tıklayın** ve **yeniden adlandır...** seçeneğini belirleyin.
+### <a name="to-rename-a-file-or-folder"></a>Bir dosyayı veya klasörü yeniden adlandırmak için
+**Çözüm panelinin yeniden** adlandırmak için öğeye sağ tıklayın ve Yeniden **Adlandır... öğesini seçin.**
 
 > [!NOTE]
-> komut dosyası içermeyen yeni bir Unity projeniz varsa ve varlıklar klasörü Mac için Visual Studio çözüm panelinde görünmüyorsa, Unity düzenleyicisi içinden bir ilk C# betiği ekleyin.
+> Betikleri olan yeni bir Unity projeniz varsa ve Assets klasörü Mac için Visual Studio Çözüm paneli içinde göster yoksa, Unity düzenleyicisinden bir ilk C# betiği ekleyin.
 
-## <a name="unity-debugging"></a>Unity hata ayıklaması
+## <a name="unity-debugging"></a>Unity hata ayıklama
 
-Unity projelerinin Mac için Visual Studio hata ayıklaması yapılabilir.
+Unity projelerinde hata ayıklaması Mac için Visual Studio.
 
-### <a name="start-debugging"></a>Hata ayıklamayı Başlat
+### <a name="start-debugging"></a>Hata ayıklamayı başlatma
 
 Hata ayıklamayı başlatmak için:
 
-1. **oynat** düğmesine tıklayarak Unity 'ye Visual Studio Bağlan veya **Command + Return** ya da **F5** yazın.
+1. Bağlan Visual Studio Düğmesine tıklayarak **Unity'ye** tıklayın veya Komut **+ Dönüş veya** **F5 yazın.**
 
-   ![Visual Studio içinde oynat ' ı tıklatın](media/using-vsmac-tools-unity-image5.png)
+   ![Dosyada Oynat'a Visual Studio](media/using-vsmac-tools-unity-image5.png)
 
-2. Unity 'ye geçin ve oyunu düzenleyicide çalıştırmak için **Yürüt** düğmesine tıklayın.
+2. Unity'ye geçiş ve **Oynat** düğmesine tıklayarak oyunu düzenleyicide çalıştırın.
 
-   ![Unity 'de Yürüt ' e tıklayın](media/using-vsmac-tools-unity-image6.png)
+   ![Unity'de Oynat'a tıklayın](media/using-vsmac-tools-unity-image6.png)
 
-3. oyun, Visual Studio bağlı durumdayken Unity düzenleyicisinde çalışırken, karşılaştığı herhangi bir kesme noktası oyunun yürütülmesini duraklatır ve oyunun Mac için Visual Studio kesme noktasına isabet ettiği kod satırını getirir.
+3. oyun Visual Studio'a bağlıyken Unity düzenleyicisinde çalışırken, karşılaşılan tüm kesme noktaları oyunun yürütülmesini duraklatacak ve oyunun kesme noktasıyla karşılaştığı kod hattını Mac için Visual Studio.
 
-### <a name="stop-debugging"></a>Hata ayıklamayı Durdur
+### <a name="stop-debugging"></a>Hata ayıklamayı durdurma
 
 Hata ayıklamayı durdurmak için:
 
-1. Mac için Visual Studio **durdur** düğmesine tıklayın veya **shıft + Command + Return** tuşlarına basın.
+1. Mac için Visual Studio'da Durdur düğmesine tıklayın veya **Shift + Komut + Return tuşlarına basın.** 
 
-   ![Visual Studio Durdur ' a tıklayın](media/using-vsmac-tools-unity-image7.png)
+   ![Dosyada Durdur'a Visual Studio](media/using-vsmac-tools-unity-image7.png)
 
-Mac için Visual Studio hata ayıklama hakkında daha fazla bilgi edinmek için bkz. [hata ayıklayıcıyı kullanma](debugging.md).
+Uygulama içinde hata ayıklama hakkında daha fazla Mac için Visual Studio için [bkz. Hata ayıklayıcıyı kullanma.](debugging.md)

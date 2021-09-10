@@ -1,17 +1,17 @@
 ---
 title: Projeleri ve Çözümleri Oluşturma ve Temizleme
-description: Bu makalede, Mac için Visual Studio'de proje oluşturma açık Mac için Visual Studio
+description: Bu makalede, Mac için Visual Studio'da proje oluşturma açık Mac için Visual Studio
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/19/2019
 ms.assetid: E4B6CB42-9FE2-43B9-93B7-BD4BD50518B1
 ms.topic: how-to
-ms.openlocfilehash: 89c09e685f3deab221265c312353133687026c1c69513cb1a547e7e18c3df74f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: de6be4b509eff8a013f7367614e0016f810b3657
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121381673"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964763"
 ---
 # <a name="building-and-cleaning-projects-and-solutions"></a>Projeleri ve çözümleri bina ve temizleme
 
@@ -20,7 +20,7 @@ Bir çözümde tüm projelerinizi veya bazı projelerinizi derlemeyi, yeniden de
 > [!NOTE]
 > Bu konu, Mac için Visual Studio. Bir Visual Studio hakkında Windows için [bkz. Visual Studio'de proje ve çözüm oluşturma ve temizleme.](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)
 
-## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Çözümün tamamını derlemek, yeniden derlemek veya temizlemek için
+## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Bir çözümün tamamını derlemek, yeniden derlemek veya temizlemek için
 
 1. Çözüm Penceresinde Çözüm **düğümünü seçin:**
 
@@ -30,7 +30,7 @@ Bir çözümde tüm projelerinizi veya bazı projelerinizi derlemeyi, yeniden de
 
     ![Tüm derleme menü öğesini seçme](media/compiling-and-building-image2.png)
 
-    * Proje **içindeki en son** derlemeden bu yana değişen dosyaları ve bileşenleri derlemek için Hepsini Derle'yi seçin.
+    * En **son derlemeden** bu yana değişen proje içindeki dosyaları ve bileşenleri derlemek için Hepsini Derle'yi seçin.
 
     * Çözümü **"temizlemek",** sonra da tüm proje dosyalarını ve bileşenlerini derlemek için Hepsini Yeniden Oluştur'a seçin.
 

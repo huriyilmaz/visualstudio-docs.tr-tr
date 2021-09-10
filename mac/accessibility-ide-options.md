@@ -1,17 +1,17 @@
 ---
 title: IDE erişilebilirlik seçeneklerini ayarlama
-description: Mac için Visual Studio'da erişilebilirlik seçeneklerini ayarlamaya giriş
+description: Mac için Visual Studio'de erişilebilirlik seçeneklerini ayarlamaya giriş
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 87D22340-2BE6-40EE-ACFD-3CF1BA886175
 ms.topic: how-to
-ms.openlocfilehash: 5c4674639b5cc67bec6663096ea62ca49a97c4a7712185643795014ed1bde812
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f56141cb59cc679993140e2ed2093fe1cb9d9790
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121439581"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964742"
 ---
 # <a name="set-ide-accessibility-options"></a>IDE erişilebilirlik seçeneklerini ayarlama
 
@@ -21,20 +21,20 @@ macOS'ta yerleşik özelliklere ek olarak, Mac için Visual Studio çeşitli öz
 
 1. İçeriği yeniden boyutlandırmak istediğiniz araç penceresini veya düzenleyici penceresini seçin.
 
-1. Görünüm **(menü) seçeneğini** belirleyin ve ardından **Yakınlaştır (&#8984;+) veya** Uzaklaştır **(&#8984;-) seçeneğini belirleyin.**
+1. Görünüm **(menü) seçeneğini** belirleyin ve ardından **Yakınlaştır (&#8984;+) veya** Uzaklaştırma **(&#8984;-) seçeneğini belirleyin.**
 
 > [!TIP]
 > İçeriği varsayılan boyuta sıfırlamak için Görünüm **(menü)** Normal Boyut  >  **(&#8984;0) seçeneğini belirleyin.**
 
 ## <a name="change-the-content-font-and-size"></a>İçerik yazı tipini ve boyutunu değiştirme
 
-Çoğu araç penceresinde içeriğin yazı tipini ve boyutunu tek bir araç Mac için Visual Studio. Aşağıdaki adımları uygulayın:
+Çoğu araç penceresinde içeriğin yazı tipini ve boyutunu özelleştirmek mümkün Mac için Visual Studio. Aşağıdaki adımları uygulayın:
 
 1. Visual Studio **(menü)**  >  **Tercihler... (&#8984;,)**.
 
 1. **Tercihler'de** Ortam Yazı **Tipleri'ne**  >  **gidin.**
 
-1. Metin Düzenleyici, **Genel** **Araç Penceresi Metni veya İçerikler** **Çıkış Penceresi** için yazı tipi ve boyut düğmesini seçin.
+1. Metin Düzenleyici, **Genel** **Araç Penceresi Metni veya** İçerikler **Çıkış Penceresi** için yazı tipi ve boyut düğmesini seçin.
 
 1. İstediğiniz yazı tipini, stili ve boyutu seçin ve Tamam'ı **seçin.**
 
@@ -43,7 +43,7 @@ macOS'ta yerleşik özelliklere ek olarak, Mac için Visual Studio çeşitli öz
 
 ## <a name="change-the-editor-syntax-highlighting"></a>Düzenleyici söz dizimi vurgulamayı değiştirme
 
-Bazı kullanıcılar varsayılan renk düzeninin karşıtlık veya renk gereksinimlerini karşılamaz olduğunu fark ediyor olabilir. Mac için Visual Studio, iki yüksek karşıtlık teması dahil olmak üzere kullanıcının seçe bir dizi alternatif teması vardır.
+Bazı kullanıcılar varsayılan renk düzeninin karşıtlık veya renk gereksinimlerini karşılamıyor olduğunu fark ediyor olabilir. Mac için Visual Studio, iki yüksek karşıtlık teması dahil olmak üzere kullanıcının seçe bir dizi alternatif teması vardır.
 
 1. Visual Studio **(menü)**  >  **Tercihler... (&#8984;,)**.
 

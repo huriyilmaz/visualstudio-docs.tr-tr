@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-DoWhile etkinlik Tasarımcısı
-description: Belirtilen koşul false olarak değerlendirilene kadar DoWhile etkinliğinin gövdesinde en az bir kez yer aldığı etkinliği nasıl yürüttüğünü öğrenin.
+title: İş Akışı Tasarımcısı - DoWhile Etkinlik Tasarımcısı
+description: Belirtilen bir koşul false olarak değerlendirilene kadar DoWhile etkinliğinin Gövdesinde yer alan etkinliği nasıl en az bir kez yürüttülür?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,26 +14,26 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 942552f127cebaff4c0f923118fb8be0ac9b141a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122068096"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963728"
 ---
 # <a name="dowhile-activity-designer"></a>DoWhile Etkinlik Tasarımcısı
 
-<xref:System.Activities.Statements.DoWhile>Etkinlik, <xref:System.Activities.Statements.DoWhile.Body%2A> belirtilen bir koşul **false** olarak değerlendirilene kadar en az bir kez içerilen etkinliği yürütür. Döngü gövdesinde içerilen etkinliğin sıfır veya daha fazla kez yürütülmesi gerekiyorsa, <xref:System.Activities.Statements.While> bunun yerine etkinliğini kullanın.
+Etkinlik, belirtilen koşul false olarak değerlendirilene kadar en az bir kez içinde <xref:System.Activities.Statements.DoWhile> <xref:System.Activities.Statements.DoWhile.Body%2A> yer alan etkinliği **yürütür.** Döngü gövdesinde yer alan etkinliğin sıfır veya daha fazla kez yürütülecek olması gerekirse, bunun yerine <xref:System.Activities.Statements.While> etkinliğini kullanın.
 
-## <a name="dowhile-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı Özellikler DoWhile
+## <a name="dowhile-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı'da DoWhile Özellikleri
 
-Aşağıdaki tabloda en yararlı <xref:System.Activities.Statements.DoWhile> etkinlik özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanılacağı açıklanmaktadır:
+Aşağıdaki tabloda en kullanışlı etkinlik <xref:System.Activities.Statements.DoWhile> özellikleri ve bunların tasarımcıda nasıl kullanılaları açıkmektedir:
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Statements.DoWhile.Body%2A>|Yanlış|Koşul **doğru** olduğunda yürütülecek etkinlik. Etkinliği eklemek için <xref:System.Activities.Statements.DoWhile.Body%2A> , araç kutusundan bir etkinliği **DoWhile** etkinlik Tasarımcısı ' nın "Ipucu" etkinliği buraya bırak "Ipucu metnini içeren **gövde** kutusuna bırakın.|
-|<xref:System.Activities.Statements.DoWhile.Condition%2A>|Doğru|Döngünün her yinelemesinden sonra değerlendirilecek koşul. ayarlamak için, <xref:System.Activities.Statements.DoWhile.Condition%2A> **DoWhile** etkinlik tasarımcısı ' nın **koşul** kutusuna veya özellik kılavuzunda bir Visual Basic ifadesi yazın.|
+|<xref:System.Activities.Statements.DoWhile.Body%2A>|Yanlış|Koşul doğruyken yürütülecek **etkinlik.** Etkinliği eklemek <xref:System.Activities.Statements.DoWhile.Body%2A> için araç kutusundan **DoWhile**  etkinlik tasarımcısında "Etkinliği Buraya Bırak" ipucu metniyle Gövde kutusuna bir etkinlik bırakın.|
+|<xref:System.Activities.Statements.DoWhile.Condition%2A>|Doğru|Döngü her yinelemeden sonra değerlendirilecek koşul. ayarlamak için <xref:System.Activities.Statements.DoWhile.Condition%2A> **DoWhile** Visual Basic tasarımcısının **Koşul** kutusuna veya özellik kılavuzuna bir Visual Basic ifadesi yazın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Edilirken](../workflow-designer/while-activity-designer.md)
+- [Süre](../workflow-designer/while-activity-designer.md)
 - [Denetim Flow](../workflow-designer/control-flow-activity-designers.md)

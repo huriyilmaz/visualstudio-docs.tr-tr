@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı-StateMachine etkinlik Tasarımcısı
-description: StateMachine etkinliğinin bilinen durum makine paradigmasını kullanarak bir durum koleksiyonu ve modeller iş akışlarını nasıl içerdiğini öğrenin.
+title: İş Akışı Tasarımcısı - StateMachine Etkinlik Tasarımcısı
+description: StateMachine etkinliğinin tanıdık durum makinesi paradigmasını kullanarak bir durum ve model iş akışı koleksiyonu içerdiğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,27 +15,27 @@ ms.workload:
 - multiple
 author: TerryGLee
 ms.openlocfilehash: b6982a3875bc09e95b6f33dd30010adf029b3a91
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122098989"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963732"
 ---
 # <a name="statemachine-activity-designer"></a>StateMachine Etkinlik Tasarımcısı
 
-<xref:System.Activities.Statements.StateMachine>Etkinlik, bilinen durum makinesi paradigmasını kullanan bir durumlar koleksiyonu ve iş akışları içerir.
+Etkinlik, <xref:System.Activities.Statements.StateMachine> tanıdık durum makinesi paradigmasını kullanan durum ve model iş akışlarının bir koleksiyonunu içerir.
 
-## <a name="using-the-statemachine-activity-designer"></a>StateMachine etkinlik tasarımcısını kullanma
+## <a name="using-the-statemachine-activity-designer"></a>StateMachine Etkinlik Tasarımcısını Kullanma
 
-Etkinlik eklemek için <xref:System.Activities.Statements.StateMachine> , **araç kutusunun** **durum makinesi** bölümünde **StateMachine** etkinlik tasarımcısını sürükleyin ve iş akışı Tasarımcısı yüzeyine bırakın. Bu etkinliğe bir alt durum eklemek için <xref:System.Activities.Statements.StateMachine> , <xref:System.Activities.Statements.State> <xref:System.Activities.Core.Presentation.FinalState> **araç kutusundan** bir veya sürükleyip **StateMachine** üzerine bırakın.
+Etkinlik eklemek için, Araç Kutusunun State Machine bölümünden <xref:System.Activities.Statements.StateMachine> **StateMachine**  etkinlik tasarımcısını sürükleyin ve etkinlik tasarımcısının İş Akışı Tasarımcısı  bırakın. Bu etkinlike bir alt durum eklemek için, Araç Kutusundan bir veya sürükleyin ve <xref:System.Activities.Statements.StateMachine> <xref:System.Activities.Statements.State> <xref:System.Activities.Core.Presentation.FinalState> **StateMachine üzerine bırakın.** 
 
-### <a name="statemachine-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı StateMachine etkinlik özellikleri
+### <a name="statemachine-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı'daki StateMachine Etkinlik Özellikleri
 
-Aşağıdaki tabloda, <xref:System.Activities.Statements.StateMachine> iş akışı Tasarımcısı kullanılarak ayarlanmakta olabilecek özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları tasarımcı yüzeyinde düzenlenebilir.
+Aşağıdaki tabloda iş <xref:System.Activities.Statements.StateMachine> akışı tasarımcısı kullanılarak ayarlanacak özellikler ve bunların tasarımcıda nasıl kullanıldıkları açık bulunmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları tasarımcı yüzeyinde düzenlenebilir.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Başlıktaki etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.StateMachine> . Varsayılan değer **StateMachine**' dir. Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir. , <xref:System.Activities.Activity.DisplayName%2A> İş akışı tasarımcısının üst kısmında görüntülenen içerik haritası gezintisinde kullanılır.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Üst bilgide etkinlik <xref:System.Activities.Statements.StateMachine> tasarımcısının kolay adını belirtir. Varsayılan değer **StateMachine'dır.** Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir. <xref:System.Activities.Activity.DisplayName%2A>, iş akışı tasarımcısının üst kısmında görüntülenen içerik harita gezintisinde kullanılır.<br /><br /> kesinlikle <xref:System.Activities.Activity.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

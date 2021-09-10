@@ -8,11 +8,11 @@ ms.date: 05/18/2021
 ms.topic: conceptual
 description: Yönetim portalında dil, kişiler, abonelik düzeyi ve diğer kullanıcılara yönelik tercihleri ayarlama hakkında bilgi edinin
 ms.openlocfilehash: 348febd6b964feec54053cff4a3d50cc02eba3d0
-ms.sourcegitcommit: 162be102d2c22a1c4ad2c447685abd28e0e85d15
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110018551"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966249"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-admin-portal"></a>Yönetici portalında anlaşmalarda tercihleri ayarlama
 Süper Yöneticiler yönetim portalında (Yönetim Portalı) her anlaşma için global olarak uygulanacak belirli tercihleri ayarlayabilir.  Bu tercihler, aboneler eklendiğinde yönetici için abonelik ayrıntılarını otomatik olarak doldurur ve yalnızca süper yöneticiler tarafından genel olarak değiştirilebilir.  
@@ -56,24 +56,24 @@ Varsayılan bir iletişim dili ve yerel ayar ayarlamak, abonelikleri atama süre
 Bu tercih, yöneticilerin kuruluşunuzun kiracı/Dizin dışından abone ekleyip ekleyemeyeceğine karar vermenize olanak tanır.  Bunu kapatırsanız, dış abonelere izin verilmez.  Bunu etkinleştirirseniz ve bir yöneticinin dış abone ekleme denemeleri varsa, bu kullanıcıların kendi seçimini onaylamasını istenir ve aboneliği atamasına izin verilir. Yöneticiler bu ayarı geçersiz kılamaz. 
 
 ### <a name="default-downloads-setting"></a>Varsayılan indirmeler ayarı
-Varsayılan olarak etkin olan bu ayarın etkinleştirilmesi, yöneticiler yeni abonelikler oluşturdukları zaman abonelerin indirmelere erişmesini sağlar.  Yöneticiler, indirmeleri tek tek abonelik temelinde devre dışı bırakabilirsiniz.  İndirmelere erişimi devre dışı bırakmak ürün anahtarlarına erişimi de devre dışı bıraktır.  
+Varsayılan olarak açık olan bu ayarın etkinleştirilmesi, yöneticilerin yeni abonelikler oluştururken indirmelere erişmesini sağlayacaktır.  Yöneticiler, ayrı bir abonelik temelinde İndirmeleri hala devre dışı bırakabilir.  İndirmelere erişimin devre dışı bırakılması, ürün anahtarlarına erişimi de devre dışı bırakır.  
 
-### <a name="overallocation-notification"></a>Fazla konum bildirimi 
-Sözleşmenize yapılan atamalar fazla yüklenmiş olduğunda e-posta almayı kabul edin. Bu e-posta bildirimi kişi e-posta adresine veya İletişim [e-posta](admin-preferences.md#contact-email-address)adresi yoksa sözleşmenizin tüm yöneticilerine gönderilir. Size bildirilecek eşiği yapılandırmak için açılan menüyü kullanın. 
+### <a name="overallocation-notification"></a>Fazla yükleme bildirimi 
+Anlaşmanızda atamalar fazla yüklenmiş hale geldiğinde bir e-posta almak için kabul edin. İletişim e-posta adresi yoksa, bu e-posta bildirimi [iletişim e-posta adresine](admin-preferences.md#contact-email-address)veya anlaşmanızda bulunan tüm yöneticilere gönderilir. Bildirim almak istediğiniz eşiği yapılandırmak için açılan menüyü kullanın. 
 
  
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-### <a name="q--can-i-disable-the-contact-email-address-so-subscribers-cannot-contact-admins"></a>S: Abonelerin yöneticilerle iletişim **kuramalarını etkinleştirmek için Kişi** e-posta adresini devre dışı bırakamaz musunuz?
-A: Hayır- Bir güvenlik grubu, grup e-posta diğer adı veya tek bir e-posta adresi kullanılarak hangi yöneticilerle iletişim kurılacaklarını belirleyeseniz de özellik devre dışı bırakılamaz.
+### <a name="q--can-i-disable-the-contact-email-address-so-subscribers-cannot-contact-admins"></a>S: abonelerin yöneticilerle iletişim kurabilmesi için **iletişim e-posta adresini** devre dışı bırakabilir miyim?
+Y: Hayır-bir güvenlik grubu, Grup e-posta diğer adı veya tek bir e-posta adresi kullanarak hangi yöneticilere bağlantı kurulabildiğini belirleyebilmeniz için özellik devre dışı bırakılamaz.
 
-### <a name="q-if-i-answer-a-subscribers-email-will-they-have-my-email-address"></a>S: Abonenin e-postasına yanıt ve ardından e-posta adresimi alır musunuz?
-A: Yanıtınız, kullanmakta olduğunuz e-posta istemcilerinden gelecektir. Abonenin aldığı yanıt, kullanmakta olduğunuz e-posta adresini gösterir.  Bu nedenle, bir grup diğer adıyla yanıt veriyorsanız grup diğer adını görebilirler.  Kendi e-posta adresinizden yanıt verirsiniz, bunu görebilirler.  
+### <a name="q-if-i-answer-a-subscribers-email-will-they-have-my-email-address"></a>S: bir abonenin e-postasını yanıtlıyorum, e-posta adresim olur mu?
+Y: yanıtınız, kullanmakta olduğunuz herhangi bir e-posta istemcisinden geldiği için, abonenin aldığı yanıt, kullandığınız e-posta adresini gösterir.  Bu nedenle, bir grup diğer adından yanıt verirseniz, grup diğer adını görürler.  Kendi e-posta adresinizden yanıt verirseniz, bunu görür.  
 
-### <a name="q-where-can-i-find-out-more-about-the-contact-my-admin-feature-in-the-subscriber-portal"></a>S: Abone portalında Yöneticime **Başvur özelliği hakkında daha** fazla bilgi nereden edinebilirsiniz?
-C: Yöneticime başvur [makalemize göz](contact-my-admin.md) atabilirsiniz. 
+### <a name="q-where-can-i-find-out-more-about-the-contact-my-admin-feature-in-the-subscriber-portal"></a>S: abone portalında **yöneticime başvur** özelliği hakkında daha fazla bilgi bulabilirim?
+A: [Yöneticimde Iletişim kurun](contact-my-admin.md) makalemize göz atın. 
 
-### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>S: Kişi e-posta adresini tamamlamazsanız **ve** abone Yöneticime Başvur özelliğini **kullanırsa,** isteğini kim alır?
-A: İlgili kişinin e-posta adresi tercihi içinde belirli bir **e-posta** adresi ayarlanmayacaksa, sözleşmede yer alan tüm yöneticiler isteği alır. 
+### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>S: **iletişim e-posta adresini** tamamlamadığımızda bir abone, kendi Isteklerini alan **yönetici ile iletişim kurun özelliğimi** kullanıyor mu?
+Y: **ilgili e-posta adresi** tercihine belirli bir e-posta adresi ayarlanmamışsa, anlaşmada tüm yöneticiler isteği alır. 
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio yönetim ve abonelik desteği](https://aka.ms/vsadminhelp)

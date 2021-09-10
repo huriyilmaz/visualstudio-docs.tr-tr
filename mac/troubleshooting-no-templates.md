@@ -6,12 +6,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/02/2019
 ms.assetid: 297D9094-B40F-4C1A-BF19-B14CB735003A
-ms.openlocfilehash: b9b26d2f6f234cacca4cdbb8976153a0b569e21fbda9d8a61968e83725b8398f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cb6f9e3a41236d10b0558a508c2531b08ec7fe13
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121421635"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964835"
 ---
 # <a name="troubleshooting-why-can-i-not-see-all-available-templates"></a>Sorun giderme: Neden kullanılabilir şablonların hepsini göremiyorum?
 

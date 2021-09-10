@@ -6,57 +6,57 @@ manager: cabuschl
 ms.assetid: 86f2856c-8adf-4085-9962-f4136679e5ed
 ms.date: 02/19/2021
 ms.topic: conceptual
-description: Azure DevOps ve Azure için kullanmak üzere Visual Studio aboneliğiniz için alternatif bir kimlik ekleme
-ms.openlocfilehash: ef182fa299f79be7883f8d369cc717c96dcb36ce2cfb601b992fdb8fe919567c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+description: Visual Studio aboneliğiniz için Azure DevOps kimlik ekleme
+ms.openlocfilehash: 4d00e6808a71522f95d8580056556f5a502ecbde
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392895"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966309"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Visual Studio aboneleri için kimlikler
-Visual Studio aboneliğinizi etkinleştirdiğinizde, etkinleştirme sırasında kullandığınız kimliği (veya oturum açma) Visual Studio abonelikle bağlantılandırtık. bu şekilde, sizi [Visual Studio abone portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs), Azure DevOps ve Azure 'da tanıyabiliriz.
+Visual Studio aboneliğinizi Visual Studio etkinleştirme sırasında kullanılan kimliği (veya oturum açma bilgilerini) Visual Studio sağlarız. Bu şekilde, azure'da, [Visual Studio portalında,](https://my.visualstudio.com?wt.mc_id=o~msft~docs)Azure DevOps sizi tanıyabilirsiniz.
 
-Azure DevOps, her oturum açışınızda Visual Studio abonelik durumunuzu denetliyoruz ve bir üye olduğunuz her kuruluş içinde size otomatik olarak özellikler verirsiniz.
-bu özellikler bir abone avantajı olarak eklendiğinden, Visual Studio aboneliğinize bağlı bir kimlik kullandığınızda sizi herhangi bir Azure DevOps kuruluşunda üye olarak eklemek ücretsizdir.
+Bu Azure DevOps her oturum Visual Studio aboneliğinizin durumunu kontrol eder ve size üye olduğunuz her kuruluşta otomatik olarak özellikler sağlarsınız.
+Bu özellikler abone avantajı olarak dahil olduğundan, abonelik aboneliğinize bağlı bir kimlik kullanırken sizi herhangi bir Azure DevOps kuruluşunda üye olarak Visual Studio edebilirsiniz.
 
-azure 'da, abone avantajı olan [aylık Azure devtest kredilerinizi](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) etkinleştirdiğinizde Visual Studio abonelik durumunuzu denetliyoruz.
+Azure'da, abone Visual Studio olan aylık [Azure DevTest](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) bireysel kredinizi etkinleştirebilirsiniz.
 
-[Visual Studio abone portalı](https://my.visualstudio.com?wt.mc_id=o~msft~docs)içinde, etkinleştirme sırasında kullandığınız kimliğe ek olarak alternatif bir **kimlik** ekleyebilirsiniz. Aboneliğinizi etkinleştirmek için bir Microsoft hesabı kullandıysanız alternatif bir kimlik eklemenize izin veriyoruz. bu şekilde, hem kişisel hesabınızı hem de iş veya okul hesabınızı kullanarak Azure DevOps erişmenize izin veren bir iş veya okul hesabı (Visual Studio, Microsoft 365 veya şirket veya okul ağınıza oturum açarken kullandığınız) ekleyebilirsiniz.
+Bu [Visual Studio portalında,](https://my.visualstudio.com?wt.mc_id=o~msft~docs)etkinleştirme sırasında kullanılan kimliğe  ek olarak alternatif bir kimlik ekleyebilirsiniz. Aboneliğinizi etkinleştirmek için bir Microsoft hesabı kimlik eklemenize olanak sağlar. Bu şekilde bir iş veya okul hesabı da ekleyebilir (Visual Studio, Microsoft 365 veya şirket ya da okul ağınıza oturum asanız) hem kişisel hesabınızla hem de iş ya da okul hesabınızla Azure DevOps'a erişmenize olanak sağlarsınız.
 
-## <a name="add-an-alternate-account-to-your-subscription"></a>Aboneliğinize alternatif bir hesap ekleyin
-Visual Studio aboneliğinize alternatif bir hesap eklemek, Azure DevOps ve Azure gibi belirli abonelik avantajlarına erişmenize veya Visual Studio ıde 'de aboneliğin atandığı farklı bir kimlikle oturum açmanıza olanak tanır. geçmişte, bu işlev yalnızca Visual Studio (VS) aboneliğiniz bir Microsoft hesabına (MSA) atanmışsa kullanılabilir. Azure Active Directory (Azure AD) içinde iş veya okul hesapları için bu işlevselliği genişlettik.
+## <a name="add-an-alternate-account-to-your-subscription"></a>Aboneliğinize alternatif bir hesap ekleme
+Visual Studio aboneliğinize alternatif bir hesap eklemek, Azure DevOps ve Azure gibi belirli abonelik avantajlarına erişmenizi veya Visual Studio IDE'de aboneliğin atandığı kimlikten farklı bir kimlikle oturum açmanızı sağlar. Geçmişte bu işlev yalnızca Visual Studio (VS) aboneliğiniz bir Microsoft Hesabına (MSA) atanmışsa kullanılabilirdi. Azure AD'de iş veya okul hesapları için bu Azure Active Directory genişletildi.
 
 > [!NOTE]
-> alternatif kimlik yalnızca Azure kredilerini etkinleştirmek ve Azure DevOps ve Visual Studio ıde 'de oturum açmak için bu ikinci kimliği kullanmanıza izin verir.  Bu, konumundaki abonelik portalında oturum açmak için kullanılamaz <https://my.visualstudio.com> .  Hala portalda oturum açmak için aboneliğin atandığı KIMLIĞI kullanmanız gerekir. 
+> Alternatif kimlik yalnızca bu ikinci kimliği kullanarak Azure kredilerini ve Azure DevOps etkinleştirmenizi ve IDE'de oturum Visual Studio sağlar.  üzerinden abonelik portalında oturum açma için <https://my.visualstudio.com> kullanılamaz.  Yine de aboneliğin atandığı kimliği kullanarak portalda oturum açmanız gerekir. 
 
-tüm abonelikler için bir "iş veya okul hesabı" ekleyebilirsiniz. bu sayede, bu hesabı oturum açma gerektiren avantajlarınızla (VS ıde, Azure DevOps ve Azure) kullanabilirsiniz.
+Tüm abonelikler için bir "iş veya okul hesabı" ekleyebilir, böylece bu hesabı oturum açma gerektiren avantajlarınız (VS IDE, Azure DevOps ve Azure) ile kullanabilirsiniz.
 
-### <a name="add-the-alternate-account"></a>Alternatif hesabı ekleyin
-1. Visual Studio abone portalında Microsoft hesabı ile oturum açın ( https://my.visualstudio.com) .
-2. **Abonelikler** sekmesini seçin.
-3. **Alternatif hesap ekle**' yi seçin.
-4. İş veya okul hesabınızı ekleyin.
+### <a name="add-the-alternate-account"></a>Alternatif hesabı ekleme
+1. Microsoft hesabı () ile Visual Studio portalında oturum https://my.visualstudio.com) açın.
+2. Abonelikler **sekmesini** seçin.
+3. Alternatif **hesap ekle'yi seçin.**
+4. İş veya okul hesabı ekleyin.
     > [!div class="mx-imgBorder"]
-    > ![İş veya okul hesabı ekle](_img/vs-alternate-identity/enter-alternate-account-my-visual-studio-com-portal.png "Aboneliğinize alternatif bir hesap olarak iş veya okul hesabı ekleme.")
+    > ![İş veya okul hesabı ekleme](_img/vs-alternate-identity/enter-alternate-account-my-visual-studio-com-portal.png "Aboneliğinize alternatif hesap olarak bir iş veya okul hesabı ekleme.")
 
-5. Azure DevOps oturum açmak için iş veya okul hesabınızı kullanın (https://{youraccount}. visualstudio. com).
+5. Azure DevOps'de (https://{hesabınız}.visualstudio.com) oturum açması için iş veya okul visualstudio.com.
 
-alternatif hesabınız Visual Studio aboneliğine eklenerek, her iki kimliğin da diğer hesap (ıde, Azure DevOps ve Azure) ile oturum açmanızı gerektiren aboneliğin avantajlarından yararlanmasına olanak tanır.
+Alternatif hesabınız Visual Studio aboneliğine eklenir ve her iki kimliğin de alternatif hesapla (IDE, Azure DevOps ve Azure) oturum açmanızı gerektiren aboneliğin avantajlarından yararlanmasına olanak sağlar.
 
 ## <a name="faq"></a>SSS
 
-### <a name="q--why-doesnt-azure-devops-recognize-me-as-a-visual-studio-subscriber"></a>s: neden Azure DevOps beni Visual Studio abonesi olarak tanımıyor?
+### <a name="q--why-doesnt-azure-devops-recognize-me-as-a-visual-studio-subscriber"></a>S: Neden Azure DevOps abone olarak Visual Studio tanımıyor?
 
-y: birincil veya alternatif kimliğinizi kullanarak oturum açtığınızda Azure DevOps aboneliğinizi otomatik olarak tanıyabilmelidir. Tanımıyorsa birkaç şey deneyebilirsiniz:
+A: Azure DevOps veya alternatif kimliğinizi kullanarak oturum asanız aboneliğinizi otomatik olarak tanımanız gerekir. Tanımıyorsa birkaç şey deneyebilirsiniz:
 
-* avantaj olarak [Azure DevOps](vs-azure-devops.md#eligibility) içeren etkin bir Visual Studio aboneliğine sahip olup olmadığınızı kontrol edin.
+* Avantaj olarak Visual Studio aboneliğinizin [olup](vs-azure-devops.md#eligibility) Azure DevOps olun.
 
-* Visual Studio aboneliğiniz için birincil ya da alternatif kimlik olan bir oturum açma/kimlik kullandığınızı onaylayın.
+* Abonelik aboneliğiniz için birincil veya alternatif kimlik olan bir oturum açma/kimlik Visual Studio onaylayın.
 
-* Azure DevOps oturum açmadan önce [Visual Studio abone portalını](https://my.visualstudio.com?wt.mc_id=o~msft~docs) en az bir kez ziyaret edin.
+* Visual Studio [oturum açmadan](https://my.visualstudio.com?wt.mc_id=o~msft~docs) önce en az bir kez Azure DevOps.
 
-aboneliğinizi hala tanımıyorsa, [Azure DevOps desteğe](https://azure.microsoft.com/support/devops/)başvurun. Azure DevOps
+Aboneliğinizi Azure DevOps hala tanımıyorsa destek için Azure DevOps [başvurun.](https://azure.microsoft.com/support/devops/)
 
 ## <a name="resources"></a>Kaynaklar
 [Visual Studio abonelik desteği](https://aka.ms/vssubscriberhelp)
@@ -68,7 +68,7 @@ aboneliğinizi hala tanımıyorsa, [Azure DevOps desteğe](https://azure.microso
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar 
-Azure 'u Azure DevOps veya Visual Studio ıde 'yi kullanma hakkında daha fazla bilgi için şu kaynaklara göz atın:
+Azure, IDE veya IDE Azure DevOps Visual Studio daha fazla bilgi için şu kaynaklara göz atabilirsiniz:
 - [Azure](vs-azure.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Visual Studio](vs-ide-benefit.md)

@@ -102,7 +102,7 @@ sections:
             html: <p>Sorunları araştırmak için uygulamanızı hata ayıklayıcısında çalıştırın.</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-            title: Hata ayıklama
+            title: Hata Ayıklama
           - href: version-control.md
             html: '<p>Azure DevOps, Git veya Subversion kaynak depolarına erişin.</p>'
             image:

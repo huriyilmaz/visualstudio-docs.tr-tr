@@ -4,18 +4,18 @@ description: Mac için Visual Studio'de IntelliSense kullanma hakkında Mac içi
 author: cobey
 ms.author: cobey
 ms.date: 08/16/2019
-ms.openlocfilehash: d1499c270f8153279d93a8f3a3bfc039949c5c5836c697cc7429703295a518d0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 07ef1d6292e4ac88ca616d0f35e3fd831cacc649
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121422947"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964799"
 ---
 # <a name="intellisense"></a>IntelliSense
 
 IntelliSense, kod yazma ve düzenleme deneyimini geliştirmeye yardımcı olan çeşitli özellikler sağlar. Örneğin, Kod tamamlamaya ek olarak IntelliSense altyapısı üye listeleri, parametre bilgileri ve hızlı bilgiler de sağlar.
 
-Bu Mac için Visual Studio IntelliSense, temel düzenleyici hizmeti tarafından sağlanır ve C#, XAML, F#, JavaScript gibi birçok dilde de sağlanır. Mac için Visual Studio, projeye henüz aktarılmış kitaplıklardan tamamlamaları gösterme gibi gelişmiş IntelliSense özelliklerine de sahiptir.
+Bu Mac için Visual Studio IntelliSense, temel düzenleyici hizmeti tarafından sağlanır ve C#, XAML, F#, JavaScript ve daha birçok dilde de sağlanır. Mac için Visual Studio henüz projeye aktarılmış kitaplıklardan tamamlamaları gösterme gibi gelişmiş IntelliSense özelliklerine de sahiptir.
 
 ## <a name="code-completion"></a>Kod Tamamlama
 

@@ -1,6 +1,6 @@
 ---
 title: .NET Türüne Gözat ve Seç iletişim kutusu
-description: Bir .NET TürüNe Gözat ve Seç iletişim kutusunu kullanarak bir derleme ve proje için derlemelerin ve projelerin ağaç görünümünden bir tür seçmeyi İş Akışı Tasarımcısı.
+description: Bir .NET TürüNe Gözat ve Seç iletişim kutusunu kullanarak derlemeler ve projeler için bir ağaç görünümünden tür seçme hakkında İş Akışı Tasarımcısı.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,11 +15,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - dotnet
 ms.openlocfilehash: b0258a69738f340ca8a2a58d1c3b900171625e5d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122068137"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963696"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET Türüne Gözat ve Seç İletişim Kutusu
 
@@ -60,7 +60,7 @@ Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli kullanıcı
 
 Tür tarayıcısında görüntülenen türler, tür tarayıcısının nasıl başlatıldıklarına bağlı olarak değişebilir. Tür tarayıcısı **vs2010** içindeki bir iş akışı projesinden başlatıldı ise, varsayılan olarak başvurulan derlemelerde ve başvurulan projelerde tüm türler gösterilir. Tür tarayıcısı **vs2010** proje sisteminin dışından (yeniden barındırılan bir iş akışı uygulamasında veya tek başına bir iş akışı dosyasında olduğu gibi) başlatıldı ise, varsayılan olarak AppDomain'de yüklenen tüm derlemelerin türleri gösterilir.
 
-Tür tarayıcısında türler etkinlik tasarımcısı geliştiricileri tarafından filtrelenmiş olabilir. Belirli bir etkinlik için türlerin yalnızca bir alt kümesini görebilir. Örneğin, <xref:System.Activities.Statements.TryCatch> etkinlikte tür tarayıcısında yalnızca <xref:System.Exception> tür türlerinden türetilen türler gösterilir.
+Tür tarayıcısında türler etkinlik tasarımcısı geliştiricileri tarafından filtrelenmiş olabilir. Belirli bir etkinlik için türlerin yalnızca bir alt kümesini görebilir. Örneğin, <xref:System.Activities.Statements.TryCatch> etkinlikte, tür tarayıcısında yalnızca <xref:System.Exception> türetilen türler gösterilir.
 
 ## <a name="filtering-search-results-in-the-type-browser"></a>Tür Tarayıcısında Arama Sonuçlarını Filtreleme
 
@@ -68,9 +68,9 @@ Bir eşleşmeyi bulmak için **daha fazla karakter** yazdıkça Tür Adı kutusu
 
 Örnek:
 
-1. Yazma **işlemi** eşleni, <xref:System.OperationCanceledException> ancak ile <xref:System.InvalidOperationException> eşleşmez. eşleşmesi <xref:System.InvalidOperationException> için System.I veya Invalid yazmaya başlayın.
+1. Yazma **işlemi** <xref:System.OperationCanceledException> eşleni ancak ile <xref:System.InvalidOperationException> eşleşmez. eşleşmesi <xref:System.InvalidOperationException> için System.I veya Invalid yazmaya başlayın.
 
-2. Genel **eşleşmeler** <xref:System.GenericUriParser> yazarak ad alanına tür <xref:System.Collections.Generic> yazmazsınız. Ad alanı içinde türleri <xref:System.Collections.Generic> aramak için ad alanının tam adını yazın.
+2. Genel **eşleşmeler** yazın <xref:System.GenericUriParser> ancak ad alanına <xref:System.Collections.Generic> türler yazın. Ad alanı içinde türleri <xref:System.Collections.Generic> aramak için ad alanının tam adını yazın.
 
 ## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>Tür tarayıcısı iletişim kutusunu kullanarak hizmet sözleşmesini seçme
 

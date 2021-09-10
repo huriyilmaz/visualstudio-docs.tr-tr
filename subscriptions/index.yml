@@ -1,118 +1,112 @@
 ### YamlMime:Hub
 title: Visual Studio belgeleri
-summary: Visual Studio aboneliklerinin sunduğu avantajlar, geliştirme ve test ihtiyaçlarınıza yönelik geliştirici araçlarına, bulut hizmetlerine, yazılıma, eğitimlere ve desteğe erişimi içerir.
+summary: 'Visual Studio aboneliklerinin sunduğu avantajlar, geliştirme ve test ihtiyaçlarınıza yönelik geliştirici araçlarına, bulut hizmetlerine, yazılıma, eğitimlere ve desteğe erişimi içerir.'
 brand: visual-studio
 metadata:
   title: Visual Studio Abonelikleri
-  description: Visual Studio abonelikleri, Windows, iOS, Android ve Linux gibi tercih ettiğiniz platform ve cihazlarda harika uygulamalar oluşturmanız, dağıtmanız ve uygulamalarınızı yönetmeniz için sunulan kapsamlı bir kaynak kümesidir. Aboneliklerin sunduğu avantajlar, geliştirme ve test ihtiyaçlarınıza yönelik geliştirici araçlarına, bulut hizmetlerine, yazılıma, eğitimlere ve desteğe erişimi içerir.
+  description: 'Visual Studio abonelikleri, Windows, iOS, Android ve Linux gibi tercih ettiğiniz platform ve cihazlarda harika uygulamalar oluşturmanız, dağıtmanız ve uygulamalarınızı yönetmeniz için sunulan kapsamlı bir kaynak kümesidir. Aboneliklerin sunduğu avantajlar, geliştirme ve test ihtiyaçlarınıza yönelik geliştirici araçlarına, bulut hizmetlerine, yazılıma, eğitimlere ve desteğe erişimi içerir.'
   ms.topic: hub-page
   author: evanwindom
   ms.author: lank
   manager: lank
   ms.date: 10/09/2020
-  ms.openlocfilehash: 6b62a37b7e8b8bf81c29950d040e597e707c48d0
-  ms.sourcegitcommit: 8efe6b45d65f9db23f5575c15155fe363fa12cdb
-  ms.translationtype: HT
-  ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92750089"
 highlightedContent:
   items:
-  - title: Visual Studio Aboneliklerindeki yenilikler
-    itemType: whats-new
-    url: ~/whats-new-in-subscriptions.md
-  - title: Abone portalını kullanma
-    itemType: how-to-guide
-    url: ~/using-the-subscriber-portal.md
-  - title: Yönetici portalını kullanma
-    itemType: how-to-guide
-    url: ~/using-admin-portal.md
+    - title: Visual Studio Aboneliklerindeki yenilikler
+      itemType: whats-new
+      url: ~/whats-new-in-subscriptions.md
+    - title: Abone portalını kullanma
+      itemType: how-to-guide
+      url: ~/using-the-subscriber-portal.md
+    - title: Yönetici portalını kullanma
+      itemType: how-to-guide
+      url: ~/using-admin-portal.md
 conceptualContent:
   title: başlarken
   items:
-  - title: Avantajları kullanma
-    links:
-    - text: Azure kredisi
-      url: ~/vs-azure.md
-      itemType: get-started
-    - text: Yazılım indirmeleri
-      url: ~/software-download-list.md
-      itemType: get-started
-    footerLink:
-      url: ~/vs-azure.md
-      text: Daha fazla göster
-  - title: Popüler kaynaklar
-    links:
-    - text: Seçenekleri ve fiyatlandırmayı karşılaştırın
-      url: https://visualstudio.microsoft.com/vs/pricing
-      itemType: overview
-    - text: Visual Studio Yönetim ve Abonelik desteği
-      url: https://visualstudio.microsoft.com/support/support-overview-vs
-      itemType: overview
-  - title: Abonelikler portalı erişimi
-    links:
-    - text: Aboneler
-      url: https://my.visualstudio.com/
-      itemType: get-started
-    - text: Yöneticiler
-      url: https://manage.visualstudio.com/
-      itemType: get-started
+    - title: Avantajları kullanma
+      links:
+        - text: Azure kredisi
+          url: ~/vs-azure.md
+          itemType: get-started
+        - text: Yazılım indirmeleri
+          url: ~/software-download-list.md
+          itemType: get-started
+      footerLink:
+        url: ~/vs-azure.md
+        text: Daha fazla göster
+    - title: Popüler kaynaklar
+      links:
+        - text: Seçenekleri ve fiyatlandırmayı karşılaştırın
+          url: 'https://visualstudio.microsoft.com/vs/pricing'
+          itemType: overview
+        - text: Visual Studio Yönetim ve Abonelik desteği
+          url: 'https://visualstudio.microsoft.com/support/support-overview-vs'
+          itemType: overview
+    - title: Abonelikler portalı erişimi
+      links:
+        - text: Aboneler
+          url: 'https://my.visualstudio.com/'
+          itemType: get-started
+        - text: Yöneticiler
+          url: 'https://manage.visualstudio.com/'
+          itemType: get-started
 tools:
   title: Kullanılabilir olan ürünler
-  summary: Bunlar, Visual Studio Abonelikleri aracılığıyla sunulan ürünlerin bazılarıdır
+  summary: 'Bunlar, Visual Studio Abonelikleri aracılığıyla sunulan ürünlerin bazılarıdır'
   items:
-  - title: Azure
-    imageSrc: https://docs.microsoft.com/media/logos/logo_azure.svg
-    url: /azure/
-  - title: Visual Studio IDE
-    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-ide.svg
-    url: /visualstudio/windows/
-  - title: Azure DevOps Services
-    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-team-services.svg
-    url: /azure/devops/
-  - title: GitHub Enterprise
-    imageSrc: ../subscriptions/_img/index-page/GitHub-Mark.svg
-    url: ~/access-github.md
-  - title: Mac için Visual Studio
-    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-mac.svg
-    url: /visualstudio/mac/
-  - title: Visual Studio App Center
-    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-mobile-center.svg
-    url: /appcenter/
+    - title: Azure
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_azure.svg'
+      url: /azure/
+    - title: Visual Studio IDE
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_vs-ide.svg'
+      url: /visualstudio/windows/
+    - title: Azure DevOps Services
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_vs-team-services.svg'
+      url: /azure/devops/
+    - title: GitHub Enterprise
+      imageSrc: ../subscriptions/_img/index-page/GitHub-Mark.svg
+      url: ~/access-github.md
+    - title: Mac için Visual Studio
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_vs-mac.svg'
+      url: /visualstudio/mac/
+    - title: Visual Studio App Center
+      imageSrc: 'https://docs.microsoft.com/media/logos/logo_vs-mobile-center.svg'
+      url: /appcenter/
 additionalContent:
   sections:
-  - title: Avantaj ayrıntıları
-    summary: Aboneliğiniz bu avantajları içerebilir
-    items:
-    - title: Geliştirici araçları
-      links:
-      - text: Visual Studio
-        url: ~/vs-ide-benefit.md
-        note: (Mac için Visual Studio dahil)
-    - title: Bulut hizmetleri
-      links:
-      - text: Azure Geliştirme ve Test
-        url: ~/vs-azure-payg.md
-      - text: Visual Studio App Center
-        url: ~/vs-visual-studio-app-center.md
-      - text: Azure DevOps Server ve CAL
-        url: ~/vs-vsts.md
-      - text: Microsoft 365 Geliştirici Aboneliği
-        url: ~/vs-office-dev.md
-      - text: Windows Geliştirici Hesabı
-        url: ~/vs-windows-dev.md
-    - title: Eğitim ve Destek
-      links:
-      - text: LinkedIn Premium
-        url: ~/vs-linkedin-learning.md
-        note: (iş, teknoloji ve yaratıcı)
-      - text: Pluralsight
-        url: ~/vs-pluralsight.md
-        note: (bulut, tasarım, mobil ve veri)
-      - text: Data Camp
-        url: ~/vs-datacamp.md
-        note: (Veri bilimi ve yapay zeka)
-      - text: Microsoft Profesyonel Teknik Destek olayları
-        url: ~/vs-tech-support.md
-      - text: Azure Topluluğu
-        url: ~/vs-azure-community.md
+    - title: Avantaj ayrıntıları
+      summary: Aboneliğiniz bu avantajları içerebilir
+      items:
+        - title: Geliştirici araçları
+          links:
+            - text: Visual Studio
+              url: ~/vs-ide-benefit.md
+              note: (including Visual Studio for Mac)
+        - title: Bulut hizmetleri
+          links:
+            - text: Azure Geliştirme ve Test
+              url: ~/vs-azure-payg.md
+            - text: Visual Studio App Center
+              url: ~/vs-visual-studio-app-center.md
+            - text: Azure DevOps Server ve CAL
+              url: ~/vs-vsts.md
+            - text: Microsoft 365 Geliştirici Aboneliği
+              url: ~/vs-office-dev.md
+            - text: Windows Geliştirici Hesabı
+              url: ~/vs-windows-dev.md
+        - title: Eğitim ve Destek
+          links:
+            - text: LinkedIn Premium
+              url: ~/vs-linkedin-learning.md
+              note: '(business, tech, and creative)'
+            - text: Pluralsight
+              url: ~/vs-pluralsight.md
+              note: '(cloud, design, mobile and data)'
+            - text: Data Camp
+              url: ~/vs-datacamp.md
+              note: (data science and AI)
+            - text: Microsoft Profesyonel Teknik Destek olayları
+              url: ~/vs-tech-support.md
+            - text: Azure Topluluğu
+              url: ~/vs-azure-community.md

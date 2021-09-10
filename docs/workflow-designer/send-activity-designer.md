@@ -1,6 +1,6 @@
 ---
 title: İş Akışı Tasarımcısı - Etkinlik Tasarımcısı Gönder
-description: Gönderme etkinliği hakkında bilgi ve Send etkinliği oluşturmak ve yapılandırmak için Etkinlik gönder tasarımcısını nasıl kullanabileceğinizi öğrenin.
+description: Gönder etkinliği hakkında bilgi ve Send etkinliği oluşturmak ve yapılandırmak için Etkinlik gönder tasarımcısını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,11 +14,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 1574d6b48e904288cde5ea66be6350430b81bc44
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122114530"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963704"
 ---
 # <a name="send-activity-designer"></a>Send Etkinlik Tasarımcısı
 
@@ -30,7 +30,7 @@ Etkinlik **oluşturmak** ve yapılandırmak için Etkinlik gönder tasarımcıs�
 
 ### <a name="using-the-send-activity-designer"></a>Etkinlik Tasarımcısı gönder'i kullanma
 
-Araç **Kutusunun Mesajlaşma** **kategorisindeKimlik gönder** etkinliği **tasarımcısına erişin.** Etkinlik **gönder** tasarımcısı Araç Kutusundan **sürüklenip** etkinlik yerleştirildikten sonra İş Akışı Tasarımcısı yüzeyine bırakılır. Bu, varsayılan <xref:System.ServiceModel.Activities.Send> Send değerine sahip bir <xref:System.Activities.Activity.DisplayName%2A> etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, Etkinlik gönder tasarımcısının üst  bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
+Araç **Kutusunun Mesajlaşma** **kategorisindeKimlik gönder** etkinliği **tasarımcısına erişin.** Etkinlik **gönder** tasarımcısı Araç Kutusundan **sürüklenip** etkinlikler genellikle yerleştirildikten sonra İş Akışı Tasarımcısı yüzeyine bırakılır. Bu, varsayılan <xref:System.ServiceModel.Activities.Send> Send değerine sahip bir <xref:System.Activities.Activity.DisplayName%2A> etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, Etkinlik gönder tasarımcısının üst  bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
 
 Bir etkinlik oluşturmak ve seçilen etkinlike bağlamak için, Etkinlik gönder tasarımcısına sağ tıklayın, bağlam menüsünde ReceiveReply Oluştur'a tıklayın ve Gönder tasarımcısının altında <xref:System.ServiceModel.Activities.ReceiveReply> <xref:System.ServiceModel.Activities.Send> **ReceiveReplyForSend** tasarımcısı görünür.    Etkinlik, <xref:System.ServiceModel.Activities.ReceiveReply> istemcide istek/yanıt iletisi değişim deseninin bir parçası olarak ileti alan bir etkinliktir. **ReceiveReplyForSend tasarımcısıyla yalıtıldığında.**
 

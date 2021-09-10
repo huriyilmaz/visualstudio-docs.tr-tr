@@ -1,31 +1,31 @@
 ---
 title: IDE’yi Özelleştirme
-description: Mac için Visual Studio, kullanıcıların hem verimlilik hem de Aesthetic Characteristics ihtiyaçlarını karşılayan bir ortamda uygulama geliştirmesine olanak tanıyan çeşitli yollarla özelleştirilebilir. Bu konu, Mac için Visual Studio gereksinimlerinize uyacak şekilde uyarlanabilen birçok yolu ele almaktadır.
+description: Mac için Visual Studio, kullanıcıların hem verimlilik hem de aesthetic characteristics ihtiyaçlarını karşılayan bir ortamda uygulama geliştirmesine olanak tanıyan çeşitli yollarla özelleştirilebilir. bu konu, Mac için Visual Studio gereksinimlerinize uyacak şekilde uyarlanabilen birçok yolu ele almaktadır.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
 ms.custom: video
 ms.openlocfilehash: f547662278d2ae01660312aff2708970a0a9300a
-ms.sourcegitcommit: b1b747063ce0bba63ad2558fa521b823f952ab51
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190258"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123962103"
 ---
 # <a name="customizing-the-ide"></a>IDE’yi Özelleştirme
 
-Mac için Visual Studio çeşitli yollarla özelleştirilebilir, böylece kullanıcıların hem verimlilik hem de aestheler için ihtiyaçlarını karşılayan bir ortamda uygulamalar geliştirebilir. Bu makalede, Mac için Visual Studio gereksinimlerinize uyacak şekilde uyarlanabilen çeşitli yollar ele alınabilir.
+Mac için Visual Studio çeşitli yollarla özelleştirilebilir, böylece kullanıcıların hem verimlilik hem de aestheler için ihtiyaçlarını karşılayan bir ortamda uygulamalar geliştirebilir. bu makalede, Mac için Visual Studio gereksinimlerinize uyacak şekilde uyarlanabilen çeşitli yollar ele alınabilir.
 
 ## <a name="dark-theme"></a>Koyu tema
 
 ![Koyu tema görünümü](media/customizing-the-ide-image7a.png)
 
-Mac için Visual Studio temaları, Visual **Studio > tercihleri > ortam > görsel stil** ' e giderek ve aşağıdaki görüntüde gösterildiği gibi **Kullanıcı arabirimi teması** açılan listesinden istediğiniz temayı seçerek değiştirebilirsiniz:
+Mac için Visual Studio temaları, aşağıdaki görüntüde gösterildiği gibi, **Visual Studio > tercihlerine > ortamı > görsel stilinde** ve **kullanıcı arabirimi teması** açılan listesinden istediğiniz temayı seçerek değiştirebilirsiniz:
 
 ![Koyu tema seçimi](media/customizing-the-ide-image7b.png)
 
-## <a name="localization"></a>Localization (Yerelleştirme)
+## <a name="localization"></a>Yerelleştirme
 
 Mac için Visual Studio, aşağıdaki 14 dilde yerelleştirilir ve daha fazla geliştirici tarafından erişilebilmesini sağlar:
 
@@ -44,7 +44,7 @@ Mac için Visual Studio, aşağıdaki 14 dilde yerelleştirilir ve daha fazla ge
 * İspanyolca
 * Türkçe
 
-Mac için Visual Studio tarafından gösterilen dili değiştirmek için, Visual  **Studio > tercihleri > ortam > görsel stil** ' e gidin ve aşağıdaki görüntüde gösterildiği gibi **Kullanıcı arabirimi dili** açılan listesinden istediğiniz dili seçin:
+Mac için Visual Studio tarafından gösterilen dili değiştirmek için, aşağıdaki görüntüde gösterildiği gibi, **Visual Studio > tercihleri > ortamı > görsel stiline** gidin ve **kullanıcı arabirimi dili** açılan listesinden istediğiniz dili seçin:
 
 ![Dil seçimi](media/customizing-the-ide-image11a.png)
 
@@ -58,13 +58,13 @@ Bu bilgiler, yeni dosyalara ekleyebileceğiniz bir lisans gibi standart dosya ü
 
 ![Standart başlık seçenekleri](media/customizing-the-ide-image8a.png)
 
-Doldurulan **ad** ve **e-posta** alanları, Mac için Visual Studio sürüm denetimi aracılığıyla yapılan herhangi bir yürütmede kullanılacaktır. Bu alanları doldurmamışsa, sürüm denetimini kullanmaya çalıştığınızda Mac için Visual Studio bunu yapmanız istenir.
+doldurulan **ad** ve **e-posta** alanları, Mac için Visual Studio sürüm denetimi aracılığıyla yapılan herhangi bir yürütmede kullanılacaktır. bu alanları doldurmamışsa, sürüm denetimini kullanmaya çalıştığınızda Mac için Visual Studio bunu yapmanız istenir.
 
 ## <a name="key-bindings"></a>Anahtar bağlamaları
 
-Anahtar bağlamaları, Mac için Visual Studio boyunca daha verimli bir şekilde geçiş yapabilmeniz için geliştirme ortamınızı uyarlamanızı sağlar. Visual Studio (Windows üzerinde), ReSharper, Visual Studio Code ve Xcode gibi birçok popüler IDE için tanıdık anahtar bağlamaları sağlar.
+anahtar bağlamaları, Mac için Visual Studio boyunca daha verimli bir şekilde geçiş yapabilmeniz için geliştirme ortamınızı uyarlamanızı sağlar. Visual Studio (Windows), ReSharper, Visual Studio Code ve xcode gibi birçok popüler ides için tanıdık anahtar bağlamaları sağlar.
 
-Anahtar bağlamaları, aşağıdaki görüntüde gösterildiği gibi **Visual Studio > tercihleri > ortam > anahtar bağlamalarına** göz atarak ayarlanabilir:
+anahtar bağlamaları, aşağıdaki görüntüde gösterildiği gibi **Visual Studio > tercihleri > ortamı > anahtar bağlamaları**'na göz atarak ayarlanabilir:
 
 ![Anahtar bağlamalarını ayarla](media/customizing-the-ide-image10a.png)
 
@@ -72,17 +72,17 @@ Buradan, anahtar bağlama kombinasyonlarını arayabilir, çakışan bağlamalar
 
 ## <a name="workspace-layout"></a>Çalışma alanı düzeni
 
-Mac için Visual Studio çalışma alanı, ana belge alanından (normalde düzenleyici, tasarımcı yüzeyi veya seçenekler dosyası) oluşur. Bu, uygulama dosyalarına erişmek ve bunları yönetmek, test etmek ve hata ayıklamak için yararlı bilgiler içeren, tamamlayıcı *defterlerden* çevrelenmiş bir belgedir.
+Mac için Visual Studio çalışma alanı, ana belge alanından (normalde düzenleyici, tasarımcı yüzeyi veya seçenekler dosyası) oluşur. bu, uygulama dosyalarına erişmek ve bunları yönetmek, test etmek ve hata ayıklamak için yararlı bilgiler içeren, tamamlayıcı *defterlerden* çevrelenmiş bir belgedir.
 
  ![Çalışma alanı düzeni](media/customizing-the-ide-image1a.png)
 
 ### <a name="viewing-and-arranging-pads"></a>Bölmeleri görüntüleme ve düzenleme
 
-Mac için Visual Studio içinde herhangi bir yeni çözüm veya dosyayı açtığınızda, çalışma alanında Çözüm Bölmesi, belge anahattı ve hatalar dahil bazı *Pad* 'ler fark etmelisiniz:
+Mac için Visual Studio içinde herhangi bir yeni çözüm veya dosyayı açtığınızda, çalışma alanında Çözüm Bölmesi, belge anahattı ve hatalar dahil bazı *pad* 'ler fark etmelisiniz:
 
 ![Çözüm defterleri](media/customizing-the-ide-image2a.png)
 
-Mac için Visual Studio, tümüne **görünüm > Pad** menü öğesine gözatıp eklemek üzere bir panel seçerek erişilebilen ek bilgiler, Araçlar ve gezinti yardımları içeren defterler sağlar:
+Mac için Visual Studio, tümüne **görünüm > pad** menü öğesine gözatıp eklemek üzere bir panel seçerek erişilebilen ek bilgiler, araçlar ve gezinti yardımları içeren defterler sağlar:
 
 ![Yeni Pad seçin](media/customizing-the-ide-image3a.png)
 
@@ -90,7 +90,7 @@ Tablalar, arama sonuçlarının ayrılmış bir panelini açan **dosyalarda bul*
 
 Pad 'ler, sizin için yararlı olan her türlü şekilde iş akışınız genelinde taşınabilir ve düzenlenebilir. Örneğin, belge düzenleyicisinin herhangi bir tarafına, başka bir bölmenin üzerine veya altına veya altına ya da aralarında hızlı bir şekilde geçiş yapma olanağı sağlayan bir sekmeli Pad kümesi olarak yuvalanabilir.
 
-Sık kullanılan Pad 'ler için Mac için Visual Studio penceresinden bir paneli tamamen ayırabilirsiniz ve bu pad için ayrı bir pencere oluşturabilirsiniz.
+sık kullanılan pad 'ler için Mac için Visual Studio penceresinden bir paneli tamamen ayırabilirsiniz ve bu pad için ayrı bir pencere oluşturabilirsiniz.
 
 Pad 'ler, her bir panelinin sağ üst köşesindeki geçiş tuşları tarafından gizlenebilir ve kapatılabilir:
 
@@ -134,4 +134,4 @@ Tek bir açık Düzenleyiciye dönmek için **> Düzenleyicisi sütunları > 1 s
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio IDE 'yi kişiselleştirme (Windows üzerinde)](/visualstudio/ide/personalizing-the-visual-studio-ide)
+- [Visual Studio ıde 'yi kişiselleştirin (Windows)](/visualstudio/ide/personalizing-the-visual-studio-ide)

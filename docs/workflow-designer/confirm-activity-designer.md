@@ -14,28 +14,28 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 017a89d2e68e3d466f7625c8dbb2312d450f888c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122045885"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963721"
 ---
 # <a name="confirm-activity-designer"></a>Confirm Etkinlik Tasarımcısı
 
 Etkinlik **oluşturmak** ve yapılandırmak için Etkinlik tasarımcısını onayla <xref:System.Activities.Statements.Confirm> kullanılır.
 
 ## <a name="the-confirm-activity"></a>Onayla Etkinliği
- Etkinliği, <xref:System.Activities.Statements.Confirm> içinde yer alan bir etkinlik için açıkça <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> <xref:System.Activities.Statements.CompensableActivity> çağırır. Etkinlik <xref:System.Activities.Statements.Confirm> , veya içinde <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> kullanılmazsa, <xref:System.Activities.Statements.CompensableActivity> özelliğini belirtmeniz <xref:System.Activities.Statements.Confirm.Target%2A> gerekir.
+ Etkinliği, <xref:System.Activities.Statements.Confirm> içinde yer alan bir etkinlik için açıkça <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> <xref:System.Activities.Statements.CompensableActivity> çağırır. Etkinlik <xref:System.Activities.Statements.Confirm> , veya içinde <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> kullanılmazsa, <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> özelliğini belirtmeniz <xref:System.Activities.Statements.CompensableActivity> <xref:System.Activities.Statements.Confirm.Target%2A> gerekir.
 
  <xref:System.Activities.Statements.CompensationToken>tarafından belirtilen, <xref:System.Activities.Statements.Compensate.Target%2A> bir başarıyla tamamlandıktan sonra açıkça onaylamak veya telafi <xref:System.Activities.Statements.CompensableActivity> etmek için bir yol <xref:System.Activities.Statements.CompensableActivity.Body%2A> <xref:System.Activities.Statements.CompensableActivity> sağlar.
 
-### <a name="using-the-confirm-activity-designer"></a>Etkinlik Tasarımcısını Onayla'nın kullanımı
- Etkinlik **tasarımcısını** onayla,  araç kutusunun sol tarafındaki Araç Kutusu sekmesine tıklayarak erişilen Araç Kutusunun İşlem kategorisinde İş Akışı Tasarımcısı.  Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
+### <a name="using-the-confirm-activity-designer"></a>Etkinlik Tasarımcısını Onayla'nın Kullanımı
+ Onayla etkinlik tasarımcısı, araç kutusunun sol tarafındaki Araç Kutusu sekmesine  tıklayarak erişilen Araç Kutusunun İşlem kategorisinde İş Akışı Tasarımcısı.   Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
 
- **Onayla** etkinlik tasarımcısı Araç Kutusundan sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirilmelerinden sonra etkinlik yüzeyine  <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.Confirm> Onayla olan bir <xref:System.Activities.Activity.DisplayName%2A> etkinlik oluşturur. Değer, Confirm etkinlik tasarımcısının üst bilgisinde <xref:System.Activities.Activity.DisplayName%2A> veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir. 
+ **Onayla** etkinlik tasarımcısı Araç Kutusundan sürüklenerek İş Akışı Tasarımcısı bir içinde olduğu gibi her yerde etkinlik yüzeyine  <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.Confirm> Onayla ayarıyla bir <xref:System.Activities.Activity.DisplayName%2A> etkinlik oluşturur. Değer, Confirm etkinlik tasarımcısının üst bilgisinde <xref:System.Activities.Activity.DisplayName%2A> veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir. 
 
 ### <a name="the-confirm-properties"></a>Özellikleri Onayla
- Aşağıdaki tablo, <xref:System.Activities.Statements.Confirm> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. özelliği özellik kılavuzunda veya İş Akışı Tasarımcısı <xref:System.Activities.Activity.DisplayName%2A> düzenlenebilir, ancak <xref:System.Activities.Statements.Confirm.Target%2A> özelliğin özellik kılavuzunda düzenlemesi gerekir.
+ Aşağıdaki tablo, <xref:System.Activities.Statements.Confirm> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. özelliği, özellik kılavuzunda veya İş Akışı Tasarımcısı <xref:System.Activities.Activity.DisplayName%2A> düzenlenebilir, ancak özellik <xref:System.Activities.Statements.Confirm.Target%2A> özellik kılavuzunda düzenlenemez.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|

@@ -1,6 +1,6 @@
 ---
 title: İş Akışlarında Kesme Noktası Ayarlama
-description: İş Akışı Tasarımcısı veya C# kodunda olduğu gibi grafik iş akışlarınıza kesme noktaları ayarlamak için Visual Basic kullanmayı öğrenin.
+description: Grafik iş akışlarınız üzerinde İş Akışı Tasarımcısı C# kodunda olduğu gibi kesme noktaları ayarlamak için Visual Basic kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,17 +12,17 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 5a40b357c71fffd1ef44be4e904cd52b583fb956
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122135355"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963746"
 ---
 # <a name="how-to-set-breakpoints-in-workflows"></a>Nasıl kullanılır: İş akışlarında kesme noktaları ayarlama
 
-İş Akışı Tasarımcısı C# kodunda olduğu gibi grafik iş akışlarınız üzerinde kesme Visual Basic oluşturabilirsiniz. Beklendiği gibi, iş akışı yürütme ayar her kesme noktası durdurulur.
+İş Akışı Tasarımcısı C# kodunda olduğu gibi grafik iş akışlarınıza kesme noktaları Visual Basic kullanabilirsiniz. Beklendiği gibi, iş akışı yürütmesi ayar her kesme noktası için durdurulur.
 
-Kesme noktası üç eyalete sahip: *Beklemede,* *Bağlandı* ve *Hata.* Kesme noktası ayar değişiklikleri Beklemede olur ve düz kırmızı bir simgeyle gösterilir. Çalışma zamanı iş akışı türünü yüklemişse Bound olur. Kesme noktası için geçerli olmayan etkinlik adı gibi yanlış bir biçim belirtirsiniz, bir hata penceresi görüntülenir. Kesme noktası yine de kesme noktası penceresine eklenir, ancak küçük bir "x" ile işaretlenir.
+Kesme noktası üç eyalete sahip: *Bekliyor,* *Bağlandı* ve *Hata.* Kesme noktası ayar değişiklikleri Beklemede olur ve düz kırmızı bir simgeyle gösterilir. Çalışma zamanı iş akışı türünü yüklemişse Bound olur. Kesme noktası için geçerli olmayan etkinlik adı gibi yanlış bir biçim belirtirsiniz, bir hata penceresi görüntülenir. Kesme noktası yine de kesme noktası penceresine eklenir, ancak küçük bir "x" ile işaretlenir.
 
 > [!NOTE]
 > Çağrılan iş akışlarda kesme noktası ayarlama desteklenmiyor.

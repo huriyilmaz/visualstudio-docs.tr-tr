@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - InvokeDelegate
-description: InvokeDelegate tasarımcısı ve InvokeDelegate tasarımcısını kullanarak invokeDelegate etkinliği oluşturma ve yapılandırma hakkında bilgi öğrenin.
+title: İş Akışı Tasarımcısı-InvokeDelegate
+description: InvokeDelegate tasarımcısını ve InvokeDelegate tasarımcısını oluşturmak ve yapılandırmak için InvokeDelegate tasarımcısını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,34 +12,34 @@ author: TerryGLee
 ms.author: tglee
 ms.workload:
 - multiple
-ms.openlocfilehash: 12fd42bd51a252470c2b7d4fbae23581847ddf0f6d3dede60f6e2659215d80fd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a482f23b1df1587e9a1c7e3023bfb0d1737f1fae
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121393516"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963756"
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 
-**InvokeDelegate** tasarımcısı bir etkinlik oluşturmak ve yapılandırmak için <xref:System.Activities.Statements.InvokeDelegate> kullanılır.
+**InvokeDelegate** Tasarımcısı, etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.InvokeDelegate> .
 
 ## <a name="the-invokedelegate-activity"></a>InvokeDelegate etkinliği
 
-, <xref:System.Activities.Statements.InvokeDelegate> bir genel temsilciyi çağırıyor.
+<xref:System.Activities.Statements.InvokeDelegate>Ortak bir temsilciyi çağırır.
 
-### <a name="use-the-invokedelegate-activity-designer"></a>InvokeDelegate Etkinlik Tasarımcısını Kullanma
+### <a name="use-the-invokedelegate-activity-designer"></a>InvokeDelegate etkinlik tasarımcısını kullanma
 
-Araç Kutusunun Temel Öğeler kategorisindeki **InvokeDelegate** **etkinlik** **tasarımcısına erişin.** **InvokeDelegate** etkinlik tasarımcısı **Araç** Kutusundan sürüklenerek İş Akışı Tasarımcısı yüzeyine bırakılır ve genellikle bir içinde olduğu gibi herhangi bir etkinliğin yerleştirilmelerini <xref:System.Activities.Statements.Sequence> sağlar. Etkinlik tasarımcısını bırakarak, <xref:System.Activities.Statements.InvokeDelegate> <xref:System.Activities.Activity.DisplayName%2A> invokeDelegate varsayılan değerine sahip bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, **InvokeDelegate** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
+**Araç kutusunun** **temel elemanlar** kategorisindeki **InvokeDelegate** etkinlik tasarımcısına erişin. **InvokeDelegate** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, içinde olduğu gibi, her zaman etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Etkinlik Tasarımcısı ' nın atılması, <xref:System.Activities.Statements.InvokeDelegate> varsayılan bir InvokeDelegate ile bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . , <xref:System.Activities.Activity.DisplayName%2A> **InvokeDelegate** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 
 ### <a name="the-invokedelegate-properties"></a>InvokeDelegate özellikleri
 
-Aşağıdaki tablo, <xref:System.Activities.Statements.InvokeDelegate> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları da İş Akışı Tasarımcısı düzenlenebilir.
+Aşağıdaki tabloda <xref:System.Activities.Statements.InvokeDelegate> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları İş Akışı Tasarımcısı yüzeyinde düzenlenebilirler.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay <xref:System.Activities.Statements.InvokeDelegate> adı. Varsayılan değer InvokeDelegate'tir.<br /><br /> kesinlikle <xref:System.Activities.Activity.DisplayName%2A> gerekli değildir, ancak en iyisi bir tane kullanmaktır.|
-|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|Doğru|Etkinlik <xref:System.Activities.ActivityDelegate> yürütülürken çağrılecek olan adı. Bu özellik tasarımcı yüzeyinde düzenlenebilir ve zorunludur.|
-|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|Yanlış|Çağrılı temsilcinin bağımsız değişken koleksiyonu. Anahtarlar, üzerinde parametre nesnelerinin adlarıdır ve değerler, ifadeleri değerlendirilip karşılık gelen parametre nesnelerine atanan <xref:System.Activities.ActivityDelegate> bağımsız değişkenlerdir. Bu özelliği **ayarlayabilirsiniz DelegateArguments** iletişim kutusunu görüntülemek için özellik kılavuzunda **DelegateArguments** alanında üç nokta düğmesine tıklayın. Bağımsız değişkenleri **eklemek için** Bağımsız Değişken Oluştur alanına tıklayın.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.Activities.Statements.InvokeDelegate> . Varsayılan değer InvokeDelegate ' dir.<br /><br /> Kesinlikle gerekli olmasa da, <xref:System.Activities.Activity.DisplayName%2A> en iyisi bir tane kullanmaktır.|
+|<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|Doğru|<xref:System.Activities.ActivityDelegate>Etkinlik yürütüldüğünde çağrılacak öğesinin adı. Bu özellik tasarımcı yüzeyinde düzenlenebilir ve zorunludur.|
+|<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|Yanlış|Çağrılan temsilcinin bağımsız değişken koleksiyonu. Anahtarlar, içindeki parametre nesnelerinin adlarıdır <xref:System.Activities.ActivityDelegate> ve değerler, ifadeleri değerlendirilen ve ilgili parametre nesnelerine atanan bağımsız değişkenlerdir. Bu özelliği ayarlayabileceğiniz **DelegateArguments** iletişim kutusunu göstermek için, özellik kılavuzunun **DelegateArguments** alanındaki üç nokta düğmesine tıklayın. Bağımsız değişkenleri eklemek için **bağımsız değişken Oluştur** alanına tıklayın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

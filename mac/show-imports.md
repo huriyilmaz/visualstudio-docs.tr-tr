@@ -6,22 +6,22 @@ ms.author: cobey
 ms.date: 03/29/2019
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
 ms.custom: video
-ms.openlocfilehash: 3159eba2984049783207bcb550e08cdd277cc1c272ae0cd4814c3a87a0d3c4a5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 964fbbf2f46e2495184b01c47cba888a93f24ea8
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121381919"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964815"
 ---
 # <a name="show-import-items"></a>İçeri aktarma öğelerini gösterme
 
-Mac için Visual Studio, projenize aktarılmış olsalar bile tüm kullanılabilir türleri IntelliSense tamamlama listeniz içinde gösterebilirsiniz. İçe aktarılmış olmayan bir öğe seçerek, kaynak `using` dosyanıza doğru deyim eklenir.
+Mac için Visual Studio, projenize aktarılmış olsalar bile tüm kullanılabilir türleri IntelliSense tamamlama listeniz içinde gösterebilirsiniz. İçe aktarılmış olmayan bir öğe seçerek, `using` kaynak dosyanıza doğru deyim eklenir.
 
 ![içeri aktarma öğelerini göstermeye genel bakış](media/importitems-overview.gif)
 
 ## <a name="how-to-enable"></a>Etkinleştirme
 
-Bu özelliği etkinleştirmek için Tercihler'i  **Visual Studio'i** açın ve Metin Düzenleyici  >     >  **IntelliSense'e gidin.** **IntelliSense'te ek öğeleri etkinleştirmek** için İçeri aktarma öğelerini göster kutusunu işaretleyin.
+Bu özelliği etkinleştirmek için Tercihler'i  **Visual Studio'i** açın ve Metin Düzenleyici  >     >  **IntelliSense'e gidin.** **IntelliSense'te ek öğeleri** etkinleştirmek için İçeri aktarma öğelerini göster kutusunu işaretleyin.
 
 ![öğeleri içeri aktarmayı göster seçeneği](media/show-import-items.png)
 
@@ -31,9 +31,9 @@ Bu özelliği etkinleştirmek için Tercihler'i  **Visual Studio'i** açın ve M
 
 ![içeri aktarma öğeleri listesini göster](media/show-import-items-list.png)
 
-IntelliSense listesinde, şu anda bir deyimi tarafından başvurulmay olan üyelerin yanında ad alanları `using` gösterilir. Listeden bu öğelerden birini seçerseniz, üye kodunuza eklenir  ve `using` deyimi dosyanın en üstüne eklenir. Kodlu içinde başvurulan türlerden üyeler ad alanlarını IntelliSense'te göstermez.
+IntelliSense listesinde, şu anda bir deyimi tarafından başvurulmay olan üyelerin yanında ad alanları `using` gösterilir. Listeden bu öğelerden birini seçerseniz, üye kodunuza _eklenir_ ve deyimi `using` dosyanın en üstüne eklenir. Kodlu içinde başvurulan türlerden üyeler ad alanlarını IntelliSense'te göstermez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı Eylemler (Visual Studio Windows)](/visualstudio/ide/quick-actions)
+- [Hızlı Eylemler (Visual Studio üzerinde Windows)](/visualstudio/ide/quick-actions)
 - [Kodu yeniden düzenleme (Visual Studio üzerinde Windows)](/visualstudio/ide/refactoring-in-visual-studio)

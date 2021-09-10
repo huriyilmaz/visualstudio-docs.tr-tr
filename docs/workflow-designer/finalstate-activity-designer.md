@@ -1,6 +1,6 @@
 ---
 title: İş Akışı Tasarımcısı - FinalState Etkinlik Tasarımcısı
-description: Bir durum makinesi örneğini sonlandıran bir State oluşturmak için FinalState tasarımcısını kullanmayı öğrenin.
+description: Bir durum makinesi örneğini sonlandıran bir Durum oluşturmak için FinalState tasarımcısını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,11 +12,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: a44cf8413e60b0dd5049f7ce31d699e6cfbbca47
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122099093"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963730"
 ---
 # <a name="finalstate-activity-designer"></a>FinalState Etkinlik Tasarımcısı
 
@@ -24,9 +24,9 @@ Tasarımcı, <xref:System.Activities.Core.Presentation.FinalState> bir durum mak
 
 ## <a name="using-the-finalstate-activity-designer"></a>FinalState Etkinlik Tasarımcısını Kullanma
 
-**FinalState** tasarımcısı, bir durum makinesinde sonlandırıcı durum olarak <xref:System.Activities.Statements.State> önceden yapılandırılmış bir oluşturmak için kullanılır. Etkinlik tasarımcısı kullanılarak oluşturulan bir özelliği true olarak ayarlanmıştır, etkinliği yoktur ve bu <xref:System.Activities.Statements.State> <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.State.IsFinal%2A>  <xref:System.Activities.Statements.State.Exit%2A> özellikten kaynaklanan hiçbir geçiş yoktur. Etkinlik tasarımcısını kullanarak bir durum makinesine sonlandırıcı durum olarak önceden yapılandırılmış bir etkinlik eklemek için, Araç Kutusunun State Machine bölümünden FinalState etkinlik tasarımcısını sürükleyin ve iş akışı tasarımcısına <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.State> bırakın.    Etkinlik tasarımcısı bir ve geçişlerine daha sonra eklenebilir veya etkinlik tasarımcısı <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.StateMachine> bırakılırken <xref:System.Activities.Core.Presentation.FinalState> bir geçiş oluşturulabilir. Geçiş oluşturma hakkında daha fazla bilgi için bkz. [Geçiş.](../workflow-designer/transition-activity-designer.md)
+**FinalState** tasarımcısı, bir durum makinesinde sonlandırıcı durum olarak <xref:System.Activities.Statements.State> önceden yapılandırılmış bir oluşturmak için kullanılır. Etkinlik tasarımcısı kullanılarak oluşturulan bir özelliği true olarak <xref:System.Activities.Statements.State> ayarlanmıştır, etkinliği yoktur ve bundan kaynaklanan <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.State.IsFinal%2A> hiçbir geçiş  <xref:System.Activities.Statements.State.Exit%2A> yoktur. Etkinlik tasarımcısını kullanarak bir durum makinesine sonlandırıcı durum olarak önceden yapılandırılmış bir etkinlik eklemek için, Araç Kutusunun State Machine bölümünden FinalState etkinlik tasarımcısını sürükleyin ve iş akışı tasarımcısına <xref:System.Activities.Core.Presentation.FinalState> <xref:System.Activities.Statements.State> bırakın.    Etkinlik <xref:System.Activities.Core.Presentation.FinalState> tasarımcısı bir ve geçişlerine daha sonra eklenebilir veya etkinlik tasarımcısı <xref:System.Activities.Statements.StateMachine> bırakıldıktan sonra bir geçiş <xref:System.Activities.Core.Presentation.FinalState> oluşturulabilir. Geçiş oluşturma hakkında daha fazla bilgi için bkz. [Geçiş.](../workflow-designer/transition-activity-designer.md)
 
-### <a name="state-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı'da Durum Etkinliği Özellikleri
+### <a name="state-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı'de Durum Etkinliği Özellikleri
 
 Aşağıdaki tabloda, tasarımcı kullanılarak ayarlanacak özellikler <xref:System.Activities.Core.Presentation.FinalState> ve bunların tasarımcıda nasıl kullanıldıkları açık bulunmaktadır. Bu özelliklerden bazıları özellik kılavuzunda, bazıları ise tasarımcı yüzeyinde düzenlenebilir.
 

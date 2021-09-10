@@ -14,15 +14,15 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: f7d5859ae9841eff105b7a18f5f4730d440df94f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122098885"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963729"
 ---
 # <a name="while-activity-designer"></a>While Etkinlik Tasarımcısı
 
-Etkinlik içinde yer alan etkinliği yürütürken belirtilen true <xref:System.Activities.Statements.While> olarak <xref:System.Activities.Statements.While.Body%2A> <xref:System.Activities.Statements.While.Condition%2A> **değerlendirilir.** Içerdiği etkinlik hiçbir zaman yürütülmez. Içerdiği etkinliğin en az bir kez yürütültülürse, bunun yerine <xref:System.Activities.Statements.DoWhile> etkinliğini kullanın.
+Etkinlik içinde yer alan etkinliği yürütürken belirtilen true <xref:System.Activities.Statements.While> olarak <xref:System.Activities.Statements.While.Body%2A> <xref:System.Activities.Statements.While.Condition%2A> **değerlendirilir.** Söz edilen etkinlik hiçbir zaman yürütülmez. Içerdiği etkinliğin en az bir kez yürütültülürse, bunun yerine <xref:System.Activities.Statements.DoWhile> etkinliğini kullanın.
 
 ## <a name="while-properties-in-workflow-designer"></a>Özellikler İş Akışı Tasarımcısı
 

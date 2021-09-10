@@ -7,12 +7,12 @@ ms.assetid: e5768153-2758-46d3-a323-3272def213ee
 ms.date: 03/18/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen kod Magazine avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 1c9a8374e7c3e56ede2c3e7d017dc50b9366ee61ba0553fb61660c59c67a5025
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 831885a89b67bc5d9ab50f49c59eb91bc5717262
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121406859"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966604"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>kod Magazine Visual Studio aboneliklerine dahildir
 
@@ -24,7 +24,7 @@ CODE Magazine aboneliğinizi ayarlama işlemi basittir.  Şu adımları izlemeni
 1. Ederken [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
 2. portalınızın Professional geliştirme veya eğitim bölümünde code Magazine kutucuğunu bulun ve **kodu al**' ı tıklatın.
    > [!div class="mx-imgBorder"]
-   > ![KOD Magazine kutucuğu](_img/vs-code-magazine/vs-code-magazine-tile.png "KOD Magazine kutucuğu")
+   > ![KOD Magazine kutucuğu](_img/vs-code-magazine/vs-code-magazine-tile.png "CODE Magazine kutucuğu")
 3. Kodunuzun alındığını belirten bir ileti görürsünüz.  Devam etmek için **Etkinleştir** 'e tıklayın.  (Etkinleştirmeye hazırsanız, bu sorun devam etmez.  Etkinleştirmek için her zaman kutucuğa geri dönebilirsiniz.  Kodunuzu aldıktan sonra "kodu al" bağlantısı "etkinleştir" bağlantısını okur.)
    > [!div class="mx-imgBorder"]
    > ![KOD Magazine kodu alındı](_img/vs-code-magazine/vs-code-magazine-success.png "Kod başarıyla alındı")
@@ -37,7 +37,7 @@ CODE Magazine aboneliğinizi ayarlama işlemi basittir.  Şu adımları izlemeni
    > - Birleşik Devletler dışındaki aboneler sevkiyat ücretleri uygulanabilir. 
    > - Lütfen ilk yazdırılmış sürümün teslimatı için birkaç haftaya izin verin.
       > [!div class="mx-imgBorder"]
-      > ![CODE Magazine abonelik ayrıntıları](_img/vs-code-magazine/vs-code-magazine-details.png "Abonelik ayrıntıları ve fiyat")
+      > ![CODE Magazine abonelik ayrıntıları](_img/vs-code-magazine/vs-code-magazine-details.png "Abonelik ayrıntıları ve fiyatı")
 6. Ardından, abone bilgilerinizi ve bir teslim adresini sağlamanız gerekir.  (Teslim adresi, karşılama, teklif seçimi ve dijital erişim süreçlerini desteklediğinden, dijital abonelikler için bile gereklidir.)
 7. Birleşik Devletler dışında yaşıyorsanız ve yazdırılmış bir dergi aboneliği almayı seçerseniz, Sevkiyat maliyetlerini kapsayacak bir fatura adresi ve ödeme bilgileri sağlamanız istenebilir. 
 8. Onay kutusuna tıklayarak HTML bültene kod göndermeyi tercih edebilirsiniz.
@@ -49,12 +49,12 @@ Abonelik siparişinizi tamamladıktan sonra, aldığınız sorunları görmek i�
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standart)   | VL, Azure, perakende| Kullanılabilir       |  Hayır          |
-| GitHub Enterprise aboneliği Visual Studio Enterprise   | VL| Kullanılabilir       |  Hayır          |
-| Visual Studio Professional (standart) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  Hayır          |
-| GitHub Enterprise aboneliği Visual Studio Professional | VL                                      | Kullanılabilir                                                            |  Hayır          |
-| Visual Studio Test Professional (standart)                         | VL, perakende                                              | Kullanılabilir                                             |  Hayır          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  Hayır          |
+| Visual Studio Enterprise (standart)   | VL, Azure, perakende| Kullanılabilir       |  No          |
+| GitHub Enterprise aboneliği Visual Studio Enterprise   | VL| Kullanılabilir       |  No          |
+| Visual Studio Professional (standart) | VL, Azure, perakende                                       | Kullanılabilir                                                            |  No          |
+| GitHub Enterprise aboneliği Visual Studio Professional | VL                                      | Kullanılabilir                                                            |  No          |
+| Visual Studio Test Professional (standart)                         | VL, perakende                                              | Kullanılabilir                                             |  No          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                              |  No          |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 | Visual Studio Enterprise NFR<sup>1</sup> | NFR | Kullanılamaz | Yok |
 

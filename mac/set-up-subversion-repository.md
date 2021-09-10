@@ -1,21 +1,21 @@
 ---
 title: Subversion Deposu Ayarlama
-description: Subversion'ın bir merkezi sürüm denetimi sistemi olarak nasıl yük yüklerini ve ayarlarını Mac için Visual Studio.
+description: Subversion'un bir merkezi sürüm denetimi sistemi olarak nasıl yük ve ayar Mac için Visual Studio.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
 ms.topic: how-to
-ms.openlocfilehash: 573c21a19161781e621c433bbfe26ce2234d080a987a892b7eebe6dc2cb77148
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b5230958fa1624acf7609d6cad7d885e43c013d0
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121438769"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964794"
 ---
 # <a name="set-up-a-subversion-repository"></a>Subversion deposu ayarlama
 
-Subversion, merkezi _bir_ sürüm denetim sistemidir. Başka bir ifadeyle, tüm dosyaları ve düzeltmeleri içeren tek bir sunucu vardır ve kullanıcılar herhangi bir dosyanın herhangi bir sürümünü gözden geçirmelerini sağlar. Dosyalar uzak bir Subversion deposundan kullanıma alınarak kullanıma alınarak, kullanıcı deponun o noktada anlık görüntüsünü alır.
+Subversion, merkezi bir sürüm denetim sistemidir. Başka bir ifadeyle, kullanıcıların herhangi bir dosyanın herhangi bir sürümünü kontrol etmek için tüm dosyaları ve düzeltmeleri içeren tek bir sunucu vardır. Dosyalar uzak bir Subversion deposundan kullanıma alınarak kullanıma alınarak, kullanıcı deponun o noktada anlık görüntüsünü alır.
 
 Sürüm denetiminiz için Subversion kullanmak üzere makinenize yüklenmiş olması gerekir. Subversion'ın makinenizin yüklü olup olduğunu kontrol etmek için Terminal'de aşağıdaki komutu kullanın:
 
@@ -31,7 +31,7 @@ Subversion yüklü değilse, bunu almanın en kolay yolu Xcode Komut Satırı Ar
 xcode-select --install
 ```
 
-Subversion makinenize yüklendikten sonra, projenizi SVN'de yayımlamak için aşağıdaki adımları kullanın.
+Subversion makinenize yüklendikten sonra aşağıdaki adımları kullanarak projenizi SVN'de yayımlayın.
 
 1. Çevrimiçi olarak ücretsiz bir SVN deposu oluşturun. Bu [örnekte, Assembla](https://app.assembla.com/) kullanılmıştır. Oluşturulduktan sonra, depoya bağlanmak için kullanılacak bir URL sağlanır:
 
@@ -43,7 +43,7 @@ Subversion makinenize yüklendikten sonra, projenizi SVN'de yayımlamak için a�
 
     ![Yayımlamaya başlama Project](media/version-control-subversion2.png)
 
-4. Depoya **Bağlan üst açılan** listeden **Subversion'ı** seçin.
+4. Depoya **Bağlan sekmesinde,** üst açılan listeden **Subversion'ı** seçin.
 
 5. 1. adımdan URL'yi girin. URL girilirken diğer alanlar varsayılan olarak doldurulur:
 

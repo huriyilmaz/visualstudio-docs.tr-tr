@@ -6,12 +6,12 @@ ms.author: dominicn
 ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: DB8DC9FE-FF21-4061-8A96-3F9FC08A4F8F
-ms.openlocfilehash: 65dcab557023e1a73b090c54cdd438f209d4eb09f4c3a42adfb909fe45c08ad5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ccfcf04816727800501dada64e73d6ce35876674
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121437754"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964750"
 ---
 # <a name="update-visual-studio-for-mac"></a>güncelleştirme Mac için Visual Studio
 

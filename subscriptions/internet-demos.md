@@ -7,12 +7,12 @@ ms.assetid: 1c5ede60-cb5a-4d5f-a6a2-a1f536f6c4ad
 ms.date: 03/21/2021
 ms.topic: conceptual
 description: Terminal Hizmetleri aracılığıyla Internet gösterileri 'nı desteklemek ve RDS erişimini etkinleştirmek için ürün anahtarları kullanmayı öğrenin
-ms.openlocfilehash: b264fa3ab65992a5b9e22fbf4be6ae4096ecead9120f8467bc5498d9958a0b17
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c074dfe12ed7c1fea5ad60f7e0c8019e133a6d1b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392919"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966409"
 ---
 # <a name="internet-demonstrations-via-terminal-services"></a>Terminal Hizmetleri aracılığıyla Internet gösterileri
 Visual Studio abonelikle, son kullanıcılara, Terminal hizmetleri (Windows server 2003 veya Windows server 2008) veya Uzak Masaüstü Hizmetleri (Windows server 2008 R2 ve üzeri) aracılığıyla programlarınızın ınternet gösterimlerine erişim sağlayabilirsiniz. En fazla 200 anonim kullanıcı, gösteriminizi bu şekilde aynı anda erişebilir. Tanıtımın üretim verilerini kullanmamalıdır. Visual Studio aboneler, uygulamalarını son kullanıcılara gösterecek şekilde lisanslanır. Terminal hizmetleri (TS) veya Uzak Masaüstü Hizmetleri (RDS) kullanan bu ınternet tanıtımı, yazılım Visual Studio abonelikleri aracılığıyla lisanslantığında, Visual Studio aboneliği olmayan son kullanıcıların tanıtım uygulamasıyla etkileşime girebileceği tek senaryodur.

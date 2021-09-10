@@ -7,18 +7,18 @@ ms.date: 06/20/2018
 ms.technology: vs-ide-install
 ms.assetid: BC836802-CC65-41F7-BAEC-A42AED0371A9
 hide_comments: false
-ms.openlocfilehash: 7d8951afcdcfcd6ab5babcf0a6f3842d9528fe70fc74c508f68aed135744dd99
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 09f4af94eb1a12780268ab47f1a06c4710f0382f
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121364882"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123962303"
 ---
 # <a name="update-visual-studio-2017-for-mac-version-7-to-visual-studio-2019-for-mac-version-80"></a>Mac Visual Studio 2017 'yi (sürüm 7) Mac için Visual Studio 2019'a (sürüm 8.0) güncelleştirme
 
-Mac için Visual Studio 2019'da çok sayıda yeni geliştirme geldi: yepyeni bir C# düzenleyicisi, yeni bir başlangıç deneyimi, birden çok örnek için destek ve Xamarin, Unity ve .NET Core geliştiricileri için bir çok yeni geliştirme. Mac için Visual Studio 2019'a dahil olan her şey hakkında daha fazla bilgi için aşağıdaki blog gönderilerine göz atabilirsiniz:
+mac için Visual Studio 2019'da çok sayıda yeni geliştirme geldi: yepyeni bir C# düzenleyicisi, yeni bir başlangıç deneyimi, birden çok örnek için destek ve Xamarin, Unity ve .NET Core geliştiricileri için bir çok yeni geliştirme. 2019'da yer alan Mac için Visual Studio daha fazla bilgi için aşağıdaki blog gönderilerine göz atabilirsiniz:
 
-- [Visual Studio Mac için 2019 artık kullanılabilir](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-is-now-available/)
+- [Visual Studio mac için 2019 artık kullanılabilir](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-is-now-available/)
 - [Visual Studio Mac için 2019 sürüm 8.1 artık kullanılabilir (ve 8.2 için Önizleme)](https://devblogs.microsoft.com/visualstudio/visual-studio-2019-for-mac-version-8-1-is-now-available-and-a-preview-for-8-2/)
 
 > [!IMPORTANT]

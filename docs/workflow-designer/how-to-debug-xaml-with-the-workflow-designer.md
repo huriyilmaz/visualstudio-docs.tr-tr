@@ -12,18 +12,18 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - uwp
 ms.openlocfilehash: 721ee723c6f7d0e28c4d7da376233641a580d21d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122037973"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963745"
 ---
 # <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Nasıl Yapılır: İş Akışı Tasarımcısı ile XAML Hatalarını Ayıklama
 
 İş akışları XAML açısından tanımlanır. İş akışının kullanıcı arabirimi gösterimi, iş akışını tanımlayan XAML ağacının üzerine inşa edilmiştir. Hata ayıklama deneyimi, iş akışlarında hata ayıklamaya benzer İş Akışı Tasarımcısı. Örneğin, XAML'de hata ayıklarken yereller, izleme ve iş parçacıkları pencereleri hata ayıklamada olduğu gibi İş Akışı Tasarımcısı çalışır. Ayrıca, XAML hata ayıklaması sırasında çağrı yığını görünümü, iş akışı için yürütme akışının satır tabanlı hiyerarşik bir görünümü olur.
 
 > [!NOTE]
-> Bir iş akışının XAML'i etkinliklerle aynı derlemede bulunuyorsa, sınıf adlarının derleme kısmı dahil değildir. Sınıf (etkinlik) adlarının bu bölümü olmadan, XAML çalışma zamanında yüklenemiyor. Ana projeyle aynı ad alanı içinde etkinlikler tanımlamak önerilmez; aksi takdirde, tasarımcıda düzenlendikten sonra XAML'nin el ile düzenlemesi gerekir.
+> Bir iş akışının XAML'i etkinliklerle aynı derlemede bulunuyorsa, sınıf adlarının derleme kısmı dahil değildir. Sınıf (etkinlik) adlarının bu bölümü olmadan, XAML çalışma zamanında yüklenemiyor. Ana projeyle aynı ad alanı içinde etkinlikler tanımlamak önerilmez; aksi takdirde, tasarımcıda düzenlendikten sonra XAML el ile düzenlenemez.
 
 ## <a name="to-debug-workflow-xaml"></a>İş akışı XAML'de hata ayıklamak için
 

@@ -1,29 +1,29 @@
 ---
-title: Müşteriler için Visual Studio aboneliklerini yöneten iş ortakları | Microsoft Docs
+title: müşteriler için Visual Studio abonelikleri yöneten iş ortakları | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 6866dfab-c4fa-428e-bb0d-7b202c81f770
 ms.date: 10/28/2020
 ms.topic: conceptual
-description: İş ortaklarının müşterileri için Visual Studio abonelikleri yönetme hakkında bilgi edinin.
+description: iş ortaklarının müşterileri için Visual Studio abonelikleri yönetme hakkında bilgi edinin.
 ms.openlocfilehash: 72891535be7f65b54fb6b9493bd7cc638516177f
-ms.sourcegitcommit: d7d9fb79448b3534923cc95071d1f91eabde88e8
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104776798"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966574"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>Müşteri adına abonelikleri yöneten iş ortakları
 Visual Studio [abonelikleri yönetim portalındaki](https://manage.visualstudio.com)abonelikleri yönetmek için birkaç adım iş ortağının izlenmesi gerekir. 
 
 İşlem şu şekilde olacaktır:
 - İş ortakları, müşterinin iş e-posta adresini girerek müşteri adına yeni bir sıra yerleştirir.
-- Müşteri, yöneticileri atamak ve [Visual Studio abonelikleri yönetim portalındaki](https://manage.visualstudio.com)aboneliklerine erişmek için davet eden bir bildirim alır.
+- müşteri, yöneticileri atamak ve [Visual Studio abonelikleri yönetim portalındaki](https://manage.visualstudio.com)aboneliklerine erişmek için davet eden bir bildirim alır.
 - İş ortaklarının abonelikleri müşteriler adına yönetmesi için yönetici portalına kaydolmaları gerekir. Erişim kazanmanın çeşitli yolları aşağıda listelenmiştir (eklenti açma işlemine benzer).
 
-## <a name="new-partners-visiting-the-visual-studio-subscriptions-administration-portal-directly"></a>Visual Studio abonelikleri yönetim portalını doğrudan ziyaret eden yeni iş ortakları
-Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'de kaydolmamış ve doğrudan [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)gidebilen yeni iş ortakları için geçerlidir.  Şu adımları izleyin:
+## <a name="new-partners-visiting-the-visual-studio-subscriptions-administration-portal-directly"></a>yeni iş ortakları Visual Studio abonelikleri yönetim portalını doğrudan ziyaret ediyor
+bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [vlsc](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'de kaydolmamış ve doğrudan [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)gidebilen yeni iş ortakları için geçerlidir.  Şu adımları izleyin:
 1. Adresini ziyaret edin <https://manage.visualstudio.com> .
 1. Tanınan bir kullanıcı olmadığı hakkında bir bildirim alırsınız.
 1. **OLP Iş ortakları** kayıt seçeneğini belirleyin ve siparişte kullanılan yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu seçin ve **Gönder**' e tıklayın.
@@ -33,10 +33,10 @@ Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](ht
 
 ## <a name="new-partners-who-register-on-the-volume-licensing-service-center-vlsc"></a>Toplu Lisanslama hizmeti Merkezi 'ne (VLSC) kaydeden yeni iş ortakları
 
-Bu, yeni açık lisans siparişlerinin yerleştirilmesi için geçerlidir, ancak Visual Studio [abonelikleri yönetim portalına](https://manage.visualstudio.com)erişmeyi denemeden önce Add-Open Flow aracılığıyla [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'ye kaydolmaya çalışır. İş ortakları aşağıdaki adımları izlemelidir:
+bu, yeni açık lisans siparişlerinin yerleştirilmesi için geçerlidir, ancak Visual Studio [abonelikleri yönetim portalına](https://manage.visualstudio.com)erişmeyi denemeden önce add-open flow aracılığıyla [vlsc](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'ye kaydolmaya çalışır. İş ortakları aşağıdaki adımları izlemelidir:
 1. VLSC 'de oturum açın ve "Ilişki Özeti" sayfasına gidin.
 1. İstenen açık lisansı seçin.
-1. Sonra, "Visual Studio abonelikleri" altındaki "Lisans Ayrıntıları" bölümünde **, bağlantı aracılığıyla** abonelikleri yönetme seçeneğini belirleyin.
+1. sonra, "Visual Studio abonelikleri" altındaki "lisans ayrıntıları" bölümünde **abonelikleri bağlantı aracılığıyla** yönetme seçeneğini belirleyin.
 1. Birincil Iletişim olarak listelenen aynı e-posta adresini kullanarak yönetim portalında oturum açın.
 1. Daha sonra Iş ortağı bu açık lisans için abonelikleri yönetebilecektir.
 
@@ -44,7 +44,7 @@ Bu, yeni açık lisans siparişlerinin yerleştirilmesi için geçerlidir, ancak
 > Müşteriye, açık lisansa bir Iş ortağının eklendiğini bildiren bir bildirim e-postası gönderilir. Iş ortağının erişimini kaldırmayı seçebilirler.
 
 ## <a name="existing-partners-adding-a-new-license"></a>Mevcut iş ortakları yeni lisans ekliyor
-Bu, [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)zaten erişimi olan iş ortakları için geçerlidir, ancak yönetilmesi gereken Visual Studio abonelikleri Ile açık lisanslar siparişi yerleştirmiş olur.  
+bu, [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)zaten erişimi olan iş ortakları için geçerlidir, ancak yönetmesi gereken Visual Studio aboneliklerle açık lisanslar siparişi yerleştirmiş olur.  
 
 <br> 
 
@@ -71,5 +71,5 @@ Bu, [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Abonelikleri yönetmek için Visual Studio [abonelikleri yönetim portalını](https://manage.visualstudio.com) ziyaret edin.
-- Yardıma mı ihtiyacınız var? Visual Studio [Yönetim ve abonelikler desteğiyle](https://visualstudio.microsoft.com/support/support-overview-vs) iletişim kurun
+- abonelikleri yönetmek için Visual Studio [abonelikleri yönetim portalını](https://manage.visualstudio.com) ziyaret edin.
+- Yardıma mı ihtiyacınız var? [yönetim ve abonelik desteğiyle](https://visualstudio.microsoft.com/support/support-overview-vs) iletişim Visual Studio

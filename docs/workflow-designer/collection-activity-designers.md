@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - Koleksiyon Etkinliği Tasarımcıları
-description: Koleksiyonları yönetmek için kullanılan etkinlikleri oluşturmak ve yapılandırmak için Koleksiyon etkinliği tasarımcılarını nasıl kullanabileceğinizi öğrenin.
+title: İş Akışı Tasarımcısı koleksiyonu etkinlik tasarımcıları
+description: Koleksiyonları yönetmek için kullanılan etkinlikleri oluşturmak ve yapılandırmak için koleksiyon etkinlik tasarımcılarını nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +12,12 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 46ed9eecee1a2cec83fbcdef73937dcc0eb1f85d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122082562"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963687"
 ---
 # <a name="collection-activity-designers"></a>Koleksiyon Etkinlik Tasarımcıları
 
-Koleksiyon etkinliği tasarımcıları, koleksiyonları yönetmek için kullanılan etkinlikleri oluşturmak ve yapılandırmak için kullanılır. Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular, İş Akışı Tasarımcısı etkinlik ve şablon tasarımcılarının kullanımına yönelik rehberlik sağlar.
+Koleksiyon etkinliği tasarımcıları, koleksiyonları yönetmek için kullanılan etkinlikleri oluşturmak ve yapılandırmak için kullanılır. Bu bölümde yer alan konular ve aşağıdaki tabloda listelenen Iş akışı Designeractivity ve Template Designer 'ların nasıl kullanılacağına ilişkin yönergeler sağlar.

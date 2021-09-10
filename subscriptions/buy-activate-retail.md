@@ -6,16 +6,16 @@ manager: cabuschl
 ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
 ms.date: 03/21/2021
 ms.topic: how-to
-description: Microsoft Store portalında Visual Studio satın alma ve Visual Studio etkinleştirme hakkında bilgi edinin.
-ms.openlocfilehash: 58e22a0d0b105914c5bbd27a499ca2a7a1a68ebf5e478c049f7848550ec6d02a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+description: Microsoft Store portalında Visual Studio abonelikleri satın Visual Studio öğrenin.
+ms.openlocfilehash: 4ed9a46112e6a4f976948375f797cb37c0a52c6e
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121381136"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966384"
 ---
-# <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Visual Studio abonelikleri, Microsoft Store
-Visual Studio abonelikler çeşitli kanallar üzerinden kullanılabilir. Toplu [Lisanslama, Bulut Çözümü](https://www.microsoft.com/licensing/default)Sağlayıcıları, Visual Studio [Market](https://marketplace.visualstudio.com/subscriptions)ve Microsoft Store.  Bu makalede, Microsoft Store aracılığıyla abonelik satın alma [ve etkinleştirme hakkında Microsoft Store.](https://www.microsoft.com/store/collections/visualstudio)  
+# <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Visual Studio abonelikler, Microsoft Store
+Visual Studio abonelikler çeşitli kanallardan kullanılabilir. Toplu [Lisanslama, Bulut Çözümü](https://www.microsoft.com/licensing/default)Sağlayıcıları, Visual Studio [Market](https://marketplace.visualstudio.com/subscriptions)ve Microsoft Store.  Bu makalede, Microsoft Store aracılığıyla abonelik satın alma ve [etkinleştirme hakkında Microsoft Store.](https://www.microsoft.com/store/collections/visualstudio)  
 
 ## <a name="how-to-buy-subscriptions"></a>Abonelik satın alma
 Hangi aboneliğin sizin için doğru olduğunu karar verirken yardıma mı ihtiyacınız var?  Abonelik avantajları [sayfamıza göz atın.](https://visualstudio.microsoft.com/vs/benefits/)  
@@ -31,7 +31,7 @@ Bu aboneliklerin her biri, ilk satın alma veya mevcut aboneliği yenileme seçe
 > Abonelikleri indirimli yenileme fiyatıyla yenileme koşullarını sağlaması için aboneliklerin süresi dolmadan önce yenilenmeleri gerekir.  
 
 ## <a name="how-to-activate-subscriptions"></a>Abonelikleri etkinleştirme
-Microsoft Store aracılığıyla Visual Studio aboneliği satın aldıktan sonra, satın aldıktan sonra aldığınız "Onay Sayfası" veya "Onay E-postası" ödemesinde etkinleştirme işlemini başlatabilirsiniz.
+Visual Studio aboneliğini Microsoft Store satın aldıktan sonra, satın aldıktan sonra aldığınız "Onay Sayfası" veya "Onay E-postası" ödemesi ile etkinleştirme işlemini başlatabilirsiniz.
 
 1. Onay **e-postasında veya satın** alma onayı sayfasında oturum açma bağlantısı için buraya tıklayın'ı seçin.
 2. sayfasına yeniden yönlendirilmesine neden olur. [https://my.visualstudio.com/subscriptions/activate](https://my.visualstudio.com/subscriptions/activate?wt.mc_id=o~msft~docs)

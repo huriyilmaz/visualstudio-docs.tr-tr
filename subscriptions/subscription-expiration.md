@@ -6,13 +6,13 @@ manager: cabuschl
 ms.assetid: b6fbfa3e-654a-462f-8e22-e313b6ea617f
 ms.date: 06/10/2021
 ms.topic: conceptual
-description: Aboneliğinizin süresi dolduğunda Visual Studio öğrenin
-ms.openlocfilehash: 9df41e76b0631d8b67a19faab4267d1aaa8cf8e538beb69c325ae58405fb6cb1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+description: Aboneliğinizin süresi dolduğunda Visual Studio olduğunu öğrenin
+ms.openlocfilehash: 576be11954a406947d71a60945b7209f7ef6b688
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121364387"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966534"
 ---
 # <a name="what-happens-when-your-subscription-expires"></a>Aboneliğinizin süresi dolduğunda ne olur?
 Visual Studio belirli sürelere sahip olur ve yenilenmediği sürece aboneliklerin süresi dolar.  Bir aboneliğin süresi dolduğunda, abonelik tarafından sağlanan avantajlar farklı şekillerde etkileyecektir.  Bu makalede, süre sonu bir aboneliğin çeşitli yönlerini nasıl Visual Studio açıklanmıştır. 
@@ -29,19 +29,19 @@ Yeni bir abonelik satın almak için fiyatlandırma sayfamızda satın alma seç
 Aboneliğin süresi dolduğunda tüm avantajlar aynı şekilde etkilenmez.  Aboneliğinizin süresi dolsa hiçbir avantaj etkinleştirilmez.  Daha önce etkinleştirdikten sonra da avantajlar kullanılabilir durumda olabilir.  
 
 ### <a name="visual-studio-ide"></a>Visual Studio IDE
-Çoğu abonelik, IDE için kalıcı Visual Studio sağlar. Aboneliğinizin kalıcı Visual Studio uygun olup [olmadığını](https://aka.ms/vslicensing) belirlemek için Lisanslama Teknik Visual Studio'i indirin.  Aboneliğiniz uygunsa, IDE'nin geçerli sürümüne erişmeye devam edersiniz ancak gelecek sürümlerde güncelleştirmeleri almazsınız.  Süresi dolmadan sonra IDE'ye devam etmek [](https://my.visualstudio.com/productkeys) için ürün anahtarı sayfasına gidip aboneliğinizin süresi dolmadan önce **ürün anahtarını indirmeniz gerekir.**  Anahtarı talep ettikten sonra, IDE [yüklemenizi etkinleştirmek](https://docs.microsoft.com/visualstudio/ide/how-to-unlock-visual-studio?view=vs-2019#enter-a-product-key) için anahtarı girmeniz gerekir.  
+Çoğu abonelik, IDE için kalıcı Visual Studio sağlar. Aboneliğinizin kalıcı Visual Studio [uygun olup olmadığını](https://aka.ms/vslicensing) belirlemek için Lisanslama Teknik Visual Studio'i indirin.  Aboneliğiniz uygunsa, IDE'nin geçerli sürümüne erişmeye devam edersiniz ancak gelecek sürümlerde güncelleştirmeleri almazsınız.  Süresi dolmadan sonra IDE'ye devam etmek [](https://my.visualstudio.com/productkeys) için ürün anahtarı sayfasına gidip aboneliğinizin süresi dolmadan önce **ürün anahtarını indirmeniz gerekir.**  Anahtarı talep ettikten sonra, IDE [yüklemenizi etkinleştirmek](https://docs.microsoft.com/visualstudio/ide/how-to-unlock-visual-studio?view=vs-2019#enter-a-product-key) için anahtarı girmeniz gerekir.  
 
 ### <a name="azure-devops"></a>Azure DevOps
 Azure DevOps aboneliği aracılığıyla Visual Studio abonelik kullanılamaz.  
 
 ### <a name="azure-credits"></a>Azure kredileri
-Aylık Azure kredisi ödemeleri, aboneliğinizin süresinin dolması ardından sınırlı bir süre için devam eder.  Geçerli ay içinde Azure aboneliğinize zaten uygulanmış olan kullanılmayan krediler yine de kullanımınıza hazır olur.  Krediniz tükendikten sonra bu abonelikten Azure kaynaklarını kullanmaya devam [](/azure/azure-resource-manager/management/move-resource-group-and-subscription) etmek isterseniz, bu kaynakları başka bir Azure aboneliğine aktarabilirsiniz veya mevcut aboneliğinizi kullana öde [aboneliğine dönüştürebilirsiniz.](/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit-in-azure-portal)
+Aylık Azure kredisi ödemeleri, aboneliğinizin sona ermesiyle sınırlı bir süre için devam eder.  Geçerli ay içinde Azure aboneliğinize zaten uygulanmış olan kullanılmayan krediler yine de kullanımınıza hazır olur.  Krediniz tükendikten sonra bu abonelikten Azure kaynaklarını kullanmaya devam [](/azure/azure-resource-manager/management/move-resource-group-and-subscription) etmek isterseniz, bu kaynakları başka bir Azure aboneliğine aktarabilirsiniz veya mevcut aboneliğinizi kullana öde [aboneliğine dönüştürebilirsiniz.](/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit-in-azure-portal)
 
 ### <a name="other-benefits"></a>Diğer avantajlar 
 Aboneliklere dahil edilen avantajların Visual Studio süreleri vardır.  Microsoft'un Pluralsight, DataCamp veya WhiteSource gibi iş ortakları tarafından sağlanan avantajlar etkinleştirildikten sonra zaman sınırlarına sahip olur.  Daha önce etkinleştirilen avantajlar, kullanım koşullarının geri kalanında size açık olmaya devam edecektir.  Örneğin, altı aylık LinkedIn Learning aboneliğini etkinleştirmiş ve Visual Studio aboneliğinizin süresi dolduğunda da dört ay daha kaldı ise LinkedIn Learning aboneliğine erişmeye devam edebilirsiniz.  
 
 ## <a name="resources"></a>Kaynaklar
-- Abonelikler için satış, abonelikler, hesaplar ve faturalama Visual Studio yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalamayla ilgili yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

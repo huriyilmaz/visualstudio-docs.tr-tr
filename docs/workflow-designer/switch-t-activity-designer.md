@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - Switch &lt; T &gt; Etkinlik Tasarımcısı
-description: Switch etkinlik tasarımcısını kullanarak bir Switch etkinliği oluşturma ve yapılandırma hakkında <T> <T> bilgi İş Akışı Tasarımcısı.
+title: İş Akışı Tasarımcısı- &lt; T &gt; etkinlik tasarımcısını Değiştir
+description: İş Akışı Tasarımcısı Switch etkinliği <T> oluşturmak ve yapılandırmak Için Switch etkinlik Tasarımcısı 'nı kullanmayı öğrenin <T> .
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,48 +15,48 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 1fc06eaaa7bd54ff42a087016dae30e674de4023
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122025361"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963772"
 ---
 # <a name="switcht-activity-designer"></a>Switch\<T> Etkinlik Tasarımcısı
 
-Etkinlik, belirtilen bir ifadeyi değerlendirir ve etkinliği ilişkili anahtarı değerlendirmeden alınan değerle eşleşen <xref:System.Activities.Statements.Switch%601> bir etkinlik koleksiyonundan yürütür.
+<xref:System.Activities.Statements.Switch%601>Etkinlik belirtilen bir ifadeyi değerlendirir ve aktiviteyi, ilişkili anahtarı değerlendirmeden elde edilen değerle eşleşen bir etkinlik koleksiyonundan yürütür.
 
-Switch **<T \>** etkinlik tasarımcısı, etkinlik oluşturmak ve yapılandırmak için <xref:System.Activities.Statements.Switch%601> İş Akışı Tasarımcısı.
+**Anahtar<T \>** etkinlik Tasarımcısı iş akışı Tasarımcısı bir etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.Switch%601> .
 
-## <a name="the-switchtactivity"></a>Switch \<T> Etkinliği
+## <a name="the-switchtactivity"></a>Switch \<T> etkinliği
 
-Etkinlik <xref:System.Activities.Statements.Switch%601> bir ve sözlüğü <xref:System.Activities.Statements.Switch%601.Expression%2A> <xref:System.Activities.Statements.Switch%601.Cases%2A> içerir. Sözlükte her büyük/küçük harf, bir  anahtar ve karşılık gelen değeri olarak hizmet veren bir etkinlik içeren bir *çiftten oluşur.* Etkinlik, <xref:System.Activities.Statements.Switch%601> <xref:System.Activities.Statements.Switch%601.Expression%2A> 'i değerlendirir ve anahtarların her biri ile karşılaştırıldığında. Bir eşleşme bulunursa ilgili etkinlik yürütülür. Sözlük anahtarlarının, sözlüğün eşitlik karşıtlığı tarafından tanımlanan eşitlik türüne göre benzersiz olması gerektir olduğundan yalnızca bir eşleşme mümkündür. Eşleşme bulunamasa <xref:System.Activities.Statements.Switch%601.Default%2A> etkinlik yürütülür.
+Bir <xref:System.Activities.Statements.Switch%601> etkinlik bir <xref:System.Activities.Statements.Switch%601.Expression%2A> ve sözlüğünü içerir <xref:System.Activities.Statements.Switch%601.Cases%2A> . Sözlükteki her bir durum, bir *anahtar* ve karşılık gelen *değeri* olarak hizmet veren bir etkinlik içeren bir çiftin oluşur. <xref:System.Activities.Statements.Switch%601>Etkinliği değerlendirir <xref:System.Activities.Statements.Switch%601.Expression%2A> ve anahtarların her birine karşı karşılaştırır. Bir eşleşme bulunursa ilgili etkinlik yürütülür. Sözlük anahtarlarının, sözlüğün eşitlik karşılaştırıcısı tarafından tanımlanan eşitlik türüne göre benzersiz olması gerektiğinden yalnızca bir eşleşme mümkündür. Eşleşme bulunmazsa <xref:System.Activities.Statements.Switch%601.Default%2A> etkinlik yürütülür.
 
-## <a name="how-to-use-the-switcht-activity-designer"></a>Switch \<T> Etkinlik Tasarımcısı'nın kullanımı
+## <a name="how-to-use-the-switcht-activity-designer"></a>Switch \<T> etkinlik tasarımcısını kullanma
 
-Araç Kutusunun **Denetim \<T>** Denetimi Flow **Switch** etkinlik **tasarımcısına erişin.** Bunu kullanıcıya bıraktıktan İş Akışı Tasarımcısı, kullanıcının  etkinlikte kullanılan genel T türünü belirtmesine izin vermesi için *Türleri* Seç iletişim kutusunu <xref:System.Activities.Statements.Switch%601> görüntüler. Varsayılan değer **Int32'dir.** T genel *türü* seçildikten sonra iş akışı **tasarımcısına<\> T** tasarımcısına anahtar anahtarı eklenir.
+**araç kutusunun** **denetim Flow** kategorisindeki **\<T> Switch** etkinlik tasarımcısına erişin. İş Akışı Tasarımcısı, kullanıcının Etkinlikte kullanılan genel tür *T* 'yi belirtmesini sağlamak Için **türleri Seç** iletişim kutusunu görüntüler <xref:System.Activities.Statements.Switch%601> . Varsayılan değer **Int32**'dir. Genel tür *t* seçildikten sonra, iş akışı tasarımcısına bir **anahtar<T \>** Designer eklenir.
 
-**Switch<T tasarımcısının özellikleri \> aşağıda ve** ardından ve ardından ve ve ardından 2. Bu özelliklerin hepsi özellik kılavuzunda düzenlenebilir. Bunlardan bazıları tasarımcı yüzeyinde de düzenlenebilir.
+**Anahtar<T \>** Designer 'ın özellikleri aşağıda verilmiştir. Bu özelliklerin tümü, özellik kılavuzunda düzenlenebilir. Bunlardan bazıları tasarımcı yüzeyi üzerinde de düzenlenebilir.
 
-Aşağıdaki tabloda en kullanışlı özellikler <xref:System.Activities.Statements.Switch%601> ve bunların tasarımcıda nasıl kullanıldıkları açık bulunmaktadır.
+Aşağıdaki tabloda en yararlı <xref:System.Activities.Statements.Switch%601> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinlik tasarımcısının kolay <xref:System.Activities.Statements.Switch%601> adını belirtir. Varsayılan değer, Switch<Int32'dir. \> Değer, Özellikler penceresinde veya **doğrudan** tasarımcı üst bilgisinde düzenlenebilir.<br /><br /> kesinlikle <xref:System.Activities.Activity.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.Switch%601.Expression%2A>|Doğru|Hangi büyük/büyük/büyük/büyük harf yürütülecek olduğunu belirlemek için cases koleksiyonunda bulunan anahtarlara karşılaştırmak için kullanılan ifadeyi belirtir.|
-|<xref:System.Activities.Statements.Switch%601.Default%2A>||Eşleşme bulunamasa yürütülen etkinliği belirtir. Tasarımcıda **Etkinlik ekle** düğmesine tıklayarak **etkinliğin bırakılan** Varsayılan kutusunu açın.|
-|<xref:System.Activities.Statements.Switch%601.Cases%2A>||Değerlendirilecek servis durumlarını belirtir. Bir olay eklemek için Anahtar **tasarımcısının altındaki** Yeni büyük/küçük harf ekle **düğmesine \<T>** tıklayın. Düğme bir metin kutusuna (Anahtar eklerken seçilen genel tür Dize veya Enum ise \<T> birleşik giriş kutusu) olarak değişir. Durum değeri kutusuna  bir anahtar ekledikten sonra, büyük/küçük harf alanı genişletildi ve olay için yürütme mantığını tanımlamak üzere "Etkinliği buraya bırak" ipucu metninin bulunduğu bir etkinlik bırakabilirsiniz.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.Switch%601> . Varsayılan değer<Int32 ' dir \> . Değer, **Özellikler** penceresinde veya doğrudan tasarımcı üstbilgisinde düzenlenebilir.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.Switch%601.Expression%2A>|Doğru|Hangi durumun yürütüleceğini öğrenmek için servis talepleri koleksiyonundaki anahtarlarla karşılaştırmak için kullanılan ifadeyi belirtir.|
+|<xref:System.Activities.Statements.Switch%601.Default%2A>||Hiçbir eşleşme bulunmazsa yürütülen etkinliği belirtir. Etkinliğin bırakılbileceği **varsayılan** kutuyu açmak için tasarımcıda **etkinlik Ekle** düğmesine tıklayın.|
+|<xref:System.Activities.Statements.Switch%601.Cases%2A>||Değerlendirilecek çalışmaları belirtir. Bir durum eklemek için, **anahtar \<T>** Tasarımcısı ' nın alt kısmındaki **yeni durum Ekle** düğmesine tıklayın. Düğme, bir TextBox olarak değişir (anahtar eklenirken seçili genel tür \<T> dize veya sabit listesi ise Birleşik giriş kutusu). **Case değer** kutusuna bir anahtar eklendikten sonra, Case alanı genişler ve bir etkinlik, durum için yürütme mantığını tanımlamak üzere ipucu metninde "etkinliği buraya bırak" olarak da çalıştırılabilir.|
 
-Durum anahtarları çoğaltılmış değil sürece birden çok durum eklenebilir. Aksi takdirde, belirtilen büyük/küçük harf anahtarının zaten mevcut olduğunu ve farklı bir anahtar seçmeniz gerektiğini bildiren bir hata iletişim kutusu görüntülenir. Anahtar **\<T> tasarımcısında,** aynı anda yalnızca bir durum alanı genişletilmiş görünümde olabilir. Bir olay alanı daraltılmış görünümde ise, büyük/küçük harf alanına tıklarsanız bu alan genişler. Daraltılmış bir durum için tasarımcının etkinliğin görünen adını varsa sağ tarafta büyük/küçük harf içinde gösterir. Aksi takdirde, **tıklarsanız durumu** genişleten ve etkinlik eklemenize olanak sağlayan Etkinlik ekle düğmesini gösterir.
+Büyük/küçük harf anahtarları yinelenmediğinden, birden çok durum eklenebilir. Aksi halde, belirtilen Case anahtarının zaten var olduğunu ve farklı bir anahtar seçmeniz gerektiğini bildiren bir hata iletişim kutusu görüntülenir. **Anahtar \<T>** tasarımcısında, tek seferde yalnızca bir Case alanı genişletilmiş görünümde olabilir. Bir Case alanı daraltılmış görünümdayken, büyük/küçük harfe tıklamak onu genişletir. Daraltılan bir durumda tasarımcı, etkinliğin görünen adını, varsa sağ taraftaki büyük küçük harf olarak gösterir. Aksi takdirde, bu durum, tıkladığınızda ve bir etkinlik eklemenize olanak varsa, bu durumu genişleten **bir etkinlik Ekle** düğmesi gösterir.
 
-Mevcut büyük/küçük harf anahtarına tıklarsanız, büyük/küçük harf anahtarını düzenleyemezsiniz.
+Mevcut durumda olan anahtara tıkladığınızda, bir etiketten anahtar TextBox olarak değişir. böylece, Case anahtarını düzenleyebilmenizi sağlayabilirsiniz.
 
-Bir durumu silmenin 2 yolu vardır:
+Bir servis talebi silmenin 2 yolu vardır:
 
-- Büyük/son durumu seçin ve silin.
+- Büyük/küçük harf ' i seçin ve silin.
 
-- Durumu seçin, bağlam menüsünü görüntülemek için sağ tıklayın ve Sil'i **seçin.**
+- Büyük/küçük harf ' i seçin, sağ tıklayarak bağlam menüsünü görüntüleyin ve **Sil**' i seçin.
 
-Silmek için büyük/büyük/yeni bir harf seçmeniz gerektiğini unutmayın. Bir olay içindeki etkinliği seçmek ve silmek yalnızca etkinliği siler, büyük/küçük harfe değil yalnızca etkinliği siler.
+Silmek için büyük/küçük harf ' i seçmeniz gerektiğini unutmayın. Etkinlik yalnızca bir servis talebi içinde seçilip silindiğinde etkinlik yalnızca durum değil olarak silinir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

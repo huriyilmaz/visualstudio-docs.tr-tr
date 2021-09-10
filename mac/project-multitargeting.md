@@ -6,12 +6,12 @@ author: jmatthiesen
 ms.author: jomatthi
 ms.date: 12/12/2019
 ms.assetid: 2a561af4-f1fe-493e-9a53-aa6d77d15498
-ms.openlocfilehash: 003c2f683b52f3def4037dd2274f3e4f3c322cd37927508b59ffb85e721065e6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 3d1372ab5bd08ce164352293ec9d341ca567e3d5
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121438608"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964807"
 ---
 # <a name="projects-with-multiple-target-frameworks"></a>Birden çok hedef çerçeve içeren projeler
 Mac için Visual Studio, bir Xamarin veya .net Core projesini .NET Framework çeşitli sürümlerinden herhangi birinde ve çeşitli sistem platformlarından herhangi birinde çalışacak şekilde yapılandırabilirsiniz. örneğin, bir projeyi hem .NET Framework 4,6 hem de .net Core 3,1 üzerinde çalışacak şekilde hedefleyebilirsiniz. 

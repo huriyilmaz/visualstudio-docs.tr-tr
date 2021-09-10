@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - Akış Çizelgesi Etkinlik Tasarımcıları
-description: Bir iş akışı içindeki akış çizelgelerini yönetmek için kullanabileceğiniz sistem tarafından sağlanan etkinlikleri içeren Flowchart Etkinlik Tasarımcıları hakkında bilgi öğrenin.
+title: İş Akışı Tasarımcısı-akış çizelgesi etkinlik tasarımcıları
+description: Bir iş akışı içindeki akış çizelgeleriyle yönetmek için kullanabileceğiniz sistem tarafından belirtilen etkinlikleri içeren akış çizelgesi etkinlik tasarımcıları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,15 +12,15 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 369d1ba066fb1a87a13c9204bd0bb45a897153d8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122099080"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963697"
 ---
 # <a name="flowchart-activity-designers"></a>Flowchart Etkinlik Tasarımcıları
 
-İş Akışı Tasarımcısı, iş akışlarınızı oluşturmak için kullanabileceğiniz bir dizi sistem tarafından sağlanan etkinlik içerir. Bu bölüm, bir iş akışı içindeki akış çizelgelerini yönetmek için kullanılan sistem tarafından sağlanan etkinlikleri içerir. Aşağıdaki konular bu etkinlikleri açıklar ve bunların nasıl kullanımına ilişkin rehberlik sağlar.
+İş Akışı Tasarımcısı, iş akışlarınızı oluştururken kullanabileceğiniz, sistem tarafından sağlanmış bir dizi etkinliği içerir. Bu bölüm, bir iş akışı içindeki akış çizelgeleriyle yönetmek için kullanılan sistem tarafından sağlanmış etkinlikleri içerir. Aşağıdaki konular bu etkinlikleri anlatmaktadır ve bunların nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="reference"></a>Başvuru
  <xref:System.Activities.Activity>
@@ -48,4 +48,4 @@ ms.locfileid: "122099080"
 
  [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
- [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
+ [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)

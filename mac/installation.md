@@ -8,12 +8,12 @@ ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: a8d1d17e78a0141530f984442eec07205e106857708744cd0e55e1ea033be4f7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 653e653a0574da52c0030b06c7a8c13b436ed686
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121407618"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964781"
 ---
 # <a name="install-visual-studio-2019-for-mac"></a>Mac Visual Studio 2019'u yükleme
 
@@ -30,7 +30,7 @@ iOS veya macOS için Xamarin uygulamaları oluşturmak için şunları da gereki
 
 - Xcode'un en son sürümüyle uyumlu bir Mac. Apple'ın en düşük [gereksinimler belgelerine bakın](https://developer.apple.com/support/xcode/)
 - [Xcode'un en son sürümü.](https://developer.apple.com/xcode) Mac'iniz [en son sürümle uyumlu değilse Xcode'un](https://docs.microsoft.com/xamarin/ios/troubleshooting/questions/old-version-xcode) eski bir sürümünü kullanmak mümkün olabilir.
-- Apple kimliği. Apple kimliğiniz yoksa, 'de yeni bir tane https://appleid.apple.com oluşturabilirsiniz. Xcode'u yüklemek ve bu kodda oturum açma için bir Apple kimliğine sahip olmak gerekir.
+- Apple kimliği. Apple kimliğiniz yoksa, 'de yeni bir tane https://appleid.apple.com oluşturabilirsiniz. Xcode'u yüklemek ve bu kodda oturum a açma için bir Apple kimliğine sahip olmak gerekir.
 
 ## <a name="installation-instructions"></a>Yükleme yönergeleri
 
@@ -50,7 +50,7 @@ iOS veya macOS için Xamarin uygulamaları oluşturmak için şunları da gereki
 
 6. Kullanılabilir iş yüklerinin listesi görüntülenir. Kullanmak istediğiniz bileşenleri seçin:
 
-    [![Visual Studio Mac Yükleyicisi'nin yükleme için kullanılabilir bileşenlerin listesini gösteren "Neleri yüklemek için?" ekran görüntüsü.](media/install-selection.png)](media/install-selection.png#lightbox)
+    [![Visual Studio Mac Installer'daki "Neleri yüklemek Visual Studio?" ekranında yükleme için kullanılabilen bileşenlerin listesini gösteren ekran görüntüsü.](media/install-selection.png)](media/install-selection.png#lightbox)
 
    Tüm platformları yüklemek isterseniz, hangi platformların yüklen karar vermelerine yardımcı olması için aşağıdaki kılavuzu kullanın:
 
@@ -81,11 +81,11 @@ iOS veya macOS için Xamarin uygulamaları oluşturmak için şunları da gereki
 Sürüm notlarında değişiklikler hakkında daha fazla [bilgi alın.](/visualstudio/releasenotes/vs2019-mac-relnotes)
 
 > [!NOTE]
-> Özgün yükleme sırasında bir platform veya araç yüklememeyi seçtiyebilirsiniz (#6 adımlarında seçimi kaldırarak), bileşenleri daha sonra eklemek isterseniz yükleyiciyi yeniden çalıştırmalısınız.
+> Özgün yükleme sırasında bir platform veya araç yüklememeyi seçtiyebilirsiniz (#6 adım adım seçimini kaldırarak), bileşenleri daha sonra eklemek isterseniz yükleyiciyi yeniden çalıştırmalısınız.
 
-## <a name="install-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Güvenlik Mac için Visual Studio veya ara sunucu arkasına yükleme
+## <a name="install-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Güvenlik Mac için Visual Studio ara sunucunun arkasına yükleme
 
-Güvenlik duvarının Mac için Visual Studio yüklemek için, yazılımınız için gerekli araçların ve güncelleştirmelerin indirilmelerine izin vermek amacıyla belirli uç noktaların erişilebilir hale olması gerekir.
+Güvenlik duvarının Mac için Visual Studio yüklemek için, yazılımınız için gerekli araç ve güncelleştirmelerin indirilmelerine izin vermek amacıyla belirli uç noktaların erişilebilir hale olması gerekir.
 
 Anızı aşağıdaki konumlara erişime izin verecek şekilde yapılandırma:
 

@@ -1,5 +1,5 @@
 ---
-title: Yönetim Visual Studio sayfasındaki abonelikleri | Microsoft Docs
+title: Yönetim Visual Studio portalında abonelikleri | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
@@ -7,12 +7,12 @@ ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
 ms.date: 03/21/2021
 ms.topic: how-to
 description: Yöneticilerin abonelik atamalarını nasıl düzenleyemezlerini öğrenin.
-ms.openlocfilehash: 0a732737e129374433754890928141b6b3c81c57aa87764b4af17e996af39726
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b1779b80cc295e680ff1856181be42a6390fe25b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121364609"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966279"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Abonelik Visual Studio düzenleme
 Abonelik yöneticisi olarak, kuruluş içindeki kişilere atanan aboneliklerde değişiklik yapabilirsiniz.  Bu makalede, ne tür değişiklikler yaptığınız ele alınarak gerekli adımlar velanmıştır.

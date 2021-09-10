@@ -7,11 +7,11 @@ ms.date: 05/06/2018
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
 ms.topic: overview
 ms.openlocfilehash: 3dfeea15e0d9003e3ae0e46b74c844016d298595
-ms.sourcegitcommit: 879ba768364f3bfdaeb9004f740478489ab15c3a
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114796196"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123962243"
 ---
 # <a name="managing-references-in-a-project"></a>Project başvuruları yönetme
 

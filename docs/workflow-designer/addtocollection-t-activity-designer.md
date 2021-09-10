@@ -14,11 +14,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: a204e6147b18938d20a94c0a41c06e8983d4026e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122068157"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963710"
 ---
 # <a name="addtocollectiont-activity-designer"></a>AddToCollection\<T> Etkinlik Tasarımcısı
 
@@ -32,7 +32,7 @@ Etkinlik <xref:System.Activities.Statements.AddToCollection%601> bir koleksiyona
 
 **AddToCollection \<T>** etkinlik tasarımcısı, araç kutusunun Araç Kutusu sekmesine tıklayarak erişilen  Araç Kutusu'nun Koleksiyon İş Akışı Tasarımcısı.  Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
 
-**AddToCollection \<T>** etkinlik tasarımcısı **Toolbox'tan** sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirildikten sonra bu veri yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. **AddToCollection etkinlik \<T> tasarımcısı bırakarak,** <xref:System.Activities.Statements.AddToCollection%601> <xref:System.Activities.Activity.DisplayName%2A> Int32'de varsayılan AddToCollection<bir etkinlik \> oluşturur. *(TypeArgument* varsayılan olarak **Int32'dir.** TypeArgument, özellik kılavuzunda değiştirilebilir.) Değer, <xref:System.Activities.Activity.DisplayName%2A> **\> AddToCollection** üst bilgisinde veya T<tasarımcısında veya özellik **kılavuzundaki DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenemez.
+**AddToCollection \<T>** etkinlik tasarımcısı **Toolbox'tan** sürüklenerek İş Akışı Tasarımcısı bir içinde olduğu gibi etkinlikler yerleştirildikten sonra üzerine <xref:System.Activities.Statements.Sequence> bırakılır. **AddToCollection etkinlik \<T> tasarımcısı bırakarak,** <xref:System.Activities.Statements.AddToCollection%601> <xref:System.Activities.Activity.DisplayName%2A> Int32'de varsayılan AddToCollection<bir etkinlik \> oluşturur. *(TypeArgument* varsayılan olarak **Int32'dir.** TypeArgument, özellik kılavuzunda değiştirilebilir.) Değer, <xref:System.Activities.Activity.DisplayName%2A> **\> AddToCollection** üst bilgisinde<T etkinlik tasarımcısında veya özellik **kılavuzundaki DisplayName** kutusunda düzenlenebilir. Diğer özellikler, özellik kılavuzunda düzenlenemez.
 
 ### <a name="the-addtocollectiont-properties"></a>AddToCollection \<T> Özellikleri
 
@@ -40,10 +40,10 @@ Aşağıdaki tablo, <xref:System.Activities.Statements.AddToCollection%601> öze
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay <xref:System.Activities.Statements.AddToCollection%601> adı. Varsayılan değer, Int32'<AddToCollection'dır. \> Değer <xref:System.Activities.Activity.DisplayName%2A> kesinlikle gerekli değildir ancak bir değer kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay <xref:System.Activities.Statements.AddToCollection%601> adı. Varsayılan değer, Int32<AddToCollection'dır. \> Değer <xref:System.Activities.Activity.DisplayName%2A> kesinlikle gerekli değildir ancak bir değer kullanmak en iyi uygulamadır.|
 |<xref:System.Activities.Statements.AddToCollection%601.Item%2A>|Doğru|Koleksiyonuna ek olarak \<T> öğesi. Bu öğe T *türündedir* ve *TypeArgument türündedir.* Öğeyi belirtmek için, özellik kılavuzunda Visual Basic bir ifade yazın.|
 |<xref:System.Activities.Statements.AddToCollection%601.Collection%2A>|Doğru|Öğenin ekleniyor olması gereken koleksiyon. Bu koleksiyon, **TypeArgument için ICollection \><türündedir.** Koleksiyonu belirtmek için özellik kılavuzuna Visual Basic bir ifade yazın.|
-|*TypeArgument*|Doğru|içinde yer alan öğelerin T <xref:System.Collections.Generic.ICollection%601> türü. Varsayılan olarak, bu *TypeArgument* türü **Int32 olarak ayarlanır.** Türü değiştirmek için özellik kılavuzunda birleşik giriş kutusunda *TypeArgument* değerini değiştirebilirsiniz.|
+|*TypeArgument*|Doğru|içinde bulunan öğelerin T <xref:System.Collections.Generic.ICollection%601> türü. Varsayılan olarak, bu *TypeArgument* türü **Int32 olarak ayarlanır.** Türü değiştirmek için özellik kılavuzunda birleşik giriş kutusunda *TypeArgument* değerini değiştirebilirsiniz.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

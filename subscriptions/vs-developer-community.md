@@ -7,12 +7,12 @@ ms.assetid: 44a790d1-f37e-4be0-9023-af1b3fdfcd35
 ms.date: 03/17/2021
 ms.topic: conceptual
 description: seçilen Visual Studio aboneliklerine dahil olan geliştirici Community destek avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 54b7023b6ad8e19ccc62016400810ab5cda757f6012905051ebe0b103f3b0b6b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 68629db57397d42f91c778ee075f3a51ce2a9c78
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121406809"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966569"
 ---
 # <a name="developer-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde geliştirici Community destek forumu
 geliştirici Community forumlarında sorularınızı gönderin, yanıtlar bulun ve bilgilerinizi paylaşabilirsiniz.
@@ -47,7 +47,7 @@ Azure Community avantajı 'nın kullanılabilirliği, aşağıda gösterildiği 
 |                          GitHub Enterprise aboneliği Visual Studio Professional                          | VL, Azure, perakende |   Kullanılabilir    |    Yes     |
 |                              Visual Studio Test Professional (standart)                               |    VL, perakende     |   Kullanılabilir    |    Yes     |
 |                                       MSDN Platformları (Standart)                                       |    VL, perakende     |   Kullanılabilir    |    Yes     |
-| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut)|        Tümü        | Kullanılamaz |     Hayır     |
+| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut)|        Tümü        | Kullanılamaz |     No     |
 
 <sup>1</sup>*şunları içerir: için değil (nfr), Microsoft fte, en değerli Professional (MVP), bölgesel müdürü (RD), Visual Studio sektör ortağı (vsıp), BizSpark, Imagine, Microsoft sertifikalı trainer (mct).  Dışlar: NFR Basic*  
 

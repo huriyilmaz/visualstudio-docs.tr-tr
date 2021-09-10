@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı durumu etkinlik Tasarımcısı
-description: Bir iş akışına durum eklemek için StateMachine etkinliği ve durum etkinliği tasarımcısını nasıl kullanabileceğinizi öğrenin.
+title: İş Akışı Tasarımcısı - Durum Etkinliği Tasarımcısı
+description: StateMachine etkinliği hakkında bilgi ve bir iş akışına durum eklemek için State etkinlik tasarımcısını nasıl kullanabileceğiniz hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,30 +14,30 @@ ms.workload:
 - multiple
 author: TerryGLee
 ms.openlocfilehash: 2a0d23bedea24a68285e90faf8ee39fd46de90fc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122135279"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963733"
 ---
 # <a name="state-activity-designer"></a>State Etkinlik Tasarımcısı
 
-Bir <xref:System.Activities.Statements.State> durum makinesinin içinde olabilecek bir durumu temsil eder.
+, <xref:System.Activities.Statements.State> durum makinesinin içinde yer alan bir durumu temsil eder.
 
-## <a name="using-the-state-activity-designer"></a>Durum etkinliği tasarımcısını kullanma
+## <a name="using-the-state-activity-designer"></a>Durum Etkinliği Tasarımcısını Kullanma
 
-Bir iş akışına bir eklemek için <xref:System.Activities.Statements.State> , **durum** etkinlik tasarımcısını **araç kutusunun** **durum makinesi** bölümünden sürükleyin ve <xref:System.Activities.Statements.StateMachine> iş akışı Tasarımcısı yüzeyinde bir etkinliğe bırakın. Bir <xref:System.Activities.Statements.State> etkinlik bir <xref:System.Activities.Statements.StateMachine> ve daha sonra eklenen geçişler üzerinde bırakılabilir veya <xref:System.Activities.Statements.State> etkinlik bırakılmakta olduğundan bir geçiş oluşturulabilir. <xref:System.Activities.Statements.State>Tek adımda bir etkinlik eklemek ve bir geçiş oluşturmak için, **araç kutusunun** **durum makinesi** bölümünden bir **durum** etkinliği sürükleyin ve iş akışı tasarımcısında başka bir durum üzerine gelin. Sürüklenen <xref:System.Activities.Statements.State> bir diğerinin üzerindeyken <xref:System.Activities.Statements.State> , diğerinin etrafında dört üçgen görünür <xref:System.Activities.Statements.State> . <xref:System.Activities.Statements.State>Dört üçgenden birine bırakıldığında, durum makinesine eklenir ve kaynaktan bırakılan hedefe bir geçiş oluşturulur <xref:System.Activities.Statements.State> <xref:System.Activities.Statements.State> . Daha fazla bilgi için bkz. [geçiş](../workflow-designer/transition-activity-designer.md).
+Bir iş akışına eklemek için, Durum etkinliği tasarımcısını Araç Kutusunun State Machine bölümünden sürükleyin ve bu tasarımcının İş Akışı Tasarımcısı <xref:System.Activities.Statements.State>    <xref:System.Activities.Statements.StateMachine> bırakın. Bir etkinlik üzerine bırakılır ve daha sonra eklenen geçişler veya etkinlik <xref:System.Activities.Statements.State> <xref:System.Activities.Statements.StateMachine> bırakılırken <xref:System.Activities.Statements.State> bir geçiş oluşturulabilir. Bir etkinlik eklemek ve bir adımda geçiş oluşturmak için, Araç Kutusunun State Machine bölümünden bir State etkinliğini sürükleyin ve iş akışı tasarımcısında başka bir <xref:System.Activities.Statements.State> durum üzerine gelin.    Sürüklenen başka <xref:System.Activities.Statements.State> bir <xref:System.Activities.Statements.State> üzerine geldiğinde, diğerinde dört üçgen <xref:System.Activities.Statements.State> görünür. dört üçgenden biri üzerine bırakılırsa, durum makinesine eklenir ve kaynaktan bırakılan hedefe <xref:System.Activities.Statements.State> bir <xref:System.Activities.Statements.State> geçiş <xref:System.Activities.Statements.State> oluşturulur. Daha fazla bilgi için bkz. [Geçiş](../workflow-designer/transition-activity-designer.md).
 
-### <a name="state-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı durum etkinliği özellikleri
+### <a name="state-activity-properties-in-the-workflow-designer"></a>İş Akışı Tasarımcısı'da Durum Etkinliği Özellikleri
 
-Aşağıdaki tabloda, <xref:System.Activities.Statements.State> iş akışı Tasarımcısı kullanılarak ayarlanmakta olabilecek özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özelliklerden bazıları özellik kılavuzunda düzenlenebilir ve bazıları tasarımcı yüzeyinde düzenlenebilirler.
+Aşağıdaki tabloda iş <xref:System.Activities.Statements.State> akışı tasarımcısı kullanılarak ayarlanacak özellikler ve bunların tasarımcıda nasıl kullanıldıkları açık bulunmaktadır. Bu özelliklerden bazıları özellik kılavuzunda, bazıları ise tasarımcı yüzeyinde düzenlenebilir.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Statements.State.DisplayName%2A>|Yanlış|Başlıktaki etkinlik tasarımcısının kolay adını belirtir <xref:System.Activities.Statements.State> . Varsayılan değer **durumdur**. Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir. , <xref:System.Activities.Statements.State.DisplayName%2A> İş akışı tasarımcısının üst kısmında görüntülenen içerik haritası gezintisinde kullanılır.<br /><br /> <xref:System.Activities.Statements.State.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.State.Entry%2A>|Yanlış|Bu durum öğesine geçiş yapıldığında oluşan eylemi belirtir. <xref:System.Activities.Statements.State>Etkinlik genişletildiğinde, bu değer **araç kutusundan** bir etkinlik sürüklenerek durumun **giriş** bölümüne bırakılarak ayarlanabilir.|
-|<xref:System.Activities.Statements.State.Exit%2A>|Yanlış|Bu durum öğesinden uzağa geldiğinde oluşan eylemi belirtir. <xref:System.Activities.Statements.State>Etkinlik genişletildiğinde, bu değer **araç kutusundan** bir etkinlik sürüklenerek durumun **Çıkış** bölümüne bırakılarak ayarlanabilir.|
-|<xref:System.Activities.Statements.State.Transitions%2A>|Yanlış|Kaynağından kaynaklanan olası geçişleri listeler <xref:System.Activities.Statements.State> . Listedeki her öğe, ilişkili ve hedefe bir bağlantı içerir <xref:System.Activities.Statements.Transition> <xref:System.Activities.Statements.State> . Bağlantıya tıkladığınızda tasarımcı veya uygulamasının genişletilmiş görünümüne geçiş yapılır <xref:System.Activities.Statements.Transition> <xref:System.Activities.Statements.State> .|
+|<xref:System.Activities.Statements.State.DisplayName%2A>|Yanlış|Üst bilgide etkinlik <xref:System.Activities.Statements.State> tasarımcısının kolay adını belirtir. Varsayılan değer State **değeridir.** Değer, özellik kılavuzunda veya doğrudan etkinlik tasarımcısının üst bilgisinde düzenlenebilir. <xref:System.Activities.Statements.State.DisplayName%2A>, iş akışı tasarımcısının üst kısmında görüntülenen içerik harita gezintisinde kullanılır.<br /><br /> kesinlikle <xref:System.Activities.Statements.State.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.State.Entry%2A>|Yanlış|Bu durum'a geçiş olduğunda oluşan eylemi belirtir. Etkinlik genişletilirken, bu değer Araç Kutusundan bir etkinlik sürükleyerek ve durumun Giriş bölümüne <xref:System.Activities.Statements.State> **bırakarak**  ayarlanabilirsiniz.|
+|<xref:System.Activities.Statements.State.Exit%2A>|Yanlış|Bu durum'dan geçiş olduğunda oluşan eylemi belirtir. Etkinlik <xref:System.Activities.Statements.State> genişletilirken, bir etkinlik Araç Kutusundan sürükleyip durumun **Çıkış** bölümüne bırakarak bu değer ayar olabilir. |
+|<xref:System.Activities.Statements.State.Transitions%2A>|Yanlış|kaynağından kaynaklanan olası geçişleri <xref:System.Activities.Statements.State> listeler. Listede yer alan her öğenin ilişkili ve hedefine <xref:System.Activities.Statements.Transition> bir bağlantısı <xref:System.Activities.Statements.State> vardır. Bağlantıya tıklar, tasarımcıyı veya 'nin genişletilmiş görünümüne <xref:System.Activities.Statements.Transition> <xref:System.Activities.Statements.State> geçiştir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

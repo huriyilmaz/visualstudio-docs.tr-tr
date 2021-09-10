@@ -12,11 +12,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 30d5e71ced0c886531c1e9728a0224e56d8161ea
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122099184"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963688"
 ---
 # <a name="error-handling-activity-designers"></a>Hata İşleme Etkinlik Tasarımcıları
 

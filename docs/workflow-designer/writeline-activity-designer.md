@@ -14,11 +14,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: daa88d858af5b99beda41631c6c139be9aff425d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122025179"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963715"
 ---
 # <a name="writeline-activity-designer"></a>WriteLine Etkinlik Tasarımcısı
 
@@ -30,11 +30,11 @@ Etkinlik, <xref:System.Activities.Statements.WriteLine> belirtilen bir nesneye m
 
 ### <a name="using-the-writeline-activity-designer"></a>WriteLine Etkinlik Tasarımcısını Kullanma
 
-Araç Kutusunun Temel Öğeler **kategorisindeki** **WriteLine** etkinlik **tasarımcısına erişin.** **WriteLine etkinlik** tasarımcısı, **Araç** Kutusundan sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirilmelerinden sonra araç yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.WriteLine> WriteLine değerine <xref:System.Activities.Activity.DisplayName%2A> sahip bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, **WriteLine** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
+Araç Kutusunun Temel Öğeler **kategorisindeki** **WriteLine** etkinlik **tasarımcısına erişin.** **WriteLine etkinlik** tasarımcısı Araç Kutusundan  sürüklenip bir içinde olduğu gibi, İş Akışı Tasarımcısı yerleştirildikten sonra bu alan yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.WriteLine> WriteLine değerine <xref:System.Activities.Activity.DisplayName%2A> sahip bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, **WriteLine** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
 
 ### <a name="the-writeline-properties"></a>WriteLine Özellikleri
 
-Aşağıdaki tablo, <xref:System.Activities.Statements.WriteLine> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazı özellikler yüzeyde İş Akışı Tasarımcısı düzenlenebilir.
+Aşağıdaki tablo, <xref:System.Activities.Statements.WriteLine> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazı özellikler tek bir İş Akışı Tasarımcısı düzenlenebilir.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|

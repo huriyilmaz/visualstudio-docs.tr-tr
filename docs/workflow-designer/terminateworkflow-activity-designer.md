@@ -1,6 +1,6 @@
 ---
-title: TerminateWorkflow etkinlik tasarımcısı
-description: Bu İş Akışı Tasarımcısı, terminateWorkflow etkinlik tasarımcısını kullanarak bir TerminateWorkflow etkinliği oluşturma ve yapılandırma hakkında bilgi öğrenin.
+title: TerminateWorkflow etkinlik Tasarımcısı
+description: İş Akışı Tasarımcısı, bir TerminateWorkflow etkinliği oluşturmak ve yapılandırmak için TerminateWorkflow etkinlik Tasarımcısı 'nı nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,35 +14,35 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 5d4fe0b77c91b36440cbb760b3e192af453c4f58
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122025413"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963723"
 ---
 # <a name="terminateworkflow-activity-designer"></a>TerminateWorkflow Etkinlik Tasarımcısı
 
-**TerminateWorkflow etkinlik** tasarımcısı, etkinlik oluşturmak ve yapılandırmak için <xref:System.Activities.Statements.TerminateWorkflow> kullanılır.
+**TerminateWorkflow** etkinlik Tasarımcısı, etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.TerminateWorkflow> .
 
-## <a name="the-terminateworkflow-activity"></a>TerminateWorkflow Etkinliği
+## <a name="the-terminateworkflow-activity"></a>TerminateWorkflow etkinliği
 
-Etkinlik, <xref:System.Activities.Statements.TerminateWorkflow> bir iş akışının yürütülmesini sonlandırılır.
+<xref:System.Activities.Statements.TerminateWorkflow>Etkinlik, bir iş akışının yürütülmesini sonlandırır.
 
-### <a name="using-the-terminateworkflow-activity-designer"></a>TerminateWorkflow Etkinlik Tasarımcısını Kullanma
+### <a name="using-the-terminateworkflow-activity-designer"></a>TerminateWorkflow etkinlik tasarımcısını kullanma
 
-**TerminateWorkflow** etkinlik tasarımcısı, **Araç**  Kutusu sekmesine tıklayarak erişilen Araç Kutusunun  Çalışma Zamanı kategorisinde bulunabilir (Alternatif  olarak, Görünüm menüsünden Araç Kutusu'nı veya CTRL+ALT+X'i seçin.) 
+**TerminateWorkflow** etkinlik **Tasarımcısı araç kutusu sekmesine** tıklanarak erişilen (alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu veya Ctrl + Alt + X ' i seçerek), **araç kutusunun** **çalışma zamanı** kategorisinde bulunabilir.
 
-**TerminateWorkflow** etkinlik tasarımcısı Araç Kutusundan  sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirildiği her yerde bu veri yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.TerminateWorkflow> TerminateWorkflow **DisplayName değerine** sahip bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, **TerminateWorkflow** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
+**TerminateWorkflow** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.TerminateWorkflow> , TerminateWorkflow varsayılan **DisplayName** 'i olan bir etkinlik oluşturur. , <xref:System.Activities.Activity.DisplayName%2A> **TerminateWorkflow** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 
-### <a name="the-terminateworkflow-properties"></a>TerminateWorkflow Özellikleri
+### <a name="the-terminateworkflow-properties"></a>TerminateWorkflow özellikleri
 
-Aşağıdaki tablo, <xref:System.Activities.Statements.TerminateWorkflow> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazı özellikler yüzeyde İş Akışı Tasarımcısı düzenlenebilir.
+Aşağıdaki tabloda <xref:System.Activities.Statements.TerminateWorkflow> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları İş Akışı Tasarımcısı yüzeyinde düzenlenebilirler.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay <xref:System.Activities.Statements.TerminateWorkflow> adı. Varsayılan değer TerminateWorkflow'dır. Görünen ad kesinlikle gerekli değildir ancak görünen ad kullanmak en iyi yöntemdir.|
-|<xref:System.Activities.Statements.TerminateWorkflow.Exception%2A>|Yanlış|İş akışı sonlandırıldı olduğunda atılacak özel durum. Özellik kılavuzunda bu özelliği ayarlayın.|
-|<xref:System.Activities.Statements.TerminateWorkflow.Reason%2A>|Yanlış|İş akışının neden sonlandırılma nedenini açıklar. Özellik kılavuzunda bu özelliği ayarlayın.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.Activities.Statements.TerminateWorkflow> . Varsayılan değer TerminateWorkflow ' dır. Görünen ad kesinlikle gerekli olmasa da, bir görünen ad kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.TerminateWorkflow.Exception%2A>|Yanlış|İş akışı sonlandırıldığı zaman throw özel durumu. Özellik kılavuzunda bu özelliği ayarlayın.|
+|<xref:System.Activities.Statements.TerminateWorkflow.Reason%2A>|Yanlış|İş akışının neden sonlandırıldığını açıklayan neden. Özellik kılavuzunda bu özelliği ayarlayın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

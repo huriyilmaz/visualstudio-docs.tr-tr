@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - Delay Etkinlik Tasarımcısı
-description: Gecikme etkinlikleri ve Gecikme etkinliği oluşturmak ve yapılandırmak için Gecikme etkinliği tasarımcısını nasıl kullanabileceğiniz hakkında bilgi edinmek.
+title: İş Akışı Tasarımcısı-gecikme etkinlik Tasarımcısı
+description: Gecikme etkinlikleri ve bir gecikme etkinliği oluşturmak ve yapılandırmak için gecikme etkinliği tasarımcısını nasıl kullanabileceğiniz hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,39 +14,39 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 71618b2ebbd0abc6f089ad9838942a99d0897e7c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122099236"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963714"
 ---
 # <a name="delay-activity-designer"></a>Delay Etkinlik Tasarımcısı
 
-Etkinlik **oluşturmak** ve yapılandırmak için Delay etkinlik tasarımcısı <xref:System.Activities.Statements.Delay> kullanılır.
+**Gecikme** etkinliği Tasarımcısı, etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.Delay> .
 
 ## <a name="the-delay-activity"></a>Gecikme etkinliği
 
-Etkinlik, <xref:System.Activities.Statements.Delay> iş akışının yürütülmesini belirli bir süre geciktirmektedir.
+<xref:System.Activities.Statements.Delay>Etkinlik, bir iş akışının belirli bir süre boyunca yürütülmesini geciktirir.
 
-### <a name="use-the-delay-activity-designer"></a>Delay Etkinlik Tasarımcısını Kullanma
+### <a name="use-the-delay-activity-designer"></a>Gecikme etkinliği tasarımcısını kullanma
 
-Gecikme **etkinliği** tasarımcısı, araç  kutusunun Araç Kutusu sekmesine tıklayarak erişilen Araç Kutusunun **Temel** öğeler kategorisinde İş Akışı Tasarımcısı. Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
+**Gecikme** etkinlik tasarımcısı, iş akışı Tasarımcısı araç **kutusu** sekmesine tıklanarak erişilen **araç kutusu**' nu **temel elemanlar** kategorisinde bulunabilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
-Gecikme **etkinliği** tasarımcısı Araç Kutusundan **sürüklenip** bir içinde olduğu gibi, İş Akışı Tasarımcısı yerleştirildikten sonra araç yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Etkinlik tasarımcısını bırakarak, varsayılan <xref:System.Activities.Statements.Delay> Delay değerine sahip bir <xref:System.Activities.Activity.DisplayName%2A> etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, Delay etkinlik tasarımcısının üst  bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
+**Gecikme** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, örneğin içinde olduğu gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Etkinlik Tasarımcısı ' nın atılması, <xref:System.Activities.Statements.Delay> varsayılan gecikmeyle bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . , <xref:System.Activities.Activity.DisplayName%2A> **Gecikme** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 
 ### <a name="the-delay-properties"></a>Gecikme özellikleri
 
-Aşağıdaki tabloda özellikler <xref:System.Activities.Statements.Delay> ve bunların tasarımcıda nasıl kullanıldıkları açık bulunmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bunlardan bazıları, İş Akışı Tasarımcısı düzenlenebilir.
+Aşağıdaki tabloda <xref:System.Activities.Statements.Delay> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları İş Akışı Tasarımcısı yüzeyinde düzenlenebilirler.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay <xref:System.Activities.Statements.Delay> adı. Varsayılan değer Gecikme'dir. Değer kesinlikle gerekli değildir ancak en iyi yöntem bunlardan birini <xref:System.Activities.Activity.DisplayName%2A> kullanmaktır.|
-|<xref:System.Activities.Statements.Delay.Duration%2A>|Doğru|İş akışını geciktirme süresi. Bu özellik, özellik kılavuzunda ayarlanır. Süre miktarını belirtmek için <xref:System.TimeSpan> 00:00:00 biçiminde bir değişmez Visual Basic bir ifade yazın.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.Activities.Statements.Delay> . Varsayılan değer gecikmede yapılır. <xref:System.Activities.Activity.DisplayName%2A>Değer kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.Delay.Duration%2A>|Doğru|İş akışını geciktirmek için geçen süre. Bu özellik, özellik kılavuzunda ayarlanır. <xref:System.TimeSpan>süreyi belirtmek için 00:00:00 biçiminde veya Visual Basic ifadesinde bir sabit değer yazın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Temel Türler](../workflow-designer/primitives-activity-designers.md)
-- [Atamak](../workflow-designer/assign-activity-designer.md)
+- [Ata](../workflow-designer/assign-activity-designer.md)
 - [Delay Etkinlik Tasarımcısı](../workflow-designer/delay-activity-designer.md)
 - [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)
 - [WriteLine](../workflow-designer/writeline-activity-designer.md)

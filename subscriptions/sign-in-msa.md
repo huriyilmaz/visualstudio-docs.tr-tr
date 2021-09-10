@@ -1,22 +1,22 @@
 ---
-title: Microsoft hesabı ile Visual Studio aboneliklerinde oturum açın | Microsoft Docs
+title: Microsoft hesabı ile Visual Studio abonelikler için oturum açın | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: cabuschl
 ms.assetid: 19038bb0-2858-49df-9624-cbf8bfbb5d39
 ms.date: 02/19/2021
 ms.topic: how-to
-description: Visual Studio aboneliğinizde Microsoft hesabınızla oturum açma (MSA)
+description: Microsoft hesabınızla Visual Studio aboneliğinizde oturum açma (MSA)
 ms.openlocfilehash: 7e0ef2e9adedc62be7c2c7ca709496d1f075f03c
-ms.sourcegitcommit: f9ed9c4c6c166ef9826feb21dcb9c4d47ed14e1a
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "102607164"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966439"
 ---
 # <a name="signing-in-to-your-visual-studio-subscriptions-with-your-microsoft-account-msa"></a>Microsoft hesabınızla Visual Studio abonelikleriniz (MSA) ile oturum açma
 
-Visual Studio aboneliğinizde oturum açmak için kullandığınız adımlar, kullanmakta olduğunuz hesap türüne bağlıdır.  Örneğin, bir Microsoft hesabı (MSA) veya işvereniniz veya okulunuz tarafından sağlanan bir e-posta adresi kullanıyor olabilirsiniz.  2019 Ocak itibariyle artık bazı aboneliklerde oturum açmak için GitHub hesabınızı da kullanabilirsiniz. 
+Visual Studio aboneliğinizde oturum açma adımları, kullanmakta olduğunuz hesap türüne bağlıdır.  Örneğin, bir Microsoft hesabı (MSA) veya işvereniniz veya okulunuz tarafından sağlanan bir e-posta adresi kullanıyor olabilirsiniz.  2019 ocak itibariyle artık bazı aboneliklerde oturum açmak için GitHub hesabınızı da kullanabilirsiniz. 
 
 Bu makalede, Microsoft hesabınızla oturum açma adımları sağlanır (MSA).
 
@@ -37,11 +37,11 @@ Y: oturum açma sorunlarının en yaygın nedeni, abonelikle ilişkilendirilen b
 
 ### <a name="q--i-cant-see-my-subscription-where-is-it"></a>S: aboneliğimi göremiyorum. Nerede?
 Y: birçok kullanıcının birden fazla aboneliği vardır.  Abonelik portalında oturum açabiliyor https://my.visualstudio.com ancak aboneliğinizi göremiyorsanız, iki genel neden vardır:
-- Farklı bir Microsoft hesabıyla oturum açtınız.  Profesyonel veya kurumsal abonelik ve Visual Studio Dev Essentials üyeliği gibi birden çok aboneliğiniz olabilir ve bunlar farklı e-posta adresleriyle ilişkilendirilir. Diğer abonelikleri görmek için oturumunuzu kapatın ve diğer MSA kullanarak yeniden oturum açın.
+- Farklı bir Microsoft hesabıyla oturum açtınız.  Professional veya Enterprise aboneliği ve Visual Studio Dev Essentials üyeliği gibi birden çok aboneliğiniz olabilir ve bunlar farklı e-posta adresleriyle ilişkilendirilir. Diğer abonelikleri görmek için oturumunuzu kapatın ve diğer MSA kullanarak yeniden oturum açın.
 - Aynı MSA ile ilişkili birden fazla aboneliğiniz var.  MSA ile ilişkili tüm abonelikleri görmek için, https://my.visualstudio.com/subscriptions kullanmak istediğiniz aboneliği ziyaret edin ve seçin. 
 
 ## <a name="resources"></a>Kaynaklar 
-- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://aka.ms/vssubscriberhelp).
+- Visual Studio abonelikleriyle ilgili satış, abonelik, hesap ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://aka.ms/vssubscriberhelp).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

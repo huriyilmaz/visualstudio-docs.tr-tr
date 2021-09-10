@@ -6,13 +6,13 @@ manager: cabuschl
 ms.assetid: ce5fc8a4-484c-4df6-97c3-cb60174fb66b
 ms.date: 03/11/2021
 ms.topic: conceptual
-description: Aboneliklere erişim kaybedilirken abone verileri nasıl anonimleştirildiğini öğrenin.
-ms.openlocfilehash: 9a4fa513dfd8f88db2b928b41f6920b28cc086d9a4c388846956f96429bac731
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+description: Aboneliklere erişim kaybedilirken abone verilerini nasıl anonimleştirildiğini öğrenin.
+ms.openlocfilehash: 2a3d55824db1c90ff0868dda6d398e8c0e9a53d7
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121421566"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966389"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Abone bilgilerini Visual Studio anonimleştirme
 Aboneliğin sona ermesi veya abonenin oturum açma hesabının silinmesi gibi abonenin abonelik kullanımını engelleyen bir olay oluştuğunda, kullanıcının ad ve oturum açma hesabı gibi kişisel bilgileri temelde bunları kullanılamaz hale getirebilirsiniz.  Bu, abonenin kişisel bilgilerini korumak için yapılır.

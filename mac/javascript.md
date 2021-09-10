@@ -1,48 +1,48 @@
 ---
 title: JavaScript ve TypeScript
-description: Mac için Visual Studio'de JavaScript desteği hakkında bilgi
+description: Mac için Visual Studio JavaScript desteği hakkında bilgi
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: 61432695-5B12-4257-B250-48D37EED106D
-ms.openlocfilehash: d87af0ad9f19e112740f9bbdc9feffe7e2d794bf9790ee537b9765f6d7a09d08
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d2ce3b3cdbf1a4cf1f19956a7327d73c0bb34b62
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121349716"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964814"
 ---
 # <a name="javascript-and-typescript-support"></a>JavaScript ve TypeScript desteği
 
-Mac için Visual Studio, söz dizimi vurgulama, kod biçimlendirme ve IntelliSense aracılığıyla JavaScript ve TypeScript için destek sağlar.
+Mac için Visual Studio, sözdizimi vurgulama, kod biçimlendirme ve ıntellisense aracılığıyla JavaScript ve TypeScript desteği sağlar.
 
-![typescript düzenleyicisi desteği](media/tsjseditor-2019.gif)
+![TypeScript Düzenleyicisi desteği](media/tsjseditor-2019.gif)
 
-JavaScript yazma hakkında daha fazla bilgi için bkz. [JavaScript Kodu](/scripting/javascript/writing-javascript-code) Yazma kılavuzları.
+JavaScript yazma hakkında daha fazla bilgi için bkz. [JavaScript kod kılavuzlarını yazma](/scripting/javascript/writing-javascript-code) .
 
 ## <a name="adding-a-javascript-file"></a>JavaScript dosyası ekleme
 
-JavaScript dosyaları genellikle Yeni Dosya ASP.NET Core **projelerine** eklenir. Javascript dosyası eklemek için projenize sağ tıklayın ve Yeni Dosya **ekle'> gidin:**
+JavaScript dosyaları en sık **yeni dosya** iletişim kutusu üzerinden ASP.NET Core projelerine eklenir. Bir JavaScript dosyası eklemek için projenize sağ tıklayın ve **> yeni dosya Ekle**' ye gidin:
 
-![projeye yeni dosyalar ekleme](media/javascript-image1.png)
+![projeye yeni dosyalar ekleniyor](media/javascript-image1.png)
 
-Yeni Dosya **iletişim kutusunda Web** Uygulaması Boş **JS >** Veya Web Uygulaması **TypeScript > seçin.** Bir ad girin ve Yeni'yi **seçin:**
+**Yeni dosya** Iletişim kutusundan **Web > boş js dosyası** veya **Web > TypeScript dosyası**' nı seçin. Bir ad verin ve ardından **Yeni**' yi seçin:
 
-![şablondan yeni bir typescript dosyası oluşturma](media/javascript-image2.png)
+![şablondan yeni bir TypeScript dosyası oluşturma](media/javascript-image2.png)
 
 ## <a name="intellisense"></a>IntelliSense
 
-Mac için Visual Studio IntelliSense [JavaScript Language Service,](/visualstudio/ide/javascript-intellisense) kod yazarken akıllı kod tamamlama, parametre bilgileri ve üye listelerine sahip olmak için JavaScript Language Service'yi kullanır.
+Mac için Visual Studio, ıntellisense sağlamak için [JavaScript Language Service](/visualstudio/ide/javascript-intellisense) kullanır, böylece kod yazarken akıllı kod tamamlama, parametre bilgisi ve üye listelerinin olması sağlanır.
 
-Mac için Visual Studio JavaScript IntelliSense tür çıkarılması, JSDoc veya TypeScript bildirimlerine dayalı olabilir.
+Mac için Visual Studio içindeki JavaScript ıntellisense, tür çıkarımı, jsdoc veya TypeScript bildirimlerini temel alabilir.
 
-- **Tür çıkarı–** Bir nesnenin türü, çevreleyen kod bağlamı tarafından an ifade eder. Daha fazla bilgi için Visual Studio [IntelliSense'te tür çıkarı temel alan bölümüne bakın.](/visualstudio/ide/javascript-intellisense#intellisense-based-on-type-inference)
-- **JSDoc–** Tür çıkarca doğru tür bilgilerini sağlamayan zamanlar vardır. Bu durumlarda tür bilgileri [JSDoc](https://jsdoc.app/about-getting-started.html) ek açıklamaları tarafından açıkça sağlanmalıdır. Daha fazla bilgi için Visual Studio [IntelliSense'in JSDoc'yi temel alan bölümüne bakın](/visualstudio/ide/javascript-intellisense#intellisense-based-on-jsdoc)
-- **TypeScript bildirim dosyaları** – `.d.ts` Dosyalar JavaScript IntelliSense için değer sağlamak için kullanılır. Bu dosyada bildirilen türler JSDoc açıklamalarında tür olarak kullanılabilir. Daha fazla bilgi için Visual Studio [IntelliSense'in TypeScript](/visualstudio/ide/javascript-intellisense#intellisense-based-on-typescript-declaration-files) bildirim dosyalarını temel alan bölümüne bakın
+- **Tür çıkarımı** : bir nesnenin türü, çevreleyen kod bağlamı tarafından iletişime. daha fazla bilgi için bkz. [tür çıkarımı temelinde ıntellisense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-type-inference)'teki Visual Studio bölümü.
+- **JSDoc** : tür çıkarımı doğru tür bilgilerini sağlamıyorsa zaman vardır. Bu gibi durumlarda, tür bilgileri açıkça [JSDoc](https://jsdoc.app/about-getting-started.html) ek açıklamaları tarafından sağlanmış olabilir. daha fazla bilgi için bkz. [jsdoc tabanlı ıntellisense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-jsdoc) 'teki Visual Studio bölümü
+- **TypeScript bildirim dosyaları** – `.d.ts` dosyalar, JavaScript IntelliSense için değerler sağlamak üzere kullanılır. Bu dosyada bildirildiği türler, JSDoc açıklamalarında türler olarak kullanılabilir. daha fazla bilgi için bkz. [TypeScript bildirim dosyalarına göre ıntellisense](/visualstudio/ide/javascript-intellisense#intellisense-based-on-typescript-declaration-files) üzerinde Visual Studio bölümü
 
-    ![typescript tanım dosyası ekleme](media/javascript-type-intellisense-2019.gif)
+    ![TypeScript tanım dosyası ekleniyor](media/javascript-type-intellisense-2019.gif)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [JavaScript IntelliSense (Visual Studio üzerinde Windows)](/visualstudio/ide/javascript-intellisense)
+- [JavaScript ıntellisense (Windows Visual Studio)](/visualstudio/ide/javascript-intellisense)

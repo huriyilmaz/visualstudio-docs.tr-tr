@@ -6,12 +6,12 @@ manager: cabuschl
 ms.date: 03/19/2021
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl özel abonelik GUID 'SI olabileceğini öğrenin
-ms.openlocfilehash: db8373f6b0b8da9b6586c18a8d1fe0dd8c5515335375b4c73f84c839139044ae
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a0721029186605c6b9a277c9eb95a370a086d7d2
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121421574"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966244"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalında belirli abonelikleri atama
 

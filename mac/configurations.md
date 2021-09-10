@@ -5,18 +5,18 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.openlocfilehash: 9b04c709f5bfe40e1906aaebb501ac427631119165486c3ac4d63d0ff7cdae7f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 911d8d3a65c414bc3c98494bda75c46b778e5b2b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121364930"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964764"
 ---
 # <a name="understanding-build-configurations"></a>Yapı yapılandırmalarını anlama
 
 Geliştirme işlemi sırasında farklı türlerde derlemelerde kullanmak üzere çözüm ve proje özelliklerinin farklı yapılandırmalarını depolayın. Şablon kullanılarak Mac için Visual Studio projeler genellikle bir uygulamanın hata ayıklamasını ve bir uygulamanın dağıtımını destekleyen Hata Ayıklama ve Sürüm yapılandırmalarını içerir. 
 
-Özel yapılandırmalar oluşturmak için bkz. Derleme [yapılandırmalarını oluşturma ve düzenleme.](./create-and-edit-configurations.md)
+Özel yapılandırmalar oluşturmak için bkz. Derleme [yapılandırmaları oluşturma ve düzenleme.](./create-and-edit-configurations.md)
 
 >[!NOTE]
 >Bu konu, Mac için Visual Studio. Daha Visual Studio için Windows [yapılandırmalarını anlama.](/visualstudio/ide/understanding-build-configurations)
@@ -31,13 +31,13 @@ Yapılandırmalar hakkında daha fazla bilgi için James Montemagno [Yapılandı
 
 ## <a name="project-build-configurations"></a>Project yapılandırmaları oluşturma
 
-Projelerin birden çok yapılandırması vardır. Proje hedeflerini yapılandırma ve platform birlikte kullanarak, proje yapılandırmasını yapılandırmasını yapmak için kullanılacak özellikleri belirtir. Yapılandırmalar arasında geçiş yapmak, derleme zamanında farklı çıkışlara olanak sağlar. Örneğin, hata ayıklama yapılandırması hata ayıklama sembolleri çıkışı vererek hata ayıklayıcının, kilitlenmeye neden olan bir uygulamanın yığın izlemesi işlev adlarını, parametrelerini veya değişkenlerini çözümlemesini sağlar. Bu ek bilgiler geliştirme sırasında yararlı olur ancak şişirilmiş bir dosya boyutuna yol açsa da dağıtım için ideal değildir.
+Projelerin birden çok yapılandırması vardır. Proje hedeflerini yapılandırma ve platform birlikte kullanarak, proje yapılandırmasını yapılandırmasını yapmak için kullanılacak özellikleri belirtir. Yapılandırmalar arasında geçiş yapmak derleme zamanında farklı çıkışlara olanak sağlar. Örneğin, hata ayıklama yapılandırması hata ayıklama sembolleri çıkışı vererek hata ayıklayıcının, kilitlenmeye neden olan bir uygulamanın yığın izlemesi işlev adlarını, parametrelerini veya değişkenlerini çözümlemesini sağlar. Bu ek bilgiler geliştirme sırasında yararlı olur ancak şişirilmiş bir dosya boyutuna yol açsa da dağıtım için ideal değildir.
 
 Her platformun derlemesi için belirli yapılandırmalar vardır. Projelerin derleme yapılandırma sayfalarına, Proje Seçenekleri iletişim kutusundaki **Derleme** bölümüne **Project erişilebilir.** Projeye sağ tıklar ve Seçenekler'i  seçerek veya çözüm gezgininde projeye çift tıklayarak bu iletişim kutusunu açın.
 
 ## <a name="run-configuration"></a>Yapılandırmayı çalıştırma
 
-Mac için Visual Studio bir çalıştırma yapılandırması _ayarlamaya olanak sağlar._ Çalıştırma yapılandırmaları aşağıda gösterildiği gibi, araç çubuğunda, derleme yapılandırma seçicinin yanında bir açılan listede görüntülenir:
+Mac için Visual Studio bir çalıştırma yapılandırması _ayarlamaya olanak sağlar._ Çalıştırma yapılandırmaları aşağıda gösterildiği gibi, araç çubuğundaki bir açılan listede derleme yapılandırma seçicinin yanında yer almaktadır:
 
 ![Yapılandırmayı Çalıştır açılan listesinde](media/projects-and-solutions-image8.png)
 
@@ -60,13 +60,13 @@ Aşağıdaki listede, çalıştırma yapılandırmalarında yer alan bazı veri 
   * Bağımsız değişkenleri başlatma
   * Çalışma dizini
   * Ortam değişkenleri
-  * Mono çalışma zamanı seçenekleri (yalnızca Mono üzerinde çalıştır kullanılır)
+  * Mono çalışma zamanı seçenekleri (yalnızca Mono'da çalıştır kullanılırken kullanılacak)
 * Android projesi
   * Giriş noktası (etkinlik, hizmet, alıcı)
   * Amaç bağımsız değişkenleri ve verileri
 * iOS projesi
   * Mod (Normal, Arka Plan Getirme)
-* iOS uzantısı projesi
+* iOS uzantı projesi
   * Başlangıç uygulaması: varsayılan veya özel
 * WatchKit projesi
   * Mod (Glance, Notification)

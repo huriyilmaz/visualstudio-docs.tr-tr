@@ -6,16 +6,16 @@ manager: cabuschl
 ms.assetid: 2e0fd8bb-8f20-487c-b350-b8fde405ea5e
 ms.date: 03/17/2021
 ms.topic: how-to
-description: Abonelik aboneliğinize dahil olan teknik destek avantajını etkinleştirmeyi Visual Studio öğrenin.
-ms.openlocfilehash: 6e7e1909df264fde625c7000aa72846d30cdb35825848786102d4283caf4ebc4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+description: Visual Studio aboneliğinize dahil olan teknik destek avantajını etkinleştirmeyi öğrenin.
+ms.openlocfilehash: 77856cf8a1f3497f66e89110e7b951c768da8c28
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121406788"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966369"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Aboneliklerde Teknik Destek avantajını etkinleştirme Visual Studio kullanma
-Visual Studio aboneliklerinde Teknik Destek avantajı, destek yaşam döngüsünün  hala temel destek aşamasında olan ürünler için üretim dışı ortamlardaki kesme düzeltme sorunlarını [çözmektir.](https://support.microsoft.com/lifecycle/search) Visual Studio Enterprise ve yıllık bulut abonelikleri dört olay alırken, standart Visual Studio Professional yıllık bulut abonelikleri avantajı etkinleştirmeden itibaren 1 yıla kadar olmak için iki olay alır. Abonelik geçerliyken avantaj etkinleştirmesi gerçekleşmesi gerekir.
+Visual Studio aboneliklerinde Teknik Destek avantajı, destek yaşam döngüsünün  hala temel destek aşamasında olan ürünler için üretim dışı ortamlardaki kesme düzeltme sorunlarını [çözmektir.](https://support.microsoft.com/lifecycle/search) Visual Studio Enterprise ve yıllık bulut abonelikleri dört olay alırken, Visual Studio Professional ve yıllık bulut abonelikleri avantajı etkinleştirmeden itibaren 1 yıla kadar olmak için iki olay alır. Abonelik geçerliyken avantaj etkinleştirmesi gerçekleşmesi gerekir.
 
 > [!NOTE]
 > Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin abonelik satın almak için <https://visualstudio.microsoft.com/vs/pricing/> farklı seçenekleri keşfetmeye Visual Studio.
@@ -23,14 +23,14 @@ Visual Studio aboneliklerinde Teknik Destek avantajı, destek yaşam döngüsün
 > [!NOTE]
 > Verilen düzeydeki tüm abonelikler destek olaylarını almaya uygun değildir. FTE, NFR, MPN, MCT ve diğer programlar aracılığıyla alınan abonelikler destek olayı almaz. Aboneliğiniz teknik destek olaylarını almaya uygun değilse, Teknik Destek kutucuğu kullanılabilir avantajlarınız içinde görünmez.
 
-**Avantajı kullanarak bir destek isteği göndermek için önce bunu etkinleştirmeniz gerekir.  Etkinleştirmeyi tamamlamak için sonraki bölümdeki adımları izleyin.**
+**Avantajı kullanarak bir destek isteği göndermek için önce etkinleştirmeniz gerekir.  Etkinleştirmeyi tamamlamak için sonraki bölümdeki adımları izleyin.**
 
 ## <a name="supported-products"></a>Desteklenen ürünler 
 Geliştirici Araçları IDE ve Visual Studio gibi Azure DevOps Server abonelikler aracılığıyla hem genel hem de genişletilmiş Visual Studio alırsınız.
 
-Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Windows, SharePoint gibi) yalnızca temel destek için uygundur. Bu ürünler yalnızca uygulamaları tasarlamak, geliştirmek, test etmek veya göstermek için geliştirme ortamları için lisanslıdır. Bu ürünler üretim ortamları için lisanslı değildir.
+Visual Studio aboneliklerinden indirilen geliştirici olmayan SQL (Windows, SharePoint gibi) yalnızca temel destek için uygundur. Bu ürünler yalnızca uygulamaları tasarlamak, geliştirmek, test etmek veya göstermek için geliştirme ortamları için lisanslıdır. Bu ürünler üretim ortamları için lisanslı değildir.
 
-Ürün düzeyi açıklamaları: Kullanılamayan **destek planlarını genişletin.** Destek planının belirtilen üründe destek için kullanılamaz **(Kod: 8)** görüyorsanız, destek sözleşmeniz seçtiğiniz ürün sürümü için kullanılamaz.
+Ürün düzeyi açıklamaları: Kullanılamıyor **destek planlarını genişletin.** Destek planının belirtilen üründe destek için kullanılamaz **(Kod: 8)** görüyorsanız, destek sözleşmeniz seçtiğiniz ürün sürümü için kullanılamaz.
 
 > [!IMPORTANT]
 > Sağlanan destek olayları, düzeltme desteği için sağlanmıştır.  Aşağıdaki ürünlerle ilgili kodlama/geliştirme sorunlarıyla ilgili yardım için kullanılmayabilirsiniz:
@@ -60,15 +60,15 @@ Visual Studio aboneliklerinden indirilen geliştirici olmayan ürünler (SQL, Wi
 4. İşlem tamamlandıktan sonra, destek olayı oluştururken kullanmak istediğiniz Sözleşme Kimliğini **ve** **Erişim** Kimliğini içeren bir e-posta alırsınız.  Ayrıca, yeni Erişim Kimliğiniz ve Sözleşme Kimliğinizi kullanarak destek olaylarını gönderme yönergeleri de sağlar. 
 
    > [!NOTE]
-   > Destek hesabınız için İngilizce dışında bir dilde etkinleştirmek için bu listeden ülkenizi/bölgenizi [seçin.](https://support.microsoft.com/help/14084/activate-support-contract)
+   > Destek hesabını İngilizce dışında bir dilde etkinleştirmek için bu listeden ülkenizi/bölgenizi [seçin.](https://support.microsoft.com/help/14084/activate-support-contract)
 
 ## <a name="how-to-submit-an-incident-using-your-benefit"></a>Avantajınızı kullanarak olay gönderme
-Sözleşme Kimliğiniz **ve Erişim Kimliğiniz** ayarlandıktan sonra, bir Teknik Destek olayı göndermek için bu kimliği kullanabilirsiniz.  
+Sözleşme Kimliğiniz **ve Erişim Kimliğiniz** **ayarlandıktan** sonra, bunu kullanarak bir Teknik Destek olayı göndersiniz. 
 
 Olayları çevrimiçi, telefonla veya telefon üzerinden Azure portal. 
 
 ### <a name="submit-an-incident-online"></a>Çevrimiçi bir olay gönderme
-İş portalı desteği aracılığıyla bir olay göndermek için şu adımları izleyin:
+İş portalı desteği aracılığıyla olay göndermek için şu adımları izleyin:
 
   > [!NOTE]
   > E-posta adresinizi onaylamanız gereken bir bildirim alırsınız.  Onayını **profilinizde** listelenen e-posta adresine göndermek için bildirimde E-posta gönder bağlantısına tıklayın. 
@@ -96,8 +96,8 @@ Olayları çevrimiçi, telefonla veya telefon üzerinden Azure portal.
 ### <a name="submit-an-incident-by-phone"></a>Telefonla olay gönderme
 Telefonda bir destek olayı oluşturmak için lütfen ülkenizin/bölgenizin [Müşteri](https://support.microsoft.com/help/13948/global-customer-service-phone-numbers) Hizmetleri telefon numarasını bulun. Lütfen çağrısında Sözleşme Kimliğiniz ve Erişim Kimliğiniz olduğundan emin olur.
 
-### <a name="submit-an-incident-in-the-azure-portal"></a>Azure portal'da bir olay gönderme
-Azure ile ilgili Visual Studio abonelik teknik destek avantajınızı kullanmak için Sözleşme Kimliğiniz ve Erişim Kimliği'nizi Azure aboneliğinize bağlamanız gerekir.
+### <a name="submit-an-incident-in-the-azure-portal"></a>Azure portal'de bir olay gönderme
+Azure ile ilgili Visual Studio abonelik teknik destek avantajınızı kullanmak için Sözleşme Kimliği ve Erişim Kimliğini Azure aboneliğinize bağlamanız gerekir.
 
 1. Ziyaret https://portal.azure.com edin ve oturum açma
 0. Sol gezinti bölmesinde Yardım **+ Destek'e tıklayın**
@@ -108,9 +108,9 @@ Azure ile ilgili Visual Studio abonelik teknik destek avantajınızı kullanmak 
 | Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, Perakende, seçili NFR<sup>1</sup> | 4 olay       |  Yes|
-| Visual Studio Enterprise ile abonelik GitHub Enterprise | Vl | 4 olay       |  Yes|
+| Visual Studio Enterprise ile abonelik GitHub Enterprise | VL | 4 olay       |  Yes|
 | Visual Studio Professional (Standart) | VL, Azure, Perakende, seçili NFR<sup>2</sup>                                        | 2 olay                                                          |Yes         |
-| Visual Studio Professional ile abonelik GitHub Enterprise | Vl                                     | 2 olay                                                          |Yes         |
+| Visual Studio Professional ile abonelik GitHub Enterprise | VL                                     | 2 olay                                                          |Yes         |
 | Visual Studio Test Professional (standart)                         | VL, perakende                                              | 2 olay                                             |  Yes         |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | 2 olay                                               | Yes         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|

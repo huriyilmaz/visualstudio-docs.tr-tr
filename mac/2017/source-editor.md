@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: A018A314-C1C4-4F36-BCB6-2D434208FCFE
-ms.openlocfilehash: 89b1843968fa6670e311e9f15426b7ab9038fc7a4cc7c8ed212599278f3023e9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 187805767e9f67851975dccf8513c708c4233ccc
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121365019"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123962182"
 ---
 # <a name="source-editor"></a>Kaynak Düzenleyicisi
 

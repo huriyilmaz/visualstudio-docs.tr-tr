@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - Akış Çizelgesi Etkinlik Tasarımcısı
-description: Karmaşık akış denetimlerini tanımlayan ve yöneten iş akışları oluşturmak için Flowchart etkinliğini nasıl kullanabileceğinizi öğrenin.
+title: İş Akışı Tasarımcısı-akış çizelgesi etkinlik Tasarımcısı
+description: Karmaşık akış denetimlerini tanımlayan ve yöneten iş akışları oluşturmak için akış çizelgesi etkinliğini nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,38 +16,38 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 948d4536f28440671fdba2a7a9931e0da66d7834
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122155206"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963734"
 ---
 # <a name="flowchart-activity-designer"></a>Flowchart Etkinlik Tasarımcısı
 
-Etkinlik, <xref:System.Activities.Statements.Flowchart> karmaşık akış denetimlerini tanımlayan ve yöneten iş akışları oluşturmak için kullanılır. , <xref:System.Activities.Statements.Flowchart> kodda veya kod kullanılarak İş Akışı Tasarımcısı. Bu konu başlığında, İş Akışı Tasarımcısı belgelemektedir. İş İş Akışı Tasarımcısı tasarımcısı, geliştiricilerin iş akışlarını doğal bir şekilde yazmalarını sağlar.
+<xref:System.Activities.Statements.Flowchart>Etkinlik, karmaşık akış denetimlerini tanımlayan ve yöneten iş akışları oluşturmak için kullanılır. Bir <xref:System.Activities.Statements.Flowchart> kod içinde ya da iş akışı Tasarımcısı kullanılarak yazılabilir. Bu konu, İş Akışı Tasarımcısı deneyimini belgelemektedir. İş Akışı Tasarımcısı iş akışı etkinliği Tasarımcısı, geliştiricilerin iş akışlarını doğal bir şekilde yazarmasını sağlar.
 
-## <a name="the-flowchart-activity"></a>Flowchart Etkinliği
+## <a name="the-flowchart-activity"></a>Akış çizelgesi etkinliği
 
-, iş akışı başlatıldığında yürütülen ve rastgele döngüler oluşturmak veya yürütme akışını herhangi bir zamanda iş akışında başka bir yere aktarmak için bağlı bir ağ kullanan benzersiz <xref:System.Activities.Statements.Flowchart> <xref:System.Activities.Statements.Flowchart.StartNode%2A> bir <xref:System.Activities.Statements.Flowchart.Nodes%2A> belirtir.
+, <xref:System.Activities.Statements.Flowchart> <xref:System.Activities.Statements.Flowchart.StartNode%2A> İş akışı başladığında yürütülen bir benzersiz belirtir ve <xref:System.Activities.Statements.Flowchart.Nodes%2A> rastgele döngüler oluşturmak veya herhangi bir zamanda iş akışındaki herhangi bir yere yürütme akışını yapmak için bağlantılı bir ağı kullanır.
 
-### <a name="using-the-flowchart-activity-designer"></a>Flowchart Etkinlik Tasarımcısı'nı kullanma
+### <a name="using-the-flowchart-activity-designer"></a>Akış çizelgesi etkinlik tasarımcısını kullanma
 
-Flowchart etkinlik tasarımcısı, araç  kutusunun Araç Kutusu sekmesine tıklayarak erişilen  Araç Kutusu'İş Akışı Tasarımcısı.   Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
+**Akış çizelgesi** etkinlik **Tasarımcısı, iş akışı Tasarımcısı araç çubuğu kategorisinde bulunabilir** **ve bu,** **araç kutusu** sekmesine tıklanarak erişilir. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
 
-**Flowchart** etkinlik tasarımcısı **Araç** Kutusundan sürüklenerek etkinlik tasarımcılarının normalde kök etkinlik olarak veya başka bir denetim akışı etkinliğinin alt etkinliği olarak yerleştirildikten sonra İş Akışı Tasarımcısı yüzeyine bırakılır. **Flowchart etkinlik** tasarımcısı boş bir İş Akışı Tasarımcısı yüzeyine bırakılırsa, varsayılan olarak yürütmeyi başlatan başlangıç düğümünün yeşil top olarak temsil edilen genişletilmiş bir görünümde kendisini sunan bir etkinlik <xref:System.Activities.Statements.Flowchart> oluşturur. Flowchart **etkinlik tasarımcısı** başka bir denetim akışı etkinliğine bırakılırsa, Flowchart etkinlik tasarımcısına çift tıklarsanız genişletilebilir bir simge durumuna **küçültülmüş görünümde** kendini gösterir. Araç **Kutusu'nda yer alan herhangi** bir etkinlik, diğer denetim akışı etkinlikleri de dahil olmak üzere doğrudan **Flowchart** etkinlik tasarımcısına sürüklenebilirsiniz.
+**Akış çizelgesi** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, etkinlik tasarımcılarının bir kök etkinlik olarak veya başka bir denetim akışı etkinliğinin alt öğesi olarak yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir. **Akış çizelgesi** etkinlik Tasarımcısı boş bir iş akışı Tasarımcısı yüzeyi üzerine bırakıldığında, <xref:System.Activities.Statements.Flowchart> Varsayılan olarak kendisini yürütmeyi Başlatan başlangıç düğümünün yeşil bir top olarak temsil edildiği genişletilmiş bir görünümde gösterir. **Akış çizelgesi** etkinlik Tasarımcısı başka bir denetim akışı etkinliğine bırakıldığında, kendisini, **akış çizelgesi** etkinlik tasarımcısına çift tıklayarak genişletilebilen, simge durumuna küçültülmüş bir görünümde sunar. **Araç kutusundaki** herhangi bir etkinlik, diğer denetim akışı etkinlikleri dahil olmak üzere doğrudan **akış çizelgesi** etkinlik tasarımcısına sürüklenebilir.
 
-Çeşitli etkinlik tasarımcıları İş Akışı Tasarımcısı tuvale sürüklendikten sonra temsil edecekleri nesneler birlikte bağlanarak <xref:System.Activities.Activity> yürütme sırası belirtebilirsiniz. Bir kaynak etkinlik ve hedef etkinlik arasında bağlantı oluşturmak için fareyle kaynak etkinliğin tasarımcısının üzerine gelir ve her tarafında kare tanıtıcılar görünür. Kare tutamaçlardan birini tıklatın ve fare düğmesini fareyle üzerine gelindiğinde hedef etkinliğin etrafında benzer şekilde görünen tutamaçlardan biri olacak şekilde sürükleyerek sürükleyin. Fare düğmesini bırakın ve kaynak tasarımcıdan hedef tasarımcıya ok olarak temsil edilen bu iki etkinlik arasında bir bağlantı oluşturulur.
+Çeşitli etkinlik tasarımcılarını İş Akışı Tasarımcısı tuvaline sürükledikten sonra <xref:System.Activities.Activity> temsil ettikleri nesneler, yürütme sırasını belirtmek için birbirine bağlanabilir. Kaynak etkinlik ve hedef etkinlik arasında bir bağlantı oluşturmak için, kaynak etkinliği ve kare tutamaçları tasarlayıcı üzerinde fare, onun her tarafında görünür. Kare tutamaçlardan birine tıklayın ve fare düğmesini fareyle üzerine gelindiğinde hedef etkinliğin etrafında benzer şekilde görünen tutamaçlardan birine tıklayarak sürükleyin. Fare düğmesini bırakın ve kaynak tasarımcıdan hedef tasarımcıya ok olarak temsil edilen bu iki etkinlik arasında bir bağlantı oluşturulur.
 
-### <a name="flowchart-activity-properties"></a>Akış Çizelgesi Etkinlik Özellikleri
+### <a name="flowchart-activity-properties"></a>Akış çizelgesi etkinlik özellikleri
 
-Aşağıdaki tablo, <xref:System.Activities.Statements.Flowchart> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. Bu özellikler özellik kılavuzunda veya tasarımcı yüzeyinde düzenlenebilir.
+Aşağıdaki tabloda <xref:System.Activities.Statements.Flowchart> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler, özellik kılavuzunda veya tasarımcı yüzeyinde düzenlenebilir.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Üst bilgide etkinlik tasarımcısının görünen adını belirtir. Varsayılan değer Flowchart'tır. Değer, Özellikler penceresinde veya **doğrudan** etkinlik tasarımcısı üst bilgisinde düzenlenebilir.<br /><br /> kesinlikle <xref:System.Activities.Activity.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.Flowchart.Variables%2A>|Yanlış|Durumu alt etkinlikleri arasında paylaşmak için bu <xref:System.Activities.Statements.Flowchart> kapsamda yer alan değişkenlerin koleksiyonu.|
-|<xref:System.Activities.Statements.Flowchart.StartNode%2A>|Yanlış|başlatıldığında <xref:System.Activities.Statements.FlowNode> yürütülen <xref:System.Activities.Statements.Flowchart> .|
-|<xref:System.Activities.Statements.Flowchart.Nodes%2A>|Yanlış|içinde nesne <xref:System.Activities.Statements.FlowNode> koleksiyonunu <xref:System.Activities.Statements.Flowchart> içerir.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Başlıktaki etkinlik tasarımcısının görünen adını belirtir. Varsayılan değer akış çizelgesi ' dir. Değer, **Özellikler** penceresinde veya doğrudan etkinlik Tasarımcısı üst bilgisinde düzenlenebilir.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.Flowchart.Variables%2A>|Yanlış|Bunun içinde kapsamı belirlenmiş değişkenlerin koleksiyonu, <xref:System.Activities.Statements.Flowchart> alt etkinlikleri genelinde durum paylaşmalıdır.|
+|<xref:System.Activities.Statements.Flowchart.StartNode%2A>|Yanlış|<xref:System.Activities.Statements.FlowNode>, <xref:System.Activities.Statements.Flowchart> Başlatıldığında yürütülür.|
+|<xref:System.Activities.Statements.Flowchart.Nodes%2A>|Yanlış|İçindeki nesnelerin koleksiyonunu içerir <xref:System.Activities.Statements.FlowNode> <xref:System.Activities.Statements.Flowchart> .|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

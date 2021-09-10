@@ -1,6 +1,6 @@
 ---
 title: İş Akışı Tasarımcısı ile İş Akışlarında Hata Ayıklama
-description: Hata ayıklayıcısının İş Akışı Tasarımcısı hata ayıklayıcısına benzer bir işlemle iş akışlarının ve özel etkinliklerin Visual Studio öğrenin.
+description: İş Akışı Tasarımcısı, varsayılan Visual Studio hata ayıklayıcısına benzer bir işlemle iş akışlarında ve özel etkinliklerde hata ayıklama olanağı sağladığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,37 +15,37 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 454f916a80cda1b2b485cc6385218bfc88fb0490
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122155245"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123963727"
 ---
-# <a name="debug-workflows-with-the-workflow-designer"></a>İş Akışı Tasarımcısı ile iş akışlarını İş Akışı Tasarımcısı
+# <a name="debug-workflows-with-the-workflow-designer"></a>İş Akışı Tasarımcısı iş akışlarında hata ayıkla
 
-Bu **İş Akışı Tasarımcısı** iş akışlarını ve özel etkinliklerde hata ayıklama olanağı sağlar. İşlem ve davranış, varsayılan hata ayıklayıcısının Visual Studio benzerdir.
+**İş akışı Tasarımcısı** , iş akışlarının ve özel etkinliklerin hatalarını ayıklama özelliğini sağlar. işlem ve davranış, varsayılan Visual Studio hata ayıklayıcıyla benzerdir.
 
-## <a name="invoke-the-workflow-debugger"></a>İş akışı hata ayıklayıcısını çağırma
+## <a name="invoke-the-workflow-debugger"></a>İş akışı hata ayıklayıcıyı çağır
 
-Genel olarak, iş akışlarının hata ayıklaması, diğer programlama dillerinde yazılan programlarda Visual Studio ayıklar. İş akışı hata ayıklayıcısını aşağıdaki yollarla başlatabilirsiniz:
+genellikle, diğer Visual Studio programlama dillerinde yazılmış programlarda hata ayıkladığınızda olduğu gibi iş akışlarının hatalarını ayıklayın. İş akışı hata ayıklayıcısını aşağıdaki yollarla başlatabilirsiniz:
 
-- İş **akışı örneğinin** çalışan **konak işlemini seçmek** için Hata Ayıklama menüsünde İşleme Ekle'yi seçin. Bu yordam, yönetilen kodda bir konak işlemi eklemekle aynıdır.
+- İş akışı örneğiniz için çalışan konak işlemini seçmek üzere **hata ayıklama** menüsünde **İşleme İliştir** ' i seçin. Bu yordam, Yönetilen koddaki bir ana bilgisayar işlemine iliştirme ile aynıdır.
 
-- İş akışının bir örneğini çalıştırmaya başlamak veya bir kesme noktası isabet olduktan sonra çalışmaya devam etmek için **F5** tuşuna basın.
+- İş akışının bir örneğini çalıştırmaya başlamak veya bir kesme noktası isabet ettikten sonra çalışmaya devam etmek için **F5** tuşuna basın.
 
-- Uzaktan hata ayıklamayı kullanın. Uzaktan hata ayıklama kullanma hakkında daha fazla bilgi için [bkz. Nasıl 2. Adım: Uzaktan hata ayıklamayı etkinleştirme.](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100))
+- Uzaktan hata ayıklamayı kullan. Uzaktan hata ayıklamayı kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: uzaktan hata ayıklamayı etkinleştirme](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
    > [!NOTE]
-   > İş akışı uygulaması x86 mimarisini hedeflese ve 64 bit işletim sistemi çalıştıran bir makinede barındırıldısa, uzak makineye Visual Studio yüklenmediği veya iş akışı uygulamasının hedefi Herhangi bir CPU olarak değiştirilene kadar uzaktan hata ayıklama **çalışmaz.**
+   > iş akışı uygulaması x86 mimarisini hedefliyorsa ve 64 bitlik bir işletim sistemi çalıştıran bir makinede barındırılıyorsa, uzak makineye Visual Studio yüklenmedikçe veya iş akışı uygulamasının hedefi **herhangi bir CPU**'ya değiştirilmediği takdirde uzaktan hata ayıklama çalışmaz.
 
-## <a name="step-through-code"></a>Kodda adım adım ilerler
+## <a name="step-through-code"></a>Kod üzerinden adımla
 
-- **Adım:** F11 tuşuna basarak bir **etkinliğin içine adımla.** Hata ayıklayıcısı, tanımlanan herhangi bir işleyiciye gider. İşleyici tanımlanmamışsa, etkinliğin üzerine adımlar veya diğer etkinlikleri içeren bileşik etkinliklerle ilk yürütülen etkinliğin içine adımlarnız.
+- **Adımla**: **F11** tuşuna basarak bir etkinliğe adımla. Hata ayıklayıcı, tanımlı herhangi bir işleyicide adımları. Hiçbir işleyici tanımlanmamışsa, etkinliğin üzerinde veya diğer etkinlikleri içeren bileşik etkinliklerle ilk yürütme etkinliğinin içine adımlayın.
 
-- **Dışarı Adımla:** Shift F11 tuşuna basarak **bir** + **etkinliğin dışında adım at.** Bir etkinliğin dışında adımlama, geçerli etkinliği ve tüm onun tüm kardeleme etkinliklerini tamamlamaya çalıştırır. Ardından hata ayıklayıcısı geçerli etkinliğin üst öğesi üzerinde kesmeler. Kod işleyiciden çıkarılırken, hata ayıklayıcı işleyicinin ilişkilendiril olduğu etkinlikte hata ayıklayıcıyı kırar.
+- **Dışarı adımla:** **SHIFT** F11 tuşuna basarak bir etkinliğin dışına geçin + . Bir etkinliğin dışına geçmek, geçerli etkinliği ve tüm eşdüzey etkinliklerini tamamlamaya kadar çalıştırır. Hata ayıklayıcı daha sonra geçerli etkinliğin üst öğesiyle kesilir. Kod işleyiciden atlama yaparken, hata ayıklayıcı işleyicinin ilişkilendirildiği etkinliği keser.
 
-- **Adım Adım:** F10 tuşuna basarak bir **etkinliğin üzerine adımla.** Bileşik etkinliğin üzerine adımlarken, hata ayıklayıcı bileşik etkinliğin ilk yürütülebilir alt bilgisinde hata ayıklayıcıyı kırar. Bir etkinlik gibi bileşik olmayan bir adım atılırken, hata ayıklayıcı etkinliği ve ilişkili işleyicilerini yürütür ve <xref:System.Activities.Statements.Assign> sonraki etkinlikte sonlar. Yürütülen etkinlik bileşik etkinlikte son alt etkinlikse, yürütmeden sonra hata ayıklayıcı üst etkinlikte son olur.
+- **Adımlama**: bir etkinliğin üzerinde, **F10** tuşuna basarak adımla. Bileşik bir etkinliğin üzerine adımlarken, hata ayıklayıcı bileşik etkinliğin ilk yürütülebilir alt öğesi üzerinde kesilir. Bir etkinlik gibi bileşik olmayan bir üzerinde Adımlama yaparken <xref:System.Activities.Statements.Assign> , hata ayıklayıcı aktiviteyi ve ilgili işleyicileri yürütür ve sonraki etkinlikte kesilir. Yürütülen etkinlik bileşik bir etkinlikte son alt etkinlikse, yürütmeden sonra hata ayıklayıcı üst etkinliği keser.
 
 ## <a name="debug-with-f5"></a>F5 ile hata ayıklama
 
-bir İş akışı konsol uygulaması inşa ediyorsanız, uygulamanıza ve iş akışınıza hata ayıklamaya başlamak için **F5** tuşuna basmanız gerekir. Etkinlik kitaplığını kendi başına inşa ediyorsanız, başlangıç projesi olarak yürütülebilir bir konak uygulaması belirtmeniz gerekir. içinde bir başlangıç projesi **ayarlamak Çözüm Gezgini,** ana bilgisayar projesi adına sağ tıklayın ve Başlangıç Olarak Ayarla'yı seçin **Project.**
+Bir Iş akışı konsol uygulaması oluşturuyorsanız, uygulamanızda ve iş akışınızda hata ayıklamaya başlamak için **F5** tuşuna basın. Kendi başına bir etkinlik kitaplığı oluşturuyorsanız, başlangıç projesi olarak bir yürütülebilir ana bilgisayar uygulaması belirtmeniz gerekir. **Çözüm Gezgini** bir başlangıç projesi ayarlamak için konağın proje adına sağ tıklayın ve **Başlangıç Project olarak ayarla**' yı seçin.

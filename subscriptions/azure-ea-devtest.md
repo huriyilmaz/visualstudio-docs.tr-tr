@@ -6,13 +6,13 @@ manager: cabuschl
 ms.assetid: a335ed23-34ee-40cb-83c6-6c93dee57424
 ms.date: 03/21/2021
 ms.topic: how-to
-description: Enterprise Sözleşmeleriyle müşterilere açık olan özel Azure DevTest fiyatlandırması hakkında bilgi edinin
-ms.openlocfilehash: e9306a3de7572a9c957a31735152af14bee2281342047c78f1c69bc8be6bb10a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+description: Müşteri Sözleşmesi olan müşterilerin yararlandır olduğu özel Azure DevTest fiyatlandırması Enterprise öğrenin
+ms.openlocfilehash: 157d094ef02864578ce4bf626d11457506817418
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121392927"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966379"
 ---
 # <a name="azure-enterprise-agreement-devtest-offer"></a>Azure Kurumsal Anlaşma DevTest teklifi
 
@@ -52,7 +52,7 @@ Hesapta yer alan her abone aşağıdaki adımları kullanarak bir abonelik oluş
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Abonelikleri yönetme hakkında daha fazla Visual Studio edinin.
-- [Bireysel abonelik atama](assign-license.md)
+- [Bireysel abonelikleri atama](assign-license.md)
 - [Birden çok abonelik atama](assign-license-bulk.md)
 - [Abonelikleri düzenleme](edit-license.md)
 - [Abonelikleri silme](delete-license.md)

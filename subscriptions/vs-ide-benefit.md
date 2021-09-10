@@ -7,12 +7,12 @@ ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
 ms.date: 07/30/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil Visual Studio IDE'nin nasıl indir Visual Studio öğrenin
-ms.openlocfilehash: e9a79018f0d8fc1889c82b306e807b4fee2443c348cfdbac842edbaa83a2de95
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6f9a420c06374f5b152dc119d2eb76af560a4b35
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121421347"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123966329"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 avantajı
 
@@ -20,15 +20,15 @@ Bir Visual Studio olarak, IDE'ye Visual Studio sahipsiniz.  Belirli bir sürüm,
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 
-*(Visual Studio Enterprise örnek için kullanılır.)*
+*(Visual Studio Enterprise örnek için bir örnek kullanılır.)*
 
 IDE'i indirmek için:
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
-2. Araçlar Visual Studio IDE kutucuğunu bulun ve avantaj  kutucuğunun altındaki İndir bağlantısına tıklayın.  İndirmeler sayfasından da [indirebilirsiniz.](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)
+2. Araçlar Visual Studio IDE kutucuğunu bulun ve avantaj kutucuğunun altındaki İndir bağlantısına tıklayın.   İndirmeler sayfasından da [indirebilirsiniz.](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)
    > [!div class="mx-imgBorder"]
    > ! [Visual Studio Enterprise kutucuğu] (_img/vs-ide-experience/vs-ide-tile.png "Visual Studio kutucuğunu yüklemek için "İndir" Visual Studio.")
 
-3. IDE'i indirme ve etkinleştirmeye bir ürün anahtarı alma Visual Studio için Sonuçları İndirme sayfasına yeniden yönlendirebilirsiniz. Ayrıca mavi Anahtar Al bağlantısına tıklayarak bir ürün anahtarı talep **edebilirsiniz** veya daha sonra Ürün anahtarları sayfasında bir [anahtar talep](https://my.visualstudio.com/productkeys) edebilirsiniz.
+3. IDE'nin indirilmesi ve etkinleştirmesi için bir ürün anahtarı Visual Studio için sonuçları indirme fırsatınız olacak. Ayrıca mavi Anahtar Al bağlantısına tıklayarak bir ürün anahtarı talep **edebilirsiniz** veya daha sonra Ürün anahtarları sayfasında bir [anahtar talep](https://my.visualstudio.com/productkeys) edebilirsiniz.
 4. Sonuçları İndir sayfasının Ayrıntılar sekmesinde:
    - İstediğiniz mimariyi seçin (x86, x64)
    - Dil tercihinizi seçin.
@@ -44,7 +44,7 @@ IDE'i indirmek için:
 
 10. **Yükle**'ye tıklayın.
 
-11. Yükleme tamamlandığında, yükleme işlemini değiştirme veya yükleme işlemini başlatma Visual Studio.  Başlatmak **için Başlat'a** tıklayın.  Birden çok sürümünüz yüklüyse, bunlar listelenir.
+11. Yükleme tamamlandığında, yükleme işlemini değiştirme veya yükleme işlemini başlatma seçeneğiniz Visual Studio.  Başlatmak **için Başlat'a** tıklayın.  Birden çok sürümünüz yüklüyse, bunlar listelenir.
     > [!div class="mx-imgBorder"]
     > ![Başlatma Visual Studio Enterprise](_img/vs-ide-experience/vs-ide-versions.png "Başlatmayı başlatmak için 'Başlat' Visual Studio.")
 
@@ -63,9 +63,9 @@ IDE'i indirmek için:
 | Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, Perakende, seçili NFR<sup>1</sup> | Kullanılabilir       |  Yes          |
-| Visual Studio Enterprise ile abonelik GitHub Enterprise   | Vl | Kullanılabilir       |  Yes          |
+| Visual Studio Enterprise ile abonelik GitHub Enterprise   | VL | Kullanılabilir       |  Yes          |
 | Visual Studio Professional (Standart, aylık bulut) | VL, Azure, Perakende                                       | Kullanılabilir                                                            |  Yes          |
-| Visual Studio Professional aboneliği GitHub Enterprise | Vl   | Kullanılabilir              |  Yes          |
+| Visual Studio Professional ile abonelik GitHub Enterprise | VL   | Kullanılabilir              |  Yes          |
 | Visual Studio Test Professional (Standart)                         | Tümü                                            | Kullanılamaz                                             |  Yok         |
 | MSDN Platformları (Standart)                                          | Tümü                                              | Kullanılamaz                                              |  Yok          |
 
@@ -80,7 +80,7 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
 - IDE'Visual Studio yardım gerekiyor, şu kaynaklara göz at:
   - Teknik Destek: [https://visualstudio.microsoft.com/support/](https://visualstudio.microsoft.com/support/)
   - [Belgeler](/visualstudio/)
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için destek [Visual Studio ile iletişime geçin.](https://my.visualstudio.com/gethelp)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için Visual Studio [ile iletişime geçin.](https://my.visualstudio.com/gethelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

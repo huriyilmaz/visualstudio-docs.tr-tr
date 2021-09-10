@@ -1,46 +1,46 @@
 ---
 title: Çoklu giriş işareti düzenleme
-description: Mac için Visual Studio kod düzenlenirken birden fazla konuma metin ekleyin.
+description: Uygulama içinde kod düzenlerken birden çok konuma metin Mac için Visual Studio.
 author: cobey
 ms.author: cobey
 ms.date: 08/19/2019
-ms.openlocfilehash: c04bb80ee6a0bf9e9d1699d9f1b0b85da727ad5bc8235ebafbf1d55369e82d16
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: a21bebda057a772017fa1481e18f9801d1fbcbdf
+ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121266343"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "123964806"
 ---
 # <a name="multi-caret-editing"></a>Çoklu giriş işareti düzenleme
 
-Çoklu giriş işareti düzenlemesi, tek seferde _n_ sayıda ekleme noktası eklemenize olanak tanır. Çoklu giriş işareti modundayken, belgenize fare tıklamaları veya klavye komutları aracılığıyla ek Evcil hayvan ekleyebilirsiniz. Birincil giriş işareti kırmızı bir imleç ile gösterilir ve ikincil sepetler açık mavi renkte bulunur. Çoklu giriş işareti düzenleme modu anahtar aracılığıyla devre dışı bırakılabilir `ESC` .
+Çoklu giriş karakteri düzenleme, tek bir _anda n_ sayıda ekleme noktası eklemenize olanak sağlar. Çoklu klavye modundayken, fare tıklamaları veya klavye komutları aracılığıyla belgenize ek tuşlar ekleyebilirsiniz. Birincil caret kırmızı bir imleçle gösterilirken ikincil caret'ler açık mavi renkte gösterilir. Çoklu imtiyazlı düzenleme modu, anahtar aracılığıyla devre dışı `ESC` bırakılabilir.
 
-## <a name="enabling-multi-caret-editing"></a>Çoklu klavyeyle düzenleme etkinleştiriliyor
+## <a name="enabling-multi-caret-editing"></a>Çoklu imtiyaz düzenlemeyi etkinleştirme
 
 ### <a name="keyboard"></a>Klavye
 
-Klavye aracılığıyla çok şapka modunu birkaç şekilde etkinleştirebilirsiniz. Aşağıdaki tabloda, çok giriş işareti düzenlemesini belirli modlar için kullanılabilecek klavye kısayolları verilmiştir:
+Klavye aracılığıyla çoklu klavye modunu çeşitli yollarla etkinleştirebilirsiniz. Aşağıdaki tabloda, çoklu giriş imtiyazlı düzenlemenin belirli modlarını girmek için kullanılabilen klavye kısayolları sağlanmaktadır:
 
-| Kısayol tuşu  | Eylem                        | 
+| Hotkey  | Eylem                        | 
 |---------| ------------------------------|
-|  ⌥⇧.   | Sonraki eşleşen giriş işaretini Ekle    | 
-|  ⌥⇧;   | Her eşleşen giriş Ekle | 
-|  ⌥⇧,   | Son giriş işaretini kaldır             | 
-|  ⌥⇧/   | Son giriş işaretini aşağı taşı          | 
+|  ⌥⇧.   | Sonraki eşleşen imtiyazı ekle    | 
+|  ⌥⇧;   | Eşleştirmeye hiç caret ekleme | 
+|  ⌥⇧,   | Son imtiyazı kaldırma             | 
+|  ⌥⇧/   | Son dikkati aşağı taşı          | 
 
-Bu davranışların her biri, komutu çağırdığınızda giriş işaretinin geçerli konumuna bağlanır. Örneğin, giriş işareti "ad" sözcüğünün başlısın ve "tüm eşleştirmeyle" maetleri Ekle "seçeneğini çağırırsanız (⌥ ⇧;) geçerli belgenizdeki "Name" sözcüğünün her bir örneği, sözcüğün başlangıcına eklenecek bir giriş işaretine sahip olacaktır. Benzer şekilde, "sonraki eşleşen giriş işaretini Ekle" (⌥ ⇧.) komutunu çağırırsanız, "Name" sözcüğünün bir sonraki örneğine bir giriş işareti konur. Bu komut birden çok kez çağrılabilir.
+Komutu çağırarak bu davranışların her biri, caret'in geçerli konumunun sabiti olur. Örneğin, caret "name" sözcüğün başında ise ve "Eşleşen hiç ekleme ekleme" çağrılsa (⌥⇧;) Geçerli belgeniz içinde "name" sözcüğün her örneği, sözcüğün başlangıcına bir caret eklenir. Benzer şekilde, "Insert next matching caret" (⌥⇧.) komutunu çağırırsanız, "name" sözcüğün sonraki örneğine bir caret yerleştirilir. Bu komut birden çok kez çağrılabilir.
 
-![Çoklu giriş işareti klavyesi](media/multi-caret-keyboard.gif)
+![çoklu klavye](media/multi-caret-keyboard.gif)
 
-## <a name="mousetouchpad"></a>Fare/Dokunmatik yüzey
+## <a name="mousetouchpad"></a>Fare/dokunmatik yüzey
 
-İmlecinizi kullanarak, birden çok Evcil hayvan için belirli ekleme noktalarını seçebilirsiniz. Klavye kısayolları eşleşen dizelere bağlıyken, imlecin bulunduğu belgede herhangi bir yere bir giriş işaretini el ile ekleyebilirsiniz. Sepetlerin ayarlandıktan sonra her biri, klavyenizde yazdığınız önemli girdileri yankıdan alır.
+İmlecinizi kullanarak, birden çok giriş noktanız için belirli ekleme noktalarını serbest sızdırabileceksiniz. Klavye kısayolları eşleşen dizelere bağlıyken, imleçle belgenin herhangi bir yerine el ile bir caret ekleyebilirsiniz. Giriş girişlerinin her biri, klavyenizde yazacakları tuş girişlerini yankılar.
 
-Fareyi kullanarak birden çok Evcil hayvan eklemek için, ⌘ ⌥ tuşlarına basılı tutmanız ve sepetlerin girilmesini istediğiniz yere tıklamalısınız. ⌘ ⌥ Anahtarları tutulduğu sürece ekleme modunda olursunuz. Yanlış bir konuma bir giriş işareti eklerseniz, ⌘ ⌥ 'yi basılı tutmaya ve aynı alanı yeniden tıklatmaya devam ederek giriş işaretini kaldırabilirsiniz. İstediğiniz yerde yer alan tüm Evcil hayvan varsa, ⌘ ⌥ tuşlarına basmayı durdurun ve yazmaya başlayın. Aşağıdaki GIF, hem bir ekleme noktası kümesi seçip hem de hatalı ayarlanmış noktaları kaldırarak gösterir.
+Fareyi kullanarak birden çok giriş kartı eklemek için, giriş ⌘⌥ basılı tutmalı ve giriş girişlerini istediğiniz yere tıklamalısiniz. Yeni anahtarlar tutulacak sürece ekleme ⌘⌥ olursunuz. Yanlış bir konuma bir caret eklersanız, aynı alanı basılı tutmaya devam ⌘⌥ aynı alana tekrar tıklayarak caret'i kaldırabilirsiniz. Tüm caret'leri istediğiniz yerde bulunduktan sonra, tüm tuşlara ⌘⌥ ve yazmaya başlayın. Aşağıdaki GIF hem ekleme noktası kümesi seçmeyi hem de hatalı ayarlanmış noktaları kaldırmayı gösteriyor.
 
-![Çoklu giriş işareti faresi](media/multi-caret-mouse.gif)
+![çoklu caret fare](media/multi-caret-mouse.gif)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [hızlı eylemler (Windows Visual Studio)](/visualstudio/ide/quick-actions)
-- [kodu yeniden düzenleme (Windows Visual Studio)](/visualstudio/ide/refactoring-in-visual-studio)
+- [Hızlı Eylemler (Visual Studio Windows)](/visualstudio/ide/quick-actions)
+- [Kodu yeniden düzenleme (Visual Studio üzerinde Windows)](/visualstudio/ide/refactoring-in-visual-studio)
