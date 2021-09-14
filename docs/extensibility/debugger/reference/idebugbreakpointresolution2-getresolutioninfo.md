@@ -1,6 +1,6 @@
 ---
-description: Bu kesme noktasını açıklayan kesme noktası çözümleme bilgilerini alır.
-title: 'IDebugBreakpointResolution2:: GetResolutionInfo | Microsoft Docs'
+description: Bu kesme noktası açıklayan kesme noktası çözümleme bilgilerini alır.
+title: IDebugBreakpointResolution2::GetResolutionInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4e7ab8cd36ac17ba0f85e5f2e1924e813c7d3d20
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122145269"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636406"
 ---
 # <a name="idebugbreakpointresolution2getresolutioninfo"></a>IDebugBreakpointResolution2::GetResolutionInfo
-Bu kesme noktasını açıklayan kesme noktası çözümleme bilgilerini alır.
+Bu kesme noktası açıklayan kesme noktası çözümleme bilgilerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +45,16 @@ int GetResolutionInfo(
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-'ndaki [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) Numaralandırmadaki, parametrenin hangi alanlarının doldurulacağını belirleyen bayrakların birleşimi `pBPResolutionInfo` .
+[in] Parametrenin hangi [alanlarının doldurulacaklarını](../../../extensibility/debugger/reference/bpresi-fields.md) belirleyen BPRESI_FIELDS `pBPResolutionInfo` bayrağının bir birleşimi.
 
 `pBPResolutionInfo`\
-dışı Bu kesme noktasıyla ilgili bilgilerle doldurulacak [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) yapısı.
+[out] Bu [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) bilgileriyle doldurulacak en iyi yapı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, `CDebugBreakpointResolution` [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemi uygular.
+ Aşağıdaki örnek, `CDebugBreakpointResolution` [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemi kullanır.
 
 ```
 HRESULT CDebugBreakpointResolution::GetResolutionInfo(

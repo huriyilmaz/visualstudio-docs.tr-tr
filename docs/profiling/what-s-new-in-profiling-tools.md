@@ -16,11 +16,11 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: ae501119b74300dea4397ccaaadbf13da99bbf6e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122140628"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637054"
 ---
 # <a name="whats-new-in-profiling-tools-in-includevs_dev15"></a>'de profil oluşturma araçlarında yapılan yeniler [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
@@ -28,7 +28,7 @@ Tanılama Araçları, uygulamanıza düzeltmesi gereken sorunları tanımlamanı
 
 Daha fazla bilgi için [bkz. sürüm [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] notları. ](/visualstudio/releasenotes/vs2017-relnotes)
 
-**Araçlara,** performans analizinizin önemli alanlarına odaklanmanıza yardımcı olacak bir Özet sekmesi eklenmiştir. Bu sekme kaç olay meydana geldiği gösterir, yığının anlık görüntülerini ala ve CPU kullanım verileri toplamayı hızlı bir şekilde etkinleştirmenizi sağlar. Bu görünüm tüm Application [Insights veya](/azure/azure-monitor/app/visual-studio) UI [analiz olaylarını](/visualstudio/releasenotes/vs2017-relnotes) gösterir. Ayrıca, bu Visual Studio Enterprise IntelliTrace olaylarını da gösterir.
+**Araçlara,** performans analizinizin önemli alanlarına odaklanmanıza yardımcı olacak bir Özet sekmesi eklenmiştir. Bu sekme kaç olay olduğunu gösterir, yığının anlık görüntülerini ala ve CPU kullanım verileri toplamayı hızlı bir şekilde etkinleştirmenizi sağlar. Bu görünüm tüm Application [Insights veya](/azure/azure-monitor/app/visual-studio) UI [analiz olaylarını](/visualstudio/releasenotes/vs2017-relnotes) gösterir. Ayrıca, bu Visual Studio Enterprise IntelliTrace olaylarını da gösterir.
 
 ![Tanılama Araçları Özet sekmesi](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
 

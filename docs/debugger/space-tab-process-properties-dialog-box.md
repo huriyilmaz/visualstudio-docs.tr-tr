@@ -14,18 +14,18 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: ce7db03ee93ef0f45f99827d3be27b0ae7df2287
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122090401"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636601"
 ---
 # <a name="space-tab-process-properties-dialog-box"></a>Alan Sekmesi, İşlem Özellikleri İletişim Kutusu
 Bir işlemin adres alanını incelemek için **boşluk** sekmesini kullanın. [Işlem özellikleri Iletişim kutusunu](../debugger/process-properties-dialog-box.md)görüntülemek için odağı bir [işlem görünümü](../debugger/processes-view.md) penceresine taşıyın. Ağaçta herhangi bir işlem düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
  **Boşluk** sekmesinde aşağıdaki ayarlar kullanılabilir:
 
-|Giriş|Açıklama|
+|Giriş|Description|
 |-----------|-----------------|
 |**Boşluk olarak işaretlenen alanı göster**|Alan kategorisini (görüntü, eşlenmiş, ayrılmış veya atanmamış) seçmek için bu liste kutusunu kullanın.|
 |**Yürütülebilir baytlar**|Seçili Kategori için, bu işlemin kullandığı tüm adres alanı toplamı. Yürütülebilir bellek, programlar tarafından yürütülebilecek, ancak okunmayabilir veya yazılamaz bellektir.|

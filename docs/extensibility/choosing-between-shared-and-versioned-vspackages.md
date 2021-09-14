@@ -16,18 +16,18 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 284dd28af7fb635767f00096420e0142661e4e88
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122146153"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636470"
 ---
 # <a name="choose-between-shared-and-versioned-vspackages"></a>Paylaşılan ve sürüme sahip VSPackage'lar arasında seçim
 Farklı Visual Studio aynı bilgisayarda bir arada var olabilir. VSPackage'lar sürümlerin herhangi bir karışımını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] destekler.
 
- VSPackage'ların yan yana yüklemelerini iki stratejiden birini (paylaşılan strateji veya sürümli strateji) etkinleştirebilirsiniz. Her ikisi de uygulamanın birden çok [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sürümünün ve ilişkili sürümlerinin varlığını .NET Framework.
+ VSPackage'ların yan yana yüklemelerini iki stratejiden birini (paylaşılan strateji veya sürümli strateji) etkinleştirebilirsiniz. Her ikisi de birden çok sürümünün ve ilişkili [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sürümlerinin varlığına uyum .NET Framework.
 
- Paylaşılan stratejide, bir VSPackage birden çok sürümlerinde kullanım için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kaydedilir. Sürüme yüklenmiş stratejide, destekleyenin her sürümü için bir tane olmak için birden çok VSPackage [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DLL'i yüklenir.
+ Paylaşılan stratejide, bir VSPackage birden çok sürümlerinde kullanım için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] kaydedilir. Sürüme yüklenmiş stratejide, birden çok VSPackage DLL'sini (destekleyenin her sürümü için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir tane) yüklenir.
 
 ## <a name="shared-vspackages"></a>Paylaşılan VSPackage'lar
  Birden çok sürümde aynı VSPackage'ı kullanırken paylaşılan VSPackage kullanmak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] uygundur. Paylaşılan bir VSPackage uygulamak için aşağıdaki adımları izleyebilirsiniz:
@@ -42,17 +42,17 @@ Farklı Visual Studio aynı bilgisayarda bir arada var olabilir. VSPackage'lar s
 
 - Dosya uzantılarını uygun şekilde kaydedin. Daha fazla bilgi için [bkz. Yan yana dağıtımlar için dosya adı uzantılarını kaydetme.](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)
 
-- VSPackage'ını uygun sürümleri için dağıtan bir yükleyici [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oluşturun. Daha fazla bilgi için, [bkz. Installing VSPackages with Windows Installer](../extensibility/internals/installing-vspackages-with-windows-installer.md) and [Component management](../extensibility/internals/component-management.md).
+- VSPackage'nızı uygun sürümleri için dağıtan bir yükleyici [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oluşturun. Daha fazla bilgi için, [bkz. Installing VSPackages with Windows Installer](../extensibility/internals/installing-vspackages-with-windows-installer.md) and [Component management](../extensibility/internals/component-management.md).
 
 - Kayıt çakışmaları ile ilgili sorunu ele alın. Daha fazla bilgi için bkz. [VSPackage kaydı.](../extensibility/internals/vspackage-registration.md)
 
 - Birden çok sürümün güvenli bir şekilde yüklenmesine ve kaldırılmasına olanak sağlamak için hem paylaşılan hem de sürüme sahip dosyaların başvuru saymaya uygun olduğundan emin olun. Daha fazla bilgi için bkz. [Bileşen yönetimi.](../extensibility/internals/component-management.md)
 
 ## <a name="versioned-vspackages"></a>Sürüme Sahip VSPackage'lar
- Sürüme sahip VSPackage stratejisi altında, destekleyenin her sürümü için bir VSPackage [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oluşturun. Bunu yapmak, her VSPackage'ın diğerlerini etkilemeden gelişerek daha sonraki sürümleri tarafından sağlanan hizmetlerden [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yararlanmayı beklediğinizde uygundur. Bununla birlikte, tek bir kod tabanından veya birden çok bağımsız kod tabanından birden çok ikili dosya oluşturmanın sürümüne sahip strateji, paylaşılan stratejiden daha fazla ilk geliştirmeyi gerektirir. Ayrıca, her sürüm için ayrı bir kurulum veya yüklü ve VSPackage'nizin desteklediği sürümlerini algılayan tek bir kurulum oluşturmanız gerektiğinden ek kurulum çalışması [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] gerekebilir.
+ Sürüme sahip VSPackage stratejisi altında, destekleyenin her sürümü için bir VSPackage [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oluşturun. Bu, her VSPackage'ın diğerlerini etkilemeden evrim geçirerek daha sonraki sürümleri tarafından sağlanan hizmetlerden yararlanmayı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] beklediğinizde uygundur. Bununla birlikte, tek bir kod tabanından veya birden çok bağımsız kod tabanından birden çok ikili dosya oluşturmanın sürümüne sahip strateji, paylaşılan stratejiden daha fazla ilk geliştirmeyi gerektirir. Ayrıca, her sürüm için ayrı bir kurulum veya yüklü ve VSPackage'nizin desteklediği sürümlerini algılayan tek bir kurulum oluşturmanız gerektiğinden ek kurulum çalışması [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] gerekebilir.
 
 ## <a name="binary-compatibility"></a>İkili uyumluluk
- Genellikle ikili uyumluluk, önceki Visual Studio sürümleriyle geliştirilen yerel kodLU VSPackage'ların Visual Studio. Ancak üç önemli özel durum vardır:
+ Genellikle, ikili uyumluluk, önceki Visual Studio sürümleriyle geliştirilen yerel kodLU VSPackage'ların Visual Studio. Ancak üç önemli özel durum vardır:
 
 - VSPackage'nız ortak dil çalışma zamanının belirli bir sürümüne bağlı ise, hangi sürümünün [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çalıştır gerektiğini belirlemesi gerekir.
 

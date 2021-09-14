@@ -16,12 +16,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cf6376ca9ef5442e4f71588a6de7d3a4a33886ba8520f18914f03d7522fa463
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bb628f967f9d56f954c2c639951f9317fa8efed9
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121411327"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625743"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>Yapı işleminde metin dönüşümünü çağır
 
@@ -294,25 +294,25 @@ dahil edilen bir dosyayı veya şablon tarafından okunan başka bir dosyayı g�
 
 **Metin şablonlarını dönüştürmek için diğer seçenekler nelerdir?**
 
-- [TextTransform yardımcı programı](../modeling/generating-files-with-the-texttransform-utility.md) komut betiklerine uygulanabilir. Çoğu durumda MSBuild kullanmak daha kolaydır.
+- [TextTransform yardımcı programı](../modeling/generating-files-with-the-texttransform-utility.md) komut betiklerine uygulanabilir. Çoğu durumda, daha kolay bir şekilde MSBuild.
 
-- [Visual Studio uzantısında metin dönüştürmeyi çağır](../modeling/invoking-text-transformation-in-a-vs-extension.md).
+- [Bir uzantıda Metin Visual Studio çağırma.](../modeling/invoking-text-transformation-in-a-vs-extension.md)
 
-- [Tasarım zamanı metin şablonları](../modeling/design-time-code-generation-by-using-t4-text-templates.md) Visual Studio tarafından dönüştürülür.
+- [Tasarım zamanı metin şablonları,](../modeling/design-time-code-generation-by-using-t4-text-templates.md) Visual Studio.
 
-- [Çalışma zamanı metin şablonları](../modeling/run-time-text-generation-with-t4-text-templates.md) uygulamanızdaki çalışma zamanında dönüştürülür.
+- [Çalışma zamanı metin şablonları,](../modeling/run-time-text-generation-with-t4-text-templates.md) uygulamanıza çalışma zamanında dönüştürülmektedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 ::: moniker range="vs-2017"
 
-- Şu adreste T4 MSbuild şablonunda iyi bir kılavuzluk vardır: `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
+- T4 MSbuild şablonunda iyi bir kılavuz vardır: `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- Şu adreste T4 MSbuild şablonunda iyi bir kılavuzluk vardır: `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
+- T4 MSbuild şablonunda iyi bir kılavuz vardır: `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 

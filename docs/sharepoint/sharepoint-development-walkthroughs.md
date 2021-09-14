@@ -16,18 +16,18 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 1b5d980df94fcd1ccf3ef65c555e452b8a761293
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122092780"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625071"
 ---
 # <a name="sharepoint-development-walkthroughs"></a>SharePoint geliştirme talimatları
   aşağıdaki izlenecek yollarda kullanarak SharePoint çözümlerin nasıl geliştirileceği ve dağıtılacağı gösterilmektedir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 ## <a name="general"></a>Genel
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[İzlenecek yol: özellik Olay alıcıları ekleme](../sharepoint/walkthrough-add-feature-event-receivers.md)|Bir özellik yüklendiğinde, etkinleştirildiğinde, devre dışı bırakıldığında veya kaldırıldığında yürütülen Yöntemler olan özellik olay alıcılarının nasıl ekleneceğini açıklar.|
 |[İzlenecek yol: SharePoint için bir site sütunu, içerik türü ve liste oluşturma](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)|Bir özel alanın, içerik türünün, içerik türünden liste tanımının ve liste örneğinin nasıl oluşturulacağını gösterir.|
@@ -36,21 +36,21 @@ ms.locfileid: "122092780"
 
 ## <a name="import-wizard"></a>İçeri Aktarma Sihirbazı
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[İzlenecek yol: SharePoint Tasarımcısı Yeniden Kullanılabilir İş Akışını Visual Studio'ya İçeri Aktarma](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)|SharePoint Designer 2010 ' de oluşturulan yeniden kullanılabilir bir iş akışının [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint bir iş akışı projesine nasıl içeri aktarılacağını gösterir.|
 |[İzlenecek yol: Mevcut SharePoint Sitesinden Öğeleri İçeri Aktarma](../sharepoint/walkthrough-import-items-from-an-existing-sharepoint-site.md)|mevcut bir SharePoint sitesinden SharePoint projesine nasıl öğe aktarılacağını gösterir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 
 ## <a name="web-parts"></a>Web bölümleri
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[İzlenecek yol: SharePoint için bir Web Bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)|Visual Studio **Web Bölümü** öğe şablonunu kullanarak Web Bölümü oluşturmayı gösterir.|
 |[izlenecek yol: tasarımcı kullanarak SharePoint için web bölümü oluşturma](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)|Visual Studio içinde SharePoint **Visual Web bölümü** proje şablonunu kullanarak görsel olarak bir web bölümü oluşturmayı gösterir.|
 
 ## <a name="workflows"></a>İş Akışları
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[izlenecek yol: SharePoint iş akışı çözümü oluşturma ve hatalarını ayıklama](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md)|Temel sıralı bir iş akışı şablonunun nasıl oluşturulacağını gösterir.|
 |[İzlenecek yol: ilişkilendirme ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)|İlişkilendirme ve başlatma formlarını kullanan temel sıralı bir iş akışının nasıl oluşturulacağını gösterir.|
@@ -60,26 +60,26 @@ ms.locfileid: "122092780"
 
 ## <a name="application-pages"></a>Uygulama sayfaları
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[İzlenecek yol: bir uygulama sayfasını bir iş akışına ekleme](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|Bir iş akışından türetilmiş verileri bir iş akışı projesine görüntüleyen bir uygulama sayfasının nasıl ekleneceğini gösterir.|
 |[izlenecek yol: SharePoint uygulama sayfası oluşturma](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)|bir uygulama sayfasının nasıl oluşturulacağını ve sonra yerel bir SharePoint sitesi kullanarak bu sayfada hata ayıklamanın nasıl yapılacağını gösterir.|
 
 ## <a name="business-data-connectivity"></a>İş verileri bağlantısı
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[izlenecek yol: iş verilerini kullanarak SharePoint bir dış liste oluşturma](../sharepoint/walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md)|Bir örnek veritabanındaki kişiler hakkında bilgi döndüren BDC hizmeti için bir modelin nasıl oluşturulacağını gösterir.|
 
 ## <a name="packaging-and-deployment"></a>Paketleme ve dağıtım
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[İzlenecek yol: proje görev listesi tanımını dağıtma](../sharepoint/walkthrough-deploying-a-project-task-list-definition.md)|proje görevlerini izlemek için SharePoint liste tanımı oluşturmak, özelleştirmek, hatalarını ayıklamak ve dağıtmak için Visual Studio nasıl kullanacağınızı gösterir.|
 
 ## <a name="extend-the-sharepoint-project-system"></a>SharePoint proje sistemini genişletme
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[izlenecek yol: SharePoint proje öğesi türünü genişletme](../sharepoint/walkthrough-extending-a-sharepoint-project-item-type.md)|Yerleşik **Iş verileri bağlantı modeli** proje öğesi türünün nasıl genişletileceğini gösterir.|
 |[izlenecek yol: SharePoint projesi uzantısı oluşturma](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)|tüm SharePoint projelerine özel bir özelliğin nasıl ekleneceğini gösterir. Geliştiriciler, eşlenmiş bir klasör eklemek veya kaldırmak için özelliğini kullanabilir.|
@@ -91,7 +91,7 @@ ms.locfileid: "122092780"
 
 ## <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
 |[İzlenecek yol: Sunucu Gezgini Web bölümlerini görüntüleyecek şekilde genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)|Sunucu Gezgini görüntülenen SharePoint sitelerde Web Bölümleri görüntülemek için yeni düğümlerin nasıl ekleneceğini gösterir. bu izlenecek yol ayrıca, SharePoint sunucusu nesne modeline çağırmak için bir SharePoint komutunun nasıl oluşturulacağını gösterir.|
 |[izlenecek yol: Sunucu Gezgini uzantısında SharePoint istemci nesne modelini çağırma](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)|Sunucu Gezgini görüntülenen SharePoint sitelerde Web Bölümleri görüntülemek için yeni düğümlerin nasıl ekleneceğini gösterir. bu izlenecek yol ayrıca SharePoint istemci nesne modelinin nasıl kullanılacağını gösterir.|

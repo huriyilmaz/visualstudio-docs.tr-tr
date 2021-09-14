@@ -8,11 +8,11 @@ ms.date: 03/21/2021
 ms.topic: conceptual
 description: Microsoft ürün ve hizmet sözleşmesi 'nde (mpsa) Visual Studio aboneliklerini yönetme hakkında bilgi edinin
 ms.openlocfilehash: 63124e8853184fde04db7bc202e5acea3cfbe89f
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966559"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625029"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft ürün ve hizmet anlaşmasındaki (mpsa) abonelikler Visual Studio
 mpsa programı aracılığıyla Visual Studio abonelikleri satın aldıysanız, Visual Studio bir abonelik yöneticisi ve kullanıcılarınıza abonelik atama yapabilmeniz için bilmeniz gereken birkaç nokta vardır. zaten yönetici olarak ayarladıysanız, Visual Studio abonelikleri [yönetim portalına](https://manage.visualstudio.com/)doğrudan gidebilirsiniz.

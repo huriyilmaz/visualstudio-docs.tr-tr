@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: df0b17c6a1696315e328121eaa305a65defe40ea
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122104241"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636441"
 ---
 # <a name="idebugbreakpointrequest2"></a>IDebugBreakpointRequest2
 Bu arabirim, herhangi bir kesme noktası türünü oluşturmak ve bağlamak için gereken bilgileri temsil eder.
@@ -36,7 +36,7 @@ IDebugBreakpointRequest2 : IUnknown
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  Hata ayıklama altyapısı (DE), bekleyen bir kesme noktası oluşturmak için [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) çağrısı aracılığıyla bu arabirimi alır. [GetBreakpointRequest çağrısı](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md) bu arabirimi DE'den alabilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
  Aşağıdaki tabloda yöntemlerini `IDebugBreakpointRequest2` gösterir.
 
 |Yöntem|Açıklama|

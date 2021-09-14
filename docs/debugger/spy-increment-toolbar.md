@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 97c03fe68b810cbd7e907b4020b8487ae5c547f2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122030613"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636585"
 ---
 # <a name="spy-toolbar"></a>Spy++ Araç Çubuğu
 Araç çubuğu Spy++ menü çubuğunun altında görünür. Araç çubuğunu görüntülemek veya gizlemek için Görünüm menüsünde **Araç Çubuğu'nu** **tıklatın.**
@@ -38,11 +38,11 @@ Araç çubuğu Spy++ menü çubuğunun altında görünür. Araç çubuğunu gö
 |![Spy&#43;&#43; Günlük Seçenekleri Düğmesi](../debugger/media/icon_spy--_logoptions.gif "Icon_Spy++_LogOptions")|İleti Seçenekleri [iletişim](../debugger/message-options-dialog-box.md) kutusunu görüntüler. Görüntülemek üzere windows ve ileti türlerini seçmek için bu iletişim kutusunu kullanın. Bu denetim yalnızca bir İletiler **penceresi** etkin pencere olduğunda kullanılabilir.|
 |![Spy&#43;&#43; Günlüğü Temizle Düğmesi](../debugger/media/spy--_clearlog.gif "Spy++_ClearLog")|Etkin İletiler penceresinin içeriğini **temizler.** Bu denetim yalnızca bir İletiler **penceresi** etkin pencere olduğunda kullanılabilir.|
 |![Spy&#43;&#43; Pencere Bul Düğmesi](../debugger/media/icon_spy--_findwindow.gif "Icon_Spy++_FindWindow")|Pencere arama [ölçütlerini](../debugger/find-window-dialog-box.md) ayarlamanızı ve özellikleri veya iletileri görüntülemenizi sağlayan Pencere Bul iletişim kutusunu açar. Daha fazla bilgi için, [bkz. How to: Use the Finder Tool](../debugger/how-to-use-the-finder-tool.md).|
-|![Spy&#43;&#43; İlk PencereYi Bul Düğmesi](../debugger/media/icon_spy--_window.gif "Icon_Spy++_Window")|Geçerli görünümde eşleşen bir pencere, işlem, iş parçacığı veya ileti arar.|
+|![Spy&#43;&#43; bul İlk Pencere Düğmesi](../debugger/media/icon_spy--_window.gif "Icon_Spy++_Window")|Geçerli görünümde eşleşen bir pencere, işlem, iş parçacığı veya ileti arar.|
 |![Spy&#43;&#43; Sonraki PencereYi Bul Düğmesi](../debugger/media/icon_spy--_nextwindow.gif "Icon_Spy++_NextWindow")|Geçerli görünümde sonraki eşleşen pencereyi, işlemi, iş parçacığını veya iletiyi arar. Bu denetim (ve ilgili menü komutu), yalnızca benzersiz olmayan geçerli bir arama sonucu olduğunda kullanılabilir. Örneğin, pencere ağacında arama ölçütü olarak bir pencere tanıtıcısı kullanırsınız, pencere ağacında bu tanıtıcıya sahip yalnızca bir pencere olduğundan benzersiz sonuçlar üretir; Bu örnekte, **Sonrakini Bul** kullanılamaz.|
 |![Spy&#43;&#43; Önceki Pencereyi Bul Düğmesi](../debugger/media/icon_spy--_prevwindow.gif "Icon_Spy++_PrevWindow")|Önceki eşleşen pencere, işlem, iş parçacığı veya ileti için geçerli görünümü arar. Bu denetim (ve ilgili menü komutu), yalnızca benzersiz olmayan geçerli bir arama sonucu olduğunda kullanılabilir. Örneğin, pencere ağacında arama ölçütü olarak bir pencere tanıtıcısı kullanırsınız, pencere ağacında bu tanıtıcıya sahip yalnızca bir pencere olduğundan benzersiz sonuçlar üretir; Bu örnekte **Öncekini Bul** kullanılamıyor.|
 |![Spy&#43;&#43; Özellik Gezgini Düğmesi](../debugger/media/icon_spy--_propexp.gif "Icon_Spy++_PropExp")|Windows görünümünde seçilen pencerenin Windows görüntüler.|
-|![Spy&#43;&#43; Yenileme Düğmesi](../debugger/media/icon_spy--_refresh.gif "Icon_Spy++_Refresh")|Sistem görünümlerini yeniler.|
+|![Spy&#43;&#43; Yenile Düğmesi](../debugger/media/icon_spy--_refresh.gif "Icon_Spy++_Refresh")|Sistem görünümlerini yeniler.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Spy++ Kullanma](../debugger/using-spy-increment.md)

@@ -8,11 +8,11 @@ ms.author: kaelli
 author: KathrynEE
 ms.manager: jmartens
 ms.openlocfilehash: 85d007ae7aec5bb56b85e4b1861845f81687dd68
-ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "122785877"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635950"
 ---
 # <a name="team-explorer-reference"></a>Takım Gezgini başvurusu
 

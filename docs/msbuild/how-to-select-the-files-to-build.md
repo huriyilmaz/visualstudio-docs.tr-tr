@@ -16,11 +16,11 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fac27ec9996d115381ae42a7c88ddcf6549ba86
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122136930"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625694"
 ---
 # <a name="how-to-select-the-files-to-build"></a>Nasıl yapılır: derlenecek dosyaları seçme
 

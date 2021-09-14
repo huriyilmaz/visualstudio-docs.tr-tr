@@ -1,6 +1,6 @@
 ---
 title: Etki Alanı İlişkilerinin Özellikleri
-description: Erişim değiştiricisi, custome öznitelikleri gibi bir etki alanı ilişki dükkanı ile ilişkili özellikler hakkında bilgi edinin ve çift türetilmiş bir üretir.
+description: Erişim Değiştiricisi, Özel Öznitelikler ve İki Kez Türetilen Oluşturma gibi bir etki alanı relationshop ile ilişkili özellikler hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,32 +13,32 @@ ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 ms.openlocfilehash: 8972722c0f65f4d007db7173ef41b7a40dba1208
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122061161"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637553"
 ---
 # <a name="properties-of-domain-relationships"></a>Etki Alanı İlişkilerinin Özellikleri
-Aşağıdaki tabloda yer alan Özellikler bir etki alanı ilişkisiyle ilişkilendirilir. Etki alanı ilişkileri hakkında daha fazla bilgi için bkz. [modelleri, sınıfları ve Ilişkileri anlama](../modeling/understanding-models-classes-and-relationships.md). Bu özelliklerin nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Domain-Specific dilini özelleştirme ve genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md).
+Aşağıdaki tablodaki özellikler bir etki alanı ilişkisiyle ilişkilendirildi. Etki alanı ilişkileri hakkında bilgi için [bkz. Modelleri, Sınıfları ve İlişkileri Anlama.](../modeling/understanding-models-classes-and-relationships.md) Bu özellikleri kullanma hakkında daha fazla bilgi için, [bkz. Domain-Specific Dili Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
 
 |Özellik|Açıklama|Varsayılan|
 |-|-|-|
-|Erişim değiştiricisi|Etki alanı ilişkisine erişim düzeyi ( `public` veya `internal` ).|`public`|
-|Özel Öznitelikler|Etki alanı ilişkisinden oluşturulan kaynak kodu sınıfına öznitelikler eklemek için kullanılır.|\<none>|
-|Double türevi üretir|Eğer `True` bir temel sınıf ve kısmi bir sınıf (geçersiz kılmaları özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|`False`|
-|Özel Oluşturucusu vardır|İse `True` , kaynak kodda özel bir oluşturucunun sağlandığını gösterir. Daha fazla bilgi için bkz. [oluşturulan sınıfları geçersiz kılma ve genişletme](../modeling/overriding-and-extending-the-generated-classes.md).|`False`|
-|Devralma değiştiricisi|Etki alanı ilişkisinden oluşturulan kaynak kodu sınıfının devralım türünü açıklar ( `none` `abstract` veya `sealed` ).|\<none>|
-|Yinelemelere izin verir|İse `True` , aynı iki öğe arasında etki alanı ilişkisinin Yinelenen bağlantıları oluşturulabilir.|`False`|
-|Temel Ilişkiler|Etki alanı ilişkisi türetildiyse, etki alanı ilişkisinin temel ilişkisi.|\<none>|
-|Ekleniyor|İse `True` , etki alanı ilişkisi bir katıştırma ilişkisidir. İse `False` , ilişki bir başvuru ilişkisidir.|\<both>|
+|Erişim Değiştiricisi|Etki alanı ilişkisinin erişim düzeyi ( `public` veya `internal` ).|`public`|
+|Özel Öznitelikler|Etki alanı ilişkisinden oluşturulan kaynak kod sınıfına öznitelikler eklemek için kullanılır.|\<none>|
+|Çift Türetilen|ise, `True` hem temel bir sınıf hem de kısmi bir sınıf (geçersiz kılmalar aracılığıyla özelleştirmeyi desteklemek için) oluşturulur. Daha fazla bilgi için [bkz. Oluşturulan Sınıfları Geçersiz Kılma ve Genişletme.](../modeling/overriding-and-extending-the-generated-classes.md)|`False`|
+|Özel Oluşturucuya Sahip|ise, `True` kaynak kodda özel bir oluşturucu sağlanmıştır gösterir. Daha fazla bilgi için [bkz. Oluşturulan Sınıfları Geçersiz Kılma ve Genişletme.](../modeling/overriding-and-extending-the-generated-classes.md)|`False`|
+|Devralma Değiştiricisi|Etki alanı ilişkisinden ( veya ) oluşturulan kaynak kod sınıfının `none` devralmanın nasıl olduğunu `abstract` `sealed` açıklar.|\<none>|
+|Yinelenenlere Izin Verir|ise, `True` etki alanı ilişkisinin yinelenen bağlantıları aynı iki öğe arasında oluşturulabilir.|`False`|
+|Temel İlişkiler|Etki alanı ilişkisi türetilmişse, etki alanı ilişkisinin temel ilişkisi.|\<none>|
+|Ekleme|ise, `True` etki alanı ilişkisi bir ekleme ilişkisidir. ise, `False` ilişki bir başvuru ilişkisidir.|\<both>|
 |Name|Etki alanı ilişkisinin adı.|Geçerli ad|
-|Ad Alanı|Etki alanı ilişkisiyle bağlantılı olan ad alanı.|Geçerli ad alanı|
+|Ad Alanı|Etki alanı ilişkisine bağlı olan ad alanı.|Geçerli ad alanı|
 |Notlar|Etki alanı ilişkisiyle ilişkili resmi olmayan notlar.|\<none>|
-|Açıklama|Kodu belgelemek için kullanılan açıklama ve oluşturulan tasarımcının Kullanıcı arabiriminde kullanılır.|\<none>|
+|Description|Kodu belgeley için kullanılan ve oluşturulan tasarımcının kullanıcı arabiriminde kullanılan açıklama.|\<none>|
 |Görünen Ad|Etki alanı ilişkisi için oluşturulan tasarımcıda görüntülenen ad.|\<none>|
-|Help anahtar sözcüğü|Etki alanı ilişkisi için F1 yardımını dizine eklemek üzere kullanılan isteğe bağlı anahtar sözcük.|\<none>|
+|Yardım Anahtar Sözcüğü|Etki alanı ilişkisi için F1 yardım dizinini dizine eklemek için kullanılan isteğe bağlı anahtar sözcük.|\<none>|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Alana Özgü Dil Araçları sözlüğü](/previous-versions/bb126564(v=vs.100))
+- [Alana Özgü Dil Araçları Sözlüğü](/previous-versions/bb126564(v=vs.100))

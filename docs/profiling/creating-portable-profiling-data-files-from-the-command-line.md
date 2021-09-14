@@ -13,11 +13,11 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 7eadad8efebfa673a7e6c12e7dc67fb8b601f884
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122039091"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637233"
 ---
 # <a name="create-portable-profiling-data-files-from-the-command-line"></a>Komut satırına taşınabilir profil oluşturma veri dosyaları oluşturma
 Profil oluşturma verileri paylaşımını kolaylaştırmak için [VSPerfReport](../profiling/vsperfreport.md) komut satırı aracını kullanarak profil oluşturma çalıştırması için simgeleri ebilirsiniz. *vsp* dosyası.

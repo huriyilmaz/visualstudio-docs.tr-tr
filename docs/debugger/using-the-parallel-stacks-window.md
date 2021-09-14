@@ -21,11 +21,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: b88c488f73c99cd5a86e6bbe88acbeb379724f88
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122090284"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636526"
 ---
 # <a name="view-threads-and-tasks-in-the-parallel-stacks-window-c-visual-basic-c"></a>Paralel Yığınlar penceresinde iş parçacıklarını ve görevleri görüntüleme (C#, Visual Basic, C++)
 
@@ -49,18 +49,18 @@ ms.locfileid: "122090284"
 
 ![Paralel Yığınlar penceresinde araç çubuğu](../debugger/media/parallel_stackstoolbar.png "Paralel Yığınlar araç çubuğu")
 
-|Simge|Denetim|Açıklama|
+|Simge|Denetim|Description|
 |-|-|-|
 |![İş parçacıkları/görevler açılan kutusu](media/parallel_toolbar1.png "İş Parçacıkları/Görevler birleşik giriş kutusu")|**Iş parçacıkları** / **Görevler** açılan kutusu|Görünümü iş parçacıklarının çağrı yığınları ve görev yığınları arasında geçirir. Daha fazla bilgi için bkz. [Görevler Görünümü](#tasks-view) ve [iş parçacıkları görünümü](#threads-view).|
 |![Yalnızca bayraklı simgeyi göster](media/parallel_toolbar2.png "Yalnızca Bayraklı Göster simgesi")|Yalnızca bayraklı göster|Yalnızca **GPU Iş parçacıkları** penceresi ve **paralel izleme** penceresi gibi diğer hata ayıklayıcı pencerelerinin bayrak eklenmiş iş parçacıkları için çağrı yığınlarını gösterir.|
 |![Değiştirme yöntemi görünümü simgesi](media/parallel_toolbar3.png "Yöntem Görünümü'ne Geçiş Simgesi")|**Yöntem görünümünü** değiştirme|Çağrı yığını görünümleri ve **Yöntem görünümü** arasında geçiş yapar. Daha fazla bilgi için bkz. [Yöntem görünümü](#method-view).|
-|![Geçerli simgeye Otomatik Kaydır](media/parallel_toolbar4.png "Geçerli Simgeye Otomatik Kaydır simgesi")|Geçerli yığın çerçevesine Otomatik Kaydır|Grafiği geçerli yığın çerçevesinin görünümü olacak şekilde oto kaydır. Bu özellik, geçerli yığın çerçevesini diğer pencerelerin veya büyük grafiklerde yeni bir kesme noktasına vurdığınızda yararlı olur.|
+|![Geçerli simgeye Otomatik Kaydır](media/parallel_toolbar4.png "Geçerli simgeye otomatik kaydırma")|Geçerli yığın çerçevesine Otomatik Kaydır|Grafiği geçerli yığın çerçevesinin görünümü olacak şekilde oto kaydır. Bu özellik, geçerli yığın çerçevesini diğer pencerelerin veya büyük grafiklerde yeni bir kesme noktasına vurdığınızda yararlı olur.|
 |![Yakınlaştır simgesini değiştirme](media/parallel_toolbar5.png "Yakınlaştır simgesini değiştir")|Yakınlaştırma denetimini değiştirme|Pencerenin sol tarafındaki Yakınlaştırma denetimini gösterir veya gizler. <br /><br />Yakınlaştırma denetiminin görünürlüğüne bakılmaksızın, **CTRL** tuşuna basarak ve fare tekerleğini açıp veya **CTRL** + **+ SHIFT** tuşlarına basarak yakınlaştırarak yakınlaştırabilirsiniz + **+**  +  + **-** . |
 
 ### <a name="stack-frame-icons"></a>Yığın çerçevesi simgeleri
 Aşağıdaki simgeler, tüm görünümlerde etkin ve geçerli yığın çerçeveleri hakkında bilgi sağlar:
 
-|Simge|Açıklama|
+|Simge|Description|
 |-|-|
 |![Sarı ok](media/icon_parallelyellowarrow.gif)|Geçerli iş parçacığının geçerli konumunu (etkin yığın çerçevesi) gösterir.|
 |![İş parçacıkları simgesi](media/icon_parallelthreads.gif)|Geçerli olmayan bir iş parçacığının geçerli konumunu (etkin yığın çerçevesi) gösterir.|
@@ -71,7 +71,7 @@ Aşağıdaki kısayol menü öğeleri, **Iş parçacıkları** görünümü veya
 
 ![Paralel Yığınlar penceresinde kısayol menüsü](../debugger/media/parallel_contmenu.png "Paralel Yığınlar penceresinde kısayol menüsü")
 
-|Menü öğesi|Açıklama|
+|Menü öğesi|Description|
 |-|-|
 |**Bayrak**|Seçili öğeyi bayraklar.|
 |**İşaretsiz**|Seçili öğenin bayraklarını kaldır.|
@@ -103,9 +103,9 @@ Aşağıdaki tabloda, **Iş parçacıkları** görünümünün ana özellikleri 
 
 |Çıkma|Öğe adı|Açıklama|
 |-|-|-|
-|1|Çağrı yığını segmenti veya düğümü|Bir veya daha fazla iş parçacığı için bir dizi yöntem içerir. Çerçeveye bağlı ok satırı yoksa, çerçeve iş parçacıklarının çağrı yolunun tamamını gösterir.|
+|1|Çağrı yığını segmenti veya düğümü|Bir veya daha fazla iş parçacığı için bir dizi yöntem içerir. Çerçeveye bağlı ok satırı yoksa çerçeve, iş parçacıklarının çağrı yolunun tamamını gösterir.|
 |2|Mavi vurgu|Geçerli iş parçacığının çağrı yolunu gösterir.|
-|3|Ok çizgileri|Bağlan iş parçacığı için çağrı yolunun tamamının nasıl hazır olduğunu gösterir.|
+|3|Ok çizgileri|Bağlan için çağrı yolunun tamamını yapmak için düğümler kullanın.|
 |4|Düğüm üst bilgisi|Düğüm için işlem ve iş parçacığı sayısını gösterir.|
 |5|Yöntem|Aynı yöntemdeki bir veya daha fazla yığın çerçevesini temsil eder.|
 |6|Yöntemde araç ipucu|Bir yöntemin üzerine gelindiğinde görünür. İş **Parçacıkları** görünümünde araç ipucu, İş Parçacıkları penceresine benzer bir tabloda tüm iş **parçacıklarını** gösterir. |
@@ -136,7 +136,7 @@ Aşağıdaki görüntüde, üst kısmında İş  Parçacıkları görünümünde
 
 ![İş Parçacıkları görünümü ve Yöntem Görünümü](../debugger/media/parallel_methodview.png "İş Parçacıkları görünümü ve Yöntem Görünümü")
 
-Yeni bir yığın çerçevesine geçiş yaptıysanız, bu  yöntemi geçerli yönteme siz hazırlar ve Yöntem Görünümü yeni yöntem için tüm çağıranları ve çağrılarını gösterir. Bu, yöntemin çağrı yığınlarında görünip görünmelerine bağlı olarak bazı iş parçacıklarının görünümde görünmesine veya görünümden kaybolmasına neden olabilir. Çağrı yığını görünümüne dönmek için Yöntem Görünümü araç **çubuğu simgesini** yeniden seçin.
+Yeni bir yığın çerçevesine geçiş yaptıysanız, bu  yöntemi geçerli yöntem olarak kullanır ve Yöntem Görünümü yeni yöntem için tüm çağıranları ve çağrılarını gösterir. Bu, yöntemin çağrı yığınlarında görünip görünmelerine bağlı olarak bazı iş parçacıklarının görünümde görünmesine veya görünümden kaybolmasına neden olabilir. Çağrı yığını görünümüne dönmek için Yöntem Görünümü araç **çubuğu simgesini** yeniden seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kullanmaya başlayın iş parçacıklı uygulamada hata ayıklama](../debugger/get-started-debugging-multithreaded-apps.md)

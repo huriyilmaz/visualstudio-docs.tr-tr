@@ -12,11 +12,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: eb31e62a74b9309d86a02005047fd0c96bb2e1e4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122151866"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635969"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>hızlı başlangıç: Visual Studio ıde 'ye ilk bakış
 
@@ -202,7 +202,7 @@ Visual Studio kullanırken herhangi bir sorunla karşılaşmanız gerekir veya �
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kullanıcı arabirimi hakkında bilgi almak için Visual Studio özelliklerini inceledik. Daha fazla bilgi için:
+Kullanıcı arabirimi hakkında bilgi almak için Visual Studio özelliklerine göz atalım. Daha fazla bilgi için:
 
 > [!div class="nextstepaction"]
 > [Kod düzenleyicisi hakkında bilgi](../get-started/tutorial-editor.md)

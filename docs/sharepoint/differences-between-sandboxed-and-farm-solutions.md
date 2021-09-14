@@ -1,6 +1,6 @@
 ---
-title: Korumalı ve Grup çözümleri arasındaki farklılıklar | Microsoft Docs
-description: Korumalı ve Grup çözümleri arasındaki farkları anlayın. Visual Studio her iki çözüm türüyle hata ayıklamanın nasıl yaklaşımının nasıl yapılacağını öğrenin.
+title: Korumalı Alan ve Grup Çözümleri arasındaki farklar | Microsoft Docs
+description: Korumalı alan ve grup çözümleri arasındaki farkları anlama. Her iki Visual Studio hata ayıklama yaklaşımlarının nasıl olduğunu bilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -19,29 +19,29 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 7f6cc328c33f4aca45833bf5fd61977cef571c58
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122149279"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625274"
 ---
-# <a name="differences-between-sandboxed-and-farm-solutions"></a>Korumalı ve Grup çözümleri arasındaki farklılıklar
-  bir SharePoint çözümü derlerken, SharePoint sunucusuna dağıtılır ve hata ayıklayıcı, hata ayıklaması için iliştirir. Çözümde hata ayıklamak için kullanılan işlem, Korumalı çözüm özelliğinin ayarına bağlıdır: Korumalı çözüm veya Grup çözümü.
+# <a name="differences-between-sandboxed-and-farm-solutions"></a>Korumalı alan ve grup çözümleri arasındaki farklar
+  Bir çözüm derle SharePoint, SharePoint sunucusuna dağıtır ve hata ayıklamak için bir hata ayıklayıcısı iliştirer. Çözümde hata ayıklamak için kullanılan işlem Korumalı Çözüm özelliğinin ayarına bağlıdır: korumalı alanlı çözüm veya grup çözümü.
 
- Daha fazla bilgi için bkz. [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md).
+ Daha fazla bilgi için [bkz. Korumalı alanlı çözümde dikkat edilmesi gerekenler.](../sharepoint/sandboxed-solution-considerations.md)
 
 ## <a name="farm-solutions"></a>Grup çözümleri
- IIS çalışan işleminde (W3WP.exe) barındırılan Grup çözümleri, tüm grubu etkileyebilecek kodu çalıştırır. korumalı çözüm özelliği "grup çözümü" olarak ayarlanmış bir SharePoint projesinde hata ayıkladığınızda, sistem ııs uygulama havuzu, ııs çalışan işlemi tarafından kilitlenen tüm dosyaları serbest bırakmak için SharePoint veya özelliği dağıtmadan önce geri dönüştürür. yalnızca SharePoint projesinin site URL 'sini sunan ııs uygulama havuzu geri dönüştürüldü.
+ IIS çalışan işlemi (W3WP.exe) içinde barındırılan grup çözümleri, tüm grubu etkileyebilecek kodu çalıştırın. Korumalı Çözüm özelliği "grup çözümü" olarak ayarlanmış bir SharePoint projesinde hata ayıklarken, IIS çalışan işlemi tarafından kilitlenmiş tüm dosyaları serbest bırakmak için sistemin IIS uygulama havuzu SharePoint geri çekilmeden veya dağıtmadan önce geri dönüştürülmektedir. Yalnızca projenin site URL'sini SharePoint IIS uygulama havuzu geri dönüştürülmektedir.
 
-## <a name="sandboxed-solutions"></a>Korumalı çözümler
- SharePoint kullanıcı kodu çözümü çalışan işleminde (SPUCWorkerProcess.exe) barındırılan korumalı çözümler, yalnızca çözümün site koleksiyonunu etkileyebilecek kodu çalıştırır. Korumalı çözümler IIS çalışan işleminde çalışmadığından, ne IIS uygulama havuzu ne de IIS sunucusunun yeniden başlatılması gerekir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SPUserCodeV4 hizmetinin SharePoint otomatik olarak tetiklediği ve denetimlerinde hata ayıklayıcıyı spucworkerprocess işlemine iliştirir. SPUCWorkerProcess işleminin çözümün en son sürümünü yüklemek için geri dönüştürülmesi gerekli değildir.
+## <a name="sandboxed-solutions"></a>Korumalı alan çözümleri
+ SharePoint kod çözümü çalışan SharePoint (SPUCWorkerProcess.exe) barındırılan korumalı alanlı çözümler, çözümün yalnızca site koleksiyonunu etkileyebilecek kodu çalıştırın. Korumalı alanlı çözümler IIS çalışan işleminde çalışmaması nedeniyle, ne IIS uygulama havuzu ne de IIS sunucusunun yeniden başlatılması gerekir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]hata ayıklayıcıyı, spusercodeV4 hizmetinin otomatik olarak tetikleye SharePoint SPUCWorkerProcess işlemine iliştirer. SPUCWorkerProcess işleminin çözümün en son sürümünü yüklemek için geri dönüşümü gerekmez.
 
 ## <a name="either-type-of-solution"></a>Her iki çözüm türü
- Her iki çözüm türü ile [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] de hata ayıklayıcıyı tarayıcıya ekler ve istemci tarafı komut dosyası hata ayıklamayı etkinleştirir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Bu amaçla betik hata ayıklama altyapısını kullanır. Betik hata ayıklamasını etkinleştirmek için, istendiğinde varsayılan tarayıcı ayarlarını değiştirmeniz gerekir.
+ Her iki çözüm türüyle [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] de istemci tarafı betik hata ayıklamasını etkinleştirmek için hata ayıklayıcıyı tarayıcıya iliştirer. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bu amaç için betik hata ayıklama altyapısını kullanır. Betik hata ayıklamayı etkinleştirmek için, istendiğinde varsayılan tarayıcı ayarlarını değiştirebilirsiniz.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] yalnızca geçerli siteyi çalıştıran W3WP veya SPUCWorkerProcess işlemlerine hata ayıklayıcıyı iliştirir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca, yönetilen COM Plus ve Workflow hata ayıklama altyapılarını da iliştirir.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , hata ayıklayıcıyı yalnızca geçerli siteyi çalıştıran W3WP veya SPUCWorkerProcess işlemlerine iliştirer. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ayrıca, yönetilen COM Plus ve iş akışı hata ayıklama altyapılarını ekler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint çözümlerinde hata ayıklama](../sharepoint/debugging-sharepoint-solutions.md)
-- [SharePoint çözümleri oluşturun ve hata ayıklayın](../sharepoint/building-and-debugging-sharepoint-solutions.md)
-- [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md)
+- [Hata ayıklama SharePoint çözümleri](../sharepoint/debugging-sharepoint-solutions.md)
+- [Çözüm oluşturma ve SharePoint ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [Korumalı alanlı çözümde dikkat edilmesi gerekenler](../sharepoint/sandboxed-solution-considerations.md)

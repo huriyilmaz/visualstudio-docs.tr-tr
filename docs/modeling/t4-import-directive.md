@@ -1,6 +1,6 @@
 ---
 title: T4 İçe Aktarma Yönergesi
-description: Visual Studio T4 metin şablonunda içeri aktarma yönergesinin, tam nitelikli ad sağlamadan başka bir ad alanındaki öğelere başvurabileceğiniz hakkında bilgi edinin.
+description: T4 metin Visual Studio şablonunda, içeri aktarma yönergesi ile tam ad sağlamadan başka bir ad alanı öğelerine başvurabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,17 +11,17 @@ ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 ms.openlocfilehash: 3f8f34f45e18000de9cea09c8c58a6e021b52134
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034012"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637385"
 ---
 # <a name="t4-import-directive"></a>T4 İçe Aktarma Yönergesi
 
-Visual Studio T4 metin şablonunun kod blokları içinde, yönerge, bir `import` tam adı sağlamadan başka bir ad alanındaki öğelere başvurgirmenize olanak sağlar. Bu, `using` C# veya içinde ' ın eşdeğeridir `imports` [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] .
+Visual Studio T4 metin şablonunun kod bloklarında yönergesi, tam ad sağlamadan başka bir ad alanındaki `import` öğelere başvurabilirsiniz. C# veya içinde `using` ile `imports` [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] eşdeğerdir.
 
-T4 Metin şablonları yazma hakkında genel bir bakış için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
+T4 metin şablonları yazmaya genel bir genel bakış için [bkz. T4 Metin Şablonu Yazma.](../modeling/writing-a-t4-text-template.md)
 
 ## <a name="using-the-import-directive"></a>İçeri Aktarma Yönergesini Kullanma
 
@@ -50,7 +50,7 @@ The file contains: <#=  fileContent #>
 
 - `Microsoft.VisualStudio.Modeling`
 
-- DSL ad alanı
+- DSL'nizin ad alanı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

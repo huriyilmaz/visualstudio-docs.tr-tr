@@ -1,6 +1,6 @@
 ---
-title: 'nasıl yapılır: birden çok Project dosyasında aynı hedefi kullanma | Microsoft Docs'
-description: MSBuild bir proje dosyasında bir hedefin nasıl kaydedileceğini ve hedefin kullanması gereken başka bir projeye nasıl içeri aktarılacağını öğrenin.
+title: 'Nasıl kullanılır: Birden Çok DosyaDa Aynı Hedefi Project Kullanma | Microsoft Docs'
+description: Hedef bir proje dosyasına MSBuild ve hedefi kullanmak zorunda olan herhangi bir projeye aktarmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,35 +15,35 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 1f9fa6593cfb5e6ef21379b7513be02d943e9c66
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122143345"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625671"
 ---
-# <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma
+# <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Nasıl kullanılır: Birden çok proje dosyalarında aynı hedefi kullanma
 
-birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında aynı görevleri ve hedefleri kullanmanız gerektiğini fark edebilirsiniz. Her proje dosyasındaki bu görevlerin veya hedeflerin tüm açıklamalarını eklemek yerine, bir hedefi ayrı bir proje dosyasında kaydedebilir ve sonra bu projeyi, hedefi kullanmak için gereken diğer bir projeye içeri aktarabilirsiniz.
+Birden fazla proje MSBuild yazarsanız, farklı proje dosyalarında aynı görevleri ve hedefleri kullanmak zorunda olduğunu keşfetebilirsiniz. Her proje dosyasına bu görevlerin veya hedeflerin tam açıklamasını dahil etmek yerine, bir hedefi ayrı bir proje dosyasına kaydedebilir ve ardından bu projeyi hedefi kullanması gereken başka bir projeye aktarabilirsiniz.
 
-## <a name="use-the-import-element"></a>Içeri aktarma öğesini kullanın
+## <a name="use-the-import-element"></a>İçeri Aktarma öğesini kullanma
 
-Öğesi, başka bir proje dosyasına `Import` bir proje dosyası eklemek için kullanılır. içeri aktarılmakta olan proje dosyası geçerli bir MSBuild proje dosyası olmalı ve iyi biçimlendirilmiş XML içermelidir. `Project`Öznitelik, içeri aktarılan proje dosyasının yolunu belirtir. Öğesi hakkında daha fazla bilgi için `Import` bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
+öğesi, `Import` bir proje dosyasını başka bir proje dosyasına eklemek için kullanılır. İçe aktarılan proje dosyası, proje dosyası için geçerli MSBuild ve iyi formed XML içermesi gerekir. özniteliği, `Project` içe aktarılan proje dosyasının yolunu belirtir. öğesi hakkında daha fazla bilgi `Import` için bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md).
 
-#### <a name="to-import-a-project"></a>Bir projeyi içeri aktarmak için
+#### <a name="to-import-a-project"></a>Projeyi içeri aktarma
 
-1. İçeri aktarılan projedeki Özellikler ve öğeler için parametre olarak kullanılan proje dosyasını içeri aktarma, tüm özellikler ve öğeler ' i tanımlayın.
+1. İçeri aktarılan proje dosyasında, içeri aktarılan projedeki özellikler ve öğeler için parametre olarak kullanılan tüm özellikleri ve öğeleri tanımlayın.
 
-2. `Import`Projeyi içeri aktarmak için öğesini kullanın. Örnek:
+2. Projeyi `Import` içeri aktarmak için öğesini kullanın. Örnek:
 
      `<Import Project="MyCommon.targets"/>`
 
-3. Öğesini takip `Import` eden tüm özellikleri ve içeri aktarılan projedeki özelliklerin ve öğelerin varsayılan tanımlarını geçersiz kılması gereken öğeleri tanımlayın.
+3. öğesinin `Import` ardından, içe aktarılan projedeki özelliklerin ve öğelerin varsayılan tanımlarını geçersiz kılması gereken tüm özellikleri ve öğeleri tanımlayın.
 
 ## <a name="order-of-evaluation"></a>Değerlendirme sırası
 
- MSBuild bir öğeye ulaştığında `Import` , içeri aktarılan proje, öğe konumundaki içeri aktarma projesine etkin bir şekilde eklenir `Import` . Bu nedenle, `Import` öğesinin konumu Özellikler ve öğelerin değerlerini etkileyebilir. İçeri aktarılan proje tarafından ayarlanan özellikleri ve öğeleri ve içeri aktarılan projenin kullandığı özellikleri ve öğeleri anlamak önemlidir.
+ Bir MSBuild ulaştığında, içeri aktarılan proje öğenin bulunduğu `Import` konumda içeri aktarma projesine etkin bir şekilde `Import` eklenir. Bu nedenle, `Import` öğenin konumu özelliklerin ve öğelerin değerlerini etkileyebilir. İçe aktarılan proje tarafından ayarlanmış özellikleri ve öğeleri ve içe aktarılan projenin kullandığı özellikleri ve öğeleri anlamak önemlidir.
 
- Proje oluşturulduğunda tüm özellikler önce değerlendirilir ve ardından öğeler gelir. Örneğin, aşağıdaki XML içeri aktarılan proje dosyasını *MyCommon. targets* olarak tanımlar:
+ Proje derlemesi sonrasında tüm özellikler önce değerlendirilir ve ardından öğeler kullanılır. Örneğin, aşağıdaki XML, *MyCommon.targets* içe aktarılan proje dosyasını tanımlar:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -57,7 +57,7 @@ birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında ay
 </Project>
 ```
 
- Aşağıdaki XML, *MyCommon. targets* Içeri aktaran *MyApp. proj* öğesini tanımlar:
+ Aşağıdaki XML, *MyCommon.targets'ı içeri aktaran MyApp.proj'yi tanımlar:* 
 
 ```xml
 <Project
@@ -70,25 +70,25 @@ birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında ay
 </Project>
 ```
 
- Proje oluşturduğunda, aşağıdaki ileti görüntülenir:
+ Proje lendiğinde aşağıdaki ileti görüntülenir:
 
  `Name="MyCommon"`
 
- Proje, özelliği `Name` *MyApp. proj* içinde tanımlandıktan sonra Içeri aktarıldığından `Name` *MyCommon. targets* içindeki tanımı, *MyApp. proj* içindeki tanımı geçersiz kılar. Proje, özellik adı tanımlanmadan önce içeri aktarıldıysa, yapı aşağıdaki iletiyi görüntüler:
+ Proje, özelliği `Name` *MyApp.proj* içinde tanımlandığı için, `Name` *MyCommon.targets* içinde tanımı *MyApp.proj* içinde tanımı geçersiz kılar. Proje Ad özelliği tanımlanmamış şekilde içe aktarılmışsa derleme aşağıdaki iletiyi görüntüler:
 
  `Name="MyApp"`
 
-#### <a name="use-the-following-approach-when-importing-projects"></a>Projeleri içeri aktarırken aşağıdaki yaklaşımı kullanın
+#### <a name="use-the-following-approach-when-importing-projects"></a>Projeleri içeri aktarıyorken aşağıdaki yaklaşımı kullanın
 
-1. Proje dosyasında, içeri aktarılan projedeki Özellikler ve öğeler için parametre olarak kullanılan tüm özellikleri ve öğeleri tanımlayın.
+1. Proje dosyasında, içe aktarılan projedeki özellikler ve öğeler için parametre olarak kullanılan tüm özellikleri ve öğeleri tanımlayın.
 
 2. Projeyi içeri aktarın.
 
-3. Proje dosyasında, içeri aktarılan projedeki özelliklerin ve öğelerin varsayılan tanımlarını geçersiz kılması gereken tüm özellikleri ve öğeleri tanımlayın.
+3. Proje dosyasında, içe aktarılan projedeki özelliklerin ve öğelerin varsayılan tanımlarını geçersiz kılması gereken tüm özellikleri ve öğeleri tanımlayın.
 
 ## <a name="example-1"></a>Örnek 1
 
- Aşağıdaki kod örneği, ikinci kod örneği içe aktardığı *MyCommon. targets* dosyasını gösterir. *. Targets* dosyası, derlemeyi yapılandırmak için içeri aktarma projesinden özellikleri değerlendirir.
+ Aşağıdaki kod örneği, ikinci kod örneğinin içeri aktar olduğu *MyCommon.targets* dosyasını gösterir. *.targets dosyası,* derlemeyi yapılandırmak için içeri aktarma projesinin özelliklerini değerlendirir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -107,7 +107,7 @@ birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında ay
 
 ## <a name="example-2"></a>Örnek 2
 
- Aşağıdaki kod örneği *MyCommon. targets* dosyasını içeri aktarır.
+ Aşağıdaki kod örneği *MyCommon.targets dosyasını içeri* aktarır.
 
 ```xml
 <Project DefaultTargets="Build"
@@ -121,5 +121,5 @@ birkaç MSBuild proje dosyası oluşturduysanız, farklı proje dosyalarında ay
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İçeri aktarma öğesi (MSBuild)](../msbuild/import-element-msbuild.md)
+- [Import öğesi (MSBuild)](../msbuild/import-element-msbuild.md)
 - [Targets](../msbuild/msbuild-targets.md)

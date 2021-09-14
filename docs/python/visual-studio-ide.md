@@ -14,11 +14,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: a81616e50cc4f7a3aab5fc4ccfa52d378eeb34d5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122027285"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625328"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>Visual Studio ıde 'ye hoş geldiniz | Python
 

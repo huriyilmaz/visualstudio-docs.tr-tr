@@ -8,11 +8,11 @@ ms.date: 03/21/2021
 ms.topic: conceptual
 description: Aboneliklerde ürün anahtarlarını bulma, talep ve dışarı aktarma Visual Studio öğrenin
 ms.openlocfilehash: 2e74269c3e5e49e776b00484de790472030dc1c1
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966399"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625094"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Aboneliklerde ürün anahtarlarını bulma Visual Studio talep ediyor
 Bu makalede, ürününden ürün anahtarlarını bulma, talep ve dışarı aktarma https://my.visualstudio.com/productkeys açıklanmıştır.  Anahtarı olan bir ürünü etkinleştirme, anahtarların perakende ve toplu lisans sürümleri ve günlük ürün anahtarı talep sınırları hakkında daha fazla bilgi için ürün anahtar genel [bakışını ziyaret edin.](product-keys.md)
@@ -45,21 +45,21 @@ Bazı anahtarlar otomatik olarak sağlanır( örneğin, "statik" anahtarlar) ve 
 
 Ürünün indirme sayfasından bir anahtar talep edebilirsiniz veya ihtiyacınız olan anahtarı Ürün Anahtarları sayfasında [arayabilirsiniz.](https://my.visualstudio.com/productkeys)
 
-### <a name="claiming-product-keys"></a>Ürün anahtarlarını talep
-Yalnızca etkin abonelikleri olan aboneler ürünleri indirebilir ve ürün anahtarlarını talep eder.  Aboneliğiniz etkinken, talepte bulunan [anahtarlarınızı Ürün](https://my.visualstudio.com/productkeys) Anahtarları sayfasından dışarı aktarabilirsiniz.
+### <a name="claiming-product-keys"></a>Ürün anahtarlarını talep ediyor
+Yalnızca etkin abonelikleri olan aboneler ürünleri indirebilir ve ürün anahtarlarını talep eder.  Aboneliğiniz etkinken ürün anahtarları [sayfasından talepte bulunarak](https://my.visualstudio.com/productkeys) anahtarlarınızı dışarı aktarabilirsiniz.
 
 Bir ürün anahtarı talep etmek için:
 1. Visual Studio oturum açma.  Ürünleri indirmek veya ürün anahtarlarını talep etmek için oturum açık olması gerekir.
 2. Ürün Anahtarları [sekmesini](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) seçin.
-3. Ürün anahtarları, ürün adına göre alfabetik olarak listelenir.  İstediğiniz ürünün adını aşağı kaydırarak veya sayfanın üst kısmında yer alan arama çubuğunu kullanarak bu ürünü arayabilirsiniz.
+3. Ürün anahtarları, ürün adına göre alfabetik olarak listelenir.  İstediğiniz ürünün adına kadar aşağı kaydırabilirsiniz veya sayfanın üst kısmında yer alan arama çubuğunu kullanarak ürünü arayabilirsiniz.
 > [!div class="mx-imgBorder"]
 > ![Ürün Anahtarı ara](_img/product-keys/search-keys.png "İstediğiniz ürüne kaydırın veya herhangi bir ürünü hızla bulmak için arama kutusunu kullanın.")
    
-Bu örnekte, 2019'daki bir ürün anahtarını bulmak için arama çubuğunu Visual Studio Enterprise kullandık.
-Gördüğünüz gibi, listelenen birkaç sürüm vardır.  2019 sürüm 16.0 Visual Studio Enterprise 16.1 için her biri zaten bir anahtar talep edildi.  Her iki sürüm için de farklı türlerde ek anahtarlar kullanılabilir. Notlar sütunundaki talep eden anahtarlar hakkında kısa bir not **kaydedebilirsiniz.**  Bunu Talep Edildi sütunundaki **tarihle birlikte** kullanarak talepte bulundurarak anahtarlara göz edebilirsiniz.  Örneğin, anahtarını kullanarak ürünün yüklemesini etkinleştiren notlar ekleyebilirsiniz.
+Bu örnekte, Visual Studio Enterprise 2019 için bir ürün anahtarını bulmak için arama çubuğunu kullandık.
+Gördüğünüz gibi, listelenen birkaç sürüm vardır.  2019 sürüm 16.0 Visual Studio Enterprise ve 16.1 için her biri için zaten bir anahtar talep edildi.  Her iki sürüm için de farklı türlerde ek anahtarlar kullanılabilir. Notlar sütunundaki talep eden anahtarlar hakkında kısa bir not **kaydedebilirsiniz.**  Bunu Talep Edildi sütunundaki **tarihle birlikte** kullanarak talepte bulundurarak anahtarlara göz edebilirsiniz.  Örneğin, anahtarını kullanarak ürünün yüklemesini etkinleştiren notlar ekleyebilirsiniz.
 
-### <a name="exporting-your-claimed-keys"></a>Talepte bulundurarak anahtarlarınızı dışarı aktarma
-Talepte bulundurarak anahtarların listesini dışarı aktarabilirsiniz.  Buna, sizin için otomatik olarak "talep edildi" olarak işaretlenen büyük bir statik anahtar seçimi ve diğer anahtarlar dahildir.
+### <a name="exporting-your-claimed-keys"></a>Talep eden anahtarlarınızı dışarı aktarma
+Talepte bulundurarak anahtarların listesini dışarı aktarabilirsiniz.  Buna, sizin için otomatik olarak "talep edildi" olarak işaretlenen çok sayıda statik anahtar ve diğer anahtarlar dahildir.
 
 > [!IMPORTANT]
 > Aboneliğinizin süresi dolsa, artık yeni anahtar talep edemeyecek veya talepte bulundurarak anahtarlarınızı dışarı aktaramazsınız.

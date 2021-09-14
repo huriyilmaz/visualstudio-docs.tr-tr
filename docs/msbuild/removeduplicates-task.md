@@ -1,6 +1,6 @@
 ---
-title: RemoveDuplicates Task | Microsoft Docs
-description: Belirtilen öğe MSBuild yinelenen öğeleri kaldırmak için RemoveDuplicates görevini nasıl kullandığını öğrenin.
+title: Removeyinelemeler görevi | Microsoft Docs
+description: MSBuild, belirtilen öğe koleksiyonundan yinelenen öğeleri kaldırmak için removeyinelenenler görevini nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/01/2018
 ms.topic: reference
@@ -22,11 +22,11 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 53abd38178770ddff46216dbba2cd1548e204fec
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122068754"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625611"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates görevi
 
@@ -34,22 +34,22 @@ Belirtilen öğe koleksiyonundan yinelenen öğeleri kaldırır.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevin parametreleri açık `RemoveDuplicates` almaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `RemoveDuplicates` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Filtered`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Tüm yinelenen öğelerin kaldırıldığı bir öğe koleksiyonu içerir. Giriş öğelerinin sırası korunur ve her yinelenen öğenin ilk örneği korunur.|
-|`Inputs`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı parametre.<br /><br /> Yinelenen öğeleri kaldıran öğe koleksiyonu.|
+|`Filtered`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Tüm yinelenen öğeleri kaldırılmış bir öğe koleksiyonu içerir. Giriş öğelerinin sırası, her yinelenen öğenin ilk örneğini koruyarak korunur.|
+|`Inputs`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Yinelenen öğelerin kaldırılacağı öğe koleksiyonu.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görev büyük/büyük/büyük harfe duyarlı değildir ve yinelenenleri belirlerken öğe meta verilerini karşılaştırmaz.
+ Bu görev, büyük/küçük harfe duyarlıdır ve yinelenenleri belirlerken öğe meta verilerini karşılaştırmaz.
 
- Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, öğe `RemoveDuplicates` koleksiyonundan yinelenen öğeleri kaldırmak için `MyItems` görevini kullanır. Görev tamamlandığında, öğe koleksiyonu `FilteredItems` bir öğe içerir.
+ Aşağıdaki örnek, `RemoveDuplicates` öğe koleksiyonundan yinelenen öğeleri kaldırmak için görevini kullanır `MyItems` . Görev tamamlandığında, `FilteredItems` öğe koleksiyonu bir öğe içerir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -73,7 +73,7 @@ Belirtilen öğe koleksiyonundan yinelenen öğeleri kaldırır.
 </Project>
 ```
 
- Aşağıdaki örnek, görevin giriş `RemoveDuplicates` sıralamasını korumasını gösterir. Görev tamamlandığında, öğe koleksiyonu bu sırayla `FilteredItems` *MyFile2.cs*, *MyFile1.cs* ve *MyFile3.cs* öğelerini içerir.
+ Aşağıdaki örnekte, `RemoveDuplicates` görevin giriş sırası korunduğu gösterilmektedir. Görev tamamlandığında, `FilteredItems` öğe koleksiyonu bu sırayla *MyFile2. cs*, *MyFile1. cs* ve *MyFile3. cs* öğelerini içerir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">

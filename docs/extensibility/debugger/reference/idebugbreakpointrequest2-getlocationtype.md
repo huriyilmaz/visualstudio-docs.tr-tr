@@ -1,6 +1,6 @@
 ---
 description: Bu kesme noktası isteğinin kesme noktası konum türünü alır.
-title: 'IDebugBreakpointRequest2:: GetLocationType | Microsoft Docs'
+title: IDebugBreakpointRequest2::GetLocationType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7f2a496c7c4d2414ea793c12f16d9b5ebdb2057c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122111547"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636454"
 ---
 # <a name="idebugbreakpointrequest2getlocationtype"></a>IDebugBreakpointRequest2::GetLocationType
 Bu kesme noktası isteğinin kesme noktası konum türünü alır.
@@ -43,13 +43,13 @@ int GetLocationType(
 
 ## <a name="parameters"></a>Parametreler
 `pBPLocationType`\
-dışı Bu kesme noktası isteğinin konumunu açıklayan [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) numaralandırmasından bir değer döndürür.
+[out] Bu kesme noktası [isteğinin BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) açıklayan bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_FAIL` `bpLocation` İlişkili [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) yapısındaki alanın geçerli olup olmadığını döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. `E_FAIL`İlişkili `bpLocation` çalışma alanı yapısında [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) geçerli değilse döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CDebugBreakpointRequest` [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CDebugBreakpointRequest` [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulandığını gösterir.
 
 ```
 HRESULT CDebugBreakpointRequest::GetLocationType(BP_LOCATION_TYPE* pBPLocationType)

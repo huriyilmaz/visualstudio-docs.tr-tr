@@ -1,6 +1,6 @@
 ---
-description: Parametrelere bir taban işaretçisi tutan kaydın KIMLIĞINI alır.
-title: 'IDiaSymbol:: get_paramBasePointerRegisterId | Microsoft Docs'
+description: Parametrelerin temel işaretçisini tutan yazmaç kimliğini alın.
+title: IDiaSymbol::get_paramBasePointerRegisterId | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: f1213f1b201b76c31bed1f494bdd62710a9231aa
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113277"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636758"
 ---
 # <a name="idiasymbolget_parambasepointerregisterid"></a>IDiaSymbol::get_paramBasePointerRegisterId
-Parametrelere bir taban işaretçisi tutan kaydın KIMLIĞINI alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) olarak ayarlandığında kullanın `SymTagFunction` .
+Parametrelerin temel işaretçisini tutan yazmaç kimliğini alın. [SymTagEnum Numaralama olarak ayarlanırken](../../debugger/debug-interface-access/symtagenum.md) `SymTagFunction` kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_paramBasePointerRegisterId (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Parametrelere bir taban işaretçisi tutan kaydın KIMLIĞINI döndürür.
+[out] Parametrelerin temel işaretçisini tutan yazmaç kimliğini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: dia2. h
+ Üst bilgi: Dia2.h
 
- Kitaplık: diaguid. lib
+ Kitaplık: diaguids.lib
 
  DLL: msdia100.dll
 

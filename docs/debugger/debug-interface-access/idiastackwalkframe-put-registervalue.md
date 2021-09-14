@@ -1,5 +1,5 @@
 ---
-description: IDiaStackWalkFrame::p ut_registerValue, yazmacın değerini ayarlar.
+description: IDiaStackWalkFrame::p ut_registerValue bir kaydın değerini ayarlar.
 title: IDiaStackWalkFrame::p ut_registerValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 639b57d876cd4ced7bf6ab458af7b43dcadb6a4e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122091168"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636782"
 ---
 # <a name="idiastackwalkframeput_registervalue"></a>IDiaStackWalkFrame::put_registerValue
-Yazmanın değerini ayarlar.
+Bir kaydın değerini ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,14 +36,14 @@ HRESULT put_registerValue (
 #### <a name="parameters"></a>Parametreler
  `index`
 
-[in] Yazmacı [belirten CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) enumeration enumeration değerinden bir değer.
+'ndaki Yazılacak kaydı belirten [CV_HREG_e sabit listesi](../../debugger/debug-interface-access/cv-hreg-e.md) numaralandırmasından bir değer.
 
  `NewVal`
 
-[in] Yeni yazmaz değeri.
+'ndaki Yeni kayıt değeri.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

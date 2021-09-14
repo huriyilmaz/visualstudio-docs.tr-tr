@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 064ddc1bf410f6b64025c9d2045ca6cd86f05282b5d94a52fefbcabeb5399549
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 858620450452080dbbdf6c9aa5da8ed7c44c13e2
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453150"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636657"
 ---
 # <a name="messages-view"></a>İletiler Görünümü
 Her pencerede ilişkili bir ileti akışı vardır. Bir Iletiler görünümü penceresi bu ileti akışını görüntüler. Pencere tanıtıcısı, ileti kodu ve ileti gösterilir. Bir iş parçacığı veya işlem için de bir Ileti görünümü oluşturabilirsiniz. Bu, belirli bir işlem veya iş parçacığı tarafından sahip olunan tüm pencereler için gönderilen iletileri görüntülemenize olanak sağlar. Bu, özellikle pencere başlatma iletilerini yakalamaya yarar.

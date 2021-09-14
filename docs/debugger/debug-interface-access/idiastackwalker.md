@@ -1,6 +1,6 @@
 ---
-description: . Pdb dosyasındaki bilgileri kullanarak bir yığın izlenecek yöntemler sağlar.
-title: Idiastackdenetçisi | Microsoft Docs
+description: .pdb dosyasındaki bilgileri kullanarak yığında adım adım yol yapmaya yönelik yöntemler sağlar.
+title: IDiaStackWalker | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: c27a18923ae5b305702994e4d76be7dd291eb8c5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113566"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636793"
 ---
 # <a name="idiastackwalker"></a>IDiaStackWalker
-. Pdb dosyasındaki bilgileri kullanarak bir yığın izlenecek yöntemler sağlar.
+.pdb dosyasındaki bilgileri kullanarak yığında adım adım yol yapmaya yönelik yöntemler sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,22 +30,22 @@ ms.locfileid: "122113566"
 IDiaStackWalker: IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaStackWalker` .
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
+Aşağıdaki tabloda yöntemlerini `IDiaStackWalker` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md)|X86 platformları için bir yığın çerçeve numaralandırıcısı alır.|
-|[IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)|Belirli bir platform türü için yığın çerçeve numaralandırıcısı alır.|
+|[IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md)|x86 platformları için yığın çerçevesi numaralayıcısını verir.|
+|[IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md)|Belirli bir platform türü için yığın çerçevesi numaralayıcısını alma.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu arabirim, yüklü bir modül için yığın çerçevelerinin listesini almak için kullanılır. Yöntemlerin her birine, yığın çerçevelerinin listesini oluşturmak için gerekli bilgileri sağlayan bir [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) nesnesi (istemci uygulaması tarafından uygulanır) geçirilir.
+Bu arabirim, yüklenen bir modül için yığın çerçevelerinin listesini almak için kullanılır. Yöntemlerin her biri, yığın çerçevelerinin listesini oluşturmak için gerekli bilgileri sağlayan [bir IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) nesnesine (istemci uygulaması tarafından uygulanır) geçirildi.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirim, `CoCreateInstance` yöntemi sınıf tanımlayıcısıyla `CLSID_DiaStackWalker` ve arabirim kimliğiyle çağırarak elde edilir `IID_IDiaStackWalker` . Örnek, bu arabirimin nasıl elde edilildiği gösterilmektedir.
+Bu arabirim, sınıf tanımlayıcısı ve `CoCreateInstance` arabirim kimliği ile yöntemi `CLSID_DiaStackWalker` çağrılarak elde `IID_IDiaStackWalker` edilir. Örnek, bu arabirimin nasıl alınarak elde edilenleri gösterir.
 
 ## <a name="example"></a>Örnek
-Bu örnek, arabirimin nasıl alınacağını gösterir `IDiaStackWalker` .
+Bu örnekte arabirimin nasıl alınarak elde `IDiaStackWalker` edilir?
 
 ```C++
 
@@ -62,9 +62,9 @@ if (FAILED(hr))
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: dia2. h
+Üst bilgi: Dia2.h
 
-Kitaplık: diaguid. lib
+Kitaplık: diaguids.lib
 
 DLL: msdia80.dll
 

@@ -1,6 +1,6 @@
 ---
-title: Yönerge İşaretçileri (PS) Görünümü - İtirnas Veri | Microsoft Docs
-description: İtirma verilerinde IP'ler görünümünün, profil oluşturma çalıştırması içinde yürütülmesi engellenen derleme yönergelerine ilişkin verileri nasıl listele olduğunu öğrenin.
+title: Yönerge Işaretçileri (IP) görünümü-çekişme verileri | Microsoft Docs
+description: Çekişme verileri 'nin, profil oluşturma çalıştırmasında yürütülmesi engellenen derleme yönergelerinin verilerini nasıl listelediğinden emin olun.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,39 +14,39 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 251e0ab0f4c9ad21e1f9fd0bc10db8f3395f47f3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122076522"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637094"
 ---
-# <a name="instruction-pointers-ips-view---contention-data"></a>Yönerge İşaretçileri (PS) Görünümü - içerik verileri
-İtirma verilerinin IPS görünümü, profil oluşturma çalıştırması içinde yürütülmesi engellenen derleme yönergelerine ilişkin verileri listeler.
+# <a name="instruction-pointers-ips-view---contention-data"></a>Yönerge Işaretçileri (IP) görünümü-çekişme verileri
+Çekişme verilerinin IP görünümü, profil oluşturma çalıştırmasında yürütülmesi engellenen derleme yönergelerinin verilerini listeler.
 
- Aşağıdaki tabloda, Yönerge İşaretçileri görünümündeki sütunların değerleri açık almaktadır.
+ Aşağıdaki tabloda, yönerge Işaretçileri görünümündeki sütunların değerleri açıklanmaktadır.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Özel Engellenen Süre**|Bu işlevde engellenen süre.|
-|**Özel Engellenen Saat %**|Yönerge yürütülürken engellenen sürenin yüzdesi.|
-|**Özel İçerikler**|Yönerge yürütülürken meydana gelen irdelerin sayısı.|
-|**Özel İçerik %**|Profil oluşturma çalıştırması sırasında yönerge yürütülürken meydana gelen tüm itirazların yüzdesi.|
-|**İşlev Adresi**|Yüklenen ikili dosyada işlevin başlangıç bellek adresi.|
-|**İşlev Adı**|Yönergeyi içeren işlevin adı.|
-|**Yönerge Adresi**|Yüklenen ikili dosyada yönergenin bellek adresi.|
-|**İşlev Satır Numarası**|Kaynak dosyada bu işlevin başlangıcının satır numarası.|
-|**Modül Adı**|Yönergeyi içeren modülün adı.|
-|**Modül Yolu**|Yönergeyi içeren modülün yolu.|
-|**İşlem Kimliği**|Profili yapılan sürecin işlem kimliği (PID).|
-|**İşlem Adı**|Sürecin adı.|
-|**Kaynak Karakter Başlangıç**|Bu yönergenin başladığı kaynak dosya satırı karakterinin uzaklığı.|
-|**Kaynak Karakter Sonu**|Bu yönergenin sona erer kaynak dosya satırı karakteri uzaklığı.|
-|**Kaynak Dosya**|Yönergeyi içeren kaynak dosya.|
-|**Kaynak Satırı Başlangıç**|Bu yönergenin başladığı kaynak dosyanın satır numarası.|
-|**Kaynak Satır Sonu**|Kaynak dosyada bu yönergenin sona erdiğinde yer alan satır numarası.|
+|**Dışlamalı engellenme süresi**|Bu işlevdeki engellenme süresi.|
+|**Dışlamalı engellenme süresi yüzdesi**|Yönerge yürütülürken engellenme süresi yüzdesi.|
+|**Dışlamalı çekişmeler**|Yönerge yürütülürken gerçekleşen çekişmelerin sayısı.|
+|**Dışlamalı çekişmeler yüzdesi**|Yönerge yürütülürken oluşan profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi.|
+|**İşlev adresi**|Yüklenen ikilide işlevin başlangıç belleği adresi.|
+|**İşlev adı**|Yönergeyi içeren işlevin adı.|
+|**Yönerge adresi**|Yüklenen ikilide yönergenin bellek adresi.|
+|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
+|**Modül adı**|Yönergeyi içeren modülün adı.|
+|**Modül yolu**|Yönergeyi içeren modülün yolu.|
+|**İşlem Kimliği**|Profili oluşturulan işlemin işlem KIMLIĞI (PID).|
+|**İşlem adı**|Sürecin adı.|
+|**Kaynak karakter başlangıcı**|Bu yönergenin başladığı kaynak dosya satırındaki karakterin boşluğu.|
+|**Kaynak karakter sonu**|Bu yönergenin bittiği kaynak dosya satırındaki karakterin boşluğu.|
+|**Kaynak Dosya**|Yönergesini içeren kaynak dosya.|
+|**Kaynak satırı başlangıç**|Bu yönergenin başladığı kaynak dosyadaki satır numarası.|
+|**Kaynak satır sonu**|Bu yönergenin bittiği kaynak dosyadaki satır numarası.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl: Rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
+- [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view.md)
-- [Yönerge İşaretçileri (PS) Görünümü - örnekleme](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)
+- [Yönerge Işaretçileri (IP) görünümü-örnekleme](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view-sampling-data.md)

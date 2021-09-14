@@ -1,6 +1,6 @@
 ---
 title: SetThreadCount | Microsoft Docs
-description: MSBuild, genel iş parçacığı sayısını ayarlamak için setthreadcount 'ı nasıl kullandığını ve bu sayıyı geçerli iş parçacığına atamayı öğrenin.
+description: Genel MSBuild sayısını ayarlamak ve bu s sayımı geçerli iş parçacığına atamak için SetThreadCount'un nasıl kullandığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -19,15 +19,15 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 35649f2ae7c0aec8b713573fc5b9f8f29e86ac2f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122084824"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625551"
 ---
 # <a name="setthreadcount"></a>SetThreadCount
 
-Genel iş parçacığı sayısını ayarlar ve bu sayıyı geçerli iş parçacığına atar.
+Genel iş parçacığı sayısını ayarlar ve bu s sayımı geçerli iş parçacığına atar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,14 +37,14 @@ HRESULT WINAPI SetThreadCount(int threadCount);
 
 #### <a name="parameters"></a>Parametreler
 
-'ndaki `threadCount`
+[in] `threadCount`
 
- Kullanılacak iş parçacığı sayısı.
+ Kullanılan iş parçacığı sayısı.
 
 ## <a name="return-value"></a>Döndürülen değer
 
- İş parçacığı sayısı güncellendiyse, **başarılı** biti ayarlanmış bir **HRESULT** .
+ İş parçacığı sayısı **güncelleştirilmişse BAŞARILI** bit kümesine sahip **bir HRESULT.**
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Üstbilgi:** *FileTracker. h*
+ **Üst bilgi:** *FileTracker.h*

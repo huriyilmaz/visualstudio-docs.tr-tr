@@ -1,6 +1,6 @@
 ---
 title: StartTrackingContextWithRoot | Microsoft Docs
-description: bir kök işaretleyici belirten yanıt dosyası kullanarak bir izleme bağlamı başlatmak için starttrackingcontextwithroot MSBuild kullanmayı öğrenin.
+description: Kök işaretçisi MSBuild bir yanıt dosyası kullanarak bir izleme bağlamı başlatmak için StartTrackingContextWithRoot ile birlikte kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -19,15 +19,15 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 62ecbb05d0fd129709345c23887aca1d9ed201be
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122142981"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625497"
 ---
 # <a name="starttrackingcontextwithroot"></a>StartTrackingContextWithRoot
 
-Bir kök işaretleyici belirten yanıt dosyası kullanarak izleme bağlamını başlatır.
+Kök işaretçiyi belirten bir yanıt dosyası kullanarak bir izleme bağlamı başlatır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,25 +37,25 @@ HRESULT WINAPI StartTrackingContextWithRoot(LPCTSTR intermediateDirectory, LPCTS
 
 #### <a name="parameters"></a>Parametreler
 
-'ndaki `intermediateDirectory`
+[in] `intermediateDirectory`
 
- İzleme günlüğünün depolayabileceği dizin.
+ İzleme günlüğünün depolan olduğu dizin.
 
-'ndaki `taskName`
+[in] `taskName`
 
  İzleme bağlamını tanımlar. Bu ad, günlük dosyası adını oluşturmak için kullanılır.
 
-'ndaki `rootMarkerResponseFile`
+[in] `rootMarkerResponseFile`
 
- Kök işaretleyici içeren bir yanıt dosyasının yol adı. Kök adı bir bağlam için tüm izlemeyi gruplamak üzere kullanılır.
+ Kök işaretçi içeren bir yanıt dosyasının yol adı. Kök ad, bir bağlamın tüm izlemelerini birlikte grup etmek için kullanılır.
 
 ## <a name="return-value"></a>Döndürülen değer
 
- İzleme bağlamı oluşturulduysa, **başarılı** biti ayarlanmış bir **HRESULT** .
+ İzleme bağlamı oluşturulduktan sonra **SUCCEEDED** bit kümesine sahip **bir HRESULT.**
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Üstbilgi:** *FileTracker. h*
+ **Üst bilgi:** *FileTracker.h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

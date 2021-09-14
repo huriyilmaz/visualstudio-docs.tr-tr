@@ -13,16 +13,16 @@ ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 ms.openlocfilehash: cd32788e6b423b5ceb1ceafa54ad72cd3a885b15
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034259"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637606"
 ---
 # <a name="properties-of-a-dsl-definition"></a>DSL Tanımının Özellikleri
 DslDefinition özellikleri, *sürüm numarası gibi etki* alanına özgü dil tanımı özelliklerini tanımlar. DslDefinition özellikleri, **diyagramda** diyagramın açık bir alanına tıklarsanız Özellikler penceresinde *Alana Özgü Dil Tasarımcısı.*
 
- Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, bkz. Domain-Specific Dili [Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
+ Daha fazla bilgi için [bkz. How to Define a Domain-Specific Language](../modeling/how-to-define-a-domain-specific-language.md). Bu özellikleri kullanma hakkında daha fazla bilgi için, [bkz. Domain-Specific Dili Özelleştirme ve Genişletme.](../modeling/customizing-and-extending-a-domain-specific-language.md)
 
  DslDefinition aşağıdaki tabloda yer alan özelliklere sahiptir:
 
@@ -37,9 +37,9 @@ DslDefinition özellikleri, *sürüm numarası gibi etki* alanına özgü dil ta
 |Paket Ad Alanı|Bu DSL için Visual Studio paketi için ad alanı.|\<none>|
 |Ürün Adı|Bu DSL için oluşturulan paket için Visual Studio ürünün adı.|\<none>|
 |Notlar|Bu etki alanı sınıfıyla ilişkili notlar.|\<none>|
-|Açıklama|Bu etki alanı sınıfının açıklaması.|\<none>|
+|Description|Bu etki alanı sınıfının açıklaması.|\<none>|
 |Görünen Ad|Bu etki alanı sınıfı için oluşturulan tasarımcıda görüntülenecek ad.|\<none>|
-|Help Anahtar Sözcüğü|Bu etki alanı sınıfıyla ilişkili help anahtar sözcüğü.|\<none>|
+|Yardım Anahtar Sözcüğü|Bu etki alanı sınıfıyla ilişkili help anahtar sözcüğü.|\<none>|
 |Oluşturma|Bu etki alanına özgü dil tanımı için artımlı derleme numarası.|0|
 |Ana Sürüm|Bu etki alanına özgü dil tanımı için artımlı ana derleme numarası.|1|
 |Alt Sürüm|Bu etki alanına özgü dil tanımı için artımlı küçük derleme numarası.|0|

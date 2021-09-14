@@ -1,6 +1,6 @@
 ---
 title: Angular oluşturma
-description: Bu öğreticide, bu öğreticide basit bir Angular uygulama Visual Studio.
+description: Bu öğreticide, bu öğreticide basit bir Angular uygulaması Visual Studio.
 ms.date: 07/30/2021
 ms.custom: vs-acquisition
 ms.topic: tutorial
@@ -15,11 +15,11 @@ ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
 ms.openlocfilehash: 1b40a03c63665be09ecea5c28fb8e82dcc69c7a7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122077757"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635897"
 ---
 # <a name="create-an-angular-app"></a>Angular oluşturma
 
@@ -39,13 +39,13 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
    :::image type="content" source="media/vs-2022/create-new-project.png" alt-text="Yeni proje oluşturma":::
 
-1. En üst Angular arama çubuğundan Tek Başına uygulama şablonu'Angular **seçin.**
+1. Üst Angular arama çubuğundan Tek Başına uygulama şablonu'Angular **seçin.**
 
    :::image type="content" source="media/vs-2022/angular-choose-template.png" alt-text="Şablon seçme":::
 
 1. Projenize ve çözümünüze bir ad girin. 
 
-   Ek bilgiler penceresine bakarak **Web API'si** ASP.NET Api'si Project emin olun. Bu seçenek, Angular bir proje eklenirse ASP.NET Core projeyle bağlanacak şekilde ASP.NET Core ekler.
+   Ek bilgiler penceresine inerseniz Boş web **API'si** ASP.NET tümleştirmesi ekle seçeneğini Project emin olun. Bu seçenek, Angular bir proje eklenirse ASP.NET Core projeyle bağlanacak şekilde ASP.NET Core ekler.
 
    :::image type="content" source="media/vs-2022/angular-additional-info.png" alt-text="Ek bilgi":::
 
@@ -53,15 +53,15 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
 1. Bu Çözüm Gezgini, Angular projesine sağ tıklayın, Özellikler'i **seçin** ve hata ayıklama **bölümüne** gidin.
 
-1. Hata Ayıklayıcısı'nın başlat seçeneğini **launch.js** olarak değiştirme.
+1. Debugger'ı **launch.json seçeneğiyle değiştirebilirsiniz.**
  
-   :::image type="content" source="media/vs-2022/angular-choose-debugger.png" alt-text="Hata ayıklayıcıyı seçin (launch.js)":::
+   :::image type="content" source="media/vs-2022/angular-choose-debugger.png" alt-text="Hata ayıklayıcısını (launch.json) seçin":::
 
 ## <a name="build-your-project"></a>Derleme Project
 
 Projeyi   >  **derlemek için Derleme** Çözümü'ne seçin.
 
-Angular CLI'sı npm install komutunu çalıştıracak olduğu için ilk derlemenin biraz zaman alsa da olduğunu unutmayın.
+Angular CLI npm install komutunu çalıştıracak olduğu için ilk derlemenin biraz uzun zaman alyabilirsiniz.
 
 ## <a name="start-your-project"></a>Çalışma Project
 

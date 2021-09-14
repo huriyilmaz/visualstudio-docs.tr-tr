@@ -1,6 +1,6 @@
 ---
-title: Katman Etkileşimleri Görünümü | Microsoft Docs
-description: Katman etkileşim profili oluşturmanın, veritabanlarıyla iletişim kuran çok katmanlı uygulamaların işlevlerinde yürütme süreleri hakkında nasıl bilgi sağladığını öğrenin.
+title: Katman etkileşimleri görünümü | Microsoft Docs
+description: Katman etkileşimi profili oluşturma işleminin veritabanları ile iletişim kuran çok katmanlı uygulamaların işlevlerinde yürütme süreleri hakkında bilgi sağladığını öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,47 +15,47 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 16d2e3d6dd64ff5827376ffba1f1ee65f6b9860e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122141109"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637073"
 ---
 # <a name="tier-interactions-view"></a>Katman Etkileşimleri Görünümü
 
-Katman etkileşimi profili oluşturma, aracılığıyla veritabanlarıyla iletişim kuran çok katmanlı uygulamaların işlevlerinde yürütme süreleri hakkında ek bilgi [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] sağlar. Veriler yalnızca zaman uyumlu işlev çağrıları için toplanır.
+Katman etkileşimi profili oluşturma, ile veritabanlarıyla iletişim kuran çok katmanlı uygulamaların işlevlerinde yürütme süreleri hakkında ek bilgiler sağlar [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] . Veriler yalnızca zaman uyumlu işlev çağrıları için toplanır.
 
 **Gereksinimler**
 
 - Visual Studio Enterprise
 
-Etkileşimler Görünümü katman etkileşim verilerini iki bölmede görüntüler:
+Etkileşimler görünümü, katman etkileşim verilerini iki bölme halinde görüntüler:
 
-- Ana bölme hiyerarşik bir ağaçtır. Üst düzey satır, bir sayfanın veya bir sürecin veritabanı bağlantıları için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] toplanan verileri içerir. Alt düğümler, üst öğenin veritabanı bağlantıları için toplanan verileri içerir.
+- Ana bölme hiyerarşik bir ağacıdır. En üst düzey satır, bir sayfa veya işlemin veritabanı bağlantıları için toplanan verileri içerir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . Alt düğümler, üst öğenin veritabanı bağlantıları için toplanan verileri içerir.
 
-- Ana bölmede bir veritabanı çağrı düğümüne tıklarken, veritabanı çağrısı örneğine ilişkin veriler ayrıntılar bölmesinde görüntülenir.
+- Ana bölmedeki bir veritabanı çağrısı düğümüne tıkladığınızda, veritabanı çağrısının örneğine ilişkin veriler Ayrıntılar bölmesinde görüntülenir.
 
-  Saat, milisaniye sayısı veya CPU saati saat sayısı olarak görüntülenir. Görüntülenen zaman birimini değiştirmek için Araçlar  **menüsüne** tıklayın, Seçenekler'e tıklayın ve ardından Zaman değerlerini **göster seçenekleri'ne** tıklayın.
+  Süre, milisaniye sayısı veya CPU saat işaretleri sayısı olarak görüntülenir. Görüntülenecek zaman birimini değiştirmek için, **Araçlar** menüsüne tıklayın, **Seçenekler**' e tıklayın ve ardından **zaman değerlerini göster** seçeneklerinden birini belirleyin.
 
 ## <a name="master-pane"></a>Ana bölme
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Ad**|- Üst düzey bir satır için, profili yapılan işlem veya Web sayfasının adı.<br />- Veritabanı bağlantı satırı için veritabanını barındıran sunucunun adı.|
+|**Ad**|-En üst düzey bir satır için, profili oluşturulmuş işlemin veya Web sayfasının adı.<br />-Veritabanı bağlantı satırı için, veritabanını barındıran sunucunun adı.|
 |**Veritabanı**|Veritabanının adı (yalnızca veritabanı bağlantı satırları).|
-|**Sayısı**|İşlem, Web sayfası veya veritabanı bağlantısı tarafından oluşturulan isteklerin toplam sayısı.|
-|**Geçen Toplam Süre**|İşlemden, Web sayfasından veya veritabanı bağlantısından herhangi bir isteğin yürütülmesi için harcanan toplam süre.|
-|**Geçen En Uzun Süre**|İşlemden, Web sayfasından veya veritabanı bağlantısından herhangi bir isteğin yürütülmesi için harcanan en uzun süre.|
-|**En Az Geçen Süre**|İşlemden, Web sayfasından veya veritabanı bağlantısından herhangi bir isteğin yürütülmesi için harcanan minimum süre.|
-|**Geçen Ortalama Süre**|İşlemden, Web sayfasından veya veritabanı bağlantısından bir isteği yürütmek için harcanan ortalama süre.|
+|**Biriktirme**|İşlem, Web sayfası veya veritabanı bağlantısı tarafından oluşturulan isteklerin toplam sayısı.|
+|**Geçen toplam süre**|İşlem, Web sayfası veya veritabanı bağlantısından herhangi bir isteği yürütmek için harcanan toplam süre.|
+|**Geçen en uzun süre**|İşlem, Web sayfası veya veritabanı bağlantısından herhangi bir isteği yürütmek için harcanan en uzun süre.|
+|**Geçen en az süre**|İşlem, Web sayfası veya veritabanı bağlantısından herhangi bir isteği yürütmek için harcanan en kısa süre.|
+|**Ortalama geçen süre**|İşlemin, Web sayfasının veya veritabanı bağlantısının bir isteğini yürütmek için harcanan ortalama süre.|
 
-## <a name="database-connection-details-pane"></a>Veritabanı Bağlantı Ayrıntıları bölmesi
+## <a name="database-connection-details-pane"></a>Veritabanı bağlantısı ayrıntıları bölmesi
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Komut Metni**|İsteğin SQL sorgusunu görüntüler.|
-|**Sorgu Sayısı**|Sorgunun çalıştırıma sayısı.|
-|**Geçen Toplam Süre**|Sorgu örneklerinin yürütülmesi için harcanan toplam süre.|
-|**Geçen En Uzun Süre**|Sorgunun herhangi bir örneğini yürütmek için harcanan en uzun süre.|
-|**En Az Geçen Süre**|Sorgunun herhangi bir örneğini yürütmek için harcanan minimum süre.|
-|**Geçen Ortalama Süre**|Sorgunun bir örneğini yürütmek için harcanan ortalama süre.|
+|**Komut metni**|isteğin SQL sorgusu.|
+|**Sorgu sayısı**|Sorgunun kaç kez çalıştırıldığı.|
+|**Geçen toplam süre**|Sorgunun örneklerini yürütmek için harcanan toplam süre.|
+|**Geçen en uzun süre**|Sorgunun herhangi bir örneğini yürütmek için harcanan en uzun süre.|
+|**Geçen en az süre**|Sorgunun herhangi bir örneğini yürütmek için harcanan en kısa süre.|
+|**Ortalama geçen süre**|Sorgunun bir örneğini yürütmek için harcanan ortalama süre.|

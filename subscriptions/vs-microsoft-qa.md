@@ -8,13 +8,13 @@ ms.date: 03/17/2021
 ms.topic: conceptual
 description: Seçili aboneliklere dahil olan Microsoft Q&Forum destek avantajı hakkında Visual Studio öğrenin.
 ms.openlocfilehash: c9900dd914a53911fa95fee662a8fd820e59ff4b
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966584"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625017"
 ---
-# <a name="microsoft-qa-forum-support-in-visual-studio-subscriptions"></a>&aboneliklerde Microsoft Q Visual Studio forum desteği
+# <a name="microsoft-qa-forum-support-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Microsoft Q&Forum desteği
 Teknik ürünle ilgili bir sorunun mu var? Microsoft'ta teknik soruların&cevaplarının yer olduğu Microsoft Q&A'da bulabilirsiniz.
 
 Desteklenen çok çeşitli ürünlerle ilgili sorular ve yanıtlar, şunları da içeren:
@@ -46,12 +46,12 @@ Microsoft Q&A'ya erişmek oldukça kolaydır.
    > ![Microsoft Q&Kutucuğu](_img/vs-microsoft-qa/vs-microsoft-qa-tile.png "Microsoft Q&A forumuna bağlanmak için 'Yardım al'a tıklayın")
 
 ## <a name="eligibility"></a>Uygunluk
-Azure Community avantajının kullanılabilirliği aşağıda gösterildiği gibi abonelik düzeyinize bağlıdır:
+Azure Community kullanılabilirliği aşağıda gösterildiği gibi abonelik düzeyinize bağlıdır:
 
 |                                          Abonelik Düzeyi                                           |     Kanallar      |    Avantaj    | Yenilen -ebilir? |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
 |                           Visual Studio Enterprise (Standart), NFR<sup>1</sup>                            | VL, Azure, Perakende |   Kullanılabilir    |    Yes     |
-|                           Visual Studio Enterprise ile abonelik GitHub Enterprise                           | VL, Azure, Perakende |   Kullanılabilir    |    Yes     |
+|                           Visual Studio Enterprise aboneliği GitHub Enterprise                           | VL, Azure, Perakende |   Kullanılabilir    |    Yes     |
 |                          Visual Studio Professional (Standart)                          | VL, Azure, Perakende |   Kullanılabilir    |    Yes     |
 |                          Visual Studio Professional ile abonelik GitHub Enterprise                          | VL, Azure, Perakende |   Kullanılabilir    |    Yes     |
 |                              Visual Studio Test Professional (Standart)                               |    VL, Perakende     |   Kullanılabilir    |    Yes     |
@@ -66,8 +66,8 @@ Azure Community avantajının kullanılabilirliği aşağıda gösterildiği gib
 Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) e-posta adresinize atanan tüm abonelikleri görmek için adresine tıklayın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla aboneliğiniz olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="support-resources"></a>Destek Kaynakları
-- Visual Studio Abonelikleri için satışlar, abonelikler, hesaplar ve faturalama konusunda yardıma mı ihtiyacınız var?  Abonelikler [Visual Studio iletişim kurma.](https://my.visualstudio.com/gethelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Abonelikler için satış, abonelikler, hesaplar ve faturalama konusunda Visual Studio mi gerekiyor?  Abonelikler [Visual Studio iletişim kurma.](https://my.visualstudio.com/gethelp)
+- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

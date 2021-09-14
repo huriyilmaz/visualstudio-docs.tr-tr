@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 30619052d25cb1b3838075bf43a5d169e5e5d3dc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122128576"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636729"
 ---
 # <a name="how-to-display-message-properties"></a>Nasıl yapılır: İleti Özelliklerini Görüntüleme
 [Iletiler görünümünde](../debugger/messages-view.md)listelenen bir ileti hakkında daha fazla bilgi edinmek Için [Ileti özellikleri iletişim kutusunu](../debugger/message-properties-dialog-box.md)kullanın.

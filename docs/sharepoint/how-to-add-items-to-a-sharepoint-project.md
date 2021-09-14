@@ -16,11 +16,11 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 75283a7ba9060af4323b3082bd6b32ca4ba1a51c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122027012"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625083"
 ---
 # <a name="how-to-add-items-to-a-sharepoint-project"></a>nasıl yapılır: SharePoint projesine öğe ekleme
   SharePoint çözümler, her biri birden çok SharePoint proje öğesi içeren bir veya daha fazla proje içerir. SharePoint bir çözümü açtıktan veya oluşturduktan sonra, bu projelere yeni veya varolan öğeleri ekleyebilirsiniz. Örneğin, yeni iş akışı projeleri default. aspx adlı varsayılan bir formla gelir, ancak bu formu yeni veya farklı bir formla değiştirebilir veya başka bir ASPX formu ekleyebilirsiniz.

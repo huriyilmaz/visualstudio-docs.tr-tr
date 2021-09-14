@@ -17,11 +17,11 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 3a00ae9a4ecfc5f8fbc0b5c0357b4db47db114b0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122149266"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625262"
 ---
 # <a name="extend-the-sharepoint-project-system"></a>SharePoint proje sistemini genişletme
   Visual Studio bir dizi proje şablonu ve öğe şablonu kullanarak SharePoint çözüm oluşturabilirsiniz. Bu şablonlar birçok geliştirme senaryosunun gereksinimlerini karşılar, ancak ihtiyacınız olan işlevleri sağlamayan bazı durumları keşfedebilirsiniz. bu durumlarda, SharePoint proje sistemini genişletebilirsiniz.

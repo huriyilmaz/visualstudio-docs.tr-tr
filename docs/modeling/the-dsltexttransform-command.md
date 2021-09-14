@@ -1,6 +1,6 @@
 ---
 title: DslTextTransform Komutu
-description: DslTextTransform. cmd ' nin TextTransform.exe çağıran ve bunu ortak seçeneklerle çalıştıran bir betik olduğunu öğrenin.
+description: DslTextTransform.cmd dosyasının TextTransform.exe çağıran ve ortak seçeneklerle çalıştıran bir betik olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,25 +13,25 @@ ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 ms.openlocfilehash: ae937c45d0bb768bf25ef562132db136b8462805
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122061174"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637313"
 ---
 # <a name="the-dsltexttransform-command"></a>DslTextTransform Komutu
-DslTextTransform. cmd TextTransform.exe çağıran ve bunu ortak seçeneklerle çalıştıran bir betiktir. Projelerinize yönelik gecelik bir derlemeyi otomatik hale getirmek için DslTextTransformation. cmd ' de kullanabilirsiniz [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] . Daha fazla bilgi için bkz. [TextTransform yardımcı programıyla dosya oluşturma](../modeling/generating-files-with-the-texttransform-utility.md).
+DslTextTransform.cmd, TextTransform.exe çağıran ve ortak seçeneklerle çalıştıran bir betiktir. Projelerinizin gecelik derlemesini otomatikleştirmek için DslTextTransformation.cmd [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] kullanabilirsiniz. Daha fazla bilgi için [bkz. TextTransform Yardımcı Programı ile Dosya Oluşturma.](../modeling/generating-files-with-the-texttransform-utility.md)
 
- DslTextTransform. cmd aşağıdaki dizinde bulunur:
+ DslTextTransform.cmd aşağıdaki dizinde bulunur:
 
  **\<Visual Studio SDK Installation Path>\VisualStudioIntegration\Tools\Bin**
 
- DslTextTransform. cmd ' ye giriş olarak aşağıdaki bağımsız değişkenleri belirtebilirsiniz:
+ DslTextTransform.cmd'ye giriş olarak aşağıdaki bağımsız değişkenleri belirtsiniz:
 
-- Etki alanı model projesinin çıkış dizini.
+- Etki alanı modeli projesinin çıkış dizini.
 
 - Tasarımcı tanımı projesinin çıkış dizini.
 
 - Metin şablonu dosyasının konumu.
 
-  DslTextTransform. cmd varsayılan yönerge işlemcileri ve derlemeleri kullanarak belirtilen metin şablonu dosyasını işler. Özel yönerge işlemcileri oluşturursanız, TextTransform.exe çağıran kendi toplu iş dosyanızı oluşturabilirsiniz. Bu toplu iş dosyasında derlemelerinizi ve ilişkili özel yönerge işlemcilerini belirtebilirsiniz.
+  DslTextTransform.cmd, varsayılan yönerge işlemcileri ve derlemeleri kullanarak belirtilen metin şablonu dosyasını işler. Özel yönerge işlemcileri oluşturmanız, özel yönerge işlemcilerini çağıran kendi toplu iş dosyanızı TextTransform.exe. Bu toplu iş dosyasında derlemelerinizi ve ilişkili özel yönerge işlemcilerini belirtebilirsiniz.

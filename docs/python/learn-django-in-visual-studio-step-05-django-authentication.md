@@ -1,7 +1,7 @@
 ---
 title: Visual Studio, 5. adım, kimlik doğrulamasında Django öğreticisi hakkında bilgi edinin
 titleSuffix: ''
-description: Django web uygulaması şablonları tarafından sağlanan Visual Studio özellikle kimlik doğrulama özellikleri bağlamında Django temel bilgileri Project izlenecek yol.
+description: Django web uygulaması şablonları tarafından sağlanan Visual Studio özellikle kimlik doğrulama özellikleri bağlamında Django temel Project izlenecek yol.
 ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -13,22 +13,22 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 17a6ee7cbf622eb90debd961ba36f159bf7fbc6c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122156532"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625388"
 ---
 # <a name="step-5-authenticate-users-in-django"></a>5. Adım: Django'da kullanıcıların kimliğini doğrulama
 
 **Önceki adım: [Tam Django Web Project kullanın](learn-django-in-visual-studio-step-04-full-django-project-template.md)**
 
 ::: moniker range="vs-2017"
-Kimlik doğrulaması web uygulamaları için yaygın bir ihtiyaç olduğundan, "Django Web Project" şablonu temel bir kimlik doğrulama akışı içerir. (Bu öğreticinin 6. adımlarında ele alınan "Django Web Project Yoklamaları" şablonu aynı akışı da içerir.) Django proje şablonlarını kullanırken, Visual Studio Django projesinin projesinde kimlik doğrulaması için gerekli tüm modülleri *settings.py.*
+Kimlik doğrulaması web uygulamaları için yaygın bir ihtiyaç olduğundan, "Django Web Project" şablonu temel bir kimlik doğrulama akışı içerir. (Bu öğreticinin 6. adımlarında ele alınan "Django Web Project Yoklamaları" şablonu da aynı akışı içerir.) Django proje şablonlarını kullanırken, Visual Studio Django projesinin projesinde kimlik doğrulaması için gerekli tüm modülleri *settings.py.*
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-Kimlik doğrulaması web uygulamaları için yaygın bir ihtiyaç olduğundan, "Django Web Project" şablonu temel bir kimlik doğrulama akışı içerir. Django proje şablonlarını kullanırken, Visual Studio Django projesinin projesinde kimlik doğrulaması için gerekli tüm *modülleri* settings.py.
+Kimlik doğrulaması web uygulamaları için yaygın bir ihtiyaç olduğundan, "Django Web Project" şablonu temel bir kimlik doğrulama akışı içerir. Django proje şablonlarının herhangi birini kullanırken, Visual Studio Django projesinin projesinde kimlik doğrulaması için gerekli tüm modülleri *settings.py.*
 ::: moniker-end
 
 Bu adımda şunları öğreniriz:
@@ -40,15 +40,15 @@ Bu adımda şunları öğreniriz:
 
 Aşağıdaki adımlarda kimlik doğrulama akışı alıştırması ve projenin ilgili bölümleri açık bir şekilde anlatılacaktır:
 
-1. Proje kökünde yer alanreadme.htm *l* dosyasındaki yönergeleri henüz takip ettiyseniz, şimdi bunu uygulayın.
+1. Proje kökünde yer alanreadme.html (yönetici) hesabı oluşturmak için yönergeleri henüz uygulamadıysanız, şimdi uygulayın.
 
-1. Hata AyıklamaYı Başlat Hata Ayıklamayı Visual Studio kullanarak **uygulamayı** Visual Studio  >   uygulamasından çalıştırın (**F5**). Uygulama tarayıcıda göründüğünde gezinti **çubuğunun** sağ üst kısmında Oturum aç'ın görüntülendiğinden dikkat edin.
+1. Hata AyıklamaYı Başlat Hata Visual Studio ( F5 ) kullanarak uygulamayı farklı  >  **bir** **dosyadan çalıştırın.** Uygulama tarayıcıda göründüğünde gezinti **çubuğunun** sağ üst kısmında Oturum aç'ın görüntülendiğinden dikkat edin.
 
     ![Django Web uygulaması sayfasında Project denetimi](media/django/step05-login-control.png)
 
-1. *templates/app/layout.html öğesini açın* ve öğesinin `<div class="navbar ...>` etiketini içerdiğine dikkat `{% include app/loginpartial.html %}` edin. Etiket, Django'nun şablon oluşturma sistemine, bu noktada dahil edilen dosyanın içeriklerini `{% include %}` içeren şablonda çekmesini sağlar.
+1. *Templates/app/layout.html* öğesinin etiketini `<div class="navbar ...>` içerdiğine dikkat `{% include app/loginpartial.html %}` edin. Etiket, Django'nun şablon oluşturma sistemine, bu noktada dahil edilen dosyanın içeriklerini `{% include %}` içeren şablonda çekmesini sağlar.
 
-1. *templates/app/loginpartial.html'yi* açın ve kullanıcının kimlik doğrulamasından geçme durumuna bağlı olarak farklı kullanıcı arabirimi öğelerini işlemek için koşullu etiketi ve etiketi nasıl `{% if user.is_authenticated %}` kullandığını `{% else %}` gözlemlemek için:
+1. *Şablonları/uygulama/loginpartial.html* açın ve kullanıcının kimlik doğrulamasından geçene bağlı olarak farklı kullanıcı arabirimi öğelerini işlemek için koşullu etiketi ve etiketi nasıl `{% if user.is_authenticated %}` `{% else %}` kullandığını gözlemlemek için:
 
     ```html
     {% if user.is_authenticated %}
@@ -83,7 +83,7 @@ Aşağıdaki adımlarda kimlik doğrulama akışı alıştırması ve projenin i
     }
     ```
 
-    Burada, oturum açma sayfasının şablonunu tanımlar, bu durumda `template_name` *templates/app/login.html*. `extra_context`özelliği, şablona verilen varsayılan bağlam verilerine eklenir. Son olarak, oturum açma bilgileriyle birlikte kullanmak üzere bir `authentication_form` form sınıfı belirtir; şablonda nesne olarak `form` görünür. Varsayılan değer `AuthenticationForm` (from); Visual Studio proje şablonu, bunun yerine uygulamanın forms.py `django.contrib.auth.views` kullanır: 
+    Burada, `template_name` oturum açma sayfasının şablonunu tanımlar, bu durumda *templates/app/login.html.* `extra_context`özelliği, şablona verilen varsayılan bağlam verilerine eklenir. Son olarak, oturum açma bilgileriyle birlikte kullanmak üzere bir `authentication_form` form sınıfı belirtir; şablonda nesne olarak `form` görünür. Varsayılan değer `AuthenticationForm` `django.contrib.auth.views` (from) değeridir; Visual Studio  proje şablonu bunun yerine uygulamanın forms.py kullanır:
 
     ```python
     from django import forms
@@ -102,9 +102,9 @@ Aşağıdaki adımlarda kimlik doğrulama akışı alıştırması ve projenin i
                                        'placeholder':'Password'}))
     ```
 
-    Gördüğünüz gibi, bu form sınıfı yer tutucu metin eklemek için kullanıcı adı ve parola alanlarından türetilen `AuthenticationForm` ve özellikle geçersiz kılar. Bu Visual Studio, formu özelleştirmek istediğiniz varsayımı temel alan bu açık kodu (parola gücü doğrulaması ekleme gibi) içerir.
+    Gördüğünüz gibi, bu form sınıfı yer tutucu metin eklemek için kullanıcı adı ve parola alanlarından türetilen `AuthenticationForm` ve özellikle geçersiz kılar. Bu Visual Studio, parola gücü doğrulaması ekleme gibi formu özelleştirmek istediğiniz varsayımı temel alan bu açık kodu içerir.
 
-1. Oturum açma sayfasına gidilen uygulama,login.htm *l şablonunu* işler. değişkenleri ve `{{ form.username }}` `{{ form.password }}` formlarını `CharField` 'den `BootstrapAuthenticationForm` işler. Ayrıca doğrulama hatalarını göstermek için yerleşik bir bölüm ve bu hizmetleri eklemeyi seçerseniz sosyal oturum açmalar için hazır bir öğe de vardır.
+1. Ardından, oturum açma sayfasına gidilen uygulama,login.html *işler.* değişkenleri ve `{{ form.username }}` `{{ form.password }}` formlarını `CharField` 'den `BootstrapAuthenticationForm` işler. Ayrıca doğrulama hatalarını göstermek için yerleşik bir bölüm ve bu hizmetleri eklemeyi seçerseniz sosyal oturum açmalar için hazır bir öğe de vardır.
 
     ```html
     {% extends "app/layout.html" %}
@@ -151,19 +151,19 @@ Aşağıdaki adımlarda kimlik doğrulama akışı alıştırması ve projenin i
     {% endblock %}
     ```
 
-1. Formu gönderdiğinizde Django kimlik bilgilerinizin (süper kullanıcının kimlik bilgileri gibi) kimliğini doğrulamaya çalışır. Kimlik doğrulaması başarısız olursa geçerli sayfada kalır ancak true `form.errors` olarak ayarlanır. Kimlik doğrulaması başarılı olursa Django, "sonraki" alanında göreli URL'ye (bu durumda giriş sayfası `<input type="hidden" name="next" value="/" />` ) `/` gidin.
+1. Formu gönderdiğinizde Django kimlik bilgilerinizin (süper kullanıcının kimlik bilgileri gibi) kimliğini doğrulamaya çalışır. Kimlik doğrulaması başarısız olursa geçerli sayfada kalır ancak true `form.errors` olarak ayarlanır. Kimlik doğrulaması başarılı olursa, Django "sonraki" alanında göreli URL'ye (bu durumda giriş sayfası `<input type="hidden" name="next" value="/" />` ) `/` gidin.
 
-1. Artık giriş sayfası yeniden işlenecek olduğunda,loginpartial.html şablonu `user.is_authenticated` *işlenecek* şekilde true olur. Sonuç olarak, Bir Merhaba **(kullanıcı adı) iletisi ve** Oturumu Kapat **iletisiyle karşınıza çıkar.** Kimlik doğrulamasını `user.is_authenticated` kontrol etmek için uygulamanın diğer kısımlarında kullanabilirsiniz.
+1. Şimdi, giriş sayfası yeniden işlenecek olduğunda, `user.is_authenticated` şablon loginpartial.htmltrue olur. Sonuç olarak, Bir Merhaba **(kullanıcı adı) iletisi ve** Oturumu Kapat **iletisiyle karşınıza çıkar.** Kimlik doğrulamasını `user.is_authenticated` kontrol etmek için uygulamanın diğer kısımlarında kullanabilirsiniz.
 
-    ![Django Web uygulaması sayfasında Hello iletisi ve Project denetimi](media/django/step05-logoff-control.png)
+    ![Django Web uygulaması sayfasında Hello iletisi Project denetimi](media/django/step05-logoff-control.png)
 
 1. Kimliği doğrulanmış kullanıcının belirli kaynaklara erişim yetkisi olup olmadığını kontrol etmek için veritabanınıza kullanıcıya özgü izinleri alasınız. Daha fazla bilgi için [bkz. Django kimlik doğrulama sistemini kullanma](https://docs.djangoproject.com/en/2.0/topics/auth/default/#permissions-and-authorization) (Django belgeleri).
 
 1. Özellikle süper kullanıcı veya yönetici, "/admin/" ve "/admin/doc/" url'lerini kullanarak yerleşik Django yönetici arabirimlerine erişme yetkisine sahiptir. Bu arabirimleri etkinleştirmek için şunları yapın:
 
-    1. docutils Python paketini ortamınıza yükleyin. Bunu yapmak için harika bir *yol,requirements.txt* dosyanıza "docutils" eklemek, ardından **Çözüm Gezgini'de** projeyi genişletmek, **Python** Ortamları düğümünü genişletmek ve ardından requirements.txt'den yükle'yi seçerek kullanmakta olduğunu ortama **sağ tıklamaktır.**
+    1. docutils Python paketini ortamınıza yükleyin. Bunu yapmak için harika bir *yol,requirements.txt* dosyanıza "docutils" eklemek ve ardından **Çözüm Gezgini'de** projeyi genişletmek, **Python** Ortamları düğümünü genişletmek ve ardından requirements.txt'den yükle seçeneğini kullanarak kullanmakta olduğunu ortama **sağ tıklamaktır.**
 
-    1. Django projesinin proje *urls.py* ve varsayılan yorumları aşağıdaki girdilerden kaldırın:
+    1. Django projesinin *proje* urls.py ve varsayılan yorumları aşağıdaki girdilerden kaldırın:
 
         ```python
         from django.conf.urls import include
@@ -178,13 +178,13 @@ Aşağıdaki adımlarda kimlik doğrulama akışı alıştırması ve projenin i
         ]
         ```
 
-    1. Django projesinin settings.py *koleksiyonuna* gidin ve `INSTALLED_APPS` `'django.contrib.admindocs'` ekleyin.
+    1. Django projesinin settings.py *koleksiyonuna* gidin `INSTALLED_APPS` ve `'django.contrib.admindocs'` ekleyin.
 
     1. Uygulamayı yeniden başlattıktan sonra "/admin/" ve "/admin/doc/" hesaplarına gidin ve ek kullanıcı hesapları oluşturma gibi görevleri gerçekleştirin.
 
         ![Django yönetici arabirimi](media/django/step05-administrator-interface.png)
 
-1. Kimlik doğrulama akışının son bölümü oturumu kapatmadır. *loginpartial.html'de* de gördüğünüz gibi,  Oturumu kapat bağlantısı yalnızca yerleşik görünümü tarafından işilen "/login" göreli URL'sinde bir POST `django.contrib.auth.views.logout` yapar. Bu görünüm herhangi bir kullanıcı arabirimi görüntülemez ve yalnızca giriş sayfasına ("^logout$" *deseni urls.py* gösterildiği gibi) gidin. Oturum kapatma sayfası görüntülemek için url desenini aşağıdaki gibi değiştirin ve "template_name" özelliğini ekleyin ve "next_page" özelliğini kaldırın:
+1. Kimlik doğrulama akışının son bölümü oturumu kapatmadır. oturum açmaloginpartial.htmlgördüğünüz *gibi,* Oturumu kapat bağlantısı yalnızca yerleşik görünümü tarafından işilen "/login" göreli URL'sinde bir POST  `django.contrib.auth.views.logout` yapar. Bu görünüm herhangi bir kullanıcı arabirimi görüntülemez ve yalnızca giriş sayfasına ("^logout$" *deseni urls.py* gösterildiği gibi) gidin. Oturum kapatma sayfası görüntülemek için önce URL desenini aşağıdaki gibi değiştirin ve bir "template_name" özelliği ekleyin ve "next_page" özelliğini kaldırın:
 
     ```python
     url(r'^logout$',
@@ -196,7 +196,7 @@ Aşağıdaki adımlarda kimlik doğrulama akışı alıştırması ve projenin i
         name='logout')
     ```
 
-    Ardından aşağıdaki *(minimum) içeriklerle loggedoff.htm/uygulama/uygulama* loggedoff.html oluşturun:
+    Ardından, *aşağıdaki (minimum) loggedoff.htmlşablonlar/uygulama/uygulama* şablonları oluşturun:
 
     ```html
     {% extends "app/layout.html" %}
@@ -225,15 +225,15 @@ Cevap: Etiket, Django'nun yerleşik siteler arası istek sahtecilik `{% csrf_tok
 > [!Note]
 > Bu öğretici boyunca Visual Studio çözümlerinizi kaynak denetimine sunuyorsanız, şimdi başka bir işleme yapmak için iyi bir zamandır. Çözümünüz, [microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)GitHub öğretici kaynak koduyla eşleşmeli.
 
-Artık Visual Studio'daki "Blank Django Web Project" ve "Django Web Project" şablonlarının tamamını Visual Studio. Görünümleri ve şablonları kullanma gibi Django ile ilgili tüm temel bilgileri öğrendinuz ve yönlendirme, kimlik doğrulaması ve veritabanı modellerini kullanma hakkında bilginiz var. Artık ihtiyacınız olan görünümlere ve modellere sahip bir web uygulaması oluşturabileceksiniz.
+Artık Visual Studio'de "Blank Django Web Project" ve "Django Web Project" şablonlarının tamamını Visual Studio. Görünümleri ve şablonları kullanma gibi Django ile ilgili tüm temel bilgileri öğrendinuz ve yönlendirme, kimlik doğrulaması ve veritabanı modellerini kullanma hakkında bilginiz var. Artık ihtiyacınız olan görünümlere ve modellere sahip kendi web uygulamasını oluşturabileceksiniz.
 
 Geliştirme bilgisayarınızda web uygulaması çalıştırma, uygulamayı müşterileriniz için kullanılabilir hale uygulamanın yalnızca bir adımıdır. Sonraki adımlar aşağıdaki görevleri içerebilir:
 
-- Web uygulamasını üretim sunucusuna dağıtın, örneğin Azure App Service. Bkz. [Azure App Service.](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- Web uygulamasını üretim sunucusuna dağıtın, örneğin Azure App Service. Bkz. [Azure App Service.](publishing-python-web-applications-to-azure-from-visual-studio.md).
 
-- templates/404.html adlı bir şablon *oluşturarak 404 sayfasını özelleştirin.* Django mevcut olduğunda varsayılan şablonu yerine bu şablonu kullanır. Daha fazla bilgi için Django [belgelerinde](https://docs.djangoproject.com/en/2.0/ref/views/#error-views) Hata görünümleri'ne bakın.
+- templates/404.htmladlı bir şablon oluşturarak 404 *sayfasını özelleştirin.* Django, mevcut olduğunda varsayılan şablonu yerine bu şablonu kullanır. Daha fazla bilgi için Django [belgelerinde](https://docs.djangoproject.com/en/2.0/ref/views/#error-views) Hata görünümleri'ne bakın.
 
-- tests.py' *içinde birim testleri yazma;* Bu Visual Studio proje şablonları bunlar için başlangıç noktaları sağlar ve Django belgelerinde İlk Django uygulamanızı [yazma, 5.](https://docs.djangoproject.com/en/2.0/intro/tutorial05/) bölüm - [Django'da](https://docs.djangoproject.com/en/2.0/topics/testing/) test etme ve Test etme bölümünde daha fazla bilgi bulabilirsiniz.
+- Tests.py'da *birim testleri yazma;* Visual Studio proje şablonları bunlar için başlangıç noktaları sağlar ve Django belgelerinde İlk Django uygulamanızı [yazma, 5.](https://docs.djangoproject.com/en/2.0/intro/tutorial05/) bölüm - [Django'da](https://docs.djangoproject.com/en/2.0/topics/testing/) test etme ve Test etme bölümünde daha fazla bilgi bulabilirsiniz.
 
 - Uygulamayı SQLite'dan PostgreSQL, MySQL ve SQL Server (bunların hepsi Azure'da barındırabilirsiniz) gibi üretim düzeyinde bir veri deposuna değiştirme. SQLite (sqlite.org) ne zaman kullanılır? konusunda açıklandığı gibi, [SQLite](https://www.sqlite.org/whentouse.html) günde 100.000'den az isabete sahip düşük ve orta ölçekli trafik siteleri için iyi çalışır, ancak daha yüksek birimler için önerilmez. Ayrıca tek bir bilgisayarla da sınırlıdır, bu nedenle yük dengeleme ve coğrafi çoğaltma gibi çok sunuculu senaryolarda kullanılamaz. Django'nun diğer veritabanları için desteği hakkında bilgi için bkz. [Veritabanı kurulumu.](https://docs.djangoproject.com/en/2.0/intro/tutorial02/#database-setup) Tablolar ve bloblar [gibi Azure depolama hizmetleriyle](/azure/python/) çalışmak üzere Python için Azure SDK'yı da kullanabilirsiniz.
 

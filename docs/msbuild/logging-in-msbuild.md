@@ -14,11 +14,11 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 673a46cb6727adcc1b9625187b5d7949cb07ea5a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122115817"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625647"
 ---
 # <a name="logging-in-msbuild"></a>MSBuild'de Günlük Kaydı
 
@@ -44,7 +44,7 @@ Günlük kaydı, derlemenin ilerleme durumunu izlemenizi sağlar. Günlüğe kay
 
 - [Yönlendirme günlüklerini oluşturma](../msbuild/creating-forwarding-loggers.md)
 
- Özel iletme günlüklerini oluşturma ana hatlarıyla özetler.
+ Özel iletme günlükçileri oluşturma ana hatlarıyla açık bir şekilde özetler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -14,17 +14,17 @@ ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 ms.openlocfilehash: 4adcdb442e31a0de834a05a06ea96981b761ea73
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122100783"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637502"
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>Diğer Visual Studio sürümlerindeki modelleri ve diyagramları okuma
 
 Modeli, model oluşturma desteği olmayan Visual Studio sürümde açtığında, model salt okunur modda açılır. Bu modda diyagramların düzenini değiştirebilirsiniz ancak modeli değiştiremezsiniz.
 
-Model oluşturma desteğinin hangi Visual Studio için [bkz. Mimari ve modelleme araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
+Model oluşturmanın hangi sürümlerini Visual Studio için [bkz. Mimari ve modelleme araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
 
 ## <a name="obtaining-access-to-a-model-and-diagrams"></a>Modele ve Diyagramlara Erişim Alma
 
@@ -35,7 +35,7 @@ Bu nedenle, bir bağımlılık diyagramını okumak için, oluşturulduktan sonr
 > [!NOTE]
 > Bu, koddan oluşturulan kod eşlemeleri ve .NET sınıf diyagramları için geçerli değildir. Bu diyagramlar bir modelleme projesinin bağımsız olarak görünüme sahip olabilir.
 
-Bağımlılık diyagramını okumak için ihtiyacınız olan minimum dosya kümesi aşağıdaki gibidir:
+Bağımlılık diyagramını okumak için ihtiyacınız olan en düşük dosya kümesi aşağıdaki gibidir:
 
 - Okumak istediğiniz diyagram için iki diyagram dosyası; örneğin, **MyDiagram.classdiagram ve MyDiagram.classdiagram.layout**.
 

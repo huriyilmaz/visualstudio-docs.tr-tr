@@ -12,11 +12,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 3ef8fc7ef3de032d4c4fba25e0e3b64a47b76ac1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122156636"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636982"
 ---
 # <a name="debug-your-python-code"></a>Python kodunuzda hata ayıklama
 
@@ -67,7 +67,7 @@ Koşulları ayarlarken, Ayrıca, isteğe bağlı olarak yürütmeye devam etmek 
 
 Bir kesme noktasında durdurulduktan sonra, yeniden kesmeden önce kod veya kod blokları çalıştırmak için çeşitli yöntemlere sahip olursunuz. Bu komutlar, en üstteki hata ayıklama araç çubuğu, **hata ayıklama** menüsü, kod düzenleyicisinde sağ tıklama bağlam menüsünde ve klavye kısayolları (tüm komutlar tüm yerlerde olmasa da) dahil olmak üzere birkaç yerde mevcuttur:
 
-| Özellik | U | Açıklama |
+| Özellik | U | Description |
 | --- | --- | --- |
 | **Devam et** | **F5** | Sonraki kesme noktasına ulaşılana kadar kodu çalıştırır. |
 | **Adımla** | **F11** | Sonraki ifadeyi çalıştırır ve duraklar. Next ifadesinde bir işlev çağrısı varsa, hata ayıklayıcı çağrılan işlevin ilk satırında duraklar. |
@@ -119,130 +119,130 @@ Bu noktada, çağrı yığını da dahil olmak üzere program durumunu inceleyeb
 
 ![Visual Studio hata ayıklayıcısındaki özel durumlar penceresi](media/debugging-exception-settings.png)
 
-Her bir özel durum için onay kutusu *, hata ayıklayıcının ne zaman harekete* geçirilip bölünemediğini denetler. Belirli bir özel durum için daha sık kesme yapmak istediğinizde bu kutuyu işaretleyin.
+Her bir özel durum için onay kutusu *, hata ayıklayıcının ne zaman harekete* geçirilip bölünemediğini denetler. Belirli bir özel durum için daha sık daha fazla bölmek istiyorsanız bu kutuyu işaretleyin.
 
-Varsayılan olarak, bir özel durum işleyicisi kaynak kodda bulunamazsa çoğu özel durum bozabilir. Bu davranışı değiştirmek için herhangi bir özel duruma sağ tıklayın ve Kullanıcı Kodunda **İşlenilen Durumda Devam'ı** seçin. Bir özel durum için daha az sıklıkta kesme yapmak istediğiniz zaman bu kutuyu temizleyin.
+Varsayılan olarak, bir özel durum işleyicisi kaynak kodunda bulunamadığında, en çok özel durumlar kesilir. Bu davranışı değiştirmek için herhangi bir özel duruma sağ tıklayın ve **Kullanıcı kodunda Işlenmediğinde devam et** seçeneğini değiştirin. Bir özel durum için daha az sıklıkta bölmek istediğinizde bu kutuyu temizleyin.
 
-Bu listede görünmeen bir özel durum yapılandırmak için Ekle **düğmesine** tıklayarak ekleyin. Ad, özel durumun tam adıyla eşleşmeli.
+Bu listede görünmeyen bir özel durumu yapılandırmak için **Ekle** düğmesine tıklayarak ekleyin. Ad, özel durumun tam adıyla eşleşmelidir.
 
-## <a name="project-debugging-options"></a>Project ayıklama seçenekleri
+## <a name="project-debugging-options"></a>Project hata ayıklama seçenekleri
 
-Varsayılan olarak, hata ayıklayıcı programınızı standart Python başlatıcısı, komut satırı bağımsız değişkeni ve başka özel yol veya koşullar ile başlatır. Başlangıç seçenekleri, projesinde projenize sağ tıklar, Özellikler **'i** seçerek ve Çözüm Gezgini Hata ayıkla sekmesini seçerek projenin hata ayıklama **özellikleriyle** değiştirilir.
+Varsayılan olarak, hata ayıklayıcı programınızı standart Python başlatıcısı, komut satırı bağımsız değişkeni olmadan ve başka özel yollar veya koşullar olmadan başlatır. Başlangıç seçenekleri, projenin **Çözüm Gezgini**, **Özellikler**' i seçip ve **Hata Ayıkla** sekmesi seçilerek erişilen proje hata ayıklama özellikleri aracılığıyla değiştirilir.
 
-![Project hata ayıklayıcısında Visual Studio ayıklama özellikleri](media/debugging-project-properties.png)
+![Visual Studio hata ayıklayıcıda hata ayıklama özellikleri Project](media/debugging-project-properties.png)
 
 ### <a name="launch-mode-options"></a>Başlatma modu seçenekleri
 
 | Seçenek | Açıklama |
 | --- | --- |
-| **Standart Python başlatıcısı** | CPython, IronPython ve Stackless Python gibi çeşitlemelerle uyumlu taşınabilir Python'da yazılmış hata ayıklama kodunu kullanır. Saf Python kodunda hata ayıklamak için en iyi deneyimi sağlar. Çalışan bir uygulama işlem *python.exe,* bu başlatıcı kullanılır. Bu başlatıcı ayrıca [CPython](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) için karma mod hata ayıklaması sağlayarak C/C++ kodu ile Python kodu arasında sorunsuz bir şekilde adım çalışmanıza olanak sağlar. |
-| **Web başlatıcısı** | Başlatma sırasında varsayılan tarayıcınızı başlatır ve şablonların hata ayıklamasını sağlar. Daha fazla [bilgi için Web şablonu](python-web-application-project-templates.md#debugging) hata ayıklama bölümüne bakın. |
-| **Django Web başlatıcısı** | Web başlatıcısı ile aynıdır ve yalnızca geriye dönük uyumluluk için gösterilir. |
-| **IronPython (.NET) başlatıcısı** | Yalnızca IronPython ile çalışan ancak C# ve VB dahil olmak üzere herhangi bir .NET dil projesi arasında adımlama sağlayan .NET hata ayıklayıcısını kullanır. Bu başlatıcı, IronPython'un barındırıcısı olan çalışan bir .NET sürecine iliştirmek için kullanılır. |
+| **Standart Python başlatıcısı** | , Cponthon, IronPython ve stackless Python gibi varyantlar ile uyumlu olan taşınabilir Python 'da yazılmış hata ayıklama kodunu kullanır. Saf Python kodunda hata ayıklamak için en iyi deneyimi sağlar. Çalışan bir *python.exe* işlemine iliştirmeye çalıştığınızda, bu başlatıcı kullanılır. Bu başlatıcı Ayrıca, Cpkullanım için [karışık modda hata ayıklama](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) sağlar ve C/C++ kodu ile Python kodu arasında sorunsuz bir şekilde ilerlemenize olanak tanır. |
+| **Web başlatıcısı** | Varsayılan tarayıcınızı başlatma sırasında başlatır ve şablonların hata ayıklamasını sağlar. Daha fazla bilgi için [Web şablonu hata ayıklama](python-web-application-project-templates.md#debugging) bölümüne bakın. |
+| **Docgo Web başlatıcısı** | Web başlatıcısı ile özdeş ve yalnızca geriye dönük uyumluluk için gösteriliyor. |
+| **IronPython (.NET) başlatıcısı** | Yalnızca IronPython ile birlikte çalışarak, ancak C# ve VB dahil .NET dil projeleri arasında adımlama sağlayan .NET hata ayıklayıcısını kullanır. Bu başlatıcı, IronPython 'u barındıran çalışan bir .NET işlemini iliştirmek için kullanılır. |
 
 ### <a name="run-options-search-paths-startup-arguments-and-environment-variables"></a>Çalıştırma seçenekleri (arama yolları, başlangıç bağımsız değişkenleri ve ortam değişkenleri)
 
 | Seçenek | Açıklama |
 | --- | --- |
-| **Arama Yolları** | Bu değerler, projedeki arama yolları düğümünde **gösterilenlerle Çözüm Gezgini.**  Bu değeri burada değiştirebilirsiniz, ancak klasörlere göz **atmanıza ve yolları Çözüm Gezgini** göre biçime otomatik olarak dönüştürmenize olanak sağlayan bir dosya adı kullanmak daha kolaydır. |
-| **Betik Bağımsız Değişkenleri** | Bu bağımsız değişkenler, betiğinizi başlatmak için kullanılan komuta eklenir ve betiğinizin dosya adı sonrasında görünür. Buradaki ilk öğe betiğiniz için `sys.argv[1]` olarak, ikinci öğe olarak kullanılabilir `sys.argv[2]` ve bu şekilde devam etti. |
-| **Yorumlayıcı Bağımsız Değişkenleri** | Bu bağımsız değişkenler, betiğinizin adının önünde başlatıcı komut satırına eklenir. Buradaki yaygın bağımsız değişkenler uyarıları kontrol etmek, programınızı biraz iyileştirmek ve bağımsız olmayan bir `-W ...` `-O` `-u` IO kullanmaktır. IronPython kullanıcıları, veya gibi seçenekleri geçmek için `-X` büyük olasılıkla bu alanı `-X:Frames` `-X:MTA` kullanır. |
-| **Yorumlayıcı Yolu** | Geçerli ortamla ilişkili yolu geçersiz kılar. Değeri, betiğinizi standart olmayan bir yorumlayıcıyla başlatmak için yararlı olabilir. |
-| **Ortam Değişkenleri** | Bu çok satırlı metin kutusuna formun girdilerini \<NAME> = \<VALUE> ekleyin. Bu ayar en son uygulandığı için, mevcut genel ortam değişkenlerinin üzerine uygulanır ve sonra Arama Yolları ayarına göre ayarlanırsa, bu diğer değişkenlerden herhangi birini el ile geçersiz `PYTHONPATH` kılmak için kullanılabilir.  |
+| **Arama yolları** | Bu değerler, projenin **Çözüm Gezgini** **arama yolları** düğümünde gösterilenlerin eşleşmesinden eşleşir. Bu değeri burada değiştirebilirsiniz, ancak klasörlere gözatmanıza ve yolları göreli biçime otomatik olarak dönüştürmenize olanak tanıyan **Çözüm Gezgini** kullanımı daha kolaydır. |
+| **Betik bağımsız değişkenleri** | Bu bağımsız değişkenler, komut dosyanızı başlatmak için kullanılan komuta, betiğinizin dosya adından sonra görünen komuta eklenir. Buradaki ilk öğe, `sys.argv[1]` `sys.argv[2]` betiğinizin, ikincisi, vb. için kullanılabilir. |
+| **Yorumlayıcı bağımsız değişkenleri** | Bu bağımsız değişkenler, betiğinizin adından önce Başlatıcı komut satırına eklenir. Burada ortak bağımsız değişkenler, `-W ...` uyarıları denetlemek, `-O` programınızı biraz iyileştirmek ve `-u` arabelleğe alınmamış GÇ kullanmak için kullanılır. IronPython kullanıcılarının, veya gibi seçenekleri geçirmek için bu alanı kullanması olasıdır `-X` `-X:Frames` `-X:MTA` . |
+| **Yorumlayıcı yolu** | Geçerli ortamla ilişkili yolu geçersiz kılar. Bu değer, komut dosyanızı standart olmayan bir yorumlayıcıya başlatmak için yararlı olabilir. |
+| **Ortam değişkenleri** | Bu çok satırlı metin kutusunda, form girdilerini ekleyin \<NAME> = \<VALUE> . Bu ayar son olarak, var olan genel ortam değişkenlerinin en üstünde ve sonra `PYTHONPATH` **arama yolları** ayarına göre ayarlandıktan sonra, bu diğer değişkenlerden herhangi birini el ile geçersiz kılmak için kullanılabilir. |
 
-## <a name="immediate-and-interactive-windows"></a>Anlık ve Etkileşimli pencereler
+## <a name="immediate-and-interactive-windows"></a>Anında ve etkileşimli Windows
 
-Hata ayıklama oturumu sırasında kullanabileceğiniz iki etkileşimli pencere vardır: standart Visual Studio **Penceresi** ve **Python Hata** Ayıklama Etkileşimli penceresi.
+hata ayıklama oturumu sırasında kullanabileceğiniz iki etkileşimli windows vardır: standart Visual Studio **hemen** penceresi ve **Python hata ayıklama etkileşimli** penceresi.
 
-Hemen **penceresi** (**Hata ayıklama** Windows Anında), Python ifadelerinin hızlı değerlendirilmesi ve çalışan program içindeki değişkenlerin incelemesi veya  >    >  ataması için kullanılır. Ayrıntılar için [genel Anında pencere](../ide/reference/immediate-window.md) makalesine bakın.
+**hemen** pencere (**hata ayıklama**  >  **Windows**  >  **anında**), Python ifadelerinin ve denetleme veya çalışan programdaki değişkenlerin atanması için hızlı değerlendirme için kullanılır. Ayrıntılar için genel [pencere](../ide/reference/immediate-window.md) makalesine bakın.
 
-Python **Hata Ayıklama Etkileşimli** penceresi ( Hata Ayıklama Windows Python Hata Ayıklama Etkileşimli ), kod yazma ve çalıştırma dahil olmak üzere hata ayıklama sırasında tam EtkileşimliREPL deneyimini kullanılabilir yapan daha  >    >  zengindir. [](python-interactive-repl-in-visual-studio.md) Standart Python başlatıcısını kullanarak hata ayıklayıcıda başlatan işlemlere otomatik olarak bağlanır (İşleme Hata Ayıklama  >  **İliştir aracılığıyla eklenen işlemler de dahil).** Ancak karma mod C/C++ hata ayıklaması kullanırken kullanılamaz.
+**python hata ayıklama etkileşimli** penceresi (**hata** ayıklama  >  **Windows**  >  **python hata ayıklama etkileşimli**), hata ayıklama sırasında kod yazma ve çalıştırma dahil olmak üzere tam [etkileşimli REPL](python-interactive-repl-in-visual-studio.md) deneyimini kullanılabilir hale getiren daha zengin bir deneyimdir. Standart Python başlatıcısı kullanılarak hata ayıklayıcıda başlatılan herhangi bir işleme otomatik olarak bağlanır ( **hata ayıklama** ekleme yoluyla eklenen işlemler dahil  >  ). Ancak, karma mod C/C++ hata ayıklama kullanılırken kullanılabilir değildir.
 
-![Python Hata Ayıklama Etkileşimli penceresi](media/debugging-interactive.png)
+![Python hata ayıklama etkileşimli penceresi](media/debugging-interactive.png)
 
-Etkileşimli **Hata Ayıklama penceresi,** standart REPL komutlarının yanı sıra özel [meta komutlarını da destekler:](python-interactive-repl-in-visual-studio.md#meta-commands)
+**Hata ayıklama etkileşimli** penceresi, [Standart REPL komutlarına](python-interactive-repl-in-visual-studio.md#meta-commands)ek olarak özel meta komutları destekler:
 
-| Komut | Bağımsız değişkenler | Açıklama |
+| Komut | Bağımsız değişkenler | Description |
 | --- | --- | --- |
-| `$continue`, `$cont`, `$c` | Programı geçerli deyiminden çalıştırmaya başlar. |
-| `$down`, `$d` | Geçerli çerçeveyi yığın izlemesinde bir düzey aşağı taşıma. |
-| `$frame` | | Geçerli çerçeve kimliğini görüntüler.
-| `$frame` | çerçeve kimliği | Geçerli kareyi belirtilen çerçeve kimliğine geçiştir.
-| `$load` | Dosyadan komutları yükler ve tamamlayana kadar yürütülür |
-| `$proc` |  | Geçerli işlem kimliğini görüntüler. |
-| `$proc` | işlem kimliği | Geçerli işlemi belirtilen işlem kimliğine geçiştir. |
-| `$procs` | | Şu anda hata ayıklama işlemi yapılan işlemleri listeler. |
-| `$stepin`, `$step`, `$s` | Mümkünse sonraki işlev çağrısına adım adım gösterir. |
-| `$stepout`, `$return`, `$r` | Geçerli işlevin dışında adımlar. |
-| `$stepover`, `$until`, `$unt` | Sonraki işlev çağrısının adımları. |
-| `$thread` | | Geçerli iş parçacığı kimliğini görüntüler. |
-| `$thread` | iş parçacığı kimliği | Geçerli iş parçacığını belirtilen iş parçacığı kimliğine geçiştir. |
-| `$threads` | | Şu anda hata ayıklaması yapılan iş parçacıklarını listeler. |
+| `$continue`, `$cont`, `$c` | Geçerli deyimden programı çalıştırmaya başlar. |
+| `$down`, `$d` | Geçerli çerçeveyi yığın izlemesinde bir düzey aşağı taşıyın. |
+| `$frame` | | Geçerli çerçeve KIMLIĞINI görüntüler.
+| `$frame` | çerçeve KIMLIĞI | Geçerli çerçeveyi belirtilen çerçeve KIMLIĞINE geçirir.
+| `$load` | Komutları dosyadan yükler ve tamamlanana kadar yürütülür |
+| `$proc` |  | Geçerli işlem KIMLIĞINI görüntüler. |
+| `$proc` | işlem KIMLIĞI | Geçerli işlemi belirtilen işlem KIMLIĞINE geçirir. |
+| `$procs` | | Şu anda hataları ayıklanan işlemlerin listesini görüntüler. |
+| `$stepin`, `$step`, `$s` | Mümkünse sonraki işlev çağrısının adımları. |
+| `$stepout`, `$return`, `$r` | Geçerli işlevin adımları. |
+| `$stepover`, `$until`, `$unt` | Sonraki işlev çağrısının üzerindeki adımlar. |
+| `$thread` | | Geçerli iş parçacığı KIMLIĞINI görüntüler. |
+| `$thread` | iş parçacığı KIMLIĞI | Geçerli iş parçacığını belirtilen iş parçacığı KIMLIĞINE geçirir. |
+| `$threads` | | Şu anda hata ayıklanan iş parçacıklarını listeler. |
 | `$up`, `$u` | | Geçerli çerçeveyi yığın izlemesinde bir düzey yukarı taşı. |
-| `$where`, `$w`, `$bt` | Geçerli iş parçacığı için çerçeveleri listeler. |
+| `$where`, `$w`, `$bt` | Geçerli iş parçacığının çerçevelerini listeler. |
 
-İşlemler, İş Parçacıkları ve Çağrı Yığını gibi  standart hata ayıklayıcı pencerelerini Etkileşimli Hata Ayıklama **penceresiyle eşitlenmez.**  Etkileşimli Hata Ayıklama penceresinde etkin işlemi, iş **parçacığını** veya çerçeveyi değiştirmek diğer hata ayıklayıcı pencerelerini etkilemez. Benzer şekilde, diğer hata ayıklayıcı pencerelerinde etkin işlemi, iş parçacığını veya çerçeveyi değiştirmek Etkileşimli Hata Ayıklama **penceresini etkilemez.**
+**Süreçler**, **Iş parçacıkları** ve **çağrı yığını** gibi standart hata ayıklayıcı pencerelerinin **hata ayıklama etkileşimli** penceresiyle eşitlenmediğini unutmayın. **Hata ayıklama etkileşimli** penceresindeki etkin işlem, iş parçacığı veya çerçeveyi değiştirmek, diğer hata ayıklayıcı pencerelerini etkilemez. Benzer şekilde, diğer hata ayıklayıcı pencerelerinin etkin işlem, iş parçacığı veya çerçeveyi değiştirmek, **hata ayıklama etkileşimli** penceresini etkilemez.
 
 <a name="use-the-experimental-debugger"></a>
 
-## <a name="use-the-legacy-debugger"></a>Eski hata ayıklayıcısını kullanma
+## <a name="use-the-legacy-debugger"></a>Eski hata ayıklayıcıyı kullanın
 
-Visual Studio 2017 sürüm 15.8 ve sonrası ptvsd sürüm 4.1+ tabanlı bir hata ayıklayıcı kullanır. Visual Studio 2019 sürüm 16.5 ve sonrası, hata ayıklamayı temel alan bir hata ayıklayıcı kullanır. Hata ayıklayıcının bu sürümleri Python 2.7 ve Python 3.5+ ile uyumludur. Python 2.6, 3.1 ile 3.4 veya IronPython kullanıyorsanız Visual Studio hata gösterir, Hata Ayıklayıcı **şu Python ortamını desteklemez:**
+Visual Studio 2017 sürümleri 15,8 ve üzeri, ptvsd sürüm 4.1 + tabanlı bir hata ayıklayıcı kullanır. Visual Studio 2019 sürümleri 16,5 ve üzeri, hata ayıklayıcı gpy tabanlı bir hata ayıklayıcı kullanır. Hata ayıklayıcının bu sürümleri Python 2,7 ve Python 3.5 + ile uyumludur. python 2,6, 3,1-3,4 veya ıronpython kullanıyorsanız, Visual Studio hatayı gösteriyorsa, hata **ayıklayıcı bu Python ortamını desteklemez**:
 
-![Hata ayıklayıcısı, hata ayıklayıcıyı kullanırken bu Python ortamı hatasını desteklemez](media/debugging-experimental-incompatible-error.png)
+![Hata ayıklayıcı kullanılırken hata ayıklayıcı bu Python ortamı hatasını desteklemez](media/debugging-experimental-incompatible-error.png)
 
-Bu durumlarda eski hata ayıklayıcısını (2017 sürüm 15.7 ve Visual Studio varsayılandır) kullan gerekir. Araçlar Seçenekler **menü**  >  **komutunu** seçin, Python Hata **Ayıklama'ya** gidin ve Eski hata  >   **ayıklayıcıyı kullan seçeneğini** belirleyin.
+bu durumlarda, daha eski hata ayıklayıcıyı kullanmanız gerekir (Visual Studio 2017 sürümleri 15,7 ve önceki sürümlerde varsayılandır). **Araç**  >  **seçenekleri** menü komutunu seçin, **Python**  >  **hata ayıklama** bölümüne gidin ve **eski hata ayıklayıcı kullan** seçeneğini belirleyin.
 
-Geçerli ortama ptvsd'nin eski bir sürümünü yüklemiş (örneğin, önceki bir 4.0.x sürümü veya uzaktan hata ayıklama için gereken 3.x sürümü) Visual Studio bir hata veya uyarı gösterebilir.
+geçerli ortamda ptvsd 'in daha eski bir sürümünü (önceki bir sürüm. x sürümü veya uzaktan hata ayıklama için gereken 3. x sürümü) yüklediyseniz Visual Studio bir hata veya uyarı gösterebilir.
 
-Hata: **Ptvsd** 3.x'i yüklemişken Hata ayıklayıcısı paketi yüklenemedi:
+Hata, hata **ayıklayıcı paketi yüklenemedi**, ptvsd 3. x 'i yüklediğinizde görünür:
 
-![Hata ayıklayıcı kullanırken hata ayıklayıcı paketi yüklenemedi hatası](media/debugging-experimental-version-error.png)
+![Hata ayıklayıcı kullanılırken hata ayıklayıcı paketi yüklenemedi](media/debugging-experimental-version-error.png)
 
-Bu durumda Eski hata **ayıklayıcıyı kullan'ı seçerek** Eski hata ayıklayıcıyı **kullan** seçeneğini belirleyin ve hata ayıklayıcıyı yeniden başlatın.
+Bu durumda, eski hata ayıklayıcıyı **kullan** seçeneğini ayarlamak için **eski hata ayıklayıcıyı kullan** ' ı seçin ve hata ayıklayıcıyı yeniden başlatın.
 
-Ptvsd'nin **önceki** 4.x sürümünü yüklemişken Hata ayıklayıcı paketi güncel değil uyarısı görüntülenir:
+Uyarı, **hata ayıklayıcı paketi güncel değil**, ptvsd 'in önceki 4. x sürümünü yüklediğinizde görüntülenir:
 
-![Hata ayıklayıcı kullanırken hata ayıklayıcı paketinde zamandıldı uyarısı](media/debugging-experimental-version-warning.png)
+![Hata ayıklayıcı kullanılırken hata ayıklayıcı paketi güncel değil uyarısı](media/debugging-experimental-version-warning.png)
 
 > [!Important]
-> Bazı ptvsd sürümleri için uyarıyı yoksayabilirsiniz ancak Visual Studio düzgün çalışmayabilir.
+> bazı ptvsd sürümleri için uyarıyı yok saymayı tercih edebilirsiniz, ancak Visual Studio düzgün çalışmayabilir.
 
 Ptvsd yüklemenizi yönetmek için:
 
-1. Python Ortamları **penceresinde** Paketler **sekmesine** gidin.
+1. **Python ortamları** penceresinde **paketler** sekmesine gidin.
 
-1. Arama kutusuna "ptvsd" yazın ve ptvsd'nin yüklü sürümünü inceler:
+1. Arama kutusuna "ptvsd" yazın ve ptvsd 'in yüklü sürümünü inceleyin:
 
-    ![Python Ortamları penceresinde ptvsd sürümünü denetleme](media/debugging-experimental-check-ptvsd.png)
+    ![Python ortamları penceresinde ptvsd sürümü denetleniyor](media/debugging-experimental-check-ptvsd.png)
 
-1. Sürüm 4.1.1a9'dan küçükse (Visual Studio ile paketlenmiş sürüm), eski sürümü kaldırmak için paketin sağ **köşesindeki X'i** seçin. Visual Studio paket sürümünü kullanır. (Ayrıca kullanarak PowerShell'den `pip uninstall ptvsd` kaldırabilirsiniz.)
+1. sürüm 4.1.1 a9 'den düşükse (Visual Studio ile paketlenmiş sürüm), eski sürümü kaldırmak için paketin sağ tarafındaki **X** ' i seçin. Visual Studio daha sonra paketlenmiş sürümünü kullanır. (Kullanarak PowerShell 'den da kaldırabilirsiniz `pip uninstall ptvsd` .)
 
-1. Alternatif olarak, Sorun Giderme bölümündeki yönergeleri izleyerek ptvsd paketini en yeni sürümüne [güncelleştirebilirsiniz.](#troubleshooting)
+1. Alternatif olarak, [sorun giderme](#troubleshooting) bölümündeki yönergeleri izleyerek ptvsd paketini en yeni sürümüne güncelleştirebilirsiniz.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-### <a name="for-visual-studio-2019-version-164-and-earlier-upgrade-ptvsd"></a>2019 Visual Studio (Sürüm 16.4 ve önceki sürümler) ptvsd'ye yükseltme
-Hata ayıklayıcısıyla ilgili sorunlarınız varsa, önce hata ayıklayıcı sürümünü aşağıdaki gibi yükseltin:
+### <a name="for-visual-studio-2019-version-164-and-earlier-upgrade-ptvsd"></a>Visual Studio 2019 (sürüm 16,4 ve önceki sürümler) için yükseltme ptvsd
+Hata ayıklayıcıyla ilgili sorunlarınız varsa, önce hata ayıklayıcı sürümünüzü aşağıdaki gibi yükseltin:
 
-1. Python Ortamları **penceresinde** Paketler **sekmesine** gidin.
+1. **Python ortamları** penceresinde **paketler** sekmesine gidin.
 
-1. Arama `ptvsd --upgrade` kutusuna yazın ve çalıştır komutu: pip install **ptvsd --upgrade öğesini seçin.** (Aynı komutu PowerShell'den de kullanabilirsiniz.)
+1. `ptvsd --upgrade`Arama kutusuna girin ve ardından **komutu Çalıştır: pttrvsd--Upgrade**' i seçin. (PowerShell 'in aynı komutunu da kullanabilirsiniz.)
 
-    ![Python Ortamları penceresinde ptvsd upgrade komutu verme](media/debugging-experimental-upgrade-ptvsd.png)
+    ![Python ortamları penceresinde ptvsd Upgrade komutuna verme](media/debugging-experimental-upgrade-ptvsd.png)
 
-   Sorunlar devam ederse lütfen PTVS depolama deposunda [GitHub kaydedin.](https://github.com/Microsoft/ptvs/issues)
+   sorun devam ederse lütfen [ptv GitHub deposunda](https://github.com/Microsoft/ptvs/issues)bir sorun bildirin.
 
    > [!NOTE]
-   > 2019 Visual Studio 16.5 ve sonraki sürümler için hata ayıklama, Visual Studio Python iş yükünün bir parçası ve Visual Studio.
+   > Visual Studio 2019 sürüm 16,5 ve üzeri için, hata ayıklama gpy Visual Studio Python iş yükünün bir parçasıdır ve Visual Studio birlikte güncelleştirilir.
 
-### <a name="enable-debugger-logging"></a>Hata ayıklayıcı günlüğünü etkinleştirme
+### <a name="enable-debugger-logging"></a>Hata ayıklayıcı günlüğünü etkinleştir
 
-Bir hata ayıklayıcı sorunu araştırırken, Microsoft tanılamaya yardımcı olan hata ayıklayıcı günlüklerini etkinleştirmenizi ve toplamayı sorabilir.
+Bir hata ayıklayıcı sorunu araştırırken, Microsoft, tanılamada yardım veren hata ayıklayıcı günlüklerini etkinleştirmenizi ve toplamanızı isteyebilir.
 
-Aşağıdaki adımlar geçerli oturumda hata ayıklamayı Visual Studio sağlar:
+aşağıdaki adımlar geçerli Visual Studio oturumunda hata ayıklamayı etkinleştirir:
 
-1. Komut Penceresi menü Visual Studio **kullanarak** Windows  >    >  **penceresinde bir** komut penceresi açın.
+1. Visual Studio   >  **diğer Windows** göster  >  **komut penceresi** menü komutunu kullanarak bir komut penceresi açın.
 
 1. Aşağıdaki komutu girin:
 
@@ -250,18 +250,18 @@ Aşağıdaki adımlar geçerli oturumda hata ayıklamayı Visual Studio sağlar:
     DebugAdapterHost.Logging /On /OutputWindow
     ```
 
-1. Hata ayıklamaya başlama ve sorunlarınızı yeniden oluşturmak için gereken adımların üzerinden geçebilirsiniz. Bu süre boyunca hata ayıklama günlükleri, Hata Ayıklama Bağdaştırıcısı Ana **Bilgisayar** Günlüğü altındaki **Çıkış penceresinde görüntülenir.** Ardından bu pencereden günlükleri kopyalayıp bir sorun, e-posta GitHub yapıştırabilirsiniz.
+1. Hata ayıklamayı başlatın ve sorununuzu yeniden oluşturmak için gereken adımlarla ilerleyin. Bu süre boyunca hata ayıklama günlüğü, **hata ayıklama bağdaştırıcısı ana bilgisayar günlüğü** altındaki **Çıkış** penceresinde görüntülenir. daha sonra bu penceredeki günlükleri kopyalayabilir ve GitHub bir sorun, e-posta vb. yapıştırabilirsiniz.
 
     ![Çıkış penceresinde hata ayıklayıcı günlüğü çıkışı](media/debugger-logging-output.png)
 
-1. Yanıt Visual Studio veya Çıkış penceresine erişemiyorsanız,  Visual Studio yeniden başlatın, bir komut penceresi açın ve aşağıdaki komutu girin:
+1. Visual Studio yanıt vermeyi durdurursa veya **çıkış** penceresine erişemeyebilirsiniz, Visual Studio yeniden başlatın, bir komut penceresi açın ve aşağıdaki komutu girin:
 
     ```ps
     DebugAdapterHost.Logging /On
     ```
 
-1. Hata ayıklamaya başlama ve sorunlarınızı yeniden oluşturma. Hata ayıklayıcı günlükleri daha sonra içinde `%temp%\DebugAdapterHostLog.txt` bulunabilir.
+1. Hata ayıklamayı başlatın ve sorunu yeniden oluşturun. Hata ayıklayıcı günlükleri içinde bulunabilir `%temp%\DebugAdapterHostLog.txt` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Hata ayıklayıcısıyla ilgili tüm Visual Studio için [bkz.](../debugger/debugger-feature-tour.md)Visual Studio.
+Visual Studio hata ayıklayıcıyla ilgili tüm ayrıntılar için bkz. [Visual Studio hata ayıklama](../debugger/debugger-feature-tour.md).

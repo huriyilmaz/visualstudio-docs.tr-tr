@@ -12,11 +12,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 920822cca275f0285f922fc49a60af3a3b152d6b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122140316"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625334"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Cookiecutter uzantısını kullanma
 
@@ -94,12 +94,12 @@ Cookiecutter şablonu yazma temelleri için bkz. [Cookiecutter belgeleri](https:
 - String: değişken adı için etiket, değer girmek için metin kutusu ve varsayılan değeri gösteren bir filigran. Metin kutusundaki araç ipucu varsayılan değeri gösterir.
 - List: değişken adı için etiket, bir değer seçmek için Birleşik giriş kutusu. Birleşik giriş kutusundaki araç ipucu varsayılan değeri gösterir.
 
-Visual Studio özgü (ve Cookiecutter clı tarafından yoksayılmış) dosyadaki *cookiecutter.js* ek meta verileri belirterek bu işleme üzerinde geliştirme mümkündür. Tüm özellikler isteğe bağlıdır:
+Visual Studio özgü olan (ve cookiecutter clı tarafından yoksayılan) *cookiecutter. json* dosyanızda ek meta veriler belirterek bu işleme göre iyileştirebilmek mümkündür. Tüm özellikler isteğe bağlıdır:
 
 | Özellik | Açıklama |
 | --- | --- |
 | Etiketle | Değişken için, değişkenin adı yerine düzenleyicinin üzerinde ne göründüğünü belirtir. |
-| Açıklama | Bu değişken için varsayılan değer yerine, düzenleme denetiminde görünen araç ipucunu belirtir. |
+| Description | Bu değişken için varsayılan değer yerine, düzenleme denetiminde görünen araç ipucunu belirtir. |
 | URL | Etiketi, URL 'YI gösteren bir araç ipucuyla birlikte köprü haline geçirir. Köprü seçildiğinde kullanıcının varsayılan tarayıcısı Bu URL 'ye açılır. |
 | Seçici | Bir değişken için düzenleyicinin özelleştirilmesine izin verir. Şu seçiciler Şu anda desteklenmektedir:<ul><li>`string`: Standart metin kutusu, dizeler için varsayılan.</li><li>`list`: Standart Birleşik giriş kutusu, listeler için varsayılan.</li><li>`yesno`: `y` Dizeler için ve arasında seçim yapabileceğiniz Birleşik giriş kutusu `n` .</li><li>`odbcConnection`: Bir veritabanı bağlantısı iletişim kutusu getiren **...** düğmesini içeren metin kutusu.</li></ul> |
 
@@ -134,9 +134,9 @@ Visual Studio özgü (ve Cookiecutter clı tarafından yoksayılmış) dosyadaki
 
 Cookiecutter, dosyalar oluşturulduktan sonra rastgele Python kodu çalıştırmaya izin veren, *oluşturma sonrası kancalar* adlı bir özelliğe sahiptir. Esnek olmasına rağmen Visual Studio kolay erişime izin vermez.
 
-örneğin, Visual Studio düzenleyicisinde veya web tarayıcısında bir dosyayı açmak veya kullanıcıdan bir sanal ortam oluşturmasını ve paket gereksinimlerini yüklemesini isteyen Visual Studio kullanıcı arabirimini tetiklemeniz gerekebilir.
+Örneğin, Visual Studio düzenleyicisinde veya web tarayıcısında bir dosya açmak ya da kullanıcıdan sanal ortam oluşturmasını ve paket gereksinimlerini yüklemesini isteyen Visual Studio kullanıcı arabirimini tetiklemek istiyor olabilirsiniz.
 
-bu senaryolara izin vermek için Visual Studio, kullanıcı **Çözüm Gezgini** içinde oluşturulan dosyaları açtıktan sonra veya var olan bir projeye eklendikten sonra çalıştırılacak komutları açıklayan *cookiecutter.jsüzerinde* genişletilmiş meta verileri arar. (Yine de Kullanıcı, şablon seçeneklerinde **tamamlandığında ek görevleri Çalıştır** ' ı temizleyerek görevleri çalıştırmayı tercih edebilir.)
+Bu senaryolara izin vermek *Visual Studio, cookiecutter.json'da* kullanıcı oluşturulan dosyaları **Çözüm Gezgini'de** açtıktan sonra veya dosyalar mevcut projeye eklendikten sonra çalıştırılacak komutları açıklayan genişletilmiş meta verileri aramaz. (Kullanıcı, şablon seçenekleri tamamlandıktan sonra ek görevleri çalıştır'ın **temizlerini çıkararak görevleri çalıştırmayı** geri tercih ediyor olabilir.)
 
 Örnek:
 
@@ -157,11 +157,11 @@ bu senaryolara izin vermek için Visual Studio, kullanıcı **Çözüm Gezgini**
 ]
 ```
 
-Komutlar ad ile belirtilir ve yerelleştirilmiş Visual Studio yüklemeleri üzerinde çalışmak için yerelleştirilmemiş (Ingilizce) adı kullanmalıdır. komut adlarını Visual Studio **komut** penceresinde test edebilir ve keşfedebilirsiniz.
+Komutlar adla belirtilir ve yerelleştirilmiş yüklemelerde çalışmak için yerelleştirilmiş olmayan (İngilizce) adı Visual Studio. Komut penceresinde komut adlarını test Visual Studio **keşfedebilirsiniz.**
 
-Tek bir bağımsız değişken geçirmek istiyorsanız, önceki örnekte olduğu gibi bir dize olarak belirtin.
+Tek bir bağımsız değişken geçmek için, bunu önceki örnekte olduğu gibi bir dize olarak belirtin.
 
-Bir bağımsız değişken iletmeniz gerekmiyorsa, boş bir dize bırakın veya JSON 'dan atlayın:
+Bağımsız değişken geçmeye gerek yoksa boş bir dize bırakın veya JSON'dan atlayın:
 
 ```json
 "_visual_studio_post_cmds": [
@@ -171,7 +171,7 @@ Bir bağımsız değişken iletmeniz gerekmiyorsa, boş bir dize bırakın veya 
 ]
 ```
 
-Birden çok bağımsız değişken için bir dizi kullanın. Anahtarlar için anahtarı ve değerini ayrı bağımsız değişkenlere böler ve uygun tırnak içine kullanın. Örnek:
+Birden çok bağımsız değişken için bir dizi kullanın. Anahtarlar için anahtarı ve değerini ayrı bağımsız değişkenlere bölün ve düzgün alıntı kullanın. Örnek:
 
 ```json
 "_visual_studio_post_cmds": [
@@ -186,41 +186,41 @@ Birden çok bağımsız değişken için bir dizi kullanın. Anahtarlar için an
 ]
 ```
 
-Bağımsız değişkenler, diğer Cookiecutter değişkenlerine başvurabilir. Yukarıdaki örneklerde, iç `_output_folder_path` değişken oluşturulan dosyalara mutlak bir yol oluşturmak için kullanılır.
+Bağımsız değişkenler diğer Cookiecutter değişkenlerine başvurur. Yukarıdaki örneklerde dahili `_output_folder_path` değişken, oluşturulan dosyaların mutlak yolunu oluşturmak için kullanılır.
 
-`Python.InstallProjectRequirements`Komutun yalnızca mevcut bir projeye dosya eklerken çalıştığına unutmayın. Bu sınırlama, komut **Çözüm Gezgini**' de Python projesi tarafından işlendiği ve **Çözüm Gezgini**  -  **klasör görünümünde** iletiyi alacak bir proje bulunmadığından oluşur. Gelecek bir sürümü kazanmanızı (ve genel olarak daha iyi **klasör görünümü** desteği sağlamayı) umuyoruz.
+Komutun `Python.InstallProjectRequirements` yalnızca mevcut projeye dosya eklerken çalıştığını unutmayın. Bu sınırlama, komutu Çözüm Gezgini'daki Python projesi tarafından işlendiğinden ve Klasör Görünümü'ne Çözüm Gezgini ileti **almak için** bir  -  **proje yoktur.** Sınırlamanın kaldırarak gelecek bir sürümü kazanmayı umuyoruz (ve genel olarak daha **iyi Bir** Klasör Görünümü desteği sağlarız).
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
 ### <a name="error-loading-template"></a>Şablon yüklenirken hata oluştu
 
-Bazı şablonlar, *üzerindecookiecutter.js*, Boolean gibi geçersiz veri türlerini kullanıyor olabilir. Şablon bilgileri bölmesindeki **sorunlar** bağlantısını seçerek şablon yazarına bu tür örnekler bildirin.
+Bazı şablonlar *cookiecutter.json* içinde boole gibi geçersiz veri türleri kullanıyor olabilir. Şablon bilgileri bölmesindeki Sorunlar bağlantısını seçerek bu **örnekleri** şablon yazarına rapor edin.
 
 ### <a name="hook-script-failed"></a>Kanca betiği başarısız oldu
 
-Bazı şablonlar, Cookiecutter Kullanıcı arabirimiyle uyumlu olmayan oluşturma sonrası betikleri kullanabilir. Örneğin, Kullanıcı girişi için sorgulama yapan betikler, Terminal konsoluna sahip olmadığı için başarısız olur.
+Bazı şablonlar, Cookiecutter kullanıcı arabirimiyle uyumlu olmayan son nesil betikler kullanabilir. Örneğin, kullanıcıya giriş sorgusunda yer alan betikler, terminal konsoluna sahip olunmay nedeniyle başarısız olur.
 
-### <a name="hook-script-not-supported-on-windows"></a>Kanca betiği Windows desteklenmiyor
+### <a name="hook-script-not-supported-on-windows"></a>Kanca betiği Windows
 
-post betiği *. sh* ise, Windows bilgisayarınızdaki bir uygulamayla ilişkili olmayabilir. Windows deposunda uyumlu bir uygulama bulmanızı isteyen bir Windows iletişim kutusu görebilirsiniz.
+Post betiği *.sh* ise, uygulama bilgisayarınızda bir uygulamayla Windows olabilir. Windows Windows uyumlu bir uygulama bulmanız isteyen bir Windows olabilir.
 
 ### <a name="templates-with-known-issues"></a>Bilinen sorunları olan şablonlar
 
-Kopyalama başarısızlığı:
+Kopyalama hataları:
 
-- **yavaya balık/cookiecutter-docgo-CRUD** ( `|` alt klasör adında geçersiz karakter)
-- **cookiecutter-pyvanguard** ( `|` alt klasör adında geçersiz karakter)
+- **wildfish/cookiecutter-django-crud** (alt `|` klasör adı için geçersiz karakter)
+- **cookiecutter-pyvanguard** (alt `|` klasör adı için geçersiz karakter)
 
-Yükleme başarısızlığı:
+Yükleme hataları:
 
-- **chrisdev/Wagtail-cookiecutter-Foundation** ( *cookiecutter.jsüzerinde* bir Boole türü kullanır)
-- **quintoandar/cookiecutter-Android** (şablon klasörü yok)
+- **chrisdev/wagtail-cookiecutter-foundation** *(cookiecutter.json içinde boole türü kullanır)*
+- **cookieoandar/cookiecutter-android** (şablon klasörü yok)
 
-Çalıştırma sorunları:
+Çalıştırma hataları:
 
-- **ıknite/cookiecutter-anerişilebilir-rol** (Post kanca betiği için konsol girişi gerekir)
-- **benregn/cookiecutter-docgo-anerişilebilir** (jınja hatası)
+- **iknite/cookiecutter-ansible-role** (kanca sonrası betik konsol girişi gerektirir)
+- **benregn/cookiecutter-django-ansible** (Jinja hatası)
 
-Bash kullanır (önemli değil):
+Bash kullanır (önemli değildir):
 
-- **OpenStack-dev/cookiecutter**
+- **openstack-dev/cookiecutter**

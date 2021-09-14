@@ -1,6 +1,6 @@
 ---
-title: DA0014 - Etkin belleği disk belleğine veya disk belleğine | Microsoft Docs
-description: Profil oluşturma çalıştırması sırasında toplanan sistem performansı verileri, profil oluşturma çalıştırması boyunca diske gelen ve diskten çok yüksek bir disk belleği belleği oranı olduğunu gösterir.
+title: DA0014-son derece yüksek oranda diske etkin bellek sayfalaması | Microsoft Docs
+description: Profil oluşturma çalıştırmasında toplanan sistem performansı verileri, profil oluşturma çalıştırmasının tamamında son derece yüksek oranda disk belleği üzerinde etkin bellek olduğunu gösterir.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,38 +17,38 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: ea42e94eab6c5da65e5e1d59e93f71680dea1500
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122131761"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637137"
 ---
 # <a name="da0014-extremely-high-rates-of-paging-active-memory-to-disk"></a>DA0014: Çok yüksek oranda diske etkin bellek sayfalaması
 
 |Öğe|Değer|
 |-|-|
-|Kural Kimliği|DA0014|
-|Kategori|Bellek ve Disk Belleği|
+|Kural kimliği|DA0014|
+|Kategori|Bellek ve disk belleği|
 |Profil oluşturma yöntemi|Tümü|
-|İleti|Çok yüksek oranda diske etkin bellek diske disk belleği oluşuyor. Uygulamanız belleğe bağlı olabilir.|
+|İleti|Son derece yüksek oranda diske etkin bellek sayfalaması gerçekleşiyor. Uygulamanız bellek ile bağlantılı olabilir.|
 |Kural türü|Uyarı|
 
- Örnekleme, .NET belleği veya kaynak musiki yöntemlerini kullanarak profil 25 örnek toplayan bu kuralı tetiklemeniz gerekir.
+ Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 25 örnek toplamanız gerekir.
 
 ## <a name="cause"></a>Nedeni
- Profil oluşturma çalıştırması sırasında toplanan sistem performansı verileri, profil oluşturma çalıştırması boyunca diske gelen ve diskten çok yüksek bir disk belleği belleği oranı olduğunu gösterir. Bu düzeydeki disk belleği oranları genellikle uygulama performansını ve yanıt hızını etkiler. Algoritmaları gözden kullanarak bellek ayırmalarını azaltmayı göz önünde bulundurarak. Ayrıca, uygulamanın bellek gereksinimlerini de göz önünde bulundurabilirsiniz. daha fazla belleğe sahip bir bilgisayarda profil oluşturmayı yeniden çalıştırma.
+ Profil oluşturma çalıştırmasında toplanan sistem performansı verileri, profil oluşturma çalıştırmasının tamamında son derece yüksek oranda disk belleği üzerinde etkin bellek olduğunu gösterir. Bu düzeydeki disk belleği ücretleri genellikle uygulama performansını ve yanıt hızını etkiler. Algoritmaların yeniden gözden geçirerek bellek ayırmalarını azaltmayı göz önünde bulundurun. Ayrıca, uygulamanızın bellek gereksinimlerini dikkate almanız gerekebilir. daha fazla belleğe sahip bir bilgisayarda profil oluşturma yeniden çalıştırılıyor.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Diske aşırı disk belleği, fiziksel bellek yetersizliği neden olabilir. Disk belleği işlemlerinin disk belleği dosyasının bulunduğu fiziksel diskte baskın olması, diğer uygulama odaklı disk işlemlerini aynı diske yavaşlatır.
+ Disk üzerinde aşırı sayfalama, fiziksel belleğin yetersizliğinden kaynaklanabilir. Sayfalama işlemleri disk belleği dosyasının bulunduğu fiziksel disk kullanıyorsa, diğer uygulama odaklı disk işlemlerini aynı diske düşürebilir.
 
- Sayfalar genellikle diskten okunur veya toplu sayfalama işlemleriyle diske yazılır. Sayfa Çıkışı/sn sayısı, örneğin sayfa yazma/sn sayısından çok daha fazladır. Sayfalar Çıktı/sn, sistem dosyası önbelleğinden değiştirilen veri sayfalarını da içerir. Ancak, hangi sürecin disk belleğinden veya neden doğrudan sorumlu olduğunu belirlemek her zaman kolay değildir.
+ Genellikle, sayfalar diskten okunmakta veya toplu sayfalama işlemlerinde diske yazılır. Çıkış/sn sayısı, örneğin sayfa yazma/sn sayısından çok daha büyük. Sayfa çıktısı/sn aynı zamanda sistem dosyası önbelleğinden değiştirilen veri sayfalarını da içerdiğinden. Ancak, sayfalama veya neden tarafından hangi işlemin doğrudan sorumlu olduğunu belirlenmesi her zaman kolay değildir.
 
 > [!NOTE]
-> Bu kural, etkin bellek disk belleği düzeyleri çok yüksek bir hıza ulaştığında etkin olur. Disk belleği düzeyi önemli ancak aşırı değilken, [DA0017 bilgi kuralı:](../profiling/da0017-high-rates-of-paging-active-memory-to-disk.md) Bunun yerine diske etkin belleğin yüksek oranda diske atılıyor olması.
+> Bu kural, etkin belleğin sayfalama düzeyleri çok yüksek bir hıza ulaştığında ateşlenir. Sayfalama düzeyi önemli olduğunda, ancak aşırı olmasa da bilgilendirme kuralı [DA0017: yüksek oranda diske etkin bellek sayfalaması](../profiling/da0017-high-rates-of-paging-active-memory-to-disk.md) , bunun yerine.
 
-## <a name="how-to-fix-violations"></a>İhlalleri düzeltme
- İşaretler görünümüne gitmek için Hata Listesi penceresinde iletiye [çift](../profiling/marks-view.md) tıklayın. **Memory\Pages/sec sütununu** bulun. Disk belleği IO etkinliğinin diğerlerine göre daha ağır olduğu belirli program yürütme aşamaları olup olmadığını belirler.
+## <a name="how-to-fix-violations"></a>İhlalleri çözme
+ [İşaretler](../profiling/marks-view.md) görünümüne gitmek için hata Listesi penceresindeki iletiye çift tıklayın. **Bellek \ Sayfa/sn** sütununu bulun. Sayfalama GÇ etkinliğinin diğerlerinden daha ağır olduğu belirli program yürütme aşamaları olup olmadığını belirleme.
 
- Bir yük testi senaryosunda bir ASP.NET uygulama için profil verileri topluyorsanız, yük testini ek fiziksel bellek (veya RAM) ile yapılandırılmış bir makinede yeniden çalıştırmayı deneyin.
+ yük testi senaryosunda bir ASP.NET uygulama için profil verileri topıyorsanız, yük testini ek fiziksel bellekle (veya RAM) yapılandırılmış bir makinede yeniden çalıştırmayı deneyin.
 
- Algoritmaları yeniden değerlendirerek ve String.Concat ve String.Substring gibi yoğun bellek kullanımına sahip API'lerden kaçınarak bellek ayırmalarını azaltmayı göz önünde bulundurarak.
+ Algoritmaları yeniden düzenleyerek ve String. Concat ve String. Substring gibi bellek kullanımı yoğun API 'lerden kaçınarak bellek ayırmalarını azaltmayı göz önünde bulundurun.

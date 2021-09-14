@@ -11,15 +11,15 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: e75f433c3949ecb623dbe14ee7289060f7cc463b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122038597"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625370"
 ---
-# <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio'de Python ortamları oluşturma ve yönetme
+# <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio'da Python ortamları oluşturma ve yönetme
 
-**Python ortamı,** Python kodunu çalıştırarak genel, sanal ve conda ortamlarını içeren bir bağlamdır. Ortam bir yorumlayıcı, bir kitaplık (genellikle Python Standart Kitaplığı) ve yüklü paketlerden oluşur. Bu bileşenler birlikte hangi dil yapılarını ve söz dizimlerini geçerli olduğunu, hangi işletim sistemi işlevlerine erişebilirsiniz ve hangi paketleri kullanabileceğini belirler.
+**Python ortamı,** Python kodunu çalıştırarak genel, sanal ve conda ortamlarını içeren bir bağlamdır. Ortam bir yorumlayıcı, kitaplık (genellikle Python Standart Kitaplığı) ve yüklü paketlerden oluşur. Bu bileşenler birlikte hangi dil yapılarını ve söz dizimlerini geçerli olduğunu, hangi işletim sistemi işlevlerine erişebilirsiniz ve hangi paketleri kullanabileceğini belirler.
 
 Bu Visual Studio Windows, ortamları yönetmek ve yeni projeler için varsayılan olarak birini seçmek için bu makalede açıklandığı gibi **Python** Ortamları penceresini kullanırsınız. Ortamların diğer yönleri aşağıdaki makalelerde bulunabilir:
 
@@ -31,19 +31,19 @@ Bu Visual Studio Windows, ortamları yönetmek ve yeni projeler için varsayıla
 
 - Başka bir Python yorumlayıcı yüklemek için [bkz. Python yorumlayıcılarını yükleme.](installing-python-interpreters.md) Genel olarak, ana Python dağıtımı için bir yükleyici indirip çalıştırıyorsanız, Visual Studio yeni yüklemenin ve ortamın **Python** Ortamları penceresinde görüntülendiğinden ve projeler için seçilene olduğunu algılar.
 
-Python'da yeni bir Visual Studio aşağıdaki makaleler de genel arka plan bilgileri sağlar:
+Python'da yeniydiniz Visual Studio aşağıdaki makaleler de genel arka planda sağlar:
 
 - [Visual Studio'da Python ile çalışma](overview-of-python-tools-for-visual-studio.md)
 - [Visual Studio’da Python desteğini yükleme](installing-python-support-in-visual-studio.md)
 
 ::: moniker range="vs-2017"
 > [!Note]
-> Python kodu için yalnızca klasör olarak açılan ortamları Dosya Klasör Aç komutunu **kullanarak**  >  **yönetesiniz.**  >   Bunun [yerine, ortamın ortam özelliklerinden keyif almak için](quickstart-01-python-in-visual-studio-project-from-existing-code.md) mevcut koddan bir Python Visual Studio.
+> Python kodu için yalnızca klasör olarak açılan ortamları Dosya Klasör Aç komutunu **kullanarak**  >  **yönetebilirsiniz.**  >   Bunun [yerine, ortamın ortam özelliklerinden keyif almak için](quickstart-01-python-in-visual-studio-project-from-existing-code.md) mevcut koddan bir Python Visual Studio.
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 > [!Note]
-> Klasör olarak açılan Python kodu ortamlarını Dosya Klasör Aç **komutunu**  >  **kullanarak**  >  **yönetebilirsiniz.** Python araç çubuğu, algılanan tüm ortamlar arasında geçiş ve yeni bir ortam eklemenize olanak tanır. Ortam bilgileri Çalışma Alanı PythonSettings.jsklasöründeki dosyada depolanır.
+> Klasör olarak açılan Python kodu ortamlarını Dosya Klasör Aç **komutunu**  >  **kullanarak**  >  **yönetebilirsiniz.** Python araç çubuğu, algılanan tüm ortamlar arasında geçiş yapmak ve yeni bir ortam eklemek için kullanılabilir. Ortam bilgileri Workspace .vs klasöründeki PythonSettings.json dosyasında depolanır.
 ::: moniker-end
 
 ## <a name="the-python-environments-window"></a>Python Ortamları penceresi
@@ -51,7 +51,7 @@ Python'da yeni bir Visual Studio aşağıdaki makaleler de genel arka plan bilgi
 Hakkında Visual Studio ortamlar Python Ortamları **penceresinde** görüntülenir. Pencereyi açmak için aşağıdaki yöntemlerden birini kullanın:
 
 - Diğer Öğeleri  >  **Görüntüle'Windows**  >  **Python Ortamları menü** komutunu seçin.
-- Çözüm Gezgini'da **bir** proje için Python Ortamları **düğümüne sağ tıklayın ve Tüm** Python **Ortamlarını Görüntüle'yi seçin:**
+- Çözüm Gezgini'da **bir** projenin Python Ortamları düğümüne **sağ tıklayın ve** Tüm Python **Ortamlarını Görüntüle'yi seçin:**
 
     ::: moniker range="vs-2017"
     ![Görünüm Tüm Ortamlar komutu Çözüm Gezgini](media/environments/environments-view-all.png)
@@ -69,7 +69,7 @@ Her iki durumda da **Python Ortamları penceresi,** **Çözüm Gezgini:**
 ![Python Ortamları penceresi](media/environments/environments-default-view-2019.png)
 ::: moniker-end
 
-Visual Studio kayıt defterini [(PEP 514'ü](https://www.python.org/dev/peps/pep-0514/)takip eder) ve sanal ortamlar ve conda ortamlarını (bkz. Ortam türleri) kullanarak yüklü genel [ortamların yanı](#types-of-environments)sıra, Beklenen bir ortamı listede görmüyorsanız bkz. Mevcut [ortamı el ile tanımlama.](#manually-identify-an-existing-environment)
+Visual Studio, sanal ortamlar ve conda ortamları (bkz. Ortam türleri) ile birlikte kayıt defterini kullanarak [(PEP 514'ü](https://www.python.org/dev/peps/pep-0514/)takip eder) yüklü genel [ortamları da bulun.](#types-of-environments) Beklenen bir ortamı listede görmüyorsanız bkz. Mevcut [ortamı el ile tanımlama.](#manually-identify-an-existing-environment)
 
 Listeden bir ortam seçerek Visual Studio genel bakış sekmesinde bu ortam için çeşitli özellikler ve **komutlar** görüntülenir. Örneğin yukarıdaki görüntüde yorumlayıcının konumunun *C:\Python36-32 olduğunu görebilirsiniz.* Genel Bakış sekmesinin alt kısmında yer **alan dört komutun** her biri yorumlayıcı çalıştırarak bir komut istemi açar. Daha fazla bilgi için [bkz. Python Ortamları pencere sekmesi başvurusu - Genel Bakış.](python-environments-window-tab-reference.md#overview-tab)
 
@@ -94,7 +94,7 @@ Listelenen her ortamın sağ tarafından, bu ortam için etkileşimli bir **penc
 ::: moniker-end
 
 > [!Note]
-> Bu Visual Studio system-site-packages seçeneğine uygun olsa da, bunu sistem içinde değiştirmek için bir yol Visual Studio.
+> Bu Visual Studio system-site-packages seçeneğine uygun olsa da, bunu sistem içinde değiştirmek için bir Visual Studio.
 
 ### <a name="what-if-no-environments-appear"></a>Ortam görünmüyorsa ne olur?
 
@@ -103,9 +103,9 @@ Ortam görünmüyorsa, bu Visual Studio konumlarda herhangi bir Python yüklemes
 Bilgisayarınızda Python yorumlayıcınız olduğunu biliyorsanız ancak Visual Studio (herhangi bir sürüm) algılamadıysanız, **+ Özel** komutunu kullanarak konumunu el ile belirtin. Var olan bir ortamı el [ile tanımlama bölümüne bakın.](#manually-identify-an-existing-environment)
 
 > [!Tip]
-> Visual Studio, python 2.7.11'den 2.7.14'e yükseltme gibi mevcut yorumlayıcı güncelleştirmelerini python.org. Yükleme işlemi sırasında, eski ortam güncelleştirme yerinde olmadan önce **Python** Ortamları listesinden kaybolur.
+> Visual Studio, Python 2.7.11'den 2.7.14 sürümüne yükseltme gibi mevcut yorumlayıcı güncelleştirmelerini python.org. Yükleme işlemi sırasında, eski ortam güncelleştirme yerinde olmadan önce **Python** Ortamları listesinden kaybolur.
 >
-> Ancak, dosya sistemini kullanarak bir yorumlayıcıyı ve ortamını el ile Visual Studio yeni konumu bilmiyor olursanız. Daha fazla bilgi için [bkz. Yorumlayıcıyı taşıma.](installing-python-interpreters.md#move-an-interpreter)
+> Ancak, dosya sistemini kullanarak bir yorumlayıcıyı ve ortamını el ile Visual Studio konum hakkında bilginiz olmayacaktır. Daha fazla bilgi için [bkz. Yorumlayıcıyı taşıma.](installing-python-interpreters.md#move-an-interpreter)
 
 ### <a name="types-of-environments"></a>Ortam türleri
 
@@ -123,15 +123,15 @@ Küresel bir ortamda çalışmak, çalışmaya başlamanın kolay bir yolu olsa 
 
 Bu nedenle geliştiriciler genellikle bir proje için *sanal ortam* oluşturabilir. Sanal ortam, projesinde belirli bir yorumlayıcının kopyasını içeren bir alt klasördir. Sanal ortamı etkinleştirerek, yüklemiş olduğunuz tüm paketler yalnızca o ortamın alt klasörüne yüklenir. Ardından bu ortamda bir Python programı çalıştırsanız, yalnızca bu belirli paketlere karşı çalıştırılı olduğunu bilirsiniz.
 
-Visual Studio proje için sanal ortam oluşturmaya yönelik doğrudan destek sağlar. Örneğin, *requirements.txt* içeren bir proje açar veya bu dosyayı içeren bir şablondan proje oluşturursanız, Visual Studio otomatik olarak bir sanal ortam oluşturmanızı ve bu bağımlılıkları yüklemeni ister.
+Visual Studio proje için sanal ortam oluşturmaya yönelik doğrudan destek sağlar. Örneğin, *requirements.txt* içeren bir proje açarsanız veya bu dosyayı içeren bir şablondan proje oluşturursanız, Visual Studio otomatik olarak bir sanal ortam oluşturmanızı ve bu bağımlılıkları yüklemeniz istenir.
 
-Açık bir proje içinde herhangi bir zamanda yeni bir sanal ortam oluşturabilirsiniz. Bu **Çözüm Gezgini** proje düğümünü genişletin, Python Ortamları'ne sağ **tıklayın** ve "Sanal Ortam Ekle"yi seçin. Daha fazla bilgi için [bkz. Sanal ortam oluşturma.](./selecting-a-python-environment-for-a-project.md?view=vs-2019&preserve-view=true#create-a-virtual-environment-1)
+Açık bir proje içinde herhangi bir zamanda yeni bir sanal ortam oluşturabilirsiniz. Bu **Çözüm Gezgini** proje düğümünü genişletin, Python Ortamları'ne **sağ tıklayın** ve "Sanal Ortam Ekle"yi seçin. Daha fazla bilgi için [bkz. Sanal ortam oluşturma.](./selecting-a-python-environment-for-a-project.md?view=vs-2019&preserve-view=true#create-a-virtual-environment-1)
 
 Visual Studio sanal ortamdan bir *requirements.txt* dosyası oluşturmak için bir komut da sağlar, bu da ortamı diğer bilgisayarlarda yeniden oluşturmayı kolaylaştırır. Daha fazla bilgi için [bkz. Sanal ortamları kullanma.](selecting-a-python-environment-for-a-project.md#use-virtual-environments)
 
 #### <a name="conda-environments"></a>Conda ortamları
 
-Conda ortamı, araç kullanılarak veya `conda` 2017 sürüm 15.7 ve Visual Studio tümleşik conda yönetimiyle oluşturulur. (Anaconda veya Miniconda gerektirir, bu yükleyici aracılığıyla Visual Studio, bkz. [Yükleme.)](installing-python-support-in-visual-studio.md#visual-studio-2019-and-visual-studio-2017)
+Conda ortamı, araç kullanılarak veya `conda` 2017 sürüm 15.7 ve Visual Studio tümleşik conda yönetimi ile oluşturulur. (Anaconda veya Miniconda gerektirir, bu yükleyici aracılığıyla Visual Studio, bkz. [Yükleme.)](installing-python-support-in-visual-studio.md#visual-studio-2019-and-visual-studio-2017)
 
 ::: moniker range="vs-2017"
 
@@ -145,7 +145,7 @@ Conda ortamı, araç kullanılarak veya `conda` 2017 sürüm 15.7 ve Visual Stud
 
     ![Conda ortamının başarıyla oluşturulması](media/environments/environments-conda-2.png)
 
-1. Bu Visual Studio proje için bir ortam seçin konusunda açıklandığı gibi bir proje için conda ortamını etkinleştirerek diğer tüm [ortamlar gibi etkinleştirebileceksiniz.](selecting-a-python-environment-for-a-project.md)
+1. Bu Visual Studio proje için Bir ortam seçin konusunda açıklandığı gibi bir proje için conda [ortamını etkinleştirebileceksiniz.](selecting-a-python-environment-for-a-project.md)
 
 1. Ortama paket yüklemek için Paketler sekmesini [kullanın.](python-environments-window-tab-reference.md#packages-tab)
 ::: moniker-end
@@ -160,37 +160,37 @@ Conda ortamı, araç kullanılarak veya `conda` 2017 sürüm 15.7 ve Visual Stud
 
     | Alan | Açıklama |
     | --- | --- |
-    | Project | ortamın oluşturulacağı proje (aynı Visual Studio çözümünde birden çok projeniz varsa). |
+    | Project | Ortamın oluşturulacak proje (aynı çözümde birden fazla projeniz Visual Studio. |
     | Name | Conda ortamının adı. |
-    | Paket ekle | Bağımlılıklarınızı tanımlayan bir *Environment. yıml* dosyanız varsa **ortam dosyası** ' nı seçin veya **bir veya daha fazla Anaconda paketi adı** seçin ve en az bir Python paketi veya aşağıdaki alanda bir Python sürümü listeleyin. Paket listesi, Conda 'ın Python ortamı oluşturmasını söyler. Python 'un en son sürümünü yüklemek için; kullanın `python` ; belirli bir sürümü yüklemek için `python=,major>.<minor>` içinde olarak kullanın `python=3.7` . Ayrıca, bir dizi menüden Python sürümlerini ve ortak paketleri seçmek için paket düğmesini de kullanabilirsiniz. |
-    | Geçerli ortam olarak ayarla | Ortam oluşturulduktan sonra seçili projede yeni ortamı etkinleştirir. |
-    | Yeni projeler için varsayılan ortam olarak ayarla | , Visual Studio ' de oluşturulan tüm yeni projelerde Conda ortamını otomatik olarak ayarlar ve etkinleştirir. Bu seçenek, **Python ortamları** penceresinde **yeni projeler için bu varsayılan ortamı yap** ' ın kullanılmasıyla aynıdır. |
-    | Python ortamları penceresinde görüntüle | Ortamı oluşturduktan sonra  **Python ortamları** penceresinin gösterilip gösterilmeyeceğini belirtir. |
+    | 'den paket ekleme | Bağımlılıklarınızı **açıklayan** bir *environment.yml* dosyanız varsa Ortam dosyası'yı seçin veya Bir veya daha fazla **Anaconda** paket adı'ı seçin ve aşağıdaki alanda en az bir Python paketi veya Python sürümü listelenin. Paket listesi conda'ya bir Python ortamı oluşturma talimatı sağlar. Python'ın en son sürümünü yüklemek için `python` kullanın; belirli bir sürümü yüklemek için içinde `python=,major>.<minor>` olduğu gibi `python=3.7` kullanın. Bir menü dizisinde Python sürümlerini ve ortak paketleri seçmek için paket düğmesini de kullanabilirsiniz. |
+    | Geçerli ortam olarak ayarlayın | Ortam oluşturulduktan sonra seçili projede yeni ortamı etkinleştirir. |
+    | Yeni projeler için varsayılan ortam olarak ayarlayın | Conda ortamını, Visual Studio'da oluşturulan tüm yeni projelerde otomatik olarak ayarlar ve Visual Studio. Bu seçenek, Python Ortamları **penceresindeki Yeni projeler için bunu varsayılan ortam yapma** seçeneğinin **kullanımıyla aynıdır.** |
+    | Python Ortamlarında Görüntüle penceresi | Ortamı oluşturdukktan sonra Python Ortamları  **penceresinin** gösterip göstermey kararını belirtir. |
 
     > [!Important]
-    > Bir Conda ortamı oluştururken, ya da paket listesini kullanarak en az bir Python sürümü veya Python paketi belirttiğinizden emin olun `environments.yml` . Bu, ortamın bir Python çalışma zamanı içerdiğinden emin olmanızı sağlar. aksi takdirde, Visual Studio ortamı yoksayar: ortam, **Python ortamları** penceresinde hiçbir yerde görünmez, bir proje için geçerli ortam olarak ayarlanmamış ve genel bir ortam olarak kullanılamıyor.
+    > Conda ortamı oluştururken, ortamın bir Python çalışma zamanı içerdiğini sağlayan veya paket listesini kullanarak en az bir Python sürümü veya Python paketi `environments.yml` belirttiğinizden emin olun. Aksi Visual Studio yoksayıyorsa: ortam **Python** Ortamları penceresinin herhangi bir yerinde görünmez, projenin geçerli ortamı olarak ayarlanmıyor ve genel bir ortam olarak kullanılamaz.
     >
-    > Python sürümü olmadan bir Conda ortamı oluşturursanız, `conda info` Conda ortam klasörlerinin konumlarını görmek için komutunu kullanın, ardından ortamın alt klasörünü bu konumdan el ile kaldırın.
+    > Python sürümü olmayan bir conda ortamı oluşturursanız, conda ortam klasörlerinin konumlarını görmek için komutunu kullanın ve ardından ortamın alt klasörünü bu konumdan el `conda info` ile kaldırın.
 
-1. **Oluştur**' u seçin ve **Çıkış** penceresinde ilerlemeyi gözlemleyin. Çıktı, oluşturma işlemi tamamlandıktan sonra birkaç CLı yönergesi içerir:
+1. **Oluştur'a** tıklayın ve Çıkış penceresinde **ilerlemeyi gözlemle.** Çıkış, oluşturma işlemi tamamlandıktan sonra birkaç CLI yönergeleri içerir:
 
     ![Conda ortamının başarıyla oluşturulması](media/environments/environments-conda-2-2019.png)
 
-1. Visual Studio içinde, proje için bir [ortam seçin](selecting-a-python-environment-for-a-project.md)bölümünde açıklandığı gibi bir proje için conda ortamını etkinleştirebilirsiniz.
+1. Bu Visual Studio proje için bir ortam seçin konusunda açıklandığı gibi bir proje için conda [ortamını etkinleştirebileceksiniz.](selecting-a-python-environment-for-a-project.md)
 
-1. Ortama ek paketler yüklemek için [paketler sekmesini](python-environments-window-tab-reference.md#packages-tab)kullanın.
+1. Ortama ek paketler yüklemek için Paketler sekmesini [kullanın.](python-environments-window-tab-reference.md#packages-tab)
 ::: moniker-end
 
 > [!Note]
-> Conda ortamlarındaki en iyi sonuçları elde etmek için Conda 4.4.8 veya üstünü kullanın (Conda sürümleri, Anaconda sürümlerinden farklıdır). Visual Studio yükleyicisi aracılığıyla miniconda (Visual Studio 2019) ve anaconda (Visual Studio 2017) için uygun sürümleri yükleyebilirsiniz.
+> Conda ortamlarında en iyi sonuçları elde etmek için conda 4.4.8 veya sonraki sürümleri kullanın (conda sürümleri Anaconda sürümlerinden farklıdır). Miniconda (Visual Studio 2019) ve Anaconda 'nın (Visual Studio 2017) uygun sürümlerini Visual Studio yükleyebilirsiniz.
 
-Conda ortamlarının depolandığı Conda sürümünü ve diğer bilgileri görmek için, `conda info` bir Anaconda komut isteminde (Anaconda 'nın yolda bulunduğu bir komut istemi) çalıştırın:
+Conda ortamlarının depolandığı conda sürümünü ve diğer bilgileri görmek için anaconda komut isteminde (anaconda'nın yolda olduğu bir komut istemi) `conda info` komutunu çalıştırın:
 
 ```cli
 conda info
 ```
 
-Conda ortam klasörleriniz şu şekilde görünür:
+Conda ortam klasörleriniz aşağıdaki gibi görünür:
 
 ```output
        envs directories : C:\Users\user\.conda\envs
@@ -198,85 +198,85 @@ Conda ortam klasörleriniz şu şekilde görünür:
                           C:\Users\user\AppData\Local\conda\conda\envs
 ```
 
-Conda ortamları bir proje ile depolanmadığından, küresel ortamlara benzer şekilde davranır. Örneğin, bir Conda ortamına yeni bir paket yüklemek, bu paketin bu ortamı kullanan tüm projeler tarafından kullanılabilmesini sağlar.
+Conda ortamları bir projeyle depolanmaz, genel ortamlara benzer şekilde davranır. Örneğin, conda ortamına yeni bir paket yüklemek, bu paketi bu ortamı kullanan tüm projelerin kullanımına sunar.
 
-Visual Studio 2017 sürüm 15,6 ve önceki sürümlerde, [var olan bir ortamı el ile tanımlamak](#manually-identify-an-existing-environment)altında açıklandığı gibi, conda ortamlarını el ile işaret ederek kullanabilirsiniz.
+2017 Visual Studio 15.6 ve önceki sürümler için conda ortamlarını, mevcut ortamı el ile tanımlama altında açıklandığı gibi el ile işaret [edersiniz.](#manually-identify-an-existing-environment)
 
-Visual Studio 2017 sürüm 15,7 ve üzeri, conda ortamlarını otomatik olarak algılar ve bu ortamları bir sonraki bölümde açıklandığı gibi **Python ortamları** penceresinde görüntüler.
+Visual Studio 2017 sürüm 15.7 ve sonraki sürümler conda ortamlarını otomatik olarak algılar ve sonraki bölümde açıklandığı gibi **Python** Ortamları penceresinde görüntüler.
 
-## <a name="manually-identify-an-existing-environment"></a>Mevcut bir ortamı el ile tanımla
+## <a name="manually-identify-an-existing-environment"></a>Mevcut ortamı el ile tanımlama
 
-standart olmayan bir konumda yüklü olan bir ortamı (Visual Studio 2017 sürüm 15,6 ve önceki sürümlerde bulunan conda dahil olmak üzere) tanımlamak için aşağıdaki adımları kullanın:
+Standart olmayan bir konuma (Visual Studio 2017 sürüm 15.6 ve önceki sürümlerde conda ortamları dahil) yüklenmiş bir ortamı belirlemek için aşağıdaki adımları kullanın:
 
 ::: moniker range="vs-2017"
 
-1. **Yapılandırma** sekmesini açan **Python ortamları** penceresinde **+ özel** ' i seçin:
+1. Python Ortamları penceresinde Yapılandır **sekmesini açan** **+** **Özel'i** seçin:
 
     ![Yeni bir özel ortam için varsayılan görünüm](media/environments/environments-custom-1.png)
 
-1. **Açıklama** alanına ortam için bir ad girin.
+1. Açıklama alanına ortam için bir **ad** girin.
 
-1. **Önek yolu** alanındaki yorumlayıcı yolunun yolunu ( **.**..) girin veya buraya gidin.
+1. Ön ek yolu alanında yorumlayıcının yoluna gidin  **(...** kullanarak).
 
-1. Visual Studio bu konumda bir Python yorumlayıcı algılarsa (bir conda ortamı için aşağıda gösterilen yol gibi), **otomatik algıla** komutu etkinleştirilir. **Otomatik algılamayı** seçmek kalan alanları tamamlar. Ayrıca, bu alanları el ile de tamamlayabilirsiniz.
+1. Bu Visual Studio bir Python yorumlayıcı (conda ortamı için aşağıda gösterilen yol gibi) algılarsa, Otomatik Algıla **komutunu** sağlar. Otomatik **Algıla seçeneği,** kalan alanları tamamlar. Ayrıca bu alanları el ile de tamamabilirsiniz.
 
-    ![Auto Detect komutunu etkinleştirme](media/environments/environments-custom-2.png)
+    ![Otomatik Algıla komutunu etkinleştirme](media/environments/environments-custom-2.png)
 
-    ![Otomatik Algıla kullanıldıktan sonra ortam alanlarını tamamlama](media/environments/environments-custom-3.png)
+    ![Otomatik Algılama'nın kullanımından sonra ortam alanlarının tamamlanması](media/environments/environments-custom-3.png)
 
-1. Alanlar istediğiniz değerleri içeriyorsa, yapılandırmayı kaydetmek için **Uygula** ' yı seçin. Artık Visual Studio içindeki diğer gibi ortamı kullanabilirsiniz.
+1. Alanlar istediğiniz değerleri içerdiği zaman, yapılandırmayı kaydetmek **için Uygula'ya** tıklayın. Artık ortamı, ortam içindeki diğer tüm ortamlar gibi Visual Studio.
 
-1. El ile tanımlanmış bir ortamı kaldırmanız gerekiyorsa, **Yapılandır** sekmesinde **Kaldır** komutunu seçin. Otomatik algılanan ortamlar bu seçeneği sağlamaz. Daha fazla bilgi için bkz. [Configure Tab](python-environments-window-tab-reference.md#configure-tab).
+1. El ile tanımlanan bir ortamı kaldırmanız gerekirse Yapılandır **sekmesinde Kaldır** **komutunu** seçin. Otomatik olarak algılanan ortamlar bu seçeneği sağlamaz. Daha fazla bilgi için [bkz. Yapılandırma sekmesi.](python-environments-window-tab-reference.md#configure-tab)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. **Python ortamları** penceresinde (veya Python araç çubuğundan) ortam **Ekle Iletişim kutusunu** açan **ortam ekle...** seçeneğini belirleyin. Bu iletişim kutusunda, **var olan ortam** sekmesini seçin:
+1. Ortam Ekle iletişim kutusunu açan **Python Ortamları** penceresinde (veya Python araç çubuğundan) Ortam **Ekle...** **öğesini** seçin. Bu iletişim kutusunda Mevcut ortam **sekmesini** seçin:
 
-    ![Ortam Ekle iletişim kutusunda var olan ortam sekmesi](media/environments/environments-custom-1-2019.png)
+    ![Ortam ekle iletişim kutusundaki mevcut ortam sekmesi](media/environments/environments-custom-1-2019.png)
 
-1. **Ortam** açılan öğesini seçin ve ardından **özel**' i seçin:
+1. Ortam **açılan öğesini** ve ardından Özel'i **seçin:**
 
-    ![Ortam Ekle iletişim kutusunda özel ortam seçeneği](media/environments/environments-custom-2-2019.png)
+    ![Ortam ekle iletişim kutusundaki özel ortam seçeneği](media/environments/environments-custom-2-2019.png)
 
-1. İletişim kutusundaki belirtilen alanlarda, diğer alanların çoğunu dolduran **ön ek yolu** altındaki yorumlayıcı yoluna ( **.**..) girin veya bu yolu inceleyin. Bu değerleri inceledikten ve gerektiğinde değiştirdikten sonra **Ekle**' yi seçin.
+1. İletişim kutusundaki sağlanan alanlara, diğer alanların çoğunu dolduran Ön Ek yolu altındaki yorumlayıcının yoluna **(kullanarak )** gidin veya gözatın. Bu değerleri gözden geçirdikten ve gerektiğinde değiştirdikten sonra Ekle'yi **seçin.**
 
-    ![Ortam Ekle iletişim kutusunda özel ortam seçeneğinin ayrıntılarını belirtme alanları](media/environments/environments-custom-3-2019.png)
+    ![Ortam ekle iletişim kutusundaki özel ortam seçeneğinin ayrıntılarını belirten alanlar](media/environments/environments-custom-3-2019.png)
 
-1. Ortam ayrıntıları, **Python ortamları** penceresinde herhangi bir zamanda incelenebilir ve değiştirilebilir. Bu pencerede, ortamı seçin ve ardından **Yapılandır** sekmesini seçin. Değişiklik yaptıktan sonra **Uygula** komutunu seçin. Ayrıca **Remove** komutunu kullanarak ortamı kaldırabilirsiniz (otomatik algılanan ortamlar için kullanılamaz). Daha fazla bilgi için bkz. [Configure Tab](python-environments-window-tab-reference.md#configure-tab).
+1. Python Ortamları penceresinde ortamın ayrıntıları herhangi bir zamanda gözden **geçirilsin ve değiştirilebilir.** Bu pencerede ortamı ve ardından Yapılandır **sekmesini** seçin. Değişiklik yaptıktan sonra Uygula **komutunu** seçin. Kaldır komutunu kullanarak da ortamı **kaldırabilirsiniz** (otomatik olarak algılanan ortamlar için kullanılamaz). Daha fazla bilgi için [bkz. Yapılandırma sekmesi.](python-environments-window-tab-reference.md#configure-tab)
 ::: moniker-end
 
-## <a name="fix-or-delete-invalid-environments"></a>Geçersiz ortamları çözme veya silme
+## <a name="fix-or-delete-invalid-environments"></a>Geçersiz ortamları düzeltme veya silme
 
-Visual Studio bir ortamın kayıt defteri girişlerini bulursa, ancak yorumlayıcı yolu geçersizse, **Python ortamları** penceresi adı bir üstü çizili yazı tipiyle gösterir:
+Bir Visual Studio kayıt defteri girdilerini bulan ancak yorumlayıcının yolu geçersizse **Python Ortamları** penceresinde adı bir yazı tipiyle birlikte gösterir:
 
 ::: moniker range="vs-2017"
-![Geçersiz bir ortamı gösteren Python ortamları penceresi](media/environments/environments-invalid-entry.png)
+![Geçersiz bir ortamı gösteren Python Ortamları penceresi](media/environments/environments-invalid-entry.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-![Geçersiz bir ortamı gösteren Python ortamları penceresi](media/environments/environments-invalid-entry-2019.png)
+![Geçersiz bir ortamı gösteren Python Ortamları penceresi](media/environments/environments-invalid-entry-2019.png)
 ::: moniker-end
 
-Tutmak istediğiniz bir ortamı düzeltmek için öncelikle yükleyicinin **onarma** işlemini kullanmayı deneyin. Standart Python 3. x yükleyicileri, örneğin, bu seçeneği içerir.
+Tutmak istediğiniz bir ortamı düzeltmek için önce yükleyicinin Onarım işlemini **kullanmayı** deneyin. Örneğin, standart Python 3.x yükleyicileri bu seçeneği içerir.
 
-Onarma seçeneği olmayan bir ortamı düzeltmek veya geçersiz bir ortamı kaldırmak için, kayıt defterini doğrudan değiştirmek için aşağıdaki adımları kullanın. Visual Studio, kayıt defterinde değişiklik yaptığınızda **Python ortamları** penceresini otomatik olarak güncelleştirir.
+Onarım seçeneği olmayan bir ortamı düzeltmek veya geçersiz bir ortamı kaldırmak için aşağıdaki adımları kullanarak kayıt defterini doğrudan değiştirebilirsiniz. Visual Studio değişiklik yaptığınız **zaman Python Ortamları** penceresini otomatik olarak güncelleştirmeniz gerekir.
 
-1. *regedit.exe* çalıştırın.
-1. **HKEY_LOCAL_MACHINE\SOFTWARE\Python** veya **HKEY_CURRENT_USER\SOFTWARE\Python** gidin. IronPython için, bunun yerine **IronPython** öğesini arayın.
-1. Anaconda için, Cpyıthon veya **Continuumanalytics** Için **Python Core** gibi dağıtımla eşleşen düğümü genişletin. IronPython için sürüm numarası düğümünü genişletin.
-1. **InstallPath** düğümünün altındaki değerleri inceleyin:
+1. *regedit.exe.*
+1. HKEY_LOCAL_MACHINE\SOFTWARE\Python **veya** **HKEY_CURRENT_USER\SOFTWARE\Python.** IronPython için bunun yerine **IronPython'a** bakın.
+1. Dağıtımla eşleşen düğümü genişletin; örneğin CPython için **Python Core** veya Anaconda için **ContinuumAnalytics.** IronPython için sürüm numarası düğümünü genişletin.
+1. InstallPath düğümü altındaki **değerleri inceleme:**
 
-    ![Tipik bir Cpne Thon yüklemesi için kayıt defteri girişleri](media/environments/environments-registry-entries.png)
+    ![Tipik bir CPython yüklemesi için kayıt defteri girdileri](media/environments/environments-registry-entries.png)
 
-    - Ortam bilgisayarınızda hala mevcutsa, **ExecutablePath** değerini doğru konum olarak değiştirin. Ayrıca, **(varsayılan)** ve **WindowedExecutablePath** değerlerini gereken şekilde düzeltin.
-    - Ortam bilgisayarınızda artık yoksa ve **Python ortamları** penceresinden kaldırmak istiyorsanız, yukarıdaki görüntüde **3,6** gibi **InstallPath**'in üst düğümünü silin.
-    - **HKEY_CURRENT_USER\SOFTWARE\Python** geçersiz ayarlar **HKEY_LOCAL_MACHINE\SOFTWARE\Python** ayarları geçersiz kılar
+    - Ortam bilgisayarınızda hala mevcutsa **ExecutablePath** değerini doğru konumla değiştirebilirsiniz. Ayrıca **(Varsayılan) ve** **WindowedExecutablePath değerlerini de** gereken şekilde düzeltin.
+    - Ortam artık bilgisayarınızda yoksa ve **bunu Python** Ortamları penceresinden kaldırmak için yukarıdaki görüntüde yer alan **3.6** gibi **InstallPath** üst düğümünü silin.
+    - Uygulama içinde geçersiz **HKEY_CURRENT_USER\SOFTWARE\Python** ayarları geçersiz **kılacakHKEY_LOCAL_MACHINE\SOFTWARE\Python**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Python yorumlayıcılarını yükleme](installing-python-interpreters.md)
 - [Proje için yorumlayıcıyı seçme](selecting-a-python-environment-for-a-project.md)
-- [Bağımlılıklar için requirements.txt kullanma](managing-required-packages-with-requirements-txt.md)
+- [Bağımlılıklar requirements.txt kullanım](managing-required-packages-with-requirements-txt.md)
 - [Arama yolları](search-paths.md)
-- [Python ortamları penceresi başvurusu](python-environments-window-tab-reference.md)
+- [Python Ortamları pencere başvurusu](python-environments-window-tab-reference.md)

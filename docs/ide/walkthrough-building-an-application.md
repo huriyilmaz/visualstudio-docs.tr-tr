@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 24a1e3ffeab11b8e1fd88800e854febe10d93da6ce6c30ce55512fddb3efaff0
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f7fe40f78b8a8447c1ae784e33a25e905e368118
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121371546"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635937"
 ---
 # <a name="walkthrough-build-an-application"></a>İzlenecek yol: Uygulama oluşturma
 
@@ -183,48 +183,48 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 1. **Platform** listesinde, **x86**' yı seçin.
 
-1. **Yapı çıkış yolu** kutusunda bir ağ yolu belirtin.
+1. Derleme **çıkış yolu kutusunda** bir ağ yolu belirtin.
 
-     Örneğin, belirtebilirsiniz `\\myserver\builds` .
+     Örneğin, `\\myserver\builds` belirtesiniz.
 
     > [!IMPORTANT]
-    > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
+    > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmadığını belirten bir ileti kutusu görünebilir. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
 
 1. Uygulamayı derleyin.
 
-     ![Build menüsünde çözüm komutu oluştur](../ide/media/exploreide-buildsolution.png)
+     ![Derleme menüsünde Çözümü Derleme komutu](../ide/media/exploreide-buildsolution.png)
 
-### <a name="specify-a-release-build-for-c"></a>C için bir yayın derlemesi belirtin\#
+### <a name="specify-a-release-build-for-c"></a>C için yayın derlemesi belirtme\#
 
-1. **Project tasarımcısını** açın.
+1. Project **Designer'Project açın.**
 
-     ![Görünüm menüsü, özellik sayfaları komutu](../ide/media/buildwalk_viewpropertypages.png)
+     ![Görünüm menüsü, Özellik Sayfaları komutu](../ide/media/buildwalk_viewpropertypages.png)
 
-1. **Yapı** sayfasını seçin.
+1. Derleme **sayfasını** seçin.
 
-1. **Yapılandırma** listesinde **yayın**' ı seçin.
+1. Yapılandırma listesinde **Yayın'ı** **seçin.**
 
-1. **Platform** listesinde, **x86**' yı seçin.
+1. Platform **listesinde** **x86'yi seçin.**
 
-1. **Çıkış yolu** kutusunda bir ağ yolu belirtin.
+1. Çıkış **yolu kutusunda** bir ağ yolu belirtin.
 
-     Örneğin, belirtebilirsiniz `\\myserver\builds` .
+     Örneğin, `\\myserver\builds` belirtesiniz.
 
     > [!IMPORTANT]
-    > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
+    > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmadığını belirten bir ileti kutusu görünebilir. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
 
-1. **Standart araç çubuğunda** çözüm konfigürasyonlarını **Sürüm** ve çözüm platformlarını **x86** olarak ayarlayın.
+1. Standart araç **çubuğunda Çözüm** Yapılandırmaları'nın Yayın ve **Çözüm** Platformları'nın **x86 olarak ayarlayın.**
 
 1. Uygulamayı derleyin.
 
-     ![Build menüsünde çözüm komutu oluştur](../ide/media/exploreide-buildsolution.png)
+     ![Derleme menüsünde Çözümü Derleme komutu](../ide/media/exploreide-buildsolution.png)
 
-   Yürütülebilir dosya, belirttiğiniz ağ yoluna kopyalanır. Yolu şöyle olur `\\myserver\builds\\FileName.exe` .
+   Yürütülebilir dosya, belirttiğiniz ağ yoluna kopyalanır. Yolu `\\myserver\builds\\FileName.exe` olur.
 
-Tebrikler! Bu yönergeyi başarıyla tamamladınız.
+Tebrikler! Bu izlenecek yolu başarıyla tamamladın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: proje derleme (C++)](/cpp/ide/walkthrough-building-a-project-cpp)
-- [ASP.NET web uygulaması projesi ön derlemesine genel bakış](/previous-versions/aspnet/aa983464\(v\=vs.110\))
-- [İzlenecek yol: MSBuild kullanma](../msbuild/walkthrough-using-msbuild.md)
+- [Adım adım kılavuz: Proje derleme (C++)](/cpp/ide/walkthrough-building-a-project-cpp)
+- [ASP.NET web uygulaması proje ön derlemeye genel bakış](/previous-versions/aspnet/aa983464\(v\=vs.110\))
+- [Adım adım kılavuz: MSBuild](../msbuild/walkthrough-using-msbuild.md)

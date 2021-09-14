@@ -1,6 +1,6 @@
 ---
 title: Arama Menüsü Komutları | Microsoft Docs
-description: Belirli Visual Studio komutların yer alan Arama menüsünü gözden geçirebilirsiniz. Pencere/İşlem/İş Parçacığı/İleti Bul, Sonrakini Bul ve Öncekini Bul'ı kullanın.
+description: Belirli Visual Studio için arama komutları bulunan Arama menüsünü gözden geçirme. Pencere/İşlem/İş Parçacığı/İleti Bul, Sonrakini Bul ve Öncekini Bul'ı kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 256f506fa2355edcd93fce59c20a91995ddd0d18
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122030535"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636646"
 ---
 # <a name="search-menu-commands"></a>Arama Menü Komutları
 Ara **menüsü** belirli pencereleri aramak için komutlar sağlar.

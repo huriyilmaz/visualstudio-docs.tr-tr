@@ -22,11 +22,11 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: d65187b74dc17c9211a6b3ac8b750606c1c4ae3d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122136644"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625515"
 ---
 # <a name="signfile-task"></a>SignFile görevi
 
@@ -46,7 +46,7 @@ Belirtilen sertifikayı kullanarak belirtilen dosyayı imzalar.
 |`CertificateThumbprint`|Gerekli `String` parametre.<br /><br /> İmzalama için kullanmak üzere sertifikayı belirtir. Bu sertifika, geçerli kullanıcının kişisel mağazasında yer alalıdır.|
 |`SigningTarget`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Sertifikayla oturum açması gereken dosyaları, sertifika türü veya .exe .dll.|
 |`TimestampUrl`|İsteğe `String` bağlı parametre.<br /><br /> Zaman damgası sunucusunun URL'sini belirtir.|
-|`TargetFrameworkVersion`|Hedef için .NET Framework için kullanılan dosyanın sürümü.|
+|`TargetFrameworkVersion`|Hedef için .NET Framework dosyanın sürümü.|
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -54,7 +54,7 @@ Belirtilen sertifikayı kullanarak belirtilen dosyayı imzalar.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, öğe koleksiyonunda belirtilen dosyaları özelliği tarafından belirtilen sertifikayla `SignFile` `FilesToSign` imzalamak için görevini `CertificateThumbprint` kullanır.
+ Aşağıdaki örnek, öğe `SignFile` koleksiyonunda belirtilen dosyaları özelliği tarafından `FilesToSign` belirtilen sertifikayla imzalamak için görevini `CertificateThumbprint` kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -74,7 +74,7 @@ Belirtilen sertifikayı kullanarak belirtilen dosyayı imzalar.
 ```
 
 > [!NOTE]
-> Sertifika parmak izi, sertifikanın SHA-1 karmasıdır. Daha fazla bilgi için [bkz. Güvenilen kök CA sertifikasının SHA-1 karması alma.](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733076\(v\=ws.10\)) Sertifika ayrıntılarından parmak izini kopyalayıp yapıştırıyorsanız, sertifikayı bulmasını önleyen fazladan (3F) görünmez karakterini `SignFile` içermeyebilirsiniz.
+> Sertifika parmak izi, sertifikanın SHA-1 karmasıdır. Daha fazla bilgi için [bkz. Güvenilen kök CA sertifikasının SHA-1 karması alma.](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733076\(v\=ws.10\)) Sertifika ayrıntılarından parmak izini kopyalayıp yapıştırıyorsanız, sertifikayı bulmasını önleyen fazladan (3F) görünmez karakteri `SignFile` içermeyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

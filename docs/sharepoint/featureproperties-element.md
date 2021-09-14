@@ -1,6 +1,6 @@
 ---
-title: FeatureProperties öğesi | Microsoft Docs
-description: SharePoint proje öğesi şemasındaki bir öğe olan featureproperties öğesiyle ilgili başvuru bilgilerini görüntüleyin.
+title: FeatureProperties Öğesi | Microsoft Docs
+description: Proje öğesi şemasında yer alan bir öğe olan FeatureProperties öğesi SharePoint başvuru bilgilerini görüntüleme.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,14 +16,14 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: d3bfb1a8e53c72f4a3d70e69658d78f8c336e9cf
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122093248"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625250"
 ---
 # <a name="featureproperties-element"></a>FeatureProperties öğesi
-  SharePoint dağıtıldığında bir özelliğe dahil edilen özellik değerleri koleksiyonu. Bir özellik dağıtıldıktan sonra, kodunuzda özellik değerlerine erişebilirsiniz.
+  Bir Özellilik özelliğine dahil edilen özellik değerleri koleksiyonu, SharePoint. Bir Özellik dağıtıldıktan sonra, kodundaki özellik değerlerine erişebilirsiniz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,26 +43,26 @@ ms.locfileid: "122093248"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[FeatureProperty](../sharepoint/featureproperty-element.md)|İsteğe bağlı öğe.<br /><br /> Anahtar/değer biçiminde özel bir özelliği temsil eder.|
+|[FeatureProperty](../sharepoint/featureproperty-element.md)|İsteğe bağlı öğe.<br /><br /> Anahtar/değer biçimindeki özel bir özelliği temsil eder.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ProjectItem](../sharepoint/projectitem-element.md)|bir SharePoint proje öğesini temsil eder. Bu öğe, dosyanın gerekli kök öğesi `.spdata` .|
+|[ProjectItem](../sharepoint/projectitem-element.md)|Bir proje SharePoint temsil eder. Bu öğe, dosyanın gerekli kök `.spdata` öğesi.|
 
 ## <a name="remarks"></a>Açıklamalar
- Özellik özellikleri hakkında daha fazla bilgi için bkz. [Proje Öğelerinde Paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).
+ Özellik özellikleri hakkında daha fazla bilgi için [bkz. Proje öğelerinde paketleme ve dağıtım bilgileri sağlama.](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
 
 ## <a name="element-information"></a>Öğe bilgileri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
-|**Şema adı**|SharePoint Project öğesi şeması|
-|**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
-|**Boş olabilir**|Hayır|
+|**Ad Alanı**|http: \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Şema adı**|SharePoint Project Öğe Şeması|
+|**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)
-- [Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [SharePoint öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)
+- [Proje öğelerinde paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)

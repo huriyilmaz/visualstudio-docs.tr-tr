@@ -1,6 +1,6 @@
 ---
-title: CvWriteAlert Işlevi | Microsoft Docs
-description: CvWriteAlert (C Kitaplığı) Eşzamanlılık Görselleştiricisi SDK işlevine yönelik başvuru bilgilerine bakın.
+title: CvWriteAlert İşlev | Microsoft Docs
+description: Eşzamanlılık Görselleştiricisi SDK'sı işlevi CvWriteAlert (C kitaplığı) için başvuru bilgilerine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -22,14 +22,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 72c96c25f2103b2ded6bc4892a47cc618618d032
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122084512"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625431"
 ---
 # <a name="cvwritealert-function"></a>CvWriteAlert işlevi
-Eşzamanlılık görselleştiricisi izleme dosyasına bir uyarı yazar.
+Eşzamanlılık Görselleştiricisi izleme dosyasına bir uyarı yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -60,19 +60,19 @@ HRESULT CvWriteAlertVA(
 #### <a name="parameters"></a>Parametreler
  `argList` Bağımsız değişkenlerin listesi.
 
- `pMarkerSeries` Geçerli işaretleyici serisi bağlamı. NULL olamaz.
+ `pMarkerSeries` Geçerli işaretçi serisi bağlamı. NULL olamaz.
 
  `pMessage` İleti biçimi dizesi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
+ S_OK başarıyla yazıldığı zaman iletiyi görüntüler. Hata varsa hata kodu. Hata koşullarını kontrol etmek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvişaretleyiciler. h*
+ **Üst bilgi:** *cvmarkers.h*
 
  **Unicode:** CvWriteAlertW, CvWriteAlertVW
 
  **ANSI:** CvWriteAlertA, CvWriteAlertVA
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

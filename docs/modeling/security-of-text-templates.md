@@ -13,11 +13,11 @@ ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 ms.openlocfilehash: 376abb9674519cc87afdfd9af81bea4a6d495903
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122085539"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637465"
 ---
 # <a name="security-of-text-templates"></a>Metin Şablonlarının Güvenliği
 Metin şablonlarının güvenlikle ilgili sorunları vardır:
@@ -29,7 +29,7 @@ Metin şablonlarının güvenlikle ilgili sorunları vardır:
 ## <a name="arbitrary-code"></a>Rastgele Kod
  Şablon yazarak etiketlerin içine herhangi bir kod \<# #> koyabilirsiniz. Bu, bir metin şablonundan rastgele kodun yürütülltülür.
 
- Güvenilir kaynaklardan şablon edin edindiğinizden emin olun. Uygulamanın son kullanıcılarını güvenilir kaynaklardan gelen şablonları yürütmeleri konusunda uyarmamaya emin olun.
+ Güvenilir kaynaklardan şablon edin edindiğinizden emin olun. Uygulamanın son kullanıcılarını, güvenilir kaynaklardan gelen şablonları yürütmeleri konusunda uyarmamaya emin olun.
 
 ## <a name="malicious-directive-processor"></a>Kötü Amaçlı Yönerge İşlemcisi
  Metin şablonu altyapısı bir dönüştürme ana bilgisayarı ve bir veya daha fazla yönerge işlemcisi ile etkileşim kurarak şablon metnini bir çıkış dosyasına dönüştürmektedir. Daha fazla bilgi için [bkz. Metin Şablonu Dönüştürme İşlemleri.](../modeling/the-text-template-transformation-process.md)

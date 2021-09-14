@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl |: Görevler | Microsoft Docs'
-description: Bir görev hatası oluştuğunda derlemenin MSBuild veya devam edip etmemeyi denetlemeyi öğrenin.
+title: 'Nasıl |: Görev Görev | Microsoft Docs'
+description: Bir görev hatası oluştuğunda derlemenin MSBuild devam edip etmemeyi denetleme hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,15 +13,15 @@ ms.author: ghogen
 manager: jmartens
 ms.technology: msbuild
 ms.openlocfilehash: 1e63d6e35714947010243d06c2b0e8ba7e4237c5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122108752"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625706"
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>Nasıllı: Görevlerde hataları yoksayma
 
-Bazen bir derlemenin belirli görevlerde hatalara karşı karşı güçlü olması gerekir. Bu kritik olmayan görevler başarısız olursa, derlemenin yine de gerekli çıkışı üretmeye devam eder. Örneğin, bir proje her bileşen hazırlandıktan sonra e-posta iletisi göndermek için bir görev kullanıyorsa, posta sunucuları kullanılamasa ve durum iletileri gönderilemiyor olsa bile derlemenin tamamlanmasını kabul edilebilir olarak `SendMail` düşünebilirsiniz. Veya, örneğin, ara dosyalar genellikle derleme sırasında silinirse, bu dosyalar silinene kadar derlemenin tamamlanmasını kabul edilebilir olarak düşünebilirsiniz.
+Bazen bir derlemenin belirli görevlerde hatalara karşı karşı güçlü olması gerekir. Bu kritik olmayan görevler başarısız olursa, derlemenin yine de gerekli çıkışı üretmeye devam eder. Örneğin, bir proje her bileşen hazırlandıktan sonra e-posta iletisi göndermek için bir görev kullanıyorsa, posta sunucuları kullanılamasa ve durum iletileri gönderilemezse bile derlemenin tamamlanmasını kabul edilebilir olarak `SendMail` düşünebilirsiniz. Veya, örneğin, ara dosyalar genellikle derleme sırasında silinirse, bu dosyalar silinene kadar derlemenin tamamlanmasını kabul edilebilir olarak düşünebilirsiniz.
 
 ## <a name="use-the-continueonerror-attribute"></a>ContinueOnError özniteliğini kullanma
 
@@ -31,7 +31,7 @@ Bazen bir derlemenin belirli görevlerde hatalara karşı karşı güçlü olmas
 
 - **WarnAndContinue veya** **true**. Bir görev başarısız olduğunda, [Target](../msbuild/target-element-msbuild.md) öğesinde ve derlemede sonraki görevler yürütülebilir ve görevdeki tüm hatalar uyarı olarak kabul edilir.
 
-- **ErrorAndContinue**. Bir görev başarısız olduğunda, öğesinde ve derlemede sonraki görevler yürütülebilir ve görevdeki tüm `Target` hatalar hata olarak kabul edilir.
+- **ErrorAndContinue**. Bir görev başarısız olduğunda, öğesinde ve derlemede sonraki görevler yürütülebilir ve `Target` görevdeki tüm hatalar hata olarak kabul edilir.
 
 - **ErrorAndStop** veya **false** (varsayılan). Bir görev başarısız olduğunda, öğesinde ve derlemede kalan görevler yürütülmez ve tüm öğe ile `Target` `Target` derlemenin başarısız olduğu kabul edilir.
 

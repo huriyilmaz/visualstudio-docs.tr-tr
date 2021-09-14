@@ -17,14 +17,14 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: c65edab726fb0def889364f37f2eed41778bcfe6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122084239"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636849"
 ---
 # <a name="how-to-localize-code"></a>Nasıl olur: Kodu yerelleştirme
-  Yerel olmayan kod sabit kodlu dize değerlerini kullanır. Kod dizelerini yerelleştirmek için, yerelleştirilmiş kaynaklara <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> başvurulan bir yöntem olan çağrısıyla değiştirin.
+  Yerelleştirilmiş olmayan kod, sabit kodlu dize değerleri kullanır. Kod dizelerini yerelleştirmek için, yerelleştirilmiş kaynaklara <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> başvurulan bir yöntem olan çağrısıyla değiştirin.
 
 ## <a name="localize-code"></a>Kodu yerelleştirme
 
@@ -39,7 +39,7 @@ ms.locfileid: "122084239"
 
 2. Varsayılan dil kaynak dosyasına, *MyAppResources.resx* gibi *bir .resx* uzantısıyla birlikte istediğiniz adı girin.
 
-3. 1. ve 2. adımları tekrarlayın ve her yerelleştirilmiş dil için bir tane olmak SharePoint proje öğesine ayrı kaynak dosyaları ekleyin.
+3. Her yerelleştirilmiş dil için bir tane olmak kaydıyla, 1. ve 2. adımları SharePoint proje öğesine ayrı kaynak dosyaları ekleyin.
 
      Yerelleştirilmiş her kaynak dosyası için aynı temel adı kullanın, ancak kültür kimliğini ekleyin. Örneğin, Almanca yerelleştirilmiş bir kaynağı *MyAppResources.de-DE.resx olarak anın.*
 
@@ -55,11 +55,11 @@ ms.locfileid: "122084239"
 
 8. Paket **Tasarımcısı'nda** Gelişmiş **sekmesini** seçin ve ardından uydu derlemesini ekleyin.
 
-9. Konum **kutusunda,** *\\ \<Project Item Name> de-DE* gibi bir kültür kimliği klasörünü Konum yoluna.resources.dll.
+9. Konum **kutusunda,** Konum yoluna *de-DE \\ \<Project Item Name> .resources.dllgibi* bir kültür kimliği resources.dll.
 
 10. Çözümünüz System.Web derlemesine henüz başvurmsa, buna bir başvuru ekleyin ve kodunıza bir yönerge <xref:System.Web> ekleyin.
 
-11. Kodunuz içinde kullanıcı arabirimi metni, hatalar ve ileti metni gibi kullanıcılara görünür olan tüm sabit kodlanmış dizeleri bulun. Aşağıdaki sözdizimini kullanarak bunları <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> yöntemine yapılan bir çağrıyla değiştirin:
+11. Kodunda kullanıcı arabirimi metni, hatalar ve ileti metni gibi kullanıcılara görünür olan tüm sabit kodlanmış dizeleri bulun. Aşağıdaki sözdizimini kullanarak bunları <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> yöntemine yapılan bir çağrıyla değiştirin:
 
     ```csharp
     HttpContext.GetGlobalResourceObject("Resource File Name", "String ID")

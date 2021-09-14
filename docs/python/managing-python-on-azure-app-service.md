@@ -13,11 +13,11 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: 7d571a490d93e57084a9b372b385eb406a592208
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122106893"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625340"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Azure App Service bir Python ortamı ayarlama (Windows)
 

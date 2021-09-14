@@ -26,15 +26,15 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 30120b45a26fe46e80f6dca1eb6f68e1f4ce7e93
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122142748"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625448"
 ---
 # <a name="unzip-task"></a>Unzip görevi
 
-Belirtilen konuma *.zip* arşivini açar.
+Bir dosya *.zip* belirtilen konuma açar.
 
 >[!NOTE]
 >Görev `Unzip` yalnızca 15.8 MSBuild ve üzerinde kullanılabilir.

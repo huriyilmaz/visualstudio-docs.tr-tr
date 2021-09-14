@@ -1,6 +1,6 @@
 ---
-title: Files Öğesi | Microsoft Docs
-description: Proje öğesi şemasında yer alan bir öğe olan Files SharePoint bilgilerini görüntüleme.
+title: Files öğesi | Microsoft Docs
+description: SharePoint proje öğesi şemasındaki bir öğe olan Files öğesiyle ilgili başvuru bilgilerini görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,14 +16,14 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 84c3ab0837680fe815f644d6b0456ce0fe066326
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122093235"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625214"
 ---
 # <a name="files-element"></a>Dosyalar öğesi
-  Özellik öğesi dosyaları ve bağımlı SharePoint olmayan projelerin çıkışı gibi, SharePoint proje öğesiyle dağıtılacak SharePoint belirtir.
+  özellik öğesi dosyaları ve bağımlı SharePoint olmayan projelerin çıktısı gibi SharePoint proje öğesiyle dağıtılacak dosyaları belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ ms.locfileid: "122093235"
 ```
 
 ## <a name="type"></a>Tür
- **FileCollectionType**
+ **Dosya CollectionType**
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.
@@ -47,23 +47,23 @@ ms.locfileid: "122093235"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ProjectItemFile](../sharepoint/projectitemfile-element.md)|İsteğe **bağlı ProjectItemFileType** öğesi.<br /><br /> Bu SharePoint proje öğesine dahil etmek için Özellik öğesi dosyası gibi bir dosya SharePoint.|
-|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|İsteğe **bağlı ProjectOutputFileType** öğesi.<br /><br /> Bir proje, proje öğesi bir projeye dağıtıldığında dahil etmek için bir projenin çıkışını SharePoint.|
+|[ProjectItemFile](../sharepoint/projectitemfile-element.md)|İsteğe bağlı **ProjectItemFileType** öğesi.<br /><br /> SharePoint öğesine dağıtıldığında proje öğesi dahil olmak üzere özellik öğesi dosyası gibi bir SharePoint dosyasını temsil eder.|
+|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|İsteğe bağlı **ProjectOutputFileType** öğesi.<br /><br /> SharePoint öğesine dağıtıldığında proje öğesiyle birlikte içerilecek projenin çıkışını temsil eder.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ProjectItem](../sharepoint/projectitem-element.md)|Bir proje SharePoint temsil eder. Bu öğe, dosyanın gerekli kök `.spdata` öğesi.|
+|[ProjectItem](../sharepoint/projectitem-element.md)|bir SharePoint proje öğesini temsil eder. Bu öğe, dosyanın gerekli kök öğesi `.spdata` .|
 
 ## <a name="element-information"></a>Öğe bilgileri
 
 |Özellik|Değer|
 |-|-|
-|**Ad Alanı**|http: \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Şema adı**|SharePoint Project Öğesi Şeması|
-|**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
-|**Boş olabilir**|Hayır|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
+|**Şema adı**|SharePoint Project öğesi şeması|
+|**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)
+- [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)

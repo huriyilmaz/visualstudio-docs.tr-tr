@@ -24,11 +24,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 23ae0b5e07271b9829702432f4d15cfec31d216e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122146751"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636566"
 ---
 # <a name="stale-code-warning-dialog-box"></a>Eski Kod Uyarısı İletişim Kutusu
 
@@ -36,7 +36,7 @@ Yerel kodda Düzenle ve Devam'ın hemen uygulanamayabilecek **değişiklikler ya
 
 **Bu iletişim kutusunu bir daha gösterme**
 
-Bu onay kutusunu işaret edersanız Düzenle ve Devam Edin, gelecekte izin istemeden kod değişikliklerini uygulayacak. Seçenekler iletişim kutusuna gidip Hata Ayıklama Klasörünü açarak,  Düzenle ve Devam  Edin sayfasına tıklar ve Eski kod hakkında uyar'ı seçerek bu  **uyarıyı yeniden açabilirsiniz.**
+Bu onay kutusunu işaret edersanız Düzenle ve Devam Edin, gelecekte izin istemeden kod değişikliklerini uygulayacak. Seçenekler iletişim kutusuna gidip Hata Ayıklama  Klasörünü açarak, Düzenle ve Devam  Edin sayfasına tıklar ve Eski kod hakkında uyar'ı seçerek bu uyarıyı **yeniden açabilirsiniz.** 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

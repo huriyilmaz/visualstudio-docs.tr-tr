@@ -1,6 +1,6 @@
 ---
-title: Uııdmanager görevi | Microsoft Docs
-description: kaynak XAML dosyalarındaki tüm XAML öğelerini yerelleştirmek için MSBuild uımanager görevinin benzersiz tanımlayıcıları (uıd 'ler) nasıl denetleyeceğini, güncelleştirdiğini veya kaldırmadığını öğrenin.
+title: UidManager Görev | Microsoft Docs
+description: UidManager MSBuild kaynak XAML dosyalarında tüm XAML öğelerini yerelleştirmek için benzersiz tanımlayıcıları (UID) nasıl denetler, ler veya kaldırır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -23,27 +23,27 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 323756067e8c553eb13729e305cb76677ccf3a3b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122142721"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625455"
 ---
 # <a name="uidmanager-task"></a>UidManager görevi
 
-<xref:Microsoft.Build.Tasks.Windows.UidManager>Görev, kaynak xaml dosyalarına dahil edilen tüm XAML öğelerini yerelleştirmek için benzersiz tanımlayıcıları (UID 'ler) denetler, güncelleştirir veya kaldırır.
+Görev, kaynak XAML dosyalarına dahil edilen tüm XAML öğelerini yerelleştirmek için benzersiz tanımlayıcıları <xref:Microsoft.Build.Tasks.Windows.UidManager> (UID) denetler, günceller veya kaldırır.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
 | Parametre | Açıklama |
 |-------------------------| - |
-| `IntermediateDirectory` | İsteğe bağlı **dize** parametresi.<br /><br /> **MarkupFiles** parametresi tarafından BELIRTILEN kaynak xaml dosyalarını yedeklemek için kullanılan dizini belirtir. |
-| `MarkupFiles` | Gerekli **ıtaskitem []** parametresi.<br /><br /> UID denetimi, güncelleştirilmesi veya kaldırılması için dahil edilecek kaynak XAML dosyalarını belirtir. |
-| `Task` | Gerekli **dize** parametresi.<br /><br /> Gerçekleştirmek istediğiniz UID yönetim görevini belirtir. Geçerli seçenekler **Check**, **Update** veya **Remove** seçenekleridir. |
+| `IntermediateDirectory` | İsteğe **bağlı Dize** parametresi.<br /><br /> **MarkupFiles** parametresi tarafından belirtilen kaynak XAML dosyalarını back up için kullanılan dizini belirtir. |
+| `MarkupFiles` | Gerekli **ITaskItem[]** parametresi.<br /><br /> UID denetleme, güncelleştirme veya kaldırma için eklenecek kaynak XAML dosyalarını belirtir. |
+| `Task` | Gerekli **Dize** parametresi.<br /><br /> Gerçekleştirmek istediğiniz UID yönetim görevini belirtir. Geçerli seçenekler **Denetim,** Güncelleştirme **veya** Kaldır **seçenekleridir.** |
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, <xref:Microsoft.Build.Tasks.Windows.UidManager> belirtilen kaynak xaml dosyalarının uygun UID 'leri olan xaml öğeleri içerdiğini denetlemek için görevini kullanır.
+ Aşağıdaki örnek, belirtilen kaynak XAML dosyalarının uygun UID'lere sahip XAML öğeleri içerdiğini <xref:Microsoft.Build.Tasks.Windows.UidManager> kontrol etmek için görevini kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -66,4 +66,4 @@ ms.locfileid: "122142721"
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
 - [WPF uygulaması oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
-- [Nasıl yapılır: bir uygulamayı yerelleştirme](/dotnet/framework/wpf/advanced/how-to-localize-an-application)
+- [Nasıl: Uygulamayı yerelleştirme](/dotnet/framework/wpf/advanced/how-to-localize-an-application)

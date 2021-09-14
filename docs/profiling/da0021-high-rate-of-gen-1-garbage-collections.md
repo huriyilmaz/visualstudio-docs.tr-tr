@@ -1,6 +1,6 @@
 ---
-description: Profil oluşturma sırasında toplanan sistem performansı verileri bellek for.NET Framework nesnelerinin önemli bir oranının, 1. nesil veri toplamaya kıyasla çöp toplamanın 1. kuşak ile geri kazanıldığını gösterir.
-title: DA0021-yüksek oranda Gen 1 çöp koleksiyonları | Microsoft Docs
+description: Profil oluşturma sırasında toplanan sistem performansı verileri, nesil 0 veri toplamaya kıyasla atık toplamanın 1. neslinde bellek for.NET Framework nesnelerinin önemli bir oranının geri toplanmış olduğunu gösterir.
+title: DA0021 - Yüksek oranda 1. Nesil atık toplama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,37 +16,37 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 1ed53e6999c07f712268be9163f8baa1225e2341
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122093261"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637113"
 ---
 # <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: Yüksek oranda 1. nesil atık toplama
 
 |Öğe|Değer|
 |-|-|
-|Kural kimliği|DA0021|
-|Kategori|.NET Framework Kullanımıyla|
+|Kural Kimliği|DA0021|
+|Kategori|.NET Framework Kullanım|
 |Profil oluşturma yöntemleri|Tümü|
-|İleti|Gerçekleşen çok yüksek bir gen 1 çöp koleksiyonları vardır. Tasarım ile programınızın veri yapılarının çoğu uzun bir süre ayrılır ve kalıcı hale getirilir, bu normalde bir sorun değildir. Ancak, bu davranış istenmeden, uygulamanız nesneleri sabitlenebilir olabilir. Emin değilseniz, uygulamanızın kullandığı bellek ayırma modelini anlamak için .NET bellek ayırma verileri ve nesne yaşam süresi bilgilerini toplayabilirsiniz.|
+|İleti|1. Nesil çöp toplama işlemlerinin oldukça yüksek bir oranı vardır. Tasarıma göre, program veri yapılarının çoğu uzun bir süre için ayrılır ve kalıcı olursa, bu normalde bir sorun değildir. Ancak, bu davranış istenmişse, uygulamanız nesneleri sabitlemektedir. Emin değilsanız, uygulamanın kullandığı bellek ayırma desenini anlamak için .NET bellek ayırma verileri ve nesne yaşam süresi bilgilerini topabilirsiniz.|
 |Kural türü|Bilgi|
 
- Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
+ Örnekleme, .NET belleği veya kaynak musiki yöntemlerini kullanarak profil 7'niz olduğunda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
 
 ## <a name="cause"></a>Nedeni
- Profil oluşturma sırasında toplanan sistem performansı verileri bellek for.NET Framework nesnelerinin önemli bir oranının, 1. nesil veri toplamaya kıyasla çöp toplamanın 1. kuşak ile geri kazanıldığını gösterir.
+ Profil oluşturma sırasında toplanan sistem performansı verileri, nesil 0 veri toplamaya kıyasla atık toplamanın 1. neslinde bellek for.NET Framework nesnelerinin önemli bir oranının geri toplanmış olduğunu gösterir.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Microsoft .NET ortak dil çalışma zamanı (CLR), uygulamanın artık kullandığı nesnelerden belleği geri kazanmak için çöp toplayıcı kullanan bir otomatik bellek yönetim mekanizması sağlar. Çöp toplayıcı, çok sayıda ayırmaların kısa süreli olduğu varsayımına bağlı olarak, oluşturma odaklı bir şekilde yapılır. Örneğin, yerel değişkenler kısa süreli olmalıdır. Yeni oluşturulan nesneler nesil 0 ' da (Gen 0) başlar ve sonra bir atık toplama çalıştırmasını sürdüren 1. nesil ve son olarak uygulama bunları kullanıyorsa 2. nesil 'e geçiş yapılır.
+ Yaygın Microsoft .NET çalışma zamanı (CLR), uygulamanın artık kullanmama durumuna sahip nesnelerden belleği geri alan bir atık toplayıcı kullanan otomatik bir bellek yönetimi mekanizması sağlar. Atık toplayıcı, çok sayıda ayırmanın kısa süreli olduğu varsayımı üzerine oluşturma odaklıdır. Örneğin yerel değişkenler kısa süreli olmalı. Yeni oluşturulan nesneler nesil 0'da (0. nesil) başlar ve bir çöp toplama çalıştırması çalıştırılana kadar hayatta kalarak 1. nesile ilerler ve uygulama hala bunları kullanıyorsa son olarak 2. nesile geçişler.
 
- Nesil 0 içindeki nesneler sık ve genellikle çok verimli bir şekilde toplanır. 1. nesil nesneler daha az ve daha az verimli bir şekilde toplanır. Son olarak, kuşak 2 ' deki uzun süreli nesneler daha az sıklıkta toplanmalıdır. Eksiksiz bir atık toplama çalıştırması olan 2. nesil koleksiyon, ayrıca en pahalı işlemdir.
+ Nesil 0'daki nesneler sıklıkla ve genellikle çok verimli bir şekilde toplanır. Nesil 1'de nesneler daha az sıklıkta ve daha az verimli bir şekilde toplanır. Son olarak, nesil 2'de uzun süreli nesneler daha az sıklıkta toplanabilir. Tam çöp toplama çalıştırması olan 2. nesil toplama da en pahalı işlemdir.
 
- Bu kural, çok fazla 1. nesil atık toplama işlemi meydana geldiğinde ateşlenir. Çok sayıda çok kısa süreli nesne nesil 0 toplama işlemi devam ediyor ancak daha sonra 1. nesil bir koleksiyonda toplanıyorsa, bellek yönetiminin maliyeti aşırı olabilir. Daha fazla bilgi için, MSDN Web sitesindeki Riko [maridın](/archive/blogs/ricom/mid-life-crisis) performans katmanını ' na bakın.
+ Bu kural, orantılı olarak çok fazla nesil 1 çöp toplaması meydana geldiğinde sızıyor. Çok fazla sayıda kısa süreli nesne nesil 0 koleksiyonuna dayansa da nesil 1 koleksiyonunda toplanabilirse, bellek yönetiminin maliyeti aşırıya iner. Daha fazla bilgi [](/archive/blogs/ricom/mid-life-crisis) için MSDN Web sitesinde, Mariani'nin Performans Tidbit'leri ile ilgili Orta yaş kriz gönderisine bakın.
 
-## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
- Profil oluşturma verilerinin [Işaretler görünümüne](../profiling/marks-view.md) gitmek Için hatalar Listesi penceresinde iletiye çift tıklayın. **\\ Gen 0 KOLEKSIYONLARıNıN .NET CLR bellek** sayısını ve **\\ Genel 1 koleksiyonlar sütunlarının .NET CLR bellek sayısını** bulun. Çöp toplamanın daha sık gerçekleştiği program yürütmesinin belirli aşamaları olup olmadığını saptayın. Yönetilen bellek ayırmaları deseninin aşırı bellek yönetimi ek yüküne neden olup olmadığını görmek için bu değerleri **GC sütunundaki% Time** ile karşılaştırın.
+## <a name="how-to-investigate-a-warning"></a>Uyarıyı araştırma
+ Profil oluşturma verilerinin İşaretler Görünümüne gitmek için Hatalar Listesi [penceresindeki iletiye](../profiling/marks-view.md) çift tıklayın. **\\ 0. Nesil Koleksiyonlar'ın .NET CLR** Belleği ve **\\ 1.** Nesil Koleksiyonlar sütunlarının .NET CLR Belleği # yolunu bulun. Atık toplamanın daha sık olduğu belirli program yürütme aşamaları olup olmadığını belirler. Yönetilen bellek ayırma **desenlerinin aşırı** bellek yönetimi ek yüküne neden olup olmadığını görmek için bu değerleri GC sütunundaki Süre % ile karşılaştırın.
 
- Uygulamanın yönetilen bellek kullanımı modelini anlamak için, a.NET bellek ayırma profilini ve istek nesnesi yaşam süresi ölçümlerini çalıştıran bir kez daha profilini yeniden çalıştırın.
+ Uygulamanın yönetilen bellek kullanımı desenini anlamak için, bellek ayırma profiline a.NET ve Nesne Ömrü ölçümlerini isteğinde bulundurarak uygulamanın profilini oluşturun.
 
- Çöp toplama performansını geliştirme hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [çöp toplayıcı temelleri ve performans ipuçları](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) . Otomatik atık toplama ek yükü hakkında daha fazla bilgi için bkz. [büyük nesne yığını kapsanmamış](/archive/msdn-magazine/2008/june/clr-inside-out-large-object-heap-uncovered).
+ Atık toplama performansını geliştirme hakkında daha fazla bilgi için Microsoft Web sitesinde Atık Toplayıcı temel bilgileri [ve](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) Performans İpuçları makalesine bakın. Otomatik çöp toplamanın ek yükü hakkında bilgi için bkz. [Ele Geçen Büyük Nesne Yığını.](/archive/msdn-magazine/2008/june/clr-inside-out-large-object-heap-uncovered)

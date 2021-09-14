@@ -1,6 +1,6 @@
 ---
-description: İşlevin yönetilmeyen C++ stili özel durum işleme (örneğin, bir try/catch bloğu) içerip içermediğini belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_hasEH | Microsoft Docs'
+description: İşlevin herhangi bir unmanaged C++-style özel durum işlemesi (örneğin, bir try/catch bloğu) içerdiğini belirten bir bayrak alır.
+title: IDiaSymbol::get_hasEH | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: d0707c903c0daf02cfe62b008b031f382263e89b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044233"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636761"
 ---
 # <a name="idiasymbolget_haseh"></a>IDiaSymbol::get_hasEH
-İşlevin yönetilmeyen C++ stili özel durum işleme (örneğin, bir try/catch bloğu) içerip içermediğini belirten bir bayrak alır.
+İşlevin herhangi bir unmanaged C++-style özel durum işlemesi (örneğin, bir try/catch bloğu) içerdiğini belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_hasEH(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE` İşlevin herhangi bir C++ stili özel durum işleme sahip olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] İşlevde `TRUE` herhangi bir C++stili özel durum işleme varsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

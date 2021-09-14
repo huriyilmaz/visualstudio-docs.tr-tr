@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: d632e10c28bcb3ef1b5aa0ec464c82806021673f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122104202"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636385"
 ---
 # <a name="idebugbreakpointunboundevent2"></a>IDebugBreakpointUnboundEvent2
 Bu arabirim, oturum hata ayıklama Yöneticisi 'ne (SDM), bağlı bir kesme noktasının yüklenmiş bir programdan bağlanmamış olduğunu söyler.

@@ -12,11 +12,11 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 4b5f22674f1b66b31a03b2c30ed0e58a7b9f89e5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122156714"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637030"
 ---
 # <a name="wincounter"></a>WinCounter
 **WinCounter seçeneği,** profil Windows belirli aralıklarla toplamak için bir uygulama performansı sayacı belirtir. Windows ve uygulama performans sayaçları profil oluşturma veri dosyasında işaretler olarak listelenir. Ayrı seçeneklerde toplamak için birden çok performans sayacı belirtebilirsiniz.
@@ -47,7 +47,7 @@ VSPerfCmd.exe /Start:Method /Wincounter:Path [/WinCounter:Path] [AutoMark:Millis
  **Otomatik İşaret:** `Milliseconds` Performans sayacı veri toplama ile Windows milisaniye sayısını belirtir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, iki Windows sayaçlarının 1000 milisaniyelik bir aralıkta toplanacak şekilde belirtiliyor.
+ Aşağıdaki örnekte, iki Windows sayaçlarının 1000 milisaniyelik aralıklarla toplanacak şekilde belirtiliyor.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp /WinCounter:"\Processor(0)\% Processor Time" /WinCounter:"\System\Context Switches/sec" /AutoMark:1000

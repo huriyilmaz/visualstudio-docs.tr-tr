@@ -19,14 +19,14 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 639b86f0c4b17faf72fb8a74caf9ef6398d770a4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122149708"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625316"
 ---
 # <a name="create-a-business-data-connectivity-model"></a>İş verileri bağlantı modeli oluşturma
-  bir İş Verileri Bağlantısı (BDC) modeli oluşturabilir veya mevcut bir BDC modelini Visual Studio. Her SharePoint proje yalnızca bir model içerebilir. Daha fazla bilgi için [bkz. İş verilerini SharePoint.](../sharepoint/integrating-business-data-into-sharepoint.md)
+  İş Verileri Bağlantısı (BDC) modeli oluşturabilir veya mevcut bir BDC modelini özelleştirilebilir ve Visual Studio. Her SharePoint proje yalnızca bir model içerebilir. Daha fazla bilgi için [bkz. İş verilerini SharePoint.](../sharepoint/integrating-business-data-into-sharepoint.md)
 
 ## <a name="create-a-new-model"></a>Yeni model oluşturma
  Yeni bir model oluşturmak için, bir İş Verileri  **Bağlantı Modeli** projesi oluşturun veya Boş veri kaynağına bir İş Verileri Bağlantı **Modeli SharePoint Project.**
@@ -38,12 +38,12 @@ ms.locfileid: "122149708"
 
  Visual Studio yeni klasöre aşağıdaki dosyaları ekler:
 
-|Dosya|Açıklama|
+|Dosya|Description|
 |----------|-----------------|
 |Model Tanım Dosyası|Varlıkları, yöntemleri, İş Hattı (LOB) sistem nesnelerini ve modeli açıklayan diğer meta verileri tanımlayan XML'yi içerir.<br /><br /> BDC Tasarımcısı, BDC Gezgini, **BDC** Yöntem Ayrıntıları penceresi ve Özellikler penceresini **kullanarak** bu dosyada meta **verileri** değiştirin.|
 |Varlık Hizmeti Kod Dosyası|Varsayılan varlığın örneklerini alan, güncelleştiren ve sildi yöntemleri içerir.|
 
- Bir varlığın özelliklerini tanımlamak için varlık kodu dosyasını düzenleyin. Daha fazla bilgi için [bkz. Nasıl kullanılır: Modele varlık ekleme.](../sharepoint/how-to-add-an-entity-to-a-model.md)
+ Bir varlığın özelliklerini tanımlamak için varlık kod dosyasını düzenleyin. Daha fazla bilgi için [bkz. Nasıl kullanılır: Modele varlık ekleme.](../sharepoint/how-to-add-an-entity-to-a-model.md)
 
  Bir varlığın örneklerini almak, güncelleştirmek ve silmek için varlık hizmeti kod dosyasına kod ekleyin. Daha fazla bilgi için [bkz. İş verileri bağlantı modeli tasarlama.](../sharepoint/designing-a-business-data-connectivity-model.md)
 
@@ -59,9 +59,9 @@ ms.locfileid: "122149708"
 
 - Var olan bir modeli birden çok sunucu grubu için SharePoint dağıtmak için.
 
-  Her iki durumda da, içeri aktardı olarak modelde tanımlanan LOB sistemleri etkilenmez ve beklendiği gibi çalışmaya devam eder. Mevcut modeli bir SharePoint eklemek için Visual Studio **Ekle iletişim kutusunu** kullanın. Daha fazla bilgi için, [bkz. How to: Add an existing BDC model file to a SharePoint project](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md).
+  Her iki durumda da, içeri aktarın modelde tanımlanan LOB sistemleri etkilenmez ve beklendiği gibi çalışmaya devam eder. Mevcut modeli bir SharePoint projesine eklemek için Visual Studio Ekle **iletişim** kutusunu kullanın. Daha fazla bilgi için, [bkz. How to: Add an existing BDC model file to a SharePoint project](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md).
 
-  .NET bütüncesi Ekle LobSystem .NET Framework bir seçenek seçerek, içe aktarılan modele derleme türüne sahip bir **LOB sistemi ekebilirsiniz.** Bu, özel kod yazmanızı ve içe aktarılan modelin meta verilerini tanımlamak için tasarımcıyı kullanmanızı sağlar.
+  .NET bütüncesi Ekle LobSystem .NET Framework bir seçenek seçerek, içe aktarılan modele derleme türüne sahip bir **LOB sistemi ekebilirsiniz.** Bu, özel kod yazmanızı ve içe aktarılan modelin meta verilerini tanımlamak için bir tasarımcı kullanmanızı sağlar.
 
 ## <a name="related-topics"></a>İlgili konular
 

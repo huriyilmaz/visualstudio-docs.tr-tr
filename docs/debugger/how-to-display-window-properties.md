@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: f64b4f6183b6878eb934c0125fe85ada86b697c0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122128513"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636710"
 ---
 # <a name="how-to-display-window-properties"></a>Nasıl yapılır: Pencere Özelliklerini Görüntüleme
 [Windows görünümünde](../debugger/windows-view.md)listelenen bir pencere hakkında daha fazla bilgi edinmek için [pencere özellikleri iletişim kutusunu](../debugger/window-properties-dialog-box.md)kullanın.

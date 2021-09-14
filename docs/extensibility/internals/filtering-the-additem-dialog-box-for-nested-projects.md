@@ -14,23 +14,23 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa65af14d05b60e78643f03c1f74719fb1c25eadf246451287ed04d58723e4f4
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5bb4a9a76cc4ca074051ccb7ad48ae70b0e29e92
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121338013"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636198"
 ---
 # <a name="filter-the-additem-dialog-box-for-nested-projects"></a>İç içe projeler için AddItem iletişim kutusunu filtreleme
-İç içe bir proje **için AddItem** iletişim kutusu görüntülendiğinde, üst proje iletişim kutusunda hangi öğelerin görüntülendiğinden emin olabilir.
+İç içe bir proje **için Bir AddItem** iletişim kutusu görüntülendiğinde, üst proje iletişim kutusunda hangi öğelerin görüntülendiğinden emin olabilir.
 
- Arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2> **AddItem** iletişim kutusunda olacak düğümleri filtrelemenize olanak sağlar. Alt proje **AddItem** iletişim kutusunu görüntülendiğinde üst öğe, alt projenin başka bir şekilde görüntülenebilir arabirimini ve `IVsFilterAddProjectItemDlg` filtre öğelerini uygulamaya ekleyebilir.
+ Arabirimi, <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2> bir **AddItem** iletişim kutusunda olacak düğümleri filtrelemenize olanak sağlar. Alt proje **AddItem** iletişim kutusunu görüntülendiğinde üst öğe, alt projenin başka bir şekilde görüntülenebilir arabirimini ve `IVsFilterAddProjectItemDlg` filtre öğelerini uygulamaya ekleyebilir.
 
- Projeler belirli üst projelerin altında işleve göre gruplanmışsa, kullanıcı iç içe bir proje içindeki kısayol menüsünden Project Öğe Ekle'yi seçerek `IVsFilterAddProjectItemDlg` bunu gerçekleştirebilirsiniz.  Yalnızca bu `IvsFilterAddProjectItemDlg displays` gruba özgü proje öğelerini veya dosyaları uygulama. Project grupların tüm öğeleri, aynı dizinde depolanmış olsalar bile iletişim kutusunun dışında filtrelenmiş olur.
+ Projeler belirli üst projelerin altında işleve göre gruplanmışsa, kullanıcı iç içe bir proje içindeki kısayol menüsünden Project Öğe Ekle'yi seçerek `IVsFilterAddProjectItemDlg` bunu gerçekleştirebilirsiniz.  Yalnızca bu `IvsFilterAddProjectItemDlg displays` gruba özgü proje öğelerini veya dosyaları uygulama. Project grupların tüm öğeleri aynı dizinde depolanmış olsalar bile iletişim kutusunun dışında filtrelenmiş olur.
 
  Kullanıcı alt öğe için **AddItem** iletişim kutusunu açtığında, üst projenin arabirim `IVsFilterAddProjectItemDlg` uygulaması çağrılır.
 
- Arabirim `IVsFilterAddProjectItemDlg` ayrıca kategoriye göre filtreleme de gerçekleştirebilirsiniz. Daha fazla bilgi için [Bkz. Yeni Öğe Ekle iletişim kutusuna öğe ekleme ve](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md) Proje ve öğe [şablonlarını kaydetme.](../../extensibility/internals/registering-project-and-item-templates.md)
+ Arabirim `IVsFilterAddProjectItemDlg` ayrıca kategoriye göre filtreleme de gerçekleştirebilirsiniz. Daha fazla bilgi için [Bkz. Yeni Öğe Ekle iletişim](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md) kutusuna öğe ekleme ve [Proje ve öğe şablonlarını kaydetme.](../../extensibility/internals/registering-project-and-item-templates.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>

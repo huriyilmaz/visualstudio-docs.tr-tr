@@ -14,11 +14,11 @@ ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
 ms.openlocfilehash: 50ee00867e6729c269753edeb0cdfa44f3215c3f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122027918"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625755"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-vue-in-visual-studio"></a>öğretici: Visual Studio vue ile ASP.NET Core uygulama oluşturma
 
@@ -57,9 +57,9 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 Proje oluşturulduktan sonra bazı yeni ve değiştirilmiş dosyalar görürsünüz:
 
 - aspnetcore-https.js
-- vue.config.json (değiştirilmiş)
+- vue.config. JSON (değiştirilmiş)
 - HelloWorld. Vue (değiştirilmiş)
-- package.json (değiştirilmiş)
+- Package. JSON (değiştirilmiş)
 
 ## <a name="create-the-backend-app"></a>Arka uç uygulamasını oluşturma
 
@@ -87,9 +87,9 @@ Proje oluşturulduktan sonra bazı yeni ve değiştirilmiş dosyalar görürsün
 
    :::image type="content" source="media/vs-2022/asp-net-core-with-vue-deselect-launch-browser.png" alt-text="Hata ayıklama başlatma profilleri kullanıcı arabirimini açın"::: 
 
-1. Ardından, Vue projesine sağ tıklayın ve **Özellikler** menüsünü seçin ve **hata ayıklama** bölümüne gidin. Hata ayıklayıcıyı başlatmak için **launch.js** seçeneğini değiştirin.
+1. Ardından, Vue projesine sağ tıklayın ve **Özellikler** menüsünü seçin ve **hata ayıklama** bölümüne gidin. Hata ayıklayıcıyı Launch **. JSON** seçeneğine başlatılacak şekilde değiştirin.
  
-   :::image type="content" source="media/vs-2022/asp-net-core-with-vue-choose-debugger.png" alt-text="Hata ayıklayıcıyı seçin (launch.js)":::
+   :::image type="content" source="media/vs-2022/asp-net-core-with-vue-choose-debugger.png" alt-text="Hata ayıklayıcıyı seçin (Launch. JSON)":::
 
 ## <a name="set-the-startup-project"></a>Başlangıç projesini ayarla
 

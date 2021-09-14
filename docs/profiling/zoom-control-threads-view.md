@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: a99b64bfc6f36f674d31f5b8eb7e51a6f1fa11fe
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122140602"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637025"
 ---
 # <a name="zoom-control-threads-view"></a>Yakınlaştırma denetimi (iş parçacıkları görünümü)
 Yakınlaştırma denetimi, belirli bir ilgilendiğiniz alanlara odaklanabilmeniz için zaman çizelgesinde yakınlaştırıp uzaklaşmanıza yardımcı olan bir kaydırıcıdır. Bu denetim, zaman çizelgesi görünümünün merkezinde yakınlaştırdığı için, yakınlaştırmadan önce ilgilendiğiniz alanı ortalayın.

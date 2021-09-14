@@ -1,6 +1,6 @@
 ---
-title: Project Alt Türleri tarafından Genişletilmiş Özellikler ve | Microsoft Docs
-description: Proje alt türlerinin geliştirilebileceğiniz veya değiştirilebileceğiniz özellikleri öğrenin. Bu özellik, uygulamanın proje sistemlerinin davranışını Visual Studio.
+title: Project alt türleri tarafından genişletilen özellikler ve yöntemler | Microsoft Docs
+description: Proje alt türleri tarafından geliştirilen veya değiştirilebilen özellikler hakkında bilgi edinin. Bu, Visual Studio proje sistemlerinin davranışını özelleştirmenize olanak tanır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,41 +15,41 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0744b8669e3ab5d2fe7a3e936157172c5b0e0ef2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117680"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636137"
 ---
 # <a name="properties-and-methods-extended-by-project-subtypes"></a>Proje Alt Türleri Tarafından Genişletilen Özellikler ve Metotlar
-Bir proje alt türü, temel projenin bir toplayıcısı olarak oluşturulmuş olduğundan projenin davranışını etkilemek için çok fazla gücü vardır. Bu bölümde, proje alt türleri tarafından geliştirilecek veya değiştirilecek bazı özellikler özetlenmiştir.
+Proje alt türünün, bir temel projenin toplayıcısı olarak oluşturulduğundan projenin davranışını etkilemek için çok güç vardır. Bu bölümde, proje alt türleri tarafından geliştirilmiş veya değiştirilebilen bazı özellikler özetlenmektedir.
 
-## <a name="features-gained-by-aggregation"></a>Toplama tarafından Kazanılan Özellikler
- Aşağıdaki tabloda, toplamanın temel projelerde proje alt türlerini geçersiz kılmaya olanak sağlayan yöntemlerin birçoğu özetlenmiştir.
+## <a name="features-gained-by-aggregation"></a>Toplama tarafından kazanılan Özellikler
+ Aşağıdaki tabloda, toplama proje alt türlerini temel projelerde geçersiz kılmak için izin veren yöntemlerin birçoğu özetlenmektedir.
 
-|Toplama ile Geçersiz Kılınan Yöntemler|Project Alt|
+|Toplama tarafından geçersiz kılınan Yöntemler|Project SubType|
 |---------------------------------------|---------------------|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>Şundan:<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetGuidProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetGuidProperty%2A>|Bir proje alt türüne olanak sağlar<br /><br /> - Açıklamalı alt yazıyı ve proje düğümünün simgesini değiştirme.<br />- Proje nesnesini tamamen geçersiz `Browse` kılın.<br />- Projenin yeniden adlandırılap adlandırılanamaylarını denetleme.<br />- Sıralama sıralamayı denetleme.<br />- Dinamik yardım için kullanıcı bağlamını denetleme.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>Şundan:<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetItemContext%2A>|Tasarımcılara ve düzenleyicilere hangi bağlamsal hizmetlerin sağlanacaklarını denetlemeye olanak sağlayan bir proje alt türü.|
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>Şundan:<br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A><br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>|Bir proje alt türüne olanak sağlar<br /><br /> - Proje komutları için komut yönlendirmeye katılma.<br />- Hem proje ortam komutlarını hem de etkin komutları ekleyin, Çözüm Gezgini veya devre dışı kaldırın.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>|Kullanıcının Yeni Öğe Ekle iletişim kutusunda neleri gördüğünü filtrelemek için **proje alt türüne** olanak sağlar.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGeneratorFactory>|Bir proje alt türüne olanak sağlar<br /><br /> - Verilen varsayılan dosya uzantısını belirleme.<br />- Okunabilir bir oluşturucu adını com nesnesine eşler.|
+|Kimden <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> :<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetGuidProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetGuidProperty%2A>|İçin bir proje alt türü sağlar<br /><br /> -Proje düğümünün başlığını ve simgesini değiştirin.<br />-Proje nesnesini tamamen geçersiz kılar `Browse` .<br />-Projenin yeniden adlandırılamayacağını denetleyin.<br />-Denetim sıralama düzeni.<br />-Dinamik yardım için kullanıcı bağlamını denetleyin.|
+|Kimden <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject> :<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetItemContext%2A>|Bir proje alt türünün, tasarımcı ve düzenleyicilere hangi bağlamsal hizmetlerin sağlandığını denetlemesine olanak sağlar.|
+|Kimden <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> :<br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A><br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>|İçin bir proje alt türü sağlar<br /><br /> -Proje komutları için komut yönlendirmesine katılın.<br />-Hem proje çevresel komutlarını hem de Çözüm Gezgini etkin komutları ekleyin, kaldırın veya devre dışı bırakın.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>|Proje alt türünün, kullanıcının **Yeni öğe Ekle** iletişim kutusunda ne göreceğini filtrelemesine olanak sağlar.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGeneratorFactory>|İçin bir proje alt türü sağlar<br /><br /> -Bir dosya uzantısı verilen varsayılan oluşturucuyu belirleme.<br />-Okunabilir bir Oluşturucu adını bir COM nesnesiyle eşleyin.|
 
-## <a name="properties-used-by-project-subtypes"></a>Project Alt Türleri Tarafından Kullanılan Özellikler
- Ortam ve temel proje sistemi, proje sisteminin çeşitli özelliklerini denetlemeye olanak sağlamak için aşağıdaki tabloda ayrıntılı olarak yer alan ve numaralarının <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID> <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2> özelliklerini kullanabilir.
+## <a name="properties-used-by-project-subtypes"></a>Project alt türleri tarafından kullanılan özellikler
+ Ortam ve temel proje sistemi, <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID> <xref:Microsoft.VisualStudio.Shell.Interop.__VSSPROPID2> bir proje alt türünün proje sisteminin çeşitli özelliklerini denetlemesini sağlamak için aşağıdaki tabloda açıklanan özellikleri ve numaralandırmalar kullanabilir.
 
-|VSHPROPID özelliği|Project Alt|
+|VSHPROPID özelliği|Project SubType|
 |------------------------|---------------------|
-|`AddItemTemplatesGuid`|Bir proje alt türüne Öğe Ekle iletişim kutusunun içeriğini **denetlemeye** izin verir. Proje alt türü şablon dizinlerinin yeni belirtimlerini sağlar, yeni öğe türleri ekleyebilir, mevcut öğeleri kaldırabilir ve temel projenin Öğe Ekle iletişim kutusundaki öğelerin bir alt kümesini **yeniden** ayarlayabilir.|
-|`PropertyPagesCLSIDList`|Bir proje alt türüne yapılandırmadan bağımsız özellik sayfaları ekleme veya kaldırma izin verir.|
-|`CfgPropertyPagesCLSIDList`|Bir projenin alt türüne yapılandırmaya bağımlı özellik sayfaları eklemeye veya kaldırmaya izin verir.|
-|`ExtObjectCATID`|Bir proje alt türüne, Genişletici CATID'sini bilerek proje veya proje öğesi nesneleri için Otomasyon Genişleticisi sağlamayı sağlar. Örneğin, bir proje alt türü özel bir nesne `Project.Extender("<subtype>")` sağlar.|
-|`BrowseObjectCATID`|Proje alt türüne, Genişletici CATID'sini bilerek `Browse` nesne için Otomasyon Genişleticisi sağlamayı sağlar. Örneğin, bir proje alt türü koleksiyona ek özellikler <xref:EnvDTE.Project.Properties%2A> ekleyebilir.|
-|`CfgBrowseObjectCATID`|Bir proje alt türüne, proje yapılandırması gözatma nesnesi için Otomasyon Genişleticisi sağlama izin verir. Örneğin, bir proje alt türü koleksiyona ek özellikler <xref:EnvDTE.Configuration.Properties%2A> ekleyebilir.|
-|`CfgExtObjectCATID`|Bir proje alt türüne yapılandırma nesnesi için Otomasyon Genişleticisi sağlar.|
-|`DefaultPlatformName`|Projenin yapılandırma nesnelerinin platform adını belirlemek için bir proje alt türüne izin verir.|
+|`AddItemTemplatesGuid`|Proje alt türünün **öğe Ekle** iletişim kutusunun içeriğini denetlemesine izin verir. Proje alt türü, şablon dizinlerinin yeni bir belirtimini sağlayabilir, yeni öğe türleri ekleyebilir, varolan öğeleri kaldırabilir ve temel projenin **öğe Ekle** iletişim kutusunda öğelerin bir alt kümesini yeniden düzenleyebilir.|
+|`PropertyPagesCLSIDList`|Proje alt türünün, yapılandırmaya bağımsız Özellik sayfaları eklemesine veya kaldırmasına izin verir.|
+|`CfgPropertyPagesCLSIDList`|Proje alt türünün yapılandırmaya bağımlı Özellik sayfaları eklemesine veya kaldırmasına izin verir.|
+|`ExtObjectCATID`|Bir proje alt türünün, genişletici CATıD 'yi öğrenerek proje veya proje öğesi nesneleri için bir Otomasyon genişletici sağlamasına izin verir. Örneğin, bir proje alt türü özel bir nesne sağlayabilir `Project.Extender("<subtype>")` .|
+|`BrowseObjectCATID`|Bir proje alt türünün, `Browse` genişletici catID 'yi öğrenerek nesne için bir Otomasyon genişletici sağlamasına izin verir. Örneğin, bir proje alt türü, koleksiyona ek özellikler ekleyebilir <xref:EnvDTE.Project.Properties%2A> .|
+|`CfgBrowseObjectCATID`|Bir proje alt türünün proje yapılandırması için bir Otomasyon genişletici sağlamasına izin verir. Örneğin, bir proje alt türü, koleksiyona ek özellikler ekleyebilir <xref:EnvDTE.Configuration.Properties%2A> .|
+|`CfgExtObjectCATID`|Proje alt türünün yapılandırma nesnesi için bir Otomasyon genişletici sağlamasına izin verir.|
+|`DefaultPlatformName`|Proje alt türünün projenin yapılandırma nesneleri için platform adını belirlemesine izin verir.|
 
- Temel proje, yukarıdaki özelliklerin varsayılan uygulamasını sağlar. Temel proje, en dıştaki proje alt türü üzerinde çağrısında bulundurarak bunları alır ve bu sayede proje alt türü, özelliklerin `QueryInterface` <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> uygulanmasını geçersiz kılar.
+ Temel proje, yukarıdaki özelliklerin varsayılan bir uygulamasını sağlar. Temel proje, en `QueryInterface` <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> dıştaki proje alt türüne çağırarak, bu sayede proje alt türünün özelliklerin uygulanmasını geçersiz kılmasına izin vererek bunları alır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Proje Alt Türleri Tasarımı](../../extensibility/internals/project-subtypes-design.md)

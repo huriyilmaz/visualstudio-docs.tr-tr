@@ -8,11 +8,11 @@ ms.date: 03/21/2021
 ms.topic: conceptual
 description: yöneticilerin, zaman aşımına uğradı Visual Studio aboneliklerini nasıl işleyebileceğini öğrenin
 ms.openlocfilehash: a91096e4dd278e0e53fcd31145dc5cca0653ed72
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966254"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625095"
 ---
 # <a name="expired-subscriptions"></a>Süresi dolan abonelikler
 Bir kullanıcının aboneliğinin süresi dolduğunda, aboneler listesinde adının yanında kırmızı bir çubuk görünür. bu abonelerin Visual Studio abonelik avantajlarını kullanmaya devam etmesi için lisanslarını yenilemeniz gerekir.

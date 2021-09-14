@@ -1,6 +1,6 @@
 ---
 title: Projeler | Microsoft Docs
-description: VSPackage'ların proje türleri, proje alt türleri Visual Studio özel araçlar dahil olmak üzere proje sistemini genişletme yollarını öğrenin.
+description: VSPackage'ların proje türleri, proje alt türleri ve özel araçlar dahil olmak üzere Visual Studio proje sistemini genişletme yolları hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -18,14 +18,14 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9daeac1804940eb80331461b12b2cda51e9fef55
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122063024"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636142"
 ---
 # <a name="projects"></a>Projeler
-Bu Visual Studio, geliştiricilerin kaynak kodu dosyalarını ve içinde görünen diğer kaynakları düzenlemek için **Çözüm Gezgini.** Projeler genellikle kaynak kod dosyalarına ve bit eşlem dosyaları gibi kaynaklara yapılan başvuruları depolar. (Örneğin, bir C# projesi için .csproj dosyası) dosyalardır. Projeler kaynak kodunu düzenlemenize, derlemenize, hata ayıklamanızı ve dağıtmanızı, Web hizmetleri ve veritabanlarına yönelik başvuruları ve diğer kaynakları dağıtmanızı sağlar. VSPackage'lar proje Visual Studio üç ana şekilde genişletebilir: *proje türleri,* *proje alt* türleri ve *özel araçlar.*
+Bu Visual Studio, geliştiricilerin kaynak kodu dosyalarını ve içinde görünen diğer kaynakları düzenlemek için **Çözüm Gezgini.** Projeler genellikle kaynak kod dosyalarına ve bit eşlem dosyaları gibi kaynaklara yönelik başvuruları depolar ve dosyalardır (örneğin, bir C# projesi için .csproj dosyası). Projeler kaynak kodunu düzenlemenize, derlemenize, hata ayıklamanızı ve dağıtmanızı, Web hizmetleri ve veritabanlarına yönelik başvuruları ve diğer kaynakları dağıtmanızı sağlar. VSPackage'lar proje Visual Studio üç ana şekilde genişletebilir: proje *türleri,* *proje alt* türleri ve *özel araçlar.*
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Proje Türleri](../../extensibility/internals/project-types.md)
@@ -34,7 +34,7 @@ Bu Visual Studio, geliştiricilerin kaynak kodu dosyalarını ve içinde görün
 
 - [Proje Alt Türleri](../../extensibility/internals/project-subtypes.md)
 
- *Project türler* proje türlerini temel almaktadır ve projelerin nasıl yazılacağı, hata ayıklandırılacağı ve dağıtılacağı şekilde özelleştirilebilir. Visual Studio Cihaz projeleriyle proje alt türleri kullanır; yeni oluşturulan bir programı bir geliştirme bilgisayardan hedef cihaza kopyalayıp dağıtımı özelleştirilebilir. C# ve Visual Basic proje türleri proje alt türleri için temel olarak kullanılabilir; C++ proje türleri olamaz. Kendi proje türleriniz, proje alt türleri için temel olarak da kullanılabilir. Daha fazla bilgi için [bkz. Project Alt Türleri.](../../extensibility/internals/project-subtypes.md)
+ *Project türler* proje türlerini temel almaktadır ve projelerin nasıl yazılacağı, hata ayıklandırılacağı ve dağıtılacağı şekilde özelleştirilebilir. Visual Studio Cihaz projeleriyle proje alt türleri kullanır; yeni oluşturulan bir programı geliştirme bilgisayarından hedef cihaza kopyalayıp dağıtımı özelleştirilebilir. C# ve Visual Basic proje türleri proje alt türleri için temel olarak kullanılabilir; C++ proje türleri olamaz. Kendi proje türleriniz, proje alt türleri için temel olarak da kullanılabilir. Daha fazla bilgi için [bkz. Project Alt Türleri.](../../extensibility/internals/project-subtypes.md)
 
 - [Web Projeleri](../../extensibility/internals/web-projects.md)
 
@@ -42,7 +42,7 @@ Bu Visual Studio, geliştiricilerin kaynak kodu dosyalarını ve içinde görün
 
 - [Yeni Project Oluşturma: Başlık Altında, Bölüm Bir](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) ve [Yeni Project Oluşturma: Başlık Altında, Bölüm İki](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)
 
- Yeni bir proje oluşturma sırasında gerçekten neler olduğunu açıklar.
+ Yeni bir proje oluşturma sırasında neler olduğunu açıklar.
 
 - [VSSDK Örnekleri](https://github.com/Microsoft/VSSDK-Extensibility-Samples) VSSDK'de projeler ve çözümlerle ilgili örnekler içerir.
 

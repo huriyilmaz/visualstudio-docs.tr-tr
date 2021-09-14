@@ -14,11 +14,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 69b675f19060cf57d8c9dca03414709de5545199
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122054489"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625383"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>6. adım: docgo Web Project şablonunu yoklayıp kullanın
 
@@ -45,7 +45,7 @@ Bu şablon kullanılarak oluşturulan bir proje, Docgo belgelerinden [Ilk Docgo 
 
 1. Visual Studio diğer proje şablonları gibi, "docgo Web Project yokladığı şablon bir *requirements.txt* dosyası içeriyorsa Visual Studio istemler bu bağımlılıkların nereye yükleneceğini sorar. **Bir sanal ortama yükleyip**, sanal **ortam ekle** iletişim kutusunda Varsayılanları kabul etmek için **Oluştur** seçeneğini belirleyin.
 
-1. Python sanal ortamı ayarlamayı tamamladıktan sonra, veritabanını başlatmak ve bir Docgo süper kullanıcısı (yani bir yönetici) oluşturmak için görüntülenen *readme.html* içindeki yönergeleri izleyin. Adımlar ilk olarak **Çözüm Gezgini**' de **DjangoPolls** projesine sağ tıklayıp **Python**  >  **docgo geçişi** komutunu seçin, ardından projeye tekrar sağ tıklayın, **Python**  >  **docgo süper kullanıcı oluştur** komutunu seçin ve istemleri izleyin. (Önce bir süper kullanıcı oluşturmaya çalışırsanız, veritabanı başlatılmadığından bir hata görürsünüz.)
+1. Python sanal ortamı ayarlamayı tamamladıktan sonra, veritabanını başlatmak ve bir Docgo süper kullanıcısı (yani bir yönetici) oluşturmak için görüntülenen *readme.html* yönergeleri izleyin. Adımlar ilk olarak **Çözüm Gezgini**' de **DjangoPolls** projesine sağ tıklayıp **Python**  >  **docgo geçişi** komutunu seçin, ardından projeye tekrar sağ tıklayın, **Python**  >  **docgo süper kullanıcı oluştur** komutunu seçin ve istemleri izleyin. (Önce bir süper kullanıcı oluşturmaya çalışırsanız, veritabanı başlatılmadığından bir hata görürsünüz.)
 
 1. **DjangoPolls** projesini, **Çözüm Gezgini** ' de projeye sağ tıklayıp **başlangıç Project olarak ayarla**' yı seçerek Visual Studio çözüm için varsayılan olacak şekilde ayarlayın. Kalın olarak gösterilen başlangıç projesi, hata ayıklayıcıyı başlattığınızda çalıştırılan şeydir.
 
@@ -124,11 +124,11 @@ Alan türlerinin tam listesi `CharField` (sınırlı metin) `TextField` (sınır
 
 Genel olarak, DMİ go 'da veritabanımız ile çalışmak, Docgo 'nun sizin adınıza temel alınan veritabanını yönetebilmesi için modelleriniz aracılığıyla özel olarak çalışıyor demektir.
 
-### <a name="seed-the-database-from-samplesjson"></a>Veritabanını samples.jstemel alarak
+### <a name="seed-the-database-from-samplesjson"></a>Veritabanını Samples. JSON öğesinden çekirdek yapın
 
-Başlangıçta, veritabanı hiçbir yoklama içermez. "/Admin" URL 'sindeki yönetim arabirimini kullanarak el ile yoklamalar ekleyebilirsiniz ve ayrıca veritabanını uygulamanın *samples.jsdosya üzerinde* tanımlanan yoklamalarda eklemek için çalışan sitede "/Seed" sayfasını da ziyaret edebilirsiniz.
+Başlangıçta, veritabanı hiçbir yoklama içermez. "/Admin" URL 'sindeki yönetim arabirimini kullanarak el ile yoklamalar ekleyebilirsiniz ve ayrıca veritabanını uygulamanın *Samples. JSON* dosyasında tanımlanan yoklamalarda eklemek için çalışan sitede "/Seed" sayfasını da ziyaret edebilirsiniz.
 
-Docgo projesinin *URLs.py* EKLENMIŞ bir URL kalıbı vardır `url(r'^seed$', app.views.seed, name='seed'),` . `seed` *App/views. Kopyala* 'daki görünüm, *samples.js* dosyasına yükler ve gerekli model nesnelerini oluşturur. Docgo daha sonra otomatik olarak ilgili veritabanında eşleşen kayıtları oluşturur.
+Docgo projesinin *URLs.py* EKLENMIŞ bir URL kalıbı vardır `url(r'^seed$', app.views.seed, name='seed'),` . `seed` *App/views. Kopyala* 'daki görünüm, *Samples. JSON* dosyasını yükler ve gerekli model nesnelerini oluşturur. Docgo daha sonra otomatik olarak ilgili veritabanında eşleşen kayıtları oluşturur.
 
 `@login_required`Görünümün yetkilendirme düzeyini göstermek için dekoratörün kullanımını göz önünde edin.
 
@@ -278,7 +278,7 @@ class PollListView(ListView):
 
 Burada yapılan tüm bunlar, görünümün (yoklama) birlikte çalışması için olan modeli tanımlamak ve `get_context_data` `title` `year` bağlama ve bağlam değerlerini geçersiz kılar.
 
-Şablonun çekirdeği (*Templates/App/index.html*) aşağıdaki gibidir:
+Şablonun çekirdeği (*Şablonlar/uygulama/index.html*) aşağıdaki gibidir:
 
 ```html
 {% if latest_poll_list %}
@@ -300,7 +300,7 @@ Burada yapılan tüm bunlar, görünümün (yoklama) birlikte çalışması içi
 
 Basitçe, şablon ' daki yoklama nesnelerinin listesini alır `latest_poll_list` ve sonra yoklamaya ilişkin değeri kullanarak her bir yoklamaya bağlantı içeren bir tablo satırı oluşturmak için bu listede yinelenir `text` . `{% url %}`"App: Detail" etiketinde "Detail" adlı bir bağımsız değişken olarak kullanılan *App/URLs* içindeki URL deseninin olması gerekir `poll.id` . Bunun etkisi, Docgo 'nun uygun kalıbı kullanarak bir URL oluşturması ve bu bağlantıyı kullanması için kullanılır. Daha sonra bu bit-yazım denetimi, bu URL deseninin istediğiniz zaman ve oluşturulan bağlantıların eşleşmek üzere otomatik olarak güncelleştirilmesini sağlayan anlamına gelir.
 
-`PollDetailView` `PollResultsView` *App/views. Kopyala* içindeki ve sınıfları (burada gösterilmez), `PollListView` bunun yerine türettikleri hariç neredeyse özdeş olarak görünür `DetailView` . İlgili şablonlar, *App/Templates/details.html* ve *App/Templates/results.html* , daha sonra çeşitli HTML denetimlerinde modellerden uygun alanları yerleştirir. *details.html* 'deki benzersiz bir parça, bir yoklama seçeneklerinin, gönderildiğinde/oy URL 'sine gönderi GÖNDERDIĞI bir HTML biçiminde içermalarıdır. Daha önce görüldüğü gibi, bu URL deseninin öğesine yönlendirilmesi gerekir `app.views.vote` ve bu, aşağıdaki şekilde uygulanır ( `poll_id` Bu görünümün yönlendirmesinde kullanılan normal ifadede bir adlandırılmış grup olan bağımsız değişkeni unutmayın):
+`PollDetailView` `PollResultsView` *App/views. Kopyala* içindeki ve sınıfları (burada gösterilmez), `PollListView` bunun yerine türettikleri hariç neredeyse özdeş olarak görünür `DetailView` . İlgili şablonlar, *uygulama/şablonlar/details.html* ve *uygulama/şablonlar/results.html* , daha sonra uygun ALANLARı modellerden çeşitli HTML denetimleri içinde yerleştirir. *details.html* benzersiz bir parça, bir yoklama seçeneklerinin, gönderildiğinde/oy URL 'sine gönderi GÖNDERDIĞI bir HTML biçiminde içermalarıdır. Daha önce görüldüğü gibi, bu URL deseninin öğesine yönlendirilmesi gerekir `app.views.vote` ve bu, aşağıdaki şekilde uygulanır ( `poll_id` Bu görünümün yönlendirmesinde kullanılan normal ifadede bir adlandırılmış grup olan bağımsız değişkeni unutmayın):
 
 ```python
 def vote(request, poll_id):

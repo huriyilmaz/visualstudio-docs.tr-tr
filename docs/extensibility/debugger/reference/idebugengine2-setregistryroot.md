@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 8200b5426e37ed4e6129b3e0cab16b6820ea2950c1a7d0f8d42683ba16328557
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0d2e5d8f9fc435740d536c4bcd33c270763c0be8
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452166"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636318"
 ---
 # <a name="idebugengine2setregistryroot"></a>IDebugEngine2::SetRegistryRoot
 Hata ayıklama altyapısı (DE) için kayıt defteri kökünü ayarlar.

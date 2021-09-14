@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 1023044ebcd765a411aa6edfb358f5f6191ed7028d5e8559fe020e27f7d57ade
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5868dfe761030ed46d71b45cbe646959f8824ece
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121332345"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625190"
 ---
 # <a name="how-to-add-a-parameter-to-a-method"></a>Nasıl: Yönteme parametre ekleme
   Yöntemine bilgi almak veya yöntemden bilgi almak için bir parametre kullanın. Tüm yöntemlerin en az bir parametresi olmalıdır. Oluşturmak istediğiniz yöntem türünü desteklemek için parametre tasarlama hakkında daha fazla bilgi için bkz. İş Verileri Bağlantı [Modeli Tasarlama.](../sharepoint/designing-a-business-data-connectivity-model.md)
@@ -44,7 +44,7 @@ ms.locfileid: "121332345"
 
 4. Parametre **Ekle listesinde Parametre** **Oluştur'a tıklayın.**
 
-     Parametreler düğümünün altında yeni **bir parametre** görüntülenir.
+     Parametreler düğümünün altında yeni **bir parametre** görünür.
 
 5. Menü çubuğunda Özellikler Penceresini **Görüntüle'yi**  >  **seçin.**
 

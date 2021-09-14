@@ -16,14 +16,14 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: b99d9a267b8fb18ec8e238191382d71f558fc3d3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122115609"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625251"
 ---
 # <a name="extensiondataitem-element"></a>ExtensionDataItem öğesi
-  Anahtar/değer biçiminde bir proje SharePoint ilişkili özel veri öğesi. Hem anahtar hem de değer dizeler olmalı.
+  Anahtar/değer biçiminde bir proje SharePoint özel veri öğesi. Hem anahtar hem de değer dizeler olmalı.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,9 +59,9 @@ ms.locfileid: "122115609"
 |Özellik|Değer|
 |-|-|
 |**Ad Alanı**|http: \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Şema adı**|SharePoint Project Öğesi Şeması|
+|**Şema adı**|SharePoint Project Öğe Şeması|
 |**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
-|**Boş olabilir**|Hayır|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)

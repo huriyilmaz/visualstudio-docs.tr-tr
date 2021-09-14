@@ -19,11 +19,11 @@ ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 ms.openlocfilehash: ce1a760bd51a9d3476354cdd63fdcebcad311552
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122085630"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637473"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Senaryo: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme
 
@@ -143,99 +143,99 @@ Ekipler değişikliklerini iade etmeden önce, bağımlılık doğrulama ve otom
 
 ### <a name="identify-changes-to-the-existing-system"></a>Mevcut sistemdeki değişiklikleri tanımla
 
-Şimdi Akşam Yemeği, yeni gereksinimin karşılanma maliyetini tahmin etmek gerekir. Bu, kısmen bu değişikliğin sistemin diğer bölümlerini ne kadar etkileyeceğini etkiler. Bunu anlamalarına yardımcı olmak için Şimdi Akşam Yemeği geliştiricilerinden biri mevcut koddan şu haritaları ve diyagramları oluşturur:
+Şimdi akşam yemeği yeni gereksinimin toplantısının maliyetini tahmin etmelidir. Bu, kısmen bu değişikliğin sistemin diğer bölümlerini ne kadar etkileyeceğini gösterir. Bunu anlamalarına yardımcı olmak için Dinner Now geliştiricilerinden biri mevcut koddan bu haritaları ve diyagramları oluşturur:
 
 |**Harita veya diyagram**|**Diziler**|
 |-|-|
-|*Kod haritası*<br /><br /> Bkz.<br /><br /> - [Çözümleriniz genelinde bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)<br />- [Kod haritalarına göz atma ve yeniden düzenleme](../modeling/browse-and-rearrange-code-maps.md)<br />- [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md)|Kodda bağımlılıklar ve diğer ilişkiler.<br /><br /> Örneğin Şimdi Akşam Yemeği, derlemelere ve bağımlılıklarına genel bir bakış için derleme kod eşlemelerini gözden geçirerek başlayabilir. Bu derlemelerde ad alanlarını ve sınıfları keşfetmek için haritalarda detaya inerler.<br /><br /> Şimdi Akşam Yemeği, kodda belirli alanları ve diğer ilişki türlerini keşfetmek için haritalar da oluşturabilir. İlgi Çözüm Gezgini alanları ve ilişkileri bulmak ve seçmek için Çözüm Gezgini kullanırlar.|
-|*Kod tabanlı sınıf diyagramı*<br /><br /> Bkz. [Nasıl: Projelere Sınıf Diyagramları Ekleme (Sınıf Tasarımcısı)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|Kodda mevcut sınıflar|
+|*Kod eşlemesi*<br /><br /> Bkz.<br /><br /> - [Çözümleriniz genelinde bağımlılıkları eşleyin](../modeling/map-dependencies-across-your-solutions.md)<br />- [Kod haritalarını inceleyin ve yeniden düzenleyin](../modeling/browse-and-rearrange-code-maps.md)<br />- [DGML dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md)|Koddaki bağımlılıklar ve diğer ilişkiler.<br /><br /> Örneğin, şimdi akşam yemeği derlemeler ve bağımlılıklarına genel bir bakış için derleme kodu eşlemelerini inceleyerek başlayabilir. Bu derlemelerdeki ad alanlarını ve sınıfları araştırmak için Eşlemlerde detaya gidebilirler.<br /><br /> Şimdi akşam yemeği, belirli alanların ve koddaki diğer ilişki türlerinin araştırıp haritalarını da oluşturabilir. Bunları ilgilendiren alanları ve ilişkileri bulmak ve seçmek için Çözüm Gezgini kullanırlar.|
+|*Kod tabanlı sınıf diyagramı*<br /><br /> Bkz. [nasıl yapılır: projelere sınıf diyagramları ekleme (sınıf Tasarımcısı)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|Koddaki mevcut sınıflar|
 
- Örneğin geliştirici bir kod haritası oluşturur. Kapsamını, yeni senaryodan etkilenecek alanlara odaklanacak şekilde ayarlar. Bu alanlar haritada seçili ve vurgulanmış:
+ Örneğin, geliştirici bir kod haritası oluşturur. Yeni senaryodan etkilenecek alanlara odaklanmak için kapsamını ayarlar. Bu bölgeler seçili ve haritada vurgulandı:
 
- ![Ad Alanı Bağımlılığı Graph](../modeling/media/namespace_reviewsystem.png)
+ ![Ad alanı bağımlılığı Graph](../modeling/media/namespace_reviewsystem.png)
 
  **Ad alanı kod eşlemesi**
 
- Geliştirici sınıflarını, yöntemlerini ve ilişkilerini görmek için seçilen ad alanlarını genişletmektedir:
+ Geliştirici, sınıflarını, yöntemlerini ve ilişkilerini görmek için seçili ad alanlarını genişletir:
 
  ![Genişletilmiş ad alanı bağımlılık grafiği](../modeling/media/dep_reviewsystem.png)
 
- **Görünür çapraz grup bağlantılarıyla genişletilmiş ad alanı kod eşlemesi**
+ **Görünür çapraz grup bağlantılarıyla genişletilmiş ad alanı kod Haritası**
 
- Geliştirici etkilenen sınıfları ve yöntemleri bulmak için kodu inceler. Her değişikliğin etkilerini siz oluşturken görmek için, her değişiklik sonrasında kod eşlemelerini yeniden üretin. Bkz. [Kodu görselleştirme.](../modeling/visualize-code.md)
+ Geliştirici, etkilenen sınıfları ve yöntemleri bulmak için kodu inceler. Her bir değişikliğin yaptığınız etkileri görmek için her değişiklikten sonra kod haritalarını yeniden oluşturun. Bkz. [Kodu görselleştirme](../modeling/visualize-code.md).
 
- Takım, sistemin bileşenler veya etkileşimler gibi diğer kısımlarında yapılan değişiklikleri açıklamak için bu öğeleri beyaz tahtalara çizebilirsiniz. Ayrıca ayrıntıların her iki ekip tarafından da yakalanıp Visual Studio için aşağıdaki diyagramları aşağıdaki diyagramlarda çizebilirsiniz:
+ Bileşenler veya etkileşimler gibi, sistemin diğer bölümlerine yapılan değişiklikleri anlatmak için, takım bu öğeleri beyaz tahtalara çizebilir. ayrıca, ayrıntılar yakalanabilmesi, yönetilmesi ve her iki ekip tarafından anlaşılabilmesi için Visual Studio aşağıdaki diyagramları da çizebilir:
 
-|**Diyagramları**|**Açıklanır**|
+|**Diyagram**|**Anlatır**|
 |-|-|
-|*Kod tabanlı sınıf diyagramı*<br /><br /> Bkz. [Nasıl: Projelere Sınıf Diyagramları Ekleme (Sınıf Tasarımcısı)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|Kodda mevcut sınıflar.|
+|*Kod tabanlı sınıf diyagramı*<br /><br /> Bkz. [nasıl yapılır: projelere sınıf diyagramları ekleme (sınıf Tasarımcısı)](../ide/class-designer/how-to-add-class-diagrams-to-projects.md).|Koddaki mevcut sınıflar.|
 
-### <a name="keep-code-consistent-with-the-design"></a><a name="ValidatingCode"></a> Tasarımla Kodu Tutarlı Tutma
- Şimdi Akşam Yemeği güncelleştirilmiş kodun tasarımla tutarlı olduğundan emin olmalıdır. Sistemdeki işlev katmanlarını açıklayan, aralarında izin verilen bağımlılıkları belirten ve çözüm yapıtlarını bu katmanlarla ilişkilendirilen bağımlılık diyagramları oluşturabilirler.
+### <a name="keep-code-consistent-with-the-design"></a><a name="ValidatingCode"></a> Kodu tasarımla tutarlı tutun
+ Şimdi akşam yemeği, güncelleştirilmiş kodun tasarımla tutarlı kaldığından emin olmalıdır. Bunlar, sistemdeki işlevlerin katmanlarını tanımlayan bağımlılık diyagramları oluşturur, aralarında izin verilen bağımlılıkları belirtir ve çözüm yapıtları bu katmanlarla ilişkilendirin.
 
-|**Diyagram**|**Açıklanır**|
+|**Diyagram**|**Anlatır**|
 |-|-|
-|*Bağımlılık diyagramı*<br /><br /> Bkz.<br /><br /> - [Kodunuzdan bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Bağımlılık Diyagramları: Başvuru](../modeling/layer-diagrams-reference.md)<br />- [Bağımlılık Diyagramları: Yönergeler](../modeling/layer-diagrams-guidelines.md)<br />- [Bağımlılık diyagramları ile kodu doğrulama](../modeling/validate-code-with-layer-diagrams.md)|Kodun mantıksal mimarisi.<br /><br /> Bağımlılık diyagramı, bir çözümdeki yapıtları düzenleyecek ve Visual Studio olarak adlandırılan soyut gruplara *eşler.* Bu katmanlar, bu yapıtların sistemde gerçekleştirecekleri rolleri, görevleri veya işlevleri tanımlayabilir.<br /><br /> Bağımlılık diyagramları sistemin hedeflenen tasarımını açıklama ve gelişen kodu bu tasarıma göre doğrulama için yararlıdır.<br /><br /> Katmanlar oluşturmak için öğeleri Çözüm Gezgini, kod eşlemeleri, Sınıf Görünümü ve Object Browser'dan sürükleyin. Yeni katmanlar çizmek için araç kutusunu kullanın veya diyagram yüzeyine sağ tıklayın.<br /><br /> Mevcut bağımlılıkları görüntülemek için bağımlılık diyagramı yüzeyine sağ tıklayın ve ardından Bağımlılıkları **Oluştur'a tıklayın.** Hedeflenen bağımlılıkları belirtmek için yeni bağımlılıklar çizin.|
+|*Bağımlılık diyagramı*<br /><br /> Bkz.<br /><br /> - [Kodunuzda bağımlılık diyagramları oluşturma](../modeling/create-layer-diagrams-from-your-code.md)<br />- [Bağımlılık diyagramları: başvuru](../modeling/layer-diagrams-reference.md)<br />- [Bağımlılık diyagramları: yönergeler](../modeling/layer-diagrams-guidelines.md)<br />- [Bağımlılık diyagramları ile kodu doğrulama](../modeling/validate-code-with-layer-diagrams.md)|Kodun mantıksal mimarisi.<br /><br /> bir bağımlılık diyagramı, Visual Studio çözümündeki yapıtları, *katmanlar* adlı soyut gruplar halinde düzenler ve eşler. Bu katmanlar, Bu yapıtların sistemde gerçekleştirdiği rolleri, görevleri veya işlevleri belirler.<br /><br /> Bağımlılık diyagramları, sistemin amaçlanan tasarımını açıklamak ve bu tasarıma karşı gelişen kodu doğrulamak için kullanışlıdır.<br /><br /> Katmanlar oluşturmak için Çözüm Gezgini, kod haritaları, Sınıf Görünümü ve Nesne Tarayıcısı öğelerini sürükleyin. Yeni Katmanlar çizmek için araç kutusunu kullanın veya Diyagram yüzeyine sağ tıklayın.<br /><br /> Mevcut bağımlılıkları görüntülemek için bağımlılık diyagramı yüzeyine sağ tıklayın ve ardından **Bağımlılıklar Oluştur**' a tıklayın. Hedeflenen bağımlılıkları belirtmek için yeni bağımlılıklar çizin.|
 
-Örneğin, aşağıdaki bağımlılık diyagramı katmanlar arasındaki bağımlılıkları ve her katmanla ilişkili yapıt sayısını açıklar:
+Örneğin, aşağıdaki bağımlılık diyagramı katmanlar ve her katmanla ilişkili yapıt sayısı arasındaki bağımlılıkları açıklar:
 
 ![Tümleşik ödeme sisteminin bağımlılık diyagramı](../modeling/media/layer_integrated_dnlucerne.png)
 
- **Bağımlılık Diyagramı**
+ **Bağımlılık diyagramı**
 
-Kod geliştirme sırasında tasarımla çakışmaların oluşmay olduğundan emin olmak için ekipler, kod geliştirme sırasında çalıştırıldık derlemelerde bağımlılık doğrulamayı Azure DevOps. Ayrıca, iade MSBuild doğrulamasını gerektirmek için özel bir özel görev görevi de oluşturabilirler. Doğrulama hatalarını toplamak için derleme raporlarını kullanırlar.
+Tasarım ile çakışmaların kod geliştirme sırasında gerçekleşmediğinden emin olmak için, takımlar Azure DevOps çalıştırılan yapılarda bağımlılık doğrulaması kullanır. ayrıca, iade etme işlemlerinde bağımlılık doğrulaması gerektirmek için özel bir MSBuild görevi oluşturur. Doğrulama hatalarını toplamak için yapı raporları kullanırlar.
 
 Bkz.
 
 - [Görsel tasarımcıyı kullanma](/azure/devops/pipelines/get-started-designer)
 
-- [TFVC geçitli iade](/azure/devops/pipelines/build/triggers)
+- [TFVC geçitli iade etme](/azure/devops/pipelines/build/triggers)
 
-- [Derleme ve sürüm görevleri](/azure/devops/pipelines/tasks/index)
+- [Derleme ve yayınlama görevleri](/azure/devops/pipelines/tasks/index)
 
-### <a name="general-tips-for-creating-and-using-models"></a>Modelleri İpuçları Kullanmaya Genel Uygulama
+### <a name="general-tips-for-creating-and-using-models"></a>modeller oluşturmak ve kullanmak için genel İpuçları
 
-- Çoğu diyagram, satırlarla bağlanan düğümlerden oluşur. Her diyagram türü için araç kutusu farklı türde düğümler ve çizgiler sağlar.
+- Çoğu diyagram satırlara göre bağlanmış düğümlerden oluşur. Her diyagram türü için araç kutusu farklı türlerde düğüm ve satır sağlar.
 
-   Araç kutusunu açmak için Görünüm menüsünde **Araç** Kutusu'na **tıklayın.**
+   Araç kutusunu açmak için, **Görünüm** menüsünden, **araç kutusu**' na tıklayın.
 
-- Bir düğüm oluşturmak için, düğümünü araç kutusundan diyagrama sürükleyin. Belirli düğüm türleri mevcut düğümlere sürüklenmeli. Örneğin, bir bileşen diyagramında var olan bir bileşene yeni bir bağlantı noktası eklenmiştir.
+- Bir düğüm oluşturmak için araç kutusundan diyagrama sürükleyin. Belirli düğüm türleri mevcut düğümlere sürüklenmesi gerekir. Örneğin, bir bileşen diyagramında, var olan bir bileşene yeni bir bağlantı noktası eklenmelidir.
 
-- Bir satır veya bağlantı oluşturmak için araç kutusunda uygun aracı tıklatın, kaynak düğüme tıklayın ve ardından hedef düğüme tıklayın. Bazı satırlar yalnızca belirli düğüm türleri arasında oluşturulabilir. İşaretçiyi olası bir kaynağın veya hedefin üzerine taşıyabilirsiniz, işaretçi bağlantı oluşturıp oluştura olmadığınızı gösterir.
+- Bir hat veya bağlantı oluşturmak için, araç kutusunda ilgili araca tıklayın, kaynak düğümüne tıklayın ve ardından hedef düğüme tıklayın. Bazı satırlar yalnızca belirli düğüm türleri arasında oluşturulabilir. İşaretçiyi olası bir kaynağın veya hedefin üzerine getirdiğinizde, işaretçi bir bağlantı oluşturup oluşturamayacağını gösterir.
 
 ### <a name="plan-and-track-work"></a>İşi planlayın ve izleyin
 
-Visual Studio modelleme diyagramları, işi daha kolay Team Foundation Server şekilde planlamak, yönetmek ve izlemek için Team Foundation Server ile tümleştirilmiştir. Her iki ekip de test çalışmalarını ve geliştirme görevlerini tanımlamak ve çalışmalarını tahmin etmek için modelleri kullanır. Lucerne, iş öğelerini Team Foundation Server öğeleri oluşturur ve bu öğeleri kullanım örnekleri veya bileşenler gibi model öğelerine bağlar. Bu, ilerleme durumlarını izlemelerine ve çalışmalarını kullanıcıların gereksinimlerine göre izlemelerine yardımcı olur. Bu, değişikliklerinin bu gereksinimleri karşılamaya devam ettiğine emin olmaya yardımcı olur.
+Visual Studio modelleme diyagramları, daha kolay çalışmanızı planlamak, yönetmek ve izlemek için Team Foundation Server ile tümleşiktir. Her iki ekip, test çalışmalarını ve geliştirme görevlerini tanımlamak ve bunların çalışmalarını tahmin etmek için modeller kullanır. Lucerne, kullanım durumları veya bileşenleri gibi model öğelerine Team Foundation Server iş öğeleri oluşturur ve bağlar. Bu, bunların ilerlemesini izlemelerine ve çalışmalarını kullanıcıların gereksinimlerine geri izlemesine yardımcı olur. Bu, onların değişikliklerinin bu gereksinimleri karşılamak için devam etmesini sağlamaya yardımcı olur.
 
-Ekipler, çalışmaları ilerledikçe iş öğelerini görevlerine harcadığı zamanı yansıtacak şekilde güncelleştiriyor. Ayrıca, aşağıdaki özellikleri kullanarak çalışmalarını izlep durumlarını Team Foundation Server:
+Çalışmaları ilerledikçe takımlar, iş öğelerini görevlerinde harcadıkları süreyi yansıtacak şekilde güncelleştirir. ayrıca, aşağıdaki Team Foundation Server özelliklerini kullanarak çalışmalarını izler ve bunlarla ilgili durumu raporlar:
 
-- Planlanan *işi beklenen* zamanda tamamlamayacaklarını göstermek için günlük rapor yazma. Hataların ilerlemesini izlemek Team Foundation Server başka benzer raporlar da üretirler.
+- Günlük olarak, planlanan çalışmanın beklenen sürede tamamlanıp tamamlanmayacağını gösteren *raporlar* . bunlar, hataların ilerlemesini izlemek için Team Foundation Server başka benzer raporlar oluşturur.
 
-- Ekibin *iş* yükünü üyeleri Microsoft Excel ve dengelemesine yardımcı olmak için Microsoft Excel çalışma sayfasını kullanan yineleme çalışma sayfası. Bu çalışma sayfası, Team Foundation Server bağlantılıdır ve düzenli ilerleme toplantılarında tartışma odağı sağlar.
+- ekibin üyeleri arasındaki iş yükünü izlemesine ve dengelemeye yardımcı olmak için Microsoft Excel kullanan bir *yineleme çalışma sayfası* . bu çalışma sayfası Team Foundation Server bağlanır ve normal ilerleme toplantıları sırasında tartışmayı odaklamayı sağlar.
 
-- Ekibi *önemli proje* bilgileri Office Project için Office Project kullanan geliştirme panosu.
+- Project Office kullanan bir *geliştirme panosu* , takımın önemli proje bilgileri hakkında bilgi sahibi olmasını sağlar.
 
 Bkz.
 
-- [Çevik araçlar ve Çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true)
+- [Çevik Araçlar ve çevik proje yönetimi hakkında](/azure/devops/boards/backlogs/backlogs-overview?view=vsts&preserve-view=true)
 
 - [Grafikler, panolar ve pencere öğeleri (Azure DevOps Services)](/azure/devops/report/dashboards/overview?view=vsts&preserve-view=true)
 
-- [Project kullanarak biriktirme Project](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
+- [Project kullanarak kapsamınızı ve görevlerinizi oluşturun](/azure/devops/boards/backlogs/office/create-your-backlog-tasks-using-project)
 
-### <a name="test-validate-and-check-in-code"></a><a name="TestValidateCheckInCode"></a> Kodu Test Edin, Doğrula ve Iade Edin
+### <a name="test-validate-and-check-in-code"></a><a name="TestValidateCheckInCode"></a> Kodu test edin, doğrulayın ve Iade edin
 
-Ekipler her görevi tamamlayan ekipler, kodunu kaynak denetimine alır ve unutursa Team Foundation Server anımsatıcılar alır. Ekip Team Foundation Server girişlerini kabul etmeden önce ekipler birim testleri ve bağımlılık doğrulaması çalıştırarak kodu test çalışmalarına ve tasarıma göre doğrular. Derlemeleri, Team Foundation Server testleri ve bağımlılık doğrulamayı düzenli olarak çalıştırmak için Team Foundation Server kullanırlar. Bu, kodun aşağıdaki ölçütlere uygun olduğundan emin olunmanıza yardımcı olur:
+takımlar her görevi tamamlarsa, bunların kodlarını kaynak denetimine denetler ve Team Foundation Server, unutduklarında anımsatıcıları alırlar. Team Foundation Server, iadelerini kabul etmeden önce, ekip, kodu test çalışmalarına ve tasarıma karşı doğrulamak için birim testleri ve bağımlılık doğrulaması çalıştırır. derlemeler, otomatik birim testleri ve bağımlılık doğrulamasını düzenli olarak çalıştırmak için Team Foundation Server kullanırlar. Bu, kodun aşağıdaki ölçütlere uyduğundan emin olmanıza yardımcı olur:
 
-- Çalışır.
+- İşe yarar.
 
 - Daha önce çalışan kodu bozmaz.
 
-- Tasarımla çakışmaz.
+- Tasarım ile çakışmaz.
 
-Şimdi Akşam Yemeği'nin neredeyse hepsi geçerli olduğu için Lucerne'ın yeniden kullanacı olan çok sayıda otomatikleştirilmiş test koleksiyonu vardır. Lucerne ayrıca bu testler üzerinde derlemeler ve yeni işlevleri kapsayacak yeni testler ekleyebilir. Her ikisi de el Visual Studio testleri çalıştırmak için Visual Studio kullanır.
+Şimdi Akşam Yemeği'nin neredeyse hepsi geçerli olduğu için Lucerne'ın yeniden kullanacı olan çok sayıda otomatikleştirilmiş test koleksiyonu vardır. Lucerne ayrıca bu testler üzerinde derlemeler ve yeni işlevleri kapsayacak yeni testler ekleyebilir. Her ikisi de el Visual Studio testleri çalıştırmak için de Visual Studio kullanır.
 
-Kodun tasarıma uygun olduğundan emin olmak için ekipler derlemelerini Azure DevOps doğrulamayı içerecek şekilde yapılandırıyor. Herhangi bir çakışma oluşursa, ayrıntılarla birlikte bir rapor oluşturulur.
+Kodun tasarıma uygun olduğundan emin olmak için ekipler derlemelerini Azure DevOps doğrulamayı içerecek şekilde yapılandırabilir. Herhangi bir çakışma oluşursa, ayrıntılarla birlikte bir rapor oluşturulur.
 
 Bkz.
 
@@ -275,7 +275,7 @@ Kod eşlemeleri, kodda geçerli kuruluşu ve ilişkileri gösterir. Öğeler, *e
 
 - Karmaşıklık alanlarını, doğal bağımlılıkları veya desenleri ya da geliştirmeden yararlanabilecek diğer alanları bulun.
 
-Örneğin Şimdi Akşam Yemeği'nin PaymentProcessing bileşenini güncelleştirme maliyetini tahmin etmek gerekir. Bu, kısmen bu değişikliğin sistemin diğer bölümlerini ne kadar etkileyeceğini etkiler. Bunu anlamalarına yardımcı olmak için Şimdi Akşam Yemeği geliştiricilerinden biri koddan kod haritaları üretir ve kapsam odağında değişiklikten etkilenecek alanlara ayarlar.
+Örneğin, Şimdi Akşam Yemeği'nin PaymentProcessing bileşenini güncelleştirme maliyetini tahmin etmek gerekir. Bu, kısmen bu değişikliğin sistemin diğer bölümlerini ne kadar etkileyeceğini etkiler. Bunu anlamalarına yardımcı olmak için Şimdi Akşam Yemeği geliştiricilerinden biri koddan kod haritaları üretir ve kapsam odağını değişiklikten etkilenecek alanlara ayarlar.
 
 Aşağıdaki harita PaymentProcessing sınıfı ile Şimdi Akşam Yemeği sisteminin seçili görünen diğer bölümleri arasındaki bağımlılıkları gösterir:
 
@@ -295,7 +295,7 @@ Sınıflarını, yöntemlerini ve bağımlılıklarını incelemek için Lucerne
 
 **Lucerne Ödeme Sistemi için kod haritası**
 
-İki ekip de iki sistemi tümleştirecek değişiklikleri belirlemek için birlikte çalışır. Güncelleştirmenin daha kolay olması için bazı kodu yeniden düzenlemeye karar veriyor. PaymentApprover sınıfı DinnerNow.Business ad alanına taşınacak ve bazı yeni yöntemler gerektirecektir. İşlemleri işlemek için Şimdi Akşam Yemeği sınıfları kendi ad alanına sahip olacaktır. Ekipler, çalışmalarını planlamak, düzenlemek ve izlemek için iş öğeleri oluşturabilir ve kullanabilir. İş öğelerini yararlı olduğu model öğelerine bağlar.
+İki ekip de birlikte çalışarak iki sistemi tümleştirecek değişiklikleri belirler. Güncelleştirmenin daha kolay olması için bazı kodu yeniden düzenlemeye karar veriyor. PaymentApprover sınıfı DinnerNow.Business ad alanına taşınacak ve bazı yeni yöntemler gerektirecektir. İşlemleri işlemek için Şimdi Akşam Yemeği sınıfları kendi ad alanına sahip olacaktır. Ekipler, çalışmalarını planlamak, düzenlemek ve izlemek için iş öğeleri oluşturabilir ve kullanabilir. İş öğelerini yararlı olduğu model öğelerine bağlar.
 
 Kod yeniden düzenlendikten sonra ekipler güncelleştirilmiş yapıyı ve ilişkileri görmek için yeni bir kod haritası üretir:
 
@@ -307,7 +307,7 @@ Bu harita PaymentApprover sınıfının artık DinnerNow.Business ad alanı içi
 
 #### <a name="creating-a-code-map"></a>Kod Eşlemesi Oluşturma
 
-- Kaynak koduna hızlı bir genel bakış için, kod eşlemesi oluşturmak için şu adımları izleyin:
+- Kaynak koduna hızlı bir genel bakış için kod eşlemesi oluşturmak için şu adımları izleyin:
 
      Mimari menüsünde **Çözüm** için Kod **Eşlemesi Oluştur'a tıklayın.**
 
@@ -362,7 +362,7 @@ Sınıf diyagramı aşağıdaki önemli özelliklere sahiptir:
 
   - *Arabirim,* bir nesnenin dışarıdan görünen davranışının bir bölümünü tanımlar.
 
-  - Sabit *listesi,* değişmez değer listesini içeren bir sınıflandırıcıdır.
+  - Sabit *listesi, değişmez* değer listesini içeren bir sınıflandırıcıdır.
 
 - *Öznitelikler,* bir sınıflandırıcının her örneğini açıklayan belirli bir *türe sahip değerlerdir.* Sınıflandırıcı türler, bileşenler, kullanım örnekleri ve hatta aktörler için genel bir addır.
 
@@ -376,7 +376,7 @@ Sınıf diyagramı aşağıdaki önemli özelliklere sahiptir:
 
     Toplamaları veya bileşimleri göstermek için bir **ilişkilendirmede** Toplama özelliğini ayarlayın. **Paylaşılan** toplamaları, Bileşik ise **bileşimleri** gösterir.
 
-- *Bağımlılık,* bir sınıflandırıcının tanımının değiştirilmesinin başka bir sınıflandırıcının tanımını değiştir olabileceğini gösterir.
+- *Bağımlılık,* bir sınıflandırıcının tanımının değiştirilmesinin başka bir sınıflandırıcının tanımını değiştire olabileceğini gösterir.
 
 - *Genelleştirme,* belirli bir sınıflandırıcının tanımının bir kısmını genel sınıflandırıcıdan devralınan olduğunu gösterir. Bir *gerçekleştirme,* bir sınıfın bir arabirim tarafından sunulan işlemleri ve öznitelikleri uygulaydığını gösterir.
 
@@ -405,7 +405,7 @@ Mevcut sınıfları keşfetmek ve tartışmak için başlangıç noktası olarak
 |Kod haritası|Mevcut kodda kuruluşu ve ilişkileri görselleştirin.<br /><br /> Sınıfları, ilişkilerini ve yöntemlerini tanımlamak için bu öğeleri gösteren bir kod haritası oluşturun.<br /><br /> Bkz.<br /><br /> - [Çözümleriniz genelinde bağımlılıkları eşleme](../modeling/map-dependencies-across-your-solutions.md)|
 
 ### <a name="describe-the-logical-architecture-dependency-diagrams"></a><a name="DescribeLayers"></a> Mantıksal Mimariyi Açıklama: Bağımlılık Diyagramları
- Bağımlılık diyagramları, çözümünüzdeki yapıtları soyut gruplar veya katmanlar halinde düzenleyerek sistemin mantıksal mimarisini *açıklar.* Artifacts ad alanları, projeler, sınıflar, yöntemler gibi birçok şey olabilir. Katmanlar, yapıtların sistemde gerçekleştirecekleri rolleri veya görevleri temsil edebilir ve açıklar. Kodun tasarımıyla tutarlı kalmasını sağlamak için derlemenize ve iade işlemlerinize katman doğrulaması da dahildir.
+ Bağımlılık diyagramları, çözümünüzdeki yapıtları soyut gruplar veya katmanlar halinde düzenleyerek sistemin mantıksal mimarisini *açıklar.* Artifacts alanları, projeler, sınıflar, yöntemler gibi birçok şey olabilir. Katmanlar, yapıtların sistemde gerçekleştirecekleri rolleri veya görevleri temsil edebilir ve açıklar. Kodun tasarımıyla tutarlı kalmasını sağlamak için derlemenize ve iade işlemlerinize katman doğrulaması da dahildir.
 
  Kodu tasarımla tutarlı tutmak için Şimdi Akşam Yemeği ve Lucerne aşağıdaki bağımlılık diyagramını kullanarak kodu geliştikçe doğrular:
 
@@ -413,9 +413,9 @@ Mevcut sınıfları keşfetmek ve tartışmak için başlangıç noktası olarak
 
  **Şimdi Lucerne ile tümleştirilmiş Akşam Yemeği için bağımlılık diyagramı**
 
- Bu diyagramda yer alan katmanlar, karşılık gelen Şimdi Akşam Yemeği ve Lucerne çözüm yapıtlarına bağlantı sağlar. Örneğin, İş katmanı Artık PaymentApprover sınıfını içeren DinnerNow.Business ad alanına ve üyelerine bağlantı verir. Kaynak Erişimi katmanı, DinnerNow.Data ad alanına bağlantı verir. Oklar veya *bağımlılıklar,* Kaynak Erişimi katmanında işlevselliği yalnızca İş katmanının kullanabileceğini belirtir. Takımlar kodunu güncelleştirdiğinde, çakışmaları ortaya çıktıklarına göre yakalamak ve ekiplerin bunları hemen çözümlemelerine yardımcı olmak için düzenli olarak katman doğrulaması gerçekleştirilir.
+ Bu diyagramda yer alan katmanlar, karşılık gelen Şimdi Akşam Yemeği ve Lucerne çözüm yapıtlarına bağlantı sağlar. Örneğin, İş katmanı Artık PaymentApprover sınıfını içeren DinnerNow.Business ad alanına ve üyelerine bağlantı verir. Kaynak Erişimi katmanı, DinnerNow.Data ad alanına bağlantı verir. Oklar veya *bağımlılıklar,* Kaynak Erişimi katmanında işlevselliği yalnızca İş katmanının kullanabileceğini belirtir. Takımlar kodunu güncelleştirdiğinde, çakışmaları ortaya çıktıklarında yakalamak ve ekiplerin bunları hemen çözümlemelerine yardımcı olmak için düzenli olarak katman doğrulaması gerçekleştirilir.
 
- Ekipler, iki sistemi artımlı olarak tümleştirin ve test etmek için birlikte çalışır. Önce PaymentApprover ve Akşam Yemeği'nin geri kalanının PaymentProcessing'i işlemeden önce başarıyla birlikte çalışa çalışmalarından emin olur.
+ Ekipler, iki sistemi artımlı olarak tümleştirin ve test etmek için birlikte çalışır. Önce PaymentApprover ve Akşam Yemeği'nin geri kalanının PaymentProcessing'i işlemeden önce başarıyla birlikte çalışmasına yardımcı olur.
 
  Aşağıdaki kod haritası, Şimdi Akşam Yemeği ile PaymentApprover arasındaki yeni çağrıları gösterir:
 

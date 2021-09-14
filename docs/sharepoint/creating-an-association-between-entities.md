@@ -25,11 +25,11 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: dcae4af6cb6ef0592f587718afe995a364686351
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122149552"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625310"
 ---
 # <a name="create-an-association-between-entities"></a>Varlıklar arasında ilişki oluşturma
   İlişki oluşturarak İş Verileri Bağlantısı (BDC) modelinize varlıklar arasındaki ilişkileri tanımlayabilirsiniz. Visual Studio, modelin tüketicilerine her ilişkilendirme hakkında bilgi sağlayan yöntemler üretir. Bu yöntemler web bölümleri, SharePoint veya özel uygulamalar tarafından bir kullanıcı arabiriminde (UI) veri ilişkilerini görüntülemek için kullanılabilir.
@@ -40,7 +40,7 @@ ms.locfileid: "122149552"
 ## <a name="association-methods"></a>İlişki yöntemleri
  İş verileri SharePoint bölümleri gibi uygulamalar, bir varlığın hizmet sınıfında yöntemleri çağırarak ilişkilendirmeleri kullanır. Bir varlığın hizmet sınıfına yöntemleri İlişki düzenleyicisinde seçerek **ebilirsiniz.**
 
- Varsayılan olarak, İlişki **düzenleyicisi kaynak** ve hedef varlıklara bir İlişki gezintisi yöntemi ekler. Kaynak varlıkta İlişkili Gezinti yöntemi, tüketicilerin hedef varlıkların listesini almalarını sağlar. Hedef varlığa İlişkili Gezinti yöntemi, tüketicilerin bir hedef varlıkla ilişkili kaynak varlığı almalarını sağlar.
+ Varsayılan olarak, İlişki **düzenleyicisi kaynak** ve hedef varlıklara bir İlişki gezintisi yöntemi ekler. Kaynak varlıkta İlişkili Gezinti yöntemi, tüketicilerin hedef varlıkların listesini almalarını sağlar. Hedef varlığa İlişkili Gezinti yöntemi, tüketicilerin bir hedef varlıkla ilgili kaynak varlığı almalarını sağlar.
 
  Uygun bilgileri almak için bu yöntemlerin her biri için kodu eklemeniz gerekir. Daha gelişmiş senaryoları desteklemek için başka yöntem türleri de ekebilirsiniz. Bu yöntemlerin her biri hakkında daha fazla bilgi için bkz. [Desteklenen İşlemler.](/previous-versions/office/developer/sharepoint-2010/ee557363(v=office.14))
 
@@ -50,7 +50,7 @@ ms.locfileid: "122149552"
 ### <a name="foreign-key-based-association"></a>Yabancı anahtar tabanlı ilişkilendirme
  Kaynak varlıkta bir tanımlayıcıyı hedef varlığa tanımlanan tür tanımlayıcıları ile ilişkilendirilerek yabancı anahtar tabanlı ilişkilendirme oluşturabilirsiniz. Bu ilişki, modelin tüketicilerinin kullanıcıları için gelişmiş bir kullanıcı arabirimi sağlamalarını sağlar. Örneğin, bir Outlook açılan listede müşterileri görüntüleyen bir satış siparişi oluşturmalarını sağlayan bir form; veya kullanıcıların bir müşteri SharePoint açmalarını sağlayan bir satış siparişi listesi.
 
- Yabancı anahtar tabanlı ilişkilendirme oluşturmak için, tanımlayıcıları ve aynı adı ve türü paylaşan tür tanımlayıcılarını ilişkilendirme. Örneğin, bir varlık ve varlık arasında yabancı anahtar tabanlı `Contact` bir ilişki `SalesOrder` oluşturabilirsiniz. Varlık, Finder veya Specific Finder yöntemlerinin dönüş parametresinin bir `SalesOrder` parçası olarak bir tür tanımlayıcısı `ContactID` döndürür. Her iki tür tanımlayıcısı da İlişki **Düzenleyici'de görünür.** Varlık ve varlık arasında yabancı anahtar tabanlı bir `Contact` ilişki oluşturmak için bu alanların her birini yanındaki `SalesOrder` `ContactID` tanımlayıcıyı seçin.
+ Yabancı anahtar tabanlı bir ilişkilendirme oluşturmak için, tanımlayıcıları ve aynı adı ve türü paylaşan tür tanımlayıcılarını ilişkilendirme. Örneğin, bir varlık ve varlık arasında yabancı anahtar tabanlı `Contact` bir ilişki `SalesOrder` oluşturabilirsiniz. Varlık, Finder veya Specific Finder yöntemlerinin dönüş parametresinin bir `SalesOrder` parçası olarak bir tür tanımlayıcısı `ContactID` döndürür. Her iki tür tanımlayıcısı da İlişki **Düzenleyici'de görünür.** Varlık ve varlık arasında yabancı anahtar tabanlı bir `Contact` ilişki oluşturmak için bu alanların her birini yanındaki `SalesOrder` `ContactID` tanımlayıcıyı seçin.
 
  Kaynak varlığın hedef varlık koleksiyonunu döndüren İlişki gezgini yöntemine kod ekleyin. Aşağıdaki örnek, ilgili kişinin satış siparişlerini döndürür.
 

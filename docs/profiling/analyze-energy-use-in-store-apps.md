@@ -18,11 +18,11 @@ ms.workload:
 - uwp
 monikerRange: vs-2017
 ms.openlocfilehash: 475b6dad983bf196a094399da38a644f55170384
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122077042"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625442"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP uygulamalarında enerji kullanımını analiz etme
 
@@ -127,7 +127,7 @@ if (performance && performance.mark) {
 
  ![Enerji profili Oluşturucu rapor sayfası](../profiling/media/energyprof_all.png "ENERGYPROF_All")
 
-|Görüntü|Açıklama|
+|Görüntü|Description|
 |-|-|
 |![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|Rapor dosyası, Report *YYYYMMDD-SSMM*. diagsession olarak adlandırılır. Raporu kaydetmeye karar verirseniz adını değiştirebilirsiniz.|
 |![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Zaman çizelgesi profil oluşturma oturumunun uzunluğunu, uygulama yaşam döngüsü etkinleştirme olaylarını ve kullanıcı işaretlerini gösterir.|
@@ -141,25 +141,25 @@ if (performance && performance.mark) {
  Kaynağın gücünün tepe noktasına vardığı bir alan bulun. Tepe noktası alanını, uygulamanızın işlevselliğiyle ilişkilendirin. Sonra zaman çizelgesindeki denetim çubuklarını kullanarak, zaman çizelgesinde alanı yakınlaştırın. Ağ kullanımına odaklandıysanız, ağ bağlantısının açık olduğu zamanı, uygulamanın bağlantı üzerinden veri aldığı veya aktaran zamana göre karşılaştırmak için **kaynaklar (açık/kapalı)** grafiğinde **ağ** düğümünü genişletin. Ağın gereksiz yere açık kaldığı süreyi azaltmak çok etkili bir optimizasyondur.
 
 ## <a name="optimize-energy-use"></a>Enerji kullanımını en iyi duruma getirme
- Ağ bağlantılarında veri aktarmaktan başka, bağlantı başlatma, sürdürme ve kapatma ile ilgili enerji maliyetleri de vardır. Bazı ağlar veri gönderildikten veya alındıktan sonra, tek bağlantı üzerinden daha fazla veri iletimine olanak sağlamak için bağlantıyı bir süre daha sürdürür. Kaynak **(Aç/Kapat) bölmesini kullanarak,** uygulamanın bağlantıyla nasıl etkileşim kura olduğunu inceleyebilirsiniz.
+ Ağ bağlantılarında veri aktarmaktan başka, bağlantı başlatma, sürdürme ve kapatma ile ilgili enerji maliyetleri de vardır. Bazı ağlar veri gönderildikten veya alındıktan sonra, tek bağlantı üzerinden daha fazla veri iletimine olanak sağlamak için bağlantıyı bir süre daha sürdürür. Uygulamanızın bağlantıyla etkileşim kurma şeklini incelemek için **kaynaklar (açık/kapalı)** bölmesini kullanabilirsiniz.
 
- ![Kaynaklar &#40;&#47;Kapalı&#41; bölmesi](../profiling/media/energyprof_resources.png "ENERGYPROF_Resources")
+ ![&#41; bölmedeki&#47;&#40;kaynaklar](../profiling/media/energyprof_resources.png "ENERGYPROF_Resources")
 
- Ağ **ve** **Veri** Aktarımı çubukları, bir dizi küçük veri paketini aralıklı olarak iletmek için bağlantının uzun süre açık olduğunu gösteriyorsa, verileri toplu olarak göndererek tek bir iletimde gönderebilir, ağın açık olduğu zamanı azaltabilirsiniz ve böylece enerji maliyetlerinden tasarruf edin.
+ **Ağ** ve **veri aktarımı** çubuklar, bir dizi küçük veri paketini zaman zaman aktarmak için bağlantının açık olduğunu gösterip, verileri tek bir iletime göndermek için toplu olarak kullanabilir, ağın açık olduğu süreyi azaltabilir ve böylece enerji maliyetlerini kaydedebilirsiniz.
 
- ![Enerji Tüketimi Özeti bölmesi](../profiling/media/energyprof_summary.png "ENERGYPROF_Summary")
+ ![Enerji tüketimi Özet bölmesi](../profiling/media/energyprof_summary.png "ENERGYPROF_Summary")
 
  Ekranın enerji giderleri üzerinde daha az denetiminiz vardır. Çoğu ekranlar açık renkleri görüntülemek için koyu renklere göre daha fazla enerji harcar ve dolayısıyla koyu renk arka plan kullanmak giderleri azaltmanın bir yoludur.
 
 ## <a name="other-resources"></a>Diğer kaynaklar
 
-- [C#/VB/C++ ve XAML](/previous-versions/windows/apps/hh452985\(v\=win.10\)) için bağlantı durumu ve maliyet yönetimi bölümleri, Windows ağ trafiği maliyetini en aza indirmek için kullanabileceği ağ bağlantısı bilgilerini sağlayan Windows API'lerini açıklar. 
+- [C#/vb/c + + ve XAML](/previous-versions/windows/apps/hh452985\(v\=win.10\)) için **bağlantı durumu ve maliyet yönetimi** bölümleri, uygulamanızın ağ trafiği maliyetini en aza indirmek için kullanabileceği ağ bağlantı bilgilerini sağlayan Windows apı 'lerini anlatmaktadır.
 
-   UWP Visual Studio için sanal simülatör, ağ bilgisi API'lerinin veri bağlantısı özelliklerinin benzetimini sağlar. Bkz. [Simülatörde UWP uygulamaları çalıştırma](../debugger/run-windows-store-apps-in-the-simulator.md)
+   UWP uygulamaları için Visual Studio simülatör, ağ bilgileri apı 'lerinin veri bağlantısı özelliklerinin benzetimini yapmanızı sağlar. Bkz [. simülatörde UWP uygulamaları çalıştırma](../debugger/run-windows-store-apps-in-the-simulator.md)
 
-- **CPU Kullanımı** araçları, verimsiz işlevler nedeniyle CPU yükünü azaltmanıza yardımcı olabilir. Bkz. [CPU kullanımını analiz etme.](../profiling/beginners-guide-to-performance-profiling.md)
+- **CPU kullanım** araçları, verimsiz IŞLEVLERDEN kaynaklanan CPU yükünü azaltmanıza yardımcı olabilir. Bkz. [CPU kullanımını çözümleme](../profiling/beginners-guide-to-performance-profiling.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da profil oluşturma](../profiling/index.yml)
+- [Visual Studio profil oluşturma](../profiling/index.yml)
 - [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

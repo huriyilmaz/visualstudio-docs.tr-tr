@@ -1,6 +1,6 @@
 ---
-title: SharePoint çözümlerinde sorun giderme | Microsoft Docs
-description: Visual Studio hata ayıklayıcısını kullanarak SharePoint çözümlerinde hata ayıkladığınızda oluşabilecek sorun veya uyarıların neler olabileceğini görün.
+title: Sorun SharePoint Çözümleri | Microsoft Docs
+description: Hata ayıklayıcının hata ayıklayıcısını kullanarak SharePoint hangi sorunların veya uyarıların Visual Studio bakın.
 ms.custom: SEO-VS-2020
 ms.date: 02/22/2017
 ms.topic: conceptual
@@ -20,23 +20,23 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: f4c69d5464d23fdeacbb77fb5af7b178a70d2fa5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122156246"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636814"
 ---
-# <a name="troubleshoot-sharepoint-solutions"></a>SharePoint çözümlerinde sorun giderme
-  hata ayıklayıcıyı kullanarak SharePoint çözümlerinde hata ayıkladığınızda aşağıdaki sorunlar veya uyarılar oluşabilir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . daha fazla bilgi için bkz. [SharePoint 2007 iş akışı çözümlerinde hata ayıklama](/previous-versions/bb386166(v=vs.100)).
+# <a name="troubleshoot-sharepoint-solutions"></a>SharePoint sorunlarını giderme
+  Hata ayıklayıcıyı kullanarak çözümlerde hata SharePoint aşağıdaki sorunlar veya [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] uyarılar oluşabilir. Daha fazla bilgi için bkz. [Hata Ayıklama SharePoint 2007 İş Akışı Çözümleri.](/previous-versions/bb386166(v=vs.100))
 
-## <a name="token-restrictions-in-sandboxed-visual-web-parts"></a>Korumalı görsel Web bölümlerinde belirteç kısıtlamaları
- korumalı çözümlerin Visual web bölümleri, SharePoint çalışma zamanının desteklediği $SPUrl gibi standart belirteçleri işleyemez. Sonuç olarak, URL çözümlenmez ve Visual Web Bölümü Tasarımcısında Tasarım görünümü içeriği, aşağıdaki örnekte olduğu gibi doğrudan bir betik öğesinde ifade ederseniz önizleyemezsiniz:
+## <a name="token-restrictions-in-sandboxed-visual-web-parts"></a>Korumalı alan görsel web parçalarında belirteç kısıtlamaları
+ Korumalı alanlı çözümlerde görsel web bölümleri, $SPUrl çalışma zamanının desteklediği SharePoint belirteçleri işleyemektedir. Sonuç olarak URL çözümlenmezse ve görsel web Tasarım görünümü tasarımcısında doğrudan aşağıdaki örnekte olduğu gibi bir betik öğesinde başvurursanız içeriğin önizlemesini görüntülenemiyor:
 
 ```xml
 <script src="<% $SPUrl:~site/SiteAssets/ListOperations.js %>"></script>
 ```
 
- Bu sınırlamaya geçici bir çözüm bulmak ve belirteci çözmek için, değişmez değerleri kullanarak buna başvurun:
+ Bu sınırlamaya bir çözüm olarak belirteci çözmek için değişmez sabitleri kullanarak bu belirteci bakın:
 
 ```xml
 <asp:literal ID="Literal1" runat="server" Text="<script src='" />
@@ -44,14 +44,14 @@ ms.locfileid: "122156246"
 <asp:literal ID="Literal3" runat="server" Text="' type='text/javascript' ></script>" />
 ```
 
-## <a name="character-restrictions-in-names-of-projects-and-project-items"></a>Projelerin ve proje öğelerinin adlarındaki karakter kısıtlamaları
- projelerin ve proje öğelerinin adları yalnızca SharePoint 2010 ' deki bir dağıtım yolunda geçerli olan karakterleri içerebilir. Başka hiçbir karaktere izin verilmez.
+## <a name="character-restrictions-in-names-of-projects-and-project-items"></a>Proje ve proje öğeleri adlarında karakter kısıtlamaları
+ Proje ve proje öğelerinin adları yalnızca 2010'daki bir dağıtım yolunda geçerli SharePoint içerebilir. Başka hiçbir karaktere izin verilmez.
 
 ### <a name="error-message"></a>Hata iletisi
  "Geçersiz karakterler" hata iletisi.
 
 ### <a name="resolution"></a>Çözüm
- SharePoint projelerinin ve proje öğelerinin adları için yalnızca aşağıdaki karakterleri kullanın:
+ Proje ve proje SharePoint adları için yalnızca aşağıdaki karakterleri kullanın:
 
 - Alfasayısal ASCII karakterleri
 
@@ -63,20 +63,20 @@ ms.locfileid: "122156246"
 
 - Alt çizgi (_)
 
-- Kısa çizgi (-)
+- Tire (-)
 
 - Ters eğik çizgi ( \\ )
 
-  Bir proje paketlendiğinde, bir doğrulama kuralı, dağıttığınız her bir dosyanın dağıtım yolu özelliğinin yalnızca bu geçerli karakterleri içerdiğini doğrular.
+  Bir proje paketlenenin doğrulama kuralı, dağıtıyorsanız her dosya için dağıtım yolu özelliğinin yalnızca bu geçerli karakterleri içerdiğini doğrular.
 
-## <a name="errors-when-creating-custom-fields"></a>Özel alanlar oluşturulurken hatalar oluştu
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]' De, özel alanlar xml içinde tanımlanmıştır. Bir alan, belirli bir biçim kullanılarak tanımlanmamışsa veya başvurulmuyorsa hatalar oluşabilir.
+## <a name="errors-when-creating-custom-fields"></a>Özel alanlar oluşturulurken hatalar
+ içinde, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] özel alanlar XML'de tanımlanır. Bir alan tanımlanmamışsa veya belirli bir biçim kullanılarak başvurulmasa hatalar oluşabilir.
 
 ### <a name="error-message"></a>Hata iletisi
- Paketleme zamanında "geçersiz karakterler" hata iletisi.
+ Paketleme zamanında "Geçersiz karakterler" hata iletisi.
 
 ### <a name="resolution"></a>Çözüm
- Aşağıdaki örnekte gösterildiği gibi, bir alan tanımının KIMLIĞI, küme ayracı içine alınmış bir GUID olmalıdır:
+ Bir alan tanımının kimliği, aşağıdaki örnekte de olduğu gibi küme ayraçları ile çevreli bir GUID olması gerekir:
 
 ```xml
 <Field ID="{5744d18c-305e-4632-8bd1-09d134f4830d}"
@@ -87,7 +87,7 @@ ms.locfileid: "122156246"
 </Field>.
 ```
 
- Aşağıdaki örnekte gösterildiği gibi, içerik türündeki bir alan başvurusu, \<FieldRef /> Start/End öğeleri () kullanılarak değil, boş öğe biçimi () kullanılarak tanımlanmalıdır \<FieldRef> \</FieldRef> :
+ Aşağıdaki örnekte de olduğu gibi, içerik türünde bir alan başvurusu, başlangıç/bitiş öğeleri ( ) kullanılarak değil boş öğe biçimi () kullanılarak \<FieldRef /> \<FieldRef> \</FieldRef> tanımlanmalıdır:
 
 ```xml
 <FieldRef ID="{5744d18c-305e-4632-8bd1-09d134f4830d}"
@@ -96,97 +96,97 @@ ms.locfileid: "122156246"
     Required="TRUE"/>
 ```
 
- Alan için kaynak XML hatalı biçimlendirilmişse, geçerli bir XML dosyası veya başka bir sorun ortaya çıkarsa, "dosya ayrıştırılamıyor" hatası oluşur.
+ Alanın kaynak XML'i yanlış biçimlendirilmişse, geçerli bir XML dosyası değilse veya başka bir sorun sergileniyorsa, "Dosya ayrıştırılaamıyor" hatası oluşur.
 
-## <a name="new-non-english-site-definitions-do-not-appear-in-site-creation-page-after-deployment"></a>Yeni Ingilizce olmayan site tanımları dağıtımdan sonra site oluşturma sayfasında görünmez
- ingilizce olmayan bir sürümü (yani, 1033 dışında bir yerel ayar) kullanarak bir site tanımı oluşturup dağıttıktan sonra [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] , **şablon seçim** kutusunda **SharePoint özelleştirmeler** sekmesi görünmez ve yeni site şablonu **yeni SharePoint site** sayfasında görünmez.
+## <a name="new-non-english-site-definitions-do-not-appear-in-site-creation-page-after-deployment"></a>Yeni İngilizce olmayan site tanımları, dağıtımdan sonra site oluşturma sayfasında görünmüyor
+ İngilizce olmayan bir sürümünü [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] (1033   dışında bir yerel ayarları olan bir sürüm) kullanarak bir site tanımı oluşturduktan ve dağıtın, SharePoint Özelleştirmeler sekmesi Şablon Seçimi kutusunda görünmez  ve yeni site şablonu Yeni SharePoint Sitesi sayfasında görünmez.
 
 ### <a name="error-message"></a>Hata iletisi
  Yok.
 
 ### <a name="resolution"></a>Çözüm
- Bu sorun, Webtemp site tanımı yapılandırma dosyası için **yol** özelliğindeki yanlış bir değer nedeniyle oluşur, örneğin *webtemp_SiteDefinitionProject1.xml*. **Dağıtım konumu** altında bulunan webtemp dosyasının **Path** özelliğinde, 1033 değerini uygun yerel ayara değiştirin [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] . Örneğin, Japonca yerel ayarı kullanmak için değeri 1041 olarak değiştirin. Daha fazla bilgi için bkz. [Microsoft tarafından atanan yerel kimlikler](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
+ Bu sorun, webtemp site tanımı yapılandırma dosyasının **Path** özelliğinde bulunan yanlış bir değerden (örneğin, *webtemp_SiteDefinitionProject1.xml.* Dağıtım Konumu altında bulunan webtemp dosyasının  **Path** özelliğinde, 1033'ü uygun yerel değeriyle [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] değiştirir. Örneğin, Bir Japonca yerel ayarlarını kullanmak için değeri 1041 olarak değiştirebilirsiniz. Daha fazla bilgi için [bkz. Microsoft tarafından Atanan Yerel Kimlikler.](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)
 
-## <a name="error-appears-when-a-workflow-project-is-deployed-on-a-clean-system"></a>Bir iş akışı projesi temiz bir sisteme dağıtıldığında hata görüntülenir
- Bu sorun, içinde bir iş akışı projesini [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] temiz bir sistemde dağıtırsanız oluşur. temiz bir sistem, yeni bir yüklemesi olan [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve SharePoint ancak dağıtılmış iş akışı projeleri olmayan bir bilgisayardır.
+## <a name="error-appears-when-a-workflow-project-is-deployed-on-a-clean-system"></a>Temiz bir sistemde bir iş akışı projesi dağıtıldığında hata görünüyor
+ Temiz bir sistemde içinde bir iş akışı projesi [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dağıtırsanız bu sorun oluşur. Temiz bir sistem, yeni yüklemesi ve yüklemesi olan ancak SharePoint iş akışı [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projesine sahip bir bilgisayardır.
 
 ### <a name="error-message"></a>Hata iletisi
- SharePoint listesi bulunamıyor: iş akışı geçmişi.
+ İş Akışı SharePoint listesi bulunamaz.
 
 ### <a name="resolution"></a>Çözüm
- Bu hata, eksik bir Iş akışı geçmiş listesi nedeniyle oluşur. Geliştirme ortamı temiz bir sistem olduğundan, hiçbir iş akışı dağıtılmaz ve Iş akışı geçmiş listesi henüz yok. Bu sorunu çözmek için, iş akışı geçmiş listesinin oluşturulmasına neden olan iş akışı Sihirbazı 'nı yeniden açın.
+ Bu hata, eksik bir İş Akışı Geçmişi listesi nedeniyle oluşur. Geliştirme ortamı temiz bir sistem olduğundan, hiçbir iş akışı dağıtlanmadı ve İş Akışı Geçmişi listesi henüz yok. Bu sorunu çözmek için, İş Akışı Geçmişi listesinin oluşturularak iş akışı sihirbazını yeniden açın.
 
-##### <a name="to-reenter-the-workflow-wizard"></a>İş akışı Sihirbazı 'nı yeniden girmek için
+##### <a name="to-reenter-the-workflow-wizard"></a>İş akışı sihirbazını yeniden girmeden önce
 
-1. **Çözüm Gezgini**, iş akışı düğümünü seçin.
+1. Bu **Çözüm Gezgini** iş akışı düğümünü seçin.
 
-2. **Özellikler** penceresinde, üç nokta düğmesi olan herhangi bir özellikte üç nokta (...) düğmesini seçin.
+2. Özellikler **penceresinde,** üç nokta düğmesi olan herhangi bir özellikte üç nokta (...) düğmesini seçin.
 
-## <a name="user-must-refresh-application-page-in-browser-while-debugging-to-view-updated-image"></a>Kullanıcı, güncelleştirilmiş görüntüyü görüntülemek için hata ayıklarken tarayıcıda uygulama sayfasını yenilemelidir
- görüntü denetimi gibi bir görüntü görüntüleyen bir uygulama sayfası içeren bir SharePoint çözümünde hata ayıklaması yapıyorsanız, [!INCLUDE[TLA2#tla_html](../sharepoint/includes/tla2sharptla-html-md.md)] görüntüde yapılan tüm değişiklikleri göstermek için tarayıcıda sayfayı yenilemeniz gerekir.
+## <a name="user-must-refresh-application-page-in-browser-while-debugging-to-view-updated-image"></a>Güncelleştirilmiş görüntüyü görüntülemek için kullanıcının hata ayıklama sırasında tarayıcıda uygulama sayfasını yenilemesi gerekir
+ Görüntü denetimi gibi bir görüntü görüntüleyen denetime sahip bir uygulama sayfası içeren bir SharePoint çözümünde hata ayıklarsanız, görüntüde yapılan değişiklikleri görüntülemek için tarayıcıda sayfayı [!INCLUDE[TLA2#tla_html](../sharepoint/includes/tla2sharptla-html-md.md)] yenilemeniz gerekir.
 
-## <a name="error-the-site-location-is-not-valid"></a>Hata: site konumu geçerli değil
- Bu sorun, [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] yüklü değilse oluşabilir. ayrıca, **SharePoint özelleştirme sihirbazında** belirtilen SharePoint Web sitesine yönetici erişiminiz yoksa da bu durum oluşabilir.
+## <a name="error-the-site-location-is-not-valid"></a>Hata: Site konumu geçerli değil
+ Yüklü değilse bu [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] sorun oluşabilir. Ayrıca, Özelleştirme Sihirbazı'nda belirtilen SharePoint Web sitesine yönetici erişiminiz SharePoint **oluşabilir.**
 
 ### <a name="error-message"></a>Hata iletisi
 
-- SharePoint site konumu geçerli değil.
+- SharePoint konumu geçerli değil.
 
 ### <a name="resolution"></a>Çözüm
 
 - [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)]yükleyin.
 
-- SharePoint Web sitesine yönetici erişiminiz olduğundan emin olun. daha fazla bilgi için bkz [!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)] . [SharePoint Server 'da hizmet uygulamalarının yöneticilerini atama veya kaldırma](/sharepoint/administration/assign-or-remove-administrators-of-service-applications).
+- Web sitesine yönetici erişimine sahip SharePoint emin olmak. Daha fazla bilgi için, SharePoint Server'da hizmet uygulamalarının yöneticilerini [!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)] atama veya kaldırma çevrimiçi [makalesine bakın.](/sharepoint/administration/assign-or-remove-administrators-of-service-applications)
 
-## <a name="site-deletion-web-event-does-not-occur-in-event-receiver-project"></a>Site silme Web olayı olay alıcısı projesinde gerçekleşmez
- Bir olay alıcı projesi oluşturduğunuzda ve "bir site silinmekte" gibi belirli Web olaylarını seçtiğinizde, olay hiçbir zaman gerçekleşmez.
+## <a name="site-deletion-web-event-does-not-occur-in-event-receiver-project"></a>Olay alıcı projesinde site silme web olayı oluşmaz
+ Bir olay alıcı projesi oluşturma ve "site siliniyor" gibi belirli Web olaylarını seçmeniz durumunda olay hiçbir zaman oluşmaz.
 
 ### <a name="error-message"></a>Hata iletisi
  Yok.
 
 ### <a name="resolution"></a>Çözüm
- Bu sorun, özellik kapsamının site düzeyindeki olayları işlemek için "site" olması gerektiğinden, ancak olay alıcı projeleri için varsayılan özellik kapsamı "Web" ise oluşur. Etkilenen Web olayları şunlardır:
+ Site düzeyindeki olayları işlemek için özellik kapsamının "Site" olması, ancak olay alıcısı projeleri için varsayılan özellik kapsamı "Web" olduğu için bu sorun oluşur. Etkilenen Web olayları:
 
-- Site siliniyor (WebDeleted)
+- Bir site siliniyor (WebDeleting)
 
 - Bir site silindi (WebDeleted)
 
-- Bir site taşınıyor (Webnakliye)
+- Bir site taşınıyor (WebMoving)
 
-- Bir site taşındı (Webtaşınmış)
+- Bir site taşındı (WebMoved)
 
-  Sorunu gidermek için, olay alıcısının Özellik kapsamını aşağıdaki şekilde değiştirin.
+  Sorunu çözmek için olay alıcısının özellik kapsamını aşağıdaki gibi değiştirin.
 
-##### <a name="to-change-the-feature-scope-of-the-event-receiver"></a>Olay alıcısının Özellik kapsamını değiştirmek için
+##### <a name="to-change-the-feature-scope-of-the-event-receiver"></a>Olay alıcısının özellik kapsamını değiştirmek için
 
-1. **Çözüm Gezgini**, **özellik tasarımcısında** olay alıcısının *. feature* dosyasını açın, dosyayı çift tıklatın veya kısayol menüsünü açıp **Aç**' ı seçin.
+1. Bu **Çözüm Gezgini,** dosyaya çift tıklayarak veya kısayol menüsünü  açıp Aç'ı seçerek olay alıcısının *.feature* dosyasını Özellik Tasarımcısı'nda **açın.**
 
-2. **Kapsam**' ın yanındaki oku seçin ve açılan listeden **site** ' yi seçin.
+2. Kapsam'ın yanındaki **oku seçin** ve sonra görüntülenen listeden **Site'yi** seçin.
 
-## <a name="deployment-error-appears-after-the-name-of-an-identifier-in-a-business-data-connectivity-model-project-is-changed"></a>İş verileri bağlantı modeli projesindeki bir tanımlayıcının adı değiştirildikten sonra dağıtım hatası görüntülenir
- Bu sorun, bir Iş verileri bağlantısı (BDC) modelinde bir varlığın tanımlayıcı adını değiştirirseniz ve sonra çözümü dağıtmaya çalıştığınızda oluşur.
+## <a name="deployment-error-appears-after-the-name-of-an-identifier-in-a-business-data-connectivity-model-project-is-changed"></a>İş verileri bağlantı modeli projesinde tanımlayıcının adı değiştirildikten sonra dağıtım hatası görüntülenir
+ Bu sorun, bir İş Verileri Bağlantısı (BDC) modelinde bir varlığın tanımlayıcı adını değiştirir ve ardından çözümü dağıtmayı denersiniz.
 
 ### <a name="error-messages"></a>Hata iletileri
 
-- \<*model name*> aşağıdaki dış Içerik türü etkinleştirme hatalarına sahiptir...
+- \<*model name*> aşağıdaki Dış İçerik Türü etkinleştirme hatalarına sahip ...
 
-- ' ' Adlı IMetadataObject, \<*model name*> ' name ' alanında yinelenen bir değer içeriyor...
+- Adı ' olan IMetadataObject, Alan 'name' içinde yinelenen bir \<*model name*> değere sahip...
 
 ### <a name="resolution"></a>Çözüm
- Bu sorunu çözmek için modeli el ile silin ve ardından çözümü yeniden dağıtın.  Modeli aşağıdaki araçlardan birini kullanarak silebilirsiniz:
+ Bu sorunu çözmek için modeli el ile silin ve çözümü yeniden dağıtın.  Aşağıdaki araçlardan birini kullanarak modeli silebilirsiniz:
 
-- SharePoint 2010 merkezi yönetimi. Daha fazla bilgi için bkz. Microsoft TechNet Web sitesindeki [BDC model yönetimi](/previous-versions/office/sharepoint-server-2010/ee524073(v=office.14)#delete-a-bdc-model) .
+- SharePoint 2010 Merkezi Yönetimi. Daha fazla bilgi için Bkz. Microsoft TechNet Web Model Yönetimi [BDC](/previous-versions/office/sharepoint-server-2010/ee524073(v=office.14)#delete-a-bdc-model) kimlik bilgileri.
 
-- Windows PowerShell. Şu komutu komut istemine yazarak modeli silebilirsiniz: **Remove-SPBusinessDataCatalogModel**. daha fazla bilgi için bkz. Microsoft TechNet Web sitesindeki [genel cmdlet 'ler (SharePoint Server 2010)](/powershell/module/sharepoint-server) .
+- Windows PowerShell. Modeli silmek için komut istemine şu komutu yazabilirsiniz: **Remove-SPBusinessDataCatalogModel**. Daha fazla bilgi için Microsoft TechNet Web sitesinde [genel cmdlet'ler (SharePoint Server 2010)](/powershell/module/sharepoint-server) makalesini ziyaret edin.
 
-## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>SharePoint ' de bir görsel web bölümünü görüntülemeye çalıştığınızda bir hata görüntüleniyor
- Bu sorun, Kullanıcı denetiminin **Path** ÖZELLIĞI "ControlTemplates" dizesiyle başlamamasından oluşur \\ .
+## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>Web'de görsel bir web bölümünü görüntülemeye çalışsanız hata SharePoint
+ Kullanıcı denetimi path **özelliği** "CONTROLTEMPLATES" dizesiyle başlamazsa bu sorun \\ oluşur.
 
 ### <a name="error-messages"></a>Hata iletileri
 
-- '/_CONTROLTEMPLATES/ *\<project name>* / *\<Web Part name>* / *\<user control name>* . ascx ' dosyası yok.
+- '/_CONTROLTEMPLATES/ *\<project name>* / *\<Web Part name>* / *\<user control name>* .ascx' dosyası yok.
 
-- '/' Uygulamasında sunucu hatası.
+- '/' Uygulamasında Sunucu Hatası.
 
 ### <a name="resolution"></a>Çözüm
 

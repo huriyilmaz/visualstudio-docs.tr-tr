@@ -1,6 +1,6 @@
 ---
 title: Node.js ve Express uygulaması oluşturma
-description: Bu öğreticide, Visual Studio Hızlı Web uygulaması çerçevesini kullanarak basit bir Node.js uygulaması oluşturmayı öğrenin.
+description: Bu öğreticide, express web uygulaması çerçevesini kullanarak basit Node.js uygulama oluşturma hakkında bilgi Visual Studio.
 ms.date: 03/25/2021
 ms.custom: vs-acquisition
 ms.topic: tutorial
@@ -14,31 +14,31 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: dae63215fe41d42f1a20f5d21e7c51e05163281a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122027987"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635886"
 ---
-# <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Öğretici: Visual Studio Node.js ve Express uygulaması oluşturma
+# <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Öğretici: Node.js express uygulaması oluşturma Visual Studio
 
-Node.js ve Express kullanarak Visual Studio geliştirmeye yönelik bu öğreticide, basit bir Node.js web uygulaması oluşturur, bazı kodlar ekler, ıde 'nin bazı özelliklerini keşfedebilir ve uygulamayı çalıştırırsınız. 
+Node.js express kullanarak Visual Studio geliştirme için bu öğreticide basit bir Node.js web uygulaması oluşturacak, kod ekser, IDE'nin bazı özelliklerini keşfeder ve uygulamayı çalıştırabilirsiniz. 
 
 ::: moniker range="vs-2017"
 
-Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasına giderek ücretsiz yükleme yapın.
+Henüz yüklemedıysanız Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) indirmeler sayfasına gidin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz yükleme yapın.
+Henüz yüklemedıysanız Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/downloads) indirmeler sayfasına gidin.
 
 ::: moniker-end
 
 ::: moniker range="vs-2022"
 
-henüz 2022 önizleme Visual Studio yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio 2022 önizleme indirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına gidin.
+Visual Studio 2022 Preview'Visual Studio henüz yüklememişsinizdir, ücretsiz olarak yüklemek için [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) indirmeleri sayfasına gidin.
 
 ::: moniker-end
 
@@ -46,92 +46,92 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 > * Node.js projesi oluşturma
 > * Kod ekleme
-> * Kodu düzenlemek için IntelliSense kullanma
+> * IntelliSense kullanarak kodu düzenleme
 > * Uygulamayı çalıştırma
-> * Hata ayıklayıcıda bir kesme noktasına isabet edin
+> * Hata ayıklayıcısında bir kesme noktası isabeti
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-İşte size bazı önemli kavramlara yol açmaya yönelik hızlı bir SSS.
+Bazı temel kavramları size tanıtan hızlı bir SSS'yi burada bulabilirsiniz.
 
 ### <a name="what-is-nodejs"></a>Node.js nedir?
 
-Node.js, JavaScript sunucu tarafını yürüten sunucu tarafı bir JavaScript çalışma zamanı ortamıdır.
+Node.js, JavaScript sunucu tarafı yürüten bir sunucu tarafı JavaScript çalışma zamanı ortamıdır.
 
-### <a name="what-is-npm"></a>NPM nedir?
+### <a name="what-is-npm"></a>npm nedir?
 
-NPM, Node.js için varsayılan paket yöneticisidir. Paket Yöneticisi, programcıların Node.js kitaplıklarının kaynak kodunu yayımlamasını ve paylaşmasını kolaylaştırır ve kitaplıkları yükleme, güncelleştirme ve kaldırmayı basitleştirecek şekilde tasarlanmıştır.
+npm, uygulamanın varsayılan paket Node.js. Paket yöneticisi, programcıların Node.js kitaplıklarının kaynak kodunu yayımlamalarını ve paylaşmalarını kolaylaştırır ve kitaplıkları yüklemeyi, güncelleştirmeyi ve kaldırmayı basitleştirmek için tasarlanmıştır.
 
 ### <a name="what-is-express"></a>Express nedir?
 
-Express, Web uygulamaları oluşturmak için Node.js için sunucu çerçevesi olarak kullanılan bir Web uygulaması çerçevesidir. Express, Pug (eskiden Jade olarak adlandırılır) gibi bir kullanıcı arabirimi oluşturmak için farklı ön uç çerçeveleri seçmenize olanak sağlar. Pug Bu öğreticide kullanılır.
+Express, web uygulamaları derlemek için sunucu çerçevesi olarak Node.js bir web uygulaması çerçevesidir. Express, Pug (eski adı Jade) gibi bir kullanıcı arabirimi oluşturmak için farklı ön uç çerçeveleri seçmenize olanak sağlar. Pug bu öğreticide kullanılır.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Visual Studio yüklü ve Node.js geliştirme iş yüküne sahip olmanız gerekir.
+* Uygulama ve Visual Studio geliştirme iş Node.js gerekir.
 
     ::: moniker range=">=vs-2019"
-    zaten 2019 Visual Studio yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin.
+    Visual Studio 2019'Visual Studio yüklemediyebilirsiniz. [](https://visualstudio.microsoft.com/downloads/)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    zaten 2017 Visual Studio yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin.
+    Visual Studio 2017'de henüz yüklememişsinizdir, ücretsiz Visual Studio [](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
     ::: moniker-end
 
-    iş yükünü yüklemeniz gerekir, ancak zaten Visual Studio sahipseniz **araçlar**  >  **ve özellikler al.**.. ' a giderek Visual Studio Yükleyicisi açan araçlar ' a gidin. **Node.js geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    İş yükünü yüklemeniz gerekse ama zaten yüklüyse Visual Studio Araçları ve Özellikleri Al... 'a  >  **gidin.** Bu işlem Visual Studio Yükleyicisi. Geliştirme iş **Node.js seçin** ve ardından Değiştir'i **seçin.**
 
-    ![VS yükleyicisinde iş yükünü Node.js](../ide/media/quickstart-nodejs-workload.png)
+    ![VS YükleyicisiNode.js de iş yükü yükleme](../ide/media/quickstart-nodejs-workload.png)
 
-* Node.js çalışma zamanının yüklü olması gerekir.
+* Node.js çalışma Node.js gerekir.
 
-    Yüklü değilse, dış çerçeveler ve kitaplıklar ile en iyi uyumluluk için [Node.js](https://nodejs.org/en/download/) Web sitesinden LTS sürümünü yüklemenizi öneririz. Node.js, 32-bit ve 64-bit mimariler için oluşturulmuştur. Node.js iş yüküne dahil olan Visual Studio Node.js araçları her iki sürümü de destekler. Yalnızca bir tane gereklidir ve Node.js yükleyici yalnızca aynı anda yüklü olan birini destekler.
+    Yüklü yoksa, dış çerçeveler ve kitaplıklarla en iyi uyumluluk için [ LTS ](https://nodejs.org/en/download/) sürümünüNode.jsweb sitesinden yüklemenizi öneririz. Node.js 32 bit ve 64 bit mimariler için tasarlanmıştır. Node.js iş yüküne dahil Visual Studio araçları her iki sürümü Node.js destekler. Yalnızca bir tane gereklidir ve Node.js yükleyicisi aynı anda yalnızca birinin yüklü olduğunu destekler.
     
-    genellikle Visual Studio, yüklü Node.js çalışma zamanını otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi Özellikler sayfasındaki yüklü çalışma zamanına başvuracak şekilde yapılandırabilirsiniz (bir proje oluşturduktan sonra proje düğümüne sağ tıklayın, **Özellikler**' i seçin ve **Node.exe yolunu** ayarlayın). Node.js genel bir yüklemesini kullanabilir veya Node.js projelerinizde her birinde yerel yorumlayıcı yolunu belirtebilirsiniz. 
+    Genel olarak, Visual Studio çalışma zamanı otomatik olarak Node.js algılar. Yüklü bir çalışma zamanı algılanmazsa, projenizi özellikler sayfasında yüklü çalışma zamanının başvurusu için yapılandırabilirsiniz (bir proje oluşturduk sonra proje düğümüne sağ tıklayın, Özellikler'i seçin veNode.exe **yolunu ayarlayın).** Bir yerel yorumlayıcının Node.js yüklemesini kullanabilir veya her bir yerel yorumlayıcının yolunu Node.js belirtebilirsiniz. 
 
-    Bu öğretici Node.js 8.10.0 ile test edilmiştir.
+    Bu öğretici 8.10.0 Node.js test edilmiştir.
 
-## <a name="create-a-new-nodejs-project"></a>Yeni bir Node.js projesi oluştur
+## <a name="create-a-new-nodejs-project"></a>Yeni bir Node.js oluşturma
 
-Visual Studio *projedeki* tek bir uygulama için dosyaları yönetir. Proje kaynak kodu, kaynakları ve yapılandırma dosyalarını içerir.
+Visual Studio projesinde tek bir uygulamanın dosyalarını *yönetir.* Proje kaynak kodunu, kaynakları ve yapılandırma dosyalarını içerir.
 
-Bu öğreticide, Node.js ve Express uygulaması için kod içeren basit bir proje ile başlarsınız.
+Bu öğreticide, bir Node.js ve express uygulaması için kod içeren basit bir projeyle başlayacaktır.
 
 1. Visual Studio'yu açın.
 
 1. Yeni bir proje oluşturma.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **ESC** tuşuna basın. **CTRL + Q** yazarak arama kutusunu açın, **Node.js** yazın ve ardından **Yeni temel Azure Node.js Express 4 uygulaması oluştur** (JavaScript) öğesini seçin. Görüntülenen iletişim kutusunda **Oluştur**' u seçin.
+    Başlangıç penceresini kapatmak için **Esc** tuşuna basın. Arama **kutusunu açmak için Ctrl + Q** tuşlarına basın, **Node.js** yazın, ardından Yeni bir Temel Azure Node.js Express 4 uygulaması (JavaScript) oluştur'a tıklayın.  Görüntülenen iletişim kutusunda Oluştur'a **tıklayın.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    üstteki menü çubuğundan **dosya**  >  **yeni**  >  **Project** öğesini seçin. **yeni Project** iletişim kutusunun sol bölmesinde, **JavaScript**' i genişletin ve **Node.js**' ı seçin. Orta bölmede **temel Azure Node.js Express 4 uygulaması**' nı seçin ve ardından **Tamam**' ı seçin.
+    Üst menü çubuğundan Dosya Yeni **Dosya'Project.**  >    >   Yeni Giriş iletişim kutusunun sol **bölmesinde JavaScript Project** genişletin ve ardından Yeni'yiNode.js.  **** Orta bölmede Temel Azure Node.js **Express 4 uygulamasını ve ardından Tamam'ı** **seçin.**
     ::: moniker-end
-    **Temel Azure Node.js Express 4 uygulama** projesi şablonunu görmüyorsanız, **Node.js geliştirme** iş yükünü eklemeniz gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar](#prerequisites).
+    Temel Azure Node.js **Express 4 uygulama** projesi şablonunu görmüyorsanız, uygulama geliştirme iş yükünüNode.js **eklemeniz** gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar.](#prerequisites)
 
-    Visual Studio yeni çözümü oluşturur ve projenizi sağ bölmede açar. *app.js* proje dosyası düzenleyicide açılır (sol bölme).
+    Visual Studio çözümü oluşturur ve projenizi sağ bölmede açar. app.js proje dosyası düzenleyicide (sol bölme) açılır.
 
     ![Proje yapısı](../javascript/media/tutorial-project-structure.png)
 
-    (1), **yeni Project** iletişim kutusunda verdiğiniz adı kullanarak projenizde **kalın** olarak vurgulanır. Dosya sisteminde bu proje, proje klasörünüzdeki bir *. njsproj* dosyası tarafından temsil edilir. Projeye sağ tıklayıp **Özellikler**' i seçerek projeyle ilişkili özellikleri ve ortam değişkenlerini ayarlayabilirsiniz. Proje dosyası Node.js proje kaynağında özel değişiklikler yapmadığından, diğer geliştirme araçlarıyla gidiş dönüşü yapabilirsiniz.
+    (1) Yeni  Çalışma Alanı iletişim kutusunda verdiği ad kullanılarak projeniz kalın **Project** vurgulanır. Dosya sisteminde, bu proje proje klasörünüzdeki *bir .njsproj* dosyasıyla temsil edildi. Projeye sağ tıklar ve Özellikler'i seçerek projeyle ilişkili özellikleri ve ortam değişkenlerini **ayarlayın.** Proje dosyası proje kaynağında özel değişiklikler yapmay olduğundan, diğer geliştirme araçlarıyla Node.js yapabilirsiniz.
 
-    (2) en üst düzeyde, varsayılan olarak projenizle aynı ada sahip olan bir çözümdür. Disk üzerinde *. sln* dosyası tarafından temsil edilen bir çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
+    (2) En üst düzeyde varsayılan olarak projenizin adıyla aynı adı alan bir çözümdür. Diskte bir *.sln dosyasıyla temsil* edilen çözüm, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
 
-    (3) NPM düğümü yüklü NPM paketlerini gösterir. Bir iletişim kutusu kullanarak NPM paketlerini aramak ve yüklemek için NPM düğümüne sağ tıklayabilir veya *package.js* ' deki ayarları ve NPM düğümündeki sağ tıklama seçenekleri ' ni kullanarak paketleri yükleyebilir ve güncelleştirebilirsiniz.
+    (3) npm düğümü yüklü npm paketlerini gösterir. npm paketlerini bir iletişim kutusu kullanarak aramak ve yüklemek için npm düğümüne sağ tıklar veya *package.json'daki* ayarları kullanarak paketleri yükleyebilir ve güncelleştirin ve npm düğümünde sağ tıklayın.
 
-    (4) *package.json* , NPM tarafından yerel olarak yüklenen paketler için paket bağımlılıklarını ve paket sürümlerini yönetmek üzere kullanılan bir dosyadır. Daha fazla bilgi için bkz. [NPM paketlerini yönetme](../javascript/npm-package-management.md).
+    (4) *package.json,* npm tarafından yerel olarak yüklenmiş paketlerin paket bağımlılıklarını ve paket sürümlerini yönetmek için kullanılan bir dosyadır. Daha fazla bilgi için [bkz. Npm paketlerini yönetme.](../javascript/npm-package-management.md)
 
-    (5) *app.js* gibi Project dosyalar proje düğümünün altında görünür. *app.js* , proje başlangıç dosyasıdır ve bu nedenle **kalın** olarak görünür. Başlangıç dosyasını projedeki bir dosyaya sağ tıklayıp **Node.js başlangıç dosyası olarak ayarla**' yı seçerek ayarlayabilirsiniz.
+    (5) Project gibi *app.js* proje düğümü altında gösterir. *app.js* proje başlangıç dosyasıdır ve bu nedenle kalın olarak **gösterilir.** Proje içinde bir dosyaya sağ tıklar ve Başlangıç dosyası olarak ayarla'Node.js **başlangıç dosyasını ayarlayın.**
 
-1. **NPM** düğümünü açın ve tüm gerekli NPM paketlerinin mevcut olduğundan emin olun.
+1. **npm düğümünü** açın ve tüm gerekli npm paketlerinin mevcut olduğundan emin olun.
 
-    Herhangi bir paket eksikse (ünlem işareti simgesi), **NPM** düğümüne sağ tıklayıp **NPM paketlerini yükleyebilirsiniz**' i seçebilirsiniz.
+    Herhangi bir paket eksikse (ünlem işareti simgesi), **npm** düğümüne sağ tıklar ve Npm Paketlerini **Yükle'yi seçebilirsiniz.**
 
 ## <a name="add-some-code"></a>Kod ekleme
 
-Uygulama ön uç JavaScript çerçevesi için Pug kullanır. Pug, HTML 'ye derlenen basit biçimlendirme kodunu kullanır. (Pug, *app.js* içinde Görünüm altyapısı olarak ayarlanır. *app.js* içinde görünüm altyapısını ayarlayan kod `app.set('view engine', 'pug');` .)
+Uygulama, ön uç JavaScript çerçevesi için Pug kullanır. Pug, HTML'ye derlenmiş basit işaretleme kodunu kullanır. (Pug, 'de görünüm altyapısı *app.js.* içinde görünüm altyapısını ayar *app.js* `app.set('view engine', 'pug');` kodudur.)
 
-1. Çözüm Gezgini (sağ bölme) menüsünde, görünümler klasörünü açın ve *index. Pug* öğesini açın.
+1. Bu Çözüm Gezgini (sağ bölme) görünümler klasörünü ve ardından *index.pug'yi açın.*
 
-1. İçeriği aşağıdaki biçimlendirme ile değiştirin.
+1. İçeriği aşağıdaki işaretlemeyle değiştirin.
 
     ```js
     extends layout
@@ -153,11 +153,11 @@ Uygulama ön uç JavaScript çerçevesi için Pug kullanır. Pug, HTML 'ye derle
       a: img(id='myImage' height='200' width='200' src='')
     ```
 
-    Yukarıdaki kod, bir başlık ve hoş geldiniz iletisiyle bir HTML sayfasını dinamik olarak oluşturmak için kullanılır. Sayfada Ayrıca bir düğmeye bastığınızda değişen bir görüntüyü görüntüleyen kod de yer alır.
+    Yukarıdaki kod, bir başlık ve karşılama iletisiyle dinamik olarak HTML sayfası oluşturmak için kullanılır. Sayfa, bir düğmeye her bastığınızda değişir bir görüntü görüntülemek için kod da içerir.
 
-1. Yollar klasöründe *index.js* açın.
+1. routes klasöründe *index.js.*
 
-1. Çağrısının önüne aşağıdaki kodu ekleyin `router.get` :
+1. çağrısının önce aşağıdaki kodu `router.get` ekleyin:
 
     ```js
     var getData = function () {
@@ -170,9 +170,9 @@ Uygulama ön uç JavaScript çerçevesi için Pug kullanır. Pug, HTML 'ye derle
     }
     ````
 
-    Bu kod, dinamik olarak oluşturulan HTML sayfasına geçirdiğiniz bir veri nesnesi oluşturur.
+    Bu kod, dinamik olarak oluşturulan HTML sayfasına aktaran bir veri nesnesi oluşturur.
 
-1. `router.get`İşlev çağrısını aşağıdaki kodla değiştirin:
+1. İşlev `router.get` çağrısını aşağıdaki kodla değiştirin:
 
     ```js
     router.get('/', function (req, res) {
@@ -180,31 +180,31 @@ Uygulama ön uç JavaScript çerçevesi için Pug kullanır. Pug, HTML 'ye derle
     });
     ```
 
-    Yukarıdaki kod, Express yönlendirici nesnesini kullanarak geçerli sayfayı ayarlar ve sayfayı, başlık ve veri nesnesini sayfaya geçirerek oluşturur. *İndex. Pug* dosyası, *index.js* çalıştığında yüklenecek sayfa olarak belirtilir. *index.js* , *app.js* kodunda varsayılan yol olarak yapılandırılır (gösterilmez).
+    Yukarıdaki kod, Express yönlendirici nesnesini kullanarak geçerli sayfayı ayarlar ve sayfayı işler ve başlığı ve veri nesnesini sayfaya iletir. *Index.pug* dosyası burada, bir dosya çalıştırılamazken yük *index.js* belirtilir. *index.js* kodda varsayılan yol olarak *app.js* (gösterilmez) yapılandırılır.
 
-    Visual Studio çeşitli özelliklerini göstermek için, içeren kod satırında bir bilinçli hatası vardır `res.render` . Uygulamanın çalıştırılabilmesi için sonraki bölümde yaptığınız hatayı çözmeniz gerekir.
+    Uygulamanın çeşitli Visual Studio göstermek için, içeren kod sırasında kasıtlı bir hata `res.render` vardır. Uygulamanın çalışması için önce hatayı düzeltmelisiniz. Bunu bir sonraki bölümde yapacaksınız.
 
 ## <a name="use-intellisense"></a>IntelliSense kullanma
 
-ıntellisense, kod yazarken size yardımcı olan bir Visual Studio aracıdır.
+IntelliSense, Visual Studio yardımcı olan bir araçtır.
 
-1. *index.js* içinde, içeren kod satırına gidin `res.render` .
+1. Bu *index.js*, içeren kod satırına `res.render` gidin.
 
-1. İmlecinizi dizenin arkasına koyun `data` , yazın `: get` ve IntelliSense `getData` kodda daha önce tanımlanan işlevi gösterir. `getData` öğesini seçin.
+1. İmlecinizi `data` dize, tür ve IntelliSense'in altına yerleştirdikten sonra `: get` `getData` kodda daha önce tanımlanan işlev gösterilir. `getData` öğesini seçin.
 
     ![IntelliSense kullanma](../javascript/media/tutorial-nodejs-intellisense.png)
 
-1. Bir işlev çağrısı yapmak için ayraçları ekleyin `getData()` .
+1. Parantezleri işlev çağrısı yapmak için `getData()` ekleyin.
 
-1. Önce virgül ( `,` ) işareti kaldırın `"data"` ve ifadede yeşil söz dizimi vurgulamasını görürsünüz. Söz dizimi vurgulamanın üzerine gelin.
+1. Önce virgül ( `,` ) kaldırıyor `"data"` ve ifadede yeşil söz dizimi vurgusu görüyorsunuz. Söz dizimi vurgulamanın üzerine gelin.
 
-    ![Sözdizimi görüntüleme hatası](../javascript/media/tutorial-nodejs-syntax-checking.png)
+    ![Söz dizimi hatasını görüntüleme](../javascript/media/tutorial-nodejs-syntax-checking.png)
 
     Bu iletinin son satırı, JavaScript yorumlayıcının virgül ( ) beklendiğini size `,` söyler.
 
 1. Alt bölmede Hata Listesi **sekmesine tıklayın ve** bildirilen **sorunların türü olarak Derleme + IntelliSense'i** seçin.
 
-    Dosya adı ve satır numarasıyla birlikte uyarı ve açıklamayı da görüyorsunuz.
+    Uyarıyı ve açıklamayı dosya adı ve satır numarasıyla birlikte görüyorsunuz.
 
     ![Hata listesini görüntüleme](../javascript/media/tutorial-nodejs-error-list.png)
 
@@ -226,7 +226,7 @@ Bir sonraki adım, hata ayıklayıcının ekli olduğu Visual Studio çalıştı
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. Hata ayıklama araç çubuğunda Web Sunucusu **(Google Chrome)** veya Web Sunucusu **(Microsoft Edge) gibi hata ayıklama hedefini seçin.**
+1. Hata ayıklama araç çubuğunda Web Sunucusu **(Google Chrome) veya Web Sunucusu (Microsoft Edge)** gibi hata ayıklama **hedefini seçin.**
 
     ::: moniker range=">=vs-2019"
     ![Hata ayıklama hedefini seçin](../javascript/media/vs-2019/tutorial-nodejs-deploy-target.png)
@@ -271,9 +271,9 @@ Bir sonraki adım, hata ayıklayıcının ekli olduğu Visual Studio çalıştı
 
 1. Çıktı **penceresi,** Azure'a dağıtım ilerlemesini gösterir.
 
-    Başarılı bir dağıtımda, uygulamanız Azure App Service. Bir görüntüyü görüntülemek için bir düğmeye tıklayın.
+    Başarılı bir dağıtımda, uygulamanız Azure App Service.'de çalışan bir tarayıcıda açılır. Bir görüntüyü görüntülemek için bir düğmeye tıklayın.
 
-   ![Azure App Service'da çalışan uygulama](../javascript/media/tutorial-nodejs-running-in-azure.png)
+   ![Azure App Service'de çalışan uygulama](../javascript/media/tutorial-nodejs-running-in-azure.png)
 
 Tebrikler, bu öğreticiyi tamamladıktan sonra!
 

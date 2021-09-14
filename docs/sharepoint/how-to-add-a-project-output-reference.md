@@ -1,6 +1,6 @@
 ---
-title: 'nasıl yapılır: Project çıkış başvurusu ekleme | Microsoft Docs'
-description: SharePoint için SharePoint olmayan proje derlemelerini (veya Silverlight projelerinde. xap dosyaları) dağıtabilmeniz için bir proje çıkış başvurusu eklemeyi öğrenin.
+title: 'Nasıl Project: Project Çıkış Başvurusu | Microsoft Docs'
+description: SharePoint olmayan proje derlemelerini (veya Silverlight projelerinde .xap dosyalarını) dağıtıma dağıtmak için bir proje çıkış başvurusu SharePoint.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,32 +18,32 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: d3d7bea0d57e4351fc022b2f4c45ecc1b6423e4b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122060121"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625154"
 ---
-# <a name="how-to-add-a-project-output-reference"></a>Nasıl yapılır: proje çıktı başvurusu ekleme
-  SharePoint için SharePoint olmayan proje derlemelerini (veya. xap dosyalarını Silverlight projelerinde) dağıtmak için, bunları bir proje çıktı başvurusu olarak ekleyin.
+# <a name="how-to-add-a-project-output-reference"></a>Nasıl: Proje çıkış başvurusu ekleme
+  SharePoint olmayan proje derlemelerini (veya Silverlight projelerinde .xap dosyaları) SharePoint proje çıkış başvurusu olarak ekleyin.
 
- Bu işlem iki proje arasında bir çözüm derleme bağımlılığı oluşturur. proje çıkış başvurularıyla ilişkili projeler, SharePoint projesi oluşturulup dağıtılmadan önce oluşturulur.
+ Bu işlem, iki proje arasında bir çözüm derleme bağımlılığı oluşturur. Proje çıkış başvuruları ile ilişkilendirilmiş projeler, proje SharePoint ve dağıtıldıktan önce hazırlar.
 
 ### <a name="to-add-a-project-output-reference"></a>Proje çıkış başvurusu eklemek için
 
-1. en az bir SharePoint projesi ve SharePoint olmayan bir proje içeren bir çözüm yükleyin.
+1. En az bir proje ve bir SharePoint olmayan proje içeren bir SharePoint yükleme.
 
-2. **Çözüm Gezgini**, SharePoint projesi düğümünde bir öğe seçin.
+2. Bu **Çözüm Gezgini** proje düğümünde bir SharePoint seçin.
 
-3. **özellikler** penceresinde, **çıkış başvuruları özelliğini Project** seçin ve yanındaki üç nokta (![ASP.NET Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil tasarımcı elips")) düğmesini seçin.
+3. Özellikler **penceresinde,** **Project** Çıkış Başvuruları özelliğini seçin ve ardından yanındaki üç noktayı (![ASP.NET Mobil](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil Tasarımcı üç nokta")Tasarımcı üç nokta ) düğmesini seçin.
 
-4. **çıkış başvurularını Project** iletişim kutusunda **ekle** düğmesini seçin.
+4. Çıkış **Project iletişim** kutusunda Ekle **düğmesini** seçin.
 
-5. özellikler bölmesinde, **dağıtım türü** özelliğinin yanındaki oku seçin ve ardından başvuru yaptığınız SharePoint olmayan öğe için **elementfile** gibi uygun bir değer seçin.
+5. Özellikler bölmesinde, Dağıtım Türü özelliğinin  yanındaki oku seçin ve ardından başvurdurma dışı öğe için uygun SharePoint uygun bir değer seçin, **örneğin, ElementFile**.
 
-6. **Project ad**' ın yanındaki oku seçin, SharePoint olmayan proje öğesinin adını seçin ve **tamam** düğmesini seçin.
+6. Ad'Project **yanındaki oku** seçin, SharePoint olmayan proje öğesinin adını seçin ve ardından Tamam **düğmesini** seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
-- [Nasıl yapılır: denetimleri güvenli denetim olarak Işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md)
-- [SharePoint çözümleri paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [Proje öğelerinde paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [Nasıllı: Denetimleri güvenli denetimler olarak işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md)
+- [Çözümlerini paket SharePoint dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

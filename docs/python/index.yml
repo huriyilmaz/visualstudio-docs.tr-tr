@@ -11,12 +11,12 @@ metadata:
   author: JoshuaPartlow
   ms.author: joshuapa
   ms.date: 09/23/2019
-  ms.openlocfilehash: 1090d13769d088e7743c5811d25ff5597c56d3addf43da1160033413a2c5e3e3
-  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+  ms.openlocfilehash: e85bdedfc91c949213528718d147a7f1890964ce
+  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/12/2021
-  ms.locfileid: "121353572"
+  ms.lasthandoff: 09/13/2021
+  ms.locfileid: "126625395"
 landingContent:
 - title: Visual Studio’da Python desteği hakkında
   linkLists:

@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl SharePoint: SharePoint Özelliğini | Microsoft Docs'
-description: SharePoint özellikleri Visual Studio. Çözüm Gezgini Gezgini'nde yeni bir özellik SharePoint Tasarımcı açılır.
+title: 'nasıl yapılır: SharePoint özelliğini özelleştirme | Microsoft Docs'
+description: Visual Studio SharePoint özelliklerini özelleştirin. özellik tasarımcısı, Çözüm Gezgini veya SharePoint paket gezgini ' nde yeni bir özellik eklediğinizde açılır.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -20,77 +20,77 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 7f4df055447221d563d4725f2a49ccb826b23002
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122093040"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636913"
 ---
-# <a name="how-to-customize-a-sharepoint-feature"></a>Nasıl SharePoint: SharePoint özelleştirme
-  SharePoint Tasarımcısı'SharePoint kullanarak yeni özellikler oluşturabilir ve Visual Studio. Örneğin, Özellik kapsamını ayarlayın ve diğer Özellikleri bağımlılıklar olarak ekleyin. Varsayılan olarak, Çözüm Gezgini Veya Paket Gezgini'nde yeni bir Özellik SharePoint açılır.
+# <a name="how-to-customize-a-sharepoint-feature"></a>nasıl yapılır: SharePoint özelliğini özelleştirme
+  Visual Studio özellik tasarımcısını kullanarak SharePoint özellikleri oluşturabilir ve özelleştirebilirsiniz. Örneğin, özellik kapsamını ayarlayabilir ve diğer özellikleri bağımlılıklar olarak ekleyebilirsiniz. varsayılan olarak, Çözüm Gezgini veya SharePoint paket gezgini ' nde yeni bir özellik eklediğinizde özellik tasarımcısı açılır.
 
-## <a name="opening-the-feature-designer"></a>Özellik Tasarımcısını Açma
- Özellik Tasarımcısı'SharePoint proje öğelerini bir Özellik'e ekleyebilir veya kaldırabilirsiniz.
+## <a name="opening-the-feature-designer"></a>Özellik tasarımcısını açma
+ özellik tasarımcısını kullanarak bir özelliğe SharePoint proje öğeleri ekleyebilir veya kaldırabilirsiniz.
 
-#### <a name="to-open-the-feature-designer"></a>Özellik Tasarımcısını açmak için
+#### <a name="to-open-the-feature-designer"></a>Özellik tasarımcısını açmak için
 
-1. Bu **Çözüm Gezgini** Özellikler'i **genişletin.**
+1. **Çözüm Gezgini**, **Özellikler**' i genişletin.
 
-2. *Feature1* öğesini çift tıklatın veya Feature1 öğesinin kısayol menüsünü açın ve ardından *Özellik1'i* Görünüm Tasarımcısı.
+2. *Özellik1* öğesini çift tıklatın veya *özellik1* öğesi için kısayol menüsünü açın ve ardından **Tasarımcı görüntüle**' yi seçin.
 
 ## <a name="view-the-packaged-manifest-file"></a>Paketlenmiş bildirim dosyasını görüntüleme
- Özellik Tasarımcısı'nda Özellik ( veya ) için paketlenmiş bildirim dosyasını değiştirebilir ve *feature.xml.* Ardından, bu dosyanın XML kodunu Visual Studio.
+ Özelliği için paketlenmiş bildirim dosyasını değiştirmek ve oluşturmak için özellik tasarımcısını kullanabilirsiniz (*feature.xml*). Ardından, bu dosya için XML kodunu Visual Studio görüntüleyebilirsiniz.
 
 #### <a name="to-view-the-packaged-manifest-file"></a>Paketlenmiş bildirim dosyasını görüntülemek için
 
-1. Özellik **Tasarımcısı'nda** Bildirim **sekmesini** seçin.
+1. **Özellik tasarımcısında**, **bildirim** sekmesini seçin.
 
-#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Paket bildirim dosyasını Çözüm Gezgini kullanarak görüntülemek için
+#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Çözüm Gezgini kullanarak paketlenmiş bildirim dosyasını görüntülemek için
 
-1. Bu **Çözüm Gezgini,** Tüm Dosyaları **Göster simgesini** seçin.
+1. **Çözüm Gezgini**, **tüm dosyaları göster** simgesini seçin.
 
-2. Özellikler'i genişletin, FeatureName'i genişletin, FeatureName.feature'i genişletin ve.Template.xmlaçın. *\<FeatureName>*
+2. Özellikler ' i genişletin, ÖzellikAdı ' nı genişletin, FeatureName. feature öğesini genişletin ve ardından *\<FeatureName> . Template.xml* dosyasını açın.
 
     > [!NOTE]
-    > Özellik şablonu bildirimi XML dosyasını açsanız, dosyalar otomatik olarak doğrulanır ve Hata Listesi penceresinde görünen uyarılar yoksayılabilir.
+    > Özellik şablonu bildirim XML dosyasını açtığınızda, dosyalar otomatik olarak onaylanır ve Hata Listesi penceresinde görüntülenen uyarılar yoksayılabilir.
 
 ## <a name="change-the-manifest-template"></a>Bildirim şablonunu değiştirme
- Xml Düzenleyicisi'nde veya Bildirim Şablonu bölmesindeKimlik bildirimi Visual Studio XML kodunu değiştirebilirsiniz. XML kodunda yapılan tüm değişiklikler Özellik için paketlenmiş bildirim dosyasıyla birleştirilir. Örneğin, bir Özellik özelliğini özelleştirmek için bildirim şablonunu değiştirmek istiyor olabilir.
+ özellik bildirim dosyasının xml kodunu Visual Studio xml düzenleyicisinde veya bildirim şablonu bölmesinde değiştirebilirsiniz. XML kodunda yapılan tüm değişiklikler, özelliği için paketlenmiş bildirim dosyası ile birleştirilir. Örneğin, bir özellik özelliğini özelleştirmek için bildirim şablonunu değiştirmek isteyebilirsiniz.
 
-#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML Düzenleyicisi'ni kullanarak bildirim şablonunu değiştirmek için
+#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML düzenleyicisini kullanarak bildirim şablonunu değiştirme
 
-1. Özellik **Tasarımcısı'nda** Bildirim **sekmesini seçin,** Seçenekleri Düzenle düğümünü **genişletin** ve ardından XML Düzenleyicisi'nde **Aç bağlantısını** seçin.
+1. **Özellik tasarımcısında**, **bildirim** sekmesini seçin, **düzenleme SEÇENEKLERI** düğümünü genişletin ve ardından **XML Düzenleyicisi 'nde aç** bağlantısını seçin.
 
-     XML'de yapılan değişiklikler paketlenmiş bildirim dosyasıyla birleştirilir.
+     XML üzerinde yapılan değişiklikler paketlenmiş bildirim dosyası ile birleştirilir.
 
-#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>Bildirim Şablonu bölmesini kullanarak bildirim şablonunu değiştirmek için
+#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>Bildirim şablonu bölmesini kullanarak bildirim şablonunu değiştirme
 
-1. Özellik **Tasarımcısı'nda** Bildirim **sekmesini** seçin,  Seçenekleri Düzenle düğümünü genişletin ve bildirim şablonu bölmesinde görüntülenen XML'i ayarlayın.
+1. **Özellik tasarımcısında**, **bildirim** sekmesini seçin, **düzenleme seçenekleri** düğümünü genişletin ve ardından bildirim şablonu bölmesinde görüntülenen xml 'yi değiştirin.
 
-     XML'de yapılan değişiklikler, **Paketlenmiş Bildirim Önizleme bölmesinde** görüntülenir.
+     XML üzerinde yapılan değişiklikler, **paketlenmiş bildirim bölmesinin önizlemesinde** görüntülenir.
 
-## <a name="overwrite-the-packaged-manifest-file"></a>Paketlenmiş bildirim dosyasının üzerine yazma
- Özellik Tasarımcısı'nın devre dışı bırakılabilir ve *feature.xml* oluşturabilirsiniz. Bu yordamı ilk kez gerçekleştirin, Özellik Tasarımcısı'nda geçerli ayarlar Özellik şablonu XML dosyasına kaydedilir. Ardından XML kodunu değiştirebilir veya üzerine yazabilirsiniz.
+## <a name="overwrite-the-packaged-manifest-file"></a>Paketlenmiş bildirim dosyasının üzerine yaz
+ Özellik tasarımcısını devre dışı bırakabilir ve *feature.xml* dosyasını el ile oluşturabilirsiniz. Bu yordamı ilk yaptığınızda, özellik tasarımcısında geçerli ayarlar özellik şablonu XML dosyasına kaydedilir. Ardından, XML kodunu değiştirebilir veya üzerine yazabilirsiniz.
 
 > [!NOTE]
-> Özellik Tasarımcısı devre dışı SharePoint xml dosyasına proje öğeleri ekler veya kaldırırsanız, bu proje öğeleri paketlanmaz.
+> özellik tasarımcısı devre dışı bırakıldığında XML dosyasında SharePoint proje öğeleri ekler veya kaldırırsanız, bu proje öğeleri paketlenmez.
 
 #### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>Tasarımcıyı devre dışı bırakarak paketlenmiş bildirim dosyasının üzerine yazmak için
 
-1. Özellik **Tasarımcısı'nda** Bildirim **sekmesini** seçin.
+1. **Özellik tasarımcısında**, **bildirim** sekmesini seçin.
 
-2. Seçenekleri **Düzenle düğümünü** genişletin, XML düzenleyicisinde **Oluşturulan XML'in** üzerine yaz ve bildirimi düzenle bağlantısını ve ardından Evet **düğmesini** seçin.
+2. **Düzenleme seçenekleri** düğümünü GENIŞLETIN, **XML DÜZENLEYICISI bağlantısında oluşturulan XML üzerine yaz ve bildirimi Düzenle** ' yi seçin ve ardından **Evet** düğmesini seçin.
 
-     Şablon, geçerli paketlenmiş bildirim dosyasıyla güncelleştirilir.
+     Şablon, geçerli paketlenmiş bildirim dosyası ile güncelleştirilir.
 
-## <a name="enable-the-feature-designer"></a>Özellik Tasarımcısını Etkinleştirme
- Özellik Tasarımcısı'nın yeniden etkinleştirebileceğiniz  gibi,feature.xmlözelleştirebilirsiniz.
+## <a name="enable-the-feature-designer"></a>Özellik tasarımcısını etkinleştirin
+ *feature.xml* dosyasını özelleştirmek Için özellik tasarımcısını yeniden etkinleştirebilirsiniz.
 
 #### <a name="to-re-enable-the-designer"></a>Tasarımcıyı yeniden etkinleştirmek için
 
-1. Özellik **Tasarımcısı'nda** Bildirim **düzenlemelerini at'ı seçin ve tasarımcı bağlantısını yeniden etkinleştirin** ve ardından Evet **düğmesini** seçin.
+1. **Özellik tasarımcısında**, **atma bildirimi düzenlemelerini seçin ve tasarımcı bağlantısını yeniden etkinleştirin** ve ardından **Evet** düğmesini seçin.
 
-2. Şablon özgün metinle yenilenir ve XML'de yapılan tüm değişiklikler kaybolur.
+2. Şablon orijinal metinle yenilenir ve XML üzerinde yapılan değişiklikler kaybedilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Dağıtım çözümlerini SharePoint dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [SharePoint çözümleri paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

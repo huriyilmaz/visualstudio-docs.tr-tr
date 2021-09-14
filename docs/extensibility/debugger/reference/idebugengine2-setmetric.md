@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, ölçüm olarak bilinen bir kayıt defteri değerini ayarlar.
-title: 'IDebugEngine2:: SetMetric | Microsoft Docs'
+description: Bu yöntem, ölçüm olarak bilinen bir kayıt defteri değeri ayarlar.
+title: IDebugEngine2::SetMetric | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6af1b13fb48f29140ccb5a76f944c48909246a34
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122035247"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636321"
 ---
 # <a name="idebugengine2setmetric"></a>IDebugEngine2::SetMetric
-Bu yöntem, ölçüm olarak bilinen bir kayıt defteri değerini ayarlar.
+Bu yöntem, ölçüm olarak bilinen bir kayıt defteri değeri ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +45,16 @@ int SetMetric(
 
 ## <a name="parameters"></a>Parametreler
 `pszMetric`\
-'ndaki Ölçüm adı.
+[in] Ölçüm adı.
 
 `varValue`\
-'ndaki Ölçüm değerini belirtir.
+[in] Ölçüm değerini belirtir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Ölçüm, bir hata ayıklama altyapısının davranışını değiştirmek veya desteklenen işlevselliği tanıtmak için kullanılan bir kayıt defteri değeridir. Bu yöntem, çağrıyı [hata ayıklama işlevi Için SDK yardımcılarını](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) uygun biçimine iletebilir `SetMetric` .
+ Ölçüm, hata ayıklama altyapısının davranışını değiştirmek veya desteklenen işlevleri tanıtacak şekilde kullanılan bir kayıt defteri değeridir. Bu yöntem, çağrıyı Hata Ayıklama işlevi olan [SDK Yardımcıları'nın uygun biçimine](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) iletebilirsiniz. `SetMetric`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fe002ad7e29b29f516d147c605d8808e7fe10b2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122157000"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637078"
 ---
 # <a name="timeline-caret"></a>Zaman çizelgesi çizgisi
 Yürütülen iş parçacığı kesiminin zaman çizelgesinde bir nokta seçerek üzerinde bir Zaman Çizelgesi çizgisi görünür. Geçerli yığın sekmesinde görüntülenen çağrı yığını, segmente tıklamış olduğunuz yere zaman içinde en yakın olandır. Giriş imtiyaz, Geçerli sekmesinde görüntülenen çağrı  yığınını örneklendiğinde anında ilişkilendirmek için kullanılır. Caret çağrı yığınının tam konumunu gösterir. Bu, kullanıcının seçili olduğu konuma en yakın çağrı yığınıdır.

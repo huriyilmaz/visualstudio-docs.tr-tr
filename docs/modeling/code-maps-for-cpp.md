@@ -11,15 +11,15 @@ ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 ms.openlocfilehash: 572f0daff0d4ca114f3c718f0334eeced32e42fc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122157572"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625742"
 ---
 # <a name="code-maps-for-c-projects"></a>C++ projeleri için kod eşlemeleri
 
-C++ projeleri için daha eksiksiz eşlemeler oluşturmak için, bu projelerde göz atma bilgileri derleyicisi seçeneğini (**/FR**) ayarlayın. Aksi durumda, bir ileti görüntülenir ve bu seçeneği ayarlamanızı ister. **Tamam'ı seçerseniz,** bu yalnızca geçerli harita için seçeneğini ayarlar. İletiyi sonraki tüm eşlemeler için gizlemeyi seçebilirsiniz.
+C++ projeleri için daha eksiksiz eşlemeler oluşturmak için bu projelerde göz atma bilgileri derleyicisi seçeneğini (**/FR**) ayarlayın. Aksi durumda, bir ileti görüntülenir ve bu seçeneği ayarlamanızı ister. **Tamam'ı seçerseniz,** bu yalnızca geçerli harita için seçeneğini ayarlar. İletiyi sonraki tüm eşlemeler için gizlemeyi seçebilirsiniz.
 
 Visual C++ projeleri içeren bir çözümü açtığınızda, IntelliSense veritabanını güncelleştirmek biraz zaman alabilir. Bu süre boyunca IntelliSense veritabanı güncelleştirilene kadar üst bilgi (*.h veya* ) dosyaları için kod `#include` eşlemeleri oluşturamayabilirsiniz. Visual Studio durum çubuğunda güncelleştirme ilerleme durumunu izleyebilirsiniz.
 
@@ -41,7 +41,7 @@ Bu öğeler C ve C++ kodu için desteklenmiyor:
 
 C ve C++ kodu için kod eşlemeleri oluşturma sırasında bu sorunlar oluşabilir:
 
-|**Sorun**|**Olası nedeni**|**Çözünürlük**|
+|**Sorun**|**Olası nedeni**|**Çözüm**|
 |-|-|-|
 |Kod eşlemesi oluşturulamadı.|Çözümdeki hiçbir proje başarıyla oluşturulmadı.|Oluşan derleme hatalarını düzeltin ve haritayı yeniden üretin.|
 |Visual Studio menüsünden kod eşlemesi oluşturma denemesi yanıt **vermemeye** başladı.|Program veritabanı (.pdb) dosyası bozulmuş olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Çözümü yeniden oluşturun ve tekrar deneyin.|

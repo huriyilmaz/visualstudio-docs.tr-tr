@@ -22,11 +22,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 4722a70c1a298ce16e801a902648f810bb559cd6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122076730"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625430"
 ---
 # <a name="cvwriteflag-function"></a>CvWriteFlag işlevi
 Eşzamanlılık Görselleştiricisi izleme dosyasına bir bayrak yazar.

@@ -11,11 +11,11 @@ ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 ms.openlocfilehash: b0e96a74b56226818c96e049df93dba8b1fa721a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122085552"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637438"
 ---
 # <a name="setting-a-background-image-on-a-diagram"></a>Diyagram Üzerinde Arka Plan Görüntüsü Ayarlama
 görselleştirme ve modelleme SDK Visual Studio, özel kod kullanarak oluşturulan tasarımcı için arka plan görüntüsünü ayarlayabilirsiniz.

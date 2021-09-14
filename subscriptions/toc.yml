@@ -180,6 +180,8 @@
               href: assign-license-bulk.md
             - name: Özel abonelikler atama
               href: assign-guid.md
+        - name: Abonelikleri yeni sözleşmelere taşıyın
+          href: migrate-subscriptions.md
         - name: Abonelikleri düzenleme
           href: edit-license.md
         - name: Abonelikleri silme

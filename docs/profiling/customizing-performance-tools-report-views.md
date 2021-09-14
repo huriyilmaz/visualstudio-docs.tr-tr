@@ -16,11 +16,11 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 46d91c15fb43a735856e537fe09c94ba33aa439a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122136332"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637185"
 ---
 # <a name="customize-performance-tools-report-views"></a>Performans araçları rapor görünümlerini özelleştirme
 Bu bölümde, Profil Oluşturma Araçları ile oluşturulan raporların nasıl özelleştirileceği ele alınmaktadır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .

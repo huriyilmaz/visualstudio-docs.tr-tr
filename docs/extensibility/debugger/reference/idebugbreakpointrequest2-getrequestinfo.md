@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 17221f1ac28ff3f0f7e587b78900ee3ece83b713
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122064636"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636449"
 ---
 # <a name="idebugbreakpointrequest2getrequestinfo"></a>IDebugBreakpointRequest2::GetRequestInfo
 Bu kesme noktası isteğini açıklayan kesme noktası isteği bilgilerini alır.
@@ -45,7 +45,7 @@ int GetRequestInfo(
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-[in] Parametrede hangi alanların [doldurulması BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) bir numaralandırılan `pBPRequestInfo` bayrakların birleşimi.
+[in] Parametrede hangi alanların [doldurulacaklarını](../../../extensibility/debugger/reference/bpreqi-fields.md) belirleyen BPREQI_FIELDS bayrağının bir `pBPRequestInfo` birleşimi.
 
 `pBPRequestInfo`\
 [out] Kesme [noktası BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) açıklamasıyla doldurulacak uygulama yapısını belirtir.

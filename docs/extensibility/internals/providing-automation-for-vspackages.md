@@ -15,11 +15,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: b7432ed87b5ff633f9f295f9805eeafb9a0d50b7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122028910"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636073"
 ---
 # <a name="providing-automation-for-vspackages"></a>VSPackage’lar için Otomasyon Sağlama
 VSPackages için Otomasyon sağlamanın iki ana yolu vardır: VSPackage 'a özgü nesneler uygulayarak ve standart otomasyon nesnelerini uygulayarak. Genellikle, bu, ortamın otomasyon modelini genişletmek için birlikte kullanılır.

@@ -1,6 +1,6 @@
 ---
-title: Çeşitli Dosyalar Project | Microsoft Docs
-description: Bir Visual Studio projesinde dosyaları açmak için kullanılan iki düzenleyici türü ve kullanılacak düzenleyicinin belirlenmesinde projenin rolü hakkında bilgi öğrenin.
+title: Çeşitli dosyalar Project | Microsoft Docs
+description: Visual Studio projesindeki dosyaları açmak için kullanılabilecek iki düzenleyici türü hakkında bilgi edinin ve hangi düzenleyiciyi kullanacağınızı belirleyen proje rolü.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,26 +17,26 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: ff3643d3a1f2d48b0fac071f57738d73055529e7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122057258"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636193"
 ---
 # <a name="miscellaneous-files-project"></a>Çeşitli Dosyalar Projesi
-Kullanıcı proje öğelerini açtığında, IDE Çözümdeki herhangi bir projenin üyesi olan öğelerden herhangi birini Çeşitli Dosyalar projesine atar.
+Bir kullanıcı proje öğelerini açtığında, IDE çeşitli dosyalar projesine bir çözümdeki projelerin üyesi olmayan tüm öğeleri atar.
 
- Projeler, kullanıcı bir proje öğesini açtığında hangi düzenleyicinin kullanılı olduğunu belirlemede önemli bir rol oynar. Proje, projeye özgü bir düzenleyici veya standart bir düzenleyici kullanarak belirli dosyaları açmak için tasar kullanılabilir.
+ Projeler, bir Kullanıcı bir proje öğesi açtığında hangi düzenleyicinin kullanıldığını belirlemek için önemli bir rol oynar. Bir proje, belirli dosyaları projeye özgü bir düzenleyici veya standart bir düzenleyici kullanılarak açılacak şekilde tasarlanabilir.
 
- Projeye özgü bir düzenleyici genellikle kullanıcının özel bilgiye sahip olması veya projeden özel arabirimler kullanması gerekir. Daha fazla bilgi için, [bkz. How to: Open Project-Specific Editors](../../extensibility/how-to-open-project-specific-editors.md).
+ Projeye özgü bir düzenleyici, genellikle kullanıcının özel bilgiye sahip olmasını veya projeden özel arabirimler kullanmasını gerektirir. Daha fazla bilgi için bkz. [nasıl yapılır: Project-Specific düzenleyicileri açma](../../extensibility/how-to-open-project-specific-editors.md).
 
- Standart düzenleyici herhangi bir projede belirli bir uzantının herhangi bir dosyasını açabilir. Kullanıcı, projeler için metin düzenleyicisi gibi bazı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] standart düzenleyicileri özelleştirilebilir ancak yine de genel karakterini koruyabilirsiniz. Standart düzenleyiciler yöntemi kullanılarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> oluşturulur.
+ Standart bir düzenleyici, herhangi bir projede belirli bir uzantının herhangi bir dosyasını açabilir. Kullanıcı, projeler için metin Düzenleyicisi gibi bazı standart düzenleyicileri özelleştirebilir, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ancak yine de ortak karakterlerini koruyabilir. Standart düzenleyiciler yöntemi kullanılarak oluşturulur <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> .
 
- Çözümde herhangi bir proje, bir proje öğesini açamıyorsa, IDE herhangi bir dosyayı açan Çeşitli Dosyalar projesi adlı özel bir proje sağlar.
+ Çözümdeki hiçbir proje bir proje öğesi açabildiğinden yanıt verirse, IDE, herhangi bir dosyayı açan çeşitli dosyalar projesi adlı özel bir proje sağlar.
 
- Bu özel proje, bir dosyanın proje bağlamı dışında açılmasını sağlar. yönteminin işlemesi sırasında, Çeşitli Dosyalar projesi her zaman çok düşük <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> öncelikli olarak yanıt verir. Bu nedenle, Çeşitli Dosyalar projesi her zaman dosyaları açan herhangi bir yüksek öncelikli projeye yol açar.
+ Bu özel proje, bir dosyanın bir proje bağlamı dışında açılmasını sağlar. Yöntemin işlenmesi sırasında <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> , Miscellaneous Files projesi her zaman çok düşük bir önceliğe sahip olarak yanıt verir. Bu nedenle, çeşitli dosyalar projesi her zaman dosyaları açan daha yüksek öncelikli bir projeye üretir.
 
- Çeşitli Dosyalar projesi, kullanıcının Bunu Yeni Dosyalar iletişim kutusuyla **açıkça Project** gerektirmez. Ayrıca, Çeşitli Dosyalar projesi proje üyelerinin listesini kalıcı olarak yönetmez. Her kullanıcı için en son kullanılan dosyaların listesini kaydetmek için isteğe bağlı bir özellik kullanır.
+ çeşitli dosyalar projesi, kullanıcının **yeni Project** iletişim kutusuyla açıkça oluşturmasını gerektirmez. Ayrıca, Miscellaneous Files projesi Proje üyelerinin bir listesini kalıcı olarak yönetmez. Her Kullanıcı için en son kullanılan dosyaların listesini kaydetmek için isteğe bağlı bir özellik kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>

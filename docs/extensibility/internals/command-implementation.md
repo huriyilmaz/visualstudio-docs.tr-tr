@@ -1,6 +1,6 @@
 ---
-title: Komut uygulama | Microsoft Docs
-description: Visual Studio 'de komut uygulaması hakkında bilgi edinin, vspackage 'ta bir komut grubunu ayarlama, bir komut ekleme, komutu kaydetme ve uygulamayı uygulama hakkında bilgi edinin.
+title: Komut Uygulama | Microsoft Docs
+description: Visual Studio'de komut uygulaması, VSPackage'da komut grubu ayarlama, buna komut ekleme, komutu kaydetme ve uygulama hakkında bilgi.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,25 +14,25 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 76cb43ec2df05480563f0f7f70e1e4fbecbf44c2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122095029"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636225"
 ---
-# <a name="command-implementation"></a>Komut uygulama
-Bir VSPackage içinde bir komut uygulamak için aşağıdaki görevleri gerçekleştirmeniz gerekir:
+# <a name="command-implementation"></a>Komut uygulaması
+VSPackage'da komut uygulamak için aşağıdaki görevleri gerçekleştirmeniz gerekir:
 
-1. *. Vsct* dosyasında, bir komut grubu ayarlayın ve ardından komutunu ekleyin. daha fazla bilgi için bkz. [Visual Studio komut tablosu (. vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).
+1. *.vsct dosyasında* bir komut grubu ayarlayın ve komutu buna ekleyin. Daha fazla bilgi için [bkz. Visual Studio tablosu (.vsct) dosyaları.](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
 
-2. Komutu Visual Studio kaydedin.
+2. Komutunu Visual Studio.
 
-3. Komutunu uygulayın.
+3. komutunu uygulama.
 
-Aşağıdaki bölümlerde komutları kaydetme ve uygulama işlemlerinin nasıl yapılacağı açıklanmaktadır.
+Aşağıdaki bölümlerde, komutları kaydetme ve uygulama açıklanmaktadır.
 
-## <a name="register-commands-with-visual-studio"></a>Komutları Visual Studio Kaydet
- Komutunuz bir menüde yer alıyorsa, öğesini <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> VSPackage 'a eklemeniz ve menünün adı ya da kaynak kimliği değeri olarak kullanmanız gerekir.
+## <a name="register-commands-with-visual-studio"></a>komutlarını Visual Studio
+ Komutunuz bir menüde görünecekse, VSPackage'nıza eklemeniz ve menü adını veya kaynak kimliğini değer <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> olarak kullansanız gerekir.
 
 ```
 [ProvideMenuResource("Menus.ctmenu", 1)]
@@ -42,7 +42,7 @@ Aşağıdaki bölümlerde komutları kaydetme ve uygulama işlemlerinin nasıl y
 
 ```
 
- Ayrıca, komutunu ile kaydetmeniz gerekir <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> . <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A>VSPackage, öğesinden türetildiyse yöntemini kullanarak bu hizmeti alabilirsiniz <xref:Microsoft.VisualStudio.Shell.Package> .
+ Ayrıca, komutunu ile <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> kaydetmelisiniz. VSPackage'nız'dan <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> türetilen yöntemini kullanarak bu hizmeti <xref:Microsoft.VisualStudio.Shell.Package> eldeabilirsiniz.
 
 ```
 OleMenuCommandService mcs = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
@@ -56,43 +56,43 @@ if ( null != mcs )
 
 ```
 
-## <a name="implement-commands"></a>Komutları Uygula
- Komutları uygulamak için çeşitli yollar vardır. Her zaman aynı şekilde görüntülenen ve aynı menüdeki bir komut olan statik bir menü komutu istiyorsanız, <xref:System.ComponentModel.Design.MenuCommand> önceki bölümdeki örneklerde gösterildiği gibi kullanarak komutunu oluşturun. Statik bir komut oluşturmak için, komutu yürütmeden sorumlu bir olay işleyicisi sağlamanız gerekir. Komut her zaman etkin ve görünür olduğundan, durumunu Visual Studio sağlamanız gerekmez. belirli koşullara bağlı olarak bir komutun durumunu değiştirmek istiyorsanız, sınıfının bir örneği olarak komutunu oluşturabilir <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> ve oluşturucusunda, komutun durumu değiştiğinde Visual Studio bildirimi için bir olay işleyicisi sağlayabilirsiniz ve bir `QueryStatus` işleyici sağlayabilirsiniz. Ayrıca <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> , bir komut sınıfının parçası olarak uygulayabilir veya bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> projenin parçası olarak bir komut sağlıyorsanız uygulayabilirsiniz. iki arabirim ve <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> sınıf hepsi, bir komutun durumundaki bir değişikliğin Visual Studio bildiren yöntemlere ve komutun yürütülmesini sağlayan diğer yöntemlere sahiptir.
+## <a name="implement-commands"></a>Komutları uygulama
+ Komutları uygulamanın birkaç yolu vardır. Her zaman aynı şekilde ve aynı menüde görünen bir komut olan statik menü komutunu kullanmak için, önceki bölümdeki örneklerde gösterildiği gibi kullanarak <xref:System.ComponentModel.Design.MenuCommand> komutunu oluşturun. Statik bir komut oluşturmak için, komutu yürütmekle sorumlu bir olay işleyicisi sağlayabilirsiniz. Komut her zaman etkin ve görünür olduğundan, komut için durumunu Visual Studio. Belirli koşullara bağlı olarak bir komutun durumunu değiştirmek için, komutu sınıfın bir örneği olarak oluşturabilir ve oluşturucusu içinde komutu yürütmek için bir olay işleyicisi ve komutun durumu değişse Visual Studio bildirmek için bir işleyici <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> `QueryStatus` sebilirsiniz. Komut sınıfının bir parçası olarak da uygulayabilirsiniz veya bir projenin parçası olarak komut <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> sağlıyorsanız bunu da gerçekleştirebilirsiniz. İki arabirim ve sınıfının hepsinde, bir Visual Studio durumundaki bir değişikliği bildiren yöntemler ve komutun yürütülmesini sağlayan <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> diğer yöntemler vardır.
 
- Komut hizmetine bir komut eklendiğinde, bir komut zincirinden biri olur. Komut için durum bildirimi ve yürütme yöntemlerini uyguladığınızda, yalnızca söz konusu komut için sağlamayı ve diğer tüm durumları zincirdeki diğer komutlara geçirmek için dikkatli olmanız gerekir. komutuna (genellikle döndürerek) geçiş gerçekleştiremezseniz <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> , Visual Studio düzgün şekilde çalışmayı durdurabilir.
+ Komut hizmetine bir komut ekleniyorsa, bir komut zinciri haline gelir. Komut için durum bildirimi ve yürütme yöntemlerini uygulamaya alırken, yalnızca bu komut için sağlamayı ve diğer tüm durumları zincirde diğer komutlara geçirebilirsiniz. komutuna geçemiyorsanız (genellikle <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> döndürerek), Visual Studio çalışmayı durdurabilir.
 
 ## <a name="querystatus-methods"></a>QueryStatus yöntemleri
- <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A>Yöntemini veya yöntemini uygulamadıysanız <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> , komutun ait olduğu komut kümesinin GUID 'ini ve komutun kimliğini denetleyin. Şu yönergeleri izleyin:
+ yöntemini veya yöntemini uygulayıyorsanız, komutun ait olduğu komut kümesi GUID'ini ve komutun <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> kimliğini kontrol edin. Şu yönergeleri izleyin:
 
-- GUID tanınmazsa, her iki yöntemin uygulamanız döndürmelidir <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_UNKNOWNGROUP> .
+- GUID tanınmıyorsa, her iki yöntemden birini uygulamanız dönüş <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_UNKNOWNGROUP> gerekir.
 
-- Her iki yöntemin uygulamanız GUID 'ı tanır ancak komutunu uygulamadıysanız, Yöntemi döndürmelidir <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> .
+- İki yöntemden birini uygulamanız GUID'i tanısa ama komutu uygulamamışsa, yöntemi tarafından dönüş <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> gerekir.
 
-- Her iki yöntemin uygulamanız hem GUID hem de komutunu tanırsa, yöntemi aşağıdaki bayrakları kullanarak her komutun (parametresinde) komut bayrakları alanını ayarlamış olmalıdır `prgCmds` <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> :
+- Herhangi bir yöntemin uygulaması hem GUID'i hem de komutu tanırsa, yöntemi aşağıdaki bayrakları kullanarak her komutun komut bayrakları alanını (parametresinde) `prgCmds` <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> ayarlaması gerekir:
 
-  - `OLECMDF_SUPPORTED`: Komut destekleniyor.
+  - `OLECMDF_SUPPORTED`: Komut de destekler.
 
-  - `OLECMDF_INVISIBLE`: Komut görünür olmamalıdır.
+  - `OLECMDF_INVISIBLE`: Komut görünür durumda olmayacaktır.
 
-  - `OLECMDF_LATCHED`: Komut açık ve işaretli olarak görünüyor.
+  - `OLECMDF_LATCHED`: Komut açık olarak açılır ve denetlendi gibi görünür.
 
-  - `OLECMDF_ENABLED`: Komut etkin.
+  - `OLECMDF_ENABLED`: Komut etkindir.
 
-  - `OLECMDF_DEFHIDEONCTXTMENU`: Kısayol menüsünde görünürse komutun gizlenmesi gerekir.
+  - `OLECMDF_DEFHIDEONCTXTMENU`: Komut bir kısayol menüsünde görünüyorsa gizlenir.
 
-  - `OLECMDF_NINCHED`: Komut bir menü denetleyicisi ve etkin değil, ancak açılan menü listesi boş değil ve hala kullanılabilir. (Bu bayrak nadiren kullanılır.)
+  - `OLECMDF_NINCHED`: Komut bir menü denetleyicisidir ve etkin değildir, ancak açılan menü listesi boş değildir ve hala kullanılabilir durumdadır. (Bu bayrak nadiren kullanılır.)
 
-- Komut *. vsct* dosyasında `TextChanges` bayrağıyla tanımlanmışsa, aşağıdaki parametreleri ayarlayın:
+- Komut *.vsct* dosyasında bayrağıyla `TextChanges` tanımlanmışsa aşağıdaki parametreleri ayarlayın:
 
-  - `rgwz` `pCmdText` Parametresinin öğesini komutun yeni metnine ayarlayın.
+  - parametresinin `rgwz` öğesini `pCmdText` komutun yeni metnine ayarlayın.
 
-  - `cwActual` `pCmdText` Parametresinin öğesini komut dizesinin boyutuna ayarlayın.
+  - parametresinin `cwActual` öğesini `pCmdText` komut dizesinin boyutuna ayarlayın.
 
-Ayrıca, komutunuz Otomasyon işlevlerini işlemek için özel olarak hedeflenmediği takdirde, geçerli bağlamın bir Otomasyon işlevi olmadığından emin olun.
+Ayrıca, komutunuz özellikle otomasyon işlevlerini işlemeye yönelik değilse geçerli bağlamın bir otomasyon işlevi olduğundan emin olun.
 
-Belirli bir komutu destekleistediğinizi belirtmek için döndürün <xref:Microsoft.VisualStudio.VSConstants.S_OK> . Diğer tüm komutlar için döndürün <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> .
+Belirli bir komutu destekle işaret etmek için komutunu geri <xref:Microsoft.VisualStudio.VSConstants.S_OK> yazın. Diğer tüm komutlar için <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> dönüş.
 
-Aşağıdaki örnekte, `QueryStatus` yöntemi önce bağlamın bir Otomasyon işlevi olmadığından emin olur, ardından doğru komut kümesi GUID 'ini ve komut kimliğini bulur. Komutun kendisi etkinleştirilir ve desteklenir olarak ayarlanır. Başka komut desteklenmez.
+Aşağıdaki örnekte, yöntemi önce bağlamın bir otomasyon işlevi olduğundan emin olur, ardından doğru komut kümesi `QueryStatus` GUID'lerini ve komut kimliğini bulur. Komutun kendisi etkin ve destekli olarak ayarlanır. Başka hiçbir komut desteklenmiyor.
 
 ```csharp
 public int QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, IntPtr pCmdText)
@@ -114,9 +114,9 @@ public int QueryStatus(ref Guid pguidCmdGroup, uint cCmds, OLECMD[] prgCmds, Int
 ```
 
 ## <a name="execution-methods"></a>Yürütme yöntemleri
- `Exec`Yönteminin uygulanması metodun uygulamasına benzer `QueryStatus` . İlk olarak, bağlamın bir Otomasyon işlevi olmadığından emin olun. Ardından, hem GUID hem de komut KIMLIĞI için test edin. GUID veya komut KIMLIĞI tanınmazsa, döndürün <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> .
+ Yöntemin `Exec` uygulanması, yönteminin uygulanmasına `QueryStatus` benzer. İlk olarak bağlamın bir otomasyon işlevi olduğundan emin olun. Ardından hem GUID hem de komut kimliği için testte bulundurabilirsiniz. GUID veya komut kimliği tanınmıyorsa, <xref:Microsoft.VisualStudio.OLE.Interop.Constants.OLECMDERR_E_NOTSUPPORTED> yazın.
 
- Komutu işlemek için yürütün ve <xref:Microsoft.VisualStudio.VSConstants.S_OK> yürütme başarılı olursa döndürün. Komut, hata algılama ve bildirimden sorumludur; Bu nedenle, yürütme başarısız olursa bir hata kodu döndürün. Aşağıdaki örnek, yürütme yönteminin nasıl uygulanması gerektiğini gösterir.
+ Komutu işlemek için yürütün ve yürütme <xref:Microsoft.VisualStudio.VSConstants.S_OK> başarılı olursa geri döner. Komutunuz hata algılama ve bildirimden sorumludur; bu nedenle, yürütme başarısız olursa bir hata kodu döndürür. Aşağıdaki örnek, yürütme yönteminin nasıl uygulanması gerektiğini gösteriyor.
 
 ```csharp
 public int Exec(ref Guid pguidCmdGroup, uint nCmdID, uint nCmdexecopt, IntPtr pvaIn, IntPtr pvaOut)
@@ -138,4 +138,4 @@ public int Exec(ref Guid pguidCmdGroup, uint nCmdID, uint nCmdexecopt, IntPtr pv
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [VSPackages Kullanıcı arabirimi öğeleri ekleme](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackage'lar kullanıcı arabirimi öğelerini nasıl ekler?](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

@@ -1,6 +1,6 @@
 ---
 description: Bu olayın konumunu açıklayan kod bağlamını alır.
-title: IDebugCanStopEvent2::GetCodeContext | Microsoft Docs
+title: 'IDebugCanStopEvent2:: GetCodeContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5bdb7f4865174548247c91a5fc5c268ef419af1a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122079850"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636374"
 ---
 # <a name="idebugcanstopevent2getcodecontext"></a>IDebugCanStopEvent2::GetCodeContext
 Bu olayın konumunu açıklayan kod bağlamını alır.
@@ -43,15 +43,15 @@ int GetCodeContext(
 
 ## <a name="parameters"></a>Parametreler
 `ppCodeContext`\
-[out] Geçerli kod [konumunu temsil eden IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesini döndürür.
+dışı Geçerli kod konumunu temsil eden [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Çoğu çalışma zamanı mimarisinde kod bağlamı, bir programın yürütme akışında belirli bir yönergeyi işaret alan bir adres olarak düşünebilirsiniz.
+ Çoğu çalışma zamanı mimarilerinde, bir kod bağlamı, bir programın yürütme akışında belirli bir yönergeyi işaret eden bir adres olarak düşünülebilir.
 
- Kaynak kod satırlarına yönelen belge bağlamını almak için [GetDocumentContext yöntemini çağırmanız](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md) gerekir.
+ Kaynak kodu satırlarına yönelik olan belge bağlamını almak için [GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md) yöntemini çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)

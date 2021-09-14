@@ -1,6 +1,6 @@
 ---
-title: React uygulaması oluşturma
-description: bu öğreticide, Visual Studio React basit bir uygulama oluşturmayı öğrenin.
+title: React oluşturma
+description: Bu öğreticide, bu öğreticide basit bir React uygulaması Visual Studio.
 ms.date: 07/30/2021
 ms.custom: vs-acquisition
 ms.topic: tutorial
@@ -15,58 +15,58 @@ ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
 ms.openlocfilehash: fbf4b68c1f5f82af8af47cda7e21389b14c21bb2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122061460"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635894"
 ---
-# <a name="create-a-react-app"></a>React uygulaması oluşturma
+# <a name="create-a-react-app"></a>React oluşturma
 
-bu 5-10 dakikalık Visual Studio tümleşik geliştirme ortamına (ıde) giriş sırasında basit bir React ön uç web uygulaması oluşturup çalıştırırsınız.
+Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişte, basit bir ön uç web uygulaması React ve çalıştırabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdakilerin yüklü olduğundan emin olun:
 
-- Visual Studio 2022 Preview 2 veya üzeri. ücretsiz olarak yüklemek için [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına gidin.
-- NPM ( [https://www.npmjs.com/](https://www.npmjs.com/) ) 
-- NPX ( [https://www.npmjs.com/package/npx](https://www.npmjs.com/package/npx) )
+- Visual Studio 2022 Preview 2 veya sonraki bir sürümü. Ücretsiz yüklemek [Visual Studio](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
+- npm ( [https://www.npmjs.com/](https://www.npmjs.com/) ) 
+- npx ( [https://www.npmjs.com/package/npx](https://www.npmjs.com/package/npx) )
 
-## <a name="create-your-app"></a>Uygulamanızı oluşturun
+## <a name="create-your-app"></a>Uygulama oluşturma
 
-1. yeni Project iletişim kutusunda **yeni proje oluştur**' u seçin.
+1. Yeni Proje Oluştur Project Yeni proje **oluştur'a seçin.**
 
    :::image type="content" source="media/vs-2022/create-new-project.png" alt-text="Yeni proje oluşturma":::
 
-1. en üstteki arama çubuğunda React arayın ve tercihinize göre **tek başına JavaScript React şablonu** veya **tek başına TypeScript React şablonunu** seçin.
+1. Üst React arama çubuğunda tek başına **JavaScript** React Şablonu veya Tek başına **TypeScript React Şablonu'React** seçin.
 
    :::image type="content" source="media/vs-2022/react-choose-template.png" alt-text="Şablon seçme":::
 
-1. Projenize ve çözümünüze bir ad verin. 
+1. Projenize ve çözümünüze bir ad girin. 
 
-   daha önce tek başına JavaScript React şablonu seçtiyseniz, ek bilgi penceresine geldiğinizde, **boş ASP.NET Web apı 'si için tümleştirme ekle Project** seçeneğini denetlediğinizden emin olun. bu seçenek, bir ASP.NET Core projesi eklenirse ASP.NET Core projesiyle kullanıma abilmesi için React şablonunuza dosya ekler.
+   Daha önce Tek Başına JavaScript React Şablonu'React seçtiyseniz, Ek bilgiler penceresine bakarak Boş Web API'si ASP.NET tümleştirmesi ekle seçeneğini **denetlemeyi Project** olun. Bu seçenek, React bir proje eklenirse ASP.NET Core projeyle bağlanacak şekilde ASP.NET Core ekler.
 
    :::image type="content" source="media/vs-2022/react-additional-info.png" alt-text="Ek bilgi":::
 
-   bu sırada çalışan create-tepki-app komutu, npm install komutunu da çalıştırdığından React projesinin oluşturulması bir süre sonra zaman aldığına lütfen emin olun.
+   Şu anda çalışan create-react-app React npm install komutunu da çalıştıracak olduğundan, React projesinin oluşturulmasının biraz zaman alır
 
 ## <a name="set-the-project-properties"></a>Proje özelliklerini ayarlama
 
-1. Çözüm Gezgini, React projesine sağ tıklayın, **özellikler**' i seçin ve ardından **hata ayıklama** bölümüne gidin.
+1. Bu Çözüm Gezgini, React projesine sağ tıklayın, Özellikler'i **seçin** ve hata ayıklama **bölümüne** gidin.
 
-1. Hata ayıklayıcıyı başlatmak için **launch.js** seçeneğini değiştirin.
+1. Debugger'ı **launch.json seçeneğiyle değiştirebilirsiniz.**
  
-   :::image type="content" source="media/vs-2022/react-choose-debugger.png" alt-text="Hata ayıklayıcıyı seçin (launch.js)":::
+   :::image type="content" source="media/vs-2022/react-choose-debugger.png" alt-text="Hata ayıklayıcısını (launch.json) seçin":::
 
-## <a name="build-your-project"></a>Project oluşturun
+## <a name="build-your-project"></a>Derleme Project
 
-  >  Projeyi derlemek için derleme **Yapı çözümünü** seçin.
+Projeyi   >  **derlemek için Derleme** Çözümü'ne seçin.
 
-## <a name="start-your-project"></a>Project başlatın
+## <a name="start-your-project"></a>Çalışma Project
 
-**F5** tuşuna basın veya pencerenin üst kısmındaki **Başlat** düğmesini seçin. Bir komut istemi görüntülenir:
+**F5 tuşuna** basın **veya** pencerenin üst kısmından Başlat düğmesini seçin. Bir komut istemi görüntülenir:
 
-- Yanıt verme betikleri başlangıç komutunu çalıştıran NPM
+- react-scripts start komutunu çalıştıran npm
 
-sonra, temel React uygulamanın göründüğünü görmeniz gerekir!
+Ardından, temel uygulamanın React görün!

@@ -1,7 +1,7 @@
 ---
-title: Nasıl Sunucu Gezgini |'a SharePoint Düğüm Ekleme Microsoft Docs
+title: 'nasıl yapılır: Sunucu Gezgini için özel SharePoint düğümü ekleme | Microsoft Docs'
 titleSuffix: ''
-description: Uygulamanın içinde SharePoint bir Sunucu Gezgini düğüm Visual Studio. Varsayılan olarak SharePoint ek bileşenler Sunucu Gezgini görüntüler.
+description: Visual Studio Sunucu Gezgini için özel bir SharePoint düğümü ekleyin. varsayılan olarak Sunucu Gezgini görüntülenmeyen ek SharePoint bileşenleri görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,16 +18,16 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 73dac3ba52b31efd55a1c6621b0e32d098bdb997
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122131163"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625203"
 ---
-# <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>Nasıl Sunucu Gezgini'a SharePoint özel bir Sunucu Gezgini
-  Sunucu Gezgini'daki SharePoint düğümü **altına** özel **düğümler Sunucu Gezgini.** Bu özellik, varsayılan olarak SharePoint olarak Sunucu Gezgini **görüntülemek** istediğiniz zaman kullanışlıdır. Daha fazla bilgi için [bkz. SharePoint'de bağlantı düğümünü Sunucu Gezgini.](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+# <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>nasıl yapılır: Sunucu Gezgini için özel SharePoint düğümü ekleme
+  **Sunucu Gezgini** **SharePoint bağlantıları** düğümünün altına özel düğümler ekleyebilirsiniz. bu, varsayılan olarak **Sunucu Gezgini** görüntülenmeyen ek SharePoint bileşenleri göstermek istediğinizde yararlıdır. daha fazla bilgi için bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
- Özel düğüm eklemek için önce yeni düğümü tanımlayan bir sınıf oluşturun. Ardından, düğümü mevcut bir düğümün alt düğümü olarak ekleyen bir uzantı oluşturun.
+ Özel bir düğüm eklemek için ilk olarak yeni düğümü tanımlayan bir sınıf oluşturun. Ardından, düğümü mevcut bir düğümün alt öğesi olarak ekleyen bir uzantı oluşturun.
 
 ### <a name="to-define-the-new-node"></a>Yeni düğümü tanımlamak için
 
@@ -35,71 +35,71 @@ ms.locfileid: "122131163"
 
 2. Aşağıdaki derlemelere başvurular ekleyin:
 
-    - Microsoft.VisualStudio. SharePoint
+    - Microsoft. VisualStudio. SharePoint
 
-    - Microsoft.VisualStudio. SharePoint. Explorer.Extensions
+    - Microsoft. VisualStudio. SharePoint. Explorer. Extensions
 
-    - System.ComponentModel.Composition
+    - System. ComponentModel. Composition
 
-    - System.Drawing
+    - System. Drawing
 
-3. Arabirimi uygulayan bir sınıf <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> oluşturun.
+3. Arabirimini uygulayan bir sınıf oluşturun <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> .
 
 4. Sınıfına aşağıdaki öznitelikleri ekleyin:
 
-    - <xref:System.ComponentModel.Composition.ExportAttribute>. Bu öznitelik, Visual Studio bulmanızı ve yüklemenizi <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> sağlar. Türü <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> öznitelik oluşturucuya ilet.
+    - <xref:System.ComponentModel.Composition.ExportAttribute>. bu öznitelik, Visual Studio uygulamanızı bulmasını ve yüklemesini sağlar <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> . <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider>Türü öznitelik oluşturucusuna geçirin.
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute>. Bir düğüm tanımında, bu öznitelik yeni düğümün dize tanımlayıcısını belirtir. Şirket adı biçimini *kullanmalarını öneririz.* *tüm düğümlerin* benzersiz bir tanımlayıcıya sahip olduğundan emin olmak için düğüm adı.
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute>. Düğüm tanımında, bu öznitelik yeni düğümün dize tanımlayıcısını belirtir. *Şirket adı* biçimini kullanmanızı öneririz. Tüm düğümlerin benzersiz bir tanımlayıcıya sahip olduğundan emin olmak için *düğüm adı* .
 
-5. yöntemi uygulamanıza, yeni düğümün davranışını yapılandırmak için <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider.InitializeType%2A> *typeDefinition* parametresinin üyelerini kullanın. Bu parametre, <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition> arabirimde tanımlanan olaylara erişim sağlayan bir <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents> nesnedir.
+5. <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider.InitializeType%2A>Yöntemi uygulamanızda, yeni düğümün davranışını yapılandırmak Için *typeDefinition* parametresinin üyelerini kullanın. Bu parametre, <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition> arabirimde tanımlanan olaylara erişim sağlayan bir nesnedir <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents> .
 
-     Aşağıdaki kod örneği, yeni bir düğümün nasıl tanımlarını gösterir. Bu örnekte projenizin eklenmiş bir kaynak olarak CustomChildNodeIcon adlı bir simge içerdiği varsaydır.
+     Aşağıdaki kod örneği, nasıl yeni bir düğüm tanımlanacağını göstermektedir. Bu örnekte, projenizin katıştırılmış kaynak olarak CustomChildNodeIcon adlı bir simge içerdiğini varsaymaktadır.
 
      :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb" id="Snippet6":::
      :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs" id="Snippet6":::
 
-### <a name="to-add-the-new-node-as-a-child-of-an-existing-node"></a>Yeni düğümü mevcut bir düğümün alt düğümü olarak eklemek için
+### <a name="to-add-the-new-node-as-a-child-of-an-existing-node"></a>Yeni düğümü var olan bir düğümün alt öğesi olarak eklemek için
 
-1. Düğüm tanımınız ile aynı projede, arabirimini uygulayan bir sınıf <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> oluşturun.
+1. Düğüm tanımınız ile aynı projede, arabirimini uygulayan bir sınıf oluşturun <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> .
 
-2. özniteliğini <xref:System.ComponentModel.Composition.ExportAttribute> sınıfına ekleyin. Bu öznitelik, Visual Studio bulmanızı ve yüklemenizi <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> sağlar. Türü <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> öznitelik oluşturucuya ilet.
+2. <xref:System.ComponentModel.Composition.ExportAttribute>Özniteliğini sınıfına ekleyin. bu öznitelik, Visual Studio uygulamanızı bulmasını ve yüklemesini sağlar <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> . <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension>Türü öznitelik oluşturucusuna geçirin.
 
-3. özniteliğini <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute> sınıfına ekleyin. Bir düğüm uzantısında, bu öznitelik genişletmek istediğiniz düğüm türü için dize tanımlayıcısını belirtir.
+3. <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypeAttribute>Özniteliğini sınıfına ekleyin. Düğüm uzantısında, bu öznitelik genişletmek istediğiniz düğüm türünün dize tanımlayıcısını belirtir.
 
-     Visual Studio tarafından sağlanan yerleşik düğüm türlerini belirtmek için, aşağıdaki numaralama değerlerinden birini öznitelik oluşturucuya iletir:
+     Visual Studio tarafından sağlanmış yerleşik düğüm türlerini belirtmek için aşağıdaki numaralandırma değerlerinden birini öznitelik oluşturucusuna geçirin:
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>: Site bağlantı düğümlerini (site URL'lerini görüntülemekte olan düğümler), site düğümlerini veya içindeki diğer tüm üst düğümleri belirtmek için **Sunucu Gezgini.**
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeTypes>: Site bağlantı düğümlerini (site URL 'Lerini görüntüleyen düğümler), site düğümlerini veya **Sunucu Gezgini** tüm diğer üst düğümleri belirtmek için bu değerleri kullanın.
 
-    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes>: Liste, alan veya içerik türünü temsil eden bir düğüm gibi bir SharePoint sitedeki tek bir bileşeni temsil eden yerleşik düğümlerden birini belirtmek için bu değerleri kullanın.
+    - <xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.ExtensionNodeTypes>: bir listeyi, alanı veya içerik türünü temsil eden bir düğüm gibi bir SharePoint sitesinde tek bir bileşeni temsil eden yerleşik düğümlerden birini belirtmek için bu değerleri kullanın.
 
-4. yöntemi uygulamanıza <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension.Initialize%2A> <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested> parametresinin olayı <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType> işle.
+4. Yöntemi uygulamanızda, <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension.Initialize%2A> <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested> parametresinin olayını işleyin <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeType> .
 
-5. Olay işleyicisinde, yeni düğümü olay bağımsız değişkenleri parametresi tarafından ortaya çıkaran nesnenin alt <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested> <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs.Node%2A> düğüm koleksiyonuna ekleyin.
+5. <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodeChildrenRequested>Olay işleyicisinde, yeni düğümü, <xref:Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs.Node%2A> olay bağımsız değişkenleri parametresi tarafından açığa çıkarılan nesnenin alt düğümler koleksiyonuna ekleyin.
 
-     Aşağıdaki kod örneğinde, yeni düğümün SharePoint site düğümünün alt düğümü olarak nasıl **Sunucu Gezgini.**
+     aşağıdaki kod örneği, yeni düğümün **Sunucu Gezgini** SharePoint site düğümünün bir alt öğesi olarak nasıl ekleneceğini gösterir.
 
      :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb" id="Snippet7":::
      :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs" id="Snippet7":::
 
-## <a name="complete-example"></a>Tam örnek
- Aşağıdaki kod örneği, basit bir düğüm tanımlamak ve bunu bir site düğümünün alt düğümü olarak eklemek için SharePoint kodunu **Sunucu Gezgini.**
+## <a name="complete-example"></a>Örnek Tamam
+ aşağıdaki kod örneği, basit bir düğüm tanımlamak ve bunu **Sunucu Gezgini** SharePoint site düğümünün bir alt öğesi olarak eklemek için tüm kodu sağlar.
 
  :::code language="vb" source="../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb" id="Snippet5":::
  :::code language="csharp" source="../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs" id="Snippet5":::
 
 ## <a name="compiling-the-code"></a>Kod derleme
- Bu örnekte projenizin eklenmiş bir kaynak olarak CustomChildNodeIcon adlı bir simge içerdiği varsaydır. Bu örnek ayrıca aşağıdaki derlemelere başvurular gerektirir:
+ Bu örnekte, projenizin katıştırılmış kaynak olarak CustomChildNodeIcon adlı bir simge içerdiğini varsaymaktadır. Bu örnek ayrıca aşağıdaki derlemelere başvurular gerektirir:
 
-- Microsoft.VisualStudio. SharePoint
+- Microsoft. VisualStudio. SharePoint
 
-- System.ComponentModel.Composition
+- System. ComponentModel. Composition
 
-- System.Drawing
+- System. Drawing
 
 ## <a name="deploy-the-extension"></a>Uzantıyı dağıtma
- Uygulama **uzantısını Sunucu Gezgini,** derleme için bir uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] diğer dosyaları oluşturun. Daha fazla bilgi için [bkz. Visual Studio'de SharePoint Araçları için uzantıları dağıtma.](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+ **Sunucu Gezgini** uzantısını dağıtmak için, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] derleme için BIR uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz diğer dosyalar oluşturun. daha fazla bilgi için bkz. [Visual Studio SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kümedeki SharePoint düğümünü Sunucu Gezgini](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
-- [Nasıl SharePoint: Sunucu Gezgini](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)
-- [Adım adım kılavuz: Web Sunucu Gezgini görüntülemek için uygulamanın süresini genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
+- [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [nasıl yapılır: Sunucu Gezgini SharePoint düğümünü genişletme](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)
+- [İzlenecek yol: Sunucu Gezgini Web bölümlerini görüntüleyecek şekilde genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)

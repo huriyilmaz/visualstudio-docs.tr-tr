@@ -20,11 +20,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 6b697645cbff18ebb7053f1b9facca221de767d0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122128487"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126636689"
 ---
 # <a name="how-to-display-wpf-trace-information"></a>Nasıl Yapılır: WPF İzleme Bilgilerini Görüntüleme
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] , WPF uygulamalarından hata ayıklama izleme bilgilerini alır ve bu bilgileri Çıkış **penceresinde** görüntüler. Hata ayıklama izleme bilgilerini görüntülemek için WPF izlemenin etkinleştirilmesi gerekir.
@@ -47,9 +47,9 @@ ms.locfileid: "122128487"
 
 7. **WPF İzleme Ayarlar** altında, etkinleştirmek istediğiniz ayarlar kategorisine tıklayın (örneğin, **Veri Bağlama).**
 
-     Veri Bağlama'nın yanındaki Ayarlar veya tıklamış olduğunuz **kategoriyi içeren** bir açılan liste denetimi görüntülenir.
+     Veri Bağlama'nın yanındaki Ayarlar veya tıklamış **olduğunuz kategoriyi içeren** bir açılan liste denetimi görüntülenir.
 
-8. Açılan listeye tıklayın ve görmek istediğiniz izleme bilgileri türünü **seçin:** Tüm , **Kritik**, **Hata** **,** Uyarı , **Bilgi** **,** Ayrıntılı veya **ActivityTracing**.
+8. Açılan listeye tıklayın ve görmek istediğiniz izleme bilgileri türünü **seçin:** Tüm , **Kritik**, **Hata** **,** Uyarı , **Bilgi** **,** Ayrıntılı veya **ActivityTracing.**
 
      **Kritik,** yalnızca Kritik olayların izlemeyi etkinleştirir.
 
@@ -57,7 +57,7 @@ ms.locfileid: "122128487"
 
      **Uyarı,** Kritik, Hata ve Uyarı olaylarının izlemesi sağlar.
 
-     **Bilgiler** Kritik, Hata, Uyarı ve Bilgi olaylarının izlerini etkinleştirir.
+     **Bilgiler,** Kritik, Hata, Uyarı ve Bilgi olaylarının izlerini etkinleştirir.
 
      **Ayrıntılı, Kritik,** Hata, Uyarı, Bilgi ve Ayrıntılı olayların izlemesi sağlar.
 
@@ -81,7 +81,7 @@ ms.locfileid: "122128487"
 
 6. **WPF İzleme Ayarlar** altında, etkinleştirmek istediğiniz ayarlar kategorisine tıklayın (örneğin, **Veri Bağlama).**
 
-     Veri Bağlama'nın yanındaki Ayarlar veya tıklamış olduğunuz **kategoriyi içeren** bir açılan liste denetimi görüntülenir.
+     Veri Bağlama'nın yanındaki Ayarlar veya tıklamış **olduğunuz kategoriyi içeren** bir açılan liste denetimi görüntülenir.
 
 7. Açılan listeye tıklayın ve Kapalı'yı **seçin.**
 

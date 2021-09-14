@@ -11,11 +11,11 @@ ms.technology: vs-ide-modeling
 ms.workload:
 - multiple
 ms.openlocfilehash: 4937ad4322d7aed06890c138d70c66a577540153
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122040079"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126637406"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 
@@ -23,7 +23,7 @@ Bir geliştirme projesinde modelleri etkili bir şekilde kullanmak için ekip ü
 
 Bir projeyi veya alt projeyi hızla başlatmak için, seçtiğiniz proje yapısını izleyen bir proje şablonuna sahip olmak yararlıdır. Bu konu başlığında, böyle bir şablonun nasıl oluşturul ve nasıl kullanılası açıklanmıştır.
 
-Bu konu başlığında, birkaç ekip üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığın ve belki de birkaç ekibin olduğu varsayıldı. Projenin kodu ve modelleri gibi bir kaynak denetim sisteminde [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] depolanır. En azından bazı ekip üyeleri Visual Studio geliştirmek için bu modelleri kullanır ve diğer ekip üyeleri modelleri diğer Visual Studio sınar.
+Bu konu başlığında, birkaç ekip üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığın ve belki de birkaç ekibin olduğu varsayıldı. Projenin kodu ve modelleri gibi bir kaynak denetim sisteminde [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] depolanır. En azından bazı ekip üyeleri Visual Studio geliştirmek için bu bilgileri kullanır ve diğer ekip üyeleri modelleri diğer Visual Studio sınar.
 
 Her araç ve modelleme özelliğini Visual Studio sürümlerini görmek için bkz. Mimari ve modelleme [araçları için sürüm desteği.](../modeling/analyze-and-model-your-architecture.md#VersionSupport)
 
@@ -71,13 +71,13 @@ Orta veya büyük bir projede ekibin yapısı uygulamanın yapısına dayalıdı
 
    Bu yöntem, katman modellerini aynı anda düzende bulunduran geliştiricilerin herhangi bir girişime neden olacağını garanti eder.
 
-   Ancak modeller ayrı olduğundan genel kavramlara başvurmak zordur. Her modelin, diğer katmanlara ve mimariye bağımlı olduğu öğelerin kendi kopyasına sahip olması gerekir. Her katmanda bağımlılık diyagramı, Mimari bağımlılık diyagramı ile eşit tutulmalıdır. Bu öğeler değişirken eşitlemeyi sürdürmek zordur, ancak bunu gerçekleştirmek için araçlar geliştirebilirsiniz.
+   Ancak modeller ayrı olduğundan genel kavramlara başvurmak zordur. Her modelin, diğer katmanlara ve mimariye bağımlı olduğu öğelerin kendi kopyasına sahip olması gerekir. Her katmanda bağımlılık diyagramı, Mimari bağımlılık diyagramıyla eşit olarak tutulmalıdır. Bu öğeler değişirken eşitlemeyi sürdürmek zordur, ancak bunu gerçekleştirmek için araçlar geliştirebilirsiniz.
 
 #### <a name="use-a-separate-package-for-each-layer"></a>Her katman için ayrı bir paket kullanma
 
-1. Her katmanın çözümünde Mimari modelleme projesini ekleyin. Bu **Çözüm Gezgini,** çözüm düğümüne sağ tıklayın, Ekle'nin üzerine **gelin** ve ardından Var olan **Project.** Tek modelleme projesine artık her çözümden erişilebilir: Mimari projesi ve her katman için geliştirme projesi.
+1. Her katmanın çözümünde Mimari modelleme projesini ekleyin. Bu **Çözüm Gezgini,** çözüm düğümüne sağ tıklayın, Ekle'nin üzerine **gelin** ve ardından Mevcut uygulama **Project.** Tek modelleme projesine artık her çözümden erişilebilir: Mimari projesi ve her katman için geliştirme projesi.
 
-2. Paylaşılan modelde her katman için bir paket oluşturun: Çözüm Gezgini **projesini** seçin. **UML Model Gezgini'nde,** model kök düğümüne sağ tıklayın, Ekle'nin üzerine **gelin ve** ardından Paketle'ye **tıklayın.**
+2. Paylaşılan modelde her katman için bir paket oluşturun: Çözüm Gezgini projesini seçin. **UML Model Gezgini'nde,** model kök düğümüne sağ tıklayın, Ekle'nin üzerine **gelin ve** ardından Paketle'ye **tıklayın.**
 
    Her paket, ilgili katmanın gereksinimlerini ve tasarımını açıklayan diyagramlar içerir.
 
@@ -101,7 +101,7 @@ Uygulamada, tüm çözümlerinizi aynı anda Visual Studio proje ilerledikçe bu
 
 3. Dosya menüsünde **Şablonu** **VSIX Olarak Dışarı Aktar'a tıklayın.**
 
-   **ŞABLONU VSIX Olarak Dışarı Aktarma Sihirbazı** açılır.
+   **VSIX Olarak Şablonu Dışarı Aktarma Sihirbazı** açılır.
 
 4. Sihirbazda verilen yönergeleri izleyerek şablona eklemek istediğiniz projeleri seçin, şablon için bir ad ve açıklama girin ve bir çıkış konumu belirtin.
 
