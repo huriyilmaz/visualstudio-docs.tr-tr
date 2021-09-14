@@ -15,11 +15,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8ff57a36930ebf1ad248480cd7ea15a50440529b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122086956"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626264"
 ---
 # <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Nasıl yapılır: Özel galeri için Atom akışı oluşturma
 Uzantılar içeren bir intranet konuma Atom (RSS) akışı oluşturabilir ve  akışı Özel galeri olarak Uzantılar ve Güncelleştirmeler'e ebilirsiniz. Daha fazla bilgi için bkz. [Özel galeriler.](../extensibility/private-galleries.md)
@@ -29,7 +29,7 @@ Uzantılar içeren bir intranet konuma Atom (RSS) akışı oluşturabilir ve  ak
 
 - Uzantıları *atom.xml* galeri olarak kullanılabilir yapan bir dosya. Uzantılar ve Güncelleştirmeler'e *atom.xml* hakkında bilgi için **bkz.** [Özel galeriler.](../extensibility/private-galleries.md)
 
-- Uzantılardan ayıklanan tüm görüntü dosyalarını içeren bir klasör (örneğin, ekran görüntüleri). Bu *atom.xml,* Uzantılar ve Güncelleştirmeler'de kullanılabilir olacak şekilde bu **görüntülerin göreli bağlantılarını içerir.**
+- Uzantılardan ayıklanan tüm görüntü dosyalarını içeren bir klasör (örneğin, ekran görüntüleri). Dosya *atom.xml,* Uzantılar ve Güncelleştirmeler'de kullanılabilir olacak şekilde bu **görüntülerin göreli bağlantılarını içerir.**
 
   Örneğin, aşağıdaki iki uzantıyı bir klasöre toplanmış olduğunu varsayalım:
 

@@ -14,14 +14,14 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4601c7e10d3f3092ad274e0570148bb348a7f41a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122086488"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626060"
 ---
 # <a name="supporting-source-control"></a>Kaynak Denetimini Destekleme
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projeniz veya düzenleyiciniz için dosya iadelerini, iadeleri ve diğer kaynak denetimi işlemlerini destekler. Kaynak denetim istemcisi olarak, dinamik olarak tanımlanmış bir dosya kümesi için arşivleme, sürüm oluşturma ve denetim özellikleri sağlayan gibi bir kaynak denetim paketiyle etkileşim [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] kurmak için tasarlanmıştır.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projeniz veya düzenleyiciniz için dosya iadelerini, iadeleri ve diğer kaynak denetimi işlemlerini destekler. Kaynak denetimi istemcisi olarak, dinamik olarak tanımlanmış bir dosya kümesi için arşivleme, sürüm oluşturma ve denetim özellikleri sağlayan gibi bir kaynak denetim paketiyle etkileşim [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] kurmak için tasarlanmıştır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Kaynak Denetimi Paketleri için Model](../../extensibility/internals/model-for-source-control-packages.md)
@@ -30,7 +30,7 @@ ms.locfileid: "122086488"
 
 - [Tasarım Kararları](../../extensibility/internals/source-control-design-decisions.md)
 
- Yanıtlarının proje türünü uygulamada değişikliklerini sağlayan sorular sağlar.
+ Yanıtlarının proje türünü uygulamada değişiklik sağladığı soruları sağlar.
 
 - [Yapılandırma Ayrıntıları](../../extensibility/internals/source-control-configuration-details.md)
 
@@ -45,7 +45,7 @@ ms.locfileid: "122086488"
  Bir kullanıcı projeyi kaynak denetim sistemine eklense de projenin nasıl kayded açıklar.
 
 ## <a name="reference"></a>Başvuru
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> Ortama veya kaynak denetim paketine, bir dosyanın bellekte değişmek veya kaydedilebilir olduğunu gösterir.
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> Ortama veya kaynak denetim paketine, bir dosyanın bellekte değiştir veya kaydedilene kadar olduğunu gösterir.
 
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> Projelerin ve hiyerarşilerin kendilerini kaynak denetimine kaydetmelerine ve kaynak denetimi durumu hakkında bilgi edinlerine izin verir.
 
@@ -58,4 +58,4 @@ ms.locfileid: "122086488"
 ## <a name="related-sections"></a>İlgili Bölümler
 - [Proje Türleri](../../extensibility/internals/project-types.md)
 
- Tümleşik geliştirme ortamının (IDE) temel yapı taşları olarak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projelere genel bir bakış sağlar. Projelerin kodu derlemeyi ve derlemeyi denetlemeyi açıklayan ek konulara bağlantılar sağlanır.
+ Tümleşik geliştirme ortamının (IDE) temel yapı taşları olarak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projelere genel bir bakış sağlar. Projelerin kod derlemeyi ve derlemeyi denetlemeyi açıklayan ek konulara bağlantılar sağlanır.

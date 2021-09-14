@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl: Hizmet | Microsoft Docs'
-description: Farklı özelliklere erişmek için Visual Studio hizmetleri nasıl elde etmeyi öğrenin. Çoğu hizmeti VSPackage kullanarak eldeabilirsiniz.
+title: 'Nasıl |: Hizmet | Microsoft Docs'
+description: Farklı özelliklere erişmek Visual Studio hizmetleri nasıl elde etmeyi öğrenin. Çoğu hizmeti VSPackage kullanarak eldeabilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 3/16/2019
 ms.topic: how-to
@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 810211f79bd04bcba9b59dcf60e16e14d19bc702
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122050357"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626253"
 ---
 # <a name="how-to-get-a-service"></a>Nasıl: Hizmet al
 
@@ -30,7 +30,7 @@ Bir Visual Studio <xref:Microsoft.VisualStudio.Shell.Package> yüklerken, başla
 
 ## <a name="getting-a-service-from-an-initialized-vspackage"></a>Başlatılan VSPackage'dan hizmet alma
 
-1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSIX dağıtım projesiyle başlar. adlı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir VSIX projesi `GetServiceExtension` oluşturun. VSIX proje şablonunu New **Project** "vsix" arayarak bulabilirsiniz.
+1. Her Visual Studio uzantı, uzantı varlıklarını içeren bir VSIX dağıtım projesiyle başlar. adlı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir VSIX projesi `GetServiceExtension` oluşturun. VSIX proje şablonunu New **Project** "vsix" arayarak bulabilirsiniz.
 
 2. Şimdi **GetServiceCommand** adlı özel bir komut öğesi şablonu ekleyin. Yeni Öğe **Ekle iletişim kutusunda** Visual **C#**  >  **Genişletilebilirliği'ne** gidin ve Özel **Komut'ı seçin.** Pencerenin **en** altındaki Ad alanında, komut dosyası adını *GetServiceCommand.cs olarak değiştirebilirsiniz.* Özel komut oluşturma hakkında daha fazla bilgi için Menü [komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)
 
@@ -43,7 +43,7 @@ Bir Visual Studio <xref:Microsoft.VisualStudio.Shell.Package> yüklerken, başla
 
    ```
 
-    Bu kod bir SVsActivityLog hizmetini alır ve bunu etkinlik günlüğüne yazmak için kullanılan <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> bir arabirime yazar. Bir örnek için [bkz. Nasıl: Etkinlik günlüğünü kullanma.](../extensibility/how-to-use-the-activity-log.md)
+    Bu kod bir SVsActivityLog hizmetini alır ve bunu etkinlik günlüğüne yazmak için kullanılan <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> bir arabirime yazar. Bir örnek için, [bkz. Nasıl: Etkinlik günlüğünü kullanma.](../extensibility/how-to-use-the-activity-log.md)
 
 4. Projeyi derleme ve hata ayıklamayı başlatma. Deneysel örnek görünür.
 
@@ -51,11 +51,11 @@ Bir Visual Studio <xref:Microsoft.VisualStudio.Shell.Package> yüklerken, başla
 
 ## <a name="getting-a-service-from-a-tool-window-or-control-container"></a>Araç penceresinden veya denetim kapsayıcılarından hizmet alma
 
-Bazen, bir araç penceresinden veya denetim kapsayıcısı sitesinden bir hizmet alasınız veya başka bir hizmet sağlayıcısıyla istediğiniz hizmeti bilmiyor olabilir. Örneğin, bir denetimden etkinlik günlüğüne yazmak istiyor olabilir.
+Bazen, bir araç penceresinden veya sited 2019'da yer almayan veya istediğiniz hizmeti bilmiyor bir hizmet sağlayıcısıyla siteli olan kapsayıcıyı denetlemeniz gerekebilir. Örneğin, bir denetimden etkinlik günlüğüne yazmak istiyor olabilir.
 
 Statik yöntem, türetilen herhangi bir VSPackage ilk kez sited ilk kez başlatılan <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> önbelleğe alınmış bir <xref:Microsoft.VisualStudio.Shell.Package> hizmet sağlayıcısını kullanır.
 
-VSPackage oluşturucusu VSPackage sited önce çağrıldı olduğundan, genel hizmetler genellikle VSPackage oluşturucusu içinde kullanılamaz. Geçici [bir çözüm için bkz. Nasıl yapılanlar:](../extensibility/how-to-troubleshoot-services.md) Hizmetlerle ilgili sorunları giderme.
+VSPackage oluşturucusu VSPackage sited olmadan önce çağrıldıklarından, genel hizmetler genellikle VSPackage oluşturucusu içinde kullanılamaz. Geçici [bir çözüm için bkz. Nasıl yapılanlar:](../extensibility/how-to-troubleshoot-services.md) Hizmetlerle ilgili sorunları giderme.
 
 Burada bir araç penceresinde veya VSPackage olmayan başka bir öğede hizmet elde etmek için bir örnek veserge ve sonra bir örnek veserge ve sonra da bir hizmet edinebilirsiniz.
 

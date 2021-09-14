@@ -1,6 +1,6 @@
 ---
-title: VSPackage kaydı | Microsoft Docs
-description: paketlerin yüklendikleri Visual Studio ve kayıt defterine bilgi yazarak yüklenmesi gereken vspackage kaydı hakkında bilgi edinin.
+title: VSPackage Kayıt | Microsoft Docs
+description: Paketlerin yüklü olduğunu ve kayıt defterine bilgi yazarak Visual Studio gerektiğini önerip yüklemeleri gerektiği VSPackage kaydı hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,49 +15,49 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: f0257eb175dff65a28cc942ef4854cfdff437d5c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117637"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724996"
 ---
 # <a name="vspackage-registration"></a>VSPackage Kaydı
-VSPackages [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , yüklü olmaları ve yüklenmesi gerektiğini tavsiye etmelidir. Bu işlem, kayıt defterine bilgi yazılarak gerçekleştirilir. Bu, bir yükleyicinin tipik bir işidir.
+VSPackage'lar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yüklendiklerini ve yüklenmeleri gerektiğini öneriltir. Bu işlem kayıt defterine bilgi yazarak başarılı olur. Bu, bir yükleyicinin tipik bir işidir.
 
 > [!NOTE]
-> Bu, VSPackage geliştirme sırasında kendi kendine kayıt kullanımı için kabul edilen bir uygulamadır. Ancak, [!INCLUDE[vsipprvsip](../../extensibility/includes/vsipprvsip_md.md)] iş ortakları, kurulum kapsamında kendi ürünlerini kendi kendine kayıt kullanarak teslim edemez.
+> Kendi kendine kayıt kullanmak VSPackage geliştirme sırasında kabul edilen bir uygulamadır. Ancak, [!INCLUDE[vsipprvsip](../../extensibility/includes/vsipprvsip_md.md)] iş ortakları kurulumun bir parçası olarak kendi kendine kayıt kullanarak ürünlerini gönderamaz.
 
- Windows Installer paketteki kayıt defteri girdileri genellikle kayıt defteri tablosunda yapılır. Dosya uzantılarını kayıt defteri tablosuna da kaydedebilirsiniz. ancak, Windows Installer programlı tanımlayıcı (progıd), sınıf, uzantı ve fiil tabloları aracılığıyla yerleşik destek sağlar. Daha fazla bilgi için bkz. [veritabanı tabloları](/windows/desktop/Msi/database-tables).
+ Windows Installer paketinde kayıt defteri girişleri genellikle Kayıt Defteri tablosunda yapılır. Dosya uzantılarını Kayıt Defteri tablosuna da kaydedebilirsiniz. Ancak Windows Yükleyicisi program tanımlayıcısı (ProgId), sınıf, uzantı ve fiil tabloları aracılığıyla yerleşik destek sağlar. Daha fazla bilgi için [bkz. Veritabanı Tabloları.](/windows/desktop/Msi/database-tables)
 
- Kayıt defteri girdlarınızın seçtiğiniz yan yana stratejiniz için uygun olan bileşenle ilişkili olduğundan emin olun. örneğin, paylaşılan bir dosya için kayıt defteri girişleri, bu dosyanın Windows Installer bileşeniyle ilişkilendirilmelidir. Benzer şekilde, sürüme özgü bir dosyanın kayıt defteri girişlerine bu dosyanın bileşeniyle ilişkilendirilmesi gerekir. Aksi halde, VSPackage 'ı bir sürümüne yüklemek veya kaldırmak, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage 'ı diğer sürümlerde bozabilir. Daha fazla bilgi için bkz. [Visual Studio birden çok sürümünü destekleme](../../extensibility/supporting-multiple-versions-of-visual-studio.md).
-
-> [!NOTE]
-> Kayıt yönetmenin en kolay yolu, hem geliştirici kaydı hem de yüklenme zamanı kaydı için aynı dosyalardaki verileri kullanmaktır. Örneğin, bazı yükleyici geliştirme araçları derleme zamanında dosyayı. reg biçiminde kullanabilir. Geliştiriciler kendi günlük geliştirme ve hata ayıklama için. reg dosyalarını korumadığında, aynı dosyalar yükleyiciye otomatik olarak dahil edilebilir. Kayıt verilerini otomatik olarak paylaşadıysanız, yükleyicinin kayıt verileri kopyasının güncel olduğundan emin olmanız gerekir.
-
-## <a name="registering-unmanaged-vspackages"></a>Yönetilmeyen VSPackages kaydetme
- yönetilmeyen vspackages (Visual Studio paketi şablonu tarafından oluşturulanlar dahil), kayıt bilgilerini depolamak için ATL stili. rgs dosyalarını kullanır. . RGS dosya biçimi, ATL 'ye özeldir ve genellikle bir yükleme yazma aracı tarafından olduğu gibi tüketilemez. VSPackage yükleyicisi için kayıt bilgileri ayrı olarak sağlanmalıdır. Örneğin, geliştiriciler dosyaları. reg biçiminde. RGS dosya değişiklikleriyle eşitlenmiş halde tutar. . Reg dosyaları geliştirme çalışması için RegEdit ile birleştirilebilir veya bir yükleyici tarafından tüketilebilir.
-
-## <a name="registering-managed-vspackages"></a>Yönetilen VSPackages 'yi kaydetme
- RegPkg Aracı, yönetilen bir VSPackage 'daki kayıt özniteliklerini okur ve bilgileri doğrudan kayıt defterine yazabilir veya bir yükleyici tarafından tüketilen. reg-format dosyalarını yazabilir.
+ Kayıt defteri girdilerinin seçtiğiniz yan yana stratejinize uygun bileşenle ilişkilendiril olduğundan emin olun. Örneğin, paylaşılan bir dosyanın kayıt defteri girdileri, bu dosyanın Windows yükleyici bileşeniyle ilişkilendirilmiş olması gerekir. Benzer şekilde, sürüme özgü bir dosyanın kayıt defteri girdileri bu dosyanın bileşeniyle ilişkili olması gerekir. Aksi takdirde, bir sürümü için VSPackage'nızı yüklemek veya kaldırmak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage'nızı diğer sürümlerde bozabilirsiniz. Daha fazla bilgi için, [bkz. Supporting Multiple Versions of Visual Studio](../../extensibility/supporting-multiple-versions-of-visual-studio.md).
 
 > [!NOTE]
-> RegPkg aracı yeniden dağıtılabilir değildir ve kullanıcının sistemine VSPackage kaydetmek için kullanılamaz.
+> Kaydı yönetmenin en kolay yolu, aynı verileri hem geliştirici kaydı hem de yükleme zamanı kaydı için aynı dosyalarda kullanmaktır. Örneğin, bazı yükleyici geliştirme araçları derleme zamanında dosyayı .reg biçiminde tüketir. Geliştiriciler günlük geliştirme ve hata ayıklama için .reg dosyalarını bulundurıyorsa, aynı dosyalar yükleyiciye otomatik olarak dahil olabilir. Kayıt verilerini otomatik olarak paylaşamazsanız, yükleyicinin kayıt verileri kopyasının güncel olduğundan emin olmak gerekir.
 
-## <a name="why-vspackages-should-not-self-register-at-install-time"></a>Neden VSPackages, yüklemesi sırasında Self-Register olmamalıdır
- VSPackage yükleyicileriniz kendi kendine kayda dayanmamalıdır. İlk bakışta, VSPackage 'un kayıt defteri değerlerinin yalnızca VSPackage içinde tutulması iyi bir fikir gibi görünüyor. Geliştiricilerin rutin iş ve test için kullanılabilir kayıt defteri değerlerine ihtiyacı verildiğinden, yükleyicideki kayıt defteri verilerinin ayrı bir kopyasının korunmasından kaçınmak mantıklı olur. Yükleyici, kayıt defteri değerlerini yazmak için VSPackage 'un kendisini kullanır.
+## <a name="registering-unmanaged-vspackages"></a>Unmanaged VSPackages Kaydetme
+ Unmanaged VSPackages (Visual Studio Paket Şablonu tarafından oluşturulanlar dahil) kayıt bilgilerini depolamak için ATL stili .rgs dosyalarını kullanır. .rgs dosya biçimi ATL'ye özeldir ve genellikle bir yükleme yazma aracı tarafından olduğu gibi kullanılamaz. VSPackage yükleyicisi için kayıt bilgileri ayrı ayrı tutulmalıdır. Örneğin, geliştiriciler dosyaları .rgs dosya değişiklikleriyle eşitlenen .reg biçiminde tutabilirsiniz. Geliştirme işi için .reg dosyaları RegEdit ile birleştirilebilir veya bir yükleyici tarafından kullanılabilir.
 
- Teorik olarak, kendi kendine kayıt, VSPackage yüklemesine uygun olmayan birçok kusura sahiptir:
+## <a name="registering-managed-vspackages"></a>Yönetilen VSPackage'ları Kaydetme
+ RegPkg aracı, yönetilen bir VSPackage'dan kayıt özniteliklerini okur ve bilgileri doğrudan kayıt defterine yazabilir veya bir yükleyici tarafından tüketilen .reg biçimindeki dosyaları yazabilir.
 
-- Yükleme, kaldırma, yükleme geri alma ve kaldırma geri alma işlemlerini doğru şekilde desteklemek için, RegPkg çağırarak kendinden kaydeden her yönetilen VSPackage için dört özel eylem yazmanızı gerektirir.
+> [!NOTE]
+> RegPkg aracı yeniden dağıtılamaz ve kullanıcının sistemine VSPackage kaydetmek için kullanılamaz.
 
-- Yan yana desteğe yaklaşımda, desteklenen her sürümü için RegSvr32 veya RegPkg komutunu çağıran dört özel eylem yazarınızın olması gerekebilir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+## <a name="why-vspackages-should-not-self-register-at-install-time"></a>VSPackages Yükleme Zamanında Self-Register Neden Yüklenmeli?
+ VSPackage yükleyicileri kendi kendine kayıt işlemini kullanmaz. İlk bakışta, vsPackage'ın kayıt defteri değerlerini yalnızca VSPackage'ın içinde tutmak iyi bir fikir gibi görünebilir. Geliştiricilerin rutin çalışmaları ve testleri için kullanılabilir kayıt defteri değerlerine ihtiyacı olduğu için, kayıt defteri verilerini yükleyicide ayrı bir kopyasının korunmasından kaçınmak mantıklıdır. Yükleyici, kayıt defteri değerlerini yazmak için VSPackage'ın kendisine güvenebilirsiniz.
 
-- Kendi kendine kayıtlı anahtarların başka bir özellik veya uygulama tarafından kullanıldığını söyleyen bir yöntem olmadığından, kendi kendine kayıtlı modüllerle yükleme güvenli bir şekilde geri alınamaz.
+ Teoride iyi bir şey de, kendi kendine kayıt işleminin VSPackage yüklemesi için uygun olmayan bazı açıkları vardır:
 
-- Otomatik olarak kaydedilen dll 'Ler bazen mevcut olmayan veya yanlış sürümde olan yardımcı DLL 'lere bağlanır. buna karşılık Windows Installer, sistemin geçerli durumuna bağımlılığı olmadan kayıt defteri tablolarını kullanarak dll 'leri kaydedebilir.
+- Yüklemeyi, kaldırmayı, yükleme geri alma ve kaldırma geri alma işlemini doğru desteklemek için RegPkg'yi çağırarak kendi kendine kaydolan her yönetilen VSPackage için dört özel eylem yazmanız gerekir.
 
-- Bir bileşen hem kaynak olarak çalıştır hem de SelfReg tablosunda listeleniyorsa, kendi kendine kayıt kodu tür kitaplıkları gibi ağ kaynaklarına erişimi reddedilebilir. Bu, bileşen yüklemesinin yönetim yüklemesi sırasında başarısız olmasına neden olabilir.
+- Yan yana destek yaklaşımınız, desteklenen her sürümü için RegSvr32 veya RegPkg'yi çağıran dört özel eylem yazmanızı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] gerektirir.
+
+- Kendi kendine kayıtlı modülleri olan bir yükleme güvenli bir şekilde geri alınamaz çünkü kendi kendine kaydedilen anahtarların başka bir özellik veya uygulama tarafından kullanılıp kullanılmay olmadığını söylemenin bir yolu yoktur.
+
+- Kendi kendine kaydedilen URL'ler bazen mevcut olmayan veya yanlış sürümde olan yardımcı URL'lere bağlantı sağlar. Buna karşılık, Windows Yükleyici sistemin geçerli durumuna bağımlılıksız olarak kayıt defteri tablolarını kullanarak URL'leri kaydedebilirsiniz.
+
+- Bir bileşenin her ikisi de kaynaktan çalıştır olarak belirtilmişse ve SelfReg tablosunda listelenmişse, tür kitaplıkları gibi ağ kaynaklarına kendi kendine kayıt kodu erişimi reddedilebilir. Bu, bileşenin yüklenmesi bir yönetim yüklemesi sırasında başarısız olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Windows Installer](/windows/desktop/Msi/windows-installer-portal)
-- [Yönetilen paket kaydı](/previous-versions/bb166783(v=vs.100))
+- [Yönetilen Paket Kaydı](/previous-versions/bb166783(v=vs.100))

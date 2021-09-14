@@ -1,6 +1,6 @@
 ---
-title: RegPkg Yardımcı Programı | Microsoft Docs
-description: RegPkg.exe yardımcı Visual Studio vsPackage'Visual Studio dağıtım için hazırlar.
+title: RegPkg yardımcı programı | Microsoft Docs
+description: RegPkg.exe yardımcı programının bir vspackage 'ı Visual Studio nasıl kaydedeceğini ve dağıtım için hazırmasını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,46 +14,46 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7911c31b6e7766d69e51b65abea8184f4d6fbbdc8d2518560b13d665c365e61f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: ed91788526177392901a6fd8aa03f139f9267827
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121432234"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725008"
 ---
 # <a name="regpkg-utility"></a>RegPkg Yardımcı Programı
 > [!NOTE]
-> Paketleri uygulama içinde kaydetmenin tercih Visual Studio .pkgdef dosyalarını kullanmaktır. Bu, VSIX dağıtımı için bir gereksinim olan sistem kayıt defterine erişmek zorunda kalmadan uzantı dağıtımına olanak sağlar. Pkgdef dosyaları, [CreatePkgDef Yardımcı Programı kullanılarak oluşturulur.](../../extensibility/internals/createpkgdef-utility.md) Paket dağıtımı hakkında daha Visual Studio için bkz. [Shipping Visual Studio Extensions](../../extensibility/shipping-visual-studio-extensions.md).
+> Visual Studio paketleri kaydetmek için tercih edilen yol. pkgdef dosyalarını kullanmaktır. Bu, VSıX dağıtımı için bir gereksinim olan sistem kayıt defterine erişmek zorunda kalmadan uzantı dağıtımına izin verir. Pkgdef dosyaları [CreatePkgDef yardımcı programı](../../extensibility/internals/createpkgdef-utility.md)kullanılarak oluşturulur. Visual Studio paketi dağıtımı hakkında daha fazla bilgi için bkz. [Visual Studio uzantıları gönderme](../../extensibility/shipping-visual-studio-extensions.md).
 
- RegPkg.exe yardımcı programı bir VSPackage'i ile [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaydeden ve dağıtım için hazırlar. Bu yardımcı program, VSPackage geliştirme sırasında arka planı kullanılır. Deneysel hive'da VSPackage derlemek ve çalıştırmak için derleme işleminin bir parçası olarak çalışır.
+ RegPkg.exe yardımcı programı ile VSPackage kaydeder [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ve bunu dağıtıma hazırlar. Bu yardımcı program VSPackage geliştirme sırasında arka planda kullanılır. Deneysel Hive içinde VSPackage oluşturup çalıştırabilmeniz için yapı sürecinin bir parçası olarak çalışır.
 
- RegPkg çeşitli biçimlerde sistem kayıt defteri betikleri oluşturabilirsiniz. Bu betikleri, .msi veya Windows YükleyiciSI XML Araç Seti dosyaları gibi dağıtım projelerine dahil edin.
+ RegPkg, çeşitli biçimlerde sistem kayıt betikleri oluşturabilir. bu komut dosyalarını .msi projeler veya Windows Installer XML araç takımı dosyaları gibi dağıtım projelerinde ekleyebilirsiniz.
 
- RegPkg.exe genellikle \<*Visual Studio SDK installation path*>\VisualStudioIntegration\Tools\Bin\RegPkg.exe. RegPkg şu söz dizimlerini izler:
+ RegPkg.exe genellikle \<*Visual Studio SDK installation path*>\VisualStudioIntegration\Tools\Bin\RegPkg.exe bulunur. RegPkg bu söz dizimini izler:
 
 ```
 RegPkg [/root:<root>] [/regfile:<regfile>] [/rgsfile:<rgsfile> [/rgm]] [/vrgfile:<vrgfile>] [/codebase | /assembly] [/unregister] AssemblyPath
 ```
 
- /root:root Belirtilen kök altında kaydı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] gerçekleştirir.
+ /Root: kök, belirtilen kök altında kayıt gerçekleştirir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
- /regfile:FileName Kayıt defterini güncelleştirmek yerine bir .reg dosyası oluşturur.  /vrgfile, /rgsfile veya /wixfile ile kullanılamaz.
+ /regfile: FileName kayıt defterini güncelleştirmek yerine bir. reg dosyası oluşturur.  /Vrgfile veya/rgsfile veya/wixfile. ile birlikte kullanılamaz
 
- /rgsfile:FileName Kayıt defterini güncelleştirmek yerine bir .rgs dosyası oluşturur.  /vrgfile, /regfile veya /wixfile ile kullanılamaz.
+ /rgsfile: FileName, kayıt defterini güncelleştirmek yerine bir. rgs dosyası oluşturur.  /Vrgfile veya/regfile veya/wixfile. ile birlikte kullanılamaz
 
- /vrgfile:FileName Kayıt defterini güncelleştirmek yerine bir .vrg dosyası oluşturur.  /regfile, /rgsfile veya /wixfile ile kullanılamaz.
+ /vrgfile: FileName kayıt defterini güncelleştirmek yerine bir. VRG dosyası oluşturur.  /Regfile veya/rgsfile veya/wixfile. ile birlikte kullanılamaz
 
- /rgm rgs dosyasına ek olarak bir .rgm dosyası oluşturur.  /rgsfile ile birleştirildi.
+ /RGM, RGS dosyasına ek olarak bir. RGM dosyası oluşturur.  /Rgsfileile birleştirilmelidir.
 
- /wixfile:FileName Kayıt defterini güncelleştirmek Windows Yükleyici XML Araç Seti ile uyumlu bir dosya oluşturur.  /regfile, /rgsfile veya /vrgfile ile kullanılamaz.
+ /wixfile: FileName, kayıt defterini güncelleştirmek yerine Windows Installer XML araç takımı ile uyumlu bir dosya oluşturur.  ,/Regfile veya/rgsfile veya/vrgfileile kullanılamaz.
 
- /codebase Derleme yerine CodeBase ile kaydı zorlar.
+ /CodeBase derleme yerine kod temeli ile kaydolmayı zorlar.
 
- /assembly CodeBase yerine Assembly ile kaydı zorlar.
+ /Assembly kod temeli yerine derlemeyle kaydolmayı zorlar.
 
- /unregister Unregisters this package.  Kullanılamaz
+ /Unregister bu paketin kaydını siler.  Kullanılamaz
 
- /regfile veya /vrgfile, /rgsfile veya /wixfile ile.
+ /regfile veya/vrgfile veya/rgsfile veya/wixfile. ile
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’lar](../../extensibility/internals/vspackages.md)

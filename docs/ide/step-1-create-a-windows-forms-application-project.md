@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 441b91ce3fe78b0e79be55db8d312b0b90740d97
-ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
+ms.openlocfilehash: d3f3bacb4c0a08e6a9bd2948fcc9a70637706111
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "123398118"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724872"
 ---
 # <a name="step-1-create-a-windows-forms-app-project"></a>1. Adım: Windows Forms Uygulaması projesi oluşturma
 

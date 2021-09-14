@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: fb8cb02d178a9efcb9b3d03423b722a4950c6511
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122127213"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634913"
 ---
 # <a name="idebugenumfield"></a>IDebugEnumField
 Bu arabirim bir numaralama türünü temsil eder.
@@ -44,7 +44,7 @@ IDebugEnumField : IDebugContainerField
 |[GetUnderlyingSymbol](../../../extensibility/debugger/reference/idebugenumfield-getunderlyingsymbol.md)|Bu numaralama türünün adını açıklayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) döndürür.|
 |[GetStringFromValue](../../../extensibility/debugger/reference/idebugenumfield-getstringfromvalue.md)|Verilen değerle ilişkili sabit değerinin adını döndürür.|
 |[GetValueFromString](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstring.md)|Verilen sabit sabit adı ile ilişkili değeri döndürür|
-|[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)|Verilen sabit sabit adı ile ilişkili değeri döndürür, ancak büyük/büyük harf yoksayarak.|
+|[GetValueFromStringCaseInsensitive](../../../extensibility/debugger/reference/idebugenumfield-getvaluefromstringcaseinsensitive.md)|Verilen sabit sabit adı ile ilişkili değeri döndürür ancak büyük/büyük harf yoksayarak.|
 
 ## <a name="remarks"></a>Açıklamalar
  Bağlama ile bir konuma bağlı olan temel alınan [simgedir.](../../../extensibility/debugger/reference/idebugbinder-bind.md)

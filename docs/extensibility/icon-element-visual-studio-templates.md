@@ -1,6 +1,6 @@
 ---
-title: ıcon öğesi (Visual Studio şablonları) | Microsoft Docs
-description: Simge öğesi hakkında bilgi edinin ve simge olarak hizmet gören görüntü dosyasının dosya adını ve yolunu belirtir.
+title: Icon Öğesi (Visual Studio Şablonları) | Microsoft Docs
+description: Icon öğesini ve simge olarak görev alan görüntü dosyasının yolunu ve dosya adını nasıl ifade ettiği hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -15,15 +15,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4760b69d7ea1b9b39bc6d1dfb0b3d4a8be77ded30382473383fb921d2357fd7a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c3241457fc23a0df369c1ebc78546a5045e89975
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448266"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626229"
 ---
-# <a name="icon-element-visual-studio-templates"></a>ıcon öğesi (Visual Studio şablonları)
-şablon için **yeni Project** veya **yeni öğe ekle** iletişim kutusunda görünen simge olarak hizmet gören görüntü dosyasının yolunu ve dosya adını belirtir.
+# <a name="icon-element-visual-studio-templates"></a>Icon öğesi (Visual Studio şablonları)
+Şablon için Yeni Dosya veya Yeni Öğe Ekle iletişim kutusunda görünen simge olarak görev alan  görüntü **dosyasının yolunu ve Project dosya** adını belirtir.
 
  \<VSTemplate> \<TemplateData>
  \<Icon>
@@ -47,8 +47,8 @@ ms.locfileid: "121448266"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Package`|Gelişmiş Kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Visual Studio paket kimliğini belirten bir guıd.|
-|`ID`|Gelişmiş Kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Visual Studio kaynak kimliğini belirtir.|
+|`Package`|Gelişmiş kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Paket kimliğini belirten Visual Studio GUID.|
+|`ID`|Gelişmiş kullanıcı senaryoları için isteğe bağlı öznitelik.<br /><br /> Kaynak kimliğini Visual Studio belirtir.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -57,18 +57,18 @@ ms.locfileid: "121448266"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> şablonu kategorilere ayırır ve **yeni Project** ya da **yeni öğe ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırarak Yeni Öğe Ekle iletişim kutusunda **Project** **nasıl görüntü olduğunu** tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
- `Package`Ve `ID` öznitelikleri kullanılmamışsa metin değeri gereklidir.
+ ve öznitelikleri kullanılmadıkça metin `Package` `ID` değeri gereklidir.
 
- metin, **yeni Project** iletişim kutusunda görünecek şablon simgesinin yolunu ve dosya adını sağlar.
+ Metin, Yeni Uygulama iletişim kutusunda görünecek şablon simgesinin yolunu **ve Project** sağlar.
 
 ## <a name="remarks"></a>Açıklamalar
- `Icon` , öğesinin gerekli bir alt öğesidir `TemplateData` .
+ `Icon` , öğesinin gerekli bir alt `TemplateData` öğesidir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir uygulama için bir proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
+ Aşağıdaki örnek, bir uygulama için proje şablonu meta verilerini [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] gösterir.
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -95,5 +95,5 @@ ms.locfileid: "121448266"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablonu şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

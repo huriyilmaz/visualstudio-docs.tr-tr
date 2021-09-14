@@ -1,6 +1,6 @@
 ---
-title: SharePoint Çözüm Paketleri | Microsoft Docs
-description: Paket Tasarımcısı'SharePoint dağıtım paketleri oluşturun ve özelleştirin. Paketleme araçlarını, tasarımcı seçeneklerini ve klasör yapısını keşfedin.
+title: SharePoint çözüm paketleri oluşturma | Microsoft Docs
+description: paket tasarımcısını kullanarak SharePoint çözümleri için dağıtım paketleri oluşturun ve özelleştirin. Paketleme araçları, tasarımcı seçenekleri ve klasör yapısını gezin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,66 +17,66 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: d395dcbc0c1600209d6e1bd04b4c88059b9cf60e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122149422"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635654"
 ---
-# <a name="create-sharepoint-solution-packages"></a>Çözüm SharePoint paketleri oluşturma
-  Paket Tasarımcısı'nda dağıtım paketleri oluşturabilir ve özelleştirebilirsiniz. Örneğin, proje öğeleri SharePoint Özellikler ekleyebilir, IIS sunucusunu sıfırlayabilirsiniz, Özellik etkinleştirme kapsamlarını ayarlayabilirsiniz ve Özellik bağımlılıklarını tanımlayabilirsiniz. Tasarımcı ayrıca her paketi açıklayan bir XML dosyası olan bir bildirim de üretir.
+# <a name="create-sharepoint-solution-packages"></a>SharePoint çözüm paketleri oluşturma
+  Paket Tasarımcısını kullanarak dağıtım paketleri oluşturabilir ve bunları özelleştirebilirsiniz. örneğin, SharePoint proje öğeleri ve özellikler ekleyebilir, ııs sunucusunu sıfırlayabilir, özellik etkinleştirme kapsamlarını ayarlayabilir ve özellik bağımlılıklarını belirleyebilirsiniz. Tasarımcı Ayrıca her paketi açıklayan bir XML dosyası bildirimi de oluşturur.
 
 ## <a name="packaging-tools"></a>Paketleme araçları
- Paketi özelleştirmek ve **bildirimi oluşturmak** için Paket Tasarımcısı'nın kullanabilirsiniz. Proje öğelerini SharePoint, Web sunucusunun sıfırlanacak olup olmadığını yapılandırıp dağıtım sunucusu türünü ayarlayabilirsiniz. Daha fazla bilgi için, [bkz. How to: Add and remove features and items to a package by using the Package Designer](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md).
+ Paketi özelleştirmek ve bildirimi oluşturmak için **Paket Tasarımcısını** kullanabilirsiniz. SharePoint proje öğelerini dahil edebilir, Web sunucusunun sıfırlanması gerekip gerekmediğini yapılandırabilir ve dağıtım sunucusu türünü ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Paket Tasarımcısını kullanarak bir pakete Özellikler ve öğeler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md).
 
- Alternatif olarak, Paketleme Gezgini'ni **kullanarak** paket dosyanız *(.wsp)* özellikleri ve öğeleri değiştirebilirsiniz. Daha fazla bilgi için [bkz. Paketleme Gezgini'ni](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md)kullanarak Pakete özellik ve öğe ekleme ve kaldırma.
+ Alternatif olarak, paket dosyanızdaki (*. wsp*) özellikleri ve öğeleri değiştirmek Için **paketleme Gezginini** kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: paketleme Gezgini 'ni kullanarak bir pakete Özellikler ve öğeler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md).
 
- Visual Studio MSBuild dağıtmak üzere paket (*.wsp*) dosyaları oluşturmak için SharePoint kullanabilirsiniz. Bu işlem, dağıtım için gereken bildirim SharePoint üretir. Daha fazla bilgi için, [bkz. How to: Create a SharePoint Solution Package by using MSBuild görevleri](../sharepoint/how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md).
+ SharePoint çözümünüzü dağıtmak üzere paket (*. wsp*) dosyaları oluşturmak için Visual Studio ve MSBuild kullanabilirsiniz. bu işlem, SharePoint dağıtımı için gereken bildirim dosyalarını oluşturur. daha fazla bilgi için, bkz. [nasıl yapılır: MSBuild görevleri kullanarak SharePoint çözüm paketi oluşturma](../sharepoint/how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md).
 
-## <a name="package-designer-options"></a>Paket tasarımcısı seçenekleri
- Aşağıdaki tabloda, Paket Tasarımcısı ile SharePoint özelleştirebileceğiniz **özellikler yer alır.**
+## <a name="package-designer-options"></a>Paket Tasarımcısı seçenekleri
+ aşağıdaki tabloda, **paket tasarımcısı** ile SharePoint paketlerinde özelleştirebileceğiniz özellikler gösterilmektedir.
 
-|Paket Tasarımcısı Özelliği|Varsayılan ayarın açıklaması|
+|Paket Tasarımcısı özelliği|Varsayılan ayarın açıklaması|
 |-------------------------------|------------------------------------|
-|Name|Gereklidir. Paketin varsayılan adı *ProjectName olarak ayarlanır.*|
-|WebServer'ı Sıfırlama|İsteğe bağlı. Web sunucusuna *.wsp* dosyası yüklendikten sonra Web sunucusunu yeniden başlatmak SharePoint seçin.|
-|Dağıtım Sunucusu Türü|İsteğe bağlı. Paketi barındıran sunucunun türünü temsil eder. Ayarlanmazsa, bu varsayılan olarak WebFrontEnd olur.<br /><br /> ApplicationServer: Hizmetleri barındıran bir sunucuyu açıklar.<br /><br /> WebFrontEnd: Web sitelerini barındıran bir sunucuyu açıklar.|
-|Çözümdeki Öğeler|Tüm SharePoint proje öğeleri ve pakete eklen all.|
-|Paket öğeleri|İsteğe bağlı. Tüm SharePoint paketinize dağıtmak istediğiniz tüm öğeleri ve Özellikleri içerir.|
+|Name|Gereklidir. Paketin varsayılan adı *ProjectName* olarak ayarlanır.|
+|Web sunucusu sıfırlama|İsteğe bağlı. *. wsp* dosyası SharePoint sunucusuna yüklendikten sonra Web sunucusunu yeniden başlatmak istiyorsanız seçin.|
+|Dağıtım sunucusu türü|İsteğe bağlı. Paketi barındıran sunucunun türünü temsil eder. Ayarlanmamışsa, varsayılan olarak Webön uç olur.<br /><br /> ApplicationServer: hizmetleri barındıran bir sunucuyu tanımlar.<br /><br /> Webön uç: Web sitelerini barındıran bir sunucuyu tanımlar.|
+|Çözümdeki öğeler|tüm SharePoint proje öğeleri ve pakete eklenebilecek özellikler.|
+|Paketteki öğeler|İsteğe bağlı. paketinize dağıtmak istediğiniz tüm öğeleri ve özellikleri SharePoint.|
 
 ## <a name="configure-the-packaging-process"></a>Paketleme işlemini yapılandırma
- Bu SharePoint çözümlerini Visual Studio, projelerin nasıl paketlen olduğunu özelleştirebilirsiniz.
+ Visual Studio SharePoint çözümleri geliştirip, projelerin paketlenebilme şeklini özelleştirebilirsiniz.
 
- Aşağıdaki tabloda, *.wsp* MSBuild özelleştirmek için kullanabileceğiniz iki farklı hedef yer almaktadır.
+ aşağıdaki tabloda, *. wsp* dosyasının nasıl oluşturulduğunu özelleştirmek için kullanabileceğiniz iki MSBuild hedefi gösterilmektedir.
 
-|Hedef|Açıklama|
+|Hedef|Description|
 |------------|-----------------|
-|BeforeLayout|Dosyalar bir ara dizine kopyalanmadan hemen önce görevleri gerçekleştiren hedef. Bir paket dosyası ( .wsp ) oluşturmadan önce *dosyaları değiştirebilirsiniz.*|
+|BeforeLayout|Dosyalar bir ara dizine kopyalanmadan hemen önce görevleri gerçekleştiren hedef. Dosyaları bir paket dosyası (*. wsp*) oluşturmadan önce değiştirebilirsiniz.|
 |AfterLayout|Dosyalar bir ara dizine kopyalandıktan hemen sonra görevleri gerçekleştiren hedef.|
 
- Daha fazla bilgi [için, Nasıl: SharePoint Hedeflerini](../sharepoint/how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets.md)kullanarak bir MSBuild paketi özelleştirme.
+ daha fazla bilgi için [nasıl yapılır: MSBuild hedeflerini kullanarak SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets.md).
 
 ## <a name="packaging-architecture"></a>Paketleme mimarisi
- Aşağıdaki adımlar, uygulama içinde bir SharePoint paketi (*.wsp*) Visual Studio.
+ Visual Studio ' de bir SharePoint paketi (*. wsp*) oluşturduğunuzda aşağıdaki adımlar oluşur.
 
-1. Özellikler ve paketler, paketin fiziksel ve semantik yapısının doğru olduğundan emin olmak için doğrulanır.
+1. Özellikler ve paketler, paketin fiziksel ve anlam yapısının doğru olduğundan emin olmak için onaylanır.
 
-2. Pakette yer alan Özellikler, proje öğeleri ve paket dosyaları numaralandı. Paketlere ve Özelliklere ilişkin bildirim dosyaları, dağıtım ve etkinleştirme için gerekli tüm bilgileri içerecek şekilde dönüştürülmektedir. Belirteçler, tam değerle değiştirilir.
+2. Paketteki özellikler, proje öğeleri ve paket dosyaları numaralandırılır. Paketler ve özellikler için bildirim dosyaları, dağıtım ve etkinleştirmeye yönelik tüm gerekli bilgileri içerecek şekilde dönüştürülür. Belirteçler tam nitelikli değerle değiştirilmiştir.
 
-3. Özelleştirilebilir BeforeLayout MSBuild hedef gerçekleştirilir. *.wsp* dosyası oluşturulmadan önce pakette özel değişiklikler yapmak için bu adımı oluşturabilirsiniz.
+3. özelleştirilebilir BeforeLayout MSBuild hedefi gerçekleştirilir. Bu adımı, *. wsp* dosyası oluşturulmadan önce pakette herhangi bir özel değişiklik yapmak için oluşturabilirsiniz.
 
-4. Numaralanan dosyalar bir ara dizine kopyalanır.
+4. Numaralandırılmış dosyalar bir ara dizine kopyalanır.
 
-5. Özelleştirilebilir AfterLayout MSBuild hedef gerçekleştirilir. *.wsp* dosyası oluşturulmadan önce pakette özel değişiklikler yapmak için bu adımı oluşturabilirsiniz.
+5. özelleştirilebilir afterlayout MSBuild hedefi gerçekleştirilir. Bu adımı, *. wsp* dosyası oluşturulmadan önce pakette herhangi bir özel değişiklik yapmak için oluşturabilirsiniz.
 
-6. Ara dizinde yer alan dosyalar *.wsp dosyasına* eklenir.
+6. Ara dizindeki dosyalar *. wsp* dosyasına eklenir.
 
 ## <a name="package-folder-structure"></a>Paket klasörü yapısı
- Uygulama projenizi SharePoint, *SolutionFolder\bin \\ \<BuildConfiguration>* klasöründe sizin için bir *.wsp* dosyası oluşturulur. Örneğin, çözümünüz *C:\Visual Studio 2013\Projects\ListDefinition1* konumunda ve derleme yapılandırmanız Yayın olarak *ayarlanmışsa, .wsp* dosyası *C:\Visual Studio 2013\Projects\ListDefinition1\bin\Release* konumunda bulunur.
+ SharePoint projenizi paketlemeyi yaparken, *solutionfolder\bin \\ \<BuildConfiguration>* klasöründe sizin için bir *. wsp* dosyası oluşturulur. örneğin, çözümünüz *c:\ Visual Studio 2013 \projelerlistdefinition1* ' de ise ve derleme yapılandırmanız yayın olarak ayarlandıysa, *. wsp* dosyası *c:\ Visual Studio 2013 \projelerilistdefinition1\bin\release* konumunda bulunur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl SharePoint: SharePoint paketi özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)
-- [Nasıl kullanılır: Paket Tasarımcısını kullanarak pakete özellik ve öğe ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)
-- [Nasıl SharePoint: SharePoint görevleri kullanarak MSBuild oluşturma](../sharepoint/how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md)
-- [Nasıl SharePoint: SharePoint görevleri kullanarak MSBuild oluşturma](../sharepoint/how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md)
-- [Nasıl SharePoint: SharePoint hedeflerini kullanarak MSBuild özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets.md)
+- [nasıl yapılır: SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)
+- [Nasıl yapılır: Paket Tasarımcısını kullanarak bir pakete Özellikler ve öğeler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)
+- [nasıl yapılır: MSBuild görevleri kullanarak SharePoint çözüm paketi oluşturma](../sharepoint/how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md)
+- [nasıl yapılır: MSBuild görevleri kullanarak SharePoint çözüm paketi oluşturma](../sharepoint/how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md)
+- [nasıl yapılır: MSBuild hedeflerini kullanarak SharePoint çözüm paketini özelleştirme](../sharepoint/how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets.md)

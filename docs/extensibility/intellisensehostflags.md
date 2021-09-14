@@ -1,6 +1,6 @@
 ---
 title: IntelliSenseHostFlags | Microsoft Docs
-description: IntelliSenseHostFlags numaralandırması, IntelliSense ana bilgisayar bayraklarını belirtir. Bu makalede, Enum değerleri açıklanmaktadır.
+description: IntelliSenseHostFlags numaralama, IntelliSense konak bayraklarını belirtir. Bu makalede enum değerleri açıklanmıştır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,14 +17,14 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4ca23fb8a388619afda5b23f437a87627e05baea
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122050253"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725092"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
-IntelliSense ana bilgisayar bayraklarını belirtir.
+IntelliSense konak bayraklarını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,16 +41,16 @@ enum IntellisenseHostFlags
 
 ### <a name="parameters"></a>Parametreler
 
-|Üyeler|Açıklama|
+|Üyeler|Description|
 |-------------|-----------------|
-|`IHF_READONLYCONTEXT`|Bağlam arabelleği salt okunurdur.|
-|`IHF_NOSEPARATESUBJECT`|Konu metni yok. Bağlam arabelleği IntelliSense-target (anlamına gelir `!IHF_READONLYCONTEXT` ) içerir.|
-|`IHF_SINGLELINESUBJECT`|Konu metni çok satırlı özellikli değil.|
-|`IHF_FORCECOMMITTOCONTEXT`|Aynı `CanCommitIntoReadOnlyBuffer` .|
-|`IHF_OVERTYPE`|Düzenlemenin (konu veya bağlamda) üzerine yazma modunda yapılması gerekir.|
+|`IHF_READONLYCONTEXT`|Bağlam arabelleği salt okunur.|
+|`IHF_NOSEPARATESUBJECT`|Konu metni yok. Bağlam arabelleği IntelliSense hedefi içerir (anlamına `!IHF_READONLYCONTEXT` gelir).|
+|`IHF_SINGLELINESUBJECT`|Konu metni çok satırlı değildir.|
+|`IHF_FORCECOMMITTOCONTEXT`|ile `CanCommitIntoReadOnlyBuffer` aynı.|
+|`IHF_OVERTYPE`|Düzenleme (konu veya bağlam) üzerine yazma modunda yapılmalı.|
 
 ## <a name="requirements"></a>Gereksinimler
- SingleFileeditor. IDL
+ SingleFileeditor.idl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.TextManager.Interop>

@@ -1,6 +1,6 @@
 ---
-description: Görev yürütmeyi başarıyla tamamladı.
-title: TASK_STATE_RAN_TO_COMPLETION alanı | Microsoft Docs
+description: Görev başarıyla yürütmeyi tamamladı.
+title: TASK_STATE_RAN_TO_COMPLETION Alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,20 +13,20 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: bb8f7c72da6e48dcd8b24a6b871e5138764494a3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117897"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626378"
 ---
 # <a name="task_state_ran_to_completion-field"></a>TASK_STATE_RAN_TO_COMPLETION alanı
-Görev yürütmeyi başarıyla tamamladı.
+Görev başarıyla yürütmeyi tamamladı.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
+ **Derleme:** mscorlib *(mscorlib.dll*)
 
- bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
+ Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ Görev yürütmeyi başarıyla tamamladı.
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- [M_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alan bu değeri içeriyorsa, <xref:System.Threading.Tasks.Task.Status%2A> özelliği döndürür <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> .
+ M_stateFlags [alanı](../../extensibility/debugger/m-stateflags-field.md) bu değeri içeriyorsa özelliği <xref:System.Threading.Tasks.Task.Status%2A> <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md)

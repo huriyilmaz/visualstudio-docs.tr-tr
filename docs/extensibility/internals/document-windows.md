@@ -1,6 +1,6 @@
 ---
 title: Belge Windows | Microsoft Docs
-description: Uygulama ve Çalışan belge Visual Studio (RDT) durumlarını nasıl takip etmek de dahil olmak üzere, belge pencerelerini nasıl uygulayacaklarını öğrenin.
+description: Visual Studio ' deki belge pencereleri hakkında bilgi edinin ve bunları nasıl uygulayacağınızı ve çalışan belge tablosunun (rdt) durumlarını nasıl izlediğini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,35 +14,35 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1a1659bc97e1626e198b2a3867223005c84cf9e7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122094886"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725085"
 ---
 # <a name="document-windows"></a>Belge pencereleri
-Bu Visual Studio belge *penceresi,* çok belgeli arabirim (MDI) penceresiyle ilişkili çerçeveli bir alt penceredir. Belge pencereleri genellikle kaynak kodun veya metnin görüntüsü ve değişikliği için kullanılır, ancak diğer işlev türlerini de barındırabilir. Belge pencereleri:
+Visual Studio, *belge penceresi* bir çoklu belge arabirimi (mdı) penceresiyle ilişkili olan bir çerçeveli alt penceredir. Belge pencereleri genellikle kaynak kodu veya metin görüntüleme ve değiştirme için kullanılır, ancak diğer işlevsel türleri de barındırabilir. Belge pencereleri:
 
-- Üst MDI'da ayrı yatay veya dikey sekme gruplarında düzenleniyor, böylece aynı anda birden çok dosya görüntüleniyor olabilir.
+- Aynı anda birden çok dosya görüntülenebilmesi için üst MDI 'daki ayrı yatay veya dikey sekme grupları halinde düzenlenebilir.
 
-- Üst MDI'de herhangi bir sırada yer alan olabilir.
+- Üst MDI 'da herhangi bir sıraya yerleştirilebilir.
 
-- Serbestçe kayan olabilir.
+- Serbestçe eklenebilir.
 
-- Diğer MDI pencerelere sekme sırasıyla bağlıdır.
+- , Diğer MDI pencereleri için sekme sırasıyla bağlantılıdır.
 
-  Gruplama, yerleştirme ve kayan öğe komutları, belge penceresi sekmesinin kısayol menüsünde bulunabilir.
+  Gruplandırma, yerleştirme ve kayan komutlar, bir belge penceresi sekmesi için kısayol menüsünde bulunabilir.
 
-  Uygulama içinde pencere davranışı hakkında daha fazla Visual Studio için [bkz. Pencere düzenlerini özelleştirme.](../../ide/customizing-window-layouts-in-visual-studio.md)
+  Visual Studio pencere davranışı hakkında daha fazla bilgi için bkz. [özelleştirme pencere düzenleri](../../ide/customizing-window-layouts-in-visual-studio.md).
 
-## <a name="document-window-implementation"></a>Belge penceresi uygulaması
- Belge pencereleri bir düzenleyici uygulanarak oluşturulur. Arabirim, <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> bir düzenleyici örneği oluşturmanın bir parçası olarak belge pencereleri oluşturur. Daha fazla bilgi için [bkz. Düzenleyicide eski arabirimler.](/previous-versions/visualstudio/visual-studio-2015/extensibility/legacy-interfaces-in-the-editor?preserve-view=true&view=vs-2015)
+## <a name="document-window-implementation"></a>Belge penceresi uygulama
+ Belge pencereleri bir düzenleyici uygulayarak oluşturulur. <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>Arabirim, bir düzenleyiciyi örnekleyici belge pencerelerini oluşturur. Daha fazla bilgi için bkz. [düzenleyicideki eski arabirimler](/previous-versions/visualstudio/visual-studio-2015/extensibility/legacy-interfaces-in-the-editor?preserve-view=true&view=vs-2015).
 
 > [!NOTE]
-> Bir pencerede geriye ve ileriye doğru gezinti noktaları sağlamak için arabirimini <xref:Microsoft.VisualStudio.Shell.Interop.IVsBackForwardNavigation> kullanın. Metin düzenleyicisi, belgede gezinti noktalarını tanımlamak için metin işaretçilerini kullanır.
+> Bir pencerede geri ve İleri gezinti noktaları sağlamak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsBackForwardNavigation> arabirimini uygulayın. Metin Düzenleyicisi belgedeki gezinti noktalarını tanımlamak için metin işaretçilerini kullanır.
 
 ## <a name="the-running-document-table"></a>Çalışan belge tablosu
- IDE, her belge penceresinin durumunu izlemek için Çalışan belge tablosu (RDT) kullanır. RDT, belge pencerelerinin bir çözümün kapatılan veya bir dosya düzenlenmiş olduğu gibi olaylar hakkında bilgi veren mekanizmadır. Daha fazla bilgi için [bkz. Belge tablosu çalıştırma.](../../extensibility/internals/running-document-table.md)
+ IDE, her belge penceresinin durumunu izlemek için çalışan belge tablosunu (RDT) kullanır. RDT, bir çözümün ne zaman kapatıldığı veya bir dosyanın düzenlenmediği gibi, Belge pencerelerinin hangi olaylar hakkında bilgilendirilmesine yönelik bir mekanizmadır. Daha fazla bilgi için bkz. [çalışma belge tablosu](../../extensibility/internals/running-document-table.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Belge yüklemesi geciktirildi](../../extensibility/internals/delayed-document-loading.md)
+- [Gecikmeli belge yükleme](../../extensibility/internals/delayed-document-loading.md)

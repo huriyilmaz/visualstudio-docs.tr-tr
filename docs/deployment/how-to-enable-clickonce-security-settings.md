@@ -1,6 +1,6 @@
 ---
-title: ClickOnce güvenliği Ayarlar etkinleştir | Microsoft Docs
-description: yayımla sihirbazının uygulamayı yayımlaması ClickOnce uygulamalar için kod erişim güvenliğini otomatik olarak nasıl etkinleştirmesine öğrenin.
+title: ClickOnce Security Ayarlar | Microsoft Docs
+description: Yayımla sihirbazının, uygulama yayımlamak için ClickOnce erişim güvenliğini otomatik olarak nasıl olanaklı olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,44 +20,44 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: b534d18deeb63cad6cb0df967915e4fde968c688
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122080630"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635281"
 ---
-# <a name="how-to-enable-clickonce-security-settings"></a>nasıl yapılır: ClickOnce güvenlik ayarlarını etkinleştirme
-uygulamayı yayımlamak için ClickOnce uygulamalar için kod erişimi güvenliği etkinleştirilmelidir. Bu, Yayımlama Sihirbazı 'nı kullanarak bir uygulamayı yayımladığınızda otomatik olarak yapılır.
+# <a name="how-to-enable-clickonce-security-settings"></a>Nasıl yapabilirsiniz: ClickOnce ayarlarını etkinleştirme
+Uygulama yayımlamak ClickOnce için kod erişimi güvenliği etkinleştirilmelidir. Bu, Yayımla sihirbazını kullanarak bir uygulama yayımlasanız otomatik olarak yapılır.
 
- Bazı durumlarda, uygulama derlerken veya hata ayıklarken kod erişim güvenliğini etkinleştirmek performansı etkileyebilir; Bu durumlarda, güvenlik ayarlarını geçici olarak devre dışı bırakmak isteyebilirsiniz.
+ Bazı durumlarda, kod erişimi güvenliğinin etkinleştirilmesi, uygulamanızı hazırlarken veya hata ayıklarken performansı etkileyebilir; Bu durumlarda, güvenlik ayarlarını geçici olarak devre dışı bırakmak isterseniz.
 
- ClickOnce güvenlik ayarları **Project tasarımcısının** **güvenlik** sayfasında etkinleştirilebilir veya devre dışı bırakılabilir.
+ ClickOnce ayarları, Project **Tasarımcısı'nın** Güvenlik **sayfasında etkinleştirilebilir veya devre dışı bırakılabilir.**
 
-### <a name="to-enable-clickonce-security-settings"></a>ClickOnce güvenlik ayarlarını etkinleştirmek için
+### <a name="to-enable-clickonce-security-settings"></a>Güvenlik ayarlarını ClickOnce için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Project** menüsünde **özellikler**' e tıklayın.
-
-2. **Güvenlik** sekmesine tıklayın.
-
-3. **ClickOnce güvenliği etkinleştir Ayarlar** onay kutusunu seçin.
-
-     Artık güvenlik sayfasında uygulamanızın güvenlik ayarlarını özelleştirebilirsiniz.
-
-    > [!NOTE]
-    > Bu onay kutusu, uygulamanın **Yayımlama** sihirbazıyla her yayımlanışında otomatik olarak seçilir.
-
-### <a name="to-disable-clickonce-security-settings"></a>ClickOnce güvenlik ayarlarını devre dışı bırakmak için
-
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Project** menüsünde **özellikler**' e tıklayın.
+1. içinde bir proje **seçiliyken Çözüm Gezgini** menüsünde **Project'a** **tıklayın.**
 
 2. **Güvenlik** sekmesine tıklayın.
 
-3. **ClickOnce güvenlik Ayarlar etkinleştir** onay kutusunu temizleyin.
+3. ClickOnce **Security Ayarlar** onay kutusunu seçin.
 
-     Uygulamanız tam güven güvenlik ayarlarıyla çalıştırılır; **güvenlik** sayfasındaki tüm ayarlar yok sayılır.
+     Artık Güvenlik sayfasında uygulamanıza güvenlik ayarlarını özelleştirebilirsiniz.
 
     > [!NOTE]
-    > Uygulama yayımlama sihirbazıyla her yayımlandığında, bu onay kutusu işaretlenir; Her başarılı yayımladıktan sonra yeniden temizlemeniz gerekir.
+    > Uygulama Yayımla sihirbazıyla her yayım olduğunda bu onay kutusu otomatik **olarak** seçilir.
+
+### <a name="to-disable-clickonce-security-settings"></a>Güvenlik ayarlarını ClickOnce için
+
+1. içinde bir proje **seçiliyken Çözüm Gezgini** menüsünde **Project'a** **tıklayın.**
+
+2. **Güvenlik** sekmesine tıklayın.
+
+3. ClickOnce **Security Ayarlar kutusunun** işaretini kaldırın.
+
+     Uygulamanız tam güven güvenliği ayarlarıyla çalıştıracak; Güvenlik sayfasındaki **tüm ayarlar** yoksayılır.
+
+    > [!NOTE]
+    > Uygulama Yayımla sihirbazıyla her yayımlanıyorsa bu onay kutusu seçilir; her başarılı yayımlamadan sonra tekrar temizlemelisiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarını koruma](../deployment/securing-clickonce-applications.md)

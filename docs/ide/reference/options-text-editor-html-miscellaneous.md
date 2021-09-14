@@ -12,16 +12,16 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 33cfb70b23c63e533582a739f8c568b01578d6f938e97c3c12729b1e071aa0b7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0ff787db88292ded90c8dbdce3c86637ba2bdbd4
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121232268"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724892"
 ---
 # <a name="options-text-editor-html-web-forms-miscellaneous"></a>Seçenekler, Metin Düzenleyici, HTML (Web Forms), Çeşitli
 
-HTML **düzenleyicisinin sayfaya yapıştırilen** öğeleri nasıl işlediğiyle ilgili tercihleri ayarlamak için Çeşitli seçenekler sayfasını kullanın. Bu sayfaya erişmek için menü çubuğunda Araçlar Seçenekleri'ni seçin ve ardından Metin  >  Düzenleyicisi   >  **HTML (Web Forms)**  >  **Çeşitli seçeneğini genişletin.**
+HTML **düzenleyicisinin sayfaya yapıştırilen** öğeleri nasıl işlediğiyle ilgili tercihleri ayarlamak için Çeşitli seçenekler sayfasını kullanın. Bu sayfaya erişmek için menü çubuğunda Araçlar Seçenekleri'ni seçin ve ardından Metin  >  Düzenleyicisi   >  **HTML (Web Forms)**  >  **Çeşitli 'yi genişletin.**
 
 ## <a name="miscellaneous-html-options"></a>Çeşitli HTML seçenekleri
 

@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl: Yönetilen Kodda Birden Çok İş Parçacığını Yönetme | Microsoft Docs'
-description: Yönetilen VSPackage uzantınız zaman uyumsuz yöntemler çağırıyorsa veya kullanıcı arabirimi iş parçacığını kapatma işlemlerine sahipse kodda birden çok iş parçacığını Visual Studio öğrenin.
+description: Yönetilen VSPackage uzantınız zaman uyumsuz yöntemler çağırıyorsa veya kullanıcı arabirimi iş parçacığında işlem varsa kodda birden çok iş parçacığını Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,11 +12,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8bc6cdae2ac2fca16467bdbeee2333e7d7189ee9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122102304"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724967"
 ---
 # <a name="how-to-manage-multiple-threads-in-managed-code"></a>Nasıllı: Yönetilen kodda birden çok iş parçacığını yönetme
 Zaman uyumsuz yöntemleri çağıran veya Visual Studio kullanıcı arabirimi iş parçacığı dışında iş parçacıklarında yürütülen işlemlere sahip yönetilen bir VSPackage uzantınız varsa, aşağıda verilen yönergeleri izlemeniz gerekir. Kullanıcı arabirimi iş parçacığının yanıt verme işleminin tamamlanması için başka bir iş parçacığında iş parçacığını beklemesi gerekmay olduğundan bu iş parçacığını tutabilirsiniz. Yığın alanı alan fazladan iş parçacıklarınız olmadığı için kodunuzu daha verimli hale getirir ve kilitlenmeleri ve yanıt vermemeye çalışan kodu önleyene kadar daha güvenilir ve hata ayıklamayı daha kolay hale getirirsiniz.
@@ -26,7 +26,7 @@ Zaman uyumsuz yöntemleri çağıran veya Visual Studio kullanıcı arabirimi i�
 > [!IMPORTANT]
 > Aşağıdaki yönergeler, özellikle sınıfındaki <xref:Microsoft.VisualStudio.Threading> ad alanı API'lerini <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> kullanır. Bu ad alanı api'leri içinde [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] yenidir. özelliğinden bir örneği <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory> <xref:Microsoft.VisualStudio.Shell.ThreadHelper> `ThreadHelper.JoinableTaskFactory` eldeabilirsiniz.
 
-## <a name="switch-from-the-ui-thread-to-a-background-thread"></a>Kullanıcı arabirimi iş parçacığından arka plan iş parçacığına geçme
+## <a name="switch-from-the-ui-thread-to-a-background-thread"></a>Ui iş parçacığından arka plan iş parçacığına geçme
 
 1. Kullanıcı arabirimi iş parçacığındaysanız ve bir arka plan iş parçacığında zaman uyumsuz çalışma yapmak için `Task.Run()` kullanın:
 
@@ -38,7 +38,7 @@ Zaman uyumsuz yöntemleri çağıran veya Visual Studio kullanıcı arabirimi i�
 
     ```
 
-2. Kullanıcı arabirimi iş parçacığındaysanız ve bir arka plan iş parçacığı üzerinde çalışma yaparken zaman uyumlu olarak engellemek için içindeki <xref:System.Threading.Tasks.TaskScheduler> özelliğini `TaskScheduler.Default` <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A> kullanın:
+2. Kullanıcı arabirimi iş parçacığındaysanız ve arka plan iş parçacığı üzerinde çalışma yaparken zaman uyumlu olarak engellemek için içindeki <xref:System.Threading.Tasks.TaskScheduler> özelliğini `TaskScheduler.Default` <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.Run%2A> kullanın:
 
     ```csharp
     // using Microsoft.VisualStudio.Threading;
@@ -52,7 +52,7 @@ Zaman uyumsuz yöntemleri çağıran veya Visual Studio kullanıcı arabirimi i�
 
 ## <a name="switch-from-a-background-thread-to-the-ui-thread"></a>Arka plan iş parçacığından UI iş parçacığına geçme
 
-1. Arka plan iş parçacığındaysanız ve kullanıcı arabirimi iş parçacığında bir şey yapmak için <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> kullanın:
+1. Bir arka plan iş parçacığındaysanız ve kullanıcı arabirimi iş parçacığında bir şey yapmak için <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> kullanın:
 
     ```csharp
     // Switch to main thread

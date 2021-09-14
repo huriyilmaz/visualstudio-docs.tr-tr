@@ -1,5 +1,5 @@
 ---
-title: MSTest onay sınıfları ve yöntemleri
+title: MSTest onaylama sınıfları ve yöntemleri
 description: Uygulama kodunuzun birim testi sırasında kod davranışının doğru olduğunu test etmek için Assert deyimlerini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/07/2018
@@ -15,11 +15,11 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: 09edc60284a8ff4d26a670123427cbf3a3ae1385
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122038363"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635465"
 ---
 # <a name="use-assert-classes-for-unit-testing"></a>Birim testi için Onay sınıflarını kullanma
 
@@ -29,7 +29,7 @@ Belirli işlevleri doğrulamak için ad alanının Assert <xref:Microsoft.Visual
 
 Ad <xref:Microsoft.VisualStudio.TestTools.UnitTesting> alanı çeşitli türlerde Onay sınıfları sağlar.
 
-Test yönteminde sınıfının gibi herhangi bir yöntemini <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName> <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=nameWithType> çağırebilirsiniz. sınıfının <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> seçecek birçok yöntemi vardır ve yöntemlerin çoğunda çeşitli aşırı yüklemeler vardır.
+Test yönteminde sınıfının gibi herhangi bir yöntemini <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName> <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=nameWithType> çağırebilirsiniz. sınıfının <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> seçecek birçok yöntemi vardır ve yöntemlerin çoğunda birkaç aşırı yükleme vardır.
 
 ### <a name="compare-strings-and-collections"></a>Dizeleri ve koleksiyonları karşılaştırma
 
@@ -48,7 +48,7 @@ Bir <xref:Microsoft.VisualStudio.TestTools.UnitTesting.AssertFailedException> te
 
 Yeni bir onay özel durum sınıfı yazarsanız, özel durumu test veya üretim kodunuzdan beklenmeyen bir özel durum değil onay hatası olarak tanımlamayı kolaylaştırmak için temel <xref:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException> sınıftan devralın.
 
-Uygulama kodunda bir yöntem tarafından at olmasını beklediğiniz özel durumun gerçekten at olduğunu doğrulamak için yöntemini <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> kullanın.
+Uygulama kodundaki bir yöntem tarafından at olmasını beklediğiniz özel durumun gerçekten at olduğunu doğrulamak için yöntemini <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

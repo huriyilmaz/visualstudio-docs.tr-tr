@@ -1,6 +1,6 @@
 ---
 title: Özelleştirilmiş Dağıtım | Microsoft Docs
-description: Uygulama projesinin özel dağıtımını nasıl işleyebilirsiniz? Visual Studio. Örneğin, bir Web sunucusuna veya cihaza dağıtım.
+description: Uygulama projesinin bir uygulama projesinin özel dağıtımını nasıl işley Visual Studio. Örneğin, bir Web sunucusuna veya cihaza dağıtım.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,11 +15,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 88cb63133cbe3dbe8c41c64cdae1f0bdc64ff5f9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122069919"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725067"
 ---
 # <a name="handle-specialized-deployment"></a>Özelleştirilmiş dağıtımı işleme
 Dağıtım, projeler için isteğe bağlı bir işlemdir. Örneğin bir Web projesi, bir projenin Web sunucusunu güncelleştirmesine izin vermek için dağıtımı destekler. Benzer şekilde, **Akıllı Cihaz projesi** de, yerleşik bir uygulamayı hedef cihaza kopyalamak için dağıtımı destekler. Project alt türleri, arabirimini uygulayarak özel dağıtım davranışı <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> sağlar. Bu arabirim, dağıtım işlemlerinin eksiksiz bir kümesini tanımlar:
@@ -44,7 +44,7 @@ Dağıtım, projeler için isteğe bağlı bir işlemdir. Örneğin bir Web proj
 
   Ortama bir dağıtım işlemi başlatıldı veya sona ermiştir bildirmek için, proje alt türü ve yöntemlerini <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnStartDeploy%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback.OnEndDeploy%2A> çağırmalıdır.
 
-## <a name="to-handle-a-specialized-deployment-by-a-subtype-project"></a>Bir alt tür projesine göre özelleştirilmiş dağıtımı işlemek için
+## <a name="to-handle-a-specialized-deployment-by-a-subtype-project"></a>Bir alt tür projesi tarafından özelleştirilmiş dağıtımı işlemek için
 
 - Dağıtım <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.AdviseDeployStatusCallback%2A> durumu olaylarının bildirimlerini almak için ortamı kaydetmek için yöntemini uygulama.
 
@@ -113,7 +113,7 @@ Dağıtım, projeler için isteğe bağlı bir işlemdir. Örneğin bir Web proj
 
     ```
 
-- Geri <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A> alma işlemi gerçekleştirmek için yöntemini uygulama. Bu yöntem çağrıldı olduğunda, dağıtım projesi değişiklikleri geri almak ve projenin durumunu geri yüklemek için uygun olan her şeyi yapmalısınız. Bu yöntem asıl olarak veritabanı dağıtımı için kullanılır.
+- Geri <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.Rollback%2A> alma işlemi gerçekleştirmek için yöntemini uygulama. Bu yöntem çağrıldı zaman, dağıtım projesi değişiklikleri geri almak ve projenin durumunu geri yüklemek için uygun olan her şeyi yapmalısınız. Bu yöntem asıl olarak veritabanı dağıtımı için kullanılır.
 
     ```vb
     Public Function Commit(ByVal dwReserved As UInteger) As Integer
@@ -244,7 +244,7 @@ Dağıtım, projeler için isteğe bağlı bir işlemdir. Örneğin bir Web proj
 
     ```
 
-- Dağıtım <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A> işlemi durdurmak için yöntemini uygulama. Bu yöntem, bir kullanıcı dağıtım işlemi sırasında **İptal düğmesine** basıldığında çağrılır.
+- Dağıtım <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg.StopDeploy%2A> işlemi durdurmak için yöntemini uygulama. Bu yöntem, kullanıcı dağıtım işlemi sırasında İptal **düğmesine** basıldığında çağrılır.
 
     ```vb
     Public Function StopDeploy(ByVal fSync As Integer) As Integer

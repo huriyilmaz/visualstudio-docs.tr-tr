@@ -1,6 +1,6 @@
 ---
-title: "Nasıl bilinir: C++ URL'leri için birim testleri yazma"
-description: Test-first metodolojisi kullanarak yerel bir C++ DLL'si geliştirmeyi öğrenin. Başlangıç olarak yerel bir test projesi oluşturma.
+title: "Nasıl yapılır: C++ dll 'Leri için birim testleri yazma"
+description: Test-First yöntemini kullanarak yerel C++ DLL geliştirmeyi öğrenin. Yerel bir test projesi oluşturarak başlayın.
 ms.custom: SEO-VS-2020
 ms.date: 06/13/2019
 ms.topic: how-to
@@ -9,61 +9,61 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 9c18bec4b6e25148c23a0e44cff95438322ea20c0cdd6f7aa57079f0cce6d268
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: cfdc580b94760cb0c5160918210ba6c3dd8fa2f6
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121226803"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635478"
 ---
-# <a name="how-to-write-unit-tests-for-c-dlls"></a>Nasıl bilinir: C++ URL'leri için birim testleri yazma
+# <a name="how-to-write-unit-tests-for-c-dlls"></a>Nasıl yapılır: C++ dll 'Leri için birim testleri yazma
 
-Bu kılavuzda, test-first metodolojisi kullanılarak yerel bir C++ DLL'leri geliştirme açıklanır. Temel adımlar aşağıdaki gibidir:
+Bu izlenecek yol, test-First yöntemini kullanarak yerel C++ DLL 'nin nasıl geliştirileceği açıklanmaktadır. Temel adımlar aşağıdaki gibidir:
 
-1. [Yerel test projesi oluşturun.](#create_test_project) Test projesi, DLL projesiyle aynı çözümde bulunur.
+1. [Yerel bir test projesi oluşturun](#create_test_project). Test projesi, DLL projesiyle aynı çözümde bulunur.
 
-2. [DLL projesi oluşturun.](#create_dll_project) Bu kılavuz yeni bir DLL oluşturur, ancak var olan bir DLL'i test etme yordamı benzerdir.
+2. [BIR DLL projesi oluşturun](#create_dll_project). Bu izlenecek yol yeni bir DLL oluşturur, ancak var olan bir DLL 'yi test etme yordamı benzerdir.
 
-3. [DLL işlevlerinin testlere görünür hale gelir.](#make_functions_visible)
+3. [DLL işlevlerini testlere görünür hale getirin](#make_functions_visible).
 
-4. [Testlerini çoğaltarak geliştirin.](#iterate) Kodun geliştirilmesinin testler tarafından yönlendirilecek bir "kırmızı-yeşil-yeniden düzenleme" döngüsü önerilir.
+4. [Testleri](#iterate)yinelemeli olarak güçlendirin. Kodun geliştirilmesi testlerin yaptığı bir "kırmızı yeşil-yeniden düzenleme" döngüsünün kullanılması önerilir.
 
-5. [Başarısız testlerde hata ayıklama.](#debug) Testleri hata ayıklama modunda çalıştırabilirsiniz.
+5. [Başarısız testlerde hata ayıklayın](#debug). Testleri hata ayıklama modunda çalıştırabilirsiniz.
 
-6. [Testleri değiştirmeden yeniden düzenleme.](#refactor) Yeniden düzenleme, dış davranışını değiştirmeden kodun yapısını geliştirmek anlamına gelir. Kodun performansını, genişletilebilirliğini veya okunabilirliğini geliştirmek için bunu yapabiliriz. Amaç davranışı değiştirmek değil, kodda yeniden düzenleme değişikliği yaparken testleri değiştirmezsiniz. Testler, yeniden düzenleme sırasında hatalara neden olmaz.
+6. [Testleri değişmeden tutarken yeniden düzenleme](#refactor). Yeniden düzenleme, dış davranışını değiştirmeden kodun yapısını iyileştirmek anlamına gelir. Bu kodu, kodun performansını, genişletilebilirliğini veya okunabilirliğini geliştirmek için yapabilirsiniz. Amaç, davranışı değiştirmediğinden, kodda yeniden düzenleme değişikliği yaparken testleri değiştirmeyin. Testler, yeniden düzenleme sırasında hata tanıtmadığınızdan emin olmanıza yardımcı olur.
 
-7. [Kapsamı kontrol edin.](using-code-coverage-to-determine-how-much-code-is-being-tested.md) Birim testleri, kodunuzun daha fazla alıştırması sırasında daha kullanışlıdır. Kodunuzun hangi bölümlerinin testler tarafından kullanılmış olduğunu keşfedebilirsiniz.
+7. [Kapsama bakın](using-code-coverage-to-determine-how-much-code-is-being-tested.md). Birim testleri, kodunuzun daha fazlasını yaparken daha kullanışlı olur. Kodunuzun hangi bölümlerinin test tarafından kullanıldığını keşfedebilirsiniz.
 
-8. [Birimleri dış kaynaklardan yalıtmak.](using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md) Bir DLL genellikle geliştirmekte olduğunu sistemin diğer bileşenlerine (diğer DLL'ler, veritabanları veya uzak alt sistemler gibi) bağımlıdır. Her birimi bağımlılıklarından yalıtarak test etmek yararlıdır. Dış bileşenler, testlerin yavaş çalışmasına neden olabilir. Geliştirme sırasında diğer bileşenler tamamlanmadı olabilir.
+8. [Birimleri dış kaynaklardan yalıtın](using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md). Genellikle, bir DLL, diğer dll 'Ler, veritabanları veya uzak alt sistemler gibi geliştirmekte olduğunuz sistem bileşenlerine bağımlıdır. Her birimi bağımlılıklarından yalıtılmış olarak test etmek yararlı olur. Dış bileşenler, testlerin yavaş çalışmasını sağlayabilir. Geliştirme sırasında diğer bileşenler tamamlanmamış olabilir.
 
-## <a name="create-a-native-unit-test-project"></a><a name="create_test_project"></a> Yerel birim testi projesi oluşturma
+## <a name="create-a-native-unit-test-project"></a><a name="create_test_project"></a> Yerel birim testi projesi oluştur
 
-1. Dosya menüsünde **Yeni** **dosya'Project.**  >  
+1. **dosya** menüsünde **yeni**  >  **Project**' yi seçin.
 
-     **Visual Studio 2017 ve önceki sürümler:** Test **etmek için**  >  **Yüklü**  >  **Visual C++**  >  **Genişletin.**
-     **Visual Studio 2019:** **Dil'i** C++ olarak ayarlayın ve arama kutusuna "test" yazın.
+     **Visual Studio 2017 ve öncesi**: **yüklü**  >  **şablonlar**  >  **Visual C++**  >  **Test**' i genişletin.
+     **Visual Studio 2019**: **dili** C++ olarak ayarlayın ve arama kutusuna "test" yazın.
 
-     Yerel Birim **Testi Project** şablonunu veya istediğiniz yüklü çerçeveyi seçin. Google Test veya Boost.Test gibi başka bir şablon seçerseniz, bazı ayrıntılar farklı olsa da temel ilkeler aynıdır.
+     **yerel birim testi Project** şablonunu veya tercih ettiğiniz yüklü çerçeveyi seçin. Google Test veya Boost. test gibi başka bir şablon seçerseniz, bazı ayrıntılar farklı olsa da temel ilkeler aynı olur.
 
-     Bu kılavuzda test projesi olarak `NativeRooterTest` adlandırılmıştır.
+     Bu izlenecek yolda, test projesi adlandırılır `NativeRooterTest` .
 
-2. Yeni projede **unittest1.cpp'yi incele**
+2. Yeni projede, **UnitTest1. cpp** ' yi inceleyin
 
-     ![TEST&#95;CLASS ve TEST&#95;METODU ile projeyi test](../test/media/utecpp2.png)
+     ![Test&#95;sınıfı ve TEST&#95;YÖNTEMIYLE test projesi](../test/media/utecpp2.png)
 
      Şunlara dikkat edin:
 
-    - Her test kullanılarak `TEST_METHOD(YourTestName){...}` tanımlanır.
+    - Her test kullanılarak tanımlanır `TEST_METHOD(YourTestName){...}` .
 
-         Geleneksel işlev imzası yazmak zorunda değildir. İmza, makro TEST_METHOD. Makro, void döndüren bir örnek işlevi üretir. Ayrıca test yöntemi hakkında bilgi döndüren statik bir işlev de üretir. Bu bilgiler, test gezgininin yöntemini bulmasını sağlar.
+         Geleneksel bir işlev imzası yazmanız gerekmez. İmza, makro TEST_METHOD tarafından oluşturulur. Makro, void döndüren bir örnek işlevi oluşturur. Ayrıca test yöntemiyle ilgili bilgileri döndüren statik bir işlev oluşturur. Bu bilgiler, test Gezgini 'nin yöntemi bulmasını sağlar.
 
-    - Test yöntemleri kullanılarak sınıflara `TEST_CLASS(YourClassName){...}` gruplandı.
+    - Test yöntemleri kullanılarak sınıflar halinde gruplandırılır `TEST_CLASS(YourClassName){...}` .
 
-         Testler çalıştırılan her test sınıfının bir örneği oluşturulur. Test yöntemleri belirtilmemiş bir sırada çağrılır. Her modülden, sınıftan veya yöntemden önce ve sonra çağrılan özel yöntemler tanımlayabilirsiniz.
+         Testler çalıştırıldığında, her bir test sınıfının bir örneği oluşturulur. Test yöntemleri belirtilmemiş bir sırada çağırılır. Her modül, sınıf veya yöntemden önce ve sonra çağrılan özel yöntemler tanımlayabilirsiniz.
 
-3. Test Gezgini'nde testlerin çalıştığını doğrulayın:
+3. Testin test Gezgini 'nde çalıştığını doğrulayın:
 
-    1. Bazı test kodu ekleme:
+    1. Bir test kodu ekleyin:
 
         ```cpp
         TEST_METHOD(TestMethod1)
@@ -72,41 +72,41 @@ Bu kılavuzda, test-first metodolojisi kullanılarak yerel bir C++ DLL'leri geli
         }
         ```
 
-         sınıfının test `Assert` yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığına dikkat etmek.
+         `Assert`Sınıfının, test yöntemlerinde sonuçları doğrulamak için kullanabileceğiniz çeşitli statik yöntemler sağladığını unutmayın.
 
-    2. Test menüsünde **Tüm** Testleri   >  **Çalıştır'ı seçin.**
+    2. **Test** menüsünde   >  **tüm testleri** Çalıştır ' ı seçin.
 
-         Test derlemelerini ve çalıştırmalarını sağlar.
+         Test derlemeleri ve çalıştırmaları.
 
          **Test Gezgini** görüntülenir.
 
-         Test, Başarılı Testler **altında görünür.**
+         Test **geçilen testler** altında görünür.
 
-         ![Tek bir geçmiş test ile Birim Testi Gezgini](../test/media/utecpp04.png)
+         ![Başarılı bir test ile birim test Gezgini](../test/media/utecpp04.png)
 
 ## <a name="create-a-dll-project"></a><a name="create_dll_project"></a> DLL projesi oluşturma
 
 ::: moniker range=">=vs-2019"
 
-Aşağıdaki adımlarda, Visual Studio 2019'da DLL projesinin nasıl oluşturulmalıdır?
+aşağıdaki adımlarda Visual Studio 2019 ' de bir DLL projesi oluşturma gösterilmektedir.
 
-1. **Windows Masaüstü** Sihirbazı'nı kullanarak bir C++ projesi oluşturun: Çözüm Gezgini'de çözüm adına sağ tıklayın ve **Project.**  >   **Dil'i** C++ olarak ayarlayın ve arama kutusuna "windows" yazın. Sonuçlar **Windows Masaüstü Sihirbazı'nı** seçin.
+1. **Windows masaüstü sihirbazı 'nı** kullanarak bir C++ projesi oluşturma: **Çözüm Gezgini** çözüm adına sağ tıklayın ve   >  **yeni Project** ekle ' yi seçin. **Dili** C++ olarak ayarlayın ve arama kutusuna "Windows" yazın. sonuçlar listesinden **Windows masaüstü sihirbazı** ' nı seçin.
 
-     Bu kılavuzda proje olarak `RootFinder` adlandırılmıştır.
+     Bu kılavuzda, proje adlandırılır `RootFinder` .
 
-2. **Oluştur**’a basın. Sonraki iletişim kutusunda, Uygulama türü altında **Dinamik Bağlantı** Kitaplığı **(dll) öğesini seçin** ve ayrıca Sembolleri Dışarı **Aktar'ı seçin.**
+2. **Oluştur**’a basın. Sonraki iletişim kutusunda, **uygulama türü** altında **dinamik bağlantı kitaplığı (dll)** öğesini seçin ve ayrıca **sembolleri dışarı aktar**' ı işaretleyin.
 
-     Sembolleri **Dışarı Aktar** seçeneği, dışarı aktaran yöntemleri bildirebilirsiniz kullanışlı bir makro üretir.
+     **Sembolleri dışarı aktar** seçeneği, dışarı aktarılmış yöntemleri bildirmek için kullanabileceğiniz, kullanışlı bir makro oluşturur.
 
-     ![DLL ve Dışarı Aktarma Sembolleri için C++ proje sihirbazı kümesi](../test/media/vs-2019/windows-desktop-project-dll.png)
+     ![DLL ve dışa aktarma sembolleri için C++ proje Sihirbazı ayarlandı](../test/media/vs-2019/windows-desktop-project-dll.png)
 
-3. Asıl *.h* dosyasında dışarı aktaran bir işlev bildir:
+3. Principal *. h* dosyasında bir dışarıya aktarılmış işlev bildirin:
 
-     ![API makroları ile yeni DLL kod projesi ve .h dosyası](../test/media/utecpp07.png)
+     ![API makroları ile yeni DLL kod projesi ve. h dosyası](../test/media/utecpp07.png)
 
-     Bildirimleyici, `__declspec(dllexport)` sınıfın ortak ve korumalı üyelerinin DLL dışında görünür olmasına neden olur. Daha fazla bilgi için bkz. C++ Sınıflarında [dllimport ve dllexport kullanma.](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)
+     Bildirimci, `__declspec(dllexport)` sınıfın genel ve korumalı ÜYELERININ dll dışında görünür olmasına neden olur. Daha fazla bilgi için bkz. [C++ sınıflarında dllimport ve dllexport kullanma](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes).
 
-4. Sorumlu *.cpp dosyasında* işlev için en küçük bir gövde ekleyin:
+4. Principal *. cpp* dosyasında, işlev için en az bir gövde ekleyin:
 
     ```cpp
         // Find the square root of a number.
@@ -120,25 +120,25 @@ Aşağıdaki adımlarda, Visual Studio 2019'da DLL projesinin nasıl oluşturulm
 
 ::: moniker range="vs-2017"
 
-Aşağıdaki adımlar, 2017'de bir DLL Visual Studio gösterir.
+aşağıdaki adımlarda Visual Studio 2017 ' de bir DLL projesi oluşturma gösterilmektedir.
 
-1. **Win32** Project şablonu kullanarak bir C++ projesi oluşturun.
+1. **Win32 Project** şablonunu kullanarak bir C++ projesi oluşturun.
 
-     Bu kılavuzda proje olarak `RootFinder` adlandırılmıştır.
+     Bu kılavuzda, proje adlandırılır `RootFinder` .
 
-2. Win32 **Uygulama Sihirbazı'nda** **DLL** ve Dışarı Aktarma Sembolleri'ni seçin.
+2. Win32 uygulama Sihirbazı 'nda **DLL** 'yi seçin ve **sembolleri dışarı aktarın** .
 
-     Sembolleri **Dışarı Aktar** seçeneği, dışarı aktaran yöntemleri bildirebilirsiniz kullanışlı bir makro üretir.
+     **Sembolleri dışarı aktar** seçeneği, dışarı aktarılmış yöntemleri bildirmek için kullanabileceğiniz, kullanışlı bir makro oluşturur.
 
-     ![DLL ve Dışarı Aktarma Sembolleri için C++ proje sihirbazı kümesi](../test/media/utecpp06.png)
+     ![DLL ve dışa aktarma sembolleri için C++ proje Sihirbazı ayarlandı](../test/media/utecpp06.png)
 
-3. Asıl *.h* dosyasında dışarı aktaran bir işlev bildir:
+3. Principal *. h* dosyasında bir dışarıya aktarılmış işlev bildirin:
 
-     ![API makroları ile yeni DLL kod projesi ve .h dosyası](../test/media/utecpp07.png)
+     ![API makroları ile yeni DLL kod projesi ve. h dosyası](../test/media/utecpp07.png)
 
-     Bildirimleyici, `__declspec(dllexport)` sınıfın ortak ve korumalı üyelerinin DLL dışında görünür olmasına neden olur. Daha fazla bilgi için bkz. C++ Sınıflarında [dllimport ve dllexport kullanma.](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes)
+     Bildirimci, `__declspec(dllexport)` sınıfın genel ve korumalı ÜYELERININ dll dışında görünür olmasına neden olur. Daha fazla bilgi için bkz. [C++ sınıflarında dllimport ve dllexport kullanma](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes).
 
-4. Sorumlu *.cpp dosyasında* işlev için en küçük bir gövde ekleyin:
+4. Principal *. cpp* dosyasında, işlev için en az bir gövde ekleyin:
 
     ```cpp
         // Find the square root of a number.
@@ -150,23 +150,23 @@ Aşağıdaki adımlar, 2017'de bir DLL Visual Studio gösterir.
 
 ::: moniker-end
 
-## <a name="couple-the-test-project-to-the-dll-project"></a><a name="make_functions_visible"></a> Test projesini DLL projesiyle birlikte kullanın
+## <a name="couple-the-test-project-to-the-dll-project"></a><a name="make_functions_visible"></a> DLL projesine test projesi için birkaç
 
-1. DLL projesini test projesinin proje başvurularını ekleyin:
+1. DLL projesini test projesinin proje başvurularına ekleyin:
 
-   1. Içinde test projesi düğümüne sağ tıklayın ve **Çözüm Gezgini** **Ekle'yi**  >  **seçin.**
+   1. **Çözüm Gezgini** ' deki test projesi düğümüne sağ tıklayın ve başvuru **Ekle**' yi seçin  >  .
 
-   2. Başvuru Ekle **iletişim kutusunda** DLL projesini seçin ve Ekle'yi **seçin.**
+   2. **Başvuru Ekle** iletişim kutusunda, DLL projesini seçin ve **Ekle**' yi seçin.
 
         ![C++ proje özellikleri | Yeni Başvuru Ekle](../test/media/utecpp09.png)
 
-2. Asıl birim testi *.cpp dosyasına* DLL *kodunun .h* dosyasını ekleyin:
+2. Asıl birim testi *. cpp* dosyasında, dll kodunun *. h* dosyasını dahil edin:
 
    ```cpp
    #include "..\RootFinder\RootFinder.h"
    ```
 
-3. Dışarı aktaran işlevi kullanan temel bir test ekleyin:
+3. İçe aktarılmış işlevi kullanan temel bir test ekleyin:
 
    ```cpp
    TEST_METHOD(BasicTest)
@@ -188,15 +188,15 @@ Aşağıdaki adımlar, 2017'de bir DLL Visual Studio gösterir.
 
 4. Çözümü derleyin.
 
-    Yeni test Test **Gezgini'nde görünür.**
+    Yeni test, **Test Gezgini**'nde görünür.
 
-5. **Test Gezgini'nde,** Hepsini **Çalıştır'ı seçin.**
+5. **Test Gezgini** Içinde **Tümünü Çalıştır**' ı seçin.
 
-    ![Temel Test &#45; Birim Testi Gezgini](../test/media/utecpp10.png)
+    ![Temel test &#45; birim test Gezgini geçildi](../test/media/utecpp10.png)
 
-   Testi ve kod projelerini ayarladıktan sonra kod projesinde işlevleri çalıştıran testleri çalıştırabilirsiniz. Artık gerçek testler ve kod yazmaya başlayabilirsiniz.
+   Test ve kod projelerini ayarlamış ve kod projesindeki işlevleri çalıştıran testleri çalıştıracağınızı doğruladınız. Artık gerçek testleri ve kodu yazmaya başlayabilirsiniz.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a> Testleri çoğaltarak geliştirin ve başarıyla geçişlerini snın
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a> Testleri tekrarlayarak ve geçiş yapın
 
 1. Yeni bir test ekleyin:
 
@@ -213,9 +213,9 @@ Aşağıdaki adımlar, 2017'de bir DLL Visual Studio gösterir.
     ```
 
     > [!TIP]
-    > Geçen testleri değiştirmenizi önerilmez. Bunun yerine, yeni bir test ekleyin, kodu test başarılı olacak şekilde güncelleştirin ve ardından başka bir test ekleyin ve bu şekilde devam ediyor.
+    > Geçilen testleri değiştirmenizi öneririz. Bunun yerine, yeni bir test ekleyin, kodu test geçişi olacak şekilde güncelleştirin ve daha sonra başka bir test ekleyin ve bu şekilde devam edin.
     >
-    > Kullanıcılarınız gereksinimlerini değiştir yaptıklarında, artık doğru olan testleri devre dışı bırak. Yeni testler yazın ve aynı anda bir kez, aynı şekilde çalışır hale getirin.
+    > Kullanıcılarınız gereksinimlerini değiştirmelerine göre artık doğru olmayan Testleri devre dışı bırakın. Yeni testler yazın ve aynı anda bir kez, aynı şekilde çalışır hale getirin.
 
 2. Çözümü oluşturun ve ardından **Test Gezgini**' nde **Tümünü Çalıştır**' ı seçin.
 

@@ -1,6 +1,6 @@
 ---
 title: WizardExtension Öğesi (Visual Studio Şablonları) | Microsoft Docs
-description: WizardExtension öğesini ve şablon sihirbazını özelleştirmek için kayıt öğelerini nasıl içerdiğini öğrenin.
+description: WizardExtension öğesi ve şablon sihirbazını özelleştirmek için kayıt öğelerini nasıl içerdiği hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41e17f80d2d0fb2de71a2187f42032a756aee2a21dc5a224579092344f0b234f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c32f9f2050e04741a2612de30e2718f45c0603de
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121334958"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724947"
 ---
 # <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension Öğesi (Visual Studio Şablonları)
 Şablon sihirbazını özelleştirmek için kayıt öğelerini içerir.

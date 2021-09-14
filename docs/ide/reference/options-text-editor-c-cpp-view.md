@@ -13,12 +13,12 @@ ms.author: corob
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caa0b67c5c59474948a7abb18b391e42d18fbd3996e126175b5990bf63766a81
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 68d08953ca3c493f3b3e42dd4ddd84bc19bdfd6e
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121447447"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724913"
 ---
 # <a name="options-text-editor-cc-view"></a>Seçenekler, metin düzenleyici, C/C++, görünüm
 

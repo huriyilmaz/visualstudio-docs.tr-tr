@@ -1,6 +1,6 @@
 ---
-title: Yığın Çerçeveleri | Microsoft Docs
-description: Bu makalede, Visual Studio'de hata ayıklayıcı mimarisinde yığın çerçevesinin tanımı ve Visual Studio.
+title: Yığın çerçeveleri | Microsoft Docs
+description: Bu makalede, Visual Studio hata ayıklayıcı mimarisinde yığın çerçevesinin tanımı ve rolü açıklanır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,25 +16,25 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: dc6c10f00f12d1ee8df9918530a3b04d6ba5ef4e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122102871"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626432"
 ---
 # <a name="stack-frames"></a>Yığın çerçeveleri
-Hata ayıklayıcısı mimarisinde bir *yığın çerçevesi:*
+Hata ayıklayıcı mimarisinde *yığın çerçevesi*:
 
-- Bir iş parçacığının yürütme bağlamını sağlayan bir yığının soyutlamadır. İş parçacığı her zaman bir işlevin içinde yürütülür. Yığın çerçevesi, işlevin yerel değişkenlerini ve işlevin bağımsız değişkenlerini tutar. Hata ayıklama ile hata ayıklamak Visual Studio, hata ayıklanacak dil veya ortamın yığın çerçevelerini desteklemesi gerekir.
+- , Bir iş parçacığının Yürütme bağlamını sağlayan bir yığın soyutlamasıdır. Bir iş parçacığı her zaman bir işlev içinde yürütülür. Yığın çerçevesi, işlevin yerel değişkenlerini ve bağımsız değişkenlerini barındırır. Visual Studio ile hata ayıklamak için, hata ayıklaması yapılan dilin veya ortamın yığın çerçevelerini desteklemesi gerekir.
 
-- Hem kendisini tanımlayabilir hem de tanımlayabilir ve ilişkili iş parçacığını geri getirebilirsiniz. Bir yığın çerçevesi, geçerli yönerge işaretçisini ve ilişkili belge ve ifade değerlendirme bağlamlarını temsil eden kod bağlamını da geri getirebilirsiniz.
+- Hem tanımlayabilir hem de tanımlayabilir ve ilişkili iş parçacığını döndürebilir. Yığın çerçevesi, geçerli yönerge işaretçisini ve ilişkili belgeleri ve ifade değerlendirme bağlamlarını temsil eden kod bağlamını de döndürebilir.
 
-- Yerel değişkenlerin ve bağımsız değişkenlerin adını, türünü ve değerini açıklayan ve çeşitli IDE hata ayıklama pencerelerinde görünen özellikleri vardır.
+- , Yerel değişkenlerin ve bağımsız değişkenlerin adını, türünü ve değerini tanımlayan ve çeşitli IDE hata ayıklama pencereleri içinde görüntülenen özelliklere sahiptir.
 
-- Genellikle bir iş parçacığı yürütmenin bir sonucu olarak bir hata ayıklama altyapısı (DE) veya sanal makine tarafından oluşturulan [bir IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) arabirimiyle temsil edilen.
+- , Genellikle bir hata ayıklama altyapısı (DE) veya sanal makine tarafından bir iş parçacığı yürütmenin sonucu olarak oluşturulan bir [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) arabirimi tarafından temsil edilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcısı bağlamları](../../extensibility/debugger/debugger-contexts.md)
-- [Hata ayıklayıcısı kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Hata ayıklayıcı bağlamları](../../extensibility/debugger/debugger-contexts.md)
+- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
 - [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md)
 - [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md)

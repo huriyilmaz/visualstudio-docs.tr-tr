@@ -1,6 +1,6 @@
 ---
-title: Bir kabuk komutunu düzenleyici uzantısıyla kullanma
-description: Bir menü komutunu çağırarak düzenleyicide bir metin görünümüne kenarlığı eklemeyi öğrenin. VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz.
+title: Düzenleyici uzantısıyla kabuk komutu kullanma
+description: Bir menü komutunu başlatarak düzenleyicide metin görünümüne bir donatma ekleme hakkında bilgi öğrenin. VSPackage'dan düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,107 +14,107 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: fa482a1316a05ac7eaa4677ec2451bc396baf5bc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122056608"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724948"
 ---
-# <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>İzlenecek yol: Düzenleyici uzantısı ile bir Shell komutu kullanma
-VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz. Bu izlenecek yol, bir menü komutunu çağırarak düzenleyicide bir metin görünümüne nasıl kenarlığı ekleneceğini gösterir.
+# <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>Adım adım kılavuz: Düzenleyici uzantısıyla kabuk komutu kullanma
+VSPackage'dan düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz. Bu kılavuzda, bir menü komutuyla düzenleyicide metin görünümüne bir donatma ekleme açıklanır.
 
- bu izlenecek yol, bir vspackage 'ın Managed Extensibility Framework (MEF) bileşeni bölümüyle birlikte kullanımını gösterir. menü komutunu Visual Studio shell ile kaydetmek için vspackage kullanmanız gerekir. Ve, MEF bileşeni bölümüne erişmek için komutunu da kullanabilirsiniz.
+ Bu kılavuzda, bir VSPackage'ın bir Managed Extensibility Framework (MEF) bileşeni bölümüyle birlikte kullanımı anlatıldı. Menü komutunu Visual Studio kabuğuna kaydetmek için VSPackage kullanacaksınız. MeF bileşen parçasına erişmek için komutunu da kullanabilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
- Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulum 'da isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. daha fazla bilgi için bkz. [Visual Studio SDK 'yı ınstall](../extensibility/installing-the-visual-studio-sdk.md).
+ 2015'Visual Studio başlayarak, Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Kurulumda isteğe bağlı bir özellik olarak Visual Studio dahil edilir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
 
 ## <a name="create-an-extension-with-a-menu-command"></a>Menü komutuyla uzantı oluşturma
- **Araçlar** menüsüne **Add kenarlığı** adlı bir menü komutu koyan VSPackage oluşturun.
+ Araçlar menüsüne Donatma Ekle adlı bir menü **komutu koyan bir** VSPackage **oluşturun.**
 
-1. Adlı bir C# VSıX projesi oluşturun `MenuCommandTest` ve özel bir komut öğesi şablon adı **AddAdornment** ekleyin. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
+1. adlı bir C# VSIX projesi oluşturun ve Bir Özel Komut öğesi `MenuCommandTest` şablon adı **EkleyinSernment ekleyin.** Daha fazla bilgi için [bkz. Menü komutuyla uzantı oluşturma.](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-2. MenuCommandTest adlı bir çözüm açılır. MenuCommandTestPackage dosyası, menü komutunu oluşturan ve **Araçlar** menüsüne yerleştiren koda sahiptir. Bu noktada, komut yalnızca bir ileti kutusunun görünmesine neden olur. Sonraki adımlarda, kenarlığı yorumunu görüntülemek için bunun nasıl değiştirileceği gösterilmektedir.
+2. MenuCommandTest adlı bir çözüm açılır. MenuCommandTestPackage dosyasında menü komutunu oluşturan ve Araçlar menüsüne yerleştiren **kod** vardır. Bu noktada, komutu yalnızca bir ileti kutusunun görünmesine neden olur. Sonraki adımlarda açıklama donatıcısı görüntülemek için bunun nasıl değiştireceğiz?
 
-3. VSıX bildirim düzenleyicisinde *Source. Extension. valtmanifest* dosyasını açın. `Assets`Sekme, MenuCommandTest adlı bir Microsoft. VisualStudio. VsPackage için bir satıra sahip olmalıdır.
+3. VSIX *Bildirim Düzenleyicisi'nde source.extension.vsixmanifest* dosyasını açın. Sekmede `Assets` MenuCommandTest adlı bir Microsoft.VisualStudio.VsPackage için bir satır olması gerekir.
 
-4. *Source. Extension. valtmanifest* dosyasını kaydedin ve kapatın.
+4. *source.extension.vsixmanifest dosyasını kaydedin ve* kapatın.
 
-## <a name="add-a-mef-extension-to-the-command-extension"></a>Komut uzantısına bir MEF uzantısı ekleyin
+## <a name="add-a-mef-extension-to-the-command-extension"></a>Komut uzantısına MEF uzantısı ekleme
 
-1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, **Ekle**' ye tıklayın ve ardından **yeni Project**' ye tıklayın. **yeni Project ekle** iletişim kutusunda, **Visual C#** altında **genişletilebilirlik** ' e, ardından **vsıx Project**' a tıklayın. Projeyi adlandırın `CommentAdornmentTest` .
+1. Içinde **Çözüm Gezgini,** çözüm düğümüne sağ tıklayın, Ekle'ye **tıklayın** ve ardından Yeni **düğümler'e Project.** Yeni Dosya **Ekle iletişim Project** Visual **C#** altında Genişletilebilirlik'e ve ardından **VSIX seçeneğine Project.**  Projeyi olarak `CommentAdornmentTest` adlar.
 
-2. Bu proje, tanımlayıcı adlı VSPackage derlemesi ile etkileşime gireceğinden, derlemeyi imzalamanız gerekir. VSPackage derlemesi için önceden oluşturulmuş olan anahtar dosyasını yeniden kullanabilirsiniz.
+2. Bu proje strong-named VSPackage derlemesi ile etkileşim kuracak olduğundan, derlemeyi imzalamanız gerekir. VSPackage derlemesi için önceden oluşturulmuş olan anahtar dosyasını yeniden kullanabilirsiniz.
 
-    1. Proje özelliklerini açın ve **imzalama** sekmesini seçin.
+    1. Proje özelliklerini açın ve İmzalama **sekmesini** seçin.
 
-    2. **Derlemeyi imzala**' yı seçin.
+    2. Derlemeyi **imzala'ya seçin.**
 
-    3. **Tanımlayıcı ad anahtar dosyası seçin** altında, MenuCommandTest derlemesi Için oluşturulan *Key. snk* dosyasını seçin.
+    3. Bir **güçlü ad anahtar dosyası seçin** altında MenuCommandTest derlemesi için oluşturulan *Key.snk* dosyasını seçin.
 
-## <a name="refer-to-the-mef-extension-in-the-vspackage-project"></a>VSPackage projesindeki MEF uzantısına bakın
- VSPackage 'a bir MEF bileşeni ekliyorsanız, bildirimde her iki varlık türünü de belirtmeniz gerekir.
+## <a name="refer-to-the-mef-extension-in-the-vspackage-project"></a>VSPackage projesinde MEF uzantısına bakın
+ VSPackage'a bir MEF bileşeni eklerken bildirimde her iki varlık türü de belirtmeniz gerekir.
 
 > [!NOTE]
-> MEF hakkında daha fazla bilgi için bkz. [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
+> MEF hakkında daha fazla bilgi için [bkz. Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
 
-### <a name="to-refer-to-the-mef-component-in-the-vspackage-project"></a>VSPackage projesindeki MEF bileşenine başvurmak için
+### <a name="to-refer-to-the-mef-component-in-the-vspackage-project"></a>VSPackage projesinde MEF bileşenine başvurmak için
 
-1. MenuCommandTest projesinde, VSıX bildirim düzenleyicisinde *Source. Extension. valtmanifest* dosyasını açın.
+1. MenuCommandTest projesinde *source.extension.vsixmanifest* dosyasını VSIX Bildirim Düzenleyicisi'nde açın.
 
-2. **Varlıklar** sekmesinde **Yeni**' ye tıklayın.
+2. Varlıklar sekmesinde **Yeni'ye** **tıklayın.**
 
-3. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent** öğesini seçin.
+3. Tür **listesinde** **Microsoft.VisualStudio.MefComponent'ı seçin.**
 
-4. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
+4. Kaynak **listesinde Geçerli** çözümde **bir proje'yi seçin.**
 
-5. **Project** listesinde **yorumtadornmenttest**' i seçin.
+5. Yeni **Project** **CommentTest'i seçin.**
 
-6. *Source. Extension. valtmanifest* dosyasını kaydedin ve kapatın.
+6. *source.extension.vsixmanifest dosyasını kaydedin ve* kapatın.
 
-7. MenuCommandTest projesinin Yorumtadornmenttest projesine bir başvurusu olduğundan emin olun.
+7. MenuCommandTest projesinin CommentTestTest projesine bir başvurusu olduğundan emin olun.
 
-8. Yorumtadornmenttest projesinde, projeyi derleme oluşturacak şekilde ayarlayın. **Çözüm Gezgini**, projeyi seçin ve **derleme çıkışını OutputDirectory 'ye Kopyala** özelliğinin **Özellikler** penceresine bakın ve bunu **true** olarak ayarlayın.
+8. CommentTest projesinde, projeyi bir derleme üretecek şekilde ayarlayın. Giriş **Çözüm Gezgini** projesini seçin, Özellikler penceresinde  Derleme Çıktısını **OutputDirectory'ye** Kopyala özelliğine bakın ve true olarak **ayarlayın.**
 
-## <a name="define-a-comment-adornment"></a>Yorum kenarlığı tanımlama
- Kenarlığı yorumu, <xref:Microsoft.VisualStudio.Text.ITrackingSpan> Seçilen metni izleyen bir, ve yazarı temsil eden bazı dizeleri ve metin açıklamasını içerir.
+## <a name="define-a-comment-adornment"></a>Açıklama donatma tanımlama
+ Açıklama donatma, seçilen metni takip eden bir ve yazarı ve metnin açıklamasını <xref:Microsoft.VisualStudio.Text.ITrackingSpan> temsil eden bazı dizelerden oluşur.
 
-#### <a name="to-define-a-comment-adornment"></a>Bir yorum kenarlığı tanımlamak için
+#### <a name="to-define-a-comment-adornment"></a>Açıklama donatıcısı tanımlamak için
 
-1. Yorumtadornmenttest projesinde yeni bir sınıf dosyası ekleyin ve adlandırın `CommentAdornment` .
+1. CommentTest projesine yeni bir sınıf dosyası ekleyin ve olarak adını `CommentAdornment` girin.
 
 2. Aşağıdaki başvuruları ekleyin:
 
-    1. Microsoft. VisualStudio. CoreUtility
+    1. Microsoft.VisualStudio.CoreUtility
 
-    2. Microsoft. VisualStudio. Text. Data
+    2. Microsoft.VisualStudio.Text.Data
 
-    3. Microsoft. VisualStudio. Text. Logic
+    3. Microsoft.VisualStudio.Text.Logic
 
-    4. Microsoft. VisualStudio. Text. UI
+    4. Microsoft.VisualStudio.Text.UI
 
-    5. Microsoft. VisualStudio. Text. UI. WPF
+    5. Microsoft.VisualStudio.Text.UI.Wpf
 
-    6. System. ComponentModel. Composition
+    6. System.ComponentModel.Composition
 
-    7. PresentationCore
+    7. Presentationcore
 
-    8. PresentationFramework
+    8. Presentationframework
 
-    9. WindowsBase
+    9. Windowsbase
 
-3. Aşağıdaki yönergeyi ekleyin `using` .
+3. Aşağıdaki yönergeyi `using` ekleyin.
 
     ```csharp
     using Microsoft.VisualStudio.Text;
     ```
 
-4. Dosya adında bir sınıf içermelidir `CommentAdornment` .
+4. Dosya adlı bir sınıf `CommentAdornment` içermeli.
 
     ```csharp
     internal class CommentAdornment
     ```
 
-5. `CommentAdornment`, Yazarı ve açıklaması için sınıfına üç alan ekleyin <xref:Microsoft.VisualStudio.Text.ITrackingSpan> .
+5. sınıfına , `CommentAdornment` yazarı ve <xref:Microsoft.VisualStudio.Text.ITrackingSpan> açıklaması için üç alan ekleyin.
 
     ```csharp
     public readonly ITrackingSpan Span;
@@ -122,7 +122,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     public readonly string Text;
     ```
 
-6. Alanları Başlatan bir Oluşturucu ekleyin.
+6. Alanları başlatan bir oluşturucu ekleyin.
 
     ```csharp
     public CommentAdornment(SnapshotSpan span, string author, string text)
@@ -133,12 +133,12 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     }
     ```
 
-## <a name="create-a-visual-element-for-the-adornment"></a>Kenarlığı için görsel öğe oluşturma
- Kenarlığı için görsel bir öğe tanımlayın. bu izlenecek yol için, Windows Presentation Foundation (WPF) sınıfından devralan bir denetim tanımlayın <xref:System.Windows.Controls.Canvas> .
+## <a name="create-a-visual-element-for-the-adornment"></a>Donatma için görsel öğe oluşturma
+ Donatma için bir görsel öğe tanımlayın. Bu kılavuz için, Windows Presentation Foundation (WPF) sınıfından devralan bir denetim <xref:System.Windows.Controls.Canvas> tanımlayın.
 
-1. Yorumtadornmenttest projesinde bir sınıf oluşturun ve bunu adlandırın `CommentBlock` .
+1. CommentTest Projesinde bir sınıf oluşturun ve bunu olarak adlandırın. `CommentBlock`
 
-2. Aşağıdaki yönergeleri ekleyin `using` .
+2. Aşağıdaki yönergeleri `using` ekleyin.
 
     ```csharp
     using Microsoft.VisualStudio.Text;
@@ -152,14 +152,14 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     using Microsoft.VisualStudio.Utilities;
     ```
 
-3. `CommentBlock`Sınıfın devralmasını sağlayın <xref:System.Windows.Controls.Canvas> .
+3. sınıfını `CommentBlock` 'den <xref:System.Windows.Controls.Canvas> devralın.
 
     ```csharp
     internal class CommentBlock : Canvas
     { }
     ```
 
-4. Kenarlığı görsel yönlerini tanımlamak için bazı özel alanlar ekleyin.
+4. Donatma görsel yönlerini tanımlamak için bazı özel alanlar ekleyin.
 
     ```csharp
     private Geometry textGeometry;
@@ -169,7 +169,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     private static Pen dashPen;
     ```
 
-5. Kenarlığı yorumunu tanımlayan ve ilgili metni ekleyen bir Oluşturucu ekleyin.
+5. Açıklama donatma tanımlayan ve ilgili metni ekleyen bir oluşturucu ekleyin.
 
     ```csharp
     public CommentBlock(double textRightEdge, double viewRightEdge,
@@ -238,7 +238,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     }
     ```
 
-6. Ayrıca <xref:System.Windows.Controls.Panel.OnRender%2A> , kenarlığı çizen bir olay işleyicisi de uygular.
+6. Ayrıca, <xref:System.Windows.Controls.Panel.OnRender%2A> donatma çizen bir olay işleyicisi de uygulama.
 
     ```csharp
     protected override void OnRender(DrawingContext dc)
@@ -258,11 +258,11 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     ```
 
 ## <a name="add-an-iwpftextviewcreationlistener"></a>IWpfTextViewCreationListener ekleme
- , <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> Oluşturma olaylarını görüntülemeyi dinlemek için kullanabileceğiniz BIR MEF bileşeni bölümüdür.
+ <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener>, oluşturma olaylarını görüntülemek için dinlemek için kullanabileceğiniz bir MEF bileşenidir.
 
-1. Yorumtadornmenttest projesine bir sınıf dosyası ekleyin ve bunu adlandırın `Connector` .
+1. CommentTest projesine bir sınıf dosyası ekleyin ve bunu olarak adlandırın. `Connector`
 
-2. Aşağıdaki yönergeleri ekleyin `using` .
+2. Aşağıdaki yönergeleri `using` ekleyin.
 
     ```csharp
     using System.ComponentModel.Composition;
@@ -270,12 +270,12 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     using Microsoft.VisualStudio.Utilities;
     ```
 
-3. Uygulayan bir sınıf bildirin <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> ve bunu <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "metin" ve bir ile dışarı aktarın <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> . İçerik türü özniteliği, bileşenin uygulandığı içerik türünü belirtir. Metin türü, ikili olmayan tüm dosya türlerinin temel türüdür. Bu nedenle, neredeyse her metin görünümü bu türden olacaktır. Metin görünümü rolü özniteliği, bileşenin geçerli olduğu metin görünümü türünü belirtir. Belge metni görünümü rolleri genellikle satırlardan oluşan ve bir dosyada depolanan metni gösterir.
+3. uygulayan bir sınıf bildirin ve "metin" ve bir ile <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> dışarı <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute> <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> aktarın. İçerik türü özniteliği, bileşenin uygulanacağı içerik türünü belirtir. Metin türü, tüm ikili olmayan dosya türleri için temel türdir. Bu nedenle, oluşturulan hemen her metin görünümü bu türe sahip olur. Metin görünümü rol özniteliği, bileşenin uygulanacağı metin görünümün nasıl olduğunu belirtir. Belge metin görünümü rolleri genellikle satırlardan oluşan ve bir dosyada depolanan metinleri gösterir.
 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkmenucommandtest/vb/commentadornmenttest/connector.vb" id="Snippet11":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdkmenucommandtest/cs/commentadornmenttest/connector.cs" id="Snippet11":::
 
-4. <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A>Yöntemini, ' nin statik olayını çağıracak şekilde uygulayın `Create()` `CommentAdornmentManager` .
+4. yöntemini, <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> statik olayı çağıran şekilde `Create()` `CommentAdornmentManager` uygulama.
 
     ```csharp
     public void TextViewCreated(IWpfTextView textView)
@@ -284,7 +284,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     }
     ```
 
-5. Komutu yürütmek için kullanabileceğiniz bir yöntem ekleyin.
+5. Komutunu yürütmek için kullanabileceğiniz bir yöntem ekleyin.
 
     ```csharp
     static public void Execute(IWpfTextViewHost host)
@@ -306,12 +306,12 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     }
     ```
 
-## <a name="define-an-adornment-layer"></a>Bir kenarlığı katmanı tanımlama
- Yeni bir kenarlığı eklemek için bir kenarlığı katmanı tanımlamanız gerekir.
+## <a name="define-an-adornment-layer"></a>Donatma katmanı tanımlama
+ Yeni bir donatma eklemek için bir donatma katmanı tanımlamanız gerekir.
 
-### <a name="to-define-an-adornment-layer"></a>Bir kenarlığı katmanını tanımlamak için
+### <a name="to-define-an-adornment-layer"></a>Bir donatma katmanı tanımlamak için
 
-1. Sınıfında, `Connector` türünde bir ortak alan bildirin <xref:Microsoft.VisualStudio.Text.Editor.AdornmentLayerDefinition> ve bunu <xref:Microsoft.VisualStudio.Utilities.NameAttribute> kenarlığı katmanı için benzersiz bir ad belirten bir ile dışarı aktarın ve <xref:Microsoft.VisualStudio.Utilities.OrderAttribute> Bu kenarlığı katmanının diğer metin görünümü katmanlarına (metin, giriş Işareti ve seçim) Z düzeni ilişkisini tanımlar.
+1. sınıfında, türünde bir ortak alan bildirin ve donatma katmanı için benzersiz bir ad ve bu donatma katmanının Z düzeni ilişkisini diğer metin görünümü `Connector` <xref:Microsoft.VisualStudio.Text.Editor.AdornmentLayerDefinition> <xref:Microsoft.VisualStudio.Utilities.NameAttribute> katmanlarıyla (metin, caret ve seçim) tanımlayan bir ile dışarı <xref:Microsoft.VisualStudio.Utilities.OrderAttribute> aktarın.
 
     ```csharp
     [Export(typeof(AdornmentLayerDefinition))]
@@ -321,12 +321,12 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 
     ```
 
-## <a name="provide-comment-adornments"></a>Açıklama donbesleri sağla
- Bir kenarlığı tanımladığınızda, bir Comment kenarlığı sağlayıcısı ve bir Comment kenarlığı Manager da uygular. Comment kenarlığı sağlayıcısı, açıklama donatılarının bir listesini tutar, <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> temel alınan metin arabelleğindeki olayları dinler ve temel alınan metin silindiğinde donnments açıklamalarını siler.
+## <a name="provide-comment-adornments"></a>Açıklama donatmalarını sağlama
+ Bir donatma tanımladığınız zaman, bir açıklama donatma sağlayıcısı ve açıklama donatma yöneticisi de gerçekleştirin. Açıklama donatma sağlayıcısı, açıklama donatmalarının listesini tutar, temel alınan metin arabelleği üzerinde olayları dinler ve temel alınan metin silindiğinde açıklama <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> donatmalarını siler.
 
-1. Yorumtadornmenttest projesine yeni bir sınıf dosyası ekleyin ve bunu adlandırın `CommentAdornmentProvider` .
+1. CommentTest projesine yeni bir sınıf dosyası ekleyin ve bunu olarak adlandırın. `CommentAdornmentProvider`
 
-2. Aşağıdaki yönergeleri ekleyin `using` .
+2. Aşağıdaki yönergeleri `using` ekleyin.
 
     ```csharp
     using System;
@@ -336,7 +336,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     using Microsoft.VisualStudio.Text.Editor;
     ```
 
-3. Adlı bir sınıf ekleyin `CommentAdornmentProvider` .
+3. adlı bir sınıf `CommentAdornmentProvider` ekleyin.
 
     ```csharp
     internal class CommentAdornmentProvider
@@ -344,7 +344,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
     }
     ```
 
-4. Metin arabelleği için özel alanlar ve arabelleğin ilişkili olduğu açıklama listesini ekleyin.
+4. Metin arabelleği ve arabellekle ilgili açıklama donatmalarının listesi için özel alanlar ekleyin.
 
     ```csharp
     private ITextBuffer buffer;
@@ -352,7 +352,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 
     ```
 
-5. İçin bir Oluşturucu ekleyin `CommentAdornmentProvider` . Sağlayıcı yöntemi tarafından örneklendiği için bu oluşturucunun özel erişimi olmalıdır `Create()` . Oluşturucu olay `OnBufferChanged` işleyicisini <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> olaya ekler.
+5. için bir oluşturucu `CommentAdornmentProvider` ekleyin. Sağlayıcı yöntemi tarafından örneklenmiş olduğundan bu oluşturucu özel erişime sahip `Create()` olmalı. Oluşturucu, olay `OnBufferChanged` işleyicisini olayına <xref:Microsoft.VisualStudio.Text.ITextBuffer.Changed> ekler.
 
     ```csharp
     private CommentAdornmentProvider(ITextBuffer buffer)

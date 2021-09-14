@@ -1,6 +1,6 @@
 ---
-title: 'Seçenekler, metin düzenleyici, F #, CodeLens'
-description: 'F # için metin düzenleyici CodeLens ayarlarını değiştirmek üzere F # bölümündeki CodeLens sayfasını nasıl kullanacağınızı öğrenin.'
+title: Seçenekler, Metin Düzenleyici, F#, CodeLens
+description: F# için CodeLens ayarlarını değiştirmek üzere F# bölümündeki CodeLens sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/16/2019
 ms.topic: reference
@@ -13,31 +13,31 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 ms.openlocfilehash: 711aec7e37c4595be9ee149ebe0392b9789a0b79
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122143683"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724906"
 ---
-# <a name="options-text-editor-f-codelens"></a>Seçenekler, metin düzenleyici, F #, CodeLens
+# <a name="options-text-editor-f-codelens"></a>Seçenekler, Metin Düzenleyici, F#, CodeLens
 
-F # için metin düzenleyici CodeLens ayarlarını değiştirmek için **CodeLens** seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar**  >  **Seçenekler**' i ve ardından **metin düzenleyici**  >  **F #**  >  **CodeLens**' i seçin.
+F# **metin düzenleyicisi CodeLens** ayarlarını değiştirmek için CodeLens seçenekler sayfasını kullanın. Bu seçenekler sayfasına erişmek için Araçlar **Seçenekleri'ni**  >  **ve** ardından Metin Düzenleyici   >  **F#**  >  **CodeLens'i seçin.**
 
 ## <a name="codelens"></a>CodeLens
 
-- **CodeLens 'i etkinleştir (deneysel)**
+- **CodeLens'i etkinleştirme (Deneysel)**
 
-   Bu seçenek belirlendiğinde, kodunuzda, bağlantılı hatalarda, çalışma öğelerinde, kod incelemelerinizde ve birim testlerinde başvuruları ve değişiklikleri kolayca bulmanıza olanak sağlayan etkileşimli ek açıklamalar kod içinde görüntülenir.
+   Bu seçenek seçildiğinde kodda kodunuz, bağlantılı hatalar, iş öğeleri, kod incelemeleri ve birim testleri ile ilgili başvuruları ve değişiklikleri kolayca bulmanızı sağlar.
 
-- **Ek açıklamalarda renkler kullanma**
+- **Ek açıklamalarda renkleri kullanma**
 
-   CodeLens ek açıklamalarını renkli olarak göstermek için bu onay kutusunu işaretleyin.
+   CodeLens raporlarının öğelerini kolayca ayırt etmek için CodeLens ek açıklamalarını renk olarak görüntülemek için bu onay kutusunu seçin.
 
-- **Ek açıklamaları satırın üstünde değil, sağa göster**
+- **Satırın üzerinde değil sağdan ek açıklamalar gösterme**
 
-   Varsayılan olarak, CodeLens ek açıklamaları bir kod satırı üzerinde görünür. Ek açıklamaların yukarıdaki yerine kodun sağında görünmesini sağlamak için bu onay kutusunu işaretleyin.
+   CodeLens ek açıklamaları varsayılan olarak bir kod satırı üzerinde görünür. Ek açıklamaların yukarıda yerine kodun sağ tarafından görünmesi için bu onay kutusunu seçin.
 
-- **Ek açıklama öneki**
+- **Ek açıklama ön eki**
 
    Ek açıklamalar için kullanılan varsayılan ön eki değiştirebilirsiniz.
 

@@ -18,11 +18,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 791e8d9713b1f12cf7e388d87449b4a171c029a9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122062985"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725015"
 ---
 # <a name="registering-project-and-item-templates"></a>Proje ve Öğe Şablonlarını Kaydetme
 Project türler, proje ve proje öğesi şablonlarının bulunduğu dizinleri kaydetmelidir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]**yeni Project ekle** ve **yeni öğe ekle** iletişim kutularında nelerin gösterileceğini belirlemek için proje türleriniz ile ilişkili kayıt bilgilerini kullanır.
@@ -40,7 +40,7 @@ Project türler, proje ve proje öğesi şablonlarının bulunduğu dizinleri ka
 "ProjectTemplatesDir"="C:\\MyProduct\\MyProjectTemplates"
 ```
 
-|Ad|Tür|Açıklama|
+|Ad|Tür|Description|
 |----------|----------|-----------------|
 |@|REG_SZ|Bu türden projelerin varsayılan adı.|
 |DisplayName|REG_SZ|Paketler altında kayıtlı olan uydu DLL 'sinden alınacak adın kaynak KIMLIĞI.|
@@ -58,7 +58,7 @@ Project türler, proje ve proje öğesi şablonlarının bulunduğu dizinleri ka
 "SortPriority"=dword:00000064
 ```
 
-| Ad | Tür | Açıklama |
+| Ad | Tür | Description |
 |--------------------------|-----------| - |
 | @ | REG_SZ | Öğe şablonları eklemek için kaynak KIMLIĞI. |
 | Templates dizini | REG_SZ | **Yeni öğe Ekle** sihirbazının iletişim kutusunda görünen proje öğelerinin yolu. |
@@ -85,7 +85,7 @@ Project türler, proje ve proje öğesi şablonlarının bulunduğu dizinleri ka
 "SortPriority"=dword:00000064
 ```
 
-|Ad|Tür|Açıklama|
+|Ad|Tür|Description|
 |----------|----------|-----------------|
 |Commonfindfilesfiltresi|REG_DWORD|**Dosyalarda bul** iletişim kutusunda ortak filtrelerden birine filtre uygular. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|
 |Commonopenfilesfiltresi|REG_DWORD|**Dosya Aç** iletişim kutusunda ortak filtrelerden birine filtre uygular. Ortak filtreler, filtreler ortak olarak işaretlenmeden önce filtre listesinde listelenir.|

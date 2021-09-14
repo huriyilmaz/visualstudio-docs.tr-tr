@@ -1,6 +1,6 @@
 ---
 title: Türleri Görsel Tasarımcılara | Microsoft Docs
-description: Özel araçlarda bulunanlar da dahil olmak üzere sınıf ve tür tanımlarını nasıl Visual Studio görsel tasarımcıların kullanmalarını s öğrendiniz.
+description: Özel araçlarda bulunanlar da dahil olmak üzere sınıf ve tür tanımlarını nasıl Visual Studio görsel tasarımcıların kullanmalarına yardımcı olabilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,21 +16,21 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: ffee5f17192cc14346f9da52ce32551dea6daded
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122094860"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725071"
 ---
 # <a name="expose-types-to-visual-designers"></a>Türleri görsel tasarımcıların ortaya çıkarma
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bir görsel tasarımcıyı görüntülemek için tasarım zamanında sınıf ve tür tanımlarına erişimi olması gerekir. Sınıflar, geçerli projenin tam bağımlılık kümesi (başvurular ve bağımlılıkları) içeren önceden tanımlanmış bir derleme kümesinden yüklenir. Görsel tasarımcıların özel araçlar tarafından oluşturulan dosyalarda tanımlanan sınıflara ve türlere erişmesi de gerekebilir.
 
  ve [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] proje [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] sistemleri, geçici taşınabilir yürütülebilir dosyalar (geçici PE'ler) aracılığıyla oluşturulan sınıflara ve türlere erişim için destek sağlar. Özel bir araç tarafından oluşturulan herhangi bir dosya geçici bir derleme içinde derlenmiş olabilir, böylece türler bu derlemelerden yüklenebilir ve tasarımcılara açık olabilir. Her özel aracın çıkışı ayrı bir geçici PE'de derlenmiş ve bu geçici derlemenin başarılı veya başarısız olması yalnızca oluşturulan dosyanın derlenmesine bağlıdır. Bir proje bütün olarak yapılamasa da, tek tek geçici PE'ler tasarımcılar tarafından kullanılabilir olabilir.
 
- Proje sistemi, bu değişikliklerin özel aracı çalıştırmanın sonucu olduğu şartıyla, özel bir aracın çıkış dosyasında yapılan değişiklikleri izlemek için tam destek sağlar. Özel araç her çalıştırıldıknda yeni bir geçici PE oluşturulur ve tasarımcılara uygun bildirimler gönderilir.
+ Proje sistemi, bu değişikliklerin özel aracı çalıştırmanın sonucu olduğu şartıyla, özel bir aracın çıkış dosyasında yapılan değişiklikleri izlemek için tam destek sağlar. Özel araç her çalıştırıldında yeni bir geçici PE oluşturulur ve tasarımcılara uygun bildirimler gönderilir.
 
 > [!NOTE]
-> Geçici program yürütülebilir oluşturma dosyası arka planda olduğundan, derleme başarısız olursa kullanıcıya herhangi bir hata bildirmaz.
+> Geçici program yürütülebilir oluşturma dosyası arka planda olduğundan, derleme başarısız olursa kullanıcıya hata bildirmaz.
 
  Geçici PE desteğinin avantajına sahip özel araçların aşağıdaki kurallara uyması gerekir:
 
@@ -42,7 +42,7 @@ ms.locfileid: "122094860"
 
      GeneratesDesignTimeSource'ın kayıt defterinde 1 olarak ayarlanmış olduğu sürece, içinde istenen uzantı olarak özel aracın ne raporlediğine bakılmaksızın geçici PE <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A> derlenmiş olur.  Uzantının *.vb*, *.cs* veya *.jsl olması gerekir;* herhangi bir uzantı olabilir.
 
-- Özel araç tarafından oluşturulan kodun geçerli olması ve yalnızca projede mevcut olan başvuru kümesi yürütücü tamamlansa bile kendi başına <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> derlenmiş olması gerekir.
+- Özel araç tarafından oluşturulan kodun geçerli olması ve yalnızca projedeki başvuru kümesi yürütücü tamamlansa bile kendi başına <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.Generate%2A> derlenmiş olması gerekir.
 
      Geçici bir PE derlenmiş olduğunda, derleyiciye sağlanan tek kaynak dosya özel araç çıkışıdır. Bu nedenle, geçici PE kullanan özel bir araç, proje içinde diğer dosyalardan bağımsız olarak derlenmiş çıkış dosyaları oluşturması gerekir.
 

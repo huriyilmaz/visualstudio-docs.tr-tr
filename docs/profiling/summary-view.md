@@ -1,6 +1,6 @@
 ---
 title: Özet Görünümü | Microsoft Docs
-description: Özet görünümünün profil oluşturma çalıştırması içinde en yüksek performansa sahip işlevler veya nesneler hakkında nasıl bilgi görüntüley olduğunu öğrenin.
+description: Özet görünümünün bir profil oluşturma çalıştırması içinde en yüksek performansa sahip işlevler veya nesneler hakkında nasıl bilgi görüntüley olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,18 +19,18 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 6e44ca9418a08b1e31508634b63e6c58a2acdd7d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122157182"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635662"
 ---
 # <a name="summary-view"></a>Özet görünümü
 Özet görünümü, profil oluşturma çalıştırması içinde en yüksek performansa sahip işlevler veya nesneler hakkında bilgi görüntüler. Bu görünüm, profil oluşturma yönteminin performans ölçümlerine göre bir zaman çizelgesi grafiği ve en pahalı işlevlerin veya nesnelerin iki veya daha fazla listesi sağlar. Bu görünümde yer alan veriler, kullanılan profil oluşturma yöntemine (örnekleme, ölçümleme veya eşzamanlılık) ve .NET bellek ayırmanın toplanmış olup olmadığını bağlıdır.
 
  Eşzamanlılık verilerinin Özet görünümü dışındaki tüm Özet görünümleri için, Özet görünümündeki zaman çizelgesi grafiği profil oluşturmanın meydana geldiği zaman içinde profili yapılan uygulamanın işlemci (CPU) kullanımını gösterir.
 
-- Grafikte bir zaman dilimi belirtirsiniz, bu segment için verileri yeniden yalıtabilir veya zaman çizelgesinin grafitisini belirttiğiniz segmente yakınlaştırabilirsiniz. Daha fazla bilgi için [bkz. Nasıl ekleyebilirsiniz: Özet Zaman Çizelgesi'nde rapor görünümlerini filtreleme.](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)
+- Grafikte bir zaman dilimi belirtirsiniz, bu segment için verileri yeniden yalıtabilir veya zaman çizelgesinin grafitisini belirttiğiniz segmente yakınlaştırabilirsiniz. Daha fazla bilgi için, [bkz. How to: Filter report views from the Summary Timeline](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).
 
 - İşlevin İşlev Ayrıntıları görünümünü açmak için Özet görünümü listesinde bir işleve tıkabilirsiniz. Ayrıca diğer görünüm seçenekleri için işleve sağ tıkabilirsiniz.
 
@@ -41,18 +41,18 @@ ms.locfileid: "122157182"
 
 |Seçenek|Açıklama|
 |-|-|
-|**Kullanıcı Olmayan Kodu Göster**<br /><br /> **Yalnızca kendi kodum**|Yerel kod veya ölçümleme yöntemi kullanılarak toplanan verilerin profilini oluşturma için kullanılamaz. Yalnızca kullanıcı kodundaki verileri görüntüleme **(** Yalnızca kendi kodum göster) ile sistem kodu ( Kullanıcı Olmayan Kodu Göster ) dahil olmak üzere tüm kodlardan gelen verileri görüntüleme **arasında geçişler.** Varsayılan olarak, veriler kullanıcı koduyla sınırlıdır. Ayarı değiştirmek için bkz. Nasıl Yalnızca kendi kodum 1000000000000000000000000000000000000000000000000000000000 [](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)|
+|**Kullanıcı Olmayan Kodu Göster**<br /><br /> **Yalnızca kendi kodum**|Yerel kod veya ölçümleme yöntemi kullanılarak toplanan verilerin profilini oluşturma için kullanılamaz. Yalnızca kullanıcı kodundaki verileri görüntüleme **(** Yalnızca kendi kodum göster) ile sistem kodu ( Kullanıcı Olmayan Kodu Göster ) dahil olmak üzere tüm kodlardan gelen verileri görüntüleme **arasında geçişler.** Varsayılan olarak, veriler kullanıcı koduyla sınırlıdır. Ayarı değiştirmek için bkz. Nasıl Yalnızca kendi kodum 1000000000000000000000000000000000000000000000000000000000000 [](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)|
 |**Kılavuzu Görüntüle**|Hata Listesi penceresinde performans **kuralı uyarılarını** görüntüler. Daha fazla bilgi için [bkz. Verileri analiz etmek için performans kurallarını kullanma](../profiling/using-performance-rules-to-analyze-data.md)|
 
 ## <a name="report"></a>Rapor
- Farklı görünümleri açmak ve raporu karşılaştırmak, kaydetmek veya filtrelemek için Rapor listesinde bağlantılara tıkabilirsiniz. Liste, zaman çizelgesi grafiğinin sağ tarafından sağdır.
+ Farklı görünümler açmak ve raporu karşılaştırmak, kaydetmek veya filtrelemek için Rapor listesinde bağlantılara tıkabilirsiniz. Liste, zaman çizelgesi grafiğinin sağ tarafından sağdır.
 
 |Seçenek |Açıklama |
 |----------------------------| - |
 | **Kırpıldı Çağrı Ağacını Göster** | Çağrı Ağacı Görünümünde en pahalı yürütme yollarını görüntüler. Daha fazla bilgi için [bkz. Çağrı Ağacı görünümü.](../profiling/call-tree-view.md) |
 | **Hot Lines'i Göster** | Ölçümleme yöntemi kullanılarak toplanan verilerin profilini oluşturma için kullanılamaz. Satırlar Görünümünde en pahalı kaynak kod satırlarını görüntüler. Daha fazla bilgi için bkz. [Satırlar görünümü.](../profiling/lines-view.md) |
 | **Raporları Karşılaştırma** | Geçerli **dosyayla karşılaştırmak için başka** bir profil oluşturma veri dosyası belirtebilirsiniz Karşılaştırma için analiz dosyalarını seçin iletişim kutusunu görüntüler. Daha fazla bilgi için [bkz. Performans veri dosyalarını karşılaştırma.](../profiling/comparing-performance-data-files.md) |
-| **Rapor Verilerini Dışarı Aktarma** | Virgülle **ayrılmış değer** (.csv) olarak kaydetmek için bir veya daha fazla rapor görünümleri belirtebilirsiniz Raporu Dışarı Aktar iletişim .xml görüntüler. Daha fazla bilgi için [bkz. Nasıl: Profil oluşturma araçlarını dışarı aktarma raporları.](/previous-versions/visualstudio/visual-studio-2010/ms182394\(v\=vs.100\)) |
+| **Rapor Verilerini Dışarı Aktarma** | Virgülle **ayrılmış değer** (.csv) veya dosya olarak kaydetmek için bir veya daha fazla rapor .xml görüntüler. Daha fazla bilgi için [bkz. Nasıl: Profil oluşturma araçlarını dışarı aktarma raporları.](/previous-versions/visualstudio/visual-studio-2010/ms182394\(v\=vs.100\)) |
 | **Analiz Raporu Kaydetme** | Geçerli profil oluşturma veri dosyasını bir .vsps dosyası olarak kaydeder ve bu dosya arabiriminde daha hızlı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] açılır. Daha fazla bilgi için, [bkz. How to: Save analyzed profiling data files](/previous-versions/visualstudio/visual-studio-2010/bb763106\(v\=vs.100\)). |
 | **Rapor Verilerini Filtreleme** | Rapor görünümündeki verileri kısıtlama ölçütlerini belirtebilirsiniz profil oluşturma raporu filtre bölmesini görüntüler. Daha fazla bilgi için [bkz. Performans raporu görünümü filtresi](../profiling/performance-report-view-filter.md) |
 | **Tam Ekranı Değiştir** | Rapor görünümü için tam ekran modunu iki durumlu olarak gösterir. |

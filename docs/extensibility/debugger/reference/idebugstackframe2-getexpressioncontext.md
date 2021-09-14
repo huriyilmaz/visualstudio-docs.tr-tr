@@ -1,6 +1,6 @@
 ---
-description: Yığın çerçevesinin ve iş parçacığının geçerli bağlamı içindeki ifade değerlendirmesi için bir değerlendirme bağlamı alır.
-title: 'IDebugStackFrame2:: GetExpressionContext | Microsoft Docs'
+description: Bir yığın çerçevesinin ve iş parçacığının geçerli bağlamında ifade değerlendirmesi için bir değerlendirme bağlamı alır.
+title: IDebugStackFrame2::GetExpressionContext | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d95af977f77bc48a112d584d613877d3259bdb90
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122095939"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725129"
 ---
 # <a name="idebugstackframe2getexpressioncontext"></a>IDebugStackFrame2::GetExpressionContext
-Yığın çerçevesinin ve iş parçacığının geçerli bağlamı içindeki ifade değerlendirmesi için bir değerlendirme bağlamı alır.
+Bir yığın çerçevesinin ve iş parçacığının geçerli bağlamında ifade değerlendirmesi için bir değerlendirme bağlamı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetExpressionContext (
 
 ## <a name="parameters"></a>Parametreler
 `ppExprCxt`\
-dışı İfade değerlendirmesi için bir bağlamı temsil eden bir [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) nesnesi döndürür.
+[out] İfade değerlendirmesi [bağlamını temsil eden bir IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Genellikle, ifade değerlendirme bağlamı ifade değerlendirmesi gerçekleştirmeye yönelik bir kapsam olarak düşünülebilir. Bir ifadeyi ayrıştırmak için [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemini çağırın ve ardından ayrıştırılmış ifadeyi değerlendirmek için elde edilen [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) veya [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) yöntemlerini çağırın.
+ Genellikle ifade değerlendirme bağlamı, ifade değerlendirmesi gerçekleştirmek için bir kapsam olarak değerlendirin. Bir [ifadeyi ayrıştırmak için ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemini çağırma ve ardından ayrıştırilen ifadeyi değerlendirmek için sonuçta elde edilen [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) veya [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) yöntemlerini çağırma.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

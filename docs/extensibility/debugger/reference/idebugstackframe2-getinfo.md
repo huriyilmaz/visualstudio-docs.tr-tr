@@ -1,6 +1,6 @@
 ---
 description: Yığın çerçevesinin açıklamasını alır.
-title: IDebugStackFrame2::GetInfo | Microsoft Docs
+title: 'IDebugStackFrame2:: GetInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6d03223e4571a6792dacf0de413a4caaced08ba3c7c53266dfbe004f5434bbfc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e543a603029c529841bb1d10e48109538255eafa
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121448942"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725128"
 ---
 # <a name="idebugstackframe2getinfo"></a>IDebugStackFrame2::GetInfo
 Yığın çerçevesinin açıklamasını alır.
@@ -47,16 +47,16 @@ int GetInfo (
 
 ## <a name="parameters"></a>Parametreler
 `dwFieldSpec`\
-[in] Parametrenin hangi [alanlarının doldurulması](../../../extensibility/debugger/reference/frameinfo-flags.md) FRAMEINFO_FLAGS bir numaralandırılan `pFrameInfo` bayrakların birleşimi.
+'ndaki [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) Numaralandırmadaki, parametrenin hangi alanlarının doldurulacağını belirten bayrakların birleşimi `pFrameInfo` .
 
 `nRadix`\
-[in] Herhangi bir sayısal bilgiyi biçimlendirmek için kullanılacak radyan.
+'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak taban tabanı.
 
 `pFrameInfo`\
-[out] Yığın çerçevesinin açıklamasıyla doldurulmuş bir [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) yapısı.
+dışı Yığın çerçevesinin açıklamasıyla doldurulmuş bir [frameInfo](../../../extensibility/debugger/reference/frameinfo.md) yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

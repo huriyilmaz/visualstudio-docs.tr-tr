@@ -16,14 +16,14 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 87ebfb777aed483fefbf5d4c3caeee8587c41b03
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122049668"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725005"
 ---
 # <a name="resources-in-vspackages"></a>VSPackage’lardaki Kaynaklar
-Yerelleştirilmiş kaynakları yerel uydu kullanıcı arabirimi DLL'lerine, yönetilen uydu DLL'lerine veya yönetilen bir VSPackage'ın kendisine katıştırma.
+Yerelleştirilmiş kaynakları yerel uydu UI DLL'lerine, yönetilen uydu DLL'lerine veya yönetilen bir VSPackage'ın kendisine katıştırma.
 
  Bazı kaynaklar VSPackage'lara katıştıramaz. Aşağıdaki yönetilen türler ekli olabilir:
 
@@ -84,9 +84,9 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 ```
 
 ## <a name="implementation-notes"></a>Uygulama Notları
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] mümkün olduğunda VSPackage'ların yüklenmesini geciktirmektedir. VsPackage'a bir CTO dosyası eklemenin bir sonucu, Kurulum sırasında bu tür tüm VSPackage'ları belleğe yüklemesi gerekir. Bu, birleştirilmiş bir komut tablosu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] derlemesi sırasında olur. Kaynaklar VSPackage'da kod çalıştırmadan meta veriler inceler ve vsPackage'dan ayıklanır. VSPackage şu anda başlatılmamış olduğundan performans kaybı en düşük düzeydedir.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] mümkün olduğunda VSPackage'ların yüklenmesini geciktirmektedir. VsPackage'a bir CTO dosyası eklemenin bir sonucu, Kurulum sırasında bu tür tüm VSPackage'ları belleğe yüklemesi gerekir ve bu da birleştirilmiş bir komut [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tablosu derlemesi sırasında olur. Kaynaklar VSPackage'da kod çalıştırmadan meta veriler inceler ve vsPackage'dan ayıklanır. VSPackage şu anda başlatılmamış olduğundan performans kaybı en düşük düzeydedir.
 
- Kurulumdan sonra VSPackage'dan bir kaynak isteğinde bulunduktan sonra bu paketin zaten yüklenmiş ve başlatılmış olması olasıdır, dolayısıyla [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] performans kaybı en düşük düzeydedir.
+ Kurulumdan sonra VSPackage'dan bir kaynak isteğinde olduğunda, bu paketin zaten yüklenmiş ve başlatılmış olması olasıdır, dolayısıyla [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] performans kaybı en düşük düzeydedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’ları Yönetme](../../extensibility/managing-vspackages.md)

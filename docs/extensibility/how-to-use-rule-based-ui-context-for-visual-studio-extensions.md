@@ -1,5 +1,5 @@
 ---
-title: Farklı uzantılar için kural tabanlı kullanıcı Visual Studio kullanma
+title: Kullanıcı arabirimi uzantıları için kural Visual Studio kullanma
 titleSuffix: ''
 description: Uzantı yazarlarının bir KULLANıCı Arabirimi Bağlamı etkinleştirildiğinde ve VSPackage'lar yüklendiğinde koşulları tanımlamalarına olanak sağlayan Kural tabanlı UI Bağlamları'nın nasıl kullanılamayacaklarını öğrenin.
 ms.custom: SEO-VS-2020
@@ -10,22 +10,22 @@ author: leslierichardson95
 ms.author: lerich
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87ed379f3d79561a4fb986d0de2dd378d052f205ac237025068562009abf851a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0ce09edd20c0c46a6b93ace77808fdfc7d5d1c5d
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121275781"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626252"
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Nasıl yapabilirsiniz: Kullanıcı arabirimi uzantıları için kural Visual Studio kullanma
 
-Visual Studio, bilinen belirli s'ler etkinleştirildiğinde VSPackage'ların <xref:Microsoft.VisualStudio.Shell.UIContext> yüklenmesine izin verir. Ancak bu KULLANıCı Arabirimi Bağlamları, uzantı yazarlarının VSPackage'ın yüklemesi gereken noktadan önce etkinleştirilen kullanılabilir bir KULLANıCı Arabirimi Bağlamı seçmeyi tercih etmelerini sağlar. İyi bilinen kullanıcı arabirimi bağlamlarının listesi için bkz. <xref:Microsoft.VisualStudio.Shell.KnownUIContexts> .
+Visual Studio, bilinen belirli s'ler etkinleştirildiğinde VSPackage'ların <xref:Microsoft.VisualStudio.Shell.UIContext> yüklenmesine izin verir. Ancak bu KULLANıCı Arabirimi Bağlamları, uzantı yazarlarının VSPackage'ın yüklemesi istediği noktadan önce etkinleştirilen kullanılabilir bir KULLANıCı Arabirimi Bağlamı seçmekten başka bir seçenek bırakmayacak şekilde ince bilgili değildir. İyi bilinen kullanıcı arabirimi bağlamlarının listesi için bkz. <xref:Microsoft.VisualStudio.Shell.KnownUIContexts> .
 
 Paketlerin yüklenmesi performansı etkileyebilir ve gerektiğinden daha erken yüklenmesi en iyi yöntem değildir. Visual Studio 2015'te, uzantı yazarlarının kullanıcı arabirimi bağlamının etkinleştirildikten ve ilişkili VSPackage'ların yükleniyor olduğu kesin koşulları tanımlamalarına olanak sağlayan kural tabanlı UI Bağlamları kavramı ortaya çıktı.
 
 ## <a name="rule-based-ui-context"></a>Kural Tabanlı Kullanıcı Arabirimi Bağlamı
 
-"Kural" yeni bir KULLANıCı Arabirimi Bağlamı (GUID) ve mantıksal "and", "or", "not" işlemleriyle birleştirilmiş bir veya daha fazla "Terime" başvurulan Boole ifadelerinden oluşur. "Terimler", çalışma zamanında dinamik olarak değerlendirilir ve terimlerden herhangi biri her değişse ifade yeniden değerlendirilir. İfade true olarak değerlendirildiğinde ilişkili KULLANıCı Arabirimi Bağlamı etkinleştirilir. Aksi takdirde KULLANıCı Arabirimi Bağlamı devre dışıdır.
+"Kural" yeni bir KULLANıCı Arabirimi Bağlamı (GUID) ve mantıksal "and", "or", "not" işlemleriyle birleştirilmiş bir veya daha fazla "Terime" başvurulan Boole ifadelerinden oluşur. "Terimler", çalışma zamanında dinamik olarak değerlendirilir ve terimlerden herhangi biri her değiştiklerinde ifade yeniden değerlendirilir. İfade true olarak değerlendirildiğinde ilişkili KULLANıCı Arabirimi Bağlamı etkinleştirilir. Aksi takdirde KULLANıCı Arabirimi Bağlamı devre dışıdır.
 
 Kural tabanlı UI Bağlamı çeşitli yollarla kullanılabilir:
 
@@ -33,12 +33,12 @@ Kural tabanlı UI Bağlamı çeşitli yollarla kullanılabilir:
 
 2. Otomatik yükleme kısıtlamaları olarak: Paketleri yalnızca kurala karşı geldiğinde otomatik olarak yükle.
 
-3. Gecikmeli bir görev olarak: Belirtilen bir aralık geçinceye ve kural yine karşı olana kadar yükleme gecikmesi.
+3. Gecikmeli bir görev olarak: Belirtilen bir aralık geçinceye ve kural yine karşı olana kadar yüklemeyi geciktirin.
 
    Mekanizma herhangi bir uzantı tarafından Visual Studio kullanılabilir.
 
 ## <a name="create-a-rule-based-ui-context"></a>Kural tabanlı ui bağlamı oluşturma
- TestPackage adlı bir uzantınız olduğunu ve bu uzantının yalnızca uzantıya sahip dosyalar için geçerli *.config* düşünün. VS2015'den önce en iyi seçenek, KULLANıCı Arabirimi Bağlamı etkinleştirildiğinde TestPackage <xref:Microsoft.VisualStudio.Shell.KnownUIContexts.SolutionExistsAndFullyLoadedContext%2A> yüklemekti. TestPackage'ın bu şekilde yüklenmesi verimli değildir çünkü yüklenen çözümde bir.config *bile* bulunamıyor olabilir. Bu adımlar, yalnızca.configuzantısına sahip bir dosya seçildiğinde kullanıcı arabirimi bağlamını etkinleştirmek ve bu UI Bağlamı *etkinleştirildiğinde* TestPackage'ı yüklemek için kural tabanlı UI Bağlamı'nın nasıl kullanıl olduğunu gösterir.
+ TestPackage adlı bir uzantınız olduğunu ve bu uzantının yalnızca uzantıya sahip dosyalar için geçerli *.config* düşünün. VS2015'den önce en iyi seçenek, UI Bağlamı etkinleştirildiğinde TestPackage <xref:Microsoft.VisualStudio.Shell.KnownUIContexts.SolutionExistsAndFullyLoadedContext%2A> yüklemekti. TestPackage'ın bu şekilde yüklenmesi verimli değildir çünkü yüklenen çözümde bir.config *bile* bulunamıyor olabilir. Bu adımlar, kullanıcı arabirimi bağlamını yalnızca.configuzantısına sahip bir  dosya seçildiğinde etkinleştirmek ve bu UI Bağlamı etkinleştirildiğinde TestPackage yüklemek için kural tabanlı UI Bağlamının nasıl kullanıl olduğunu gösterir.
 
 1. Yeni bir UIContext GUID tanımlayın ve VSPackage sınıfına ve <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideUIContextRuleAttribute> ekleyin.
 
@@ -100,7 +100,7 @@ Kural tabanlı UI Bağlamı çeşitli yollarla kullanılabilir:
    TestPackage yüklenir ve kesme noktası içinde durur.
 
 ## <a name="add-more-rules-for-ui-context"></a>UI Bağlamı için daha fazla kural ekleme
- UI Bağlam kuralları Boole ifadeleri olduğu için, ui bağlamı için daha fazla kısıtlanmış kural ekleyin. Örneğin, yukarıdaki Kullanıcı Arabirimi Bağlamı'da kuralın yalnızca projeli bir çözüm yüklendiğinde geçerli olduğunu belirtabilirsiniz. Bu şekilde, bir.configdosyasını projenin bir parçası *olarak* değil tek başına dosya olarak açarsanız komutlar gösterlanmaz.
+ UI Bağlam kuralları Boole ifadeleri olduğu için, ui bağlamı için daha fazla kısıtlanmış kural ekleyin. Örneğin, yukarıdaki KULLANıCı Arabirimi Bağlamı'da kuralın yalnızca projeli bir çözüm yüklendiğinde geçerli olduğunu belirtabilirsiniz. Bu şekilde, bir.configdosyasını projenin bir parçası *olarak* değil tek başına dosya olarak açarsanız komutlar gösterlanmaz.
 
 ```csharp
 [ProvideAutoLoad(TestPackage.UIContextGuid)]
@@ -134,23 +134,23 @@ Desteklenen çeşitli terim türleri şu şekildedir:
 
 |Süre|Açıklama|
 |-|-|
-|{nnnnnnnn-nnnn-nnnn-nn-nnnnn}|GUID, kullanıcı arabirimi bağlamına başvurur. Kullanıcı Arabirimi Bağlamı etkin olduğunda terimi true, aksi takdirde false olur.|
+|{nnnnnnnn-nnnn-nnnn-nn-nnnn}|GUID, kullanıcı arabirimi bağlamına başvurur. Kullanıcı Arabirimi Bağlamı etkin olduğunda terimi true, aksi takdirde false olur.|
 |HierSingleSelectionName:\<pattern>|Etkin hiyerarşide yapılan seçim tek bir öğe olduğunda ve seçilen öğenin adı "desen" tarafından verilen .Net normal ifadesiyle eşle her eşlese terim true olur.|
 |UserSettingsStoreQuery:\<query>|"query", kullanıcı ayarları deposuna giden ve sıfır olmayan bir değer olarak değerlendirilmesi gereken tam yolu temsil eder. Sorgu, son eğik çizgide bir "koleksiyon" ve "propertyName" olarak bölünüyor.|
 |ConfigSettingsStoreQuery:\<query>|"query", yapılandırma ayarları deposuna giden ve sıfır olmayan bir değer olarak değerlendirilmesi gereken tam yolu temsil eder. Sorgu, son eğik çizgide bir "koleksiyon" ve "propertyName" olarak bölünüyor.|
 |ActiveProjectFlavor:\<projectTypeGuid>|Şu anda seçili olan proje aromalı olduğunda (toplanmış) ve verilen proje türü GUID ile eşleşen bir aromaya sahip olduğunda bu terim true olur.|
-|ActiveEditorContentType:\<contentType>|Seçilen belge, verilen içerik türüne sahip bir metin düzenleyicisi olduğunda bu terim true olur. Not: Seçilen belge yeniden adlandırılana kadar dosya kapatılana ve yeniden açılana kadar bu terim yenilenmez.|
+|ActiveEditorContentType:\<contentType>|Seçilen belge, verilen içerik türüne sahip bir metin düzenleyicisi olduğunda bu terim true olur. Not: Seçilen belge yeniden adlandırıldı, dosya kapatılana ve yeniden açılana kadar bu terim yenilenmez.|
 |ActiveProjectCapability:\<Expression>|Etkin proje özellikleri sağlanan ifadeyle eş olduğunda bu terim true olur. İfade, CSharp gibi VB &#124; olabilir.|
 |SolutionHasProjectCapability:\<Expression>|Yukarıdakine benzer ancak çözümde ifadeyle eşleşen yüklü herhangi bir proje olduğunda terim true olur.|
-|SolutionHasProjectFlavor:\<projectTypeGuid>|Bir çözümün türünde (toplanmış) bir proje olduğunda ve verilen proje türü GUID'si ile eşleşen bir aromaya sahip olduğunda bu terim true olur.|
-|ProjectAddedItem:\<pattern>| "Desen" ile eşleşen bir dosya açılan süre içinde bir projeye ekleniyorsa bu terim true olur.|
+|SolutionHasProjectFlavor:\<projectTypeGuid>|Bir çözümde aromalı (toplanmış) bir proje olduğunda ve verilen proje türü GUID ile eşleşen bir aromaya sahip olduğunda bu terim true olur.|
+|ProjectAddedItem:\<pattern>| "Desen" ile eşleşen bir dosya, açılan çözünürlük içinde bir projeye ekleniyorsa bu terim true olur.|
 |ActiveProjectOutputType:\<outputType>|Etkin projenin çıkış türü tam olarak eş olduğunda bu terim true olur.  outputType bir tamsayı veya tür <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROJOUTPUTTYPE> olabilir.|
 |ActiveProjectBuildProperty:\<buildProperty>=\<regex>|Etkin proje belirtilen derleme özelliğine sahip olduğunda ve özellik değeri sağlanan regex filtresiyle eş olduğunda bu terim true olur. Derleme özellikleri [hakkında daha fazla bilgi için MSBuild Project](internals/persisting-data-in-the-msbuild-project-file.md) Dosyalarında Kalıcı Veriler'e bakın.|
 |SolutionHasProjectBuildProperty:\<buildProperty>=\<regex>|Çözümde belirtilen derleme özelliği ve özellik değeri sağlanan regex filtresiyle eşleşen yüklenmiş bir proje olduğunda bu terim true olur.|
 
 ## <a name="compatibility-with-cross-version-extension"></a>Sürümler arası uzantıyla uyumluluk
 
-Kural tabanlı UI Bağlamları, Visual Studio 2015'te yeni bir özelliktir ve önceki sürümlere taşınabilir. Önceki sürümlere bağlantının eski sürümlere bağlantıyla ilgili değil, birden çok sürümü hedef alan uzantılar/paketler ile ilgili bir Visual Studio. Bu sürümlerin Visual Studio 2013 ve önceki sürümlerde otomatik olarak yüklenmiş olması gerekir, ancak 2015'te otomatik olarak yüklenmeyi önlemek için kural tabanlı UI Bağlamlarından Visual Studio olabilir.
+Kural tabanlı UI Bağlamları, Visual Studio 2015'te yeni bir özelliktir ve önceki sürümlere taşınabilir. Önceki sürümlere bağlantının eski sürümlere bağlantıyla ilgili değil, birden çok sürümü hedef alan uzantılar/paketler ile ilgili bir Visual Studio. Bu sürümlerin hem Visual Studio 2013 hem de önceki sürümlerde otomatik olarak yüklenmiş olması gerekir, ancak 2015'te otomatik olarak yüklenmeyi önlemek için kural tabanlı UI Bağlamlarından Visual Studio olabilir.
 
 bu tür paketleri desteklemek için, kayıt defterindeki oto loadpackages girdileri artık girişin Visual Studio 2015 ve üzeri sürümlerde atlanacağını göstermek için değer alanında bir bayrak sağlayabilir. Bu, öğesine bir bayrak seçeneği eklenerek yapılabilir <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> . vspackages artık, girişin Visual Studio 2015 ve üzeri sürümlerde yoksayılması gerektiğini belirtmek için kendi özniteliğine **skipwhenuicontextrulesactive** seçeneğini ekleyebilirler <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> .
 ## <a name="extensible-ui-context-rules"></a>Genişletilebilir UI bağlam kuralları

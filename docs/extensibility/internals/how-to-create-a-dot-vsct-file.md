@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl: Oluşturma. Vsct Dosya | Microsoft Docs'
-description: XML tabanlı bir dosya olan .vsct dosyasını el ile Visual Studio tablo yapılandırma dosyasını öğrenin.
+description: Xml tabanlı bir dosya olan .vsct dosyasını el ile Visual Studio tablo yapılandırma dosyasını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: fa80c77a9ed390e55e39b72c0ea5976f0584b25b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122063336"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725062"
 ---
 # <a name="how-to-create-a-vsct-file"></a>Nasıl: .vsct dosyası oluşturma
 
@@ -28,7 +28,7 @@ XML tabanlı bir komut tablosu yapılandırması (*.vsct*) Visual Studio oluştu
 
 - Var olan bir .ctc dosyasından dosya oluşturmak için *Vsct.exe* XML tabanlı komut tablosu yapılandırma *derleyicisini kullanabilirsiniz.*
 
-- Var olan *bir .cto* dosyasından *.vsct* dosyası oluşturmak içinVsct.exe'yi *kullanabilirsiniz.*
+- Mevcut bir *.ctoVsct.exe* *.vsct* dosyası oluşturmak için *Vsct.exe'yi kullanabilirsiniz.*
 
 - El ile yeni bir *.vsct dosyası oluşturabilirsiniz.*
 
@@ -80,7 +80,7 @@ Var olan bir komut tablosu *.ctc kaynak* dosyasından XML tabanlı *.vsct dosyas
 
     Burada *PkgCmd.ctc,* *.ctc* dosyasının adı, *PkgCmd.vsct* ise oluşturmak istediğiniz *.vsct* dosyasının adıdır.
 
-    Bu eylem yeni bir *.vsct* XML komut tablosu kaynak dosyası oluşturur. Dosyayı, vsCT *derleyicisiVsct.exe* herhangi bir *.vsct* dosyası gibi kullanarak derleyebilirsiniz.
+    Bu eylem yeni bir *.vsct* XML komut tablosu kaynak dosyası oluşturur. Dosyayı, diğer *.vsct* *Vsct.exe* vsCT derleyicisi olan vsCT derleyicisi ile derleyebilirsiniz.
 
    > [!NOTE]
    > XML açıklamalarını yeniden adlandırarak *.vsct* dosyasının okunabilirliğini geliştirebilirsiniz.
@@ -114,7 +114,7 @@ Var olan bir ikili *.cto* dosyasından XML tabanlı *.vsct* dosyası oluşturabi
 
 ### <a name="to-add-a-vsct-file-to-project-compilation"></a>Proje derlemeye bir .vsct dosyası eklemek için
 
-1. Proje dosyanızı düzenleyicide açın. Proje yüklü ise, önce projenin yüklemesini kaldırmalısiniz.
+1. Proje dosyanızı düzenleyicide açın. Proje yüklenirse, önce projenin yüklemesini kaldırmalısiniz.
 
 2. Aşağıdaki örnekte gösterildiği gibi bir öğesi içeren bir [ItemGroup](../../msbuild/itemgroup-element-msbuild.md) `VSCTCompile` öğesi ekleyin.
 

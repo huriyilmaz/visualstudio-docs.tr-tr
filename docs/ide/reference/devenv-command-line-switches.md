@@ -17,24 +17,24 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: fbad39c210c5cefd45dfbdfa9bec8f6cafe432cc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034324"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625898"
 ---
 # <a name="devenv-command-line-switches"></a>Devenv komut satırı anahtarları
 
-Devenv, IDE için çeşitli seçenekler ayarlamaya, proje derlemeye, projelerde hata ayıklamaya ve komut satırına proje dağıtmaya olanak sağlar. IDE'i bir betikten veya bir .bat dosyasından (gecelik derleme betiği gibi) çalıştırmak veya belirli bir yapılandırmada IDE'ye başlamak için bu anahtarları kullanın.
+Devenv, IDE için çeşitli seçenekler ayarlama, proje derleme, projelerde hata ayıklama ve komut satırlarından proje dağıtma seçenekleri sunar. IDE'i bir betikten veya bir .bat dosyasından (gecelik derleme betiği gibi) çalıştırmak veya belirli bir yapılandırmada IDE'ye başlamak için bu anahtarları kullanın.
 
 > [!NOTE]
-> Derlemeyle ilgili görevler için devenv yerine MSBuild önerilir. Daha fazla bilgi için [bkz. MSBuild komut satırı başvurusu.](../../msbuild/msbuild-command-line-reference.md)
+> Derlemeyle ilgili görevler için devenv yerine MSBuild önerilir. Daha fazla bilgi için [bkz. MSBuild satırı başvurusu.](../../msbuild/msbuild-command-line-reference.md)
 
 VSPackage geliştirmeyle ilgili anahtarlar hakkında bilgi için bkz. VSPackage geliştirmesi için [Devenv komut satırı anahtarları.](../../extensibility/devenv-command-line-switches-for-vspackage-development.md)
 
 ## <a name="devenv-switch-syntax"></a>Devenv anahtar söz dizimi
 
-ile başlayan komutlar, ve gibi standart sistem akışları üzerinden çıkış `devenv` `devenv.com` teslimi olan yardımcı programı tarafından `stdout` `stderr` tanıtıcıdır. yardımcı programı, çıktıyı yakalarken uygun I/O yeniden yönlendirmesini (örneğin, bir .txt belirler.
+ile başlayan komutlar, ve gibi standart sistem akışları üzerinden çıkış `devenv` `devenv.com` teslimi olan yardımcı programı tarafından `stdout` ele `stderr` almaktadır. yardımcı programı, çıktıyı (örneğin, bir işletim sistemi dosyasına) yakalarken uygun .txt belirler.
 
 Alternatif olarak, ile başlayan `devenv.exe` komutlar aynı anahtarları kullanabilir ancak `devenv.com` yardımcı program atlanır. Doğrudan `devenv.exe` kullanmak, çıkışın konsolda görünmesini önler.
 
@@ -48,7 +48,7 @@ Anahtarlar için söz `devenv` dizimi kuralları, diğer DOS komut satırı yard
 
 - Bir çözüm veya proje belirtirken ilk bağımsız değişken, dosya yolu da dahil olmak üzere çözüm dosyasının veya proje dosyasının adıdır.
 
-- İlk bağımsız değişken çözüm veya proje değil bir dosya ise, bu dosya yeni bir IDE örneğinde uygun düzenleyicide açılır.
+- İlk bağımsız değişken çözüm veya proje değil bir dosya ise, bu dosya uygun düzenleyicide, yeni bir IDE örneğinde açılır.
 
 - Bir çözüm dosyası adı yerine bir proje dosyası adı sağlarsanız, bir komut proje dosyasının üst klasöründe aynı adı içeren bir çözüm `devenv` dosyası arar. Örneğin, komutu `devenv myproject1.vbproj /build` üst klasörde adlı bir çözüm dosyası `myproject1.sln` arar.
 
@@ -65,7 +65,7 @@ Anahtarlar için söz `devenv` dizimi kuralları, diğer DOS komut satırı yard
 
 Aşağıdaki komut satırı anahtarları IDE'leri görüntüler ve açıklanan görevi yapar.
 
-|Komut satırı anahtarı|Açıklama|
+|Komut satırı anahtarı|Description|
 | - |-----------------|
 |[/Command](command-devenv-exe.md)|IDE'i başlatır ve belirtilen komutu yürütür.<br /><br /> `devenv /command "nav https://docs.microsoft.com/"`|
 |[/DebugExe](debugexe-devenv-exe.md)|Hata ayıklayıcı denetimi altında bir C++ yürütülebilir dosyası yükler. Bu anahtar, C# Visual Basic için kullanılamaz. Daha fazla bilgi için [bkz. Hata ayıklayıcıda otomatik olarak bir işlem başlatma.](../../debugger/debug-multiple-processes.md#BKMK_Automatically_start_an_process_in_the_debugger)<br /><br /> `devenv /debugexe mysln.exe`|
@@ -77,13 +77,13 @@ Aşağıdaki komut satırı anahtarları IDE'leri görüntüler ve açıklanan g
 |[/NoSoidh](nosplash-devenv-exe.md)|Giriş ekranı göstermeden IDE'i açar.<br /><br /> `devenv /nosplash File1 File2`|
 |[/ResetSettings](resetsettings-devenv-exe.md)|Varsayılan ayarları Visual Studio geri yükleme. İsteğe bağlı olarak ayarları belirtilen dosyaya `.vssettings` sıfırlar.<br /><br /> `devenv /resetsettings mysettings.vssettings`|
 |[/Run veya /R](run-devenv-exe.md)|Belirtilen çözümü derler ve çalıştırır.<br /><br /> `devenv /run mysln.sln`|
-|[/RunExit](runexit-devenv-exe.md)|Belirtilen çözümü derler ve çalıştırır, çözüm çalıştır olduğunda IDE'nin en aza indirilmesine ve çözümün çalışması sona erdikten sonra IDE'nin kapanmasına neden olur.<br /><br /> `devenv /runexit mysln.sln`|
+|[/RunExit](runexit-devenv-exe.md)|Belirtilen çözümü derler ve çalıştırır, çözüm çalıştır tamamlandığında IDE'nin en aza indirilmesine ve çözümün çalışması sona erdikten sonra IDE'nin kapanmasına neden olur.<br /><br /> `devenv /runexit mysln.sln`|
 |[/SafeMode](safemode-devenv-exe.md)|Güvenli Visual Studio modunda başlatılır. Bu anahtar yalnızca varsayılan ortamı, varsayılan hizmetleri ve üçüncü taraf paketlerin gönderilen sürümlerini yükler.<br /><br /> Bu anahtar hiçbir bağımsız değişken alır.|
 |[/UseEnv](useenv-devenv-exe.md)|IDE'nin C++ derlemesi için PATH, INCLUDE, LIBPATH ve LIB ortam değişkenlerini kullanmalarına neden olur. Bu anahtar C++ ile **Masaüstü geliştirme iş yüküyle** birlikte yüklenir. Daha fazla bilgi için, [bkz. Setting the Path and Environment Variables for Command-Line Builds](/cpp/build/setting-the-path-and-environment-variables-for-command-line-builds).|
 
-Aşağıdaki komut satırı anahtarları IDE'leri görüntülemez.
+Aşağıdaki komut satırı anahtarları IDE'i görüntülemez.
 
-|Komut satırı anahtarı|Açıklama|
+|Komut satırı anahtarı|Description|
 | - |-----------------|
 |[/?](q-devenv-exe.md)|Komut İstemi `devenv` penceresinde anahtarlar için yardım **görüntüler.**<br /><br /> Bu anahtar hiçbir bağımsız değişken alır.|
 |[/Build](build-devenv-exe.md)|Belirtilen çözümün yapılandırmasına göre belirtilen çözümü veya projeyi derleme.<br /><br /> `devenv mysln.sln /build`|
@@ -93,7 +93,7 @@ Aşağıdaki komut satırı anahtarları IDE'leri görüntülemez.
 |[/Project](project-devenv-exe.md)|Derleme, temizleme veya dağıtma projesi. Bu anahtarı yalnızca , , veya anahtarını da `/Build` `/Rebuild` `/Clean` sağdıysanız `/Deploy` kullanabilirsiniz.<br /><br /> `devenv mysln.sln /build Debug /project proj1`|
 |[/ProjectConfig](projectconfig-devenv-exe.md)|Derlemek veya dağıtmak için proje yapılandırmasını belirtir. Bu anahtarı yalnızca anahtarı da sağdıysanız `/Project` kullanabilirsiniz.<br /><br /> `devenv mysln.sln /build Release /project proj1 /projectconfig Release`|
 |[/Rebuild](rebuild-devenv-exe.md)|Temizlenir ve ardından belirtilen çözümün yapılandırmasına göre belirtilen çözümü veya projeyi derleme.<br /><br /> `devenv mysln.sln /rebuild`|
-|[/Upgrade](upgrade-devenv-exe.md)|Belirtilen çözüm dosyasını ve tüm proje dosyalarını veya belirtilen proje dosyasını bu dosyalar için geçerli Visual Studio biçimine yükselter.<br /><br /> `devenv mysln.sln /upgrade`|
+|[/Upgrade](upgrade-devenv-exe.md)|Belirtilen çözüm dosyasını ve tüm proje dosyalarını veya belirtilen proje dosyasını bu dosyalar için geçerli Visual Studio biçimine yükseltin.<br /><br /> `devenv mysln.sln /upgrade`|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

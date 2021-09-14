@@ -18,11 +18,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: ee0c1daa8c56f759c39f4affb175b3894cbf9039
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122050097"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626169"
 ---
 # <a name="createexpinstance-utility"></a>CreateExpInstance yardımcı programı
 Deneysel bir örnek oluşturmak, sıfırlamak veya silmek için **CreateExpInstance** yardımcı programını Visual Studio. Temel alınan ürünü değiştirmeden uzantılarda hata ayıklamak Visual Studio test etmek için deneysel örneği kullanabilirsiniz.
@@ -45,7 +45,7 @@ CreateExpInstance.exe [/Create | /Reset | /Clean] /VSInstance=VsInstance /RootSu
  **/RootSuffix** Deneysel örnek dizininin adına eklenecek sonek.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir uzantı üzerinde çalışırken Visual Studio F5 tuşuna basarak varsayılan deneysel örneği açabilir ve geçerli uzantıyı yükleyebilirsiniz. Deneysel bir örnek yoksa, Visual Studio ayarları olan bir örnek oluşturur.
+ Bir uzantı üzerinde çalışırken Visual Studio F5 tuşuna basarak varsayılan deneysel örneği açabilir ve geçerli uzantıyı yükleyebilirsiniz. Deneysel örnek yoksa, Visual Studio ayarları olan bir örnek oluşturur.
 
  Deneysel örneğin varsayılan konumu, örnek sürüm numarasına Visual Studio bağlıdır. Örneğin, Visual Studio 2015 için konum *%localappdata%\Microsoft\VisualStudio\14.0Exp konumundadır. \\* Dizin konumdaki tüm dosyalar bu örneğin parçası olarak kabul edilir. Dizin adı varsayılan konuma değiştirilene Visual Studio ek deneysel örnekler bu örnek tarafından yüklenmez.
 

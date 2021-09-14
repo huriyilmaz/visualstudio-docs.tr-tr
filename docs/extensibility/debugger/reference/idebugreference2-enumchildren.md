@@ -1,6 +1,6 @@
 ---
-description: Bir başvurunun seçili alt öğelerinin listesini alır.
-title: 'IDebugReference2:: EnumChildren | Microsoft Docs'
+description: Bir başvuruda seçili olan çocukların listesini almak.
+title: IDebugReference2::EnumChildren | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: bab404519695b71c84c82216606b59529b1d4386
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122029846"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725153"
 ---
 # <a name="idebugreference2enumchildren"></a>IDebugReference2::EnumChildren
-Bir başvurunun seçili alt öğelerinin listesini alır. Daha sonraki kullanımlar için ayrılmıştır.
+Bir başvuruda seçili olan çocukların listesini almak. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,22 +53,22 @@ int EnumChildren (
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-'ndaki Numaralandırılmış [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapılardaki hangi alanların doldurulacağını belirten [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) Numaralandırmadaki bayrakların birleşimi.
+[in] Numaralandırılan [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) alanları belirten bir numaralandırılan DEBUG_REFERENCE_INFO bayrakların birleşimi. [](../../../extensibility/debugger/reference/debug-reference-info.md)
 
 `dwRadix`\
-'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak taban tabanı.
+[in] Herhangi bir sayısal bilgiyi biçimlendirmek için kullanılacak radyan.
 
 `dwAttribFilter`\
-'ndaki [](../../../extensibility/debugger/reference/dbg-attrib-flags.md) `pszNameFilter` Hangi yapıların numaralandırılacağını seçmek için parametresiyle birlikte filtre olarak kullanılan DBG_ATTRIB_FLAGS numaralandırmasındaki bayrakların birleşimi.
+[in] Numaralandırılan [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) seçmek için parametresiyle birlikte filtre olarak kullanılan bir filtre enumerasyonundan `pszNameFilter` bayrakların birleşimi.
 
 `pszNameFilter`\
-'ndaki "MyX" gibi bir filtre belirten bir dize, `dwAttribFilter` Numaralandırılacak yapıları seçmek için parametresiyle birlikte kullanılır.
+[in] Numaralandır kullanılacak yapıları seçmek için parametresiyle birlikte kullanılan "MyX" gibi bir `dwAttribFilter` filtreyi belirten dize.
 
 `dwTimeout`\
-'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süre (milisaniye cinsinden). `INFINITE`Sonsuza kadar beklemek için kullanın.
+[in] Bu yöntemden dönmeden önce bek süresi (milisaniye cinsinden). Süresiz `INFINITE` olarak beklemek için kullanın.
 
 `ppEnum`\
-dışı İstenen alt özelliklerin bir listesini içeren bir [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) nesnesi döndürür.
+[out] İstenen alt [özelliklerin listesini içeren bir IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Her zaman `E_NOTIMPL` döndürür.

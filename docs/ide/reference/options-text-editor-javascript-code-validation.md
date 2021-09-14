@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: aab9a249a9f17fdb93a0ca832b03254bab7cf2c101579e344bef2d45e13d066d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0dc6fbde896a2f043040c93710ca48bc95193127
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121357095"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724889"
 ---
 # <a name="options-dialog-box-text-editor--javascripttypescript--code-validation"></a>Seçenekler iletişim kutusu: Metin Düzenleyici \> JavaScript/TypeScript \> Kod Doğrulaması
 

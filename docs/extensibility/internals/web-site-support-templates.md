@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: d6aea0846a8811956bb022975c8efd0fa80a1044
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122041925"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626019"
 ---
 # <a name="web-site-support-templates"></a>Web Sitesi Destek Şablonları
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Web sitesi projesi ve öğe şablonları, yeni Web sitesi projeleri ve öğeleri sıfırdan oluşturma gereksinimini ortadan kaldırarak geliştirme sürecini hızlandıran, yeniden kullanılabilir ve özelleştirilebilir Web sitesi projesi ve öğe saplamaları sağlar. şablonlar hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] bkz. [Project ve öğe şablonları oluşturma](../../ide/creating-project-and-item-templates.md).
@@ -152,40 +152,40 @@ ms.locfileid: "122041925"
 
 - CodeBehind. *uzantının*
 
-     WebForm sınıfını uygulayan bağımlı dosya. Codebehind dili bu *dosyanın uzantısını* belirler.
+     WebForm sınıfını uygulayan bağımlı dosya. CodeBehind dili bu dosyanın *uzantısını* belirler.
 
-- ContentPage.aspx
+- ContentPage. aspx
 
-     Web sayfasının içerik sayfası olarak başlangıç içeriği. Bu Web sayfasında, bağımlı dosyanın gerisinde ilişkili kod yoktur.
+     Web sayfasının içerik sayfası olarak başlangıç içeriği. Bu Web sayfasına ilişkili bir codebehind bağımlı dosyası yok.
 
-- ContentPage_cb.aspx
+- ContentPage_cb. aspx
 
-     Web sayfasının içerik sayfası olarak başlangıç içeriği. Bu Web sayfasında, ilişkili bir koda ve bağımlı dosyaya sahip.
+     Web sayfasının içerik sayfası olarak başlangıç içeriği. Bu Web sayfasında ilişkili bir codebehind bağımlı dosyası bulunur.
 
-- WebForm.vstemplate
+- WebForm. vstemplate
 
-     Yeni web sayfasının içeriğini ve varsa bağımlı dosyasını belirleyen şablon dosyası.
+     Varsa, yeni Web sayfasının ve bağımlı dosyanın içeriğini belirleyen şablon dosyası.
 
-### <a name="new-master-page"></a>Yeni Ana Sayfa
- Bu şablon, Yeni Ana Sayfa Ekle komutuna yanıt **olarak yeni bir ana sayfa** oluşturur.
+### <a name="new-master-page"></a>Yeni Ana sayfa
+ Bu şablon **Yeni Ana sayfa ekle** komutuna yanıt olarak yeni bir ana sayfa oluşturur.
 
- Bağımlı bir kod oluşturmak için, kaynak dosyanın gerisinde, Kodu ayrı **bir dosyaya yerle'yi seçin.** Aksi takdirde, boş bir betik bloğu olan ve bağımlı bir dosyayı bağlayabilecek yönergesi olmayan \<% Page %> tek bir Web sayfası oluşturulur.
+ Bağımlı bir codebehind kaynak dosyası oluşturmak için **kodu ayrı dosyaya yerleştir**' i seçin. Aksi halde, boş bir betik bloğu olan ve \<% Page %> bağımlı bir dosyayı bağlama yönergesi olmayan tek bir Web sayfası oluşturulur.
 
-- MasterPage.master
+- MasterPage. Master
 
-     Ana sayfanın başlangıç içeriği. Bu ana sayfada, bağımlı dosyanın gerisinde ilişkili kod yoktur.
+     Ana sayfanın başlangıç içeriği. Bu ana sayfaya ilişkili bir codebehind bağımlı dosyası yok.
 
-- MasterPage_cb.master
+- MasterPage_cb. Master
 
-     Ana sayfanın başlangıç içeriği. Bu ana sayfada ilişkilendirilmiş bir codebehind bağımlı dosyası vardır.
+     Ana sayfanın başlangıç içeriği. Bu ana sayfada, ilişkili bir codebehind bağımlı dosyası var.
 
-- Codebehind. *uzantı*
+- CodeBehind. *uzantı*
 
-     Ana sayfa sınıfını uygulayan bağımlı dosya. Codebehind dili bu *dosyanın uzantısını* belirler.
+     Ana sayfa sınıfını uygulayan bağımlı dosya. CodeBehind dili bu dosyanın *uzantısını* belirler.
 
-- MasterPage.vstemplate
+- MasterPage. vstemplate
 
-     Yeni ana sayfanın içeriğini ve varsa bağımlı dosyasını belirleyen şablon dosyası.
+     Varsa, yeni ana sayfanın ve bağımlı dosyanın içeriğini belirleyen şablon dosyası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Web Sitesi Desteği](../../extensibility/internals/web-site-support.md)

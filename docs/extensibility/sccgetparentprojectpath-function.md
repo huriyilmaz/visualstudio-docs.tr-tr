@@ -1,6 +1,6 @@
 ---
-description: Bu işlev, belirtilen projenin üst proje yolunu belirler.
-title: SccGetParentProjectPath Işlevi | Microsoft Docs
+description: Bu işlev, belirtilen bir projenin üst proje yolunu belirler.
+title: SccGetParentProjectPath İşlev | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: d75640372839c4fddf83ec098879e9eb0479eb4f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122049486"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625989"
 ---
 # <a name="sccgetparentprojectpath-function"></a>SccGetParentProjectPath işlevi
-Bu işlev, belirtilen projenin üst proje yolunu belirler. bu işlev, kullanıcı kaynak denetimine bir Visual Studio projesi eklerken çağrılır.
+Bu işlev, belirtilen bir projenin üst proje yolunu belirler. Bu işlev, kullanıcı kaynak denetimine bir Visual Studio eklerken çağrılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,67 +38,67 @@ SCCRTN SccGetParentProjectPath(
 ```
 
 ### <a name="parameters"></a>Parametreler
- pContext
+ Pcontext
 
-'ndaki Kaynak denetimi eklentisi bağlam işaretçisi.
+[in] Kaynak denetimi eklentisi bağlam işaretçisi.
 
- lendiği
+ Hwnd
 
-'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
+[in] Kaynak denetimi eklentisinin sağladığı iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi tanıtıcısı.
 
  lpUser
 
-[in, out] Kullanıcı adı (en fazla SCC_USER_SIZE, NULL Sonlandırıcı dahil).
+[in, out] Kullanıcı adı (NULL SCC_USER_SIZE kadar).
 
  lpProjPath
 
-'ndaki Proje yolunu tanımlayan dize (NULL Sonlandırıcı dahil SCC_PRJPATH_SIZE kadar).
+[in] Proje yolunu tanımlayan dize (NULL SCC_PRJPATH_SIZE kadar).
 
- lpAuxProjPath
+ lpUxProjPath
 
-[in, out] Projeyi tanımlayan yardımcı dize (NULL Sonlandırıcı dahil SCC_PRJPATH_SIZE kadar).
+[in, out] Projeyi tanımlayan yardımcı dize (NULL SCC_PRJPATH_SIZE kadar).
 
  lpParentProjPath
 
-[in, out] Üst proje yolunu tanımlayan çıkış dizesi (NULL Sonlandırıcı dahil SCC_PRJPATH_SIZE kadar).
+[in, out] Üst proje yolunu tanımlayan çıkış dizesi (NULL SCC_PRJPATH_SIZE kadar).
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini dönmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Üst proje yolu başarıyla alındı.|
+|SCC_OK|Üst proje yolu başarıyla elde edildi.|
 |SCC_E_INITIALIZEFAILED|Project başlatılamadı.|
-|SCC_E_INVALIDUSER|Kullanıcı, kaynak denetimi eklentisinde oturum açamadı.|
-|SCC_E_UNKNOWNPROJECT|kaynak denetimi eklentisi için Project bilinmiyor.|
-|SCC_E_INVALIDFILEPATH|Geçersiz veya kullanılamayan dosya yolu.|
-|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|
-|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|
-|SCC_E_PROJSYNTAXERR|Geçersiz proje sözdizimi.|
-|SCC_E_CONNECTIONFAILURE|Mağaza bağlantısı sorunu.|
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Özel olmayan hata.|
+|SCC_E_INVALIDUSER|Kullanıcı kaynak denetimi eklentisinde oturum açamdı.|
+|SCC_E_UNKNOWNPROJECT|Project denetimi eklentisi tarafından bilinmez.|
+|SCC_E_INVALIDFILEPATH|Geçersiz veya kullanılamaz dosya yolu.|
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmez.|
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya sorun sorun nedeniyle kaynak denetim sistemine erişilirken bir sorun vardı. Yeniden deneme önerilir.|
+|SCC_E_PROJSYNTAXERR|Geçersiz proje söz dizimi.|
+|SCC_E_CONNECTIONFAILURE|Depolama bağlantısı sorunu.|
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Belirtilmeyen hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlev bir başarı veya hata kodu döndürür ve başarılı olursa, değişkeni `lpParentProjPath` belirtilen projenin tam proje yoluyla doldurur.
+ Bu işlev bir başarı veya hata kodu döndürür ve başarılı olursa değişkeni belirtilen projenin `lpParentProjPath` tam proje yolu ile doldurur.
 
- Bu işlev, var olan bir projenin üst proje yolunu döndürür. Kök proje için işlev, geçirilen proje yolunu döndürür (yani, aynı kök proje yolu). Proje yolunun yalnızca kaynak denetimi eklentisi için anlamlı bir dize olduğunu unutmayın.
+ Bu işlev, mevcut projenin üst proje yolunu döndürür. Kök proje için işlev, geçirilen proje yolunu (yani aynı kök proje yolunu) döndürür. Proje yolunun yalnızca kaynak denetimi eklentisi için anlamlı bir dize olduğunu unutmayın.
 
- IDE, `lpUser` ve parametrelerdeki değişiklikleri kabul etmek için hazır `lpAuxProjPath` . IDE bu dizeleri kalıcı hale getirin ve Kullanıcı bu projeyi gelecekte açtığında [SccOpenProject](../extensibility/sccopenproject-function.md) 'e iletir. Bu nedenle, bu dizeler, kaynak denetimi eklentisinin bir projeyle ilişkilendirilmesi gereken bilgileri izlemek için bir yol sağlar.
+ IDE, ve parametrelerinde yapılan değişiklikleri `lpUser` kabul `lpAuxProjPath` etmeye de hazırlanmıştır. Kullanıcı gelecekte bu projeyi açtığında IDE bu dizeleri kalıcı olarak [sccOpenProject'e](../extensibility/sccopenproject-function.md) iletir. Bu nedenle bu dizeler, kaynak denetim eklentisinin bir projeyle ilişkilendirmek için gerekli bilgileri izlemesi için bir yol sağlar.
 
- Bu işlev, kullanıcıdan bir proje seçmesini istemez hariç, [SccGetProjPath](../extensibility/sccgetprojpath-function.md)öğesine benzerdir. Ayrıca hiçbir şekilde yeni bir proje oluşturmazlar ancak yalnızca var olan bir projeyle birlikte kullanılabilir.
+ Bu işlev [SccGetProjPath](../extensibility/sccgetprojpath-function.md)işlevine benzer, ancak kullanıcıdan bir proje seçmesini istemiz. Ayrıca hiçbir zaman yeni bir proje oluşturur, ancak yalnızca mevcut bir projeyle çalışır.
 
- `SccGetParentProjectPath`Çağrıldığında `lpProjPath` ve `lpAuxProjPath` boş olmaz ve geçerli bir projeye karşılık gelir. Bu dizeler genellikle, işleve önceki bir çağrıdan IDE tarafından alınır `SccGetProjPath` .
+ çağrıldı `SccGetParentProjectPath` mı, `lpProjPath` boş olmaz ve geçerli bir projeye karşılık `lpAuxProjPath` gelecektir. Bu dizeler genellikle IDE tarafından işleve yapılan önceki bir çağrıdan `SccGetProjPath` alınmıştır.
 
- `lpUser`Bağımsız değişken kullanıcı adıdır. IDE, işlevinden daha önce aldığı Kullanıcı adına geçecek `SccGetProjPath` ve kaynak denetimi eklentisinin adı varsayılan olarak kullanması gerekir. Kullanıcının eklentiyle zaten açık bağlantısı varsa, eklentinin sessizce çalıştığından emin olmak için eklentinin herhangi bir istemi ortadan kaldırmaya çalışması gerekir. Ancak, oturum açma başarısız olursa, eklenti kullanıcıdan bir oturum açma isteği ister ve geçerli bir oturum açma bilgisi aldığında adı geri geçirin `lpUser` . Eklenti bu dizeyi değiştirebileceğinden, IDE her zaman bir arabellek boyutu ayırır ( `SCC_USER_LEN` + 1). Dize değiştirilirse, yeni dize geçerli bir oturum açma adı olmalıdır (en azından eski dize olarak geçerli olur).
+ bağımsız `lpUser` değişkeni kullanıcı adıdır. IDE, işlevden daha önce aldığı kullanıcı adını iletir ve kaynak denetimi eklentisi varsayılan `SccGetProjPath` olarak bu adı kullanmalıdır. Kullanıcının eklentiyle açık bir bağlantısı varsa, işlevin sessizce çalışmasını sağlamak için eklenti tüm istemleri ortadan kaldırmayı denemeli. Ancak, oturum açma başarısız olursa, eklenti kullanıcıdan oturum açma isteminde olmalı ve geçerli bir oturum açma bilgileri aldığında adı 'ye geri `lpUser` iletir. Eklenti bu dizeyi değiştirene kadar, IDE her zaman boyutta bir arabellek ayırır ( `SCC_USER_LEN` +1). Dize değiştirilirse, yeni dize geçerli bir oturum açma adı (eski dize kadar geçerli) olmalıdır.
 
-## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>Scccreatealt projesi ve SccGetParentProjectPath için teknik notlar
- kaynak denetimine çözüm ve proje ekleme, bir kullanıcının kaynak denetimi sisteminde konumları kaç kez seçmesi gerektiğini en aza indirmek için Visual Studio basitleştirilmiştir. bu değişiklikler, bir kaynak denetimi eklentisi her iki yeni işlevi, [scccreatealt projesi](../extensibility/scccreatesubproject-function.md) ve işlevini destekliyorsa Visual Studio tarafından etkinleştirilir `SccGetParentProjectPath` . ancak, aşağıdaki kayıt defteri girişi, bu değişiklikleri devre dışı bırakmak ve önceki Visual Studio geri dönmek için kullanılabilir (kaynak denetimi eklentisi apı sürümü 1,1) davranışı:
+## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>SccCreateSubProject ve SccGetParentProjectPath için teknik notlar
+ Kaynak denetimine çözüm ve proje ekleme işlemi Visual Studio kullanıcıdan kaynak denetim sisteminde konum seçmesi istendiğinde sayısını en aza indirmek için basitleştirildi. Bu değişiklikler, Visual Studio denetimi eklentisi hem yeni işlevleri hem [de SccCreateSubProject'i](../extensibility/scccreatesubproject-function.md) ve işlevi destekliyorsa bu değişiklikler Visual Studio tarafından `SccGetParentProjectPath` etkinleştirilir. Ancak, aşağıdaki kayıt defteri girdisi bu değişiklikleri devre dışı bırakmak ve önceki Visual Studio (Kaynak Denetimi Eklentisi API'si Sürüm 1.1) davranışına geri dönmek için kullanılabilir:
 
- **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl" = DWORD: 00000001**
+ **[HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl"=dword:00000001**
 
- bu kayıt defteri girdisi yoksa veya dword: 00000000 olarak ayarlanırsa, Visual Studio yeni işlevleri kullanmaya çalışır `SccCreateSubProject` `SccGetParentProjectPath` .
+ Bu kayıt defteri girdisi yoksa veya dword:00000000 olarak ayarlanırsa, Visual Studio ve işlevlerini kullanmayı `SccCreateSubProject` `SccGetParentProjectPath` denemez.
 
- kayıt defteri girişi dword: 00000001 olarak ayarlandıysa Visual Studio bu yeni işlevleri kullanmayı denemez ve kaynak denetimine ekleme işlemleri Visual Studio önceki sürümlerinde olduğu gibi çalışır.
+ Kayıt defteri girdisi dword:00000001 olarak ayarlanırsa Visual Studio bu yeni işlevleri kullanmayı denemez ve kaynak denetimine ekleme işlemleri, önceki Visual Studio sürümlerinde olduğu gibi çalışır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)

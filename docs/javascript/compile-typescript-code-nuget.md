@@ -1,6 +1,6 @@
 ---
 title: NuGet kullanarak TypeScript kodu derleme ve derleme
-description: NuGet paketini kullanarak Visual Studio projelerinize TypeScript desteğinin nasıl ekleneceğini öğrenin.
+description: NuGet paketini kullanarak Visual Studio projelerinize TypeScript desteği NuGet öğrenin.
 ms.date: 7/23/2020
 ms.topic: conceptual
 author: mikejo5000
@@ -12,31 +12,31 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 1bf1deb271d7a20527f53260813e35e0de9daa19
-ms.sourcegitcommit: 409a750a944a72c5931f6094deb4dc9a2635a984
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "123262081"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625796"
 ---
-# <a name="compile-typescript-code-aspnet-core"></a>TypeScript kodunu derle (ASP.NET Core)
+# <a name="compile-typescript-code-aspnet-core"></a>TypeScript kodunu derleme (ASP.NET Core)
 
-Visual Studio yükleyicisindeki veya NuGet paketini kullanarak varsayılan olarak bulunan TypeScript SDK kullanarak projelerinize TypeScript desteği ekleyebilirsiniz. Visual Studio 2019 ' de geliştirilen projeler için, farklı platformlar ve ortamlarda daha fazla taşınabilirlik için TypeScript NuGet kullanmanızı öneririz.
+TypeScript SDK yükleyicisinde varsayılan olarak kullanılabilir veya Visual Studio paketi kullanarak projelerinize TypeScript desteği NuGet abilirsiniz. Visual Studio 2019'da geliştirilen projeler için, farklı platformlar ve ortamlar arasında daha fazla taşınabilirlik için TypeScript NuGet'i kullanmalarını teşvik ederiz.
 
-ASP.NET Core projeleri için, NuGet paketi için yaygın olarak kullanılan bir kullanım, .NET Core CLI kullanarak TypeScript 'i derlemeye yöneliktir. proje dosyanızı TypeScript SDK yüklemesinden derleme hedeflerini içeri aktarmak üzere el ile düzenlemediğiniz sürece, NuGet paketi, ve gibi .NET Core CLI komutlarını kullanarak TypeScript derlemesini etkinleştirmenin tek yoludur `dotnet build` `dotnet publish` . ayrıca, ASP.NET Core ve TypeScript ile [MSBuild tümleştirme](https://www.staging-typescript.org/docs/handbook/compiler-options-in-msbuild.html) için npm paketi üzerinden NuGet paketini seçin.
+Daha ASP.NET Core için, NuGet paketi için yaygın kullanımlardan biri, .NET Core CLI. Proje dosyanızı bir TypeScript SDK yüklemesinde derleme hedeflerini içeri aktaracak şekilde el ile düzenlemedikçe, ve gibi NuGet komutlarını kullanarak TypeScript derlemesini etkinleştirmenin tek yolu .NET Core CLI `dotnet build` `dotnet publish` paketidir. Ayrıca, [MSBuild](https://www.staging-typescript.org/docs/handbook/compiler-options-in-msbuild.html) ve TypeScript ile ASP.NET Core için npm paketi NuGet paketi seçin.
 
 ## <a name="add-typescript-support-with-nuget"></a>NuGet ile TypeScript desteği ekleme
 
-[typescript NuGet paketi](https://www.nuget.org/packages/Microsoft.TypeScript.MSBuild) typescript desteği ekler. typescript 3,2 veya üzeri için NuGet paketi projenize yüklendiğinde, typescript dil hizmeti 'nin karşılık gelen sürümü düzenleyicide yüklenir.
+[TypeScript NuGet paketi,](https://www.nuget.org/packages/Microsoft.TypeScript.MSBuild) TypeScript desteği ekler. Projenize TypeScript 3.2 veya NuGet paketi yüklendiğinde, TypeScript dil hizmetinin ilgili sürümü düzenleyiciye yüklenir.
 
-Visual Studio yüklüyse, onunla birlikte gelen node.exe, Visual Studio tarafından otomatik olarak alınır. Yüklü Node.js yoksa, [Node.js](https://nodejs.org/en/download/) Web sitesinden LTS sürümünü yüklemenizi öneririz.
+Bir Visual Studio yüklüyse, node.exe pakette yer alan paket otomatik olarak Visual Studio. Yüklü bir Node.js, lts sürümünüNode.jsweb [ sitesinden ](https://nodejs.org/en/download/) yüklemeniz önerilir.
 
-1. ASP.NET Core projenizi Visual Studio açın.
+1. ASP.NET Core projenizi Visual Studio.
 
-1. Çözüm Gezgini (sağ bölme). proje düğümüne sağ tıklayın ve **NuGet paketlerini yönet**' i seçin. **araştır** sekmesinde, **Microsoft. TypeScript. MSBuild** araması yapın ve ardından **paketi yüklemek için sağdaki aç '** a tıklayın.
+1. Bölmede Çözüm Gezgini (sağ bölme). Proje düğümüne sağ tıklayın ve Paketleri **Yönet'NuGet seçin.** Gözat **sekmesinde** **Microsoft.TypeScript.MSBuild** araması yapın ve ardından paketi **yüklemek** için sağdan Yükle'ye tıklayın.
 
-   ![NuGet paketi ekle](../javascript/media/aspnet-core-ts-nuget.png)
+   ![Paket NuGet ekleme](../javascript/media/aspnet-core-ts-nuget.png)
 
-   Visual Studio, NuGet paketini Çözüm Gezgini **bağımlılıklar** düğümü altına ekler. Aşağıdaki paket başvurusu *. csproj dosyanıza eklenir.
+   Visual Studio paketi NuGet'daki **Bağımlılıklar** düğümü altına Çözüm Gezgini. Aşağıdaki paket başvurusu *.csproj dosyanıza eklenir.
 
    ```xml
    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.9.7">
@@ -45,13 +45,13 @@ Visual Studio yüklüyse, onunla birlikte gelen node.exe, Visual Studio tarafın
    </PackageReference>
    ```
 
-1. Proje düğümüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TYPESCRIPT JSON yapılandırma dosyasını** seçin ve ardından **Ekle**' ye tıklayın.
+1. Proje düğümüne sağ tıklayın ve Yeni **Öğe'> Ekle'yi seçin.** **TypeScript JSON Yapılandırma Dosyasını seçin ve** ekle'ye **tıklayın.**
 
-   Visual Studio dosya *tsconfig.js* proje köküne ekler. TypeScript derleyicisi [seçeneklerini yapılandırmak](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) için bu dosyayı kullanabilirsiniz.
+   Visual Studio *proje köküne tsconfig.json* dosyasını ekler. TypeScript derleyicisi seçeneklerini [yapılandırmak için](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) bu dosyayı kullanabilirsiniz.
 
-1. İstediğiniz derleyici seçeneklerini ayarlamak için *tsconfig.json* ve Update ' i açın.
+1. *tsconfig.json'ı* açın ve istediğiniz derleyici seçeneklerini ayarlamak için güncelleştirin.
 
-   Aşağıda bir basit *tsconfig.js* dosyası örneği verilmiştir.
+   Aşağıda basit bir *tsconfig.json dosyası örneği ve* ardından ve bir örnek ve ardından yer almaktadır.
 
    ```json
    {
@@ -70,32 +70,32 @@ Visual Studio yüklüyse, onunla birlikte gelen node.exe, Visual Studio tarafın
    ```
 
    Bu örnekte:
-   - *Include* , derleyiciye TypeScript (*. TS) dosyalarını nerede bulacağını söyler.
-   - *OutDir* seçeneği, TypeScript derleyicisi tarafından transpiled olan düz JavaScript dosyaları için çıkış klasörünü belirtir.
-   - *sourcemap* seçeneği derleyicinin *sourcemap* dosyaları oluşturup oluşturmayacağını belirtir.
+   - *include,* derleyiciye TypeScript (*.ts) dosyalarının nerede bulun olduğunu söyler.
+   - *outDir* seçeneği, TypeScript derleyicisi tarafından transpile edilen düz JavaScript dosyalarının çıkış klasörünü belirtir.
+   - *sourceMap* seçeneği, derleyicinin sourceMap dosyaları *oluşturıp oluşturmay olmadığını* gösterir.
 
-   Önceki yapılandırma TypeScript 'i yapılandırmaya yönelik temel bir giriş sağlar. Diğer seçeneklerle ilgili daha fazla bilgi için bkz. [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+   Önceki yapılandırma, TypeScript'i yapılandırmaya yalnızca temel bir giriş sağlar. Diğer seçenekler hakkında bilgi için bkz. [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 
 ### <a name="build-the-application"></a>Uygulama oluşturma
 
-1. Projenize TypeScript (*. TS*) veya TypeScript JSX (*. TSX*) dosyaları ekleyin ve ardından TypeScript kodu ekleyin. TypeScript 'in basit bir örneği için aşağıdakileri kullanın:
+1. Projenize TypeScript (*.ts*) veya TypeScript JSX (*.tsx*) dosyalarını ekleyin ve ardından TypeScript kodunu ekleyin. Basit bir TypeScript örneği için aşağıdakini kullanın:
 
    ```typescript
    let message: string = 'Hello World';
    console.log(message);
    ```
 
-1. SDK olmayan eski bir stil projesi kullanıyorsanız, derlemeden önce [varsayılan içeri aktarmaları kaldır](#remove-default-imports) ' daki yönergeleri izleyin.
+1. SDK olmayan daha eski bir stil projesi kullanıyorsanız, Varsayılan içeri aktarmaları yapılmadan [önce kaldırma yönergelerini](#remove-default-imports) izleyin.
 
-1. **Build > Build Solution** öğesini seçin.
+1. Build **> Build Solution (Derleme Çözümü) seçin.**
 
-   Uygulamayı çalıştırdığınızda otomatik olarak oluştursa da, yapı işlemi sırasında gerçekleşen bir şeye göz atmak istiyoruz:
+   Uygulamayı çalıştırarak otomatik olarak derlemeye devam ediyor olsa da, derleme işlemi sırasında olan bir şeye göz atacağız:
 
-   Kaynak haritaları oluşturduysanız, *OutDir* seçeneğinde belirtilen klasörü açın ve oluşturulan * js. map dosyaları ile birlikte oluşturulan * .js dosyalarını bulabilirsiniz.
+   Kaynak eşlemeleri oluşturursanız *outDir* seçeneğinde belirtilen klasörü açın ve oluşturulan *.js dosyalarıyla birlikte oluşturulan *js.map dosyaları) bulur.
 
    Hata ayıklama için kaynak eşleme dosyaları gereklidir.
 
-1. Projeyi her kaydedişinizde derlemek istiyorsanız *. tsconfig içindeki *Compileonsave* seçeneğini kullanın.
+1. Projeyi her kaydeden derlemek için *.tsconfig içinde *compileOnSave* seçeneğini kullanın.
 
    ```json
    ```{
@@ -105,72 +105,72 @@ Visual Studio yüklüyse, onunla birlikte gelen node.exe, Visual Studio tarafın
    }
    ```
 
-uygulamanızı derlemek için görev çalıştırıcısı ile gulp kullanma örneği için bkz. [ASP.NET Core ve TypeScript](https://www.typescriptlang.org/docs/handbook/asp-net-core.html).
+Uygulamanızı derlemek için Görev Çalıştırıcısı ile gulp kullanma örneği için bkz. [ASP.NET Core TypeScript.](https://www.typescriptlang.org/docs/handbook/asp-net-core.html)
 
-Visual Studio, Node.js bir sürümü ya da beklediğiniz sürümden farklı bir üçüncü taraf aracı kullanıyorsa sorunlarla karşılaşırsanız Visual Studio için yolunu ayarlamanız gerekebilir. **Araçlar**  >  **seçeneklerini** belirleyin. **Projeler ve çözümler** altında **Web paket yönetimi**  >  **dış Web araçları**' nı seçin.
+Visual Studio'ın Node.js sürümünü veya beklenen sürümden farklı bir üçüncü taraf aracını kullanması ile ilgili sorunlaryla karşı karşınız varsa, Visual Studio için yolu ayarlamanız gerekir. Araçlar **Seçenekleri'ne**  >  **tıklayın.** Projeler **ve çözümler altında Web** Uygulaması Dış Web   >  **Paket Yönetimi'ı seçin.**
 
 ### <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-Derlemeden sonra uygulamayı çalıştırma yönergeleri için, bkz. [ilk Node.js uygulamanızı oluşturma](/visualstudio/ide/quickstart-nodejs?toc=%2Fvisualstudio%2Fjavascript%2Ftoc.json#run-the-application).
+Uygulamayı derledikten sonra çalıştırma yönergeleri için bkz. [İlk Node.js oluşturma.](/visualstudio/ide/quickstart-nodejs?toc=%2Fvisualstudio%2Fjavascript%2Ftoc.json#run-the-application)
 
-### <a name="nuget-package-structure-details"></a>NuGet paket yapısı ayrıntıları
+### <a name="nuget-package-structure-details"></a>NuGet yapısı ayrıntılarını içerir
 
 `Microsoft.TypeScript.MSBuild.nupkg` iki ana klasör içerir:
 
-- *derleme* klasörü
+- *build* klasörü
 
     Bu klasörde iki dosya bulunur.
-    Hem giriş noktaları hem de ana TypeScript hedef dosyası ve props dosyası için sırasıyla.
+    Her ikisi de ana TypeScript hedef dosyası ve props dosyası için giriş noktalarıdır.
 
-    1. *Microsoft. TypeScript. MSBuild. targets*
+    1. *Microsoft.TypeScript. MSBuild.targets*
 
-        Bu dosya, *Araçlar* klasöründen *Microsoft. TypeScript. targets* almadan önce *TypeScript.Tasks.dll* yolu gibi çalışma zamanı platformunu belirten değişkenleri ayarlar.
+        Bu dosya, araçlar klasöründen *Microsoft.TypeScript.targets'i* içeri aktarmadan önceTypeScript.Tasks.dllyolu gibi çalışma zamanı platformunu belirten *değişkenleri* ayarlar. **
 
-    2. *Microsoft. TypeScript. MSBuild. props*
+    2. *Microsoft.TypeScript. MSBuild.props*
 
-        Bu dosya, *Araçlar* klasöründen *Microsoft. TypeScript. default. props* içeri aktarır ve derleme NuGet aracılığıyla başlatıldığını gösteren özellikleri ayarlar.
+        Bu dosya, *araçlar klasöründen Microsoft.TypeScript.Default.props* dosyasını içeri aktarır ve derlemenin NuGet. 
 
-- *Araçlar* klasörü
+- *araçlar* klasörü
 
-    2,3 ' den önceki paket sürümleri yalnızca bir TSC klasörü içerir. *Microsoft. TypeScript. targets* ve *TypeScript.Tasks.dll* kök düzeyinde bulunur.
+    2.3'den önceki paket sürümleri yalnızca bir tsc klasörü içerir. *Microsoft.TypeScript.targets* *TypeScript.Tasks.dll* kök düzeyinde bulunur.
 
-    Paket sürümleri 2,3 ve üzeri sürümlerde kök düzeyi `Microsoft.TypeScript.targets` ve içerir `Microsoft.TypeScript.Default.props` . bu dosyalar hakkında daha fazla bilgi için bkz. [MSBuild Configuration](https://www.typescriptlang.org/docs/handbook/compiler-options-in-msbuild.html).
+    Paket 2.3 ve sonraki sürümlerinde kök düzeyi ve `Microsoft.TypeScript.targets` `Microsoft.TypeScript.Default.props` içerir. Bu dosyalar hakkında daha fazla bilgi için [bkz. MSBuild Yapılandırma.](https://www.typescriptlang.org/docs/handbook/compiler-options-in-msbuild.html)
 
     Ayrıca, klasör üç alt klasör içerir:
 
     1. *net45*
 
-        Bu klasör `TypeScript.Tasks.dll` ve üzerinde bağımlı olduğu diğer dll 'leri içerir.
-        Windows platformunda bir proje oluştururken, MSBuild dll 'leri bu klasörden kullanır.
+        Bu klasör ve `TypeScript.Tasks.dll` bağlı olduğu diğer URL'leri içerir.
+        Windows platformunda proje MSBuild bu klasördeki URL'leri kullanır.
 
-    2. *Netstandard 1.3*
+    2. *netstandard1.3*
 
-        bu klasör `TypeScript.Tasks.dll` , Windows olmayan bir makinede proje oluştururken kullanılan başka bir sürümünü içerir.
+        Bu klasör, sanal makine olmayan `TypeScript.Tasks.dll` bir makinede proje oluşturmada kullanılan başka bir Windows içerir.
 
-    3. *TSC*
+    3. *Tsc*
 
-        Bu klasör `tsc.js` `tsserver.js` ve bunları düğüm komut dosyaları olarak çalıştırmak için gereken tüm bağımlılık dosyalarını içerir.
+        Bu klasör , `tsc.js` ve `tsserver.js` bunları düğüm betikleri olarak çalıştırmak için gereken tüm bağımlılık dosyalarını içerir.
 
         > [!NOTE]
-        > Visual Studio yüklüyse, onunla paketlenmiş *node.exe* otomatik olarak alınır. Aksi takdirde Node.js makinede yüklü olmalıdır.
+        > Bir Visual Studio yüklüyse, *node.exe* paketle birlikte otomatik olarak yüklenir. Aksi Node.js makineye yüklenmiş olması gerekir.
 
-        3,1 ' den önceki sürümler `tsc.exe` , derlemeyi çalıştırmak için yürütülebilir bir dosya içeriyordu. Sürüm 3,1 ' de, bu, kullanımı Lehde kaldırılmıştır `node.exe` .
+        3.1'den önceki sürümlerde derlemeyi `tsc.exe` çalıştırmak için yürütülebilir dosya bulunuyor. Sürüm 3.1'de bu, kullanılarak `node.exe` kaldırılmıştır.
 
-### <a name="remove-default-imports"></a>Varsayılan içeri aktarmaları kaldır
+### <a name="remove-default-imports"></a>Varsayılan içeri aktarmaları kaldırma
 
-[SDK olmayan biçim biçimini](/nuget/resources/check-project-format)kullanan daha eski ASP.NET Core projelerde, bazı proje dosyası öğelerini kaldırmanız gerekebilir.
+Eski ASP.NET Core SDK stili olmayan [biçimi](/nuget/resources/check-project-format)kullanan projelerde bazı proje dosyası öğelerini kaldırmanız gerekebilir.
 
-bir proje için MSBuild desteği için NuGet paketini kullanıyorsanız, proje dosyası veya içeri aktarmamalıdır `Microsoft.TypeScript.Default.props` `Microsoft.TypeScript.targets` . dosyalar NuGet paketi tarafından içeri aktarıldığından, bunların ayrı olarak dahil edilmesi istenmeden davranışa neden olabilir.
+Proje desteği için NuGet paketini MSBuild proje dosyası veya içeri `Microsoft.TypeScript.Default.props` `Microsoft.TypeScript.targets` aktarmamalı. Dosyalar, ayrı olarak dahil NuGet paket tarafından içe aktarılır, bu nedenle, intended davranışa neden olabilir.
 
-1. Projeye sağ tıklayın ve **Project kaldır**' ı seçin.
+1. Projeye sağ tıklayın ve Yüklemeden **kaldır'ı Project.**
 
-1. Projeye sağ tıklayın ve **Düzenle \<*project file name*\>**' yi seçin.
+1. Projeye sağ tıklayın ve Düzenle'yi **seçin. \<*project file name*\>**
 
    Proje dosyası açılır.
 
-1. Ve başvurularını kaldırın `Microsoft.TypeScript.Default.props` `Microsoft.TypeScript.targets` .
+1. ve başvurularını `Microsoft.TypeScript.Default.props` `Microsoft.TypeScript.targets` kaldırın.
 
-   Kaldırılacak içeri aktarmalar aşağıdakine benzer şekilde görünür:
+   Kaldır için içeri aktarmalar aşağıdakine benzer:
 
    ```xml
    <Import

@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2cf7b18d84ae8279c5d15f9404a6d8d500d44d82
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122118911"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634849"
 ---
 # <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
 İnsan tarafından okunabilir bir hata iletisinin yapısına olanak sağlayan bilgileri döndürür.
@@ -53,7 +53,7 @@ int GetErrorMessage(
 
 ## <a name="parameters"></a>Parametreler
 `pMessageType`\
-[out] [MESSAGETYPE numaralama değerinden](../../../extensibility/debugger/reference/messagetype.md) ileti türünü açıklayan bir değer döndürür.
+[out] [MESSAGETYPE numaralama](../../../extensibility/debugger/reference/messagetype.md) değerinden ileti türünü açıklayan bir değer döndürür.
 
 `pbstrErrorFormat`\
 [out] Kullanıcıya son iletinin biçimi (ayrıntılar için bkz. "Açıklamalar").
@@ -74,7 +74,7 @@ int GetErrorMessage(
  Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Hata iletisi, satırlarında biçimlendirilmiş `"What I was doing.  %1"` olmalıdır. Daha sonra , çağıranın yerine hata kodundan türetilen hata `"%1"` iletisiyle (içinde döndürülür) `hrErrorReason` değiştirilir. parametresi, `pMessageType` çağrıyı yapana son hata iletisinin nasıl görüntüleniyor olması gerektiğini söyler.
+ Hata iletisi, satırlarında biçimlendirilmiş `"What I was doing.  %1"` olmalıdır. Daha `"%1"` sonra , çağıranın yerine hata kodundan türetilen hata iletisiyle (içinde döndürülür) `hrErrorReason` değiştirilir. parametresi, `pMessageType` çağrıyı yapana son hata iletisinin nasıl görüntüleniyor olması gerektiğini söyler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)

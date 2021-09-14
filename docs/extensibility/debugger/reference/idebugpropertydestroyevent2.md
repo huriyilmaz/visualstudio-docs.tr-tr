@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8326ba7248e5c1e351cae0e625794cf3af7ab08e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122087658"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725171"
 ---
 # <a name="idebugpropertydestroyevent2"></a>IDebugPropertyDestroyEvent2
 Bu arabirim, belirli bir belgeyle ilişkili bir özellik yok etmek üzereyken hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
@@ -31,12 +31,12 @@ IDebugPropertyDestroyEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- DE, bir özelliğin yok edilmiş olduğunu rapor etmek için bu arabirimini uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak uygulanarak. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır. DE daha önce bir betikle ilişkili bir özellik oluşturdu ise bu arabirim uygulanır; özelliğini yok etmek ilişkili betiği IDE'den kaldırır.
+ DE, bir özelliğin yok edilmiş olduğunu rapor etmek için bu arabirimini uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak gerçekleştir gerekir. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır. DE daha önce bir betikle ilişkili bir özellik oluşturdu ise bu arabirim uygulanır; özelliğini yok etmek ilişkili betiği IDE'den kaldırır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  DE bu olay nesnesini oluşturur ve bir özelliğin yok edilmiş olduğunu rapor etmek için gönderir. Olay, hata ayıklama yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
  Aşağıdaki tabloda yöntemini `IDebugPropertyDestroyEvent2` gösterir.
 
 |Yöntem|Açıklama|
@@ -44,7 +44,7 @@ IDebugPropertyDestroyEvent2 : IUnknown
 |[GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertydestroyevent2-getdebugproperty.md)|Yok edilecek özelliği alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu olayların neden kullanıldıklarına ilişkin ayrıntılar için [bkz. IDebugPropertyCreateEvent2](../../../extensibility/debugger/reference/idebugpropertycreateevent2.md) için Açıklamalar.
+ Bu olayların neden kullanıldıklarına ilişkin ayrıntılar için [bkz. IDebugPropertyCreateEvent2](../../../extensibility/debugger/reference/idebugpropertycreateevent2.md) açıklamaları.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg.h

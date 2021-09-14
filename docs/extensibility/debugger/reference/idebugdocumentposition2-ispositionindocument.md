@@ -1,6 +1,6 @@
 ---
-description: Belge konumunun verilen belgede olup olmadığını belirler.
-title: IDebugDocumentPosition2::IsPositionInDocument | Microsoft Docs
+description: Belge konumunun verilen belgede içerildiğini belirler.
+title: 'IDebugDocumentPosition2:: ıspositionındocument | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c72b0a3494018f8dc2bda518507d4b13da9cfe74
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122119470"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634974"
 ---
 # <a name="idebugdocumentposition2ispositionindocument"></a>IDebugDocumentPosition2::IsPositionInDocument
-Belge konumunun verilen belgede olup olmadığını belirler.
+Belge konumunun verilen belgede içerildiğini belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int IsPositionInDocument(
 
 ## <a name="parameters"></a>Parametreler
 `pDoc`\
-[in] İçeren belge adayını temsil eden [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi.
+'ndaki İçerilen belge adayını temsil eden [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem öncelikli olarak [IDebugDocument2 arabirimleri içinde kesme noktaları ayarlamada](../../../extensibility/debugger/reference/idebugdocument2.md) kullanılır. Belgeler yüklendiğinde, belgenin bu konumu içerdiğini belirlemek için kesme noktası konumu çağrılır.
+ Bu yöntem öncelikle [IDebugDocument2](../../../extensibility/debugger/reference/idebugdocument2.md) arabirimlerinde kesme noktaları ayarlamak için kullanılır. Belgeler yüklendiğinde, belgenin bu konumu içerip içermediğini anlamak için kesme noktası konumu çağırılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)

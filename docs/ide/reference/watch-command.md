@@ -17,14 +17,14 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 2258c704e8a91b2b00942a8dcae5ca5215da028d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122056049"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724888"
 ---
 # <a name="watch-command"></a>İzle Komutu
-İzleme penceresinin belirtilen bir örneğini oluşturur **ve** açar. Değişkenlerin, **ifadelerin** ve yazmaların değerlerini hesaplamak, bu değerleri düzenlemek ve sonuçları kaydetmek için bir İzleme penceresi kullanabilirsiniz.
+İzleme penceresinin belirtilen bir örneğini oluşturur **ve** açar. Değişkenlerin, **ifadelerin** ve kayıtların değerlerini hesaplamak, bu değerleri düzenlemek ve sonuçları kaydetmek için bir İzleme penceresi kullanabilirsiniz.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -50,7 +50,7 @@ bir `index` tamsayı olmalıdır. Geçerli değerler 1, 2, 3 veya 4'tir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Otomatikler ve Yereller Pencereleri](../../debugger/autos-and-locals-windows.md)
-- [Visual Studio'de Watch ve QuickWatch Windows kullanarak Değişkenler üzerinde watch Visual Studio](../../debugger/watch-and-quickwatch-windows.md)
+- [Visual Studio'daki Watch ve QuickWatch Windows kullanarak Değişkenler üzerinde watch Visual Studio](../../debugger/watch-and-quickwatch-windows.md)
 - [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
 - [Komut Penceresi](../../ide/reference/command-window.md)
 - [Bul/Komut Kutusu](../../ide/find-command-box.md)

@@ -1,6 +1,6 @@
 ---
-description: Görev, çalışma durumuna ulaşılmadan önce iptal edildi veya iptal işlemini onayladığından özel durum olmadan tamamlandı.
-title: TASK_STATE_CANCELED alanı | Microsoft Docs
+description: Görev, çalışma durumuna ulaşmadan iptal edildi veya iptalini onayladı ve özel durum olmadan tamamlandı.
+title: TASK_STATE_CANCELED Alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,20 +13,20 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8ea74eb264f6706fb02b03304e50baa4ee86207f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122042627"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626391"
 ---
 # <a name="task_state_canceled-field"></a>TASK_STATE_CANCELED alanı
-Görev, çalışma durumuna ulaşılmadan önce iptal edildi veya iptal işlemini onayladığından özel durum olmadan tamamlandı.
+Görev, çalışma durumuna ulaşmadan iptal edildi veya iptalini onayladı ve özel durum olmadan tamamlandı.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
+ **Derleme:** mscorlib (mscorlib.dll)
 
- bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
+ Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ Görev, çalışma durumuna ulaşılmadan önce iptal edildi veya iptal işlemin
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- [M_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alan bu değeri içeriyorsa, <xref:System.Threading.Tasks.Task.Status%2A> özelliği döndürür <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> .
+ M_stateFlags [alanı](../../extensibility/debugger/m-stateflags-field.md) bu değeri içeriyorsa <xref:System.Threading.Tasks.Task.Status%2A> özelliği <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md)

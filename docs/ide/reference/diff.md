@@ -16,11 +16,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: b3db029bc530cf90f48fd92901c7c55a7a0e9ae1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122094093"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625892"
 ---
 # <a name="diff-devenvexe"></a>/Diff (devenv.exe)
 
@@ -36,11 +36,11 @@ devenv /Diff SourceFile TargetFile [SourceDisplayName [TargetDisplayName]]
 
 - *SourceFile*
 
-  Gereklidir. Karşılaştır olunan ilk dosyanın tam yolu ve adı.
+  Gereklidir. Karşılaştırıla ilk dosyanın tam yolu ve adı.
 
 - *TargetFile*
 
-  Gereklidir. Karşılaştır olunan ikinci dosyanın tam yolu ve adı.
+  Gereklidir. Karşılaştırıla ikinci dosyanın tam yolu ve adı.
 
 - *SourceDisplayName*
 

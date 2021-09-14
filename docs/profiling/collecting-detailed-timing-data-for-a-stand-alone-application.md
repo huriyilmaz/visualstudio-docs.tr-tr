@@ -1,6 +1,6 @@
 ---
-title: Profil oluşturucu komut satırı-tek başına uygulama için zamanlama verileri ayrıntısı
-description: Tek başına bir bileşen için ayrıntılı performans verileri toplamak üzere komut satırından izleme yöntemini nasıl kullanacağınızı öğrenin.
+title: Profil oluşturma komut satırı - Tek başına uygulama için zamanlama veri ayrıntıları
+description: Tek başına bir bileşen için ayrıntılı performans verileri toplamak üzere komut satırına ilişkin ölçüm ölçüm yöntemini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,42 +16,42 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: aea82023781bb98fcc64f80f088c6ab4e4f91e09
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122131865"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635814"
 ---
-# <a name="collect-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>Profil oluşturucu komut satırını kullanarak tek başına bir uygulama için ayrıntılı zamanlama verileri toplama
-Bu bölümde, komut satırından izleme yöntemini kullanarak bir istemci (tek başına) bileşeni için ayrıntılı performans verilerini toplamaya yönelik yordamlar ve seçenekler açıklanmaktadır.
+# <a name="collect-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>Profil oluşturma komut satırı kullanarak tek başına bir uygulama için ayrıntılı zamanlama verileri toplama
+Bu bölümde, komut satırdan ölçümleme yöntemini kullanarak bir istemci (tek başına) bileşeni için ayrıntılı performans verileri toplama yordamları ve seçenekleri açıklanır.
 
 ## <a name="common-tasks"></a>Genel görevler
 
 |Görev|İlgili içerik|
 |----------|---------------------|
-|**izleme kullanarak bir .NET Framework uygulaması profili oluşturma**|-   [Nasıl yapılır: bir .NET bileşenini Işaretleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)|
-|**İzleme kullanarak bir C/C++ uygulaması profili oluşturma**|-   [Nasıl yapılır: yerel bir bileşeni Işaretleme ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-native-component-and-collect-timing-data.md)|
-|**Katman etkileşim verileri ekleme**|-   [Katman etkileşim verileri toplama](../profiling/adding-tier-interaction-data-from-the-command-line.md)|
+|**Ölçüm .NET Framework bir uygulamanın profilini oluşturma**|-   [Nasıl kullanılır: .NET bileşenini kullanma ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-timing-data.md)|
+|**Ölçüm ölçümlerini kullanarak bir C/C++ uygulamasının profilini oluşturma**|-   [Nasıl kullanılır: Yerel bir bileşenin ölçümlerini oluşturma ve ayrıntılı zamanlama verileri toplama](../profiling/how-to-instrument-a-native-component-and-collect-timing-data.md)|
+|**Katman etkileşim verileri ekleme**|-   [Katman etkileşim verilerini toplama](../profiling/adding-tier-interaction-data-from-the-command-line.md)|
 
 ## <a name="related-tasks"></a>İlişkili görevler
 
-### <a name="profile-stand-alone-applications"></a>Tek başına uygulamalar profili
+### <a name="profile-stand-alone-applications"></a>Tek başına uygulamaların profilini oluşturma
 
 |Görev|İlgili İçerik|
 |----------|---------------------|
-|**Örnekleme kullanarak uygulamalar profili uygulama**|-   [Örnekleme kullanarak uygulama istatistikleri toplama](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
-|**.NET bellek ayırma ve çöp toplama profili**|-   [.NET Framework bellek verileri toplama](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|
-|**Profil kaynağı çekişmesi ve iş parçacığı etkinliği**|-   [Eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|
+|**Örnekleme kullanarak uygulama profili oluşturma**|-   [Örnekleme kullanarak uygulama istatistikleri toplama](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|
+|**.NET bellek ayırma ve atık toplama profilini oluşturma**|-   [Bellek .NET Framework toplama](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|
+|**Profil kaynak etkinliği ve iş parçacığı etkinliği**|-   [Eşzamanlılık verileri toplama](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|
 
-### <a name="profile-by-using-the-instrumentation-method"></a>İzleme yöntemini kullanarak profil
+### <a name="profile-by-using-the-instrumentation-method"></a>Ölçümleme yöntemini kullanarak profil oluşturma
 
 |Görev|İlgili İçerik|
 |----------|---------------------|
-|**ASP.NET uygulamalar profili**|-   [İzleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
-|**Profil hizmetleri**|-   [İzleme kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|
+|**Profil ASP.NET uygulamaları**|-   [Ölçüm ölçümlerini kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-aspnet-profiler-instrumentation-method.md)|
+|**Profil hizmetleri**|-   [Ölçüm ölçümlerini kullanarak ayrıntılı zamanlama verileri toplama](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|
 
-### <a name="analyze-instrumentation-data-views-and-reports"></a>İzleme verileri görünümlerini ve raporlarını çözümleyin
-- [İzleme yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)
+### <a name="analyze-instrumentation-data-views-and-reports"></a>Ölçüm izleme veri görünümlerini ve raporlarını analiz etme
+- [Ölçüm izleme yöntemi veri görünümleri](../profiling/instrumentation-method-data-views.md)
 
 ## <a name="reference"></a>Başvuru
 - [Komut satırı profil oluşturma araçları başvurusu](../profiling/command-line-profiling-tools-reference.md)

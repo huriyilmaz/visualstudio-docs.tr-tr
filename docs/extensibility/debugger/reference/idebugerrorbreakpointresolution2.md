@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim bir kesme noktası hatasının çözünürlüğünü temsil eder.
+description: Bu arabirim, bir kesme noktası hatasının çözünürlüğünü temsil eder.
 title: IDebugErrorBreakpointResolution2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3aaed396e2038740936fd74643690b86dc80530a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122118924"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634862"
 ---
 # <a name="idebugerrorbreakpointresolution2"></a>IDebugErrorBreakpointResolution2
-Bu arabirim bir kesme noktası hatasının çözünürlüğünü temsil eder.
+Bu arabirim, bir kesme noktası hatasının çözünürlüğünü temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,14 +30,14 @@ Bu arabirim bir kesme noktası hatasının çözünürlüğünü temsil eder.
 IDebugErrorBreakpointResolution2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Bir hata ayıklama altyapısı, bu arabirimi kesme noktaları desteğinin bir parçası olarak uygular. Bu arabirim, bir kesme noktasının bağlanacağı yeri raporlamak için kullanılır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı bu arabirimi kesme noktası desteğinin bir parçası olarak uygulamaya almaktadır. Bu arabirim, bir kesme noktası bağlamanın başarısız olduğunu rapor etmek için kullanılır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [GetBreakpointResolution](../../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) çağrısı, kesme noktasının bağlama başarısız olduğu hakkında bilgi sağlamak için bu arabirimi döndürür. [GetErrorBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) yöntemi [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) arabirimini alır.
+ [GetBreakpointResolution çağrısı,](../../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) kesme noktası bağlamanın başarısız olduğu yer hakkında bilgi sağlamak için bu arabirimi döndürür. [GetErrorBreakpoint yöntemi](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) [IDebugErrorBreakpoint2 arabirimini](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) elde ediyor.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugErrorBreakpointResolution2` .
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugErrorBreakpointResolution2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -45,11 +45,11 @@ IDebugErrorBreakpointResolution2 : IUnknown
 |[GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)|Kesme noktası çözümleme bilgilerini alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)

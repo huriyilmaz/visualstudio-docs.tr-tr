@@ -1,6 +1,6 @@
 ---
-title: MaxFrameworkVersion öğesi (Visual Studio şablonları) | Microsoft Docs
-description: MaxFrameworkVersion öğesi hakkında bilgi edinin ve şablon için gereken .NET Framework en yüksek sürümünü nasıl belirtir.
+title: MaxFrameworkVersion Öğesi (Visual Studio Şablonları) | Microsoft Docs
+description: MaxFrameworkVersion öğesini ve şablonun gerekli olduğu en yüksek .NET Framework nasıl belirtir hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -15,18 +15,18 @@ manager: jmartens
 ms.workload:
 - vssdk
 ms.openlocfilehash: 05d61e298c666d22df1af8d426cb0671feb8b9c5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090622"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724955"
 ---
 # <a name="maxframeworkversion-element-visual-studio-templates"></a>MaxFrameworkVersion öğesi (Visual Studio şablonları)
 
-Şablonun gerektirdiği .NET Framework en yüksek sürümünü belirtir. **Yeni proje** Iletişim kutusunun **hedef Framework sürümü** açılan menüsünde kullanılabilir en yüksek değeri belirler. Kullanıcıların bir çerçeve sürümü seçebilmeleri için, şablonun en düşük .NET Framework sürümü olarak [Requiredframeworkversion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) ' ı da belirtmeniz gerekir.
+Şablon için gereken en .NET Framework sürümünü belirtir. Yeni Çerçeve Sürümü iletişim kutusunun **Hedef Çerçeve Sürümü** açılan listesinde kullanılabilen en yüksek **Project** belirler. Kullanıcıların bir çerçeve sürümü seçeb için, şablonun en düşük sürüm olarak [RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) .NET Framework belirtmeniz gerekir.
 
 > [!IMPORTANT]
-> Visual Studio 2017 sürüm 15,6 ' den başlayarak, **hedef Framework sürümü** açılan kutusu artık **Yeni proje** iletişim kutusunun **Şablonlar** bölümünde, görünen şablonlar için bir filtre değildir. Bunun yerine, **hedef Framework sürümü** açılan kutusu seçili şablon için bir çerçeve seçici olarak çalışır.
+> Visual Studio 2017 sürüm 15.6'dan başlayarak, **Hedef Çerçeve** Sürümü açılan listesinde artık Yeni  Çerçeve Sürümü iletişim kutusunun Şablonlar bölümünde görüntülenen şablonlar için bir **filtre Project** yoktur. Bunun yerine, **Hedef Çerçeve Sürümü** açılan listesinde seçilen şablon için çerçeve seçici işlevi kullanılır.
 
  \<VSTemplate> \<TemplateData>
  \<MaxFrameworkVersion>
@@ -50,20 +50,20 @@ ms.locfileid: "105090622"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** ya da **Yeni öğe Ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırarak Yeni Öğe Ekle iletişim kutusunda **Project** **görüntülenen şablonu** tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin, şablon tarafından izin verilen .NET Framework en yüksek sürüm numarası olmalıdır.
+ Metin, şablon tarafından izin verilen .NET Framework en yüksek sürüm numarasına sahip olması gerekir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`MaxFrameworkVersion` isteğe bağlı bir öğedir. `MaxFrameworkVersion`Şablon için desteklenen .NET Framework sürümlerinin yanlışlıkla sınırlandırımaması gibi, gerekli olmadığı sürece, öğe atlanmalıdır. .NET Framework şablon için geçerli değilse de atlanmalıdır.
+`MaxFrameworkVersion` isteğe bağlı bir öğedir. Öğe gerekli olmadığı sürece atlanır, bu nedenle şablon için desteklenen .NET Framework aralıklarını yanlışlıkla `MaxFrameworkVersion` sınırlamamalıdır. Şablon için geçerli .NET Framework de atlanır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, standart sınıf şablonu için meta verileri gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
+Aşağıdaki örnek, standart bir sınıf şablonunun meta [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] verilerini göstermektedir.
 
 ```xml
 <VSTemplate Type="Item" Version="3.0.0"
@@ -83,9 +83,9 @@ Aşağıdaki örnek, standart sınıf şablonu için meta verileri gösterir [!I
 </VSTemplate>
 ```
 
-Bu örnekte, şablonu için gereken .NET Framework en yüksek sürümü tarafından temsil edilir, `MaxFrameworkVersion` 4.7.1. Bu şablonla oluşturulan bir proje, 4.7.1 sürümüne kadar .NET Framework sürümlerini hedefleyebilir.
+Bu örnekte, tarafından temsil edilen .NET Framework için gereken en yüksek sürüm `MaxFrameworkVersion` 4.7.1'tir. Bu şablonla oluşturulan bir proje, 4.7.1.NET Framework e kadar olan tüm sürümleri hedefleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablonu şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

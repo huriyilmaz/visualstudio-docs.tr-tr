@@ -1,7 +1,7 @@
 ---
 title: LocationField Öğesi (Visual Studio Proje Şablonları)
 titleSuffix: ''
-description: LocationField öğesini ve Yeni Dosya iletişim kutusunun Konum metin kutusunun proje şablonu için Project, devre dışı bırakılmıştır veya gizlenir olduğunu nasıl belirtir hakkında bilgi edinebilirsiniz.
+description: LocationField öğesini ve Yeni Dosya iletişim kutusunun Konum metin kutusunun proje şablonu için etkin, devre dışı Project veya gizlendikten nasıl emin olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,15 +16,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b0610ab1e24b4f6de2052b45d52882ff7c9e88c2a402d1b7c96e5e0f4a5e4afe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f1ad5263f11cd7e940b641959de1dea393eb98ab
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121290927"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724973"
 ---
-# <a name="locationfield-element-visual-studio-project-templates"></a>LocationField öğesi (Visual Studio proje şablonları)
-Yeni Oturum Açma iletişim kutusundaki **Konum** metin kutusunun **proje şablonu için Project,** devre dışı veya gizli olup olmadığını belirtir.
+# <a name="locationfield-element-visual-studio-project-templates"></a>LocationField öğesi (Visual Studio şablonları)
+Yeni Uygulama iletişim kutusundaki **Konum metin** kutusunun proje şablonu **için Project,** devre dışı veya gizli olup olmadığını belirtir.
 
  \<VSTemplate> \<TemplateData>
  \<LocationField>
@@ -66,7 +66,7 @@ Yeni Oturum Açma iletişim kutusundaki **Konum** metin kutusunun **proje şablo
 
  Yeni **Dizin** iletişim kutusundaki **Konum Project** kutusu, kullanıcıların yeni projelerin kayded olduğu varsayılan dizini değiştirmesini sağlar.
 
- Öğesinde belirtilen değer yalnızca temel proje sistemi tarafından `Location` destek alıyorsa iletişim kutusu tarafından kabul edildi.
+ öğesinde belirtilen `Location` değer yalnızca temel proje sistemi tarafından destek alıyorsa iletişim kutusu tarafından kabul edildi.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, bir şablonun meta verilerini [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] göstermektedir.

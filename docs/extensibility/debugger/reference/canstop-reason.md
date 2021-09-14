@@ -1,5 +1,5 @@
 ---
-description: Bir programın yürütmenin belirli bir noktaya ulaştıktan sonra yürütmeyi durdurup durdurmadığını tespit etmek için kullanılır.
+description: Bir programın yürütmede belirli bir noktaya ulaştıktan sonra yürütmeyi durduranın olup olmadığını belirlemek için kullanılır.
 title: CANSTOP_REASON | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4a9b61c9c77c015071e3661865b93575cb8bbb98
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122145698"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635153"
 ---
 # <a name="canstop_reason"></a>CANSTOP_REASON
-Bir programın yürütmenin belirli bir noktaya ulaştıktan sonra yürütmeyi durdurup durdurmadığını tespit etmek için kullanılır.
+Bir programın yürütmede belirli bir noktaya ulaştıktan sonra yürütmeyi durduranın olup olmadığını belirlemek için kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,17 +49,17 @@ public enum enum_CANSTOP_REASON {
 Verilen programın giriş noktasını belirtir.
 
 `CANSTOP_STEPIN`\
-Bir işleve adımlamayı belirtir.
+Bir işleve adımlama belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-Programın giriş noktasına ulaştıktan sonra veya bir işlev ya da yönteme adımladıktan sonra durmak gerekirse, oturum hata ayıklama Yöneticisi (SDM) ile onaylamak için [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) yöntemine bir bağımsız değişken olarak geçirilir.
+Oturum Hata Ayıklama Yöneticisi'ne (SDM) programın giriş noktasına ulaştıktan sonra veya bir işleve ya da yönteme adımlamanın ardından durmasının uygun olup olduğunu onaylamak için [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md) yöntemine bağımsız değişken olarak geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üst bilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

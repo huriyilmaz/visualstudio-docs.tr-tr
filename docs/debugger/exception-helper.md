@@ -21,11 +21,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b93a717d4a3f22db860f2bbef51bc51e0f8cc85
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122139060"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626493"
 ---
 # <a name="inspect-an-exception-using-the-exception-helper"></a>Özel Durum Yardımcı'sı kullanarak özel durumu inceleme 
 
@@ -48,10 +48,10 @@ Hata ayıklayıcı bir özel durum üzerinde hata ayıklayıcıda kırılırsa, 
 
 
 > [!NOTE]
-> Yönetilen kodda null başvuru analizi için .NET sürüm 4.6.2 gerekir. Null analizi şu anda Universal Windows Platform (UWP) ve diğer .NET Core uygulamaları için desteklenmiyor. Yalnızca herhangi bir Tam Zamanında (JIT) kod iyileştirmesi olmayan kodlarda hata ayıklarken kullanılabilir.
+> Yönetilen kodda null başvuru analizi için .NET sürüm 4.6.2 gerekir. Null analizi şu anda Universal Windows Platform (UWP) ve diğer .NET Core uygulamaları için desteklemektedir. Yalnızca herhangi bir Tam Zamanında (JIT) kod iyileştirmesi olmayan kodlarda hata ayıklarken kullanılabilir.
 
 ## <a name="configure-exception-settings"></a>Özel durum ayarlarını yapılandırma 
-Özel Durum Yardımcısı'nın Özel Durum Bilgileri bölümünden geçerli türde  bir özel durum Ayarlar hata ayıklayıcıyı bozacak şekilde yapılandırabilirsiniz. Hata ayıklayıcı bir özel durum sırasında duraklatıldı ise, gelecekte sızan özel durum türünde hata ayıklamayı devre dışı bırakmak için onay kutusunu kullanabilirsiniz. Bu modülde 30. özel durumu bozmak istemiyorsanız, Özel durum denetimi penceresindeKimlik durumu penceresindeki Şu özel durumdan sızan durumlar altındaki modül adına göre onay **kutusunu işaretleyin** **Ayarlar.** 
+Özel Durum Yardımcısı'nın Özel Durum Bilgileri bölümünden geçerli türde bir özel durum Ayarlar hata **ayıklayıcıyı** bozacak şekilde yapılandırabilirsiniz. Hata ayıklayıcı, bir özel durum sırasında duraklatılırsa, gelecekte sızan özel durum türünde hata ayıklamayı devre dışı bırakmak için onay kutusunu kullanabilirsiniz. Bu modülde **thrown** bu özel durumu bozmak istemiyorsanız, Özel durum denetimi penceresindeKimlik durumu penceresindeki Şu özel durumdan sızan durumlar altındaki modül adına göre onay **kutusunu işaretleyin:** Ayarlar. 
 
 ## <a name="inspect-inner-exceptions"></a>İç özel durumları inceleme 
 Özel durumda herhangi bir iç özel durum varsa ([InnerException),](/dotnet/api/system.exception.innerexception)bunları Özel Durum Yardımcısı'da görüntüabilirsiniz. Birden çok özel durum varsa, çağrı yığınının üzerinde gösterilen sol ve sağ okları kullanarak bunlar arasında gezinebilirsiniz.
@@ -64,4 +64,4 @@ Bir özel durumun Özel Durum Yardımcı olduğu durumlarda, özel durum ilk kez
 ![Yenidenrown özel durumlarını olan özel durum yardımcı](media/debugger-exception-helper-innerexception.png)
 
 ## <a name="share-a-debug-session-with-live-share"></a>Hata ayıklama oturumunu Live Share
-Özel Durum Yardımcı'dan, Oturum [](/visualstudio/liveshare/) Live Share başlat... bağlantısını **kullanarak bir Live Share başlatabilirsiniz.** Oturuma katılarak Live Share özel durum yardımcısını ve diğer hata ayıklama bilgilerini görebilir.
+Özel Durum Yardımcı'dan, Oturum [](/visualstudio/liveshare/) Live Share başlat... bağlantısını kullanarak **bir Live Share başlatabilirsiniz.** Oturuma katılarak Live Share özel durum yardımcısını ve diğer hata ayıklama bilgilerini görebilir.

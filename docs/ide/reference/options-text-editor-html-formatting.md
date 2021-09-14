@@ -12,23 +12,23 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 22e4d986204645e136709efad87e27b5b97289ec0d6042d8bc03cbfbcd9fb9ee
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fd8d7e6bd81e32858f990c70bbcdf0bf00049867
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121271920"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724893"
 ---
 # <a name="options-text-editor-html-web-forms-formatting"></a>Seçenekler, Metin Düzenleyici, HTML (Web Forms), Biçimlendirme
 
-Kod **Düzenleyicisi'nde** kodu biçimlendirmek üzere HTML projesi seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını kullanın. Bu sayfaya erişmek için menü çubuğunda Araçlar Seçenekleri'ni seçin ve ardından Metin  >  Düzenleyicisi   >  **HTML (Web Forms) Biçimlendirme'yi**  >  **genişletin.**
+Kod **Düzenleyicisi'nde** kodu biçimlendirmek üzere HTML projesi seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını kullanın. Bu sayfaya erişmek için menü çubuğunda Araçlar Seçenekleri'ni seçin ve ardından Metin  >  Düzenleyici   >  **HTML (Web Forms) Biçimlendirme'yi**  >  **genişletin.**
 
 ## <a name="capitalization"></a>Büyük harf
 
-Bu seçenekler seçildiğinde, Kaynak görünümü ve XML düzenleyicileri, öğeler ilk oluşturulduğunda ve otomatik biçimlendirme sırasında öğe ve özniteliklerin adlara varsayılan bir büyük/küçük harf biçimi uygulayabilir. Otomatik **Biçimlendirme Uygula** ayarları, otomatik yeniden biçimlendirmenin oluştuğu zamanı belirler.
+Bu seçenekler seçildiğinde, Kaynak görünümü ve XML düzenleyicileri, öğeler ilk oluşturulduğunda ve otomatik biçimlendirme sırasında öğe ve öznitelik adları için varsayılan bir büyük/küçük harf biçimi kullanır. Otomatik **Biçimlendirme Uygula** ayarları, otomatik yeniden biçimlendirmenin oluştuğu zamanı belirler.
 
 > [!WARNING]
-> XML büyük/büyük/büyük harfe duyarlıdır. Varsayılan durum ayarı XML ayrıştırıcılarını etkileyene kadar devam ediyor olabilir.
+> XML büyük/büyük/büyük harfe duyarlıdır. Varsayılan bir servis durumu ayarı XML ayrıştırıcılarını etkiler.
 
 ### <a name="uielement-list"></a>UIElement listesi
 
@@ -45,7 +45,7 @@ Bu seçenekler, Web sunucusu denetimleri için işaretlemenin büyük harfle nas
 
 **İstemci etiketi, İstemci öznitelikleri**
 
-Bu seçenekler, otomatik biçimlendirmenin HTML özniteliklerinin ve özelliklerinin adlarını büyük harf veya küçük harf olarak değiştirip değiştirmeyeceklerini veya girildik şekilde tutarlarını belirtir.
+Bu seçenekler, otomatik biçimlendirmenin HTML özniteliklerinin ve özelliklerinin adlarını büyük harf veya küçük harf olarak değiştirip değiştirmeyeceklerini veya girildiklerinde tutarlarını belirtir.
 
 |Seçenek|Sonuç|
 |---------------------------------|------------------------------|
@@ -82,7 +82,7 @@ Bu seçenekler, Kaynak görünümü düzenleyicisinin otomatik biçimlendirme s�
 
 ## <a name="tag-wrapping"></a>Etiket sarmalama
 
-Bu seçenekler, belirli bir uzunluktan fazla olursa düzenleyicinin etiketleri satırlara dönüştürip kesmeyeceklerini belirler.
+Bu seçenekler, belirli bir uzunluktan fazla olursa düzenleyicinin etiketleri satırlara kırıp kesmeyeceklerini belirler.
 
 ### <a name="uielement-list"></a>UIElement listesi
 

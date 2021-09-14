@@ -1,6 +1,6 @@
 ---
-description: İşlem sınırları arasında belirtilen bir arabirimi elde edin.
-title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Microsoft Docs
+description: İşlem sınırları genelinde belirtilen bir arabirimi edinir.
+title: 'IDebugProviderProgramNode2:: Unmarshaldebuggeeınterface | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a17ef182c3b480ce2fa2809c2258a7509d30b14b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122071064"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725167"
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
-İşlem sınırları arasında belirtilen bir arabirimi elde edin.
+İşlem sınırları genelinde belirtilen bir arabirimi edinir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +45,16 @@ int UnmarshalDebuggeeInterface(
 
 ## <a name="parameters"></a>Parametreler
 `riid`\
-[in] Elde edilen arabirimin GUID'si.
+'ndaki Elde edilecek arabirimin GUID 'ı.
 
 `ppvObject`\
-[out] İstenen arabirimi uygulayan nesneyi döndürür. [C++] Bu, doğrudan istenen arabirim türüne atilebilir. [C#] istenen <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> arabirimi almak için yöntemini kullanın.
+dışı İstenen arabirimi uygulayan nesneyi döndürür. [C++] Bu, doğrudan istenen arabirim türüne dönüşebilir. [C#] <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> istenen arabirimi almak için yöntemini kullanın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, hata ayıklama altyapısı işlem alanı içinde çalıştırıldıklarında ve hata ayıklama yapılan program kendi [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] işlem alanı içinde çalıştırıldıklarında kullanılır.
+ Bu yöntem, hata ayıklama altyapısı işlem alanında çalışırken [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ve hata ayıklamakta olan programın kendi işlem alanında çalıştığı durumlarda kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)

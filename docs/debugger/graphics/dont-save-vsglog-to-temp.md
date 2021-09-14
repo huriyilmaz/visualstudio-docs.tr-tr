@@ -1,5 +1,5 @@
 ---
-description: Grafik günlük dosyasının kullanıcının geçici dosyalar dizinine kaydedip kaydedile olmadığını varlığıyla tanımlar.
+description: Grafik günlük dosyasının kullanıcının geçici dosyalar dizinine kaydedilip kaydedilmediğini kendi varlığına göre tanımlar.
 title: DONT_SAVE_VSGLOG_TO_TEMP | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,14 +11,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 44ffbba52a09c5d2874e51014cec9e1b755c5f32
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154258"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626450"
 ---
 # <a name="dont_save_vsglog_to_temp"></a>DONT_SAVE_VSGLOG_TO_TEMP
-Grafik günlük dosyasının kullanıcının geçici dosyalar dizinine kaydedip kaydedile olmadığını varlığıyla tanımlar.
+Grafik günlük dosyasının kullanıcının geçici dosyalar dizinine kaydedilip kaydedilmediğini kendi varlığına göre tanımlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,15 +27,15 @@ Grafik günlük dosyasının kullanıcının geçici dosyalar dizinine kaydedip 
 ```
 
 ## <a name="value"></a>Değer
- Varlığı veya yokluğuna göre grafik günlük dosyasının kullanıcının geçici dosyalar dizinine kaydedip kaydedilemeyişini belirleyen bir önişlemci simgesi. Bu simge tanımlanmışsa, tarafından tanımlanan dosya adı yakalanan uygulamanın geçerli diziniyle görelidir veya mutlak bir yoldur; aksi takdirde, tarafından tanımlanan dosya adı kullanıcının geçici dosyalar dizinine göredir ve mutlak bir yol `VSG_DEFAULT_RUN_FILENAME` `VSG_DEFAULT_RUN_FILENAME` değildir.
+ Durumu veya devamsızlığı tarafından kullanılan bir ön işlemci sembolü, grafik günlük dosyasının kullanıcının geçici dosyalar dizinine kaydedilip kaydedilmediğini belirler. Bu simge tanımlanmışsa, tarafından tanımlanan dosya adı `VSG_DEFAULT_RUN_FILENAME` yakalanan uygulamanın geçerli dizinine göre veya mutlak bir yoldur; Aksi takdirde, tarafından tanımlanan dosya adı `VSG_DEFAULT_RUN_FILENAME` kullanıcının geçici dosyalar dizinine göredir ve mutlak bir yol olamaz.
 
 ## <a name="remarks"></a>Açıklamalar
- Kullanıcının ayrıcalıklarına bağlı olarak grafik günlüğü dosyası rastgele bir konuma kaydedilemiyor olabilir. Seçtiğiniz konumun kullanıcı tarafından yazıp yazılanamayyabilirsiniz konusunda emin değilseniz grafik günlüklerini kullanıcının geçici dosyalar dizinine veya bilinen başka bir iyi konuma kaydetmeyi tercih edersiniz.
+ Kullanıcının ayrıcalıklarına bağlı olarak, grafik günlük dosyası rastgele bir konuma kaydedilemeyebilir. Seçtiğiniz konumun Kullanıcı tarafından yazılıp yazılamayacağını bilmiyorsanız, grafik günlüklerini kullanıcının geçici dosyalar dizinine veya bilinen ve iyi bir konuma kaydetmeyi tercih etmenizi öneririz.
 
- Grafik günlüğü dosyasının geçici dosyalar dizinine kaydedilene kadar, eklemeden önce `DONT_SAVE_VSGLOG_TO_TEMP` `vsgcapture.h` tanımlanmalıdır.
+ Grafik günlük dosyasının geçici dosyalar dizinine kaydedilmesini engellemek için, ' yi dahil etmeden önce tanımlanması gerekir `DONT_SAVE_VSGLOG_TO_TEMP` `vsgcapture.h` .
 
 ## <a name="example"></a>Örnek
- Bu örnek, grafik günlük dosyasının konak makinede mutlak bir yola nasıl kaydedile bir yolunu gösterir.
+ Bu örnekte, grafik günlük dosyasının ana makinedeki mutlak bir yola nasıl kaydedileceği gösterilmektedir.
 
 ```cpp
 // Define DONT_SAVE_VSGLOG_TO_TEMP and VSG_DEFAULT_RUN_FILENAME before including vsgcapture.h

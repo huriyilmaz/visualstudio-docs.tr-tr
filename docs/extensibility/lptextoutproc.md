@@ -20,11 +20,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: e142922aa91fee7b5fc3d3f816652b6c1dca2bb9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122102355"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724969"
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 
@@ -50,7 +50,7 @@ Görüntü için bir metin dizesi. Bu dize satır başı veya satır besleme ile
 
 mesg_type
 
-İletinin türü. Aşağıdaki tabloda bu parametre için desteklenen değerler listele devam eder.
+İletinin türü. Aşağıdaki tablo, bu parametre için desteklenen değerleri listeler.
 
 |Değer|Açıklama|
 |-----------|-----------------|
@@ -62,7 +62,7 @@ mesg_type
 |`SCC_MSG_BACKGROUND_IS_CANCELLED`|Arka plan işlemi iptal edilecekse IDE'ye sorar: İşlem iptal edildi ise IDE `SCC_MSG_RTN_CANCEL` döndürür; aksi takdirde `SCC_MSG_RTN_OK` döndürür. parametresi, kaynak denetim eklentisi tarafından `display_string` [sağlanan bir SccMsgDataIsCancelled](#LinkSccMsgDataIsCancelled) yapısı olarak verilir.|
 |`SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE`|IDE'ye, sürüm denetiminden alınmadan önce bir dosya hakkında bilgi sağlar. parametresi, `display_string` kaynak denetim eklentisi tarafından sağlanan bir [SccMsgDataOnBeforeGetFile](#LinkSccMsgDataOnBeforeGetFile) yapısı olarak verilir.|
 |`SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE`|IDE'ye, sürüm denetiminden alındıktan sonra dosya hakkında bilgi sağlar. parametresi, `display_string` kaynak denetim eklentisi tarafından sağlanan bir [SccMsgDataOnAfterGetFile](#LinkSccMsgDataOnAfterGetFile) yapısı olarak verilir.|
-|`SCC_MSG_BACKGROUND_ON_MESSAGE`|IDE'ye bir arka plan işlemi için geçerli durumu söyler. parametresi, `display_string` kaynak denetim eklentisi tarafından sağlanan bir [SccMsgDataOnMessage](#LinkSccMsgDataOnMessage) yapısı olarak verilir.|
+|`SCC_MSG_BACKGROUND_ON_MESSAGE`|IDE'ye bir arka plan işlemi için geçerli durumu söyler. parametresi, `display_string` kaynak denetimi eklentisi tarafından sağlanan bir [SccMsgDataOnMessage](#LinkSccMsgDataOnMessage) yapısı olarak verilir.|
 
 ## <a name="return-value"></a>Döndürülen değer
 
@@ -72,7 +72,7 @@ mesg_type
 |SCC_MSG_RTN_CANCEL|Kullanıcı işlemi iptal etmek istiyor.|
 
 ## <a name="example"></a>Örnek
- IDE'nin yirmi dosya adı [ile SccGet'i](../extensibility/sccget-function.md) çağır çağıran bir ad olduğunu varsayalım. Kaynak denetimi eklentisi, get dosyasının ortasında işlemi iptal etmek istiyor. Her dosyayı alan, çağırarak her dosyanın durum bilgilerini iletir ve rapor durumu `lpTextOutProc` `SCC_MSG_DOCANCEL` yoksa bir ileti gönderir. Eklenti herhangi bir zamanda IDE'den dönüş değeri alırsa, daha fazla dosya alınmayacak şekilde alma `SCC_MSG_RTN_CANCEL` işlemini hemen iptal eder.
+ IDE'nin yirmi dosya adı [ile SccGet'i](../extensibility/sccget-function.md) çağırarak çağır olduğunu varsayalım. Kaynak denetimi eklentisi, get dosyasının ortasında işlemi iptal etmek istiyor. Her dosyayı alan, çağırarak her dosyanın durum bilgilerini iletir ve rapor durumu `lpTextOutProc` `SCC_MSG_DOCANCEL` yoksa bir ileti gönderir. Eklenti herhangi bir zamanda IDE'den dönüş değeri alırsa, daha fazla dosya alınmay için alma işlemini hemen `SCC_MSG_RTN_CANCEL` iptal eder.
 
 ## <a name="structures"></a>Yapılar
 
@@ -107,7 +107,7 @@ typedef struct {
 } SccMsgDataOnAfterGetFile;
 ```
 
- Bu yapı iletiyle `SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE` birlikte gönderilir. Belirtilen dosyayı alma sonucundan ve alma işlemi yapılan arka plan işlemi kimliğine iletişim kurmak için kullanılır. Sonuç olarak nelerin ver [getiriLll](../extensibility/sccget-function.md) olduğunu görmek için SccGet için dönüş değerlerine bakın.
+ Bu yapı iletiyle `SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE` birlikte gönderilir. Belirtilen dosyayı alma sonucundan ve alma işlemi yapılan arka plan işlemi kimliğine iletişim kurmak için kullanılır. Sonuç olarak ver neyin [vernebilirsiniz? için SccGet](../extensibility/sccget-function.md) için dönüş değerlerine bakın.
 
 ### <a name="sccmsgdataonmessage"></a><a name="LinkSccMsgDataOnMessage"></a> SccMsgDataOnMessage
 
@@ -119,10 +119,10 @@ typedef struct {
 } SccMsgDataOnMessage;
 ```
 
- Bu yapı iletiyle `SCC_MSG_BACKGROUND_ON_MESSAGE` birlikte gönderilir. Bir arka plan işlemi geçerli durumunu iletişim kurmak için kullanılır. Durum, IDE tarafından görüntülenecek bir dize olarak ifade edildi ve iletinin önem derecesini gösterir ( bir hata iletisi için; uyarı için veya bilgilendirme `bIsError` `TRUE` iletisi `FALSE` için). Durumu gönderen arka plan işlemi kimliği de verilir.
+ Bu yapı iletiyle `SCC_MSG_BACKGROUND_ON_MESSAGE` birlikte gönderilir. Bir arka plan işlemi geçerli durumunu iletişim kurmak için kullanılır. Durum, IDE tarafından görüntülenecek bir dize olarak ifade edildi ve iletinin önem derecesini gösterir ( bir hata iletisi için; uyarı için veya bilgilendirme iletisi `bIsError` `TRUE` `FALSE` için). Durumu gönderen arka plan işlemi kimliği de verilir.
 
 ## <a name="code-example"></a>Kod örneği
- Burada, iletiyi göndermek için çağrının yapısının nasıl atfı olduğunu `LPTEXTOUTPROC` gösteren kısa bir örnek ve ardından ve ardından bir çağrı `SCC_MSG_BACKGROUND_ON_MESSAGE` iletiyi gönderebilirsiniz.
+ Burada iletiyi göndermek için çağrının yapısının nasıl atfı olduğunu `LPTEXTOUTPROC` gösteren kısa bir çağrı örneği ve ardından ve ardından yer `SCC_MSG_BACKGROUND_ON_MESSAGE` alır.
 
 ```cpp
 LONG SendStatusMessage(

@@ -13,11 +13,11 @@ monikerRange: vs-2017
 ms.workload:
 - dotnet
 ms.openlocfilehash: b7c5f57b81899ead03b96fd7d26dbcaf63ffeda6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122136384"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635801"
 ---
 # <a name="collect-net-framework-memory-data-by-using-the-profiler-command-line"></a>Profil .NET Framework kullanarak bellek verilerini toplama
 
@@ -28,7 +28,7 @@ Bu bölümde, komut satırı örnekleme yöntemini kullanarak bir .NET istemcisi
 |Görev|İlgili içerik|
 |----------|---------------------|
 |**Bir uygulama başlatma ve .NET belleği profili oluşturma**|-   [Nasıl kullanılır: Bellek .NET Framework için profil oluşturma ile bir uygulama başlatma](../profiling/how-to-launch-a-stand-alone-dotnet-framework-app-to-collect-memory-data.md)|
-|**Profilleyiciyi bir .NET uygulamasına ekleme**|-   [Nasıl kullanılır: Bellek verilerini toplamak için .NET Framework profili oluşturma uygulamasına ekleme](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md)|
+|**Profilleyiciyi bir .NET uygulamasına ekleme**|-   [Nasıl kullanılır: Bellek verilerini toplamak için profil .NET Framework uygulama ekleme](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-app-to-collect-memory-data.md)|
 |**Bir uygulamayı .NET bellek verilerini toplamak için takip**|-   [Nasıl .NET Framework: Tek başına .NET Framework profil oluşturma bileşeniyle bellek verilerini toplama](../profiling/how-to-instrument-a-dotnet-framework-component-and-collect-memory-data.md)|
 
 ## <a name="related-tasks"></a>İlişkili görevler

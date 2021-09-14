@@ -1,6 +1,6 @@
 ---
-title: Kaynak denetim bilgisini. proj ve. sln dosyalarından kaldır
-description: Kaynak denetimi eklentisi API 'sinde, SCC bilgileri bir MSSCCPRJ depolanır. Proje ve çözüm dosyaları yerine SCC dosyası.
+title: .proj ve .sln dosyalarından kaynak denetimi bilgilerini kaldırma
+description: Kaynak Denetimi Eklentisi API'sinde SCC bilgileri msSCCPRJ içinde depolanır. Proje ve çözüm dosyaları yerine SCC dosyası.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,21 +14,21 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 5a6db057075b57f07a733af146915db92446a077
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122062842"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725006"
 ---
-# <a name="removal-of-source-control-information-from-proj-and-sln-files"></a>Kaynak denetim bilgilerinin. proj ve. sln dosyalarından kaldırılması
+# <a name="removal-of-source-control-information-from-proj-and-sln-files"></a>.proj ve .sln dosyalarından kaynak denetimi bilgilerini kaldırma
 
-Kaynak denetimi eklentisi API 'sinin sürüm 1,2 ' de, SCC bilgileri bir MSSCCPRJ depolanır. SCC dosyası. MSSCCPRJ avantajı. SCC dosyası. proj ve. sln dosyalarında olduğu gibi, SCC bilgisinin kaynak denetimli olmaması olabilir.
+Kaynak Denetimi Eklentisi API'sini 1.2 sürümünde SCC bilgileri MSSCCPRJ'de depolanır. SCC dosyası. MSSCCPRJ'nin avantajı. SCC dosyası, .proj ve .sln dosyalarında olduğu gibi SCC bilgisinin kaynak denetimli olmadığını belirtir.
 
-## <a name="version-12-changes"></a>Sürüm 1,2 değişiklikleri
+## <a name="version-12-changes"></a>Sürüm 1.2 Değişiklikleri
 
- Kaynak denetimi eklentisi API sürüm 1,1 ' i temel alan kaynak denetimi eklentilerinde, kaynak denetimi ile ilgili bilgiler proje (. proj) ve çözüm (. sln) dosyalarında depolanır. Kaynak denetim bilgisinin veritabanı konumu AuxPath tarafından belirtilir ve veritabanı içindeki belirli konum ProjName tarafından belirtilir. Bu davranış, bu işlemlerden herhangi biri sonrasında ProjName genellikle geçersiz olacağından, dal, çatal veya kopyalama işlemlerinden sonra sorunlara yol açabilir.
+ Kaynak Denetimi Eklentisi API'si sürüm 1.1'i temel alan kaynak denetimi eklentilerde, kaynak denetimiyle ilgili bilgiler proje (.proj) ve çözüm (.sln) dosyalarında depolanır. Kaynak denetim bilgisinin veritabanı konumu AuxPath tarafından belirtilir ve veritabanındaki belirli konum ProjName tarafından belirtilir. Bu davranış dal, fork veya kopyalama işlemleri sonrasında sorunlara neden olabilir çünkü ProjName genellikle bu işlemlerden herhangi biri sonrasında geçersiz olur.
 
- Kaynak denetimi eklentisi API sürümü 1,1 ' de, IDE, bir eklentinin MSSCCPRJ tarafından desteklenip desteklenmediğini algılamak için ~ SAK dosyalarını kullandı. Kaynak denetim bilgilerini depolamanın SCC yöntemi. Kaynak denetimi eklentisi API sürümü 1,2, MSSCCPRJ desteğini algılamaya yönelik yeni bir özellik sunar. Bir ~ SAK dosyası kullanmadan SCC dosyası. Daha fazla bilgi için bkz. yok [~ sak Files](../../extensibility/internals/elimination-of-tilde-sak-files.md).
+ Kaynak Denetimi Eklentisi API'si sürüm 1.1'de, IDE~ SAK dosyalarını kullanarak bir eklentinin MSSCCPRJ'yi destekleyeblip desteklemedi. Kaynak denetimi bilgilerini depolamaya ilişkin SCC yöntemi. Kaynak Denetimi Eklentisi API'si sürüm 1.2, MSSCCPRJ desteğini algılamak için yeni bir özellik sağlar. ~SAK dosyası olmadan SCC dosyası. Daha fazla bilgi için [bkz. ~SAK Dosyalarının Ortadan Kaldırılması.](../../extensibility/internals/elimination-of-tilde-sak-files.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,11 +16,11 @@ monikerRange: vs-2017
 ms.workload:
 - aspnet
 ms.openlocfilehash: f11ff21ad7e33008f85262ed489ea7e82ea59100
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122142409"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635841"
 ---
 # <a name="collect-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line"></a>Profil oluşturma komut satırı kullanarak ASP.NET web uygulaması için eşzamanlılık verileri toplama
 Kaynak yönetiminin eşzamanlılık [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları, kaynak musiki verisi toplamaya olanak sağlar.
@@ -29,7 +29,7 @@ Kaynak yönetiminin eşzamanlılık [!INCLUDE[vsprvs](../code-quality/includes/v
 
 |Görev|İlgili İçerik|
 |----------|---------------------|
-|Profilleyiciyi çalışan bir ASP.NET ekleme|-   [Nasıl kullanılır: Eşzamanlılık verileri toplamak ASP.NET profil oluşturma uygulamasına profil oluşturma](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)|
+|Çalışan bir uygulamanın profil ASP.NET ekleme|-   [Nasıl kullanılır: Eşzamanlılık verileri toplamak ASP.NET profil oluşturma uygulamasına profil oluşturma](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)|
 
 ## <a name="reference"></a>Başvuru
 - [Komut satırı profil oluşturma araçları başvurusu](../profiling/command-line-profiling-tools-reference.md)

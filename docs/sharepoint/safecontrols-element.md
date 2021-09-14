@@ -1,6 +1,6 @@
 ---
-title: SafeControls öğesi | Microsoft Docs
-description: bir SharePoint sitesinin aspx sayfasında erişim için güvenli olarak işaretlenmiş bir ASPX denetimleri veya web bölümleri koleksiyonu tutan safecontrols öğesi hakkında bilgi alın.
+title: SafeControls Öğesi | Microsoft Docs
+description: Bir sitenin ASPX sayfasında erişim için güvenli olarak işaretlenmiş ASPX denetimleri veya web bölümleri koleksiyonunu tutan SafeControls SharePoint bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,14 +16,14 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 063da0761f15c1a3b39468a810fd5d3055cece62
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122092793"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635569"
 ---
 # <a name="safecontrols-element"></a>SafeControls öğesi
-  herhangi bir kullanıcının SharePoint sitesindeki herhangi bir aspx sayfasına erişmesi için güvenli olarak belirlenmiş bir aspx denetimleri ve Web Bölümleri koleksiyonu.
+  Herhangi bir kullanıcının Web Bölümleri sitenin aspx sayfasından erişmesi için güvenli olarak belirlenen ASPX denetimleri ve SharePoint koleksiyonu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,26 +43,26 @@ ms.locfileid: "122092793"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[SafeControl](../sharepoint/safecontrol-element.md)|İsteğe bağlı öğe.<br /><br /> tüm kullanıcıların SharePoint sitesindeki herhangi bir aspx sayfasına erişmesi için güvenli olarak belirlenmiş bir aspx denetimi veya Web bölümü temsil eder.|
+|[SafeControl](../sharepoint/safecontrol-element.md)|İsteğe bağlı öğe.<br /><br /> Herhangi bir kullanıcının sitenin herhangi bir ASPX sayfasından erişmesi için güvenli olarak belirlenen bir ASPX SharePoint temsil eder.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ProjectItem](../sharepoint/projectitem-element.md)|bir SharePoint proje öğesini temsil eder. Bu öğe *. spdata* dosyasının gerekli kök öğesi.|
+|[ProjectItem](../sharepoint/projectitem-element.md)|Bir proje SharePoint temsil eder. Bu öğe . spdata dosyasının *gerekli kök öğesi.*|
 
 ## <a name="remarks"></a>Açıklamalar
- Güvenli denetimler hakkında daha fazla bilgi için bkz. [Proje Öğelerinde Paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).
+ Güvenli denetimler hakkında daha fazla bilgi için [bkz. Proje öğelerinde paketleme ve dağıtım bilgileri sağlama.](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
 
 ## <a name="element-information"></a>Öğe bilgileri
 
 |Özellik|Değer|
 |-|-|
-|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
-|**Şema adı**|SharePoint Project öğesi şeması|
-|**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
-|**Boş olabilir**|Hayır|
+|**Ad Alanı**|http: \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
+|**Şema adı**|SharePoint Project Öğe Şeması|
+|**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)
-- [Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [SharePoint öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)
+- [Proje öğelerinde paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)

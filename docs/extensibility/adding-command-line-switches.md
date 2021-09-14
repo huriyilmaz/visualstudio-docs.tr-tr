@@ -17,11 +17,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 539ab9c7a70d1e2ed22c864132048175eebfcda3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122043862"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635257"
 ---
 # <a name="add-command-line-switches"></a>Komut satırı anahtarları Ekle
 *devenv.exe* yürütüldüğünde VSPackage için uygulanan komut satırı anahtarlarını ekleyebilirsiniz. <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute>Anahtarın adını ve özelliklerini bildirmek için kullanın. Bu örnekte, bir bağımsız **değişken içermeyen ve** VSPackage otomatik olarak yüklenen VSPackage adlı VSPackage alt sınıfı Için mySwitch anahtarı eklenir.

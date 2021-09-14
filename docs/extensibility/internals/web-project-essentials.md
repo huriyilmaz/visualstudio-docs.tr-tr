@@ -1,6 +1,6 @@
 ---
 title: Web Project Essentials | Microsoft Docs
-description: Web projelerinin Visual Studio nasıl çalıştığı hakkında iç ayrıntıları öğrenin.
+description: Web projelerinin şirket içinde nasıl çalışmalarına ilişkin iç ayrıntıları Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,51 +14,51 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 54888223ec789babd4af15c6b675a138bdb81520
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122042016"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724985"
 ---
 # <a name="web-project-essentials"></a>Web Projesi Temel Bileşenleri
-Web projeleri Web uygulamaları oluşturur. Web projesini, akıllı Web sayfaları olan bir Web uygulaması oluşturmak için kullanabilirsiniz. Akıllı bir Web sayfasında, Web sayfasını istek üzerine işleyen sunucu tarafı kodu vardır.
+Web projeleri Web uygulamaları oluşturun. Akıllı Web sayfalarına sahip bir Web uygulaması oluşturmak için bir Web projesi kullanabilirsiniz. Akıllı Bir Web sayfasında, Web sayfasını isteğe bağlı olarak işleyici sunucu tarafı kodu vardır.
 
- Veya gibi geleneksel programlama dillerini kullanarak, [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] bir kullanıcıdan bilgi toplamak ve işlemek, bir veritabanında depolamak ve bu şekilde devam etmek Için akıllı Web sayfaları oluşturabilirsiniz.
+ veya gibi geleneksel programlama dillerini kullanarak, bir kullanıcıdan bilgi toplamak ve işlemek, bunu bir veritabanında depolamak ve bu gibi işlemleri yapmak için akıllı [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] Web sayfaları oluşturabilirsiniz.
 
-- Arka plan kod modeli, bağımlı kaynak kodu dosyalarını. aspx veya. asmx uzantılı web sayfalarıyla ilişkilendirir. Örneğin, Hello. aspx bağımlı kaynak kodu dosyası Hello. aspx. cs olabilir.
+- Arka alınan kod modeli, bağımlı kaynak kod dosyalarını .aspx veya .asmx dosya uzantısına sahip Web sayfalarıyla ilişkilendirır. Örneğin, hello.aspx hello.aspx.cs bağımlı kaynak kod dosyasına sahip olabilir.
 
-- Akıllı bir Web sayfasıyla ilişkili sunucu tarafı kodu, Web sitesi/bin klasöründe bulunan yürütülebilir bir dosyaya derlenir.
+- Bir akıllı Web sayfasıyla ilişkili sunucu tarafı kodu, Web sitesi /bin klasöründe bulunan yürütülebilir bir dosyaya derlenmiş.
 
-- Belirli bir Web sayfasıyla ilişkilendirilmemiş yardımcı sınıflar gibi ek kaynak kodu dosyaları Web sitesi/App_Code klasöründe bulunur.
+- Belirli bir Web sayfasıyla ilişkilendirilen yardımcı sınıflar gibi ek kaynak kodu dosyaları Web sitesi /App_Code klasöründe bulunur.
 
-  - Web sitesi projesi (WSP) her akıllı Web sayfası için bir yürütülebilir dosya oluşturur. Ek yürütülebilir dosyalar/App_Code klasöründeki herhangi bir kaynak kod dosyasından oluşturulur.
+  - Web sitesi projesi (WSP), her akıllı Web sayfası için bir yürütülebilir dosya üretir. /App_Code klasöründeki tüm kaynak kod dosyalarından ek yürütülebilir dosyalar oluşturulur.
 
-  - Web uygulaması projesi (WAP), tüm akıllı Web sayfaları için kodu ve/App_Code klasöründeki tüm kaynak dosyaları birleştiren tek bir yürütülebilir dosya oluşturur.
+  - Web uygulaması projesi (WAP), tüm akıllı Web sayfalarının kodunu ve /App_Code klasöründeki tüm kaynak dosyaları birleştiren tek bir yürütülebilir dosya oluşturur.
 
-- Web projesinin çözüm dosyası, Web sitesinden ayrı olarak bulunur. varsayılan olarak, çözüm dosyaları \documents dizininde bulunur ve \\ *hesabınızı* \\ *\<Visual Studio ####>* \belgeler\projects \ \\ *web sitesini* Ayarlar.
+- Bir Web projesinin çözüm dosyası, Web sitesinden ayrı olarak bulunur. Varsayılan olarak, çözüm dosyaları \Documents konumunda bulunur ve \\ *YourAccount*\My Documents \\ *\<Visual Studio ####>* \Projects \\ *YourWebSite* dizininde Ayarlar.
 
   > [!NOTE]
-  > Çözüm dosyasını Web sitesiyle birlikte tutmak istiyorsanız, dosyayı buraya taşıyın ve yeniden açın.
+  > Çözüm dosyasını Web sitesinde tutmak için buraya taşımanız ve yeniden açmanız gerekir.
 
-- Visual Studio çözüm dosyası olmayan bir Web sitesi açarsanız, bu dosya için otomatik olarak yeni bir çözüm dosyası oluşturulur.
+- Bir web sitesinde çözüm dosyası Visual Studio bir Web sitesi açarsanız, bu site için otomatik olarak yeni bir çözüm dosyası oluşturulur.
 
-- Web projelerinin proje dosyaları yok. Project bilgiler çözüm dosyasında, web.config dosyasında ve başka bir yerde depolanır.
+- Web projelerinin proje dosyası yoktur. Project bilgileri çözüm dosyasında, web.config başka bir yerde depolanır.
 
-- Web projesine genel özellikler eklemek, otomatik olarak Web projesi çözüm klasöründe bir depolama dosyası oluşturur.
+- Web projesine genel özellikler eklemek, Web projesi çözüm klasöründe otomatik olarak bir depolama dosyası oluşturur.
 
-- Akıllı bir Web sayfası, Page yönergesini veya etiketini kullanarak sunucu tarafı programlama diliyle ilişkilendirilebilir \<script runat="server"> .
+- Akıllı Web sayfası, Page yönergesi veya etiketi kullanılarak sunucu tarafı programlama diliyle \<script runat="server"> ilişkilendirilebilirsiniz.
 
-- Ayrıca, Web sayfalarında herhangi bir komut dosyası dilinde yazılmış sayıda istemci tarafı betik bloğu bulunabilir.
+- Ayrıca, Web sayfaları herhangi bir betik dilinde yazılmış herhangi bir sayıda istemci tarafı betik bloğuna sahip olabilir.
 
-- Proje ve öğe şablonları ve projeye kayıt eklenerek bir Web sitesi proje sistemi uygulanır [!INCLUDE[vwprvw](../../extensibility/internals/includes/vwprvw_md.md)] .
+- Bir Web sitesi proje sistemi, proje ve öğe şablonları eklip projeye kayıt [!INCLUDE[vwprvw](../../extensibility/internals/includes/vwprvw_md.md)] uygulanarak uygulanır.
 
-- WAP sistemi, proje türü olarak da adlandırılan bir proje alt türü olarak uygulanır. [!INCLUDE[vwprvw](../../extensibility/internals/includes/vwprvw_md.md)]WAP sistemi oluşturmak için proje WAP alt türü tarafından düzlüyor. proje alt türleri hakkında daha fazla bilgi için bkz. [Project alt türleri](../../extensibility/internals/project-subtypes.md).
+- WAP sistemi, proje türü olarak da adlandırılan bir proje alt türü olarak uygulanır. Proje, [!INCLUDE[vwprvw](../../extensibility/internals/includes/vwprvw_md.md)] WAP sistemi oluşturmak için WAP alt türü tarafından 100'e sahiptir. Proje alt türleri hakkında daha fazla bilgi için [bkz. Project Alt Türleri.](../../extensibility/internals/project-subtypes.md)
 
-- Bir akıllı Web sayfası, HTML 'yi sunucu tarafı programlama diliyle birleştirir. Sunucu tarafı diline, içerilen dil denir. Kapsanan bir dili desteklemek için, Web projesi sisteminin arabirimlerin ailesini uygulaması gerekir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> .
+- Akıllı Web sayfası, HTML'yi sunucu tarafı programlama diliyle birleştirir. Sunucu tarafı dili, içerdiği dil olarak adlandırılan dildir. Bir içerdiği dili desteklemek için Web proje sisteminin arabirim ailesini <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> uygulaması gerekir.
 
-  - Bir düzenleyicide bulunan dili desteklemek için, HTML dil hizmetinin içerilen dil kodunu içerilen dil hizmetine görüntülemesi gerekir.
+  - Bir düzenleyicide bulunan dili desteklemek için HTML dil hizmetinin, içerdiği dil kodunu görüntülemeyi, içerdiği dil hizmetine ertelemesi gerekir.
 
-  - Hata işaretçileri (kırmızı dalgalı Glar), her zaman kod düzenleyicisinin birincil arabelleğinde oluşturulmalıdır.
+  - Kod düzenleyicisinin birincil arabelleğinde her zaman hata işaretçileri (kırmızı çizgi) oluşturularak oluşturulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Web Projeleri](../../extensibility/internals/web-projects.md)

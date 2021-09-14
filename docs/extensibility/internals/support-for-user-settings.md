@@ -1,6 +1,6 @@
 ---
-title: kullanıcı Ayarlar için destek | Microsoft Docs
-description: Visual Studio SDK 'daki ayarlar apı 'lerini kullanarak ayarlar kategorilerinin kalıcılığını nasıl etkinleştireceğinizi öğrenin.
+title: Kullanıcı Desteği Ayarlar | Microsoft Docs
+description: Visual Studio SDK'sı'nın ayarlar API'lerini kullanarak ayarlar kategorilerinin kalıcı Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,47 +16,47 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: d317809bde56132f990c11e641ae151fcbac8eff
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122086514"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626066"
 ---
 # <a name="support-for-user-settings"></a>Kullanıcı Ayarları için Destek
-bir vspackage, bir kullanıcı **araçlar** menüsünde **İçeri/Dışarı Aktarma Ayarlar** komutunu seçtiğinde devam eden durum değişkenlerinin grupları olan bir veya daha fazla ayar kategorisi tanımlayabilir. Bu kalıcılığı etkinleştirmek için içindeki ayarlar API 'Lerini kullanın [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .
+VSPackage bir veya daha fazla ayar kategorisi tanımlayabilir. Bu kategoriler, kullanıcı  Araçlar menüsündeki İçeri/Dışarı Aktarma Ayarlar değişkenlerini seçtiklerinde kalıcı olan durum **değişkeni gruplarıdır.** Bu kalıcılığı etkinleştirmek için içinde ayarlar API'lerini [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] kullanırsiniz.
 
- özel Ayarlar noktası ve guıd olarak adlandırılan bir kayıt defteri girişi vspackage 'ın ayarlar kategorisini tanımlar. vspackage, her biri özel bir Ayarlar noktası tarafından tanımlanan birden çok ayarlar kategorisini destekleyebilir.
+ Özel Ayarlar Noktası olarak adlandırılan bir kayıt defteri girişi ve GUID, VSPackage'ın ayarlar kategorisini tanımlar. VSPackage, her biri özel bir Ayarlar Noktası tarafından tanımlanan birden çok ayar kategorilerini destekleyene.
 
-- birlikte çalışma derlemelerini temel alan ayarların uygulamaları ( <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings> arabirimini kullanarak), kayıt defterini düzenleyerek veya bir kaydedici betiği (. rgs dosyası) kullanarak özel Ayarlar noktası oluşturmanız gerekir. Daha fazla bilgi için bkz. [kaydedici betikleri oluşturma](/cpp/atl/creating-registrar-scripts).
+- Birlikte çalışma derlemelerini (arabirimi kullanarak) temel alan ayarların uygulamaları, kayıt defterini düzenleyerek veya bir Kayıt Şirketi betiği (.rgs dosyası) kullanarak Özel Ayarlar <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings> Noktası oluşturmalı. Daha fazla bilgi için [bkz. Kayıt Şirketi Betikleri Oluşturma.](/cpp/atl/creating-registrar-scripts)
 
-- yönetilen paket çerçevesini (mpf) kullanan kod <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> , her özel Ayarlar noktası için vspackage öğesine ekleyerek özel Ayarlar noktaları oluşturmaktır.
+- Yönetilen Paket Çerçevesi (MPF) kullanan kod, her özel Ayarlar Noktası için VSPackage'a bir ekerek Özel Ayarlar <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> Noktası oluşturmalı.
 
-     tek bir vspackage birkaç özel Ayarlar noktasını destekliyorsa, her özel Ayarlar noktası ayrı bir sınıf tarafından uygulanır ve her biri sınıfının benzersiz bir örneği tarafından kaydedilir <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> . Sonuç olarak, sınıf uygulayan bir ayar birden fazla ayar kategorisini destekleyebilir.
+     Tek bir VSPackage birkaç Özel Ayarlar Noktasını destekliyorsa, her özel Ayarlar Noktası ayrı bir sınıf tarafından uygulanır ve her biri sınıfın benzersiz bir örneği tarafından <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> kaydedilir. Sonuç olarak, sınıf uygulayan bir ayar birden fazla ayar kategorisini destekleyene.
 
-## <a name="custom-settings-point-registry-entry-details"></a>özel Ayarlar noktası kayıt defteri girdisi ayrıntıları
- özel Ayarlar noktaları, aşağıdaki konumdaki bir kayıt defteri girişinde oluşturulur: hklm\software\microsoft\visualstudio \\ *\<Version>* \usersettings \\ `<CSPName>` , burada `<CSPName>` vspackage 'ın desteklediği özel Ayarlar noktasının adı ve *\<Version>* sürümüdür [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . örneğin, 8,0.
+## <a name="custom-settings-point-registry-entry-details"></a>Özel Ayarlar Noktası Kayıt Defteri Giriş Ayrıntıları
+ Özel Ayarlar Noktaları şu konumdaki bir kayıt defteri girdisinde oluşturulur: HKLM\Software\Microsoft\VisualStudio \UserSettings , burada VSPackage'ın desteklediği Özel Ayarlar Noktasının adıdır ve sürümüdür, örneğin \\ *\<Version>* \\ `<CSPName>` `<CSPName>` *\<Version>* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 8.0.
 
 > [!NOTE]
-> \\ *\<Version>* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik GELIŞTIRME ortamı (ıde) başlatıldığında HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudiokök yolu alternatif bir kökle geçersiz kılınabilir. Daha fazla bilgi için bkz. [komut satırı anahtarları](../../extensibility/command-line-switches-visual-studio-sdk.md).
+> Tümleşik geliştirme ortamı (IDE) HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudiokök yolu alternatif bir \\ *\<Version>* [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kökle geçersiz kılınabilir. Daha fazla bilgi için [bkz. Komut Satırı Anahtarları.](../../extensibility/command-line-switches-visual-studio-sdk.md)
 
- Kayıt defteri girdisinin yapısı aşağıda gösterilmektedir:
+ Kayıt defteri girişinin yapısı aşağıda gösterilmiştir:
 
- HKLM\Software\Microsoft\VisualStudio \\ *\<Version>* \Usersettings\
+ HKLM\Software\Microsoft\VisualStudio \\ *\<Version>* \UserSettings\
 
- `<CSPName`>= s ' #12345 '
+ `<CSPName`>= '#12345'
 
- Paket = ' {XXXXXX XXXX XXXX XXXX XXXXXXXXX} '
+ Paket = '{XXXXXX XXXX XXXX XXXX XXXXXXXXX}'
 
- Kategori = ' {YYYYYY YYYY yyyy YYYY YYYYYYYYY} '
+ Kategori = '{YYYYY YYYY YYYY YYYYYYYY}'
 
- ResourcePackage = ' {ZZZZZZ ZZZZ ZZZZ ZZZZ ZZZZZZZZZ} '
+ ResourcePackage = '{ZZZZZZ ZZ ZZ ZZ ZZZZ ZZZZZZZ}'
 
  AlternateParent = CategoryName
 
-| Ad | Tür | Veriler | Açıklama |
+| Ad | Tür | Veriler | Description |
 |-----------------|--------| - | - |
-| (Varsayılan) | REG_SZ | özel Ayarlar noktasının adı | anahtarın adı `<CSPName`>, özel Ayarlar noktasının yerelleştirilmemiş adıdır.<br /><br /> MPF tabanlı uygulamalar için, anahtarın adı, `categoryName` `objectName` oluşturucunun ve bağımsız değişkenlerinin içine birleştirilerek elde edilir <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> `categoryName_objectName` .<br /><br /> Anahtar boş olabilir veya bir uydu DLL içindeki yerelleştirilmiş dizeye başvuru KIMLIĞINI içerebilir. Bu değer, `objectNameResourceID` bağımsız değişkenden <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> oluşturucuya alınır. |
-| Paket | REG_SZ | GUID | özel Ayarlar noktasını uygulayan vspackage guıd 'i.<br /><br /> MPF tabanlı uygulamalar <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> sınıfını kullanarak, `objectType` <xref:System.Type> Bu değeri elde etmek Için VSPackage 'ın ve Reflection içeren bağımsız değişkenini kullanın. |
-| Kategori | REG_SZ | GUID | Ayarlar kategorisini tanımlayan GUID.<br /><br /> Birlikte çalışma derlemelerini temel alan uygulamalar için bu değer, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 'nin ve yöntemlerine geçirdiği rastgele seçilmiş BIR GUID olabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings.ExportSettings%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings.ImportSettings%2A> . Bu iki yöntemin tüm uygulamaları GUID bağımsız değişkenlerini doğrulamalıdır.<br /><br /> MPF tabanlı uygulamalar için, bu GUID, <xref:System.Type> Ayarlar mekanizmasını uygulayan sınıf tarafından alınır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
-| ResourcePackage | REG_SZ | GUID | İsteğe bağlı.<br /><br /> VSPackage uygulama bunları sağlayamadıysanız, yerelleştirilmiş dizeleri içeren uydu DLL yolu.<br /><br /> MPF doğru kaynak VSPackage 'ı almak için yansıma kullanır, bu nedenle <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> sınıf bu bağımsız değişkeni belirtmiyor. |
-| AlternateParent | REG_SZ | bu özel Ayarlar noktasını içeren araçlar seçenekler sayfasının altındaki klasörün adı. | İsteğe bağlı.<br /><br /> Bu değeri yalnızca bir ayar uygulamasının, durumu kaydetmek için Otomasyon modelindeki mekanizmadan değil, Kalıcılık mekanizmasını kullanan **araç seçenekleri** sayfalarını desteklemesi gerekir [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .<br /><br /> Bu durumlarda, AlternateParent anahtarındaki değer, `topic` `topic.sub-topic` belirli bir **araçları seçenekler** sayfasını tanımlamak için kullanılan dizenin bölümüdür. Örneğin, **araçları seçenekler** sayfasında `"TextEditor.Basic"` AlternateParent değeri olacaktır `"TextEditor"` .<br /><br /> <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>özel Ayarlar noktası oluşturduğunda, kategori adı ile aynı olur. |
+| (Varsayılan) | REG_SZ | Özel Ayarlar Noktası adı | Anahtarın adı olan>, Özel Ayarlar `<CSPName` Noktası'nın yerel olmayan adıdır.<br /><br /> MPF'yi temel alan uygulamalar için anahtarın adı, oluşturucus un ve bağımsız değişkenleri `categoryName` `objectName` ile <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> birleştirerek elde `categoryName_objectName` edilir.<br /><br /> Anahtar boş olabilir veya bir uydu DLL'deki yerelleştirilmiş dizenin başvuru kimliğini içerebilir. Bu değer, bağımsız değişkenden `objectNameResourceID` oluşturucuya <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> elde edilir. |
+| Paket | REG_SZ | GUID | Özel Ayarlar Noktası uygulayan VSPackage GUID'i.<br /><br /> sınıfını kullanarak MPF'yi temel alan uygulamalar, bu değeri elde etmek için VSPackage'ın ve yansımanın bulunduğu oluşturucu <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> `objectType` bağımsız <xref:System.Type> değişkenlerini kullanır. |
+| Kategori | REG_SZ | GUID | Ayarlar kategorisini tanımlayan GUID.<br /><br /> Birlikte çalışma derlemelerini temel alan uygulamalar için, bu değer IDE'nin ve yöntemlerine geçtiği rastgele seçilen bir GUID [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings.ExportSettings%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserSettings.ImportSettings%2A> olabilir. Bu iki yöntemin tüm uygulamaları GUID bağımsız değişkenlerini doğrulamalı.<br /><br /> MPF'yi temel alan uygulamalar için bu GUID, ayarlar <xref:System.Type> mekanizmasını uygulayan sınıfının tarafından [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] elde edilir. |
+| ResourcePackage | REG_SZ | GUID | İsteğe bağlı.<br /><br /> Uygulama VSPackage tarafından yoksa, yerelleştirilmiş dizeleri içeren uydu DLL'nin yolu.<br /><br /> MPF, doğru kaynak VSPackage'ını almak için yansıma kullanır, bu nedenle <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> sınıf bu bağımsız değişkeni ayarlamaz. |
+| AlternateParent | REG_SZ | Bu Özel Uygulama Noktası'nın bulunduğu Araçlar Seçenekleri sayfasının altındaki klasörün Ayarlar. | İsteğe bağlı.<br /><br /> Bu değeri yalnızca ayarlar uygulaması,  durumu kaydetmek için otomasyon modelinde kullanılan mekanizma yerine içinde kalıcılık mekanizmasını kullanan Araçlar Seçenekleri [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] sayfalarını destekliyorsa ayarlayabilirsiniz.<br /><br /> Bu durumlarda AlternateParent anahtarında yer alan değer, belirli `topic` `topic.sub-topic` **ToolsOptions** sayfasını tanımlamak için kullanılan dizenin bölümü olur. Örneğin **AraçlarSeçenekler sayfasında** `"TextEditor.Basic"` AlternateParent değeri `"TextEditor"` olur.<br /><br /> Özel <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> Uygulama Noktası Ayarlar, kategori adıyla aynıdır. |

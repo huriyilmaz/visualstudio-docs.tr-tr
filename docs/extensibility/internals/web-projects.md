@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: da99b9cbe43d51df0a010e618038240c148a207f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122152360"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724981"
 ---
 # <a name="web-projects"></a>Web Projeleri
 Web proje sistemi, Web projeleri oluşturan bir proje sistemidir. Web projeleri Web uygulamaları oluşturur. Bir Web sayfasını, veya gibi geleneksel programlama dilleri kullanarak, [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] bir kullanıcıdan bilgi toplamak ve işlemek, bir veritabanında depolamak ve benzeri bir şekilde programlayabilirsiniz. İlişkili koda sahip Web sayfalarına akıllı Web sayfaları denir.

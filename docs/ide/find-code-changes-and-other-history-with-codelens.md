@@ -13,11 +13,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 54054e39a9211bf63d6c187a250a47dcb1ed751c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122094535"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625922"
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens ile kod değişikliklerini ve diğer geçmişi bulma
 
@@ -183,179 +183,179 @@ Değişikliklerin ne zaman birleştirildiğini görebilirsiniz, böylece dalın�
 |![CodeLens: eş dalı simgesini değiştirme](../ide/media/codelensbranchpeericon.png)|Bir eş dalı|
 |![CodeLens: daldan uzağa geçiş simgesi](../ide/media/codelensbranchfurtherawayicon.png)|Üst, alt veya eşten daha fazla bir dal|
 |![CodeLens: üst simge ile birleştirme](../ide/media/codelensbranchmergefromparenticon.png)|Üst daldan alt dala birleştirme|
-|![CodeLens: alt daldan birleştirme simgesi](../ide/media/codelensbranchmergefromchildicon.png)|Alt dalından üst dala birleştirme|
-|![CodeLens: ilişkisiz daldan birleştirme simgesi](../ide/media/codelensbranchmergefromunrelatedicon.png)|İlişkisiz daldan birleştirme (baseless Merge)|
+|![CodeLens: Alt daldan birleştir simgesi](../ide/media/codelensbranchmergefromchildicon.png)|Alt daldan üst dala birleştirme|
+|![CodeLens: Ilgisiz daldan birleştirme simgesi](../ide/media/codelensbranchmergefromunrelatedicon.png)|Ilgisiz daldan birleştirme (temelsiz birleştirme)|
 
 ## <a name="linked-work-items"></a>Bağlantılı iş öğeleri
 
-**İş öğeleri** göstergesini seçerek veya **alt** 8 tuşlarına basarak bağlantılı iş öğelerini bulun + .
+İş öğeleri göstergesini seçerek veya Alt 8 tuşuna basarak bağlı **iş** öğelerini  + **bulun.**
 
-![CodeLens-belirli bir kod için iş öğelerini bul](../ide/media/codelens-work-items.png)
+![CodeLens - Belirli bir kod için iş öğelerini bulma](../ide/media/codelens-work-items.png)
 
-## <a name="linked-code-reviews"></a>Bağlantılı kod İncelemeleri
+## <a name="linked-code-reviews"></a>Bağlantılı kod incelemeleri
 
-**İncelemeler** göstergesini seçerek bağlantılı kod İncelemeleri bulun. Klavyeyi kullanmak için, **alt** tuşunu basılı tutarak gösterge seçeneklerinde gezinmek için **sol ok** veya **sağ ok** tuşuna basın.
+İnceleme göstergesini seçerek bağlı kod **incelemelerini** bulun. Klavyeyi kullanmak için Alt tuşunu **basılı** tutun ve ardından Gösterge **seçeneklerine gitmek için** Sol ok **veya** Sağ ok tuşlarına basın.
 
-![CodeLens-kod inceleme isteklerini görüntüle](../ide/media/codelens-code-reviews.png)
+![CodeLens - Kod inceleme isteklerini görüntüleme](../ide/media/codelens-code-reviews.png)
 
 ## <a name="linked-bugs"></a>Bağlantılı hatalar
 
-**Hata** göstergesini seçerek veya **alt** 7 tuşlarına basarak bağlantılı hataları bulun + .
+Hata göstergesini seçerek veya **Alt** 7 **tuşuna** basarak bağlantılı + **hataları bulun.**
 
-![CodeLens-değişiklik kümelerine bağlı hataları bul](../ide/media/codelens-bugs-changesets.png)
+![CodeLens - Değişiklik kümeleri ile bağlantılı hataları bulma](../ide/media/codelens-bugs-changesets.png)
 
-## <a name="contact-the-owner-of-an-item"></a>Bir öğenin sahibine başvurun
+## <a name="contact-the-owner-of-an-item"></a>Bir öğenin sahibine ulaşın
 
-**Yazarların** göstergesini seçerek veya **alt** 5 tuşlarına basarak bir öğenin yazarını bulun + .
+Yazar göstergesini seçerek veya Alt 5 **tuşuna** basarak bir **öğenin** + **yazarını bulun.**
 
-![Bir öğenin sahibine başvurun](../ide/media/codelens-contact-item-owner.png)
+![Bir öğenin sahibine ulaşın](../ide/media/codelens-contact-item-owner.png)
 
-İletişim seçeneklerini görmek için bir öğenin kısayol menüsünü açın. Lync veya Skype Kurumsal yüklüyse, şu seçenekleri görürsünüz:
+Kişi seçeneklerini görmek için bir öğenin kısayol menüsünü açın. Lync veya Skype Kurumsal yüklüyse şu seçenekleri görüyorsanız:
 
-![Öğe için iletişim seçenekleri](../ide/media/codelens-item-contact-menu.png)
+![Bir öğe için iletişim seçenekleri](../ide/media/codelens-item-contact-menu.png)
 
 ## <a name="associated-unit-tests"></a>İlişkili birim testleri
 
-C# veya Visual Basic kodunuz için var olan birim testlerini **Test gezgini**'ni açmadan keşfedebilirsiniz.
+Test Gezgini'ni açmadan C# veya Visual Basic birim **testlerini keşfedebilirsiniz.**
 
-1. İlişkili [birim test koduna](../test/unit-test-your-code.md)sahip uygulama koduna gidin.
+1. İlişkili birim testi kodunun olduğu [uygulama koduna gidin.](../test/unit-test-your-code.md)
 
-2. Henüz yapmadıysanız CodeLens test göstergelerini yüklemek için uygulamanızı derleyin.
+2. Henüz oluşturmadısanız, CodeLens test göstergelerini yüklemek için uygulamanızı derlemeniz gerekir.
 
-3. Alt 3 tuşlarına basarak kodun testlerini gözden geçirin  + .
+3. Alt 3 tuşuna basarak **kodun** + **testlerini gözden geçirme.**
 
-     ![CodeLens-kod düzenleyicisinde test durumu seçme](../ide/media/codelens-choose-test-indicator.png)
+     ![CodeLens - Kod düzenleyicisinde test durumunu seçme](../ide/media/codelens-choose-test-indicator.png)
 
-4. Bir uyarı simgesi görürseniz ![uyarı simgesi](../ide/media/codelenstestwarningicon.png), testler henüz çalıştırılmadı, bu nedenle onları çalıştırın.
+4. Uyarı simgesi görüyorsanız ![uyarı simgesi](../ide/media/codelenstestwarningicon.png), testleri henüz çalıştırmadı, bu nedenle çalıştırın.
 
-     ![CodeLens-görünüm birimi testleri henüz çalıştırılmadı](../ide/media/codelens-tests-not-yet-run.png)
+     ![CodeLens - Birim testlerini görüntüleme henüz çalıştırlanmadı](../ide/media/codelens-tests-not-yet-run.png)
 
-5. Bir testin tanımını gözden geçirmek için CodeLens gösterge penceresindeki test öğesine çift tıklayarak kod dosyasını düzenleyicide açın.
+5. Bir testin tanımını gözden geçirmek için CodeLens gösterge penceresinde test öğesini çift tıklatın ve kod dosyasını düzenleyicide açın.
 
-     ![CodeLens-birim testi tanımına git](../ide/media/codelens-unit-test-definition.png)
+     ![CodeLens - Birim testi tanımına gidin](../ide/media/codelens-unit-test-definition.png)
 
-6. Testin sonuçlarını gözden geçirmek için, test durumu göstergesini seçin ( ![ test başarısız simgesi ](../ide/media/codelenstestfailedicon.png) veya ![ Test geçilen simge ](../ide/media/codelenstestpassedicon.png) ) veya **alt** + **1**' e basın.
+6. Testin sonuçlarını gözden geçirmek için test durumu göstergesini (test başarısız oldu simgesi veya test başarılı simgesi ) seçin ![ ](../ide/media/codelenstestfailedicon.png) veya Alt ![ ](../ide/media/codelenstestpassedicon.png)  + **1'e basın.**
 
-     ![CodeLens-bkz. birim test sonucu](../ide/media/codelens-unit-test-result.png)
+     ![CodeLens - Birim testi sonucuna bakın](../ide/media/codelens-unit-test-result.png)
 
-7. Bu testi değiştiren, bu testi değiştiren veya bu testte kaç tane değişiklik yapıldığını görmek için [kodunuzun geçmişini](#find-changes-in-your-code) ve bağlantılı öğelerini bulun.
+7. Bu testi kaç kişinin değiştirdiğini, bu testi kimin değiştirdiğini veya bu testte kaç değişiklik yapılmış olduğunu görmek için kodunuzun geçmişini [ve bağlantılı](#find-changes-in-your-code) öğelerini bulun.
 
 ## <a name="keyboard-shortcuts"></a>Klavye kısayolları
 
-Göstergeleri seçmek için klavyeyi kullanmak üzere, ilgili sayı tuşlarını göstermek için **alt** tuşuna basın ve basılı tutun, ardından seçmek istediğiniz göstergeye karşılık gelen sayıya basın.
+Klavyeyi kullanarak göstergeleri seçmek için **Alt** tuşuna basın ve basılı tutun. İlgili sayı tuşlarını görüntülemek için, ardından seçmek istediğiniz göstergeye karşılık gelen sayıya basın.
 
 ![Klavye erişim numaraları](../ide/media/codelens-alt-keys.png)
 
 > [!NOTE]
-> **İncelemeler** göstergesini seçmek için, sol ve sağ ok tuşlarını kullanırken gezinmek için **alt** tuşunu basılı tutun.
+> İnceleme göstergesini **seçmek** için sol ve **sağ** ok tuşlarını kullanarak Alt tuşunu basılı tutun.
 
 ## <a name="q--a"></a>Soru-Cevap
 
-### <a name="q-how-do-i-turn-codelens-off-or-on-or-choose-which-indicators-to-see"></a>S: CodeLens 'i kapatmak veya açmak Nasıl yaparım? veya hangi göstergeleri görmek istediğinizi seçin.
+### <a name="q-how-do-i-turn-codelens-off-or-on-or-choose-which-indicators-to-see"></a>S: Nasıl yaparım? CodeLens'i kapatıyor veya açıyor veya hangi göstergelerin göreceğini seçiyor?
 
-Y **:**  Başvurular göstergesi dışında, göstergeleri kapalı veya açık olarak açabilirsiniz. **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **tüm diller**  >  **CodeLens** bölümüne gidin.
+**A:**  Başvuru göstergesi dışında göstergeleri kapatarak veya açarak açabileceksiniz. Araçlar Seçenekler **Metin**  >    >  **Düzenleyici Tüm Diller**  >  **CodeLens**  >  **'e gidin.**
 
-Göstergeler açıldığında, göstergelerden CodeLens seçeneklerini de açabilirsiniz.
+Göstergeler açık olduğunda, göstergelerden CodeLens seçeneklerini de açabilirsiniz.
 
-![CodeLens-göstergeleri kapatma veya açma](../ide/media/codelensturnoffonindicatorsfromcode.png)
+![CodeLens - Göstergeleri kapatma veya açma](../ide/media/codelensturnoffonindicatorsfromcode.png)
 
-Düzenleyici penceresinin alt köşeli ayraç simgelerini kullanarak CodeLens dosya düzeyi göstergelerini açın ve kapatın.
+Düzenleyici penceresinin altındaki köşeli çift ayraç simgelerini kullanarak CodeLens dosya düzeyi göstergelerini açın ve kapatın.
 
 ![Dosya düzeyi göstergelerini açma ve kapatma](../ide/media/codelensfilelevelonandoff.png)
 
 ### <a name="q-where-is-codelens"></a>S: CodeLens nerede?
 
-Y **:** codelens, C# ve yöntem, sınıf, dizin oluşturucu ve özellik düzeyinde kod Visual Basic görüntülenir. CodeLens, diğer tüm dosya türleri için dosya düzeyinde görünür.
+**A:** CodeLens C# içinde görünür ve Visual Basic, sınıf, dizin ve özellik düzeyinde kod kullanır. CodeLens, diğer tüm dosya türleri için dosya düzeyinde görünür.
 
-- CodeLens 'in açık olduğundan emin olun. **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **tüm diller**  >  **CodeLens** bölümüne gidin.
+- CodeLens'in açık olduğundan emin olun. Araçlar Seçenekler **Metin**  >    >  **Düzenleyici Tüm Diller**  >  **CodeLens**  >  **'e gidin.**
 
-- Kodunuz TFS 'de depolanıyorsa, [TFS Config komutuyla](/azure/devops/server/command-line/tfsconfig-cmd) [CodeIndex komutunu](../ide/codeindex-command.md) kullanarak kod dizin oluşturma özelliğinin açık olduğundan emin olun.
+- Kodunuz TFS'de depolanıyorsa, TFS Config komutuyla [CodeIndex](../ide/codeindex-command.md) komutu kullanılarak kod dizininin açık [olduğundan emin olun.](/azure/devops/server/command-line/tfsconfig-cmd)
 
-- DevOps ilgili göstergeler yalnızca iş öğeleri koda bağlandığında ve bağlantılı iş öğelerini açmak için izinleriniz olduğunda görüntülenir. [Ekip üyesi izinleriniz](/azure/devops/organizations/security/view-permissions?view=vsts&preserve-view=true)olduğunu doğrulayın.
+- DevOps ilgili göstergeler yalnızca iş öğeleri koda bağlı olduğunda ve bağlantılı iş öğelerini açma izinlerine sahip olduğunda görünür. Takım üyesi izinlerine [sahip olduğunu onaylayın.](/azure/devops/organizations/security/view-permissions?view=vsts&preserve-view=true)
 
-- Birim testi göstergeleri, uygulama kodu birim testlerine sahip olmadığında görünmez. Test durumu göstergeleri test projesinde otomatik olarak görüntülenir. Uygulama kodunuzun birim testleri olduğunu biliyorsanız, ancak test göstergeleri görünmüyorsa, çözümü oluşturmayı deneyin (**CTRL** + **vardiyası** + **B**).
+- Uygulama kodunda birim testi olmayan birim testi göstergeleri görünmez. Test durumu göstergeleri test projesinde otomatik olarak görüntülenir. Uygulama kodunuzun birim testleri olduğunu biliyorsanız ancak test göstergeleri görünmüyorsa, çözümü (**Ctrl Shift** B ) + **oluşturmak için bunu** + **deneyin.**
 
 ::: moniker range=">=vs-2019"
 
 > [!TIP]
-> codelens Visual Studio Community sürümünde kullanılabilir, ancak *kaynak denetim* göstergeleri bu sürümde kullanılamaz.
+> CodeLens, Visual Studio Community sürümde kullanılabilir, ancak  kaynak denetim göstergeleri bu sürümde kullanılamaz.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> codelens Visual Studio Community sürümünde kullanılamaz.
+> CodeLens, Visual Studio Community kullanılamaz.
 
 ::: moniker-end
 
-### <a name="q-why-dont-i-see-the-work-item-details-for-a-commit"></a>S: bir kayıt için iş öğesi ayrıntılarını neden görmüyorum?
+### <a name="q-why-dont-i-see-the-work-item-details-for-a-commit"></a>S: Bir işlemenin iş öğesi ayrıntılarını neden göremiyorum?
 
-Y **:** codelens Azure Boards veya TFS 'de iş öğelerini bulamadığı için bu durum oluşabilir. Bu iş öğelerinin bulunduğu projeye bağlı olduğunuzu ve bu iş öğelerini görme izinlerinizin olduğunu denetleyin. çalışma öğesi ayrıntıları, Azure Boards veya TFS 'de iş öğesi kimlikleri hakkında yanlış bilgiler içeriyorsa de görüntülenmeyebilir.
+**A:** CodeLens, TFS'de veya TFS'de iş öğelerini Azure Boards olabilir. Bu iş öğelerine sahip projeye bağlı olduğunuzdan ve bu iş öğelerini görme izinlerine sahip olduğunuzdan emin olun. İş öğesi ayrıntıları, işleme açıklamasının TFS veya TFS'de iş öğesi kimlikleri hakkında yanlış Azure Boards gösternemyebilirsiniz.
 
-### <a name="q-why-dont-i-see-the-skype-indicators"></a>s: Skype göstergelerini neden görmüyorum?
+### <a name="q-why-dont-i-see-the-skype-indicators"></a>S: Neden Skype göremiyorum?
 
-**A:** Skype Kurumsal oturum açmadıysanız, yüklü değilse veya desteklenen bir yapılandırmaya sahip değilseniz Skype göstergeleri görünmez. Bununla birlikte, yine de e-posta gönderebilirsiniz:
+**A:** Skype oturum Skype Kurumsal yüklü değil veya desteklenen bir yapılandırmanız yoksa bu göstergeler görünmez. Ancak yine de e-posta gönderebilirsiniz:
 
-![CodeLens-posta ile kişi değişiklik kümesi sahibi](../ide/media/codelenscodesendmailchangesetnolync1.png)
+![CodeLens - Değişiklik kümesi sahibine e-posta ile ulaşın](../ide/media/codelenscodesendmailchangesetnolync1.png)
 
-**hangi Skype ve Lync yapılandırması desteklenir?**
+**Hangi Skype ve Lync yapılandırmaları de destekler?**
 
-- Skype Kurumsal (32-bit veya 64-bit)
+- Skype Kurumsal (32 bit veya 64 bit)
 
-- Lync 2010 veya sonraki bir sürümü (32-bit veya 64-bit), Windows 8.1 ile Lync temel 2013 değil
+- Lync 2010 veya sonraki bir tek başına (32 bit veya 64 bit), ancak lync basic 2013 Windows 8.1
 
-codelens, farklı Lync veya Skype sürümünün yüklü olmasını desteklemez. Visual Studio tüm yerelleştirilmiş sürümleri için yerelleştirilmemiş olabilir.
+CodeLens, Lync veya Skype sürümlerinin yüklü Skype desteklemez. Bu sürümler, tüm yerelleştirilmiş sürümler için yerelleştirilmiş Visual Studio.
 
-### <a name="q-how-do-i-change-the-font-and-color-for-codelens"></a>S: Nasıl yaparım? CodeLens 'in yazı tipini ve rengini değiştirmek istiyor musunuz?
+### <a name="q-how-do-i-change-the-font-and-color-for-codelens"></a>S: Nasıl yaparım? codeLens için yazı tipini ve rengini nasıl değiştirebilirsiniz?
 
-Y **:** **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **yazı tipleri ve renkler** bölümüne gidin.
+**A:** Araçlar Seçenekler **Ortam**  >  **Yazı Tipleri**  >  **ve**  >  **Renkler'e gidin.**
 
-![CodeLens-yazı tipi ve renk ayarlarını değiştir](../ide/media/codelensoptionsfontscolorssettings.png)
+![CodeLens - Yazı tipi ve renk ayarlarını değiştirme](../ide/media/codelensoptionsfontscolorssettings.png)
 
 Klavyeyi kullanmak için:
 
-1.  +  + **Seçenekler** iletişim kutusunu açmak için alt T **O** tuşlarına basın.
+1. Seçenekler **iletişim** kutusunu açmak için Alt + **T** + **O** **tuşuna** basın.
 
-2. **Ortam** düğümüne gitmek Için **yukarı ok** veya **aşağı ok** tuşuna basın ve ardından düğümü genişletmek için **sol ok** tuşuna basın.
+2. Ortam **düğümüne** gitmek **için Yukarı** Ok'a veya Aşağı Ok'a basın, sonra düğümü genişletmek için Sol **Ok'a** basın. 
 
-3. **Yazı tipleri ve renkler '** e gitmek Için **aşağı ok** tuşuna basın.
+3. Yazı **Tipleri ve Renkler'e** gitmek için Aşağı **Ok tuşuna basın.**
 
-4. **Ayarları göster** listesine gitmek için **Tab** tuşuna basın ve ardından **CodeLens**' i seçmek için **aşağı ok** tuşuna basın.
+4. Sekme **tuşuna** basarak **Listenin ayarlarını göster'e** gidin ve ardından CodeLens'i **seçmek için** Aşağı Ok **tuşuna basın.**
 
 ### <a name="q-can-i-move-the-codelens-heads-up-display"></a>S: CodeLens ekran göstergesi görüntüsünü taşıyabilir miyim?
 
-Y **:** Evet, ![ ](../ide/media/codelensdockwindow.png) CodeLens 'i pencere olarak yerleştirmek için Yerleştir simgesini seçin.
+**A:** Evet, ![ ](../ide/media/codelensdockwindow.png) CodeLens'i pencere olarak yerleştirmek için Dock simgesi seçin.
 
-![CodeLens gösterge penceresinde Dock düğmesi](../ide/media/codelensselectdockwindow.png)
+![CodeLens gösterge penceresindeki Dock düğmesi](../ide/media/codelensselectdockwindow.png)
 
-![Sabitlenmiş CodeLens başvuruları penceresi](../ide/media/codelensreferencesdockedwindow.png)
+![Yerleştirildi CodeLens Başvuruları penceresi](../ide/media/codelensreferencesdockedwindow.png)
 
 ### <a name="q-how-do-i-refresh-the-indicators"></a>S: Göstergeleri nasıl yenileyebilirim?
 
-Y **:** Bu gösterge şunlara bağlıdır:
+**A:** Bu göstergeye bağlıdır:
 
-- **Başvurular**: Bu gösterge, kod değiştiğinde otomatik olarak güncelleştirilir. **Başvurular** göstergesi ayrı bir pencere olarak yerleştirilmişse, **Yenile**' yi seçerek göstergeyi yenileyin:
+- **Başvurular:** Kod değişirken bu gösterge otomatik olarak ler. Başvurular **göstergesi** ayrı bir pencere olarak yerleştirildi ise Yenile'yi seçerek göstergeyi **yenileyin:**
 
-   ![CodeLens başvurularında Yenile düğmesi](../ide/media/codelensviewreferencesdocked.png)
+   ![Yenile düğmesi CodeLens Başvurularında](../ide/media/codelensviewreferencesdocked.png)
 
-- **Takım**: sağ tıklama menüsünde **CodeLens takım göstergelerini Yenile** ' yi seçerek bu göstergeleri yenileyin:
+- **Takım:** Sağ tıklama menüsünden **CodeLens Takım** Göstergelerini Yenile'yi seçerek bu göstergeleri yenileyin:
 
-   ![CodeLens takım göstergeleri menü öğesini Yenile](../ide/media/codelensrefreshindicatorsfromcode.png)
+   ![CodeLens Takım Göstergeleri menü öğesini yenileme](../ide/media/codelensrefreshindicatorsfromcode.png)
 
-- **Test**: **Test** göstergesini yenilemek için [kodunuzun birim testlerini bulun](#associated-unit-tests) .
+- **Test:** [Test göstergesini yenilemek için kodunuz](#associated-unit-tests) için birim **testleri** bulun.
 
-### <a name="q-whats-local-version"></a>S: "Yerel sürüm" nedir?
+### <a name="q-whats-local-version"></a>S: "Yerel Sürüm" nedir?
 
-Y **:** **Yerel sürüm** oku, bir dosyanın yerel sürümünüzde en son değişiklik kümesine işaret eder. Sunucuda daha yeni değişiklik kümeleri olduğunda, değişiklik kümelerini sıralamak için kullanılan sıralamaya bağlı olarak **Yerel sürüm** okunun üstünde veya altında görünürler.
+**A:** Yerel **Sürüm okun,** bir dosyanın yerel sürümündeki en son değişiklik kümesine bakarak. Sunucuda daha yeni değişiklik kümeleri olduğunda, değişiklik  kümeleri sıralamak için kullanılan sıraya bağlı olarak Yerel Sürüm okunda veya altında görünürler.
 
-### <a name="q-can-i-manage-how-codelens-processes-code-to-show-history-and-linked-items"></a>S: CodeLens 'in geçmişi ve bağlantılı öğeleri göstermek için kodu nasıl işlediğinde yönetebilir miyim?
+### <a name="q-can-i-manage-how-codelens-processes-code-to-show-history-and-linked-items"></a>S: CodeLens'in geçmişi ve bağlantılı öğeleri göstermek için kodu nasıl işleyeni yönetmesine izin verilsin mi?
 
-**Y:** Evet. Kodunuz TFS 'de ise, [TFS Config komutuyla](/azure/devops/server/command-line/tfsconfig-cmd) [CodeIndex komutunu](../ide/codeindex-command.md) kullanın.
+**Y:** Evet. Kodunuz TFS'de ise, TFS Config [komutuyla CodeIndex](../ide/codeindex-command.md) [komutunu kullanın.](/azure/devops/server/command-line/tfsconfig-cmd)
 
-### <a name="q-my-codelens-test-indicators-no-longer-appear-in-my-file-when-i-first-open-my-solution-how-can-i-load-them"></a>S: çözümmi ilk kez açtığımda CodeLens test göstergeleri artık dosyada görünmüyor. Bunları nasıl yükleyebilirim?
+### <a name="q-my-codelens-test-indicators-no-longer-appear-in-my-file-when-i-first-open-my-solution-how-can-i-load-them"></a>S: Çözümüm ilk kez açılırken CodeLens test göstergelerim artık dosyamda görünmüyor. Bunları nasıl yükleyim?
 
-Y **:** Dosyanıza yüklenecek CodeLens test göstergeleri almak için projenizi yeniden derleyin. performansı artırmak için, kod dosyaları yüklendiğinde test göstergeleri için kaynak bilgileri artık Visual Studio. Test göstergeleri, bir derlemeden sonra yüklenir veya test **Gezgini**'nde çift tıklayarak teste gidebilirsiniz.
+**A:** CodeLens test göstergelerini dosyanıza yüklemek için projenizi yeniden oluşturma. Performansı artırmak Visual Studio artık kod dosyaları yüklendiğinde test göstergelerine ilişkin kaynak bilgileri getirmez. Test göstergeleri bir derlemeden sonra veya Test Gezgini'nde üzerine çift tıklayarak bir teste **gidildikten sonra yüklenir.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
-description: Kaynak sunucu bilgilerini içeren bir diziyi döndürür.
-title: IDebugSourceServerModule::GetSourceServerData | Microsoft Docs
+description: Kaynak sunucu bilgileri dizisini alır.
+title: 'Idebugsourceservermodule:: GetSourceServerData | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a897ee524cebb836b3780289600f0c5b665f71a8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122118430"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725145"
 ---
 # <a name="idebugsourceservermodulegetsourceserverdata"></a>IDebugSourceServerModule::GetSourceServerData
-Kaynak sunucu bilgilerini içeren bir diziyi döndürür.
+Kaynak sunucu bilgileri dizisini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ public int GetSourceServerData(
 
 ## <a name="parameters"></a>Parametreler
 `pDataByteCount`\
-[out] Veri dizisinde bayt sayısı.
+dışı Veri dizisindeki bayt sayısı.
 
 `ppData`\
-[out] Veri dizisine başvuru.
+dışı Veri dizisine başvuru.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md) arabirimini ortaya çıkaran **bir CModule** nesnesi için bu yöntemin nasıl uygulandığını gösterir.
+Aşağıdaki örnek, [ıdebugsourceservermodule](../../../extensibility/debugger/reference/idebugsourceservermodule.md) arabirimini kullanıma sunan bir **cmodule** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CModule::GetSourceServerData(ULONG* pDataByteCount, BYTE** ppData)

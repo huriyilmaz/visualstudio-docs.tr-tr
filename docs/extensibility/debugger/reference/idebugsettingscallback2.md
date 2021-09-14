@@ -13,11 +13,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: babc486a4c8d683a3557b602273bc2e165a49420
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122126264"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725146"
 ---
 # <a name="idebugsettingscallback2"></a>IDebugSettingsCallback2
 Hata ayıklama altyapılarının ölçüm ayarlarını uzaktan okumalarını sağlar.

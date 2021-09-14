@@ -1,6 +1,6 @@
 ---
-description: Hataya neden olan bekleyen kesme noktasını alır.
-title: 'IDebugErrorBreakpoint2:: GetPendingBreakpoint | Microsoft Docs'
+description: Hataya neden olan bekleyen kesme noktası alır.
+title: IDebugErrorBreakpoint2::GetPendingBreakpoint | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c3645304bf54a600f80b4d3fa72886532b287f71
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122096199"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634905"
 ---
 # <a name="idebugerrorbreakpoint2getpendingbreakpoint"></a>IDebugErrorBreakpoint2::GetPendingBreakpoint
-Hataya neden olan bekleyen kesme noktasını alır.
+Hataya neden olan bekleyen kesme noktası alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int GetPendingBreakpoint (
 
 ## <a name="parameters"></a>Parametreler
 `ppPendingBreakpoint`\
-dışı Bağlanamayacak bekleyen kesme noktasını temsil eden bir [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesi döndürür.
+[out] Bağlanamayan bekleyen kesme noktası temsil eden bir [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)

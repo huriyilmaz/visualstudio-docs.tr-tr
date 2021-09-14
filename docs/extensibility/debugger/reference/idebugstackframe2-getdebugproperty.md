@@ -1,6 +1,6 @@
 ---
-description: Yığın çerçevesinin özelliklerinin açıklamasını alır.
-title: 'IDebugStackFrame2:: GetDebugProperty | Microsoft Docs'
+description: Bir yığın çerçevesinin özelliklerinin açıklamasını alır.
+title: IDebugStackFrame2::GetDebugProperty | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 04572c9bedaaa24cbd8d6de95908a62d60742d24
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122132515"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725132"
 ---
 # <a name="idebugstackframe2getdebugproperty"></a>IDebugStackFrame2::GetDebugProperty
-Yığın çerçevesinin özelliklerinin açıklamasını alır.
+Bir yığın çerçevesinin özelliklerinin açıklamasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetDebugProperty (
 
 ## <a name="parameters"></a>Parametreler
 `ppDebugProp`\
-dışı Bu yığın çerçevesinin özelliklerini açıklayan bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
+[out] Bu yığın çerçevesinin özelliklerini açıklayan bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yönteminin uygun filtrelerle çağrılması, yerel değişkenleri, yöntem parametrelerini, Yazmaçları ve yığın çerçevesiyle ilişkili "This" işaretçisini alabilir.
+ Uygun [filtrelerle EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yöntemini çağırma yığın çerçevesiyle ilişkili yerel değişkenleri, yöntem parametrelerini, yazmaçları ve "bu" işaretçisini alabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

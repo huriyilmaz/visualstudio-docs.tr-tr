@@ -1,6 +1,6 @@
 ---
 title: Visual Basic geliştirici ayarlarıyla derleme yapılandırmalarını yönetme
-description: Visual Basic Geliştirici ayarları uygulandığında ve bu derleme ayarlarını el ile etkinleştirmek için gizlenen Gelişmiş derleme yapılandırma seçenekleri hakkında bilgi edinin.
+description: Visual Basic geliştirici ayarları uygulandığında ve bu derleme ayarlarını el ile etkinleştirmek için gizlenen gelişmiş derleme yapılandırma seçenekleri hakkında bilgi edinin.
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 ms.date: 11/21/2018
@@ -18,19 +18,19 @@ manager: jmartens
 ms.workload:
 - multiple
 ms.openlocfilehash: 5912603331ff6681cd6cc98cbb1afd88246ea695
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99962879"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724930"
 ---
-# <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>Nasıl yapılır: Visual Basic Geliştirici ayarları uygulanmış derleme yapılandırmasını yönetme
+# <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>nasıl yapılır: Visual Basic geliştirici ayarları uygulanmış derleme yapılandırmasını yönetme
 
-Varsayılan olarak, Visual Basic Geliştirici ayarları uygulandığında tüm Gelişmiş derleme yapılandırma seçenekleri gizlidir. Bu makalede, bu derleme ayarlarının el ile nasıl etkinleştirileceği açıklanır.
+varsayılan olarak, Visual Basic geliştirici ayarları uygulandığında tüm gelişmiş derleme yapılandırma seçenekleri gizlidir. Bu makalede, bu derleme ayarlarının el ile nasıl etkinleştirileceği açıklanır.
 
 ## <a name="enable-advanced-build-configurations"></a>Gelişmiş derleme yapılandırmasını etkinleştir
 
-Varsayılan olarak Visual Basic Geliştirici ayarları, [Proje tasarımcısında](../ide/reference/application-page-project-designer-visual-basic.md) **Configuration Manager** iletişim kutusunu ve **yapılandırma** ve **Platform** listelerini açma seçeneğini gizler.
+varsayılan olarak Visual Basic geliştirici ayarları, [Project tasarımcısında](../ide/reference/application-page-project-designer-visual-basic.md) **Configuration Manager** iletişim kutusunu ve **yapılandırma** ve **Platform** listelerini açma seçeneğini gizler.
 
 1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
@@ -40,7 +40,7 @@ Varsayılan olarak Visual Basic Geliştirici ayarları, [Proje tasarımcısında
 
 4. **Tamam**'a tıklayın.
 
-     **Configuration Manager** artık **derleme** menüsünde kullanılabilir ve **yapılandırma** ve **Platform** listeleri **Proje tasarımcısında** görünür.
+     **Configuration Manager** artık **derleme** menüsünde kullanılabilir ve **yapılandırma** ve **Platform** listeleri **Project tasarımcısında** görünür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

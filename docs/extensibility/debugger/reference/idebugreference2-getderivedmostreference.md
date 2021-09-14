@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e2980792572a6ac9c2d833a0fef62350db968d00
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122132593"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725154"
 ---
 # <a name="idebugreference2getderivedmostreference"></a>IDebugReference2::GetDerivedMostReference
 Bir başvurudan türetilmiş en çok başvuru alır. Daha sonraki kullanımlar için ayrılmıştır.

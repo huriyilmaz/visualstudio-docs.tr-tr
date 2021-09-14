@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: be7c5c2a45d42840c41b5860596cc4fd8c883bf0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122057128"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626007"
 ---
 # <a name="register-file-name-extensions-for-side-by-side-deployments"></a>Yan yana dağıtımlar için dosya adı uzantılarını kaydetme
 Yan yana ortamda dağıtılan VSPackage'lar için, dosyaları doğru sürümüyle ilişkilendirmek için dosya adı uzantılarını kaydetmeniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] gerekir. Sürüme özgü bir dosya adı uzantısı kullanmadıkça kayıt, kullanıcıların projenizi ve proje öğesi dosyalarınızı uygun sürümünde açmalarını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] sağlar.

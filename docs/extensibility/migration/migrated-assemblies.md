@@ -1,6 +1,6 @@
 ---
 title: VS SDK NuGet paketleri
-description: Bir Visual Studio uzantısını NuGet 2022 Preview sürümüne geçirinken ihtiyacınız olan VS SDK meta Visual Studio paketleri hakkında bilgi edinebilirsiniz.
+description: VISUAL STUDIO uzantısını Visual Studio 2022 Preview sürümüne geçirinken ihtiyacınız olan VS SDK meta paketi ve diğer NuGet paketleri hakkında bilgi edinebilirsiniz.
 ms.date: 06/08/2021
 ms.topic: conceptual
 author: leslierichardson95
@@ -12,11 +12,11 @@ ms.workload:
 - vssdk
 feedback_system: GitHub
 ms.openlocfilehash: cf2e07cf2d222c06b36c97cf2d4faf982c4039f4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122041665"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626012"
 ---
 # <a name="sdk-reference-packages"></a>SDK başvuru paketleri
 
@@ -31,7 +31,7 @@ Belirli diğer SDK paketlerine başvururken, bu paketler ana VS sürümleri aras
 2022'den önce birçok birlikte çalışma derlemesi Visual Studio unutmayın. 2022 Visual Studio den itibaren ekleme artık gerekli değildir veya desteklemektedir.
 Lütfen *bunları* bağlama yerine birlikte çalışma derlemelerimize bakın.
 
-Aşağıdaki tabloda, Visual Studio 2022 öncesi uzantınız, 2022'ye yönelik olarak başvurulacak yeni paket kimliğine zaten başvururken derlemelerden veya paketlerden bir eşleme Visual Studio sağlar. Bazı durumlarda, derlemeler artık daha önce yalnızca NuGet yerel bir yüklemeden kullanılabilen paketlerde Visual Studio kullanılabilir.
+Aşağıdaki tabloda, Visual Studio 2022 öncesi uzantınız 2022'de hedeflenen derlemelerden veya paketlerden yeni paket kimliğine başvurulacak bir eşleme Visual Studio sağlar. Bazı durumlarda, derlemeler artık daha önce yalnızca yerel NuGet yüklemesinde kullanılabilir olan paketlerde Visual Studio kullanılabilir.
 
 2022 Visual Studio öncesi | Visual Studio 2022
 --|--
@@ -104,4 +104,4 @@ Aşağıdaki tabloda, Visual Studio 2022 öncesi uzantınız, 2022'ye yönelik o
 `VSLangProj90` | `Microsoft.VisualStudio.Interop`
 
 Artık yalnızca bir birleştirilmiş birlikte çalışma derlemesi için kaç birlikte çalışma derlemesi kullanılabilir olduğunu unutmayın.
-Bir paket yukarıdaki tabloda görünmese de iki sürümde aynı olabilir.
+Yukarıdaki tabloda bir paket görünmese de, iki sürümde aynı olabilir.

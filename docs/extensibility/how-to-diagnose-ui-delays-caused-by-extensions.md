@@ -1,6 +1,6 @@
 ---
-title: Visual Studio | Uzantı Kullanıcı arabirimi gecikmelerini tanılama Microsoft Docs
-description: Visual Studio, kullanıcı arabirimi gecikmelerini bir uzantının neden olup olmadığını bildirir. Uzantı kodunuzda ne tür bir kullanıcı arabirimi gecikmesine neden olduğunu nasıl tanıleyeceğinizi öğrenin.
+title: Kullanıcı arabiriminde uzantı kullanıcı arabirimi gecikmelerini Visual Studio| Microsoft Docs
+description: Visual Studio kullanıcı arabirimi gecikmeleri bir uzantıdan kaynaklanmış olabilirse size bilgi sağlar. Uzantı kodunda kullanıcı arabirimi gecikme sürelerini neyin neden olduğunu tanılamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/26/2018
 ms.topic: conceptual
@@ -10,76 +10,76 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload: multiple
 ms.openlocfilehash: 8ddb58405125b53c955324be55ccb5eec93000e4
-ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "123398593"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626259"
 ---
 # <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>Nasıl yapılır: Uzantılardan kaynaklanan kullanıcı arabirimi gecikmelerini tanılama
 
-uı yanıt vermediğinde Visual Studio, yaprak ile başlayıp temel doğru çalışarak uı iş parçacığının çağrı yığınını inceler. Visual Studio, bir çağrı yığını çerçevesinin yüklü ve etkinleştirilmiş bir uzantının parçası olan bir modüle ait olduğunu belirlerse, bir bildirim gösterir.
+Kullanıcı arabirimi yanıt vermemeye Visual Studio, yaprakla başlayarak ve temele doğru çalışarak kullanıcı arabirimi iş parçacığının çağrı yığınını inceler. Çağrı Visual Studio çerçevesinin yüklü ve etkinleştirilmiş bir uzantının parçası olan bir modüle ait olduğunu belirlerse bir bildirim gösterir.
 
-![UI gecikmesi (yanıt verme) bildirimi](media/ui-delay-notification-in-vs.png)
+![Kullanıcı arabirimi gecikmesi (yanıt vermiyor) Bildirimi](media/ui-delay-notification-in-vs.png)
 
-Bildirim, kullanıcıya kullanıcı ARABIRIMI gecikmesi (yani, Kullanıcı arabirimindeki yanıt verme) uzantısından kodun sonucu olabileceğini bildirir. Ayrıca, kullanıcıya uzantıyı devre dışı bırakma seçeneklerini veya bu uzantıya yönelik gelecekteki bildirimleri sağlar.
+Bildirim kullanıcıya kullanıcı arabirimi gecikmesi (yani kullanıcı arabiriminde yanıt vermiyor) uzantısından gelen kodun sonucu olabileceğini bildirebilir. Ayrıca kullanıcıya uzantıyı devre dışı bırakma seçenekleri veya bu uzantı için gelecekteki bildirimler de sağlar.
 
-Bu belge, uzantı kodunuzda ne tür bir kullanıcı arabirimi gecikme bildirimlerine neden olduğunu nasıl tanılabileceğinizi açıklar.
+Bu belgede, uzantı kodunda kullanıcı arabirimi gecikme bildirimlerine neden olan öğeleri nasıl tanıyabilirsiniz?
 
 > [!NOTE]
-> uı gecikmelerini tanılamak için Visual Studio deneysel örneğini kullanmayın. UI gecikmesi bildirimleri için gereken çağrı yığını analizinin bazı kısımları deneysel örnek kullanılırken devre dışı bırakılmak, yani UI gecikmesi bildirimleri gösterilmeyebilir.
+> Kullanıcı arabirimi gecikmelerini tanılamak Visual Studio için deneysel bir örneği kullanmayın. Deneysel örnek kullanırken kullanıcı arabirimi gecikme bildirimleri için gereken çağrı yığını analizinin bazı bölümleri kapalıdır, yani kullanıcı arabirimi gecikme bildirimleri gösterilmez.
 
-Tanılama işlemine genel bakış aşağıdaki gibidir:
-1. Tetikleyici senaryosunu belirler.
-2. Etkinlik günlüğü ile VS 'yi yeniden başlatın.
-3. ETW izlemeyi Başlat.
-4. Bildirimi tekrar görüntülenecek şekilde tetikleyin.
+Tanılama sürecine genel bir bakış şu şekildedir:
+1. Tetikleyici senaryosunu tanımlama.
+2. Etkinlik günlüğüyle VS'i yeniden başlatın.
+3. ETW izlemeyi başlatma.
+4. Bildirimin yeniden görünmesini tetikler.
 5. ETW izlemeyi durdurun.
-6. Gecikme KIMLIĞINI almak için etkinlik günlüğünü inceleyin.
-7. 6. adımdaki gecikme KIMLIĞINI kullanarak ETW izlemesini çözümleyin.
+6. Gecikme kimliğini almak için etkinlik günlüğünü inceleme.
+7. 6. adımdaki gecikme kimliğini kullanarak ETW izlemesi analiz edin.
 
-Aşağıdaki bölümlerde, bu adımları daha ayrıntılı bir şekilde inceleyeceğiz.
+Aşağıdaki bölümlerde bu adımları daha ayrıntılı bir şekilde inceleacağız.
 
-## <a name="identify-the-trigger-scenario"></a>Tetikleyici senaryosunu tanımla
+## <a name="identify-the-trigger-scenario"></a>Tetikleyici senaryosunu tanımlama
 
-uı gecikmesini tanılamak için, ilk olarak ne (eylem sırası) Visual Studio bildirimi göstermesini istediğinizi belirlemeniz gerekir. Bu, daha sonra oturum açma özelliği ile bildirimi tetikleyebilmek için kullanılır.
+Kullanıcı arabirimi gecikmesini tanılamak için ilk olarak bildirimi göstermenin neden olduğu Visual Studio (eylem dizisi) belirlemelisiniz. Bu, daha sonra günlüğe kaydetme açıkken bildirimi tetikleyleyebilirsiniz.
 
-## <a name="restart-vs-with-activity-logging-on"></a>Etkinlik günlüğü ile VS 'yi yeniden Başlat
+## <a name="restart-vs-with-activity-logging-on"></a>Etkinlik günlüğüyle VS'i yeniden başlatma
 
-Visual Studio, sorun ayıklanırken yararlı bilgiler sağlayan bir "etkinlik günlüğü" oluşturabilir. etkinlik günlüğünü Visual Studio açmak için `/log` komut satırı seçeneği ile Visual Studio açın. Visual Studio başladıktan sonra, etkinlik günlüğü şu konumda depolanır:
+Visual Studio hata ayıklarken yararlı bilgiler sağlayan bir "etkinlik günlüğü" oluşturmasını sağlar. Oturum açmada etkinlik günlüğünü Visual Studio için Visual Studio satırı `/log` seçeneğiyle oturum açın. Etkinlik Visual Studio başladıktan sonra etkinlik günlüğü aşağıdaki konumda depolanır:
 
 ```DOS
 %APPDATA%\Microsoft\VisualStudio\<vs_instance_id>\ActivityLog.xml
 ```
 
-VS örnek kimliğinizi nasıl bulabileceğiniz hakkında daha fazla bilgi edinmek için bkz. [Visual Studio örnekleri algılama ve yönetme araçları](../install/tools-for-managing-visual-studio-instances.md). UI gecikmeleri ve ilgili bildirimler hakkında daha fazla bilgi edinmek için bu etkinlik günlüğünü daha sonra kullanacağız.
+VS örnek kimliğinizi nasıl bulamanız hakkında daha fazla bilgi edinmek için bkz. Visual Studio [örnekleri algılama ve yönetme araçları.](../install/tools-for-managing-visual-studio-instances.md) Bu etkinlik günlüğünü daha sonra kullanıcı arabirimi gecikmeleri ve ilgili bildirimler hakkında daha fazla bilgi bulmak için kullanacağız.
 
-## <a name="starting-etw-tracing"></a>ETW izleme başlatılıyor
+## <a name="starting-etw-tracing"></a>ETW izlemeyi başlatma
 
-Bir ETW izlemesi toplamak için [PerfView](https://github.com/Microsoft/perfview/) kullanabilirsiniz. PerfView, ETW izlemenin toplanması ve analiz edilmesi için kullanımı kolay bir arabirim sağlar. Bir izlemeyi toplamak için aşağıdaki komutu kullanın:
+[EtW izlemesi toplamak için PerfView](https://github.com/Microsoft/perfview/) kullanabilirsiniz. PerfView, bir ETW izlemesi toplamak ve analiz etmek için kullanımı kolay bir arabirim sağlar. İzleme toplamak için aşağıdaki komutu kullanın:
 
 ```DOS
 Perfview.exe collect C:\trace.etl /BufferSizeMB=1024 -CircularMB:2048 -Merge:true -Providers:*Microsoft-VisualStudio:@StacksEnabled=true -NoV2Rundown /kernelEvents=default+FileIOInit+ContextSwitch+Dispatcher
 ```
 
-bu, sağlayıcının Visual Studio kullanıcı arabirimi gecikmesi bildirimleri ile ilgili olaylar için kullandığı "Microsoft-VisualStudio" sağlayıcısı 'nı sağlar. Ayrıca, PerfView 'un **Iş parçacığı zaman yığınları** görünümünü oluşturmak için kullanabileceği çekirdek sağlayıcının anahtar sözcüğünü belirtir.
+Bu, kullanıcı arabirimi gecikme bildirimleriyle ilgili olaylar için Visual Studio sağlayıcı olan "Microsoft-VisualStudio" sağlayıcısını sağlar. Ayrıca PerfView'ın İş Parçacığı Zaman Yığınları görünümünü oluşturmak için kullanabileceği çekirdek sağlayıcısı **için anahtar sözcüğünü** belirtir.
 
-## <a name="trigger-the-notification-to-appear-again"></a>Bildirimi tekrar görüntülenecek şekilde Tetikle
+## <a name="trigger-the-notification-to-appear-again"></a>Bildirimin yeniden görünmesini tetikle
 
-PerfView izleme toplamayı başlatduktan sonra, bildirimin tekrar görünmesi için tetikleyici eylem sırasını (1. adımdan) kullanabilirsiniz. Bildirim gösterildiğinde, PerfView için izleme koleksiyonunu, çıkış izleme dosyasını işlemek ve oluşturmak üzere durdurabilirsiniz.
+PerfView izleme toplamayı başlattıktan sonra bildirimin yeniden görünmesi için tetikleyici eylem dizisini (1. adımdan) kullanabilirsiniz. Bildirim gösterildiktan sonra PerfView'ın çıkış izleme dosyasını işlemesi ve oluşturması için izleme koleksiyonunu durdurabilirsiniz.
 
-## <a name="stop-etw-tracing"></a>ETW İzlemeyi Durdur
+## <a name="stop-etw-tracing"></a>ETW izlemeyi durdurma
 
-İzleme toplamasını durdurmak için PerfView penceresindeki **koleksiyonu durdur** düğmesini kullanmanız yeterlidir. İzleme toplamasını durdurduktan sonra PerfView, ETW olaylarını otomatik olarak işleyecek ve bir çıkış izleme dosyası oluşturacaktır.
+İzleme koleksiyonunu durdurmak için PerfView **penceresindeki** Koleksiyonu durdur düğmesini kullanın. İzleme koleksiyonunu durduran PerfView, ETW olaylarını otomatik olarak işler ve bir çıkış izleme dosyası oluşturur.
 
-## <a name="examine-the-activity-log-to-get-the-delay-id"></a>Gecikme KIMLIĞINI almak için etkinlik günlüğünü inceleyin
+## <a name="examine-the-activity-log-to-get-the-delay-id"></a>Gecikme kimliğini almak için etkinlik günlüğünü inceleme
 
-Daha önce bahsedildiği gibi, etkinlik günlüğünü *%AppData%\microsoft\visualstudio \<vs_instance_id>\ActivityLog.xml* adresinde bulabilirsiniz. Visual Studio uzantı kullanıcı arabirimi gecikmesini her algıladığında, kaynak olarak etkinlik günlüğüne bir düğüm yazar `UIDelayNotifications` . Bu düğüm, UI gecikmesi hakkında dört bilgi içerir:
+Daha önce belirtildiği gibi etkinlik günlüğünü *%APPDATA%\Microsoft\VisualStudio konumunda \<vs_instance_id> bulabilirsiniz\ActivityLog.xml.* Uzantı Visual Studio kullanıcı arabirimi gecikmesi algılayan her durumda, kaynak olarak ile etkinlik günlüğüne `UIDelayNotifications` bir düğüm yazar. Bu düğüm, kullanıcı arabirimi gecikmesi hakkında dört bilgi içerir:
 
-- Bir VS oturumunda UI gecikmesini benzersiz bir şekilde tanımlayan ardışık bir sayı olan UI gecikme KIMLIĞI
-- Visual Studio oturumunuzu baştan kapatmaya benzersiz şekilde tanımlayan oturum kimliği
-- UI gecikmesi için bir bildirimin gösterilip gösterilmediğini belirtir
-- Büyük olasılıkla UI gecikmesine neden olan uzantı
+- KULLANıCı arabirimi gecikme kimliği, VS oturumunda kullanıcı arabirimi gecikmesi benzersiz olarak tanımlayan sıralı bir sayı
+- Oturum kimliğini, oturumdan Visual Studio benzersiz olarak tanımlar
+- Kullanıcı arabirimi gecikmesi için bir bildirim göster olup olmadığı
+- Büyük olasılıkla kullanıcı arabirimi gecikmesi neden olan uzantı
 
 ```xml
 <entry>
@@ -92,71 +92,71 @@ Daha önce bahsedildiği gibi, etkinlik günlüğünü *%AppData%\microsoft\visu
 ```
 
 > [!NOTE]
-> Tüm UI gecikmeleri bir bildirime neden olur. Bu nedenle, doğru Kullanıcı arabirimi gecikmesini doğru şekilde belirlemek için, **belirtilen bildirimi** her zaman bir değere denetlemeniz gerekir.
+> Tüm kullanıcı arabirimi gecikmeleri bir bildirimle sonuçlanmaz. Bu nedenle, doğru kullanıcı arabirimi gecikmelerini doğru şekilde tanımlamak için her zaman Notification **shown?** değerini denetlemeniz gerekir.
 
-Etkinlik günlüğünde doğru UI gecikmesini bulduktan sonra düğümde belirtilen UI gecikmesi KIMLIĞINI yazın. KIMLIĞI, bir sonraki adımda karşılık gelen ETW olayını aramak için kullanacaksınız.
+Etkinlik günlüğünde doğru kullanıcı arabirimi gecikmesi buduktan sonra düğümde belirtilen kullanıcı arabirimi gecikme kimliğini not edin. Bir sonraki adımda ilgili ETW olayına bakmak için kimliği kullanılır.
 
-## <a name="analyze-the-etw-trace"></a>ETW izlemesini çözümle
+## <a name="analyze-the-etw-trace"></a>ETW izlemesi analiz etme
 
-Sonra, izleme dosyasını açın. Bunu, aynı PerfView örneğini kullanarak ya da yeni bir örnek başlatıp pencerenin sol tarafındaki geçerli klasör yolunu izleme dosyasının konumuna ayarlayarak yapabilirsiniz.
+Ardından izleme dosyasını açın. Bunu aynı PerfView örneğini kullanarak veya yeni bir örnek başlatarak ve pencerenin sol üst kısmında yer alan geçerli klasör yolunu izleme dosyasının konumu olarak ayarlayarak bunu yapabiliriz.
 
-![PerfView 'da klasör yolunu ayarlama](media/perfview-set-path.png)
+![Perfview'da klasör yolunu ayarlama](media/perfview-set-path.png)
 
-Ardından, sol bölmedeki izleme dosyasını seçin ve sağ tıklama ya da bağlam menüsünden **Aç** ' ı seçerek dosyayı açın.
+Ardından sol bölmede izleme dosyasını seçin ve sağ tıklama veya bağlam **menüsünden** Aç'ı seçerek dosyayı açın.
 
 > [!NOTE]
-> Varsayılan olarak PerfView bir ZIP arşivi verir. *trace.zip* açtığınızda, Arşivi otomatik olarak açar ve izlemeyi açar. Bu, izleme koleksiyonu sırasında **ZIP** kutusunun işaretini kaldırarak atlayabilirsiniz. Ancak, farklı makinelerde izlemeleri aktarmayı ve kullanmayı planlıyorsanız, **ZIP** kutusunun denetlenmesini kesinlikle öneririz. Bu seçenek olmadan, Ngen derlemeleri için gerekli pdb 'leri, izlemeye eşlik etmez ve bu nedenle, Ngen derlemelerinin sembolleri hedef makinede çözümlenmeyecektir. (Ngen derlemeleri için pdb 'leri hakkında daha fazla bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/) bakın.)
+> Varsayılan olarak PerfView bir Zip arşivi oluşturur. dosya *trace.zip,* arşivi otomatik olarak açar ve izlemeyi açar. İzleme koleksiyonu sırasında Zip kutusunun işaretini **kaldırarak bunu** atlayabilirsiniz. Ancak, izlemeleri farklı makineler arasında aktarmayı ve kullanmayı planlıyorsanız, Zip kutusunun işaretinin kaldırılmış olarak **işaretlenmelerini kesinlikle** öneririz. Bu seçenek olmadan, Ngen derlemeleri için gerekli PDB'ler izlemeye eşlik eder ve bu nedenle Ngen derlemelerinden gelen semboller hedef makinede çözümlenmezse. (Ngen [derlemeleri için](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/) PDB'ler hakkında daha fazla bilgi için bu blog gönderisi'ne bakın.)
 
-PerfView 'in izlemeyi işlemesi ve açması birkaç dakika sürebilir. İzleme açıkken, altında çeşitli "görünümler" listesi görüntülenir.
+PerfView'ın izlemeyi işlemesi ve açması birkaç dakika sürebilir. İzleme açıldıktan sonra altında çeşitli "görünümler" listesi görünür.
 
-![PerfView İzleme Özeti Görünümü](media/perfview-summary-view-events-selected.png)
+![PerfView izleme özeti görünümü](media/perfview-summary-view-events-selected.png)
 
-Kullanıcı arabirimi gecikmesi zaman aralığını almak için önce **Olaylar** görünümünü kullanacağız:
+Kullanıcı arabirimi **gecikmesi zaman** aralığını elde etmek için öncelikle Olaylar görünümünü kullanmalıdır:
 
-1.  `Events` İzleme altındaki düğüm ' i seçerek ve sağ tıklama veya bağlam menüsünden **Aç** ' ı seçerek Olaylar görünümünü açın.
-2. `Microsoft-VisualStudio/ExtensionUIUnresponsiveness`Sol bölmede "" seçeneğini belirleyin.
-3. ENTER tuşuna basın
+1. İzlemenin **altında** düğüm seçerek ve sağ tıklama veya bağlam menüsünden `Events` Aç'ı seçerek Olaylar görünümünü açın. 
+2. Sol `Microsoft-VisualStudio/ExtensionUIUnresponsiveness` bölmede " " öğesini seçin.
+3. Enter tuşuna basın
 
-Seçim uygulanır ve tüm `ExtensionUIUnresponsiveness` Olaylar sağ bölmede görüntülenir.
+Seçim uygulanır ve `ExtensionUIUnresponsiveness` tüm olaylar sağ bölmede görüntülenir.
 
 ![Olaylar görünümünde olayları seçme](media/perfview-event-selection.png)
 
-Sağ bölmedeki her satır bir UI gecikmesine karşılık gelir. Bu olay, 6. adımdaki etkinlik günlüğündeki gecikme KIMLIĞIYLE eşleşmesi gereken bir "gecikme KIMLIĞI" değeri içerir. `ExtensionUIUnresponsiveness`UI gecikmesi sonunda tetiklendiğinden, olayın zaman damgası (kabaca) UI gecikmesi bitiş saatini işaretler. Olay gecikme süresini de içerir. UI gecikmesi başladığında zaman damgasını elde etmek için bitiş zaman damgasından süreyi çıkartabiliriz.
+Sağ bölmede yer alan her satır bir kullanıcı arabirimi gecikme süresine karşılık geliyor. Olay, 6. adımdaki etkinlik günlüğünde gecikme kimliğiyle eşleşmesi gereken bir "Gecikme Kimliği" değeri içerir. Kullanıcı arabirimi gecikmesi sonundan itibaren, olayın zaman damgası (kabaca) kullanıcı arabirimi `ExtensionUIUnresponsiveness` gecikmesi bitiş saatlerini işaretler. Olay ayrıca gecikme süresini de içerir. Kullanıcı arabirimi gecikmesi başladığı zaman damgasını elde etmek için bitiş zaman damgasından süreyi çıkarılır.
 
-![UI gecikmesi zaman aralığını hesaplama](media/ui-delay-time-range.png)
+![Kullanıcı arabirimi gecikmesi zaman aralığını hesaplama](media/ui-delay-time-range.png)
 
-Önceki ekran görüntüsünde, örneğin olay zaman damgası 12.125,679, gecikme süresi 6.143,085 (MS) olur. Bu nedenle,
-* Gecikme başlangıcı 12.125,679-6.143,085 = 5.982,594.
-* UI gecikmesi zaman aralığı 5.982,594, 12.125,679 ' dir.
+Örneğin önceki ekran görüntüsünde olayın zaman damgası 12.125.679, gecikme süresi ise 6.143.085 'tir (ms). Bu nedenle,
+* Gecikme başlangıcı 12.125.679 - 6.143.085 = 5.982.594'tir.
+* KULLANıCı arabirimi gecikme süresi aralığı 5.982.594 ile 12.125.679'dır.
 
-Zaman aralığına sahip olduktan sonra, **olay** görünümünü kapatabilir ve **iş parçacığı zamanı (StartStop etkinlikleri ile) yığınları** görünümüyle açabilirsiniz. Bu görünüm özellikle yararlıdır çünkü genellikle UI iş parçacığını engelleyen uzantılar yalnızca diğer iş parçacıkları veya g/ç 'ye bağlı bir işlem üzerinde bekliyor. Bu nedenle, çoğu durum için Git seçeneği olan **CPU yığını** görünümü, bu süre boyunca CPU kullanmadığından, iş parçacığının bloke edilme süresini yakalamayabilir. **Iş parçacığı zaman yığınları** , engellenme süresini düzgün şekilde göstererek bu sorunu çözer.
+Zaman aralığına sahip olduktan sonra Olaylar  görünümünü kapatıp İş Parçacığı Süresi **(StartStop Etkinlikleri ile) Yığınlar görünümünü açabiliriz.** Kullanıcı arabirimi iş parçacığını engelleyen uzantılar genellikle yalnızca diğer iş parçacıklarını veya bir I/O'ya bağlı işlemi beklediği için bu görünüm özellikle kullanışlıdır. Bu nedenle, çoğu durumda git seçeneği olan CPU Yığını görünümü, bu süre boyunca **CPU'yu** kullanmayarak iş parçacığının engellemeye harcadığı zamanı yakalamaz. İş **Parçacığı Zaman Yığınları** engellenen zamanı düzgün göstererek bu sorunu çözer.
 
-![PerfView Özet görünümündeki iş parçacığı süresi (StartStop etkinlikleri ile) yığınları düğümü](media/perfview-thread-time-with-startstop-activities-stacks.png)
+![PerfView özet görünümünde İş Parçacığı Süresi (StartStop Etkinlikleri ile) Yığınlar düğümü](media/perfview-thread-time-with-startstop-activities-stacks.png)
 
-**Iş parçacığı zaman yığınları** görünümünü açarken Analize Başlamak için **devenv** işlemini seçin.
+İş Parçacığı **Zaman Yığınları görünümünü** a açma sırasında analizi başlatmak için **devenv** işlemini seçin.
 
-![UI gecikme analizi için iş parçacığı zaman yığınları görünümü](media/ui-delay-thread-time-stacks.png)
+![UI gecikme analizi için İş Parçacığı Zaman Yığınları görünümü](media/ui-delay-thread-time-stacks.png)
 
-**Iş parçacığı zaman yığınları** görünümünde, sayfanın sol üst kısmında, zaman aralığını önceki adımda hesapladığımız değerlerle ayarlayabilirsiniz ve yığınların o zaman aralığına ayarlanabilmesi için **ENTER** tuşuna basın.
+İş **Parçacığı Zaman** Yığınları görünümünde, sayfanın sol üst kısmında, zaman aralığını önceki adımda hesaplanmış değerlere ayarlayabilir ve **yığınların** bu zaman aralığına göre ayarlanması için Enter tuşuna basabilirsiniz.
 
 > [!NOTE]
-> Visual Studio zaten açık olduktan sonra izleme koleksiyonu başlatılırsa, kullanıcı arabirimi (başlangıç) iş parçacığının hangi iş parçacığı tarafından belirlenebileceği belirlenir. Ancak, Kullanıcı arabirimi (başlangıç) iş parçacığının yığındaki ilk öğe, en olası işletim sistemi dll 'lardır (*ntdll.dll* ve *kernel32.dll*) `devenv!?` ve ardından ve sonra `msenv!?` . Bu sıra, UI iş parçacığını belirlemenize yardımcı olabilir.
+> Kullanıcı arabirimi (başlangıç) iş parçacığının hangi iş parçacığı olduğunu belirlemek, izleme koleksiyonu zaten açık olduktan sonra Visual Studio uygun olabilir. Ancak, kullanıcı arabirimi (başlangıç) iş parçacığı yığınında ilk öğeler büyük olasılıkla her zaman işletim sistemi DLL'leridir (*ntdll.dll* ve *kernel32.dll*) ve `devenv!?` ardından `msenv!?` . Bu dizi, kullanıcı arabirimi iş parçacığını tanımlamaya yardımcı olabilir.
 
  ![Başlangıç iş parçacığını tanımlama](media/ui-delay-startup-thread.png)
 
-Ayrıca, bu görünümü yalnızca paketinizdeki modüller içeren yığınlar dahil ederek de filtreleyebilirsiniz.
+Ayrıca, bu görünümü yalnızca paketinizin modüllerini içeren yığınları dahil edersiniz.
 
-* Varsayılan olarak eklenen tüm Gruplandırmayı kaldırmak için **Grouppats** 'leri boş metin olarak ayarlayın.
-* **Inpats** 'yi, var olan işlem filtresine ek olarak, derleme adınızın bir kısmını içerecek şekilde ayarlayın. Bu durumda, **devenv olmalıdır; UIDelayR2**.
+* Varsayılan olarak eklenen tüm gruplamaları kaldırmak için **GroupPats'ı** boş metin olarak ayarlayın.
+* **IncPats'i** mevcut işlem filtresine ek olarak derleme adının bir kısmını içerecek şekilde ayarlayın. Bu durumda, **devenv olması gerekir; UIDelayR2**.
 
-![Iş parçacığı zaman yığınları görünümünde GroupPath ve InPath ayarlama](media/perfview-tts-group-path-inc-path.png)
+![İş Parçacığı Zaman Yığınları görünümünde GroupPath ve IncPath'i ayarlama](media/perfview-tts-group-path-inc-path.png)
 
-PerfView, kodunuzda performans sorunlarını belirlemek için kullanabileceğiniz **Yardım** menüsü altında ayrıntılı rehberlik içerir. ayrıca, aşağıdaki bağlantılar kodunuzu iyileştirmek için Visual Studio iş parçacığı apı 'lerinin nasıl kullanılacağına ilişkin daha fazla bilgi sağlar:
+PerfView, Yardım **menüsünün** altında koddaki performans sorunlarını belirlemek için kullanabileceğiniz ayrıntılı kılavuza sahip. Ayrıca, aşağıdaki bağlantılar kodunuzu iyileştirmek için iş parçacığı API'Visual Studio kullanma hakkında daha fazla bilgi sağlar:
 
 * [https://github.com/Microsoft/vs-threading/blob/master/doc/index.md](https://github.com/Microsoft/vs-threading/blob/master/doc/index.md)
 * [https://github.com/Microsoft/vs-threading/blob/master/doc/cookbook_vs.md](https://github.com/Microsoft/vs-threading/blob/master/doc/cookbook_vs.md)
 
-ayrıca, etkin uzantıları yazmak için en iyi yöntemler hakkında rehberlik sağlayan uzantılar için yeni Visual Studio statik çözümleyicileri ( [burada](https://www.nuget.org/packages/microsoft.visualstudio.sdk.analyzers)NuGet paket) kullanabilirsiniz. [Vs SDK Çözümleyicileri](https://github.com/Microsoft/VSSDK-Analyzers/blob/master/doc/index.md) ve [iş parçacığı Çözümleyicileri](https://github.com/Microsoft/vs-threading/blob/master/doc/analyzers/index.md)listesini görüntüleyin.
+Ayrıca, etkili uzantılar yazmaya Visual Studio en iyi yöntemlerle ilgili rehberlik [](https://www.nuget.org/packages/microsoft.visualstudio.sdk.analyzers)sağlayan uzantılar (burada NuGet paketi) için yeni statik çözümleyicileri de kullanabilirsiniz. VS SDK [çözümleyicilerinin ve iş parçacığı](https://github.com/Microsoft/VSSDK-Analyzers/blob/master/doc/index.md) [çözümleyicilerinin listesine bakın.](https://github.com/Microsoft/vs-threading/blob/master/doc/analyzers/index.md)
 
 > [!NOTE]
-> Denetim sahibi olmayan bağımlılıklar nedeniyle yanıt verme süresini adreslemezseniz (örneğin, uzantınızın UI iş parçacığında zaman uyumlu VS hizmetlerini çağırması gerekiyorsa), bunun hakkında bilgi almak istiyoruz. Visual Studio iş ortağı programımızın bir üyesiyseniz, geliştirici destek isteği göndererek bizimle iletişim kurun. Aksi takdirde, görüşlerinizi göndermek ve başlığa eklemek için ' bir sorun bildir ' aracını kullanın `"Extension UI Delay Notifications"` . Lütfen analizlerinizin ayrıntılı bir açıklamasını da ekleyin.
+> Üzerinde denetime sahip olmadığınız bağımlılıklar nedeniyle yanıt vermemeye devam ediyorsanız (örneğin, uzantınız kullanıcı arabirimi iş parçacığında zaman uyumlu VS hizmetlerini çağırıyorsa) bunu bilmek istiyoruz. İş Ortağı programımızın bir Visual Studio, geliştirici destek isteği göndererek bizimle iletişim kurabilirsiniz. Aksi takdirde, geri bildiriminizi göndermek ve baş unvanına eklemek için 'Sorun Bildirin' `"Extension UI Delay Notifications"` aracını kullanın. Ayrıca analizinizin ayrıntılı açıklamasını da dahil edin.

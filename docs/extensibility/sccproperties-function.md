@@ -15,11 +15,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 99d83dc2cdf5dd39a6f55f39ff78a203b4ed29b0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122110000"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625982"
 ---
 # <a name="sccproperties-function"></a>SccProperties İşlevi
 Bu işlev, bir dosya veya proje için kaynak denetimi özelliklerini görüntüler.

@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl yapılır: düzenleyici pencerelerini yönetme'
-description: Kodunuzu sizin için en uygun şekilde görüntüleyebilmeniz için Windows 'u nasıl bölüştireceğinizi ve birkaç pencere açmayı öğrenin.
+title: 'Nasıl: Düzenleyici pencerelerini yönetme'
+description: Kodunuzu size en uygun şekilde görüntülemek için pencereleri bölmeyi ve aynı anda birkaç pencere açmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,45 +17,45 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 374b5417b7c19cd9e748dd1dc0e41a60eae60530
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122048927"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724929"
 ---
-# <a name="how-to-manage-editor-windows"></a>Nasıl yapılır: düzenleyici pencerelerini yönetme
+# <a name="how-to-manage-editor-windows"></a>Nasıl: Düzenleyici pencerelerini yönetme
 
-Tek seferde çeşitli konumlarda kod üzerinde çalışabilirsiniz. Bunu bir düzenleyici penceresini bölerek veya birkaç Düzenleyici penceresi örneğini açarak yapın.
+Aynı anda birden fazla konumda kod üzerinde çalışabilirsiniz. Bunu yapmak için bir düzenleyici penceresini bölebilirsiniz veya düzenleyici pencerelerinin birkaç örneğini açabilirsiniz.
 
 > [!NOTE]
-> Tüm Düzenleyici pencereleri birden çok örneği desteklemez.
+> Tüm düzenleyici pencereleri birden çok örneği desteklemez.
 
-## <a name="split-an-editor-window"></a>Bir düzenleyici penceresini bölme
+## <a name="split-an-editor-window"></a>Düzenleyici penceresini bölme
 
-Bir düzenleyici penceresinin bir örneği, daha kolay düzenleme için iki ayrı görünüme ayrılabilir.
+Düzenlemeyi kolaylaştırmak için düzenleyici penceresinin bir örneği iki ayrı görünüme ayrılabilirsiniz.
 
-### <a name="to-split-a-pane"></a>Bölmeyi bölme
+### <a name="to-split-a-pane"></a>Bölmeyi bölmek için
 
-1. Bu bileşene odaklanmak için düzenleyici penceresinin içine tıklayın.
+1. Odağı vermek için düzenleyici penceresinin içinde tıklayın.
 
-2. **Pencere** menüsünde **Böl**' ü seçin.
+2. Pencere **menüsünden** Böl'e **tıklayın.**
 
-     Düzenle alanı, bir bölücü çubukla ayrılmış iki bölmeye ayırır. Etkin belgenin farklı parçalarını aynı anda görüntülemek ve düzenlemek için bu bölmeleri bağımsız olarak kaydırabilirsiniz. Bir bölmede yapılan tüm değişiklikler diğeri de yansıtılır.
+     Düzenleme alanı, bir bölücü çubuğuyla ayrılmış iki bölmeye ayrılır. Etkin belgenin farklı bölümlerini aynı anda görüntülemek ve düzenlemek için bu bölmeleri bağımsız olarak kaydırabilirsiniz. Bir bölmede yapılan tüm değişiklikler diğer bölmeye yansıtıldı.
 
     > [!TIP]
-    > Bir bölmeyi diğerine daha büyük yapmak için, bölücü çubuğunu yukarı veya aşağı sürükleyin.
+    > Bölmelerden birini diğer bölmeden büyük yapmak için bölen çubuğu yukarı veya aşağı sürükleyin.
 
-### <a name="to-return-to-single-pane-view"></a>Tek bölmeli görünüme geri dönmek için
+### <a name="to-return-to-single-pane-view"></a>Tek bölmeli görünüme dönmek için
 
-- **Pencere** menüsünden **bölmeyi kaldır**' ı seçin.
+- Pencere **menüsünden** Bölmeyi **Kaldır'ı seçin.**
 
-## <a name="create-new-windows"></a>Yeni pencereler oluştur
+## <a name="create-new-windows"></a>Yeni pencereler oluşturma
 
-Ayrıca, bir düzenleyici penceresinin birden çok örneğini de oluşturabilirsiniz. Bu özellik, farklı bölümleri aynı anda ayrı, tam boyutlu bir düzenleyici penceresinde görüntüleyebilmeniz ve düzenleyebilmeniz için bir düzenleyicinin birden fazla örneğinde uzun bir belge açmanıza olanak tanır.
+Bir düzenleyici penceresinin birden çok örneğini de oluşturabilirsiniz. Bu özellik, farklı bölümleri ayrı, tam boyutlu düzenleyici pencerelerde aynı anda görüntüley ve düzenley için düzenleyicinin birden fazla örneğinde uzun bir belge açmana olanak sağlar.
 
-- **Pencere** menüsünde **yeni pencere**' ye tıklayın.
+- Pencere menüsünde **Yeni** **Pencere'ye tıklayın.**
 
-   Düzenleyicinin yeni bir sekmeli örneği eklendi.
+   Düzenleyicinin yeni bir sekmeli örneği eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

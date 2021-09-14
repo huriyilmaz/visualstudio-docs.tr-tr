@@ -1,6 +1,6 @@
 ---
 title: SafeControl Öğesi | Microsoft Docs
-description: Bir kullanıcının bir sitenin ASPX sayfasından erişmesi için güvenli olarak işaretlenmiş bir ASPX denetimi veya web bölümünü temsil eden SafeControl SharePoint bilgi edinin.
+description: Bir kullanıcının bir sitenin ASPX sayfasından erişmesi için güvenli olarak işaretlenmiş BIR ASPX denetimi veya web bölümünü temsil eden SafeControl SharePoint bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,11 +16,11 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: cdcd591ff2e742296a23fdf9dfa1d6324bf1e1bf
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122092832"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635574"
 ---
 # <a name="safecontrol-element"></a>SafeControl öğesi
   Herhangi bir kullanıcının sitenin herhangi bir ASPX sayfasından erişmesi için güvenli olarak belirlenen bir ASPX SharePoint temsil eder.
@@ -57,7 +57,7 @@ ms.locfileid: "122092832"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[SafeControls](../sharepoint/safecontrols-element.md)|ASPX denetimleri koleksiyonunu temsil eder ve Web Bölümleri kullanıcının SharePoint sitesinde herhangi bir ASPX sayfasına erişmesi için güvenli olarak belirlenmiştir.|
+|[SafeControls](../sharepoint/safecontrols-element.md)|ASPX denetimleri koleksiyonunu temsil eder ve Web Bölümleri kullanıcının sitenin herhangi bir ASPX sayfasından erişmesi için güvenli olarak belirlenen SharePoint temsil eder.|
 
 ## <a name="remarks"></a>Açıklamalar
  Güvenli denetimler hakkında daha fazla bilgi için [bkz. Proje öğelerinde paketleme ve dağıtım bilgileri sağlama.](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
@@ -67,9 +67,9 @@ ms.locfileid: "122092832"
 |Özellik|Değer|
 |-|-|
 |**Ad Alanı**|http: \/ \/ schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Şema adı**|SharePoint Project Öğesi Şeması|
+|**Şema adı**|SharePoint Project Öğe Şeması|
 |**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
-|**Boş olabilir**|Hayır|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)

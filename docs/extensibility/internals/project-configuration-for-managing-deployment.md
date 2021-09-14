@@ -1,6 +1,6 @@
 ---
-title: Project Dağıtım Yönetim Yapılandırması | Microsoft Docs
-description: Hata ayıklama ve yükleme için beklenen konuma dağıtım hakkında bilgi ve dağıtımı destekleyen projeleri Visual Studio iki yolu hakkında bilgi edinebilirsiniz.
+title: Project Dağıtımı yönetme yapılandırması | Microsoft Docs
+description: hata ayıklama ve yükleme için beklenen konuma dağıtım hakkında bilgi edinin ve Visual Studio dağıtımı destekleyen projeleri destekler.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,30 +15,30 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: fdd15349522c1bf49f379551825a773b676f6196
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122094652"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725027"
 ---
 # <a name="project-configuration-for-managing-deployment"></a>Dağıtımı Yönetmek için Proje Yapılandırması
-Dağıtım, çıkış öğelerini derleme sürecinden hata ayıklama ve yükleme için beklenen konuma fiziksel olarak taşıma eylemidir. Örneğin, bir Web uygulaması yerel bir makine üzerinde ve ardından sunucuya yerleştirilmiş olabilir.
+Dağıtım, çıkış öğelerini bir yapı işleminden fiziksel olarak hata ayıklama ve yükleme için beklenen konuma taşıma işlemidir. Örneğin, bir Web uygulaması yerel bir makinede oluşturulmuş ve sonra sunucuya yerleştirilebilir.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projelerin dağıtıma dahil olması için iki yolu destekler:
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , projelerin dağıtıma dahil edilebilir iki yolunu destekler:
 
-- Dağıtım işleminin konusu olarak.
+- Dağıtım sürecinin konusu.
 
-- Dağıtım işleminin yöneticisi olarak.
+- Dağıtım işleminin Yöneticisi olarak.
 
-  Çözümlerin dağıtılabilir olması için önce dağıtım seçeneklerini yapılandırmak üzere bir dağıtım projesi eklemeniz gerekir. Dağıtım projesi zaten mevcutsa, Derleme menüsünden Çözümü Dağıt'ı  seçerek veya  çözüme sağ tıklarsanız bir tane oluşturmak istediğiniz soruldu. **Evet'e** **tıklamak, Uzaktan Project** Sihirbazı projesinin seçili olduğu Yeni Uygulama **Ekle iletişim** kutusunu açar.
+  Çözümlerin dağıtılması için önce dağıtım seçeneklerini yapılandırmak üzere bir dağıtım projesi eklemeniz gerekir. Dağıtım projesi zaten yoksa, **derleme** menüsünden **Çözümü dağıt** ' ı seçtiğinizde bir tane oluşturmak isteyip istemediğiniz sorulur veya çözüme sağ tıklayın. **evet** ' i tıklatmak, **uzak dağıtım sihirbazı** projesi seçiliyken **yeni Project ekle** iletişim kutusunu açar.
 
-  Uzaktan Dağıtma Sihirbazı sizden uygulama türünü (Windows veya Web), dahil etmek istediğiniz proje çıkış gruplarını, dahil etmek istediğiniz ek dosyaları ve dağıtmak istediğiniz uzak bilgisayarı ister. Sihirbazın son sayfasında, seçilen seçeneklerin özeti görüntülenir.
+  uzak dağıtım sihirbazı sizden uygulama türü (Windows veya Web), dahil edilecek proje çıkış grupları, dahil etmek istediğiniz ek dosyalar ve dağıtmak istediğiniz uzak bilgisayar için size sorar. Sihirbazın son sayfasında, seçilen seçeneklerin bir özeti görüntülenir.
 
-  Dağıtım işleminin konusu olan projeler, alternatif bir ortama taşınmaları gereken çıkış öğeleri üretir. Bu çıkış öğeleri, projelerin çıkışları gruplatırmalarına izin vermek için birincil amacı olan <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> arabirim için parametreler olarak açıklanmıştır. uygulamasıyla ilgili daha fazla bilgi için `IVsProjectCfg2` bkz. [Project Için Yapılandırma.](../../extensibility/internals/project-configuration-for-output.md)
+  Bir dağıtım işleminin konusu olan projeler, alternatif bir ortama taşınması gereken çıkış öğeleri oluşturur. Bu çıktı öğeleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> , birincil amacı, projelerin çıkışları gruplandırılarına izin versin olan arabirim için parametreler olarak tanımlanır. uygulamasıyla ilgili daha fazla bilgi için `IVsProjectCfg2` bkz. [Project Configuration for Output](../../extensibility/internals/project-configuration-for-output.md).
 
-  Dağıtım işlemini yöneten dağıtım projeleri, Dağıt komutunu etkinleştirin ve bu komut seçildiğinde yanıt verin. Dağıtım projeleri, dağıtımı <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> gerçekleştirmek ve dağıtım durumu olaylarını rapor etmek için <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback> arabirime çağrılar yapmak için arabirimini kullanır.
+  Dağıtım işlemini yöneten dağıtım projeleri, Dağıt komutunu etkinleştirir ve bu komut seçildiğinde yanıt verir. Dağıtım projeleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> dağıtımı gerçekleştirmek için arabirimini uygular ve dağıtım <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployStatusCallback> durumu olaylarını raporlamak için arabirime çağrı yapar.
 
-  Yapılandırmalar, derleme veya dağıtım işlemlerini etkileyen bağımlılıkları belirtebilirsiniz. Derleme veya dağıtma bağımlılıkları, yapılandırmaların kendileri oluşturmadan veya dağıtmadan önce veya dağıtıldıktan sonra ya da oluşturmadan önce dağıtılması gereken projelerdir. Projeler arasındaki derleme bağımlılıkları arabirimiyle <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> açıklanmıştır ve arabirimle bağımlılıkları <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> dağıtır. Daha fazla bilgi için [bkz. Project Yapılandırma.](../../extensibility/internals/project-configuration-for-building.md)
+  Konfigürasyonlar, derleme veya dağıtım işlemlerini etkileyen bağımlılıklar belirtebilir. Yapı veya dağıtım bağımlılıkları, yapılandırmaların kendilerini oluşturup dağıtmadan önce veya sonra oluşturulması ya da dağıtılması gereken projelerdir. Projeler arasında yapı bağımlılıkları, <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> arabirimiyle tanımlanır ve arabirim ile bağımlılıkları dağıtır <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> . daha fazla bilgi için bkz. [derleme için Project yapılandırma](../../extensibility/internals/project-configuration-for-building.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılandırma Seçeneklerini Yönetme](../../extensibility/internals/managing-configuration-options.md)

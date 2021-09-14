@@ -1,6 +1,6 @@
 ---
-description: Bu belge içeriğiyle ilişkili dili alır.
-title: 'IDebugDocumentContext2:: GetLanguageInfo | Microsoft Docs'
+description: Bu belge bağlamıyla ilişkili dili alır.
+title: IDebugDocumentContext2::GetLanguageInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5aab1ae91991b630af9fa210357f8e1be3d9b81f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122079174"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635057"
 ---
 # <a name="idebugdocumentcontext2getlanguageinfo"></a>IDebugDocumentContext2::GetLanguageInfo
-Bu belge içeriğiyle ilişkili dili alır.
+Bu belge bağlamıyla ilişkili dili alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,16 +45,16 @@ int GetLanguageInfo(
 
 ## <a name="parameters"></a>Parametreler
 `pbstrLanguage`\
-dışı Bu belge bağlamındaki kodu uygulayan dilin adını döndürür.
+[out] Bu belge bağlamında kodu uygulayan dilin adını döndürür.
 
 `pguidLanguage`\
-dışı Bu belge bağlamındaki kodu uygulayan dilin GUID 'sini döndürür. Örneğin `guidVBScriptLang` veya `guidCPPLang` olabilir. Bu GUID, tarafından sağlanan dillerle sınırlı değildir [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] .
+[out] Bu belge bağlamında kodu uygulayan dilin GUID'lerini döndürür. Örneğin `guidVBScriptLang` veya `guidCPPLang` olabilir. Bu GUID, tarafından sağlanan dille sınırlı [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] değildir.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CDebugContext` [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CDebugContext` [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugContext::GetLanguageInfo(BSTR* pbstrLanguage, GUID* pguidLanguage)

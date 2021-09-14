@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b917bc14728ee1f8dd37f28bbec42e395455ee35
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122126212"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725136"
 ---
 # <a name="idebugstackframe2enumproperties"></a>IDebugStackFrame2::EnumProperties
 Yerel değişkenler gibi yığın çerçevesiyle ilişkili özellikler için bir numaralayıcı oluşturur.
@@ -59,10 +59,10 @@ int EnumProperties (
 [in] Herhangi bir sayısal bilgiyi biçimlendirmek için kullanılacak radyan.
 
 `refiid`\
-[in] Hangi filtre yapılarının numaralandır [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) bir FILTRE GUID'si, örneğin: `guidFilterLocals` .
+[in] Hangi filtre yapılarının numaralandır [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) seçmek için kullanılan bir FILTRE GUID'si, örneğin: `guidFilterLocals` .
 
 `dwTimeout`\
-[in] Bu yöntemden dönmeden önce bek için milisaniye cinsinden en uzun süre. Süresiz `INFINITE` olarak beklemek için kullanın.
+[in] Bu yöntemden dönmeden önce bek süresi (milisaniye cinsinden). Süresiz `INFINITE` olarak beklemek için kullanın.
 
 `pcelt`\
 [out] Numara verilen özelliklerin sayısını döndürür. Bu, GetCount yöntemini [çağırmayla aynıdır.](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md)
@@ -74,7 +74,7 @@ int EnumProperties (
  Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, seçilen tüm özelliklerin tek bir çağrıyla alınmasına izin verir, [sırayla GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) ve [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yöntemlerini çağırmaya göre daha hızlıdır.
+ Bu yöntem, seçilen tüm özelliklerin tek bir çağrıyla alınmasına izin verir, [sırayla GetDebugProperty](../../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) ve [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) yöntemlerini çağırmadan daha hızlıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

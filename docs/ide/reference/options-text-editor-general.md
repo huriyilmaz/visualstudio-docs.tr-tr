@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, Metin Düzenleyici, Genel
-description: Genel sayfasını kullanarak kod ve metin düzenleyicinin genel ayarlarını Visual Studio öğrenin.
+description: Kod ve metin düzenleyicisi için genel ayarları değiştirmek üzere Genel Visual Studio kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/18/2019
 ms.topic: reference
@@ -38,15 +38,15 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 7cfd0ef18f85511d23825468f1b208c34bc7e209
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122151242"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724894"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>Seçenekler iletişim kutusu: Metin Düzenleyici \> Genel
 
-Bu iletişim kutusu, uygulama kodunun ve metin düzenleyicisinin Visual Studio ayarlarını değiştirmenizi sağlar. Bu iletişim kutusunu görüntülemek için Araçlar **menüsünde Seçenekler'i** seçin, Metin Düzenleyici **klasörünü** genişletin ve ardından Genel'i **seçin.** 
+Bu iletişim kutusu, uygulama kodunun ve metin düzenleyicisinin Visual Studio ayarlarını değiştirmenizi sağlar. Bu iletişim kutusunu görüntülemek için Araçlar **menüsünde** **Seçenekler'i** seçin, Metin Düzenleyici **klasörünü** genişletin ve ardından Genel'i **seçin.**
 
 ## <a name="settings"></a>Ayarlar
 
@@ -80,7 +80,7 @@ Seçildiğinde, Ctrl tuşuna **basarak** fareye tıklarken bir öğenin üzerine
 
 ### <a name="selection-margin"></a>Seçim kenar boşluğu
 
-Seçildiğinde, düzenleyicinin metin alanı sol kenarı boyunca dikey bir kenar boşluğu görüntüler. Bir metin satırın tamamını seçmek için bu kenar boşluğuna tıklar veya tıklar ve sürükleyerek ardışık metin satırları seçersiniz.
+Seçildiğinde, düzenleyicinin metin alanı sol kenarı boyunca dikey kenar boşluğu görüntüler. Bir metin satırın tamamını seçmek için bu kenar boşluğuna tıklar veya tıklar ve sürükleyerek ardışık metin satırları seçersiniz.
 
 |Seçim Kenar Boşluğu açık|Seçim Kenar Boşluğu kapalı|
 | - | - |

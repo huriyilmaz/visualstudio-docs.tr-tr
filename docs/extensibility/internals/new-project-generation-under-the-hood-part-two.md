@@ -14,23 +14,23 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 56e1fa13846525221ec96dca3a8b744590e1dc8d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122042263"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626078"
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>Yeni Proje Oluşturma: Arka Plan, 2. Bölüm
 
-New [Project Generation: Under the Hood, Part One](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) bölümünde New **Project** iletişim kutusunun nasıl dolduruldu olduğunu gördük. Bir **Visual C#** Windows Uygulaması seçtiğinizi, Ad ve Konum  metin  kutularını doldurarak Tamam'a tıklamış olduğunu varsayalım.
+New [Project Generation: Under the Hood, Part One](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) bölümünde New **Project** iletişim kutusunun nasıl dolduruldu olduğunu gördük. **Bir Visual C#** Windows Uygulaması seçtiğinizi, Ad ve Konum  metin  kutularını doldurarak Tamam'a tıklamış olduğunu varsayalım.
 
 ## <a name="generating-the-solution-files"></a>Çözüm Dosyalarını Oluşturma
  Bir uygulama şablonu seçmek, sıkıştırmasını açıp ilgili .vstemplate dosyasını açmaya ve bu dosyada XML komutlarını yorumlamak için bir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] şablon başlatmaya yönlendiriyor. Bu komutlar yeni veya mevcut çözümde projeler ve proje öğeleri oluşturun.
 
- Şablon, .vstemplate dosyasını tutan aynı .zip klasördeki öğe şablonları olarak adlandırılan kaynak dosyaları paketinden çıkartır. Şablon, bu dosyaları uygun şekilde özelleştirerek yeni projeye kopyalar.
+ Şablon, .vstemplate dosyasını tutan aynı .zip klasördeki öğe şablonları olarak adlandırılan kaynak dosyaları paketinden çıkartır. Şablon, bu dosyaları yeni projeye kopyalar ve uygun şekilde özelleştirilebilir.
 
 ### <a name="template-parameter-replacement"></a>Şablon Parametresi Değiştirme
- Şablon bir öğe şablonunu yeni bir projeye kopyalarsa, dosyayı özelleştirmek için şablon parametrelerini dizelerle değiştirir. Şablon parametresi, önünde ve ardından dolar işareti gelen özel bir belirteçtir ( örneğin, $date$ ).
+ Şablon yeni bir projeye bir öğe şablonu kopyalasa, dosyayı özelleştirmek için şablon parametrelerini dizelerle değiştirir. Şablon parametresi, önünde ve ardından dolar işareti gelen özel bir belirteçtir ( örneğin, $date$ ).
 
  Şimdi tipik bir proje öğesi şablonuna bakalım. Program Files\Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip klasöründeki Program.cs'yi ayık Microsoft Visual Studio 8\Common7\IDE\ProjectTemplates\CSharp\Windows\1033\WindowsApplication.zip.
 
@@ -114,13 +114,13 @@ namespace Simple
 </TemplateContent>
 ```
 
- Etiket \<Project> bir projenin neslini, etiket ise \<ProjectItem> proje öğesinin neslini kontrol eder. ReplaceParameters parametresi true ise şablon, proje dosyasındaki veya öğede tüm şablon parametrelerini özeller. Bu durumda, Ayarlar.settings dışındaki tüm proje öğeleri özelleştirilebilir.
+ Etiket \<Project> bir projenin neslini, etiket ise \<ProjectItem> proje öğesinin neslini kontrol eder. ReplaceParameters parametresi true ise şablon, proje dosyasındaki veya öğede tüm şablon parametrelerini özeller. Bu durumda, Ayarlar.settings dışında tüm proje öğeleri özelleştirilebilir.
 
- TargetFileName parametresi, sonuçta elde edilen proje dosyasının veya öğenin adını ve göreli yolunu belirtir. Bu, projeniz için bir klasör yapısı oluşturmanıza olanak sağlar. Bu bağımsız değişkeni belirtmezseniz, proje öğesi proje öğesi şablonuyla aynı adı verir.
+ TargetFileName parametresi, sonuçta elde edilen proje dosyasının veya öğenin adını ve göreli yolunu belirtir. Bu, projeniz için bir klasör yapısı oluşturmanıza olanak sağlar. Bu bağımsız değişkeni belirtmezseniz proje öğesi, proje öğesi şablonuyla aynı adla aynı adı verir.
 
  Elde edilen Windows klasör yapısı şöyle görünür:
 
- ![Visual Studio Çözüm Gezgini'Windows 'Basit' Çözüm için uygulama klasör yapısının ekran Visual Studio Çözüm Gezgini.](../../extensibility/internals/media/simplesolution.png)
+ ![Windows 'Simple' Çözümü için uygulama klasör yapısının ekran Visual Studio Çözüm Gezgini.](../../extensibility/internals/media/simplesolution.png)
 
  Şablonda ilk \<Project> ve tek etiket şu şekildedir:
 
@@ -131,7 +131,7 @@ namespace Simple
  Bu, Windowsapplication.csproj şablon öğesini kopyalayıp özelleştirerek New Project şablonuna Simple.csproj proje dosyasını oluşturması talimatı sağlar.
 
 ### <a name="designers-and-references"></a>Tasarımcılar ve Başvurular
- Özellikler klasörünün mevcut Çözüm Gezgini beklenen dosyaları içerdiğini, bu klasördeki dosyaları görebilir. Peki Resources.Designer.cs'den Resources.resx'e ve Form1.Designer.cs'den Form1.cs'ye proje başvuruları ve tasarımcı dosyası bağımlılıkları ne olacak?  Bunlar, üretilen Simple.csproj dosyasında ayarlanır.
+ Özellikler klasörünün mevcut Çözüm Gezgini beklenen dosyaları içerdiğini, bu klasördeki dosyaları da görebilir. Peki Resources.Designer.cs'den Resources.resx'e ve Form1.Designer.cs'den Form1.cs'ye proje başvuruları ve tasarımcı dosyası bağımlılıkları ne olacak?  Bunlar, üretilen Simple.csproj dosyasında ayarlanır.
 
  Proje başvurularını \<ItemGroup> oluşturan Simple.csproj'dan aşağıdakiler yer almaktadır:
 

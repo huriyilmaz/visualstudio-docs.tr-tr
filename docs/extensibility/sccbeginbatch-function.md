@@ -1,6 +1,6 @@
 ---
 description: Bu işlev, kaynak denetimi işlemlerinin toplu dizisini başlatır.
-title: SccBeginBatch İşlevi | Microsoft Docs
+title: SccBeginBatch İşlev | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,11 +15,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: fc1d78840915899181046d3e1bfb19d554751c1a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122144606"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625995"
 ---
 # <a name="sccbeginbatch-function"></a>SccBeginBatch işlevi
 Bu işlev, kaynak denetimi işlemlerinin toplu dizisini başlatır. Toplu [işi sona erdirecek SccEndBatch](../extensibility/sccendbatch-function.md) çağrılır. Bu toplu işler iç içe geçmiş olabilir.
@@ -44,7 +44,7 @@ SCCRTN SccBeginBatch(void);
 ## <a name="remarks"></a>Açıklamalar
  Kaynak denetimi toplu işleri, aynı işlemleri birden çok proje veya birden çok bağlam üzerinde yürütmek için kullanılır. Toplu işlem sırasında kullanıcı deneyiminden proje başına yedekli iletişim kutularını ortadan kaldırmak için toplu işler kullanılabilir. işlevi `SccBeginBatch` ve [SccEndBatch,](../extensibility/sccendbatch-function.md) bir işlem başlangıcını ve sonunu göstermek için işlev çifti olarak kullanılır. Bunlar iç içe olamaz. `SccBeginBatch` , toplu işlem devam ediyor olduğunu belirten bir bayrak ayarlar.
 
- Toplu işlem geçerliyken, kaynak denetim eklentisi kullanıcıya herhangi bir soru için en fazla bir iletişim kutusu sunmalıdır ve sonraki tüm işlemlere bu iletişim kutusundan gelen yanıtı uygulamalıdır.
+ Toplu işlem geçerliyken, kaynak denetimi eklentisi kullanıcıya herhangi bir soru için en fazla bir iletişim kutusu sunmalıdır ve sonraki tüm işlemlere bu iletişim kutusundan gelen yanıtı uygulamalı.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)

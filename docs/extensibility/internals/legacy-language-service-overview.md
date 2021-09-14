@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: d129e02dec3770a1a2288c68ff99d6b6ac2cf0a4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122042276"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725051"
 ---
 # <a name="legacy-language-service-overview"></a>Eski Dil Hizmetine Genel Bakış
 Dil hizmeti, belirli özellikleri uygulamanıza olanak sağlayan düzenleyici desteği sağlar [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Yönetilen paket çerçevesi (MPF) dil hizmeti sınıfları, sık kullanılan özellikler ve diğer özellikler için kısmi destek için tam destek sağlar.

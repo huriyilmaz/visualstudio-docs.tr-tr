@@ -1,6 +1,6 @@
 ---
 description: Yok edilecek özelliği alır.
-title: IDebugPropertyDestroyEvent2::GetDebugProperty | Microsoft Docs
+title: 'IDebugPropertyDestroyEvent2:: GetDebugProperty | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f5fa08ed66dbdc2bcf6f1f1a7f58918fb13d9e23
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122087684"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725173"
 ---
 # <a name="idebugpropertydestroyevent2getdebugproperty"></a>IDebugPropertyDestroyEvent2::GetDebugProperty
 Yok edilecek özelliği alır.
@@ -43,10 +43,10 @@ int GetDebugProperty (
 
 ## <a name="parameters"></a>Parametreler
 `ppProperty`\
-[out] Yok edilecek [özelliği temsil eden bir IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
+dışı Yok edilecek özelliği temsil eden bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugPropertyDestroyEvent2](../../../extensibility/debugger/reference/idebugpropertydestroyevent2.md)

@@ -16,11 +16,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: be01acb11c9f3314a12383acafce465bfad5603c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122102837"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626330"
 ---
 # <a name="visual-studio-debugging-samples"></a>Visual Studio hata ayıklama örnekleri
 iki örnek kullanarak Visual Studio hata ayıklayıcının nasıl uzatıleceği gösterilmektedir [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] .

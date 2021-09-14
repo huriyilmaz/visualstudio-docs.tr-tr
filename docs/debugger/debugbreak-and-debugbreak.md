@@ -1,6 +1,6 @@
 ---
 title: DebugBreak ve __debugbreak | Microsoft Docs
-description: Programda kesme noktası ayarlanmış gibi, debugBreak işlevinin ve __debugbreak işlevinin programda kesintiye neden olmasına nasıl neden olduğunu öğrenin.
+description: DebugBreak işlevini ve bir kesme noktasının ayarlanmış olduğu gibi, programınızın kesintiye neden olması için __debugbreak iç öğesini nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -23,19 +23,19 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 707c660b658a4f1c34ab0faf345ff64c5063dc8f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052160"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626510"
 ---
 # <a name="debugbreak-and-__debugbreak"></a>DebugBreak ve __debugbreak
-[DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) Win32 işlevini veya [__debugbreak](/cpp/intrinsics/debugbreak) herhangi bir noktada iç işlevini çağırabilirsiniz. `DebugBreak` ve `__debugbreak` bu konumda bir kesme noktası ayarlamayla aynı etkiye sahiptir.
+Kodunuzda herhangi bir noktada [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) Win32 işlevini veya [__debugbreak](/cpp/intrinsics/debugbreak) iç öğesini çağırabilirsiniz. `DebugBreak` ve `__debugbreak` Bu konumda bir kesme noktası ayarlamaya aynı etkiye sahiptir.
 
- bir sistem işlevine yapılan bir çağrı olduğundan, hata ayıklama sonrasında doğru çağrı yığını bilgisinin görüntülendiğinden emin olmak için `DebugBreak` sistem hata ayıklama sembolleri yükleniyor. Aksi takdirde, hata ayıklayıcı tarafından görüntülenen çağrı yığını bilgileri tek bir kareyle kapalı olabilir. `__debugbreak`kullanıyorsanız, semboller gerekli değildir.
+ `DebugBreak`Bir sistem işlevine yapılan bir çağrı olduğundan, doğru çağrı yığını bilgilerinin koparmadan sonra görüntülendiğinden emin olmak için sistem hata ayıklama simgelerinin yüklenmesi gerekir. Aksi takdirde, hata ayıklayıcı tarafından görünen çağrı yığını bilgileri bir çerçeve tarafından kapalı olabilir. Kullanıyorsanız `__debugbreak` , semboller gerekli değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Derleyici IçLeri](/cpp/intrinsics/compiler-intrinsics)
-- [Hata Ayıklayıcı Güvenliği](../debugger/debugger-security.md)
+- [Derleyici Iç bilgileri](/cpp/intrinsics/compiler-intrinsics)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)
 - [Simge (.pdb) ve Kaynak Dosyaları Belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

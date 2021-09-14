@@ -19,17 +19,17 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 9c56614d835da1f03c4ef44f01be8ec0493dd6b1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117156"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625826"
 ---
 # <a name="references-page-project-designer-visual-basic"></a>Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)
 
-Projenize **başvuruları,** web **başvurularını ve Project** ad alanlarını yönetmek için Project Tasarımcısı'nın Başvurular sayfasını kullanın. Projeler COM bileşenlerine, XML web hizmetlerine, .NET kitaplıklarına veya derlemelerine veya diğer sınıf kitaplıklarına başvurular içerebilir. Başvuruları kullanma hakkında daha fazla bilgi için [bkz. Projedeki başvuruları yönetme.](../../ide/managing-references-in-a-project.md)
+Projenize **başvuruları,** web **başvurularını ve Project** ad alanlarını yönetmek için Project Tasarımcısı'nın Başvurular sayfasını kullanın. Projeler COM bileşenlerine, XML web hizmetlerine, .NET kitaplıklarına veya derlemelere veya diğer sınıf kitaplıklarına başvurular içerebilir. Başvuruları kullanma hakkında daha fazla bilgi için [bkz. Projedeki başvuruları yönetme.](../../ide/managing-references-in-a-project.md)
 
-Başvurular **sayfasına erişmek** için, içinde bir proje düğümü **(Çözüm** düğümü değil) **Çözüm Gezgini.** Ardından menü **Project** **, Özellikler'i** seçin. Project Tasarımcısı göründüğünde Başvurular **sekmesine** tıklayın.
+Başvurular **sayfasına erişmek** için, içinde bir proje düğümü **(Çözüm** düğümü değil) **Çözüm Gezgini.** Ardından **menü Project** **, Özellikler'i** seçin. Project Tasarımcısı göründüğünde Başvurular **sekmesine** tıklayın.
 
 ## <a name="uielement-list"></a>UIElement Listesi
 
@@ -42,7 +42,7 @@ Başvuru Yolları iletişim kutusuna **erişmek için bu düğmeye** tıklayın.
 > [!NOTE]
 > Proje sistemi bir derleme başvurusu bulduğunda, sistem aşağıdaki konumlara bakarak başvuruya aşağıdaki sırayla çözümlemektedir:
 >
-> 1. Proje klasörü. Proje klasör dosyaları, **Çözüm Gezgini** Dosyaları **Göster'in etkili** olmadığını gösterir.
+> 1. Proje klasörü. Proje klasörü dosyaları, **Çözüm Gezgini** Dosyaları **Göster'in etkili** olmadığını gösterir.
 > 2. Başvuru Yolları iletişim kutusunda **belirtilen klasörler.**
 > 3. Başvuru Ekle iletişim kutusunda **dosyaları görüntü alan** klasörler.
 > 4. Projenin obj klasörü. (Projenize com başvurusu eklerken, projenin obj klasörüne bir veya daha fazla derleme eklenebilir.)
@@ -69,7 +69,7 @@ Başvurular listesinden bir web **başvurusu seçin** ve güncelleştirmek için
 
  **İçeri aktarılan ad alanları**
 
-Bu kutuya kendi ad alanınızı yazarak Kullanıcı İçeri **Aktarma** Ekle'ye tıklar ve ad alanları listesine ekleyebilirsiniz.
+Bu kutuya kendi ad alanınızı yazarak Kullanıcı İçeri Aktarma **Ekle'ye** tıklar ve ad alanları listesine ekleyebilirsiniz.
 
 Kullanıcı tarafından içe aktarılan ad alanları için diğer adlar oluşturabilirsiniz. Bunu yapmak için diğer adı ve ad alanını diğer ad alanı *biçiminde* = *girin.* Bu, uzun ad alanları kullanıyorsanız kullanışlıdır, örneğin: `Http= MyOrg.ObjectLib.Internet.WebRequestMethods.Http` .
 
@@ -85,7 +85,7 @@ Bu listede kullanılabilir tüm ad alanları görüntülenir. Projenize dahil ed
 
 Ad alanları listesinde kullanıcı tarafından belirtilen bir ad alanı seçin, İçeri aktarılan  ad alanları kutusuna ad alanını değiştirmek istediğiniz adı yazın ve ardından bu düğmeye tıklayarak yeni ad alanına değiştirin. Düğme yalnızca seçilen ad alanı, Kullanıcı İçeri Aktarma Ekle düğmesini kullanarak listeye eklenen ad **alanı olduğunda etkindir.** Şunları eklemek için:
 
-- Sınıflar veya ad alanları, <xref:System.Math?displayProperty=fullName> örneğin.
+- Sınıflar veya gibi ad <xref:System.Math?displayProperty=fullName> alanları.
 
 - Gibi diğer adla içeri `VB=Microsoft.VisualBasic` aktarmalar.
 

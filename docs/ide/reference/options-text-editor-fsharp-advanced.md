@@ -13,11 +13,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 ms.openlocfilehash: 8849e7d3eb3acf1b30fff2cb44b21ad0b8cbd254
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122062270"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724907"
 ---
 # <a name="options-text-editor-f-advanced"></a>Seçenekler, Metin Düzenleyici, F#, Gelişmiş
 
@@ -25,7 +25,7 @@ F# **için** bazı metin düzenleyici ayarlarını değiştirmek üzere Gelişmi
 
 ## <a name="block-structure-guides"></a>Blok Yapısı Kılavuzları
 
-Seçildiğinde düzenleyicide, tek tek kod bloklarını kolayca tanımlamanıza olanak sağlayan yapılandırılmış kod blokları ile birlikte dikey çizgiler görünür.
+Seçildiğinde düzenleyicide dikey çizgiler, tek tek kod bloklarını kolayca tanımlamanıza olanak sağlayan yapılandırılmış kod blokları ile birlikte görünür.
 
 ## <a name="outlining"></a>Anahat Oluşturma
 

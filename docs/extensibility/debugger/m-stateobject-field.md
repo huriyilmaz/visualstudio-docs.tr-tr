@@ -1,6 +1,6 @@
 ---
-description: Eylemin kullanabileceği verileri temsil eden bir nesne.
-title: m_stateObject Alanı | Microsoft Docs
+description: Eylemin kullanacağı verileri temsil eden nesne.
+title: m_stateObject alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,20 +13,20 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: fad86acc86043e58bfa68f0cf8687b7c439b7ad6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122160354"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635238"
 ---
 # <a name="m_stateobject-field"></a>m_stateObject alanı
-Eylemin kullanabileceği verileri temsil eden bir nesne.
+Eylemin kullanacağı verileri temsil eden nesne.
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Derleme:** mscorlib *(mscorlib.dll*)
+ **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
+ bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ Eylemin kullanabileceği verileri temsil eden bir nesne.
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- Bu, `state` oluşturucuda <xref:System.Threading.Tasks.Task.%23ctor%2A> parametresidir. Ayrıca özelliği için de destek <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=fullName> alanıdır.
+ Bu, `state` <xref:System.Threading.Tasks.Task.%23ctor%2A> kurucudaki parametredir. Ayrıca, özelliği için de yedekleme alanıdır <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=fullName> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Görev sınıfı](../../extensibility/debugger/task-class-internal-members.md)

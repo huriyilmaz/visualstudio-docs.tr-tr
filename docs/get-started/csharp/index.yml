@@ -14,12 +14,12 @@ metadata:
   ms.technology: vs-acquisition
   dev_langs:
   - CSharp
-  ms.openlocfilehash: 342397ce1074d988dbe4347d78828906bdae3d01b69a6dd325a507b81f0a8928
-  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+  ms.openlocfilehash: ff25c69e47d8345fb44713e24eeed03cb7d5ff69
+  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/12/2021
-  ms.locfileid: "121400419"
+  ms.lasthandoff: 09/13/2021
+  ms.locfileid: "126724935"
 landingContent:
 - title: Kullanmaya başlayın
   linkLists:

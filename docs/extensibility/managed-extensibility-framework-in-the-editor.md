@@ -1,6 +1,6 @@
 ---
 title: Managed Extensibility Framework Düzenleyicisi'nde | Microsoft Docs
-description: Visual Studio SDK Managed Extensibility Framework da düzenleyiciyi genişletmek için kendi bileşenlerinizi oluşturmanızı sağlayan Visual Studio öğrenin.
+description: Managed Extensibility Framework SDK'da düzenleyiciyi genişletmek için kendi bileşenlerinizi oluşturmanızı sağlayan Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 52492e48ed9b5e2150f31c18ac07f66e45486054
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122102317"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724968"
 ---
 # <a name="managed-extensibility-framework-in-the-editor"></a>Managed Extensibility Framework düzenleyicide
 Düzenleyici, Managed Extensibility Framework (MEF) bileşenleri kullanılarak oluşur. Düzenleyiciyi genişletmek için kendi MEF bileşenlerinizi de derlemeniz gerekir ve kodunuz düzenleyici bileşenlerini de tüketir.
@@ -37,12 +37,12 @@ Düzenleyici, Managed Extensibility Framework (MEF) bileşenleri kullanılarak o
 
 - Başka bir bileşen tarafından tüketilme
 
-  Örneğin, bir ambar envanter bileşeni tarafından sağlanan ürün kullanılabilirlik verilerine bağlı olan bir sipariş girişi bileşenine sahip olan bir alışveriş uygulamasını düşünün. MEF açısından, envanter bölümü ürün *kullanılabilirlik* verilerini dışarı aktarabilirsiniz ve sipariş girişi bölümü verileri *içeri* aktarabilirsiniz. Sipariş girişi bölümü ve envanter bölümü birbirini bilmek zorunda değildir; bileşim *kapsayıcısı* (konak uygulama tarafından sağlanır) dışarı aktarma kümelerinin korunmasından ve dışarı aktarmaların ve içeri aktarmaların çözümden sorumludur.
+  Örneğin, bir ambar envanter bileşeni tarafından sağlanan ürün kullanılabilirlik verilerine bağlı olan bir sipariş girişi bileşenine sahip olan bir alışveriş uygulamasını düşünün. MEF açısından, envanter bölümü ürün *kullanılabilirlik* verilerini dışarı aktarabilirsiniz ve sipariş girişi bölümü verileri *içeri* aktarabilirsiniz. Sipariş girişi bölümü ve stok bölümü birbirini bilmek zorunda değildir; bileşim *kapsayıcısı* (konak uygulama tarafından sağlanır) dışarı aktarma kümelerinin korunmasından ve dışarı aktarmaların ve içeri aktarmaların çözümden sorumludur.
 
-  Oluşturma <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> kapsayıcısı, genellikle ana bilgisayar tarafından aittir. Bileşim kapsayıcısı, dışarı *aktaran bileşen* parçalarının kataloğunu sağlar.
+  Oluşturma kapsayıcısı <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> , genellikle ana bilgisayar tarafından aittir. Bileşim kapsayıcısı, dışarı *aktaran bileşen* parçalarının kataloğunu sağlar.
 
 ### <a name="export-and-import-component-parts"></a>Bileşen parçalarını dışarı ve içeri aktarma
- Genel sınıf olarak veya bir sınıfın genel üyesi (özellik veya yöntem) olarak uygulanmış olduğu sürece, herhangi bir işlevi dışarı aktarabilirsiniz. bileşeni parçanızı 'den türetmek zorunda <xref:System.ComponentModel.Composition.Primitives.ComposablePart> değildir. Bunun yerine, dışarı <xref:System.ComponentModel.Composition.ExportAttribute> aktarmayı istediğiniz sınıf veya sınıf üyesine bir öznitelik eklemeniz gerekir. Bu öznitelik, başka *bir bileşen* parçasının işlevselliğinizi içeri aktarama sözleşmesini belirtir.
+ Genel sınıf olarak veya bir sınıfın genel üyesi (özellik veya yöntem) olarak uygulanmış olduğu sürece, herhangi bir işlevi dışarı aktarabilirsiniz. bileşeni parçanızı 'den türetmeniz gerek <xref:System.ComponentModel.Composition.Primitives.ComposablePart> değildir. Bunun yerine, dışarı <xref:System.ComponentModel.Composition.ExportAttribute> aktarmayı istediğiniz sınıf veya sınıf üyesine bir öznitelik eklemeniz gerekir. Bu öznitelik, başka *bir bileşen* parçasının işlevselliğinizi içeri aktarama sözleşmesini belirtir.
 
 ### <a name="the-export-contract"></a>Dışarı aktarma sözleşmesi
  <xref:System.ComponentModel.Composition.ExportAttribute>, dışarı aktaran varlığı (sınıf, arabirim veya yapı) tanımlar. Genellikle, dışarı aktarma özniteliği dışarı aktarma türünü belirten bir parametre alır.

@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl kullanılır: Belge VerileriNe Görünümler Ekleme | Microsoft Docs'
-description: Mevcut bir belge veri nesnesine yeni bir belge görünümü ekleyebilirsiniz. Görünümü eklip ekleyemey olup olmadığını belirlemek için bu yordamı kullanın.
+description: Mevcut bir belge veri nesnesine yeni bir belge görünümü ekleyebilirsiniz. Görünümü ekp ekley olup olmadığını belirlemek için bu yordamı kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4171f80f3dc63fb00a64fc99c3620771ea8c48c4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122124990"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626271"
 ---
 # <a name="how-to-attach-views-to-document-data"></a>Nasıl kullanılır: Belge verilerine görünüm ekleme
 Yeni bir belge görünümünüz varsa, bunu mevcut bir belge veri nesnesine ekleyebilirsiniz.
@@ -43,7 +43,7 @@ Yeni bir belge görünümünüz varsa, bunu mevcut bir belge veri nesnesine ekle
    > Mevcut bir belge veri nesnesiyle çalışıp çalışılamayacaklarını belirlemek için, özel uygulamanıza yönelik gerçek sınıfına bir işaretçi atarak arabirim uygulamasına yönelik özel [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] bilgileri de kullanabilirsiniz. Örneğin, tüm standart düzenleyiciler ' den `IVsPersistFileFormat` devralan 'i <xref:Microsoft.VisualStudio.OLE.Interop.IPersist> uygulama. Bu nedenle, için çağrısı da kullanabilirsiniz ve mevcut belge veri nesnesinde sınıf kimliği, uygulamanın sınıf kimliğiyle eşlese, belge veri `QueryInterface` <xref:Microsoft.VisualStudio.OLE.Interop.IPersist.GetClassID%2A> nesnesiyle çalışabilirsiniz.
 
 ## <a name="robust-programming"></a>Güçlü programlama
- Bu Visual Studio yönteminin uygulamanıza çağrılsa, varsa parametresinde var olan belge veri nesnesine bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> `punkDocDataExisting` işaretçi geri iletir. Belge veri nesnesinin düzenleyicinize uygun olup olmadığını belirlemek için bu konudaki yordamın 4. adımını `punkDocDataExisting` incelenin. Uygunsa, düzenleyici fabrikanız Birden çok belge görünümünü destek altında özetlenen şekilde veriler için ikinci [bir görünüm sağlay seçmelidir.](../extensibility/supporting-multiple-document-views.md) Yoksa, uygun bir hata iletisi görüntülemesi gerekir.
+ Bu Visual Studio yöntemini uygulamanıza çağrılsa, varsa parametresinde var olan belge veri nesnesine bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> `punkDocDataExisting` işaretçi geri iletir. Belge veri nesnesinin düzenleyiciniz için uygun olup olmadığını belirlemek için bu konudaki `punkDocDataExisting` yordamın 4. adımını incelenin. Uygunsa düzenleyici fabrikanız, Birden çok belge görünümünü destek altında açıklanan şekilde veriler için ikinci [bir görünüm sağlay seçmelidir.](../extensibility/supporting-multiple-document-views.md) Yoksa, uygun bir hata iletisi görüntülemesi gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Birden çok belge görünümlerini destekleme](../extensibility/supporting-multiple-document-views.md)

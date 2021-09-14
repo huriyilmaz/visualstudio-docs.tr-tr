@@ -15,11 +15,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 535dfe4126bd1dbeeca69a89f1bd4df86df7ea98
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122086943"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626204"
 ---
 # <a name="ide-guids"></a>IDE GUID’leri
 

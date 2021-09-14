@@ -14,18 +14,18 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8b3cd5951b0ffe8a933c2920dfc1a7e107c5bf6f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122063596"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626180"
 ---
 # <a name="contribute-to-the-automation-model"></a>Otomasyon modeline katkıda bulunun
 Visual Studio ortamı özelleştirmek için bir dizi otomasyon arabirimi sağlar. Otomasyon modeli, son kullanıcıların yeni eklentiler ve uzantılar oluşturmalarını Visual Studio nesne modelidir.
 
- Ayrıca, vsPackage geliştiricisi olarak otomasyon modeline katkıda bulunmak sizin için uygundur; Bunu yaparak, VSPackage'nizin son kullanıcılarının eklenti oluşturmalarını ve vsPackage'larınızı 'de kullandıklarında genellikle tutarlı bir kullanıcı modeli deneyimi sağlamalarını [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sağlarsiniz.
+ Ayrıca, vsPackage geliştiricisi olarak otomasyon modeline katkıda bulunmak sizin için uygundur; Bunu yaparak, VSPackage'nizin son kullanıcılarının eklenti oluşturmalarını ve vsPackage'larınızı 'de kullandıklarında genellikle tutarlı bir kullanıcı modeli deneyimi sağlamalarını [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sağlar.
 
- Son kullanıcı deneyimini tutarlı hale gelecek şekilde, VSPackage'nızı tasarlarken VSPackage'nizin otomasyon modelinin'de fikirleri izlemesi için bir dizi yönergeleri takip [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] edin.
+ Son kullanıcı deneyimini tutarlı hale gelecek şekilde, VSPackage'nızı tasarlarken VSPackage'nizin otomasyon modelinin 'de fikirleri takip edecek şekilde bir dizi yönergeleri takip [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] edin.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [Otomasyon modeline genel bakış](../../extensibility/internals/automation-model-overview.md)
@@ -50,11 +50,11 @@ Visual Studio ortamı özelleştirmek için bir dizi otomasyon arabirimi sağlar
 
 - [Seçenek sayfaları için otomasyon desteği](../../extensibility/internals/automation-support-for-options-pages.md)
 
- Nesneyi genişleterek VsPackage'ın araç menüsündeki özel Seçenekler  iletişim kutusunun özelliklerini  desteklemek için bir otomasyon nesnesinin nasıl geri getirilebileceklerini `DTE.Properties` açıklar.
+ Nesneyi genişleterek VsPackage'ın araç menüsündeki özel Seçenekler  iletişim kutusunun özelliklerini  desteklemek için bir otomasyon nesnesinin nasıl geri getirileceni `DTE.Properties` açıklar.
 
 - [Kod için otomasyon sağlama](../../extensibility/internals/providing-automation-for-code.md)
 
- Kodunuz için otomasyon modeli oluşturmanın gerekli olmadığını açıklar. Ancak bu konu başlığında kod modelleri hakkında içgörü sağlayan bir bağlantı verilmektedir.
+ Kodunuz için otomasyon modeli oluşturmanın gerekli olmadığını açıklar. Ancak, bu konu başlığında kod modelleri hakkında içgörü sağlayan bir bağlantı verilmektedir.
 
 - [Nasıl Windows: Windows](../../extensibility/internals/how-to-provide-automation-for-windows.md)
 

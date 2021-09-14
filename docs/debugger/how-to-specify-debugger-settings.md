@@ -23,11 +23,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 798b87e358af7217b9d1b376f256b860e8215e57
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154128"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635321"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Nasıl Yapılır: Hata Ayıklama Ayarlarını Belirtme
 'de, değişkenlerin nasıl görüntülendiğinden, belirli uyarıların sunup görüntülenmeyeceğini, kesme noktaların nasıl ayarlayıcısının ve hata ayıklamanın çalışan programları nasıl etkilediği gibi çeşitli hata ayıklayıcı davranışı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ayarlarını belirtebilirsiniz. Seçenekler iletişim kutusunda hata ayıklayıcı **ayarlarını** belirtirsiniz.
@@ -36,7 +36,7 @@ ms.locfileid: "122154128"
 
 1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
-2. Seçenekler **iletişim** kutusunda Hata ayıklama **klasörünü** açın.
+2. Seçenekler **iletişim** kutusunda Hata Ayıklama **klasörünü** açın.
 
 3. Hata **ayıklama klasöründe** istediğiniz seçeneklerin kategorisini seçin.
 
@@ -47,5 +47,5 @@ ms.locfileid: "122154128"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Genel, Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/general-debugging-options-dialog-box.md)
 - [Düzenle ve Devam, Hata Ayıklama, Seçenekler İletişim Kutusu](./edit-and-continue.md)
-- [Hata ayıklayıcısı Ayarlar hazırlama](../debugger/debugger-settings-and-preparation.md)
+- [Hata Ayıklayıcısı Ayarlar Hazırlama](../debugger/debugger-settings-and-preparation.md)
 - [Derleme Komutları ve Özellikleri için Ortak Makrolar](/cpp/build/reference/common-macros-for-build-commands-and-properties)

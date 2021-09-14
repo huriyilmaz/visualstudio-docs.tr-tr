@@ -1,6 +1,6 @@
 ---
-title: Visual Studio çalışma alanları ve dil Hizmetleri | Microsoft Docs
-description: Dil hizmetlerinin, çözümler ve projelerle çalışırken kullandıkları aynı zengin dil özelliklerine sahip açık klasör kullanıcılarını nasıl sağlayabilecekleri hakkında bilgi edinin.
+title: Visual Studio |'daki çalışma alanları ve dil hizmetleri Microsoft Docs
+description: Dil hizmetlerinin Açık Klasör kullanıcılarına çözüm ve projelerle çalışırken kullanılan zengin dil özelliklerinin aynısını nasıl sağlay olduklarını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/21/2018
 ms.topic: conceptual
@@ -9,57 +9,57 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: ccf64a52ec4a832fc6e73290fe1deaff3ed4db0de4cf442d2d6da3ecb65e5746
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 815cfb9e17fed38b519719010acd997f7fdc5242
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121400458"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724945"
 ---
-# <a name="workspaces-and-language-services"></a>Çalışma alanları ve dil Hizmetleri
+# <a name="workspaces-and-language-services"></a>Çalışma alanları ve dil hizmetleri
 
-Dil Hizmetleri, çözüm ve projelerle çalışırken kullandıkları aynı zengin dil özelliklerine sahip kullanıcılar için [açık klasör](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) sağlayabilir. Bir dil hizmeti, açık bir belgenin dosya uzantısına veya içeriğine göre kendi kendini etkinleştirebilir ve bu "gevşek dosya" dil hizmeti söz dizimi vurgulaması ile sınırlıdır. Kaynak kodu düzenlenirken/gözden geçirirken daha zengin bir deneyim sağlamak için ek bilgiler gereklidir. Her dil hizmetinin, bir belge için bu ekstra bağlamsal verilerle başlatmak üzere kendi API 'SI vardır. Bu genellikle hem dil hizmetine hem de yapı sistemine sıkı bir şekilde bağlanmış bir proje sistemi tarafından yönetilir.
+Dil hizmetleri, [Açık Klasör kullanıcılarına](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) çözüm ve projelerle çalışırken kullanılan zengin dil özelliklerinin aynısını sağlar. Bu "gevşek dosya" dil hizmeti söz dizimi vurgulama ile sınırlı olsa da dil hizmeti, dosya uzantısına veya açık bir belgenin içeriğine bağlı olarak kendi kendine etkinleştirebilirsiniz. Kaynak kodu düzenlerken/gözden geçirerek daha zengin bir deneyim sağlamak için ek bilgiler gereklidir. Her dil hizmetinin, bir belgeye ait bu ek bağlamsal verilerle başlatma için kendi API'si vardır. Bu genellikle hem dil hizmetine hem de derleme sistemine sıkı bir şekilde bağlı olan bir proje sistemi tarafından yönetilir.
 
 ## <a name="initialization"></a>Başlatma
 
-Bir [çalışma alanında](workspaces.md)dil Hizmetleri, <xref:Microsoft.VisualStudio.Workspace.Intellisense.ILanguageServiceProvider> yalnızca söz konusu dil hizmetinde uzmanlaşmış ve derleme yazma bir şeyi bilen bir uzantı noktasıyla başlatılır. bu şekilde, bir dil hizmeti sahibi bir derleme sırasında derleyicisini çalıştırmaya yönelik klasörler ve dosyalar içinde kaç desen var olursa olsun, tek bir açık klasör uzantısını koruyabilir (örneğin, MSBuild, makefiles, vb.). Dosya bağlamının oluşturulduğu dosyalar diskte değiştirildiğinde ve dosya bağlamı yenilendiğinde, dil hizmeti sağlayıcısına güncelleştirilmiş dosya bağlamları kümesi bildirilir. Dil hizmeti sağlayıcısı daha sonra modelini güncelleştirebilir.
+Çalışma [alanında](workspaces.md)dil hizmetleri, yalnızca bu dil hizmetine özel olan ve derleme yazma hakkında hiçbir bilgi sahibi olan <xref:Microsoft.VisualStudio.Workspace.Intellisense.ILanguageServiceProvider> bir uzantı noktası tarafından başlatılır. Bu şekilde dil hizmeti sahibi, derleme sırasında derleyicisini çalıştırmaya (örneğin, derleme dosyaları, derleme dosyaları vb.) ilişkin klasör ve dosya sayısına bakılmaksızın tek bir MSBuild Açık Klasör uzantısını sürdürebilir. Diskte bir dosya bağlamının oluşturularak oluşturulan dosyalar yenilendiğinde ve dosya bağlamı yenilendiğinde, dil hizmet sağlayıcısına güncelleştirilmiş dosya bağlamları kümesi bildirilecek. Dil hizmeti sağlayıcısı daha sonra modelini güncelleştirebilirsiniz.
 
-bir belge düzenleyicide açıldığında, Visual Studio yalnızca eşleşen dosya bağlamı sağlayıcısı bulunan dosya bağlamı türleri gerektiren dil hizmeti sağlayıcılarını kabul eder. Ardından, eşleşen sağlayıcılardan dosya bağlamını, ile seçilen dil hizmeti sağlayıcısına geçirir `ILanguageServiceProvider.InitializeAsync` . Bu dosya bağlamı verileriyle hangi dil hizmeti sağlayıcısının yaptığı, dil hizmeti sağlayıcısının uygulama ayrıntısı, ancak beklenen Kullanıcı deneyimi, bu açık belge için daha zengin bir dil hizmetidir.
+Düzenleyicide bir belge açıldığında, Visual Studio yalnızca eşleşen bir dosya bağlamı sağlayıcısının buluna bir dosya bağlamı türü gerektiren dil hizmeti sağlayıcılarını göz önünde bulundurabilirsiniz. Ardından, eşleşen sağlayıcılardan dosya bağlamlarını aracılığıyla seçilen dil hizmet sağlayıcısına `ILanguageServiceProvider.InitializeAsync` iletir. Dil hizmeti sağlayıcısının bu dosya bağlamı verileriyle yaptığı, dil hizmeti sağlayıcısının uygulama ayrıntılarıdır, ancak beklenen kullanıcı deneyimi, açılan belge için daha zengin bir dil hizmetidir.
 
-## <a name="using-ilanguageserviceprovider"></a>Ilanguageserviceprovider kullanma
+## <a name="using-ilanguageserviceprovider"></a>ILanguageServiceProvider Kullanma
 
-Dil `ContextType` `SupportedContextTypes` sunucusu dışarı aktarma özniteliği değerlerinden biriyle eşleşen bir dosya bağlamı oluşturulduğunda dil hizmetine bildirim gönderilir.
+Dil sunucusu dışarı aktarma özniteliğinin değerlerinden biri ile eşleşen bir dosya bağlamı `ContextType` `SupportedContextTypes` oluşturulduğunda dil hizmetine bildirilecek.
 
-Bir dil hizmetini desteklemek için bir uzantıya şunlar gerekir:
+Dil hizmetini desteklemek için bir uzantıya şu gerekir:
 
-- Benzersiz bir `Guid` . Bu, `SupportedContextTypes` öznitelik bağımsız değişkenleri ve bir nesnesi için kullanılacaktır `FileContext` .
+- Benzersiz bir `Guid` . Bu, öznitelik bağımsız `SupportedContextTypes` değişkenleri ve bir nesnesinde `FileContext` kullanılır.
 - Dil dosyası bağlamı
   - Sağlayıcı fabrikası
-    - `ExportFileContextProviderAttribute``Guid`üzerinde benzersiz olarak oluşturulan öznitelik`SupportedContextTypes`
-    - Uygular `IWorkspaceProviderFactory<IFileContextProvider>`
-  - Sağlayıcı uygulama `IFileContextProvider.GetContextsForFileAsync`
-    - `FileContext` `contextType` Oluşturucu bağımsız değişkeniyle benzersiz olarak oluşturulan yeni bir oluşturun`Guid`
-    - ' A `Context` `FileContext` ek veri vermek için özelliğini kullanın. `ILanguageServiceProvider`
+    - `ExportFileContextProviderAttribute` özniteliği ile yukarıdaki benzersiz olarak `Guid` oluşturulur `SupportedContextTypes`
+    - Uygulayan `IWorkspaceProviderFactory<IFileContextProvider>`
+  - Sağlayıcı uygulaması `IFileContextProvider.GetContextsForFileAsync`
+    - Benzersiz olarak `FileContext` oluşturulan oluşturucu bağımsız `contextType` değişkeniyle yeni bir oluşturun `Guid`
+    - ek `Context` veri vermek `FileContext` için özelliğini kullanın `ILanguageServiceProvider`
 - Dil hizmeti
   - Sağlayıcı fabrikası
-    - `ExportLanguageServiceProvider``Guid`üzerinde benzersiz olarak oluşturulan öznitelik`SupportedContextTypes`
-    - Uygular `IWorkspaceProviderFactory<ILanguageServiceProvider>`
+    - `ExportLanguageServiceProvider` özniteliği ile yukarıdaki benzersiz olarak `Guid` oluşturulur `SupportedContextTypes`
+    - Uygulayan `IWorkspaceProviderFactory<ILanguageServiceProvider>`
   - Sağlayıcı
-    - Uygular `ILanguageServiceProvider`
-    - `ILanguageServiceProvider.InitializeAsync`Dosya açıldığında belirtilen bağımsız değişkenler için dil hizmetlerini etkinleştirmek üzere kullanın
-    - `ILanguageServiceProvider.UninitializeAsync`Dosya kapatıldığında belirtilen bağımsız değişkenler için dil hizmetlerini devre dışı bırakmak için kullanın
+    - Uygulayan `ILanguageServiceProvider`
+    - Bir `ILanguageServiceProvider.InitializeAsync` dosya açıldığında sağlanan bağımsız değişkenler için dil hizmetlerini etkinleştirmek için kullanın
+    - Bir `ILanguageServiceProvider.UninitializeAsync` dosya kapatılan bağımsız değişkenler için dil hizmetlerini devre dışı bırakmak için kullanın
 
 >[!WARNING]
->`ILanguageServiceProvider`Yöntemler, ana iş parçacığında çalışma alanı tarafından çağrılabilir. UI gecikmelerinden kaçınmak için farklı bir iş parçacığında iş zamanlamayı düşünün.
+>Yöntemler `ILanguageServiceProvider` ana iş parçacığında çalışma alanı tarafından çağrılabilir. Kullanıcı arabirimi gecikmelerini önlemek için işi farklı bir iş parçacığında zamanlamayı göz önünde bulundurabilirsiniz.
 
 ## <a name="language-server-protocol"></a>Dil Sunucusu Protokolü
 
-`Microsoft.VisualStudio.Workspace.*`API 'ler, dil hizmetinizi açık klasörde etkinleştirmenin tek yolu değildir. Başka bir seçenek de dil sunucusu kullanmaktır. Daha fazla bilgi için [dil sunucusu protokolü](language-server-protocol.md)hakkında makalesini okuyun.
+Klasör `Microsoft.VisualStudio.Workspace.*` Aç'ta dil hizmetinizi etkinleştirmenin tek yolu API'ler değildir. Bir diğer seçenek de dil sunucusu kullanmaktır. Daha fazla bilgi için Dil Sunucusu Protokolü [hakkında bilgi okuyun.](language-server-protocol.md)
 
 ## <a name="related-interfaces"></a>İlgili arabirimler
 
-- <xref:Microsoft.VisualStudio.Workspace.Intellisense.ILanguageServiceProvider> , eşleşen dosya türlerindeki bir dosya açıldığında veya düzenlenmek üzere kapatıldığında çağrılır.
+- <xref:Microsoft.VisualStudio.Workspace.Intellisense.ILanguageServiceProvider> eşleşen dosya türlerine sahip bir dosya düzenlemek için açıldığında veya kapatıldığında çağrılır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* [çalışma alanı oluşturma](workspace-build.md) -açık klasör, MSBuild ve makefiles gibi derleme sistemlerini destekler.
+* [Çalışma alanı derlemesi](workspace-build.md) - Klasör Aç, çalışma alanı ve derleme MSBuild derleme sistemlerini destekler.

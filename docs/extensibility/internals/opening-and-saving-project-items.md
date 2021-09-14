@@ -16,11 +16,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 934ce1f393d7276d0eeffd66515b8c7a874c9fd9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122102616"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725048"
 ---
 # <a name="opening-and-saving-project-items"></a>Proje Öğelerini Açma ve Kaydetme
 Yeni bir proje türü eklediğinizde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamında (IDE) proje dosyalarınızın açılmasını ve kaydedilmesini yönetmeniz gerekir. Aşağıdaki konularda, dosyaları açma ve kaydetme ile ilgili farklı yaklaşımlar ele alınmaktadır.

@@ -1,6 +1,6 @@
 ---
-description: İşlevin saf sanal olup olmadığını belirten bir bayrak alır.
-title: 'IDiaSymbol:: get_pure | Microsoft Docs'
+description: İşlevin saf sanal olup olmadığını belirten bir bayrak verir.
+title: IDiaSymbol::get_pure | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: e72d37c25ce1df188978eeb8a755e8cdc83cad9a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122058677"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635385"
 ---
 # <a name="idiasymbolget_pure"></a>IDiaSymbol::get_pure
-İşlevin saf sanal olup olmadığını belirten bir bayrak alır.
+İşlevin saf sanal olup olmadığını belirten bir bayrak verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_pure (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE` İşlevin saf sanal olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] İşlev `TRUE` saf sanal ise döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

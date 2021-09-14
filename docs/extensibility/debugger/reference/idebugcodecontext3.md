@@ -1,5 +1,5 @@
 ---
-description: Modül ve işlem arabirimlerinin alınmasını sağlamak için IDebugCodeContext2 arabirimini genişletir.
+description: Modül ve işlem arabirimlerinin alınmasını sağlamak için IDebugCodeContext2 arabirimini genişletmektedir.
 title: IDebugCodeContext3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,15 +15,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: e9aa54f6832734709f8fdabd1d3428c4b54e5741972b651eb9ab2cdf3209cf95
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 502867256f90574c2a75791b447b76b56af3a638
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452296"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635134"
 ---
 # <a name="idebugcodecontext3"></a>IDebugCodeContext3
-Modül ve işlem arabirimlerinin alınmasını sağlamak için [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) arabirimini genişletir.
+Modül ve işlem arabirimlerinin alınmasını sağlamak için [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) arabirimini genişletmektedir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,23 +31,23 @@ Modül ve işlem arabirimlerinin alınmasını sağlamak için [IDebugCodeContex
 IDebugCodeContext3 : IDebugCodeContext2
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama motorları tarafından uygulanır ve [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklama paketi tarafından kullanılır.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapıları tarafından uygulanır ve Hata Ayıklama [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] paketi tarafından tüketilir.
 
 ## <a name="methods"></a>Yöntemler
- Bu arabirim, arabirimindeki yöntemlere ek olarak `IDebugCodeContext2` aşağıdaki yöntemleri uygular:
+ Bu arabirim, arabirimde `IDebugCodeContext2` yöntemlerine ek olarak aşağıdaki yöntemleri de kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetModule](../../../extensibility/debugger/reference/idebugcodecontext3-getmodule.md)|Hata ayıklama modülünün arabirimine bir başvuru alır.|
-|[GetProcess](../../../extensibility/debugger/reference/idebugcodecontext3-getprocess.md)|Hata ayıklama işleminin arabirimine bir başvuru alır.|
+|[GetModule](../../../extensibility/debugger/reference/idebugcodecontext3-getmodule.md)|Hata ayıklama modülünün arabirimine bir başvuru verir.|
+|[GetProcess](../../../extensibility/debugger/reference/idebugcodecontext3-getprocess.md)|Hata ayıklama işleminin arabirimine bir başvuru verir.|
 
 ## <a name="remarks"></a>Açıklamalar
  Bu, genellikle uygulanması gereken isteğe bağlı bir arabirimdir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: Msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll

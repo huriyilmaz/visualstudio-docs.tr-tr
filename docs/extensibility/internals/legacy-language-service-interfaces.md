@@ -15,11 +15,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 670e8d5f8509aa3d61a23f674e2d584c9ce04c8f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122063193"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725052"
 ---
 # <a name="legacy-language-service-interfaces"></a>Eski Dil Hizmeti Arabirimleri
 Belirli bir programlama dili için aynı anda dil hizmetinin yalnızca bir örneği olabilir. Ancak, tek bir dil hizmeti birden fazla düzenleyiciye hizmet olabilir.
@@ -44,9 +44,9 @@ Belirli bir programlama dili için aynı anda dil hizmetinin yalnızca bir örne
 ## <a name="additional-language-service-interfaces"></a>Ek Dil Hizmeti Arabirimleri
  Diğer arabirimler dil hizmetinize sağlanıyor olabilir. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , metin arabelleğinin her örneği için bu arabirimlerin ayrı bir örneğini talep ediyor. Bu nedenle, bu arabirimlerin her birini kendi nesnesine uygulamalısiniz. Aşağıdaki tabloda, metin arabelleği örneği başına bir örnek gerektiren arabirimler yer almaktadır.
 
-|Arabirim|Açıklama|
+|Arabirim|Description|
 |---------------|-----------------|
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Açılan çubuk gibi kod penceresi donatmalarını yönetir. bu arabirimi almak için yöntemini <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> kullanabilirsiniz. Her kod penceresi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> için bir tane vardır.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Açılan çubuk gibi kod penceresi donatmalarını yönetir. bu arabirimi almak için yöntemini <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> kullanabilirsiniz. Kod penceresi başına <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> bir tane vardır.|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>|Dil anahtar sözcüklerini ve sınırlayıcıları renklendirme. bu arabirimi almak için yöntemini <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> kullanabilirsiniz. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> boya zamanında çağrılır. İşlem yoğun işlerden kaçının veya <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> performans düşük olabilir.|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>|IntelliSense parametre araç ipucu sağlar. Dil hizmeti, açık parantez gibi yöntem verilerini görüntülemesi gerektiğini belirten bir karakter tanırsa, dil hizmetinin Parametre Bilgisi Araç İpucu görüntülemeye hazır olduğunu metin görünümüne bildirmek için yöntemini <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> çağırır. Metin görünümü daha sonra araç ipucu görüntülemek için gerekli bilgileri almak için arabiriminin yöntemlerini kullanarak <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> dil hizmetine geri çağrılar.|
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>|IntelliSense deyiminin tamamlanmasını sağlar. Dil hizmeti tamamlanma listesini görüntülemeye hazır olduğunda metin görünümünde <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> yöntemini çağırtır. Metin görünümü daha sonra nesnede yöntemleri kullanarak dil hizmetine geri <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> çağrır.|

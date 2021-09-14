@@ -16,11 +16,11 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: de0de156ecd959671394679a30912f24a5aaaaf5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122084304"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635785"
 ---
 # <a name="da0030-gather-tier-interaction-measurements-for-database-projects"></a>DA0030: Veritabanı projeleri için katman etkileşim ölçümlerini toplama
 
@@ -40,7 +40,7 @@ ms.locfileid: "122084304"
 
  Çok katmanlı uygulamalar, sunum ve veri katmanları için katmanlı hizmetler kullanır. Veri katmanı genellikle veri katmanı gibi bir veritabanı yönetim sistemi çalıştıran ayrı bir Microsoft SQL Server. Veri katmanı, uygulamanın geri kalanından ayrı bir makinede bile çalışıyor olabilir. Örnekleme profilleri, işlem yetersiz veya uzaktan çalışan işlevler ve hizmetler hakkında çok az içgörü sağlar.
 
- Profil oluşturma araçları, Microsoft SQL Server hizmetleri için zaman uyumsuz çağrılar kullanarak bir Microsoft SQL Server etkileşimde olan çok katmanlı uygulamalar için ADO.NET toplar. Katman Etkileşim Profili Oluşturmayı açıkça etkinleştirmeniz gerekir. Varsayılan olarak açık değildir.
+ Profil oluşturma araçları, bir Microsoft SQL Server veri katmanıyla etkileşime Microsoft SQL Server hizmetleri için zaman uyumsuz çağrılar kullanarak çok katmanlı uygulamalar için zamanlama ADO.NET toplar. Katman Etkileşim Profili Oluşturmayı açıkça etkinleştirmeniz gerekir. Varsayılan olarak açık değildir.
 
 ## <a name="how-to-fix-violations"></a>İhlalleri düzeltme
  Bu kural yalnızca bilgi içindir ve düzeltici eylem gerektirmeyebilirsiniz.

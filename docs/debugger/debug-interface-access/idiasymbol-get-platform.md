@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c05237056b826ec47978f01e5f2258ae19b157b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081184"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635390"
 ---
 # <a name="idiasymbolget_platform"></a>IDiaSymbol::get_platform
 Derlemenin derlenmiş olduğu platform türünü alın.

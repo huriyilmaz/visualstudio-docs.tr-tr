@@ -1,6 +1,6 @@
 ---
 description: Bu yığın çerçevesi için belge bağlamını alır.
-title: 'IDebugStackFrame2:: GetDocumentContext | Microsoft Docs'
+title: IDebugStackFrame2::GetDocumentContext | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f1677f2e5c50092dd3a4255e48282401ce936bfe
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122132502"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725130"
 ---
 # <a name="idebugstackframe2getdocumentcontext"></a>IDebugStackFrame2::GetDocumentContext
 Bu yığın çerçevesi için belge bağlamını alır.
@@ -43,13 +43,13 @@ int GetDocumentContext (
 
 ## <a name="parameters"></a>Parametreler
 `ppCxt`\
-dışı Kaynak belgedeki geçerli konumu temsil eden bir [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) nesnesi döndürür.
+[out] Kaynak [belgede geçerli konumu temsil eden bir IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) yönteminin çağrılmasını ve daha sonra kod bağlamında [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) metodunu çağırmayı daha hızlıdır. Ancak, her hata ayıklama altyapısının (DE) bu yöntemi uygulayacağı garanti edilmez.
+ Bu yöntem, [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) yöntemini çağırmadan ve ardından kod bağlamında [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) yöntemini çağırmadan daha hızlıdır. Ancak, her hata ayıklama altyapısının (DE) bu yöntemi uygulayacakları garanti edilemez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)

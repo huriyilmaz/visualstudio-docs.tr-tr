@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 96492dbc68869ab63b1da14c6a1c7d8b08cc7a66
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122120250"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635193"
 ---
 # <a name="bp_unbound_reason"></a>BP_UNBOUND_REASON
 Kesme noktasının bağlantısı kesildi sebebini sağlar.

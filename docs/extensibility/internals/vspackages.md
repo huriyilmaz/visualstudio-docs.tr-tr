@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 16284ec7bb2481bbbfca758bb9ccbd0c9f062c34
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122086447"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724989"
 ---
 # <a name="vspackages"></a>VSPackage’lar
 VSPackages, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI öğeleri, hizmetler, projeler, düzenleyiciler ve tasarımcılar sunarak tümleşik geliştirme ortamını (IDE) genişleten yazılım modüllerdir.

@@ -1,6 +1,6 @@
 ---
-description: Özel bir hata ayıklama altyapısı (DE) arabirimini alır.
-title: 'IDebugQueryEngine2:: Getengineınterface | Microsoft Docs'
+description: Özel bir hata ayıklama altyapısı (DE) arabirimi alır.
+title: IDebugQueryEngine2::GetEngineInterface | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5458ec92e121fcfe954e03a660370ec207d3ba55
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122118638"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725165"
 ---
 # <a name="idebugqueryengine2getengineinterface"></a>IDebugQueryEngine2::GetEngineInterface
-Özel bir hata ayıklama altyapısı (DE) arabirimini alır.
+Özel bir hata ayıklama altyapısı (DE) arabirimi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetEngineInterface(
 
 ## <a name="parameters"></a>Parametreler
 `ppUnk`\
-dışı Bir nesnesi döndürür; `IUnknown` hata ayıklama altyapısını (de) temsil eder ve bır de (örneğin [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) veya [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)) ile ilişkili başka bir geçerli arabirim için sorgulanabilecek.
+[out] Bir nesnesi hata ayıklama altyapısını (DE) temsil eder ve bir DE ile ilişkili diğer geçerli `IUnknown` arabirimler [(örneğin IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) veya [IDebugEngineLaunch2) için sorgulanabilirsiniz.](../../../extensibility/debugger/reference/idebugenginelaunch2.md)
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemden alınan arabirimlerin çağrılması, oturum hata ayıklama yöneticisinin işlenmesini atladığından ve hata ayıklama sırasında SDM 'nin hatalı duruma alınmasına veya hata üretmesine neden olabileceği için, elde edilen arabirim dikkatli kullanılmalıdır.
+ Sonuçta elde edilen arabirim, bu yöntemden alınan arabirimler aracılığıyla çağrılarak oturum hata ayıklama yöneticisinin işlemini atlar ve SDM'nin hatalı bir durumla karşılaşması veya hata ayıklama sırasında hata oluşturması ile sonuçlandırılana neden olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugQueryEngine2](../../../extensibility/debugger/reference/idebugqueryengine2.md)

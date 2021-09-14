@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, Metin Düzenleyici, C/C++, Biçimlendirme
-description: C ve C++ dilinde programlama yapmak için kod düzenleyicisinde kod biçimlendirme seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını ve alt sayfasını kullanmayı öğrenin.
+description: C ve C++ ile programlama yapmak için kod düzenleyicisinde kod biçimlendirme seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını ve alt sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 04/30/2018
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: tglee
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5b342ac7533928c979b8346f4d2155b9c5de85b0509c4d86aa5261dae5bb338
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 264485fd8f20ee31046035dba7b208795d0d91b0
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121357081"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724918"
 ---
 # <a name="options-text-editor-cc-formatting"></a>Seçenekler, Metin Düzenleyici, C/C++, Biçimlendirme
 
@@ -38,7 +38,7 @@ Bu sayfaya erişmek için, Seçenekler iletişim kutusundaki sol bölmede Metin 
 
 ## <a name="general-page"></a>Genel Sayfa
 
-Bu sayfada, siz yazarak deyimleri ve blokları biçimlendirme seçenekleri vardır.
+Bu sayfada, siz bunları yazarak deyimleri ve blokları biçimlendirme seçenekleri vardır.
 
 ::: moniker range="vs-2017"
 
@@ -46,7 +46,7 @@ Bu sayfada, siz yazarak deyimleri ve blokları biçimlendirme seçenekleri vard�
 
 ::: moniker-end
 
-Sayfada [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) sürüm 5.0 için destek yapılandırma seçenekleri de vardır. ClangFormat, kodunuzu .clang biçiminde veya bir .clang biçiminde ya da farklı biçimli bir dosyada yapılandırılan bir kural kümesine göre stil ve biçim _clang kolaylaştıran bir yardımcı programdır.
+Sayfada [Ayrıca ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) sürüm 5.0 için destek yapılandırma seçenekleri de vardır. ClangFormat, kodunuzu .clang biçiminde veya bir dosya biçiminde yapılandırılan kurallara göre biçimlendirmeyi ve stil _clang kolaylaştıran bir yardımcı programdır.
 
 ### <a name="configuring-clangformat-options"></a>ClangFormat seçeneklerini yapılandırma
 
@@ -56,13 +56,13 @@ Sayfada [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) sürüm 5.0 
 
 ::: moniker-end
 
-ClangFormat desteği varsayılan olarak etkindir. Tüm projelerinize uygulanacak ortak biçimlendirme kuralları arasında hangilerini seçebilirsiniz: LLVM, Google, Chromium, Mozilla veya WebKit. Ayrıca özel bir biçim tanımı .clang-format veya _clang biçimi dosyası da oluşturabilirsiniz. Böyle bir dosya bir proje klasöründe varsa, Visual Studio klasördeki ve alt klasördeki tüm kaynak kod dosyalarını biçimlendirmek için bu dosyayı kullanır.
+ClangFormat desteği varsayılan olarak etkindir. Tüm projeleriniz için geçerli olan bu yaygın biçimlendirme kuralları arasında hangilerini seçebilirsiniz: LLVM, Google, Chromium, Mozilla veya WebKit. Ayrıca özel bir biçim tanımı .clang-format veya _clang biçimi dosyası da oluşturabilirsiniz. Böyle bir dosya bir proje klasöründe varsa, Visual Studio klasördeki ve alt klasördeki tüm kaynak kod dosyalarını biçimlendirmek için bu dosyayı kullanır.
 
-Varsayılan olarak, Visual Studio arka clangformat.exe siz yazarak biçimlendirmeyi uygular. Ayrıca, yalnızca el ile çağrılan biçimlendirme komutları için çalıştırmayı belirtebilirsiniz Belgeyi **Biçimlendir (Ctrl+K, Ctrl+D)** veya Biçim Seçimi **(Ctrl + K, Ctrl + F)**.
+Varsayılan olarak, Visual Studio arka clangformat.exe, siz yazarak biçimlendirmeyi uygular. Ayrıca, yalnızca el ile çağrılan biçimlendirme komutları için çalıştırmayı belirtebilirsiniz Belgeyi **Biçimlendir (Ctrl+K, Ctrl+D)** veya Biçim Seçimi **(Ctrl + K, Ctrl + F)**.
 
 ## <a name="indentation-new-lines-spacing-wrapping-pages"></a>Girintileme, Yeni Satırlar, Aralık kaydırma sayfaları
 
-Bu sayfalar çeşitli biçimlendirme özelleştirmelerini etkinleştirir, ancak ClangFormat etkinleştirilirse yoksayılır.
+Bu sayfalar çeşitli biçimlendirme özelleştirmelerini etkinleştirir, ancak ClangFormat etkinse yoksayılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

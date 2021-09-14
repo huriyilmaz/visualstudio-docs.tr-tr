@@ -12,11 +12,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0124fd30f1f4c3565e0019f2f5709726f7622126
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122078693"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724949"
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio İçin UX Temel Bileşenleri
 
@@ -155,16 +155,16 @@ bu durumun doğru tasarımı, ınternet Explorer, Office ve Visual Studio yaygı
 
 2. "Daha fazla bilgi", kavramsal konunun bağlantısı için uygun metin değildir. Kullanıcının amacı daha fazla bilgi almak için tercih ettikleri sonuçları anlamaktır.
 
-   ![Renk hizmetini yoksayma ve köprüler için "Daha fazla bilgi" Visual Studio desenlere karşı koruma sağlar.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />Renk hizmetini yoksayma ve köprüler için "Daha fazla bilgi" Visual Studio desenlere karşı koruma sağlar.
+   ![Renk hizmetini yoksayma ve köprüler için "Daha fazla bilgi" Visual Studio karşıt desenler kullanmaktır.](../../extensibility/ux-guidelines/media/0102-j_hyperlinkincorrect.png "0102-j_HyperlinkIncorrect")<br />Renk hizmetini yoksayma ve köprüler için "Daha fazla bilgi" Visual Studio desenlere karşı koruma sağlar.
 
 **Daha iyi çözüm:** Bağlantıya tıklayarak kullanıcının sorabilirsiniz. Örnek:
 
 - Azure Windows nasıl çalışır?
 
-- Azure Mobile Services projesi için Windows gerekir?
+- Azure Windows Mobile Services gerekir?
 
 #### <a name="using-click-here-for-links"></a>Bağlantılar için "Buraya tıklayın" seçeneğini kullanma
- Köprüler kendi kendini açıklayıcı olmalıdır. "Buraya tıklayın" veya benzer bir varyasyonu kullanmak bir anti-desendir.
+ Köprüler kendi kendine açıklayıcı olmalıdır. "Buraya tıklayın" veya benzer bir varyasyonu kullanmak bir anti-desendir.
 
  **Hatalı:** "Yeni proje oluşturma yönergeleri için buraya tıklayın."
 

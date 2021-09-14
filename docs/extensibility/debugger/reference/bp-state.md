@@ -1,5 +1,5 @@
 ---
-description: Bir bağlı kesme noktası varlığını belirtir ve ayrıca etkin olup o değil belirtir.
+description: Bir bağlantılı kesme noktasının varlığını belirtir ve ayrıca etkinleştirilip etkinleştirilmediğini belirtir.
 title: BP_STATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 6d4136444a1d48a5ba70a9ed138897a008bbc036
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122120263"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635209"
 ---
 # <a name="bp_state"></a>BP_STATE
-Bir bağlı kesme noktası varlığını belirtir ve ayrıca etkin olup o değil belirtir.
+Bir bağlantılı kesme noktasının varlığını belirtir ve ayrıca etkinleştirilip etkinleştirilmediğini belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,26 +50,26 @@ public enum enum_BP_STATE {
 
 ## <a name="fields"></a>Alanlar
 `BPS_NONE`\
-Hiçbir kesme noktası olmadığını belirtir.
+Kesme noktası olmadığını belirtir.
 
 `BPS_DELETED`\
-Kesme noktası silindi belirtir.
+Kesme noktasının silindiğini belirtir.
 
 `BPS_DISABLED`\
-Kesme noktası devre dışı bırakılmıştır belirtir.
+Kesme noktasının devre dışı olduğunu belirtir.
 
 `BPS_ENABLED`\
-Kesme noktası etkin olduğunu belirtir.
+Kesme noktasının etkinleştirildiğini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
-[GetState yönteminden](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) döndürülür.
+[GetState](../../../extensibility/debugger/reference/idebugboundbreakpoint2-getstate.md) yönteminden döndürüldü.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

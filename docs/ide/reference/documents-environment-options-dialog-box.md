@@ -35,15 +35,15 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 5f6efebfb3cfe61707b14ed39f2ae4ca2ca79585
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122094080"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625886"
 ---
 # <a name="options-dialog-box-environment--documents"></a>Seçenekler iletişim kutusu: Ortam \> Belgeleri
 
-Tümleşik geliştirme ortamında  (IDE) belgelerin görüntülenmelerini kontrol etmek ve belge ve dosyalarda yapılan dış değişiklikleri yönetmek için Seçenekler iletişim kutusunun bu sayfasını kullanın. Araçlar menüsünde Seçenekler'e tıklar **ve** ardından Ortam **Belgeleri'ne** tıklayarak bu iletişim **kutusuna**  >  **erişebilirsiniz.**
+Tümleşik geliştirme ortamında  (IDE) belgelerin görüntülenmelerini kontrol etmek ve belge ve dosyalarda yapılan dış değişiklikleri yönetmek için Seçenekler iletişim kutusunun bu sayfasını kullanın. Araçlar menüsünde Seçenekler'e **tıklar** ve ortam **belgeleri'ne** tıklayarak bu iletişim **kutusuna**  >  **erişebilirsiniz.**
 
 **Dosyanın ortamın dışında ne zaman değiştirdiğini algılama**
 
@@ -51,7 +51,7 @@ Bu seçenek seçildiğinde, IDE dışındaki bir düzenleyici tarafından yapıl
 
 **Değiştirilmemiş değişiklikler olmadığı sürece değiştirilmiş dosyaları yeniden yükleyin**
 
-Dosyanın **ortam dışında ne zaman** değiştirdiğini algıla'nın seçili olduğunu ve IDE'de açık bir dosyanın IDE dışında değişmesi durumuna karşı varsayılan olarak bir uyarı iletisi oluşturulur. Bu seçenek etkinse bir uyarı görüntülenir ve belge, dış değişiklikleri almak için IDE'ye yeniden yüklenir.
+Dosyanın **ortam dışında ne zaman** değiştirdiğini algıla'nın seçili olduğunu ve IDE'de açık bir dosyanın IDE dışında değiştiğini algıla seçeneğine sahip olursanız, varsayılan olarak bir uyarı iletisi oluşturulur. Bu seçenek etkinse bir uyarı görüntülenir ve dış değişiklikleri almak için belge IDE'ye yeniden yüklenir.
 
 **Salt okunur dosyaların düzenlenmesine izin verme; kaydetmeye çalışırken uyar**
 
@@ -71,7 +71,7 @@ Genel Geri Alma komutu, yeniden  düzenleme işlemi sonrasında da değiştirile
 
 **Dosyalarda Çeşitli dosyaları Çözüm Gezgini**
 
-içinde Çeşitli Dosyalar **düğümünü görüntülemek için bu seçeneği** Çözüm Gezgini.  Çeşitli dosyalar, bir proje veya çözümle ilişkilendirilen dosyalardır, ancak size kolaylık olması **için Çözüm Gezgini** dosyalarda görünebilir.
+içinde Çeşitli Dosyalar **düğümünü görüntülemek için bu seçeneği** Çözüm Gezgini.  Çeşitli dosyalar, bir proje veya çözümle ilişkilendirilen ancak size  kolaylık olması için Çözüm Gezgini dosyalardır.
 
 > [!NOTE]
 > Etkin web uygulamasına dahil **edilen** web  belgelerinin Dosya menüsünde Tarayıcıda Görüntüle komutunu etkinleştirmek için bu seçeneği belirleyin.
@@ -80,7 +80,7 @@ içinde Çeşitli Dosyalar **düğümünü görüntülemek için bu seçeneği**
 
 dosyanın Çeşitli Dosyalar klasöründe kalıcı **olacak dosya** sayısını Çözüm Gezgini.  Bu dosyalar artık bir düzenleyicide açık kalmasalar bile listelenir. 0 ile 256 arasında herhangi bir tam sayı belirtsiniz. Varsayılan sayı 0'dır.
 
-Örneğin, bu seçeneği 5 olarak ayarsanız ve 10 farklı dosyanız açıksa, 10 dosyanın hepsini kapatsanız, ilk 5 dosya Diğer Dosyalar **klasöründe gösterilmeye devam** ediyor.
+Örneğin, bu seçeneği 5 olarak ayarp 10 farklı dosyanız varsa, 10 dosyanın hepsini kapatsanız, ilk 5 dosya Diğer Dosyalar **klasöründe gösterilmeye devam** ediyor.
 
 **Veriler kodsayfaya kaydedilene kadar belgeleri Unicode olarak kaydetme**
 

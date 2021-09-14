@@ -16,11 +16,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: c818c05831f48875c1ad15c47d3d5f3c1610997e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122152230"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724977"
 ---
 # <a name="localizing-vsix-packages"></a>VSIX Paketlerini Yerelleştirme
 
@@ -30,7 +30,7 @@ VSIX paketinizin içeriği menü komutları veya başka bir kullanıcı arabirim
 
 ## <a name="directory-structure"></a>Dizin yapısı
 
- Kullanıcı bir uzantı yüklemiş olduğunda **Uzantılar** ve Güncelleştirmeler, adı hedef bilgisayarın yerel Visual Studio ile eşleşen bir klasör için VSIX paketinin en üst düzeyini denetler. Uzantılar **ve Güncelleştirmeler** klasöründe *bir .vsixlangpack* dosyası bulursa, *.vsixmanifest* dosyasındaki karşılık gelen değerler için bu dosyada yerelleştirilmiş değerlerin yerini alır. Uzantı yüklenirken bu değerler görüntülenir. Aşağıdaki örnek, İspanyolca (es-ES) ve Fransızca (fr-FR) olarak yerelleştirilmiş bir VSIX paketinin dizin yapısını gösterir.
+ Kullanıcı bir uzantı yüklemiş olduğunda **Uzantılar** ve Güncelleştirmeler, adı hedef bilgisayarın yerel Visual Studio bir klasör için VSIX paketinin en üst düzeyini denetler. Uzantılar **ve Güncelleştirmeler** klasöründe *bir .vsixlangpack* dosyası bulursa, *.vsixmanifest* dosyasındaki karşılık gelen değerler için bu dosyada yerelleştirilmiş değerlerin yerini alır. Uzantı yüklenirken bu değerler görüntülenir. Aşağıdaki örnek, İspanyolca (es-ES) ve Fransızca (fr-FR) olarak yerelleştirilmiş bir VSIX paketinin dizin yapısını gösterir.
 
 ```text
 .
@@ -48,7 +48,7 @@ VSIX paketinizin içeriği menü komutları veya başka bir kullanıcı arabirim
 
 ## <a name="the-extensionvsixlangpack-file"></a>Extension.vsixlangpack dosyası
 
-*Extension.vsixlangpack dosyası* VSIX Dil Paketi şeması [2.0'ı izler.](../extensibility/vsix-language-pack-schema-2-0-reference.md) Bu şemada `PackageLanguagePackManifest` hemen ardından bir alt öğe gelen bir `Metadata` vardır. Metadata öğesi en fazla 6 alt öğe içerebilir: `DisplayName` , , , , , ve `Description` `MoreInfo` `License` `ReleaseNotes` `Icon` . Bu alt öğeler `DisplayName` `Description` `MoreInfo` `License` `ReleaseNotes` `Icon` `Metadata` *Extension.vsixmanifest* dosyasının öğesinin , , , , ve alt öğelerine karşılık gelen öğelerdir.
+*Extension.vsixlangpack dosyası* VSIX Dil Paketi şeması [2.0'ı izler.](../extensibility/vsix-language-pack-schema-2-0-reference.md) Bu şemada `PackageLanguagePackManifest` hemen ardından bir alt öğe gelen bir `Metadata` vardır. Metadata öğesi en fazla 6 alt öğe içerebilir: `DisplayName` , , , , ve `Description` `MoreInfo` `License` `ReleaseNotes` `Icon` . Bu alt öğeler `DisplayName` `Description` `MoreInfo` `License` `ReleaseNotes` `Icon` `Metadata` *Extension.vsixmanifest* dosyasının öğesinin , ve alt öğelerine karşılık gelen.
 
 Vsixlangpack dosyası oluşturdukta özelliğini olarak `Include in Vsix` `true` ayarlayabilirsiniz. Aksi takdirde, yerelleştirilmiş yükleme metni yoksayılır.
 
@@ -60,9 +60,9 @@ Vsixlangpack dosyası oluşturdukta özelliğini olarak `Include in Vsix` `true`
 
 ## <a name="example"></a>Örnek
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
-Aşağıdaki örnek, *extension.vsixmanifest dosyasının ilgili bölümlerini* gösterir. Dosya ayrıca İspanyolca için ilgili *Extension.vsixlangpack* dosyasını da içerir. Hedef bilgisayarın yerel ayar İspanyolca olarak ayarlanırsa, dil paketinden Visual Studio bildirim değerleri değiştirilir.
+Aşağıdaki örnek, *extension.vsixmanifest dosyasının ilgili bölümlerini* gösterir. Dosya ayrıca İspanyolca için ilgili *Extension.vsixlangpack* dosyasını da içerir. Hedef bilgisayarın yerel ayar İspanyolca olarak ayarlanırsa, dil paketi Visual Studio bildirimden değerleri değiştirir.
 
 ### <a name="code"></a>Kod
 

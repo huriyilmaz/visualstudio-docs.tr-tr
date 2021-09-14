@@ -15,11 +15,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1b99da0c049981db441c4900a242a38066fc0ffd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122110546"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725074"
 ---
 # <a name="expose-events-in-the-visual-studio-sdk"></a>Visual Studio SDK 'da olayları kullanıma sunma
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Otomasyonu kullanarak olayları kaynak yapmanızı sağlar. Projeler ve proje öğeleri için olayları kaynak yapmanızı öneririz.
@@ -55,7 +55,7 @@ ms.locfileid: "122110546"
 
  **AutomationProjectItemEvents** = nesnesini döndürür `AutomationProjectItemsEvents` .
 
-|Ad|Tür|Aralık|Açıklama|
+|Ad|Tür|Aralık|Description|
 |----------|----------|-----------|-----------------|
 |Varsayılan (@)|REG_SZ|Kullanılmıyor|Kullanılmıyor. Belgeler için veri alanını kullanabilirsiniz.|
 |*AutomationProjectsEvents*|REG_SZ|Olay nesnenizin adı.|Yalnızca anahtar adı ilgili. Belgeler için veri alanını kullanabilirsiniz.<br /><br /> bu örnek, temel Project örneğinden gelir.|

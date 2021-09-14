@@ -1,6 +1,6 @@
 ---
-description: Bu belge konumunun aralığını alır.
-title: 'IDebugDocumentPosition2:: GetRange | Microsoft Docs'
+description: Bu belge konumu için aralığı alır.
+title: IDebugDocumentPosition2::GetRange | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 211003c3d54b7f37979240e400e373db2782ac2a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122119483"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634985"
 ---
 # <a name="idebugdocumentposition2getrange"></a>IDebugDocumentPosition2::GetRange
-Bu belge konumunun aralığını alır.
+Bu belge konumu için aralığı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,23 +45,23 @@ int GetRange(
 
 ## <a name="parameters"></a>Parametreler
 `pBegPosition`\
-[in, out] Başlangıç konumuyla doldurulmuş bir [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı. Bu bilgi gerekmiyorsa bu bağımsız değişkeni null bir değer olarak ayarlayın.
+[in, out] Başlangıç [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) doldurulan bir yapıdır. Bu bilgi gerekli yoksa bu bağımsız değişkeni null değere ayarlayın.
 
 `pEndPosition`\
-[in, out] Bitiş konumuyla doldurulmuş bir [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı. Bu bilgi gerekmiyorsa bu bağımsız değişkeni null bir değer olarak ayarlayın.
+[in, out] Bitiş [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) doldurulan bir yapıdır. Bu bilgi gerekli yoksa bu bağımsız değişkeni null değere ayarlayın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir konum kesme noktası için bir belge konumunda belirtilen Aralık, aslında koda katkıda bulunan bir ifadenin önünde aramak için hata ayıklama altyapısı (DE) tarafından kullanılır. Örneğin, aşağıdaki kodu göz önünde bulundurun:
+ Konum kesme noktası için belge konumunda belirtilen aralık, hata ayıklama altyapısı (DE) tarafından koda katkıda bulunan bir deyimi önceden aramak için kullanılır. Örneğin, aşağıdaki kodu düşünün:
 
 ```
 Line 5: // comment
 Line 6: x = 1;
 ```
 
- 5. satır hata ayıklamakta olan programa kod vermez. 5. satırda kesme noktasını ayarlayan hata ayıklayıcı, kod katkıda bulunan ilk satır için belirli bir miktarı ileri doğru aramak isterse, hata ayıklayıcı, bir kesme noktasının düzgün şekilde yerleştirilebileceği ek aday çizgileri içeren bir Aralık belirler. Ayrıca, bir kesme noktası kabul edebilecek bir çizgi bulunana kadar bu satırlarda ileriye doğru arama yapılır.
+ 5. satır, hata ayıklaması yapılan programa kod katmaz. 5. satırda kesme noktası ayarlayıcı, DE'nin koda katkıda bulunan ilk satır için belirli bir miktarda arama yapmak istiyorsa, hata ayıklayıcı bir kesme noktası düzgün yerleştirilse ek aday satırları içeren bir aralık belirtir. Ardından DE, kesme noktası kabul eden bir satır bulana kadar bu satırlarda ileri doğru arama yaptı.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)

@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 735c8715405f7c882154751658faca2eb389f5c6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122065935"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635361"
 ---
 # <a name="idiasymbolget_volatiletype"></a>IDiaSymbol::get_volatileType
 Kullanıcı tanımlı veri türünün (UDT) geçici olup olmadığını belirten bir bayrak alınır.
@@ -44,7 +44,7 @@ HRESULT get_volatileType (
 > dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- C++ içinde bir UDT anahtar sözcüğüyle işaretlenir ve içeriğinin bir erişimden sonrakine var `volatile` olduğu varsayılamaz.
+ C++ içinde, bir UDT anahtar sözcüğüyle işaretlenir ve içeriğinin bir erişimden sonrakine var `volatile` olduğu varsayılamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

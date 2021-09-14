@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: b28f18061f6a0bc76ad69da6a2fc27b0d30593f6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122096394"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635001"
 ---
 # <a name="idebugdocumentcontext2"></a>IDebugDocumentContext2
 Bu arabirim, kaynak dosya belgesinde bir konumu temsil eder.
@@ -34,9 +34,9 @@ IDebugDocumentContext2 : IUnknown
  Hata ayıklama altyapısı (DE), kaynak kodu düzeyinde hata ayıklama desteğinin bir parçası olarak bu arabirimi uygulamaya almaktadır. Bu arabirim, kaynak kodundaki bir konuma ek olarak bağlamları karşılaştırmak ve kaynak kod belgesinde gezinmek için yöntemler sağlar.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Çeşitli arabirimlerde yöntemler( genellikle [GetDocumentContext](../../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) ve [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) arabirimleri) bu arabirimi geri döner.
+ Çeşitli arabirimlerde yöntemler, genellikle [GetDocumentContext](../../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) ve [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) arabirimleri bu arabirimi geri döner.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
  Aşağıdaki tabloda yöntemlerini `IDebugDocumentContext2` gösterir.
 
 |Yöntem|Açıklama|

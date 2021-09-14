@@ -1,6 +1,6 @@
 ---
-title: Kalıcılık ve Çalışan Belge Tablosu | Microsoft Docs
-description: Projelerin, IDE'de belge durumunu takip edecek şekilde çalışan belge tablosunda belge açma, kaydetme ve yeniden Visual Studio öğrenin.
+title: Kalıcılık ve çalışan belge tablosu | Microsoft Docs
+description: projenin Visual Studio ıde 'deki belge durumunu izleyen, çalışan belge tablosunda belge açma, kaydetme ve yeniden adlandırmayı nasıl koordine edin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,19 +17,19 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1c4b37e5ae834a614cb741cb7589dad9dd1d6677
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122063128"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725031"
 ---
 # <a name="persistence-and-the-running-document-table"></a>Kalıcılık ve Çalıştırılan Belge Tablosu
-IDE'de projeler, proje öğelerinin kalıcılığı yönetiminden tamamen sorumludur ve bu da hizmetini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kullanarak <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> gerçekleştirmektedir. Belgeler, belge ortamındaki temel kalıcılık Visual Studio birimidir. Projeler, açık olan tüm belgelerin durumunu takip edecek bir kaynak olan çalışan belge tablosu (RDT) ile belgelerin açılmasını, kaydedi ve yeniden yeniden anını koordine ediyor.
+IDE 'de [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Projeler, hizmet kullanarak gerçekleştirdikleri proje öğelerinin kalıcılığını yönetmekten tamamen sorumludur <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable> . belgeler Visual Studio ortamındaki temel kalıcılık birimidir. Projeler, tüm açık belgelerin durumunu izleyen bir kaynak olan çalışan belge tablosu (RDT) ile belgeleri açma, kaydetme ve yeniden adlandırmayı koordine.
 
-## <a name="managing-persistence"></a>Kalıcılığı Yönetme
- Projeler, arabirimini kullanarak ortamın kalıcılık hizmetini <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> kontrol eder. Ortam hiçbir zaman doğrudan bir belgeden kendi kendine kalıcılık isterken, sahibi olan projeden (veya hiyerarşiden) belgeyi kaydetmesini ister. Bu, projenin proje öğesi verilerini yerel dosyalara, uzak dosyalara, veritabanına, depoya veya başka bir ortama kaydetmesini mümkün yapar.
+## <a name="managing-persistence"></a>Kalıcılığı yönetme
+ Projeler, arabirimi uygulayarak ortamın Kalıcılık hizmetini denetler <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem> . Ortam hiçbir şekilde doğrudan bir belge kalıcı hale getirirken, belgeyi kaydetmek için sahip olan projeye (veya hiyerarşiye) sorulur. Bu, projenin proje öğesi verilerini yerel dosyalara, uzak dosyalara, bir veritabanına, depoya veya diğer bir ortama kaydetmesini olanaklı kılar.
 
- Genel ortam RDT'yi sürdürür. Ortam, RDT'de tüm açık pencereler ve belgeler için girdileri bulundurarak çözüm kapatılanlar gibi özel bildirimler almalarını mümkün kılmıştır. Ayrıca RDT, ortamın içinde karşılık gelen düğümlerini izlemesini mümkün **Çözüm Gezgini.** RDT, hem proje dosyaları hem de proje öğesi belgeleri de dahil olmak üzere açık, kalıcı nesne başına bir kayıt bulundurabilir.
+ Genel ortam, RDT 'yi korur. Ortam, bir çözümün kapatıldığı zaman gibi özel bildirimler almasına olanak sağlayan RDT 'deki tüm açık pencereler ve belgeler için girişleri tutar. Ayrıca, RDT, ortamın **Çözüm Gezgini** içinde karşılık gelen düğümlerini izlemesini mümkün hale getirir. RDT, her iki proje dosyası ve proje-öğe belgeleri de dahil olmak üzere açık ve kalıcı bir nesne başına bir kayıt tutar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalıştırılan Belge Tablosu](../../extensibility/internals/running-document-table.md)

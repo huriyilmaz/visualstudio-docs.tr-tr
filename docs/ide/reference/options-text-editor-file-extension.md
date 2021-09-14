@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, Metin Düzenleyici, Dosya Uzantısı
-description: Belirli dosya uzantılarına sahip tüm dosyaların IDE tarafından nasıl iş olacağını belirtmek için Dosya Uzantısı sayfasını Visual Studio öğrenin.
+description: belirli dosya uzantılarına sahip dosyaların Visual Studio ıde tarafından nasıl işleneceğini belirtmek için dosya uzantısı sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -19,47 +19,47 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 03c34393805343f7ebe70bcfc75bfdd5b285dd98
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122143696"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724909"
 ---
 # <a name="options-text-editor-file-extension"></a>Seçenekler, Metin Düzenleyici, Dosya Uzantısı
 
-Bu Seçenekler iletişim kutusu, belirli dosya uzantılarına sahip tüm dosyaların tümleşik geliştirme ortamı (IDE) tarafından Visual Studio şekilde belirtebilirsiniz. Girersiniz  her Uzantı için bir Düzenleme Deneyimi'ne tıklayın. Bu, belirli bir türe sahip belgelerin aç olduğu IDE düzenleyicisini veya tasarımcısını seçmenize olanak sağlar. Bu seçenekleri görüntülemek için Araçlar **menüsünden** **Seçenekler'i** seçin, Metin **Düzenleyici** düğümünü genişletin ve Dosya Uzantısı'ı **seçin.**
+bu seçenekler iletişim kutusu, belirli dosya uzantılarına sahip tüm dosyaların Visual Studio tümleşik geliştirme ortamı (ıde) tarafından nasıl işleneceğini belirtmenizi sağlar. Girdiğiniz her **uzantı** Için bir düzen deneyimi seçebilirsiniz. Bu, belirli bir türdeki belgelerin açılacağı IDE düzenleyicisini veya tasarımcısını seçmenizi sağlar. Bu seçenekleri göstermek için, **Araçlar** menüsünden **Seçenekler** ' i seçin, **metin düzenleyici** düğümünü genişletin ve **Dosya Uzantısı**' nı seçin.
 
-"Kodlama ile" seçeneğini belirtirseniz, bu belge için bir kodlama düzeni seçmenize olanak sağlayan bu tür bir belgeyi her açsanız bir iletişim kutusu görüntülenir. Proje belgelerinizin sürümlerini farklı platformlarda veya farklı hedef dillerde kullanmak üzere hazırlarken bu yararlı olabilir.
+"Kodlama ile" seçeneğini belirlediğinizde, bu belgenin bir kodlama şemasını seçmenize olanak tanıyan bir belge açtığınızda bir iletişim kutusu görüntülenir. Bu, proje belgelerinizin sürümlerini farklı platformlarda veya farklı hedef dillerde kullanılmak üzere hazırlıyorsanız yararlı olabilir.
 
 ## <a name="uielement-list"></a>UIElement listesi
 
 **Dahili numara**
 
-IDE'de Düzenleme Deneyimi tanımlamak istediğiniz dosya uzantısını yazın.
+Düzen deneyimini tanımlamak istediğiniz IDE 'de bulunan dosya uzantısını yazın.
 
 **Düzenleyici**
 
-Bu dosya uzantısına sahip belgelerin aç olduğu IDE düzenleyicisini veya tasarımcısını seçin. "Ncoding ile" seçeneğini belirtirseniz, kodlama şeması seçmenize olanak sağlayan böyle bir belgeyi her açsanız bir iletişim kutusu görüntülenir.
+Bu dosya uzantısına sahip belgelerin açılacağı IDE Düzenleyicisi veya tasarımcı ' yı seçin. Bir "nencoding" seçeneği belirlediğinizde, bir kodlama şeması seçmenize olanak tanıyan bir belge açtığınızda bir iletişim kutusu görüntülenir.
 
 **Ekle**
 
-Uzantı Listesine belirtilen Uzantı ve **Düzenleme** **Deneyimini içeren** bir girdi ekler.
+Uzantı listesine belirtilen **uzantıyı** ve **Düzen deneyimini** içeren bir giriş ekler.
 
 **Kaldır**
 
-Seçilen girişi Uzantı Listesinden siler.
+Seçili girdiyi uzantı listesinden siler.
 
-**Uzantı Listesi**
+**Uzantı listesi**
 
-Düzenleme Deneyimi'nin belirtilmemiş olduğu tüm uzantıları listeler.
+Bir düzen deneyiminin belirtildiği tüm uzantıları listeler.
 
-**Uzantısız dosyaları ile eşleme**
+**Uzantısız dosyaları şu şekilde eşleyin**
 
-Uzantı olmayan dosyaların IDE tarafından nasıl iş olacağını belirtmek isterseniz bu seçeneği belirleyin.
+Uzantısı olmayan dosyaların IDE tarafından nasıl işleneceğini belirtmek istiyorsanız bu seçeneği belirleyin.
 
 **Uzantısız dosya seçenekleri**
 
-Düzenleyici ile aynı listeyi **sağlar.** Dosya uzantıları olmayan belgelerin aç olduğu IDE düzenleyicisini veya tasarımcısını seçin.
+**Düzenleyiciyle** aynı listeyi sağlar. Dosya uzantıları olmayan belgelerin açılacağı IDE Düzenleyicisi veya tasarımcı ' yı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

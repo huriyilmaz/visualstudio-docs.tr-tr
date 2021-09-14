@@ -13,11 +13,11 @@ ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
 ms.openlocfilehash: 52851b97716d6b32cc4087f19f87d060e1c608c0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122028052"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724931"
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>Nasıl kullanılır: Proje ve öğe şablonlarını bulma ve düzenleme
 
@@ -25,7 +25,7 @@ ms.locfileid: "122028052"
 
 ::: moniker range="vs-2017"
 
-Ayrıca, kullanıcı şablonu konumu içinde özel alt kategoriler oluşturabilirsiniz ve  kategoriler Yeni Giriş ve Project Ekle **iletişim kutularında** gösterilir.
+Ayrıca, kullanıcı şablonu konumu içinde özel alt kategoriler oluşturabilirsiniz ve kategoriler Yeni Girişler ve **Yeni Öğe Ekle iletişim Project** **gösterilir.**
 
 ::: moniker-end
 
@@ -41,7 +41,7 @@ Varsayılan olarak, Visual Studio şablonlar şu konumda bulunur:
 
 - *%ProgramFiles(x86)% \\ Microsoft Visual Studio \\ 2017 \\ \<edition> \\ Common7\IDE\ProjectTemplates \\<Dil<Yerel \> \\ Kimlik\>*
 
-- *%ProgramFiles(x86)% \\ Microsoft Visual Studio \\ 2017 \\ \<edition> \Common7\IDE\ItemTemplates \\<Dil<Yerel \> \\ Kimlik\>*
+- *%ProgramFiles(x86)% \\ Microsoft Visual Studio \\ 2017 \\ \<edition> \Common7\IDE\ItemTemplates \\<Dil \> \\<Yerel Kimlik\>*
 
 Örneğin, aşağıdaki dizinde İngilizce (LCID 1033) Visual Basic öğe şablonları bulunur:
 
@@ -51,7 +51,7 @@ Varsayılan olarak, Visual Studio şablonlar şu konumda bulunur:
 
 ::: moniker range=">=vs-2019"
 
-- *%ProgramFiles(x86)% \\ Microsoft Visual Studio \\ 2019 \\ \<edition> \\ Common7\IDE\ProjectTemplates \\<\> \\ Dil<Yerel Kimlik\>*
+- *%ProgramFiles(x86)% \\ Microsoft Visual Studio \\ 2019 \\ \<edition> \\ Common7\IDE\ProjectTemplates \\<Dil \> \\<Yerel Kimlik\>*
 
 - *%ProgramFiles(x86)% \\ Microsoft Visual Studio \\ 2019 \\ \<edition> \Common7\IDE\ItemTemplates \\<Dil<Yerel \> \\ Kimlik\>*
 
@@ -96,7 +96,7 @@ Kullanıcı şablonu dizinine *bir* *.vstemplate* dosyası içeren sıkıştır�
 
 ## <a name="organize-templates"></a>Şablonları düzenleme
 
-New **Project** ve Add New **Item** iletişim kutularında yer alan kategoriler, yüklü şablonda ve kullanıcı şablonu konumlarında mevcut olan dizin yapılarını gösterir. Kullanıcı şablonları, kullanıcı şablonu dizinine yeni klasörler ekleyerek kendi kategorilerine göre organize olabilir. Yeni **Project** ve **Yeni Öğe Ekle** iletişim kutuları, kullanıcı şablonu kategorilerinize yaptığınız değişiklikleri gösterir.
+New **Project** ve **Add New Item** iletişim kutularında yer alan kategoriler, yüklü şablonda ve kullanıcı şablonu konumlarında mevcut olan dizin yapılarını gösterir. Kullanıcı şablonları, kullanıcı şablonu dizinine yeni klasörler ekleyerek kendi kategorilerine göre organize olabilir. Yeni **Project** ve **Yeni Öğe Ekle** iletişim kutuları, kullanıcı şablonu kategorilerinize yaptığınız değişiklikleri gösterir.
 
 > [!NOTE]
 > Programlama dili düzeyinde yeni bir kategori oluşturamazsiniz. Yeni kategoriler yalnızca her dil içinde oluşturulabilir.
@@ -115,7 +115,7 @@ New **Project** ve Add New **Item** iletişim kutularında yer alan kategoriler,
 
 ### <a name="create-new-user-item-template-categories"></a>Yeni kullanıcı öğesi şablon kategorileri oluşturma
 
-1. Kullanıcı öğesi şablon dizininde programlama dili klasöründe bir klasör oluşturun. Örneğin, C# öğe şablonları **için HelloWorld** kategorisi oluşturmak için aşağıdaki dizini oluşturun:
+1. Kullanıcı öğesi şablon dizininde programlama dili klasöründe bir klasör oluşturun. Örneğin, C# öğe şablonları için **HelloWorld** kategorisi oluşturmak için aşağıdaki dizini oluşturun:
 
     - *\%USERPROFILE%\Documents\Visual Studio \<Version\> \Templates\ItemTemplates\Visual C#\HelloWorld*
 
@@ -127,7 +127,7 @@ New **Project** ve Add New **Item** iletişim kutularında yer alan kategoriler,
 
 ### <a name="display-templates-in-parent-categories"></a>Şablonları üst kategorilerde görüntüleme
 
-`NumberOfParentCategoriesToRollUp` *.vstemplate* dosyasındaki öğesini kullanarak alt kategorilerdeki şablonların üst kategorilerinde görüntülenebilir. Bu adımlar proje şablonları ve öğe şablonları için aynıdır.
+.vstemplate dosyasındaki öğesini kullanarak alt kategorilerdeki şablonların üst kategorilerinde `NumberOfParentCategoriesToRollUp` *görüntülenebilir.* Bu adımlar proje şablonları ve öğe şablonları için aynıdır.
 
 1. Şablonu *.zip* dosyanın konumunu bulun.
 
@@ -149,9 +149,9 @@ New **Project** ve Add New **Item** iletişim kutularında yer alan kategoriler,
 
 1. *.vstemplate dosyasını kaydedin ve* kapatın.
 
-1. Şablonda dosyaları seçin, seçime sağ tıklayın  ve Sıkıştırılmış > **(sıkıştırılmış) klasöre gönder'i seçin.**
+1. Şablonda dosyaları seçin, seçime sağ tıklayın  ve Sıkıştırılmış (sıkıştırılmış) klasöre > **Gönder'i seçin.**
 
-   Dosyalar bir.zip *sıkıştırılır.*
+   Dosyalar bir dosya *.zip* sıkıştırılır.
 
 1. Ayıklanan şablon dosyalarını ve eski şablon *.zip* silin.
 

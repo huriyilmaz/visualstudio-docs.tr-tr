@@ -1,6 +1,6 @@
 ---
-title: Visual Studio araç çubuklarının guıd 'leri ve kimlikleri | Microsoft Docs
-description: Visual Studio tümleşik geliştirme ortamına (ıde) eklenen araç çubuklarının ve içerdikleri grupların guıd ve kimlik değerlerinin listesini görüntüleyin.
+title: Araç Çubuklarının GUID'leri Visual Studio kimlikleri | Microsoft Docs
+description: Tümleştirilmiş geliştirme ortamına (IDE) dahil edilen araç çubukları ve içerleri gruplar için GUID ve Visual Studio değerlerinin listesini görüntüleme.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -20,56 +20,56 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8ec564b6b4da3f9ee6cd706d1c6ab3796c03494f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122050006"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725068"
 ---
-# <a name="guids-and-ids-of-visual-studio-toolbars"></a>Visual Studio araç çubuklarının guıd 'leri ve kimlikleri
-bu konu, Visual Studio tümleşik geliştirme ortamına (ıde) ve içerdikleri gruplara dahil olan araç çubuklarının guıd ve kimlik değerlerini numaralandırır. bu değerler, Visual Studio SDK 'nın bir parçası olarak yüklenen *. vsct* dosyalarında tanımlanmıştır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
+# <a name="guids-and-ids-of-visual-studio-toolbars"></a>Araç çubuklarının GUID'Visual Studio kimlikleri
+Bu konu, tümleşik geliştirme ortamına (IDE) ve içeren gruplara dahil edilen araç Visual Studio GUID ve kimlik değerlerini numaralandırmaktadır. Bu değerler, Visual Studio SDK'sı kapsamında yüklü olan *.vsct* dosyalarında tanımlanır. Daha fazla bilgi için bkz. [IDE tanımlı komutlar, menüler ve gruplar.](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)
 
 > [!NOTE]
-> Visual Studio kullanılabilen araç çubuklarının birçoğu Visual Studio tarafından tanımlanmamıştır ve guıd 'leri ve kimlik değerleri ortak değildir. bu konuda yalnızca Visual Studio SDK *. vsct* dosyalarında tanımlanan araç çubukları listelenmektedir.
+> Araç çubuklarının birçoğu Visual Studio tarafından tanımlanmaz Visual Studio GUID ve kimlik değerleri genel değildir. Bu konu başlığında yalnızca SDK *.vsct* dosyalarında Visual Studio araç çubukları listelanmıştır.
 
- *. Vsct* DOSYALARıNDA tanımlanan IDE nesneleriyle çalışma hakkında daha fazla bilgi için bkz. [menüleri ve komutları genişletme](../../extensibility/extending-menus-and-commands.md).
+ *.vsct* dosyalarında tanımlanan IDE nesneleriyle çalışma hakkında daha fazla bilgi için [bkz. Menüleri ve komutları genişletme.](../../extensibility/extending-menus-and-commands.md)
 
- Visual Studio ıde tarafından sunulan varsayılan araç çubukları guıd kullanır `guidSHLMainMenu` , aksi belirtilmedikçe `GUID:ID` söz dizimi kullanılarak belirtilir.
+ IDE tarafından sağlanan varsayılan araç Visual Studio, aksi takdirde söz dizimi kullanılarak belirtilenler dışında GUID `guidSHLMainMenu` `GUID:ID` kullanır.
 
 ## <a name="ide-toolbars"></a>IDE araç çubukları
- aşağıdaki araç çubukları Visual Studio ıde tarafından sağlanmaktadır. Araç çubukları, **Araçlar** menüsünün **araç çubukları** alt menüsünde seçilerek görüntülenebilir. Araç pencerelerindeki araç çubukları bu bölüme dahil değildir.
+ Aşağıdaki araç çubukları IDE'nin Visual Studio sağlanır. Araç çubukları, Araçlar menüsünün Araç Çubukları **alt** menüsünden seçerek **görüntülenebilir.** Araç pencerelerine araç çubukları bu bölüme dahil değildir.
 
- Yalnızca gruplar doğrudan araç çubuklarından eklenebilir. Bir grup eklemek için, üst öğesini araç çubuğunun GUID 'SI ve KIMLIĞI olarak ayarlayın. Bir araç çubuğuna düğme eklemek için, üst öğesini araç çubuğunda bir grup olarak ayarlayın.
+ Doğrudan araç çubuklarından yalnızca gruplar azalan düzende olabilir. Grup eklemek için üst öğenin GUID'sini ve araç çubuğunun kimliğini ayarlayın. Bir araç çubuğuna düğme eklemek için üst öğesini araç çubuğundaki bir gruba ayarlayın.
 
 |Araç Çubuğu|ID|
 |-------------|--------|
 |Standart|IDM_VS_TOOL_STANDARD|
 |Oluşturma|IDM_VS_TOOL_BUILD|
 |Metin düzenleyici|IDM_VS_TOOL_TEXTEDITOR|
-|Hata Ayıklama|Gudvsdebuggroup: IDM_DEBUG_TOOLBAR|
-|Hata ayıklama konumu|Gudvsdebuggroup: IDM_DEBUG_CONTEXT_TOOLBAR|
+|Hata Ayıklama|guidVSDebugGroup:IDM_DEBUG_TOOLBAR|
+|Hata ayıklama konumu|guidVSDebugGroup:IDM_DEBUG_CONTEXT_TOOLBAR|
 
 ### <a name="special-toolbars"></a>Özel araç çubukları
- bu araç çubukları Visual Studio ıde tarafından tanımlanmıştır, ancak özel işlevlere ve komut grupları barındırmazlar.
+ Bu araç çubukları IDE'Visual Studio tarafından tanımlanır, ancak özel işlevler sunar ve komut gruplarını barındırmaz.
 
 |Araç Çubuğu|ID|
 |-------------|--------|
 |Add komutu|IDM_VS_TOOL_ADDCOMMAND|
-|Tanımlayan|IDM_VS_TOOL_UNDEFINED|
+|Tanımsız|IDM_VS_TOOL_UNDEFINED|
 |XML şeması|IDM_VS_TOOL_SCHEMA|
 |XML verileri|IDM_VS_TOOL_DATA|
 
-## <a name="groups-on-the-ide-toolbars"></a>IDE araç çubuklarındaki gruplar
- Standart bir araç çubuğuna düğme eklemek için aşağıdaki gruplardan birini üst öğesi olarak ayarlayın. Gruplar üst araç çubuğuna göre sıralanır.
+## <a name="groups-on-the-ide-toolbars"></a>IDE araç çubuklarında gruplar
+ Standart araç çubuğuna düğme eklemek için, aşağıdaki gruplardan birini üst grup olarak ayarlayın. Gruplar üst araç çubuğuna göre sıralanmış.
 
 ### <a name="standard-toolbar-groups"></a>Standart araç çubuğu grupları
 
 |Name|ID|
 |----------|--------|
 |Kaydet/Aç|IDG_VS_TOOLSB_SAVEOPEN|
-|Kes/kopyala|IDG_VS_TOOLSB_CUTCOPY|
-|Geri Al/Yinele|IDG_VS_TOOLSB_UNDOREDO|
-|Çalıştır/oluştur|IDG_VS_TOOLSB_RUNBUILD|
+|Kes/Kopyala|IDG_VS_TOOLSB_CUTCOPY|
+|Geri Al/Tekrarla|IDG_VS_TOOLSB_UNDOREDO|
+|Çalıştırma/Derleme|IDG_VS_TOOLSB_RUNBUILD|
 |Arayın|IDG_VS_TOOLSB_SEARCH|
 |Windows|IDG_VS_TOOLSB_WINDOWS|
 |Yeni pencereler|IDG_VS_TOOLSB_NEWWINDOWS|
@@ -80,7 +80,7 @@ bu konu, Visual Studio tümleşik geliştirme ortamına (ıde) ve içerdikleri g
 
 |Name|ID|
 |----------|--------|
-|Yapı çubuğu|IDG_VS_BUILDBAR|
+|Derleme çubuğu|IDG_VS_BUILDBAR|
 |İptal|IDG_VS_BUILD_CANCEL|
 
 ### <a name="text-editor-toolbar-groups"></a>Metin düzenleyici araç çubuğu grupları
@@ -88,16 +88,16 @@ bu konu, Visual Studio tümleşik geliştirme ortamına (ıde) ve içerdikleri g
 |Name|ID|
 |----------|--------|
 |Tamamlama|IDM_VS_TOOL_TEXTEDITOR|
-|Leyebilirsiniz|IDG_VS_EDITTOOLBAR_INDENT|
+|Girinti|IDG_VS_EDITTOOLBAR_INDENT|
 |Yorum|IDG_VS_EDITTOOLBAR_COMMENT|
 |Yer işaretleri|IDG_VS_EDITTOOLBAR_TEMPBOOKMARKS|
 
-### <a name="debug-toolbar-groups"></a>Hata ayıklama araç çubuğu grupları
+### <a name="debug-toolbar-groups"></a>Araç çubuğu gruplarında hata ayıklama
 
 |Name|ID|
 |----------|--------|
 |Yürütme|IDM_DEBUG_TOOLBAR|
-|Atma|IDG_DEBUG_TOOLBAR_STEPPING|
+|Adım|IDG_DEBUG_TOOLBAR_STEPPING|
 |İzle|IDG_DEBUG_TOOLBAR_WATCH|
 |Windows|IDG_DEBUG_TOOLBAR_WINDOWS|
 
@@ -108,15 +108,15 @@ bu konu, Visual Studio tümleşik geliştirme ortamına (ıde) ve içerdikleri g
 |Hata ayıklama konumu|IDG_DEBUG_CONTEXT_TOOLBAR|
 
 ## <a name="tool-window-toolbars"></a>Araç penceresi araç çubukları
- Araç çubukları doğrudan IDE'de veya Çözüm Gezgini gibi **araç pencere Çözüm Gezgini.** Araç pencereleri *.vsct* dosyalarında tanımlanmamış olduğundan, araç penceresi araç çubuklarının tanımlı bir ailesi yok. Bunun yerine, bunlar koda yerleştirilir. Aşağıdaki tabloda, IDE'de araç pencerelerde görünen araç çubukları ve bunların içerdiği komut grupları yer alır.
+ Araç çubukları doğrudan IDE 'de veya **Çözüm Gezgini** gibi araç pencereleri içinde görünebilir. Araç pencereleri *. vsct* dosyalarında tanımlanmadığı için araç penceresi araç çubuklarının tanımlı üst öğeleri yok. Bunun yerine, kod içine yerleştirilir. Aşağıdaki tablo, IDE 'deki araç pencereleri ve içerdikleri komut grupları üzerinde görünen araç çubuklarını gösterir.
 
 > [!NOTE]
-> Araç çubukları ve gruplar GUID:ID söz dizimi kullanılarak aksi `guidSHLMainMenu` belirtilmedikçe GUID kullanır. Bir araç çubuğu için GUID belirtilirse, araç çubuğundan azalan gruplar için de geçerlidir.
+> Araç çubukları ve gruplar GUID `guidSHLMainMenu` : ID sözdizimi kullanılarak BELIRTILMEDIKÇE GUID 'yi kullanır. Bir araç çubuğu için bir GUID belirtildiğinde, bu araç çubuğundan gelen gruplar için de geçerli olur.
 
 |Araç penceresi|Araç Çubuğu|Gruplar|
 |-----------------|-------------|------------|
-|Çözüm Gezgini|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1.. 5|
-|Sunucu Gezgini|guid_SE_MenuGroup:IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
+|Çözüm Gezgini|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1.. e|
+|Sunucu Gezgini|guid_SE_MenuGroup: IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
 |Özellikler|IDM_VS_TOOL_PROPERTIES|IDG_VS_PROPERTIES_SORT<br /><br /> IDG_VS_PROPERTIES_PAGES|
 |Sınıf Görünümü|IDM_VS_TOOL_CLASSVIEW|IDG_VS_CLASSVIEW_FOLDERS<br /><br /> IDG_VS_CLASSVIEW_SEARCH<br /><br /> IDG_VS_CLASSVIEW_SETTINGS|
 |Sınıf Görünümü|IDM_VS_TOOL_CLASSVIEW_GO|IDG_VS_CLASSVIEW_SEARCH2|
@@ -125,15 +125,15 @@ bu konu, Visual Studio tümleşik geliştirme ortamına (ıde) ve içerdikleri g
 |Çıktı|IDM_VS_TOOL_OUTPUTWINDOW|IDG_VS_OUTPUTWINDOW_SELECT<br /><br /> IDG_VS_OUTPUTWINDOW_GOTO<br /><br /> IDG_VS_OUTPUTWINDOW_NEXTPREV<br /><br /> IDG_VS_OUTPUTWINDOW_CLEAR<br /><br /> IDG_VS_OUTPUTWINDOW_WORDWRAP|
 |Bulma ve Değiştirme|IDM_VS_TOOL_UNIFIEDFIND|IDG_VS_FINDTAB<br /><br /> IDG_VS_REPLACETAB|
 |Sonuçları Bul 1|IDM_VS_TOOL_FINDRESULTS1|IDG_VS_FINDRESULTS1_GOTO<br /><br /> IDG_VS_FINDRESULTS1_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS1_CLEAR<br /><br /> IDG_VS_FINDRESULTS1_STOPFIND|
-|Sonuçları Bul 2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|
+|Sonuçları bul 2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|
 |Kod Parçacığı|IDM_VS_TOOL_SNIPPETMENUS|IDG_VS_SNIPPET_REPL<br /><br /> IDG_VS_SNIPPET_REF<br /><br /> IDG_VS_SNIPPET_PROP|
 |Yer işaretleri|IDM_VS_TOOL_BOOKMARKWIND|IDG_VS_BWNEWFOLDER<br /><br /> IDG_VS_BWNEXTBM<br /><br /> IDG_VS_BWNEXTBMF<br /><br /> IDG_VS_BWENABLE<br /><br /> IDG_VS_BWDELETE|
 |Görev Listesi|IDM_VS_TOOL_TASKLIST|IDG_VS_TASKLIST_PROVIDERLIST|
-|Kullanıcı Görevleri|IDM_VS_TOOL_USERTASKS|IDG_VS_TASKLIST_PROVIDERLIST<br /><br /> IDG_VS_USERTASKS_EDIT|
+|Kullanıcı görevleri|IDM_VS_TOOL_USERTASKS|IDG_VS_TASKLIST_PROVIDERLIST<br /><br /> IDG_VS_USERTASKS_EDIT|
 |Hata Listesi|IDM_VS_TOOL_ERRORLIST|IDG_VS_ERRORLIST_ERRORGROUP<br /><br /> IDG_VS_ERRORLIST_WARNINGGROUP<br /><br /> IDG_VS_ERRORLIST_MESSAGEGROUP|
-|Çağrı Tarayıcısı|IDM_VS_TOOL_CALLBROWSER1.. 16|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|
-|Kesme noktaları|guidVSDebugGroup:IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|
-|Demontaj|guidVSDebugGroup:IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|
+|Çağrı Tarayıcısı|IDM_VS_TOOL_CALLBROWSER1.. k|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|
+|Kesme noktaları|Gudvsdebuggroup: IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|
+|Ayrıştırılmış kod|Gudvsdebuggroup: IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|
 |Bellek 1-4|Gudvsdebuggroup: IDM_MEMORY_WINDOW_TOOLBAR1... 4|IDG_MEMORY_EXPRESSION1.. 4<br /><br /> IDG_MEMORY_COLUMNS1.. 4|
 |İşlemler|Gudvsdebuggroup: IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|
 

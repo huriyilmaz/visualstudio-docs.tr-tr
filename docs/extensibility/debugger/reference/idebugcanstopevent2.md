@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6232618832b9cf25dcec97c1b3d3048d2e39b7de
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122145217"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635142"
 ---
 # <a name="idebugcanstopevent2"></a>IDebugCanStopEvent2
 Bu arabirim, oturum hata ayıklama yöneticisinin (SDM) geçerli kod konumda durıp durmayacaklarını sormak için kullanılır.
@@ -31,14 +31,14 @@ IDebugCanStopEvent2 : IUknown
 ```
 
 ## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Hata ayıklama altyapısı (DE), kaynak kodda adımlamayı desteklemek için bu arabirimi uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanarak (SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır).
+ Hata ayıklama altyapısı (DE), kaynak kodun adım uygulanmasını desteklemek için bu arabirimi uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir (SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır).
 
  Bu arabirimin uygulanması, SDM'nin [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) çağrısını hata ayıklama altyapısına iletir. Örneğin, bu işlem hata ayıklama altyapısının ileti işleme iş parçacığına gönderilen bir iletiyle yapılabilir veya bu arabirimi uygulayan nesne hata ayıklama altyapısına bir başvuru tutabilir ve bayrağı geçirilirken hata ayıklama altyapısına geri çağrı `IDebugCanStopEvent2::CanStop` yapılabilir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  DE bu yöntemi, DE'nin yürütmeye devam ettiği ve DE'nin kodda adım adım ilerleye devam ettiği her durumda gönderebilir. Bu olay, hata ayıklaması yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
  Aşağıdaki tabloda yöntemlerini `IDebugCanStopEvent2` gösterir.
 
 |Yöntem|Açıklama|

@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: b7b4b4760b6d7388a9b1179b27322b8aa4a0b13b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122035091"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634897"
 ---
 # <a name="idebugerrorbreakpoint2"></a>IDebugErrorBreakpoint2
 Bu arabirim geçersiz konum, geçersiz ifade veya bekleyen kesme noktası bağlı değil (kod henüz yüklenmedi vb.) nedenlerini temsil eden bir hata veya uyarı kesme noktası temsil eder.
@@ -36,7 +36,7 @@ IDebugErrorBreakpoint2 : IUnknown
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  [GetErrorBreakpoint çağrısı bu](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) arabirimi elde ediyor. Bu arabirim [canBind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md) veya [EnumErrorBreakpoints](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-enumerrorbreakpoints.md)çağrısıyla da döndürülebilirsiniz [(IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) arabirimiyle temsil edilen bir listenin parçası olarak).
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
  Aşağıdaki tabloda yöntemlerini `IDebugErrorBreakpoint2` gösterir.
 
 |Yöntem|Açıklama|

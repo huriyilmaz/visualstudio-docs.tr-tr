@@ -17,11 +17,11 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
 ms.openlocfilehash: b9734b2a1295f9b086c5bf51557548ba503ac574
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122055796"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126625803"
 ---
 # <a name="visual-studio-professional-component-directory"></a>Visual Studio Professional bileşen dizini
 

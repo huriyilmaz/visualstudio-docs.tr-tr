@@ -9,11 +9,11 @@ ms.technology: vs-ide-general
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.openlocfilehash: d51c04cc579433f3f6e72c55a60529088d724237
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122086098"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724932"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Bir performans sorununun düzeltilme olasılığını artırma
 
@@ -170,11 +170,11 @@ Bir performans izlemesini kaydederken, raporlama yaptığınız yavaş işlem ve
 geliştirici Community web sitesindeki mevcut geri bildirim öğelerine doğrudan performans izlemeleri eklemeyin. ek bilgi isteme/sağlama, Visual Studio yerleşik bir sorun aracında desteklenen bir iş akışıdır. Önceki bir geri bildirim öğesini çözümlemek için bir performans izlemesi gerekliyse, geri bildirim öğesinin durumunu "daha fazla bilgi gerekiyor" olarak ayarlayacağız, bu da yeni bir sorunu raporlama ile aynı şekilde yanıt verebilir. Ayrıntılı yönerge için lütfen Sorun Bildir [aracının belgesinde "Daha](./how-to-report-a-problem-with-visual-studio.md#when-further-information-is-needed) Fazla Bilgi Gerekiyor" bölümüne bakın.
 
 > [!NOTE]
-> **En değerli geri bildirim:** Neredeyse tüm yavaşlık/yüksek CPU sorunları için en değerli geri bildirim, o sırada davranışı yakalayan performans izlemesi (.etl.zip) ile birlikte yapmaya çalıştığınız şeyi üst düzey bir \* açıklamadır.
+> **En değerli geri bildirim:** Neredeyse tüm yavaşlık/yüksek CPU sorunları için en değerli geri bildirim, yapmaya çalıştığınız şeyi üst düzey bir açıklamanın yanı sıra bu süre boyunca davranışı yakalayan performans izlemesi \* (.etl.zip) ile birliktedir.
 
 **Gelişmiş Performans İzlemeleri**
 
-Sorun bildir aracında izleme toplama özellikleri çoğu senaryo için yeterlidir. Ancak izleme koleksiyonu üzerinde daha fazla denetime (örneğin, daha büyük bir arabellek boyutuna sahip izleme) ihtiyaç duyulan zamanlar vardır ve bu durumda PerfView harika bir araçtır. PerfView aracını kullanarak performans izlemelerini el ile kaydetme adımları [PerfView](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Recording-performance-traces-with-PerfView.md) ile performans izlemelerini kaydetme sayfasında bulunabilir.
+Sorun bildir aracında izleme toplama özellikleri çoğu senaryo için yeterlidir. Ancak izleme koleksiyonu üzerinde daha fazla denetime ihtiyaç duyulan zamanlar (örneğin, daha büyük bir arabellek boyutuna sahip izleme) vardır ve bu durumda PerfView harika bir araçtır. PerfView aracını kullanarak performans izlemelerini el ile kaydetme adımları [PerfView](https://github.com/dotnet/roslyn/blob/master/docs/wiki/Recording-performance-traces-with-PerfView.md) ile performans izlemelerini kaydetme sayfasında bulunabilir.
 
 ## <a name="out-of-process-issues"></a>İşlem Dışında Sorunlar
 

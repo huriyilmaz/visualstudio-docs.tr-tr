@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b433f7b58753408c916074539d9d0b6275d1ce17
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122145828"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635225"
 ---
 # <a name="bp_resolution_location"></a>BP_RESOLUTION_LOCATION
 Kesme noktası çözümleme konumunun yapısını belirtir.
@@ -52,7 +52,7 @@ public struct BP_RESOLUTION_LOCATION {
 
 ## <a name="members"></a>Üyeler
 `bpType`\
-Bir BP_TYPE [veya](../../../extensibility/debugger/reference/bp-type.md) üyeleri yorumlamayı belirten bir `bpResLocation` `unionmemberX` değer.
+Bir BP_TYPE [veya](../../../extensibility/debugger/reference/bp-type.md) üyelerin nasıl yorumlanmasına yönelik bir `bpResLocation` `unionmemberX` numaralamadır.
 
 `bpResLocation.bpresCode`\
 [yalnızca C++ ] ise [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md) yapısını `bpType`  =  `BPT_CODE` içerir.

@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a39bb6ae031aac8ae9fb72134ff3744dacb59ece
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122096212"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634918"
 ---
 # <a name="idebugenumfieldgetvaluefromstringcaseinsensitive"></a>IDebugEnumField::GetValueFromStringCaseInsensitive
 Bu yöntem, bir numaralandırma sabiti adı ile ilişkili değeri döndürmek için büyük/küçük harf duyarsız bir arama kullanır.

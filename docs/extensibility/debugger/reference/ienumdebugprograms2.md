@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3ff57a503094e018e65bdf9913c48cb3abc9f9c1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034817"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725104"
 ---
 # <a name="ienumdebugprograms2"></a>IEnumDebugPrograms2
 Bu arabirim, geçerli hata ayıklama oturumunda çalışan programları numaralar.
@@ -34,9 +34,9 @@ IEnumDebugPrograms2 : IUnknown
  Hata ayıklama altyapısı (DE), DE tarafından hata ayıklaması yapılan programların listesini sağlamak için bu arabirimi uygulamaya almaktadır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Visual Studio [arabirimi almak için EnumPrograms'a](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) çağrır. [EnumPrograms,](../../../extensibility/debugger/reference/idebugengine2-enumprograms.md) bir Visual Studio.
+ Visual Studio arabirimi [almak için EnumPrograms'a](../../../extensibility/debugger/reference/idebugprocess2-enumprograms.md) çağrır. [EnumPrograms,](../../../extensibility/debugger/reference/idebugengine2-enumprograms.md) bir Visual Studio.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
  Aşağıdaki tabloda yöntemlerini `IEnumDebugPrograms2` gösterir.
 
 |Yöntem|Açıklama|

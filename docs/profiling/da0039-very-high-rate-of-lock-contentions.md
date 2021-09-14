@@ -1,6 +1,6 @@
 ---
-title: DA0039-kilit çekişmelerinin çok yüksek oranı | Microsoft Docs
-description: Profil oluşturma verileriyle toplanan sistem performansı verileri, uygulama yürütme sırasında aşırı yüksek bir kilit çekişmesinin gerçekleştiğini gösterir.
+title: DA0039 - Çok Yüksek Oranda Kilit | Microsoft Docs
+description: Profil oluşturma verileriyle toplanan sistem performansı verileri, uygulama yürütme sırasında aşırı yüksek bir kilit tartışma oranının meydana geldiğine işaret ediyor.
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,42 +16,42 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 00befa5108828b115cf3e69a5f82e3cdf31682cd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122131735"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635782"
 ---
-# <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039: çok yüksek oranda kilit çekişmeleri
+# <a name="da0039-very-high-rate-of-lock-contentions"></a>DA0039: Çok yüksek oranda kilit içeriği
 
 |Öğe|Değer|
 |-|-|
-|Kural kimliği|DA0039|
-|Kategori|.NET Framework Kullanımıyla|
-|Profil oluşturma yöntemleri|Örnekleme<br /><br /> İzleme<br /><br /> .NET belleği|
-|İleti|Çok yüksek oranda .NET kilit çekişmeleri meydana geldiğini belirtir. Lütfen eşzamanlılık profilini çalıştırarak bu kilit çakışmasının nedenini araştırın.|
+|Kural Kimliği|DA0039|
+|Kategori|.NET Framework Kullanım|
+|Profil oluşturma yöntemleri|Örnekleme<br /><br /> İzleme<br /><br /> .NET Belleği|
+|İleti|Çok yüksek bir .NET Kilidi içeriği oluşuyor. Lütfen bir Eşzamanlılık profili çalıştırarak bu kilit kilitlenmesinin nedenini araştırın.|
 |Kural türü|Uyarı|
 
- Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 25 örnek toplamanız gerekir.
+ Örnekleme, .NET belleği veya kaynak musiki yöntemlerini kullanarak profil 25 örnek toplayan bu kuralı tetiklemeniz gerekir.
 
 ## <a name="cause"></a>Nedeni
- Profil oluşturma verileriyle toplanan sistem performansı verileri, uygulama yürütme sırasında aşırı yüksek bir kilit çekişmesinin gerçekleştiğini gösterir. Çekişmenin nedenini bulmak için eşzamanlılık profil oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün.
+ Profil oluşturma verileriyle toplanan sistem performansı verileri, uygulama yürütme sırasında aşırı yüksek bir kilit tartışma oranının meydana geldiğine işaret ediyor. İçeriğin nedenini bulmak için eşzamanlılık profil oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Kilitler, çok iş parçacıklı bir uygulamada tek seferde bir iş parçacığı tarafından yürütülmesi gereken önemli kod bölümlerini korumak için kullanılır. Microsoft .NET ortak dil çalışma zamanı (CLR), tam bir eşitleme ve kilitleme temelleri kümesi sağlar. Örneğin, C# dili bir kilit ifadesini (Visual Basic 'de SyncLock) destekler. Yönetilen bir uygulama, doğrudan bir kilit edinmek ve serbest bırakmak için System. Threading ad alanındaki Monitor. Enter ve Monitor. Exit yöntemlerini çağırabilir. .NET Framework, zaman uyumu sağlayıcılar, readerwriterkilitleri ve semaforları destekleyen sınıflar da dahil olmak üzere ek eşitleme ve kilitleme temel öğelerini destekler. daha fazla bilgi için, MSDN Web sitesindeki .NET Framework geliştirici kılavuzundaki [eşitleme temel bilgilerine genel bakış](/dotnet/standard/threading/overview-of-synchronization-primitives) konusuna bakın. .NET Framework sınıfları, Windows işletim sisteminde yerleşik olarak bulunan alt düzey eşitleme hizmetleri üzerinde katmanlıdır. Bunlar, kritik bölüm nesnelerini ve birçok farklı bekleme ve olay sinyali işlevini içerir. Daha fazla bilgi için, MSDN Kitaplığı 'nda Win32 ve COM Geliştirme 'nin [eşitleme](/windows/win32/sync/synchronization) bölümüne bakın.
+ Kilitler, çok iş parçacıklı bir uygulamada aynı anda bir iş parçacığı tarafından seri olarak yürütülebilir kod bölümlerini korumak için kullanılır. Ortak Microsoft .NET Çalışma Zamanı (CLR) tam eşitleme ve kilitleme temelleri kümesi sağlar. Örneğin, C# dili bir kilit deyimini destekler (Visual Basic). Yönetilen bir uygulama, kilidi doğrudan almak ve serbest bırakmak için System.Threading ad alanı içinde Monitor.Enter ve Monitor.Exit yöntemlerini çağırabilirsiniz. Bu .NET Framework, Mutex'leri, ReaderWriterLock'ları ve Semaforları destekleyen sınıflar da dahil olmak üzere ek eşitleme ve kilitleme temellerini destekler. Daha fazla bilgi için MSDN Web [sitesinde .NET Framework](/dotnet/standard/threading/overview-of-synchronization-primitives) Geliştirici Kılavuzu'nun Eşitleme Temellerine Genel Bakış konusuna bakın. Bu .NET Framework sınıfları, işletim sisteminde yerleşik olarak yer alan alt düzey eşitleme Windows katmana sahiptir. Bunlar kritik bölüm nesnelerini ve birçok farklı Bekleme ve olay sinyal işlevlerini içerir. Daha fazla bilgi için MSDN [Kitaplığı'nın](/windows/win32/sync/synchronization) Win32 ve COM Geliştirme'nin Eşitleme bölümüne bakın.
 
- hem .NET Framework sınıfları hem de eşitleme ve kilitleme için kullanılan yerel Windows nesneleri temel alan, birbirine kilitli işlemler kullanılarak değiştirilmesi gereken paylaşılan bellek konumlarıdır. Birbirine kenetlenmiş işlemler, Atomik işlemler kullanılarak durumlarını değiştirmek üzere paylaşılan bellek konumlarında çalışan donanıma özgü yönergeler kullanır. Atomik işlemlerin makinedeki tüm işlemciler arasında tutarlı olması garanti edilir. Kilitler ve WaitHandle, otomatik olarak karşılıklı kilitleme işlemlerini ayarlanan veya sıfırlanan zaman kullanan .NET nesneleridir. Uygulamanızda, iş parçacığı güvenli bir biçimde güncelleştirilmesini sağlamak için birbirine kenetlenmiş işlemleri de kullanmanızı gerektiren başka paylaşılan bellek veri yapıları olabilir. daha fazla bilgi için bkz. MSDN kitaplığı 'nın .NET Framework bölümünde [karşılıklı kilitleme işlemleri](/dotnet/api/system.threading.interlocked) .
+ Eşitleme ve .NET Framework için kullanılan .NET Framework yerel Windows nesneleri, birbirine bağlı işlemler kullanılarak değiştir gereken paylaşılan bellek konumlarıdır. Birbirine bağlı işlemler, atomik işlemler kullanarak durumlarını değiştirmek için paylaşılan bellek konumlarında çalışan donanıma özgü yönergeler kullanır. Atomik işlemlerin makinede tüm işlemcilerde tutarlı olması garantidir. Kilitler ve WaitHandles, ayarlanmış veya sıfırlandıklarında otomatik olarak kilitli işlemler kullanan .NET nesneleridir. Uygulamanıza iş parçacığı güvenli bir şekilde güncelleştirilecek şekilde kilitli işlemler kullanmanızı gerektiren başka paylaşılan bellek veri yapıları da olabilir. Daha fazla bilgi için MSDN [Kitaplığı'nın](/dotnet/api/system.threading.interlocked) .NET Framework Kilitli İşlemler bölümüne bakın.
 
- Eşitleme ve kilitleme, çok iş parçacıklı uygulamaların doğru şekilde yürütmesini sağlamak için kullanılan mekanizmalarda bulunur. Çok iş parçacıklı bir uygulamanın her iş parçacığı, işletim sistemi tarafından bağımsız olarak zamanlanan bağımsız bir yürütme birimidir. Bir kilit elde edilmeye çalışan bir iş parçacığı gecikmeli tutulduğu için kilit çakışması oluşur.
+ Eşitleme ve kilitleme, çok iş parçacıklı uygulamaların doğru şekilde yürütülebilir olmasını sağlamak için kullanılan mekanizmalardır. Çok iş parçacıklı bir uygulamanın her iş parçacığı, işletim sistemi tarafından bağımsız olarak zamanlanan bağımsız bir yürütme birimidir. Kilidi almaya çalışan bir iş parçacığı, kilidi başka bir iş parçacığı tuttuğu için geciktirilirken bir kilit kilitlenmesi oluşur.
 
- Kilitler genellikle iç içe geçmiş. İç içe geçme, kritik bir bölümü yürüten bir iş parçacığı daha sonra başka bir kilit gerektiren bir işlev gerçekleştirdiğinde oluşur. Kilit iç içe geçme miktarı kaçınılmaz. kritik bölüm, iş parçacığı açısından güvenli olduğundan emin olmak için kilitlerin kullanıldığı bir .NET Framework yöntemi çağırabilir. Uygulamanızdaki bazı kritik bölümden, farklı bir kilit tanıtıcısı kullanarak da kilitleyen bir çerçeve yöntemine yapılan çağrı, kilitlerin iç içe geçmesine neden olur. İç içe kilitleme koşulları, kaçınılması ve düzeltilmesi açısından önemli bir şekilde zor olan performans sorunlarına neden olabilir.
+ Kilitler sıklıkla iç içe geçmiştir. İç içe yerleştirme, kritik bölümü yürüten bir iş parçacığı başka bir kilit gerektiren bir işlev gerçekleştiriyorsa gerçekleşir. İç içe yerleştirme için bir miktar kilit kaçınılmazdır. Kritik bölümünüz, .NET Framework güvenli olduğundan emin olmak için kilitlere dayanan bir .NET Framework yöntemini çağırabilirsiniz. Uygulamanıza farklı bir kilit tanıtıcısı kullanarak kilitleyen bir Framework yöntemine yapılan bir çağrı, kilitlerin iç içe kilitlenmesine neden olur. İç içe kilitleme koşulları, çözmesi ve çözmesi zor olan performans sorunlarına yol açabilir.
 
- Bu kural, bir profil oluşturma çalışması sırasında alınan ölçümler, aşırı yüksek miktarda kilit çakışması olduğunu gösteriyorsa ateşlenir. Kilit çekişmeleri, kilidi bekleyen iş parçacıklarının yürütülmesini geciktirecek. Birim testlerinde veya daha düşük bir uçta çalışan yük testlerinde çok az miktarda kilit çakışması araştırılmalıdır.
+ Profil oluşturma çalıştırması sırasında alınan ölçümler, aşırı yüksek miktarda kilit tartışması olduğunu gösteriyor olduğunda bu kural ortaya çıkar. Kilit içeriği, kilidi bekleyen iş parçacıklarının yürütülmesini geciktirir. Birim testlerinde veya alt uç donanımlarda çalıştırılan yük testlerinde bile oldukça küçük miktarlarda kilit sorunu araştırılması gerekir.
 
 > [!NOTE]
-> Profil oluşturma verilerinde raporlanan kilit çekişmelerinin oranı önemli ancak aşırı olmadığında, bu uyarı iletisi yerine [DA0038: yüksek oranda kilit çekişmeleri](../profiling/da0038-high-rate-of-lock-contentions.md) bilgi iletisi tetiklenir.
+> Profil oluşturma verisinde bildirilen kilit içeriklerinin oranı önemli ancak aşırı [değilken, DA0038:](../profiling/da0038-high-rate-of-lock-contentions.md) Bu uyarı iletisi yerine yüksek oranda kilit içeriği bilgi iletisi çıkar.
 
-## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma
- Profil oluşturma verilerinin [işaretler](../profiling/marks-view.md) görünümüne gitmek için iletiye çift tıklayın.  **.NET CLR Locksandthreads\çekişme hız/sn** sütununu bulun. Kilit çekişmesinin diğer aşamalara göre daha ağır olduğu program yürütmesinin belirli aşamaları olup olmadığını belirleme.
+## <a name="how-to-investigate-a-warning"></a>Uyarıyı araştırma
+ Profil oluşturma verilerinin İşaretler [görünümüne gitmek](../profiling/marks-view.md) için iletiye çift tıklayın.  **.NET CLR LocksAndThreads\Contention Rate / sec sütununu** bulun. Kilitte yer alan ve diğer aşamalardan daha ağır olan belirli program yürütme aşamaları olup olmadığını belirler.
 
- Bu kural yalnızca eşzamanlılık profil oluşturma yöntemini kullanmadığınız durumlarda ateşlenir. Eşzamanlılık profili oluşturma yöntemi, uygulamanızdaki kilit çakışması ile ilgili performans sorunlarını tanılamak için kullanılan en iyi araçtır. Uygulamanızın kilitleme davranışını anlamak için eşzamanlılık profili oluşturma verileri toplayın. Bu, hangi kilitlerin çok fazla sürdüğünü, iş parçacığı yürütme zamanının, contenerme kilitleri için ne kadar gecikdiğini ve belirli kodun ne tür bir şekilde olduğunu anlamayı içerir. eşzamanlılık profilleri, yerel Windows tesislerinin, .NET Framework sınıfların ve uygulamanızın başvurduğu diğer üçüncü taraf kitaplıkların kilitleme davranışı da dahil olmak üzere tüm kilit çekişmeleri üzerinde veri toplar. IDE 'den eşzamanlılık profili oluşturma hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bkz. [Iş parçacığı toplama ve eşzamanlılık verilerini işleme](../profiling/collecting-thread-and-process-concurrency-data.md). Komut satırından eşzamanlılık profili oluşturma hakkındaki bilgilerin bağlantıları için, [komut satırından profil oluşturma yöntemlerini kullanma](../profiling/using-profiling-methods-to-collect-performance-data-from-the-command-line.md)konusunun **kaynak çekişmesini ve iş parçacığı etkinlik verilerini toplamak Için eşzamanlılık yöntemini kullanma** bölümüne bakın.
+ Bu kural yalnızca eşzamanlılık profil oluşturma yöntemini kullanmamasanız ürkür. Eşzamanlılık profili oluşturma yöntemi, uygulamanıza kilitlemeyle ilgili performans sorunlarını tanılamak için en iyi araçtır. Uygulamanın kilitleme davranışını anlamak için eşzamanlılık profili oluşturma verileri toplayın. Bu, hangi kilitlerin yoğun bir şekilde zorlanan olduğunu, iş parçacığı yürütmenin ne kadar süreyle gecikmiş olduğunu ve hangi kodun örtülü olduğunu anlamayı içerir. Eşzamanlılık profilleri yerel Windows tesislerinin, .NET Framework sınıflarının ve uygulama başvurularının diğer üçüncü taraf kitaplıklarının kilitleme davranışı da dahil olmak üzere tüm kilit içeriklerinde veri toplar. IDE'den eşzamanlılık profili oluşturma hakkında bilgi için bkz. İş [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [parçacığı toplama ve eşzamanlılık verilerini işleme.](../profiling/collecting-thread-and-process-concurrency-data.md) Komut satırdan eşzamanlılık profili oluşturma hakkında bilgi için,  Komut satırı profil oluşturma yöntemlerini kullanma bölümünün Kaynak ve iş parçacığı etkinlik verilerini toplamak için eşzamanlılık yöntemini kullanma bölümüne [bakın.](../profiling/using-profiling-methods-to-collect-performance-data-from-the-command-line.md)

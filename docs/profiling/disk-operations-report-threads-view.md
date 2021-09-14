@@ -1,6 +1,6 @@
 ---
-title: Disk İşlemleri Raporu (İş Parçacıkları Görünümü) | Microsoft Docs
-description: Disk İşlemleri Raporu, disk kanallarında disk I/O işlemlerini gösterir. Her disk erişimi için hangi bilgilerin raporlandığına bakın.
+title: Disk Işlemleri raporu (Iş parçacıkları görünümü) | Microsoft Docs
+description: Disk Işlemleri raporu disk kanallarındaki disk g/ç işlemlerini gösterir. Her disk erişimi için bildirilen bilgileri görün.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,20 +16,20 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: ff9790ab1178ecae056c4af0fcea673e8e94ead7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122142032"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635729"
 ---
 # <a name="disk-operations-report-threads-view"></a>Disk İşlemleri Raporu (İş Parçacıkları Görünümü)
-Disk İşlemleri Raporu, disk kanallarında disk I/O işlemlerini gösterir.
+Disk Işlemleri raporu disk kanallarındaki disk g/ç işlemlerini gösterir.
 
- Şu anda görünür olan zaman penceresinde profili yapılan işlem adına oluşan her disk erişimi için şu bilgiler rapor olur:
+ Şu anda görünür zaman penceresinde profili oluşturulan işlem adına gerçekleşen her disk erişimi için, bu bilgiler raporlanır:
 
-- Disk erişimini gerçekleştiren sürecin adı ve PID'i
+- Disk erişimini gerçekleştiren işlemin adı ve PID 'SI
 
-- Diske erişen iş parçacığının kimliği
+- Diske erişen iş parçacığının KIMLIĞI
 
 - Erişilen dosyanın adı
 

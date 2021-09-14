@@ -1,6 +1,6 @@
 ---
-title: Command-Line yakalama aracı | Microsoft Docs
-description: Grafik tanılama yakalama ve kayıttan yürütme için, tüm özellik düzeylerinde Direct3D 12 aracılığıyla Direct3D 10 ' u destekleyen bir komut satırı aracı olan DXCap.exe hakkında bilgi edinin.
+title: Command-Line Yakalama Aracı | Microsoft Docs
+description: Tüm özellik DXCap.exe Direct3D 10 ile Direct3D 12'yi destekleyen grafik tanılama yakalama ve kayıttan yürütmeye yönelik bir komut satırı aracı olan DXCap.exe hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,14 +12,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: ace21b9e639f78c022c03825623f6c7d5190911d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074331"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626462"
 ---
 # <a name="command-line-capture-tool"></a>Komut Satırı Yakalama Aracı
-DXCap.exe, grafik tanılama yakalama ve kayıttan yürütme için bir komut satırı aracıdır. Tüm özellik düzeylerinde Direct3D 12 aracılığıyla Direct3D 10 ' da desteklenir.
+DXCap.exe, grafik tanılama yakalama ve kayıttan yürütme için bir komut satırı aracıdır. Tüm özellik düzeylerinde Direct3D 10 ile Direct3D 12 arasında bir destek sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,207 +34,207 @@ DXCap.exe -info
 ```
 
 #### <a name="parameters"></a>Parametreler
- `-file``filename`Yakalama modu ( `-c` ) altında, `filename` grafik bilgilerinin kaydedildiği grafik günlük dosyasının adını belirtir. `filename`Belirtilmemişse, grafik bilgileri varsayılan olarak adlı bir dosyaya kaydedilir `<appname>-<date>-<time>.vsglog` .
+ `-file``filename`Yakalama modu ( `-c` ) `filename` altında, grafik bilgilerini kaydeden grafik günlüğü dosyasının adını belirtir. `filename`Belirtilmezse, grafik bilgileri varsayılan olarak adlı bir dosyaya `<appname>-<date>-<time>.vsglog` kaydedilir.
 
- Doğrulama (-v) modu altında, `filename` doğrulanacak grafik günlük dosyasının adını belirtir. `filename`Belirtilmemişse, son doğrulanan grafik günlüğü tekrar kullanılır.
+ Doğrulama (-v) `filename` modu altında, doğrulanması gereken grafik günlüğü dosyasının adını belirtir. `filename`Belirtilmezse, son doğrulanmış grafik günlüğü yeniden kullanılır.
 
- `-frame``frames`Yakalama modu ' nun altında, `frames` yakalamak istediğiniz çerçeveleri belirtir. İlk kare 1 ' dir. Virgüller ve aralıklar kullanarak çeşitli kareler belirtebilirsiniz. Örneğin, ise, `frames` `2, 5, 7-9, 15` kareler `2` ,,,, `5` `7` `8` `9` ve `15` .
-
-> [!TIP]
-> `-frame` `manual` Yazdırma ekranı tuşuna basarak çerçevelerin el ile yakalanıp yakalanmayacağını belirtmek için kullanın. Uygulama başlatıldığında çerçeveler yakalanabilir; çerçeveleri yakalamayı durdurmak için komut satırı arabirimine dönün ve ENTER tuşuna basın.
-
- `-period``periods`Yakalama modu ' nun altında, `periods` kareleri yakalamak istediğiniz zaman aralıklarını saniye cinsinden belirtir. Virgüller ve aralıklar kullanarak birkaç nokta belirtebilirsiniz. Örneğin, `periods` ise, `2.1-5, 7.0-9.3` `2.1` ve `5` saniye arasında ve ile saniye arasında işlenen çerçeveler `7` `9.3` yakalanır.
-
- `-c``app`[ `args...` ] Yakalama modu. Yakalama modu ' nun altında, `app` grafik bilgilerini yakalamak istediğiniz uygulamanın adını belirtir; `args...` Bu uygulamaya ek komut satırı parametreleri belirtir.
-
- `-p` [ `filename` ] Kayıttan yürütme modu ( `-p` ). Kayıttan yürütme modu altında, `filename` oynatılacak grafik günlük dosyasının adını belirtir. `filename`Belirtilmemişse, en son çalınan grafik günlüğü tekrar kullanılır.
-
- `-debug` Kayıttan yürütme modu ' nun altında, `-debug` kayıttan yürütmenin Direct3D hata ayıklama katmanı etkinken yürütülmesi gerektiğini belirtir.
-
- `-warp` Kayıttan yürütme modu altında `-warp` Kayıttan YÜRÜTMENIN warp yazılım oluşturucuyu kullanarak yürütülmesi gerektiğini belirtir.
-
- `-hw` Kayıttan yürütme modu ' nun altında, `-hw` Kayıttan YÜRÜTMENIN GPU donanımı kullanılarak yürütülmesi gerektiğini belirtir.
-
- `-config` Kayıttan yürütme modu ' nun altında, `-config` grafik günlük dosyasını yakalamak için kullanılan makineyle ilgili tüm bilgileri görüntüler.
-
- `-rawmode` Kayıttan yürütme modu ' nun altında, `-rawmode` kayıttan yürütmenin kayıtlı olaylarda değişiklik yapılmadan gerçekleştirilmesi gerektiğini belirtir. Normal işlem altında kayıttan yürütme modu, hata ayıklamayı basitleştirmek ve kayıttan yürütmeyi hızlandırmak için kayıttan yürütmeye küçük değişiklikler yapabilir. Örneğin, takas zinciri komutlarının yürütülmesi yerine takas zinciri çıkışının benzetimini sağlayabilir. Genellikle bu kayıttan yürütme bir sorun değildir, ancak kayıttan yürütme işleminin kayıtlı etkinliğe daha kolay bir şekilde oluşması gerekebilir. Örneğin, tam ekran işleme davranışını tam ekran modunda çalışırken yakalanan bir uygulamaya geri yüklemek için bu seçeneği kullanabilirsiniz.
-
- `-toXML` [ `xml_filename` ] Kayıttan yürütme modu altında `xml_filename` KAYıTTAN yürütme XML gösteriminin yazıldığı dosyanın adını belirtir. `xml_filename`Belirtilmemişse, XML temsili, çalınan dosya ile aynı adlı bir dosyaya yazılır, ancak bir uzantı verilirler `.xml` .
-
- `-v` Doğrulama modu. Doğrulama modu ' nun altında, yakalanan çerçeveler hem donanım hem de ÇARPıTMA üzerinde oynatılır ve sonuçları bir görüntü karşılaştırma işlevi kullanılarak karşılaştırılır. Bu özelliği kullanarak, işleinizi etkileyen sürücü sorunlarını hızla belirleyebilirsiniz.
-
- `-examine``events`Doğrulama modu ' nun altında, `events` acil sonuçları karşılaştırılan grafik olaylarının kümesini belirtir. Örneğin, `-examine present,draw,copy,clear` karşılaştırmayı yalnızca bu kategorilere ait olaylarla sınırlandırır.
+ `-frame``frames`Yakalama modu `frames` altında, yakalamak istediğiniz kareleri belirtir. İlk kare 1'tir. Virgül ve aralıklar kullanarak birkaç kare belirtebilirsiniz. Örneğin, ise `frames` , , , , ve `2, 5, 7-9, 15` `2` `5` `7` `8` `9` çerçeveleri `15` yakalanır.
 
 > [!TIP]
-> `-examine present,draw,copy,clear`Bu işlem, birçok sorunu ortaya çıkardığı ve daha kapsamlı bir olay kümesinden daha az zaman alacak olduğundan, ' den başlayıp başlamadan önce. Gerekirse, bu olayları doğrulamak ve diğer sorun türlerini açığa çıkarmak için daha büyük veya farklı bir olay kümesi belirtebilirsiniz.
+> Yazdırma `-frame` `manual` Ekranı tuşuna basılarak karelerin el ile yakalanacaklarını belirtmek için kullanın. Uygulama başlatıldığında kareler yakalanır; çerçeveleri yakalamayı durdurmak için komut satırı arabirimine dönüp Enter tuşuna basın.
 
- `-haltonfail` Doğrulama modu altında, `-haltonfail` donanım ve çarpıtma işleyicisi arasında farklılıklar algılandığında doğrulamayı durdurur. Bir anahtara basıldığında doğrulama devam eder.
+ `-period``periods`Yakalama modu `periods` altında, kareleri yakalamak istediğiniz süre aralıklarını saniyeler içinde belirtir. Virgül ve aralıklar kullanarak birkaç nokta belirtebilirsiniz. Örneğin , `periods` ise `2.1-5, 7.0-9.3` ile saniyeler arasında işlenen `2.1` `5` kareler ve ile saniyeler `7` arasında `9.3` yakalanır.
 
- `-exitonfail` Doğrulama modu altında, `-exitonfail` donanım ve çarpıtma işleyicisi arasında farklılıklar algılandığında doğrulamadan hemen çıkar. Program bu şekilde çıktığında `0` ortama döner; Aksi takdirde döndürür `1` .
+ `-c``app`[ `args...` ] Yakalama modu. Yakalama modu altında, grafik bilgilerini yakalamak istediğiniz uygulamanın adını belirtir; bu uygulamaya ek komut `app` `args...` satırı parametrelerini belirtir.
 
- `-showprogress` Doğrulama modu altında `-showprogress` doğrulama oturumuyla ilgili ilerleme bilgilerini görüntüler. ÇARPıTMA ilerlemesi solda görüntülenir; donanım ilerlemesi sağ tarafta görüntülenir.
+ `-p` [ `filename` ] Kayıttan yürütme modu ( `-p` ). Kayıttan yürütme `filename` modu altında, yeniden oynatacak grafik günlüğü dosyasının adını belirtir. `filename`Belirtilmezse, en son yeniden oynanmış grafik günlüğü yeniden kullanılır.
 
- `-e``search_string`Yüklü UWP uygulamalarını numaralandırır. Bu bilgileri, UWP uygulamalarıyla komut satırı yakalamaları gerçekleştirmek için kullanabilirsiniz.
+ `-debug` Kayıttan yürütme modu `-debug` altında, direct3D hata ayıklama katmanı etkinken kayıttan yürütmenin oynat gerektiğini belirtir.
 
- `-info` Makine ve yakalama dll 'Leri hakkındaki bilgileri görüntüler.
+ `-warp` Kayıttan yürütme modu `-warp` altında, PLAYBACK yazılım işleyicisi kullanılarak kayıttan yürütmenin oynatılacak olduğunu belirtir.
+
+ `-hw` Kayıttan yürütme modu `-hw` altında, kayıttan yürütmenin GPU donanımı kullanılarak oynat gerektiğini belirtir.
+
+ `-config` Kayıttan yürütme `-config` modu altında, grafik günlük dosyasını yakalamak için kullanılan makineyle ilgili tüm bilgileri görüntüler.
+
+ `-rawmode` Kayıttan yürütme modu `-rawmode` altında, kayıttan yürütmenin kayıtlı olaylarda değişiklik yapmadan gerçekleştirilecek olduğunu belirtir. Normal çalışma altında kayıttan yürütme modu, hata ayıklamayı basitleştirmek ve kayıttan yürütmeyi hızlandırmak için kayıttan yürütmede küçük değişikliklere neden olabilir. Örneğin, değiştirme zinciri komutlarını yürütmek yerine değiştirme zinciri çıkışının benzetimini gerçekleştiriyor olabilir. Genellikle bu kayıttan yürütme bir sorun değildir, ancak kayıttan yürütmenin kaydedilen olay için daha fazla güvenilir olacak şekilde gerçekleşmesi gerekir. Örneğin, tam ekran işleme davranışını tam ekran modunda çalışırken yakalanan bir uygulamaya geri yüklemek için bu seçeneği kullanabilirsiniz.
+
+ `-toXML` [ `xml_filename` ] Kayıttan yürütme `xml_filename` modunda, kayıttan yürütmenin XML gösteriminin yazıldığı dosyanın adını belirtir. Belirtilmezse, XML gösterimi, geri çalınan dosyayla aynı adlı bir dosyaya `xml_filename` yazılır, ancak bir uzantı `.xml` verilir.
+
+ `-v` Doğrulama modu. Doğrulama modunda yakalanan kareler hem donanımda hem de OSP'de geri çalınır ve sonuçları bir görüntü karşılaştırma işlevi kullanılarak karşılaştırıldı. İşlemenizi etkileyen sürücü sorunlarını hızla belirlemek için bu özelliği kullanabilirsiniz.
+
+ `-examine``events`Doğrulama modu `events` altında, anlık sonuçları karşılaştıran grafik olaylarını belirtir. Örneğin, `-examine present,draw,copy,clear` karşılaştırmayı yalnızca bu kategorilere ait olaylarla sınırlar.
+
+> [!TIP]
+> Ile başlamanız önerilir çünkü bu çoğu sorunu ortaya çıkaracak ancak daha kapsamlı bir olay `-examine present,draw,copy,clear` kümesinden çok daha kısa bir süre alır. Gerekirse, bu olayları doğrulamak ve diğer tür sorunları ortaya çıkarmak için daha büyük veya farklı bir olay kümesi belirtabilirsiniz.
+
+ `-haltonfail` Doğrulama modu altında, `-haltonfail` donanım ve RENDER oluşturucu arasındaki farklar algılandığında doğrulamayı durdurduğu. Bir tuşa basıldığında doğrulama devam eder.
+
+ `-exitonfail` Doğrulama modu altında, `-exitonfail` donanım ile RENDER oluşturucu arasında farklar algılandığında doğrulamadan hemen çıkar. Program bu şekilde çıkarsa ortama geri döner; aksi `0` takdirde `1` döndürür.
+
+ `-showprogress` Doğrulama modu altında, `-showprogress` doğrulama oturumuyla ilgili ilerleme bilgilerini görüntüler. LEFT ilerleme durumu solda görüntülenir; donanım ilerleme durumu sağda görüntülenir.
+
+ `-e``search_string`Yüklü UWP uygulamalarını numaralar. UWP uygulamalarıyla komut satırı yakalamaları gerçekleştirmek için bu bilgileri kullanabilirsiniz.
+
+ `-info` Makine ve yakalama URL'leri hakkında bilgileri görüntüler.
 
 ## <a name="remarks"></a>Açıklamalar
  DXCap.exe üç modda çalışır:
 
- Yakalama modu (-c) çalışan bir uygulamadan grafik bilgilerini yakalayın ve bir grafik günlük dosyasına kaydeder. Yakalama özellikleri ve dosya biçimi Visual Studio benzerdir.
+ Yakalama modu (-c) Çalışan bir uygulamanın grafik bilgilerini yakalama ve grafik günlük dosyasına kaydetme. Yakalama özellikleri ve dosya biçimi, veri yakalama özellikleriyle Visual Studio.
 
- Kayıttan yürütme modu (-p) daha önce yakalanan grafik olaylarını mevcut bir grafik günlük dosyasından oynatma. Varsayılan olarak, grafik günlük dosyası tam bir uygulamadan yakalansa bile kayıttan yürütme bir pencerede gerçekleşir. Kayıttan yürütme işlemi, yalnızca grafik günlük dosyası tam ekran uygulamadan yakalandıysa ve belirtildiğinde tam ekranda gerçekleşir `-rawmode` .
+ Kayıttan yürütme modu (-p) Var olan bir grafik günlüğü dosyasından daha önce yakalanan grafik olaylarını kayıttan yürütme. Varsayılan olarak, grafik günlük dosyası tam ekran uygulamasından yakalansa bile kayıttan yürütme bir pencerede gerçekleşir. Kayıttan yürütme yalnızca grafik günlüğü dosyası tam ekran uygulamasından yakalanır ve belirtilirken tam `-rawmode` ekranda gerçekleşir.
 
- Doğrulama modu ( `-v` ), yakalanan çerçeveleri her iki donanımda ve çarpmaya oynatarak ve sonra sonuçlarını bir görüntü karşılaştırma işlevi kullanarak karşılaştırarak işleme davranışını doğrular. Bu özelliği kullanarak, işleinizi etkileyen sürücü sorunlarını hızla belirleyebilirsiniz.
+ Doğrulama modu ( ) Yakalanan kareleri hem donanımda hem de IMAGE'de tekrar çalarak ve ardından bir görüntü karşılaştırma işlevi kullanarak sonuçlarını karşılaştırarak `-v` işleme davranışını doğrular. İşlemenizi etkileyen sürücü sorunlarını hızla belirlemek için bu özelliği kullanabilirsiniz.
 
- Bu modların yanı sıra, dxcap.exe grafik bilgilerini yakalama veya kayıttan yürütme gerçekleştirmeyen iki diğer işlev de gerçekleştirir.
+ Bu modlara ek olarak dxcap.exe, grafik bilgilerini yakalama veya kayıttan yürütme gerçekleştirmez diğer iki işlevi gerçekleştirir.
 
- Numaralandırma işlevi ( `-e` ) makinede yüklü UWP uygulamalarıyla ilgili ayrıntıları görüntüler. Bu ayrıntılar, bir UWP uygulamasında yürütülebilir dosyayı tanımlayan paket adı ve AppID 'yi içerir. DXCap.exe kullanarak bir Windows Mağazası uygulamasından grafik bilgilerini yakalamak için, bir masaüstü uygulaması yakaladığınızda kullanılan yürütülebilir dosya adı yerine paket adı ve AppID 'yi kullanın.
+ Numaralama işlevi ( `-e` ) Makinede yüklü olan UWP uygulamalarıyla ilgili ayrıntıları görüntüler. Bu ayrıntılar, UWP uygulamasında yürütülebilir dosyayı tanımlamak için paket adını ve appid'i içerir. DXCap.exe kullanarak bir Windows Mağazası uygulamasından grafik bilgilerini yakalamak için, bir masaüstü uygulamasını yakalarken kullanılan yürütülebilir dosya adı yerine paket adını ve appid'yi kullanın.
 
- Info işlevi ( `-info)` makine ve yakalama dll 'leri hakkındaki ayrıntıları görüntüler.
+ Info işlevi ( `-info)` Makine ve yakalama URL'leri ile ilgili ayrıntıları görüntüler.
 
 ## <a name="examples"></a>Örnekler
 
-### <a name="capture-graphics-information-from-a-desktop-app"></a>Bir masaüstü uygulamasından grafik bilgilerini yakalama
- `-c`Grafik bilgilerini yakalamak istediğiniz uygulamayı belirtmek için kullanın.
+### <a name="capture-graphics-information-from-a-desktop-app"></a>Masaüstü uygulamasından grafik bilgilerini yakalama
+ Grafik `-c` bilgilerini yakalamak istediğiniz uygulamayı belirtmek için kullanın.
 
 ```cmd
 DXCap.exe -c BasicHLSL11.exe
 ```
 
- Grafik bilgileri varsayılan olarak adlı bir dosyaya kaydedilir `<appname>-<date>-<time>.vsglog` . `-file`Uygulamasına kaydedilecek farklı bir dosya belirtmek için kullanın.
+ Varsayılan olarak, grafik bilgileri adlı bir dosyaya `<appname>-<date>-<time>.vsglog` kaydedilir. Kaydedilen `-file` farklı bir dosya belirtmek için kullanın.
 
 ```cmd
 DXCap.exe -file regression_test_12.vsglog -c BasicHLSL11.exe
 ```
 
- Uygulamanın dosya adından sonra dahil ederek yakaladığınız uygulamaya yönelik ek komut satırı parametreleri belirtin.
+ Uygulamanın dosya adı sonrasında dahil etmek üzere, yakalanan uygulamaya ek komut satırı parametreleri belirtin.
 
 ```cmd
 DXCap.exe -c "C:\Program Files\Internet Explorer\iexplorer.exe" "www.fishgl.com"
 ```
 
- Yukarıdaki örnekteki komut, 3-b içeriğini işlemek için WebGL API 'sini kullanan www.fishgl.com adresinde bulunan Web sayfasını görüntülerken, Internet Explorer 'ın masaüstü sürümünden grafik bilgilerini yakalar.
+ Yukarıdaki örnekteki komut, Internet Explorer'nin masaüstü sürümünden grafik bilgilerini yakalarken www.fishgl.com web sayfasını görüntüler ve 3-B içeriği işlemek için WebGL API'sini kullanır.
 
 > [!NOTE]
-> Uygulamadan sonra görüntülenen komut satırı bağımsız değişkenleri, seçeneğini kullanmadan önce DXCap.exe için tasarlanan bağımsız değişkenleri belirtmeniz gerekir `-c` .
+> Uygulama geçirildikten sonra görünen komut satırı bağımsız değişkenleri olduğundan, seçeneğini kullanmadan önce DXCap.exe için DXCap.exe bağımsız değişkenleri belirtmeniz `-c` gerekir.
 
-### <a name="capture-graphics-information-from-a-uwp-app"></a>UWP uygulamasından grafik bilgilerini yakalayın.
- UWP uygulamasından grafik bilgilerini yakalayabilirsiniz.
+### <a name="capture-graphics-information-from-a-uwp-app"></a>UWP uygulamasından grafik bilgilerini yakalama.
+ Bir UWP uygulamasından grafik bilgilerini yakaabilirsiniz.
 
 ```cmd
 DXCap.exe -c Microsof.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps
 ```
 
- uwp uygulamasından yakalamak için DXCap.exe kullanmak, bunu bir Windows masaüstü uygulamasından yakalamak üzere kullanmaya benzer, ancak bunun yerine bir masaüstü uygulamasını dosya adına göre tanımlayarak, bir uwp uygulamasını paket adına ve bu paketin içinde yakalamak istediğiniz yürütülebilir dosyanın adına ve kimliğine göre belirlersiniz. Makinenizde yüklü olan UWP uygulamalarının nasıl tanımlanacağına daha kolay bir şekilde emin olmak için, bu `-e` seçeneği listelemek için DXCap.exe kullanın:
+ Bir UWP uygulamasından yakalamak için DXCap.exe kullanmak, Windows masaüstü uygulamasından yakalamak için kullanmaya benzer, ancak bir masaüstü uygulamasını dosya adına göre tanımlamak yerine, bir UWP uygulamasını paket adına ve yakalamak istediğiniz paketin içindeki yürütülebilir dosyanın adına veya kimliğine göre tanımlayabilirsiniz. Makinenize yüklenmiş olan UWP uygulamalarını tanımlamayı daha kolay hale DXCap.exe seçeneğini kullanarak `-e` bunları numaralandırabilirsiniz:
 
 ```cmd
 DXCap.exe -e
 ```
 
- Aradığınız uygulamayı bulmaya yardımcı olması için isteğe bağlı bir arama dizesi sağlayabilirsiniz. Arama dizesi sağlandığında, DXCap.exe paket adı, uygulama adı veya uygulama kimlikleri arama dizesiyle eşleşen UWP uygulamalarını numaralandırır. Arama büyük/küçük harfe duyarlıdır.
+ İsteğe bağlı bir arama dizesi sarak, aramakta olduğunuz uygulamayı buluabilirsiniz. Arama dizesi sağlanıyorsa, DXCap.exe adı, uygulama adı veya uygulama kimlikleri arama dizesiyle aynı olan UWP uygulamalarını numaralar. Arama büyük/büyük/büyük harfe duyarlı değildir.
 
 ```cmd
 DXCap.exe -e map
 ```
 
- Yukarıdaki komut, "map" ile eşleşen UWP uygulamalarını numaralandırır; çıktı şöyledir:
+ Yukarıdaki komut, "map" ile eşleni UWP uygulamalarını numaralar; çıktısı şu şekildedir:
 
- **"Microsoft. bingmaps" paketi:** **ınstalldirectory: C: \ Program Files \ windowsapps \ Microsoft. BingMaps_2.1.2914.1734_x64__8wekyb3d8bbbu** **FullName: Microsoft. BingMaps_2.1.2914.1734 _x64__8wekyb3d8bbwe** **kullanıcı sıd: S-1-5-21-2127521184-1604012920-1887927527-5603533** **ad: microsoft. bingmaps** **Publisher: CN = Microsoft corporation, O = microsoft corporation, L = Redmond, S = Washington, C = US** **sürüm: 2.1.2914.1734** **launchable uygulamalar:** **ıd: appexmaps** **Exe: C: \ Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe** **ıwwa:** **appspec (başlatmak için): DXCap.exe-C Microsoft. BingMaps_2.1.2914.1734 _x64__8wekrivbwe,** her numaralandırılmış uygulama için çıktının son satırını, bundan sonra grafik bilgilerini yakalamak için kullanabileceğiniz komutu görüntüler.
+ **Paket "Microsoft.BingMaps":** **InstallDirectory: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe** **FullName : Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe** **UserSID : S-1-5-21-212752184-1604012920-1887927527-5603533 Adı:** **Microsoft.BingMaps** Publisher : **CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US** Version : **2.1.2914.1734** **Launchable Applications:** **Id: AppexMaps** **Exe: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe** **IsWWA: No** **AppSpec (başlatmak için): DXCap.exe -c Microsoft.BingMaps_2 DXCap.exe.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps** Numaralandı her uygulamanın son çıktı satırı, grafik bilgilerini yakalamak için kullanabileceğiniz komutu görüntüler.
 
-### <a name="capture-specific-frames-or-frames-between-specific-times"></a>Belirli saatler arasında belirli çerçeveler veya çerçeveler yakalayın.
- `-frame`Virgüller ve aralıklar kullanarak yakalamak istediğiniz çerçeveleri belirtmek için kullanın:
+### <a name="capture-specific-frames-or-frames-between-specific-times"></a>Belirli kareleri veya kareleri belirli zamanlar arasında yakalama.
+ Virgül `-frame` ve aralık kullanarak yakalamak istediğiniz kareleri belirtmek için kullanın:
 
 ```cmd
 DXCap.exe -frame 2,5,7-9,15 -c SimpleBezier11.exe
 ```
 
- Ya da `-period` çerçeve yakalamak için bir zaman aralığı kümesi belirtmek için kullanın. Zaman aralıkları saniye cinsinden belirtilir ve birden çok Aralık belirtilebilir:
+ Veya `-period` çerçevelerin yakalanması için bir zaman aralığı kümesi belirtmek için kullanın. Zaman aralıkları saniyeler içinde belirtilir ve birden çok aralık belirtilebilir:
 
 ```cmd
 DXCap.exe -period 2.1-5, 7.0-9.3 -c SimpleBezier11.exe
 ```
 
-### <a name="capture-frames-interactively"></a>Çerçeveleri etkileşimli olarak yakalayın.
- `-manual`Çerçeveleri etkileşimli olarak yakalamak için kullanın. Yakalamayı başlatmak için ENTER tuşuna basın ve durdurmak için ENTER tuşuna basın.
+### <a name="capture-frames-interactively"></a>Kareleri etkileşimli olarak yakalama.
+ Çerçeveleri `-manual` etkileşimli olarak yakalamak için kullanın. Yakalamayı başlatmak için Enter tuşuna basın ve durdurmak için Enter tuşuna tekrar basın.
 
 ```cmd
 DXCap.exe -manual -c SimpleBezier11.exe
 ```
 
-### <a name="play-back-a-graphic-log-file"></a>Grafik günlüğü dosyasını kayıttan yürütme
- `-p`Daha önce yakalanan bir grafik günlük dosyasını kayıttan yürütmek için kullanın.
+### <a name="play-back-a-graphic-log-file"></a>Grafik günlük dosyasını geri oynatma
+ Daha `-p` önce yakalanan grafik günlüğü dosyasını oynatmak için kullanın.
 
 ```cmd
 DXCap.exe -p regression_test_12.vsglog
 ```
 
- En son yakalanan grafik günlüğünü çalmak için dosya adını bırakın.
+ En son yakalanan grafik günlüğünü oynatmak için dosya adını dışarıda bırakın.
 
 ```cmd
 DXCap.exe -p
 ```
 
-### <a name="play-back-in-raw-mode"></a>Ham modda kayıttan çal
- `-rawmode`Yakalanan komutları tam olarak oluşan şekilde kayıttan yürütmek için kullanın. Normal kayıttan yürütme altında bazı komutlar öykünülecektir, örneğin, tam ekran uygulamasından yakalanan bir grafik günlüğü dosyası bir pencerede yeniden oynatılır; ham mod etkinken, aynı dosya tam ekranda kayıttan yürütmeye çalışacaktır.
+### <a name="play-back-in-raw-mode"></a>Ham modda yeniden oynatma
+ Yakalanan `-rawmode` komutları tam olarak gerçekleştikleri gibi oynatmak için kullanın. Normal kayıttan yürütmenin altında bazı komutlar öykünülmektedir; örneğin, tam ekran uygulamasından yakalanan grafik günlük dosyası bir pencerede yürütülecek; ham modu etkin olduğunda, aynı dosya tam ekranda yeniden oynatmayı dener.
 
 ```cmd
 DXCap.exe -p regression_test_12.vsglog -rawmode
 ```
 
-### <a name="play-back-using-warp-or-a-hardware-device"></a>WARP veya donanım cihazı kullanarak kayıttan yürütme
- Bir donanım cihazında yakalanan bir grafik günlüğü dosyasını, WARP kullanacak şekilde yürütmeye zorlamak veya WARP üzerinde yakalanan bir günlüğün bir donanım cihazı kullanmak için yürütülmesini zorlamak isteyebilirsiniz. `-warp`Warp kullanarak kayıttan yürütmek için kullanın.
+### <a name="play-back-using-warp-or-a-hardware-device"></a>BILGISAYAR VEYA donanım cihazı kullanarak geri oynatma
+ Donanım cihazında yakalanan grafik günlüğü dosyasını ZORLA YÜRÜTMEye veya DONANıM cihazında yakalanan bir günlüğün kayıttan yürütmeye zorlanır. `-warp`BACK kullanarak oynatmak için kullanın.
 
 ```cmd
 DXCap.exe -p regression_test_12.vsglog -warp
 ```
 
- `-hw`Donanım kullanarak kayıttan yürütmek için kullanın.
+ Donanım `-hw` kullanarak geri oynatmak için kullanın.
 
 ```cmd
 DXCap.exe -p regression_test_12.vsglog -hw
 ```
 
-### <a name="validate-a-graphics-log-file-against-warp"></a>Bir grafik günlük dosyasını ÇARPıTıP doğrulama
- Doğrulama modu altında, grafik günlük dosyası hem donanım hem de ÇARPıTMA üzerinde oynatılır ve sonuçları karşılaştırılır. Bu, sürücünün neden olduğu işleme hatalarını belirlemenize yardımcı olabilir. Grafik donanımının ÇARPMANıN doğru davranışını doğrulamak için-v kullanın.
+### <a name="validate-a-graphics-log-file-against-warp"></a>Grafik günlük dosyasını ATF'ye karşı doğrulama
+ Doğrulama modu altında grafik günlüğü dosyası hem donanım hem de BILGISAYAR üzerinde geri çalınır ve sonuçları karşılaştırıldı. Bu, sürücüden kaynaklanan işleme hatalarını tanımlamanıza yardımcı olabilir. GRAFIK donanımının DOĞRU davranışını DOĞRULAMAK için -v kullanın.
 
 ```cmd
 DXCap.exe -v regression_test_12.vsglog
 ```
 
- Karşılaştırma miktarını azaltmak için, doğrulamanın karşılaştırılacağı ve diğer komutların yoksayılacağı komutların bir alt kümesini belirtebilirsiniz. Sonuçları karşılaştırmak istediğiniz komutları belirtmek için-İncele kullanın.
+ Karşılaştırma miktarını azaltmak için, karşılaştırma için doğrulama komutlarının bir alt kümesini belirtebilirsiniz ve diğer komutlar yoksayılır. Sonuçlarını karşılaştırmak istediğiniz komutları belirtmek için -examine kullanın.
 
 ```cmd
 DXCap.exe -v regression_test_12.vsglog -examine present,draw,copy,clear
 ```
 
-### <a name="convert-a-graphics-log-file-to-pngs"></a>Grafik günlük dosyasını png 'lere Dönüştür
- Grafikleri bir grafik günlük dosyasından görüntülemek veya analiz etmek için DXCap.exe yakalanan çerçeveleri .png (Taşınabilir Ağ Grafikleri) görüntü dosyaları olarak kaydedebilir. `-screenshot`Yakalanan çerçeveleri .png dosya olarak çıktısını almak için kayıttan yürütme modunda ' i kullanın.
+### <a name="convert-a-graphics-log-file-to-pngs"></a>Grafik Günlüğü dosyasını PNG'lere dönüştürme
+ Bir grafik günlük dosyasından kareleri görüntülemek veya analiz etmek DXCap.exe, yakalanan kareleri .png (Taşınabilir Ağ Grafikleri) görüntü dosyaları olarak kaydedebilir. Yakalanan `-screenshot` kareleri kayıttan yürütme modu altında kullanmak için .png kullanın.
 
 ```cmd
 DXCap.exe -p BasicHLSL11.vsglog -screenshot
 ```
 
- `-frame` `-screenshot` Çıktısını almak istediğiniz çerçeveleri belirtmek için ile kullanın.
+ Çıkışını `-frame` `-screenshot` yapmak istediğiniz kareleri belirtmek için ile kullanın.
 
 ```cmd
 DXCap.exe -p BasicHLSL11.vsglog -screenshot -frame 5, 7-9
 ```
 
-### <a name="convert-a-graphics-log-file-to-xml"></a>Grafik günlük dosyasını XML 'e dönüştürme
- FindStr veya XSLT gibi tanıdık araçları kullanarak grafik günlüklerini işlemek ve analiz etmek için DXCap.exe bir grafik günlük dosyasını XML 'e dönüştürebilir. `-toXML`Kayıttan yürütmek yerine, günlüğü XML 'e dönüştürmek için kayıttan yürütme modunda kullanın.
+### <a name="convert-a-graphics-log-file-to-xml"></a>Grafik Günlüğü dosyasını XML'ye dönüştürme
+ FindStr veya XSLT gibi tanıdık araçları kullanarak grafik günlüklerini DXCap.exe analiz etmek için grafik günlük dosyasını XML'e dönüştürebilirsiniz. Kayıttan `-toXML` yürütme modu altında kullanarak günlüğü yeniden oynatmak yerine XML'ye dönüştürebilirsiniz.
 
 ```cmd
 DXCap.exe -p regression_test_12.vsglog -toXML
 ```
 
- Varsayılan olarak, XML çıktısı grafik günlüğü ile aynı ada sahip bir dosyaya yazılır, ancak buna bir .xml uzantısı verilir. Yukarıdaki örnekte, XML dosyası **regression_test_12.xml** olarak adlandırılır. XML dosyasına farklı bir ad vermek için, daha sonra belirtin `-toXML` .
+ Varsayılan olarak, XML çıkışı grafik günlüğüyle aynı adla bir dosyaya yazılır, ancak bu dosyaya bir .xml verilir. Yukarıdaki örnekte, XML dosyası **regression_test_12.xml.** XML dosyasına farklı bir ad vermek için sonrasında `-toXML` belirtin.
 
 ```cmd
 DXCap.exe -p regression_test_12.vsglog -toXML temp.xml
 ```
 
- Elde edilen dosya şuna benzer bir XML içerir:
+ Sonuçta elde edilen dosya, aşağıdakine benzer bir XML içerir:
 
 ```xml
 <Moment value="67"/>

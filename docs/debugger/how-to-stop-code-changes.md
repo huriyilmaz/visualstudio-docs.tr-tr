@@ -1,6 +1,6 @@
 ---
 title: Kod Değişikliklerini | Microsoft Docs
-description: Hata ayıklama oturumu sırasında Düzenle ve Devam Bırak özelliğini kullanırken kod değişikliklerini Visual Studio anlıyoruz.
+description: Hata ayıklama oturumu sırasında Düzenle ve Devam Bırak özelliğini kullanırken kod değişikliklerini Visual Studio nasıl durdurabilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,15 +20,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b103cd6d352c78db1db53efb3a20aafaaa64f3e85edee7d214e6ce917e5095a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 8968bac298983eef2101d170a52de897b131ee71
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453405"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126635286"
 ---
 # <a name="how-to-stop-code-changes"></a>Nasıl Yapılır: Kod Değişikliklerini Durdurma
-Düzenle ve Devam Etmeyi kod değişiklikleri uygulama sürecindeyken, işlemi durdurabilirsiniz.
+Düzenle ve Devam' kod değişiklikleri uygulama sürecindeyken işlemi durdurabilirsiniz.
 
 > [!CAUTION]
 > Yönetilen kodda kod değişikliklerini durdurmak beklenmeyen sonuçlar üretebilir. Yönetilen koda değişiklik uygulamak normalde hızlı bir işlemdir, bu nedenle yönetilen kodda kod değişikliklerini durdurmanın nadiren bir ihtiyacı vardır.

@@ -1,6 +1,6 @@
 ---
-title: Icon öğesi | Microsoft Docs
-description: kullanılan bit eşlem ve bit eşlem şeridindeki yuva özniteliklerini içeren Visual Studio ıde uzantılarında kullanılan simgeleri temsil eden ıcon öğesi hakkında bilgi edinin.
+title: Icon Öğesi | Microsoft Docs
+description: Kullanılan bit eşlem ve bit eşlem şeridinde yuva Visual Studio IDE uzantılarında kullanılan simgeleri temsil eden Icon öğesini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 26f942461a8d9be31e7802fb63f0249b69046663
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122070210"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626223"
 ---
-# <a name="icon-element"></a>Icon öğesi
-Simge etiketinin GUID özniteliği, tanımlı bir bit eşlemin GUID 'sidir. `id`Özniteliği, bit eşlem şeridinde yuva seçer. Bu öğe isteğe bağlıdır. Bu öğe GuidOfficeIcon değerini içeriyorsa, **Msotcıdnoıcon** dahil edilir.
+# <a name="icon-element"></a>Simge öğesi
+Icon etiketinin guid özniteliği, tanımlı bir bit eşlem guid değeridir. özniteliği `id` bit eşlem şeridinde yuvayı seçer. Bu öğe isteğe bağlıdır. Bu öğe dahil yoksa **guidOfficeIcon:msotcidNoIcon değeri** örtüşecek.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,8 +37,8 @@ Simge etiketinin GUID özniteliği, tanımlı bir bit eşlemin GUID 'sidir. `id`
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|guid|Gereklidir. Tanımlı bir bit eşlemin GUID 'si.|
-|kimlik|Gereklidir. Bit eşlem şeridinde yuva seçer.|
+|guid|Gereklidir. Tanımlı bir bit eşlem guid'si.|
+|kimlik|Gereklidir. Bit eşlem şeridinde yuvayı seçer.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -53,4 +53,4 @@ Simge etiketinin GUID özniteliği, tanımlı bir bit eşlemin GUID 'sidir. `id`
 |[Düğmeler öğesi](../extensibility/buttons-element.md)||
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

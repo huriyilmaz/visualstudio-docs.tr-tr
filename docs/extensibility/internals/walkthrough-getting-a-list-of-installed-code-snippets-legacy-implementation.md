@@ -1,5 +1,5 @@
 ---
-title: Yüklü Kod Parçacıklarının Listesini Alma (Eski) | Microsoft Docs
+title: Yüklü Kod Parçacıklarının (Eski) Listesini Alma | Microsoft Docs
 description: Belirli bir dil GUID'i için tüm kod parçacıklarını nasıl ala öğrenin. Bu kod parçacıklarının kısayolları bir IntelliSense tamamlama listesine eklenebilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -16,16 +16,16 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1d41475bef1a4da3a0eff1583a81c8e4953a3832
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122042042"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126724986"
 ---
 # <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>İzlenecek yol: Yüklü Kod Parçacıklarının Listesini Alma (Eski Uygulama)
 Kod parçacığı, bir menü komutuyla (yüklü kod parçacıkları listesinden seçime olanak sağlar) veya IntelliSense tamamlama listesinden bir kod parçacığı kısayolu seçerek kaynak arabelleğe eklen bir kod parçasıdır.
 
- yöntemi, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A> belirli bir dil GUID'si için tüm kod parçacıklarını alır. Bu kod parçacıklarının kısayolları bir IntelliSense tamamlama listesine eklenebilir.
+ yöntemi, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A> belirli bir dil GUID'i için tüm kod parçacıklarını alır. Bu kod parçacıklarının kısayolları bir IntelliSense tamamlama listesine eklenebilir.
 
  Yönetilen [paket çerçevesi](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md) (MPF) dil hizmetine kod parçacıkları uygulama hakkında ayrıntılı bilgi için bkz. Eski Dil Hizmeti'ne Kod Parçacıkları Desteği.
 
@@ -109,7 +109,7 @@ Kod parçacığı, bir menü komutuyla (yüklü kod parçacıkları listesinden 
 1. Aşağıdaki yöntem, ayrıştırma işlemi `GetSnippets` tamamlandıktan sonra yönteminin nasıl çağrıl olduğunu gösterir. yöntemi, <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A> nedeni ile başlayan bir ayrıştırma işlemi sonrasında çağrılır. <xref:Microsoft.VisualStudio.Package.ParseReason>
 
 > [!NOTE]
-> Dizi `expansionsList` listesi performans nedenleriyle önbelleğe alınmıştır. Dil hizmeti durdurulana ve yeniden yüklenene kadar (örneğin, durdurularak ve yeniden başlatarak) kod parçacıklarında yapılan değişiklikler listede [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yansıtlanmaz.
+> Dizi `expansionsList` listesi performans nedeniyle önbelleğe alınmış. Dil hizmeti durdurulana ve yeniden yüklenene (örneğin, durdurularak ve yeniden başlatarak) kadar kod parçacıklarında yapılan değişiklikler listede [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] yansıtlanmaz.
 
 ```csharp
 class TestLanguageService : LanguageService

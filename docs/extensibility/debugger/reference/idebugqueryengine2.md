@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) hata ayıklama altyapısını (DE) temsil eden bir arabirim almasına izin verir.
+description: Bu arabirim, oturum hata ayıklama yöneticisinin (SDM) hata ayıklama altyapısını (DE) temsil eden bir arabirimi alamasına olanak sağlar.
 title: IDebugQueryEngine2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e0c72f3c42520e78a53ab5fe2cc95ae3583b0c8ef40b20560edca495a3ea3da
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bf399a8ccf018e8e18c18ba0af2b54a0e5b948c9
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121402317"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725164"
 ---
 # <a name="idebugqueryengine2"></a>IDebugQueryEngine2
-Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) hata ayıklama altyapısını (DE) temsil eden bir arabirim almasına izin verir.
+Bu arabirim, oturum hata ayıklama yöneticisinin (SDM) hata ayıklama altyapısını (DE) temsil eden bir arabirimi alamasına olanak sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,28 +30,28 @@ Bu arabirim, oturum hata ayıklama Yöneticisi 'nin (SDM) hata ayıklama altyap�
 IDebugQueryEngine2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Ayrıca, bu arabirimi en yaygın olarak kullanılan ( [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md), [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)ve [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)gibi) nesnelerin kendi [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) arabirimine erişime izin vermek için uygulayan nesneler üzerinde de uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, DE'nin kendi [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) arabirimine erişim izni vermek için en yaygın DE arabirimlerini [(IDebugProgram2,](../../../extensibility/debugger/reference/idebugprogram2.md) [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)ve [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)gibi) uygulayan nesnelere bu arabirimi uygulamaz.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirimi edinmek için tipik bir DE arabirimi üzerinde [QueryInterface](/cpp/atl/queryinterface) 'i çağırın.
+ Bu arabirimi elde etmek için tipik bir DE arabiriminde [QueryInterface](/cpp/atl/queryinterface) çağrısı.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugQueryEngine2` .
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDebugQueryEngine2` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetEngineInterface](../../../extensibility/debugger/reference/idebugqueryengine2-getengineinterface.md)|Özel bir hata ayıklama altyapısı (DE) arabirimini alır.|
+|[GetEngineInterface](../../../extensibility/debugger/reference/idebugqueryengine2-getengineinterface.md)|Özel bir hata ayıklama altyapısı (DE) arabirimi alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim tipik olarak işlevler aracılığıyla sıralı adımlamayı desteklemek için [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimini uygulayan nesnede uygulanır; diğer bir deyişle, hata ayıklayıcı bir işlevden dışarı adımla, yürütülecek sonraki işlev yığında önceki işlev olmayabilir, ancak başka bir iş parçacığında bir işlev değildir. "causitesi" tanımı için bkz. [Visual Studio hata ayıklayıcı sözlüğü](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md).
+ Bu arabirim genellikle işlevlerde nedensellik sıralanmış adımlamayı desteklemek için [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimini uygulayan nesnede uygulanır; diğer bir ifadeyle, hata ayıklayıcı bir işlevden dışarı adımlarken, yürütülecek sonraki işlev yığında önceki işlev değil, tamamen başka bir iş parçacığında bir işlev olabilir. "Nedensellik" tanımı için hata [ayıklayıcısı sözlüğüne Visual Studio bakın.](../../../extensibility/debugger/reference/visual-studio-debugger-glossary.md)
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

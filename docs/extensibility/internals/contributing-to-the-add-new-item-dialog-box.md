@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: a99ccd5375f91baf0f91fceaadd803ee30d5b985
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122086852"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626181"
 ---
 # <a name="contribute-to-the-add-new-item-dialog-box"></a>Yeni öğe Ekle iletişim kutusuna katkıda bulunun
 Proje alt türü **, proje kayıt defteri alt** anahtarının altına **öğe Ekle** şablonları kaydederek **Yeni öğe Ekle** iletişim kutusu için yeni bir öğe dizini sağlayabilir.
