@@ -18,11 +18,11 @@ manager: jmartens
 ms.workload:
 - dotnet
 ms.openlocfilehash: e1ea031391b93d571b9f34ad820f1a6957dab242
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99869251"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628779"
 ---
 # <a name="how-to-specify-build-events-c"></a>Nasıl yapılır: derleme olayları belirtme (C#)
 
@@ -34,7 +34,7 @@ Bir proje oluşturulduğunda, derleme öncesi olaylar *PreBuildEvent.bat* adlı 
 
 1. **Çözüm Gezgini**, yapı olayını belirtmek istediğiniz projeyi seçin.
 
-2. **Proje** menüsünde **Özellikler**' e tıklayın.
+2. **Project** menüsünde **özellikler**' e tıklayın.
 
 3. **Derleme olayları** sekmesini seçin.
 
@@ -46,21 +46,21 @@ Bir proje oluşturulduğunda, derleme öncesi olaylar *PreBuildEvent.bat* adlı 
 5. **Oluşturma sonrası olay komut satırı** kutusunda derleme olayının sözdizimini belirtin.
 
    > [!NOTE]
-   > `call` *. Bat* dosyalarını çalıştıran tüm derleme sonrası komutlarının önüne bir ifade ekleyin. Örneğin `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat` olabilir.
+   > `call` *.bat* dosyaları çalıştıran tüm derleme sonrası komutlarınız önüne bir ifade ekleyin. Örneğin `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat` olabilir.
 
 6. **Oluşturma sonrası olayını Çalıştır** kutusunda, oluşturma sonrası olayının çalıştırılacağı koşullar altında belirtin.
 
    > [!NOTE]
    > Uzun sözdizimi eklemek veya oluşturma [öncesi olay/oluşturma sonrası olay komut satırı iletişim kutusunda](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)herhangi bir derleme makrosunu seçmek için, bir düzenleme kutusu göstermek için üç nokta düğmesini (**...**) tıklatın.
 
-   Derleme olayı sözdizimi, komut isteminde veya *. bat* dosyasında geçerli olan herhangi bir komutu içerebilir. Sonraki tüm komutların yürütüldüğünden emin olmak için bir toplu iş dosyasının adı öncesinde gelmelidir `call` .
+   Derleme olayı sözdizimi, bir komut isteminde veya bir *.bat* dosyasında geçerli olan herhangi bir komutu içerebilir. Sonraki tüm komutların yürütüldüğünden emin olmak için bir toplu iş dosyasının adı öncesinde gelmelidir `call` .
 
    > [!NOTE]
    > Oluşturma öncesi veya oluşturma sonrası olaylarınız başarıyla tamamlanmazsa, olay eyleminizi, sıfırdan farklı bir eylem belirten (0) dışında bir kodla çıkış yaparak derlemeyi sonlandırabilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki *. exe. manifest* dosyası) çağrılan bir *. exe* komutu kullanılarak uygulama bildiriminde en düşük işletim sistemi sürümünün nasıl ayarlanacağı gösterilmektedir. En düşük işletim sistemi sürümü, 4.10.0.0 gibi dört bölümden oluşan bir sayıdır. En düşük işletim sistemi sürümünü ayarlamak için, komut `<dependentOS>` bildirimin bölümünü değiştirir:
+Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki *.exe. manifest* dosyası) çağrılan *.exe* komutu kullanılarak uygulama bildiriminde en düşük işletim sistemi sürümünün nasıl ayarlanacağı gösterilmektedir. En düşük işletim sistemi sürümü, 4.10.0.0 gibi dört bölümden oluşan bir sayıdır. En düşük işletim sistemi sürümünü ayarlamak için, komut `<dependentOS>` bildirimin bölümünü değiştirir:
 
 ```xml
 <dependentOS>
@@ -70,11 +70,11 @@ Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki *. exe. ma
 </dependentOS>
 ```
 
-### <a name="create-an-exe-command-to-change-the-application-manifest"></a>Uygulama bildirimini değiştirmek için bir. exe komutu oluşturma
+### <a name="create-an-exe-command-to-change-the-application-manifest"></a>Uygulama bildirimini değiştirmek için bir .exe komutu oluşturma
 
 1. Komut için yeni bir **konsol uygulaması** projesi oluşturun. Projeyi **ChangeOSVersionCS** olarak adlandırın.
 
-2. *Program.cs*' de, aşağıdaki satırı `using` dosyanın en üstündeki yönergelere ekleyin:
+2. *Program. cs*' de, aşağıdaki satırı `using` dosyanın en üstündeki diğer yönergelere ekleyin:
 
    ```csharp
    using System.Xml;
@@ -136,21 +136,21 @@ Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki *. exe. ma
 
 4. Projeyi derleyin.
 
-5. *. Exe* dosyasını *C:\TEMP\ChangeOSVersionVB.exe* gibi bir dizine kopyalayın.
+5. *.exe* dosyasını *C:\TEMP\ChangeOSVersionVB.exe* gibi bir dizine kopyalayın.
 
 Sonra, uygulama bildirimini değiştirmek için bu komutu derleme sonrası bir olayda çağırın.
 
 ### <a name="invoke-a-post-build-event-to-modify-the-application-manifest"></a>Uygulama bildirimini değiştirmek için derleme sonrası olayını çağırma
 
-1. Yeni bir **Windows Forms App** projesi oluşturun ve bunu **CSWinApp** olarak adlandırın.
+1. yeni bir **Windows Forms App** projesi oluşturun ve bunu **cswinapp** olarak adlandırın.
 
-2. **Çözüm Gezgini**' de proje seçiliyken, **Proje** menüsünde **Özellikler**' i seçin.
+2. **Çözüm Gezgini**' de seçili proje ile **Project** menüsünde **özellikler**' i seçin.
 
-3. **Proje tasarımcısında** **Yayımla** sayfasını bulun ve **Yayımlama konumunu** *C:\Temp* olarak ayarlayın.
+3. **Project tasarımcısında** **yayımla** sayfasını bulun ve **yayımlama konumunu** *C:\TEMP* olarak ayarlayın.
 
 4. **Şimdi Yayımla**' ya tıklayarak projeyi yayımlayın.
 
-   Bildirim dosyası *C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe. manifest* öğesine oluşturulup kaydedilir. Bildirimi görüntülemek için, dosyaya sağ tıklayın, **birlikte Aç**' a tıklayın, **Listeden programı seç**' i seçin ve ardından **Notepad**' e tıklayın.
+   Bildirim dosyası *C:\TEMP\CSWinApp_1_0_0_0\CSWinApp.exe. manifest* öğesine oluşturulup kaydedilir. bildirimi görüntülemek için, dosyaya sağ tıklayın, **birlikte aç**' a tıklayın, **listeden programı seç**' i seçin ve ardından **Not Defteri**' ye tıklayın.
 
    Dosyasında öğesi için arama yapın `<osVersionInfo>` . Örneğin, sürüm şu olabilir:
 
@@ -158,7 +158,7 @@ Sonra, uygulama bildirimini değiştirmek için bu komutu derleme sonrası bir o
    <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
    ```
 
-5. **Proje Tasarımcısı**' na dönün, **derleme olayları** sekmesine tıklayın ve ardından **oluşturma sonrası Düzenle**' ye tıklayın.
+5. **Project tasarımcısına** geri dönüp **derleme olayları** sekmesine tıklayın ve ardından **oluşturma sonrası düzenle**' ye tıklayın.
 
 6. **Oluşturma sonrası olay komut satırı** kutusunda, aşağıdaki komutu girin:
 
@@ -178,7 +178,7 @@ Sonra, uygulama bildirimini değiştirmek için bu komutu derleme sonrası bir o
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme olayları sayfası, proje Tasarımcısı (C#)](../ide/reference/build-events-page-project-designer-csharp.md)
+- [derleme olayları sayfası, Project tasarımcısı (C#)](../ide/reference/build-events-page-project-designer-csharp.md)
 - [Oluşturma öncesi olay/oluşturma sonrası olay komut satırı iletişim kutusu](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
 - [Nasıl yapılır: derleme olaylarını belirtme (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)
 - [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)

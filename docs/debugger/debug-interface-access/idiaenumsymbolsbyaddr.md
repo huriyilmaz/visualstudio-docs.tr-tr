@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 274fecb6e87e221360c2f97086155237d30a7148
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129322"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629961"
 ---
 # <a name="idiaenumsymbolsbyaddr"></a>IDiaEnumSymbolsByAddr
 Veri kaynağında bulunan çeşitli sembolleri adrese göre numaralar.
@@ -30,7 +30,7 @@ Veri kaynağında bulunan çeşitli sembolleri adrese göre numaralar.
 IDiaEnumSymbolsByAddr : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
 Aşağıdaki tabloda yöntemlerini `IDiaEnumSymbolsByAddr` gösterir.
 
 |Yöntem|Açıklama|
@@ -43,7 +43,7 @@ Aşağıdaki tabloda yöntemlerini `IDiaEnumSymbolsByAddr` gösterir.
 |[IDiaEnumSymbolsByAddr::Clone](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-clone.md)|Bir nesnenin kopyasını oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu arabirim, adrese göre gruplara sahip semboller sağlar. Türe göre (kullanıcı tanımlı tür) veya gibi sembollerle çalışmak için `SymTagUDT` `SymTagBaseClass` [IDiaEnumSymbols arabirimini](../../debugger/debug-interface-access/idiaenumsymbols.md) kullanın.
+Bu arabirim adrese göre gruplandı simgeleri sağlar. Türe göre (kullanıcı tanımlı tür) veya gibi sembollerle çalışmak için `SymTagUDT` `SymTagBaseClass` [IDiaEnumSymbols arabirimini](../../debugger/debug-interface-access/idiaenumsymbols.md) kullanın.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
 [IDiaSession::getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md) yöntemini çağırarak bu arabirimi alın.

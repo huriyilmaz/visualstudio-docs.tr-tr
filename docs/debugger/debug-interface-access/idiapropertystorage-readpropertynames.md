@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c49a688fe1ecf9892ec5943934749694e8a839b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074767"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629523"
 ---
 # <a name="idiapropertystoragereadpropertynames"></a>IDiaPropertyStorage::ReadPropertyNames
 Verilen özellik tanımlayıcıları için karşılık gelen dize adlarını alır.
@@ -41,7 +41,7 @@ HRESULT ReadPropertyNames (
 
  `rgpropid`
 
-[in] Adların almak için sahip olduğu özellik kimlikleri dizisi ( `PROPID` WTypes.h içinde bir olarak `ULONG` tanımlanır).
+[in] Adların ( WTypes.h içinde bir olarak tanımlanır) almak için `PROPID` özellik kimlikleri `ULONG` dizisi.
 
  `rglpwstrName`
 

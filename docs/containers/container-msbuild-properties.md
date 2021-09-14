@@ -7,11 +7,11 @@ ms.date: 06/06/2019
 ms.technology: vs-container-tools
 ms.topic: reference
 ms.openlocfilehash: b284296e4f7bc0f2d641e3094717f95161aef2d7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122045027"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631766"
 ---
 # <a name="container-tools-build-properties"></a>Kapsayıcı araçları derleme özellikleri
 
@@ -29,7 +29,7 @@ Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Örneğ
 
 aşağıdaki tabloda kapsayıcı projeleri için kullanılabilen MSBuild özellikleri gösterilmektedir. NuGet paketi sürümü [Microsoft. VisualStudio. Azure. Containers. Tools. Targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets/)için geçerlidir.
 
-| Özellik adı | Açıklama | Varsayılan değer  | NuGet paketi sürümü|
+| Özellik adı | Description | Varsayılan değer  | NuGet paketi sürümü|
 |---------------|-------------|----------------|----------------------|
 | ContainerDevelopmentMode | "Konak oluşturma" iyileştirmesi ("hızlı mod" hata ayıklama) etkin olup olmadığını denetler.  İzin verilen değerler **hızlı** ve **normal**. | Hızlı |1.0.1872750 veya daha yeni|
 | ContainerVsDbgPath | VSDBG hata ayıklayıcısı için yol. | `%USERPROFILE%\vsdbg\vs2017u5` |1.0.1985401 veya daha yeni|

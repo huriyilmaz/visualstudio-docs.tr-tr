@@ -1,6 +1,6 @@
 ---
 title: Yönetilen nesnelerin özel görünümlerini oluşturma | Microsoft Docs
-description: Visual Studio ayıklayıcısı verileri değişken pencerelerde görüntüler. Veri türlerinin (özel türler dahil) nasıl görüntülendiğinden nasıl özelleştirebileceğinizi öğrenin.
+description: Visual Studio hata ayıklayıcı verileri değişken penceresinde görüntüler. Veri türlerinin (özel türler dahil) nasıl görüntüleneceğini özelleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 01/08/2019
 ms.topic: conceptual
@@ -27,31 +27,31 @@ ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
 ms.openlocfilehash: 327e8d74120555a4a121775f79b8ac5afe923f77
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052440"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630849"
 ---
-# <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>Yönetilen nesnelerin özel görünümlerini oluşturma (C#, Visual Basic, F#, C++/CLI)
-Hata ayıklayıcısı değişken Visual Studio veri türlerini görüntüleme yolunu özelleştirebilirsiniz.
+# <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>yönetilen nesnelerin özel görünümlerini oluşturma (C#, Visual Basic, F #, C++/clı)
+Visual Studio hata ayıklayıcı değişken pencerelerinin veri türlerini görüntüleme biçimini özelleştirebilirsiniz.
 
 ## <a name="attributes"></a>Öznitelikler
 
-C#, Visual Basic, F# ve C++ (yalnızca C++/CLI kodu), , ve kullanarak özel veriler için <xref:System.Diagnostics.DebuggerTypeProxyAttribute> <xref:System.Diagnostics.DebuggerDisplayAttribute> genişletmeler <xref:System.Diagnostics.DebuggerBrowsableAttribute> ebilirsiniz.
+C#, Visual Basic, F # ve c++ (yalnızca c++/clı) içinde,, ve kullanarak özel verilere yönelik genişletmeleri ekleyebilirsiniz <xref:System.Diagnostics.DebuggerTypeProxyAttribute> <xref:System.Diagnostics.DebuggerDisplayAttribute> <xref:System.Diagnostics.DebuggerBrowsableAttribute> .
 
-2.NET Framework 2.0 kodunda Visual Basic DebuggerBrowsable özniteliğini desteklemez. Bu sınırlama .NET'in daha yeni sürümlerinde kaldırılmıştır.
+.NET Framework 2,0 kodunda, Visual Basic debuggergözatılabilir özniteliğini desteklemez. Bu sınırlama, .NET 'in daha yeni sürümlerinde kaldırılmıştır.
 
 ## <a name="visualizers"></a>Görselleştiriciler
 
-Herhangi bir yönetilen veri türünü görüntülemek için görselleştirici yazabilirsiniz. Daha fazla bilgi için, [bkz. How to: Write a Visualizer](create-custom-visualizers-of-data.md).
+Yönetilen herhangi bir veri türünü göstermek için bir Görselleştirici yazabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Görselleştirici Yazma](create-custom-visualizers-of-data.md).
 
 > [!NOTE]
-> C++ kodu için, hata ayıklayıcısında C++ nesnelerinin özel görünümlerini oluşturma konusunda açıklandığı gibi Natvis çerçevesini kullanarak [özel veri türü genişletmeleri ebilirsiniz.](create-custom-views-of-native-objects.md)
+> C++ kodu için, [hata ayıklayıcıda c++ nesnelerinin özel görünümlerini oluşturma](create-custom-views-of-native-objects.md)bölümünde açıklandığı gibi Natvis çerçevesini kullanarak özel veri türü genişletmeleri ekleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata ayıklayıcısına DebuggerDisplay Özniteliğini kullanarak ne göster göster göster](../debugger/using-the-debuggerdisplay-attribute.md)
-- [Hata ayıklayıcısına DebuggerTypeProxy Özniteliğini kullanarak hangi türü göster göster](../debugger/using-debuggertypeproxy-attribute.md)
+- [Hata ayıklayıcıya DebuggerDisplay özniteliğini kullanarak neyin gösterileceğini söyleyin](../debugger/using-the-debuggerdisplay-attribute.md)
+- [Hata ayıklayıcıya DebuggerTypeProxy özniteliği kullanılarak hangi türün gösterileceğini söyleyin](../debugger/using-debuggertypeproxy-attribute.md)
 - [İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)
 - [Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

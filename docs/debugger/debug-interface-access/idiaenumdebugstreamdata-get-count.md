@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: f84306c1bf7527d6cf96389f012303d769097852
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044739"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630459"
 ---
 # <a name="idiaenumdebugstreamdataget_count"></a>IDiaEnumDebugStreamData::get_Count
 Hata ayıklama veri akışındaki sayı kayıtlarını alır.

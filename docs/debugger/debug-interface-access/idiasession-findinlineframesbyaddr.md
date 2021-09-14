@@ -13,11 +13,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 553557797aafcf9cb8d0802e33ba0b34656e6aa5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134252"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629205"
 ---
 # <a name="idiasessionfindinlineframesbyaddr"></a>IDiaSession::findInlineFramesByAddr
 bir istemcinin belirli bir adresteki tüm satır içi çerçeveler üzerinde devamsını sağlayan bir sabit adı verir.
@@ -43,7 +43,7 @@ HRESULT findInlineFramesByAddr (
 
  `offset`
 
-[in] Adresin kaydırma bileşenini belirtir.
+[in] Adresin uzaklık bileşenini belirtir.
 
  `ppResult`
 

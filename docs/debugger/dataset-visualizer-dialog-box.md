@@ -1,6 +1,6 @@
 ---
 title: Veri Kümesi Görselleştiricisi İletişim Kutusu | Microsoft Docs
-description: Visual Studio ayıklayıcı görselleştiricileri, verileri görüntü alan bileşenlerdir. DataSet, DataTable, DataView veya DataViewManager nesnesinin içeriğini görüntülemek için DataSet Görselleştirici'yi kullanın.
+description: Visual Studio ayıklayıcı görselleştiricileri, verileri görüntü alan bileşenlerdir. DataSet, DataTable, DataView veya DataViewManager nesnesinin içeriğini görüntülemek için DataSet Visualizer'ı kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: eb3c862c52e815b2ac03cb774ae5d709975e9e62eb35f0f5390e738e5c5b7d16
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 32c7867f0d392937c90d47ed17352e747b1fd3e7
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345822"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630818"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>Veri Kümesi Görselleştiricisi İletişim Kutusu
 DataSet Görselleştiricisi bir DataSet, DataTable, DataView veya DataViewManager nesnesinin içeriğini görüntülemenize olanak sağlar. Hata ayıklayıcı değişkenleri penceresinde veya DataTip'te bu nesnelerden birinin Değeri'nin yanında görünen büyüteç simgesine tıklayarak bu görselleştiriciye erişebilirsiniz.

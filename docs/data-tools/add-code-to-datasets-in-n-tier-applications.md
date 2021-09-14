@@ -1,6 +1,6 @@
 ---
 title: N katmanlı uygulamalarda Veri Kümelerine kod ekleme
-description: Uygulama içinde n katmanlı uygulamalarda veri kümelere kod Visual Studio. Veri kümesi için kısmi bir sınıf dosyası oluşturun ve buna kod ekleyin (DatasetName.Dataset.Designer yerine).
+description: Uygulamanın N katmanlı uygulamalarındaki veri kümelerini Visual Studio. Veri kümesi için kısmi bir sınıf dosyası oluşturun ve buna kod ekleyin (DatasetName.Dataset.Designer yerine).
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,17 +17,17 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 7df5c2fd963ce628f146bde5b8df754866898b20
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134834"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631652"
 ---
 # <a name="add-code-to-datasets-in-n-tier-applications"></a>N katmanlı uygulamalarda Veri Kümelerine kod ekleme
 
 Veri kümesi için kısmi bir sınıf dosyası oluşturarak ve buna kod ekleyerek *(DatasetName'e* kod eklemek yerine) veri kümesi işlevselliğini genişletebilirsiniz. Dataset.Designer dosyası). Kısmi sınıflar, belirli bir sınıfın birden çok fiziksel dosya arasında bölünmesi için kodu etkinleştirir. Daha fazla bilgi için [bkz. Kısmi](/dotnet/visual-basic/language-reference/modifiers/partial) [veya Kısmi sınıflar ve yöntemleri.](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)
 
-Veri kümesi tanımında her değişiklik (türü oluşturulan veri kümesinde) yapılan her değişiklikte bir veri kümesi tanımlayan kod oluşturulur. Bu kod, bir veri kümesi yapılandırmasını değiştiren herhangi bir sihirbazın çalıştırması sırasında değişiklik yaptığınız zaman da oluşturulur. Bir veri kümesi yeniden oluşturulurken kodunuzun silinmesini önlemek için, veri kümesi kısmi sınıf dosyasına kod ekleyin.
+Veri kümesi tanımında her değişiklik (türü oluşturulan veri kümesinde) yapılan her değişiklikte bir veri kümesi tanımlayan kod oluşturulur. Bu kod, bir veri kümesi yapılandırmasını değiştiren herhangi bir sihirbazın çalıştırıı sırasında değişiklik yaptığınız zaman da oluşturulur. Bir veri kümesi yeniden oluşturulurken kodunuzun silinmesini önlemek için, veri kümesi kısmi sınıf dosyasına kod ekleyin.
 
 Varsayılan olarak, veri kümesi ile TableAdapter kodunu ayırarak her projede ayrı bir sınıf dosyası elde edilen sonuç olur. Özgün projede TableAdapter kodunu içeren *DatasetName.Designer.vb* (veya *DatasetName.Designer.cs*) adlı bir dosya vardır. **DataSet Project** özelliğinde belirlenen projede *DatasetName.DataSet.Designer.vb* (veya *DatasetName.DataSet.Designer.cs)* adlı bir dosya vardır. Bu dosya veri kümesi kodunu içerir.
 

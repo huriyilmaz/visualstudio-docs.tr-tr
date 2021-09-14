@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl Yapılır: Bağlantı Dizelerini Kaydetme ve Düzenleme'
-description: Visual Studio uygulamalarında bağlantı dizelerini nasıl kaydedip düzenleyeceğimizi öğrenin. Bağlantı dizesini doğrudan uygulama ayarlarından kaydedin veya düzenleyin.
+description: Uygulama uygulamalarında bağlantı dizelerini kaydetmeyi ve düzenlemeyi Visual Studio olun. Bağlantı dizesini doğrudan uygulama ayarlarında kaydedin veya düzenleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,52 +12,52 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: d6ff3b07d05430ebb8ce26d4003f8ce74ab8ac4d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122059287"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631299"
 ---
-# <a name="how-to-save-and-edit-connection-strings"></a>Nasıl yapılır: bağlantı dizelerini kaydetme ve düzenleme
-Visual Studio uygulamalardaki bağlantı dizeleri uygulama yapılandırma dosyasına (uygulama ayarları olarak da bilinir) veya doğrudan uygulamanızda sabit kodlanmış olarak kaydedilir. Bağlantı dizelerini uygulama yapılandırma dosyasına kaydetmek, uygulamanızı sürdürme görevini basitleştirir. Bağlantı dizesinin değiştirilmesi gerekiyorsa, bunu uygulama ayarları dosyasında güncelleştirebilirsiniz (kaynak kodda değiştirmek ve uygulamayı yeniden derlemek zorunda kalmak yerine).
+# <a name="how-to-save-and-edit-connection-strings"></a>Nasıl: Bağlantı dizelerini kaydetme ve düzenleme
+Uygulama yapılandırma Visual Studio bağlantı dizeleri uygulama yapılandırma dosyasına kaydedilir (uygulama ayarları olarak da adlandırılır) veya doğrudan uygulamanıza sabit kodlar. Bağlantı dizelerini uygulama yapılandırma dosyasına kaydetme, uygulamanın bakımının basitleştirilmesini sağlar. Bağlantı dizesinin değişmesi gerekirse, bunu uygulama ayarları dosyasında güncelleştirebilirsiniz (kaynak kodda değiştirmek ve uygulamayı yeniden derlemek zorunda olmak yerine).
 
-Bağlantı dizesinde gizli bilgilerin (parola gibi) depolanması, uygulamanızın güvenliğini etkileyebilir. Uygulama yapılandırma dosyasına kaydedilen bağlantı dizeleri şifrelenmez veya görünmez, bu nedenle birisinin dosyaya erişmesi ve içeriğini görüntülemesi mümkün olabilir. Windows tümleşik güvenlik kullanımı, bir veritabanına erişimi denetlemek için daha güvenli bir yoldur.
+Hassas bilgilerin (parola gibi) bağlantı dizesi içinde depolanması, uygulamanın güvenliğini etkileyebilir. Uygulama yapılandırma dosyasına kaydedilen bağlantı dizeleri şifrelenmez veya karartılmalıdır. Bu nedenle, bir kişinin dosyaya erişmesi ve içeriğini görüntülemesi mümkün olabilir. Tümleşik Windows kullanarak veritabanına erişimi denetlemenin daha güvenli bir yolu vardır.
 
-Windows tümleşik güvenliği kullanmayı tercih etmeyebilirsiniz ve veritabanınız bir kullanıcı adı ve parola gerektiriyorsa, bunları bağlantı dizesinden çıkarabilirsiniz, ancak uygulamanızın veritabanına başarıyla bağlanması için bu bilgileri sağlaması gerekir. Örneğin, kullanıcıya bu bilgileri isteyen bir iletişim kutusu oluşturabilir ve bağlantı dizesini çalışma zamanında dinamik olarak oluşturur. Bilgiler, veritabanının yolunda ele alınıp devam ediyorsa sorun olabilir.
-Daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](/dotnet/framework/data/adonet/protecting-connection-information).
+Windows tümleşik güvenliğini kullanmayı seçeseniz ve veritabanınız bir kullanıcı adı ve parola gerektiriyorsa, bunları bağlantı dizesinden atabilirsiniz, ancak veritabanına başarıyla bağlanmak için bu bilgileri uygulamanıza sağlamanız gerekir. Örneğin, kullanıcıdan bu bilgileri istenen ve çalışma zamanında bağlantı dizesini dinamik olarak oluşturan bir iletişim kutusu oluşturabilirsiniz. Bilgiler veritabanına doğru yolda kesişse de güvenlik sorunu devam ediyor olabilir.
+Daha fazla bilgi için [bkz. Bağlantı bilgilerini koruma.](/dotnet/framework/data/adonet/protecting-connection-information)
 
-## <a name="to-save-a-connection-string-from-within-the-data-source-configuration-wizard"></a>Veri kaynağı Yapılandırma Sihirbazı içinden bir bağlantı dizesini kaydetmek için
-**Veri kaynağı Yapılandırma Sihirbazı**' nda, bağlantı **dizesini uygulama yapılandırma dosyasına kaydet** sayfasına bağlantıyı kaydetme seçeneğini belirleyin.
+## <a name="to-save-a-connection-string-from-within-the-data-source-configuration-wizard"></a>Bir bağlantı dizesini Veri Kaynağı Yapılandırma Sihirbazı'nın içinde kaydetmek için
+Veri **Kaynağı Yapılandırma Sihirbazı'nda,** Bağlantı Dizesini Uygulama Yapılandırma Dosyasına Kaydet sayfasında **bağlantıyı kaydetme seçeneğini** belirleyin.
 
 ## <a name="to-save-a-connection-string-directly-into-application-settings"></a>Bağlantı dizesini doğrudan uygulama ayarlarına kaydetmek için
-1. **Çözüm Gezgini**' de, **Project tasarımcısını** açmak için **Project** simgesine (Visual Basic) veya **özellikler** simgesine (C#) çift tıklayın.
+1. Bu **Çözüm Gezgini**, My Project simgesine **(Visual Basic)** veya **Özellikler** simgesine (C#) çift tıklar ve Project **Tasarımcısı'Project açın.**
 1. **Ayarlar** sekmesini seçin.
-1. Bağlantı dizesi için bir **ad** girin. Koddaki bağlantı dizesine erişirken bu adı inceleyin.
-1. **Türü** (**bağlantı dizesi**) olarak ayarlayın.
-1. **Kapsamı** **uygulama** olarak ayarlayın.
-1. **Değer** alanına bağlantı dizenizi yazın veya Bağlantı dizenizi derlemek Için **bağlantı özellikleri** Iletişim kutusunu açmak üzere **değer** alanındaki **üç nokta** (...) düğmesine tıklayın.
+1. Bağlantı dizesi **için** bir Ad girin. Kodda bağlantı dizesine erişirken bu adı kullanın.
+1. Tür olarak **ayarlayın** (**Bağlantı dizesi**).
+1. **Kapsam'ın Uygulama** olarak ayarlanmış şekilde **bırakın.**
+1. Bağlantı dizenizi Değer **alanına** yazın veya Değer alanında üç nokta  **(...)** düğmesine  tıklayarak bağlantı dizenizi oluşturmak için Bağlantı Özellikleri iletişim kutusunu açın.
 
-## <a name="edit-connection-strings-stored-in-application-settings"></a>Uygulama ayarlarında depolanan bağlantı dizelerini Düzenle
-uygulama ayarlarına kaydedilen bağlantı bilgilerini, **Project tasarımcısını** kullanarak değiştirebilirsiniz.
+## <a name="edit-connection-strings-stored-in-application-settings"></a>Uygulama ayarlarında depolanan bağlantı dizelerini düzenleme
+Uygulama ayarlarına kaydedilen bağlantı bilgilerini, Uygulama Tasarımcısı'Project **değiştirebilirsiniz.**
 
 ### <a name="to-edit-a-connection-string-stored-in-application-settings"></a>Uygulama ayarlarında depolanan bir bağlantı dizesini düzenlemek için
-1. **Çözüm Gezgini**' de, **Project tasarımcısını** açmak için **Project** simgesine (Visual Basic) veya **özellikler** simgesine (C#) çift tıklayın.
+1. Bu **Çözüm Gezgini**, My Project simgesine **(Visual Basic)** veya **Özellikler** simgesine (C#) çift tıklar ve Project **Tasarımcısı'Project açın.**
 1. **Ayarlar** sekmesini seçin.
-1. Düzenlemek istediğiniz bağlantıyı bulun ve **değer** alanındaki metni seçin.
-1. **Değer** alanındaki bağlantı dizesini düzenleyin veya bağlantı **özellikleri** iletişim kutusuyla bağlantınızı düzenlemek için **değer** alanındaki **üç nokta** (...) düğmesine tıklayın.
+1. Düzenlemek istediğiniz bağlantıyı bulun ve Değer alanında **metni** seçin.
+1. Değer alanında bağlantı **dizesini** düzenleyin veya Bağlantı Özellikleri **iletişim** kutusuyla bağlantınızı düzenlemek için Değer alanında üç nokta (...)  **düğmesine** tıklayın.
 
 ## <a name="edit-connection-strings-for-datasets"></a>Veri kümeleri için bağlantı dizelerini düzenleme
-Bir veri kümesindeki her bir TableAdapter için bağlantı bilgilerini değiştirebilirsiniz.
+Bir veri kümesinde her TableAdapter için bağlantı bilgilerini değiştirebilirsiniz.
 
-### <a name="to-edit-a-connection-string-for-a-tableadapter-in-a-dataset"></a>Veri kümesindeki bir TableAdapter için bağlantı dizesini düzenlemek için
-1. **Çözüm Gezgini**, düzenlemek istediğiniz bağlantıyı içeren veri kümesine (**. xsd** dosyası) çift tıklayın.
-1. Düzenlemek istediğiniz bağlantıyı içeren **TableAdapter** veya sorguyu seçin.
-1. **Özellikler** penceresinde **bağlantı düğümünü** genişletin.
-1. Bağlantı dizesini hızlıca değiştirmek için **ConnectionString** özelliğini düzenleyin veya **bağlantı** özelliğindeki aşağı oka tıklayın ve **Yeni bağlantı**' yı seçin.
+### <a name="to-edit-a-connection-string-for-a-tableadapter-in-a-dataset"></a>Bir veri kümesinde TableAdapter için bağlantı dizesini düzenlemek için
+1. Bu **Çözüm Gezgini,** düzenlemek istediğiniz bağlantının olduğu veri kümesine (**.xsd** dosyası) çift tıklayın.
+1. Düzenlemek **istediğiniz bağlantının olduğu TableAdapter** veya sorguyu seçin.
+1. Özellikler **penceresinde** Bağlantı düğümünü **genişletin.**
+1. Bağlantı dizesini hızlı bir şekilde değiştirmek için **ConnectionString** özelliğini düzenleyin veya Bağlantı özelliğinin aşağı okuna tıklayın ve **Yeni** Bağlantı'yı **seçin.**
 
 ## <a name="security"></a>Güvenlik
-Bağlantı dizesinin içindeki hassas bilgilerin (parola gibi) depolanması, uygulamanızın güvenliğini etkileyebilir. Windows tümleşik güvenlik kullanımı, bir veritabanına erişimi denetlemek için daha güvenli bir yoldur.
-Daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](/dotnet/framework/data/adonet/protecting-connection-information).
+Hassas bilgilerin (parola gibi) bağlantı dizesi içinde depolanması, uygulamanın güvenliğini etkileyebilir. Tümleşik Windows kullanarak veritabanına erişimi denetlemenin daha güvenli bir yolu vardır.
+Daha fazla bilgi için [bkz. Bağlantı bilgilerini koruma.](/dotnet/framework/data/adonet/protecting-connection-information)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

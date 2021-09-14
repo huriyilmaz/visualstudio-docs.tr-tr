@@ -1,6 +1,6 @@
 ---
 title: CV_CPU_TYPE_e | Microsoft Docs
-description: Hata ayıklama arabirimi erişim SDK'CV_CPU_TYPE_e hedef işlemciyi belirten bir numaralama türüyle ilgili başvuru bilgilerini al.
+description: Hata ayıklama arabirimi erişim SDK 'sında hedef işlemciyi belirten CV_CPU_TYPE_e numaralandırma türü hakkında başvuru bilgileri alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,17 +16,17 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 7cf2450701ed3543b7bd210a268875ef7e4b04b1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122105611"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630668"
 ---
 # <a name="cv_cpu_type_e"></a>CV_CPU_TYPE_e
 Hedef işlemciyi belirtir.
 
 > [!NOTE]
-> İşlemci, önekten sonra numaralama öğesinde `CV_CFL_*` tanımlanır.
+> İşlemci, ön ek sonrasında Enumeration öğesinde tanımlanır `CV_CFL_*` .
 
 ## <a name="syntax"></a>Syntax
 
@@ -99,10 +99,10 @@ typedef enum CV_CPU_TYPE_e {
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Bu numaralamada yer alan değerler [IDiaSymbol::get_platform yöntemine yapılan bir çağrıyla](../../debugger/debug-interface-access/idiasymbol-get-platform.md) döndürülür.
+Bu Numaralandırmadaki değerler [IDiaSymbol:: get_Platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md) metoduna yapılan bir çağrı tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: cvconst.h
+Üst bilgi: cvconst. h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)

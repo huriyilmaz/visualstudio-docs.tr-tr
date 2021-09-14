@@ -1,6 +1,6 @@
 ---
 title: Kesim Noktasını Değiştir Komutu
-description: Kesme noktası durumunun dosyada geçerli konuma bağlı olarak açık veya kapalı duruma açmak için Kesme Noktası Aç/Kapat komutunu kullanmayı öğrenin.
+description: Geçerli durumuna bağlı olarak kesme noktasını aç veya kapat seçeneğini, dosyadaki geçerli konuma göre nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 73fb9926e5472e3c27e43c9eef1f0d74b949e06b24f5ddb89e53f877f85558f2
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0404840f5aa1859c058391c7398f7c2d1fcd86fd
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121356757"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628568"
 ---
 # <a name="toggle-breakpoint-command"></a>Kesim Noktasını Değiştir Komutu
-Kesme noktası, geçerli durumuna bağlı olarak dosyanın geçerli konumu olarak açık veya kapalı olur.
+Dosyadaki geçerli konumda, geçerli durumuna bağlı olarak, kesme noktasını açar veya kapatır.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -36,10 +36,10 @@ Debug.ToggleBreakpoint [text]
 ## <a name="arguments"></a>Bağımsız değişkenler
 
 `text`\
-İsteğe bağlı. Metin belirtilirse, satır adlandırılmış bir kesme noktası olarak işaretlenir. Aksi takdirde, satır adsız bir kesme noktası olarak işaretlenir. Bu, F9 tuşuna basıldıklarına benzer.
+İsteğe bağlı. Metin belirtilirse, satır adlandırılmış bir kesme noktası olarak işaretlenir. Aksi takdirde, çizgi adlandırılmamış bir kesme noktası olarak işaretlenir ve bu, F9 tuşuna bastığınızda ne olacağı ile benzerdir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnekte geçerli kesme noktası iki durumlu olarak değiştirildi.
+Aşağıdaki örnek, geçerli kesme noktasına geçiş yapar.
 
 ```
 >Debug.ToggleBreakpoint
@@ -48,6 +48,6 @@ Aşağıdaki örnekte geçerli kesme noktası iki durumlu olarak değiştirildi.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

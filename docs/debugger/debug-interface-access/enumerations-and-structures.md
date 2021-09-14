@@ -1,6 +1,6 @@
 ---
-description: Bunlar, veri verisi tarafından kullanılan numaralar ve DIA SDK.
-title: Numaralar ve Yapılar | Microsoft Docs
+description: Bunlar, DIA SDK tarafından kullanılan numaralandırmalar ve yapılardır.
+title: Numaralandırmalar ve yapılar | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -18,15 +18,15 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 3380ab7db034649bacb05d6b9908ce5c6461c774
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154722"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630608"
 ---
 # <a name="enumerations-and-structures"></a>Numaralandırmalar ve Yapılar
 
-Bunlar, veri verisi tarafından kullanılan numaralar ve DIA SDK.
+Bunlar, DIA SDK tarafından kullanılan numaralandırmalar ve yapılardır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
@@ -34,19 +34,19 @@ Bunlar, veri verisi tarafından kullanılan numaralar ve DIA SDK.
 
 - [BasicType Numaralandırması](../../debugger/debug-interface-access/basictype.md)
 
- Sembolün temel türünü belirtir.
+ Simgenin temel türünü belirtir.
 
 - [CV_access_e Numaralandırması](../../debugger/debug-interface-access/cv-access-e.md)
 
- Üye işlevleri ve değişkenlerin görünürlük kapsamını (erişim düzeyi) belirtir.
+ Üye işlevlerinin ve değişkenlerinin görünürlük kapsamını (erişim düzeyi) belirtir.
 
 - [CV_call_e Numaralandırması](../../debugger/debug-interface-access/cv-call-e.md)
 
- Bir işlev için çağırma kuralı belirtir.
+ Bir işlev için çağırma kuralını belirtir.
 
 - [CV_CFL_LANG Numaralandırması](../../debugger/debug-interface-access/cv-cfl-lang.md)
 
- Uygulamanın veya bağlı modülün kaynak kod dilini belirtir.
+ Uygulamanın veya bağlı modülün kaynak kodu dilini belirtir.
 
 - [CV_CPU_TYPE_e Numaralandırması](../../debugger/debug-interface-access/cv-cpu-type-e.md)
 
@@ -62,11 +62,11 @@ Bunlar, veri verisi tarafından kullanılan numaralar ve DIA SDK.
 
 - [LocationType Numaralandırması](../../debugger/debug-interface-access/locationtype.md)
 
- Bir sembolde yer alan konum bilgilerine ilişkin tür gösterir.
+ Bir sembolde bulunan konum bilgilerinin türünü gösterir.
 
 - [MemoryTypeEnum Numaralandırması](../../debugger/debug-interface-access/memorytypeenum.md)
 
- Erişilen bellek türünü belirtir.
+ Erişmek için bellek türünü belirtir.
 
 - [NameSearchOptions Numaralandırması](../../debugger/debug-interface-access/namesearchoptions.md)
 
@@ -74,35 +74,35 @@ Bunlar, veri verisi tarafından kullanılan numaralar ve DIA SDK.
 
 - [StackFrameTypeEnum Numaralandırması](../../debugger/debug-interface-access/stackframetypeenum.md)
 
- Yığın çerçevesi türünü belirtir.
+ Yığın çerçeve türünü belirtir.
 
 - [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)
 
- Sembol türünü belirtir.
+ Simgenin türünü belirtir.
 
 - [THUNK_ORDINAL Numaralandırması](../../debugger/debug-interface-access/thunk-ordinal.md)
 
- Thunk türlerini gösterir.
+ Dönüştürücü türlerini belirtir.
 
 - [UdtKind Numaralandırması](../../debugger/debug-interface-access/udtkind.md)
 
- Kullanıcı tanımlı türün (UDT) çeşitliliğini açıklar.
+ Kullanıcı tanımlı farklı tür (UDT) açıklanmaktadır.
 
 ### <a name="structures"></a>Yapılar
 
 [DiaAddressMapEntry Yapısı](../../debugger/debug-interface-access/diaaddressmapentry.md)
 
-Adres eşlemesinde bir girişi açıklar.
+Adres eşlemesindeki bir girişi açıklar.
 
 ### <a name="related-sections"></a>İlgili Bölümler
 
 [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)
 
-Uygulama tarafından sağlanan arabirimleri DIA SDK.
+DIA SDK tarafından belirtilen arabirimleri belirtir.
 
 [Sabitler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)
 
-Dosyanın içinde kullanılabilir olan sabitleri DIA SDK.
+DIA SDK kullanılabilir sabitleri belirtir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

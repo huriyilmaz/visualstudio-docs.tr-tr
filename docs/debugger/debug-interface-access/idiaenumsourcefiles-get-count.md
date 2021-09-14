@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: bdd9d8348e2c214598c315f0793c5ad2dc911071
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134428"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630099"
 ---
 # <a name="idiaenumsourcefilesget_count"></a>IDiaEnumSourceFiles::get_Count
 Kaynak dosya sayısını alın.

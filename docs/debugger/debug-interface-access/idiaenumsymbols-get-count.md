@@ -1,6 +1,6 @@
 ---
-description: Sembol sayısını alır.
-title: 'IDiaEnumSymbols:: get_Count | Microsoft Docs'
+description: Sembol sayısını alın.
+title: IDiaEnumSymbols::get_Count | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 9f9b279ded2b73debc27126cda0a50a88b3f7198
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129354"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630038"
 ---
 # <a name="idiaenumsymbolsget_count"></a>IDiaEnumSymbols::get_Count
-Sembol sayısını alır.
+Sembol sayısını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_Count (
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-dışı Sembol sayısını döndürür.
+[out] Sembol sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

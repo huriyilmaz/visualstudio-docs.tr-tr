@@ -16,11 +16,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 4d538aa004147ffbb27ed1df74dc1cbaed3b437f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122059006"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630704"
 ---
 # <a name="custom-debug-interface-access-sdk"></a>Özel (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Bazı derleyiciler, standart sözlü sembol türlerinden herhangi biri tarafından tanımlanmayan semboller sunar. Bu semboller bir `SymTagCustom` etiketle tanımlanır.

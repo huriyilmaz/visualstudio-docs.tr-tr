@@ -1,5 +1,5 @@
 ---
-description: Bir istemcinin belirtilen bir adla eş değere sahip tüm satırlı işlevlerin satır numarası bilgileri arasında bir süre boyunca devam edatsını sağlayan bir numaralama verir.
+description: Bir istemcinin belirtilen bir adla eş değere sahip tüm satır içinde yer alan işlevlerin satır numarası bilgileri arasında bir süre boyunca devam edat edatacak bir numaralama sağlar.
 title: IDiaSession::findInlineesByName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: e06442d07bf13a24a59c9bd365fb5861f52ab527
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134260"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629223"
 ---
 # <a name="idiasessionfindinlineesbyname"></a>IDiaSession::findInlineesByName
-Bir istemcinin belirtilen bir adla eş değere sahip tüm satırlı işlevlerin satır numarası bilgileri arasında bir süre boyunca devam edatsını sağlayan bir numaralama verir.
+Bir istemcinin belirtilen bir adla eş değere sahip tüm satır içinde yer alan işlevlerin satır numarası bilgileri arasında bir süre boyunca devam edat edatacak bir numaralama sağlar.
 
 ## <a name="syntax"></a>Sözdizimi
 

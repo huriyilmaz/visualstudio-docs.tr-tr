@@ -1,6 +1,6 @@
 ---
-description: Kullanılan kaynak sıkıştırma göstergesini alın.
-title: IDiaInjectedSource::get_sourceCompression | Microsoft Docs
+description: Kullanılan kaynak sıkıştırma göstergesini alır.
+title: 'IDiaInjectedSource:: get_sourceCompression | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: e227b830f516077a2b168e0ecb7e3cbec09f7ea1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161749"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629750"
 ---
 # <a name="idiainjectedsourceget_sourcecompression"></a>IDiaInjectedSource::get_sourceCompression
-Kullanılan kaynak sıkıştırma göstergesini alın.
+Kullanılan kaynak sıkıştırma göstergesini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_sourceCompression (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Kullanılan kaynak sıkıştırma göstergesini döndürür. Sıfır değeri, kaynak sıkıştırma kullanılmadı ifadesini gösterir.
+dışı Kullanılan kaynak sıkıştırma göstergesini döndürür. Sıfır değeri, hiçbir kaynak sıkıştırması kullanılmadığını gösterir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem tarafından döndürülen değer, kullanılan derleyiciye özeldir. Örneğin, bir derleyici Run-Length Encoding veya Huffman stili sıkıştırma kullanabilir.
+ Bu yöntemin döndürdüğü değer, kullanılan derleyiciye özeldir. Örneğin, bir derleyici Run-Length Encoding veya Huffman stili sıkıştırma kullanabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

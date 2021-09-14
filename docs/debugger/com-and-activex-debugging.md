@@ -25,11 +25,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: b44c0e7e7f9d128a204819ec964f45c264d4d715
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081795"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630902"
 ---
 # <a name="com-and-activex-debugging"></a>COM ve ActiveX Hata Ayıklaması
 bu bölümde, COM uygulamalarında hata ayıklama ve ActiveX denetimleri hakkında ipuçları verilmektedir.

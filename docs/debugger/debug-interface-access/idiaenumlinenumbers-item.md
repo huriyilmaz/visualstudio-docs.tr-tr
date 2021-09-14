@@ -1,6 +1,6 @@
 ---
-description: Bir dizin aracılığıyla bir satır numarası alır.
-title: 'IDiaEnumLineNumbers:: Item | Microsoft Docs'
+description: Bir dizin ile bir satır numarası alınır.
+title: IDiaEnumLineNumbers::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: e49593578efb94feb9fc5f9da2152b9008a4d8ba
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044789"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630236"
 ---
 # <a name="idiaenumlinenumbersitem"></a>IDiaEnumLineNumbers::Item
-Bir dizin aracılığıyla bir satır numarası alır.
+Bir dizin ile bir satır numarası alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,14 +36,14 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametreler
  dizin
 
-'ndaki Alınacak [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesnesinin dizini. Dizin 0 `count` -1 aralığında, burada `count` [IDiaEnumLineNumbers:: get_Count](../../debugger/debug-interface-access/idiaenumlinenumbers-get-count.md) yöntemi tarafından döndürülür.
+[in] Alınan [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesnesinin dizini. Dizin, 0 ile -1 aralığındadır `count` ve `count` burada [IDiaEnumLineNumbers::get_Count](../../debugger/debug-interface-access/idiaenumlinenumbers-get-count.md) yöntemi tarafından döndürülür.
 
- Onayın
+ lineNumber
 
-dışı İstenen satır numarasını temsil eden bir [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesnesi döndürür.
+[out] İstenen satır numarasını temsil eden bir [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

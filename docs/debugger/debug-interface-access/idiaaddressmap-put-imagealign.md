@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: c0817d0b1569557bad7ebc966c1dd23339a134ce
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154707"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630537"
 ---
 # <a name="idiaaddressmapput_imagealign"></a>IDiaAddressMap::put_imageAlign
 Görüntü hizalamasını ayarlar.
@@ -43,7 +43,7 @@ HRESULT put_imageAlign (
 ## <a name="remarks"></a>Açıklamalar
  Görüntüler (yüklenen yürütülebilir dosyalar) belirtilen bellek sınırlarına hizalanır. Bu hizalama geçerli sistem mimarisi ve derleme ve bağlantı zamanı seçenekleri tarafından etkilenebilir. Görüntü hizalama her zaman byte sınırlardadır. Aşağıdaki görüntü hizalama değerleri geçerlidir: 1, 2, 4, 8, 16, 32 ve 64 byte sınırları.
 
- Geçerli görüntü hizalaması, [IDiaAddressMap::get_imageAlign yöntemi çağrısıyla](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) alınabilirsiniz.
+ Geçerli görüntü hizalaması [IDiaAddressMap::get_imageAlign yöntemi çağrısıyla](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md) alınabilirsiniz.
 
 > [!NOTE]
 > Bu yöntem çağrılana kadar görüntü zaten yüklenmiştir. yöntemi `put_imageAlign` genellikle görüntü taşındığında veya değiştiriken ve yeni bir hizalama gerektiğinde kullanılır.

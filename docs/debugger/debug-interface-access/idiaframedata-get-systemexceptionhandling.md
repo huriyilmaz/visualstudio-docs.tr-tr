@@ -1,5 +1,5 @@
 ---
-description: IDiaFrameData::get_systemExceptionHandling sistem özel durum işlemenin geçerli olup olmadığını belirten bir bayrak alır.
+description: IDiaFrameData::get_systemExceptionHandling sistem özel durum işlemenin geçerli olup olmadığını belirten bir bayrak alınır.
 title: IDiaFrameData::get_systemExceptionHandling | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: e6ac56cb23c47ee1378b8ae5eb1d2a50a1c30c50
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052414"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629816"
 ---
 # <a name="idiaframedataget_systemexceptionhandling"></a>IDiaFrameData::get_systemExceptionHandling
 Sistem özel durum işlemenin geçerli olup olmadığını belirten bir bayrak alınır.

@@ -1,6 +1,6 @@
 ---
-title: Uygulamalarınız için CPU kullanımını ölçme
-description: Hata ayıklayıcısıyla tümleşik tanılama araçlarını kullanarak uygulamanıza cpu performans sorunlarını analiz edin.
+title: Uygulamalarınızda CPU kullanımını ölçme
+description: Hata ayıklayıcı ile tümleşik tanılama araçlarını kullanarak uygulamanızdaki CPU performans sorunlarını çözümleyin.
 ms.custom: seodec18
 ms.date: 04/03/2021
 ms.topic: tutorial
@@ -19,160 +19,160 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 349d4c076c820c6f75291b8048617216cc73717c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122084876"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628395"
 ---
-# <a name="measure-application-performance-by-analyzing-cpu-usage"></a>CPU kullanımını analiz ederek uygulama performansını ölçme
+# <a name="measure-application-performance-by-analyzing-cpu-usage"></a>CPU kullanımını çözümleyerek uygulama performansını ölçme
 
-Hata ayıklayıcısıyla tümleşik CPU Kullanımı tanılama aracıyla hata ayıklama sırasında **performans sorunlarını** bulun.  Ayrıca, bir hata ayıklayıcısı ekli olmadan veya çalışan bir uygulamayı hedefleerek CPU kullanımını analiz edin. Daha fazla bilgi için [bkz. Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçlarını çalıştırma.](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+Hata ayıklayıcı ile tümleşik **CPU kullanımı** Tanılama aracı ile hata ayıklarken performans sorunlarını bulun.  Ayrıca, bir hata ayıklayıcı ekli veya çalışan bir uygulamayı hedefleyerek CPU kullanımını çözümleyebilirsiniz. Daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-Hata ayıklayıcı duraklatılırken, Tanılama Araçları penceresindeki **CPU** Kullanımı aracı, uygulamanıza yürütülen işlevler hakkında bilgi toplar. Araç, çalışma gerçekleştiren işlevleri listeler ve örnekleme oturumunun belirli segmentlerine odaklanmak için kullanabileceğiniz bir zaman çizelgesi grafiği sağlar.
+Hata ayıklayıcı durakladığında, Tanılama Araçları penceresindeki **CPU kullanımı** aracı uygulamanızda yürütülen işlevlerle ilgili bilgiler toplar. Araç, çalışmayı gerçekleştiren işlevleri listeler ve örnekleme oturumunun belirli kesimlerine odaklanmak için kullanabileceğiniz bir zaman çizelgesi grafiği sağlar.
 
 > [!Important]
-> Hata ayıklayıcısı ile tümleşik Tanılama Araçları Visual Studio, ASP.NET, ASP.NET Core ve yerel/C++ geliştirme dahil olmak üzere Visual Studio.NET geliştirmesi için de desteklemektedir. Buna karşılık Visual Studio [iş](../install/modify-visual-studio.md) yükü gereklidir. Windows 8 aracılarını hata ayıklayıcısıyla **(profil** oluşturma penceresiyle) çalıştırmak için Tanılama Araçları gerekir.
+> hata ayıklayıcı ile tümleşik tanılama araçları, ASP.NET, ASP.NET Core ve yerel/C++ geliştirmesi gibi Visual Studio .net geliştirme için desteklenir. karşılık gelen Visual Studio [iş yükü](../install/modify-visual-studio.md) gereklidir. hata ayıklayıcı (**Tanılama Araçları** penceresi) ile profil oluşturma araçlarını çalıştırmak için Windows 8 ve üzeri gereklidir.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
-> * CPU kullanım verilerini toplama
-> * CPU kullanım verilerini analiz etme
+> * CPU kullanım verilerini topla
+> * CPU kullanım verilerini çözümleme
 
-**CPU Kullanımı** size ihtiyacınız olan verileri vermezse, Performans Profili Oluşturucu profil [](../profiling/profiling-feature-tour.md#post_mortem) oluşturma araçları size yardımcı olacak farklı türlerde bilgiler sağlar. Çoğu durumda, cpu' dışında bellek, işleme kullanıcı arabirimi veya ağ isteği süresi gibi bir şey, uygulama performans sorununa neden olabilir.
+**CPU kullanımı** size ihtiyacınız olan verileri sağlamıyorsa, [performans Profiler](../profiling/profiling-feature-tour.md#post_mortem) 'daki diğer profil oluşturma araçları sizin için yararlı olabilecek farklı türde bilgiler sağlar. Çoğu durumda, uygulamanızın performans sorununa bellek, işleme Kullanıcı arabirimi veya ağ isteği süresi gibi CPU 'nuzun bir neden olabilir.
 
-## <a name="step-1-collect-profiling-data"></a>1. Adım: Profil oluşturma verilerini toplama
+## <a name="step-1-collect-profiling-data"></a>1. Adım: profil oluşturma verilerini toplama
 
-1. Hata ayıklamak istediğiniz projeyi Visual Studio cpu kullanımını incelemek istediğiniz noktada uygulamanıza bir kesme noktası ayarlayın.
+1. Visual Studio hata ayıklamak istediğiniz projeyi açın ve uygulamanızda, CPU kullanımını incelemek istediğiniz noktada bir kesme noktası ayarlayın.
 
-2. İşlevin veya analiz etmek istediğiniz kodun bölgesi sonunda ikinci bir kesme noktası ayarlayın.
+2. Çözümlemek istediğiniz işlevin veya kod bölgesinin sonunda ikinci bir kesme noktası ayarlayın.
 
-    İki kesme noktası ayarerek veri toplamayı analiz etmek istediğiniz kod bölümleriyle sınırabilirsiniz.
+    İki kesme noktası ayarlayarak, veri toplamayı çözümlemek istediğiniz kod bölümleriyle sınırlayabilirsiniz.
 
-3. Siz **Tanılama Araçları** pencere otomatik olarak görüntülenir. Pencereyi yeniden getirmek için Hata Ayıkla'ya **tıklayın**  >  **Windows**  >  **Show Tanılama Araçları**.
+3. **Tanılama araçları** penceresi devre dışı bırakılmadığı takdirde otomatik olarak görünür. pencereyi yeniden getirmek için **hata ayıkla**  >  **Windows**  >  **Tanılama Araçları göster**' e tıklayın.
 
-4. Araç çubuğundaki Araçları Seç **ayarıyla CPU** [Kullanımı,](../profiling/Memory-Usage.md)Bellek Kullanımı veya her ikisini **birden** görüntülemeyi seçebilirsiniz. IntelliTrace'i Visual Studio Enterprise, Araçlar Seçenekleri   >    >  **IntelliTrace'de IntelliTrace'i** de etkinleştirebilirsiniz veya devre dışı abilirsiniz.
+4. Araç çubuğundaki **araçları seç** ayarı Ile **CPU kullanımı**, [bellek kullanımı](../profiling/Memory-Usage.md)veya her ikisinin de görüntülenip görüntülenmeyeceğini seçebilirsiniz. Visual Studio Enterprise çalıştırıyorsanız, **araç**  >  **seçenekleri**  >  **ıntellitrace**' de ıntellitrace ' i etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
-     ![Tanılama Araçlarını Göster](../profiling/media/diag-tools-select-tool.png "Diagaraçları selecttool")
+     ![Tanılama araçlarını göster](../profiling/media/diag-tools-select-tool.png "DiagToolsSelectTool")
 
-     Temelde CPU kullanımına bakacağız, bu nedenle CPU Kullanımının **etkinleştirildiğinden** emin olun (varsayılan olarak etkindir).
+     Temel olarak CPU kullanımına bakıyoruz, bu nedenle **CPU kullanımının** etkinleştirildiğinden emin olun (varsayılan olarak etkindir).
 
-5. Hata **AyıklamaYı**  >  **Başlat 'a** tıklayın (veya araç **çubuğunda** Başlat'a veya **F5'e tıklayın.**
+5. Hata   >  **ayıklamayı Başlat** ' a tıklayın (veya araç çubuğundan veya **F5**' i **başlatın** ).
 
-     Uygulamanın yüklenmesi tamam olduğunda Tanılama Araçları'nın Özet görünümü görüntülenir. Pencereyi açmamız gerekirse, Hata Ayıkla'ya tıklayın  >  **Windows**  >  **Show Tanılama Araçları**.
+     Uygulamanın yüklenmesi bittiğinde, tanılama araçlarının Özet görünümü görüntülenir. pencereyi açmanız gerekiyorsa, **hata ayıkla**  >  **Windows**  >  **Tanılama Araçları göster**' e tıklayın.
 
-     ![Tanılama Araçları Özet Sekmesi](../profiling/media/diag-tools-summary-tab.png "DiagToolsSummaryTab")
+     ![Tanılama araçları Özet sekmesi](../profiling/media/diag-tools-summary-tab.png "DiagToolsSummaryTab")
 
-     Olaylar hakkında daha fazla bilgi için, Tanılama Araçları penceresinin [Olaylar sekmesini arama ve filtreleme.](https://devblogs.microsoft.com/devops/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window/)
+     Olaylar hakkında daha fazla bilgi için, [Tanılama Araçları penceresinin Olaylar sekmesinde arama ve filtreleme](https://devblogs.microsoft.com/devops/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window/)bölümüne bakın.
 
-6. İlk kesme noktanıza isabet etmek için senaryoyu çalıştırın.
+6. İlk kesme noktasının isabet çekmesine neden olacak senaryoyu çalıştırın.
 
-7. Hata ayıklayıcı duraklatılmışken CPU Kullanımı verilerini toplamayı etkinleştirin ve ardından CPU Kullanımı **sekmesini** açın.
+7. Hata ayıklayıcı duraklatıldığında, CPU kullanım verilerinin toplanmasını etkinleştirin ve ardından **CPU kullanımı** sekmesini açın.
 
-     ![Tanılama Araçları CPU profili oluşturmayı etkinleştirme](../profiling/media/diag-tools-enable-cpu-profiling.png "Diagtoolsenablecpuprofil oluşturma")
+     ![Tanılama araçları CPU profilini oluşturmayı etkinleştirir](../profiling/media/diag-tools-enable-cpu-profiling.png "DiagToolsEnableCPUProfiling")
 
-     CPU Profilini **Kayded'i** Visual Studio işlevlerinizi kaydetmeye ve ne kadar süreyle yürütüleceklerini kaydetmeye başlar. Toplanan bu verileri yalnızca uygulama bir kesme noktası durdurulduğu zaman görüntüebilirsiniz.
+     **CPU profilini kaydet**' i seçtiğinizde Visual Studio işlevlerinizi kaydetmeye başlar ve ne kadar süre sürer. Bu toplanan verileri yalnızca, uygulamanız bir kesme noktasında durdurulduğunda görüntüleyebilirsiniz.
 
-8. Uygulamayı ikinci kesme noktanıza çalıştırmak için F5'e tıklayın.
+8. Uygulamanızı ikinci kesme noktasına çalıştırmak için F5 'e basın.
 
-     Şimdi, iki kesme noktası arasında çalışan kodun bölgesi için özel olarak uygulamanıza yönelik performans verilerine sahipsiniz.
+     Artık, özellikle iki kesme noktası arasında çalışan kod bölgesi için uygulamanız için performans verileri vardır.
 
-     Profilleyici iş parçacığı verilerini hazırlamaya başlar. Bitimini bekleyin.
+     Profil Oluşturucu iş parçacığı verilerini hazırlamaya başlar. Bitmesini bekleyin.
 
-     ![Tanılama Araçları İş Parçacıklarını Hazırlama](../profiling/media/diag-tools-preparing-data.png "DiagToolsPreparingThreads")
+     ![Tanılama araçları Iş parçacıklarını hazırlama](../profiling/media/diag-tools-preparing-data.png "DiagToolsPreparingThreads")
 
-     CPU Kullanımı aracı raporu CPU Kullanımı **sekmesinde** görüntüler.
+     CPU kullanımı aracı, raporu **CPU kullanımı** sekmesinde görüntüler.
 
-     ![Tanılama Araçları CPU Kullanımı Sekmesi](../profiling/media/diag-tools-cpu-usage-tab.png "DiagToolsCPUUsageTab")
+     ![Tanılama araçları CPU kullanımı sekmesi](../profiling/media/diag-tools-cpu-usage-tab.png "DiagToolsCPUUsageTab")
 
-9. Analiz etmek için daha belirli bir kod bölgesi seçmek için CPU zaman çizelgesinde bir bölge seçin (profil oluşturma verilerini gösteren bir bölge olması gerekir).
+9. Analiz etmek için daha belirli bir kod bölgesi seçmek istiyorsanız, CPU zaman çizelgesinde bir bölge seçin (profil oluşturma verilerini gösteren bir bölge olmalıdır).
 
-     ![Tanılama Araçları Zaman Segmenti Seçme](../profiling/media/diag-tools-select-time-segment.png "Diagaraçları Selecttimesegment")
+     ![Tanılama araçları bir zaman dilimi seçme](../profiling/media/diag-tools-select-time-segment.png "DiagToolsSelectTimeSegment")
 
-     Bu noktada, verileri analiz etmek için başlayabilirsiniz.
+     Bu noktada, verileri çözümlemeye başlayabilirsiniz.
 
      > [!TIP]
-     >  Performans sorunlarını belirlemeye çalışırken birden çok ölçüme göz atabilirsiniz. Performans, çalıştırmadan çalıştırmaya göre doğal olarak değişiklik gösterir ve kod yolları genellikle ILK çalıştırılma zamanlarının daha yavaş yürütülebilir. Bunun nedeni, DLL'lerin yüklenmesi, JIT derleme yöntemleri ve önbelleklerin başlatılma gibi tek bir kez başlatma çalışmasıdır. Birden çok ölçüm alarak, gösterilen ölçümün aralığı ve ortası hakkında daha iyi bir fikir elde edilir ve bu da bir kod alanında ilk kez yapılanla kararlı durum performansını karşılaştırmaya olanak sağlar.
+     >  Performans sorunlarını belirlemeye çalışırken, birden çok ölçü alın. Performans doğal olarak çalıştırma, çalıştırma ve kod yollarının, dll 'Leri yükleme, JıT derleme yöntemleri ve önbellekleri başlatma gibi bir kerelik başlatma işi nedeniyle genellikle daha yavaş yürütülür. Birden çok ölçüm gerçekleştirerek, gösterilen ölçümün aralığı ve ortancası hakkında daha iyi fikir edinirsiniz. Bu, bir kod alanının sabit durum performansına karşı ilk kez karşılaştırmanızı sağlar.
 
-## <a name="step-2-analyze-cpu-usage-data"></a>2. Adım: CPU kullanım verilerini analiz etme
+## <a name="step-2-analyze-cpu-usage-data"></a>2. Adım: CPU kullanım verilerini çözümleme
 
-CPU Kullanımı altındaki işlev listesini inceler, en çok işi yapan işlevleri belirleyip her birini daha yakından inceler ve verilerinizi analiz ederek verilerinizi analize başlamanızı öneririz.
+CPU kullanımı altındaki işlevlerin listesini inceleyerek, en çok iş yapan işlevleri tanımlayarak ve sonra her birine daha yakından bakarak verilerinizi analiz etmeye başlamanızı öneririz.
 
-1. İşlev listesinde, en çok işi yapan işlevleri inceler.
+1. İşlev listesinde, en çok iş yapan işlevleri inceleyin.
 
-    ![Tanılama Araçları CPU Kullanımı İşlev Listesi](../profiling/media/diag-tools-cpu-usage-function-list.png "DiagToolsCPUUsageFunctionList")
-
-    > [!TIP]
-    > İşlevler, en çok işi yapanlarla (çağrı sırasına göre değil) sırayla listelenir. Bu, en uzun süre çalışan işlevleri hızlıca tanımlamanıza yardımcı olur.
-
-2. İşlev listesinde, çok fazla iş yapan uygulama işlevlerinize çift tıklayın.
-
-    Bir işleve çift tıklarken, **sol bölmede Arayan/Çağrılı** görünümü açılır.
-
-    ![Tanılama Araçları Çağıran Çağrılı Görünümü](../profiling/media/diag-tools-caller-callee.png "Diagtoolscallerçağrılan")
-
-    Bu görünümde, seçilen işlev başlığında ve Geçerli İşlev kutusunda (bu **örnekte** GetNumber) görünür. Geçerli işlevi çağıran işlev sol tarafta İşlevleri Çağırma altında gösterilir ve geçerli işlev tarafından çağrılır tüm işlevler sağ tarafta **İşlevler Çağrılı** kutusunda gösterilir. (Geçerli işlevi değiştirmek için iki kutudan birini de seçin.)
-
-    Bu görünümde, işlevin tamamlanması için gereken toplam süre (ms) ve genel uygulama çalışma süresi yüzdesi yer a gösterir.
-    **İşlev Gövdesi** ayrıca, çağrılan ve çağrılan işlevlerde harcanan süre hariç olmak üzere işlev gövdesinde harcanan toplam süre miktarını (ve zaman yüzdesini) gösterir. (Bu örnekte, 2389 ms'den 2367'sinde işlev gövdesine, kalan 22 ms ise bu işlev tarafından çağrılır dış koda harcandı).
+    ![Tanılama araçları CPU kullanımı Işlev listesi](../profiling/media/diag-tools-cpu-usage-function-list.png "DiagToolsCPUUsageFunctionList")
 
     > [!TIP]
-    > İşlev **Gövdesi'nde yüksek** değerler, işlevin içinde bir performans sorunu olduğunu gösteriyor olabilir.
+    > İşlevler, en çok iş yapmaktan (çağrı sırasıyla değil) başlayarak sırayla listelenir. Bu, en uzun çalışan işlevleri hızlıca belirlemenize yardımcı olur.
 
-3. İşlevlerin çağrıldığ sırayı gösteren daha üst düzey bir  görünüm görmek için bölmenin üst kısmında açılan listeden Çağrı Ağacı'ı seçin.
+2. İşlev listesinde, çok sayıda iş yapan uygulama işlevlerinizin birine çift tıklayın.
 
-    Şekilde numaralı her alan, yordamda bir adımla ilgilidir.
+    Bir işleve çift tıkladığınızda, **çağıran/çağrılan** görünümü sol bölmede açılır.
+
+    ![Tanılama araçları çağıran çağrılan görünümü](../profiling/media/diag-tools-caller-callee.png "DiagToolsCallerCallee")
+
+    Bu görünümde, seçilen işlev başlıkta ve **geçerli işlev** kutusunda (getnumber, bu örnekte) görüntülenir. Geçerli işlevi çağıran işlev, sol tarafta **çağırma işlevleri** altında gösterilir ve geçerli işlev tarafından çağrılan işlevler sağ taraftaki **çağrılan işlevler** kutusunda gösterilir. (Geçerli işlevi değiştirmek için iki kutuyu da seçebilirsiniz.)
+
+    Bu görünümde, işlevin tamamlanışında toplam süre (MS) ve Toplam uygulama çalışma zamanının yüzdesi gösterilir.
+    **Işlev gövdesi** Ayrıca, işlev gövdesinde harcanan ve çağrılan işlevlerde harcanan süre hariç toplam süreyi (ve zaman yüzdesini) gösterir. (Bu örnekte, işlev gövdesinde 2367 MS 'tan 2389 tanesi harcanmış ve kalan 22 MS, bu işlev tarafından çağrılan harici kodda harcanmıştı).
+
+    > [!TIP]
+    > **Işlev gövdesindeki** yüksek değerler işlevin içinde bir performans sorununa işaret edebilir.
+
+3. İşlevlerin çağrıldığı sırayı gösteren daha yüksek düzeyde bir görünüm görmek için bölmenin en üstündeki açılan listeden bir adım **Seç ' i seçin** .
+
+    Şekildeki her numaralanmış alan, yordamdaki adımla ilgilidir.
 
     ::: moniker range=">=vs-2019"
-    ![Tanılama Araçları Çağrı Ağacı](../profiling/media/vs-2019/diag-tools-call-tree.png "DiagToolsCallTree")
+    ![Tanılama araçları çağrı ağacı](../profiling/media/vs-2019/diag-tools-call-tree.png "DiagToolsCallTree")
     ::: moniker-end
     ::: moniker range="vs-2017"
-    ![Tanılama Araçları Çağrı Ağacı](../profiling/media/diag-tools-call-tree.png "DiagToolsCallTree")
+    ![Tanılama araçları çağrı ağacı](../profiling/media/diag-tools-call-tree.png "DiagToolsCallTree")
     ::: moniker-end
 
-    |Görüntü|Açıklama|
+    |Görüntü|Description|
     |-|-|
-    |![1. Adım](../profiling/media/ProcGuid_1.png "ProcGuid_1")|CPU Kullanımı çağrı ağaçlarında üst düzey düğüm, sözde düğüm|
-    |![2. Adım](../profiling/media/ProcGuid_2.png "ProcGuid_2")|Çoğu uygulamada, Dış [](#view-external-code) Kodu Göster seçeneği devre dışı bırakılmıştır, ikinci düzey düğüm uygulamayı başlatan ve durduran, kullanıcı arabirimini çizen, iş parçacığı zamanlamasını kontrol eden ve uygulamaya diğer alt düzey hizmetleri sağlayan sistem ve çerçeve kodunu içeren bir **[Dış Kod]** düğümü olur.|
-    |![3. Adım](../profiling/media/ProcGuid_3.png "ProcGuid_3")|İkinci düzey düğümün altları, ikinci düzey sistem ve çerçeve kodu tarafından çağrılarak veya oluşturulan kullanıcı kodu yöntemleri ve zaman uyumsuz yordamlardır.|
-    |![4. Adım](../profiling/media/ProcGuid_4.png "ProcGuid_4")|Bir yöntemin alt düğümleri yalnızca üst yöntemin çağrıları için verileri içerir. Dış **Kodu Göster devre** dışı bırakılmıştır, uygulama yöntemleri bir **[Dış Kod] düğümü de** içerebilir.|
+    |![1. Adım](../profiling/media/ProcGuid_1.png "ProcGuid_1")|CPU kullanım çağrısı ağaçlarında en üst düzey düğüm bir sözde düğümdür|
+    |![2. Adım](../profiling/media/ProcGuid_2.png "ProcGuid_2")|Çoğu uygulamalarda, [dış kodu göster](#view-external-code) seçeneği devre dışı bırakıldığında, ikinci düzey düğüm, uygulamayı başlatan ve durduran sistem ve çerçeve kodunu içeren bir **[Dış kod]** düğümüdür, Kullanıcı arabirimini çizer, iş parçacığı zamanlamasını denetler ve uygulamaya diğer alt düzey hizmetler sağlar.|
+    |![3. Adım](../profiling/media/ProcGuid_3.png "ProcGuid_3")|İkinci düzey düğümün alt öğeleri, ikinci düzey sistem ve Framework kodu tarafından çağrılan veya oluşturulan kullanıcı kodu yöntemleri ve zaman uyumsuz yordamlardır.|
+    |![4. adım](../profiling/media/ProcGuid_4.png "ProcGuid_4")|Bir metodun alt düğümleri yalnızca üst yöntemin çağrıları için veri içerir. **Dış kodu göster** devre dışı bırakıldığında, uygulama yöntemleri bir **[Dış kod]** düğümü de içerebilir.|
 
-    Sütun değerleri hakkında daha fazla bilgi aşağıda vetir:
+    Sütun değerleri hakkında daha fazla bilgi aşağıda verilmiştir:
 
-    - **Toplam CPU** işlevi tarafından ne kadar iş olduğunu ve işlev tarafından çağrılan işlevleri gösterir. Yüksek toplam CPU değerleri, genel olarak en pahalı işlevlere işaret eder.
+    - **Toplam CPU** , işlev tarafından ne kadar iş yapıldığını ve onun tarafından çağrılan işlevleri gösterir. Yüksek toplam CPU değerleri en pahalı olan işlevlere işaret edilir.
 
-    - **Kendi KENDINE CPU** işlevi gövdesinin kod tarafından ne kadar iş olduğunu gösterir; bu, işlev tarafından çağrılan işlevler tarafından yapılan işler hariçtir. Yüksek **Kendi Kendine CPU** değerleri, işlevin kendi içinde bir performans sorunu olduğunu gösteriyor olabilir.
+    - **Self CPU** , işlev gövdesinde kod tarafından yapılan çalışmanın ne kadar iş yaptığını gösterir ve bu, tarafından çağrılan işlevler tarafından gerçekleştirilen iş hariç olur. Yüksek **kendı CPU** değerleri işlevin içinde bir performans sorununa işaret edebilir.
 
-    - **Modüller** İşlevi içeren modülün adı veya bir [Dış Kod] düğümünde işlevleri içeren modüllerin sayısı.
+    - **Modüller** İşlevi içeren modülün adı veya [Dış kod] düğümündeki işlevleri içeren modül sayısı.
 
     ::: moniker range=">=vs-2019"
-    Çağrı ağacı görünümünde CPU'nun en yüksek yüzdesini kullanan işlev çağrılarını görmek için, Yoğun Yolu **Genişlet'e tıklayın.**
+    Çağrı ağacı görünümünde en yüksek CPU yüzdesini kullanan işlev çağrılarını görmek için, **etkin yolu genişlet**' e tıklayın.
 
-    ![Tanılama Araçları Hot Path](../profiling/media/vs-2019/diag-tools-hot-path.png "DiagToolsHotPath")
+    ![Tanılama araçları etkin yolu](../profiling/media/vs-2019/diag-tools-hot-path.png "DiagToolsHotPath")
     ::: moniker-end
 
     > [!NOTE]
-    > Çağrı ağacında "bozuk" kod veya "gezilemez yığın" olarak işaretlenmiş kod görüyorsanız bu, Windows (ETW) olayları için Olay İzleme'nin büyük olasılıkla bırakıldı olduğunu gösterir. Sorunu çözmek için aynı izlemeyi ikinci kez toplamayı deneyin.
+    > çağrı ağacında "bozuk" kod veya "tasene yığın" olarak işaretlenen kodu görürseniz, bu durum Windows (ETW) olaylarının olay izlemenin büyük olasılıkla bırakılmakta olduğunu gösterir. Sorunu çözmek için ikinci kez aynı izlemeyi toplamayı deneyin.
 
-## <a name="view-external-code"></a>Dış kodu görüntüleme
+## <a name="view-external-code"></a>Dış kodu görüntüle
 
-Dış kod, sistem ve çerçeve bileşenlerinde bulunan ve sizin yazarak yürütülen işlevlerdir. Dış kod, uygulamayı başlatan ve durduran, kullanıcı arabirimini çizen, iş parçacığını kontrol altına alan ve uygulamaya diğer alt düzey hizmetleri sağlayan işlevleri içerir. Çoğu durumda dış kodla ilgilenmezsiniz ve bu nedenle CPU Kullanımı aracı bir kullanıcı yönteminin dış işlevlerini tek **bir [Dış Kod] düğümünde** toplar.
+Dış kod, System ve Framework bileşenlerinde yazdığınız kod tarafından yürütülen işlevlerdir. Dış kod, uygulamayı başlatıp durduran, Kullanıcı arabirimini çizdiğiniz, iş parçacığı denetleyen ve diğer alt düzey Hizmetleri uygulamaya sağlayan işlevleri içerir. Çoğu durumda, harici kod ile ilgilenmezsiniz ve CPU kullanımı aracı bir Kullanıcı yönteminin dış işlevlerini tek bir **[harici kod]** düğümüne toplar.
 
-Dış kodun çağrı yollarını görüntülemek için Filtre görünümü listesinden **Dış** Kodu **Göster'i** seçin ve uygula'ya **tıklayın.**
+Dış kodun çağrı yollarını görüntülemek istiyorsanız, **filtre görünümü** listesinden **dış kodu göster** ' i seçin ve ardından **Uygula**' yı seçin.
 
-![Filtre Görünümü'ne ve ardından Dış Kodu Göster'e tıklayın](../profiling/media/diag-tools-show-external-code.png "Diagaraçları Showexternalcode")
+![Filtre görünümü ' ne ve ardından dış kodu göster ' i seçin](../profiling/media/diag-tools-show-external-code.png "DiagToolsShowExternalCode")
 
-Birçok dış kod çağrısı zincirinin iç içe geçmiş olduğunu, böylece İşlev Adı sütununu genişliğinin bilgisayar izleyicilerinin en büyükleri dışında tüm ekran genişliğini aşabilir. Bu durumda işlev adları **olarak gösterilir .**
+Çok sayıda dış kod çağrı zincirinin derin iç içe geçmiş olduğunu unutmayın. böylece, Işlev adı sütununun genişliği, bilgisayar izlemelerinin en büyük bir bütün boyutunu aşabilirler. Bu durumda, işlev adları **[...]** olarak gösterilir.
 
-Arama kutusunu kullanarak istediğiniz düğümü bulun ve ardından verileri görünüme getirmek için yatay kaydırma çubuğunu kullanın.
+Aradığınız düğümü bulmak için arama kutusunu kullanın, ardından verileri görünüme getirmek için yatay kaydırma çubuğunu kullanın.
 
 > [!TIP]
-> Bu işlevleri çağıran dış Windows profili gerçekleştirirsiniz, en güncel koduna sahip olduğundan emin olun. *pdb* dosyaları. bu dosyalar olmadan rapor görünümleriniz, şifreli ve anlaşılması zor Windows işlev adlarını listeler. İhtiyacınız olan dosyalara sahip olduğunuzdan emin olmak hakkında daha fazla bilgi için bkz. [hata ayıklayıcıda sembol (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+> Windows işlevleri çağıran harici kodu profilleriniz varsa en güncel olduğundan emin olmanız gerekir. *pdb* dosyaları. Bu dosyalar olmadan rapor görünümleriniz, Windows zor olan işlev adlarını listelemektedir. Size gereken dosyalara sahip olduğundan emin olmak için bkz. Hata ayıklayıcısında sembol [(.pdb)](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)ve kaynak dosyaları belirtme.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, CPU kullanım verilerini nasıl toplayacağınızı ve analiz edeceğinizi öğrendiniz. [Profil oluşturma araçlarındaki ilk görünümü](../profiling/profiling-feature-tour.md)zaten tamamladıysanız, uygulamalarınızda bellek kullanımını çözümleme hakkında hızlı bir bakış almak isteyebilirsiniz.
+Bu öğreticide CPU kullanım verilerini toplamayı ve analiz etme hakkında bilgi edinebilirsiniz. Profil oluşturma araçlarına [ilk bakış adımlarını](../profiling/profiling-feature-tour.md)tamamladınız, uygulamalarınız için bellek kullanımını analiz etme adımlarını hızlı bir şekilde incelemeniz iyi olabilir.
 
 > [!div class="nextstepaction"]
 > [Visual Studio’da bellek kullanımının profilini oluşturma](../profiling/memory-usage.md)

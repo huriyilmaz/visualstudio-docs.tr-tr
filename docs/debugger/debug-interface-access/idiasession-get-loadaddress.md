@@ -1,6 +1,6 @@
 ---
-description: Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini alır.
-title: 'IDiaSession:: get_loadAddress | Microsoft Docs'
+description: Bu sembol deposu üzerindeki sembollere karşılık gelen yürütülebilir dosyanın yükleme adresini alın.
+title: IDiaSession::get_loadAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 1ab5aee87bb562ccb4bd373999d2e30ab5565e36
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122058922"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629102"
 ---
 # <a name="idiasessionget_loadaddress"></a>IDiaSession::get_loadAddress
-Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini alır.
+Bu sembol deposu üzerindeki sembollere karşılık gelen yürütülebilir dosyanın yükleme adresini alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_loadAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bir .exe dosyası veya .dll dosyasının yüklendiği bir sanal adres (VA) döndürür.
+[out] Bir dosyanın veya dosyanın yük .exe sanal .dll (VA) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Açıkça [IDiaSession::p ut_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemi kullanılarak ayarlanmamışsa döndürülen yükleme adresi her zaman sıfırdır.
+ [IDiaSession::p ut_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemi kullanılarak ayarlanmadıkça döndürülen yük adresi her zaman sıfır olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

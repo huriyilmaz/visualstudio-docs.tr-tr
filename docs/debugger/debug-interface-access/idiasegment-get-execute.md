@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: c08f9cecb0b5a4864b7956344892d91b0c31c4ac
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122139166"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629336"
 ---
 # <a name="idiasegmentget_execute"></a>IDiaSegment::get_execute
 Segmentin yürütülebilir olup olmadığını gösteren bir bayrak alır.

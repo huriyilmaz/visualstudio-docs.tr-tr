@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Bir Hizmetteki Verilere Bağlanma'
-description: veri kaynağı yapılandırma sihirbazı 'nı çalıştırarak ve veri kaynağı türü seç sayfasında hizmet ' i seçerek, uygulamanızı bir hizmetten döndürülen verilere Bağlan.
+description: Bağlan Kaynak Yapılandırma Sihirbazı'nı çalıştırarak ve Veri Kaynağı Türü Seçin sayfasında Hizmet'i seçerek, bir hizmetten döndürülen verilere uygulamanıza ekleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,47 +20,47 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 6854b1cd7647f6bc4ac7ca92c920f7454b7ab1fe
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052752"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631341"
 ---
-# <a name="how-to-connect-to-data-in-a-service"></a>nasıl yapılır: bir hizmette verileri Bağlan
+# <a name="how-to-connect-to-data-in-a-service"></a>Nasıl kullanılır: Bağlan verilerine veri toplama
 
-Uygulamanızı [veri kaynağı Yapılandırma Sihirbazı](../data-tools/media/data-source-configuration-wizard.png) 'nı çalıştırarak ve **veri kaynağı türü seç** sayfasında **hizmet** ' i seçerek bir hizmetten döndürülen verilere bağlanırsınız.
+Veri Kaynağı Yapılandırma Sihirbazı'nı çalıştırarak ve [](../data-tools/media/data-source-configuration-wizard.png) Veri Kaynağı Türü  Seçin sayfasında Hizmet'i seçerek, bir hizmetten döndürülen verilere **uygulamanıza bağlanabilirsiniz.**
 
-Sihirbazı tamamladıktan sonra projenize bir hizmet başvurusu eklenir ve [veri kaynakları penceresinde](add-new-data-sources.md#data-sources-window)hemen kullanılabilir.
+Sihirbaz tamamlandıktan sonra projenize bir hizmet başvurusu eklenir ve Veri Kaynakları penceresinde [hemen kullanılabilir.](add-new-data-sources.md#data-sources-window)
 
 > [!NOTE]
-> **Veri kaynakları** penceresinde görünen öğeler, hizmetin döndürdüğü bilgilere bağımlıdır. Bazı hizmetler, **veri kaynağı Yapılandırma Sihirbazı** için bağlanabilir nesneler oluşturmak için yeterli bilgi sağlamayabilir. Örneğin, hizmet türsüz bir veri kümesi döndürürse, Sihirbaz tamamlandıktan sonra **veri kaynakları** penceresinde hiçbir öğe görünmez. Bunun nedeni, türsüz veri kümelerinin şema sağlamamaları, bu nedenle Sihirbazın veri kaynağını oluşturmak için yeterli bilgiye sahip olmaması.
+> Veri Kaynakları penceresinde görünen **öğeler,** hizmetin döndüren bilgilere bağlıdır. Bazı hizmetler, Veri Kaynağı Yapılandırma Sihirbazı'nın **bağlanabilir nesneler oluşturması** için yeterli bilgi sağlamayabilir. Örneğin, hizmet türlanmamış bir veri kümesi döndürürse, sihirbazı  tamamladıktan sonra Veri Kaynakları penceresinde hiçbir öğe görünmez. Bunun nedeni, yazlanmamış veri kümelerini şema sağlamamış olmasıdır, bu nedenle sihirbazda veri kaynağını oluşturmak için yeterli bilgi yok.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="to-connect-your-application-to-a-service"></a>Uygulamanızı bir hizmete bağlamak için
+## <a name="to-connect-your-application-to-a-service"></a>Uygulamalarınızı bir hizmete bağlamak için
 
-1. **Veri** menüsünde **Yeni veri kaynağı Ekle**' ye tıklayın.
+1. Veri menüsünde **Yeni** Veri Kaynağı **Ekle'ye tıklayın.**
 
-2. **Veri kaynağı türü seçin** sayfasında **hizmet** ' i seçin ve ardından **İleri**' ye tıklayın.
+2. Veri **Kaynağı** Türü **Seçin sayfasında Hizmet'i seçin** ve ardından Sonraki'ye **tıklayın.**
 
-3. Kullanmak istediğiniz hizmetin adresini girin veya geçerli çözümde hizmetleri bulmak için **bul** ' a tıklayın ve ardından **Git**' e tıklayın.
+3. Kullanmak istediğiniz hizmetin adresini girin veya geçerli çözümde hizmetleri bulmak için **Bul'a** tıklayın ve ardından Git'e **tıklayın.**
 
-4. İsteğe bağlı olarak, varsayılan değer yerine yeni bir **ad alanı** yazabilirsiniz.
+4. İsteğe bağlı olarak, varsayılan **değerin yerine** yeni bir Ad Alanı yazebilirsiniz.
 
     > [!NOTE]
-    > **Gelişmiş** ' e tıklayarak [hizmet başvurusunu Yapılandır iletişim kutusunu](../data-tools/configure-service-reference-dialog-box.md)açın.
+    > Hizmet **Başvurularını** Yapılandır iletişim [kutusunu açmak için Gelişmiş'e tıklayın.](../data-tools/configure-service-reference-dialog-box.md)
 
-5. Projenize bir hizmet başvurusu eklemek için **Tamam** ' ı tıklatın.
+5. **Projenize** hizmet başvurusu eklemek için Tamam'a tıklayın.
 
 6. **Finish (Son)** düğmesine tıklayın.
 
-     Veri kaynağı **veri kaynakları** penceresine eklenir.
+     Veri kaynağı, Veri Kaynakları **penceresine** eklenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Uygulamanıza işlevsellik eklemek için, **veri kaynakları** penceresinde bir öğe seçin ve bağlantılı denetimler oluşturmak için onu bir form üzerine sürükleyin. Daha fazla bilgi için bkz. [Visual Studio denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
+Uygulamanıza işlevsellik eklemek için Veri Kaynakları penceresinde bir öğe **seçin ve** bir forma sürükleyerek bağlı denetimler oluşturun. Daha fazla bilgi için [bkz. denetimlerini Visual Studio.](../data-tools/bind-controls-to-data-in-visual-studio.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bir WCF veri hizmetine WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)
-- [Windows Visual Studio 'de Communication Foundation Hizmetleri ve WCF veri Hizmetleri](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)
+- [Windows Visual Studio'de Communication Foundation Services ve WCF veri Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)

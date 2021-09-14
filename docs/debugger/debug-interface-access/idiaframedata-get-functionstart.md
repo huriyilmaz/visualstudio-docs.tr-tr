@@ -1,6 +1,6 @@
 ---
-description: 'IDiaFrameData:: get_functionStart, bloğun bir işlevin giriş noktasını içerip içermediğini gösteren bir bayrak alır.'
-title: 'IDiaFrameData:: get_functionStart | Microsoft Docs'
+description: IDiaFrameData::get_functionStart bloğun bir işlevin giriş noktasını içerdiğini belirten bir bayrak verir.
+title: IDiaFrameData::get_functionStart | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: b33b08a00d62c89228346e5171219a801b0ad2a9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161757"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629871"
 ---
 # <a name="idiaframedataget_functionstart"></a>IDiaFrameData::get_functionStart
-Bloğun bir işlevin giriş noktasını içerip içermediğini gösteren bir bayrak alır.
+Bloğun bir işlevin giriş noktasını içerdiğini belirten bir bayrak verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_functionStart (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE` Blok giriş noktasını içeriyorsa döndürür; Aksi takdirde döndürür `FALSE` .
+[out] Blok `TRUE` giriş noktasını içeriyorsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Çerçeve çerçevesinin bir işlevin başında olmaması mümkündür çünkü çerçeve bir işleve yerleştirilen bir satır içi yöntemi veya işlevi temsil eder.
+ Çerçeve bir işleve eklenen satır içi bir yöntemi veya işlevi temsil ettiği için yığın çerçevesinin bir işlevin başlangıcı olması mümkün değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

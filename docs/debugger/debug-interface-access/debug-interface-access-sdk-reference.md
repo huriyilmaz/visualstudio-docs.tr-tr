@@ -1,5 +1,5 @@
 ---
-description: Uygulamanın tüm arabirimlerine ve destekleyen numaralamalara ve yapılara eksiksiz bir DIA SDK.
+description: Uygulamanın tüm arabirimlerine ve destekleyen numaralandırıcı numaralamalara ve yapılara eksiksiz bir DIA SDK.
 title: Arabirim Erişimi SDK'sı Başvuru | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: d3a06891aa68b8cacbb64e6d65830de86ee3bbda
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044975"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630644"
 ---
 # <a name="debug-interface-access-sdk-reference"></a>Arabirim Erişimi SDK Başvurusunda Hata Ayıklama
 
-Uygulamanın tüm arabirimlerine ve destekleyen numaralamalara ve yapılara eksiksiz bir DIA SDK.
+Uygulamanın tüm arabirimlerine ve destekleyen numaralandırıcı numaralamalara ve yapılara eksiksiz bir DIA SDK.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 

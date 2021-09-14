@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 972871513555feeb52b40086de58e619d7c7720c1540a4bfb7d5de419fd56ab6
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6c816fd0e44ee4870bbc656aa48621b175908692
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344679"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629060"
 ---
 # <a name="idiasourcefileget_checksum"></a>IDiaSourceFile::get_checksum
 Sağlama toplam baytlarını alın.
@@ -55,7 +55,7 @@ HRESULT get_checksum (
 
  Sağlama toplam değeri genellikle kaynak dosyanın görüntüsünden oluşturulur, bu nedenle kaynak dosyada yapılan değişiklikler sağlama toplam baytlarında yapılan değişikliklere yansıtıldı. Sağlama toplam baytları, dosyanın yüklenen görüntüsünden oluşturulan sağlama toplamları ile eşlenemse, dosyanın hasarlı veya üzerinde oynanmış olduğu kabul edilir.
 
- Tipik sağlama toplamlarının boyutu hiçbir zaman 32 bayttan fazla değildir, ancak sağlama toplamlarının en büyük boyutu olduğunu varsayma. Sağlama `data` toplamlarını `NULL` almak için gereken bayt sayısını almak için parametresini olarak ayarlayın. Ardından uygun boyutta bir arabellek ayırarak bu yöntemi yeni arabellekle bir kez daha arayın.
+ Tipik sağlama toplamları boyutu hiçbir zaman 32 bayttan fazla değildir, ancak sağlama toplamlarının en büyük boyutu olduğunu varsayma. Sağlama `data` toplamlarını `NULL` almak için gereken bayt sayısını almak için parametresini olarak ayarlayın. Ardından uygun boyutta bir arabellek ayırarak bu yöntemi yeni arabellekle bir kez daha arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

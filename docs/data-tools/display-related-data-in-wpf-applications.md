@@ -20,15 +20,15 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: c5cf789d120249ca283d655f59f5058a7b28f207
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161921"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631418"
 ---
 # <a name="display-related-data-in-wpf-applications"></a>WPF uygulamalarındaki ilgili verileri görüntüleme
 
-Bazı uygulamalarda, üst-alt ilişkisinde birbirine ilişkin birden çok tablodan veya vardan gelen verilerle çalışmak istiyor olabilir. Örneğin, bir tablodaki müşterileri görüntüleyen bir kılavuz görüntülemek istiyor `Customers` olabilir. Kullanıcı belirli bir müşteriyi seçerken başka bir kılavuzda ilgili müşterinin siparişlerini ilgili tablodan `Orders` görüntüler.
+Bazı uygulamalarda, üst-alt ilişkide birbirlerine ilişkin birden çok tablodan veya vardan gelen verilerle çalışmak istiyor olabilir. Örneğin, bir tablodaki müşterileri görüntüleyen bir kılavuz görüntülemek istiyor `Customers` olabilir. Kullanıcı belirli bir müşteriyi seçerken başka bir kılavuzda ilgili müşterinin siparişlerini ilgili tablodan `Orders` görüntüler.
 
 Veri Kaynakları penceresindeki öğeleri WPF Tasarımcısına sürükleyerek ilgili verileri **görüntülüyor** veriye bağlı denetimler oluşturabilirsiniz.
 

@@ -1,6 +1,6 @@
 ---
-description: Sembolleri çözümlemek için bir sembol sunucusuna erişime izin verilip izin verilmeyeceklerini belirler.
-title: IDiaLoadCallback::RestrictSymbolServerAccess | Microsoft Docs
+description: Sembolleri çözümlemek için bir sembol sunucusuna erişime izin verilip verilmeyeceğini belirler.
+title: 'Ialoadcallback:: RestrictSymbolServerAccess | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: d5bed6cc91e06b5906bd34d4911919f90b6456be
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044537"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629606"
 ---
 # <a name="idialoadcallbackrestrictsymbolserveraccess"></a>IDiaLoadCallback::RestrictSymbolServerAccess
-Sembolleri çözümlemek için bir sembol sunucusuna erişime izin verilip izin verilmeyeceklerini belirler.
+Sembolleri çözümlemek için bir sembol sunucusuna erişime izin verilip verilmeyeceğini belirler.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,10 +31,10 @@ HRESULT RestrictSymbolServerAccess();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Dışında herhangi bir dönüş `S_OK` kodu, sembolleri çözümlemek için bir sembol sunucusunun kullanımını önler.
+ Dışındaki herhangi bir dönüş kodu `S_OK` sembolleri çözümlemek için sembol sunucusunun kullanılmasını engeller.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

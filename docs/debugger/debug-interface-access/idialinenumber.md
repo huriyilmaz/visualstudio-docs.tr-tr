@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: c1c547688dc7eb004d07a54d7b2319113bbf42fc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081552"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629643"
 ---
 # <a name="idialinenumber"></a>IDiaLineNumber
 Bir bayt bloğundan bir kaynak dosya satır numarasıyla eşleme işlemini açıklayan bilgilere erişir.

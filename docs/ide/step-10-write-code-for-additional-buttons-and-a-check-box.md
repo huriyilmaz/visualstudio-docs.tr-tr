@@ -15,15 +15,15 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 917919fbb4fc81b00f7f7e9f5600ab8017a5623a
-ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "123398383"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628520"
 ---
 # <a name="step-10-write-code-for-additional-buttons-and-a-check-box"></a>10. Adım: Ek düğmeler ve onay kutusu için kod yazma
 
-Şimdi diğer dört yöntemi tamamlamaya hazır oluruz. Bu kodu kopyalayıp yapıştırabilirsiniz, ancak bu öğreticiden en fazla bilgi edinmek için kodu yazın ve IntelliSense'i kullanın.
+Şimdi diğer dört yöntemi tamamlamaya hazır oluruz. Bu kodu kopyalayıp yapıştırabilirsiniz, ancak bu öğreticiden en iyi şekilde öğrenmek için kodu yazın ve IntelliSense'i kullanın.
 
 Bu kod, daha önce ekley kodunuzla ilgili işlevler ekler. Bu kod olmadan düğmeler herhangi bir şey yapmaz. Düğmeler kendi olaylarında kod <xref:System.Windows.Forms.Control.Click> kullanır (ve denetimler etkinleştirilene kadar farklı şeyler <xref:System.Windows.Forms.CheckBox.CheckedChanged> yapmak için onay kutusu olayı kullanır). Örneğin, Resmi temizle düğmesini seçtiğiniz zaman etkinleştirilen (veya ) olayı, Image özelliğini null (veya hiçbir şey) olarak ayarerek geçerli `clearButton_Click` `ClearButton_Click` görüntüyü **siler.**    Kodda her olay, kodun ne yaptığını açıklayan açıklamalar içerir.
 

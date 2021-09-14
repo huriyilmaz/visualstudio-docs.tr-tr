@@ -13,31 +13,31 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: ee9f34adcd5e654b03dcd180f85840b6c76d4456
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122037219"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631515"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF ve Entity Framework 6 kullanarak basit veri uygulaması oluşturma
 
-Bu kılavuzda, verilerde temel bir "veriler üzerinde formlar" uygulaması oluşturma Visual Studio. Uygulama, SQL Server LocalDB, Northwind veritabanı, Entity Framework 6 (Entity Framework Core değil) ve .NET Framework (.NET Core değil) için Windows Presentation Foundation kullanır. Ana ayrıntı görünümüyle temel veri bağlamayı gösterir ve ayrıca Sonrakini **Taşı,** Öncekini Taşı, En sona taşı , Güncelleştirmeyi ve Sil düğmelerini de olan özel bir Bağlama Gezgini'ne **sahiptir.**  
+Bu kılavuzda, verilerde temel bir "veriler üzerinde formlar" uygulaması oluşturma Visual Studio. Uygulama LocalDB SQL Server Northwind veritabanı, Entity Framework 6 (Entity Framework Core değil) ve .NET Framework (.NET Core değil) için Windows Presentation Foundation kullanır. Ana ayrıntı görünümüyle temel veri bağlamayı gösterir ve ayrıca Sonrakini **Taşı,** Öncekini Taşı **,** Başlangıcı taşı, Sona  taşı **,** Güncelleştir ve Sil düğmelerine sahip özel bir Bağlama Gezgini'ne **sahiptir.** 
 
 Bu makale, veri araçlarını Visual Studio ve temel alınan teknolojileri ayrıntılı bir şekilde açıklamaya çalışmamaktadır. XAML, Entity Framework ve SQL. Bu örnek, WPF uygulamaları için standart olan Model-View-ViewModel (MVVM) mimarisini de göstermemektedir. Ancak, bu kodu birkaç değişiklikle kendi MVVM uygulamanıza kopyaabilirsiniz.
 
 ## <a name="install-and-connect-to-northwind"></a>Northwind'i yükleme ve bağlanma
 
-Bu örnekte LocalDB SQL Server Express Northwind örnek veritabanı kullanılır. Bu ADO.NET veri sağlayıcısı bu ürünü destekliyorsa Entity Framework diğer veritabanı ürünleriyle de SQL çalışması gerekir.
+Bu örnekte LocalDB SQL Server Express Northwind örnek veritabanı kullanılır. Bu ADO.NET için veri sağlayıcısı bu Entity Framework destekliyorsa, aynı şekilde diğer SQL veritabanı ürünleriyle de çalışmalı.
 
-1. YerelDB'niz yoksa, SQL Server Express indirme sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Yerel **Visual Studio Yükleyicisi** **.NET** masaüstü geliştirme iş SQL Server Express parçası olarak veya tek bir bileşen olarak YerelDB'yi yükleyebilirsiniz.
+1. YerelDB'yi SQL Server Express yükleme sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Yerel **Visual Studio Yükleyicisi** **.NET** masaüstü geliştirme iş yükünün bir parçası olarak veya tek bir bileşen olarak yerel SQL Server Express'yi yükleyebilirsiniz.
 
 2. Aşağıdaki adımları kullanarak Northwind örnek veritabanını yükleyin:
 
-    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (**SQL Server Nesne Gezgini,** veri depolama ve işleme iş **yükünün parçası olarak** Visual Studio Yükleyicisi.)  SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
+    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (**SQL Server Nesne Gezgini,** veri depolama ve işleme iş yükünün **bir parçası olarak** Visual Studio Yükleyicisi.)  SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
 
        Sorgu düzenleyicisi penceresi açılır.
 
-    2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
+    2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
 
     3. T-SQL betiği sorgu düzenleyicisine yapıştırın ve ardından Yürüt **düğmesini** seçin.
 
@@ -49,11 +49,11 @@ Bu örnekte LocalDB SQL Server Express Northwind örnek veritabanı kullanılır
 
 1. Bu Visual Studio yeni bir C# **WPF Uygulaması projesi** oluşturun.
 
-2. Entity Framework 6 için NuGet paketini ekleyin. Bu **Çözüm Gezgini** proje düğümünü seçin. Ana menüden Paketleri **Yönet'Project**  >  **seçin NuGet seçin.**
+2. Entity Framework 6 için NuGet paketini ekleyin. Bu **Çözüm Gezgini** proje düğümünü seçin. Ana menüde Paketleri **Yönet'Project**  >  **seçin NuGet seçin.**
 
      ![Paket NuGet menü öğesini yönetme](../data-tools/media/raddata_vs2015_manage_nuget_packages.png)
 
-3. Uygulama **NuGet Paket Yöneticisi** Gözat **bağlantısına** tıklayın. Entity Framework büyük olasılıkla listenin en üst paketidir. Sağ **bölmede** Yükle'ye tıklayın ve istemleri izleyin. Çıkış penceresi, yüklemenin ne zaman tamam olduğunu size söyler.
+3. Uygulama **NuGet Paket Yöneticisi** Gözat **bağlantısına** tıklayın. Entity Framework büyük olasılıkla listede en üst sırada yer alan pakettir. Sağ **bölmede** Yükle'ye tıklayın ve istemleri izleyin. Çıkış penceresi, yüklemenin ne zaman tamam olduğunu size söyler.
 
      ![Entity Framework NuGet Paketi](../data-tools/media/raddata_vs2015_nuget_ef.png)
 
@@ -81,7 +81,7 @@ Bu örnekte LocalDB SQL Server Express Northwind örnek veritabanı kullanılır
 
     *.edmx dosyasının* tasarımcı yüzeyi, modelde bazı özellikleri ve ilişkileri değiştirmenize olanak sağlar. Bu kılavuzda tasarımcıyı kullanmayeceğiz.
 
-6. *.tt dosyaları* genel amaçlıdır ve WPF veri bağlama ile çalışmak için bunlardan birini ayarlamanız gerekir. Bu işlem ObservableCollections gerektirir. Bu **Çözüm Gezgini,** *Northwind_model.tt'i bulana kadar Northwind_model düğümünü genişletin.* (içinde olmadığınızdan emin *olun. Context.tt* *.edmx* dosyasının hemen altında olan bir dosya.)
+6. *.tt dosyaları* genel amaçlıdır ve WPF veri bağlama ile çalışmak için bunlardan birini ayarlamanız gerekir. Bu işlem ObservableCollections gerektirir. Bu **Çözüm Gezgini,** *Northwind_model.tt'i bulana kadar Northwind_model düğümünü genişletin.* (içinde olmadığınızdan emin *olun. Context.tt* *.edmx* dosyasının hemen altında bulunan bir dosya.)
 
    - iki oluşumunu ile <xref:System.Collections.ICollection> <xref:System.Collections.ObjectModel.ObservableCollection%601> değiştirin.
 
@@ -93,9 +93,9 @@ Bu örnekte LocalDB SQL Server Express Northwind örnek veritabanı kullanılır
 
 Artık verileri görüntülemek, gezinmek ve değiştirmek için bu modeli XAML sayfasına bağlayabilirsiniz.
 
-## <a name="databind-the-model-to-the-xaml-page"></a>Modeli XAML sayfasına veri ile ekleme
+## <a name="databind-the-model-to-the-xaml-page"></a>Modeli XAML sayfasına veri ekleme
 
-Kendi veri bağlama kodunuzu yazmak mümkündür, ancak bunu sizin için Visual Studio daha kolaydır.
+Kendi veri bağlama kodunuzu yazmak mümkündür, ancak sizin için bunu Visual Studio daha kolaydır.
 
 1. Ana menüden Yeni veri **Project** ekle seçeneğini  >  **belirleyin ve** Veri Kaynağı Yapılandırma **Sihirbazı'nı açın.** **Veritabanına** değil model sınıflarını bağlamanız nedeniyle Nesne'yi seçin:
 
@@ -107,7 +107,7 @@ Kendi veri bağlama kodunuzu yazmak mümkündür, ancak bunu sizin için Visual 
 
 3. **Finish (Son)** düğmesine tıklayın.
 
-4. Kod Görünümünde *MainWindow.xaml'e* gidin. XAML'i bu örneğin amaçları doğrultusunda basit tutuz. MainWindow başlığını daha açıklayıcı bir değerle değiştirin ve Yükseklik ve Genişlik'i şimdilik 600 x 800 olarak artırın. Bunu daha sonra değiştirebilirsiniz. Şimdi bu üç satır tanımını ana kılavuza, bir satır gezinti düğmelerine, biri müşterinin ayrıntılarına ve biri de siparişlerini gösteren kılavuza ekleyin:
+4. Kod Görünümünde *MainWindow.xaml'e* gidin. XAML'i bu örneğin amaçları doğrultusunda basit tutuz. MainWindow başlığını daha açıklayıcı bir değerle değiştirin ve Yükseklik ve Genişlik'i şimdilik 600 x 800 olarak artırın. Bunu daha sonra her zaman değiştirebilirsiniz. Şimdi bu üç satır tanımını ana kılavuza, bir satır gezinti düğmelerine, biri müşterinin ayrıntılarına ve biri de siparişlerini gösteren kılavuza ekleyin:
 
     ```xaml
         <Grid.RowDefinitions>
@@ -117,7 +117,7 @@ Kendi veri bağlama kodunuzu yazmak mümkündür, ancak bunu sizin için Visual 
         </Grid.RowDefinitions>
     ```
 
-5. Şimdi *Tasarımcıda görüntülemek için MainWindow.xaml'i* açın. Bu, **Veri Kaynakları penceresinin** Araç Kutusu'Visual Studio kenar boşluğunda bir seçenek olarak **görünmesine neden olur.** Pencereyi açmak için sekmeye tıklayın veya Shift Alt D tuşuna basın veya Diğer Veri Kaynaklarını +  +    >  **Görüntüle'Windows**  >  **seçin.** Customers sınıfındaki her özelliği kendi bağımsız metin kutusunda görüntüley sunuyoruz. İlk olarak Müşteriler birleşik giriş kutusunda oka **tıklayın ve** Ayrıntılar'ı **seçin.** Ardından, tasarımcının orta satıra gitmek istediğinizden haberi olacak şekilde düğümü tasarım yüzeyinin orta parçasına sürükleyin. Bunu yanlış yere yerlerinden biri olursanız, satırı daha sonra XAML'de el ile belirtebilirsiniz. Varsayılan olarak, denetimler bir kılavuz öğesinde dikey olarak yerleştirilir, ancak bu noktada bunları formda nasıl olduğu gibi ayarlayabilirsiniz. Örneğin, Adresin üzerine Ad **metin kutusunu** koymak mantıklı olabilir. Bu makalenin örnek uygulaması alanları yeniden sıralar ve bunları iki sütunda yeniden sıralar.
+5. Şimdi *Tasarımcıda görüntülemek için MainWindow.xaml'i* açın. Bu, **Veri Kaynakları penceresinin** Araç Kutusu'Visual Studio kenar boşluğunda bir seçenek olarak **görünmesine neden olur.** Pencereyi açmak için sekmeye tıklayın veya Shift Alt D + **tuşuna** basın veya Diğer +  Veri Kaynaklarını   >  **Görüntüle'Windows**  >  **seçin.** Customers sınıfındaki her özelliği kendi bağımsız metin kutusunda görüntüley sunuyoruz. İlk olarak Müşteriler birleşik giriş kutusunda oka **tıklayın ve** Ayrıntılar'ı **seçin.** Ardından, tasarımcının orta satıra gitmek istediğinizden haberi olacak şekilde düğümü tasarım yüzeyinin orta parçasına sürükleyin. Bunu yanlış yere yerlerinden biri olursanız, satırı daha sonra XAML'de el ile belirtebilirsiniz. Varsayılan olarak, denetimler bir kılavuz öğesinde dikey olarak yerleştirilir, ancak bu noktada bunları formda nasıl olduğu gibi ayarlayabilirsiniz. Örneğin, Adresin üzerine Ad **metin kutusunu** koymak mantıklı olabilir. Bu makalenin örnek uygulaması alanları yeniden sıralar ve bunları iki sütunda yeniden sıralar.
 
      ![Müşterilerin tek tek denetimlere veri kaynağı bağlaması](../data-tools/media/raddata-customers-data-source-binding-to-individual-controls.png)
 

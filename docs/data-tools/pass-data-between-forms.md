@@ -21,24 +21,24 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 030fe8a72637e82bc317c5fb457f4e8861223c52
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122045053"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631244"
 ---
 # <a name="pass-data-between-forms"></a>Formlar arasında veri geçirme
 
-Bu kılavuz, verileri bir forma başka bir forma geçirmeye ilişkin adım adım yönergeler sağlar. Northwind'den müşteriler ve sipariş tablolarını kullanan bir form, kullanıcıların bir müşteri seçmelerini sağlar ve ikinci bir form seçilen müşterinin siparişlerini görüntüler. Bu kılavuzda, ilk forma veri alan ikinci formda bir yöntemin nasıl oluşturularak ilgili bilgiler yer alır.
+Bu kılavuz, verileri bir forma başka bir forma geçirmeye ilişkin adım adım yönergeler sağlar. Northwind'den müşteriler ve sipariş tablolarını kullanan bir form, kullanıcıların bir müşteri seçmesi için izin verir ve seçilen müşterinin siparişlerini ikinci bir form görüntüler. Bu kılavuzda, birinci forma veri alan ikinci formda bir yöntemin nasıl oluşturularak ilgili bilgiler yer alır.
 
 > [!NOTE]
 > Bu kılavuz, formlar arasında veri geçirmenin yalnızca bir yolunu gösteriyor. Bir forma veri geçirmeye yönelik başka seçenekler de vardır; örneğin, verileri almak için ikinci bir oluşturucu oluşturma veya ilk forma ait verilerle ayarlan bir genel özellik oluşturma.
 
 Bu kılavuzda gösterilen görevler şunlardır:
 
-- Forms Uygulaması **Windows yeni bir oluşturma.**
+- Forms Uygulaması **Windows yeni bir uygulama** oluşturma.
 
-- Veri Kaynağı Yapılandırma Sihirbazı ile veri [kümesi oluşturma ve yapılandırma.](../data-tools/media/data-source-configuration-wizard.png)
+- Veri Kaynağı Yapılandırma Sihirbazı ile veri kümesi [oluşturma ve yapılandırma.](../data-tools/media/data-source-configuration-wizard.png)
 
 - Veri Kaynakları penceresinden öğeleri sürüklerken formda oluşturulacak **denetimi** seçme. Daha fazla bilgi için [bkz. Veri Kaynakları penceresinden sürüklenrken oluşturulacak denetimi ayarlama.](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
 
@@ -54,13 +54,13 @@ Bu kılavuzda gösterilen görevler şunlardır:
 
 Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanılır.
 
-1. Yerel VERITABANınız yoksa, SQL Server Express sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Yerel Visual Studio Yükleyicisi SQL Server Express, Veri depolama ve işleme iş yükünün bir  parçası olarak veya tek bir bileşen olarak yükleyebilirsiniz.
+1. YerelDB'niz yoksa, SQL Server Express indirme sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)aracılığıyla **Visual Studio Yükleyicisi.** Bu Visual Studio Yükleyicisi, SQL Server Express LocalDB, Veri depolama ve işleme iş  yükünün parçası olarak veya tek bir bileşen olarak yükleyebilir.
 
 2. Aşağıdaki adımları kullanarak Northwind örnek veritabanını yükleyin:
 
-    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (SQL Server Nesne Gezgini, veri depolama ve işleme iş **yükünün bir parçası** olarak Visual Studio Yükleyicisi.) SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
+    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (SQL Server Nesne Gezgini, veri depolama ve işleme iş **yükünün bir parçası olarak** Visual Studio Yükleyicisi.) SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
 
-       Bir sorgu düzenleyicisi penceresi açılır.
+       Sorgu düzenleyicisi penceresi açılır.
 
     2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
 
@@ -70,7 +70,7 @@ Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanıl�
 
 ## <a name="create-the-windows-forms-app-project"></a>Windows Forms uygulama projesini oluşturma
 
-1. Dosya Visual Studio Menüsünde **Yeni** Dosya'Project.   >  
+1. Yeni Visual Studio'nin Dosya **menüsünde Yeni**   >  **dosya'Project.**
 
 2. Sol **bölmede Visual C#** **Visual Basic** görseli genişletin ve ardından Masaüstü'Windows **seçin.**
 
@@ -82,13 +82,13 @@ Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanıl�
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
 
-1. Veri Kaynakları **penceresini açmak** için Veri menüsünde **Veri** Kaynaklarını **Göster'e tıklayın.**
+1. Veri Kaynakları **penceresini açmak için** Veri menüsünde **Veri** Kaynaklarını **Göster'e tıklayın.**
 
 2. Veri Kaynağı **Yapılandırma sihirbazını** başlatmak **için Veri Kaynakları penceresinde** Yeni Veri Kaynağı **Ekle'yi** seçin.
 
 3. Veri **Kaynağı** Türü **Seçin sayfasında Veritabanı'ı seçin** ve ardından Sonraki'ye **tıklayın.**
 
-4. Veritabanı **modeli seçin sayfasında,** Veri Kümesi'nin **belirtilmiş olduğunu** doğrulayın ve ardından Sonraki 'ye **tıklayın.**
+4. Veritabanı **modeli seçin sayfasında,** Veri Kümesi'nin **belirtilmiş olduğunu** doğrulayın ve ardından Sonraki'ye **tıklayın.**
 
 5. Veri **Bağlantınızı Seçin** sayfasında, aşağıdakilerden birini yapın:
 
@@ -104,7 +104,7 @@ Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanıl�
 
 9. **Customers** ve **Orders tablolarını seçin** ve ardından Son'a **tıklayın.**
 
-     **NorthwindDataSet** projenize eklenir ve Veri Kaynakları **penceresinde** **Müşteriler** ve **Siparişler tabloları** görüntülenir.
+     **NorthwindDataSet** projenize eklenir ve **Müşteriler** ve **Siparişler** tabloları Veri Kaynakları **penceresinde** görüntülenir.
 
 ## <a name="create-the-first-form-form1"></a>İlk formu oluşturma (Form1)
 
@@ -114,19 +114,19 @@ Veri Kaynakları penceresinden Müşteriler düğümünü forma sürükleyerek v
 
 - Ana Müşteriler **düğümünü** Veri Kaynakları **penceresinden** **Form1'e sürükleyin.**
 
-     <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.BindingNavigator> **Form1'de** kayıtlarda gezinmek için bir ve araç şeridi ( ) görüntülenir. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter <xref:System.Windows.Forms.BindingSource> ve bileşen <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
+     <xref:System.Windows.Forms.DataGridView>Form1'de kayıtlarda gezinmek için bir ve araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) **görüntülenir.** [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter <xref:System.Windows.Forms.BindingSource> ve bileşen <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
 
 ## <a name="create-the-second-form"></a>İkinci formu oluşturma
 
 Verilerin geçeceği ikinci bir form oluşturun.
 
-1. Project **Form** **ekle'yi Windows seçin.**
+1. Veri **Project** Form **ekle'Windows seçin.**
 
 2. **Form2** varsayılan adını bırakın ve Ekle'ye **tıklayın.**
 
 3. Ana Orders **düğümünü** Veri Kaynakları **penceresinden** **Form2'ye sürükleyin.**
 
-     <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.BindingNavigator> **Form2'de** kayıtlarda gezinmek için bir ve araç şeridi ( ) görüntülenir. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter <xref:System.Windows.Forms.BindingSource> ve bileşen <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
+     <xref:System.Windows.Forms.DataGridView>Form2'de kayıtlarda gezinmek için bir ve araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) **görüntülenir.** [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), CustomersTableAdapter <xref:System.Windows.Forms.BindingSource> ve bileşen <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
 
 4. Bileşen **tepsisinde OrdersBindingNavigator'ı** silin.
 
@@ -140,7 +140,7 @@ Form1'de seçili müşteriye ait siparişleri yüklemek için Form2'ye bir Table
 
 2. **OrdersTableAdapter'a sağ tıklayın ve** Sorgu **Ekle'yi seçin.**
 
-3. Varsayılan Use **SQL deyimini bırakın** ve ardından Sonraki 'ye **tıklayın.**
+3. Deyimleri kullan varsayılan seçeneğini **SQL ve** ardından Sonraki'ne **tıklayın.**
 
 4. Satırları döndüren varsayılan **SELECT seçeneğini bırakın ve ardından** Sonraki 'ye **tıklayın.**
 
@@ -159,7 +159,7 @@ Form1'de seçili müşteriye ait siparişleri yüklemek için Form2'ye bir Table
 
 7. Bir **DataTableMethod Adını Doldur için** `FillByCustomerID` yazın.
 
-8. **DataTable İadesi seçeneğinin temizlemesi** ve ardından Sonraki'ye **tıklayın.**
+8. **DataTable İadesi seçeneğinin ardından** Sonraki'ne **tıklayın.**
 
 9. **Finish (Son)** düğmesine tıklayın.
 

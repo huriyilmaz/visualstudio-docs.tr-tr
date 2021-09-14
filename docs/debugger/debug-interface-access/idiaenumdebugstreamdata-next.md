@@ -1,6 +1,6 @@
 ---
-description: Numaralandı dizisinde belirtilen sayıda kaydı alan.
-title: IDiaEnumDebugStreamData::Next | Microsoft Docs
+description: Numaralandırılmış dizide belirtilen sayıda kaydı alır.
+title: 'IDiaEnumDebugStreamData:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 8b67d12b983ef13ad92ee8a121d8733d435f7b7c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122075032"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630428"
 ---
 # <a name="idiaenumdebugstreamdatanext"></a>IDiaEnumDebugStreamData::Next
-Numaralandı dizisinde belirtilen sayıda kaydı alan.
+Numaralandırılmış dizide belirtilen sayıda kaydı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,28 +37,28 @@ HRESULT Next (
 ```
 
 #### <a name="parameters"></a>Parametreler
- Celt
+ celt
 
-[in] Alınarak alınan kayıt sayısı.
+'ndaki Alınacak kayıt sayısı.
 
- Cbdata
+ cbData
 
-[in] Veri arabelleğinin bayt cinsinden boyutu.
+'ndaki Veri arabelleğinin bayt cinsinden boyutu.
 
- veri verisi
+ pcbData
 
-[out] Döndürülen bayt sayısını döndürür. NULL `data` ise, istenen `pcbData` tüm kayıtlar için kullanılabilen toplam veri bayt sayısını içerir.
+dışı Döndürülen bayt sayısını döndürür. `data`Null ise, `pcbData` Tüm istenen kayıtlar için kullanılabilir olan toplam veri baytı sayısını içerir.
 
- data[]
+ veri []
 
-[out] Hata ayıklama akışı kayıt verileriyle doldurulacak bir arabellek.
+dışı Hata ayıklama akışı kayıt verileriyle doldurulacak bir arabellek.
 
- pceltFetched
+ Pceltfettiz
 
-[in, out] içinde kayıt sayısını `data` döndürür.
+[in, out] İçindeki kayıt sayısını döndürür `data` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` kayıt yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla kayıt yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

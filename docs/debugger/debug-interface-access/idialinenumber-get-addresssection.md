@@ -1,6 +1,6 @@
 ---
-description: Bir bloğun başladığı bellek adresinin bölüm kısmını alır.
-title: 'IDiaLineNumber:: get_addressSection | Microsoft Docs'
+description: Bir bloğun başladığı bellek adresinin bölüm bölümünü alın.
+title: IDiaLineNumber::get_addressSection | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 81c69a92f9ecdd363cd75160e855d3b48d86355f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081592"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629720"
 ---
 # <a name="idialinenumberget_addresssection"></a>IDiaLineNumber::get_addressSection
-Bir bloğun başladığı bellek adresinin bölüm kısmını alır.
+Bir bloğun başladığı bellek adresinin bölüm bölümünü alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_addressSection (
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-dışı Bir bloğun başladığı bellek adresinin bölüm bölümünü döndürür.
+[out] Bir bloğun başladığı bellek adresinin bölüm bölümünü döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

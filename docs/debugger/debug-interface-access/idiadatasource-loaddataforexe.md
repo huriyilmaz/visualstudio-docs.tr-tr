@@ -1,6 +1,6 @@
 ---
-description: .exe/.dll dosyasıyla ilişkili hata ayıklama verilerini açar ve hazırlar.
-title: 'IDiaDataSource:: loadDataForExe | Microsoft Docs'
+description: /.exedosyasıyla ilişkili hata .dll hazırlar.
+title: IDiaDataSource::loadDataForExe | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 6e11a6d85e8a33803b7cbf8b912d3db834996753
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154698"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630489"
 ---
 # <a name="idiadatasourceloaddataforexe"></a>IDiaDataSource::loadDataForExe
-.exe/.dll dosyasıyla ilişkili hata ayıklama verilerini açar ve hazırlar.
+/.exedosyasıyla ilişkili hata .dll hazırlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,44 +35,44 @@ HRESULT loadDataForExe (
 ```
 
 #### <a name="parameters"></a>Parametreler
-yürütülür
+Yürütüle -bilir
 
-'ndaki .exe veya .dll dosyasının yolu.
+[in] .exe veya .dll yolu.
 
-searchPath
+Searchpath
 
-'ndaki Hata ayıklama verilerini aramak için alternatif yol.
+[in] Hata ayıklama verilerini aramak için alternatif yol.
 
 pCallback
 
-'ndaki Bir `IUnknown` hata ayıklama geri [çağırması](../../debugger/debug-interface-access/idialoadcallback.md), [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md), [ıdareadexeatoffsetcallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)ve/veya [ıdareadexeatrboş allback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) arabirimleri gibi bir hata ayıklama geri çağırma arabirimini destekleyen bir nesne için arabirim.
+[in] `IUnknown` [IDiaLoadCallback](../../debugger/debug-interface-access/idialoadcallback.md), [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md), [IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)ve/veya [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) arabirimleri gibi hata ayıklama geri çağırma arabirimini destekleyen bir nesne arabirimi.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda, bu yöntem için olası hata kodlarının bazıları gösterilmektedir.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Aşağıdaki tabloda, bu yöntem için bazı olası hata kodları gösterir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|E_PDB_NOT_FOUND|Dosya açılamadı veya dosya geçersiz bir biçime sahip.|
-|E_PDB_FORMAT|Eski biçimdeki bir dosyaya erişme girişiminde bulunuldu.|
-|E_PDB_INVALID_SIG|İmza eşleşmiyor.|
-|E_PDB_INVALID_AGE|Yaş eşleşmiyor.|
+|E_PDB_NOT_FOUND|Dosya açılamadı veya dosyanın biçimi geçersiz.|
+|E_PDB_FORMAT|Eski bir biçime sahip bir dosyaya erişmeye çalışıldı.|
+|E_PDB_INVALID_SIG|İmza eşle değil.|
+|E_PDB_INVALID_AGE|Yaş eşle değil.|
 |E_INVALIDARG|Geçersiz parametre.|
-|E_UNEXPECTED|Veri kaynağı zaten hazırlandı.|
+|E_UNEXPECTED|Veri kaynağı zaten hazırlanmıştır.|
 
 ## <a name="remarks"></a>Açıklamalar
-.exe/.dll dosyasının hata ayıklama üst bilgisi, ilişkili hata ayıklama veri konumunu adlandırır.
+.exe/.dll dosyasının hata ayıklama üst bilgisi, ilişkili hata ayıklama veri konumunu belirtir.
 
-Bir sembol sunucusundan hata ayıklama verileri yüklüyorsanız, *symsrv.dll* kullanıcının uygulamasının veya *msdia140.dll* yüklendiği aynı dizinde bulunmalı veya sistem dizininde bulunması gerekir.
+Bir sembol sunucusundan hata ayıklama verileri yüklüyse *symsrv.dll* kullanıcının uygulamasının veyamsdia140.dll'nin yüklü  olduğu dizinde veya sistem dizininde mevcut olması gerekir.
 
-Bu yöntem hata ayıklama üstbilgisini okur ve hata ayıklama verilerini arar ve hazırlar. Aramanın ilerleme durumu isteğe bağlı olarak, geri çağrılar aracılığıyla raporlanabilmesi ve denetlenemeyebilir. Örneğin, yöntem bir hata ayıklama dizini bulduğunda ve işlediğinde, [ıaloadcallback:: NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md) çağrılır `IDiaDataSource::loadDataForExe` .
+Bu yöntem, hata ayıklama üst bilgilerini okur ve ardından hata ayıklama verilerini arar ve hazırlar. Aramanın ilerleme durumu, isteğe bağlı olarak geri çağırmalar aracılığıyla rapor edilebilir ve denetlen olabilir. Örneğin [IDiaLoadCallback::NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md) yöntemi bir hata ayıklama dizini bulduğunda ve işleyene `IDiaDataSource::loadDataForExe` çağırıldı.
 
-[Iareaareadexeatoffsetcallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md) ve [ıseareadexeatrboş allback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) arabirimleri, bir dosyaya doğrudan standart dosya g/ç aracılığıyla erişilebilmesi durumunda, istemci uygulamanın yürütülebilir dosyadan veri okumak için alternatif yöntemler sağlamasına izin verir.
+[IDiaReadExeAtOffsetCallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md) ve [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) arabirimleri, istemci uygulamanın yürütülebilir dosyadan verileri okumak için standart dosya I/O üzerinden doğrudan erişilemeyebilirsiniz.
 
-Bir. pdb dosyasını doğrulama olmadan yüklemek için [IDiaDataSource:: loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) metodunu kullanın.
+Doğrulama olmadan bir .pdb dosyası yüklemek için [IDiaDataSource::loadDataFromPdb yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) kullanın.
 
-. Pdb dosyasını belirli ölçütlere karşı doğrulamak için [IDiaDataSource:: loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) metodunu kullanın.
+.pdb dosyasını belirli ölçütlere göre doğrulamak için [IDiaDataSource::loadAndValidateDataFromPdb yöntemini](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md) kullanın.
 
-Bir. pdb dosyasını doğrudan bellekten yüklemek için [IDiaDataSource:: Loaddatafromistreaı](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) metodunu kullanın.
+.pdb dosyasını doğrudan bellekten yüklemek için [IDiaDataSource::loadDataFromIStream yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) kullanın.
 
 ## <a name="example"></a>Örnek
 

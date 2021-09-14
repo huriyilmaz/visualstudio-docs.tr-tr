@@ -17,14 +17,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 8bf377f4a7e8602f037f35de15bf330484f869be
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134772"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630596"
 ---
 # <a name="friend-debug-interface-access-sdk"></a>Arkadaş (Arabirim Erişimi SDK'sında Hata Ayıklama)
-Arkadaş sınıfları ve arkadaş işlevleri sembollerle `SymTagFriend` tanımlanır. Bunlar, üst kullanıcı tanımlı türlerin (UDT) alt öğesidir ve [IDiaSymbol::get_classParent özelliğine](../../debugger/debug-interface-access/idiasymbol-get-classparent.md) sahip olur.
+Arkadaş sınıfları ve arkadaş işlevleri sembollerle `SymTagFriend` tanımlanır. Bunlar, üst kullanıcı tanımlı türlerin (UDT) alt öğesidir ve [IDiaSymbol::get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md) özelliğine sahip olur.
 
 ## <a name="properties"></a>Özellikler
  Aşağıdaki tabloda bu sembol türü için ek geçerli özellikler gösterilir.

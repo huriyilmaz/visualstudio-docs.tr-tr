@@ -1,5 +1,5 @@
 ---
-description: Modül veya görüntünün temel konumu ve bellek uzaklıklarının ayrıntılarını açığa çıkarır.
+description: Modül veya görüntünün temel konum ve bellek uzaklıklarının ayrıntılarını açığa çıkarır.
 title: IDiaImageData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: da217ac40830700bf48968a9ed29821f88f190ec
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074823"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629769"
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
-Modül veya görüntünün temel konumu ve bellek uzaklıklarının ayrıntılarını açığa çıkarır.
+Modül veya görüntünün temel konum ve bellek uzaklıklarının ayrıntılarını açığa çıkarır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,7 +30,7 @@ Modül veya görüntünün temel konumu ve bellek uzaklıklarının ayrıntılar
 IDiaImageData : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
 Aşağıdaki tabloda yöntemlerini `IDiaImageData` gösterir.
 
 |Yöntem|Açıklama|

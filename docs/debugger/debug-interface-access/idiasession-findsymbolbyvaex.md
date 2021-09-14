@@ -1,6 +1,6 @@
 ---
-description: Belirtilen sanal adresi (VA) ve uzaklığı içeren veya buna en yakın olan belirtilen sembol türünü alın.
-title: IDiaSession::findSymbolByVAEx | Microsoft Docs
+description: Belirtilen bir sanal adresi (VA) ve sapmayı içeren veya en yakın olan belirtilen bir sembol türünü alır.
+title: 'IDiaSession:: findSymbolByVAEx | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: a1ed6cb63f2d0a8fed11d995d7cbc748461edf70
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122128986"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629121"
 ---
 # <a name="idiasessionfindsymbolbyvaex"></a>IDiaSession::findSymbolByVAEx
-Belirtilen sanal adresi (VA) ve uzaklığı içeren veya buna en yakın olan belirtilen sembol türünü alın.
+Belirtilen bir sanal adresi (VA) ve sapmayı içeren veya en yakın olan belirtilen bir sembol türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,22 +38,22 @@ HRESULT findSymbolByVAEx (
 #### <a name="parameters"></a>Parametreler
  `va`
 
-[in] VA'sı belirtir.
+'ndaki VA 'yı belirtir.
 
  `symtag`
 
-[in] Buluna sembol türü. Değerler [SymTagEnum Numaralama numaralarından](../../debugger/debug-interface-access/symtagenum.md) alınır.
+'ndaki Bulunan sembol türü. Değerler [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından alınır.
 
  `ppSymbol`
 
-[out] Alınan sembolü [temsil eden bir IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
+dışı Alınan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
  `displacement`
 
-[out] tarafından verilen sanal adresten uzaklığı belirten bir değer `va` döndürür.
+dışı Tarafından verilen sanal adresten bir konum belirten bir değer döndürür `va` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

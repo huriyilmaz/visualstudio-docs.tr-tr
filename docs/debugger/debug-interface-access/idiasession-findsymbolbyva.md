@@ -1,6 +1,6 @@
 ---
-description: Belirtilen bir sanal adresi içeren veya en yakın olan simge türünü alın.
-title: IDiaSession::findSymbolByVA | Microsoft Docs
+description: Belirtilen bir sanal adresi içeren veya en yakın olan, belirtilen bir sembol türünü alır.
+title: 'IDiaSession:: findSymbolByVA | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 1a76c3e03e38ff48501b9cc20fb580a41cdb9d55
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161544"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629127"
 ---
 # <a name="idiasessionfindsymbolbyva"></a>IDiaSession::findSymbolByVA
-Belirtilen bir sanal adresi içeren veya en yakın olan simge türünü alın.
+Belirtilen bir sanal adresi içeren veya en yakın olan, belirtilen bir sembol türünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,18 +37,18 @@ HRESULT findSymbolByVA (
 #### <a name="parameters"></a>Parametreler
  `va`
 
-[in] Sanal adresi belirtir.
+'ndaki Sanal adresi belirtir.
 
  `symtag`
 
-[in] Buluna sembol türü. Değerler [SymTagEnum Numaralama numaralarından](../../debugger/debug-interface-access/symtagenum.md) alınır.
+'ndaki Bulunan sembol türü. Değerler [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından alınır.
 
  `ppSymbol`
 
-[out] Alınan sembolü [temsil eden bir IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
+dışı Alınan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

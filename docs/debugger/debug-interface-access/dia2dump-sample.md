@@ -16,29 +16,29 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: cdf5e84eaeace022d733d7f8521aecdbc2cd58d1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122105595"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630645"
 ---
 # <a name="dia2dump-sample"></a>Dia2dump Örneği
 
 Dia2dump örneği, bilgi için bir PDB dosyasını sorgulamak üzere Microsoft Debug Interface Access Software Development Kit'in (DIA SDK) nasıl kullanabileceğinizi gösterir.
 
-Dia2dump örneği, Visual Studio ile birlikte yüklenir ve çözüm ve kaynak dosyalarını içerir. Derlenmiş yürütülebilir dosya komut satırdan çalışır. Bir program veritabanı (.pdb) dosyasının tamamının veya yalnızca ilgilendiğin bölümlerin içeriğini görüntüler.
+Dia2dump örneği, Visual Studio ve kaynak dosyalarını içerir. Derlenmiş yürütülebilir dosya komut satırdan çalışır. Bir program veritabanı (.pdb) dosyasının tamamının veya yalnızca ilgilendiğin bölümlerin içeriğini görüntüler.
 
 ## <a name="install-the-sample"></a>Örneği yükleme
 
 Örnek, masaüstünde **C++** ile masaüstü geliştirme iş yükünü Visual Studio Yükleyicisi. Belirli iş yüklerini ve Visual Studio bileşenleri seçme hakkında bilgi için bkz. [Yükleme Visual Studio.](../../install/install-visual-studio.md)
 
-Bu örnek, yüklendikten sonra Visual Studio\DIA SDK\Samples\DIA2Dump adlı alt dizindedir.
+Yüklendikten sonra örnek, \Visual Studio\Samples\DIA2Dump adlı bir DIA SDK alt dizinde yer alan yükleme dizinindedir.
 
 ## <a name="build-the-sample"></a>Örneği oluşturma
 
-Varsayılan olarak, yükleme dizini korumalı bir dizindir. Bu, bu konumda örnek çözümü derlemek ve düzenlemek için yükseltilmiş bir Geliştirici komut istemi Visual Studio örnek bir örnek kullan anlamına gelir. Derlemeyi basitleştirmek için, önce dosyaları örnek dizinden Belgeler klasörünüzdeki bir klasör gibi başka bir dizine kopyalamanızı ve ardından örneği derlemenizi öneririz.
+Varsayılan olarak, yükleme dizini korumalı bir dizindir. Bu, bu konumda örnek çözümü derlemek ve düzenlemek için Visual Studio geliştirici komut istemini veya örnek örneğini kullanmanız gerektiğini ifade eder. Derlemeyi basitleştirmek için, önce dosyaları örnek dizinden Belgeler klasörünüzdeki bir klasör gibi başka bir dizine kopyalamanızı ve ardından örneği derlemenizi öneririz.
 
-### <a name="to-build-the-dia2dump-sample-in-visual-studio"></a>Visual Studio'de Dia2Dump örneğini derlemek için
+### <a name="to-build-the-dia2dump-sample-in-visual-studio"></a>Visual Studio'da Dia2Dump örneğini derlemek için
 
 1. DIA2Dump.sln dosyasını Visual Studio. Çözümü başka bir dizine kopyalamadıysanız, yükseltilmiş izinlerle Visual Studio başlatmanız istenebilirsiniz.
 
@@ -50,7 +50,7 @@ Varsayılan olarak, yükleme dizini korumalı bir dizindir. Bu, bu konumda örne
 
 1. Ek Dahil **Dizinleri özelliğinde** açılan liste denetimi ve ardından Düzenle'yi **seçin.**
 
-1. Ek **Dahil Dizinleri iletişim** kutusunda, düzenleme alanına dizini `$(VSInstallDir)DIA SDK\include` girin. Derleyicinin dia2.h dosyasını bulmalarını garanti etmek için bu dizini ekleyin. Değişikliklerinizi **kaydetmek** için Tamam'ı seçin.
+1. Ek **Dahil Dizinleri iletişim** kutusunda, düzenleme alanına dizinini `$(VSInstallDir)DIA SDK\include` girin. Derleyicinin dia2.h dosyasını bulmalarını garanti etmek için bu dizini ekleyin. Değişikliklerinizi **kaydetmek** için Tamam'ı seçin.
 
 1. Proje **özelliklerinde** yaptığınız değişiklikleri kaydetmek için Tamam'ı seçin.
 
@@ -62,11 +62,11 @@ Varsayılan olarak, yükleme dizini korumalı bir dizindir. Bu, bu konumda örne
 
 1. Geliştirici komut istemi penceresinde, örnek dosyaları kopyalanan dizine geçin. Örneği başka bir dizine kopyalamadıysanız yükseltilmiş (yönetici olarak çalıştır) Geliştirici komut istemi penceresi kullansanız iyi olur.
 
-1. Varsayılan Hata `nmake makefile` Ayıklama yapılandırmasını derlemek için komutunu girin dia2dump.exe.
+1. Varsayılan Hata `nmake makefile` Ayıklama yapılandırmasını derlemek için komutunu dia2dump.exe.
 
 ## <a name="run-the-dia2dump-sample"></a>Dia2Dump örneğini çalıştırma
 
-Dia2Dump.exe hizmetleri sağlamak için *msdia*.dll COM sunucusuna bağlı olur. 2015 Visual Studio sürümünden itibaren sürüm msdia140.dll. COM *sunucusunun* msdia.dll başlatılmamışsa, çalışmadan önce dia2dump.exe gerekir. DIA SDK dizininde DLL'nin x86 sürümünü içeren bir bin alt dizini vardır. x64 mimari makinelerinin sürümü bin\amd64, ARM sürümü ise bin\arm dizinindedir. Dll'i kaydetmek için yükseltilmiş bir Geliştirici komut istemi penceresi açın ve makine mimarinizin sürümünü içeren dizine geçin. COM sunucusunu `regsvr32 msdia140.dll` kaydetmek için komutunu girin.
+Dia2Dump.exe hizmetleri sağlamak için *msdia*.dll COM sunucusuna bağlı olarak kullanılır. 2015 Visual Studio sürümünden itibaren sürüm msdia140.dll. COM *sunucusunun* msdia.dll başlatılmamışsa, çalışamadan önce msdia dia2dump.exe kaydetmelisiniz. DIA SDK dizininde DLL'nin x86 sürümünü içeren bir bin alt dizini vardır. x64 mimari makinelerinin sürümü bin\amd64, ARM sürümü ise bin\arm dizinindedir. Dll'i kaydetmek için yükseltilmiş bir Geliştirici komut istemi penceresi açın ve makine mimarinizin sürümünü içeren dizine geçin. COM sunucusunu `regsvr32 msdia140.dll` kaydetmek için komutunu girin.
 
 ### <a name="to-run-the-sample"></a>Örnek çalıştırmak için
 

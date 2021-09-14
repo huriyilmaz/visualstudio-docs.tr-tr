@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: cc961d24a93e91a6f5f83d8c809f528e6b7d7301
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044369"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629288"
 ---
 # <a name="idiasegmentget_virtualaddress"></a>IDiaSegment::get_virtualAddress
 Bölümün başlangıcının sanal adresini (VA) alın.
@@ -35,7 +35,7 @@ HRESULT get_virtualAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bölümün başlangıcının VA'sı döndürür.
+[out] Bölümünün başlangıcının VA'sı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.

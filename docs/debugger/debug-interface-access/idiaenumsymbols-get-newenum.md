@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 962771f9243a53ca7ca1f92441439663c0f9d710
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129346"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630033"
 ---
 # <a name="idiaenumsymbolsget__newenum"></a>IDiaEnumSymbols::get__NewEnum
-Bu <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> numaralayıcının sürümünü alın.
+Bu <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> numaralayıcının sürümünü alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 

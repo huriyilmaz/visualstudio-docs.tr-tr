@@ -1,6 +1,6 @@
 ---
-description: Bir özellik kümesinde DWORD değerlerini okur.
-title: IDiaPropertyStorage::ReadDWORD | Microsoft Docs
+description: Bir özellik kümesindeki DWORD değerlerini okur.
+title: 'IDiaPropertyStorage:: ReadDWORD | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 58b51638b742fa8dfe874c4d46ff7bd0894f7766
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161704"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629552"
 ---
 # <a name="idiapropertystoragereaddword"></a>IDiaPropertyStorage::ReadDWORD
-Bir `DWORD` özellik kümesinde değerleri okur.
+`DWORD`Bir özellik kümesindeki değerleri okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,17 +36,17 @@ HRESULT ReadDWORD (
 #### <a name="parameters"></a>Parametreler
  `id`
 
-[in] Okunacak özelliğin tanımlayıcısı ( `PROPID` WTypes.h içinde bir olarak `ULONG` tanımlanır).
+'ndaki Okunacak özelliğin tanımlayıcısı ( `PROPID` WTypes. h olarak bir olarak tanımlanır `ULONG` ).
 
  `pValue`
 
-[out] Özellik değerini döndürür.
+dışı Özellik değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. özelliği `E_INVALIDARG` türünde değilse `DWORD` döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür. `E_INVALIDARG`Özelliğin tür olup olmadığını döndürür `DWORD` .
 
 ## <a name="remarks"></a>Açıklamalar
- , 32 bit Windows bir tamsayı `DWORD` olarak tanımlanır.
+ `DWORD`, Windows tarafından 32 bitlik işaretsiz bir tamsayı olarak tanımlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

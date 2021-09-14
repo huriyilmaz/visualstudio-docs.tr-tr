@@ -1,6 +1,6 @@
 ---
-description: Önceki sembolleri sırasıyla adrese göre alır.
-title: IDiaEnumSymbolsByAddr::P Rev | Microsoft Docs
+description: Önceki sembolleri adrese göre sırasıyla alın.
+title: IDiaEnumSymbolsByAddr::P rev | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 97bba21a09d13706375f6b97897e307c46385294
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113598"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629984"
 ---
 # <a name="idiaenumsymbolsbyaddrprev"></a>IDiaEnumSymbolsByAddr::Prev
-Önceki sembolleri sırasıyla adrese göre alır.
+Önceki sembolleri adrese göre sırasıyla alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,23 +35,23 @@ HRESULT Prev (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Numaralandırıcıda alınacak olan simgelerin sayısı.
+[in] Numaralayıcıda alınan sembollerin sayısı.
 
- rgelt
+ Rgelt
 
-dışı İstenen sembolleri temsil eden [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesneleriyle doldurulacak bir dizi.
+[out] İstenen sembolleri temsil eden [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesneleriyle doldurulacak bir dizi.
 
- Pceltfettiz
+ pceltFetched
 
-dışı Getirilen Numaralandırıcı içindeki simgelerin sayısını döndürür.
+[out] Getirili numaralayıcıda sembol sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Önceki semboller yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Önceki `S_FALSE` sembol yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, Numaralandırıcı konumunu getirilen öğe sayısına göre güncelleştirir.
+ Bu yöntem, numaralayıcı konumunu, alınan öğe sayısına göre günceller.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)

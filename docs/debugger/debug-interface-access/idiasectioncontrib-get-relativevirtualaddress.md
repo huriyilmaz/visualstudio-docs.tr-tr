@@ -1,6 +1,6 @@
 ---
-description: Katkıdan görüntü göreli sanal adresini (RVA) alır.
-title: 'IDiaSectionContrib:: get_relativeVirtualAddress | Microsoft Docs'
+description: Katkının görüntü göreli sanal adresini (RVA) alın.
+title: IDiaSectionContrib::get_relativeVirtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: df0c1d8ce49a8cecbff4d3ad87157303de5d06d3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066427"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629385"
 ---
 # <a name="idiasectioncontribget_relativevirtualaddress"></a>IDiaSectionContrib::get_relativeVirtualAddress
-Katkıdan görüntü göreli sanal adresini (RVA) alır.
+Katkının görüntü göreli sanal adresini (RVA) alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_relativeVirtualAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Katkıdan görüntü RVA 'Sı döndürür.
+[out] Katkının görüntü RVA'sını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

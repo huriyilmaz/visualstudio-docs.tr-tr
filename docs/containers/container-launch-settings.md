@@ -7,15 +7,15 @@ ms.date: 08/15/2019
 ms.technology: vs-container-tools
 ms.topic: reference
 ms.openlocfilehash: d05d4a42a6e2433cc9dfc5190a9e380dda49dab0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122122065"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631767"
 ---
 # <a name="container-tools-launch-settings"></a>Kapsayıcı araçları başlatma ayarları
 
-ASP.NET Core projesindeki *özellikler* klasöründe, web uygulamanızın geliştirme makinenizde nasıl başlatıldığını denetleyen ayarları içeren launchSettings.jsdosyayı bulabilirsiniz. bu dosyanın ASP.NET geliştirmede nasıl kullanıldığı hakkında ayrıntılı bilgi için bkz. [ASP.NET Core birden çok ortam kullanma](/aspnet/core/fundamentals/environments?view=aspnetcore-2.2&preserve-view=true). *launchSettings.js*, **docker** bölümündeki ayarlar Visual Studio kapsayıcılı uygulamaları nasıl işleyeceğinden ilgilidir.
+ASP.NET Core projesindeki *özellikler* klasöründe, web uygulamanızın geliştirme makinenizde nasıl başlatıldığını denetleyen ayarları içeren launchsettings. json dosyasını bulabilirsiniz. bu dosyanın ASP.NET geliştirmede nasıl kullanıldığı hakkında ayrıntılı bilgi için bkz. [ASP.NET Core birden çok ortam kullanma](/aspnet/core/fundamentals/environments?view=aspnetcore-2.2&preserve-view=true). *launchsettings. json* dosyasında **docker** bölümündeki ayarlar kapsayıcılı uygulamaları nasıl işleyeceğinden Visual Studio ilgilidir.
 
 ::: moniker range="vs-2017"
 
@@ -51,7 +51,7 @@ CommandName ayarı, bu bölümün kapsayıcı araçları için geçerli olduğun
 
 ::: moniker range="vs-2017"
 
-|Ayar adı|Sürüm|Örnek|Açıklama|
+|Ayar adı|Sürüm|Örnek|Description|
 |------------|-------|-------|---------------|
 |launchBrowser|Visual Studio 2017|"launchBrowser": true|Projeyi başarıyla başlattıktan sonra tarayıcının başlatılıp başlatılmayacağını belirtir.|
 |launchUrl 'Si|Visual Studio 2017|"launchUrl": "{Scheme}:/\ {ServiceHost}: {ServicePort}"|Bu URL tarayıcı başlatılırken kullanılır.  Bu dize için desteklenen değiştirme belirteçleri şunlardır:<br>   {Scheme}-SSL 'nin kullanılıp kullanılmadığından bağımsız olarak, "http" veya "https" ile değiştirilmiştir.<br>   {ServiceHost}-genellikle "localhost" ile değiştirilmiştir. Windows 10 RS3 veya daha eski bir sürüm Windows kapsayıcılar hedeflenirken, kapsayıcının ıp 'si ile değiştirilmiştir.<br>   {ServicePort}-genellikle, SSL 'nin kullanılıp kullanılmadığını bağlı olarak sslPort veya httpPort ile değiştirilmiştir.  Windows 10 RS3 veya daha eski bir sürüm Windows kapsayıcılar hedeflenirken, SSL 'nin kullanılıp kullanıldığına bağlı olarak, "443" veya "80" ile değiştirilmiştir.|
@@ -60,7 +60,7 @@ CommandName ayarı, bu bölümün kapsayıcı araçları için geçerli olduğun
 
 ::: moniker range=">=vs-2019"
 
-| Ayar adı         | Örnek                                               | Açıklama                                                                                                             |
+| Ayar adı         | Örnek                                               | Description                                                                                                             |
 | -------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | commandLineArgs      | "Commanddoğrgs": "--myValue" ayarı              | Uygulamanızı başlatmak için bu komut satırı bağımsız değişkenleri, projenizde projeniz başlatılırken kullanılır.                                     |
 | environmentVariables | "environmentVariables": {                             | Bu ortam değişkeni değerleri, kapsayıcıda başlatıldığında işleme geçirilir.                       |

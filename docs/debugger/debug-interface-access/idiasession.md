@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 97a1491b524311f8e48a1e59123e2648efa8d6c1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122058898"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629078"
 ---
 # <a name="idiasession"></a>IDiaSession
 Hata ayıklama sembolleri için bir sorgu bağlamı sağlar.
@@ -35,7 +35,7 @@ Aşağıdaki tabloda yöntemlerini `IDiaSession` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaSession::get_loadAddress](../../debugger/debug-interface-access/idiasession-get-loadaddress.md)|Bu sembol deposuna karşılık gelen yürütülebilir dosyanın yükleme adresini alın. Bu, yöntemine geçirilen `put_loadAddress` değerle aynıdır.|
+|[IDiaSession::get_loadAddress](../../debugger/debug-interface-access/idiasession-get-loadaddress.md)|Bu sembol deposu üzerindeki sembollere karşılık gelen yürütülebilir dosyanın yükleme adresini alın. Bu, yöntemine geçirilen `put_loadAddress` değerle aynıdır.|
 |[IDiaSession::put_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)|Bu sembol deposuna karşılık gelen yürütülebilir dosyanın yük adresini ayarlar. **Not:**  Bir nesnesi alasanız ve nesnesini kullanmaya `IDiaSession` başlamadan önce bu yöntemi çağırmanız önemlidir.|
 |[IDiaSession::get_globalScope](../../debugger/debug-interface-access/idiasession-get-globalscope.md)|Genel kapsam için bir başvuru verir.|
 |[IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)|Sembol deposu içinde yer alan tüm tablolar için bir numaralayıcıyı alın.|
@@ -48,32 +48,32 @@ Aşağıdaki tabloda yöntemlerini `IDiaSession` gösterir.
 |[IDiaSession::symsAreEquiv](../../debugger/debug-interface-access/idiasession-symsareequiv.md)|İki sembolün eşdeğer olup olduğunu denetler.|
 |[IDiaSession::symbolById](../../debugger/debug-interface-access/idiasession-symbolbyid.md)|Benzersiz tanımlayıcısıyla bir sembolünü verir.|
 |[IDiaSession::findSymbolByRVAEx](../../debugger/debug-interface-access/idiasession-findsymbolbyrvaex.md)|Belirtilen göreli sanal adresi ve uzaklığı içeren veya buna en yakın olan belirtilen sembol türünü alın.|
-|[IDiaSession::findSymbolByVAEx](../../debugger/debug-interface-access/idiasession-findsymbolbyvaex.md)|Belirtilen sanal adresi ve uzaklığı içeren veya en yakın olan belirtilen sembol türünü alın.|
+|[IDiaSession::findSymbolByVAEx](../../debugger/debug-interface-access/idiasession-findsymbolbyvaex.md)|Belirtilen sanal adresi ve uzaklığı içeren veya buna en yakın olan belirtilen sembol türünü alın.|
 |[IDiaSession::findFile](../../debugger/debug-interface-access/idiasession-findfile.md)|Bir kaynak dosyayı compiland ve name ile alınır.|
 |[IDiaSession::findFileById](../../debugger/debug-interface-access/idiasession-findfilebyid.md)|Kaynak dosya tanımlayıcısına göre bir kaynak dosyası verir.|
 |[IDiaSession::findLines](../../debugger/debug-interface-access/idiasession-findlines.md)|Belirtilen bir derleme ve kaynak dosya tanımlayıcısı içindeki satır numaralarını verir.|
-|[IDiaSession::findLinesByAddr](../../debugger/debug-interface-access/idiasession-findlinesbyaddr.md)|Belirtilen bir adres içeren belirtilen bir derleme içinde satırları alınır.|
-|[IDiaSession::findLinesByRVA](../../debugger/debug-interface-access/idiasession-findlinesbyrva.md)|Belirtilen bir göreli sanal adresi içeren belirtilen bir derlemede satırları alın.|
+|[IDiaSession::findLinesByAddr](../../debugger/debug-interface-access/idiasession-findlinesbyaddr.md)|Belirtilen bir adres içeren belirtilen bir compiland içinde satırları alınır.|
+|[IDiaSession::findLinesByRVA](../../debugger/debug-interface-access/idiasession-findlinesbyrva.md)|Belirtilen bir göreli sanal adresi içeren belirtilen bir compiland içinde satırları alınır.|
 |[IDiaSession::findLinesByVA](../../debugger/debug-interface-access/idiasession-findlinesbyva.md)|Belirtilen adres aralığındaki satırlar için satır numarası bilgilerini bulur.|
 |[IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)|Belirtilen bir derlemede yer alan satırları kaynak dosyaya ve satır numarasına göre alın.|
 |[IDiaSession::findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md)|Öznitelik sağlayıcıları veya derleme işleminin diğer bileşenleri tarafından sembol deposuna yerleştirilmiş bir kaynağı alın.|
 |[IDiaSession::getEnumDebugStreams](../../debugger/debug-interface-access/idiasession-getenumdebugstreams.md)|Hata ayıklama veri akışlarının numaralandı bir dizisini alın.|
 |[IDiaSession::findInlineFramesByAddr](../../debugger/debug-interface-access/idiasession-findinlineframesbyaddr.md)|bir istemcinin belirli bir adresteki tüm satır içi çerçeveler üzerinde devamsını sağlayan bir sabit adı verir.|
-|[IDiaSession::findInlineFramesByRVA](../../debugger/debug-interface-access/idiasession-findinlineframesbyrva.md)|Bir istemcinin belirtilen bir göreli sanal adresteki (RVA) tüm satır içi çerçeveler üzerinde devamsını sağlayan bir sabit değer alır.|
-|[IDiaSession::findInlineFramesByVA](../../debugger/debug-interface-access/idiasession-findinlineframesbyva.md)|Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçeveler üzerinde devamını sağlayan bir sabit değer alır.|
-|[IDiaSession::findInlineeLines](../../debugger/debug-interface-access/idiasession-findinlineelines.md)|Bir istemcinin, belirtilen üst simgeyle satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında bir numaralandırarak bir numaralandırır.|
+|[IDiaSession::findInlineFramesByRVA](../../debugger/debug-interface-access/idiasession-findinlineframesbyrva.md)|bir istemcinin belirtilen bir göreli sanal adresteki (RVA) tüm satır içi çerçeveler üzerinde aynı şekilde devamsını sağlayan bir sabit adı alır.|
+|[IDiaSession::findInlineFramesByVA](../../debugger/debug-interface-access/idiasession-findinlineframesbyva.md)|Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçeveler üzerinde devamını sağlayan bir sabit adı alır.|
+|[IDiaSession::findInlineeLines](../../debugger/debug-interface-access/idiasession-findinlineelines.md)|Bir istemcinin, belirtilen üst simgeyle satır içinde, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında bir numaralandırılmasına olanak sağlayan bir numaralama verir.|
 |[IDiaSession::findInlineeLinesByAddr](../../debugger/debug-interface-access/idiasession-findinlineelinesbyaddr.md)|Bir istemcinin, belirtilen üst simge tarafından satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında ve belirtilen adres aralığında yer alan tüm işlevlerin satır numarası bilgileri arasında bir numaralandırarak bir numaralandırır.|
-|[IDiaSession::findInlineeLinesByRVA](../../debugger/debug-interface-access/idiasession-findinlineelinesbyrva.md)|Bir istemcinin, belirtilen üst simge tarafından satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında ve belirtilen göreli sanal adres (RVA) içinde yer alan tüm işlevlerin satır numarası bilgileri arasında bir numaralandırarak alır.|
-|[IDiaSession::findInlineeLinesByVA](../../debugger/debug-interface-access/idiasession-findinlineelinesbyva.md)|Bir istemcinin, belirtilen üst simge tarafından satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında ve belirtilen sanal adres (VA) içinde yer alan tüm işlevlerin satır numarası bilgileri arasında bir numaralama alır.|
-|[IDiaSession::findInlineeLinesByLinenum](../../debugger/debug-interface-access/idiasession-findinlineelinesbylinenum.md)|Bir istemcinin, belirtilen kaynak dosya ve satır numarasında satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında bir numaralandırarak bir numaralandırır.|
-|[IDiaSession::findInlineesByName](../../debugger/debug-interface-access/idiasession-findinlineesbyname.md)|Bir istemcinin belirtilen bir adla eş değere sahip tüm satırlı işlevlerin satır numarası bilgileri arasında bir süre boyunca devam edatsını sağlayan bir numaralama verir.|
-|[IDiaSession::findSymbolsForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasession-findsymbolsforacceleratorpointertag.md)|Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık gelen değişkeni için simgelerin bir sabit değerini döndürür.|
+|[IDiaSession::findInlineeLinesByRVA](../../debugger/debug-interface-access/idiasession-findinlineelinesbyrva.md)|Bir istemcinin, belirtilen üst simge tarafından satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında dolaysız olarak ve belirtilen göreli sanal adres (RVA) içinde yer alan bir numaralama alır.|
+|[IDiaSession::findInlineeLinesByVA](../../debugger/debug-interface-access/idiasession-findinlineelinesbyva.md)|Bir istemcinin, belirtilen üst simge tarafından satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında ve belirtilen sanal adres (VA) içinde yer alan bir numaralama alır.|
+|[IDiaSession::findInlineeLinesByLinenum](../../debugger/debug-interface-access/idiasession-findinlineelinesbylinenum.md)|Bir istemcinin, belirtilen kaynak dosya ve satır numarasında satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgisinde bir numaralandırarak bir numaralandırır.|
+|[IDiaSession::findInlineesByName](../../debugger/debug-interface-access/idiasession-findinlineesbyname.md)|Bir istemcinin belirtilen bir adla eş değere sahip tüm satır içinde yer alan işlevlerin satır numarası bilgileri arasında bir süre boyunca devam edat edatacak bir numaralama sağlar.|
+|[IDiaSession::findSymbolsForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasession-findsymbolsforacceleratorpointertag.md)|Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık gelen değişkeni için sembollerin bir sabit değerini döndürür.|
 |[IDiaSession::findSymbolsByRVAForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasession-findsymbolsbyrvaforacceleratorpointertag.md)|Karşılık gelen bir etiket değeri verilmelidir, bu yöntem belirtilen bir göreli sanal adreste belirtilen üst Hızlandırıcı saplama işlevinde yer alan sembollerin bir numaralama döndürür.|
 |[IDiaSession::findAcceleratorInlineesByName](../../debugger/debug-interface-access/idiasession-findacceleratorinlineesbyname.md)|Belirtilen satır içi işlev adına karşılık gelen satır içi çerçeveler için simgelerin bir sabit adını döndürür.|
 |[IDiaSession::findAcceleratorInlineesByLinenum](../../debugger/debug-interface-access/idiasession-findacceleratorinlineesbylinenum.md)|Belirtilen kaynak konuma karşılık gelen satır içi çerçeveler için simgelerin bir sabit bir sabitlevasyonu döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
-Nesneyi oluşturduktan sonra [IDiaSession::p ut_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yönteminin çağrıl olması ve sembollerin tüm sanal adres `IDiaSession` (VA) özelliklerinin erişilebilir olması için yöntemine geçirilen değerin sıfır olmayan olması `put_loadAddress` gerekir. Yükleme adresi, hata ayıklaması yapılan yürütülebilir dosyayı yüklemiş olan programdan gelir. Örneğin, yürütülebilir dosya için bir tanıtıcı verilen yürütülebilir dosyanın yükleme adresini almak için Win32 `GetModuleInformation` işlevini çağırabilirsiniz.
+Nesneyi oluşturduktan sonra [IDiaSession::p ut_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemini çağırmanız önemlidir ve sembollerin tüm sanal adres `IDiaSession` (VA) özelliklerinin erişilebilir olması için yönteme geçirilen değerin sıfır olmayan olması `put_loadAddress` gerekir. Yükleme adresi, hata ayıklaması yapılan yürütülebilir dosyayı yüklemiş olan programdan gelir. Örneğin, yürütülebilir dosya için bir tanıtıcı verilen yük adresini almak için Win32 `GetModuleInformation` işlevini çağırabilirsiniz.
 
 ## <a name="example"></a>Örnek
 Bu örnekte, uygulamanın genel `IDiaSession` olarak başlatan bir parçası olarak arabirimin nasıl DIA SDK.

@@ -16,11 +16,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 9c59e66b73767b5ee5c6787fe0155ad1a2345161
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129522"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630752"
 ---
 # <a name="basictype"></a>BasicType
 Sembolün temel türünü belirtir.
@@ -69,7 +69,7 @@ btFloat Basic türü bir kayan nokta numarasıdır ( `FLOAT` ).
 
 btBCD Temel türü ikili kodlu ondalıktır ( `BCD` ).
 
-btBool Basic türü bir Boolean ( ). `BOOL`
+btBool Basic türü bir Boole `BOOL` ( ).
 
 btLong Basic türü bir `long int` (C/C++ türü).
 
@@ -85,7 +85,7 @@ btComplex Basic türü karmaşık bir sayıdır.
 
 btBit Basic türü biraz.
 
-btBSTR Temel türü, temel veya ikili dizedir ( `BSTR` ).
+btBSTR Temel türü bir temel veya ikili dizedir ( `BSTR` ).
 
 btHresult Basic türü bir `HRESULT` 'dır.
 

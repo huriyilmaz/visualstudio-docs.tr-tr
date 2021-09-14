@@ -10,11 +10,11 @@ ms.date: 05/10/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
 ms.openlocfilehash: 3b7872707c450c393c5bbeb654d65c0dbee60052
-ms.sourcegitcommit: 8f8804b885c3a68f20bf0e9fe3729f2764145815
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "123096959"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631706"
 ---
 # <a name="launch-a-subset-of-compose-services"></a>Oluşturma hizmetleri alt kümesini Başlat
 
@@ -85,7 +85,7 @@ Sonraki örnekte, bir oluşturma profilindeki hizmetlere filtre uygulamak yerine
 
 ![Bazı hizmetler seçili değilken başlatma ayarları iletişim kutusunun ekran görüntüsü](media/launch-settings/launch-settings-selected.png)
 
-Bu bilgiler, aşağıda gösterildiği gibi *launchSettings.js* kaydedilir
+Bu bilgiler, aşağıda gösterildiği gibi *Launchsettings. JSON* dosyasında kaydedilecek
 
 ```json
 {
@@ -137,7 +137,7 @@ Bu bilgiler, aşağıdaki kodda gösterildiği gibi kaydedilir. Varsayılan eyle
 }
 ```
 
-Ayrıca, WebApplication1 eylemini **hata ayıklama olmadan başlayacak** şekilde değiştirebilirsiniz. *launchSettings.js* ' deki ayarlar aşağıdaki kodla aynı şekilde görünür:
+Ayrıca, WebApplication1 eylemini **hata ayıklama olmadan başlayacak** şekilde değiştirebilirsiniz. *Launchsettings. JSON* dosyasındaki ayarlar daha sonra aşağıdaki koda benzer şekilde görünür:
 
 ```json
 {
@@ -160,7 +160,7 @@ Ayrıca, WebApplication1 eylemini **hata ayıklama olmadan başlayacak** şekild
 
 ## <a name="properties"></a>Özellikler
 
-İşte *launchSettings.js* her bir özelliğin açıklaması:
+*Launchsettings. JSON* içindeki her bir özelliğin açıklaması aşağıdadır:
 
 |Özellik| Açıklama|
 | - | - |

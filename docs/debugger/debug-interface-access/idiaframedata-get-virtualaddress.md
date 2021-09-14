@@ -1,6 +1,6 @@
 ---
-description: Çerçeve için kodun sanal adresini (VA) alır.
-title: 'IDiaFrameData:: get_virtualAddress | Microsoft Docs'
+description: Çerçevenin kodunun sanal adresini (VA) alın.
+title: IDiaFrameData::get_virtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 003975e7eaf17783fc036da15c4653cf48d7c7ce
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074855"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629804"
 ---
 # <a name="idiaframedataget_virtualaddress"></a>IDiaFrameData::get_virtualAddress
-Çerçeve için kodun sanal adresini (VA) alır.
+Çerçevenin kodunun sanal adresini (VA) alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_virtualAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Çerçeve için kodun sanal adresini döndürür.
+[out] Çerçevenin kodunun sanal adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

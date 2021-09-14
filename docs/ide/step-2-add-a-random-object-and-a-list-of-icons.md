@@ -15,11 +15,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: a2c0e9f72e0a1dc31be3d867ca1078ddb5227754
-ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "123397966"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628509"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>2. Adım: Rastgele nesne ve simge listesi ekleme
 
@@ -27,7 +27,7 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
 ## <a name="to-add-a-random-object-and-a-list-of-icons"></a>Rastgele bir nesne ve simge listesi eklemek için
 
-1. Bu **Çözüm Gezgini** C# kullanıyorsanız *Form1.cs* veya Visual Basic kullanıyorsanız *Form1.vb'yi* seçin ve ardından menü çubuğunda Kodu Görüntüle'yi   >  **seçin.** Alternatif olarak, **F7** anahtarını seçebilir veya form1'de **form1'e çift** **Çözüm Gezgini.**
+1. Bu **Çözüm Gezgini** C# kullanıyorsanız *Form1.cs* veya Visual Basic kullanıyorsanız *Form1.vb'yi* seçin ve ardından menü çubuğunda Kodu **Görüntüle'yi**  >  **seçin.** Alternatif olarak, **F7** anahtarını seçebilir veya form1'de **form1'e** çift **Çözüm Gezgini.**
 
      Böylece Form1'in arkasındaki kod modülü görüntülenir.
 
@@ -41,20 +41,20 @@ Bu adımda, oyun için bir grup eşleşen simge oluşturuyorsunuz. Her simge, fo
 
       C# kullanıyorsanız, kodu açılış küme ayracından sonra ve sınıf bildiriminin hemen altına ( ) koyarak emin `public partial class Form1 : Form` olun. Visual Basic kullanıyorsanız, kodu sınıf bildiriminin () hemen altına `Public Class Form1` girin.
 
-3. List nesnesini eklerken açılan **IntelliSense penceresine** dikkat edin. Aşağıda bir C# örneği ve ancak aşağıdaki gibi bir metin, Visual Basic.
+3. List nesnesini eklerken açılan **IntelliSense penceresine** dikkat edin. Aşağıda bir C# örneği ve benzer bir metin yer alelade bir liste Visual Basic.
 
      ![Tıklama olayını gösteren Özellikler penceresi](../ide/media/express_listintellisense.png)<br/>***IntelliSense** penceresi*
 
     > [!NOTE]
-    > IntelliSense penceresi yalnızca kodu el ile girersiniz. Kodu kopyalayıp yapıştırırsanız görünmez.
+    > IntelliSense penceresi yalnızca kodu el ile girerken görünür. Kodu kopyalayıp yapıştırırsanız görünmez.
 
      Kodu (ve açıklamaları) küçük bölümler halinde incelerseniz anlaması daha kolay olur. Programlarınız birçok farklı öğe türlerini izlemek için liste nesnelerini kullanabilir. Bir liste; sayıları, doğru/yanlış değerlerini, metinleri veya diğer nesneleri barındırabilir. Hatta diğer liste nesnelerini tutan bir liste nesnesi bile olabilir. Bir listedeki öğelere öğe adı ve her liste yalnızca bir öğe türü içerir. Öyleyse, bir sayı listesi yalnızca sayıları tutabilir; bu listeye metin ekleyemezsiniz. Benzer şekilde, doğru/yanlış değerlerini içeren bir listeye sayı ekleyemezsiniz.
 
-     deyimini `List` kullanarak bir nesne `new` oluşturursanız, içinde depolamak istediğiniz veri türü belirtmeniz gerekir. Bu nedenle **IntelliSense** penceresinin üst kısmında yer alan araç ipucu, listede yer alan öğe türlerini gösterir. Ayrıca (C# içinde) ve (Visual Basic) ifadeleri de şu anlama gelir: Veri türü öğelerini tutan `List<string>` `List(Of String)` bir `List` `string` nesnedir. Dize, programınız metin depolamak için kullandığı dizedir. **IntelliSense** penceresinin sağ tarafından sağ tarafından bu araç ipucu bunu söylüyor.
+     deyimini `List` kullanarak bir nesne `new` oluşturursanız, içinde depolamak istediğiniz veri türü belirtmeniz gerekir. Bu nedenle **IntelliSense** penceresinin üst kısmında yer alan araç ipucu, listede yer alan öğe türlerini gösterir. Ayrıca (C#' içinde) ve (Visual Basic) şu anlama gelir: Veri türü öğelerini `List<string>` `List(Of String)` tutan bir `List` `string` nesnedir. Dize, programınız metin depolamak için kullandığı dizedir. **IntelliSense** penceresinin sağ tarafından sağ tarafından bu araç ipucu bunu söylüyor.
 
-4. İlk olarak Visual Basic dizi oluşturmanın gerektiğini ancak C# içinde listenin tek bir deyimle oluşturula bile olduğunu göz önünde bulundurabilirsiniz. Bunun nedeni, C# dilinde listeyi *değerleri kabul etmek için hazırlayacak* koleksiyon başlatıcıları olmasıdır. Visual Basic'te bir koleksiyon başlatıcısı kullanabilirsiniz. Ancak, önceki Visual Basic sürümü ile uyumluluk açısından önceki kodu kullanmanızı öneririz.
+4. İlk olarak Visual Basic dizi oluşturmanın gerektiğini ancak C# içinde listenin tek bir deyimle oluşturulama neden gerektiğini göz önünde bulundurabilirsiniz. Bunun nedeni, C# dilinde listeyi *değerleri kabul etmek için* hazırlayacak koleksiyon başlatıcıları olmasıdır. Visual Basic'te bir koleksiyon başlatıcısı kullanabilirsiniz. Ancak, önceki Visual Basic sürümü ile uyumluluk açısından önceki kodu kullanmanızı öneririz.
 
-     Deyimiyle bir koleksiyon başlatıcısı kullanırken, yeni List nesnesi oluşturulduktan sonra program bunu küme ayraçlarının içinde `new` sağlanan verilerle doldurur. Bu durumda simgeler adlı dizelerin listesini alır ve bu liste on altı dizeyi içeren şekilde başlatılır. Bu dizelerin her biri tek bir harftir ve bunların tümü etiketlerde yer alacak simgelere karşılık gelir. Dolayısıyla, oyunda bir çift ünlem işareti, bir çift büyük N harfi, bir çift virgül vs. olacaktır. (Bu karakterler Webdings yazı tipine ayarlanırsa, bunlar bir veri yolu, bisiklet, bir dağ gibi semboller olarak görünür.) Liste nesneniz, TableLayoutPanel panelindeki her hücre için bir tane olmak için hepsinde on altı dize içerir.
+     Deyimiyle bir koleksiyon başlatıcısı kullanırken, yeni List nesnesi oluşturulduktan sonra program bunu küme ayraçlarının içinde `new` sağlanan verilerle doldurur. Bu durumda simgeler adlı dizelerin listesini alır ve bu liste on altı dizeyi içeren şekilde başlatılır. Bu dizelerin her biri tek bir harftir ve bunların tümü etiketlerde yer alacak simgelere karşılık gelir. Dolayısıyla, oyunda bir çift ünlem işareti, bir çift büyük N harfi, bir çift virgül vs. olacaktır. (Bu karakterler Webdings yazı tipine ayarlanırsa, bunlar bir veri yolu, bisiklet, bir dağ gibi semboller olarak görünür.) Liste nesneniz, TableLayoutPanel panelindeki her hücre için bir tane olmak için on altı dize içerir.
 
     > [!NOTE]
     > Bu Visual Basic aynı sonucu elde edersiniz, ancak önce dizeler geçici bir diziye eklenir ve bu da bir liste nesnesine dönüştürülür. Örneğin, dizilerin sabit boyutlu oluşturulması dışında, dizi bir listeye benzer. Listelerin gerektiğinde daralabilmesi ve genişleyebilmesi bu programda önem taşır.

@@ -1,6 +1,6 @@
 ---
-description: Görüntünün temel alınarak bellek konumunu alınır.
-title: IDiaImageData::get_imageBase | Microsoft Docs
+description: Görüntünün dayanmanız gereken bellek konumunu alır.
+title: 'IDiaImageData:: get_imageBase | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 699ad3a289ff790c414a4c3e8a552436a22ab633
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129194"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629786"
 ---
 # <a name="idiaimagedataget_imagebase"></a>IDiaImageData::get_imageBase
-Görüntünün temel alınarak bellek konumunu alınır.
+Görüntünün dayanmanız gereken bellek konumunu alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_imageBase (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Önerilen görüntü temel değerini döndürür.
+dışı Önerilen görüntü taban değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Görüntü tabanı çakışmaları nedeniyle, bir görüntü yüklendiğinde otomatik olarak kullanılmayan bir bellek konuma yeniden temel olabilir. Bu yöntem, derleme zamanında modülde depolanan temel ipucunu (önerilen bellek konumu) döndürür.
+ Görüntü tabanı çakışmaları nedeniyle, bir görüntü yüklendiğinde kullanılmayan bellek konumuna otomatik olarak yeniden dayalı olabilir. Bu yöntem, derleme zamanında modülünde depolanan temel ipucunu (önerilen bellek konumu) döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

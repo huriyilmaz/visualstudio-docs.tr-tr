@@ -1,6 +1,6 @@
 ---
-title: Kavramsal Modelle Çalışma (WCF Veri Hizmetleri)
-description: WCF Veri Hizmetleri'da kavramsal bir modelle çalışma. Veritabanı şemaları ve nesne modelleri arasında ileri ve geri çeviri yapmak yerine verileri nesneler aracılığıyla sorgular.
+title: kavramsal modelle çalışma (WCF Veri Hizmetleri)
+description: WCF Veri Hizmetleri bir kavramsal modelle çalışın. Veritabanı şemaları ve nesne modelleri arasında geri çevirmek yerine nesneleri nesneler aracılığıyla sorgulayın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,37 +16,37 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 84c5ae1cf5bff93389477071892aa420081731e9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122031516"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631011"
 ---
-# <a name="work-with-a-conceptual-model-wcf-data-services"></a>Kavramsal Modelle Çalışma (WCF Veri Hizmetleri)
+# <a name="work-with-a-conceptual-model-wcf-data-services"></a>kavramsal modelle çalışma (WCF Veri Hizmetleri)
 
-Bir veritabanındaki verileri açıklamak için kavramsal bir model kullanırken, veritabanı şeması ile nesne modeli arasında ileri ve geri çevirmek zorunda kalmadan nesneleriniz aracılığıyla verileri sorguabilirsiniz.
+Bir veritabanındaki verileri anlatmak için kavramsal model kullandığınızda, bir veritabanı şeması ve bir nesne modeli arasında geri ve ileri çevirmek zorunda kalmak yerine nesneleriniz aracılığıyla verileri sorgulayabilirsiniz.
 
-Kavramsal modelleri farklı uygulamalarla WCF Veri Hizmetleri kullanabilirsiniz. Aşağıdaki konular, kavramsal bir model aracılığıyla verilerin nasıl sorgulan olduğunu gösterir.
+kavramsal modelleri WCF Veri Hizmetleri uygulamalarla birlikte kullanabilirsiniz. Aşağıdaki konularda, kavramsal bir model aracılığıyla verilerin nasıl sorgulanyapılacağı gösterilmektedir.
 
-| Konu | Açıklama |
+| Konu | Description |
 | - | - |
-| [Nasıl kullanılır: Veri Hizmeti sorguları yürütme](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services) | Bir .NET uygulamasından veri hizmetini sorgulamayı gösterir. |
-| [Nasıl Project sorgu sonuçları](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services) | Bir veri hizmeti sorgusu aracılığıyla döndürülen veri miktarını azaltmayı gösterir. |
+| [Nasıl yapılır: veri hizmeti sorgularını yürütme](/dotnet/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services) | Bir .NET uygulamasından veri hizmetinin nasıl sorgulanalınacağını gösterir. |
+| [nasıl yapılır: sorgu sonuçlarını Project](/dotnet/framework/data/wcf/how-to-project-query-results-wcf-data-services) | Bir veri hizmeti sorgusuyla döndürülen veri miktarının nasıl azaltılacağı gösterilmektedir. |
 
-Kavramsal bir model kullanırken, etki alanınız ile eşleşen dilde hangi verinin geçerli olduğunu tanımlayabilirsiniz. Modelde geçerli verileri tanımlayabilir veya bir varlık veya veri hizmeti üzerinde gerçekleştirilen işlemlere doğrulama eklemek için kullanabilirsiniz.
+Kavramsal model kullandığınızda, etki alanınız ile eşleşen dilde ne tür verilerin geçerli olduğunu tanımlayabilirsiniz. Modeldeki geçerli verileri tanımlayabilir veya bir varlık ya da veri hizmeti üzerinde gerçekleştirdiğiniz işlemlere doğrulama ekleyebilirsiniz.
 
-Aşağıdaki konular, uygulamanıza doğrulamanın nasıl WCF Veri Hizmetleri gösterir.
+aşağıdaki konular, WCF Veri Hizmetleri uygulamalarına doğrulamanın nasıl ekleneceğini göstermektedir.
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
-|[Nasıl kullanılır: Veri Hizmeti iletilerini kesme](/dotnet/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services)|Bir veri hizmeti işlemi için doğrulama eklemeyi gösterir.|
+|[Nasıl yapılır: veri hizmeti iletilerini kesme](/dotnet/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services)|Bir veri hizmeti işlemine doğrulamanın nasıl ekleneceğini gösterir.|
 
- Aşağıdaki konular varlıklar üzerinde işlemler gerçekleştirerek verileri oluşturma, güncelleştirme ve silme işlemlerini gösterir.
+ Aşağıdaki konularda, varlıklarda işlem gerçekleştirerek verileri oluşturma, güncelleştirme ve silme işlemlerinin nasıl yapılacağı gösterilmektedir.
 
-|Konu|Açıklama|
+|Konu|Description|
 |-----------|-----------------|
-|[Nasıl kullanılır: Varlık ekleme, değiştirme ve silme](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|Bir veri hizmette varlık verilerini oluşturma, güncelleştirme ve silmeyi gösterir.|
-|[Nasıl kullanılır: Varlık ilişkilerini tanımlama](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|Veri hizmette ilişkilerin nasıl oluşturuleceğini veya değiştireceğini gösterir.|
+|[Nasıl yapılır: varlıkları ekleme, değiştirme ve silme](/dotnet/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services)|Veri hizmetindeki varlık verilerini oluşturmayı, güncelleştirmeyi ve silmeyi gösterir.|
+|[Nasıl yapılır: varlık ilişkilerini tanımlama](/dotnet/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services)|Bir veri hizmetinde ilişkilerin nasıl oluşturulduğunu veya değiştirileceğini gösterir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -26,23 +26,23 @@ ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6b59c4dfca1f56bdd08a2dc810524a698a869dc9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122031399"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630873"
 ---
 # <a name="context-operator-in-the-visual-studio-debugger-c"></a>Visual Studio Debugger'da Bağlam İşleci (C++)
-Bir kesme noktası konumunu, değişken adını veya ifadeyi nitelerken C++ bağlam işleci kullanabilirsiniz. Bağlam işleci, dış kapsamdan başka bir şekilde yerel adla gizlenen bir ad belirtmek için kullanışlıdır.
+Bir kesme noktası konumunu, değişken adını veya ifadeyi nitelerken C++ bağlam işleci kullanabilirsiniz. Bağlam işleci, dış kapsamdan başka bir şekilde yerel ad tarafından gizlenen bir ad belirtmek için kullanışlıdır.
 
 ## <a name="syntax"></a><a name="BKMK_Using_context_operators_to_specify_a_symbol"></a> Sözdizimi
  Bağlamı belirtmenin iki yolu vardır:
 
-1. {,,[*modül*] } *ifadesi*
+1. {,,[*module*] } *ifadesi*
 
      Küme ayraçları iki virgül ve modül (yürütülebilir veya DLL) adı veya tam yol içermesi gerekir.
 
-     Örneğin, bir kesme noktası ayarlamak için `SomeFunction` EXAMPLE.dll:
+     Örneğin, şu işlevin işlevinde bir `SomeFunction` kesme noktası EXAMPLE.dll:
 
     ```C++
     {,,EXAMPLE.dll}SomeFunction
@@ -54,9 +54,9 @@ Bir kesme noktası konumunu, değişken adını veya ifadeyi nitelerken C++ bağ
     EXAMPLE.dll!SomeFunction
     ```
 
-- *modül,* bir modülün adıdır. Aynı adla modüller arasında belirsizlikleri tam olarak ifade etmek için tam yol kullanabilirsiniz.
+- *modül,* bir modülün adıdır. Aynı adla modüller arasında belirsizlikleri tam olarak ifade etmek için tam bir yol kullanabilirsiniz.
 
-   Modül *yolunda* virgül, ekli alan veya ayraç varsa, bağlam ayrıştırıcının dizeyi düzgün şekilde tanıyaması için yolun etrafında tırnak işaretleri kullanmalıdır. Tek tırnak işaretleri, dosya adının Windows olarak kabul edilir, bu nedenle çift tırnak işareti kullanmalıdır. Örneğin,
+   Modül *yolunda* virgül, ekli alan veya ayraç varsa, bağlam ayrıştırıcının dizeyi düzgün şekilde tanıy için yolun etrafında tırnak işaretleri kullanmalıdır. Tek tırnak işaretleri, dosya adının Windows olarak kabul edilir, bu nedenle çift tırnak işareti kullanmalıdır. Örneğin,
 
   ```C++
   {,,"a long, long, library name.dll"} g_Var
@@ -66,7 +66,7 @@ Bir kesme noktası konumunu, değişken adını veya ifadeyi nitelerken C++ bağ
 
   İfade değerlendiricisi bir ifadede bir sembolle karşılaştığında, sembolünü aşağıdaki sırayla arar:
 
-1. Sözcük kapsamı dışa doğru, geçerli blokla başlayarak, küme ayraçları içine alınmış deyimler dizisi ve kapsayan blokla dışa doğru devam. Geçerli blok, geçerli konumu, yönerge işaretçisi adresini içeren koddur.
+1. Sözcük kapsamı dışa doğru, geçerli bloktan başlayarak, küme ayraçları içine alınmış deyimler dizisi ve kapsayan blokla dışa doğru devam. Geçerli blok, geçerli konumu, yönerge işaretçisi adresini içeren koddur.
 
 2. İşlev kapsamı. Geçerli işlev.
 
@@ -74,4 +74,4 @@ Bir kesme noktası konumunu, değişken adını veya ifadeyi nitelerken C++ bağ
 
 4. Geçerli modülde genel semboller.
 
-5. Geçerli programda ortak semboller.
+5. Geçerli programda genel semboller.

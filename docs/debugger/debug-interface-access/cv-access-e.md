@@ -1,6 +1,6 @@
 ---
 title: CV_access_e | Microsoft Docs
-description: Hata ayıklama arabirimi erişim SDK 'sında üyelerin görünürlük (erişim düzeyi) kapsamını belirten CV_access_e numaralandırma türü hakkında bilgi alın.
+description: Hata ayıklama arabirimi CV_access_e SDK'sı üyelerinin görünürlük (erişim düzeyi) kapsamını belirten enumeration türü hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: f784380e1c96a28c200ee2f7ab70cfd21c40a343
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122121766"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630698"
 ---
 # <a name="cv_access_e"></a>CV_access_e
-Üye işlevlerinin ve değişkenlerinin görünürlük kapsamını (erişim düzeyi) belirtir.
+Üye işlevlerin ve değişkenlerin görünürlük kapsamını (erişim düzeyi) belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,17 +36,17 @@ typedef enum CV_access_e {
 ```
 
 ## <a name="elements"></a>Öğeler
-CV_private üyesinin özel erişimi vardır.
+CV_private üyenin özel erişimi var.
 
-CV_protected üyesinin erişimi korumalı.
+CV_protected korumalı erişimi var.
 
-CV_public üyenin ortak erişimi vardır.
+CV_public üyenin genel erişimi var.
 
 ## <a name="remarks"></a>Açıklamalar
-`friend`Genellikle sınıfın hem özel hem de korumalı öğelerine erişimi olan üye olmayan işlevler tarafından kullanıldığından, erişim belirticisi buraya dahil edilmez. Access ile sembolleri bulmak için [IDiaSymbol:: get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) metodunu kullanın `SymTagFriend` .
+Erişim belirleyicisi genellikle sınıfın hem özel hem de korumalı öğelerine erişimi olan üye olmayan işlevler tarafından kullandığından `friend` buraya dahil değildir. Erişimi olan [sembolleri bulmak için IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) yöntemini `SymTagFriend` kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: cvconst. h
+Üst bilgi: cvconst.h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)

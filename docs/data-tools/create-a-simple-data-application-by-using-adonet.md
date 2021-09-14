@@ -1,6 +1,6 @@
 ---
 title: ADO.NET kullanarak basit veri uygulaması oluşturma
-description: Windows Forms kullanarak basit bir formlar ADO.NET uygulaması Visual Studio.
+description: Visual Studio Windows Forms ve ADO.NET kullanarak basit bir form-veri uygulaması oluşturmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/23/2017
 ms.topic: conceptual
@@ -15,62 +15,62 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 506983ffacf846969f6e74fd503344d90180ca91
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161999"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631520"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET kullanarak basit veri uygulaması oluşturma
 
-Veritabanındaki verileri yönlendiren bir uygulama bilgisayarınızda bağlantı dizelerini tanımlama, veri ekleme ve saklı yordamları çalıştırma gibi temel görevleri gerçekleştirebilirsiniz. Bu konuyu takip etmek için Visual C# veya Visual Basic ve ADO.NET kullanarak basit bir Windows Forms "veriler üzerinde formlar" uygulamasından bir veritabanıyla ADO.NET.  Veri kümeleri, veri kümeleri, LINQ to SQL ve Entity Framework gibi tüm .NET veri teknolojileri, sonunda bu makalede gösterilenlere çok benzer adımlar gerçekleştirmektedir.
+Veritabanındaki verileri işleyen bir uygulama oluşturduğunuzda, bağlantı dizelerini tanımlama, veri ekleme ve saklı yordamları çalıştırma gibi temel görevleri gerçekleştirirsiniz. bu konuyu izleyerek, Visual C# veya Visual Basic ve ADO.NET kullanarak basit bir Windows Forms "veri üzerinden Forms" uygulamasının içinden bir veritabanıyla nasıl etkileşim kuracağınızı bulabilirsiniz.  veri kümeleri, LINQ to SQL ve Entity Framework dahil olmak üzere tüm .net veri teknolojileri, sonuçta bu makalede gösterilenler için çok benzeyen adımları gerçekleştirir.
 
-Bu makalede, veritabanından hızlı bir şekilde veri almak için basit bir yol açıklanmıştır. Uygulamanıza verileri önemsiz yollarla değiştirmesi ve veritabanını güncelleştirmesi gerekirse, kullanıcı arabirimi denetimlerini temel alınan verilerde yapılan değişikliklerle otomatik olarak eşitlemek için Entity Framework ve veri bağlamayı kullanmayı göz önünde bulundurabilirsiniz.
+Bu makalede, verileri bir veritabanından hızlı bir şekilde almanın basit bir yolu gösterilmektedir. Uygulamanızın verileri basit olmayan yollarla değiştirmesi ve veritabanını güncelleştirmesi gerekiyorsa, Kullanıcı arabirimi denetimlerini temel verilerdeki değişikliklerle otomatik olarak eşitlemek için Entity Framework kullanmayı ve veri bağlamayı kullanmayı göz önünde bulundurmanız gerekir.
 
 > [!IMPORTANT]
-> Kodu basit tutmak için üretime hazır özel durum işleme dahil değildir.
+> Kodu basit tutmak için üretime hazırlanma özel durum işleme içermez.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Uygulamayı oluşturmak için aşağıdakiler gerekir:
+Uygulamayı oluşturmak için şunlar gerekir:
 
 - Visual Studio.
 
-- SQL Server Express Localdb. Yerel VERITABANınız yoksa, SQL Server Express indirme sayfasından [SQL Server Express yükleyebilirsiniz.](https://www.microsoft.com/sql-server/sql-server-editions-express)
+- SQL Server Express LocalDB. SQL Server Express localdb yoksa, [SQL Server Express indirme sayfasından](https://www.microsoft.com/sql-server/sql-server-editions-express)yükleyebilirsiniz.
 
-Bu konu başlığında, Visual Studio IDE'nin temel işlevleri hakkında bilgi sahibi olduğunuz ve bir Windows Forms uygulaması oluşturabilirsiniz, projeye form ekleyebilir, formlara düğmeler ve diğer denetimler ekleyebilir, denetimlerin özelliklerini ayarlayabilirsiniz ve basit olayları kodlayabilirsiniz. Bu görevlerden rahatsızsanız, bu kılavuza başlamadan önce [Visual C#](../ide/quickstart-visual-basic-console.md) ile çalışmaya başlama ve Visual Basic konusunu tamamlamanızı öneririz.
+bu konu, Visual Studio ıde 'nin temel işlevleriyle ilgili bilgi sahibi olduğunuzu ve bir Windows Forms uygulaması oluşturabileceğiniz, projeye form ekleyebileceğiniz, düğmeleri ve diğer denetimleri formlara ekleyebileceğiniz, denetimlerin özelliklerini ayarlayabildiğiniz ve basit olaylar kodlarınızın olduğu varsayılmaktadır. bu görevlerle ilgili deneyimli değilseniz, bu yönergeyi başlamadan önce [Visual C# ve Visual Basic ile çalışmaya](../ide/quickstart-visual-basic-console.md) başlama konusunu tamamlamanızı öneririz.
 
 ## <a name="set-up-the-sample-database"></a>Örnek veritabanını ayarlama
 
-Aşağıdaki adımları kullanarak örnek veritabanını oluşturun:
+Aşağıdaki adımları izleyerek örnek veritabanını oluşturun:
 
-1. Bu Visual Studio' **Sunucu Gezgini** açın.
+1. Visual Studio, **Sunucu Gezgini** penceresini açın.
 
-2. Veri Bağlantıları'ne **sağ tıklayın ve Veritabanı** için Yeni SQL Server **seçin.**
+2. **veri bağlantıları** ' na sağ tıklayın ve **yeni SQL Server veritabanı oluştur**' u seçin.
 
-3. Sunucu **adı metin** kutusuna **(localdb)\mssqllocaldb girin.**
+3. **Sunucu adı** metin kutusuna **(LocalDB) \mssqllocaldb** yazın.
 
-4. Yeni veritabanı **adı metin kutusuna** Sales yazın ve **Tamam'ı** **seçin.**
+4. **Yeni veritabanı adı** metin kutusunda **Sales** yazın ve ardından **Tamam**' ı seçin.
 
-     Boş **Sales** veritabanı oluşturulur ve veri kümesinde Veri Bağlantıları düğümüne Sunucu Gezgini.
+     Boş **Satış** veritabanı oluşturulur ve Sunucu Gezgini veri bağlantıları düğümüne eklenir.
 
-5. Satış verileri bağlantısına **sağ tıklayın** ve Yeni Sorgu'yı **seçin.**
+5. **Satış** verileri bağlantısına sağ tıklayın ve **Yeni sorgu**' yı seçin.
 
-     Sorgu düzenleyicisi penceresi açılır.
+     Sorgu Düzenleyicisi penceresi açılır.
 
-6. Sales [Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/data-tools/samples/sales.sql) kopyalayın.
+6. [Sales Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/raw/master/docs/data-tools/samples/sales.sql) panonuza kopyalayın.
 
-7. T-SQL betiği sorgu düzenleyicisine yapıştırın ve ardından Yürüt **düğmesini** seçin.
+7. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **yürüt** düğmesini seçin.
 
-     Kısa bir süre sonra sorgunun çalışıyor ve veritabanı nesneleri oluşturulur. Veritabanı iki tablo içerir: Customer ve Orders. Bu tablolar başlangıçta veri içermemektedir, ancak oluşturacakları uygulamayı çalıştırarak veri ebilirsiniz. Veritabanı dört basit saklı yordam da içerir.
+     Kısa bir süre sonra sorgu çalışmayı sonlandırır ve veritabanı nesneleri oluşturulur. Veritabanı iki tablo içerir: müşteri ve siparişler. Bu tablolar başlangıçta veri içermez, ancak oluşturacağınız uygulamayı çalıştırdığınızda veri ekleyebilirsiniz. Veritabanı ayrıca dört basit saklı yordam içerir.
 
-## <a name="create-the-forms-and-add-controls"></a>Formları oluşturma ve denetim ekleme
+## <a name="create-the-forms-and-add-controls"></a>Formları oluşturma ve denetimleri ekleme
 
-1. Windows Forms uygulaması için bir proje oluşturun ve **simpleDataApp olarak ad girin.**
+1. Windows Forms bir uygulama için bir proje oluşturun ve bunu **simpledataapp** olarak adlandırın.
 
-    Visual Studio projeyi ve Form1 adlı boş bir Windows dosyası da dahil olmak üzere birkaç **dosya oluşturur.**
+    Visual Studio, **Form1** adlı boş bir Windows formu da dahil olmak üzere projeyi ve birkaç dosyayı oluşturur.
 
-2. Projenize Windows form ekleyen iki form ekleyin ve ardından aşağıdaki adları ekleyin:
+2. projenize üç form eklemek ve ardından aşağıdaki adları vermek için iki Windows form ekleyin:
 
    - **Gezinti**
 
@@ -78,57 +78,57 @@ Aşağıdaki adımları kullanarak örnek veritabanını oluşturun:
 
    - **FillOrCancel**
 
-3. Her form için, aşağıdaki çizimlerde görünen metin kutularını, düğmeleri ve diğer denetimleri ekleyin. Her denetim için, tabloların açık olduğu özellikleri ayarlayın.
+3. Her form için aşağıdaki çizimlerde görüntülenen metin kutularını, düğmeleri ve diğer denetimleri ekleyin. Her denetim için, tabloların açıkladığı özellikleri ayarlayın.
 
    > [!NOTE]
-   > Grup kutusu ve etiket denetimleri netlik sağlar ancak kodda kullanılmaz.
+   > Grup kutusu ve etiket denetimleri ekler, ancak kodda kullanılmaz.
 
    **Gezinti formu**
 
    ![Gezinti iletişim kutusu](../data-tools/media/simpleappnav.png)
 
-|Gezinti formu denetimleri|Özellikler|
+|Gezinti formu için denetimler|Özellikler|
 | - |----------------|
-|Düğme|Ad = btnGoToAdd|
-|Düğme|Ad = btnGoToFillOrCancel|
+|Düğme|Ad = Btnsayfayadd|
+|Düğme|Ad = Btnsayfayfillorcancel|
 |Düğme|Ad = btnExit|
 
 **NewCustomer formu**
 
-![Yeni müşteri ekleme ve sipariş düzenleme](../data-tools/media/simpleappnewcust.png)
+![Yeni müşteri ekleme ve sipariş yerleştirme](../data-tools/media/simpleappnewcust.png)
 
 |NewCustomer formu için denetimler|Özellikler|
 | - |----------------|
 |TextBox|Ad = txtCustomerName|
-|TextBox|Ad = txtCustomerID<br /><br /> Readonly = True|
+|TextBox|Ad = Txtcustomerıd<br /><br /> ReadOnly = true|
 |Düğme|Ad = btnCreateAccount|
-|Numericupdown|DecimalPlaces = 0<br /><br /> En fazla = 5000<br /><br /> Ad = numOrderAmount|
-|Datetimepicker|Format = Short<br /><br /> Ad = dtpOrderDate|
+|NumericUpdown|DecimalPlaces = 0<br /><br /> Maksimum = 5000<br /><br /> Ad = numOrderAmount|
+|'A|Format = Short<br /><br /> Ad = dtpOrderDate|
 |Düğme|Ad = btnPlaceOrder|
 |Düğme|Ad = btnAddAnotherAccount|
-|Düğme|Ad = btnAddFinish|
+|Düğme|Ad = btnaddbitiri|
 
 **FillOrCancel formu**
 
-![siparişleri doldurma veya iptal etme](../data-tools/media/simpleappcancelfill.png)
+![siparişleri doldur veya iptal etme](../data-tools/media/simpleappcancelfill.png)
 
 |FillOrCancel formu için denetimler|Özellikler|
 | - |----------------|
 |TextBox|Ad = txtOrderID|
-|Düğme|Ad = btnFindByOrderID|
-|Datetimepicker|Format = Short<br /><br /> Ad = dtpFillDate|
-|Datagridview|Ad = dgvCustomerOrders<br /><br /> Readonly = True<br /><br /> RowHeadersVisible = False|
+|Düğme|Ad = Btnfindbyorderıd|
+|'A|Format = Short<br /><br /> Ad = dtpFillDate|
+|DataGridView|Ad = dgvCustomerOrders<br /><br /> ReadOnly = true<br /><br /> RowHeadersVisible = false|
 |Düğme|Ad = btnCancelOrder|
 |Düğme|Ad = btnFillOrder|
-|Düğme|Ad = btnFinishUpdates|
+|Düğme|Ad = Btnsonlandırsupdates|
 
-## <a name="store-the-connection-string"></a>Bağlantı dizesini depolama
-Uygulamanız veritabanına bir bağlantı açmaya çalıştığında, uygulamanın bağlantı dizesine erişimi olmalıdır. Dizeyi her forma el ile girmekten kaçınmak için dizeyi *projenizinApp.config* dosyasında depolar ve uygulamanıza herhangi bir formda yöntem çağrıldında dizeyi döndüren bir yöntem oluşturun.
+## <a name="store-the-connection-string"></a>Bağlantı dizesini depolayın
+Uygulamanız veritabanına bir bağlantı açmaya çalıştığında, uygulamanızın bağlantı dizesine erişimi olması gerekir. Dizeyi her bir forma el ile girmekten kaçınmak için, dizeyi projenizdeki *App.config* dosyasına depolayın ve yöntemi uygulamanızdaki herhangi bir formdan çağrıldığında dizeyi döndüren bir yöntem oluşturun.
 
-Bağlantı dizesini, bağlantı dizesinde Satış  verileri bağlantısına sağ tıklar ve **özellikler'Sunucu Gezgini** **bulabilirsiniz.** **ConnectionString özelliğini bulun,** ardından **Ctrl** + **A**, **Ctrl** C tuşlarını kullanarak dizeyi seçin +  ve panoya kopyalayın.
+Bağlantı dizesini **Sunucu Gezgini** ' de **Satış** verileri bağlantısına sağ tıklayıp **Özellikler**' i seçerek bulabilirsiniz. **ConnectionString özelliğini bulun,** ardından **Ctrl** + **A**, **Ctrl** C tuşlarını kullanarak dizeyi seçin +  ve panoya kopyalayın.
 
-1. C# kullanıyorsanız, **Çözüm Gezgini** proje altındaki Özellikler  düğümünü genişletin ve **Ayarlar.settings dosyasını** açın.
-    Visual Basic kullanıyorsanız, Çözüm Gezgini Tüm Dosyaları **Göster'e** **tıklayın,** My **Project** düğümünü genişletin ve **Ayarlar.settings dosyasını** açın.
+1. C# kullanıyorsanız, **Çözüm Gezgini** altında Özellikler düğümünü  genişletin ve **Ayarlar.settings dosyasını** açın.
+    Visual Basic kullanıyorsanız, **Çözüm Gezgini** Tüm Dosyaları Göster'e **tıklayın,** **My Project** düğümünü genişletin ve **Ayarlar.settings dosyasını** açın.
 
 2. Ad **sütununa** `connString` girin.
 
@@ -147,13 +147,13 @@ Bu bölümde, her formun ne yaptığına ilişkin kısa genel bakışlar yer alm
 
 ### <a name="navigation-form"></a>Gezinti formu
 
-Uygulamayı çalıştırarak Gezinti formu açılır. Hesap **ekle düğmesi** NewCustomer formunu açar. Siparişleri **doldur veya iptal et** düğmesi FillOrCancel formunu açar. Çıkış  düğmesi uygulamayı kapatır.
+Uygulamayı çalıştırarak Gezinti formu açılır. Hesap **ekle düğmesi** NewCustomer formunu açar. Siparişleri **doldur veya iptal et** düğmesi FillOrCancel formunu açar. **Çıkış düğmesi** uygulamayı kapatır.
 
 #### <a name="make-the-navigation-form-the-startup-form"></a>Gezinti formunu başlangıç formu yapma
 
-C# kullanıyorsanız, **Çözüm Gezgini**'de **Program.cs'yi** açın ve satırı `Application.Run` şu şekilde değiştirirsiniz: `Application.Run(new Navigation());`
+C# kullanıyorsanız, **Çözüm Gezgini** içinde **Program.cs'yi** açın ve satırı `Application.Run` şu şekilde değiştirebilirsiniz: `Application.Run(new Navigation());`
 
-Visual Basic kullanıyorsanız, **Çözüm Gezgini** penceresini açın, Uygulama sekmesini seçin  ve ardından  Başlangıç formu listesinde **SimpleDataApp.Navigation** **öğesini** seçin.
+Visual Basic kullanıyorsanız, **Çözüm Gezgini** penceresini açın, Uygulama sekmesini  seçin ve ardından  Başlangıç formu listesinde **SimpleDataApp.Navigation** **öğesini** seçin.
 
 #### <a name="create-auto-generated-event-handlers"></a>Otomatik olarak oluşturulan olay işleyicileri oluşturma
 
@@ -168,7 +168,7 @@ Gezinti formunun kod sayfasında, aşağıdaki kodda gösterildiği gibi üç d�
 
 ### <a name="newcustomer-form"></a>NewCustomer formu
 
-Bir müşteri adı girerek Hesap  Oluştur düğmesini seçerek NewCustomer formu bir müşteri hesabı oluşturur SQL Server yeni müşteri kimliği olarak bir IDENTITY değeri döndürür. Ardından, bir tutar ve sipariş tarihi belirterek ve Siparişi Sırala düğmesini seçerek yeni hesap için **bir sipariş veebilirsiniz.**
+Bir müşteri adı girerek Hesap  Oluştur düğmesini seçerek NewCustomer formu bir müşteri hesabı oluşturur ve SQL Server kimliği olarak bir IDENTITY değeri döndürür. Ardından, bir tutar ve sipariş tarihi belirterek ve Siparişi Sırala düğmesini seçerek yeni hesap için **bir sipariş veebilirsiniz.**
 
 #### <a name="create-auto-generated-event-handlers"></a>Otomatik olarak oluşturulan olay işleyicileri oluşturma
 
@@ -210,7 +210,7 @@ FillOrCancel formundaki dört düğme için düğmelere çift tıklayarak boş T
 
 FillOrCancel form mantığını tamamlamak için aşağıdaki adımları izleyin.
 
-1. Üyelerinin adlarını tam olarak nitelendirmanız gerekmay için aşağıdaki iki ad alanını kapsamına alın.
+1. Üyelerinin adlarını tam olarak nitelendirmamanız için aşağıdaki iki ad alanını kapsamına alın.
 
      ```csharp
      using System.Data.SqlClient;

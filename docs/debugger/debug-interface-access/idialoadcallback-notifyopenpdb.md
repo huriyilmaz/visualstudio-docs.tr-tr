@@ -1,6 +1,6 @@
 ---
-description: Bir aday. pdb dosyası açıldığında çağırılır.
-title: 'Ialoadcallback:: NotifyOpenPDB | Microsoft Docs'
+description: Bir aday .pdb dosyası açıldığında çağrılır.
+title: IDiaLoadCallback::NotifyOpenPDB | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 0a3642fa6a3082c03c8b582895d7f423fdc10573
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074815"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629619"
 ---
 # <a name="idialoadcallbacknotifyopenpdb"></a>IDiaLoadCallback::NotifyOpenPDB
-Bir aday. pdb dosyası açıldığında çağırılır.
+Bir aday .pdb dosyası açıldığında çağrılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,14 +36,14 @@ HRESULT NotifyOpenPDB (
 #### <a name="parameters"></a>Parametreler
  `pdbPath`
 
-'ndaki . Pdb dosyasının tam yolu.
+[in] .pdb dosyasının tam yolu.
 
  `resultCode`
 
-'ndaki `S_OK`Bu dosyaya uygulanan yükün başarısını () veya başarısızlığını belirten kod.
+[in] Bu dosyaya uygulandığı gibi yüklemenin başarısını ( `S_OK` ) veya başarısız olduğunu gösteren kod.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Dönüş kodu genellikle yok sayılır.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Dönüş kodu genellikle yoksayılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

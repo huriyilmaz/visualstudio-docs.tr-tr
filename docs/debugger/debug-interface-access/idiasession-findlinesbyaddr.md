@@ -1,6 +1,6 @@
 ---
-description: Belirtilen bir adresi içeren belirtilen bir compiland içindeki satırları alır.
-title: 'IDiaSession:: findLinesByAddr | Microsoft Docs'
+description: Belirtilen bir adres içeren belirtilen bir compiland içinde satırları alınır.
+title: IDiaSession::findLinesByAddr | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: b02056d29e0caeb77bc045a2c6ca391808410f6d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081344"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629168"
 ---
 # <a name="idiasessionfindlinesbyaddr"></a>IDiaSession::findLinesByAddr
-Belirtilen bir adresi içeren belirtilen bir compiland içindeki satırları alır.
+Belirtilen bir adres içeren belirtilen bir compiland içinde satırları alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,25 +38,25 @@ HRESULT findLinesByAddr (
 #### <a name="parameters"></a>Parametreler
 `seg`
 
-'ndaki Belirli bir adresin bölüm bileşenini belirtir.
+[in] Belirli bir adresin bölüm bileşenini belirtir.
 
 `offset`
 
-'ndaki Belirli bir adresin konum bileşenini belirtir.
+[in] Belirli bir adresin kaydırma bileşenini belirtir.
 
 `length`
 
-'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığının bayt sayısını belirtir.
+[in] Bu sorguyla birlikte ele alınan adres aralığının bayt sayısını belirtir.
 
 `ppResult`
 
-dışı Belirtilen adres aralığını kapsayan tüm satır numaralarının listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) nesnesi döndürür.
+[out] Belirtilen adres aralığını içeren tüm satır numaralarının listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Bu örnek, işlevin adresini ve uzunluğunu kullanarak bir işlevde bulunan tüm satır numaralarını elde eden bir işlevi gösterir.
+Bu örnek, işlevin adresini ve uzunluğunu kullanarak bir işlevde yer alan tüm satır numaralarını alan bir işlevi gösterir.
 
 ```C++
 IDiaEnumLineNumbers* GetLineNumbersByAddr(IDiaSymbol *pFunc,

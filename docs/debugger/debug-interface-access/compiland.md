@@ -17,11 +17,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 8afa7026010b191f678698936d05345dd78b903d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066767"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630722"
 ---
 # <a name="compiland"></a>Compiland
 `SymTagCompiland`.exe dosyasına bağlı her bir compiland için bir sembol vardır. Compiland bilgileri bir etiketi olan semboller arasına bölünür `SymTagCompiland` , bu da ek compiland sembolleri yüklenmeden alınabilir ve bir etiketi olan semboller `SymTagCompilandDetails` , ek semboller yüklenmesi gerekebilir.

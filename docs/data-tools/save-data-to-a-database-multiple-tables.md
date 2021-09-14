@@ -1,6 +1,6 @@
 ---
 title: Bir veritabanına (birden çok tablo) veri kaydetme
-description: Bu kılavuzda, veri kümesinde DataSet araçlarını kullanarak birden çok tablodan bir veritabanına Visual Studio.
+description: Bu kılavuzda, veri kümesinde DataSet araçlarını kullanarak birden çok tablodan veritabanına Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,11 +20,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 772a4001ad999ce4c585eeac5bf5ea9b3ba97ab1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122067029"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631190"
 ---
 # <a name="save-data-to-a-database-multiple-tables"></a>Bir veritabanına (birden çok tablo) veri kaydetme
 
@@ -48,13 +48,13 @@ Bu kılavuzda gösterilen görevler şunlardır:
 
 Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanılır.
 
-1. YerelDB'niz yoksa, SQL Server Express indirme sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Bu **Visual Studio Yükleyicisi,** yerel SQL Server Express veri depolama ve işleme iş  yükünün bir parçası olarak veya tek bir bileşen olarak yükleyebilirsiniz.
+1. Yerel VERITABANınız yoksa, SQL Server Express sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Bu **Visual Studio Yükleyicisi,** yerel SQL Server Express veri depolama ve işleme iş yükünün bir parçası olarak veya tek bir bileşen olarak yükleyebilirsiniz. 
 
 2. Aşağıdaki adımları kullanarak Northwind örnek veritabanını yükleyin:
 
-    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (SQL Server Nesne Gezgini, veri depolama ve işleme **iş yükünün bir parçası olarak** Visual Studio Yükleyicisi.) SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
+    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (SQL Server Nesne Gezgini, veri depolama ve işleme iş **yükünün bir parçası olarak** Visual Studio Yükleyicisi.) SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
 
-       Bir sorgu düzenleyicisi penceresi açılır.
+       Sorgu düzenleyicisi penceresi açılır.
 
     2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
 
@@ -64,7 +64,7 @@ Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanıl�
 
 ## <a name="create-the-windows-forms-application"></a>Windows Forms uygulamasını oluşturma
 
-C# **veya Windows formlar için** yeni bir Windows Forms Uygulaması Visual Basic. Projeye **UpdateMultipleTablesWalkthrough adını girin.**
+C# **veya Windows için yeni** bir FormLar Uygulaması projesi Visual Basic. Projeye **UpdateMultipleTablesWalkthrough adını girin.**
 
 ## <a name="create-the-data-source"></a>Veri kaynağını oluşturma
 
@@ -74,7 +74,7 @@ Bu adım, Veri Kaynağı Yapılandırma Sihirbazı'nı kullanarak Northwind **ve
 
    Veri **Kaynakları** penceresi açılır.
 
-2. Veri Kaynağı **Yapılandırma Sihirbazı'nı** başlatmak **için Veri Kaynakları penceresinde** Yeni Veri Kaynağı **Ekle'yi seçin.**
+2. Veri Kaynakları **penceresinde Yeni** Veri Kaynağı **Ekle'yi seçerek** Veri Kaynağı **Yapılandırma Sihirbazı'nı başlatın.**
 
 3. Veri Kaynağı **Türü Seçin ekranında Veritabanı'ı** **ve ardından** Sonraki'yi **seçin.**
 
@@ -86,7 +86,7 @@ Bu adım, Veri Kaynağı Yapılandırma Sihirbazı'nı kullanarak Northwind **ve
 
     - Bağlantı **Ekle/Değiştir** iletişim **kutusunu açmak için Yeni Bağlantı'ya** tıklayın.
 
-5. Veritabanınız parola gerektiriyorsa hassas verileri dahil etmek için seçeneğini belirleyin ve ardından Sonraki seçeneğini **belirleyin.**
+5. Veritabanınız parola gerektiriyorsa, hassas verileri dahil etmek için seçeneğini belirtin ve ardından Sonraki seçeneğini **belirleyin.**
 
 6. Bağlantı **dizesini Uygulama Yapılandırma dosyasına kaydet'de, Sonraki'yi** **seçin.**
 
@@ -112,7 +112,7 @@ Veri Kaynakları penceresindeki öğeleri form üzerine sürükleyerek **veriye 
 
 1. Ana Müşteriler **düğümünü** Veri Kaynakları **penceresinden** **Form1'e sürükleyin.**
 
-     Formda, kayıtlarda gezinmek için bir araç şeridi ( ) ile birlikte açıklayıcı <xref:System.Windows.Forms.BindingNavigator> etiketlere sahip veriye bağlı denetimler görünür. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter` , ve bileşenleri bileşen <xref:System.Windows.Forms.BindingSource> <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
+     Formda, kayıtlarda gezinmek için bir araç şeridi ( ) ile birlikte açıklayıcı <xref:System.Windows.Forms.BindingNavigator> etiketlere sahip veriye bağlı denetimler görüntülenir. [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter` , ve bileşenleri bileşen <xref:System.Windows.Forms.BindingSource> <xref:System.Windows.Forms.BindingNavigator> tepsisinde görüntülenir.
 
 2. İlgili Siparişler **düğümünü** Veri Kaynakları **penceresinden** **Form1'e sürükleyin.**
 
@@ -132,7 +132,7 @@ Customers ve `Update` Orders TableAdapters yöntemlerini  çağırarak **veritab
 
 1. üzerinde **Kaydet** düğmesini <xref:System.Windows.Forms.BindingNavigator> seçin. Bu, Kod Düzenleyicisi'ni olay `bindingNavigatorSaveItem_Click` işleyicisinde açar.
 
-2. İlgili TableAdapter'ların yöntemlerini çağıracak olay `Update` işleyicisi kodunu değiştirin. Aşağıdaki kod önce her biri için güncelleştirilmiş bilgileri (, ve ) tutmak için üç <xref:System.Data.DataRowState> <xref:System.Data.DataRowState.Deleted> geçici veri tablosu <xref:System.Data.DataRowState.Added> <xref:System.Data.DataRowState.Modified> oluşturur. Güncelleştirmeler doğru sırada çalıştır. Kodun aşağıdaki gibi olması gerekir:
+2. İlgili TableAdapter'ların yöntemlerini çağıracak olay `Update` işleyicisi kodunu değiştirin. Aşağıdaki kod önce her biri ( , ve ) için güncelleştirilmiş bilgileri tutmak için üç <xref:System.Data.DataRowState> <xref:System.Data.DataRowState.Deleted> geçici veri tablosu <xref:System.Data.DataRowState.Added> <xref:System.Data.DataRowState.Modified> oluşturur. Güncelleştirmeler doğru sırada çalıştır. Kodun aşağıdaki gibi olması gerekir:
 
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataSaving/VB/Form4.vb" id="Snippet10":::
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataSaving/CS/Form4.cs" id="Snippet10":::

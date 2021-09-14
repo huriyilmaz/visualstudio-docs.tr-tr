@@ -1,6 +1,6 @@
 ---
-description: Numaralama dizisinde belirtilen sayıda bölüm katkısını alan.
-title: IDiaEnumSectionContribs::Next | Microsoft Docs
+description: Sabit Listesi dizisinde belirtilen sayıda bölüm katkılarını alır.
+title: 'IDiaEnumSectionContribs:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: d6377b8ee02a48878228e89ad277e4bc78b969c0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113707"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630177"
 ---
 # <a name="idiaenumsectioncontribsnext"></a>IDiaEnumSectionContribs::Next
-Numaralama dizisinde belirtilen sayıda bölüm katkısını alan.
+Sabit Listesi dizisinde belirtilen sayıda bölüm katkılarını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT Next(
 ```
 
 #### <a name="parameters"></a>Parametreler
- Celt
+ celt
 
-[in] Numaralayıcıda alınan bölüm katkılarının sayısı.
+'ndaki Alınacak numaralandırıcıdaki bölüm katkılarının sayısı.
 
- Rgelt
+ rgelt
 
-[out] İstenen bölüm katkılarını temsil eden [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) nesneleriyle doldurulması gereken bir dizi.
+dışı İstenen bölüm katkılarını temsil eden [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) nesneleriyle doldurulacak bir dizi.
 
- pceltFetched
+ Pceltfettiz
 
-[out] Numaralayıcıda alınan bölüm katkılarının sayısını döndürür.
+dışı Alınan Numaralandırıcı içindeki bölüm katkılarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` bölüm katkısı yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Başka bölüm katkıları yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

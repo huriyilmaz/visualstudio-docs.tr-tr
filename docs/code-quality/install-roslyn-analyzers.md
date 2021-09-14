@@ -1,7 +1,7 @@
 ---
 title: Üçüncü taraf çözümleyicileri yükleme
 ms.date: 08/27/2020
-description: Visual Studio'da üçüncü taraf çözümleyicileri yükleme hakkında bilgi Visual Studio. Çözümleyici paketlerini .vsix dosyalarına yükleme ve NuGet bakın.
+description: Visual Studio'da üçüncü taraf çözümleyicileri yükleme hakkında Visual Studio. Çözümleyici paketlerini .vsix dosyalarına yükleme ve NuGet bakın.
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
 ms.openlocfilehash: a31fbbc8a0e655418425416ffdcae3aa16810788
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122075326"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631905"
 ---
 # <a name="install-third-party-analyzers"></a>Üçüncü taraf çözümleyici yükleme
 
-Visual Studio çekirdek bir dizi .NET Compiler Platform (*Roslyn*) çözümleyicisi içerir. Bu çözümleyiciler her zaman açık. Ek çözümleyicileri, NuGet olarak veya *VSIX* dosyalarında Visual Studio olarak yükleyebilirsiniz.
+Visual Studio çekirdek küme (*Roslyn*) .NET Compiler Platform çözümleyicileri içerir. Bu çözümleyiciler her zaman açık. Ek çözümleyicileri, NuGet veya *VSIX* dosyalarında Visual Studio olarak yükleyebilirsiniz.
 
 ## <a name="to-install-nuget-analyzer-packages"></a>Çözümleyici NuGet yüklemek için
 
@@ -36,7 +36,7 @@ Visual Studio çekirdek bir dizi .NET Compiler Platform (*Roslyn*) çözümleyic
    > [!NOTE]
    > Her www.nuget.org çözümleyici paketinin uygulama sayfasında, konsola yapıştırmak Paket Yöneticisi **gösterilir.** Hatta metni panoya kopyalamak için kullanışlı bir düğme bile vardır.
 
-   Çözümleyici derlemeleri yüklenir ve BaşvuruLar **Çözümleyicileri Çözüm Gezgini** **içinde**  >  **görünür.**
+   Çözümleyici derlemeleri yüklenir ve Başvuru **Çözümleyicileri altında Çözüm Gezgini** **içinde**  >  **görünür.**
 
 ## <a name="to-install-vsix-analyzers"></a>VSIX çözümleyicilerini yüklemek için
 
@@ -47,7 +47,7 @@ Visual Studio çekirdek bir dizi .NET Compiler Platform (*Roslyn*) çözümleyic
    Uzantılar **ve Güncelleştirmeler** iletişim kutusu açılır.
 
    > [!NOTE]
-   > Alternatif olarak çözümleyici uzantısını doğrudan Market'te bulup [Visual Studio indirebilirsiniz.](https://marketplace.visualstudio.com)
+   > Alternatif olarak çözümleyici uzantısını doğrudan Market'te Visual Studio [indirebilirsiniz.](https://marketplace.visualstudio.com)
 
 ::: moniker-end
 
@@ -58,7 +58,7 @@ Visual Studio çekirdek bir dizi .NET Compiler Platform (*Roslyn*) çözümleyic
    Uzantıları **Yönet iletişim** kutusu açılır.
 
    > [!NOTE]
-   > Alternatif olarak çözümleyici uzantısını doğrudan Market'te bulup [Visual Studio indirebilirsiniz.](https://marketplace.visualstudio.com)
+   > Alternatif olarak çözümleyici uzantısını doğrudan Market'te Visual Studio [indirebilirsiniz.](https://marketplace.visualstudio.com)
 
 ::: moniker-end
 

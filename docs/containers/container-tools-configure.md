@@ -7,11 +7,11 @@ ms.topic: how-to
 ms.date: 03/20/2019
 ms.technology: vs-container-tools
 ms.openlocfilehash: 91ed17af9900c068af7e81ce3902e68063814d82
-ms.sourcegitcommit: 8f8804b885c3a68f20bf0e9fe3729f2764145815
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "123096925"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631760"
 ---
 # <a name="how-to-configure-visual-studio-container-tools"></a>Visual Studio kapsayıcı araçlarını yapılandırma
 

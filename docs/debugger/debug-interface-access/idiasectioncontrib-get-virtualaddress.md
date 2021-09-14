@@ -1,6 +1,6 @@
 ---
-description: Katkının sanal adresini (VA) alın.
-title: IDiaSectionContrib::get_virtualAddress | Microsoft Docs
+description: Katkı sanal adresini (VA) alır.
+title: 'IDiaSectionContrib:: get_virtualAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 0758563bafa74b8a9b43ae6f299566acc0b8fcb5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129034"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629354"
 ---
 # <a name="idiasectioncontribget_virtualaddress"></a>IDiaSectionContrib::get_virtualAddress
-Katkının sanal adresini (VA) alın.
+Katkı sanal adresini (VA) alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_virtualAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Katkının VA'sını döndürür.
+dışı Katkıdan VA 'yı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

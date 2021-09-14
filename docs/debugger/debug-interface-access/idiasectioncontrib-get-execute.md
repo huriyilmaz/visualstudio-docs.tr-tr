@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 711e1a3618419f554955e458fa1f9603dea8c7de
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134284"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629427"
 ---
 # <a name="idiasectioncontribget_execute"></a>IDiaSectionContrib::get_execute
 Bölümün kod olarak yürütülebilir olup olmadığını gösteren bir bayrak alır.

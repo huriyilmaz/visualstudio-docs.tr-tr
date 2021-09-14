@@ -1,6 +1,6 @@
 ---
-title: Microsoft Spy++ | Microsoft Docs
-description: Spy++ hata ayıklama yardımcı programı hakkında telif Visual Studio, sürüm, sahiplik ve diğer bilgileri görüntülemek için Microsoft Spy++ Hakkında iletişim kutusunu görüntüleniyor.
+title: Microsoft Spy + + hakkında | Microsoft Docs
+description: telif hakkı, sürüm, sahiplik ve Spy + + hata ayıklama yardımcı programıyla ilgili diğer bilgileri görüntülemek için Visual Studio 'teki Microsoft Spy + + hakkında iletişim kutusunu görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: e46f2d21b35a08851d35bf9d3fb4d8f452e58235
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122059118"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630993"
 ---
 # <a name="about-microsoft-spy"></a>Microsoft Spy++ Hakkında
-Spy++ ile ilgili telif hakkı, sürüm, sahiplik ve diğer bilgileri görüntülemek için bu iletişim kutusunu kullanın.
+Bu iletişim kutusunu, Spy + + hakkında telif hakkı, sürüm, sahiplik ve diğer bilgileri göstermek için kullanın.

@@ -1,6 +1,6 @@
 ---
-description: Çerçeve için kod adresinin konum kısmını alır.
-title: 'IDiaFrameData:: get_addressOffset | Microsoft Docs'
+description: Çerçeve için kod adresinin uzaklık bölümünü alın.
+title: IDiaFrameData::get_addressOffset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: fca93e47227cd6e1578a9cbb88a13237835650fb
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154586"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629901"
 ---
 # <a name="idiaframedataget_addressoffset"></a>IDiaFrameData::get_addressOffset
-Çerçeve için kod adresinin konum kısmını alır.
+Çerçeve için kod adresinin uzaklık bölümünü alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_addressOffset (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Çerçeveye ait kod adresinin konum parçasını döndürür.
+[out] Çerçeve için kod adresinin uzaklık bölümünü döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

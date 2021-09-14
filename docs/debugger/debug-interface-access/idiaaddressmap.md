@@ -1,5 +1,5 @@
 ---
-description: DIA SDK hata ayıklama nesneleri için sanal ve göreli sanal adresleri nasıl hesaplatığına ilişkin denetim sağlar.
+description: Hata ayıklama nesneleri için sanal DIA SDK ve göreli sanal adreslerin nasıl hesap sağladığı üzerinde denetim sağlar.
 title: IDiaAddressMap | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: f6e8d8a803f471d6e856da987ea70a1f121bfae5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036623"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630518"
 ---
 # <a name="idiaaddressmap"></a>IDiaAddressMap
-DIA SDK hata ayıklama nesneleri için sanal ve göreli sanal adresleri nasıl hesaplatığına ilişkin denetim sağlar.
+Hata ayıklama nesneleri için sanal DIA SDK ve göreli sanal adreslerin nasıl hesap sağladığı üzerinde denetim sağlar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,30 +30,30 @@ DIA SDK hata ayıklama nesneleri için sanal ve göreli sanal adresleri nasıl h
 IDiaAddressMap : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaAddressMap` .
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
+ Aşağıdaki tabloda yöntemlerini `IDiaAddressMap` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaAddressMap::get_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-addressmapenabled.md)|Belirli bir oturum için bir adres eşlemesinin yapılıp yapılmayacağını belirtir.|
-|[IDiaAddressMap::put_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)|Adres eşlemesinin sembol adreslerini çevirmek için kullanılıp kullanılmayacağını belirtir.|
-|[IDiaAddressMap::get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)|Göreli sanal adreslerin hesaplanması ve kullanılması etkinleştirilip etkinleştirilmeyeceğini belirtir.|
-|[IDiaAddressMap::put_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)|İstemcinin göreli sanal adreslerin hesaplamasını etkinleştirmesine veya devre dışı bırakmasına izin verir.|
-|[IDiaAddressMap::get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)|Geçerli resim hizalamasını alır.|
-|[IDiaAddressMap::put_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md)|Resim hizalamasını ayarlar.|
+|[IDiaAddressMap::get_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-addressmapenabled.md)|Belirli bir oturum için adres eşlemesi oluşturulıp kurulmamış olduğunu gösterir.|
+|[IDiaAddressMap::put_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md)|Sembol adreslerini çevirmek için adres eşlemesi kullanıp kullanılmay gerektiğini belirtir.|
+|[IDiaAddressMap::get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md)|Göreli sanal adreslerin hesaplama ve kullanımının etkin olup olmadığını gösterir.|
+|[IDiaAddressMap::put_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-relativevirtualaddressenabled.md)|İstemcinin göreli sanal adres hesaplamasını etkinleştirmesini veya devre dışı bırakmasını sağlar.|
+|[IDiaAddressMap::get_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-get-imagealign.md)|Geçerli görüntü hizalamasını alın.|
+|[IDiaAddressMap::put_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md)|Görüntü hizalamasını ayarlar.|
 |[IDiaAddressMap::set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md)|Göreli sanal adreslerin çevirisini etkinleştirmek için görüntü üst bilgilerini ayarlar.|
 |[IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)|Görüntü düzeni çevirilerini desteklemek için bir adres haritası sağlar.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim tarafından sunulan denetim, sağladığınız iki veri kümesinde kapsüllenir: görüntü üstbilgileri ve adres eşlemeleri. Çoğu istemci, bir görüntüyle ilgili doğru hata ayıklama bilgilerini bulmak için [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodunu kullanır ve yöntem genellikle gerekli tüm üst bilgileri ve haritalar verilerini bulabilir. Ancak bazı istemciler özelleştirilmiş işleme ve veri aramayı uygular. Bu istemciler, `IDiaAddressMap` arama sonuçlarıyla DIA SDK sağlamak için arabirimin yöntemlerini kullanır.
+ Bu arabirim tarafından sağlanan denetim, size sağlanan iki veri kümesinde kapsüllanır: görüntü üst bilgileri ve adres eşlemeleri. Çoğu istemci [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) yöntemini kullanarak bir görüntü için uygun hata ayıklama bilgilerini bulabilir ve yöntemi genellikle tüm gerekli üst bilgileri bulabilir ve verileri eşler. Ancak bazı istemciler özel işleme ve veri arama işlemleri gerçekleştirmektedir. Bu istemciler, arama sonuçlarıyla `IDiaAddressMap` ilgili bilgileri sağlamak DIA SDK yöntemlerini kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim, DIA oturum nesnesinden kullanılabilir. İstemci, `QueryInterface` arabirimi almak için genellikle [IDiaSession](../../debugger/debug-interface-access/idiasession.md)olan DIA oturum nesne arabirimindeki yöntemi çağırır `IDiaAddressMap` .
+ Bu arabirim DIA oturum nesnesinden kullanılabilir. İstemci, arabirimi `QueryInterface` almak için DIA oturum nesnesi arabiriminde yöntemini (genellikle [IDiaSession)](../../debugger/debug-interface-access/idiasession.md) `IDiaAddressMap` arar.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: dia2. h
+ Üst bilgi: Dia2.h
 
- Kitaplık: diaguid. lib
+ Kitaplık: diaguids.lib
 
  DLL: msdia80.dll
 

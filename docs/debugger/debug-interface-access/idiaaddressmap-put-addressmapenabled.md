@@ -1,5 +1,5 @@
 ---
-description: Adres eşlemesinin sembol adreslerini çevirmek için kullanılıp kullanılmayacağını belirtir.
+description: Sembol adreslerini çevirmek için adres eşlemesi kullanıp kullanılmay gerektiğini belirtir.
 title: IDiaAddressMap::p ut_addressMapEnabled | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a8cabb51b13262553d70e45ffd3e26219cb4563e597b519c79ef26a734a68cd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: f4c3a08361942df789c7e6bbd055464d69d056fd
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345351"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630542"
 ---
 # <a name="idiaaddressmapput_addressmapenabled"></a>IDiaAddressMap::put_addressMapEnabled
-Adres eşlemesinin sembol adreslerini çevirmek için kullanılıp kullanılmayacağını belirtir.
+Sembol adreslerini çevirmek için adres eşlemesi kullanıp kullanılmay gerektiğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,17 +35,17 @@ HRESULT put_addressMapEnabled (
 #### <a name="parameters"></a>Parametreler
  NewVal
 
-'ndaki `TRUE` Simgelerin çevirisini etkinleştirmek veya devre dışı bırakmak için olarak ayarlayın `FALSE` .
+[in] Sembollerin `TRUE` çevirisini etkinleştirmek veya devre dışı bırakmak için `FALSE` olarak ayarlayın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Yürütülebilir son işlemciler bazen yürütülebilir dosyayı güncelleştirebilir. DIA, sembollerin yeni düzene çevirisini desteklemek için bir mekanizma içerir.
+ Yürütülebilir son işlemciler bazen yürütülebilir dosyayı güncelleştirebilir. DIA, sembollerin yeni düzene çevirisini destekleyen bir mekanizma içerir.
 
- Bir PDB dosyası yüklendiğinde, dosyada depolanan adres eşlemesi etkinleştirilir. Ancak, bir istemci uygulamanın [IDiaAddressMap:: set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) yöntemini çağırarak kendi adres haritasını sağlaması gerekebilecek durumlar vardır. `set_addressMap`Yöntem başarılı olursa, istemci uygulamanın `put_addressMapEnabled` `NewVal` `TRUE` Bu adres eşlemesinin kullanımını etkinleştirmek için parametresiyle yöntemini çağırması gerekir.
+ Bir PDB dosyası yüklendiğinde, dosyada depolanan adres eşlemesi etkinleştirilir. Ancak bazen bir istemci uygulamanın [IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) yöntemini çağırarak kendi adres haritasını temin set_addressMap olabilir. Yöntem başarılı olursa, istemci uygulamanın bu adres eşlemesi kullanımını etkinleştirmek için `set_addressMap` `put_addressMapEnabled` `NewVal` `TRUE` parametresiyle yöntemini çağırsı gerekir.
 
- Etkin olan adres eşlemesinin geçerli durumu [IDiaAddressMap:: get_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-addressmapenabled.md) yöntemi çağrısıyla alınabilir.
+ Etkinleştirilen adres eşlemesi geçerli [durumu, IDiaAddressMap::get_addressMapEnabled yöntemi çağrısıyla](../../debugger/debug-interface-access/idiaaddressmap-get-addressmapenabled.md) alınabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)

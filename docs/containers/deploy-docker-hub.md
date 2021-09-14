@@ -1,6 +1,6 @@
 ---
-title: Docker Hub |'ASP.NET Core docker kapsayıcısı dağıtma Microsoft Docs
-description: Visual Studio Container Tools'ASP.NET Core web uygulamasını Docker Hub
+title: ASP.NET Core'a bir Docker kapsayıcısı Docker Hub | Microsoft Docs
+description: Visual Studio Container Tools'ASP.NET Core web uygulamasını Docker Hub kullanmayı Docker Hub
 author: ghogen
 manager: jmartens
 ms.technology: vs-container-tools
@@ -10,11 +10,11 @@ ms.date: 07/23/2019
 ms.author: ghogen
 monikerRange: '>=vs-2019'
 ms.openlocfilehash: 2fe4c9a1ac39ed090eae657c02ea8417002a2473
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122059339"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631736"
 ---
 # <a name="deploy-to-docker-hub"></a>Docker Hub’a dağıtma
 
@@ -34,7 +34,7 @@ Yeni bir depoya sahip Docker Hub, [Docker Hub.](https://hub.docker.com/)
 
 1. **Docker Container Registry'yi** seçin ve sonra **da** Docker Hub.
 
-   ![Yayımla iletişim kutusunun ekran görüntüsü - Docker Hub](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
+   ![Yayımla iletişim kutusunun ekran görüntüsü - Seç Docker Hub](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
 
 1. Docker kimlik bilgilerinizi girin.
 
@@ -42,7 +42,7 @@ Yeni bir depoya sahip Docker Hub, [Docker Hub.](https://hub.docker.com/)
 
 1. Kendi deponıza bağlanıyorsanız (bir kuruluşun parçası değil), Kişisel depoda yayımla **onay kutusunu işaretli** bırakın. Depo bir kuruluşa aitse onay kutusunu temizleyin ve kuruluş adını girin. Bağlanmakta olduğu depoya erişim izni olan Docker hesabınız için Docker kullanıcı adınızı ve parolanızı girin ve kaydet'i **seçin.**
 
-   Visual Studio, görüntünizi dağıtıma Docker Hub.  Başarılı olursa, **yayımla** ekranı depo görüntüsünün URL'sini, görüntü etiketini, depoyu ve derleme yapılandırmasını (örneğin, **Sürüm) görüntüler.**
+   Visual Studio, görüntülerinizi dağıtıma Docker Hub.  Başarılı olursa, **Yayımla** ekranı depo görüntüsünün URL'sini, görüntü etiketini, depoyu ve derleme yapılandırmasını (örneğin, **Sürüm) gösterir.**
 
    ![Yayımla ekran görüntüsü](media/deploy-docker-hub/container-tools-docker-hub-finished.png)
 

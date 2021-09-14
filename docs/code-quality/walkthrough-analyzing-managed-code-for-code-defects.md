@@ -14,11 +14,11 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
 ms.openlocfilehash: b93e0cb2a3b74fe26b60094eb74d010e0b1f77ad
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122162012"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631797"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>adım adım kılavuz: Kod hatalarını bulmak için statik kod analizi kullanma
 
@@ -28,7 +28,7 @@ Bu makale, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım yönerg
 
 ## <a name="create-a-class-library"></a>Sınıf kitaplığı oluşturma
 
-1. Sınıf Visual Studio 'i açın ve Sınıf Kitaplığı **(.NET Framework) şablonundan yeni bir proje** oluşturun.
+1. Sınıf Visual Studio (Sınıf Kitaplığı) şablonundan **yeni bir proje .NET Framework** oluşturun.
 
 1. Projeye **CodeAnalysisManagedDemo adını girin.**
 
@@ -60,7 +60,7 @@ Bu makale, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım yönerg
 
    CodeAnalysisManagedDemo özellikleri sayfası görüntülenir.
 
-3. İlke **sekmesini Code Analysis** seçin.
+3. Code Analysis **seçin.**
 
 ::: moniker range="vs-2017"
 
@@ -92,7 +92,7 @@ Bu makale, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım yönerg
 
 1. Bu **Çözüm Gezgini** Tüm Dosyaları **Göster'i seçin.**
 
-1. Özellikler düğümünü genişletin ve *ardından AssemblyInfo.cs dosyasını* açın.
+1. Özellikler düğümünü genişletin ve *AssemblyInfo.cs dosyasını* açın.
 
 1. Uyarıları düzeltmek için aşağıdaki ipuçlarını kullanın:
 
@@ -106,13 +106,13 @@ Bu makale, .NET tarafından yönetilen kod derlemelerinizi .NET tasarım yönerg
 
    [CA1032: Standart özel durum oluşturucularını uygulama:](/dotnet/fundamentals/code-analysis/quality-rules/ca1032)oluşturucusu `public demo () : base() { }` sınıfına `demo` ekleyin.
 
-   [CA1709: Tanımlayıcılar doğru büyük/büyük/büyük](../code-quality/ca1709.md)harfe sahip olmalıdır: Ad alanının büyük/büyük/alt harflerini olarak `testCode` `TestCode` değiştirerek.
+   [CA1709: Tanımlayıcılar doğru büyük/büyük/büyük](../code-quality/ca1709.md)harfe sahip olmalıdır: Ad alanının büyük/büyük/alt harflerini olarak `testCode` değiştir. `TestCode`
 
    [CA1709: Tanımlayıcılar doğru şekilde büyük/büyük](../code-quality/ca1709.md)harfe sahip olmalıdır: Üyenin adını olarak `Demo` değiştir.
 
    [CA1709: Tanımlayıcılar doğru şekilde büyük/büyük](../code-quality/ca1709.md)harfe sahip olmalıdır: Üyenin adını olarak `Item` değiştir.
 
-   [CA1710: Tanımlayıcılar](/dotnet/fundamentals/code-analysis/quality-rules/ca1710)doğru son eke sahip olmalıdır: Sınıfın adını ve oluşturucularını olarak `DemoException` değiştirme.
+   [CA1710: Tanımlayıcılar](/dotnet/fundamentals/code-analysis/quality-rules/ca1710)doğru son eke sahip olmalıdır: Sınıfın ve oluşturucularının adını olarak `DemoException` değiştir.
 
    [CA2237: ISerializable türlerini SerializableAttribute](/dotnet/fundamentals/code-analysis/quality-rules/ca2237)ile işaretle: `[Serializable ()]` sınıfına özniteliğini `demo` ekleyin.
 

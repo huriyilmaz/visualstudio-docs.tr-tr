@@ -1,6 +1,6 @@
 ---
 title: Bir Access veritabanındaki verilere bağlanma
-description: Access veritabanındaki verilere (.mdb dosyası veya .accdb.file) bağlanmayı Visual Studio.
+description: Visual Studio ' de bir erişim veritabanındaki verilere (bir. mdb dosyası veya. accdb. File) nasıl bağlanacağınızı anlayın.
 ms.custom: SEO-VS-2020
 ms.date: 07/18/2019
 ms.topic: how-to
@@ -16,110 +16,110 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: b8280c29649a792839e2bc18a409e76f276b71e4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154946"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631539"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Bir Access veritabanındaki verilere bağlanma
 
-Bir Access veritabanına *(.mdb* dosyası veya *.accdb* dosyası) bağlanmak için Visual Studio. Bağlantıyı tanımladığınız veriler Veri Kaynakları **penceresinde** görüntülenir. Buradan tabloları veya görünümleri tasarım yüzeyinize sürükleyebilirsiniz.
+Visual Studio kullanarak bir Access veritabanına (bir *. mdb* dosyası ya da *. accdb* dosyası) bağlanabilirsiniz. Bağlantıyı tanımladıktan sonra veriler **veri kaynakları** penceresinde görünür. Buradan, tasarım yüzeyiniz üzerine tabloları veya görünümleri sürükleyebilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu yordamları kullanmak için bir Windows Forms veya WPF projesine ve bir Access veritabanına (*.accdb* dosyası) veya access 2000-2003 veritabanına (*.mdb* dosyası) ihtiyacınız vardır. Dosya türünüze karşılık gelen yordamı izleyin.
+bu yordamları kullanmak için bir Windows Forms veya WPF projesine ve bir erişim veritabanı (*. accdb* dosyası) ya da erişim 2000-2003 veritabanı (*. mdb* dosyası) gerekir. Dosya türünüze karşılık gelen yordamı izleyin.
 
-## <a name="create-a-dataset-for-an-accdb-file"></a>.accdb dosyası için veri kümesi oluşturma
+## <a name="create-a-dataset-for-an-accdb-file"></a>. Accdb dosyası için veri kümesi oluşturma
 
-Bağlan yordamı kullanarak Microsoft 365, Access 2013, Access 2010 veya Access 2007 ile oluşturulmuş veritabanlarına erişebilirsiniz.
+aşağıdaki yordamı kullanarak Microsoft 365, access 2013, access 2010 veya 2007 ile oluşturulan veritabanlarına Bağlan.
 
-1. Bir Windows Forms veya WPF uygulama projesini Visual Studio.
+1. Visual Studio ' de bir Windows Forms veya WPF uygulama projesi açın.
 
-2. Veri Kaynakları **penceresini açmak için** Görünüm menüsünde **Diğer** Veri **Kaynakları'Windows**  >  **seçin.**
+2. **veri kaynakları** penceresini açmak için, **görünüm** menüsünde **diğer Windows**  >  **veri kaynakları**' nı seçin.
 
-   ![Diğer Veri Windows Kaynaklarını Görüntüleme](../data-tools/media/viewdatasources.png)
+   ![diğer Windows veri kaynaklarını görüntüleme](../data-tools/media/viewdatasources.png)
 
-3. Veri Kaynakları **penceresinde Yeni** Veri Kaynağı **Ekle'ye tıklayın.**
+3. **Veri kaynakları** penceresinde **Yeni veri kaynağı Ekle**' ye tıklayın.
 
-   Veri **Kaynağı Yapılandırma Sihirbazı** açılır.
+   **Veri kaynağı Yapılandırma Sihirbazı** açılır.
 
-4. Veri **Kaynağı** Türü **Seçin sayfasında Veritabanı'ı ve** ardından Sonraki'yi **seçin.**
+4. **Veri kaynağı türü seçin** sayfasında **veritabanı** ' nı seçin ve ardından **İleri**' yi seçin.
 
-5. Veritabanı **Modeli Seçin** sayfasında Veri **Kümesi'ne ve** ardından Sonraki'ye **tıklayın.**
+5. **Veritabanı modeli seçin** sayfasında **veri kümesi** ' ni seçin ve ardından **İleri**' yi seçin.
 
-6. Yeni bir **veri bağlantısı yapılandırmak için** Veri **Bağlantınızı Seçin** sayfasında Yeni Bağlantı'ya tıklayın.
+6. **Veri bağlantınızı seçin** sayfasında yeni **bağlantı** ' yı seçerek yeni bir veri bağlantısı yapılandırın.
 
-   Bağlantı **Ekle** iletişim kutusu açılır.
+   **Bağlantı ekle** iletişim kutusu açılır.
 
-7. Veri **kaynağı Microsoft** Access Veritabanı Dosyası olarak **ayarlanmazsa** Değiştir **düğmesini** seçin.
+7. **Veri kaynağı** **Microsoft Access veritabanı dosyası** olarak ayarlanmamışsa, **Değiştir** düğmesini seçin.
 
-   Veri **Kaynağını Değiştir iletişim** kutusu açılır. Veri kaynakları listesinde Microsoft Access Veritabanı **Dosyası'ı seçin.** Veri sağlayıcısı **açılan menüsünde,** veri sağlayıcısı için **.NET Framework Veri Sağlayıcısı'OLE DB** ve ardından Tamam'ı **seçin.**
+   **Veri kaynağını Değiştir** iletişim kutusu açılır. Veri kaynakları listesinde, **Microsoft Access veritabanı dosyası**' nı seçin. **veri sağlayıcısı** açılır penceresinde **OLE DB için .NET Framework Veri Sağlayıcısı**' ni seçin ve ardından **tamam**' ı seçin.
 
-8. Veritabanı **dosya** **adı'nın yanındaki Gözat'ı** seçin, *sonra .accdb dosyanıza* gidin ve Aç'ı **seçin.**
+8. **Veritabanı dosya adı**' nın **yanındaki Git ' i seçin ve** ardından *. accdb* dosyanıza gidin ve **Aç**' ı seçin.
 
-9. Bir kullanıcı adı ve parola girin (gerekirse) ve ardından Tamam'ı **seçin.**
+9. Bir Kullanıcı adı ve parola girin (gerekliyse) ve ardından **Tamam**' ı seçin.
 
-10. Veri **Bağlantınızı** **seçin sayfasında Sonraki'yi** seçin.
+10. **Veri bağlantınızı seçin** sayfasında **İleri ' yi** seçin.
 
-    Veri dosyasının geçerli projeniz içinde olmadığını söyleyen bir iletişim kutusuyla karşınıza çıkabilirsiniz. Evet **veya Hayır'ı** **seçin.**
+    Veri dosyasının geçerli projenizde olduğunu söyleyen bir iletişim kutusu alabilirsiniz. **Evet** veya **Hayır**' ı seçin.
 
-11. Bağlantı **dizesini** **Uygulama Yapılandırması dosyasına kaydet sayfasından Sonraki'yi** seçin.
+11. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında **İleri ' yi** seçin.
 
-12. Veritabanı **Nesnelerinizi** seçin **sayfasında Tablolar düğümünü** genişletin.
+12. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin.
 
-13. Veri kümenize eklemek istediğiniz tabloları veya görünümleri seçin ve ardından Son'a **seçin.**
+13. Veri kümenize dahil etmek istediğiniz tabloları veya görünümleri seçin ve ardından **son**' u seçin.
 
-    Veri kümesi projenize eklenir ve tablolar ve görünümler Veri Kaynakları **penceresinde** görüntülenir.
+    Veri kümesi projenize eklenir ve tablolar ve görünümler **veri kaynakları** penceresinde görünür.
 
-## <a name="create-a-dataset-for-an-mdb-file"></a>.mdb dosyası için veri kümesi oluşturma
+## <a name="create-a-dataset-for-an-mdb-file"></a>. Mdb dosyası için veri kümesi oluşturma
 
-Bağlan access 2000-2003 ile oluşturulan veritabanlarına aşağıdaki yordamı kullanarak erişebilirsiniz.
+aşağıdaki yordamı kullanarak Access 2000-2003 ile oluşturulan veritabanlarına Bağlan.
 
-1. Bir Windows Forms veya WPF uygulama projesini Visual Studio.
+1. Visual Studio ' de bir Windows Forms veya WPF uygulama projesi açın.
 
-2. Görünüm menüsünde **Diğer** Veri **Kaynakları'Windows**  >  **seçin.**
+2. **görünüm** menüsünde **diğer Windows**  >  **veri kaynakları**' nı seçin.
 
-   ![Diğer Veri Windows Kaynaklarını Görüntüleme](../data-tools/media/viewdatasources.png)
+   ![diğer Windows veri kaynaklarını görüntüleme](../data-tools/media/viewdatasources.png)
 
-3. Veri Kaynakları **penceresinde Yeni** Veri Kaynağı **Ekle'ye tıklayın.**
+3. **Veri kaynakları** penceresinde **Yeni veri kaynağı Ekle**' ye tıklayın.
 
-    Veri **Kaynağı Yapılandırma Sihirbazı** açılır.
+    **Veri kaynağı Yapılandırma Sihirbazı** açılır.
 
-4. Veri **Kaynağı** Türü **Seçin sayfasında Veritabanı'ı ve** ardından Sonraki'yi **seçin.**
+4. **Veri kaynağı türü seçin** sayfasında **veritabanı** ' nı seçin ve ardından **İleri**' yi seçin.
 
-5. Veritabanı **Modeli Seçin** sayfasında Veri **Kümesi'ne ve** ardından Sonraki'ye **tıklayın.**
+5. **Veritabanı modeli seçin** sayfasında **veri kümesi** ' ni seçin ve ardından **İleri**' yi seçin.
 
-6. Yeni bir **veri bağlantısı yapılandırmak için** Veri **Bağlantınızı Seçin** sayfasında Yeni Bağlantı'ya tıklayın.
+6. **Veri bağlantınızı seçin** sayfasında yeni **bağlantı** ' yı seçerek yeni bir veri bağlantısı yapılandırın.
 
-7. Veri kaynağı Microsoft Access Veritabanı Dosyası **(OLE DB)** değilse, Veri  Kaynağını Değiştir iletişim kutusunu açmak için Değiştir'i seçin ve **Microsoft Access** Veritabanı Dosyası'nın ardından Tamam'ı  **seçin.**
+7. Veri kaynağı **Microsoft Access veritabanı dosyası (OLE DB)** değilse, **Değiştir** ' i seçerek **veri kaynağını Değiştir** Iletişim kutusunu açın ve **Microsoft Access veritabanı dosyası**' nı seçin ve ardından **Tamam**' ı seçin.
 
-8. Veritabanı **dosyası adı içinde,** bağlanmak istediğiniz *.mdb* dosyasının yolunu ve adını belirtin ve ardından Tamam'ı **seçin.**
+8. **Veritabanı dosyası adı**' nda, bağlanmak istediğiniz *. mdb* dosyasının yolunu ve adını belirtin ve ardından **Tamam**' ı seçin.
 
-   ![Bağlantı Erişimi Veritabanı Dosyası Ekleme](../data-tools/media/add-connection-access-db.png)
+   ![Bağlantı erişimi veritabanı dosyası Ekle](../data-tools/media/add-connection-access-db.png)
 
-9. Veri **Bağlantınızı** **seçin sayfasında Sonraki'yi** seçin.
+9. **Veri bağlantınızı seçin** sayfasında **İleri ' yi** seçin.
 
-10. Bağlantı **dizesini** **Uygulama Yapılandırması dosyasına kaydet sayfasından Sonraki'yi** seçin.
+10. **Bağlantı dizesini uygulama yapılandırma dosyasına kaydet** sayfasında **İleri ' yi** seçin.
 
-11. Veritabanı **Nesnelerinizi** seçin **sayfasında Tablolar düğümünü** genişletin.
+11. **Veritabanı nesnelerinizi seçin** sayfasında **Tablolar** düğümünü genişletin.
 
-12. Veri kümenize istediğiniz tabloları veya görünümleri seçin ve ardından Son'a **seçin.**
+12. Veri kümeniz içinde istediğiniz tabloları veya görünümleri seçin ve ardından **son**' u seçin.
 
-    Veri kümesi projenize eklenir ve tablolar ve görünümler Veri Kaynakları **penceresinde** görüntülenir.
+    Veri kümesi projenize eklenir ve tablolar ve görünümler **veri kaynakları** penceresinde görünür.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Yeni oluşturduğunuz veri kümesi, Veri Kaynakları **penceresinde** kullanılabilir. Artık aşağıdaki görevlerden herhangi birini gerçekleştirebilirsiniz:
+Yeni oluşturduğunuz veri kümesi **veri kaynakları** penceresinde kullanılabilir. Artık aşağıdaki görevlerden herhangi birini gerçekleştirebilirsiniz:
 
-- Veri Kaynakları penceresinde öğeleri **seçin ve** form veya tasarım yüzeyinize sürükleyin (bkz. [Windows Forms](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) denetimlerini Visual Studio veya WPF veri [bağlamaya genel bakış).](/dotnet/desktop-wpf/data/data-binding-overview)
+- **veri kaynakları** penceresinde öğeler ' i seçin ve bunları formunuza veya tasarım yüzeyine sürükleyin (bkz. [Windows Forms denetimleri Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) veya [WPF veri bağlamaya genel bakış](/dotnet/desktop-wpf/data/data-binding-overview)).
 
-- Veri kümesinde veri **Veri Kümesi Tasarımcısı** nesneleri eklemek veya düzenlemek için veri kaynağını açın.
+- Veri kümesini oluşturan nesneleri eklemek veya düzenlemek için **veri kümesi Tasarımcısı** veri kaynağını açın.
 
-- Veri kümesinde veri <xref:System.Data.DataTable.ColumnChanging> <xref:System.Data.DataTable.RowChanging> tablolarının veya olayına doğrulama mantığı ekleyin [(bkz. Veri kümelerde verileri doğrulama).](../data-tools/validate-data-in-datasets.md)
+- Veri <xref:System.Data.DataTable.ColumnChanging> <xref:System.Data.DataTable.RowChanging> kümesindeki veri tablolarının veya olayına doğrulama mantığı ekleyin (bkz. [veri kümelerinde verileri doğrulama](../data-tools/validate-data-in-datasets.md)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağlantı ekleme](../data-tools/add-new-connections.md)
 - [WPF veri bağlamaya genel bakış](/dotnet/framework/wpf/data/data-binding-overview)
-- [Windows Form veri bağlama](/dotnet/framework/winforms/data-binding-and-windows-forms)
+- [Windows Forms veri bağlama](/dotnet/framework/winforms/data-binding-and-windows-forms)

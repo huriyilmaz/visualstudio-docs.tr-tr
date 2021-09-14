@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: dfd891aff03616acdec3a199a847b1d3ca1c90d8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122139313"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629870"
 ---
 # <a name="idiaframedataget_lengthblock"></a>IDiaFrameData::get_lengthBlock
 Çerçeve tarafından tanımlanan kod bloğunun uzunluğunu bayt cinsinden alır.

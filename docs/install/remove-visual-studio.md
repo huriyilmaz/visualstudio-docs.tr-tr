@@ -23,11 +23,11 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 4662eb0470811e3cf4047e1d51106734369ddf34
-ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "122785734"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628467"
 ---
 # <a name="remove-visual-studio"></a>Visual Studio kaldır
 

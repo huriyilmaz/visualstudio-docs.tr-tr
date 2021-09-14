@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: bd210d3d4130d94193abec38c41bda7bce67eaaa
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044601"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629745"
 ---
 # <a name="idiainjectedsourceget_source"></a>IDiaInjectedSource::get_source
 Kaynak kodu baytlarını alır.

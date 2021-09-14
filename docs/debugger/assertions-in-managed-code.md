@@ -26,11 +26,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
 ms.openlocfilehash: 937c6474aab6ea1171eccf6914e4e850a8e4bb3b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129876"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630956"
 ---
 # <a name="assertions-in-managed-code"></a>Yönetilen Koddaki Onaylar
 Bir onay veya `Assert` deyimi, `Assert` deyimine bağımsız değişken olarak belirttiğiniz bir koşulu test eder. Koşul true olarak değerlendirilirse işlem yapmanız gerekmez. Koşul false olarak değerlendirilirse onay başarısız olur. Hata ayıklama derlemesiyle çalışıyorsanız programınız kesme moduna girer.

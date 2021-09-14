@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 10fd3139fa4a6d2de26d636e0689cbedcc2559c2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036615"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630584"
 ---
 # <a name="functionargtype"></a>FunctionArgType
 Bir işlevin her parametresi bir sembolle `SymTagFunctionArgType` tanımlanır.

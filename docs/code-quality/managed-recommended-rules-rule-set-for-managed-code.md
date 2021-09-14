@@ -1,7 +1,7 @@
 ---
 title: Yönetilen kod için Yönetilen Önerilen Kurallar kural kümesi
 ms.date: 11/04/2016
-description: Visual Studio'da Yönetilen Önerilen Kurallar kural kümesi hakkında Visual Studio. Güvenlik, sağlamlık ve diğer kritik konulara odaklanan kuralların açıklamalarına bakın.
+description: Visual Studio ' de Yönetilen Önerilen Kurallar kural kümesi hakkında bilgi edinin. Güvenlik, sağlamlık ve diğer kritik sorunlara odaklanabilecek kuralların açıklamalarını inceleyin.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 1d1160f8-4e51-4e70-99cd-82ad10ee7b32
@@ -12,19 +12,19 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
 ms.openlocfilehash: 2fb85b6106ed57dc891fe5bc7c99d0ecfd48dcd7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122114008"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631880"
 ---
 # <a name="managed-recommended-rules-rule-set-for-managed-code"></a>Yönetilen kod için Yönetilen Önerilen Kurallar kural kümesi
 
-Yönetilen kodunuzla ilgili olası güvenlik açıkları, uygulama kilitlenmeleri ve diğer önemli mantık ve tasarım hataları gibi en kritik sorunlara odaklanmak için Microsoft Tarafından Yönetilen Önerilen Kurallar kural kümesi kullanın. Bu kural kümesi, Yönetilen Minimum Kurallar kural [kümesinde yer alan tüm](managed-minimum-rules-rule-set-for-managed-code.md) kuralları içerir.
+Olası güvenlik delikleri, uygulama kilitlenmesi ve diğer önemli mantık ve tasarım hataları da dahil olmak üzere, yönetilen kodunuzda en kritik sorunlara odaklanmak için Microsoft tarafından yönetilen Önerilen Kurallar kural kümesini kullanın. Bu kural kümesi, [yönetilen minimum kurallar](managed-minimum-rules-rule-set-for-managed-code.md) kural kümesindeki tüm kuralları içerir.
 
-Projeleriniz için oluşturmak istediğiniz özel kural kümesine bu kural kümelerini dahil etmek.
+Bu kuralı, projeleriniz için oluşturduğunuz herhangi bir özel kural kümesine ekleyin.
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
 |[CA1009](../code-quality/ca1009.md)|Olay işleyicileri doğru olarak bildirin|
@@ -66,7 +66,7 @@ Projeleriniz için oluşturmak istediğiniz özel kural kümesine bu kural küme
 |[CA2137](../code-quality/ca2137.md)|Saydam metotlar yalnızca doğrulanabilir IL içermelidir|
 |[CA2138](../code-quality/ca2138.md)|Saydam metotlar SuppressUnmanagedCodeSecurity özniteliğine sahip metotları çağırmamalıdır|
 |[CA2140](../code-quality/ca2140.md)|Saydam kod güvenlik kritik nesnelerine başvurmamalıdır|
-|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler LinkDemands'i karşılamamalı|
+|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler bağlantı taleplerini karşılamamalıdır|
 |[CA2146](../code-quality/ca2146.md)|Türler en az kendi taban türleri ve arabirimleri kadar kritik olmalıdır|
 |[CA2147](../code-quality/ca2147.md)|Saydam metotlar güvenlik onay deyimlerini kullanmamalıdır|
 |[CA2149](../code-quality/ca2149.md)|Saydam metotlar yerel kod içine çağırmamalıdır|

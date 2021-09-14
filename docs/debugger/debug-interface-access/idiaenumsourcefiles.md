@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: be3b2016b076fd9b2276e2bc64dfe3764b4e962e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129466"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630062"
 ---
 # <a name="idiaenumsourcefiles"></a>IDiaEnumSourceFiles
 Veri kaynağında bulunan çeşitli kaynak dosyaları numaralar.
@@ -30,12 +30,12 @@ Veri kaynağında bulunan çeşitli kaynak dosyaları numaralar.
 IDiaEnumSourceFiles : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
 Aşağıdaki tabloda yöntemlerini `IDiaEnumSourceFiles` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumSourceFiles::get__NewEnum](../../debugger/debug-interface-access/idiaenumsourcefiles-get-newenum.md)|Bu `IEnumVARIANT Interface` numaralayıcının sürümünü alın.|
+|[IDiaEnumSourceFiles::get__NewEnum](../../debugger/debug-interface-access/idiaenumsourcefiles-get-newenum.md)|Bu `IEnumVARIANT Interface` numaralayıcının sürümünü alınır.|
 |[IDiaEnumSourceFiles::get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md)|Kaynak dosya sayısını alın.|
 |[IDiaEnumSourceFiles::Item](../../debugger/debug-interface-access/idiaenumsourcefiles-item.md)|Bir kaynak dosyayı dizin ile alma.|
 |[IDiaEnumSourceFiles::Next](../../debugger/debug-interface-access/idiaenumsourcefiles-next.md)|Numaralama dizisinde belirtilen sayıda kaynak dosyayı alan.|

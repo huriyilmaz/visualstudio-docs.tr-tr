@@ -25,11 +25,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 17ad04ea4e87a99d1f9e98cef197d986b5e31dc1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129694"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630891"
 ---
 # <a name="com-server-and-container-debugging"></a>COM Sunucusunda ve Kapsayıcısında Hata Ayıklama
 COM uygulamaları, programcının doğrudan denetimi dışında bir dizi görev gerçekleştirmektedir. URL'ler arasındaki iletişim, nesnelerdeki kullanım sayıları ve Pano işlemleri, beklenmeyen davranışlarla karşılaşabilirsiniz alanlardan yalnızca birkaçıdır. Bu durumda ilk adımınız sorunun kaynağını izlemek olur.
@@ -51,11 +51,11 @@ COM uygulamaları, programcının doğrudan denetimi dışında bir dizi görev 
 3. Kapsayıcı uygulamasını başlatma.
 
 ## <a name="debugging-a-server-and-domain-isolation-sdi-application"></a><a name="BKMK_DebuggingaServerandDomainIsolationSDIApplication"></a> Sunucu ve Etki Alanı Yalıtımı (SDI) Uygulamasında Hata Ayıklama
- Bir SDI sunucu uygulamasında hata ayıklarsanız, `/Embedding` `/Automation` C/C++, C#  veya Project projeleri için *Project* Özellik Sayfaları iletişim kutusunda Komut satırı bağımsız değişkenleri özelliğini belirtmeniz Visual Basic gerekir.
+ Bir SDI sunucu uygulamasında hata ayıklarsanız, `/Embedding` `/Automation` C/C++, C#  veya Visual Basic projeleri için *Project* Özellik Sayfaları iletişim kutusunda Komut satırı bağımsız değişkenleri özelliğini belirtmeniz Visual Basic gerekir.
 
  Bu komut satırı bağımsız değişkenleriyle, hata ayıklayıcı sunucu uygulamasını bir kapsayıcıdan başlatıldı gibi başlatabilirsiniz. Kapsayıcıyı Program Yöneticisi'nde veya Dosya Yöneticisi'nde başlatmanız, kapsayıcının hata ayıklayıcıda başlatan sunucu örneğini kullanmalarına neden olur.
 
- Project Özellik *Sayfaları* iletişim kutusuna erişmek için, Çözüm Gezgini'da projenize sağ tıklayın ve ardından kısayol menüsünden Özellikler'i seçin. Komut satırı bağımsız değişkenleri özelliğini bulmak için Yapılandırma Özellikleri kategorisini genişletin ve Hata Ayıklama sayfasına tıklayın.
+ Project Özellik *Sayfaları* iletişim kutusuna erişmek için, Çözüm Gezgini'de projenize sağ tıklayın ve kısayol menüsünden Özellikler'i seçin. Komut satırı bağımsız değişkenleri özelliğini bulmak için Yapılandırma Özellikleri kategorisini genişletin ve Hata Ayıklama sayfasına tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

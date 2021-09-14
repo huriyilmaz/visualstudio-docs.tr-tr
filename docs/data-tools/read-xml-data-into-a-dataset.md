@@ -1,6 +1,6 @@
 ---
 title: Bir veri kümesinin içine XML verileri okuma
-description: XML verilerini bir veri kümesine okuma. Bu kılavuzda, XML verilerini bir veri kümesine Windows bir uygulama oluşturabileceksiniz.
+description: XML verilerini bir veri kümesine okuma. Bu kılavuzda, XML verilerini bir Windows veri kümesine yükecek bir uygulama oluşturabileceksiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -24,19 +24,19 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 9fe6058713abf66ab173f4ddf77e9ff71a03bb74
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122075079"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631239"
 ---
 # <a name="read-xml-data-into-a-dataset"></a>Bir veri kümesinin içine XML verileri okuma
 
-ADO.NET XML verileriyle çalışmak için basit yöntemler sağlar. Bu kılavuzda, XML verilerini bir veri kümesine Windows bir uygulama oluşturabileceksiniz. Veri kümesi daha sonra bir denetimde <xref:System.Windows.Forms.DataGridView> görüntülenir. Son olarak, XML dosyasının içeriğini temel alan bir XML şeması bir metin kutusunda görüntülenir.
+ADO.NET XML verileriyle çalışmak için basit yöntemler sağlar. Bu kılavuzda, XML verilerini bir Windows veri kümesine yükecek bir uygulama oluşturabileceksiniz. Veri kümesi daha sonra bir denetimde <xref:System.Windows.Forms.DataGridView> görüntülenir. Son olarak, XML dosyasının içeriğini temel alan bir XML şeması bir metin kutusunda görüntülenir.
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
-C# **veya Windows formlar için** yeni bir Windows Forms Uygulaması Visual Basic. Projeye **ReadingXML adını girin.**
+C# **veya Windows için yeni** bir FormLar Uygulaması projesi Visual Basic. Projeye **ReadingXML adını girin.**
 
 ## <a name="generate-the-xml-file-to-be-read-into-the-dataset"></a>Veri kümesine okunabilecek XML dosyasını oluşturma
 
@@ -44,7 +44,7 @@ Bu kılavuz, XML verilerini bir veri kümesinde okumaya odaklanan bir XML dosyas
 
 1. Yeni **Project** **Ekle'yi seçin.**
 
-2. **XML Dosyası'ı** seçin, dosyayı olarak **authors.xml** ve ekle'yi **seçin.**
+2. **XML Dosyası'authors.xml,** **dosyayı olarakauthors.xml** ekle'yi **seçin.**
 
    XML dosyası tasarımcıya yüklenir ve düzenlemeye hazırdır.
 
@@ -110,7 +110,7 @@ Bu kılavuz, XML verilerini bir veri kümesinde okumaya odaklanan bir XML dosyas
    </Authors_Table>
    ```
 
-4. Dosya menüsünde **Kaydet'i** **authors.xml.**
+4. Dosya menüsünde **Kaydet'i** **seçin ve authors.xml.**
 
 ## <a name="create-the-user-interface"></a>Kullanıcı arabirimini oluşturma
 
@@ -118,11 +118,11 @@ Bu uygulamanın kullanıcı arabirimi aşağıdakilerden oluşur:
 
 - <xref:System.Windows.Forms.DataGridView>XML dosyasının içeriğini veri olarak görüntüleyen denetim.
 
-- XML <xref:System.Windows.Forms.TextBox> dosyasının XML şemasını görüntüleyen denetim.
+- XML <xref:System.Windows.Forms.TextBox> dosyası için XML şemasını görüntüleyen bir denetim.
 
 - İki <xref:System.Windows.Forms.Button> denetim.
 
-  - Bir düğme XML dosyasını veri kümesine okur ve denetimde <xref:System.Windows.Forms.DataGridView> görüntüler.
+  - Bir düğme, XML dosyasını veri kümesine okur ve denetimde <xref:System.Windows.Forms.DataGridView> görüntüler.
 
   - İkinci bir düğme, veri kümesinden şemayı ayıklar ve aracılığıyla <xref:System.IO.StringWriter> bunu denetimde <xref:System.Windows.Forms.TextBox> görüntüler.
 
@@ -167,7 +167,7 @@ Bu adımda adlı yeni bir veri kümesi `authors` oluşturabilirsiniz. Veri küme
 
 **XML'i** Oku düğmesi, XML dosyasını veri kümesine okur. Ardından denetimde, <xref:System.Windows.Forms.DataGridView> bunu veri kümesine bağlayan özellikleri ayarlar.
 
-1. Bu **Çözüm Gezgini** **Form1'i** ve ardından araç **çubuğunda Görünüm Tasarımcısı** düğmesini **Çözüm Gezgini** seçin.
+1. Bu **Çözüm Gezgini** **Form1'i** seçin ve ardından araç **çubuğunda Görünüm Tasarımcısı** **düğmeyi Çözüm Gezgini** seçin.
 
 2. XML Oku **düğmesini** seçin.
 
@@ -184,7 +184,7 @@ Bu adımda adlı yeni bir veri kümesi `authors` oluşturabilirsiniz. Veri küme
 
 **Şemayı** Göster düğmesi <xref:System.IO.StringWriter> şemayla doldurulmuş bir nesne oluşturur ve denetimde <xref:System.Windows.Forms.TextBox> görüntülenir.
 
-1. Bu **Çözüm Gezgini** **Form1'i** ve ardından Form1'Görünüm Tasarımcısı seçin. 
+1. Bu **Çözüm Gezgini** **Form1'i** ve ardından Form1 düğmesini **Görünüm Tasarımcısı** seçin.
 
 2. Şemayı **Göster düğmesini** seçin.
 

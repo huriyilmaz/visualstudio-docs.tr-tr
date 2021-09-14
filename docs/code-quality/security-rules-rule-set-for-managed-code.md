@@ -12,17 +12,17 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
 ms.openlocfilehash: 26aaec700d308e73249401e215fc1b1b93a87735
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122162051"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631821"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>Yönetilen kod için Güvenlik Kuralları kural kümesi
 
 Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarmak için eski kod analizi için Microsoft Güvenlik Kuralları kural kümesi kullanın.
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA2100](/dotnet/fundamentals/code-analysis/quality-rules/ca2100)|SQL sorgularını güvenlik açıkları için inceleyin|
 |[CA2102](../code-quality/ca2102.md)|CLSCompliant olmayan özel durumları genel işleyiciler içinde yakalayın|
@@ -58,7 +58,7 @@ Bildirilen olası güvenlik sorunlarının sayısını en üst düzeye çıkarma
 |[CA2138](../code-quality/ca2138.md)|Saydam metotlar SuppressUnmanagedCodeSecurity özniteliğine sahip metotları çağırmamalıdır|
 |[CA2139](../code-quality/ca2139.md)|Saydam metotlar HandleProcessCorruptingExceptions özniteliğini kullanamaz|
 |[CA2140](../code-quality/ca2140.md)|Saydam kod güvenlik kritik nesnelerine başvurmamalıdır|
-|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler LinkDemands'i karşılamamalı|
+|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler LinkDemands'ı karşılamamalı|
 |[CA2142](../code-quality/ca2142.md)|Saydam kod LinkDemands ile korunmamalıdır|
 |[CA2143](../code-quality/ca2143.md)|Saydam metotlar güvenlik taleplerini kullanmamalıdır|
 |[CA2144](../code-quality/ca2144.md)|Saydam kod derlemeleri bayt dizilerinden yüklememelidir|

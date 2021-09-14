@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: bd427ca1485cb0fc86237209050dad6243d2b59340255ffbcaebb7dc7fabde27
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 64fea0497f1cc8d8767a71eb4e06d77ae4b56e58
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121405302"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630213"
 ---
 # <a name="idiaenumlinenumbers"></a>IDiaEnumLineNumbers
 Veri kaynağında bulunan çeşitli satır numaralarını numaralar.
@@ -30,7 +30,7 @@ Veri kaynağında bulunan çeşitli satır numaralarını numaralar.
 IDiaEnumLineNumbers : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
 Aşağıdaki tabloda yöntemlerini `IDiaEnumLineNumbers` gösterir.
 
 |Yöntem|Açıklama|
@@ -59,7 +59,7 @@ Bu arabirim, [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
 - [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)
 
 ## <a name="example"></a>Örnek
-Bu örnekte, bir oturumdan `IDiaEnumLineNumbers` arabirimin nasıl alınarak elde edilir? Bu örnekte, bir işlevin satır numarası numaralama işlevinin (ile temsil edilen) nasıl elde etmek olduğu `pSymbol` gösterir. Satır numaralarını kullanmanın daha eksiksiz bir örneği için bkz. [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) arabirimi.
+Bu örnekte, arabirimin bir `IDiaEnumLineNumbers` oturumdan nasıl alınarak elde edilir? Bu örnekte, bir işlevin satır numarası numaralama işlevinin (ile temsil edilen) nasıl elde etmek olduğu `pSymbol` gösterir. Satır numaralarını kullanmanın daha eksiksiz bir örneği için bkz. [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) arabirimi.
 
 ```C++
 void dumpFunctionLines( IDiaSymbol* pSymbol, IDiaSession* pSession )

@@ -26,19 +26,19 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: c0b371f4aceef5baadd7a00738d885974b88c584
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122143137"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628466"
 ---
 # <a name="msbuild-conditional-constructs"></a>MSBuild koşullu yapıları
 
-MSBuild, Seç , Ne Zaman ve Aksi takdirde [](../msbuild/when-element-msbuild.md)öğeleriyle [işlemeye](../msbuild/choose-element-msbuild.md)yönelik bir [mekanizma](../msbuild/otherwise-element-msbuild.md) sağlar.
+MSBuild, Seç , Ne Zaman ve Aksi [](../msbuild/choose-element-msbuild.md)takdirde [](../msbuild/when-element-msbuild.md)öğeleriyle işlemeye yönelik bir [mekanizma](../msbuild/otherwise-element-msbuild.md) sağlar.
 
 ## <a name="use-the-choose-element"></a>Choose öğesini kullanma
 
- öğesi, biri olarak değerlendirilene kadar üstten aşağıya doğru test edilen `Choose` `When` `Condition` özniteliklere sahip bir dizi öğe `true` içerir. Birden fazla öğe `When` olarak değerlendirilirse `true` yalnızca ilk öğe kullanılır. Bir öğe varsa, bir öğedeki hiçbir koşul olarak `Otherwise` `When` değerlendirilmezse `true` değerlendirilir.
+ öğesi, değerlendirilene kadar üstten aşağıya doğru sırayla test edilen `Choose` `When` `Condition` özniteliklere sahip bir dizi öğe `true` içerir. Birden fazla öğe `When` olarak değerlendirilirse `true` yalnızca ilk öğe kullanılır. Bir `Otherwise` öğe varsa, bir öğedeki hiçbir koşul olarak değerlendirilmezse `When` `true` değerlendirilir.
 
  `Choose` öğeleri, ve öğelerinin alt öğeleri `Project` `When` olarak `Otherwise` kullanılabilir. `When` ve `Otherwise` öğeleri , veya alt `ItemGroup` `PropertyGroup` `Choose` öğelerine sahip olabilir.
 

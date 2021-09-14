@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: e18c7224d68642cd5afc30b59375060c30b6d767
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134580"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630333"
 ---
 # <a name="idiaenumframedata"></a>IDiaEnumFrameData
 Veri kaynağında bulunan çeşitli çerçeve veri öğelerini numaralar.
@@ -30,12 +30,12 @@ Veri kaynağında bulunan çeşitli çerçeve veri öğelerini numaralar.
 IDiaEnumFrameData : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
 Aşağıdaki tabloda yöntemlerini `IDiaEnumFrameData` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumFrameData::get__NewEnum](../../debugger/debug-interface-access/idiaenumframedata-get-newenum.md)|Bu `IEnumVARIANT Interface` numaralayıcının sürümünü alın.|
+|[IDiaEnumFrameData::get__NewEnum](../../debugger/debug-interface-access/idiaenumframedata-get-newenum.md)|Bu `IEnumVARIANT Interface` numaralayıcının sürümünü alınır.|
 |[IDiaEnumFrameData::get_Count](../../debugger/debug-interface-access/idiaenumframedata-get-count.md)|Çerçeve veri öğelerinin sayısını alın.|
 |[IDiaEnumFrameData::Item](../../debugger/debug-interface-access/idiaenumframedata-item.md)|Bir dizin ile bir çerçeve veri öğesi alınır.|
 |[IDiaEnumFrameData::Next](../../debugger/debug-interface-access/idiaenumframedata-next.md)|Numaralama dizisinde belirtilen sayıda çerçeve verisi öğelerini alan.|

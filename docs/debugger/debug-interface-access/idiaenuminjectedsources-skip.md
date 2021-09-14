@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 5c6007bac1977ce32bffffc698f4ef6b090d8de6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134460"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630266"
 ---
 # <a name="idiaenuminjectedsourcesskip"></a>IDiaEnumInjectedSources::Skip
 Bir numaralama dizisinde belirtilen sayıdaki ekli kaynağı atlar.
@@ -38,7 +38,7 @@ HRESULT Skip (
 [in] Atlama için numaralama sırasına ekli kaynakların sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK` döndürür; aksi takdirde, `S_FALSE` atlanabilecek daha fazla ekli kaynak yoksa döndürür.
+ Başarılı olursa, `S_OK` ; aksi takdirde, `S_FALSE` atlanabilecek daha fazla ekli kaynak yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

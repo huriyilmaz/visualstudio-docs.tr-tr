@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ae69061c68d76c30dcc845f6aaa922496529f9bf61c29dac1d7200ec1406b6da
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 051711a9d6dfe861f37e741ae9ecabfbf741012e
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121334425"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628670"
 ---
 # <a name="options-dialog-box-text-editor--javascript--intellisense"></a>Seçenekler iletişim kutusu: metin düzenleyici \> JavaScript \> IntelliSense
 

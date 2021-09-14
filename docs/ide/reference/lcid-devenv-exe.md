@@ -22,11 +22,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 35a8fa0a783817d5ad1fdc4b6bce39f873a051f1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122101108"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628749"
 ---
 # <a name="lcid-devenvexe"></a>/LCID (devenv.exe)
 
@@ -46,7 +46,7 @@ devenv {/LCID|/L} LocaleID
 
 ## <a name="remarks"></a>Açıklamalar
 
-IDE'i yükler ve ortam için varsayılan doğal dili ayarlar. Bu değişiklik oturumlar arasında kalıcıdır ve IDE bu değişikliği Araçlar Seçenekler Ortamı Uluslararası Ayarlar  >    >    >    >  **Dil kutusunda** gösterir.
+IDE'i yükler ve ortam için varsayılan doğal dili ayarlar. Bu değişiklik oturumlar arasında kalıcıdır ve IDE bu değişikliği **Araçlar** Seçenekler Ortamı Uluslararası Ayarlar  >    >    >    >  **Dil kutusunda** gösterir.
 
 Belirtilen dil sisteminiz üzerinde kullanılamıyorsa anahtar `/LCID` yoksayılır.
 

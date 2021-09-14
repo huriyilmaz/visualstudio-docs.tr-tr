@@ -1,6 +1,6 @@
 ---
 title: My Extensions Sayfası, Proje Tasarımcısı (Visual Basic)
-description: Projenizin Ad alanı uzantılarımı yönetmek için Project Tasarımcısı'nın Uzantılarım sayfasını kullanmayı öğrenin.
+description: Project tasarımcısı 'nın uzantılarımı kullanarak, ad alanı uzantılarımı projenizde nasıl yöneteceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,31 +17,31 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 8fec9e648a1f17cf4023aac0d7bc6034bfa7211c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122151255"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628706"
 ---
 # <a name="my-extensions-page-project-designer-visual-basic"></a>My Extensions Sayfası, Proje Tasarımcısı (Visual Basic)
-Projenizin **ad alanı** uzantılarını yönetmek için Project **Tasarımcısı'nın** `My` Uzantılarım sayfasını kullanın. `My` ad alanı uzantıları, kendi özel üyelerinizi `My` eklemek için ad alanını özelleştirmenize olanak sağlar. Özel ad alanı uzantıları oluşturma `My` hakkında daha fazla bilgi için [bkz.](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace)Visual Basic.
+projenizdeki ad alanı uzantılarını yönetmek için **Project tasarımcısı** ' nın **uzantılarım** sayfasını kullanın `My` . `My` ad alanı uzantıları, `My` kendi özel üyelerinizi eklemek için ad alanını özelleştirmenizi sağlar. Özel ad alanı uzantıları oluşturma hakkında daha fazla bilgi için `My` bkz. [Visual Basic ad alanını genişletme](/dotnet/visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace).
 
-Uzantılarım sayfasına **erişmek için,** Çözüm Gezgini'deki proje düğümünün My **Project'a** **çift tıklayın.** Project **Tasarımcısı** göründüğünde Uzantılarım **sekmesine** tıklayın.
+**uzantılarım** sayfasına erişmek için, **Çözüm Gezgini** içindeki proje düğümünüz için **Project** çift tıklayın. **Project tasarımcı** göründüğünde **uzantılarım** sekmesine tıklayın.
 
 ## <a name="uielement-list"></a>UIElement Listesi
-Aşağıdaki seçenekler, projenize ad alanı uzantıları `My` eklemenize veya kaldırmanıza olanak sağlar. Ad `My` alanı uzantısının eklenmek için Visual Studio öğe şablonu olarak yüklü olması gerekir. Ad alanı uzantılarını yayımlama ve `My` yükleme hakkında bilgi için bkz. Özel [Uzantılarımı Paketleme ve Dağıtma.](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions)
+Aşağıdaki seçenekler, `My` projenize ad alanı uzantıları eklemenize veya kaldırmanıza imkan sağlar. `My`ad alanı uzantısının eklenebilmesi için önce Visual Studio bir öğe şablonu olarak yüklenmesi gerekir. Ad alanı uzantılarını yayımlama ve yükleme hakkında daha fazla bilgi için `My` bkz. [özel uzantılarımı paketleme ve dağıtma](/dotnet/visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions).
 
- **Ad alanı uzantılarım**
+ **My Namespace uzantıları**
 
-Bu liste, projede `My` yüklü olan tüm ad alanı uzantılarını gösterir.
+Bu liste, `My` projede yüklü olan tüm ad alanı uzantılarını gösterir.
 
  **Uzantı Ekle**
 
-Projenize yüklü bir ad alanı uzantısı `My` eklemek için bu düğmeye tıklayın. Olası tüm ad alanı `My` uzantılarının listesi görüntülenir. Projenize `My` eklemek istediğiniz ad alanı uzantısını seçin ve eklemek için **Tamam'a** tıklayın.
+Projenize yüklü bir ad alanı uzantısı eklemek için bu düğmeye tıklayın `My` . Tüm olası `My` ad alanı uzantılarının listesi görüntülenir. `My`Projenize eklemek istediğiniz ad alanı uzantısını seçin ve eklemek Için **Tamam** ' ı tıklatın.
 
- **Uzantıyı Kaldır**
+ **Uzantıyı kaldır**
 
-Ad alanı uzantılarım listesinde bir **veya** daha fazla başvuru seçin ve ardından ad alanı uzantısını `My` projeden kaldırmak için bu düğmeye tıklayın.
+**My Namespace Extensions** listesindeki bir veya daha fazla başvuruyu seçin ve ardından bu düğmeye tıklayarak `My` ad alanı uzantısını projeden kaldırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
 title: CV_HREG_e | Microsoft Docs
-description: Hata ayıklama arabirimi erişim SDK'sı içinde bir hedef yazmacı belirten CV_HREG_e türüyle ilgili başvuru bilgilerini elde edin.
+description: Hata ayıklama arabirimi erişim SDK'CV_HREG_e bir hedef yazmacı belirten bir hedef kayıt türü ile ilgili başvuru bilgilerini almak.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,11 +16,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: e2e35a4dd170d78aeda22200d4634300bdb8a184
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154803"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630662"
 ---
 # <a name="cv_hreg_e"></a>CV_HREG_e
 Bir hedef kayıt belirtir.

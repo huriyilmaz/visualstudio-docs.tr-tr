@@ -1,6 +1,6 @@
 ---
 title: Seçenekler, Metin Düzenleyici, XAML, Biçimlendirme
-description: XAML 'de programlarken kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için biçimlendirme seçenekleri sayfasını ve alt sayfalarını nasıl kullanacağınızı öğrenin.
+description: XAML'de programlama yapmak için kod düzenleyicisinde kod biçimlendirme seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını ve alt sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: reference
@@ -33,49 +33,49 @@ ms.technology: vs-ide-general
 ms.workload:
 - uwp
 ms.openlocfilehash: 47311af7eee476ac4beea2c73bfa5ab00ed19ea6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122069395"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628641"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>Seçenekler, Metin Düzenleyici, XAML, Biçimlendirme
 
-Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için **biçimlendirme** özelliği sayfasını kullanın. **Seçenekler** iletişim kutusunu açmak için **Araçlar** menüsüne ve ardından **Seçenekler**' e tıklayın. **Biçimlendirme** özelliği sayfasına erişmek için, **metin düzenleyici**  >  **xaml**  >  **biçimlendirme** düğümünü genişletin.
+Öğelerin ve **özniteliklerin** XAML belgelerinize nasıl biçimlendiril olduğunu belirtmek için Biçimlendirme özellik sayfasını kullanın. Seçenekler iletişim **kutusunu açmak** için Araçlar menüsüne ve **ardından** Seçenekler'e **tıklayın.** Biçimlendirme özellik sayfasına **erişmek** için Metin Düzenleyici  >  **XAML Biçimlendirme**  >  **düğümünü** genişletin.
 
-## <a name="auto-formatting-events"></a>Otomatik biçimlendirme olayları
+## <a name="auto-formatting-events"></a>Olayları Otomatik Biçimlendirme
 
-Aşağıdaki olaylardan herhangi biri algılandığında, oto biçimlendirme gerçekleşebilir.
+Aşağıdaki olaylardan herhangi biri algılandığında otomatik biçimlendirme oluşabilir.
 
-- Bitiş etiketi veya basit etiket tamamlama.
+- Bir bitiş etiketinin veya basit etiketin tamamlanması.
 
 - Başlangıç etiketinin tamamlanması.
 
-- Panodan yapıştırılıyor.
+- Panodan yapıştırma.
 
-- Klavye komutları biçimlendiriliyor.
+- Klavye komutlarını biçimlendirme.
 
-Hangi olayların, hangi olayların bu şekilde olduğunu belirtebilirsiniz.
+Hangi olayların otomatik biçimlendirmeye neden olduğunu belirterek.
 
 **Bitiş etiketi veya basit etiket tamamlandığında**
 
-Bir bitiş etiketi veya basit bir etiket yazmayı bitirdiğinizde otomatik biçimlendirme oluşur. Basit bir etiketin öznitelikleri yoktur, örneğin `<Button />` .
+Otomatik biçimlendirme, bir bitiş etiketi veya basit bir etiket yazmayı bitirladığınızda gerçekleşir. Basit bir etiketin özniteliği yoktur, örneğin `<Button />` .
 
 **Başlangıç etiketi tamamlandığında**
 
-Başlangıç etiketi yazmayı bitirdiğinizde otomatik biçimlendirme oluşur.
+Otomatik biçimlendirme, bir başlangıç etiketi yazmayı tamamladığınızda gerçekleşir.
 
-**Panodan yapıştırılırken**
+**Panodan yapıştır**
 
-Panodaki XAML 'yi XAML görünümüne yapıştırdığınızda, oto biçimlendirme gerçekleşir.
+Panodan XAML'i XAML görünümüne yapıştırırken otomatik biçimlendirme gerçekleşir.
 
-## <a name="quotation-mark-style"></a>Tırnak Işareti stili
+## <a name="quotation-mark-style"></a>Tırnak İşareti Stili
 
-Bu ayar, öznitelik değerlerinin tek veya çift tırnak işareti içine alınmış olup olmadığını gösterir. Otomatik biçimlendirici ve IntelliSense otomatik tamamlama bu ayarı kullanır.
+Bu ayar, öznitelik değerlerinin tek veya çift tırnak içinde olup olmadığını gösterir. Hem otomatik biçimlendiren hem de IntelliSense otomatik tamamlama bu ayarı kullanır.
 
-Bu seçeneği ayarladıktan sonra, yalnızca Tasarımcı kullanılarak veya XAML görünümünde el ile eklenen öznitelikler etkilenir.
+Bu seçeneği ayar verdiktan sonra yalnızca tasarımcı kullanılarak veya XAML görünümünde el ile eklenen öznitelikler etkilenir.
 
-**Çift tırnak işareti (")**
+**Çift tırnak (")**
 
 Öznitelik değerleri çift tırnak içine alınır.
 `<Button Name="button1">Hello</Button>`
@@ -85,42 +85,42 @@ Bu seçeneği ayarladıktan sonra, yalnızca Tasarımcı kullanılarak veya XAML
 Öznitelik değerleri tek tırnak içine alınır.
 `<Button Name='button1'>Hello</Button>`
 
-## <a name="tag-wrapping"></a>Etiket sarmalama
+## <a name="tag-wrapping"></a>Etiket Sarmalama
 
-Etiket sarmalama için bir satır uzunluğu belirtebilirsiniz. Etiket kaydırma etkinleştirildiğinde, daha sonra tasarımcı kullanılarak eklenen XAML, uygun şekilde sarmalanır.
+Etiket sarmalama için bir satır uzunluğu belirtebilirsiniz. Etiket sarmalama etkinleştirildiğinde, tasarımcı kullanılarak daha sonra eklenen tüm XAML'ler uygun şekilde sarmalar.
 
-**Belirtilen uzunluğu aşan etiketleri sarın**
+**Belirtilen uzunluğu aşan etiketleri sarmala**
 
-Çizgilerin, **uzunluğa** göre belirtilen satır uzunluğuna kaydırılıp kaydırılmayacağını belirtir.
+Satırların Length tarafından belirtilen satır uzunluğuna sarmalanmış olup olmadığını **belirtir.**
 
 **Uzunluk**
 
-Bir çizginin içerebileceği karakter sayısı. Gerekirse, bazı XAML satırları belirtilen satır uzunluğunu aşabilir.
+Bir satırda yer alan karakter sayısı. Gerekirse, bazı XAML satırları belirtilen satır uzunluğunu aş olabilir.
 
-## <a name="attribute-spacing"></a>Öznitelik aralığı
+## <a name="attribute-spacing"></a>Öznitelik Aralığı
 
-Özniteliklerin XAML belgenizde nasıl düzenlendiğini denetlemek için bu ayarı kullanın
+Özniteliklerin XAML belgesinde nasıl düzenlenmiş olduğunu kontrol etmek için bu ayarı kullanın
 
-**Öznitelikler arasındaki newlines ve boşlukları koru**
+**Öznitelikler arasındaki yeni çizgileri ve boşlukları koruma**
 
-Öznitelikler arasındaki yeni satırlar ve boşluklar, oto biçimlendirmeden etkilenmez.
+Öznitelikler arasındaki yeni satırlar ve boşluklar otomatik biçimlendirmeden etkilenmez.
 
 ```xml
 <Button Height="23"   Name="button1"
 Width="75">Hello</Button>
 ```
 
-**Öznitelikler arasına tek boşluk Ekle**
+**Öznitelikler arasında tek bir boşluk ekleme**
 
-Öznitelikler bir satır kaplar ve bitişik öznitelikleri ayıran bir alandır. Etiket kaydırma ayarları uygulanır.
+Öznitelikler bir satırı kaplar ve bitişik öznitelikleri ayıran bir boşluk içerir. Etiket sarmalama ayarları uygulanır.
 
 ```xml
 <Button Height="23" Name="button1" Width="75">Hello</Button>
 ```
 
-**Her özniteliği ayrı bir satıra yerleştir**
+**Her özniteliği ayrı bir satıra konumlandırma**
 
-Her öznitelik kendi satırını kaplar, bu da birçok öznitelik mevcut olduğunda yararlı olur.
+Her öznitelik kendi çizgisini kaplar ve bu da birçok öznitelik mevcut olduğunda kullanışlıdır.
 
 ```xml
 <Button
@@ -129,9 +129,9 @@ Name="button1"
 Width="75">Hello</Button>
 ```
 
-**İlk özniteliği başlangıç etiketiyle aynı satıra yerleştir**
+**İlk özniteliği başlangıç etiketiyle aynı satıra konumlandırma**
 
-İşaretlendiğinde, ilk öznitelik öğenin başlangıç etiketiyle aynı satırda görüntülenir.
+İşaretlendiğinde, ilk öznitelik öğenin başlangıç etiketiyle aynı satırda görünür.
 
 ```xml
 <Button Height="23"
@@ -139,25 +139,13 @@ Name="button1"
 Width="75">Hello</Button>
 ```
 
-## <a name="element-spacing"></a>Öğe aralığı
+## <a name="element-spacing"></a>Öğe Aralığı
 
-Öğelerin XAML belgenizde nasıl düzenlendiğini denetlemek için bu ayarı kullanın.
+Öğelerin XAML belgeniz içinde nasıl düzenlenmiş olduğunu kontrol etmek için bu ayarı kullanın.
 
-**İçerikte yeni satırları koru**
+**İçerikte yeni satırları koruma**
 
-Öğe içeriğindeki boş satırlar kaldırılmaz.
-
-```xml
-<Grid>
-
-<Button Name="button1">Hello</Button>
-
-</Grid>
-```
-
-**İçerikteki birden çok boş satırı tek bir satıra Daralt**
-
-Öğe içeriğindeki boş satırlar tek bir satıra daraltılır.
+Öğe içeriğinde boş satırlar kaldırılamaz.
 
 ```xml
 <Grid>
@@ -167,9 +155,21 @@ Width="75">Hello</Button>
 </Grid>
 ```
 
-**İçerikteki boş satırları kaldır**
+**İçerikte birden çok boş satırı tek satıra daralt**
 
-Öğe içeriğindeki tüm boş satırlar kaldırılır.
+Öğe içeriğinde boş satırlar tek satıra daraltılmış.
+
+```xml
+<Grid>
+
+<Button Name="button1">Hello</Button>
+
+</Grid>
+```
+
+**İçerikte boş satırları kaldırma**
+
+Öğe içeriğinde tüm boş satırlar kaldırılır.
 
 ```xml
 <Grid>

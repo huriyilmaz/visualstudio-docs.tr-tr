@@ -1,6 +1,6 @@
 ---
 title: Verilere WPF denetimleri bağlama - Bölüm 1
-description: WPF denetimlerini verilere bağlama. Bu veriye bağlı denetimleri oluşturmak için, öğeleri Veri Kaynakları penceresinden veri kaynakları penceresindeki WPF Tasarımcısı'Visual Studio.
+description: WPF denetimlerini verilere bağlama. Bu veriye bağlı denetimleri oluşturmak için öğeleri Veri Kaynakları penceresinden veri kaynağı penceresindeki WPF Tasarımcısı'Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,21 +20,21 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: e491fcb8e7dad813eeb5594f6e8cbb9d64ade6ed
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122075282"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631568"
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere WPF denetimleri bağlama
 
-Verileri denetimlere bağarak uygulamanın kullanıcılarına veri [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] görüntüebilirsiniz. Bu veriye bağlı denetimleri oluşturmak için, öğeleri Veri Kaynakları **penceresinden** veri kaynağı [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)] Visual Studio. Bu konuda, veriye bağlı uygulamalar oluşturmak için kullanabileceğiniz en yaygın görev, araç ve sınıflardan bazıları [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] açıklanmıştır.
+Verileri denetimlere bağarak uygulamanın kullanıcılarına veri [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] görüntüebilirsiniz. Bu veriye bağlı denetimleri oluşturmak için, öğeleri Veri Kaynakları penceresinden veri **kaynakları** [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)] penceresindeki Visual Studio. Bu konuda, veriye bağlı uygulamalar oluşturmak için kullanabileceğiniz en yaygın görev, araç ve sınıflardan bazıları [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] açıklanmıştır.
 
-Veri bağımlı denetimler oluşturma hakkında genel bilgi için Visual Studio' de verilere [bağlama Visual Studio.](../data-tools/bind-controls-to-data-in-visual-studio.md) Veri bağlama hakkında daha [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] fazla bilgi için bkz. Veri [Bağlamaya Genel Bakış.](/dotnet/desktop-wpf/data/data-binding-overview)
+Veri bağımlı denetimler oluşturma hakkında genel bilgi Visual Studio bkz. [Visual Studio.](../data-tools/bind-controls-to-data-in-visual-studio.md). Veri bağlama hakkında daha [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] fazla bilgi için bkz. Veri [Bağlamaya Genel Bakış.](/dotnet/desktop-wpf/data/data-binding-overview)
 
 ## <a name="tasks-involved-in-binding-wpf-controls-to-data"></a>WPF denetimlerini verilere bağlamayla ilgili görevler
 
-Aşağıdaki tabloda, Veri Kaynakları penceresinden öğeleri 'ye sürükleyerek **gerçekleştirebilir görevleri** [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)] listele.
+Aşağıdaki tabloda, Veri Kaynakları penceresinden öğeleri 'ye sürükleyerek **gerçekleştirebilir görevleri** listele [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)] görebilirsiniz.
 
 |Görev|Daha fazla bilgi|
 |----------| - |
@@ -51,7 +51,7 @@ Veri Kaynakları penceresindeki öğeleri **yalnızca içinde** geçerli bırakm
 
 Veri Kaynakları penceresinden  bir öğeyi üzerine sürüklerken, Visual Studio yeni bir veriye bağlı denetim tanımlayan (veya var olan bir denetimi veri kaynağına bağlayan) bir [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)] öğe [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] oluşturulur. Bazı veri kaynakları Visual Studio, veri kaynağını verilerle dolduran arka kod dosyasında da kod üretir.
 
-Aşağıdaki tabloda, Veri Kaynakları penceresinde Visual Studio her veri kaynağı türü için [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] oluşturulan ve **kodu listele.**
+Aşağıdaki tabloda, Veri Kaynakları penceresinde Visual Studio her veri kaynağı türü için oluşturulan ve [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] **kodu listele.**
 
 | Veri kaynağı | Bir denetimi veri kaynağına bağlayan XAML oluşturma | Veri kaynağını verilerle dolduran kod oluşturma |
 | - | - | - |
@@ -70,7 +70,7 @@ Veri Kaynakları penceresinden bir tabloyu **veya sütunu** tasarımcıya sürü
 
 Visual Studio arka plan kod dosyasında aşağıdaki değişiklikleri de yapar:
 
-- Denetimi <xref:System.Windows.FrameworkElement.Loaded> içeren öğe için [!INCLUDE[TLA2#tla_ui](../data-tools/includes/tla2sharptla_ui_md.md)] bir olay işleyicisi oluşturur. Olay işleyicisi tabloyu verilerle doldurur, kapsayıcının kaynaklarından alır ve ardından ilk veri <xref:System.Windows.Data.CollectionViewSource> öğesini geçerli öğe yapar. Bir olay <xref:System.Windows.FrameworkElement.Loaded> işleyicisi zaten varsa Visual Studio bu kodu mevcut olay işleyiciye ekler.
+- Denetimi <xref:System.Windows.FrameworkElement.Loaded> içeren öğe için [!INCLUDE[TLA2#tla_ui](../data-tools/includes/tla2sharptla_ui_md.md)] bir olay işleyicisi oluşturur. Olay işleyicisi tabloyu verilerle doldurur, kapsayıcının kaynaklarından alır ve ardından ilk veri <xref:System.Windows.Data.CollectionViewSource> öğesini geçerli öğe yapar. Bir olay <xref:System.Windows.FrameworkElement.Loaded> işleyicisi zaten varsa, Visual Studio bu kodu mevcut olay işleyiciye ekler.
 
 ### <a name="entity-data-models"></a>Varlık veri modelleri
 
@@ -82,13 +82,13 @@ Veri Kaynakları penceresinden bir varlığı veya varlık **özelliğini** tasa
 
 Visual Studio arka plan kod dosyasında aşağıdaki değişiklikleri de yapar:
 
-- Tasarımcıya sürüklediğiniz varlık (veya tasarımcıya sürüklediğiniz özelliği içeren varlık) için bir sorgu döndüren yeni bir yöntem ekler. Yeni yöntemin adı `Get<EntityName>Query` vardır; `\<EntityName>` burada varlığın adıdır.
+- Tasarımcıya sürüklediğiniz varlık (veya tasarımcıya sürüklediğiniz özelliği içeren varlık) için bir sorgu döndüren yeni bir yöntem ekler. Yeni yöntemin adı `Get<EntityName>Query` vardır, `\<EntityName>` burada varlığın adıdır.
 
-- Denetimi <xref:System.Windows.FrameworkElement.Loaded> içeren öğe için [!INCLUDE[TLA2#tla_ui](../data-tools/includes/tla2sharptla_ui_md.md)] bir olay işleyicisi oluşturur. Olay işleyicisi, varlığı verilerle doldurmak için yöntemini çağırır, kapsayıcının kaynaklarından öğesini toplar ve ardından ilk veri `Get<EntityName>Query` <xref:System.Windows.Data.CollectionViewSource> öğesini geçerli öğe yapar. Bir olay <xref:System.Windows.FrameworkElement.Loaded> işleyicisi zaten varsa Visual Studio bu kodu mevcut olay işleyiciye ekler.
+- Denetimi <xref:System.Windows.FrameworkElement.Loaded> içeren öğe için [!INCLUDE[TLA2#tla_ui](../data-tools/includes/tla2sharptla_ui_md.md)] bir olay işleyicisi oluşturur. Olay işleyicisi, varlığı verilerle doldurmak için yöntemini çağırır, kapsayıcının kaynaklarından öğesini toplar ve ardından ilk veri `Get<EntityName>Query` <xref:System.Windows.Data.CollectionViewSource> öğesini geçerli öğe yapar. Bir olay <xref:System.Windows.FrameworkElement.Loaded> işleyicisi zaten varsa, Visual Studio bu kodu mevcut olay işleyiciye ekler.
 
 ### <a name="services"></a>Hizmetler
 
-Veri Kaynakları penceresinden bir hizmet  nesnesini veya özelliği tasarımcıya sürüklerken, Visual Studio bir veriye bağlı denetim oluşturan (veya var olan bir denetimi nesne veya özelle bağlayan) [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] oluşturur. Ancak Visual Studio ara sunucu hizmeti nesnesini verilerle dolduran kod oluşturmaz. Bu kodu kendiniz yazmalısınız. Bunun nasıl yapacağını gösteren bir örnek için bkz. [WPF denetimlerini bir WCF veri hizmetine bağlama.](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)
+Veri Kaynakları penceresinden bir hizmet  nesnesini veya özelliği tasarımcıya sürüklerken, Visual Studio bir veri bağımlı denetim oluşturan (veya var olan bir denetimi nesne ya da özelle bağlayan) [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] oluşturur. Ancak Visual Studio ara sunucu hizmeti nesnesini verilerle dolduran kod oluşturmaz. Bu kodu kendiniz yazmalısınız. Bunun nasıl yapacağını gösteren bir örnek için bkz. [WPF denetimlerini bir WCF veri hizmetine bağlama.](../data-tools/bind-wpf-controls-to-a-wcf-data-service.md)
 
 Visual Studio aşağıdakileri yapan XAML oluşturur:
 
@@ -98,7 +98,7 @@ Visual Studio aşağıdakileri yapan XAML oluşturur:
 
 ### <a name="objects"></a>Nesneler
 
-Veri Kaynakları penceresinden bir  nesneyi veya özelliği tasarımcıya sürüklerken, Visual Studio bir veriye bağlı denetim oluşturan (veya var olan bir denetimi nesne veya özelle bağlayan) [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] oluşturur. Ancak Visual Studio, nesneyi verilerle doldurmak için kod oluşturmaz. Bu kodu kendiniz yazmalısınız.
+Veri Kaynakları penceresinden bir  nesneyi veya özelliği tasarımcıya sürüklerken, Visual Studio bir veriye bağlı denetim oluşturan (veya var olan bir denetimi nesne ya da özelle bağlayan) [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] oluşturur. Ancak Visual Studio, nesneyi verilerle doldurmak için kod oluşturmaz. Bu kodu kendiniz yazmalısınız.
 
 > [!NOTE]
 > Özel sınıflar genel olmalıdır ve varsayılan olarak parametresiz bir oluşturucuya sahip olmalıdır. Söz dizimlerinde "nokta" olan iç içe geçmiş sınıflar olamayabilirsiniz. Daha fazla bilgi için bkz. [WPF için XAML ve özel sınıflar.](/dotnet/framework/wpf/advanced/xaml-and-custom-classes-for-wpf)

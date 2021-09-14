@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 2c524025a5117406ad8de3737226495253f297e9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113755"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630476"
 ---
 # <a name="idiadatasource"></a>IDiaDataSource
 Hata ayıklama sembollerinin kaynağına erişimi başlatma.
@@ -30,7 +30,7 @@ Hata ayıklama sembollerinin kaynağına erişimi başlatma.
 IDiaDataSource : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
 Aşağıdaki tabloda yöntemlerini `IDiaDataSource` gösterir.
 
 |Yöntem|Açıklama|
@@ -38,7 +38,7 @@ Aşağıdaki tabloda yöntemlerini `IDiaDataSource` gösterir.
 |[IDiaDataSource::get_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md)|Son yükleme hatasının dosya adını alır.|
 |[IDiaDataSource::loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md)|Program veritabanı (.pdb) dosyasını açar ve hata ayıklama veri kaynağı olarak hazırlar.|
 |[IDiaDataSource::loadAndValidateDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loadandvalidatedatafrompdb.md)|açar ve program veritabanı (.pdb) dosyasının sağlanan imza bilgileriyle eş olduğunu doğrular; .pdb dosyasını hata ayıklama veri kaynağı olarak hazırlar.|
-|[IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)|.exe/.dll dosyasıyla ilişkili hata .dll hazırlar.|
+|[IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)|/.exedosyasıyla ilişkili hata .dll hazırlar.|
 |[IDiaDataSource::loadDataFromIStream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md)|Bellek içinde veri akışı aracılığıyla erişilen bir program veritabanı (.pdb) dosyasında depolanan hata ayıklama verilerini hazırlar.|
 |[IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)|Sembolleri sorgulamak için bir oturum açar.|
 

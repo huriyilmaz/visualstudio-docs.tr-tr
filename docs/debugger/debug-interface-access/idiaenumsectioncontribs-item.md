@@ -1,6 +1,6 @@
 ---
-description: Bir dizin yoluyla bölüm katkılarını alır.
-title: 'IDiaEnumSectionContribs:: Item | Microsoft Docs'
+description: Bölüm katkılarını bir dizin ile alın.
+title: IDiaEnumSectionContribs::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: c18f39898347313784e6201aedbc02018771e6f5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036498"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630182"
 ---
 # <a name="idiaenumsectioncontribsitem"></a>IDiaEnumSectionContribs::Item
-Bir dizin yoluyla bölüm katkılarını alır.
+Bölüm katkılarını bir dizin ile alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,14 +36,14 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametreler
  dizin
 
-'ndaki Alınacak [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) nesnesinin dizini. Dizin, `count` `count` [ıdiaenumsectioncontribs:: get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md) yöntemi tarafından döndürülen 0 ile-1 aralığındadır.
+[in] [Alınan IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) nesnesinin dizini. Dizin 0 ile `count` -1 aralığındadır ve `count` burada [IDiaEnumSectionContribs::get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md) yöntemi tarafından döndürülür.
 
  section
 
-dışı İstenen bölüm katkısını temsil eden bir [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) nesnesi döndürür.
+[out] İstenen bölüm [katkısını temsil eden bir IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSectionContribs::get_Count](../../debugger/debug-interface-access/idiaenumsectioncontribs-get-count.md)

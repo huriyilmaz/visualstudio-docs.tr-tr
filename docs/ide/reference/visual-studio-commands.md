@@ -1,6 +1,6 @@
 ---
 title: Komutlar
-description: Visual Studio'da erişiminiz olan çeşitli komutlar hakkında Visual Studio.
+description: Visual Studio'da erişiminiz olan çeşitli komutlar hakkında bilgi Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,25 +16,25 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 180852e2895318f1ffc2fbf411c3945373b5ab4c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122040976"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628563"
 ---
 # <a name="visual-studio-commands"></a>Visual Studio komutları
 
-Komut penceresine Visual Studio veya **Bul/Komut** **kutusuna** komut satırı girebilirsiniz.  Her durumda, büyüktür işareti ( ) bir komutun, arama veya hata ayıklama işlemi `>` yerine aşağıdakini gösterir.
+Komut penceresine, Visual Studio **penceresine** veya **Bul/Komut kutusuna** komut satırı komutları **girebilirsiniz.** Her durumda büyüktür işareti ( ) bir komutun, arama veya hata ayıklama işlemi yerine aşağıdaki `>` gibi olduğunu gösterir.
 
 Komutların ve söz dizimlerinin tam listesini Araçlar Seçenekler **Ortamı'nın** Klavye  >  **sayfasında**  >  **bulabilirsiniz.**
 
 IDE'nin yerelleştirilmiş sürümlerinde, komut adları IDE'nin yerel dilinde veya İngilizce olarak girilebilir. Örneğin, aynı komutu yürütmek `File.NewFile` için Fransızca `Fichier.NouveauFichier` IDE'ye veya yazabilirsiniz.
 
-Çoğu komutun diğer adları vardır. Komut diğer adlarının listesi için bkz. [Komut diğer adları.](../../ide/reference/visual-studio-command-aliases.md) Komut klavye kısayolları için [bkz. Visual Studio.](../default-keyboard-shortcuts-in-visual-studio.md)
+Çoğu komutun diğer adları vardır. Komut diğer adlarının listesi için bkz. [Komut diğer adları.](../../ide/reference/visual-studio-command-aliases.md) Komut klavye kısayolları için [bkz. komutta varsayılan klavye kısayolları Visual Studio.](../default-keyboard-shortcuts-in-visual-studio.md)
 
 ## <a name="escape-character"></a>Atlatma karakteri
 
-Komutlar için Visual Studio karakteri, bir karakter karakteridir (^). Kaçış karakteri, onu takip eden karakterin bir denetim karakteri yerine tam olarak yorumlanması anlamına gelir. Bu, anahtar adları dışında bir parametre veya anahtar değerine düz tırnak işaretleri ("), boşluklar, baştaki eğik çizgi, çizgi işareti veya diğer sabit karakterleri eklemek için kullanılabilir. Örnek:
+Komutlar için kaçış Visual Studio bir karakter (^) olur. Kaçış karakteri, onu takip eden karakterin bir denetim karakteri yerine tam olarak yorumlanması anlamına gelir. Bu, anahtar adları dışında bir parametre veya anahtar değerine düz tırnak işaretleri ("), boşluklar, baştaki eğik çizgi, çizgi işareti veya diğer sabit karakterleri eklemek için kullanılabilir. Örnek:
 
 ```
 >Edit.Find ^^t /regex
@@ -46,10 +46,10 @@ Komutlar için Visual Studio karakteri, bir karakter karakteridir (^). Kaçış 
 
 Aşağıdaki komutlar bağımsız değişkenleri veya anahtarları alır:
 
-| Komut Adı | Açıklama |
+| Komut Adı | Description |
 | - | - |
 | [Var Olan Öğeyi Ekle](../../ide/reference/add-existing-item-command.md) | Mevcut bir dosyayı geçerli çözüme ekler ve açar. |
-| [Var Olan Project](../../ide/reference/add-existing-project-command.md) | Mevcut bir projeyi geçerli çözüme ekler. |
+| [Var Olan Verileri Project](../../ide/reference/add-existing-project-command.md) | Mevcut bir projeyi geçerli çözüme ekler. |
 | [Yeni Öğe Ekle](../../ide/reference/add-new-item-command.md) | Geçerli çözüme .htm, .css, .txt veya frameset gibi yeni bir çözüm öğesi ekler ve açar. |
 | [Diğer ad](../../ide/reference/alias-command.md) | Tam komut, tam komut ve bağımsız değişkenler, hatta başka bir diğer ad için yeni bir diğer ad oluşturur. |
 | [Evaluate Deyimi](../../ide/reference/evaluate-statement-command.md) | Verilen deyimi değerlendirir ve görüntüler. |
@@ -70,7 +70,7 @@ Aşağıdaki komutlar bağımsız değişkenleri veya anahtarları alır:
 | [Yazdır](../../ide/reference/print-command.md) | İfadeyi değerlendirir ve sonuçları veya belirtilen metni görüntüler. |
 | [Hızlı İzleme Komutu](../../ide/reference/quick-watch-command.md) | Hızlı İzleme iletişim kutusunun İfade **alanında** seçili veya belirtilen **metni** görüntüler. |
 | [Değiştirmek](../../ide/reference/replace-command.md) | Bul ve Değiştir denetiminde kullanılabilen seçeneklerin bir alt kümesini kullanarak **dosyalarda bulunan metni** değiştirir. |
-| [Dosyalarda Değiştir](../../ide/reference/replace-in-files-command.md) | Dosyalarda Değiştir'te bulunan seçeneklerin bir alt kümesini kullanarak [dosyalarda yer alan metni değiştirir.](../../ide/replace-in-files.md) |
+| [Dosyalarda Değiştir](../../ide/reference/replace-in-files-command.md) | Dosyalarda yer alan metni, Dosyalarda Değiştir'te bulunan seçeneklerin bir alt [kümesini kullanarak değiştirir.](../../ide/replace-in-files.md) |
 | [Geçerli Yığın Çerçevesini Ayarlama](../../ide/reference/set-current-stack-frame-command.md) | Belirli bir yığın çerçevesini görüntülemeye olanak sağlar. |
 | [Geçerli İş Parçacığını Ayarla](../../ide/reference/set-current-thread-command.md) | Belirli bir iş parçacığını görüntülemeye olanak sağlar. |
 | [Radix'i ayarlama](../../ide/reference/set-radix-command.md) | Görüntülenecek bayt sayısını belirler. |
@@ -78,7 +78,7 @@ Aşağıdaki komutlar bağımsız değişkenleri veya anahtarları alır:
 | [ShowWebBrowser Komutu](../../ide/reference/showwebbrowser-command.md) | Web tarayıcısı penceresinde belirttiğiniz URL'yi tümleşik geliştirme ortamında (IDE) veya IDE'nin dışında görüntüler. |
 | [Başlangıç](../../ide/reference/start-command.md) | Hata ayıklama işlemini başlar ve hataların nasıl işlen olduğunu belirtmenize olanak sağlar. |
 | [Yol](../../ide/reference/symbol-path-command.md) | Hata ayıklayıcısının sembol araması için dizin listesini ayarlar. |
-| [Kesme Noktası'nın Geçişini Değiştir](../../ide/reference/toggle-breakpoint-command.md) | Kesme noktası, geçerli durumuna bağlı olarak dosyasındaki geçerli konumda açık veya kapalı olur. |
+| [Kesme Noktası'nın GeçişIni Değiştir](../../ide/reference/toggle-breakpoint-command.md) | Kesme noktası, geçerli durumuna bağlı olarak dosyasındaki geçerli konumda açık veya kapalı olur. |
 | [İzleme Komutu](../../ide/reference/watch-command.md) | İzleme penceresinin belirtilen bir örneğini oluşturur **ve** açar. |
 
 ## <a name="see-also"></a>Ayrıca bkz.

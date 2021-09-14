@@ -1,6 +1,6 @@
 ---
-description: Numaralama dizisinde belirtilen sayıda simgeyi alan.
-title: IDiaEnumSymbols::Next | Microsoft Docs
+description: Sabit Listesi dizisinde belirtilen sayıda sembol alır.
+title: 'IDiaEnumSymbols:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: d366401b76e328f23ab77a65563fbe90a4fb7f29
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129298"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630021"
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
-Numaralama dizisinde belirtilen sayıda simgeyi alan.
+Sabit Listesi dizisinde belirtilen sayıda sembol alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT Next (
 ```
 
 #### <a name="parameters"></a>Parametreler
- Celt
+ celt
 
-[in] Numaralayıcıda alınan simgelerin sayısı.
+'ndaki Numaralandırıcıda alınacak olan simgelerin sayısı.
 
- Rgelt
+ rgelt
 
-[out] İstenen sembolleri temsil eden [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesneleriyle doldurulacak bir dizi.
+dışı İstenen sembolleri temsil eden [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesneleriyle doldurulacak bir dizi.
 
- pceltFetched
+ Pceltfettiz
 
-[out] Getirili numaralayıcıda simgelerin sayısını döndürür.
+dışı Getirilen Numaralandırıcı içindeki simgelerin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` sembol yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla sembol yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

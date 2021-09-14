@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 32fe309b649f364c4b8eb3694716f206c2b2881b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066379"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629157"
 ---
 # <a name="idiasessionfindsymbolbyaddr"></a>IDiaSession::findSymbolByAddr
 Belirtilen bir adresi içeren veya en yakın olan belirtilen sembol türünü alın.
@@ -42,7 +42,7 @@ HRESULT findSymbolByAddr (
 
  `offset`
 
-[in] Adresin kaydırma bileşenini belirtir.
+[in] Adresin uzaklık bileşenini belirtir.
 
  `symtag`
 

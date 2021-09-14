@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinde belirtilen sayıda kaynak dosyası alır.
-title: 'IDiaEnumSourceFiles:: Next | Microsoft Docs'
+description: Numaralama dizisinde belirtilen sayıda kaynak dosyayı alan.
+title: IDiaEnumSourceFiles::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: a2b7e18417cead3100a879b2a9f2dcd19ed18f22
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129498"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630087"
 ---
 # <a name="idiaenumsourcefilesnext"></a>IDiaEnumSourceFiles::Next
-Sabit Listesi dizisinde belirtilen sayıda kaynak dosyası alır.
+Numaralama dizisinde belirtilen sayıda kaynak dosyayı alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT Next (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Alınacak numaralandırıcıdaki kaynak dosya sayısı.
+[in] Numaralayıcıda alınan kaynak dosya sayısı.
 
- rgelt
+ Rgelt
 
-dışı İstenen kaynak dosyalarını temsil eden [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) nesneleriyle doldurulacak bir dizi.
+[out] İstenen kaynak dosyaları temsil eden [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) nesneleriyle doldurulması gereken bir dizi.
 
- Pceltfettiz
+ pceltFetched
 
-dışı Getirilen Numaralandırıcı içindeki kaynak dosyalarının sayısını döndürür.
+[out] Alınan numaralayıcıda kaynak dosya sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla kaynak dosyası yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` kaynak dosya yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)

@@ -1,6 +1,6 @@
 ---
-title: Özellik türleri eşle değil
-description: İlişki oluşturulamaz - özellik türleri eşliğiz. Bu Visual Studio Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) iletisiyle ilgili bilgileri görüntüleme.
+title: Özellik türleri eşleşmiyor
+description: İlişki oluşturulamıyor-Özellik türleri eşleşmiyor. bu Visual Studio Nesne İlişkisel Tasarımcısı (O/R Designer) iletisiyle ilgili bilgileri görüntüleyin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: error-reference
@@ -12,31 +12,31 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: f752757aadf67529f915340434735e89bf7375da
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081886"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631563"
 ---
-# <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>İlişki ilişkilendirme adı &lt; oluşturulamaz &gt; - özellik türleri eşle
+# <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>İlişki &lt; ilişkilendirme adı oluşturulamıyor &gt; -özellik türleri eşleşmiyor
 
-İlişki oluşturulamaz \<association name> - özellik türleri eşliğiz. Özelliklerin eşleşen türleri yok: \<property names> .
+İlişki oluşturulamıyor \<association name> -özellik türleri eşleşmiyor. Özelliklerin eşleşen türleri yok: \<property names> .
 
-İlişkiler, İlişki Düzenleyici iletişim **kutusunda seçili** İlişki Özellikleri **tarafından** tanımlanır. İlişkinin her tarafındaki özellikler aynı veri türünde olması gerekir.
+İlişkilendirmeler, **Ilişki düzenleyici** iletişim kutusunda seçilen **ilişkilendirme özellikleri** tarafından tanımlanır. İlişkilendirmenin her tarafındaki Özellikler aynı veri türünde olmalıdır.
 
 İletide listelenen özellikler aynı veri türlerine sahip değildir.
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-1. İletiyi inceler ve iletide çağrılan özellikleri not alın.
+1. İletiyi inceleyin ve iletide verilen özellikleri aklınızda edin.
 
-2. İletişim **kutusunu** açmak için Tamam'a tıklayın.
+2. İletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 
-3. İlişki **özellikleri'ne** tıklayın ve aynı veri türünün özelliklerini seçin.
+3. **Ilişki özelliklerini** inceleyin ve aynı veri türünde Özellikler ' i seçin.
 
 4. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to SQL araçları Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
-- [Nasıl kullanılır: LINQ to SQL sınıfları (O/R Tasarımcısı) arasında ilişki oluşturma](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)
+- [Visual Studio araçlar LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [nasıl yapılır: LINQ to SQL sınıfları arasında ilişki oluşturma (O/R Designer)](../data-tools/how-to-create-an-association-relationship-between-linq-to-sql-classes-o-r-designer.md)

@@ -1,6 +1,6 @@
 ---
-description: Bloğun sanal adresini (VA) alır.
-title: 'IDiaLineNumber:: get_virtualAddress | Microsoft Docs'
+description: Bloğun sanal adresini (VA) alın.
+title: IDiaLineNumber::get_virtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 7c0af3aec2c8ac413873ae0a0ff6dfc054e6f696
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129098"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629636"
 ---
 # <a name="idialinenumberget_virtualaddress"></a>IDiaLineNumber::get_virtualAddress
-Bloğun sanal adresini (VA) alır.
+Bloğun sanal adresini (VA) alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_virtualAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bloğun sanal adresini döndürür.
+[out] Bloğun sanal adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

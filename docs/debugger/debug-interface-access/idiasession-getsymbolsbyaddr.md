@@ -1,6 +1,6 @@
 ---
-description: Sembolleri, adreslerinin sırasına göre bulan bir Numaralandırıcı alır.
-title: 'IDiaSession:: getSymbolsByAddr | Microsoft Docs'
+description: Adreslerinin sırasına göre sembolleri bulan bir numaralayıcıyı alın.
+title: IDiaSession::getSymbolsByAddr | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 679ec90169ed8b95fe2fd10c0e1453efbcac243b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066273"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629073"
 ---
 # <a name="idiasessiongetsymbolsbyaddr"></a>IDiaSession::getSymbolsByAddr
-Sembolleri, adreslerinin sırasına göre bulan bir Numaralandırıcı alır.
+Adreslerinin sırasına göre sembolleri bulan bir numaralayıcıyı alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT getSymbolsByAddr(
 #### <a name="parameters"></a>Parametreler
  `ppEnumbyAddr`
 
-dışı Bir [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) nesnesi döndürür. Sembol deposundaki bellek konumuna göre sembolleri aramak için bu arabirimi kullanın.
+[out] Bir [IDiaEnumSymbolsByAddr nesnesi](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) döndürür. Sembol depolamada bellek konuma göre semboller aramak için bu arabirimi kullanın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

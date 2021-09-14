@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c453e7513cb076acc22089bb0bf4da7e8e2957c307ca4ac566a4b34c2aa47749
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 4ed16d546887a8d467dce9cdb014711e24322b21
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121404981"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628946"
 ---
 # <a name="idiastackframeget_returnaddress"></a>IDiaStackFrame::get_returnAddress
 Çerçevenin dönüş adresini alır.

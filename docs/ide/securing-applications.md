@@ -15,11 +15,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: d95b640fc6daae8c9fe6734ab6cec5c73f96cd1c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122123664"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628526"
 ---
 # <a name="secure-applications"></a>Uygulamaları güvenli hale getirme
 

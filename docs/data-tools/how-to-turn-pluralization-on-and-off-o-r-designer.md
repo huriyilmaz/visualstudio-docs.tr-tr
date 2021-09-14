@@ -12,11 +12,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: f51d48f2d4af4ed723dbe0dcd720ee460e1feb1b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122139679"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631298"
 ---
 # <a name="how-to-turn-pluralization-on-and-off-or-designer"></a>Nasıl yapılır: Çoğullaştırmayı açıp kapatma (O/R Tasarımcısı)
 varsayılan olarak, **Sunucu Gezgini** veya **Veritabanı Gezgini** son görüntülenen adlara sahip veritabanı nesnelerini [Visual Studio LINQ to SQL araçlar](../data-tools/linq-to-sql-tools-in-visual-studio2.md)üzerine sürüklediğinizde, oluşturulan varlık sınıflarının adları plural 'den tekil 'e değiştirilir. Bu, Örneklenmiş varlık sınıfının tek bir veri kaydıyla eşlendiği olguyu daha doğru bir şekilde temsil etmek için yapılır. Örneğin, `Customers` **u/R tasarımcısına** tablo eklemek, `Customer` sınıfı yalnızca tek bir müşteri için veri tutacağından, adlı bir varlık sınıfı ile sonuçlanır.

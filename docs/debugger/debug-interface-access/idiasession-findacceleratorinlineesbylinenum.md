@@ -1,6 +1,6 @@
 ---
-description: Belirtilen kaynak konumuna karşılık gelen satır içi çerçeveler için simgelerin bir listesini döndürür.
-title: 'IDiaSession:: findAcceleratorInlineesByLinenum | Microsoft Docs'
+description: Belirtilen kaynak konuma karşılık gelen satır içi çerçeveler için simgelerin bir sabit bir sabitlevasyonu döndürür.
+title: IDiaSession::findAcceleratorInlineesByLinenum | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,14 +13,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: a6c819ea1fe69c31f86165f9ce4e72111c48b651
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044345"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629277"
 ---
 # <a name="idiasessionfindacceleratorinlineesbylinenum"></a>IDiaSession::findAcceleratorInlineesByLinenum
-Belirtilen kaynak konumuna karşılık gelen satır içi çerçeveler için simgelerin bir listesini döndürür.
+Belirtilen kaynak konuma karşılık gelen satır içi çerçeveler için simgelerin bir sabit bir sabitlevasyonu döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,26 +37,26 @@ HRESULT findAcceleratorInlineeLinesByName (
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki `IDiaSymbol` Aranması gereken Hızlandırıcı saplama işlevine karşılık gelen bir.
+[in] Aranacak `IDiaSymbol` Hızlandırıcı saplama işlevine karşılık gelen bir.
 
  `file`
 
-'ndaki `IDiaSourceFile` Kaynak konumu.
+[in] Kaynak `IDiaSourceFile` konumun .
 
  `linenum`
 
-'ndaki Kaynak konumun satır numarası.
+[in] Kaynak konumun satır numarası.
 
  `colnum`
 
-'ndaki Kaynak konumun sütun numarası.
+[in] Kaynak konumun sütun numarası.
 
  `ppResult`
 
-dışı `IDiaEnumLineNumbers` Sonuçla başlatılan arabirim işaretçisine yönelik bir işaretçi.
+[out] Sonuçla başlatılan `IDiaEnumLineNumbers` bir arabirim işaretçisinin işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

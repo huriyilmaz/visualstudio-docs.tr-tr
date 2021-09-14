@@ -17,14 +17,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 3db5105f310bdb3493262965f313620b66393651
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036704"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630710"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>Sabitler (Arabirim Erişimi SDK'sında Hata Ayıklama)
-Bu dize sabitleri, bir program hata ayıklama veritabanı (PDB) dosyasının farklı bölümlerini DIA SDK.
+Bu dize sabitleri, bir program hata ayıklama veritabanı (PDB) dosyasının çeşitli bölümlerini DIA SDK.
 
 ## <a name="constants"></a>Sabitler
 Aşağıdakiler C/C++ makroları olarak bildirilmez.

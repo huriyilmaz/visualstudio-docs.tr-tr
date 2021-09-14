@@ -1,6 +1,6 @@
 ---
-description: IDiaFrameData::get_lengthSavedRegisters yığına gönderilen kayıtlı yazmaçların bayt sayısını alınır.
-title: IDiaFrameData::get_lengthSavedRegisters | Microsoft Docs
+description: 'IDiaFrameData:: get_lengthSavedRegisters, yığında gönderilen kayıtlı yazmaçların bayt sayısını alır.'
+title: 'IDiaFrameData:: get_lengthSavedRegisters | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: fc5f3ef7a27ef367c1f48bb17bf346322eff6434
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074863"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629840"
 ---
 # <a name="idiaframedataget_lengthsavedregisters"></a>IDiaFrameData::get_lengthSavedRegisters
-Yığına gönderilen kaydedilmiş yazmazların bayt sayısını alın.
+Yığına gönderilen kaydedilmiş yazmaçların bayt sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_lengthSavedRegisters (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Kaydedilen yazmazların bayt sayısını döndürür.
+dışı Kaydedilen yazmaçların bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem tarafından döndürülen değer genellikle bir program dizesinin yorumlanmasında kullanılır (program dizesinin tanımı için [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) yöntemine bakın).
+ Bu yöntemin döndürdüğü değer genellikle program dizesinin yorumu içinde kullanılır (program dizesinin tanımı için [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) metoduna bakın).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

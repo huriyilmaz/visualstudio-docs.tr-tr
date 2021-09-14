@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinde belirtilen sayıda çerçeve verisi öğesini alır.
-title: 'IDiaEnumFrameData:: Next | Microsoft Docs'
+description: Numaralama dizisinde belirtilen sayıda çerçeve verisi öğelerini alan.
+title: IDiaEnumFrameData::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 57324a0ec9b82ff0b32f16ebf32f8d3ee9e19fb5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134612"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630326"
 ---
 # <a name="idiaenumframedatanext"></a>IDiaEnumFrameData::Next
-Sabit Listesi dizisinde belirtilen sayıda çerçeve verisi öğesini alır.
+Numaralama dizisinde belirtilen sayıda çerçeve verisi öğelerini alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT Next (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Alınacak Numaralandırıcı içindeki çerçeve verisi öğelerinin sayısı.
+[in] Numaralayıcıda alınan çerçeve veri öğelerinin sayısı.
 
- rgelt
+ Rgelt
 
-dışı İstenen çerçeve verisi öğeleriyle doldurulacak bir [ıaframedata](../../debugger/debug-interface-access/idiaframedata.md) nesneleri dizisi.
+[out] İstenen çerçeve veri öğeleriyle doldurulan [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesneleri dizisi.
 
- Pceltfettiz
+ pceltFetched
 
-dışı Getirilen Numaralandırıcı içindeki çerçeve verisi öğelerinin sayısını döndürür.
+[out] Getirili numaralayıcıda çerçeve veri öğelerinin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla kayıt yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` kayıt yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

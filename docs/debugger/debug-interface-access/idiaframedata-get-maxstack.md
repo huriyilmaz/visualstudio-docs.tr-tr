@@ -1,6 +1,6 @@
 ---
-description: 'IDiaFrameData:: get_maxStack çerçevedeki yığına gönderilen en fazla bayt sayısını alır.'
-title: 'IDiaFrameData:: get_maxStack | Microsoft Docs'
+description: IDiaFrameData::get_maxStack, çerçevede yığına gönderilen en fazla bayt sayısını almaktadır.
+title: IDiaFrameData::get_maxStack | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: f0af1f96f3f9ee468c18b89a1fd15f291ce2de0c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122147290"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629828"
 ---
 # <a name="idiaframedataget_maxstack"></a>IDiaFrameData::get_maxStack
-Çerçevedeki yığına gönderilen en fazla bayt sayısını alır.
+Çerçevede yığına gönderilen en fazla bayt sayısını alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_maxStack (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Yığına gönderilen en fazla bayt sayısını döndürür.
+[out] Yığına gönderilen en fazla bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntemin döndürdüğü değer genellikle program dizesinin yorumu içinde kullanılır (program dizesinin tanımı için [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) metoduna bakın).
+ Bu yöntem tarafından döndürülen değer genellikle bir program dizesinin yorumlanmasında kullanılır (program dizesinin tanımı için [IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) yöntemine bakın).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

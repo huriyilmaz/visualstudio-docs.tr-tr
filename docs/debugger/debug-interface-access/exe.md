@@ -18,11 +18,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 32f559e2365e0c422497573dc19ce2ce094caa9a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122031339"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630602"
 ---
 # <a name="exe"></a>Exe
 Exe, .exe veya .dll dosyasının genel kapsamını temsil ettiğinden, sözcük temelli ya da sınıf üst öğesi olmayan tek simgedir. Dosya başına etiket içeren tek bir sembol vardır `SymTagExe` . [IDiaSession:: get_globalScope](../../debugger/debug-interface-access/idiasession-get-globalscope.md) yöntemi simgeyi döndürür.

@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklama 64-bit uygulamalar | Microsoft Docs
-description: Visual Studio ile 64 bitlik bir uygulamada hata ayıklamayı öğrenin. Beklenmedik hata ayıklama gecikmeleriyle ilgili sorunları gidermeye yönelik ipuçları vardır.
+title: 64 Bit Uygulamalarda Hata Ayıklama | Microsoft Docs
+description: Visual Studio ile 64 bitlik bir uygulamada hata ayıklamayı Visual Studio. Beklenmeyen hata ayıklama gecikmeleri için ipuçları vardır.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -20,45 +20,45 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: dc3a841d97b3479eb30d26d66608827e1a771d20
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066830"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630813"
 ---
 # <a name="debug-64-bit-applications"></a>64 Bit Uygulamalarda Hata Ayıklama
-Yerel bilgisayarda veya uzak bir bilgisayarda çalışan 64 bitlik bir uygulamada hata ayıklaması yapabilirsiniz.
+Yerel bilgisayarda veya uzak bir bilgisayarda çalışan 64 bit uygulamada hata ayıkabilirsiniz.
 
- Uzak bilgisayarda çalışan 64 bitlik bir uygulamada hata ayıklamak için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
+ Uzak bilgisayarda çalışan 64 bit uygulamanın hatasını ayıklamak için bkz. [Uzaktan Hata Ayıklama.](../debugger/remote-debugging.md)
 
- Visual Studio, yerel olarak 64 bitlik uygulamalarda hata ayıklamak için 64 bit çalışan işlemi kullanır (msvsmon.exe) ve bu işlemler, 32-bit Visual Studio işleminin içinde gerçekleştirilemez alt düzey işlemleri gerçekleştirir.
+ 64 bit uygulamalarda yerel olarak hata ayıklamak için Visual Studio, 64 bit çalışan işlemi (msvsmon.exe) kullanır ve 32 bit çalışma süreci içinde gerçekleştirileb alt düzey işlemleri Visual Studio.
 
- .NET Framework sürüm 3,5 veya önceki bir sürümü kullanan 64 bit işlemlerde karışık modda hata ayıklama desteklenmez.
+ Karma mod hata ayıklaması, 3.5 veya önceki bir sürümü kullanan .NET Framework 64 bit işlemler için desteklenmiyor.
 
-## <a name="debug-a-64-bit-application"></a>64 bitlik bir uygulamada hata ayıklama
- 64 bitlik bir uygulamada hata ayıklamayı denemek için:
+## <a name="debug-a-64-bit-application"></a>64 bit Uygulamada Hata Ayıklama
+ 64 bit uygulamada hata ayıklamayı denemek için:
 
-1. bir Visual Studio çözümü oluşturun, örneğin bir C# konsol uygulaması.
+1. C# Visual Studio gibi bir çözüm oluşturun.
 
-2. Configuration Manager kullanarak yapılandırmayı 64 bit olarak ayarlayın. Daha fazla bilgi için bkz. [nasıl yapılır: projeleri hedef platformları Için yapılandırma](../ide/how-to-configure-projects-to-target-platforms.md).
+2. Yapılandırmayı 64 bit olarak ayarlamak için Yapılandırma Yöneticisi. Daha fazla bilgi için, [bkz. How to: Configure Projects to Target Platforms](../ide/how-to-configure-projects-to-target-platforms.md).
 
-3. Bu noktada, uzaktan hata ayıklayıcı 'nın 64 bit sürümü (msvsmon.exe) başlatılır. 64 bit yapılandırmasına sahip çözüm açık olduğu sürece çalışır.
+3. Bu noktada, uzak hata ayıklayıcının 64 bit sürümü (msvsmon.exe) başlar. 64 bit yapılandırmaya sahip çözüm açık olduğu sürece çalışır.
 
-4. Hata ayıklamayı başlatın. 32 bitlik bir yapılandırmayla aynı deneyimle sahip olmanız gerekir. Hata alırsanız aşağıdaki sorun giderme bölümüne bakın.
+4. Hata ayıklamayı başlatın. 32 bit yapılandırmayla aynı deneyimi yaşamanız gerekir. Hata asanız aşağıdaki Sorun giderme bölümüne bakın.
 
-## <a name="troubleshooting-64-bit-debugging"></a>Sorun giderme 64-bit hata ayıklama
- Bir hata görebilirsiniz: "64 bit hata ayıklama işlemi beklenenden uzun sürüyor." bu durumda Visual Studio, msvsmon.exe 64 bit sürümüne bir istek gönderdi ve bu isteğin geri gelmesi uzun zaman aldı.
+## <a name="troubleshooting-64-bit-debugging"></a>64 bit hata ayıklama sorunlarını giderme
+ Şu hatayı alabilirsiniz: "64 bit hata ayıklama işlemi beklenenden uzun sürer." Bu durumda Visual Studio msvsmon.exe 64 bit sürümüne bir istek gönderdi ve bu isteğin sonucu çok uzun sürdü.
 
- Bu hatanın başlıca iki nedeni vardır:
+ Bu hatanın iki ana nedeni vardır:
 
-- Bilgisayarınızda, ağ yığınının güvenilmez hale gelmesinin ve localhost üzerinden gelen paketleri bıraktığı ağ güvenlik yazılımı yüklü. Tüm ağ güvenlik yazılımlarını devre dışı bırakıp çözmediğine bakın. Bu durumda, yazılımın localhost trafiğiyle çakışmasını engelleyen ağ güvenliği yazılım satıcınıza rapor edin.
+- Bilgisayarınızda ağ yığınının güvenilir olmayan bir şekilde teslim edişini ve localhost üzerinden giden paketleri düşüren ağ güvenlik yazılımını yüklemişsinizdir. Tüm ağ güvenlik yazılımlarını devre dışı bırakmayı deneyin ve bunun çözümleyene bakabilirsiniz. Öyleyse, ağ güvenlik yazılımı satıcınıza yazılımın localhost trafiğine engel olduğunu rapor olun.
 
-- Visual Studio yanıt vermeyen bir sorun veya başka bir performans sorunu üzerinde çalışıyorsunuz. sorun düzenli olarak gerçekleşmişse, Visual Studio (devenv.exe) ve çalışan işlemin (msvsmon.exe) dökümünü toplayıp Microsoft 'a gönderebilirsiniz. Sorun bildirme hakkında daha fazla bilgi için bkz. [Visual Studio sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md).
+- Sorunun yanıt vermemeye Visual Studio başka bir performans sorunuyla karşı karşısı var. Sorun düzenli olarak gerçekleşirse, Visual Studio (devenv.exe) ve çalışan işleminin (msvsmon.exe) dökümlerini toplayabilirsiniz ve bunları Microsoft'a göndersiniz. Bir sorunu bildirme hakkında bilgi için [bkz.](../ide/how-to-report-a-problem-with-visual-studio.md)How to Report a Problem with Visual Studio .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [64 bit Uygulamalar](/dotnet/framework/64-bit-apps)
-- [64 bit için programları yapılandırma](/cpp/build/configuring-programs-for-64-bit-visual-cpp)
-- [Visual Studio IDE 64 bit desteği](../ide/visual-studio-ide-64-bit-support.md)
+- [Programları 64 Bit için Yapılandırma](/cpp/build/configuring-programs-for-64-bit-visual-cpp)
+- [Visual Studio IDE 64 Bit Desteği](../ide/visual-studio-ide-64-bit-support.md)
 - [Döküm Dosyalarını Kullanma](../debugger/using-dump-files.md)
-- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)

@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a3d09b96f835b84399742a461b404bc4b75ddc0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122097949"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630500"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
 program veritabanı (.pdb) dosyasının sağlanan imza bilgileriyle eş olduğunu açar ve doğrular ve .pdb dosyasını hata ayıklama veri kaynağı olarak hazırlar.
@@ -50,7 +50,7 @@ HRESULT loadAndValidateDataFromPdb (
 
 `age`
 
-[in] Doğru için yaş değeri. Yaş her zaman bilinen bir saat değerine karşılık gelmez; bir .pdb dosyasının karşılık gelen bir dosyayla eşitlenen bir zaman .exe kullanılır.
+[in] Doğru için yaş değeri. Yaş her zaman bilinen bir saat değerine karşılık gelmez, bir .pdb dosyasının karşılık gelen bir dosyayla eşitlenen bir zaman .exe kullanılır.
 
 ## <a name="return-value"></a>Dönüş Değeri
 Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri yer alır.
@@ -61,15 +61,15 @@ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. 
 |E_PDB_FORMAT|Eski bir biçime sahip bir dosyaya erişmeye çalışıldı.|
 |E_PDB_INVALID_SIG|İmza eşle değil.|
 |E_PDB_INVALID_AGE|Yaş eşle değil.|
-|E_ınvalıdarg|Geçersiz parametre.|
-|E_unexpected|Veri kaynağı zaten hazırlanmıştır.|
+|E_INVALIDARG|Geçersiz parametre.|
+|E_UNEXPECTED|Veri kaynağı zaten hazırlanmıştır.|
 
 ## <a name="remarks"></a>Açıklamalar
 .pdb dosyası hem imza hem de yaş değerlerini içerir. Bu değerler.pdb dosyasıyla .exe .dll dosyada çoğaltılır. Bu yöntem, veri kaynağını hazırlamadan önce, adlandırılmış .pdb dosyasının imzası ve yaşı değerlerinin sağlanan değerlerle eşle olduğunu doğrular.
 
 Doğrulama olmadan bir .pdb dosyası yüklemek için [IDiaDataSource::loadDataFromPdb yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) kullanın.
 
-Veri yükleme sürecine erişim elde etmek için (bir geri çağırma mekanizması aracılığıyla), [IDiaDataSource::loadDataForExe yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) kullanın.
+Veri yükleme sürecine erişim elde etmek için (geri çağırma mekanizması aracılığıyla), [IDiaDataSource::loadDataForExe yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) kullanın.
 
 .pdb dosyasını doğrudan bellekten yüklemek için [IDiaDataSource::loadDataFromIStream yöntemini](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) kullanın.
 

@@ -8,11 +8,11 @@ ms.date: 04/06/2021
 ms.technology: vs-container-tools
 ms.topic: reference
 ms.openlocfilehash: 1d2e367f066fc683c1a29ce2dab1b692abe5fce9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122147303"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631737"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose derleme özellikleri
 
@@ -34,7 +34,7 @@ Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Docker 
 
 aşağıdaki tabloda Docker Compose projeleri için kullanılabilen MSBuild özellikleri gösterilmektedir.
 
-| Özellik adı | Konum | Açıklama | Varsayılan değer  |
+| Özellik adı | Konum | Description | Varsayılan değer  |
 |---------------|----------|-------------|----------------|
 |AdditionalComposeFilePaths|dcproj|Tüm komutlar için docker-compose.exe gönderilmek üzere, noktalı virgülle ayrılmış bir listede ek oluşturma dosyaları belirtir. Docker-Compose proje dosyasından (dcproj) göreli yollara izin verilir.|-|
 |DockerComposeBaseFilePath|dcproj|Docker-Compose dosyalarının dosya adlarının ilk kısmını *. yıml* uzantısı olmadan belirtir. Örnek: <br>1. DockerComposeBaseFilePath = null/tanımsız: *Docker-Compose* temel dosya yolunu kullanın ve dosyalar *Docker-Compose. yml* ve *Docker-Compose. override. yml* olarak adlandırılır.<br>2. DockerComposeBaseFilePath = *mydockercompose*: dosyalar *mydockercompose. yml* ve *mydockercompose. override. yml* olarak adlandırılır.<br> 3. DockerComposeBaseFilePath = *.. \mydockercompose*: dosyalar bir düzey yukarı kalacak. |Docker-Compose|
@@ -114,7 +114,7 @@ services:
 
 Yukarıdaki örnekte olduğu gibi, değerlerin etrafında çift tırnak işareti kullanın ve ters eğik çizgiyi yollarda ters eğik çizgi için kaçış karakteri olarak kullanın.
 
-|Etiket adı|Açıklama|
+|Etiket adı|Description|
 |----------|-----------|
 |com. Microsoft. VisualStudio. debugayıklanan. Arguments|Hata ayıklama başlatılırken programa geçirilen bağımsız değişkenler. .net Core uygulamaları için bu bağımsız değişkenler genellikle NuGet paketlerine ait ek arama yollarıdır ve ardından projenin çıkış derlemesinin yoludur.|
 |com. Microsoft. VisualStudio. debugayıklanan. program|Hata ayıklama başlatılırken program başlatıldı. .NET Core uygulamaları için bu ayar genellikle **DotNet**' dir.|

@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinde belirtilen sayıda bölüm katkılarını atlar.
-title: 'IDiaEnumSectionContribs:: Skip | Microsoft Docs'
+description: Bir numaralama dizisinde belirtilen sayıda bölüm katkısını atlar.
+title: IDiaEnumSectionContribs::| Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: cd60e86df46a77941c3aa9b58fa93d2f7e4531c8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036466"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630170"
 ---
 # <a name="idiaenumsectioncontribsskip"></a>IDiaEnumSectionContribs::Skip
-Sabit Listesi dizisinde belirtilen sayıda bölüm katkılarını atlar.
+Bir numaralama dizisinde belirtilen sayıda bölüm katkısını atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT Skip(
 #### <a name="parameters"></a>Parametreler
  `celt`
 
-'ndaki Atlanacak numaralandırma dizisindeki bölüm katkılarının sayısı.
+[in] Atlama için numaralama dizisinde bölüm katkılarının sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlanacak başka bölüm katkılarının yoksa döndürür.
+ Başarılı olursa, `S_OK` döndürür; aksi takdirde, `S_FALSE` atlanabilecek başka bölüm katkısı yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

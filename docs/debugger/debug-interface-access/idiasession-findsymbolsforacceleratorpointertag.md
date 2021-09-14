@@ -1,6 +1,6 @@
 ---
-description: Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık gelen değişkeni için simgelerin bir sabit değerini döndürür.
-title: IDiaSession::findSymbolsForAcceleratorPointerTag | Microsoft Docs
+description: Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık geldiği değişken için bir sembol numaralandırması döndürür.
+title: 'IDiaSession:: Findsymbolsforivatorpointertag | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,14 +13,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: e508ef56dd6b3a52e8c65431a263d3bda9a47caf
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122128978"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629114"
 ---
 # <a name="idiasessionfindsymbolsforacceleratorpointertag"></a>IDiaSession::findSymbolsForAcceleratorPointerTag
-Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık gelen değişkeni için simgelerin bir sabit değerini döndürür.
+Belirtilen etiket değerinin üst Hızlandırıcı saplama işlevinde karşılık geldiği değişken için bir sembol numaralandırması döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,18 +35,18 @@ HRESULT findSymbolsForAcceleratorPointerTag (
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-[in] Aranacak Hızlandırıcı saplama işlevine karşılık gelen bir IDiaSymbol.
+'ndaki Aranmak üzere Hızlandırıcı saplama işlevine karşılık gelen bir IDiaSymbol.
 
  `tagValue`
 
-[in] İşaretçi etiketi değeri.
+'ndaki İşaretçi etiketi değeri.
 
  `ppResult`
 
-[out] Sonuçla başlatılan `IDiaEnumSymbols` bir arabirim işaretçisinin işaretçisi.
+dışı `IDiaEnumSymbols` Sonuçla başlatılan arabirim işaretçisine yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

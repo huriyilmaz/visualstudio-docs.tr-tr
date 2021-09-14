@@ -11,13 +11,13 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 ms.openlocfilehash: abf1098b3c117cdc549eb530e2b9eac682ff55bd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122101888"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628838"
 ---
-# <a name="code-generation-features-in-visual-studio"></a>Visual Studio'da kod oluşturma özellikleri
+# <a name="code-generation-features-in-visual-studio"></a>Visual Studio'de kod oluşturma özellikleri
 
 Kod oluşturma, düzeltme ve Visual Studio yardımcı olmak için birçok farklı yol vardır.
 
@@ -25,12 +25,12 @@ Kod oluşturma, düzeltme ve Visual Studio yardımcı olmak için birçok farkl�
 
 - Anahtar bloğu [veya enum](../ide/code-snippets.md) bildirimi gibi bir şablon eklemek [için](/dotnet/csharp/language-reference/keywords/switch) kod [parçacıklarını kullanabilirsiniz.](/dotnet/csharp/language-reference/keywords/enum)
 
-- Hızlı [Eylemler'i sınıflar](../ide/quick-actions.md) ve özellikler gibi kod oluşturmak veya yerel bir değişken tanıtmak için kullanabilirsiniz. Ayrıca hızlı eylemleri kullanarak [](../ide/common-quick-actions.md)kodu geliştirebilirsiniz. Örneğin, gereksiz tür değiştirmeleri ve kullanılmayan değişkenleri kaldırmak veya değişkenlere erişmeden önce null denetimler eklemek için.
+- Hızlı [Eylemler'i sınıflar](../ide/quick-actions.md) ve özellikler gibi kod oluşturmak veya yerel bir değişken tanıtmak için kullanabilirsiniz. Ayrıca Hızlı Eylemler'i [](../ide/common-quick-actions.md)kullanarak kodu geliştirebilirsiniz. Örneğin, gereksiz tür değiştirmeleri ve kullanılmayan değişkenleri kaldırmak veya değişkenlere erişmeden önce null denetimler eklemek için.
 
 - Bir değişkeni [yeniden adlandırmak,](../ide/refactoring-in-visual-studio.md) yöntem parametrelerini yeniden sıralamak veya bir türü dosya adıyla eşitlemek için kodu yeniden düzenlemeniz gerekir.
 
 > [!NOTE]
-> Visual Studio dil hizmeti kendi kod oluşturma özelliklerini sağladığı için bazı özellikler yalnızca C# dilinde, bazıları ise hem C# hem de Visual Basic.
+> Visual Studio'daki her dil hizmeti kendi kod oluşturma özelliklerini sağladığı için bazı özellikler yalnızca C# dilinde, bazıları ise hem C# hem de Visual Basic.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

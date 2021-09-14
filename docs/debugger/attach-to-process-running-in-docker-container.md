@@ -14,15 +14,15 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
 ms.openlocfilehash: 86a8bf2e9ed02c6ef53898413c88e4de7de02e93
-ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "122785942"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630951"
 ---
 # <a name="attach-to-a-process-running-on-a-docker-container"></a>Docker kapsayıcısı üzerinde çalışan bir işleme ekleme 
 
-Visual Studio kullanarak Windows Docker Kapsayıcısı veya Linux .NET Core Docker kapsayıcısı içinde çalışan uygulamalarda Visual Studio.
+Windows Docker Kapsayıcısı'Windows Linux .NET Core Docker kapsayıcısı içinde çalışan uygulamaların hatasını ayıklamak için Visual Studio.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -45,7 +45,7 @@ Visual Studio hata ayıklayıcısını yerel veya uzak makinenizin Linux .NET Co
 
 1. Bu Visual Studio İşleme **Ekle (CTRL+ALT+P)** > Hata Ayıkla'ya seçerek İşleme Ekle **iletişim** kutusunu açın.
 
-![Docker (Linux Kapsayıcısı) bağlantı türünü gösteren Visual Studio İşleme Ekle iletişim kutusunun ekran görüntüsü.](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
+![Docker bağlantı türünü (Linux Kapsayıcısı Visual Studio gösteren İşleme Ekle iletişim kutusunun ekran görüntüsü.](../debugger/media/attach-process-menu.png "Attach_To_Process_Menu")
 
 2. Bağlantı türü **olarak** **Docker (Linux Kapsayıcısı) olarak ayarlayın.**
 3. Bul... **öğesini** seçerek Docker **Kapsayıcısı** **Seç iletişim kutusu aracılığıyla Bağlantı hedefini** ayarlayın.
@@ -74,22 +74,22 @@ Visual Studio hata ayıklayıcısını yerel veya uzak makinenizin Linux .NET Co
 
 4. Kullanılabilir işlemler listesinden karşılık gelen kapsayıcı işlemini  **seçin ve** Ekle'yi seçerek C# kapsayıcı işleminizin hata ayıklamasını Visual Studio!
 
-    ![Visual Studio'de İşleme Ekle iletişim kutusunun ekran görüntüsü. Bağlantı türü Docker (Linux Kapsayıcısı) olarak ayarlanır ve dotnet işlemi seçilir.](../debugger/media/docker-attach-complete.png "Tamamlandı Linux Docker Ekleme Menüsü")
+    ![Visual Studio'daki İşleme Ekle iletişim kutusunun ekran görüntüsü. Bağlantı türü Docker (Linux Kapsayıcısı) olarak ayarlanır ve dotnet işlemi seçilir.](../debugger/media/docker-attach-complete.png "Tamamlandı Linux Docker Ekleme Menüsü")
 
 ## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a>Windows Docker kapsayıcısı üzerinde çalışan bir işleme ekleme
 
-İşleme Ekle iletişim kutusunu Visual Studio yerel makinenizin Windows Docker kapsayıcısı içinde çalışan bir işleme hata **ayıklayıcısını** iliştirebilirsiniz.
+İşleme İldir iletişim kutusunu Visual Studio yerel makinenizin Windows Docker kapsayıcısı içinde çalışan bir işleme hata **ayıklayıcısını** iliştirebilirsiniz.
 
 > [!IMPORTANT]
 > Bu özelliği bir .NET Core işlemiyle kullanmak için .NET Core Platformlar Arası Geliştirme iş yükünü yüklemeniz ve kaynak koda yerel erişiminizin olması gerekir.
 
 **Docker kapsayıcısı içinde çalışan bir işleme Windows için:**
 
-1. bu Visual Studio, İşleme **>** Ekle (veya **CTRL+ALT+P**) öğesini seçerek İşleme Ekle **iletişim** kutusunu açın.
+1. bu Visual Studio, İşleme **>** Ekle (veya **CTRL+ALT+P**) seçeneğini kullanarak İşleme Ekle iletişim **kutusunu** açın.
 
-   ![Docker Bağlantı türünü (Visual Studio Kapsayıcı) gösteren İşleme Ekle iletişim Windows kutusunun ekran görüntüsü.](../debugger/media/attach-process-menu-docker-windows.png "Attach_To_Process_Menu")
+   ![Docker Bağlantı türünü (Visual Studio Kapsayıcı) gösteren İşleme Ekle iletişim kutusunun Windows görüntüsü.](../debugger/media/attach-process-menu-docker-windows.png "Attach_To_Process_Menu")
 
-2. Bağlantı **türü'lerini** **Docker (Windows Container) olarak ayarlayın.**
+2. Bağlantı türü **olarak** **Docker (Windows Container) olarak ayarlayın.**
 3. Docker Kapsayıcısı Seç iletişim **kutusunu kullanarak Bağlantı** **hedefini ayarlamak için** **Bul...** öğesini seçin.
 
     > [!IMPORTANT]
@@ -104,6 +104,6 @@ Visual Studio hata ayıklayıcısını yerel veya uzak makinenizin Linux .NET Co
 
 4. Kullanılabilir işlemler listesinden karşılık gelen kapsayıcı işlemini  **seçin ve C#** kapsayıcı işleminizin hata ayıklamasını başlatmak için Ekle'yi seçin.
 
-    ![Visual Studio'de İşleme Ekle iletişim kutusunun ekran görüntüsü. Bağlantı türü Docker (Windows Container) olarak ayarlanır ve dotnet.exe işlemi seçilir.](../debugger/media/docker-attach-complete-windows.png "Docker Windows Menüsü tamamlandı")
+    ![Visual Studio'da İşleme Ekle iletişim kutusunun ekran görüntüsü. Bağlantı türü Docker (Windows Container) olarak ayarlanır ve dotnet.exe işlemi seçilir.](../debugger/media/docker-attach-complete-windows.png "Tamamlandı Windows Docker Ekle Menüsü")
 
 5. Kullanılabilir işlemler listesinden karşılık gelen kapsayıcı işlemini  seçin ve C# kapsayıcı işleminizin hata ayıklamasını başlatmak için Ekle'yi seçin.

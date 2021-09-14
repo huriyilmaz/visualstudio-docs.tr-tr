@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: e3d5985411fe58852a004d6f74d0015f07732d3de243895642492282a50367df
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 724d5c541d90eedc335aaf840eea389510b6d8dd
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121347954"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631796"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Kod analizi kural kümesi düzenleyicisini kullanma
 
@@ -26,7 +26,7 @@ Kod analizi kural kümesi Düzenleyicisi, özel bir kural kümesine dahil edilen
 
 Aşağıdaki tabloda önem derecesi seçenekleri gösterilmektedir:
 
-|Eylem (önem derecesi)|Açıklama|
+|Eylem (önem derecesi)|Description|
 |-|-|
 |Uyarı|**Hata listesi** ve derleme zamanında bir uyarı oluşturur.|
 |Hata|**Hata listesi** ve derleme zamanında bir hata oluşturur.|
@@ -51,7 +51,7 @@ Kural kümesi Düzenleyicisi ' nin araç çubuğunu, kural kümesi kılavuzunda 
 
 Aşağıdaki tabloda, kural kümesi düzenleyicisinin araç çubuğundaki denetimler açıklanmaktadır.
 
-|ToolBar denetimi|Açıklama|
+|ToolBar denetimi|Description|
 |---------------------|-----------------|
 |**Tümünü Genişlet**|Tüm gruplardaki kuralları gösterir.|
 |**Tümünü Daralt**|Tüm gruplardaki kuralları gizler.|

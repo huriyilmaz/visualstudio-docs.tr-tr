@@ -1,6 +1,6 @@
 ---
-description: Sabit Listesi dizisinde belirtilen sayıda satır numarasını alır.
-title: 'IDiaEnumLineNumbers:: Next | Microsoft Docs'
+description: Numaralama dizisinde belirtilen sayıda satır numarası verir.
+title: IDiaEnumLineNumbers::Next | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 0c114955909619ffba09b44c3f8bf2380530dc79
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134443"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630225"
 ---
 # <a name="idiaenumlinenumbersnext"></a>IDiaEnumLineNumbers::Next
-Sabit Listesi dizisinde belirtilen sayıda satır numarasını alır.
+Numaralama dizisinde belirtilen sayıda satır numarası verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT Next (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Numaralandırıcıda alınacak olan satır numaralarının sayısı.
+[in] Alınan numaralayıcıda satır numaralarının sayısı.
 
- rgelt
+ Rgelt
 
-dışı İstenen satır numaralarını temsil eden [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesnelerinin bir dizisini döndürür.
+[out] İstenen satır numaralarını [temsil eden bir IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesneleri dizisi döndürür.
 
- Pceltfettiz
+ pceltFetched
 
-dışı Getirilen Numaralandırıcı içindeki satır numaralarının sayısını döndürür.
+[out] Getirili numaralayıcıda satır numaralarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla satır numarası yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` satır numarası yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

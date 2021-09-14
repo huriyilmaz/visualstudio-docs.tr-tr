@@ -1,6 +1,6 @@
 ---
 title: Veri aramak için Windows Form oluşturma
-description: Veri aramak için bir Form oluşturma Windows örneğini okuyun. Form Windows, veri kaynağı ve formu oluşturun. Parametreleştirme ekleyin. Uygulamayı test etme.
+description: Veri aramak için bir Windows Form oluşturma örneğini okuyun. Form Windows, veri kaynağı ve formu oluşturun. Parametreleştirme ekleyin. Uygulamayı test etme.
 ms.custom: SEO-VS-2020
 ms.date: 06/07/2021
 ms.topic: conceptual
@@ -18,11 +18,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 4d045dcddd1cdebb4308e35bf9060b013216a670
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122037089"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631502"
 ---
 # <a name="create-a-windows-form-to-search-data"></a>Veri aramak için Windows Form oluşturma
 
@@ -36,7 +36,7 @@ Bu kılavuzda gösterilen görevler şunlardır:
 
 - Veri Kaynağı Yapılandırma sihirbazı ile uygulamanıza veri kaynağı **oluşturma ve** yapılandırma.
 
-- Veri Kaynakları penceresinde öğelerin bırakma **türünü** ayarlama.
+- Veri Kaynakları penceresindeki öğelerin bırakma **türünü** ayarlama.
 
 - Veri Kaynakları penceresindeki öğeleri bir forma **sürükleyerek verileri** görüntülüyor denetimler oluşturma.
 
@@ -55,15 +55,15 @@ Veri depolama ve **işleme iş yükünün yüklü** olması gerekir. Bkz. [Visua
 
 Bu kılavuzda LocalDB SQL Server Express Northwind örnek veritabanı kullanılır.
 
-1. Yerel VERITABANınız yoksa, SQL Server Express sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Bu **Visual Studio Yükleyicisi,** yerel SQL Server Express veri depolama ve işleme iş  yükünün bir parçası olarak veya tek bir bileşen olarak yükleyebilirsiniz.
+1. YerelDB'yi SQL Server Express yükleme sayfasından veya [SQL Server Express](https://www.microsoft.com/sql-server/sql-server-editions-express)sayfasından **Visual Studio Yükleyicisi.** Bu **Visual Studio Yükleyicisi,** yerel SQL Server Express veri depolama ve işleme iş yükünün bir parçası olarak veya tek bir bileşen olarak yükleyebilirsiniz. 
 
 2. Aşağıdaki adımları kullanarak Northwind örnek veritabanını yükleyin:
 
-    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (SQL Server Nesne Gezgini, veri depolama ve işleme iş **yükünün** bir parçası olarak **Visual Studio Yükleyicisi.)** SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
+    1. Bu Visual Studio, **SQL Server Nesne Gezgini** açın. (SQL Server Nesne Gezgini, veri depolama ve işleme iş **yükünün bir parçası olarak** **Visual Studio Yükleyicisi.)** SQL Server **genişletin.** LocalDB örneğine sağ tıklayın ve Yeni **Sorgu'yı seçin.**
 
-       Bir sorgu düzenleyicisi penceresi açılır.
+       Sorgu düzenleyicisi penceresi açılır.
 
-    2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
+    2. [Northwind Transact-SQL betiği panoya](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) kopyalayın. Bu T-SQL, Northwind veritabanını sıfırdan oluşturur ve verilerle doldurmak için kullanılır.
 
     3. T-SQL betiği sorgu düzenleyicisine yapıştırın ve ardından Yürüt **düğmesini** seçin.
 
@@ -79,7 +79,7 @@ C# veya Windows için yeni .NET Framework Forms Uygulaması **(.NET Framework)**
 
 Bu adım, Veri Kaynağı Yapılandırma sihirbazını kullanarak **veritabanından bir veri kaynağı** oluşturur:
 
-1. Veri Kaynakları **penceresini açmak** için Veri menüsünde **Veri** Kaynaklarını **Göster'e tıklayın.**
+1. Veri Kaynakları **penceresini açmak için** Veri menüsünde **Veri** Kaynaklarını **Göster'e tıklayın.**
 
 2. Veri Kaynağı **Yapılandırma sihirbazını** başlatmak **için Veri Kaynakları penceresinde** Yeni Veri Kaynağı **Ekle'yi** seçin.
 
@@ -99,7 +99,7 @@ Bu adım, Veri Kaynağı Yapılandırma sihirbazını kullanarak **veritabanınd
 
 8. Customers **tablosu'u** seçin ve ardından Son'a **tıklayın.**
 
-     **NorthwindDataSet** projenize eklenir ve Veri  Kaynakları penceresinde Müşteriler **tablosu** görüntülenir.
+     **NorthwindDataSet** projenize eklenir ve Müşteriler **tablosu** Veri Kaynakları **penceresinde** görüntülenir.
 
 :::moniker-end
 
@@ -131,7 +131,7 @@ Bu adım, Veri Kaynağı Yapılandırma sihirbazını kullanarak **veritabanınd
 
 1. Customers **tablosu'u** seçin ve ardından Son'a **tıklayın.**
 
-     **NorthwindDataSet** projenize eklenir ve Veri  Kaynakları penceresinde Müşteriler **tablosu** görüntülenir.
+     **NorthwindDataSet** projenize eklenir ve Müşteriler **tablosu** Veri Kaynakları **penceresinde** görüntülenir.
 
 :::moniker-end
 
@@ -181,7 +181,7 @@ Uygulamayı çalıştırma form sayfanızı açar ve parametreyi giriş olarak a
 
 2. City **metin** kutusuna **Londra yazın** ve **FillByCity'ye tıklayın.**
 
-     Veri kılavuzu, ölçütlere uyan müşterilerle doldurulur. Bu örnekte veri kılavuzunda yalnızca City sütununda Londra **değerine sahip** **müşteriler** görüntülenir.
+     Veri kılavuzu, ölçütlere uyan müşterilerle doldurulur. Bu örnekte veri kılavuzunda yalnızca City sütununda Londra **değerine sahip** müşteriler **görüntülenir.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

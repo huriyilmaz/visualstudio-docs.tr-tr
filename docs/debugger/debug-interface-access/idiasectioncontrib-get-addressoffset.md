@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c438d388aa34fe20af514a04f0ecf723a0561c64d03151da10448d42a42658a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 9cbcc84e579ebc0152d0ca4773ed6189c9878b4a
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121344879"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629493"
 ---
 # <a name="idiasectioncontribget_addressoffset"></a>IDiaSectionContrib::get_addressOffset
 Katkı adresinin konum kısmını alır.

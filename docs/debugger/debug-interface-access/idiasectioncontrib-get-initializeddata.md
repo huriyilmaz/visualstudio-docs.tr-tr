@@ -1,6 +1,6 @@
 ---
-description: Bölümün başlatılmış verileri içerip içermediğini gösteren bir bayrak alır.
-title: 'IDiaSectionContrib:: get_initializedData | Microsoft Docs'
+description: bölümünün başlatılan veriler içerdiğini belirten bir bayrağını alın.
+title: IDiaSectionContrib::get_initializedData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 5aa7447e539fbec093994660b90df687862529a0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134276"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629420"
 ---
 # <a name="idiasectioncontribget_initializeddata"></a>IDiaSectionContrib::get_initializedData
-Bölümün başlatılmış verileri içerip içermediğini gösteren bir bayrak alır.
+bölümünün başlatılan veriler içerdiğini belirten bir bayrağını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_initializedData (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE` Bölüm başlatılmış verileri içeriyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] bölümü `TRUE` başlatılan verileri içeriyorsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

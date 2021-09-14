@@ -1,5 +1,5 @@
 ---
-description: Bölümün önbelleğe alınıp alınamay olmadığını belirten bir bayrak alınır.
+description: Bölümünün önbelleğe alınıp alınamay olmadığını belirten bir bayrak alınır.
 title: IDiaSectionContrib::get_notCached | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 330c36eb7f9437316f87d858cc758fdc4c89d846
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161560"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629397"
 ---
 # <a name="idiasectioncontribget_notcached"></a>IDiaSectionContrib::get_notCached
-Bölümün önbelleğe alınıp alınamay olmadığını belirten bir bayrak alınır.
+Bölümünün önbelleğe alınıp alınamay olmadığını belirten bir bayrak alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 

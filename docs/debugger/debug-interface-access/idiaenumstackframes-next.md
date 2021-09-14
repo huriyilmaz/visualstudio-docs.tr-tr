@@ -1,6 +1,6 @@
 ---
-description: Numaralama dizisinde belirtilen sayıda yığın çerçevesi öğelerini alan.
-title: IDiaEnumStackFrames::Next | Microsoft Docs
+description: Sabit Listesi dizisinden belirtilen sayıda yığın çerçevesi öğesi alır.
+title: 'IDiaEnumStackFrames:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 76248ef1feb330157895ccd24d8fa071b3e857bd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129482"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630057"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
-Numaralama dizisinde belirtilen sayıda yığın çerçevesi öğelerini alan.
+Sabit Listesi dizisinden belirtilen sayıda yığın çerçevesi öğesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT Next(
 ```
 
 #### <a name="parameters"></a>Parametreler
- Celt
+ celt
 
-[in] Numaralayıcıda alınan stackframe öğelerinin sayısı.
+'ndaki Alınacak numaralandırıcıdaki StackFrame öğelerinin sayısı.
 
- Rgelt
+ rgelt
 
-[out] İstenen [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) nesneleriyle doldurulması gereken bir dizi.
+dışı İstenen [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) nesneleriyle doldurulacak bir dizi.
 
- pceltFetched
+ Pceltfettiz
 
-[out] Getirili numaralayıcıda yığın çerçevesi öğelerinin sayısını döndürür.
+dışı Getirilen Numaralandırıcı içindeki yığın çerçevesi öğelerinin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Başka `S_FALSE` yığın çerçevesi yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla yığın çerçevesi yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md)

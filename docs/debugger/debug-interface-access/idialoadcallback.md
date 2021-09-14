@@ -1,6 +1,6 @@
 ---
-description: DIA sembol konumlandırma yordamının geri çağırmaları alır, böylece bir kullanıcı arabiriminin konum denemesinin ilerlemesini raporlemelerini sağlar.
-title: Ialoadcallback | Microsoft Docs
+description: DIA sembol bulma yordamından geri çağırmalar alır, böylece konum girişiminin ilerlemesini rapor etmek için kullanıcı arabirimini etkinleştirebilirsiniz.
+title: IDiaLoadCallback | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 9b5ef4523aa2b8acd098f8a9e46d5aa0009f9b37
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122139198"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629613"
 ---
 # <a name="idialoadcallback"></a>IDiaLoadCallback
-DIA sembol konumlandırma yordamının geri çağırmaları alır, böylece bir kullanıcı arabiriminin konum denemesinin ilerlemesini raporlemelerini sağlar.
+DIA sembol bulma yordamından geri çağırmalar alır, böylece konum girişiminin ilerlemesini rapor etmek için kullanıcı arabirimini etkinleştirebilirsiniz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,26 +30,26 @@ DIA sembol konumlandırma yordamının geri çağırmaları alır, böylece bir 
 IDiaLoadCallback : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki yöntemler bu arabirim tarafından sunulur:
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
+ Aşağıdaki yöntemler bu arabirim tarafından ortaya çıkar:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaLoadCallback::NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md)|.exe dosyasında bir hata ayıklama dizini bulunduğunda çağırılır.|
-|[IDiaLoadCallback::NotifyOpenDBG](../../debugger/debug-interface-access/idialoadcallback-notifyopendbg.md)|Bir aday. dbg dosyası açıldığında çağırılır.|
-|[IDiaLoadCallback::NotifyOpenPDB](../../debugger/debug-interface-access/idialoadcallback-notifyopenpdb.md)|Bir aday. pdb dosyası açıldığında çağırılır.|
-|[IDiaLoadCallback::RestrictRegistryAccess](../../debugger/debug-interface-access/idialoadcallback-restrictregistryaccess.md)|Simge arama yollarını bulmak için kayıt defteri sorgularının kullanılabileceğini belirler.|
-|[IDiaLoadCallback::RestrictSymbolServerAccess](../../debugger/debug-interface-access/idialoadcallback-restrictsymbolserveraccess.md)|Sembolleri çözümlemek için bir sembol sunucusuna erişime izin verilip verilmeyeceğini belirler.|
+|[IDiaLoadCallback::NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md)|.exe dosyasında bir hata ayıklama dizini .exe çağrılır.|
+|[IDiaLoadCallback::NotifyOpenDBG](../../debugger/debug-interface-access/idialoadcallback-notifyopendbg.md)|Bir aday .dbg dosyası açıldığında çağrılır.|
+|[IDiaLoadCallback::NotifyOpenPDB](../../debugger/debug-interface-access/idialoadcallback-notifyopenpdb.md)|Bir aday .pdb dosyası açıldığında çağrılır.|
+|[IDiaLoadCallback::RestrictRegistryAccess](../../debugger/debug-interface-access/idialoadcallback-restrictregistryaccess.md)|Sembol arama yollarını bulmak için kayıt defteri sorgularının kullanılap kullanıla olmadığını belirler.|
+|[IDiaLoadCallback::RestrictSymbolServerAccess](../../debugger/debug-interface-access/idialoadcallback-restrictsymbolserveraccess.md)|Sembolleri çözümlemek için bir sembol sunucusuna erişime izin verilip izin verilmeyeceklerini belirler.|
 
 ## <a name="remarks"></a>Açıklamalar
- İstemci uygulaması bu arabirimi uygular ve [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metoduna yapılan çağrıda buna bir başvuru sağlar.
+ İstemci uygulaması bu arabirimi kullanır ve [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) yöntemi çağrısında buna bir başvuru sağlar.
 
- Bir yükleme işlemine eklenebilir ek kısıtlamalar için, [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md) arabirimine bakın.
+ Bir yükleme işlemi üzerinde uygulanan ek kısıtlamalar için bkz. [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md) arabirimi.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: dia2. h
+ Üst bilgi: Dia2.h
 
- Kitaplık: diaguid. lib
+ Kitaplık: diaguids.lib
 
  DLL: msdia80.dll
 

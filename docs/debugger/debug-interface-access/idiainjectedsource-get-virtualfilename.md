@@ -1,5 +1,5 @@
 ---
-description: Dosya olmayan kaynak koduna verilen adı alın; diğer bir ifadeyle, kodun eklemesi.
+description: Dosya olmayan kaynak koduna verilen adı alın; başka bir ifadeyle, kodun eklemesi.
 title: IDiaInjectedSource::get_virtualFilename | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 162303b563e5808d12728f624a76e189135aff6c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066609"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629732"
 ---
 # <a name="idiainjectedsourceget_virtualfilename"></a>IDiaInjectedSource::get_virtualFilename
-Dosya olmayan kaynak koduna verilen adı alın; diğer bir ifadeyle, kodun eklemesi.
+Dosya olmayan kaynak koduna verilen adı alın; başka bir ifadeyle, kodun eklemesi.
 
 ## <a name="syntax"></a>Sözdizimi
 

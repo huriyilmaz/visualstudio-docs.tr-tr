@@ -1,6 +1,6 @@
 ---
-description: 'IDiaSession:: Findınlineelinesbyva, bir istemcinin belirtilen ana sembolüyle doğrudan veya dolaylı olarak satır numarası bilgileri üzerinden yineleme yapmasına izin veren bir sabit listesi alır ve belirtilen sanal adreste (VA) bulunur.'
-title: 'IDiaSession:: findInlineeLinesByVA | Microsoft Docs'
+description: IDiaSession::findInlineeLinesByVA, bir istemcinin satır içi, doğrudan veya dolaylı olarak, belirtilen üst simge tarafından satır numarası bilgileri arasında ve belirtilen sanal adres (VA) içinde yer alan tüm işlevlerin satır numarası bilgileri arasında bir sabitlevasyonu alır.
+title: IDiaSession::findInlineeLinesByVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,14 +13,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 7b14bbe058ef074d8173d5c11b37130abf576d9a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122105558"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629216"
 ---
 # <a name="idiasessionfindinlineelinesbyva"></a>IDiaSession::findInlineeLinesByVA
-Bir istemcinin, belirtilen ana sembolüyle doğrudan veya dolaylı olarak satır numarası bilgileri üzerinden yineleme yapmasına izin veren ve belirtilen sanal adres (VA) içinde yer alan bir sabit listesi alır.
+Bir istemcinin, belirtilen üst simge tarafından satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında ve belirtilen sanal adres (VA) içinde yer alan bir numaralama alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,22 +34,22 @@ HRESULT findInlineeLinesByVA (
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki `IDiaSymbol` Üst öğeyi temsil eden nesne.
+[in] Üst `IDiaSymbol` öğeyi temsil eden nesne.
 
  `va`
 
-'ndaki Adresi bir VA olarak belirtir.
+[in] Adresi VA olarak belirtir.
 
  `length`
 
-'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığını bayt cinsinden belirtir.
+[in] Bu sorguyu kapsayacak adres aralığını bayt sayısı cinsinden belirtir.
 
  `ppResult`
 
-dışı `IDiaEnumLineNumbers` Alınan satır numaralarının listesini içeren bir nesnesi tutar.
+[out] Alınan `IDiaEnumLineNumbers` satır numaralarının listesini içeren bir nesneyi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

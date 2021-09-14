@@ -18,11 +18,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: cbeff0269456687316f7a02972b68213c59f5e1e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154769"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630663"
 ---
 # <a name="data-debug-interface-access-sdk"></a>Veriler (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Parametreler, yerel değişkenler, genel değişkenler ve sınıf üyeleri gibi tüm değişkenler sembollerle `SymTagData` tanımlanır. Sabit değerler ( `LocIsConstant` ) bu türle de tanımlanır.
@@ -32,11 +32,11 @@ Parametreler, yerel değişkenler, genel değişkenler ve sınıf üyeleri gibi 
 
 |Özellik|Veri türü|Açıklama|
 |--------------|---------------|-----------------|
-|[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|`DWORD`|Bir alan varsa, değerlerinden biri [enumeration CV_access_e olur.](../../debugger/debug-interface-access/cv-access-e.md)|
+|[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|`DWORD`|Bir alan varsa, alan [enumeration CV_access_e değerlerinden biri olur.](../../debugger/debug-interface-access/cv-access-e.md)|
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|`DWORD`|Konumun kaydırma bölümü; Ayrıntılar için bkz. [LocationType Numaralama.](../../debugger/debug-interface-access/locationtype.md)|
 |[IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)|`DWORD`|Konumun bölüm bölümü; Ayrıntılar için bkz. [LocationType Numaralama.](../../debugger/debug-interface-access/locationtype.md)|
 |[IDiaSymbol::get_addressTaken](../../debugger/debug-interface-access/idiasymbol-get-addresstaken.md)|`BOOL`|`TRUE` Bu verilerin adresine başka bir sembol tarafından başvurulsa.|
-|[IDiaSymbol::get_bitPosition](../../debugger/debug-interface-access/idiasymbol-get-bitposition.md)|`DWORD`|Konumun bit konumu; Ayrıntılar için bkz. [LocationType Numaralama (DIA SDK](../../debugger/debug-interface-access/locationtype.md) v8.0'da desteklenmiyor).|
+|[IDiaSymbol::get_bitPosition](../../debugger/debug-interface-access/idiasymbol-get-bitposition.md)|`DWORD`|Konumun bit konumu; Ayrıntılar için bkz. [LocationType Enumeration](../../debugger/debug-interface-access/locationtype.md) (DIA SDK v8.0'da desteklenmiyor).|
 |[IDiaSymbol::get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)|`IDiaSymbol*`|Bu bir yapı, birlik veya sınıf alanı ise sınıfın sembolü.|
 |[IDiaSymbol::get_classParentId](../../debugger/debug-interface-access/idiasymbol-get-classparentid.md)|`DWORD`|Sınıf üst simgesinin kimliği.|
 |[IDiaSymbol::get_compilerGenerated](../../debugger/debug-interface-access/idiasymbol-get-compilergenerated.md)|`BOOL`|`TRUE` verileri derleyici tarafından oluşturulmuşsa.|

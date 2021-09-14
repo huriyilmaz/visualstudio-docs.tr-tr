@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 4e7e6aeec300aaf8941fa0d3ac28ddce7ace8de4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044313"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629252"
 ---
 # <a name="idiasessionfindinjectedsource"></a>IDiaSession::findInjectedSource
 Öznitelik sağlayıcıları veya derleme işleminin diğer bileşenleri tarafından sembol deposuna yerleştirilmiş kaynakların listesini alın.
@@ -36,7 +36,7 @@ HRESULT findInjectedSource (
 #### <a name="parameters"></a>Parametreler
  srcFile
 
-[in] Aranır kaynak dosyanın adı.
+[in] Arama yapmak istediğiniz kaynak dosyanın adı.
 
  ppResult
 

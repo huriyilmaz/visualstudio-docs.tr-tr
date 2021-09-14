@@ -23,11 +23,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - uwp
 ms.openlocfilehash: 3d398dd937bad3af548f1a32a4b9a5964ddb31fb
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129668"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630789"
 ---
 # <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>Visual Studio yüklü bir UWP uygulama paketinin hatalarını ayıklama
 

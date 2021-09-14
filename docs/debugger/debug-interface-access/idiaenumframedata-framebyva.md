@@ -1,6 +1,6 @@
 ---
 description: Sanal adrese (VA) göre bir çerçeve döndürür.
-title: 'IDiaEnumFrameData:: frameByVA | Microsoft Docs'
+title: IDiaEnumFrameData::frameByVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: c713ea86baad9529b9dbca4ee2e07f2dd5d2b7e3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113739"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630351"
 ---
 # <a name="idiaenumframedataframebyva"></a>IDiaEnumFrameData::frameByVA
 Sanal adrese (VA) göre bir çerçeve döndürür.
@@ -36,14 +36,14 @@ HRESULT frameByVA(
 #### <a name="parameters"></a>Parametreler
  virtualAddress
 
-'ndaki İlgilendiğiniz çerçevenin VA.
+[in] İlgi çerçevesinin VA'sı.
 
  çerçeve
 
-dışı Belirtilen adresi içeren çerçeveyi temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi döndürür.
+[out] Sağlanan adresi içeren çerçeveyi temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Belirtilen adresle eşleşen hiçbir çerçeve verisi yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Belirtilen `S_FALSE` adresle eşleşen çerçeve verisi yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

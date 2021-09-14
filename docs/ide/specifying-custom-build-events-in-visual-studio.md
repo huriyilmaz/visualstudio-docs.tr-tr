@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 19b974d9e67cb2713299928f3a7e945e9208dcd8cf8c56978a019ed98f88aea7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d0728154e21893ac45fc0e17cc3d0407551dbb3a
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121411964"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628515"
 ---
 # <a name="specify-custom-build-events-in-visual-studio"></a>Visual Studio özel derleme olayları belirtme
 

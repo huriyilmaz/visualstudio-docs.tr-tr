@@ -1,6 +1,6 @@
 ---
-title: Dil Hizmeti ve Düzenleyici Uzantı Noktaları | Microsoft Docs
-description: Çoğu dil hizmeti özelliği dahil olmak Visual Studio kod düzenleyicisinde uzantı noktaları hakkında bilgi öğrenin.
+title: Dil hizmeti ve Düzenleyici uzantı noktaları | Microsoft Docs
+description: çoğu dil hizmeti özelliği de dahil olmak üzere Visual Studio kod düzenleyicisinde genişletebileceğinizi uzantı noktaları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,43 +14,43 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: c3a97b75f1df66d8353c06acf74f8d69b26a6e8c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122152256"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628904"
 ---
-# <a name="language-service-and-editor-extension-points"></a>Dil hizmeti ve düzenleyici uzantısı noktaları
-Düzenleyici, çoğu dil hizmeti özelliği dahil olmak üzere Managed Extensibility Framework (MEF) bileşen parçaları olarak genişletebilirsiniz. Bunlar ana uzantı noktası kategorileridir:
+# <a name="language-service-and-editor-extension-points"></a>Dil hizmeti ve Düzenleyici uzantı noktaları
+düzenleyici, çoğu dil hizmeti özelliği de dahil olmak üzere Managed Extensibility Framework (MEF) bileşen parçaları olarak genişletebileceğinizi uzantı noktaları sağlar. Bunlar ana uzantı noktası kategorileridir:
 
 - İçerik türleri
 
 - Sınıflandırma türleri ve sınıflandırma biçimleri
 
-- Kenar boşlukları ve kaydırma çubuğu
+- Kenar boşlukları ve kaydırma çubukları
 
 - Etiketler
 
-- Süsleme -leri
+- Satırdaki kenarlıkları
 
 - Fare işlemcileri
 
-- İşleyicileri bırakma
+- İşleyicileri bırak
 
 - Seçenekler
 
 - IntelliSense
 
-## <a name="extend-content-types"></a>İçerik türlerini genişletme
- İçerik türleri, düzenleyici tarafından iş yapılan metin türlerinin tanımlarıdır; örneğin, "text", "code" veya "CSharp". Türünde bir değişken bildirerek ve yeni içerik türüne benzersiz bir ad vererek <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> yeni bir içerik türü tanımlarsiniz. İçerik türünü düzenleyiciye kaydetmek için aşağıdaki özniteliklerle birlikte dışarı aktarın:
+## <a name="extend-content-types"></a>İçerik türlerini Genişlet
+ İçerik türleri, düzenleyici tarafından işlenen metin türlerinin tanımlardır, örneğin, "metin", "kod" veya "CSharp". Türünde bir değişken bildirerek <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> ve yeni içerik türüne benzersiz bir ad vererek yeni bir içerik türü tanımlarsınız. İçerik türünü düzenleyiciye kaydetmek için aşağıdaki özniteliklerle birlikte dışarı aktarın:
 
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute> , içerik türünün adıdır.
 
-- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute> , bu içerik türünün türetilen içerik türünün adıdır. İçerik türü, diğer birden çok içerik türünden devralabilir.
+- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute> Bu içerik türünün türetildiği içerik türünün adıdır. İçerik türü, birden fazla diğer içerik türünden devralınabilir.
 
-  Sınıfı <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> korumalı olduğundan, tür parametresi ile dışarı aktarın.
+  <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition>Sınıfı mühürlenmiş olduğundan, türü parametre olmadan dışarı aktarabilirsiniz.
 
-  Aşağıdaki örnek, bir içerik türü tanımında dışarı aktarma özniteliklerini gösterir.
+  Aşağıdaki örnek, içerik türü tanımında dışarı aktarma özniteliklerini gösterir.
 
 ```
 [Export]
@@ -60,27 +60,27 @@ Düzenleyici, çoğu dil hizmeti özelliği dahil olmak üzere Managed Extensibi
 internal static ContentTypeDefinition TestContentTypeDefinition;
 ```
 
- İçerik türleri sıfır veya daha fazla önceden var olan içerik türlerini temel alarak olabilir. Bunlar yerleşik türlerdir:
+ İçerik türleri sıfır veya daha önceden var olan içerik türlerini temel alabilir. Bunlar yerleşik türlerdir:
 
-- Herhangi bir: temel içerik türü. Diğer tüm içerik türlerinin üst öğesi.
+- Any: temel içerik türü. Diğer tüm içerik türlerinin üst öğesi.
 
-- Metin: Projeksiyon olmayan içerik için temel tür. "Any" tarafından devralınıyor.
+- Metin: projeksiyon olmayan içerik için temel tür. "Any" öğesinden devralır.
 
-- Düz metin: Kod olmayan metinler için. "Text" (metinden) devralıyor.
+- Düz metin: kod olmayan metin için. "Metin" öğesinden devralır.
 
-- Kod: Her türlü kod için. "Text" (metinden) devralıyor.
+- Kod: tüm türlerdeki kodlar için. "Metin" öğesinden devralır.
 
-- Inert: Metni herhangi bir işlemenin dışında sunar. Bu içerik türünün metnine hiçbir zaman uzantı uygulanmaz.
+- Inert: metni herhangi bir işleme türüyle dışlar. Bu içerik türünün metninde hiçbir uzantı uygulanmadı.
 
-- Projeksiyon: Projeksiyon arabelleklerinin içeriği için. "Any" tarafından devralınıyor.
+- Projeksiyon: projeksiyon arabelleklerinin içeriği için. "Any" öğesinden devralır.
 
-- IntelliSense: IntelliSense'in içeriği için. "Text" (metinden) devralıyor.
+- IntelliSense: IntelliSense içeriği için. "Metin" öğesinden devralır.
 
-- Sighelp: imza yardımı. "Intellisense" tarafından devralınıyor.
+- Sıghelp: imza yardımı. "IntelliSense" öğesinden devralır.
 
-- Sighelp-doc: imza yardım belgeleri. "Intellisense" tarafından devralınıyor.
+- Sıghelp-doc: imza yardım belgeleri. "IntelliSense" öğesinden devralır.
 
-  Bunlar, Visual Studio tarafından tanımlanan içerik türlerinden bazıları ve Visual Studio:
+  bunlar, Visual Studio tarafından tanımlanan bazı içerik türlerinden ve Visual Studio barındırılan bazı dillerden bazılarıdır:
 
 - Temel
 
@@ -88,11 +88,11 @@ internal static ContentTypeDefinition TestContentTypeDefinition;
 
 - ConsoleOutput
 
-- Csharp
+- Step\chapter
 
 - CSS
 
-- Enc
+- ENC
 
 - FindResults
 
@@ -106,27 +106,27 @@ internal static ContentTypeDefinition TestContentTypeDefinition;
 
 - XML
 
-  Kullanılabilir içerik türlerinin listesini bulmak için, düzenleyici için <xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService> içerik türlerinin koleksiyonunu bulunduran 'i içeri aktarın. Aşağıdaki kod bu hizmeti bir özellik olarak içeri aktarmaktadır.
+  Kullanılabilir içerik türleri listesini saptamak için, <xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService> Düzenleyici için içerik türleri koleksiyonunu tutan öğesini içeri aktarın. Aşağıdaki kod bu hizmeti bir özellik olarak içeri aktarır.
 
 ```
 [Import]
 internal IContentTypeRegistryService ContentTypeRegistryService { get; set; }
 ```
 
- İçerik türünü bir dosya adı uzantısıyla ilişkilendirmek için <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> kullanın.
+ Bir içerik türünü bir dosya adı uzantısıyla ilişkilendirmek için kullanın <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> .
 
 > [!NOTE]
-> Bu Visual Studio, dosya adı uzantıları bir dil hizmet <xref:Microsoft.VisualStudio.Shell.ProvideLanguageExtensionAttribute> paketinde kullanılarak kaydedilir. , <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> bir MEF içerik türünü bu şekilde kaydedilmiş bir dosya adı uzantısıyla ilişkilendirmektedir.
+> Visual Studio, dosya adı uzantıları <xref:Microsoft.VisualStudio.Shell.ProvideLanguageExtensionAttribute> bir dil hizmeti paketi kullanılarak kaydedilir. <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition>BIR MEF içerik türünü, bu şekilde kaydedilmiş bir dosya adı uzantısıyla ilişkilendirir.
 
- Dosya adı uzantısını içerik türü tanımına dışarı aktarmanız için aşağıdaki öznitelikleri dahil etmek gerekir:
+ Dosya adı uzantısını içerik türü tanımına dışarı aktarmak için aşağıdaki öznitelikleri eklemeniz gerekir:
 
 - <xref:Microsoft.VisualStudio.Utilities.FileExtensionAttribute>: dosya adı uzantısını belirtir.
 
-- <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: İçerik türünü belirtir.
+- <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: içerik türünü belirtir.
 
-  Sınıfı <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> korumalı olduğundan, tür parametresi ile dışarı aktarın.
+  <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition>Sınıfı mühürlenmiş olduğundan, türü parametre olmadan dışarı aktarabilirsiniz.
 
-  Aşağıdaki örnek, bir dosya adı uzantısında yer alan öznitelikleri bir içerik türü tanımına dışarı aktarmayı gösterir.
+  Aşağıdaki örnek, bir dosya adı uzantısında içerik türü tanımına dışarı aktarma özniteliklerini gösterir.
 
 ```
 [Export]
@@ -135,20 +135,20 @@ internal IContentTypeRegistryService ContentTypeRegistryService { get; set; }
 internal static FileExtensionToContentTypeDefinition TestFileExtensionDefinition;
 ```
 
- <xref:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService>, dosya adı uzantıları ve içerik türleri arasındaki ilişkilendirmeleri yönetir.
+ , <xref:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService> Dosya adı uzantıları ve içerik türleri arasındaki ilişkilendirmeleri yönetir.
 
 ## <a name="extend-classification-types-and-classification-formats"></a>Sınıflandırma türlerini ve sınıflandırma biçimlerini genişletme
- Sınıflandırma türlerini, farklı işleme sağlamak istediğiniz metin türlerini tanımlamak için kullanabilirsiniz (örneğin, "anahtar sözcük" metnini mavi ve "açıklama" metnini yeşil renklendirme). Türünde bir değişken bildirerek ve benzersiz bir ad vererek <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> yeni bir sınıflandırma türü tanımlayın.
+ Farklı işleme sağlamak istediğiniz metin türlerini tanımlamak için sınıflandırma türlerini kullanabilirsiniz (örneğin, "anahtar sözcüğü" metni maviyi ve "Açıklama" metnini yeşil şekilde renklendirme). Türünde bir değişken bildirerek <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> ve benzersiz bir ad vererek yeni bir sınıflandırma türü tanımlayın.
 
  Sınıflandırma türünü düzenleyiciye kaydetmek için aşağıdaki özniteliklerle birlikte dışarı aktarın:
 
-- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: sınıflandırma türünün adı.
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: Sınıflandırma türünün adı.
 
-- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute>: Bu sınıflandırma türünün devralınan sınıflandırma türünün adı. Tüm sınıflandırma türleri "metin" türünden devralınabilir ve bir sınıflandırma türü diğer birden çok sınıflandırma türünden devralabilir.
+- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute>: Bu sınıflandırma türünün devraldığı Sınıflandırma türünün adı. Tüm sınıflandırma türleri "metin" öğesinden devralınır ve bir sınıflandırma türü birden fazla diğer sınıflandırma türünden devralınabilir.
 
-  Sınıfı <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> korumalı olduğundan, tür parametresi ile dışarı aktarın.
+  <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition>Sınıfı mühürlenmiş olduğundan, türü parametre olmadan dışarı aktarabilirsiniz.
 
-  Aşağıdaki örnek, sınıflandırma türü tanımında dışarı aktarma özniteliklerini gösterir.
+  Aşağıdaki örnek, bir sınıflandırma türü tanımında dışarı aktarma özniteliklerini gösterir.
 
 ```
 [Export]
@@ -157,48 +157,48 @@ internal static FileExtensionToContentTypeDefinition TestFileExtensionDefinition
 internal static ClassificationTypeDefinition CSharpTestDefinition;
 ```
 
- <xref:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService>, standart sınıflandırmalara erişim sağlar. Yerleşik sınıflandırma türleri şunları içerir:
+ , <xref:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService> Standart sınıflandırmalara erişim sağlar. Yerleşik sınıflandırma türleri şunları içerir:
 
-- "text"
+- metinleri
 
-- "doğal dil" ("metinden" türetilmektedir)
+- "doğal dil" ("metin" öğesinden türetilir)
 
-- "formal language" ("text" dilinden türetilmektedir)
+- "biçimsel dil" ("metin" öğesinden türetilir)
 
-- "string" ("değişmez" dizeden türetilmektedir)
+- "String" ("literal" sınıfından türetilir)
 
-- "character" ("değişmez" karakterden türetilmektedir)
+- "karakter" ("literal" öğesinden türetilir)
 
-- "sayısal" ("değişmez" değerden türetilmektedir)
+- "sayısal" ("değişmez değer" öğesinden türetilir)
 
-  Bir dizi farklı hata türü, 'den <xref:Microsoft.VisualStudio.Text.Adornments.ErrorTypeDefinition> devralındı. Aşağıdaki hata türlerini içerir:
+  Öğesinden kalıtımla alınan farklı hata türleri kümesi <xref:Microsoft.VisualStudio.Text.Adornments.ErrorTypeDefinition> . Bunlar aşağıdaki hata türlerini içerir:
 
-- "söz dizimi hatası"
+- "sözdizimi hatası"
 
 - "derleyici hatası"
 
 - "diğer hata"
 
-- "uyarı"
+- Warning
 
-  Kullanılabilir sınıflandırma türlerinin listesini bulmak için, düzenleyici için <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService> sınıflandırma türlerinin koleksiyonunu bulunduran 'i içeri aktarın. Aşağıdaki kod bu hizmeti bir özellik olarak içeri aktarmaktadır.
+  Kullanılabilir sınıflandırma türlerinin listesini saptamak için, <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService> Düzenleyici için sınıflandırma türleri koleksiyonunu tutan öğesini içeri aktarın. Aşağıdaki kod bu hizmeti bir özellik olarak içeri aktarır.
 
 ```
 [Import]
 internal IClassificationTypeRegistryService ClassificationTypeRegistryService { get; set; }
 ```
 
- Yeni sınıflandırma türünüz için bir sınıflandırma biçimi tanımı tanımlayabilirsiniz. sınıfından bir sınıf <xref:Microsoft.VisualStudio.Text.Classification.ClassificationFormatDefinition> türetin ve türüyle <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition> birlikte aşağıdaki özniteliklerle dışarı aktarın:
+ Yeni sınıflandırma türü için bir sınıflandırma biçim tanımı tanımlayabilirsiniz. ' Dan bir sınıf türet <xref:Microsoft.VisualStudio.Text.Classification.ClassificationFormatDefinition> ve <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition> aşağıdaki özniteliklerle birlikte türü ile dışarı aktarın:
 
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: biçimin adı.
 
 - <xref:Microsoft.VisualStudio.Utilities.DisplayNameAttribute>: biçimin görünen adı.
 
-- <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: biçimin Seçenekler iletişim kutusunun Yazı Tipleri **ve Renkler** sayfasında **görüntülendiğinden** emin olur.
+- <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: biçimin **Seçenekler** Iletişim kutusunun **yazı tipleri ve renkler** sayfasında görüntülenip görüntülenmeyeceğini belirtir.
 
-- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: biçimin önceliği. Geçerli değerler <xref:Microsoft.VisualStudio.Text.Classification.Priority> konumundandır.
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: biçimin önceliği. Geçerli değerler şunlardır <xref:Microsoft.VisualStudio.Text.Classification.Priority> .
 
-- <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeAttribute>: Bu biçimin eşlenmiş olduğu sınıflandırma türünün adı.
+- <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeAttribute>: bu biçimin eşlendiği Sınıflandırma türünün adı.
 
   Aşağıdaki örnek, sınıflandırma biçimi tanımında dışarı aktarma özniteliklerini gösterir.
 
@@ -226,7 +226,7 @@ internal IEditorFormatMapService FormatMapService { get; set; }
 
  Dış boşluk sağlayıcısını düzenleyiciye kaydetmek için sağlayıcıyı aşağıdaki özniteliklerle birlikte dışarı aktarmanız gerekir:
 
-- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: kenar boşluğun adı.
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: kenar boşluğu adı.
 
 - <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: diğer kenar boşluklarının göreli olarak kenar boşluğunda göründüğü sıra.
 
@@ -238,7 +238,7 @@ internal IEditorFormatMapService FormatMapService { get; set; }
 
   - "Wpf Satır Numarası Kenar Boşluğu"
 
-    sıralama özniteliğine sahip yatay kenar boşlukları yerleşik kenar boşluğun altında, sıralama özniteliğine sahip yatay kenar boşlukları ise yerleşik kenar `After="Wpf Horizontal Scrollbar"` `Before ="Wpf Horizontal Scrollbar"` boşluğun üzerinde görüntülenir. sıralama özniteliğine sahip sağ dikey kenar `After="Wpf Vertical Scrollbar"` boşlukları kaydırma çubuğunun sağ tarafından görüntülenir. sipariş özniteliğine sahip sol dikey kenar boşlukları, çizgi sayı kenar boşluğunda `After="Wpf Line Number Margin"` (görünürse) sol tarafta görünür.
+    sıralama özniteliğine sahip yatay kenar boşlukları yerleşik kenar boşluğu altında, sıralama özniteliğine sahip yatay kenar boşlukları ise yerleşik kenar `After="Wpf Horizontal Scrollbar"` `Before ="Wpf Horizontal Scrollbar"` boşluğun üzerinde görüntülenir. sıralama özniteliğine sahip sağ dikey kenar `After="Wpf Vertical Scrollbar"` boşlukları kaydırma çubuğunun sağ tarafından görüntülenir. sipariş özniteliğine sahip sol dikey kenar boşlukları, çizgi sayı kenar boşluğunda `After="Wpf Line Number Margin"` (görünürse) sol tarafta görünür.
 
 - <xref:Microsoft.VisualStudio.Text.Editor.MarginContainerAttribute>: kenar boşluğu (sol, sağ, üst veya alt) tür.
 
@@ -274,7 +274,7 @@ internal IEditorFormatMapService FormatMapService { get; set; }
   > [!NOTE]
   > bir örneği için, <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> [Walkthrough: Highlighting Text](../extensibility/walkthrough-highlighting-text.md)içinde HighlightWordTag tanımına bakın.
 
-- <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>: altı çizili olarak genişletilen veya daraltılmış bölgelerle ilişkilendirilen.
+- <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>: altı çizili olarak genişletilen veya daraltılmış bölgeler ile ilişkilendirildi.
 
 - <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag>: bir donatma metninin kapladığı alanı tanımlar. Alan anlaşmaları hakkında daha fazla bilgi için aşağıdaki bölüme bakın.
 
@@ -318,10 +318,10 @@ internal class HighlightWordFormatDefinition : MarkerFormatDefinition
  Bu biçim tanımını bir etikete uygulamak için sınıfın name özniteliğinde ayar adınıza (görünen ad değil) başvurabilirsiniz.
 
 > [!NOTE]
-> bir örneği için, <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition> [Walkthrough: Highlighting Text](../extensibility/walkthrough-highlighting-text.md)içinde HighlightWordFormatDefinition sınıfına bakın.
+> Bir örneği için, <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition> [Walkthrough: Highlighting Text](../extensibility/walkthrough-highlighting-text.md)içinde HighlightWordFormatDefinition sınıfına bakın.
 
-## <a name="extend-adornments"></a>Donatmaları genişletme
- Donatma, bir metin görünümünde görüntülenen metne veya metin görünümünün kendisine eklenilen görsel etkileri tanımlar. Kendi donatmanızı herhangi bir türü olarak <xref:System.Windows.UIElement> tanımlayabilirsiniz.
+## <a name="extend-adornments"></a>Donatmalarını genişletme
+ Donatma, bir metin görünümünde görüntülenen metne veya metin görünümünün kendisine eklenilen görsel etkileri tanımlar. Kendi donatmanızı herhangi bir tür olarak <xref:System.Windows.UIElement> tanımlayabilirsiniz.
 
  Donatma sınıfınıza bir <xref:Microsoft.VisualStudio.Text.Editor.AdornmentLayerDefinition> bildirin. Donatma katmanınızı kaydetmek için aşağıdaki özniteliklerle birlikte dışarı aktarın:
 
@@ -342,7 +342,7 @@ internal AdornmentLayerDefinition testLayerDefinition;
 
 - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: donatma geçerli olduğu içerik türü (örneğin, "metin" veya "kod").
 
-- <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: Bu donatma için geçerli olan metin görünümü. sınıfı, <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> önceden tanımlanmış metin görünümü rolleri kümesine sahiptir. Örneğin, <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> öncelikle dosyaların metin görünümleri için kullanılır. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> , bir kullanıcının fare ve klavye kullanarak düzenleyemez veya gezine metne yönelik görünümler için kullanılır. Görünümlere <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> örnek olarak düzenleyici metin görünümü ve Çıkış **penceresi** gösterilir.
+- <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: Bu donatma için geçerli metin görünümü. sınıfı, <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> önceden tanımlanmış metin görünümü rolleri kümesine sahiptir. Örneğin, <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> öncelikle dosyaların metin görünümleri için kullanılır. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> , bir kullanıcının fare ve klavye kullanarak düzenleyemez veya gezine metne yönelik görünümler için kullanılır. Görünümlere <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> örnek olarak düzenleyici metin görünümü ve Çıkış **penceresi** gösterilir.
 
   Aşağıdaki örnek, donatma sağlayıcısında dışarı aktarma özniteliklerini gösterir.
 
@@ -353,7 +353,7 @@ internal AdornmentLayerDefinition testLayerDefinition;
 internal sealed class TestAdornmentProvider : IWpfTextViewCreationListener
 ```
 
- Boşluk anlaşmalı donatma, metinle aynı düzeyde alanı kaplar. Bu tür bir donatma oluşturmak için, donatma kapladığı alan miktarını tanımlayan 'den <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag> devralan bir etiket sınıfı tanımlamanız gerekir.
+ Boşluk anlaşmalı donatma, alanı metinle aynı düzeyde kaplar. Bu tür bir donatma oluşturmak için, donatma kapladığı alan miktarını tanımlayan 'den devralan <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag> bir etiket sınıfı tanımlamanız gerekir.
 
  Tüm donatmalarda olduğu gibi, donatma katmanı tanımını dışarı aktarmalısiniz.
 
@@ -364,13 +364,13 @@ internal sealed class TestAdornmentProvider : IWpfTextViewCreationListener
 internal AdornmentLayerDefinition testAdornmentLayer;
 ```
 
- Alan anlaşmalı donatma örneğini oluşturmak için uygulayan sınıfa (diğer donatma türleri gibi) ek olarak uygulayan bir <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider> <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> sınıf oluşturmanız gerekir.
+ Alan anlaşmalı donatma örneğini oluşturmak için uygulayan sınıfa ek olarak (diğer donatma türleri gibi) uygulayan bir <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider> <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> sınıf oluşturmanız gerekir.
 
  Tagger sağlayıcısını kaydetmek için aşağıdaki özniteliklerle birlikte dışarı aktarmanız gerekir:
 
 - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: donatma sürenizin geçerli olduğu içerik türü (örneğin, "metin" veya "kod").
 
-- <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: bu etiketin veya donatmanın geçerli olduğu metin görünümü. sınıfı, <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> önceden tanımlanmış metin görünümü rolleri kümesine sahiptir. Örneğin, <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> öncelikle dosyaların metin görünümleri için kullanılır. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> , bir kullanıcının fare ve klavye kullanarak düzenleyemez veya gezine metne yönelik görünümler için kullanılır. Görünümlere <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> örnek olarak düzenleyici metin görünümü ve Çıkış **penceresi** gösterilir.
+- <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: Bu etiketin veya donatmanın geçerli olduğu metin görünümü. sınıfı, <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> önceden tanımlanmış metin görünümü rolleri kümesine sahiptir. Örneğin, <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> öncelikle dosyaların metin görünümleri için kullanılır. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> , bir kullanıcının fare ve klavye kullanarak düzenleyemez veya gezine metne yönelik görünümler için kullanılır. Görünümlere <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> örnek olarak düzenleyici metin görünümü ve Çıkış **penceresi** gösterilir.
 
 - <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>: tanımlandığı etiket veya donatma tür. için bir saniye eklemeniz <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag> gerekir.
 
@@ -417,43 +417,43 @@ internal sealed class TestMouseProcessorProvider : IMouseProcessorProvider
 
   7. Yerel Ayar
 
-  8. Palet
+  8. İnizdeki
 
   9. PenData
 
-  10. Serileştirilebilir
+  10. Seri hale getirilebilir
 
-  11. Sembolik Bağlantı
+  11. Semboliclınk
 
   12. Xaml
 
   13. XamlPackage
 
-  14. Tıff
+  14. Dosyalarında
 
-  15. Bitmap
+  15. Biteş
 
-  16. Dıb
+  16. Dib
 
-  17. Meta DosyaPicture
+  17. MetafilePicture
 
   18. CSV
 
-  19. System
+  19. System. String
 
-  20. HTML Biçimi
+  20. HTML biçimi
 
-  21. Unicodetext
+  21. UnicodeText
 
   22. OEMText
 
   23. Metin
 
-- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: bırakma işleyicisi adı.
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: bırakma işleyicisinin adı.
 
-- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: varsayılan bırakma işleyiciden önce veya sonra bırakma işleyicinin sıralaması. Visual Studio için varsayılan bırakma işleyicisi "DefaultFileDropHandler" olarak adlandırılmıştır.
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: varsayılan bırakma işleyicisinden önce veya sonra bırakma işleyicisinin sıralaması. Visual Studio için varsayılan bırakma işleyicisi "defaultfiledrophandler" olarak adlandırılmıştır.
 
-  Aşağıdaki örnek, bırakma işleyicisi sağlayıcısında dışarı aktarma özniteliklerini gösterir.
+  Aşağıdaki örnek, bir bırakma işleyici sağlayıcısında dışarı aktarma özniteliklerini gösterir.
 
 ```
 [Export(typeof(IDropHandlerProvider))]
@@ -463,10 +463,10 @@ internal sealed class TestMouseProcessorProvider : IMouseProcessorProvider
 internal class TestDropHandlerProvider : IDropHandlerProvider
 ```
 
-## <a name="extending-editor-options"></a>Düzenleyici Seçeneklerini Genişletme
- Yalnızca belirli bir kapsamda (örneğin, metin görünümünde) geçerli olacak seçenekleri tanımlayabilirsiniz. Düzenleyici şu önceden tanımlanmış seçenekler kümesi sağlar: düzenleyici seçenekleri, görünüm seçenekleri ve Windows Presentation Foundation (WPF) görüntüleme seçenekleri. Bu seçenekler , <xref:Microsoft.VisualStudio.Text.Editor.DefaultOptions> ve içinde <xref:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions> <xref:Microsoft.VisualStudio.Text.Editor.DefaultWpfViewOptions> bulunabilir.
+## <a name="extending-editor-options"></a>Düzenleyici seçeneklerini genişletme
+ Seçenekleri yalnızca belirli bir kapsamda (örneğin, bir metin görünümünde) geçerli olacak şekilde tanımlayabilirsiniz. düzenleyici, bu öntanımlı seçenekler kümesini sağlar: düzenleyici seçenekleri, görüntüleme seçenekleri ve Windows Presentation Foundation (WPF) görünüm seçenekleri. Bu seçenekler <xref:Microsoft.VisualStudio.Text.Editor.DefaultOptions> ,, ve içinde bulunabilir <xref:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions> <xref:Microsoft.VisualStudio.Text.Editor.DefaultWpfViewOptions> .
 
- Yeni bir seçenek eklemek için, şu seçenek tanımı sınıflarından bir sınıf türetin:
+ Yeni bir seçenek eklemek için, bu seçenek tanım sınıflarından birini bir sınıf türetirsiniz:
 
 - <xref:Microsoft.VisualStudio.Text.Editor.EditorOptionDefinition%601>
 
@@ -474,32 +474,32 @@ internal class TestDropHandlerProvider : IDropHandlerProvider
 
 - <xref:Microsoft.VisualStudio.Text.Editor.WpfViewOptionDefinition%601>
 
-  Aşağıdaki örnekte, Boole değerine sahip bir seçenek tanımının nasıl dışarı aktar olduğu gösterir.
+  Aşağıdaki örnek, Boole değeri olan bir seçenek tanımının nasıl dışarı aktarılacağını gösterir.
 
 ```
 [Export(typeof(EditorOptionDefinition))]
 internal sealed class TestOption : EditorOptionDefinition<bool>
 ```
 
-## <a name="extend-intellisense"></a>IntelliSense'i genişletme
- IntelliSense, yapılandırılmış metin ve deyim tamamlama hakkında bilgi sağlayan bir özellik grubu için genel bir terimdir. Bu özellikler deyim tamamlama, imza yardımı, Hızlı Bilgi ve ampulleri içerir. Deyim tamamlama, kullanıcıların dil anahtar sözcüğünü veya üye adını doğru yazmalarını sağlar. İmza yardımı, kullanıcının az önce yazarak yöntemine yönelik imzayı veya imzaları görüntüler. Hızlı Bilgi, fare üzerine geldiğinde bir tür veya üye adı için tam bir imza görüntüler. Ampul belirli bağlamlarda belirli tanımlayıcılar için ek eylemler sağlar; örneğin, bir oluşum yeniden adlandırıldıktan sonra değişkenin tüm oluşumlarını yeniden adlandırma.
+## <a name="extend-intellisense"></a>IntelliSense 'i genişletme
+ IntelliSense, yapılandırılmış metin ve bunun için deyimi tamamlama hakkında bilgi sağlayan bir dizi özellik için genel bir terimdir. Bu özellikler; deyimin tamamlanmasını, imza yardımını, hızlı bilgileri ve hafif bulbs 'leri içerir. Deyimin tamamlanması, kullanıcıların bir dil anahtar sözcüğünü veya üye adını doğru şekilde yazmasının sağlar. İmza yardımı, kullanıcının yeni girdiği yönteme ait imza veya imzaları görüntüler. Hızlı bilgi, fare üzerine getirildiğinde bir tür veya üye adı için tamamen imza görüntüler. Ampul, belirli bağlamlardaki belirli tanımlayıcılar için ek eylemler sağlar, örneğin, bir oluşum yeniden adlandırıldıktan sonra bir değişkenin tüm tekrarlamalarını yeniden adlandırma.
 
  IntelliSense özelliğinin tasarımı her durumda çok aynıdır:
 
-- Genel işlemden *intelliSense* aracısı sorumludur.
+- Bir IntelliSense *Aracısı* , genel işlemden sorumludur.
 
-- IntelliSense *oturumu,* sunucu tetikleme ile işleme veya seçimin iptali arasındaki olay dizisini temsil eder. Oturum genellikle bir kullanıcı hareketiyle tetiklenir.
+- Bir IntelliSense *oturumu* , sunucunun tetiklenmesi ile seçimin komite veya iptalinin arasındaki olayların sırasını temsil eder. Oturum genellikle bazı Kullanıcı hareketi tarafından tetiklenir.
 
-- IntelliSense *denetleyicisi,* oturumun ne zaman başlayacağına ve bitim tarihine karar vermekle sorumludur. Ayrıca bilgilerin ne zaman işlendiklerine ve ne zaman iptal edileceklerine de karar verir.
+- Bir IntelliSense *denetleyicisi* , oturumun ne zaman başlayıp bitmeyeceğine karar vermekten sorumludur. Ayrıca, bilgilerin ne zaman yürütülmesi gerektiğini ve oturumun ne zaman iptal edilip edilmeyeceğine de karar verir.
 
-- IntelliSense *kaynağı içeriği* sağlar ve en iyi eşleşmeye karar verir.
+- IntelliSense *kaynağı* içeriği sağlar ve en iyi eşleşmeyi belirler.
 
-- İçeriğin görüntülenmesi *intelliSense* sunucusu tarafından sorumludur.
+- Bir IntelliSense *sunucu* , içeriğin görüntülenmesini sağlamaktan sorumludur.
 
-  Çoğu durumda, en az bir kaynak ve denetleyici sağlamanız önerilir. Ayrıca, ekranı özelleştirmek için bir sunucu da sebilirsiniz.
+  Çoğu durumda, en az bir kaynak ve denetleyici sağlamanızı öneririz. Ayrıca, görüntülemeyi özelleştirmek istiyorsanız bir sunucu da sağlayabilirsiniz.
 
-### <a name="implement-an-intellisense-source"></a>IntelliSense Kaynağı Uygulama
- Bir kaynağı özelleştirmek için aşağıdaki kaynak arabirimlerden birini (veya daha fazlasını) uygulamanız gerekir:
+### <a name="implement-an-intellisense-source"></a>Bir IntelliSense kaynağı uygulama
+ Bir kaynağı özelleştirmek için aşağıdaki kaynak arabirimlerinden bir (veya daha fazla) uygulamanız gerekir:
 
 - <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>
 
@@ -510,9 +510,9 @@ internal sealed class TestOption : EditorOptionDefinition<bool>
 - <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>
 
 > [!IMPORTANT]
-> <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource> , için kullanım <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> dışıdır.
+> <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource> kullanım dışı bırakılmıştır <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> .
 
- Ayrıca, aynı tür bir sağlayıcıyı da uygulamalısiniz:
+ Ayrıca, aynı türde bir sağlayıcı uygulamanız gerekir:
 
 - <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider>
 
@@ -523,17 +523,17 @@ internal sealed class TestOption : EditorOptionDefinition<bool>
 - <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>
 
 > [!IMPORTANT]
-> <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider> , için kullanım <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> dışıdır.
+> <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider> kullanım dışı bırakılmıştır <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> .
 
- Sağlayıcıyı aşağıdaki özniteliklerle birlikte dışarı aktarmalısiniz:
+ Sağlayıcıyı aşağıdaki özniteliklerle birlikte dışarı aktarmanız gerekir:
 
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: kaynağın adı.
 
 - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: kaynağın uygulandığı içerik türü (örneğin, "metin" veya "kod").
 
-- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: kaynağın görünme sırası (diğer kaynaklara göre).
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: kaynağın görünmesi gereken sıra (diğer kaynaklara göre).
 
-- Aşağıdaki örnek, tamamlama kaynak sağlayıcısında dışarı aktarma özniteliklerini gösterir.
+- Aşağıdaki örnek, bir tamamlama kaynak sağlayıcısında dışarı aktarma özniteliklerini gösterir.
 
 ```
 Export(typeof(ICompletionSourceProvider))]
@@ -543,22 +543,22 @@ Export(typeof(ICompletionSourceProvider))]
 internal class TestCompletionSourceProvider : ICompletionSourceProvider
 ```
 
- IntelliSense kaynaklarını uygulama hakkında daha fazla bilgi için aşağıdaki kılavuzlara bakın:
+ IntelliSense kaynaklarını uygulama hakkında daha fazla bilgi için aşağıdaki izlenecek yollara bakın:
 
-- [Adım adım kılavuz: QuickInfo araç ipucu görüntüleme](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)
+- [İzlenecek yol: hızlı bilgi araç ipuçlarını görüntüle](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)
 
-- [adım adım kılavuz: İmza Yardımı Görüntüleme](../extensibility/walkthrough-displaying-signature-help.md)
+- [İzlenecek yol: Imza yardımını görüntüle](../extensibility/walkthrough-displaying-signature-help.md)
 
-- [Adım adım kılavuz: Deyim tamamlamayı görüntüleme](../extensibility/walkthrough-displaying-statement-completion.md)
+- [İzlenecek yol: görüntüleme ifadesinin tamamlanması](../extensibility/walkthrough-displaying-statement-completion.md)
 
 ### <a name="implement-an-intellisense-controller"></a>IntelliSense denetleyicisi uygulama
- Bir denetleyiciyi özelleştirmek için arabirimini uygulamanız <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController> gerekir. Ayrıca, aşağıdaki özniteliklerle birlikte bir denetleyici sağlayıcısı da uygulamanız gerekir:
+ Bir denetleyiciyi özelleştirmek için arabirimini uygulamanız gerekir <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController> . Ayrıca, aşağıdaki özniteliklerle bir denetleyici sağlayıcısı uygulamanız gerekir:
 
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: denetleyicinin adı.
 
 - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: denetleyicinin uygulandığı içerik türü (örneğin, "metin" veya "kod").
 
-- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: denetleyicinin görünme sırası (diğer denetleyicilere göre).
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: denetleyicinin görüntüleneceği sıra (diğer denetleyicilere göre).
 
   Aşağıdaki örnek, bir tamamlama denetleyicisi sağlayıcısında dışarı aktarma özniteliklerini gösterir.
 
@@ -570,6 +570,6 @@ Export(typeof(IIntellisenseControllerProvider))]
 internal class TestIntellisenseControllerProvider : IIntellisenseControllerProvider
 ```
 
- IntelliSense denetleyicilerini kullanma hakkında daha fazla bilgi için aşağıdaki kılavuzlara bakın:
+ IntelliSense denetleyicilerini kullanma hakkında daha fazla bilgi için aşağıdaki izlenecek yollara bakın:
 
-- [Adım adım kılavuz: QuickInfo araç ipucu görüntüleme](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)
+- [İzlenecek yol: hızlı bilgi araç ipuçlarını görüntüle](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)

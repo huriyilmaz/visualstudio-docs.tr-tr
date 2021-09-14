@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 193f365019c0fd005b6c487a8b8414302f301a60
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044525"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629661"
 ---
 # <a name="idialinenumberget_sourcefileid"></a>IDiaLineNumber::get_sourceFileId
 Bu satıra katkıda bulunan kaynak dosya için benzersiz bir kaynak dosya tanımlayıcısı alır.

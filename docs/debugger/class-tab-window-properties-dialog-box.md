@@ -14,18 +14,18 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 4179680ae5f5c55c322de8fbfc9552923ba3962a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129746"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630915"
 ---
 # <a name="class-tab-window-properties-dialog-box"></a>Sınıf Sekmesi, Pencere Özellikleri İletişim Kutusu
 Seçilen **pencerenin** sınıfındaki bilgileri göstermek için Sınıf sekmesini kullanın. Pencere Özellikleri [İletişim Kutusunu görüntülemek için](../debugger/window-properties-dialog-box.md)odağı Görünüm [penceresine Windows](../debugger/windows-view.md) hareket ettirin. Ağaçta herhangi bir pencere düğümünü seçin ve ardından Görünüm **menüsünden** **Özellikler'i** seçin.
 
  Sınıf sekmesinde aşağıdaki ayarlar **kullanılabilir:**
 
-|Giriş|Açıklama|
+|Giriş|Description|
 |-----------|-----------------|
 |**Sınıf Adı**|Bu pencere sınıfının adı (veya dizi numarası).|
 |**Sınıf Stilleri**|Sınıf stili kodlarının birleşimi.|
@@ -33,8 +33,8 @@ Seçilen **pencerenin** sınıfındaki bilgileri göstermek için Sınıf sekmes
 |**Sınıf Atomu**|**RegisterClass** çağrısı tarafından döndürülen sınıfın atomu.|
 |**Örnek Tanıtıcısı**|sınıfını kaydeden modülün örnek tanıtıcısı. Örnek tanıtıcıları benzersiz değildir.|
 |**Pencere Bayt sayısı**|Bu sınıfın her penceresiyle ilişkili ek bayt sayısı. Bu baytların anlamı uygulama tarafından belirlenir. DWORD biçimindeki bayt değerlerini görmek için liste kutusunu genişletin.|
-|**Pencere Temini**|Bu sınıfın pencereleri için **WndProc** işlevinin geçerli adresi. Bu durum, pencere **alt sınıfına** alındı **ise** Genel sekmesindeki Window Proc'dan farklıdır.|
+|**Window Proc**|Bu sınıfın pencereleri için **WndProc** işlevinin geçerli adresi. Bu durum, pencere **alt sınıfına** alındı **ise** Genel sekmesindeki Window Proc'dan farklıdır.|
 |**Menü Adı**|Bu sınıfın pencereleri ile ilişkili ana menenin adı ("menü yoksa hiçbiri").|
 |**Simge Tanıtıcısı**|Bu sınıfın pencereleri ile ilişkili simgenin tanıtıcısı ("simge yoksa hiçbiri").|
-|**İmleç Tanıtıcısı**|Bu sınıfın pencereleri ile ilişkili imleç tanıtıcısı ("imleç yoksa hiçbiri").|
+|**İmleç Tanıtıcısı**|Bu sınıfın pencereleri ile ilişkili imlecin tanıtıcısı ("imleç yoksa hiçbiri").|
 |**Bkgnd Fırça**|Bu sınıfın pencereleriyle ilişkili arka plan fırçasının tanıtıcısı veya pencere arka planını boyamak için önceden tanımlanmış COLOR_* renklerinden biri ("fırça yoksa hiçbiri").|

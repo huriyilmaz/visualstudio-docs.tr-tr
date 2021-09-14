@@ -20,11 +20,11 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: c56eb3b3bfb79bd7896657719157fc6a4bd8e99c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122100679"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628406"
 ---
 # <a name="parametergroup-element"></a>ParameterGroup öğesi
 
@@ -61,7 +61,7 @@ bir tarafından oluşturulan görev üzerinde mevcut olacak parametrelerin iste�
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, öğesinin nasıl `ParameterGroup` kullanılageldi.
+ Aşağıdaki örnek, öğesinin nasıl kullanılalı olduğunu `ParameterGroup` gösterir.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">

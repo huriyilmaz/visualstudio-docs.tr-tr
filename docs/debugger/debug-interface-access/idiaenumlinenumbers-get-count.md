@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: a72c34ef5c1ca1ddfc19e20291cfea8249a7857e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036546"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630242"
 ---
 # <a name="idiaenumlinenumbersget_count"></a>IDiaEnumLineNumbers::get_Count
 Satır numaralarının sayısını verir.

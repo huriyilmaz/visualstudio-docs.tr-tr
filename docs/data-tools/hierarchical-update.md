@@ -25,11 +25,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 74e96bf3644d57235aff82fb2b0393c1506dd653
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122122000"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631376"
 ---
 # <a name="hierarchical-update"></a>Hiyerarşik güncelleştirme
 
@@ -121,7 +121,7 @@ Varsayılan olarak, `TableAdapterManager` ilişkili tabloları içeren bir veri 
 
 Aşağıda, sınıfının sık kullanılan yöntemleri ve özellikleri verilmiştir `TableAdapterManager` :
 
-|Üye|Açıklama|
+|Üye|Description|
 |------------|-----------------|
 |`UpdateAll` yöntemi|Tüm veri tablolarından tüm verileri kaydeder.|
 |`BackUpDataSetBeforeUpdate` özelliði|Yöntemi yürütmeden önce veri kümesinin yedek kopyasının oluşturulup oluşturulmayacağını belirler `TableAdapterManager.UpdateAll` . Boolean.|

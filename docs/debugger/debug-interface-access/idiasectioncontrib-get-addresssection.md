@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: d549d9ef101cb5b94f19c70e1b5a0c9f1860e964
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161592"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629481"
 ---
 # <a name="idiasectioncontribget_addresssection"></a>IDiaSectionContrib::get_addressSection
 Katkı adresinin bölüm bölümünü alın.

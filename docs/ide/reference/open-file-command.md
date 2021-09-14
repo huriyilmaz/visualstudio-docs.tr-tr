@@ -1,6 +1,6 @@
 ---
 title: Dosya Aç Komutu
-description: Dosya Aç komutu ve var olan bir dosyayı nasıl açtığı hakkında bilgi edinin ve bir düzenleyici belirtmenize izin verir.
+description: Dosya Aç komutu ve var olan bir dosyayı nasıl açtığı hakkında bilgi alın ve bir düzenleyici belirtmenize olanak sağlar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,15 +18,15 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: aa31ee8ce28b29f81066e12f80aa0c73fccb8731
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117325"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628688"
 ---
-# <a name="open-file-command"></a>Dosya Aç komutu
+# <a name="open-file-command"></a>Dosya aç komutu
 
-Var olan bir dosyayı açar ve bir düzenleyici belirtmenize olanak tanır.
+Mevcut bir dosyayı açar ve bir düzenleyici belirtmenize olanak sağlar.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -38,17 +38,17 @@ File.OpenFile filename [/e:editorname]
 
 `filename`
 
-Gereklidir. Açılacak dosyanın tam veya kısmi yolu ve dosya adı. Boşluk içeren yollar tırnak işaretleri içine alınmalıdır.
+Gereklidir. Açılacak dosyanın tam veya kısmi yolu ve dosya adı. Boşluk içeren yollar tırnak içine alınmalıdır.
 
 ## <a name="switches"></a>Anahtarlar
 
-/e`editorname`
+/e:`editorname`
 
-İsteğe bağlı. Dosyanın açıldığı düzenleyicinin adı. Bağımsız değişken belirtilmişse ancak düzenleyici adı sağlanmadığında, **birlikte Aç** iletişim kutusu görüntülenir.
+İsteğe bağlı. Dosyanın açılamıyor olduğu düzenleyicinin adı. Bağımsız değişken belirtilmişse ancak düzenleyici adı sağlanmadı ise, **Birlikte Aç** iletişim kutusu görüntülenir.
 
-/E: `editorname` Argument sözdizimi, birlikte Aç Iletişim kutusunda göründükleri gibi, tırnak işaretleri içine alınan düzenleyici adlarını kullanır.
+/e: bağımsız değişken söz dizimi, düzenleyici adlarını, tırnak içinde, Birlikte Aç `editorname` İletişim Kutusunda görünen şekilde kullanır.
 
-Örneğin, kaynak kodu düzenleyicisinde bir dosya açmak için,/e: Argument için aşağıdakini girersiniz `editorname` .
+Örneğin, kaynak kod düzenleyicisinde bir dosya açmak için /e: bağımsız değişkeni için aşağıdakini `editorname` girersiniz.
 
 ```cmd
 /e:"Source Code (text) Editor"
@@ -60,7 +60,7 @@ Bir yol girerken, otomatik tamamlama doğru yolu ve dosya adını bulmaya çalı
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, kaynak kodu düzenleyicisinde "test1. css" stil dosyasını açar.
+Bu örnek, kaynak kod düzenleyicisinde "Test1.css" stil dosyasını açar.
 
 ```cmd
 >File.OpenFile "C:\My Projects\project1\Test1.css" /e:"Source Code (text) Editor"
@@ -71,5 +71,5 @@ Bu örnek, kaynak kodu düzenleyicisinde "test1. css" stil dosyasını açar.
 - [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
 - [Komut penceresi](../../ide/reference/command-window.md)
 - [Komut penceresi](../../ide/reference/immediate-window.md)
-- [Bul/komut kutusu](../../ide/find-command-box.md)
-- [Visual Studio komut diğer adları](../../ide/reference/visual-studio-command-aliases.md)
+- [Bul/Komut kutusu](../../ide/find-command-box.md)
+- [Visual Studio diğer adları](../../ide/reference/visual-studio-command-aliases.md)

@@ -1,6 +1,6 @@
 ---
-description: Bir numaralandırma dizisinde belirtilen sayıda parçayı atlar.
-title: 'IDiaEnumSegments:: Skip | Microsoft Docs'
+description: Bir numaralama dizisinde belirtilen sayıda segmenti atlar.
+title: IDiaEnumSegments::Skip | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 22479a35faf797969eb7936c6d630e91f7f6352b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113699"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630117"
 ---
 # <a name="idiaenumsegmentsskip"></a>IDiaEnumSegments::Skip
-Bir numaralandırma dizisinde belirtilen sayıda parçayı atlar.
+Bir numaralama dizisinde belirtilen sayıda segmenti atlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,12 +33,12 @@ HRESULT Skip (
 ```
 
 #### <a name="parameters"></a>Parametreler
- celt
+ Celt
 
-'ndaki Atlanacak numaralandırma dizisindeki kesimlerin sayısı.
+[in] Atlama sırasına göre numaralama dizisinde yer alan segmentlerin sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlanacak daha fazla kesim yoksa döndürür.
+ Başarılı olursa, `S_OK` döndürür; aksi takdirde, `S_FALSE` atlanabilecek başka kesim yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

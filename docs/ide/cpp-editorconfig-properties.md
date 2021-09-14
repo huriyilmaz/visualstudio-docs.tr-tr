@@ -1,7 +1,7 @@
 ---
 title: C++ EditorConfig biçimlendirme kuralları
 titleSuffix: ''
-description: Visual Studio 'da C++ kodunu biçimlendirmek için EditorConfig 'in nasıl kullanılacağı hakkında bilgi edinin.
+description: Visual Studio'de C++ kodunu biçimlendirmek için EditorConfig'i kullanma hakkında Visual Studio.
 ms.date: 9/14/2020
 author: jureid
 ms.author: jureid
@@ -15,19 +15,19 @@ ms.workload:
 - cplusplus
 monikerRange: vs-2019
 ms.openlocfilehash: b7554e2038f0be8d72b96e8b53280faca498e772
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122124080"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628826"
 ---
 # <a name="c-editorconfig-formatting-conventions"></a>C++ EditorConfig biçimlendirme kuralları
 
-Visual Studio C++ biçimlendiricisi, genel olarak uygulanabilen, zengin bir yapılandırılabilir ayarlar kümesine sahiptir. Belirli bir çalışma alanının C++ biçimlendirme ayarlarını ayarlamak için [clangformat](https://clang.llvm.org/docs/ClangFormat.html) veya [editorconfig](https://editorconfig.org/)kullanın. hem Visual Studio hem de Visual Studio Code, genel Visual Studio C++ biçimlendirme ayarlarının her biri için yerleşik editorconfig desteğine sahiptir ve bu da editorconfig ayarları önceliklidir. Bu, C++ biçimlendirmesini daha ayrıntılı bir düzeyde yapılandırmak ve projeye katkıda bulunan herkes için tutarlı kod stili uygulamak üzere çalışma alanınıza EditorConfig dosyaları ekleyebileceğiniz anlamına gelir.
+C++ Visual Studio biçimlendiren, genel olarak uygulanabilir zengin bir yapılandırılabilir ayarlar kümesine sahip. Belirli bir çalışma alanı için C++ biçimlendirme ayarlarını ayarlamak üzere [clangformat veya](https://clang.llvm.org/docs/ClangFormat.html) [EditorConfig kullanın.](https://editorconfig.org/) Hem Visual Studio hem de Visual Studio Code C++ biçimlendirme ayarlarının her biri için yerleşik EditorConfig desteğine ve EditorConfig ayarları öncelikli olacak şekilde Visual Studio'ye sahip olur. Bu, C++ biçimlendirmesini daha ayrıntılı bir düzeyde yapılandırmak ve projeye katkıda bulunan herkes için tutarlı kod stili uygulamak için çalışma alanınıza EditorConfig dosyaları eklebilirsiniz.
 
 ## <a name="c-formatting-conventions"></a>C++ biçimlendirme kuralları
 
-C++ biçimlendirme EditorConfig ayarları ön ekine sahiptir `cpp_` . Aşağıda, EditorConfig dosyanızın nasıl görünebileceğini bir örnek verilmiştir:
+C++ biçimlendirme EditorConfig ayarları ön eki ile birlikte `cpp_` kullanılır. EditorConfig dosyanız aşağıdaki gibi olabilir:
 
 ```ini
 [*.{c++,cc,cpp,cxx,h,h++,hh,hpp,hxx,inl,ipp,tlh,tli}]
@@ -36,7 +36,7 @@ cpp_indent_case_contents_when_block = true
 cpp_new_line_before_open_brace_namespace = same_line
 ```
 
-bu belgenin geri kalanında Visual Studio ve VS Code tarafından desteklenen tüm editorconfig C++ biçimlendirme ayarları listelenir.
+Bu belgenin geri kalanında, Visual Studio ve VS Code tarafından desteklenen tüm EditorConfig C++ biçimlendirme ayarları VS Code.
 
 ### <a name="indentation-settings"></a>Girintileme ayarları
 
@@ -45,130 +45,130 @@ bu belgenin geri kalanında Visual Studio ve VS Code tarafından desteklenen tü
 - Ad: `cpp_indent_braces`
 - Değerler: `true` , `false`
 
-**Her satırı göreceli olarak Girintile**
+**Her satırı göreli olarak girintileme**
 
 - Ad: `cpp_indent_multi_line_relative_to`
 - Değerler:
-  - `outermost_parenthesis` -Yeni bir satır yazıldığında, göreceli olarak en dıştaki açık ayraçla girintilenir.
-  - `innermost_parenthesis` -Yeni bir satır yazıldığında, bu, en içteki açık ayraçla göreli olarak girintilenir.
-  - `statement_begin` -Yeni bir satır yazıldığında, geçerli deyimin başına göreli olarak girintilenir.
+  - `outermost_parenthesis` - Yeni bir satır yazıldı mı, göreli olarak en dıştaki açık paranteze girintili olarak eklenir.
+  - `innermost_parenthesis` - Yeni bir satır yazgınca, en içteki açık paranteze göre girintili olur.
+  - `statement_begin` - Yeni bir satır yazgınca, geçerli deyimin başlangıcına göre girintili olarak girintili olarak eklenir.
 
-**Parantez içinde, yeni satırları yazdığımda Hizala**
+**Parantez içinde, yeni satırları yazarak hizala**
 
 - Ad: `cpp_indent_within_parentheses`
 - Değerler:
-  - `align_to_parenthesis` -Parantez açmak için içeriği hizalayın.
-  - `indent` -Yeni satırları Girintile.
+  - `align_to_parenthesis` - İçeriği parantez açmak için hizala.
+  - `indent` - Yeni satırları girintileme.
 
-**Mevcut kodda, parantez içindeki yeni satırların hizalaması için ayarı kullanmayın**
+**Mevcut kodda, yeni satırları parantez içinde hizalamak için ayarını kullanma**
 
 - Ad: `cpp_indent_preserve_within_parentheses`
 - Değerler: `true` , `false`
 
-**Büyük/küçük harf içeriğini Girintile**
+**Büyük/büyük/büyük harf içeriklerini girintileme**
 
 - Ad: `cpp_indent_case_contents`
 - Değerler: `true` , `false`
 
-**Büyük/küçük harf etiketlerini Girintile**
+**Büyük/büyük/harf etiketlerini girintileme**
 
 - Ad: `cpp_indent_case_labels`
 - Değerler: `true` , `false`
 
-**Case deyiminden sonra ayraçları Girintile**
+**Bir case deyiminden sonra küme ayraçlarını girintileme**
 
 - Ad: `cpp_indent_case_contents_when_block`
 - Değerler: `true` , `false`
 
-**Parametre olarak kullanılan lambdaların ayraçlarını Girintile**
+**Parametre olarak kullanılan lambdaların girinti ayraçları**
 
 - Ad: `cpp_indent_lambda_braces_when_parameter`
 - Değerler: `true` , `false`
 
-**Goto etiketlerinin konumu**
+**Etiketlerin konumu**
 
 - Ad: `cpp_indent_goto_labels`
 - Değerler:
-  - `one_left` -Sola bir girinti
-  - `leftmost_column` -En soldaki sütuna taşı
-  - `none` -Girintili kalsın
+  - `one_left` - Sol tarafta bir girinti
+  - `leftmost_column` - En soldaki sütuna taşıma
+  - `none` - Girintili bırakın
 
-**Önişlemci yönergelerinin konumu**
+**Ön işlemci yönergelerinin konumu**
 
 - Ad: `cpp_indent_preprocessor`
 - Değerler:
-  - `one_left` -Sola bir girinti
-  - `leftmost_column` -En soldaki sütuna taşı
-  - `none` -Girintili kalsın
+  - `one_left` - Sol tarafta bir girinti
+  - `leftmost_column` - En soldaki sütuna taşıma
+  - `none` - Girintili bırakın
 
-**Erişim belirticilerini Girintile**
+**Erişim belirleyicilerini girintileme**
 
 - Ad: `cpp_indent_access_specifiers`
 - Değerler: `true` , `false`
 
-**Ad alanı içeriklerini Girintile**
+**Ad alanı içeriğini girintileme**
 
 - Ad: `cpp_indent_namespace_contents`
 - Değerler: `true` , `false`
 
-**Yorumların girintilenmesini koru**
+**Açıklama girintisini koruma**
 
 - Ad: `cpp_indent_preserve_comments`
 - Değerler: `true` , `false`
 
 ### <a name="newline-settings"></a>Yeni satır ayarları
 
-**Ad alanları için açık küme ayraçlarının konumu**
+**Ad alanları için açık ayraçların konumu**
 
 - Ad: `cpp_new_line_before_open_brace_namespace`
 - Değerler:
-  - `new_line` -Yeni bir satıra taşı
-  - `same_line` -Aynı satırda tutun, ancak daha önce bir boşluk ekleyin
-  - `ignore` -Otomatik olarak yeniden Konumlandır
+  - `new_line` - Yeni satıra taşıma
+  - `same_line` - Aynı satırda tut ama önce bir boşluk ekleyin
+  - `ignore` - Otomatik olarak yeniden konumlandırma
 
-**Türler için açık küme ayraçlarının konumu**
+**Türler için açık ayraçların konumu**
 
 - Ad: `cpp_new_line_before_open_brace_type`
 - Değerler:
-  - `new_line` -Yeni bir satıra taşı
-  - `same_line` -Aynı satırda tutun, ancak daha önce bir boşluk ekleyin
-  - `ignore` -Otomatik olarak yeniden Konumlandır
+  - `new_line` - Yeni satıra taşıma
+  - `same_line` - Aynı satırda tut ama önce bir boşluk ekleyin
+  - `ignore` - Otomatik olarak yeniden konumlandırma
 
-**İşlevler için açık küme ayraçlarının konumu**
+**İşlevler için açık ayraçların konumu**
 
 - Ad: `cpp_new_line_before_open_brace_function`
 - Değerler:
-  - `new_line` -Yeni bir satıra taşı
-  - `same_line` -Aynı satırda tutun, ancak daha önce bir boşluk ekleyin
-  - `ignore` -Otomatik olarak yeniden Konumlandır
+  - `new_line` - Yeni satıra taşıma
+  - `same_line` - Aynı satırda tut ama önce bir boşluk ekleyin
+  - `ignore` - Otomatik olarak yeniden konumlandırma
 
-**Denetim blokları için açık küme ayraçlarının konumu**
+**Denetim blokları için açık ayraçların konumu**
 
 - Ad: `cpp_new_line_before_open_brace_block`
 - Değerler:
-  - `new_line` -Yeni bir satıra taşı
-  - `same_line` -Aynı satırda tutun, ancak daha önce bir boşluk ekleyin
-  - `ignore` -Otomatik olarak yeniden Konumlandır
+  - `new_line` - Yeni satıra taşıma
+  - `same_line` - Aynı satırda tut ama önce bir boşluk ekleyin
+  - `ignore` - Otomatik olarak yeniden konumlandırma
 
-**Lambdalar için açık küme ayraçlarının konumu**
+**Lambdalar için açık ayraçların konumu**
 
 - Ad: `cpp_new_line_before_open_brace_lambda`
 - Değerler:
-  - `new_line` -Yeni bir satıra taşı
-  - `same_line` -Aynı satırda tutun, ancak daha önce bir boşluk ekleyin
-  - `ignore` -Otomatik olarak yeniden Konumlandır
+  - `new_line` - Yeni satıra taşıma
+  - `same_line` - Aynı satırda tut ama önce bir boşluk ekleyin
+  - `ignore` - Otomatik olarak yeniden konumlandırma
  
-**Kapsam ayraçları ayrı satırlara yerleştir**
+**Kapsam ayraçlarını ayrı satırlara yer**
 
 - Ad: `cpp_new_line_scope_braces_on_separate_lines`
 - Değerler: `true` , `false`
 
-**Boş türler için, kapatma küme ayraçlarını açma küme ayraçlarıyla aynı satıra taşıyın**
+**Boş türler için, kapatma ayraçlarını açma ayraçları ile aynı satıra taşıma**
 
 - Ad: `cpp_new_line_close_brace_same_line_empty_type`
 - Değerler: `true` , `false`
 
-**Boş işlev gövdeleri için, kapatma küme ayraçlarını açma küme ayraçlarıyla aynı satıra taşıyın**
+**Boş işlev gövdeleri için kapatma ayraçlarını açma ayraçları ile aynı satıra taşıma**
 
 - Ad: `cpp_new_line_close_brace_same_line_empty_function`
 - Değerler: `true` , `false`
@@ -360,7 +360,7 @@ bu belgenin geri kalanında Visual Studio ve VS Code tarafından desteklenen tü
   - `left` - Sola hizala.
   - `center` - Ortayı hizala.
   - `right` - Sağa hizala.
-  - `ignore` - Değiştirmeden bırakın.
+  - `ignore` - Değişmeden bırakın.
 
 **Koşullu işleçler için boşluk**
 

@@ -12,19 +12,19 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: e7f686e86f0bb4743e8cbb45e29d0ebcb2b22e5e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036933"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631317"
 ---
 # <a name="how-to-create-an-association-between-linq-to-sql-classes-or-designer"></a>Nasıl kullanılır: LINQ to SQL sınıfları (O/R Tasarımcısı) arasında ilişki oluşturma
-içinde varlık sınıfları arasındaki [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] ilişkilendirmeler, veritabanındaki tablolar arasındaki ilişkilere benzer. İlişki Düzenleyici iletişim kutusunu kullanarak varlık sınıfları arasında **ilişki** oluşturabilirsiniz.
+içinde varlık sınıfları arasındaki [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] ilişkilendirmeler, veritabanındaki tablolar arasındaki ilişkilere benzer. İlişki Düzenleyici iletişim kutusunu kullanarak varlık sınıfları arasında **ilişkilendirmeler** oluşturabilirsiniz.
 
 İlişki oluşturma için İlişki düzenleyici iletişim kutusunu kullanırken bir üst sınıf **ve** alt sınıf seçmeniz gerekir. Üst sınıf, birincil anahtarı içeren varlık sınıfıdır; alt sınıfı, yabancı anahtarı içeren varlık sınıfıdır. Örneğin, ve tablolarına eşlene varlık sınıfları oluşturulduktan sonra sınıf üst `Northwind Customers` `Orders` `Customer` sınıf, `Order` sınıf ise alt sınıf olur.
 
 > [!NOTE]
-> Tabloları Sunucu Gezgini **veya** **Veritabanı Gezgini** **(O/R Tasarımcısı)** **Nesne İlişkisel Tasarımcısı)** üzerine sürüklerken, ilişkilendirmeler veritabanındaki mevcut yabancı anahtar ilişkilerine göre otomatik olarak oluşturulur.
+> Tabloları Sunucu Gezgini **veya** **Veritabanı Gezgini** **(O/R** Tasarımcısı Nesne İlişkisel Tasarımcısı) üzerine sürüklerken, ilişkilendirmeler veritabanındaki mevcut yabancı anahtar ilişkilerine göre otomatik olarak oluşturulur. 
 
 ## <a name="association-properties"></a>İlişki özellikleri
 bir ilişkilendirme oluşturduk sonra, **O/R Tasarımcısı'nda ilişkilendirmeyi** seçerek Özellikler penceresinde bazı yapılandırılabilir **özellikler** vardır. (İlişkili sınıflar arasındaki çizgi ilişkilendirmedir.) Aşağıdaki tablo, bir ilişkilendirmenin özellikleri için açıklamalar sağlar.
@@ -32,10 +32,10 @@ bir ilişkilendirme oluşturduk sonra, **O/R Tasarımcısı'nda ilişkilendirmey
 |Özellik|Açıklama|
 |--------------|-----------------|
 |**Kardinalite**|İlişkinin bire çok mu yoksa bire bir mi olduğunu kontrol eder.|
-|**Alt Özellik**|Üst öğede bir koleksiyon veya ilişkilendirmenin yabancı anahtar tarafında alt kayıtlara başvuru bir özellik oluşturulıp oluşturul olmadığını belirtir. Örneğin, ve arasındaki ilişkide, Alt Özellik True olarak ayarlanırsa, üst sınıfta `Customer` `Order` adlı bir özellik   `Orders` oluşturulur.|
+|**Alt Özellik**|Üst öğede bir koleksiyon veya ilişkilendirmenin yabancı anahtar tarafında alt kayıtlara başvuru özelliği oluşturulıp oluşturul olmadığını belirtir. Örneğin, ve arasındaki ilişkide, Alt Özellik True olarak ayarlanırsa, üst sınıfta `Customer` `Order` adlı bir özellik   `Orders` oluşturulur.|
 |**Üst Özellik**|İlişkili üst sınıfa başvurulan alt sınıftaki özelliği. Örneğin, ve arasındaki ilişkide, sınıfında bir sipariş için ilişkili müşteriye `Customer` `Order` `Customer` başvurulan adlı bir özellik `Order` oluşturulur.|
 |**Katılan Özellikler**|İlişki özelliklerini görüntüler ve İlişki **düzenleyici iletişim kutusunu** yeniden açan bir üç nokta **düğmesi** (...) sağlar.|
-|**Benzersiz**|Yabancı hedef sütunların benzersizlik kısıtlaması olup olmadığını belirtir.|
+|**Benzersiz**|Yabancı hedef sütunlarının benzersizlik kısıtlaması olup olmadığını belirtir.|
 
 ## <a name="to-create-an-association-between-entity-classes"></a>Varlık sınıfları arasında ilişki oluşturmak için
 
@@ -45,7 +45,7 @@ bir ilişkilendirme oluşturduk sonra, **O/R Tasarımcısı'nda ilişkilendirmey
 
 3. Birleşik **giriş kutusunda Alt** Sınıf'ı seçin.
 
-4. Sınıfları **ilişkili İlişkili** İlişkili Özellikler'i seçin. Bu genellikle veritabanında tanımlanan yabancı anahtar ilişkisiyle eşler. Örneğin, ve `Customers` `Orders` ilişkilendirmesinde, İlişki **özellikleri her** sınıf `CustomerID` için 'tir.
+4. Sınıfları **ilişkili İlişkili** İlişkili Özellikler'i seçin. Genellikle bu, veritabanında tanımlanan yabancı anahtar ilişkisiyle eşler. Örneğin, ve `Customers` `Orders` ilişkilendirmesinde, İlişki **özellikleri her** sınıf `CustomerID` için 'tir.
 
 5. İlişkiyi **oluşturmak** için Tamam'a tıklayın.
 

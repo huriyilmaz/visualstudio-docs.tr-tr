@@ -1,6 +1,6 @@
 ---
-description: Segmentin değiştirilip değiştirileile olmadığını belirten bir bayrak alınır.
-title: IDiaSegment::get_write | Microsoft Docs
+description: Segmentin değiştirilip değiştirilemeyeceğini belirten bir bayrak alır.
+title: 'IDiaSegment:: get_write | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: e6d718c187c862febe20d94182b858e993599306
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134268"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629282"
 ---
 # <a name="idiasegmentget_write"></a>IDiaSegment::get_write
-Segmentin değiştirilip değiştirileile olmadığını belirten bir bayrak alınır.
+Segmentin değiştirilip değiştirilemeyeceğini belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_write (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Segmentin `TRUE` yazılamayacaksa döndürür, aksi takdirde `FALSE` döndürür.
+dışı `TRUE` Segmentin yazılamayacağını döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

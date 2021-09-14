@@ -1,6 +1,6 @@
 ---
-description: İfade veya deyimin bittiği tek tabanlı kaynak sütun numarasını alır.
-title: 'IDiaLineNumber:: get_columnNumberEnd | Microsoft Docs'
+description: İfadenin veya deyimin sona erer olduğu tek tabanlı kaynak sütun numarasını alın.
+title: IDiaLineNumber::get_columnNumberEnd | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 19e3ed60a17abdb39e9027455fc4e96bcad3a32a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066601"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629702"
 ---
 # <a name="idialinenumberget_columnnumberend"></a>IDiaLineNumber::get_columnNumberEnd
-İfade veya deyimin bittiği tek tabanlı kaynak sütun numarasını alır.
+İfadenin veya deyimin sona erer olduğu tek tabanlı kaynak sütun numarasını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_columnNumberEnd (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı İfadenin veya deyimin bittiği sütun numarasını döndürür. Değer sıfırsa, sütun bitiş bilgileri mevcut değildir.
+[out] İfadenin veya deyimin sona erdiğinde sütun numarasını döndürür. Değer sıfır ise sütun bitiş bilgileri mevcut değildir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem tarafından döndürülen sütun değeri, satırdaki deyimin son karakterinden sonraki konuma satıra kadar olan bir bayt kaydırmadır.
+ Bu yöntem tarafından döndürülen sütun değeri, satırdaki deyimin son karakterinden sonraki konuma doğru bir bayt kaydırmadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

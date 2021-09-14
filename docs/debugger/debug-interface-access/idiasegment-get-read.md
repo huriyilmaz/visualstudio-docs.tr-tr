@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: c90a957648ddbc5e7a3fbfc0f4acaeb45d8dc5fc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074703"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629312"
 ---
 # <a name="idiasegmentget_read"></a>IDiaSegment::get_read
 Segmentin okunup okunamayacağını gösteren bir bayrak alır.

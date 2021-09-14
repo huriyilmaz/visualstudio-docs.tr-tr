@@ -1,6 +1,6 @@
 ---
-description: Arabirim ErişimiNde Hata Ayıklama (DIA) SDK'sı size yönerge belgeleri ve DIA API'sini kullanmayı gösteren bir örnek sağlar.
-title: Başlarken (Arabirim Erişimi SDK'sı Hata Ayıklama) | Microsoft Docs
+description: Hata ayıklama arabirimi erişimi (DIA) SDK 'Sı size, size bir öğretici belgesi ve bir DIA API 'sinin nasıl kullanılacağını gösteren bir örnek sağlar.
+title: Başlarken (hata ayıklama arabirimi erişim SDK 'Sı) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,42 +16,42 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 4e74262594e23af3819851bcf23d69692fd7d64c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081701"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630567"
 ---
 # <a name="getting-started-debug-interface-access-sdk"></a>Başlarken (Arabirim Erişimi SDK'sında Hata Ayıklama)
-Arabirim ErişimiNde Hata Ayıklama (DIA) SDK'sı size yönerge belgeleri ve DIA API'sini kullanmayı gösteren bir örnek sağlar. .pdb ve .dbg dosyalarını açıp içeriklerinde semboller, değerler, öznitelikler, adresler ve diğer hata ayıklama bilgileri için arama yapılan özel uygulamalar geliştirmek için DIA SDK'daki arabirimleri ve yöntemleri kullanın. Bu SDK, C++ uygulamalarında bulunan sembollerle ilişkili özellikler için başvuru tabloları da sağlar.
+Hata ayıklama arabirimi erişimi (DIA) SDK 'Sı size, size bir öğretici belgesi ve bir DIA API 'sinin nasıl kullanılacağını gösteren bir örnek sağlar. . Pdb ve. dbg dosyalarını açan ve içeriklerini semboller, değerler, öznitelikler, adresler ve diğer hata ayıklama bilgileri için aramak üzere DIA SDK arabirimlerini ve yöntemlerini kullanın. Bu SDK, C++ uygulamalarında bulunan simgelerle ilişkili özellikler için de başvuru tabloları sağlar.
 
- En iyi DIA SDK için aşağıdakilere aşina olmak gerekir:
+ DIA SDK en iyi şekilde kullanmak için aşağıdakiler hakkında bilgi sahibi olmanız gerekir:
 
 - C++ programlama dili
 
 - COM programlama
 
-- Visual Studio derlemek için tümleşik geliştirme ortamı (IDE)
+- örnekleri derlemek için tümleşik geliştirme ortamı (ıde) Visual Studio
 
-  DIA SDK normalde Visual Studio ile yüklenir ve varsayılan konumu *[sürücü]* \Program Files\Microsoft Visual Studio 9.0\DIA SDK. Yüklemenin bir parçası olarak, msdia90.dll'i uygulayan DIA SDK otomatik olarak kaydedilir, böylece bunu kullanmak için tek gereken programınıza eklemek ve bağlantısını `dia2.h` `diaguids.lib` yapmaktır.
+  DIA SDK normalde Visual Studio ile yüklenir ve varsayılan konumu *[sürücü]* \program Files \ Microsoft Visual Studio 9.0 \ DIA SDK olur. Yüklemenin bir parçası olarak, DIA SDK uygulayan msdia90.dll otomatik olarak kaydedilir, böylece kullanmak için yapmanız gereken tek şey, programınıza dahil etmek `dia2.h` ve ' a bağlantı kullanmaktır `diaguids.lib` .
 
-  Üst bilgi: include\dia2.h
+  Üstbilgi: include\dia2,h
 
-  Kitaplık: lib\diaguids.lib
+  Kitaplık: lib\diaguids.exe
 
   DLL: bin\msdia80.dll
 
-  IDL: idl\dia2.idl
+  IDL: ıdl\dia2.IDL
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
 [Genel Bakış](../../debugger/debug-interface-access/overview-debug-interface-access-sdk.md)
 
-DIA'nın temel mimarisini gözden okur.
+DIA 'in temel mimarisini inceler.
 
 [.Pdb Dosyasını Sorgulama](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)
 
-Bir .pdb dosyasını sorgulamak için DIA API'sini kullanma hakkında adım adım yönergeler sağlar.
+Bir. pdb dosyasını sorgulamak için ÇYA API 'sini kullanma hakkında adım adım yönergeler sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

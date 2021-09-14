@@ -14,11 +14,11 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6ec5d5a5bc491ef820631af942db8ad5c320fa22
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122045066"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631820"
 ---
 # <a name="overview-of-legacy-analysis-for-managed-code-in-visual-studio"></a>Visual Studio yönetilen kod için eski Analize genel bakış
 

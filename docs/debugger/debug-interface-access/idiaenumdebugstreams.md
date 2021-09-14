@@ -1,5 +1,5 @@
 ---
-description: Veri kaynağında bulunan çeşitli hata ayıklama akışlarını numaralandırır.
+description: Veri kaynağında bulunan çeşitli hata ayıklama akışlarını numaralar.
 title: IDiaEnumDebugStreams | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 1d75b0cc6d85125935d88af57602157d2a1e7f4e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122044755"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630357"
 ---
 # <a name="idiaenumdebugstreams"></a>IDiaEnumDebugStreams
-Veri kaynağında bulunan çeşitli hata ayıklama akışlarını numaralandırır.
+Veri kaynağında bulunan çeşitli hata ayıklama akışlarını numaralar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,27 +30,27 @@ Veri kaynağında bulunan çeşitli hata ayıklama akışlarını numaralandır�
 IDiaEnumDebugStreams : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaEnumDebugStreams` .
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
+Aşağıdaki tabloda yöntemlerini `IDiaEnumDebugStreams` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumDebugStreams::get__NewEnum](../../debugger/debug-interface-access/idiaenumdebugstreams-get-newenum.md)|`IEnumVARIANT`Bu Numaralandırıcı sürümünü alır.|
-|[IDiaEnumDebugStreams::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md)|Hata ayıklama akışlarının sayısını alır.|
-|[IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)|Bir dizin aracılığıyla hata ayıklama akışı alır.|
-|[IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)|Sabit Listesi dizisinde belirtilen sayıda hata ayıklama akışı alır.|
-|[IDiaEnumDebugStreams::Skip](../../debugger/debug-interface-access/idiaenumdebugstreams-skip.md)|Sabit Listesi dizisinde belirtilen sayıda hata ayıklama akışını atlar.|
-|[IDiaEnumDebugStreams::Reset](../../debugger/debug-interface-access/idiaenumdebugstreams-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[IDiaEnumDebugStreams::Clone](../../debugger/debug-interface-access/idiaenumdebugstreams-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[IDiaEnumDebugStreams::get__NewEnum](../../debugger/debug-interface-access/idiaenumdebugstreams-get-newenum.md)|Bu `IEnumVARIANT` numaralayıcının sürümünü alınır.|
+|[IDiaEnumDebugStreams::get_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md)|Hata ayıklama akışlarının sayısını alınır.|
+|[IDiaEnumDebugStreams::Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md)|Dizin üzerinden bir hata ayıklama akışı alınır.|
+|[IDiaEnumDebugStreams::Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md)|Numaralama dizisinde belirtilen sayıda hata ayıklama akışı alınır.|
+|[IDiaEnumDebugStreams::Skip](../../debugger/debug-interface-access/idiaenumdebugstreams-skip.md)|Bir numaralama dizisinde belirtilen sayıda hata ayıklama akışını atlar.|
+|[IDiaEnumDebugStreams::Reset](../../debugger/debug-interface-access/idiaenumdebugstreams-reset.md)|Bir numaralama dizisini en başta sıfırlar.|
+|[IDiaEnumDebugStreams::Clone](../../debugger/debug-interface-access/idiaenumdebugstreams-clone.md)|Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
-Hata ayıklama akışlarının içeriği uygulamaya bağımlıdır ve veri biçimleri açıklanmamıştır.
+Hata ayıklama akışlarının içeriği uygulamaya bağlıdır ve veri biçimleri belgelenmemiştir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bir nesne almak için [IDiaSession:: getEnumDebugStreams](../../debugger/debug-interface-access/idiasession-getenumdebugstreams.md) metodunu çağırın `IDiaEnumDebugStreams` .
+Nesne almak [için IDiaSession::getEnumDebugStreams](../../debugger/debug-interface-access/idiasession-getenumdebugstreams.md) yöntemini `IDiaEnumDebugStreams` çağırma.
 
 ## <a name="example"></a>Örnek
-Bu örnekte, bu arabirimden kullanılabilen veri akışlarına nasıl erişebileceğiniz gösterilmektedir. İşlevin bir uygulaması için bkz. [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) arabirimi `PrintStreamData` .
+Bu örnekte, bu arabirimden kullanılabilen veri akışlarına nasıl erişebilirsiniz? İşlevin [uygulanması için bkz. IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) `PrintStreamData` arabirimi.
 
 ```C++
 void DumpAllDebugStreams( IDiaSession* pSession)
@@ -80,9 +80,9 @@ void DumpAllDebugStreams( IDiaSession* pSession)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: dia2. h
+Üst bilgi: Dia2.h
 
-Kitaplık: diaguid. lib
+Kitaplık: diaguids.lib
 
 DLL: msdia80.dll
 

@@ -1,6 +1,6 @@
 ---
-description: İfadenin veya deyimin başladığı sütun numarasını alın.
-title: IDiaLineNumber::get_columnNumber | Microsoft Docs
+description: İfadenin veya deyimin başladığı sütun numarasını alır.
+title: 'IDiaLineNumber:: get_columnNumber | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: dc09fa2761b6048219afc9af4ac2e1ce917a2601
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066620"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629703"
 ---
 # <a name="idialinenumberget_columnnumber"></a>IDiaLineNumber::get_columnNumber
-İfadenin veya deyimin başladığı sütun numarasını alın.
+İfadenin veya deyimin başladığı sütun numarasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_columnNumber (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] İfadenin veya deyimin başladığı sütun numarasını döndürür. Değer sıfır ise sütun bilgileri mevcut değildir.
+dışı İfadenin veya deyimin başladığı sütun numarasını döndürür. Değer sıfırsa, sütun bilgisi mevcut değildir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem tarafından döndürülen sütun değeri, satırdaki deyiminin ilk karakterine doğru bir byte kaydırmadır.
+ Bu yöntem tarafından döndürülen sütun değeri, satırdaki deyimin ilk karakterine satıra kadar olan bir bayt kaydırmadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

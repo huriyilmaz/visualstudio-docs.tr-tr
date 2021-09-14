@@ -1,6 +1,6 @@
 ---
-description: Bölümün bir sonraki bellek sınırına alınıp alınmay olmadığını belirten bir bayrak alınır.
-title: IDiaSectionContrib::get_nopad | Microsoft Docs
+description: Bölümün bir sonraki bellek sınırına geçirilip geçirilmeyeceğini belirten bir bayrak alır.
+title: 'IDiaSectionContrib:: get_nopad | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: a6b522beb9237ca2d72b066ac16caf80827132c1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161568"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629403"
 ---
 # <a name="idiasectioncontribget_nopad"></a>IDiaSectionContrib::get_nopad
-Bölümün bir sonraki bellek sınırına alınıp alınmay olmadığını belirten bir bayrak alınır.
+Bölümün bir sonraki bellek sınırına geçirilip geçirilmeyeceğini belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_nopad(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bölümü bir sonraki bellek sınırına atmayacaksa döndürür; `TRUE` aksi takdirde `FALSE` döndürür.
+dışı `TRUE` Bölüm bir sonraki bellek sınırına dönmemelidir; Aksi takdirde döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu genellikle yalnızca eski dosyalarda görülen bir özelliktir.
+ Bu, genellikle yalnızca eski dosyalarda görülen bir özelliktir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

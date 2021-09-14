@@ -1,6 +1,6 @@
 ---
-description: Çerçeve veri numaralayıcının System.Runtime.InteropServices.ComTypes.IEnumVARIANT sürümünü alın.
-title: IDiaEnumFrameData::get__NewEnum | Microsoft Docs
+description: Çerçeve veri Numaralandırıcının System. Runtime. InteropServices. ComTypes. IEnumVARIANT sürümünü alır.
+title: 'IDiaEnumFrameData:: get__NewEnum | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 90cdae350c90722cf98611a270c35753cd12197a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134604"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630339"
 ---
 # <a name="idiaenumframedataget__newenum"></a>IDiaEnumFrameData::get__NewEnum
-Bu <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> numaralayıcının sürümünü alın.
+<xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>Bu Numaralandırıcı sürümünü alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get__NewEnum (
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-[out] Bu `IUnknown` numaralayıcının <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> sürümünü temsil eden arabirimi döndürür.
+dışı `IUnknown` Bu Numaralandırıcı sürümünü temsil eden arabirimi döndürür <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

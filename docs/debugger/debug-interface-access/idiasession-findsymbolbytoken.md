@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 08d539a2cc48988264c183bf13850389dedd987c858405f0a732aa5e043378d3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: d251a70eca33366cfdd4b3fc5e93de6ff659feca
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121380175"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629132"
 ---
 # <a name="idiasessionfindsymbolbytoken"></a>IDiaSession::findSymbolByToken
 Belirtilen meta veri belirtecini içeren simgeyi alır.

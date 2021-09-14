@@ -1,5 +1,5 @@
 ---
-description: Veri kaynağında bulunan çeşitli sembolleri numaralandırır.
+description: Veri kaynağında bulunan çeşitli sembolleri numaralar.
 title: IDiaEnumSymbols | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 6f8578ca439d32dbaae13356b0f76fb890d2d5ff
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113614"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629997"
 ---
 # <a name="idiaenumsymbols"></a>IDiaEnumSymbols
-Veri kaynağında bulunan çeşitli sembolleri numaralandırır.
+Veri kaynağında bulunan çeşitli sembolleri numaralar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,24 +30,24 @@ Veri kaynağında bulunan çeşitli sembolleri numaralandırır.
 IDiaEnumSymbols : IUnknown
 ```
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaEnumSymbols` .
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
+Aşağıdaki tabloda yöntemlerini `IDiaEnumSymbols` gösterir.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaEnumSymbols::get__NewEnum](../../debugger/debug-interface-access/idiaenumsymbols-get-newenum.md)|`IEnumVARIANT Interface`Bu Numaralandırıcı sürümünü alır.|
-|[IDiaEnumSymbols::get_Count](../../debugger/debug-interface-access/idiaenumsymbols-get-count.md)|Sembol sayısını alır.|
-|[IDiaEnumSymbols::Item](../../debugger/debug-interface-access/idiaenumsymbols-item.md)|Bir simgeyi bir dizin aracılığıyla alır.|
-|[IDiaEnumSymbols::Next](../../debugger/debug-interface-access/idiaenumsymbols-next.md)|Sabit Listesi dizisinde belirtilen sayıda sembol alır.|
-|[IDiaEnumSymbols::Skip](../../debugger/debug-interface-access/idiaenumsymbols-skip.md)|Bir numaralandırma dizisinde belirtilen sayıda sembolleri atlar.|
-|[IDiaEnumSymbols::Reset](../../debugger/debug-interface-access/idiaenumsymbols-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
-|[IDiaEnumSymbols::Clone](../../debugger/debug-interface-access/idiaenumsymbols-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[IDiaEnumSymbols::get__NewEnum](../../debugger/debug-interface-access/idiaenumsymbols-get-newenum.md)|Bu `IEnumVARIANT Interface` numaralayıcının sürümünü alınır.|
+|[IDiaEnumSymbols::get_Count](../../debugger/debug-interface-access/idiaenumsymbols-get-count.md)|Sembol sayısını alın.|
+|[IDiaEnumSymbols::Item](../../debugger/debug-interface-access/idiaenumsymbols-item.md)|Bir dizini kullanarak sembolünü alan.|
+|[IDiaEnumSymbols::Next](../../debugger/debug-interface-access/idiaenumsymbols-next.md)|Numaralama dizisinde belirtilen sayıda simgeyi alan.|
+|[IDiaEnumSymbols::Skip](../../debugger/debug-interface-access/idiaenumsymbols-skip.md)|Bir numaralama dizisinde belirtilen sayıda simgeyi atlar.|
+|[IDiaEnumSymbols::Reset](../../debugger/debug-interface-access/idiaenumsymbols-reset.md)|Bir numaralama dizisini en başta sıfırlar.|
+|[IDiaEnumSymbols::Clone](../../debugger/debug-interface-access/idiaenumsymbols-clone.md)|Geçerli numaralayıcıyla aynı numaralama durumunu içeren bir numaralayıcı oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu arabirim, örneğin `SymTagUDT` (Kullanıcı tanımlı türler) veya gibi belirli bir sembol türüne göre gruplanmış semboller sağlar `SymTagBaseClass` . Adresle gruplanmış simgelerle çalışmak için [IDiaEnumSymbolsByAddr](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) arabirimini kullanın.
+Bu arabirim, belirli bir sembol türüne göre (kullanıcı tanımlı türler) veya `SymTagUDT` gibi gruplara sahip semboller `SymTagBaseClass` sağlar. Adrese göre gruplu sembollerle çalışmak için [IDiaEnumSymbolsByAddr arabirimini](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md) kullanın.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Aşağıdaki yöntemleri çağırarak bu arabirimi edinin:
+Aşağıdaki yöntemleri çağırarak bu arabirimi alın:
 
 - [IDiaSession::findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md)
 
@@ -56,10 +56,10 @@ Aşağıdaki yöntemleri çağırarak bu arabirimi edinin:
 - [IDiaSourceFile::get_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)
 
 ## <a name="example"></a>Örnek
-Bu örnek, arabirimin nasıl alınacağını `IDiaEnumSymbols` ve ardından Kullanıcı tanımlı türler (UDTs) listelemek için bu numaralandırmayı nasıl kullanacağınızı gösterir.
+Bu örnekte, kullanıcı tanımlı türleri (UDT' ler) listeleye bu numaralamanın nasıl alınarak arabirimin nasıl alınacak ve sonra `IDiaEnumSymbols` bu numaralamanın nasıl kullanacağız?
 
 > [!NOTE]
-> `CDiaBSTR` , `BSTR` örnekleme kapsam dışına geçtiğinde bir ve otomatik olarak dizeyi serbest bırakma olarak işleyen bir sınıftır.
+> `CDiaBSTR` , bir sarmalama ve örnekleme kapsam dışında olduğunda dize serbest bırakarak otomatik `BSTR` olarak tanıtıcı bir sınıftır.
 
 ```C++
 void ShowUDTs(IDiaSymbol *pGlobals)
@@ -88,9 +88,9 @@ void ShowUDTs(IDiaSymbol *pGlobals)
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: dia2. h
+Üst bilgi: Dia2.h
 
-Kitaplık: diaguid. lib
+Kitaplık: diaguids.lib
 
 DLL: msdia80.dll
 

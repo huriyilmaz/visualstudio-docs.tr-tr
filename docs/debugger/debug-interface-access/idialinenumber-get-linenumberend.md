@@ -1,6 +1,6 @@
 ---
-description: Deyim veya ifadenin bittiği tek tabanlı kaynak satır numarasını alır.
-title: 'IDiaLineNumber:: get_lineNumberEnd | Microsoft Docs'
+description: Deyimin veya ifadenin sona erer olduğu tek tabanlı kaynak satır numarasını alın.
+title: IDiaLineNumber::get_lineNumberEnd | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: ce245c8c9797aaff8ed65759b8b06e4334567df5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134316"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629673"
 ---
 # <a name="idialinenumberget_linenumberend"></a>IDiaLineNumber::get_lineNumberEnd
-Deyim veya ifadenin bittiği tek tabanlı kaynak satır numarasını alır.
+Deyimin veya ifadenin sona erer olduğu tek tabanlı kaynak satır numarasını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_lineNumberEnd (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Deyimin veya ifadenin bittiği satır numarasını döndürür. Değer sıfırsa, bitiş bilgileri mevcut değildir.
+[out] Deyimin veya ifadenin sona erdiğinde satır numarasını döndürür. Değer sıfır ise, bitiş bilgileri mevcut değildir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

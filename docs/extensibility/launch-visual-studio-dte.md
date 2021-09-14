@@ -1,6 +1,6 @@
 ---
 title: DTE kullanarak Visual Studio’yu Başlatma
-description: Ana sürümler Visual Studio yan yana yüklemeleri desteklemek için DTE kullanarak uygulama başlatmayı öğrenin. Bu makale bir kod örneği içerir.
+description: ana sürümlerin yan yana yüklemelerini desteklemek için DTE kullanarak Visual Studio başlatmayı öğrenin. Bu makale, bir kod örneği içerir.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 04/26/2019
@@ -12,31 +12,31 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1cea6b082a5cdb51f0de2053bbc7912cd32ce500
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122102369"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628898"
 ---
 # <a name="launch-visual-studio-using-dte"></a>DTE kullanarak Visual Studio’yu Başlatma
 
-Visual Studio 2017'den başlayarak DTE kullanarak Visual Studio başlatma mekanizması, DTE'nin önceki sürümlerinin başlatılmasına Visual Studio. Visual Studio 2017 ve sonraki sürümler ana sürümlerde yan yana yüklemeleri desteklediği için bu değişiklik gereklidir (örneğin, yan yana yüklenmiş bir önizleme ve sürüm sürümüne sahip olabilirsiniz).
+Visual Studio 2017 ' den başlayarak, DTE 'yi kullanarak Visual Studio başlatma mekanizması, önceki Visual Studio sürümlerini başlatmaktan farklıdır. bu değişiklik gereklidir çünkü Visual Studio 2017 ve üzeri ana sürümlerin yan yana yüklemelerini destekler (örneğin, bir önizleme ve bir sürüm sürümü yan yana yüklü olabilir).
 
-Bu makalenin geri kalanında, DTE kullanarak 2019'Visual Studio başlatmak için kullanabileceğiniz kodlar açıklanmıştır.
+bu makalenin geri kalanı, DTE 'yi kullanarak Visual Studio 2019 ' i başlatmak için kullanabileceğiniz kodu gösterir.
 
 ## <a name="set-up-the-project"></a>Projeyi ayarlama
 
-Başlatma kodunun nasıl olduğunu görmek için aşağıdaki adımları izleyin ve bir proje oluşturun.
+Başlatma kodunu çalıştırmak için, aşağıdaki adımları izleyerek bir proje oluşturun.
 
-1. Yeni uygulama için **yeni bir** Konsol Uygulaması .NET Framework.
+1. .NET Framework için yeni bir **konsol uygulaması** projesi oluşturun.
 
-2. uration [Microsoft.VisualStudio.Setup.Configyükleyin. Birlikte](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) NuGet paketiyle birlikte çalışma ve derlemeye bir başvuru ekleme.
+2. [Microsoft. VisualStudio. Setup. Configuration. ınterop](https://www.nuget.org/packages/Microsoft.VisualStudio.Setup.Configuration.Interop/) NuGet paketini yükleyip derlemeye bir başvuru ekleyin.
 
-3. EnvDTE'ye bir başvuru ekleyin.
+3. EnvDTE öğesine bir başvuru ekleyin.
 
-4. Aşağıdaki [örnek kodu](#example-code) *Program.cs dosyasına* yapıştırın.
+4. Aşağıdaki [örnek kodu](#example-code) *program. cs* dosyasına yapıştırın.
 
-5. Programı **çalıştırmak için F5** tuşuna basın. Programdan çık Visual Studio önce 2019'un açık olduğunu görüyor gerekir.
+5. Programı çalıştırmak için **F5** tuşuna basın. programın çıkmadan önce Visual Studio 2019 açık ' i görmeniz gerekir.
 
 ## <a name="example-code"></a>Örnek kod
 
@@ -185,4 +185,4 @@ namespace ConsoleLauncherApp
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio’yu Bulma](locating-visual-studio.md)
-- [Adım adım kılavuz: DTE nesnesine bir düzenleyici uzantısından erişme](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)
+- [İzlenecek yol: bir düzenleyici uzantısından DTE nesnesine erişme](walkthrough-accessing-the-dte-object-from-an-editor-extension.md)

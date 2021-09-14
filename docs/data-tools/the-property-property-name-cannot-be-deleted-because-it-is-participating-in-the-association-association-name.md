@@ -12,11 +12,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: dc732273719484b7f2f3eaf26a39a8ff518ee3dc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122067013"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631137"
 ---
 # <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>Özellik &lt; özellik &gt; adı, ilişkilendirme ilişkilendirme adına katıldığı için &lt; silinemiyor&gt;
 
@@ -32,7 +32,7 @@ Seçilen özellik, hata **iletisinde belirtilen** sınıflar arasındaki ilişki
 
 3. özelliğini İlişki **Özellikleri'nin 'den kaldırın.**
 
-4. Özelliğini silmeyi yeniden deneyin.
+4. özelliğini silmeyi yeniden deneyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

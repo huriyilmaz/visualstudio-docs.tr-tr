@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 9a90c9938481755e2e813343b60d7bf0f3ff375d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066327"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629091"
 ---
 # <a name="idiasessiongetenumtables"></a>IDiaSession::getEnumTables
 Sembol deposunda bulunan tüm tablolar için bir Numaralandırıcı alır.

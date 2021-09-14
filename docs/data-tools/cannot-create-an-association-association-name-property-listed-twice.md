@@ -12,11 +12,11 @@ manager: jmartens
 ms.workload:
 - data-storage
 ms.openlocfilehash: ed577ac9c0ca5263e651433da9cfea1f8bf613ab
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122134811"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631551"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-listed-twice"></a>İlişki &lt; ilişkilendirme adı oluşturulamıyor &gt; -özellik iki kez listelendi
 

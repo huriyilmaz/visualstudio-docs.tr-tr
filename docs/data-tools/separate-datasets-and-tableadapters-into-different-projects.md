@@ -15,11 +15,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 335f6d1ab4a7dba28609a267e6a6ce950cb607ff
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161837"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631178"
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>Veri kümeleri ile TableAdapter’ları farklı projelere ayırma
 Türü belirtilmiş veri kümeleri, [TableAdapters](create-and-configure-tableadapters.md) ve DataSet sınıflarının ayrı projelere üretilebilmeleri için geliştirilmiştir. Bu, uygulama katmanlarını hızlıca ayırmanızı ve n katmanlı veri uygulamaları oluşturmanıza olanak sağlar.

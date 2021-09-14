@@ -17,11 +17,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 3a5979fda1e2fcbe8664df7171b1053acebb0506
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052817"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631443"
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio'nun verilere bağlı denetimler için başlık oluşturma biçimini özelleştirme
 
@@ -29,24 +29,24 @@ ms.locfileid: "122052817"
 
 ::: moniker range="vs-2017"
 
-Kayıt defteri anahtarında **SmartCaptionExpression**, **SmartCaptionReplacement** ve **SmartCaptionSuffix** değerlerini ayarHKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data Designers **özelleştirebilirsiniz.**
+Kayıt defteri anahtarında **SmartCaptionExpression**, **SmartCaptionReplacement** ve **SmartCaptionSuffix** değerlerini **ayarerek bu etiketlerin oluşturulmaHKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data Designers** özelleştirebilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Kayıt defteri anahtarında **SmartCaptionExpression**, **SmartCaptionReplacement** ve **SmartCaptionSuffix** değerlerini ayarHKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Data Designers **özelleştirebilirsiniz.**
+Kayıt defteri anahtarında **SmartCaptionExpression**, **SmartCaptionReplacement** ve **SmartCaptionSuffix** değerlerini **ayarerek bu etiketlerin oluşturulmaHKEY_CURRENT_USER\Software\Microsoft\VisualStudio\16.0\Data Designers** özelleştirebilirsiniz.
 
 ::: moniker-end
 
 > [!NOTE]
 > Bu kayıt defteri anahtarı siz oluşturmadan mevcut değildir.
 
-Akıllı açıklamalı alt yazı, **SmartCaptionExpression** değerinin değerine girilen normal ifade tarafından denetlenr. Veri Tasarımcıları **kayıt defteri anahtarını eklemek,** açıklamalı alt yazı etiketlerini kontrol eden varsayılan normal ifadeyi geçersiz kılar. Normal ifadeler hakkında daha fazla bilgi için [bkz. Visual Studio.](../ide/using-regular-expressions-in-visual-studio.md)
+Akıllı açıklamalı alt yazı, **SmartCaptionExpression** değerinin değerine girilen normal ifade tarafından denetlenr. Veri Tasarımcıları **kayıt defteri anahtarını eklemek,** açıklamalı alt yazı etiketlerini kontrol eden varsayılan normal ifadeyi geçersiz kılar. Normal ifadeler hakkında daha fazla bilgi için, [bkz. Using regular expressions in Visual Studio.](../ide/using-regular-expressions-in-visual-studio.md).
 
 Aşağıdaki tabloda açıklamalı alt yazı etiketlerini kontrol eden kayıt defteri değerleri açık almaktadır.
 
-|Kayıt defteri öğesi|Açıklama|
+|Kayıt defteri öğesi|Description|
 |-------------------|-----------------|
 |**SmartCaptionExpression**|Desenlerinize uygun olarak kullanabileceğiniz normal ifade.|
 |**SmartCaptionReplacement**|**SmartCaptionExpression** içinde eşlene tüm grupları görüntüleme biçimi.|
@@ -57,8 +57,8 @@ Aşağıdaki tabloda, bu kayıt defteri değerleri için iç varsayılan ayarlar
 |Kayıt defteri öğesi|Varsayılan değer|Açıklama|
 |-------------------|-------------------|-----------------|
 |**SmartCaptionExpression**|**( \\ \p{Ll})( \\ \p{Lu})&#124;_+**|Ardından büyük harf veya alt çizgi gelen bir küçük harf karakteriyle eşler.|
-|**SmartCaptionReplacement**|**1 ABD doları 2 ABD doları**|**$1,** ifadenin ilk parantezlerinde eş değere sahip tüm karakterleri temsil eder ve **$2, ikinci** parantezde eşlene tüm karakterleri temsil eder. Değiştirme ilk eşleşme, bir boşluk ve ardından ikinci eşleşmedir.|
-|**SmartCaptionSuffix**|**:**|Döndürülen dizeye eklenen bir karakteri temsil eder. Örneğin açıklamalı alt yazı ise `Company Name` soneki bunu yapar `Company Name:`|
+|**SmartCaptionReplacement**|**1 ABD doları 2 ABD doları**|**$1,** ifadenin ilk parantezlerinde eş değere sahip tüm karakterleri temsil eder ve **$2, ikinci** parantezde eş değer olan karakterleri temsil eder. Değiştirme ilk eşleşme, boşluk ve ardından ikinci eşleşmedir.|
+|**SmartCaptionSuffix**|**:**|Döndürülen dizeye eklenen bir karakteri temsil eder. Örneğin, açıklamalı alt yazı `Company Name` ise soneki bunu yapar `Company Name:`|
 
 > [!CAUTION]
 > Kayıt Defteri Düzenleyicisi'nde herhangi bir şey yaparken çok dikkatli olun. Düzenlemeden önce kayıt defterini geri yükleme. Kayıt Defteri Düzenleyicisi'ni yanlış kullanırsanız, işletim sisteminizi yeniden yüklemenizi gerektirabilecek ciddi sorunlara neden olabilir. Microsoft, Kayıt Defteri Düzenleyicisi'ni kullanarak neden olduğunuz sorunların yanlış çözülebilir olduğunu garanti değildir. Kayıt Defteri Düzenleyicisi'ni kullanım riski size aittir.

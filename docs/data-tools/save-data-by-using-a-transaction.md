@@ -20,11 +20,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 238c5e82a35db0f2fbc6627bd0bb09d3af8f070b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122091194"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631226"
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>Nasıl kullanılır: İşlem kullanarak veri kaydetme
 
@@ -40,9 +40,9 @@ Projeler *System.Transactions* derlemesi başvurusuyla oluşturulmaz, bu nedenle
 
 ## <a name="to-add-a-reference-to-the-systemtransactionsdll"></a>System.Transactions.dll'a başvuru eklemek için
 
-1. Yeni **Project** Ekle'yi **seçin.**
+1. Yeni **Project** **Ekle'yi seçin.**
 
-2. **.NET sekmesinde** **(** SQL Server projeleri için SQL Server sekmesi), **System.Transactions'ı ve** ardından Tamam'ı **seçin.**
+2. **.NET sekmesinde** **(** SQL Server projeleri için SQL Server sekmesi), **System.Transactions 'ı ve** ardından Tamam'ı **seçin.**
 
      Projeye *System.Transactions.dll* bir başvuru eklenir.
 

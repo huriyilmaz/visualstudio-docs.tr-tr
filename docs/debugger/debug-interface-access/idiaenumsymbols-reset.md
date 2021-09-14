@@ -1,6 +1,6 @@
 ---
-description: Bir sembol numaralandırma dizisini başlangıca sıfırlar.
-title: 'IDiaEnumSymbols:: Reset | Microsoft Docs'
+description: Sembollerin bir numaralama dizisini en başına sıfırlar.
+title: IDiaEnumSymbols::Reset | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: b201bcad3701f2ec5b1e3dc84a11ed416e591e74
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129306"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630032"
 ---
 # <a name="idiaenumsymbolsreset"></a>IDiaEnumSymbols::Reset
-Bir numaralandırma dizisini başlangıca sıfırlar.
+Bir numaralama dizisini en başta sıfırlar.
 
 ## <a name="syntax"></a>Syntax
 

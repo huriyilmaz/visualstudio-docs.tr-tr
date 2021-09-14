@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 454f79260201fcf9929f85d53aa5d9a4699c7b55
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081640"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630141"
 ---
 # <a name="idiaenumsegmentsitem"></a>IDiaEnumSegments::Item
 Bir segmenti dizin ile alma.
@@ -36,7 +36,7 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametreler
  dizin
 
-[in] Alınan [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) nesnesinin dizini. Dizin 0 ile -1 aralığındadır `count` ve `count` burada [IDiaEnumSegments::get_Count](../../debugger/debug-interface-access/idiaenumsegments-get-count.md) yöntemi tarafından döndürülür.
+[in] Alınan [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) nesnesinin dizini. Dizin 0 ile -1 aralığındadır ve burada `count` `count` [IDiaEnumSegments::get_Count yöntemi tarafından](../../debugger/debug-interface-access/idiaenumsegments-get-count.md) döndürülür.
 
  segment
 

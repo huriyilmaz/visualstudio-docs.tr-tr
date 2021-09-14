@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 144412b8e738391e1c0122efaef3dee658010422556541987f09b2ca31881697
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 127e97c92d9b331fe3cc461c585fb3240482fbd0
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121346940"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631232"
 ---
 # <a name="save-a-dataset-as-xml"></a>Bir veri kümesini XML olarak kaydetme
 

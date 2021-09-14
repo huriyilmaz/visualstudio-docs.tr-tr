@@ -1,6 +1,6 @@
 ---
 title: Bir veri kümesini doldururken kısıtlamaları kapatma
-description: Bir veri kümesi doldururken kısıtlamaları nasıl kapatacaklarını bilmek. Güncelleştirme kısıtlamalarını program aracılığıyla veya güncelleştirme kısıtlamalarını Veri Kümesi Tasarımcısı.
+description: Bir veri kümesi doldururken kısıtlamaları nasıl kapatacaklarını bilmek. Güncelleştirme kısıtlamalarını program aracılığıyla veya Veri Kümesi Tasarımcısı.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -24,11 +24,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: ab5ff2fe9702d56ddc2c4b767ac40f3d63ddbe15
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052570"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631113"
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>Bir veri kümesini doldururken kısıtlamaları kapatma
 
@@ -41,12 +41,12 @@ Geçici kısıtlamanın askıya alınmasına izin verecek bir mekanizma yoksa, a
 
 ## <a name="to-suspend-update-constraints-programmatically"></a>Güncelleştirme kısıtlamalarını program aracılığıyla askıya almak için
 
-- Aşağıdaki örnekte, bir veri kümesinde kısıtlama denetiminin nasıl geçici olarak kapatıldığını gösterir:
+- Aşağıdaki örnekte, bir veri kümesinde kısıtlama denetlemenin nasıl geçici olarak kapatıldığını gösterir:
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_VBCSharp/VbRaddataEditing/CS/Form1.cs" id="Snippet10":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VBCSharp/VbRaddataEditing/VB/Form1.vb" id="Snippet10":::
 
-## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>Güncelleştirme kısıtlamalarını askıya almak için Veri Kümesi Tasarımcısı
+## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>güncelleştirme kısıtlamalarını askıya almak için Veri Kümesi Tasarımcısı
 
 1. veri kümenizi **Veri Kümesi Tasarımcısı.** Daha fazla bilgi için [bkz. Adım adım: Veri kümesi oluşturma Veri Kümesi Tasarımcısı.](walkthrough-creating-a-dataset-with-the-dataset-designer.md)
 

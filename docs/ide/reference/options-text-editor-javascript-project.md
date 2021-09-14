@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: bfd3f621a0d969c7d5ee684a4277ecbf89e633fe2beba34209f07687d002d1e5
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0b30aaec3087cece63e392cf7170ac85f6be0ad7
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121334360"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628653"
 ---
 # <a name="options-text-editor-javascript-project"></a>Seçenekler, metin düzenleyici, JavaScript, Project
 

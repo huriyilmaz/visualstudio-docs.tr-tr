@@ -1,6 +1,6 @@
 ---
-description: Eklenen kaynağı bir dizin aracılığıyla alır.
-title: 'IDiaEnumInjectedSources:: Item | Microsoft Docs'
+description: Dizin ile bir ekleme kaynağı alınır.
+title: IDiaEnumInjectedSources::Item | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -14,15 +14,15 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d28eb5cc69d3cdeb8ca5da95b91d79ed9c5f46ec042d53fb0704f3b77f3ea5dc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0b77564566d1f45ca860483867bc407de1e5040c
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121455202"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630284"
 ---
 # <a name="idiaenuminjectedsourcesitem"></a>IDiaEnumInjectedSources::Item
-Eklenen kaynağı bir dizin aracılığıyla alır.
+Dizin ile bir ekleme kaynağı alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,14 +36,14 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametreler
  dizin
 
-'ndaki Alınacak [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesnesinin dizini. Dizin, `count` `count` [IDiaEnumInjectedSources:: get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md) yöntemi tarafından döndürülen 0 ile-1 aralığıdır.
+[in] Alınan [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesnesinin dizini. Dizin, `count` `count` [IDiaEnumInjectedSources::get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md) yöntemi tarafından döndürülen 0 ile -1 get_Count aralığıdır.
 
- ınjectedsource
+ injectedSource
 
-dışı Eklenen kaynağı temsil eden bir [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesnesi döndürür.
+[out] Belirtilen kaynağı [temsil eden bir IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

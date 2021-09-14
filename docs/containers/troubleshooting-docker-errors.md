@@ -12,11 +12,11 @@ ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
 ms.openlocfilehash: 760fd0c4d3a9593dbfcc4f78e3279a1ba7e2570f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122097988"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631695"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Docker ile Visual Studio geliştirme sorunlarını giderme
 
@@ -88,7 +88,7 @@ Docker, varsayılan olarak, görüntüleri genellikle sistem sürücüsünde, * 
 
 :::image type="content" source="media/troubleshooting-docker-errors/docker-daemon-settings.png" alt-text="Docker dosya paylaşımının ekran görüntüsü":::
 
-**& yeniden başlatmak Için Uygula**' ya tıklayın. Bu adımlar *üzerinde% ProgramData% \docker\config\daemon.js* yapılandırma dosyasını değiştirir. Önceden oluşturulmuş görüntüler taşınmaz.
+**& yeniden başlatmak Için Uygula**' ya tıklayın. Bu adımlar *%ProgramData%\docker\config\daemon.JSON* adresindeki yapılandırma dosyasını değiştirir. Önceden oluşturulmuş görüntüler taşınmaz.
 
 ## <a name="container-type-mismatch"></a>Kapsayıcı türü uyumsuzluğu
 

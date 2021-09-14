@@ -1,6 +1,6 @@
 ---
-description: Bölümün başlatılmamış verileri içerip içermediğini gösteren bir bayrak alır.
-title: 'IDiaSectionContrib:: get_uninitializedData | Microsoft Docs'
+description: Bölümünün, uninitialized data (uninitialized data) içerdiğini belirten bir bayrak alınır.
+title: IDiaSectionContrib::get_uninitializedData | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 248ef038a6b44f7ec926ed1cb4ee43e2aee79c3f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161535"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629360"
 ---
 # <a name="idiasectioncontribget_uninitializeddata"></a>IDiaSectionContrib::get_uninitializedData
-Bölümün başlatılmamış verileri içerip içermediğini gösteren bir bayrak alır.
+Bölümünün, uninitialized data (uninitialized data) içerdiğini belirten bir bayrak alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,10 +35,10 @@ HRESULT get_uninitializedData (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE` Bölüm başlatılmamış veriler içeriyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] bölümü, `TRUE` uninitialized data içeriyorsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür. Bu `S_FALSE` özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

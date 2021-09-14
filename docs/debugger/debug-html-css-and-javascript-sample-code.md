@@ -17,12 +17,12 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 00dca00e6e90d879a2804fb039aa78d684a31174bc3c8c2599cdd8be941be23d
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 6bfe174e5f68d86247c5007882eebec855057069
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121345692"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126630782"
 ---
 # <a name="debug-html-and-css-sample-code"></a>HTML ve CSS örnek kod hatalarını ayıklama
 
@@ -53,7 +53,7 @@ Aşağıdaki CSS, default.css'ye yapılan eklemeleri gösterir.
 }
 ```
 
-Aşağıdaki kod örneğinde, aşağıdaki kodda javascript kodunun default.js. Bu kod için WinJS ad alanlarına başvurular, şablonun default.html dosyasındadır.
+Aşağıdaki kod örneğinde, aşağıdaki kodda javascript kodunun default.js. Bu kod için WinJS ad alanlarına başvurular, şablonun default.html vardır.
 
 ```javascript
 (function () {

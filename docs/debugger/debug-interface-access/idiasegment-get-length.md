@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: fef912cc248b02ad9787977760837e1b45f45088
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122128994"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126629319"
 ---
 # <a name="idiasegmentget_length"></a>IDiaSegment::get_length
 Kesimdeki bayt sayısını alır.

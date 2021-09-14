@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 3e073f222c19c5666d7f5c674cb53f760e203faa
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074687"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628983"
 ---
 # <a name="idiastackframeget_lengthprolog"></a>IDiaStackFrame::get_lengthProlog
 Bloktaki prolog kodunun bayt sayısını alır.
