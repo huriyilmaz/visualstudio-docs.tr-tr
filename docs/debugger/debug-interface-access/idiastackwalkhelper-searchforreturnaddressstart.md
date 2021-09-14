@@ -1,6 +1,6 @@
 ---
-description: Belirtilen yığın adresinde veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.
-title: 'IDiaStackWalkHelper:: searchForReturnAddressStart | Microsoft Docs'
+description: Belirtilen yığın çerçevesinde belirtilen yığın adresinin üzerinde veya yakınında bir dönüş adresi arar.
+title: IDiaStackWalkHelper::searchForReturnAddressStart | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: f556ec473053e7a8ebba5c90760104d65fa76983
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074559"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626804"
 ---
 # <a name="idiastackwalkhelpersearchforreturnaddressstart"></a>IDiaStackWalkHelper::searchForReturnAddressStart
-Belirtilen yığın adresinde veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.
+Belirtilen yığın çerçevesinde belirtilen yığın adresinin üzerinde veya yakınında bir dönüş adresi arar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,18 +37,18 @@ HRESULT searchForReturnAddressStart(
 #### <a name="parameters"></a>Parametreler
  `frame`
 
-'ndaki Geçerli yığın çerçevesini temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi.
+[in] Geçerli yığın çerçevesini temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi.
 
  `startAddress`
 
-'ndaki Aramanın başlatılacağı bir sanal bellek adresi.
+[in] Aramaya başlamak için bir sanal bellek adresi.
 
  `ReturnAddress`
 
-dışı En yakın işlev dönüş adresini döndürür `startAddress` .
+[out] en yakın işlev dönüş adresini adresine `startAddress` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

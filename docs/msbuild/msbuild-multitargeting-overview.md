@@ -1,6 +1,6 @@
 ---
-title: MSBuild Çoklu HedefLere Genel Bakış | Microsoft Docs
-description: MSBuild'i kullanarak .NET Framework'nin herhangi bir sürümü üzerinde ve çeşitli sistem platformlarından herhangi biri üzerinde çalıştıracak bir uygulama derlemeyi öğrenin.
+title: MSBuild Çoklu hedeflemeye genel bakış | Microsoft Docs
+description: MSBuild, .NET Framework çeşitli sürümlerinden herhangi birinde ve çeşitli sistem platformlarından herhangi birinde çalışacak şekilde bir uygulamayı derlemek için nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,47 +12,47 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: a71c3c774e512d012b1f1bbd99a8e00aa1304cda
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122136852"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627057"
 ---
 # <a name="msbuild-multitargeting-overview"></a>MSBuild çoklu sürüm desteğine genel bakış
 
-Bu MSBuild kullanarak, bir uygulamayı derlemenin çeşitli sürümlerinden herhangi biri üzerinde ve .NET Framework herhangi bir sistem platformunda çalıştıracak şekilde derleyebilirsiniz. Örneğin, 32 bitlik bir platformda .NET Framework 2.0'da çalıştıracak bir uygulama derler ve aynı uygulamayı 64 bitlik bir platformda .NET Framework 4.5 üzerinde çalıştıracak şekilde derlersiniz.
+MSBuild kullanarak, bir uygulamayı .NET Framework çeşitli sürümlerinden herhangi birinde ve çeşitli sistem platformlarından herhangi birinde çalışacak şekilde derleyebilirsiniz. örneğin, bir uygulamayı 32 bit platformda .NET Framework 2,0 ' de çalışacak şekilde derleyebilir ve aynı uygulamayı bir 64-bit platformunda .NET Framework 4,5 üzerinde çalışacak şekilde derleyebilirsiniz.
 
 > [!IMPORTANT]
-> "Çoklu hedef" adı olmasına rağmen, bir proje aynı anda yalnızca bir çerçeveyi ve yalnızca bir platformu hedefleyene kadar devam ediyor olabilir.
+> "Çoklu hedefleme" adına rağmen bir proje aynı anda yalnızca bir çerçeveyi ve yalnızca bir platformu hedefleyebilir.
 
- Aşağıdakiler, MSBuild hedeflemenin özelliklerinden bazılarıdır:
+ bunlar MSBuild hedeflediği özelliklerden bazılarıdır:
 
-- .NET Framework 2.0, 3.5 veya 4 gibi önceki bir sürümü hedef alan bir uygulama geliştirebilirsiniz.
+- .NET Framework önceki bir sürümünü hedefleyen bir uygulama geliştirebilirsiniz, örneğin, 2,0, 3,5 veya 4 sürümleri.
 
-- Silverlight Framework gibi .NET Framework bir çerçeveyi hedefleysiniz.
+- örneğin, Silverlight çerçevesi gibi .NET Framework dışında bir çerçeveyi hedefleyebilirsiniz.
 
-- Hedef çerçevenin *önceden tanımlanmış* bir alt kümesi olan bir çerçeve profilini hedefleyebilirsiniz.
+- Hedef çerçevenin önceden tanımlanmış bir alt kümesi olan bir *çerçeve profilini* hedefleyebilirsiniz.
 
-- Geçerli sürümü için bir hizmet paketi .NET Framework, hedefleyabilirsiniz.
+- .NET Framework geçerli sürümü için bir hizmet paketi yayımlanmışsa, hedefleyebilirsiniz.
 
-- MSBuild, bir uygulamanın yalnızca hedeflenen çerçevede ve platformda kullanılabilen işlevleri kullandığını garantiler.
+- MSBuild hedefleme, bir uygulamanın yalnızca hedeflenen çerçevede ve platformda kullanılabilir olan işlevleri kullanmasını güvence altına alır.
 
 ## <a name="target-framework-and-platform"></a>Hedef çerçeve ve platform
 
- Hedef *çerçeve,* bir .NET Framework üzerinde çalıştıracak şekilde, hedef *platform* ise projenin üzerinde çalıştıracak şekilde inşa edilen sistem platformudur.  Örneğin, bir .NET Framework 2.0 uygulamasını, 80x86 işlemci ailesi (x86) ile uyumlu bir 32 bit platform üzerinde çalıştırmak için hedeflemek istiyor olabilir. Hedef çerçeve ve hedef platformun birleşimi hedef bağlam *olarak bilinir.* Daha fazla bilgi için [bkz. Hedef çerçeve ve hedef platform.](../msbuild/msbuild-target-framework-and-target-platform.md)
+ *hedef çerçeve* , bir projenin üzerinde çalışmak üzere oluşturulduğu .NET Framework sürümüdür ve *hedef platform* , projenin üzerinde çalışmak üzere oluşturulduğu sistem platformudur.  örneğin, 80x86 işlemci ailesi (x86) ile uyumlu bir 32 bit platformda çalıştırmak üzere bir .NET Framework 2,0 uygulamasını hedeflemek isteyebilirsiniz. Hedef Framework ve hedef platformun birleşimi *hedef bağlam* olarak bilinir. Daha fazla bilgi için bkz. [hedef Framework ve hedef platform](../msbuild/msbuild-target-framework-and-target-platform.md).
 
 ## <a name="toolset-toolsversion"></a>Araç Takımı (ToolsVersion)
 
- Araç Kümesi, uygulamayı oluşturmak için kullanılan araçları, görevleri ve hedefleri bir araya toplar. Araç Seti; *csc.exevevbc.exe* , ** ortak hedefler dosyası (*microsoft.common.targets*) ve ortak görevler dosyası (*microsoft.common.tasks*) gibi derleyicileri içerir. 4.5 Araç Seti, .NET Framework 2.0, 3.0, 3.5, 4 ve 4.5 sürümlerini hedeflemek için kullanılabilir. Ancak, 2.0 Araç Seti yalnızca 2.0 .NET Framework hedeflemek için kullanılabilir. Daha fazla bilgi için [bkz. Araç Kümesi (ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md).
+ Araç takımı, uygulamayı oluşturmak için kullanılan araçları, görevleri ve hedefleri birlikte toplar. Araç takımı, *csc.exe* ve *vbc.exe*, ortak hedefler dosyası (*Microsoft. Common. targets*) ve ortak görevler dosyası (*Microsoft. Common. Tasks*) gibi derleyiciler içerir. 4,5 araç takımı, 2,0, 3,0, 3,5, 4 ve 4,5 .NET Framework sürümlerini hedeflemek için kullanılabilir. ancak, 2,0 araç takımı yalnızca 2,0 sürümünü .NET Framework hedeflemek için kullanılabilir. Daha fazla bilgi için bkz. [araç takımı (araçları sürümü)](../msbuild/msbuild-toolset-toolsversion.md).
 
 ## <a name="reference-assemblies"></a>Başvuru derlemeleri
 
- Araç Kümesinde belirtilen başvuru derlemeleri bir uygulama tasarlamanıza ve derlemeye yardımcı olur. Bu başvuru derlemeleri yalnızca belirli bir hedef derlemeyi etkinleştirmekle birlikte, IDE'de Visual Studio ve özellikleri hedefle uyumlu olanlarla da kısıtlar. Daha fazla bilgi için [bkz. Derlemeleri tasarım zamanında çözümleme.](../msbuild/resolving-assemblies-at-design-time.md)
+ Araç takımı 'nda belirtilen başvuru derlemeleri bir uygulama tasarlamanıza ve oluşturmanıza yardımcı olur. bu başvuru derlemeleri yalnızca belirli bir hedef derlemeyi etkinleştirmeyin, aynı zamanda Visual Studio ıde 'deki bileşenleri ve özellikleri hedefle uyumlu olanlarla kısıtlar. Daha fazla bilgi için bkz. [tasarım zamanında derlemeleri çözümleme](../msbuild/resolving-assemblies-at-design-time.md).
 
 ## <a name="configure-targets-and-tasks"></a>Hedefleri ve görevleri yapılandırma
 
- MSBuild ile MSBuild ve görevleri, üzerinde çalıştırılandan çok daha farklı bağlamları hedeflemek için MSBuild ile işlem dışında çalıştıracak şekilde yapılandırabilirsiniz.  Örneğin, geliştirme bilgisayarı .NET Framework 4.5 ile 64 bitlik bir platformda çalışırken 32 bit, .NET Framework .NET Framework 2.0 uygulamasını hedefleyebilirsiniz. Daha fazla bilgi için [bkz. Hedefleri ve görevleri yapılandırma.](../msbuild/configuring-targets-and-tasks.md)
+ MSBuild hedeflerini ve görevleri, üzerinde çalışmakta olduğunuz sunucudan önemli ölçüde farklı olan bağlamların hedeflemesini sağlamak için MSBuild ile işlem dışı çalışacak şekilde yapılandırabilirsiniz.  örneğin, geliştirme bilgisayarı .NET Framework 4,5 ile 64 bit platformda çalışırken 32 bitlik bir .NET Framework 2,0 uygulamasını hedefleyebilirsiniz. Daha fazla bilgi için bkz. [hedefleri ve görevleri yapılandırma](../msbuild/configuring-targets-and-tasks.md).
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
- Hedef bağlamın parçası olan bir derlemeye başvurursanız hatalarla karşılaşabilirsiniz. Bu hatalar ve bunlar hakkında ne yapacakları hakkında daha fazla bilgi için bkz. .NET Framework [giderme.](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)
+ Hedef bağlamın parçası olmayan bir derlemeye başvuru yapmayı denerseniz hatalarla karşılaşabilirsiniz. bu hatalar ve bunlarla ilgili daha fazla bilgi için bkz. [.NET Framework hedefleme hatalarını giderme](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).

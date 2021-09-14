@@ -17,11 +17,11 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: d6aabbae9b0e65933e9340a09a20d66fba4da98f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122084382"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627008"
 ---
 # <a name="da0002-vsperfcorprofdll-is-missing"></a>DA0002: VSPerfCorProf.dll eksik
 
@@ -30,7 +30,7 @@ ms.locfileid: "122084382"
 |Kural Kimliği|DA0002|
 |Kategori|Profil Oluşturma Araçları Kullanımı|
 |Profil oluşturma yöntemleri|VSPerfCmd ve VSPerfASPNETCmd komut satırı araçlarını kullanarak profil oluşturma|
-|İleti|*VsPerfCLREnv.cmd* ile ortam değişkenlerini düzgün ayarlamadan dosyanın toplanmış olduğu görünüyor. Yönetilen ikili dosyalar için semboller çözümlenebilmiyor olabilir.|
+|İleti|*VsPerfCLREnv.cmd* ile ortam değişkenlerini düzgün ayarlamadan dosyanın toplanmış olduğu görünüyor. Yönetilen ikili dosyalar için semboller çözümlenebilmiyor.|
 |Kural türü|Bilgi|
 
 ## <a name="cause"></a>Nedeni
@@ -40,4 +40,4 @@ ms.locfileid: "122084382"
  Belirli ortam değişkenleri, profil oluşturma çalışmadan önce, profil oluşturma ikilileri içinde sembolleri çözümlemek .NET Framework gerekir. Bu uyarı, profil oluşturma *verileri toplanmadan önce VSPerfCLREnv.cmd* aracının çalıştırılamay olmadığını önerir. Yönetilen ikili dosyalar için semboller çözümlenebilmiyor olabilir. Komut satırına ilişkin Profil Oluşturma Araçları daha fazla bilgi için [bkz. Komut satırı profil oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md)
 
 ## <a name="how-to-fix-violations"></a>İhlalleri düzeltme
- Profil Oluşturma Araçları'daki komut satırı araçlarını kullanarak yönetilen uygulamaların profilini larken, veri toplamaya başlamadan önce [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [VSPerfCLREnv](../profiling/vsperfclrenv.md) komut satırı aracını çalıştırın.
+ Profil Oluşturma Araçları'daki komut satırı araçlarını kullanarak yönetilen uygulamaların profilini oluşturmak için veri toplamaya başlamadan önce [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [VSPerfCLREnv](../profiling/vsperfclrenv.md) komut satırı aracını çalıştırın.

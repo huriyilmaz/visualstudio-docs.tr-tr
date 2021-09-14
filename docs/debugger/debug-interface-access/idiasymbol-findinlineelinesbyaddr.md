@@ -1,6 +1,6 @@
 ---
-description: IDiaSymbol::findInlineeLinesByAddr, bir istemcinin belirtilen adres aralığındaki bu sembolde satır içi, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında bir sabitlevasyonu almalarına olanak sağlar.
-title: IDiaSymbol::findInlineeLinesByAddr | Microsoft Docs
+description: 'IDiaSymbol:: Findınlineelinesbyaddr, bir istemcinin belirtilen adres aralığındaki Bu sembolde yer alan ve doğrudan ya da dolaylı olarak satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.'
+title: 'IDiaSymbol:: Findınlineelinesbyaddr | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,14 +13,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 57eb156d96d20f1c1032980c31309c93519ab844
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036282"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626751"
 ---
 # <a name="idiasymbolfindinlineelinesbyaddr"></a>IDiaSymbol::findInlineeLinesByAddr
-Bir istemcinin, belirtilen adres aralığındaki bu sembolde satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında bir numaralandırarak bir numaralandırıcısını verir.
+Bir istemcinin, belirtilen adres aralığı içinde Bu sembolde bulunan ve doğrudan veya dolaylı olarak satır numarası bilgilerini yinelemek için bir sabit listesi alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,22 +36,22 @@ HRESULT findInlineeLinesByAddr (
 #### <a name="parameters"></a>Parametreler
  `isect`
 
-[in] Adresin bölüm bileşenini belirtir.
+'ndaki Adresin bölüm bileşenini belirtir.
 
  `offset`
 
-[in] Adresin kaydırma bileşenini belirtir.
+'ndaki Adresin konum bileşenini belirtir.
 
  `length`
 
-[in] Bu sorguyu kapsayacak adres aralığını bayt sayısı cinsinden belirtir.
+'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığını bayt cinsinden belirtir.
 
  `ppResult`
 
-[out] Alınan `IDiaEnumLineNumbers` satır numaralarının listesini içeren bir nesneyi tutar.
+dışı `IDiaEnumLineNumbers` Alınan satır numaralarının listesini içeren bir nesnesi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

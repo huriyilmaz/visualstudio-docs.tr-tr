@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 8bbb837fe55405b9f66dd55913a8773b5b82ad7a50f132710e2398c60776a5a9
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fd8070890752e08e265ee2f526964a871e848f76
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454842"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626853"
 ---
 # <a name="idiastackwalkframesearchforreturnaddressstart"></a>IDiaStackWalkFrame::searchForReturnAddressStart
 Belirtilen yığın çerçevesinde belirtilen adreste veya yakınında bir dönüş adresi arar.
@@ -45,7 +45,7 @@ HRESULT searchForReturnAddressStart (
 
  `returnAddress`
 
-[out] için en yakın işlev dönüş adresini `startAddress` döndürür.
+[out] en yakın işlev dönüş adresini adresine `startAddress` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.

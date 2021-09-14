@@ -1,6 +1,6 @@
 ---
-description: Hata ayıklama altyapısının (DE) GUID 'INI alır.
-title: 'IDebugEngine2:: Getengineıd | Microsoft Docs'
+description: Hata ayıklama altyapısının (DE) GUID'lerini alır.
+title: IDebugEngine2::GetEngineID | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 079e3b0316bb06edb383dc74ed0e71f157d29a00
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122064337"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126727010"
 ---
 # <a name="idebugengine2getengineid"></a>IDebugEngine2::GetEngineID
-Hata ayıklama altyapısının (DE) GUID 'INI alır.
+Hata ayıklama altyapısının (DE) GUID'lerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int GetEngineID(
 
 ## <a name="parameters"></a>Parametreler
 `pguidEngine`\
-dışı DE öğesinin GUID 'sini döndürür.
+[out] DE'nin GUID'lerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Tipik GUID 'lerin bazı örnekleri `guidScriptEng` , `guidNativeEng` , veya `guidSQLEng` . Yeni hata ayıklama motorları, tanımlama için kendi GUID değerlerini oluşturacaktır.
+Tipik GUID'lere örnek olarak `guidScriptEng` , `guidNativeEng` veya `guidSQLEng` verilmiştir. Yeni hata ayıklama altyapıları tanımlama için kendi GUID'lerini oluşturacak.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CEngine` [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CEngine` [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CEngine::GetEngineId(GUID *pguidEngine) {

@@ -1,6 +1,6 @@
 ---
-title: Sunulan hizmetler (kaynak denetimi VSPackage) | Microsoft Docs
-description: Visual Studio ıde ve vspackages ile etkileşim de dahil olmak üzere vspackages 'ın hizmetler aracılığıyla nasıl paylaşılacağını öğrenin.
+title: Sağlanan Hizmetler (Kaynak Denetimi VSPackage) | Microsoft Docs
+description: VSPackage'ların IDE ve VSPackage'ları ile etkileşim Visual Studio hizmetler aracılığıyla işlevselliği nasıl paylaştığını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,17 +15,17 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 34ef5c26184f06b0a9bec3307f4c6af155f51586
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122062764"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627327"
 ---
 # <a name="services-provided-source-control-vspackage"></a>Sağlanan Hizmetler (Kaynak Denetimi VSPackage’ı)
-hizmetler, işlevin vspackages ve Visual Studio tümleşik geliştirme ortamı (ıde) ve yüklü vspackages 'ler arasında paylaşıldığı birincil mekanizmadır. hizmetlerin ayrıntılı açıklaması ve Visual Studio ıde 'de önemini öğrenmek için bkz.[hizmetleri kullanma ve sağlama](../../extensibility/using-and-providing-services.md).
+Hizmetler, işlevlerin VSPackage'lar arasında ve Visual Studio tümleşik geliştirme ortamı (IDE) ile yüklü VSPackage'ları arasında paylaştırılır. Hizmetlerin ayrıntılı açıklaması ve IDE'de Visual Studio için bkz. Hizmetleri Kullanma[ve Sağlama.](../../extensibility/using-and-providing-services.md)
 
-## <a name="the-source-control-service"></a>Kaynak denetim hizmeti
- Visual Studio, iki adet hizmet katmanı, ıde düzeyi hizmet ve paket düzeyi hizmet sunar. Visual Studio ıde yerel olarak ıde düzeyi hizmetler sağlar. Kaynak denetim paketi bu hizmetlerden bazılarını tüketir. Kaynak denetim paketi VSPackage, kendi kendine özel bir kaynak denetimi hizmeti sağlayarak kaynak denetimi işlevselliğini paylaşır. kaynak denetim paketi, Visual Studio ıde tarafından kullanılabilecek bir sözleşme biçiminde uygulanan kaynak denetimi ile ilgili arabirimlerin kümesini kapsüller.
+## <a name="the-source-control-service"></a>Kaynak Denetimi Hizmeti
+ Visual Studio iki hizmet katmanı sağlar: IDE düzeyi hizmetler ve paket düzeyi hizmetler. IDE Visual Studio yerel olarak IDE düzeyinde hizmetler sağlar. Kaynak denetim paketi bu hizmetlerden bazılarını tüketir. VSPackage olarak kaynak denetim paketi, kendi özel bir kaynak denetimi hizmeti sağlayarak kaynak denetimi işlevselliğini paylaştırır. Kaynak denetim paketi, kaynak denetimiyle ilgili arabirimler kümesi tarafından IDE tarafından kullanılmaktadır bir sözleşme şeklinde Visual Studio içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Tasarım Öğeleri](../../extensibility/internals/source-control-vspackage-design-elements.md)

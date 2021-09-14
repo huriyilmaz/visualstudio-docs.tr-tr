@@ -1,5 +1,5 @@
 ---
-description: Program hata ayıklama veritabanı (.pdb) dosyasını kullanarak yığının üzerinde dolmasına yardımcı olur.
+description: Program hata ayıklama veritabanı (. pdb) dosyasını kullanarak yığını yürüme işlemini kolaylaştırır.
 title: IDiaStackWalkHelper | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 06ba4964be340bd5d087a73fb5af9e9d48ded02d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122128826"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626787"
 ---
 # <a name="idiastackwalkhelper"></a>IDiaStackWalkHelper
-Program hata ayıklama veritabanı (.pdb) dosyasını kullanarak yığının üzerinde dolmasına yardımcı olur.
+Program hata ayıklama veritabanı (. pdb) dosyasını kullanarak yığını yürüme işlemini kolaylaştırır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,31 +32,31 @@ IDiaStackWalkHelper: IUnknown
 
 ```
 
-## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
- Aşağıdaki tabloda yöntemleri `IDiaStackWalkHelper` gösterilmiştir:
+## <a name="methods-in-vtable-order"></a>VTable sırasındaki Yöntemler
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaStackWalkHelper` :
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaStackWalkHelper::get_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-get-registervalue.md)|Bir yazmanın değerini verir.|
-|[IDiaStackWalkHelper::put_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-put-registervalue.md)|Yazmanın değerini ayarlar.|
-|[IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md)|Yürütülebilir dosyanın görüntüsünden bellekte bir veri bloğu okur.|
-|[IDiaStackWalkHelper::searchForReturnAddress](../../debugger/debug-interface-access/idiastackwalkhelper-searchforreturnaddress.md)|Belirtilen yığın çerçevesinde en yakın işlev dönüş adresini arar.|
-|[IDiaStackWalkHelper::searchForReturnAddressStart](../../debugger/debug-interface-access/idiastackwalkhelper-searchforreturnaddressstart.md)|Belirtilen yığın çerçevesinde belirtilen yığın adresinin üzerinde veya yakınında bir dönüş adresi arar.|
-|[IDiaStackWalkHelper::frameForVA](../../debugger/debug-interface-access/idiastackwalkhelper-frameforva.md)|Belirtilen sanal adresi içeren yığın çerçevesini alın.|
-|[IDiaStackWalkHelper::symbolForVA](../../debugger/debug-interface-access/idiastackwalkhelper-symbolforva.md)|Belirtilen sanal adresi içeren simgeyi alın. **Not:**  Sembol türüne `SymTagFunctionType` [(SymTagEnum Numaralama numaralarından bir değer)](../../debugger/debug-interface-access/symtagenum.md) sahip olması gerekir.|
-|[IDiaStackWalkHelper::pdataForVA](../../debugger/debug-interface-access/idiastackwalkhelper-pdataforva.md)|Belirtilen sanal adresle ilişkili PDATA veri bloğunü döndürür.|
-|[IDiaStackWalkHelper::imageForVA](../../debugger/debug-interface-access/idiastackwalkhelper-imageforva.md)|Yürütülebilir dosyanın bellek alanı içinde bir yerde bir sanal adres verilen bir yürütülebilir dosyanın başlangıç sanal adresini alın.|
+|[IDiaStackWalkHelper::get_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-get-registervalue.md)|Bir kaydın değerini alır.|
+|[IDiaStackWalkHelper::put_registerValue](../../debugger/debug-interface-access/idiastackwalkhelper-put-registervalue.md)|Bir kaydın değerini ayarlar.|
+|[IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md)|Bellek içindeki yürütülebilir dosyanın görüntüsünden bir veri bloğunu okur.|
+|[IDiaStackWalkHelper::searchForReturnAddress](../../debugger/debug-interface-access/idiastackwalkhelper-searchforreturnaddress.md)|En yakın işlev dönüş adresi için belirtilen yığın çerçevesini arar.|
+|[IDiaStackWalkHelper::searchForReturnAddressStart](../../debugger/debug-interface-access/idiastackwalkhelper-searchforreturnaddressstart.md)|Belirtilen yığın adresinde veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.|
+|[IDiaStackWalkHelper::frameForVA](../../debugger/debug-interface-access/idiastackwalkhelper-frameforva.md)|Belirtilen sanal adresi içeren yığın çerçevesini alır.|
+|[IDiaStackWalkHelper::symbolForVA](../../debugger/debug-interface-access/idiastackwalkhelper-symbolforva.md)|Belirtilen sanal adresi içeren simgeyi alır. **Note:**  Simgenin türü `SymTagFunctionType` ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından bir değer) olmalıdır.|
+|[IDiaStackWalkHelper::pdataForVA](../../debugger/debug-interface-access/idiastackwalkhelper-pdataforva.md)|Belirtilen sanal adresle ilişkili PDATA veri bloğunu döndürür.|
+|[IDiaStackWalkHelper::imageForVA](../../debugger/debug-interface-access/idiastackwalkhelper-imageforva.md)|Yürütülebilir dosyanın başlangıç sanal adresini alır ve bir sanal adres, çalıştırılabilirin bellek alanında bir yere verilir.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim, program yürütme sırasında yığın çerçeveleri listesi oluşturmak üzere yürütülebilir dosya hakkında bilgi almak için DIA kodu tarafından çağrılır.
+ Bu arabirim, program yürütmesi sırasında yığın çerçevelerinin bir listesini oluşturmak üzere yürütülebilir dosya hakkında bilgi almak için, DIA kodu tarafından çağırılır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- İstemci uygulaması, program yürütme sırasında yığının yürütülmesini desteklemek için bu arabirimi uygulamaya almaktadır. Bu arabirimin bir örneği [IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) veya [IDiaStackWalker::getEnumFrames2 yöntemlerine](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) geçirildi.
+ İstemci uygulaması, program yürütme sırasında yığını yürüme desteğini desteklemek için bu arabirimi uygular. Bu arabirimin bir örneği [ıdiastackdenetçisi:: getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) veya [ıdiastackdenetçisi:: getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) yöntemlerine geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Dia2.h
+ Üstbilgi: dia2. h
 
- Kitaplık: diaguids.lib
+ Kitaplık: diaguid. lib
 
  DLL: msdia80.dll
 

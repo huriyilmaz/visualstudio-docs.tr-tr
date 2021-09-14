@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: c2267173539401f9b673a6cf760abe9070279970
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122091152"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626817"
 ---
 # <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
 Sanal adresle ilişkili PDATA veri bloğunü döndürür.
@@ -56,7 +56,7 @@ HRESULT pdataForVA(
  Başarılı olursa `S_OK` döndürür. Belirtilen `S_FALSE` adres için PDATA yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir derlemenin PDATA (".pdata" adlı bölümü), işlevler için özel durum işleme hakkında bilgi içerir.
+ Bir derlemenin PDATA 'sı (".pdata" adlı bölüm), işlevler için özel durum işleme hakkında bilgi içerir.
 
  Çağıran ne kadar verinin döndürül olacağını bilir, bu nedenle çağıranın ne kadar veri kullanılabilir olduğunu sorması gerek yoktur. Bu nedenle, parametresi ise bu yöntemin uygulanması bir hata döndürür. `pbData` `NULL`
 

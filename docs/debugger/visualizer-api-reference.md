@@ -21,15 +21,15 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 7dbf4105320531a21f478ef8947129e0fa754c28
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122112235"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627812"
 ---
 # <a name="visualizer-api-reference"></a>Görselleştirici API Başvurusu
 
-Görselleştirici API'leri, Visual Studio hata ayıklayıcısı için görselleştirici yazmak isteyen kullanıcılara sağlanır. Görselleştirici, hata ayıklayıcı kullanıcı arabiriminin işlevselliğini genişleten Visual Studio bir uygulamadır. Görselleştirici, görselleştiricinin tasar olduğu belirli bir türe sahip bir veri nesnesini görüntüleyemez (ve isteğe bağlı olarak düzenleyebilir).
+Görselleştirici API'leri, Visual Studio hata ayıklayıcısı için görselleştirici yazmak isteyen kullanıcılara sağlanır. Görselleştirici, hata ayıklayıcısı kullanıcı arabiriminin işlevselliğini genişleten Visual Studio bir uygulamadır. Görselleştirici, görselleştiricinin tasar olduğu belirli bir türe sahip bir veri nesnesini görüntüleyemez (ve isteğe bağlı olarak düzenleyebilir).
 
 ## <a name="in-this-section"></a>Bu Bölümde
 

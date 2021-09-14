@@ -16,19 +16,19 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: bc765f09966a9dbd5aed7ab31b4c2829e6c490dc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122062114"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627129"
 ---
 # <a name="services-page-project-designer"></a>Hizmetler Sayfası, Proje Tasarımcısı
 
-İstemci uygulama hizmetleri, Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarından oturum açma, roller ve profil hizmetleri için [!INCLUDE[ajax_current_short](../../ide/reference/includes/ajax_current_short_md.md)] basitleştirilmiş erişim sağlar. Projeniz için **istemci** uygulama hizmetlerini **etkinleştirmek ve yapılandırmak Project** Tasarımcısı'nın Hizmetler sayfasını kullanabilirsiniz.
+İstemci uygulama hizmetleri, Windows Forms ve [!INCLUDE[ajax_current_short](../../ide/reference/includes/ajax_current_short_md.md)] Windows Presentation Foundation (WPF) uygulamalarından oturum açma, roller ve profil hizmetleri için basitleştirilmiş erişim sağlar. Projeniz için **istemci** uygulama hizmetlerini **etkinleştirmek ve yapılandırmak Project** Tasarımcısı'nın Hizmetler sayfasını kullanabilirsiniz.
 
 İstemci uygulama hizmetleriyle, kullanıcıların kimliğini doğrulamak, her kullanıcının atanmış rolünü veya rollerini belirlemek ve ağ üzerinde paylaşabilirsiniz kullanıcı başına uygulama ayarlarını depolamak için merkezi bir sunucu kullanabilirsiniz. Daha fazla bilgi için [bkz. İstemci Uygulama Hizmetleri.](/dotnet/framework/common-client-technologies/client-application-services)
 
-Hizmetler sayfasına **erişmek** için, Çözüm Gezgini menüsünden bir **proje** düğümü seçin ve **ardından** Project tıklayın. Project **Tasarımcısı** göründüğünde Hizmetler **sekmesine** tıklayın.
+Hizmetler sayfasına **erişmek** için, Çözüm Gezgini menüsünden bir **proje** düğümü seçin ve ardından **Project** tıklayın. Project **Tasarımcısı** göründüğünde Hizmetler **sekmesine** tıklayın.
 
 ## <a name="task-list"></a>Görev Listesi
 
@@ -74,7 +74,7 @@ Profil (web ayarları) hizmetinin konumunu belirtir.
 
  **Gelişmiş**
 
-Varsayılan davranışı [geçersiz Ayarlar için kullanabileceğiniz](../../ide/reference/advanced-settings-for-services-dialog-box.md)Hizmetler için Gelişmiş Hizmetler İletişim Kutusu'. Örneğin, yerel dosya sistemini kullanmak yerine çevrimdışı depolama için bir veritabanı belirtmek üzere bu iletişim kutusunu kullanabilirsiniz. Daha fazla bilgi için [bkz. Hizmetler Ayarlar Gelişmiş Hizmetler İletişim Kutusu.](../../ide/reference/advanced-settings-for-services-dialog-box.md)
+Varsayılan davranışı [geçersiz Ayarlar için kullanabileceğiniz](../../ide/reference/advanced-settings-for-services-dialog-box.md)Hizmetler için Gelişmiş Hizmet İletişim Kutusu'Ayarlar açar. Örneğin, yerel dosya sistemini kullanmak yerine çevrimdışı depolama için bir veritabanı belirtmek üzere bu iletişim kutusunu kullanabilirsiniz. Daha fazla bilgi için [bkz. Hizmetler Ayarlar Gelişmiş Hizmetler İletişim Kutusu.](../../ide/reference/advanced-settings-for-services-dialog-box.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

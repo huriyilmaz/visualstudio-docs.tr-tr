@@ -1,5 +1,5 @@
 ---
-description: IDiaStackWalkHelper::p ut_registerValue, yazmacın değerini ayarlar.
+description: IDiaStackWalkHelper::p ut_registerValue bir kaydın değerini ayarlar.
 title: IDiaStackWalkHelper::p ut_registerValue | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: a93a21b10f6793cd75c6999998bc21b923ce69d7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052325"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626816"
 ---
 # <a name="idiastackwalkhelperput_registervalue"></a>IDiaStackWalkHelper::put_registerValue
-Yazmanın değerini ayarlar.
+Bir kaydın değerini ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,17 +36,17 @@ HRESULT put_registerValue (
 #### <a name="parameters"></a>Parametreler
  `index`
 
-[in] Yazmacı [belirten CV_HREG_e](../../debugger/debug-interface-access/cv-hreg-e.md) enumeration enumeration değerinden bir değer.
+'ndaki Yazılacak kaydı belirten [CV_HREG_e sabit listesi](../../debugger/debug-interface-access/cv-hreg-e.md) numaralandırmasından bir değer.
 
  `NewVal`
 
-[in] Yeni yazmaz değeri.
+'ndaki Yeni kayıt değeri.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Değerin boyutuna rağmen, uygulama yalnızca yazmaca normal olarak nelerin sahip olduğunu depolamalı. Örneğin, bir 8 bit yazmalık, verilen değerin yalnızca en düşük 8 bitlerini tutar.
+ Değerin boyutuna rağmen bir uygulama yalnızca kaydın normal olarak tuttuğu şeyi depolamalıdır. Örneğin, 8 bitlik bir kayıt yalnızca verilen değerin en düşük 8 bitini tutacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

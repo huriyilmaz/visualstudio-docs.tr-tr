@@ -1,6 +1,6 @@
 ---
 title: Seçenekler iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma
-description: Visual Studio 'da aynı anda oluşturulabilecek en fazla C++ veya C# projesi sayısını, belirli varsayılan derleme davranışlarını ve bazı derleme günlüğü ayarlarını belirtin.
+description: Aynı anda oluşturulabilecek en fazla C++ veya C# projesi sayısını, bazı varsayılan derleme davranışlarını ve Visual Studio yapı günlüğü ayarlarını belirtin.
 '\ms.custom': SEO-VS-2020
 ms.date: 07/14/2017
 ms.technology: vs-ide-compile
@@ -18,11 +18,11 @@ manager: jmartens
 ms.workload:
 - multiple
 ms.openlocfilehash: f3b6d98e715d0c86af6948f2fcc502e94dfde56a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99910827"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627225"
 ---
 # <a name="options-dialog-box-projects-and-solutions--build-and-run"></a>Seçenekler iletişim kutusu: projeler ve çözümler \> derleme ve çalıştırma
 
@@ -52,11 +52,11 @@ Aynı anda oluşturulabilecek en fazla C++ ve C# proje sayısını belirtir. Yap
 
 Bu seçenek ayarlandığında, yeni çözümler seçili olan projeyi başlangıç projesi olarak kullanır.
 
-**MSBuild proje derlemesi çıkış ayrıntı düzeyi**
+**MSBuild proje derlemesi çıktısını ayrıntı düzeyi**
 
 **Çıkış** penceresinde yapı işlemindeki bilgilerin ne kadar görüntülendiğini belirler.
 
-**MSBuild proje derleme günlük dosyası ayrıntı düzeyi**
+**MSBuild proje derlemesi günlük dosyası ayrıntı düzeyi**
 
 *Yalnızca C++ projeleri için geçerlidir.*
 

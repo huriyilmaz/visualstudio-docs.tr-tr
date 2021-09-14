@@ -16,14 +16,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: c0432a57deee0b88cd0b30d16cc741b391250b55
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122131787"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627032"
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider işlevi
-İşaretleyici sağlayıcısını başlatıyor. Diğer Eşzamanlılık GörselleştiriciSI SDK'sı işlevleri öncesinde çağrılları gerekir.
+İşaretleyici sağlayıcısını başlatılır. Diğer Eşzamanlılık GörselleştiriciSI SDK'sı işlevleri öncesinde çağrılları gerekir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,7 +40,7 @@ HRESULT CvInitProvider(
  `ppProvider` Sağlayıcı bağlamını depolar bir çıkış değişkeninin adresi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- S_OK başarıyla başlatılamadı mı yoksa hata olması durumunda hata kodu mu? Hata koşullarını kontrol etmek için BAŞARILI/BAŞARILI makroları kullanın.
+ S_OK başarıyla başlatılmışsa veya herhangi bir hata olması durumunda hata kodu. Hata koşullarını kontrol etmek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
  **Üst bilgi:** *cvmarkers.h*

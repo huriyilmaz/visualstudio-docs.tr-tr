@@ -13,11 +13,11 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 34e8f64b0007231ef3c5208d7020d415d65e6d67
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122073545"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627716"
 ---
 # <a name="creating-a-custom-start-page"></a>Özel Başlangıç Sayfası oluşturma
 
@@ -27,11 +27,11 @@ Bu belgede yer alan adımları kullanarak özel bir Başlangıç Sayfası oluşt
 
 İlk olarak, tanıyacak etiket yapısına sahip *bir .xaml* dosyası oluşturarak Visual Studio olun. Ardından istediğiniz görünümü ve işlevi üretmek için işaretleme ve arka kod ekleyin.
 
-1. **WPF** Uygulaması türünde yeni bir proje oluşturun (**Visual C#**  >  **Windows Desktop**).
+1. **WPF** Uygulaması (**Visual C#** Windows Desktop )  >  **türünde yeni bir proje oluşturun.**
 
 2. için bir başvuru `Microsoft.VisualStudio.Shell.14.0` ekleyin.
 
-3. XAML dosyasını XML düzenleyicisinde açın ve ad alanı bildirimlerini kaldırmadan en üst düzey öğeyi \<Window> \<UserControl> bir öğe olarak değiştirebilirsiniz.
+3. XAML dosyasını XML düzenleyicisinde açın ve ad alanı bildirimlerini kaldırmadan en üst düzey \<Window> öğeyi bir öğe olarak \<UserControl> değiştirebilirsiniz.
 
 4. Bildirimi `x:Class` üst düzey öğesinden kaldırın. Bu, XAML içeriğini Başlangıç Sayfasını barındıran Visual Studio aracı penceresiyle uyumlu yapar.
 
@@ -64,11 +64,11 @@ Bu belgede yer alan adımları kullanarak özel bir Başlangıç Sayfası oluşt
     </UserControl>
     ```
 
-6. Özel Başlangıç Sayfanızı \<UserControl> doldurmak için boş öğeye denetimler ekleyin. Uygulamanıza özel işlevler ekleme hakkında bilgi için Visual Studio, [bkz. Başlangıç Visual Studio komutlarını ekleme.](../extensibility/adding-visual-studio-commands-to-a-start-page.md)
+6. Özel Başlangıç Sayfanızı \<UserControl> doldurmak için boş öğeye denetimler ekleyin. Uygulamanıza özel işlevler ekleme hakkında bilgi için bkz. Visual Studio Sayfasına [Visual Studio komutları ekleme.](../extensibility/adding-visual-studio-commands-to-a-start-page.md)
 
 ## <a name="test-and-apply-the-custom-start-page"></a>Özel Başlangıç Sayfasını test edin ve uygulama
 
-Özel Başlangıç Sayfası'nın Visual Studio çalışmayıncaya kadar özel başlangıç sayfasının birincil örneğini ayarlayıncaya kadar Visual Studio. Bunun yerine, deneysel örnekte test etmek.
+Özel Başlangıç Sayfası'Visual Studio için birincil örneğini, özel Başlangıç Sayfası'nın kilitlenmesi olmadığını doğrulaya kadar Visual Studio. Bunun yerine, deneysel örnekte test etmek.
 
 ### <a name="to-test-a-manually-created-custom-start-page"></a>El ile oluşturulan özel Başlangıç Sayfasını test etmek için
 

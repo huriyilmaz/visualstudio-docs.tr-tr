@@ -1,6 +1,6 @@
 ---
-title: Derleme derleniyor
-description: Uygulama derlemek için Visual Studio IDE Build yöntemini, MSBuild komut satırı araçları derleme yöntemini veya Azure Pipelines Build metodunu nasıl kullanacağınızı öğrenin.
+title: Derleme
+description: Visual Studio IDE derleme yöntemini, MSBuild komut satırı araçları derleme yöntemini veya Azure Pipelines derleme yöntemini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 07/14/2017
 ms.technology: vs-ide-compile
@@ -15,48 +15,48 @@ manager: jmartens
 ms.workload:
 - multiple
 ms.openlocfilehash: 61abd28890fe92918c8ee2c9067820a781fac9c4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99970900"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627237"
 ---
-# <a name="compile-and-build-in-visual-studio"></a>Visual Studio 'da derleme ve derleme
+# <a name="compile-and-build-in-visual-studio"></a>Derleme ve derleme Visual Studio
 
-IDE içinde oluşturmaya ilk giriş için, bkz. [Izlenecek yol: uygulama oluşturma](walkthrough-building-an-application.md).
+IDE içinde binaya ilk giriş için bkz. [Adım adım kılavuz: Uygulama bina.](walkthrough-building-an-application.md)
 
-Bir uygulama oluşturmak için aşağıdaki yöntemlerden herhangi birini kullanabilirsiniz: Visual Studio IDE, MSBuild komut satırı araçları ve Azure Pipelines:
+Uygulama oluşturmak için aşağıdaki yöntemlerden herhangi birini kullanabilirsiniz: Visual Studio IDE, MSBuild komut satırı araçları ve Azure Pipelines:
 
-| Build yöntemi | Avantajlar |
+| Derleme Yöntemi | Avantajlar |
 | --- |--- | --- |
-| IDE |-Derlemeleri hemen oluşturun ve bir hata ayıklayıcıda test edin.<br />-C++ ve C# projeleri için çok işlemcili derlemeler çalıştırın.<br />-Derleme sisteminin farklı yönlerini özelleştirin. |
-| CMake | -CMake aracını kullanarak proje oluşturun<br />-Linux ve Windows platformları genelinde aynı derleme sistemini kullanın. |
-| MSBuild komut satırı| -Visual Studio 'Yu yüklemeden projeler oluşturun.<br />-Tüm proje türleri için çok işlemcili derlemeler çalıştırın.<br />-Yapı sisteminin birçok alanını özelleştirin.|
-| Azure Pipelines | -Derleme işleminizi sürekli tümleştirme/sürekli teslim işlem hattının parçası olarak otomatikleştirin.<br />-Her derleme ile otomatikleştirilmiş testler uygulayın.<br />-Derleme işlemlerinde neredeyse sınırsız sayıda bulut tabanlı kaynak kullanmayı.<br />-Derin özelleştirilmiş görevler gerçekleştirmek için derleme iş akışını değiştirin ve derleme etkinlikleri oluşturun.|
+| IDE |- Derlemeleri hemen oluşturun ve bir hata ayıklayıcısında test edin.<br />- C++ ve C# projeleri için çok işlemcili derlemeler çalıştırın.<br />- Derleme sisteminin farklı yönlerini özelleştirin. |
+| CMake | - CMake aracını kullanarak proje oluşturma<br />- Linux ve diğer platformlarda aynı derleme Windows kullanın. |
+| MSBuild satırı| - Proje derlemelerini yüklemeden Visual Studio.<br />- Tüm proje türleri için çok işlemcili derlemeler çalıştırın.<br />- Derleme sisteminin çoğu alanlarını özelleştirin.|
+| Azure Pipelines | - Sürekli tümleştirme/sürekli teslim işlem hattının bir parçası olarak derleme sürecinizi otomatikleştirin.<br />- Her derlemeyle otomatikleştirilmiş testler uygulama.<br />- Derleme işlemleri için neredeyse sınırsız bulut tabanlı kaynak kullanın.<br />- Derin özelleştirilmiş görevleri gerçekleştirmek için derleme iş akışını değiştirme ve derleme etkinlikleri oluşturma.|
 
-Bu bölümdeki belgeler, IDE tabanlı derleme sürecinin daha ayrıntılı ayrıntılarına gider. Diğer yöntemler hakkında daha fazla bilgi için sırasıyla [MSBuild](../msbuild/msbuild.md) ve [Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)bölümüne bakın.
+Bu bölümdeki belgeler, IDE tabanlı derleme işleminin diğer ayrıntılarına gider. Diğer yöntemler hakkında daha fazla bilgi için [sırasıyla MSBuild](../msbuild/msbuild.md) [ve Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)bakın.
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için, bkz. [Mac için Visual Studio derleme ve derleme](/visualstudio/mac/compiling-and-building).
+> Bu konu, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. Derleme ve derleme Mac için Visual Studio.](/visualstudio/mac/compiling-and-building)
 
-## <a name="overview-of-building-from-the-ide"></a>IDE 'den oluşturmaya genel bakış
+## <a name="overview-of-building-from-the-ide"></a>IDE'den binaya genel bakış
 
-Bir proje oluşturduğunuzda, Visual Studio proje için varsayılan derleme konfigürasyonları ve projeyi içeren çözüm için oluşturulmuştur.  Bu konfigürasyonlar, çözümlerin ve projelerin nasıl oluşturulup dağıtıldığını tanımlar. Özellikle de proje konfigürasyonları bir hedef platform (Windows veya Linux gibi) ve derleme türü (hata ayıklama veya sürüm gibi) için benzersizdir. Bu konfigürasyonları istediğiniz gibi düzenleyebilir ve gerektiğinde kendi yapılandırmalarınızı da oluşturabilirsiniz.
+Bir proje oluşturulduğunda, Visual Studio ve projeyi içeren çözüm için varsayılan derleme yapılandırmaları oluşturulur.  Bu yapılandırmalar, çözümlerin ve projelerin nasıl yerleşik ve dağıtılmış olduğunu tanımlar. Project yapılandırmaları hedef platform (Windows veya Linux gibi) ve derleme türü (hata ayıklama veya yayın gibi) için benzersizdir. Bu yapılandırmaları istediğiniz gibi düzenleyebilir ve gerektiğinde kendi yapılandırmalarınızı da oluşturabilirsiniz.
 
-IDE içinde oluşturmaya ilk giriş için, bkz. [Izlenecek yol: uygulama oluşturma](walkthrough-building-an-application.md).
+IDE içinde binaya ilk giriş için bkz. [Adım adım kılavuz: Uygulama bina.](walkthrough-building-an-application.md)
 
-Ardından, işleme yapabileceğiniz farklı yönleri özelleştirmeleri hakkında bilgi edinmek için bkz. [Visual Studio 'da projeleri ve çözümleri oluşturma ve Temizleme](building-and-cleaning-projects-and-solutions-in-visual-studio.md) . Özelleştirmeler, [Çıkış dizinlerini değiştirme](how-to-change-the-build-output-directory.md), [özel derleme olayları belirtme](specifying-custom-build-events-in-visual-studio.md), [Proje bağımlılıklarını yönetme](how-to-create-and-remove-project-dependencies.md), [derleme günlüğü dosyalarını yönetme](how-to-view-save-and-configure-build-log-files.md)ve [derleyici uyarılarını gizleme](how-to-suppress-compiler-warnings.md)içerir.
+Ardından, [süreçle ilgili olarak farklı özelleştirmeler hakkında Visual Studio](building-and-cleaning-projects-and-solutions-in-visual-studio.md) için bkz. Proje ve çözümler derleme ve temizleme. Özelleştirmeler, [çıkış dizinlerini](how-to-change-the-build-output-directory.md) [değiştirmeyi,](specifying-custom-build-events-in-visual-studio.md)özel derleme olaylarını [belirtmeyi,](how-to-create-and-remove-project-dependencies.md)proje bağımlılıklarını yönetmeyi, [](how-to-view-save-and-configure-build-log-files.md)derleme günlük dosyalarını yönetmeyi ve derleyici [uyarılarını gizlemeyi içerir.](how-to-suppress-compiler-warnings.md)
 
-Buradan, diğer birçok görevi inceleyebilirsiniz:
+Buradan, diğer çeşitli görevleri keşfedebilirsiniz:
 - [Derleme yapılandırmalarını anlama](understanding-build-configurations.md)
 - [Derleme platformlarını anlama](understanding-build-platforms.md)
-- [Proje ve çözüm özelliklerini yönetin](managing-project-and-solution-properties.md).
-- [C#](how-to-specify-build-events-csharp.md) ve [Visual Basic](how-to-specify-build-events-visual-basic.md)derleme olaylarını belirtin.
-- [Derleme seçeneklerini ayarla](reference/options-dialog-box-projects-and-solutions-build-and-run.md)
-- [Paralel olarak birden çok proje oluşturun](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md).
+- [Proje ve çözüm özelliklerini yönetme.](managing-project-and-solution-properties.md)
+- C# içinde derleme [olaylarını belirtin ve](how-to-specify-build-events-csharp.md) [Visual Basic.](how-to-specify-build-events-visual-basic.md)
+- [Derleme seçeneklerini ayarlama](reference/options-dialog-box-projects-and-solutions-build-and-run.md)
+- [Birden çok proje paralel olarak derleme.](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Web sitesi projelerini derleme (derleme)](/previous-versions/hwxa5aha(v=vs.140))
-- [Derle ve derle (Mac için Visual Studio)](/visualstudio/mac/compiling-and-building)
-- [Visual Studio 'da CMake projeleri](/cpp/build/cmake-projects-in-visual-studio)
+- [Web sitesi projeleri derleme (derleme)](/previous-versions/hwxa5aha(v=vs.140))
+- [Derleme ve derleme (Mac için Visual Studio)](/visualstudio/mac/compiling-and-building)
+- [Visual Studio'de CMake projeleri](/cpp/build/cmake-projects-in-visual-studio)

@@ -1,5 +1,5 @@
 ---
-description: Bu yapı, bir sınıfın veya yapının bir alanının adresini temsil eder.
+description: Bu yapı, bir sınıfın veya yapının bir alanın adresini temsil eder.
 title: METADATA_ADDRESS_FIELD | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,15 +18,15 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9757f42022cf5b590385151fc1346ad75ce8cdd3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122152568"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627363"
 ---
 # <a name="metadata_address_field"></a>METADATA_ADDRESS_FIELD
 
-Bu yapı, bir sınıfın veya yapının bir alanının adresini temsil eder.
+Bu yapı, bir sınıfın veya yapının bir alanın adresini temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ public struct METADATA_ADDRESS_FIELD {
 ## <a name="members"></a>Üyeler
 
 `tokField`\
-Alan belirtecinin KIMLIĞI.
+Alan belirtecin kimliği.
 
-[C++] `_mdToken` , `typedef` 32 bitlik bir içindir `int` .
+[C++] `_mdToken` , `typedef` 32 bit için bir'dır. `int`
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, [](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_FIELD` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
+Bu yapı, yapının alanı [(DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) enumerasyonundan bir değer) olarak ayarlanırken ADDRESS_KIND `dwKind` parçası `DEBUG_ADDRESS_UNION` `ADDRESS_KIND_FIELD` olur. [](../../../extensibility/debugger/reference/address-kind.md)
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üstbilgi: SH. h
+Üst bilgi: sh.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

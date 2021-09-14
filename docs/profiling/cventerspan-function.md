@@ -1,6 +1,6 @@
 ---
-title: CvEnterSpan Işlevi | Microsoft Docs
-description: Eşzamanlılık Görselleştiricisi SDK fonksiyonu CvEnterSpan (C Kitaplığı) için başvuru bilgilerine bakın.
+title: CvEnterSpan İşlev | Microsoft Docs
+description: Eşzamanlılık Görselleştiricisi SDK'sı işlevi CvEnterSpan (C kitaplığı) için başvuru bilgilerine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -28,14 +28,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 784a4d7e0f4df220573b9a93e68c62336f15cea3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122136319"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627038"
 ---
 # <a name="cventerspan-function"></a>CvEnterSpan işlevi
-Yeni bir yayılımın başlangıcını işaretler.
+Yeni bir aralığın başlangıcını işaretler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -107,25 +107,25 @@ HRESULT CvEnterSpanExVA(
 #### <a name="parameters"></a>Parametreler
  `argList` Bağımsız değişkenlerin listesi.
 
- `category` Yayılma kategorisi
+ `category` Aralığın kategorisi
 
- `level` Yayılma alanının önem düzeyi.
+ `level` Aralığın önem düzeyi.
 
- `pMarkerSeries` Geçerli işaretleyici serisi bağlamı. NULL olamaz.
+ `pMarkerSeries` Geçerli işaretçi serisi bağlamı. NULL olamaz.
 
- `pMessage` İleti biçimli dize. NULL olamaz.
+ `pMessage` İleti biçimi dizesi. NULL olamaz.
 
- `ppSpan` Elde edilen span nesnesini barındıracak değişkenin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
+ `ppSpan` Sonuçta elde edilen span nesnesini tutacak değişkenin adresi. Adres NULL olamaz, değişkenin herhangi bir değeri olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
+ S_OK başarıyla yazıldığı zaman iletiyi görüntüler. Hata varsa hata kodu. Hata koşullarını kontrol etmek için BAŞARILI/BAŞARILI makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvişaretleyiciler. h*
+ **Üst bilgi:** *cvmarkers.h*
 
  **Unicode:** CvEnterSpanW, CvEnterSpanVW, CvEnterSpanExW, CvEnterSpanExVW
 
  **ANSI:** CvEnterSpanA, CvEnterSpanVA, CvEnterSpanExA, CvEnterSpanExVW
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)
+- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)

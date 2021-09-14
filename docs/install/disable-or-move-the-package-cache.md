@@ -1,6 +1,6 @@
 ---
 title: Paket önbelleğini devre dışı bırakma veya taşıma
-description: Visual Studio dağıtımları için paket önbelleğini devre dışı bırakma, etkinleştirme veya taşıma hakkında bilgi edinin.
+description: Dağıtımlar için paket önbelleğini devre dışı bırakmayı, etkinleştirmeyi veya taşımayı Visual Studio öğrenin.
 ms.date: 04/14/2017
 ms.custom: seodec18
 ms.topic: conceptual
@@ -11,53 +11,53 @@ helpviewer_keywords:
 - '{{PLACEHOLDER}}'
 - '{{PLACEHOLDER}}'
 ms.assetid: 2429993A-3F0E-41C5-9562-FEA6AE994440
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 0584673880a56bbde0ef44ad14c24acca252c5a2
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 8a16be51c603befac88f1576a2cd42fed5b75d3c
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307485"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627075"
 ---
 # <a name="disable-or-move-the-package-cache"></a>Paket önbelleğini devre dışı bırakma veya taşıma
 
-Paket önbelleği, Internet bağlantınızın olmadığı durumlarda Visual Studio 'Yu veya diğer ilgili ürünleri onarmanız gerektiğinde yüklü paketlerin bir kaynağını sağlar. Ancak bazı sürücülerle veya sistem kümesiyle birlikte, tüm bu paketlerin etrafında tutulması istemeyebilirsiniz.
-Yükleyici, gerektiğinde bunları indirir, bu nedenle disk alanını kaydetmek veya kurtarmak istiyorsanız, paket önbelleğini devre dışı bırakabilir veya taşıyabilirsiniz.
+Paket önbelleği, İnternet bağlantınız olmadığınız durumlarda bir Visual Studio veya diğer ilgili ürünleri onarmanız gereksin diye yüklü paketlerin kaynağını sağlar. Ancak bazı sürücüler veya sistem ayarlamaları ile bu paketlerin hepsini tutmak istemeyebilirsiniz.
+Yükleyici gerektiğinde bunları indirir, bu nedenle disk alanını kaydetmek veya kurtarmak için paket önbelleğini devre dışı indirebilirsiniz veya taşıyabilirsiniz.
 
-## <a name="disable-the-package-cache"></a>Paket önbelleğini devre dışı bırak
+## <a name="disable-the-package-cache"></a>Paket önbelleğini devre dışı bırakma
 
-Yeni yükleyiciyle Visual Studio 'Yu veya diğer ürünleri yüklemeden, değiştirmeden veya onarmadan önce, yükleyiciyi `--nocache` yükleyiciye geçiş ile başlatabilirsiniz.
+Yükleme, değiştirme veya Visual Studio veya diğer ürünleri yeni yükleyiciyle onarmadan önce yükleyiciyi yükleyiciye geçiş `--nocache` ile başlatabilirsiniz.
 
 ```shell
 "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vs_installer.exe" --nocache
 ```
 
-Herhangi bir üründe yaptığınız herhangi bir işlem, söz konusu ürüne ait mevcut paketleri kaldırır ve yüklendikten sonra herhangi bir paketi kaydetmekten kaçınır. Visual Studio 'Yu değiştirir veya onarır ve paketler gerekliyse, bunlar otomatik olarak indirilir ve yüklendikten sonra kaldırılır.
+Herhangi bir üründe yapılan tüm işlem, bu ürün için mevcut paketleri kaldırır ve yüklendikten sonra paketlerden tasarruf etmekten kaçınacak. Gerekli olan tüm Visual Studio ve paketleri değiştirir veya onarsanız, bunlar yüklendikten sonra otomatik olarak indirilir ve kaldırılır.
 
-Önbelleği yeniden etkinleştirmek istiyorsanız, `--cache` bunun yerine geçiş yapın. Yalnızca gerekli paketler önbelleğe alınır, bu nedenle tüm paketleri geri yüklemeniz gerekiyorsa, ağınızdan bağlantıyı kesmeden önce Visual Studio 'Yu onarmanız gerekir.
+Önbelleği yeniden etkinleştirmek için bunun yerine `--cache` geçişlerini kullanın. Yalnızca gerekli olan paketler önbelleğe alınacak, bu nedenle tüm paketleri geri yüklemeniz gerekirse ağ bağlantısını Visual Studio önce bu paketleri onarmanız gerekir.
 
 ```shell
 "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vs_installer.exe" repair --passive --norestart --cache
 ```
 
-Ayrıca, `KeepDownloadedPayloads` Visual Studio 'yu yüklemeden, değiştirmeden veya onarmadan önce önbelleğin devre dışı bırakılması için [kayıt defteri ilkesini](set-defaults-for-enterprise-deployments.md) ayarlayabilirsiniz.
+Ayrıca kayıt defteri ilkesi' `KeepDownloadedPayloads` [ni, verileri yüklemeden,](set-defaults-for-enterprise-deployments.md) değiştirmeden veya onarmadan önce önbelleği devre dışı Visual Studio.
 
 ## <a name="move-the-package-cache"></a>Paket önbelleğini taşıma
 
-Ortak sistem yapılandırması, Windows 'un kaynak kodu, program ikilileri ve daha fazlası gibi geliştirme ihtiyaçları için daha büyük bir sabit disk (veya daha fazla) ile bir SSD üzerinde yüklü olmasını sağlar. Çevrimdışı çalışmak istiyorsanız bunun yerine paket önbelleğini taşıyabilirsiniz.
+Yaygın bir sistem yapılandırması, Windows, program ikili dosyaları ve daha fazlası gibi geliştirme ihtiyaçları için daha büyük bir sabit diske (veya daha fazla) sahip bir SSD'ye yüklenmiş bir diske sahip olmaktır. Çevrimdışı çalışmak istiyorsanız, bunun yerine paket önbelleğini taşıyabilirsiniz.
 
-Şu anda bunu, `CachePath` Visual Studio 'yu yüklemeden, değiştirmeden veya onarmadan önce [kayıt defteri ilkesini](set-defaults-for-enterprise-deployments.md) ayarlarsanız yapabilirsiniz.
+Şu anda bunu yalnızca kayıt defteri ilkenizi yüklemeden, değiştirmeden veya onarmadan önce `CachePath` [](set-defaults-for-enterprise-deployments.md) Visual Studio.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio'yu yükleme](install-visual-studio.md)
-* [Kurumsal dağıtımlar için Varsayılanları Ayarla](set-defaults-for-enterprise-deployments.md)
+* [Kurumsal dağıtımlar için varsayılanları ayarlama](set-defaults-for-enterprise-deployments.md)
 * [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)

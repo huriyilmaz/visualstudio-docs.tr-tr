@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 686209a07caaf06ec39bb3c3e4f2c9688e6cb392
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122104449"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627627"
 ---
 # <a name="idebugaliasgetobject"></a>IDebugAlias::GetObject
 Bu diğer adın için olduğu nesneyi alır.

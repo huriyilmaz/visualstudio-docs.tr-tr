@@ -1,6 +1,6 @@
 ---
 title: -SafeMode (devenv.exe)
-description: SafeMode devenv komut satırı anahtarını kullanarak güvenli modda Visual Studio ortamı ve hizmetleri yükleme hakkında bilgi edinebilirsiniz.
+description: SafeMode devenv komut satırı anahtarını kullanarak yalnızca varsayılan ortamı ve Visual Studio modunda başlatmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -16,11 +16,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: abc61c4a92bfab394fab783196ff2ca9fab831d4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122056179"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627135"
 ---
 # <a name="safemode-devenvexe"></a>/SafeMode (devenv.exe)
 

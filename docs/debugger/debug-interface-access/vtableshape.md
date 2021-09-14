@@ -16,11 +16,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: c29ae9f4922e6d2f4c3a110c6b4220d9a24088b4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122090975"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626582"
 ---
 # <a name="vtableshape"></a>VTableShape
 [Vtable](../../debugger/debug-interface-access/vtable.md) sembolü, etiketiyle tanımlanan bir sınıf alt simgesine sahiptir `SymTagVTableShape` .

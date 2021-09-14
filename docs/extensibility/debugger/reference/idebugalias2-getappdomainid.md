@@ -1,6 +1,6 @@
 ---
-description: Uygulama etki alanının tanımlayıcısını alın.
-title: IDebugAlias2::GetAppDomainId | Microsoft Docs
+description: Uygulama etki alanı için tanımlayıcıyı alır.
+title: 'IDebugAlias2:: Getappdomainıd | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 20be3f4abaa53dd6d65770142935003db7b211ab
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122111742"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627621"
 ---
 # <a name="idebugalias2getappdomainid"></a>IDebugAlias2::GetAppDomainId
-Uygulama etki alanının tanımlayıcısını alın.
+Uygulama etki alanı için tanımlayıcıyı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,13 +42,13 @@ int GetAppDomainId (
 
 ## <a name="parameters"></a>Parametreler
 `pappDomainId`\
-[out] Uygulama etki alanı tanımlayıcısını döndürür.
+dışı Uygulama etki alanı tanımlayıcısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Uygulama etki alanı tanımlayıcısı, uygulama yeniden başlatıldığında ve yeni bir uygulama etki alanı oluşturulduğunda değişir.
+ Uygulama etki alanı tanımlayıcısı, uygulama her yeniden başlatıldığında ve yeni bir uygulama etki alanı oluşturulduğunda değişir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugAlias2](../../../extensibility/debugger/reference/idebugalias2.md)

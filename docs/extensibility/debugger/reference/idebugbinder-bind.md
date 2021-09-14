@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, simgenin geçerli değerini içeren bellek bağlamını veya nesnesini alır.
-title: 'Idebugciltçi:: bind | Microsoft Docs'
+description: Bu yöntem, sembolün geçerli değerini içeren bellek bağlamını veya nesnesini alır.
+title: IDebugBinder::Bind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: de3cbb35245fad317014136177a4a410edfb25b5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122104397"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627507"
 ---
 # <a name="idebugbinderbind"></a>IDebugBinder::Bind
-Bu yöntem, simgenin geçerli değerini içeren bellek bağlamını veya nesnesini alır.
+Bu yöntem, sembolün geçerli değerini içeren bellek bağlamını veya nesnesini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,16 +47,16 @@ int Bind(
 
 ## <a name="parameters"></a>Parametreler
 `pContainer`\
-'ndaki Tarafından başvurulan alt öğe içeren [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) `pField` .
+[in] tarafından başvurulan alt adı içeren [IDebugObject.](../../../extensibility/debugger/reference/idebugobject.md) `pField`
 
 `pField`\
-'ndaki Simgeyi temsil eden [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) .
+[in] Sembolünü [temsil eden IDebugField.](../../../extensibility/debugger/reference/idebugfield.md)
 
 `ppObject`\
-dışı `IDebugObject` Simgenin örneğini temsil eden öğesini döndürür.
+[out] Sembol `IDebugObject` örneğini temsil eden döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)

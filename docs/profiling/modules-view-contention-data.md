@@ -1,6 +1,6 @@
 ---
-title: Modüller görünümü-çekişme verileri | Microsoft Docs
-description: Çakışma verilerinin modüller görünümünün, profil oluşturma verilerinde örneklendiği modüller tarafından gruplanmış eşzamanlılık verilerini nasıl görüntülediğini öğrenin.
+title: Modüller Görünümü - Contention Data | Microsoft Docs
+description: İçerik verisinin Modüller görünümünün, profil oluşturma verisinde örnek alınan modüllere göre gruplamalı eşzamanlılık verilerini nasıl görüntüley olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,41 +14,41 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 556e7becfd87cd9ffd9a47737cee1330d93413b9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122076418"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626877"
 ---
-# <a name="modules-view---contention-data"></a>Modüller görünümü-çakışma verileri
-Çekişme verilerinin Modüller görünümü, profil oluşturma verilerinde örneklendiği modüller tarafından gruplanmış eşzamanlılık verilerini görüntüler. Her modül hiyerarşik bir ağacın köküdür. Çekişme olaylarının oluştuğu modülün işlevleri modül düğümünün altında listelenir.
+# <a name="modules-view---contention-data"></a>Modüller Görünümü - karşıtlık verileri
+Şüpheli verilerin Modüller görünümü, profil oluşturma verisinde örnek alınan modüllere göre gruplama yapan eşzamanlılık verilerini görüntüler. Her modül hiyerarşik ağacın köküdür. Ion olaylarının meydana geldiği modülün işlevleri modül düğümü altında listelenir.
 
- Bir çekişme olayı oluştuğunda işlev kendi kodunu yürütüp, diğer bir deyişle, işlev çağrı yığınının en üstünde ise, yürütülen kaynak çizgiler ve yönerge adresleri işlev düğümü altında listelenir. Satır veya yönerge yürütüldüğü zaman bir kaynak satırı veya yönerge işaretçisi için veri toplandığı için, hem satır hem de yönerge verileri için dahil ve dışlamalı değerler her zaman aynıdır.
+ İşlev, bir sorun olayı meydana geldiğinde kendi kodunu yürütüyorsa, yani işlev çağrı yığınının en üstünde yer aldı ise, yürütülen kaynak satırlar ve yönerge adresleri işlev düğümü altında listelenir. Satır veya yönerge yürütücü olduğunda bir kaynak satır veya yönerge işaretçisi için veri toplanmış olduğundan, hem satır verileri hem de yönerge verileri için kapsayıcı ve dışlamalı değerler her zaman aynıdır.
 
- Aşağıdaki tabloda, çekişme verilerinin modüller görünümündeki sütunların değerleri açıklanmaktadır.
+ Aşağıdaki tabloda, modüller görünümündeki sütunların değerleri açıkmektedir.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Dışlamalı engellenme süresi**|-Bir işlev için, bu işlevin, işlevin gövdesinde kod yürütmesini engellediği zaman. İşlev tarafından çağrılan işlevlerde engellenen süre dahil değildir.<br />-Bir modül için, modüldeki işlevlerin dışlamalı engellenme süresi toplamı.<br />-Bir çizgi veya yönerge için, bu satırın veya yönergenin yürütülmesi engellenen zaman.|
-|**Dışlamalı engellenme süresi yüzdesi**|-Bir işlev veya modül için, bu işlevin veya modülün dışlamalı engellenme süresi olan profil oluşturma çalıştırmasında tüm engellenen sürenin yüzdesi.<br />-Bir çizgi veya yönerge için, bu satır veya yönergenin yürütülmesi engellenen profil oluşturma çalıştırmasında tüm engellenen sürenin yüzdesi.|
-|**Dışlamalı çekişmeler**|-Bir işlev için, bu işlevin işlevin gövdesinde kod yürütmeyi engellediği zaman sayısı. İşlev tarafından çağrılan işlevlerde çekişmeler dahil değildir.<br />-Bir modül için, modüldeki işlevlerin dışlamalı çekişmelerinin toplamı.<br />-Bir çizgi veya yönerge için, bu satır veya yönergenin yürütülmesi için kaç kez engellediği.|
-|**Dışlamalı çekişmeler yüzdesi**|-Bir işlev veya modül için, bu işlevin veya modülün özel çekişmeleri olan profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi.<br />-Bir çizgi veya yönerge için, bu satırı veya yönergeyi yürütmeyi engelleyen çekişmeler olan, profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi.|
-|**Kapsamlı engellenme süresi**|-Bir işlev için, bu işlevin veya bu işlev tarafından çağrılan bir işlevin yürütülmesi engellendi.<br />-Bir modül için, bu modülden en az bir işlevin yığında olduğu engellenme süresinin toplamı.<br />-Bir çizgi veya yönerge için, bu satırın veya yönergenin yürütülmesi engellenen zaman.|
-|**Kapsamlı engellenme süresi%**|-Bir işlev veya modül için, bu işlevin veya modülün dahil olduğu, profil oluşturma çalıştırışında tüm engellenen sürenin yüzdesi.<br />-Bir çizgi veya yönerge için, bu satır veya yönergenin yürütüldüğü profil oluşturma çalıştırmasında tüm engellenen sürenin yüzdesi.|
-|**Kapsamlı çekişmeler**|-Bir işlev için, bu işlevin veya bu işlev tarafından çağrılan bir işlevin kaç kez yürütülenmediği.<br />-Bir modül için, bu modülden en az bir işlevin yığında olduğu çekişmelerin sayısı.<br />-Bir çizgi veya yönerge için, bu satır veya yönergenin yürütülmesi için kaç kez engellediği.|
-|**Kapsamlı çekişmeler yüzdesi**|-Bir işlev veya modül için, bu işlevin veya modülün dahil olduğu, profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi.<br />-Bir çizgi veya yönerge için, bu satır veya yönergenin yürütüldüğü profil oluşturma çalıştırmasında tüm engellenen sürenin yüzdesi.|
-|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
-|**Modül adı**|İşlevin, çizginin veya yönerge işaretçisinin bulunduğu modül adı.|
-|**Modül yolu**|Modülün, işlevin, çizginin veya yönerge işaretçisinin bulunduğu modül yolu.|
+|**Özel Engellenen Süre**|- Bir işlev için, bu işlevin işlevin gövdesinde kod yürütmesi engellenmiş olduğu zaman. İşlev tarafından çağrılan işlevlerde engellenen süre dahil değildir.<br />- Bir modül için, modülde işlevlerin engellenen zamanlarının toplamı.<br />- Bir satır veya yönerge için, bu satırın veya yönergenin yürütülmesinin engellenmiş olduğu zaman.|
+|**Özel Engellenen Saat %**|- Bir işlev veya modül için profil oluşturma çalıştırması içinde engellenen tüm sürenin yüzdesi, bu işlevin veya modülün özel olarak engellenen zamanıdır.<br />- Bir satır veya yönerge için, profil oluşturmada bu satırın veya yönergenin yürütülmesinin engellenmiş olduğu tüm engellenen sürenin yüzdesi.|
+|**Özel İçerikler**|- Bir işlev için, bu işlevin işlevin gövdesinde kod yürütmesi engellenmiş sayısı. İşlev tarafından çağrılan işlevlerde yer alan içerikler dahil değildir.<br />- Bir modül için, modülde işlevlerin özel içeriklerinin toplamı.<br />- Bir satır veya yönerge için, bu satırın veya yönergenin yürütülmesinin kaç kez engellenmiş olduğu.|
+|**Özel İçerik %**|- Bir işlev veya modül için profil oluşturma çalıştırması içinde yer alan ve bu işlevin veya modülün özel olarak ele alınan tüm içeriklerinin yüzdesi.<br />- Bir satır veya yönerge için, profil oluşturma çalıştırması içinde yer alan ve bu satırın veya yönergenin yürütülmesini engellenmiş olan tüm itirazların yüzdesi.|
+|**Kapsayıcı Engellenen Süre**|- Bir işlev için, bu işlevin veya bu işlev tarafından çağrılmış bir işlevin yürütülmesinin engellenmiş olduğu saat.<br />- Bir modül için, bu modülden en az bir işlevin yığında olduğu engellenen sürenin toplamı.<br />- Bir satır veya yönerge için, bu satırın veya yönergenin yürütülmesinin engellenmiş olduğu zaman.|
+|**Kapsayıcı Engellenen Saat %**|- Bir işlev veya modül için profil oluşturma çalıştırması içinde engellenen tüm sürenin yüzdesi, bu işlevin veya modülün kapsayıcı olarak engellenmiş zamanıdır.<br />- Bir satır veya yönerge için, profil oluşturmada bu satırın veya yönergenin yürütültt olduğu tüm engellenen sürenin yüzdesi.|
+|**Kapsayıcı İçerikler**|- Bir işlev için, bu işlevin veya bu işlev tarafından çağrılmış bir işlevin yürütülmesinin kaç kez engellenmiş olduğu.<br />- Bir modül için, bu modülden en az bir işlevin yığında olduğu irdeleme sayısı.<br />- Bir satır veya yönerge için, bu satırın veya yönergenin yürütülmesinin kaç kez engellenmiş olduğu.|
+|**Kapsayıcı İçerik %**|- Bir işlev veya modül için, profil oluşturma çalıştırması içinde yer alan ve bu işlevin veya modülün kapsayıcı itirazları olan tüm itirazların yüzdesi.<br />- Bir satır veya yönerge için, profil oluşturmada bu satırın veya yönergenin yürütültt olduğu tüm engellenen sürenin yüzdesi.|
+|**İşlev Satır Numarası**|Kaynak dosyada bu işlevin başlangıcının satır numarası.|
+|**Modül Adı**|İşlevi, satırı veya yönerge işaretçisini içeren modülün adı.|
+|**Modül Yolu**|Modül, işlev, satır veya yönerge işaretçisini içeren modülün yolu.|
 |**Ad**|Modülün veya işlevin adı.|
-|**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|
-|**İşlem adı**|Sürecin adı.|
+|**İşlem Kimliği**|Profil oluşturma çalıştırmanın işlem kimliği (PID).|
+|**İşlem Adı**|Sürecin adı.|
 |**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
+- [Nasıl: Rapor Görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
 - [Modüller Görünümü](../profiling/modules-view.md)
-- [Modüller görünümü-izleme](../profiling/modules-view-dotnet-memory-instrumentation-data.md)
-- [Modüller görünümü-örnekleme](../profiling/modules-view-dotnet-memory-sampling-data.md)
+- [Modüller Görünümü - ölçüm](../profiling/modules-view-dotnet-memory-instrumentation-data.md)
+- [Modüller Görünümü - örnekleme](../profiling/modules-view-dotnet-memory-sampling-data.md)
 - [Modüller Görünümü](../profiling/modules-view-instrumentation-data.md)
 - [Modüller Görünümü](../profiling/modules-view-sampling-data.md)

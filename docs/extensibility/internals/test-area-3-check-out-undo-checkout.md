@@ -17,14 +17,14 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 96c5940a97fc799393d7830fa5589183afe33fb0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122158794"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627320"
 ---
 # <a name="test-area-3-check-outundo-checkout"></a>Test Alanı 3: Kullanıma Alma/Kullanıma Almayı Geri Alma
-Bu kaynak denetimi eklentisi test alanı, Kullanıma Alma ve Kullanıma  Almayı Geri Alma komutları aracılığıyla sürüm mağazasındaki öğeleri düzenlemeyi ve **geri almayı** kapsar.
+Bu kaynak denetimi eklentisi test alanı, Kullanıma Alma ve Kullanıma  Almayı Geri Alma komutları aracılığıyla sürüm mağazasından öğeleri düzenlemeyi **ve geri almayı** kapsar.
 
 **Kullanıma Alın:** Sürüm mağazasındaki bir öğeyi kullanıma alınmış olarak işaretler, yerel kopyayı okuma/yazma olarak değiştiren.
 
@@ -42,7 +42,7 @@ Aşağıdaki [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümle
 
 - Kısayol menüsüne **göz atabilirsiniz.**
 
-- Kullanıma Almayı Geri Al: **Dosya,** **Kaynak Denetimi**, Kullanıma Almayı **Geri Al.**
+- Kullanıma Almayı Geri Alma: **Dosya,** **Kaynak Denetimi**, Kullanıma Almayı **Geri Alma.**
 
 ## <a name="common-expected-behavior"></a>Ortak Beklenen Davranış
 
@@ -56,20 +56,20 @@ Aşağıdaki [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümle
 
 Kullanıma Alma/Kullanıma Almayı Geri Alma test alanı için belirli test testleri aşağıda ve listelemektedir.
 
-### <a name="case-3a-check-out"></a>Olay 3a: Göz At
+### <a name="case-3a-check-out"></a>Durum 3a: Göz at
 
 Bu bölüm, check-out komutunun çalışmasına odaklanır.
 
 |Eylem|Test Adımları|Doğrulandı Beklenen Sonuçlar|
 |------------|----------------|--------------------------------|
 |İstemci projesini özel (COE) göz at|1. İstemci projesi oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Yalnızca projenin tamamına göz at (**Dosya**, **Check Out**).|Check-out gerçekleşir.|
-|Özel (COE) Bir Dosya Sistemini veya yerel IIS Web projesini göz at|1. Araçlar, **Seçenekler,** **Projeler,** Web Siteleri içinde Dosya **Paylaşımına** Web Sunucusu **Bağlantısını Ayarlar.**<br />2. Web projesi oluşturma.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Yalnızca projenin tamamına göz at (**Dosya,** **Kaynak Denetimi**, **Check Out**).|Check-out gerçekleşir.|
+|Özel (COE) Bir Dosya Sistemini veya yerel IIS Web projesini göz at|1. Araçlar, **Seçenekler,** **Projeler,** Web sitesi ve içinde Dosya **Paylaşımına** Web Sunucusu Bağlantısını **Ayarlar.**<br />2. Web projesi oluşturma.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Yalnızca projenin tamamına göz at (**Dosya,** **Kaynak Denetimi**, **Check Out**).|Check-out gerçekleşir.|
 |Çözümdeki çözüm öğelerini (diğer dosyaları işlemeye yeni yöntem) göz at|1. Boş bir çözüm oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Çözümü kontrol edin.<br />4. Birkaç çözüm öğeleri ekleyin.<br />5. Yeni eklenen tüm öğeleri kontrol edin.<br />6. Birden çok çözüm öğesini seçin.<br />7. Seçili öğeleri (Kısayol Menüsü, Bkz. **) kontrol edin.**|Seçilen dosyalar kullanıma alınmış.|
 |Yerel Sürüm'e Göz At (test altındaki eklenti bu özelliği destekliyorsa)|1. Kullanıcı 1: İstemci projesi oluşturun.<br />2. Kullanıcı 1: Çözümü kaynak denetimine ekleyin.<br />3. Kullanıcı 2: Çözümü kaynak denetiminden başka bir konuma açın.<br />4. Kullanıcı 2: Bir dosyayı kontrol edin.<br />5. Kullanıcı 2: Dosyayı değiştirme.<br />6. Kullanıcı 2: Dosyayı iade edin.<br />7. Kullanıcı 1: Dosyanın yerel sürümünü  kontrol edin (Satın Alma iletişim kutusunda Yerel Sürümün gelişmiş sürümünü satın **alma seçeneğini** işaretleyin).|Dosyanın yerel sürümü kullanıma alınmış.<br /><br /> Kullanıcı 2'ye göre değişiklikler Kullanıcı 1 dosyasına uygulanmaz.|
 
 ### <a name="case-3b-disconnected-check-out"></a>Olay 3b: Bağlantısı Kesildi
 
-Bağlantısız modda çalışma, doğrudan bir sürüm deposuna bağlı olmayan kullanıcılara bir düzeyde devam eden kaynak denetimi desteği sağlar. Bu, listede yer alan çözüm ve projeler hakkında tüm ilgili bilgileri yerel olarak önbelleğe alma ile yapılır.
+Bağlantısız modda çalışma, doğrudan bir sürüm deposuna bağlı olmayan kullanıcılara bir düzeyde devam eden kaynak denetimi desteği sağlar. Bu, yerel olarak önbelleğe alınan çözüm ve projeler hakkında tüm ilgili bilgileri önbelleğe alma ile yapılır.
 
 Özel denetim işlemleri yalnızca kaynak denetim deposuna bağlıyken oluşabilir. Paylaşılan iade işlemleri, bağlı veya bağlantısı kesilmiş olarak herhangi bir zamanda oluşabilir. Bu nedenle, sürüm deposu bağlantısı kesildiğinde yalnızca **Paylaşılan Check Out** (COS) komutu etkinleştirilir. Bağlantısı kesilmiş **durumdayken, kullanıcı tarafından** yapılan değişiklikleri değiştirmek için eski sürüm alınamay olduğundan Kullanıma Almayı Geri Al devre dışı bırakılmıştır.
 
@@ -85,16 +85,16 @@ Kullanıcı sürüm deposuna yeniden bağlandığında, listede yer alan tüm ç
 
 |Eylem|Test Adımları|Doğrulandı Beklenen Sonuçlar|
 |------------|----------------|--------------------------------|
-|Bağlantısı kesilmiş durumdayken bir dosyayı kontrol edin ve eşitleme için bağlanabilirsiniz|1. Kaynak Denetimi Değiştir iletişim kutusunu (Dosya, Kaynak Denetimi,**Kaynak** Denetimi Değiştir) kullanarak **denetlenen** **bir projenin bağlantısını kesin.**<br />2. Bir dosyayı kontrol edin.<br />3. Uyarı iletişim kutusunda Check Out (bağlantısı kesildi) seçeneğine tıklayın.<br />4. Dosyayı düzenleyin.<br />5. Bağlan Denetimi Değiştir iletişim kutusunu kullanın.<br />6. Düzenlenen dosyanın En Son Sürümünü al.|Ortak Beklenen Davranış|
+|Bağlantısı kesilmiş durumdayken bir dosyayı kontrol edin ve eşitleme için bağlanabilirsiniz|1. Kaynak Denetimi Değiştir iletişim kutusunu (Dosya, Kaynak Denetimi,**Kaynak** Denetimi Değiştir) kullanarak **denetlenen** **bir projenin bağlantısını kesin.**<br />2. Bir dosyayı kontrol edin.<br />3. Uyarı iletişim kutusunda Check Out (bağlantısı kesildi) seçeneğine tıklayın.<br />4. Dosyayı düzenleyin.<br />5. Bağlan Değiştir iletişim kutusunu kullanın.<br />6. Düzenlenen dosyanın En Son Sürümünü al.|Ortak Beklenen Davranış|
 
 ### <a name="case-3c-query-editquery-save-qeqs"></a>Durum 3c: Sorgu Düzenleme/Sorgu Kaydetme (QEQS)
- Kaynak denetimi altındaki öğeler, kullanıcıların dosyalarını kolayca yönetmelerine yardımcı olmak için düzenlemeler, değişiklikler ve tasarruflar için izlenemez. Denetlenen "iade edilen" bir öğe düzenlendiğinde QEQS, denenen düzenleme girişimini kesir ve kullanıcıdan dosyayı düzenlemek için kullanıma almak istediğini sorar. Araçlar , **Seçenekler ayarlarına** bağlı olarak, kullanıcı düzenlemek için dosyayı denetlemeye zorlar veya bellekte bir kopyayı düzenleyemez ve daha sonra göz atma iznine sahip olabilir.  Kullanıcının Araçlar **,** Seçenekler  ayarı, kullanımdan çıkma iletişim kutusunu görüntülemek ve yalnızca bunu kontrol etmek için ayarlanmazsa, kullanıcı düzenlemesini yaptığı anda dosya mümkün olduğunca otomatik olarak kontrol edilir.
+ Kaynak denetimi altındaki öğeler, kullanıcıların dosyalarını kolayca yönetmelerine yardımcı olmak için düzenlemeler, değişiklikler ve tasarruflar için izlenemez. Denetlenen "iade edilen" bir öğe düzenlendiğinde QEQS, denenen düzenleme girişimine müdahale ediyor ve kullanıcıdan dosyayı düzenlemek için kullanıma almak istediğini sorar. Araçlar , **Seçenekler ayarlarına** bağlı olarak, kullanıcı düzenlemek için dosyayı denetlemeye zorlar veya bellekte bir kopyayı düzenleyemez ve daha sonra göz atma iznine sahip olabilir.  Kullanıcının Araçlar **,** Seçenekler  ayarı, kullanımdan çıkma iletişim kutusunu görüntülemek ve yalnızca bunu kontrol etmek için ayarlanmazsa, kullanıcı düzenlemesini yaptığı anda dosya mümkün olduğunca otomatik olarak kontrol edilir.
 
 #### <a name="expected-behavior"></a>Beklenen Davranış
 
 - Kullanıma alındıktan sonra hedef dosyalar ve/veya klasörler sürüm depolamada kullanıma alınmış olarak işaretlenir.
 
-- Sürüm deposu, denetimi doğru kullanıcıya öznitelik olarak sağlar.
+- Sürüm deposu, iadeyi doğru kullanıcıya öznitelik olarak sağlar.
 
 - Teslim tarihi ve saati doğru (kullanıcının ayarlarına göre).
 
@@ -113,16 +113,16 @@ Kullanıcı sürüm deposuna yeniden bağlandığında, listede yer alan tüm ç
 
 - Kullanıma alındıktan sonra hedef dosyalar ve/veya klasörler sürüm depolamada kullanıma alınmış olarak işaretlenir.
 
-- Sürüm deposu, denetimi doğru kullanıcıya öznitelik olarak sağlar.
+- Sürüm deposu, iadeyi doğru kullanıcıya öznitelik olarak sağlar.
 
-- Onay tarihi ve saati doğru (kullanıcının ayarlarına göre).
+- Denetimin saati ve tarihi doğru (kullanıcının ayarlarına göre).
 
 - Hedef dosyanın veya klasörün yerel kopyası yazılabilir.
 
 |Eylem|Test Adımları|Doğrulandı Beklenen Sonuçlar|
 |------------|----------------|--------------------------------|
-|Dosya için sessiz iade|1. Düzenleme **sırasında dosyaları otomatik** **olarak** kontrol etmek **için Araçlar,** **Seçenekler, Kaynak Denetimi'ne ayarlayın.**<br />2. Dosya ile yeni bir proje oluşturun.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Dosyayı kontrol edin.|Dosya sessiz bir şekilde kullanıma alınmış (kullanıcı arabirimi yok).|
-|Proje için sessiz iade|1. Düzenleme **sırasında dosyaları otomatik** **olarak** kontrol etmek **için Araçlar,** **Seçenekler, Kaynak Denetimi'ne ayarlayın.**<br />2. Yeni bir proje oluşturun.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Projeyi kontrol edin.|Dosya sessiz bir şekilde kullanıma alınmış (kullanıcı arabirimi yok).|
+|Dosya için sessiz iade|1. Düzenleme **sırasında dosyaları otomatik** **olarak** kontrol **etmek için** **Araçlar, Seçenekler, Kaynak Denetimi'ne ayarlayın.**<br />2. Dosya ile yeni bir proje oluşturun.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Dosyayı kontrol edin.|Dosya sessiz bir şekilde kullanıma alınmış (kullanıcı arabirimi yok).|
+|Proje için sessiz iade|1. Düzenleme **sırasında dosyaları otomatik** **olarak** kontrol **etmek için** **Araçlar, Seçenekler, Kaynak Denetimi'ne ayarlayın.**<br />2. Yeni bir proje oluşturun.<br />3. Çözümü kaynak denetimine ekleyin.<br />4. Projeyi kontrol edin.|Dosya sessiz bir şekilde kullanıma alınmış (kullanıcı arabirimi yok).|
 
 ### <a name="case-3e-undo-check-out"></a>Durum 3e: Kullanıma Almayı Geri Alma
  **Kullanıma Almayı Geri** Al, bir dosyanın kullanıma alınmış durumunu iptal etmek ve dosyada yapılan değişikliklerin iadesini önlemek için kullanılır.
@@ -131,13 +131,13 @@ Kullanıcı sürüm deposuna yeniden bağlandığında, listede yer alan tüm ç
 
 - Varsayılan değer, kullanıcının Yerel Sürüme **Göz At ayarına göredir.** Kullanıcı yerel sürümü kullanıma almayı seçtiyseniz, kullanıma alma işlemini geri almak için varsayılan ayar her zaman kullanıma alınmış sürüme geri dönmektir.
 
-- Geri alma işleminin kabulü  Çözüm Gezgini, etkilenen dosyalar için güncelleştirilmiş olur ve öğe **Bekleyen Iadeler penceresinden** kaldırılır.
+- Geri alma işleminin kabulü **Çözüm Gezgini,** etkilenen dosyalar için güncelleştirilir ve öğe Bekleyen Iadeler **penceresinden** kaldırılır.
 
 |Eylem|Test Adımları|Doğrulandı Beklenen Sonuçlar|
 |------------|----------------|--------------------------------|
-|Yalnızca kullanıma alınmış tek bir dosyanın Kullanıma Almayı Geri Alma|1. İstemci projesi oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Bir dosyayı özel olarak kontrol edin.<br />4. Dosyayı değiştirme.<br />5. Kullanıma Almayı Geri Al (**Dosya,** **Kaynak Denetimi**, Kullanıma Almayı **Geri Al**).|Ortak Beklenen Davranış.|
-|Paylaşılan kullanıma alınmış tek bir dosyanın kullanıma almayı geri alma|1. İstemci projesi oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Paylaşılan bir dosyayı kontrol edin.<br />4. Dosyayı değiştirme.<br />5. Kullanıma Almayı Geri Al (**Dosya,** **Kaynak Denetimi**, Kullanıma Almayı **Geri Al**).|Ortak Beklenen Davranış.|
-|Projeye dosya ekledikten sonra projenin kullanıma almayı geri alma|1. Yeni bir proje oluşturun ve bunu kaynak denetimine ekleyin.<br />2. Projeyi kontrol edin.<br />3. Projeye bir dosya ekleyin.<br />4. Projenin Kullanıma Almayı Geri Alma.|Eklenen dosya, projeden Çözüm Gezgini.<br /><br /> Project artık kullanıma alınmış değil.|
+|Yalnızca kullanıma alınmış tek bir dosyanın Kullanıma Almayı Geri Alma|1. İstemci projesi oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Bir dosyayı özel olarak kontrol edin.<br />4. Dosyayı değiştirme.<br />5. Kullanıma Almayı Geri Al (**Dosya**, **Kaynak Denetimi**, Kullanıma Almayı **Geri Al**).|Ortak Beklenen Davranış.|
+|Paylaşılan kullanıma alınmış tek bir dosyanın kullanıma almayı geri alma|1. İstemci projesi oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Paylaşılan bir dosyayı kontrol edin.<br />4. Dosyayı değiştirme.<br />5. Kullanıma Almayı Geri Al (**Dosya**, **Kaynak Denetimi**, Kullanıma Almayı **Geri Al**).|Ortak Beklenen Davranış.|
+|Projeye dosya ekledikten sonra projenin kullanıma almayı geri alma|1. Yeni bir proje oluşturun ve bunu kaynak denetimine ekleyin.<br />2. Projeyi kontrol edin.<br />3. Projeye bir dosya ekleyin.<br />4. Projenin Kullanıma Almayı Geri Alma.|Eklenen dosya, dosyanın içinde projeden Çözüm Gezgini.<br /><br /> Project artık kullanıma alınmış değil.|
 |Projeden dosya sildikten sonra projenin kullanıma almayı geri alma|1. Yeni bir proje oluşturun ve bunu kaynak denetimine ekleyin.<br />2. Projeyi kontrol edin.<br />3. Projeden bir dosyayı silin.<br />4. Projenin Kullanıma Almayı Geri Alma.|Silinen dosya, proje altında Çözüm Gezgini.<br /><br /> Project artık kullanıma alınmış değil.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

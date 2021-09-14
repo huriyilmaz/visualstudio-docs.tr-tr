@@ -1,6 +1,6 @@
 ---
-description: Marker_series sınıfının yeni bir örneğini başlatır.
-title: 'marker_series:: marker_series Oluşturucu | Microsoft Docs'
+description: marker_series sınıfının yeni marker_series başlatılır.
+title: marker_series::marker_series Oluşturucu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,13 +15,13 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 16e766bc5c22cc6c9efb257c22326a4addf4bf0f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122076470"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626913"
 ---
-# <a name="marker_seriesmarker_series-constructor"></a>marker_series:: marker_series Oluşturucusu
+# <a name="marker_seriesmarker_series-constructor"></a>marker_series::marker_series oluşturucusu
 `marker_series` sınıfının yeni bir örneğini başlatır.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -43,12 +43,12 @@ marker_series(
 #### <a name="parameters"></a>Parametreler
  `_SeriesName` Oluşturulacak serinin adı.
 
- `_ProviderGuid` Seri sağlayıcının GUID 'SI.
+ `_ProviderGuid` Seri sağlayıcısının GUID'si.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvmarkersobj. h*
+ **Üst bilgi:** *cvmarkersobj.h*
 
- **Ad alanı:** Eşzamanlılık::d ıagstik
+ **Ad alanı:** Concurrency::d iagnostic
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [marker_series sınıfı](../profiling/marker-series-class.md)

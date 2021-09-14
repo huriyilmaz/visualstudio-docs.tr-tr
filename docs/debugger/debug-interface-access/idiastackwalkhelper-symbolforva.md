@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 8b7696e5a7982c68f1520534d41473ccc3b89d68
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074551"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626793"
 ---
 # <a name="idiastackwalkhelpersymbolforva"></a>IDiaStackWalkHelper::symbolForVA
 Belirtilen sanal adresi içeren simgeyi alın.
@@ -36,7 +36,7 @@ HRESULT symbolForVA(
 #### <a name="parameters"></a>Parametreler
  `va`
 
-[in] İstenen sembolde yer alan sanal adres. Sembol bir `SymTagFunctionType` [(SymTagEnum Numaralama numaralama değerinden bir](../../debugger/debug-interface-access/symtagenum.md) değer) olması gerekir.
+[in] İstenen sembolde yer alan sanal adres. Sembol bir `SymTagFunctionType` [(SymTagEnum Enum Numaralama enumerasyonundan bir](../../debugger/debug-interface-access/symtagenum.md) değer) olması gerekir.
 
  `ppSymbol`
 

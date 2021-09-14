@@ -13,11 +13,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 89597f27ee15014a8c2a5d7a999de297a3228a4e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081120"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626697"
 ---
 # <a name="idiasymbolget_stride"></a>IDiaSymbol::get_stride
 Matrisin ilerini alır veya bir dizi harcar.

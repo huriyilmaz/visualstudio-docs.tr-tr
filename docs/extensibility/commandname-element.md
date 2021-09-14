@@ -1,6 +1,6 @@
 ---
-title: CommandName öğesi | Microsoft Docs
-description: CommandName öğesi, Seçenekler iletişim kutusundaki klavye kategorisinde ve Özelleştir iletişim kutusundaki Komutlar listesinde görüntülenen metni belirtir.
+title: CommandName Öğesi | Microsoft Docs
+description: CommandName öğesi, Seçenekler iletişim kutusunda ve Özelleştir iletişim kutusundaki Komutlar listesinde klavye kategorisinde görünen metni belirtir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: c76a96c86a9c6e83ca6b787286ce22ed881161bb
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122058091"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627728"
 ---
 # <a name="commandname-element"></a>CommandName öğesi
-`CommandName`Öğesi, **Seçenekler** iletişim kutusundaki klavye kategorisinde ve **Özelleştir** iletişim kutusundaki **Komutlar** listesinde görüntülenen metni belirtir.
+öğesi, Seçenekler iletişim kutusundaki klavye kategorisinde ve Özelleştir `CommandName` iletişim kutusundaki **Komutlar** listesinde görüntülenen  **metni** belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ ms.locfileid: "122058091"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Dizeler öğesi](../extensibility/strings-element.md)|Ve gibi metin öğelerini gruplandırır `ButtonText` `CommandName` .|
+|[Strings öğesi](../extensibility/strings-element.md)|ve gibi metin öğelerini `ButtonText` `CommandName` gruplar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [komut tablosu (. vsct) dosyaları Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

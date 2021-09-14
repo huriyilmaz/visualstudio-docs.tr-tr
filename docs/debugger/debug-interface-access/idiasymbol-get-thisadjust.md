@@ -1,6 +1,6 @@
 ---
-description: Yöntemi için bu ayarlancı 'yi alır.
-title: 'IDiaSymbol:: get_thisAdjust | Microsoft Docs'
+description: yöntemi için bu ayara göre mantıksal değer alınır.
+title: IDiaSymbol::get_thisAdjust | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 7b4f166f936bef12c183eb7064d10f1c1d6217e1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122036066"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626636"
 ---
 # <a name="idiasymbolget_thisadjust"></a>IDiaSymbol::get_thisAdjust
-`this`Yöntemi için mantıksal ayarlanıcısı alır.
+yöntemi için `this` mantıksal ayarıcıyı alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,16 +35,16 @@ HRESULT get_thisAdjust (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `this` Yöntemi için mantıksal ayarlanıcısı döndürür.
+[out] yöntemi için `this` mantıksal ayar döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bazı çoklu devralma durumlarında yöntemin kendisi `this` için bir konum ekleyerek doğru bir değeri hesaplaması gerekir `this` .
+ Bazı birden çok devralma durumda yönteminin kendisine bir uzaklık ekleyerek `this` gerçek bir değer hesaplaması `this` gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

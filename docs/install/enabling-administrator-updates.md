@@ -1,100 +1,100 @@
 ---
-title: Microsoft uç noktası ile Visual Studio için yönetici güncelleştirmelerini etkinleştirme Configuration Manager
+title: Microsoft Endpoint Configuration Manager ile Visual Studio güncelleştirmelerini etkinleştirme
 titleSuffix: ''
-description: Yönetici güncelleştirmelerini Visual Studio 'ya dağıtma hakkında daha fazla bilgi edinin.
+description: Yöneticilere yönetici güncelleştirmeleri dağıtma hakkında daha fazla Visual Studio.
 ms.date: 04/06/2021
 ms.custom: ''
 ms.topic: overview
 ms.assetid: 546fbad6-f12b-49cf-bccc-f2e63e051a18
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: affb5a0c78c1ad1e230c571485385d9f55fc2bec
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: f3cfe29c9c8c912e7a88f08b04235de1d390f8e6
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307459"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627074"
 ---
-# <a name="enabling-administrator-updates-to-visual-studio-with-microsoft-endpoint-configuration-manager"></a>Microsoft uç noktası ile Visual Studio için yönetici güncelleştirmelerini etkinleştirme Configuration Manager
+# <a name="enabling-administrator-updates-to-visual-studio-with-microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager ile Visual Studio güncelleştirmelerini etkinleştirme
 
-Microsoft uç nokta Configuration Manager (SCCM), yazılım güncelleştirme yönetimi iş akışını kullanarak Visual Studio 2017 ve Visual Studio 2019 yönetici güncelleştirmelerini yönetebilir.
+Microsoft Endpoint Configuration Manager (SCCM), Visual Studio 2017 ve Visual Studio 2019 yönetici güncelleştirmelerini Yazılım Güncelleştirmesi yönetim iş akışını kullanarak yönetebilir.
 
 > [!NOTE]
-> Belge basitliği için aşağıdaki içerik, toplu olarak "Visual Studio" olarak Visual Studio 2017, Visual Studio 2019 ve Visual Studio 2022 ürünlerine başvuracaktır.
+> Belge basitliği için, aşağıdaki içerik topluca "Visual Studio 2017, Visual Studio 2019 ve Visual Studio 2022 ürünleri" olarak Visual Studio.
 
-Microsoft, Content Delivery Network (CDN) için yeni bir Visual Studio Güncelleştirmesi yayımladığında, Microsoft aynı anda ilgili yönetici güncelleştirme paketini Microsoft Update sunucularına yayımlayacaktır. Böylece, bir yöneticinin Visual Studio güncelleştirmesini [Microsoft Update katalogu](https://www.catalog.update.microsoft.com/Home.aspx) (MUC) veya [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) (WSUS) aracılığıyla dağıtması etkinleştirilir. Configuration Manager, Visual Studio Yönetici güncelleştirmelerini WSUS kataloğundan site sunucusuna eşitlenmek üzere ayarlanabilir ve sonra, güncelleştirmeyi indirebilir ve kuruluştaki Visual Studio istemci makinelerine dağıtabilir. Visual Studio 'nun her sürümünde hangi düzeltmelerin bulunduğu hakkında daha fazla bilgi için [sürüm notlarına](/visualstudio/releases/2019/release-notes)bakın.
+Microsoft, yeni bir Visual Studio güncelleştirmesini Content Delivery Network (CDN), Microsoft ilgili yönetici güncelleştirme paketini aynı anda Microsoft Update yayımlar. Bu, yöneticinin güncelleştirme güncelleştirmesini Visual Studio Kataloğu (MUC) [veya Microsoft Update](https://www.catalog.update.microsoft.com/Home.aspx) Sunucu Güncelleştirme Hizmetleri (WSUS) [Windows dağıtması](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) için etkinleştirir. Yapılandırma Yöneticisi, WSUS kataloğundan Visual Studio yönetici güncelleştirmelerini site sunucusuna eşitlemek için ayarlanır ve ardından güncelleştirmeyi indirip kuruluş genelindeki Visual Studio makinelere dağıtabilirsiniz. Her sürümde hangi düzeltmelerin mevcut olduğu hakkında daha fazla bilgi Visual Studio sürüm [notlarına bakın.](/visualstudio/releases/2019/release-notes)
 
-Configuration Manager aracılığıyla Visual Studio Yönetici güncelleştirmelerini dağıtmak için, bu iki ilk hazırlama adımını gerçekleştirmeniz gerekir:
-1. Visual Studio Yönetici güncelleştirme bildirimlerini almak için Configuration Manager etkinleştirin. 
-2. Configuration Manager 'den Visual Studio Yönetici güncelleştirmelerini almak için istemci makinelerini etkinleştirin (veya devre dışı bırakın).
+Yönetici güncelleştirmelerini Visual Studio dağıtmak Yapılandırma Yöneticisi için şu iki başlangıç hazırlık adımını atılması gerekir:
+1. Yönetici Yapılandırma Yöneticisi bildirimlerini Visual Studio için yöneticiyi etkinleştirin. 
+2. İstemci makinelerinden yönetici güncelleştirmelerini almak için istemci Visual Studio etkinleştirin (veya devre dışı Yapılandırma Yöneticisi.
 
-Bu adımları gerçekleştirdikten sonra, Visual Studio Yönetici güncelleştirmelerini dağıtmak için Configuration Manager yazılım güncelleştirme yönetimi özelliklerini kullanabilirsiniz. Visual Studio yönetici güncelleştirmelerinin farklı türleri ve özellikleri, kuruluşunuzun tamamında nasıl ve ne zaman dağıtılmaları gerektiği hakkında rehberlik sağlayan [yönetici güncelleştirmelerini uygulama](../install/applying-administrator-updates.md)bölümünde açıklanmaktadır. Configuration Manager işlevselliği ve seçenekleri hakkında daha fazla bilgi için bkz. [Microsoft uç noktası 'nda yazılım güncelleştirmelerini dağıtma Configuration Manager](/mem/configmgr/sum/deploy-use/deploy-software-updates).
+Bu adımları gerçekleştirdikten sonra, yönetici güncelleştirmelerini dağıtmak için Yapılandırma Yöneticisi yazılım güncelleştirme yönetimi Visual Studio kullanabilirsiniz. Yönetici güncelleştirmelerinin farklı türleri Visual Studio özellikleri, kuruluş [](../install/applying-administrator-updates.md)genelinde nasıl ve ne zaman dağıtılmaları gerektiği konusunda rehberlik sağlayan Yönetici güncelleştirmelerini uygulama konusunda açıklanmıştır. İşlevsellik ve Yapılandırma Yöneticisi daha fazla bilgi için bkz. Yazılım [güncelleştirmelerini Microsoft Endpoint Configuration Manager.](/mem/configmgr/sum/deploy-use/deploy-software-updates)
 
-## <a name="enable-configuration-manager-to-receive-visual-studio-administrator-update-notifications"></a>Visual Studio Yönetici güncelleştirme bildirimlerini almak için Configuration Manager etkinleştirme
+## <a name="enable-configuration-manager-to-receive-visual-studio-administrator-update-notifications"></a>Yönetici Yapılandırma Yöneticisi bildirimlerini Visual Studio için yöneticiyi etkinleştirme
 
-Visual Studio Yönetici güncelleştirmelerini yönetmek için Configuration Manager etkinleştirmek üzere şunları yapmanız gerekir:
+Yönetici güncelleştirmelerini Yapılandırma Yöneticisi için Visual Studio sağlamak için şunları gerekir:
 
-* Microsoft uç noktası Configuration Manager (geçerli dal) ve Windows Server Update Services (WSUS) çalıştıran Windows Server 'ın geçerli bir lisanslı sürümü. Bu güncelleştirmeleri dağıtmak için WSUS 'yi kullanamazsınız; Configuration Manager ile birlikte kullanılması gerekir.
+* Windows Server Update Services (WSUS) Microsoft Endpoint Configuration Manager (geçerli dal) ve Windows çalıştıran geçerli lisanslı bir sürüm. Bu güncelleştirmeleri dağıtmak için WSUS'nin kendisini kullanamazsınız; bu, verilerle birlikte Yapılandırma Yöneticisi.
 
-* Hiyerarşinin en üst düzey WSUS sunucusu ve en üst düzey Configuration Manager site sunucusu, Visual Studio URL 'Lerine ve bu bağlantı noktalarına aşağıda listelenen bağlantı noktalarına erişebilmelidir: [bir güvenlik duvarı veya proxy sunucusunun arkasında Visual Studio ve Azure hizmetlerini yükleyip kullanın](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md).  
+* Hiyerarşinin en üst düzey WSUS sunucusu ve üst düzey Yapılandırma Yöneticisi site sunucusunun burada listelenen Visual Studio URL'lerine ve bağlantı noktalarına erişimi olmalıdır: Bir güvenlik duvarı veya ara sunucu arkasında Visual Studio ve Azure Hizmetlerini yükleyin ve [kullanın.](../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)  
 
-* Microsoft uç noktası Configuration Manager, Visual Studio Yönetici güncelleştirme paketleri kullanılabilir olduğunda bildirim alacak şekilde yapılandırılmalıdır.  Bunu yapmak için aşağıdaki adımları kullanın ve daha fazla bilgi için bkz. [Microsoft uç nokta Configuration Manager yazılım güncelleştirmelerine giriş](/mem/configmgr/sum/understand/software-updates-introduction).
+* Yönetici Microsoft Endpoint Configuration Manager paketleri kullanılabilir olduğunda bildirim almak için Visual Studio yapılandırmanız gerekir.  Bunu yapmak için aşağıdaki adımları kullanın ve daha fazla bilgi için [bkz.](/mem/configmgr/sum/understand/software-updates-introduction)Microsoft Endpoint Configuration Manager.
 
-  1. Configuration Manager konsolunda, **Yönetim** (sol alt) öğesini seçin ve ardından **Site yapılandırması** (orta sol) ve ardından **siteler**' i seçin ve site sunucunuzu seçin.
+  1. Yapılandırma Yöneticisi konsolunda Yönetim **(sol** alt) seçeneğini, ardından **Site** Yapılandırması (orta sol), Siteler'i **ve** ardından site sunucunuz'ı seçin.
 
-  2. En üstteki **giriş** sekmesi şeridinde, **Ayarlar** grubu düğmesinde, **site bileşenlerini Yapılandır**' ı seçin ve ardından **yazılım güncelleştirme noktası**' nı seçin.
+  2. Üstteki **Giriş** sekmesi şeridinde, site **grubu Ayarlar** **Site** Bileşenlerini Yapılandır'ı ve ardından Yazılım Güncelleştirme **Noktası'ı seçin.**
 
-  3. **Yazılım güncelleştirme noktası bileşen özellikleri** iletişim kutusunda:
+  3. Yazılım **Güncelleştirme Noktası Bileşen Özellikleri iletişim** kutusunda:
 
-        * **Ürünler** sekmesinde, **Geliştirici araçları, çalışma zamanları ve yeniden dağıtılabilir** hiyerarşisi altında, eşitlenmek istediğiniz Visual Studio sürümlerini seçin.
+        * Ürünler **sekmesindeki** **Geliştirici Araçları, Runtimes ve Redistributables** hiyerarşisinin altında eşitlemek istediğiniz Visual Studio sürümlerini seçin.
 
-        * **Sınıflandırmalar** sekmesinde "güvenlik güncelleştirmeleri", "özellik paketleri" ve "Güncelleştirmeler" ' in seçildiğinden emin olun.
+        * Sınıflandırmalar **sekmesinde** "Güvenlik Güncelleştirmeleri", "Özellik Paketleri" ve "Güncelleştirmeler"in seçildiğinden emin olun.
 
-  4. Ardından, yazılım güncelleştirmelerini WSUS sunucusu ile eşitleyerek **yazılım kitaplığı** ' nı (sol alt tarafta) ve ardından üstteki **giriş** sekmesi şeridinde, **yazılım güncelleştirmelerini Synchronize** düğmesini seçin. Yazılım güncelleştirmelerinin eşitlenmesi, kullanılabilir Visual Studio yönetici güncelleştirmelerinin ' de görünür olmasını ve Configuration Manager konsolundan dağıtılmasını sağlar.
+  4. Ardından, Yazılım **Kitaplığı(sol** alt) seçeneğini ve ardından üstteki Giriş sekmesi  şeridinde Yazılım Güncelleştirmelerini Eşitle düğmesini seçerek yazılım güncelleştirmelerini WSUS **sunucusuyla eşitleyebilirsiniz.** Yazılım Güncelleştirmelerinin Eşitlenmesi, Visual Studio yönetici güncelleştirmelerinin görünür hale gelir ve Yapılandırma Yöneticisi konsolundan dağıtılabilir.
 
-## <a name="enable-or-disable-client-machines-ability-to-receive-visual-studio-administrator-updates-from-configuration-manager"></a>İstemci makinelerinin Configuration Manager Visual Studio Yönetici güncelleştirmelerini almasına izin verme (veya devre dışı bırakma)
+## <a name="enable-or-disable-client-machines-ability-to-receive-visual-studio-administrator-updates-from-configuration-manager"></a>İstemci makinelerinin yönetici güncelleştirmelerini yönetici güncelleştirmelerini Visual Studio etkinleştirme (veya devre dışı bırakma) Yapılandırma Yöneticisi
 
-Bir istemci makinenin Visual Studio Yönetici güncelleştirmelerini kabul etmesine olanak tanımak için, Visual Studio Istemci algılayıcısı yardımcı programının düzgün yüklendiğinden emin olmanız ve istemcinin yönetici güncelleştirmelerini almasını sağlamak için bir kayıt defteri anahtarı ayarlamanız gerekir.  
+Bir istemci makinesinin Visual Studio yönetici güncelleştirmelerini kabul etmelerini sağlamak için, Visual Studio İstemci Algılayıcısı Yardımcı Programı'nın düzgün bir şekilde yüklü olduğundan emin olun ve istemcinin yönetici güncelleştirmelerini aldırması için bir kayıt defteri anahtarı ayarlamanız gerekir.  
 
-### <a name="visual-studio-client-detector-utility"></a>Visual Studio Istemci algılayıcısı yardımcı programı
+### <a name="visual-studio-client-detector-utility"></a>Visual Studio İstemci Algılayıcısı Yardımcı Programı
 
-Yönetici güncelleştirmelerinin düzgün şekilde tanınması ve alınabilmesi için, istemci makinelerde [Visual Studio Istemci algılayıcısı yardımcı programı](https://support.microsoft.com/help/5001148) yüklü olmalıdır. Bu yardımcı program, 12 Mayıs 2020 tarihinde veya bu tarihten sonra yayınlanan tüm Visual Studio 2017 ve Visual Studio 2019 ürün güncelleştirmelerine eklenmiştir. Bu, tüm Visual Studio Yönetici güncelleştirmelerinde önkoşul olarak dahildir ve ayrıca, bağımsız olarak yüklemek için [Microsoft Update kataloğunda](https://catalog.update.microsoft.com) de mevcuttur.
+Yönetici [Visual Studio düzgün](https://support.microsoft.com/help/5001148) şekilde tanınması ve alın olması için istemci makinelerde İstemci Algılayıcısı Yardımcı Programı'nın yüklü olması gerekir. Bu yardımcı program tüm Visual Studio 2017 ve 12 Mayıs 2020'de veya sonrasında yayımlanan Visual Studio 2019 ürün güncelleştirmelerine dahil edildi, tüm Visual Studio yönetici güncelleştirmeleriyle önkul olarak dahil edildi ve bağımsız olarak yüklemek için [Microsoft Update Kataloğu'da](https://catalog.update.microsoft.com) da kullanılabilir.
 
-### <a name="encoding-administrator-intent-on-the-client-machines"></a>İstemci makinelerde yönetici hedefini kodlama
+### <a name="encoding-administrator-intent-on-the-client-machines"></a>İstemci makinelerde yönetici amacı kodlama
 
-Yönetici güncelleştirmelerini almak için istemci bilgisayarların etkinleştirilmesi gerekir. Bu adım, güncelleştirmelerin istem dışı bir istemci bilgisayara istenmeden veya yanlışlıkla itilmediğinden emin olmak için gereklidir.
+Yönetici güncelleştirmelerini almak için istemci bilgisayarların etkinleştirilmesi gerekir. Bu adım, güncelleştirmelerin yanlışlıkla veya yanlışlıkla şüpheli istemci bilgisayarlara doğru şekilde ertelenmemelerini sağlar.
 
- **Tınupdatesenabled**   anahtarı, yöneticinin yönetici hedefini kodlayamak üzere tasarlanmıştır. Bu anahtar, [Visual Studio 'nun kurumsal dağıtımları için Varsayılanları Ayarla](/visualstudio/install/set-defaults-for-enterprise-deployments) belgelerinin açıklandığı gibi standart Visual Studio konumlarından herhangi birinde olabilir. İstemci bilgisayarda yönetici erişimi, bu anahtarın değerini oluşturmak ve ayarlamak için gereklidir.
+ **AdministratorUpdatesEnabled**   anahtarı, yöneticinin yönetici amacını kodlaması için tasarlanmıştır. Bu anahtar, Visual Studio'nin kurumsal dağıtımları için varsayılanları ayarla belgelerinde açıklandığı gibi standart Visual Studio [olabilir.](/visualstudio/install/set-defaults-for-enterprise-deployments) Bu anahtarın değerini oluşturmak ve ayarlamak için istemci bilgisayarda yönetici erişimi gerekir.
 
-* İstemci bilgisayarı yönetici güncelleştirmelerini kabul edecek şekilde yapılandırmak için, **Tınupdatesenabled**   REG_DWORD anahtarını **1** olarak ayarlayın.
-*  **Tınupdatesenabled**   REG_DWORD anahtarı **eksikse veya 0 olarak ayarlandıysa**, yönetici güncelleştirmelerinin istemci bilgisayara uygulanması engellenir.
+* İstemci bilgisayarı Yönetici Güncelleştirmelerini kabul etmek üzere yapılandırmak için **AdministratorUpdatesEnabled**   REG_DWORD **1 olarak ayarlayın.**
+*  **AdministratorUpdatesEnabled** REG_DWORD anahtarı eksikse veya 0 olarak ayarlanırsa, yönetici güncelleştirmelerinin istemci bilgisayara   uygulanması engellenir. 
 
 ## <a name="feedback-and-support"></a>Geri bildirim ve destek
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-Visual Studio yönetici güncelleştirmeleri hakkında geri bildirim sağlamak veya güncelleştirmeleri etkileyen sorunları bildirmek için aşağıdaki yöntemleri kullanabilirsiniz:
+Yönetici güncelleştirmeleri hakkında geri bildirim sağlamak veya Visual Studio sorunları rapor etmek için aşağıdaki yöntemleri kullanabilirsiniz:
 
-* [Visual Studio yükleme ve yükseltme sorunlarını giderme](../install/troubleshooting-installation-issues.md) kılavuzuna bakın.
-* [Visual Studio Kurulumu soru-cevap&](/answers/topics/vs-setup.html)topluluğa soru sorun.
-* [Visual Studio destek sayfasına](https://visualstudio.microsoft.com/vs/support/)gidin ve sorunun SSS bölümünde listelenip listelenmediğini denetleyin.  Sohbet yardımı için [destek bağlantısı](https://visualstudio.microsoft.com/vs/support/#talktous) düğmesini de seçebilirsiniz.
-* Yönetici güncelleştirmelerini etkinleştirme deneyimiyle ilgili olarak, [özellik geri bildirimi sağlayın veya Visual Studio ekibine bir sorun bildirin](https://aka.ms/vs/wsus/feedback) .
-* Microsoft için kuruluşunuzun teknik hesap yöneticisiyle iletişim kurun.
+* Yükleme ve yükseltme [Visual Studio sorunlarını giderme kılavuzuna](../install/troubleshooting-installation-issues.md) bakın.
+* Setup [Q&A Forumu'nda Visual Studio soru sorun.](/answers/topics/vs-setup.html)
+* destek sayfasına [Visual Studio ve soruna](https://visualstudio.microsoft.com/vs/support/)SSS sayfasında listelenmiş olup olmadığını kontrol edin.  Sohbet yardımı için Destek [Bağlantısı düğmesini](https://visualstudio.microsoft.com/vs/support/#talktous) de seçin.
+* [Yönetici güncelleştirmelerini etkinleştirme deneyimiyle ilgili](https://aka.ms/vs/wsus/feedback) özellik geri bildirimi Visual Studio sorun bildirin.
+* Microsoft için kuruluşun teknik hesap yöneticisine ulaşın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Yönetici güncelleştirmeleri uygulanıyor](../install/applying-administrator-updates.md)
+* [Yönetici güncelleştirmelerini uygulama](../install/applying-administrator-updates.md)
 * [Visual Studio yönetici kılavuzu](../install/visual-studio-administrator-guide.md)
 * [Visual Studio Ürün Yaşam Döngüsü ve Bakım](/visualstudio/productinfo/vs-servicing-vs)
 * [Visual Studio 2019 Sürüm Notları](/visualstudio/releases/2019/release-notes)
 * [Visual Studio 2017 Sürüm Notları](/visualstudio/releasenotes/vs2017-relnotes)
 * [Visual Studio'yu yükleme](../install/install-visual-studio.md)
-* [Microsoft Update Catalog hakkında SSS](https://www.catalog.update.microsoft.com/faq.aspx)
-* [Microsoft uç nokta Configuration Manager (SCCM) belgeleri](/mem/configmgr)
-* [Güncelleştirmeleri Microsoft kataloğundan Configuration Manager içine aktarın](/mem/configmgr/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog)
-* [Windows Server Update Services (WSUS) belgeleri](/windows-server/administration/windows-server-update-services/get-started-windows-server-update-services-wsus)
+* [Microsoft Update Kataloğu hakkında SSS](https://www.catalog.update.microsoft.com/faq.aspx)
+* [Microsoft Endpoint Configuration Manager (SCCM) belgeleri](/mem/configmgr)
+* [Güncelleştirmeleri Microsoft Kataloğu'dan Yapılandırma Yöneticisi](/mem/configmgr/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog)
+* [Windows Sunucu Güncelleştirme Hizmetleri (WSUS) belgeleri](/windows-server/administration/windows-server-update-services/get-started-windows-server-update-services-wsus)

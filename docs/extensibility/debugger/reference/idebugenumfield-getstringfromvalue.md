@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 692d5fd16912be8645e99fd2b54a8fbb4871b007
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122035104"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126727008"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
 Bu yöntem, değerine göre sabit değerinin adını elde ediyor.
@@ -45,7 +45,7 @@ int GetStringFromValue(
 
 ## <a name="parameters"></a>Parametreler
 `value`\
-[in] Sabit sabit değerinin adını almak için gereken değer.
+[in] Sabit sabiti için sabit sabitin adını almak için değer.
 
 `pbstrValue`\
 [out] Sabit sabiti sabiti adını döndürür.

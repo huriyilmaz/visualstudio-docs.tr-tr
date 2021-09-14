@@ -1,6 +1,6 @@
 ---
-description: Dizide boyut sayısına göre her dizin için temel dizinleri (alt sınırları) döndürür.
-title: IDebugArrayObject2::GetBaseIndices | Microsoft Docs
+description: Dizideki boyutların sayısını verilen her bir dizin için temel dizinleri (alt sınır) alır.
+title: 'IDebugArrayObject2:: Getbasedizinler | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a000a365863ddb56e0d5896392b15c92a00822876e66fe18dba09551e22e0e7a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 584b0f39bd9f50b68f928cdfb2b93e6e9ea0af28
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121293150"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627554"
 ---
 # <a name="idebugarrayobject2getbaseindices"></a>IDebugArrayObject2::GetBaseIndices
-Dizide boyut sayısına göre her dizin için temel dizinleri (alt sınırları) döndürür.
+Dizideki boyutların sayısını verilen her bir dizin için temel dizinleri (alt sınır) alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,16 +44,16 @@ int GetBaseIndices (
 
 ## <a name="parameters"></a>Parametreler
 `dwRank`\
-[in] Dizinin boyut sayısı (derece).
+'ndaki Dizinin boyut (derece) sayısı.
 
 `dwIndices`\
-[out] Dizi için temel dizinler (alt sınır).
+dışı Dizi için temel dizinler (alt sınırlar).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Örneğin, bu işlev aşağıdaki C# kodu tarafından oluşturulan dizi için '5' döndürür:
+ Örnek olarak, bu işlev aşağıdaki C# kodu tarafından oluşturulan dizi için ' 5 ' döndürür:
 
 ```
 int[] lengths = { 12 };

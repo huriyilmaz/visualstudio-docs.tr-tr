@@ -1,5 +1,5 @@
 ---
-description: Bazı semboller ad alanı tarafından başvurulsa ve daha sonra SymTagUsingNameSpace etiketiyle tanımlanır.
+description: Bazı semboller ad alanı tarafından başvurul içerebilir ve daha sonra SymTagUsingNameSpace etiketiyle tanımlanır.
 title: UsingNameSpace | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 04653fe964adb26f5c2df8afdf3bb0d14831bb28
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122065823"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626606"
 ---
 # <a name="usingnamespace"></a>UsingNameSpace
-Bazı semboller ad alanı tarafından başvurulsa ve daha sonra bir etiketle `SymTagUsingNameSpace` tanımlanır.
+Bazı semboller ad alanı tarafından başvurul olabilir ve daha sonra bir etiketle `SymTagUsingNameSpace` tanımlanır.
 
 > [!NOTE]
 > UsingNamespace sembol etiketi yalnızca yönetilen kodda görünür.

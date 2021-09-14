@@ -16,11 +16,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 810aceef4e88b6cfcff11c368ba1fe5358fa1b00
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122041067"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627141"
 ---
 # <a name="runexit-devenvexe"></a>/RunExit (devenv.exe)
 
@@ -48,7 +48,7 @@ devenv /RunExit {SolutionName|ProjectName} [/Out OutputFilename]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Etkin çözüm yapılandırması için belirtilen ayarlara göre belirtilen projeyi veya çözümü derler ve çalıştırır. Bu anahtar, proje veya çözüm çalışırken IDE'nin en aza indirilmesine neden olur. Proje veya çözüm çalışma tamamlandıktan sonra IDE'nin kapanması.
+Etkin çözüm yapılandırması için belirtilen ayarlara göre belirtilen projeyi veya çözümü derler ve çalıştırır. Bu anahtar, proje veya çözüm çalışırken IDE'nin en aza indirilmesine neden olur. Proje veya çözümün çalışma tamamlandıktan sonra IDE'sini kapatır.
 
 - Çift tırnak içinde boşluk içeren dizeleri içine alın.
 

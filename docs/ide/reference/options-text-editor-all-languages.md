@@ -46,30 +46,30 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: f581f48efb9fbba97aa65b9826f7114f7377e951
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122101004"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627194"
 ---
 # <a name="options-dialog-box-text-editor--all-languages"></a>Seçenekler iletişim kutusu: Metin Düzenleyici \> Tüm Diller
 
-Bu iletişim kutusu, Kod Düzenleyicisi'nin varsayılan davranışını değiştirmenizi sağlar. Bu ayarlar, HTML Tasarımcısı'nın Kaynak görünümü gibi Kod Düzenleyicisi'ni temel alan diğer düzenleyiciler için de geçerlidir. Bu iletişim kutusunu açmak için Araçlar **menüsünden** **Seçenekler'i** seçin. Metin Düzenleyici **klasöründe** Tüm Diller alt **klasörünü genişletin** ve ardından Genel'i **seçin.**
+Bu iletişim kutusu, Kod Düzenleyicisi'nin varsayılan davranışını değiştirmenizi sağlar. Bu ayarlar, HTML Tasarımcısı'nın Kaynak görünümü gibi Kod Düzenleyicisi'ni temel alan diğer düzenleyiciler için de geçerlidir. Bu iletişim kutusunu açmak için Araçlar **menüsünden** **Seçenekler'i** seçin. Metin Düzenleyici **klasöründe Tüm** Diller alt **klasörünü genişletin** ve ardından Genel'i **seçin.**
 
 > [!CAUTION]
-> Bu sayfa, tüm geliştirme dilleri için varsayılan seçenekleri ayarlar. Bu iletişim kutusundaki bir seçeneğin sıfırlanması, tüm dillerdeki Genel seçeneklerini burada seçili olan seçeneklere sıfırlar. Yalnızca bir dil için Metin Düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörlerini genişletin ve seçenek sayfalarını seçin.
+> Bu sayfa tüm geliştirme dilleri için varsayılan seçenekleri ayarlar. Bu iletişim kutusundaki bir seçeneğin sıfırlanması, tüm dillerdeki Genel seçeneklerini burada seçili olan seçeneklere sıfırlar. Yalnızca bir dil için Metin Düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörlerini genişletin ve seçenek sayfalarını seçin.
 
 Bazı programlama dilleri için Genel seçenekler sayfalarında bir seçenek seçildiğinde gri bir onay işareti görüntülenir, ancak diğerleri için görüntülenmez.
 
 ## <a name="statement-completion"></a>Deyim Tamamlama
 
-**Üyeleri otomatik listele**
+**Üyeleri otomatik olarak listele**
 
 Seçildiğinde, düzenleyicide siz yazarak IntelliSense tarafından kullanılabilir üyelerin, özelliklerin, değerlerin veya yöntemlerin açılır listeleri görüntülenir. Öğeyi kodunuza eklemek için açılır listeden herhangi bir öğe seçin. Bu seçeneğin seçerek Gelişmiş **üyeleri gizle seçeneğine olanak** sağlar.
 
 **Gelişmiş üyeleri gizleme**
 
-Seçildiğinde, yalnızca en sık kullanılan öğeleri görüntüleyerek açılır deyim tamamlama listelerini kısaltabilir. Diğer öğeler listeden filtrelenmiş.
+Seçildiğinde, yalnızca en yaygın kullanılan öğeleri görüntüleyerek açılır deyim tamamlama listelerini kısaltıyor. Diğer öğeler listeden filtrelenmiş.
 
 **Parametre bilgileri**
 
@@ -114,15 +114,15 @@ Seçildiğinde, fare imleci düzenleyicide bir URL'den geçerken işaret eden el
 
 Seçildiğinde, kod **düzenleyicisinin** üst kısmında Gezinti çubuğunu görüntüler. Açılan Nesneler **ve** **Üyeler** listeleri, kodunuzdaki belirli bir nesneyi seçmenize, üyelerinden birini seçmenize ve Kod Düzenleyicisi'nde seçili üyenin bildirimine gezinmenize olanak sağlar.
 
-**Seçim yoksa Boş satırlara Kesme veya Kopyalama komutları uygulama**
+**Seçim yoksa boş satırlara Kesme veya Kopyalama komutları uygulama**
 
 Bu seçenek, ekleme noktasını boş bir satıra yerleştirme, hiçbir şey seçme ve ardından Kopyala veya Kes'i seçerek düzenleyicinin davranışını ayarlar.
 
-- Bu seçenek seçildiğinde boş satır kopyalanır veya kesilir. Yapıştır'ı tamamlarsanız yeni, boş bir satır eklenir.
+- Bu seçenek seçildiğinde boş satır kopyalanır veya kesilir. Yapıştır'ı tamamlarsanız yeni ve boş bir satır eklenir.
 
 - Bu seçenek temiz olduğunda, Kes komutu boş satırları kaldırır. Ancak Panodaki veriler korunur. Bu nedenle Yapıştır komutunu kullanırsanız panoya en son kopyalanan içerik yapıştırır. Daha önce hiçbir şey kopyalanmazsa hiçbir şey yapıştırlanmaz.
 
-Bir satır boş değilken bu ayarın Kopyala veya Kes üzerinde hiçbir etkisi yoktur. Hiçbir şey seçilmezse, satırın tamamı kopyalanır veya kesilir. Yapıştırıyorsanız, satırın tamamının ve bitiş çizgisi karakterinin metni yapıştırıldı.
+Bu ayarın, satır boş değilken Kopyala veya Kes üzerinde hiçbir etkisi yoktur. Hiçbir şey seçilmezse, satırın tamamı kopyalanır veya kesilir. Yapıştırıyorsanız, satırın tamamının ve bitiş çizgisi karakterinin metni yapıştırıldı.
 
 > [!TIP]
 > Boşluklar, sekmeler ve satır uçları göstergelerini görüntülemek ve girintili satırları tamamen  boş  satırlardan ayırmak için Düzenle menüsünden Gelişmiş'i seçin ve Boşluğu **Görüntüle'yi seçin.**

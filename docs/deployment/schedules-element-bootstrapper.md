@@ -1,6 +1,6 @@
 ---
 title: '&lt;Schedules &gt; Öğesi (Önyükleyici) | Microsoft Docs'
-description: Schedules öğesi, Command öğesi tarafından tanımlanan komutların hangi zamanlarda çalıştır gerektiğini tanımlayan Schedule öğelerini içerir.
+description: Schedules öğesi, Command öğesi tarafından tanımlanan komutların çalıştırılma zamanlarını tanımlayan Schedule öğelerini içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -19,11 +19,11 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: 8f9430dd814ba76f0a8e688d6a198c8715fc4d99
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122120718"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627746"
 ---
 # <a name="ltschedulesgt-element-bootstrapper"></a>&lt;Schedules &gt; öğesi (önyükleyici)
 `Schedules`öğesi, `Schedule` öğesi tarafından tanımlanan komutların çalışması gereken belirli saatleri `Command` tanımlayan öğeleri içerir.
@@ -60,7 +60,7 @@ ms.locfileid: "122120718"
  öğesi, `BuildList` yükleyiciye önyükleme uygulaması başlatıldıktan hemen sonra bir komut yürütmesini belirtir.
 
 ## <a name="beforepackage"></a>BeforePackage
- öğesi, `BeforePackage` belirtilen paket yüklenmeden önce yükleyiciye bir komut yürütmesini belirtir.
+ öğesi, `BeforePackage` yükleyiciye belirtilen paket yüklenmeden önce bir komut yürütmesini belirtir.
 
 ## <a name="afterpackage"></a>AfterPackage
  öğesi, `AfterPackage` yükleyiciye belirtilen paket yüklendikten sonra bir komut yürütmesini belirtir.

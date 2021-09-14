@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: e637f1139de8ee6caebea92cc5ca1fe494c206e6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122080019"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627572"
 ---
 # <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
 Dizinin boyutlarını alır.
@@ -51,7 +51,7 @@ int GetDimensions(
  Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Çok boyutlu bir dizi, her boyut için farklı boyutlara sahip olabilir. Örneğin, üç boyutlu dizisine göre, bu yöntem bu sırayla parametresinde `myarray[3][2][6]` 3, 2 ve 6 `dwDimensions` döndürür.
+ Çok boyutlu bir dizi, her boyut için farklı boyutlara sahip olabilir. Örneğin, üç boyutlu dizide bu yöntem bu sırayla parametresinde `myarray[3][2][6]` 3, 2 ve 6 `dwDimensions` döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

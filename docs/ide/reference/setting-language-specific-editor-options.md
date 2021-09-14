@@ -1,6 +1,6 @@
 ---
 title: Dile Özgü Düzenleyici Seçeneklerini Ayarlama
-description: Belirli programlama dilleri için geçerli olan çeşitli metin düzenleyici seçeneklerini ayarlamayı öğrenin.
+description: Belirli programlama dillerinde geçerli olan çeşitli metin düzenleyici seçeneklerini ayarlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,11 +15,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bfdecc836056cc1a786ee36937c64aac564575d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122151034"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627104"
 ---
 # <a name="set-language-specific-editor-options"></a>Dile özgü düzenleyici seçeneklerini ayarlama
 

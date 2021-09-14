@@ -15,11 +15,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: d118ac31d86fcf2935b6c7864ee7cdf2a8d5ad2a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122062101"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627123"
 ---
 # <a name="set-current-process"></a>Geçerli Süreci Ayarla
 Belirtilen işlemi hata ayıklayıcıda etkin işlem olarak ayarlar.
@@ -36,7 +36,7 @@ Debug.SetCurrentProcess index
 Gereklidir. Sürecin dizini.
 
 ## <a name="remarks"></a>Açıklamalar
-Hata ayıklarken birden çok işleme iliştirin, ancak herhangi bir zamanda tek bir işlem dosyada etkindir. Etkin işlemi ayarlamak `SetCurrentProcess` için komutunu kullanabilirsiniz.
+Hata ayıklama sırasında birden çok işleme iliştirin, ancak herhangi bir zamanda tek bir işlem dosyada etkindir. Etkin işlemi ayarlamak `SetCurrentProcess` için komutunu kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
 

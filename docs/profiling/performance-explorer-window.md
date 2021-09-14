@@ -16,21 +16,21 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: bfd7c11540cd481925c8701b3e24447616db2ee2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122027532"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626870"
 ---
 # <a name="performance-explorer-window"></a>Performans Gezgini Penceresi
 
-Performans Gezgini  IDE'de Visual Studio penceresi, Visual Studio Profil Oluşturma Araçları kullanarak performans oturumlarını yapılandırmaya ve başlatmaya olanak Visual Studio Profil Oluşturma Araçları. Pencereyi açmamız gerekirse Performans profili oluşturma için [Yeni Başlayanlar kılavuzu'na bakın.](../profiling/beginners-guide-to-cpu-sampling.md)
+Performans Gezgini  IDE'Visual Studio penceresi, Visual Studio Profil Oluşturma Araçları kullanarak performans oturumlarını yapılandırmayı ve başlatmayı sağlar. Pencereyi açmamız gerekirse Performans profili oluşturma için [Yeni Başlayanlar kılavuzu'na bakın.](../profiling/beginners-guide-to-cpu-sampling.md)
 
 ## <a name="performance-explorer-toolbar"></a>Performans Gezgini Araç Çubuğu
 
 Aşağıdaki seçenekler araç çubuğunda **Performans Gezgini** kullanılabilir:
 
-- **Performans Sihirbazı'nı** Başlatma - Performans Sihirbazı'nı görüntüler ve yeni bir performans oturumu eklemek Performans Gezgini görüntüler.
+- **Performans Sihirbazı'nı** Başlatma - Performans Sihirbazı'nı görüntüden görüntü Performans Gezgini görüntüler.
 
 - **Yeni Performans Oturumu** - Yeni performans penceresine boş bir Performans Gezgini ekler.
 
@@ -40,7 +40,7 @@ Aşağıdaki seçenekler araç çubuğunda **Performans Gezgini** kullanılabili
 
 - **Durdur** - Hedef uygulama ve profilleyiciden hemen çıkar.
 
-- **Ekle/Ayır** - **Profil oluşturmanın** ekserli olduğu çalışan bir işlemi seçmek için İşleme Profil İşleyici ekle iletişim kutusunu görüntüler.
+- **Ekle/Ayır** - **Profilleyicinin iliştirmek** istediğiniz çalışan bir işlemi seçmek için İşleme Profil İşleyici ekle iletişim kutusunu görüntüler.
 
 ## <a name="performance-explorer-window"></a>Performans Gezgini Penceresi
 

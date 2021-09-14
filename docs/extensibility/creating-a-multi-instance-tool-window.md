@@ -15,11 +15,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 61b9f21163fd9382575aa97693e955a5cf710b6e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122089738"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627710"
 ---
 # <a name="create-a-multi-instance-tool-window"></a>Çok örnekli bir araç penceresi oluşturma
 Bir araç penceresini, birden çok örneğinin aynı anda açılmasını sağlayacak şekilde programlayabilirsiniz. Araç pencerelerinin varsayılan olarak yalnızca bir örnek açık olabilir.

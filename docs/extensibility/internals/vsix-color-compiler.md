@@ -12,11 +12,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1c724dae82bb8f7f05c83c96d1c331d72eac0abd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122042029"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627261"
 ---
 # <a name="vsix-color-compiler"></a>VSIX Renk Derleyicisi
 Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temalarının renklerini temsil eden bir .xml dosyası alan ve bu renklerin Visual Studio'de kullanıla bir .pkgdef dosyasına kapatan bir konsol uygulamasıdır. Farklı dosyalar arasındaki farkları karşılaştırmak .xml, bu araç kaynak denetiminde özel renkleri yönetmek için kullanışlıdır. Derlemenin çıktısı geçerli bir .pkgdef dosyası olacak şekilde derleme ortamlarına da bağlanabilir.
@@ -45,7 +45,7 @@ Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temaları
 
  **Tema**
 
- öğesi \<Theme> temayı tamamen tanımlar. Tema en az bir öğe \<Category> içermeli. Tema öğeleri şu şekilde tanımlanır:
+ öğesi \<Theme> temayı tamamen tanımlar. Bir tema en az bir öğe \<Category> içermeli. Tema öğeleri şu şekilde tanımlanır:
 
 ```xml
 <Theme Name="name" GUID="guid">
@@ -84,7 +84,7 @@ Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temaları
 
  **Renk**
 
- öğesi, \<Color> bir bileşen veya kullanıcı arabiriminin durumu için bir renk tanımlar. Bir renk için tercih edilen adlandırma şeması [UI türü] [State] olur. Yedekli olduğu için "renk" sözcüğü kullanma. Renk, öğe türünü ve rengin uygulanacak olduğu durumları veya "durumu" açıkça belirtmalıdır. Renk boş olamaz ve bir ve öğesinin bir veya her ikisini birden \<Background> \<Foreground> içermesi gerekir. Renk öğeleri şu şekilde tanımlanır:
+ öğesi, \<Color> bir bileşen veya kullanıcı arabiriminin durumu için bir renk tanımlar. Bir renk için tercih edilen adlandırma şeması [UI türü] [State] olur. Yedekli olduğu için "color" sözcüğü kullanma. Renk, öğe türünü ve rengin uygulanacak olduğu durumları veya "durum"ları net bir şekilde belirtmalıdır. Renk boş olamaz ve bir ve öğesinin bir veya her ikisini de \<Background> \<Foreground> içermesi gerekir. Renk öğeleri şu şekilde tanımlanır:
 
 ```xml
 <Color Name="name">
@@ -99,7 +99,7 @@ Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temaları
 
  **Arka plan ve/veya Ön Plan**
 
- ve öğeleri, bir ui öğesinin arka planı veya ön planı için bir \<Background> \<Foreground> rengin değerini ve türünü tanımlar. Bu öğelerin hiçbir yoktur.
+ ve öğeleri, bir ui öğesinin arka planı veya ön planı için bir rengin \<Background> \<Foreground> değerini ve türünü tanımlar. Bu öğelerin hiçbir yoktur.
 
 ```xml
 <Background Type="type" Source="int" />
@@ -111,7 +111,7 @@ Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temaları
 |Tür|[Gerekli] Rengin türü. Şunlardan biri olabilir:<br /><br /> *CT_INVALID:* Renk geçersiz veya ayarlanmaz.<br /><br /> *CT_RAW:* Ham ARGB değeri.<br /><br /> *CT_COLORINDEX:* KULLANMAYIN.<br /><br /> *CT_SYSCOLOR:* SysColor Windows bir sistem rengi.<br /><br /> *CT_VSCOLOR:* Bir Visual Studio rengi __VSSYSCOLOREX.<br /><br /> *CT_AUTOMATIC:* Otomatik renk.<br /><br /> *CT_TRACK_FOREGROUND:* KULLANMAYIN.<br /><br /> *CT_TRACK_BACKGROUND:* KULLANMAYIN.|
 |Kaynak|[Gerekli] Onaltılık olarak temsil edilen rengin değeri|
 
- Tür enumerasyonu __VSCOLORTYPE tüm değerler Tür özniteliğinde şema tarafından de destekler. Ancak, yalnızca bir veya daha fazla CT_RAW CT_SYSCOLOR.
+ Tür enumerasyonu __VSCOLORTYPE tüm değerler Tür özniteliğinde şema tarafından de destekler. Ancak, yalnızca kaynak ve CT_RAW CT_SYSCOLOR.
 
  **Hepsi birlikte**
 
@@ -152,14 +152,14 @@ Visual Studio Uzantısı Renk Derleyicisi aracı, mevcut Visual Studio temaları
 
 ## <a name="notes"></a>Notlar
 
-- Bu araç, VC++ çalışma zamanının en son sürümünün yüklü olması gerekir.
+- Bu araç, VC + + çalışma zamanının en son sürümünün yüklü olmasını gerektirir.
 
-- Yalnızca tek dosyalar de destekler. Klasör yolları aracılığıyla toplu dönüştürme desteklenmiyor.
+- Yalnızca tek dosyalar desteklenir. Klasör yolları aracılığıyla toplu dönüştürme desteklenmiyor.
 
-- Araç şu içinde bulunabilir: `<VS Install Path>\VSSDK\VisualStudioIntegration\Tools\Bin\`
+- Araç şu şekilde bulunabilir `<VS Install Path>\VSSDK\VisualStudioIntegration\Tools\Bin\`
 
 ## <a name="sample-output"></a>Örnek çıktı
- Araç tarafından oluşturulan .pkgdef dosyası aşağıdaki anahtarlara benzer:
+ Araç tarafından oluşturulan. pkgdef dosyası aşağıdaki anahtarlara benzer olacaktır:
 
 ```
 [$RootKey$\Themes\{de3dbbcd-f642-433c-8353-8f1df4370aba}\Environment]

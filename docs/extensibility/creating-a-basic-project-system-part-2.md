@@ -16,16 +16,16 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4aa62227051b68307c0bb4ab301a218d8e535461
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122058025"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627723"
 ---
 # <a name="create-a-basic-project-system-part-2"></a>Temel proje sistemi oluşturma, bölüm 2
-Bu serinin ilk izlenecek yolu olan Temel bir [proje sistemi oluşturma, bölüm 1,](../extensibility/creating-a-basic-project-system-part-1.md)temel bir proje sisteminin nasıl oluşturulacaklarını gösterir. Bu izlenecek yol, temel proje sistemi üzerinde temel bir Visual Studio şablonu, özellik sayfası ve diğer özellikleri ekler. Bunu başlatmadan önce ilk izlenecek yolu tamamlamanız gerekir.
+Bu serinin ilk izlenecek yolu olan Temel bir proje sistemi [oluşturma, bölüm 1,](../extensibility/creating-a-basic-project-system-part-1.md)temel bir proje sisteminin nasıl oluşturulacaklarını gösterir. Bu izlenecek yol, temel proje sistemi üzerinde temel bir Visual Studio şablonu, özellik sayfası ve diğer özellikleri ekleyerek oluşturur. Bunu başlatmadan önce ilk izlenecek yolu tamamlamanız gerekir.
 
-Bu kılavuzda, .myproj proje dosya adı uzantısına sahip bir proje türünün *nasıl oluşturularak ilgili bilgi veresin.* Bu izlenecek yolu tamamlamak için kendi dilinizi oluşturmanıza gerek yok çünkü izlenecek yol mevcut Visual C# proje sisteminden ödünç alınıyor.
+Bu kılavuzda, .myproj proje dosya adı uzantısına sahip bir proje türünün *nasıl oluşturularak ilgili bilgi vereeceğiz.* Bu izlenecek yolu tamamlamak için kendi dilinizi oluşturmanıza gerek yok çünkü izlenecek yol mevcut Visual C# proje sisteminden ödünç alınıyor.
 
 Bu kılavuzda, bu görevlerin nasıl yerine ulaşacağız öğretildi:
 
@@ -42,14 +42,14 @@ Bu kılavuzda, bu görevlerin nasıl yerine ulaşacağız öğretildi:
 > [!NOTE]
 > Bu kılavuzda yer alan adımlar bir C# projesine dayalıdır. Ancak, dosya adı uzantıları ve kod gibi özeller dışında, bir proje için aynı adımları Visual Basic kullanabilirsiniz.
 
-## <a name="create-a-visual-studio-template"></a>Visual Studio şablonu oluşturma
-- [Temel bir proje sistemi oluşturma, 1.](../extensibility/creating-a-basic-project-system-part-1.md) bölüm, temel bir proje şablonunun nasıl oluşturularak proje sistemine ekliln olduğunu gösterir. Ayrıca, sistem kayıt defterinde <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> *\\ Templates\Projects\SimpleProject \\* klasörünün tam yolunu yazan özniteliğini kullanarak bu şablonu Visual Studio'a kaydetmeyi de gösterir.
+## <a name="create-a-visual-studio-template"></a>Bir Visual Studio oluşturma
+- [Temel bir proje sistemi oluşturma, 1.](../extensibility/creating-a-basic-project-system-part-1.md) bölüm, temel bir proje şablonunun nasıl oluşturularak proje sistemine ekliln olduğunu gösterir. Ayrıca, sistem kayıt defterine <xref:Microsoft.VisualStudio.Shell.ProvideProjectFactoryAttribute> *\\ Templates\Projects\SimpleProject \\* klasörünün tam yolunu yazan özniteliğini kullanarak bu şablonu Visual Studio'a kaydetmeyi de gösterir.
 
 Temel bir Visual Studio şablonu yerine bir Visual Studio şablonu *(.vstemplate* dosyası) kullanarak, şablonun **Yeni** Project iletişim kutusunda nasıl görüntülendiğinden ve şablon parametrelerinin yerinin nasıl değiştirilir? *.vstemplate* dosyası, proje sistem şablonu kullanılarak bir proje oluşturulduğunda kaynak dosyaların nasıl dahil edileceklerini açıklayan bir XML dosyasıdır. Proje sistemi, *.vstemplate* dosyasını ve kaynak dosyaları bir *.zip* dosyasında toplayarak ve *.zip* dosyası tarafından bilinen bir konuma kopyalayarak Visual Studio. Bu işlem, bu kılavuzda daha sonra daha ayrıntılı olarak açıklanmaktadır.
 
 1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]'de, Temel proje sistemi oluşturma bölümünü [1'i](../extensibility/creating-a-basic-project-system-part-1.md)takip eden SimpleProject çözümünü açın.
 
-2. *SimpleProjectPackage.cs* dosyasında ProvideProjectFactory özniteliğini bulun. İkinci parametreyi (proje adı) null, dördüncü parametreyi (proje şablonu klasörünün yolu) ise " ile değiştirin. \\ \NullPath", aşağıdaki gibi.
+2. *SimpleProjectPackage.cs* dosyasında ProvideProjectFactory özniteliğini bulun. İkinci parametreyi (proje adı) null, dördüncü parametresini (proje şablonu klasörünün yolu) ". \\ \NullPath", aşağıdaki gibi.
 
     ```
     [ProvideProjectFactory(typeof(SimpleProjectFactory), null,
@@ -60,7 +60,7 @@ Temel bir Visual Studio şablonu yerine bir Visual Studio şablonu *(.vstemplate
 
 3. *\\ Templates\Projects\SimpleProject \\* *klasörüne SimpleProject.vstemplate* adlı bir XML dosyası ekleyin.
 
-4. *SimpleProject.vstemplate içeriğini* aşağıdaki kodla değiştirin.
+4. *SimpleProject.vstemplate içeriğini aşağıdaki* kodla değiştirin.
 
     ```xml
     <VSTemplate Version="2.0.0" Type="Project"
@@ -90,15 +90,15 @@ Temel bir Visual Studio şablonu yerine bir Visual Studio şablonu *(.vstemplate
 
     ![Basit Project Klasörü](../extensibility/media/simpproj2.png "SimpProj2")
 
-    bölümü, New Project iletişim kutusundaki \<TemplateData> SimpleProject proje **türünün konumunu ve görünümünü** aşağıdaki gibi belirler:
+    bölümü, New Project iletişim kutusundaki SimpleProject proje türünün konumunu ve görünümünü aşağıdaki \<TemplateData> gibi belirler: 
 
 - öğesi, \<Name> proje şablonunu SimpleProject Application olarak adlar.
 
-- \<Description>öğesi, proje şablonu seçildiğinde **Yeni** Project iletişim kutusunda görünen açıklamayı içerir.
+- \<Description>öğesi, proje şablonu seçildiğinde **Yeni** Project iletişim kutusunda görüntülenen açıklamayı içerir.
 
 - \<Icon>öğesi SimpleProject proje türüyle birlikte görüntülenen simgeyi belirtir.
 
-- Öğesi, \<ProjectType> Yeni Project iletişim kutusunda  Project olarak adlar. Bu ad, ProvideProjectFactory özniteliğinin proje adı parametresinin yerini almaktadır.
+- Öğesi, \<ProjectType> Yeni Project iletişim kutusunda **Project** olarak adlar. Bu ad, ProvideProjectFactory özniteliğinin proje adı parametresinin yerini almaktadır.
 
   > [!NOTE]
   > öğesi \<ProjectType> `LanguageVsTemplate` `ProvideProjectFactory` SimpleProjectPackage.cs dosyasındaki özniteliğinin bağımsız değişkeniyle eşleşmeli.
@@ -113,13 +113,13 @@ Temel bir Visual Studio şablonu yerine bir Visual Studio şablonu *(.vstemplate
 
   Üç dosyanın da `ReplaceParameters` parametre değiştirmeyi sağlayan true değerine ayarlanmıştır. *Program.cs* dosyası true olarak ayarlanmıştır ve bu da proje oluşturulduğunda dosyanın `OpenInEditor` kod düzenleyicisinde açılmasına neden olur.
 
-  Visual Studio Şablonu şemasında öğeler hakkında daha fazla bilgi için [bkz. Visual Studio şema başvurusu.](../extensibility/visual-studio-template-schema-reference.md)
+  Visual Studio Şablonu şemasında öğeleri hakkında daha fazla bilgi için [bkz. Visual Studio şablon şeması başvurusu.](../extensibility/visual-studio-template-schema-reference.md)
 
 > [!NOTE]
 > Bir projede birden fazla Visual Studio şablon varsa, her şablon ayrı bir klasördedir. Bu klasördeki her dosyanın Derleme Eylemi **ZipProject olarak ayarlanmış olması gerekir.** 
 
 ## <a name="adding-a-minimal-vsct-file"></a>En az bir .vsct dosyası ekleme
- Visual Studio yeni veya değiştirilmiş bir şablonu tanımak için kurulum modunda Visual Studio gerekir. Kurulum modu bir *.vsct dosyasının* mevcut olması gerekir. Bu nedenle, projeye en az *bir .vsct* dosyası eklemeniz gerekir.
+ Visual Studio yeni veya değiştirilmiş bir şablonu tanımak için kurulum modunda Visual Studio gerekir. Kurulum modu bir *.vsct* dosyasının mevcut olması gerekir. Bu nedenle, projeye en az *bir .vsct* dosyası eklemeniz gerekir.
 
 1. *SimpleProject projesine SimpleProject.vsct* adlı bir XML dosyası ekleyin.
 
@@ -132,7 +132,7 @@ Temel bir Visual Studio şablonu yerine bir Visual Studio şablonu *(.vstemplate
     </CommandTable>
     ```
 
-3. Bu **dosyanın Derleme** Eylemi'nin **VSCTCompile olarak ayarlayın.** Bunu, Özellikler penceresinde değil *yalnızca .csproj* **dosyasından yapabiliriz.** Bu dosyanın **Derleme Eylemi'nin** bu noktada Yok olarak **ayarlanmış** olduğundan emin olun.
+3. Bu **dosyanın Derleme Eylemi'nin** **VSCTCompile olarak ayarlayın.** Bunu, Özellikler penceresinde değil *yalnızca .csproj* **dosyasından yapabiliriz.** Bu dosyanın **Derleme Eylemi'nin** bu noktada Yok olarak **ayarlanmış** olduğundan emin olun.
 
     1. SimpleProject düğümüne sağ tıklayın ve ardından **SimpleProject.csproj'u Düzenle'ye tıklayın.**
 
@@ -150,10 +150,10 @@ Temel bir Visual Studio şablonu yerine bir Visual Studio şablonu *(.vstemplate
 
     4. proje dosyasını açın ve düzenleyiciyi kapatın.
 
-    5. SimpleProject düğümünü kaydedin ve ardından Çözüm Gezgini **Yeniden** **Yükle'ye** Project.
+    5. SimpleProject düğümünü kaydedin ve ardından Çözüm Gezgini **Yeniden Yükle'ye** **Project.**
 
 ## <a name="examine-the-visual-studio-template-build-steps"></a>Şablon Visual Studio adımlarını inceleme
- VSPackage proje derleme sistemi genellikle *.vstemplate* dosyası Visual Studio veya *.vstemplate* dosyasını içeren proje yeniden değiştirilebilirken kurulum modunda çalışır. Bu adımları takip etmek için normal veya daha yüksek bir MSBuild düzeyine kadar devam edin.
+ VSPackage proje derleme sistemi genellikle *Visual Studio .vstemplate* dosyası değiştiriken veya *.vstemplate* dosyasını içeren proje yeniden değiştirilebilir. Bu adımları takip etmek için normal veya daha yüksek bir MSBuild düzeyine kadar devam edin.
 
 1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
@@ -187,15 +187,15 @@ Proje fabrikanızı test etmek için proje şablonunu kullanarak bir proje hiyer
 
 1. Visual Studio SDK deneysel örneğini sıfırlayın.
 
-    üzerinde: [!INCLUDE[win7](../debugger/includes/win7_md.md)] Başlat **menüsünde** **Microsoft Visual Studio/Microsoft Visual Studio SDK/Tools** klasörünü bulun ve Deneysel örneği **Microsoft Visual Studio'yi seçin.**
+    üzerinde: [!INCLUDE[win7](../debugger/includes/win7_md.md)] Başlat **menüsünde** **Microsoft Visual Studio/Microsoft Visual Studio SDK/Tools** klasörünü bulun ve Deneysel örneği **Microsoft Visual Studio'ı seçin.**
 
     Sonraki sürümlerde Windows: Başlangıç **ekranında** Deneysel Örneği **Microsoft Visual Studio \<version> yazın.**
 
-2. Bir komut istemi penceresi görüntülenir. Devam etmek için herhangi bir **tuşa basın sözcüklerini gördüğünüzde** ENTER tuşuna **basın.** Pencere kapattıktan sonra Visual Studio.
+2. Bir komut istemi penceresi görüntülenir. Devam etmek için herhangi bir **tuşa basın sözcüklerini gördüğünüzde** ENTER tuşuna **basın.** Pencere kapanıyorsa, Visual Studio.
 
 3. SimpleProject projesini yeniden oluşturma ve hata ayıklamayı başlatma. Deneysel örnek görünür.
 
-4. Deneysel örnekte bir SimpleProject projesi oluşturun. Yeni Proje **Project** Kutusunda **SimpleProject'i seçin.**
+4. Deneysel örnekte bir SimpleProject projesi oluşturun. Yeni Proje **Project** kutusunda **SimpleProject'i seçin.**
 
 5. SimpleProject'in yeni bir örneğini görüyor gerekir.
 
@@ -204,7 +204,7 @@ Proje fabrikanızı test etmek için proje şablonunu kullanarak bir proje hiyer
     ![My Project New Instance](../extensibility/media/simpproj2_myproj.png "SimpProj2_MyProj")
 
 ## <a name="create-a-project-type-child-node"></a>Proje türü alt düğümü oluşturma
-Yeni Düğümler iletişim kutusunda proje türü düğümüne bir **alt Project** eklemek için kullanabilirsiniz. Örneğin SimpleProject proje türü için konsol uygulamaları, pencere uygulamaları, web uygulamaları vb. için alt düğümleriniz olabilir.
+Yeni Düğümler iletişim kutusunda proje türü düğümüne **bir alt Project** eklemek için kullanabilirsiniz. Örneğin SimpleProject proje türü için konsol uygulamaları, pencere uygulamaları, web uygulamaları vb. için alt düğümleriniz olabilir.
 
 Alt düğümler, proje dosyası değiştirerek ve öğelere \<OutputSubPath> alt öğe ekleyerek \<ZipProject> oluşturulur. Bir şablon derleme veya dağıtım sırasında kopyalanırsa, her alt düğüm proje şablonları klasörünün bir alt klasörü olur.
 

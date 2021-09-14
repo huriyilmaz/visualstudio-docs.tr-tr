@@ -1,6 +1,6 @@
 ---
-title: Seçenekler, metin düzenleyici, temel (VB), gelişmiş
-description: Analiz, Içeri aktarma yönergelerinin ve özellikleri vurgulamanın varsayılan ayarlarını değiştirmek için temel bölümdeki gelişmiş sayfasını nasıl kullanacağınızı öğrenin.
+title: Seçenekler, Metin Düzenleyici, Temel (VB), Gelişmiş
+description: Analiz, İçeri Aktarma Yönergeleri ve Vurgulama özelliklerinin varsayılan ayarlarını değiştirmek için Temel bölümündeki Gelişmiş sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 08/12/2020
 ms.topic: reference
@@ -22,100 +22,100 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: abe1a46305ad656dca843fbb217f34eacca86410
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122151268"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627188"
 ---
-# <a name="options-text-editor-basic-visual-basic-advanced"></a>seçenekler, metin düzenleyici, temel (Visual Basic), gelişmiş
-**Seçenekler** (**Araçlar** menüsü) iletişim kutusunun **metin düzenleyici** klasörünün **temel** klasöründe **vb 'ye özgü** Özellik sayfası aşağıdaki özellikleri içerir:
+# <a name="options-text-editor-basic-visual-basic-advanced"></a>Seçenekler, Metin Düzenleyici, Temel (Visual Basic), Gelişmiş
+Seçenekler **(** Araçlar menüsü) iletişim **kutusunun** **Metin** Düzenleyicisi klasörünün Temel **klasöründeki VB Özel** özellik sayfası aşağıdaki özellikleri içerir:
 
 ## <a name="analysis"></a>Analiz
 
-- Canlı kod analizi veya arka plan Analizi kapsamı
+- Canlı kod analizi veya Arka plan analizi kapsamı
 
-   Yönetilen kod için arka plan Analizi kapsamını yapılandırın. Daha fazla bilgi için bkz. [nasıl yapılır: yönetilen kod için canlı kod analizi kapsamını yapılandırma](../../code-quality/configure-live-code-analysis-scope-managed-code.md).
+   Yönetilen kod için arka plan analizi kapsamını yapılandırma. Daha fazla bilgi için [bkz. Nasıl yapılandırılır: Yönetilen kod için canlı kod analizi kapsamını yapılandırma.](../../code-quality/configure-live-code-analysis-scope-managed-code.md)
 
-## <a name="using-directives"></a>Using yönergeleri
+## <a name="using-directives"></a>Yönergeleri Kullanma
 
-- Using deyimlerini sıralarken ' System ' yönergelerini ilk olarak Yerleştir
+- Usings sıralamada 'System' yönergelerini ilk önce yer
 
-   Seçildiğinde, sağ tıklama menüsündeki kullanımları **Kaldır ve Sırala** komutu `using` yönergeleri sıralar ve listenin en üstüne ' sistem ' ad alanlarını koyar.
+   Seçildiğinde, sağ **tıklama menüsündeki** KullanarakLarı Kaldır ve Sırala komutu yönergeleri sıralar ve 'Sistem' ad alanlarını `using` listenin en üstüne yer.
 
-- Yönerge gruplarını kullanarak ayır
+- Kullanma yönerge gruplarını ayırma
 
-   Seçildiğinde, sağ tıklama menüsündeki kullanımları **Kaldır ve Sırala** komutu, `using` aynı kök ad alanına sahip yönergelerin grupları arasına boş bir satır ekleyerek yönergeleri ayırır.
+   Seçildiğinde, **sağ** tıklama menüsündeki Kullanmaları Kaldır ve Sırala komutu, aynı kök ad alanına sahip yönerge grupları arasına boş bir satır ekerek yönergeleri birbirinden `using` ayırıyor.
 
-- Başvuru derlemelerindeki türler için kullanımlar önerin
-- NuGet paketlerindeki türler için kullanımlar önerin
+- Başvuru derlemelerinde türler için kullanma önerin
+- NuGet paketlerinde türler için kullanma önerin
 
-   bu seçenekler belirlendiğinde, bir NuGet paketini yüklemek ve başvurulmayan türler için bir yönerge eklemek üzere [hızlı bir eylem](../quick-actions.md) mevcuttur `using` .
+   Bu seçenekler seçildiğinde, NuGet paketini [yüklemek](../quick-actions.md) ve bağlantı kurulmaz türler için bir yönerge eklemek `using` için bir Hızlı Eylem kullanılabilir.
 
-   ![Visual Studio NuGet paketi yüklemek için hızlı eylem](media/nuget-lightbulb.png)
+   ![NuGet paketini Visual Studio'a yüklemek için hızlı Visual Studio](media/nuget-lightbulb.png)
 
 ## <a name="highlighting"></a>Vurgulama
 
- **Başvuruların ve anahtar sözcüklerin vurgulanmasını etkinleştir**
+ **Başvuruların ve anahtar sözcüklerin vurgularını etkinleştirme**
 
-Metin Düzenleyicisi, veya gibi bir yan tümcedeki bir sembolün veya tüm anahtar kelimelerin tüm örneklerini vurgulayabilir `If..Then` `While...End While` `Try...Catch...Finally` . **CTRL**  +  **SHIFT**  +  **aşağı ok** veya **CTRL**  +  **SHIFT**  +  **yukarı ok** tuşlarına basarak vurgulanan başvurular veya anahtar sözcükler arasında gezinebilirsiniz.
+Metin düzenleyicisi, bir sembolün tüm örneklerini veya , veya gibi bir yan tümcede yer alan tüm `If..Then` anahtar sözcükleri `While...End While` `Try...Catch...Finally` vurgular. **Ctrl** Shift Aşağı ok veya Ctrl Shift Yukarı ok tuşlarına basarak vurgulanan başvurular veya anahtar sözcükler  +    +     +    +  **arasında gezinebilirsiniz.**
 
 ## <a name="outlining"></a>Anahat Oluşturma
 
-**Anahat oluşturma modunu etkinleştir**
+**Outlining modunu etkinleştirme**
 
-Kod düzenleyicisinde bir dosya açtığınızda, belgeyi anahat modunda görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [anahat oluşturma](../../ide/outlining.md) . Bu seçenek belirlendiğinde, bir dosyayı açtığınızda anahat oluşturma özelliği etkinleştirilir.
+Kod düzenleyicisinde bir dosya açtıklarında, belgeyi genel açıklama modunda görüntüebilirsiniz. Daha [fazla bilgi için bkz. Outlining](../../ide/outlining.md) . Bu seçenek seçildiğinde, bir dosyayı açsanız, outlining özelliği etkinleştirilir.
 
-**Yordam satırı ayırıcılarını göster**
+**Yordam çizgisi ayırıcılarını gösterme**
 
-Metin Düzenleyicisi, yordamların görsel kapsamını gösterir. Aşağıdaki tabloda listelenen konumlarda projenizin *. vb* kaynak dosyalarında bir çizgi çizilir:
+Metin düzenleyicisi, yordamların görsel kapsamını gösterir. Aşağıdaki tabloda listelenen konumlarda *projenizin .vb* kaynak dosyalarında bir satır çizilir:
 
-|. Vb kaynak dosyasındaki konum|Satır konumu örneği|
+|.vb Kaynak DosyasındaKi Konum|Satır Konumu Örneği|
 |---------------------------------|------------------------------|
-|Bir blok bildirimi yapısının kapandıktan sonra|-Bir sınıf, yapı, modül, arabirim veya sabit listesinin sonunda<br />-Bir özellik, işlev veya Sub öğesinden sonra<br />-Bir özellikte get ve set yan tümceleri arasında değil|
-|Tek satırlık bir yapı kümesinden sonra|-İçe aktarma deyimlerinden sonra, bir sınıf dosyasındaki tür tanımından önce<br />-Öğesinden sonra, herhangi bir yordamdan önce, bir sınıfta belirtilen değişkenlerden|
-|Tek satır bildirimleri sonrasında (blok düzeyi olmayan bildirimler)|-Aşağıdaki import deyimleri, Inherits deyimlerini, değişken bildirimlerini, olay bildirimlerini, temsilci bildirimlerini ve DLL bildirme deyimlerini|
+|Blok bildirimi yapısı kapat sonrasında|- Bir sınıfın, yapının, modülün, arabirimin veya enum'un sonunda<br />- Bir özellik, işlev veya alt işlevden sonra<br />- Bir özellikte get ve set yan tümceleri arasında değil|
+|Tek satırlı yapılardan sonra|- İçeri aktarma deyimlerini, bir sınıf dosyasındaki tür tanımından önce<br />- Herhangi bir yordamdan önce, bir sınıfta bildirilen değişkenler sonra|
+|Tek satırlı bildirimlerin ardından (blok düzeyinde olmayan bildirim)|- İçeri aktarma deyimlerini takip ediyor, deyimlerini, değişken bildirimlerini, olay bildirimlerini, temsilci bildirimlerini ve DLL bildirim deyimlerini devralıyor|
 
-## <a name="block-structure-guides"></a>Yapı kılavuzlarını engelle
+## <a name="block-structure-guides"></a>Blok Yapısı Kılavuzları
 
-Seçildiğinde, düzenleyicide tek tek kod bloklarını kolayca tanımlamanızı sağlayan, yapılandırılmış kod bloklarıyla bir dikey çizgi görüntülenir. Örneğin, ve ifadesinde bir çizgi görürsünüz `Sub` `EndSub` `Sub` .
+Seçildiğinde düzenleyicide dikey çizgiler, tek tek kod bloklarını kolayca tanımlamanıza olanak sağlayan yapılandırılmış kod blokları ile birlikte görünür. Örneğin, bir deyiminde ile arasında `Sub` bir `EndSub` çizgi `Sub` görüyoruz.
 
-## <a name="editor-help"></a>Düzenleyici yardımı
+## <a name="editor-help"></a>Düzenleyici Yardımı
 
 ::: moniker range=">=vs-2019"
-**Satır içi parametre adı Ipuçları**    
-Seçildiğinde, işlev çağrılarında her bağımsız değişkenden önce sabit değerler, yayımlanmış sabit değerler ve nesne örneklemeleri için parametre adı ipuçları ekler.  
+**Satır Içi Parametre Adı İpuçları**    
+Seçildiğinde, işlev çağrılarında her bağımsız değişkenden önce sabit değerlerin, türün atfedilen sabit değerlerin ve nesne örnek oluşturmaların parametre adı ipuçlarını ekler.  
 
-![Visual Basic için satır içi parametre adı Ipuçları](media/inline-parameter-name-hints-visualbasic.png)
+![Visual Basic için Satır Içi Parametre Adı İpuçları](media/inline-parameter-name-hints-visualbasic.png)
 ::: moniker-end
 
-**Kodu düzgün listeleme (yeniden biçimlendirme)** Metin düzenleyici, kodunuzu uygun şekilde yeniden biçimlendirir. Bu seçenek belirlendiğinde, kod Düzenleyicisi şu şekilde olur:
+**Kodun Güzel Listesi (yeniden düzenleme)** Metin düzenleyicisi kodunuzu uygun şekilde yeniden biçimlendirer. Bu seçenek seçildiğinde kod düzenleyicisi şunları sağlar:
 
-- Kodunuzu doğru sekme konumuna hizalayın
+- Kodunuzu doğru sekme konumuyla hizalama
 
-- Büyük/küçük anahtar sözcükler, değişkenler ve nesneler doğru durumda
+- Anahtar sözcükleri, değişkenleri ve nesneleri doğru büyük/küçük harfe yeniden yazın
 
-- Deyime eksik ekleme `Then` `If...Then`
+- Deyimine `Then` eksik ekleme `If...Then`
 
-- İşlev çağrılarına parantez Ekle
+- İşlev çağrılarını parantez içinde ekleme
 
-- Dizelere eksik bitiş tırnakları Ekle
+- Dizelere eksik bitiş tırnakları ekleme
 
-- Üstel gösterimi yeniden Biçimlendir
+- Üstel biçimi yeniden biçimlendirme
 
-- Tarihleri yeniden Biçimlendir
+- Tarihleri yeniden biçimlendirme
 
-**Son yapıların otomatik eklenmesi**
+**Son yapıların otomatik olarak yerleştirilmesi**
 
-Örneğin, bir yordam bildiriminin ilk satırı `Sub Main` — ve **ENTER** tuşuna bastığınızda, metin düzenleyici eşleşen bir `End Sub` satır ekler. Benzer şekilde, bir [for](/dotnet/visual-basic/language-reference/statements/for-next-statement) döngüsü eklerseniz, metin düzenleyici eşleşen bir `Next` ifade ekler. Bu seçenek belirlendiğinde, kod Düzenleyicisi bitiş yapısını otomatik olarak ekler.
+Bir yordam bildiriminin ilk satırı gibi bir tür yazarak Enter tuşuna basarak metin `Sub Main` düzenleyicisi eşleşen bir satır  `End Sub` ekler. Benzer şekilde, For döngüsü [eklersiniz,](/dotnet/visual-basic/language-reference/statements/for-next-statement) metin düzenleyicisi eşleşen bir deyimi `Next` ekler. Bu seçenek seçildiğinde, kod düzenleyicisi otomatik olarak son yapıyı ekler.
 
-**Arabirim ve MustOverride üyelerinin otomatik olarak eklenmesi**
+**Arabirim ve MustOverride üyelerini otomatik ekleme**
 
-`Implements`Bir sınıf için bir ifadeyi veya bir `Inherits` ifadeyi kaydettiğinizde, metin düzenleyici sırasıyla uygulanması veya geçersiz kılınabilmesi gereken Üyeler için prototipler ekler.
+Bir sınıf için deyimini veya deyimini işlerken, metin düzenleyicisi sırasıyla uygulanması veya geçersiz kılınmaları gereken üyeler için `Implements` `Inherits` prototipler ekler.
 
-**Hata düzeltme önerilerini etkinleştir**
+**Hata düzeltme önerilerini etkinleştirme**
 
-Metin Düzenleyicisi ortak hatalara çözümler önerebilir ve daha sonra kodunuza uygulanan uygun düzeltmeyi seçmenizi sağlayabilir.
+Metin düzenleyicisi yaygın hatalara çözüm önererek uygun düzeltmeyi seçmenize olanak sağlar. Bu düzeltme daha sonra kodunuz için geçerli olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

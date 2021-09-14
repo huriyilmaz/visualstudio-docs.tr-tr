@@ -1,6 +1,6 @@
 ---
-description: Belirtilen adresten başlayarak belirtilen sayıda belleği yazar.
-title: 'IDebugMemoryBytes2:: WriteAt | Microsoft Docs'
+description: Belirtilen adresle başlayarak belirtilen bellek bayt sayısını yazar.
+title: IDebugMemoryBytes2::WriteAt | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -19,14 +19,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 099da50a72150d425fca560648df743f1804776f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122035026"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627405"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-Belirtilen adresten başlayarak belirtilen sayıda belleği yazar.
+Belirtilen adresle başlayarak belirtilen bellek bayt sayısını yazar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,19 +48,19 @@ int WriteAt(
 
 ## <a name="parameters"></a>Parametreler
 `pStartContext`\
-'ndaki Baytların yazma başlangıcını belirten [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesi.
+[in] Bayt [yazmaya nereden başlayacağını belirten IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesi.
 
 `dwCount`\
-'ndaki Yazılacak bayt sayısı.
+[in] Yazacak bayt sayısı.
 
 `rgbMemory`\
-'ndaki Yazılacak bayt sayısı. Bu dizinin boyutunun en az bayt olduğu varsayılır `dwCount` .
+[in] Yazacak bayt sayısı. Bu dizinin boyutu en az bayt `dwCount` olarak kabul edilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` tüm baytlar yazılamaz veya bir hata kodu (genellikle) döndürüp döndürmemelidir `E_FAIL` .
+ Başarılı olursa `S_OK` döndürür; aksi takdirde, tüm baytlar yazılamayacaksa `S_FALSE` döndürür veya bir hata kodu döndürür (genellikle `E_FAIL` ).
 
 ## <a name="remarks"></a>Açıklamalar
- Başlangıç adresi bu [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesi tarafından temsil edilen bellek penceresinde değilse yazma işlemi yapılmaz ve `E_FAIL` yazma miktarı bellek alanına örtüşse bile hata kodu döndürülür.
+ Başlangıç adresi bu [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) nesnesiyle temsil edilen bellek penceresi içinde yoksa, yazma oluşmaz ve yazma miktarı bellek alanıyla çakışsa bile hata kodu `E_FAIL` döndürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)

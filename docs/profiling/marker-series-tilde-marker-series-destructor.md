@@ -1,6 +1,6 @@
 ---
-description: Marker_series nesnesini yok eder ve tüm ayrılmış kaynakları serbest bırakır.
-title: 'marker_series:: ~ marker_series yıkıcı | Microsoft Docs'
+description: Bu marker_series yok eder ve ayrılan tüm kaynakları serbest bıraktır.
+title: marker_series::~marker_series Yıkıcı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 97b14ff032d432b2b806fc1a3e1645cdbb9078c0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122150176"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626912"
 ---
-# <a name="marker_seriesmarker_series-destructor"></a>marker_series:: ~ marker_series yok edici
-Marker_series nesnesini yok eder ve tüm ayrılmış kaynakları serbest bırakır.
+# <a name="marker_seriesmarker_series-destructor"></a>marker_series::~marker_series yok etme
+Bu marker_series yok eder ve ayrılan tüm kaynakları serbest bıraktır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,9 +31,9 @@ Marker_series nesnesini yok eder ve tüm ayrılmış kaynakları serbest bırak�
 ```
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvmarkersobj. h*
+ **Üst bilgi:** *cvmarkersobj.h*
 
- **Ad alanı:** Eşzamanlılık::d ıagstik
+ **Ad alanı:** Concurrency::d iagnostic
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [marker_series sınıfı](../profiling/marker-series-class.md)

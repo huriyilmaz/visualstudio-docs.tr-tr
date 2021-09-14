@@ -1,6 +1,6 @@
 ---
-description: Bellek alanı türünü alır.
-title: 'IDiaSymbol:: get_memorySpaceKind | Microsoft Docs'
+description: Bellek alanı türlerini alan.
+title: IDiaSymbol::get_memorySpaceKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,14 +13,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: fae68b092a89d0097fd123a19fe591e82ea12ea0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113550"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626703"
 ---
 # <a name="idiasymbolget_memoryspacekind"></a>IDiaSymbol::get_memorySpaceKind
-Bellek alanı türünü alır.
+Bellek alanı türlerini alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT get_memorySpaceKind(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `DWORD` Bellek alanı türünü tutan bir işaretçisi.
+[out] Bellek alanı `DWORD` türe sahip bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

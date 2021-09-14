@@ -1,5 +1,5 @@
 ---
-description: Kullanıcı tanımlı türün (UDT) çeşitliliğini açıklar.
+description: Kullanıcı tanımlı farklı tür (UDT) açıklanmaktadır.
 title: UdtKind | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: a8f9a065ceb5fce06f01c1e64c6d5acf48959539
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052175"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626612"
 ---
 # <a name="udtkind"></a>UdtKind
-Kullanıcı tanımlı türün (UDT) çeşitliliğini açıklar.
+Kullanıcı tanımlı farklı tür (UDT) açıklanmaktadır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,15 +40,15 @@ UdtStruct UDT bir yapıdır.
 
 UdtClass UDT bir sınıftır.
 
-UdtUnion UDT bir birlikteliktir.
+Udtuniyon UDT bir birleşimdir.
 
-UdtInterface UDT bir arabirimdir.
+Udtınterface UDT bir arabirimdir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu numaralamada yer alan değerler [IDiaSymbol::get_udtKind yöntemi tarafından](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md) döndürülür.
+Bu Numaralandırmadaki değerler [IDiaSymbol:: get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md) yöntemi tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: cvconst.h
+Üst bilgi: cvconst. h
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Enumerations and Structures](../../debugger/debug-interface-access/enumerations-and-structures.md)

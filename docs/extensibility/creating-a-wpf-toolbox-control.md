@@ -16,11 +16,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6bf8dae61373b8a9ba5814930298896f3ba41da6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122051137"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627693"
 ---
 # <a name="create-a-wpf-toolbox-control"></a>WPF Araç Kutusu Denetimi Oluşturma
 
@@ -34,9 +34,9 @@ WPF (Windows Sunu Çerçevesi) Araç Kutusu Denetimi şablonu, uzantı yüklenir
 
 1. adlı bir VSIX projesi `MyToolboxControl` oluşturun. VSIX proje şablonunu New **Project** "vsix" arayarak bulabilirsiniz.
 
-2. Proje açıldığında adlı bir **WPF Araç Kutusu Denetimi** öğesi şablonu `MyToolboxControl` ekleyin. Giriş **Çözüm Gezgini** proje düğümüne sağ tıklayın ve Yeni Öğe **Ekle'yi**  >  **seçin.** Yeni Öğe **Ekle iletişim kutusunda** Visual **C#** Genişletilebilirliği'ne gidin  >  **ve** WPF Araç Kutusu **Denetimi'ne tıklayın.** Pencerenin **en** altındaki Ad alanında, komut dosyası adını *MyToolboxControl.cs olarak değiştirebilirsiniz.*
+2. Proje açıldığında adlı bir **WPF Araç Kutusu Denetimi** öğesi şablonu `MyToolboxControl` ekleyin. Yeni **Çözüm Gezgini** proje düğümüne sağ tıklayın ve Yeni Öğe **Ekle'yi**  >  **seçin.** Yeni Öğe **Ekle iletişim kutusunda** Visual **C#** Genişletilebilirliği'ne gidin  >  **ve** WPF Araç Kutusu **Denetimi'ne tıklayın.** Pencerenin **en** altındaki Ad alanında, komut dosyası adını *MyToolboxControl.cs olarak değiştirebilirsiniz.*
 
-    Çözüm artık bir kullanıcı denetimi, denetimi Araç Kutusuna ekleyen bir ve dağıtım için VSIX bildiriminde `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> **Microsoft.VisualStudio.ToolboxControl** Varlık girdisi içeriyor. 
+    Çözüm artık bir kullanıcı denetimi, denetimi Araç Kutusuna ekleyen bir ve dağıtım için VSIX bildiriminde `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> **bir Microsoft.VisualStudio.ToolboxControl** Varlık girdisi içeriyor. 
 
 #### <a name="to-create-the-control-ui"></a>Denetim kullanıcı arabirimini oluşturmak için
 
@@ -62,7 +62,7 @@ WPF (Windows Sunu Çerçevesi) Araç Kutusu Denetimi şablonu, uzantı yüklenir
 
 1. Kod *görünümünde MyToolboxControl.xaml.cs'yi* açın.
 
-2. sınıfını `MyToolboxControl` bulun ve TestControl olarak yeniden adlandırin. (Bunu yapmak için en hızlı yol, sınıfı yeniden adlandırmak, ardından bağlam **menüsünden Yeniden** Adlandır'ı seçmek ve adımları tamamlamaktır. (Yeniden adlandır komutu hakkında daha **fazla bilgi** için [bkz. Yeniden düzenlemeyi yeniden adlandırma (C#) .)](../ide/reference/rename.md)
+2. sınıfını `MyToolboxControl` bulun ve TestControl olarak yeniden adlandırin. (Bunu yapmak için en hızlı yol sınıfını yeniden adlandırmak, ardından bağlam **menüsünden Yeniden** Adlandır'ı seçmek ve adımları tamamlamaktır. (Yeniden adlandır komutu hakkında daha **fazla bilgi** için [bkz. Yeniden düzenlemeyi yeniden adlandırma (C#) .)](../ide/reference/rename.md)
 
 3. özniteliğine `ProvideToolboxControl` gidin ve ilk parametrenin değerini Test olarak **değiştirin.** Bu, Araç Kutusu'nda denetimi içeren grubun **adıdır.**
 
@@ -81,7 +81,7 @@ WPF (Windows Sunu Çerçevesi) Araç Kutusu Denetimi şablonu, uzantı yüklenir
 
 ## <a name="build-test-and-deployment"></a>Derleme, test ve dağıtım
 
- Projede hata ayıklarken, denetimin deneysel örnek  araç kutusunda yüklü olduğunu Visual Studio.
+ Projede hata ayıklarken, deneysel Visual Studio örneğinin **Araç** Kutusunda yüklü denetimi bulmalı Visual Studio.
 
 ### <a name="to-build-and-test-the-control"></a>Denetimi derlemek ve test etmek için
 
@@ -99,8 +99,8 @@ WPF (Windows Sunu Çerçevesi) Araç Kutusu Denetimi şablonu, uzantı yüklenir
 
 1. Test edilen projeyi derlemenin ardından *.vsix* dosyasını projenin *\bin\debug \* klasöründe bulabilirsiniz.
 
-2. *.vsix* dosyasına çift tıklar ve yükleme yordamını takip edin, yerel bir bilgisayara yükleyebilirsiniz. Denetimi kaldırmak için Araçlar Uzantıları ve  >  **Güncelleştirmeler'e** gidin, denetim uzantısını seçin ve Kaldır'a **tıklayın.**
+2. *.vsix* dosyasına çift tıklar ve yükleme yordamını takip edin, yerel bir bilgisayara yükleyebilirsiniz. Denetimi kaldırmak için Araçlar Uzantıları **ve**  >  **Güncelleştirmeler'e** gidin, denetim uzantısını seçin ve Kaldır'a **tıklayın.**
 
 3. Upload *.vsix* dosyasını bir ağa veya bir Web sitesine kaydedin.
 
-    Dosyayı Visual Studio [Market](https://marketplace.visualstudio.com/) Web sitesine yüklersiniz, diğer kullanıcılar denetimi çevrimiçi bulup yüklemek için Visual Studio'da Araç Uzantıları ve  >   Güncelleştirmeler'i kullanabilir.
+    Dosyayı Visual Studio [Market](https://marketplace.visualstudio.com/) Web sitesine yüklersiniz, diğer kullanıcılar denetimi çevrimiçi bulup yüklemek için Visual Studio'deki Araç Uzantıları ve  >   Güncelleştirmeler'i kullanabilir.

@@ -1,5 +1,5 @@
 ---
-description: Bir değişkenin sayısal diğer adını temsil eder ve bir ifade değerlendiricinin (EE) diğer ad için uygulama etki alanını elde ettiğine olanak sağlar.
+description: Bir değişken için sayısal diğer adı temsil eder ve bir ifade değerlendiricinin (EE) diğer ad için uygulama etki alanını elde ettiğine olanak sağlar.
 title: IDebugAlias2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,17 +13,17 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: ae66d69153a539c42000914c9df1c275aa3a431c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122072889"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627614"
 ---
 # <a name="idebugalias2"></a>IDebugAlias2
 > [!IMPORTANT]
 > 2015 Visual Studio de ifade değerlendiricilerini uygulamanın bu yolu kullanım dışıdır. CLR ifade değerlendiricilerini uygulama hakkında bilgi için bkz. [CLR İfade Değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği.](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
- Bir değişkenin sayısal diğer adını temsil eder ve bir ifade değerlendiricinin (EE) diğer ad için uygulama etki alanını elde ettiğine olanak sağlar.
+ Bir değişken için sayısal diğer adı temsil eder ve bir ifade değerlendiricinin (EE) diğer ad için uygulama etki alanını elde ettiğine olanak sağlar.
 
 ## <a name="syntax"></a>Syntax
 

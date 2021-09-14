@@ -17,15 +17,15 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: cbc3b329b4a525a525823169d63ebbda2770727e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122062153"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627171"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
 
-Varsayılan Visual Studio geri yüklenir ve IDE'nin Visual Studio başlatılır. Bu anahtar isteğe bağlı olarak ayarları belirtilen bir ayarlar dosyasına () `*.vssettings` sıfırlar.
+Varsayılan Visual Studio geri yüklenir ve otomatik olarak Visual Studio başlatılır. Bu anahtar isteğe bağlı olarak ayarları belirtilen bir ayarlar dosyasına () `*.vssettings` sıfırlar.
 
 Varsayılan ayarlar, Visual Studio ilk kez Visual Studio profilden gelir.
 
@@ -69,7 +69,7 @@ devenv /ResetSettings [SettingsFile|DefaultCollectionSpecifier]
 
 İkinci örnek, Visual C# varsayılan profilini geri yükledi.
 
-Üçüncü örnek, ayarları Visual Studio sonra da kapatacak. Ekini ekleme. `/Command "File.Exit"`
+Üçüncü örnek ayrıca ayarları Visual Studio sonra da kapatacak. Ekini ekleme. `/Command "File.Exit"`
 
 ```shell
 devenv /ResetSettings "%USERPROFILE%\MySettings.vssettings"

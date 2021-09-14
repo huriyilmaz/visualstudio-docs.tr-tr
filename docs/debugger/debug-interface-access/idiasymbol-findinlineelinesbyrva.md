@@ -1,6 +1,6 @@
 ---
-description: 'IDiaSymbol:: Findınlineelinesbyrva, bir istemcinin belirtilen göreli sanal adres (RVA) içindeki Bu sembolde yer alan ve doğrudan veya dolaylı olarak satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.'
-title: 'IDiaSymbol:: findInlineeLinesByRVA | Microsoft Docs'
+description: IDiaSymbol::findInlineeLinesByRVA, bir istemcinin, belirtilen göreli sanal adres (RVA) içindeki bu simgede satır içi, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında devam eden bir sabit adı alır.
+title: IDiaSymbol::findInlineeLinesByRVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,14 +13,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: d0d1d7b83dd8e643dc5d25d71d43b50c039a8b25
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122074527"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626745"
 ---
 # <a name="idiasymbolfindinlineelinesbyrva"></a>IDiaSymbol::findInlineeLinesByRVA
-Bir istemcinin, belirtilen göreli sanal adres (RVA) içindeki Bu sembolde yer alan ve doğrudan veya dolaylı olarak satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.
+Bir istemcinin, belirtilen göreli sanal adres (RVA) içindeki bu simgede satır içine alınan, doğrudan veya dolaylı olarak tüm işlevlerin satır numarası bilgileri arasında bir numaralandırarak bir numaralandırarak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,18 +33,18 @@ HRESULT findInlineeLinesByRVA (    DWORD                 rva,   DWORD           
 #### <a name="parameters"></a>Parametreler
  `rva`
 
-'ndaki Adresi RVA olarak belirtir.
+[in] Adresi RVA olarak belirtir.
 
  `length`
 
-'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığını bayt cinsinden belirtir.
+[in] Bu sorguyu kapsayacak adres aralığını bayt sayısı cinsinden belirtir.
 
  `ppResult`
 
-dışı `IDiaEnumLineNumbers` Alınan satır numaralarının listesini içeren bir nesnesi tutar.
+[out] Alınan `IDiaEnumLineNumbers` satır numaralarının listesini içeren bir nesneyi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

@@ -1,6 +1,6 @@
 ---
-description: Dizi derecesini, yani boyut sayısını alır.
-title: IDebugArrayObject::GetRank | Microsoft Docs
+description: Dizinin derecesini, yani boyut sayısını alır.
+title: 'Ihata ayıklama Garrayobject:: GetRank | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 8c1c5662a555531741fb0744712982a207c447a9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122119951"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627555"
 ---
 # <a name="idebugarrayobjectgetrank"></a>IDebugArrayObject::GetRank
-Dizi derecesini, yani boyut sayısını alır.
+Dizinin derecesini, yani boyut sayısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetRank(
 
 ## <a name="parameters"></a>Parametreler
 `pdwRank`\
-[out] Dereceyi döndürür.
+dışı Dereceyi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Dizi nesnesinin her boyutunun boyutunu almak için [GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md) yöntemini kullanın.
+ Dizi nesnesinin her boyutunun boyutunu almak için [GetDimensions](../../../extensibility/debugger/reference/idebugarrayobject-getdimensions.md) metodunu kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

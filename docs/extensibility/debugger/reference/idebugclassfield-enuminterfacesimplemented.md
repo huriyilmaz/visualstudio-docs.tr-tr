@@ -1,6 +1,6 @@
 ---
-description: Bu sınıf tarafından uygulanan arabirimler için bir Numaralandırıcı oluşturur.
-title: 'IDebugClassField:: Enumınterfacesimpted | Microsoft Docs'
+description: Bu sınıf tarafından uygulanan arabirimler için bir numaralayıcı oluşturur.
+title: IDebugClassField::EnumInterfacesImplemented | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 8395a35a2f0e5aa7481148562dc12b66da39e257
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122064571"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627482"
 ---
 # <a name="idebugclassfieldenuminterfacesimplemented"></a>IDebugClassField::EnumInterfacesImplemented
-Bu sınıf tarafından uygulanan arabirimler için bir Numaralandırıcı oluşturur.
+Bu sınıf tarafından uygulanan arabirimler için bir numaralayıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int EnumInterfacesImplemented(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-dışı Uygulanan arabirimlerin listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Arabirim yoksa, null bir değer döndürür.
+[out] Uygulanan [arabirimlerin listesini temsil eden bir IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Arabirim yoksa null değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, bu sınıfta hiçbir arabirim uygulandıysa S_OK veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK veya S_FALSE arabirim uygulanmamışsa bu işlevi döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Sabit listesinin her öğesi, bir arabirimi tanımlayan bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesidir. Yönetilmeyen [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] kodun arabirimleri ayrık bir varlık olarak kullanmadığından, bu yöntemin yönetilmeyen kod için her zaman null bir değer döndürdüğünden emin olduğunu unutmayın [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] .
+ Numaralamanın her öğesi, arabirimini açıklayan [bir IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesidir. Unmanaged code'un arabirimleri ayrık varlık olarak kullanmaz, bu nedenle bu yöntem her zaman, unmanaged code için [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] null değer [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

@@ -1,6 +1,6 @@
 ---
-description: Yürütülebilir dosyanın bellek alanı içinde bir yerde sanal adres verilen bir yürütülebilir dosya görüntüsünün bellekte başlangıcını döndürür.
-title: IDiaStackWalkHelper::imageForVA | Microsoft Docs
+description: Yürütülebilir dosyanın bellek alanında bir sanal adres verildiğinde, bir yürütülebilir dosyanın belleğindeki görüntüsünün başlangıcını döndürür.
+title: 'IDiaStackWalkHelper:: ımageforva | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 8ad55d62007c139f1a14e6c93b34797110b47557
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081312"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626823"
 ---
 # <a name="idiastackwalkhelperimageforva"></a>IDiaStackWalkHelper::imageForVA
-Yürütülebilir dosyanın bellek alanı içinde bir yerde sanal adres verilen bir yürütülebilir dosya görüntüsünün bellekte başlangıcını döndürür.
+Yürütülebilir dosyanın bellek alanında bir sanal adres verildiğinde, bir yürütülebilir dosyanın belleğindeki görüntüsünün başlangıcını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,14 +36,14 @@ HRESULT imageForVA(
 #### <a name="parameters"></a>Parametreler
  `vaContext`
 
-[in] Yürütülebilir dosyanın alanı içinde bir yerde yer alan sanal adres.
+'ndaki Yürütülebilir dosyanın alanında bir yerde yer alan sanal adres.
 
  `pvaImageStart`
 
-[out] Yürütülebilir dosya görüntüsünün başlangıç sanal adresini döndürür.
+dışı Yürütülebilir dosyanın başlangıç sanal adresini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

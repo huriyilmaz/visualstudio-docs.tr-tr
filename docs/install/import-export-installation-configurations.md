@@ -9,23 +9,23 @@ helpviewer_keywords:
 - export installation configuration
 - install Visual Studio
 - Visual Studio installer
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 33ee25da51d5243daa67be53f68c50ede76219b2
-ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
+ms.openlocfilehash: fda4d25c164a91614c35b6cb3f2622235bbbb02a
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112925234"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627068"
 ---
 # <a name="import-or-export-installation-configurations"></a>Yükleme yapılandırmasını içeri veya dışarı aktarma
 
-Yükleme yapılandırma dosyalarıyla Visual Studio yapılandırmayı yapılandırabilirsiniz. Bunu yapmak için, iş yükü ve bileşen bilgilerini bir .vsconfig dosyasına dışarı aktararak Visual Studio gerekir. Ardından yapılandırmayı yeni veya var olan yüklemelere aktararak başkalarını da paylaşabilirsiniz.
+Yükleme yapılandırma Visual Studio tüm kuruluş genelinde yapılandırmayı yapılandırabilirsiniz. Bunu yapmak için, iş yükü ve bileşen bilgilerini bir .vsconfig dosyasına dışarı aktararak Visual Studio gerekir. Ardından yapılandırmayı yeni veya var olan yüklemelere aktararak başkalarını da paylaşabilirsiniz.
 
 Aşağıdaki adımları uygulayın:
 
@@ -38,7 +38,7 @@ Aşağıdaki adımları uygulayın:
 
 ## <a name="export-a-configuration"></a>Yapılandırmayı dışarı aktarma
 
-Yükleme yapılandırma dosyasını daha önce yüklenmiş bir Visual Studio veya şu anda yüklemekte olduğunu bir örnekten dışarı aktarmayı seçebilirsiniz.
+Yükleme yapılandırma dosyasını daha önce yüklenmiş bir Visual Studio örneğinden veya şu anda yüklemekte olduğunu bir örnekten dışarı aktarmayı seçebilirsiniz.
 
 1. Dosyayı Visual Studio Yükleyicisi.
 
@@ -58,7 +58,7 @@ Bir yükleme yapılandırma dosyasını içeri aktarmaya hazırsanız aşağıda
 
 1. Dosyayı Visual Studio Yükleyicisi.
 
-1. Ürün kartında Diğer düğmesini **ve** ardından Yapılandırmayı içeri **aktar'ı seçin.**
+1. Ürün kartında Diğer düğmesini ve ardından **Yapılandırmayı** içeri **aktar'ı seçin.**
 
 1. İçeri aktarmasını istediğiniz .vsconfig dosyasını bulun ve ardından Ayrıntıları gözden **geçir'i seçin.**
 
@@ -68,9 +68,9 @@ Bir yükleme yapılandırma dosyasını içeri aktarmaya hazırsanız aşağıda
 
 ## <a name="automatically-install-missing-components"></a>Eksik bileşenleri otomatik olarak yükleme
 
-**Visual Studio 2019'daki** yeni sürümü: Çözüm kök dizininize bir .vsconfig dosyası kaydedecek ve ardından bir çözüm Visual Studio, hangi bileşenlerin eksik olduğunu otomatik olarak algılar ve bunları yüklemenizi istenir.
+**Visual Studio 2019'daki** yeni sürümü: Çözüm kök dizininize bir .vsconfig dosyası kaydedecek ve ardından bir çözüm Visual Studio hangi bileşenlerin eksik olduğunu otomatik olarak algılar ve bunları yüklemenizi istenir.
 
-![Çözüm Gezgini bileşen önerir](../install/media/vs-2019/solution-explorer-config-file.png)
+![Çözüm Gezgini ek bileşenler önerir](../install/media/vs-2019/solution-explorer-config-file.png)
 
 Ayrıca, bir .vsconfig dosyasını dosyanın sağ tarafından Çözüm Gezgini.
 

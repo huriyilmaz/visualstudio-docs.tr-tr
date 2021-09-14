@@ -1,6 +1,6 @@
 ---
-title: Spy + + kullanma | Microsoft Docs
-description: Spy + + (SPYXX.EXE), sistemin işlemlerinin, iş parçacıklarının, pencerelerin ve pencere iletilerinin grafik görünümünü sağlar. İlgili makalelerin bağlantıları için buraya bakın.
+title: Spy++ | Microsoft Docs
+description: Spy++ (SPYXX.EXE) size sistemin işlemlerinin, iş parçacıklarının, pencerelerin ve pencere iletilerinin grafiksel bir görünümünü sağlar. İlgili makalelerin bağlantıları için buraya bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,31 +14,31 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 4811bcd95b7d99ed78544e68394887d67e8a0c9d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122090219"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627813"
 ---
 # <a name="using-spy"></a>Spy++ Kullanma
-Spy + + (SPYXX.EXE), sistemin işlemlerinin, iş parçacıklarının, pencerelerin ve pencere iletilerinin grafik görünümünü sağlayan, Win32 tabanlı bir yardımcı programdır. Spy + + Yardımı 'nın bu bölümü aşağıdaki Yardım konularını içerir:
+Spy++ (SPYXX.EXE), sistemin işlemlerine, iş parçacıklarına, pencerelerine ve pencere iletilerine grafiksel bir görünüm veren Win32 tabanlı bir yardımcı programdır. Spy++ Yardımı'nın bu bölümü aşağıdaki yardım konularını içerir:
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Spy + + tanıtımı](../debugger/introducing-spy-increment.md) Spy + + aracıyla görüntülenebilecek bilgi türlerini açıklar.
+ [Spy++ tanıtımı](../debugger/introducing-spy-increment.md) Spy++ aracıyla görüntüleyebilirsiniz bilgi türlerini açıklar.
 
- [Nasıl yapılır: Spy + + başlatma](../debugger/how-to-start-spy-increment.md) Araçlar menüsünden Spy + + ' un nasıl başlatılacağını açıklar.
+ [Nasıl: Spy++ Başlatma](../debugger/how-to-start-spy-increment.md) Araçlar menüsünden Spy++ başlatmayı açıklar.
 
- [Spy + + araç çubuğu](../debugger/spy-increment-toolbar.md) Spy + + araç çubuğunda kullanılabilen komutları açıklar.
+ [Spy++ Araç Çubuğu](../debugger/spy-increment-toolbar.md) Spy++ araç çubuğunda kullanılabilen komutları açıklar.
 
- [Nasıl yapılır: Spy + + görünümlerini görüntüleme](../debugger/how-to-display-spy-increment-views.md) Windows görünümünü görüntüleme, iletiler görünümü, süreçler görünümü ve iş parçacıkları görünümü.
+ [Nasıl: Spy++ Görünümlerini Görüntüleme](../debugger/how-to-display-spy-increment-views.md) İletiler görünümü Windows, İşlemler görünümü ve İş Parçacıkları görünümünü görüntüleme.
 
- [Nasıl yapılır: görünümü yenileme](../debugger/how-to-refresh-the-view.md) Yenile komutunu açıklar.
+ [Nasıl: Görünümü Yenileme](../debugger/how-to-refresh-the-view.md) Yenile komutunu açıklar.
 
- [Nasıl yapılır: yazı tiplerini değiştirme](../debugger/how-to-change-fonts.md) Bir görünümün görüntülenme şeklini nasıl değiştirileceğini açıklar.
+ [Nasıl kullanılır: Yazı Tiplerini Değiştirme](../debugger/how-to-change-fonts.md) Bir görünümün görüntülenme yolunun nasıl değiştirnip değiştirilemeyeceklerini açıklar.
 
- [Nasıl yapılır: Spy + + ağaçlarını genişletme ve daraltma](../debugger/how-to-expand-and-collapse-spy-increment-trees.md) Bir görünümün nasıl düzenleneceğini açıklar.
+ [Nasıl: Spy++ Ağaçlarını Genişletme ve Daraltma](../debugger/how-to-expand-and-collapse-spy-increment-trees.md) Görünümü işlemeyi açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Spy + + görünümleri](../debugger/spy-increment-views.md) Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.
+ [Spy++ Görünümleri](../debugger/spy-increment-views.md) Pencerelerin, iletilerin, işlemlerin ve iş parçacıklarının Spy++ ağaç görünümlerini açıklar.
 
- [Spy + + başvurusu](../debugger/spy-increment-reference.md) Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.
+ [Spy++ Başvurusu](../debugger/spy-increment-reference.md) Her Spy++ menüsünü ve iletişim kutusunu açıklayan bölümler içerir.

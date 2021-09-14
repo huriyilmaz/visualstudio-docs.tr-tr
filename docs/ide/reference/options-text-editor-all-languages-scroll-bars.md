@@ -1,6 +1,6 @@
 ---
-title: Seçenekler, metin düzenleyici, tüm diller, kaydırma çubukları
-description: Visual Studio içindeki kod düzenleyici kaydırma çubuklarının varsayılan davranışını değiştirmek için tüm diller bölümündeki kaydırma çubukları sayfasını nasıl kullanacağınızı öğrenin.
+title: Seçenekler, Metin Düzenleyici, Tüm Diller, Kaydırma Çubukları
+description: Kod düzenleyicisi kaydırma çubuklarının varsayılan davranışını değiştirmek için Tüm Diller bölümündeki Kaydırma Çubukları sayfasını kullanmayı Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 10/25/2018
 ms.topic: reference
@@ -36,59 +36,59 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 111fd2231d775b4c69c7510568c8a9aea5e97188
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122056283"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627201"
 ---
-# <a name="options-text-editor-all-languages-scroll-bars"></a>Seçenekler, metin düzenleyici, tüm diller, kaydırma çubukları
-Bu iletişim kutusu, kod Düzenleyicisi kaydırma çubuğunun varsayılan davranışını değiştirmenize olanak sağlar. Bu seçenekleri göstermek için, **Araçlar** menüsünden **Seçenekler** ' i seçin. **Metin Düzenleyicisi** klasörü Içinde **tüm diller** alt klasörünü genişletin ve ardından **kaydırma çubukları**' nı seçin.
+# <a name="options-text-editor-all-languages-scroll-bars"></a>Seçenekler, Metin Düzenleyici, Tüm Diller, Kaydırma Çubukları
+Bu iletişim kutusu, kod düzenleyicisi kaydırma çubuğunun varsayılan davranışını değiştirmenizi sağlar. Bu seçenekleri görüntülemek için Araçlar **menüsünden** **Seçenekler'i** seçin. Metin Düzenleyici **klasöründe** Tüm Diller alt **klasörünü genişletin** ve Ardından Kaydırma Çubukları'ı **seçin.**
 
 > [!CAUTION]
-> Bu sayfa tüm geliştirme dillerinin varsayılan seçeneklerini ayarlar. Bu iletişim kutusundaki bir seçeneğin sıfırlanması, burada seçili olan seçimlerin her birinde kaydırma çubuklarının seçeneklerini sıfırlayacaktır. Yalnızca bir dile ait metin düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörünü genişletin ve seçenek sayfalarını seçin.
+> Bu sayfa tüm geliştirme dilleri için varsayılan seçenekleri ayarlar. Bu iletişim kutusundaki bir seçeneğin sıfırlanması, tüm dillerdeki Kaydırma Çubukları seçeneklerini burada seçilen seçeneklere sıfırlar. Yalnızca bir dil için Metin Düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörlerini genişletin ve seçenek sayfalarını seçin.
 
 ## <a name="show-horizontal-scroll-bar"></a>Yatay kaydırma çubuğunu göster
 
-Seçildiğinde, düzenleyicinin görüntüleme alanının dışında kalan öğeleri görüntülemek için yan yana kaydırma yapmanıza olanak sağlayan bir yatay kaydırma çubuğu görüntüler. Yatay kaydırma çubukları kullanılamıyorsa, kaydırma yapmak için imleç tuşlarını kullanabilirsiniz.
+Seçildiğinde, Düzenleyici'nin görüntüleme alanı dışına düşen öğeleri görüntülemek için yan yana kaydırma sağlayan bir yatay kaydırma çubuğu görüntüler. Yatay kaydırma çubuğu kullanılamıyorsa, kaydırmak için imleç tuşlarını kullanabilirsiniz.
 
 ## <a name="show-vertical-scroll-bar"></a>Dikey kaydırma çubuğunu göster
 
-Seçildiğinde, düzenleyicinin görüntüleme alanının dışında kalan öğeleri görüntülemek için yukarı ve aşağı kaydırma yapmanıza olanak sağlayan dikey bir kaydırma çubuğu görüntüler. Dikey kaydırma çubukları yoksa, kaydırmak için sayfa yukarı, sayfa aşağı ve imleç tuşlarını kullanabilirsiniz.
+Seçildiğinde, Düzenleyici'nin görüntüleme alanı dışına düşen öğeleri görüntülemek için yukarı ve aşağı kaydırma sağlayan bir dikey kaydırma çubuğu görüntüler. Dikey kaydırma çubuğu kullanılamıyorsa sayfa yukarı, Sayfa Aşağı ve imleç tuşlarını kullanarak kaydırabilirsiniz.
 
 ## <a name="display"></a>Göster
 
-### <a name="show-annotations-over-vertical-scroll-bar"></a>Dikey kaydırma çubuğunun üzerinde ek açıklamaları göster
+### <a name="show-annotations-over-vertical-scroll-bar"></a>Ek açıklamaları dikey kaydırma çubuğu üzerinde gösterme
 
-Dikey kaydırma çubuğunun aşağıdaki ek açıklamaları gösterilip gösterilmeyeceğini seçin:
+Dikey kaydırma çubuğunun aşağıdaki ek açıklamaları gösterip gösterir olmadığını seçin:
 
 - değişiklikler
 - işaretler
 - hatalar
-- şapka işareti konumu
+- caret konumu
 
 > [!TIP]
-> **Işaretleri göster** seçeneği kesme noktaları ve yer işaretleri içerir.
+> İşaretleri **göster** seçeneği kesme noktaları ve yer işaretleri içerir.
 
-Büyük bir kod dosyası açarak ve dosyadaki birkaç yerde oluşan bazı metinleri değiştirerek deneyin. Kaydırma çubuğu, değişikliklerinizin etkisini gösterir. bu sayede, sahip olmayan bir şeyi değiştirdiyseniz değişikliklerinizi geri alabilirsiniz.
+Büyük bir kod dosyası açarak ve dosyanın çeşitli yerlerinde oluşan bazı metinleri değiştirerek bunu deneyin. Kaydırma çubuğu, değiştirmelerin etkisini gösterir. Bu nedenle, değiştirme yapmamanız gereken bir şeyi değiştirmeniz gerekirse değişikliklerinizi geri çıkarabilirsiniz.
 
-Kod düzenlenirken çeşitli renklerin ve simgelerin anlamı olan [Gelişmiş kaydırma çubuğu](/archive/blogs/cdnstudents/visual-studio-tips-and-tricks-enhanced-scroll-bar) blog gönderisine bakın.
+Kodu [düzenlerken çeşitli renklerin ve](/archive/blogs/cdnstudents/visual-studio-tips-and-tricks-enhanced-scroll-bar) simgelerin ne anlama geldiğinden ilgili Gelişmiş kaydırma çubuğu blog gönderisi'ne bakın.
 
 ## <a name="behavior"></a>Davranış
 
-Kaydırma çubuğunun iki modu vardır: çubuk modu ve eşleme modu.
+Kaydırma çubuğunun iki modu vardır: çubuk modu ve harita modu.
 
-### <a name="use-bar-mode-for-vertical-scroll-bar"></a>Dikey kaydırma çubuğu için çubuk modunu kullan
+### <a name="use-bar-mode-for-vertical-scroll-bar"></a>Dikey kaydırma çubuğu için çubuk modunu kullanma
 
-*Çubuk modu* , kaydırma çubuğundaki ek açıklama göstergelerini görüntüler. Kaydırma çubuğuna tıkladığınızda sayfa yukarı veya aşağı kaydırılır, ancak dosyadaki bu konuma atlamaz.
+*Çubuk modu,* kaydırma çubuğunda ek açıklama göstergeleri görüntüler. Kaydırma çubuğuna tıklarsanız sayfa yukarı veya aşağı kaydırılabilir ancak dosyada bu konuma atlanmaz.
 
-### <a name="use-map-mode-for-vertical-scroll-bar"></a>Dikey kaydırma çubuğu için eşleme modunu kullan
+### <a name="use-map-mode-for-vertical-scroll-bar"></a>Dikey kaydırma çubuğu için harita modunu kullanma
 
-*Harita modunda*, kaydırma çubuğundaki bir konuma tıkladığınızda, imleç yalnızca bir sayfada yukarı veya aşağı kaydırmak yerine dosyada bu konuma atlar. Kod satırları, kaydırma çubuğunda küçük olarak gösterilir. Eşleme sütununun ne kadar geniş olduğunu seçerek **kaynak genel bakış**' da bir değer seçebilirsiniz. İşaretçiyi haritada tuttuğunuz zaman kodun daha büyük bir önizlemesini etkinleştirmek için **Önizleme araç Ipucunu göster** seçeneğini belirleyin. Daraltılmış bölgeler farklı şekilde genişleyebilir ve çift tıkladığınızda genişletilir.
+Harita *modunda,* kaydırma çubuğundaki bir konuma tıklarsanız, imleç bir sayfayı yukarı veya aşağı kaydırmak yerine dosyada o konuma atlar. Kayan çubukta kod satırları gösterilir. Kaynak genel bakış'ta bir değer seçerek eşleme sütununu ne kadar geniş **olduğunu seçebilirsiniz.** İşaretçiyi haritada dinleniyorken kodun daha büyük bir önizlemesini etkinleştirmek için Önizleme Araç **İpucu'nı Göster seçeneğini** belirleyin. Daraltılmış bölgeler farklı şekilde gölgelidir ve çift tıklarken genişler.
 
 > [!TIP]
-> **Kaynak genel bakışını** **kapalı** olarak ayarlayarak, eşleme modunda küçük kod görünümünü kapatabilirsiniz. **Önizleme araç Ipucunu göster** seçiliyse, işaretçinizi kaydırma çubuğunun üzerine getirdiğinizde bu konumdaki kodun önizlemesini görmeye devam edersiniz ve imleç, tıkladığınızda dosyada bu konuma atlar.
+> Kaynak genel bakış ayarını Kapalı olarak ayarerek harita modunda kod görünümünü **kapatabilirsiniz.**  Önizleme **Araç** İpucu göster seçeneği seçiliyse, işaretçinizi kaydırma çubuğunun üzerine yerleştirerek ilgili konumda kodun önizlemesini görmeye devam edersiniz ve imleç, tıklarsanız dosyada o konuma atlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: kaydırma çubuğunu özelleştirme](../how-to-track-your-code-by-customizing-the-scrollbar.md)
+- [Nasıl: Kaydırma çubuğunu özelleştirme](../how-to-track-your-code-by-customizing-the-scrollbar.md)

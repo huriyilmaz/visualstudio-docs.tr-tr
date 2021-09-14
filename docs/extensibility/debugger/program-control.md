@@ -1,6 +1,6 @@
 ---
 title: Program Denetimi | Microsoft Docs
-description: İş parçacıklarını yürütme Visual Studio adımlama, devam etme ve askıya alma/devam etme gibi program düzeyinde oluşan hata ayıklama yordamları hakkında bilgi alın.
+description: İş parçacıklarını yürütme, Visual Studio ve askıya alma/devam etme gibi program düzeyinde oluşan hata ayıklama yordamları hakkında bilgi alın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6039cff32588296e861a83126fc3541bc49c43f7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122080188"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627644"
 ---
 # <a name="program-control"></a>Program denetimi
 Hata Visual Studio, aşağıdaki adımlama ve devam eden yordamların hepsi program düzeyinde gerçekleşir:

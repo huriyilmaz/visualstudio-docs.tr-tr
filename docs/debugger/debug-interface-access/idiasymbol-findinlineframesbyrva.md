@@ -1,6 +1,6 @@
 ---
-description: 'IDiaSymbol:: findInlineFramesByRVA, bir istemcinin belirtilen göreli sanal adreste (RVA) tüm satır içi çerçeveler üzerinde yineleme yapmasına izin veren bir sabit listesi alır.'
-title: 'IDiaSymbol:: findInlineFramesByRVA | Microsoft Docs'
+description: IDiaSymbol::findInlineFramesByRVA, istemcinin belirli bir göreli sanal adresteki (RVA) tüm satır içi çerçeveler arasında yeniden işlemde bulunarak bir sabit adı alır.
+title: IDiaSymbol::findInlineFramesByRVA | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,14 +13,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: ce4ae1bdafd5189f40d780fa17550d9113e33bb4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122091071"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626733"
 ---
 # <a name="idiasymbolfindinlineframesbyrva"></a>IDiaSymbol::findInlineFramesByRVA
-Bir istemcinin belirtilen göreli sanal adreste (RVA) bulunan tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.
+bir istemcinin belirtilen bir göreli sanal adresteki (RVA) tüm satır içi çerçeveler üzerinde aynı şekilde devamsını sağlayan bir sabit adı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,14 +33,14 @@ HRESULT findInlineFramesByRVA (    DWORD             rva,
 #### <a name="parameters"></a>Parametreler
  `rva`
 
-'ndaki Adresi RVA olarak belirtir.
+[in] Adresi RVA olarak belirtir.
 
  `ppResult`
 
-dışı `IDiaEnumSymbols` Alınan çerçevelerin listesini içeren bir nesnesi tutar.
+[out] Alınan `IDiaEnumSymbols` çerçevelerin listesini içeren bir nesneyi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

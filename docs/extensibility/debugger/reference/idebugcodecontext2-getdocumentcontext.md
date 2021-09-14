@@ -1,6 +1,6 @@
 ---
 description: Bu kod bağlamına karşılık gelen belge bağlamını alır.
-title: IDebugCodeContext2::GetDocumentContext | Microsoft Docs
+title: 'IDebugCodeContext2:: GetDocumentContext | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9aadc89257d86bac9432026d368c1f84e963152a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122079837"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627452"
 ---
 # <a name="idebugcodecontext2getdocumentcontext"></a>IDebugCodeContext2::GetDocumentContext
-Bu kod bağlamına karşılık gelen belge bağlamını alır. Belge bağlamı, kaynak dosyada bu yönergeyi oluşturan kaynak koda karşılık gelen bir konumu temsil eder.
+Bu kod bağlamına karşılık gelen belge bağlamını alır. Belge bağlamı, kaynak dosyadaki, bu yönergeyi oluşturan kaynak koda karşılık gelen bir konumu temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,13 +43,13 @@ int GetDocumentContext(
 
 ## <a name="parameters"></a>Parametreler
 `ppSrcCxt`\
-[out] Kod [bağlamına karşılık gelen IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) nesnesini döndürür. `S_OK`döndürülürse, bu, olmayan olması `null` gerekir.
+dışı Kod bağlamına karşılık gelen [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) nesnesini döndürür. `S_OK`Döndürülürse, altı olmamalıdır `null` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Hata ayıklama altyapısı, örneğin, kod bağlamının ilişkili bir kaynak konumuna sahip olması gibi bir `E_FAIL` `out` hata kodu `null` getirmalıdır.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Hata ayıklama altyapısı, parametre gibi bir hata kodu döndürmelidir `E_FAIL` . Örneğin, `out` `null` kod bağlamı ilişkili kaynak konumu olmadığında.
 
 ## <a name="remarks"></a>Açıklamalar
- Genellikle, belge bağlamı bir kaynak dosyada konum olarak, kod bağlamı ise yürütme akışındaki bir kod yönergesi konumu olarak düşünebilirsiniz.
+ Genellikle, belge bağlamı kaynak dosyada bir konum olarak düşünülebilir, ancak kod bağlamı yürütme akışındaki kod yönergesinin bir konumudur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

@@ -1,6 +1,6 @@
 ---
-title: Windows Installer ile vspackage kaldırılıyor | Microsoft Docs
-description: Windows Yükleyici, yükleme işlemini geri alarak VSPackage 'ı kaldırabilir. Windows Installer paketinizdeki özel eylemlerle nasıl başa çıkılacağınızı öğrenin.
+title: Windows Installer ile VSPackage'ı kaldırma | Microsoft Docs
+description: Windows Yükleyici, yüklemeyi geri alınarak VSPackage'nızı kaldırabilirsiniz. Windows Installer paketinizin özel eylemleriyle nasıl Windows öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,30 +16,30 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: e1c616b366e18cc6bba0bb9eb2906193022a6289
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122158625"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627314"
 ---
 # <a name="uninstalling-a-vspackage-with-windows-installer"></a>Windows Installer ile VSPackage Kaldırma
-çoğu bölüm için Windows Installer vspackage 'ı yalnızca "geri alma" ile vspackage 'ı yükleme işlemini kaldırabilir. [Yükleme işleminden sonra çalıştırılması gereken komutlarda](../../extensibility/internals/commands-that-must-be-run-after-installation.md) açıklanan özel eylemler, bir kaldırma işleminden sonra çalıştırılmalıdır. devenv.exe çağrıları hem yükleme hem de kaldırma için InstallFinalize standart eyleminden hemen önce gerçekleştiğinden, CustomAction ve InstallExecuteSequence tablo girdileri her iki durumda da sunar.
+Çoğu bölümde, Windows Yükleyicisi VSPackage'nızı yüklemek için ne yaptığını "geri alarak" VSPackage'nızı kaldırabilirsiniz. Yüklemeden Sonra [Çalıştırılacak Komutlar'da tartışılan özel](../../extensibility/internals/commands-that-must-be-run-after-installation.md) eylemler de bir kaldırmadan sonra çalıştırılacaktır. devenv.exe yükleme ve kaldırma için standart InstallFinalize eylemden hemen önce oluştuğu için CustomAction ve InstallExecuteSequence tablo girişleri her iki durum için de kullanılır.
 
 > [!NOTE]
-> `devenv /setup`BIR MSI paketini kaldırdıktan sonra çalıştırın.
+> MSI `devenv /setup` paketini kaldırdikten sonra çalıştırın.
 
- genel bir kural olarak, bir Windows Installer paketine özel eylemler eklerseniz, bu işlemleri kaldırma ve geri alma sırasında işlemeniz gerekir. VSPackage 'a kendi kendine kaydolabilmeniz için özel eylemler eklerseniz, örneğin kaydını silmek için özel eylemler eklemeniz gerekir.
-
-> [!NOTE]
-> Bir kullanıcının VSPackage 'ı yüklemesi ve ardından tümleşik olduğu sürümlerini kaldırması mümkündür [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bağımlılıkları olan kodu çalıştıran özel eylemleri ortadan kaldırarak VSPackage 'ın kaldırma işleminin bu senaryoda çalıştığından emin olabilirsiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
-
-## <a name="handling-launch-conditions-at-uninstall-time"></a>Kaldırma sırasında başlatma koşullarını işleme
- LaunchConditions standart eylemi, koşullar karşılanmazsa hata iletilerini göstermek için LaunchCondition tablosunun satırlarını okur. Başlatma koşulları genellikle sistem gereksinimlerinin karşılandığından emin olmak için kullanıldığında, kaldırma işlemi sırasında başlatma koşullarını `NOT Installed` LaunchCondition tablosunun LaunchConditions satırına ekleyerek genellikle atlayabilirsiniz.
-
- Diğer bir seçenek de `OR Installed` kaldırma sırasında önemli olmayan başlatma koşullarına eklemektir. Bu, kaldırma işlemi sırasında koşulun her zaman doğru olmasını sağlar ve bu nedenle başlatma koşulu hata iletisini görüntülemez.
+ Genel bir kural olarak, bir Windows Yükleyici paketine özel eylemler eklersiniz, kaldırma ve geri alma sırasında bu eylemleri işlemeniz gerekir. VSPackage'nızı kendi kendine kaydetmek için özel eylemler eklersiniz, örneğin, kaydını silen özel eylemler de eklemeniz gerekir.
 
 > [!NOTE]
-> `Installed`özelliği, vspackage 'ın sistemde zaten yüklü olduğunu algıladığında ayarlar Windows Installer.
+> Kullanıcının VSPackage'nızı yüklemesi ve ardından ile [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tümleştirilen sürümlerini kaldırması mümkündür. üzerinde bağımlılıklarla kod çalıştıran özel eylemleri ortadan kaldırarak VSPackage kaldırma işleminizin bu senaryoda çalışmalarına yardımcı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] olur.
+
+## <a name="handling-launch-conditions-at-uninstall-time"></a>Kaldırma Zamanında Başlatma Koşullarını İşleme
+ LaunchConditions standart eylemi, koşulların karşılanmazsa hata iletilerini göstermek için LaunchCondition tablosu satırlarını okur. Başlatma koşulları genellikle sistem gereksinimlerinin karşı olduğundan emin olmak için kullanılırken, launchCondition tablonun LaunchConditions satırına koşul ekleyerek, kaldırma sırasında başlatma koşullarını `NOT Installed` atlayabilirsiniz.
+
+ Bir alternatif, kaldırma `OR Installed` sırasında önemli olan başlatma koşullarına eklemektir. Bu, kaldırma sırasında koşulun her zaman doğru olması ve bu nedenle başlatma koşulu hata iletisini görüntülemesini sağlar.
+
+> [!NOTE]
+> `Installed`, VSPackage Windows nın sistemde zaten yüklü olduğunu algılayan Yükleyici kümelerini ayarlayan özelliğidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Windows Installer](/previous-versions/ee231230(v=vs.100))

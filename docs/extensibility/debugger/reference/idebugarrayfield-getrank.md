@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a35563f55824ae95269c944f34f87a8af2222a08
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122145490"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627596"
 ---
 # <a name="idebugarrayfieldgetrank"></a>IDebugArrayField::GetRank
 Dizinin boyutlarının derecesini veya sayısını alır.
@@ -49,7 +49,7 @@ int GetRank(
  Başarılı olursa, S_OK; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir dizinin sıralaması, boyut sayısına karşılık gelen bir değerdir. C++ ve C# içinde çok boyutlu diziler aslında dizi dizileridir ve bu nedenle yalnızca tek boyutlu bir dizi olarak kabul edilir (ve yöntem her zaman `GetRank` 1 döndürür). 'de ise, çok boyutlu diziler farklı şekilde iş alır ve böyle bir dizinin sıralaması boyut sayısını gösterir (ve yöntem her zaman boyut [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] `GetRank` sayısını döndürür).
+ Bir dizinin derecesi boyut sayısına karşılık gelen bir değerdir. C++ ve C# içinde çok boyutlu diziler aslında dizi dizileridir ve bu nedenle yalnızca tek boyutlu bir dizi olarak kabul edilir (ve yöntem her zaman `GetRank` 1 döndürür). 'de ise, çok boyutlu diziler farklı şekilde iş alır ve böyle bir dizinin sıralaması boyut sayısını gösterir (ve yöntem her zaman boyut [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] `GetRank` sayısını döndürür).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

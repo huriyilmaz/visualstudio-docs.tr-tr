@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 78308844f64e87c95a41b662c2055f770809f262
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122125302"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627357"
 ---
 # <a name="module_symbol_search_info"></a>MODULE_SYMBOL_SEARCH_INFO
 
@@ -57,9 +57,9 @@ Arama yolu ve sonuçları tek bir dizede birlenmiş.
 
 Bu yapı [GetSymbolInfo yöntemine yapılan bir çağrıdan](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) döndürülür.
 
-Alan `bstrVerboseSearchInfo` boş yoksa, arama yapılan yolların listesini ve bu aramanın sonuçlarını içerir. Liste bir yol ile biçimlendirildi, ardından üç nokta ("..." ) ve ardından sonuç geldi. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (satır başı/satır besleme) çifti ile ayrılır. Desen şu şekildedir:
+Alan `bstrVerboseSearchInfo` boş yoksa, arama yapılan yolların listesini ve bu aramanın sonuçlarını içerir. Liste bir yol, ardından üç nokta ("..." ) ve ardından sonuç ile biçimlendirildi. Birden fazla yol sonuç çifti varsa, her çift bir "\r\n" (satır başı/satır besleme) çifti ile ayrılır. Desen şu şekildedir:
 
-\<path>...\<result>\r\n\<path> ... \<result> \<path>\r\n...\<result>
+\<path>...\<result>\r\n... \<path> \<result> \<path>\r\n...\<result>
 
 Son girdinin bir \r\n unutmayın.
 

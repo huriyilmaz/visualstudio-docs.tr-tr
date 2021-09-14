@@ -1,6 +1,6 @@
 ---
-title: CvCreateMarkerSeriesWithCodePageA İşlev | Microsoft Docs
-description: Eşzamanlılık Görselleştirici SDK'sı işlevi CvCreateMarkerSeriesWithCodePageA (C kitaplığı) için başvuru bilgilerine bakın.
+title: CvCreateMarkerSeriesWithCodePageA Işlevi | Microsoft Docs
+description: Eşzamanlılık Görselleştiricisi SDK işlevi CvCreateMarkerSeriesWithCodePageA (C Kitaplığı) için başvuru bilgilerine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 187cc85b3bcdb552a491dd20e866a9f02e025fd2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122084538"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627045"
 ---
 # <a name="cvcreatemarkerserieswithcodepagea-function"></a>CvCreateMarkerSeriesWithCodePageA işlevi
-Belirli bir sağlayıcı ve belirtilen kod sayfası için işaretçi serisi oluşturur. Bu işlev, işaretçi API'si ANSI işlevleri tarafından yazılan metin için kod sayfasını açıkça belirtmek için kullanılabilir. Kod sayfasını ayarlama, izlemenin yakalanıp farklı yerel ayarlara/dillere sahip farklı makinelerde analiz olması durumunda yararlı olabilir. Varsayılan olarak GetACP() işlevi tarafından döndürülen kod sayfası kullanılır.
+Belirli bir sağlayıcı ve belirtilen kod sayfası için işaretleyici serisi oluşturur. Bu işlev, işaret API 'SI işlevleri tarafından yazılan metin için kod sayfasını açıkça belirtmek üzere kullanılabilir. Kod sayfasının ayarlanması, izlemenin yakalanıp farklı yerel ayarlara/dile sahip farklı makinelerde çözümlenme olasılığına karşı yararlı olabilir. Varsayılan olarak, GetACP () işlevi tarafından döndürülen kod sayfası kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,19 +37,19 @@ HRESULT CvCreateMarkerSeriesWithCodePageA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pProvider` Daha önce CvInitProvider tarafından başlatılan provider nesnesi. NULL olamaz.
+ `pProvider` Sağlayıcı nesnesi daha önce CvInitProvider tarafından başlatıldı. NULL olamaz.
 
- `pSeriesName` İşaretçi serisi adı. NULL olamaz ancak boş dizeye izin verilir.
+ `pSeriesName` İşaretleyici seri adı. NULL olamaz, ancak boş dizeye izin verilir.
 
  `nTextCodePage` Geçerli kod sayfası.
 
- `ppMarkerSeries` İşaretçi serisi bağlamını depolanacak çıkış değişkeninin adresi. NULL olamaz.
+ `ppMarkerSeries` İşaretleyici serisi bağlamını depolayacak bir çıktı değişkeninin adresi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- S_OK seri başarıyla oluşturulduğunda veya herhangi bir hata olduğunda hata kodu. Hata koşullarını kontrol etmek için BAŞARILI/BAŞARILI makroları kullanın.
+ İşaretleyici serisi başarıyla oluşturulduğunda S_OK veya herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

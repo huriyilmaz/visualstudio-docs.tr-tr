@@ -19,11 +19,11 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 49e2b4196ce6ac08177aa9a4b3c7b484de8194c2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122068884"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627056"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>MSBuild proje dosyası şema başvurusu
 
@@ -59,8 +59,8 @@ MSBuild proje dosyasındaki şema bağlantısı Visual Studio 2017 ve sonrasınd
 |[Target öğesi (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *Görev*|AfterTargets<br /><br /> BeforeTargets<br /><br /> Koşul<br /><br /> Bağımlıdsonhedefleri<br /><br /> Girişler<br /><br /> "Pduperepteçıkışları<br /><br /> Name<br /><br /> Çıkışlar<br /><br /> Döndürülenler|
 |[Hedefin görev öğesi (MSBuild)](../msbuild/task-element-msbuild.md)|Çıktı|Koşul<br /><br /> ContinueOnError<br /><br /> *Parametre*|
 |[UsingTask görev öğesi (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*Veriler*|Değerlendir|
-|[UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup<br /><br /> Görev|AssemblyFile & lt<br /><br /> AssemblyName<br /><br /> Koşul<br /><br /> TaskFactory<br /><br /> Silinecek|
-|[Ne zaman öğesi (MSBuild)](../msbuild/when-element-msbuild.md)|Seçin:<br /><br /> ItemGroup<br /><br /> PropertyGroup|Koşul|
+|[UsingTask öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup<br /><br /> Görev|Assemblyfile<br /><br /> Assemblyname<br /><br /> Koşul<br /><br /> Taskfactory<br /><br /> Görevadı|
+|[When öğesi (MSBuild)](../msbuild/when-element-msbuild.md)|Seçin:<br /><br /> Itemgroup<br /><br /> Propertygroup|Koşul|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

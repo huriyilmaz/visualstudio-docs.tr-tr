@@ -1,6 +1,6 @@
 ---
 title: Visual Studio Şablon Şeması Başvurusu | Microsoft Docs
-description: . Vstemplate dosyalarındaki XML öğelerini inceleyerek Visual Studio şablon şeması hakkında bilgi edinin.
+description: . vstemplate dosyalarındaki XML öğelerini inceleyerek Visual Studio şablon şeması hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
@@ -16,20 +16,20 @@ manager: jmartens
 ms.workload:
 - vssdk
 ms.openlocfilehash: 423e92eef6f9b712bd7705acbf9d95d5a01f44f4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062453"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627249"
 ---
-# <a name="visual-studio-template-schema-reference"></a>Visual Studio Şablon Şeması Başvurusu
+# <a name="visual-studio-template-schema-reference"></a>Visual Studio şablon şeması başvurusu
 Bu bölüm, proje şablonları, öğe şablonları ve Başlangıç setleri için meta verileri depolayan dosyalar olan *. vstemplate* dosyalarındaki XML öğeleri hakkında bilgiler içerir.
 
  Özel *. vstemplate* dosyalarını doğrulamak için *vstemplate. xsd* ' de kullanabilirsiniz. Bu dosya, adresinde bulunabilir *. \\ \<Visual Studio installation folder> \Xml\Schemas\1033\vstemplate.xsd*.
 
 |Öğe|Alt Öğeler|Öznitelikler|
 |-------------|--------------------|----------------|
-|[AppliesTo](../extensibility/appliesto-element-visual-studio-templates.md)|Yok|Yok|
+|[AppliesTo](../extensibility/appliesto-element-visual-studio-templates.md)|Hiçbiri|Hiçbiri|
 |[Bütünleştirilmiş kod (şablon)](../extensibility/assembly-element-visual-studio-templates.md)|--|--|
 |[Bütünleştirilmiş kod (sihirbaz uzantısı)](../extensibility/assembly-element-visual-studio-template-wizard-extension.md)|--|--|
 |[BuildProjectOnload](../extensibility/buildprojectonload-element-visual-studio-templates.md)|--|--|
@@ -56,7 +56,7 @@ Bu bölüm, proje şablonları, öğe şablonları ve Başlangıç setleri için
 |[Project](../extensibility/project-element-visual-studio-templates.md)|Klasör<br /><br /> ProjectItem|Dosya<br /><br /> TargetFileName<br /><br /> ReplaceParameters|
 |[ProjectCollection](../extensibility/projectcollection-element-visual-studio-templates.md)|ProjectTemplateLink<br /><br /> SolutionFolder|--|
 |[ProjectItem (öğe şablonları)](../extensibility/projectitem-element-visual-studio-item-templates.md)|--|SubType<br /><br /> CustomTool<br /><br /> ItemType<br /><br /> ReplaceParameters<br /><br /> TargetFileName|
-|[ProjectItem (proje şablonları)](../extensibility/projectitem-element-visual-studio-project-templates.md)|--|TargetFileName<br /><br /> ReplaceParameters<br /><br /> OpenInEditor<br /><br /> OpenOrder<br /><br /> OpenInWebBrowser<br /><br /> OpenInHelpBrowser|
+|[projectıtem (Project şablonları)](../extensibility/projectitem-element-visual-studio-project-templates.md)|--|TargetFileName<br /><br /> ReplaceParameters<br /><br /> OpenInEditor<br /><br /> OpenOrder<br /><br /> OpenInWebBrowser<br /><br /> OpenInHelpBrowser|
 |[ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md)|--|--|
 |[ProjectTemplateLink](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|--|ProjectName|
 |[ProjectType](../extensibility/projecttype-element-visual-studio-templates.md)|--|--|

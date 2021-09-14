@@ -1,6 +1,6 @@
 ---
-description: Özel özniteliğin adı verilen özel öznitelik baytlarını edinir.
-title: 'IDebugCustomAttributeQuery2:: GetCustomAttributeByName | Microsoft Docs'
+description: Özel özniteliğin adına göre özel öznitelik baytlarını elde eder.
+title: IDebugCustomAttributeQuery2::GetCustomAttributeByName | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e20f4cba0d826a7a9b608f1fc56fde1a35ae54c0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122079421"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627447"
 ---
 # <a name="idebugcustomattributequery2getcustomattributebyname"></a>IDebugCustomAttributeQuery2::GetCustomAttributeByName
-Özel özniteliğin adı verilen özel öznitelik baytlarını edinir.
+Özel özniteliğin adına göre özel öznitelik baytlarını elde eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,23 +47,23 @@ int GetCustomAttributeByName(
 
 ## <a name="parameters"></a>Parametreler
 `pszCustomAttributeName`\
-'ndaki Aranacak özel özniteliğin adını içeren bir dize.
+[in] Arama için özel özniteliğin adını içeren bir dize.
 
 `ppBlob`\
 [in, out] Özel öznitelik baytları ile doldurulmuş bir dizi.
 
 `pdwLen`\
-[in, out] Dizide döndürülecek en fazla bayt sayısını belirtir `ppBlob` ve gerçekten diziye yazılan bayt sayısını döndürür.
+[in, out] Dizide döndüren en fazla bayt sayısını `ppBlob` belirtir ve aslında diziye yazılan bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, özel öznitelik yoksa S_OK döndürür veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK veya S_FALSE özniteliği yoksa bu değeri döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- `ppBlob`Kullanılabilir öznitelik baytları sayısını döndürmek için parametreyi null değere ayarlayın. Sonra bir dizi ayırın ve bu diziyi parametresi için geçirin `ppBlob` .
+ Kullanılabilir `ppBlob` öznitelik baytlarının sayısını döndüren parametreyi null değere ayarlayın. Ardından bir dizi ayırarak parametresi için bu diziyi `ppBlob` iletir.
 
- Öznitelik baytları özel özniteliğin ham verilerini temsil eder.
+ Öznitelik baytları, özel özniteliğin ham verilerini temsil eder.
 
- `ppBlob`Ve `pdwLen` parametreleri null bir değere ayarlanırsa, bu yöntem özel özniteliğin yalnızca mevcut olup olmadığını anlamak için kullanılabilir. Ancak, daha kolay bir alternatif, [ıcustomattributedefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md) yöntemini çağırmaktır.
+ ve `ppBlob` parametreleri `pdwLen` null değere ayarlanırsa, özel özniteliğin yalnızca mevcut olup olmadığını belirlemek için bu yöntem kullanılabilir. Ancak daha kolay bir alternatif de [IsCustomAttributeDefined yönteminin çağrılmaktır.](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)

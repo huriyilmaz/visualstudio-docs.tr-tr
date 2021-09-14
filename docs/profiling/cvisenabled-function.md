@@ -1,6 +1,6 @@
 ---
-title: CvIsEnabled İşlev | Microsoft Docs
-description: Eşzamanlılık Görselleştiricisi SDK'sı cvIsEnabled (C kitaplığı) işlevi için başvuru bilgilerine bakın.
+title: CvIsEnabled Işlevi | Microsoft Docs
+description: Eşzamanlılık Görselleştiricisi SDK işlevi CvIsEnabled (C Kitaplığı) için başvuru bilgilerine bakın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bb2e5bf40c038456853a06b9b43a9ee03d8e051
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122084525"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627027"
 ---
 # <a name="cvisenabled-function"></a>CvIsEnabled işlevi
-Herhangi bir oturumun belirtilen ETW sağlayıcısını etkinleştirip etkinleştirmemiş olduğunu belirler.
+Belirtilen ETW sağlayıcısını herhangi bir oturumun etkinleştirilip etkinleştirilmediğini belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,17 +41,17 @@ HRESULT CvIsEnabledEx(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `category` Kategori.
+ `category` Alan.
 
  `level` Önem düzeyi.
 
  `pProvider` Geçerli sağlayıcı nesnesi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- S_OK etkinse bu soruna neden olabilir. S_FALSE devre dışı bırakılmıştır. Hata varsa hata kodu. Hata koşullarını kontrol etmek için BAŞARILI makroyu kullanın ve ardından S_OK/S_FALSE.
+ Sağlayıcı Şu anda etkin ise S_OK. Sağlayıcı Şu anda devre dışıysa S_FALSE. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için başarısız makroyu kullanın ve ardından S_OK/S_FALSE kontrol edin.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üst bilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

@@ -1,6 +1,6 @@
 ---
 description: Bu arabirim bir dizi sembolünü veya türünü açıklar.
-title: IDebugArrayField | Microsoft Docs
+title: Ihata ayıklama Garrayfield | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6a14c4379abff21d97c5936914937f897942e010
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122145464"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627591"
 ---
 # <a name="idebugarrayfield"></a>IDebugArrayField
 Bu arabirim bir dizi sembolünü veya türünü açıklar.
@@ -30,27 +30,27 @@ Bu arabirim bir dizi sembolünü veya türünü açıklar.
 IDebugArrayField : IDebugContainerField
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Sembol sağlayıcısı bu arabirimi [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimini uygulayan aynı nesne üzerinde kullanır. Bu arabirim, dizi nesnelerini temsil eden bir uzmanlıktır.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Sembol sağlayıcısı, bu arabirimi [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimini uygulayan aynı nesne üzerinde uygular. Bu arabirim, dizi nesnelerini temsil eden bir özelleşmenin bir özelleştirmesi.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) bayrağını döndürürse [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabiriminden bu arabirimi almak için [QueryInterface](/cpp/atl/queryinterface) `FIELD_TYPE_ARRAY` kullanın.
+ [Getkinleştirilen d](../../../extensibility/debugger/reference/idebugfield-getkind.md) bayrağını döndürürse, bu arabirimi [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabiriminden elde etmek için [QueryInterface](/cpp/atl/queryinterface) kullanın `FIELD_TYPE_ARRAY` .
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
- [Bu arabirim, IDebugField](../../../extensibility/debugger/reference/idebugfield.md) ve [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimleri üzerinde yöntemlere ek olarak şunları da kullanır:
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) ve [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) arabirimlerindeki yöntemlere ek olarak, bu arabirim aşağıdakileri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetNumberOfElements](../../../extensibility/debugger/reference/idebugarrayfield-getnumberofelements.md)|Dizide öğelerin sayısını alır.|
-|[GetElementType](../../../extensibility/debugger/reference/idebugarrayfield-getelementtype.md)|Dizideki öğenin türünü alır.|
+|[GetNumberOfElements](../../../extensibility/debugger/reference/idebugarrayfield-getnumberofelements.md)|Dizideki öğelerin sayısını alır.|
+|[GetElementType](../../../extensibility/debugger/reference/idebugarrayfield-getelementtype.md)|Dizideki öğe türünü alır.|
 |[GetRank](../../../extensibility/debugger/reference/idebugarrayfield-getrank.md)|Dizinin derecesini alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: sh.h
+ Üstbilgi: SH. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)

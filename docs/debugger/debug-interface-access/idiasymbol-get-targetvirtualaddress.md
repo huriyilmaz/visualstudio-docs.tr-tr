@@ -1,6 +1,6 @@
 ---
-description: Bir dönüştürücü hedefinin sanal adresini (VA) alır.
-title: 'IDiaSymbol:: get_targetVirtualAddress | Microsoft Docs'
+description: Bir thunk hedefinin sanal adresini (VA) alan.
+title: IDiaSymbol::get_targetVirtualAddress | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 8c9024683d25679794f3fe29ea9a01233ca9e443
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122097655"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126626660"
 ---
 # <a name="idiasymbolget_targetvirtualaddress"></a>IDiaSymbol::get_targetVirtualAddress
-Bir dönüştürücü hedefinin sanal adresini (VA) alır.
+Bir thunk hedefinin sanal adresini (VA) alan.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,18 +35,18 @@ HRESULT get_targetVirtualAddress (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bir dönüştürücü hedefinin VA değerini döndürür.
+[out] Bir thunk hedefinin VA'sı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik yalnızca sembol bir [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değeri olarak sembolü ise geçerlidir `SymTagThunk` .
+ Bu özellik yalnızca sembol, [SymTagEnum Enum değeri olarak değerine sahipse](../../debugger/debug-interface-access/symtagenum.md) `SymTagThunk` geçerlidir.
 
- "Dönüştürücü", 32 bitlik bir bellek adres alanı (düz adres alanı olarak da bilinir) ve 16 bit adres alanı (bölümlenmiş adres alanı olarak bilinir) arasında dönüştürme yapan bir kod parçasıdır.
+ "Thunk", 32 bit bellek adres alanı (düz adres alanı olarak da bilinir) ile 16 bit adres alanı (kesimli adres alanı olarak bilinir) arasında dönüştürmeler yapılan bir kod parçasıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

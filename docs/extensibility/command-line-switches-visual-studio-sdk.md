@@ -16,19 +16,19 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 568faf418219de8f758bb6ab692bca6e65343b68
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122043771"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627734"
 ---
 # <a name="command-line-switches-visual-studio-sdk"></a>Komut satırı anahtarları (Visual Studio SDK)
-*Devenv.exe* geliştirme ortamını (IDE) başlatan yürütülebilir dosya olan dosya, VSPackage'ların geliştirilmesi için özel olarak komut [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] satırı anahtarlarını destekler. VSPackage'lar kendi anahtarlarını Devenv komut satırına da kullanılabilir hale de gelir. Aşağıdaki konular, IDE'de komut satırı anahtarlarını kullanma hakkında bilgi sağlar.
+*Devenv.exe,* tümleşik geliştirme ortamını (IDE) başlatan yürütülebilir dosya, VSPackage'ların geliştirilmesi için özel olarak komut [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] satırı anahtarlarını destekler. VSPackage'lar kendi anahtarlarını Devenv komut satırına da kullanılabilir hale de gelir. Aşağıdaki konular, IDE'de komut satırı anahtarlarını kullanma hakkında bilgi sağlar.
 
 ## <a name="in-this-section"></a>Bu bölümde
 - [VSPackage Ddevelopment için Devenv komut satırı anahtarları](../extensibility/devenv-command-line-switches-for-vspackage-development.md) VSPackage geliştirme, hata ayıklama ve dağıtımı basitleştirmek için kullanabileceğiniz Devenv komut satırı anahtarlarını açıklar.
 
-- [Komut satırı anahtarları ekleme](../extensibility/adding-command-line-switches.md) Paketiniz için kullanıcı tarafından girilen komut satırı anahtarlarını uygulama, bu anahtarlara bakma ve okuma hakkında bilgi sağlar.
+- [Komut satırı anahtarları ekleme](../extensibility/adding-command-line-switches.md) Paketiniz için kullanıcı tarafından girilen komut satırı anahtarlarını uygulama, bakma ve okuma hakkında bilgi sağlar.
 
 ## <a name="related-sections"></a>İlgili bölümler
-- [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md) Devenv'in IDE için çeşitli seçenekler ayarlamayı ve komut satırlarından projeleri derlemeyi, derlemeyi ve hata ayıklamayı açıklar. Ayrıca, Devenv anahtarlarının söz dizimi ve anahtar tablosu hakkında bilgiler de vardır.
+- [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md) Devenv'in IDE için çeşitli seçenekler ayarlamayı ve komut satırlarından projeleri derlemeyi, derlemeyi ve hata ayıklamayı nasıl ayarlayabilirsiniz? Ayrıca, Devenv anahtarlarının söz dizimi ve anahtar tablosu hakkında bilgiler de vardır.

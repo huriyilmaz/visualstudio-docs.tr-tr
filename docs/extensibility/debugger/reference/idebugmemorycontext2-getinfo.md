@@ -1,6 +1,6 @@
 ---
-description: Bağlamını açıklayan CONTEXT_INFO yapısını alır.
-title: 'IDebugMemoryContext2:: GetInfo | Microsoft Docs'
+description: Bağlamı açıklayan CONTEXT_INFO bir veri yapısı alınır.
+title: IDebugMemoryContext2::GetInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,15 +18,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b2e8c0e1f8171a83fcbbe3358476edcb10b6f1f0b2f2c1657a794e92c0283706
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 799d161c82a0d84b524256c00788e1664e1a0d7a
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121433833"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627386"
 ---
 # <a name="idebugmemorycontext2getinfo"></a>IDebugMemoryContext2::GetInfo
-Bağlamını açıklayan [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) yapısını alır.
+Bağlamı açıklayan [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) bir veri yapısı alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,13 +46,13 @@ int GetInfo(
 
 ## <a name="parameters"></a>Parametreler
 `dwFields`\
-'ndaki [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) numaralandırmadaki, [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) yapısının hangi alanlarının doldurulacağını belirten bayrakların bir birleşimi.
+[in] CONTEXT_INFO_FIELDS [yapısının](../../../extensibility/debugger/reference/context-info-fields.md) hangi alanlarının doldurulması gerektirmektedir? CONTEXT_INFO [](../../../extensibility/debugger/reference/context-info.md) bayrakların birleşimi.
 
 `pInfo`\
-[in, out] `CONTEXT_INFO` Doldurulmuş yapı.
+[in, out] `CONTEXT_INFO` Doldurulan yapı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)
