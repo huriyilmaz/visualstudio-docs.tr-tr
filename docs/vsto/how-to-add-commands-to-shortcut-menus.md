@@ -17,11 +17,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 4694ca84475aa569b047e8de818613fe30d04c29
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122100263"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725591"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>Nasıl kullanılır: Kısayol menülerine komut ekleme
   Bu konuda, VSTO Eklenti kullanarak bir Office uygulamanın kısayol menüsüne komutlar ekleme açıklanmıştır.
@@ -30,7 +30,7 @@ ms.locfileid: "122100263"
 
 ### <a name="to-add-commands-to-shortcut-menus-in-office"></a>Kısayol menülerine komut eklemek için Office
 
-1. Belge **düzeyine veya** Eklenti projesine şerit XML VSTO ekleyin. Daha fazla bilgi için [bkz. Nasıl Kullanmaya başlayın şerit özelleştirme.](../vsto/how-to-get-started-customizing-the-ribbon.md) İçinde
+1. Belge **düzeyine veya** Eklenti projesine Şerit XML VSTO ekleyin. Daha fazla bilgi için [bkz. Nasıl Kullanmaya başlayın şerit özelleştirme.](../vsto/how-to-get-started-customizing-the-ribbon.md) İçinde
 
 2. **Çözüm Gezgini** **ThisAddin.cs veya** **ThisAddin.vb öğesini seçin.**
 
@@ -38,7 +38,7 @@ ms.locfileid: "122100263"
 
      **ThisAddin sınıf** dosyası Kod Düzenleyicisi'nde açılır.
 
-4. **ThisAddin sınıfına aşağıdaki kodu** ekleyin. Bu kod yöntemini geçersiz `CreateRibbonExtensibilityObject` kılar ve Şerit XML sınıfını Office döndürür.
+4. **ThisAddin sınıfına aşağıdaki kodu** ekleyin. Bu kod yöntemini geçersiz `CreateRibbonExtensibilityObject` kılar ve Ribbon XML sınıfını Office döndürür.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs" id="Snippet1":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb" id="Snippet1":::
@@ -51,7 +51,7 @@ ms.locfileid: "122100263"
 
 7. Kod Düzenleyicisi'nde kısayol menüsünü ve kısayol menüsüne eklemek istediğiniz denetimi açıklayan XML ekleyin.
 
-     Aşağıdaki örnek, bir sözcük belgesi için kısayol menüsüne düğme, menü ve galeri denetimi ekler. Bu kısayol menüsünün denetim kimliği ContextMenuText'tir. Office 2010 kısayol denetimi kimliklerinin tam listesi için bkz. [Office 2010](https://www.microsoft.com/download/details.aspx?id=6627)yardım dosyaları: Office akıcı kullanıcı arabirimi denetim tanımlayıcıları.
+     Aşağıdaki örnek, bir sözcük belgesi için kısayol menüsüne düğme, menü ve galeri denetimi ekler. Bu kısayol menüsünün denetim kimliği ContextMenuText'tir. 2010 kısayol Office kimliklerinin tam listesi için [bkz. Office 2010](https://www.microsoft.com/download/details.aspx?id=6627)yardım dosyaları: Office fluent kullanıcı arabirimi denetim tanımlayıcıları.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>

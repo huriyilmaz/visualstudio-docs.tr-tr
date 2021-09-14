@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 3e678d3089032d93eb2974123d9a5c2153c97e95
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122073181"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725824"
 ---
 # <a name="bp_error_resolution_info"></a>BP_ERROR_RESOLUTION_INFO
 Konum, program ve iş parçacığı dahil olmak üzere bir hata kesme noktası çözümlemesi açıklar.
@@ -53,10 +53,10 @@ public struct BP_ERROR_RESOLUTION_INFO {
 
 ## <a name="members"></a>Üyeler
 `dwFields`\
-Bu yapının hangi [alanlarının BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) belirten bir numaralandırma verilerinden değerlerin birleşimi.
+Bu yapının hangi [alanlarının BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) belirten bir veri BPERESI_FIELDS değerleri birleşimi.
 
 `bpResLocation`\
-Kesme [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) konumunu belirten veri noktası birliliği.
+Kesme [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) konumunu belirten veri birliliği.
 
 `pProgram`\
 Kesme noktası hatasının meydana geldiği uygulamayı temsil eden [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.

@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 448dfc472c7c0111d378cf072cbf95979b7437266bfad0a30cec0bde81f70194
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5beea84edce408acda7fc157f530c4a5f3253835
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390664"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725366"
 ---
 # <a name="dotnet-restore"></a>dotnet-restore
 
@@ -50,7 +50,7 @@ Aracın varsayılan davranışı `dotnet-restore` `dotnet restore` geçerli dizi
 ## <a name="example-usage"></a>Örnek kullanım
 Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `dotnet-restore` `.devinit.json` .
 
-#### <a name="devinitjson-that-will-restore-dependencies-and-tools-of-a-project"></a>.devinit.js, bir projenin bağımlılıklarını ve araçlarını geri yükler:
+#### <a name="devinitjson-that-will-restore-dependencies-and-tools-of-a-project"></a>. devinit. JSON, bir projenin bağımlılıklarını ve araçlarını geri yükler:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",

@@ -1,6 +1,6 @@
 ---
 title: eShopOnWeb
-description: DotNet-Architecture/eShopOnWeb deposu için devinit kullanan örnek özelleştirme.
+description: dotnet-architecture/eShopOnWeb repo için devinit kullanan örnek özelleştirme.
 ms.date: 08/28/2020
 ms.topic: reference
 author: andysterland
@@ -11,23 +11,23 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 931f3ccef580725fdc5d2b23834d3e831ba98ffbdef10618469da2ee23231e9a
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1356cf2654adfb78fcff61c9f9dab95f1fdbe913
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452846"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725852"
 ---
 # <a name="eshoponweb"></a>eShopOnWeb
 
 > [!IMPORTANT]
-> 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren, Visual Studio 2019'dan GitHub Codespaces'a bağlanmak artık desteklemeyecek ve bu özel önizlemenin sonucuna varıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi almak Visual Studio geliştirici topluluğu forummize dahil olmak için sizi teşvik ediyoruz.
 
-bu örnek, [GitHub codespaces](https://github.com/features/codespaces)ile otomatik olarak sağlanacak olan dotnet mimari örneği [eshoponweb](https://github.com/dotnet-architecture/eShopOnWeb) ' i nasıl özelleştireceğinizi gösterir.
+Bu örnekte, [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) dotnet mimarisi örneğini [Codespaces](https://github.com/features/codespaces)ile otomatik olarak sağ GitHub göstermektedir.
 
 ## <a name="postclonesetupps1"></a>PostCloneSetup.ps1
 
-Bu komut dosyası _PostCloneSetup.ps1_ çağrılır ve depoyu kurmak için yerel olarak da çalıştırılabilir. Bu dosyanın _.devcontainer.js_ ile aynı klasörde olması gerekir.
+Bu betik, _PostCloneSetup.ps1_ olarak çağrılır ve depoyu ayarlamak için yerel olarak da çalıştırılabilir. Bu dosyanın _.devcontainer.json ile aynı klasörde olması gerekir._
 
 ```console
 devinit init
@@ -37,7 +37,7 @@ dotnet ef database update -c appidentitydbcontext -p src\Infrastructure\Infrastr
 
 ## <a name="devinitjson"></a>.devinit.json
 
-[`.devinit.json`](devinit-json.md)Dosyanın içeriği. Bu dosyanın _.devcontainer.js_ ile aynı klasörde olması gerekir.
+Dosyanın [`.devinit.json`](devinit-json.md) içeriği. Bu dosyanın _.devcontainer.json ile aynı klasörde olması gerekir._
 
 ```json
 {
@@ -57,9 +57,9 @@ dotnet ef database update -c appidentitydbcontext -p src\Infrastructure\Infrastr
 }
 ```
 
-## <a name="devcontainerjson"></a>Üzerinde .devcontainer.js
+## <a name="devcontainerjson"></a>.devcontainer.json
 
-Depo kökündeki dosya _.devcontainer.js_ içeriği.
+Repo _kökünde .devcontainer.json_ dosyasının içeriği.
 
 ```json
 {

@@ -1,6 +1,6 @@
 ---
 title: Yerel işlevi ayıklama
-description: Kodu seçip CTRL + R, CTRL + M yazarak kodun bir parçasını kendi işlevine dönüştürün.
+description: Kodu seçerek ve Ctrl+R, Ctrl+M yazarak bir kod parçasını kendi işlevine dönüştürebilirsiniz.
 ms.date: 02/19/2020
 ms.topic: reference
 author: mikadumont
@@ -12,33 +12,33 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 8b1f05e564f5d26c3c470917dbdf9bb9045a689a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122143917"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725740"
 ---
-# <a name="extract-local-function-refactoring"></a>Yerel işlev yeniden düzenlemesi Ayıkla
+# <a name="extract-local-function-refactoring"></a>Yerel işlevi yeniden düzenlemeyi ayıklama
 
-Bu yeniden düzenleme için geçerlidir:
+Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Varolan bir yöntemden bir kod parçasını yerel işleve açmanızı sağlar.
+**Ne:** Bir kod parçasını mevcut bir yöntemden yerel bir işleve çevirmenizi sağlar.
 
-**Ne zaman:** Bir yerel işlevden çağrılması gereken bazı bir yöntemde var olan kodun bir parçası var.
+**Ne zaman:** Yerel bir işlevden çağrıllanması gereken bir yöntemde mevcut kodun bir parçasına sahipsiniz.
 
-**Neden:** Bu kodu kopyalayabilir/yapıştırabilir, ancak çoğaltmaya yol açabilir. Daha iyi bir çözüm, söz konusu parçayı kendi yerel işlevine yeniden düzenleme.
+**Neden:** Bu kodu kopyalayıp yapıştırabilirsiniz, ancak bu yinelemeye yol açabilecektir. Daha iyi bir çözüm, bu parçanın kendi yerel işlevi olarak yeniden düzenlemesidir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Ayıklanacak kodu vurgulayın.
+1. Ayıklanan kodu vurgulayın.
 
-2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için. 
+2. **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için. 
 
 3. **Yerel işlevi ayıkla** seçeneğini belirleyin.
 
-    ![çizgi vurgulanmış şekilde Visual Studio kod penceresinin ekran görüntüsü. Hızlı Eylemler ve yeniden düzenlemeler menüsü açık ve yerel işlevi Ayıkla seçilidir.](media/extract-local-function.png)
+    ![Satır vurgulanmış Visual Studio penceresinin ekran görüntüsü. Hızlı Eylemler ve Yeniden Düzenleme menüsü açık ve Yerel işlevi ayıkla seçilidir.](media/extract-local-function.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

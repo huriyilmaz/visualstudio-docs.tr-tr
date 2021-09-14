@@ -19,11 +19,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 422fe752d75caad04023da2306428a2e26e82afd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122099366"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633777"
 ---
 # <a name="walkthrough-collect-data-by-using-a-windows-form"></a>izlenecek yol: Windows formu kullanarak veri toplama
   bu kılavuzda, Microsoft Office Excel için belge düzeyi özelleştirmesindeki bir Windows formunun nasıl açılacağı, kullanıcıdan bilgi toplamadan ve bu bilgilerin bir çalışma sayfası hücresine nasıl yazılacağı gösterilmektedir.

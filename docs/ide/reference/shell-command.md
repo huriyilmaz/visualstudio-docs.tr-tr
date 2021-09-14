@@ -1,6 +1,6 @@
 ---
 title: Kabuk Komutu
-description: Kabuk komutu ve Visual Studio içinden yürütülebilir programları nasıl Başlatan hakkında bilgi edinin.
+description: Kabuk komutu ve dosyanın içindeki yürütülebilir programları nasıl Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -22,14 +22,14 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 070d58d8fc4561c37dfce66fd89c2e6905184daa
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117117"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725718"
 ---
 # <a name="shell-command"></a>Kabuk Komutu
-İçinden çalıştırılabilir programları başlatır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
+içinde yürütülebilir programları [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] başlatıyor.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -40,48 +40,48 @@ Tools.Shell [/command] [/output] [/dir:folder] path [args]
 ## <a name="arguments"></a>Bağımsız değişkenler
 `path`
 
-Gereklidir. Yürütülecek dosyanın yolu ve dosya adı ya da açılacak belge. Belirtilen dosya yol ortam değişkeninde dizinlerden birinde değilse tam yol gereklidir.
+Gereklidir. Yürütülecek dosyanın yolu ve dosya adı veya açılacak belge. Belirtilen dosya PATH ortam değişkenli dizinlerden biri içinde yoksa tam yol gereklidir.
 
 `args`
 
-İsteğe bağlı. Çağrılan programa geçirilecek herhangi bir bağımsız değişken.
+İsteğe bağlı. Çağrılan programa geçilen tüm bağımsız değişkenler.
 
 ## <a name="switches"></a>Anahtarlar
-/CommandWindow [veya]/Command [veya]/c [veya]/cmd
+/commandwindow [or] /command [or] /c [or] /cmd
 
-İsteğe bağlı. Yürütülebilir dosyanın çıktısının **komut** penceresinde görüntülendiğini belirtir.
+İsteğe bağlı. Yürütülebilir dosyanın çıktının Komut penceresinde **görüntülendiğinden belirtir.**
 
-/dir: `folder` [veya]/d: `folder`
+/dir: `folder` [or] /d: `folder`
 
-İsteğe bağlı. Program çalıştırıldığında ayarlanacak çalışma dizinini belirtir.
+İsteğe bağlı. Program çalıştır çalışırken ayar için çalışma dizinini belirtir.
 
-/OutputWindow [veya]/output [veya]/Out [veya]/o
+/outputwindow [veya] /output [or] /out [or] /o
 
-İsteğe bağlı. Yürütülebilir dosyanın çıktısının **Çıkış** penceresinde görüntülendiğini belirtir.
+İsteğe bağlı. Yürütülebilir dosyanın çıktının Çıkış penceresinde **görüntülendiğinden belirtir.**
 
 ## <a name="remarks"></a>Açıklamalar
-/Dir/o/c anahtarlarının hemen sonra belirtilmesi gerekir `Tools.Shell` . Yürütülebilir dosyanın adından sonra belirtilen her şey, komut satırı bağımsız değişkenleri olarak kendisine geçirilir.
+/dir /o /c anahtarları hemen sonra `Tools.Shell` belirtilmelidir. Yürütülebilir dosyanın adına göre belirtilen her şey komut satırı bağımsız değişkenleri olarak geçirilebilir.
 
-Önceden tanımlanmış diğer ad, yerine `Shell` kullanılabilir `Tools.Shell` .
+Önceden tanımlanmış diğer `Shell` ad yerine `Tools.Shell` kullanılabilir.
 
 > [!CAUTION]
-> `path`Bağımsız değişken dizin yolunu ve dosya adını sağlarsa, aşağıdaki gibi tüm yol adını sabit tırnak ("" ") içine almalısınız:
+> Bağımsız değişken dizin yolunu ve dosya adını sağlarsa, pathname'in tamamını aşağıda olduğu gibi değişmez tırnak `path` içine (""") yazmanız gerekir:
 
 ```cmd
 Tools.Shell """C:\Program Files\SomeFile.exe"""
 ```
 
-Her üç çift tırnak ("" ") kümesi, `Shell` işlemci tarafından tek bir çift tırnak karakteri olarak yorumlanır. Bu nedenle, önceki örnek şu yol dizesini `Shell` komutuna geçirir:
+Her üç çift tırnak (""") kümesi, işlemci tarafından tek bir `Shell` çift tırnak karakteri olarak yorumlanır. Bu nedenle, önceki örnek aslında aşağıdaki yol dizesini komutuna `Shell` iletir:
 
 ```cmd
 "C:\Program Files\SomeFile.exe"
 ```
 
 > [!CAUTION]
-> yol dizesini değişmez tırnak işaretleri ("" ") içine aldıysanız Windows, yalnızca ilk alana kadar olan dizenin kısmını kullanacaktır. örneğin, yukarıdaki yol dizesi düzgün şekilde tırnak içine alınmazdı, Windows c:\ dizininde bulunan "Program" adlı bir dosya arayacaktır. kök dizin. C:\Program.exe çalıştırılabilir bir dosya gerçekten kullanılabilir durumda olsa da, "c:\Program Files\SomeFile.exe" programının yerine bu programı yürütmeyi dener Windows.
+> Yol dizesini değişmez tırnak içine ("""), Windows dizenin yalnızca ilk alana kadar olan kısmını kullanır. Örneğin, yukarıdaki yol dizesi düzgün bir şekilde tırnak içine Windows C:\ konumunda bulunan "Program" adlı bir dosyayı aramanız gerekir. kök dizini. Bir C:\Program.exe yürütülebilir dosya gerçekten varsa, hatta bir tane kötü amaçlı kurcalama tarafından yüklenmişse, Windows istenen "c:\Program Files\SomeFile.exe" programı yerine bu programı yürütmeyi denebilir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki komut, dosyayı klasörüne kopyalamak için xcopy.exe kullanır `MyText.txt` `Text` . xcopy.exe çıkışı hem **komut penceresinde** hem de **Çıkış** penceresinde görüntülenir.
+Aşağıdaki komut, xcopy.exe klasörüne kopyalamak `MyText.txt` için aşağıdaki komutu `Text` kullanır. Komut xcopy.exe hem de Çıkış **penceresinde** **görüntülenir.**
 
 ```cmd
 >Tools.Shell /o /c xcopy.exe c:\MyText.txt c:\Text\MyText.txt
@@ -90,7 +90,7 @@ Aşağıdaki komut, dosyayı klasörüne kopyalamak için xcopy.exe kullanır `M
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
-- [Komut penceresi](../../ide/reference/command-window.md)
+- [Komut Penceresi](../../ide/reference/command-window.md)
 - [Çıkış Penceresi](../../ide/reference/output-window.md)
-- [Bul/komut kutusu](../../ide/find-command-box.md)
+- [Bul/Komut Kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

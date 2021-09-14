@@ -1,7 +1,7 @@
 ---
 title: Kod analizini kapatma
 ms.date: 09/01/2020
-description: .NET Core, Visual Studio projelerinde kaynak kodu analizini .NET Standard ve .NET Framework öğrenin.
+description: .NET Core, Visual Studio projelerinde kaynak kodu analizini .NET Standard nasıl .NET Framework öğrenin.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,11 +12,11 @@ ms.author: midumont
 manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.openlocfilehash: 8d86945cb39e1e6c37e62726b920ee774c0f7146
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122053064"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632049"
 ---
 # <a name="disable-source-code-analysis-for-net"></a>.NET için kaynak kod analizini devre dışı bırakma
 
@@ -26,7 +26,7 @@ Bu sayfa, kod analizini devre dışı bırakmanıza yardımcı Visual Studio. De
 
 - Project türü (.NET Core/Standard ve .NET Framework)
 
-  .NET Core ve .NET Standard projeleri, Code Analysis paket olarak yüklenmiş çözümleyicilerden kod analizini kapatmaya izin NuGet sahiptir. Daha fazla bilgi için [bkz. .NET Core ve .NET Standard.](#net-core-and-net-standard-projects) Bu projelerin kaynak kodu analizini .NET Framework için bkz. [.NET Framework projeleri.](#net-framework-projects)
+  .NET Core .NET Standard projelerinin Code Analysis paket olarak yüklenmiş çözümleyicilerden kod analizini kapatmasına izin NuGet vardır. Daha fazla bilgi için [bkz. .NET Core ve .NET Standard.](#net-core-and-net-standard-projects) Bu projelerin kaynak kodu analizini .NET Framework için bkz. [.NET Framework projeleri.](#net-framework-projects)
 
 - Kaynak analiziyle eski analiz karşılaştırması
 
@@ -34,7 +34,7 @@ Bu sayfa, kod analizini devre dışı bırakmanıza yardımcı Visual Studio. De
 
 ## <a name="net-core-and-net-standard-projects"></a>.NET Core ve .NET Standard projeleri
 
-2019 Visual Studio 16.3 sürümünden başlayarak, Code Analysis özellikleri sayfasında, çözümleyicilerin derleme zamanında ve tasarım zamanında çalıştırıp çalışmay olmadığını denetlemeye yönelik iki onay kutusu vardır. Bu seçenekler projeye özgü seçeneklerdir.
+Visual Studio 2019 sürüm 16.3'te başlayarak, Code Analysis özellikleri sayfasında çözümleyicilerin derleme zamanında ve tasarım zamanında çalıştırıp çalışmay olmadığını denetlemeye yönelik iki onay kutusu vardır. Bu seçenekler projeye özgü seçeneklerdir.
 
 ![Canlı kod analizini etkinleştirme veya devre dışı bırakma veya Visual Studio](media/run-on-build-run-live-analysis.png)
 
@@ -50,11 +50,11 @@ Bu sayfayı açmak için, Çözüm Gezgini proje **düğümüne** sağ tıklayı
 
 Çözümleyiciler için kaynak kod analizini kapatmak için, proje dosyasına aşağıdaki MSBuild bir veya daha [fazlasını ekleyin.](../ide/solutions-and-projects-in-visual-studio.md#project-file)
 
-| MSBuild özelliği | Açıklama | Varsayılan |
+| MSBuild özelliği | Description | Varsayılan |
 | - | - | - |
 | `RunAnalyzersDuringBuild` | Çözümleyicilerin derleme zamanında çalıştırıp çalışmay olmadığını kontrol eder. | `true` |
 | `RunAnalyzersDuringLiveAnalysis` | Çözümleyicilerin tasarım zamanında kodu canlı olarak analiz edip etmey olmadığını kontrol eder. | `true` |
-| `RunAnalyzers` | Hem derleme hem de tasarım zamanında çözümleyicileri devre dışı bırakma. Bu özellik ve 'den `RunAnalyzersDuringBuild` `RunAnalyzersDuringLiveAnalysis` önceliklidir. | `true` |
+| `RunAnalyzers` | Çözümleyicileri hem derleme hem de tasarım zamanında devre dışı bıraktır. Bu özellik ve 'den `RunAnalyzersDuringBuild` `RunAnalyzersDuringLiveAnalysis` önceliklidir. | `true` |
 
 Örnekler:
 
@@ -76,7 +76,7 @@ Bu sayfayı açmak için, Çözüm Gezgini proje **düğümüne** sağ tıklayı
 
 ## <a name="legacy-analysis"></a>Eski analiz
 
-Eski, derleme zamanı analizini özellikler sayfasında **Code Analysis** devre dışı abilirsiniz. Daha fazla bilgi için, [bkz. How to: Enable and disable legacy code analysis](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
+Eski, derleme zamanı analizini özellikler sayfasından **Code Analysis** dışı abilirsiniz. Daha fazla bilgi için, [bkz. How to: Enable and disable legacy code analysis](how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md).
 
 ::: moniker-end
 

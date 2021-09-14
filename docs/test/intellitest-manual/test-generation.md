@@ -13,11 +13,11 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: fd7c9b667e2c355267a22212684141a40bca9f7c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122148434"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725619"
 ---
 # <a name="test-generation"></a>Test oluşturma
 
@@ -49,7 +49,7 @@ IntelliTest genellikle daha genel Parametreli [](#parameterized-unit-testing)Bir
 <a name="test-generators"></a>
 ## <a name="test-generators"></a>Test oluşturucuları
 
-IntelliTest, yürütülecek test kapsamında uygulamanın bir dizi yöntemini seçerek ve ardından türetilmiş veriler üzerinde onayları kontrol ederken yöntemler için girişler oluşturarak test çalışmaları üretir.
+IntelliTest, yürütülecek test kapsamında uygulamanın bir dizi yöntemini seçerek ve ardından türetilmiş veriler üzerinde onayları kontrol ederken yöntemler için girişler üreterek test çalışmaları üretir.
 
 Parametreli [birim testi](#parameterized-unit-testing) doğrudan gövdesinde bir dizi yöntem çağrısı belirtir.
 
@@ -58,9 +58,9 @@ IntelliTest'in nesneleri oluşturması gerektiğinde, oluşturuculara ve fabrika
 <a name="parameterized-unit-testing"></a>
 ## <a name="parameterized-unit-testing"></a>Parametreli birim testi
 
-*Parametreli Birim Testleri* (PUT), parametre alan testlerdir. Genellikle kapalı yöntemler olan geleneksel birim testlerinin aksine, PUT'lar herhangi bir parametre kümesi alır. Bu kadar basit mi? Evet - Buradan IntelliTest, testten ulaşılabilir kodu tamamen [](input-generation.md#dynamic-code-coverage) [kapsatan (minimum)](input-generation.md) giriş kümesi oluşturmayı dener.
+*Parametreli Birim Testleri* (PUT), parametre alan testlerdir. Genellikle kapalı yöntemler olan geleneksel birim testlerinin aksine, PUT'lar herhangi bir parametre kümesi alır. Bu kadar basit mi? Evet - Buradan IntelliTest, testten ulaşılabilir kodu tam [](input-generation.md#dynamic-code-coverage) olarak [kapsatan (minimum)](input-generation.md) giriş kümesi oluşturmayı dener.
 
-PUT'lar [PexMethod](attribute-glossary.md#pexmethod) özel özniteliği MSTest 'e (veya NUnit, xUnit) benzer şekilde kullanılarak tanımlanır. PUT'lar PexClass ile etiketlenmiş sınıflarda mantıksal olarak gruplanan [örnek yöntemleridir.](attribute-glossary.md#pexclass) Aşağıdaki örnek, **MyPexTest** sınıfında depolanan basit bir PUT'i gösterir:
+PUT'lar [PexMethod](attribute-glossary.md#pexmethod) özel özniteliği MSTest 'e (veya NUnit, xUnit) benzer şekilde kullanılarak tanımlanır. PUT'lar PexClass ile etiketlenmiş sınıflarda mantıksal olarak gruplanan [örnek yöntemleridir.](attribute-glossary.md#pexclass) Aşağıdaki **örnek, MyPexTest** sınıfında depolanan basit bir PUT'i gösterir:
 
 ```csharp
 [PexMethod]
@@ -145,7 +145,7 @@ IntelliTest, iç türleri görene kadar "test"ler. IntelliTest'in türleri görm
 <a name="assumptions-and-assertions"></a>
 ## <a name="assumptions-and-assertions"></a>Varsayımlar ve onaylamalar
 
-Kullanıcılar, testleriyle ilgili önkoşulları [](#precondition) (varsayımları) ve sonkoşulları (onaylar) ifade etmek için varsayımları ve onayları kullanabilir. [](#postcondition) IntelliTest bir parametre değerleri kümesi oluşturması ve kodu "keşfetmesi", testin varsayımlarını ihlal ediyor olabilir. Bu durumda, bu yol için bir test oluşturmaz, ancak sessizce yoksayar.
+Kullanıcılar, testleriyle ilgili önkoşulları [](#precondition) (varsayımları) ve sonkoşulları (onaylar) ifade etmek için varsayımları ve onayları kullanabilir. [](#postcondition) IntelliTest bir dizi parametre değeri üretir ve kodu "keşfeder", testin varsayımlarını ihlal ediyor olabilir. Bu durumda, bu yol için bir test oluşturmaz ancak sessizce yoksayar.
 
 Onaylar normal birim testi çerçeveleri içinde iyi bilinen bir kavramdır, bu nedenle IntelliTest desteklenen her test çerçevesi tarafından sağlanan yerleşik **Assert** sınıflarını zaten "anlar". Ancak, çoğu çerçeve bir **Assume sınıfı** sağlamaz. Bu durumda IntelliTest [PexAssume sınıfını](static-helper-classes.md#pexassume) sağlar. Mevcut bir test çerçevesini kullanmak istemiyorsanız, IntelliTest [pexAssert sınıfına da](static-helper-classes.md#pexassert) sahip olur.
 
@@ -184,7 +184,7 @@ IntelliTest'te parametreli birim [testinin](#parameterized-unit-testing) önkoş
 
 Yöntemin sonkoşulları, yöntemin yürütülmesi sırasında ve sonrasında, önkoşullarının başlangıçta geçerli olduğunu varsayarak tutması gereken koşulları ifade ediyor.
 
-Genellikle sonkoşul Assert yöntemlerine yapılan **çağrılar tarafından** zorlar.
+Genellikle son koşul, Assert yöntemlerine yapılan çağrılar **tarafından** zorlar.
 
 IntelliTest ile parametreli birim testinin [sonkoşulları](#parameterized-unit-testing) [PexAssert ile ifade edildi.](static-helper-classes.md#pexassert)
 
@@ -198,7 +198,7 @@ Oluşturulan bir test çalışma ne zaman başarısız olur?
 
 1. Test bir onaylamayı ihlal [ediyorsa;](#assumptions-and-assertions) Örneğin, bir birim testi çerçevesinin onay ihlali özel durumu atarak başarısız olur
 
-Yukarıdakilerin hiçbiri karar vermezse, yalnızca özel durum oluşturursa ve yoksa test başarılı olur. Onaylama ihlalleri, özel durumlar gibi kabul edilir.
+Yukarıdakilerin hiçbiri bir karar üretmezse, yalnızca özel durum oluşturursa ve yoksa test başarılı olur. Onaylama ihlalleri, özel durum olarak aynı şekilde kabul edilir.
 
 <a name="setup-teardown"></a>
 ## <a name="setup-and-tear-down"></a>Kurulum ve kapatma

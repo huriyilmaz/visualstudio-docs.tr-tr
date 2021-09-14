@@ -1,6 +1,6 @@
 ---
 title: Uygulama için özel ClickOnce oluşturma
-description: Özel bir yükleyicinin bir ClickOnce dosyasını temel alarak .exe nasıl güncelleştire .exe öğrenin.
+description: Özel bir yükleyicinin bir ClickOnce dosyasını temel alarak sessiz .exe öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -22,14 +22,14 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: 4d19a93710b2134f7c4878faf8143209bff4e357
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122133607"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725377"
 ---
 # <a name="walkthrough-create-a-custom-installer-for-a-clickonce-application"></a>Adım adım kılavuz: Bir uygulama için özel ClickOnce oluşturma
-Bir ClickOnce dosyasını temel alan tüm *.exe* özel bir yükleyici tarafından sessizce yükleniyor ve güncelleştirilebilir. Özel bir yükleyici, güvenlik ve bakım işlemleri için özel iletişim kutuları da dahil olmak üzere yükleme sırasında özel kullanıcı deneyimi gerçekleştirebilirsiniz. Yükleme işlemlerini gerçekleştirmek için özel yükleyici sınıfını <xref:System.Deployment.Application.InPlaceHostingManager> kullanır. Bu kılavuzda, bir uygulamanın sessiz bir şekilde yük devredilen özel bir yükleyici ClickOnce göstereceğiz.
+Bir ClickOnce dosyasını temel alan tüm *.exe* özel bir yükleyici tarafından sessizce yükleniyor ve güncelleştirilebilir. Özel bir yükleyici, güvenlik ve bakım işlemleri için özel iletişim kutuları dahil olmak üzere yükleme sırasında özel kullanıcı deneyimi gerçekleştirebilirsiniz. Yükleme işlemlerini gerçekleştirmek için özel yükleyici sınıfını <xref:System.Deployment.Application.InPlaceHostingManager> kullanır. Bu kılavuzda, bir uygulamanın sessizce yük devredilen özel bir yükleyicinin ClickOnce göstereceğiz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 

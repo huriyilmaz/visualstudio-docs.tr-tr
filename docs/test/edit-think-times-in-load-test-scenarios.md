@@ -14,11 +14,11 @@ ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
 ms.openlocfilehash: cc11872aa238ee1b3b72a171193de6b7d0ee972b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122148603"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726734"
 ---
 # <a name="edit-think-times-to-simulate-website-human-interaction-delays-in-load-tests-scenarios"></a>Yük testi senaryolarında web sitesi insan etkileşimi gecikmelerinin benzetimini yapmak için düşünme sürelerini düzenleme
 
@@ -26,7 +26,7 @@ Düşünme süreleri, insanların bir web sitesiyle etkileşimler arasında bekl
 
 Düşünme *profili,* yük testinde senaryo için geçerli olan bir ayardır. ayarı, tek tek web performans testlerinde kaydedilen düşünme sürelerinin yük testi sırasında kullanıp kullanılmadığını belirler. Bazı web performans testlerinde düşünme sürelerini kullanmak ancak diğer testlerde kullanmak istemiyorsanız, bunları farklı senaryolara yer edin. Senaryolar hakkında daha fazla bilgi için [bkz. Yük testi senaryolarını düzenleme.](../test/edit-load-test-scenarios.md)
 
-Başlangıçta, New Yük Testi Sihirbazı kullanarak yük testlerinizi yük testlerinizi oluşturmak için düşünme **zamanlarını kullanıp Yük Testi Sihirbazı.** Daha fazla bilgi için [bkz. Yük testi senaryolarını düzenleme.](../test/edit-load-test-scenarios.md)
+Başlangıçta, New Yük Testi Sihirbazı kullanarak yük testlerinizi yük testlerinde oluşturma sırasında düşünme zamanlarını **kullanıp Yük Testi Sihirbazı.** Daha fazla bilgi için [bkz. Yük testi senaryolarını düzenleme.](../test/edit-load-test-scenarios.md)
 
 Profili **Düşün** seçenekleri aşağıdaki listede açıklanmıştır:
 
@@ -38,11 +38,11 @@ Düşünme süreleri yoksayılır. Web sunucunuzda yoğun baskı oluşturmak iç
 
 **Açık**
 
-Düşünme süreleri, web performans testinde kaydedildikleri gibi kullanılır. Web performans testlerini tam olarak kaydedilen şekilde çalıştıran birden çok kullanıcının benzetimini sağlar. Yük testi birden çok kullanıcının benzetimini lar, aynı düşünme zamanlarını kullanarak eşitlenen sanal kullanıcıların doğal olmayan bir yük deseni oluşturabilir.
+Düşünme süreleri, web performans testinde kaydedildikleri şekilde kullanılır. Web performans testlerini tam olarak kaydedilen şekilde çalıştıran birden çok kullanıcının benzetimini sağlar. Yük testi birden çok kullanıcının benzetimini lar, aynı düşünme zamanlarını kullanarak eşitlenen sanal kullanıcıların doğal olmayan bir yük deseni oluşturabilir.
 
 **Normal Dağıtım**
 
-Düşünme süreleri kullanılır, ancak normal bir eğri üzerinde çeşitlidir. İstekler arasındaki düşünme süresi biraz değişiklik göstererek sanal kullanıcıların daha gerçekçi bir simülasyonunu sağlar.
+Düşünme süreleri kullanılır, ancak normal bir eğride çeşitlidir. İstekler arasındaki düşünme süresi biraz değişiklik göstererek sanal kullanıcıların daha gerçekçi bir simülasyonunu sağlar.
 
 > [!NOTE]
 > Yük testi senaryosu özelliklerinin ve açıklamalarının tam listesi için bkz. [Yük testi senaryosu özellikleri.](../test/load-test-scenario-properties.md)
@@ -53,7 +53,7 @@ Düşünme süreleri kullanılır, ancak normal bir eğri üzerinde çeşitlidir
 
 1. Web performansı ve yük testi projesinde bir yük testi açın.
 
-2. Bu **Yük Testi Düzenleyicisi,** Düşünme Profilini değiştirmek istediğiniz senaryo **düğümünü seçin.** Düşün **Profili** Özellikler **penceresinde** görüntülenir. Özellikler penceresini görüntülemek için **F4** **tuşuna** basın.
+2. Aşağıdaki **Yük Testi Düzenleyicisi,** Düşünün Profilini değiştirmek istediğiniz senaryo **düğümünü seçin.** Düşünme **Profili** Özellikler **penceresinde** görüntülenir. Özellikler penceresini görüntülemek için **F4** **tuşuna** basın.
 
 3. Özellikler **penceresinde Düşünme** Profili **özelliğini** değiştirin.
 

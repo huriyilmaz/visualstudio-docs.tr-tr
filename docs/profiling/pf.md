@@ -1,6 +1,6 @@
 ---
 title: PF | Microsoft Docs
-description: VSPerfCmd.exe PF seçeneğinin, örnek alınan profil oluşturma olaylarını sayfa hatalarının nasıl ayar olduğunu ve bir örnekleme aralığındaki sayfa hatalarının sayısını nasıl değiştirmesi olduğunu öğrenin.
+description: VSPerfCmd.exe PF seçeneğinin örnek alınan profil oluşturma olaylarını sayfa hatalarında nasıl ayarlay olduğunu ve bir örnekleme aralığındaki sayfa hatalarının sayısını nasıl değiştirmesi olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: cdc0a094-a986-4629-bd1c-dd5fdca323dc
@@ -12,19 +12,19 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: b782e630e04e5e490d56bc3a4830404c79a2c26a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122060914"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628346"
 ---
 # <a name="pf"></a>PF
 VSPerfCmd.exe **PF** seçeneği, örnek alınan profil oluşturma olaylarını sayfa hatalarından ayarlar ve isteğe bağlı olarak bir örnekleme aralığındaki sayfa hatalarının sayısını varsayılan değer olan 10'dan değiştirir.
 
 > [!NOTE]
-> **PF** 64 bit sistemlerde kullanılamaz.
+> **PF,** 64 bitlik sistemlerde kullanılamaz.
 
-**PF** yalnızca Başlat veya Ekle seçeneğini de içeren bir **komut** satırı **içinde** kullanılabilir.
+**PF** yalnızca Başlat veya Ekle seçeneğini içeren bir **komut** satırı **içinde** kullanılabilir.
 
  Örnekleme olayı varsayılan olarak durdurulan işlemci saat döngüleri olarak, örnekleme aralığı ise 10.000.000 olarak ayarlanır. **Zamanlayıcı,** **PF,** **Sys** ve **Sayaç** seçenekleri, örnek olay ve örnekleme aralığını ayarlamaya olanak sağlar. **GC seçeneği** her ayırma ve çöp toplama olayında .NET bellek verilerini toplar. Bu seçeneklerden yalnızca biri bir komut satırı üzerinde belirtilebilir.
 
@@ -42,14 +42,14 @@ VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /PF[:Events] [Options]
 ## <a name="required-options"></a>Gerekli seçenekler
  **PF** yalnızca aşağıdaki seçeneklerden birini içeren bir komut satırı üzerinde belirtilebilir.
 
- **Başlatma:** `AppName` Profilleyiciyi ve AppName tarafından belirtilen uygulamayı başlatır.
+ **Başlatma:** `AppName` AppName tarafından belirtilen profilleyiciyi ve uygulamayı başlatır.
 
  **Ekleme:** `PID` Profilleyiciyi AppName tarafından belirtilen işleme iliştirer.
 
 ## <a name="invalid-options"></a>Geçersiz seçenekler
  Aşağıdaki seçenekler PF ile aynı komut satırı üzerinde **belirtilmez.**
 
- **Zamanlayıcı**[**:** `Cycles` ] Örnekleme olaylarını işlemci saat döngüleri olarak ayarlar ve isteğe bağlı olarak örnekleme aralığını olarak `Cycles` ayarlar. Varsayılan Zamanlayıcı aralığı 10.000.000'tir.
+ **Zamanlayıcı**[**:** `Cycles` ] Örnekleme olaylarını işlemci saat döngüleri olarak ayarlar ve isteğe bağlı olarak örnekleme aralığını olarak `Cycles` ayarlar. Varsayılan Zamanlayıcı aralığı 10.000.000'dır.
 
  **Sys**[**:**] Örnekleme olaylarını, profili profili yapılan uygulamanın işletim sistemi `Events` çekirdeğine (syscalls) yapılan çağrılara ayarlar ve isteğe bağlı olarak örnekleme aralığını olarak `Events` ayarlar. Varsayılan Sys aralığı 10'dır.
 

@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: cdc63c26f8e2b1589e09ab46206e3703d9c8ad9faf2e8e125bd2682b3c6117a3
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 0bd8c7dd0154eb25289d3a9e44fe24097d817b24
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121454754"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628053"
 ---
 # <a name="idiasymbolget_hasmanagedcode"></a>IDiaSymbol::get_hasManagedCode
 Modülün yönetilen kod içerip içermediğini gösteren bir bayrak alır.

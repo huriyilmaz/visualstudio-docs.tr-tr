@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, bir ifade dizesini ayrıştırıldı ifadeye dönüştürür.
-title: IDebugExpressionEvaluator::P arse | Microsoft Docs
+description: Bu yöntem, bir ifade dizesini ayrıştırılmış ifadeye dönüştürür.
+title: Idebugexpressiondeğerlendirici::P arde | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ac8b2c7a74801925775642bca9738865c207d14d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122138750"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725211"
 ---
 # <a name="idebugexpressionevaluatorparse"></a>IDebugExpressionEvaluator::Parse
-Bu yöntem, bir ifade dizesini ayrıştırıldı ifadeye dönüştürür.
+Bu yöntem, bir ifade dizesini ayrıştırılmış ifadeye dönüştürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -53,28 +53,28 @@ int Parse(
 
 ## <a name="parameters"></a>Parametreler
 `upstrExpression`\
-[in] Ayrıştırıla ifade dizesi.
+'ndaki Ayrıştırılacak ifade dizesi.
 
 `dwFlags`\
-[in] İfadenin nasıl ayrıştır olacağını belirleyen [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) sabitleri koleksiyonu.
+'ndaki İfadenin nasıl ayrıştırılaceğini tespit eden bir [Parseflags](../../../extensibility/debugger/reference/parseflags.md) sabitleri koleksiyonu.
 
 `nRadix`\
-[in] Tüm sayısal bilgileri yorumlamak için kullanılacak radix.
+'ndaki Sayısal bilgileri yorumlamak için kullanılacak taban tabanı.
 
 `pbstrError`\
-[out] Hatayı insan tarafından okunabilir metin olarak döndürür.
+dışı Hatayı insanlarca okunabilir metin olarak döndürür.
 
 `pichError`\
-[out] İfade dizesinde hatanın başlangıcının karakter konumunu döndürür.
+dışı İfade dizesinde hatanın başlangıcı olan karakter konumunu döndürür.
 
 `ppParsedExpression`\
-[out] [IDebugParsedExpression nesnesinde ayrıştırılmış ifadeyi](../../../extensibility/debugger/reference/idebugparsedexpression.md) döndürür.
+dışı Bir [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) nesnesinde ayrıştırılmış ifadeyi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem gerçek bir değer değil ayrıştıran bir ifade üretir. Ayrıştırıldı ifadesi değerlendirilmeye, yani bir değere dönüştürül etmeye hazırdır.
+ Bu yöntem, gerçek bir değer değil ayrıştırılmamış bir ifade oluşturur. Ayrıştırılmış bir ifade değerlendirilmeye, yani bir değere dönüştürülecek.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

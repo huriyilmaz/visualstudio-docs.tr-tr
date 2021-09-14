@@ -1,50 +1,51 @@
 ---
-title: 'Docker öğreticisi-5. Bölüm: Docker Compose kullanma'
-description: Docker Compose yüklemeyi ve kullanmayı açıklar.
+title: 'Docker öğreticisi - Bölüm 8: Docker Compose'
+description: Uygulama yükleme ve kullanma Docker Compose.
 ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
 ms.technology: vs-docker
+ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 8e846388320da492ddccd7b2628112a32f0c4145
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 1609081f364a2a20f983f8d8acd55181a71de42f
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122053442"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633433"
 ---
 # <a name="use-docker-compose"></a>Docker Compose kullanma
 
-[Docker Compose](https://docs.docker.com/compose/) , çok Kapsayıcılı uygulamaların tanımlanması ve paylaşılması için geliştirilmiş bir araçtır. Compose ile, hizmetleri tanımlamak için bir YAML dosyası oluşturabilir ve tek bir komutla, her şeyi açabilir veya parçalara ayırın.
+[Docker Compose,](https://docs.docker.com/compose/) çok kapsayıcılı uygulamaları tanımlamaya ve paylaşmaya yardımcı olmak için geliştirilmiş bir araçtır. Compose ile, hizmetleri tanımlamak için bir YAML dosyası oluşturabilir ve tek bir komutla her şeyi döndürebilirsiniz veya her şeyi parçalara ayırabilirsiniz.
 
-Oluşturma kullanmanın *büyük* avantajı, uygulama yığınınızı bir dosya içinde tanımlayabilir, bunu proje deponuzu kökünde tutabilir (artık sürümdedir) ve başka birinin projenize katkıda bulunmasını kolayca sağlayabilirsiniz. Birisinin yalnızca depoyu kopyalaması ve oluşturma uygulamasını başlatması gerekir. aslında GitHub/GitLab üzerinde yalnızca birkaç proje görebilirsiniz.
+Compose kullanmanın en büyük avantajı, uygulama yığınınızı bir dosyada tanımlayarak projenizin kökünde tutmanız (artık sürüm denetimli) ve başka birinin projenize katkıda bulunarak kolayca faydalanmanızı sağlamaktır.  Birinin yalnızca sizin repo'larınızı kopyalaması ve oluşturma uygulamasını başlatması gerekir. Aslında, GitHub/GitLab'de tam olarak bunu yaparken çok sayıda proje olduğunu görüyor olabilirsiniz.
 
-Bu nedenle nasıl başladıysanız?
+Peki, nasıl çalışmaya başladın?
 
-## <a name="install-docker-compose"></a>Docker Compose yüklensin
+## <a name="install-docker-compose"></a>Yükleme Docker Compose
 
-Windows veya Mac için docker Desktop yüklediyseniz, zaten Docker Compose demektir! WITH Docker örneklerinin de Docker Compose zaten yüklü. Bir Linux makineniz varsa, [buradaki yönergeleri](https://docs.docker.com/compose/install/)kullanarak Docker Compose yüklemeniz gerekecektir.
+Docker Desktop'ı Windows veya Mac için yüklemişsinizdir, zaten Docker Compose! Play-with-Docker örneklerinin Docker Compose zaten yüklü. Linux makinesi kullanıyorsanız, buradaki yönergeleri kullanarak Docker Compose yüklemeniz [gerekir.](https://docs.docker.com/compose/install/)
 
-Yükleme sonrasında, aşağıdakileri çalıştırıp sürüm bilgilerini görebilirsiniz.
+Yüklemeden sonra, aşağıdakini çalıştırarak sürüm bilgilerini görmelisiniz.
 
 ```bash
 docker-compose version
 ```
 
-## <a name="create-the-compose-file"></a>Oluşturma dosyası oluşturma
+## <a name="create-the-compose-file"></a>Oluşturma dosyasını oluşturma
 
-1. Uygulama projesinin kökünde adlı bir dosya oluşturun `docker-compose.yml` .
+1. Uygulama projesinin kökünde adlı bir dosya `docker-compose.yml` oluşturun.
 
-1. Oluşturma dosyasında, şema sürümünü tanımlayarak başlayacağız. Çoğu durumda, en son desteklenen sürümü kullanmak en iyisidir. Geçerli şema sürümleri ve uyumluluk matrisi için [oluşturma dosyası başvurusuna](https://docs.docker.com/compose/compose-file/) bakabilirsiniz.
+1. Oluşturma dosyasında şema sürümünü tanımlayarak başlayacağız. Çoğu durumda desteklenen en son sürümü kullanmak en iyisidir. Geçerli şema sürümleri [ve uyumluluk matrisi için](https://docs.docker.com/compose/compose-file/) Oluştur dosya başvurusuna bakabilirsiniz.
 
     ```yaml
     version: "3.7"
     ```
 
-1. Ardından, uygulamanızın bir parçası olarak çalıştırmak istediğiniz hizmetlerin (veya kapsayıcıların) listesini tanımlayın.
+1. Ardından, uygulamanın bir parçası olarak çalıştırmak istediğiniz hizmetlerin (veya kapsayıcıların) listesini tanımlayın.
 
     ```yaml hl_lines="3"
     version: "3.7"
@@ -52,11 +53,11 @@ docker-compose version
     services:
     ```
 
-Şimdi de bir hizmeti bir seferde oluşturma dosyasına geçirmeye başlayacaksınız.
+Şimdi de hizmeti aynı anda compose dosyasına iletirsiniz.
 
-## <a name="define-the-app-service"></a>App Service tanımlayın
+## <a name="define-the-app-service"></a>Define the App Service
 
-Bunu anımsamak için, uygulama kapsayıcınızı tanımlamak için kullandığınız komuttur ( ` \ ` karakterleri Windows PowerShell ile değiştirin `` ` `` ).
+Unutmayın; bu, uygulama kapsayıcınızı tanımlamak için kullanılan komutdu (uygulama ` \ ` kapsayıcısı içinde `` ` `` ile Windows PowerShell).
 
 ```bash
 docker run -dp 3000:3000 \
@@ -70,7 +71,7 @@ docker run -dp 3000:3000 \
   sh -c "yarn install && yarn run dev"
 ```
 
-1. İlk olarak, hizmet girdisini ve kapsayıcının görüntüsünü tanımlayın. Hizmet için herhangi bir ad seçebilirsiniz. Ad, MySQL hizmeti tanımlanırken yararlı olacak şekilde otomatik olarak bir ağ diğer adı olacak.
+1. İlk olarak, kapsayıcı için hizmet girişini ve görüntüsünü tanımlayın. Hizmet için istediğiniz adı seçesiniz. Ad otomatik olarak bir ağ diğer adı haline gelecek ve MySQL hizmetini tanımlarken yararlı olacaktır.
 
     ```yaml hl_lines="4 5"
     version: "3.7"
@@ -80,7 +81,7 @@ docker run -dp 3000:3000 \
         image: node:12-alpine
     ```
 
-1. Genellikle, sıralamada bir gereksinim olmasa da, tanımınıza yakın komutu görürsünüz `image` . Bu nedenle, devam edin ve dosyaya taşıyın.
+1. Sıralamaya gerek yoktur ancak komutu genellikle `image` tanımın yakınındadır. Bu nedenle bunu dosyaya taşımaya devam edin.
 
     ```yaml hl_lines="6"
     version: "3.7"
@@ -91,7 +92,7 @@ docker run -dp 3000:3000 \
         command: sh -c "yarn install && yarn run dev"
     ```
 
-1. `-p 3000:3000`Hizmeti için öğesini tanımlayarak komutun bölümünü geçirin `ports` . Burada [kısa söz dizimini](https://docs.docker.com/compose/compose-file/#short-syntax-1) kullanacaksınız, ancak daha ayrıntılı bir [uzun sözdizimi](https://docs.docker.com/compose/compose-file/#long-syntax-1) de mevcuttur.
+1. Hizmet `-p 3000:3000` için tanımlayarak komutunun `ports` bölümünü geçirme. Burada kısa söz [dizimi](https://docs.docker.com/compose/compose-file/#short-syntax-1) kullanasınız, ancak daha ayrıntılı bir uzun söz [dizimi de](https://docs.docker.com/compose/compose-file/#long-syntax-1) mevcuttur.
 
     ```yaml hl_lines="7 8"
     version: "3.7"
@@ -104,9 +105,9 @@ docker run -dp 3000:3000 \
           - 3000:3000
     ```
 
-1. Ardından, ve tanımlarını kullanarak hem çalışma dizinini () hem de `-w /app` birim eşlemesini ( `-v ${PWD}:/app` ) geçirin `working_dir` `volumes` . Birimlerde ayrıca [kısa](https://docs.docker.com/compose/compose-file/#short-syntax-3) ve [uzun](https://docs.docker.com/compose/compose-file/#long-syntax-3) bir sözdizimi vardır.
+1. Ardından, ve tanımlarını kullanarak hem çalışma dizinini ( ) hem de `-w /app` birim eşlemesini ( ) `-v ${PWD}:/app` `working_dir` `volumes` geçirebilirsiniz. Birimler de kısa ve [uzun söz](https://docs.docker.com/compose/compose-file/#short-syntax-3) [dizimleri](https://docs.docker.com/compose/compose-file/#long-syntax-3) içerir.
 
-   Docker Compose birim tanımlarının bir avantajı, geçerli dizinden göreli yollar kullanabilirsiniz.
+   Birim tanımlarının Docker Compose bir avantajı, geçerli dizinden göreli yolları kullanabileceğinizdir.
 
     ```yaml hl_lines="9 10 11"
     version: "3.7"
@@ -122,7 +123,7 @@ docker run -dp 3000:3000 \
           - ./:/app
     ```
 
-1. Son olarak, anahtarı kullanarak ortam değişkeni tanımlarını geçirin `environment` .
+1. Son olarak, anahtarını kullanarak ortam değişkeni tanımlarını `environment` geçirin.
 
     ```yaml hl_lines="12 13 14 15 16"
     version: "3.7"
@@ -145,7 +146,7 @@ docker run -dp 3000:3000 \
 
 ### <a name="define-the-mysql-service"></a>MySQL hizmetini tanımlama
 
-Şimdi MySQL hizmetini tanımlamanız zaman. Bu kapsayıcı için kullandığınız komut aşağıdaki gibi ( ` \ ` karakterleri Windows PowerShell ile değiştirin `` ` `` ):
+Şimdi MySQL hizmetini tanımlama zamanı geldi. Bu kapsayıcı için kullanılan komut şu şekildedir (karakterleri ` \ ` aşağıdakiyle değiştirin Windows PowerShell: `` ` ``
 
 ```bash
 docker run -d \
@@ -156,7 +157,7 @@ docker run -d \
   mysql:5.7
 ```
 
-1. İlk olarak, yeni hizmeti tanımlayın ve `mysql` ağ diğer adını otomatik olarak alır. Kullanılacak görüntüyü de belirtin.
+1. İlk olarak, yeni hizmeti tanımlayın ve ağ `mysql` diğer adını otomatik olarak alır. Kullanmak istediğiniz görüntüyü de belirtin.
 
     ```yaml hl_lines="6 7"
     version: "3.7"
@@ -168,7 +169,7 @@ docker run -d \
         image: mysql:5.7
     ```
 
-1. Ardından, birim eşlemesini tanımlayın. Kapsayıcıyı ile çalıştırdığınızda `docker run` , adlandırılmış birim otomatik olarak oluşturulmuştur. Ancak, Compose ile çalışırken gerçekleşmez. Üst düzey bölümünde birimi tanımlamanız `volumes:` ve ardından hizmet yapılandırmasında bağlama noktasını belirtmeniz gerekir. Yalnızca birim adını sağlayarak varsayılan seçenekler kullanılır. [Birden çok daha fazla seçenek](https://github.com/compose-spec/compose-spec/blob/master/spec.md#volumes-top-level-element) mevcuttur.
+1. Ardından birim eşlemesini tanımlayın. Kapsayıcıyı ile birlikte `docker run` 2. Ancak Bu durum Compose ile çalıştırılırken olmaz. Birimi üst düzey bölümde tanımlamanız ve ardından hizmet `volumes:` yapılandırmasında bağlama noktası belirtmeniz gerekir. Yalnızca birim adını sağlayarak varsayılan seçenekler kullanılır. Ancak birçok [seçenek daha](https://github.com/compose-spec/compose-spec/blob/master/spec.md#volumes-top-level-element) vardır.
 
     ```yaml hl_lines="8 9 10 11 12"
     version: "3.7"
@@ -185,7 +186,7 @@ docker run -d \
       todo-mysql-data:
     ```
 
-1. Son olarak, yalnızca ortam değişkenlerini belirtmeniz yeterlidir.
+1. Son olarak, yalnızca ortam değişkenlerini belirtmeniz gerekir.
 
     ```yaml hl_lines="10 11 12"
     version: "3.7"
@@ -205,7 +206,7 @@ docker run -d \
       todo-mysql-data:
     ```
 
-Bu noktada, tamamlanma `docker-compose.yml` şöyle görünmelidir:
+Bu noktada, tam `docker-compose.yml` şu şekilde olması gerekir:
 
 ```yaml
 version: "3.7"
@@ -239,17 +240,17 @@ volumes:
 
 ## <a name="run-the-application-stack"></a>Uygulama yığınını çalıştırma
 
-Artık dosyaya sahip olduğunuza göre `docker-compose.yml` başlayabilirsiniz!
+Artık dosyayı sahip `docker-compose.yml` olduğunuza göre başlatabilirsiniz!
 
-1. İlk olarak, uygulamanın ve veritabanının başka bir kopyasının (ve) çalıştığından emin olun `docker ps` `docker rm -f <ids>` .
+1. İlk olarak, uygulamanın ve veritabanının başka bir kopyasının ( ve ) çalıştırılamay olduğundan emin `docker ps` `docker rm -f <ids>` olun.
 
-1. Komutunu kullanarak uygulama yığınını başlatın `docker-compose up` . `-d`Arka planda her şeyi çalıştırmak için bayrak ekleyin. alternatif olarak, oluştur dosyanıza sağ tıklayıp VS Code yan çubuk için **oluştur** seçeneğini belirleyebilirsiniz. 
+1. komutunu kullanarak uygulama yığınını `docker-compose up` başlatma. Arka planda `-d` her şeyi çalıştırmak için bayrağını ekleyin. Alternatif olarak, Oluştur dosyanıza sağ tıklayabilirsiniz ve  kenar çubuğu için Oluştur VS Code seçeneğini belirleyin. 
 
     ```bash
     docker-compose up -d
     ```
 
-    Bunu çalıştırdığınızda aşağıdakine benzer bir çıktı görmeniz gerekir:
+    Bunu çalıştıracak olurken aşağıdaki gibi bir çıkış görüyor oluruz:
 
     ```plaintext
     Creating network "app_default" with the default driver
@@ -258,11 +259,11 @@ Artık dosyaya sahip olduğunuza göre `docker-compose.yml` başlayabilirsiniz!
     Creating app_mysql_1 ... done
     ```
 
-    Birimin oluşturulduğunu ve bir ağ olduğunu fark edeceksiniz! Varsayılan olarak, Docker Compose otomatik olarak uygulama yığını için bir ağ oluşturur (Bu nedenle, oluşturma dosyasında bir tane tanımlamadığınız anlamına gelir).
+    Birimin ve bir ağın da oluşturulmuş olduğunu fark vardır! Varsayılan olarak, Docker Compose uygulama yığını için özel olarak bir ağ oluşturur (bu nedenle oluşturma dosyasında bir ağ tanımlamadınız).
 
-1. Komutunu kullanarak günlüklere bakın `docker-compose logs -f` . Her bir hizmet için günlük kayıtları tek bir akışta görürsünüz. Bu, zamanlamaya göre ilgili sorunları izlemek istediğinizde inanılmaz yararlıdır. `-f`"Bu" bayrak, günlüğün oluşturulduğu gibi canlı çıktılar sağlayacak.
+1. komutunu kullanarak günlüklere `docker-compose logs -f` bakın. Hizmetlerin her biri günlüklerinin tek bir akışa alınarak yenilerini göreceğiz. Bu, zamanlamayla ilgili sorunları izlemek istediğinizde son derece kullanışlıdır. bayrağı `-f` günlüğü "izler" ve bu nedenle oluşturulan canlı çıkışı sağlar.
 
-    Henüz yapmadıysanız aşağıdakine benzer bir çıktı görürsünüz:
+    Henüz görmüyorsanız aşağıdakine benzer bir çıkışla karşı karşıdan gelirsiniz:
 
     ```plaintext
     mysql_1  | 2019-10-03T03:07:16.083639Z 0 [Note] mysqld: ready for connections.
@@ -271,41 +272,41 @@ Artık dosyaya sahip olduğunuza göre `docker-compose.yml` başlayabilirsiniz!
     app_1    | Listening on port 3000
     ```
 
-    Hizmet adı, iletileri ayırt etmenize yardımcı olmak için satırın başlangıcında görüntülenir (genellikle renkli). Belirli bir hizmet için günlükleri görüntülemek istiyorsanız, hizmet adını Günlükler komutunun sonuna (örneğin, `docker-compose logs -f app` ) ekleyebilirsiniz.
+    İletileri ayırt etmeye yardımcı olmak için hizmet adı satırın başında (genellikle renkli) görüntülenir. Belirli bir hizmetin günlüklerini görüntülemek için hizmet adını logs komutunun sonuna ekleyebilirsiniz (örneğin, `docker-compose logs -f app` ).
 
     > [!TIP]
-    > **Uygulamayı başlatmadan önce DB bekleniyor** Uygulama başlatıldığında, gerçekten bir bağlantı kurmaya çalışmadan önce MySQL 'in hazır ve hazır olmasını bekler it.Docker, başka bir kapsayıcının başlatılmasına, çalışmaya ve başka bir kapsayıcıya başlamadan önce herhangi bir yerleşik destek vermez. Düğüm tabanlı projelerde [bekleme-bağlantı noktası](https://github.com/dwmkerr/wait-port) bağımlılığını kullanabilirsiniz. Diğer diller/çerçeveler için benzer projeler de mevcuttur.
+    > **Uygulamayı başlatmadan önce db'nin beklemesi** Uygulama çalışırken, uygulamaya bağlanmaya çalışmadan önce mySQL'in hazır ve hazır olması için beklemesi gerekir. Docker, başka bir kapsayıcıyı başlatmadan önce başka bir kapsayıcının tamamen açık, çalışıyor ve hazır durumda olacağını beklemek için yerleşik desteke sahip değil. Düğüm tabanlı projeler için bekleme bağlantı [noktası bağımlılığını kullanabilirsiniz.](https://github.com/dwmkerr/wait-port) Diğer diller/çerçeveler için de benzer projeler mevcuttur.
 
-1. Bu noktada, uygulamanızı açabiliyor ve çalıştığını görmeniz gerekir. Ve Hey! Tek bir komuta hazırsınız!
+1. Bu noktada, uygulamanızı açıp çalışıyor olarak görüyor olmak gerekir. Ve hey! Tek bir komuta geçtin!
 
 ## <a name="see-the-app-stack-in-the-docker-extension"></a>Docker uzantısında uygulama yığınına bakın
 
-Docker uzantısına bakarsanız, ' COG ' ve ' Group by ' kullanarak gruplandırma seçeneklerini değiştirebilirsiniz. bu örnekte, oluşturma Project adına göre gruplanmış kapsayıcıları görmek istiyorsunuz:
+Docker uzantısına bakarsanız , 'dişli' ve 'gruplama by' kullanarak gruplama seçeneklerini değiştirebilirsiniz. Bu örnekte Kapsayıcıları Oluştur'a göre gruplandı ve şu Project görüyorsunuz:
 
-![Oluşturma ile VS uzantısı](media/vs-app-project-collapsed.png)
+![Compose ile VS Uzantısı](media/vs-app-project-collapsed.png)
 
-Ağı görmüyorsanız, oluşturma dosyasında tanımladığınız iki kapsayıcıyı görürsünüz.
+Ağın aşağı doğru ilerlerken, oluşturma dosyasında tanımlandığı iki kapsayıcıyı görüyorsunuz.
 
-![Genişletilmiş oluşturma ile VS uzantısı](media/vs-app-project-expanded.png)
+![Compose genişletilmiş VS Uzantısı](media/vs-app-project-expanded.png)
 
-## <a name="tear-it-all-down"></a>Tümünü koparın
+## <a name="tear-it-all-down"></a>Hepsini parçalara ayır
 
-tamamen ayrılmaya hazırsanız, `docker-compose down` VS Code docker uzantısı 'ndaki kapsayıcılar listesinden uygulamayı çalıştırın veya sağ tıklayın ve **oluştur**' u seçin. Kapsayıcılar durdurulur ve ağ kaldırılır.
+Tüm dosyaları parçalara ayıracaksanız, docker uzantısının kapsayıcılar listesinde bulunan uygulamaya sağ tıklar veya `docker-compose down` VS Code **Oluştur'u seçmeniz gerekir.** Kapsayıcılar durur ve ağ kaldırılır.
 
 > [!WARNING]
-> **Birimleri kaldırma** Varsayılan olarak, oluşturma dosyanızdaki adlandırılmış birimler çalışırken kaldırılmaz `docker-compose down` . Birimleri kaldırmak istiyorsanız bayrağını eklemeniz gerekir `--volumes` .
+> **Birimleri Kaldırma** Varsayılan olarak, oluşturma dosyanız içinde adlandırılmış birimler çalıştırılırken `docker-compose down` KALDıRLANMAZ. Birimleri kaldırmak için bayrağını eklemeniz `--volumes` gerekir.
 
-Yırtık olduktan sonra, başka bir projeye geçiş yapabilir, çalıştırabilir `docker-compose up` ve bu projeye katkıda bulunmak için hazırsanız! Gerçekten çok daha basit almaz!
+Devreden sonra başka bir projeye geçiş yapmak, çalıştırmak `docker-compose up` ve bu projeye katkıda bulunmak için hazır olmak! Aslında bundan çok daha basit bir şey değil!
 
 ## <a name="recap"></a>Özet
 
-Bu bölümde Docker Compose ve çok hizmet uygulamalarının tanımlanmasını ve paylaşılmasını önemli ölçüde basitleştirmeye nasıl yardımcı olduğunu öğrendiniz. Kullanmakta olduğunuz komutları uygun oluşturma biçiminde çevirerek bir oluşturma dosyası oluşturdunuz.
+Bu bölümde, çok hizmetli Docker Compose tanımlamayı ve paylaşmayı önemli ölçüde basitleştirmeye nasıl yardımcı olduğu hakkında bilgi edindi. Kullanmakta olduğunu komutları uygun compose biçimine dönüştürerek bir Compose dosyası oluştursunuz.
 
-Bu noktada öğreticiyi kaydırmaya başlıyoruz. Bununla birlikte, kullanmakta olduğunuz Dockerfile ile ilgili büyük bir sorun olduğu için görüntü oluşturma hakkında en iyi uygulamalar vardır. Bu nedenle, bir göz atalım!
+Bu noktada, öğreticiyi sarmamaya başlıyorsanız. Ancak, kullanmakta olduğu Dockerfile'da büyük bir sorun olduğu için görüntü binayla ilgili birkaç en iyi uygulama vardır. Şimdi bir göz at bakalım!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Öğreticiye devam edin!
 
 > [!div class="nextstepaction"]
-> [Görüntü-en iyi uygulamalar oluşturma](image-building-best-practices.md)
+> [Görüntü en iyi yöntemleri](image-building-best-practices.md)

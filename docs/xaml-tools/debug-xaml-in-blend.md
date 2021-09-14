@@ -1,6 +1,6 @@
 ---
-title: Blend 'de XAML hatalarını ayıklama | Microsoft Docs
-description: uygulamanızdaki XAML hatalarını algılamak, hatalarını ayıklamak ve çözümlemek için Visual Studio için Blend araçlarını kullanmayı öğrenin.
+title: Blend |'de XAML'de hata ayıklama Microsoft Docs
+description: Uygulamanıza XAML hatalarını Visual Studio için Blend, hatalarını ayıklamak ve çözmek için Visual Studio için Blend'daki araçları kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -12,60 +12,60 @@ ms.technology: vs-xaml-tools
 ms.workload:
 - uwp
 ms.openlocfilehash: 5cd32b2eab82cd148bec4f21fa7a6f5e1f95c5b9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122135097"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726058"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend'de XAML hatalarını ayıklama
 
-uygulamanızdaki XAML hatalarını ayıklamak için Visual Studio için Blend içindeki araçları kullanabilirsiniz. Bir proje oluşturduğunuzda, tüm hatalar **sonuçlar** panelinde görüntülenir. Hatayla ilgili işaretlemeyi bulmak için bir hataya çift tıklayın. Çalışmak için daha fazla yer gerekiyorsa, **F12** tuşuna basarak **sonuçlar** panelini gizleyebilirsiniz.
+Uygulamanıza XAML'Visual Studio için Blend ayıklamak için Visual Studio için Blend'daki araçları kullanabilirsiniz. Proje derleme sırasında hatalar Sonuçlar panelinde **görüntülenir.** Hatayla ilgili işaretlemeyi bulmak için bir hataya çift tıklayın. Daha fazla çalışmanız gerekirse F12 tuşuna **basarak** Sonuçlar panelini **gizleyebilirsiniz.**
 
 ## <a name="syntax-errors"></a>Sözdizimi hataları
 
-XAML veya arka plan kod dosyaları dilin biçimlendirme kurallarını izleyememesi durumunda sözdizimi hataları oluşur. Hatanın açıklaması, nasıl düzeltileceğini anlamanıza yardımcı olabilir. Listede ayrıca dosyanın adı ve hatanın gerçekleştiği satır numarası da belirtilir. XAML hataları, **sonuçlar** panelinde **biçimlendirme** sekmesinde listelenir.
+XAML veya arkadeki kod dosyaları dilin biçimlendirme kurallarına uymazsa söz dizimi hataları oluşur. Hatanın açıklaması, nasıl düzeltileceğini anlamanıza yardımcı olabilir. Liste ayrıca dosyanın adını ve hatanın oluştuğu satır numarasını belirtir. XAML hataları Sonuçlar **panelindeki İşaretleme** **sekmesinde** listelenir.
 
 > [!TIP]
-> XAML, XML tabanlı bir biçimlendirme dilidir ve XML sözdizimi kurallarını izler.
+> XAML, XML tabanlı bir işaretleme dilidir ve XML söz dizimi kurallarını izler.
 
-XAML sözdizimi hatalarının bazı yaygın nedenleri şunlardır:
+XAML söz dizimi hatalarının bazı yaygın nedenleri:
 
 - Bir anahtar sözcük yanlış yazılmıştır veya büyük harf ayrımı yanlıştır.
 
-- Özniteliklerin veya metin dizelerinin etrafında tırnak işaretleri eksik.
+- Öznitelikler veya metin dizeleri için tırnak işaretleri eksik.
 
 - XAML öğesinde bir kapatma etiketi eksiktir.
 
 - XAML öğesi, izin verilmeyen bir konumda bulunmaktadır.
 
-Ortak XAML sözdizimi hakkında daha fazla bilgi için bkz. [temel xaml sözdizimi Kılavuzu](/windows/uwp/xaml-platform/xaml-syntax-guide).
+Yaygın XAML söz dizimi hakkında daha fazla bilgi için [bkz. Temel XAML söz dizimi kılavuzu.](/windows/uwp/xaml-platform/xaml-syntax-guide)
 
-Ayrıca Blend 'de basit kod hataları, derleme hataları ve çalışma zamanı hataları tanımlayabilir ve bunları çözebilirsiniz. Ancak, arka plan kod hataları Visual Studio içinde tanımlanması ve çözümlenmesi daha kolay olabilir.
+Ayrıca Blend'de basit arka kod arkası söz dizimi hatalarını, derleme hatalarını ve çalışma zamanı hatalarını tanımlayabilir ve çözebilirsiniz. Ancak, arka alınan kod hatalarının daha kolay belirlenmesi ve bu hataların Visual Studio.
 
 ### <a name="debugging-sample-xaml-code"></a>Örnek XAML kodunda hata ayıklama
 
-Aşağıdaki örnek, Blend 'de basit bir XAML hata ayıklama oturumunda size yol gösterecektir.
+Aşağıdaki örnek, Blend'de basit bir XAML hata ayıklama oturumunda size yol sağlar.
 
 #### <a name="to-create-a-project"></a>Bir proje oluşturmak için
 
-1. Blend 'de **Dosya** menüsünü açın ve ardından **yeni Project**' ye tıklayın.
+1. Blend'de Dosya menüsünü **açın ve** yeni dosya'ya **Project.**
 
-    **yeni Project** iletişim kutusunda, sol tarafta proje türlerinin bir listesi görüntülenir. Bir proje türüne tıkladığınızda, onunla ilişkili proje şablonları sağ tarafta görüntülenir.
+    Yeni **Project** iletişim kutusunda, sol tarafta proje türlerinin listesi görüntülenir. Bir proje türüne tıklarsanız, projeyle ilişkili proje şablonları sağ tarafta görünür.
 
-2. proje türleri listesinde, **evrensel Windows**' ye tıklayın.
+2. Proje türleri listesinde Evrensel'e **Windows tıklayın.**
 
-3. Proje şablonları listesinde **boş uygulama (evrensel Windows)** seçeneğine tıklayın.
+3. Proje şablonları listesinde Boş Uygulama **(Evrensel Uygulama) Windows.**
 
-4. **Ad** metin kutusuna yazın `DebuggingSample` .
+4. Ad **metin** kutusuna `DebuggingSample` yazın.
 
-5. **Konum** metin kutusunda projenin konumunu doğrulayın.
+5. Konum **metin** kutusunda projenin konumunu doğrulayın.
 
-6. **Dil** listesinde, **Visual C#**' yi tıklatın ve ardından projeyi oluşturmak için **Tamam** ' ı tıklatın.
+6. Dil **listesinde Visual** **C# 'ye tıklayın** ve ardından Projeyi oluşturmak **için Tamam'a** tıklayın.
 
-7. Tasarım yüzeyine sağ tıklayın ve ardından **bölünmüş** görünüme geçmek Için **kaynağı görüntüle** ' ye tıklayın.
+7. Tasarım yüzeyine sağ tıklayın ve ardından Kaynağı **Görüntüle'ye** tıklar ve Bölme **görünümüne geçiş** yapmak için.
 
-8. Kodun sağ üst köşesindeki **Kopyala** bağlantısına tıklayarak aşağıdaki kodu kopyalayın.
+8. Kodun sağ üst **köşesindeki** Kopyala bağlantısına tıklayarak aşağıdaki kodu kopyalayın.
 
    ```xml
    <Grid HorizontalAlignment="Left" Height="222" VerticalAlignment="Top>
@@ -77,7 +77,7 @@ Aşağıdaki örnek, Blend 'de basit bir XAML hata ayıklama oturumunda size yol
    </Grid>
    ```
 
-9. Varsayılan **Kılavuzu** bulun ve açılış ve kapanış **kılavuz** etiketleri arasına kodu yapıştırın. İşiniz bittiğinde kodunuzun aşağıdaki gibi görünmesi gerekir:
+9. Varsayılan **Kılavuz'a** tıklayın ve kodu açma ve kapatma Kılavuz etiketleri **arasına** yapıştırın. Bitirdikten sonra kodunuzun aşağıdaki gibi olması gerekir:
 
     ```xml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -91,38 +91,38 @@ Aşağıdaki örnek, Blend 'de basit bir XAML hata ayıklama oturumunda size yol
     </Grid>
     ```
 
-10.  +  + Projeyi derlemek için CTRL SHIFT **B** tuşlarına basın.
+10. Projeyi **derlemek için Ctrl** +  + **Shift B** tuşlarına basın.
 
-    Projenin derlenmeyeceğini ve hataları listelerken **sonuçlar** bölmesinin uygulamanın altında göründüğünü belirten bir hata iletisi görüntülenir.
+    Projenin yapılamay durumuyla ilgili sizi uyaran  bir hata iletisi görüntülenir ve hataları liste alan Sonuçlar paneli uygulamanın alt kısmında görünür.
 
     ![Visual Studio için Blend'de XAML hatalarını ayıklama](../debugger/media/blend_debugxaml_xaml.png "blend_debugXAML_XAML")
 
-### <a name="resolve-xaml-errors"></a>XAML hatalarını çözümleme
+### <a name="resolve-xaml-errors"></a>XAML hatalarını düzeltme
 
-XAML hataları algılandığında tasarım yüzeyi, projenizin geçersiz biçimlendirme içerdiğini belirten bir uyarı görüntüler. Hataları çözümlediğinizde, **sonuçlar** panelindeki hata listesi güncellenir. Tüm hataları çözdüyseniz tasarım yüzeyi etkinleştirilir ve uygulamanız tasarım yüzeyinde görüntülenir.
+XAML hataları algılandığında, tasarım yüzeyi projenizin geçersiz işaretleme içerdiğini gösteren bir uyarı görüntüler. Hataları çözümlediğinde Sonuçlar panelindeki hata **listesi** güncelleştirilir. Tüm hataları çözümledikten sonra tasarım yüzeyi etkinleştirilir ve uygulama tasarım yüzeyinde görüntülenir.
 
-#### <a name="to-resolve-the-xaml-errors"></a>XAML hatalarını çözümlemek için
+#### <a name="to-resolve-the-xaml-errors"></a>XAML hatalarını çözmek için
 
-1. Listedeki ilk hataya çift tıklayın. Açıklama "< ' değeri özniteliğinde geçerli değildir." Hatayı çift tıklattığınızda, işaretçi kodda karşılık gelen konumu bulur. `<`Yukarıdaki, `Button` hata iletisinde önerildiği şekilde değil, geçerli bir öznitelik değil. Yukarıdaki kod satırına baktığınızda, öznitelik için kapanan tırnak işaretlerinin eksik olduğunu fark edeceksiniz `Top` . Kapanış tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesinin değişikliklerinizi yansıtacak şekilde güncelleştiğine dikkat edin.
+1. Listede ilk hataya çift tıklayın. Açıklama şu şekildedir: "'<' değeri öznitelikte geçerli değil." Hataya çift tıklarsanız, işaretçi kodda karşılık gelen konumu bulur. Yukarıdaki `<` `Button` geçerlidir ve hata iletisinde önerilen bir öznitelik değildir. Önceki kod satırına bakarsanız özniteliğin kapanış tırnak işaretlerinin eksik olduğunu `Top` farkedersiniz. Kapanış tırnak işaretlerini yazın. Sonuçlar panelindeki hata listesinin **değişikliklerinizi** yansıtacak şekilde değiştirilebilir.
 
-2. "' 0" açıklamasına çift tıklayarak bir adın başlangıcında geçerli değildir. " `Margin="0,149,0,0"` iyi biçimlendirilmiş gibi görünüyor. Ancak, renk kodlamasının, `Margin` koddaki diğer örneklerle eşleşmediğinden emin olun `Margin` . Önceki ad/değer çiftindeki () kapanış tırnak işaretleri eksik olduğundan `VerticalAlignment="Top` , `Margin="` önceki özniteliğin değerinin bir parçası olarak salt okunurdur ve 0 bir ad/değer çiftinin başlangıcı olarak okunurdur. Kapanış tırnak işaretlerini yazın `Top` . **Sonuçlar** panelindeki hata listesi, yaptığınız değişiklikleri yansıtacak şekilde güncelleştirilir.
+2. "'0' adı başında geçerli değil" açıklamasına çift tıklayın. `Margin="0,149,0,0"` iyi oluşturulmuş gibi görünür. Ancak, renk kodlamanın `Margin` kodda diğer örnekleriyle `Margin` eşleşmez. Kapatma tırnak işaretleri önceki ad/değer çifti () içinde eksik olduğundan, önceki özniteliğin değerinin bir parçası olarak okunur ve 0 bir ad/değer çiftinin başlangıcı `VerticalAlignment="Top` `Margin="` olarak okunur. için kapanış tırnak işaretlerini `Top` yazın. Sonuçlar panelindeki hata **listesi değişikliklerinizi** yansıtacak şekilde uzer.
 
-3. Kalan hataya çift tıklayın, "kapanış XML etiketi ' Button ' eşleşmiyor." İşaretçi,  `</Grid>` hatanın nesnenin içinde olması için kapanış kılavuz etiketinde () bulunur `Grid` . İkinci `Button` nesnede kapanış etiketinin eksik olduğuna dikkat edin. Kapatmayı ekledikten sonra `/` **sonuçlar** paneli listesi güncellenir. Artık bu ilk hatalar çözümlendiğinden, iki ek hata belirlenmiştir.
+3. Kalan hataya çift tıklayın: "'Düğme' kapanış XML etiketi eşleşmedi." İşaretçi, hatanın **nesnenin içinde** olduğunu öneren kapanış Kılavuz etiketinde () `</Grid>` `Grid` bulunur. İkinci nesnede `Button` kapanış etiketinin eksik olduğunu fark edersiniz. Kapatmayı ekledikten `/` sonra **Sonuçlar** paneli listesi güncelleştirilir. Bu ilk hatalar çözüldü, şimdi iki ek hata belirlendi.
 
-4. "Üye ' içerik ' tanınmıyor veya erişilebilir değil" seçeneğine çift tıklayın. `c`İçindeki, `content` büyük harf olmalıdır. "C" alt durumunu "c" büyük harfle değiştirin.
+4. "'İçerik' üyesi tanınmıyor veya erişilebilir değil"e çift tıklayın. `c`içinde `content` büyük harfli olması gerekir. Küçük harfli "c"yi büyük harf "c" ile değiştirin.
 
-5. "' MAME ' özelliği ad alanında yok ' a çift tıklayın `http://schemas.microsoft.com/winfx/2006/xaml` ." "Mame" içindeki "d", "N" olmalıdır. "D" değerini bir "N" ile değiştirin. Artık XAML ayrıştırılabilmesine göre, uygulama tasarım yüzeyinde görünür.
+5. "'Mame' özelliği ad alanı içinde yok"a çift `http://schemas.microsoft.com/winfx/2006/xaml` tıklayın. "Mame" içinde "M" bir "N" olması gerekir. "M"yi "N" ile değiştirin. XAML ayrıştırılana kadar uygulama tasarım yüzeyinde görünür.
 
-    ![Visual Studio için Blend XAML hatalarını ayıklama](../debugger/media/blend_debugartboard_xaml.png "blend_debugArtboard_XAML")
+    ![Visual Studio için Blend'de XAML'de hata ayıklama](../debugger/media/blend_debugartboard_xaml.png "blend_debugArtboard_XAML")
 
-     +  + Projenizi derlemek için CTRL SHIFT **B** tuşlarına basın ve kalan hata olmadığını onaylayın.
+    Projenizi **derlemek** için Ctrl Shift B tuşlarına +  +  basın ve kalan hata olmadığını onaylayın.
 
 ## <a name="debug-in-visual-studio"></a>Visual Studio'da hata ayıklama
 
-uygulamanızdaki kodda hata ayıklamanın daha kolay olması için Visual Studio Blend projelerini açabilirsiniz. Visual Studio bir Blend projesi açmak için **projeler** panelinde projeye sağ tıklayın ve ardından **Visual Studio düzenle**' ye tıklayın. Visual Studio hata ayıklama oturumunuzu tamamladıktan sonra, tüm değişikliklerinizi kaydetmek için Ctrl + shıft + S tuşlarına basın ve ardından Blend 'e geri dönün. Projeyi yeniden yüklemeniz istenecektir. Blend 'de çalışmaya devam etmek için **Tümüne Evet** ' e tıklayın.
+Uygulamanıza kodda daha kolay Visual Studio için Blend projelerini bir uygulamada açabilirsiniz. Bir Blend projesini Visual Studio için Projeler **panelinde** projeye sağ tıklayın ve ardından **Visual Studio.** Visual Studio'da hata ayıklama oturum Visual Studio tüm değişikliklerinizi kaydetmek için Ctrl+Shift+S tuşlarına basın ve blend'e geri dönebilirsiniz. Projeyi yeniden yüklemeniz istenir. **Blend'de çalışmaya devam etmek** için Tamam'a tıklayın.
 
-Uygulamanızda hata ayıklama hakkında daha fazla bilgi için bkz. [VISUAL STUDIO UWP uygulamalarının hatalarını ayıklama](../debugger/debugging-windows-store-and-windows-universal-apps.md).
+Uygulamanıza hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio'de UWP uygulamalarının Visual Studio.](../debugger/debugging-windows-store-and-windows-universal-apps.md)
 
 ## <a name="get-help"></a>Yardım alın
 
-Blend uygulamanızda hata ayıklama konusunda daha fazla yardıma ihtiyacınız varsa, sorun veya soru göndermek için [UWP uygulama topluluğu forumlarında](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) arama yapabilirsiniz.
+Blend uygulamanıza hata ayıklaması için daha fazla yardıma ihtiyacınız varsa, UWP uygulaması topluluk [forumlarında](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) sorunla ilgili gönderiler arayabilir veya bir soru paylaşabilirsiniz.

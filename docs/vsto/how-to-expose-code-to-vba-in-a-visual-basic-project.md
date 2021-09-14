@@ -1,6 +1,6 @@
 ---
-title: "nasıl yapılır: Visual Basic projesindeki kodu VBA 'de kullanıma sunma"
-description: iki tür kodun birbirleriyle etkileşime geçmesini isterseniz, bir Visual Basic projesindeki kodu Visual Basic for Applications (VBA) koduna nasıl kullanıma sunabileceğinizi öğrenin.
+title: "Nasıl olur: Bir Visual Basic projesinde kodu VBA'Visual Basic açığa çıkarma"
+description: İki tür kodun birbiriyle etkileşim kurması Visual Basic kod Visual Basic for Applications (VBA) kodu kullanmak için bir Visual Basic projesinde kodu nasıl ortaya çıkarabilirsiniz?
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -20,84 +20,84 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: a943688945ab7134742ff85ec63e7fad5a4f11c6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122122819"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725587"
 ---
-# <a name="how-to-expose-code-to-vba-in-a-visual-basic-project"></a>nasıl yapılır: Visual Basic projesindeki kodu VBA 'de kullanıma sunma
-  [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]iki tür kodun birbirleriyle etkileşime geçmesini isterseniz, bir projedeki kodu bir Visual Basic for Applications (VBA) kodu üzerinde kullanıma sunabilirsiniz.
+# <a name="how-to-expose-code-to-vba-in-a-visual-basic-project"></a>Nasıl olur: Bir Visual Basic projesinde kodu VBA'Visual Basic açığa çıkarma
+  İki tür kodun birbiriyle etkileşim kurması Visual Basic for Applications projesinde kodun [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] (VBA) kodunun nasıl açığa çıkarılacağını ortaya çıkarabilirsiniz.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Visual Basic işlem, Visual C# işleminden farklıdır. Daha fazla bilgi için bkz. [nasıl yapılır: Visual C&#35; projesinde kodu VBA 'de kullanıma](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)sunma.
+ Bu Visual Basic Visual C# sürecinden farklıdır. Daha fazla bilgi için, [bkz. How to: Expose code to VBA in a Visual C&#35; projesinde](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md).
 
- İşlem, bir konak öğesi sınıfındaki kod için, diğer sınıflardaki kod olduğundan farklıdır:
+ bir konak öğesi sınıfındaki kod için işlem, diğer sınıflarda koda göre farklıdır:
 
-- [Kodu bir konak öğesi sınıfında kullanıma sunma](#HostItemCode)
+- [Konak öğesi sınıfında kodu açığa çıkarma](#HostItemCode)
 
-- [Konak öğesi sınıfında olmayan kodu açığa çıkarın](#NonHostItem)
+- [Konak öğesi sınıfında yer alan kodu açığa çıkarma](#NonHostItem)
 
-## <a name="expose-code-in-a-host-item-class"></a><a name="HostItemCode"></a> Kodu bir konak öğesi sınıfında kullanıma sunma
- VBA kodunu bir konak öğesi sınıfında Visual Basic kodu çağırmak üzere etkinleştirmek için, konak öğesinin **EnableVbaCallers** özelliğini **True** olarak ayarlayın.
+## <a name="expose-code-in-a-host-item-class"></a><a name="HostItemCode"></a> Konak öğesi sınıfında kodu açığa çıkarma
+ VBA kodunun bir konak öğesi sınıfındaki Visual Basic çağıracağını etkinleştirmek için konak öğesinin **EnableVbaCallers** özelliğini True olarak **ayarlayın.**
 
- bir konak öğesi sınıfının bir yöntemini kullanıma sunma ve sonra bunu vba 'dan çağırma hakkında yönergeler için bkz. [izlenecek yol: Visual Basic projesindeki vba 'dan kod çağırma](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md). Konak öğeleri hakkında daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
+ Bir konak öğesi sınıfının yönteminin nasıl açığa çıkarılacağını ve vbA'dan nasıl çağrılacağını gösteren bir kılavuz için bkz. [Walkthrough: Call code from VBA in a Visual Basic projesinde](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md). Konak öğeleri hakkında daha fazla bilgi için bkz. [Konak öğeleri ve konak denetimlerine genel bakış.](../vsto/host-items-and-host-controls-overview.md)
 
-#### <a name="to-expose-code-in-a-host-item-to-vba"></a>Bir konak öğesinde kodu VBA 'de ortaya çıkarmak için
+#### <a name="to-expose-code-in-a-host-item-to-vba"></a>Bir konak öğesinde kodu VBA'ya göstermek için
 
-1. [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]makroları destekleyen ve zaten VBA kodu içeren bir Word belgesini, Excel çalışma kitabını veya Excel şablonunu temel alan belge düzeyi bir proje açın veya oluşturun.
+1. Makroları destekleyen ve zaten VBA kodu içeren bir Word belgesini, Excel çalışma kitabını veya Excel şablonu temel alan bir belge düzeyi proje açın [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] veya oluşturun.
 
-     Makroları destekleyen belge dosyası biçimleri hakkında daha fazla bilgi için bkz. [VBA ve belge düzeyi özelleştirmelerini birleştirme](../vsto/combining-vba-and-document-level-customizations.md).
-
-    > [!NOTE]
-    > Bu özellik Word şablon projelerinde kullanılamaz.
-
-2. Belgedeki VBA kodunun, kullanıcıdan makroları etkinleştirmesini istemeden çalışmasına izin verildiğinden emin olun. Office projesinin konumunu, Word veya Excel güven merkezi ayarlarındaki güvenilir konumlar listesine ekleyerek çalıştırmak için VBA koduna güvenebilirsiniz.
-
-3. VBA 'da göstermek istediğiniz özelliği, yöntemi veya olayı projenizdeki konak öğesi sınıflarından birine ekleyin ve yeni üyeyi **ortak** olarak bildirin. Sınıfın adı uygulamaya göre değişir:
-
-    - Bir Word projesinde, ana bilgisayar öğe sınıfı `ThisDocument` Varsayılan olarak adlandırılır.
-
-    - Excel bir projede konak öğesi sınıfları,,, `ThisWorkbook` `Sheet1` `Sheet2` ve `Sheet3` varsayılan olarak adlandırılır.
-
-4. Konak öğesi için **EnableVbaCallers** özelliğini **true** olarak ayarlayın. Bu özellik, konak öğesi tasarımcıda açık olduğunda **Özellikler** penceresinde kullanılabilir.
-
-     bu özelliği ayarladıktan sonra, Visual Studio **ReferenceAssemblyFromVbaProject** özelliğini otomatik olarak **True** olarak ayarlar.
+     Makroları destekleyen belge dosyası biçimleri hakkında daha fazla bilgi için bkz. [VBA ve belge düzeyinde özelleştirmeleri birleştirme.](../vsto/combining-vba-and-document-level-customizations.md)
 
     > [!NOTE]
-    > Çalışma kitabı veya belge zaten VBA kodu içermiyorsa veya belgedeki VBA kodunun çalıştırılmak üzere güvenilir olmaması durumunda, **EnableVbaCallers** özelliğini **true** olarak ayarladığınızda bir hata iletisi alırsınız. bunun nedeni Visual Studio, bu durumdaki belgedeki VBA projesini değiştirememelidir.
+    > Bu özellik Word şablonu projelerinde kullanılamaz.
 
-5. Görüntülenen iletide **Tamam** ' a tıklayın. Bu ileti, projeyi çalıştırırken çalışma kitabına veya belgeye VBA kodu eklerseniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , projeyi bir dahaki sefer OLUŞTURDUĞUNUZDA VBA kodu kaybedilir. Bunun nedeni, projeyi her oluşturduğunuzda derleme çıkış klasöründeki belgenin üzerine yazılışında olur.
+2. Kullanıcıdan makroları etkinleştirmesi istenmeden belgede VBA kodunun çalışmasına izin verilenin. Word veya Office için Güven Merkezi ayarlarında güvenilir konumlar listesine Office VBA kodunun çalışmasına Excel.
 
-     bu noktada, projeyi VBA projesinin derlemeye çağırabilmesi için Visual Studio yapılandırır. Visual Studio ayrıca `CallVSTOAssembly` `ThisDocument` , VBA projesindeki,,, `ThisWorkbook` `Sheet1` `Sheet2` veya `Sheet3` modülüne adlı bir özellik ekler. Bu özelliği, VBA 'da kullanıma sunulan sınıfın ortak üyelerine erişmek için kullanabilirsiniz.
+3. VBA'ya göstermek istediğiniz özelliği, yöntemi veya olayı projenizin konak öğesi sınıflarından biri olarak ekleyin ve yeni üyeyi Genel olarak **bildirin.** Sınıfın adı uygulamaya bağlıdır:
+
+    - Bir Word projesinde, konak öğesi sınıfı varsayılan `ThisDocument` olarak adlandırılmıştır.
+
+    - Bir Excel, konak öğesi sınıfları varsayılan olarak `ThisWorkbook` `Sheet1` , , ve olarak `Sheet2` `Sheet3` adlandırılmıştır.
+
+4. Konak öğesi **için EnableVbaCallers** özelliğini True olarak **ayarlayın.** Bu özellik, konak **öğesi** tasarımcıda açık olduğunda Özellikler penceresinde kullanılabilir.
+
+     Bu özelliği ayardikten sonra, Visual Studio **ReferenceAssemblyFromVbaProject** özelliğini otomatik olarak True olarak **ayarlar.**
+
+    > [!NOTE]
+    > Çalışma kitabı veya belge zaten VBA kodu içeriyorsa veya belgede VBA kodunun çalışmasına güvenilmiyorsa **EnableVbaCallers** özelliğini True olarak ayarsanız bir hata iletisi **alırsınız.** Bunun nedeni Visual Studio belgede VBA projesini değiştirenin bu durumda değiştirileyemilmesidir.
+
+5. Görüntülenen **iletide** Tamam'a tıklayın. Bu ileti, proje üzerinde çalışırken çalışma kitabına veya belgeye VBA kodu eklerken projeyi bir sonraki derlemesinde VBA kodunun [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kaybedileceğini anımsatır. Bunun nedeni, projeyi her derlemeniz için derleme çıkış klasöründeki belgenin üzerine yazmasıdır.
+
+     Bu noktada, Visual Studio VBA projesinin derlemeye çağırana kadar projeyi yapılandırıyor. Visual Studio VBA projesinde `CallVSTOAssembly` , , , veya `ThisDocument` `ThisWorkbook` `Sheet1` `Sheet2` `Sheet3` modülüne adlı bir özellik de ekler. BU özelliği, VBA'ya açık durumdaki sınıfın ortak üyelerine erişmek için kullanabilirsiniz.
 
 6. Projeyi derleyin.
 
-## <a name="expose-code-that-is-not-in-a-host-item-class"></a><a name="NonHostItem"></a> Konak öğesi sınıfında olmayan kodu açığa çıkarın
- vba kodunu bir konak öğesi sınıfında olmayan Visual Basic kodu çağırmak üzere etkinleştirmek için kodu vba 'da görünür olacak şekilde değiştirin.
+## <a name="expose-code-that-is-not-in-a-host-item-class"></a><a name="NonHostItem"></a> Konak öğesi sınıfında yer alan kodu açığa çıkarma
+ VBA kodunun konak öğesi Visual Basic kodu çağıracağını etkinleştirmek için, kodu VBA'ya görünür olacak şekilde değiştirebilirsiniz.
 
-### <a name="to-expose-code-that-is-not-in-a-host-item-class-to-vba"></a>Konak öğesi sınıfında olmayan kodu VBA 'ya göstermek için
+### <a name="to-expose-code-that-is-not-in-a-host-item-class-to-vba"></a>Bir konak öğesi sınıfında yer alan kodu VBA'ya göstermek için
 
-1. [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]makroları destekleyen ve zaten VBA kodu içeren bir Word belgesini, Excel çalışma kitabını veya Excel şablonunu temel alan belge düzeyi bir proje açın veya oluşturun.
+1. Makroları destekleyen ve zaten VBA kodu içeren bir Word belgesini, Excel çalışma kitabını veya Excel şablonu temel alan bir belge düzeyi proje açın [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] veya oluşturun.
 
-     Makroları destekleyen belge dosyası biçimleri hakkında daha fazla bilgi için bkz. [VBA ve belge düzeyi özelleştirmelerini birleştirme](../vsto/combining-vba-and-document-level-customizations.md).
+     Makroları destekleyen belge dosyası biçimleri hakkında daha fazla bilgi için bkz. [VBA ve belge düzeyinde özelleştirmeleri birleştirme.](../vsto/combining-vba-and-document-level-customizations.md)
 
     > [!NOTE]
-    > Bu özellik Word şablon projelerinde kullanılamaz.
+    > Bu özellik Word şablonu projelerinde kullanılamaz.
 
-2. Belgedeki VBA kodunun, kullanıcıdan makroları etkinleştirmesini istemeden çalışmasına izin verildiğinden emin olun. Office projesinin konumunu, Word veya Excel güven merkezi ayarlarındaki güvenilir konumlar listesine ekleyerek çalıştırmak için VBA koduna güvenebilirsiniz.
+2. Kullanıcıdan makroları etkinleştirmesi istenmeden belgede VBA kodunun çalışmasına izin verilenin. Word veya Office için Güven Merkezi ayarlarında güvenilir konumlar listesine Office VBA kodunun çalışmasına Excel.
 
-3. VBA 'ya göstermek istediğiniz üyeyi projenizdeki ortak bir sınıfa ekleyin ve yeni üyeyi **ortak** olarak bildirin.
+3. VBA'ya göstermek istediğiniz üyeyi projenizin genel sınıfına ekleyin ve yeni üyeyi genel olarak **bildirin.**
 
-4. Aşağıdaki <xref:System.Runtime.InteropServices.ComVisibleAttribute> ve <xref:Microsoft.VisualBasic.ComClassAttribute> özniteliklerini VBA 'da ortaya çıkardığınız sınıfa uygulayın. Bu öznitelikler, sınıfı VBA 'da görünür hale getirir.
+4. Aşağıdaki ve <xref:System.Runtime.InteropServices.ComVisibleAttribute> <xref:Microsoft.VisualBasic.ComClassAttribute> özniteliklerini VBA'ya açığa çıkararak sınıfa uygulayabilirsiniz. Bu öznitelikler sınıfı VBA'ya görünür hale gelir.
 
     ```vb
     <Microsoft.VisualBasic.ComClass()> _
     <System.Runtime.InteropServices.ComVisibleAttribute(True)> _
     ```
 
-5. VBA 'da kullanıma sunmanıza yardımcı olan sınıfın bir örneğini döndürmek için projenizdeki bir konak öğesi sınıfının **GetAutomationObject** yöntemini geçersiz kılın. Aşağıdaki kod örneği, VBA için adlı bir sınıfı ortaya çıkardığınızı varsayar `DocumentUtilities` .
+5. VBA'ya açığa çıkararak sınıfın bir örneğini geri almak için projenizin konak öğesi sınıfının **GetAutomationObject** yöntemini geçersiz kılın. Aşağıdaki kod örneğinde adlı bir sınıfı VBA'ya açığa `DocumentUtilities` çıkarabilirsiniz.
 
     ```vb
     Protected Overrides Function GetAutomationObject() As Object
@@ -105,22 +105,22 @@ ms.locfileid: "122122819"
     End Function
     ```
 
-6. içindeki belge (Word) veya çalışma sayfası (Excel) tasarımcısını açın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+6. içinde belge (Word için) veya çalışma sayfası (Excel) tasarımcısını [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] açın.
 
-7. **Özellikler** penceresinde, **ReferenceAssemblyFromVbaProject** özelliğini seçin ve değeri **true** olarak değiştirin.
+7. Özellikler **penceresinde** **ReferenceAssemblyFromVbaProject** özelliğini seçin ve değeri True olarak **değiştirin.**
 
     > [!NOTE]
-    > Çalışma kitabı veya belge zaten VBA kodu içermiyorsa veya belgedeki VBA kodunun çalıştırılmak üzere güvenilir olmaması durumunda, **ReferenceAssemblyFromVbaProject** özelliğini **true** olarak ayarladığınızda bir hata iletisi alırsınız. bunun nedeni Visual Studio, bu durumdaki belgedeki VBA projesini değiştirememelidir.
+    > Çalışma kitabı veya belge zaten VBA kodu içeriyorsa veya belgedeki VBA kodunun çalışmasına güvenilmiyorsa **ReferenceAssemblyFromVbaProject** özelliğini True olarak ayarsanız bir hata iletisi **alırsınız.** Bunun nedeni Visual Studio belgede VBA projesini değiştirenin bu durumda değiştirileyemilmesidir.
 
-8. Görüntülenen iletide **Tamam** ' a tıklayın. Bu ileti, projeyi çalıştırırken çalışma kitabına veya belgeye VBA kodu eklerseniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , projeyi bir dahaki sefer OLUŞTURDUĞUNUZDA VBA kodu kaybedilir. Bunun nedeni, projeyi her oluşturduğunuzda derleme çıkış klasöründeki belgenin üzerine yazılışında olur.
+8. Görüntülenen **iletide** Tamam'a tıklayın. Bu ileti, proje üzerinde çalışırken çalışma kitabına veya belgeye VBA kodu eklerken projeyi bir sonraki derlemesinde VBA kodunun [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kaybedileceğini anımsatır. Bunun nedeni, projeyi her derlemeniz için derleme çıkış klasöründeki belgenin üzerine yazmasıdır.
 
-     bu noktada, projeyi VBA projesinin derlemeye çağırabilmesi için Visual Studio yapılandırır. Visual Studio VBA projesine adlı bir yöntemi de ekler `GetManagedClass` . VBA 'da gösterilen sınıfa erişmek için VBA projesinin herhangi bir yerinden bu yöntemi çağırabilirsiniz.
+     Bu noktada, Visual Studio VBA projesinin derlemeye çağırana kadar projeyi yapılandırıyor. Visual Studio VBA projesine `GetManagedClass` adlı bir yöntem de ekler. VBA'ya açık olan sınıfa erişmek için vbA projesinin herhangi bir yerinden bu yöntemi çağırabilirsiniz.
 
 9. Projeyi derleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [nasıl yapılır: Visual Studio Office projeler oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
-- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
+- [Nasıl Office: Office projelerini Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [Yeni çözümler tasarlama Office oluşturma](../vsto/designing-and-creating-office-solutions.md)
 - [VBA ve belge düzeyi özelleştirmelerini birleştirme](../vsto/combining-vba-and-document-level-customizations.md)
-- [izlenecek yol: Visual Basic projesindeki VBA 'dan kod çağırma](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)
-- [Nasıl yapılır: Visual C&#35; projesinde kodu VBA 'de kullanıma sunma](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)
+- [Adım adım kılavuz: Visual Basic projesinde VBA'dan kod çağırma](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)
+- [Nasıl olur: Visual C görsel projesinde kodu VBA'&#35; açığa çıkarma](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)

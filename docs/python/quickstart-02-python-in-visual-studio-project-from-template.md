@@ -1,6 +1,6 @@
 ---
-title: Hızlı Başlangıç - Şablon kullanarak Python projesi oluşturma
-description: Bu hızlı başlangıçta, temel bir Flask Visual Studio yerleşik şablonunu kullanarak Python için bir temel proje oluşturuluyor.
+title: Hızlı başlangıç-şablon kullanarak bir Python projesi oluşturma
+description: bu hızlı başlangıçta, temel bir flask uygulaması için yerleşik şablonu kullanarak Python için bir Visual Studio projesi oluşturacaksınız.
 ms.date: 12/06/2018
 ms.topic: quickstart
 author: JoshuaPartlow
@@ -12,47 +12,47 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: c77f8c52e62772cbef61f7ae07f29a2594e608c0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122156506"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726790"
 ---
-# <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>Hızlı Başlangıç: Visual Studio'de şablondan Python Visual Studio
+# <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>Hızlı başlangıç: Visual Studio bir şablondan Python projesi oluşturma
 
-Visual Studio'da [Python](installing-python-support-in-visual-studio.md)desteğini yüklediniz, çeşitli şablonlar kullanarak yeni bir Python projesi oluşturmak kolaydır. Bu Hızlı Başlangıçta şablon kullanarak basit bir Flask uygulaması oluşturabilirsiniz. Sonuçta elde edilen proje, Hızlı Başlangıç [- Flask](../ide/quickstart-python.md)ile web uygulaması oluşturma aracılığıyla el ile oluşturmalısınız.
+[Visual Studio ' de Python desteğini](installing-python-support-in-visual-studio.md)yükledikten sonra, çeşitli şablonlar kullanarak yeni bir Python projesi oluşturmak kolaydır. Bu hızlı başlangıçta, şablon kullanarak basit bir Flask uygulaması oluşturacaksınız. Elde edilen proje, hızlı başlangıç aracılığıyla oluşturduğunuz projeye benzer. [Flask ile bir Web uygulaması oluşturun](../ide/quickstart-python.md).
 
 1. Visual Studio’yu çalıştırın.
 
-1. Üst menü çubuğundan Dosya Yeni Project'ı seçin, ardından Yeni Project iletişim  >    >  kutusunda "boş **flask"** araması  yazın, ortadaki listede Boş Flask Web Project şablonunu seçin, projeye bir ad girin ve Tamam'ı **seçin:**
+1. üst menü çubuğundan **dosya**  >  **yeni**  >  **Project**' yi seçin, sonra **yeni Project** iletişim kutusunda "boş flask" araması yapın, ortadaki listeden **boş flask Web Project** şablonunu seçin, projeye bir ad verin ve **tamam**' ı seçin:
 
-    ![Boş Flask Web Uygulaması şablonuyla yeni Project oluşturma](media/quickstart-python-06-blank-flask-template.png)
+    ![boş flask Web Project şablonuyla yeni bir proje oluşturma](media/quickstart-python-06-blank-flask-template.png)
 
-1. Visual Studio, Bu proje dış paketler gerektiriyor ifadesini içeren **bir iletişim kutusu girmenizi sağlar.** ŞablonDa Flask *bağımlılığını belirtenrequirements.txt* dosyası olduğundan bu iletişim kutusu görüntülenir. Visual Studio paketleri otomatik olarak yükleyebilir ve bunları sanal bir ortama yükleme *seçeneği sunar.* Genel bir ortama yükleme yerine sanal ortam kullanılması önerilir, bu nedenle devam etmek **için Sanal ortama yükle'yi** seçin.
+1. Visual Studio, **bu projenin dış paket gerektirdiğini** belirten bir iletişim kutusu ister. Bu iletişim kutusu, şablon Flask üzerinde bir bağımlılık belirten bir *requirements.txt* dosyası içerdiğinden görüntülenir. Visual Studio paketleri otomatik olarak yükleyebilir ve bunları bir *sanal ortama* yüklemek için seçenek sunar. Bir sanal ortamın kullanılması için genel bir ortama yükleme yapılması önerilir, bu nedenle devam etmek için **sanal ortama yükleme** ' yi seçin.
 
-    ![Flask'i sanal ortama yükleme](media/quickstart-python-07-install-into-virtual-environment.png)
+    ![Sanal ortama Flask yükleme](media/quickstart-python-07-install-into-virtual-environment.png)
 
-1. Visual Studio Ortam Ekle **iletişim kutusunu** görüntüler. Varsayılanı kabul et ve **Oluştur'un** ardından tüm yükseltme isteklerini onayla'ya seçin.
+1. Visual Studio **sanal ortam ekle** iletişim kutusunu görüntüler. Varsayılanı kabul edin ve **Oluştur**' u ve ardından herhangi bir yükseltme isteğinde onay ' yı seçin.
 
     > [!Tip]
-    > Bir projeye başlarken, çoğu şablon sizi davet Visual Studio hemen sanal ortam oluşturmanız önerilir. Sanal ortamlar, siz kitaplıkları eklerken ve kaldırırken projenizin zaman içinde tam gereksinimlerini karşılar. Ardından, bu *bağımlılıkları diğer geliştirme bilgisayarlarına* (kaynak denetimi kullanırken olduğu gibi) ve projeyi bir üretim sunucusuna dağıtırken yeniden yüklemek için kullanabileceğiniz birrequirements.txtdosyasını kolayca oluşturabilirsiniz. Sanal ortamlar ve bunların avantajları hakkında daha fazla bilgi için [bkz. Sanal ortamları kullanma](../python/selecting-a-python-environment-for-a-project.md#use-virtual-environments) ve Sanal [ortamlarla gerekli requirements.txt. ](../python/managing-required-packages-with-requirements-txt.md)
+    > bir projeye başladığınızda, çoğu Visual Studio şablon sizi davet etmek için hemen bir sanal ortam oluşturmanız önerilir. Sanal ortamlar, kitaplıkları eklerken ve kaldırırken projenizin tam gereksinimlerini zaman içinde tutar. Daha sonra bu bağımlılıkları diğer geliştirme bilgisayarlarına (kaynak denetimi kullanılırken olduğu gibi) yeniden yüklemek için kullandığınız ve projeyi bir üretim sunucusuna dağıttığınızda kolayca *requirements.txt* bir dosya oluşturabilirsiniz. Sanal ortamlar ve avantajları hakkında daha fazla bilgi için bkz. [sanal ortamları kullanma](../python/selecting-a-python-environment-for-a-project.md#use-virtual-environments) ve [gerekli paketleri requirements.txtile yönetme ](../python/managing-required-packages-with-requirements-txt.md).
 
-1. Bu Visual Studio ortamını oluşturduğunda,  Çözüm Gezgini ile birlikte bir app.py *dosyanız* olduğunu görmek için *requirements.txt.* Şablonun *app.py* hızlı başlangıç [- Flask](../ide/quickstart-python.md)ile web uygulaması oluşturma içinde birkaç ek bölümle kod sağladığını görmek için bu sayfayı açın. Aşağıda gösterilen kodun hepsi şablon tarafından oluşturulmuştur, bu nedenle kendi kendinize herhangi bir kodu *app.py* gerek yok.
+1. Visual Studio bu ortamı oluşturduktan sonra, *requirements.txt* birlikte bir *app.py* dosyasına sahip olup olmadığını görmek için **Çözüm Gezgini** bakın. Şablonda, daha fazla eklenen bölümle bir [Flask ile bir Web uygulaması oluşturmak](../ide/quickstart-python.md)için *app.py* açın. Aşağıda gösterilen tüm kod şablon tarafından oluşturulur, bu nedenle *app.py* 'e dilediğiniz şekilde yapıştırmanız gerekmez.
 
-    Kod gerekli içeri aktarmalarla başlar:
+    Kod, gerekli içeri aktarımlarla başlar:
 
     ```python
     from flask import Flask
     app = Flask(__name__)
     ```
 
-    Sonraki satır, bir web ana bilgisayar için uygulama dağıtırken yararlı olabilir:
+    Sonraki bir, bir uygulamayı bir Web konağına dağıtmada yararlı olabilecek aşağıdaki satırdır:
 
     ```python
     wsgi_app = app.wsgi_app
     ```
 
-    Ardından görünüm tanımlayan basit bir işlevde yol dekoratörü gelir:
+    Ardından, bir görünümü tanımlayan basit bir işlevde yol dekoratörü gelir:
 
     ```python
     @app.route('/')
@@ -61,7 +61,7 @@ Visual Studio'da [Python](installing-python-support-in-visual-studio.md)desteği
         return "Hello World!"
     ```
 
-    Son olarak, aşağıdaki başlangıç kodu, konak ve bağlantı noktasını sabit kodlamak yerine ortam değişkenleri aracılığıyla ayarlamaya olanak sağlar. Bu tür kod, kodu değiştirmeden hem geliştirme hem de üretim makinelerinin yapılandırmasını kolayca denetlemenizi sağlar:
+    Son olarak, aşağıdaki başlangıç kodu, Konağı ve bağlantı noktasını sabit kodlamak yerine ortam değişkenleri aracılığıyla ayarlamanıza olanak sağlar. Bu kod, kodu değiştirmeden hem geliştirme hem de üretim makinelerinde yapılandırmayı kolayca denetlemenize olanak tanır:
 
     ```python
     if __name__ == '__main__':
@@ -74,27 +74,27 @@ Visual Studio'da [Python](installing-python-support-in-visual-studio.md)desteği
         app.run(HOST, PORT)
     ```
 
-1. Uygulamayı **çalıştırmak ve**  >  **tarayıcıyı açmak için Hata** Ayıklama Olmadan Başlat'ı `localhost:5555` seçin.
+1.   >  Uygulamayı çalıştırmak ve ' de bir tarayıcı açmak için **hata ayıklama olmadan Başlat** ' ı seçin `localhost:5555` .
 
-**Soru: Hangi Python şablonları Visual Studio sunuyor?**
+**soru: diğer Python şablonları Visual Studio teklif veriyor?**
 
-**Cevap:** Python iş yükü yüklendikten sonra, Visual Studio [Flask, Bottle ve Django web çerçeveleri,](../python/python-web-application-project-templates.md)Azure bulut hizmetleri, farklı makine öğrenmesi senaryoları ve hatta Python uygulaması içeren mevcut bir klasör yapısından proje oluşturmak için bir şablon gibi çeşitli proje şablonları sağlar. Bunlara, Python dil **düğümünü** ve Project düğümlerini seçerek Dosya Yeni Dosya  >    >   iletişim kutusu aracılığıyla erişebilirsiniz. 
+**cevap**: python iş yükü yüklüyken, Visual Studio [flask, şişe ve docgo web çerçeveleri](../python/python-web-application-project-templates.md), Azure bulut hizmetleri, farklı makine öğrenimi senaryoları ve hatta bir Python uygulaması içeren var olan bir klasör yapısından proje oluşturmak için bir şablon dahil çeşitli proje şablonları sağlar. bunlara   >    >  , **Python** dil düğümünü ve onun alt düğümlerini seçerek dosya yeni **Project** iletişim kutusu üzerinden erişirsiniz.
 
-Visual Studio Python sınıfını, Python paketini,  Python birim testini,web.configdosyalarını ve daha fazlasını hızlı bir şekilde oluşturmak için *çeşitli dosya veya öğe* şablonları da sağlar. Bir Python projeniz açık olduğunda öğe şablonlarına Yeni Öğe Ekle menü **Project**  >  **aracılığıyla erişebilirsiniz.** Öğe [şablonları başvurusuna](python-item-templates.md) bakın.
+Visual Studio ayrıca, bir python sınıfı, bir python paketi, bir python birimi testi, *web.config* dosyaları ve daha fazlasını oluşturmak için çeşitli dosya veya *öğe şablonları* sağlar. açık bir Python projeniz olduğunda, **Project**  >  **yeni öğe ekle** menü komutu aracılığıyla öğe şablonlarına erişirsiniz. [Öğe şablonları](python-item-templates.md) başvurusuna bakın.
 
-Şablonları kullanmak, bir projeyi başlatma veya dosya oluşturma konusunda önemli zaman tasarrufu sağlar ve ayrıca farklı uygulama türleri ve kod yapıları hakkında bilgi edinmek için harika bir yol sağlar. Çeşitli şablonlardan proje ve öğe oluşturmak birkaç dakikanızı alır ve bu şablonların neler sun olduklarını tanımanız faydalı olur.
+Şablonları kullanmak, bir projeyi başlatırken veya dosya oluştururken önemli bir zaman kazandırabilir ve ayrıca farklı uygulama türleri ve kod yapıları hakkında bilgi edinmek için harika bir yoldur. Çeşitli şablonlardan proje ve öğelerin oluşturulması, neleri sundukları hakkında bilgi edinmek için birkaç dakika sürer.
 
 **Soru: Cookiecutter şablonlarını da kullanabilir miyim?**
 
-**Cevap:** Evet! Aslında, Visual Studio Cookiecutter ile doğrudan tümleştirme sağlar. Bu tümleştirmeyi Hızlı [Başlangıç: Cookiecutter](../python/quickstart-04-python-in-visual-studio-project-from-cookiecutter.md)şablonundan proje oluşturma aracılığıyla öğrenebilirsiniz.
+**Cevap**: Evet! aslında Visual Studio, [hızlı başlangıç: bir Cookiecutter şablonundan proje oluşturma](../python/quickstart-04-python-in-visual-studio-project-from-cookiecutter.md)hakkında bilgi edinmek için doğrudan Cookiecutter ile tümleştirme sağlar.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Öğretici: Python ile Visual Studio](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [Öğretici: Visual Studio 'de Python ile çalışma](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Mevcut Python yorumlayıcıyı el ile tanımlama](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
-- [Visual Studio 2015 ve önceki sürümlerde Python desteğini yükleme](installing-python-support-in-visual-studio.md)
-- [Yükleme konumları](installing-python-support-in-visual-studio.md#install-locations)
+- [Mevcut bir Python yorumlayıcısını el ile tanımla](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
+- [Visual Studio 2015 ve önceki sürümlerde Python desteği yüklemesi](installing-python-support-in-visual-studio.md)
+- [Konum yüklemeleri](installing-python-support-in-visual-studio.md#install-locations)

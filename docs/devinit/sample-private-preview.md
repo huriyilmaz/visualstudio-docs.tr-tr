@@ -11,23 +11,23 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 0b6ca27eccae7b76a6a33fbb5158448d8a160e166603eb8d7605c398dc49befd
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: dfcaa045710a28eb0caec144cb922c9a5506f6ba
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452854"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725848"
 ---
 # <a name="private-beta"></a>Özel beta
 
 > [!IMPORTANT]
-> 12 Nisan 2021'den itibaren Visual Studio 2019'dan GitHub Codespaces'a bağlanma desteklemeyecek ve bu özel önizleme sonuçlandırıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için Visual Studio geliştirici topluluğu forummize katılın.
+> 12 Nisan 2021'den itibaren, Visual Studio 2019'dan GitHub Codespaces'a bağlanmak artık desteklemeyecek ve bu özel önizlemenin sonucuna varıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi almak Visual Studio geliştirici topluluğu forummize dahil olmak için sizi teşvik ediyoruz.
 
-Bu örnekte [Codespaces](https://github.com/features/codespaces) özel beta sürümündeki Visual Studio aynı özelliklere sahip olacak şekilde bir codespace GitHub nasıl özelleştirebileceğiniz göstermektedir.
+Bu örnekte [codespaces](https://github.com/features/codespaces) özel beta sürümündeki Visual Studio aynı özelliklere sahip olacak şekilde kod GitHub nasıl özelleştirebileceğiniz açık bir şekilde açık bir şekilde ve bu GitHub göstermektedir.
 
 ## <a name="devinitjson"></a>.devinit.json
 
-Dosyanın [`.devinit.json`](devinit-json.md) içeriği. Bu dosyanın, üzerinde dosyayla aynı _.devcontainer.jsgerekir._
+Dosyanın [`.devinit.json`](devinit-json.md) içeriği. Bu dosyanın _.devcontainer.json ile aynı klasörde olması gerekir._
 
 ```json
 {
@@ -71,9 +71,9 @@ Dosyanın [`.devinit.json`](devinit-json.md) içeriği. Bu dosyanın, üzerinde 
 }
 ```
 
-## <a name="devcontainerjson"></a>.devcontainer.js
+## <a name="devcontainerjson"></a>.devcontainer.json
 
-Dosyanın _.devcontainer.js_ kökte.
+Repo _kökünde .devcontainer.json_ dosyasının içeriği.
 
 ```json
 {

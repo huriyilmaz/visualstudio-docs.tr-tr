@@ -1,6 +1,6 @@
 ---
-title: 'Docker öğreticisi-3. kısım: uygulamanızı güncelleştirme'
-description: Bir Docker uygulamasının nasıl güncelleştirileceğini açıklar.
+title: 'Docker öğreticisi - 3. Bölüm: Uygulamalarınızı güncelleştirme'
+description: Docker uygulamasının nasıl güncelleştirilmelerini açıklar.
 ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
@@ -11,110 +11,110 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: 0ce798b3264eedea5826df0ca2076c7fbc6ee4c6
-ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "122334310"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633454"
 ---
 # <a name="update-the-app"></a>Uygulamayı güncelleştirme
 
-Küçük bir özellik isteği olarak, hiçbir yapılacaklar listesi öğesi olmadığında ürün ekibinin "boş metni" değiştirmesi istenir. Bunlar, aşağıdaki gibi geçiş yapmak istiyor:
+Küçük bir özellik isteği olarak, herhangi bir todo listesi öğeniz olduğunda ürün ekibi tarafından "boş metni" değiştirmeniz istendi. Bunu aşağıdakine geçiş yapmak için:
 
-> Henüz Yapılacaklar öğeleriniz yok! Yukarıya bir tane ekleyin!
+> Henüz todo öğelerine sahip değilsiniz! Yukarıya bir tane ekleyin!
 
-Oldukça basit, doğru mu? Değişikliği yapalim.
+Oldukça basit, değil mi? Şimdi bu değişikliği gidelim.
 
 ## <a name="update-the-source-code"></a>Kaynak kodu güncelleştirme
 
-1. `src/static/js/app.js`Dosyasında yeni boş metni kullanmak için 56 satırını güncelleştirin.
+1. dosyasında, `src/static/js/app.js` 56. satırı yeni boş metni kullanmak için güncelleştirin.
 
     ```diff
     -                <p className="text-center">No items yet! Add one above!</p>
     +                <p className="text-center">You have no todo items yet! Add one above!</p>
     ```
 
-1. Daha önce kullandığınız komutu kullanarak görüntünün güncelleştirilmiş sürümünü oluşturun.
+1. Daha önce kullanılan komutu kullanarak görüntünün güncelleştirilmiş sürümünü derleme.
 
     ```bash
     docker build -t getting-started .
     ```
 
-1. Güncelleştirilmiş kodu kullanarak yeni bir kapsayıcı başlatın.
+1. Güncelleştirilmiş kodu kullanarak yeni bir kapsayıcı başlatma.
 
     ```bash
     docker run -dp 3000:3000 getting-started
     ```
 
-**Uh oh!** Büyük olasılıkla aşağıdakine benzer bir hata gördük (kimlikler farklı olacak):
+**İşte bu kadar!** Büyük olasılıkla bunun gibi bir hata görmüş olursanız (kimlikler farklı olur):
 
 ```bash
 docker: Error response from daemon: driver failed programming external connectivity on endpoint laughing_burnell 
 (bb242b2ca4d67eba76e79474fb36bb5125708ebdabd7f45c8eaf16caaabde9dd): Bind for 0.0.0.0:3000 failed: port is already allocated.
 ```
 
-Ne oldu? Eski Kapsayıcınız çalışmaya devam ettiğinden yeni kapsayıcı başlatılamadı. Bunun bir sorun olmasının nedeni, kapsayıcının ana bilgisayarın bağlantı noktası 3000 ' i kullandığından ve makinede yalnızca bir işlem (kapsayıcı dahil) belirli bir bağlantı noktasını dinleyebileceğinden oluşur. Bu hatayı onarmak için eski kapsayıcıyı kaldırın.
+Peki ne oldu? Eski kapsayıcınız hala çalışıyor olduğundan yeni kapsayıcı başlatılamadı. Bu sorunun nedeni, kapsayıcının ana bilgisayar bağlantı noktası 3000'i kullanması ve makinede (kapsayıcılar dahil) yalnızca bir işlem tarafından belirli bir bağlantı noktasını dinlemesidir. Bunu düzeltmek için eski kapsayıcıyı kaldırın.
 
-## <a name="replace-the-old-container"></a>Eski kapsayıcıyı Değiştir
+## <a name="replace-the-old-container"></a>Eski kapsayıcıyı değiştirme
 
-Bir kapsayıcıyı kaldırmak için öncelikle durdurulması gerekir. Durduktan sonra, kaldırılabilir. Eski kapsayıcıyı kaldırabilmeniz için kullanabileceğiniz iki yol vardır. En rahat olan yolu seçebilirsiniz.
+Bir kapsayıcıyı kaldırmak için önce durdurulmuş olması gerekir. Durdurulduktan sonra kaldırılabilir. Eski kapsayıcıyı kaldırmanın iki yolu vardır. En rahat yolunu seçebilirsiniz.
 
-### <a name="remove-a-container-using-the-cli"></a>CLı kullanarak kapsayıcıyı kaldırma
+### <a name="remove-a-container-using-the-cli"></a>CLI kullanarak kapsayıcıyı kaldırma
 
-1. Komutunu kullanarak kapsayıcının KIMLIĞINI alın `docker ps` .
+1. komutunu kullanarak kapsayıcının kimliğini `docker ps` elde edin.
 
     ```bash
     docker ps
     ```
 
-1. `docker stop`Kapsayıcıyı durdurmak için komutunu kullanın.
+1. Kapsayıcıyı `docker stop` durdurmak için komutunu kullanın.
 
     ```bash
     # Swap out <the-container-id> with the ID from docker ps
     docker stop <the-container-id>
     ```
 
-1. Kapsayıcı durdurulduktan sonra, komutunu kullanarak kaldırabilirsiniz `docker rm` .
+1. Kapsayıcı durdurulduktan sonra komutunu kullanarak kapsayıcıyı `docker rm` kaldırabilirsiniz.
 
     ```bash
     docker rm <the-container-id>
     ```
 
 > [!TIP]
-> Komutuna "zorla" bayrağını ekleyerek tek bir komutta kapsayıcıyı durdurabilir ve kaldırabilirsiniz `docker rm` . Örnek: `docker rm -f <the-container-id>`
+> Komuta "zorla" bayrağını ekleyerek kapsayıcıyı tek bir komutta durdurabilir ve `docker rm` kaldırabilirsiniz. Örnek: `docker rm -f <the-container-id>`
 
 ### <a name="remove-a-container-using-the-docker-view"></a>Docker görünümünü kullanarak kapsayıcıyı kaldırma
 
-VS Code uzantısını açarsanız, iki tıklamayla bir kapsayıcıyı kaldırabilirsiniz! Kapsayıcı KIMLIĞINI aramak ve kaldırmak zorunda kalmadan kesinlikle çok daha kolay.
+uzantı uzantısını VS Code, iki tıklamayla kapsayıcıyı kaldırabilirsiniz! Kapsayıcı kimliğini aramadan kaldırmaktan kesinlikle çok daha kolaydır.
 
-1. Uzantı açıldığında kapsayıcıya gidin ve sağ tıklayın.
+1. Uzantı açıkken kapsayıcıya gidin ve sağ tıklayın.
 
-1. **Kaldır** seçeneğine tıklayın.
+1. Kaldır **seçeneğine** tıklayın.
 
-1. Kaldırmayı onaylayın ve işiniz bitti!
+1. Kaldırma işlemini onaylayın ve işlemi tamamlayın!
 
-![Docker görünümü-kapsayıcıyı kaldırma](media/vs-removing-container.png)
+![Docker görünümü - kapsayıcıyı kaldırma](media/vs-removing-container.png)
 
-### <a name="start-the-updated-app-container"></a>Güncelleştirilmiş uygulama kapsayıcısını Başlat
+### <a name="start-the-updated-app-container"></a>Güncelleştirilmiş uygulama kapsayıcısı başlatma
 
-1. Şimdi, güncelleştirilmiş uygulamanızı başlatın.
+1. Şimdi güncelleştirilmiş uygulamanıza başlayabilirsiniz.
 
     ```bash
     docker run -dp 3000:3000 getting-started
     ```
 
-1. Üzerinde tarayıcınızı yenileyin [http://localhost:3000](http://localhost:3000) ve güncelleştirilmiş yardım metninizi görmeniz gerekir!
+1. Tarayıcınızı [http://localhost:3000](http://localhost:3000) yenileyin; güncelleştirilmiş yardım metninizi görüyor olun!
 
 ![Güncelleştirilmiş boş metinle güncelleştirilmiş uygulama](media/todo-list-updated-empty-text.png)
 
 ## <a name="recap"></a>Özet
 
-Bir güncelleştirme derlemenize rağmen, fark etmiş olabileceğiniz iki şey vardır:
+Bir güncelleştirme derlemeyi tamamlaya kadar fark etmiş olabileceğiniz iki şey vardı:
 
-- Yapılacaklar listenizdeki tüm mevcut öğeler kayboldu! Bu çok iyi bir uygulama değildir! Kısa süre içinde konuşacağız.
-- Bu tür küçük bir değişikliğe yönelik *birçok* adım vardır. Yaklaşan bir bölümde, her değişiklik yaptığınızda yeni bir kapsayıcı oluşturmak ve başlatmak gerekmeden kod güncelleştirmelerini nasıl görebileceğinizi öğreneceksiniz.
+- Todo listenizin tüm mevcut öğeleri kayboldu! Bu çok iyi bir uygulama değil! Kısa süre içinde bu konu hakkında konuşacağız.
+- Böyle *küçük bir değişiklik* için birçok adım vardı. Yaklaşan bir bölümde, her değişiklikte yeni bir kapsayıcıyı yeniden oluşturmanıza ve başlatmaya gerek kalmadan kod güncelleştirmelerini nasıl göreceğinizi öğrenirsiniz.
 
-Kalıcılık hakkında bilgi edinmek için bu görüntüleri başkalarıyla nasıl paylaşacağınızı hızlıca görürsünüz.
+Kalıcılık hakkında bilgi öğrenmeden önce bu görüntüleri diğerleriyle nasıl paylaşabilirsiniz?
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

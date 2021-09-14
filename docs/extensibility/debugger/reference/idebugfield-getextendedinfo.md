@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, bir alan hakkında genişletilmiş bilgiler alır.
-title: IDebugField::GetExtendedInfo | Microsoft Docs
+description: Bu yöntem, bir alanla ilgili genişletilmiş bilgileri alır.
+title: 'IDebugField:: Geiddeınfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,15 +17,15 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 3881d9f94ca552fd675c774cdd8ec93dd2e2edfe18dca43a4a2d77b74532a245
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 54cdd5b8c57e6aaf9e28832b21dd82430ed98d38
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452010"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725208"
 ---
 # <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
-Bu yöntem, bir alan hakkında genişletilmiş bilgiler alır.
+Bu yöntem, bir alanla ilgili genişletilmiş bilgileri alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,24 +47,24 @@ int GetExtendedInfo(
 
 ## <a name="parameters"></a>Parametreler
 `guidExtendedInfo`\
-[in] Döndürülen bilgileri seçer. Geçerli değerler:
+'ndaki Döndürülecek bilgileri seçer. Geçerli değerler:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|`guidConstantValue`|Bayt dizisi olarak değer.|
-|`guidConstantType`|Tür imzası olarak türü.|
+|`guidConstantValue`|Değer bir bayt dizisi olarak.|
+|`guidConstantType`|Tür imzası olarak yazın.|
 
 `prgBuffer`\
-[out] Genişletilmiş bilgileri döndürür.
+dışı Genişletilmiş bilgileri döndürür.
 
 `pdwLen`\
 [in, out] Genişletilmiş bilgilerin boyutunu bayt cinsinden döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Şu anda bu yöntem yalnızca bir sabitin türünü veya değerini döndürür. Çağıranın COM'un işlevini (C++) veya (C#) çağırarak içinde döndürülen `prgBuffer` `CoTaskMemFree` arabelleği <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> serbest bırakacağı gerekir.
+ Şu anda, bu yöntem yalnızca bir sabitin türünü veya değerini döndürür. Çağıran, `prgBuffer` com `CoTaskMemFree` Işlevi (C++) veya <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> (C#) çağırarak ' de döndürülen arabelleği boşaltmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

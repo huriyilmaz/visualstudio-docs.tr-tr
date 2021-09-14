@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 749eb1e8d922ef7bc6e1b0f8f953b42fdde2fa08
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122065951"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725435"
 ---
 # <a name="idiasymbolget_virtualtableshape"></a>IDiaSymbol::get_virtualTableShape
 Kullanıcı tanımlı bir tür için sanal tablo türünün sembol arabirimini alır.

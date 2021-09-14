@@ -18,11 +18,11 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 2384d98c2f0f2872bb7aba0ce505264ce531da8e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122135890"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725643"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>SharePoint çözümleri paketleme ve dağıtma
   genellikle, bir SharePoint çözümü bir SharePoint sunucusuna bir çözüm paketi (. wsp) dosyası kullanılarak dağıtılır. SharePoint Project öğelerinizi özellikler halinde düzenlemek ve SharePoint özelliklerinizi dağıtmak üzere bir paket oluşturmak için Visual Studio kullanabilirsiniz.

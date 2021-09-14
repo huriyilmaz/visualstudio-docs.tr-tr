@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1aaa319f0c6cd545e1f319ab7c8c510f694529d7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122160393"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725832"
 ---
 # <a name="notify-the-port"></a>Bağlantı noktasına bildirme
 Programı başlattıktan sonra bağlantı noktasına aşağıdaki gibi bildirilecek:
@@ -27,7 +27,7 @@ Programı başlattıktan sonra bağlantı noktasına aşağıdaki gibi bildirile
 
 2. Hata ayıklama oturumu, programda iliştirilen bir hata ayıklama altyapısının (DE) tanımlayıcısını sorgular.
 
-3. Hata ayıklama oturumu, DE'nin bu program için izin verilebilir DE'ler listesinde olup değildir. Hata ayıklama oturumu, çözümün etkin program ayarlarından bu listeyi alır ve başlangıçta hata ayıklama paketi tarafından bu listeye geçiri.
+3. Hata ayıklama oturumu, DE'nin bu program için izin verilebilir DE'ler listesinde olup değildir. Hata ayıklama oturumu, çözümün etkin program ayarlarından bu listeyi alır ve başlangıçta hata ayıklama paketi tarafından bu listeye geçiritir.
 
     DE izin verilebilir listesinde yer alalır, yoksa DE programa bağlı olmaz.
 
@@ -36,7 +36,7 @@ Programı başlattıktan sonra bağlantı noktasına aşağıdaki gibi bildirile
 > [!NOTE]
 > Bu, daha sonra hata ayıklama `IDebugProgram2` altyapısı (DE) tarafından oluşturulan arabirimle karıştırılmamalıdır.
 
- Bağlantı noktası bir COM arabiriminden oturum hata ayıklama yöneticisine (SDM) [bir IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) program oluşturma olayı `IConnectionPoint` gönderir.
+ Bağlantı noktası bir COM arabirimi kullanarak oturum hata ayıklama yöneticisine (SDM) [bir IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) program oluşturma olayı `IConnectionPoint` gönderir.
 
 > [!NOTE]
 > Bu, daha sonra `IDebugProgramCreateEvent2` DE tarafından gönderilen arabirimle karıştırılmamalıdır.

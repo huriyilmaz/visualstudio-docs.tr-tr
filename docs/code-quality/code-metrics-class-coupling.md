@@ -1,7 +1,7 @@
 ---
 title: Kod ölçümleri - Sınıf bağlantısı
 ms.date: 1/8/2021
-description: Visual Studio'da kod ölçümleri için sınıf eşleştirme ölçümü hakkında Visual Studio.
+description: Visual Studio'da kod ölçümleri için sınıf eşleştirme ölçümü hakkında bilgi Visual Studio.
 ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
@@ -10,21 +10,21 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
 ms.openlocfilehash: 6c9ff474cfdc8c572143145c642bc42e899b6516
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122129967"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632072"
 ---
 # <a name="code-metrics---class-coupling"></a>Kod ölçümleri - Sınıf bağlantısı
 
 Sınıf eşleştirmesi, başlangıçta [CK94](#ck94)tarafından tanımlandığı gibi Nesneler Arasında Eşleştirme (CBO) adıyla da gider. Temel olarak, sınıf eşleştirmesi tek bir sınıfın kaç sınıf kullandığına bir ölçüdür. Yüksek bir sayı kötüdür ve düşük bir sayı genellikle bu ölçümde iyidir. Sınıf bağlantısı, yazılım hatasına yönelik doğru bir tahmin olarak gösterilmiştir ve son çalışmalar 9 üst sınır değerinin en verimli [S2010](#s2010)olduğunu göstermiştir.
 
-Microsoft belgelerine göre, sınıf eşleştirmesi "parametreler, yerel değişkenler, dönüş türleri, yöntem çağrıları, genel veya şablon örneklemeleri, temel sınıflar, arabirim uygulamaları, dış türlerde tanımlanan alanlar ve öznitelik süslemesi aracılığıyla benzersiz sınıflarla eşleşmeyi ölçür. İyi bir yazılım tasarımı, türlerin ve yöntemlerin yüksek uyum ve düşük eşleşmeye sahip olması gerektiğini dikte ediyor. Yüksek bağlantı, diğer türlerde birçok bağımlılıkları nedeniyle yeniden kullanılması ve korunması zor bir tasarım olduğunu gösterir."
+Microsoft belgelerine göre, sınıf eşleştirmesi "parametreler, yerel değişkenler, dönüş türleri, yöntem çağrıları, genel veya şablon örneklemeleri, temel sınıflar, arabirim uygulamaları, dış türlerde tanımlanan alanlar ve öznitelik süslemesi aracılığıyla benzersiz sınıflarla eşleşmeyi ölçür. İyi yazılım tasarımı, türlerin ve yöntemlerin yüksek uyum ve düşük eşleşmeye sahip olması gerektiğini dikte ediyor. Yüksek bağlantı, diğer türlerde birçok bağımlılıkları nedeniyle yeniden kullanılması ve korunması zor bir tasarım olduğunu gösterir."
 
-Eşleştirme ve uyum kavramları net bir şekilde ilişkilidir. Bu tartışmayı konu başlığında tutmak için [KKLS2000'den](#kkls2000)kısa bir tanım vermekten başka bir uyumla daha derine inmayacaktır:
+Eşleştirme ve uyum kavramları net bir şekilde ilişkilidir. Bu tartışmayı konu başlığında tutmak için [KKLS2000'den](#kkls2000)kısa bir tanım vermekten başka bir uyumla daha derine ineriz:
 
-"Modül uyumu Yourdon ve Constantine tarafından 'bir modülün iç öğelerinin ne kadar sıkı bir şekilde bağlı olduğu veya ilişkili olduğu' [YC79 olarak tanıtıldı.](#yc79) Bir modülün tam olarak tek bir görevi temsil ettiği ve tüm öğelerinin bu tek göreve katkıda bulunan güçlü bir uyumu vardır. Bunlar, uyumu kod yerine tasarım özniteliği ve yeniden kullanılabilirlik, bakım ve değişiklikle ilgili tahminde etmek için kullanılan bir öznitelik olarak tanımlar."
+"Modül uyumu Yourdon ve Constantine tarafından 'bir modülün iç öğelerinin ne kadar sıkı bir şekilde bağlı olduğu veya ilişkili olduğu' [YC79 olarak tanıtıldı.](#yc79) Bir modülün tam olarak tek bir görevi temsil ettiği ve tüm öğelerinin bu tek göreve katkıda bulunan güçlü bir uyumu vardır. Bunlar, uyumu kod yerine tasarım özniteliği ve yeniden kullanılabilirlik, bakım ve değişiklikle ilgili tahminde kullanılacak bir öznitelik olarak tanımlar."
 
 ## <a name="class-coupling-example"></a>Sınıf Eşleştirme Örneği
 
@@ -32,11 +32,11 @@ Eşleştirme ve uyum kavramları net bir şekilde ilişkilidir. Bu tartışmayı
 
 ![Sınıf eşleştirme örneği 1](media/class-coupling-example-1.png)
 
-Bu sınıf başka sınıf kullanmaz çünkü sınıf eşleştirmesi 0'dır. Şimdi personstuff adlı başka bir sınıf oluşturmak için Person örneği oluşturan ve özellik değerlerini ayaran bir yöntem kullanın. Kod ölçümlerini yeniden hesapla:
+Bu sınıf başka sınıf kullanmaz, çünkü sınıf eşleştirmesi 0'dır. Şimdi personstuff adlı başka bir sınıf oluşturmak için Person örneği oluşturan ve özellik değerlerini ayaran bir yöntem kullanın. Kod ölçümlerini yeniden hesapla:
 
 ![Sınıf eşleştirme örneği 2](media/class-coupling-example-2.png)
 
-Sınıf eşleştirme değerinin nasıl daha yüksek olduğunu görüyor musunuz? Ayrıca, kaç özellik ayarlansa da sınıf eşleştirme değerinin başka bir değere göre değil yalnızca 1'e kadar ilerler. Sınıf eşleştirmesi, ne kadar kullanılır olursa olsun bu ölçüm için her sınıfı yalnızca bir kez ölçür. Ayrıca, değerinin 1 olduğunu ancak oluşturucus unda 0 olduğunu `DoSomething()` `PersonStuff()` görüyor musunuz? Şu anda oluşturucuda başka bir sınıf kullanan bir kod yoktur.
+Sınıf eşleştirme değerinin ne kadar yüksek olduğunu görüyor musunuz? Ayrıca, kaç özellik ayarlansa da sınıf eşleştirme değerinin başka bir değere göre değil yalnızca 1'e kadar ilerler. Sınıf eşleştirmesi, ne kadar kullanılır olursa olsun bu ölçüm için her sınıfı yalnızca bir kez ölçür. Ayrıca, değerinin 1 olduğunu ancak oluşturucus unda 0 olduğunu `DoSomething()` `PersonStuff()` görüyor musunuz? Şu anda oluşturucuda başka bir sınıf kullanan bir kod yoktur.
 
 Başka bir sınıf kullanılan oluşturucuya kod koysanız ne olur? Elde şunları elde ettiysiniz:
 
@@ -52,7 +52,7 @@ Ardından, başka bir yeni sınıf oluşturun. Bu sınıfa bir ad girin ve için
 
 ![Sınıf eşleştirme örneği 4](media/class-coupling-example-4.png)
 
-Gördüğünüz gibi PersonStuff sınıfı için sınıf eşleştirmesi 2'ye kadar gider ve sınıfa detaya gidersiniz, yöntemin içinde en çok eşleşmeye sahip olduğunu, ancak oluşturucu hala 1 sınıf `DoSomething()` tüketir.  Bu ölçümleri kullanarak, bir sınıfın genel maksimum sayısını görebilir ve üye başına ayrıntıya inebilirsiniz.
+Gördüğünüz gibi PersonStuff sınıfı için sınıf eşleştirmesi 2'ye kadar gider ve sınıfta detaya gidersiniz, yöntemin içinde en çok eşleşmeye sahip olduğunu, ancak oluşturucu hala 1 sınıf `DoSomething()` tüketir.  Bu ölçümleri kullanarak, bir sınıfın genel maksimum sayısını görebilir ve üye başına ayrıntıya inebilirsiniz.
 
 ## <a name="the-magic-number"></a>Sihirli Sayı
 
@@ -80,7 +80,7 @@ Chidamber, S. R. & ZamanEr, C. F. (1994). Nesne Odaklı Tasarım için Ölçüm 
 
 ### <a name="kkls2000"></a>KKLS2000
 
-Kabaili, H., Keller, R., Saintman, F., and Saint-Denis, G. (2000). Sınıf Uyumu Yeniden Değerlendirildi: Endüstriyel Sistemlerle ilgili Ampirik Bir Çalışma (Object-Oriented Software Engineering'de Nicel Yaklaşımlar Üzerine AtölyeNin DevamLarı). 20 Mayıs 2011 tarihindeKiré de Montréal web sitesinden alındı [http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf](http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf)
+Kabaili, H., Keller, R., Saintman, F., and Saint-Denis, G. (2000). Sınıf Uyumu Yeniden Değerlendirildi: Endüstriyel Sistemlerle ilgili Ampirik Bir Çalışma (Object-Oriented Yazılım Mühendisliğinde Nicel Yaklaşımlar Atölyesinde Proceedings of the Workshop). 20 Mayıs 2011 tarihindeKiré de Montréal web sitesinden alındı [http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf](http://www.iro.umontreal.ca/~sahraouh/qaoose/papers/Kabaili.pdf)
 
 ### <a name="sk2003"></a>SK2003
 
@@ -88,7 +88,7 @@ Subramanyam, R. & Ancak, M. S. (2003). Object-Oriented Tasarım Karmaşıklığ�
 
 ### <a name="s2010"></a>S2010
 
-Shatnawi, R. (2010). Open-Source Sistemlerinde Object-Oriented Ölçümlerinin Kabul Edilebilir Risk Düzeylerinin Nicel Bir Araştırma (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 36, Hayır. 2).
+Shatnawi, R. (2010). Open-Source Sistemlerindeki Object-Oriented Ölçümlerinin Kabul Edilebilir Risk Düzeylerinin Nicel Bir Araştırma (Yazılım Mühendisliğinde IEEE İşlemleri, Vol. 36, Hayır. 2).
 
 ### <a name="yc79"></a>YC79
 

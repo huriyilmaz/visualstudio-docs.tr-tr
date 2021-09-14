@@ -13,11 +13,11 @@ ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
 ms.openlocfilehash: e359ad5cd4d7272661fbddb6bce263d7a7c6c202
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122045651"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726055"
 ---
 # <a name="display-data-in-blend-for-visual-studio"></a>Visual Studio için Blend verileri görüntüleme
 

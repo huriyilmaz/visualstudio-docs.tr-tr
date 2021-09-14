@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl olur: Eski Dil Hizmeti Hizmet HizmetLerinde Açıklama | Microsoft Docs'
-description: Eski dil hizmetlerinde farklı metin bölgelerini genişletme, genişletme veya daraltma desteği sağlamayı öğrenin.
+title: 'Nasıl yapılır: eski dil hizmetinde anahat oluşturmayı destekleme | Microsoft Docs'
+description: Eski dil hizmetinde, farklı metin bölgelerini seviyelendirme, genişletme veya daraltma desteği sağlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -16,38 +16,38 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: cef8f5520ebd0034ff5d8852129b1f076bf53b28
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122050019"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726928"
 ---
-# <a name="how-to-support-outlining-in-a-legacy-language-service"></a>Nasıl yapılanlar: Eski dil hizmetlerinde açıklamayı destekleme
-Metnin farklı bölgelerini genişletmek veya daraltmak için altı çizili metin kullanılır. Açıklama dilinin kullanılama yolu farklı dillere göre farklı tanımlanabilir. Daha fazla bilgi için [bkz. Outlining](../../ide/outlining.md).
+# <a name="how-to-support-outlining-in-a-legacy-language-service"></a>Nasıl yapılır: eski dil hizmetinde anahat oluşturmayı destekleme
+Ana hat, metnin farklı bölgelerini genişletmek veya daraltmak için kullanılır. Ana hat kullanım şekli farklı diller tarafından farklı şekilde tanımlanabilir. Daha fazla bilgi için bkz. [anahat oluşturma](../../ide/outlining.md).
 
- Eski dil hizmetleri VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın daha yeni yolu MEF uzantılarını kullanmaktır. İlkeyi uygulamanın yeni yolu hakkında daha fazla bilgi için bkz. [Adım adım kılavuz: Açıklama.](../../extensibility/walkthrough-outlining.md)
+ Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Anahat oluşturmanın yeni yolu hakkında daha fazla bilgi edinmek için bkz. [Izlenecek yol: Ana hat](../../extensibility/walkthrough-outlining.md).
 
 > [!NOTE]
-> Yeni düzenleyici API'sini mümkün olan en kısa sürede kullanmaya başlamayı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
+> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
- Aşağıda bu komutu dil hizmetiniz için nasıl destekleyebilirsiniz?
+ Dil hizmetiniz için bu komutun nasıl destekleyeceği aşağıda gösterilmiştir.
 
-## <a name="to-support-outlining"></a>Açıklamayı desteklemek için
+## <a name="to-support-outlining"></a>Anahat oluşturmayı desteklemek için
 
-1. Dil <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningCapableLanguage> hizmeti nesnenize uygulama.
+1. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningCapableLanguage>Dil hizmeti nesneniz üzerinde uygulama.
 
-2. Yeni <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A> ana hat bölgeleri eklemek için geçerli ana hat oluşturma oturumu nesnesi üzerinde çağrısı.
+2. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A>Yeni ana hat bölgeleri eklemek için geçerli anahat oturumu nesnesinde çağırın.
 
 ## <a name="robust-programming"></a>Güçlü programlama
- Kullanıcı Ana Açıklama menüsünde **Tanımları** **Daralt'ı seçerken,** dil hizmetiniz IDE <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningCapableLanguage.CollapseToDefinitions%2A> tarafından çağrılır.
+ Bir Kullanıcı ana **hat** menüsündeki **tanımlardan Daralt** ' ı seçtiğinde, IDE <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningCapableLanguage.CollapseToDefinitions%2A> dil hizmetinize çağrı yapar.
 
- Bu yöntem çağrıldığnda, IDE bir işaretçi (metin arabelleğinin işaretçisi) ve bir (geçerli ana satırlama oturumunun <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession> işaretçisi) iletir.
+ Bu yöntem çağrıldığında, IDE bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> işaretçiye (bir metin arabelleğinin işaretçisi) ve bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession> (geçerli ana hat oturumunun işaretçisi) geçer.
 
- parametresinde bu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A> bölgeleri belirterek birden çok ana hat bölgesi için yöntemini `rgOutlnReg` çağırebilirsiniz. parametresi `rgOutlnReg` bir <xref:Microsoft.VisualStudio.TextManager.Interop.NewOutlineRegion> yapıdır. Bu işlem, belirli bir bölgenin genişletilen veya daraltılmış olduğu gibi gizli bölgenin farklı özelliklerini belirtmenize olanak sağlar.
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsOutliningSession.AddOutlineRegions%2A>Bu bölgeleri parametresinde belirterek birden çok ana hat bölgesi için yöntemini çağırabilirsiniz `rgOutlnReg` . `rgOutlnReg`Parametresi bir <xref:Microsoft.VisualStudio.TextManager.Interop.NewOutlineRegion> yapıdır. Bu işlem, belirli bir bölgenin genişletilip daraltılmayacağı gibi gizli bölgenin farklı özelliklerini belirtmenize olanak tanır.
 
 > [!NOTE]
-> Yeni satır karakterlerini gizleme konusunda dikkatli olun. Gizli metin, ilk satırın başından bir bölümdeki son satırın son karakterine kadar genişletir ve son yeni satır karakterini görünür durumda bıraktır.
+> Yeni satır karakterlerini gizleme konusunda dikkatli olun. Gizli metin, son yeni satır karakterini görünür bırakarak, ilk satırın başından itibaren bir bölümdeki son satırın son karakterine kadar genişlemelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl olur: Eski dil hizmetlerinde gizli metin desteği sağlama](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
-- [Nasıl olur: Eski dil hizmetlerinde genişletilmiş açıklama desteği sağlama](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
+- [Nasıl yapılır: eski dil hizmetinde gizli metin desteği sağlama](../../extensibility/internals/how-to-provide-hidden-text-support-in-a-legacy-language-service.md)
+- [Nasıl yapılır: eski dil hizmetinde genişletilmiş anahat desteği sağlama](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)

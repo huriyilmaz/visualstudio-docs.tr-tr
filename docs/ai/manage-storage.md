@@ -1,6 +1,6 @@
 ---
-title: Verileri karşıya yüklemek için depolamaya göz atma
-description: Verileri karşıya yüklemek veya modelleri ve günlükleri indirmek için uzak makinede veya Azure dosya paylaşımında tüm depolama alanlarına nasıl göz atabilirsiniz?
+title: Verileri karşıya yüklemek için depolamaya gözatamıyorum
+description: Verileri karşıya yüklemeyi veya modelleri ve günlükleri indirmeyi sağlamak için uzak makinedeki veya Azure dosya paylaşımındaki tüm depolamaya nasıl gözatacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 author: jillre
 ms.author: jillfra
@@ -12,28 +12,28 @@ ms.topic: how-to
 ms.workload:
 - multiple
 ms.openlocfilehash: 1b0e7098519374a41042f02f8ac8cba4b9071b15
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122053376"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633358"
 ---
-# <a name="browse-storage-to-upload-data-or-download-models-and-logs"></a>Verileri karşıya yüklemek veya modelleri ve günlükleri indirmek için depolamaya göz atma
+# <a name="browse-storage-to-upload-data-or-download-models-and-logs"></a>Verileri karşıya yüklemek veya modelleri ve günlükleri indirmek için depolamaya gözatamıyorum
 
-Verileri karşıya yüklemek veya modelleri ve günlükleri indirmek için uzak makinede veya Azure dosya paylaşımında tüm depolama alanlarına göz atabilirsiniz. Veya belirli bir işin günlüklerine ve iş çıkışlarına erişmek için bunu iş tarayıcısında da kullanabilirsiniz.
+Verileri karşıya yüklemeyi veya modelleri ve günlükleri indirmeyi sağlamak için uzak makinedeki veya Azure dosya paylaşımındaki tüm depolamaya gözatabilmeniz gerekir. Ya da, belirli bir iş için günlüklere ve iş çıktılarına erişmek istiyorsanız, bu işlemi iş tarayıcısına de yapabilirsiniz.
 
-## <a name="to-access-all-data-on-the-remote-machine-or-file-share"></a>Uzak makine veya dosya paylaşımında tüm verilere erişmek için
+## <a name="to-access-all-data-on-the-remote-machine-or-file-share"></a>Uzak makinedeki veya dosya paylaşımındaki tüm verilere erişmek için
 
-1. Sunucu Gezgini. 
-2. Uzak makineyi genişletin veya Batch AI bağlamını genişletin.
-3. Depolama;  Ardından **Gözat'a tıklayın.**
+1. **Sunucu Gezgini** açın.
+2. Uzak makineyi veya Batch AI işlem bağlamını genişletin.
+3. **Depolama** öğesine sağ tıklayın; ardından, **Araştır**' a tıklayın.
 
-    ![Uzak Makineler Sunucu Gezgini genişletilmiş bir dosyanın ekran görüntüsü. Depolama klasör ağacında vurgulanmış ve bağlam menüsünde Gözat seçilmiştir.](media/manage-storage/browse-storage.png)
+    ![Uzak makineler klasörü genişletilmiş Sunucu Gezgini ekran görüntüsü. Depolama, klasör ağacında vurgulanır ve bağlam menüsünde tarama seçilidir.](media/manage-storage/browse-storage.png)
 
-## <a name="to-access-job-specific-data-on-the-remote-machine-or-file-share"></a>Uzak makinede veya dosya paylaşımında işe özgü verilere erişmek için
+## <a name="to-access-job-specific-data-on-the-remote-machine-or-file-share"></a>Uzak makinedeki veya dosya paylaşımındaki işe özgü verilere erişmek için
 
-1. İş [Geçmişini açma](job-details.md)
-2. İş seçin.
-3. Bu **önemli günlük dosyalarına** **hızlı erişim için Çalışma Klasörü'ne veya StdOut / Stderr'a** tıklayın.
+1. [Iş geçmişini](job-details.md) açın
+2. İşi seçin.
+3. Bu önemli günlük dosyalarına hızlı erişim için **çalışma klasörü** ' ne veya **stdout/stderr** ' e tıklayın.
 
-    ![İş Tarayıcısı penceresinin ekran görüntüsü Sunucu Gezgini. İş train_mnist seçilidir ve İş Ayrıntıları altında Çalışma Klasörü bağlantısı seçilidir.](media/manage-storage/job-workingfolder.png)
+    ![Sunucu Gezgini 'de Iş tarayıcısı penceresinin ekran görüntüsü. Train_mnist işi seçilidir ve çalışma klasörü bağlantısı Iş ayrıntıları altında seçilidir.](media/manage-storage/job-workingfolder.png)

@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 16d73973b9d6170023f605dd42e7d451b32fd6bb
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122042783"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726976"
 ---
 # <a name="pending_bp_state_info"></a>PENDING_BP_STATE_INFO
 Bir kod konumuna bağlanmaya yönelik bir kesme noktasının durumu hakkında bilgi içerir.

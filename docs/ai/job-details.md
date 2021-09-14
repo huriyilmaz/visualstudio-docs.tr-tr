@@ -1,6 +1,6 @@
 ---
-title: Son işleri görüntüle
-description: İşlerin durumunu, süresini ve daha fazlasını görmek için işlerin listesini görüntüleyebilirsiniz.
+title: Son işleri görüntüleme
+description: İşler gönderildikten sonra durumlarını, süresini ve daha fazlasını görmek için iş listesini görüntüleyebilirsiniz.
 ms.custom: SEO-VS-2020
 author: jillre
 ms.author: jillfra
@@ -12,21 +12,21 @@ ms.topic: how-to
 ms.workload:
 - multiple
 ms.openlocfilehash: 6377acf831db6ce7f14a2a3e7605f01777f49496
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122045496"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633369"
 ---
 # <a name="view-recent-job-performance-and-details"></a>Son iş performansını ve ayrıntılarını görüntüleme
 
-İşler gönderildikten sonra, durumunu, süresini ve daha fazlasını görmek için işlerin listesini görüntüleyebilirsiniz.
+İşler gönderildikten sonra, durumlarını, süresini ve daha fazlasını görmek için iş listesini görüntüebilirsiniz.
 
-1. **Sunucu Gezgini**, belirli işlem bağlamını genişletin.
+1. uygulama **Sunucu Gezgini,** belirli işlem bağlamını genişletin.
 2. **İşler**’e çift tıklayın.
-3. Bu işlem bağlamına gönderilen işlerin listesini görürsünüz.
-4. Ayrıntıları görüntülemek için listeden belirli bir **işi** seçin.
+3. Bu işlem bağlamına gönderilen işlerin listesini görüntülenir.
+4. Ayrıntıları görüntülemek **için** listeden belirli bir İş seçin.
 
 ![işleri izleme](media/job-details/monitor-jobs.png)
 
-> Linux VM 'lerine gönderilen iş geçmişi,/tmp dizinindeki VM 'de depolanır. Bu nedenle, her yeniden başlatıldığında iş geçmişi temizlenir. iş geçmişinizin kalıcı bir kaydı için lütfen sanal makinenizi Azure Machine learning 'de bir işlem bağlamı olarak yapılandırın ve ardından işi Azure Machine Learning (işlem bağlamı olarak VM 'nizi seçerek) gönderebilirsiniz.
+> Linux VM'lere gönderilen iş geçmişi, /tmp dizininde VM'de depolanır. Bu nedenle, yeniden başlatıldığında iş geçmişi temiz olur. İş geçmişinizin kalıcı bir kaydı için lütfen VM'nizi Azure Machine Learning'de işlem bağlamı olarak yapılandırın ve ardından İş'e Azure Machine Learning gönderin (işlem bağlamı olarak VM'nizi seçin).

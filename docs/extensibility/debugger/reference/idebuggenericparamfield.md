@@ -13,11 +13,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6960983be5b71162f95a0fcbd5a3152ee4c7362d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122088542"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725189"
 ---
 # <a name="idebuggenericparamfield"></a>IDebugGenericParamField
 Yönetilen kod genel türü için bir parametreyi temsil eder.
@@ -44,7 +44,7 @@ IDebugGenericParamField : IDebugField
 |[GetOwner](../../../extensibility/debugger/reference/idebuggenericparamfield-getowner.md)|Bu genel parametrenin türünü veya yöntem sahibini alın.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Sh.h
+ Üst Bilgi: Sh.h
 
  Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 

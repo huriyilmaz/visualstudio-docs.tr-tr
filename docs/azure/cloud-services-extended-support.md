@@ -1,6 +1,6 @@
 ---
 title: Cloud Services (genişletilmiş destek) kullanma
-description: Cloud Services ile Azure Resource Manager kullanarak Cloud Services (genişletilmiş destek) Visual Studio
+description: Visual Studio ile Cloud Services kullanarak Cloud Services (genişletilmiş destek) Azure Resource Manager ve dağıtmayı Visual Studio
 author: ghogen
 manager: jmartens
 ms.technology: vs-azure
@@ -11,21 +11,21 @@ ms.date: 01/25/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
 ms.openlocfilehash: 547c3b6e81ad1df0f0beffec54a25ad7c0b32ed7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122082445"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633249"
 ---
 # <a name="create-and-deploy-to-cloud-services-extended-support-in-visual-studio"></a>Visual Studio'de Cloud Services (genişletilmiş destek) oluşturma ve Visual Studio
 
-Visual Studio [2019 sürüm 16.9'dan](https://visualstudio.microsoft.com/vs/)başlayarak, Azure kaynaklarının bakım ve yönetimini büyük ölçüde kolaylaştıran ve modernleştiren Azure Resource Manager kullanarak bulut hizmetleriyle çalışabilirsiniz. Bu, Cloud Services *(genişletilmiş destek)* olarak adlandırılan yeni bir Azure hizmeti tarafından etkinleştirilir. Mevcut bir bulut hizmetini Cloud Services (genişletilmiş destek) yayımabilirsiniz. Bu Azure hizmeti hakkında daha fazla bilgi için [Cloud Services (genişletilmiş destek) belgelerine bakın.](/azure/cloud-services-extended-support/overview)
+Visual Studio [2019 sürüm 16.9'dan](https://visualstudio.microsoft.com/vs/)başlayarak, Azure kaynaklarının bakım ve yönetimini büyük ölçüde basitleştiren ve modernleştiren Azure Resource Manager kullanarak bulut hizmetleriyle çalışabilirsiniz. Bu, Cloud Services *(genişletilmiş destek)* olarak adlandırılan yeni bir Azure hizmeti tarafından etkinleştirilir. Mevcut bir bulut hizmetini Cloud Services (genişletilmiş destek) yayımabilirsiniz. Bu Azure hizmeti hakkında daha fazla bilgi için [Cloud Services (genişletilmiş destek) belgelerine bakın.](/azure/cloud-services-extended-support/overview)
 
 ## <a name="publish-to-cloud-services-extended-support"></a>Cloud Services'da yayımlama (genişletilmiş destek)
 
-Mevcut Azure Bulut Hizmeti projenizi Cloud Services (genişletilmiş destek) yayımlarsanız, klasik Bir Azure Bulut Hizmeti'ne yayımlama özelliği korunur. 2019 Visual Studio 16.9 ve sonraki sürümlerde klasik bulut hizmeti projelerinin  Yayımla komutu olan Yayımla **(genişletilmiş destek)** özel bir sürümü vardır. Bu komut, öğesinin kısayol menüsünde **Çözüm Gezgini.**
+Mevcut Azure Bulut Hizmeti projenizi Cloud Services (genişletilmiş destek) yayımlarsanız, klasik Bir Azure Bulut Hizmeti'ne yayımlama özelliği korunur. 2019 Visual Studio 16.9 ve sonraki sürümlerde, klasik bulut hizmeti projelerinin Yayımla komutu olan Yayımla **(genişletilmiş destek)** özel bir sürümü vardır.  Bu komut, öğesinin kısayol **menüsünde Çözüm Gezgini.**
 
-Cloud Services(genişletilmiş destek) için yayımlamanız gereken bazı farklar vardır. Örneğin, bu dağıtım yuvaları genişletilmiş  destek yayımlama modelinin parçası değildir, çünkü Hazırlama veya Üretim'de yayımlarsanız size sorulanmaz. Bunun yerine, Cloud Services (genişletilmiş destek) ile birden çok dağıtım oluşturabilir ve dağıtımları Azure portal. Visual Studio aracı bunu 16.9'da ayarlamaya izin verir ancak değiştirme özelliği Cloud Services'nin (genişletilmiş destek) sonraki bir sürümüne kadar etkinleştirilmez ve Önizleme sırasında dağıtım zamanında hataya neden olabilir.
+Cloud Services'da yayımlama (genişletilmiş destek) arasında bazı farklar vardır. Örneğin, bu dağıtım yuvaları genişletilmiş  destek yayımlama modelinin parçası değildir, çünkü Hazırlama veya Üretim'de yayımlarsanız size sorulanmaz. Bunun yerine, Cloud Services (genişletilmiş destek) ile birden çok dağıtım oluşturabilir ve dağıtımları Azure portal. Visual Studio aracı bunu 16.9'da ayarlamaya izin verir ancak değiştirme özelliği Cloud Services'nin (genişletilmiş destek) sonraki bir sürümüne kadar etkinleştirilmez ve Önizleme sırasında dağıtım zamanında hataya neden olabilir.
 
 Klasik bir Azure Cloud Service'i Cloud Services (genişletilmiş destek) yayımlamadan önce projenizin kullandığı depolama hesaplarını kontrol edin ve V1 veya Depolama V2 Depolama emin olun. Klasik depolama hesabı türleri dağıtım zamanında hata iletisiyle başarısız olur. Tanılama tarafından kullanılan depolama hesabını kontrol edin. Tanılama depolama hesabını kontrol etmek için [bkz. Sanal makineler ve sanal makineler için Azure Cloud Services ayarlama.](vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines.md) Hizmetiniz klasik bir depolama hesabı kullanıyorsa, bunu yükseltebilirsiniz; Bkz. [Genel amaçlı v2 depolama hesabına yükseltme.](/azure/storage/common/storage-account-upgrade?tabs=azure-portal)  Depolama hesabı türleri hakkında genel bilgi için bkz. [Depolama genel bakış.](/azure/storage/common/storage-account-overview)
 
@@ -43,13 +43,13 @@ Klasik bir Azure Cloud Service'i Cloud Services (genişletilmiş destek) yayıml
 
 1. **Aboneliğinizi seçin** - Dağıtımınız için kullanmak istediğiniz aboneliği seçin.
 
-1. Ayarlar  **seçin.**
+1. Yeni **sayfayı** seçmek için **Ayarlar** seçin.
 
    ![Ortak Ayarlar](./media/cloud-services-extended-support/publish-settings.png)
 
 1. **Bulut Hizmeti (genişletilmiş destek)** - Açılan listeden mevcut bir bulut hizmetini (genişletilmiş destek) seçin veya Yeni oluştur'ı seçin ve bir tane oluşturun.  Veri merkezi, her bulut hizmeti (genişletilmiş destek) için parantez içinde görüntülenir. Bulut hizmeti için veri merkezi konumunun (genişletilmiş destek) depolama hesabı için veri merkezi konumuyla aynı olması önerilir.
 
-   Yeni bir hizmet oluşturma seçeneğiniz varsa Bulut Hizmeti **Oluştur (genişletilmiş destek) iletişim kutusunu** görüntülenir. Bulut hizmeti için kullanmak istediğiniz konumu ve kaynak grubunu belirtin (genişletilmiş destek).
+   Yeni bir hizmet oluşturma seçeneğiniz varsa, Bulut Hizmeti **Oluştur (genişletilmiş destek) iletişim kutusunu** görüntülenir. Bulut hizmeti için kullanmak istediğiniz konumu ve kaynak grubunu belirtin (genişletilmiş destek).
 
    ![Bulut hizmeti oluşturma (genişletilmiş destek)](./media/cloud-services-extended-support/extended-support-dialog.png)
 
@@ -57,7 +57,7 @@ Klasik bir Azure Cloud Service'i Cloud Services (genişletilmiş destek) yayıml
 
 1. **Hizmet yapılandırması** - Bulut veya **Yerel'i** **seçin.**
 
-1. **Depolama -** Bu dağıtım için kullanmak üzere depolama hesabını seçin veya Yeni **oluştur'a seçerek** bir depolama hesabı oluşturun. Bölge, her depolama hesabı için parantez içinde görüntülenir. Depolama hesabının veri merkezi konumunun, bulut hizmeti için veri merkezi konumuyla aynı olması önerilir (Common Ayarlar).
+1. **Depolama -** Bu dağıtım için kullanmak üzere depolama hesabını seçin veya Yeni **oluştur'a** bakarak bir depolama hesabı oluşturun. Bölge, her depolama hesabı için parantez içinde görüntülenir. Depolama hesabının veri merkezi konumunun, bulut hizmeti için veri merkezi konumuyla aynı olması önerilir (Common Ayarlar).
 
    Azure depolama hesabı, uygulama dağıtımı için paketi depolar.
 
@@ -77,18 +77,18 @@ Klasik bir Azure Cloud Service'i Cloud Services (genişletilmiş destek) yayıml
 
    ![Özet](./media/cloud-services-extended-support/publish-summary.png)
 
-1. **Hedef profil** - Seçtiğiniz ayarlardan bir yayımlama profili oluşturabilirsiniz. Örneğin, bir test ortamı için bir profil ve üretim için başka bir profil oluşturabilirsiniz. Bu profili kaydetmek için Kaydet **simgesini** seçin. Sihirbaz, profili oluşturur ve Visual Studio kaydeder. Profil adını değiştirmek için Hedef profil listesini **açın ve** **Yönet... 'i seçin.**
+1. **Hedef profil** - Seçtiğiniz ayarlardan bir yayımlama profili oluşturabilirsiniz. Örneğin, bir test ortamı için bir profil ve üretim için başka bir profil oluşturabilirsiniz. Bu profili kaydetmek için Kaydet **simgesini** seçin. Sihirbaz, profili oluşturur ve Visual Studio kaydeder. Profil adını değiştirmek için Hedef profil **listesini açın ve** **Yönet... 'i seçin.**
 
    > [!Note]
-   > Yayımlama profili, Çözüm Gezgini içinde Visual Studio ve profil ayarları *.azurePubxml* uzantısına sahip bir dosyaya yazılır. Ayarlar XML etiketlerinin öznitelikleri olarak kaydedilir.
+   > Yayımlama profili Çözüm Gezgini içinde Visual Studio ve profil ayarları *.azurePubxml* uzantısına sahip bir dosyaya yazılır. Ayarlar XML etiketlerinin öznitelikleri olarak kaydedilir.
 
 1. Projenizin dağıtımı için tüm ayarları yapılandırdıktan sonra iletişim kutusunun **alt kısmında** Yayımla'yı seçin. İşlem durumunu azure etkinlik günlüğü çıkış **penceresinden** izleyebilirsiniz Visual Studio. Portalda **aç bağlantısını** seçin 
 
-Tebrikler! Bulut hizmeti (genişletilmiş destek) projenizi Azure'da yayımladınız. Aynı ayarlarla yeniden yayımlamak için yayımlama profilini yeniden kullanabilir veya bu adımları tekrar tekrar kullanarak yeni bir tane oluşturabilirsiniz. Dağıtım Azure Resource Manager (ARM) şablonu ve parametreleri *bin/ \<configuration\> /Publish klasörüne* kaydedilir.
+Tebrikler! Bulut hizmeti (genişletilmiş destek) projenizi Azure'da yayımladınız. Aynı ayarlarla yeniden yayımlamak için yayımlama profilini yeniden kullanabilir veya bu adımları tekrar kullanarak yeni bir tane oluşturabilirsiniz. Dağıtım Azure Resource Manager (ARM) şablonu ve parametreleri *bin/ \<configuration\> /Publish klasörüne* kaydedilir.
 
 ## <a name="clean-up-azure-resources"></a>Azure kaynaklarını temizleme
 
-Bu öğreticiyi kullanarak oluşturduğunuz Azure kaynaklarını temizlemek için [Azure portal'a](https://portal.azure.com)gidin, Kaynak grupları'ı **seçin,** bulut hizmetini oluşturmak için kullanılan kaynak grubunu bulun ve açın (genişletilmiş destek) ve Kaynak grubunu sil'i **seçin.**
+Bu öğreticiyi kullanarak oluşturduğunuz Azure kaynaklarını temizlemek için [Azure portal'ye](https://portal.azure.com)gidin, Kaynak grupları'ı **seçin,** bulut hizmetini oluşturmak için kullanılan kaynak grubunu bulun ve açın (genişletilmiş destek) ve Kaynak grubunu sil'i **seçin.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

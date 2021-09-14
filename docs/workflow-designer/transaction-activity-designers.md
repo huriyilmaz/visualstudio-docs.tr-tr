@@ -12,11 +12,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 2925b836596393b4f10e6331aa8ec2488d9cb66d
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963699"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726065"
 ---
 # <a name="transaction-activity-designers"></a>İşlem Etkinlik Tasarımcıları
 

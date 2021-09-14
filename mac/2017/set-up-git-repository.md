@@ -7,11 +7,11 @@ ms.date: 02/15/2018
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
 ms.topic: how-to
 ms.openlocfilehash: c226e1a8160d0eb1321d244b26177119ec3a5846
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123962223"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726013"
 ---
 # <a name="set-up-a-git-repository"></a>Git deposu ayarlama
 

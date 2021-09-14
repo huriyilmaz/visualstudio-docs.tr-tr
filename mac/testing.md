@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.author: jomatthi
 author: jmatthiesen
 ms.openlocfilehash: 3956c3158fd4ec1ad32b76882ac3f9d4cf1ea9bf
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964827"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725973"
 ---
 # <a name="testing-tools-in-visual-studio-for-mac"></a>Mac için Visual Studio 'de test araçları
 

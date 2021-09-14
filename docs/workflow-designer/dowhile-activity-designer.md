@@ -14,11 +14,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 942552f127cebaff4c0f923118fb8be0ac9b141a
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963728"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633689"
 ---
 # <a name="dowhile-activity-designer"></a>DoWhile Etkinlik Tasarımcısı
 
@@ -31,7 +31,7 @@ Aşağıdaki tabloda en kullanışlı etkinlik <xref:System.Activities.Statement
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
 |<xref:System.Activities.Statements.DoWhile.Body%2A>|Yanlış|Koşul doğruyken yürütülecek **etkinlik.** Etkinliği eklemek <xref:System.Activities.Statements.DoWhile.Body%2A> için araç kutusundan **DoWhile**  etkinlik tasarımcısında "Etkinliği Buraya Bırak" ipucu metniyle Gövde kutusuna bir etkinlik bırakın.|
-|<xref:System.Activities.Statements.DoWhile.Condition%2A>|Doğru|Döngü her yinelemeden sonra değerlendirilecek koşul. ayarlamak için <xref:System.Activities.Statements.DoWhile.Condition%2A> **DoWhile** Visual Basic tasarımcısının **Koşul** kutusuna veya özellik kılavuzuna bir Visual Basic ifadesi yazın.|
+|<xref:System.Activities.Statements.DoWhile.Condition%2A>|Doğru|Döngü her yinelemeden sonra değerlendirilecek koşul. ayarlamak <xref:System.Activities.Statements.DoWhile.Condition%2A> için, **DoWhile** Visual Basic tasarımcısının **Koşul** kutusuna veya özellik kılavuzuna bir Visual Basic ifadesi yazın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

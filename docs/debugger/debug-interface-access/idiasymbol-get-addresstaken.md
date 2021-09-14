@@ -1,6 +1,6 @@
 ---
-description: Başka bir simgenin bu simgenin adresine başvuruda bulunup bulunmadığını gösteren bir bayrak alır.
-title: 'IDiaSymbol:: get_addressTaken | Microsoft Docs'
+description: Başka bir sembolün bu sembolün adresine başvurup başvura olmadığını belirten bir bayrak verir.
+title: IDiaSymbol::get_addressTaken | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 132fa45ef2ab2adb4a79283742bf9a566aa7a59e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052317"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725471"
 ---
 # <a name="idiasymbolget_addresstaken"></a>IDiaSymbol::get_addressTaken
-Başka bir simgenin bu simgenin adresine başvuruda bulunup bulunmadığını gösteren bir bayrak alır.
+Başka bir sembolün bu sembolün adresine başvurup başvura olmadığını belirten bir bayrak verir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,16 +35,16 @@ HRESULT get_addressTaken (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE` Başka bir simgenin bu adrese başvuruyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] Başka `TRUE` bir sembol bu adrese başvurursa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, `B` başvuruları `A` . Bu nedenle, `A` simgenin `get_addressTaken` yöntemi döndürür `TRUE` .
+ Aşağıdaki örnekte, `B` `A` başvurur. Bu nedenle sembol `A` metodu `get_addressTaken` `TRUE` döndürür.
 
 ```C++
 int A  = 0;
@@ -55,8 +55,8 @@ int* B = &A;
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 7.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v7.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

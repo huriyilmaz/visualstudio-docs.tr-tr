@@ -11,11 +11,11 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: 6ba31a6d250123d4d54fa1071e9ef662aea7dae8
-ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "122334284"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633417"
 ---
 # <a name="whats-next"></a>Sırada ne var?
 

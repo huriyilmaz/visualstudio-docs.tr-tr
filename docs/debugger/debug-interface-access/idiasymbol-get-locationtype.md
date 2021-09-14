@@ -1,6 +1,6 @@
 ---
-description: Bir veri sembolünün konum türünü alır.
-title: 'IDiaSymbol:: get_locationType | Microsoft Docs'
+description: Bir veri simgesinin konum türünü alınır.
+title: IDiaSymbol::get_locationType | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: fec2412b7b8801f1197bc53963b5166cb2cc950f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122147282"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628028"
 ---
 # <a name="idiasymbolget_locationtype"></a>IDiaSymbol::get_locationType
-Bir veri sembolünün konum türünü alır.
+Bir veri simgesinin konum türünü alınır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_locationType (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı , Veya gibi bir veri sembolünün konum türünü belirten [LocationType sabit](../../debugger/debug-interface-access/locationtype.md) listesi numaralandırmasından bir değer döndürür `static` `local` .
+[out] [LocationType Enumeration enumeration'dan](../../debugger/debug-interface-access/locationtype.md) veya gibi bir veri simgesinin konum türünü belirten bir değer `static` `local` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

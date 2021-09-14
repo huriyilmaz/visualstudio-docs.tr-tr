@@ -1,6 +1,6 @@
 ---
 title: Port Suppliers | Microsoft Docs
-description: Bu makalede, Visual Studio'da hata ayıklayıcı mimarisinde bağlantı noktası sağlayıcının tanımı ve Visual Studio.
+description: Bu makalede, Visual Studio'da hata ayıklayıcı mimarisinde bir bağlantı noktası sağlayıcının tanımı ve Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 098e1546dea997f83f0c73b5d337657b1a8d77a8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122073285"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725828"
 ---
 # <a name="port-suppliers"></a>Bağlantı noktası sağlayıcıları
 Hata ayıklayıcısı mimarisinde bir bağlantı *noktası sağlayıcı:*
@@ -28,7 +28,7 @@ Hata ayıklayıcısı mimarisinde bir bağlantı *noktası sağlayıcı:*
 
 - Bağlantı noktalarını içeren sunucuya ekleyebilir ve kaldırabilir.
 
-- Sunucuya sağladığı tüm bağlantı noktalarını numara olarak numaralara dığrabilirsiniz.
+- Sunucuya sağladığı tüm bağlantı noktalarını numara olarak numaralara uzer.
 
 - Kayıt defteri aracılığıyla bir [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimiyle temsil Visual Studio ile kaydedilir. Bu arabirim [GetPortSupplier çağrılarak elde edilir.](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)
 

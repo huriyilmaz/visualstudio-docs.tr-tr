@@ -11,11 +11,11 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: 36c7a2dbada3dd1f23b45019dc0690f3ba1ab5f1
-ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "122334472"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633462"
 ---
 # <a name="persist-your-data"></a>Verilerinizi kalıcı olarak kalıcı olarak koruma
 
@@ -37,7 +37,7 @@ Bunu uygulamalı olarak görmek için iki kapsayıcı başlatacak ve her kapsay�
 
     Komutu merak ediyor olabilir, bir bash kabuğu başlatıyor ve iki komutu (neden komutu var) `&&` başlatıyorsunuz? İlk bölüm tek bir rastgele sayı seçer ve bunu 'a `/data.txt` yazar. İkinci komut, kapsayıcıyı çalıştırmaya devam etmek için bir dosyayı izlemektir.
 
-1. Kapsayıcıya almak için kullanarak çıkışı `exec` gördüğünüzi onaylar. Bunu yapmak için, VS Code uzantısını açın ve Kabuk Ekle **seçeneğine** tıklayın. Bu, `exec` terminalde kapsayıcıda bir kabuk açmak için VS Code kullanılır.
+1. Kapsayıcıya almak için kullanarak çıkışı `exec` gördüğünüzi onaylar. Bunu yapmak için, VS Code uzantısını açın ve Kabuk Ekle **seçeneğine** tıklayın. Bu, yeni `exec` terminalin içindeki kapsayıcıda bir kabuk VS Code kullanır.
 
     ![VS Code CLI'sini ubuntu kapsayıcısı içine açma](media/attach_shell.png)
 

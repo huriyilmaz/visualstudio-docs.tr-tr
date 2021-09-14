@@ -1,6 +1,6 @@
 ---
-title: Yönetilen kodda hata ayıklama | Microsoft Docs
-description: Visual Studio hata ayıklayıcısını kullanarak C# veya Visual Basic hatalarını ayıklama
+title: Yönetilen kod hata ayıklaması | Microsoft Docs
+description: Visual Studio hata ayıklayıcısını kullanarak C# Visual Basic hata ayıklama
 ms.custom: mvc
 ms.date: 03/18/2018
 ms.topic: quickstart
@@ -14,40 +14,40 @@ ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
 ms.openlocfilehash: b6b1bf99c7961c2ca8a9d162e2de173a9dd0a41c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122112587"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627963"
 ---
-# <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>hızlı başlangıç: Visual Studio hata ayıklayıcıyı kullanarak C# veya Visual Basic hatalarını ayıklama
+# <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>Hızlı Başlangıç: Visual Studio hata Visual Basic ayıklayıcısını kullanarak C# veya Visual Studio ayıklama
 
-Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardımcı olmak için birçok güçlü özellik sağlar. Bu konu, temel özelliklerden bazılarını öğrenmenin hızlı bir yolunu sağlar.
+Bu Visual Studio hata ayıklayıcısı, uygulamalarınızı hata ayıklamanıza yardımcı olacak birçok güçlü özellik sağlar. Bu konu, bazı temel özellikleri öğrenmenin hızlı bir yolunu sağlar.
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
-1. Visual Studio açın ve yeni bir proje oluşturun.
+1. Yeni Visual Studio açın ve yeni bir proje oluşturun.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresi açık değilse **Dosya**  >  **Başlangıç penceresi**' ni seçin. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+    Başlangıç penceresi açık değilse Dosya Başlangıç **Penceresi'ne**  >  **tıklayın.** Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-    **Yeni proje oluştur** penceresinde, arama kutusuna *konsol* girin veya yazın. ardından, dil listesinden **C#** öğesini seçin ve ardından Platform listesinden **Windows** öğesini seçin.
+    Yeni **proje oluştur penceresinde** arama kutusuna *konsol yazın* veya yazın. Ardından Dil **listesinden C#** dilini ve ardından Platform **listesinden Windows'yi** seçin.
 
-    Dil ve platform filtrelerini uyguladıktan sonra .NET Core **konsol uygulaması** şablonunu seçin ve ardından **İleri**' yi seçin.
+    Dil ve platform filtrelerini uygulayan .NET Core **için Konsol** Uygulaması şablonunu ve ardından Sonraki'yi **seçin.**
 
-    Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
+    Önerilen hedef çerçeveyi (.NET Core 3.1) veya .NET 5'i seçin ve ardından Oluştur'a **seçin.**
 
-    .net Core için **konsol uygulaması** proje şablonunu görmüyorsanız, **araçlar**  >  **ve özellikler al.**.. ' a giderek Visual Studio Yükleyicisi açan araçlar ' a gidin. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    .NET Core için Konsol Uygulaması **proje** şablonunu görmüyorsanız Araçlar Araçları ve Özellikleri Al... 'a gidin ve bu işlem  >  Visual Studio Yükleyicisi. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    üstteki menü çubuğundan **dosya**  >  **yeni**  >  **Project** öğesini seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında **.NET Core**' u seçin ve ardından Ortadaki bölmede **konsol uygulaması (.NET Core)** seçeneğini belirleyin. Ardından, **Mydbgapp** gibi bir ad yazın ve **Tamam**' a tıklayın.
+    Üst menü çubuğundan Dosya Yeni **dosya'Project.**  >    >   Yeni proje iletişim  kutusunun sol bölmesinde, **Visual C#** altında **.NET Core'ı** seçin ve orta bölmede Konsol Uygulaması **(.NET Core) öğesini seçin.** Ardından **MyDbgApp** gibi bir ad yazın ve Tamam'a **tıklayın.**
 
-    **konsol uygulaması (.net Core)** proje şablonunu görmüyorsanız **araçlar**  >  **ve özellikler al.**.. ' a giderek Visual Studio Yükleyicisi açan araçlar ' a gidin. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+    Konsol Uygulaması **(.NET Core)** proje şablonunu görmüyorsanız Araçlar Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
     ::: moniker-end
 
     Visual Studio projeyi oluşturur.
 
-1. *Program. cs* veya *Module1. vb* dosyasında aşağıdaki kodu değiştirin
+1. *Program.cs veya* *Module1.vb içinde* aşağıdaki kodu değiştirin
 
     ```csharp
     class Program
@@ -133,66 +133,66 @@ Visual Studio hata ayıklayıcı, uygulamalarınızda hata ayıklamanıza yardı
     ```
 
     > [!NOTE]
-    > Visual Basic, başlangıç nesnesinin `Sub Main` (**özellikler > uygulama > başlangıç nesnesi**) olarak ayarlandığından emin olun.
+    > Bu Visual Basic, başlangıç nesnesinin ( Uygulama Uygulama Nesnesinde Özellikler `Sub Main` > > ) olarak >**olun.**
 
 ## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
 
-*kesme noktası* , değişkenlerin değerlerini veya bellek davranışını ya da kodun bir dalının çalıştırılıp çalıştırılmadığını görmek için Visual Studio çalışan kodunuzun askıya alınması gerektiğini belirten bir işaretleyicidir. Hata ayıklamada en temel özelliktir.
+Kesme *noktası,* değişkenlerin değerlerine Visual Studio veya bellek davranışına veya bir kod dalını çalıştırıp çalıştırmamaya bakabilirsiniz. Hata ayıklamanın en temel özelliğidir.
 
-1. Kesme noktasını ayarlamak için, işlev çağrısının solundaki cilt payın içine tıklayın `doWork` (veya kod satırını seçip **F9** tuşuna basın).
+1. Kesme noktası ayarlamak için işlev çağrısının sol tarafından sol tarafta yer alan oluklara tıklayın (veya kod satırına tıklayın ve `doWork` **F9 tuşuna basın).**
 
     ![Kesme noktası ayarlama](../debugger/media/dbg-qs-set-breakpoint-csharp.png "Kesme noktası ayarlama")
 
-2. Şimdi **F5** tuşuna basın (veya hata **ayıklamayı başlatmak > hata ayıkla** seçeneğini belirleyin).
+2. Şimdi **F5 tuşuna basın** (veya Hata **Ayıkla'> Hata Ayıklamayı Başlat'ı seçin).**
 
-    ![Kesme noktasına isabet edin](../debugger/media/dbg-qs-hit-breakpoint-csharp.png "Kesme noktasına isabet edin")
+    ![Kesme noktası isabeti](../debugger/media/dbg-qs-hit-breakpoint-csharp.png "Kesme noktası isabeti")
 
-    Hata ayıklayıcı, kesme noktasını ayarladığınız yerde duraklatılır. Hata ayıklayıcının ve uygulama yürütmenin duraklatıldığı ifade sarı oklu belirtilir. İşlev çağrısının bulunduğu satır `doWork` henüz yürütülmedi.
+    Hata ayıklayıcısı kesme noktası ayarlayıcıyı duraklatıyor. Hata ayıklayıcısı ve uygulama yürütmenin duraklatılmış olduğu deyim sarı okla işaret ediyor. İşlev `doWork` çağrısına sahip satır henüz yürütülmedi.
 
     > [!TIP]
-    > Bir döngüde veya özyinelemedeki bir kesme noktası varsa veya sık sık adımtığınız çok sayıda kesme noktasına sahipseniz, kodunuzun yalnızca belirli koşullar karşılandığında askıya alındığından emin olmak için [koşullu bir kesme noktası](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) kullanın. Koşullu kesme noktası zamandan tasarruf edebilir ve yeniden oluşturulması zor olan sorunların hatalarını ayıklamanızı da kolaylaştırabilir.
+    > Döngüde veya yeniden çalışmada kesme noktanız varsa veya sık sık adım attığınız çok sayıda [](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) kesme noktanız varsa, kodunuzun YALNIZCA belirli koşullar karşılandı olduğunda askıya alındıktan emin olmak için koşullu kesme noktası kullanın. Koşullu kesme noktası zamandan tasarruf sağlar ve yeniden oluşturması zor olan sorunlarda hata ayıklamayı da kolaylaştırır.
 
-## <a name="navigate-code"></a>Koda git
+## <a name="navigate-code"></a>Kodda gezinme
 
-Hata ayıklayıcının devam etmesini bildirmek için farklı komutlar vardır. Visual Studio 2017 ' den başlayarak kullanılabilecek yararlı bir kod gezinti komutu gösteririz.
+Hata ayıklayıcıya devam etme talimatı için farklı komutlar vardır. 2017'den itibaren kullanılabilen yararlı bir kod gezinti Visual Studio gösteriyoruz.
 
-Kesme noktasında duraklalarken, tıklama `c1.AddLast(20)` düğmesine tıklayarak ve ardından tıklama düğmesine tıklayarak  deyimin üzerine gelin ve ![](../debugger/media/dbg-tour-run-to-click.png "RunToClick") sonra da **Çalıştır** düğmesine basın.
+Kesme noktası duraklatılırken, yeşil renkli Çalıştır düğmesine tıklar gibi görünene kadar deyimin üzerine gelin ve ardından `c1.AddLast(20)` **Çalıştır'a tıklayarak düğmesine** basın.  ![](../debugger/media/dbg-tour-run-to-click.png "RunToClick")
 
-![Tıklama için Çalıştır](../debugger/media/dbg-qs-run-to-click-csharp.png "Tıklama için Çalıştır")
+![Tıklamak için çalıştır](../debugger/media/dbg-qs-run-to-click-csharp.png "Tıklamak için çalıştır")
 
-Uygulama, `doWork` düğmeye tıklamış olduğunuz kod satırında yürütme, çağırma ve duraklamaya devam eder.
+Uygulama, çağrısıyla `doWork` yürütmeye devam eder ve düğmesine tıklamış olduğu kod satırı üzerinde duraklatılır.
 
-Kod içinde ilerlemek için kullanılan yaygın klavye komutları **F10** ve **F11**. Daha ayrıntılı yönergeler için bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
+Kodda adım adım gezinmek için kullanılan yaygın klavye komutları **F10** ve **F11'tir.** Daha ayrıntılı yönergeler için bkz. [Hata ayıklayıcıya ilk bakış.](../debugger/debugger-feature-tour.md)
 
-## <a name="inspect-variables-in-a-data-tip"></a>Bir veri ipucunda değişkenleri İnceleme
+## <a name="inspect-variables-in-a-data-tip"></a>Veri ipucunda değişkenleri inceleme
 
-1. Geçerli kod satırında (Sarı yürütme işaretçisi tarafından işaretlenir), `c1` bir veri ipucu göstermek için farenizle nesnenin üzerine gelin.
+1. Geçerli kod satırı (sarı yürütme işaretçisi ile işaretlenmiş) farenizin olduğu nesnenin üzerine gelerek `c1` bir veri ipucu gösterir.
 
-    ![Veri ipucunu görüntüleme](../debugger/media/dbg-qs-data-tip-csharp.png "Veri ipucunu görüntüleme")
+    ![Veri ipucu görüntüleme](../debugger/media/dbg-qs-data-tip-csharp.png "Veri ipucu görüntüleme")
 
-    Veri ipucu, değişkenin geçerli değerini gösterir `c1` ve özelliklerini incelemenizi sağlar. Hata ayıklarken, beklemediğinizi bir değer görürseniz, büyük olasılıkla kodun önceki veya çağırma satırlarında bir hata oluşur.
+    Veri ipucu, değişkenin geçerli değerini `c1` gösterir ve özelliklerini incelemeye olanak sağlar. Hata ayıklama sırasında, beklemeyebilirsiniz bir değer görüyorsanız, büyük olasılıkla önceki veya çağıran kod satırlarında bir hata vardır.
 
-2. Nesnenin geçerli özellik değerlerini görmek için veri ipucunu genişletin `c1` .
+2. Nesnenin geçerli özellik değerlerine bakmak için veri ipucu'nda `c1` genişletin.
 
-3. Kodu yürüttüğünüzde değerini görmeye devam edebilmeniz için veri ipucunu sabitlemek istiyorsanız `c1` , küçük sabitle simgesine tıklayın. (Sabitlenmiş veri ipucunu uygun bir konuma taşıyabilirsiniz.)
+3. Kodu yürütürken değerini görmeye devam etmek için veri ipucuna sabitlemek için küçük pin `c1` simgesine tıklayın. (Sabitlenmiş veri ipucunı uygun bir konuma taşıyabilirsiniz.)
 
 ## <a name="edit-code-and-continue-debugging"></a>Kodu düzenleme ve hata ayıklamaya devam etme
 
-Hata ayıklama oturumunun ortasında kodunuzda test etmek istediğiniz bir değişikliği belirlerseniz, bunu da yapabilirsiniz.
+Hata ayıklama oturumunun ortasındayken kodunda test etmek istediğiniz bir değişikliği tespit ediyorsanız, bunu da kullanabilirsiniz.
 
-1. İkinci örneğine tıklayın ve öğesini `c2.First.Value` olarak değiştirin `c2.First.Value` `c2.Last.Value` .
+1. İkinci örneğine tıklayın `c2.First.Value` ve olarak `c2.First.Value` `c2.Last.Value` değişir.
 
-2. Hata ayıklayıcıyı ilerletmek ve düzenlenmiş kodu yürütmek için **F10** 'e (veya **hata ayıklama > adımla**) birkaç kez basın.
+2. Hata ayıklayıcıyı ilerletin ve **düzenlenen kodu yürütmek >** **F10** 'a (veya Hata Ayıkla veya AdımLa) birkaç kez basın.
 
-    ![Düzenle ve devam et](../debugger/media/dbg-qs-edit-and-continue-csharp.gif "Düzenle ve devam et")
+    ![Düzenle ve devam](../debugger/media/dbg-qs-edit-and-continue-csharp.gif "Düzenle ve devam")
 
-    **F10** , hata ayıklayıcı bir ifadeyi tek seferde ilerletir, ancak bunlar içine adımlamak yerine işlevler üzerinde adımlar (yine de atladığınız kod).
+    **F10,** hata ayıklayıcıyı tek tek bir deyime ilerletmektedir, ancak işlevlere adımlarını atlar (atlayıp atlayılan kod yine de yürütülür).
 
-Düzenle ve devam et ve özellik sınırlamalarını kullanma hakkında daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
+Düzenleme ve devam ile özellik sınırlamaları hakkında daha fazla bilgi için, bkz. [Düzenle ve Devam Edin.](../debugger/edit-and-continue.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, hata ayıklayıcıyı başlatma, kod adım adım ve değişkenleri İnceleme hakkında öğrendiniz. Hata ayıklayıcı özelliklerine ve daha fazla bilgi için bağlantılarla birlikte yüksek düzeyde bir görünüm sağlamak isteyebilirsiniz.
+Bu öğreticide hata ayıklayıcıyı başlatmayı, kodu adım adım incelemeyi ve değişkenleri incelemeyi öğrendiniz. Daha fazla bilgi için bağlantılarla birlikte hata ayıklayıcı özelliklerine üst düzey bir bakış elde etmek iyi olabilir.
 
 > [!div class="nextstepaction"]
 > [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

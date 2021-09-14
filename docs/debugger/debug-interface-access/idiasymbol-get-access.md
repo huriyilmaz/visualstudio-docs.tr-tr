@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 71ed7ca5018e69541d254750f5e7c4956cded569
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122081328"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628059"
 ---
 # <a name="idiasymbolget_access"></a>IDiaSymbol::get_access
 Bir sınıf üyesinin erişim değiştiricisini alın.
@@ -35,7 +35,7 @@ HRESULT get_access (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Sınıf üyesinin [erişim değiştiricisini belirten](../../debugger/debug-interface-access/cv-access-e.md) CV_access_e enumeration enumeration'dan bir değer döndürür.
+[out] Sınıf üyesinin [erişim değiştiricisini belirten CV_access_e](../../debugger/debug-interface-access/cv-access-e.md) enumeration enumeration'dan bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.

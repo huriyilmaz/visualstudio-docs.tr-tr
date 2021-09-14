@@ -1,7 +1,7 @@
 ---
 title: Yönetilen kod için kod analizi
 ms.date: 08/27/2020
-description: .NET Compiler Platform tabanlı kod çözümleyicileri hakkında Visual Studio. Bu çözümleyicilerin neden yönetilen derlemelerin FxCop statik analizinin yerini alasınız.
+description: Visual Studio .NET Compiler Platform tabanlı kod çözümleyicileri hakkında bilgi edinin. Bu çözümleyiciler neden yönetilen derlemelerin FxCop statik analizini değiştirmesini anlayın.
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
 ms.openlocfilehash: 5fbd9e0df806e038e4016a128a4340aa46777470
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122031737"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632085"
 ---
-# <a name="overview-of-code-analysis-for-net-in-visual-studio"></a>Visual Studio'de .NET için kod analizine genel Visual Studio
+# <a name="overview-of-code-analysis-for-net-in-visual-studio"></a>Visual Studio .NET için kod çözümlemesine genel bakış
 
-Visual Studio, yönetilen kodun kod analizini iki şekilde gerçekleştirebilir: Eski analiz ile [,](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)yönetilen derlemelerin FxCop statik analizi olarak da bilinir ve daha modern .NET Compiler Platform tabanlı kod [çözümleyicileri](../code-quality/roslyn-analyzers-overview.md)ile. .NET Compiler Platform kodunuzu siz yazarak canlı olarak analiz eden ve yalnızca derlenmiş kodu analiz eden eski FxCop statik kod analizinin yerini alan kod çözümleyicileridir.
+Visual Studio yönetilen kodun kod analizini iki şekilde gerçekleştirebilir: [eski analizler](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md), yönetilen derlemelerin FxCop statik analizini ve daha modern [.NET Compiler Platform tabanlı kod çözümleyicileri](../code-quality/roslyn-analyzers-overview.md)olarak da bilinir. kodunuzu yazarken canlı olarak çözümleyen .NET Compiler Platform tabanlı kod çözümleyicileri, yalnızca derlenen kodu çözümleyen eski FxCop statik kod analizini değiştirir.

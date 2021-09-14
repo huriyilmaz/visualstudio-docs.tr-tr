@@ -1,6 +1,6 @@
 ---
-title: Bağlı Hizmetler aboneliğini kullanarak Azure SignalR | Microsoft Docs
-description: Bağlı hizmet eklemek için azure Visual Studio kullanarak uygulamanıza Azure SignalR ekleme
+title: Bağlı hizmetleri kullanarak Azure SignalR ekleme | Microsoft Docs
+description: bağlı hizmet eklemek için Visual Studio kullanarak uygulamanıza Azure signalr ekleme
 author: AngelosP
 manager: jmartens
 ms.technology: vs-azure
@@ -10,76 +10,76 @@ ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: d2f90c7b1a5b389243bf91ff46aa6892689bf17c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122082471"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633278"
 ---
-# <a name="add-azure-signalr-by-using-visual-studio-connected-services"></a>Bağlı Hizmetler'i kullanarak Azure SignalR Visual Studio ekleme
+# <a name="add-azure-signalr-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetleri kullanarak Azure signalr ekleme
 
-Aşağıdaki Visual Studio, Bağlı Hizmetler özelliğini kullanarak Azure SignalR hizmetine **bağlanabilirsiniz:**
+Visual Studio, **bağlı hizmetler** özelliğini kullanarak aşağıdakilerden herhangi birini Azure signalr hizmetine bağlayabilirsiniz:
 
 - .NET Framework konsol uygulaması
 - ASP.NET MVC (.NET Framework) 
 - ASP.NET Core
-- .NET Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
-- .NET Core Çalışan Rolü
+- .net Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
+- .NET Core çalışan rolü
 - Azure İşlevleri
-- Universal Windows Platform Uygulaması
+- Evrensel Windows Platformu uygulaması
 - Xamarin
 - Cordova
 
-Bağlı hizmet işlevi, projenize gereken tüm başvuruları ve bağlantı kodunu ekler ve yapılandırma dosyalarınızı uygun şekilde ayarlar.
+Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodlarını projenize ekler ve yapılandırma dosyalarınızı uygun şekilde değiştirir.
 
 > [!NOTE]
-> Bu konu, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. Mac için Visual Studio.](/visualstudio/mac/connected-services)
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Visual Studio Azure iş yükünün yüklü olması gerekir.
+- Azure iş yükü yüklü Visual Studio.
 - Desteklenen türlerden birinin projesi
 
-## <a name="connect-to-azure-signalr-using-connected-services"></a>Bağlan Hizmetleri kullanarak Azure SignalR'ye bağlanma
+## <a name="connect-to-azure-signalr-using-connected-services"></a>bağlı hizmetleri kullanarak Azure signalr 'ye Bağlan
 
 1. Projenizi Visual Studio’da açın.
 
-1. Bu **Çözüm Gezgini** Bağlı Hizmetler düğümüne **sağ** tıklayın ve bağlam menüsünde Bağlı Hizmet **Ekle'yi seçin.**
+1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne sağ tıklayın ve bağlam menüsünden **bağlı hizmet ekle**' yi seçin.
 
-1. Bağlı **Hizmetler sekmesinde** Hizmet Bağımlılıkları için + **simgesini seçin.**
+1. **Bağlı hizmetler** sekmesinde, **hizmet bağımlılıkları** için + simgesini seçin.
 
-    ![Hizmet Bağımlılığı Ekleme](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
+    ![Hizmet bağımlılığı Ekle](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
 
-1. Bağımlılık **Ekle sayfasında Azure SignalR Hizmeti.** 
+1. **Bağımlılık Ekle** sayfasında **Azure SignalR hizmeti**' ni seçin.
 
-    ![Yeni Azure SignalR Hizmeti](./media/azure-signalr-add-connected-service/add-signalr-service.png)
+    ![Azure SignalR hizmeti ekleme](./media/azure-signalr-add-connected-service/add-signalr-service.png)
 
-    Henüz oturum açmadıysanız Azure hesabınızla oturum açın. Azure hesabınız yoksa ücretsiz deneme sürümüne [kaydolabilirsiniz.](https://azure.microsoft.com/account/free)
+    Henüz oturum açmadıysanız Azure hesabınızda oturum açın. Bir Azure hesabınız yoksa, [ücretsiz deneme](https://azure.microsoft.com/account/free)için kaydolabilirsiniz.
 
-1. Azure **SignalR'yi Yapılandır ekranında** var olan bir Azure SignalR bileşenini seçin ve ardından Sonraki'yi **seçin.**
+1. **Azure SignalR 'Yi Yapılandır** ekranında, var olan bir Azure SignalR bileşenini seçin ve **İleri**' yi seçin.
 
-    Yeni bir bileşen oluşturmanız gerekirse sonraki adıma gidin. Aksi takdirde 7. adıma geçin.
+    Yeni bir bileşen oluşturmanız gerekiyorsa, bir sonraki adıma gidin. Aksi takdirde 7. adıma geçin.
 
-    ![Bağlan Azure SignalR bileşenine yükleme](./media/azure-signalr-add-connected-service/created-signalr.png)
+    ![mevcut Azure signalr bileşenine Bağlan](./media/azure-signalr-add-connected-service/created-signalr.png)
 
-1. Azure SignalR hizmet örneği oluşturmak için:
+1. Bir Azure SignalR hizmeti örneği oluşturmak için:
 
-   1. Ekranın **alt kısmında Yeni Azure SignalR Hizmeti** örnek oluştur'a tıklayın.
+   1. Ekranın alt kısmında **Yeni bir Azure SignalR hizmet örneği oluştur** ' u seçin.
 
-   1. Yeni oluştur ekranı **Azure SignalR Hizmeti oluştur'a** tıklayın ve Oluştur'a **tıklayın.**
+   1. **Azure SignalR hizmetini doldurun: yeni ekran oluşturun** ve **Oluştur**' u seçin.
 
-       ![Yeni Azure SignalR Hizmeti örneği](./media/azure-signalr-add-connected-service/create-new-signalr.png)
+       ![Yeni Azure SignalR hizmeti örneği](./media/azure-signalr-add-connected-service/create-new-signalr.png)
 
-   1. Yapılandırma **Azure SignalR Hizmeti** ekranında yeni örnek görüntülenir. Listeden yeni örneği ve ardından Sonraki'yi **seçin.**
+   1. **Azure SignalR hizmeti yapılandırma** ekranı görüntülendiğinde, yeni örnek listede görüntülenir. Listeden yeni örneği seçin ve **İleri**' yi seçin.
 
-1. Bir bağlantı dizesi adı girin veya varsayılanı seçin ve bağlantı dizesinin yerel bir gizli dizi dosyasında mı yoksa dosyasında mı depo [Azure Key Vault.](/azure/key-vault)
+1. Bir bağlantı dizesi adı girin veya varsayılanı seçin ve bağlantı dizesinin yerel bir gizli dizi dosyasında mi yoksa [Azure Key Vault](/azure/key-vault)mi depolandığını seçin.
 
-   ![Bağlantı dizesini belirtme](./media/azure-signalr-add-connected-service/connection-string.png)
+   ![Bağlantı dizesini belirtin](./media/azure-signalr-add-connected-service/connection-string.png)
 
-1. Değişiklikleri **özetle** ekranında, işlemi tamamlarsanız projenize yapılacak tüm değişiklikler gösterilir. Değişiklikler Tamam görünüyorsa Son'a **tıklayın.**
+1. **Değişiklikler ekranının Özeti** , işlemi tamamlamadıysanız projenizde yapılacak tüm değişiklikleri gösterir. Değişiklikler tamam ise **son**' u seçin.
 
    ![Değişikliklerin özeti](./media/azure-signalr-add-connected-service/summary-of-changes.png)
 
-1. Bağlantı, Bağlı Hizmetler **sekmesinin** Hizmet Bağımlılıkları **bölümünde** görünür.
+1. Bağlantı, **bağlı hizmetler** sekmesinin **hizmet bağımlılıkları** bölümünün altında görüntülenir.
 
    ![Hizmet bağımlılıkları](./media/azure-signalr-add-connected-service/service-dependencies-after.png)
 
@@ -87,4 +87,4 @@ Bağlı hizmet işlevi, projenize gereken tüm başvuruları ve bağlantı kodun
 
 - [Azure SignalR ürün sayfası](https://azure.microsoft.com/services/signalr-service/)
 - [Azure SignalR Hizmeti belgeleri](/azure/azure-signalr)
-- [Bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)
+- [bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)

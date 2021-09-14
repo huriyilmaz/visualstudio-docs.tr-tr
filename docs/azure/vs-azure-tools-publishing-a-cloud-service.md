@@ -1,6 +1,6 @@
 ---
-title: Azure araçlarını kullanarak bir bulut hizmeti yayımlama | Microsoft Docs
-description: Visual Studio kullanarak Azure Cloud Service projelerini yayımlama hakkında bilgi edinin.
+title: Azure Tools | kullanarak Bulut Hizmeti yayımlama Microsoft Docs
+description: Visual Studio kullanarak Azure bulut hizmeti projelerini yayımlama hakkında Visual Studio.
 author: ghogen
 manager: jmartens
 ms.technology: vs-azure
@@ -9,115 +9,115 @@ ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: cd41925fb1b9078b108213870b95d328c81103a0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122114452"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633057"
 ---
 # <a name="publishing-a-cloud-service-using-visual-studio"></a>Visual Studio kullanarak bulut hizmetini yayımlama
 
-Visual Studio, bir uygulamayı bir bulut hizmetinin hem hazırlık hem de üretim ortamları için desteğiyle doğrudan Azure 'da yayımlayabilirsiniz. Yayımlarken, dağıtım paketini ve dağıtım paketi için geçici olarak kullanılan bir depolama hesabını seçersiniz.
+Visual Studio, bir bulut hizmetinin hem Hazırlama hem de Üretim ortamları desteğiyle bir uygulamayı doğrudan Azure'da yayımlar. Yayımlarken dağıtım ortamını ve dağıtım paketi için geçici olarak kullanılan bir depolama hesabını seçersiniz.
 
-Bir Azure uygulaması geliştirirken ve sınadığınızda, değişiklikleri Web rolleriniz için artımlı olarak yayımlamak üzere Web Dağıtımı kullanabilirsiniz. Uygulamanızı bir dağıtım ortamında yayımladıktan sonra, Web Dağıtımı değişiklikleri doğrudan Web rolünü çalıştıran sanal makineye dağıtmanızı sağlar. Değişiklikleri test etmek için Web rolünüzü güncelleştirmek istediğiniz her seferinde tüm Azure uygulamanızı paketleyip yayımlamanız gerekmez. Bu yaklaşımla, uygulamanızın bir dağıtım ortamında yayımlanmasını beklemeden, test için Web rolünüzün değişikliklerinizin bulutta kullanılabilmesini sağlayabilirsiniz.
+Bir Azure uygulaması geliştirme ve test etme aşamasında, web rolleriniz için Web Dağıtımı artımlı olarak yayımlamak üzere Web Dağıtımı'i kullanabilirsiniz. Uygulamanızı bir dağıtım ortamına yayımladıktan sonra Web Dağıtımı doğrudan web rolünü çalıştıran sanal makineye dağıtmanıza olanak sağlar. Değişiklikleri test etmek için web rollerinizi her güncelleştirmek istediğinizde azure uygulamanın tamamını paketleye ve yayımlamaya gerek yok. Bu yaklaşımla, web rolü değişikliklerinizi, uygulamanın bir dağıtım ortamında yayımlanır olması için beklemeden test için bulutta kullanabilirsiniz.
 
-Azure uygulamanızı yayımlamak ve Web Dağıtımı kullanarak bir Web rolünü güncelleştirmek için aşağıdaki yordamları kullanın:
+Aşağıdaki yordamları kullanarak Azure uygulamalarınızı yayımlayın ve aşağıdaki adımları kullanarak bir web rolünü Web Dağıtımı:
 
-- Visual Studio bir Azure uygulaması yayımlama veya paketleme
-- Geliştirme ve test döngüsünün bir parçası olarak bir Web rolünü güncelleştirme
+- Azure uygulamasını Visual Studio'dan yayımlama veya paketle
+- Geliştirme ve test döngüsünün bir parçası olarak web rolünü güncelleştirme
 
-## <a name="publish-or-package-an-azure-application-from-visual-studio"></a>Visual Studio bir Azure uygulaması yayımlama veya paketleme
+## <a name="publish-or-package-an-azure-application-from-visual-studio"></a>Azure uygulamasını Visual Studio'dan yayımlama veya Visual Studio
 
-Azure uygulamanızı yayımladığınızda, aşağıdaki görevlerden birini yapabilirsiniz:
+Azure uygulamalarınızı yayımlarken aşağıdaki görevlerden birini gerçekleştirebilirsiniz:
 
-- Bir hizmet paketi oluşturun: uygulamanızı [Azure Portal](https://portal.azure.com)bir dağıtım ortamında yayımlamak için bu paketi ve hizmet yapılandırma dosyasını kullanabilirsiniz.
+- Hizmet paketi oluşturma: Bu paketi ve hizmet yapılandırma dosyasını kullanarak, uygulamanızı bir dağıtım ortamına yayımlamak için [Azure portal.](https://portal.azure.com)
 
-- azure projenizi Visual Studio yayımlama: uygulamanızı doğrudan Azure 'da yayımlamak için, yayımlama sihirbazı 'nı kullanın. Bilgi için bkz. [Azure Uygulama Yayımlama Sihirbazı](vs-azure-tools-publish-azure-application-wizard.md).
+- Azure projenizi Visual Studio: Uygulamayı doğrudan Azure'da yayımlamak için Yayımlama Sihirbazı'nı kullanırsınız. Bilgi için bkz. [Azure Uygulama Yayımlama Sihirbazı.](vs-azure-tools-publish-azure-application-wizard.md)
 
-### <a name="to-create-a-service-package-from-visual-studio"></a>Visual Studio bir hizmet paketi oluşturmak için
+### <a name="to-create-a-service-package-from-visual-studio"></a>Hizmet paketi oluşturmak için Visual Studio
 
-1. Uygulamanızı yayımlamaya hazırsanız Çözüm Gezgini açın, rollerinizi içeren Azure projesi için kısayol menüsünü açın ve Yayımla ' yı seçin.
+1. Uygulamanızı yayımlamaya hazır olduğunda, Çözüm Gezgini rollerinizi içeren Azure projesinin kısayol menüsünü açın ve Yayımla'yı seçin.
 
-1. Yalnızca bir hizmet paketi oluşturmak için aşağıdaki adımları izleyin:
+1. Yalnızca bir hizmet paketi oluşturmak için şu adımları izleyin:
 
-   a. Azure projesinin kısayol menüsünde **paket**' i seçin.
+   a. Azure projesinin kısayol menüsünde Paket'i **seçin.**
 
-   b. **Paket Azure uygulaması** iletişim kutusunda, paket oluşturmak istediğiniz hizmet yapılandırmasını seçin ve ardından yapı yapılandırmasını seçin.
+   b. Azure **Uygulamasını Paketle** iletişim kutusunda, paket oluşturmak istediğiniz hizmet yapılandırmasını ve ardından derleme yapılandırmasını seçin.
 
-   c. Seçim yayımladıktan sonra bulut hizmeti için uzak masaüstü 'nü açmak üzere **tüm roller için uzak masaüstünü etkinleştir**' i seçin ve ardından uzak masaüstü kimlik bilgilerini yapılandırmak için **Ayarlar** ' ı seçin. Daha fazla bilgi için bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
+   c. (İsteğe bağlı) Yayımlandıktan sonra bulut hizmeti için Uzak Masaüstü'leri açmak için Tüm Roller için Uzak **Masaüstünü** Etkinleştir'i ve ardından Uzak Masaüstü **kimlik bilgilerini Ayarlar'yi** seçin. Daha fazla bilgi için [bkz. Uzak Masaüstü Bağlantısı kullanarak Azure Cloud Services rolü Visual Studio.](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio)
 
-      Yayımladıktan sonra bulut hizmetinizde hata ayıklamak istiyorsanız, uzaktan hata ayıklamayı **tüm roller Için etkinleştir**' i seçerek açın.
+      Yayımladikten sonra bulut hizmetinizin hatasını ayıklamak için Tüm Roller için Uzaktan Hata Ayıklayıcıyı **Etkinleştir'i seçerek uzaktan hata ayıklamayı etkinleştirin.**
 
-   d. Paketi oluşturmak için **paket** bağlantısını seçin.
+   d. Paketi oluşturmak için Paket **bağlantısını** seçin.
 
-      Dosya Gezgini, yeni oluşturulan paketin dosya konumunu gösterir. Bu konumu, Azure portal kullanabilmek için kopyalayabilirsiniz.
+      Dosya Gezgini yeni oluşturulan paketin dosya konumunu gösterir. Bu konumu kopyalayıp dosyadan Azure portal.
 
-   e. Bu paketi bir dağıtım ortamında yayımlamak için, bir bulut hizmeti oluştururken ve bu paketi Azure portal bir ortama dağıttığınızda paket konumu olarak bu konumu kullanmanız gerekir.
+   e. Bu paketi bir dağıtım ortamında yayımlamak için, bir bulut hizmeti oluşturma ve bu paketi bulut hizmetiyle bir ortama dağıtırken Bu konumu Paket konumu olarak Azure portal.
 
-1. Seçim Dağıtım işlemini iptal etmek için, etkinlik günlüğündeki satır öğesi için kısayol menüsünde **iptal ve Kaldır**' ı seçin. Bu komut dağıtım sürecini durduruyor ve dağıtım ortamını Azure 'dan siler. Dağıtımı tamamladıktan sonra ortamı kaldırmak için Azure portal kullanın.
+1. (İsteğe bağlı) Dağıtım işlemini iptal etmek için etkinlik günlüğünde satır öğesinin kısayol menüsünde İptal'i seçin **ve öğesini kaldırın.** Bu komut dağıtım işlemini durdurur ve dağıtım ortamını Azure'dan siler. Dağıtımdan sonra ortamı kaldırmak için aşağıdaki Azure portal.
 
-1. Seçim rol örneklerinizin başlatılmasından sonra Visual Studio, dağıtım ortamını Sunucu Gezgini **Cloud Services** düğümünde otomatik olarak gösterir. Buradan, tek tek rol örneklerinin durumunu görebilirsiniz. Bkz. [bulut Gezgini Ile Azure kaynaklarını yönetme](vs-azure-tools-resources-managing-with-cloud-explorer.md). Aşağıdaki çizimde, hala başlatma durumunda olan rol örnekleri gösterilmektedir:
+1. (İsteğe bağlı) Rol örnekleriniz başlatıldıktan sonra, Visual Studio otomatik olarak dağıtım ortamını Cloud Services **düğümde** Sunucu Gezgini. Burada, tek tek rol örneklerinin durumunu görebilir. Bkz. [Cloud Explorer ile Azure kaynaklarını yönetme.](vs-azure-tools-resources-managing-with-cloud-explorer.md) Aşağıdaki çizimde, hala Başlatıyor durumda olan rol örnekleri gösterilmiştir:
 
     ![VST_DeployComputeNode](./media/vs-azure-tools-publishing-a-cloud-service/IC744134.png)
 
-## <a name="update-a-web-role-as-part-of-the-development-and-testing-cycle"></a>Geliştirme ve test döngüsünün bir parçası olarak bir Web rolünü güncelleştirme
+## <a name="update-a-web-role-as-part-of-the-development-and-testing-cycle"></a>Geliştirme ve test döngüsünün bir parçası olarak web rolünü güncelleştirme
 
-Uygulamanızın arka uç altyapısı kararlı ise, ancak Web rollerinin daha sık güncelleştirilmesi gerekiyorsa, projenizdeki yalnızca bir Web rolünü güncelleştirmek için Web Dağıtımı kullanabilirsiniz. Web Dağıtımı, arka uç çalışan rollerini yeniden oluşturmak ve yeniden dağıtmak istemediğinizde veya birden fazla Web rolüne sahipseniz ve yalnızca bir web rolünden yalnızca birini güncellemek istediğinizde yararlı olur.
+Uygulamanın arka uç altyapısı kararlı ancak web rollerinin daha sık güncelleştiriliyor olması gerekirse, Web Dağıtımı kullanarak yalnızca projenizdeki bir web rolünü güncelleştirebilirsiniz. Web Dağıtımı arka uç çalışan rollerini yeniden oluşturmanıza ve yeniden oluşturmanıza gerek yoksa veya birden çok web rolüne sahip olup web rollerinden yalnızca birini güncelleştirmek istediğinizde bu özellik kullanışlıdır.
 
 ### <a name="requirements-for-using-web-deploy"></a>Web Dağıtımı kullanma gereksinimleri
 
-- **Yalnızca geliştirme ve test amaçlıdır**: değişiklikler doğrudan Web rolünün çalıştığı sanal makineye yapılır. Bu sanal makinenin geri dönüştürülmesi gerekiyorsa, değişiklikler kaybedilir çünkü yayımladığınız özgün paket, rol için sanal makineyi yeniden oluşturmak için kullanılır. Web rolü için en son değişiklikleri almak üzere uygulamanızı yeniden yayımlayın.
+- **Yalnızca geliştirme ve test amacıyla:** Değişiklikler doğrudan web rolünün çalıştırıldı olduğu sanal makinede yapılır. Bu sanal makinenin geri dönüştürülmesi gerekirse, yayımlanan özgün paket rolün sanal makinesini yeniden oluşturmak için kullandığı için değişiklikler kaybedilir. Web rolü için en son değişiklikleri almak için uygulamanızı yeniden yayımlar.
 
-- **Yalnızca Web rolleri güncelleştirilemiyor**: çalışan rolleri güncelleştirilemiyor. Ayrıca, içinde ' yi güncelleştiremezsiniz `RoleEntryPoint` `web role.cs` .
+- **Yalnızca web rolleri güncelleştirilebilir:** Çalışan rolleri güncelleştirilemez. Ayrıca, içinde 'i `RoleEntryPoint` `web role.cs` güncelleştiresiniz.
 
-- **Bir Web rolünün yalnızca tek bir örneğini destekleyebilir**: dağıtım ortamınızda herhangi bir Web rolünün birden çok örneği olamaz. Ancak, her biri yalnızca bir örneğe sahip birden çok web rolü desteklenir.
+- **Bir web rolünün yalnızca tek bir örneğini destekleyene:** Dağıtım ortamınız içinde herhangi bir web rolünün birden çok örneğine sahip olasınız. Ancak, her biri yalnızca bir örneği olan birden çok web rolü de kullanılabilir.
 
-- **uzak masaüstü bağlantılarını etkinleştir**: bu gereksinim, Web Dağıtımı Internet Information Services (ııs) çalıştıran sunucuya değişiklikleri dağıtmak üzere sanal makineye bağlanmak için kullanıcı ve parolayı kullanmasına izin verir. Ayrıca, bu sanal makinede IIS 'ye güvenilir bir sertifika eklemek için sanal makineye bağlanmanız gerekebilir. (Bu sertifika, Web Dağıtımı tarafından kullanılan IIS için Uzak bağlantının güvende olmasını sağlar.)
+- **Uzak masaüstü bağlantılarını etkinleştirme:** Bu Web Dağıtımı kullanıcı ve parola kullanarak sanal makineye bağlanarak değişiklikleri Internet Information Services (IIS) çalıştıran sunucuya dağıtmanıza olanak sağlar. Ayrıca, bu sanal makinede IIS'ye güvenilen bir sertifika eklemek için sanal makineye bağlanmanız da gerekir. (Bu sertifika, sanal ağ tarafından kullanılan IIS için uzak bağlantının Web Dağıtımı sağlar.)
 
-Aşağıdaki yordamda, **Azure uygulama yayımlama** Sihirbazı 'nı kullandığınız varsayılır.
+Aşağıdaki yordam, Azure Uygulamasını Yayımla **sihirbazını kullanmakta olduğunu varsayıyor.**
 
-### <a name="enable-web-deploy-when-you-publish-your-application"></a>Uygulamanızı yayımladığınızda Web Dağıtımı etkinleştirme
+### <a name="enable-web-deploy-when-you-publish-your-application"></a>Uygulama Web Dağıtımı yayımlarken uygulamayı etkinleştirme
 
-1. **Tüm Web rolleri için Web dağıtımı etkinleştir** seçeneğini etkinleştirmek için öncelikle Uzak Masaüstü bağlantıları 'nı yapılandırmanız gerekir. Tüm roller için **uzak masaüstünü etkinleştir** ' i seçin ve görüntülenen **Uzak Masaüstü yapılandırması** kutusuna uzaktan bağlanmak için kullanılan kimlik bilgilerini sağlayın. Bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio).
+1. Tüm web rolleri **için Web Dağıtımı etkinleştir seçeneğini etkinleştirmek** için önce uzak masaüstü bağlantılarını yapılandırmanız gerekir. Tüm **roller için Uzak Masaüstünü** Etkinleştir'i seçin ve ardından görüntülenen Uzak Masaüstü Yapılandırması kutusunda uzaktan bağlanmak için **kullanılan** kimlik bilgilerini girin. Bkz. [Uzak Masaüstü Bağlantısı kullanarak bir rol Azure Cloud Services için Visual Studio.](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio)
 
-1. Uygulamanızdaki tüm Web rolleri için Web Dağıtımı etkinleştirmek üzere **tüm Web rolleri için Web dağıtımı etkinleştir**' i seçin.
+1. Uygulamanıza Web Dağıtımı tüm web rolleri için uygulamanıza bir web rolü eklemek için Tüm **web rolleri için Web Dağıtımı'yi seçin.**
 
-    Sarı bir uyarı üçgeni belirir. Web Dağıtımı, varsayılan olarak güvenilir olmayan, otomatik olarak imzalanan bir sertifika kullanır ve bu, hassas verileri karşıya yüklemek için önerilmez. Bu işlemi hassas veriler için güvenli hale getirmeniz gerekiyorsa Web Dağıtımı bağlantıları için kullanılacak bir SSL sertifikası ekleyebilirsiniz. Bu sertifikanın güvenilir bir sertifika olması gerekir. Daha fazla bilgi için bkz. [Web dağıtımı güvenli hale getirme](#make-web-deploy-secure).
+    Sarı bir uyarı üçgeni görüntülenir. Web Dağıtımı, varsayılan olarak güvenilmeyen, otomatik olarak imzalanan bir sertifika kullanır ve bu sertifika hassas verileri karşıya yüklemek için önerilmez. Hassas veriler için bu işlemi güvenli hale toplamanız gerekirse, bağlantılara erişim sağlamak için kullanılacak bir SSL Web Dağıtımı ebilirsiniz. Bu sertifikanın güvenilir bir sertifika olması gerekir. Daha fazla bilgi için, [bkz. Make web deploy secure](#make-web-deploy-secure).
 
-1. **Özet** ekranını göstermek için **İleri** ' yi, sonra da bulut hizmetini dağıtmak için **Yayımla** ' yı seçin.
+1. Özet **ekranı göstermek** için **Sonraki'yi** seçin ve ardından Yayımla'yı seçarak bulut hizmetini dağıtın. 
 
-    Bulut hizmeti yayımlandı. Oluşturulan sanal makinede, Web rollerinizi yeniden yayımlamadan güncelleştirmek için Web Dağıtımı IIS için uzak bağlantılar etkinleştirilmiş olmalıdır.
+    Bulut hizmeti yayımlanır. Oluşturulan sanal makinede, web rollerinizi yeniden yayımlamadan güncelleştirmek için Web Dağıtımı için iis için uzak bağlantılar etkinleştirilmiştir.
 
    > [!NOTE]
-   > Bir Web rolü için yapılandırılmış birden fazla örneğiniz varsa, her bir Web rolünün yalnızca uygulamanızı yayımlamak için oluşturulan pakette bir örnekle sınırlı olduğunu belirten bir uyarı iletisi görüntülenir. Devam etmek için **Tamam**'ı seçin. Gereksinimler bölümünde belirtildiği gibi, birden fazla Web rolüne sahip olabilirsiniz ancak her rolün yalnızca bir örneği olabilir.
+   > Bir web rolü için yapılandırılmış birden fazla örneğiniz varsa, her web rolünün yalnızca uygulamanızı yayımlamak için oluşturulan pakette bir örnekle sınırlı olduğunu belirten bir uyarı iletisi görüntülenir. Devam etmek için **Tamam**'ı seçin. Gereksinimler bölümünde belirtildiği gibi, birden fazla web rolünüz olabilir ancak her rolün yalnızca bir örneği olabilir.
 
-### <a name="update-your-web-role-by-using-web-deploy"></a>Web rolünüzü Web Dağıtımı kullanarak güncelleştirin
+### <a name="update-your-web-role-by-using-web-deploy"></a>Web rollerinizi güncelleştirmek için Web Dağıtımı
 
-1. Web Dağıtımı kullanmak için, yayımlamak istediğiniz Visual Studio Web rollerinizin herhangi biri için projede kod değişiklikleri yapın ve ardından çözümünüzde bu proje düğümüne sağ tıklayıp **yayımla**' yı işaret edin. **Web 'ı Yayımla** iletişim kutusu görüntülenir.
+1. Bu Web Dağıtımı kullanmak için, Visual Studio'de yayımlamak istediğiniz web rollerinden herhangi biri için projede kod değişiklikleri yapın ve ardından çözümünüzdeki bu proje düğümüne sağ tıklayın ve Yayımla'nın üzerine **gelin.** **Web'i Yayımla** iletişim kutusu görüntülenir.
 
-1. Seçim IIS için uzak bağlantılar için kullanmak üzere güvenilen bir SSL sertifikası eklediyseniz, **Güvenilmeyen sertifikaya Izin ver** onay kutusunu temizleyebilirsiniz. Web Dağıtımı güvenli hale getirmek için bir sertifika ekleme hakkında daha fazla bilgi için, bu makalede daha sonra **Web dağıtımı güvenli hale getirmek için** bölümüne bakın.
+1. (İsteğe bağlı) IIS için uzak bağlantılar için kullanmak üzere bir güvenilen SSL sertifikası eklediyebilirsiniz, Güvenilmeyen **sertifikaya izin** ver onay kutusunun işaretini kaldırın. Güvenliği sağlamak için sertifika ekleme hakkında bilgi Web Dağıtımı, bu makalenin ilerleyen kısımlarında **Web Dağıtımı Güvenli** Hale Web Dağıtımı bölümüne bakın.
 
-1. Web Dağıtımı kullanmak için, yayınlama mekanizmasına, paketi ilk yayımlandığında, uzak masaüstü bağlantınız için ayarladığınız Kullanıcı adı ve parola gerekir.
+1. Bu Web Dağıtımı yayımlama mekanizması, paketi ilk kez yayımlarken Uzak Masaüstü bağlantınız için ayarladığı kullanıcı adı ve parolaya ihtiyaç gösterir.
 
-   a. **Kullanıcı adı** alanına kullanıcı adını girin.
+   a. Kullanıcı **adı alanına** kullanıcı adını girin.
 
-   b. **Parola** alanına parolayı girin.
+   b. Parola **alanına** parolayı girin.
 
-   c. Seçim Bu parolayı bu profilde kaydetmek istiyorsanız, **Parolayı kaydet**' i seçin.
+   c. (İsteğe bağlı) Bu parolayı bu profile kaydetmek için Parolayı **kaydet'i seçin.**
 
-1. Değişiklikleri Web rolünüzde yayımlamak için **Yayımla**' yı seçin.
+1. Değişiklikleri web rolünüzle yayımlamak için Yayımla'yı **seçin.**
 
-    Durum satırı **Yayımlama başladı**' i görüntüler. Yayımlama tamamlandığında, **Yayımlama başarılı** görüntülenir. Değişiklikler artık sanal makinenizde Web rolüne dağıtıldı. Şimdi yaptığınız değişiklikleri test etmek için Azure uygulamanızı Azure ortamında başlatabilirsiniz.
+    Durum satırı Yayımlama başlatıldı **olarak görüntülenir.** Yayımlama tamamlandığında Yayımla **başarılı görünür.** Değişiklikler artık sanal makinenizin web rolüne dağıtılmıştır. Artık değişikliklerinizi test etmek için Azure ortamında Azure uygulamanıza başlayabilirsiniz.
 
-### <a name="make-web-deploy-secure"></a>Web dağıtımı güvenli hale getirme
+### <a name="make-web-deploy-secure"></a>Web dağıtımı güvenliğini sağlama
 
-1. Web Dağıtımı, varsayılan olarak güvenilir olmayan, otomatik olarak imzalanan bir sertifika kullanır ve bu, hassas verileri karşıya yüklemek için önerilmez. Bu işlemi hassas veriler için güvenli hale getirmeniz gerekiyorsa Web Dağıtımı bağlantıları için kullanılacak bir SSL sertifikası ekleyebilirsiniz. Bu sertifikanın bir sertifika yetkilisinden (CA) edindiğiniz güvenilir bir sertifika olması gerekir.
+1. Web Dağıtımı, varsayılan olarak güvenilmeyen, otomatik olarak imzalanan bir sertifika kullanır ve bu sertifika hassas verileri karşıya yüklemek için önerilmez. Hassas veriler için bu işlemi güvenli hale toplamanız gerekirse, bağlantılara erişim sağlamak için kullanılacak bir SSL Web Dağıtımı ebilirsiniz. Bu sertifikanın, bir sertifika yetkilisini (CA) edinen güvenilir bir sertifika olması gerekir.
 
-    Web rollerinizin her biri için her bir sanal makine için Web Dağıtımı güvenli hale getirmek üzere, Web dağıtımı için kullanmak istediğiniz güvenilen sertifikayı Azure portal yüklemeniz gerekir. Bu sertifika, uygulamanızı yayımladığınızda web rolü için oluşturulan sanal makineye sertifikanın eklendiğinden emin olmanızı sağlar.
+    Web rol Web Dağıtımı sanal makinelerinizin güvenliğini sağlamak için web dağıtımı için kullanmak istediğiniz güvenilen sertifikayı sanal makineye Azure portal. Bu sertifika, sertifikanın, web rolü için oluşturulan sanal makineye, uygulamanızı yayımlarken eklendiklerine emin olur.
 
-1. Uzaktan bağlantılar için kullanmak üzere IIS 'ye güvenilir bir SSL sertifikası eklemek için aşağıdaki adımları izleyin:
+1. Iis'e uzak bağlantılarda kullanmak üzere güvenilen bir SSL sertifikası eklemek için şu adımları izleyin:
 
-   a. web rolünü çalıştıran sanal makineye bağlanmak için, **Cloud Explorer** veya **Sunucu Gezgini** web rolü örneğini seçin ve ardından **uzak masaüstü komutunu kullanarak Bağlan** seçin. Sanal makineye bağlanma hakkında ayrıntılı adımlar için, bkz. [Visual Studio kullanarak Azure Cloud Services bir rol için Uzak Masaüstü bağlantısı etkinleştirme](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio). Tarayıcınız bir dosya indirmenizi ister `.rdp` .
+   a. Web rolünü çalıştıran sanal makineye bağlanmak **için, Cloud Explorer'da** veya Sunucu Gezgini'da web rolünün örneğini seçin ve ardından Uzak Masaüstü Bağlan seçeneğini **kullanın.** Sanal makineye bağlanma hakkında ayrıntılı adımlar için bkz. Uzak Masaüstü Bağlantısı kullanarak [Azure Cloud Services'da Rol Visual Studio.](/azure/cloud-services/cloud-services-role-enable-remote-desktop-visual-studio) Tarayıcınız bir dosyayı indirmenizi `.rdp` istenir.
 
    b. SSL sertifikası eklemek için IIS Yöneticisi'nde yönetim hizmetini açın. IIS Yöneticisi'nde, Eylem bölmesinde **Bağlamalar bağlantısını açarak** **SSL'yi** etkinleştirin. Site **Bağlaması Ekle** iletişim kutusu görüntülenir. **Ekle'yi** ve ardından Tür **açılan** listesinde HTTPS'yi seçin. SSL **sertifikası listesinde,** bir CA tarafından imzalayan ve sertifika yetkilisine yüklediğiniz SSL sertifikasını Azure portal. Daha fazla bilgi için, [bkz. Configure Connection Ayarlar for the Management Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770458(v=ws.10)).
 
@@ -126,7 +126,7 @@ Aşağıdaki yordamda, **Azure uygulama yayımlama** Sihirbazı 'nı kullandığ
 
 ## <a name="include-files-in-the-service-package"></a>Hizmet paketine dosya dahil etmek
 
-Bir rol için oluşturulan sanal makinede kullanılabilir olacak şekilde hizmet paketinize belirli dosyaları dahil etmek zorundayabilirsiniz. Örneğin, hizmet paketinize başlangıç betiği tarafından kullanılan bir `.exe` veya dosyası eklemek istiyor `.msi` olabilir. Veya bir web rolü veya çalışan rolü projesinin gerektirdiği bir derleme eklemeniz de gerekli olabilir. Dosyaları dahil etmek için Azure uygulamanıza uygun çözüme ekleniyor olması gerekir.
+Bir rol için oluşturulan sanal makinede kullanılabilir olacak şekilde hizmet paketinize belirli dosyaları dahil etmek zorundayabilirsiniz. Örneğin, hizmet paketinize başlangıç `.exe` betiği `.msi` tarafından kullanılan bir veya dosyası eklemek istiyor olabilir. Veya bir web rolü veya çalışan rolü projesinin gerektirdiği bir derleme eklemeniz de gerekli olabilir. Dosyaları dahil etmek için Azure uygulamanıza uygun çözüme eklenmeleri gerekir.
 
 1. Bir hizmet paketine derleme eklemek için aşağıdaki adımları kullanın:
 

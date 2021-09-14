@@ -1,5 +1,5 @@
 ---
-description: Bir işlem hakkındaki bilgileri içerir.
+description: Bir işlem hakkında bilgi içerir.
 title: PROCESS_INFO | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: e2fc29833c8d3f6b64e5bbc683ad6f5fc82231ef
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122118105"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726968"
 ---
 # <a name="process_info"></a>PROCESS_INFO
-Bir işlem hakkındaki bilgileri içerir.
+Bir işlem hakkında bilgi içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,41 +59,41 @@ public struct PROCESS_INFO {
 
 ## <a name="members"></a>Üyeler
  `Fields`\
- [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi.
+ Hangi alanların doldurulması [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) bir bayrak birleşimi.
 
  `bstrFileName`\
- İşlemin tam yol adı. Parametresiyle [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) metodunu çağırmaya eşdeğerdir `GN_FILENAME` .
+ Sürecin tam yol adı. parametresiyle [GetName yöntemini](../../../extensibility/debugger/reference/idebugprocess2-getname.md) çağırmaya `GN_FILENAME` eşdeğerdir.
 
  `bstrBaseName`\
- İşlemin dosya adı ve uzantısı. `IDebugProcess2::Getname`Yöntemi parametresiyle çağırma ile eşdeğerdir `GN_BASENAME` .
+ Sürecin dosya adı ve uzantısı. parametresiyle yöntemini `IDebugProcess2::Getname` çağırmaya `GN_BASENAME` eşdeğerdir.
 
  `bstrTitle`\
- Bir varsa, işlemin başlığı. `IDebugProcess2::Getname`Yöntemi parametresiyle çağırma ile eşdeğerdir `GN_TITLE` .
+ Varsa, sürecin başlığı. parametresiyle yöntemini `IDebugProcess2::Getname` çağırmaya `GN_TITLE` eşdeğerdir.
 
  `ProcessId`\
- İşlemi tanımlayan [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısı. [Getphysicalprocessıd](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) yöntemini çağırmaya eşdeğerdir.
+ İşlem [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) tanımlayan bir yapıdır. [GetPhysicalProcessId yöntemini çağırmaya](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) eşdeğerdir.
 
  `dwSessionId`\
- Bu işlemin üzerinde çalıştığı hata ayıklama oturumunun tanımlayıcısı.
+ Bu işlemde çalışan hata ayıklama oturumunun tanımlayıcısı.
 
  `bstrAttachedSessionName`\
- Eklenen oturum adı. [Getattachedoturumadı](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) yöntemini çağırmaya eşdeğerdir.
+ Eklenen oturum adı. [GetAttachedSessionName yöntemini çağırmaya eşdeğerdir.](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)
 
  `CreationTime`\
- İşlemin oluşturulduğu zaman.
+ sürecin oluşturulma zamanı.
 
  `Flags`\
- İşlemin özelliklerini belirten [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) Numaralandırmadaki bayrakların birleşimi.
+ İşlem özelliklerini belirten [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) bir bayrak birleşimi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, doldurulduğu [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) yöntemine geçirilir.
+ Bu yapı, [doldurulan GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) yöntemine geçirildi.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

@@ -1,6 +1,6 @@
 ---
-title: 'İzlenecek yol: NamedRange denetimi olaylarına karşı programlama'
-description: Visual Studio ' de Office geliştirme araçları 'nı kullanarak Microsoft Excel çalışma sayfasına ve programa göre bir NamedRange denetimini nasıl ekleyebileceğiniz hakkında bilgi edinin.
+title: 'Adım adım kılavuz: NamedRange denetimi olaylarına karşı programla'
+description: Office geliştirme araçlarını kullanarak Microsoft Excel çalışma sayfasına ve programlarına NamedRange denetimi Visual Studio.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -21,27 +21,27 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 8a6b5ca7d884fbece6795f63d668aa04a8ba6f80
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122068484"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726097"
 ---
-# <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>İzlenecek yol: NamedRange denetimi olaylarına karşı programlama
-  bu izlenecek yol <xref:Microsoft.Office.Tools.Excel.NamedRange> , Visual Studio Office geliştirme araçlarını kullanarak Microsoft Office Excel çalışma sayfasına ve programa yönelik bir denetimin nasıl ekleneceğini gösterir.
+# <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>Adım adım kılavuz: NamedRange denetimi olaylarına karşı programla
+  Bu kılavuzda, Microsoft Office Excel çalışma sayfasındaki geliştirme araçlarını kullanarak Microsoft Office Excel çalışma sayfasına <xref:Microsoft.Office.Tools.Excel.NamedRange> ve programlarına denetim Office nasıl Visual Studio.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
- Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
+ Bu kılavuzda şunları yapmayı öğrenirsiniz:
 
-- <xref:Microsoft.Office.Tools.Excel.NamedRange>Çalışma sayfasına bir denetim ekleyin.
+- Çalışma sayfasına <xref:Microsoft.Office.Tools.Excel.NamedRange> denetim ekleme.
 
-- <xref:Microsoft.Office.Tools.Excel.NamedRange>Denetim olaylarına karşı program.
+- Denetim olaylarına <xref:Microsoft.Office.Tools.Excel.NamedRange> karşı programla.
 
-- Projenizi test edin.
+- Projenizi test etmek.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. daha fazla bilgi için bkz. [Visual Studio ıde 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [bkz. IDE'Visual Studio kişiselleştirme.](../ide/personalizing-the-visual-studio-ide.md)
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
@@ -51,119 +51,119 @@ ms.locfileid: "122068484"
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
 ## <a name="create-the-project"></a>Proje oluşturma
- bu adımda, Visual Studio kullanarak bir Excel çalışma kitabı projesi oluşturacaksınız.
+ Bu adımda, Excel kullanarak Visual Studio.
 
-### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
+### <a name="to-create-a-new-project"></a>Yeni proje oluşturmak için
 
-1. **adlandırılmış aralık olaylarım** adlı bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. My Named Range Events Excel adlı bir **Çalışma Kitabı projesi oluşturun.** Yeni belge **oluştur'ın seçili olduğundan** emin olun. Daha fazla bilgi için, [bkz. How to: Create Office projects in Visual Studio.](../vsto/how-to-create-office-projects-in-visual-studio.md)
 
-     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini** **adlı adlandırılmış aralık olayları** projesini ekler.
+     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve Adlandırılmış Aralık Olaylarım **projesini** **Çözüm Gezgini.**
 
-## <a name="add-text-and-named-ranges-to-the-worksheet"></a>Çalışma sayfasına metin ve adlandırılmış aralıklar ekleme
- konak denetimleri nesneleri Office genişlettiğinden, yerel nesneyi ekleyeceğiniz şekilde belgenize ekleyebilirsiniz. örneğin, <xref:Microsoft.Office.Tools.Excel.NamedRange> **ekle** menüsünü açıp **ad**' ın üzerine gelip **tanımla**' yı seçerek bir çalışma sayfasına Excel denetimi ekleyebilirsiniz. Ayrıca, <xref:Microsoft.Office.Tools.Excel.NamedRange> **araç kutusundan** çalışma sayfasına sürükleyerek bir denetim ekleyebilirsiniz.
+## <a name="add-text-and-named-ranges-to-the-worksheet"></a>Çalışma sayfasına metin ve adlandırılmış aralık ekleme
+ Konak denetimleri nesnelere Office, bunları belgenize yerel nesneyi eklerken olduğu gibi ekleyebilirsiniz. Örneğin, Ekle menüsünü açarak Excel üzerine gelin ve Tanımla'ya seçerek çalışma sayfasına bir çalışma <xref:Microsoft.Office.Tools.Excel.NamedRange> sayfası denetimi **ekleyebilirsiniz.**   Bir denetimi Araç <xref:Microsoft.Office.Tools.Excel.NamedRange> Kutusundan çalışma sayfasına **sürükleyerek de** ekleyebilirsiniz.
 
- Bu adımda, **araç kutusunu** kullanarak çalışma sayfasına iki adlandırılmış aralık denetimi ekleyecek ve ardından çalışma sayfasına metin ekleyeceksiniz.
+ Bu adımda, Araç Kutusunu kullanarak çalışma sayfasına iki adlandırılmış aralık denetimi **ekecek ve ardından** çalışma sayfasına metin eksersiniz.
 
-### <a name="to-add-a-range-to-your-worksheet"></a>Çalışma sayfanıza bir Aralık eklemek için
+### <a name="to-add-a-range-to-your-worksheet"></a>Çalışma sayfanıza aralık eklemek için
 
-1. *adlandırılmış aralık Events.xlsx* çalışma kitabının, Visual Studio tasarımcısında görüntülenir ve açık olduğunu doğrulayın `Sheet1` .
+1. Adlandırılmış *Aralığım çalışma Events.xlsx* çalışma kitabının, Visual Studio açık olduğunu `Sheet1` doğrulayın.
 
-2. araç kutusunun **Excel denetimleri** sekmesinden, <xref:Microsoft.Office.Tools.Excel.NamedRange> içindeki **A1** hücresine bir denetim sürükleyin `Sheet1` .
+2. Araç **kutusunun Excel Denetimler** sekmesinden, bir denetimi içinde <xref:Microsoft.Office.Tools.Excel.NamedRange> **A1 hücresine** `Sheet1` sürükleyin.
 
-     **NamedRange denetimi Ekle** iletişim kutusu görünür.
+     Add **NamedRange Control** iletişim kutusu görüntülenir.
 
-3. **$A $1** ' nin düzenlenebilir metin kutusunda göründüğünü ve **a1** hücresinin seçildiğini doğrulayın. Aksi takdirde, seçmek için **a1** hücresini tıklatın.
+3. Düzenlenebilir **$A kutusunda 1** ABD Doları'nın görüntülendiğinden ve **A1 hücresi seçildiğinden** emin olun. Yoksa, seçmek için **A1 hücresine** tıklayın.
 
 4. **Tamam**'a tıklayın.
 
-     **A1** hücresi adlı bir aralığa dönüşür `namedRange1` . Çalışma sayfasında görünür bir gösterge yoktur, ancak `namedRange1` **a1** hücresi seçildiğinde **ad** kutusunda (sol taraftaki çalışma sayfasının hemen üzerinde bulunur) görünür.
+     A1 **hücresi** adlı bir aralık haline `namedRange1` gelir. Çalışma sayfasında görünür bir gösterge yoktur, ancak A1 hücresi seçildiğinde Ad kutusunda (sol tarafta çalışma sayfasının hemen üzerinde `namedRange1` bulunur) görünür.  
 
-5. <xref:Microsoft.Office.Tools.Excel.NamedRange> **B3** hücresine başka bir denetim ekleyin.
+5. <xref:Microsoft.Office.Tools.Excel.NamedRange>B3 hücresine başka bir **denetim ekleyin.**
 
-6. **$B $3** ' nin düzenlenebilir metin kutusunda göründüğünü ve **B3** hücresinin seçildiğini doğrulayın. Aksi takdirde, seçmek için hücre **B3** ' e tıklayın.
+6. Düzenlenebilir **$B kutusunda 3** ABD Doları'nın görüntülendiğinden ve **B3 hücresi seçildiğinden** emin olun. Yoksa, seçmek için **B3 hücresine** tıklayın.
 
 7. **Tamam**'a tıklayın.
 
-     **B3** hücresi adlı bir aralığa dönüşür `namedRange2` .
+     B3 **hücresi** adlı bir aralık haline `namedRange2` gelir.
 
 ### <a name="to-add-text-to-your-worksheet"></a>Çalışma sayfanıza metin eklemek için
 
-1. **A1** hücresinde aşağıdaki metni yazın:
+1. **A1 Hücresi'ne** aşağıdaki metni yazın:
 
-    **Bu, NamedRange denetimine bir örnektir.**
+    **Bu bir NamedRange denetimi örneğidir.**
 
-2. **A3** hücresinde (soluna `namedRange2` ) aşağıdaki metni yazın:
+2. A3 **Hücresi'ne** (sol `namedRange2` tarafta) aşağıdaki metni yazın:
 
-    **Olayları**
+    **Olay:**
 
-   Aşağıdaki bölümlerde, içine metin ekleyen `namedRange2` ve, `namedRange2` ve olaylarına yanıt olarak denetimin özelliklerini değiştiren bir kod yazacaksınız <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> `namedRange1` .
+   Aşağıdaki bölümlerde , ve olaylarına yanıt olarak denetimin özelliklerini değiştiren ve içine metin ekleyen `namedRange2` `namedRange2` kod <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> yazacak. `namedRange1`
 
 ## <a name="add-code-to-respond-to-the-beforedoubleclick-event"></a>BeforeDoubleClick olayına yanıt vermek için kod ekleme
 
 ### <a name="to-insert-text-into-namedrange2-based-on-the-beforedoubleclick-event"></a>BeforeDoubleClick olayına göre NamedRange2 içine metin eklemek için
 
-1. **Çözüm Gezgini**, **Sheet1. vb** veya **Sheet1. cs** öğesine sağ tıklayın ve **kodu görüntüle**' yi seçin.
+1. Bu **Çözüm Gezgini,** **Sayfa1.vb veya Sheet1.cs'ye** sağ tıklayın **ve** Kodu **Görüntüle'yi seçin.**
 
-2. Olay işleyicisinin aşağıdakine benzer şekilde kod ekleyin `namedRange1_BeforeDoubleClick` :
+2. Olay işleyicisi `namedRange1_BeforeDoubleClick` aşağıdaki gibi görünüyor olacak şekilde kod ekleyin:
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet24":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet24":::
 
-3. C# ' de, aşağıdaki olayda gösterildiği gibi, adlandırılmış aralığa yönelik olay işleyicileri eklemeniz gerekir <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> . olay işleyicileri oluşturma hakkında bilgi için bkz. [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
+3. C# içinde, aşağıdaki olayda gösterildiği gibi adlandırılmış aralık için olay işleyicileri <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> eklemeniz gerekir. Olay işleyicileri oluşturma hakkında daha fazla bilgi için [bkz. Nasıl oluşturulur: Office projelerinde olay işleyicileri oluşturma.](../vsto/how-to-create-event-handlers-in-office-projects.md)
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet25":::
 
 ## <a name="add-code-to-respond-to-the-change-event"></a>Değişiklik olayına yanıt vermek için kod ekleme
 
-### <a name="to-insert-text-into-namedrange2-based-on-the-change-event"></a>Değişiklik olayına göre namedRange2 içine metin eklemek için
+### <a name="to-insert-text-into-namedrange2-based-on-the-change-event"></a>Change olayına göre namedRange2 içine metin eklemek için
 
-1. Olay işleyicisinin aşağıdakine benzer şekilde kod ekleyin `NamedRange1_Change` :
+1. Olay işleyicisi `NamedRange1_Change` aşağıdaki gibi görünüyor olacak şekilde kod ekleyin:
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet26":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet26":::
 
     > [!NOTE]
-    > Excel aralıktaki bir hücreye çift tıklamak düzenleme moduna girdiğinde, <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> metinde değişiklik yapılmasa bile seçim aralığın dışına taşındığında bir olay oluşur.
+    > Excel aralığındaki bir hücreye çift tıklarsanız düzenleme moduna girebilirsiniz. Metinde değişiklik olsa bile seçim aralığın dışına taşındığında bir <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> olay oluşur.
 
 ## <a name="add-code-to-respond-to-the-selectionchange-event"></a>SelectionChange olayına yanıt vermek için kod ekleme
 
 ### <a name="to-insert-text-into-namedrange2-based-on-the-selectionchange-event"></a>SelectionChange olayına göre namedRange2 içine metin eklemek için
 
-1. **NamedRange1_SelectionChange** olay işleyicisinin aşağıdaki gibi görünmesi için kod ekleyin:
+1. Olay **işleyicisini NamedRange1_SelectionChange** şekilde görünen kod ekleyin:
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs" id="Snippet27":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb" id="Snippet27":::
 
     > [!NOTE]
-    > Excel aralıktaki bir hücreye çift tıklamak seçimin aralığa geçmesine neden olduğundan, <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> olay gerçekleşmeden önce bir olay oluşur <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> .
+    > Bir aralıkta bir hücreye çift Excel seçimin aralıkta hareket etmesine neden olduğundan, olay oluşmadan önce <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> bir olay oluşur.
 
 ## <a name="test-the-application"></a>Uygulamayı test edin
- Artık, bir denetimin olaylarını açıklayan metnin, <xref:Microsoft.Office.Tools.Excel.NamedRange> Olaylar oluşturulduğunda başka bir adlandırılmış aralığa eklendiğini doğrulamak için çalışma kitabınızı test edebilirsiniz.
+ Artık çalışma kitabınızı test etmek için denetim olaylarını açıklayan metnin olaylar ıldığında başka bir adlandırılmış <xref:Microsoft.Office.Tools.Excel.NamedRange> araca ekli olduğunu doğrularsınız.
 
 ### <a name="to-test-your-document"></a>Belgenizi test etmek için
 
-1. Projenizi çalıştırmak için **F5** tuşuna basın.
+1. Projenizi **çalıştırmak için F5** tuşuna basın.
 
-2. İmlecinizi içine yerleştirin `namedRange1` ve olayla ilgili metnin <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> eklendiğini ve çalışma sayfasına bir yorum eklendiğini doğrulayın.
+2. İmlecinizi `namedRange1` içine yerleştirerek olayla ilgili metnin <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> ekli olduğunu ve çalışma sayfasına bir açıklama ekli olduğunu doğrulayın.
 
-3. İçine çift tıklayın `namedRange1` ve olaylar ile ilgili metnin <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> içinde kırmızı italik metinle eklendiğini doğrulayın `namedRange2` .
+3. öğesinin içine `namedRange1` çift tıklayın ve olaylarla ilgili metnin içine <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> kırmızı italik metin ekli olduğunu `namedRange2` doğrulayın.
 
-4. Dışında ' `namedRange1` e tıklayın ve metinde değişiklik yapılmasa bile düzenleme modundan çıkarken değişiklik olayının gerçekleşeceğini unutmayın.
+4. öğesinin dışına tıklayın ve metinde değişiklik yapılmış olsa bile düzenleme modundan çıkılıyorsa değişiklik olayı `namedRange1` oluştuğuna dikkat edin.
 
-5. İçindeki metni değiştirin `namedRange1` .
+5. içindeki metni `namedRange1` değiştirme.
 
-6. Dışında ' `namedRange1` e tıklayın ve olayla ilgili metnin <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> mavi metinle birlikte eklendiğini doğrulayın `namedRange2` .
+6. öğesinin dışına `namedRange1` tıklayın ve olayla ilgili metnin <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> içine mavi metin ile ekli olduğunu `namedRange2` doğrulayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bu izlenecek yol, bir denetimin olaylarına karşı programlama temellerini gösterir <xref:Microsoft.Office.Tools.Excel.NamedRange> . Daha sonra gelebilecek bir görev aşağıda verilmiştir:
+ Bu kılavuz, bir denetimin olaylarına karşı programlamanın temellerini <xref:Microsoft.Office.Tools.Excel.NamedRange> gösterir. Bir sonraki görev şu şekilde olabilir:
 
-- Projeyi dağıtma. daha fazla bilgi için bkz. [Office çözüm dağıtma](../vsto/deploying-an-office-solution.md).
+- Projeyi dağıtma. Daha fazla bilgi için [bkz. Bir Office dağıtma.](../vsto/deploying-an-office-solution.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
-- [genişletilmiş nesneleri kullanarak Excel otomatikleştirin](../vsto/automating-excel-by-using-extended-objects.md)
+- [Konak öğelerine ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
+- [Genişletilmiş Excel kullanarak nesneleri otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
-- [Nasıl yapılır: NamedRange denetimlerinin boyutunu değiştirme](../vsto/how-to-resize-namedrange-controls.md)
-- [Nasıl yapılır: çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
-- [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
-- [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md)
+- [Nasıl olur: NamedRange denetimlerini yeniden boyutlandırma](../vsto/how-to-resize-namedrange-controls.md)
+- [Nasıl ekleyebilirsiniz: Çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
+- [Konak öğelerinin ve konak denetimlerinin programlı sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Nasıllı: Projelerde olay Office oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md)

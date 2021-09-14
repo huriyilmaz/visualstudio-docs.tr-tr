@@ -17,11 +17,11 @@ ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
 ms.openlocfilehash: 8866ef3e78615ab5bc6c90b4b73a1b9a1d6d1a83
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122140238"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628185"
 ---
 # <a name="code-a-custom-extraction-rule-for-a-web-performance-test"></a>Web performans testi için özel ayıklama kuralı kodla
 

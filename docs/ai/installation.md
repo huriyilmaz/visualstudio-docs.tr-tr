@@ -1,7 +1,7 @@
 ---
-title: AI araçları 'nı yükler
-description: Visual Studio için AI araçlarının nasıl yükleneceğini açıklar
-keywords: AI, Visual Studio
+title: AI Araçlarını Yükleme
+description: Visual Studio için AI Araçlarının nasıl yük Visual Studio
+keywords: ai, visual studio
 author: jillre
 ms.author: jillfra
 manager: jmartens
@@ -12,80 +12,80 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 ms.openlocfilehash: 5e8867064e4392cdbf3c2dbc72810ddf22f0cded
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122053468"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633374"
 ---
 # <a name="installation"></a>Yükleme
 
-aı için Visual Studio Araçları, Windows 64 bit işletim sistemlerine yüklenebilir.
+Visual Studio Araçları 64 bit işletim sistemlerine Windows için kullanılabilir.
 
-## <a name="install-visual-studio-tools-for-ai"></a>aı için Visual Studio Araçları 'i yükler
+## <a name="install-visual-studio-tools-for-ai"></a>AI Visual Studio Araçları yükleme
 
-bu uzantı Visual Studio 2015 ve Visual Studio 2017 Community sürümü veya üzeri ile birlikte geçerlidir.
+Bu uzantı, Visual Studio 2015 ve Visual Studio 2017, Community veya daha yeni sürümlerle çalışır.
 
-araçları [Visual Studio marketi](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vstoolsai-vs2017)'nden veya Visual Studio içinden indirebilirsiniz:
+Araçları marketten veya Visual Studio [marketten](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vstoolsai-vs2017)Visual Studio:
 
-1. **Araçlar**  >  **Uzantılar ve Güncelleştirmeler '** i seçin.
+1. Araç **Uzantıları**  >  **ve Güncelleştirmeler'i seçin.**
 
-   ![Visual Studio Uzantılar ve güncelleştirmeler menüsü](media/installation/extensions.png)
+   ![Visual Studio'deki Uzantılar ve Güncelleştirmeler menüsü](media/installation/extensions.png)
 
-2. **Uzantılar ve güncelleştirmeler** iletişim kutusunda sol taraftaki **çevrimiçi** ' i seçin.
-3. Sağ üst köşedeki arama kutusuna "AI araçları" yazın veya girin.
-4. sonuçlardan **aı için Visual Studio Araçları** seçin.
+2. Uzantılar **ve Güncelleştirmeler** iletişim kutusunda, **sol taraftan** Çevrimiçi'yi seçin.
+3. Sağ üst köşedeki arama kutusuna "ai araçları" yazın veya girin.
+4. Sonuçlardan **Visual Studio Araçları için AI'yi** seçin.
 5. **İndir**'i seçin.
 
 ## <a name="prepare-your-local-machine"></a>Yerel makinenizi hazırlama
-Yerel bilgisayarınızdaki derinlemesine öğrenme modellerini öğreticmadan önce, uygulanabilir önkoşulların yüklü olduğundan emin olun. Bu, NVıDıA GPU (varsa) için en son sürücülere ve kitaplıklara sahip olduğunuzdan emin olmanızı içerir. ayrıca, projenizde kullanmayı planladığınız Microsoft Cognitive Toolkit (CNTK), tensorflow, Caffe2, mxnet, keras, theano, pytorch ve chainer gibi python ve python kitaplıklarını da yüklediğinizden emin olun.
+Derin öğrenme modellerini yerel bilgisayarınızda eğitmeden önce, geçerli önkoşulların yüklü olduğundan emin olun. Buna NVIDIA GPU'nız (varsa) için en son sürücülere ve kitaplıklara sahip olduğundan emin olun. Ayrıca NumPy, SciPy gibi Python ve Python kitaplıklarını ve projeniz içinde kullanmayı planlamış olduğu Microsoft Cognitive Toolkit (CNTK), TensorFlow, Caffe2, MXNet, Keras, Theano, PyTorch ve Chainer gibi uygun derin öğrenme çerçevelerini de yüklemiş olduğundan emin olursunuz.
 
 > [!NOTE]
-> Aşağıdaki alt bölümlerde yazılım tanıtımı, homepages 'ten alınmıştır.
+> Aşağıdaki alt bölümlerde yer alan yazılım tanıtımı, giriş sayfalarından alıntılandı.
 
-### <a name="nvidia-gpu-driver"></a>NVıDıA GPU sürücüsü
+### <a name="nvidia-gpu-driver"></a>NVIDIA GPU sürücüsü
 
-Derin öğrenme çerçeveleri, makinelerin bir hız, doğruluk ve gerçek yapay zeka doğru ölçeklenebilmesini sağlamak için NVıDıA GPU avantajlarından yararlanır. Bilgisayarınızda NVıDıA GPU kartları varsa bkz. [NVIDIA sürücü indirmeleri](https://www.nvidia.com/Download/index.aspx) veya en son sürücüyü yüklemek için bir işletim sistemi güncelleştirmesi deneyin.
+Derin öğrenme çerçeveleri, makinelerin hızla, doğrulukla öğrenmesine ve gerçek yapay zekaya doğru ölçeklendirerek NVIDIA GPU'nun avantajını kullanır. Bilgisayarınızda NVIDIA GPU kartları varsa NVIDIA Sürücü [İndirmeleri'ne bakın](https://www.nvidia.com/Download/index.aspx) veya en son sürücüyü yüklemek için bir işletim sistemi güncelleştirmesi deneyin.
 
 ### <a name="cuda"></a>CUDA
 
-[CUDA](https://developer.nvidia.com/cuda-zone) , NVIDIA tarafından bir paralel bilgi işlem platformu ve programlama modelidir. GPU 'nun gücünden yararlanarak işlem performansının önemli artışına izin verir. Şu anda CUDA araç seti 8,0 derin öğrenme çerçeveleri için gereklidir.
+[CUDA,](https://developer.nvidia.com/cuda-zone) NVIDIA tarafından bir paralel bilgi işlem platformu ve programlama modelidir. GPU'nun gücüyle işlem performansında önemli artışlar sağlar. Şu anda derin öğrenme çerçeveleri CUDA Toolkit 8.0'a ihtiyaçmektedir.
 
-CUDA 'yi yüklemek için
+CUDA'yı yüklemek için
 
-- Bu [siteyi](https://developer.nvidia.com/cuda-80-ga2-download-archive)ziyaret edın, CUDA indirin ve yükleyin.
-- CUDA çalışma zamanı kitaplıklarını yüklediğinizden emin olun ve ardından% PATH% veya $Path ortam değişkenine CUDA ikili yolunu ekleyin.
-- Windows, bu yol varsayılan olarak "C:\Program files\nvıdıa GPU bilgi işlem araç kit\cuda\v8.0\bin" şeklindedir.
+- Bu [siteyi ziyaret](https://developer.nvidia.com/cuda-80-ga2-download-archive)edin, CUDA'yı indirin ve yükleyin.
+- CUDA çalışma zamanı kitaplıklarını yükleyin ve ardından %PATH% veya $Path ortam değişkenine CUDA ikili yolunu ekleyin.
+- Bu Windows yol varsayılan olarak "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin" şeklindedir.
 
-![Windows CUDA 'ı yüklerken](media/installation/install_cuda_win.png)
+![CuDA'yı Windows](media/installation/install_cuda_win.png)
 
 ### <a name="cudnn"></a>cuDNN
 
-[Cudnn](https://developer.nvidia.com/cudnn) (CUDA derin sinir ağ kitaplığı), NVIDIA tarafından derin sinir ağlarının temel ELEMANLARıNA yönelik GPU hızlandırmalı bir kitaplıktır. cuDNN V6, en son derin öğrenme çerçeveleri için gereklidir.
+[cuDNN](https://developer.nvidia.com/cudnn) (CUDA Derin Sinir Ağı kitaplığı), NVIDIA tarafından derin sinir ağları için GPU hızlandırmalı temel öğeler kitaplığıdır. cuDNN v6, en son derin öğrenme çerçeveleri için gereklidir.
 
-CuDNN 'yi yüklemek için:
+cuDNN yüklemek için:
 
-- En son paketi indirmek ve yüklemek için [NVIDIA geliştirici](https://developer.nvidia.com/rdp/cudnn-download) adresini ziyaret edin.
-- CuDNN ikilisini içeren dizini% PATH% veya $Path ortam değişkenine eklemediğinizden emin olun.
-- Windows, cudnn64_6.dll "C:\Program files\nvıdıa GPU bilgi işlem araç kit\cuda\v8.0\bin" dizinine kopyalayabilirsiniz.
+- En son paketi indirip yüklemek için [NVIDIA](https://developer.nvidia.com/rdp/cudnn-download) Developer'ı ziyaret edin.
+- cuDNN ikilisi içeren dizini %PATH% veya $Path emin olun.
+- Bu Windows" cudnn64_6.dll "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin" dizinine kopyalayabiliyoruz.
 
 > [!NOTE]
-> CNTK 2,0 ve tensorflow 1.2.1'in önceki derin öğrenme çerçevelerinin cudnn v 5.1 olması gerekir. Ancak, birden çok cuDNN sürümünü birlikte yükleyebilirsiniz.
+> CNTK 2.0 ve TensorFlow 1.2.1 gibi önceki derin öğrenme çerçevelerine cuDNN v5.1 gerekir. Ancak, birden çok cuDNN sürümünü birlikte yükleyebilirsiniz.
 
 ### <a name="python"></a>Python
 
-Python, derin öğrenme uygulamaları için birincil programlama dilidir. **64 bit** Python dağıtımı gereklidir ve en iyi uyumluluk için [Python 3.5.4](https://www.python.org/downloads/release/python-354/) önerilir.
+Python, derin öğrenme uygulamaları için birincil programlama dilidir. **64 bit** Python dağıtımı gereklidir ve en iyi [uyumluluk için Python 3.5.4](https://www.python.org/downloads/release/python-354/) önerilir.
 
-### <a name="to-install-python-on-windows"></a>Windows Python 'ı yüklemek için
+### <a name="to-install-python-on-windows"></a>Python'i Windows
 
-- Python başlatıcısı 'nı yalnızca kendiniz için yüklemenizi ve% PATH% ortam değişkenine Python eklemeyi öneririz.
-- Python 'da yazılmış yazılım paketlerini yüklemek ve yönetmek için paket yönetim sistemi PIP 'yi yüklediğinizden emin olun.
+- Python başlatıcısını yalnızca kendiniz yüklemenizi ve Python'u %PATH% ortam değişkenine eklemenizi öneririz.
+- Python'da yazılmış yazılım paketlerini yüklemek paket yönetim sistemi yönetmek için gerekli olan pip'i yükleyebilirsiniz.
 
-Derin öğrenme çerçeveleri kendi yüklemeleri için PIP kullanır.
+Derin öğrenme çerçeveleri kendi yüklemeleri için pip'i temel almaktadır.
 
 ![Windows üzerinde Python’ı yükleme](media/installation/install_python_win.png)
 
-Daha sonra, Python 3,5 ' in doğru yüklenip yüklenmediğini doğrulamanız ve bir terminalde aşağıdaki komutları yürüterek PIP 'yi en son sürüme yükseltmek gerekir:
+Ardından Python 3.5'in doğru yük olup olmadığını doğrulamamız ve terminalde aşağıdaki komutları yürüterek pip'i en son sürüme yükseltmemiz gerekir:
 
 - **Windows**
 
@@ -113,53 +113,53 @@ Daha sonra, Python 3,5 ' in doğru yüklenip yüklenmediğini doğrulamanız ve 
 
 ### <a name="python-on-visual-studio"></a>Visual Studio üzerinde Python
 
-Python, uzantılar aracılığıyla Visual Studio içinde tam olarak desteklenir.
-daha fazla ayrıntı için [Visual Studio Araçları Python](../python/installing-python-support-in-visual-studio.md) yüklemesi hakkında daha fazla bilgi edinin.
+Python, uzantılar aracılığıyla Visual Studio tam olarak de destekler.
+Daha fazla bilgi için [Python'Visual Studio Araçları](../python/installing-python-support-in-visual-studio.md) yükleme hakkında daha fazla bilgi edinebilirsiniz.
 
-### <a name="numpy-and-scipy"></a>Sayısal tuş takımı ve SciPy
+### <a name="numpy-and-scipy"></a>NumPy ve SciPy
 
-- **Sayısal tuş takımı** , küçük çok boyutlu diziler için çok fazla hıza ödün vermeden, rastgele kayıtların büyük ölçekli dizilerini verimli bir şekilde işlemek için tasarlanan genel amaçlı bir dizi işleme paketidir.
+- **NumPy,** küçük çok boyutlu diziler için çok fazla hızdan ödün vermeden rastgele kayıtların büyük çok boyutlu dizilerini verimli bir şekilde işlemek için tasarlanmış genel amaçlı bir dizi işleme paketidir.
 
-- **SciPy** ("sigh pasta"), bir çift yönlü y 'ye bağlı olarak matematik, bilim ve Mühendislik için açık kaynaklı yazılımdır. 1.0.0 sürümünden başlayarak, SciPy artık Windows için resmi önceden oluşturulmuş bir tekerlek paketine sahiptir.
+- **SciPy** ("Sigh Pie" olarak okunur), NumPy'ye bağlı olarak matematik, bilim ve mühendislik için açık kaynak bir yazılımdır. Sürüm 1.0.0'dan başlayarak, SciPy'nin artık yeni sürümler için önceden oluşturulmuş resmi Windows.
 
-Sayısal tuş a ve SciPy 'yi yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
+NumPy ve SciPy'yi yüklemek için terminalde aşağıdaki komutu çalıştırın:
 
 ```bash
 pip3.5 install -U numpy scipy
 ```
 
 > [!NOTE]
-> yukarıdaki komut, var olan eski veya resmi olmayan (örneğin, üçüncü taraf paketleri Windows için olan üçüncü taraf paketleri http://www.lfd.uci.edu/~gohlke/pythonlibs/ ) bir y ve scipy 'yi en son resmi olanlara yükseltir.
+> Yukarıdaki komut, mevcut eski veya resmi olmayan (örneğin, Windows için üçüncü taraf http://www.lfd.uci.edu/~gohlke/pythonlibs/ paketleri) NumPy ve SciPy'yi en son resmi sürümlere yükseltmektedir.
 
 ### <a name="microsoft-cognitive-toolkit-cntk"></a>Microsoft Cognitive Toolkit (CNTK)
 
-[Microsoft Cognitive Toolkit](https://cntk.ai) , yönlendirilmiş bir grafik aracılığıyla sinir ağlarını bir dizi hesaplama adımı olarak açıklayan birleştirilmiş bir ayrıntılı öğrenme araç setidir. CNTK hem Python hem de BrainScript programlama dillerini destekler.
+Bu [Microsoft Cognitive Toolkit,](https://cntk.ai) sinir ağlarını yönlendiren bir grafik aracılığıyla bir dizi hesaplama adımı olarak tanımlayan birleşik bir derin öğrenme araç setidir. CNTK Python ve BrainScript programlama dillerini destekler.
 
 > [!NOTE]
-> CNTK şu anda macos 'ı desteklemiyor.
+> CNTK macOS'u desteklemez.
 
-CNTK Python paketini yüklemek için bkz. [CNTK nasıl yüklenir](/cognitive-toolkit/Setup-CNTK-on-your-machine).
+Python CNTK yüklemek için [bkz.](/cognitive-toolkit/Setup-CNTK-on-your-machine)CNTK.
 
 ### <a name="tensorflow"></a>TensorFlow
 
-[TensorFlow](https://www.tensorflow.org/) , veri akışı grafiklerini kullanan sayısal hesaplama için açık kaynaklı bir yazılım kitaplığıdır. Ayrıntılı yükleme için [buraya](https://www.tensorflow.org/install/) başvurun.
+[TensorFlow,](https://www.tensorflow.org/) veri akışı grafiklerini kullanarak sayısal hesaplamaya yönelik bir açık kaynak yazılım kitaplığıdır. Ayrıntılı yükleme [için](https://www.tensorflow.org/install/) buraya bakın.
 
 > [!NOTE]
-> Sürüm 1,2 itibariyle, TensorFlow artık macOS için GPU desteği sağlamaz.
+> Sürüm 1.2'den sonra TensorFlow artık macOS için GPU desteğine sahip değildir.
 
 ### <a name="caffe2"></a>Caffe2
 
-[Caffe2](https://caffe2.ai/) basit, modüler ve ölçeklenebilir derinlemesine bir öğrenme çerçevesidir. Özgün Caffe 'de derleme, Caffe2 ifade, hız ve modülerliği göz önünde bulundurularak tasarlanmıştır.
+[Caffe2](https://caffe2.ai/) hafif, modüler ve ölçeklenebilir bir derin öğrenme çerçevesidir. Caffe2, özgün Caffe'nin üzerine inşa edildiklerinde ifade, hız ve modülerlik ile tasarlanmıştır.
 
-Şu anda önceden oluşturulmuş bir Caffe2 Python tekerlek paketi mevcut değil.
+Şu anda önceden oluşturulmuş Caffe2 python tekerlek paketi yoktur.
 
-Kaynak koddan derlemek için [burayı](https://caffe2.ai/docs/getting-started.html) ziyaret edin.
+Kaynak [kodundan](https://caffe2.ai/docs/getting-started.html) derlemek için buraya ziyaret edin.
 
 ### <a name="mxnet"></a>MXNet
 
-[Apache MXNet (ınubating)](https://mxnet.incubator.apache.org/) , verimlilik ve esneklik için tasarlanan derin bir öğrenme çerçevesidir. Verimliliği ve verimliliği en üst düzeye çıkarmak için [sembolik ve kesinlik temelli programlama](http://mxnet.io/architecture/index.html#deep-learning-system-design-concepts) **karışmanızı** sağlar.
+[Apache MXNet (incubating),](https://mxnet.incubator.apache.org/) hem verimlilik hem de esneklik için tasarlanmış bir derin öğrenme çerçevesidir. Verimliliği ve üretkenliği **en üst** [düzeye çıkarmak için sembolik ve](http://mxnet.io/architecture/index.html#deep-learning-system-design-concepts) koruyucu programlamayı karıştırmanıza olanak sağlar.
 
-MXNet ' i yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
+MXNet'i yüklemek için terminalde aşağıdaki komutu çalıştırın:
 
 - GPU ile
 
@@ -175,9 +175,9 @@ MXNet ' i yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
 
 ### <a name="keras"></a>Keras
 
-[keras](https://keras.io/) , CNTK, tensorflow veya teano üzerinde çalışan Python 'da yazılmış üst düzey bir sinir networks apı 'sidir. Hızlı deneme etkinleştirme konusunda bir odak ile geliştirilmiştir. İyi bir araştırma yapmak için olası en az gecikme olan anahtarla sonuçdan sonuca gidebileceksiniz.
+[Keras,](https://keras.io/) Python'da yazılmış ve CNTK, TensorFlow veya Theano üzerinde çalıştırabilen üst düzey bir sinir ağları API'dir. Hızlı denemeyi etkinleştirmeye odaklanarak geliştirilmiştir. Mümkün olan en az gecikmeyle fikirden sonuç elde etmek, iyi bir araştırma yapmak için çok önemli.
 
-Keras 'yi yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
+Keras'ı yüklemek için terminalde aşağıdaki komutu çalıştırın:
 
 ```bash
 pip3.5 install Keras==2.0.9
@@ -185,9 +185,9 @@ pip3.5 install Keras==2.0.9
 
 ### <a name="theano"></a>Theano
 
-Bu [, çok](http://deeplearning.net/software/theano/) boyutlu dizileri verimli bir şekilde tanımlamanıza, iyileştirmenize ve değerlendirmenize olanak tanıyan bir Python kitaplığıdır.
+[Theano,](http://deeplearning.net/software/theano/) çok boyutlu dizileri içeren matematiksel ifadeleri verimli bir şekilde tanımlamanızı, iyileştirmenizi ve değerlendirmenizi sağlayan bir Python kitaplığıdır.
 
-Ano yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
+Theano'yu yüklemek için terminalde aşağıdaki komutu çalıştırın:
 
 ```bash
 pip3.5 install Theano==0.9.0
@@ -195,19 +195,19 @@ pip3.5 install Theano==0.9.0
 
 ### <a name="pytorch"></a>PyTorch
 
-[Pytorch](https://pytorch.org/) , iki üst düzey Özellik sağlayan bir Python paketidir:
+[PyTorch,](https://pytorch.org/) iki üst düzey özellik sağlayan bir Python paketidir:
 
-- Güçlü GPU hızlandırma ile Tensor hesaplaması (sayısal tuş takımı gibi)
-- Bant tabanlı bir oto sistem sisteminde oluşturulan derin sinir ağları
+- Güçlü GPU hızlandırmalı tensor hesaplaması (numpy gibi)
+- Bant tabanlı bir otomatik derecelendirme sistemi üzerinde yerleşik Derin Sinir Ağları
 
-PyTorch 'yi yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
+PyTorch'ı yüklemek için terminalde aşağıdaki komutu çalıştırın:
 
 - **Windows**
 
-  Henüz resmi bir tekerlek paketi yok. Bir üçüncü taraf paketini, [Anaconda](https://anaconda.org/pytorch/repo?type=all) veya [California Üniversitesi](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pytorch)'nden indirebilirsiniz.
+  Henüz resmi bir tekerlek paketi yoktur. [Anaconda](https://anaconda.org/pytorch/repo?type=all) veya California Üniversitesi'nden bir üçüncü taraf [paketi indirebilirsiniz.](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pytorch)
 
-  - Ana dizininiz için sıkıştırmayı açın, örneğin, *C:\users\test\pytorch*.
-  - % PYTHONPATH% ortam değişkenine *C:\users\test\pytorch\lib\site-Packages* ekleyin.
+  - Bunu giriş dizininize,örneğin, *C:\Users\test\pytorch dizinine sıkıştırabilirsiniz.*
+  - %PYTHONPATH% *ortam değişkenine C:\Users\test\pytorch\Lib\site-packages* ekleyin.
 
     ```bash
     pip3 install http://download.pytorch.org/whl/cu80/torch-0.4.0-cp36-cp36m-win_amd64.whl
@@ -221,7 +221,7 @@ PyTorch 'yi yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
   ```
 
   > [!NOTE]
-  > macOS ikilileri CUDA 'yi desteklemez, CUDA gerekliyse kaynaktan yüklenir
+  > macOS ikilileri CUDA'yı desteklemez, CUDA gerekirse kaynaktan yükleyin
 
 - **Linux**
 
@@ -230,9 +230,9 @@ PyTorch 'yi yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
   ```
 
   > [!NOTE]
-  > Bu tek paket hem GPU hem de CPU 'YU destekler.
+  > Bu tek paket hem GPU hem de CPU'yu destekler.
 
-Son olarak, Windows olmayan bir şekilde torchvision 'ı yüklersiniz:
+Son olarak, özel olmayan bir Windows:
 
 ```bash
 pip3.5 install torchvision
@@ -240,18 +240,18 @@ pip3.5 install torchvision
 
 ### <a name="chainer"></a>Chainer
 
-[Chainer](https://chainer.org/) , esneklik açısından bir Python tabanlı derin öğrenme çerçevesidir. Bu, sinir ağlarını derlemek ve eğmek için nesne odaklı üst düzey API 'Lerin yanı sıra, otomatik fark temelli API 'ler sağlar (dinamik hesaplama grafikleri olarak da bilinir)
+[Chainer,](https://chainer.org/) esnekliği hedef alan Python tabanlı bir derin öğrenme çerçevesidir. Nöral ağları oluşturmak ve eğitmek için tek tek tanımlama yaklaşımına (dinamik hesaplama grafları olarak da bilinir) ve nesne odaklı üst düzey API'lere dayalı otomatik ayrım API'leri sağlar.
 
-CUDA desteğini etkinleştirmek için, [cupy](https://github.com/cupy/cupy)'yi yükler:
+CUDA desteğini etkinleştirmek için [CuPy'yi yükleyin:](https://github.com/cupy/cupy)
 
 ```bash
 pip3.5 install cupy
 ```
 
 > [!NOTE]
-> Windows, cuda 8,0 ile cupy derlemek için [Visual Studio](https://visualstudio.microsoft.com/) 2015 sürümü veya [Microsoft Visual C++ derleme araçları](https://visualstudio.microsoft.com/visual-cpp-build-tools/) gerekir.
+> Bu Windows CuPy'yi CUDA 8.0 ile derlemek için [Visual Studio](https://visualstudio.microsoft.com/) veya [Microsoft Visual C++ Derleme](https://visualstudio.microsoft.com/visual-cpp-build-tools/) Araçları'nın 2015 sürümüne ihtiyacınız vardır.
 
-Chainer 'yi yüklemek için bir terminalde aşağıdaki komutu çalıştırın:
+Chainer'ı yüklemek için terminalde aşağıdaki komutu çalıştırın:
 
 ```bash
 pip3.5 install chainer==3.0.0

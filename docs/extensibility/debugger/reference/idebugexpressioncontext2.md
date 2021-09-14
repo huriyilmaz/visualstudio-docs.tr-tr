@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 01d5c04d8314bcf81f1a7d3e42ddf4d4517956d3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122064234"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725226"
 ---
 # <a name="idebugexpressioncontext2"></a>IDebugExpressionContext2
 Bu arabirim, ifade değerlendirmesi için bir bağlamı temsil eder.

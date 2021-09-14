@@ -12,11 +12,11 @@ ms.technology: vs-xml-tools
 ms.workload:
 - multiple
 ms.openlocfilehash: a9e1b5d1ebd573f74762d86717118138adea23d7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122130201"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633622"
 ---
 # <a name="how-to-examine-the-content-model-of-nodes-by-using-the-content-model-view"></a>Nasıllı: İçerik Modeli Görünümünü kullanarak düğümlerin içerik modelini inceleme
 
@@ -34,11 +34,11 @@ Bu konu başlığında, İçerik Modeli Görünümü'ünü kullanarak [düğüml
 
 5. XML Gezgini'nde `purchaseOrder` dosyasına sağ tıklayın ve İçerik Modeli Görünümünde **Göster'i seçin.**
 
-     İçerik Modeli Görünümü, `purchaseOrder` öğeyi tasarım yüzeyinde görüntüler.
+     İçerik Modeli Görünümü, öğeyi `purchaseOrder` tasarım yüzeyinde görüntüler.
 
 6. Her düğüme çift tıklayarak veya her düğümün sağ yanındaki çift oka tıklayarak , ve `shipTo` `billTo` `items` düğümlerini genişletin.
 
-     Öğesinin düğümleri `purchaseOrder` artık genişletildi ve öğesinin içerik modelini görüyorsunuz.
+     Öğesinin düğümleri `purchaseOrder` artık genişletildi ve öğenin içerik modelini görüyorsunuz.
 
 7. öğesinin altındaki herhangi bir düğüme tıklayın ve seçilen düğümün şema kümesinde nerede olduğunu görmek `purchaseOrder` için breadcrumb çubuğuna bakın.
 

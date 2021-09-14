@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: cec77762a356f86d8cab32402c824ec70ae41e8e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122057349"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634646"
 ---
 # <a name="editor-and-language-service-extensions"></a>Düzenleyici ve dil hizmeti uzantıları
 Visual Studio kod düzenleyicisinin birçok özelliğini genişletebilirsiniz. düzenleyici, Windows Presentation Foundation (WPF) temel alır ve yönetilen kodda yazılmıştır. bu tasarım, önceki Visual Studio sürümlerindeki tasarımlardan farklı olsa da, aynı özelliklerin çoğunu sağlar. düzenleyiciyi genişletmek için Managed Extensibility Framework (MEF) kullanın.

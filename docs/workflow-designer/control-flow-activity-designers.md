@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - Denetim Flow Etkinlik Tasarımcıları
-description: Bir iş akışı Flow için sistem tarafından sağlanan etkinlikler olan Denetim Ve Etkinlik Tasarımcıları hakkında bilgi öğrenin.
+title: İş Akışı Tasarımcısı denetim Flow etkinlik tasarımcıları
+description: bir iş akışı içinde akışı denetlemek için kullanılan sistem tarafından belirtilen etkinlikler olan denetim Flow etkinlik tasarımcıları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,15 +12,15 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 80e89e0ec82b8f5eed71845f084ee5700726a68f
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963689"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633710"
 ---
 # <a name="control-flow-activity-designers"></a>Akış Etkinliği Tasarımcılarını denetleme
 
-İş Akışı Tasarımcısı, iş akışlarınızı oluşturmak için kullanabileceğiniz bir dizi sistem tarafından sağlanan etkinlik içerir. Bu bölüm, bir iş akışı içindeki akışı kontrol etmek için kullanılan sistem tarafından sağlanan etkinlikleri içerir. Aşağıdaki konular bu etkinlikleri açıklar ve bunların nasıl kullanımına ilişkin rehberlik sağlar.
+İş Akışı Tasarımcısı, iş akışlarınızı oluştururken kullanabileceğiniz, sistem tarafından sağlanmış bir dizi etkinliği içerir. Bu bölüm, bir iş akışı içindeki akışı denetlemek için kullanılan sistem tarafından sağlanmış etkinlikleri içerir. Aşağıdaki konular bu etkinlikleri anlatmaktadır ve bunların nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="reference"></a>Başvuru
 
@@ -64,7 +64,7 @@ Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
  [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
- [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
+ [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)
 
 ## <a name="external-resources"></a>Dış Kaynaklar
 

@@ -1,17 +1,17 @@
 ---
 title: Projeleri ve Çözümleri Oluşturma ve Temizleme
-description: Bu makalede, Mac için Visual Studio'da proje oluşturma açık Mac için Visual Studio
+description: Bu makalede, Mac için Visual Studio'de proje oluşturma açık Mac için Visual Studio
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/19/2019
 ms.assetid: E4B6CB42-9FE2-43B9-93B7-BD4BD50518B1
 ms.topic: how-to
 ms.openlocfilehash: de6be4b509eff8a013f7367614e0016f810b3657
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964763"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725985"
 ---
 # <a name="building-and-cleaning-projects-and-solutions"></a>Projeleri ve çözümleri bina ve temizleme
 
@@ -34,7 +34,7 @@ Bir çözümde tüm projelerinizi veya bazı projelerinizi derlemeyi, yeniden de
 
     * Çözümü **"temizlemek",** sonra da tüm proje dosyalarını ve bileşenlerini derlemek için Hepsini Yeniden Oluştur'a seçin.
 
-    * Ara **ve çıkış dosyalarını** silmek için Hepsini Temizle'yi seçin. Yalnızca proje ve bileşen dosyaları bırakıla birlikte, ara ve çıkış dosyalarının yeni örnekleri daha sonra inşa edilecektir.
+    * Ara **ve çıkış dosyalarını** silmek için Hepsini Temizle'yi seçin. Yalnızca proje ve bileşen dosyaları bırakarak, ara ve çıkış dosyalarının yeni örnekleri daha sonra inşa edilecektir.
 
 ## <a name="to-build-or-rebuild-a-single-project"></a>Tek bir projeyi derlemek veya yeniden derlemek için
 
@@ -58,4 +58,4 @@ Derlemeyi durdurmak için aşağıdaki seçeneklerden birini kullanın:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projeleri ve çözümleri oluşturma ve temizleme (Visual Studio üzerinde Windows)](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)
+- [Projeleri ve çözümleri oluşturma ve temizleme (Visual Studio Windows)](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)

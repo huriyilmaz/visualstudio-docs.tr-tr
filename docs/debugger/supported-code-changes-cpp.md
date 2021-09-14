@@ -24,14 +24,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c2d7d7a4225c3a2711e238f7100054b1342a65eb
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122146660"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725887"
 ---
 # <a name="supported-code-changes-c"></a>Desteklenen Kod Değişiklikleri (C++)
-C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. Ancak, program yürütme sırasında bazı değişiklikler uygulanamaz. Bu değişiklikleri uygulamak için yürütmeyi durdurmalı ve kodun yeni bir sürümünü derlemelisiniz.
+C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. Ancak, program yürütme sırasında bazı değişiklikler uygulanamaz. Bu değişiklikleri uygulamak için yürütmeyi durdurmalı ve kodun yeni bir sürümünü oluşturmalı.
 
  Aşağıdaki [belgelerde C++ için Düzenle](../debugger/edit-and-continue-visual-cpp.md) ve DevamLa ile çalışma hakkında bilgi için bkz. Düzenle ve Devam Visual Studio.
 
@@ -79,14 +79,14 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
   - Statik veya genel üyeye sahip olmalıdır.
   - Std::function'a geçirildi. Bu, orijinal bir ODR ihlaline neden olur ve C1092 ile sonuç verir.
 
-- Düzenle ve Devam Etmek statik kitaplıkları güncelleştirmez. Statik bir kitaplıkta değişiklik yaptıysanız, yürütme eski sürümle devam eder ve herhangi bir uyarı olmaz.
+- Düzenle ve Devam Etmek statik kitaplıkları güncelleştirmez. Statik bir kitaplıkta değişiklik yaptısanız, yürütme eski sürümle devam eder ve herhangi bir uyarı olmaz.
 
 ## <a name="unsupported-scenarios"></a><a name="BKMK_Unsupported_scenarios"></a> Desteklenmeyen senaryolar
  C/C++ için Düzenle ve Devam Bırak, aşağıdaki hata ayıklama senaryolarında kullanılamıyor:
 
 - /Zo ile derlenmiş yerel uygulamalarda hata [ayıklama (İyileştirilmiş Hata Ayıklamayı geliştirme)](/cpp/build/reference/zo-enhance-optimized-debugging)
 
-- Visual Studio 2015 Güncelleştirme 1 Visual Studio önceki sürümlerde UWP uygulamaları veya bileşenlerinde hata ayıklama. Visual Studio 2015 Güncelleştirme 1'den başlayarak, artık anahtar ile derleyici anahtarını desteklediği için UWP C++ uygulamaları ve DirectX uygulamaları içinde Düzenle ve Devam Edin'i `/ZI` `/bigobj` kullanabilirsiniz. Anahtarıyla derlenmiş ikili dosyalarla Düzenle ve Devam'a da `/FASTLINK` kullanabilirsiniz.
+- Visual Studio 2015 Güncelleştirme 1 Visual Studio önceki sürümlerde UWP uygulamaları veya bileşenlerinde hata ayıklama. Visual Studio 2015 Güncelleştirme 1'den başlayarak UWP C++ uygulamaları ve DirectX uygulamaları içinde Düzenle ve Devam Git'i kullanabilirsiniz çünkü artık anahtar ile derleyici anahtarını `/ZI` `/bigobj` desteklemektedir. Anahtarıyla derlenmiş ikili dosyalarla Düzenle ve Devam'a da `/FASTLINK` kullanabilirsiniz.
 
 - 8/8.1 Mağaza Uygulamalarının Hata Ayıklaması. Bu projeler VC 120 araç kümesi ve C/C++ anahtarını `/bigobj` kullanır. Ile Düzenle ve `/bigobj` Devam Edin, yalnızca VC 140 araç kümesinde de destekleni.
 
@@ -102,17 +102,17 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
 
 - İşlenemeyen özel durumların ardından kod düzenleme, çağrı **yığınını işlanmamış** özel durumlar üzerinde geriye doğru izleme seçeneği belirlen belirlenmse.
 
-- Hata Ayıklama menüsünde **Başlat'ı seçerek** uygulamayı çalıştırma yerine Ekle'ye **kullanarak** uygulamada **hata** ayıklama.
+- Hata Ayıklama menüsünde Başlat'ı **seçerek** uygulamayı çalıştırma yerine Ekle'ye **kullanarak** uygulamada **hata** ayıklama.
 
 - İyileştirilmiş kodda hata ayıklama.
 
 - Derleme hataları nedeniyle yeni bir sürüm derleme başarısız olduktan sonra kodunuzun eski bir sürümünde hata ayıklama.
 
-- Özel derleyici kullanma (*cl.exe*) yolu. Dosyanın Düzenle ve Devam Ederken yeniden derlenmiş olması güvenlik nedeniyle Visual Studio her zaman yüklü derleyiciyi kullanır. Özel bir derleyici yolu kullanıyorsanız (örneğin, dosyanız içinde özel bir değişken aracılığıyla), bir uyarı görüntülenir ve Visual Studio aynı `$(ExecutablePath)` sürümün/mimarinin yüklü derleyicisi kullanmaya geri `*.props` döner.
+- Özel derleyici kullanma (*cl.exe*) yolu. Güvenlik nedeniyle, Düzenle ve Devam Sırasında bir dosyanın yeniden derlene Visual Studio her zaman yüklü derleyiciyi kullanır. Özel bir derleyici yolu kullanıyorsanız (örneğin, dosyanız içinde özel bir değişken aracılığıyla), bir uyarı görüntülenir ve Visual Studio aynı `$(ExecutablePath)` sürümün/mimarinin yüklü derleyicisi kullanmaya geri `*.props` döner.
 
 - FASTBuild derleme sistemi. FASTBuild şu anda "Minimum Yeniden Derlemeyi Etkinleştir ( )" derleyici anahtarıyla uyumlu değildir ve bu nedenle Düzenle ve Devam Et `/Gm` desteklenmiyor.
 
-- Eski Mimariler/VC Araç Kümeleri. VC 140 araç kümesiyle, varsayılan hata ayıklayıcı hem X86 hem de X64 uygulamalarıyla Düzenle ve Devam'ı destekler. Eski araç kümeleri yalnızca X86 uygulamalarını destekler. DÜZENLE ve Devam'ı kullanmak için VC 120'den eski araç kümeleri " Hata Ayıklama _> Seçenekleri > Genel >_ Yerel Uyumluluk Modunu Kullan" seçeneği denetlenerek eski hata ayıklayıcısını kullan gerekir.
+- Eski Mimariler/VC Araç Kümeleri. VC 140 araç kümesiyle, varsayılan hata ayıklayıcı hem X86 hem de X64 uygulamalarıyla Düzenle ve Devam'ı destekler. Eski araç kümeleri yalnızca X86 uygulamalarını destekler. DÜZENLE ve Devam'ı kullanmak için VC 120'den eski araç kümeleri " Hata Ayıklama _> Seçenekleri > Genel >_ Yerel Uyumluluk Modunu Kullan" denetlenerek eski hata ayıklayıcısını kullan gerekir.
 
 ## <a name="linking-limitations"></a><a name="BKMK_Linking_limitations"></a> Bağlama sınırlamaları
 
@@ -145,7 +145,7 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
 3. Hata **ayıklamadan sonra kod değişikliklerini yeniden bağlantıla onay** kutusunun işaretini kaldırın.
 
 ## <a name="precompiled-header-limitations"></a><a name="BKMK_Precompiled_header_limitations"></a> Önceden derlemeli üst bilgi sınırlamaları
- Varsayılan olarak Düzenle ve Devam Değiştir, kod değişikliklerini işlemeyi hızlandırmak için arka planda önceden derleme yapılan üst bilgileri yükler ve işler. Önceden derleme yapılan üst bilgileri yükleme, fiziksel belleğin ayırmasını gerektirir. Bu, sınırlı RAM'e sahip bir makinede derlemek için sorun olabilir. Hata ayıklama sırasında kullanılabilir fiziksel bellek miktarını belirlemek için Windows Görev Yöneticisi'ni kullanarak bunun bir sorun olup olmadığını anabilirsiniz. Bu miktar önceden derlemeli üst bilgilerinizin boyutundan büyükse Düzenle ve Devam'da sorun olmaz. Miktar önceden derlemeli üst bilgilerinizin boyutundan küçükse Düzenle ve Devam'ın arka planda önceden derlemeli üst bilgileri yüklemesini önleyemezsiniz.
+ Varsayılan olarak Düzenle ve Devam Değiştir, kod değişikliklerini işlemeyi hızlandırmak için arka planda önceden derleme yapılan üst bilgileri yükler ve işler. Önceden derleme yapılan üst bilgileri yükleme, fiziksel bellek ayırmayı gerektirir. Bu, sınırlı RAM'e sahip bir makinede derlemek için sorun olabilir. Hata ayıklama sırasında kullanılabilir fiziksel bellek miktarını belirlemek için Windows Görev Yöneticisi'ni kullanarak bunun bir sorun olup olmadığını anabilirsiniz. Bu miktar önceden derlemeli üst bilgilerinizin boyutundan büyükse Düzenle ve Devam'da sorun olmaz. Miktar önceden derlemeli üst bilgilerinizin boyutundan küçükse Düzenle ve Devam'ın arka planda önceden derlemeli üst bilgileri yüklemesini önleyemezsiniz.
 
  **Düzenle ve Devam Etmek için önceden derlemeli üst bilgileri arka plan yüklemesini devre dışı bırakmak için**
 
@@ -156,15 +156,15 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
 3. Ön **Derlemeye İzin Ver onay** kutusunun işaretini kaldırın.
 
 ## <a name="idl-attribute-limitations"></a><a name="BKMK_IDL_attribute_limitations"></a> IDL öznitelik sınırlamaları
- Düzenle ve Devam, arabirim tanımı (IDL) dosyalarını yeniden oluşturmaz. Bu nedenle, hata ayıklama sırasında IDL özniteliklerinde yapılan değişiklikler yansıtlanmaz. IDL özniteliklerinde yapılan değişikliklerin sonucu görmek için hata ayıklamayı durdurmanız ve uygulamanızı yeniden oluşturmanız gerekir. Düzenle ve Devam, IDL öznitelikleri değişmişse hata veya uyarı oluşturmaz. Daha fazla bilgi için bkz. [IDL Öznitelikleri.](/cpp/windows/idl-attributes)
+ Düzenle ve Devam, arabirim tanımı (IDL) dosyalarını yeniden oluşturmaz. Bu nedenle, hata ayıklama sırasında IDL özniteliklerinde yapılan değişiklikler yansıtlanmaz. IDL özniteliklerinde yapılan değişikliklerin sonucu görmek için hata ayıklamayı durdurmanız ve uygulamanızı yeniden oluşturmanız gerekir. Düzenle ve Devam, IDL öznitelikleri değişmişse hata veya uyarı oluşturmaz. Daha fazla bilgi için [bkz. IDL Öznitelikleri.](/cpp/windows/idl-attributes)
 
 ## <a name="diagnosing-issues"></a><a name="BKMK_Diagnosing_issues"></a> Sorunları tanılama
- Senaryonuz yukarıda bahsedilen koşullara uymuyorsa, aşağıdaki DWORD kayıt defteri değerini ayarlayarak daha fazla ayrıntı toplayabilirsiniz:
- 1. Bir Geliştirici Komut İstemi açın.
+ Senaryonız yukarıda belirtilen koşulların hiçbirine uymuyorsa, aşağıdaki DWORD kayıt defteri değerini ayarerek daha fazla ayrıntı topabilirsiniz:
+ 1. Bir Geliştirici Komut İstemi.
  2. Şu komutu çalıştırın:  
      `VsRegEdit.exe set “C:\Program Files (x86)\Microsoft Visual Studio\[Version]\[YOUR EDITION]” HKCU Debugger NativeEncDiagnosticLoggingLevel DWORD 1`
 
- Bir hata ayıklama oturumunun başlangıcında bu değerin ayarlanması, düzenleme ve **Çıkış penceresi**  >  **hata ayıklama** bölmesine ayrıntılı günlük kaydı yapmaya devam eden çeşitli bileşenlere neden olur.
+ Hata ayıklama oturumunun başında bu değerin ayarı, Düzenle ve Devam'ın çeşitli bileşenlerinin hata ayıklama bölmesinde ayrıntılı **günlük Çıkış Penceresi**  >  **neden** olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Düzenle ve Devam Et (C++)](../debugger/edit-and-continue-visual-cpp.md)

@@ -13,13 +13,13 @@ ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
 ms.openlocfilehash: 6611ffbcf7ac3ccf98cfc91d8423458ebe314ea3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122091935"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726040"
 ---
-# <a name="keyboard-shortcuts-in-blend-for-visual-studio"></a>Visual Studio için Blend'de klavye kısayolları
+# <a name="keyboard-shortcuts-in-blend-for-visual-studio"></a>Visual Studio için Blend'da klavye kısayolları
 
 ## <a name="project-shortcuts"></a>Project kısayolları
 
@@ -60,7 +60,7 @@ ms.locfileid: "122091935"
 |Yeni bir öğe oluşturun|**Ctrl tuşunu basılı tutarak** + **N**|
 |Nesneyi yineleme|Alt tuşunu **basılı** tutun ve nesneyi sürükleyin|
 |Bir nesneyi yeniden uygulama|Nesneyi bir düzen panelinin üzerine sürükleyin ve Alt tuşuna **basın**|
-|Denetimde metni düzenleme|**F2** (**Çıkmak** için esc)|
+|Denetimde metni düzenleme|**F2** (**Çıkmak için** Esc)|
 |Denetimi düzenleme (WPF)|**Ctrl tuşunu basılı tutarak** + **E**|
 |Seçilen nesneleri aynı genişlikte yapma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **1**|
 |Seçilen nesneleri aynı yüksekliğe sahip yapma|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **2**|
@@ -98,7 +98,7 @@ ms.locfileid: "122091935"
 
 |Bunu yapmak için|Bunu yapın|
 |----------------|-------------|
-|Tasarım, Kod ve Bölünmüş **görünümler arasında** geçiş|**F11**|
+|Tasarım, Kod ve Bölünmüş **görünümler arasında geçiş**|**F11**|
 |Çalışma panosunda yakınlaştırma|**Ctrl tuşunu basılı tutarak** + **Eşittir İşareti** ( **=** )|
 |Çalışma panosunda yakınlaştırma|**Ctrl tuşunu basılı tutarak** + **Eksi İşareti** ( **-** )|
 |Çalışma panosunda yakınlaştırma veya uzaklaştırma|Fare tekerleğini döndürme|

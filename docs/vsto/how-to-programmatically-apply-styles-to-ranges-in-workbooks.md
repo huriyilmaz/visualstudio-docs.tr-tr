@@ -19,11 +19,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 32ba588545d401a7c25f56d5a5f7042d62116a25
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122122741"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633998"
 ---
 # <a name="how-to-programmatically-apply-styles-to-ranges-in-workbooks"></a>Nasıl yapılır: program aracılığıyla çalışma kitaplarındaki aralıklara stil uygulama
   Çalışma kitaplarındaki bölgelere adlandırılmış stilleri uygulayabilirsiniz. Excel önceden tanımlanmış bir dizi stil sağlar.

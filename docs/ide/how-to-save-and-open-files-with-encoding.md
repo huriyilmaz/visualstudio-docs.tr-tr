@@ -17,15 +17,15 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: a3769689f28f1a14c39942c6cdcb0103e01bb8a4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122137385"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725766"
 ---
 # <a name="how-to-save-and-open-files-with-encoding"></a>Nasıl kullanılır: Dosyaları kodlamayla kaydetme ve açma
 
-Çift yönlü dilleri desteklemek için belirli karakter kodlamalı dosyaları kaydedebilirsiniz. Ayrıca, dosyayı doğru şekilde görüntülemesi için bir Visual Studio de belirtebilirsiniz.
+Çift yönlü dilleri desteklemek için belirli karakter kodlamalı dosyaları kaydedebilirsiniz. Ayrıca, dosyayı doğru şekilde görüntülemesi için bir Visual Studio belirtebilirsiniz.
 
 ## <a name="to-save-a-file-with-encoding"></a>Bir dosyayı kodlama ile kaydetmek için
 
@@ -39,7 +39,7 @@ ms.locfileid: "122137385"
 
      Bu seçenek, dosyayı farklı bir işletim sisteminin kullanıcıları ile değiştirme amacınız varsa kullanışlıdır.
 
-     Belirli bir şekilde kodlanmış olduğunu bilirsiniz bir dosyayla çalışmak için, Visual Studio bu kodlamayı kullanmalarını sebilirsiniz. Kullandığınız yöntem, dosyanın projenizin bir parçası olup olmadığını bağlıdır.
+     Belirli bir şekilde kodlanmış olduğunu bilirsiniz bir dosyayla çalışmak için, Visual Studio bu kodlamayı kullanmalarını sebilirsiniz. Kullandığınız yöntem, dosyanın projenizin bir parçası olup olmadığına bağlıdır.
 
 > [!NOTE]
 > Proje dosyasını kodlamayla kaydetmek için, **projeyi** kaldırana kadar Dosyayı Farklı Kaydet seçeneği etkinleştirilmez.
@@ -50,13 +50,13 @@ ms.locfileid: "122137385"
 
 2. Birlikte **Aç iletişim** kutusunda, dosyayı açmak için düzenleyiciyi seçin.
 
-     Form Visual Studio gibi birçok farklı düzenleyici, kodlamayı otomatik olarak algılar ve dosyayı uygun şekilde açar. Kodlama seçmenize olanak sağlayan bir düzenleyici seçerseniz Kodlama **iletişim** kutusu görüntülenir.
+     Form Visual Studio gibi birçok farklı düzenleyici kodlamayı otomatik olarak algılar ve dosyayı uygun şekilde açar. Kodlama seçmenize olanak sağlayan bir düzenleyici seçerseniz Kodlama **iletişim** kutusu görüntülenir.
 
 3. Kodlama **iletişim** kutusunda düzenleyicinin kullanması gereken kodlamayı seçin.
 
 ## <a name="to-open-an-encoded-file-that-is-not-part-of-a-project"></a>Projenin parçası olan kodlanmış bir dosyayı açmak için
 
-1. Dosya menüsünde **Aç'ın** üzerine **gelin,** Dosya **veya Web'den** **Dosya'ya** tıklayın ve ardından açılacak dosyayı seçin.
+1. Dosya menüsünde **Aç'ın** üzerine **gelin,** Dosya **veya** **Web'den Dosya'ya** tıklayın ve ardından açılacak dosyayı seçin.
 
 2. Aç düğmesinin yanındaki açılan düğmeye tıklayın **ve Birlikte** Aç'ı **seçin.**
 

@@ -1,6 +1,6 @@
 ---
-title: 'Test Alanı 5: Kaynak Denetimi Ayarlarını | Microsoft Docs'
-description: Bu kaynak denetimi eklentisi test alanı, Kaynak Denetimi Değiştir komutunu kullanarak kaynak denetimin değiştirilmesini kapsar.
+title: 'Test alanı 5: kaynak denetimini değiştirme | Microsoft Docs'
+description: Bu kaynak denetimi eklentisi test alanı, kaynak denetimini Değiştir komutunu kullanarak kaynak denetiminin değiştirilmesini içerir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,52 +15,52 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 24cbcc50b3641bc62242ee7216d6ce4c1f290efd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122158781"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725772"
 ---
 # <a name="test-area-5-change-source-control"></a>Test Alanı 5: Kaynak Denetimini Değiştirme
-Bu kaynak denetimi eklentisi test alanı, Kaynak Denetimi Değiştir komutuyla kaynak **denetimin değiştirilmesini** kapsar.
+Bu kaynak denetimi eklentisi test alanı, kaynak denetimini **Değiştir** komutunu kullanarak kaynak denetiminin değiştirilmesini içerir.
 
- **Kaynak Denetimi Değiştir** komutu kullanıcı için dört temel işlev sağlar:
+ **Kaynak denetimini Değiştir** komutu, Kullanıcı için dört temel işlev sağlar:
 
-- **Bağlamak:**
+- **Bağladığınızda**
 
-   Kullanıcının bir çözüm/proje ile sürüm deposu arasında kaynak denetimi bağlantısı kurması veya yeniden kurması için izin verir.
+   Kullanıcının bir çözüm/proje ile sürüm deposu arasında bir kaynak denetimi bağlantısı kurmasını veya yeniden kurmasını sağlar.
 
-- **Unbind:**
+- **Kesin**
 
-   Bir projeyi/çözümü bağlantı başına kaynak denetiminden kaldırır.
+   Kaynak denetiminden bir proje/çözümü bağlantı başına temelinde kaldırır.
 
-- **Bağlan/Bağlantıyı Kes:**
+- **Bağlan/disconnect:**
 
-  Denetimli çözümün bağlı veya çevrimdışı durumunu açıp kapatarak 3. Alan'da ele alınamaz. Daha fazla bilgi için bkz. [Test Alanı 3: Kullanıma Alma/Kullanıma Almayı Geri Alma.](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)
+  , Alan 3 ' te ele alınan denetimli çözümün bağlı veya çevrimdışı durumuna geçer. Daha fazla bilgi için bkz. [test alanı 3: kullanıma almayı kullanıma alma/geri alma](../../extensibility/internals/test-area-3-check-out-undo-checkout.md).
 
-## <a name="command-menu-access"></a>Komut Menüsü Erişimi
- Test [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] çalışmalarında aşağıdaki tümleşik geliştirme ortamı menü yolu kullanılır.
+## <a name="command-menu-access"></a>Komut menüsü erişimi
+ Aşağıdaki [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tümleşik geliştirme ortamı menü yolu, test durumlarında kullanılır.
 
- Kaynak Denetimi Değiştir:**Dosya**, **Kaynak Denetimi**, **Kaynak Denetimi'nin Değişiklik.**
+ Kaynak denetimini Değiştir:**Dosya**, **kaynak denetimi**, **kaynak denetimini Değiştir**.
 
 ## <a name="test-cases"></a>Test Çalışmaları
- Aşağıda, Kaynak Denetimi Değiştir komut test **alanına özgü** test testleri yer almaktadır.
+ Aşağıda, **kaynak denetimi değiştir** komut testi alanı için özel test çalışmaları verilmiştir.
 
-### <a name="case-5a-bind"></a>Durum 5a: Bağlama
- Bağlama, kullanıcının seçilen projelere ve çözümlere kaynak kodu denetim bilgileri eklemelerini sağlar. Kullanıcıdan genellikle kaynak denetiminde bunların ekli olduğu bir projeyi tanımlaması istenir. Kullanıcı, bu işlem kapsamında kaynak denetiminde yeni bir proje oluşturamayebiliyor (Kaynak Denetimine Ekle ile karşıtlık).
+### <a name="case-5a-bind"></a>Case 5A: bağlama
+ Bağlama, kullanıcının seçili projelere ve çözümlere kaynak kodu denetim bilgisi eklemesine izin verir. Kullanıcıdan, genellikle bunların ekleneceği kaynak denetimindeki bir projeyi tanımlaması istenir. Kullanıcı bu işlemin bir parçası olarak kaynak denetiminde yeni bir proje oluşturmayabilir (kaynak denetimine Ekle ' ye kontrast).
 
-| Eylem | Test Adımları | Doğrulandı Beklenen Sonuçlar |
+| Eylem | Test adımları | Doğrulanacak beklenen sonuçlar |
 | - | - | - |
-| Boş konuma bağlama | 1. Proje oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Kaynak **Denetimi Değiştir iletişim** kutusunu açın (**Dosya**, **Kaynak Denetimi**, Kaynak **Denetimi Değiştir**).<br />4. **Bindirin'e tıklayın.**<br />5. Görünürse uyarı iletişim kutusunu kabul et.<br />6. Tüm öğeleri seçin.<br />7. **Bağla'ya tıklayın.**<br />8. Kaynak denetim deposu içinde boş bir konuma göz atma.<br />9. Kaynak **Denetimi** Değiştir iletişim **kutusunu kapatmak için Tamam'a** tıklayın.<br />10. Onay **iletişim kutusunda Bu bağlamalarla devam'a** tıklayın.<br />11. **Görünürse** uyarı iletişim kutusunda Tamam'a tıklayın.<br />12. Her şeyi kontrol edin. Bu adım başarılı olursa sonraki adıma geçin.<br />13. Kaynak denetiminden yeni bir konuma çözüm açın. | `Result from Step 12:`<br /><br /> Çözüm ve proje, sürüm deposuna bağlı ve yeni hedefe yazılır.<br /><br /> Çözüm ve proje dosyaları iade edilir.<br /><br /> Sürüm deposu proje hiyerarşisi, diskte projenin klasör hiyerarşisi ile eşler.<br /><br /> `Result from Step 13:`<br /><br /> Tüm proje öğeleri indirilir. |
-| İstemciyle eşitlenen konuma bağlama | 1. Proje oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Sürüm depolamada çözümün ve projenin bir kopyasını oluşturun (kullanıyorsanız Paylaş ve [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] Dal).<br />4. Kaynak **Denetimi Değiştir iletişim** kutusunu açın (**Dosya**, **Kaynak Denetimi**, Kaynak **Denetimi Değiştir**).<br />5. TümLerin Bindirin.<br />6. Kaynak **Denetimi Değiştir** iletişim kutusunu kapatmak **için Tamam'a** tıklayın.<br />7. Kaynak **Denetimi Değiştir iletişim kutusunu** yeniden açın.<br />8. Hepsini seçin.<br />9. **Bağla'ya tıklayın.**<br />10. Çözümün ve projenin dallı konuma göz atma (3. adımdan)<br />11. Kaynak **Denetimi** Değiştir iletişim **kutusunu kapatmak için Tamam'a** tıklayın.<br />12. Tüm öğeler için En Son'a recursively al. | Get sonrasındaki dosya içeriği, get'den öncekiyle aynıdır. |
-| İstemciyle eşitlenen konuma bağlama | 1. Proje oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Sürüm depolamada çözümün ve projenin bir kopyasını oluşturun (kullanıyorsanız Paylaş ve [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] Dal).<br />4. Sürüm deposuna dallı proje dosyaları değiştirme.<br />5. Kaynak **Denetimi Değiştir iletişim** kutusunu açın (**Dosya**, **Kaynak Denetimi**, Kaynak **Denetimi Değiştir**).<br />6. Tümlerin bindirin.<br />7. Kaynak **Denetimi Değiştir** iletişim kutusunu kapatmak **için Tamam'a** tıklayın.<br />8. Kaynak **Denetimi Değiştir iletişim kutusunu** yeniden açın.<br />9. Hepsini seçin.<br />10. **Bağla'ya tıklayın.**<br />11. Çözüm ve proje için dallı konuma göz atma.<br />12. Kaynak **Denetimi** Değiştir iletişim **kutusunu kapatmak için Tamam'a** tıklayın.<br />13. Görünürse Uyarı iletişim kutusunu kabul et.<br />14. Tüm öğeler için En Son tekrarlayıcıyı al. | 4. Adımda değiştirilen dosyalar da yerel olarak değiştirilir. |
-| Hiçbir zaman kaynak denetimi altında yer alan bağlama çözümü | 1. Kaynak denetiminde boş bir klasör oluşturun.<br />2. İstemci projesi oluşturma.<br />3. Kaynak **Denetimi Değiştir iletişim** kutusunu açın (**Dosya**, **Kaynak Denetimi**, Kaynak **Denetimi Değiştir**).<br />4. Çözümü kaynak denetiminde boş konuma bağlayın.<br />5. Kaynak **Denetimi** Değiştir iletişim **kutusunu kapatmak için Tamam'a** tıklayın.<br />6. Onay **iletişim kutusunda Bu bağlamalarla devam'a** tıklayın.<br />7. **Görünürse** uyarı iletişim kutusunda Tamam'a tıklayın. | Çözüm kaynak denetimine eklenir.<br /><br /> Çözüm ve proje kullanıma alınmış. |
-| Bağlamayı İptal Etme | 1. Proje oluşturun.<br />2. Çözümü kaynak denetimine ekleyin.<br />3. Kaynak Denetimi Değiştir iletişim kutusunu açın.<br />4. TümLerin Bindirin.<br />5. İletişim **kutusunu** kapatmak için Tamam düğmesine tıklayın. Bu adım başarılı olursa sonraki adıma geçin.<br />6. Kaynak Denetimi **Değiştir iletişim kutusunu** yeniden açın.<br />7. Ilgisiz konuma bağlama.<br />8. **İptal'e tıklayın.** | `Result from Step 5:`<br /><br /> Çözüm artık kaynak denetimi altında değil<br /><br /> `Result from Step 8:`<br /><br /> Çözüm hala kaynak denetimi altında DEĞIL. |
+| Boş konuma bağla | 1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. **kaynak denetimini Değiştir** iletişim kutusunu açın (**Dosya**, **kaynak denetimi**, **kaynak denetimini değiştirin**).<br />4. **ciltten çıkar**'a tıklayın.<br />5. görüntülenirse uyarı iletişim kutusunu kabul edin.<br />6. tüm öğeleri seçin.<br />7. **bağla**'yı tıklatın.<br />8. kaynak denetim deposundaki boş bir konuma gidin.<br />9. **kaynak denetimini Değiştir** iletişim kutusunu kapatmak için **Tamam** 'a tıklayın.<br />10. onay iletişim kutusunda **Bu bağlamalarla devam et** ' e tıklayın.<br />11. görüntülenirse, uyarı iletişim kutusunda **Tamam** ' a tıklayın.<br />12. her şeyi iade edin. Bu adım başarılı olursa sonraki adımla devam edin.<br />13. kaynak denetiminden yeni bir konuma çözüm açın. | `Result from Step 12:`<br /><br /> Çözüm ve proje, sürüm deposundaki yeni hedefe bağlanır ve bu hedefe yazılır.<br /><br /> Çözüm ve proje dosyaları iade edilir.<br /><br /> Sürüm deposu proje hiyerarşisi diskteki projenin klasör hiyerarşisine eşleşiyor.<br /><br /> `Result from Step 13:`<br /><br /> Tüm proje öğeleri indirilir. |
+| İstemcisiyle eşitlenmiş konuma bağlama | 1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. sürüm deposunda çözüm ve proje yinelemesi oluşturun (Eğer kullanıyorsanız, paylaşma ve dalı [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] ).<br />4. **kaynak denetimini Değiştir** iletişim kutusunu açın (**Dosya**, **kaynak denetimi**, **kaynak denetimini değiştirin**).<br />5. tümünün bağlantısını kaldır.<br />6. **Tamam** 'A tıklayarak **kaynak denetimini Değiştir** iletişim kutusunu kapatın.<br />7. **kaynak denetimini Değiştir** iletişim kutusunu yeniden açın.<br />8. tümünü seçin.<br />9. **bağla**'yı tıklatın.<br />10. çözümün ve projenin dallanmış konumuna gidin (adım 3 ' ten)<br />11. **kaynak denetimini Değiştir** iletişim kutusunu kapatmak için **Tamam** 'a tıklayın.<br />12. tüm öğeler için yinelemeli olarak en son alın. | Get öğesinden sonra dosya içeriği, Get öncesindeki ile aynı olur. |
+| İstemci ile eşitlenmemiş konuma bağlama | 1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. sürüm deposunda çözüm ve proje yinelemesi oluşturun (Eğer kullanıyorsanız, paylaşma ve dalı [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)] ).<br />4. Sürüm deposundaki dallanmış projedeki dosyaları değiştirin.<br />5. **kaynak denetimini Değiştir** iletişim kutusunu açın (**Dosya**, **kaynak denetimi**, **kaynak denetimini değiştirin**).<br />6. tümünün bağlantısını kaldır.<br />7. **Tamam** 'A tıklayarak **kaynak denetimini Değiştir** iletişim kutusunu kapatın.<br />8. **kaynak denetimini Değiştir** iletişim kutusunu yeniden açın.<br />9. tümünü seçin.<br />10. **bağla**' ya tıklayın.<br />11. çözüm ve proje için dallanmış konuma gidin.<br />12. **kaynak denetimini Değiştir** iletişim kutusunu kapatmak için **Tamam** 'a tıklayın.<br />13. görüntülenirse uyarı iletişim kutusunu kabul edin.<br />14. tüm öğeler için en son özyinelemeli alın. | Adım 4 ' te değiştirilen dosyalar da yerel olarak değiştirilir. |
+| Kaynak denetimi altında hiç bir şekilde bağlama çözümü | 1. kaynak denetiminde boş bir klasör oluşturun.<br />2. bir istemci projesi oluşturun.<br />3. **kaynak denetimini Değiştir** iletişim kutusunu açın (**Dosya**, **kaynak denetimi**, **kaynak denetimini değiştirin**).<br />4. çözümü kaynak denetimindeki boş konuma bağlayın.<br />5. **kaynak denetimini Değiştir** iletişim kutusunu kapatmak için **Tamam** 'a tıklayın.<br />6. onay iletişim kutusunda **Bu bağlamalara devam et** ' e tıklayın.<br />7. görüntülenirse, uyarı iletişim kutusunda **Tamam** ' a tıklayın. | Çözüm, kaynak denetimine eklenir.<br /><br /> Çözüm ve proje kullanıma alındı. |
+| Bağlamayı iptal et | 1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. kaynak denetimini Değiştir iletişim kutusunu açın.<br />4. tümünün bağlantısını kaldır.<br />5. iletişim kutusunu kapatmak için **Tamam** düğmesine tıklayın. Bu adım başarılı olursa sonraki adımla devam edin.<br />6. **kaynak denetimini Değiştir** iletişim kutusunu yeniden açın.<br />7. ilişkisiz konuma bağlayın.<br />8. **Iptal 'e** tıklayın. | `Result from Step 5:`<br /><br /> Çözüm artık kaynak denetimi altında değil<br /><br /> `Result from Step 8:`<br /><br /> Çözüm hala kaynak denetimi altında DEĞIL. |
 
-### <a name="case-5b-unbind"></a>Olay 5b: Bindirin
- Unbind, projelerden ve çözümlerinden kaynak kodu denetim bilgilerini kaldırır. Etkilenen projeler ve çözüm, kullanıcı seçiminin bir karışımına ve öğelerin kaynak denetimine nasıl eklendiğine dayalıdır.
+### <a name="case-5b-unbind"></a>Case 5B: ciltten çıkar
+ Ciltten Çıkar, projelerden ve çözümlerinin kaynak kodu denetim bilgilerini kaldırır. Etkilenen projeler ve çözüm, Kullanıcı seçiminin bir karışımını ve öğelerin kaynak denetimine Eklenme şeklini temel alır.
 
-|Eylem|Test Adımları|Doğrulanacak beklenen sonuçlar|
+|Eylem|Test adımları|Doğrulanacak beklenen sonuçlar|
 |------------|----------------|--------------------------------|
 |Bir dosya sistemi veya yerel IIS Web projesi ve bir istemci projesi içeren çözümün bağlantısını kaldır|1. bir dosya sistemi veya yerel IIS Web projesi oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. çözüme yeni bir istemci projesi ekleyin.<br />4. istenirse çözümü kullanıma alma kabul edin.<br />5. **kaynak denetimini Değiştir** iletişim kutusunu açın.<br />6. **ciltten çıkar**'a tıklayın.<br />7. iletişim kutusunu kapatmak için **Tamam 'ı** tıklatın.<br />8. çözümü, projeyi, çözüm öğelerini, proje öğelerini kullanıma alma girişimi.|Çözüm ve projeler kaynak denetimi altında DEĞIL.<br /><br /> Kaynak denetimi menü komutları görünmüyor.|
 |Kesme bağlantısını iptal et|1. bir proje oluşturun.<br />2. çözümü kaynak denetimine ekleyin.<br />3. **kaynak denetimini Değiştir** iletişim kutusunu açın.<br />4. **Tümünü çöz**' e tıklayın.<br />5. **Iptal 'e** tıklayın.|Çözüm, kaynak denetimi altında.|

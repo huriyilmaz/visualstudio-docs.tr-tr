@@ -17,11 +17,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c2708f2cdf4d2bb9150eaf1b5f235ddecc4164e3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122050539"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726970"
 ---
 # <a name="process_info_flags"></a>PROCESS_INFO_FLAGS
 
@@ -51,10 +51,10 @@ enum enum_PROCESS_INFO_FLAGS {
 ## <a name="fields"></a>Alanlar
 
 `PIFLAG_SYSTEM_PROCESS`\
-sürecin bir sistem işlemi olduğunu gösterir.
+Sürecin bir sistem işlemi olduğunu gösterir.
 
 `PIFLAG_DEBUGGER_ATTACHED`\
-Bir hata ayıklayıcı tarafından işlemde hata ayıklandı olduğunu gösterir. Bu bir hata ayıklayıcısı veya winDbg gibi başka bir [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı olabilir.
+Bir hata ayıklayıcı tarafından işlemde hata ayıklandı olduğunu gösterir. Bu bir hata ayıklayıcısı veya winDbg gibi başka [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] bir hata ayıklayıcı olabilir.
 
 `PIFLAG_PROCESS_STOPPED`\
 sürecin durdurulmuş olduğunu gösterir. Yalnızca aynı zamanda `PIFLAG_DEBUGGER_ATTACHED` belirtilmişse geçerlidir. 2005 Visual Studio sonraki bir yıl içinde kullanılabilir.

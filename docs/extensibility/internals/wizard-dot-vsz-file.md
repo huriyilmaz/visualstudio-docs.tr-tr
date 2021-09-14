@@ -16,11 +16,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: cf6d381ff163711eb1026071a91660d74d835c71
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122041769"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726913"
 ---
 # <a name="wizard-vsz-file"></a>Sihirbaz (.Vsz) Dosyası
 
@@ -39,7 +39,7 @@ Param="WIZARDUI = FALSE"
 
 . Vsz dosyasındaki parçalar aşağıda verilmiştir.
 
-|Bölüm|Açıklama|
+|Bölüm|Description|
 |----------|-----------------|
 |VSWizard|Dosyadaki ilk parametre, şablon dosya biçiminin sürüm numarasıdır. Bu sürüm numarası 6,0, 7,0, 7,1 veya 8,0 olmalıdır. Diğer sayılar başlatılamaz ve geçersiz biçim hatasına neden olabilir.|
 |Ekleme|Bu alan, sihirbazın OLE ProgID 'sini veya alternatif olarak IDE tarafından birlikte oluşturulan sihirbazın CLSID 'inin GUID dize gösterimini içerir.|

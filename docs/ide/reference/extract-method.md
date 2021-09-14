@@ -15,11 +15,11 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 28595d4ed837249385a18b4a60cd12f1713b5640
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122101433"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725738"
 ---
 # <a name="extract-a-method-refactoring"></a>Bir yöntemi yeniden düzenlemeyi Ayıkla
 

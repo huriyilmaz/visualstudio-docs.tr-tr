@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 6e90d81f857aa0088288a1d54db72e3d5de86787
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122091030"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725473"
 ---
 # <a name="idiasymbolget_addresssection"></a>IDiaSymbol::get_addressSection
 Bir adres konumunun bölüm kısmını alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) olarak ayarlandığında kullanın `LocIsStatic` .

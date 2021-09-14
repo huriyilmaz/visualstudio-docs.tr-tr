@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl kullanılır: Bir veri kaynağını konak denetiminden verilerle güncelleştirme'
-description: Bir veri kaynağına konak denetimi bağlamayı ve veri kaynağını denetimde verilerde yapılan değişikliklerle güncelleştirmeyi öğrenin.
+description: Bir konak denetimine veri kaynağı bağlamayı ve veri kaynağını denetimde verilerde yapılan değişikliklerle güncelleştirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -20,11 +20,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: d389e4f3e2b8bdf4348508760b6894c0eeaf1ec7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122026011"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725548"
 ---
 # <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>Nasıl kullanılır: Bir veri kaynağını konak denetiminden verilerle güncelleştirme
   Bir konak denetimi bir veri kaynağına bağlanabilir ve veri kaynağını denetimde verilerde yapılan değişikliklerle güncelleştirebilirsiniz. Bu süreçte iki ana adım vardır:
@@ -48,7 +48,7 @@ ms.locfileid: "122026011"
 
 - Denetimi <xref:System.Windows.Forms.Binding.WriteValue%2A> veri <xref:System.Windows.Forms.Binding> kaynağına bağlayan nesnesinin yöntemini çağırma.
 
-     Aşağıdaki örnek, çalışma sayfasındaki bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimde yapılan Excel veri kaynağına kaydeder. Bu örnekte, bir veri kaynağında <xref:Microsoft.Office.Tools.Excel.NamedRange> bir alana bağlı olan `namedRange1` <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> özelliğiyle adlı bir denetimin olduğu varsaymaktadır.
+     Aşağıdaki örnek, çalışma sayfasındaki bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimde Excel yapılan değişiklikleri veri kaynağına kaydeder. Bu örnekte, bir veri kaynağında <xref:Microsoft.Office.Tools.Excel.NamedRange> bir alana bağlı olan `namedRange1` <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> özelliğiyle adlı bir denetimin olduğu varsaymaktadır.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs" id="Snippet1":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb" id="Snippet1":::
@@ -74,7 +74,7 @@ ms.locfileid: "122026011"
 
 #### <a name="to-set-a-control-to-automatically-update-the-in-memory-data-source-by-using-the-designer"></a>Tasarımcıyı kullanarak bellek içinde veri kaynağını otomatik olarak güncelleştirmek için bir denetim ayarlamak için
 
-1. Bu Visual Studio Word belgesini veya Excel çalışma kitabını açın.
+1. Bu Visual Studio Word belgesini veya Excel çalışma kitabını tasarımcıda açın.
 
 2. Veri kaynağını otomatik olarak güncelleştirmek istediğiniz denetime tıklayın.
 
@@ -124,4 +124,4 @@ ms.locfileid: "122026011"
 - [Nasıl kullanılır: Çalışma sayfalarını veritabanındaki verilerle doldurmak](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
 - [Nasıl kullanılır: Belgeleri nesnelerden verilerle doldurmak](../vsto/how-to-populate-documents-with-data-from-objects.md)
 - [Nasıl kullanılır: Belgeleri bir veritabanındaki verilerle doldurmak](../vsto/how-to-populate-documents-with-data-from-a-database.md)
-- [Nasıl kullanılır: Belgeleri hizmetlerden gelen verilerle doldurmak](../vsto/how-to-populate-documents-with-data-from-services.md)
+- [Nasıl kullanılır: Belgeleri hizmet verileriyle doldurmak](../vsto/how-to-populate-documents-with-data-from-services.md)

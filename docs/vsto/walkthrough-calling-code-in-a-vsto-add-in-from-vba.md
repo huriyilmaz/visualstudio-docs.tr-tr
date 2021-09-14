@@ -1,6 +1,6 @@
 ---
 title: "Kılavuz: VBA'dan VSTO eklentisinde kod çağırma"
-description: Visual Basic for Applications (VBA) ve COM eklentilerini içeren VSTO eklentisinde bir nesneyi diğer Microsoft Office çözümlerine VSTO öğrenin.
+description: Visual Basic for Applications (VBA) ve COM eklentilerini içeren VSTO eklentisinde bir nesneyi Microsoft Office eklentisinde nasıl VSTO öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -22,11 +22,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: edde3dc96ed0440981b79828c82331608e0f2f7a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122147641"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726101"
 ---
 # <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>Kılavuz: VBA'dan VSTO eklentisinde kod çağırma
   Bu kılavuzda, Visual Basic for Applications (VBA) ve COM eklentilerini içeren VSTO Eklentisinde bir nesnenin Microsoft Office çözümlerde nasıl VSTO gösterileceğini gösterir.
@@ -53,18 +53,18 @@ ms.locfileid: "122147641"
 - Microsoft Excel
 
 ## <a name="create-the-vsto-add-in-project"></a>VSTO Eklenti projesini oluşturma
- İlk adım, VSTO için bir Eklenti projesi Excel.
+ İlk adım, VSTO için bir eklenti projesi Excel.
 
 ### <a name="to-create-a-new-project"></a>Yeni proje oluşturmak için
 
-1. Excel VSTO Eklenti proje şablonunu kullanarak **ExcelImportData** Excel VSTO bir eklenti projesi oluşturun. Daha fazla bilgi için, [bkz. How to: Create Office Projects in Visual Studio.](../vsto/how-to-create-office-projects-in-visual-studio.md)
+1. Excel VSTO Excel VSTO Add-in proje şablonunu kullanarak **ExcelImportData** Excel VSTO bir Eklenti projesi oluşturun. Daha fazla bilgi için, [bkz. How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn.cs** veya **ThisAddIn.vb** kod dosyasını açar ve **ExcelImportData** projesini **Çözüm Gezgini.**
 
 ## <a name="define-a-class-that-you-can-expose-to-other-office-solutions"></a>Diğer çözüm çözümlerine açık bir sınıf Office tanımlama
- Bu kılavuzda amaç, VBA kodundan eklentiyi kullanarak VSTO `ImportData` `AddInUtilities` yöntemini çağırabilirsiniz. Bu yöntem, etkin çalışma sayfasının A1 hücresine bir dize yazar.
+ Bu kılavuzda amaç, VBA kodundan eklentiyi kullanarak VSTO `ImportData` `AddInUtilities` yöntemine çağrı yapmaktır. Bu yöntem, etkin çalışma sayfasının A1 hücresine bir dize yazar.
 
- Sınıfı diğer `AddInUtilities` çözüm çözümlerine Office için, sınıfı genel ve COM'a görünür hale gelir. Ayrıca sınıfında [IDispatch arabirimini](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) de açığa çıkarmalısiniz. Aşağıdaki yordamda yer alan kod, bu gereksinimleri karşılamanın bir yolunu gösteriyor. Daha fazla bilgi için [bkz. Diğer VSTO Çözümlerinden Eklentilerde Kod Office Çağırma.](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
+ Sınıfı diğer `AddInUtilities` çözüm çözümlerine Office için, sınıfı genel ve COM'da görünür hale gelir. Ayrıca sınıfında [IDispatch arabirimini](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) de açığa çıkarmalısiniz. Aşağıdaki yordamda yer alan kod, bu gereksinimleri karşılamanın bir yolunu gösteriyor. Daha fazla bilgi için [bkz. Diğer VSTO Çözümlerinden Eklentilerde Kod Office Çağırma.](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
 
 ### <a name="to-define-a-class-that-you-can-expose-to-other-office-solutions"></a>Diğer çözüm çözümlerine açık bir sınıf Office için
 
@@ -72,7 +72,7 @@ ms.locfileid: "122147641"
 
 2. Yeni Öğe **Ekle iletişim** kutusunda, yeni sınıfın adını **AddInUtilities olarak değiştirin** ve Ekle'ye **tıklayın.**
 
-     **AddInUtilities.cs** veya **AddInUtilities.vb** dosyası Kod Düzenleyicisi'nde açılır.
+     **Kod Düzenleyicisi'nde AddInUtilities.cs** veya **AddInUtilities.vb** dosyası açılır.
 
 3. Aşağıdaki yönergeleri dosyanın en üstüne ekleyin.
 
@@ -84,7 +84,7 @@ ms.locfileid: "122147641"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs" id="Snippet3":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb" id="Snippet3":::
 
-     Bu kod, `AddInUtilities` sınıfı COM'da görünür hale gelir ve `ImportData` sınıfına yöntemini ekler. [IDispatch arabirimini](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) açığa çıkarmak için sınıfı özniteliğine de sahiptir ve `AddInUtilities` COM tarafından <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> görülebilen bir arabirim uygulamaz.
+     Bu kod, `AddInUtilities` sınıfı COM'da görünür hale gelir ve `ImportData` sınıfına yöntemini ekler. [IDispatch arabirimini](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) ortaya çıkarmak için sınıfı özniteliğine de sahiptir ve `AddInUtilities` COM tarafından <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> görülebilen bir arabirim uygulamaz.
 
 ## <a name="expose-the-class-to-other-office-solutions"></a>Sınıfını diğer Office ortaya çıkarma
  Sınıfı diğer `AddInUtilities` çözüm çözümlerine Office için <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> sınıfındaki yöntemini geçersiz `ThisAddIn` kılın. Geçersiz kılmada sınıfının bir örneğini `AddInUtilities` geri dön.
@@ -105,13 +105,13 @@ ms.locfileid: "122147641"
      Çözümün hatasız olarak derlemesi olduğunu doğrulayın.
 
 ## <a name="test-the-vsto-add-in"></a>VSTO Eklentiyi Test
- Çeşitli farklı türlerde `AddInUtilities` farklı çözümlerden sınıfına çağrı Office. Bu kılavuzda, bir çalışma kitabında VBA Excel kullansınız. Kullanabileceğiniz diğer çözüm türleri Office için bkz. Diğer VSTO çözümlerinden [eklentilerde kod Office çağırma.](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
+ Çeşitli farklı türlerde `AddInUtilities` çözümlerden sınıfına çağrı Office. Bu kılavuzda, bir çalışma kitabında VBA Excel kullansınız. Kullanabileceğiniz diğer Office hakkında daha fazla bilgi için bkz. Diğer VSTO çözümlerinden [eklentilerde kod Office.](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
 
 ### <a name="to-test-your-vsto-add-in"></a>Eklentinizi VSTO için
 
 1. Projenizi **çalıştırmak için F5** tuşuna basın.
 
-2. Bu Excel çalışma kitabını bir çalışma kitabı Excel Macro-Enabled (*.xlsm) olarak kaydedin. Masaüstü gibi uygun bir konuma kaydedin.
+2. Bu Excel çalışma kitabını çalışma kitabı (*.xlsm) Excel Macro-Enabled çalışma kitabı olarak kaydedin. Masaüstü gibi uygun bir konuma kaydedin.
 
 3. Şeritte Geliştirici **sekmesine** tıklayın.
 
@@ -145,18 +145,18 @@ ms.locfileid: "122147641"
 9. Çıkış Excel.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Aşağıdaki konulardan eklentilerini programlama VSTO daha fazla bilgi edinmek için:
+ Aşağıdaki konulardan ek eklentilerini VSTO programlama hakkında daha fazla bilgi edinmek için:
 
 - Konak uygulamasını `ThisAddIn` otomatikleştirmek ve eklenti projelerinde diğer görevleri gerçekleştirmek VSTO sınıfını kullanın. Daha fazla bilgi için [bkz. Program VSTO Eklentileri.](../vsto/programming-vsto-add-ins.md)
 
-- Bir eklentide özel VSTO bölmesi oluşturun. Daha fazla bilgi için [bkz. Özel görev bölmeleri](../vsto/custom-task-panes.md) [ve Nasıl ekleyebilirsiniz: Uygulamaya özel görev bölmesi ekleme.](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)
+- Bir eklentide özel bir VSTO bölmesi oluşturun. Daha fazla bilgi için [bkz. Özel görev bölmeleri](../vsto/custom-task-panes.md) [ve Nasıl ekleyebilirsiniz: Uygulamaya özel görev bölmesi ekleme.](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)
 
-- Eklentinin bir VSTO özelleştirin. Daha fazla bilgi için [bkz. Şerit](../vsto/ribbon-overview.md) [genel bakış ve Nasıl Kullanmaya başlayın özelleştirme.](../vsto/how-to-get-started-customizing-the-ribbon.md)
+- Eklentinin bir VSTO özelleştirin. Daha fazla bilgi için [bkz.](../vsto/ribbon-overview.md) [Şerit'e genel bakış ve Kullanmaya başlayın özelleştirme.](../vsto/how-to-get-started-customizing-the-ribbon.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Program VSTO Eklentileri](../vsto/programming-vsto-add-ins.md)
 - [Diğer VSTO çözümlerinden eklentilerde kod Office çağırma](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
 - [Yeni Office geliştirme](../vsto/developing-office-solutions.md)
-- [Nasıl Office: Visual Studio'da Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [Nasıl Office: Office projelerini Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)
 - [VSTO Eklentileri Mimarisi](../vsto/architecture-of-vsto-add-ins.md)
 - [Genişletilebilirlik arabirimlerini kullanarak kullanıcı arabirimi özelliklerini özelleştirme](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)

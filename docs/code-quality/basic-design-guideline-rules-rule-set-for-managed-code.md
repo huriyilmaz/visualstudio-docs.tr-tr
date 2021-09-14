@@ -1,7 +1,7 @@
 ---
 title: Yönetilen kod için Temel Tasarım Yönerge Kuralları kural kümesi
 ms.date: 11/04/2016
-description: Visual Studio'de, kodun daha kolay anlaşılır ve kullanımı kolay hale Visual Studio Temel Tasarım Kılavuzu Kuralları kural kümesi hakkında bilgi edinebilirsiniz. Kural açıklamalarını görme.
+description: kodun anlaşılması ve kullanılması daha kolay hale getirmeye yardımcı olabilecek Visual Studio ' de ayarlanan temel tasarım kılavuz kuralları kuralı hakkında bilgi edinin. Bkz. kural açıklamaları.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 7eb384f5-f961-400b-b151-115d92addc6a
@@ -12,21 +12,21 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
 ms.openlocfilehash: ea01858239cff0c189149598abf96fd5024ca2f1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122053272"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632979"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>Yönetilen kod için Temel Tasarım Yönerge Kuralları kural kümesi
 
-Kodunuzun daha kolay anlaşılır ve kullanımına odaklanmak için Microsoft Basic Tasarım Kılavuzu Kuralları kural kümesi kullanabilirsiniz. Projeniz kitaplık koduna sahipse veya bakımı kolay kod için en iyi yöntemleri zorunlu tutulacaksa bu kural kümesine dahil edin.
+Kodunuzun anlaşılması ve kullanılması daha kolay hale getirilmesi üzerine odaklanmak için Microsoft temel tasarım kılavuzu kuralları kural kümesini kullanabilirsiniz. Projeniz kitaplık kodu içeriyorsa veya bakımı kolay olan kod için en iyi yöntemleri zorlamak istiyorsanız bu kural kümesini dahil etmelisiniz.
 
-Temel Tasarım Kılavuzu Kuralları, Yönetilen Önerilen Kurallar kural [kümesinde yer alan tüm kuralları](managed-recommended-rules-rule-set-for-managed-code.md) içerir.
+Temel tasarım kılavuz kuralları, [yönetilen önerilen kurallar](managed-recommended-rules-rule-set-for-managed-code.md) kural kümesindeki tüm kuralları içerir.
 
-Aşağıdaki tabloda Microsoft Temel Tasarım Kılavuzu Kuralları kural kümesinde yer alan tüm kurallar açıkılmıştır.
+Aşağıdaki tabloda, Microsoft temel tasarım kılavuzu kuralları kural kümesindeki tüm kurallar açıklanmaktadır.
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA1000](/dotnet/fundamentals/code-analysis/quality-rules/ca1000)|Genel türlerde statik üyeler belirtme|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
@@ -132,7 +132,7 @@ Aşağıdaki tabloda Microsoft Temel Tasarım Kılavuzu Kuralları kural kümesi
 |[CA2137](../code-quality/ca2137.md)|Saydam metotlar yalnızca doğrulanabilir IL içermelidir|
 |[CA2138](../code-quality/ca2138.md)|Saydam metotlar SuppressUnmanagedCodeSecurity özniteliğine sahip metotları çağırmamalıdır|
 |[CA2140](../code-quality/ca2140.md)|Saydam kod güvenlik kritik nesnelerine başvurmamalıdır|
-|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler LinkDemands'i karşılamamalı|
+|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler bağlantı taleplerini karşılamamalıdır|
 |[CA2146](../code-quality/ca2146.md)|Türler en az kendi taban türleri ve arabirimleri kadar kritik olmalıdır|
 |[CA2147](../code-quality/ca2147.md)|Saydam metotlar güvenlik onay deyimlerini kullanmamalıdır|
 |[CA2149](../code-quality/ca2149.md)|Saydam metotlar yerel kod içine çağırmamalıdır|

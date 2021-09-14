@@ -1,22 +1,22 @@
 ---
 title: Derleme Sistemini Özelleştirme
-description: Bu makale, Mac için Visual Studio tarafından kullanılan MSBuild derleme sistemine kısa bir Mac için Visual Studio
+description: Bu makale, MSBuild tarafından kullanılan MSBuild kısa bir giriştir Mac için Visual Studio
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
 ms.openlocfilehash: 97416ef126ee77f9955d8fa486d7bb7e2ceb725e
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123962123"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726020"
 ---
 # <a name="customizing-the-build-system"></a>Derleme sistemini özelleştirme
 
 MSBuild, microsoft tarafından geliştirilen ve öncelikli olarak .NET uygulamalarının derlemeye olanak sağlayan bir derleme altyapısıdır. Mono çerçevesinin microsoft'un Derleme Altyapısı'nın xbuild adlı kendi **uygulaması da vardır.** Ancak xbuild, tüm işletim sistemlerinde MSBuild kullanımdan çıkarıldı.
 
-**MSBuild** için birincil olarak projelerde derleme sistemi olarak Mac için Visual Studio.
+**MSBuild** için birincil olarak, Mac için Visual Studio'daki projeler için derleme sistemi olarak kullanılır.
 
 MSBuild, kaynak dosyalar gibi bir dizi giriş alıp yürütülebilir dosyalar gibi çıkışlara dönüştürerek çalışır. Derleyici gibi araçları kullanarak bu çıkışı elde ediyor.
 
@@ -26,13 +26,13 @@ MSBuild projenizin parçası olan Öğeleri (görüntü kaynakları gibi) ve pro
 
 ### <a name="viewing-the-msbuild-file"></a>MSBuild görüntüleme
 
-Proje MSBuild sağ tıklar ve Bulıcı'da Ortaya Çıkar'ı seçerek **bir dosya bulun.** Bulıcı penceresi, aşağıdaki görüntüde gösterildiği gibi dosya dahil olmak üzere projeniz ile `.csproj` ilgili tüm dosyaları ve klasörleri görüntüler:
+Proje MSBuild sağ tıklar ve Bulıcı'da Ortaya Çıkar'ı seçerek **dosyanın adını bulun.** Bulıcı penceresi, aşağıdaki görüntüde gösterildiği gibi dosya dahil olmak üzere projeniz ile `.csproj` ilgili tüm dosyaları ve klasörleri görüntüler:
 
 ![Bulıcı'da csproj konumu](media/customizing-build-system-image1.png)
 
 dosyasını yeni bir sekmede görüntülemek Mac için Visual Studio proje adınıza sağ tıklayın ve Dosya Düzenle'ye > `.csproj` **göz atabilirsiniz:**
 
-![kaynak düzenleyicisinde csproj'ı açma](media/customizing-build-system-image2.png)
+![csproj'ı kaynak düzenleyicide açma](media/customizing-build-system-image2.png)
 
 ### <a name="composition-of-the-msbuild-file"></a>Dosyanın MSBuild oluşturma
 
@@ -50,11 +50,11 @@ Genellikle, proje bir dosyayı da içeri `.targets` aktarır. Bu dosya, çeşitl
 <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 ```
 
-Hedefler dosyası bir diğer MSBuild dosyasıdır. Bu dosya MSBuild proje tarafından yeniden kullanılabilir bir kod içerir. Örneğin, özelliğiyle (veya değişkeniyle) temsil edilen bir dizinde bulunan dosya, C# kaynak dosyalarından C# derlemeleri derleme `Microsoft.CSharp.targets` `MSBuildBinPath` mantığını içerir.
+Hedefler dosyası bir diğer MSBuild dosyasıdır. Bu dosya, MSBuild proje tarafından yeniden kullanılabilir bir kod içerir. Örneğin, özelliğiyle (veya değişkeniyle) temsil edilen bir dizinde bulunan dosya, C# kaynak dosyalarından C# derlemeleri derleme `Microsoft.CSharp.targets` `MSBuildBinPath` mantığını içerir.
 
 ### <a name="items-and-properties"></a>Öğeler ve özellikler
 
-Veri verilerinde iki temel veri MSBuild *vardır: öğeler* ve *özellikler*, aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmıştır.
+Veri verilerinde iki temel veri MSBuild *vardır:* öğeler ve *özellikler*, aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmıştır.
 
 #### <a name="properties"></a>Özellikler
 
@@ -76,11 +76,11 @@ Bir PropertyGroup kullanılarak ayarlanır ve herhangi bir sayıda özellik içe
 </PropertyGroup>
 ```
 
-Özellikler, söz dizimi kullanılarak ifadelerden `$()` başvurulabilirsiniz. Örneğin, `$(Foo)` özelliğinin değeri olarak `Foo` değerlendirilir. Özellik ayarlanmazsa, herhangi bir hata olmadan boş bir dize olarak değerlendirilir.
+Özellikler, söz dizimi kullanılarak ifadelerden `$()` başvurul olabilir. Örneğin, `$(Foo)` özelliğinin değeri olarak `Foo` değerlendirilir. Özellik ayarlanmazsa, herhangi bir hata olmadan boş bir dize olarak değerlendirilir.
 
 #### <a name="items"></a>Öğeler
 
-Öğeler, derleme sistemine girişlerle listeler veya kümeler olarak ilgilenmek için bir yol sağlar ve genellikle dosyaları temsil eder. Her öğenin bir öğe *türü, öğe* özellikleri *ve* isteğe bağlı rastgele meta verileri *vardır.* Tek MSBuild üzerinde çalışmayabilirsiniz; öğe kümesi olarak adlandırılan bir türdeki tüm öğeleri *alır*
+Öğeler, derleme sistemine girişlerle listeler veya kümeler olarak ilgilenmek için bir yol sağlar ve genellikle dosyaları temsil eder. Her öğenin bir öğe *türü, öğe* özellikleri *ve* isteğe bağlı rastgele meta *verileri vardır.* Tek MSBuild üzerinde çalışmayabilirsiniz; öğe kümesi olarak adlandırılan bir türdeki tüm öğeleri *alır*
 
 Öğeler bir bildirerek `ItemGroup` oluşturulur. Herhangi bir sayıda öğe içeren herhangi bir sayıda ItemGroup olabilir.
 

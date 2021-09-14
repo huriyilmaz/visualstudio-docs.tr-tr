@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: cb62849f82b2fdbbcc6e2942fbeebcb7c1dd60d3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122079525"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725232"
 ---
 # <a name="idebugcustomattribute"></a>IDebugCustomAttribute
 Bu arabirim özel bir özniteliği temsil eder ve özniteliğin adını, üst ve sınıf türünü sağlar.
@@ -36,7 +36,7 @@ IDebugCustomAttribute : IUnknown
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  Next çağrısı bu [arabirimi](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) döndürür. [EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md) yöntemine yapılan bir [çağrı, IEnumDebugCustomAttributes arabirimini](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) döndürür.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
  Aşağıdaki tabloda yöntemlerini `IDebugCustomAttribute` gösterir.
 
 |Yöntem|Açıklama|

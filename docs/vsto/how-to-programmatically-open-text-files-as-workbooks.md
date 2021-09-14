@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl kullanılır: Program aracılığıyla metin dosyalarını çalışma kitapları olarak açma'
-description: Bir metin dosyasını program Visual Studio çalışma kitabı olarak açmak için Microsoft Excel öğrenin.
+description: Bir metin dosyasını program Visual Studio bir çalışma kitabı olarak açmak için Microsoft Excel öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -18,11 +18,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 68ee509eca06d6785f47fc776ad42c9f010b5219
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122106048"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725565"
 ---
 # <a name="how-to-programmatically-open-text-files-as-workbooks"></a>Nasıl kullanılır: Program aracılığıyla metin dosyalarını çalışma kitapları olarak açma
   Bir metin dosyasını çalışma kitabı olarak açabilirsiniz. Açmak istediğiniz metin dosyasının adını geçmelisiniz. Hangi satır numarasının ayrıştırmaya başlayacağı ve dosyadaki verilerin sütun biçimi gibi birkaç isteğe bağlı parametre belirtebilirsiniz.
@@ -42,7 +42,7 @@ ms.locfileid: "122106048"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma kitaplarıyla çalışma](../vsto/working-with-workbooks.md)
-- [Nasıl yapılanlar: Program aracılığıyla çalışma kitaplarını açma](../vsto/how-to-programmatically-open-workbooks.md)
+- [Nasıl musunuz: Program aracılığıyla çalışma kitaplarını açma](../vsto/how-to-programmatically-open-workbooks.md)
 - [Nasıl musunuz: Program aracılığıyla yeni çalışma kitapları oluşturma](../vsto/how-to-programmatically-create-new-workbooks.md)
 - [Nasıl yapılanlar: Program aracılığıyla çalışma kitaplarını kaydetme](../vsto/how-to-programmatically-save-workbooks.md)
 - [Nasıl yapılanlar: Program aracılığıyla çalışma kitaplarını kapatma](../vsto/how-to-programmatically-close-workbooks.md)

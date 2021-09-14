@@ -1,5 +1,5 @@
 ---
-title: 'adım adım kılavuz: Metin | Microsoft Docs'
+title: 'Adım adım kılavuz: Metin | Microsoft Docs'
 description: Bu kılavuzda düzenleyiciye görsel etkiler ekleyerek bir metin dosyasında geçerli sözcüğün her oluşumunu vurgulamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -14,21 +14,21 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0ccbc7dd098112706fb26d19a35e7d961fd89842
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122028402"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725771"
 ---
 # <a name="walkthrough-highlight-text"></a>Adım adım kılavuz: Metni vurgulama
-Düzenleyiciye farklı görsel efektler eklemek için Managed Extensibility Framework (MEF) bileşeni bölümleri ebilirsiniz. Bu kılavuzda, geçerli sözcüğün bir metin dosyasındaki her oluşumunu vurgulamayı gösterir. Metin dosyasında bir sözcük birden fazla kez oluşursa ve dikkati bir kez konumlandırmanız, her oluşum vurgulanır.
+Düzenleyiciye farklı görsel efektler eklemek için Managed Extensibility Framework (MEF) bileşeni parçaları oluşturabilirsiniz. Bu kılavuzda, geçerli sözcüğün bir metin dosyasındaki her oluşumunu vurgulamayı gösterir. Metin dosyasında bir sözcük birden fazla kez oluşursa ve dikkati bir kez konumlandırmanız, her oluşum vurgulanır.
 
 ## <a name="prerequisites"></a>Önkoşullar
- 2015'Visual Studio başlayarak, Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Bu, kurulumda isteğe bağlı bir Visual Studio olarak dahil edilir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
+ 2015'Visual Studio başlayarak, Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Kurulumda isteğe bağlı bir özellik olarak Visual Studio dahil edilir. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için [bkz. Visual Studio SDK'sı yükleme.](../extensibility/installing-the-visual-studio-sdk.md)
 
 ## <a name="create-a-mef-project"></a>MEF projesi oluşturma
 
-1. C# VSIX projesi oluşturun. (Yeni **Project** iletişim kutusunda **Visual C# / Genişletilebilirlik'i** seçin, ardından **VSIX Project**.) Çözüme adını `HighlightWordTest` girin.
+1. C# VSIX projesi oluşturun. (Yeni **Project** iletişim kutusunda Visual **C# / Genişletilebilirlik'i** seçin, ardından **VSIX Project**.) Çözüme adını `HighlightWordTest` girin.
 
 2. Projeye bir Düzenleyici Sınıflandırıcı öğesi şablonu ekleyin. Daha fazla bilgi için [bkz. Düzenleyici öğesi şablonuyla uzantı oluşturma.](../extensibility/creating-an-extension-with-an-editor-item-template.md)
 
@@ -142,7 +142,7 @@ Düzenleyiciye farklı görsel efektler eklemek için Managed Extensibility Fram
 
     - Metin <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService> bulmak için kullanılan bir .
 
-    - Metin <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> aralıklarının içinde gezinmek için yöntemleri olan bir .
+    - Metin <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> aralıkları içinde gezinmek için yöntemleri olan bir .
 
     - Vurgulanan <xref:Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection> sözcük kümesi içeren bir .
 
@@ -200,13 +200,13 @@ Düzenleyiciye farklı görsel efektler eklemek için Managed Extensibility Fram
     }
     ```
 
-5. Güncelleştirme yöntemi tarafından `TagsChanged` çağrılan bir olay da eklemeniz gerekir.
+5. Update yöntemi tarafından `TagsChanged` çağrılan bir olay da eklemeniz gerekir.
 
     :::code language="csharp" source="../snippets/csharp/VS_Snippets_VSSDK/vssdkhighlightwordtest/cs/highlightwordtag.cs" id="Snippet10":::
     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_VSSDK/vssdkhighlightwordtest/vb/highlightwordtag.vb" id="Snippet10":::
 
 
-6. yöntemi, metin arabelleğinde imlecin bulunduğu sözcükle aynı olan her sözcüğü bulur ve sözcüğün oluşumlarını karşılık gelen nesnelerin `UpdateAtCaretPosition()` <xref:Microsoft.VisualStudio.Text.SnapshotSpan> listesini oluşturur. Ardından, `SynchronousUpdate` olayı yükselten `TagsChanged` çağrısında lar.
+6. yöntemi, metin arabelleğinde imlecin bulunduğu sözcükle aynı olan her sözcüğü bulur ve sözcüğün oluşumlarını karşılık gelen nesnelerin `UpdateAtCaretPosition()` <xref:Microsoft.VisualStudio.Text.SnapshotSpan> listesini oluşturur. Ardından, `SynchronousUpdate` olayı yükselten `TagsChanged` çağrısında bulundu.
 
     ```csharp
     void UpdateAtCaretPosition(CaretPosition caretPosition)
@@ -310,7 +310,7 @@ Düzenleyiciye farklı görsel efektler eklemek için Managed Extensibility Fram
 
 8. yöntemini <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601.GetTags%2A> uygulamalısiniz. Bu yöntem nesnelerinin <xref:Microsoft.VisualStudio.Text.SnapshotSpan> bir koleksiyonunu alır ve etiket aralıklarının bir numaralama döndürür.
 
-     C# içinde, bu yöntemi etiketlerin yavaş değerlendirmesini (yalnızca tek öğelere erişilirken kümenin değerlendirilmesini) sağlayan bir verim itici olarak gerçekleştirin. Bu Visual Basic, etiketleri listeye ekleyin ve listeyi geri ekleyin.
+     C# içinde, bu yöntemi etiketlerin yavaş değerlendirmesini (yalnızca tek öğelere erişilirken kümenin değerlendirilmesini) sağlayan bir verim iticisi olarak gerçekleştirin. Bu Visual Basic, etiketleri listeye ekleyin ve listeyi geri ekleyin.
 
      Burada yöntemi, mavi <xref:Microsoft.VisualStudio.Text.Tagging.TagSpan%601> arka plan sağlayan "mavi" <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag> bir nesnesi döndürür.
 
@@ -369,7 +369,7 @@ Düzenleyiciye farklı görsel efektler eklemek için Managed Extensibility Fram
     { }
     ```
 
-2. Etiketçinin örneğini almak için ve <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService> gibi iki düzenleyici hizmeti içeri <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> aktarmalısiniz.
+2. Etiketçinin örneğini almak için iki düzenleyici hizmeti (ve <xref:Microsoft.VisualStudio.Text.Operations.ITextSearchService> <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> ) içeri aktarın.
 
     ```csharp
     [Import]
@@ -403,7 +403,7 @@ Düzenleyiciye farklı görsel efektler eklemek için Managed Extensibility Fram
 
 1. Çözümü derleyin.
 
-2. Bu projeyi hata ayıklayıcısında çalıştırarak, hata ayıklayıcısının Visual Studio örneği başlatıldı.
+2. Bu projeyi hata ayıklayıcısında çalıştırarak ikinci bir Visual Studio başlat.
 
 3. Bir metin dosyası oluşturun ve sözcüklerin tekrarlanan bir metin (örneğin, "hello hello hello" gibi) yazın.
 

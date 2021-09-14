@@ -1,6 +1,6 @@
 ---
-description: Numaralamadan sonraki DEBUG_REFERENCE_INFO öğelerini döndürür.
-title: IEnumDebugReferenceInfo2::Next | Microsoft Docs
+description: Numaralandırmadaki DEBUG_REFERENCE_INFO öğelerinin bir sonraki kümesini döndürür.
+title: 'IEnumDebugReferenceInfo2:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1e863b8c4a10cbdc75b537c56a73693f75605bc1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034818"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634814"
 ---
 # <a name="ienumdebugreferenceinfo2next"></a>IEnumDebugReferenceInfo2::Next
-Numaralamadan sonraki öğe kümesi döndürür.
+Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,16 +47,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[in] Alınarak alınan öğe sayısı. Ayrıca dizinin en büyük boyutunu `rgelt` belirtir.
+'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
 
 `rgelt`\
-[in, out] Doldurulması [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) öğe dizisi.
+[in, out] Doldurulacak [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) öğeleri dizisi.
 
 `pceltFetched`\
-[out] içinde gerçekten döndürülen öğe sayısını `rgelt` döndürür.
+dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. İstenen `S_FALSE` sayıdan daha az öğe döndürüleninse döndürür, aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)

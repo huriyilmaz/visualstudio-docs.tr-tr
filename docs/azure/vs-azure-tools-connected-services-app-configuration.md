@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.date: 12/11/2020
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: d19d65943745aabd078173d6362ba186fa312959eeaca22b974d98b6718ee09c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 250b89c983da039717982b31873a470172bde0f5
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121381019"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633161"
 ---
 # <a name="adding-azure-app-configuration-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetleri kullanarak Azure uygulama yapılandırması ekleme
 

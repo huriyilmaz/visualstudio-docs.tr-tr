@@ -1,5 +1,5 @@
 ---
-description: Bu arabirim kullanıcıya bildirilecek bir hata iletisi belirtir.
+description: Bu arabirim, kullanıcıya bildirilen bir hata iletisi belirtir.
 title: IDebugErrorEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3e1b781ed584714e149e1373f8be82e596aac464
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122035078"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634841"
 ---
 # <a name="idebugerrorevent2"></a>IDebugErrorEvent2
-Bu arabirim kullanıcıya bildirilecek bir hata iletisi belirtir.
+Bu arabirim, kullanıcıya bildirilen bir hata iletisi belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,28 +30,28 @@ Bu arabirim kullanıcıya bildirilecek bir hata iletisi belirtir.
 IDebugErrorEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- Hata ayıklama altyapısı (DE), hataları insan tarafından okunabilen iletiler olarak raporlamak için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekir. SDM, arabirime erişmek için [QueryInterface](/cpp/atl/queryinterface) kullanır `IDebugEvent2` .
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE), hataları insanlar tarafından okunabilir iletiler olarak rapor etmek için bu arabirimi uygulamaya almaktadır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak gerçekleştir gerekir. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Aynı şekilde bir hata bildirmek için bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
+ DE, hata bildirmesi için bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklaması yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Bu arabirim aşağıdaki yöntemi uygular:
+## <a name="methods-in-vtable-order"></a>Vtable sırasına göre yöntemler
+ Bu arabirim aşağıdaki yöntemi kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|`GetErrorMessage`|Bir hatayı, insan tarafından okunabilen bir dize olarak döndürür.|
+|`GetErrorMessage`|İnsan tarafından okunabilir bir dize olarak hata döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
- hata ayıklama altyapısı bir hatayla karşılaşırsa, iletiyi kullanıcıya Visual Studio raporlamak için bu arabirimi kullanabilir.
+ Hata ayıklama altyapısı bir hatayla karşılaşırsa bu arabirimi kullanarak iletiyi kullanıcıya Visual Studio bildirebilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)

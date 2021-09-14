@@ -16,12 +16,12 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 676ff3d93c1b7126829a5593adc7377ea28794e2b4129602640cf588d7ce17bc
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 041b6fde00efaae5934d793738fe85584511a372
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121434080"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725287"
 ---
 # <a name="idebugcomplussymbolproviderloadsymbols"></a>IDebugComPlusSymbolProvider::LoadSymbols
 Belirtilen hata ayıklama sembollerini belleğe yükler.

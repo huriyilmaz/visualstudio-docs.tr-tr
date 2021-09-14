@@ -1,6 +1,6 @@
 ---
-title: Statik yardımcı sınıfları | Microsoft IntelliTest Geliştirici Test Aracı
-description: IntelliTest'in parametreli birim testleri yazma için sağladığı statik yardımcı sınıflar hakkında bilgi edinin.
+title: Statik yardımcı sınıfları | Microsoft IntelliTest geliştirici test aracı
+description: IntelliTest 'in parametreli birim testlerini yazmak için sağladığı statik yardımcı sınıfları hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 05/02/2017
 ms.topic: reference
@@ -13,35 +13,35 @@ ms.workload:
 - multiple
 author: mikejo5000
 ms.openlocfilehash: fa4c088543775a55b0ec9b2bedea07a92b44cc9b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122033011"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725621"
 ---
 # <a name="static-helper-classes"></a>Statik yardımcı sınıfları
 
-IntelliTest, parametreli birim testleri yazmada kullanılan bir statik [yardımcı sınıf kümesi sağlar:](test-generation.md#parameterized-unit-testing)
+IntelliTest, [parametreli birim testleri](test-generation.md#parameterized-unit-testing)yazarken kullanılabilecek bir statik yardımcı sınıf kümesi sağlar:
 
-* [PexAssume:](#pexassume)girişler üzerinde varsayımları tanımlamak için kullanılır ve istenmeyen girişleri filtrelemek için yararlıdır
-* [PexAssert:](#pexassert)test çerçeveniz bir onay sınıfı sağlanmasa kullanmak için basit bir onay sınıfı
-* [PexChoose:](#pexchoose)IntelliTest tarafından yönetilen ek test girişlerinin akışı
-* [PexObserve:](#pexobserve)somut değerleri günlüğe kaydeder ve isteğe bağlı olarak bunları oluşturulan kodda doğrular
+* [Pexvarsay](#pexassume): girişler üzerinde varsayımları tanımlamak için kullanılır ve istenmeyen girdileri filtrelemek için faydalıdır
+* [Pexassertion](#pexassert): test çatısı bir tane sağlamıyorsa kullanılmak üzere basit bir onaylama sınıfı
+* [PexChoose](#pexchoose): IntelliTest 'in yönettiği ek test girişlerinin akışı
+* [Pexgözlem:](#pexobserve)somut değerleri günlüğe kaydeder ve isteğe bağlı olarak bunları üretilen kodda doğrular
 
-Bazı sınıflar, IntelliTest gerekçe altyapısıyla alt düzeyde etkileşim kurmana olanak sağlar:
+Bazı sınıflar, IntelliTest mantık yürütme altyapısıyla düşük düzeyde etkileşimde bulunabilmeniz için izin verir:
 
-* [PexSymbolicValue:](#pexsymbolicvalue)değişkenler üzerinde sembolik kısıtlamaları incelemeye veya değiştirmeye yönelik yardımcı programlar
+* [Pexsembolicvalue](#pexsymbolicvalue): değişkenlerde sembolik kısıtlamaları İnceleme veya değiştirme yardımcı programları
 
 <a name="pexassume"></a>
 ## <a name="pexassume"></a>PexAssume
 
-Parametreli birim testlerinde önkoşullar gibi varsayımları ifade etmek [için kullanılan statik bir sınıf.](test-generation.md#parameterized-unit-testing) [](test-generation.md#precondition) Bu sınıfın yöntemleri, istenmeyen test girişlerini filtrelemek için kullanılabilir.
+[Parametreli birim testlerinde](test-generation.md#parameterized-unit-testing) [önkoşulları](test-generation.md#precondition)gibi varsayımları ifade etmek için kullanılan statik bir sınıf. Bu sınıfın yöntemleri, istenmeyen test girişlerini filtrelemek için kullanılabilir.
 
-Varsayılan koşul bazı test girişlerini tutmazsa, **pexAssumeFailedException** olur. Bu, testin sessizce yoksay sınanmasına neden olur.
+Kabul edilen koşul bazı test girişleri için Tutulmasa, bir **PexAssumeFailedException** oluşturulur. Bu, testin sessizce yoksayılmasına neden olur.
 
 **Örnek**
 
-Aşağıdaki parametreli test **j=0'ı dikkate amayacak:**
+Şu parametreli test, **j = 0** olarak kabul etmez:
 
 ```csharp
 public void TestSomething(int i, int j) {
@@ -53,23 +53,23 @@ public void TestSomething(int i, int j) {
 
 **Açıklamalar**
 
-Yukarıdaki kod aşağıdakilere neredeyse eşdeğerdir:
+Yukarıdaki kod, neredeyse eşittir:
 
 ```csharp
      if (j==0)
           return;
 ```
 
-başarısız bir **PexAssume'un** test sonucu elde edilemez. If deyiminde  IntelliTest, if deyiminin o zaman dallarını kapsayacak şekilde **ayrı** bir test **durumu** üretir.
+hata veren bir **Pexın** , test çalışması olmadan sonuçları vermez. **İf** Ifadesinde, IntelliTest, **IF** **ifadesinin dalını kapsayacak** şekilde ayrı bir test durumu oluşturur.
 
-**PexAssume** ayrıca dize, dizi ve koleksiyon varsayımları için özel iç içe geçmiş sınıflar içerir.
+**Pexvarsay** Ayrıca dize, dizi ve koleksiyonlardaki varsayımlar için özel iç içe sınıflar içerir.
 
 <a name="pexassert"></a>
 ## <a name="pexassert"></a>PexAssert
 
-Parametreli birim testlerinde sonkoşullar gibi [onayları](test-generation.md#postcondition)ifade etmek [için kullanılan statik bir sınıf.](test-generation.md#parameterized-unit-testing)
+[Parametreli birim testlerinde](test-generation.md#parameterized-unit-testing) [Sonkoşulları](test-generation.md#postcondition)gibi onayları ifade etmek için kullanılan statik bir sınıf.
 
-Onaylandırılan koşul bazı test girişlerini tutmayacaksa, testin başarısız olması için **pexAssertFailedException** ortaya çıktı.
+Onaylanan koşul bazı test girdileri içermiyorsa, bir **PexAssertFailedException** atılır ve bu da testin başarısız olmasına neden olur.
 
 **Örnek**
 
@@ -86,21 +86,21 @@ public void TestSomething(int i) {
 <a name="pexchoose"></a>
 ## <a name="pexchoose"></a>PexChoose
 
-Bir teste yardımcı giriş değerleri temin eden statik sınıf, Parametreli Sahteleri [uygulamak için kullanılabilir.](input-generation.md#parameterized-mocks)
+Bir teste yardımcı giriş değerleri sağlayan statik bir sınıf, [parametreli modülleri](input-generation.md#parameterized-mocks)uygulamak için kullanılabilir.
 
-**PexChoose** sınıfı, bir testin belirli giriş değerleri için başarılı veya başarısız olup olmadığını belirlemeye yardımcı olmaz. **PexChoose** yalnızca seçim olarak da adlandırılan giriş değerleri *sağlar.* Giriş değerlerini kısıtlamak ve testin ne zaman başarılı olduğunu veya başarısız olduğunu tanımlayan onaylar yazmak yine kullanıcıya göredir.
+**PexChoose** sınıfı, bir testin belirli giriş değerleri için başarılı veya başarısız olup olmadığını belirlemede yardımcı değildir. **PexChoose** , *seçenek* olarak da adlandırılan giriş değerlerini sağlar. Bu, giriş değerlerini kısıtlamak ve bir testin ne zaman başarılı veya başarısız olduğunu tanımlayan onaylamaları yazmak için hala kullanıcıya kadar sürer.
 
 **İşlem modları**
 
-**PexChoose** sınıfı iki modda çalışır:
+**PexChoose** sınıfı iki modda çalışabilir:
 
-* IntelliTest, giriş oluşturma sırasında testin ve test [](input-generation.md)edilen kodun sembolik bir analizini gerçekleştirirken, seçimci rastgele değerler döndürür ve IntelliTest her değerin testte ve test edilen kodda nasıl kullanılı olduğunu izler. IntelliTest, testte ve test edilen kodda farklı yürütme yollarını tetiklemek için ilgili değerler üretir.
+* IntelliTest, [giriş oluşturma](input-generation.md)sırasında testin sembolik analizini ve sınanan kodu gerçekleştiriyor olsa da, Chooser rastgele değerler döndürür ve IntelliTest her bir değerin testte ve sınanan kodda nasıl kullanıldığını izler. IntelliTest, testte ve test edilen koddaki farklı yürütme yollarını tetiklemek için ilgili değerleri oluşturur.
 
-* Belirli test örnekleri için oluşturulan kod, seçim sağlayıcısını belirli bir şekilde ayarlar, böylece böyle bir test örneğinin yeniden yürütülmesi belirli bir yürütme yolunu tetiklemek için belirli seçimler yapacaktır.
+* Belirli test çalışmaları için oluşturulan kod, seçim sağlayıcısını belirli bir şekilde ayarlar, böylece böyle bir test çalışmasının yeniden yürütülmesi belirli bir yürütme yolunu tetiklemeye yönelik belirli seçimler oluşturur.
 
 **Kullanım**
 
-* Yeni bir **değer oluşturmak için PexChoose.Value** basit çağrısı:
+* Basit çağrı **PexChoose. Value** yeni bir değer oluşturmak için:
 
 ```csharp
 public int Foo() {
@@ -111,9 +111,9 @@ public int Foo() {
 <a name="pexobserve"></a>
 ## <a name="pexobserve"></a>PexObserve
 
-Adlandırılmış değerleri günlüğe günlüğe alan statik bir sınıf.
+Adlandırılmış değerlerin günlüğe kaydedilecek statik bir sınıf.
 
-IntelliTest kodu araştıran **PexObserve,** biçimlendirilmiş dize gösterimlerini kullanarak hesaplanan değerleri kaydetmek için kullanılır. Değerler benzersiz adlarla ilişkilendirildi.
+IntelliTest kodu inceleyince, hesaplanan değerleri biçimli dize gösterimlerini kullanarak kaydetmek için **Pexgözlemkullanılır** . Değerler benzersiz adlarla ilişkilendirilir.
 
 ```csharp
 PexObserve.Value<string>("result", result);
@@ -142,16 +142,16 @@ public partial class MathExTests {
 <a name="pexsymbolicvalue"></a>
 ## <a name="pexsymbolicvalue"></a>PexSymbolicValue
 
-Parametrelerle ilgili kısıtlamaları yoksaymak ve değerlerle ilişkili sembolik bilgileri yazdırmak için kullanılan statik bir sınıf.
+Parametrelerin kısıtlamalarını yoksaymak ve değerlerle ilişkili sembolik bilgileri yazdırmak için kullanılan statik bir sınıf.
 
 **Kullanım**
 
-Normalde, IntelliTest yürütme sırasında kodun tüm yürütme yollarını kapatmaya çalışır. Ancak, özellikle de varsayım ve onaylama koşulları hesaplanırken, olası tüm örnekleri araştırmama gerekir.
+Normalde, IntelliTest yürütme sırasında kodun tüm yürütme yollarını kapsamaya çalışır. Ancak, özellikle de varsayım ve onaylama koşullarını hesaplarken, olası tüm durumları araştırmamalıdır.
 
 **Örnek**
 
-Bu örnek **PexAssume.Arrays.ElementsAreNotNull yönteminin uygulamasını** gösterir.
-yönteminde, IntelliTest'in farklı dizi boyutları üretmeye çalışmasını önlemek için dizi değerinin yalıtılmasıyla ilgili kısıtlamaları yoksayabilirsiniz. Kısıtlamalar yalnızca burada yoksayılır. Test edilen kod farklı dizi uzunlukları için farklı davranırsa, IntelliTest test edilen kodun kısıtlamalarından farklı boyutlu diziler oluşturamaz.
+Bu örnek, **Pexvarsay. Arrays. ElementsAreNotNull** yönteminin uygulamasını gösterir.
+Yönteminde, farklı boyutlarda dizi boyutları oluşturmaya çalışan IntelliTest 'i önlemek için dizi değerinin lengh üzerindeki kısıtlamaları yoksayabilirsiniz. Kısıtlamalar yalnızca burada yok sayılır. Sınanan kod farklı dizi uzunlukları için farklı davrandıysa, IntelliTest, sınanan kodun kısıtlamalarından farklı boyutlardaki diziler üretemiyor.
 
 ```csharp
 public static void AreElementsNotNull<T>(T[] value)

@@ -1,6 +1,6 @@
 ---
-description: Özel simgelerin sembol dosyasından bırakılıp nakledilmediğini belirten bayrak alır.
-title: 'IDiaSymbol:: get_isStripped | Microsoft Docs'
+description: Özel sembollerin sembol dosyasından çıkarılmış olup olmadığını belirten bayrağını alın.
+title: IDiaSymbol::get_isStripped | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 58dd3f07fc3c706d82cdf5e4f2f8c2c99b5bbbad
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066034"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725452"
 ---
 # <a name="idiasymbolget_isstripped"></a>IDiaSymbol::get_isStripped
-Özel simgelerin sembol dosyasından bırakılıp nakledilmediğini belirten bayrak alır.
+Özel sembollerin sembol dosyasından çıkarılmış olup olmadığını belirten bayrağını alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,23 +35,23 @@ HRESULT get_isStripped(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE` Özel simgelerin sembol dosyasından kaldırılıp kaldırılmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+[out] Özel `TRUE` semboller sembol dosyasından kaldırılmışsa döndürür; aksi takdirde `FALSE` döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
+> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik `SymTagExe` sembol türünden (bkz. [exe](../../debugger/debug-interface-access/exe.md)) kullanılabilir.
+ Bu özellik sembol türünden `SymTagExe` kullanılabilir (bkz. [Exe).](../../debugger/debug-interface-access/exe.md)
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üst bilgi|dia2. h|
-|Sürüm:|DIA SDK v 8.0|
+|Üstbilgi:|dia2.h|
+|Sürüm:|DIA SDK v8.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

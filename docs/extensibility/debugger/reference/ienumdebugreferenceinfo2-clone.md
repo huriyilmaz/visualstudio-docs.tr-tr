@@ -1,5 +1,5 @@
 ---
-description: Geçerli veri DEBUG_REFERENCE_INFO ayrı bir nesne olarak döndürür.
+description: Geçerli veri DEBUG_REFERENCE_INFO bir kopyasını ayrı bir nesne olarak döndürür.
 title: IEnumDebugReferenceInfo2::Clone | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f027671a1e6940e8f378d2f821cc99370fe5a3b9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122152724"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726988"
 ---
 # <a name="ienumdebugreferenceinfo2clone"></a>IEnumDebugReferenceInfo2::Clone
 Geçerli numaralamanın bir kopyasını ayrı bir nesne olarak döndürür.

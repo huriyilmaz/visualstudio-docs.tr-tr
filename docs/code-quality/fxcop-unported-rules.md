@@ -13,11 +13,11 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
 ms.openlocfilehash: d522a333f1653743c1380dec1660492cd90ae5dd
-ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122980514"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632012"
 ---
 # <a name="unported-rules"></a>Kaldırılmış kurallar
 

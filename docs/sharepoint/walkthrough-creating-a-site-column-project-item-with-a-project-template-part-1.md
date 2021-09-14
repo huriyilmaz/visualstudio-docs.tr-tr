@@ -20,11 +20,11 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 6ede65c0360a747c21d640e15b28c8b1dffe0583
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122054255"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726751"
 ---
 # <a name="walkthrough-create-a-site-column-project-item-with-a-project-template-part-1"></a>İzlenecek yol: proje şablonu, Bölüm 1 ile bir site sütunu proje öğesi oluşturma
   SharePoint projeler bir veya daha fazla SharePoint proje öğesi için kapsayıcılardır. kendi SharePoint proje öğesi türlerinizi oluşturup bunları bir proje şablonuyla ilişkilendirerek, Visual Studio SharePoint proje sistemini genişletebilirsiniz. Bu kılavuzda, bir site sütunu oluşturmak için bir proje öğesi türü tanımlayacaksınız ve sonra bir site sütunu proje öğesi içeren yeni bir proje oluşturmak için kullanılabilecek bir proje şablonu oluşturacaksınız.
@@ -185,25 +185,25 @@ ms.locfileid: "122054255"
 
    - *\Field1\Elements.xml*
 
-   - *\Field1\sharepointprojectıtem.exe*
+   - *\Field1\SharePointProjectItem.spdata*
 
    - *\Features\Feature1\Feature1.feature*
 
    - *\Features\Feature1\Feature1.Template.xml*
 
-   - *\ Package\package.exe paketi*
+   - *\Package\Package.package*
 
    - *\Package\Package.Template.xml*
 
-     Bu dosyaları doğrudan SiteColumnProjectTemplate projesine ekleyin; Projedeki alan1, özellikler veya paket alt klasörlerini yeniden oluşturmayın. bu dosyalar hakkında daha fazla bilgi için bkz. [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
+     Bu dosyaları doğrudan SiteColumnProjectTemplate projesine ekleyin; projesinde Field1, Features veya Package alt klasörlerini yeniden oluşturama. Bu dosyalar hakkında daha fazla bilgi için bkz. Proje öğeleri için öğe [SharePoint ve proje şablonları oluşturma.](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
 
-#### <a name="to-configure-how-developers-discover-the-project-template-in-the-new-project-dialog-box"></a>geliştiricilerin proje şablonunu yeni Project iletişim kutusunda nasıl bulmasını yapılandırmak için
+#### <a name="to-configure-how-developers-discover-the-project-template-in-the-new-project-dialog-box"></a>Geliştiricilerin Proje Şablonunu Yeni Uygulama iletişim kutusunda nasıl Project yapılandırmak için
 
-1. **Çözüm Gezgini**, **SiteColumnProjectTemplate** proje düğümünün kısayol menüsünü açın ve ardından **Project kaldır**' ı seçin. Değişiklikleri herhangi bir dosyaya kaydetmeniz istenirse, **Evet** düğmesini seçin.
+1. Bu **Çözüm Gezgini,** **SiteColumnProjectTemplate** proje düğümü için kısayol menüsünü açın ve ardından Yüklemeden kaldır'ı **Project.** Herhangi bir dosyada yapılan değişiklikleri kaydetmeniz istenirse Evet **düğmesini** seçin.
 
-2. **SiteColumnProjectTemplate** düğümünün kısayol menüsünü yeniden açın ve ardından **SiteColumnProjectTemplate. csproj öğesini Düzenle** ' yi seçin veya **SiteColumnProjectTemplate. vbproj**' i düzenleyin.
+2. **SiteColumnProjectTemplate** düğümünün kısayol menüsünü yeniden açın ve **siteyi düzenleColumnProjectTemplate.csproj veya** **Edit SiteColumnProjectTemplate.vbproj** öğesini seçin.
 
-3. Proje dosyasında, aşağıdaki `VSTemplate` öğeyi bulun.
+3. Proje dosyasında aşağıdaki öğeyi `VSTemplate` bulun.
 
     ```xml
     <VSTemplate Include="SiteColumnProjectTemplate.vstemplate">
@@ -217,34 +217,34 @@ ms.locfileid: "122054255"
     </VSTemplate>
     ```
 
-     `OutputSubPath`Öğesi, proje oluşturduğunuzda proje şablonunun oluşturulduğu yolda ek klasörleri belirtir. burada belirtilen klasörler, proje şablonunun yalnızca müşteriler **yeni Project** iletişim kutusunu açtıklarında kullanılabilir olacağını, **SharePoint** düğümünü genişlettikten sonra da **2010** düğümünü seçmesini sağlamaktır.
+     `OutputSubPath`öğesi, projeyi oluşturulduğunda proje şablonunun oluşturulacak yolda ek klasörleri belirtir. Burada belirtilen klasörler, proje şablonunun yalnızca müşteriler **Yeni** Project iletişim kutusunu açtıklarında kullanılabilir olmasını, SharePoint düğümünü **genişletmesini** ve **ardından 2010 düğümünü seçmesini** sağlar.
 
 5. Dosyayı kaydedin ve kapatın.
 
-6. **Çözüm Gezgini**, **SiteColumnProjectTemplate** projesinin kısayol menüsünü açın ve ardından **Project yeniden yükle**' yi seçin.
+6. Bu **Çözüm Gezgini** **SiteColumnProjectTemplate** projesinin kısayol menüsünü açın ve sonra Yeniden Yükle'yi **Project.**
 
 ## <a name="edit-the-project-template-files"></a>Proje şablonu dosyalarını düzenleme
  SiteColumnProjectTemplate projesinde, proje şablonunun davranışını tanımlamak için aşağıdaki dosyaları düzenleyin:
 
-- *AssemblyInfo. cs* veya *AssemblyInfo. vb*
+- *AssemblyInfo.cs* veya *AssemblyInfo.vb*
 
 - *Elements.xml*
 
-- *SharePointProjectItem. spdata*
+- *SharePointProjectItem.spdata*
 
-- *Özellik1. Feature*
+- *Özellik1.özellik*
 
-- *Package. Package*
+- *Package.package*
 
-- *SiteColumnProjectTemplate. vstemplate*
+- *SiteColumnProjectTemplate.vstemplate*
 
-- *ProjectTemplate. csproj* veya *ProjectTemplate. vbproj*
+- *ProjectTemplate.csproj* veya *ProjectTemplate.vbproj*
 
-  Aşağıdaki yordamlarda, bu dosyalardan bazılarına değiştirilebilen parametreler ekleyeceksiniz. Değiştirilebilir bir parametre, dolar işareti ($) karakteriyle başlayan ve biten bir belirteçtir. bir kullanıcı bir proje oluşturmak için bu proje şablonunu kullandığında Visual Studio, yeni projedeki bu parametreleri otomatik olarak belirli değerlerle değiştirir. Daha fazla bilgi için bkz. [değiştirilebilen parametreler](../sharepoint/replaceable-parameters.md).
+  Aşağıdaki yordamlarda, bu dosyalardan bazılarında değiştirilebilir parametreler eksersiniz. Değiştirilebilir parametre, dolar işareti ($) karakteriyle başlayan ve sona eren bir belirteçtir. Kullanıcı proje oluşturmak için bu proje şablonunu kullandığında, Visual Studio yeni projede bu parametreleri otomatik olarak belirli değerlerle değiştirir. Daha fazla bilgi için [bkz. Değiştirilebilir parametreler.](../sharepoint/replaceable-parameters.md)
 
-#### <a name="to-edit-the-assemblyinfocs-or-assemblyinfovb-file"></a>AssemblyInfo. cs veya AssemblyInfo. vb dosyasını düzenlemek için
+#### <a name="to-edit-the-assemblyinfocs-or-assemblyinfovb-file"></a>AssemblyInfo.cs veya AssemblyInfo.vb dosyasını düzenlemek için
 
-1. SiteColumnProjectTemplate projesinde *AssemblyInfo. cs* veya *AssemblyInfo. vb* dosyasını açın ve ardından aşağıdaki ifadeyi onun üstüne ekleyin:
+1. SiteColumnProjectTemplate projesinde *AssemblyInfo.cs* veya *AssemblyInfo.vb* dosyasını açın ve en üstüne aşağıdaki deyimi ekleyin:
 
     ```vb
     Imports System.Security
@@ -254,13 +254,13 @@ ms.locfileid: "122054255"
     using System.Security;
     ```
 
-     bir SharePoint projesinin **korumalı çözüm** özelliği **True** olarak ayarlandığında, Visual Studio öğesini <xref:System.Security.AllowPartiallyTrustedCallersAttribute> assemblyınfo kod dosyasına ekler. Ancak Proje şablonundaki AssemblyInfo kod dosyası, <xref:System.Security> Varsayılan olarak ad alanını içeri aktarmaz. Derleme hatalarını engellemek için bu **using** veya **Imports** ifadesini eklemeniz gerekir.
+     Bir **SharePoint** projesinin Korumalı Çözüm özelliği **True** olarak Visual Studio AssemblyInfo kod <xref:System.Security.AllowPartiallyTrustedCallersAttribute> dosyasına ekler. Ancak, proje şablonundaki AssemblyInfo kod dosyası varsayılan olarak ad alanını <xref:System.Security> içeri aktarmaz. Derleme hatalarını önlemek için **bunu veya** **Imports** deyimini kullanarak eklemeniz gerekir.
 
 2. Dosyayı kaydedin ve kapatın.
 
-#### <a name="to-edit-the-elementsxml-file"></a>Elements.xml dosyasını düzenlemek için
+#### <a name="to-edit-the-elementsxml-file"></a>Elements.xml düzenlemek için
 
-1. SiteColumnProjectTemplate projesinde *Elements.xml* dosyasının IÇERIĞINI aşağıdaki XML ile değiştirin.
+1. SiteColumnProjectTemplate projesinde, *Elements.xml* dosyasının içeriğini aşağıdaki XML ile değiştirin.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -274,13 +274,13 @@ ms.locfileid: "122054255"
     </Elements>
     ```
 
-     Yeni XML, `Field` site sütununun adını, temel türünü ve galerisindeki site sütununun listekaydedileceği grubu tanımlayan bir öğe ekler. Bu dosyanın içeriği hakkında daha fazla bilgi için bkz. [alan tanımı şeması](/previous-versions/office/developer/sharepoint-2010/ms196289(v=office.14)).
+     Yeni XML, site sütunlarının adını, temel türünü ve galerideki site sütununu listelenin yer alan `Field` grubu tanımlayan bir öğe ekler. Bu dosyanın içeriği hakkında daha fazla bilgi için bkz. [Alan Tanımı Şeması.](/previous-versions/office/developer/sharepoint-2010/ms196289(v=office.14))
 
 2. Dosyayı kaydedin ve kapatın.
 
-#### <a name="to-edit-the-sharepointprojectitemspdata-file"></a>SharePointProjectItem. spdata dosyasını düzenlemek için
+#### <a name="to-edit-the-sharepointprojectitemspdata-file"></a>SharePointProjectItem.spdata dosyasını düzenlemek için
 
-1. SiteColumnProjectTemplate projesinde, *SharePointProjectItem. spdata* dosyasının IÇERIĞINI aşağıdaki XML ile değiştirin.
+1. SiteColumnProjectTemplate *projesinde, SharePointProjectItem.spdata* dosyasının içeriğini aşağıdaki XML ile değiştirin.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
@@ -292,19 +292,19 @@ ms.locfileid: "122054255"
    </ProjectItem>
    ```
 
-    Yeni XML, dosyasında aşağıdaki değişiklikleri yapar:
+    Yeni XML dosyasında aşağıdaki değişiklikleri yapar:
 
-   - `Type`Öğesi özniteliğini, `ProjectItem` <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> Proje öğesi tanımında ( `SiteColumnProjectItemTypeProvider` Bu kılavuzda daha önce oluşturduğunuz sınıf) kendisine geçirilen aynı dizeye dönüştürür.
+   - öğesinin özniteliğini, proje öğesi tanımında öğesine geçirilen aynı dizeye (bu kılavuzda daha önce `Type` `ProjectItem` oluşturduğunuz <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> `SiteColumnProjectItemTypeProvider` sınıf) değiştirir.
 
-   - `SupportedTrustLevels`Ve `SupportedDeploymentScopes` özniteliklerini `ProjectItem` öğesinden kaldırır. Bu öznitelik değerleri, `SiteColumnProjectItemTypeProvider` projectItemTypeDefinition projesindeki sınıfında güven düzeyleri ve dağıtım kapsamları belirtildiğinden gereksizdir.
+   - öğesinden `SupportedTrustLevels` `SupportedDeploymentScopes` ve özniteliklerini `ProjectItem` kaldırır. Güven düzeyleri ve dağıtım kapsamları ProjectItemTypeDefinition projesinde sınıfında belirtildiklerinden bu öznitelik `SiteColumnProjectItemTypeProvider` değerleri gereksizdir.
 
-     *. spdata* dosyalarının içerikleri hakkında daha fazla bilgi için bkz. [SharePoint proje öğesi şeması başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md).
+     *.spdata* dosyalarının içeriği hakkında daha fazla bilgi için [bkz. SharePoint proje öğesi şema başvurusu.](../sharepoint/sharepoint-project-item-schema-reference.md)
 
 2. Dosyayı kaydedin ve kapatın.
 
-#### <a name="to-edit-the-feature1feature-file"></a>Özellik1. feature dosyasını düzenlemek için
+#### <a name="to-edit-the-feature1feature-file"></a>Feature1.feature dosyasını düzenlemek için
 
-1. SiteColumnProjectTemplate projesinde, *özellik1. feature* dosyasının IÇERIĞINI aşağıdaki XML ile değiştirin.
+1. SiteColumnProjectTemplate projesinde *Feature1.feature* dosyasının içeriğini aşağıdaki XML ile değiştirin.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
@@ -318,19 +318,19 @@ ms.locfileid: "122054255"
    </feature>
    ```
 
-    Yeni XML, dosyasında aşağıdaki değişiklikleri yapar:
+    Yeni XML dosyasında aşağıdaki değişiklikleri yapar:
 
-   - `Id`Öğesi ve özniteliklerinin değerlerini olarak değiştirir `featureId` `feature` `$guid4$` .
+   - öğesinin ve `Id` `featureId` özniteliklerinin değerlerini olarak `feature` `$guid4$` değiştirir.
 
-   - `itemId`Öğesi özniteliğinin değerlerini `projectItemReference` olarak değiştirir `$guid2$` .
+   - öğesinin `itemId` özniteliğinin değerlerini `projectItemReference` olarak `$guid2$` değiştirir.
 
-     *. feature* dosyaları hakkında daha fazla bilgi için bkz. [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
+     *.feature* dosyaları hakkında daha fazla bilgi için bkz. Proje öğeleri için öğe [SharePoint ve proje şablonları oluşturma.](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
 
 2. Dosyayı kaydedin ve kapatın.
 
-#### <a name="to-edit-the-packagepackage-file"></a>Package. Package dosyasını düzenlemek için
+#### <a name="to-edit-the-packagepackage-file"></a>Package.package dosyasını düzenlemek için
 
-1. SiteColumnProjectTemplate projesinde, *Package. Package* dosyasının IÇERIĞINI aşağıdaki XML ile değiştirin.
+1. SiteColumnProjectTemplate projesinde *Package.package* dosyasının içeriğini aşağıdaki XML ile değiştirin.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
@@ -343,21 +343,21 @@ ms.locfileid: "122054255"
    </package>
    ```
 
-    Yeni XML, dosyasında aşağıdaki değişiklikleri yapar:
+    Yeni XML dosyasında aşağıdaki değişiklikleri yapar:
 
-   - `Id`Öğesi ve özniteliklerinin değerlerini olarak değiştirir `solutionId` `package` `$guid3$` .
+   - öğesinin ve `Id` `solutionId` özniteliklerinin değerlerini olarak `package` `$guid3$` değiştirir.
 
-   - `itemId`Öğesi özniteliğinin değerlerini `featureReference` olarak değiştirir `$guid4$` .
+   - öğesinin `itemId` özniteliğinin değerlerini `featureReference` olarak `$guid4$` değiştirir.
 
-     *. package* dosyaları hakkında daha fazla bilgi için bkz. [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
+     *.package* dosyaları hakkında daha fazla bilgi için bkz. Proje öğeleri için öğe [SharePoint ve proje şablonları oluşturma.](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
 
 2. Dosyayı kaydedin ve kapatın.
 
-#### <a name="to-edit-the-sitecolumnprojecttemplatevstemplate-file"></a>SiteColumnProjectTemplate. vstemplate dosyasını düzenlemek için
+#### <a name="to-edit-the-sitecolumnprojecttemplatevstemplate-file"></a>sitecolumnprojecttemplate.vstemplate dosyasını düzenlemek için
 
-1. SiteColumnProjectTemplate projesinde, SiteColumnProjectTemplate. vstemplate dosyasının içeriğini XML 'nin aşağıdaki bölümlerinden biriyle değiştirin.
+1. SiteColumnProjectTemplate projesinde, SiteColumnProjectTemplate.vstemplate dosyasının içeriğini aşağıdaki XML bölümlerinden biri ile değiştirin.
 
-   - Visual C# proje şablonu oluşturuyorsanız, aşağıdaki XML 'i kullanın.
+   - Visual C# proje şablonu oluşturuyorsanız aşağıdaki XML'yi kullanın.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
@@ -393,7 +393,7 @@ ms.locfileid: "122054255"
    </VSTemplate>
    ```
 
-   - Visual Basic proje şablonu oluşturuyorsanız, aşağıdaki XML 'i kullanın.
+   - Visual Basic proje şablonu oluşturuyorsanız aşağıdaki XML'yi kullanın.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
@@ -429,23 +429,23 @@ ms.locfileid: "122054255"
    </VSTemplate>
    ```
 
-    Yeni XML, dosyasında aşağıdaki değişiklikleri yapar:
+    Yeni XML dosyasında aşağıdaki değişiklikleri yapar:
 
-   - `Name`Öğesini değer **site sütununa** ayarlar. (bu ad, **yeni Project** iletişim kutusunda görünür).
+   - öğesini `Name` Site Sütunu **değerine ayarlar.** (Bu ad Yeni Dosya **iletişim Project** görünür).
 
-   - `ProjectItem`Her bir proje örneğine dahil edilen her bir dosya için öğe ekler.
+   - Her `ProjectItem` bir proje örneğine dahil edilen her dosya için öğeler ekler.
 
-   - Ad alanını kullanır `http://schemas.microsoft.com/developer/vstemplate/2005` . Bu çözümdeki diğer proje dosyaları `http://schemas.microsoft.com/developer/msbuild/2003` ad alanını kullanır. Bu nedenle, XML şeması uyarı iletileri oluşturulacaktır, ancak bu kılavuzda yoksayabilirsiniz.
+   - ad alanını `http://schemas.microsoft.com/developer/vstemplate/2005` kullanır. Bu çözümde yer alan diğer proje dosyaları ad alanını `http://schemas.microsoft.com/developer/msbuild/2003` kullanır. Bu nedenle, XML şeması uyarı iletileri oluşturulur, ancak bu kılavuzda bunları göz ardı edersiniz.
 
-     *. vstemplate* dosyalarının içerikleri hakkında daha fazla bilgi için bkz. [Visual Studio şablon şeması başvurusu](../extensibility/visual-studio-template-schema-reference.md).
+     *.vstemplate* dosyalarının içeriği hakkında daha fazla bilgi için [bkz. Visual Studio Şema Başvurusu.](../extensibility/visual-studio-template-schema-reference.md)
 
 2. Dosyayı kaydedin ve kapatın.
 
-#### <a name="to-edit-the-projecttemplatecsproj-or-projecttemplatevbproj-file"></a>ProjectTemplate. csproj veya ProjectTemplate. vbproj dosyasını düzenlemek için
+#### <a name="to-edit-the-projecttemplatecsproj-or-projecttemplatevbproj-file"></a>projecttemplate.csproj veya projecttemplate.vbproj dosyasını düzenlemek için
 
-1. SiteColumnProjectTemplate projesinde, *ProjectTemplate. csproj* dosyasının veya *ProjectTemplate. vbproj* dosyasının içeriğini XML 'nin aşağıdaki bölümlerinden biriyle değiştirin.
+1. SiteColumnProjectTemplate *projesinde, ProjectTemplate.csproj* dosyasının veya *ProjectTemplate.vbproj* dosyasının içeriğini aşağıdaki XML bölümlerinden biri ile değiştirin.
 
-    - Visual C# proje şablonu oluşturuyorsanız, aşağıdaki XML 'i kullanın.
+    - Visual C# proje şablonu oluşturuyorsanız aşağıdaki XML'yi kullanın.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -525,7 +525,7 @@ ms.locfileid: "122054255"
     </Project>
     ```
 
-    1. Visual Basic proje şablonu oluşturuyorsanız, aşağıdaki XML 'i kullanın.
+    1. Visual Basic proje şablonu oluşturuyorsanız aşağıdaki XML'yi kullanın.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -624,142 +624,142 @@ ms.locfileid: "122054255"
     </Project>
     ```
 
-     Yeni XML, dosyasında aşağıdaki değişiklikleri yapar:
+     Yeni XML dosyasında aşağıdaki değişiklikleri yapar:
 
-    - , `TargetFrameworkVersion` 4,5 değil 3,5 .NET Framework belirtmek için öğesini kullanır.
+    - `TargetFrameworkVersion`4.5 yerine .NET Framework 3.5'i belirtmek için öğesini kullanır.
 
-    - `SignAssembly` `AssemblyOriginatorKeyFile` Proje çıkışını imzalamak için ve öğeleri ekler.
+    - Proje `SignAssembly` `AssemblyOriginatorKeyFile` çıktısını imzalamak için ve öğelerini ekler.
 
-    - `Reference`SharePoint projelerinin kullandığı derleme başvuruları için öğeler ekler.
+    - Projelerin `Reference` kullanabileceği derleme başvuruları için SharePoint ekler.
 
-    - Projedeki her bir varsayılan dosya için öğeler ekler; örneğin, *Elements.xml* ve *SharePointProjectItem. spdata*.
+    - projesinde her varsayılan dosya içinElements.xml ve *SharePointProjectItem.spdata gibi öğeler ekler.*
 
 2. Dosyayı kaydedin ve kapatın.
 
-## <a name="create-a-vsix-package-to-deploy-the-project-template"></a>Proje şablonunu dağıtmak için bir VSıX paketi oluşturma
- Uzantıyı dağıtmak için, **SiteColumnProjectItem** çözümünde VSIX projesi ' ni kullanarak bir VSIX paketi oluşturun. İlk olarak, VSIX projesinde bulunan kaynak. Extension. valtmanifest dosyasını değiştirerek VSıX paketini yapılandırın. Ardından, çözümü oluşturarak VSıX paketini oluşturun.
+## <a name="create-a-vsix-package-to-deploy-the-project-template"></a>Proje şablonunu dağıtmak için VSIX paketi oluşturma
+ Uzantıyı dağıtmak için **SiteColumnProjectItem** çözümünde VSIX projesini kullanarak bir VSIX paketi oluşturun. İlk olarak, VSIX projesine dahil edilen source.extension.vsixmanifest dosyasını değiştirerek VSIX paketini yapılandırabilirsiniz. Ardından, çözümü oluşturarak VSIX paketini oluşturun.
 
-#### <a name="to-configure-and-create-the-vsix-package"></a>VSıX paketini yapılandırmak ve oluşturmak için
+#### <a name="to-configure-and-create-the-vsix-package"></a>VSIX paketini yapılandırmak ve oluşturmak için
 
-1. **Çözüm Gezgini**, **SiteColumnProjectItem** projesinde, bildirim düzenleyicisinde source. Extension. valtmanifest dosyasını açın.
+1. Bu **Çözüm Gezgini** **SiteColumnProjectItem** projesinde source.extension.vsixmanifest dosyasını bildirim düzenleyicisinde açın.
 
-     Source. Extension. valtmanifest dosyası, tüm VSıX paketlerinin gerektirdiği uzantı. valtmanifest dosyasının temelini oluşturur. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110)).
+     source.extension.vsixmanifest dosyası, tüm VSIX paketlerinin gerekli olduğu extension.vsixmanifest dosyasının temelidir. Bu dosya hakkında daha fazla bilgi için bkz. [VSIX Uzantı Şeması 1.0 Başvurusu.](/previous-versions/dd393700(v=vs.110))
 
-2. **Ürün adı** kutusuna **site sütununu** girin.
+2. Ürün Adı **kutusuna** Site Sütunu **girin.**
 
-3. **Yazar** kutusuna **contoso** girin.
+3. Yazar **kutusuna** Contoso **yazın.**
 
-4. **açıklama** kutusuna **site sütunları oluşturmak için bir SharePoint projesi** girin.
+4. Açıklama **kutusuna Site** sütunları **oluşturmak SharePoint bir proje yazın.**
 
-5. **Varlıklar** sekmesini seçin ve ardından **Yeni** düğmesini seçin.
-
-     **Yeni varlık Ekle** iletişim kutusu açılır.
-
-6. **Tür** listesinde, **Microsoft. VisualStudio. ProjectTemplate**' i seçin.
-
-    > [!NOTE]
-    > Bu değer `ProjectTemplate` extension.vsixmanifest dosyasındaki öğesine karşılık gelen bir değerdir. Bu öğe, proje şablonunu içeren VSIX paketinde alt klasörü tanımlar. Daha fazla bilgi için bkz. [ProjectTemplate Öğesi (VSX Şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393735\(v\=vs.100\)).
-
-7. Kaynak **listesinde Geçerli** çözümde **bir proje'yi seçin.**
-
-8. **İlkeler Project** **SiteColumnProjectTemplate'i** ve ardından Tamam **düğmesini** seçin.
-
-9. Yeni **düğmesini yeniden** seçin.
+5. Varlıklar **sekmesini** ve ardından Yeni **düğmesini** seçin.
 
      Yeni **Varlık Ekle iletişim** kutusu açılır.
 
-10. Tür **listesinde** **Microsoft.VisualStudio.MefComponent'ı seçin.**
+6. Tür **listesinde** **Microsoft.VisualStudio.ProjectTemplate'ı seçin.**
 
     > [!NOTE]
-    > Bu değer `MefComponent` extension.vsixmanifest dosyasındaki öğesine karşılık gelen bir değerdir. Bu öğe VSIX paketinde bir uzantı derlemenin adını belirtir. Daha fazla bilgi için bkz. [MEFComponent Öğesi (VSX Şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
+    > Bu değer, `ProjectTemplate` extension. valtmanifest dosyasındaki öğesine karşılık gelir. Bu öğe, proje şablonunu içeren VSıX paketindeki alt klasörü tanımlar. Daha fazla bilgi için bkz. [ProjectTemplate öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393735\(v\=vs.100\)).
 
-11. Kaynak **listesinde Geçerli** çözümde **bir proje'yi seçin.**
+7. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
-12. İlk **Project** **ProjectItemTypeDefinition'ı ve** ardından Tamam **düğmesini** seçin.
+8. **Project** listesinde, **sitecolumnprojecttemplate**' i ve sonra **tamam** düğmesini seçin.
 
-13. Menü çubuğunda Derleme   >  **Çözümü'yü seçin** ve projenin hatasız derlenmiş olduğundan emin olun.
+9. **Yeni** düğmesini yeniden seçin.
 
-## <a name="test-the-project-template"></a>Proje şablonunu test etmek
- Artık proje şablonunu test etmeye hazırsınız. İlk olarak, Visual Studio'nin deneysel örneğinde SiteColumnProjectItem çözümünde hata ayıklamaya Visual Studio. Ardından, **site sütununu test** etmek için deneysel Visual Studio. Son olarak, site sütununu SharePoint doğrulamak için SharePoint projesini derleme ve çalıştırma.
+     **Yeni varlık Ekle** iletişim kutusu açılır.
 
-#### <a name="to-start-debugging-the-solution"></a>Çözümde hata ayıklamaya başlamak için
-
-1. Yönetici Visual Studio ile yeniden başlatın ve ardından SiteColumnProjectItem çözümünü açın.
-
-2. SiteColumnProjectItemTypeProvider kod dosyasında, yönteminde ilk kod satırına bir kesme noktası ekleyin ve ardından hata ayıklamayı başlatmak için `InitializeType` **F5** anahtarını seçin.
-
-     Visual Studio %UserProfile%\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Contoso\Site Column\1.0 uzantısını yüklüp deneysel bir Visual Studio. Proje öğesini bu örnek içinde test Visual Studio.
-
-#### <a name="to-test-the-project-in-visual-studio"></a>Projeyi test etmek için Visual Studio
-
-1. Deneysel Visual Studio örneğinde, menü çubuğunda Dosya Yeni Dosya'Project.  >    >  
-
-2. Visual **C#** **veya Visual Basic** düğümünü genişletin (proje şablonunuz tarafından kullanılan dile bağlı olarak), **SharePoint** düğümünü genişletin ve **ardından 2010 düğümünü** seçin.
-
-3. Proje şablonları listesinde Site Sütunu **şablonunu** seçin.
-
-4. Ad **kutusuna** **SiteColumnTest yazın ve** Tamam **düğmesini** seçin.
-
-     Bu **Çözüm Gezgini,** Alan1 adlı bir proje öğesiyle birlikte yeni bir **proje görünür.**
-
-5. Visual Studio'nin diğer örneğinde yer alan kodun yönteminde daha önce ayar seçtiğiniz kesme noktası üzerinde durarak projesinde hata ayıklamaya devam etmek için `InitializeType` **F5** tuşuna basın.
-
-6. Bu **Çözüm Gezgini,** **Alan1** düğümünü ve ardından **F4 anahtarını** seçin.
-
-     Özellikler  penceresi açılır.
-
-7. Özellikler listesinde, Örnek Özellik özelliğinin **görüntülendiğinden emin** olur.
-
-#### <a name="to-test-the-site-column-in-sharepoint"></a>Site sütununu test etmek için SharePoint
-
-1. Bu **Çözüm Gezgini** **SiteColumnTest düğümünü** seçin.
-
-2. Özellikler **penceresinde,** **Site URL'si** özelliğinin yanındaki metin kutusuna **http://localhost** girin.
-
-     Bu adım, SharePoint için kullanmak istediğiniz geliştirme bilgisayarına yerel siteyi belirtir.
+10. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent** öğesini seçin.
 
     > [!NOTE]
-    > Site Sütunu proje şablonu proje oluşturulduğunda bu değeri toplamak için bir sihirbaz sağlamay olduğundan **Site URL'si** özelliği varsayılan olarak boştur. Geliştiriciden bu değeri isteyen ve ardından bu özelliği yeni projede yapılandıran bir sihirbaz ekleme hakkında bilgi edinmek için bkz. Kılavuz: Proje şablonuyla site sütunu proje öğesi [oluşturma, Bölüm 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md).
+    > Bu değer, `MefComponent` extension. valtmanifest dosyasındaki öğesine karşılık gelir. Bu öğe VSıX paketindeki bir uzantı derlemesinin adını belirtir. Daha fazla bilgi için bkz. [MefComponent öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
-3. **F5 anahtarını** seçin.
+11. **Kaynak** listesinde, **Geçerli çözümde bir proje** seçin.
 
-     Site sütunu, projenin Site **URL'si** özelliğinde belirtilen SharePoint site için paketli ve dağıtılmıştır. Web tarayıcısı bu sitenin varsayılan sayfasını açar.
+12. **Project** listesinde **projectıtemtypedefinition**' ı seçin ve ardından **tamam** düğmesini seçin.
+
+13. Menü **çubuğunda Build**  >  **Build Solution** öğesini seçin ve ardından projenin hatasız derlendiğinden emin olun.
+
+## <a name="test-the-project-template"></a>Proje şablonunu test etme
+ Artık proje şablonunu test etmeye hazırsınız. İlk olarak, Visual Studio deneysel örneğinde SiteColumnProjectItem çözümünde hata ayıklamaya başlayın. Ardından, **site sütunu** projesini Visual Studio deneysel örneğinde test edin. son olarak, site sütununun beklendiği gibi çalıştığını doğrulamak için SharePoint projesi derleyin ve çalıştırın.
+
+#### <a name="to-start-debugging-the-solution"></a>Çözümdeki hata ayıklamayı başlatmak için
+
+1. yönetici kimlik bilgileriyle Visual Studio yeniden başlatın ve ardından sitecolumnprojectıtem çözümünü açın.
+
+2. SiteColumnProjectItemTypeProvider kod dosyasında, yöntemdeki kodun ilk satırına bir kesme noktası ekleyin `InitializeType` ve ardından hata ayıklamayı başlatmak Için **F5** tuşunu seçin.
+
+     Visual Studio, uzantıyı%userprofile%\appdata\local\microsoft\visualstudio\10.0exp\extensions\contoso\site column\1.0 dizinine yükleyerek Visual Studio deneysel bir örneğini başlatır. Proje öğesini bu Visual Studio örneğinde test edersiniz.
+
+#### <a name="to-test-the-project-in-visual-studio"></a>Projeyi Visual Studio test etmek için
+
+1. Visual Studio deneysel örneğinde, menü çubuğunda **dosya**  >  **yeni**  >  **Project**' ni seçin.
+
+2. **Visual C#** veya **Visual Basic** düğümünü (proje şablonunuzun desteklediği dile bağlı olarak) genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+
+3. Proje şablonları listesinde, **site sütunu** şablonunu seçin.
+
+4. **Ad** kutusuna **SiteColumnTest** girin ve **Tamam** düğmesini seçin.
+
+     **Çözüm Gezgini** Içinde, **alan1** adlı bir proje öğesiyle yeni bir proje görüntülenir.
+
+5. diğer Visual Studio örneğindeki kodun, yöntemde daha önce ayarladığınız kesme noktasında durduğunu doğrulayın `InitializeType` ve sonra projede hata ayıklamaya devam etmek için **F5** tuşunu seçin.
+
+6. **Çözüm Gezgini**, **alan1** düğümünü seçin ve sonra **F4** tuşunu seçin.
+
+     **Özellikler** penceresi açılır.
+
+7. Özellikler listesinde, Property **example özelliğinin** göründüğünü doğrulayın.
+
+#### <a name="to-test-the-site-column-in-sharepoint"></a>SharePoint site sütununu test etmek için
+
+1. **Çözüm Gezgini**, **SiteColumnTest** düğümünü seçin.
+
+2. **Özellikler** penceresinde, **site URL** özelliğinin yanındaki metin kutusunda, girin **http://localhost** .
+
+     bu adım, geliştirme bilgisayarında hata ayıklama için kullanmak istediğiniz yerel SharePoint sitesini belirtir.
 
     > [!NOTE]
-    > Betik **Hata Ayıklama Devre Dışı** iletişim kutusu görüntülenirse projede **hata** ayıklamaya devam etmek için Evet düğmesini seçin.
+    > Site sütunu proje şablonu proje oluşturulduğunda bu değerin toplanması için bir sihirbaz sağlamadığından, **site URL 'si** özelliği varsayılan olarak boştur. Geliştiriciyi bu değere soran bir sihirbaz ekleme ve sonra bu özelliği yeni projede yapılandırma hakkında bilgi edinmek için bkz. [Izlenecek yol: proje şablonu, Bölüm 2 ile bir site sütunu oluşturma proje öğesi](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md).
 
-4. Site Eylemleri **menüsünde Site** **öğeleri'Ayarlar.**
+3. **F5** tuşunu seçin.
 
-5. Site **Sütunları Ayarlar** Galeriler **listesinin** altında Site sütunları **bağlantısını** seçin.
+     site sütunu paketlenir ve projenin **site URL** özelliğinde belirtilen SharePoint sitesine dağıtılır. Web tarayıcısı, bu sitenin varsayılan sayfasına açılır.
 
-6. Site sütunları listesinde, Özel Sütunlar **grubunun** **SiteColumnTest** adlı bir sütun içerdiğini doğrulayın.
+    > [!NOTE]
+    > **Betik hata ayıklaması devre dışı** iletişim kutusu görüntülenirse, projede hata ayıklamaya devam etmek için **Evet** düğmesini seçin.
+
+4. **site eylemleri** menüsünde **site Ayarlar**' yi seçin.
+
+5. **site Ayarlar** sayfasında, **galeriler** listesinde, **site sütunları** bağlantısını seçin.
+
+6. Site sütunları listesinde, **özel bir sütun** grubunun **SiteColumnTest** adlı bir sütun içerdiğini doğrulayın.
 
 7. Web tarayıcısını kapatın.
 
-## <a name="clean-up-the-development-computer"></a>Geliştirme bilgisayarlarını temizleme
- Projeyi test etme tamamdikten sonra, proje şablonunu Visual Studio.
+## <a name="clean-up-the-development-computer"></a>Geliştirme bilgisayarını Temizleme
+ Projeyi test etmeyi bitirdikten sonra, proje şablonunu Visual Studio deneysel örneğinden kaldırın.
 
-#### <a name="to-clean-up-the-development-computer"></a>Geliştirme bilgisayarlarını temizlemek için
+#### <a name="to-clean-up-the-development-computer"></a>Geliştirme bilgisayarını temizlemek için
 
-1. Deneysel Visual Studio menü çubuğunda Araçlar Uzantıları ve   >  **Güncelleştirmeler'i seçin.**
+1. Visual Studio deneysel örneğinde, menü çubuğunda **araçlar**  >  **uzantılar ve güncelleştirmeler**' i seçin.
 
-     Uzantılar **ve Güncelleştirmeler** iletişim kutusu açılır.
+     **Uzantılar ve güncelleştirmeler** iletişim kutusu açılır.
 
-2. Uzantı listesinde Site Sütunu uzantısını **ve** ardından Kaldır **düğmesini** seçin.
+2. Uzantılar listesinde, **site sütunu** uzantısını seçin ve ardından **Kaldır** düğmesini seçin.
 
-3. Görüntülenen iletişim kutusunda, uzantıyı **kaldırmak istediğinizden** emin olmak için Evet düğmesini seçin.
+3. Görüntülenen iletişim kutusunda, uzantıyı kaldırmak istediğinizi onaylamak için **Evet** düğmesini seçin.
 
-4. Kaldırma **işlemini tamamlamak** için Kapat düğmesini seçin.
+4. Kaldırma işlemini gerçekleştirmek için **Kapat** düğmesini seçin.
 
-5. Her iki Visual Studio (deneysel örnek ve SiteColumnProjectItem çözümünün açık olduğu Visual Studio örneği) kapatın.
+5. her iki Visual Studio örneğini (deneysel örnek ve sitecolumnprojectıtem çözümünün açık olduğu Visual Studio örneğini) kapatın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bu izlenecek yolu tamamlandıktan sonra, proje şablonuna bir sihirbaz abilirsiniz. Kullanıcı bir Site Sütunu projesi oluşturduğunda sihirbaz, kullanıcıdan hata ayıklama için kullanmak üzere site URL'sini ve yeni çözümün korumalı alan altında olup olmadığını sorar ve sihirbaz yeni projeyi bu bilgilerle yapılandırıyor. Sihirbaz ayrıca sütun hakkında (temel tür ve site sütun galerisinde sütunun listeleyenin grup gibi) bilgilerini toplar ve bu bilgileri *yeniElements.xml* dosyasına ekler. Daha fazla bilgi için [bkz. Adım adım: Proje şablonuyla site sütunu proje öğesi oluşturma, Bölüm 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md).
+ Bu yönergeyi tamamladıktan sonra, proje şablonuna bir sihirbaz ekleyebilirsiniz. Bir Kullanıcı bir site sütun projesi oluşturduğunda, sihirbaz kullanıcıdan hata ayıklama için kullanacağı site URL 'sini ve yeni çözümün korumalı olup olmadığını sorar ve sihirbaz yeni projeyi bu bilgilerle yapılandırır. Sihirbaz ayrıca sütun hakkındaki bilgileri (temel tür ve sütunun site sütunu galerisinde listekaydedileceği grup gibi) toplar ve bu bilgileri yeni projedeki *Elements.xml* dosyasına ekler. Daha fazla bilgi için bkz. [Izlenecek yol: proje şablonu, Bölüm 2 ile site sütunu oluşturma proje öğesi](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Adım adım kılavuz: Proje şablonuyla site sütunu proje öğesi oluşturma, Bölüm 2](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)
-- [Özel proje SharePoint türlerini tanımlama](../sharepoint/defining-custom-sharepoint-project-item-types.md)
-- [Proje öğeleri için öğe şablonları ve SharePoint şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
-- [Verileri proje sisteminin uzantılarına SharePoint kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)
-- [Özel verileri araç uzantılarıyla SharePoint ilişkilendirme](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)
+- [İzlenecek yol: proje şablonu, Bölüm 2 ile bir site sütunu proje öğesi oluşturma](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)
+- [özel SharePoint proje öğesi türlerini tanımlama](../sharepoint/defining-custom-sharepoint-project-item-types.md)
+- [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
+- [SharePoint proje sisteminin uzantılarında veri kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)
+- [özel verileri SharePoint araçları uzantılarıyla ilişkilendir](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)

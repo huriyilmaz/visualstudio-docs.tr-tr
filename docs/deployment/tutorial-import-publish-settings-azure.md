@@ -12,11 +12,11 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: 7d2807480741ff40df82156eea563843bec07712
-ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "123398541"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725386"
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>Visual Studio 'de yayımlama ayarlarını içeri aktararak bir uygulamayı Azure App Service yayımlayın
 

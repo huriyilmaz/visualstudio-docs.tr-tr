@@ -1,6 +1,6 @@
 ---
 title: -DebugExe (devenv.exe)
-description: Hata ayıklamak üzere belirtilen yürütülebilir dosyayı açmak için DebugExe devenv komut satırı anahtarını kullanmayı öğrenin.
+description: Hata ayıklama için belirtilen yürütülebilir dosyayı açmak üzere DebugExe Devenv komut satırı anahtarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 8c65427c3228697b4d9e0faa07943f6e5ba7cc29
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117390"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634422"
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe (devenv.exe)
 
-Hata ayıklamak için belirtilen yürütülebilir dosyayı açar.
+Ayıklanmakta olan belirtilen yürütülebilir dosyayı açar.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -35,17 +35,17 @@ devenv /DebugExe ExecutableFile
 
 ## <a name="arguments"></a>Bağımsız değişkenler
 
-- *Yürütülebilir Dosya*
+- *ExecutableFile*
 
-  Gereklidir. Bir dosyanın yolu ve dosya `.exe` adı. Dosya bulunamıyorsa veya yoksa uyarı veya hata görüntülenmez ve `.exe` Visual Studio başlar.
+  Gereklidir. Bir dosyanın yolu ve dosya adı `.exe` . `.exe`dosya bulunamazsa veya yoksa, uyarı veya hata gösterilmez ve Visual Studio normal olarak başlatılır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-*ExecutableFile* parametresini takip eden tüm dizeler bu dosyaya bağımsız değişken olarak geçirilsin.
+*ExecutableFile* parametresini izleyen dizeler, bu dosyaya bağımsız değişken olarak geçirilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, hata ayıklama `MyApplication.exe` için dosyasını açar.
+Aşağıdaki örnek, `MyApplication.exe` hata ayıklama için dosyasını açar.
 
 ```shell
 devenv /debugexe MyApplication.exe

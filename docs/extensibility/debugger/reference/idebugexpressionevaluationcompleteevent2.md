@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: f6690c2bd598b0662cc5ef54170726ac8efe99e2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122118742"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725224"
 ---
 # <a name="idebugexpressionevaluationcompleteevent2"></a>IDebugExpressionEvaluationCompleteEvent2
 Bu arabirim, zaman uyumsuz ifade değerlendirmesi tamamlandığında hata ayıklama altyapısı (DE) tarafından oturum hata ayıklama yöneticisine (SDM) gönderilir.
@@ -31,12 +31,12 @@ IDebugExpressionEvaluationCompleteEvent2 : IUnknown
 ```
 
 ## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- DE, EvaluateAsync çağrısıyla başlayan bir ifade değerlendirmesinin tamamlanmasını rapor etmek için [bu arabirimini uygulamaya almaktadır.](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak uygulanarak. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır.
+ DE, EvaluateAsync çağrısıyla başlayan bir ifade değerlendirmesinin tamamlanmasını rapor etmek için [bu arabirimini uygulamaya almaktadır.](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi, bu arabirimle aynı nesne üzerinde uygulanarak gerçekleştir gerekir. SDM, [arabirime erişmek için QueryInterface](/cpp/atl/queryinterface) `IDebugEvent2` kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  DE, ifade değerlendirmesinin tamamlanmasını rapor etmek için bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklaması yapılan programa ekli olduğunda SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri çağırma işlevi kullanılarak gönderilir.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
  Aşağıdaki tabloda yöntemlerini `IDebugExpressionEvaluationCompleteEvent2` gösterir.
 
 |Yöntem|Açıklama|

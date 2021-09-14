@@ -17,11 +17,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 721828123734b82797fa27f720a9e5e0b7d4126f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122122754"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633942"
 ---
 # <a name="how-to-programmatically-create-word-tables"></a>Nasıl yapılır: program aracılığıyla Word tabloları oluşturma
   <xref:Microsoft.Office.Interop.Word.Tables>Koleksiyon,, ve sınıflarının bir üyesidir <xref:Microsoft.Office.Interop.Word.Document> ve <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Interop.Word.Selection> <xref:Microsoft.Office.Interop.Word.Range> Bu bağlamlardan herhangi birinde bir tablo oluşturabileceğiniz anlamına gelir. <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> <xref:Microsoft.Office.Interop.Word.Tables> Belirtilen aralıktaki bir tabloyu eklemek için koleksiyonun yöntemini kullanırsınız.

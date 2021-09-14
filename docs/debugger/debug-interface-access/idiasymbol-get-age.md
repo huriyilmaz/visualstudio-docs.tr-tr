@@ -1,6 +1,6 @@
 ---
-description: Bir .pdb dosyasının yaş değerini verir.
-title: IDiaSymbol::get_age | Microsoft Docs
+description: Bir. pdb dosyasının yaş değerini alır.
+title: 'IDiaSymbol:: get_age | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: d99303e34e1e1249cad9af81cd7c42a62b197a8c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122128778"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725470"
 ---
 # <a name="idiasymbolget_age"></a>IDiaSymbol::get_age
-Bir .pdb dosyasının yaş değerini verir.
+Bir. pdb dosyasının yaş değerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,23 +35,23 @@ HRESULT get_age (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Bir .pdb dosyasının yaş değerini döndürür.
+dışı Bir. pdb dosyasının yaş değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Yaş, bilinen bir saat değerine karşılık gelmez; genellikle bir .pdb dosyasının karşılık gelen bir dosyayla eşitlenen bir dosyayla eşit .exe kullanılır.
+ Yaş, bilinen bir zaman değerine karşılık gelmez; genellikle bir. pdb dosyasının karşılık gelen bir .exe dosyası ile eşitlenmemiş olup olmadığını anlamak için kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üstbilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

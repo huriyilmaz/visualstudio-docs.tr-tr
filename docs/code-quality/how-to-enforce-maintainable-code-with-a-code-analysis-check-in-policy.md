@@ -1,7 +1,7 @@
 ---
-title: Kod analizi iade ilkesi kullanma
+title: Kod Analizi iade etme ilkesi kullanma
 ms.date: 11/04/2016
-description: Kodun devralma, sınıf eşleştirme, bakım ve karmaşıklık standartlarına uygun olduğunu doğrulamak için kod analizi iade ilkesi kullanmayı öğrenin.
+description: Kodun devralma, sınıf bağlantısı, bakım ve karmaşıklık standartlarıyla uyumlu olduğunu doğrulamak için bir kod analizi iade ilkesi kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,53 +14,53 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
 ms.openlocfilehash: 4188a9d12daa5294e6771d3a1b4fc4a37b044521
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122091311"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631958"
 ---
-# <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>Nasıl olur: Kod analizi iade ilkesiyle korunabilir kodu zorlama
+# <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>Nasıl yapılır: bir kod çözümleme iade ilkesiyle sürdürülebilir kodu zorlama
 
-Geliştiriciler kodlarının karmaşıklığını ve sürdürülebilirliğini ölçmek için Kod Ölçümleri aracını kullanabilir ancak iade ilkesi kapsamında Kod Ölçümlerini çağıramaz. Bununla birlikte, Code Analysis ölçüm standartlarıyla uyumluluğunu doğrular ve iade ilkeleri aracılığıyla kuralları zorunlu bulunduran kurallar etkinleştirebilirsiniz. Kod ölçümleri hakkında daha fazla bilgi için [bkz. Kod ölçümleri değerleri.](../code-quality/code-metrics-values.md)
+Geliştiriciler, kodunuzun karmaşıklığını ve bakımlarını ölçmek için kod ölçümleri aracını kullanabilir, ancak iade ilkesinin bir parçası olarak kod ölçümlerini çağıramazsınız. ancak, kod ölçüm standartları ile kodunuzun uyumluluğunu doğrulayan Code Analysis kuralları etkinleştirebilir ve bu kuralları iade ilkeleri aracılığıyla zorlayabilirsiniz. Kod ölçümleri hakkında daha fazla bilgi için bkz. [Kod ölçümleri değerleri](../code-quality/code-metrics-values.md).
 
-Devralma Derinliği, Sınıf Eşleştirmesi, Bakım Dizini ve Karmaşıklık kurallarını etkinleştirerek bir iade ilkesi aracılığıyla sürdürülebilir Code Analysis zorabilirsiniz. Bu kuralların dördü de ilke düzenleyicisinin "Bakım Kuralları" kategorisinde Code Analysis bulunur.
+Code Analysis bir iade ilkesi aracılığıyla sürdürülebilir kodu zorlamak için devralma, sınıf bağlantısı, bakım dizini ve karmaşıklık kuralları derinliğini etkinleştirebilirsiniz. bu kuralların dört bölümü, Code Analysis ilkesi düzenleyicisinde "bakımkuralı kuralları" kategorisinin altında bulunur.
 
-Team Foundation için sürüm denetimi yöneticileri, Code Analysis ilkesi gereksinimlerine Bakım Kuralları'nın gereksinimlerini ekleyebilir. Bu iade ilkeleri, geliştiricilerin bir iade Code Analysis önce bu kural değişikliklerine göre değişikliklerini çalıştırmalarını gerektirir.
+Team Foundation için sürüm denetimi yöneticileri, iade ilkesi gereksinimlerine Code Analysis bakım kuralları ekleyebilir. bu iade ilkeleri, geliştiricilerin bir iade başlatmadan önce bu kural değişikliklerine göre Code Analysis çalıştırmasını gerektirir.
 
-## <a name="to-open-the-code-analysis-policy-editor"></a>Code Analysis İlkesi düzenleyicisini açmak için
+## <a name="to-open-the-code-analysis-policy-editor"></a>Code Analysis ilke düzenleyicisini açmak için
 
-1. Içinde **Takım Gezgini,** projeye sağ tıklayın, Project Ayarlar **ve** ardından Kaynak **Denetimi'ne tıklayın.**
+1. **Takım Gezgini**, projeye sağ tıklayın, **Project Ayarlar**' a ve ardından **kaynak denetimi**' ne tıklayın.
 
-     Kaynak **Denetimi iletişim** kutusu görüntülenir.
+     **Kaynak denetimi** iletişim kutusu görüntülenir.
 
-2. Iade **İlkesi sekmesinde Ekle'ye** **tıklayın.**
+2. **Iade ilkesi** sekmesinde, **Ekle**' ye tıklayın.
 
-     Iade **İlkesi Ekle iletişim** kutusu görüntülenir.
+     **Iade Ilkesi Ekle** iletişim kutusu görünür.
 
-3. **İlkeyi Iade Edin listesinde,** İlkeler **onay Code Analysis** ve ardından Tamam'a **tıklayın.**
+3. **iade ilkesi** listesinde **Code Analysis** onay kutusunu seçin ve ardından **tamam**' a tıklayın.
 
-     İlke **Code Analysis Düzenleyici** iletişim kutusu görüntülenir.
+     **Code Analysis ilke düzenleyicisi** iletişim kutusu görüntülenir.
 
-## <a name="to-enable-code-analysis-maintainability-rules"></a>Kod analizi bakım kurallarını etkinleştirmek için
+## <a name="to-enable-code-analysis-maintainability-rules"></a>Kod Analizi bakım kurallarını etkinleştirmek için
 
-1. İlke **Code Analysis iletişim kutusundaki** Kural Ayarlar **altında** Bakım Kuralları **düğümünü** genişletin.
+1. **Code Analysis ilke düzenleyicisi** iletişim kutusunda, **kural Ayarlar** altında, bakım **kuralları** düğümünü genişletin.
 
 2. Aşağıdaki kuralların onay kutularını seçin:
 
-   - Devralma Derinliği: **CA1501 AvoidExcessiveInheritance** - Eşik: 5'den fazla derin düzeyde uyarı
+   - Devralma derinliği: **CA1501 AvoidExcessiveInheritance** -Threshold: 5 düzeyden daha derin bir uyarı
 
-   - Karmaşıklık: **CA1502 AvoidExcessiveComplexity** - Eşik: 25'in üzerinde uyarı
+   - Karmaşıklık: **CA1502 AvoidExcessiveComplexity** -Threshold: 25 ' ten fazla uyarı
 
-   - Bakım Dizini: **CA1505 AvoidUnmaintainableCode** - Eşik: 20'den az uyarı
+   - Bakım dizini: **CA1505 AvoidUnmaintainableCode** -Threshold: 20 ' den az uyarı
 
-   - Sınıf Bağlantısı: **CA1506 AvoidExcessiveClassCoupling** - Eşik: Bir sınıf için 80'den fazla ve bir yöntem için 30'dan fazla uyarı
+   - Sınıf bağlantısı: **CA1506 AvoidExcessiveClassCoupling** -Threshold: bir sınıf için 80 ' den fazla uyarı ve bir yöntem için 30 ' dan fazla uyarı
 
-     Ayrıca, başarılı bir derlemeyi önlemek için bir kural  ihlali yapmak istemiyorsanız, kural açıklamasının yanındaki Uyarıyı Hata Olarak Davran onay kutusunu seçin.
+     Ayrıca, başarılı bir derlemeyi engellemek için bir kural ihlalini isterseniz, kural açıklamasının yanındaki **uyarıyı hata olarak işle** onay kutusunu seçin.
 
-3. **Tamam**'a tıklayın. Yeni iade ilkesi artık gelecekteki iadeler için geçerlidir.
+3. **Tamam**'a tıklayın. Yeni iade ilkesi artık gelecek iadeler için geçerlidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod ölçümleri değerleri](../code-quality/code-metrics-values.md)
-- [Kod analizi iade ilkelerini oluşturma ve kullanma](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)
+- [Kod ölçüm değerleri](../code-quality/code-metrics-values.md)
+- [Kod Analizi iade ilkeleri oluşturma ve kullanma](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)

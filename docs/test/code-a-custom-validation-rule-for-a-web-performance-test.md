@@ -1,5 +1,5 @@
 ---
-title: Web perf testi için özel doğrulama kuralı oluşturma
+title: Web testi için özel doğrulama kuralı oluşturma
 description: ValidationRule doğrulama kuralı sınıfından türetilen kendi doğrulama kurallarınızı oluşturma hakkında bilgi.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
@@ -19,11 +19,11 @@ ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
 ms.openlocfilehash: 5eb34377ab17bec9a1e8bb51e213eb24b7415e48
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122026908"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628167"
 ---
 # <a name="code-a-custom-validation-rule-for-a-web-performance-test"></a>Web performans testi için özel doğrulama kuralı kodla
 
@@ -43,7 +43,7 @@ Kendi doğrulama kurallarınızı oluşturabilirsiniz. Bunu yapmak için, bir do
     > [!IMPORTANT]
     > Sınıfını, testlerinizi içinde olduğu projede oluşturabilirsiniz. Ancak, kuralı yeniden kullanmak için kuralınızı depolamak üzere ayrı bir Sınıf kitaplığı projesi oluşturmanız daha iyi olur. Ayrı bir proje sanız, bu yordamda isteğe bağlı adımları tamamlamanız gerekir.
 
-3. (İsteğe bağlı) Sınıf kitaplığı projesinde Microsoft.VisualStudio.QualityTools.WebTestFramework DLL'lerine bir başvuru ekleyin.
+3. (İsteğe bağlı) Sınıf kitaplığı projesinde, Microsoft.VisualStudio.QualityTools.WebTestFramework DLL'ye bir başvuru ekleyin.
 
 4. sınıfından türeten bir sınıf <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule> oluşturun. ve <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.Validate*> üyelerini <xref:Microsoft.VisualStudio.TestTools.WebTesting.ValidationRule.RuleName*> uygulama.
 
@@ -51,7 +51,7 @@ Kendi doğrulama kurallarınızı oluşturabilirsiniz. Bunu yapmak için, bir do
 
 6. (İsteğe bağlı) Test Project, özel doğrulama kuralını içeren Sınıf kitaplığı projesine bir başvuru ekleyin.
 
-7. Test Project' içinde bir web performans testi **Web Performans Testi Düzenleyicisi.**
+7. Test Project içinde bir web performans testi **Web Performans Testi Düzenleyicisi.**
 
 8. Özel doğrulama kuralını bir web performans testi isteğine eklemek için bir isteke sağ tıklayın ve Doğrulama Kuralı **Ekle'yi seçin.**
 

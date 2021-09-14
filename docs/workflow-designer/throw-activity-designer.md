@@ -14,11 +14,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 8517ac1cfc2a1a4ba0c3a1c28e17970bea6e1598
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963764"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726067"
 ---
 # <a name="throw-activity-designer"></a>Throw Etkinlik Tasarımcısı
 
@@ -32,7 +32,7 @@ Etkinlik <xref:System.Activities.Statements.Throw> bir özel durum oluşturur.
 
 Araç Kutusunun **Hata** İşleme kategorisinde **Throw etkinlik** tasarımcısına **erişin.**
 
-**Throw** etkinlik tasarımcısı Araç Kutusundan **sürüklenip** bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirilmelerinden sonra araç yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.Throw> Throw **DisplayName değerine sahip bir** etkinlik oluşturur. Değer <xref:System.Activities.Activity.DisplayName%2A> Throw etkinlik tasarımcısının üst  bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir. <xref:System.Activities.Statements.Throw.Exception%2A>özelliği, özellik kılavuzunda düzenlenemez.
+**Throw** etkinlik tasarımcısı Araç Kutusundan **sürüklenip** bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirildikten sonra bu yüzeyde <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.Throw> Throw **DisplayName değerine sahip bir** etkinlik oluşturur. Değer <xref:System.Activities.Activity.DisplayName%2A> Throw etkinlik tasarımcısının üst  bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir. <xref:System.Activities.Statements.Throw.Exception%2A>özelliği, özellik kılavuzunda düzenlenemez.
 
 ### <a name="the-throw-properties"></a>Throw Özellikleri
 
@@ -41,7 +41,7 @@ Aşağıdaki tablo, <xref:System.Activities.Statements.Throw> özellikleri göst
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
 |<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adını <xref:System.Activities.Statements.Throw> belirtir. Varsayılan değer Throw'tır.|
-|<xref:System.Activities.Statements.Throw.Exception%2A>|Doğru|Atılan özel durum. Bu özel durum, 'den <xref:System.Exception> türetildi. Özel durumu belirtmek için özellik kılavuzuna Visual Basic bir ifade yazın.|
+|<xref:System.Activities.Statements.Throw.Exception%2A>|Doğru|Atılan özel durum. Bu özel durum, 'den <xref:System.Exception> türetildi. Özel durumu belirtmek için, özellik Visual Basic bir özel durum ifadesi yazın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

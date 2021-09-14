@@ -1,7 +1,7 @@
 ---
 title: Özel kod analizi kural kümesi oluşturma
 ms.date: 11/02/2018
-description: Visual Studio 'de kod analizi kural kümelerini özelleştirmeyi öğrenin. Bkz. sıfırdan veya mevcut kümelerden yeni kümeler oluşturma. Kural önceliğini anlayın.
+description: Kod analizi kural kümelerini nasıl özelleştirebileceğinizi Visual Studio. Sıfırdan veya mevcut kümelerden yeni kümeler oluşturma hakkında daha fazla veri alın. Kural önceliklerini anlama.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 f1_keywords:
@@ -15,93 +15,93 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
 ms.openlocfilehash: 181f94ccc9b83053673e49746d757708afdbf966
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122139619"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631982"
 ---
-# <a name="customize-a-rule-set"></a>Bir kural kümesini özelleştirme
+# <a name="customize-a-rule-set"></a>Kural kümesi özelleştirme
 
 Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir kural kümesi oluşturabilirsiniz.
 
-## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>Var olan bir kural kümesinden özel bir kural kümesi oluşturma
+## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>Mevcut bir kural kümesinden özel kural kümesi oluşturma
 
-Özel bir kural kümesi oluşturmak için, **kural kümesi düzenleyicisinde** yerleşik bir kural kümesi açabilirsiniz. Buradan, belirli kuralları ekleyebilir veya kaldırabilir ve bir kural ihlal edildiğinde oluşan eylemi değiştirebilirsiniz &mdash; , örneğin bir uyarı veya hata gösterir.
+Özel bir kural kümesi oluşturmak için, kural kümesi düzenleyicisinde yerleşik bir kural **kümesi açabilirsiniz.** Buradan belirli kurallar ekleyebilir veya kaldırabilir ve örneğin bir kural ihlal edildiklerinden oluşan eylemi değiştirebilirsiniz. Örneğin, bir uyarı &mdash; veya hata göster.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
+1. Bu **Çözüm Gezgini,** projeye sağ tıklayın ve ardından Özellikler'i **seçin.**
 
-2. **özellikler** sayfalarında **Code Analysis** sekmesini seçin.
+2. Özellikler **sayfalarında,** Code Analysis **seçin.**
 
 ::: moniker range="vs-2017"
 
-3. **Bu kural kümesini Çalıştır** açılan listesinde aşağıdakilerden birini yapın:
+3. Bu **kuralı çalıştır kümesi** açılan listesinde, aşağıdakilerden birini yapın:
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. **Etkin kurallar** açılan listesinde aşağıdakilerden birini yapın:
+3. Etkin **kurallar açılan** listesinde, aşağıdakilerden birini yapın:
 
 ::: moniker-end
 
-   - Özelleştirmek istediğiniz kural kümesini seçin.
+   - Özelleştirmek istediğiniz kural kümesi seçin.
 
-     \- veya
+     \- veya -
 
-   - **\<Browse>** Listede olmayan mevcut bir kural kümesini belirtmek için seçin.
+   - Listede **\<Browse>** yer alan mevcut bir kural kümesi belirtmek için seçin.
 
-4. Kural kümesi düzenleyicisinde kuralları göstermek için **Aç** ' ı seçin.
+4. Kuralları **kural** kümesi düzenleyicisinde görüntülemek için Aç'ı seçin.
 
 > [!NOTE]
-> .net Core veya .NET Standard projeniz varsa, proje özelliklerindeki **Code Analysis** sekmesi aynı seçenekleri desteklemediğinden işlem biraz farklıdır. [Önceden tanımlanmış bir kural kümesini projenize kopyalamak ve etkin kural kümesi olarak ayarlamak](/dotnet/fundamentals/code-analysis/code-quality-rule-options)için adımları izleyin. bir kural kümesi üzerinden kopyaladıktan sonra, bunu **Çözüm Gezgini** açarak [Visual Studio kural kümesi düzenleyicisinde düzenleyebilirsiniz](working-in-the-code-analysis-rule-set-editor.md) .
+> Bir .NET Core veya .NET Standard projeniz varsa, proje özelliklerinde **Code Analysis** sekmesi aynı seçenekleri desteklemey olduğundan işlem biraz farklıdır. Önceden tanımlanmış bir [kural kümesi kopyalayıp projenize kopyalamak ve](/dotnet/fundamentals/code-analysis/code-quality-rule-options)bunu etkin kural kümesi olarak ayarlamak için adımları izleyin. Bir kural kümesi üzerine kopya kullandıktan [](working-in-the-code-analysis-rule-set-editor.md) sonra, bunu Visual Studio kural kümesi düzenleyicisinde **Çözüm Gezgini.**
 
-## <a name="create-a-new-rule-set"></a>Yeni bir kural kümesi oluştur
+## <a name="create-a-new-rule-set"></a>Yeni kural kümesi oluşturma
 
-**Yeni dosya** iletişim kutusundan yeni bir kural kümesi dosyası oluşturabilirsiniz:
+Yeni Dosya iletişim kutusundan yeni bir kural kümesi **dosyası oluşturabilirsiniz:**
 
-1. **Dosya**  >  **Yeni**  >  **Dosya**' yı seçin veya **CTRL** + **N** tuşuna basın.
+1. Dosya **Yeni**  >  **Dosya'yi**  >  **seçin** veya **Ctrl** N + **tuşlarına basın.**
 
-2. **yeni dosya** iletişim kutusunda sol taraftaki **genel** kategorisini seçin ve ardından **Code Analysis kural kümesi**' ni seçin.
+2. Yeni **Dosya iletişim kutusunda,** sol tarafta **Genel kategorisini** ve ardından Kural Kümesi'Code Analysis **seçin.**
 
 3. **Aç**’ı seçin.
 
-   Yeni *. RuleSet* dosyası kural kümesi düzenleyicisinde açılır.
+   Yeni *.ruleset dosyası* kural kümesi düzenleyicisinde açılır.
 
-## <a name="create-a-custom-rule-set-from-multiple-rule-sets"></a>Birden çok kural kümesinden özel bir kural kümesi oluşturma
+## <a name="create-a-custom-rule-set-from-multiple-rule-sets"></a>Birden çok kural kümesinden özel kural kümesi oluşturma
 
 > [!NOTE]
-> aşağıdaki yordam, .net Core veya .NET Standard projelerine uygulanmaz, bu da **Code Analysis** özellik sekmesindeki özellikleri desteklemez.
+> Aşağıdaki yordam. .NET Core veya .NET Standard projeleri için geçerli değildir. Bu, Code Analysis **sekmesinde** aynı özellikleri desteklemez.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
+1. Bu **Çözüm Gezgini,** projeye sağ tıklayın ve ardından Özellikler'i **seçin.**
 
-2. **özellikler** sayfalarında **Code Analysis** sekmesini seçin.
+2. Özellikler **sayfalarında,** Code Analysis **seçin.**
 
 ::: moniker range="vs-2017"
 
-3. **\<Choose multiple rule sets>** **Bu kural kümesini Çalıştır**' ı seçin.
+3. Bu **\<Choose multiple rule sets>** kural kümesi **çalıştır'ı seçin.**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. **\<Choose multiple rule sets>** **Etkin kurallar** arasından seçim yapın.
+3. Etkin **\<Choose multiple rule sets>** **kurallar'dan öğesini seçin.**
 
 ::: moniker-end
 
-4. **Kural kümeleri Ekle veya Kaldır** iletişim kutusunda yeni kural kümesine dahil etmek istediğiniz kural kümelerini seçin.
+4. Kural **Kümesi Ekle veya Kaldır iletişim** kutusunda, yeni kural kümenize eklemek istediğiniz kural kümelerini seçin.
 
-   ![Kural kümeleri Ekle veya Kaldır iletişim kutusu](media/add-remove-rule-sets.png)
+   ![Kural kümesi ekle veya kaldır iletişim kutusu](media/add-remove-rule-sets.png)
 
-5. **Farklı kaydet**' i seçin, *. RuleSet* dosyası için bir ad girin ve ardından **Kaydet**' i seçin.
+5. Farklı **Kaydet'i** seçin, *.ruleset* dosyası için bir ad girin ve kaydet'i **seçin.**
 
-   Yeni kural kümesi **Bu kural kümesini Çalıştır** listesinde seçilir.
+   Yeni kural kümesi Bu kural kümesi çalıştır **listesinde** seçilidir.
 
-6. Kural kümesi düzenleyicisinde yeni kural kümesini açmak için **Aç** ' ı seçin.
+6. Kural **kümesi** düzenleyicisinde yeni kural kümesi açmak için Aç'ı seçin.
 
 ## <a name="rule-precedence"></a>Kural önceliği
 
-- Aynı kural, farklı önem derecelerine sahip bir kural kümesinde iki veya daha fazla kez listeleniyorsa, derleyici bir hata oluşturur. Örnek:
+- Aynı kural, farklı ayrımlara sahip bir kural kümesinde iki veya daha fazla kez listelenmişse, derleyici bir hata üretir. Örnek:
 
    ```xml
    <RuleSet Name="Rules for ClassLibrary21" Description="Code analysis rules for ClassLibrary21.csproj." ToolsVersion="15.0">
@@ -112,11 +112,11 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
    </RuleSet>
    ```
 
-- *Aynı önem derecesine* sahip bir kural kümesinde aynı kural iki veya daha fazla kez listeleniyorsa, **hata listesi** aşağıdaki uyarıyı görebilirsiniz:
+- Aynı kural aynı önem derecesine sahip bir kural  kümesinde iki veya daha fazla kez listelenmişse, Hata Listesinde aşağıdaki **uyarıyı görebilir:**
 
-   **CA0063: ' \[ sizin]. RuleSet ' kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi. Dosya, kural kümesi şemasıyla uyumlu değil.**
+   **CA0063: 'your].ruleset' veya bağımlı kural kümesi dosyalarından biri olan kural \[ kümesi dosyası yüklenemedi. Dosya kural kümesi şemasına uymaz.**
 
-- Kural kümesi bir **içerme** etiketi kullanarak ayarlanmış bir alt kural içeriyorsa ve alt ve üst kural her ikisi de aynı kuralı, ancak farklı önem derecelerine sahip olarak ayarlarsa, üst kural kümesindeki önem derecesi önceliklidir. Örnek:
+- Kural kümesi, Ekle etiketi kullanılarak bir  alt kural kümesi içerirse ve alt ve üst kural kümeleri her ikisi de aynı kuralı ancak farklı önem dereceleriyle listelese, üst kural kümesinde önem derecesi önceliklidir. Örnek:
 
    ```xml
    <!-- Parent rule set -->
@@ -139,11 +139,11 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 ## <a name="name-and-description"></a>Ad ve açıklama
 
-Düzenleyicide açık olan bir kural kümesinin görünen adını değiştirmek için,    >  menü çubuğunda **Özellikler penceresini** görüntüle ' yi seçerek Özellikler penceresini açın. **Ad** kutusuna görünen adı girin. Kural kümesi için bir açıklama de girebilirsiniz.
+Düzenleyicide açık olan bir kural kümesi görünen adını değiştirmek için menü çubuğunda Özellikler **Penceresini** Görüntüle'yi  >   seçerek Özellikler penceresini açın. Ad kutusuna görünen **adı** girin. Kural kümesi için bir açıklama da girsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık bir kural ayarlamış olduğunuza göre, bir sonraki adım kuralları ekleyip kaldırarak veya kural ihlallerinin önem derecesini değiştirerek kuralları özelleştirecek.
+Artık bir kural kümesine sahip olduğunuza göre, sonraki adım kuralları ekleyerek veya kaldırarak ya da kural ihlallerinin önem derecesini değiştirerek kuralları özelleştirmektir.
 
 > [!div class="nextstepaction"]
 > [Kural kümesi düzenleyicisinde kuralları değiştirme](../code-quality/working-in-the-code-analysis-rule-set-editor.md)

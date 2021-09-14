@@ -1,6 +1,6 @@
 ---
-title: CancellationScope Etkinlik Tasarımcısı
-description: CancellationScope etkinliğini oluşturmak ve yapılandırmak için İş Akışı Tasarımcısı 'de CancellationScope Etkinlik tasarımcısını nasıl kullanabileceğinizi öğrenin.
+title: CancellationScope etkinlik tasarımcısı
+description: CancellationScope etkinliği oluşturmak ve yapılandırmak için İş Akışı Tasarımcısı'da CancellationScope etkinlik tasarımcısını nasıl kullanabileceğiniz hakkında bilgi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,35 +14,35 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 91eb31444a56d68f062f7909d9fb5de13d3f496d
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963718"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633726"
 ---
 # <a name="cancellationscope-activity-designer"></a>CancellationScope Etkinlik Tasarımcısı
 
-**CancellationScope** etkinlik Tasarımcısı bir etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.CancellationScope> .
+**CancellationScope etkinlik** tasarımcısı, etkinlik oluşturmak ve yapılandırmak için <xref:System.Activities.Statements.CancellationScope> kullanılır.
 
-## <a name="the-cancellationscope-activity"></a>CancellationScope etkinliği
+## <a name="the-cancellationscope-activity"></a>CancellationScope Etkinliği
 
-<xref:System.Activities.Statements.CancellationScope>Etkinlik, bu etkinlik için yürütme ve iptal mantığı için bir etkinlik belirtmenize olanak tanır.
+Etkinlik, <xref:System.Activities.Statements.CancellationScope> bu etkinlik için yürütme ve iptal mantığı için bir etkinlik belirtmenize olanak sağlar.
 
-### <a name="using-the-cancellationscope-activity-designer"></a>CancellationScope Etkinlik tasarımcısını kullanma
+### <a name="using-the-cancellationscope-activity-designer"></a>CancellationScope Etkinlik Tasarımcısını Kullanma
 
-**CancellationScope** etkinlik Tasarımcısı **araç kutusu** **işlem** kategorisinde bulunabilir. **Araç kutusunu** açmak Için iş akışı Tasarımcısı **araç kutusu** sekmesini seçin. Alternatif olarak, **Görünüm** menüsünden **araç kutusu** ' nu seçin veya **CTRL** + **alt** + **X** tuşlarına basın.
+**CancellationScope** etkinlik tasarımcısı, Araç **Kutusu'nda İşlem** **kategorisinde bulunabilir.** Araç **Kutusu'nı** açmak için, **dosyanın** Araç Kutusu İş Akışı Tasarımcısı. Alternatif olarak Görünüm **menüsünden Araç** Kutusu'nı **seçin** veya **Ctrl** Alt X + **tuşlarına** + **basın.**
 
-**CancellationScope** etkinlik Tasarımcısı **araç kutusu** 'ndan sürüklenebilir ve içindeki gibi etkinliklerin yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . **CancellationScope** etkinlik Tasarımcısı ' nın atılması, <xref:System.Activities.Statements.CancellationScope> varsayılan CancellationScope olan bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . <xref:System.Activities.Activity.DisplayName%2A> **CancellationScope** etkinlik Tasarımcısı üstbilgisindeki değeri düzenleyin. Bunu Özellik kılavuzunun **DisplayName** kutusunda da düzenleyebilirsiniz.
+**CancellationScope** etkinlik tasarımcısı **Toolbox'tan** sürüklenip bir içinde olduğu gibi İş Akışı Tasarımcısı yerleştirildikten sonra bu alan yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. **CancellationScope etkinlik tasarımcısını** bırakarak, <xref:System.Activities.Statements.CancellationScope> cancellationScope varsayılan değeriyle <xref:System.Activities.Activity.DisplayName%2A> bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>CancellationScope etkinlik tasarımcısının üst **bilgisinde değerini** düzenleyin. Ayrıca, özellik kılavuzunda **DisplayName** kutusunda da düzenleyebilirsiniz.
 
-### <a name="the-cancellationscope-properties"></a>CancellationScope özellikleri
+### <a name="the-cancellationscope-properties"></a>CancellationScope Özellikleri
 
-Aşağıdaki tabloda <xref:System.Activities.Statements.CancellationScope> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. <xref:System.Activities.Activity.DisplayName%2A>Özellik, özellik kılavuzunda düzenlenebilir, ancak diğer özellikler iş akışı Tasarımcısı yüzeyinde düzenlenmelidir.
+Aşağıdaki tablo, <xref:System.Activities.Statements.CancellationScope> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. özelliği <xref:System.Activities.Activity.DisplayName%2A> özellik kılavuzunda düzenlenebilir, ancak diğer özelliklerin tek bir yüzeyde İş Akışı Tasarımcısı gerekir.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adı <xref:System.Activities.Statements.CancellationScope> . Varsayılan değer CancellationScope ' dir. <xref:System.Activities.Activity.DisplayName%2A>Değer kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.CancellationScope.Body%2A>|Doğru|İptal mantığının sağlandığı etkinliği belirtir. Etkinliği eklemek için <xref:System.Activities.Statements.CancellationScope.Body%2A> , **araç kutusundan** bir etkinliği **CancellationScope** etkinlik Tasarımcısı ' nın **gövde** kutusuna bırakın. "Etkinliği buraya bırak" ipucu metnini ekleyin.|
-|<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>|Doğru|İptal varsa yürütülen etkinliği belirtir. Etkinliği eklemek için <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> , **Toolbox** 'Tan bir etkinliği **CancellationScope** Etkinlik tasarımcısında **CancellationHandler** kutusuna bırakın. "Etkinliği buraya bırak" ipucu metnini ekleyin.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay <xref:System.Activities.Statements.CancellationScope> adı. CancellationScope varsayılandır. Değer <xref:System.Activities.Activity.DisplayName%2A> kesinlikle gerekli değildir ancak bir değer kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.CancellationScope.Body%2A>|Doğru|İptal mantığının sağlanacak etkinliğini belirtir. Etkinliği eklemek <xref:System.Activities.Statements.CancellationScope.Body%2A> için Araç Kutusundan **CancellationScope etkinlik** tasarımcısının Gövde kutusuna bir **etkinlik** bırakın.  "Etkinliği Buraya Bırak" ipucu metnini ekleyin.|
+|<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>|Doğru|İptal varsa yürütülen etkinliği belirtir. Etkinliği eklemek <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> için, Araç Kutusundan **CancellationScope** etkinlik tasarımcısında **CancellationHandler** **kutusuna bir** etkinlik bırakın. "Etkinliği Buraya Bırak" ipucu metnini ekleyin.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

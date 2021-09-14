@@ -11,11 +11,11 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: 495e1cedbcecef549102fd279ced077d096c2616
-ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "122334444"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633473"
 ---
 # <a name="image-layering"></a>Resim katmanlama
 

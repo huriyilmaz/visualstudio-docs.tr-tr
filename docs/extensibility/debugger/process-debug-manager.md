@@ -1,6 +1,6 @@
 ---
-title: İşlem Hata Ayıklama Yöneticisi | Microsoft Docs
-description: Programlarının oturum hata ayıklama yöneticisi ve hata ayıklama altyapıları için kullanılabilir Visual Studio bileşeni olan işlem hata ayıklama yöneticisi hakkında bilgi öğrenin.
+title: İşlem hata ayıklama Yöneticisi | Microsoft Docs
+description: programları oturum hata ayıklama yöneticisi ve hata ayıklama altyapılarında kullanılabilir hale getiren Visual Studio bileşeni olan işlem hata ayıklama yöneticisi hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,20 +15,20 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 86d8128f997aff275380b25f90b908bc8abaf535
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122104708"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725826"
 ---
-# <a name="process-debug-manager"></a>İşlem hata ayıklama yöneticisi
-İşlem hata ayıklama yöneticisi (PDM), program ve Visual Studio yöneten bir bileşendir ve oturum hata ayıklama yöneticisi ve hata ayıklama altyapıları tarafından kullanılabilir hale geldi.
+# <a name="process-debug-manager"></a>İşlem hata ayıklama Yöneticisi
+işlem hata ayıklama yöneticisi (PDM), programları ve işlemleri yöneten ve bunları oturum hata ayıklama yöneticisi ve hata ayıklama altyapılarında kullanılabilir hale getiren Visual Studio bir bileşenidir.
 
- PDM, hata ayıklaması yapılan tüm işlemleri yönetir. Hata ayıklamak için bir programın PDM'ye kayıtlı olması gerekir. Bu kayıt, program başlat zamanı bir bağlantı noktası veya hata ayıklama altyapısı tarafından yapılır.
+ PDM, hata ayıklaabilecek tüm işlemlerin yönetimini yönetir. Hata ayıklanabilecek şekilde, PDM ile bir programın kayıtlı olması gerekir. Bu kayıt, program başlatıldığı sırada veya bir bağlantı noktası ya da hata ayıklama altyapısı tarafından yapılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İşlemler](../../extensibility/debugger/processes.md)
 - [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md)
 - [Bağlantı noktaları](../../extensibility/debugger/ports.md)
 - [Programlar](../../extensibility/debugger/programs.md)
-- [Hata ayıklayıcısı bileşenleri](../../extensibility/debugger/debugger-components.md)
+- [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md)

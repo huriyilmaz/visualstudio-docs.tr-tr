@@ -1,6 +1,6 @@
 ---
-description: Sembolün bir kod adresine başvurup başvurul olmadığını belirten bir bayrak alınır.
-title: IDiaSymbol::get_code | Microsoft Docs
+description: Simgenin bir kod adresine başvuru yapıp kullanmadığını belirten bir bayrak alır.
+title: 'IDiaSymbol:: get_code | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 33e44a4722de1c827d0590199481daa770c67fb6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052280"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725908"
 ---
 # <a name="idiasymbolget_code"></a>IDiaSymbol::get_code
-Sembolün bir kod adresine başvurup başvurul olmadığını belirten bir bayrak alınır.
+Simgenin bir kod adresine başvuru yapıp kullanmadığını belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,20 +35,20 @@ HRESULT get_code (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Sembol `TRUE` bir kod adresine başvurursa döndürür, aksi takdirde `FALSE` döndürür.
+dışı `TRUE` Simgenin bir kod adresine başvuruyorsa, aksi takdirde döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
 |Gereksinim|Açıklama|
 |-----------------|-----------------|
-|Üstbilgi:|dia2.h|
-|Sürüm:|DIA SDK v7.0|
+|Üst bilgi|dia2. h|
+|Sürüm:|DIA SDK v 7.0|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

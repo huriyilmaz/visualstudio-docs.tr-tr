@@ -1,6 +1,6 @@
 ---
 title: Bir gizlilik istemiyle özel bir önyükleyici oluşturma
-description: yeni dosya sürümlerine ve derleme sürümlerine sahip derlemeler kullanılabilir olduğunda otomatik olarak güncelleştirilecek ClickOnce uygulamalarını nasıl yapılandıracağınızı öğrenin.
+description: Yeni dosya sürümlerine ve ClickOnce sürümlerine sahip derlemeler kullanılabilir olduğunda otomatik olarak güncelleştirilecek şekilde uygulama yapılandırmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -23,14 +23,14 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: 5f0c34a56b610ee65f2f9d8d4ac506224950c302
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122133620"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725382"
 ---
 # <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>İzlenecek yol: Bir gizlilik istemiyle özel bir önyükleyici oluşturma
-yeni dosya sürümlerine ve derleme sürümlerine sahip derlemeler kullanılabilir olduğunda otomatik olarak güncelleştirilecek ClickOnce uygulamaları yapılandırabilirsiniz. Müşterilerinizin Bu davranışa izin vermesini sağlamak için bir gizlilik istemi görüntüleyebilirsiniz. Ardından, uygulamaya otomatik olarak güncelleştirme izni verip vermeyeceğinizi seçebilirler. Uygulamanın otomatik olarak güncelleştirmesine izin verilmiyorsa, yüklemez.
+Yeni dosya sürümlerine ClickOnce derlemeler kullanılabilir olduğunda, uygulamaları otomatik olarak güncelleştirecek şekilde yapılandırabilirsiniz. Müşterilerimizin bu davranışı onay olduğundan emin olmak için onlara bir gizlilik istemi görüntüabilirsiniz. Ardından uygulamaya otomatik olarak güncelleştirme izni verip verilmeyeceklerini seçebilirler. Uygulamanın otomatik olarak güncelleştirilmesine izin verilmiyorsa yüklenmez.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -39,134 +39,134 @@ yeni dosya sürümlerine ve derleme sürümlerine sahip derlemeler kullanılabil
 
 - Visual Studio 2010.
 
-## <a name="create-an-update-consent-dialog-box"></a>Güncelleştirme Izni oluştur iletişim kutusu
- Bir gizlilik istemi göstermek için, okuyucunun uygulama için otomatik güncelleştirmelere izin vermesini isteyen bir uygulama oluşturun.
+## <a name="create-an-update-consent-dialog-box"></a>Güncelleştirme Onayı Oluştur iletişim kutusu
+ Bir gizlilik istemi görüntülemek için, okuyucudan uygulama için otomatik güncelleştirmeleri onaylarken onay isteyen bir uygulama oluşturun.
 
 #### <a name="to-create-a-consent-dialog-box"></a>Onay iletişim kutusu oluşturmak için
 
-1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve **Project**' ye tıklayın.
+1. Dosya menüsünde **Yeni'nin** üzerine **gelin ve** ardından Dosya'ya **Project.**
 
-2. **yeni Project** iletişim kutusunda, **Windows**' a ve ardından **WindowsFormsApplication**' e tıklayın.
+2. Yeni **Project** iletişim kutusunda, Windows'a ve ardından **WindowsFormsApplication 'a tıklayın.** 
 
-3. **Ad** Için **ConsentDialog** yazın ve ardından **Tamam**' a tıklayın.
+3. Ad için **ConsentDialog yazın ve** Tamam'a  **tıklayın.**
 
 4. Tasarımcıda forma tıklayın.
 
-5. **Özellikler** penceresinde, **metin** özelliğini **güncelleştirme onayı iletişim kutusunu** olarak değiştirin.
+5. Özellikler penceresinde **Text** özelliğini Güncelleştirme Onayı **İletişim** **Kutusu olarak değiştirin.**
 
-6. **araç kutusunda** **tüm Windows Forms**' ı genişletin ve bir **etiket** denetimini forma sürükleyin.
+6. Araç **Kutusunda, Tüm** **Formlar'Windows genişletin** ve bir Etiket **denetimi** sürükleyerek forma yazın.
 
 7. Tasarımcıda etiket denetimine tıklayın.
 
-8. **Özellikler** penceresinde, **Görünüm** altındaki **metin** özelliğini aşağıdaki gibi değiştirin:
+8. Özellikler **penceresinde,** Görünüm altındaki **Text** özelliğini **aşağıdakiyle** değiştirin:
 
-    Yüklemek üzere olduğunuz uygulama, Web üzerinde en son güncelleştirmeleri denetler. "Kabul ediyorum" seçeneğine tıklayarak, uygulamayı internetten güncelleştirmeleri otomatik olarak denetleyip yükleyecek şekilde yetkilendirirsiniz.
+    Yüklemekte olduğunuz uygulama, Web'de en son güncelleştirmeleri denetler. "Kabul Ediyorum" seçeneğine tıklayarak, uygulamayı güncelleştirmeleri İnternet'den otomatik olarak denetlemesi ve yüklemesi için yetkilendirebilirsiniz.
 
-9. **Araç kutusu**' nda, formun ortasına bir **CheckBox** denetimi sürükleyin.
+9. Araç **Kutusunda,** onay **kutusu denetimlerini** formun ortasına sürükleyin.
 
-10. **Özellikler** penceresinde, **kabul** ediyorum ' u Için, **Düzen** altındaki **metin** özelliğini değiştirin.
+10. Özellikler penceresinde **Düzen** altındaki **Text özelliğini** Kabul **Ediyorum** **olarak değiştirin.**
 
-11. **Araç kutusunda**, bir **düğme** denetimini formun sol altına sürükleyin.
+11. Araç **Kutusunda,** düğme **denetimlerini** formun sol alta sürükleyin.
 
-12. **Özellikler** penceresinde, **devam** etmek için **Düzen** altındaki **metin** özelliğini değiştirin.
+12. Özellikler penceresinde **Düzen** altındaki **Text özelliğini** Devam **olarak** **değiştirin.**
 
-13. **Özellikler** penceresinde, **Tasarım** altındaki **(ad)** özelliğini devam **edbutton** olarak değiştirin.
+13. Özellikler **penceresinde,** Tasarım altındaki **(Ad) özelliğini** **ProceedButton olarak değiştirin.** 
 
-14. **Araç kutusunda**, formun sağ alt kısmına bir **düğme** denetimi sürükleyin.
+14. Araç **Kutusunda,** düğme **denetimlerini** formun sağ alta sürükleyin.
 
-15. **Özellikler** penceresinde, **Düzen** altındaki **metin** özelliğini **iptal**' e değiştirin.
+15. Özellikler penceresinde **Düzen** altındaki **Text özelliğini Cancel** **olarak** **değiştirin.**
 
-16. **Özellikler** penceresinde, **(ad)** özelliğini **Design** ' ın altında **CancelButton**' a değiştirin.
+16. Özellikler **penceresinde,** Tasarım altındaki **(Ad) özelliğini** **CancelButton olarak değiştirin.** 
 
-17. Tasarımcı 'da, CheckedChanged olay işleyicisini oluşturmak için **kabul** ediyorum onay kutusuna çift tıklayın.
+17. CheckedChanged olay işleyicisini **oluşturmak için** tasarımcıda Kabul Ediyorum onay kutusuna çift tıklayın.
 
-18. Form1 kod dosyasında, CheckedChanged olay işleyicisi için aşağıdaki kodu ekleyin.
+18. Form1 kod dosyasında CheckedChanged olay işleyicisi için aşağıdaki kodu ekleyin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/consentdialog/cs/form1.cs" id="Snippet1":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/consentdialog/vb/form1.vb" id="Snippet1":::
 
-19. Varsayılan olarak **devam** düğmesini devre dışı bırakmak için sınıf oluşturucusunu güncelleştirin.
+19. Devam düğmesini varsayılan olarak devre dışı bırakmak için **sınıf oluşturucusu** güncelleştirildi.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/consentdialog/cs/form1.cs" id="Snippet6":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/consentdialog/vb/form1.vb" id="Snippet6":::
 
-20. Form1 kod dosyasında, son kullanıcının çevrimiçi güncelleştirmelere onaylı olup olmadığını izlemek üzere bir Boole değişkeni için aşağıdaki kodu ekleyin.
+20. Form1 kod dosyasında, son kullanıcının çevrimiçi güncelleştirmelere onay verdip onay vermezse izlemek için bir Boole değişkeni için aşağıdaki kodu ekleyin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/consentdialog/cs/form1.cs" id="Snippet3":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/consentdialog/vb/form1.vb" id="Snippet3":::
 
-21. Tasarımcıda, tıklama olay işleyicisini oluşturmak için **devam** düğmesine çift tıklayın.
+21. Tasarımcıda Devam'a çift **tıklayarak** Tıklama olayı işleyicisini üretin.
 
-22. Form1 kod dosyasında, **ilerle** düğmesine Click olay işleyicisine aşağıdaki kodu ekleyin.
+22. Form1 kod dosyasında, Devam düğmesinin Click olay işleyicisi'ne aşağıdaki **kodu** ekleyin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/consentdialog/cs/form1.cs" id="Snippet2":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/consentdialog/vb/form1.vb" id="Snippet2":::
 
 
-23. Tasarımcıda, Click olay işleyicisini oluşturmak için **iptal** düğmesine çift tıklayın.
+23. Click olayı işleyicisini oluşturmak **için tasarımcıda** İptal düğmesine çift tıklayın.
 
-24. Form1 kod dosyasında, **Cancel** düğmesine Click olay işleyicisi için aşağıdaki kodu ekleyin.
+24. Form1 kod dosyasında, İptal düğmesi için Click olay işleyicisi için aşağıdaki **kodu** ekleyin.
 
      :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/consentdialog/cs/form1.cs" id="Snippet4":::
      :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/consentdialog/vb/form1.vb" id="Snippet4":::
 
-25. Son Kullanıcı çevrimiçi güncelleştirmeleri onaylamaz bir hata döndürecek şekilde uygulamayı güncelleştirin.
+25. Son kullanıcı çevrimiçi güncelleştirmelere onay vermezse, uygulamayı hata döndürürken güncelleştirin.
 
-     yalnızca Visual Basic geliştiricileri için:
+     Yalnızca Visual Basic geliştiriciler için:
 
-    1. **Çözüm Gezgini**, **ConsentDialog**' a tıklayın.
+    1. Bu **Çözüm Gezgini** **ConsentDialog'a tıklayın.**
 
-    2. **Project** menüsünde **modül ekle**' ye ve ardından **ekle**' ye tıklayın.
+    2. Yeni **Project** Modül Ekle'ye **ve** ardından Ekle'ye **tıklayın.**
 
-    3. *Module1. vb* kod dosyasında aşağıdaki kodu ekleyin.
+    3. *Module1.vb kod* dosyasına aşağıdaki kodu ekleyin.
 
        :::code language="vb" source="../snippets/visualbasic/VS_Snippets_ProTools/consentdialog/vb/module1.vb" id="Snippet7":::
 
-    4. **Project** menüsünde, **consentdialog özellikleri**' ne tıklayın ve ardından **uygulama** sekmesine tıklayın.
+    4. Uygulama **Project** **ConsentDialog Özellikleri'ne ve** ardından Uygulama **sekmesine** tıklayın.
 
-    5. **Uygulama çerçevesini etkinleştir** seçeneğinin işaretini kaldırın.
+    5. Uygulama çerçevesini **etkinleştir'in işaretini kaldırın.**
 
-    6. **Başlangıç nesnesi** açılan menüsünde **Module1** öğesini seçin.
+    6. Başlangıç **nesnesi açılan** menüsünde **Modül1'i seçin.**
 
        > [!NOTE]
-       > uygulama çerçevesini devre dışı bırakmak, Windows XP görsel stilleri, uygulama olayları, giriş ekranı, tek örnekli uygulama ve daha fazlası gibi özellikleri devre dışı bırakır. daha fazla bilgi için bkz. [uygulama sayfası, Project tasarımcısı (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md).
+       > Uygulama çerçevesinin devre dışı bırakılması XP görsel stilleri, Windows, giriş ekranı, tek örnekli uygulama ve daha fazlası gibi özellikleri devre dışı bırakmanızı sağlar. Daha fazla bilgi için [bkz. Uygulama Sayfası, Project Tasarımcısı (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md).
 
        Yalnızca Visual C# geliştiricileri için:
 
-       *Program. cs* kod dosyasını açın ve aşağıdaki kodu ekleyin.
+       *Program.cs kod* dosyasını açın ve aşağıdaki kodu ekleyin.
 
        :::code language="csharp" source="../snippets/csharp/VS_Snippets_ProTools/consentdialog/cs/program.cs" id="Snippet5":::
 
-26. **Derle** menüsünde **BuildSolution**' a tıklayın.
+26. Derleme menüsünde **BuildSolution** 'a **tıklayın.**
 
-## <a name="create-the-custom-bootstrapper-package"></a>Özel önyükleyici paketi oluşturma
- son kullanıcılara gizlilik istemi 'ni göstermek için, güncelleştirme onayı iletişim kutusu uygulaması için özel bir önyükleyici paketi oluşturabilir ve bunu tüm ClickOnce uygulamalarınıza bir önkoşul olarak ekleyebilirsiniz.
+## <a name="create-the-custom-bootstrapper-package"></a>Özel önyükleyici paketini oluşturma
+ Gizlilik istemini son kullanıcılara göstermek için, Güncelleştirme Onayı İletişim Kutusu uygulaması için özel bir önyükleyici paketi oluşturabilir ve bunu tüm uygulamalarınızı önkoşul olarak ClickOnce.
 
- Bu yordam, aşağıdaki belgeleri oluşturarak özel bir önyükleyici paketinin nasıl oluşturulacağını gösterir:
+ Bu yordamda, aşağıdaki belgeleri oluşturarak özel bir önyükleyici paketinin nasıl oluşturulacakları açıklanıyor:
 
-- Önyükleyici içeriğini tanımlayacak bir *product.xml* bildirim dosyası.
+- *Önyükleyicinin* product.xmlaçıklayan bir bildirim dosyası.
 
-- Paketinizin dizeler ve yazılım lisans koşulları gibi yerelleştirmeye özgü yönlerini listelemek için bir *package.xml* bildirim dosyası.
+- Bir *package.xml* dizeler ve yazılım lisans koşulları gibi paketinizin yerelleştirmeye özgü yönlerini listeleye bir bildirim dosyasıdır.
 
 - Yazılım lisans koşulları için bir belge.
 
-#### <a name="step-1-to-create-the-bootstrapper-directory"></a>1. Adım: önyükleyici dizinini oluşturmak Için
+#### <a name="step-1-to-create-the-bootstrapper-directory"></a>1. Adım: Önyükleyici dizinini oluşturmak için
 
-1. *%programfiles%\microsoft sdk \ Windows \v7.0a\bootstrapper\packages* içinde **updateconsentdialog** adlı bir dizin oluşturun.
-
-    > [!NOTE]
-    > Bu klasörü oluşturmak için yönetici ayrıcalıklarına sahip olmanız gerekebilir.
-
-2. *UpdateConsentDialog* dizininde, *en*-adlı bir alt dizin oluşturun.
+1. *%PROGRAMFILES%\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages* dizininde **UpdateConsentDialog** adlı bir dizin oluşturun.
 
     > [!NOTE]
-    > Her yerel ayar için yeni bir dizin oluşturun. Örneğin, fr ve de yerel ayarları için alt dizinler ekleyebilirsiniz. Bu dizinler, gerekirse Fransızca ve Almanca dizeleri ve dil paketlerini içerir.
+    > Bu klasörü oluşturmak için yönetici ayrıcalıklarına ihtiyacınız olabilir.
 
-#### <a name="step-2-to-create-the-productxml-manifest-file"></a>2. Adım: product.xml bildirim dosyasını oluşturmak Için
+2. *UpdateConsentDialog dizininde* en adlı bir alt dizin *oluşturun.*
 
-1. *product.xml* adlı bir metin dosyası oluşturun.
+    > [!NOTE]
+    > Her yerel seçim için yeni bir dizin oluşturun. Örneğin, fr ve de yerelleri için alt dizinler ekleme. Bu dizinler, gerekirse Fransızca ve Almanca dizeleri ve dil paketlerini içerir.
 
-2. *product.xml* dosyasında aşağıdaki XML kodunu ekleyin. Mevcut XML kodunun üzerine yazdığınızdan emin olun.
+#### <a name="step-2-to-create-the-productxml-manifest-file"></a>2. Adım: Bildirim product.xml oluşturmak için
+
+1. product.xmladlı bir *metin dosyası oluşturun.*
+
+2. product.xml *dosyasında* aşağıdaki XML kodunu ekleyin. Mevcut XML kodunun üzerine yazmayabilirsiniz.
 
     ```xml
     <Product
@@ -194,11 +194,11 @@ yeni dosya sürümlerine ve derleme sürümlerine sahip derlemeler kullanılabil
 
 3. Dosyayı UpdateConsentDialog önyükleyici dizinine kaydedin.
 
-#### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>3. Adım: package.xml bildirim dosyasını ve yazılım lisans koşullarını oluşturmak Için
+#### <a name="step-3-to-create-the-packagexml-manifest-file-and-the-software-license-terms"></a>3. Adım: package.xml bildirimi dosyasını ve yazılım lisans koşullarını oluşturmak için
 
-1. *package.xml* adlı bir metin dosyası oluşturun.
+1. package.xmladlı bir *metin dosyası oluşturun.*
 
-2. *package.xml* dosyasında, yerel ayarı tanımlamak ve yazılım lisans koşulları 'nı eklemek IÇIN aşağıdaki XML kodunu ekleyin. Mevcut XML kodunun üzerine yazdığınızdan emin olun.
+2. Yerel *package.xml* tanımlamak ve yazılım lisans koşullarını dahil etmek için aşağıdaki XML kodunu ekleyin. Mevcut XML kodunun üzerine yazmayabilirsiniz.
 
     ```xml
     <Package
@@ -220,65 +220,39 @@ yeni dosya sürümlerine ve derleme sürümlerine sahip derlemeler kullanılabil
     </Package>
     ```
 
-3. Dosyayı UpdateConsentDialog önyükleyici dizininde en alt dizine kaydedin.
+3. Dosyayı UpdateConsentDialog önyükleyici dizininde en alt dizinine kaydedin.
 
-4. Yazılım lisans koşulları için *EULA. rtf* adlı bir belge oluşturun.
-
-    > [!NOTE]
-    > Yazılım lisans koşulları lisanslama, garantiler, borçlar ve yerel yasalar hakkında bilgiler içermelidir. Bu dosyalar yerel ayara özgü olmalıdır, bu nedenle dosyanın MBCS veya UNICODE karakterlerini destekleyen bir biçimde kaydedildiğinden emin olun. Yazılım lisans koşullarının içeriğiyle ilgili hukuk departmanınıza başvurun.
-
-5. Belgeyi *UpdateConsentDialog* önyükleyici dizinindeki en alt dizine kaydedin.
-
-6. Gerekirse, her yerel ayar için yazılım lisans koşulları için yeni bir *package.xml* bildirim dosyası ve yeni bir *EULA. rtf* belgesi oluşturun. Örneğin, fr ve de yerel ayarlar için alt dizinler oluşturduysanız, ayrı package.xml bildirim dosyaları ve yazılım lisans koşulları oluşturun ve bunları fr ve de alt dizinlere kaydedin.
-
-## <a name="set-the-update-consent-application-as-a-prerequisite"></a>Güncelleştirme Onayı uygulamasını bir önkoşul olarak ayarlama
- Visual Studio, güncelleştirme onayı uygulamasını bir önkoşul olarak ayarlayabilirsiniz.
-
-#### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>Güncelleştirme Onayı uygulamasını bir önkoşul olarak ayarlamak için
-
-1. **Çözüm Gezgini**, dağıtmak istediğiniz uygulamanızın adına tıklayın.
-
-2. **Project** menüsünde, *ProjectName* **özellikler**' e tıklayın.
-
-3. **Yayımla** sayfasına ve sonra **Önkoşullar**' a tıklayın.
-
-4. **Onay onayını Güncelleştir**' i seçin.
+4. Yazılım lisans koşulları için *eula.rtf* adlı bir belge oluşturun.
 
     > [!NOTE]
-    > önkoşullar iletişim kutusunda güncelleştirme onayı iletişim kutusunu görmek için Visual Studio kapatıp yeniden açmanız gerekebilir.
+    > Yazılım lisans koşulları lisanslama, garantiler, borçlar ve yerel yasalar hakkında bilgi içerir. Bu dosyalar yerele özgü olmalıdır, bu nedenle dosyanın MBCS veya UNICODE karakterlerini destekleyen bir biçimde kaydedildiklerine emin olun. Yazılım lisans koşullarının içeriği hakkında hukuk departmanınıza danışın.
+
+5. *UpdateConsentDialog* önyükleyici dizininde belgeyi en alt dizinine kaydedin.
+
+6. Gerekirse, her yerel *package.xml* lisans koşulları için yeni bir bildirim dosyası ve *yeni bir eula.rtf* belgesi oluşturun. Örneğin, fr ve de yerelleri için alt dizinler oluşturduysanız, ayrı package.xml bildirim dosyaları ve yazılım lisans koşulları oluşturun ve bunları fr ve de alt dizinlerine kaydedin.
+
+## <a name="set-the-update-consent-application-as-a-prerequisite"></a>Güncelleştirme Onayı Uygulamasını önkoşul olarak ayarlama
+ Bu Visual Studio, Güncelleştirme Onayı uygulamasını önkoşul olarak ayarlayın.
+
+#### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>Güncelleştirme Onayı Uygulamasını önkoşul olarak ayarlamak için
+
+1. Uygulama **Çözüm Gezgini** içinde, dağıtmak istediğiniz uygulamanızın adına tıklayın.
+
+2. Proje Adı **Project** ProjeAdı *Özellikleri'ne* **tıklayın.**
+
+3. Yayımla **sayfasına ve** ardından Önkoşullar'a **tıklayın.**
+
+4. Onay İletişim **Kutusunu Güncelleştir'i seçin.**
+
+    > [!NOTE]
+    > Önkoşullar İletişim Kutusunda Visual Studio İletişim Kutusunu görmek için bu iletişim kutusunu kapatıp yeniden açabilirsiniz.
 
 5. **Tamam**'a tıklayın.
 
-## <a name="create-and-test-the-setup-program"></a>Kurulum programını oluşturma ve test etme
- Güncelleştirme Onayı uygulamasını bir önkoşul olarak ayarladıktan sonra, uygulamanız için yükleyiciyi ve önyükleyici oluşturabilirsiniz.
+## <a name="create-and-test-the-setup-program"></a>Kurulum programını oluşturma ve test edin
+ Güncelleştirme Onayı uygulamasını önkoşul olarak ayardikten sonra, uygulamanız için yükleyiciyi ve önyükleyiciyi oluşturabilirsiniz.
 
-#### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>Kurulum programını kabul ediyorum ' a tıklamayan bir şekilde oluşturmak ve test etmek için
-
-1. **Çözüm Gezgini**, dağıtmak istediğiniz uygulamanızın adına tıklayın.
-
-2. **Project** menüsünde, *ProjectName* **özellikler**' e tıklayın.
-
-3. **Yayımla** sayfasına tıklayın ve **Şimdi Yayımla**' ya tıklayın.
-
-4. Yayımlama çıkışı otomatik olarak açılmadığından, yayımlama çıktısına gidin.
-
-5. *Setup.exe* programını çalıştırın.
-
-     Kurulum programı, güncelleştirme onayı Iletişim kutusu yazılım lisans sözleşmesini gösterir.
-
-6. Yazılım lisans sözleşmelerini okuyun ve kabul et'e **tıklayın.**
-
-     Güncelleştirme Onayı İletişim Kutusu uygulaması görüntülenir ve şu metni gösterir: Yüklemek istediğiniz uygulama, Web'de en son güncelleştirmeleri denetler. Kabul Ediyorum'a tıklayarak, uygulamayı güncelleştirmeleri İnternet'e otomatik olarak denetleme yetkisi verecek şekilde yetkilendirebilirsiniz.
-
-7. Uygulamayı kapatın veya İptal'e tıklayın.
-
-     Uygulama bir hata gösteriyor: ApplicationName için sistem bileşenleri yüklerken bir *hata oluştu.* Tüm sistem bileşenleri başarıyla yüklenene kadar kurulum devam eder.
-
-8. Aşağıdaki hata iletisini göstermek için Ayrıntılar'a tıklayın: Bileşen Güncelleştirme Onayı İletişim Kutusu şu hata iletisiyle yüklenemedi: "Otomatik güncelleştirme sözleşmesi kabul edilemedi." Aşağıdaki bileşenler yüklenemedi: - Güncelleştirme Onayı İletişim Kutusu
-
-9. **Kapat**’a tıklayın.
-
-#### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>Kabul ediyorum'a tıklayarak Kurulum programını oluşturmak ve test etmek için
+#### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>Kabul ediyorum'a tıklamadan Kurulum programını oluşturmak ve test etmek için
 
 1. Uygulama **Çözüm Gezgini** içinde, dağıtmak istediğiniz uygulamanızın adına tıklayın.
 
@@ -292,19 +266,45 @@ yeni dosya sürümlerine ve derleme sürümlerine sahip derlemeler kullanılabil
 
      Kurulum programı, Güncelleştirme Onayı İletişim Kutusu yazılım lisans sözleşmesini gösterir.
 
-6. Yazılım lisans sözleşmelerini okuyun ve kabul et'e **tıklayın.**
+6. Yazılım lisans sözleşmesini okuyun ve ardından **kabul et**' e tıklayın.
 
-     Güncelleştirme Onayı İletişim Kutusu uygulaması görüntülenir ve şu metni gösterir: Yüklemek istediğiniz uygulama, Web'de en son güncelleştirmeleri denetler. Kabul Ediyorum'a tıklayarak, uygulamayı güncelleştirmeleri İnternet'e otomatik olarak denetleme yetkisi verecek şekilde yetkilendirebilirsiniz.
+     Güncelleştirme Onayı Iletişim kutusu uygulaması görünür ve şu metni gösterir: yüklemek üzere olduğunuz uygulama, Web üzerinde en son güncelleştirmeleri denetler. Kabul ediyorum ' a tıklayarak, uygulamayı Internet 'te güncelleştirmeleri otomatik olarak denetleyecek şekilde yetkilendirirsiniz.
 
-7. Kabul **Ediyorum'a** ve ardından Devam'a **tıklayın.**
+7. Uygulamayı kapatın veya Iptal ' e tıklayın.
 
-     Uygulama yüklenmeye başlar.
+     Uygulama bir hata gösterir: *ApplicationName* için sistem bileşenleri yüklenirken bir hata oluştu. Tüm sistem bileşenleri başarıyla yüklenene kadar kurulum devam edemez.
 
-8. Uygulama Yükleme iletişim kutusu görüntülenirse Yükle'ye **tıklayın.**
+8. Ayrıntılar ' a tıklayarak şu hata iletisini görüntüleyin: bileşen güncelleştirme onayı Iletişim kutusu şu hata iletisiyle başarısız oldu: "otomatik güncelleştirme sözleşmesi kabul edilmedi." Şu bileşenler yüklenemedi:-onay onay Iletişim kutusu
+
+9. **Kapat**’a tıklayın.
+
+#### <a name="to-create-and-test-the-setup-program-by-clicking-i-agree"></a>Kurulum programını kabul ediyorum ' a tıklayarak oluşturma ve test etme
+
+1. **Çözüm Gezgini**, dağıtmak istediğiniz uygulamanızın adına tıklayın.
+
+2. **Project** menüsünde, *ProjectName* **özellikler**' e tıklayın.
+
+3. **Yayımla** sayfasına tıklayın ve **Şimdi Yayımla**' ya tıklayın.
+
+4. Yayımlama çıkışı otomatik olarak açılmadığından, yayımlama çıktısına gidin.
+
+5. *Setup.exe* programını çalıştırın.
+
+     Kurulum programı, güncelleştirme onayı Iletişim kutusu yazılım lisans sözleşmesini gösterir.
+
+6. Yazılım lisans sözleşmesini okuyun ve ardından **kabul et**' e tıklayın.
+
+     Güncelleştirme Onayı Iletişim kutusu uygulaması görünür ve şu metni gösterir: yüklemek üzere olduğunuz uygulama, Web üzerinde en son güncelleştirmeleri denetler. Kabul ediyorum ' a tıklayarak, uygulamayı Internet 'te güncelleştirmeleri otomatik olarak denetleyecek şekilde yetkilendirirsiniz.
+
+7. **Kabul** ediyorum ' a ve ardından **devam**' a tıklayın.
+
+     Uygulama yüklenmeye başlıyor.
+
+8. Uygulama yüklemesi iletişim kutusu görüntülenirse, **yükler**' e tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uygulama dağıtımının önkoşulları](../deployment/application-deployment-prerequisites.md)
 - [Önyükleyici paketleri oluşturma](../deployment/creating-bootstrapper-packages.md)
-- [Nasıl: Ürün bildirimi oluşturma](../deployment/how-to-create-a-product-manifest.md)
+- [Nasıl yapılır: Ürün bildirimi oluşturma](../deployment/how-to-create-a-product-manifest.md)
 - [Nasıl yapılır: Paket bildirimi oluşturma](../deployment/how-to-create-a-package-manifest.md)
 - [Ürün ve paket şema başvurusu](../deployment/product-and-package-schema-reference.md)

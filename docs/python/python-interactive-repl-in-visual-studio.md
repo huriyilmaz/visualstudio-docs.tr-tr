@@ -12,11 +12,11 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: db046648d78caeb1ec779ae556709806d72dc55c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122076223"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726794"
 ---
 # <a name="work-with-the-python-interactive-window"></a>Python etkileşimli penceresiyle çalışma
 
@@ -26,12 +26,12 @@ Visual Studio, Python ortamlarınızın her biri için etkileşimli bir okuma-de
 
 Visual Studio, aralarından seçim yapabileceğiniz bir dizi Python REPL moduna sahiptir:
 
-| REPL | Açıklama | Düzenleme | Hata Ayıklama | Görüntüler |
+| REPL | Description | Düzenleme | Hata Ayıklama | Görüntüler |
 | --- | --- | --- | --- | --- |
-| Standart | Varsayılan REPL, Python 'a doğrudan konuşuyor | Standart Düzen (çok satırlı, vb.). | Evet, ile `$attach` | Hayır |
-| Hata Ayıklama | Varsayılan REPL, hata ayıklamanın Python işlemini | Standart Düzen | Yalnızca hata ayıklama | Hayır |
-| IPython | REPL, IPython arka ucu ile konuşuyor | IPython komutları, Pylab kolaylığı | Hayır | Evet, REPL içinde satır içi |
-| IPython w/o Pylab | REPL, IPython arka ucu ile konuşuyor | Standart IPython | Hayır | Evet, pencereyi ayır |
+| Standart | Varsayılan REPL, Python 'a doğrudan konuşuyor | Standart Düzen (çok satırlı, vb.). | Evet, ile `$attach` | No |
+| Hata Ayıklama | Varsayılan REPL, hata ayıklamanın Python işlemini | Standart Düzen | Yalnızca hata ayıklama | No |
+| IPython | REPL, IPython arka ucu ile konuşuyor | IPython komutları, Pylab kolaylığı | No | Evet, REPL içinde satır içi |
+| IPython w/o Pylab | REPL, IPython arka ucu ile konuşuyor | Standart IPython | No | Evet, pencereyi ayır |
 
 Bu makalede, **Standart** ve **hata ayıklama** REPL modları açıklanır. IPython modlarında Ayrıntılar için bkz. [ıPYTHON REPL kullanma](interactive-repl-ipython.md).
 
@@ -76,7 +76,7 @@ Son olarak, dosyadaki kodu seçebilir ve aşağıda açıklanan [ **etkileşimli
 
 :::moniker range="<=vs-2017"
 
-| Meta-komut | Açıklama |
+| Meta-komut | Description |
 | --- | --- |
 | `$$` | Oturumunuz genelinde kod yorumu için yararlı olan bir açıklama ekler. |
 | `$attach` | hata ayıklamayı etkinleştirmek için Visual Studio hata ayıklayıcısını REPL pencere işlemine iliştirir. |
@@ -91,7 +91,7 @@ Son olarak, dosyadaki kodu seçebilir ve aşağıda açıklanan [ **etkileşimli
 
 :::moniker range=">=vs-2019"
 
-| Meta-komut | Açıklama |
+| Meta-komut | Description |
 | --- | --- |
 | `$$` | Oturumunuz genelinde kod yorumu için yararlı olan bir açıklama ekler. |
 | `$cls`, `$clear` | , Geçmiş ve yürütme bağlamından ayrılmadan düzenleyici penceresinin içeriğini temizler. |

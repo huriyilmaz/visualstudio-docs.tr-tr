@@ -1,7 +1,7 @@
 ---
 title: .NET için canlı kod analizi kapsamını yapılandırma
 ms.date: 09/01/2020
-description: Visual Studio'da arka plan analizi hakkında bilgi Visual Studio. Analizi görünür belgeyle, tüm açık belgelerle veya tüm dosya ve projelerle sınırlamaya bakın.
+description: Visual Studio'da arka plan analizi hakkında bilgi Visual Studio. Analizi görünür belge, tüm açık belgeler veya tüm dosya ve projelerle sınırlamaya bakın.
 ms.custom: SEO-VS-2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +16,15 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
 ms.openlocfilehash: 664d24c2732ee2c63475ac986fa9bbab78831493
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122114192"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632054"
 ---
 # <a name="configure-live-code-analysis-for-net"></a>.NET için canlı kod analizini yapılandırma
 
-Visual Studio, düzenleyicide kaynak dosyalarını düzenlerken arka plan analizi olarak da adlandırılan bir grup canlı kod analizi yürütür. Bazı durumlarda kabul edilebilir bir IDE düzenleme deneyimi için Visual Studio az analiz gerekir. Bu özelliklerin bazıları, IDE özellikleri için daha iyi yanıt verme hızına sahiptir. Bazıları Roslyn çözümleyicilerinden gelen tanılama ve kod düzeltmeleri gibi ek IDE işlevlerini etkinleştirmektir. İşlevselliğe bağlı olarak, bu analizler aşağıdaki gibi gruplanabilir:
+Visual Studio, düzenleyicide kaynak dosyalarını düzenlerken arka plan analizi olarak da adlandırılan bir grup canlı kod analizi yürütür. Bazı durumlarda kabul edilebilir bir IDE düzenleme deneyimi için Visual Studio az analiz gerekir. Bu özelliklerin bazıları IDE özellikleri için geliştirilmiş yanıt hızına sahiptir. Bazıları Roslyn çözümleyicilerinden gelen tanılama ve kod düzeltmeleri gibi ek IDE işlevlerini etkinleştirmektir. İşlevselliğe bağlı olarak, bu analizler aşağıdaki gibi gruplanabilir:
 
 - **Tanılamanın arka plan hesaplaması:** Kaynak dosyalarda hataları, uyarıları ve önerileri hesaplamak için analiz. Bu tanılamalar, hata listesinde girdiler olarak ve düzenleyicide geçişler olarak görünür. İki kategoriye ayrılırlar:
   - C# ve Visual Basic derleyici tanılamaları
@@ -46,7 +46,7 @@ Varsayılan olarak, tanılamanın arka plan hesaplaması için canlı kod analiz
 
 ## <a name="custom-analysis-scope"></a>Özel analiz kapsamı
 
-Her arka plan analizinin varsayılan kapsamı, müşteri senaryolarının ve çözümlerinin çoğu için en uygun kullanıcı deneyimi, işlevselliği ve performansı için ayarlanmıştır. Ancak, müşterilerin arka plan analizini azaltmak veya artırmak için bu kapsamı özelleştirmek istemesi gereken durumlar vardır. Örnek:
+Her arka plan analizinin varsayılan kapsamı, müşteri senaryolarının ve çözümlerinin çoğu için en uygun kullanıcı deneyimi, işlevselliği ve performansı için ayarlanmıştır. Ancak müşterilerin arka plan analizini azaltmak veya artırmak için bu kapsamı özelleştirmek istemesi gereken durumlar vardır. Örnek:
 
 - Güç tasarrufu modu: Kullanıcılar dizüstü bilgisayar pille çalıştırıyorsa, daha uzun pil ömrü için güç tüketimini en aza indirmek istiyor olabilir. Bu senaryoda arka plan analizini en aza indirmek ister.
 - isteğe bağlı kod analizi: Kullanıcılar canlı çözümleyici yürütmeyi kapatmayı ve isteğe bağlı olarak kod analizini el ile çalıştırmayı tercih ederse arka plan analizini en aza indirmek ister. Bkz. [Nasıl yapılır: Kod analizini isteğe bağlı olarak el ile çalıştırma.](./how-to-run-code-analysis-manually-for-managed-code.md)
@@ -73,7 +73,7 @@ Aşağıdaki adımları kullanarak Araçlar Seçenekleri iletişim kutusunda yuk
 
 ## <a name="automatically-minimize-live-code-analysis-scope"></a>Canlı kod analizi kapsamını otomatik olarak en aza indirme
 
-Bu Visual Studio 200 MB veya daha az sistem belleğinin kullanılabilir olduğunu algılarsa, canlı kod analizi kapsamını otomatik olarak "Geçerli Belge" olarak en aza indirger. Bu durum oluşursa, bazı özellikleri devre dışı bırakarak Visual Studio bir uyarı görüntülenir. Bir düğme, 2000'den önceki analiz kapsamına dönmenizi sağlar.
+Bu Visual Studio 200 MB veya daha az sistem belleğinin kullanılabilir olduğunu algılarsa, canlı kod analizi kapsamını otomatik olarak "Geçerli Belge" olarak en aza indirger. Bu durumda, bazı özellikleri devre dışı bırakarak Visual Studio bir uyarı görüntülenir. Bir düğme, 2004'e geri dönmenizi sağlar.
 
 ![Analiz kapsamını en aza indiren uyarı metni](./media/fsa_alert.png)
 

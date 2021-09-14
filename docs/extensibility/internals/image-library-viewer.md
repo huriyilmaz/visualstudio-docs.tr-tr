@@ -1,6 +1,6 @@
 ---
 title: Görüntü Kitaplığı Görüntüleyicisi | Microsoft Docs
-description: Görüntü özniteliklerini Visual Studio ve işlemeye olanak sağlayan görüntü bildirimlerini yükip bu araçta arama sağlayan Görüntü Kitaplığı Görüntüleyicisi aracı hakkında bilgi edinebilirsiniz.
+description: Görüntü Visual Studio yükip bu öznitelikleri görüntülemeye ve işlemeye olanak sağlayan görüntü kitaplığı görüntüleyicisi aracı hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,11 +12,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: ee92f235bc973d0929e89ceae8d24f8ca77b9865
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122042380"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725781"
 ---
 # <a name="image-library-viewer"></a>Görüntü Kitaplığı Görüntüleyicisi
 Görüntü Visual Studio Görüntüleyicisi aracı, görüntü bildirimlerini yükp arayarak kullanıcının bunları aynı şekilde işlemesini Visual Studio. Kullanıcı arka plan, boyutlar, DPI, yüksek karşıtlık ve diğer ayarları değiştirebilir. Araç ayrıca her görüntü bildirimi için yükleme bilgilerini ve görüntü bildiriminde her görüntünün kaynak bilgilerini görüntüler. Bu araç şu için yararlıdır:
@@ -35,7 +35,7 @@ Görüntü Visual Studio Görüntüleyicisi aracı, görüntü bildirimlerini y�
 
    **Görüntü bildirim dosyaları**
 
-   Görüntü bildirimi (.imagemanifest) dosyaları bir görüntü varlıkları kümesi tanımlayan XML dosyaları, bu varlıkları temsil eden bilinen adlar ve her varlığı temsil eden gerçek görüntü veya görüntülerdir. Görüntü bildirimleri, eski kullanıcı arabirimi desteği için tek başına görüntüleri veya görüntü listelerini tanımlayabilir. Ayrıca, varlık üzerinde veya her varlığın arkasındaki tek tek görüntülerde, bu varlıkların ne zaman ve nasıl görüntülendiğinde değişmesi için ayarlanabilirsiniz.
+   Görüntü bildirimi (.imagemanifest) dosyaları bir görüntü varlıkları kümesi tanımlayan XML dosyaları, bu varlıkları temsil eden bilinen adlar ve her varlığı temsil eden gerçek görüntü veya görüntülerdir. Görüntü bildirimleri, eski kullanıcı arabirimi desteği için tek başına görüntüleri veya görüntü listelerini tanımlayabilir. Ayrıca, varlık üzerinde veya her varlığın arkasındaki tek tek görüntülerde, bu varlıkların ne zaman ve nasıl görüntülendiğinde değişmesi için ayarlan bir öznitelikler vardır.
 
    **Görüntü bildirimi şeması**
 
@@ -129,8 +129,8 @@ Görüntü Visual Studio Görüntüleyicisi aracı, görüntü bildirimlerini y�
 
 |**Öznitelik**|**Tanım**|
 |-|-|
-|Urı|[Gerekli] Görüntünün nereden yüklenemediklerini tanımlayan bir URI. Şunlardan biri olabilir:<br /><br /> - Application:/// yetkilisini kullanan bir Pack [URI'sı](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br /><br /> - Mutlak bileşen kaynak başvurusu<br /><br /> - Yerel kaynak içeren bir dosyanın yolu|
-|Arka Plan|[İsteğe bağlı] Kaynağın ne tür bir arka plan üzerinde kullanılmaya yönelik olduğunu gösterir.<br /><br /> Şunlardan biri olabilir:<br /><br /> - *Açık:* Kaynak, açık bir arka planda kullanılabilir.<br /><br /> - *Koyu:* Kaynak, koyu arka planda kullanılabilir.<br /><br /> - *HighContrast:* Kaynak, herhangi bir arka plan üzerinde herhangi bir Yüksek Karşıtlık kullanılabilir.<br /><br /> - *HighContrastLight:* Kaynak, açık bir arka plan üzerinde Yüksek Karşıtlık kullanılabilir.<br /><br /> -*HighContrastDark:* Kaynak, arka planda koyu renkli modda Yüksek Karşıtlık kullanılabilir.<br /><br /> Background **özniteliği** atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka **Plan** *Açık,* *Koyu,* *HighContrastLight* veya *HighContrastDark* ise, kaynağın renkleri hiçbir zaman ters çevirilir. **Background atlanırsa** veya *HighContrast* olarak ayarlanırsa, kaynağın renklerinin ters çevirmesi görüntünün **AllowColorInversion** özniteliği tarafından denetlenr.|
+|Urı|[Gerekli] Görüntünün nereden yüklenemiyor olduğunu tanımlayan bir URI. Şunlardan biri olabilir:<br /><br /> - Application:/// yetkilisini kullanan bir Pack [URI'sı](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br /><br /> - Mutlak bileşen kaynak başvurusu<br /><br /> - Yerel kaynak içeren bir dosyanın yolu|
+|Arka Plan|[İsteğe bağlı] Kaynağın ne tür bir arka plan üzerinde kullanılmaya yönelik olduğunu gösterir.<br /><br /> Şunlardan biri olabilir:<br /><br /> - *Açık:* Kaynak, açık arka planda kullanılabilir.<br /><br /> - *Koyu:* Kaynak, koyu arka planda kullanılabilir.<br /><br /> - *HighContrast:* Kaynak, herhangi bir arka plan üzerinde herhangi bir Yüksek Karşıtlık kullanılabilir.<br /><br /> - *HighContrastLight:* Kaynak, açık bir arka plan üzerinde Yüksek Karşıtlık kullanılabilir.<br /><br /> -*HighContrastDark:* Kaynak, arka planda koyu renkli modda Yüksek Karşıtlık kullanılabilir.<br /><br /> Background **özniteliği** atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka **Plan** *Açık,* *Koyu,* *HighContrastLight* veya *HighContrastDark* ise kaynağın renkleri hiçbir zaman ters çevirilir. **Background atlanırsa** veya *HighContrast* olarak ayarlanırsa, kaynağın renklerinin ters çevirmesi görüntünün **AllowColorInversion** özniteliği tarafından denetlenr.|
 
  Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğelerden tam olarak biri olabilir:
 

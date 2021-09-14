@@ -1,6 +1,6 @@
 ---
-title: İş Akışı Tasarımcısı - WriteLine Etkinlik Tasarımcısı
-description: WriteLine etkinliği ve WriteLine etkinlik tasarımcısını kullanarak WriteLine etkinliği oluşturma ve yapılandırma hakkında bilgi öğrenin.
+title: İş Akışı Tasarımcısı-WriteLine etkinlik Tasarımcısı
+description: WriteLine etkinliği ve bir WriteLine etkinliği oluşturmak ve yapılandırmak için WriteLine etkinlik tasarımcısını nasıl kullanabileceğiniz hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,37 +14,37 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: daa88d858af5b99beda41631c6c139be9aff425d
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963715"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726064"
 ---
 # <a name="writeline-activity-designer"></a>WriteLine Etkinlik Tasarımcısı
 
-Etkinlik oluşturmak ve yapılandırmak için **WriteLine** etkinlik tasarımcısı <xref:System.Activities.Statements.WriteLine> kullanılır.
+**WriteLine** etkinlik Tasarımcısı, etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.WriteLine> .
 
-## <a name="the-writeline-activity"></a>WriteLine Etkinliği
+## <a name="the-writeline-activity"></a>WriteLine etkinliği
 
-Etkinlik, <xref:System.Activities.Statements.WriteLine> belirtilen bir nesneye metin <xref:System.IO.TextWriter> yazar. <xref:System.IO.TextWriter>Belirtilmezse, <xref:System.Activities.Statements.WriteLine> metni konsola yazar.
+<xref:System.Activities.Statements.WriteLine>Etkinlik, belirtilen bir nesneye metin yazar <xref:System.IO.TextWriter> . Hayır <xref:System.IO.TextWriter> belirtilmişse, <xref:System.Activities.Statements.WriteLine> metni konsola yazar.
 
-### <a name="using-the-writeline-activity-designer"></a>WriteLine Etkinlik Tasarımcısını Kullanma
+### <a name="using-the-writeline-activity-designer"></a>WriteLine etkinlik tasarımcısını kullanma
 
-Araç Kutusunun Temel Öğeler **kategorisindeki** **WriteLine** etkinlik **tasarımcısına erişin.** **WriteLine etkinlik** tasarımcısı Araç Kutusundan  sürüklenip bir içinde olduğu gibi, İş Akışı Tasarımcısı yerleştirildikten sonra bu alan yüzeyine <xref:System.Activities.Statements.Sequence> bırakılır. Bu, varsayılan <xref:System.Activities.Statements.WriteLine> WriteLine değerine <xref:System.Activities.Activity.DisplayName%2A> sahip bir etkinlik oluşturur. <xref:System.Activities.Activity.DisplayName%2A>, **WriteLine** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzundaki **DisplayName** kutusunda düzenlenebilir.
+**Araç kutusunun** **temel elemanlar** kategorisindeki **WriteLine** etkinlik tasarımcısına erişin. **WriteLine** etkinlik Tasarımcısı **araç kutusundan** sürüklenip, içindeki gibi etkinliklerin genellikle yerleştirildiği iş akışı Tasarımcısı yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.WriteLine> , varsayılan olarak WriteLine olan bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . , <xref:System.Activities.Activity.DisplayName%2A> **WriteLine** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 
-### <a name="the-writeline-properties"></a>WriteLine Özellikleri
+### <a name="the-writeline-properties"></a>WriteLine özellikleri
 
-Aşağıdaki tablo, <xref:System.Activities.Statements.WriteLine> özellikleri gösterir ve tasarımcıda nasıl kullanıldıklarını açıklar. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazı özellikler tek bir İş Akışı Tasarımcısı düzenlenebilir.
+Aşağıdaki tabloda <xref:System.Activities.Statements.WriteLine> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Bu özellikler özellik kılavuzunda düzenlenebilir ve bazıları İş Akışı Tasarımcısı yüzeyinde düzenlenebilirler.
 
 |Özellik Adı|Gerekli|Kullanım|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay <xref:System.Activities.Statements.WriteLine> adı. Varsayılan değer WriteLine'dır. kesinlikle <xref:System.Activities.Activity.DisplayName%2A> gerekli değildir, ancak bir tane kullanmak en iyi uygulamadır.|
-|<xref:System.Activities.Statements.WriteLine.Text%2A>|Yanlış|Yazacak metin. Özelliğini ayarlamak için, **WriteLine** Visual Basic tasarımcısının **Metin** kutusuna veya özellik kılavuzuna bir metin ifadesi yazın.|
-|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|Yanlış|, <xref:System.IO.TextWriter> <xref:System.Activities.Statements.WriteLine> <xref:System.Activities.Statements.WriteLine.Text%2A> yazar. Varsayılan olarak konsol kullanılır.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin kolay adı <xref:System.Activities.Statements.WriteLine> . Varsayılan değer WriteLine ' dır. <xref:System.Activities.Activity.DisplayName%2A>Kesinlikle gerekli olmasa da, bir tane kullanmak en iyi uygulamadır.|
+|<xref:System.Activities.Statements.WriteLine.Text%2A>|Yanlış|Yazılacak metin. özelliği ayarlamak için, **WriteLine** etkinlik tasarımcısı ' nın veya özellik kılavuzundaki **metin** kutusuna bir Visual Basic ifadesi yazın.|
+|<xref:System.Activities.Statements.WriteLine.TextWriter%2A>|Yanlış|' A <xref:System.IO.TextWriter> <xref:System.Activities.Statements.WriteLine> Yazar <xref:System.Activities.Statements.WriteLine.Text%2A> . Varsayılan, konsoldur.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Temel Türler](../workflow-designer/primitives-activity-designers.md)
-- [Atamak](../workflow-designer/assign-activity-designer.md)
+- [Ata](../workflow-designer/assign-activity-designer.md)
 - [Gecikme](../workflow-designer/delay-activity-designer.md)
 - [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)

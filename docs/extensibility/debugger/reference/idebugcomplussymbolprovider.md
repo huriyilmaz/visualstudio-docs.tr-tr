@@ -1,5 +1,5 @@
 ---
-description: Yönetilen koda özgü yöntemlere sahip bir COM+ sembol sağlayıcısını temsil eder.
+description: Yönetilen koda özgü yöntemlerle bir COM+ sembol sağlayıcısını temsil eder.
 title: IDebugComPlusSymbolProvider | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: da8d6c4ebd64c4dd4f3a4610e2f4753b86aa0ef5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122145048"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725272"
 ---
 # <a name="idebugcomplussymbolprovider"></a>IDebugComPlusSymbolProvider
-Yönetilen koda özgü yöntemlere sahip bir COM+ sembol sağlayıcısını temsil eder.
+Yönetilen koda özgü yöntemlerle bir COM+ sembol sağlayıcısını temsil eder.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,40 +28,40 @@ Yönetilen koda özgü yöntemlere sahip bir COM+ sembol sağlayıcısını tems
 IDebugComPlusSymbolProvider : IDebugSymbolProvider
 ```
 
-## <a name="notes-for-implementers"></a>Implemenonun notları
- bir ifade değerlendirici (EE) ve bir hata ayıklama altyapısı (DE) tarafından kullanılması amaçlanan arabirimler arasında ayrım olmamasına karşın, aşağıdaki yöntemler muhtemelen yalnızca geliştiricileri de ilgileniyor: aresymbolsloaded, GetAddressesInModuleFromPosition, getentrypoint, getfunctionlinekayması, getlocalvariablelayout, ısfunctionstale, loadsymbols, loadsymbolsfromstream, selectioncesymbar, unloadsymbols ve updatesymbols.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Bir ifade değerlendiricisi (EE) ve bir hata ayıklama altyapısı (DE) tarafından kullanılmak üzere tasarlanmış arabirimler arasında ayrım yoktur, ancak aşağıdaki yöntemler yalnızca DE geliştiricileriyle ilgili olacaktır: AreSymbolsLoaded, GetAddressesInModuleFromPosition, GetEntryPoint, GetFunctionLineOffset, GetLocalVariableLayout, IsFunctionStale, LoadSymbols, LoadSymbolsFromStream, ReplaceSymbols, UnloadSymbols ve UpdateSymbols.
 
 ## <a name="methods"></a>Yöntemler
- Bu arabirim, [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) arabirimindeki yöntemlere ek olarak aşağıdaki yöntemleri uygular:
+ [Bu arabirim, IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) arabiriminde yöntemlere ek olarak aşağıdaki yöntemleri de kullanır:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[AreSymbolsLoaded](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-aresymbolsloaded.md)|Uygulama etki alanı tanımlayıcısı verilen belirtilen modül için hata ayıklama simgelerinin yüklenip yüklenmediğini belirler.|
+|[AreSymbolsLoaded](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-aresymbolsloaded.md)|Uygulama etki alanı tanımlayıcısı verilmelidir, belirtilen modül için hata ayıklama sembollerinin yük olup olmadığını belirler.|
 |[CreateTypeFromPrimitive](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-createtypefromprimitive.md)|Belirtilen ilkel türden bir tür oluşturur.|
-|[GetAddressesInModuleFromPosition](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getaddressesinmodulefromposition.md)|belirtilen modüldeki bir belge konumunu hata ayıklama adresleri dizisine Haritalar.|
-|[GetArrayTypeFromAddress](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getarraytypefromaddress.md)|Belirtilen dizi hakkında hata ayıklama adresini verilen tür bilgilerini alır.|
-|[GetAssemblyName](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getassemblyname.md)|Modül ve uygulama etki alanı verilen derlemenin adını alır.|
-|[GetAttributedClassesForLanguage](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getattributedclassesforlanguage.md)|Belirtilen özniteliğine sahip sınıfları verilen programlama dilinde uygulanan şekilde alır.|
-|[GetAttributedClassesinModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getattributedclassesinmodule.md)|Belirli bir modülde belirtilen özniteliğe sahip sınıfları alır.|
-|[GetEntryPoint](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getentrypoint.md)|Uygulama giriş noktasını alır.|
-|[GetFunctionLineOffset](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getfunctionlineoffset.md)|Verilen satır sapmasını temsil eden bir işlev içindeki adresi alır.|
-|[GetLocalVariablelayout](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getlocalvariablelayout.md)|Bir dizi yöntem için yerel değişkenlerin yerleşimini alır.|
-|[GetNameFromToken](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getnamefromtoken.md)|Belirtilen belirteçle ilişkili, meta veri nesnesi verilen adı döndürür.|
-|[GetSymAttribute](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getsymattribute.md)|Belirtilen modül için verilen üst özniteliğe sahip hata ayıklama sembollerini alır.|
-|[GetSymUnmanagedReader](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getsymunmanagedreader.md)|Yönetilmeyen kod tarafından kullanılacak simge okuyucuyu alır.|
-|[GetTypeFromAddress](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-gettypefromaddress.md)|Hata ayıklama adresi verilen bir sembol türüne alır.|
-|[IsFunctionDeleted](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-isfunctiondeleted.md)|Belirtilen hata ayıklama adresindeki işlevin silinip silinmediğini belirler.|
-|[IsFunctionStale](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-isfunctionstale.md)|Belirtilen hata ayıklama adresindeki işlevin eski olarak kabul edileceğini belirler.|
-|[IsHiddenCode](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-ishiddencode.md)|Belirtilen hata ayıklayıcı adresindeki kodun gizli olup olmadığını belirler.|
+|[GetAddressesInModuleFromPosition](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getaddressesinmodulefromposition.md)|Haritalar modülde bir belge konumunu bir dizi hata ayıklama adresine ekler.|
+|[GetArrayTypeFromAddress](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getarraytypefromaddress.md)|Belirtilen diziyle ilgili tür bilgilerini hata ayıklama adresiyle birlikte verir.|
+|[GetAssemblyName](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getassemblyname.md)|Modülüne ve uygulama etki alanına göre derlemenin adını alın.|
+|[GetAttributedClassesForLanguage](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getattributedclassesforlanguage.md)|Belirtilen programlama dilinde uygulanan belirtilen öznitelikle sınıfları alın.|
+|[GetAttributedClassesinModule](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getattributedclassesinmodule.md)|Belirli bir modülde belirtilen öznitelikle sınıfları alınır.|
+|[GetEntryPoint](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getentrypoint.md)|Uygulama giriş noktasını alın.|
+|[GetFunctionLineOffset](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getfunctionlineoffset.md)|Verilen satır uzaklığını temsil eden bir işlev içindeki adresi verir.|
+|[GetLocalVariablelayout](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getlocalvariablelayout.md)|Bir yöntem kümesi için yerel değişkenlerin düzenini alın.|
+|[GetNameFromToken](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getnamefromtoken.md)|Belirtilen belirteçle ilişkili adı meta veri nesnesine göre döndürür.|
+|[GetSymAttribute](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getsymattribute.md)|Belirtilen modül için verilen üst öznitelikle hata ayıklama sembollerini alın.|
+|[GetSymUnmanagedReader](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-getsymunmanagedreader.md)|Unmanaged code tarafından kullanılacak sembol okuyucuyu alın.|
+|[GetTypeFromAddress](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-gettypefromaddress.md)|Hata ayıklama adresi verilen bir sembol türüne alınır.|
+|[IsFunctionDeleted](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-isfunctiondeleted.md)|Belirtilen hata ayıklama adresli işlevin silinebilir olup olmadığını belirler.|
+|[IsFunctionStale](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-isfunctionstale.md)|Belirtilen hata ayıklama adresli işlevin eski olarak kabul edilir olup olmadığını belirler.|
+|[IsHiddenCode](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-ishiddencode.md)|Belirtilen hata ayıklayıcı adresli kodun gizli olup olmadığını belirler.|
 |[LoadSymbols](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-loadsymbols.md)|Belirtilen hata ayıklama sembollerini belleğe yükler.|
-|[LoadSymbolsFromStream](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-loadsymbolsfromstream.md)|Veri akışı verilen hata ayıklama sembollerini yükler.|
-|[ReplaceSymbols](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-replacesymbols.md)|Geçerli hata ayıklama sembollerini, belirtilen veri akışındaki verilerle değiştirir.|
-|[UnloadSymbols](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-unloadsymbols.md)|Belirtilen modülün hata ayıklama sembollerini bellekten kaldırır.|
-|[UpdateSymbols](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-updatesymbols.md)|Bellekteki hata ayıklama sembollerini, belirtilen veri akışı ile güncelleştirir.|
+|[LoadSymbolsFromStream](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-loadsymbolsfromstream.md)|Veri akışına göre hata ayıklama sembollerini yükler.|
+|[ReplaceSymbols](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-replacesymbols.md)|Geçerli hata ayıklama sembollerini belirtilen veri akışındaki sembollerle değiştirir.|
+|[UnloadSymbols](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-unloadsymbols.md)|Belirtilen modül için hata ayıklama sembollerini bellekten kaldırıyor.|
+|[UpdateSymbols](../../../extensibility/debugger/reference/idebugcomplussymbolprovider-updatesymbols.md)|Bellekte hata ayıklama sembollerini belirtilen veri akışıyla güncelleştirme.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: SH. h
+ Üst Bilgi: Sh.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll

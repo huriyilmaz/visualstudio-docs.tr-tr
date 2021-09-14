@@ -1,6 +1,6 @@
 ---
-title: İşaretçiler Rapor | Microsoft Docs
-description: İşaretçiler Raporu'nın görüntülenen zaman çerçevesindeki işaretçileri nasıl listeleyeni ve kaydırmanın veya yakınlaştırmanın işaretçilerin görünmeye veya kaybolmasına nasıl neden olabileceğini öğrenin.
+title: İşaret raporu | Microsoft Docs
+description: Işaretleyiciler raporunun görüntülenen zaman çerçevesinde işaretleyicileri nasıl listeleyeceğinizi ve kaydırma ya da yakınlaştırma işaretlerinin görünme veya kaybolmasının nasıl neden olabileceğini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,34 +13,34 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: a2a406279d8e9123d342cd63d648206fd35c7b5f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122033323"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726829"
 ---
 # <a name="markers-report"></a>İşaretçiler Raporu
-İşaretçiler Raporu görüntülenen zaman çerçevesindeki işaretçileri listeler.  Şeritleri kaydırma, yakınlaştırma veya gizleme, işaretçilerin görünmesine veya kaybolmasına neden olabilir. Rapor, her işaretçiyle ilgili şu bilgileri içerir:
+Işaretçiler raporu, görünen zaman çerçevesinde işaretçileri listeler.  Yolları kaydırma veya büyütme ya da gizleme, işaretleyicilerin görünmesine veya kaybolmasına neden olabilir. Rapor, her işaretleyici hakkında şu bilgileri içerir:
 
 - İzlemenin başlangıcına göre başladığı zaman.
 
-- Süresi. Bayraklar ve iletiler için süre sıfırdır çünkü bir anlık değeri temsil eder.
+- Süresi. Bir anlık temsil ettiğinden, bayraklar ve mesajlar için süre sıfırdır.
 
-- Onu oluşturan iş parçacığının kimliği.
+- Kendisini oluşturan iş parçacığının KIMLIĞI.
 
-- Bunu oluşturan Windows (ETW) sağlayıcısı için Olay İzleme.
+- tarafından oluşturulan Windows (ETW) sağlayıcısı için olay izleme.
 
-- Yazıldığı işaretçi serisi.
+- Yazıldığı işaretleyici serisi.
 
 - Ait olduğu olayların kategorisi.
 
 - Önem düzeyi.
 
-- Türü (span, bayrak veya ileti).
+- Türü (span, flag veya Message).
 
-- Neyi temsil ettiğine ilişkin üst düzey bir açıklama
+- Temsil edilecek özellikler için üst düzey bir açıklama
 
-  **İşaretçiler** Raporunu CSV dosyası olarak kaydetmek için Dışarı Aktar düğmesini seçin. CSV dosyasındaki verileri diğer uygulamalar veya araçlarla kullanabilirsiniz.
+  Işaretleyiciler raporunu bir CSV dosyası olarak kaydetmek için **dışarı aktar** düğmesini seçin. CSV dosyasındaki verileri diğer uygulamalarla veya araçlarla kullanabilirsiniz.
 
 > [!NOTE]
-> İşaretçiler Raporu 1.000 işaretçi görüntüler. Tüm işaretçileri görmek için raporun tamamını csv dosyasına aktarın.
+> Işaretçiler raporu 1.000 işaretçileri gösterebilir. Tüm işaretçileri görmek için, tam raporu bir CSV dosyasına dışarı aktarın.

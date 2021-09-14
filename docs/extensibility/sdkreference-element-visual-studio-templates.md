@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5aa0ab4f9a795fd225e3fc2e26966a921f080c1722fe256f927b6a5d08a968ef
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5ea070cf466782a1da09e1ba48d08a6965fd041a
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121431532"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634494"
 ---
 # <a name="sdkreference-element-visual-studio-templates"></a>SDKReference Öğesi (Visual Studio Şablonları)
 Öğe şablonunun bir SDK başvurusu kullandığını belirtir.

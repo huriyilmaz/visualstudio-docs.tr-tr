@@ -8,11 +8,11 @@ ms.topic: how-to
 ms.prod: visual-studio-mac
 ms.assetid: fd354fff-ce6b-4505-a815-84a2311e39ba
 ms.openlocfilehash: df1e088a5e2d0f65d8b72dad0895f1edb1740f1f
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964831"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633553"
 ---
 # <a name="set-multiple-startup-projects"></a>Çoklu başlangıç projeleri ayarlama
 

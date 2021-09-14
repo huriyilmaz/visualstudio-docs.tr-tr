@@ -1,6 +1,6 @@
 ---
-description: Bu yöntem, hata ayıklama altyapısının (DE) GUID 'INI ayarlar.
-title: 'IDebugEngine3:: SetEngineGuid | Microsoft Docs'
+description: Bu yöntem, hata ayıklama altyapısının (DE) GUID'lerini ayarlar.
+title: IDebugEngine3::SetEngineGuid | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ab13c75cb0860ccf0c54d7a7fdc42d4c03e8006e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122096368"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725813"
 ---
 # <a name="idebugengine3setengineguid"></a>IDebugEngine3::SetEngineGuid
-Bu yöntem, hata ayıklama altyapısının (DE) ayarlar `GUID` .
+Bu yöntem, hata ayıklama altyapısının (DE) 'lerini `GUID` ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int SetEngineGuid(
 
 ## <a name="parameters"></a>Parametreler
 `guidEngine`\
-[in] `GUID` .
+[in] `GUID` altyapının.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

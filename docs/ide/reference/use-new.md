@@ -1,6 +1,6 @@
 ---
 title: new() kullanma
-description: "' İ kullanırken nasıl kullanacağınızı öğrenin `new()` `var` ."
+description: '`new()`kullanamayarak kullanmayı `var` öğrenin.'
 ms.date: 11/03/2020
 ms.topic: reference
 author: mikadumont
@@ -12,33 +12,33 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 2c1455d92501ee50bca84e655b83ca98435e2d47
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122061881"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726862"
 ---
 # <a name="use-new"></a>`new()` komutunu kullanma
 
-Bu için geçerlidir:
+Bu durum aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** Kullanın `new()` .
+**Ne:** `new()`kullanın.
 
-**Ne zaman:** Kullanmayan bir alanınız `var` veya bir kod stili tercihi kullanılamaz `var` .
+**Ne zaman:** Kullanamayan bir alanı veya `var` kullanmama tercihi kod stiliniz `var` var.
 
-**Neden:** Bu nedenle, türü iki kez tekrarlayarak yinelenen kod yazmanız gerekmez.
+**Neden:** Bu nedenle, türü iki kez tekrarlayarak yinelenen kod yazmanız zorunda değildir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Giriş işaretini alan bildirimine yerleştirin.
+1. Caret'inizi alan bildirimine girin.
 
-2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
 
-3. **' Yeni (...) ' kullan** öğesini seçin:
+3. **'new(...)' kullan'ı seçin:**
 
-    ![' New (...) ' kullan](media/use-new.png)
+    !['new(...)' kullanın](media/use-new.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

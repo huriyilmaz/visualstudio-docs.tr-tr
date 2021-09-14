@@ -12,18 +12,18 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - uwp
 ms.openlocfilehash: 721ee723c6f7d0e28c4d7da376233641a580d21d
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963745"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633678"
 ---
 # <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Nasıl Yapılır: İş Akışı Tasarımcısı ile XAML Hatalarını Ayıklama
 
 İş akışları XAML açısından tanımlanır. İş akışının kullanıcı arabirimi gösterimi, iş akışını tanımlayan XAML ağacının üzerine inşa edilmiştir. Hata ayıklama deneyimi, iş akışlarında hata ayıklamaya benzer İş Akışı Tasarımcısı. Örneğin, XAML'de hata ayıklarken yereller, izleme ve iş parçacıkları pencereleri hata ayıklamada olduğu gibi İş Akışı Tasarımcısı çalışır. Ayrıca, XAML hata ayıklaması sırasında çağrı yığını görünümü, iş akışı için yürütme akışının satır tabanlı hiyerarşik bir görünümü olur.
 
 > [!NOTE]
-> Bir iş akışının XAML'i etkinliklerle aynı derlemede bulunuyorsa, sınıf adlarının derleme kısmı dahil değildir. Sınıf (etkinlik) adlarının bu bölümü olmadan, XAML çalışma zamanında yüklenemiyor. Ana projeyle aynı ad alanı içinde etkinlikler tanımlamak önerilmez; aksi takdirde, tasarımcıda düzenlendikten sonra XAML el ile düzenlenemez.
+> Bir iş akışının XAML'i etkinliklerle aynı derlemede bulunuyorsa, sınıf adlarının derleme kısmı dahil değildir. Sınıf (etkinlik) adlarının bu bölümü olmadan, XAML çalışma zamanında yüklenemiyor. Ana projeyle aynı ad alanı içinde etkinlikler tanımlamanız önerilmez; aksi takdirde, tasarımcıda düzenlendikten sonra XAML el ile düzenlenemez.
 
 ## <a name="to-debug-workflow-xaml"></a>İş akışı XAML'de hata ayıklamak için
 
@@ -35,7 +35,7 @@ ms.locfileid: "123963745"
 
 4. İş akışlarında hata ayıklama konusunda açıklandığı gibi [hata ayıklayıcısını çağırma.](debugging-workflows-with-the-workflow-designer.md)
 
-5. Kod yürütme kesme noktalarından biri ile ulaştığında, bu kesme noktasıyla ilişkili XAML öğesi vurgulanır. Bir sonraki kesme noktası için **F10** veya **F11 anahtarını** kullanın.
+5. Kod yürütmesi kesme noktalarınıza ulaştığında, bu kesme noktasıyla ilişkili XAML öğesi vurgulanır. Bir sonraki kesme noktası için **F10** veya **F11 anahtarını** kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

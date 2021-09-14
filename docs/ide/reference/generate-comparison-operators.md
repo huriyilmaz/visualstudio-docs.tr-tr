@@ -1,7 +1,7 @@
 ---
 title: IComparable için Karşılaştırma İşleçleri Oluşturma
 ms.custom: SEO-VS-2020
-description: Daha yüksek performans için IComparable uygulayan türler için Karşılaştırma İşleçleri oluşturma.
+description: Daha yüksek performans için, IComparable uygulayan türler için karşılaştırma Işleçleri oluşturun.
 ms.date: 05/12/2020
 ms.topic: reference
 author: mikadumont
@@ -11,41 +11,41 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 ms.openlocfilehash: b0a2c2e532258594834d73c091314451f8b2cd3f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117364"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725724"
 ---
-# <a name="generate-comparison-operators-for-types-that-implement-icomparable"></a>IComparable uygulayan türler için Karşılaştırma İşleçleri Oluşturma
+# <a name="generate-comparison-operators-for-types-that-implement-icomparable"></a>IComparable uygulayan türler için karşılaştırma Işleçleri oluşturma
 
-Bu kod oluşturma aşağıdakiler için geçerlidir:
+Bu kod üretimi için geçerlidir:
 
 - C#
 
-**Ne:** IComparable **uygulayan** türler için Karşılaştırma işleçleri oluşturmana olanak sağlar.
+**Ne:** IComparable uygulayan türler için **karşılaştırma** işleçleri oluşturmanıza olanak sağlar.
 
-**Ne zaman:** IComparable uygulayan bir türünüz var. Karşılaştırma işleçlerini otomatik olarak ekleyciz.
+**Ne zaman:** IComparable uygulayan bir türdür, karşılaştırma işleçlerini otomatik olarak ekleyeceğiz.
 
-**Neden:** Bir değer türü uygulayıyorsanız, ValueType üzerinde **Equals** yönteminin varsayılan uygulamasında daha yüksek performans elde etmek için Equals yöntemini geçersiz kılmayı göz önünde bulundurabilirsiniz.
+**Neden:** Bir değer türü uygulamadıysanız, ValueType üzerindeki Equals yönteminin varsayılan uygulamasında daha fazla performans elde etmek için **Equals** metodunu geçersiz kılmayı göz önünde bulundurmanız gerekir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi sınıfın içine veya IComparable anahtar sözcüğüne yerleştirebilirsiniz.
+1. İmlecinizi sınıfın içine veya IComparable anahtar sözcüğüne yerleştirin.
 
-2. Ardından, aşağıdakilerden birini yapın:
+2. Sonra, aşağıdakilerden birini yapın:
 
-   - **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+   - **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-   - Sağ tıklayın ve Hızlı **Eylemler ve Yeniden Düzenleme menüsünü** seçin.
+   - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
 
-   - Sağ üst köşedeki ![Tornavida](../media/screwdriver-icon.png) simgesini seçin.
+   - Sağ üst köşedeki ![Screwdriver](../media/screwdriver-icon.png) Sol kenar boşluğunda görünen simge.
 
    ![Karşılaştırma İşleçleri Oluştur](media/generate-comparison-operators.png)
 
-3. Açılan **menüden Eşittir(nesne)** oluştur'a tıklayın.
+3. Açılır menüden **Equals (nesne) oluştur** ' u seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Oluşturma](../code-generation-in-visual-studio.md)
+- [Kod oluşturma](../code-generation-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

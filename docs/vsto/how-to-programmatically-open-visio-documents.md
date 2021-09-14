@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl Visio: Program aracılığıyla Visio açma'
-description: Open veya OpenEx Visual Studio bir belgeyi program aracılığıyla Visio için Visio nasıl kullanabileceğiniz hakkında bilgi.
+title: 'nasıl yapılır: program aracılığıyla Visio belgeleri açma'
+description: açık veya openex yöntemleriyle bir Visio belgesini program aracılığıyla açmak için Visual Studio nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -17,44 +17,44 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 1c3126f3f5ac73632996079a070c426afc20d656
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122155830"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725564"
 ---
-# <a name="how-to-programmatically-open-visio-documents"></a>Nasıl Visio: Program aracılığıyla Visio açma
-  Mevcut belgeleri açmak için iki yöntem Microsoft Office Visio vardır: Open ve OpenEx. OpenEx yöntemi Open yöntemiyle aynıdır, ancak çağıranın belgenin nasıl aç olduğunu belirterek bağımsız değişkenler sağladığını gösterir.
+# <a name="how-to-programmatically-open-visio-documents"></a>nasıl yapılır: program aracılığıyla Visio belgeleri açma
+  mevcut Microsoft Office Visio belgeleri açmak için iki yöntem vardır: Open ve openex. OpenEx yöntemi, Open yöntemiyle aynıdır, ancak çağıranın belgenin nasıl açıldığını belirtebileceğiniz bağımsız değişkenler sağlar.
 
- Nesne modeli hakkında ayrıntılı bilgi için, nesne modellerine ilişkin VBA [ başvuruMicrosoft.Office.Interop.Visio.Docbakın. Yöntemi](/office/vba/api/Visio.Documents.Open) açın [ veMicrosoft.Office.Interop.Visio.Docaçın. OpenEx](/office/vba/api/Visio.Documents.OpenEx) yöntemi.
+ Nesne modeliyle ilgili ayrıntılar için bkz. Microsoft. Office için VBA başvuru belgeleri [. Derlemesinde. Visio. Documents. Open](/office/vba/api/Visio.Documents.Open) yöntemi ve [Microsoft. Office. Derlemesinde. Visio. Documents. OpenEx](/office/vba/api/Visio.Documents.OpenEx) yöntemi.
 
-## <a name="open-a-visio-document"></a>Bir belgeyi Visio açma
+## <a name="open-a-visio-document"></a>Visio bir belge açın
 
-### <a name="to-open-a-visio-document"></a>Bir belgeyi Visio için
+### <a name="to-open-a-visio-document"></a>Visio bir belge açmak için
 
-- yöntemini `Microsoft.Office.Interop.Visio.Documents.Open` çağırma ve bu belgenin tam yolunu Visio.
+- yöntemini çağırın `Microsoft.Office.Interop.Visio.Documents.Open` ve Visio belgenin tam yolunu sağlayın.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet5":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet5":::
 
-## <a name="open-a-visio-document-with-specified-arguments"></a>Belirtilen bağımsız Visio bir belge açma
+## <a name="open-a-visio-document-with-specified-arguments"></a>belirtilen bağımsız değişkenlerle Visio bir belge açın
 
-### <a name="to-open-a-visio-document-as-read-only-and-docked"></a>Bir belgeyi Visio salt okunur ve yerleştirildi olarak açmak için
+### <a name="to-open-a-visio-document-as-read-only-and-docked"></a>Visio bir belgeyi salt okunurdur ve sabitlenmiş olarak açmak için
 
-- yöntemini çağırın, Visio belgesinin tam yolunu s ekleyin ve kullanmak istediğiniz bağımsız değişkenleri (bu durumda Docked ve `Microsoft.Office.Interop.Visio.Documents.OpenEx` Salt Okunur) ekleyin.
+- yöntemi çağırın `Microsoft.Office.Interop.Visio.Documents.OpenEx` , Visio belgenin tam yolunu sağlayın ve kullanmak istediğiniz bağımsız değişkenleri (bu örnekte, sabitlenmiş ve salt okunurdur) dahil edin.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs" id="Snippet6":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb" id="Snippet6":::
 
-## <a name="compile-the-code"></a>Kodu derleme
- Bu kod örneği için aşağıdakiler gerekir:
+## <a name="compile-the-code"></a>Kodu derle
+ Bu kod örneği şunları gerektirir:
 
-- adlı Visio belge, Belgelerim klasöründe (Windows XP ve önceki sürümler için) veya Belgeler klasöründe `myDrawing.vsd` `Test` (Windows Vista için) olmalıdır.  
+- adlı bir Visio belge `myDrawing.vsd` `Test` , belgelerim klasöründe (Windows XP ve önceki sürümler  için) veya *belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visio çözümleri](../vsto/visio-solutions.md)
-- [Visio modeline genel bakış](../vsto/visio-object-model-overview.md)
-- [Nasıl kullanılır: Program aracılığıyla yeni Visio oluşturma](../vsto/how-to-programmatically-create-new-visio-documents.md)
-- [Nasıl Visio: Program aracılığıyla Visio kapatma](../vsto/how-to-programmatically-close-visio-documents.md)
-- [Nasıl Visio: Program aracılığıyla Visio kaydetme](../vsto/how-to-programmatically-save-visio-documents.md)
-- [Nasıl kullanılır: Program aracılığıyla Visio yazdırma](../vsto/how-to-programmatically-print-visio-documents.md)
+- [Visio nesne modeline genel bakış](../vsto/visio-object-model-overview.md)
+- [nasıl yapılır: program aracılığıyla yeni Visio belgeleri oluşturma](../vsto/how-to-programmatically-create-new-visio-documents.md)
+- [nasıl yapılır: program aracılığıyla Visio belgeleri kapatma](../vsto/how-to-programmatically-close-visio-documents.md)
+- [nasıl yapılır: program aracılığıyla Visio belgeleri kaydetme](../vsto/how-to-programmatically-save-visio-documents.md)
+- [nasıl yapılır: program aracılığıyla Visio belgeleri yazdırma](../vsto/how-to-programmatically-print-visio-documents.md)

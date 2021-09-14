@@ -12,11 +12,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 50cd69ea0b46d54095faebf2981de1f1ba0299f2
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963768"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726076"
 ---
 # <a name="state-machine-activity-designers"></a>Durum Makinesi Etkinlik Tasarımcıları
 

@@ -17,11 +17,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 1894cb23fcfe1c9d72d5c8ab64a0fce2e14f3a34
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122130539"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634073"
 ---
 # <a name="general-reference-office-development-in-visual-studio"></a>genel başvuru (Visual Studio Office geliştirme)
   bu bölüm, Visual Studio Microsoft Office projelerle ilgili teknik ayrıntıları içerir.

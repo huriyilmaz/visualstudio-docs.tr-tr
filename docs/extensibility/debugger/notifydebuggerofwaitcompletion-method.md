@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: f4ba75017e277f12c6d3727ddc3d14a7dfd3483a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122160380"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725836"
 ---
 # <a name="notifydebuggerofwaitcompletion-method"></a>NotifyDebuggerOfWaitCompletion yöntemi
 Hata ayıklayıcı tarafından kesme noktası hedefi olarak kullanılan yer tutucu yöntemi. Bu yöntemin, büyük/büyük/büyük olması veya en iyi duruma getirilmiş olması gerekir.

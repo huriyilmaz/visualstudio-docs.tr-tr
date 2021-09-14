@@ -16,11 +16,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 21d753fdcd1076a79cb2fcde8698430cb5de31e5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122039416"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725704"
 ---
 # <a name="cores-view-legend"></a>Çekirdekler görünümü göstergesi
 Çekirdekler görünümü göstergesi her bir iş parçacığını renge ve ada göre tanımlar. Bu, platformlar arası bağlam anahtarları, toplam bağlam geçişleri ve çekirdekler arası bağlam anahtarlarının yüzdesi gösteren sütunları içerir. Göstergedeki satırlar, azalan sırada çapraz çekirdek bağlam anahtarları sayısına göre sıralanır.

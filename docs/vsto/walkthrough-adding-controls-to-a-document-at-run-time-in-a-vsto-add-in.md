@@ -19,11 +19,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: ddc4f42be5c1b9a6fb439cdb097480b8d7a60e76
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122025660"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725546"
 ---
 # <a name="walkthrough-add-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>izlenecek yol: bir VSTO eklentisi içinde çalışma zamanında belgeye denetim ekleme
   bir VSTO eklentisi kullanarak herhangi bir açık Microsoft Office Word belgesine denetim ekleyebilirsiniz. Bu izlenecek yol, kullanıcıların bir <xref:Microsoft.Office.Tools.Word.Controls.Button> belgeye veya bir belge eklemesine olanak tanımak için şerit 'in nasıl kullanılacağını gösterir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> .
@@ -183,12 +183,12 @@ ms.locfileid: "122025660"
 
 - çalışma zamanında bir belgeye birçok farklı denetim türünün nasıl ekleneceğini ve belge yeniden açıldığı zaman denetimleri yeniden oluşturmayı gösteren bir örnek için, [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)' a Add-In dinamik denetimler örneği ' ne bakın.
 
-- Excel için VSTO eklentisi kullanılarak çalışma sayfasına denetimlerin nasıl ekleneceğini gösteren bir anlatım için bkz. [izlenecek yol: VSTO eklenti projesindeki çalışma sayfasına denetim ekleme](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md).
+- Excel için VSTO Eklentisini kullanarak çalışma sayfasına denetimler ekleme adımlarını gösteren bir kılavuz için bkz. [Walkthrough: Add-in](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)projesinde çalışma zamanında çalışma VSTO ekleme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Word çözümleri](../vsto/word-solutions.md)
-- [çalışma zamanında Office belgelere denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
-- [Office belgelerinde dinamik denetimleri kalıcı hale getirme](../vsto/persisting-dynamic-controls-in-office-documents.md)
-- [nasıl yapılır: Office belgelere Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
-- [Nasıl yapılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md)
-- [Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında VSTO eklentilerde genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
+- [Sözcük çözümleri](../vsto/word-solutions.md)
+- [Çalışma zamanında Office için denetimler ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [Belgelerde dinamik Office kalıcılığı](../vsto/persisting-dynamic-controls-in-office-documents.md)
+- [Nasıl kullanılır: Windows Form denetimleri Office ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
+- [Nasıl kullanılır: Word belgelerine içerik denetimleri ekleme](../vsto/how-to-add-content-controls-to-word-documents.md)
+- [Çalışma zamanında Word Excel ve VSTO çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)

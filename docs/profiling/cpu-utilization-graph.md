@@ -1,6 +1,6 @@
 ---
-title: CPU Kullanımı Graph | Microsoft Docs
-description: Bir uygulamanın zaman içinde kullanım düzeyini gösteren CPU Kullanımı grafı hakkında bilgi edinebilirsiniz. Kullanım, kullanımda mantıksal çekirdek sayısı olarak gösterilir.
+title: CPU kullanımı Graph | Microsoft Docs
+description: Zaman içinde bir uygulamadaki kullanım düzeyini gösteren CPU kullanımı grafiği hakkında bilgi edinin. Kullanım, kullanımdaki mantıksal çekirdek sayısı olarak gösterilir.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,24 +16,24 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 758c90c3cdf5c458fc355f9f6eaf9c7233bd3cb4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122039195"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726835"
 ---
-# <a name="cpu-utilization-graph"></a>CPU Kullanımı grafiği
-CPU Kullanımı grafı, bir uygulamanın zaman içinde kullanım düzeyini gösterir. X ekseni izlemenin süresini, y ekseni ise sistem üzerinde mantıksal çekirdek sayısını temsil eder. Grafik belirli bir zamanda hangi çekirdeğin etkin olduğunu göstermez. Örneğin, her biri belirli bir süre için yüzde 50 kapasitede çalışan iki çekirdek varsa, bu görünümde bir mantıksal çekirdek kullanılır.
+# <a name="cpu-utilization-graph"></a>CPU kullanım grafiği
+CPU kullanım grafiğinde, zaman içinde bir uygulamadaki kullanım düzeyi gösterilir. X ekseni, izlemenin süresini temsil eder ve y ekseni, sistemdeki mantıksal çekirdek sayısını temsil eder. Grafik, belirli bir zamanda hangi belirli çekirdeğin etkin olduğunu göstermez. Örneğin, belirli bir süre boyunca her biri yüzde 50 kapasiteye iki çekirdek çalışıyorsa, bu görünüm kullanılan bir mantıksal çekirdeği gösterir.
 
-## <a name="cpu-utilization-graph-colors"></a>CPU Kullanımı graf renkleri
+## <a name="cpu-utilization-graph-colors"></a>CPU kullanımı grafik renkleri
 
-- Yeşil, geçerli işlem tarafından sistemdeki mantıksal çekirdeklerin kullanımını gösterir.
+- Yeşil, geçerli işlem tarafından sistemdeki mantıksal çekirdekler kullanımını gösterir.
 
-- Açık gri, sistemdeki diğer işlemler tarafından mantıksal çekirdeklerin kullanımını gösterir. CPU grafı içinde açık grinin yüksek bir yüzdesi, sistemin diğer işlemler tarafından yoğun bir şekilde yükleniyor olduğunu ve işleminizin büyük olasılıkla onlar tarafından önek olacağını gösterir. Mantıksal çekirdeklerin diğer işlemler tarafından tüketimini azaltmak için sistemde çalıştır çalıştırılalarının sayısını azalt.
+- Açık gri, sistemdeki diğer işlemlere göre mantıksal çekirdekler kullanımını gösterir. CPU grafiğinde yüksek oranda açık gri yüzdesi, sistemin diğer işlemler tarafından yoğun bir şekilde yüklendiğini ve işleminizin bu işlemden büyük olasılıkla önyüklenebileceğini gösterir. Mantıksal çekirdekleri diğer işlemlere göre tüketimini azaltmak için, sistemde çalışan bunların sayısını azaltın.
 
-- Koyu gri, sistem işlemi tarafından mantıksal çekirdeklerin tüketimini gösterir. Bunu doğrudan kontrol etmek doğru değildir, ancak ne zaman oluştuğunu bilmek yararlı olur çünkü bu işlem süreciniz için mantıksal çekirdeklerin kullanılabilirliğini etkileyebilir.
+- Koyu gri, mantıksal çekirdekler tarafından sistem işleminin tüketimini gösterir. Bunu doğrudan denetleyemiyorsunuz, ancak işlemin ne zaman meydana geldiğini bilmeniz yararlı olur, çünkü işlem için mantıksal çekirdekler kullanılabilirliğini etkileyebilir.
 
-- Beyaz, sistem üzerinde kullanılmayan mantıksal çekirdeklerin kullanılabilirliğini gösterir. Paralellik için daha fazla fırsat bulursanız bu çekirdekler süreciniz için kullanılabilir.
+- Beyaz, sistemdeki kullanılmayan mantıksal çekirdekler için kullanılabilirliği gösterir. Paralellik için daha fazla fırsat bulabiliyorsanız, bu çekirdekler işleminiz için kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kullanım Görünümü](../profiling/utilization-view.md)

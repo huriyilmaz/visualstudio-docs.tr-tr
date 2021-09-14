@@ -14,17 +14,17 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: aa669bae8cd178f70ff843c309fdbdaf9ed1bed9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122124951"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634617"
 ---
 # <a name="how-to-open-editors-for-open-documents"></a>Nasıl kullanılır: Açık belgeler için düzenleyicileri açma
 Proje bir belge penceresi açmadan önce, projenin önce dosyanın başka bir düzenleyici için belge penceresinde zaten açık olup olmadığını belirlemesi gerekir. Dosya, projeye özgü bir düzenleyicide veya ile kayıtlı standart düzenleyicilerden biri olarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] açabilirsiniz.
 
 ## <a name="open-a-project-specific-editor"></a>Projeye özgü düzenleyiciyi açma
- Zaten açık olan bir dosya için projeye özgü bir düzenleyiciyi açmak üzere aşağıdaki yordamı kullanın.
+ Zaten açık olan bir dosya için projeye özgü düzenleyiciyi açmak üzere aşağıdaki yordamı kullanın.
 
 ### <a name="to-open-a-project-specific-editor-for-an-open-file"></a>Projeye özgü bir düzenleyiciyi açık bir dosya için açmak için
 

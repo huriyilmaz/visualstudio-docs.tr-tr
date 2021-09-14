@@ -1,6 +1,6 @@
 ---
-title: Oluşturucudan özel alan ve Özellik Oluştur
-description: Bir oluşturucudan özel bir alan veya özellik oluşturmak için hızlı eylemler ve yeniden düzenlemeler menüsünü nasıl kullanacağınızı öğrenin.
+title: Oluşturucudan özel alan ve özellik oluşturma
+description: Oluşturucudan özel alan veya özellik oluşturmak için Hızlı Eylemler ve Yeniden Düzenleme menüsünü kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 06/20/2020
 ms.topic: reference
@@ -13,33 +13,33 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 499398f40387ee8c5497ca32e7d3f0f56e44d788
-ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "122785692"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726875"
 ---
-# <a name="generate-private-field-and-property-from-constructor"></a>Oluşturucudan özel alan ve Özellik Oluştur
+# <a name="generate-private-field-and-property-from-constructor"></a>Oluşturucudan özel alan ve özellik oluşturma
 
-Bu yeniden düzenleme için geçerlidir: 
+Bu yeniden düzenleme aşağıdakiler için geçerlidir: 
 
 - C# 
 
-**Ne:** Bir oluşturucudan özel bir alan veya özellik oluşturun. 
+**Ne:** Oluşturucudan özel bir alan veya özellik oluşturma. 
 
-**Ne zaman:** Bir oluşturucudan bir özel alanı veya özelliği hızlıca eklemek ve başlatmak istiyorsunuz.
+**Ne zaman:** Bir oluşturucudan hızla özel bir alan veya özellik eklemek ve başlatmak istediğiniz.
 
-**Neden:** Özel alanlar ve Özellikler yazmak zaman alabilir ve tekrarlı olabilir. Bu yeniden düzenlemenin kullanılması hızlıdır ve programı daha sağlam hale getirir.
+**Neden:** Özel alanlar ve özellikler yazmak zaman alabilir ve tekrarlayıcı olabilir. Bu yeniden düzenlemeyi kullanmak hızlıdır ve programı daha sağlam haletır.
 
 ## <a name="how-to"></a>Nasıl yapılır 
 
-1. İmlecinizi Oluşturucu içindeki parametre adına yerleştirin.
+1. İmlecinizi oluşturucu içindeki parametre adının üzerine yerleştirin.
 
-2. **CTRL** tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
+2. **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
    
 3. Daha sonra aşağıdakilerden birini seçin:
 
-- **Alan oluşturun ve başlatın** veya **özellik oluşturun ve başlatın**.
+- **Alan oluşturma ve başlatma veya** Oluşturma ve başlatma **özelliği.**
 
    ![Oluşturucudan özel alan oluşturma](media/generate-private-field-from-constructor.png)
 

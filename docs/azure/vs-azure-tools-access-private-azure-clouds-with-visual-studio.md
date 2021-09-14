@@ -9,11 +9,11 @@ ms.topic: how-to
 ms.date: 11/13/2017
 ms.author: ghogen
 ms.openlocfilehash: 04ce2657fa5b7e5aa8e829c161a1739d23920ab9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122091753"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633230"
 ---
 # <a name="accessing-private-azure-clouds-with-visual-studio"></a>Visual Studio ile özel Azure bulutlara erişme
 
@@ -25,7 +25,7 @@ Varsayılan olarak, Visual Studio Azure bulut REST uç noktalarını destekler. 
 
     ![Abonelikleri yönet komutu](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790778.png)
 
-1. Abonelikleri **Yönet Microsoft Azure Sertifikaları** sekmesini ve ardından **İçeri** Aktar'ı **seçin.**
+1. Abonelikleri **Microsoft Azure iletişim kutusunda** Sertifikalar sekmesini ve ardından **İçeri** Aktar'ı **seçin.**
 
     ![Azure sertifikalarını içeri aktarma](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790779.png)
 

@@ -1,6 +1,6 @@
 ---
-description: Özgün ekipman üreticisi (OEM) simgesinin kimlik değerini verir.
-title: IDiaSymbol::get_oemSymbolId | Microsoft Docs
+description: Özgün ekipman üreticisi (OEM) sembolünün KIMLIK değerini alır.
+title: 'IDiaSymbol:: get_oemSymbolId | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: a241d75b9a073b3ba4072e6d287ea64a5c2ad202
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113398"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628040"
 ---
 # <a name="idiasymbolget_oemsymbolid"></a>IDiaSymbol::get_oemSymbolId
-Özgün ekipman üreticisi (OEM) simgesinin kimlik değerini verir.
+Özgün ekipman üreticisi (OEM) sembolünün KIMLIK değerini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,18 +35,18 @@ HRESULT get_oemSymbolId (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] OEM'nin dahili olarak atanan sembol kimliğini döndürür.
+dışı OEM 'nin dahili olarak atanmış sembol KIMLIĞINI döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Tanımlayıcı, tüm sembolleri benzersiz olarak işaretlemek DIA SDK tarafından oluşturulan benzersiz bir değerdir.
+ Tanımlayıcı, tüm sembolleri benzersiz olarak işaretlemek için DIA SDK tarafından oluşturulan benzersiz bir değerdir.
 
- Bu özellik yalnızca [SymTagEnum Numaralama türüne sahip semboller](../../debugger/debug-interface-access/symtagenum.md) için `SymTagCustomType` geçerlidir.
+ Bu özellik yalnızca [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) türüne sahip semboller için geçerlidir `SymTagCustomType` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

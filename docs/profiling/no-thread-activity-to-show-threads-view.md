@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 8bfb26f6f632d62eceea3f897297ff338f3fe978
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122107192"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725696"
 ---
 # <a name="no-thread-activity-to-show-threads-view"></a>Gösterilecek iş parçacığı etkinliği yok (Iş parçacıkları görünümü)
 Bu alan, geçerli görünen zaman aralığındaki gizli olmayan iş parçacıkları hakkındaki verileri gösterir.

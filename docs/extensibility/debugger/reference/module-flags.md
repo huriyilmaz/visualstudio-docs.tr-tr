@@ -1,5 +1,5 @@
 ---
-description: Bir modülü açıklamak için kullanılır.
+description: Bir modülü tanımlamakta kullanılır.
 title: MODULE_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 83aa45e4fdcac756dbd623abcb1203fa160c9820
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122110793"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634777"
 ---
 # <a name="module_flags"></a>MODULE_FLAGS
-Bir modülü açıklamak için kullanılır.
+Bir modülü tanımlamakta kullanılır.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,34 +54,34 @@ public enum enum_MODULE_FLAGS {
 
 ## <a name="fields"></a>Alanlar
  `MODULE_FLAG_NONE`\
- Modül belirtir.
+ Modül olmadığını belirtir.
 
  `MODULE_FLAG_SYSTEM`\
- Sistem modülünü belirtir.
+ Bir sistem modülünü belirtir.
 
  `MODULE_FLAG_SYMBOLS`\
- Sembol modülünü belirtir.
+ Bir sembol modülünü belirtir.
 
  `MODULE_FLAG_64BIT`\
- 64 bit modülü belirtir.
+ 64 bitlik bir modül belirtir.
 
  `MODULE_FLAG_OPTIMIZED`\
- Modülün iyileştirilmiş olduğunu belirtir. Bu durum Modüller **penceresine yansıtıldı.**
+ Modülün iyileştirildiğini belirtir. Bu durum **modüller** penceresinde yansıtılır.
 
  `MODULE_FLAG_UNOPTIMIZED`\
- Modülün en iyi duruma getirilmiş olmadığını belirtir. Bu durum Modüller **penceresine yansıtıldı.** Bu varsayılan durum olur.
+ Modülün iyileştirilmediğini belirtir. Bu durum **modüller** penceresinde yansıtılır. Bu, varsayılan durumdur.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu `m_dwModuleFlags` yapının üyesi [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) kullanılır.
+ `m_dwModuleFlags` [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısının üyesi için kullanılır.
 
- Bu bayraklar bit olarak birleştirilmiş `OR` olabilir.
+ Bu bayraklar bit düzeyinde birleştirilebilir `OR` .
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

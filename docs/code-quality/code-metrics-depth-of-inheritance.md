@@ -10,11 +10,11 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
 ms.openlocfilehash: c08a35a622eeb30a51b4dea2ab4914b0105b01cd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122075404"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632066"
 ---
 # <a name="code-metrics---depth-of-inheritance-dit"></a>Kod ölçümleri-devralmanın derinliği (DıT)
 

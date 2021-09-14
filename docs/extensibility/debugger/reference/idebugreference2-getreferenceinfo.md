@@ -1,5 +1,5 @@
 ---
-description: Bir DEBUG_REFERENCE_INFO açıklayan bir veri yapısı alır.
+description: Başvuru DEBUG_REFERENCE_INFO yapıyı alır.
 title: IDebugReference2::GetReferenceInfo | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 88dc8d4bdbc0e354ccc327aa0c5b6968091c19c6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122029768"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634825"
 ---
 # <a name="idebugreference2getreferenceinfo"></a>IDebugReference2::GetReferenceInfo
-Başvuru [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) yapıyı alır. Daha sonraki kullanımlar için ayrılmıştır.
+Bir [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) açıklayan bir veri yapısı alır. Daha sonraki kullanımlar için ayrılmıştır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -59,7 +59,7 @@ int GetReferenceInfo (
 [in] Herhangi bir sayısal bilgiyi biçimlendirmek için kullanılacak radyan.
 
 `dwTimeout`\
-[in] Bu yöntemden dönmeden önce bek için milisaniye cinsinden en uzun süre. Süresiz `INFINITE` olarak beklemek için kullanın.
+[in] Bu yöntemden dönmeden önce bek süresi (milisaniye cinsinden). Süresiz `INFINITE` olarak beklemek için kullanın.
 
 `rgpArgs`\
 [in] [IDebugReference2 nesneleri dizisi.](../../../extensibility/debugger/reference/idebugreference2.md) Gelecekteki kullanım için ayrılmıştır; null değere ayarlanır.

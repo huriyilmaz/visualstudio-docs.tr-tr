@@ -1,5 +1,5 @@
 ---
-description: Bekleyen bir kesme noktasının durumunu belirtir (henüz bağlanmamış bir kesme noktası).
+description: Bekleyen bir kesme noktası (henüz bağlı değil bir kesme noktası) durumunu belirtir.
 title: PENDING_BP_STATE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 191d73dcf5b4e1f7b0e3b10842d9a6806a95e9c2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034610"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726973"
 ---
 # <a name="pending_bp_state"></a>PENDING_BP_STATE
-Bekleyen bir kesme noktasının durumunu belirtir (henüz bağlanmamış bir kesme noktası).
+Bekleyen bir kesme noktası (henüz bağlı değil bir kesme noktası) durumunu belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,26 +50,26 @@ public enum enum_PENDING_BP_STATE {
 
 ## <a name="fields"></a>Alanlar
  `PBPS_NONE`\
- Sıfır için yer tutucu. Bu değer hiçbir şekilde döndürülmez.
+ Sıfır için yer tutucu. Bu değer hiçbir zaman döndürülz.
 
  `PBPS_DELETED`\
- Bekleyen kesme noktasının silindiğini gösterir.
+ Bekleyen kesme noktası silindi gösterir.
 
  `PBPS_DISABLED`\
- Bekleyen kesme noktasının devre dışı olduğunu belirtir.
+ Bekleyen kesme noktası devre dışı olduğunu gösterir.
 
  `PBPS_ENABLED`\
- Bekleyen kesme noktasının etkin olduğunu gösterir.
+ Bekleyen kesme noktası etkin olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
- `state` [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) yapısının üyesi olarak kullanın.
+ Bu `state` yapının üyesi olarak [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Listelemeler](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

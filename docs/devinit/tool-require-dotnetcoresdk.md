@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: d3c73ed7b7c463226e49dcf29bc80a7ffec9e677d017442e501cb13620f2baa7
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1963ad8dfe1bd31eb3f98ec6fdf57524a274cfb6
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390543"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725348"
 ---
 # <a name="require-dotnetcoresdk"></a>require-dotnetcoresdk
 
@@ -53,7 +53,7 @@ Aracın varsayılan davranışı, `require-dotnetcoresdk` `global.json` geçerli
 ## <a name="example-usage"></a>Örnek kullanım
 Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `require-dotnetcoresdk` `.devinit.json` .
 
-#### <a name="devinitjson-that-will-install-the-latest-version-of-net-core"></a>.NET Core 'un en son sürümünü yükleyecek .devinit.js.
+#### <a name="devinitjson-that-will-install-the-latest-version-of-net-core"></a>.NET Core 'un en son sürümünü yükleyecek. devinit. JSON:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
@@ -65,7 +65,7 @@ Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda veril
 }
 ```
 
-#### <a name="devinitjson-that-will-install-a-specific-version-of-net-core"></a>.devinit.js, .NET Core 'un belirli bir sürümünü yükleyecek:
+#### <a name="devinitjson-that-will-install-a-specific-version-of-net-core"></a>.NET Core 'un belirli bir sürümünü yükleyecek. devinit. JSON:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
@@ -78,7 +78,7 @@ Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda veril
 }
 ```
 
-#### <a name="devinitjson-that-will-install-a-specific-version-of-net-core-and-aspnet-core"></a>.devinit.js, .NET Core 'un belirli bir sürümünü yükleyecek ve ASP.NET Core:
+#### <a name="devinitjson-that-will-install-a-specific-version-of-net-core-and-aspnet-core"></a>.NET Core ve ASP.NET Core 'nin belirli bir sürümünü yükleyecek. devinit. JSON:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
@@ -92,7 +92,7 @@ Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda veril
 }
 ```
 
-#### <a name="devinitjson-that-will-install-net-core-in-a-specific-directory"></a>.devinit.js, .NET Core 'u belirli bir dizine yükleyecek:
+#### <a name="devinitjson-that-will-install-net-core-in-a-specific-directory"></a>.NET Core 'u belirli bir dizine yükleyecek. devinit. JSON:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",

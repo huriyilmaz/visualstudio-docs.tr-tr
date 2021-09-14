@@ -1,6 +1,6 @@
 ---
 title: IManagedAddin::Load
-description: Yönetilen bir VSTO yüklendiğinde çağrılır.
+description: yönetilen bir VSTO eklentisi yüklendiğinde çağırılır.
 ms.date: 02/02/2017
 ms.topic: interface
 dev_langs:
@@ -14,14 +14,14 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 7be4be6b08c5ea9b0813e4782a0ac1a77cec2890
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122032660"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726707"
 ---
 # <a name="imanagedaddinload"></a>IManagedAddin::Load
-  Yönetilen bir VSTO yüklendiğinde çağrılır.
+  yönetilen bir VSTO eklentisi yüklendiğinde çağırılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,18 +34,18 @@ HRESULT Load([in] BSTR bstrManifestURL,
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|*bstrManifestURL*|VSTO Eklenti için bildirimin tam yolu.|
-|*pdispApplication*|IDispatch'e, eklentiyi yük eden konak uygulamayı temsil eden VSTO işaretçisi.|
+|*bstrManifestURL 'Si*|VSTO eklentisi için bildirimin tam yolu.|
+|*pdispApplication*|VSTO eklentisini yükleyen ana bilgisayar uygulamasını temsil eden bir ıdispatch işaretçisi.|
 
 ## <a name="return-value"></a>Dönüş Değeri
- Yöntemin başarıyla tamamlandıktan sonra tamamlandıktan sonra bir HRESULT değeri.
+ Metodun başarıyla tamamlanıp tamamlanmadığını gösteren bir HRESULT değeri.
 
 ## <a name="remarks"></a>Açıklamalar
- Bildirim, eklentiyi yüklemeye yardımcı olmak için kullanılan bilgileri sağlayan bir dosyadır (genellikle bir XML VSTO dosyasıdır. Örneğin, bir bildirim, VSTO Eklentisi yüklendiğinde örneği için giriş noktası sınıfı ve VSTO derlemenin konumunu belirtebilirsiniz.
+ bildirim, VSTO eklentisinin yüklenmesine yardımcı olmak için kullanılan bilgileri sağlayan bir dosyadır (genellikle bir XML dosyasıdır). örneğin, bir bildirim VSTO eklenti derlemesinin konumunu ve VSTO eklentisi yüklendiğinde örnek oluşturmak için giriş noktası sınıfını belirtebilir.
 
- *bstrManifestURL* parametresi, VSTO `Manifest` Add-in için **HKEY_CURRENT_USER\Software\Microsoft\Office\\ _\<application name>_ \Addins \\ _\<add-in ID>_** kayıt defteri anahtarı altındaki girdinin değerini içerir. Daha fazla bilgi için bkz. [IManagedAddin arabirimi.](../vsto/imanagedaddin-interface.md)
+ *bstrmanifesturl* parametresi, `Manifest` VSTO eklentisinin **HKEY_CURRENT_USER\Software\Microsoft\Office\\ _\<application name>_ \\ _\<add-in ID>_ \addıns** kayıt defteri anahtarı altındaki girişin değerini içerir. Daha fazla bilgi için bkz. [IManagedAddin Interface](../vsto/imanagedaddin-interface.md).
 
- [IManagedAddIn::Load](../vsto/imanagedaddin-load.md) yöntemini, yüklenen uygulama etki alanı ve güvenlik VSTO yapılandırma gibi görevleri gerçekleştirin.
+ yüklenmekte olan VSTO eklentisi için uygulama etki alanını ve güvenlik ilkesini yapılandırma gibi görevleri gerçekleştirmek için [ımanagedaddin:: Load](../vsto/imanagedaddin-load.md) yöntemini uygulayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IManagedAddin Arabirimi](../vsto/imanagedaddin-interface.md)

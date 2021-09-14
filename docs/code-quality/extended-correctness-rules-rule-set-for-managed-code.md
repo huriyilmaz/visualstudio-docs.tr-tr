@@ -1,7 +1,7 @@
 ---
 title: Yönetilen kod için Genişletilmiş Doğruluk Kuralları kural kümesi
 ms.date: 11/04/2016
-description: Com ile birlikte çalışabilirlik ve mobil uygulamalar için Visual Studio genişletilmiş doğruluk kuralları kural kümesi hakkında bilgi edinebilirsiniz. Kural açıklamalarını görme.
+description: Com ile birlikte çalışabilirlik ve mobil uygulamalar için Visual Studio Genişletilmiş Doğruluk Kuralları kural kümesi hakkında bilgi edinebilirsiniz. Kural açıklamalarını görme.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 ms.assetid: 5b181f5b-6c7a-4e46-a783-360e1da427a0
@@ -12,11 +12,11 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
 ms.openlocfilehash: a664b01f5fec771f4891389d3ec807d2e4976797
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122114179"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632031"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>Yönetilen kod için Genişletilmiş Doğruluk Kuralları kural kümesi
 
@@ -26,7 +26,7 @@ Microsoft Genişletilmiş Doğruluk Kuralları kural kümesi, Yönetilen [](../c
 
 Aşağıdaki tabloda Microsoft Genişletilmiş Doğruluk Kuralları kural kümesinde yer alan tüm kurallar açıkılmıştır.
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA1001](/dotnet/fundamentals/code-analysis/quality-rules/ca1001)|Atılabilen alanlara sahip türler atılabilir olmalıdır|
 |[CA1009](../code-quality/ca1009.md)|Olay işleyicileri doğru olarak bildirin|
@@ -68,7 +68,7 @@ Aşağıdaki tabloda Microsoft Genişletilmiş Doğruluk Kuralları kural kümes
 |[CA2137](../code-quality/ca2137.md)|Saydam metotlar yalnızca doğrulanabilir IL içermelidir|
 |[CA2138](../code-quality/ca2138.md)|Saydam metotlar SuppressUnmanagedCodeSecurity özniteliğine sahip metotları çağırmamalıdır|
 |[CA2140](../code-quality/ca2140.md)|Saydam kod güvenlik kritik nesnelerine başvurmamalıdır|
-|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler LinkDemands'i karşılamamalı|
+|[CA2141](../code-quality/ca2141.md)|Saydam yöntemler LinkDemands'ı karşılamamalı|
 |[CA2146](../code-quality/ca2146.md)|Türler en az kendi taban türleri ve arabirimleri kadar kritik olmalıdır|
 |[CA2147](../code-quality/ca2147.md)|Saydam metotlar güvenlik onay deyimlerini kullanmamalıdır|
 |[CA2149](../code-quality/ca2149.md)|Saydam metotlar yerel kod içine çağırmamalıdır|

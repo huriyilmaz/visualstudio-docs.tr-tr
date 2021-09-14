@@ -1,6 +1,6 @@
 ---
 title: Şablondan AI projesi oluşturma
-description: Çeşitli şablonlardan Visual Studio Araçları bir AI projesi oluşturmak için Visual Studio Araçları'yi kullanmayı öğrenin.
+description: Çeşitli şablonlardan bir Visual Studio Araçları proje oluşturmak için AI için Visual Studio Araçları'yi kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 author: jillre
 ms.author: jillfra
@@ -12,25 +12,25 @@ ms.topic: how-to
 ms.workload:
 - multiple
 ms.openlocfilehash: e1a9cbdd4449282076703134862178f3a866851f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122067731"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633377"
 ---
-# <a name="create-an-ai-project-from-a-template-in-visual-studio"></a>Visual Studio'de şablondan bir AI projesi Visual Studio
+# <a name="create-an-ai-project-from-a-template-in-visual-studio"></a>Visual Studio'de şablondan bir AI projesi oluşturma
 
-AI için [Visual Studio Araçları'yi](installation.md)yüklemiş olduktan sonra, çeşitli şablonları kullanarak yeni bir AI projesi kolayca oluşturabilirsiniz.
+AI için [yeni Visual Studio Araçları](installation.md)yüklen bir kez yüklensin, çeşitli şablonlar kullanarak yeni bir AI projesi oluşturmak kolaydır.
 
 1. Visual Studio.
 
-2. Yeni **> (Ctrl+Shift+N)** > Project'yi seçin. Yeni **Project** iletişim kutusunda " AI Tools "**(AI Araçları)** ifadesini arayın ve istediğiniz şablonu seçin. Şablon seçerek şablonun sağladığına ilişkin kısa bir açıklama görüntülebilirsiniz.
+2. Yeni **> (Ctrl+Shift+N)** > Project'yi seçin. Yeni **Project** iletişim kutusunda "**AI Tools**" ifadesini arayın ve istediğiniz şablonu seçin. Şablon seçerek şablonun sağladığına ilişkin kısa bir açıklama görüntülebilirsiniz.
 
-    ![Python şablonuyla VS2017 Project yeni uygulama iletişim kutusu](media/create-project/new-ai-project.png)
+    ![Python şablonuyla VS2017 Project iletişim kutusu](media/create-project/new-ai-project.png)
 
 3. Bu Hızlı Başlangıç için "**TensorFlow Uygulaması**" şablonunu seçin, projeye bir ad ("MNIST" gibi) ve konum girin ve Tamam'ı **seçin.**
 
-4. Visual Studio proje dosyasını (diskte bir dosya) şablonda açıklandığı gibi `.pyproj` diğer dosyalarla birlikte oluşturur. "TensorFlow Uygulaması" şablonuyla projeniz ile aynı adlı bir dosya içerir. Dosya varsayılan olarak Visual Studio düzenleyicide açıktır.
+4. Visual Studio proje dosyasını (diskte bir dosya) şablonda açıklandığı gibi `.pyproj` diğer tüm dosyalarla birlikte oluşturur. "TensorFlow Uygulaması" şablonuyla projeniz ile aynı adlı bir dosya içerir. Dosya, varsayılan olarak Visual Studio düzenleyicide açıktır.
 
     ![Python Uygulama şablonu kullanırken sonuçta elde edilen proje](media/create-project/new-tensorflowapp.png)
 
@@ -44,4 +44,4 @@ AI için [Visual Studio Araçları'yi](installation.md)yüklemiş olduktan sonra
 
     ![Projenin Betik Bağımsız Değişkenlerini gösteren TensorFlowApplication1 için Özellikler ayarlarında Hata Ayıklama sekmesinin ekran görüntüsü.](media/create-project//project-properties_1.png)
 
-8. Ctrl+F5 tuşlarına basarak veya menüde Hata Ayıkla'> **Hata Ayıklama Olmadan Başlat'ı seçerek** programı çalıştırın. Sonuçlar bir konsol penceresinde görüntülenir.
+8. Ctrl+F5 tuşlarına basarak veya menüde Hata Ayıkla'> Hata Ayıklama **Olmadan Başlat'ı seçerek** programı çalıştırın. Sonuçlar bir konsol penceresinde görüntülenir.

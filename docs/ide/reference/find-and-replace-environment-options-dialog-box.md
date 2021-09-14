@@ -18,11 +18,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 62b3568ca76c5aa9f66e4ea8f457e82db2316465
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034285"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725733"
 ---
 # <a name="find-and-replace-environment-options-dialog-box"></a>Bul ve Değiştir, Ortam, Seçenekler İletişim Kutusu
 
@@ -32,11 +32,11 @@ ms.locfileid: "122034285"
 
 **Bilgilendirme iletilerini görüntüleme**
 
-Bu iletiyi her zaman göster seçeneğinin olduğu tüm Bul ve Değiştir bilgi iletilerini **görüntülemek için bu seçeneği** belirleyin. Örneğin, "Bul aramanın başlangıç noktasına ulaştı"iletiyi görüntülememayı seçtiyseniz, bu seçeneğin işaretleniyorsa Bul ve Değiştir'i kullanarak bu bilgilendirme iletisi yeniden görünür.
+Bu iletiyi her zaman göster seçeneğinin olduğu tüm Bul ve Değiştir bilgi iletilerini **görüntülemek için bu seçeneği** belirleyin. Örneğin, "Bul aramanın başlangıç noktasına ulaştı" iletisi görüntülenmezse, bu seçeneğin işaretleniyorsa Bul ve Değiştir'i kullanarak bu bilgilendirme iletisi yeniden görünür.
 
 Bul ve Değiştir için bilgi iletilerini görmek istemiyorsanız bu seçeneğin temizlemesini seçin.
 
-Bilgi iletilerini bul ve Değiştir gibi bazı iletilerde bu  iletiyi her zaman  göster seçeneğini temizleseniz, Bilgilendirme iletilerini görüntüle onay kutusu doldurulmuş gibi görünür ancak seçilmez.  tüm isteğe bağlı **Bul ve Değiştir iletilerini geri** yüklemek için bu seçeneği temizle ve sonra yeniden seçin.
+Bilgi iletilerini bul ve Değiştir gibi bazı iletilerde bu  iletiyi her zaman  göster seçeneğini temizleseniz, Bilgi iletilerini görüntüle onay kutusu doldurulmuş gibi görünür ancak seçilmez.  tüm isteğe bağlı **Bul ve Değiştir iletilerini geri** yüklemek için bu seçeneği temizle ve sonra yeniden seçin.
 
 > [!NOTE]
 > Bu seçenek, Bu iletiyi **her zaman göster** seçeneğini göstermeyen Bul ve Değiştir bilgi **iletilerini** etkilemez.
@@ -54,7 +54,7 @@ Uyarı iletilerini bul ve Değiştir gibi bazı iletilerde bu  iletiyi her zaman
 
 **Bul'ı düzenleyiciden metinle otomatik olarak doldurmak**
 
-Düzenle menüsünden Bul ve Değiştir penceresinin herhangi bir görünümünü  seçerek metni geçerli düzenleyicinin  ekleme noktasının herhangi bir tarafına yapıştırmak için bu **seçeneği** belirleyin. Önceki aramanın son arama desenini Find what string (Hangi dizeyi bul) olarak kullanmak için **bu seçeneğin temizini** kullanın.
+Düzenle menüsünden Bul ve Değiştir penceresinin herhangi bir görünümünü  seçerek metni geçerli düzenleyicinin  ekleme noktasının herhangi bir tarafına yapıştırmak için bu **seçeneği** belirleyin. Önceki aramada yer alan son arama desenini Find what string (Hangi dizeyi bul) olarak kullanmak **için bu seçeneğin temizini** kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

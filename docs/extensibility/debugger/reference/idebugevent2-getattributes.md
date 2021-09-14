@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ba1b39a74497633e7a6cd1a2655b83550ae3a51c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122111066"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634838"
 ---
 # <a name="idebugevent2getattributes"></a>IDebugEvent2::GetAttributes
 Bu hata ayıklama olayı için öznitelikleri alır.

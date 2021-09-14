@@ -1,6 +1,6 @@
 ---
-title: Komut satırından katman etkileşim verileri ekleme | Microsoft Docs
-description: Bir veya daha fazla veritabanıyla iletişim kuran çok katmanlı uygulamalarda, zaman uyumlu çağrılar için yürütme zaman bilgileri için katman etkileşim profili oluşturma kullanın.
+title: Komut satırı verilerinden katman etkileşim verileri | Microsoft Docs
+description: Bir veya daha fazla veritabanıyla iletişim kuran çok katmanlı uygulamalar için zaman uyumlu çağrılar için yürütme süresi bilgileri için katman etkileşim profili oluşturma kullanın.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,96 +15,96 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f185cf57e118c923d8fbdfda6caa30a23059b9d2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122136449"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634398"
 ---
 # <a name="add-tier-interaction-data-from-the-command-line"></a>Komut satırından katman etkileşim verileri ekleme
 
-Katman etkileşimi profili oluşturma, [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] bir veya daha fazla veritabanı ile iletişim kuran çok katmanlı uygulamaların işlevlerinde zaman uyumlu çağrıların yürütme zamanları hakkında ek bilgiler sağlar.
+Katman etkileşimi profili oluşturma, bir veya daha fazla veritabanıyla iletişim kuran çok katmanlı uygulamaların işlevlerinde zaman uyumlu çağrıların yürütme süreleri hakkında [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] ek bilgi sağlar.
 
 **Windows 8 ve Windows Server 2012**
 
-Windows 8 masaüstü uygulamaları ve Windows Server 2012 uygulamalar üzerinde katman etkileşim verileri toplamak için, izleme yöntemini kullanmanız gerekir. UWP uygulamalarında katman etkileşimi verilerinin toplanması desteklenmez.
+Masaüstü uygulamaları ve Windows 8 katman etkileşim verilerini Windows Server 2012 için ölçüm ölçüm yöntemini kullansanız gerekir. UWP uygulamaları üzerinde katman etkileşim verileri toplama desteklenmiyor.
 
 **Visual Studio sürümleri**
 
-Katman etkileşimi profili oluşturma, herhangi bir Visual Studio sürümü kullanılarak toplanabilir. Ancak, katman etkileşimi profil oluşturma verileri yalnızca Visual Studio Enterprise görüntülenebilir.
+Katman etkileşim profili oluşturma, herhangi bir sürüm kullanılarak Visual Studio. Ancak, katman etkileşimi profil oluşturma verileri yalnızca Visual Studio Enterprise.
 
-**Uzak makinede Ipucu verileri toplama**
+**Uzak makinede İPUCU verileri toplama**
 
-uzak bir makinedeki katman etkileşimi verilerini toplamak için, **\_** _\<Platform>_ **\_** _\<Language>_ bir Visual Studio makinenin _% vsınstalldir%_**\team tools\performance tools\kurulumları** klasöründen vs_profiler **.exe** dosyasını uzak bilgisayara kopyalamanız ve kurmanız gerekir. [Uzaktan hata ayıklama](../debugger/remote-debugging.md) indirme paketindeki profil oluşturma araçlarını kullanamazsınız.
+Uzak makinede katman etkileşim verileri toplamak için **\_ vs_profiler**.exedosyasını bir Visual Studio makinesinin _\<Platform>_ **\_** _\<Language>_ **** _%VSInstallDir%_**\Team Tools\Performance Tools\Setups** klasöründen uzak bilgisayara kopyalamanız ve yüklemeniz gerekir. Uzaktan Hata Ayıklama indirme paketinde profil [oluşturma araçlarını kullanılamaz.](../debugger/remote-debugging.md)
 
-**Ipucu raporları**
+**İpucu raporları**
 
-Katman etkileşim verileri yalnızca Visual Studio Enterprise ' de görüntülenebilir. [VSPerfReport](../profiling/vsperfreport.md) aracılığıyla dosya tabanlı katman etkileşimi raporları kullanılamaz.
+Katman etkileşim verileri yalnızca Visual Studio Enterprise. [VSPerfReport](../profiling/vsperfreport.md) aracılığıyla dosya tabanlı katman etkileşim raporları kullanılamaz.
 
 ## <a name="add-tier-interaction-data-with-vsperfcmd"></a>VSPerfCmd ile katman etkileşim verileri ekleme
 
-VSPerfASPNETCmd komut satırı aracı, Profil Oluşturma Araçları bulunan tüm işlevselliğe erişmenize olanak tanır. VSPerfCmd kullanılarak toplanan profil oluşturma verilerine katman etkileşimi eklemek için, **VSPerfCLREnv** yardımcı programını kullanarak katman etkileşim verileri sağlayan ortam değişkenlerini ayarlayıp kaldırmanız gerekir. Belirttiğiniz seçenekler ve veri toplamak için gereken yordamlar, profil oluşturduğunuz uygulamanın türüne bağlıdır.
+VSPerfASPNETCmd komut satırı aracı, komut satırı aracında kullanılabilen tüm işlevlere erişmenizi Profil Oluşturma Araçları. VSPerfCmd kullanılarak toplanan profil oluşturma verilerine katman etkileşimi eklemek için **vsPerfCLREnv** yardımcı programını kullanarak katman etkileşim verilerini sağlayan ortam değişkenlerini ayarp kaldırmanız gerekir. Belirttiğiniz seçenekler ve veri toplamak için gereken yordamlar, profil oluşturma sırasında kullandığınız uygulamanın türüne bağlıdır.
 
-## <a name="profile-stand-alone-applications"></a>Tek başına uygulamalar profili
+## <a name="profile-stand-alone-applications"></a>Tek başına uygulamaların profilini oluşturma
 
-bir SQLServer veritabanına zaman uyumlu çağrılar yapan Windows masaüstü uygulaması gibi başka bir işlem tarafından çalıştırılmayan bir uygulamaya katman etkileşim verileri eklemek için [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] , ortam değişkenlerini ayarlamak için **vsperfclrenv/ınteractionon** seçeneğini ve bunları kaldırmak için **vsperfclrenv/ınteractionoff** seçeneğini kullanın.
+SqlServer veritabanına zaman uyumlu çağrılar yapan bir Windows masaüstü uygulaması gibi başka bir işlem tarafından çalıştır olmayan bir uygulamaya katman etkileşim verileri eklemek için, ortam değişkenlerini ayarlamak için [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] **VSPerfClrEnv /InteractionOn** seçeneğini ve bunları kaldırmak için **VSPerfClrEnv /InteractionOff** seçeneğini kullanın.
 
-aşağıdaki örnekte, bir Windows masaüstü uygulaması, izleme yöntemi kullanılarak profili oluşturulur ve katman etkileşim verileri toplanır.
+Aşağıdaki örnekte, Windows yöntemi kullanılarak bir masaüstü uygulamasının profili ve katman etkileşim verileri toplanır.
 
-### <a name="profile-a-windows-desktop-application-example"></a>Windows masaüstü uygulaması örneği profili oluşturma
+### <a name="profile-a-windows-desktop-application-example"></a>Bir masaüstü Windows profili oluşturma örneği
 
-1. Yönetici ayrıcalıklarıyla bir komut istemi penceresi açın. **Başlat**' a tıklayın, **tüm programlar**' ın üzerine gelin ve **Donatılar**' ın üzerine gelin. **Komut istemi**' ne sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın.
+1. Yönetici ayrıcalıklarıyla bir komut istemi penceresi açın. **Başlat'a** tıklayın, Tüm **Programlar'ın üzerine gelin** ve ardından Donatılar'ın **üzerine gelin.** Komut **İstemi'ne sağ tıklayın** ve ardından Yönetici Olarak **Çalıştır'a tıklayın.**
 
-2. .NET profil oluşturma ve tıp ortam değişkenlerini başlatın. Aşağıdaki komutları yazın:
+2. .NET profil oluşturmayı ve TIP ortam değişkenlerini başlatma. Aşağıdaki komutları yazın:
 
     ```cmd
     vsperfclrenv /traceon
     vsperfclrenv /interactionon
     ```
 
-3. Profil oluşturucuyu başlatın. Aşağıdaki komutu yazın:
+3. Profilleyiciyi başlatma. Aşağıdaki komutu yazın:
 
     ```cmd
     vsperfcmd /start:trace /output:Desktop_tip.vsp
     ```
 
-4. Uygulamayı VSPerfCmd ile başlatın. Aşağıdaki komutu yazın:
+4. Uygulamayı VSPerfCmd ile başlatma. Aşağıdaki komutu yazın:
 
     ```cmd
     vsperfcmd /launch:DesktopApp.exe
     ```
 
-5. Profil oluşturma verilerini toplamak için uygulamayı alıştırma yapın ve uygulamayı düzenli olarak kapatın.
+5. Profil oluşturma verilerini toplamak için uygulamayı alıştırma yapın ve ardından uygulamayı normal şekilde kapatın.
 
-6. Tıp ortam değişkenlerini temizleyin. Aşağıdaki komutu yazın:
+6. TIP ortam değişkenlerini temizleme. Aşağıdaki komutu yazın:
 
     ```cmd
     vsperfclrenv /off
     ```
 
-Daha fazla bilgi için bkz. [tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md).
+Daha fazla bilgi için [bkz. Tek başına uygulamaların profilini oluşturma.](../profiling/command-line-profiling-of-stand-alone-applications.md)
 
 ## <a name="profile-services"></a>Profil hizmetleri
 
-Uygulamalar dahil olmak üzere Hizmetleri profili eklemek için, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ortam değişkenlerini ayarlamak Için **VSPerfCLREnv/GlobalInteractionOn** seçeneğini ve bunları kaldırmak Için **VSPerfCLREnv/GlobalInteractionOff** seçeneğini kullanın.
+Uygulamalar dahil olmak üzere hizmetlerin profilini oluşturmak için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] **VSPerfClrEnv /GlobalInteractionOn** seçeneğini kullanarak ortam değişkenlerini ayarlayın ve **VSPerfClrEnv /GlobalInteractionOff** seçeneğini kullanarak bunları kaldırın.
 
-Web uygulamaları dahil olmak üzere profil oluştururken [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] genellikle, profil oluşturmayı etkinleştirmek için bilgisayarı yeniden başlatmanız gerekir.
+Web uygulamaları da dahil olmak üzere hizmet profili oluşturma işlemi için genellikle profil [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] oluşturmayı etkinleştirmek için bilgisayarı yeniden başlatmanız gerekir.
 
-aşağıdaki örnekte, bir Windows hizmeti, izleme yöntemi kullanılarak profili oluşturulur ve katman etkileşim verileri toplanır.
+Aşağıdaki örnekte, Windows yöntemi kullanılarak bir hizmet profili ve katman etkileşim verileri toplanır.
 
-### <a name="profile-a-windows-service-example"></a>Windows hizmet örneği profili oluşturma
+### <a name="profile-a-windows-service-example"></a>Bir Windows profili oluşturma örneği
 
-1. Gerekirse, hizmeti yükler.
+1. Gerekirse hizmeti yükleyin.
 
-2. Yönetici ayrıcalıklarıyla bir komut istemi penceresi açın. **Başlat**' a tıklayın, **tüm programlar**' ın üzerine gelin ve **Donatılar**' ın üzerine gelin. **Komut istemi**' ne sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın.
+2. Yönetici ayrıcalıklarıyla bir komut istemi penceresi açın. **Başlat'a** tıklayın, Tüm **Programlar'ın üzerine gelin** ve ardından Donatılar'ın **üzerine gelin.** Komut **İstemi'ne sağ tıklayın** ve ardından Yönetici Olarak **Çalıştır'a tıklayın.**
 
-3. .NET profil oluşturma ortamı değişkenlerini başlatın. Aşağıdaki komutu yazın:
+3. .NET profil oluşturma ortam değişkenlerini başlatma. Aşağıdaki komutu yazın:
 
     ```cmd
     vsperfclrenv /globaltraceon
     ```
 
-4. Tıp ortam değişkenlerini başlatın. Aşağıdaki komutu yazın:
+4. TIP ortam değişkenlerini başlatma. Aşağıdaki komutu yazın:
 
     ```cmd
     vsperfclrenv /globalinteractionon
@@ -114,15 +114,15 @@ aşağıdaki örnekte, bir Windows hizmeti, izleme yöntemi kullanılarak profil
 
 6. Yönetici ayrıcalıklarıyla bir komut istemi penceresi açın.
 
-7. Profil oluşturucuyu başlatın. Aşağıdaki komutu yazın:
+7. Profilleyiciyi başlatma. Aşağıdaki komutu yazın:
 
     ```cmd
     vsperfcmd /start:trace /output:MiddleTier_tip.vsp /user:SYSTEM /crosssession
     ```
 
-8. Gerekirse, hizmeti başlatın.
+8. Gerekirse hizmeti başlatabilirsiniz.
 
-9. Profil oluşturucuyu hizmete ekleyin. Aşağıdaki komutu yazın:
+9. Profiler'i hizmete ekleme. Aşağıdaki komutu yazın:
 
     ```cmd
     vsperfcmd /attach:MiddleTier.exe /output:MyService_tip.vsp /user:SYSTEM /crosssession
@@ -130,32 +130,32 @@ aşağıdaki örnekte, bir Windows hizmeti, izleme yöntemi kullanılarak profil
 
 10. Hizmeti alıştırma yapın ve profil oluşturma verilerini toplayın.
 
-11. Profil oluşturucuyu durdurun. Aşağıdaki komutu yazın:
+11. Profil oluşturmayı durdurun. Aşağıdaki komutu yazın:
 
      `vsperfcmd /detach`
 
-12. .NET ve tıp profil oluşturma ortam değişkenlerini temizleyin. Aşağıdaki komutu yazın:
+12. .NET ve TIP profil oluşturma ortam değişkenlerini temizleme. Aşağıdaki komutu yazın:
 
     ```cmd
     vsperfclrenv /globaloff
     ```
 
-13. Temizlenmiş ortam değişkenlerini kaydetmek için bilgisayarı yeniden başlatın.
+13. Temizilen ortam değişkenlerini kaydetmek için bilgisayarı yeniden başlatın.
 
 Daha fazla bilgi için aşağıdaki konulardan birine bakın:
 
-[web uygulamalarının profilini ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+[Web ASP.NET profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 
 [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)
 
 ## <a name="add-tier-interaction-data-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd ile katman etkileşim verileri ekleme
 
-VSPerfASPNETCmd komut satırı aracı, Web uygulamalarını kolayca profillemenize olanak sağlar [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] . **VSPerfCmd** komut satırı aracıyla karşılaştırıldığında, seçenekler azalır, hiçbir ortam değişkeni ayarlanamaz ve bilgisayarın yeniden başlatılması gerekli değildir. VSPerfASPNETCmd 'nin bu özellikleri, katman etkileşimi verilerinin toplanmasını çok daha kolay hale getirir.
+VSPerfASPNETCmd komut satırı aracı, Web uygulamalarının profilini kolayca [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] oluşturmanizi sağlar. **VSPerfCmd** komut satırı aracıyla karşılaştırıldığında, seçenekler azaltıldı, ortam değişkeni ayarlanmaz ve bilgisayarı yeniden başlatma gerekli değildir. VSPerfASPNETCmd'nin bu özellikleri, katman etkileşim verilerini toplamayı son derece kolaylaştırır.
 
-VSPerfASPNETCmd kullanılarak toplanan profil oluşturma verilerine katman etkileşimi eklemek için, **/tip** seçeneğini komut satırına ekleyin. Örneğin, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] izleme yöntemini kullanarak bir Web uygulaması için katman etkileşimi verilerini toplamak üzere aşağıdaki komut satırını kullanın:
+VSPerfASPNETCmd kullanarak toplanan profil oluşturma verilerine katman etkileşimi eklemek için komut satırına **/TIP** seçeneğini ekleyin. Örneğin, bir Web uygulaması için ölçümleme yöntemini kullanarak katman etkileşim verilerini [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] toplamak için aşağıdaki komut satırı kullanın:
 
 ```cmd
 vsperfaspnetcmd /tip /trace http://localhost/MyWebApp
 ```
 
-VSPerfASPNETCmd hakkında daha fazla bilgi için bkz. [VSPerfASPNETCmd Ile hızlı web sitesi profili oluşturma](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md).
+VSPerfASPNETCmd hakkında daha fazla bilgi için bkz. [VSPerfASPNETCmd](../profiling/rapid-web-site-profiling-with-vsperfaspnetcmd.md)ile hızlı web sitesi profili oluşturma.

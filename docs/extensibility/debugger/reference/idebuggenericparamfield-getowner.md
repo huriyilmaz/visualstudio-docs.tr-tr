@@ -1,6 +1,6 @@
 ---
-description: Bu genel parametrenin türünü veya yöntem sahibini alın.
-title: IDebugGenericParamField::GetOwner | Microsoft Docs
+description: Bu genel parametrenin türünü veya yöntem sahibini alır.
+title: 'Idebuggenericparamfield:: GetOwner | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 0ae75c99d8ffe1ed2b6206ff5128e3f4f1ae293d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122064132"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725190"
 ---
 # <a name="idebuggenericparamfieldgetowner"></a>IDebugGenericParamField::GetOwner
-Bu genel parametrenin türünü veya yöntem sahibini alın.
+Bu genel parametrenin türünü veya yöntem sahibini alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetOwner(
 
 ## <a name="parameters"></a>Parametreler
 `ppOwner`\
-[out] Bu genel [parametreye sahip olan IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesini döndürür.
+dışı Bu genel parametreye sahip [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, **IDebugGenericParamField arabirimini ortaya çıkaran bir CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl [uygulandığını](../../../extensibility/debugger/reference/idebuggenericparamfield.md) gösterir.
+Aşağıdaki örnek, [ıdebuggenericparamfield](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini kullanıma sunan bir **cdebuggenericparamtcobject** için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetOwner(IDebugField** ppOwner)

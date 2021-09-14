@@ -21,11 +21,11 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: dae59aa3fb9bde3d2ed43cf7d8c41da4079cf408
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122160614"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725395"
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Nasıl kurulur: Son kullanıcıların yükleyecekleri konumu belirtme
 

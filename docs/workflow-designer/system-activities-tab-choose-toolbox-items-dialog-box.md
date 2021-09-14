@@ -1,6 +1,6 @@
 ---
-title: System.Activities, Araç Kutusu Öğelerini Seçme
-description: Bu İş Akışı Tasarımcısı System.Activities sekmesinde Windows Workflow Foundation (WF) etkinliklerinin, şablonların ve kullanılabilir öğelerin listesini nasıl görüntülemektedir?
+title: System.Activities, Araç Kutusu Öğelerini Seçin
+description: Bu İş Akışı Tasarımcısı, System.Activities sekmesinde Windows Workflow Foundation (WF) etkinliklerinin, şablonların ve kullanılabilir öğelerin listesini nasıl görüntülemektedir?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,11 +15,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: 29074e32fb232af7e89581368a6067b9db668da1
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963775"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726074"
 ---
 # <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>System.Activities sekmesi, Araç Kutusu Öğelerini Seç iletişim kutusu
 
@@ -32,11 +32,11 @@ Bu iletişim kutusu projeden bağımsızdır ve bu nedenle **System.Activities**
 
 Filtreleme her sekmede yapılır ve **.NET** Bileşeni sekmesi aracılığıyla iş akışı etkinlikleri eklemek mümkün değildir. Bunları **System.Activities sekmesinin kendisi** aracılığıyla ekleyin.
 
-Araç Kutusunda görmek istemediklerin işaretini bu iletişim kutusu sekmesinden kaldırabilirsiniz veya alternatif olarak,  Araç Kutusu'nda Sağ  tıklamayı sil menü seçeneğini kullanarak bunu yapabilirsiniz ve bir derlemeye başvurulma, öğeyi Araç Kutusundan  kaldırmaz. 
+Araç Kutusunda görmek istemeyseniz tüm öğelerin  işaretini bu iletişim kutusu sekmesinden kaldırabilirsiniz veya alternatif  olarak, Araç Kutusu'nda Sağ tıklamayı sil menü seçeneğini kullanarak bunu yapabilirsiniz ve bir derlemeye başvurulma, öğeyi Araç Kutusundan  **kaldırmaz.**
 
 Tasarımcıda sürükleyip bırakarak etkinliğin örneğini oluşturma, öğeyi içeren derlemeyi başvurulan derlemeler listesine otomatik olarak ekler. Ayrıca etkinlik bir C derlemeye başvurursa, başvurulan derleme listesine C eklemez. C derlemesi GAC'de veya B etkinliğiyle aynı dizinde olmalıdır. Tek başına durumda, derlemeNIN GAC'de veya VS'nin Yoklama yollarında olması gerekir. Ancak bundan sonra etkinliği iş akışı tasarımcısının yüzeyine sürükleyip bırakın.
 
-**Araç kutusu** ayarları varsayılan olarak kullanıcı seçenekleri olarak kaydedilir, bu nedenle, **Araç** Kutusunu bir sonraki açsanız, özelleştirilmiş iş akışı etkinlikleri listenizi görüntüler. Bunun bir yan etkisi, Araç Kutusu Öğelerini Seç  iletişim kutusu  aracılığıyla araç kutusuna belirli etki alanı öğelerinizi eklediyebilirsiniz. Bu öğeleri bir İş Akışı Konsolu Uygulamasında çalışırken de görmeye devam edersiniz. Bunları görmek istemiyorsanız, sağ tıklama menüsünü kullanarak silin veya daha önce  belirtildiği gibi Araç Kutusu Öğelerini Seç iletişim kutusundan bu menülerin işaretini kaldırın.
+**Araç kutusu** ayarları varsayılan olarak kullanıcı seçenekleri olarak kaydedilir, bu nedenle, **Araç** Kutusunu bir sonraki açsanız, özelleştirilmiş iş akışı etkinlikleri listenizi görüntüler. Bunun bir yan etkisi, Araç Kutusu Öğelerini Seç  iletişim kutusu  aracılığıyla araç kutusuna belirli etki alanı öğelerinizi eklediyebilirsiniz; bir İş Akışı Konsolu Uygulamasında çalışırken de bu öğeleri görmeye devam edersiniz. Bunları görmek istemiyorsanız, sağ tıklama menüsünü kullanarak silin veya daha önce  belirtildiği gibi Araç Kutusu Öğelerini Seç iletişim kutusundan bu menülerin işaretini kaldırın.
 
 Bu iletişim kutusundaki sütunlar aşağıdaki bilgileri içerir:
 

@@ -12,11 +12,11 @@ ms.technology: vs-xml-tools
 ms.workload:
 - multiple
 ms.openlocfilehash: ee6dfe8990cf5e85a35a0d538c2bfbd50c3462e4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122045468"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633625"
 ---
 # <a name="how-to-create-xml-snippets"></a>Nasıl yapılır: XML kod parçacıkları oluşturma
 
@@ -36,13 +36,13 @@ Yeni bir XML kod parçacığı oluşturmak için yeni bir XML dosyası oluşturu
 
 5. Yeni kod parçacığında herhangi bir değişiklik yapın.
 
-6. Dosya **menüsünden Dosyayı** **kaydet'i XMLFile.xml.**
+6. Dosya **menüsünden Kaydet'i** **XMLFile.xml.**
 
      Dosyayı **Farklı Kaydet** iletişim kutusu görüntülenir.
 
 7. Yeni kod parçacığının adını girin ve Tür **olarak kaydet açılan** **penceresinden Kod Parçacığı** Dosyaları'ı seçin.
 
-8. Dosya **konumunu** Belgelerim\Visual Studio *2005\Code Snippets\XML\Xml Kod* Parçacıklarım klasörü olarak değiştirmek için Save in açılan listesini kullanın ve ardından **Kaydet'e basın.**
+8. Dosya **konumunu** *Belgelerim\Visual Studio 2005\Code Snippets\XML\Xml Kod* Parçacıklarım klasörü olarak değiştirmek için Save in açılan listesini kullanın ve ardından **Kaydet'e basın.**
 
 ## <a name="snippet-description"></a>Kod parçacığı açıklaması
 
@@ -59,7 +59,7 @@ Düzenleyici iki kod parçacığı türü destekler:
 </SnippetTypes>
 ```
 
-Tür, `Expansion` Kod Parçacığı Ekle komutunu çağırarak kod parçacığının **görüntülendiğinde görüntü olup olmadığını** belirler. türü, `SurroundsWith` Surrounds With komutunu çağırarak kod parçacığının **görüntülendiğinde görüntü olup olmadığını** belirler.
+Tür, `Expansion` Kod Parçacığı Ekle komutunu çağırarak kod parçacığının **görüntülendiğinde görünür olup olmadığını** belirler. türü, `SurroundsWith` Surrounds With komutunu çağırarak kod parçacığının **görüntülendiğinde görüntü olup olmadığını** belirler.
 
 ### <a name="code-element"></a>Kod öğesi
 
@@ -98,7 +98,7 @@ Name öğesinin değeri düzenlenebilir bir bölge olarak işaretlenir.
 
 ### <a name="literal-element"></a>Değişmez öğe
 
-`Literal`öğesi, dosyaya eklendikten sonra özelleştirebileceğiniz değiştirme metnini tanımlamak için kullanılır. Örneğin, değişmez değer dizeleri, sayısal değerler ve bazı değişken adları değişmez değer olarak bildirilebilirsiniz. XML kod parçacığında istediğiniz sayıda değişmez öğe tanımlayabilir ve kod parçacığının içinde bunları birden çok kez başvurabileceksiniz. Aşağıda, varsayılan değeri `Literal` "name" olan bir $name$ değişkeni tanımlayan bir öğe örneği ve bir örnek vetir.
+`Literal`öğesi, dosyaya eklendikten sonra özelleştirebileceğiniz değiştirme metnini tanımlamak için kullanılır. Örneğin, değişmez değer dizeleri, sayısal değerler ve bazı değişken adları değişmez değer olarak bildirilebilirsiniz. XML kod parçacığında herhangi bir sayıda değişmez öğe tanımlayabilir ve kod parçacığının içinde birden çok kez başvurarak bunları tanımlayabilirsiniz. Aşağıda, varsayılan değeri `Literal` "name" olan bir $name$ değişkeni tanımlayan bir öğe örneği ve bir örnektir.
 
 ```xml
 <Literal>
@@ -107,7 +107,7 @@ Name öğesinin değeri düzenlenebilir bir bölge olarak işaretlenir.
 </Literal
 ```
 
-Değişmez değişmezler işlevlere de başvurabilirsiniz. XML düzenleyicisi **LookupPrefix** adlı bir işlev içerir. **LookupPrefix** işlevi, verilen ad alanı URI'sini xml belgesinde bu kod parçacığının çağrıldığında bulunduğu konumdan aratır ve varsa bu ad alanı için tanımlanan ad alanı ön ekini döndürür ve iki nokta üst üste (:) bu adla. Aşağıda `Literal` **LookupPrefix** işlevini kullanan bir öğe örneği ve ardından ve ardından ve ve ardından 3.
+Değişmez değişmezler işlevlere de başvurabilirsiniz. XML düzenleyicisi **LookupPrefix** adlı bir işlev içerir. **LookupPrefix** işlevi, verilen ad alanı URI'sini xml belgesinde bu kod parçacığının çağrıldığında bulunduğu konumdan aratır ve varsa bu ad alanı için tanımlanan ad alanı ön ekini döndürür ve iki nokta üst üste :) bu adla. Aşağıda `Literal` LookupPrefix işlevini kullanan bir öğe örneği ve ardından ve ardından ve ve ardından bir öğe ve daha fazla bilgi ve saat **20:00'de 100'e** kadar 100.000 abd
 
 ```xml
 <Literal Editable="false">

@@ -1,6 +1,6 @@
 ---
 title: Kullanım Gezgini | Microsoft Docs
-description: İzlemedeki bir zaman aralığını seçmek için Eşzamanlılık Görselleştiricisi'nde Kullanım Gezgini'nin nasıl kullanabileceğinizi öğrenin.
+description: Bir izlemede zaman aralığı seçmek için eşzamanlılık görselleştiricisi içindeki kullanım Gezginini nasıl kullanabileceğinizi öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,23 +13,23 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 6c7dbf162ad3325d99556b97c761d34358175041
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122156922"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725664"
 ---
 # <a name="utilization-navigator"></a>Kullanım Gezgini
-İzlemedeki bir zaman aralığını seçmek için Eşzamanlılık Görselleştiricisi'nde Kullanım Gezgini'nin kullanabilirsiniz. Eşzamanlılık Görselleştiricisi, cpu çekirdeklerinin zaman içinde hedef işlem tarafından kullanımını gösterir. Bu, CPU kullanım düzenlerini incelemeyi kolaylaştırır ve ayrıca diğer görünümlerde kullanım verileriyle veriler arasında karşılaştırmaya olanak sağlar. Kullanım Gezgini Eşzamanlılık Görselleştiricisi'nde her görünümün en üstünde görünür. Aşağıdaki çizimde Kullanım Gezgini gösterilir.
+Bir izlemede zaman aralığı seçmek için eşzamanlılık görselleştiricisi içindeki kullanım Gezgini ' ni kullanabilirsiniz. Eşzamanlılık görselleştiricisi, CPU çekirdeklerinin zaman içindeki hedef işleme göre kullanımını gösterir. Bu, CPU kullanım düzenlerini incelemenizi kolaylaştırır ve ayrıca, kullanım verileri ile diğer görünümlerdeki veriler arasında karşılaştırmaya olanak sağlar. Kullanım Gezgini, eşzamanlılık görselleştiricisi içindeki her görünümün en üstünde görünür. Aşağıdaki çizimde kullanım Gezgini gösterilmektedir.
 
- ![Seçili zaman çerçevesini gösteren Kullanım Gezgini](../profiling/media/cvutilizationnavigator.png "CVUtilizationNavigator") Kullanım Gezgini ve seçili bir zaman çerçevesi
+ ![Seçili zaman dilimini gösteren kullanım Gezgini](../profiling/media/cvutilizationnavigator.png "Cvkullanımı Zationnavigator") Kullanım Gezgini ve seçilen zaman çerçevesi
 
- Çizimde, seçilen aralık başparmak olarak bilinen kırmızı bir dikdörtgenle *tanımlanır.*
+ Çizimde, seçilen Aralık, *Thumb* olarak bilinen kırmızı bir dikdörtgen tarafından tanımlanır.
 
- Görüntülenen zaman aralığını değiştirmek için Kullanım Gezgini'nin kullanımı şöyledir:
+ Kullanım gezginini, görüntülenecek zaman aralığını değiştirmek için nasıl kullanabileceğinizi aşağıda bulabilirsiniz:
 
-- Başparmağını sola veya sağa sürükleyerek kaydırın. (Klavye: Odağı başparmak üzerine hareket ettirin ve ardından sol veya sağ ok tuşuna basın.)
+- Parmak izi ' ni sola veya sağa sürükleyerek kaydırma yapabilirsiniz. (Klavye: odağı Thumb öğesine taşıyın ve sol veya sağ ok tuşuna basın.)
 
-- Tanıtıcılardan birini sürükleyerek aralığın kapsamını değiştirebilirsiniz. (Klavye: Odağı bir tutamaça taşıma ve ardından sağ veya sol ok tuşuna basın.)
+- Tutamaçlardan birini sürükleyerek aralığın kapsamını değiştirebilirsiniz. (Klavye: odağı bir tutamaya taşıyın ve sağ veya sol ok tuşuna basın.)
 
-  Aralığı farklı bir Eşzamanlılık Görselleştiricisi yakınlaştırma denetimi kullanarak değiştirirsanız, Kullanım Gezgini değişikliği yansıtacak şekilde sızabilir.
+  Aralığı farklı bir eşzamanlılık görselleştiricisi yakınlaştırma denetimi kullanarak değiştirirseniz, kullanım Gezgini değişikliği yansıtacak şekilde güncelleştirilir.

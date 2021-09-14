@@ -1,6 +1,6 @@
 ---
 title: Git Komutu
-description: Git komutu ve imleci belirtilen satıra nasıl taşıması hakkında bilgi edinebilirsiniz.
+description: Git komutu ve imlecin belirtilen satıra nasıl taşınacağı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,14 +17,14 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: ebc75b92886ea4d6938a2dd517418a3fac41e8f4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122143839"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726872"
 ---
 # <a name="go-to-command"></a>Git Komutu
-İmleci belirtilen satıra taşır.
+İmleci belirtilen satıra kaydırır.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -34,14 +34,14 @@ Edit.GoTo [linenumber]
 
 ## <a name="arguments"></a>Bağımsız değişkenler
 `linenumber`\
-İsteğe bağlı. Gitmek için satır sayısını temsil eden bir tamsayı.
+İsteğe bağlı. Gidilecek satırın numarasını temsil eden bir tamsayı.
 
 ## <a name="remarks"></a>Açıklamalar
-Satır numarası tek bir satırda başlar. değeri birden `linenumber` küçükse ilk satır görüntülenir. değeri son `linenumber` satırın sayısından büyükse son satır görüntülenir.
+Satır numaralandırması bir kerede başlar. Değeri `linenumber` bir değerinden küçükse, ilk satır görüntülenir. Değeri, `linenumber` son satırın sayısından büyükse, son satır görüntülenir.
 
-için bir değer `linenumber` belirtilmezse **Satıra Git** iletişim kutusu görüntülenir.
+İçin bir değer `linenumber` belirtilmemişse, **satıra git** iletişim kutusu görüntülenir.
 
-Bu komutun diğer adı GoToLn'dır.
+Bu komutun diğer adı Sayfayln 'dir.
 
 ## <a name="example"></a>Örnek
 
@@ -52,6 +52,6 @@ Bu komutun diğer adı GoToLn'dır.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Komut](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

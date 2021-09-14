@@ -1,6 +1,6 @@
 ---
 title: -Deploy (devenv.exe)
-description: Derleme veya yeniden derleme sonrasında çözüm dağıtmak için Deploy devenv komut satırı anahtarını kullanmayı öğrenin.
+description: Bir derleme veya yeniden oluşturma işleminden sonra çözüm dağıtmak için devenv dağıtma komut satırı anahtarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 12/10/2018
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 34ad9f8da134241ce818cf37022a28fd8509b7f5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117377"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634417"
 ---
 # <a name="deploy-devenvexe"></a>/Deploy (devenv.exe)
 
-Derleme veya yeniden derleme sonrasında bir çözüm dağıtır. Yalnızca yönetilen kod projeleri için geçerlidir.
+Bir derleme veya yeniden derlemeden sonra bir çözüm dağıtır. Yalnızca yönetilen kod projeleri için geçerlidir.
 
 ## <a name="syntax"></a>Söz dizimi
 
@@ -41,15 +41,15 @@ devenv SolutionName /Deploy [SolnConfigName [/Project ProjName [/ProjectConfig P
 
 - *SolnConfigName*
 
-  İsteğe bağlı. SolutionName içinde adlı çözümü oluşturmak için kullanılacak çözüm yapılandırmasının adı `Debug` `Release` (veya *gibi).* Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu bağımsız değişken belirtilmemişse veya boş bir dize () `""` ise, araç çözümün etkin yapılandırmasını kullanır.
+  İsteğe bağlı. `Debug` `Release` *SolutionName* içinde adlı çözümü oluşturmak için kullanılacak Çözüm yapılandırmasının adı (veya gibi). Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu bağımsız değişken belirtilmemişse veya boş bir dize ( `""` ) ise, araç çözümün etkin yapılandırmasını kullanır.
 
 - `/Project` *ProjName*
 
-  İsteğe bağlı. Çözüm içindeki proje dosyasının yolu ve adı. *SolutionName* klasöründen projenin görünen adını veya göreli yolunu proje dosyasına girebilirsiniz. Proje dosyasının tam yolunu ve adını da girebilirsiniz.
+  İsteğe bağlı. Çözüm içindeki bir proje dosyasının yolu ve adı. Projenin görünen adını veya *SolutionName* klasöründen proje dosyasına göreli bir yol girebilirsiniz. Proje dosyasının tam yolunu ve adını da girebilirsiniz.
 
-- `/ProjectConfig`*ProjConfigName*
+- `/ProjectConfig`*Projconfigname*
 
-  İsteğe bağlı. Bir proje derleme yapılandırmasının (veya gibi) adı `Debug` `Release` oluşturmada kullanılacak `/Project` adları. Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu anahtar belirtilirse *SolnConfigName bağımsız değişkenlerini geçersiz* kılar.
+  İsteğe bağlı. Adlandırılmış bir proje derleme yapılandırmasının (veya gibi) adı `Debug` `Release` oluşturulurken kullanılacak olan adları `/Project` . Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu anahtar belirtilmişse, *Solnconfigname* bağımsız değişkenini geçersiz kılar.
 
 - `/Out`*OutputFilename*
 
@@ -57,15 +57,15 @@ devenv SolutionName /Deploy [SolnConfigName [/Project ProjName [/ProjectConfig P
 
 ## <a name="remarks"></a>Açıklamalar
 
-Belirtilen proje bir dağıtım projesi olması gerekir. Belirtilen proje bir dağıtım projesi değilse, proje dağıtım için geçiriliyorsa bir hatayla başarısız olur.
+Belirtilen proje bir dağıtım projesi olmalıdır. Belirtilen proje bir dağıtım projesi değilse, oluşturulan proje dağıtım için geçirildiğinde hata vererek başarısız olur.
 
-Çift tırnak içinde boşluk içeren dizeleri içine alın.
+Boşluk içeren dizeleri çift tırnak işaretleri içine alın.
 
-Hatalar da dahil olmak üzere derlemelerin özet  bilgileri Komut penceresinde veya /Out anahtarıyla belirtilen herhangi bir günlük [dosyasında görüntülenebilir.](out-devenv-exe.md)
+Hatalar da dahil olmak üzere derlemeler için Özet bilgiler, **komut** penceresinde veya [/Out](out-devenv-exe.md) anahtarıyla belirtilen herhangi bir günlük dosyasında görüntülenebilir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, içindeki proje `CSharpWinApp` derleme yapılandırmasını `Release` kullanarak projesini `MySolution` dağıtır.
+Bu örnek, `CSharpWinApp` `Release` içindeki proje yapı yapılandırmasını kullanarak projeyi dağıtır `MySolution` .
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln" /deploy Release /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Release

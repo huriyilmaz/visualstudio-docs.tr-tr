@@ -1,6 +1,6 @@
 ---
 title: require-nodejs
-description: devinit tool require-nodejs.
+description: devinit Aracı,-NodeJS gerektirir.
 ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
@@ -11,46 +11,46 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 9aecdbfc113f21c719a210b86e6df64f7da725c274f7741414561a6ebbdb530f
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 75690f85fb627140226242b476d70bfc4dac6ed2
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121343228"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725346"
 ---
 # <a name="require-nodejs"></a>require-nodejs
 
 > [!IMPORTANT]
-> 12 Nisan 2021'den itibaren Visual Studio 2019'dan GitHub Codespaces'a bağlanma desteklemeyecek ve bu özel önizleme sonuçlandırıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi için Visual Studio geliştirici topluluğu forummize katılın.
+> 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
 
-Araç,Node.jskuruluş `require-nodejs` [ tarafından dağıtılan ](https://nodejs.org/) bir MSI aracılığıyla Node.js kullanılır.
+`require-nodejs`Araç, Node.js kuruluş tarafından dağıtılan BIR MSI aracılığıyla [Node.js](https://nodejs.org/) yüklemek için kullanılır.
 
 ## <a name="usage"></a>Kullanım
 
-Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı [olarak açıklanmış varsayılan](#default-behavior) davranışı takip eder.
+Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak açıklanan [varsayılan](#default-behavior) davranışı izler.
 
 | Ad                                             | Tür   | Gerekli | Değer                                                                     |
 |--------------------------------------------------|--------|----------|---------------------------------------------------------------------------|
-| **yorumlar**                                     | dize | No       | İsteğe bağlı açıklamalar özelliği. Kullanılmadı.                                     |
-| [**Giriş**](#input)                              | dize | No       | Yüklenmek Node.JS sürümü. Ayrıntılar [için](#input) aşağıdaki Giriş'e bakın. |
-| [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar [için aşağıdaki](#additional-options) Ek seçenekler'e bakın.          |
+| **yorumlar**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                     |
+| [**girişinin**](#input)                              | dize | No       | Yüklenecek Node.JS sürümü. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin. |
+| [**additionalOptions**](#additional-options)     | dize | No       | Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.          |
 
 ### <a name="input"></a>Giriş
 
-özelliği, `input` Node.js kullanılır. Sürümlerin listesi, indirme sayfasında [Node.js bulunabilir.](https://nodejs.org/en/download/) Herhangi biri atlanırsa yükleme başarısız olur. Tam sürüm numarası Major.Minor.Path (örneğin 14.4.0) gereklidir.
+`input`Özelliği, Node.js sürümünü belirtmek için kullanılır. [Node.js indirme sayfasında](https://nodejs.org/en/download/)sürümlerin listesini bulabilirsiniz. Tam sürüm numarası gereklidir. Ikincil. yol (örneğin 14.4.0) varsa, yükleme başarısız olur.
 
 ### <a name="additional-options"></a>Ek seçenekler
 
-Ek yapılandırma seçenekleri değeri olarak `additionalOptions` geçirebilirsiniz. Bu bağımsız değişkenler, MSI yükleyicisi için doğrudan geçiştir ve Node.js.  
+Ek yapılandırma seçenekleri ' ın bir değeri olarak geçirilebilir `additionalOptions` . Bu bağımsız değişkenler, Node.js için doğrudan MSI yükleyicisine PASSTHROUGH.  
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracın varsayılan davranışı, düğümün en son LTS sürümünü web sitesinde `require-nodejs` ayrıntılı olarak Node.JS [yüklemektir.](https://nodejs.org/en/download/)
+Aracının varsayılan davranışı, `require-nodejs` Node.JS [Web sitesinde](https://nodejs.org/en/download/)açıklandığı gibi, düğümün en son LTS sürümünü yüklemektir.
 
 ## <a name="example-usage"></a>Örnek kullanım
-Aşağıda, kullanarak çalıştırma örnekleri `require-nodejs` `.devinit.json` verilmiştir. 
+Kullanarak nasıl çalıştırılacağını gösteren örnekler aşağıda verilmiştir `require-nodejs` `.devinit.json` . 
 
-#### <a name="devinitjson-that-will-install-the-lts-of-nodejs"></a>.devinit.jsltS'lerini yükecek Node.js:
+#### <a name="devinitjson-that-will-install-the-lts-of-nodejs"></a>Node.js LTS 'leri yükleyecek. devinit. JSON:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",
@@ -62,7 +62,7 @@ Aşağıda, kullanarak çalıştırma örnekleri `require-nodejs` `.devinit.json
 }
 ```
 
-#### <a name="devinitjson-that-will-install-a-specific-version-of-nodejs"></a>.devinit.jsbelirli bir sürümü yükecek olan Node.js:
+#### <a name="devinitjson-that-will-install-a-specific-version-of-nodejs"></a>Node.js belirli bir sürümünü yükleyecek. devinit. JSON:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",

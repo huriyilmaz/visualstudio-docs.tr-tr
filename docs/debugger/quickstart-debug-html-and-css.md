@@ -21,11 +21,11 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 ms.openlocfilehash: 32e12e8646b25adff81c217626de6cacee724600
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122153855"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627969"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio 'de UWP uygulamalarında HTML ve CSS hatalarını ayıklama
 
@@ -67,7 +67,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
 3. Proje için bir ad yazın (gibi) `FlipViewApp` ve uygulamayı oluşturmak Için **Tamam** ' ı seçin.
 
-4. index.html 'nin BODY öğesinde şu kodu ekleyin:
+4. index.html BODY öğesinde şu kodu ekleyin:
 
     ```html
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -225,7 +225,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
 1. Uygulama çalışmaya devam ederken, Visual Studio ' ye geçin.
 
-2. default.html 'yi açın ve DIV öğesinin Height ve Width değerlerini %100 olarak değiştirerek kaynak kodunuzu değiştirin `"fView"` .
+2. default.html açın ve DIV öğesinin Height ve Width değerlerini %100 olarak değiştirerek kaynak kodunuzu değiştirin `"fView"` .
 
 3. hata ayıklama araç çubuğunda **Windows uygulamayı yenile** düğmesini seçin (veya F4 tuşuna basın). düğme şu şekilde görünür: ![Windows uygulamayı yenile düğmesi](../debugger/media/js_refresh.png "JS_Refresh").
 
@@ -233,29 +233,29 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
     Yenileme özelliği hakkında daha fazla bilgi için bkz. [uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md).
 
-## <a name="selecting-elements"></a><a name="SelectingElements"></a> Öğe seçme
-Bir uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
+## <a name="selecting-elements"></a><a name="SelectingElements"></a> Öğeleri seçme
+Uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
 
-- Doğrudan DOM Gezgini penceresinde (veya ok tuşlarını kullanarak) öğelere tıklayarak.
+- Doğrudan DOM Gezgini öğelere tıklayarak (veya ok tuşlarını kullanarak).
 
-- **Öğe seç** düğmesini (Ctrl + B) kullanarak.
+- Öğe Seç **düğmesini** (Ctrl+B) kullanarak.
 
-- `select` [JavaScript Konsol komutlarından](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)biri olan komutunu kullanarak.
+- JavaScript `select` Konsol komutlarından biri olan [komutunu kullanarak.](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
 
-  Öğeleri seçmek için DOM Gezgini penceresini kullandığınızda ve fare işaretçisini bir öğe üzerine getirdiğinizde, ilgili öğe çalışan uygulamada vurgulanır. Bunu seçmek için DOM Gezgini 'nde öğeye tıklamalısınız veya öğeleri vurgulamak ve seçmek için ok tuşlarını kullanabilirsiniz. DOM Gezgini 'nde **öğe seç** düğmesini kullanarak da öğeleri seçebilirsiniz. Aşağıdaki çizimde **öğe seç** düğmesi gösterilmektedir.
+  Öğeleri seçmek için DOM Gezgini ve fare işaretçisini bir öğenin üzerine geri kalanına eklemek için DOM Gezgini penceresini kullanırsanız, ilgili öğe çalışan uygulamada vurgulanır. Öğeyi seçmek için DOM Gezgini tıklamalı veya öğeleri vurgulamak ve seçmek için ok tuşlarını kullanabilirsiniz. Öğe seç düğmesini kullanarak DOM Gezgini öğeleri **de seçebilirsiniz.** Aşağıdaki çizimde Öğe **Seç düğmesi gösterilmiştir.**
 
-  ![DOM Gezgini 'nde öğe seç düğmesi](../debugger/media/js_dom_select_element_button.png "JS_DOM_Select_Element_Button")
+  ![Dosyada Öğe Düğmesini DOM Gezgini](../debugger/media/js_dom_select_element_button.png "JS_DOM_Select_Element_Button")
 
-  **Öğe seç** ' e tıkladığınızda (veya CTRL + B tuşlarına basın), bu seçim modu, çalışan uygulamada tıklayarak DOM Gezgini 'nde bir öğe seçebilmeniz için değiştirilir. Tek bir tıklama sonrasında mod normal seçim moduna geri değişir. **Öğe seç**' e tıkladığınızda, uygulama ön plana gelir ve imleç yeni seçim modunu yansıtacak şekilde değişir. Seviyelendirilmiş öğeye tıkladığınızda, DOM Gezgini belirtilen öğe seçili olan ön plana geri döner.
+  Öğe **seç'e** tıklarsanız (veya Ctrl+B tuşlarına bassanız), çalışan uygulamada öğeye tıklayarak öğe DOM Gezgini şekilde seçim modunu değiştirir. Tek tıklamadan sonra mod normal seçim moduna döner. Öğe **seç'e** tıklarsanız, uygulama ön plana gelir ve imleç yeni seçim modunu yansıtacak şekilde değişir. Özetlenen öğeye tıklarken, DOM Gezgini öğe seçili olarak ön plana geri döner.
 
-  **Öğe seç**' i seçmeden önce, **Web sayfası vurgulamaları göster** düğmesini değiştirerek çalışan uygulamadaki öğelerin vurgulanmasını belirtebilirsiniz. Aşağıdaki çizimde bu düğme gösterilmektedir. Vurgular varsayılan olarak görüntülenir.
+  Öğe **Seç'i seçmeden** önce, Web sayfası vurgularını görüntüle düğmesini seçerek çalışan uygulamanın öğelerinin **vurgulup vurgulanamayrı belirtebilirsiniz.** Aşağıdaki çizimde bu düğme gösterilmiştir. Vurgular varsayılan olarak görüntülenir.
 
-  ![Web sayfası vurgulamaları göster düğmesi](../debugger/media/js_dom_display_highlights_button.png "JS_DOM_Display_Highlights_Button")
+  ![Web sayfası vurgularını görüntüle düğmesi](../debugger/media/js_dom_display_highlights_button.png "JS_DOM_Display_Highlights_Button")
 
-  Öğeleri vurgulamanızı seçtiğinizde benzeticide üzerine geldiğinizde bulunan öğeler vurgulanır. Vurgulanan öğelerin renkleri, DOM Gezgini 'nin **Düzen** sekmesinde görüntülenen kutu modeliyle eşleşir.
+  Öğeleri vurgulamayı seçerseniz, Simülatör'de üzerine gelinen öğeler vurgulanır. Vurgulanan öğelerin renkleri, vurgulanan öğelerin Düzen sekmesinde **görünen** kutu modeliyle DOM Gezgini.
 
 > [!NOTE]
-> öğelerin üzerine gelindiğinde vurgulanması yalnızca Windows Phone Emulator kısmen desteklenir.
+> Öğelerin üzerine gelerek vurgulama, yalnızca Windows Phone Emulator.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -265,4 +265,4 @@ Bir uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
 - [Klavye kısayolları](../debugger/keyboard-shortcuts-html-and-javascript.md?view=vs-2017&preserve-view=true)
 - [JavaScript Konsolu komutları](../debugger/javascript-console-commands.md?view=vs-2017&preserve-view=true)
 - [HTML, CSS ve JavaScript'te hata ayıklama örnek kodu](../debugger/debug-html-css-and-javascript-sample-code.md)
-- [Ürün desteği ve erişilebilirlik](/previous-versions/tzbxw1af(v=vs.120))
+- [Ürün Desteği ve Erişilebilirlik](/previous-versions/tzbxw1af(v=vs.120))

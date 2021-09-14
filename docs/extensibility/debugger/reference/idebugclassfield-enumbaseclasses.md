@@ -1,6 +1,6 @@
 ---
-description: Bu sınıfın temel sınıfları için bir numaralayıcı oluşturur.
-title: IDebugClassField::EnumBaseClasses | Microsoft Docs
+description: Bu sınıfın temel sınıfları için bir Numaralandırıcı oluşturur.
+title: 'IDebugClassField:: EnumBaseClasses | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7bd7f742e057107e02d05934d62bab4747417588
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122145191"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725292"
 ---
 # <a name="idebugclassfieldenumbaseclasses"></a>IDebugClassField::EnumBaseClasses
-Bu sınıfın temel sınıfları için bir numaralayıcı oluşturur.
+Bu sınıfın temel sınıfları için bir Numaralandırıcı oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,13 +44,13 @@ int EnumBaseClasses(
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
 
-[out] Temel sınıflar [listesini temsil eden bir IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Temel sınıf yoksa null değer döndürür.
+dışı Temel sınıfların listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Temel sınıf yoksa, null değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür, S_SH_NO_BASE_CLASSES (ve parametresi null değere ayarlanırsa) bir hata kodu döndürür. Aksi takdirde `ppEnum` bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür, temel sınıflar yoksa (ve `ppEnum` parametresi null değere ayarlanmışsa) S_SH_NO_BASE_CLASSES döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralayıcı nesnesinde temel sınıflar en hızlı (veya en türetilmiş) en uzak temel sınıfa sırasıyla belirtilir. Örneğin, C++ sınıfları verildi:
+ Numaralandırıcı nesnesindeki temel sınıflar, en yakın (veya en türetilmiş) taban sınıfının en uzak taban sınıfına göre belirtilen şekilde belirtilir. Örneğin, C++ sınıfları verildiğinde:
 
 ```
 class Root { }
@@ -59,7 +59,7 @@ class Level2 : Level1 { }
 class MyClass : Level2 { }
 ```
 
- Numaralama , , sırasına göre temel `Level2` `Level1` sınıfların dönüşlerini `Root` sağlar.
+ Sabit Listesi temel sınıfları, `Level2` `Level1` ,, sırasıyla döndürür `Root` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

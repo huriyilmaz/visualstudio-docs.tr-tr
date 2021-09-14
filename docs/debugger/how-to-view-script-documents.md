@@ -1,6 +1,6 @@
 ---
 title: Betik Belgelerini | Microsoft Docs
-description: JavaScript sunucu tarafı betik belgelerini uygulama ve Visual Studio görüntülemeyi Çözüm Gezgini.
+description: Komut dosyası kullanarak JavaScript sunucu tarafı betik belgelerini Visual Studio Çözüm Gezgini.
 ms.custom: SEO-VS-2020
 ms.date: 11/05/2019
 ms.topic: how-to
@@ -19,11 +19,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 72ad42572eadff6434677d0a67357ed684758a20
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161160"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725410"
 ---
 # <a name="how-to-view-script-documents-javascript"></a>Nasıl kullanılır: Betik Belgelerini Görüntüleme (JavaScript)
 

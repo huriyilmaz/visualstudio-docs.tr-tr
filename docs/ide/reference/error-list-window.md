@@ -17,11 +17,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 3690bdcfd80593599d792c2091583e95fdc513b6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122144008"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725751"
 ---
 # <a name="error-list-window"></a>Hata Listesi Penceresi
 
@@ -42,7 +42,7 @@ Hata **Listesi penceresi** aşağıdaki görevleri gerçekleştirmenizi sağlar:
 
 - Belirli terimler için arama ve arama kapsamını yalnızca geçerli proje veya belge olarak seçin.
 
-Hata **Listesi'ni görüntülemek için** Hata Listesini **Görüntüle'yi**  >  **seçin** veya **Ctrl** E + **\\** + **tuşlarına basın.**
+Hata **Listesi'ni görüntülemek için Hata** Listesini **Görüntüle'yi**  >  **seçin** veya **Ctrl** E + **\\** + **tuşlarına basın.**
 
 Farklı bilgi düzeylerini **görmek için** **Hatalar,** Uyarılar **ve** İletiler sekmelerini seçebilirsiniz.
 
@@ -50,30 +50,30 @@ Listeyi sıralamak için herhangi bir sütun başlığına tıklayın. Yeniden e
 
 ## <a name="error-list-filters"></a>Hata Listesi Filtreleri
 
-İki açılan kutu içinde biri araç çubuğunun sağ tarafında, biri de araç çubuğunun sol tarafında olmak için iki tür filtre vardır. Araç çubuğunun sol tarafındaki açılan liste, kullanmak üzere kod dosyaları kümesi belirtir ( Tüm **Çözüm,** **Açık** Belgeler, Geçerli **Project**, **Geçerli Belge**).
+İki açılan kutu içinde biri araç çubuğunun sağ tarafında, biri de araç çubuğunun sol tarafında olmak için iki tür filtre vardır. Araç çubuğunun sol tarafındaki açılan liste, kullanmak üzere kod dosyaları kümesi belirtir ( Tüm **Çözüm,** Açık Belgeler **,** Geçerli **Project**, **Geçerli Belge**).
 
-Hata gruplarını analiz etmek ve bu gruplara göre hareket etmek için arama kapsamını kısıtabilirsiniz. Örneğin, bir projenin derlemesini engelleyen temel hatalara odaklanmak istiyor olabilir. Bu seçeneklerin bazıları şunlardır:
+Hata gruplarını analiz etmek ve eyleme etmek için arama kapsamını kısıtabilirsiniz. Örneğin, bir projenin derlemesini engelleyen temel hatalara odaklanmak istiyor olabilir. Bu seçeneklerin bazıları şunlardır:
 
 1. **Açık Belgeler:** Açık belgeler için hataları, uyarıları ve iletileri gösterir.
 
 2. **Geçerli Project:** Düzenleyici'de o anda seçili olan belgenin projesinde veya içinde seçilen projeden gelen **hataları,** uyarıları ve **iletileri Çözüm Gezgini.**
 
     > [!NOTE]
-    > Şu anda seçili olan belgenin projesi, içinde seçilen projeden farklı ise, filtrelenmiş hata, uyarı ve ileti **listesi Çözüm Gezgini.**
+    > Şu anda seçili olan belgenin projesi, 'de seçilen projeden farklı olduğunda, filtrelenmiş hata, uyarı ve ileti **listesi Çözüm Gezgini.**
 
 3. **Geçerli Belge:** Düzenleyicide veya düzenleyicide seçili olan belge için **hataları,** uyarıları ve **iletileri Çözüm Gezgini.**
 
 Arama sonuçlarına şu anda bir filtre uygulanmışsa, filtrenin adı Hata Listesi **başlık çubuğunda** görünür. Ardından **Hatalar,** **Uyarılar** **ve** İletiler düğmeleri, toplam öğe sayısıyla birlikte filtrelenmiş öğe sayısını görüntüler. Örneğin, düğmeler "x of y Errors" ifadesini gösterir. Filtre uygulanmazsa başlık çubuğunda yalnızca "Hata Listesi" yer alır.
 
-Araç çubuğunun sağ tarafındaki liste, derleme hatalarını (derleme işlemi sonucunda oluşan hatalar) veya IntelliSense'den (derlemeyi çalıştırmadan önce algılanan hatalar) veya her ikisini birden göstermeyi belirtir.
+Araç çubuğunun sağ tarafındaki liste, derleme hatalarını (derleme işlemi sonucunda oluşan hatalar) veya IntelliSense'den (derlemeyi çalıştırmadan önce algılanan hatalar) ya da her ikisini birden göstermeyi belirtir.
 
 ## <a name="search"></a>Arayın
 
-Hata **listesinde belirli hataları** bulmak için Hata  Listesi araç çubuğunun sağ tarafındaki Hata Listesini Ara metin kutusunu kullanın. Hata listesinde herhangi bir görünür sütunda arama yapmak için arama da ekleyebilirsiniz ve arama sonuçları her zaman sorgu veya uygulanan filtre yerine sıralama önceliğini içeren sütuna göre sıralanmış olur. Odak Hata **Listesindeyken Esc** tuşuna basın, arama terimini ve filtrelenmiş arama sonuçlarını temizebilirsiniz. Ayrıca, metin kutusunun sağ tarafındaki **X** tarak da bunu temizebilirsiniz.
+Hata **listesinde belirli hataları** bulmak için Hata Listesi araç çubuğunun sağ **tarafındaki** Hata Listesi Ara metin kutusunu kullanın. Hata listesinde herhangi bir görünür sütunda arama yapmak için arama da ekleyebilirsiniz ve arama sonuçları her zaman sorgu veya uygulanan filtre yerine sıralama önceliğini içeren sütuna göre sıralanmış olur. Odak Hata **Listesindeyken Esc** tuşuna basın, arama terimini ve filtrelenmiş arama sonuçlarını temizebilirsiniz. Metin kutusunun sağ **tarafındaki X'e** de tıklar ve bu ifadeyi temizebilirsiniz.
 
 ## <a name="save"></a>Kaydet
 
-Hata listesini kopyalayıp bir dosyaya kaydedebilirsiniz. Kopyalamak istediğiniz hataları seçin ve seçime sağ tıklayın ve bağlam menüsünde Kopyala'yı **seçin.** Ardından hataları bir dosyaya yapıştırabilirsiniz. Hataları bir elektronik tabloda Excel alanları farklı sütunlar olarak görünür.
+Hata listesini kopyalayıp bir dosyaya kaydedebilirsiniz. Kopyalamak istediğiniz hataları seçin ve seçime sağ tıklayın ve bağlam menüsünde Kopyala'yı **seçin.** Ardından hataları bir dosyaya yapıştırabilirsiniz. Hataları bir elektronik tabloda Excel, alanlar farklı sütunlar olarak görünür.
 
 ## <a name="ui-element-list"></a>UI Öğe Listesi
 
@@ -85,7 +85,7 @@ Kod
 
 Hata kodunu görüntüler.
 
-Açıklama
+Description
 
 Girişin metnini görüntüler.
 

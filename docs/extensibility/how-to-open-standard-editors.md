@@ -1,6 +1,6 @@
 ---
-title: "Nasıl: Standart Düzenleyiciler'i | Microsoft Docs"
-description: OpenItem yöntemini standart bir düzenleyiciyle nasıl uygulayacaklarını öğrenin. IDE, belirlenen dosya türü için standart bir düzenleyici belirler.
+title: 'Nasıl yapılır: standart düzenleyiciler açma | Microsoft Docs'
+description: OpenItem metodunu standart bir düzenleyici ile uygulamayı öğrenin. IDE, belirlenen dosya türü için standart bir düzenleyici belirler.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -15,46 +15,46 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: fa3da3de94f28fd0cc02320471e76f63ecf1694b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122124912"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634598"
 ---
-# <a name="how-to-open-standard-editors"></a>Nasıl: Standart düzenleyicileri açma
-Standart bir düzenleyiciyi açıp IDE'nin, dosya için projeye özgü bir düzenleyici belirtmek yerine belirlenmiş bir dosya türü için standart bir düzenleyici belirlemesine izin verirsiniz.
+# <a name="how-to-open-standard-editors"></a>Nasıl yapılır: standart düzenleyiciler açma
+Standart bir düzenleyici açtığınızda, IDE 'nin dosya için projeye özgü bir düzenleyici belirtmek yerine, belirlenen dosya türü için standart bir düzenleyici belirlemesine izin verirolursunuz.
 
- yöntemini uygulamak için aşağıdaki yordamı <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> izleyin. Bu, proje dosyasını standart bir düzenleyicide açar.
+ Yöntemini uygulamak için aşağıdaki yordamı izleyin <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> . Bu, bir proje dosyasını standart düzenleyicide açar.
 
-## <a name="to-implement-the-openitem-method-with-a-standard-editor"></a>OpenItem yöntemini standart bir düzenleyiciyle uygulamak için
+## <a name="to-implement-the-openitem-method-with-a-standard-editor"></a>OpenItem metodunu standart bir düzenleyici ile uygulamak için
 
-1. Belge <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> veri nesnesi dosyasının zaten açık olup olmadığını belirlemek için () `RDT_EditLock` çağrısı.
+1. <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> `RDT_EditLock` Belge verisi nesne dosyasının zaten açık olup olmadığını belirleme () çağrısı.
 
-2. Dosya zaten açıksa, parametresi için değerini belirterek yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> çağırarak dosyayı `IDO_ActivateIfOpen` yeniden `grfIDO` açın.
+2. Dosya zaten açıksa, parametresini çağırarak, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> parametresi için değerini belirterek dosyayı yeniden açın `IDO_ActivateIfOpen` `grfIDO` .
 
-     Dosya açıksa ve belge, çağıran projeden farklı bir projeye aitse, projeniz açılan düzenleyicinin başka bir projeden geldiğine bir uyarı alır. Ardından dosya penceresi açılır.
+     Dosya açıksa ve belge çağıran projeden farklı bir projeye aitse, projeniz açılan düzenleyicinin başka bir projeden olduğunu belirten bir uyarı alır. Dosya penceresi daha sonra ortaya çıkmış.
 
-3. Belge açık veya çalışan belge tablosunda yoksa, dosya için standart bir düzenleyici açmak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> yöntemini () `OSE_ChooseBestStdEditor` çağırabilirsiniz.
+3. Belge açık veya çalışan belge tablosunda değilse, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> `OSE_ChooseBestStdEditor` dosya için standart bir düzenleyici açmak üzere yöntemini () çağırın.
 
-     yöntemini çağırarak IDE aşağıdaki görevleri gerçekleştirir:
+     Yöntemini çağırdığınızda, IDE aşağıdaki görevleri gerçekleştirir:
 
-    1. IDE, dosyayı hangi düzenleyicinin açıp en yüksek önceliğe sahip olduğunu belirlemek için kayıt defterinde editors/{guidEditorType}/Extensions alt anahtarını tarar.
+    1. IDE, hangi düzenleyicinin dosyayı açabilme ve bunu yapmak için en yüksek önceliğe sahip olduğunu anlamak için kayıt defterindeki düzenleyiciler/{Editdıtortype}/Extensions alt anahtarını tarar.
 
-    2. IDE, dosyayı hangi düzenleyicinin aça olduğunu belirledikten sonra, IDE çağrısında <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> lar. Düzenleyicinin bu yöntemi uygulaması, IDE'nin yeni açılan belgeyi çağırarak site oluşturması <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> için gereken bilgileri döndürür.
+    2. IDE, dosyayı hangi düzenleyicinin açduymayı belirledikten sonra, IDE çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> . Düzenleyicinin bu yöntemin uygulanması, IDE 'nin <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> Yeni açılan belgeyi çağırması ve site için gereken bilgileri döndürür.
 
-    3. Son olarak, IDE gibi normal kalıcılık arabirimini kullanarak belgeyi <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> yükler.
+    3. Son olarak, IDE,, gibi normal Kalıcılık arabirimini kullanarak belgeyi yükler <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> .
 
-    4. IDE daha önce hiyerarşi veya hiyerarşi öğesinin kullanılabilir olduğunu belirlediyse IDE, yöntem çağrısıyla geri geçiş yapmak için proje düzeyinde bir bağlam işaretçisi almak için <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A> <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> proje üzerinde yöntemini <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> arar.
+    4. IDE daha önce hiyerarşinin veya hiyerarşi öğesinin kullanılabilir olduğunu belirleiyorsa, IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A> <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> yöntem çağrısıyla birlikte geri geçirilecek proje düzeyi bağlam işaretçisini almak için proje üzerinde yöntemi çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> .
 
-4. Düzenleyicinin projenizin bağlamını aldırarak IDE'nin projenizi çağırarak <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A> IDE'ye bir işaretçisi dönmesini sebilirsiniz.
+4. <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A> Düzenleyicinin projenizden bağlamı almasına izin vermek istiyorsanız IDE 'yi projeniz üzerinde çağırdığında IDE 'ye bir işaretçi döndürün.
 
-     Bu adımın gerçekleştirerek projenin düzenleyiciye ek hizmetler sunabilirsiniz.
+     Bu adımın gerçekleştirilmesi, projenin düzenleyiciye ek hizmetler sunmasına olanak tanır.
 
-     Belge görünümü veya belge görünümü nesnesi bir pencere çerçevesinde başarıyla sitelenmişse, nesnesi çağrılarak verileriyle <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.LoadDocData%2A> başlatılır.
+     Belge görünümü veya belge görünümü nesnesi bir pencere çerçevesinde başarıyla oluşturulmuşsa, nesnesi çağırarak verileri ile başlatılır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.LoadDocData%2A> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>
-- [Proje öğelerini açma ve kaydetme](../extensibility/internals/opening-and-saving-project-items.md)
-- [Nasıllı: Projeye özgü düzenleyicileri açma](../extensibility/how-to-open-project-specific-editors.md)
-- [Nasıl kullanılır: Açık belgeler için düzenleyicileri açma](../extensibility/how-to-open-editors-for-open-documents.md)
+- [Proje öğelerini aç ve Kaydet](../extensibility/internals/opening-and-saving-project-items.md)
+- [Nasıl yapılır: projeye özgü düzenleyiciler açma](../extensibility/how-to-open-project-specific-editors.md)
+- [Nasıl yapılır: açık belgeler için düzenleyiciler açma](../extensibility/how-to-open-editors-for-open-documents.md)
 - [Dosya Aç komutunu kullanarak dosyaları görüntüleme](../extensibility/internals/displaying-files-by-using-the-open-file-command.md)

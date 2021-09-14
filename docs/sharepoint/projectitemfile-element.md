@@ -16,11 +16,11 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 065bb202420549462597ccea7cece0a3c3485c4b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122135851"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725632"
 ---
 # <a name="projectitemfile-element"></a>ProjectItemFile öğesi
   SharePoint öğesine dağıtıldığında proje öğesi dahil olmak üzere özellik öğesi dosyası gibi bir SharePoint dosyasını temsil eder.
@@ -66,7 +66,7 @@ ms.locfileid: "122135851"
 |**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
 |**Şema adı**|SharePoint Project öğesi şeması|
 |**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
-|**Boş olabilir**|Hayır|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)

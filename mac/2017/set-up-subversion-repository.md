@@ -7,11 +7,11 @@ ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
 ms.topic: how-to
 ms.openlocfilehash: ae67bdd9a9dac8daed268105d830064fa6ef4cae
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123962213"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726011"
 ---
 # <a name="set-up-a-subversion-repository"></a>Bir alt sürüm deposu ayarlama
 

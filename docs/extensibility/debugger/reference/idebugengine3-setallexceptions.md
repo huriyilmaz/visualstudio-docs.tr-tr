@@ -1,6 +1,6 @@
 ---
 description: Bu yöntem, tüm bekleyen özel durumların durumunu ayarlar.
-title: 'IDebugEngine3:: SetAllExceptions | Microsoft Docs'
+title: IDebugEngine3::SetAllExceptions | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2662631a4c3b5ab4420fc5f14740138596435d77
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122111092"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725816"
 ---
 # <a name="idebugengine3setallexceptions"></a>IDebugEngine3::SetAllExceptions
 Bu yöntem, tüm bekleyen özel durumların durumunu ayarlar.
@@ -43,10 +43,10 @@ int SetAllExceptions(
 
 ## <a name="parameters"></a>Parametreler
 `dwState`\
-'ndaki [EXCEPTION_STATE](../../../extensibility/debugger/reference/exception-state.md) değerlerinden biri.
+[in] En önemli [EXCEPTION_STATE.](../../../extensibility/debugger/reference/exception-state.md)
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde hata kodunu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

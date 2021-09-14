@@ -13,11 +13,11 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: a4a5973863877db2d071f9be8d4689928b21a689
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123961589"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726026"
 ---
 # <a name="customize-project-files-created-by-vstu"></a>VSTU tarafından oluşturulan proje dosyalarını özelleştirme
 Unity, proje dosyası oluşturma sırasında geri çağrılar sağlar. Öğesini `OnGeneratedSlnSolution` `OnGeneratedCSProject` kullanarak, [`AssetPostprocessor`](https://docs.unity3d.com/ScriptReference/AssetPostprocessor.html) Proje veya çözüm dosyasını her yeniden oluşturulduğunda değiştirmek için kullanın.

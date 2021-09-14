@@ -18,11 +18,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 3c2a763957004b622250514535a9ebe1c80b0cf8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122046595"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633953"
 ---
 # <a name="how-to-programmatically-create-an-email-item"></a>Nasıl yapılır: program aracılığıyla e-posta öğesi oluşturma
   Bu örnek Microsoft Office Outlook bir e-posta iletisi oluşturur.

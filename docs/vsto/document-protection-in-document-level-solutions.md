@@ -1,6 +1,6 @@
 ---
-title: Belge düzeyi çözümlerde belge koruması
-description: Belge düzeyindeki projelerde Word'Microsoft Office ve Microsoft Office Excel özelliklerini nasıl kullanabileceğiniz hakkında bilgi öğrenin.
+title: Belge düzeyi çözümlerde Belge koruması
+description: belge düzeyi projelerinde Microsoft Office Word ve Microsoft Office Excel koruma özelliklerini nasıl kullanabileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -20,45 +20,45 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: cc11241057a32d24746eb9eabbc6a7b6526c9eaa
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122026479"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634118"
 ---
-# <a name="document-protection-in-document-level-solutions"></a>Belge düzeyi çözümlerde belge koruması
-  Belge düzeyi projelerde Word'Microsoft Office ve Microsoft Office Excel koruma özelliklerini kullanabilirsiniz. Bu özellikler, yetkisiz kullanıcıların belgenin korumalı kısımlarında değişiklik yapmalarını engelleyebilir.
+# <a name="document-protection-in-document-level-solutions"></a>Belge düzeyi çözümlerde Belge koruması
+  belge düzeyi projelerinde Microsoft Office Word ve Microsoft Office Excel koruma özelliklerini kullanabilirsiniz. Bu özellikler yetkisiz kullanıcıların bir belgenin korunan bölümlerinde değişiklik yapmasını engeller.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Bu Excel kullanarak, çalışma kitabı tasarımcıda açıkken korumayı açıp kapatabilirsiniz. Word'i kullanarak korumayı yalnızca tasarımcının dışında açsanız iyi olabilir. Çalışma zamanında, hem Word hem de Excel için korumayı program aracılığıyla etkinleştirin veya devre dışı Excel.
+ Excel kullanarak, çalışma kitabı tasarımcıda açıkken korumayı etkinleştirebilir ve devre dışı bırakabilirsiniz. Word kullanarak korumayı yalnızca Tasarımcı dışında etkinleştirebilirsiniz. Çalışma zamanında, hem Word hem de Excel için korumayı programlı bir şekilde etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
- Tasarımcıda açık olan bir belgede belge koruması etkinleştirildiğinde, tüm  denetimler Araç Kutusundan kaldırılır veya kullanılamaz  duruma gelir ve Veri Kaynakları penceresinden belgeye hiçbir şeyi sürükleyesiniz.
+ Tasarımcıda açık olan bir belge üzerinde belge koruması etkinleştirildiğinde, tüm denetimler **araç kutusundan** kaldırılır veya kullanılamaz hale getirilir ve **veri kaynakları** penceresinden belgeye hiçbir şey sürükleyemezsiniz.
 
 ## <a name="serverdocument-and-protected-documents"></a>ServerDocument ve korumalı belgeler
- Bir belge korunuyorsa, veri önbelleğine belgenin dışından erişilemez. Korumalı bir belgede önbelleğe alınan verileri almak veya işlemek için sınıfını veya <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfın diğer yöntemlerini <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> kullanamazsınız.
+ Bir belge korunuyorsa, veri önbelleğine belge dışından erişilemez. <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>Korumalı bir belgede önbelleğe alınmış verileri almak veya işlemek ya da sınıfının diğer yöntemlerini kullanmak için sınıfını kullanamazsınız <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> .
 
 ## <a name="word-document-protection-in-the-designer"></a>Tasarımcıda Word belge koruması
- Word belge veya şablonu açıkken bir Word belgesine veya şablonuna koruma Visual Studio, tasarımcıda korumayı zorlamaya başamazsınız. Belge tasarım modundayken açıkken Visual Studio ve korumayı zorlamaya başlamadan önce çalışma modunda olması gerekir.
+ bir Word belgesi veya şablonuna Visual Studio açıkken koruma eklerseniz, tasarımcıda korumayı zorunlu hale başlatamazsınız. belge tasarım modunda, Visual Studio açıkken, korumayı zorlamaya başlayabilmeniz için önce çalışma modunda olmalıdır.
 
- Ancak, koruma etkinleştirilmiş mevcut bir Word belgesini kullanan bir proje ekleyebilirsiniz, belge tasarımcıda açıkken korunur. Belgenin korumalı bölümlerini düzenleyemezsiniz, ancak yine de belgeyi otomatikleştirmek için Kod Düzenleyicisi'nde kod yazabilirsiniz. Belge açıkken koruma etkinse projeyi de Visual Studio.
+ Ancak, koruması etkin olan mevcut bir Word belgesini kullanan bir proje oluşturursanız, belge tasarımcıda açıldığında korunur. Belgenin korunan bölümlerini düzenleyemezsiniz, ancak belgeyi otomatik hale getirmek için kod düzenleyicisinde kod yazmaya devam edebilirsiniz. Ayrıca, belge Visual Studio açıkken koruma etkinleştirildiyse projeyi derlenemez.
 
- Belge tasarımcıda açıkken korumayı kapatabilirsiniz; böylece belgeyi düzenleyebilir ve projeyi ekleyebilirsiniz. Hata ayıklarken tasarımcıda kopya için korumayı kapatamaz; hata ayıklama sırasında açılan belge, tasarımcıda açık olandan ayrı bir kopyadır (çıkış kopyası Visual Basic için *\bin* dizininde ve C# için *\bin\debug* dizininde depolanır).
+ Belgeyi düzenlemek ve projeyi derlemek için belge tasarımcıda açıkken korumayı devre dışı bırakabilirsiniz. Hata ayıklarken tasarımcıda kopyalamaya yönelik korumayı devre dışı bırakabilirsiniz; hata ayıklama sırasında açılan belge, tasarımcıda açık olan ayrı bir kopyadır (çıktı kopyası Visual Basic için *\bin* dizininde ve C# için *\bin\debug* dizininde depolanır).
 
- Projeyi Visual Studio'da kapatarak, proje dizininde yer alan belgenin kopyasını açarak ve korumayı açarak tasarımcıda açılan belgenin kopyasında korumayı etkinleştirebilirsiniz.
+ Visual Studio içinde projeyi kapatarak, proje dizininde bulunan belgenin kopyasını açarak ve korumayı etkinleştirerek, tasarımcıda açılan belgenin kopyasında korumayı etkinleştirebilirsiniz ().
 
-## <a name="enforce-word-document-protection-on-build"></a>Derlemede Word belge korumasını zorlama
- Visual Studio belge hata ayıklama için açıldığında korumanın etkinleştirilmesi için derleme işlemi sırasında Word belgeleri ve şablonları için korumayı zorlamaya başlar. Belge boş bir parolayla korunur.
+## <a name="enforce-word-document-protection-on-build"></a>Derlemede Word belge korumasını zorla
+ Visual Studio, derleme işlemi sırasında Word belgelerinin ve şablonlarının korunmasını zorlamaya başlar, bu sayede belge hata ayıklama için açıldığında koruma etkinleştirilir. Belge boş bir parolayla korunuyor.
 
- Derleme sırasında koruma etkinleştirildiğinden, belge olayında özel durumlara neden olan veya uygulamanın davranışını değiştiren bir kod varsa, bu kod doğru <xref:Microsoft.Office.Tools.Word.Document.Startup> şekilde hata ayıklanabilecektir. Belge açıldıktan sonra korumayı etkinleştirirsiniz, başlatma kodunda hata ayıklama veya test kullanılamaz.
+ <xref:Microsoft.Office.Tools.Word.Document.Startup>Uygulama, özel durumlara neden olabilecek veya uygulamanın davranışını değiştirebilen belge olayında kod varsa, bu kodun doğru şekilde ayıklanamayacağını belirten derleme sırasında koruma etkinleştirilir. Belge açıldıktan sonra korumayı etkinleştirirseniz, başlatma kodunun hataları ayıklanamaz veya test edilemez.
 
 ## <a name="setting-the-password"></a>Parolayı ayarlama
- Visual Studio korumayı otomatik olarak sağlar, ancak varsayılan olarak parola sağlar. Belge korumasının bir parolası olması için çözüm dağıtmadan önce bunu eklemeniz gerekir. Parola eklemek, yetkili kullanıcıların belgeden korumayı kaldırmasına olanak sağlar; parola olmadan koruma kolayca kaldırılamaz. Parola ayarlama hakkında ayrıntılı bilgi için belirli bir uygulamanın Office bakın.
+ Visual Studio otomatik olarak koruma sağlar, ancak varsayılan olarak parola sağlamaz. Belge korumasının bir parolası olmasını istiyorsanız çözümünüzü dağıtmadan önce eklemeniz gerekir. Parola eklemek yetkili kullanıcıların belgeden korumayı kaldırmasını sağlar; parola olmadan koruma kolayca kaldırılamaz. parola ayarlama hakkında daha fazla bilgi için bkz. belirli Office uygulamasındaki yardım.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl kullanılır: Belgeleri ve belgelerin parçalarını program aracılığıyla koruma](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md)
-- [Office örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
-- [Bilgi hakları yönetimi ve yönetilen kod uzantılarına genel bakış](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
+- [Nasıl yapılır: program aracılığıyla belgeleri ve belge parçalarını koruma](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md)
+- [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
+- [Bilgi hakları yönetimine ve yönetilen kod uzantılarına genel bakış](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
 - [Office belgelerde parola koruması](../vsto/password-protection-on-office-documents.md)
-- [Nasıl kullanılır: Kodun kısıtlı izinlerle belgelerin arkasında çalışmasına izin verme](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)
-- [Yeni çözümler tasarlama Office oluşturma](../vsto/designing-and-creating-office-solutions.md)
+- [Nasıl yapılır: kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına Izin verme](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)
+- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)

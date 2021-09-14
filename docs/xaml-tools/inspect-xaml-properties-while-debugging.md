@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklama sırasında XAML özelliklerini | Microsoft Docs
-description: XAML özelliklerini incelemek ve ui öğelerinin ağaç görünümünü elde etmek için hata ayıklarken Canlı Görsel Ağaç ve Canlı Özellik Gezgini araçlarını kullanmayı öğrenin.
+title: Hata ayıklarken XAML özelliklerini İnceleme | Microsoft Docs
+description: XAML özelliklerini incelemek ve Kullanıcı arabirimi öğelerinin ağaç görünümünü almak için hata ayıklarken canlı görsel ağacı ve canlı Özellik Gezgini araçlarını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 03/02/2021
 ms.topic: how-to
@@ -12,42 +12,42 @@ ms.technology: vs-xaml-tools
 ms.workload:
 - uwp
 ms.openlocfilehash: 0ecf5a1c11c9f942a3c89510ecaab050abfa9df3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122091974"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726046"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Hata ayıklama sırasında XAML özelliklerini denetleme
 
-Canlı Görsel Ağaç ve Canlı Özellik Gezgini ile çalışan XAML kodunuzun **gerçek** zamanlı bir **görünümünü eldeebilirsiniz.** Bu araçlar, çalışan XAML uygulamanıza kullanıcı arabirimi öğelerinin ağaç görünümünü sağlar ve seçerek herhangi bir kullanıcı arabirimi öğesinin çalışma zamanı özelliklerini gösterir.
+**Canlı görsel ağaç** ve **canlı Özellik GEZGINI** ile çalışan xaml kodunuzun gerçek zamanlı bir görünümünü alabilirsiniz. Bu araçlar, çalışan XAML uygulamanızın kullanıcı arabirimi öğelerinin ağaç görünümünü sağlar ve seçtiğiniz herhangi bir kullanıcı arabirimi öğesinin çalışma zamanı özelliklerini gösterir.
 
-Bu araçları aşağıdaki yapılandırmalarda kullanabilirsiniz:
+Aşağıdaki yapılandırmalarda bu araçları kullanabilirsiniz:
 
-|Uygulama Türü|İşletim Sistemi ve Araçlar|
+|Uygulama türü|İşletim sistemi ve araçlar|
 |-----------------|--------------------------------|
-|Windows Presentation Foundation (4.0 ve üzeri) uygulamaları|Windows 7 ve üzeri|
-|Evrensel Windows uygulamaları|Windows 10 SDK ile Windows 10 [ve üzeri](https://dev.windows.com/downloads/windows-10-sdk)|
+|Windows Presentation Foundation (4,0 ve üzeri) uygulamalar|Windows 7 ve üzeri|
+|Evrensel Windows uygulamaları|[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk) ile Windows 10 ve üzeri|
 
-## <a name="look-at-elements-in-the-live-visual-tree"></a>Canlı Görsel AğaçtaKi Öğelere Bakma
+## <a name="look-at-elements-in-the-live-visual-tree"></a>Canlı görsel ağaçtaki öğelere bakma
 
-Liste görünümü ve düğmesi olan çok basit bir WPF uygulamasıyla çalışmaya bakalım. Düğmeye her tıklarken listeye başka bir öğe eklenir. Çift numaralı öğeler gri renkte, tek numaralı öğeler ise sarı renktedir.
+Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını kullanmaya başlayalım. Düğmeye her tıkladığınızda, listeye başka bir öğe eklenir. Çift numaralı öğeler gri renklendirilir ve tek sayılı öğeler sarı renktedir.
 
 ### <a name="create-the-project"></a>Proje oluşturma
 
 ::: moniker range=">=vs-2019"
 
-1. Yeni bir C# WPF uygulaması **oluşturun** ( Dosya >  > **Yeni Project,**"C# WPF" yazın, **WPF** Uygulaması proje şablonunu seçin, **projeyi TestXAML**  olarak adlar ve ardından Hedef Çerçeve açılır listesinde **.NET Core 3.1'in** görüntülendiğinden emin olun.
+1. yeni bir C# wpf uygulaması oluşturun (**dosya** > **yeni** > **Project**, "C# WPF" yazın, **WPF uygulaması** proje şablonunu seçin, projeyi **testxaml** olarak adlandırın ve ardından **.net Core 3,1** ' in **hedef çerçeve** açılır penceresinde göründüğünü doğrulayın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-1. Yeni bir C# WPF uygulaması **oluşturun**( Dosya  >    >  **Yeni Project,** ardından "C# WPF" yazın ve WPF Uygulaması **(.NET Framework) ) seçin.** **TestXAML olarak ad girin.**
+1. yeni bir C# wpf uygulaması (**dosya**  >  **yeni**  >  **Project** oluşturun, ardından "C# WPF" yazın ve **WPF uygulaması (.NET Framework)** seçeneğini belirleyin. **TestXaml** olarak adlandırın.
 
 ::: moniker-end
 
-1. MainWindow.xaml'i aşağıdakiyle değiştirebilirsiniz:
+1. MainWindow. xaml ' i şu şekilde değiştirin:
 
    ```xaml
    <Window x:Class="TestXAML.MainWindow"
@@ -65,7 +65,7 @@ Liste görünümü ve düğmesi olan çok basit bir WPF uygulamasıyla çalışm
    </Window>
    ```
 
-1. Aşağıdaki komut işleyicisini MainWindow.xaml.cs dosyasına ekleyin:
+1. MainWindow. xaml. cs dosyasına aşağıdaki komut işleyicisini ekleyin:
 
    ```csharp
    int count;
@@ -86,9 +86,9 @@ Liste görünümü ve düğmesi olan çok basit bir WPF uygulamasıyla çalışm
    }
    ```
 
-1. Projeyi derleme ve hata ayıklamayı başlatma. (Derleme yapılandırması Yayın değil Hata Ayıklaması'dır. Derleme yapılandırmaları hakkında daha fazla bilgi için [bkz. Derleme Yapılandırmalarını Anlama](../ide/understanding-build-configurations.md).)
+1. Projeyi derleyin ve hata ayıklamayı başlatın. (Derleme yapılandırması, yayın değil, hata ayıklama olmalıdır. Derleme konfigürasyonları hakkında daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md).)
 
-   Pencere açılırken, çalışan uygulamanın içinde uygulama içindeki araç çubuğunun görünmesi gerekir.
+   Pencere geldiğinde, çalışan uygulamanız içinde uygulama içi araç çubuğunun göründüğünü görmeniz gerekir.
 
    ::: moniker range=">= vs-2019"
    ![Uygulamanın ana penceresi](../debugger/media/vs-2019/livevisualtree-app.png "LiveVIsualTree-App")
@@ -97,72 +97,72 @@ Liste görünümü ve düğmesi olan çok basit bir WPF uygulamasıyla çalışm
    ![Uygulamanın ana penceresi](../debugger/media/livevisualtree-app.png "LiveVIsualTree-App")
    ::: moniker-end
 
-1. Şimdi, listeye **yeni öğeler** eklemek için Öğe Ekle düğmesine birkaç kez tıklayın.
+1. Şimdi, listeye yeni öğeler eklemek için birkaç kez **öğe Ekle** düğmesine tıklayın.
 
 ### <a name="inspect-xaml-properties"></a>XAML özelliklerini inceleme
 
-1. Ardından, uygulama **içinde araç çubuğunun** sol üst düğmesine tıklayarak (veya Canlı Görsel Ağaç'ta hata ayıkla'ya > Windows > tıklayarak) Canlı **Görsel Ağaç penceresini açın.** Açıldıktan sonra, bu pencereye ve Canlı Özellikler penceresine yan yana bakmak için yerleştirme **konumundan** sürükleyin.
+1. daha sonra, uygulama içi araç çubuğunun sağ tarafındaki düğmesine tıklayarak (veya **> Windows > canlı görsel ağaç**' a giderek) **canlı görsel ağaç** penceresini açın. Açık olduktan sonra, bu pencereye ve **canlı Özellikler** penceresine yan yana bakabilmemiz için yerleştirme konumundan uzağa sürükleyin.
 
-1. Canlı **Görsel Ağaç penceresinde** **ContentPresenter düğümünü** genişletin. Düğme ve liste kutusu için düğümler içermesi gerekir. Liste kutusu öğelerini bulmak için liste kutusunu (ve **ardından ScrollContentPresenter** ve **ItemsPresenter**) genişletin.
+1. **Canlı görsel ağaç** penceresinde, **ContentPresenter** düğümünü genişletin. Düğme ve liste kutusu için düğüm içermelidir. Liste kutusu öğelerini bulmak için liste kutusunu (ve ardından **ScrollContentPresenter** ve **ItemsPresenter**) genişletin.
 
    ::: moniker range=">= vs-2019"
-   **ContentPresenter** düğümünü görmüyorsanız araç çubuğundaki **Yalnızca Benim XAML'imi Göster** simgesini açıp seçin. 2019 Visual Studio 16.4 sürümünden başlayarak, XAML öğelerinin görünümü varsayılan olarak Yalnızca Benim XAML'im özelliği kullanılarak basitleştirilir. Tüm XAML [öğelerini her zaman](../debugger/general-debugging-options-dialog-box.md) göstermek için seçeneklerde de bu ayarı devre dışı abilirsiniz.
+   **ContentPresenter** düğümünü görmüyorsanız araç çubuğunda **yalnızca XAML mi göster** simgesine geçiş yapın. Visual Studio 2019 sürüm 16,4 ' den başlayarak, xaml öğelerinin görünümü varsayılan olarak yalnızca xaml 'im özelliği kullanılarak basitleştirilmiştir. Tüm XAML öğelerini her zaman göstermek için Seçenekler ' de [Bu ayarı devre dışı](../debugger/general-debugging-options-dialog-box.md) bırakabilirsiniz.
    ::: moniker-end
 
-   Pencere şu şekilde görünür:
+   Pencere şuna benzemelidir:
 
    ::: moniker range=">= vs-2019"
-   ![Canlı Görsel Ağacında ListBoxItems](../debugger/media/vs-2019/livevisualtree-listboxitems.png "LiveVisualTree-ListBoxItems")
+   ![Canlı görsel ağaçtaki ListBoxItems](../debugger/media/vs-2019/livevisualtree-listboxitems.png "LiveVisualTree-ListBoxItems")
    ::: moniker-end
    ::: moniker range="vs-2017"
-   ![Canlı Görsel Ağacında ListBoxItems](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree-ListBoxItems")
+   ![Canlı görsel ağaçtaki ListBoxItems](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree-ListBoxItems")
    ::: moniker-end
 
-1. Geri dön penceresine tıklayın ve birkaç öğe daha ekleyin. Canlı Görsel Ağaç'ta daha fazla liste kutusu **öğelerinin görünmesi gerekir.**
+1. Uygulama penceresine dönüp birkaç öğe daha ekleyin. **Canlı görsel ağaçta** daha fazla liste kutusu öğesi göründüğünü görmeniz gerekir.
 
-1. Şimdi liste kutusu öğelerine göz atabilirsiniz.
+1. Şimdi liste kutusu öğelerinden birinin özelliklerine bakalım.
 
-   Canlı Görsel Ağaç'ta ilk liste **kutusu öğesini seçin** ve araç çubuğunda Özellikleri **Göster** simgesine tıklayın. Canlı **Özellik Gezgini görünmektedir.** İçerik alanı **"Item1"** ve Arka Plan Rengi **alanı** da  >  **#FFFFFFE0.** 
+   **Canlı görsel ağaçtaki** ilk liste kutusu öğesini seçin ve araç çubuğundaki **özellikleri göster** simgesine tıklayın. **Canlı Özellik Gezgini** görünmelidir. **İçerik** alanının "Item1" olduğunu ve **arka plan**  >  **rengi** alanının **#FFFFFFE0** olduğunu unutmayın.
 
-1. Geri dön Görsel **Ağaç'a tıklayın** ve ikinci liste kutusu öğesini seçin. Canlı **Özellik Gezgini,** İçerik  alanı "Item2" ve Arka Plan Rengi alanı ise #FFD3D3D3 (temaya bağlı  >   olarak)  gösterebilirsiniz.
+1. **Canlı görsel ağaca** dönün ve ikinci liste kutusu öğesini seçin. **Canlı Özellik Gezgini** **içerik** alanının "Item2" olduğunu ve **arka plan**  >  **rengi** alanının **#FFD3D3D3** (temaya bağlı olarak) olduğunu göstermelidir.
 
    > [!NOTE]
-   > Live **Property Explorer'daki** bir özelliğin çevresindeki sarı kenarlık, özellik değerinin gibi bir bağlama aracılığıyla ayarlanacak olduğu anlamına `Color = {BindingExpression}` gelir. Yeşil kenarlık, değerin gibi bir kaynak kullanılarak ayar anlamına `Color = {StaticResource MyBrush}` gelir.
+   > **Canlı Özellik Gezgini** içindeki bir özelliğin etrafında sarı bir kenarlık, özellik değerinin gibi bir bağlama üzerinden ayarlandığı anlamına gelir `Color = {BindingExpression}` . Yeşil kenarlık, değerinin gibi bir kaynak kullanılarak ayarlandığı anlamına gelir `Color = {StaticResource MyBrush}` .
 
-   XAML'nin gerçek yapısı büyük olasılıkla doğrudan ilgilenmeyilen birçok öğeye sahiptir ve kodu iyi bilmiyorsanız arayabilirsiniz. Bu **nedenle Canlı Görsel** Ağaç, incelemek istediğiniz öğeyi bulanıza yardımcı olmak için uygulamanın kullanıcı arabirimini kullanmanın birkaç yolu vardır.
+   XAML gerçek yapısı, muhtemelen doğrudan ilgilenmediğiniz çok sayıda öğeye sahiptir ve kodun iyi olduğunu bilmiyorsanız, aradığınız şeyi bulmak için ağaçta gezinmek için bir sabit zaman olabilir. Bu nedenle, **canlı görsel ağaç** , incelemek istediğiniz öğeyi bulmanıza yardımcı olmak için uygulamanın kullanıcı arabirimini kullanmanıza olanak sağlayan birkaç yol içerir.
 
    ::: moniker range=">= vs-2019"
-   **Çalışan uygulamada öğesini seçin.** Canlı Görsel Ağaç araç çubuğunda en soldaki düğmeyi seçerek **bu modu etkinleştirebilirsiniz.** Bu mod açılırken, uygulamada bir kullanıcı arabirimi öğesi seçebilirsiniz ve **Canlı** Görsel Ağaç (ve Canlı Özellik Görüntüleyicisi) otomatik olarak bu öğeye ve özelliklerine karşılık gelen ağaçta düğümü gösterecek şekilde ler. 2019 Visual Studio 16.4 sürümünden başlayarak öğe [seçiminin davranışını yapılandırabilirsiniz.](../debugger/general-debugging-options-dialog-box.md)
+   **Çalışan uygulamadaki öğesini seçin**. **Canlı görsel ağaç** araç çubuğunda en soldaki düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. Bu mod üzerinde, uygulamada bir UI öğesi seçebilirsiniz ve **canlı görsel ağaç** (ve **canlı Özellik Görüntüleyicisi**), düğümü ilgili öğeye ve özelliklerine karşılık gelen ağaçta göstermek için otomatik olarak güncelleştirilir. Visual Studio 2019 sürüm 16,4 ' den başlayarak, [öğe seçiminin davranışını yapılandırabilirsiniz](../debugger/general-debugging-options-dialog-box.md).
 
-   **Çalışan uygulamada düzen donatıcılarını görüntüleme.** Seçimi etkinleştir düğmesinin hemen sağ tarafından düğmeyi seçerek bu modu etkinleştirebilirsiniz. Düzen **donatıcılarını** görüntüle seçeneği açık olduğunda, kenar boşluklarını gösteren dikdörtgenlerin yanı sıra nelere hizalı olduğunu görmek için uygulama penceresinin seçili nesnenin sınırları boyunca yatay ve dikey çizgiler göstermelerini sağlar. Örneğin, Hem Öğe **seçin hem** de **Düzeni görüntüle'yi** açarak uygulamanın **Öğe** Ekle metin bloğuna tıklayın. Canlı Görsel Ağaç'ta metin  bloğu düğümünü ve **Canlı** Özellik Görüntüleyicisi'nde metin bloğu özelliklerini ve metin bloğu sınırları üzerinde yatay ve dikey çizgileri görüyor gerekir.
+   **Çalışan uygulamada düzen donatıcıları görüntüleyin**. Seçimi Etkinleştir düğmesinin hemen sağında bulunan düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. **Görüntüleme düzeni donatıcıları** açık olduğunda, uygulama penceresinin seçili nesnenin sınırları üzerinde yatay ve dikey çizgiler görüntülemesine neden olur, böylece neyin ne kadar hizalanacağını görebilir ve kenar boşluklarını gösteren dikdörtgenler de gösterilir. Örneğin, hem **Select öğesini** hem de **düzeni görüntüle** ' yi açın ve uygulamada **öğe Ekle** metin bloğunu seçin. **Canlı görsel ağaçta** metin bloğu düğümünü ve **canlı Özellik görüntüleyicisinde** metin bloğu özelliklerinin yanı sıra metin bloğunun sınırları üzerindeki yatay ve dikey çizgileri görmeniz gerekir.
 
-   ![DisplayLayout'ta LivePropertyViewer](../debugger/media/vs-2019/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer-DisplayLayout")
+   ![DisplayLayout içinde LivePropertyViewer](../debugger/media/vs-2019/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer-DisplayLayout")
 
-   **Önizleme Seçimi**. Canlı Görsel Ağaç araç çubuğunun sol tarafından üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa öğenin bildiril olduğu XAML'i gösterir. Öğe **seçin ve** Önizleme **seçimi'ne** tıklayın ve ardından test uygulamamızda düğmesini seçin. MainWindow.xaml dosyası Visual Studio açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
+   **Önizleme seçimi**. Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. **Öğe seç** ve **Önizleme seçimi**' ni seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
    ::: moniker-end
 
    ::: moniker range="vs-2017"
-   **Çalışan uygulamada seçimi etkinleştirin.** Canlı Görsel Ağaç araç çubuğunda en soldaki düğmeyi seçerek **bu modu etkinleştirebilirsiniz.** Bu mod açılırken, uygulamada bir kullanıcı arabirimi öğesi seçebilirsiniz ve **Canlı** Görsel Ağaç (ve Canlı Özellik Görüntüleyicisi) otomatik olarak bu öğeye ve özelliklerine karşılık gelen ağaçta düğümü gösterecek şekilde ler.
+   **Çalışan uygulamada seçimi etkinleştirin**. **Canlı görsel ağaç** araç çubuğunda en soldaki düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. Bu mod üzerinde, uygulamada bir UI öğesi seçebilirsiniz ve **canlı görsel ağaç** (ve **canlı Özellik Görüntüleyicisi**), düğümü ilgili öğeye ve özelliklerine karşılık gelen ağaçta göstermek için otomatik olarak güncelleştirilir.
 
-   **Çalışan uygulamada düzen donatıcılarını görüntüleme.** Seçimi etkinleştir düğmesinin hemen sağ tarafından düğmeyi seçerek bu modu etkinleştirebilirsiniz. Düzen **donatıcılarını** görüntüle seçeneği açık olduğunda, kenar boşluklarını gösteren dikdörtgenlerin yanı sıra nelere hizalı olduğunu görmek için uygulama penceresinin seçili nesnenin sınırları boyunca yatay ve dikey çizgiler göstermelerini sağlar. Örneğin, Hem Seçimi etkinleştir **hem de** **Düzeni görüntüle'yi** etkinleştirin ve **uygulamada Öğe** Ekle metin bloğu seçin. Canlı Görsel Ağaç'ta metin  bloğu düğümünü ve **Canlı** Özellik Görüntüleyicisi'nde metin bloğu özelliklerini ve metin bloğu sınırları üzerinde yatay ve dikey çizgileri görüyor gerekir.
+   **Çalışan uygulamada düzen donatıcıları görüntüleyin**. Seçimi Etkinleştir düğmesinin hemen sağında bulunan düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. **Görüntüleme düzeni donatıcıları** açık olduğunda, uygulama penceresinin seçili nesnenin sınırları üzerinde yatay ve dikey çizgiler görüntülemesine neden olur, böylece neyin ne kadar hizalanacağını görebilir ve kenar boşluklarını gösteren dikdörtgenler de gösterilir. Örneğin, her ikisini de **seçimi** ve **görüntüleme yerleşimini** etkinleştirin ve uygulamada **öğe Ekle** metin bloğunu seçin. **Canlı görsel ağaçta** metin bloğu düğümünü ve **canlı Özellik görüntüleyicisinde** metin bloğu özelliklerinin yanı sıra metin bloğunun sınırları üzerindeki yatay ve dikey çizgileri görmeniz gerekir.
 
-   ![DisplayLayout'ta LivePropertyViewer](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer-DisplayLayout")
+   ![DisplayLayout içinde LivePropertyViewer](../debugger/media/livevisualtreelivepropertyviewer-displaylayout.png "LiveVisualTreeLivePropertyViewer-DisplayLayout")
 
-   **Önizleme Seçimi**. Canlı Görsel Ağaç araç çubuğunun sol tarafından üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa öğenin bildiril olduğu XAML'i gösterir. Seçimi **etkinleştir'i** **ve Önizleme seçimini** seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow.xaml dosyası Visual Studio açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
+   **Önizleme seçimi**. Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. Seçim ve **Önizleme seçimini** **Etkinleştir** ' i seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
    ::: moniker-end
 
-## <a name="use-xaml-tools-with-running-applications"></a>Uygulama çalıştırma ile XAML araçlarını kullanma
+## <a name="use-xaml-tools-with-running-applications"></a>Çalışan uygulamalarla XAML araçlarını kullanma
 
-Kaynak koduna sahip değilken bile bu XAML araçlarını kullanabilirsiniz. Çalışan bir XAML uygulamasına iliştirerek, o uygulamanın kullanıcı arabirimi **öğelerinde** Canlı Görsel Ağaç'ı da kullanabilirsiniz. Burada daha önce kullanılan WPF test uygulamasını kullanan bir örnek ve ardından.
+Kaynak kodunuz olmadığında bile bu XAML araçlarını kullanabilirsiniz. Çalışan bir XAML uygulamasına iliştirmeye çalıştığınızda, bu uygulamanın UI öğelerinde **canlı görsel ağaç** ' ı da kullanabilirsiniz. Daha önce kullandığımız aynı WPF test uygulamasını kullanarak bir örnek aşağıda verilmiştir.
 
-1. Yayın **yapılandırmasında TestXaml** uygulamasını başlatma. Hata ayıklama yapılandırmasında çalışan bir işleme ek **olamaz.**
+1. Sürüm yapılandırmasında **TestXaml** uygulamasını başlatın. **Hata ayıklama** yapılandırmasında çalışan bir işleme iliştiremezsiniz.
 
-2. dosyanın ikinci bir örneğini açın ve Visual Studio **Ekle'ye > Ayıkla'ya tıklayın.** Kullanılabilir **TestXaml.exe** listesinde bir liste bulun ve Ekle'ye **tıklayın.**
+2. Visual Studio ikinci bir örneğini açın ve **işleme eklemek > hata ayıkla**' ya tıklayın. Kullanılabilir süreçler listesinde **TestXaml.exe** bulun ve **Ekle**' ye tıklayın.
 
 3. Uygulama çalışmaya başlar.
 
-4. Visual Studio'nin ikinci örneğinde Canlı Görsel Ağaç **(** Canlı Görsel **Ağaç> Windows > hata ayıkla) açın.** **TestXaml** kullanıcı arabirimi öğelerini görüyor ve uygulamanın doğrudan hata ayıklamasını yaparken olduğu gibi bunları yönetebilirsiniz.
+4. Visual Studio ikinci örneğinde **canlı görsel ağacı** açın (**hata ayıklama > Windows > canlı görsel ağaç**). **TestXaml** Kullanıcı arabirimi öğelerini görmeniz gerekir ve uygulamayı doğrudan hata ayıklarken yaptığınız gibi işleyebilmelisiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[XAML Çalışırken Yeniden Yükleme ile XAML kodu çalıştırmayı ve hata ayıklamayı XAML Çalışırken Yeniden Yükleme](xaml-hot-reload.md)
+[Xaml dinamik yeniden yüklemesine çalışan XAML kodu yazma ve hata ayıklama](xaml-hot-reload.md)

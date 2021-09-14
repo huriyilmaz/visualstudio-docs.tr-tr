@@ -15,11 +15,11 @@ ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
 ms.openlocfilehash: fb6d40558acac6c51f353925b7e8a5b5453f611a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122026700"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634238"
 ---
 # <a name="how-to-add-a-threshold-rule-using-the-load-test-editor"></a>Nasıl: Yük testi düzenleyicisini kullanarak eşik kuralı ekleme
 
@@ -35,7 +35,7 @@ Yük testlerinde eşik kuralları, performans sayacı değerini sabit değerle v
 
 3. Sayaç Kümelerinden **biri için** Sayaç Kategorilerinden birini genişletin. Örneğin, **LoadTest:Scenario öğesini seçin.** Düğümü genişletin.
 
-4. Sayaçlardan birini (örneğin, Kullanıcı Yükü) **LoadTest:Scenario altında sağ tıklayın.**  Eşik **Kuralı Ekle'yi seçin.**
+4. Sayaçlardan birini (örneğin, Kullanıcı Yüklemesi) **LoadTest:Scenario altında sağ tıklayın.**  Eşik **Kuralı Ekle'yi seçin.**
 
      Eşik **Kuralı Ekle** iletişim kutusu görüntülenir.
 

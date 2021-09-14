@@ -1,6 +1,6 @@
 ---
-description: Sembolün Microsoft Ara Dil (MSIL) koduna başvurup başvurul olmadığını belirten bir bayrak alınır.
-title: IDiaSymbol::get_msil | Microsoft Docs
+description: Simgenin Microsoft ara dili (MSIL) koduna işaret edilip edilmeyeceğini belirten bir bayrak alır.
+title: 'IDiaSymbol:: get_msil | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,14 +15,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 68ae7c5ad745d80dd6f5462f08440088b4b930c5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113542"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725445"
 ---
 # <a name="idiasymbolget_msil"></a>IDiaSymbol::get_msil
-Sembolün Microsoft Ara Dil (MSIL) koduna başvurup başvurul olmadığını belirten bir bayrak alınır.
+Simgenin Microsoft ara dili (MSIL) koduna işaret edilip edilmeyeceğini belirten bir bayrak alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -35,13 +35,13 @@ HRESULT get_msil (
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Sembol `TRUE` MSIL koduna başvurursa döndürür; aksi takdirde `FALSE` döndürür.
+dışı `TRUE` SIMGENIN MSIL kodunu ifade eder; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> dönüş `S_FALSE` değeri, özelliğin sembol için kullanılamaz olduğu anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

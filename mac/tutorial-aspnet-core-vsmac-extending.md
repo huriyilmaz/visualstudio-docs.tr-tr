@@ -1,6 +1,6 @@
 ---
-title: Mevcut bir web ASP.NET Core genişletme
-description: Bu belge, eShopOnWeb örneği ve uygulamanın nasıl genişletilene ASP.NET Core içerir.
+title: mevcut bir ASP.NET Core web uygulamasını genişletme
+description: bu belgede eshoponweb örnek ASP.NET Core uygulamasının nasıl genişletileceğini gösteren video öğreticileri yer almaktadır.
 ms.custom: SEO-VS-2020
 author: sayedihashimi
 ms.author: sayedha
@@ -8,49 +8,49 @@ ms.date: 10/18/2019
 ms.assetid: 047f5e36-f38e-4bf6-a1c5-3fde32978b7d
 ms.topic: tutorial
 ms.openlocfilehash: d2813f70a497df9057f312f561504639b4e1afcd
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964834"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725960"
 ---
-# <a name="tutorial-extending-an-existing-aspnet-core-web-application"></a>Öğretici: Mevcut bir web ASP.NET Core genişletme
+# <a name="tutorial-extending-an-existing-aspnet-core-web-application"></a>öğretici: mevcut bir ASP.NET Core web uygulamasını genişletme
 
-Bu [öğreticilerde, eShopOnWeb başvuru uygulaması ile birlikte çalışabilirsiniz.](https://github.com/dotnet-architecture/eShopOnWeb) Her adım bir videodan ve öğretici belgeden oluşur.
+Bu öğreticilerde [Eshoponweb Reference](https://github.com/dotnet-architecture/eShopOnWeb)uygulamasıyla çalışıcaksınız. Her adım bir video ve öğretici belgesi içerir.
 
 ## <a name="step-1-getting-started-with-eshoponweb"></a>1. Adım: eShopOnWeb ile çalışmaya başlama
 
-Bu videoda eShopOnWeb uygulamasını kullanmaya başlarken size yol Mac için Visual Studio.
+bu videoda, Mac için Visual Studio kullanarak eshoponweb uygulaması ile çalışmaya başlama konusunda yol gösterilecektir.
 
-[Adım adım kılavuz](https://github.com/dotnet-architecture/eShopOnWeb/wiki/Getting-Started-for-Beginners-with-Visual-Studio-for-Mac)
+[Adım adım yönergeler](https://github.com/dotnet-architecture/eShopOnWeb/wiki/Getting-Started-for-Beginners-with-Visual-Studio-for-Mac)
 
 > [!VIDEO https://www.youtube.com/embed/-joD6W2aR3o]
 
 ## <a name="step-2-working-with-the-eshoponweb-solution"></a>2. Adım: eShopOnWeb çözümüyle çalışma
 
-eShopOnWeb çözümüyle çalışma hakkında bilgi edinmek için Mac için Visual Studio.
+Mac için Visual Studio ' de eshoponweb çözümüyle nasıl çalışacağınızı öğreneceksiniz.
 
-[Adım adım kılavuz](https://github.com/dotnet-architecture/eShopOnWeb/wiki/Working-with-the-Project-and-Adding-New-Features-using-Visual-Studio-for-Mac)
+[Adım adım yönergeler](https://github.com/dotnet-architecture/eShopOnWeb/wiki/Working-with-the-Project-and-Adding-New-Features-using-Visual-Studio-for-Mac)
 
 > [!VIDEO https://www.youtube.com/embed/PXTJCzCwvE4]
 
-## <a name="step-3-adding-docker-and-running-it-locally"></a>3. Adım: Docker'ı ekleme ve yerel olarak çalıştırma
+## <a name="step-3-adding-docker-and-running-it-locally"></a>3. Adım: Docker ekleme ve yerel olarak çalıştırma
 
-Docker kapsayıcılarını eShopOnWeb uygulamasına eklemenin yanı sıra dockerized uygulamasını çalıştırmayı ve hata ayıklamayı da öğrenirsiniz.
+EShopOnWeb uygulamasına Docker Kapsayıcıları eklemeyi ve dockerıleştirilmiş uygulamanın nasıl çalıştırılacağını ve hata ayıklanalınacağını öğreneceksiniz.
 
-[Adım adım kılavuz](https://github.com/dotnet-architecture/eShopOnWeb/wiki/03b.-Running-Locally-on-a-Linux-Container-from-Visual-Studio-for-Mac)
+[Adım adım yönergeler](https://github.com/dotnet-architecture/eShopOnWeb/wiki/03b.-Running-Locally-on-a-Linux-Container-from-Visual-Studio-for-Mac)
 
 > [!VIDEO https://www.youtube.com/embed/QqZr6cbKoIM]
 
-## <a name="step-4-deploying-to-azure-app-services"></a>4. Adım: Azure App Services'e Dağıtma
+## <a name="step-4-deploying-to-azure-app-services"></a>4. Adım: Azure Uygulama Hizmetleri 'ne dağıtma
 
-eShopOnWeb uygulamasını [Azure App Services'e dağıtmayı öğrenirsiniz.](https://azure.microsoft.com/services/app-service/)
+EShopOnWeb uygulamasını [Azure Uygulama Hizmetleri](https://azure.microsoft.com/services/app-service/)'ne dağıtmayı öğreneceksiniz.
 
-[Adım adım kılavuz](https://github.com/dotnet-architecture/eShopOnWeb/wiki/01b.-Deploying-to-Azure-App-Service-from-Visual-Studio-for-Mac)
+[Adım adım yönergeler](https://github.com/dotnet-architecture/eShopOnWeb/wiki/01b.-Deploying-to-Azure-App-Service-from-Visual-Studio-for-Mac)
 
 > [!VIDEO https://www.youtube.com/embed/HfJPTzlLIWA]
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
  - [ASP.NET Core Kullanmaya Başlama](asp-net-core.md)
- - [ASP.NET Core Web Uygulaması Dağıtımı](web-app-deployment.md)
+ - [ASP.NET Core Web uygulaması dağıtımı](web-app-deployment.md)

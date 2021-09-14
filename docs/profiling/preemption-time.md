@@ -15,22 +15,22 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 02398447da41c1cb1442c7fb6a10b57625c2ecef
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122027454"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628340"
 ---
-# <a name="preemption-time"></a>Önk süre
+# <a name="preemption-time"></a>Ön hazırlık süresi
 Zaman çizelgesinde yer alan bu segmentler, Ön emption olarak kategorilere ayrılmış engelleme süresiyle ilişkilendirilmektedir. Bu kategori, bir iş parçacığının şu nedenlerden biri nedeniyle kapatıldığı anlamına gelir:
 
 - Zamanlayıcı, daha yüksek öncelikli bir iş parçacığı kullanarak bunu değiştirdi.
 
 - İş parçacığının yürütme kuantum süresi doldu ve diğer iş parçacıkları yürütülmaya hazırdı.
 
-  Bu süre boyunca bir iş parçacığı, Eşzamanlılık Görselleştiricisi'nin Ön emption olarak sayma nedeniyle çekirdek bekleme nedeniyle engellendi. Ön emption segmentleri, bir iş parçacığı mantıksal çekirdekten çıkarılırken başlar ve bu iş parçacığı yürütmeyi sürdürterek sona erer.
+  Bu süre boyunca bir iş parçacığı, Eşzamanlılık Görselleştiricisi'nin Ön emption olarak sayma nedeniyle çekirdek bekleme nedeniyle engellendi. Ön emption segmentleri, bir iş parçacığı mantıksal çekirdekten çıkarılırken başlar ve bu iş parçacığı yürütmeyi sürdürürken sona erer.
 
-  Önceden boşaltılan segmentin araç ipucu, ön emptiona neden olan işlem veya iş parçacığının adını görüntüler. Ancak bu, üzerine geçen işlem veya iş parçacığının, önceki süre boyunca gerçekten çalışma yaptığına yönelik bir ifade değildir.
+  Önceden boşaltılan segmentin araç ipucu, ön emptiona neden olan işlem veya iş parçacığının adını görüntüler. Ancak bu, üzerine geçen sürecin veya iş parçacığının, önceki süre boyunca gerçekten çalışma yaptığına yönelik bir ifade değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

@@ -1,6 +1,6 @@
 ---
-title: Yalnızca kendi kodum (Iş parçacıkları görünümü) | Microsoft Docs
-description: Yalnızca kendi kodum seçeneğini belirlerseniz, çağrı yığınını yalnızca kodunuzun yanı sıra çağrılan işlevlerin bir düzeyini gösterecek şekilde nasıl filtreleyeceğinizi öğrenin.
+title: Yalnızca kendi kodum (İş Parçacıkları Görünümü) | Microsoft Docs
+description: Çağrı yığınını filtreleyerek yalnızca kodunuzun yanı sıra tek bir çağrılı işlev düzeyi göstermek için Yalnızca kendi kodum öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,18 +15,18 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 8613a3857325f80e8aa700230b44cadcf691dd11
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122038779"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726834"
 ---
 # <a name="just-my-code-threads-view"></a>Yalnızca Kendi Kodum (İş Parçacıkları Görünümü)
-Bu seçeneği belirlerseniz, çağrı yığınını yalnızca kodunuzun yanı sıra çağrılan işlevlerin bir düzeyini gösterecek şekilde filtreleyecek.
+Bu seçeneği tercih ederseniz, çağrı yığınını yalnızca kodunuzun yanı sıra bir çağrılı işlev düzeyi gösterecek şekilde filtrelersiniz.
 
- Bu seçeneği etkinleştirerek, çağrı yığınının karmaşıklığını önemli ölçüde azaltabilir, belki de belirli bir sorunu tanılamayı daha kolay hale getirebilirsiniz.
+ Bu seçeneği etkinleştirerek çağrı yığınının karmaşıklığını önemli ölçüde azaltabilir ve belirli bir sorunu tanılamayı kolaylaştırabilirsiniz.
 
- Bazı durumlarda, bu seçeneğin belirlenmesi engelleme çağrısını filtreleyebiliriz. Bu belirlenmesi için tam çağrı yığını ayrıntılarına ihtiyacınız varsa, tam çağrı yığınını ortaya çıkarmak için bu seçeneği temizleyin.
+ Bazı durumlarda, bu seçeneğin seçerek engelleme çağrısını filtrelenmiş olabilir. Bu belirlemeyi yapmak için tam çağrı yığını ayrıntılarına ihtiyaç ediyorsanız, tam çağrı yığınını ortaya çıkarmak için bu seçeneğin temizlemesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

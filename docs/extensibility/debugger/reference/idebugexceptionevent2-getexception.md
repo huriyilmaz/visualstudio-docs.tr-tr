@@ -1,6 +1,6 @@
 ---
-description: Bu olayı tetikleyen özel durumun ayrıntılı bir açıklamasını alır.
-title: 'IDebugExceptionEvent2:: GetException | Microsoft Docs'
+description: Bu olayı neden olan özel durumun ayrıntılı açıklamasını alır.
+title: IDebugExceptionEvent2::GetException | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b181e91bf06538b09a12a394404926e30e00ca91
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122111055"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725806"
 ---
 # <a name="idebugexceptionevent2getexception"></a>IDebugExceptionEvent2::GetException
-Bu olayı tetikleyen özel durumun ayrıntılı bir açıklamasını alır.
+Bu olayı neden olan özel durumun ayrıntılı açıklamasını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,14 +43,14 @@ int GetException(
 
 ## <a name="parameters"></a>Parametreler
 `pExceptionInfo`\
-[in, out] Özel durumun açıklamasıyla doldurulmuş bir [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısı.
+[in, out] Özel [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) açıklamasıyla doldurulan bir özel durum yapısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
 
- [Yalnızca C++] Çağıran, [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısındaki dizeleri boşaltmaktan ve [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesinin yapıda serbest bırakılmasından sorumludur.
+ [yalnızca C++ ] Çağıran, [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) [nesnesinin EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) serbest bırakmanın yanı sıra bu yapıda yer alan dizeleri serbest bırakmakla sorumludur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)

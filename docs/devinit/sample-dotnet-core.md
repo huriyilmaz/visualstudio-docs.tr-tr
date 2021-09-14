@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: c56665df760338975e334533bc3ddfdcd4f34434e01a3e17ca8d5d9440679856
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: b3e25835f305a96b2205fc96cc0200d68ad033af
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452943"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725857"
 ---
 # <a name="net-core-app"></a>.NET Core uygulaması
 
@@ -27,7 +27,7 @@ Codespaces 'a gerekli .NET Core SDK sürümünü yüklemek için devinit kullanm
 
 ## <a name="devinitjson"></a>.devinit.json
 
-Depo kökündeki dosya _.devinit.js_ içeriği.
+Depo kökündeki _. devinit. JSON_ dosyasının içeriği.
 
 ```json
 {
@@ -41,9 +41,9 @@ Depo kökündeki dosya _.devinit.js_ içeriği.
 }
 ```
 
-## <a name="devcontainerjson"></a>Üzerinde .devcontainer.js
+## <a name="devcontainerjson"></a>. devcontainer. JSON
 
-Depo kökündeki dosya _.devcontainer.js_ içeriği.
+Depo kökündeki _. devcontainer. JSON_ dosyasının içeriği.
 
 ```json
 {
@@ -53,7 +53,7 @@ Depo kökündeki dosya _.devcontainer.js_ içeriği.
 
 ## <a name="globaljson"></a>global.json
 
-Depo kökündeki dosya _global.js_ içeriği.
+Depo kökündeki _Global. JSON_ dosyasının içeriği.
 
 ```json
 {

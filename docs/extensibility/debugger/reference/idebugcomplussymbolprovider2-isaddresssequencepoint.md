@@ -1,6 +1,6 @@
 ---
 description: Belirtilen hata ayıklama adresinin bir sıra noktası olup olmadığını belirler.
-title: 'IDebugComPlusSymbolProvider2:: IsAddressSequencePoint | Microsoft Docs'
+title: IDebugComPlusSymbolProvider2::IsAddressSequencePoint | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,11 +17,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7d47cd32ad243725691362f58e5ae7552669680a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122079655"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725269"
 ---
 # <a name="idebugcomplussymbolprovider2isaddresssequencepoint"></a>IDebugComPlusSymbolProvider2::IsAddressSequencePoint
 Belirtilen hata ayıklama adresinin bir sıra noktası olup olmadığını belirler.
@@ -42,13 +42,13 @@ int IsAddressSequencePoint(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-'ndaki [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi.
+[in] [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Hata ayıklama adresi bir sıra noktası ise, öğesini döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` .
+Hata ayıklama adresi bir sıra noktası ise döndürür; `S_OK` aksi takdirde `S_FALSE` döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider2** arabirimini ortaya çıkaran bir [CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsAddressSequencePoint(

@@ -16,15 +16,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b6f25154015790919577d7fc32daffe21c0e69d90c10675c98dd2ad5d1314eed
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 5bf5ec98fc71158d9ebe3b95ec9e3d49526cb491
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121388727"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726940"
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton öğesi (Visual Studio şablonları)
-Kullanıcıların yeni projenin **kayded** olduğu varsayılan dizini **kolayca değiştire** Project için Gözat düğmesinin Yeni Dizin iletişim kutusunda kullanılabilir olup olmadığını belirtir.
+Kullanıcıların yeni **bir** projenin kayded olduğu varsayılan **dizini kolayca değiştire** Project için Yeni Görünüm iletişim kutusunda Gözat düğmesinin kullanılabilir olup olmadığını belirtir.
 
  \<VSTemplate> \<TemplateData>
  \<EnableLocationBrowseButton>
@@ -48,17 +48,17 @@ Kullanıcıların yeni projenin **kayded** olduğu varsayılan dizini **kolayca 
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırarak Yeni Öğe Ekle iletişim kutusunda **Project** **şekilde** tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırarak Yeni Öğe Ekle iletişim kutusunda **Project** **nasıl görüntü olduğunu** tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Metin, Yeni Giriş `true` iletişim `false` kutusunda Gözat düğmesinin  görüntüleniyor olup olmadığını belirten **veya Project** gerekir.
+ Metin, Yeni Giriş iletişim kutusunda Gözat düğmesinin görüntüleniyor olup olmadığını `true` `false` belirten veya **Project** gerekir. 
 
 ## <a name="remarks"></a>Açıklamalar
  `EnableLocationBrowseButton` isteğe bağlı bir öğedir. Varsayılan değer, `true` Yeni Giriş iletişim **kutusunda** Gözat düğmesini **Project** değeridir.
 
- Yeni **Project** iletişim kutusunda, **Konum** metin kutusu yeni projenin kayded olduğu dizini belirtir. Gözat **düğmesi,** **Project Konumu** iletişim kutusunu görüntüleyerek bu dizini değiştirmenize yardımcı olur. Bu iletişim kutusu bilgisayarınızdan kullanılabilen farklı bir dizine kolayca gidin ve yeni projenin kayded olduğu dizin olarak seçin.
+ Yeni **Project** iletişim kutusunda, **Konum** metin kutusu yeni projenin kayded olduğu dizini belirtir. Gözat **düğmesi,** **Project Konumu** iletişim kutusunu görüntüleyerek bu dizini değiştirmenize yardımcı olur. Bu iletişim kutusu, bilgisayarınızdan kullanılabilen farklı bir dizine kolayca gidin ve yeni projenin kayded olduğu dizin olarak bunu seçin.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, bir uygulamanın meta [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] verilerini Windows göstermektedir.

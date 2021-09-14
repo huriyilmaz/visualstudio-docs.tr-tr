@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: adf3b3b6efd6e1c0df4c8cd45c0d0bb9c6f2196d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122107393"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726832"
 ---
 # <a name="marker_serieswrite_flag-method"></a>marker_series:: write_flag yöntemi
 Eşzamanlılık görselleştiricisi izleme dosyasına bir bayrak yazar.

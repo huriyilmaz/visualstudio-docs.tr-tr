@@ -1,6 +1,6 @@
 ---
 title: Word nesne modeline genel bakış
-description: Word nesne modeli, Word için birincil birlikte çalışma derlemesinde sağlanan ve Word ad alanında tanımlanan sınıflardan ve arabirimlerden oluşur.
+description: Word nesne modeli, Word için birincil birlikte çalışma derlemesinde sunulan ve Word ad alanında tanımlanmış sınıflardan ve arabirimlerden oluşur.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -21,20 +21,20 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 919253f271da3c8f7d486ea9bfd8706c2bd66c71
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122068471"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726093"
 ---
 # <a name="word-object-model-overview"></a>Word nesne modeline genel bakış
-  Visual Studio'da Word çözümleri Visual Studio Word nesne modeliyle etkileşime geçmeniz gerekir. Bu nesne modeli, Word için birincil birlikte çalışma derlemesinde sağlanan ve ad alanında tanımlanan sınıflardan ve arabirimlerden <xref:Microsoft.Office.Interop.Word> oluşur.
+  Visual Studio ' de word çözümleri geliştirirken word nesne modeliyle etkileşime geçin. Bu nesne modeli, Word için birincil birlikte çalışma derlemesinde sunulan sınıflardan ve arabirimlerden oluşur ve <xref:Microsoft.Office.Interop.Word> ad alanında tanımlanır.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- Bu konu, Word nesne modeline kısa bir genel bakış sağlar. Tüm Word nesne modeli hakkında daha fazla bilgi edinebilirsiniz kaynakları için [Bkz. Word nesne modeli belgelerini kullanma.](#WordOMDocumentation)
+ Bu konuda Word nesne modeli hakkında kısa bir genel bakış sunulmaktadır. Tüm Word nesne modeli hakkında daha fazla bilgi sağlayabileceğiniz kaynaklar için, bkz. [Word nesne modeli belgelerini kullanma](#WordOMDocumentation).
 
- Belirli görevleri gerçekleştirmek için Word nesne modelini kullanma hakkında bilgi için aşağıdaki konulara bakın:
+ Belirli görevleri gerçekleştirmek için Word nesne modelini kullanma hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
 - [Belgelerle çalışma](../vsto/working-with-documents.md)
 
@@ -43,15 +43,15 @@ ms.locfileid: "122068471"
 - [Tablolarla çalışma](../vsto/working-with-tables.md)
 
 ## <a name="understand-the-word-object-model"></a><a name="understanding"></a> Word nesne modelini anlama
- Word, etkileşim kurabilirsiniz yüzlerce nesne sağlar. Bu nesneler, kullanıcı arabirimini yakından izleyen bir hiyerarşide düzenlenir. Hiyerarşinin en üstünde nesnesi <xref:Microsoft.Office.Interop.Word.Application> yer alır. Bu nesne geçerli Word örneğini temsil eder. nesnesi <xref:Microsoft.Office.Interop.Word.Application> , <xref:Microsoft.Office.Interop.Word.Document> , ve <xref:Microsoft.Office.Interop.Word.Selection> <xref:Microsoft.Office.Interop.Word.Bookmark> nesnelerini <xref:Microsoft.Office.Interop.Word.Range> içerir. Bu nesnelerin her biri, nesneyi işlemek ve nesneyle etkileşim kurmak için erişebilirsiniz birçok yöntem ve özele sahiptir.
+ Word, etkileşime girebilmeniz için yüzlerce nesne sağlar. Bu nesneler, Kullanıcı arabirimini yakından takip eden bir hiyerarşide düzenlenir. Hiyerarşinin en üstünde <xref:Microsoft.Office.Interop.Word.Application> nesnesi olur. Bu nesne, Word 'ün geçerli örneğini temsil eder. <xref:Microsoft.Office.Interop.Word.Application>Nesnesi,,, <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Interop.Word.Selection> <xref:Microsoft.Office.Interop.Word.Bookmark> ve nesnelerini içerir <xref:Microsoft.Office.Interop.Word.Range> . Bu nesnelerin her biri, nesne üzerinde işleme ve etkileşimde bulunmak için erişebileceğiniz birçok yöntem ve özelliğe sahiptir.
 
- Aşağıdaki çizimde, Word nesne modelinin hiyerarşisinde bu nesnelerin bir görünümü gösterilmiştir.
+ Aşağıdaki çizimde, Word nesne modeli hiyerarşisinde bu nesnelerin bir görünümü gösterilmektedir.
 
- ![Word Nesne Modeli grafiği](../vsto/media/wrwordobjectmodel.gif "Word nesne modeli grafiği")
+ ![Word nesne modeli grafiği](../vsto/media/wrwordobjectmodel.gif "Word nesne modeli grafiği")
 
- İlk bakışta nesneler çakışıyor gibi görünür. Örneğin, <xref:Microsoft.Office.Interop.Word.Document> ve <xref:Microsoft.Office.Interop.Word.Selection> nesneleri hem nesnenin üyesi hem de <xref:Microsoft.Office.Interop.Word.Application> nesnesi aynı zamanda nesnenin bir <xref:Microsoft.Office.Interop.Word.Document> <xref:Microsoft.Office.Interop.Word.Selection> üyesidir. Hem hem <xref:Microsoft.Office.Interop.Word.Document> de <xref:Microsoft.Office.Interop.Word.Selection> nesneleri ve <xref:Microsoft.Office.Interop.Word.Bookmark> nesnelerini <xref:Microsoft.Office.Interop.Word.Range> içerir. Aynı nesne türüne erişmenin birden çok yolu olduğundan çakışma vardır. Örneğin, bir nesneye biçimlendirme uygulayabilirsiniz; ancak geçerli seçim aralığına, belirli bir paragrafa, bir bölüme veya belgenin tamamına <xref:Microsoft.Office.Interop.Word.Range> erişmek istiyor olabilir.
+ İlk bakışta nesneler çakışacak şekilde görünür. Örneğin, <xref:Microsoft.Office.Interop.Word.Document> ve <xref:Microsoft.Office.Interop.Word.Selection> nesneleri <xref:Microsoft.Office.Interop.Word.Application> nesnenin üyeleridir, ancak <xref:Microsoft.Office.Interop.Word.Document> nesne Ayrıca nesnenin bir üyesidir <xref:Microsoft.Office.Interop.Word.Selection> . Hem hem <xref:Microsoft.Office.Interop.Word.Document> de <xref:Microsoft.Office.Interop.Word.Selection> nesneleri <xref:Microsoft.Office.Interop.Word.Bookmark> ve <xref:Microsoft.Office.Interop.Word.Range> nesneleri içerir. Aynı nesne türüne erişmek için birden çok yol olduğu için çakışma vardır. Örneğin, bir nesnesine biçimlendirme uygularsınız <xref:Microsoft.Office.Interop.Word.Range> ; ancak, belirli bir paragrafın, bir bölümün veya tüm belgenin bulunduğu aralığa erişmek isteyebilirsiniz.
 
- Aşağıdaki bölümlerde üst düzey nesneler ve birbirleriyle nasıl etkileşime geçmeleri açıklanmaktadır. Bu nesneler şunlardır:
+ Aşağıdaki bölümler en üst düzey nesneleri ve birbirleriyle nasıl etkileşime gireceğini kısaca açıklamaktadır. Bu nesneler aşağıdaki beş içerir:
 
 - Uygulama nesnesi
 
@@ -61,68 +61,68 @@ ms.locfileid: "122068471"
 
 - Aralık nesnesi
 
-- Yer işareti nesnesi
+- Bookmark nesnesi
 
-  Word nesne modeline ek olarak, Office projelerini Visual Studio  word  nesne modelinde bazı nesneleri genişleten konak öğeleri ve konak denetimleri sağlar. Konak öğeleri ve konak denetimleri genişletildikleri Word nesneleri gibi davranır, ancak veri bağlama özellikleri ve ek olaylar gibi ek işlevlere de sahiptir. Daha fazla bilgi için [bkz. Genişletilmiş nesneleri kullanarak Word'u otomatikleştirme ve](../vsto/automating-word-by-using-extended-objects.md) Konak öğeleri [ve konak denetimlerine genel bakış.](../vsto/host-items-and-host-controls-overview.md)
+  word nesne modeli ' ne ek olarak, Visual Studio Office projeler, word nesne modelindeki bazı nesneleri genişleten *konak öğeleri* ve *konak denetimleri* sağlar. Konak öğeleri ve konak denetimleri genişledikleri Word nesneleri gibi davranır, ancak veri bağlama özellikleri ve ek olaylar gibi ek işlevlere de sahiptir. Daha fazla bilgi için bkz. Genişletilmiş nesneler ve [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md) [kullanarak Word 'ü otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md) .
 
 ### <a name="application-object"></a>Uygulama nesnesi
- nesnesi <xref:Microsoft.Office.Interop.Word.Application> Word uygulamasını temsil eder ve diğer tüm nesnelerin üst öğesidir. Üyeleri genellikle Word'e bir bütün olarak uygulanır. Word ortamını kontrol etmek için özelliklerini ve yöntemlerini kullanabilirsiniz.
+ <xref:Microsoft.Office.Interop.Word.Application>Nesnesi, Word uygulamasını temsil eder ve diğer tüm nesnelerin üst öğesidir. Üyeleri genellikle bir bütün olarak Word 'e uygulanır. Word ortamını denetlemek için özelliklerini ve yöntemlerini kullanabilirsiniz.
 
- Eklenti VSTO sınıfını kullanarak <xref:Microsoft.Office.Interop.Word.Application> nesnesine `Application` `ThisAddIn` erişebilirsiniz. Daha fazla bilgi için [bkz. Program VSTO Eklentileri.](../vsto/programming-vsto-add-ins.md)
+ VSTO eklenti projelerinde, <xref:Microsoft.Office.Interop.Word.Application> sınıfının alanını kullanarak nesneye erişebilirsiniz `Application` `ThisAddIn` . daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
 
- Belge düzeyi projelerde, sınıfının <xref:Microsoft.Office.Interop.Word.Application> özelliğini kullanarak <xref:Microsoft.Office.Tools.Word.Document.Application%2A> nesnesine `ThisDocument` erişebilirsiniz.
+ Belge düzeyi projelerinde, <xref:Microsoft.Office.Interop.Word.Application> sınıfının özelliğini kullanarak nesneye erişebilirsiniz <xref:Microsoft.Office.Tools.Word.Document.Application%2A> `ThisDocument` .
 
 ### <a name="document-object"></a>Belge nesnesi
- nesnesi, <xref:Microsoft.Office.Interop.Word.Document> Word programlamanın merkezindedir. Bir belgeyi ve tüm içeriğini temsil eder. Bir belgeyi açıp yeni bir belge ekleyebilirsiniz. Bu, nesnenin <xref:Microsoft.Office.Interop.Word.Document> koleksiyonuna eklenen yeni <xref:Microsoft.Office.Interop.Word.Documents> bir nesne <xref:Microsoft.Office.Interop.Word.Application> oluşturur. Odak noktası olan belgeye etkin belge denir. Nesnenin <xref:Microsoft.Office.Interop.Word._Application.ActiveDocument%2A> özelliğiyle temsil <xref:Microsoft.Office.Interop.Word.Application> eder.
+ <xref:Microsoft.Office.Interop.Word.Document>Nesne, Word programlamasında orta. Bir belgeyi ve tüm içeriğini temsil eder. Bir belge açtığınızda veya yeni bir belge oluşturduğunuzda, <xref:Microsoft.Office.Interop.Word.Document> nesne koleksiyonuna eklenen yeni bir nesne oluşturun <xref:Microsoft.Office.Interop.Word.Documents> <xref:Microsoft.Office.Interop.Word.Application> . Odağa sahip belgeye etkin belge denir. Nesnenin özelliği tarafından temsil edilir <xref:Microsoft.Office.Interop.Word._Application.ActiveDocument%2A> <xref:Microsoft.Office.Interop.Word.Application> .
 
- Office geliştirme araçları Visual Studio <xref:Microsoft.Office.Interop.Word.Document> sağlayarak nesneyi <xref:Microsoft.Office.Tools.Word.Document> genişletmektedir. Bu tür, *bir nesnenin tüm* özelliklerine erişmenizi ve ek olaylar ve yönetilen denetimler ekleme olanağı <xref:Microsoft.Office.Interop.Word.Document> ekleyen bir konak öğesidir.
+ Visual Studio Office geliştirme araçları, <xref:Microsoft.Office.Interop.Word.Document> türü sağlayarak nesneyi genişletir <xref:Microsoft.Office.Tools.Word.Document> . Bu tür, bir nesnenin tüm özelliklerine erişmenizi sağlayan bir *konak öğesidir* <xref:Microsoft.Office.Interop.Word.Document> ve daha fazla olay ve yönetilen denetim ekleme özelliği ekler.
 
- Belge düzeyi bir proje ekleyebilirsiniz, projenizin <xref:Microsoft.Office.Tools.Word.Document> oluşturulan sınıfını kullanarak `ThisDocument` üyelere erişebilirsiniz. Ana bilgisayar öğesinin üyelerine, sınıftaki koddan Me veya bu anahtar sözcükleri kullanarak veya sınıfın dışındaki <xref:Microsoft.Office.Tools.Word.Document>  bir  `ThisDocument` `Globals.ThisDocument` koddan `ThisDocument` erişebilirsiniz. Daha fazla bilgi için [bkz. Program belge düzeyi özelleştirmeleri.](../vsto/programming-document-level-customizations.md) Örneğin, belgede ilk paragrafı seçmek için aşağıdaki kodu kullanın.
+ Belge düzeyinde bir proje oluşturduğunuzda, <xref:Microsoft.Office.Tools.Word.Document> projenizdeki oluşturulan sınıfı kullanarak üyelere erişebilirsiniz `ThisDocument` . <xref:Microsoft.Office.Tools.Word.Document>Ana öğe öğesinin üyelerine, sınıftaki koddan **Me** veya **Bu** anahtar sözcükleri kullanarak `ThisDocument` ya da `Globals.ThisDocument` sınıf dışındaki koddan kullanarak erişebilirsiniz `ThisDocument` . Daha fazla bilgi için bkz. [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md). Örneğin, belgedeki ilk paragrafı seçmek için aşağıdaki kodu kullanın.
 
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb" id="Snippet120":::
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs" id="Snippet120":::
 
- Eklenti VSTO içinde, çalışma zamanında <xref:Microsoft.Office.Tools.Word.Document> konak öğeleri oluşturabilirsiniz. Oluşturulan konak öğesini ilişkili belgeye denetim eklemek için kullanabilirsiniz. Daha fazla bilgi için bkz. Word belgelerini genişletme Excel çalışma VSTO çalışma [kitaplarını çalışma zamanında genişletme.](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
+ VSTO eklenti projelerinde, <xref:Microsoft.Office.Tools.Word.Document> çalışma zamanında konak öğeleri oluşturabilirsiniz. Oluşturulan konak öğesini, ilişkili belgeye denetim eklemek için kullanabilirsiniz. daha fazla bilgi için bkz. [çalışma zamanında VSTO eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
 ### <a name="selection-object"></a>Seçim nesnesi
- nesnesi <xref:Microsoft.Office.Interop.Word.Selection> şu anda seçili olan alanı temsil eder. Word kullanıcı arabiriminde kalın metin gibi bir işlem gerçekleştirerek metni seçer veya vurgular ve ardından biçimlendirmeyi uygulayabilirsiniz. Nesnesi <xref:Microsoft.Office.Interop.Word.Selection> her zaman bir belgede yer alan bir nesnedir. Hiçbir şey seçilmezse, ekleme noktasını temsil eder. Ayrıca, bir seçim bitişik olmayan birden çok metin bloğu kapsayıyor olabilir.
+ <xref:Microsoft.Office.Interop.Word.Selection>Nesnesi şu anda seçili olan alanı temsil eder. Sözcük Kullanıcı arabiriminde, kalın metin gibi bir işlem gerçekleştirdiğinizde, metni seçer veya vurgulayabilir ve ardından biçimlendirmeyi uygularsınız. <xref:Microsoft.Office.Interop.Word.Selection>Nesne her zaman bir belgede bulunur. Hiçbir şey seçilmezse, ekleme noktasını temsil eder. Ayrıca, bir seçim bitişik olmayan birden çok metin bloğunu kapsayabilir.
 
 ### <a name="range-object"></a>Aralık nesnesi
- nesnesi belgedeki bitişik bir alanı temsil eder ve başlangıç karakteri konumu ve bitiş karakteri <xref:Microsoft.Office.Interop.Word.Range> konumu ile tanımlanır. Tek bir nesneyle sınırlı <xref:Microsoft.Office.Interop.Word.Range> olmaz. Aynı belgede birden <xref:Microsoft.Office.Interop.Word.Range> çok nesne tanımlayabilirsiniz. Bir <xref:Microsoft.Office.Interop.Word.Range> nesne aşağıdaki özelliklere sahiptir:
+ <xref:Microsoft.Office.Interop.Word.Range>Nesnesi bir belgedeki bitişik bir alanı temsil eder ve bir başlangıç karakteri konumu ve bitiş karakteri konumu tarafından tanımlanır. Tek bir nesneyle sınırlı değilsiniz <xref:Microsoft.Office.Interop.Word.Range> . Aynı belgede birden fazla <xref:Microsoft.Office.Interop.Word.Range> nesne tanımlayabilirsiniz. Bir <xref:Microsoft.Office.Interop.Word.Range> nesne aşağıdaki özelliklere sahiptir:
 
-- Yalnızca ekleme noktasını, bir metin aralığını veya belgenin tamamını kapsayabilirsiniz.
+- Yalnızca ekleme noktası, bir metin aralığı veya tüm belgeyi içerebilir.
 
-- Boşluklar, sekme karakterleri ve paragraf işaretleri gibi yazdırilmeyen karakterleri içerir.
+- Boşluk, sekme karakteri ve paragraf işaretleri gibi yazdırılamayan karakterler içerir.
 
-- Geçerli seçimle temsil edilen alan veya geçerli seçimden farklı bir alanı temsil ediyor olabilir.
+- Bu, geçerli seçim tarafından temsil edilen alan olabilir veya geçerli seçimden farklı bir alanı temsil edebilir.
 
-- Belge, her zaman görünür olan bir seçimden farklı olarak görünür değildir.
+- Her zaman görünür olan bir seçimden farklı olarak, bir belgede görünmez.
 
-- Bir belgeyle birlikte kayıtlı değildir ve yalnızca kod çalışırken mevcuttur.
+- Bir belge ile kaydedilmez ve yalnızca kod çalışırken bulunur.
 
-  Bir aralığın sonuna metin eklerken Word, eklenen metni içerecek şekilde aralığı otomatik olarak genişleter.
+  Bir aralığın sonuna metin eklediğinizde, sözcük otomatik olarak aralığı eklenecek metni içerecek şekilde genişletir.
 
-### <a name="content-control-objects"></a>İçerik denetimi nesneleri
- , <xref:Microsoft.Office.Interop.Word.ContentControl> Word belgelerinde metin girişini ve sunumunu ve diğer içerik türlerini denetlemeniz için bir yol sağlar. , Zengin metin denetimi, tarih seçici veya birleşik giriş kutusu gibi Word belgelerinde kullanım için iyileştirilmiş birkaç farklı kullanıcı arabirimi <xref:Microsoft.Office.Interop.Word.ContentControl> türü display olabilir. Kullanıcıların belge veya <xref:Microsoft.Office.Interop.Word.ContentControl> şablonun bölümlerini düzenlemesini önlemek için de kullanabilirsiniz.
+### <a name="content-control-objects"></a>İçerik denetim nesneleri
+ <xref:Microsoft.Office.Interop.Word.ContentControl>, Word belgelerindeki metin ve diğer içerik türlerinin giriş ve sunumunu denetlemenizi sağlayan bir yol sağlar. Bir <xref:Microsoft.Office.Interop.Word.ContentControl> zengin metin denetimi, tarih seçici veya Birleşik giriş kutusu gibi Word belgelerinde kullanılmak üzere iyileştirilmiş birçok farklı kullanıcı arabirimi türünü görüntüleyebilir. Ayrıca, <xref:Microsoft.Office.Interop.Word.ContentControl> kullanıcıların belge veya şablon bölümlerini düzenlemesini engellemek için de kullanabilirsiniz.
 
- Visual Studio, nesneyi birkaç <xref:Microsoft.Office.Interop.Word.ContentControl> farklı konak denetimine genişleter. Nesne, içerik denetimleri için kullanılabilen farklı kullanıcı arabirimi türlerinden herhangi birini görüntüleyene Visual Studio her içerik denetimi için <xref:Microsoft.Office.Interop.Word.ContentControl> farklı bir tür sağlar. Örneğin, zengin metin denetimi oluşturmak için veya tarih seçici oluşturmak için <xref:Microsoft.Office.Tools.Word.RichTextContentControl> <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> kullanabilirsiniz. Bu konak denetimleri yerel gibi <xref:Microsoft.Office.Interop.Word.ContentControl> davranır, ancak ek olaylar ve veri bağlama özelliklerine sahiptir. Daha fazla bilgi için bkz. [İçerik denetimleri.](../vsto/content-controls.md)
+ Visual Studio, <xref:Microsoft.Office.Interop.Word.ContentControl> nesneyi birçok farklı konak denetimine genişletir. nesne, <xref:Microsoft.Office.Interop.Word.ContentControl> içerik denetimleri için kullanılabilen farklı kullanıcı arabirimi türlerinden herhangi birini görüntüleyebilir Visual Studio her içerik denetimi için farklı bir tür sağlar. Örneğin, bir <xref:Microsoft.Office.Tools.Word.RichTextContentControl> zengin metin denetimi oluşturmak için kullanabilirsiniz veya bir <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> Tarih Seçici oluşturmak için kullanabilirsiniz. Bu konak denetimleri, yerel gibi davranır <xref:Microsoft.Office.Interop.Word.ContentControl> , ancak ek olaylara ve veri bağlama yeteneklerine sahiptir. Daha fazla bilgi için bkz. [içerik denetimleri](../vsto/content-controls.md).
 
-### <a name="bookmark-object"></a>Yer işareti nesnesi
- nesnesi, hem başlangıç konumu hem de bitiş konumu olan bir <xref:Microsoft.Office.Interop.Word.Bookmark> belge içinde bitişik bir alanı temsil eder. Yer işaretlerini kullanarak bir belgede bir konumu veya belge içinde metin için kapsayıcı olarak işaret atabilirsiniz. Nesne <xref:Microsoft.Office.Interop.Word.Bookmark> ekleme noktasından veya belgenin tamamı kadar büyük olabilir. , <xref:Microsoft.Office.Interop.Word.Bookmark> nesnesini nesnesinden ayrı olarak ayar eden aşağıdaki özelliklere <xref:Microsoft.Office.Interop.Word.Range> sahiptir:
+### <a name="bookmark-object"></a>Bookmark nesnesi
+ <xref:Microsoft.Office.Interop.Word.Bookmark>Nesnesi, bir belgedeki bitişik bir alanı temsil eder ve hem başlangıç konumu hem de bitiş konumudur. Bir belgedeki konumu işaretlemek veya bir belgedeki metin için kapsayıcı olarak yer işaretlerini kullanabilirsiniz. Bir <xref:Microsoft.Office.Interop.Word.Bookmark> nesne ekleme noktasını içerebilir veya belgenin tamamı kadar büyük olabilir. , <xref:Microsoft.Office.Interop.Word.Bookmark> Nesnesinden ayrı olarak ayarlanan aşağıdaki özelliklere sahiptir <xref:Microsoft.Office.Interop.Word.Range> :
 
-- Yer işaretini tasarım zamanında ad veabilirsiniz.
+- Yer işaretini tasarım zamanında adı verebilirsiniz.
 
-- <xref:Microsoft.Office.Interop.Word.Bookmark> nesneleri belgeyle birlikte kaydedilir ve bu nedenle kod çalışmadan veya belgeniz kapatılana kadar silinmez.
+- <xref:Microsoft.Office.Interop.Word.Bookmark> nesneler, belgeyle birlikte kaydedilir ve bu nedenle kod çalışmayı durdurduğu veya belgeniz kapalıyken silinmez.
 
-- Yer işaretleri nesnenin özelliği false veya true olarak ayarlarak <xref:Microsoft.Office.Interop.Word.View.ShowBookmarks%2A> <xref:Microsoft.Office.Interop.Word.View> gizlenerek veya **görünür** hale **olabilir.**
+- Yer işaretleri, <xref:Microsoft.Office.Interop.Word.View.ShowBookmarks%2A> <xref:Microsoft.Office.Interop.Word.View> nesnenin özelliği **false** veya **true** olarak ayarlanarak gizlenebilir veya görünebilir hale getirilebilir.
 
-  Visual Studio, konak denetimi <xref:Microsoft.Office.Interop.Word.Bookmark> sağlayarak nesneyi <xref:Microsoft.Office.Tools.Word.Bookmark> genişleter. Konak <xref:Microsoft.Office.Tools.Word.Bookmark> denetimi yerel bir gibi <xref:Microsoft.Office.Interop.Word.Bookmark> davranır, ancak ek olaylar ve veri bağlama özelliklerine sahip olur. Verileri bir belge üzerinde yer işareti denetimine bağlamak için, verileri bir Form'daki bir metin kutusu denetimine bağlamayla Windows sekleyebilirsiniz. Daha fazla bilgi için bkz. [Yer işareti denetimi.](../vsto/bookmark-control.md)
+  Visual Studio, <xref:Microsoft.Office.Interop.Word.Bookmark> konak denetimini sağlayarak nesneyi genişletir <xref:Microsoft.Office.Tools.Word.Bookmark> . <xref:Microsoft.Office.Tools.Word.Bookmark>Konak denetimi yerel gibi davranır <xref:Microsoft.Office.Interop.Word.Bookmark> , ancak ek olaylara ve veri bağlama yeteneklerine sahiptir. verileri bir Windows formunda metin kutusu denetimine bağladığınızda aynı şekilde bir belgedeki yer işareti denetimine bağlayabilirsiniz. Daha fazla bilgi için bkz. [Bookmark Control](../vsto/bookmark-control.md).
 
-## <a name="use-the-word-object-model-documentation"></a><a name="WordOMDocumentation"></a> Word nesne modeli belgelerini kullanma
- Word nesne modeli hakkında tam bilgi için Word birincil birlikte çalışma derlemesi (PIA) başvurusuna ve Visual Basic for Applications (VBA) nesne modeli başvurusuna başvurabilirsiniz.
+## <a name="use-the-word-object-model-documentation"></a><a name="WordOMDocumentation"></a> Word nesne modeli belgelerini kullanın
+ word nesne modeli hakkında tüm bilgiler için, word birincil birlikte çalışma derlemesi (pıa) başvurusuna ve Visual Basic for Applications (VBA) nesne modeli başvurusuna başvurabilirsiniz.
 
 ### <a name="primary-interop-assembly-reference"></a>Birincil birlikte çalışma derleme başvurusu
- Word PIA başvuru belgeleri, Word için birincil birlikte çalışma derlemesinde türleri açıklar. Bu belgeler şu konumdan kullanılabilir: [Word 2010 birincil birlikte çalışma derleme başvurusu.](../vsto/office-primary-interop-assemblies.md)
+ PIA başvuru belgeleri Word için birincil birlikte çalışma derlemesindeki türleri açıklar. Bu belge şu konumdan edinilebilir: [Word 2010 birincil birlikte çalışma derleme başvurusu](../vsto/office-primary-interop-assemblies.md).
 
  pıa içindeki sınıflar ve arabirimler arasındaki farklar ve pıa içindeki olayların nasıl uygulandığı gibi, pıa 'ın tasarımı hakkında daha fazla bilgi için, bkz. [Office primary ınterop derlemelerindeki sınıflara ve arayüzlere genel bakış](/previous-versions/office/office-12/ms247299(v=office.12)).
 

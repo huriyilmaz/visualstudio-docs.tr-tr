@@ -1,5 +1,5 @@
 ---
-title: Hata Ayıklayıcısı Bağlam | Microsoft Docs
+title: Hata Ayıklayıcı Bağlamları | Microsoft Docs
 description: 'Hata ayıklama altyapısının Visual Studio bağlamlar içinde nasıl çalışma olduğunu öğrenin: kod bağlamı, belge bağlamı veya konumu ve ifade değerlendirme bağlamı.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: d7c06855b7ec216ec90d77fc0c0b9968d8da1be1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122089556"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725846"
 ---
 # <a name="debugger-contexts"></a>Hata ayıklayıcısı bağlamları
 Hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ayıklamada, hata ayıklama altyapısı (DE) aşağıdaki gibi birkaç farklı bağlam içinde aynı anda çalışır:
@@ -34,7 +34,7 @@ Hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ayıklamada, h
 
  [Belge konumu](../../extensibility/debugger/document-position.md) IDE tarafından Visual Studio kaynak dosyada bir konumun soyutlaması ile hata ayıklama sırasında belge konumunu tanımlar.
 
- [Belge bağlamı](../../extensibility/debugger/document-context.md) Kaynak dosyayla ilgili olarak hata Visual Studio belge bağlamının hangilerini temsil ettiğini tartışır. Ayrıca sembol işleyicisi bir kod bağlamını belge bağlamıyla nasıl eşlemektedir?
+ [Belge bağlamı](../../extensibility/debugger/document-context.md) Bir kaynak dosyayla ilgili olarak Visual Studio hata ayıklamada hangi belge bağlamının temsil ettiğini tartışır. Ayrıca sembol işleyicisi bir kod bağlamını belge bağlamıyla nasıl eşlemektedir?
 
  [İfade değerlendirme bağlamı](../../extensibility/debugger/expression-evaluation-context.md) Verilerde ifade değerlendirme bağlamı hakkında bilgi Visual Studio. Örneğin, bir yığın çerçevesiyle ilişkili ifade değerlendirme bağlamı yerel değişkenlerin, yöntem parametrelerinin ve sınıf üyelerinin değerlendirilmesi için bağlam sağlar.
 

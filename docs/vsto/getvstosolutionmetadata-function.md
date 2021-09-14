@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: c261bb24d774b8894cbc2c25249b798ef542126971593b69430cc847f1ceddd1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 14cf1d9ab6c8c3a734caa737b99a5edaededb94f
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121352064"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725605"
 ---
 # <a name="getvstosolutionmetadata-function"></a>GetVstoSolutionMetadata işlevi
   bu apı Office altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.

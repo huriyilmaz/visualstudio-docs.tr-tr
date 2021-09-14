@@ -1,6 +1,6 @@
 ---
 title: Modüller | Microsoft Docs
-description: Bu makalede, Visual Studio hata ayıklayıcı mimarisinde bir modülün tanımı ve rolü açıklanır.
+description: Bu makalede, modülde hata ayıklayıcı mimarisinde modülün tanımı ve rolü Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -15,21 +15,21 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 91011c021c429c5f09556f749e305572097a8de6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122160367"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725837"
 ---
 # <a name="modules"></a>Modül
-Hata ayıklayıcı mimarisi açısından bir *Modül*:
+Hata ayıklayıcısı mimarisi açısından bir *modül:*
 
-- , Yürütülebilir dosya veya DLL gibi fiziksel bir kod kapsayıcısıdır.
+- Yürütülebilir dosya veya DLL gibi fiziksel bir kod kapsayıcısıdır.
 
-- , Kendi simgelerini yeniden yükleyebilir ve kendisi tanımlayabilir. Modül açıklamaları IDE 'nin modüller penceresinde görüntülenir.
+- Sembolleri yeniden yük içerebilir ve kendisini açıklar. Modül açıklamaları IDE'nin Modüller penceresinde görüntülenir.
 
-- , Modülü anlatmak için bir hata ayıklama altyapısı tarafından oluşturulan bir [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) arabirimi tarafından temsil edilir.
+- Modülü açıklamak için bir hata ayıklama altyapısı tarafından oluşturulan [bir IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) arabirimiyle temsil eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Hata ayıklayıcısı kavramları](../../extensibility/debugger/debugger-concepts.md)
 - [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md)

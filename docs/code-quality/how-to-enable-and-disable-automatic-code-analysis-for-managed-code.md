@@ -1,7 +1,7 @@
 ---
 title: Eski kod analizini devre dışı bırakma
 ms.date: 10/04/2019
-description: İkili kod analizini nasıl aç ve kapat? Visual Studio. Yönetilen kod projelerinde bu özelliği yapılandırmaya bakın.
+description: İkili kod analizini açma ve kapatma hakkında bilgi Visual Studio. Yönetilen kod projelerinde bu özelliği yapılandırmaya bakın.
 ms.custom: SEO-VS-2020
 ms.topic: how-to
 author: mikejo5000
@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-code-analysis
 ms.openlocfilehash: c687a8c2fd1293913670af4489dfb5c9663344c1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122147355"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631965"
 ---
 # <a name="how-to-enable-and-disable-binary-code-analysis-for-managed-code"></a>Nasıllı: Yönetilen kod için ikili kod analizini etkinleştirme ve devre dışı bırakma
 
 Yönetilen kod projesinin her derlemesinde çalıştırılan eski kod analizini (ikili analiz) yapılandırabilirsiniz. Ayrıca, her derleme yapılandırması için hata ayıklama ve sürüm gibi farklı ayarlarınız da olabilir.
 
 > [!NOTE]
-> Eski analiz, .NET Core ve diğer uygulamalar gibi daha yeni proje .NET Standard kullanılamaz. Bu projeler, [.NET Compiler Platform hem de derleme zamanında](roslyn-analyzers-overview.md) analiz etmek için .NET Compiler Platform tabanlı kod çözümleyicileri kullanır. Bu projelerde kaynak kodu analizini devre dışı bırakma hakkında bilgi için bkz. Kaynak kodu [analizini devre dışı bırakma.](disable-code-analysis.md)
+> Eski analiz, .NET Core ve diğer uygulamalar gibi daha yeni proje .NET Standard kullanılamaz. Bu projeler hem [.NET Compiler Platform hem de derleme zamanında](roslyn-analyzers-overview.md) kodu analiz etmek için .NET Compiler Platform tabanlı kod çözümleyicilerini kullanır. Bu projelerde kaynak kodu analizini devre dışı bırakma hakkında bilgi için bkz. Kaynak kodu [analizini devre dışı bırakma.](disable-code-analysis.md)
 
 Eski kod analizini etkinleştirmek veya devre dışı bırakmak için:
 
@@ -28,11 +28,11 @@ Eski kod analizini etkinleştirmek veya devre dışı bırakmak için:
 
 2. Projenin özellikler iletişim kutusunda Code Analysis **sekmesine** gidin.
 
-3. Yapılandırma'da derleme **türünü ve** Platform'da hedef platformu **belirtin.** (Non-.NET Core/.NET Standard projeleri.)
+3. Yapılandırma'da derleme **türünü ve** Platform'da hedef platformu **belirtin.** (Non-.NET Çekirdek/.NET Standard projeleri.)
 
 ::: moniker range="vs-2017"
 
-4. Otomatik kod analizini etkinleştirmek veya devre dışı bırakmak için Derlemede Code Analysis **etkinleştir onay kutusunu** seçin veya temizleyin.
+4. Otomatik kod analizini etkinleştirmek veya devre dışı bırakmak için Derlemede Code Analysis **etkinleştir onay kutusunu** işaretleyin veya temizleyin.
 
 ::: moniker-end
 

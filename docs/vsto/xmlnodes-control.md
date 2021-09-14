@@ -1,6 +1,6 @@
 ---
 title: XMLNodes denetimi
-description: XMLNodes denetiminin yalnızca yinelenen bir şema öğesi Microsoft Word bir belgeyle eşlendiğinde oluşturulduğunu öğrenin.
+description: XMLNodes denetimi yalnızca yinelenen bir şema öğesi bir belgeye eşlenmiş olduğunda Microsoft Word öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -17,32 +17,32 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: cad5ca717f5e996fcc32c4806c6ab86afc7cc241
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122045911"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726079"
 ---
 # <a name="xmlnodes-control"></a>XMLNodes denetimi
-  **Önemli** bu konu başlığı altında Microsoft Word, microsoft, Microsoft Word 'den özel XML ile ilgili belirli işlevlerin bir uygulamasını kaldırdıkları zaman, Birleşik Devletler ve bölgeleri dışında bulunan Microsoft Word veya 2010 microsoft tarafından lisanslanan ürünlerin ve kuruluşların kullanımı ve kullanımı için özel olarak sunulur. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler veya şirket içinde çalışan ya da şirket içinde çalışan veya Microsoft tarafından lisanslanan Microsoft Word, 10 ocak 2010 ' den sonra lisanslı ürünleri kullanan bireyler veya kuruluşlar tarafından okunamaz veya kullanılmıyor olabilir. Bu ürünler, bu tarihten önce lisanslanan ürünlerle aynı veya satın alınmadan ve Birleşik Devletler dışında kullanılmak üzere lisanslanmaz.
+  **Önemli** Microsoft Word ile ilgili bu konu başlığı altında açıklanan bilgiler, Microsoft tarafından Ocak 2010'dan önce Microsoft tarafından lisanslanmıştır ve Birleşik Devletler ve bölgeleri dışında bulunan veya Microsoft tarafından 2010'dan önce microsoft tarafından lisanslanmıştır ve Microsoft Word ürünleri üzerinde çalıştırılan programları kullanan veya geliştiren kişiler ve kuruluşların kullanımı için özel olarak Microsoft Word. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler'daki veya Microsoft Word Microsoft tarafından 10 Ocak 2010'dan sonra lisansa alınan ve üzerinde çalışan programları kullanan veya geliştiren kişiler veya kuruluşlar tarafından okunamayabilirsiniz veya kullanılmayabilirsiniz; bu ürünler, ilgili tarihten önce lisanslı olan veya satın alınan ve satın alınan ve satın alınan ürünlerle aynı davranışa Birleşik Devletler.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
- <xref:Microsoft.Office.Tools.Word.XMLNodes>Denetim, olayları ortaya çıkaran eşlenmiş BIR XML düğümü nesneleri koleksiyonudur. <xref:Microsoft.Office.Tools.Word.XMLNodes>denetim, yalnızca yinelenen bir şema öğesi Microsoft Office bir Word belgesiyle eşlendiğinde oluşturulur. Yinelenen öğe alt öğeler içeriyorsa, alt öğelerin her biri de bir denetim olarak oluşturulur <xref:Microsoft.Office.Tools.Word.XMLNodes> .
+ Denetim, <xref:Microsoft.Office.Tools.Word.XMLNodes> olayları ortaya çıkaran eşlenmiş XML düğümü nesneleri koleksiyonudur. Denetim yalnızca yinelenen bir şema öğesi word belgesinde bir Microsoft Office <xref:Microsoft.Office.Tools.Word.XMLNodes> oluşturulur. Yinelenen öğe alt öğeler içeriyorsa, alt öğelerin her biri de bir denetim olarak <xref:Microsoft.Office.Tools.Word.XMLNodes> oluşturulur.
 
- Visual Studio, XML düğümleri koleksiyonunu oluşturduktan sonra, Word nesne modeline çapraz geçiş yapmak zorunda kalmadan doğrudan denetime karşı programlama yapabilirsiniz. <xref:Microsoft.Office.Tools.Word.XMLNodes>Denetim yalnızca belgeden öğe eşlemesi kaldırılarak silinebilir.
+ Bu Visual Studio XML düğümleri koleksiyonunu oluşturduğunda, Word nesne modelini çapraz geçiş yapmak zorunda kalmadan doğrudan denetime karşı program kurabilirsiniz. Denetim <xref:Microsoft.Office.Tools.Word.XMLNodes> yalnızca öğe eşlemesi belgeden kaldırılarak silinebilir.
 
 > [!NOTE]
-> Özelliği aracılığıyla denetimin bir alt öğesine eriştiğinizde <xref:Microsoft.Office.Tools.Word.XMLNodes> <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A> , <xref:Microsoft.Office.Interop.Word.XMLNode> bir denetim yerine bir nesne döndürür <xref:Microsoft.Office.Tools.Word.XMLNode> . Daha fazla bilgi için bkz. [konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).
+> Denetimin bir alt öğesine özelliği <xref:Microsoft.Office.Tools.Word.XMLNodes> aracılığıyla <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A> erişersiniz, denetim yerine <xref:Microsoft.Office.Interop.Word.XMLNode> bir nesnesi <xref:Microsoft.Office.Tools.Word.XMLNode> döndürür. Daha fazla bilgi için [bkz. Konak öğelerinin ve konak denetimlerinin programlı sınırlamaları.](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 
-## <a name="bind-data-to-the-control"></a>Verileri denetime bağlama
- Bir <xref:Microsoft.Office.Tools.Word.XMLNodes> Denetim veri bağlamayı desteklemez. Bunun nedeni, <xref:Microsoft.Office.Tools.Word.XMLNodes> denetimin karmaşık veri bağlama özelliklerine sahip olmaması ve basit veri bağlamasının yinelenen verileri temsil edemez.
+## <a name="bind-data-to-the-control"></a>Denetime veri bağlama
+ Denetim, <xref:Microsoft.Office.Tools.Word.XMLNodes> veri bağlamayı desteklemez. Bunun nedeni <xref:Microsoft.Office.Tools.Word.XMLNodes> denetimin karmaşık veri bağlama özelliklerine sahip değildir ve basit veri bağlaması yinelenen verileri temsil etme özelliğine sahip değildir.
 
 ## <a name="formatting"></a>Biçimlendirme
- Belge içindeki metne uygulanabilen tüm biçimlendirmeler bir <xref:Microsoft.Office.Tools.Word.XMLNodes> denetime uygulanabilir.
+ Belge içindeki metne uygulana tüm biçimlendirmeler bir denetime <xref:Microsoft.Office.Tools.Word.XMLNodes> uygulanabilir.
 
 ## <a name="events"></a>Ekinlikler
- Denetim için kullanılabilen olaylar <xref:Microsoft.Office.Tools.Word.XMLNodes> şunlardır:
+ Denetim için kullanılabilen <xref:Microsoft.Office.Tools.Word.XMLNodes> olaylar:
 
 - <xref:Microsoft.Office.Tools.Word.XMLNodes.AfterInsert>
 
@@ -60,8 +60,8 @@ ms.locfileid: "122045911"
 
 - <xref:Microsoft.Office.Tools.Word.XMLNodes.ValidationError>
 
-## <a name="compare-events"></a>Olayları Karşılaştır
- Kullanıcı imlecini belirli bir denetim bağlamının içine taşıdıkça bir olay yakalayabilirsiniz <xref:Microsoft.Office.Tools.Word.XMLNodes> . Örneğin, adında <xref:Microsoft.Office.Tools.Word.XMLNodes> bir alt denetimi olan adlı bir denetiminiz olabilir `Customer` <xref:Microsoft.Office.Tools.Word.XMLNodes> `Company` ve `Company` <xref:Microsoft.Office.Tools.Word.XMLNodes> `CompanyName` aşağıdaki gibi iki alt denetime sahiptir `CompanyRegion` :
+## <a name="compare-events"></a>Olayları karşılaştırma
+ Kullanıcı imlecini belirli bir denetimin bağlamı içinde hareket ettiğinde bir olayı <xref:Microsoft.Office.Tools.Word.XMLNodes> yakalar. Örneğin, adlı bir alt denetimi olan ve adlı iki alt denetimi olan <xref:Microsoft.Office.Tools.Word.XMLNodes> ve aşağıdaki gibi bir `Customer` <xref:Microsoft.Office.Tools.Word.XMLNodes> `Company` `Company` <xref:Microsoft.Office.Tools.Word.XMLNodes> `CompanyName` `CompanyRegion` denetime sahip olabilir:
 
 ```xml
 <Customer>
@@ -70,22 +70,22 @@ ms.locfileid: "122045911"
         <CompanyRegion>
 ```
 
- İmleç düğümüne her taşındığında Eylemler bölmesinde bir denetim göstermek istiyorsanız `Company` , imlece yerleştirilmiş `CompanyName` ya da `CompanyRegion` her ikisi de bağlamı içinde olduklarından bağımsız değildir `Company` . Bu durumda, kodunuzun <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> olayında yazabilirsiniz `Company` .
+ İmleç düğüme her taşındığında eylemler bölmesinde bir denetim göstermek istemeniz, imlecin içine yerleştirilip yerleştirilip yerleştiril olmadığı veya her ikisi de bağlamında olduğu `Company` `CompanyName` için önemli `CompanyRegion` `Company` değildir. Bu durumda, durumunda kodunuzu <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> `Company` yazabilirsiniz.
 
- Çoğu durumda, imleç bir denetim girdiğinde hem hem <xref:Microsoft.Office.Tools.Word.XMLNodes> de <xref:Microsoft.Office.Tools.Word.XMLNodes.Select> <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> olayları tetiklenir. Aşağıdaki tabloda bu olaylar arasındaki farklılıklar gösterilmektedir.
+ Çoğu durumda, imleç bir <xref:Microsoft.Office.Tools.Word.XMLNodes> denetime girdiği zaman hem <xref:Microsoft.Office.Tools.Word.XMLNodes.Select> hem de olayları ortaya <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> çıkar. Aşağıdaki tabloda bu olaylar arasındaki farklar yer alır.
 
-|Olay Seç|ContextEnter olayı|
+|Olay seçme|ContextEnter olayı|
 |------------------|------------------------|
-|İmleç koleksiyonun düğümlerinden birinin içine yerleştirildiğinde oluşur <xref:Microsoft.Office.Tools.Word.XMLNodes> .|İmleç, <xref:Microsoft.Office.Tools.Word.XMLNodes> düğümün bağlamı dışında bir alandan, koleksiyonun düğümlerin veya alt düğümlerinden birinin içine yerleştirildiğinde oluşur. Diğer bir deyişle, yalnızca bağlam değiştiğinde oluşturulur ve birden çok iç içe denetim için oluşturulabilir <xref:Microsoft.Office.Tools.Word.XMLNodes> .|
+|İmleç koleksiyonun düğümlerinden birinin içine yerleştiril olduğunda <xref:Microsoft.Office.Tools.Word.XMLNodes> gerçekleşir.|İmleç, düğümün bağlamı dışındaki bir alandan koleksiyonun düğümlerinden veya alt düğümlerinden birinin <xref:Microsoft.Office.Tools.Word.XMLNodes> içine yerleştirilsin. Başka bir deyişle, yalnızca bağlam değiştinde ve birden çok iç içe denetim için <xref:Microsoft.Office.Tools.Word.XMLNodes> yükseltildi.|
 
- Örneğin, imleci içine içinden taşıdığınızda,, `Customer` `CompanyName` <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> ve için olaylar `Customer` `Company` `CompanyName` oluşturulur. Daha sonra imleci `CompanyName` ' den ' e taşırsanız `CompanyRegion` , <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> `CompanyRegion` bağlamı her ikisi için de aynı olduğu için yalnızca için olay tetiklenir `Company` `Customer` . Belgenizde birden çok düğüme sahip olabilirsiniz `Company` . İmleci `CompanyName` bir düğümden `Company` `CompanyName` başka bir düğüme taşırsanız `Company` , bağlam aynı olur, bu nedenle yalnızca <xref:Microsoft.Office.Tools.Word.XMLNodes.Select> olay tetiklenir.
+ Örneğin, imleci dışından içine `Customer` taşıyarak , ve olayları harekete `CompanyName` <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> `Customer` `Company` `CompanyName` geçerek. Daha sonra imleci 'den 'e taşımanız durumunda, bağlam hem hem de için aynı olduğu için yalnızca `CompanyName` `CompanyRegion` olayı ortaya <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextEnter> `CompanyRegion` `Company` `Customer` çıkar. Belgenize birden `Company` çok düğüm ekleyebilirsiniz. İmleci bir düğümden başka bir düğümüne taşımanız durumunda bağlam `CompanyName` `Company` `CompanyName` `Company` aynıdır, bu nedenle yalnızca <xref:Microsoft.Office.Tools.Word.XMLNodes.Select> olay ortaya çıkar.
 
- Olay ve olay arasında aynı farklar vardır <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> .
+ Olayla olay arasında <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> aynı farklar <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> vardır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
-- [Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)
+- [Konak öğelerine ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
+- [Genişletilmiş nesneleri kullanarak Word'i otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)
 - [XMLNode denetimi](../vsto/xmlnode-control.md)
-- [Nasıl yapılır: Word belgelerine XMLNodes denetimleri ekleme](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)
-- [Nasıl yapılır: Visual Studio içindeki Word belgeleriyle şemaları eşleme](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)
-- [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Nasıl kullanılır: Word belgelerine XMLNodes denetimleri ekleme](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)
+- [Nasıl kullanılır: Şemaları Visual Studio içindeki Word belgeleriyle eşleme](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)
+- [Konak öğelerinin ve konak denetimlerinin programlı sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

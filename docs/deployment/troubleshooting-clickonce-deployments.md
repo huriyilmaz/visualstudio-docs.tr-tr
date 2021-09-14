@@ -22,11 +22,11 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: 78789574a07568aeed1b5f4990bc0d1d0f9bf6cc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122089855"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725389"
 ---
 # <a name="troubleshoot-clickonce-deployments"></a>ClickOnce dağıtım sorunlarını giderme
 Bu konu, dağıtımlarla ilgili en yaygın sorunları tanılamanıza ve çözmenize yardımcı olur [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .

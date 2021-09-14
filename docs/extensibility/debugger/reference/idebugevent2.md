@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9aca1f8ce1b8dbf4575f4ba9aecd4f714b0dbf83
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122079057"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634817"
 ---
 # <a name="idebugevent2"></a>IDebugEvent2
 Bu arabirim, kesme noktası sırasında durdurma gibi kritik hata ayıklama bilgilerini ve hata ayıklama iletisi gibi kritik olmayan bilgileri iletişim kurmak için kullanılır.
@@ -36,7 +36,7 @@ IDebugEvent2 : IUnknown
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
  Olay veya Olay'a verilen arabirim [](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) kimliği (IID) bağımsız değişkenlerini [kullanarak,](../../../extensibility/debugger/reference/idebugportevents2-event.md)uygun olay arabirimini almak için oturum hata ayıklama yöneticisi (SDM) [arabiriminde QueryInterface'i](/cpp/atl/queryinterface) `IDebugEvent2` arar.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sırasına Göre Yöntemler
+## <a name="methods-in-vtable-order"></a>VTable Sırasına Göre Yöntemler
  Aşağıdaki tabloda yöntemlerini `IDebugEvent2` gösterir.
 
 |Yöntem|Açıklama|
@@ -44,7 +44,7 @@ IDebugEvent2 : IUnknown
 |[GetAttributes](../../../extensibility/debugger/reference/idebugevent2-getattributes.md)|Bu hata ayıklama olayı için öznitelikleri alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)gibi daha belirli olay arabirimleri, IDebugEvent2 arabiriminden türetilmez, ancak bunun yerine ile aynı nesnede ayrı bir arabirim olarak `IDebugEvent2` uygulanır.
+ [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md)gibi daha belirli olay arabirimleri IDebugEvent2 arabiriminden türetilmez, ancak bunun yerine ile aynı nesnede ayrı bir arabirim olarak `IDebugEvent2` uygulanır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg.h

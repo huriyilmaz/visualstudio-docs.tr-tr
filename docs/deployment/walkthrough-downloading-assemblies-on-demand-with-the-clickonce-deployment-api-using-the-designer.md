@@ -1,6 +1,6 @@
 ---
-title: tasarımcı kullanarak isteğe bağlı derlemeleri indirme (ClickOnce apı)
-description: tasarımcı kullanarak ClickOnce uygulamanızdaki belirli derlemeleri isteğe bağlı olarak nasıl işaretleyeceğinizi ve ortak dil çalışma zamanı için gereken durumlarda onları indirmenin nasıl yapılacağını öğrenin.
+title: Tasarımcıyı kullanarak isteğe bağlı derlemeleri indirme (ClickOnce API)
+description: Tasarımcı'ı kullanarak uygulama uygulamanıza ClickOnce derlemeleri isteğe bağlı olarak işaretlemeyi ve ortak dil çalışma zamanının ihtiyacı olduğunda bunları indirmeyi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -21,84 +21,84 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: 1b55cb3ce52864d8649008cd5f4f187c170c5813
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122104982"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725373"
 ---
-# <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>izlenecek yol: tasarımcıyı kullanarak ClickOnce dağıtım apı 'si ile isteğe bağlı derlemeleri indirme
-Varsayılan olarak, uygulama ilk çalıştırıldığında bir uygulamaya dahil edilen tüm derlemeler [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] indirilir. Ancak, uygulamanızın küçük bir kullanıcı kümesi tarafından kullanılan bölümleri olabilir. Bu durumda, bir derlemeyi yalnızca türlerinden birini oluştururken indirmek istersiniz. Aşağıdaki izlenecek yol, uygulamanızda belirli derlemelerin "isteğe bağlı" olarak nasıl işaretleneceğini ve <xref:System.Deployment.Application> ortak dil çalışma zamanı tarafından talep edildiğinde ad alanındaki sınıfları kullanarak nasıl indirileceğini gösterir.
+# <a name="walkthrough-download-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>Adım adım kılavuz: Tasarımcıyı kullanarak ClickOnce dağıtım API'si ile isteğe bağlı derlemeleri indirme
+Varsayılan olarak, bir uygulamaya dahil edilen tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] derlemeler, uygulama ilk kez çalıştırılana kadar indirilir. Ancak, uygulamanın küçük bir kullanıcı kümesi tarafından kullanılan bölümleri olabilir. Bu durumda, bir derlemeyi yalnızca türlerinden birini oluşturmadan indirmek istiyor. Aşağıdaki kılavuzda, uygulamanıza bazı derlemelerin "isteğe bağlı" olarak nasıl işaretlenecekleri ve ortak dil çalışma zamanı talep olduğunda ad alanı sınıflarını kullanarak nasıl <xref:System.Deployment.Application> indirecekleri anlatılacaktır.
 
 > [!NOTE]
-> Bu yordamı kullanmak için uygulamanızın tam güvende çalışması gerekir.
+> Bu yordamı kullanmak için, uygulamanın tam güven içinde çalışması gerekir.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. ayarlarınızı değiştirmek için **araçlar** menüsünden **içeri aktar ve dışarı aktar Ayarlar** ' a tıklayın. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünde İçeri **ve Dışarı Ayarlar'ye** tıklayın.  Daha fazla bilgi için [bkz. Ayarları sıfırlama.](../ide/environment-settings.md#reset-settings)
 
 ## <a name="create-the-projects"></a>Projeleri oluşturma
 
-### <a name="to-create-a-project-that-uses-an-on-demand-assembly-with-visual-studio"></a>Visual Studio ile isteğe bağlı derleme kullanan bir proje oluşturmak için
+### <a name="to-create-a-project-that-uses-an-on-demand-assembly-with-visual-studio"></a>Visual Studio ile isteğe bağlı derleme kullanan bir proje Visual Studio
 
-1. içinde yeni bir Windows Forms projesi oluşturun [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . **Dosya** menüsünde, **Ekle**' nin üzerine gelin ve ardından **yeni Project**' ye tıklayın. İletişim kutusunda bir **sınıf kitaplığı** projesi seçin ve adlandırın `ClickOnceLibrary` .
+1. içinde yeni Windows Forms projesi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oluşturun. Dosya menüsünde **Ekle'nin** üzerine **gelin ve** ardından Yeni Dosya'ya **Project.** İletişim **kutusunda bir Sınıf** Kitaplığı projesi seçin ve olarak ad `ClickOnceLibrary` girin.
 
    > [!NOTE]
-   > Visual Basic, proje özelliklerini, bu proje için kök ad alanını `Microsoft.Samples.ClickOnceOnDemand` tercih ettiğiniz bir ad alanı olarak değiştirecek şekilde değiştirmenizi öneririz. Kolaylık olması için bu izlenecek yolda bulunan iki proje aynı ad alanında yer alan.
+   > Bu Visual Basic, proje özelliklerini değiştirerek bu projenin kök ad alanını tercih edilen ad alanı olarak veya olarak `Microsoft.Samples.ClickOnceOnDemand` değiştirmenizi öneririz. Kolaylık olması için bu kılavuzda yer alan iki proje aynı ad alanı içindedir.
 
-2. Adlı tek bir özelliği olan adlı bir sınıf tanımlayın `DynamicClass` `Message` .
+2. adlı tek bir özelliği `DynamicClass` olan adlı bir sınıf `Message` tanımlayın.
 
     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceLibrary/VB/Class1.vb" id="Snippet1":::
     :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceLibrary/CS/Class1.cs" id="Snippet1":::
 
-3. **Çözüm Gezgini** Windows Forms projesi seçin. Derlemeye bir başvuru ve projeye bir <xref:System.Deployment.Application> proje başvurusu ekleyin `ClickOnceLibrary` .
+3. içinde Windows Forms **projesini Çözüm Gezgini.** Derlemeye bir başvuru <xref:System.Deployment.Application> ve projeye bir proje başvurusu `ClickOnceLibrary` ekleyin.
 
    > [!NOTE]
-   > Visual Basic, proje özelliklerini, bu proje için kök ad alanını `Microsoft.Samples.ClickOnceOnDemand` tercih ettiğiniz bir ad alanı olarak değiştirecek şekilde değiştirmenizi öneririz. Kolaylık olması için, bu yönergedeki iki proje aynı ad alanında yer alır.
+   > Bu Visual Basic, proje özelliklerini değiştirerek bu projenin kök ad alanını tercih edilen ad alanı olarak veya olarak `Microsoft.Samples.ClickOnceOnDemand` değiştirmenizi öneririz. Kolaylık olması için bu kılavuzda yer alan iki proje aynı ad alanına yer almaktadır.
 
-4. Forma sağ tıklayın, menüden **kodu görüntüle** ' ye tıklayın ve aşağıdaki başvuruları forma ekleyin.
+4. Forma sağ tıklayın, **menüden** Kodu Görüntüle'ye tıklayın ve forma aşağıdaki başvuruları ekleyin.
 
     :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceOnDemand/CS/Form1.cs" id="Snippet1":::
     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceOnDemand/VB/Form1.vb" id="Snippet1":::
 
-5. Bu derlemeyi isteğe bağlı olarak indirmek için aşağıdaki kodu ekleyin. Bu kod, bir derleme kümesinin genel bir sınıf kullanarak bir grup adına nasıl eşlendiğini gösterir <xref:System.Collections.DictionaryBase.Dictionary%2A> . Bu kılavuzda yalnızca tek bir derlemeyi indirdiğimiz için grubumuza yalnızca bir derleme var. Gerçek bir uygulamada, büyük olasılıkla uygulamanızdaki tek bir özellikle ilgili tüm derlemeleri aynı anda indirmek istersiniz. Eşleme tablosu, bir özelliğe ait olan tüm dll 'Leri indirme grubu adıyla ilişkilendirerek bunu kolayca yapmanızı sağlar.
+5. Bu derlemeyi isteğe bağlı olarak indirmek için aşağıdaki kodu ekleyin. Bu kod, genel bir sınıf kullanarak bir derleme kümesiyle grup adı eşlemeyi <xref:System.Collections.DictionaryBase.Dictionary%2A> gösterir. Bu kılavuzda yalnızca tek bir derleme indireceğimiz için, grubumuzda yalnızca bir derleme var. Gerçek bir uygulamada, uygulamanıza tek bir özellikle ilgili tüm derlemeleri aynı anda indirmeniz olasıdır. Eşleme tablosu, bir özelente ait olan tüm URL'leri bir indirme grubu adıyla bağ bağarak bunu kolayca yapabilirsiniz.
 
     :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceOnDemand/CS/Form1.cs" id="Snippet2":::
     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceOnDemand/VB/Form1.vb" id="Snippet2":::
 
-6. **Görünüm** menüsünde **araç kutusu**' na tıklayın. <xref:System.Windows.Forms.Button> **Araç kutusundan** bir öğesini form üzerine sürükleyin. Düğmeye çift tıklayın ve olay işleyicisine aşağıdaki kodu ekleyin <xref:System.Windows.Forms.Control.Click> .
+6. Görünüm menüsünde **Araç** **Kutusu'na tıklayın.** Araç <xref:System.Windows.Forms.Button> Kutusundan **forma** bir sürükleyin. Düğmeye çift tıklayın ve olay işleyiciye aşağıdaki <xref:System.Windows.Forms.Control.Click> kodu ekleyin.
 
     :::code language="csharp" source="../snippets/csharp/VS_Snippets_Winforms/ClickOnceOnDemand/CS/Form1.cs" id="Snippet3":::
     :::code language="vb" source="../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceOnDemand/VB/Form1.vb" id="Snippet3":::
 
-## <a name="mark-assemblies-as-optional"></a>Derlemeleri isteğe bağlı olarak işaretle
+## <a name="mark-assemblies-as-optional"></a>Derlemeleri isteğe bağlı olarak işaretleme
 
-### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-visual-studio"></a>Visual Studio kullanarak derlemeleri ClickOnce uygulamanızda isteğe bağlı olarak işaretlemek için
+### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-visual-studio"></a>Derlemeleri uygulamanıza isteğe bağlı olarak işaretlemek ClickOnce kullanarak Visual Studio
 
-1. **Çözüm Gezgini** Windows Forms projesine sağ tıklayın ve **özellikler**' e tıklayın. **Yayımla** sekmesini seçin.
+1. Windows Forms projesine sağ tıklayın **ve Çözüm Gezgini'a** **tıklayın.** Yayımla **sekmesini** seçin.
 
-2. **Uygulama dosyaları** düğmesine tıklayın.
+2. Uygulama Dosyaları **düğmesine** tıklayın.
 
-3. *ClickOnceLibrary.dll* listesini bulun. **Yayımla durumu** açılan kutusunu **dahil et** olarak ayarlayın.
+3. için listelemeyi *ClickOnceLibrary.dll.* Yayımlama **Durumu açılan** kutusunu Dahil Edildi olarak **ayarlayın.**
 
-4. **Grup** açılan kutusunu genişletin ve **Yeni**' yi seçin. Adı `ClickOnceLibrary` Yeni grup adı olarak girin.
+4. Grup açılan **kutusunu** genişletin ve Yeni'yi **seçin.** Yeni grup `ClickOnceLibrary` adı olarak adı girin.
 
-5. uygulamanızı yayımlama [sihirbazı 'nı kullanarak nasıl yapılır: ClickOnce uygulama yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)bölümünde açıklandığı gibi yayımlamaya devam edin.
+5. Yayımlama Sihirbazı'nı kullanarak uygulamanızı [nasıl yayımla: ClickOnce uygulama yayımlama konusunda açıklandığı gibi yayımlayın.](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
 
-### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-manifest-generation-and-editing-tool--graphical-client-mageuiexe"></a>ClickOnce uygulamanızda derlemeleri isteğe bağlı olarak işaretlemek için Bildirim Oluşturma ve Düzenleme Aracı — grafik istemcisi (MageUI.exe)
+### <a name="to-mark-assemblies-as-optional-in-your-clickonce-application-by-using-manifest-generation-and-editing-tool--graphical-client-mageuiexe"></a>Bildirim Oluşturma ve Düzenleme Aracı — Grafik İstemci (ClickOnce) kullanarak derlemeleri uygulamanıza isteğe bağlı olarak MageUI.exe
 
-1. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] [izlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)bölümünde açıklandığı gibi bildirimlerinizi oluşturun.
+1. Bildirimlerinizi [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Adım adım [kılavuz: Uygulamanıza](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)el ile ClickOnce oluşturun.
 
-2. MageUI.exe kapatmadan önce, dağıtımınızın uygulama bildirimini içeren sekmeyi seçin ve bu sekmenin içinde **dosyalar** sekmesini seçin.
+2. Bu MageUI.exe önce, dağıtım uygulama bildirimini içeren sekmeyi seçin ve bu sekmede Dosyalar **sekmesini** seçin.
 
-3. Uygulama dosyaları listesinde ClickOnceLibrary.dll bulun ve **dosya türü** sütununu **none** olarak ayarlayın. **Grup** sütunu için, yazın `ClickOnceLibrary.dll` .
+3. Uygulama ClickOnceLibrary.dll listesinde dosya türünü bulun ve Dosya Türü **sütununu** Yok olarak **ayarlayın.** Grup **sütunu için** `ClickOnceLibrary.dll` yazın.
 
-## <a name="test-the-new-assembly"></a>Yeni derlemeyi test etme
+## <a name="test-the-new-assembly"></a>Yeni derlemeyi test etmek
 
-İsteğe bağlı derlemenizi test etmek için:
+isteğe bağlı derlemenizi test etmek için:
 
-1. Uygulamanızı ile birlikte dağıtılan şekilde başlatın [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
+1. ile dağıtılan uygulamalarınızı [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] başlatma.
 
-2. Ana formunuz göründüğünde, ' a basın <xref:System.Windows.Forms.Button> . İleti kutusu penceresinde "Merhaba, Dünya!" okuyan bir dize görmeniz gerekir
+2. Ana formunuz görüntülendiğinde tuşuna <xref:System.Windows.Forms.Button> basın. İleti kutusu penceresinde "Hello, World!"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

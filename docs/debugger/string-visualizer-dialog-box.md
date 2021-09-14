@@ -23,11 +23,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 52d50d7e2bf204de7907f568318b100aa53349d6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122146686"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627855"
 ---
 # <a name="string-visualizer-dialog-box"></a>Dize Görselleştirici iletişim kutusu
 
@@ -68,7 +68,7 @@ XML görselleştiricisinde aşağıdaki çizime benzer şekilde iyi leştirilmi�
 
 Aşağıdaki çizimde gösterildiği gibi, iyi oluşturulmuş bir HTML dizesi bir tarayıcıda işlenmiş gibi görünür. Yanlış biçimlendirilmiş HTML düz metin olarak biçimlendirilmiş olabilir.
 
-![HTML dizesi görselleştiricisi](../debugger/media/dbg-string-visualizers-html.png "HTML Dizesi Görselleştiricisi")
+![HTML dize görselleştiricisi](../debugger/media/dbg-string-visualizers-html.png "HTML Dizesi Görselleştiricisi")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

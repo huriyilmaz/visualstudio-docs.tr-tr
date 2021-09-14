@@ -1,6 +1,6 @@
 ---
 title: Kod Çözümlemesi, Proje Tasarımcısı
-description: Code Analysis, Project tasarımcı ve kodunuzda çalıştırmayı tercih ettiğiniz kod analizi aracını nasıl içerdiği hakkında bilgi edinin.
+description: Code Analysis, Project Tasarımcısı ve kodu üzerinde çalıştırmayı tercih etmeyi tercih ettiyebilirsiniz kod analizi aracını nasıl içerdiği hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,56 +17,56 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 3ec311a051133ae2c01734f767caa77810860518
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122101550"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634441"
 ---
 # <a name="code-analysis-project-designer"></a>Kod Çözümlemesi, Proje Tasarımcısı
 
-Kodunuzda çalıştırmayı tercih ettiğiniz kod analizi aracını içerir. Araç, Microsoft .NET tasarım yönergelerinden sonra ayarlanan programlama ve tasarım kuralları ihlalleri gibi derlemeleriniz hakkındaki bilgileri raporlar.
+Kodunuz üzerinde çalıştırmayı kabul etmek istediğiniz kod analizi aracını içerir. Araç, derlemeleriniz hakkında, Microsoft .NET Tasarım Yönergeleri'ne göre belirtilen programlama ve tasarım kurallarının ihlalleri gibi bilgileri raporlar.
 
 ## <a name="uielement-list"></a>UIElement listesi
 
-Code Analysis \ ' i etkinleştir
-Projeniz için kod analizini etkinleştirilir veya devre dışı bırakır.
+Code Analysis\
+Projeniz için kod analizini etkinleştirme veya devre dışı bırakma.
 
-Tasarım kuralları \
-Tasarım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Tasarım Kuralları\
+Tasarım kurallarını etkinleştirme veya devre dışı bırakma. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Genelleştirme kuralları \
-Genelleştirme kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Genelleştirme Kuralları\
+Genelleştirme kurallarını etkinleştirme veya devre dışı bırakma. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Birlikte çalışabilirlik kuralları \
-Birlikte çalışabilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Birlikte Çalışabilirlik Kuralları\
+Birlikte çalışabilirlik kurallarını etkinleştirebilir veya devre dışı bırakmaktadır. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Bakım kuralları \
-Bakım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Bakım Kuralları\
+Bakım kurallarını etkinleştirebilir veya devre dışı bırakmaktadır. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Mobility kuralları \
-Mobility kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Mobility Kuralları\
+Mobility kurallarını etkinleştirme veya devre dışı bırakma. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Adlandırma kuralları \
-Adlandırma kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Adlandırma Kuralları\
+Adlandırma kurallarını etkinleştiren veya devre dışı bırakan. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Performans kuralları \
-Performans kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Performans Kuralları\
+Performans kurallarını etkinleştirebilir veya devre dışı bırakabilirsiniz. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Taşınabilirlik kuralları \
-Taşınabilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Taşınabilirlik Kuralları\
+Taşınabilirlik kurallarını etkinleştirebilir veya devre dışı bırakmaktadır. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Güvenilirlik kuralları \
-Güvenilirlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Güvenilirlik Kuralları\
+Güvenilirlik kurallarını etkinleştirme veya devre dışı bırakma. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Güvenlik kuralları \
-Güvenlik kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Güvenlik Kuralları\
+Güvenlik kurallarını etkinleştirme veya devre dışı bırakma. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
-Kullanım kuralları \
-Kullanım kurallarını etkinleştirilir veya devre dışı bırakır. Ayrıca, tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
+Kullanım Kuralları\
+Kullanım kurallarını etkinleştiren veya devre dışı bırakan. Ayrıca tek tek kuralları etkinleştirmek veya devre dışı bırakmak için bu girdiyi genişletebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [yönetilen kod uyarıları için Code Analysis](/dotnet/fundamentals/code-analysis/quality-rules/index)
+- [Code Analysis Kod Uyarıları için Öneriler](/dotnet/fundamentals/code-analysis/quality-rules/index)
 - [Yönetilen Kod için Kod Çözümlemesine Genel Bakış](../../code-quality/code-analysis-for-managed-code-overview.md)
 - [İzlenecek yol: Kod Kusurları için Yönetilen Kodu Analiz Etme](../../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)

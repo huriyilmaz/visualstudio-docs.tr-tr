@@ -1,6 +1,6 @@
 ---
-title: Eşitleme saati | Microsoft Docs
-description: Zaman çizelgesindeki segmentlerin eşitleme olarak sınıflandırılan engelleme süreleriyle nasıl ilişkilendirildiğini öğrenin.
+title: Eşitleme Zamanı | Microsoft Docs
+description: Zaman çizelgesinde segmentlerin Eşitleme olarak kategorilere ayrılmış engelleme zamanları ile nasıl ilişkilendirileceklerini öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -15,20 +15,20 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 118fa48f6c818c366d733fc29fbcc4a12883a6c5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122157143"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634334"
 ---
-# <a name="synchronization-time"></a>Eşitleme saati
-Zaman çizelgesindeki bu segmentler, eşitleme olarak kategorilere ayrılan engelleyici sürelerle ilişkilendirilir. Bir iş parçacığı eşitlemede engellenmiş olarak işaretlendiğinde, bunlardan biri kapsanır:
+# <a name="synchronization-time"></a>Eşitleme zamanı
+Zaman çizelgesinde yer alan bu segmentler, Eşitleme olarak kategorilere ayrılmış engelleme süreleri ile ilişkilendirilmektedir. Bir iş parçacığı eşitlemede engellenmiş olarak işaretlenirken, bunlardan biri örtük olarak işaretlenir:
 
-- İş parçacığının yürütülmesi, veya gibi iyi bilinen bir iş parçacığı eşitleme API 'sine çağrı ile sonuçlanmasına neden olmuş olabilir `EnterCriticalSection()` `WaitForSingleObject()` .
+- İş parçacığının yürütülmesi, veya gibi iyi bilinen bir iş parçacığı eşitleme API'sine çağrıyla `EnterCriticalSection()` sonuçlandırmış `WaitForSingleObject()` olabilir.
 
-- API eşleştirme algoritması tamamen kapsamlı olamaz ve bu nedenle, çağrı yığınında bir çerçeve bu kategoriye eşlenmiş temel bir çekirdek engelleme temel değerine ulaştığından, diğer kategorilere eşlenebilen bazı API 'Ler eşitleme olarak da görünebilir.
+- API eşleştirme algoritması tamamen kapsamlı olamaz ve bu nedenle diğer kategorilere eşlenmiş olan bazı API'ler de eşitleme olarak görünebilir çünkü çağrı yığınında bir çerçeve sonunda bu kategoriyle eşlenmiş temel çekirdek engelleme temellerine ulaşmış olur.
 
-  Bir iş parçacığı engelleme olayının temel nedenini anlamak için engelleme çağrı yığınlarını ve profil raporlarını dikkatle inceleyin.
+  Bir iş parçacığının engelleme olayına neden olan temel nedeni anlamak için engelleme çağrı yığınlarını ve profil raporlarını dikkatle inceleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş parçacıkları görünümü](../profiling/threads-view-parallel-performance.md)

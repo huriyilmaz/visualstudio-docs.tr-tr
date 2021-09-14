@@ -15,11 +15,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 46330c69b89b297b82ce70d3fb6eb0b7bd7d95df
-ms.sourcegitcommit: 42aec4a2ea6dec67dbe4c93bcf0fa1116a4b93d9
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122981079"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725608"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio kullanarak Office için VSTO Eklentileri oluşturma
 > [!IMPORTANT]

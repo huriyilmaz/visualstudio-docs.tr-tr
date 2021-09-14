@@ -1,7 +1,7 @@
 ---
 title: Kod Analiz İlkesi Hataları
 ms.date: 11/04/2016
-description: Visual Studio kod analizi ilke hataları hakkında bilgi edinin. Kod iade edildiğinde ilke karşılanmıyorsa oluşan hataların açıklamalarını görüntüleyin.
+description: Kod analizi ilkesi hataları hakkında bilgi Visual Studio. Kod iade edilirken ilke karşılanmazsa oluşan hataların açıklamalarını görüntüleme.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 f1_keywords:
@@ -16,66 +16,66 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
 ms.openlocfilehash: 9ca28097058c0f9c7722aacd806f00af3ef263a1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122105827"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632079"
 ---
 # <a name="code-analysis-policy-errors"></a>Kod Analiz İlkesi Hataları
 
-Kod Analizi ilkesi iadede karşılanmıyorsa aşağıdaki hatalar oluşur:
+Kod analizi ilkesi iade sırasında karşılanmazsa aşağıdaki hatalar oluşur:
 
-**bir veya daha fazla projenin Code Analysis ayarları Code Analysis ilkesiyle uyumlu değil.**
+**Bir Code Analysis proje için ilke ayarları, bir veya daha fazla proje için Code Analysis uyumlu değildir.**
 
-Bir veya daha fazla kod projesi için proje kaynak denetimine iade etme kod analizi gereksinimleri karşılanmadı. Bu hata, aşağıdaki koşullardan biri veya birkaçı nedeniyle oluşabilir:
+Proje kaynak denetimine giriş yapılan kod analizi gereksinimleri bir veya daha fazla kod projesi için karşılanmaz. Bu hata aşağıdaki koşullardan biri veya daha fazlası nedeniyle olabilir:
 
-- Code Analysis çözümdeki tüm projelere yönelik derlemede etkin değil.
+- Code Analysis çözümde tüm projeler için derlemede etkinleştirilmemiş.
 
-- Visual Studio içindeki proje için yerel kural kümesi, proje kuralı kümesinden daha az kısıtlayıcı bir **eylem** ayarına sahip. örneğin, sunucuda **eylem** hatası olarak ayarlanan bir kuralın =  **eylemi** **uyarı** olarak ayarlanmış veya kural kümesinde Visual Studio olarak çalıştırılmakta olan bir kural **yok** .
+- Visual Studio'daki proje için yerel kural kümesi, proje  kuralı kümesinden daha az kısıtlayıcı bir Eylem ayarına sahip olabilir. Örneğin, sunucuda Eylem Hatası olarak ayarlanmış bir kural, kural kümesinde Uyarı veya Yok olarak =  ayarlanmış Visual Studio).   
 
-- Visual Studio belirtilen kural kümesi, proje için Code Analysis iade ilkesinde belirtilen kural kümesinde belirtilen kuralların tümünü içermiyor.
+- içinde belirtilen kural Visual Studio, projenin iade ilkesinde belirtilen kural kümesinde belirtilen Code Analysis kuralların hepsini içermez.
 
-**Code Analysis ilkesi başarısız oldu. Projede hatalar var {0} veya derleme güncel değil.**
+**İlke Code Analysis başarısız oldu. Projede hatalar var {0} veya derleme güncel değil.**
 
-Derleme hatalar içeriyor ya da hatalar düzeltildi, ancak düzeltme sonrasında kod analizi gerçekleştirilmedi.
+Derleme hatalar içeriyor veya hatalar düzeltildi, ancak düzeltmeden sonra kod analizi gerçekleştirilmiyor.
 
-**İade etme başarısız oldu. Code Analysis ilkesi, açık bir çözümle birlikte Visual Studio iade etmeniz gerekir.**
+**Giriş başarısız oldu. Code Analysis İlkesi, açık bir çözümle Visual Studio aracılığıyla iade gerektirir.**
 
-Kod Analizi ilkesi, iade edilen tüm dosyaların Şu anda açık olan çözümde olması gerekir. Bu hatayı düzeltmek için, iade edilecek dosyayı içeren çözümü açın.
+Kod analizi ilkesi, iade olan tüm dosyaların o anda açık olan çözümde olması gerekir. Bu hatayı düzeltmek için iade etmek istediğiniz dosyayı içeren çözümü açın.
 
-**Bekleyen iadedeki tüm dosyalar şu anda açık olan çözüm içinde değil.**
+**Bekleyen iadedeki tüm dosyalar o anda açık olan çözüm içinde yer alan dosyalar değildir.**
 
-Kod Analizi ilkesi, iade edilen tüm dosyaların Şu anda açık olan çözümde olması gerekir. Bu hata, açık bir çözüm olduğunda tetiklenir, ancak "bekleyen iade etme" görünümündeki bazı dosyalar şu anda açılan çözümün parçası değildir. Bu hatayı düzeltmek için, iade edilecek dosyayı içeren çözümü açın.
+Kod analizi ilkesi, iade olan tüm dosyaların o anda açık olan çözümde olması gerekir. Bu hata açık bir çözüm olduğunda ortaya çıkar, ancak "bekleyen iade" görünümündeki bazı dosyalar o anda açık olan çözümün parçası değildir. Bu hatayı düzeltmek için iade etmek istediğiniz dosyayı içeren çözümü açın.
 
-**' ' Öğesinin sürümü {0} doğru değil. İlkede belirtilen tanımlayıcı adı ' {1} '.**
+**'' {0} sürümü doğru değil. İlkede belirtilen strong-name şu {1} şekildedir: ' '.**
 
-Bu hata .NET projeleri için geçerlidir. Kod Analizi ilkesinin gerektirdiği bir kural .dll yerel bilgisayarda bulunuyor, ancak sürüm/ortak anahtar eşleşmiyor. bu hatayı düzeltmek için, ilke oluşturucunun, bilgisayarında *C:\Program Files \ Microsoft Visual Studio 8 \ Team tools\static Analysis tools\fxcop\rules \\* dizinindeki. dll 'leri güncelleştirmesi gerekir.
+Bu hata .NET projeleri için geçerlidir. Kod .dll ilkesi için gerekli olan bir kural yerel bilgisayarda mevcuttur, ancak sürüm/ortak anahtar eşleşmez. Bu hatayı düzeltmek için, ilke oluşturucusu bilgisayarlarında *C:\Program Files\Microsoft Visual Studio 8\Team Tools\Static Analysis Tools\FxCop\Rules \\* dizininde .dll'leri güncelleştirmesi gerekir.
 
-**{0}ilkede belirtilen ' ' derlemesi yok.**
+**İlkede belirtilen ' {0} ' derlemesi yok.**
 
-Bu hata .NET projeleri için geçerlidir. Kod Analizi ilkesinin gerektirdiği bir kuralda, istemci bilgisayarda karşılık gelen dll yüklü değil. bu hatayı düzeltmek için, ilke oluşturucu bilgisayarında *C:\Program Files \ Microsoft Visual Studio 8 \ Team tools\static Analysis tools\fxcop\rules \\* dizininde bulunan dll 'yi güncelleştirmeniz gerekir.
+Bu hata .NET projeleri için geçerlidir. Kod analizi ilkesi için gerekli olan bir kural, istemci bilgisayarda karşılık gelen dll'ye sahip değildir. Bu hatayı düzeltmek için, ilke oluşturucusu bilgisayarlarında *C:\Program Files\Microsoft Visual Studio 8\Team Tools\Static Analysis Tools\FxCop\Rules \\* dizininde dll'yi güncelleştirmesi gerekir.
 
-**Project {0} kural ayarları Code Analysis ilkesiyle uyumlu değil.**
+**{0}Project kural ayarları, ilkeyle uyumlu Code Analysis değildir.**
 
-Bu hata .NET projeleri için geçerlidir. Yönetilen kod kuralları ayarları, ilke gerektirdiğinden katı değildir. Bu hatayı düzeltmek için, istemci ayarı sunucusundaki ilke gereksiniminden daha katı olmalıdır.
+Bu hata .NET projeleri için geçerlidir. Yönetilen kod kuralları ayarları ilkenin gerektirdiği kadar katı değildir. Bu hatayı düzeltmek için istemci ayarının sunucuda ilke gereksinimiyle aynı veya daha katı olması gerekir.
 
-**Code Analysis etkin yapılandırmada etkin değil. {0}İade etmeden önce yapılandırma ve derleme projesi ' ne geçin {1} .**
+**Code Analysis yapılandırmada etkin değil. Denetlemeden önce {0} yapılandırmaya ve {1} derleme projesine geçiş yap.**
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' De, etkin yapılandırmada kod analizi etkin değil, ancak en az bir kod analizi etkin.
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]'de, etkin yapılandırmada kod analizi etkin değildir, ancak en az bir kod analizi etkindir.
 
-**proje özelliklerinde yönetilen ikililer için Code Analysis etkinleştirmeniz {0} ve iade etmeden önce derleme yapmanız gerekir.**
+**Giriş öncesinde proje Code Analysis ve derlemede yönetilen ikili dosyalar için yönetilen {0} ikili dosyalar için ilkeyi etkinleştirmeniz gerekir.**
 
-Bu hata [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] .NET uygulamaları için geçerlidir. İlke, yönetilen kod analizinin gerçekleştirilmesini gerektiriyor, ancak istemcideki geçerli projede etkin değil.
+Bu hata [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] .NET uygulamaları için geçerlidir. İlkenin gerçekleştirilecek yönetilen kod analizi gerekir, ancak istemcide geçerli projede etkinleştirilmez.
 
-**{0}iade etmeden önce proje özellikleri ve derleme Code Analysis etkinleştirmeniz gerekir.**
+**Giriş Code Analysis proje özelliklerinde {0} ve derlemesinde bu özelliği etkinleştirmeniz gerekir.**
 
-Bu hata [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , projelere ve Web projelerine uygulanır. İlke, yönetilen kod analizinin gerçekleştirilmesini gerektiriyor, ancak istemcideki geçerli projede etkin değil.
+Bu hata projelere [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve web projelerine uygulanır. İlkenin gerçekleştirilecek yönetilen kod analizi gerekir, ancak istemcide geçerli projede etkinleştirilmez.
 
-**proje özelliklerinde C/C++ Code Analysis etkinleştirmeniz {0} ve iade etmeden önce derleme yapmanız gerekir.**
+**Giriş öncesinde proje özelliklerinde ve derlemede C/C++ Code Analysis {0} etkinleştirmeniz gerekir.**
 
-Bu hata, yönetilmeyen projeler için geçerlidir. kod analizi ilkesi C/C++ için Code Analysis gerektiriyor, ancak istemcideki geçerli projede etkin değil.
+Bu hata, unmanaged projeleri için geçerlidir. Kod analizi ilkesi C/C++ için Code Analysis gerektirir, ancak istemcide geçerli projede etkinleştirilmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Code Analysis Uygulama hataları](../code-quality/code-analysis-application-errors.md)
+- [Code Analysis Uygulama Hataları](../code-quality/code-analysis-application-errors.md)

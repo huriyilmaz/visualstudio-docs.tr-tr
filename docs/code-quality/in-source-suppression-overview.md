@@ -18,11 +18,11 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: 224de248715a75a3291869f4bc588384f662643f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122067353"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126631916"
 ---
 # <a name="suppress-code-analysis-violations"></a>Kod analizi ihlallerini gizleme
 
@@ -239,7 +239,7 @@ Yönetilen kod analizi aracı derleme, modül, tür, üye veya parametre düzeyi
 
 Herhangi bir gizleme, açık bir kapsam belirterek ifade olabilir. Bu gizlemeler genel düzeyde yaşanıyor olması gerekir. Bir türü dekore etmekle üye düzeyinde gizleme belirtemezseniz.
 
-Genel düzey gizlemeler, açıkça sağlanan kullanıcı kaynağıyla eşleşmeden derleyici tarafından oluşturulan koda başvuran iletileri gizlemenin tek yoludur. Örneğin, aşağıdaki kod derleyici tarafından yayılan bir oluşturucuya karşı bir ihlali bastırıyor:
+Genel düzey gizlemeler, açıkça sağlanan kullanıcı kaynağıyla eşleşmeden derleyici tarafından oluşturulan koda başvuran iletileri gizlemenin tek yoludur. Örneğin, aşağıdaki kod derleyici tarafından yayılan oluşturucuya karşı bir ihlali bastırıyor:
 
 `[module: SuppressMessage("Microsoft.Design", "CA1055:AbstractTypesDoNotHavePublicConstructors", Scope="member", Target="Microsoft.Tools.FxCop.Type..ctor()")]`
 
@@ -248,11 +248,11 @@ Genel düzey gizlemeler, açıkça sağlanan kullanıcı kaynağıyla eşleşmed
 
 #### <a name="global-suppression-file"></a>Genel gizleme dosyası
 
-Genel gizleme dosyası, bir hedef belirtmeden genel düzeyde gizlemeler veya gizlemeler olan gizlemeleri sürdürür. Örneğin, derleme düzeyi ihlaller için gizlemeler bu dosyada depolanır. Buna ek olarak, ASP.NET gizlemeleri bu dosyada depolanır çünkü bir formun ardındaki kod için proje düzeyi ayarlar kullanılamaz. Genel bir gizleme dosyası oluşturulur ve Hata Listesi penceresindeki Suppress komutunun **In Project Suppression File** seçeneğini ilk kez seçerek **projenize** eklenir. 
+Genel gizleme dosyası, bir hedef belirtmeden genel düzeyde gizlemeler veya gizlemeler olan gizlemeleri sürdürür. Örneğin, derleme düzeyi ihlaller için gizlemeler bu dosyada depolanır. Ayrıca, ASP.NET düzeyi ayarlar bir formun ardındaki kod için kullanılabilir durumda olmadığınız için bazı önemli gizlemeler bu dosyada depolanır. Genel gizleme dosyası oluşturulur ve Hata Listesi penceresindeki Suppress komutunun **In Project Suppression** File  seçeneğini ilk kez seçerek **projenize** eklenir.
 
 #### <a name="module-suppression-scope"></a>Modül gizleme kapsamı
 
-Modül kapsamını kullanarak bütün derleme için kod kalitesi ihlallerini **bastırabilirsiniz.**
+Modül kapsamını kullanarak bütün derleme için kod  kalitesi ihlallerini bastırabilirsiniz.
 
 Örneğin, _GlobalSuppressions_ proje dosyanıza aşağıdaki öznitelik, bir ASP.NET Core projesi için ConfigureAwait ihlalini bastırır:
 

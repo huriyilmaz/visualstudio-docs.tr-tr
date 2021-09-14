@@ -1,5 +1,5 @@
 ---
-description: İlgi programlarını açıklayan bir nesne dizisi içerir.
+description: İlgilendiğiniz programları tanımlayan bir nesne dizisi içerir.
 title: PROGRAM_NODE_ARRAY | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9b2860214acc534b43c4c47ea837e74c18eb6fbe
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122103058"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726966"
 ---
 # <a name="program_node_array"></a>PROGRAM_NODE_ARRAY
-İlgi programlarını açıklayan bir nesne dizisi içerir.
+İlgilendiğiniz programları tanımlayan bir nesne dizisi içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,20 +45,20 @@ public struct tagPROGRAM_NODE_ARRAY {
 
 ## <a name="members"></a>Üyeler
  `dwCount`\
- Dizideki nesne `Members` sayısı.
+ Dizideki nesne sayısı `Members` .
 
  `Members`\
- İstenen programları [açıklayan IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesneleri dizisi.
+ İstenen programları açıklayan bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesneleri dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) [yöntemine](../../../extensibility/debugger/reference/provider-process-data.md) yapılan bir çağrıyla doldurulan PROVIDER_PROCESS_DATA yapısının bir parçasıdır.
+ Bu yapı, bir [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) metoduna yapılan bir çağrı tarafından doldurulduğu [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) yapısının bir parçasıdır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

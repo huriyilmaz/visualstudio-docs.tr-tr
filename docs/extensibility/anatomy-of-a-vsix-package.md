@@ -1,6 +1,6 @@
 ---
-title: VSıX paketinin anatomumu | Microsoft Docs
-description: bir veya daha fazla Visual Studio uzantısı ve meta veri bildirim dosyası içeren Visual Studio, bir vsıx paketinin içerikleri hakkında bilgi edinin.
+title: VSIX Paketi Anatomisi | Microsoft Docs
+description: Visual Studio'daki VSIX paketinin içeriği, bir veya daha fazla uzantı ve meta veri bildirim Visual Studio dosya hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -16,48 +16,48 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9485aeba7d531c0a05f33ad759688e9fd05a29f9
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122111989"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725328"
 ---
-# <a name="anatomy-of-a-vsix-package"></a>VSıX paketinin anatomumu
-vsıx paketi bir veya daha fazla Visual Studio uzantısı içeren bir *. VSIX* dosyasıdır, Visual Studio meta verileri, uzantıları sınıflandırmak ve yüklemek için kullanır. Bu meta veriler VSıX bildiriminde ve *[Content_Types] .xml* dosyasında bulunur. Bir VSıX paketi ayrıca yerelleştirilmiş kurulum metni sağlamak için bir veya daha fazla *extension. valtlangpack* dosyası içerebilir ve bağımlılıkları yüklemek IÇIN ek VSIX paketleri içerebilir.
+# <a name="anatomy-of-a-vsix-package"></a>VSIX paketinin anatomisi
+VSIX paketi, uzantıları sınıflandırmak ve yüklemek için Visual Studio meta verilerle birlikte bir veya daha fazla Visual Studio *içeren bir .vsix* dosyasıdır. Bu meta veriler VSIX bildiriminde ve *[Content_Types].xml* içerir. Bir VSIX paketi, yerelleştirilmiş kurulum metni sağlamak için bir veya daha fazla *Extension.vsixlangpack* dosyası içerebilir ve bağımlılıkları yüklemek için ek VSIX paketleri içerebilir.
 
- VSıX paketi biçimi açık paketleme kuralları (OPC) standardını izler. Paket, bir *[Content_Types] .xml* dosyası ve *. vsix* bildirim dosyası ile birlikte ikili dosyaları ve destekleyici dosyaları içerir. Bir VSıX paketi birden çok projenin çıkışını ya da kendi bildirimlerine sahip birden çok paketi içerebilir.
+ VSIX paket biçimi Açık Paketleme Kuralları (OPC) standardını izler. Paket, *[Content_Types].xml* dosyası ve *bir .vsix* bildirim dosyasıyla birlikte ikili dosyalar ve destek dosyaları içerir. Bir VSIX paketi, birden çok proje veya hatta kendi bildirimleri olan birden çok paketin çıkışını içerebilir.
 
 > [!NOTE]
-> VSıX paketlerine dahil edilen dosyaların adları, [ \[ rfc2396 \] ](https://www.rfc-editor.org/rfc/rfc2396.txt)altında tanımlandığı gibi Tekdüzen Kaynak tanımlayıcılarında (URI) ayrılan boşluk veya karakterleri içermemelidir.
+> VSIX paketlerinde yer alan dosyaların [ \[ adları, RFC2396 \] ](https://www.rfc-editor.org/rfc/rfc2396.txt)altında tanımlandığı gibi Tekdü Kaynak Tanımlayıcıları 'da (URI) ayrılmış boşluklar veya karakterler içermemalıdır.
 
-## <a name="the-vsix-manifest"></a>VSıX bildirimi
- VSıX bildirimi yüklenecek uzantı hakkında bilgiler içerir ve VSX şemasını izler. Daha fazla bilgi için bkz. [VSIX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110)). Örnek VSıX bildirimi için bkz. [PackageManifest öğesi (root öğesi, VSX şeması)](/previous-versions/dd393754(v=vs.110)).
+## <a name="the-vsix-manifest"></a>VSIX bildirimi
+ VSIX bildirimi, yüklenmek için uzantı hakkında bilgiler içerir ve VSX Şemasını izler. Daha fazla bilgi için bkz. [VSIX uzantı şeması 1.0 başvurusu.](/previous-versions/dd393700(v=vs.110)) Örnek bir VSIX bildirimi için bkz. [PackageManifest öğesi (kök öğe, VSX şeması)](/previous-versions/dd393754(v=vs.110)).
 
- VSıX bildiriminin `extension.vsixmanifest` bir ^. VSIX * dosyasına dahil edildiğinde adlandırılması gerekir.
+ VSIX bildirimi bir `extension.vsixmanifest` ^.vsix* dosyasına ekli olduğunda adlandırılmış olması gerekir.
 
 ## <a name="the-content"></a>İçerik
- Bir VSıX paketi, Visual Studio tarafından desteklenen şablonlar, araç kutusu öğeleri, VSPackages veya diğer uzantı türlerini içerebilir.
+ VSIX paketi şablonlar, araç kutusu öğeleri, VSPackage'lar veya uygulama tarafından desteklenen başka bir uzantı Visual Studio.
 
 ## <a name="language-packs"></a>Dil paketleri
- Bir VSıX paketi, yükleme sırasında yerelleştirilmiş metin sağlamak için bir veya daha fazla *extension. valtlangpack* dosyası içerebilir. Daha fazla bilgi için bkz. [VSIX paketlerini yerelleştirme](../extensibility/localizing-vsix-packages.md).
+ VsIX paketi, yükleme sırasında yerelleştirilmiş metin sağlamak için bir veya daha fazla *Extension.vsixlangpack* dosyası içerebilir. Daha fazla bilgi için [bkz. VSIX paketlerini yerelleştirme.](../extensibility/localizing-vsix-packages.md)
 
 ## <a name="dependencies-and-references"></a>Bağımlılıklar ve başvurular
- VSıX paketi, diğer VSıX paketlerini başvuru olarak içerebilir. Bu diğer paketlerin her biri kendi VSıX bildirimini içermelidir.
+ VsIX paketi, başvuru olarak başka VSIX paketleri içerebilir. Bu diğer paketlerin her biri kendi VSIX bildirimini içermeli.
 
- Bir Kullanıcı bağımlılıkları olan bir uzantıyı yüklemeye çalışırsa, yükleyici gerekli derlemelerin Kullanıcı sisteminde yüklü olduğunu doğrular. Gerekli derlemeler bulunamazsa, **Uzantılar ve güncelleştirmeler** eksik derlemelerin bir listesini görüntüler.
+ Kullanıcı bağımlılıkları olan bir uzantıyı yüklemeye çalışırsa, yükleyici gerekli derlemelerin kullanıcı sisteminde yüklü olduğunu doğrular. Gerekli derlemeler bulunamasa **Uzantılar ve Güncelleştirmeler** eksik derlemelerin listesini görüntüler.
 
- Uzantı bildirimi bir veya daha fazla [başvuru](/previous-versions/visualstudio/visual-studio-2010/dd393687(v=vs.100)) öğesi Içeriyorsa, **Uzantılar ve güncelleştirmeler** , her başvurunun bildirimini sistemde yüklü olan uzantılara göre karşılaştırır ve henüz yüklenmemişse başvurulan uzantıyı ekler. Başvurulan bir uzantının önceki bir sürümü yüklüyse, yeni sürüm yerini alır.
+ Uzantı bildirimi bir veya [](/previous-versions/visualstudio/visual-studio-2010/dd393687(v=vs.100)) daha fazla Başvuru öğeleri içerirse **Uzantılar** ve Güncelleştirmeler, her bir başvuru bildirimini sistemde yüklü olan uzantılar ile karşılaştırıldığında, başvurulan uzantı zaten yüklü değilse yüklenir. Başvurulan uzantının önceki bir sürümü yüklüyse, uzantının yerini daha yeni bir sürüme verir.
 
- Çoklu proje çözümündeki bir proje aynı çözümdeki başka bir projeye başvuru içeriyorsa, VSıX paketi o projenin bağımlılıklarını içerir. İç proje başvurusunu seçerek ve ardından **Özellikler** penceresinde **VSIX özelliğinde bulunan çıkış gruplarını** olarak ayarlayarak bu davranışı geçersiz kılabilirsiniz `BuiltProjectOutputGroup` .
+ Çok projeli çözümdeki bir proje, aynı çözümdeki başka bir projeye başvuru içerirse VSIX paketi bu projenin bağımlılıklarını içerir. İç proje için başvuru seçerek ve ardından Özellikler penceresinde **VSIX** özelliğine Dahil Edilen Çıkış Grupları ayarını olarak ayarerek bu davranışı geçersiz  kılabilirsiniz. `BuiltProjectOutputGroup`
 
- VSıX paketindeki başvurulan derlemelerden uydu dll 'Leri eklemek için `SatelliteDllsProjectOutputGroup` **VSIX özelliğinde bulunan çıkış gruplarına** ekleyin.
+ VSIX paketinde başvurulan derlemelerden uydu URL'lerini dahil etmek için, `SatelliteDllsProjectOutputGroup` **VSIX özelliğine Dahil Edilen Çıkış Gruplarına** ekleyin.
 
 ## <a name="installation-location"></a>Yükleme konumu
- Yükleme sırasında, **Uzantılar ve güncelleştirmeler** , VSIX paketinin içeriğini *%LocalAppData%\Microsoft\VisualStudio\14.0\Extensions* altındaki bir klasörde arar.
+ Yükleme sırasında, **Uzantılar** ve Güncelleştirmeler VSIX paketinin *içeriğini %LocalAppData%\Microsoft\VisualStudio\14.0\Extensions* altındaki bir klasörde arama.
 
- Varsayılan olarak, yükleme yalnızca geçerli kullanıcı için geçerlidir, çünkü *% LocalAppData%* kullanıcıya özgü bir dizindir. Ancak, bildirimin [ALLUSERS](/previous-versions/ee191547(v=vs.110)) öğesini olarak ayarlarsanız `True` , uzantı altına yüklenir <em>. \\ </em> VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> ve bilgisayarın tüm kullanıcıları tarafından kullanılabilir.
+ *%LocalAppData%* kullanıcıya özgü bir dizin olduğundan yükleme varsayılan olarak yalnızca geçerli kullanıcı için geçerlidir. Ancak bildirimin [AllUsers öğesini](/previous-versions/ee191547(v=vs.110)) olarak ayarlayacak olursanız `True` uzantı altına <em>yüklenir. \\ </em> VisualStudioInstallationFolder<em>\Common7\IDE\Extensions</em> ve bilgisayarın tüm kullanıcıları tarafından kullanılabilir.
 
-## <a name="content_typesxml"></a>[Content_Types] .xml
- *[Content_Types] .xml* dosyası Genişletilmiş *. vsix* dosyasındaki dosya türlerini tanımlar. Visual Studio, paketin yüklenmesi sırasında bu dosyayı kullanır, ancak dosyanın kendisini yüklemez. Bu dosya hakkında daha fazla bilgi için bkz. [[Content_Types] .xml dosyasının yapısı](the-structure-of-the-content-types-dot-xml-file.md).
+## <a name="content_typesxml"></a>[Content_Types].xml
+ *[Content_Types].xml* dosyası, genişletilmiş *.vsix* dosyasındaki dosya türlerini tanımlar. Visual Studio paketin yüklemesi sırasında bu dosyayı kullanır, ancak dosyanın kendisini yüklemez. Bu dosya hakkında daha fazla bilgi için [bkz. [Content_types].xml dosyası.](the-structure-of-the-content-types-dot-xml-file.md)
 
- Açık paketleme kuralları (OPC) standardı için bir *[Content_Types] .xml* dosyası gereklidir. OPC hakkında daha fazla bilgi için bkz. [OPC: msdn Web sitesinde verilerinizi paketlemeye yönelik yeni bir standart](/archive/blogs/msdnmagazine/opc-a-new-standard-for-packaging-your-data) .
+ *[Content_Types].xml* dosyası, Açık Paketleme Kuralları (OPC) standardı tarafından gereklidir. OPC hakkında daha fazla bilgi için MSDN Web sitesinde [OPC:](/archive/blogs/msdnmagazine/opc-a-new-standard-for-packaging-your-data) Verilerinizi paketlemeye ilişkin yeni bir standart konusuna bakın.

@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c70e331de05b3288e1105832616acb1d3359b049
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122137840"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634734"
 ---
 # <a name="threadproperty_fields"></a>THREADPROPERTY_FIELDS
 Bir iş parçacığı hakkında hangi bilgilerin alın olacağını belirtir.
@@ -56,7 +56,7 @@ public enum enum_THREADPROPERTY_FIELDS {
 
 ## <a name="fields"></a>Alanlar
  `TPF_ID`\
- `dwThreadId` [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısının alanını başlatma/kullanma.
+ `dwThreadId` [THREADPROPERTIES yapısının alanını başlatma/kullanma.](../../../extensibility/debugger/reference/threadproperties.md)
 
  `TPF_SUSPENDCOUNT`\
  S yapısının `dwSuspendCount` alanını `THREADPROPERTIE` başlatma/kullanma.
@@ -79,7 +79,7 @@ public enum enum_THREADPROPERTY_FIELDS {
 ## <a name="remarks"></a>Açıklamalar
  Bu değerler, [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) yapısının hangi alanlarının başlat olacağını belirtmek için [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) yöntemine bağımsız değişken olarak geçirildi.
 
- Bu değerler, hangi alanların `dwFields` ve geçerli olduğunu belirtmek için `THREADPROPERTIES` yapının üyesinde de kullanılır.
+ Bu değerler ayrıca hangi alanların `dwFields` ve geçerli alanların olduğunu belirtmek için `THREADPROPERTIES` yapının üyesinde de kullanılır.
 
  Bu bayraklar bit olarak birleştirilmiş `OR` olabilir.
 

@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: cdcf987151af31e9f8921bfca3f758b20b818e32
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122029183"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726972"
 ---
 # <a name="process_info_fields"></a>PROCESS_INFO_FIELDS
 Bir işlem için ne tür bilgilerin alınamadı.
@@ -87,7 +87,7 @@ public enum enum_PROCESS_INFO_FIELDS {
  Tüm alanları doldurur.
 
 ## <a name="remarks"></a>Açıklamalar
- İlke [yapısının](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) hangi alanlarının başlatılmayacaklarını [belirtmek PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) GetInfo yöntemine geçirildi.
+ İlke [yapısının](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) hangi alanlarının başlatılmayacaklarını [göstermek PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) GetInfo yöntemine geçirildi.
 
  Ayrıca, `Fields` kullanılan ve geçerli `PROCESS_INFO` olan alanları belirtmek için yapı alanında kullanılır.
 

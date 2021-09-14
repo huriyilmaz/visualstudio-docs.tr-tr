@@ -15,11 +15,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 26a5c1e979eb5ca0a0dcb18f87bacdc86bd915bc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113534"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725443"
 ---
 # <a name="idiasymbolget_name"></a>IDiaSymbol::get_name
 Simgenin adını alır.

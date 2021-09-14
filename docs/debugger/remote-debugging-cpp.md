@@ -20,22 +20,22 @@ ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ffaa8d1dde6e1304cda0dec33809a01e36fdd56b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122161198"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627915"
 ---
 # <a name="remote-debugging-a-c-project-in-visual-studio"></a>Visual Studio'de C++ Project Uzaktan Hata Ayıklama
 Farklı bir bilgisayarda Visual Studio uygulamanın hata ayıklaması için, uygulamanızı dağıtacak bilgisayarınıza uzak araçları yükleyin ve çalıştırın, projenizi Visual Studio'den uzak bilgisayara bağlanacak şekilde yapılandırın ve ardından uygulamanızı dağıtın ve çalıştırın.
 
 ![Uzaktan hata ayıklayıcı bileşenleri](../debugger/media/remote-debugger-client-apps.png "Remote_debugger_components")
 
-Universal Windows Apps 'de (UWP) uzaktan hata ayıklama hakkında bilgi için bkz. Yüklü [Uygulama Paketinde Hata Ayıklama.](debug-installed-app-package.md)
+Universal Windows Apps 'de (UWP) uzaktan hata ayıklama hakkında bilgi için bkz. [Yüklü Uygulama Paketinde Hata Ayıklama.](debug-installed-app-package.md)
 
 ## <a name="requirements"></a>Gereksinimler
 
-Uzaktan hata ayıklayıcısı Windows Server 2008 Service Pack 2 ile başlayan Windows Windows Server 7 ve daha yeni sürümlerde (telefon değil) ve sürümlerinde de desteklemektedir. Gereksinimlerin tam listesi için bkz. [Gereksinimler.](../debugger/remote-debugging.md#requirements_msvsmon)
+Uzaktan hata ayıklayıcı, Windows Server 2008 Service Pack 2 ile başlayan Windows Server'ın Windows Windows 7 ve daha yeni sürümlerinde (telefon değil) de desteklemektedir. Gereksinimlerin tam listesi için bkz. [Gereksinimler.](../debugger/remote-debugging.md#requirements_msvsmon)
 
 > [!NOTE]
 > Ara sunucu üzerinden bağlanan iki bilgisayar arasında hata ayıklama desteklenmiyor. Çevirmeli İnternet gibi yüksek gecikme süresi veya düşük bant genişliği bağlantısı üzerinden veya ülkeler arasında İnternet üzerinden hata ayıklama önerilmez ve başarısız olabilir veya kabul edilemez düzeyde yavaş olabilir.
@@ -87,7 +87,7 @@ Uzaktan hata ayıklayıcısı Windows Server 2008 Service Pack 2 ile başlayan W
 
     ![Uygulamanın Yapılandırma Yöneticisi ekran Visual Studio Çözüm Gezgini. Hata ayıklama yapılandırması seçilidir ve Dağıt seçeneği işaretlidir.](../debugger/media/remotedebugcplusdeploy.png)
 
-8. Hata ayıklamayı başlatma (**Hata ayıklamayı > Hata Ayıklamayı Başlat** veya **F5**).
+8. Hata ayıklamayı başlatma (**Hata > Başlat** veya **F5**).
 
 9. Yürütülebilir dosya otomatik olarak uzak bilgisayara dağıtılır.
 
@@ -98,9 +98,9 @@ Uzaktan hata ayıklayıcısı Windows Server 2008 Service Pack 2 ile başlayan W
 11. Bu Visual Studio kesme noktası üzerinde yürütmenin durdurulmuş olduğunu görüyor olun.
 
     > [!TIP]
-    > Alternatif olarak, dosyaları ayrı bir adım olarak dağıtabilirsiniz. Uygulama Çözüm Gezgini **mymfc** düğümüne sağ tıklayın ve dağıt'ı  **seçin.**
+    > Alternatif olarak, dosyaları ayrı bir adım olarak dağıtabilirsiniz. Uygulamanın **Çözüm Gezgini** **mymfc** düğümüne sağ tıklayın ve dağıt'ı **seçin.**
 
-    Uygulama için gerekli olan kod olmayan dosyalarınız varsa, Bunları Uzak Dosya Hata Ayıklayıcısı  sayfasında Dağıtılan Ek Dosyalar'da noktalı virgülle ayrılmış **Windows belirtebilirsiniz.**
+    Uygulama için gerekli olan kod dışı dosyalarınız varsa, Bunları Uzak Dosya Hata Ayıklayıcısı  sayfasında dağıtıla diğer dosyalar'da noktalı virgülle ayrılmış **bir Windows belirtebilirsiniz.**
 
     Alternatif olarak, dosyaları projenize dahil edebilirsiniz ve  her  dosyanın Özellikler sayfasında İçerik **özelliğini Evet** olarak ayarlayın. Bu dosyalar Uzak Sunucu Hata **Ayıklayıcısı sayfasında** belirtilen **Dağıtım Windows kopyalanır.** Ayrıca, Dosyaların Dağıtım **Dizini'nin** bir alt klasörüne kopyalanmış olması gerekirse Öğe Türü'nü Dosya Kopyala olarak değiştirebilir ve ek özellikler  **belirtebilirsiniz.**
 
@@ -111,7 +111,7 @@ Uzaktan hata ayıklayıcısı Windows Server 2008 Service Pack 2 ile başlayan W
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
-- [Uzaktan Hata Windows Güvenlik Duvarı'nı yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
+- [Uzaktan Windows Güvenlik Duvarı'nı yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları](../debugger/remote-debugger-port-assignments.md)
 - [Uzak IIS Bilgisayarında Uzaktan ASP.NET ile Hata Ayıklama](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)
 - [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)

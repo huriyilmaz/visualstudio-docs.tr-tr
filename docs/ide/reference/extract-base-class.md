@@ -13,11 +13,11 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: c3dec3fb8f00f763ea898b17e97c3714c75bfddb
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034298"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725741"
 ---
 # <a name="extract-base-class"></a>Temel sınıfı ayıklama
 
@@ -35,9 +35,9 @@ Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Caret'inizi sınıf adına veya vurgulanan üyeye girin.
+1. Caret'inizi sınıf adına veya vurgulanmış bir üyeye girin.
 
-2. **Ctrl tuşuna** + **basın.** hızlı eylemler **ve yeniden düzenleme menüsünü tetiklemek** için.
+2. **Ctrl tuşuna** + **basın.** Hızlı Eylemler **ve Yeniden Düzenleme menüsünü tetiklemek** için.
 
 3. **Üyeleri yeni temel sınıfa çek** seçeneğini belirleyin.
 

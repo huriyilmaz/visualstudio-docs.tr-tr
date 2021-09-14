@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 49c8975a93d54d9138cbdcf510e7ee18d5bc55d2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122145620"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725306"
 ---
 # <a name="context_compare"></a>CONTEXT_COMPARE
 İki bellek bağlamlarını karşılaştırma ölçütlerini belirtir.

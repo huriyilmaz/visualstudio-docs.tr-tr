@@ -1,6 +1,6 @@
 ---
-title: 'nasıl yapılır: program aracılığıyla Outlook kişilerine giriş ekleme'
-description: Outlook kişiler için programlı olarak bir girişi nasıl ekleyebileceğiniz hakkında bilgi edinin. Bu örnek yeni bir kişi oluşturur ve yeni kişiye veri girer.
+title: 'Nasıl yapılanlar: Kişi eklemeye program aracılığıyla Outlook ekleme'
+description: Kişileri eklemek için program aracılığıyla giriş Outlook öğrenin. Bu örnek yeni bir kişi oluşturur ve yeni kişiye veri girer.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -17,13 +17,13 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 1f5ea3b9eb70a8b58dce76c214bea2625536873b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122155960"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725583"
 ---
-# <a name="how-to-programmatically-add-an-entry-to-outlook-contacts"></a>nasıl yapılır: program aracılığıyla Outlook kişilerine giriş ekleme
+# <a name="how-to-programmatically-add-an-entry-to-outlook-contacts"></a>Nasıl yapılanlar: Kişi eklemeye program aracılığıyla Outlook ekleme
   Bu örnek yeni bir kişi oluşturur ve yeni kişiye veri girer.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
@@ -34,6 +34,6 @@ ms.locfileid: "122155960"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)
-- [Nasıl yapılır: program aracılığıyla randevu oluşturma](../vsto/how-to-programmatically-create-appointments.md)
-- [nasıl yapılır: program aracılığıyla Outlook kişilere erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)
-- [Nasıl yapılır: kişilerde program aracılığıyla e-posta adresi arama](../vsto/how-to-programmatically-search-for-an-e-mail-address-in-contacts.md)
+- [Nasıl olur: Program aracılığıyla randevular oluşturma](../vsto/how-to-programmatically-create-appointments.md)
+- [Nasıl Outlook: Program aracılığıyla Outlook erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)
+- [Nasıl olur: Kişilerde program aracılığıyla e-posta adresi arama](../vsto/how-to-programmatically-search-for-an-e-mail-address-in-contacts.md)

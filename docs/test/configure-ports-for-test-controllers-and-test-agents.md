@@ -1,6 +1,6 @@
 ---
-title: Test denetleyicileri ve test aracıları için bağlantı noktalarını yapılandırma
-description: Test denetleyicisi, test aracısı ve diğer yazılımlarla çakışmaları önlemek için istemci tarafından kullanılan varsayılan gelen bağlantı noktalarını değiştirmeyi öğrenin.
+title: Test Denetleyicileri ve Test Aracıları için Bağlantı Noktalarını Yapılandırma
+description: Diğer yazılımlarla çakışmaları önlemek için test denetleyicisi, test aracısı ve istemci tarafından kullanılan varsayılan gelen bağlantı noktalarının nasıl değiştirileceklerini öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/19/2016
 ms.topic: how-to
@@ -17,58 +17,58 @@ ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
 ms.openlocfilehash: c12affe5d2979aefbc8776264fade321e4950818
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122140069"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725628"
 ---
 # <a name="configure-ports-for-test-controllers-and-test-agents"></a>Test denetleyicileri ve test aracıları için bağlantı noktalarını yapılandırma
 
-Test denetleyicisi, test aracısı ve istemci tarafından kullanılan varsayılan gelen bağlantı noktalarını değiştirebilirsiniz. Bu, test denetleyicisini, test aracısını veya istemciyi bağlantı noktası ayarlarıyla çakışan diğer yazılımlarla birlikte kullanmaya çalışıyorsanız gerekli olabilir. Bağlantı noktalarını değiştirme işlemi, test denetleyicisi ve istemci arasındaki güvenlik duvarı kısıtlamasından kaynaklanır. Bu durumda, test denetleyicisinin sonuçları istemciye gönderebilmesi için bağlantı noktasını bir güvenlik duvarı için etkinleştirmeye uyum sağlayacak şekilde el ile yapılandırmak isteyebilirsiniz.
+Test denetleyicisi, test aracısı ve istemci tarafından kullanılan varsayılan gelen bağlantı noktalarını değiştirebilirsiniz. Test denetleyicisini, test aracısını veya istemciyi bağlantı noktası ayarlarıyla çakışan başka bir yazılımla birlikte kullanmaya çalışıyorsanız bu gerekli olabilir. Bağlantı noktalarını değiştirmenin bir diğer nedeni de test denetleyicisi ile istemci arasındaki güvenlik duvarı kısıtlamasıdır. Bu durumda, test denetleyicisinin istemciye sonuç gönderesin diye bağlantı noktasını güvenlik duvarı için etkinleştirmeye uygun şekilde el ile yapılandırmak istiyor olabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Aşağıdaki çizimde, test denetleyicisi, test aracısı ve istemci arasındaki bağlantı noktaları gösterilmektedir. Gelen ve giden bağlantılar için hangi bağlantı noktalarının kullanıldığını ve bu bağlantı noktalarında kullanılan güvenlik kısıtlamalarını özetler.
+Aşağıdaki çizimde test denetleyicisi, test aracısı ve istemci arasındaki bağlantı noktaları gösterilmiştir. Gelen ve giden bağlantılar için kullanılan bağlantı noktalarının yanı sıra bu bağlantı noktalarında kullanılan güvenlik kısıtlamalarını özetler.
 
-![Test denetleyicisi ve test Aracısı bağlantı noktaları ve güvenliği](../test/media/test-controller-agent-firewall.png)
+![Test denetleyicisi ve test aracısı bağlantı noktaları ve güvenlik](../test/media/test-controller-agent-firewall.png)
 
 ## <a name="incoming-connections"></a>Gelen bağlantılar
 
-Test denetleyicisi tarafından kullanılan varsayılan bağlantı noktası 6901 ' dir ve test aracısının varsayılan bağlantı noktası 6910 ' dir. İstemci, test denetleyicisinden test sonuçlarını almak için kullanılan varsayılan olarak rastgele bir bağlantı noktası kullanır. Tüm gelen bağlantılarda, test denetleyicisi çağıran tarafın kimliğini doğrular ve belirli bir güvenlik grubuna ait olduğunu doğrular.
+Test denetleyicisi tarafından kullanılan varsayılan bağlantı noktası 6901 ve test aracısına göre varsayılan bağlantı noktası 6910'dır. İstemci varsayılan olarak test denetleyicisinden test sonuçlarını almak için kullanılan rastgele bir bağlantı noktası kullanır. Tüm gelen bağlantılar için, test denetleyicisi arama grubunun kimliğini doğrular ve belirli bir güvenlik grubuna ait olduğunu doğrular.
 
-- **Test denetleyicisi** Gelen bağlantılar, TCP bağlantı noktası 6901 ' dir. Gerekirse, gelen bağlantı noktasını yapılandırabilirsiniz. Daha fazla bilgi için bkz. [gelen bağlantı noktalarını yapılandırma](#configure-the-incoming-ports).
+- **Test Denetleyicisi** Gelen bağlantılar TCP bağlantı noktası 6901'dedir. Gerekirse, gelen bağlantı noktasını yapılandırabilirsiniz. Daha fazla bilgi için [bkz. Gelen bağlantı noktalarını yapılandırma.](#configure-the-incoming-ports)
 
-    Test denetleyicisinin Test aracılarına ve istemciye giden bağlantıları yapabilmesi gerekir.
+    Test denetleyicisinin test aracıları ve istemciye giden bağlantıda olması gerekir.
 
     > [!NOTE]
-    > Test denetleyicisine gelen **dosya ve yazıcı paylaşımı** bağlantısı açık olmalıdır.
+    > Test denetleyicisinin gelen Dosya **ve Yazıcı paylaşımı bağlantısının açık** olması gerekir.
 
-- **Test Aracısı** Gelen bağlantılar, TCP bağlantı noktası 6910 ' dir. Gerekirse, gelen bağlantı noktasını yapılandırabilirsiniz. Daha fazla bilgi için bkz. [gelen bağlantı noktalarını yapılandırma](#configure-the-incoming-ports).
+- **Test Aracısı** Gelen bağlantılar TCP bağlantı noktası 6910'dadır. Gerekirse, gelen bağlantı noktasını yapılandırabilirsiniz. Daha fazla bilgi için [bkz. Gelen bağlantı noktalarını yapılandırma.](#configure-the-incoming-ports)
 
-   Test aracısının, test denetleyicisi ile giden bağlantı kurabilmesi gerekir.
+   Test aracısını test denetleyicisine giden bağlantının olması gerekir.
 
-- **İstemci** Varsayılan olarak, gelen bağlantılar için rastgele bir TCP bağlantı noktası kullanılır. Gerekirse, gelen bağlantı noktasını yapılandırabilirsiniz. Daha fazla bilgi için bkz. [gelen bağlantı noktalarını yapılandırma](#configure-the-incoming-ports).
+- **İstemci** Varsayılan olarak, gelen bağlantılar için rastgele bir TCP bağlantı noktası kullanılır. Gerekirse, gelen bağlantı noktasını yapılandırabilirsiniz. Daha fazla bilgi için [bkz. Gelen bağlantı noktalarını yapılandırma.](#configure-the-incoming-ports)
 
-   Test denetleyicisi istemciye ilk kez bağlanmayı denediğinde güvenlik duvarı bildirimleri alabilirsiniz.
+   Test denetleyicisi istemciye ilk kez bağlanmaya çalıştığında güvenlik duvarı bildirimleri alırsınız.
 
-   Windows Server 2008 ' de, güvenlik duvarı bildirimleri varsayılan olarak devre dışıdır ve gelen bağlantıları kabul edebilmesi için istemci programları (*devenv.exe*, *mstest.exe*, *mlm.exe*) için güvenlik duvarı özel durumlarını el ile eklemeniz gerekir.
+   Windows Server 2008'de güvenlik duvarı bildirimleri varsayılan olarak devre dışı bırakılır ve gelen bağlantıları kabul etmek için İstemci programları (*devenv.exe*, *mstest.exe*, *mlm.exe*) için güvenlik duvarı özel durumlarını el ile eklemeniz gerekir.
 
 ## <a name="outgoing-connections"></a>Giden bağlantılar
 
-Rastgele TCP bağlantı noktaları tüm giden bağlantılar için kullanılır.
+Tüm giden bağlantılar için rastgele TCP bağlantı noktaları kullanılır.
 
-- **Test denetleyicisi** Test denetleyicisinin aracılara ve Istemciye giden bağlantıları yapabilmesi gerekir.
+- **Test Denetleyicisi** Test denetleyicisinin Aracılara ve İstemciye giden bağlantıda olması gerekir.
 
-- **Test Aracısı** Test aracısının denetleyiciye giden bağlantı kurabilmesi gerekir.
+- **Test Aracısı** Test aracısını Denetleyiciye giden bağlantının olması gerekir.
 
-- **İstemci** İstemcinin denetleyiciye giden bağlantı kurabilmesi gerekir.
+- **İstemci** İstemcinin Denetleyici ile giden bağlantıda olması gerekir.
 
 ## <a name="configure-the-incoming-ports"></a>Gelen bağlantı noktalarını yapılandırma
 
-Bir test denetleyicisi ve test aracısının bağlantı noktalarını yapılandırmak için bu yönergeleri izleyin.
+Bir test denetleyicisi ve test aracıları için bağlantı noktalarını yapılandırmak üzere bu yönergeleri izleyin.
 
-- **Denetleyici hizmeti** *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config* dosyasını düzenleyerek bağlantı noktasının değerini değiştirin:
+- **Denetleyici Hizmeti** *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.configdosyasını düzenleyerek bağlantı noktasının değerini* değiştirme:
 
     ```xml
     <appSettings>
@@ -76,7 +76,7 @@ Bir test denetleyicisi ve test aracısının bağlantı noktalarını yapıland�
     </appSettings>
     ```
 
-- **Aracı hizmeti** *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config* dosyasını düzenleyerek bağlantı noktasını değiştirin:
+- **Aracı Hizmeti** *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.configdosyasını düzenleyerek bağlantı Studio\2017\Enterprise\Common7\IDE\QTAgentService.exe.config* değiştirme:
 
     ```xml
     <appSettings>
@@ -84,7 +84,7 @@ Bir test denetleyicisi ve test aracısının bağlantı noktalarını yapıland�
     </appSettings>
     ```
 
-- **İstemci** Aşağıdaki kayıt defteri (**DWORD**) değerlerini eklemek için kayıt defteri düzenleyicisini kullanın. İstemci, test denetleyicisinden veri almak için belirtilen aralıktaki bağlantı noktalarından birini kullanacaktır:
+- **İstemci** Aşağıdaki kayıt defteri ( DWORD ) değerlerini eklemek için **kayıt defteri düzenleyicisini** kullanın. İstemci, test denetleyicisinden veri almak için belirtilen aralıktan bağlantı noktalarından birini kullanır:
 
      **HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\VisualStudio\12.0\EnterpriseTools\QualityTools\ListenPortRange\PortRangeStart**
 

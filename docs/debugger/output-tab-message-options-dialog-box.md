@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 41a6e5aef6654b06b21481328a6fdd50f672095b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122030626"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725888"
 ---
 # <a name="output-tab-message-options-dialog-box"></a>Çıktı Sekmesi, İleti Seçenekleri İletişim Kutusu
 her **iletiden** hangi verilerin İletiler Görünümü'ne listelen bir veri olduğunu belirtmek için [Çıktı sekmesini kullanın.](../debugger/messages-view.md) İleti Seçenekleri İletişim [Kutusunu görüntülemek için Spy](../debugger/message-options-dialog-box.md) **menüsünden Günlük** İletileri'ne tıklayın. 
@@ -29,7 +29,7 @@ her **iletiden** hangi verilerin İletiler Görünümü'ne listelen bir veri old
 
  **İleti İç İçe Yerleştirme Düzeyi** Düzey başına bir nokta ile iç içe geçmiş iletiler öneki.
 
- **Ham İleti Parametreleri** Onaltılık **wParam ve** **lParam değerlerini** görüntüler.
+ **Ham İleti Parametreleri** Onaltılık **wParam ve lParam** **değerlerini** görüntüler.
 
  **Kodu Çözülen İleti Parametreleri** **wParam** ve **lParam** değerlerinin iletiye özgü kod çözme sonuçlarını görüntüler.
 

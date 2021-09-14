@@ -17,11 +17,11 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 211bba75c6acee1a820a2b8b4adaefb508818a04
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122060082"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726769"
 ---
 # <a name="how-to-create-an-application-page"></a>Nasıl yapılır: uygulama sayfası oluşturma
   bir veya daha fazla SharePoint sitesi için ASP.NET web sayfası oluşturabilirsiniz. SharePoint, bu sayfalara uygulama sayfaları denir. Bir site sayfasının aksine, bir uygulama sayfası sayfanın arkasında çalışan kodu içerir. Daha fazla bilgi için bkz. [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md).

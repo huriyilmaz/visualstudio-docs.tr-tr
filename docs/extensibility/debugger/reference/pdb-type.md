@@ -1,5 +1,5 @@
 ---
-description: Bu yapı bir PDB sembolünden alınan alan türü hakkında bilgi belirtir.
+description: Bu yapı, PDB simgesinden alınan alan türüyle ilgili bilgileri belirtir.
 title: PDB_TYPE | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,15 +18,15 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 115d327411cb3d04f26e44ede6fee0f17ff3d9b6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034636"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726984"
 ---
 # <a name="pdb_type"></a>PDB_TYPE
 
-Bu yapı bir PDB sembolünden alınan alan türü hakkında bilgi belirtir.
+Bu yapı, PDB simgesinden alınan alan türüyle ilgili bilgileri belirtir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,25 +49,25 @@ public struct PDB_TYPE {
 ## <a name="members"></a>Üyeler
 
 `ulAppDomainID`\
-Simgenin geldiği uygulamanın KIMLIĞI. Bu, uygulamanın bir örneğini benzersiz bir şekilde tanımlamak için kullanılır.
+Sembolün geldiği uygulamanın kimliği. Bu, uygulamanın bir örneğini benzersiz olarak tanımlamak için kullanılır.
 
 `guidModule`\
-Bu alanı içeren modülün GUID 'ı.
+Bu alanı içeren modülün GUID'si.
 
 `symid`\
-Bu alana karşılık gelen simgenin KIMLIĞI.
+Bu alana karşılık gelen sembolün kimliği.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı, [](../../../extensibility/debugger/reference/type-info.md) `dwKind` `TYPE_INFO` yapı alanı `TYPE_KIND_PDB` ( [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) numaralandırmasından bir değer) olarak ayarlandığında TYPE_INFO yapısındaki birleşimin bir parçası olarak görüntülenir.
+Bu yapı, yapının alanı olarak [(TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) enumerasyonundan bir değer) ayarlanırken dwTYPE_KIND `dwKind` olarak `TYPE_INFO` `TYPE_KIND_PDB` görünür. [](../../../extensibility/debugger/reference/dwtype-kind.md)
 
 ## <a name="requirements"></a>Gereksinimler
 
-Üstbilgi: SH. h
+Üst bilgi: sh.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

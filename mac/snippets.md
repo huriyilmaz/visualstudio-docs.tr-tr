@@ -6,11 +6,11 @@ ms.author: jomatthi
 ms.date: 11/09/2020
 ms.assetid: 0FE27C0C-A861-4133-A74E-8D0505CF5342
 ms.openlocfilehash: a8fdf70b4d966c644719047eca4249e432561ace
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123964847"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725979"
 ---
 # <a name="code-snippets"></a>Kod parçacıkları
 
@@ -30,13 +30,13 @@ Kod parçacıkları eklemenin bazı farklı yolları vardır ve bazıları aşa�
 
   [![Araç Kutusunda kod parçacıkları](media/source-editor-image14-sml.png)](media/source-editor-image14.png#lightbox)
 
-- **Şablon Ekle komutu** &ndash; Şu anda şablon eklemek için varsayılan anahtar bağlama kümesi yoktur. Bir tane oluşturmak için, Visual Studio > **Tercihleri'ne > ve** için arama `template` oluşturun. Bu, istenen anahtar bağlamayı Bağlamayı Düzenle alanına eklemeye ve ardından Uygula'ya tıklamaya **olanak sağlar:**
+- **Şablon Ekle komutu** &ndash; Şu anda şablon eklemek için varsayılan anahtar bağlama kümesi yoktur. Bir tane oluşturmak için Anahtar **Bağlamaları Visual Studio > Tercihler'e > ve** için arama `template` oluşturun. Bu, istenen anahtar bağlamayı Bağlamayı Düzenle alanına eklemeye ve ardından Uygula'ya tıklamaya **olanak sağlar:**
 
   ![Şablona Ekleme komutu](media/source-editor-image15.png)
 
 ## <a name="creating-a-new-template"></a>Yeni şablon oluşturma
 
-Kullanabileceğiniz ve düzenleyemezsiniz çeşitli dillerde çok sayıda mevcut şablon vardır, ancak Visual Studio > Tercihler > Metin Düzenleyici'ye ve Kod Parçacıklarına giderek **> eklenebilir:**
+Kullanabileceğiniz ve düzenleyemezsiniz çeşitli dillerde çok sayıda mevcut şablon vardır, ancak Visual Studio > Tercihler > Metin Düzenleyici'ye ve Kod Parçacıklarına > yeni şablonlar da **eklenebilir:**
 
 ![Yeni şablon oluşturma](media/source-editor-image12.png)
 
@@ -57,23 +57,23 @@ Bir kod parçacığını tanımlamak için aşağıdaki alanlar kullanılır:
 - **Açıklama** &ndash; Kod parçacığının amacının açıklaması.
 - **Mime** &ndash; Kod parçacığının hangi dosya türlerinde kullanılabilir olduğunu kontrol eder.
 - **Genişletilebilir şablon** &ndash; Kısayol yazarak kod parçacığının imleçe eklenece kadar bu öğenin işaretli olduğundan emin olun.
-- **Şablonla çevreli** &ndash; Düzenleyicinin Surround **with...** içerik menüsünde bu kısayolu listele seçeneğini işaretleyin.
-- **Şablon metni** &ndash; Düzenleyiciye eklenecek gerçek kod parçacığı. Anahtar sözcük yer tutucuları, dolar işaretleriyle bir belirteci çevrelerken tanımlanabilir. `$type$`.
+- **Şablonla çevreli** &ndash; Düzenleyicinin Surround **with...** içerik menüsünde bu kısayolu listele seçeneği işaretleyin.
+- **Şablon metni** &ndash; Düzenleyiciye eklenecek gerçek kod parçacığı. Anahtar sözcük yer tutucuları, dolar işaretleri olan bir belirteci çevrelerken tanımlanabilir. `$type$`.
 - **Anahtar sözcük özellik paneli** &ndash; Pencerenin sağ tarafında, bir anahtar sözcük seçmek (örneğin) ve varsayılan değer ve araç ipucu gibi özellikleri düzenlemek için üst tarafındaki açılan `type` listeyi kullanın.
 
 ## <a name="using-keywords-in-the-editor"></a>Düzenleyicide anahtar sözcükleri kullanma
 
-Yukarıda tanımlanan gibi anahtar sözcüklerle kod parçacığını kullanmak için kısayolu yazın ve **Sekme** tuşuna iki kez basın; kod parçacığı içeriği imlecin üzerine eklenir:
+Yukarıda tanımlanan gibi anahtar sözcüklerle kod parçacığını kullanmak için kısayolu yazın ve **Sekme** tuşuna iki kez basın. Kod parçacığı içeriği imlecin üzerine eklenir:
 
 ![Anahtar sözcükleri gösteren eklenen kod parçacığı](media/source-editor-image12a.png)
 
-Sınıf için **kod** parçacığını özelleştirmek için `object` ve arasında geçiş yapmak için Sekme `MyProperty` tuşuna basın.
+Sınıfınız **için kod** parçacığını özelleştirmek için ve arasında geçiş yapmak için Sekme `object` `MyProperty` tuşuna basın.
 
 Anahtar sözcük, bu örnekte olduğu gibi bir kod parçacığında yinelendiğinde `for` anahtar sözcüğün `$i$` 3 kez göründüğüne dikkat ekleyebilirsiniz:
 
 ![Yinelenen anahtar sözcüklerle kod parçacığı şablonu](media/source-editor-image12b.png)
 
-Düzenleyicide kullanılırken, **Sekme tuşu** ilk ve arasında `i` geçiş yapmak için `max` kullanılır. değerini farklı bir değişken `i` adıyla üzerine yazsanız üç örnek de güncelleştirilir:
+Düzenleyicide kullanılırken, **Sekme tuşu** ilk ve arasında `i` geçiş yapmak için `max` kullanılır. değerini farklı bir değişken `i` adıyla üzerine yazarak üç örnek de güncelleştirilir:
 
 ![Birden çok anahtar sözcük gösteren eklenen kod parçacığı](media/source-editor-image12c.png)
 
@@ -81,7 +81,7 @@ Düzenleyicide kullanılırken, **Sekme tuşu** ilk ve arasında `i` geçiş yap
 
 Bir kod parçacığında kullanabileceğiniz iki ayrılmış anahtar sözcük vardır:
 
-- `$selected$`&ndash;Kod parçacığında **Is surround with template** işaretli ise, bu anahtar sözcük kod parçacığı seçilirken düzenleyicide vurgulanan metinle değiştirilir.
+- `$selected$`Kod parçacığında Is surround with template işaretli ise, bu anahtar sözcük kod parçacığı seçilirken düzenleyicide vurgulanan &ndash; metinle değiştirilir. 
 - `$end$`&ndash;Kullanıcı bir kod parçacığında anahtar sözcükleri düzenlemeyi bitirdikten sonra imleci anahtar sözcüğün konumunun üzerine `$end$` yerleştirilir.
 
 Önceki `for` bölümde yer alan kod parçacığı, bu ayrılmış anahtar sözcüklerin her ikisine de bir örnektir.

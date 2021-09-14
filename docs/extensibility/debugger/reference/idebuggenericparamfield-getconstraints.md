@@ -1,6 +1,6 @@
 ---
-description: Bu genel parametreyle ilişkili kısıtlamaları alın.
-title: IDebugGenericParamField::GetConstraints | Microsoft Docs
+description: Bu genel parametreyle ilişkili olan kısıtlamaları alır.
+title: 'Idebuggenericparamfield:: Getkısıtlamalarıyla | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2b6822b629f1a66aa80de72b95fdbb1ba8472353
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122118703"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725204"
 ---
 # <a name="idebuggenericparamfieldgetconstraints"></a>IDebugGenericParamField::GetConstraints
-Bu genel parametreyle ilişkili kısıtlamaları alın.
+Bu genel parametreyle ilişkili olan kısıtlamaları alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,19 +46,19 @@ int GetConstraints(
 
 ## <a name="parameters"></a>Parametreler
 `cConstraints`\
-[in] Kısıtlama sayısı.
+'ndaki Kısıtlama sayısı.
 
 `ppConstraints`\
-[out] Bu alanla ilişkili kısıtlamaları içeren bir dizi döndürür.
+dışı Bu alanla ilişkili kısıtlamaları içeren bir dizi döndürür.
 
 `pcConstraints`\
-[in, out] Dizide kısıtlama `ppConstraints` sayısı.
+[in, out] Dizideki kısıtlamaların sayısı `ppConstraints` .
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, **IDebugGenericParamField arabirimini ortaya çıkaran bir CDebugGenericParamFieldType** nesnesi için bu yöntemin nasıl [uygulandığını](../../../extensibility/debugger/reference/idebuggenericparamfield.md) gösterir.
+Aşağıdaki örnek, [ıdebuggenericparamfield](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini kullanıma sunan bir **cdebuggenericparamtcobject** için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugGenericParamFieldType::GetConstraints(

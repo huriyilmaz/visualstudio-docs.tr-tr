@@ -26,11 +26,11 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: cc3d08921100d05bea77e22bbec4659862b90143
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122120692"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725387"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustınfo &gt; öğesi (ClickOnce uygulaması)
 Uygulamanın istemci bilgisayarda çalışması için gereken en düşük güvenlik izinlerini açıklar.

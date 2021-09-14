@@ -1,6 +1,6 @@
 ---
 title: GPU kullanımını izleme
-description: GPU kullanımı hakkında bilgi edinin. Özellikle, uzak Linux makinelerinin GPU kullanımını izlemeyi öğrenin.
+description: GPU kullanımı hakkında bilgi edinmek. Özellikle uzak Linux makinelerinin GPU kullanımını izleme hakkında bilgi edinmek.
 ms.custom: SEO-VS-2020
 author: jillre
 ms.author: jillfra
@@ -12,21 +12,21 @@ ms.topic: how-to
 ms.workload:
 - multiple
 ms.openlocfilehash: d13c912608732ce231ac5a04253c2f4ad2559154
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122037648"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633337"
 ---
-# <a name="monitoring-gpu-utilization"></a>GPU kullanımını izleme
+# <a name="monitoring-gpu-utilization"></a>GPU Kullanımını İzleme
 
 Uzak Linux makinelerinin GPU kullanımını izlemek için:
 
-1. **Sunucu Gezgini**, **uzak makineler**' i genişletin.
-2. İzlemek istediğiniz uzak makineye **sağ tıklayın** .
+1. **'Sunucu Gezgini** Uzak **Makineler'i genişletin.**
+2. **İzlemek** istediğiniz uzak makineye sağ tıklayın.
 
-    ![AI araçlarının klasör ağacını gösteren Sunucu Gezgini ekran görüntüsü. Azure tanıtımı seçilidir ve ısı haritasını göster komutuyla bir bağlam menüsü açıktır.](media/monitor-gpu/gpu-heatmap-0.png)
+    ![AI Sunucu Gezgini klasör ağacını gösteren ekran görüntüsü. Azure Demo seçilidir ve ısı Haritasını Göster komutunun yer alan bir bağlam menüsü açılır.](media/monitor-gpu/gpu-heatmap-0.png)
 
-3. **Isı haritasını göster**' e tıklayın.
+3. Isı **Haritasını Göster'e tıklayın.**
 
-    ![Azure DLVM sanal makinesindeki GPU 'lara ilişkin özet, Ayrıntılar ve ısı haritası verilerini gösteren Sunucu Gezgini AI araçları ısı haritası penceresinin ekran görüntüsü.](media/monitor-gpu/heatmap.png)
+    ![Azure DLVM sanal makinesi Sunucu Gezgini GPU'lar için özet, ayrıntılar ve ısı Haritası verilerini gösteren AI Araçları Isı Haritası penceresinin ekran görüntüsü.](media/monitor-gpu/heatmap.png)

@@ -17,11 +17,11 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
 ms.openlocfilehash: 62ee5dd35eaa779292f89696f6ab18f6d1dbbeec
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122098079"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632103"
 ---
 # <a name="code-analysis-application-errors"></a>Kod analizi uygulama hataları
 
@@ -29,7 +29,7 @@ Bu bölüm, yönetilen kod analizi aracı tarafından oluşturulan hata iletiler
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Kod|Açıklama|
+|Kod|Description|
 |-|-|
 |[CA0001](ca0001.md)|Yönetilen kod analizi aracında beklenen hata koşullarını belirten bir özel durum oluştu.|
 |[CA0051](ca0051.md)|Hiçbir kural seçilmedi.|
@@ -41,12 +41,12 @@ Bu bölüm, yönetilen kod analizi aracı tarafından oluşturulan hata iletiler
 |[CA0057](ca0057.md)|İhlaller geçerli hedef ve kural kümesiyle eş olamaz.|
 |[CA0058](ca0058.md)|Başvurulan derlemeler yüklenemedi.|
 |[CA0059](ca0059.md)|Komut satırı anahtar hatası.|
-|[CA0060](ca0060.md)|Başvurulan derlemeler dolaylı olarak yüklenemedi.|
+|[CA0060](ca0060.md)|Dolaylı olarak başvurulan derlemeler yüklenemedi.|
 |[CA0061](ca0061.md)|*'RuleId'* kuralı bulunamadı.|
 |[CA0062](ca0062.md)|*'RuleSetName'* kural kümesinde başvurulan '*RuleId*' kuralı bulunamadı.|
 |[CA0063](ca0063.md)|Kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi.|
 |[CA0064](ca0064.md)|Belirtilen kural kümesi hiçbir FxCop kuralı içermeme nedeniyle hiçbir analiz gerçekleştirilmedi.|
-|[CA0065](ca0065.md)|Desteklenmeyen meta veri yapısı: Type '*TypeName*' hem bir özellik hem de aynı adlı bir alan içeriyor '*PropertyFieldName*'|
+|[CA0065](ca0065.md)|Desteklenmeyen meta veri yapısı: Type '*TypeName*' hem bir özellik hem de aynı adlı bir alan içerir '*PropertyFieldName*'|
 |[CA0066](ca0066.md)|**/targetframeworkversion** için sağlanan *'VersionID'* değeri tanınan bir sürüm değildir.|
 |[CA0067](ca0067.md)|Dizin bulunamadı.|
 |[CA0068](ca0068.md)|'AssemblyName' hedef derlemesi için *hata ayıklama bilgileri bulunamadı.*|

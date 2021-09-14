@@ -18,16 +18,16 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 152af5d3be5385e6f5c91fb510d62ea7bc336218
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122053930"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725609"
 ---
 # <a name="common-tasks-in-office-programming"></a>Programlamada ortak Office görevler
-  Bu konu, Visual Studio kullanarak programlama ve çözüm programlama hakkında aşağıdaki yaygın soruların Office yardımcı Visual Studio.
+  Bu konu, programlama ve programlama çözümleri hakkında aşağıdaki yaygın soruların yanıtlarını bulmak için Office yardımcı Visual Studio.
 
-- [Kurulum ve genel görevler.](#projects)
+- [Kurulumu ve genel görevler.](#projects)
 
 - [Kullanıcı arabirimi özelleştirme görevleri.](#ui)
 
@@ -45,7 +45,7 @@ ms.locfileid: "122053930"
 
 ## <a name="setup-and-general-tasks"></a><a name="projects"></a> Kurulum ve genel görevler
 
-- [Nasıl Visual Studio: Office projelerini oluşturma.](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [Nasıl Visual Studio: Office projelerini Visual Studio.](../vsto/how-to-create-office-projects-in-visual-studio.md)
 
 - [Nasıllı: Office yükseltme.](/previous-versions/4bez6837(v=vs.140))
 
@@ -55,9 +55,9 @@ ms.locfileid: "122053930"
 
 - [Nasıllı: Projelerinde olay Office oluşturma.](../vsto/how-to-create-event-handlers-in-office-projects.md)
 
-- [Nasıl Office: Office çalıştırmadan çözümlerini açma.](../vsto/how-to-open-office-solutions-without-running-code.md)
+- [Nasıl: Kod Office çözümlerini açma.](../vsto/how-to-open-office-solutions-without-running-code.md)
 
-- [Nasıl: Bir çözüm için yapılandırma bilgilerini Office ayarlama.](../vsto/how-to-set-up-configuration-information-for-an-office-solution.md)
+- [Nasıl: Bir çözüm için yapılandırma bilgilerini Office.](../vsto/how-to-set-up-configuration-information-for-an-office-solution.md)
 
 - [Nasıl: Şeritte geliştirici sekmesini gösterme.](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)
 
@@ -67,13 +67,13 @@ ms.locfileid: "122053930"
 
 ### <a name="controls-on-documents-and-worksheets"></a>Belgeler ve çalışma sayfaları üzerinde denetimler
 
-- [Nasıl kullanılır: Windows formlarına form Office ekleme.](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
+- [Nasıl kullanılır: Windows Formlar denetimleri Office ekleme.](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
 
 - [Nasıl ekleyebilirsiniz: Çalışma sayfalarına NamedRange denetimleri ekleme.](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
 
 - [Nasıl ekleyebilirsiniz: Çalışma sayfalarına ListObject denetimleri ekleme.](../vsto/how-to-add-listobject-controls-to-worksheets.md)
 
-- [Nasıl kullanılır: Windows formlarına form Office ekleme.](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
+- [Nasıl kullanılır: Windows Formlar denetimleri Office ekleme.](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
 
 - [Nasıl kullanılır: Word belgelerine İçerik denetimleri ekleme.](../vsto/how-to-add-content-controls-to-word-documents.md)
 
@@ -101,7 +101,7 @@ ms.locfileid: "122053930"
 
 ### <a name="outlook-form-regions"></a>Outlook bölgeleri oluşturma
 
-- [Nasıl: Bir form bölgesi Outlook projesine ekleme.](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)
+- [Nasıl yapılanlar: Bir form bölgesi Outlook projesine ekleme.](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)
 
 - [Nasıl Outlook: Outlook bir form bölgesi görüntülemesini engelleme.](../vsto/how-to-prevent-outlook-from-displaying-a-form-region.md)
 
@@ -115,19 +115,19 @@ ms.locfileid: "122053930"
 
 - [Nasıl musunuz: Program aracılığıyla yeni çalışma kitapları oluşturma.](../vsto/how-to-programmatically-create-new-workbooks.md)
 
-- [Nasıl musunuz: Program aracılığıyla çalışma kitaplarını açma.](../vsto/how-to-programmatically-open-workbooks.md)
+- [Nasıl: Çalışma kitaplarını program aracılığıyla açma.](../vsto/how-to-programmatically-open-workbooks.md)
 
-- [Nasıl musunuz: Çalışma kitaplarını program aracılığıyla kaydetme.](../vsto/how-to-programmatically-save-workbooks.md)
+- [Nasıl: Çalışma kitaplarını program aracılığıyla kaydetme.](../vsto/how-to-programmatically-save-workbooks.md)
 
-- [Nasıl olur: Çalışma kitaplarını program aracılığıyla kapatma.](../vsto/how-to-programmatically-close-workbooks.md)
+- [Nasıl: Çalışma kitaplarını program aracılığıyla kapatma.](../vsto/how-to-programmatically-close-workbooks.md)
 
 - [Nasıllı: Çalışma kitaplarında program aracılığıyla yeni çalışma sayfaları ekleme.](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
 
 - [Nasıl olur: Çalışma sayfalarını program aracılığıyla gizleme.](../vsto/how-to-programmatically-hide-worksheets.md)
 
-- [Nasıl olur: Çalışma kitaplarında program aracılığıyla çalışma sayfalarını taşıma.](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
+- [Nasıllı: Çalışma kitaplarında program aracılığıyla çalışma sayfalarını taşıma.](../vsto/how-to-programmatically-move-worksheets-within-workbooks.md)
 
-- [Nasıl musunuz: Çalışma kitaplarını program aracılığıyla koruma.](../vsto/how-to-programmatically-protect-workbooks.md)
+- [Nasıl olur: Çalışma kitaplarını program aracılığıyla koruma.](../vsto/how-to-programmatically-protect-workbooks.md)
 
 - [Nasıl ekleyebilirsiniz: Kodda program aracılığıyla çalışma sayfası aralıklarını ifade etmek.](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)
 
@@ -169,7 +169,7 @@ ms.locfileid: "122053930"
 
 - [Nasıl kullanılır: Belgeleri program aracılığıyla yazdırma.](../vsto/how-to-programmatically-print-documents.md)
 
-- [Nasıl olur: Program aracılığıyla Word tabloları oluşturma.](../vsto/how-to-programmatically-create-word-tables.md)
+- [Nasıl: Program aracılığıyla Word tabloları oluşturma.](../vsto/how-to-programmatically-create-word-tables.md)
 
 - [Nasıl kullanılır: Word tablolarına program aracılığıyla satır ve sütun ekleme.](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)
 
@@ -193,7 +193,7 @@ ms.locfileid: "122053930"
 
 - [Nasıl kullanılır: Bir veri kaynağını bir konak denetiminden verilerle güncelleştirme.](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
 
-### <a name="cached-data-in-document-level-solutions"></a>Belge düzeyi çözümlerde önbelleğe alınmış veriler
+### <a name="cached-data-in-document-level-solutions"></a>Belge düzeyi çözümlerde önbelleğe alınan veriler
 
 - [Nasıl kullanılır: Verileri çevrimdışı veya bir sunucuda kullanmak üzere önbelleğe alın.](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)
 
@@ -215,25 +215,25 @@ ms.locfileid: "122053930"
 
 ## <a name="security-tasks"></a><a name="security"></a> Güvenlik görevleri
 
-- [Nasıl yapılanlar: Office imzalama.](../vsto/how-to-sign-office-solutions.md)
+- [Nasıllı: Office imzalar.](../vsto/how-to-sign-office-solutions.md)
 
 ## <a name="deployment-tasks"></a><a name="deployment"></a> Dağıtım görevleri
 
-- Nasıl ClickOnce kullanarak [Office çözümü yayımlama.](/previous-versions/bb386095(v=vs.110))
+- [nasıl yapılır: ClickOnce kullanarak Office çözümünü yayımlama](/previous-versions/bb386095(v=vs.110)).
 
-- [Nasıl kullanılır: ClickOnce kullanarak Office düzeyinde bir SharePoint sunucusuna belge düzeyi ClickOnce.](/previous-versions/bb608595(v=vs.110))
+- [nasıl yapılır: ClickOnce kullanarak SharePoint sunucusuna belge düzeyinde Office çözümü yayımlama](/previous-versions/bb608595(v=vs.110)).
 
-- [Nasıl kurulur: Bir ClickOnce Office yükleyin.](/previous-versions/bb608592(v=vs.110))
+- [nasıl yapılır: ClickOnce Office çözümü yüklemesi](/previous-versions/bb608592(v=vs.110)).
 
-- [Nasıl kurulur: Son kullanıcı bilgisayarlarına önkoşulları yük Office çalıştırın.](/previous-versions/bb608608(v=vs.110))
+- [nasıl yapılır: Office çözümleri çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yükler](/previous-versions/bb608608(v=vs.110)).
 
-- [Nasıl olur: Iis'i çözümlerini dağıtmaya Office hazırlama.](/previous-versions/bb608629(v=vs.110))
+- [nasıl yapılır: Office çözümlerin dağıtımı için ııs 'i hazırlama](/previous-versions/bb608629(v=vs.110)).
 
-- [Nasıl güncelleştirmesi: Dağıtılan Office güncelleştirme.](/previous-versions/bb157871(v=vs.110))
+- [nasıl yapılır: dağıtılan Office çözümlerini güncelleştirme](/previous-versions/bb157871(v=vs.110)).
 
-- [Nasıl olur: Bir Office çözümünün yükleme yolunu değiştirme.](/previous-versions/bb608626(v=vs.110))
+- [nasıl yapılır: Office çözümünün yükleme yolunu değiştirme](/previous-versions/bb608626(v=vs.110)).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kullanmaya başlayın &#40;Office geliştirme Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
-- [Uygulama ve Office tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md)
-- [Office örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
+- [Visual Studio &#40;Office geliştirmeye başlayın&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Office uygulama ve proje türü tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md)
+- [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)

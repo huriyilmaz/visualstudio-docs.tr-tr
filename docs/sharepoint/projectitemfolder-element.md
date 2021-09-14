@@ -1,6 +1,6 @@
 ---
-title: ProjectItemFolder Öğesi | Microsoft Docs
-description: Proje öğesi XML şema başvurusunda eşlenmiş bir klasörü temsil eden ProjectItemFolder SharePoint başvuru bilgilerini elde edin.
+title: ProjectItemFolder öğesi | Microsoft Docs
+description: SharePoint proje öğesi XML şeması başvurusunda eşlenen bir klasörü temsil eden projectıtemfolder öğesi hakkında başvuru bilgileri alın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
@@ -16,11 +16,11 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: 3873a4cbf50d216f3574c2ef8ce90255d3eb5d7b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122084135"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725631"
 ---
 # <a name="projectitemfolder-element"></a>ProjectItemFolder öğesi
   Eşlenmiş bir klasörü temsil eder.
@@ -42,8 +42,8 @@ ms.locfileid: "122084135"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|**Hedef**|Gerekli **xs: dize** özniteliği.<br /><br /> Eşlenen klasörün dağıtım kök SharePoint karşılık gelen yüklemesinde klasörün yolu. Dağıtım kök klasörü, Tür özniteliği tarafından belirtilen dağıtım türü **tarafından** belirlenir.<br /><br /> Daha fazla bilgi için, Çözüm  geliştirme  içinde proje öğelerinin Dağıtım Yolu SharePoint Dağıtım Yolu ve Dağıtım [Kök özellikleri SharePoint bakın.](../sharepoint/developing-sharepoint-solutions.md)|
-|**Tür**|Gerekli **xs:string** özniteliği.<br /><br /> Eşlenen klasör için dağıtım türü. Olası değerler hakkında daha fazla bilgi için, Çözüm geliştirme konusunda proje öğelerinin SharePoint Dağıtım Türü  [özelliğinin SharePoint bakın.](../sharepoint/developing-sharepoint-solutions.md)|
+|**Hedef**|Gerekli **xs: String** özniteliği.<br /><br /> SharePoint yüklemesinde, eşlenen klasörün dağıtım kök klasörüne göre karşılık geldiği klasörün yolu. Dağıtım kök klasörü, **tür** özniteliği tarafından belirtilen dağıtım türü tarafından belirlenir.<br /><br /> daha fazla bilgi için, [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)bölümünde SharePoint proje öğelerinin **dağıtım yolu** ve **dağıtım kök** özellikleri için açıklamalara bakın.|
+|**Tür**|Gerekli **xs: String** özniteliği.<br /><br /> Eşlenen klasör için dağıtım türü. olası değerler hakkında daha fazla bilgi için bkz. [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)içindeki SharePoint proje öğelerinin **dağıtım türü** özelliği için açıklama.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -52,20 +52,20 @@ ms.locfileid: "122084135"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ProjectItem](../sharepoint/projectitem-element.md)|Bir proje SharePoint temsil eder. Bu öğe, *.spdata* dosyasının gerekli kök öğesidir.|
+|[ProjectItem](../sharepoint/projectitem-element.md)|bir SharePoint proje öğesini temsil eder. Bu öğe, *. spdata* dosyasının gerekli kök öğesidir.|
 
 ## <a name="remarks"></a>Açıklamalar
- Eşlenen klasörler hakkında daha fazla bilgi için [bkz. Nasıl 2.](../sharepoint/how-to-add-and-remove-mapped-folders.md)
+ Eşlenen klasörler hakkında daha fazla bilgi için bkz. [nasıl yapılır: eşlenmiş klasör ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
 
 ## <a name="element-information"></a>Öğe bilgileri
 
 |Özellik|Değer|
 |-|-|
-|**Ad Alanı**|http: \/ \/ schemas.microsoft.com/VisualStudio/2010/<br>SharePointTools/SharePointProjectItemModel|
-|**Şema adı**|SharePoint Project Öğesi Şeması|
-|**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
-|**Boş olabilir**|Hayır|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/2010/<br>SharePointTools/Sharepointprojectıtemmodel|
+|**Şema adı**|SharePoint Project öğesi şeması|
+|**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)
-- [Nasıl: Eşlenmiş klasörler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md)
+- [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)
+- [Nasıl yapılır: eşlenmiş klasörler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md)

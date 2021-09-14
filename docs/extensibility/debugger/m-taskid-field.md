@@ -1,6 +1,6 @@
 ---
-description: System.Threading.Tasks.Task.Id için System.Threading.Tasks.Task.Id.
-title: m_taskId Alanı | Microsoft Docs
+description: System.Threading.Tasks.Task.Id özelliği için yedekleme alanı.
+title: m_taskId alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -13,20 +13,20 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 46ad2b7bc2fad41821b60c7c7aa428b75fe25d49
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122160328"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725843"
 ---
 # <a name="m_taskid-field"></a>m_taskId alanı
-özelliği için backing <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> alanı.
+Özelliği için yedekleme alanı <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> .
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Derleme:** mscorlib *(mscorlib.dll*)
+ **Bütünleştirilmiş kod:** mscorlib ( *mscorlib.dll*)
 
- Bu iç üyeye .NET Framework erişe .NET Framework Ortak Ara Dil (CIL) içinde sağlanmıştır.
+ bu iç üyeye .NET Framework erişeolmadığınızdan, ortak ara dil (cıl) içinde aşağıdaki sözdizimi sunulmaktadır.
 
 ## <a name="syntax"></a>Syntax
 

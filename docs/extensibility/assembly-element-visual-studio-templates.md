@@ -17,12 +17,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49137804fd73c2ba66ad68e20d6ea0423e0b3b29f64d2295026e3bcd9fdf59ba
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 54fc5cfccde99776136f0cb904d02bf6a4971045
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121308502"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725325"
 ---
 # <a name="assembly-element-visual-studio-templates"></a>Assembly öğesi (Visual Studio şablonları)
 Şablonun projelere Bu derlemenin bir başvurusunu eklemek için kullandığı bir derleme hakkındaki bilgileri belirtir.

@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 2d7750d6a77965527b4bf396afd8de094762821923c543a06d184509c238b205
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 319f560e4661f12acbef941692e5fd2c257c25ee
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452838"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725849"
 ---
 # <a name="opencv"></a>OpenCV
 
@@ -27,16 +27,16 @@ bu örnekte, [opencv/opencv](https://github.com/opencv/opencv)gibi çok platform
 
 aşağıdaki özelleştirmeler [microsoft/opencv](https://github.com/microsoft/opencv) çatalından zaten uygulanmış ve Windows ve ubuntu hedeflemesi oluşturmaya izin veriyor.
 
-## <a name="customization-with-devcontainerjson-and-devinitjson"></a>Üzerinde devcontainer.jsve devinit.jsile özelleştirme
+## <a name="customization-with-devcontainerjson-and-devinitjson"></a>Devcontainer. JSON ve devinit. JSON ile özelleştirme
 
 `.devcontainer`Dizinin aşağıdaki dosyaları içermesi gerekir:
 
 * devcontainer.json
-* Üzerinde devinit.js
+* devinit. JSON
 
 ### <a name="devcontainerjson"></a>devcontainer.json
 
-_devcontainer.js_ dosyadaki içeriği aşağıda verilmiştir.
+_Devcontainer. JSON_ dosyasının içeriği aşağıda verilmiştir.
 
 ```json
 {
@@ -44,11 +44,11 @@ _devcontainer.js_ dosyadaki içeriği aşağıda verilmiştir.
 }
 ```
 
-, `postCreateCommand` _Üzerindedevinit.js_ tüketen [devinit](devinit-and-codespaces.md) aracını başlatır.
+`postCreateCommand` _Devinit. JSON_ tüketen [devinit](devinit-and-codespaces.md) aracını başlatır.
 
-### <a name="devinitjson"></a>Üzerinde devinit.js
+### <a name="devinitjson"></a>devinit. JSON
 
-[_devinit.js_](devinit-json.md) dosyadaki içeriği aşağıda verilmiştir.
+[_Devinit. JSON_](devinit-json.md) dosyasının içeriği aşağıda verilmiştir.
 
 ```json
 {
@@ -63,7 +63,7 @@ _devcontainer.js_ dosyadaki içeriği aşağıda verilmiştir.
 }
 ```
 
-_devinit.js_ , [devinit](devinit-and-codespaces.md) aracı tarafından tüketilen dosyadır ve _üzerindedevcontainer.js_ aynı dizinde olmalıdır.
+_Devinit. JSON_ , [devinit](devinit-and-codespaces.md) aracı tarafından tüketilen dosyadır ve aynı _devcontainer. JSON_ dizininde olmalıdır.
 
 Bu örnekte, [WSL-install](tool-wsl-install.md) Aracı, Ubuntu 20,04 çalıştıran bir WSL örneği oluşturmak ve bunu temel C++ geliştirme araçlarıyla sağlamak için kullanılır.
 ## <a name="targeting-windows-or-linux"></a>Windows veya Linux 'u hedefleme

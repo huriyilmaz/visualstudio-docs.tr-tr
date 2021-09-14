@@ -1,7 +1,7 @@
 ---
-title: Bulutta TensorFlow modeli çalıştırma
-description: Azure Derin Öğrenme vm'sinde tensorflow modeli çalıştırma
-keywords: ai, visual studio, derin öğrenme sanal makinesi
+title: Bulutta bir TensorFlow modeli çalıştırma
+description: Azure derin öğrenme VM 'de bir TensorFlow modeli çalıştırma
+keywords: AI, Visual Studio, derin öğrenme sanal makinesi
 author: jillre
 ms.author: jillfra
 manager: jmartens
@@ -13,75 +13,75 @@ ms.devlang: python
 ms.workload:
 - multiple
 ms.openlocfilehash: 0a73a22397f05660cd0b5e2c90633f6528297848
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122037583"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633305"
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>Bulutta TensorFlow modelini eğitme
 
-Bu öğreticide, Azure [Deep Learning](/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview) sanal makinesi [](http://yann.lecun.com/exdb/mnist/) üzerinde MNIST veri kümesi kullanarak tensorFlow modelini eğitecek.
+bu öğreticide, Azure [derin Learning](/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview) sanal makinesinde bulunan [mnist veri kümesini](http://yann.lecun.com/exdb/mnist/) kullanarak bir tensorflow modeli eğeceğiz.
 
-MNIST veritabanında 60.000 örnekli bir eğitim kümesi ve el yazısı basamaklardan 10.000 örnekli bir test kümesi vardır.
+MNIST veritabanı, 60.000 örnek bir eğitim kümesine ve el yazısı rakamlarının bir dizi 10.000 örneklerine sahiptir.
 
 ## <a name="prerequisites"></a>Önkoşullar
-Başlamadan önce, aşağıdakilerin yüklü ve yapılandırılmış olduğundan emin olmak için:
+Başlamadan önce, aşağıdakilerin yüklü ve yapılandırılmış olduğundan emin olun:
 
-### <a name="setup-azure-deep-learning-virtual-machine"></a>Azure Deep Learning Virtual Machine'i ayarlama
+### <a name="setup-azure-deep-learning-virtual-machine"></a>Azure derin Learning sanal makinesini kurma
 
 > [!NOTE]
-> Işletim **sistemi türünü** Linux olarak ayarlayın.
+> **Işletim sistemi türünü** Linux olarak ayarlayın.
 
-Ayrıntılı Sanal Makine Learning yönergeleri burada [bulunabilir.](/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm)
+derin Learning sanal makine ayarlamaya yönelik yönergeler [burada](/azure/machine-learning/data-science-virtual-machine/provision-deep-learning-dsvm)bulunabilir.
 
-### <a name="remove-comment-in-parens"></a>Ayrıştıranlarda açıklama kaldırma
+### <a name="remove-comment-in-parens"></a>Açıklamaları parleştirir kaldır
 
 ```bash
 echo -e ". /etc/profile\n$(cat ~/.bashrc)" > ~/.bashrc
 ```
 
-### <a name="download-sample-code"></a>Örnek kodu indirme
+### <a name="download-sample-code"></a>Örnek kodu indir
 
-TensorFlow GitHub, CNTK, Theano ve daha fazlası hakkında derin öğrenmeye başlamaya yönelik örnekler içeren bu depoyu indirin. [](https://github.com/Microsoft/samples-for-ai)
+tensorflow, CNTK, theano ve daha birçok konuda derin öğrenime başlarken örnekleri içeren bu [GitHub depoyu](https://github.com/Microsoft/samples-for-ai) indirin.
 
 ## <a name="open-project"></a>Projeyi açma
 
-- Dosya **Visual Studio/Çözüm'> Aç'ı > Project'yi seçin.**
+- Visual Studio başlatın ve **dosya > seçin > Project/çözüm açın**.
 
-- İndirilen **örnek deposundan Tensorflow** Örnekleri klasörünü seçin ve **TensorflowExamples.sln dosyasını** açın.
+- İndirilen örnek deposundan **TensorFlow örnekleri** klasörünü seçin ve **tensorflowexamples. sln** dosyasını açın.
 
    ![Projeyi açma](media/tensorflow-local/open-project.png)
 
-   ![Çözümü açma](media/tensorflow-local/open-solution.png)
+   ![Çözümü aç](media/tensorflow-local/open-solution.png)
 
-## <a name="add-azure-remote-vm"></a>Azure Uzak VM ekleme
+## <a name="add-azure-remote-vm"></a>Azure uzak VM ekleme
 
-Bu Sunucu Gezgini, AI **Araçları** düğümünün altındaki Uzak Makineler düğümüne sağ tıklayın ve "Ekle..." öğesini seçin. Uzak Makine görünen adı, IP ana bilgisayarı, SSH bağlantı noktası, kullanıcı adı ve parola/anahtar dosyasını girin.
+Sunucu Gezgini, AI araçları düğümünün altındaki **uzak makineler** düğümüne sağ tıklayın ve "Ekle..." öğesini seçin. Uzak makine görünen adını, IP konağını, SSH bağlantı noktasını, Kullanıcı adını ve parolayı/anahtar dosyasını girin.
 
-![Yeni bir uzak makine ekleme](media/tensorflow-vm/add-remote-vm.png)
+![Yeni bir uzak makine ekleyin](media/tensorflow-vm/add-remote-vm.png)
 
-## <a name="submit-job-to-azure-vm"></a>Azure VM'ye iş gönderme
-Dosyada MNIST projesine sağ **tıklayın Çözüm Gezgini** **gönder'i seçin.**
+## <a name="submit-job-to-azure-vm"></a>Azure VM 'ye iş gönderme
+**Çözüm Gezgini** ' de mnist projesine sağ tıklayın ve **işi gönder**' i seçin.
 
 ![Uzak makineye iş gönderme](media/tensorflow-vm/job-submission.png)
 
 Gönderim penceresinde:
 
-- Kullanmak için **Küme listesinde,** işi göndermek için uzak makineyi ("rm:" ön eki ile) seçin.
+- **Kullanılacak küme** listesinde, işi göndermek için uzak makineyi ("RM:" ön eki ile) seçin.
 
-- bir İş **adı girin.**
+- Bir **iş adı** girin.
 
-- **Gönder'e tıklayın.**
+- **Gönder**' e tıklayın.
 
-## <a name="check-status-of-job"></a>İş durumunu denetleme
-İşlerin durumunu ve ayrıntılarını görmek için: aşağıdaki içinde işi göndererek sanal makineyi **Sunucu Gezgini.** İşler'e çift **tıklayın.**
+## <a name="check-status-of-job"></a>İşin durumunu denetleme
+İşlerin durumunu ve ayrıntılarını görmek için: işi **Sunucu Gezgini** gönderdiğiniz sanal makineyi genişletin. **İşler**' e çift tıklayın.
 
 ![İş tarayıcısı](media/tensorflow-vm/job-browser.png)
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
-Yakın gelecekte kullanmayı planlıyorsanız VM'yi durdurun. Bu öğreticiyi tamamladıysanız, kaynaklarınızı temizlemek için aşağıdaki komutu çalıştırın:
+Yakın gelecekte kullanmayı planlıyorsanız VM 'yi durdurun. Bu öğreticiyle işiniz bittiğinde, kaynaklarınızı temizlemek için aşağıdaki komutu çalıştırın:
 
 ```azurecli-interactive
 az group delete --name myResourceGroup

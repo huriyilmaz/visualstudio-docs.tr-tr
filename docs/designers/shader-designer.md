@@ -1,6 +1,6 @@
 ---
 title: Gölgelendirici Tasarımcısı
-description: Gölgelendirici olarak bilinen özel görsel Visual Studio oluşturmak, değiştirmek ve dışarı aktarmak için Visual Studio Gölgelendirici Tasarımcısı ile nasıl çalışabilirsiniz?
+description: gölgelendiriciler olarak bilinen özel görsel etkileri oluşturmak, değiştirmek ve dışarı aktarmak için Visual Studio gölgelendirici tasarımcısı ile nasıl çalışacağınızı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 09/21/2018
 ms.topic: conceptual
@@ -15,91 +15,91 @@ ms.technology: vs-ide-designers
 ms.workload:
 - multiple
 ms.openlocfilehash: 02b59924a2b2020d6c5855f5e91f41615601a19d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122073662"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725869"
 ---
 # <a name="shader-designer"></a>Gölgelendirici Tasarımcısı
 
-Bu belgede gölgelendirici olarak bilinen özel  görsel Visual Studio oluşturmak, değiştirmek ve dışarı aktarmak için Visual Studio Gölgelendirici Tasarımcısı ile nasıl *çalışabilirsiniz?*
+bu belgede, *gölgelendiriciler* olarak bilinen özel görsel etkileri oluşturmak, değiştirmek ve dışarı aktarmak için Visual Studio **gölgelendirici tasarımcısı** ile nasıl çalışılacağı açıklanmaktadır.
 
-Üst düzey **gölgelendirici dili** (HLSL) programlaması bilmiyorsanız bile, oyun veya uygulamanıza özel görsel efektler oluşturmak için Gölgelendirici Tasarımcısı'nın kullanabilirsiniz. Gölgelendirici Tasarımcısı'nda **bir gölgelendirici oluşturmak** için bunu grafik olarak ortaya koyabilirsiniz. Başka bir ifadeyle, verileri  ve işlemleri temsil eden tasarım yüzeyi düğümlerine eklersiniz ve ardından işlemlerin verileri nasıl işleyeni tanımlamak için bunlar arasında bağlantılar kurmanız gerekir. Her işlem düğümünde, o noktaya kadar olan etkinin önizlemesi sağlanır, böylece sonucu görselleştiresiniz. Veri, gölgelendiricinin çıkışını temsil eden son düğüme doğru düğümler arasında akar.
+Üst düzey gölgelendirici dili (HLSL) programlamayı bilmiyor olsanız bile, oyununuz veya uygulamanız için özel görsel etkiler oluşturmak üzere **gölgelendirici tasarımcısını** kullanabilirsiniz. **Gölgelendirici tasarımcısında** gölgelendirici oluşturmak için onu bir grafik olarak yerleştirirsiniz. Yani, verileri ve işlemleri temsil eden tasarım yüzeyi *düğümlerine* ekler ve sonra işlemlerin verileri nasıl işleyeceğini tanımlamak için bunlar arasında bağlantı yaparsınız. Her bir işlem düğümünde, bu noktaya kadar olan efektin bir önizlemesi sağlanır, böylece sonucu görselleştirebilirsiniz. Veriler, gölgelendirici çıkışını temsil eden son bir düğüme doğru düğümler aracılığıyla akar.
 
 ## <a name="supported-formats"></a>Desteklenen biçimler
 
-Gölgelendirici **Tasarımcısı şu** gölgelendirici biçimlerini destekler:
+**Gölgelendirici Tasarımcısı** Bu gölgelendirici biçimlerini destekler:
 
-|Biçim Adı|Dosya Uzantısı|Desteklenen İşlemler (Görüntüleme, Düzenleme, Dışarı Aktarma)|
+|Biçim Adı|Dosya Uzantısı|Desteklenen Işlemler (görüntüleme, düzenleme, dışarı aktarma)|
 |-----------------| - | - |
-|Yönlendirildi Graph Gölgelendirici Dili|*.dgsl*|Görüntüle, Düzenle|
-|HLSL Gölgelendiricisi (kaynak kodu)|*.hlsl*|Dışarı Aktarma|
-|HLSL Gölgelendiricisi (bytecode)|*.cso*|Dışarı Aktarma|
-|C++ üst bilgisi (HLSL bytecode dizisi)|*H*|Dışarı Aktarma|
+|yönlendirilmiş Graph gölgelendirici dili|*. dgsl*|Görüntüleme, düzenleme|
+|HLSL gölgelendiricisi (kaynak kodu)|*. HLSL*|Dışarı Aktarma|
+|HLSL gölgelendiricisi (bytecode)|*. cso*|Dışarı Aktarma|
+|C++ üstbilgisi (HLSL bytecode dizisi)|*. h*|Dışarı Aktarma|
 
 ## <a name="get-started"></a>başlarken
 
-Bu bölümde, Visual Studio C++ projenize DGSL gölgelendiricisi ekleme ve başlamanıza yardımcı olacak temel bilgiler açıklandı.
+bu bölümde, Visual Studio C++ projenize bir dgsl gölgelendiricisi ekleme ve kullanmaya başlamanıza yardımcı olacak temel bilgiler sağlanmaktadır.
 
 > [!NOTE]
-> Gölgelendirici grafikleri (.dgsl dosyaları) gibi grafik öğelerinin otomatik derleme tümleştirmesi yalnızca C++ projeleri için de kullanılabilir.
+> Gölgelendirici grafikleri (. dgsl dosyaları) gibi grafik öğelerinin otomatik derleme tümleştirmesi yalnızca C++ projeleri için desteklenir.
 
 ### <a name="to-add-a-dgsl-shader-to-your-project"></a>Projenize bir DGSL gölgelendiricisi eklemek için
 
-1. Grafiklerle çalışma Visual Studio gereken gerekli bileşene sahip olduğundan emin olmak. Bileşenin adı **Görüntü ve 3D model düzenleyicileri'dir.**
+1. grafiklerle çalışmanız gereken Visual Studio bileşenin yüklü olduğundan emin olun. Bileşen, **görüntü ve 3B model düzenleyicileri** olarak adlandırılır.
 
-   Yüklemek için, Visual Studio Yükleyicisi çubuğundan Araçlar Araçları ve Özellikleri Al'ı seçerek Visual Studio Yükleyicisi'yi açın ve ardından Bağımsız bileşenler sekmesini seçin. Oyunlar ve Grafikler kategorisi altında Görüntü ve 3D model düzenleyicileri bileşenini seçin ve ardından  >   Değiştir'i **seçin.**   
+   yüklemek için **araçlar**  >  menüsünü ve menü çubuğundan araçlar **al** ' ı seçerek Visual Studio Yükleyicisi açın ve ardından **ayrı bileşenler** sekmesini seçin. **oyunlar ve grafikler** kategorisi altındaki **görüntü ve 3b model düzenleyicileri** bileşenini seçin ve ardından **değiştir**' i seçin.
 
-   ![Görüntü ve 3D model düzenleyicileri bileşeni](media/image-3d-model-editors-component.png)
+   ![Görüntü ve 3B model düzenleyicileri bileşeni](media/image-3d-model-editors-component.png)
 
-2. Bu **Çözüm Gezgini,** gölgelendiriciyi eklemek istediğiniz C++ projesinin kısayol menüsünü açın ve ardından Yeni Öğe **Ekle'yi**  >  **seçin.**
+2. **Çözüm Gezgini**' de, gölgelendiriciyi eklemek istediğiniz C++ projesinin kısayol menüsünü açın ve   >  **Yeni öğe** Ekle ' yi seçin.
 
-3. Yeni Öğe Ekle **iletişim kutusundaki** Yüklü altında Grafikler'i ve ardından Visual Shader Graph  **(.dgsl) öğesini seçin.**
+3. **yeni öğe ekle** iletişim kutusunda, **yüklü** altında **grafikler**' i seçin ve ardından **görsel gölgelendirici Graph (. dgsl)** öğesini seçin.
 
    > [!NOTE]
-   > Yeni Öğe Ekle iletişim  kutusunda Grafik  kategorisini görmüyorsanız ve Görüntü ve **3D model** düzenleyicileri bileşeni yüklüyse, proje türünüz için grafik öğeleri desteklenmiyordur.
+   > **Yeni öğe Ekle** Iletişim kutusunda **grafik** kategorisini görmüyorsanız ve **resim ve 3B model düzenleyicileri** bileşeni yüklüyse, grafik öğeleri proje türü için desteklenmez.
 
-4. Gölgelendirici  dosyasının Adını ve **oluşturulacak** konumu belirtin.
+4. Gölgelendirici dosyasının **adını** ve oluşturulmasını istediğiniz **konumu** belirtin.
 
 5. **Ekle** düğmesini seçin.
 
 ### <a name="the-default-shader"></a>Varsayılan gölgelendirici
 
-Her DGSL gölgelendiricisi olduğunuzda, Yalnızca Son Renk düğümüne  bağlı bir Nokta Rengi düğümüne sahip olan minimal bir gölgelendirici **olarak** başlar. Bu gölgelendirici eksiksiz ve işlevsel olsa da çok fazla bir şey yapmaz. Bu nedenle, çalışma gölgelendiricisi oluşturmanın ilk adımı genellikle **Nokta** Rengi düğümünü silmek veya diğer düğümlere yer sağlamak için **Son** Renk düğümüyle bağlantısını kesmektir.
+Her bir DGSL gölgelendiricisi oluşturduğunuzda, **son renk** düğümüne bağlanmış yalnızca bir **nokta rengi** düğümüne sahip olan minimal bir gölgelendirici olarak başlar. Bu gölgelendirici tamamlanmış ve işlevsel olsa da, çok fazla değildir. Bu nedenle, çalışma Gölgelendirici oluşturmanın ilk adımı genellikle **nokta rengi** düğümünü silmek veya diğer düğümlere yer açmak Için **son renk** düğümü bağlantısını keser.
 
 ## <a name="work-with-the-shader-designer"></a>Gölgelendirici Tasarımcısı ile çalışma
 
-Aşağıdaki bölümlerde, özel gölgelendiricilerle çalışmak için Gölgelendirici Tasarımcısı'nın nasıl kullanımı açıklanmaktadır.
+Aşağıdaki bölümlerde, özel gölgelendiriciler ile çalışmak için Gölgelendirici Tasarımcısının nasıl kullanılacağı açıklanır.
 
 ### <a name="shader-designer-toolbars"></a>Gölgelendirici Tasarımcısı araç çubukları
 
 Gölgelendirici Tasarımcısı araç çubukları, DGSL gölgelendirici grafikleriyle çalışmanıza yardımcı olan komutlar içerir.
 
-Gölgelendirici Tasarımcısı'nın durumunu etkileyen komutlar,  ana gölgelendirici penceresindeki Gölgelendirici Tasarımcısı Modu araç Visual Studio bulunur. Tasarım araçları ve komutlar Gölgelendirici **Tasarımcısı tasarım yüzeyinde** gölgelendirici Tasarımcısı araç çubuğunda bulunur.
+gölgelendirici tasarımcısının durumunu etkileyen komutlar, ana Visual Studio penceresindeki **gölgelendirici tasarımcı modu** araç çubuğunda bulunur. Tasarım araçları ve komutları, gölgelendirici Tasarımcısı tasarım yüzeyinde **Gölgelendirici Tasarımcısı** araç çubuğunda bulunur.
 
-Gölgelendirici Tasarımcısı Modu **araç çubuğu şu şekildedir:**
+**Gölgelendirici tasarımcı modu** araç çubuğu şöyledir:
 
 ![Gölgelendirici Tasarımcısı kalıcı araç çubuğu.](../designers/media/digit-dsd-modal-toolbar.png)
 
-Bu tabloda Gölgelendirici Tasarımcısı  Modu araç çubuğundaki öğeler, soldan sağa doğru görünme sırasına göre listelenmiştir:
+Bu tabloda, **gölgelendirici tasarımcı modu** araç çubuğunda soldan sağa göründükleri sırada listelenen öğeler açıklanmaktadır:
 
-|Araç Çubuğu Öğesi|Açıklama|
+|Araç Çubuğu Öğesi|Description|
 |------------------|-----------------|
-|**Seç**|Grafikte düğümler ve kenarlarla etkileşime olanak sağlar. Bu modda düğümleri seçerek taşıma veya silme, kenarlar kurma veya kesme gibi seçeneklere sahip olursunuz.|
-|**Kaydır**|Bir gölgelendirici grafiğinin pencere çerçevesine göre hareketini sağlar. Kaydırmak için tasarım yüzeyinde bir nokta seçin ve bu noktanın etrafında hareket ettirin.<br /><br /> Seçim **modunda,** Pan modunu geçici olarak etkinleştirmek için **Ctrl tuşuna** **basabilirsiniz.**|
-|**Zoom**|Pencere çerçevesine göre daha fazla veya daha az gölgelendirici grafı ayrıntısı görüntülenmeye olanak sağlar. Yakınlaştırma **modunda** tasarım yüzeyinde bir nokta seçin ve ardından yakınlaştırmak için sağa veya aşağı hareket ettirin ya da uzaklaştırın ya da sola ya da yukarıya gelin.<br /><br /> Seç **modunda,** fare tekerleğini kullanarak yakınlaştırmak veya uzaklaştırmak için **Ctrl** tuşuna basıp basılı tutabilirsiniz.|
-|**Sığdırmak için Yakınlaştır**|Pencere çerçevesinde tam gölgelendirici grafiğini görüntüler.|
-|**Gerçek Zamanlı İşleme Modu**|Gerçek zamanlı işleme etkinleştirildiğinde, Visual Studio eylemi gerçekleştirilmese bile tasarım yüzeyini yeniden çizin. Bu mod, zamanla değişen gölgelendiriciler ile çalıştığınızda kullanışlıdır.|
-|**Sphere ile önizleme**|Etkinleştirildiğinde, gölgelendiricinin önizlemesini görmek için bir küre modeli kullanılır. Aynı anda yalnızca bir önizleme şekli etkinleştirilebilir.|
-|**Küp ile önizleme**|Etkinleştirildiğinde, gölgelendiricinin önizlemesini görmek için bir küp modeli kullanılır. Aynı anda yalnızca bir önizleme şekli etkinleştirilebilir.|
-|**Silindir ile Önizleme**|Etkinleştirildiğinde, gölgelendiricinin önizlemesini görmek için bir silindir modeli kullanılır. Aynı anda yalnızca bir önizleme şekli etkinleştirilebilir.|
-|**Külah ile önizleme**|Etkinleştirildiğinde gölgelendiricinin önizlemesini görmek için bir külah modeli kullanılır. Aynı anda yalnızca bir önizleme şekli etkinleştirilebilir.|
-|**Çaydanlık ile önizleme**|Etkinleştirildiğinde, gölgelendiricinin önizlemesini görmek için bir çaydanlık modeli kullanılır. Aynı anda yalnızca bir önizleme şekli etkinleştirilebilir.|
-|**Düzlem ile önizleme**|Etkinleştirildiğinde gölgelendiricinin önizlemesini görmek için bir düzlem modeli kullanılır. Aynı anda yalnızca bir önizleme şekli etkinleştirilebilir.|
-|**Araç Kutusu**|Alternatif olarak Araç Kutusunu gösterir **veya gizler.**|
-|**Özellikler**|Alternatif olarak Özellikler penceresini gösterir veya **gizler.**|
-|**Gelişmiş**|Gelişmiş komutları ve seçenekleri içerir.<br /><br /> **Dışarı** aktar: Bir gölgelendiricinin çeşitli biçimlerde dışarı aktarılabilir.<br /><br /> **Farklı Dışarı** Aktar: Gölgelendiriciyi HLSL kaynak kodu olarak veya derlenmiş gölgelendirici bytecode olarak dışarı aktarın. Gölgelendiricileri dışarı aktarma hakkında daha fazla bilgi için [bkz. Nasıl: Gölgelendiriciyi dışarı aktarma.](../designers/how-to-export-a-shader.md)<br /><br /> **Grafik Altyapıları:** Tasarım yüzeyini görüntülemek için kullanılan işleyicinin seçimini sağlar.<br /><br /> **D3D11 ile işleme:** Gölgelendirici Tasarımcısı tasarım yüzeyini işlemek için Direct3D 11 kullanır.<br /><br /> **D3D11WARP** ile işleme: Gölgelendirici Tasarımcısı tasarım yüzeyini işlemek için Direct3D 11 Windows Gelişmiş Tarama Platformu'na (RENDER) sahiptir.<br /><br /> **Görünüm:** Gölgelendirici Tasarımcısı hakkında ek bilgi seçimini sağlar.<br /><br /> **Çerçeve Hızı:** Etkinleştirildiğinde, tasarım yüzeyinin sağ üst köşesinde geçerli kare oranını görüntüler. Kare hızı, saniye başına çizilen çerçeve sayısıdır. Bu seçenek, Gerçek Zamanlı İşleme **Modu seçeneğini etkinleştirenler için** kullanışlıdır.|
+|**Seç**|Grafikteki düğümlerle ve kenarlarla etkileşimi sunar. Bu modda düğümleri seçip taşıyabilir ya da silebilirsiniz ve kenarları oluşturabilir veya bunları kesebilirsiniz.|
+|**Kaydır**|Bir gölgelendirici grafiğinin pencere çerçevesine göre taşınmasını sağlar. Kaydırmak için tasarım yüzeyinde bir nokta seçin ve taşıyın.<br /><br /> **Seçim** modunda, **Dikey Çevir** modunu geçici olarak etkinleştirmek için **CTRL** tuşuna basılı tutabilirsiniz.|
+|**Zoom**|Pencere çerçevesine göre daha fazla veya daha az gölgelendirici grafik ayrıntısı görüntülenmesini sağlar. **Yakınlaştırma** modu ' nda tasarım yüzeyinde bir nokta seçin ve yakınlaştırmak için sağa veya aşağı taşıyın ya da uzaklaştırmak için sola veya yukarı kaydırın.<br /><br /> **Seçme** modunda, fare tekerleğini kullanarak yakınlaştırmak veya uzaklaştırmak için **CTRL** tuşuna basılı tutabilirsiniz.|
+|**Sığacak kadar Yakınlaştır**|Pencere çerçevesindeki tam gölgelendirici grafiğini görüntüler.|
+|**Gerçek zamanlı Işleme modu**|gerçek zamanlı işleme etkinleştirildiğinde, kullanıcı eylemi gerçekleştirilmediğinde bile tasarım yüzeyini yeniden çizer Visual Studio. Bu mod, zamanla değişen gölgelendiriciler ile çalıştığınızda kullanışlıdır.|
+|**Sphere ile Önizleme**|Etkinleştirildiğinde, gölgelendiricinin önizlemesi için bir Sphere modeli kullanılır. Tek seferde yalnızca bir önizleme şekli etkinleştirilebilir.|
+|**Küp ile Önizleme**|Etkinleştirildiğinde, gölgelendirici önizlemesi için bir küpün modeli kullanılır. Tek seferde yalnızca bir önizleme şekli etkinleştirilebilir.|
+|**Silindir ile Önizleme**|Etkinleştirildiğinde, gölgelendiriciyi önizlemek için bir silindir modeli kullanılır. Tek seferde yalnızca bir önizleme şekli etkinleştirilebilir.|
+|**Koni ile Önizleme**|Etkinleştirildiğinde, gölgelendiriciyi önizlemek için koni modeli kullanılır. Tek seferde yalnızca bir önizleme şekli etkinleştirilebilir.|
+|**Ekiple Önizleme**|Etkinleştirildiğinde, gölgelendiriciyi önizlemek için bir ekip modeli kullanılır. Tek seferde yalnızca bir önizleme şekli etkinleştirilebilir.|
+|**Düzlemle Önizleme**|Etkinleştirildiğinde, gölgelendiriciyi önizlemek için düzlemin bir modeli kullanılır. Tek seferde yalnızca bir önizleme şekli etkinleştirilebilir.|
+|**Araç Kutusu**|Ayrıca **araç kutusunu** gösterir veya gizler.|
+|**Özellikler**|Alternatif olarak, **Özellikler** penceresini gösterir veya gizler.|
+|**Gelişmiş**|Gelişmiş komutları ve seçenekleri içerir.<br /><br /> **Dışarı aktar**: bir gölgelendiricinin birkaç biçimde dışa aktarılmasını mümkün.<br /><br /> **Farklı ver**: gölgelendiriciyi HLSL kaynak kodu veya derlenen gölgelendirici bayt olarak dışa aktarır. Gölgelendiricilerin nasıl dışarı aktarılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md).<br /><br /> **Grafik altyapıları**: tasarım yüzeyini göstermek için kullanılan oluşturucunun seçilmesini sağlar.<br /><br /> **D3d11 Ile işle**: Gölgelendirici Tasarımcısı tasarım yüzeyini Işlemek için Direct3D 11 kullanır.<br /><br /> **D3D11WARP ile işle**: gölgelendirici tasarımcısı tasarım yüzeyini işlemek için Direct3D 11 Windows gelişmiş tarama platformu (WARP) kullanır.<br /><br /> **Görünüm:** Gölgelendirici Tasarımcısı hakkında ek bilgi seçimini sağlar.<br /><br /> **Çerçeve Hızı:** Etkinleştirildiğinde, tasarım yüzeyinin sağ üst köşesinde geçerli kare oranını görüntüler. Kare hızı, saniye başına çizilen çerçeve sayısıdır. Bu seçenek, Gerçek Zamanlı İşleme **Modu seçeneğini etkinleştirenler için** kullanışlıdır.|
 
 > [!TIP]
 > Son komutu yeniden **çalıştırmak** için Gelişmiş düğmesini seçebilirsiniz.
@@ -136,7 +136,7 @@ Gölgelendirici Tasarımcısı gölgelendiricinizi önizlemek için kullanabilec
 
 #### <a name="textures-and-material-parameters"></a>Dokular ve malzeme parametreleri
 
-Birçok gölgelendirici, uygulamanıza her tür nesne için benzersiz bir görünüm oluşturmak için dokulara ve malzeme özelliklerine güvenmektedir. Gölgelendiricinizin uygulamanıza nasıl bir şey göreceğini görmek için, önizlemeyi işlemek için kullanılan dokuları ve malzeme özelliklerini uygulamanıza ek olarak kullanabileceğiniz dokular ve parametrelerle eş hale gelecek şekilde ayarlayın.
+Birçok gölgelendirici, uygulamanıza her tür nesne için benzersiz bir görünüm oluşturmak için dokulara ve malzeme özelliklerine güvenmektedir. Gölgelendiricinizin uygulamanıza nasıl bir görünümde olduğunu görmek için, önizlemeyi işlemek için kullanılan dokuları ve malzeme özelliklerini uygulamanıza ek olarak kullanabileceğiniz dokular ve parametrelerle eş hale gelecek şekilde ayarlayın.
 
 Doku kaydına farklı bir doku bağlamak veya diğer malzeme parametrelerini değiştirmek için:
 
@@ -163,7 +163,7 @@ Gerçek zamanlı işlemeyi etkinleştirmek için Gölgelendirici Tasarımcısı 
 
 #### <a name="examine-the-effect"></a>Etkiyi inceleme
 
-Birçok gölgelendirici, açıyı veya yönlü aydınlatmayı görüntüleme gibi değişkenlerden etkilenir. Bu değişkenler değiştiklerinde etkinin nasıl yanıt verme şeklini incelemek için önizleme şeklini serbestçe döndürebilir ve gölgelendiricinin nasıl davrandığını gözlemleyebilirsiniz.
+Birçok gölgelendirici, görüntüleme açısı veya yönlü aydınlatma gibi değişkenlerden etkilenir. Bu değişkenler değiştiklerinde etkinin nasıl yanıt verme şeklini incelemek için önizleme şeklini serbestçe döndürebilir ve gölgelendiricinin nasıl davrandığını gözlemleyebilirsiniz.
 
 Şekli döndürmek için Alt tuşuna **basın** ve basılı tutun, ardından tasarım yüzeyinde herhangi bir nokta seçin ve hareket ettirin.
 
@@ -181,7 +181,7 @@ Gölgelendiricileri dışarı aktarma hakkında daha fazla bilgi için [bkz. Nas
 |-------------| - |
 |Seçim **moduna** geçme|**Ctrl tuşunu basılı tutarak** + **G,** **Ctrl** + **Q**<br /><br /> **S**|
 |Yakınlaştırma **moduna** geçme|**Ctrl tuşunu basılı tutarak** + **G,** **Ctrl** + **Z**<br /><br /> **Z**|
-|Kaydırma **moduna** geçme|**Ctrl tuşunu basılı tutarak** + **G,** **Ctrl** + **P**<br /><br /> **K**|
+|Pan **moduna** geçme|**Ctrl tuşunu basılı tutarak** + **G,** **Ctrl** + **P**<br /><br /> **K**|
 |Tümünü seç|**Ctrl tuşunu basılı tutarak** + **A**|
 |Geçerli seçimi sil|**Silme**|
 |Geçerli seçimi iptal et|**Kaçış** (**Esc**)|

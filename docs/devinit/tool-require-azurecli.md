@@ -1,6 +1,6 @@
 ---
 title: require-azurecli
-description: devinit tool require-azurecli.
+description: devinit aracı-azurecli gerektirir.
 ms.date: 11/20/2020
 ms.topic: reference
 author: andysterland
@@ -11,29 +11,29 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 84b6506f2aa9c284a97521bf865572773f61908b2def3ef17644cc20234ac037
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 799f1f8153d132f8490bc4fe99c17a256893a6be
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121390560"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725350"
 ---
 # <a name="require-azurecli"></a>require-azurecli
 
 > [!IMPORTANT]
-> 12 Nisan 2021'den itibaren, Visual Studio 2019'dan GitHub Codespaces'a bağlanmak artık desteklemeyecek ve bu özel önizlemenin sonucuna varıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi almak Visual Studio geliştirici topluluğu forummize dahil olmak için sizi teşvik ediyoruz.
+> 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
 
-Araç, `require-azurecli` Azure CLI MSI aracılığıyla Azure [CLI'sini](/cli/azure/?view=azure-cli-latest&preserve-view=true) yüklemek için kullanılır.
+Araç Azure CLI `require-azurecli` MSI aracılığıyla [Azure CLI](/cli/azure/?view=azure-cli-latest&preserve-view=true) 'yı yüklemek için kullanılır.
 
 ## <a name="usage"></a>Kullanım
 
-Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı [olarak açıklanmış varsayılan](#default-behavior) davranışı takip eder.
+Hem hem de `input` `additionalOptions` özellikleri atlanırsa veya boşsa, araç aşağıda ayrıntılı olarak açıklanan [varsayılan](#default-behavior) davranışı izler.
 
 | Ad                                             | Tür   | Gerekli | Değer                                                                          |
 |--------------------------------------------------|--------|----------|--------------------------------------------------------------------------------|
-| **yorumlar**                                     | dize | No       | İsteğe bağlı açıklamalar özelliği. Kullanılmadı.                                          |
-| [**Giriş**](#input)                              | dize | No       | Kullanılmadı. Ayrıntılar [için](#input) aşağıdaki Giriş'e bakın.                               |
-| [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar [için aşağıdaki](#additional-options) Ek seçenekler'e bakın.     |
+| **yorumlar**                                     | dize | No       | İsteğe bağlı Yorumlar özelliği. Kullanılmadı.                                          |
+| [**girişinin**](#input)                              | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [girişi](#input) inceleyin.                               |
+| [**additionalOptions**](#additional-options)     | dize | No       | Kullanılmadı. Ayrıntılar için aşağıdaki [ek seçeneklere](#additional-options) bakın.     |
 
 ### <a name="input"></a>Giriş
 
@@ -45,12 +45,12 @@ Kullanılmadı.
 
 ### <a name="default-behavior"></a>Varsayılan davranış
 
-Aracın varsayılan `require-azurecli` davranışı, Azure CLI'nin en son sürümünü yüklemek ve 'ye eklemektir. `PATH`
+Aracın varsayılan davranışı, `require-azurecli` en son Azure CLI sürümünü yüklemek ve ' a eklemektir `PATH` .
 
 ## <a name="example-usage"></a>Örnek kullanım
-Aşağıda, kullanarak çalıştırmaya bir `require-azurecli` örnek `.devinit.json` verilmiştir.
+Kullanarak nasıl çalıştırılacağını gösteren bir örnek aşağıda verilmiştir `require-azurecli` `.devinit.json` .
 
-#### <a name="devinitjson-that-will-install-the-azure-cli"></a>.devinit.jsAzure CLI'sini yükleyecek olan
+#### <a name="devinitjson-that-will-install-the-azure-cli"></a>Azure CLı 'yı yükleyecek. devinit. JSON:
 ```json
 {
     "$schema": "https://json.schemastore.org/devinit.schema-3.0",

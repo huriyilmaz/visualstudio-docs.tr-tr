@@ -18,11 +18,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 2a2a66db404501048a3eeaffafaf4ab0b51ac813
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122106284"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634001"
 ---
 # <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>nasıl yapılır: program aracılığıyla Excel aralıklarına renk uygulama
   bir hücre aralığı içindeki metne renk uygulamak için, bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetim veya yerel Excel range nesnesi kullanın.

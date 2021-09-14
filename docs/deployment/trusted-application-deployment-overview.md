@@ -20,11 +20,11 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: 563ce328bdfab648651adb6095533011820b03c4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122120705"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725388"
 ---
 # <a name="trusted-application-deployment-overview"></a>Güvenilen uygulama dağıtımına genel bakış
 Bu konu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , güvenilen uygulama dağıtım teknolojisini kullanarak yükseltilmiş izinlere sahip uygulamaların nasıl dağıtılacağı hakkında genel bakış sağlar.
@@ -37,7 +37,7 @@ Bu konu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , güv
 ## <a name="trusted-application-deployment-basics"></a>Güvenilen uygulama dağıtımı temelleri
  Aşağıdaki tabloda, güvenilir uygulama dağıtımında yer alan nesneler ve roller gösterilmektedir.
 
-|Nesne veya rol|Açıklama|
+|Nesne veya rol|Description|
 |--------------------|-----------------|
 |yönetici|İstemci bilgisayarlarını güncelleştirmeden ve korumadan sorumlu kuruluş varlığı|
 |güven Yöneticisi|Ortak dil çalışma zamanı (CLR) içindeki, istemci uygulama güvenliğini zormaktan sorumlu alt sistem.|

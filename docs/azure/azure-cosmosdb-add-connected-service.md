@@ -1,6 +1,6 @@
 ---
-title: Bağlı Hizmetler'i kullanarak Azure CosmosDB'yi | Microsoft Docs
-description: Bağlı hizmet eklemek için azure Visual Studio kullanarak uygulamanıza Azure CosmosDB desteği ekleme
+title: Bağlı hizmetleri kullanarak Azure CosmosDB ekleme | Microsoft Docs
+description: bağlı bir hizmet eklemek için Visual Studio kullanarak uygulamanıza Azure cosmosdb desteği ekleyin
 author: AngelosP
 manager: jmartens
 ms.technology: vs-azure
@@ -10,76 +10,76 @@ ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: 182e39c3dd1c166b539023427891c8bcd63eb193
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122037505"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633289"
 ---
-# <a name="add-azure-cosmos-db-to-your-app-by-using-visual-studio-connected-services"></a>Azure Cosmos DB'yi Bağlı Hizmetler'i Visual Studio uygulamanıza ekleme
+# <a name="add-azure-cosmos-db-to-your-app-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetleri kullanarak uygulamanıza Azure Cosmos DB ekleyin
 
-Bu Visual Studio Bağlı Hizmetler özelliğini kullanarak azure Cosmos DB'ye **bağlanabilirsiniz:**
+Visual Studio, **bağlı hizmetler** özelliğini kullanarak aşağıdakilerden herhangi birini Azure Cosmos DB bağlayabilirsiniz:
 
 - .NET Framework konsol uygulaması
 - ASP.NET MVC (.NET Framework) 
 - ASP.NET Core
-- .NET Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
-- .NET Core Çalışan Rolü
+- .net Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
+- .NET Core çalışan rolü
 - Azure İşlevleri
-- Universal Windows Platform Uygulaması
+- Evrensel Windows Platformu uygulaması
 - Xamarin
 - Cordova
 
-Bağlı hizmet işlevi, projenize gereken tüm başvuruları ve bağlantı kodunu ekler ve yapılandırma dosyalarınızı uygun şekilde ayarlar.
+Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodlarını projenize ekler ve yapılandırma dosyalarınızı uygun şekilde değiştirir.
 
 > [!NOTE]
-> Bu konu, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. Mac için Visual Studio.](/visualstudio/mac/connected-services)
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Visual Studio Azure iş yükünün yüklü olması gerekir.
+- Azure iş yükü yüklü Visual Studio.
 - Desteklenen türlerden birinin projesi
 
-## <a name="connect-to-azure-cosmos-db-using-connected-services"></a>Bağlan Hizmetleri kullanarak Azure Cosmos DB'ye bağlanma
+## <a name="connect-to-azure-cosmos-db-using-connected-services"></a>bağlı hizmetleri kullanarak Azure Cosmos DB Bağlan
 
 1. Projenizi Visual Studio’da açın.
 
-1. Bu **Çözüm Gezgini** Bağlı Hizmetler düğümüne **sağ** tıklayın ve bağlam menüsünde Bağlı Hizmet **Ekle'yi seçin.**
+1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne sağ tıklayın ve bağlam menüsünden **bağlı hizmet ekle**' yi seçin.
 
-1. Bağlı **Hizmetler sekmesinde** Hizmet Bağımlılıkları için + **simgesini seçin.**
+1. **Bağlı hizmetler** sekmesinde, **hizmet bağımlılıkları** için + simgesini seçin.
 
-    ![Hizmet Bağımlılığı Ekleme](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
+    ![Hizmet bağımlılığı Ekle](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
 
-1. Bağımlılık **Ekle sayfasında Azure** **veritabanı'Cosmos seçin.**
+1. **bağımlılık ekle** sayfasında **Azure Cosmos DB**' yi seçin.
 
-    ![Azure Cosmos DB ekleme](./media/azure-cosmosdb-add-connected-service/azure-cosmosdb.png)
+    ![Azure Cosmos DB ekle](./media/azure-cosmosdb-add-connected-service/azure-cosmosdb.png)
 
-    Henüz oturum açmadıysanız Azure hesabınızla oturum açın. Azure hesabınız yoksa ücretsiz deneme sürümüne [kaydolabilirsiniz.](https://azure.microsoft.com/account/free)
+    Henüz oturum açmadıysanız Azure hesabınızda oturum açın. Bir Azure hesabınız yoksa, [ücretsiz deneme](https://azure.microsoft.com/account/free)için kaydolabilirsiniz.
 
-1. Azure Cosmos **DB ekranında** mevcut bir Azure Cosmos DB'yi ve ardından Sonraki'yi **seçin.**
+1. **Azure Cosmos DB** ekranında, var olan bir Azure Cosmos DB seçin ve **ileri**' yi seçin.
 
-    Veritabanı oluşturmanız gerekirse sonraki adıma geçin. Aksi takdirde 7. adıma geçin.
+    Bir veritabanı oluşturmanız gerekiyorsa, bir sonraki adıma gidin. Aksi takdirde 7. adıma geçin.
 
-    ![Mevcut Cosmos DB'yi projeye ekleme](./media/azure-cosmosdb-add-connected-service/created-cosmosdb.png)
+    ![varolan Cosmos DB projeye ekle](./media/azure-cosmosdb-add-connected-service/created-cosmosdb.png)
 
 1. Azure Cosmos DB oluşturmak için:
 
-   1. Ekranın **alt kısmından Yeni Cosmos veritabanı** oluştur'a tıklayın.
+   1. ekranın alt kısmındaki **yeni Azure Cosmos DB oluştur** ' u seçin.
 
-   1. Azure Veritabanı: **Cosmos ekranı doldurun ve Oluştur'a** **tıklayın.**
+   1. **Azure Cosmos DB: yeni ekran oluştur** ' u doldurun ve **oluştur**' u seçin.
 
-       ![Yeni Azure Cosmos DB](./media/azure-cosmosdb-add-connected-service/create-new-cosmosdb.png)
+       ![yeni Azure Cosmos DB](./media/azure-cosmosdb-add-connected-service/create-new-cosmosdb.png)
 
-   1. Azure **Veritabanı Cosmos iletişim** kutusu görüntülendiğinde, yeni veritabanı listede görünür. Listeden yeni veritabanını ve ardından Sonraki'yi **seçin.**
+   1. **Azure Cosmos DB yapılandır** iletişim kutusu görüntülendiğinde, yeni veritabanı listede görüntülenir. Listeden yeni veritabanını seçin ve **İleri**' yi seçin.
 
-1. Bir bağlantı dizesi adı girin ve bağlantı dizesinin yerel bir gizli dizi dosyasında mı yoksa yerel bir gizli dizi dosyasında mı [Azure Key Vault.](/azure/key-vault)
+1. Bir bağlantı dizesi adı girin ve bağlantı dizesinin yerel bir gizli dizi dosyasında mi yoksa [Azure Key Vault](/azure/key-vault)mi depolanmasını istediğinizi seçin.
 
-   ![Bağlantı dizesini belirtme](./media/azure-cosmosdb-add-connected-service/connection-string.png)
+   ![Bağlantı dizesini belirtin](./media/azure-cosmosdb-add-connected-service/connection-string.png)
 
-1. Değişiklikleri **özetle** ekranında, işlemi tamamlarsanız projenize yapılacak tüm değişiklikler gösterilir. Değişiklikler Tamam görünüyorsa Son'a **tıklayın.**
+1. **Değişiklikler ekranının Özeti** , işlemi tamamlamadıysanız projenizde yapılacak tüm değişiklikleri gösterir. Değişiklikler tamam ise **son**' u seçin.
 
    ![Değişikliklerin özeti](./media/azure-cosmosdb-add-connected-service/summary-of-changes.png)
 
-1. Bağlantı, Bağlı Hizmetler **sekmesinin** Hizmet Bağımlılıkları **bölümünde** görünür.
+1. Bağlantı, **bağlı hizmetler** sekmesinin **hizmet bağımlılıkları** bölümünün altında görüntülenir.
 
    ![Hizmet bağımlılıkları](./media/azure-cosmosdb-add-connected-service/service-dependencies-after.png)
 
@@ -87,4 +87,4 @@ Bağlı hizmet işlevi, projenize gereken tüm başvuruları ve bağlantı kodun
 
 - [Azure Cosmos DB ürün sayfası](https://azure.microsoft.com/services/cosmos-db/)
 - [Azure Cosmos DB belgeleri](/azure/cosmos-db/)
-- [Bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)
+- [bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)

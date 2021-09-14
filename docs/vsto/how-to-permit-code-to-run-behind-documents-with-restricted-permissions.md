@@ -1,6 +1,6 @@
 ---
-title: Kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına izin verme
-description: Visual Studio Office geliştirme araçlarını kullanarak kodun kısıtlanmış izinlerle birlikte çalıştırılmasına nasıl izin verileceğini öğrenin.
+title: Kodun kısıtlı izinlerle docs'un arkasında çalışmasına izin ver
+description: Uygulama geliştirme araçlarını kullanarak belgelerin arkasında kısıtlı izinlerle kod çalıştırmaya izin Office nasıl izin ver Visual Studio.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -22,38 +22,38 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 366c8716995f0f5e88707d738957fc4ec0476a50
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122083394"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634033"
 ---
-# <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Nasıl yapılır: kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına Izin verme
-  bir belge veya çalışma kitabıyla izinleri kısıtlamak için Microsoft Office bilgi Rights Management (ırm) özelliğini kullanabilirsiniz. varsayılan olarak, kısıtlanmış Microsoft Office Word belgesi veya Microsoft Office Excel çalışma kitabının arkasındaki kodun çalışmasına izin verilmez. Varsayılan değer olarak, yönetilen kod uzantılarınızın nesne modeline erişebilmesi ve çözümünüzün çalışması için değiştirebilirsiniz.
+# <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Nasıl kullanılır: Kodun kısıtlı izinlerle belgelerin arkasında çalışmasına izin verme
+  Bir belge veya çalışma kitabına Rights Management kısıtlamak için Microsoft Office'nin Information Rights Management (IRM) özelliğini kullanabilirsiniz. Varsayılan olarak, kısıtlanmış bir Word Microsoft Office veya Microsoft Office Excel çalışma kitabının arkasındaki kodun çalışmasına izin verilmez. Yönetilen kod uzantılarınız nesne modeline erişemeyecek ve çözümünüz çalışacak şekilde varsayılanı değiştirebilirsiniz.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- İzin ayarlarını değiştirebilmek için belge veya çalışma kitabının yazarı veya tam denetim erişiminin olması gerekir.
+ İzin ayarlarını değiştiremeniz için belgenin veya çalışma kitabının yazarı veya Tam Denetim erişiminizin olması gerekir.
 
-## <a name="to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına izin vermek için
+## <a name="to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>Kodun kısıtlı izinlerle belgelerin arkasında çalışmasına izin verme
 
-1. Belge veya çalışma kitabını Word veya Excel açın.
+1. Belgeyi veya çalışma kitabını Word'de veya Excel.
 
-2. **Dosya** sekmesine tıklayın, **hazırla** seçeneğinin üzerine gelin, **izin kısıtla**' nın üzerine gelin ve ardından **kısıtlı erişim**' e tıklayın.
+2. Dosya **sekmesine tıklayın,** Hazırla'nın **üzerine gelin,** İzni **Kısıtla'nın üzerine gelin** ve ardından Kısıtlı **Erişim'e tıklayın.**
 
    > [!NOTE]
-   > ilk kullanımda, Windows Rights Management istemcisini yüklemeniz istenir. İstemcisini yükledikten sonra, adımları tekrarlamanız gerekebilir.
+   > İlk kullanımda, Windows Rights Management istemcisini yüklemeniz istenir. İstemciyi yükledikten sonra adımları yinelemeniz gerekir.
 
-3. **İzin** iletişim kutusunda **Bu belge için izinleri kısıtla**' yı seçin ve **daha sonra diğer seçenekler**' e tıklayın.
+3. İzin iletişim **kutusunda Bu** belge için izni **kısıtla'yı seçin** ve ardından Diğer Seçenekler'e **tıklayın.**
 
-4. **Kullanıcılar Için ek izinler** altında, **içeriğe programlamayla erişim**' i seçin.
+4. Kullanıcılar **için ek izinler altında,** **içeriğe program aracılığıyla eriş'i seçin.**
 
-   sözcük veya Excel, nesne modeline programlı erişime izin verir.
+   Word Excel nesne modeline programlı erişime izin veecek.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bilgi hakları yönetimine ve yönetilen kod uzantılarına genel bakış](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
-- [Belge düzeyi çözümlerde Belge koruması](../vsto/document-protection-in-document-level-solutions.md)
+- [Bilgi hakları yönetimi ve yönetilen kod uzantılarına genel bakış](../vsto/information-rights-management-and-managed-code-extensions-overview.md)
+- [Belge düzeyi çözümlerde belge koruması](../vsto/document-protection-in-document-level-solutions.md)
 - [Office belgelerde parola koruması](../vsto/password-protection-on-office-documents.md)
-- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
-- [Office çözümleri güvenli hale getirme](../vsto/securing-office-solutions.md)
-- [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
+- [Yeni çözümler tasarlama Office oluşturma](../vsto/designing-and-creating-office-solutions.md)
+- [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
+- [Bir Office dağıtma](../vsto/deploying-an-office-solution.md)

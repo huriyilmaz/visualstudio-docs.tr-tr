@@ -1,6 +1,6 @@
 ---
-description: Belirtilen hata ayıklama adresindeki işlevin eski olarak kabul edileceğini belirler.
-title: 'IDebugComPlusSymbolProvider:: IsFunctionStale | Microsoft Docs'
+description: Belirtilen hata ayıklama adresli işlevin eski olarak kabul edilir olup olmadığını belirler.
+title: IDebugComPlusSymbolProvider::IsFunctionStale | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,14 +16,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f160180b9076345612f285df69e64b90f0d442b2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122103760"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725290"
 ---
 # <a name="idebugcomplussymbolproviderisfunctionstale"></a>IDebugComPlusSymbolProvider::IsFunctionStale
-Belirtilen hata ayıklama adresindeki işlevin eski olarak kabul edileceğini belirler.
+Belirtilen hata ayıklama adresli işlevin eski olarak kabul edilir olup olmadığını belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int IsFunctionStale(
 
 ## <a name="parameters"></a>Parametreler
 `pAddress`\
-'ndaki Bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) arabirimi tarafından temsil edilen hata ayıklama adresi. Bu adres bir METHOD_ADDRESS olmalıdır.
+[in] [IDebugAddress arabirimiyle temsil edilen hata ayıklama](../../../extensibility/debugger/reference/idebugaddress.md) adresi. Bu adres bir METHOD_ADDRESS.
 
 ## <a name="return-value"></a>Dönüş Değeri
-İşlev eski olarak kabul edildiğinde, döndürür `S_OK` . İşlev eski değilse, döndürür `S_FALSE` .
+İşlev eski olarak kabul edilirse `S_OK` döndürür. İşlev eski yoksa `S_FALSE` döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::IsFunctionStale(

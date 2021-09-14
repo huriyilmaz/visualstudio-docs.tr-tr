@@ -16,11 +16,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 93d689122f61f68da64e09687edce9c0a89a28eb
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122039390"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725698"
 ---
 # <a name="cores-view-timeline"></a>Çekirdekler Görünümü zaman çizelgesi
 Zaman çizelgesinde yer alan her satır, profili yapılan sistem üzerinde bir mantıksal işlemci çekirdeğini temsil eder. Her satır için yatay eksen, belirli bir zamanda bir mantıksal çekirdek üzerinde çalışan iş parçacığını gösterir. Zaman çizelgesinde ilginizi olan bir rengin üzerine gelerek iş parçacığını tanımlayan bir araç ipucu getirebilirsiniz. İş parçacığı tanımlamaya yardımcı olmak için pencerenin alt kısmında yer alan gösterge, her rengin neyi temsil ettiğini gösterir. Yakınlaştırma aracını kullanarak tıklayarak ve sürükleyerek veya CTRL tuşuna basarak ve fare tekerleğini hareket ettirerek yakınlaştırın ve uzaklaştırın. Çekirdekler Görünümü ile İş Parçacıkları Görünümü arasında geçiş yapmak için yakınlaştırma tutarlılığı korunur.

@@ -22,14 +22,14 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: e31147694042309c77801d3058ea42fcdf6b8828
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122155505"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725545"
 ---
 # <a name="walkthrough-automate-an-application-from-a-custom-task-pane"></a>Adım adım kılavuz: Özel görev bölmesinden uygulamayı otomatikleştirme
-  Bu izlenecek yol, özel bir görev bölmesinin nasıl oluşturularak otomatikleştir PowerPoint. Özel görev bölmesi, kullanıcı özel görev bölmesindeki bir denetime tıkladığında bir <xref:System.Windows.Forms.MonthCalendar> slayta tarih ekler.
+  Bu adım adım kılavuzda, özel bir görev bölmesinin nasıl oluşturularak otomatikleştir PowerPoint. Özel görev bölmesi, kullanıcı özel görev bölmesindeki bir denetime tıkladığında bir <xref:System.Windows.Forms.MonthCalendar> slayta tarih ekler.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "122155505"
 
 - Özel PowerPoint bölmesinden otomatik olarak yükleme.
 
-- Bölmede özel görev bölmesini PowerPoint.
+- Özel görev bölmesini PowerPoint.
 
 > [!NOTE]
 > Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [bkz. IDE'Visual Studio kişiselleştirme.](../ide/personalizing-the-visual-studio-ide.md)
@@ -58,12 +58,12 @@ ms.locfileid: "122155505"
 
 ### <a name="to-create-a-new-project"></a>Yeni proje oluşturmak için
 
-1. PowerPoint Proje şablonunu kullanarak **MyAddIn** PowerPoint VSTO bir Eklenti projesi oluşturun. Daha fazla bilgi için, [bkz. How to: Create Office projects in Visual Studio.](../vsto/how-to-create-office-projects-in-visual-studio.md)
+1. PowerPoint Proje şablonunu kullanarak **MyAddIn** PowerPoint VSTO bir eklenti projesi oluşturun. Daha fazla bilgi için, [bkz. How to: Create Office projects in Visual Studio.](../vsto/how-to-create-office-projects-in-visual-studio.md)
 
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ThisAddIn.cs** veya **ThisAddIn.vb** kod dosyasını açar ve **MyAddIn** projesini **Çözüm Gezgini.**
 
 ## <a name="design-the-user-interface-of-the-custom-task-pane"></a>Özel görev bölmesinin kullanıcı arabirimini tasarlama
- Özel görev bölmeleri için görsel tasarımcı yoktur, ancak istediğiniz düzende bir kullanıcı denetimi tasarleyebilirsiniz. Bu kılavuzda daha sonra kullanıcı denetimi özel görev bölmesine eklenecektir.
+ Özel görev bölmeleri için görsel tasarımcı yoktur, ancak istediğiniz düzende bir kullanıcı denetimi tasarleyebilirsiniz. Bu kılavuzda daha sonra, kullanıcı denetimi özel görev bölmesine eklenecektir.
 
 #### <a name="to-design-the-user-interface-of-the-custom-task-pane"></a>Özel görev bölmesinin kullanıcı arabirimini tasarlamak için
 
@@ -78,7 +78,7 @@ ms.locfileid: "122155505"
      **MonthCalendar denetimi,** kullanıcı denetimi tasarım yüzeyinden büyükse, kullanıcı denetimlerini **MonthCalendar** denetimine uyacak şekilde yeniden boyutlandırın.
 
 ## <a name="automate-powerpoint-from-the-custom-task-pane"></a>Özel PowerPoint bölmesinden otomatikleştirme
- Eklentinin VSTO etkin sunumun ilk slaydına seçili tarihi koymaktır. Seçili <xref:System.Windows.Forms.MonthCalendar.DateChanged> tarihi her değiştikten sonra eklemek için denetimin olaylarını kullanın.
+ Eklentinin VSTO, etkin sunumun ilk slaydına seçili tarihi koymaktır. Her <xref:System.Windows.Forms.MonthCalendar.DateChanged> değişiklikte seçili tarihi eklemek için denetimin olaylarını kullanın.
 
 ### <a name="to-automate-powerpoint-from-the-custom-task-pane"></a>Özel PowerPoint bölmesinden otomatikleştirme
 
@@ -86,7 +86,7 @@ ms.locfileid: "122155505"
 
      **MyUserControl.cs** veya **MyUserControl.vb** dosyası açılır ve olay için bir olay <xref:System.Windows.Forms.MonthCalendar.DateChanged> işleyicisi oluşturulur.
 
-2. Aşağıdaki kodu dosyanın en üstüne ekleyin. Bu kod, ad alanları için <xref:Microsoft.Office.Core> diğer [PowerPoint](/previous-versions/office/developer/office-2010/ff763170%28v%3doffice.14%29) oluşturur.
+2. Aşağıdaki kodu dosyanın en üstüne ekleyin. Bu kod, ad alanları için diğer <xref:Microsoft.Office.Core> [PowerPoint](/previous-versions/office/developer/office-2010/ff763170%28v%3doffice.14%29) oluşturur.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs" id="Snippet1":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb" id="Snippet1":::
@@ -96,19 +96,19 @@ ms.locfileid: "122155505"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs" id="Snippet2":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb" id="Snippet2":::
 
-4. Olay `monthCalendar1_DateChanged` işleyicisini aşağıdaki kodla değiştirin. Bu kod, etkin sunuda ilk slayta bir metin kutusu ekler ve ardından seçili olan tarihi metin kutusuna ekler. Bu kod, `Globals.ThisAddIn` nesne modeline erişmek için nesnesini PowerPoint.
+4. Olay `monthCalendar1_DateChanged` işleyicisini aşağıdaki kodla değiştirin. Bu kod, etkin sunuda ilk slayta bir metin kutusu ekler ve ardından seçili olan tarihi metin kutusuna ekler. Bu kod, `Globals.ThisAddIn` nesnesini kullanarak uygulamanın nesne modeline PowerPoint.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/MyUserControl.cs" id="Snippet3":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/MyUserControl.vb" id="Snippet3":::
 
-5. Bu **Çözüm Gezgini,** **MyAddIn projesine sağ** tıklayın ve ardından Derleme'ye **tıklayın.** Projenin hatasız olarak derlemesini doğrulayın.
+5. Bu **Çözüm Gezgini,** **MyAddIn projesine sağ tıklayın** ve ardından Derleme'ye **tıklayın.** Projenin hatasız olarak derlemesini doğrulayın.
 
 ## <a name="display-the-custom-task-pane"></a>Özel görev bölmesini görüntüleme
- Eklenti başlatıldığında özel görev bölmesini VSTO için, kullanıcı denetimi kullanıcı denetimlerini eklentinin olay <xref:Microsoft.Office.Tools.AddIn.Startup> işleyicisinde görev bölmesine VSTO ekleyin.
+ Eklenti başlatıldığında özel görev bölmesini VSTO için, kullanıcı denetimi kullanıcı denetimlerini eklentinin olay işleyicisinde <xref:Microsoft.Office.Tools.AddIn.Startup> görev bölmesine VSTO ekleyin.
 
 ### <a name="to-display-the-custom-task-pane"></a>Özel görev bölmesini görüntülemek için
 
-1. Içinde **Çözüm Gezgini** genişletin ve **PowerPoint.**
+1. içinde **Çözüm Gezgini** genişletin ve **PowerPoint.**
 
 2. **ThisAddIn.cs veya** **ThisAddIn.vb'ye** sağ tıklayın ve Kodu **Görüntüle'ye tıklayın.**
 

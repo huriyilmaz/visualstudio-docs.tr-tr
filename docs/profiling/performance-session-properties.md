@@ -1,6 +1,6 @@
 ---
-title: Performans oturumu özellikleri | Microsoft Docs
-description: Bir performans oturumunun, uygulamanın profili oluşturma şeklini belirleyecek ayarları yapılandırmanıza nasıl olanak sağladığını öğrenin.
+title: Performans Oturumu Özellikleri | Microsoft Docs
+description: Performans Oturumu'nın, uygulamanın profilini belirleyen ayarları yapılandırmayı nasıl olanaklı olduğunu öğrenin.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,29 +15,29 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 0fb9846958700e89ea4bc7cf12815ccf6335e39c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122107153"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726813"
 ---
 # <a name="performance-session-properties"></a>Performans oturumu özellikleri
 
-Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyecek ayarları yapılandırmanıza olanak sağlar. Profil oluşturma oturumu için oluşturulan raporları da depolar.
+Performans **Oturumu,** uygulamanın profilini belirleyen ayarları yapılandırmaya olanak sağlar. Profil oluşturma oturumu için oluşturulan raporları da depolar.
 
-Performans **sihirbazını** çalıştırarak veya el ile bir oturum oluşturarak bir **performans oturumu** oluşturursunuz. Performans **oturumu** , performans **oturumu** oluşturulduktan sonra **Performans Gezgini** görüntülenir.
+Performans **Sihirbazı'nı çalıştırarak** veya el **ile oturum** oluşturarak bir Performans Oturumu oluşturabilirsiniz. Performans **Oturumu** oluşturulduktan **sonra Performans Gezgini** **oturumda** görüntülenir.
 
-**Performans oturumu** özelliklerini görüntülemek için **Performans Gezgini** oturum adını seçin, sağ tıklayın ve ardından **Özellikler**' i seçin.
+Performans Oturumu **özelliklerini görüntülemek** için, oturum adını Performans Gezgini **tıklayın** ve ardından Özellikler'i **seçin.**
 
-Performans oturumu aşağıdaki özellik sayfalarına sahiptir:
+Performans oturumu aşağıdaki özellik sayfalarına sahip:
 
 ## <a name="general"></a>Genel
 
-Bu ayarlar, .NET nesne koleksiyonu ve ömür verileri eklemek ve varsayılan rapor konumunu ve adlandırma kurallarını belirtmek için profil oluşturma yöntemini seçmenizi sağlar.
+Bu ayarlar profil oluşturma yöntemini seçmenize, .NET nesne koleksiyonu ve yaşam süresi verileri eklemenize ve varsayılan rapor konumu ile adlandırma kuralları belirtmenize olanak sağlar.
 
 Daha fazla bilgi için bkz.
 
-[Nasıl yapılır: koleksiyon yöntemleri seçme](../profiling/how-to-choose-collection-methods.md)
+[Nasıl yapılacaklar: Koleksiyon yöntemlerini seçme](../profiling/how-to-choose-collection-methods.md)
 
 [.NET bellek ayırma ve yaşam süresi verilerini toplama](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)
 
@@ -45,66 +45,66 @@ Daha fazla bilgi için bkz.
 
 ## <a name="launch"></a>Başlat
 
-Bu ayarlar, ikili bir listeden seçim yapmanız ve ikili dosyaların başlangıç sırasını belirtmenizi sağlar.
+Bu ayarlar, ikili dosyalar listesinden seçim yapabilirsiniz ve ikililerin başlangıç sırası belirtebilirsiniz.
 
-Daha fazla bilgi için bkz. [nasıl yapılır: başlatılacak Ikiliyi belirtme](../profiling/how-to-specify-the-binary-to-start.md)
+Daha fazla bilgi için, [bkz. How to: Specify the binary to start](../profiling/how-to-specify-the-binary-to-start.md)
 
 ## <a name="sampling"></a>Örnekleme
 
-Bu ayarlar, örnekleme profil oluşturma yöntemi olarak kullanıldığında örnek olay ve örnekleme aralığını seçmenizi sağlar. Belirtilen aralıkta profil oluşturma verilerini toplamak için örnek bir olay kullanılır. Örneğin, örnek olay saat döngüleri ise ve örnekleme aralığı 10.000.000 olarak ayarlanırsa, profil oluşturma verileri her 10.000.000 saat döngüden sonra toplanır. Aşağıdaki dört örnek olay türü mevcuttur:
+Bu ayarlar, örnekleme profil oluşturma yöntemi olarak kullanılırken örnek olay ve örnekleme aralığını seçmenize olanak sağlar. Belirtilen aralıkta profil oluşturma verilerini toplamak için örnek bir olay kullanılır. Örneğin, örnek olay saat döngüleri ise ve örnekleme aralığı 10.000.000 olarak ayarlanırsa, profil oluşturma verileri her 10 milyon saat döngüsünde toplanır. Aşağıdaki dört örnek olay türü kullanılabilir:
 
-- Saat döngüleri-CPU ile bağlantılı sorunlar için
-- Sayfa hataları-bellekle ilgili sorunlar için
-- Sistem çağrıları-g/ç ile ilgili sorunlar için
-- Performans sayaçları-düşük düzeyde performans sorunları için
-- Ek örnek olaylar, kullanılabilir performans sayaçlarına göre belirtilebilir
+- Saat Döngüleri - CPU'ya bağlı sorunlar için
+- Sayfa Hataları - bellekle ilgili sorunlar için
+- Sistem Çağrıları - I/O ile ilgili sorunlar için
+- Performans Sayaçları - alt düzey performans sorunları için
+- Kullanılabilir performans sayaçlarına göre ek örnek olaylar belirtilebilir
 
-Daha fazla bilgi için bkz [. nasıl yapılır: örnekleme olaylarını seçme](../profiling/how-to-choose-sampling-events.md)
+Daha fazla bilgi için [bkz. Nasıl? Örnekleme olaylarını seçme](../profiling/how-to-choose-sampling-events.md)
 
 ## <a name="binary"></a>İkili
-Bu ayarlar, izlenen ikiliyi başka bir konuma değiştirmek isteyip istemediğinizi belirtmenize olanak tanır. Örneğin, *My.DLL* profilini oluşturup, izlenen ikilinin yeniden konumlandırılacağını seçerseniz, *My.Orig.DLL* adlı *My.DLL* bir yedek kopyası oluşturulur. Daha sonra, verileri toplamak için yoklamalar eklenerek *My.DLL* değiştirilir. İzlenen ikilinin yeniden konumlandırmaya karar verirseniz, orijinal ikili yeniden adlandırılmaz ve izlenen ikili, izleme sırasında kullanılmak üzere belirtilen konuma kopyalanır.
+Bu ayarlar, araçlı ikili dosyanın başka bir konuma taşınmak isteyip istemediklerini belirtmenize olanak sağlar. Örneğin,My.DLLprofiliMy.DLL ikili dosyayı yeniden taşınmazsanız,My.DLLadlı bir *My.Orig.DLL*  oluşturulur. Daha sonra *My.DLL* veri toplamak için yoklamalar eksildiğinde değişiklik değiştirilebilir. Araçlı ikili dosyayı yeniden kullanmaya karar verdiy olursanız, özgün ikili dosya yeniden adlandırılamaz ve ölçümleme sırasında kullanmak üzere belirtilen konuma kopyalanır.
 
-Daha fazla bilgi için bkz. [nasıl yapılır: başlatılacak Ikiliyi belirtme](../profiling/how-to-specify-the-binary-to-start.md)
+Daha fazla bilgi için, [bkz. How to: Specify the binary to start](../profiling/how-to-specify-the-binary-to-start.md)
 
 ## <a name="tier-interactions"></a>Katman etkileşimleri
 
-Daha fazla bilgi için bkz. [Katman etkileşimi verilerini toplama](../profiling/collecting-tier-interaction-data.md)
+Daha fazla bilgi için [bkz. Katman etkileşim verileri toplama](../profiling/collecting-tier-interaction-data.md)
 
 ## <a name="instrumentation"></a>İzleme
 
-bu ayarlar, Web sayfalarındaki JScript kod için performans verilerini toplamanıza [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] ve izleme işleminden önce veya sonra gerçekleşmesini istediğiniz herhangi bir **araç öncesi** ve **sonrası** olay belirtmenize olanak sağlar.
+Bu ayarlar, Web sayfalarındaki JScript için performans verileri toplamanız ve ölçümleme işlemi öncesinde veya sonrasında gerçekleşmesini istediğiniz Ön ölçüm ve Son ölçüm olaylarını [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] belirtmenize olanak  sağlar. 
 
 Daha fazla bilgi için bkz.
 
-[Nasıl yapılır: Web sayfalarında JavaScript kodu profili oluşturma](../profiling/how-to-profile-javascript-code-in-web-pages.md)
+[Nasıl kullanılır: Web sayfalarında JavaScript kodunun profilini oluşturma](../profiling/how-to-profile-javascript-code-in-web-pages.md)
 
-[Nasıl yapılır: ön ve araç sonrası komutları belirtme](../profiling/how-to-specify-pre-and-post-instrument-commands.md)
+[Nasıl kullanılır: Ön ve son ölçüm komutları belirtme](../profiling/how-to-specify-pre-and-post-instrument-commands.md)
 
 ## <a name="cpu-counters"></a>CPU sayaçları
 
-Bu ayarlar, izleme profili oluşturma yöntemini kullanırken CPU performans sayaçları hakkında veri toplamanıza olanak tanır. Taşınabilir performans sayaçları, CPU tasarımı veya üreticisi ne olursa olsun kullanılabilir. Platform olayları, CPU tasarımına ve üreticisine özeldir. Yonga hakkında performans sayaçları hakkında daha fazla bilgi için bkz. belirli işlemci belgeleri.
+Bu ayarlar, ölçüm ölçüm profil oluşturma yöntemini kullanırken CPU performans sayaçları hakkında veri toplamaya olanak sağlar. Taşınabilir Performans sayaçları CPU tasarımına veya üreticisine bakılmaksızın kullanılabilir. Platform Olayları, CPU tasarımına ve üreticisine özeldir. Yonga üzerinde performans sayaçları hakkında daha fazla bilgi için ilgili işlemci belgelerine bakın.
 
-Daha fazla bilgi için bkz [. nasıl yapılır: CPU sayacı verilerini toplama](../profiling/how-to-collect-cpu-counter-data.md)
+Daha fazla bilgi için [bkz. Nasıl kullanılır: CPU sayacı verilerini toplama](../profiling/how-to-collect-cpu-counter-data.md)
 
 ## <a name="windows-events"></a>Windows olayları
 
-Profil oluşturma sırasında, olay izleme sağlayıcılarından veri toplayabilirsiniz. *VSPerfReport.exe* komut satırı araç seçeneğini kullanarak verileri görüntüleyebilirsiniz `/calltrace` . Windows (ETW) için olay izleme hakkında daha fazla bilgi için bkz. [olay izleme hakkında](/windows/win32/etw/about-event-tracing).
+Profil oluşturma sırasında olay izleme sağlayıcılarından veri toplayabilirsiniz. Komut satırı aracı seçeneğini kullanarak *VSPerfReport.exe* `/calltrace` görüntüebilirsiniz. Windows için Olay İzleme (ETW) hakkında daha fazla bilgi için [bkz. Olay İzleme Hakkında.](/windows/win32/etw/about-event-tracing)
 
 Daha fazla bilgi için bkz.
 
-[nasıl yapılır: Windows (ETW) verileri için olay izlemeyi toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
+[Nasıl Windows (ETW) verileri için olay izleme toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
 
 [VSPerfReport](../profiling/vsperfreport.md).
 
 ## <a name="windows-counters"></a>Windows sayaçları
 
-bu seçenek Windows performans izleyicisi sayaçlarından veri toplamanıza olanak sağlar. bu verileri toplamak için **Windows performans sayaçlarını topla** etiketli onay kutusunu seçin. Koleksiyon aralığı, **koleksiyon aralığı** kutusunda ayarlanabilir. **Sayaç kategorisi** ve **örneği** de kullanılabilir olabilir. bazı varsayılan Windows performans izleyicisi sayaçları kullanılabilir.
+Bu seçenek, farklı sayaçlardan veri Windows Performans İzleyicisi sağlar. Bu verileri toplamak için Performans Sayaçlarını Topla **etiketli Windows kutusunu seçin.** Koleksiyon aralığı, Koleksiyon Aralığı **kutusunda ayarlanabilir.** **Sayaç Kategorisi** ve **Örneği** de kullanılabilir. Bazı varsayılan Windows Performans İzleyicisi sayaçları kullanılabilir.
 
- daha fazla bilgi için bkz. [nasıl yapılır: toplama Windows sayaç verileri](../profiling/how-to-collect-windows-counter-data.md).
+ Daha fazla bilgi için [bkz. Nasıl Windows verileri toplama.](../profiling/how-to-collect-windows-counter-data.md)
 
 ## <a name="advanced"></a>Gelişmiş
 
-Bu ayarlar, [vsinstr](../profiling/vsinstr.md) komut satırı profil oluşturma Aracı ' nın bir veya daha fazla seçeneğini belirterek, izleme işlemine seçenekler eklemenize olanak tanır. Ayrıca, uygulama birden fazla sürüm kullanırken profil için ortak çalışma zamanının sürümünü belirtebilirsiniz.
+Bu ayarlar, [VSInstr](../profiling/vsinstr.md) komut satırı profil oluşturma aracının bir veya daha fazla seçeneği belirterek ölçümleme sürecine seçenekler eklemenize olanak sağlar. Uygulama birden fazla sürüm kullanırken profili oluşturmak için Common Runtime sürümünü de belirtebilirsiniz.
 
 Daha fazla bilgi için bkz.
 
@@ -114,6 +114,6 @@ Daha fazla bilgi için bkz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Genel bakış](../profiling/overviews-performance-tools.md) 
+[Genel Bakışlar](../profiling/overviews-performance-tools.md) 
  [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md) 
- [Denetim verileri toplama](../profiling/controlling-data-collection.md)
+ [Veri toplamayı denetleme](../profiling/controlling-data-collection.md)

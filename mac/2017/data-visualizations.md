@@ -7,21 +7,21 @@ ms.date: 05/06/2018
 ms.technology: vs-ide-debug
 ms.assetid: 527E6BEC-EF15-4002-ACB5-62AE1C16F6B7
 ms.openlocfilehash: 3355b81406d2b510dc13604a026bcd014bf9dbcb
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123962132"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725514"
 ---
 # <a name="data-visualizations"></a>Veri görselleştirmeleri
 
-Mac için Visual Studio hata ayıklayıcı için ui desteği içerir ve hata ayıklama sırasında bir değişken, alan veya özelliğin değerlerinin görselleştirmelerine izin verir. Bu veri görselleştiricileri verilerin genişletilmiş bir sürümünü gösterir ve geliştiricilerin bilinen yapıları (örneğin bir renk yapısının rengini gösterme) incelemesine olanak sağlar.
+Mac için Visual Studio hata ayıklayıcı için ui desteği içerir ve hata ayıklama sırasında bir değişken, alan veya özellik değerlerinin görselleştirmelerine izin verir. Bu veri görselleştiricileri verilerin genişletilmiş bir sürümünü gösterir ve geliştiricilerin bilinen yapıları (örneğin renk yapısının rengini) incelemesine olanak sağlar.
 
 Hata ayıklama Yerel  **panelinin** görselleştiricileri, değerin sağ tarafından görüntülenen önizleme simgesine tıklarsanız, kullanıcı satırın üzerine geldiğinde görüntülenebilir:
 
 ![Yerel Pad](media/data-visualizations-image9.png)
 
-Aşağıdaki listede, hata ayıklama sırasında kullanılabilen yeni görselleştirmelerin birçoğuna Mac için Visual Studio.
+Aşağıdaki listede, hata ayıklama sırasında kullanılabilen yeni görselleştirmelerin birçoğu Mac için Visual Studio.
 
 ## <a name="point"></a>Nokta
 iOS ve Mac'te Point/PointF veya CGPoint, hata ayıklama panelinin X ve Y değerlerini gösteren bir tuple olarak işler:
@@ -29,7 +29,7 @@ iOS ve Mac'te Point/PointF veya CGPoint, hata ayıklama panelinin X ve Y değerl
 ![Nokta Görselleştirme](media/data-visualizations-image10.png)
 
 ## <a name="size"></a>Boyut
-iOS ve Mac'te Size/SizeF veya CGSize, dikdörtgen olarak işleme alır. Bir boyut 250 px'i geçene kadar ölçeklendirilir ve bu noktada dikdörtgeni en büyük boyuta 250 px olarak ölçeklendirir:
+iOS ve Mac'te Size/SizeF veya CGSize, dikdörtgen olarak işleme alır. Bir boyut 250x'i geçene kadar ölçeklendirilir ve bu noktada dikdörtgeni en büyük boyuta 250 px olarak ölçeklendirir:
 
 [Boyut Görselleştirmesi](media/data-visualizations-image11.png)
 
@@ -62,7 +62,7 @@ Görselleştirici bir `NSBezierPath` görüntüler:
 
 ## <a name="string"></a>Dize
 
-100 karakterden kısa bir dize önizleme olmadan tam olarak görüntülenir. Daha uzun dizeler önizlemede tam olarak görüntülenir. Dizeler düzenlenebilir ve görselleştiriciye bir düzenleme düğmesi eşlik ettiği için dize değerinin önizlemede veya Dize Değeri Düzenleyicisi'nde düzenlenebilir. Bu düğme aşağıda gösterilmiştir:
+100 karakterden kısa bir dize önizleme olmadan tam olarak görüntülenir. Daha uzun dizeler önizlemede tam olarak görüntülenir. Dizeler düzenlenebilir ve görselleştiriciye bir düzenleme düğmesi eşlik ediyor ve dize değerinin önizlemede veya Dize Değeri Düzenleyicisi'nde düzenlenerek aşağıda gösterildiği gibi:
 
 ![Dize Görselleştirmesi](media/data-visualizations-image17.png)
 

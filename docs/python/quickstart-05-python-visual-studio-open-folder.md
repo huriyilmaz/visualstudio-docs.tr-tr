@@ -13,11 +13,11 @@ ms.workload:
 - data-science
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: 6553ffcc80dbe650b3b1775292599bc20d67cbfd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122076145"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726787"
 ---
 # <a name="quickstart-open-and-run-python-code-in-a-folder"></a>Hızlı başlangıç: bir klasörde Python kodunu açma ve çalıştırma
 
@@ -80,7 +80,7 @@ Bu gibi durumlarda, çalışma dizinini belirtmek için başlatma yapılandırma
     > [!Note]
     > **varsayılan** bir seçenek olarak görmüyorsanız, **Debug ve Launch Ayarlar** komutunu seçerken bir Python *. kopyala* dosyası seçtiğinizden emin olun. Visual Studio, görüntülenecek hata ayıklayıcı seçeneklerini belirleyen dosya türünü kullanır.
 
-1. Visual Studio, hidden *. vs* klasöründe bulunan *launch.vs.jsüzerinde* adlı bir dosya açar. Bu dosya, projenin hata ayıklama bağlamını açıklar. Çalışma dizini belirtmek için, `"workingDirectory"`  `"workingDirectory": "python3"` Python-koans örneğinde olduğu gibi için bir değer ekleyin:
+1. Visual Studio *, hidden. vs klasöründe* bulunan *launch. vs. json* adlı bir dosya açar. Bu dosya, projenin hata ayıklama bağlamını açıklar. Çalışma dizini belirtmek için, `"workingDirectory"`  `"workingDirectory": "python3"` Python-koans örneğinde olduğu gibi için bir değer ekleyin:
 
     ```json
     {

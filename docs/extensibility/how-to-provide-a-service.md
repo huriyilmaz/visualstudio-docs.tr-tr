@@ -14,11 +14,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 11205634b75c3ae1892e7a4d964ae049ec50afbd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122050305"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634585"
 ---
 # <a name="how-to-provide-a-service"></a>Nasıl yapılır: hizmet sağlama
 VSPackage, diğer VSPackages tarafından kullanılabilecek hizmetler sağlayabilir. bir hizmet sağlamak için, bir vspackage hizmeti Visual Studio ve hizmeti eklemesi gerekir.

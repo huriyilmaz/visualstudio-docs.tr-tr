@@ -1,6 +1,6 @@
 ---
-description: Değişkenin bir dönüş değeri taşıdığını belirtir.
-title: IDiaSymbol::get_isReturnValue | Microsoft Docs
+description: Değişkenin bir dönüş değeri içerip içermediğini belirtir.
+title: 'IDiaSymbol:: get_isReturnValue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -13,14 +13,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 6a81bc133cb83e1c818ccd4bee4b93e389e3b4bb
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122052224"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725468"
 ---
 # <a name="idiasymbolget_isreturnvalue"></a>IDiaSymbol::get_isReturnValue
-Değişkenin bir dönüş değeri taşıdığını belirtir.
+Değişkenin bir dönüş değeri içerip içermediğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -32,10 +32,10 @@ HRESULT get_isReturnValue(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-[out] Değişkenin bir `BOOL` dönüş değeri taşıdığını belirten bir işaretçi.
+dışı `BOOL` Değişkenin bir dönüş değeri içerip içermediğini belirten bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

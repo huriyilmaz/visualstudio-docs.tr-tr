@@ -20,14 +20,14 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 39998bb7d60b55405be13493900ef936c05c3032
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122025491"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633761"
 ---
 # <a name="walkthrough-create-your-first-vsto-add-in-for-powerpoint"></a>adım adım kılavuz: VSTO için İlk Eklentinizi PowerPoint
-  Bu kılavuzda, uygulama için VSTO Eklenti oluşturma Microsoft Office PowerPoint. Bu tür bir çözümde, hangi sunumların açık olduğu ne olursa olsun uygulamanın kendisinde oluşturabilirsiniz. Daha fazla bilgi için [bkz. Office çözüm geliştirmeye genel bakış &#40;VSTO&#41;. ](../vsto/office-solutions-development-overview-vsto.md)
+  Bu kılavuzda, uygulama için VSTO Eklentinin nasıl Microsoft Office PowerPoint. Bu tür bir çözümde, hangi sunumların açık olduğuna bakılmaksızın uygulamanın kendisinde oluşturabilirsiniz. Daha fazla bilgi için [bkz. Office geliştirmeye genel bakış &#40;VSTO&#41;. ](../vsto/office-solutions-development-overview-vsto.md)
 
  [!INCLUDE[appliesto_pptallapp](../vsto/includes/appliesto-pptallapp-md.md)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "122025491"
 
 - Projeyi test etmek için bina ve çalıştırma.
 
-- Proje, eklentinin VSTO artık otomatik olarak çalışmayacak şekilde temizlenir.
+- Eklentinin artık geliştirme bilgisayarınızda VSTO şekilde çalışması için projeyi temizleme.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -58,11 +58,11 @@ ms.locfileid: "122025491"
 
 2. Dosya menüsünde **Yeni'nin** üzerine **gelin ve** ardından Dosya'ya **Project.**
 
-3. Şablonlar bölmesinde Visual **C#** veya **Visual Basic'ı** genişletin ve sonra **Office/SharePoint.**
+3. Şablonlar bölmesinde **Visual C#** veya **Visual Basic'ı** genişletin ve ardından **Office/SharePoint.**
 
-4. Genişletilmiş **Office/SharePoint** altında, **Office düğümünü** seçin.
+4. Genişletilmiş **Office/SharePoint** altında, Office **düğümünü** seçin.
 
-5. Proje şablonları listesinde, Bir PowerPoint VSTO projesini seçin.
+5. Proje şablonları listesinde, Eklenti projesini PowerPoint VSTO seçin.
 
 6. Ad **kutusuna** **FirstPowerPointAddIn yazın.**
 
@@ -71,11 +71,11 @@ ms.locfileid: "122025491"
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstPowerPointAddIn projesini** oluşturur ve **ThisAddIn** kod dosyasını düzenleyicide açar.
 
 ## <a name="write-code-that-adds-text-to-each-new-slide"></a>Her yeni slayta metin ekleyen kod yazma
- Ardından ThisAddIn kod dosyasına kod ekleyin. Yeni kod, her yeni PowerPoint metin kutusu eklemek için PowerPoint nesnesinin nesne modelini kullanır. Varsayılan olarak ThisAddIn kod dosyası aşağıdaki oluşturulan kodu içerir:
+ Ardından ThisAddIn kod dosyasına kod ekleyin. Yeni kod, her yeni slayta PowerPoint metin kutusu eklemek için PowerPoint nesnesinin nesne modelini kullanır. Varsayılan olarak ThisAddIn kod dosyası aşağıdaki oluşturulan kodu içerir:
 
-- Sınıfın kısmi `ThisAddIn` tanımı. Bu sınıf kodunuz için bir giriş noktası sağlar ve kodun nesne modeline PowerPoint. Daha fazla bilgi için [bkz. Program VSTO Eklentileri.](../vsto/programming-vsto-add-ins.md) Sınıfın geri `ThisAddIn` kalanı, değiştirmeyebilirsiniz gizli bir kod dosyasında tanımlanır.
+- Sınıfının kısmi `ThisAddIn` tanımı. Bu sınıf kodunuz için bir giriş noktası sağlar ve kodun nesne modeline PowerPoint. Daha fazla bilgi için [bkz. Program VSTO Eklentileri.](../vsto/programming-vsto-add-ins.md) Sınıfın geri `ThisAddIn` kalanı, değiştirmeyebilirsiniz gizli bir kod dosyasında tanımlanır.
 
-- ve `ThisAddIn_Startup` olay `ThisAddIn_Shutdown` işleyicileri. Bu olay işleyicileri, PowerPoint eklentinizi yükler ve VSTO çağrılır. Bu olay işleyicilerini kullanarak VSTO eklentinizi başlatıp yüklemesi kaldırılan eklentiniz tarafından VSTO kaynakları temizleyin. Daha fazla bilgi için [bkz. Office projelerinde olaylar.](../vsto/events-in-office-projects.md)
+- ve `ThisAddIn_Startup` olay `ThisAddIn_Shutdown` işleyicileri. Bu olay işleyicileri, PowerPoint eklentinizi yükler ve VSTO çağrılır. Bu olay işleyicilerini kullanarak VSTO eklentinizi başlatmak ve yüklemesi kaldırılan VSTO kaynaklarınızı temizlemek için kullanın. Daha fazla bilgi için [bkz. Office projelerinde olaylar.](../vsto/events-in-office-projects.md)
 
 ### <a name="to-add-a-text-box-to-each-new-slide"></a>Her yeni slayta metin kutusu eklemek için
 
@@ -103,7 +103,7 @@ ms.locfileid: "122025491"
 
 1. Projenizi derlemek ve çalıştırmak için **F5'e** basın.
 
-     Projeyi derlerken kod, projenin derleme çıkış klasörüne konan bir derlemede derlenmiş olur. Visual Studio, PowerPoint'ın VSTO Eklentisini bulması ve yüklemesini sağlayan bir kayıt defteri girdileri kümesi de oluşturur ve geliştirme bilgisayarında güvenlik ayarlarını VSTO Eklentinin çalışmasına olanak sağlayacak şekilde yapılandırıyor. Daha fazla bilgi için [bkz. Derleme Office.](../vsto/building-office-solutions.md)
+     Projeyi derlerken kod, projenin derleme çıkış klasörüne konan bir derlemede derlenmiş olur. Visual Studio, PowerPoint'nin VSTO Eklentisini keşfetmesini ve yüklemesini sağlayan bir kayıt defteri girdisi kümesi de oluşturur ve geliştirme bilgisayarında güvenlik ayarlarını VSTO Eklentinin çalışmasına olanak sağlayacak şekilde yapılandırıyor. Daha fazla bilgi için [bkz. Derleme Office.](../vsto/building-office-solutions.md)
 
 2. Bu PowerPoint etkin sunuya yeni bir slayt ekleyin.
 
@@ -121,15 +121,15 @@ ms.locfileid: "122025491"
 1. Bu Visual Studio, Derleme **menüsünde Çözümü** Temizle'ye **tıklayın.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
- PowerPoint için temel VSTO eklenti oluşturduğunuza göre, VSTO eklentilerini geliştirme hakkında daha fazla bilgi edinmek için şu konulardan bilgi sebilirsiniz:
+ PowerPoint için temel bir VSTO eklenti oluşturduğunuza göre, aşağıdaki konulardan VSTO geliştirme hakkında daha fazla bilgi öğrenebilirsiniz:
 
-- Uygulama için eklentilerde gerçekleştirebilirsiniz VSTO genel programlama PowerPoint. Daha fazla bilgi için [bkz. Program VSTO Eklentileri.](../vsto/programming-vsto-add-ins.md)
+- Uygulama için Eklentilerde gerçekleştirebilirsiniz VSTO genel programlama PowerPoint. Daha fazla bilgi için [bkz. Program VSTO Eklentileri.](../vsto/programming-vsto-add-ins.md)
 
 - Uygulamanın nesne modelini PowerPoint. Daha fazla bilgi için [bkz. PowerPoint çözümleri.](../vsto/powerpoint-solutions.md)
 
 - Örneğin Şerit'PowerPoint özel bir sekme ekleyerek veya kendi özel görev bölmenizi oluşturarak kullanıcı arabirimini özelleştirme. Daha fazla bilgi için [bkz. Office kullanıcı arabirimi özelleştirmesi.](../vsto/office-ui-customization.md)
 
-- Uygulama için VSTO ve hata ayıklama PowerPoint. Daha fazla bilgi için [bkz. Derleme Office.](../vsto/building-office-solutions.md)
+- PowerPoint için VSTO eklentilerini PowerPoint. Daha fazla bilgi için [bkz. Derleme Office.](../vsto/building-office-solutions.md)
 
 - VSTO için PowerPoint. Daha fazla bilgi için [bkz. Bir Office dağıtma.](../vsto/deploying-an-office-solution.md)
 

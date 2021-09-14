@@ -1,6 +1,6 @@
 ---
 title: Görsel stillerin etkin olduğu bir WPF uygulaması yayımlama
-description: Kullanıcı tarafından seçilen temaya göre denetimlerin görünümünün değişmesini sağlayan görsel stillerin etkinleştirildiğinde bir WPF uygulamasını yayımlamayı öğrenin.
+description: Kullanıcı tarafından seçilen temaya göre denetimlerin görünümünün değişmesini sağlayan görsel stillerin etkin olduğu bir WPF uygulamasını yayımlamayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -12,13 +12,13 @@ ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
 ms.openlocfilehash: b231fc6635b5c974898ee2cc85ce8a4a64318039
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122127902"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725871"
 ---
-# <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Nasıl yapabilirsiniz: Görsel stiller etkinleştirilmiş bir WPF uygulaması yayımlama
+# <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Nasıl etkinleştirilmiş görsel stiller ile WPF uygulaması yayımlama
 
 Görsel stiller, kullanıcı tarafından seçilen temaya göre ortak denetimlerin görünümünün değişmesini sağlar. Varsayılan olarak, görsel stilleri Windows Presentation Foundation (WPF) uygulamaları için etkinleştirilmez, bu nedenle bunları el ile etkinleştirmeniz gerekir. Ancak, bir WPF uygulaması için görsel stilleri etkinleştirmek ve ardından çözümü yayımlamak hataya neden olur. Bu konuda, bu hatanın nasıl çözülecek ve görsel stiller etkinleştirilmiş bir WPF uygulaması yayımlama işlemi açıklanmıştır. Görsel stiller hakkında daha fazla bilgi için bkz. [Görsel stiller'e genel bakış.](/windows/desktop/Controls/visual-styles-overview) Hata iletisi hakkında daha fazla bilgi için [bkz. Dağıtımlarda belirli ClickOnce giderme.](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)
 
@@ -56,7 +56,7 @@ Görsel stiller, kullanıcı tarafından seçilen temaya göre ortak denetimleri
 
          WPF projenizin özellik sayfaları görüntülenir.
 
-    2. Uygulama sekmesinde **Görünüm'e** **tıklayın ve Windows Ayarlar.**
+    2. Uygulama sekmesinde **Görünüm'e** tıklayın **ve Windows Ayarlar.**
 
          app.manifest dosyası Kod **Düzenleyicisi'nde açılır.**
 
@@ -69,7 +69,7 @@ Görsel stiller, kullanıcı tarafından seçilen temaya göre ortak denetimleri
     2. Uygulama **sekmesinde,** bildirim alanında görünen adı not ekleyin. Bu, projeniz ile ilişkili bildirimin adıdır.
 
         > [!NOTE]
-        > Bildirim **alanında varsayılan ayarlarla bildirim** ekle veya Bildirim **olmadan** uygulama oluştur görünüyorsa, görsel stilleri etkinleştirilmez. Bildirim alanında bir bildirim dosyasının adı görünürse, bu yordamda bir sonraki adıma geçin.
+        > Bildirim **alanında Varsayılan ayarlarla bildirim** ekle veya Bildirim **olmadan** uygulama oluştur görünüyorsa, görsel stilleri etkinleştirilmez. Bildirim alanında bir bildirim dosyasının adı görünürse, bu yordamda bir sonraki adıma geçin.
 
     3. Bu **Çözüm Gezgini** Tüm Dosyaları **Göster'i seçin.**
 
@@ -113,7 +113,7 @@ Görsel stiller, kullanıcı tarafından seçilen temaya göre ortak denetimleri
 
 1. için **Geliştirici Komut İstemi'Visual Studio.**
 
-    Geliştirici Komut İstemi için Geliştirici Komut İstemi hakkında daha fazla bilgi Visual Studio [bkz. Geliştirici Komut İstemi Geliştirici PowerShell.](../ide/reference/command-prompt-powershell.md)
+    Visual Studio için Geliştirici Komut İstemi açma hakkında daha fazla Geliştirici Komut İstemi için bkz. [Geliştirici Komut İstemi Geliştirici PowerShell.](../ide/reference/command-prompt-powershell.md)
 
    > [!NOTE]
    > Kalan adımlar çözümünüzle ilgili olarak aşağıdaki varsayımları yapın:
@@ -132,7 +132,7 @@ Görsel stiller, kullanıcı tarafından seçilen temaya göre ortak denetimleri
    cd "%UserProfile%\Documents\Visual Studio 2010\Projects\MyWPFProject\publish\Application Files\WPFApp_1_0_0_0"
    ```
 
-3. Komut isteminde, bildirim dosyasını uygulamanın yürütülebilir dosyasına eklemek için aşağıdaki komutu çalıştırın.
+3. Bildirim dosyasını uygulamanın yürütülebilir dosyasına eklemek için komut isteminde aşağıdaki komutu çalıştırın.
 
    ```cmd
    mt -manifest c:\temp\themes.manifest -outputresource:MyWPFApp.exe.deploy
@@ -147,7 +147,7 @@ Görsel stiller, kullanıcı tarafından seçilen temaya göre ortak denetimleri
    ```
 
    > [!NOTE]
-   > Bu örnekte yalnızca bir dosyanın .deploy dosya *uzantısına sahip olduğu* varsaydır. Bu dizinde .deploy dosya uzantısına sahip tüm dosyaları *yeniden adlandırırsanız emin* olun.
+   > Bu örnekte yalnızca bir dosyanın .deploy dosya *uzantısına sahip olduğu* varsaydır. Bu dizinde .deploy dosya uzantısına sahip olan tüm dosyaları *yeniden adlandırırsanız emin* olun.
 
 2. Komut isteminde, uygulama bildirimini imzalamak için aşağıdaki komutu çalıştırın.
 

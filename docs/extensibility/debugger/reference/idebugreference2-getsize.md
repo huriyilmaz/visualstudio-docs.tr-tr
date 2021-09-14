@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 116cc2795a648907aac26bda3381ba3519c341a7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122095952"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634822"
 ---
 # <a name="idebugreference2getsize"></a>IDebugReference2::GetSize
 Başvurunun değerinin bayt cinsinden boyutunu alır. Daha sonraki kullanımlar için ayrılmıştır.

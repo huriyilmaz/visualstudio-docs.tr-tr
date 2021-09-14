@@ -1,5 +1,5 @@
 ---
-description: vstav3 ad alanının entryPointsCollection öğesi, Office çözümleriyle ilişkili tüm entrypoints öğelerini içerir.
+description: vstav3 ad alanının entryPointsCollection öğesi, uygulama çözümleriyle ilişkili tüm entryPoints Office içerir.
 title: '&lt;entryPointsCollection &gt; öğesi (Office geliştirme Visual Studio)'
 titleSuffix: ''
 ms.custom: seodec18
@@ -19,14 +19,14 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 65ba6319caed660f0ee752ce1aa7a2804c48b53a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122106373"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634105"
 ---
 # <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection &gt; öğesi (Office geliştirme Visual Studio)
-  `entryPointsCollection` `vstav3` ad alanı öğesi `entryPoints` Office çözümlerle ilişkili tüm öğeleri içerir.
+  Ad `entryPointsCollection` alanının `vstav3` öğesi, uygulama `entryPoints` çözümleriyle ilişkili tüm Office içerir.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,19 +44,19 @@ ms.locfileid: "122106373"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `entryPointsCollection`Öğesi gereklidir ve `vstav3` ad alanında bulunur. Alt öğeler de bu ad alanında olmalıdır. `entryPointsCollection`Uygulama bildiriminde tanımlı yalnızca bir öğe vardır.
+ öğesi `entryPointsCollection` gereklidir ve ad alanı `vstav3` içindedir. Alt öğelerin de bu ad alanı içinde olması gerekir. Bir uygulama `entryPointsCollection` bildiriminde tanımlanan yalnızca bir öğe vardır.
 
- `entryPointsCollection`Öğesinde hiç öznitelik yok.
+ öğesinin `entryPointsCollection` özniteliği yoktur.
 
- `entryPointsCollection` Aşağıdaki öğelere sahiptir.
+ `entryPointsCollection` aşağıdaki öğelere sahiptir.
 
-### <a name="entrypoints"></a>entryPoints
- Gereklidir. `entryPoints` `vstav3` ad alanındaki öğesinin rolü [&#60;entrypoints&#62; öğesi &#40;Visual Studio&#41;Office geliştirme ](../vsto/entrypoints-element-office-development-in-visual-studio.md)' da tanımlanmıştır.
+### <a name="entrypoints"></a>Entrypoints
+ Gereklidir. ad alanı içinde `entryPoints` öğenin `vstav3` rolü, [&#60;'de geliştirme&#62; entryPoints &#40;Office öğesinde Visual Studio&#41;. ](../vsto/entrypoints-element-office-development-in-visual-studio.md)
 
-## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
+## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirme örneği
 
-### <a name="description"></a>Açıklama
- Aşağıdaki kod örneği, `entryPointsCollection` kullanılarak dağıtılan bir belge düzeyi çözümü için uygulama bildiriminde bulunan öğeyi gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . bu kod örneği, [Office çözümleri için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sağlanmış daha büyük bir örneğin bir parçasıdır.
+### <a name="description"></a>Description
+ Aşağıdaki kod örneği, kullanılarak `entryPointsCollection` dağıtılan belge düzeyi bir çözüm için uygulama bildiriminde öğesini [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] gösterir. Bu kod örneği, uygulama çözümleri için Uygulama [bildirimleri'ne sağlanan daha büyük bir Office bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -101,8 +101,8 @@ ms.locfileid: "122106373"
 
 ## <a name="vsto-add-in-example"></a>VSTO Eklenti örneği
 
-### <a name="description"></a>Açıklama
- Aşağıdaki kod örneği, `entryPointsCollection` kullanılarak dağıtılan uygulama düzeyi çözüm için uygulama bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . bu kod örneği, [Office çözümleri için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sağlanmış daha büyük bir örneğin bir parçasıdır.
+### <a name="description"></a>Description
+ Aşağıdaki kod örneği, kullanılarak `entryPointsCollection` dağıtılan bir uygulama düzeyi çözümü için uygulama bildiriminde bir öğeyi [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] gösterir. Bu kod örneği, uygulama çözümleri için Uygulama [bildirimleri'ne sağlanan daha büyük bir Office bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -121,10 +121,10 @@ ms.locfileid: "122106373"
   </vstav3:entryPointsCollection>
 ```
 
-## <a name="multi-project-deployment-example"></a>çoklu Project dağıtım örneği
+## <a name="multi-project-deployment-example"></a>Çoklu Project dağıtım örneği
 
-### <a name="description"></a>Açıklama
- aşağıdaki kod örneği, `entryPointsCollection` iki Office çözümü ile çoklu proje dağıtımı için bir uygulama bildiriminde bir öğe gösterir. bu kod örneği, [Office çözümleri için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sağlanmış daha büyük bir örneğin bir parçasıdır.
+### <a name="description"></a>Description
+ Aşağıdaki kod örneği, iki farklı çözüme sahip çoklu proje dağıtımı için bir uygulama `entryPointsCollection` bildiriminde Office gösterir. Bu kod örneği, uygulama çözümleri için Uygulama [bildirimleri'ne sağlanan daha büyük bir Office bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -181,6 +181,6 @@ ms.locfileid: "122106373"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
-- [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [uygulama bildirimini ClickOnce](../deployment/clickonce-application-manifest.md)
+- [Uygulama çözümleri için Office bildirimleri](../vsto/application-manifests-for-office-solutions.md)
+- [Dağıtım çözümleri için Office bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

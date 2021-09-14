@@ -12,11 +12,11 @@ ms.technology: vs-ide-designers
 ms.workload:
 - multiple
 ms.openlocfilehash: b10df636d87cb8fcb2ea88a3422998a4773adc56
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122058181"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725867"
 ---
 # <a name="texture-nodes"></a>Doku düğümleri
 
@@ -34,4 +34,4 @@ Gölgelendirici tasarımcısında, doku düğümleri örnek olarak çeşitli dok
 |**Doku koordinatı**|Geçerli pikselin doku koordinatları.<br /><br /> Doku koordinatları, yakın köşelerin doku koordinat öznitelikleri arasında enterpolasyonu tarafından belirlenir. Bunu, doku alanındaki geçerli pikselin konumu olarak düşünebilirsiniz.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float2`<br /> Doku koordinatları.|Hiçbiri|
 |**Doku boyutları**|2B doku eşlemesinin genişlik ve yüksekliğini verir.<br /><br /> Bir gölgelendiricide dokunun genişliğini ve yüksekliğini göz önünde bulundurmanız için doku boyutlarını kullanabilirsiniz.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float2`<br /> Dokunun bir vektör olarak ifade edilen genişliği ve yüksekliği. Genişlik, vector öğesinin ilk öğesinde saklanır. Yükseklik ikinci öğesinde saklanır.|**Doku**<br /> Doku boyutlarıyla ilişkili doku kaydı.|
 |**Texel Delta**|Bir 2B doku haritasının dokun arasındaki Delta (mesafe) çıktısını verir.<br /><br /> Bir gölgelendiricide komşu doku hücresi değerinin değerlerini örneklemek için doku hücresi değerinin Delta öğesini kullanabilirsiniz.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float2`<br /> Bir doku hücresi değerinin 'den sonraki doku hücresi değerinin 'ye (pozitif yönde çapraz geçiş), normalleştirilmiş doku alanında vektör olarak ifade edilen Delta (uzaklık). Delta 'un U veya V koordinatlarını seçerek veya negatifi atlayarak tüm komşu metinlerinizin konumlarını türetebilirsiniz.|**Doku**<br /> Doku hücresi değerinin Delta ile ilişkili doku kaydı.|
-|**Doku örneği**|2B doku eşlemesinden belirtilen koordinatlarda bir renk örneği alır.<br /><br /> Bir nesnenin yüzeyi üzerinde renk ayrıntısı sağlamak için doku haritası kullanabilirsiniz.<br /><br /> **Girişinin**<br /><br /> `UV`: `float2`<br /> Örneğin çekildiği koordinatlar.<br /><br /> **Çıktıların**<br /><br /> `Output`: `float4`<br /> Renk örneği.|**Doku**<br /> Örnekleyici ile ilişkili doku kaydı.|
+|**Doku örneği**|2B doku eşlemesinden belirtilen koordinatlarda bir renk örneği alır.<br /><br /> Bir nesnenin yüzeyinde renk ayrıntıları sağlamak için doku eşlemesi kullanabilirsiniz.<br /><br /> **Giriş:**<br /><br /> `UV`: `float2`<br /> Örneğin alınarak alınan koordinatlar.<br /><br /> **Çıkış:**<br /><br /> `Output`: `float4`<br /> Renk örneği.|**Doku**<br /> Örnekleyiciyle ilişkili doku yazmacı.|

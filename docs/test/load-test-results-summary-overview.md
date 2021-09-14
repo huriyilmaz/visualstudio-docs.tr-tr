@@ -18,11 +18,11 @@ ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
 ms.openlocfilehash: 0d46f4254ae34adc32d3b92be96923373ba6ca45
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122139939"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628089"
 ---
 # <a name="load-test-results-summary-overview"></a>Yük testi sonuçları özetine genel bakış
 
@@ -141,5 +141,5 @@ Hatalar bölümü, yük testi sırasında oluşan tüm hataların bir listesini 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Eşik kuralı ihlallerini analiz etme](../test/analyze-threshold-rule-violations-in-load-tests.md)
-- [Yük testi sonuçlarını analiz etme](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
+- [Eşik Kuralı İhlallerini Çözümleme](../test/analyze-threshold-rule-violations-in-load-tests.md)
+- [Yük testi sonuçlarını çözümle](../test/analyze-load-test-results-using-the-load-test-analyzer.md)

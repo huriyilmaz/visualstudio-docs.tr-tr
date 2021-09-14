@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b2978642aded9b729a4f21400ce32bcaa6024bcc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122132567"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634830"
 ---
 # <a name="idebugreference2getparent"></a>IDebugReference2::GetParent
 Bir başvuru için üst başvuru alır. Daha sonraki kullanımlar için ayrılmıştır.

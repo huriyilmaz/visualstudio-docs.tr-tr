@@ -1,6 +1,6 @@
 ---
-title: 'İzlenecek yol: Eylemler bölmesinden belgeye metin ekleme'
-description: Microsoft Word belgesinde bir eylemler bölmesi oluşturun. Eylemler bölmesinin girişi toplayıp belgeyi belgeye gönderdiğini iki denetim içerdiğini öğrenin.
+title: 'Adım adım kılavuz: Eylemler bölmesinden belgeye metin ekleme'
+description: Yeni bir belgede eylemler Microsoft Word oluşturun. Eylemler bölmesinde girişi toplayan ve sonra belgeye metin gönderen iki denetim olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 titleSuffix: ''
 ms.date: 02/02/2017
@@ -20,25 +20,25 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 071f447e8f32d53feef912b6c804af27fe69aa1e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122025452"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725544"
 ---
-# <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>İzlenecek yol: Eylemler bölmesinden belgeye metin ekleme
-  bu izlenecek yol, bir Microsoft Office Word belgesinde bir eylemler bölmesinin nasıl oluşturulacağını göstermektedir. Eylemler bölmesi girişi toplayıp metni belgeye gönderen iki denetim içerir.
+# <a name="walkthrough-insert-text-into-a-document-from-an-actions-pane"></a>Adım adım kılavuz: Eylemler bölmesinden belgeye metin ekleme
+  Bu kılavuzda, Word belgesinde eylemler bölmesinin nasıl Microsoft Office gösterilir. Eylemler bölmesi, girişi toplayan ve sonra belgeye metin göndermek için iki denetim içerir.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- eylemler bölmesi denetiminde Windows Forms denetimleri kullanarak bir arabirim tasarlayın.
+- Eylemler bölmesi denetiminde Windows Forms denetimlerini kullanarak arabirim tasarlar.
 
-- Uygulama açıldığında Eylemler bölmesini görüntüleyin.
+- Uygulama açıldığında eylemler bölmesini görüntüleyin.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. daha fazla bilgi için bkz. [Visual Studio ıde 'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [bkz. IDE'Visual Studio kişiselleştirme.](../ide/personalizing-the-visual-studio-ide.md)
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
@@ -48,16 +48,16 @@ ms.locfileid: "122025452"
 - [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] veya [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
 
 ## <a name="create-the-project"></a>Proje oluşturma
- İlk adım bir Word belgesi projesi oluşturmaktır.
+ İlk adım bir Word Belgesi projesi oluşturmaktır.
 
-### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
+### <a name="to-create-a-new-project"></a>Yeni proje oluşturmak için
 
-1. **Temel eylemler Bölmesimi** Içeren bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin. daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Temel Eylemlerim Bölmesi adıyla **bir Word Belgesi projesi oluşturun.** Sihirbazda Yeni belge **oluştur'a tıklayın.** Daha fazla bilgi için, [bkz. How to: Create Office projects in Visual Studio.](../vsto/how-to-create-office-projects-in-visual-studio.md)
 
-     Visual Studio yeni Word belgesini tasarımcıda açar ve **temel eylemler bölmesi** projesini **Çözüm Gezgini** ekler.
+     Visual Studio yeni Word belgesini tasarımcıda açar ve Temel Eylemlerim Bölmesi **projesini** **Çözüm Gezgini.**
 
 ## <a name="add-text-and-bookmarks-to-the-document"></a>Belgeye metin ve yer işaretleri ekleme
- Eylemler bölmesi belgedeki yer işaretlerine metin gönderir. Belgeyi tasarlamak için, temel form oluşturmak üzere bir metin yazın.
+ Eylemler bölmesi belgede yer işaretlerine metin gönderir. Belgeyi tasarlamak için bazı metinler yazarak temel bir form oluşturun.
 
 ### <a name="to-add-text-to-your-document"></a>Belgenize metin eklemek için
 
@@ -69,67 +69,67 @@ ms.locfileid: "122025452"
 
     **Adres**
 
-    **Bu, Word 'deki temel eylemler bölmesine bir örnektir.**
+    **Bu, Word'de temel eylemler bölmesine bir örnektir.**
 
-   <xref:Microsoft.Office.Tools.Word.Bookmark>belgenize Visual Studio **araç** kutusundan sürükleyerek veya Word içindeki **yer işareti** iletişim kutusunu kullanarak belgenize bir denetim ekleyebilirsiniz.
+   Belgenize, belgenizin Araç Kutusundan sürükleyerek veya Word'Visual Studio Yer İşareti <xref:Microsoft.Office.Tools.Word.Bookmark> **iletişim** kutusunu kullanarak bir denetim ekleyebilirsiniz. 
 
-### <a name="to-add-a-bookmark-control-to-your-document"></a>Belgenize bir yer Işareti denetimi eklemek için
+### <a name="to-add-a-bookmark-control-to-your-document"></a>Belgenize Yer İşareti denetimi eklemek için
 
-1. **Araç kutusunun** **Word denetimleri** sekmesinden <xref:Microsoft.Office.Tools.Word.Bookmark> belgenize bir denetim sürükleyin.
+1. Araç **Kutusunun Sözcük Denetimleri** **sekmesinden,** bir denetimi <xref:Microsoft.Office.Tools.Word.Bookmark> belgenize sürükleyin.
 
-     **Yer Işareti denetimi Ekle** iletişim kutusu görünür.
+     Yer **İşareti Denetimi Ekle** iletişim kutusu görüntülenir.
 
-2. Paragraf işaretini seçmeden bir sözcük **adı** seçin ve **Tamam**' ı tıklatın.
+2. Paragraf işaretini **seçmeden** Ad sözcüğüne tıklayın ve Tamam'a **tıklayın.**
 
     > [!NOTE]
-    > Paragraf işareti, yer işaretinin dışında olmalıdır. paragraf işaretleri belgede görünmüyorsa, **araçlar** menüsüne tıklayın, **Microsoft Office Word araçları** ' nın üzerine gelin ve ardından **seçenekler**' e tıklayın. **Görünüm** sekmesine tıklayın ve **Seçenekler** iletişim kutusunun **Biçimlendirme işaretleri** bölümündeki **paragraf işaretleri** onay kutusunu seçin.
+    > Paragraf işaretinin yer işaretinin dışında olması gerekir. Belgede paragraf işaretleri görünmüyorsa Araçlar menüsüne tıklayın, **Word** **Araçları'nın** üzerine gelin Microsoft Office seçenekler'e **tıklayın.** Görünüm **sekmesine** tıklayın ve Seçenekler **iletişim kutusunun** Biçimlendirme işaretleri **bölümünde Paragraf** işaretleri **onay** kutusunu seçin.
 
-3. **Özellikler** penceresinde, **Bookmark1** öğesinin **Name** özelliğini **ShowName** olarak değiştirin.
+3. Özellikler penceresinde **Bookmark1'in** **Name** özelliğini **showName olarak değiştirin.** 
 
-4. Paragraf işaretini seçmeden, sözcük **adresini** seçin.
+4. Paragraf işaretini **seçmeden** Adres sözcüklerini seçin.
 
-5. Şeridin **Ekle** sekmesinde, **Bağlantılar** grubunda **yer işareti**' ne tıklayın.
+5. Şeridin **Ekle** sekmesindeki Bağlantılar grubunda Yer **İşareti'ne** **tıklayın.**
 
-6. **Yer işareti** iletişim kutusunda, **yer Işareti adı** kutusuna **showAddress** yazın ve **Ekle**' ye tıklayın.
+6. Yer **İşareti** iletişim kutusunda Yer İşareti **Adı kutusuna showAddress** **yazın ve** Ekle'ye **tıklayın.**
 
-## <a name="add-controls-to-the-actions-pane"></a>Eylemler bölmesine denetim ekleme
- eylemler bölmesi arabirimini tasarlamak için projeye bir eylemler bölmesi denetimi ekleyin ve sonra eylemler bölmesi denetimine Windows Forms denetimleri ekleyin.
+## <a name="add-controls-to-the-actions-pane"></a>Eylemler bölmesine denetimler ekleme
+ Eylemler bölmesi arabirimini tasarlamak için projeye bir eylemler bölmesi denetimi ekleyin ve Windows Forms denetimlerini eylemler bölmesi denetimine ekleyin.
 
 ### <a name="to-add-an-actions-pane-control"></a>Eylemler bölmesi denetimi eklemek için
 
-1. **Çözüm Gezgini** Içinde **temel eylemler bölmesi** projesini seçin.
+1. içinde **Temel Eylemlerim Bölmesi** projesini **Çözüm Gezgini.**
 
-2. **Project** menüsünde, **yeni öğe ekle**' ye tıklayın.
+2. Yeni **Project** **Ekle'ye tıklayın.**
 
-3. **Yeni öğe Ekle** iletişim kutusunda, **Eylemler bölmesi denetimi**' ne tıklayın, denetimi **InsertTextControl olarak** adlandırın ve **Ekle**' ye tıklayın.
+3. Yeni Öğe **Ekle iletişim kutusunda** Eylemler Bölmesi Denetimi'ne tıklayın, denetimi **InsertTextControl** olarak ve Ekle'ye **tıklayın.** 
 
-#### <a name="to-add-windows-form-controls-to-the-actions-pane-control"></a>eylemler bölmesi denetimine Windows Form denetimleri eklemek için
+#### <a name="to-add-windows-form-controls-to-the-actions-pane-control"></a>Eylemler bölmesi Windows Form denetimleri eklemek için
 
-1. Eylemler bölmesi denetimi tasarımcıda görünür değilse, **InsertTextControl** öğesine çift tıklayın.
+1. Eylemler bölmesi denetimi tasarımcıda görünmüyorsa **InsertTextControl'e çift tıklayın.**
 
-2. **Araç kutusunun** **ortak denetimler** sekmesinden, bir **etiket** denetimini eylemler bölmesi denetimine sürükleyin.
+2. Araç **Kutusunun Ortak** Denetimler **sekmesinden bir** **Etiket denetimi** sürükleyerek eylemler bölmesi denetimine sürükleyin.
 
-3. Etiket denetiminin **Text** özelliğini **Name** olarak değiştirin.
+3. Etiket **denetiminde Text** özelliğini Name olarak **değiştirme.**
 
-4. Eylemler bölmesi denetimine bir **TextBox** denetimi ekleyin ve aşağıdaki özellikleri değiştirin.
+4. Eylemler **bölmesi denetimine** bir Metin Kutusu denetimi ekleyin ve aşağıdaki özellikleri değiştirin.
 
     |Özellik|Değer|
     |--------------|-----------|
     |**Ad**|**getName**|
     |**Boyut**|**130, 20**|
 
-5. Eylemler bölmesi denetimine ikinci bir **etiket** denetimi ekleyin ve **Text** özelliğini **Address** olarak değiştirin.
+5. Eylemler bölmesi **denetimine** ikinci bir Etiket denetimi ekleyin ve Text özelliğini **Address** olarak **değiştirebilirsiniz.**
 
-6. Eylemler bölmesi denetimine ikinci bir **TextBox** denetimi ekleyin ve aşağıdaki özellikleri değiştirin.
+6. Eylemler bölmesi **denetimine ikinci** bir Metin Kutusu denetimi ekleyin ve aşağıdaki özellikleri değiştirin.
 
     |Özellik|Değer|
     |--------------|-----------|
     |**Ad**|**getAddress**|
-    |**Dönüşü kabul eder**|**True**|
+    |**Dönüş Kabul Eder**|**True**|
     |**Multiline**|**True**|
     |**Boyut**|**130, 40**|
 
-7. Eylemler bölmesi denetimine bir **düğme** denetimi ekleyin ve aşağıdaki özellikleri değiştirin.
+7. Eylemler **bölmesi** denetimine bir Düğme denetimi ekleyin ve aşağıdaki özellikleri değiştirin.
 
     |Özellik|Değer|
     |--------------|-----------|
@@ -137,16 +137,16 @@ ms.locfileid: "122025452"
     |**Metin**|**Ekle**|
 
 ## <a name="add-code-to-insert-text-into-the-document"></a>Belgeye metin eklemek için kod ekleme
- Eylemler bölmesinde metin kutularından metni belgedeki uygun denetimlere ekleyen kodu yazın <xref:Microsoft.Office.Tools.Word.Bookmark> . Bu `Globals` sınıfı, Eylemler bölmesindeki denetimlerden belgedeki denetimlere erişmek için kullanabilirsiniz. daha fazla bilgi için bkz. [Office projelerindeki nesnelere genel erişim](../vsto/global-access-to-objects-in-office-projects.md).
+ Eylemler bölmesinde, metin kutularından belgede uygun denetimlere metin ekli <xref:Microsoft.Office.Tools.Word.Bookmark> kod yazın. Eylemler bölmesindeki `Globals` denetimlerden belge üzerinde denetimlere erişmek için sınıfını kullanabilirsiniz. Daha fazla bilgi için [bkz. Office projelerinde nesnelere genel erişim.](../vsto/global-access-to-objects-in-office-projects.md)
 
-### <a name="to-insert-text-from-the-actions-pane-in-a-bookmark-in-the-document"></a>Belgedeki bir yer işaretine Eylemler bölmesinden metin eklemek için
+### <a name="to-insert-text-from-the-actions-pane-in-a-bookmark-in-the-document"></a>Eylemler bölmesinden belgede yer işaretine metin eklemek için
 
-1. <xref:System.Windows.Forms.Control.Click> **AddText** düğmesinin olay işleyicisine aşağıdaki kodu ekleyin.
+1. AddText düğmesinin <xref:System.Windows.Forms.Control.Click> olay işleyicisi için **aşağıdaki kodu** ekleyin.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/InsertTextControl.cs" id="Snippet8":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/InsertTextControl.vb" id="Snippet8":::
 
-2. C# ' de, düğme tıklayı için bir olay işleyicisi eklemeniz gerekir. `InsertTextControl`Çağrısından sonra bu kodu oluşturucuya yerleştirebilirsiniz `InitializeComponent` . olay işleyicileri oluşturma hakkında bilgi için bkz. [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
+2. C# içinde, düğme tıklaması için bir olay işleyicisi eklemeniz gerekir. Bu kodu çağrısının ardından `InsertTextControl` oluşturucuya yer veebilirsiniz. `InitializeComponent` Olay işleyicileri oluşturma hakkında daha fazla bilgi için [bkz. Nasıl oluşturulur: Office projelerinde olay işleyicileri oluşturma.](../vsto/how-to-create-event-handlers-in-office-projects.md)
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/InsertTextControl.cs" id="Snippet9":::
 
@@ -155,37 +155,37 @@ ms.locfileid: "122025452"
 
 ### <a name="to-show-the-actions-pane"></a>Eylemler bölmesini göstermek için
 
-1. Sınıfında eylemler bölmesi denetiminin yeni bir örneğini oluşturun `ThisDocument` .
+1. sınıfında eylemler bölmesi denetimi için yeni bir örnek `ThisDocument` oluşturun.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet10":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet10":::
 
-2. Olay işleyicisine aşağıdaki kodu ekleyin <xref:Microsoft.Office.Tools.Word.Document.Startup> `ThisDocument` .
+2. Aşağıdaki kodu olay <xref:Microsoft.Office.Tools.Word.Document.Startup> işleyicisi'ne `ThisDocument` ekleyin.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs" id="Snippet11":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb" id="Snippet11":::
 
 ## <a name="test-the-application"></a>Uygulamayı test edin
- Belge açıldığında eylemler bölmesinin açıldığını ve düğme tıklandığında metin kutularına yazılan metinlerin yer işaretlerine eklendiğini doğrulamak için belgenizi test edin.
+ Belge açıldığında eylemler bölmesinin açıldığından ve düğmeye tıkıldığında metin kutularına yazılmış metnin yer işaretlerine ekli olduğunu doğrulamak için belgenizi test edin.
 
 ### <a name="to-test-your-document"></a>Belgenizi test etmek için
 
-1. Projenizi çalıştırmak için **F5** tuşuna basın.
+1. Projenizi **çalıştırmak için F5** tuşuna basın.
 
 2. Eylemler bölmesinin görünür olduğunu onaylayın.
 
-3. Eylemler bölmesindeki metin kutularına adınızı ve adresinizi yazın ve **Ekle**' ye tıklayın.
+3. Eylemler bölmesindeki metin kutularına adınız ve adresinizi yazın ve Ekle'ye **tıklayın.**
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Daha sonra gelebilecek bazı görevler şunlardır:
+ Bir sonraki görevlerden bazıları:
 
-- Excel bir eylemler bölmesi oluşturun. daha fazla bilgi için bkz. [nasıl yapılır: Excel çalışma kitaplarına eylemler bölmesi ekleme](/previous-versions/visualstudio/visual-studio-2010/e3zbk0hz(v=vs.100)).
+- Excel'da bir eylemler bölmesi oluşturun. Daha fazla bilgi için [bkz. Nasıl musunuz: Çalışma kitaplarını Excel bölmesi ekleme.](/previous-versions/visualstudio/visual-studio-2010/e3zbk0hz(v=vs.100))
 
-- Eylemler bölmesindeki denetimlere veri bağlama. Daha fazla bilgi için bkz. [Izlenecek yol: Word Eylemler bölmesindeki denetimlere veri bağlama](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md).
+- Eylemler bölmesindeki denetimlere veri bağlama. Daha fazla bilgi için [bkz. Adım adım: Word eylemleri bölmesindeki denetimlere veri bağlama.](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md)
-- [nasıl yapılır: Word belgelerine veya Excel çalışma kitaplarına eylemler bölmesi ekleme](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)
-- [nasıl yapılır: Excel çalışma kitaplarına eylemler bölmesi ekleme](/previous-versions/visualstudio/visual-studio-2010/e3zbk0hz(v=vs.100))
-- [Nasıl yapılır: eylemler bölmelerinde denetim yerleşimini yönetme](../vsto/how-to-manage-control-layout-on-actions-panes.md)
+- [Nasıl kullanılır: Word belgelerine veya çalışma kitaplarını Excel bölmesi ekleme](../vsto/how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks.md)
+- [Nasıl Excel: Çalışma kitaplarını Excel ekleme](/previous-versions/visualstudio/visual-studio-2010/e3zbk0hz(v=vs.100))
+- [Nasıl gösterilir: Eylemler bölmeleri üzerinde denetim düzenini yönetme](../vsto/how-to-manage-control-layout-on-actions-panes.md)
 - [Yer işareti denetimi](../vsto/bookmark-control.md)

@@ -21,11 +21,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 4ceb436ddb6a82308e2d380a1d4bddcafa638438
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122090245"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627837"
 ---
 # <a name="tell-the-debugger-what-type-to-show-using-debuggertypeproxy-attribute-c-visual-basic-ccli"></a>hata ayıklayıcıya debuggertypeproxy özniteliği kullanarak hangi türün gösterileceğini söyleyin (C#, Visual Basic, C++/clı)
 

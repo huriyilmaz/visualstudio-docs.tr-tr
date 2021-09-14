@@ -1,6 +1,6 @@
 ---
-title: Başlangıç Sayfası Sayfasına Kullanıcı Denetimi | Microsoft Docs
-description: Windows Presentation Foundation'de Başlangıç Sayfasına Windows Presentation Foundation (WPF) kullanıcı denetimi Visual Studio.
+title: Başlangıç Sayfası girişlerine Kullanıcı Denetimi | Microsoft Docs
+description: Windows Presentation Foundation'da Başlangıç Sayfasına bir Windows Presentation Foundation (WPF) kullanıcı denetimi Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -17,11 +17,11 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 794ff65d58e03b22584f0a4d2a291371b1e08c81
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122120562"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725331"
 ---
 # <a name="add-user-control-to-the-start-page"></a>Başlangıç Sayfasına kullanıcı denetimi ekleme
 
@@ -31,13 +31,13 @@ Bir *.xaml* dosyasından çağrılabilirsiniz herhangi bir derleme eklemek için
 
 ## <a name="add-a-wpf-user-control-to-the-solution"></a>Çözüme WPF kullanıcı denetimi ekleme
 
-İlk olarak, Başlangıç Windows Presentation Foundation (WPF) kullanıcı denetimi ekleyin.
+İlk olarak, Windows Presentation Foundation (WPF) kullanıcı denetimine bir Başlangıç Sayfası çözümü ekleyin.
 
 1. Özel başlangıç sayfası oluşturma içinde oluşturduğum [sayfayı kullanarak bir Başlangıç Sayfası oluşturun.](../extensibility/creating-a-custom-start-page.md)
 
-2. Bu **Çözüm Gezgini,** çözüme sağ tıklayın, Ekle'ye **tıklayın** ve ardından Yeni **Giriş'e Project.**
+2. Bu **Çözüm Gezgini,** çözüme sağ tıklayın, Ekle'ye **tıklayın** ve ardından Yeni **giriş'e Project.**
 
-3. Yeni Project iletişim  kutusunun sol bölmesinde, **Visual Basic** veya **Visual C# düğümünü genişletin** ve **Windows.** Orta bölmede **WPF Kullanıcı Denetimi Kitaplığı'ni seçin.**
+3. Yeni Project iletişim **kutusunun sol** bölmesinde, **Visual Basic** veya **Visual C# düğümünü genişletin** ve **Windows.** Orta bölmede **WPF Kullanıcı Denetimi Kitaplığı'ni seçin.**
 
 4. Denetime bir ad `WebUserControl` ve ardından Tamam'a **tıklayın.**
 
@@ -107,7 +107,7 @@ WPF kullanıcı denetimi uygulamak için, XAML'de kullanıcı arabirimini (UI) d
 
 ### <a name="to-write-the-code-behind-events-for-the-user-control"></a>Kullanıcı denetimi için arka arkasındaki kod olaylarını yazmak için
 
-1. XAML tasarımcısında, denetime **eklenen** Adresi Ayarla düğmesine çift tıklayın.
+1. XAML tasarımcısında, denetime **eklenen Adresi** Ayarla düğmesine çift tıklayın.
 
     *UserControl1.cs* dosyası kod düzenleyicisinde açılır.
 
@@ -180,9 +180,9 @@ Bu denetimi Başlangıç Sayfası projesinin kullanılabilir hale eklemek için 
 
 ## <a name="test-a-manually-created-custom-start-page"></a>El ile oluşturulan özel Başlangıç Sayfasını test edin
 
-1. XAML dosyanızı ve tüm desteklenen metin dosyalarını veya işaretleme dosyalarını *%USERPROFILE%\Belgelerim\Visual Studio 2015\StartPages klasörüne \\* kopyalayın.
+1. XAML dosyanızı ve tüm desteklenen metin dosyalarını veya işaretleme dosyalarını *%USERPROFILE%\My Documents\Visual Studio 2015\StartPages klasörüne \\* kopyalayın.
 
-2. Başlangıç sayfanız, Visual Studio tarafından yüklenmemiş derlemelerde herhangi bir denetime veya türe başvurursa, derlemeleri kopyalayın ve **sonra \Common7\IDE\PrivateAssemblies \\** Visual Studio yükleme klasörüne yapıştırın.
+2. Başlangıç sayfanız, Visual Studio tarafından yüklenmemiş derlemelerde herhangi bir denetime veya türe başvurursa, derlemeleri kopyalayın ve **ardından \Common7\IDE\PrivateAssemblies \\** Visual Studio yükleme klasörüne yapıştırın.
 
 3. Bir Visual Studio komut isteminde, deneysel bir örnek açmak için **devenv /rootsuffix Exp** Visual Studio.
 

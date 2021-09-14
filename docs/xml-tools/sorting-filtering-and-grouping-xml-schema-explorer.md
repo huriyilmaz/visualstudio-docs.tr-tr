@@ -12,11 +12,11 @@ ms.technology: vs-xml-tools
 ms.workload:
 - multiple
 ms.openlocfilehash: f317ea59fd7f3318669a71d4480c5b53a182b327
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122098690"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726037"
 ---
 # <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>Sıralama, filtreleme ve gruplama (XML Şema Gezgini)
 
@@ -24,7 +24,7 @@ Bu konuda, XML Şema Gezgini araç çubuğundaki **Sıralama,** Filtreleme ve Gr
 
 ## <a name="filter-options"></a>Filtre seçenekleri
 
-Aşağıdaki filtre seçenekleri kullanılabilir. Varsayılan olarak, **Ad Alanlarını Göster ve** Şema Dosyalarını **Göster** seçenekleri seçilidir.
+Aşağıdaki filtre seçenekleri kullanılabilir. Varsayılan olarak, **Ad Alanlarını Göster ve** Şema Dosyalarını **Göster** seçenekleri seçilir.
 
 - **Ad Alanlarını Göster.**
 
@@ -34,7 +34,7 @@ Aşağıdaki filtre seçenekleri kullanılabilir. Varsayılan olarak, **Ad Alanl
 
 ## <a name="sorting-options"></a>Sıralama seçenekleri
 
-Aşağıdaki sıralama seçenekleri mevcuttur. Varsayılan değer Türüne **Göre Sırala'dır.** **SıralamaYa göre** seçenekleri dosyalar ve ad alanları için geçerli değildir.
+Aşağıdaki sıralama seçenekleri mevcuttur. Varsayılan değer Türüne **Göre Sırala'dır.** **SıralamaYa** göre seçenekleri dosyalar ve ad alanları için geçerli değildir.
 
 - **Türüne Göre Sırala.**
 
@@ -70,9 +70,9 @@ Adla **Sırala** seçeneği seçildiğinde, genel düğümler aşağıdaki sıra
 
 1. `import` düğümler (ad alanlarının alfabetik sırasına göre).
 
-2. `include` düğümler (özniteliklerin alfabetik `schemaLocation` sırasına göre).
+2. `include` düğümleri (özniteliklerin alfabetik `schemaLocation` sırasına göre).
 
-3. `redefine` düğümler (özniteliklerin alfabetik `schemaLocation` sırasına göre).
+3. `redefine` düğümleri (özniteliklerin alfabetik `schemaLocation` sırasına göre).
 
 4. Alfabetik sırada diğer genel düğümler.
 

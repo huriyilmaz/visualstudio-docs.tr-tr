@@ -1,6 +1,6 @@
 ---
 title: Live Unit Test ile kodunuzu test etmeyi öğrenin
-description: Live Unit Testing'i hedef alan basit bir sınıf kitaplığı .NET Standard ve test etmek için .NET Core'.NET Standard MSTest projesi oluşturarak bu kitaplığı kullanmayı öğrenin.
+description: Live Unit Testing'i hedef alan basit bir sınıf kitaplığı .NET Standard ve test etmek için .NET Core'ı hedef alan bir MSTest projesi oluşturarak bu kitaplığı kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 04/03/2020
 ms.topic: how-to
@@ -13,23 +13,23 @@ ms.technology: vs-ide-test
 ms.workload:
 - dotnet
 ms.openlocfilehash: 2041845ab82ec539ccaec0befd3275aeab7c0493
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122148473"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628106"
 ---
 # <a name="get-started-with-live-unit-testing"></a>Live Unit Testing kullanmaya başlama
 
-Bir çözümde Live Unit Testing etkinleştir Visual Studio, test kapsamınızı ve testlerin durumunu görsel olarak gösterir. Live Unit Testing ayrıca kodunuzu değiştirerek testleri dinamik olarak yürütür ve değişiklikleriniz testlerin başarısız olması durumuna neden olduğunda hemen size haber vetir.
+Bir çözümde Live Unit Testing etkinleştir Visual Studio, test kapsamınızı ve testlerin durumunu görsel olarak gösterir. Live Unit Testing ayrıca kodunuzu değiştirerek testleri dinamik olarak yürütür ve değişiklikleriniz testlerin başarısız olması durumuna neden olduğunda hemen size haber eder.
 
-Live Unit Testing, .NET Core veya .NET Core'.NET Framework çözümleri test etmek için kullanılabilir. Bu öğreticide, Live Unit Testing'i hedef alan basit bir sınıf kitaplığı .NET Standard ve test etmek için .NET Core'ı hedef alan bir MSTest projesi oluşturarak Live Unit Testing'i kullanmayı öğrenirsiniz.
+Live Unit Testing, .NET Core veya .NET Core'.NET Framework çözümleri test etmek için kullanılabilir. Bu öğreticide, .NET Standard'ı hedef alan basit bir sınıf kitaplığı oluşturarak Live Unit Testing'ı kullanmayı öğrenecek ve test etmek için .NET Core'ı hedef alan bir MSTest projesi oluştur bulacaksınız.
 
 C# çözümünün eksiksiz bir şekilde indirildikten sonra [MicrosoftDocs/visualstudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs/tree/master/docs/test/samples/csharp/UtilityLibraries/) GitHub.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu öğretici, **.NET Core** platformlar arası Visual Studio Enterprise iş yüküyle birlikte bir sürüm yüklemesini gerektirir.
+Bu öğretici, **.NET Core** platformlar arası Visual Studio Enterprise iş yüküyle bir sürüm yüklemesini gerektirir.
 
 ## <a name="create-the-solution-and-the-class-library-project"></a>Çözümü ve sınıf kitaplığı projesini oluşturma
 
@@ -37,7 +37,7 @@ StringLibrary adlı Visual Studio sınıf kitaplığı projesini içeren Utility
 
 Çözüm yalnızca bir veya daha fazla proje için bir kapsayıcıdır. Boş bir çözüm oluşturmak için Visual Studio açın ve şunları yapın:
 
-1. Üst **düzey**  >  **Project**  >   Yeni Dosya'Visual Studio seçin.
+1. Üst **düzey**  >  **Project**  >   Menüsünden Dosya Yeni Dosya Visual Studio seçin.
 
 1. Şablon **arama** kutusuna çözüm yazın ve Boş Çözüm **şablonunu** seçin. Projeye **UtilityLibraries adını girin.**
 
@@ -51,14 +51,14 @@ StringLibrary adlı Visual Studio sınıf kitaplığı projesini içeren Utility
 
 Artık çözümü oluşturduğunuza göre dizelerle çalışmak için bir dizi uzantı yöntemi içeren StringLibrary adlı bir sınıf kitaplığı oluşturabilirsiniz.
 
-1. Bu **Çözüm Gezgini** UtilityLibraries çözümüne sağ tıklayın ve Yeni Ekle'yi **Project.**  >  
+1. Bu **Çözüm Gezgini** Yardımcı Programlar çözümüne sağ tıklayın ve Yeni Ekle'yi **Project.**  >  
 
 ::: moniker range="vs-2017"
 
-2. Yeni Dosya **Ekle iletişim Project** C# düğümünü seçin ve sonra da .NET Standard. 
+2. Yeni Dosya **Ekle iletişim Project** C# düğümünü seçin ve sonra da yeni .NET Standard. 
 
    > [!NOTE]
-   > Kitaplığımız belirli bir .NET .NET Standard yerine bir .NET uygulamasını hedeflese de, bu sürümü destekleyen herhangi bir .NET uygulamasından çağrıl .NET Standard. Daha fazla bilgi için [bkz. .NET Standard.](/dotnet/standard/net-standard)
+   > Kitaplığımız belirli .NET Standard bir .NET uygulaması yerine bir .NET uygulamasını hedeflese de, bu .NET uygulamasının bu sürümünü destekleyen herhangi bir .NET uygulamasından .NET Standard. Daha fazla bilgi için [bkz. .NET Standard.](/dotnet/standard/net-standard)
 
 3. Sağ **bölmede Sınıf Kitaplığı (.NET Standard)** şablonunu seçin ve Aşağıdaki çizimde  gösterildiği gibi Ad metin kutusuna **StringLibrary** yazın:
 
@@ -73,7 +73,7 @@ Artık çözümü oluşturduğunuza göre dizelerle çalışmak için bir dizi u
 2. Sınıf **kitaplığını** şablon arama kutusuna yazın ve Sınıf Kitaplığı **(.NET Standard) şablonunu** seçin. **İleri**’ye tıklayın.
 
    > [!NOTE]
-   > Kitaplığımız belirli bir .NET .NET Standard yerine bir .NET uygulamasını hedeflese de, bu sürümü destekleyen herhangi bir .NET uygulamasından çağrıl .NET Standard. Daha fazla bilgi için [bkz. .NET Standard.](/dotnet/standard/net-standard)
+   > Kitaplığımız belirli .NET Standard bir .NET uygulaması yerine bir .NET uygulamasını hedeflese de, bu .NET uygulamasının bu sürümünü destekleyen herhangi bir .NET uygulamasından .NET Standard. Daha fazla bilgi için [bkz. .NET Standard.](/dotnet/standard/net-standard)
 
 3. Projeyi **StringLibrary olarak adlandır.**
 
@@ -133,7 +133,7 @@ Artık çözümü oluşturduğunuza göre dizelerle çalışmak için bir dizi u
 
 Sonraki adım, StringLibrary kitaplığını test etmek için birim testi projesi oluşturmaktır. Aşağıdaki adımları gerçekleştirerek birim testlerini oluşturun:
 
-1. Bu **Çözüm Gezgini** UtilityLibraries çözümüne sağ tıklayın ve Yeni Ekle'yi **Project.**  >  
+1. Bu **Çözüm Gezgini** Yardımcı Programlar çözümüne sağ tıklayın ve Yeni Ekle'yi **Project.**  >  
 
 ::: moniker range="vs-2017"
 
@@ -155,10 +155,10 @@ Sonraki adım, StringLibrary kitaplığını test etmek için birim testi projes
 
 ::: moniker range=">=vs-2019"
 
-2. Şablon **arama kutusuna** birim testi yazın, dil olarak **C#** seçeneğini ve ardından .NET Core için **Birim Testi Project** şablonunu seçin. **İleri**’ye tıklayın.
+2. Şablon **arama kutusuna** birim testi yazın, dil olarak **C#** öğesini seçin ve ardından .NET Core Project Birim Testi şablonunu seçin.  **İleri**’ye tıklayın.
 
    > [!NOTE]
-   > 2019 Visual Studio 16.9 sürümünden başlayarak, MSTest proje şablonu adı **MSTest Birim Testi Project (.NET Core)** olarak Birim Testi şablonu **Project.**
+   > 2019 Visual Studio 16.9 sürümünden başlayarak, MSTest proje şablonu adı **MSTest Birim Testi Project (.NET Core)** olarak Birim **Testi** Project.
 
 3. Projeyi **StringLibraryTests olarak adlandırarak Sonraki'ye** **tıklayın.**
 
@@ -247,13 +247,13 @@ Bir sınıf kitaplığının yanı sıra bunun için bazı birim testleri de olu
 
 ## <a name="enable-live-unit-testing"></a>Enable Live Unit Testing
 
-Şu ana kadar StringLibrary sınıf kitaplığı için testleri yazmadınız ancak bunları yürütmedisiniz. Live Unit Testing etkinleştiren otomatik olarak yürütür. Bunu yapmak için şunları yapın:
+Şu ana kadar StringLibrary sınıf kitaplığı için testleri yazmadınız ancak bunları yürütmedisiniz. Live Unit Testing etkinleştiren otomatik olarak yürütülür. Bunu yapmak için şunları yapın:
 
-1. İsteğe bağlı olarak, StringLibrary kodunu içeren kod düzenleyicisi penceresini seçin. Bu, bir C# *projesi için Class1.cs* veya bir C# projesi için *Class1.vb* Visual Basic olur. (Bu adım, testlerinizi etkinleştiren testleri ve kod kapsamı kapsamını görsel olarak incelemenize Live Unit Testing.)
+1. İsteğe bağlı olarak, StringLibrary kodunu içeren kod düzenleyicisi penceresini seçin. Bu, bir *C# projesi için Class1.cs* veya bir C# projesi için *Class1.vb* Visual Basic olur. (Bu adım, testlerinizi etkinleştiren testleri ve kod kapsamı kapsamını görsel olarak incelemenize Live Unit Testing.)
 
-1. Üst   >  **düzey Live Unit Testing**  >  **Başlat menüsünden** Test Visual Studio seçin.
+1. Üst   >  **düzey Live Unit Testing** Başlat  >  **menüsünden** Test Visual Studio seçin.
 
-1. Visual Studio tüm testlerinizi otomatik olarak çalıştıran Live Unit Test'i başlatır.
+1. Visual Studio tüm testlerinizi otomatik olarak çalıştıran Canlı Birim Testi'ne başlar.
 
 ::: moniker range="vs-2017"
 Test Gezgini, testlerinizi **çalıştırmayı tamamlarsa hem** genel sonuçları hem de tek tek testlerin sonuçlarını görüntüler. Ayrıca, kod düzenleyicisi penceresi hem test kodu kapsamınızı hem de test sonuçlarınızı grafiksel olarak görüntüler. Aşağıdaki çizimde gösterildiği gibi üç test de başarıyla yürütülür. Ayrıca testlerimizin yönteminde tüm kod yollarını kapsamıştır ve bu testlerin hepsi başarıyla yürütülür (yeşil onay `StartsWithUpper` işaretiyle ""). Son olarak, StringLibrary'de diğer yöntemlerden hiçbirinin kod kapsamına sahip olduğunu (mavi çizgiyle gösterilen "➖").
@@ -263,12 +263,12 @@ Test Gezgini, testlerinizi **çalıştırmayı tamamlarsa hem** genel sonuçlar�
 ::: moniker range=">=vs-2019&quot;
 Testlerinizi çalıştırmanız tamamlansa **Live Unit Testing** sonuçları ve tek tek testlerin sonuçlarını görüntüler. Ayrıca, kod düzenleyicisi penceresi hem test kodu kapsamınızı hem de test sonuçlarınızı grafiksel olarak görüntüler. Aşağıdaki çizimde gösterildiği gibi üç test de başarıyla yürütülür. Ayrıca testlerimizin yönteminde tüm kod yollarını kapsamıştır ve bu testlerin hepsi başarıyla yürütülür (yeşil onay `StartsWithUpper` işaretiyle &quot;"). Son olarak, StringLibrary'de diğer yöntemlerden hiçbirinin kod kapsamına sahip olduğunu (mavi çizgiyle gösterilen "➖").
 
-![Live Unit testini başlatan Canlı Test Gezgini ve kod düzenleyicisi penceresi](media/lut-start/vs-2019/lut-results-cs.png)
+![Canlı Birim testi başladıktan sonra Canlı Test Gezgini ve kod düzenleyicisi penceresi](media/lut-start/vs-2019/lut-results-cs.png)
 ::: moniker-end
 
 Ayrıca, kod düzenleyicisi penceresinde belirli bir kod kapsamı simgesini seçerek test kapsamı ve test sonuçları hakkında daha ayrıntılı bilgi edinebilirsiniz. Bu ayrıntıyı incelemek için şunları yapın:
 
-1. yönteminde okunan satırda yeşil onay `if (String.IsNullOrWhiteSpace(s))` işaretine `StartsWithUpper` tıklayın. Aşağıdaki çizimde gösterildiği gibi Live Unit Testing, üç testin bu kod satırına sahip olduğunu ve hepsinin başarıyla yürütülmektedir.
+1. yönteminde okunan satırda yeşil onay `if (String.IsNullOrWhiteSpace(s))` işaretine `StartsWithUpper` tıklayın. Aşağıdaki çizimde gösterildiği gibi, Live Unit Testing üç testin bu kod satırına yer ve hepsinin başarıyla yürütülmektedir.
 
    !['if' koşullu deyimi için kod kapsamı](media/lut-start/code-coverage-cs1.png)
 

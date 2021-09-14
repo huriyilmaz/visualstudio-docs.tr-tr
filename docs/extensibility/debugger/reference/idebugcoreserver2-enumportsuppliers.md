@@ -1,6 +1,6 @@
 ---
-description: Tüm kullanılabilir bağlantı noktası sağlayıcılarının listesini alır.
-title: 'IDebugCoreServer2:: Trtsuppliers | Microsoft Docs'
+description: Kullanılabilir tüm bağlantı noktası sağlayıcılarının listesini alın.
+title: IDebugCoreServer2::EnumPortSuppliers | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a78646a09c1b420921db0bd2c96ce280967102c4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122144970"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725252"
 ---
 # <a name="idebugcoreserver2enumportsuppliers"></a>IDebugCoreServer2::EnumPortSuppliers
-Tüm kullanılabilir bağlantı noktası sağlayıcılarının listesini alır.
+Kullanılabilir tüm bağlantı noktası sağlayıcılarının listesini alın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,10 +43,10 @@ int EnumPortSuppliers(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-dışı Tüm bağlantı noktası sağlayıcılarının listesini içeren bir [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md) nesnesi döndürür.
+[out] Tüm bağlantı [noktası sağlayıcılarının listesini içeren bir IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

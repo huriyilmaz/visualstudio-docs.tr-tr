@@ -6,11 +6,11 @@ ms.author: dominicn
 ms.date: 02/07/2019
 ms.assetid: 0FE27C0C-A861-4133-A74E-8D0505CF5342
 ms.openlocfilehash: 96344b72dd27095f8b9060078112fb767b1338fc
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123962272"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726005"
 ---
 # <a name="code-snippets"></a>Kod parçacıkları
 

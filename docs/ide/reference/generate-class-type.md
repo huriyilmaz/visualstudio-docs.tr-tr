@@ -16,11 +16,11 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 3af7bb3f8a52029c0b9e11df802b8f4788711af0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122034311"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725726"
 ---
 # <a name="generate-a-class-or-type-in-visual-studio"></a>Sınıf veya tür oluşturma Visual Studio
 

@@ -11,11 +11,11 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: 870bc951d9f05c0075140cca22481685dc88ed01
-ms.sourcegitcommit: 0c6cecf1b973a33003d924abeb382f23e62c134d
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "123230371"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633449"
 ---
 # <a name="use-bind-mounts"></a>BIND bağlama kullanma
 

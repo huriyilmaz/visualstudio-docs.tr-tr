@@ -16,11 +16,11 @@ helpviewer_keywords:
 - trusted files
 - trusted folders
 ms.openlocfilehash: 47cfd8c689699367336a3b4dafb9d72771e8b9b9
-ms.sourcegitcommit: 0ac22f45b3240081c4a219fc96f9d630e5de59a4
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122423556"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726870"
 ---
 # <a name="configure-trust-settings-for-files-and-folders"></a>Dosyalar ve klasörler için güven ayarlarını yapılandırma
 

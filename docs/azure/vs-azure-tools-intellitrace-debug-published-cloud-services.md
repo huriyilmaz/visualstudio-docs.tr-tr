@@ -1,7 +1,7 @@
 ---
-title: IntelliTrace ile yayımlanan Azure bulut hizmetinde hata ayıklama
+title: IntelliTrace ile yayımlanmış Azure bulut hizmeti hata ayıklaması
 ms.custom: SEO-VS-2020
-description: Visual Studio ve ıntellitrace ile bulut hizmetinde hata ayıklamayı öğrenin
+description: Visual Studio ve IntelliTrace ile bulut hizmette hata ayıklamayı öğrenin
 author: mikejo5000
 manager: jmartens
 ms.technology: vs-azure
@@ -10,70 +10,70 @@ ms.workload: azure-vs
 ms.date: 03/21/2017
 ms.author: mikejo
 ms.openlocfilehash: d298983e3dae549b09a96873d4325011fda5f51b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122059704"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633129"
 ---
 # <a name="debugging-a-published-azure-cloud-service-with-visual-studio-and-intellitrace"></a>Visual Studio ve IntelliTrace ile yayımlanan bir Azure bulut hizmetinin hatalarını ayıklama
-IntelliTrace ile, Azure 'da çalıştırıldığında bir rol örneği için kapsamlı hata ayıklama bilgilerini günlüğe kaydedebilirsiniz. bir sorunun nedenini bulmanız gerekiyorsa, Azure 'da çalışıyor gibi Visual Studio kodunuzda adım adım ilerlemek için ıntellitrace günlüklerini kullanabilirsiniz. Aslında, IntelliTrace anahtar kodu yürütme ve ortam verilerini Azure uygulamanız Azure 'da bir bulut hizmeti olarak çalışırken kaydeder ve kaydedilen verileri Visual Studio yeniden oynamanızı sağlar.
+IntelliTrace ile, Azure'da çalışan bir rol örneği için kapsamlı hata ayıklama bilgilerini günlüğe görüntüebilirsiniz. Bir sorunun nedenini bulmanız gerekirse IntelliTrace günlüklerini kullanarak azure'da çalışıyor gibi Visual Studio adım adım kod atabilirsiniz. Aslında IntelliTrace, Azure uygulama Azure'da bulut hizmeti olarak çalıştır çalıştırken anahtar kodu yürütme ve ortam verilerini kaydeden ve kaydedilen verileri azure'dan Visual Studio.
 
-Visual Studio Enterprise yüklüyse ve Azure uygulamanız .NET Framework 4 veya sonraki bir sürümü hedeflerse ıntellitrace 'i kullanabilirsiniz. IntelliTrace, Azure rolleriniz için bilgi toplar. Bu rollerin sanal makineleri daima 64 bitlik işletim sistemlerini çalıştırır.
+4 veya daha yeni bir sürüme sahip Visual Studio Enterprise Azure uygulama hedefleriniz varsa IntelliTrace.NET Framework kullanabilirsiniz. IntelliTrace, Azure rolleriniz için bilgi toplar. Bu rollerin sanal makineleri her zaman 64 bit işletim sistemlerini çalıştırmaktadır.
 
-Alternatif olarak, [Uzaktan hata ayıklamayı](vs-azure-tools-debugging-cloud-services-overview.md) kullanarak doğrudan Azure 'da çalışan bir bulut hizmetine ekleyebilirsiniz.
+Alternatif olarak, [Azure'da çalışan bir bulut](vs-azure-tools-debugging-cloud-services-overview.md) hizmetine doğrudan eklemek için uzaktan hata ayıklamayı kullanabilirsiniz.
 
 > [!IMPORTANT]
-> IntelliTrace yalnızca hata ayıklama senaryolarına yöneliktir ve bir üretim dağıtımı için kullanılmamalıdır.
+> IntelliTrace yalnızca hata ayıklama senaryolarına yöneliktir ve üretim dağıtımı için kullanılmamalı.
 >
 
-## <a name="configure-an-azure-application-for-intellitrace"></a>IntelliTrace için bir Azure uygulaması yapılandırma
-bir azure uygulaması için ıntellitrace 'i etkinleştirmek üzere uygulamayı bir Visual Studio azure projesinden oluşturmanız ve yayımlamanız gerekir. Azure 'a yayımlamadan önce Azure uygulamanız için IntelliTrace 'i yapılandırmanız gerekir. Uygulamanızı IntelliTrace yapılandırması olmadan yayımlarsanız projeyi yeniden yayımlamanız gerekir. Daha fazla bilgi için bkz. [Visual Studio kullanarak Azure bulut hizmetleri projelerini yayımlama](vs-azure-tools-publishing-a-cloud-service.md).
+## <a name="configure-an-azure-application-for-intellitrace"></a>IntelliTrace için Azure uygulaması yapılandırma
+Bir Azure uygulamasında IntelliTrace'i etkinleştirmek için uygulamayı bir Azure projesinden Visual Studio yayımlamanız gerekir. Azure'da yayımlamadan önce Azure uygulamanıza IntelliTrace'i yapılandırmanız gerekir. IntelliTrace'i yapılandırmadan uygulama yayımlarsanız projeyi yeniden yayımlamanız gerekir. Daha fazla bilgi için [bkz. Azure bulut hizmetleri projelerini Visual Studio.](vs-azure-tools-publishing-a-cloud-service.md)
 
-1. Azure uygulamanızı dağıtmaya hazırsanız, proje derleme hedeflerinizin **hata ayıklama** olarak ayarlandığını doğrulayın.
+1. Azure uygulamanızı dağıtmaya hazır olduğunda proje derleme hedeflerinizi Hata Ayıkla olarak **ayarlı olduğunu doğrulayın.**
 
-1. **Çözüm Gezgini**, proje öğesine sağ tıklayın ve bağlam menüsünden **Yayımla**' yı seçin.
+1. Bu **Çözüm Gezgini** proje'ye sağ tıklayın ve bağlam menüsünde Yayımla'yı **seçin.**
 
-1. **Azure uygulaması Yayımla** Iletişim kutusunda Azure aboneliğini seçin ve **İleri**' yi seçin.
+1. Azure Uygulamasını **Yayımla iletişim** kutusunda Azure aboneliğini ve ardından Sonraki'yi **seçin.**
 
-1. **Ayarlar** sayfasında, **gelişmiş Ayarlar** sekmesini seçin.
+1. Yeni **Ayarlar** Gelişmiş Giriş sekmesini **Ayarlar** seçin.
 
-1. Bulutta yayımlandığında uygulamanıza yönelik IntelliTrace günlüklerini toplamak için **IntelliTrace 'ı etkinleştir** seçeneğini etkinleştirin.
+1. Uygulama bulutta yayımlanırken uygulamanıza intelliTrace günlüklerini toplamak için **IntelliTrace'i** Etkinleştir seçeneğini etkinleştirin.
 
-1. temel ıntellitrace yapılandırmasını özelleştirmek için, **ıntellitrace 'i etkinleştir ' in** yanındaki **Ayarlar** ' yi seçin.
+1. Temel IntelliTrace yapılandırmasını özelleştirmek için, IntelliTrace'i **Ayarlar** **seçeneğinin yanındaki Seç'i seçin.**
 
     ![IntelliTrace ayarları bağlantısı](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/intellitrace-settings-link.png)
 
-1. **ıntellitrace Ayarlar** iletişim kutusunda, hangi olayların günlüğe alınacağını, çağrı bilgilerinin toplanmasını, hangi modüllerin ve işlemlerin toplanacağını toplayacağınızı ve kayda ne kadar alan ayrılacağını belirtebilirsiniz. IntelliTrace hakkında daha fazla bilgi için bkz. [IntelliTrace Ile hata ayıklama](../debugger/intellitrace.md).
+1. **IntelliTrace Ayarlar** iletişim kutusunda günlüğe kaydedilebilecek olayları, çağrı bilgilerini toplayıp toplamayacaksınız, hangi modüllerin ve işlemlerin günlükleri toplayacaksınız ve kayda ne kadar alan ayrılacaklarını belirtebilirsiniz. IntelliTrace hakkında daha fazla bilgi için [bkz. IntelliTrace ile Hata Ayıklama.](../debugger/intellitrace.md)
 
     ![IntelliTrace ayarları](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC519063.png)
 
-IntelliTrace günlüğü, IntelliTrace ayarlarında belirtilen en büyük boyutun (varsayılan boyut 250 MB 'tır) bir dairesel günlük dosyasıdır. IntelliTrace günlükleri, sanal makinenin dosya sistemindeki bir dosyaya toplanır. Günlükleri istediğinizde, o zaman bu noktada bir anlık görüntü alınır ve yerel bilgisayarınıza indirilir.
+IntelliTrace günlüğü, IntelliTrace ayarlarında belirtilen en büyük boyuta sahip döngüsel bir günlük dosyasıdır (varsayılan boyut 250 MB'tır). IntelliTrace günlükleri, sanal makinenin dosya sisteminde bir dosyaya toplanır. Günlükleri isteğinde bulundurarak o noktada bir anlık görüntü alınır ve yerel bilgisayarınıza indirilir.
 
-Azure bulut hizmeti Azure 'da yayımlandıktan sonra, aşağıdaki görüntüde gösterildiği gibi, IntelliTrace 'in **Sunucu Gezgini** Azure düğümünden etkinleştirilip etkinleştirilmediğini belirleyebilirsiniz:
+Azure bulut hizmeti Azure'da yayımlandıktan sonra, aşağıdaki görüntüde gösterildiği gibi IntelliTrace'in **Sunucu Gezgini'daki** Azure düğümünden etkinleştirildiğinden karar veabilirsiniz:
 
-![Sunucu Gezgini-IntelliTrace etkin](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC744134.png)
+![Sunucu Gezgini - IntelliTrace etkin](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC744134.png)
 
-## <a name="download-intellitrace-logs-for-a-role-instance"></a>Rol örneği için IntelliTrace günlüklerini indirin
-Visual Studio kullanarak, aşağıdaki adımları izleyerek bir rol örneği için ıntellitrace günlüklerini indirebilirsiniz:
+## <a name="download-intellitrace-logs-for-a-role-instance"></a>Rol örneği için IntelliTrace günlüklerini indirme
+Aşağıdaki Visual Studio kullanarak bir rol örneği için IntelliTrace günlüklerini indirebilirsiniz:
 
-1. **Sunucu Gezgini**' de, **Cloud Services** düğümünü genişletin ve günlüklerini indirmek istediğiniz rol örneğini bulun.
+1. Bu **Sunucu Gezgini,** Cloud Services **düğümünü** genişletin ve günlüklerini indirmek istediğiniz rol örneğini bulun.
 
-1. Rol örneğine sağ tıklayın ve s bağlam menüsünde **IntelliTrace günlüklerini görüntüle**' yi seçin.
+1. Rol örneğine sağ tıklayın ve bağlam **menüsünden IntelliTrace Günlüklerini Görüntüle'yi seçin.**
 
     ![IntelliTrace günlüklerini görüntüle menü seçeneği](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/view-intellitrace-logs.png)
 
-1. IntelliTrace günlükleri yerel bilgisayarınızdaki bir dizindeki bir dosyaya indirilir. IntelliTrace günlüklerini her istediğinizde yeni bir anlık görüntü oluşturulur. günlükler indirilirken, Visual Studio **Azure etkinlik günlüğü** penceresinde işlemin ilerlemesini görüntüler. Aşağıdaki şekilde gösterildiği gibi, daha fazla ayrıntı görmek için işlem için satır öğesini genişletebilirsiniz.
+1. IntelliTrace günlükleri yerel bilgisayarınızda bir dizinde yer alan bir dosyaya indirilir. IntelliTrace günlüklerini her isteğiniz için yeni bir anlık görüntü oluşturulur. Günlükler indirilirken Visual Studio ilerlemesini Azure Etkinlik Günlüğü **penceresinde** görüntüler. Aşağıdaki şekilde gösterildiği gibi, daha fazla ayrıntı görmek için işlem için satır öğesini genişletebilirsiniz.
 
 ![VST_IntelliTraceDownloadProgress](./media/vs-azure-tools-intellitrace-debug-published-cloud-services/IC745551.png)
 
-ıntellitrace günlükleri indirilirken Visual Studio çalışmaya devam edebilirsiniz. Günlük indirmeyi bitirdiğinde Visual Studio açılır.
+IntelliTrace günlükleri Visual Studio bu günlüklerde çalışmaya devam edin. Günlük indirdikten sonra günlük, Visual Studio.
 
 > [!NOTE]
-> IntelliTrace günlükleri Framework 'ün oluşturduğu ve daha sonra işlediği özel durumlar içerebilir. İç Framework kodu bu özel durumları bir rolün başlatılmasının normal bir parçası olarak oluşturur, bu nedenle onları güvenle yoksayabilirsiniz.
+> IntelliTrace günlükleri, çerçevenin daha sonra oluşturması ve işlemesi için özel durumlar içerebilir. İç çerçeve kodu bu özel durumları bir rolü başlatmanın normal bir parçası olarak oluşturur, bu nedenle bunları güvenle yoksayabilirsiniz.
 >
 >
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- [Azure bulut hizmetlerinde hata ayıklama seçenekleri](vs-azure-tools-debugging-cloud-services-overview.md)
-- [Visual Studio kullanarak bir Azure bulut hizmeti yayımlama](vs-azure-tools-publishing-a-cloud-service.md)
+- [Azure bulut hizmetlerde hata ayıklama seçenekleri](vs-azure-tools-debugging-cloud-services-overview.md)
+- [Azure bulut hizmetini Visual Studio](vs-azure-tools-publishing-a-cloud-service.md)

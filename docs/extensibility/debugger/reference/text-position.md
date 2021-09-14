@@ -1,5 +1,5 @@
 ---
-description: Verilen metindeki satır ve sütun konumunu açıklar.
+description: Verilen metinde satır ve sütun konumunu açıklar.
 title: TEXT_POSITION | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,14 +18,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 497e412b75ee1c37c28da018e3a9f67ec2cab184
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122102928"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634750"
 ---
 # <a name="text_position"></a>TEXT_POSITION
-Verilen metindeki satır ve sütun konumunu açıklar.
+Verilen metinde satır ve sütun konumunu açıklar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,16 +46,16 @@ public struct TEXT_POSITION {
 ## <a name="members"></a>Üyeler
 
 `dwLine`\
-Kaynak dosyadaki satır dizini.
+Kaynak dosyada satır dizini.
 
 `dwColumn`\
-Satıra karakter boşluğu.
+Karakter kaydırması satıra.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu yapı [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) ve [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapılarında kullanılır.
+Bu yapı, CONTEXT_INFO [](../../../extensibility/debugger/reference/context-info.md) [ve DisassemblyData yapılarında](../../../extensibility/debugger/reference/disassemblydata.md) kullanılır.
 
-Bu yapı aşağıdaki yöntemlere bir çağrı ile doldurulur:
+Bu yapı, aşağıdaki yöntemlere yapılan bir çağrıyla doldurulur:
 
 - [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)
 
@@ -65,7 +65,7 @@ Bu yapı aşağıdaki yöntemlere bir çağrı ile doldurulur:
 
 - [GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)
 
-Bu yapı aşağıdaki yöntemlere bir parametre olarak geçirilir:
+Bu yapı, aşağıdaki yöntemlere parametre olarak geçirildi:
 
 - [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)
 
@@ -79,11 +79,11 @@ Bu yapı aşağıdaki yöntemlere bir parametre olarak geçirilir:
 
 ## <a name="requirements"></a>Gereksinimler
 
- Üst bilgi: msdbg. h
+ Üst bilgi: msdbg.h
 
- Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+ Ad Alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
+ Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

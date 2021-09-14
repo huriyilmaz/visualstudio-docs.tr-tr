@@ -10,12 +10,12 @@ metadata:
   author: Mikejo5000
   ms.author: mikejo
   ms.date: 10/15/2019
-  ms.openlocfilehash: 182af9fa4bd91feffa3764c7041e0e67f74dac15fbe5927211cd2f5c85c1af8e
-  ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+  ms.openlocfilehash: fd843690d5eb2f792bb8e671162e7c150bea2750
+  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/12/2021
-  ms.locfileid: "121348656"
+  ms.lasthandoff: 09/13/2021
+  ms.locfileid: "126631911"
 landingContent:
 - title: .NET kod analizini yapılandırma
   linkLists:

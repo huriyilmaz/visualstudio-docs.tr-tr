@@ -19,14 +19,14 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: df241aa2a2f67b18d11653ba016b39b561866bec
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122025751"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633822"
 ---
 # <a name="secure-deployment"></a>Güvenli dağıtım
-  Yeni bir çözüm Office, geliştirme bilgisayarınız projenizin kodunun çalışmasına izin verecek şekilde otomatik olarak güncelleştirilir. Ancak, çözümlerinizi dağıtırken, çözümü bir sertifikayla imzalayarak veya güven istemi anahtarını kullanarak güven kararını temel alan bir kanıt [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] sağlanız gerekir. Daha fazla bilgi için, [bkz. Grant trust to Office solutions](../vsto/granting-trust-to-office-solutions.md).
+  Yeni bir çözüm Office, geliştirme bilgisayarınız projenizin kodun çalışmasına izin verecek şekilde otomatik olarak güncelleştirilir. Ancak, çözümlerinizi dağıtırken, çözümü bir sertifikayla imzalayarak veya güven istemi anahtarını kullanarak güven kararını temel alan bir kanıt [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] sağlanız gerekir. Daha fazla bilgi için, [bkz. Grant trust to Office solutions](../vsto/granting-trust-to-office-solutions.md).
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
@@ -39,13 +39,13 @@ ms.locfileid: "122025751"
 
 - **HKEY_LOCAL_MACHINE\Software\Microsoft\VSTO**
 
-  Bu Office çalıştırmasını önlemek için, bu kayıt defteri anahtarlarından biri veya her ikisi altında bir giriş oluşturun ve için aşağıdaki veri türlerinden ve `Disabled` değerlerinden birini `Disabled` belirtin:
+  Bu Office çalıştırmasını önlemek için, bu kayıt defteri anahtarlarından biri veya her ikisi altında bir girdi oluşturun ve için aşağıdaki veri türlerinden ve `Disabled` değerlerinden birini `Disabled` belirtin:
 
-- "0 REG_SZ (REG_EXPAND_SZ) dışında herhangi bir dizeye ayarlanmış bir dize veya dize.
+- "0 REG_SZ (REG_EXPAND_SZ) dışında herhangi bir dizeye ayarlanmış bir dize veya bir dize.
 
 - 0 REG_DWORD (sıfır) dışında herhangi bir değere ayarlanmış bir değerdir.
 
-  Bu Office kod çalıştırmaya olanak sağlamak için her iki girdiyi de 0 (sıfır) olarak ayarlayın `Disabled` veya kayıt defteri girdilerini silin.
+  Bu Office çalıştırmak için her iki girdiyi `Disabled` de 0 (sıfır) olarak ayarlayın veya kayıt defteri girdilerini silin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Bir Office dağıtma](../vsto/deploying-an-office-solution.md)

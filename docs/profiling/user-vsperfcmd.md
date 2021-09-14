@@ -12,11 +12,11 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 015cca1c11050f2bd34fa5b6eb8292b014b61856
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122140810"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725671"
 ---
 # <a name="user-vsperfcmd"></a>Kullanıcı (VSPerfCmd)
 Kullanıcı  seçeneği, profili yapılan işleme sahip olan hesabın etki alanını ve kullanıcı adını belirtir. Bu seçenek yalnızca işlem oturum açmış kullanıcıdan farklı bir kullanıcı olarak çalışıyorsa gereklidir. İşlem sahibi, Görev Yöneticisi'nin İşlemler **sekmesindeki** Kullanıcı Adı Windows listelenir.

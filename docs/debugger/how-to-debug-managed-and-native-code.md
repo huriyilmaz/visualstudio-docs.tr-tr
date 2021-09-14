@@ -17,11 +17,11 @@ ms.workload:
 - dotnet
 - cplusplus
 ms.openlocfilehash: a3d3591fab5eaed2d1051212dae5c626c0f501e3
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122065572"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627999"
 ---
 # <a name="tutorial-debug-c-and-c-in-the-same-debugging-session"></a>Öğretici: aynı hata ayıklama oturumunda C# ve C++ hatalarını ayıklama
 
@@ -216,17 +216,17 @@ Visual Studio yüklüyse ancak ihtiyacınız olan iş yükleri yoksa, **yeni Pro
 
    - Hata ayıklayıcıda duraklalarken, **Gözcü** pencereleri ve **çağrı yığını** penceresini de kullanabilirsiniz.
 
-1. Hata ayıklayıcıyı bir satır ilerlemek için **F11** tuşuna basın.
+1. Hata ayıklayıcısını bir satır ilerlemek için **F11'e** tekrar basın.
 
-1.  + Yürütmeye devam etmek için SHIFT **F11** tuşuna basın veya **hata ayıklama**  >  **adımını** seçin seçeneğini belirleyin.
+1. Yürütmeye **devam** etmek ve yönetilen uygulamada yeniden duraklatmak için Shift F11 tuşuna basın veya Hata +    >   Ayıkla AdımLa'ya basın.
 
-1. Uygulamada hata ayıklamaya devam etmek için **F5** tuşuna basın veya yeşil oku seçin.
+1. Uygulamada **hata ayıklamaya** devam etmek için F5 tuşuna basın veya yeşil oku seçin.
 
-Tebrikler! Karışık modda hata ayıklama öğreticisini tamamladınız.
+Tebrikler! Karma mod hata ayıklama öğreticisi tamamlanmıştır.
 
 ## <a name="next-step"></a>Sonraki adım
 
-Bu öğreticide, karışık modda hata ayıklamayı etkinleştirerek, yönetilen bir uygulamadaki yerel kodun hatalarını ayıklamanın nasıl yapılacağını öğrendiniz. Diğer hata ayıklayıcı özelliklerine genel bakış için bkz.:
+Bu öğreticide, karma mod hata ayıklamayı etkinleştirerek yönetilen bir uygulamanın yerel kodunda hata ayıklamayı öğrendinsiniz. Diğer hata ayıklayıcı özelliklerine genel bakış için bkz:
 
 > [!div class="nextstepaction"]
 > [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

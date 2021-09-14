@@ -15,11 +15,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: f877150a747984d0d04f779b16338d04fd55f1ba
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122082900"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633846"
 ---
 # <a name="imanagedaddinunload"></a>IManagedAddin::Unload
   Yönetilen bir eklenti VSTO önce çağrılır.
@@ -34,7 +34,7 @@ HRESULT Unload();
  Yöntemin başarıyla tamamlandıktan sonra tamamlandıktan sonra bir HRESULT değeri.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, uygulamanın geçerli sürümleri tarafından Microsoft Office. Bu yöntem gelecekte kullanılmak üzere ayrılmıştır.
+ Bu yöntem, geçerli sürümler tarafından çağrıl Microsoft Office. Bu yöntem gelecekte kullanılmak üzere ayrılmıştır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IManagedAddin arabirimi](../vsto/imanagedaddin-interface.md)

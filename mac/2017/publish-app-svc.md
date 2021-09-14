@@ -14,19 +14,19 @@ ms.topic: how-to
 ms.workload:
 - azure
 ms.openlocfilehash: e0fdabe38f2696540db1a3b629609dbc1c42d821
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123962083"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725511"
 ---
-# <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak web Azure App Service yayımlama
+# <a name="publish-a-web-app-to-azure-app-service-using-visual-studio-for-mac"></a>Web uygulamasını Azure App Service'de yayımlama Mac için Visual Studio
 
 Yayımlama aracını kullanarak uygulamalarınızı ASP.NET Core yayım Azure App Service.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [Visual Studio etkinleştirilmiş mac için 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) ASP.NET Core yükleyin.
+- [Visual Studio 2017'nin yüklü](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2017) olduğu mac için ASP.NET Core.
 - Azure Aboneliği. Henüz bir aboneliğiniz [yoksa,](https://azure.microsoft.com/free/dotnet/)30 gün boyunca 200 ABD doları kredi ve popüler ücretsiz hizmetlerden 12 ay boyunca ücretsiz olarak kaydolabilirsiniz.
 - Bir ASP.NET Core projesi. Henüz bir projeniz yoksa yeni bir [tane oluşturabilirsiniz.](./create-new-projects.md?view=vsmac-2017&preserve-view=true)
 
@@ -36,13 +36,13 @@ Yayımlama aracını kullanarak uygulamalarınızı ASP.NET Core yayım Azure Ap
 
     ![Yayımla bağlam menüsü](media/publish-context-menu.png)
 
- 2. Bu projeyi daha önce Azure App Service yayımlamak için yayımladıysanız, menüde yayımlama profilinin olduğunu görüyorsunuz. Yayımlama işlemini başlatmak için bu yayımlama profilini seçin.
+ 2. Bu projeyi daha önce Azure App Service yayımlamak için kullandıysanız, menüde yayımlama profilinin olduğunu görüyorsunuz. Yayımlama işlemini başlatmak için bu yayımlama profilini seçin.
 
  3. Bu projeyi ilk kez App Service için **Azure'da yayımla'yı seçin**
 
     ![App Service'da yayımla bağlam menüsü](media/publish-to-azure-context-menu.png)
 
- 4. Azure App Service  yayımla iletişim kutusu görüntülenir ve mevcut Tüm App Services gösterilir. Var olan bir App Service yayımlamak için, App Service'yi seçin ve ardından Yayımla'ya **tıklayın.**
+ 4. **Azure App Service'da** yayımla iletişim kutusu görüntülenir ve mevcut Tüm App Services gösterilir. Mevcut bir App Service yayımlamak için, listeden App Service'yi seçin ve ardından Yayımla'ya **tıklayın.**
 
     ![Bir Azure App Service yayımla iletişim kutusu](media/publish-to-app-service-dialog.png)
 
@@ -64,7 +64,7 @@ Yayımlama aracını kullanarak uygulamalarınızı ASP.NET Core yayım Azure Ap
 
     Yeni projenizi oluşturmak App Service projenizi yayımlamak için Oluştur'a **tıklayın.**
 
-    Yeni Uygulama **Oluştur App Service** tıklarsanız iletişim kutusu görüntülenir ve uygulama oluşturmanın başlat gerektiğini belirten App Service gerekir. 
+    Yeni Uygulama **Oluştur'App Service** iletişim kutusu görüntülenir ve uygulama oluşturmanın başlat gerektiğini belirten aşağıdaki App Service gerekir. 
 
       ![İleti App Service Oluşturma](media/publish-create-app-service-message.png)
 

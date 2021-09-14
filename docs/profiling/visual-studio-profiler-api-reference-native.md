@@ -1,6 +1,6 @@
 ---
 title: Visual Studio Profil Oluşturucu API Başvurusu (Yerel)
-description: Profil profil Visual Studio API'lerinin toplanan veri miktarını program aracılığıyla denetlemeye ve profil oluşturma sırasında hem zaman damgası hem de profil işareti eklemeye nasıl olanak olduğunu öğrenin.
+description: Profil profil Visual Studio API'lerinin toplanan veri miktarını program aracılığıyla denetleme ve profil oluşturma sırasında hem zaman damgası hem de profil işareti ekleme hakkında bilgi alın.
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
@@ -17,11 +17,11 @@ monikerRange: vs-2017
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e782ced3a2760af780f70f586fb79329da68394c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122140706"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725659"
 ---
 # <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio profil oluşturma API başvurusu (yerel)
 Visual Studio profil oluşturma API'leri toplanan veri miktarını program aracılığıyla denetlemeye ve profil oluşturma sırasında hem zaman damgası hem de profil işareti eklemeye olanak sağlar. Yerel API'leri kullanmak için *VSPerf.h üst bilgi* dosyasını ekleyin ve *VSPerf.lib'i projenize* ekleyin.

@@ -1,6 +1,6 @@
 ---
-title: Hizmet yapılandırma ve profillerini yönetme | Microsoft Docs
-description: Hizmet yapılandırmaları ve profilleri yapılandırma dosyalarıyla çalışmayı öğrenin | Dağıtım ortamları ve bulut hizmetleri için yayımlama ayarları için hangi ayarları depolar.
+title: Hizmet yapılandırmalarını ve profillerini | Microsoft Docs
+description: Hizmet yapılandırmaları ve profil yapılandırma dosyalarıyla çalışma hakkında bilgi | dağıtım ortamlarının ayarlarını depolar ve bulut hizmetleri için yayımlama ayarları.
 author: ghogen
 manager: jmartens
 ms.technology: vs-azure
@@ -9,90 +9,90 @@ ms.topic: conceptual
 ms.date: 8/11/2017
 ms.author: ghogen
 ms.openlocfilehash: d57272582a75ddc183250f0f6978e529263e901c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122031867"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633049"
 ---
 # <a name="how-to-manage-service-configurations-and-profiles"></a>Hizmet yapılandırmalarını ve profillerini yönetme
 ## <a name="overview"></a>Genel Bakış
-bir bulut hizmeti yayımladığınızda Visual Studio yapılandırma bilgilerini iki tür yapılandırma dosyasında depolar: hizmet yapılandırmaları ve profiller. Hizmet yapılandırma (. cscfg dosyaları) bir Azure bulut hizmeti için dağıtım ortamları için depolama ayarları. Azure, bulut hizmetlerinizi yönetirken bu yapılandırma dosyalarını kullanır. Diğer yandan, profiller (. azurePubxml dosyaları), bulut hizmetleri için yayımlama ayarlarını depolar. Bu ayarlar, Yayımlama Sihirbazı 'nı kullanırken seçtiğiniz ayarların bir kaydıdır ve Visual Studio tarafından yerel olarak kullanılır. Bu konu, her iki yapılandırma dosyası türüyle nasıl çalışılacağını açıklamaktadır.
+Bir bulut hizmetini yayımlarken, Visual Studio bilgilerini iki tür yapılandırma dosyası içinde depolar: hizmet yapılandırmaları ve profiller. Hizmet yapılandırmaları (.cscfg dosyaları), Azure bulut hizmeti için dağıtım ortamlarının ayarlarını depolar. Azure, bulut hizmetlerinizi yönetirken bu yapılandırma dosyalarını kullanır. Öte yandan, profiller (.azurePubxml dosyaları) bulut hizmetleri için yayımlama ayarlarını depolar. Bu ayarlar, yayımlama sihirbazını kullanırken seçtiğiniz ayarların bir kaydıdır ve yayımlama sihirbazı tarafından yerel Visual Studio. Bu konu başlığında, her iki yapılandırma dosyası türüyle nasıl çalışabilirsiniz?
 
-## <a name="service-configurations"></a>Hizmet yapılandırması
-Dağıtım ortamlarınızın her biri için kullanmak üzere birden çok hizmet yapılandırması oluşturabilirsiniz. Örneğin, bir Azure uygulamasını ve üretim ortamınız için başka bir hizmet yapılandırmasını çalıştırmak ve test etmek üzere kullandığınız yerel ortam için bir hizmet yapılandırması oluşturabilirsiniz.
+## <a name="service-configurations"></a>Hizmet Yapılandırmaları
+Dağıtım ortamlarınızı her biri için kullanmak üzere birden çok hizmet yapılandırması oluşturabilirsiniz. Örneğin, bir Azure uygulamasını çalıştırmak ve test etmek için yerel ortam için bir hizmet yapılandırması ve üretim ortamınız için başka bir hizmet yapılandırması oluşturabilirsiniz.
 
-Gereksinimlerinize göre bu hizmet yapılandırmasını ekleyebilir, silebilir, yeniden adlandırabilir ve değiştirebilirsiniz. aşağıdaki çizimde gösterildiği gibi, bu hizmet yapılandırmalarının Visual Studio ' den yönetebilirsiniz.
+Gereksinimlerinize göre bu hizmet yapılandırmalarını ekleyebilir, silebilir, yeniden adlandırabilirsiniz ve değiştirebilirsiniz. Bu hizmet yapılandırmalarını aşağıdaki çizimde Visual Studio hizmet yapılandırmalarından yönetebilirsiniz.
 
-![Hizmet yapılandırmasını yönetme](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/manage-service-config.png)
+![Hizmet Yapılandırmalarını Yönetme](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/manage-service-config.png)
 
-Ayrıca rolün özellik sayfalarındaki **konfigürasyonları Yönet** iletişim kutusunu da açabilirsiniz. Azure projenizde bir rolün özelliklerini açmak için, bu rolün kısayol menüsünü açın ve **Özellikler**' i seçin. **Ayarlar** sekmesinde, **hizmet yapılandırması** listesini genişletin ve ardından **yönet** ' i seçerek **yapılandırmaları yönet** iletişim kutusunu açın.
+Rolün özellik **sayfalarından Yapılandırmaları** Yönet iletişim kutusunu da açabilirsiniz. Azure projenize bir rolün özelliklerini açmak için bu rolün kısayol menüsünü açın ve Özellikler'i **seçin.** Yapılandırmalar **Ayarlar,** Hizmet Yapılandırması **listesini genişletin** ve ardından Yönet'i seçerek **Yapılandırmaları Yönet iletişim** kutusunu açın. 
 
 ### <a name="to-add-a-service-configuration"></a>Hizmet yapılandırması eklemek için
-1. Çözüm Gezgini ' de, Azure projesi için kısayol menüsünü açın ve ardından **konfigürasyonları Yönet**' i seçin.
+1. Bu Çözüm Gezgini Azure projesinin kısayol menüsünü açın ve Yapılandırmaları **Yönet'i seçin.**
 
-    **Hizmet yapılandırmasını Yönet** iletişim kutusu görüntülenir.
-2. Bir hizmet yapılandırması eklemek için, var olan yapılandırmanın bir kopyasını oluşturmanız gerekir. Bunu yapmak için, ad listesinden kopyalamak istediğiniz yapılandırmayı seçin ve ardından **kopya oluştur**' u seçin.
-3. Seçim Hizmet yapılandırmasına farklı bir ad vermek için, ad listesinden yeni hizmet yapılandırması ' nı seçin ve ardından **Yeniden Adlandır**' ı seçin. **Ad** metin kutusuna, bu hizmet yapılandırması için kullanmak istediğiniz adı yazın ve ardından **Tamam**' ı seçin.
+    Hizmet **Yapılandırmalarını Yönet** iletişim kutusu görüntülenir.
+2. Hizmet yapılandırması eklemek için mevcut yapılandırmanın bir kopyasını oluşturmanız gerekir. Bunu yapmak için Ad listesinden kopyalamak istediğiniz yapılandırmayı seçin ve ardından Kopyala **oluştur'a tıklayın.**
+3. (İsteğe bağlı) Hizmet yapılandırmasına farklı bir ad vermek için Ad listesinden yeni hizmet yapılandırmasını seçin ve ardından Yeniden Adlandır'ı **seçin.** Ad **metin** kutusuna bu hizmet yapılandırması için kullanmak istediğiniz adı yazın ve tamam'ı **seçin.**
 
-    ServiceConfiguration adlı yeni bir hizmet yapılandırma dosyası. [New Name]. cscfg Çözüm Gezgini Azure projesine eklenir.
+    ServiceConfiguration adlı yeni bir hizmet yapılandırma dosyası. [Yeni Ad].cscfg, Azure projesine Çözüm Gezgini.
 
-### <a name="to-delete-a-service-configuration"></a>Bir hizmet yapılandırmasını silmek için
-1. Çözüm Gezgini ' de, Azure projesi için kısayol menüsünü açın ve ardından **konfigürasyonları Yönet**' i seçin.
+### <a name="to-delete-a-service-configuration"></a>Hizmet yapılandırmasını silmek için
+1. Bu Çözüm Gezgini Azure projesinin kısayol menüsünü açın ve Yapılandırmaları **Yönet'i seçin.**
 
-    **Hizmet yapılandırmasını Yönet** iletişim kutusu görüntülenir.
-2. Bir hizmet yapılandırmasını silmek için, **ad** listesinden silmek istediğiniz yapılandırmayı seçin ve ardından **Kaldır**' ı seçin. Bu yapılandırmayı silmek istediğinizi doğrulayan bir iletişim kutusu görünür.
+    Hizmet **Yapılandırmalarını Yönet** iletişim kutusu görüntülenir.
+2. Bir hizmet yapılandırmasını silmek için Ad listesinden silmek istediğiniz **yapılandırmayı** seçin ve ardından Kaldır'ı **seçin.** Bu yapılandırmayı silmek istediğinizden emin olmak için bir iletişim kutusu görüntülenir.
 3. **Sil**’i seçin.
 
-     Hizmet yapılandırma dosyası Çözüm Gezgini Azure projesinden kaldırılır.
+     Hizmet yapılandırma dosyası, azure projesinde Çözüm Gezgini.
 
-### <a name="to-rename-a-service-configuration"></a>Bir hizmet yapılandırmasını yeniden adlandırmak için
-1. Çözüm Gezgini ' de Azure projesi için kısayol menüsünü açın ve ardından **konfigürasyonları Yönet**' i seçin.
+### <a name="to-rename-a-service-configuration"></a>Hizmet yapılandırmasını yeniden adlandırmak için
+1. Bu Çözüm Gezgini Azure projesinin kısayol menüsünü açın ve Yapılandırmaları **Yönet'i seçin.**
 
-    **Hizmet yapılandırmasını Yönet** iletişim kutusu görüntülenir.
-2. Bir hizmet yapılandırmasını yeniden adlandırmak için, **ad** listesinden yeni hizmet yapılandırması ' nı seçin ve ardından **Yeniden Adlandır**' ı seçin. **Ad** metin kutusuna, bu hizmet yapılandırması için kullanmak istediğiniz adı yazın ve ardından **Tamam**' ı seçin.
+    Hizmet **Yapılandırmalarını Yönet** iletişim kutusu görüntülenir.
+2. Bir hizmet yapılandırmasını yeniden adlandırmak için Ad listesinden yeni hizmet **yapılandırmasını seçin** ve ardından Yeniden Adlandır'ı **seçin.** Ad **metin** kutusuna bu hizmet yapılandırması için kullanmak istediğiniz adı yazın ve tamam'ı **seçin.**
 
-    Hizmet yapılandırma dosyasının adı, Azure projesinde Çözüm Gezgini değiştirilir.
+    Hizmet yapılandırma dosyasının adı, azure projesinde Çözüm Gezgini.
 
-### <a name="to-change-a-service-configuration"></a>Bir hizmet yapılandırmasını değiştirmek için
-* Bir hizmet yapılandırmasını değiştirmek isterseniz, Azure projesinde değiştirmek istediğiniz belirli rolün kısayol menüsünü açın ve ardından **Özellikler**' i seçin. daha fazla bilgi için bkz. [nasıl yapılır: Azure bulut hizmeti için rolleri yapılandırma Visual Studio](vs-azure-tools-configure-roles-for-cloud-service.md) .
+### <a name="to-change-a-service-configuration"></a>Hizmet yapılandırmasını değiştirmek için
+* Hizmet yapılandırmasını değiştirmek için Azure projesinde değiştirmek istediğiniz rolün kısayol menüsünü açın ve Özellikler'i **seçin.** Daha [fazla bilgi için bkz. Azure Bulut](vs-azure-tools-configure-roles-for-cloud-service.md) Hizmeti rollerini Visual Studio yapılandırma.
 
-## <a name="make-different-setting-combinations-by-using-profiles"></a>Profilleri kullanarak farklı ayar birleşimleri yapın
-Bir profil kullanarak, farklı amaçlar için farklı ayarlar birleşimleriyle **Yayımla Sihirbazı** ' nı otomatik olarak doldurabilirsiniz. Örneğin, hata ayıklama için bir profiliniz ve yayın yapıları için bir profil oluşturabilirsiniz. Bu durumda, **hata ayıklama** profilinizde **IntelliTrace** etkin ve **hata ayıklama** yapılandırması seçili olur ve **yayın** profilinizde **IntelliTrace** devre dışı bırakılır ve **Sürüm** yapılandırması seçilidir. Farklı bir depolama hesabı kullanarak bir hizmeti dağıtmak için farklı profiller de kullanabilirsiniz.
+## <a name="make-different-setting-combinations-by-using-profiles"></a>Profilleri kullanarak farklı ayar bileşimleri oluşturma
+Bir profil kullanarak, Yayımlama Sihirbazı'nı farklı amaçlarla **farklı** ayar birleşimleriyle otomatik olarak doldurabilirsiniz. Örneğin, hata ayıklama için bir profiliniz ve yayın derlemeleri için başka bir profiliniz olabilir. Bu durumda, **Hata Ayıklama** **profilinizde IntelliTrace**  etkin ve Hata ayıklama  yapılandırması seçili olur ve Yayın **profilinizde IntelliTrace** devre dışı bırakılır ve **Sürüm** yapılandırması seçili olur. Bir hizmeti farklı bir depolama hesabı kullanarak dağıtmak için farklı profiller de kullanabilirsiniz.
 
-Sihirbazı ilk kez çalıştırdığınızda varsayılan bir profil oluşturulur. Visual Studio **profili, profil klasörü altında** Azure projenize eklenen. azurePubXml uzantısına sahip bir dosyada depolar. Sihirbazı daha sonra çalıştırdığınızda farklı seçimleri el ile belirtirseniz dosya otomatik olarak güncelleştirilir. Aşağıdaki yordamı çalıştırmadan önce, zaten bulut hizmetinizi en az bir kez yayımladınız.
+Sihirbazı ilk kez çalıştıracak olurken varsayılan bir profil oluşturulur. Visual Studio, Profiller klasörünün altında Azure projenize eklenen .azurePubXml uzantısına sahip bir **dosyada depolar.** Sihirbazı daha sonra çalıştıracaksanız, el ile farklı seçenekler belirtirsiniz, dosya otomatik olarak ler. Aşağıdaki yordamı çalıştırmadan önce bulut hizmetinizi en az bir kez yayımlamış olması gerekir.
 
-### <a name="to-add-a-profile"></a>Bir profil eklemek için
-1. Azure projeniz için kısayol menüsünü açın ve ardından **Yayımla**' yı seçin.
-2. Aşağıdaki çizimde gösterildiği gibi, **hedef profil** listesinin yanındaki **profili kaydet** düğmesini seçin. Bu, sizin için bir profil oluşturur.
+### <a name="to-add-a-profile"></a>Profil eklemek için
+1. Azure projenizin kısayol menüsünü açın ve Yayımla'yı **seçin.**
+2. Hedef profil **listesinin** yanında, aşağıdaki **çizimde gösterildiği** gibi Profili Kaydet düğmesini seçin. Bu işlem sizin için bir profil oluşturur.
 
-    ![Yeni bir profil oluşturun](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/create-new-profile.png)
-3. Profil oluşturulduktan sonra **hedef profil** listesinde **<Yönet... >** öğesini seçin.
+    ![Yeni profil oluşturma](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/create-new-profile.png)
+3. Profil oluşturulduktan sonra Hedef profil **<Yönet...>'yi**  seçin.
 
-    Aşağıdaki çizimde gösterildiği gibi **profilleri Yönet** iletişim kutusu görünür.
+    Aşağıdaki **çizimde** gösterildiği gibi Profilleri Yönet iletişim kutusu görüntülenir.
 
-    ![Profilleri Yönet Iletişim kutusu](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/manage-profiles.png)
-4. **Ad** listesinde bir profil seçin ve ardından **kopya oluştur**' u seçin.
-5. **Kapat** düğmesini seçin.
+    ![Profilleri Yönet İletişim Kutusu](./media/vs-azure-tools-service-configurations-and-profiles-how-to-manage/manage-profiles.png)
+4. Ad **listesinde bir** profil seçin ve ardından Kopyala Oluştur'a **tıklayın.**
+5. Kapat **düğmesini** seçin.
 
-    Yeni profil, hedef profil listesinde görünür.
-6. **Hedef profil** listesinde, az önce oluşturduğunuz profili seçin. Yayımla Sihirbazı ayarları, seçtiğiniz profildeki seçimlerle doldurulur.
-7. Yayımla sihirbazının her bir sayfasını göstermek için **önceki** ve **sonraki** düğmeleri seçin ve ardından bu profilin ayarlarını özelleştirin. Bilgi için bkz. [Azure Uygulama Yayımlama Sihirbazı](vs-azure-tools-publish-azure-application-wizard.md) .
-8. ayarları özelleştirmeyi bitirdikten sonra, **ileri** ' yi seçerek Ayarlar sayfasına dönün. Bu ayarları kullanarak hizmeti yayımladığınızda veya profil listesinin yanındaki **Kaydet** ' i seçtiğinizde profil kaydedilir.
+    Yeni profil Hedef profil listesinde görünür.
+6. Hedef **profil listesinde,** yeni oluşturduğunuz profili seçin. Yayımlama Sihirbazı ayarları, seçtiğiniz profilden gelen seçeneklerle doldurulur.
+7. Yayımlama **Sihirbazı'nın** **her** sayfasını görüntülemek için Önceki ve Sonraki düğmelerini seçin ve ardından bu profilin ayarlarını özelleştirin. Bilgi [için bkz. Azure Uygulama Yayımlama](vs-azure-tools-publish-azure-application-wizard.md) Sihirbazı.
+8. Ayarları özelleştirmeyi bitirdikten sonra, **Ayarlar** sayfasına geri dönmek için Ayarlar seçin. Profil, hizmeti yayımlarken bu ayarlar kullanılarak kaydedilir veya profil **listesinin** yanındaki Kaydet'i seçmeniz gerekir.
 
 ### <a name="to-rename-or-delete-a-profile"></a>Bir profili yeniden adlandırmak veya silmek için
-1. Azure projeniz için kısayol menüsünü açın ve ardından **Yayımla**' yı seçin.
-2. **Hedef profil** listesinde **Yönet**' i seçin.
-3. **Profilleri Yönet** iletişim kutusunda, silmek istediğiniz profili seçin ve ardından **Kaldır**' ı seçin.
-4. Görüntülenen onay iletişim kutusunda **Tamam**' ı seçin.
+1. Azure projenizin kısayol menüsünü açın ve Yayımla'yı **seçin.**
+2. Hedef profil **listesinde Yönet'i** **seçin.**
+3. Profilleri **Yönet iletişim kutusunda,** silmek istediğiniz profili seçin ve ardından Kaldır'ı **seçin.**
+4. Görüntülenen onay iletişim kutusunda Tamam'ı **seçin.**
 5. **Kapat**’ı seçin.
 
 ### <a name="to-change-a-profile"></a>Bir profili değiştirmek için
-1. Azure projeniz için kısayol menüsünü açın ve ardından **Yayımla**' yı seçin.
-2. **Hedef profil** listesinde, değiştirmek istediğiniz profili seçin.
-3. Yayımla sihirbazının her bir sayfasını göstermek için **önceki** ve **sonraki** düğmeleri seçin ve ardından istediğiniz ayarları değiştirin. Bilgi için bkz. [Azure Uygulama Yayımlama Sihirbazı](vs-azure-tools-publish-azure-application-wizard.md) .
-4. ayarları değiştirmeyi bitirdikten sonra, **ileri** ' yi seçerek **Ayarlar** sayfasına dönün.
-5. (İsteğe bağlı) yeni ayarları kullanarak bulut hizmetini yayımlamak için **Yayımla** ' yı seçin. bulut hizmetinizi şu anda yayımlamak istemiyorsanız ve yayımlama sihirbazı 'nı kapatırsanız, Visual Studio değişiklikleri profile kaydetmek isteyip istemediğinizi sorar.
+1. Azure projenizin kısayol menüsünü açın ve Yayımla'yı **seçin.**
+2. Hedef **profil listesinde,** değiştirmek istediğiniz profili seçin.
+3. Yayımlama **Sihirbazı'nın** **her** sayfasını görüntülemek için Önceki ve Sonraki düğmelerini seçin ve ardından istediğiniz ayarları değiştirin. Bilgi [için bkz. Azure Uygulama Yayımlama](vs-azure-tools-publish-azure-application-wizard.md) Sihirbazı.
+4. Ayarları değiştirmeyi bitirdikten sonra, yeni **sayfaya** geri dönmek için **Ayarlar** seçin.
+5. (İsteğe bağlı) **Yeni ayarları** kullanarak bulut hizmetini yayımlamak için Yayımla'yı seçin. Şu anda bulut hizmetinizi yayımlamak istemiyorsanız ve Yayımlama Sihirbazı'nı kapatırsanız, Visual Studio profilde kaydetmek istediğiniz değişiklikleri sorar.
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Visual Studio azure projenizin diğer bölümlerini yapılandırma hakkında bilgi edinmek için bkz. [azure Project yapılandırma](vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address.md).
+Azure projenizin diğer bölümlerini yapılandırma hakkında daha fazla bilgi edinmek Visual Studio bkz. [Azure Project.](vs-azure-tools-cloud-service-retain-a-constant-virtual-ip-address.md)

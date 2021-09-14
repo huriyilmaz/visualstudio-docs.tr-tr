@@ -1,6 +1,6 @@
 ---
-title: İleti kodları | Microsoft Docs
-description: Mesaj Iletilerinin her ileti satırında gösterilen ileti kodlarının anlamlarını öğrenin.
+title: İleti Kodları | Microsoft Docs
+description: İletiler Görünümü'nin her ileti satırına gösterilen ileti kodlarının anlamını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,18 +14,18 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: ce6fe678785719ed52e9be59e28d7eedd98ebef6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122146842"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725407"
 ---
 # <a name="message-codes"></a>İleti Kodları
-[Iletiler görünümünde](../debugger/messages-view.md) gösterilen her ileti satırı bir ' P, ', ' 's ' veya ' R ' kodu içerir. Bu kodlar aşağıdaki anlamlara sahiptir:
+İletiler Görünümünde gösterilen [her ileti satırı](../debugger/messages-view.md) bir 'P,' 'S,' 's' veya 'R' kodu içerir. Bu kodlar aşağıdaki anlamlara sahiptir:
 
 |Kod|Anlamı|
 |----------|-------------|
-|P|İleti, **PostMessage** işleviyle kuyruğa gönderildi. İletinin son değerlendirmesi ile ilgili bilgi yok.|
-|S|İleti, **SendMessage** işleviyle gönderilmiştir. Bu, alıcı iletiyi işleyerek ve döndürünceye kadar gönderenin denetimi geri kazanmayacağı anlamına gelir. Bu nedenle alıcı, gönderene geri dönüş değeri geçirebilir.|
-|s|İleti gönderildi, ancak güvenlik dönüş değerine erişimi engelliyor.|
-|R|Her birinin ' satırı, ileti dönüş değerini listeleyen karşılık gelen bir ' R ' (Return) satırına sahiptir. Bazen ileti çağrıları iç içe gelir, yani bir ileti işleyicisi başka bir ileti gönderir.|
+|P|İleti, PostMessage işleviyle **kuyruğa gönderildi.** İletinin son değerlendirmesinde hiçbir bilgi yoktur.|
+|S|İleti **SendMessage işleviyle gönderildi.** Bu, alıcı iletiyi işleyene ve döndürene kadar gönderenin denetimi yeniden elde etmey olduğu anlamına gelir. Bu nedenle alıcı, gönderene geri bir dönüş değeri iletir.|
+|s|İleti gönderildi, ancak güvenlik dönüş değerine erişimi engelledi.|
+|R|Her 'S' satırı, ileti dönüş değerini listeleye karşılık gelen bir 'R' (dönüş) satırına sahip olur. Bazen ileti çağrıları iç içe geçmiş olur, bu da bir ileti işleyicinin başka bir ileti gönderdiği anlamına gelir.|

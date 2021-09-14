@@ -1,6 +1,6 @@
 ---
 description: Bu yöntem, ifadeyi zaman uyumsuz olarak değerlendirir.
-title: 'IDebugExpression2:: EvaluateAsync | Microsoft Docs'
+title: IDebugExpression2::EvaluateAsync | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ad7d4c41aae0b1d48502fdb19865e737004696ae
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122118885"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725794"
 ---
 # <a name="idebugexpression2evaluateasync"></a>IDebugExpression2::EvaluateAsync
 Bu yöntem, ifadeyi zaman uyumsuz olarak değerlendirir.
@@ -45,23 +45,23 @@ int EvaluateAsync(
 
 ## <a name="parameters"></a>Parametreler
 `dwFlags`\
-'ndaki İfade değerlendirmesini denetleyen [Evalflags](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasındaki bayrakların birleşimi.
+[in] İfade değerlendirmesini kontrol eden [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) numaralamasında yer alan bayrakların birleşimi.
 
 `pExprCallback`\
-'ndaki Bu parametre her zaman bir null değerdir.
+[in] Bu parametre her zaman null değerdir.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür. Tipik bir hata kodu:
+Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür. Tipik bir hata kodu şöyledir:
 
 |Hata|Açıklama|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|Şu anda başka bir ifade değerlendirilemekte ve eşzamanlı ifade değerlendirmesi desteklenmiyor.|
+|E_EVALUATE_BUSY_WITH_EVALUATION|Şu anda başka bir ifade değerlendiriliyor ve eşzamanlı ifade değerlendirmesi desteklenmiyor.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yöntem, ifade değerlendirmesini başlattıktan hemen sonra döndürmelidir. İfade başarıyla değerlendirildiğinde, [Attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md) veya [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)aracılığıyla sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) Event geri çağırması için bir [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) gönderilmesi gerekir.
+Bu yöntem, ifade değerlendirmesini başlattıktan hemen sonra dönmeli. İfade başarıyla değerlendir geldiğinde, Attach veya Attach aracılığıyla sağlandı olarak [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) olay geri çağırmaya bir [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) [gönder](../../../extensibility/debugger/reference/idebugprogram2-attach.md) [gerekir.](../../../extensibility/debugger/reference/idebugengine2-attach.md)
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CExpression` [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CExpression` [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulandığını gösterir.
 
 ```cpp
 HRESULT CExpression::EvaluateAsync(EVALFLAGS dwFlags,

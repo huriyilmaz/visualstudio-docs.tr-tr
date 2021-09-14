@@ -1,6 +1,6 @@
 ---
 title: XAML Tasarımcısı için klavye kısayolları
-description: Çalışma yüzeyinde ve belge anahattı penceresinde öğelerle çalışma için komutlara erişen XAML Tasarımcısı klavye kısayolları hakkında bilgi edinin.
+description: Çalışma panosunda ve Belge Ana XAML Tasarımcısı öğeleriyle çalışmaya uygun komutlara erişen klavye kısayolları hakkında bilgi edinmek için bu klavye kısayollarını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,45 +10,45 @@ ms.author: tglee
 manager: jmartens
 ms.technology: vs-xaml-tools
 ms.openlocfilehash: fa5890c56895d9bb818935253222bc04fb9bf01d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122037895"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726042"
 ---
 # <a name="keyboard-shortcuts-for-xaml-designer"></a>XAML Tasarımcısı için klavye kısayolları
 
-XAML Tasarımcısı klavye kısayolları, tek bir klavye kısayoluna birden çok fare düğmesi tıklamasını gerektiren bir eylemi azaltarak çalışmanızı hızlandırabilir.
+Klavye kısayolları XAML Tasarımcısı tek bir klavye kısayolu için birden çok fare düğmesi tıklaması gerektiren bir eylemi azaltarak çalışmanızı hızlandırabilirsiniz.
 
 ## <a name="element-shortcuts"></a>Öğe kısayolları
 
-Bu tabloda, çalışma yüzeyinde öğelerle çalışmak için kullanılabilen kısayollar listelenmektedir.
+Bu tabloda, çalışma panosunda öğelerle çalışmak için kullanılabilen kısayollar liste bulunmaktadır.
 
 |**Bu eylemi gerçekleştirmek için**|**Bunu yapın**|
 | - |-----------------|
-|Öğe oluşturma|**CTRL** + **N** tuşlarına basın|
-|Yinelenen öğe|**Alt** tuşunu basılı tutun ve bir ok tuşuna basın.|
-|Denetimdeki metni düzenleme|**F2** tuşuna basın (çıkmak için **ESC** tuşuna basın)|
-|Tek bir öğe seçin|Öğeleri belgede göründükleri sırada seçmek için **Tab** tuşuna basın. (Ayrıca, ok tuşlarını kullanarak öğeleri de seçebilirsiniz.)|
-|Birden çok öğe seçin|Her öğeyi seçerken **SHIFT** tuşuna basın ve basılı tutun|
-|Bitişik olmayan birden çok öğe seç|İlk ve son öğeleri seçerken **CTRL** tuşuna basın ve basılı tutun|
-|Seçili öğeleri taşı|Ok tuşlarına basın. (Her tuş tuşuna basarak geçiş mesafesini artırmak için **SHIFT** tuşunu basılı tutabilirsiniz.)|
-|Bir öğeyi 15 derece artışlarla döndürme|Öğeyi döndürürken **SHIFT** tuşunu basılı tutun|
-|Tüm öğeleri seç|**CTRL** tuşuna basın + |
-|Tüm öğelerin seçimini temizle|**CTRL** + **SHIFT** +  tuşuna basın|
-|Öğe tutamaçlarını göster veya gizle|**F9** tuşuna basın|
-|Öğe için bir özellik seçin|Seçili bir öğe ve Özellikler penceresi odaklanıldığında **Tab** tuşuna basın. ( **CTRL** + kullanın Odağı Özellikler penceresi değiştirme **sekmesi** .) Aşağı açılan listelerden özellik değerlerini seçmek için ok tuşlarını kullanabilirsiniz.|
+|Öğe oluşturma|**Ctrl** + **N tuşlarına basın**|
+|Bir öğeyi yineleme|Alt tuşunu **basılı tutun** ve bir ok tuşuna basın.|
+|Denetimde metni düzenleme|**F2 tuşuna** basın **(çıkmak için Esc** tuşuna basın)|
+|Tek bir öğe seçin|Öğeleri **belgede** görünme sırasına göre seçmek için Sekme tuşuna basın. (Ok tuşlarını kullanarak öğeleri de seçin.)|
+|Birden çok öğe seçme|Her öğeyi **seçerken Shift** tuşuna basın ve basılı tutun|
+|Bitişik olmayan birden çok öğe seçin|İlk ve son **öğeleri seçme sırasında Ctrl** tuşunu basılı tutun|
+|Seçili öğeleri taşıma|Ok tuşlarına basın. (Shift tuşunu basılı **tutarak** tuşa basarak taşıma mesafeyi artırabilirsiniz.)|
+|Bir öğeyi 15 derecelik artışlarla döndürme|Öğeyi döndürme **sırasında Shift** tuşunu basılı tutun|
+|Tüm öğeleri seçin|**Ctrl** + **A tuşlarına basın**|
+|Tüm öğelerin seçimini temizle|**Ctrl Shift** A +  + **tuşlarına basın**|
+|Öğe tanıtıcılarını gösterme veya gizleme|**F9 tuşuna basın**|
+|Öğe için özellik seçme|Bir öğe seçiliyken ve odak noktası Özellikler penceresi Tab tuşuna **basın.** **(Ctrl tuşunu kullanın** + **Odağı** yeni bir sekmeye Özellikler penceresi.) Aşağı açılan listelerden özellik değerlerini seçmek için ok tuşlarını kullanabilirsiniz.|
 
-## <a name="document-outline-window-shortcuts"></a>Belge ana hat penceresi kısayolları
+## <a name="document-outline-window-shortcuts"></a>Belge Ana Hat penceresi kısayolları
 
-Aşağıdaki tabloda, belge ana hattı penceresindeki öğelerle çalışırken kullanılabilecek kısayollar listelenmektedir.
+Aşağıdaki tabloda, Belge Ana Hat penceresinde öğelerle çalışırken kullanılabilen kısayollar listelenmiştir.
 
 |**Bu eylemi gerçekleştirmek için**|**Bunu yapın**|
 | - |-----------------|
-|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerini gizle|**CTRL** + **H**|
-|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerini göster|**SHIFT** + **CTRL** + **H**|
-|Odak belge anahattı penceresinde olduğunda çalışma yüzeyi nesnelerini kilitle|**CTRL** + **L**|
-|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerinin kilidini aç|**SHIFT** + **CTRL** + **L**|
+|Odak Belge Ana Hat penceresindeyken çalışma panosu nesnelerini gizleme|**Ctrl tuşunu basılı tutarak** + **H**|
+|Odak Belge Ana Hat penceresindeyken çalışma panosu nesnelerini gösterir|**Shift ile kaydırma** + **Ctrl tuşunu basılı tutarak** + **H**|
+|Odak Belge Ana Hat penceresindeyken çalışma panosu nesnelerini kilitleme|**Ctrl tuşunu basılı tutarak** + **L**|
+|Odak Belge Ana Hat penceresindeyken çalışma panosu nesnelerinin kilidini açma|**Shift ile kaydırma** + **Ctrl tuşunu basılı tutarak** + **L**|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

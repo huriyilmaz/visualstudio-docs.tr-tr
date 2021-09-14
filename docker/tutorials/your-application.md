@@ -11,11 +11,11 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: f7e22de1de21773d8218e9a2e6567ebe72563354
-ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "122334336"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633414"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Todo örnek uygulamasını derleyin ve çalıştırın
 

@@ -1,6 +1,6 @@
 ---
-title: 'Docker öğreticisi-Bölüm 10: buluta dağıtma'
-description: Barındırma için bir bulut hizmetine Docker uygulaması dağıtın.
+title: 'Docker öğreticisi - Bölüm 10: Buluta dağıtma'
+description: Barındırma için bir docker uygulamasını bulut hizmetine dağıtın.
 ms.date: 08/06/2021
 author: nebuk89
 ms.author: ghogen
@@ -11,82 +11,82 @@ ms.topic: conceptual
 ms.workload:
 - azure
 ms.openlocfilehash: faa4fe632662a9e57ab6e39573a42ad4e3da4c97
-ms.sourcegitcommit: f930bc28bdb0ba01d6f7cb48f229afecfa0c90cd
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "122334499"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633494"
 ---
-# <a name="deploy-to-the-cloud"></a>Buluta dağıtın
+# <a name="deploy-to-the-cloud"></a>Buluta dağıtma
 
-Uygulamanızı yerel olarak çalıştırdığınıza göre, diğer kişilerin bu uygulamaya erişebilmesi ve onu kullanabilmesi için bulutta çalıştırmayı düşünmek üzere bir başlangıç yapabilirsiniz. Bunu yapmak için Docker bağlamlarını kullanacaksınız. Bağlam, şu anda kapsayıcılarla çalışmakta olduğunuz yerdir. Şu anda yalnızca "varsayılan" içeriğiniz vardır. bu nedenle, bir bulut eklemeniz ve uygulamanızı buna dağıtmanız gerekir.
+Artık uygulamayı yerel olarak çalıştırdınıza göre, diğer kişilerin bu uygulamaya erişmesi ve bunu kullanabiliyor olması için uygulamayı bulutta çalıştırmayı düşünebilirsiniz. Bunu yapmak için Docker bağlamlarını kullan kullanırsiniz. Bağlam, şu anda kapsayıcılarla çalıştığınız yerdir. Şu anda yalnızca "varsayılan" bağlamınız olduğu için bir bulut bağlamı eklemeniz ve uygulamanızı buna dağıtmanız gerekir.
 
-## <a name="create-your-cloud-context"></a>Bulut bağlamını oluşturma
+## <a name="create-your-cloud-context"></a>Bulut bağlamınızı oluşturma
 
-1. Başlamak için, Docker panelinin bağlamlar bölümüne bakarak sahip olduğunuz bağlamlara bakabilirsiniz:
+1. Başlamak için Docker panelinin contexts bölümüne bakarak hangi bağlamlara sahip olduğunu bulabilirsiniz:
 
    ![Yalnızca varsayılan bağlamı gösterir](media/defaultcontext.png)
 
-Yerel iş için yalnızca varsayılan bağlamı görmeniz gerekir.
+Yalnızca yerel çalışma için varsayılan bağlamınızı görüyor gerekir.
 
-1. Buluta dağıtmak için yeni bir ACI bağlamı oluşturmanız gerekir, ancak bunu yapmak için önce Azure hesap uzantısının Azure 'da kimlik doğrulaması yapması gerekir.
+1. Buluta dağıtmak için yeni bir ACI bağlamı oluşturmanız gerekir, ancak bunu yapmak için önce Azure hesabı uzantısının Azure kimlik doğrulamasına sahip olması gerekir.
 
-   ![Azure uzantısı ekleniyor](media/addazureextension.png)
+   ![Azure uzantısı ekleme](media/addazureextension.png)
 
-Henüz yoksa bir Azure hesabı ayarlamanız gerekir.
+Henüz azure hesabınız yoksa bir Azure hesabı ayarlayabilirsiniz.
 
-1. Şimdi yeni acı bağlamınızı oluşturabilirsiniz. Bunu, Docker görünümündeki **bağlamlar** bölümünde yer alan artı düğmesine tıklayarak yapabilirsiniz.
+1. Artık yeni ACI bağlamınızı oluşturabilirsiniz. Bunu Yapmak için Docker görünümünün **Bağlamlar bölümündeki** artı düğmesine tıklayabilirsiniz.
 
-   ![ACI bağlamını oluşturma](media/createnewcontext.png)
+   ![ACI bağlamınızı oluşturma](media/createnewcontext.png)
 
-Bu, altında bu kapsayıcıları çalıştırmak istediğiniz kaynak grubunu sorar. Ok tuşlarını kullanarak var olan bir grubu seçin ya da yeni grubu kullanmak için varsayılan seçeneği kullanın.
+Bu, bu kapsayıcıları hangi kaynak grubu altında çalıştırmak istediğinize sorar. Ok tuşlarını kullanarak mevcut bir grubu seçin veya yeni grubu kullanmak için varsayılan seçeneği kullanın.
 
-![Kaynak grubunuzu seçme](media/selectresourcegroup.png)
+![Kaynak grubularınızı seçme](media/selectresourcegroup.png)
 
-Artık ACI bağlamını listelenmiş olarak görebilir ve geçerli odağınızı/kullanımda olan bağlamı açmak için sağ tıklayıp tıklamayı seçebilirsiniz:
+Artık ACI bağlamınızı listelenmiş olarak görebilir ve geçerli odağınız/kullanım bağlamınız yapmak için buna sağ tıklarsanız:
 
-![Yeni acı bağlamı seçilebilir](media/listofcontexts.png)
+![Yeni ACI bağlamı seçilebilir](media/listofcontexts.png)
 
-## <a name="run-containers-in-the-cloud"></a>Kapsayıcıları bulutta çalıştırın
+## <a name="run-containers-in-the-cloud"></a>Bulutta kapsayıcıları çalıştırma
 
-1. Şimdi ACI bağlamını kullanın ve kapsayıcıyı çalıştırın.
+1. Şimdi ACI bağlamınızı kullanın ve kapsayıcıyı çalıştırın.
 
    ```bash
    docker context use myacicontext
    docker run  -dp 3000:3000 <username>/getting-started
    ```
 
-1. Bunu çalıştırmak zorunda kalmadan, artık bağlamınızda kapsayıcıya bakabilirsiniz.
+1. Bunu çalıştırarak, şimdi bağlamınız içinde kapsayıcıya bakın.
 
-   ![ACı bağlamınızda çalışan kapsayıcı](media/contextcontainer.png)
+   ![ACI bağlamınız içinde çalışan kapsayıcı](media/contextcontainer.png)
 
-1. Bunun düzgün şekilde çalıştığından emin olmak için, çalışan kapsayıcıya sağ tıklayıp **Tarayıcıda görüntüle** seçeneğini belirleyebilirsiniz.
+1. Tüm bunların düzgün çalıştığını kontrol etmek için çalışan kapsayıcıya sağ tıklayabilirsiniz ve Tarayıcıda **görüntüle'yi seçebilirsiniz.**
 
-   ![Ortak IP ile acı 'de kapsayıcı](media/containerinaci.png)
+   ![ACI'da genel IP ile kapsayıcı](media/containerinaci.png)
 
-Ayrıca, kapsayıcının ortak bir IP 'de çalıştığını ve doğru şekilde çalıştığını görebilirsiniz!
+Ayrıca kapsayıcının genel IP'de çalıştığını ve düzgün çalıştığını da görüyorsunuz!
 
-1. Şimdi nasıl çalıştığını görmek için çalışan kapsayımıza göz atabilirsiniz. ' İ, kapsayıcı günlüklerine bakarak başlayabilirsiniz:
+1. Şimdi, nasıl çalıştığını görmek için çalışan kapsayıcımıza göz atabilirsiniz. Kapsayıcı günlüklerine göz atarak başlayabilirsiniz:
  
  ```bash
    docker logs distracted-jackson
    ```
 
-1. Ayrıca, yerel bir kapsayıcıda yaptığınız gibi kapsayıcınızı da kullanabilirsiniz.
+1. Ayrıca, yerel bir kapsayıcıda olduğu gibi kapsayıcınıza da exec çalıştırılabilir.
  
  ```bash
    docker exec -it distracted-jackson sh
    ```
 
-1. Son olarak, çalışma alanınızı temizlemek ve test kapsayıcısını çalıştırmaya devam etmek için ücretlendirilmediğinden emin olmak için, çalışan kapsayıcıya sağ tıklayıp **Kaldır**' ı seçmeniz yeterlidir.
+1. Son olarak çalışma alanınızı temizlemek ve test kapsayıcısı çalıştırmaya devam etmek için ücret ödemeye gerek olmadığınızdan emin olmak için, çalışan kapsayıcıya sağ tıklar ve Kaldır'ı **seçebilirsiniz.**
 
 ## <a name="recap"></a>Özet
 
-Artık iş yükünüzü aldınız ve ilk kez buluta başarıyla dağıttınız. Bunu, komut satırından ve kullanarak ACI bağlamınızın içinden `docker run` ve ayrıca `docker compose up` çok Kapsayıcılı uygulamalarınızı çalıştırmak için kullanarak yapabilirsiniz. Kapsayıcılarınızı bulutta çalıştırma hakkında daha fazla bilgi edinmek için [ACI 'yi kullanma hakkında genişletilmiş belgeleri](https://docs.docker.com/engine/context/aci-integration/)okuyun.
+Harika, iş yüklerinizi ilk kez başarıyla buluta dağıttınız. Bunların hepsini komut satırıyla ve aynı zamanda çok kapsayıcılı uygulamalarınızı çalıştırmak için kullanarak ve kullanarak ACI `docker run` `docker compose up` bağlamınız içinde de çalıştırabilirsiniz. Kapsayıcılarınızı bulutta çalıştırma hakkında daha fazla bilgi için [ACI](https://docs.docker.com/engine/context/aci-integration/)kullanma ile ilgili genişletilmiş belgeleri okuyun.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Öğreticiye devam edin!
 
 > [!div class="nextstepaction"]
-> [Sıradaki](whats-next.md)
+> [Sırada ne var?](whats-next.md)

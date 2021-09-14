@@ -15,11 +15,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 8fe3ac3ca61d54f14cd72387623461dd5057740b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122147914"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633854"
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin arabirimi
   yönetilen VSTO eklentilerini yükleyen bir bileşen oluşturmak için ımanagedaddin arabirimini uygulayın. bu arabirim 2007 Microsoft Office sistemine eklenmiştir.

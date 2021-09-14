@@ -17,11 +17,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 7ef751a635d31bc43b2ae4eb32dae9917120a7b0
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122144281"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726892"
 ---
 # <a name="vstextview-object"></a>VSTextView nesnesi
 
@@ -29,7 +29,7 @@ Metin görünümü, kullanıcıların metin arabelleğinin Unicode metnini gör�
 
 Aşağıdaki tabloda, nesnesindeki arabirimler gösterilmektedir <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> .
 
-|Arabirim|Açıklama|
+|Arabirim|Description|
 |---------------|-----------------|
 |[IDropSource](/windows/desktop/api/oleidl/nn-oleidl-idropsource)|Standart OLE arabirimi.|
 |<xref:Microsoft.VisualStudio.OLE.Interop.IDropTarget>|Standart OLE arabirimi.|

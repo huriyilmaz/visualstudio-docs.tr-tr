@@ -19,11 +19,11 @@ ms.technology: office-development
 ms.workload:
 - office
 ms.openlocfilehash: 8916affc89cdf179cf3981e5900d155731ded6c8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122046444"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726710"
 ---
 # <a name="how-to-programmatically-set-search-options-in-word"></a>Nasıl yapılır: Word 'de program aracılığıyla arama seçeneklerini ayarlama
   Microsoft Office Word belgelerindeki seçimler için arama seçeneklerini kurmanın iki yolu vardır:

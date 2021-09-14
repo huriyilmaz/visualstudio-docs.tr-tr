@@ -19,11 +19,11 @@ ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-test
 ms.openlocfilehash: 0a783a64901f0178913b2b90a3052bf7bbc03884
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122140264"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628221"
 ---
 # <a name="analyze-load-test-results-in-the-graphs-view-of-the-load-test-analyzer"></a>Yük Testi Çözümleyicisinin grafik görünümünde Yük testi sonuçlarını çözümleme
 
@@ -41,7 +41,7 @@ Birkaç yerleşik grafik sağlanır. Yerleşik grafikleri olduğu gibi kullanabi
 
 Aşağıdaki tabloda, yük testi sonuçlarını çözümlemek için kullanılabilen yerleşik grafikler listelenmektedir.
 
-|Graph Ada|Açıklama|
+|Graph Ada|Description|
 |-|-|
 |Anahtar göstergeleri|Kullanıcı yükü, aktarım hızı ve yanıt süresi gibi test performansının temel yönlerini tanımlayan sayaçlar.|
 |Sınama yanıt süresi|Testlerin çalıştırılması için gereken süre hakkındaki veriler.|

@@ -12,15 +12,15 @@ ms.topic: overview
 ms.workload:
 - multiple
 ms.openlocfilehash: 42d22d608426641394423d1ec0478605d4d4e68d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122037544"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633318"
 ---
 # <a name="overview-of-visual-studio-tools-for-ai"></a>AI için Visual Studio Araçları genel bakış
 
-Visual Studio Araçları geliştirme, derin öğrenme çözümleri oluşturmak, test etmek ve dağıtmak için kullanabileceğiniz tümleşik bir geliştirme ortamıdır (IDE). Aşağıdaki öğreticilerde ve örneklerde AI Araçlarını kullanma hakkında daha fazla bilgi edinebilirsiniz.
+Visual Studio Araçları geliştirme, derin öğrenme çözümleri oluşturmak, test etmek ve dağıtmak için kullanabileceğiniz tümleşik bir geliştirme ortamıdır (IDE). Aşağıdaki öğreticilerden ve örneklerden AI Araçlarını kullanma hakkında daha fazla bilgi edinebilirsiniz.
 
 ## <a name="install-the-extension"></a>Uzantıyı yükleme
 
@@ -40,7 +40,7 @@ Bulutta [TensorFlow](tensorflow-vm.md) modeli eğitin öğreticisinde derin öğ
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Sistem gereksinimleri ve destek seçenekleri dahil olmak Visual Studio Araçları için daha fazla bilgi edinmek için [Bkz. AI için Visual Studio Araçları](about-ai-tools.md) hakkında sayfası.
+Sistem gereksinimleri ve destek seçenekleri de dahil olmak üzere, AI'ye Visual Studio Araçları hakkında daha fazla bilgi edinmek için [Bkz. Visual Studio Araçları AI için](about-ai-tools.md) Güvenlik Hakkında sayfası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 [Visual Studio genişletilebilirliği](../extensibility/index.yml?view=vs-2017&preserve-view=true)

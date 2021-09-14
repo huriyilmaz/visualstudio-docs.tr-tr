@@ -13,11 +13,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 17f009c25ce6de66a6ac4ce0ac2b1f304dd22a72
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122160562"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725308"
 ---
 # <a name="m_children-field"></a>m_children alanı
 Bu göreve kayıtlı alt görevlerin listesi.

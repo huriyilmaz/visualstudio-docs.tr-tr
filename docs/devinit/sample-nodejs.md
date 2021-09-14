@@ -11,12 +11,12 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 76800cc5bd9ec3fccc59bce28311e820a508ffde43f273741ea96fa4f21f3c87
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 61e58109d98417e7b8b57a6c0fd23c64106413d7
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121452822"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725855"
 ---
 # <a name="nodejs-app"></a>Node.js uygulaması
 
@@ -27,7 +27,7 @@ Bir Node.js Express projesi için NPM paketlerini yüklemek üzere devinit kulla
 
 ## <a name="devinitjson"></a>.devinit.json
 
-Depo kökündeki dosya _.devinit.js_ içeriği.
+Depo kökündeki _. devinit. JSON_ dosyasının içeriği.
 
 ```json
 {
@@ -68,9 +68,9 @@ Depo kökündeki dosya _.devinit.js_ içeriği.
 
 ```
 
-## <a name="devcontainerjson"></a>Üzerinde .devcontainer.js
+## <a name="devcontainerjson"></a>. devcontainer. JSON
 
-Depo kökündeki dosya _.devcontainer.js_ içeriği.
+Depo kökündeki _. devcontainer. JSON_ dosyasının içeriği.
 
 ```json
 {

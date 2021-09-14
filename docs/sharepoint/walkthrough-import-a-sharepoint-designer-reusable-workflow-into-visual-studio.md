@@ -1,7 +1,7 @@
 ---
-title: 'izlenecek yol: SharePoint Designer yeniden kullanılabilir iş akışını içeri aktarma | Microsoft Docs'
+title: 'Adım adım kılavuz: SharePoint Tasarımcısı yeniden kullanılabilir iş akışı akışını içeri | Microsoft Docs'
 titleSuffix: ''
-description: bu kılavuzda, SharePoint tasarımcısında oluşturulan yeniden kullanılabilir bir iş akışını Visual Studio SharePoint iş akışı projesine aktarın.
+description: Bu kılavuzda, SharePoint Designer'da oluşturulan yeniden Visual Studio SharePoint iş akışı projesine aktarın.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -20,188 +20,188 @@ ms.technology: sharepoint-development
 ms.workload:
 - office
 ms.openlocfilehash: ab8357b126ab2bfacea24cd3b922baa40fb25da4
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122148759"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126628208"
 ---
-# <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow"></a>izlenecek yol: SharePoint Designer yeniden kullanılabilir iş akışını içeri aktarma
+# <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow"></a>Adım adım kılavuz: SharePoint Tasarımcısı yeniden kullanılabilir iş akışını içeri aktarma
 
-  bu izlenecek yol, SharePoint tasarımcısı 2010 ' de oluşturulan yeniden kullanılabilir bir iş akışının [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint bir iş akışı projesine nasıl aktarılacağını gösterir.
+  Bu kılavuzda, SharePoint Designer 2010'da oluşturulan yeniden kullanılabilir iş akışını bir iş akışı [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projesine SharePoint nasıl içeri aktarabilirsiniz.
 
- SharePoint tasarımcısında veya *bildirim temelli iş akışlarında* oluşturulan iş akışları, [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] kod yerine deyimlerden oluşur. SharePoint tasarımcı 2010, taşınabilir ve SharePoint sitelerde farklı listeler tarafından kullanılabilen, bildirim temelli iş akışları olan yeniden *kullanılabilir iş akışlarını* tanıtır.
+ SharePoint Designer'da oluşturulan iş akışları veya bildirimli *iş akışları,* kod [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] yerine deyimlerden oluşur. SharePoint Tasarımcı 2010' da, sitelerde farklı listeler tarafından kullanılmaktadır taşınabilir, bildirime açık iş akışları olan yeniden kullanılabilir iş SharePoint tanıtır.
 
- [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]Sıralı ve eyalet makine iş akışları gibi ' de oluşturulan iş akışlarına *kod iş* akışları denir. Kod iş akışları, kullanıcıların iş akışının davranışını özelleştirebileceği XML dosyalarından ve kod modüllerinden oluşur.
+ içinde oluşturulan sıralı [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] ve durum makinesi iş akışları gibi iş akışlarına kod iş akışları *denir.* Kod iş akışları, kullanıcıların iş akışının davranışını özelleştirebileceğiniz XML dosya ve kod modüllerinden oluşur.
 
- Visual Studio, SharePoint tasarımcı 2010 ' de oluşturulan yeniden kullanılabilir iş akışlarını içeri aktarmanızı ve bunları SharePoint sitelerinizde kullanılmak üzere kod iş akışlarına dönüştürmenizi sağlar.
+ Visual Studio, SharePoint Designer 2010'da oluşturulan yeniden kullanılabilir iş akışlarını içeri aktarmanıza ve bunları sitelerde kullanmak üzere kod iş akışlarına SharePoint sağlar.
 
- Bu izlenecek yol aşağıdaki görevleri gösterir:
+ Bu kılavuz aşağıdaki görevleri gösterir:
 
-- SharePoint tasarımcısında basit ve yeniden kullanılabilir bir iş akışı oluşturma.
+- SharePoint Designer'da basit, yeniden kullanılabilir bir iş akışı oluşturma.
 
-- SharePoint Designer yeniden kullanılabilir iş akışını bir *. wsp* dosyasına ve SharePoint içine aktarma.
+- SharePoint Tasarımcısı yeniden kullanılabilir iş akışını bir *.wsp* dosyasına ve bir .wsp dosyasına SharePoint.
 
-- *. Wsp* dosyasını [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Içeri aktarma yeniden kullanılabilir iş akışı projesini kullanarak içine aktarma.
+- Yeniden Kullanılabilir İş Akışını İçeri Aktar projesini kullanarak *.wsp* [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dosyasını içine aktarma.
 
 - Kod ekleyerek iş akışını değiştirme.
 
-- içeri aktarılan iş akışını bir SharePoint sitesinde kullanma.
+- İçe aktarılan iş akışını bir SharePoint kullanma.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)]Ve SharePoint desteklenen sürümleri.
+- desteklenen ve sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] SharePoint.
 
 - Visual Studio.
 
-- Microsoft [!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)] SharePoint tasarımcısı 2010.
+- Microsoft [!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)] SharePoint Designer 2010.
 
-## <a name="create-target-sharepoint-subsites"></a>hedef SharePoint alt siteleri oluştur
- ilk olarak iki yeni SharePoint alt site oluşturursunuz: biri SharePoint tasarımcısından yeniden kullanılabilir iş akışlarını barındırmak için, başka bir deyişle, dönüştürülmüş iş akışlarını barındırmak için.
+## <a name="create-target-sharepoint-subsites"></a>Hedef SharePoint siteleri oluşturma
+ İlk olarak iki yeni SharePoint oluşturun: biri SharePoint Designer'dan yeniden kullanılabilir iş akışlarını barındırmak için, diğeri dönüştürülen iş akışlarını barındırmak için.
 
 #### <a name="to-create-sharepoint-subsites"></a>SharePoint alt siteleri oluşturmak için
 
-1. SharePoint tasarımcı 2010 ' de, menü çubuğunda **dosya**  >  **yeni boş Web sitesi**' ni seçin.
+1. Tasarımcı SharePoint 2010'da, menü çubuğunda Dosya Yeni **Boş**  >  **Web Sitesi'ne tıklayın.**
 
-2. **yeni boş Web sitesi** iletişim kutusunda, iş akışını oluşturmak istediğiniz SharePoint sitesine gidin veya http://<em>systemname</em>/değerini kullanın ve **tamam** düğmesini seçin.
+2. Yeni **Boş Web Sitesi** iletişim kutusunda, iş akışını oluşturmak istediğiniz bir SharePoint sitesine göz atabilir veya http://<em>SystemName</em>/ değerini kullanarak Tamam **düğmesini** seçin.
 
     Giriş sayfası görüntülenir.
 
-3. **Alt siteler** bölümünde **Yeni** düğmesini seçin.
+3. Alt **siteler bölümünde** Yeni **düğmesini** seçin.
 
-4. **yeni** iletişim kutusunda sol bölmedeki listeden **SharePoint şablonlar** ' ı seçin ve sağ bölmedeki listeden **ekip sitesi** ' ni seçin.
+4. Yeni **iletişim** kutusunda, **sol bölmede SharePoint** Listeden Yeni Şablonlar'ı  ve sağ bölmede listeden Takım Sitesi'ni seçin.
 
-5. **Web sitesinin konumunu belirtin** kutusunda URL 'deki Word **alt** sitesini **SPD1** ile değiştirin ve **Tamam** düğmesini seçin.
+5. Web **sitesinin konumunu belirtin kutusunda** URL'de alt **site** sözcüğü yerine **SPD1** yazın ve Tamam **düğmesini** seçin.
 
-    bu, yeni alt siteyi SharePoint tasarımcısında açar. SharePoint Designer 'ın bu örneğini kapatın ve ilk örneğe (en üst düzey site) geri dönün.
+    Bu, yeni alt siteyi SharePoint açar. SharePoint Designer'ın bu örneğini kapatın ve ilk örnek (üst düzey site) geri gidin.
 
-6. İkinci alt siteyi oluşturmak için 3-5 adımlarını yineleyin. bu kez, içindeki Word **alt** öğesini [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] **SPD2** ile değiştirin.
+6. İkinci alt siteyi oluşturmak için 3- 5 arası adımları tekrarlayın, bu kez içinde alt **site** [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] sözcüğü **SPD2 ile değiştirildi.**
 
-## <a name="create-a-sharepoint-designer-reusable-workflow"></a>SharePoint Designer yeniden kullanılabilir iş akışı oluşturma
- SharePoint bu örnek için kullanabileceğiniz herhangi bir yeniden kullanılabilir iş akışı içermediğinden, bir tane oluşturacaksınız. Bu basit iş akışında, bir kullanıcı görev listesinde belirli bir başlığa sahip yeni bir görev girdiğinde, görev bu kullanıcıya atanır.
+## <a name="create-a-sharepoint-designer-reusable-workflow"></a>SharePoint Tasarımcısı yeniden kullanılabilir iş akışı oluşturma
+ Bu SharePoint için kullanabileceğiniz herhangi bir yeniden kullanılabilir iş akışı içermeyebilirsiniz, bir iş akışı oluşturabilirsiniz. Bu basit iş akışında, bir kullanıcı Görev listesine belirli bir başlığı olan yeni bir görev girdiği zaman, görev o kullanıcıya atanır.
 
 #### <a name="to-create-a-sharepoint-designer-reusable-workflow"></a>SharePoint Designer yeniden kullanılabilir iş akışı oluşturmak için
 
-1. **Alt siteler** bölümünde, değiştirmek için **SPD1** sitesini seçin.
+1. Alt **siteler bölümünde,** değiştirmek için **SPD1** sitesini seçin.
 
-2. Şeritte yeniden **kullanılabilir Iş akışı** düğmesini seçin.
+2. Şeritte Yeniden Kullanılabilir **İş Akışı düğmesini** seçin.
 
-     Yeniden kullanılabilir Iş akışı oluşturma Sihirbazı görünür.
+     Yeniden Kullanılabilir İş Akışı Oluşturma sihirbazı görüntülenir.
 
-3. **Ad** kutusunda, **SPD görev iş akışı**' nı girin.
+3. Ad **kutusuna** SPD Görev **İş Akışı yazın.**
 
-4. **Içerik türü** listesinde **görev**' i ve ardından **Tamam** düğmesini seçin.
+4. İçerik **Türü listesinde Görev'i** **ve** ardından Tamam **düğmesini** seçin.
 
-     iş akışı SharePoint tasarımcısı iş akışı tasarımcısı 'nda açılır.
+     İş akışı, SharePoint Tasarımcısı iş akışı tasarımcısında açılır.
 
-5. İş akışı tasarımcısında 1. adım ' ı ve ardından şeritte **koşul** düğmesini seçin.
+5. İş akışı tasarımcısında 1. Adım'ı seçin ve şeritte Koşul **düğmesini** seçin.
 
-6. Koşullar listesinde, **geçerli öğe alanının değere eşit olup olmadığını** seçin.
+6. Koşullar listesinde Geçerli öğe alanı **değerine eşitse'yi seçin.**
 
-     Bu adım **, alan eşitse** adlı bir koşul ekler.
+     Bu adım, If alanı değerine **eşitse adlı bir koşul ekler.**
 
-7. **IF alanı değer koşulunu eşitse** **alan** bağlantısını seçin.
+7. If **alanında değer koşulu eşittir** alanında alan **bağlantısını** seçin.
 
-8. Değer listesinde **başlık**' ı seçin.
+8. Değer listesinde Başlık'ı **seçin.**
 
-9. **IF alanı değer koşulunu eşitse** **değer** bağlantısını seçin.
+9. If **alanında değer koşulu eşittir** alanında değer **bağlantısını** seçin.
 
-10. Kutuya **Yeni görev** girin.
+10. Kutuya Yeni görev **yazın.**
 
-     Koşul ekstresi artık **geçerli öğe: başlık yeni göreve eşitse** okur.
+     Condition deyimi artık If **Current Item:Title equals New task (Geçerli Öğe:Başlık yeni görevse) ifadesini okur.**
 
-11. Koşul ifadesinin altındaki satırı seçin ve ardından şeritte **eylem** düğmesini seçin.
+11. Condition deyiminin altındaki satırı seçin ve şeritte Eylem **düğmesini** seçin.
 
-12. Eylemler listesinde, **geçerli öğedeki alanı ayarla**' yı seçin.
+12. Eylem listesinde, Geçerli öğede **alanı ayarla'ya tıklayın.**
 
-13. **Alandan değere Ayarla** eyleminde, **alan** bağlantısını seçin ve ardından listede **atanan**' ı seçin.
+13. Alan **değerini ayarla eylem alanında** alan **bağlantısını seçin** ve sonra listede Atanan'ı **seçin.**
 
-14. **Alandan değere Ayarla** eyleminde **değer** bağlantısını seçin ve ardından mevcut kullanıcılar ve Gruplar listesinde **öğeyi oluşturan kullanıcı**' yı seçin.
+14. Değer **olarak ayarla eylem alanında**  değer bağlantısını seçin ve ardından mevcut kullanıcılar ve gruplar listesinde öğesini oluşturan **kullanıcı'ya tıklayın.**
 
-15. **Ekle** düğmesini ve sonra **Tamam** düğmesini seçin.
+15. Ekle **düğmesini** ve ardından Tamam **düğmesini** seçin.
 
-     Eylem ekstresi şimdi **geçerli öğeye atanan ayarla ' yı okur: CreatedBy**.
+     Eylem deyimi artık Set **Atanan To Current Item:CreatedBy (Geçerli Öğe:CreatedBy) olarak ayarlanmıştır.**
 
 ## <a name="save-and-deploy-the-reusable-workflow"></a>Yeniden kullanılabilir iş akışını kaydetme ve dağıtma
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]yalnızca *. wsp* dosyalarını içeri aktarabildiğinden, yeniden kullanılabilir iş akışını bir *. wsp* dosyası olarak kaydetmeli ve içine aktarmadan önce SharePoint dağıtmanız gerekir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+ Yalnızca .wsp dosyalarını içeri aktarana kadar, yeniden kullanılabilir iş akışını [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] *bir .wsp* dosyası olarak kaydetmeli ve içine aktarmadan önce SharePoint dosyasına dağıtmanız  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] gerekir.
 
 > [!IMPORTANT]
-> aşağıdaki yordamı gerçekleştirirken bir çalışma zamanı hatası alırsanız, yordamı SharePoint sitesine erişimi olan bir sistemde gerçekleştirmeniz gerekir.
+> Aşağıdaki yordamı gerçekleştiren bir çalışma zamanı hatası alırsanız, yordamı SharePoint sitesine erişimi olan bir sistemde gerçekleştirmeniz gerekir.
 
 #### <a name="to-save-and-deploy-the-reusable-workflow"></a>Yeniden kullanılabilir iş akışını kaydetmek ve dağıtmak için
 
-1. SharePoint tasarımcısının en üstünde **kaydet** düğmesini seçerek ilerlemenizi kaydedin ve sonra iş akışını **SPD1** SharePoint sitesine dağıtmak için **yayımla** düğmesini seçin.
+1. SharePoint Tasarımcısı'nın üst kısmında Kaydet  düğmesini seçen ve ilerleme durumunuz  kaydedecek ve ardından Yayımla düğmesini seçecek şekilde iş akışını **SPD1** SharePoint dağıtın.
 
-2. Gezinti bölmesinde, **Iş akışları** nesnesini seçin.
+2. Gezinti bölmesinde İş Akışları **nesnesini** seçin.
 
-3. Yeniden **kullanılabilir Iş akışı** altında **SPD görev iş akışı**' nı seçin.
+3. Yeniden **Kullanılabilir İş Akışı altında** SPD Görev İş **Akışı'ı seçin.**
 
-4. Şeritte, iş akışını bir *. wsp* dosyası olarak kaydetmek için **şablon olarak kaydet** düğmesini seçin.
+4. Şeritte Şablon Olarak Kaydet **düğmesini seçerek** iş akışını *bir .wsp dosyası olarak* kaydedin.
 
-5. SharePoint içinde *. wsp* dosyasını görüntülemek için **SPD1** SharePoint sitesini bir tarayıcıda açın.
+5. *.wsp* dosyasını SharePoint için **SPD1** SharePoint sitesini tarayıcıda SharePoint.
 
-6. Hızlı Başlat çubuğunda **Kitaplıklar** bağlantısını seçin.
+6. QuickLaunch çubuğunda Kitaplıklar **bağlantısını** seçin.
 
-7. **Belge kitaplıkları** bölümünde, **site varlıkları** bağlantısını seçin.
+7. Belge **Kitaplıkları bölümünde** Site Varlıkları **bağlantısını** seçin.
 
-     **SPD görev Iş akışı** dosyası diğer site varlıkları ile listelenir.
+     **SPD Görev İş Akışı** dosyası diğer site varlıklarıyla listelenir.
 
-8. Dosya listesinde, bu dosyanın adını seçin
+8. Dosya listesinde bu dosyanın adını seçin
 
-9. **Dosya indirme** iletişim kutusunda, *. wsp* dosyasını yerel sisteminize kaydetmek için **Kaydet** düğmesini seçin.
+9. *.wsp* **dosyasını** yerel **sisteminize kaydetmek** için Dosya İndirme iletişim kutusunda Kaydet düğmesini seçin.
 
-## <a name="import-the-wsp-file-into-visual-studio"></a>. Wsp dosyasını Visual Studio içine aktarın
- *. Wsp* dosyasını [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Içeri aktarma yeniden kullanılabilir iş akışı projesi kullanarak içine aktarın. Bu proje iş akışını yeniden kullanılabilir, bildirime dayalı bir iş akışından kod akışına dönüştürür. İş akışı dönüştürüldükten sonra, davranışını değiştirmek için kod kullanacaksınız.
+## <a name="import-the-wsp-file-into-visual-studio"></a>.wsp dosyasını Visual Studio
+ Yeniden Kullanılabilir İş Akışını İçeri Aktar projesini kullanarak *.wsp* [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] dosyasını içine aktarın. Bu proje, iş akışını yeniden kullanılabilir, bildirimli bir iş akışından kod iş akışına dönüştürür. İş akışı dönüştürüldikten sonra davranışını değiştirmek için kodu kullanabilirsiniz.
 
 #### <a name="to-import-a-workflow-from-a-wsp-file-and-modify-it"></a>Bir iş akışını .wsp dosyasından içeri aktarmak ve değiştirmek için
 
-1. ' nde, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] menü çubuğunda **dosya**  >  **yeni**  >  **Project**' yi seçin.
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]'de, menü çubuğunda Dosya Yeni **Dosya'Project.**  >    >  
 
-2. **yeni Project** iletişim kutusunda, **Visual C#** veya **Visual Basic** altındaki **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. Yeni **Project** iletişim **kutusunda, Visual C#** **SharePoint** veya Visual Basic altındaki Visual Basic düğümünü genişletin ve **ardından 2010 düğümünü** seçin.
 
-3. **şablonlar** bölmesinde, yeniden **kullanılabilir SharePoint 2010 iş akışı** şablonunu seçin, projenin adını **WorkflowImportProject1** olarak bırakın ve **tamam** düğmesini seçin.
+3. Şablonlar **bölmesinde** Yeniden Kullanılabilir İş Akışı İçeri Aktar **SharePoint 2010** İş Akışı şablonunu seçin, projenin adını **WorkflowImportProject1** olarak bırakın ve ardından **Tamam düğmesini** seçin.
 
-    SharePoint özelleştirme sihirbazı görüntülenir.
+    SharePoint Özelleştirme Sihirbazı görüntülenir.
 
-4. **hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında, [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] daha önce oluşturduğunuz ikinci SharePoint alt site için şunu girin: http://<em>sistem adı</em>/spd3.
+4. Hata **ayıklama için siteyi** ve güvenlik düzeyini belirtin sayfasında, daha önce oluşturduğunuz ikinci SharePoint site için girin: http:// sistem adı [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] <em></em>/SPD2.
 
-5. **bu SharePoint çözümü için güven düzeyi nedir?** bölümünde, **grup çözümü olarak dağıt** seçenek düğmesini seçin ve sonra **ileri** düğmesini seçin.
+5. Bu **grup çözümü için SharePoint** düzeyi nedir? bölümünde Grup  çözümü olarak dağıt seçeneğini belirleyin ve ardından Sonraki **düğmesini** seçin.
 
-    Korumalı Grup çözümleri hakkında daha fazla bilgi için bkz. [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md).
+    Korumalı alan veya grup çözümleri hakkında daha fazla bilgi için bkz. [Korumalı alanlı çözümde dikkat edilmesi gerekenler.](../sharepoint/sandboxed-solution-considerations.md)
 
-6. **Yeni proje kaynağını belirtin** sayfasında, daha önce *. wsp* dosyasını kaydettiğiniz sistemdeki konuma gidin, dosyayı açın ve sonra **İleri** düğmesini seçin.
+6. Yeni **proje kaynağını belirtin** sayfasında, sistemde daha önce *.wsp* dosyasını kaydedip dosyayı belirttiğiniz konuma göz atın, dosyayı açın ve ardından Sonraki **düğmesini** seçin.
 
    > [!NOTE]
-   > *. Wsp* dosyasındaki tüm kullanılabilir öğeleri içe aktarmak için **son** düğmesini seçin.
+   > *.wsp* **dosyasındaki** tüm kullanılabilir öğeleri içeri aktarın.
 
-    Bu, içeri aktarmaya uygun yeniden kullanılabilir iş akışlarının bir listesini görüntüler.
+    Bu, içeri aktarılabilir yeniden kullanılabilir iş akışlarının listesini görüntüler.
 
-7. **İçeri aktarılacak öğeleri seçin** kutusunda, **SPD görev iş akışı** iş akışını seçin ve ardından **son** düğmesini seçin.
+7. İçeri **aktarıla öğeleri seçin** kutusunda **SPD** Görev İş Akışı iş akışını ve ardından Son **düğmesini** seçin.
 
-    İçeri aktarma işlemi tamamlandıktan sonra, **SPD_Workflow_TestFT** adlı bir iş akışını içeren **WorkflowImportProject1** adlı bir proje oluşturulur. Bu klasörde, iş akışının tanım dosyası *Elements.xml* ve iş akışı Tasarımcısı dosyası (*. xoml*). Tasarımcı iki dosya içerir: kurallar dosyası (. Rules) ve arka plan kod dosyası (projenizin programlama diline bağlı olarak *. cs* veya *. vb*).
+    İçeri aktarma işlemi tamam olduktan sonra, SPD_Workflow_TestFT adlı bir iş akışı içeren **WorkflowImportProject1** **adlı bir proje oluşturulur.** Bu klasörde iş akışının tanım dosyası ve *Elements.xml* tasarımcısı dosyası (*.xoml*). Tasarımcı iki dosya içerir: projenizin programlama diline bağlı olarak kurallar dosyası (.rules) ve arka arkasındaki kod dosyası *(.cs* veya *.vb).*
 
-8. **Çözüm Gezgini**, **Içeri aktarılan diğer dosyalar** klasörünü silin.
+8. Bu **Çözüm Gezgini,** Diğer **İçe Aktarılan Dosyalar klasörünü** silin.
 
-9. *Elements.xml* dosyasında, öğesini silin `InstantiationURL="_layouts/IniErkflIP.sspx"` .
+9. Dosyanın *Elements.xml* `InstantiationURL="_layouts/IniErkflIP.sspx"` silin.
 
-10. **Çözüm Gezgini**' de, **WorkflowImportProject1**' ı seçin ve ardından menü çubuğunda, başlangıç   >  öğesi olarak **WorkflowImportProject1** ayarlamak için Project **başlangıç Project olarak ayarla** ' yı seçin.
+10. Bu **Çözüm Gezgini** **WorkflowImportProject1'i** seçin ve ardından menü çubuğunda Project Başlangıç Öğesi olarak ayarla'Project  >   **WorkflowImportProject1'i** Başlangıç Öğesi olarak ayarlayın.
 
-     Bu, projede hata ayıklarken listeyi hemen görüntüler.
+     Bu, projede hata ayıklana listeyi hemen görüntüler.
 
-11. **içeri aktarma SharePoint 2010 iş akışı** şablonu içeri aktarılan iş akışı için ilişkilendirme özelliği değerlerini içeri aktarmadığından, bunları girmeniz gerekir. Bunu yapmak için:
+11. Yeniden **Kullanılabilir İçeri Aktar SharePoint 2010** İş Akışı şablonu içeri aktarılan iş akışının ilişkilendirme özelliği değerlerini içeri aktarmaz, bunları girmeniz gerekir. Bunu yapmak için:
 
-    1. **Çözüm Gezgini** **SPD_Workflow_TestFT** düğümünü seçin.
+    1. Bu **Çözüm Gezgini**, **düğümünü SPD_Workflow_TestFT** seçin.
 
-    2. **hedef liste** özelliği gibi liste özelliklerinden birinin yanındaki üç nokta (![ASP.NET Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil tasarımcı elips")) düğmesini seçin.
+    2. Hedef Liste özelliği gibi ![liste ASP.NET](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil tasarımcı elips")yanındaki üç nokta ( Mobil Tasarımcı üç nokta ) **düğmesini** seçin.
 
-    3. SharePoint özelleştirme sihirbazında eksik değerleri girin ve ardından **son** düğmesini seçin.
+    3. Özelleştirme Sihirbazı'nda eksik SharePoint doldurun ve ardından Son **düğmesini** seçin.
 
-12. . Xoml dosyasını seçin ve ardından menü çubuğunda,   >  içeri aktarılan iş akışını iş akışı tasarımcısında görüntülemek için Görünüm **Tasarımcısı** ' nı seçin.
+12. .xoml dosyasını seçin ve ardından, iş akışı tasarımcısında içe aktarılan iş akışını görüntülemek için menü çubuğunda  >   Tasarımcıyı Görüntüle'yi seçin.
 
-13. **araç kutusunun** **Windows Workflow v 3.0** düğümünde aşağıdaki adımlardan birini gerçekleştirin:
+13. Araç **Windows İş Akışı v3.0** düğümünde, aşağıdaki adımlardan birini gerçekleştirin:
 
     - **Kod** etkinliğinin kısayol menüsünü açın ve **Kopyala**' yı seçin. İş akışı tasarımcısında, **SequenceActivity1** etkinliğinin altındaki satır için kısayol menüsünü açın ve **Yapıştır**' ı seçin.
 

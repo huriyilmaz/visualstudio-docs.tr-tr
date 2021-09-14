@@ -11,11 +11,11 @@ ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-general
 ms.openlocfilehash: 00580c7a1e63dd3c68fc9a86b67812ed3a1dfa8b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122085968"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725753"
 ---
 # <a name="how-to-troubleshoot-templates"></a>Nasıl yapılır: şablonlarda sorun giderme
 

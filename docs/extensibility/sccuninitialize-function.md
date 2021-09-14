@@ -15,11 +15,11 @@ ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
 ms.openlocfilehash: 56d2365df1e613976943bd8ba33f6d49a32566f5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117598"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634505"
 ---
 # <a name="sccuninitialize-function"></a>SccUninitialize İşlevi
 Bu işlev, kaynak denetimi eklentiyi kapatmaya hazırlık olarak [önceki bir SccInitialize](../extensibility/sccinitialize-function.md) çağrısı tarafından oluşturulan ayırmaları veya açık bağlantıları temizler.
@@ -38,7 +38,7 @@ SCCRTN SccUninitialize (
 [in] [SccInitialize](../extensibility/sccinitialize-function.md)içinde oluşturulan kaynak denetimi eklentisi bağlam yapısının işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini geri dönmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisinin aşağıdaki değerlerden birini dönmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|

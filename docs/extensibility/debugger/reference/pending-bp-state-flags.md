@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 896059b2272470af2f0deb9bbfd55602bd6b7d62
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122125263"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726981"
 ---
 # <a name="pending_bp_state_flags"></a>PENDING_BP_STATE_FLAGS
 Bekleyen kesme noktası durum bayraklarını belirtir.
@@ -50,7 +50,7 @@ public enum enum_PENDING_BP_STATE_FLAGS {
  `PBPSF_VIRTUALIZED` Yeni kod her yüklendiğinde bağlanacak olan bir sanallaştırılmış bekleyen kesme noktası belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- PENDING_BP_STATE_INFO `flags` [yapısının üyesi için](../../../extensibility/debugger/reference/pending-bp-state-info.md) kullanılır.
+ Bu `flags` yapının üyesi [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üst bilgi: msdbg.h

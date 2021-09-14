@@ -1,5 +1,5 @@
 ---
-title: İş Akışı Tasarımcısı - Etkinlik Tasarımcısını Seçme
+title: İş Akışı Tasarımcısı - Etkinlik Tasarımcısı seçme
 description: Pick etkinliğinin olay tabanlı denetim akışını nasıl sağladığını ve bir tetikleyici olayına yanıt olarak birkaç daldan birini nasıl yürüttülür?
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
@@ -14,11 +14,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - multiple
 ms.openlocfilehash: e871e38cb9f675e1a76edae0410cbd5ac45aee10
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963759"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725522"
 ---
 # <a name="pick-activity-designer"></a>Pick Etkinlik Tasarımcısı
 
@@ -28,9 +28,9 @@ Etkinlik, <xref:System.Activities.Statements.Pick> olay tabanlı denetim akış�
 
 Bir etkinlik, tetikleyici olarak görev alan bazı gelen olaylardan dolayı <xref:System.Activities.Statements.Pick> <xref:System.Activities.Statements.PickBranch> <xref:System.Activities.Statements.Pick> etkinliğin yürütüle bir nesne koleksiyonu içerir. Bu şekilde İş Akışı Tasarımcısı tabanlı denetim akışı modellemesi sağlar. Her <xref:System.Activities.Statements.PickBranch> biri bir ve <xref:System.Activities.Statements.PickBranch.Trigger%2A> <xref:System.Activities.Statements.PickBranch.Action%2A> içerir. Bir etkinliğin <xref:System.Activities.Statements.Pick> yürütülmesinin başlangıcında öğelerin tüm tetikleyici etkinlikleri <xref:System.Activities.Statements.PickBranch> zamanlanmış olur. İlk etkinlik tamamlandığında ilgili eylem etkinliği zamanlanır ve diğer tüm tetikleyici etkinlikleri iptal edilir.
 
-### <a name="how-to-use-the-pick-activity-designer"></a>Etkinlik Tasarımcısı seçmeyi kullanma
+### <a name="how-to-use-the-pick-activity-designer"></a>Etkinlik Tasarımcısını Seçmeyi Kullanma
 
-Araç Kutusunun **Denetim** Denetimi **Flow** etkinlik tasarımcısına **erişin.** Seçim **etkinliği** tasarımcısı Araç Kutusundan  sürüklenip etkinlik tasarımcılarının normalde yerleştirilmelerinin (örneğin bir Sıra etkinlik tasarımcısının içinde) İş Akışı Tasarımcısı **yüzeyine** bırakılır. Bunu bir İş Akışı Tasarımcısı sonra, varsayılan olarak Branch1 ve Branch2 görünen adlarına sahip öğeler olarak iki boş etkinlik içeren bir <xref:System.Activities.Statements.Pick> <xref:System.Activities.Statements.PickBranch> etkinlik oluşturur. Bu <xref:System.Activities.Statements.PickBranch.DisplayName%2A> ilgili özellik değerleri **PickBranch** etkinlik tasarımcısı üst bilgisinde veya her dalın **Özellikler** penceresinde düzenlenebilir.
+Araç Kutusunun **Denetim** Denetimi **Flow** etkinlik tasarımcısına **erişin.** Seçim **etkinliği** tasarımcısı Araç Kutusundan  sürüklenip etkinlik tasarımcılarının normalde yerleştirilmeleri (örneğin, bir Sıra etkinlik tasarımcısının içine) İş Akışı Tasarımcısı **yüzeyine** bırakılır. Bunu bir İş Akışı Tasarımcısı sonra, varsayılan olarak Branch1 ve Branch2 görünen adlarına sahip öğeler olarak iki boş etkinlik içeren bir <xref:System.Activities.Statements.Pick> <xref:System.Activities.Statements.PickBranch> etkinlik oluşturur. Bu <xref:System.Activities.Statements.PickBranch.DisplayName%2A> ilgili özellik değerleri **PickBranch** etkinlik tasarımcısı üst bilgisinde veya her dalın **Özellikler** penceresinde düzenlenebilir.
 
 Bir nesnenin koleksiyonuna etkinlik eklemenin iki yolu <xref:System.Activities.Statements.PickBranch> <xref:System.Activities.Statements.Pick> vardır: **PickBranch**  tasarımcısını **Araç** Kutusundan sürükleyip bırakma veya Tasarım seçin yüzeyinin içindeki sağ tıklama menüsünü kullanma. Ayrıntılar için [PickBranch konu başlığına](../workflow-designer/pickbranch-activity-designer.md) bakın. Bir Pick etkinlik tasarımcısına yerleştiril **pickbranch** **etkinlik** tasarımcısının tek öğe olduğunu fark vardır.
 

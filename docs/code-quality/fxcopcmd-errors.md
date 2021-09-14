@@ -1,7 +1,7 @@
 ---
 title: FxCopCmd hataları
 ms.date: 10/19/2016
-description: FxCopCmd komutunun döndüren hata kodları hakkında bilgi edinebilirsiniz. Her kodun hangi hata türünü temsil ettiğine bakın ve önemli hataların nasıl tanındığını bulun.
+description: FxCopCmd komutunun döndür olduğu hata kodları hakkında bilgi edinebilirsiniz. Her kodun hangi hata türünü temsil ettiğini görme ve önemli hataları tanıma hakkında bilgi edinebilirsiniz.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 helpviewer_keywords:
@@ -14,11 +14,11 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
 ms.openlocfilehash: c06c996245dfba796d4ab7e71fdbb28ad486f017
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122098040"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632006"
 ---
 # <a name="fxcopcmd-tool-errors"></a>FxCopCmd aracı hataları
 
@@ -53,7 +53,7 @@ Aşağıdaki tabloda FxCopCmd tarafından döndürülen hata kodları açıkland
 - Çıkış seçeneği belirtilmedi veya dosya yazılamdı.
 
 > [!NOTE]
-> FxCopCmd dönüş kodu **Derlemesi hataya** başvurur 0x200 tek başına bir hata değil uyarıdır. Bu dönüş kodu eksik dolaylı başvurular olduğunu ama FxCopCmd'nin bunları işleye olduğunu gösterir. Uyarı, bazı analiz sonuçlarının tehlikeye atılmış olma olasılığının olduğu anlamına gelir. Derleme **başvuruları hatasını,** başka bir dönüş koduyla birleştirildiklerine bir hata olarak davran.
+> FxCopCmd dönüş kodu **Derlemesi** hataya başvurur 0x200 bir hata değil uyarıdır. Bu dönüş kodu eksik dolaylı başvurular olduğunu ama FxCopCmd'nin bunları işleye olduğunu gösterir. Uyarı, bazı analiz sonuçlarının tehlikeye atılmış olma olasılığının olduğu anlamına gelir. Derleme **başvuruları hatasını,** başka bir dönüş koduyla birleştirildiklerine bir hata olarak davran.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

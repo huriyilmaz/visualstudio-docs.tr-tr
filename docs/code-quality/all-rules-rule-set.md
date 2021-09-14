@@ -1,7 +1,7 @@
 ---
 title: Tüm Kurallar kural kümesi
 ms.date: 11/04/2016
-description: Visual Studio içindeki yerel ve yönetilen kod için tüm kuralları içeren tüm kurallar kural kümesi hakkında bilgi edinin. Bu küme içindeki kuralları tanımlayan kaynakları görüntüleyin.
+description: Yerel ve yönetilen kodun tüm kurallarını içeren Tüm Kurallar kural kümesi hakkında bilgi Visual Studio. Bu kümede kuralları açıklayan kaynakları görüntüleme.
 ms.custom: SEO-VS-2020
 ms.topic: reference
 author: mikejo5000
@@ -11,16 +11,16 @@ ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
 ms.openlocfilehash: 457fd3d56cf85a8c79599280c927dde82eab065e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122053259"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126632996"
 ---
 # <a name="all-rules-rule-set"></a>Tüm Kurallar kural kümesi
 
-Tüm Kurallar kural kümesi hem yerel hem de yönetilen kodun tüm kurallarını içerir. Kural kümesi, aşağıdaki konularda açıklanan tüm kuralları içerir:
+Tüm Kurallar kural kümesi hem yerel hem de yönetilen kod için tüm kuralları içerir. Kural kümesi, aşağıdaki konularda açıklanan tüm kuralları içerir:
 
 - [C/C++ İçin Kod Analizi Uyarıları](/cpp/code-quality/code-analysis-for-c-cpp-warnings)
 
-- [yönetilen kod uyarıları için Code Analysis](/dotnet/fundamentals/code-analysis/quality-rules/index)
+- [Code Analysis Kod Uyarıları için Öneriler](/dotnet/fundamentals/code-analysis/quality-rules/index)

@@ -1,6 +1,6 @@
 ---
 title: Tüm araçlar
-description: Tüm devinit araçlarını kullanma örneği.
+description: Tüm sapma araçlarını kullanma örneği.
 ms.date: 02/08/2021
 ms.topic: reference
 author: andysterland
@@ -11,19 +11,19 @@ ms.workload:
 monikerRange: '>= vs-2019'
 ms.prod: visual-studio-windows
 ms.technology: devinit
-ms.openlocfilehash: 32f8fee439bad53145e31d98f437df8805547220f79c459486288ccebb8e710b
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e3d429cbbc1b9fa25bf52c1d02ea5b669b784c9e
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121418023"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725864"
 ---
 # <a name="all-tools"></a>Tüm araçlar
 
 > [!IMPORTANT]
-> 12 nisan 2021 itibariyle, Visual Studio 2019 ' den GitHub codespaces 'a bağlanmak artık desteklenmeyecektir ve bu özel önizleme sona ermiştir. bulut destekli bir iç döngü ve çok sayıda Visual Studio iş yükü için iyileştirilmiş vdı çözümleri için gelişen deneyimler üzerinde odaklanıyoruz. Bu `devinit` ve ilişkili araçların bir parçası olarak artık kullanılabilir olmayacaktır. gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi edinmek için Visual Studio geliştirici topluluğu forumumuza dahil etmeniz önerilir.
+> 12 Nisan 2021'den itibaren, Visual Studio 2019'dan GitHub Codespaces'a bağlanmak artık desteklemeyecek ve bu özel önizlemenin sonucuna varıldı. Bulut destekli iç döngü için gelişen deneyimlere ve çok çeşitli iş yükleri için iyileştirilmiş VDI çözümlerine Visual Studio odaklanacağız. Bu ve ilişkili `devinit` araçların bir parçası olarak artık kullanılamaz. Gelecekteki önizlemeler ve yol haritası bilgileri hakkında bilgi almak Visual Studio geliştirici topluluğu forummize dahil olmak için sizi teşvik ediyoruz.
 
-Bu örnek `devinit.json` , tüm kullanılabilir devinit araçlarını yükleyecek bir öğesine sahiptir.
+Bu örnekte, kullanılabilir `devinit.json` tüm sapma araçlarını yük alan bir vardır.
 
 ## <a name="devinitjson"></a>.devinit.json
 
@@ -184,9 +184,9 @@ Bu örnek `devinit.json` , tüm kullanılabilir devinit araçlarını yükleyece
 }
 ```
 
-## <a name="devcontainerjson"></a>Üzerinde .devcontainer.js
+## <a name="devcontainerjson"></a>.devcontainer.json
 
-Depo kökündeki dosya _.devcontainer.js_ içeriği.
+Repo _kökünde .devcontainer.json_ dosyasının içeriği.
 
 ```json
 {

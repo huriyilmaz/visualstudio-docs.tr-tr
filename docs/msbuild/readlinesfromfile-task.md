@@ -22,11 +22,11 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 1634aa8a669fa03f217fedf04b5dd8620b95829c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122068780"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126726852"
 ---
 # <a name="readlinesfromfile-task"></a>ReadLinesFromFile görevi
 
@@ -39,7 +39,7 @@ Bir metin dosyasındaki öğelerin listesini okur.
 |Parametre|Açıklama|
 |---------------|-----------------|
 |`File`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Okunan dosyayı belirtir. Dosyanın her satırda bir öğe olması gerekir.|
-|`Lines`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Dosyadan okunan satırları içerir.|
+|`Lines`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Dosyasından okunan satırları içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
 

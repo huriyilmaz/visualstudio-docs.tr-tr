@@ -1,6 +1,6 @@
 ---
-description: Bu işaretçinin tek devralma ile bir veri üyesine işaret ettiğini belirtir.
-title: 'IDiaSymbol:: get_isSingleInheritance | Microsoft Docs'
+description: Bu işaretçinin tek devralmalı bir veri üyesine işaret edip ede olmadığını belirtir.
+title: IDiaSymbol::get_isSingleInheritance | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -11,14 +11,14 @@ ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-debug
 ms.openlocfilehash: b9e16afe8fe3649174033fe2901527dc9006737a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122066050"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725463"
 ---
 # <a name="idiasymbolget_issingleinheritance"></a>IDiaSymbol::get_isSingleInheritance
-`this`İşaretçinin tek devralma ile bir veri üyesine işaret ettiğini belirtir.
+İşaretçinin tek `this` devralma ile bir veri üyesine işaret edip ede olmadığını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,10 +30,10 @@ HRESULT get_isSingleInheritance(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `BOOL` `this` İşaretçisinin tek devralma ile veri üyesine işaret ettiğini belirten bir işaretçisi.
+[out] İşaretçinin `BOOL` tek devralmalı bir veri `this` üyesine işaret edip ede olmadığını belirten bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
+ Başarılı olursa `S_OK` döndürür; aksi takdirde veya `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,6 +1,6 @@
 ---
 title: .NET Türüne Gözat ve Seç iletişim kutusu
-description: Bir .NET TürüNe Gözat ve Seç iletişim kutusunu kullanarak derlemeler ve projeler için bir ağaç görünümünden tür seçme hakkında İş Akışı Tasarımcısı.
+description: Bir .NET TürüNe Gözat ve Seç iletişim kutusunu kullanarak bir derleme ve proje için derlemelerin ve projelerin ağaç görünümünden bir tür seçmeyi İş Akışı Tasarımcısı.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -15,11 +15,11 @@ ms.technology: vs-workflow-designer
 ms.workload:
 - dotnet
 ms.openlocfilehash: b0258a69738f340ca8a2a58d1c3b900171625e5d
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123963696"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633766"
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET Türüne Gözat ve Seç İletişim Kutusu
 
@@ -58,7 +58,7 @@ Bu iletişim kutusu, aşağıdakiler de dahil olmak üzere çeşitli kullanıcı
 
 ## <a name="types-displayed-in-the-type-browser"></a>Tür tarayıcısında görüntülenen türler
 
-Tür tarayıcısında görüntülenen türler, tür tarayıcısının nasıl başlatıldıklarına bağlı olarak değişebilir. Tür tarayıcısı **vs2010** içindeki bir iş akışı projesinden başlatıldı ise, varsayılan olarak başvurulan derlemelerde ve başvurulan projelerde tüm türler gösterilir. Tür tarayıcısı **vs2010** proje sisteminin dışından (yeniden barındırılan bir iş akışı uygulamasında veya tek başına bir iş akışı dosyasında olduğu gibi) başlatıldı ise, varsayılan olarak AppDomain'de yüklenen tüm derlemelerin türleri gösterilir.
+Tür tarayıcısında görüntülenen türler, tür tarayıcısının nasıl başlatıldıklarına bağlı olarak değişebilir. Tür tarayıcısı **vs2010** içindeki bir iş akışı projesinden başlatıldı ise, varsayılan olarak başvurulan derlemelerde ve başvurulan projelerde tüm türler gösterilir. Tür tarayıcısı **vs2010** proje sisteminin dışından (yeniden barındırılan iş akışı uygulamasında veya tek başına bir iş akışı dosyasında olduğu gibi) başlatıldı ise, varsayılan olarak AppDomain'de yüklenen tüm derlemelerin türleri gösterilir.
 
 Tür tarayıcısında türler etkinlik tasarımcısı geliştiricileri tarafından filtrelenmiş olabilir. Belirli bir etkinlik için türlerin yalnızca bir alt kümesini görebilir. Örneğin, <xref:System.Activities.Statements.TryCatch> etkinlikte, tür tarayıcısında yalnızca <xref:System.Exception> türetilen türler gösterilir.
 
@@ -74,7 +74,7 @@ Bir eşleşmeyi bulmak için **daha fazla karakter** yazdıkça Tür Adı kutusu
 
 ## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>Tür tarayıcısı iletişim kutusunu kullanarak hizmet sözleşmesini seçme
 
-Hizmet sözleşmesi türü seçen tür tarayıcısı yalnızca özniteliğine sahip türleri <xref:System.ServiceModel.ServiceContractAttribute> gösterir.
+Bir hizmet sözleşmesi türü seçen tür tarayıcısı yalnızca özniteliğine sahip türleri <xref:System.ServiceModel.ServiceContractAttribute> gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

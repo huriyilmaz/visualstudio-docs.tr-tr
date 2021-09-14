@@ -14,11 +14,11 @@ ms.technology: vs-ide-debug
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2499e4aef01bd4812a705afd7777cacd7eb2ba14
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117949"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126634681"
 ---
 # <a name="register-a-custom-debug-engine"></a>Özel bir hata ayıklama altyapısını kaydetme
 hata ayıklama altyapısı kendisini bir sınıf fabrikası olarak kaydetmelidir, COM kurallarını ve Visual Studio kayıt defteri alt anahtarı aracılığıyla Visual Studio kayıt yaptırmalıdır.

@@ -1,6 +1,6 @@
 ---
-description: Bellekte hata ayıklama sembollerini belirtilen veri akışından gelenlerle güncelleştirme.
-title: IDebugComPlusSymbolProvider::UpdateSymbols | Microsoft Docs
+description: Bellekteki hata ayıklama sembollerini, belirtilen veri akışından gelen verilerle güncelleştirir.
+title: 'IDebugComPlusSymbolProvider:: UpdateSymbols | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 729e2c896fcf6ee4e5dad904afb04cc24604ddb1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122079681"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126725274"
 ---
 # <a name="idebugcomplussymbolproviderupdatesymbols"></a>IDebugComPlusSymbolProvider::UpdateSymbols
-Bellekte hata ayıklama sembollerini belirtilen veri akışından gelenlerle güncelleştirme.
+Bellekteki hata ayıklama sembollerini, belirtilen veri akışından gelen verilerle güncelleştirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,16 +46,16 @@ int UpdateSymbols (
 
 ## <a name="parameters"></a>Parametreler
 `ulAppDomainID`\
-[in] Uygulama etki alanının tanımlayıcısı.
+'ndaki Uygulama etki alanının tanımlayıcısı.
 
 `guidModule`\
-[in] Modülün benzersiz tanımlayıcısı.
+'ndaki Modülün benzersiz tanıtıcısı.
 
 `pUpdateStream`\
-[in] Güncelleştirilmiş hata ayıklama sembollerini içeren veri akışı.
+'ndaki Güncelleştirilmiş hata ayıklama sembollerini içeren veri akışı.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, **IDebugComPlusSymbolProvider** arabirimini ortaya çıkaran [bir CDebugSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) nesnesi için bu yöntemin nasıl uygulandığını gösterir.
+Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugSymbolProvider::UpdateSymbols(
@@ -94,7 +94,7 @@ Error:
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md)

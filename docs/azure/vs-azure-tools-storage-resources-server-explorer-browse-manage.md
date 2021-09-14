@@ -1,6 +1,6 @@
 ---
-title: Depolama kaynaklarına gözatıp yönetme
-description: Sunucu Gezgini kullanarak depolama kaynaklarına göz atma ve bunları yönetme
+title: Depolama kaynaklarına göz atma ve kaynakları yönetme
+description: Sunucu Gezgini kullanarak depolama kaynaklarına göz atma ve kaynakları yönetme
 ms.custom: SEO-VS-2020
 author: ghogen
 manager: jmartens
@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.date: 8/24/2017
 ms.author: ghogen
 ms.openlocfilehash: 18726b1fa7f42b46cd309cfd4edef289d9469d39
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122053415"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126633014"
 ---
 # <a name="browse-and-manage-storage-resources-by-using-server-explorer"></a>Sunucu Gezgini'ni kullanarak depolama kaynaklarına göz atma ve bu kaynakları yönetme
 
@@ -22,260 +22,260 @@ ms.locfileid: "122053415"
 
 ## <a name="overview"></a>Genel Bakış
 
-Microsoft Visual Studio için azure araçları 'nı yüklediyseniz, azure için depolama hesaplarınızdan blob, kuyruk ve tablo verilerini görüntüleyebilirsiniz. Sunucu Gezgini azure **Depolama** düğümü, yerel depolama öykünücü hesabınızdaki ve diğer Azure depolama hesaplarınızdaki verileri gösterir.
+Microsoft Visual Studio için Azure Araçları'Microsoft Visual Studio, Azure için depolama hesaplarından blob, kuyruk ve tablo verilerini görüntüebilirsiniz. Azure **Depolama** düğümü Sunucu Gezgini yerel depolama öykünücüsü hesabınızla diğer Azure depolama hesaplarınızı gösteren veriler gösterir.
 
-Sunucu Gezgini Visual Studio görüntülemek için, menü çubuğunda **görünüm**  >  **Sunucu Gezgini**' yı seçin. **Depolama** düğümü, her bir Azure aboneliğinde veya bağlı olduğunuz sertifikada bulunan tüm depolama hesaplarını gösterir. Depolama Hesabınız görünmezse, [Bu makalenin ilerleyen kısımlarındaki](#add-storage-accounts-by-using-server-explorer)yönergeleri izleyerek ekleyebilirsiniz.
+Veri Sunucu Gezgini görüntülemek Visual Studio menü çubuğunda Görünüm'Sunucu Gezgini.   >   Depolama  düğümü, bağlı olduğunu her Bir Azure aboneliği veya sertifikası altında var olan tüm depolama hesaplarını gösterir. Depolama hesabınız görünmüyorsa, bu makalenin devamlarında yer alan yönergeleri [izleyerek ekleyin.](#add-storage-accounts-by-using-server-explorer)
 
-Azure SDK 2,7 ' den başlayarak, Azure kaynaklarınızı görüntülemek ve yönetmek için bulut Gezgini 'ni de kullanabilirsiniz. Daha fazla bilgi için bkz. [Cloud Explorer Ile Azure kaynaklarını yönetme](vs-azure-tools-resources-managing-with-cloud-explorer.md).
+Azure SDK 2.7'den başlayarak, Azure kaynaklarınızı görüntülemek ve yönetmek için Bulut Gezgini'ni de kullanabilirsiniz. Daha fazla bilgi için [bkz. Cloud Explorer ile Azure kaynaklarını yönetme.](vs-azure-tools-resources-managing-with-cloud-explorer.md)
 
-## <a name="view-and-manage-storage-resources-in-visual-studio"></a>Visual Studio 'de depolama kaynaklarını görüntüleyin ve yönetin
+## <a name="view-and-manage-storage-resources-in-visual-studio"></a>Visual Studio'de depolama kaynaklarını görüntüleme ve yönetme
 
-Sunucu Gezgini, depolama öykünücü hesabınızdaki Bloblar, kuyruklar ve tablolar listesini otomatik olarak gösterir. depolama öykünücüsü hesabı, **Depolama** düğümü altında, **geliştirme** düğümü olarak Sunucu Gezgini listelenir.
+Sunucu Gezgini depolama öykünücüsü hesapta blobların, kuyrukların ve tabloların listesini otomatik olarak gösterir. Depolama öykünücüsü hesabı, Sunucu Gezgini düğümü altında **Depolama** düğümü olarak **listelenir.**
 
-Depolama öykünücüsü hesabının kaynaklarını görmek için **geliştirme** düğümünü genişletin. **Geliştirme** düğümünü genişlettiğinizde depolama öykünücüsü başlatılmamışsa, otomatik olarak başlatılır. Bu işlem birkaç saniye sürebilir. depolama öykünücüsü başladığında Visual Studio diğer alanlarında çalışmaya devam edebilirsiniz.
+Depolama öykünücüsü hesabının kaynaklarını görmek için Geliştirme **düğümünü** genişletin. Geliştirme düğümünü genişletilirken depolama öykünücüsü **başlatılamamışsa** otomatik olarak başlatılır. Bu işlem birkaç saniye sürebilir. Depolama öykünücüsü başlatılırken diğer Visual Studio alanlarda çalışmaya devam edersiniz.
 
-Bir depolama hesabındaki kaynakları görüntülemek için, **BLOB**, **kuyruk** ve **tablo** düğümlerini gördüğünüz Sunucu Gezgini depolama hesabının düğümünü genişletin.
+Bir depolama hesabıdaki kaynakları görüntülemek için bloblar, kuyruklar ve tablolar Sunucu Gezgini depolama hesabının **düğümünü** genişletin.
 
 ## <a name="work-with-blob-resources"></a>Blob kaynaklarıyla çalışma
 
-**BLOB 'lar** düğümü, seçilen depolama hesabı için kapsayıcıların listesini görüntüler. Blob kapsayıcıları blob dosyaları içerir ve bu Blobları klasörler ve alt klasörler halinde düzenleyebilirsiniz. Daha fazla bilgi için bkz. [.net 'Ten blob depolamayı kullanma](/azure/storage/blobs/storage-dotnet-how-to-use-blobs).
+**Bloblar düğümü,** seçili depolama hesabı için kapsayıcıların listesini görüntüler. Blob kapsayıcıları blob dosyaları içerir ve bu blobları klasörler ve alt klasörler olarak düzenleyebilirsiniz. Daha fazla bilgi için [bkz. .NET'den Blob depolama kullanma.](/azure/storage/blobs/storage-dotnet-how-to-use-blobs)
 
 ### <a name="to-create-a-blob-container"></a>Blob kapsayıcısı oluşturmak için
 
-1. **Bloblar** düğümünün kısayol menüsünü açın ve ardından **BLOB kapsayıcısı oluştur**' u seçin.
-1. **BLOB kapsayıcısı oluştur** iletişim kutusunda yeni kapsayıcının adını girin.
-1. Klavyenizde Enter ' u seçin veya blob kapsayıcısını kaydetmek için ad alanının dışına tıklayabilir veya dokunabilirsiniz.
+1. **Bloblar** düğümünün kısayol menüsünü açın ve Blob Kapsayıcısı **Oluştur'a tıklayın.**
+1. Blob **Kapsayıcısı Oluştur** iletişim kutusuna yeni kapsayıcının adını girin.
+1. Klavyenizde Enter'ı seçin veya ad alanı dışına tıklar veya dokunarak blob kapsayıcıyı kaydedebilirsiniz.
 
    > [!NOTE]
-   > Blob kapsayıcısı adı bir sayı (0-9) veya küçük harf (a-z) ile başlamalıdır.
+   > Blob kapsayıcısı adı bir sayı (0-9) veya küçük harfle (a-z) başlasın.
 
-### <a name="to-delete-a-blob-container"></a>Blob kapsayıcısını silmek için
+### <a name="to-delete-a-blob-container"></a>Blob kapsayıcısı silmek için
 
-Kaldırmak istediğiniz blob kapsayıcısı için kısayol menüsünü açın ve **Sil**' i seçin.
+Kaldırmak istediğiniz blob kapsayıcısı için kısayol menüsünü açın ve Sil'i **seçin.**
 
-### <a name="to-display-a-list-of-the-items-in-a-blob-container"></a>Blob kapsayıcısındaki öğelerin listesini görüntüleme
+### <a name="to-display-a-list-of-the-items-in-a-blob-container"></a>Blob kapsayıcısı içinde öğelerin listesini görüntülemek için
 
-Listede bir blob kapsayıcısı adı için kısayol menüsünü açın ve **Aç**' ı seçin.
+Listede blob kapsayıcısı adının kısayol menüsünü açın ve Aç'ı **seçin.**
 
-Blob kapsayıcısının içeriğini görüntülediğinizde, blob kapsayıcı görünümü olarak bilinen bir sekmede görüntülenir.
+Bir blob kapsayıcının içeriğini görüntülendiğinde, blob kapsayıcısı görünümü olarak bilinen bir sekmede görünür.
 
-![Blob kapsayıcı görünümü](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC749016.png)
+![Blob kapsayıcısı görünümü](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC749016.png)
 
-Blob kapsayıcı görünümünün sağ üst köşesindeki düğmeleri kullanarak bloblarda aşağıdaki işlemleri yapabilirsiniz:
+Blob kapsayıcı görünümünün sağ üst köşesindeki düğmeleri kullanarak bloblarda aşağıdaki işlemleri gerçekleştirebilirsiniz:
 
-* Bir filtre değeri girin ve uygulayın.
-* Kapsayıcıdaki Blobların listesini yenileyin.
-* bir dosya Upload.
-* Bir blobu silin. (Bir blob kapsayıcısından bir dosyayı silme, temeldeki dosyayı silmez. Yalnızca blob kapsayıcısından kaldırılır.)
-* Blob açın.
+* Bir filtre değeri girin ve bunu uygulama.
+* Kapsayıcıda blob listesini yenileyin.
+* Upload bir dosya seçin.
+* Bir blobu silin. (Blob kapsayıcıdan dosya silmek, temel alınan dosyayı silemez. Yalnızca blob kapsayıcıdan kaldırır.)
+* Bir blob açın.
 * Bir blobu yerel bilgisayara kaydedin.
 
-### <a name="to-create-a-folder-or-subfolder-in-a-blob-container"></a>Blob kapsayıcısında klasör veya alt klasör oluşturmak için
+### <a name="to-create-a-folder-or-subfolder-in-a-blob-container"></a>Blob kapsayıcısı içinde klasör veya alt klasör oluşturmak için
 
-1. **Cloud Explorer**'da blob kapsayıcısını seçin. kapsayıcı penceresinde, **Upload Blob** düğmesini seçin.
+1. Cloud Explorer'da blob **kapsayıcısını seçin.** Kapsayıcı penceresinde Blob'a **Upload seçin.**
 
-1. **yeni dosya Upload** iletişim kutusunda, karşıya yüklemek istediğiniz dosyayı belirtmek için, **gözden** geçirme düğmesini seçin ve ardından **klasör (isteğe bağlı)** kutusuna bir klasör adı girin.
+1. Yeni **Upload** Ekle iletişim kutusunda, karşıya  yüklemek istediğiniz dosyayı belirtmek için Gözat düğmesini seçin ve ardından Klasör **(isteğe bağlı)** kutusuna bir klasör adı girin.
 
    ![Blob klasörüne dosya yükleme](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766037.png)
 
-   Aynı adımı izleyerek kapsayıcı klasörlerine alt klasörler ekleyebilirsiniz. Bir klasör adı belirtmezseniz, dosya BLOB kapsayıcısının en üst düzeyine yüklenir. Dosya, kapsayıcıda belirtilen klasörde görüntülenir.
+   Aynı adımı kullanarak kapsayıcı klasörlerine alt klasörler ebilirsiniz. Bir klasör adı belirtmezseniz, dosya blob kapsayıcının en üst düzeyine karşıya yükler. Dosya, kapsayıcıda belirtilen klasörde görünür.
 
-   ![Bir blob kapsayıcısına eklenen klasör](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766038.png)
+   ![Blob kapsayıcıya eklenen klasör](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766038.png)
 
-1. Klasörün içeriğini görmek için klasörü çift tıklatın veya ENTER ' u seçin. Kapsayıcının klasöründe olduğunuzda, **üst dizin aç** (ok) düğmesini seçerek kapsayıcının köküne gidebilirsiniz.
+1. Klasörün içeriğini görmek için klasöre çift tıklayın veya Enter tarak seçin. Kapsayıcının klasöründeyken Üst Dizini Aç **(ok)** düğmesini seçerek kapsayıcının köküne dönebilirsiniz.
 
-### <a name="to-delete-a-container-folder"></a>Bir kapsayıcı klasörünü silmek için
+### <a name="to-delete-a-container-folder"></a>Kapsayıcı klasörünü silmek için
 
 Klasördeki tüm dosyaları silin.
 
-Blob kapsayıcılarındaki klasörler sanal klasörlerdir, boş bir klasör oluşturamazsınız. Ayrıca, dosya içeriklerini silmek için bir klasörü silemez, ancak bunun yerine klasörü silmek için bir klasörün tüm içeriğini silmeniz gerekir.
+Blob kapsayıcılarında klasörler sanal klasörler olduğundan boş bir klasör oluşturasınız. Ayrıca, bir klasörü silemez ve dosya içeriğini silemezsiniz, ancak klasörün kendisini silmek için klasörün içeriğinin tamamını silmeniz gerekir.
 
-### <a name="to-filter-blobs-in-a-container"></a>Bir kapsayıcıdaki Blobları filtrelemek için
+### <a name="to-filter-blobs-in-a-container"></a>Kapsayıcıda blobları filtrelemek için
 
-Ortak bir ön ek belirterek görüntülenen Blobları filtreleyebilirsiniz.
+Ortak bir ön ek belirterek görüntülenen blobları filtrelebilirsiniz.
 
-Örneğin, filtre metin kutusuna **Hello** önekini girip **Yürüt** (**!**) düğmesini seçerseniz, yalnızca "Hello" ile başlayan Bloblar görüntülenir.
+Örneğin, filtre metin kutusuna **hello** ön eki girer ve ardından Yürüt **(** **!**) düğmesini seçersiniz, yalnızca "hello" ile başlayan bloblar görüntülenir.
 
 ![Filtre metin kutusu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC519076.png)
 
-Filtre metin kutusu, büyük/küçük harfe duyarlıdır ve joker karakterlerle filtrelemeyi desteklemez. Blob 'lar yalnızca ön eke göre filtrelenebilir. Bir sanal hiyerarşide Blobları düzenlemek için bir sınırlayıcı kullanıyorsanız, ön ek bir sınırlayıcı içerebilir. Örneğin, "HelloFabric/" ön ekine filtre uygulamak, bu dizeyle başlayan tüm blob 'ları döndürür.
+Filtre metin kutusu büyük/büyük harfe duyarlıdır ve joker karakterlerle filtrelemeyi desteklemez. Bloblar yalnızca ön eke göre filtrelenmiş olabilir. Sanal hiyerarşide blobları düzenlemek için sınırlayıcı kullanıyorsanız ön ek bir sınırlayıcı içerebilir. Örneğin, "HelloFabric/" öneki üzerinde filtrelemek, bu dizeyle başlayan tüm blobları döndürür.
 
 ### <a name="to-download-blob-data"></a>Blob verilerini indirmek için
 
-**Cloud Explorer**'da aşağıdaki yöntemlerden birini kullanın:
+Cloud **Explorer'da** aşağıdaki yöntemlerden birini kullanın:
 
-* Bir veya daha fazla Blobun kısayol menüsünü açın ve **Aç**' ı seçin.
-* Blob adını seçin ve sonra **Aç** düğmesini seçin.
+* Bir veya daha fazla blob için kısayol menüsünü açın ve Aç'ı **seçin.**
+* Blob adını ve ardından Aç **düğmesini** seçin.
 * Blob adına çift tıklayın.
 
-Blob indirmenin ilerleme durumu, **Azure etkinlik günlüğü** penceresinde görünür.
+Blob indirmenin ilerleme durumu **Azure** Etkinlik Günlüğü penceresinde görüntülenir.
 
-Blob, bu dosya türü için varsayılan düzenleyicide açılır. İşletim sistemi dosya türünü tanırsa, dosya yerel olarak yüklenmiş bir uygulamada açılır. Aksi takdirde, Blobun dosya türü için uygun bir uygulama seçmeniz istenir. Bir blobu karşıdan yüklerken oluşturulan yerel dosya salt okunurdur.
+Blob, bu dosya türü için varsayılan düzenleyicide açılır. İşletim sistemi dosya türünü tanırsa, dosya yerel olarak yüklenmiş bir uygulamada açılır. Aksi takdirde, blob'un dosya türüne uygun bir uygulama seçmeniz istenir. Blob indirken oluşturulan yerel dosya salt okunur olarak işaretlenir.
 
-Blob verileri yerel olarak önbelleğe alınır ve BLOB 'un Azure Blob depolamada son değiştirilme zamanına karşı denetlenir. Blob son indirildikten sonra güncelleştirilirse, yeniden indirilir. Aksi takdirde, blob yerel diskten yüklenir.
+Blob verileri yerel olarak önbelleğe alınarak Blob'un Azure Blob depolama alanında son değiştirme zamanıyla ilgili olarak denetlenir. Blob son indirildikten sonra güncelleştirilmişse yeniden indirilir. Aksi takdirde blob yerel diskten yüklenir.
 
-Varsayılan olarak, bir blob geçici bir dizine indirilir. Blob 'ları belirli bir dizine indirmek için seçili blob adları için kısayol menüsünü açın ve **farklı kaydet**' i seçin. Bir blobu bu şekilde kaydettiğinizde, blob dosyası açılmaz ve yerel dosya okuma/yazma öznitelikleriyle oluşturulur.
+Varsayılan olarak, bir blob geçici bir dizine indirilir. Blobları belirli bir dizine indirmek için, seçili blob adlarının kısayol menüsünü açın ve Farklı **Kaydet'i seçin.** Bir blobu bu şekilde kaydeden blob dosyası açık olmaz ve yerel dosya okuma/yazma öznitelikleriyle oluşturulur.
 
 ### <a name="to-upload-blobs"></a>Blobları karşıya yüklemek için
 
-blobları karşıya yüklemek için, kapsayıcı blob kapsayıcısı görünümünde görüntülenmek üzere açıkken **Upload blob** düğmesini seçin.
+Blobları karşıya yüklemek için, **Upload blob** kapsayıcı görünümünde görüntülemeye açık olduğunda Blobu Seç düğmesini seçin.
 
-Karşıya yüklenecek bir veya daha fazla dosya seçebilir ve herhangi bir türde dosya yükleyebilirsiniz. **Azure etkinlik günlüğü** penceresinde karşıya yükleme işleminin ilerleme durumu gösterilir. Blob verileriyle çalışma hakkında daha fazla bilgi için bkz. [.net 'Te Azure Blob depolamayı kullanma](/azure/storage/blobs/storage-quickstart-blobs-dotnet).
+Karşıya yüklemek için bir veya daha fazla dosya seçebilir ve istediğiniz türde dosyaları karşıya yükleyebilirsiniz. **Azure Etkinlik Günlüğü penceresinde** karşıya yüklemenin ilerleme durumu gösterilir. Blob verileriyle çalışma hakkında daha fazla bilgi için [bkz. .NET'te Azure Blob depolamayı kullanma.](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
 
 ### <a name="to-view-logs-transferred-to-blobs"></a>Bloblara aktarılan günlükleri görüntülemek için
 
-Azure uygulamanızdaki verileri günlüğe kaydetmek için Azure Tanılama kullanıyorsanız ve günlükleri depolama hesabınıza aktardıysanız, Azure 'un bu Günlükler için oluşturduğu kapsayıcıları görürsünüz. Bu günlükleri Sunucu Gezgini ' de görüntülemek, özellikle Azure 'a dağıtılırsa, uygulamanızla ilgili sorunları belirlemenin kolay bir yoludur.
+Azure uygulamanıza Azure Tanılama verileri günlüğe kaydederken günlükleri depolama hesabınıza aktardıysanız, Azure'ın bu günlükler için oluşturduğu kapsayıcıları alırsınız. Bu günlükleri Sunucu Gezgini, özellikle de Azure'a dağıtılmışsa uygulamayla ilgili sorunları tanımlamanın kolay bir yolu olabilir.
 
-Azure Tanılama hakkında daha fazla bilgi için bkz. [Azure Tanılama kullanarak günlük verilerini toplama](/azure/cloud-services/cloud-services-dotnet-diagnostics).
+Daha fazla bilgi Azure Tanılama için [bkz. Azure Tanılama Kullanarak Günlük Verileri Toplama.](/azure/cloud-services/cloud-services-dotnet-diagnostics)
 
-### <a name="to-get-the-url-for-a-blob"></a>Bir Blobun URL 'sini almak için
+### <a name="to-get-the-url-for-a-blob"></a>Blob url'sini almak için
 
-Blobun kısayol menüsünü açın ve **URL 'Yi Kopyala**' yı seçin.
+Blobun kısayol menüsünü açın ve URL'yi **kopyala'yı seçin.**
 
-### <a name="to-edit-a-blob"></a>Bir blobu düzenlemek için
+### <a name="to-edit-a-blob"></a>Blobu düzenlemek için
 
-Blobu seçin ve ardından **blobu aç** düğmesini seçin.
+Blobu ve ardından Blobu Aç **düğmesini** seçin.
 
-Dosya geçici bir konuma indirilir ve yerel bilgisayarda açılır. değişiklikleri yaptıktan sonra blobu yeniden Upload.
+Dosya geçici bir konuma indirilir ve yerel bilgisayarda açılır. Upload sonra blobu yeniden deneyin.
 
 ## <a name="work-with-queue-resources"></a>Kuyruk kaynaklarıyla çalışma
 
-Depolama services kuyrukları bir Azure depolama hesabında barındırılır. Bunları, bulut hizmeti rollerinizin bir ileti geçirme mekanizmasıyla birbirleriyle ve diğer hizmetlerle iletişim kurmasına izin vermek için kullanabilirsiniz. Kuyruğa program aracılığıyla bir bulut hizmeti ve dış istemciler için bir web hizmeti üzerinden erişin. Ayrıca kuyrukta yer alan Sunucu Gezgini kullanarak Visual Studio.
+Depolama hizmetleri kuyrukları bir Azure depolama hesabında barındırıldı. Bulut hizmeti rollerinin birbirleriyle ve diğer hizmetlerle bir ileti geçirme mekanizmasıyla iletişim kurmasına izin vermek için bunları kullanabilirsiniz. Bir bulut hizmeti üzerinden ve dış istemciler için bir Web hizmeti üzerinden sıraya programlı bir şekilde erişebilirsiniz. Kuyruğa doğrudan Visual Studio Sunucu Gezgini kullanarak da erişebilirsiniz.
 
-Kuyrukları kullanan bir bulut hizmeti geliştirirken, siz kodunuzu geliştirirken ve test ederken Visual Studio oluşturmak ve onlarla etkileşimli olarak çalışmak için Visual Studio'i kullanabilirsiniz.
+kuyrukları kullanan bir bulut hizmeti geliştirirken,, kodunuzu geliştirip test ederken, kuyruklar oluşturmak ve bunlarla etkileşimli olarak çalışmak için Visual Studio kullanmak isteyebilirsiniz.
 
-Bu Sunucu Gezgini, kuyrukları bir depolama hesabında görüntüleme, kuyruk oluşturma ve silme, iletilerini görüntülemek için bir kuyruk açma ve kuyruğa ileti ekleme. Görüntülemek üzere bir kuyruk asanız, tek tek iletileri görüntüebilirsiniz ve sol üst köşedeki düğmeleri kullanarak kuyrukta aşağıdaki eylemleri gerçekleştirebilirsiniz:
+Sunucu Gezgini, kuyrukları bir depolama hesabında görüntüleyebilir, kuyruklar oluşturup silebilir, iletilerini görüntülemek için bir kuyruk açabilir ve bir kuyruğa ileti ekleyebilirsiniz. Görüntüleme için bir kuyruğu açtığınızda, tek tek iletileri görüntüleyebilir ve sol üst köşedeki düğmeleri kullanarak sırada aşağıdaki eylemleri gerçekleştirebilirsiniz:
 
 * Kuyruğun görünümünü yenileyin.
 * Kuyruğa bir ileti ekleyin.
-* En üstteki iletiyi sıra dışı bırakın.
-* Kuyruğun tamamını temizleme.
+* En üstteki ileti sıradan çıkar.
+* Tüm sırayı Temizle.
 
-Aşağıdaki görüntüde, iki ileti içeren bir kuyruk gösterir:
+Aşağıdaki görüntüde iki ileti içeren bir sıra gösterilmektedir:
 
 ![Kuyruğu görüntüleme](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC651470.png)
 
-Depolama hizmetleri kuyrukları hakkında daha fazla bilgi için [bkz. .NET Kullanmaya başlayın Azure Kuyruk depolama ile depolamayı kullanma.](/azure/storage/queues/storage-dotnet-how-to-use-queues) Depolama hizmetleri kuyrukları için web hizmeti hakkında daha fazla bilgi için bkz. [Kuyruk Hizmeti Kavramları.](/rest/api/storageservices/Queue-Service-Concepts) Visual Studio kullanarak bir depolama hizmetleri kuyruğuna ileti gönderme hakkında bilgi için bkz. [Depolama Hizmetleri Kuyruğuna İleti Gönderme.](/azure/visual-studio/vs-storage-cloud-services-getting-started-queues)
+Depolama Hizmetleri kuyrukları hakkında daha fazla bilgi için bkz. [.NET kullanarak Azure kuyruk depolama ile çalışmaya başlama](/azure/storage/queues/storage-dotnet-how-to-use-queues). Depolama Hizmetleri kuyrukları Web hizmeti hakkında daha fazla bilgi için bkz. [kuyruk hizmeti kavramları](/rest/api/storageservices/Queue-Service-Concepts). Visual Studio kullanarak bir depolama hizmetleri kuyruğuna ileti gönderme hakkında daha fazla bilgi için bkz. [bir Depolama hizmetleri kuyruğuna ileti gönderme](/azure/visual-studio/vs-storage-cloud-services-getting-started-queues).
 
 > [!NOTE]
-> Depolama hizmetleri kuyrukları Azure hizmet kuyruklarından Service Bus farklıdır. Kuyrukları yeniden Service Bus için [bkz. Service Bus, konu başlıkları ve abonelikleri.](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions)
+> Depolama services kuyrukları Azure Service Bus kuyruklarından farklıdır. Service Bus kuyrukları hakkında daha fazla bilgi için bkz. [Service Bus kuyruklar, konular ve abonelikler](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions).
 
 ## <a name="work-with-table-resources"></a>Tablo kaynaklarıyla çalışma
 
-Azure Tablo depolama, büyük miktarlarda yapısal veriyi depolar. Hizmet, Azure bulutu içinden ve dışından kimliği doğrulanmış çağrıları kabul eden bir NoSQL veri deposu hizmetidir. Azure tabloları, yapılandırılmış ve ilişkisel olmayan verilerin depolanması için idealdir.
+Azure Tablo depolama, büyük miktarlarda yapısal veriyi depolar. Hizmet, Azure bulutu içinden ve dışından kimliği doğrulanmış çağrıları kabul eden bir NoSQL veri deposu olur. Azure tabloları, yapılandırılmış ve ilişkisel olmayan verilerin depolanması için idealdir.
 
 ### <a name="to-create-a-table"></a>Tablo oluşturmak için
 
-1. Bulut **Gezgini'nde** depolama **hesabının Tablolar** düğümünü ve ardından Tablo Oluştur'ı **seçin.**
-1. Tablo **Oluştur iletişim** kutusuna tablo için bir ad girin.
+1. **Cloud Explorer**'da depolama hesabının **Tablolar** düğümünü seçin ve ardından **tablo oluştur**' u seçin.
+1. **Tablo oluştur** iletişim kutusunda tablo için bir ad girin.
 
 ### <a name="to-view-table-data"></a>Tablo verilerini görüntülemek için
 
-1. Cloud **Explorer'da** **Azure** düğümünü açın ve ardından azure **Depolama** açın.
-1. İlgilenilen depolama hesabı düğümünü açın ve ardından depolama hesabı **için** tabloların listesini görmek için Tablolar düğümünü açın.
-1. Bir tablonun kısayol menüsünü açın ve Tabloyu **Görüntüle'yi seçin.**
+1. **Cloud Explorer**'da **Azure** düğümünü açın ve **Depolama** düğümünü açın.
+1. İlgilendiğiniz depolama hesabı düğümünü açın ve ardından depolama hesabı için tabloların listesini görmek üzere **Tables** düğümünü açın.
+1. Bir tablo için kısayol menüsünü açın ve ardından **tabloyu görüntüle**' yi seçin.
 
-    ![Çözüm Gezgini'de bir Azure tablosu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744165.png)
+    ![Çözüm Gezgini bir Azure tablosu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744165.png)
 
-Tablo varlıklara (satırlarda gösterilir) ve özelliklere (sütunlarda gösterilir) göre düzenlenmiştir. Örneğin, sonraki çizimde aşağıdaki çizimde listelenen varlıklar Tablo Tasarımcısı.
+Tablo varlıklara (satırlarda gösterilen) ve özelliklerde (sütunlarda gösterilir) göre düzenlenir. Örneğin, bir sonraki çizimde Tablo Tasarımcısı listelenen varlıklar gösterilmektedir.
 
 ### <a name="to-edit-table-data"></a>Tablo verilerini düzenlemek için
 
-Bu **Tablo Tasarımcısı** varlığın kısayol menüsünü (tek satır) veya bir özelliği (tek bir hücre) açın ve düzenle'yi **seçin.**
+**Tablo Tasarımcısı**, bir varlık (tek bir satır) veya bir Özellik (tek bir hücre) için kısayol menüsünü açın ve ardından **Düzenle**' yi seçin.
 
 ![Tablo varlığı ekleme veya düzenleme](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC656238.png)
 
-Tek bir tablodaki varlıkların aynı özellik kümesine (sütunlar) sahip olması gerekmez. Tablo verilerini görüntüleme ve düzenlemeyle ilgili aşağıdaki kısıtlamaları unutmayın:
+Tek bir tablodaki varlıkların aynı özellik kümesine (sütun) sahip olması gerekmez. Tablo verilerini görüntüleme ve düzenlemeyle ilgili aşağıdaki kısıtlamaları göz önünde bulundurun:
 
-* İkili verileri ( ) görüntüleyemez veya `type byte[]` düzenleyemezsiniz, ancak bir tabloda depolarsınız.
-* Azure Tablo depolaması bu işlemi desteklemey olduğundan **PartitionKey** veya **RowKey** değerlerini düzenleyemezsiniz.
-* Timestamp adlı bir özellik **oluşturayazabilirsiniz.** Azure depolama hizmetleri bu adla bir özellik kullanır.
-* Bir Tarih Saat **değeri** girersiniz, bilgisayarınızın bölge ve dil ayarlarına (örneğin, AA/D/YYYY SS:MM:SS [AM| ABD İngilizcesi için PM] ).
+* İkili verileri görüntüleyemez veya düzenleyemezsiniz ( `type byte[]` ), ancak bir tabloda saklayabilirsiniz.
+* Azure Tablo Depolaması bu işlemi desteklemediğinden **partitionkey** veya **rowkey** değerlerini düzenleyemezsiniz.
+* **Zaman damgası** adlı bir özellik oluşturamazsınız. Azure depolama hizmetleri, bu adı taşıyan bir özellik kullanır.
+* Bir **Tarih saat** değeri girerseniz, bilgisayarınızın bölge ve dil ayarlarına uygun bir biçimi izlemeniz gerekir (ÖRNEĞIN, aa/gg/yyyy HH: mm: SS [har | PM] ABD Ingilizcesi için).
 
 ### <a name="to-add-entities"></a>Varlık eklemek için
 
-1. Bu **Tablo Tasarımcısı** Varlık Ekle **düğmesini** seçin.
+1. **Tablo Tasarımcısı** **varlık Ekle** düğmesini seçin.
 
     ![Varlık Ekle düğmesi](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC655336.png)
 
-1. Varlık **Ekle iletişim** kutusunda **PartitionKey** ve **RowKey** özelliklerinin değerlerini girin.
+1. **Varlık Ekle** iletişim kutusunda, **Partitionkey** ve **rowkey** özelliklerinin değerlerini girin.
 
     ![Varlık Ekle iletişim kutusu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC655335.png)
 
-    Değerleri dikkatli bir şekilde girin. Varlığı sildikten sonra yeniden eklemedikçe iletişim kutusunu kapatarak bunları değiştiremezsiniz.
+    Değerleri dikkatle girin. Varlığı silip yeniden eklemediğiniz takdirde iletişim kutusunu kapattıktan sonra bu dosyaları değiştiremezsiniz.
 
 ### <a name="to-filter-entities"></a>Varlıkları filtrelemek için
 
-Sorgu oluşturucuyu kullanıyorsanız tabloda görünen varlık kümelerini özelleştirebilirsiniz.
+Sorgu oluşturucuyu kullanıyorsanız bir tabloda görünen varlıkların kümesini özelleştirebilirsiniz.
 
-1. Sorgu oluşturucuyu açmak için görüntülemek için bir tablo açın.
-1. Tablo **Sorgu Tasarımcısı** araç çubuğundaKimlik düğmesi seçin.
+1. Sorgu oluşturucuyu açmak için, görüntülemek üzere bir tablo açın.
+1. Tablo görünümü araç çubuğunda **Sorgu Tasarımcısı** düğmesini seçin.
 
-    Sorgu Tasarımcısı  iletişim kutusu görüntülenir. Aşağıdaki çizimde, sorgu oluşturucuda yerleşik olarak yer alan bir sorgu gösterilmiştir.
+    **Sorgu Tasarımcısı** iletişim kutusu görüntülenir. Aşağıdaki çizimde sorgu oluşturucuda oluşturulan bir sorgu gösterilmektedir.
 
-    ![Sorgu oluşturucu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC652231.png)
-1. Sorguyu oluşturma işi bittiğinde iletişim kutusunu kapatın. Sorgunun sonuçta elde edilen metin biçimi, bir metin kutusunda bir metin WCF Veri Hizmetleri görünür.
+    ![Sorgu Oluşturucu](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC652231.png)
+1. Sorguyu oluşturmayı bitirdiğinizde iletişim kutusunu kapatın. sorgunun ortaya çıkan metin formu, bir WCF Veri Hizmetleri filtresi olarak bir metin kutusunda görünür.
 1. Sorguyu çalıştırmak için yeşil üçgen simgesini seçin.
 
-Ayrıca, doğrudan filtre metin kutusuna Tablo Tasarımcısı bir filtre dizesi WCF Veri Hizmetleri içinde görünen varlık verilerini filtreleebilirsiniz. Bu tür dize, WHERE yan tümcesine SQL ancak sunucuya HTTP isteği olarak gönderilir. Filtre dizeleri oluşturma hakkında bilgi için [bkz. Tablo tasarımcısı için filtre dizeleri oluşturma.](vs-azure-tools-table-designer-construct-filter-strings.md)
+filtre metin kutusuna doğrudan bir WCF Veri Hizmetleri filtre dizesi girerseniz, Tablo Tasarımcısı görüntülenen varlık verilerini de filtreleyebilirsiniz. bu tür bir dize, bir SQL where yan tümcesine benzerdir ancak sunucuya HTTP isteği olarak gönderilir. Filtre dizeleri oluşturma hakkında daha fazla bilgi için bkz. [Tablo Tasarımcısı için filtre dizeleri](vs-azure-tools-table-designer-construct-filter-strings.md)oluşturma.
 
-Aşağıdaki çizimde geçerli bir filtre dizesi örneği gösterilmiştir:
+Aşağıdaki çizimde geçerli bir filtre dizesi örneği gösterilmektedir:
 
 ![Filtre dizesi](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC655337.png)
 
-## <a name="refresh-storage-data"></a>Depolama verilerini yenileme
+## <a name="refresh-storage-data"></a>Depolama verilerini yenile
 
-Bir Sunucu Gezgini bir depolama hesabına bağlandığında veya bu hesaptan veri alıyorsa, işlemi tamamlamak bir dakika kadar zaman alır. Bağlantı Sunucu Gezgini, işlem zaman zaman uzer. Veriler alınırken verilerin diğer kısımlarında çalışmaya devam Visual Studio. Çok uzun süren işlemi iptal etmek için, araç **çubuğundaki** Yenilemeyi Durdur Sunucu Gezgini seçin.
+Sunucu Gezgini bir depolama hesabına bağlanıp verileri aldığında, işlemin tamamlanması birkaç dakika sürebilir. Sunucu Gezgini bağlanamıyorsa, işlem zaman aşımına uğrar. Veriler alınırken, Visual Studio diğer bölümlerinde çalışmaya devam edebilirsiniz. Çok uzun sürüyorsa işlemi iptal etmek için Sunucu Gezgini araç çubuğundaki **yenilemeyi durdur** düğmesini seçin.
 
 ### <a name="to-refresh-blob-container-data"></a>Blob kapsayıcı verilerini yenilemek için
 
-* öğesinin **altındaki Bloblar** **Depolama** seçin ve sonra  da araç çubuğunda yenile Sunucu Gezgini seçin.
-* Görüntülenen blob listesini yenilemek için Yürüt **düğmesini** seçin.
+* **Depolama** altındaki **bloblar** düğümünü seçin ve sonra Sunucu Gezgini araç çubuğunda **yenile** düğmesini seçin.
+* Görüntülenen blob 'ların listesini yenilemek için **Yürüt** düğmesini seçin.
 
 ### <a name="to-refresh-table-data"></a>Tablo verilerini yenilemek için
 
-* öğesinin **altındaki** Tablolar **Depolama** seçin ve sonra  da araç çubuğunda yenile Sunucu Gezgini seçin.
-* içinde görüntülenen varlıkların listesini yenilemek için **Tablo Tasarımcısı** içinde **Yürüt** düğmesini Tablo Tasarımcısı.
+* **Depolama** altındaki **tablolar** düğümünü seçin ve sonra Sunucu Gezgini araç çubuğunda **yenile** düğmesini seçin.
+* **Tablo Tasarımcısı**' de görüntülenen varlıkların listesini yenilemek Için Tablo Tasarımcısı **Çalıştır** düğmesini seçin.
 
-### <a name="to-refresh-queue-data"></a>Kuyruk verilerini yenilemek için
+### <a name="to-refresh-queue-data"></a>Sıra verilerini yenilemek için
 
-öğesinin **altındaki Kuyruklar** **Depolama** seçin ve ardından araç **çubuğunda** yenile Sunucu Gezgini seçin.
+**Depolama** altındaki **kuyruklar** düğümünü seçin ve sonra Sunucu Gezgini araç çubuğunda **yenile** düğmesini seçin.
 
-### <a name="to-refresh-all-items-in-a-storage-account"></a>Depolama hesabıdaki tüm öğeleri yenilemek için
+### <a name="to-refresh-all-items-in-a-storage-account"></a>Bir depolama hesabındaki tüm öğeleri yenilemek için
 
-Hesap adını seçin ve ardından araç **çubuğunda** yenile Sunucu Gezgini seçin.
+Hesap adı ' nı seçin ve ardından Sunucu Gezgini araç çubuğunda **Yenile** düğmesini seçin.
 
-## <a name="add-storage-accounts-by-using-server-explorer"></a>Sunucu Gezgini kullanarak depolama Sunucu Gezgini
+## <a name="add-storage-accounts-by-using-server-explorer"></a>Sunucu Gezgini kullanarak depolama hesapları ekleme
 
-Depolama hesaplarını, depolama hesabı eklemenin iki yolu Sunucu Gezgini. Azure aboneliğinize bir depolama hesabı oluşturabilir veya var olan bir depolama hesabını iliştirebilirsiniz.
+Sunucu Gezgini kullanarak depolama hesapları eklemenin iki yolu vardır. Azure aboneliğinizde bir depolama hesabı oluşturabilir veya var olan bir depolama hesabını iliştirebilirsiniz.
 
-### <a name="to-create-a-storage-account-by-using-server-explorer"></a>Depolama hesabını kullanarak depolama hesabı Sunucu Gezgini
+### <a name="to-create-a-storage-account-by-using-server-explorer"></a>Sunucu Gezgini kullanarak bir depolama hesabı oluşturmak için
 
-1. Sunucu Gezgini düğümü için kısayol menüsünü açın **ve Depolama** Oluştur'Depolama **seçin.**
+1. Sunucu Gezgini ' de, **Depolama** düğümünün kısayol menüsünü açın ve **Depolama hesabı oluştur**' u seçin.
 
-1. Hesap **Oluştur Depolama** iletişim kutusunda aşağıdaki bilgileri seçin veya girin:
+1. **Depolama hesabı oluştur** iletişim kutusunda aşağıdaki bilgileri seçin veya girin:
 
    * Depolama hesabını eklemek istediğiniz Azure aboneliği.
    * Yeni depolama hesabı için kullanmak istediğiniz ad.
-   * Bölge veya benzeşm grubu (örneğin, Batı ABD veya Doğu Asya).
-   * Yerel olarak yedekli gibi depolama hesabı için kullanmak istediğiniz çoğaltma türü.
+   * Bölge veya benzeşim grubu (Batı ABD veya Doğu Asya gibi).
+   * Depolama hesabı için kullanmak istediğiniz çoğaltma türü (yerel olarak yedekli).
 
    ![Azure depolama hesabı oluşturma](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC744166.png)
 
 1. **Oluştur**’u seçin.
 
-Yeni depolama hesabı, Depolama **listesinde** Çözüm Gezgini.
+yeni depolama hesabı, Çözüm Gezgini **Depolama** listesinde görünür.
 
-### <a name="to-attach-an-existing-storage-account-by-using-server-explorer"></a>Var olan bir depolama hesabını Sunucu Gezgini
+### <a name="to-attach-an-existing-storage-account-by-using-server-explorer"></a>Sunucu Gezgini kullanarak var olan bir depolama hesabı eklemek için
 
-1. Azure Sunucu Gezgini düğümü için kısayol menüsünü **açın ve Depolama** Ekle'yi **Depolama.**
+1. Sunucu Gezgini ' de Azure **Depolama** düğümünün kısayol menüsünü açın ve **dış Depolama ekle**' yi seçin.
 
-    ![Mevcut depolama hesabını ekleme](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766039.png)
-1. Hesap **Oluştur Depolama** iletişim kutusunda aşağıdaki bilgileri seçin veya girin:
+    ![Var olan bir depolama hesabı ekleniyor](./media/vs-azure-tools-storage-resources-server-explorer-browse-manage/IC766039.png)
+1. **Depolama hesabı oluştur** iletişim kutusunda aşağıdaki bilgileri seçin veya girin:
 
    * Eklemek istediğiniz mevcut depolama hesabının adı.
-   * Seçilen depolama hesabının anahtarı. Bu değer genellikle bir depolama hesabı seçerek sizin için sağlanır. Depolama hesabı Visual Studio hatırlamak istemiyorsanız Hesap anahtarını anımsa **onay** kutusunu seçin.
-   * HTTP, HTTPS veya özel uç nokta gibi depolama hesabına bağlanmak için kullanabileceğiniz protokol. Özel uç noktalar hakkında daha fazla bilgi için [bkz. Bağlantı Dizelerini Yapılandırma.](/azure/storage/common/storage-configure-connection-string)
+   * Seçilen depolama hesabı için anahtar. Bu değer genellikle bir depolama hesabı seçtiğinizde sizin için sağlanır. depolama hesabı anahtarını hatırlamak Visual Studio istiyorsanız, **hesap anahtarını anımsa** onay kutusunu seçin.
+   * HTTP, HTTPS veya özel bir uç nokta gibi depolama hesabına bağlanmak için kullanılacak protokol. Özel uç noktalar hakkında daha fazla bilgi için bkz. [bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string).
 
 ### <a name="to-view-the-secondary-endpoints"></a>İkincil uç noktaları görüntülemek için
 

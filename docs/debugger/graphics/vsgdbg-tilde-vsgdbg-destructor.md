@@ -11,14 +11,14 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 ms.openlocfilehash: 3a0331d0919a52ed91cf973a274a01220dc88f2a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122090791"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126627998"
 ---
 # <a name="vsgdbgvsgdbg-destructor"></a>VsgDbg::~VsgDbg (Yok Edici)
-Sınıfının bir örneğini yok `VsgDbg` eder. Grafik bilgileri etkin bir şekilde kaydediliyorsa, grafik günlük dosyası son olarak kapatılır ve grafik bilgilerini etkin bir şekilde yakalayarak kullanılan kaynaklar serbest bırakılmıştır.
+Sınıfının bir örneğini yok `VsgDbg` eder. Grafik bilgileri etkin bir şekilde kaydediliyorsa, grafik günlüğü dosyası son olarak kapatılır ve grafik bilgilerini etkin bir şekilde yakalayarak kullanılan kaynaklar serbest bırakılmıştır.
 
 ## <a name="syntax"></a>Syntax
 
