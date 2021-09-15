@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 8f9d8445f2bfac17a077ed9bf3a444350209ad58
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 2788894a98dd0433fcc191a37665dd1df0333c3e
+ms.sourcegitcommit: 559c662b2d60048300b76ea6ed3defaa2a259492
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122055906"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "127779629"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>multi-factor authentication gerektiren hesaplarla Visual Studio kullanma
 
@@ -69,7 +69,7 @@ Yeniden girmeye tıkladığınızda, **kimlik bilgileriniz** sisteminizin varsay
 
 ## <a name="how-to-opt-out-of-using-a-specific-azure-active-directory-tenant-in-visual-studio"></a>Visual Studio içinde belirli bir Azure Active Directory kiracının kullanımını devre dışı bırakma
 
-Visual Studio 2019 sürüm 16,6, kiracıların tek tek veya küresel olarak filtreleneceği esnekliği sunarak Visual Studio tarafından etkin bir şekilde ele alır. Filtreleme, bu kiracıyla kimlik doğrulaması gereksinimini ortadan kaldırır, ancak aynı zamanda ilişkili kaynaklara erişemeyeceksiniz.
+Visual Studio 2019 sürüm 16,6, kiracıların tek tek veya küresel olarak filtreleneceği esnekliği sunar ve bunları Visual Studio etkin bir şekilde gizler. Filtreleme, bu kiracıyla kimlik doğrulaması gereksinimini ortadan kaldırır, ancak aynı zamanda ilişkili kaynaklara erişemeyeceksiniz.
 
 Bu işlevsellik, birden çok kiracının olması ve belirli bir alt kümeyi hedefleyerek geliştirme ortamınızı iyileştirmek istediğinizde yararlıdır. Ayrıca, soruna neden olan kiracıyı filtreleyebileceğiniz için belirli bir CA/MFA ilkesini doğrulayamıyorum, örneklerde da yardımcı olabilir. 
 
