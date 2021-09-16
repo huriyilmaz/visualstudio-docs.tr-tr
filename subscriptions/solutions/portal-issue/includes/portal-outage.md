@@ -1,29 +1,29 @@
 ---
 title: Portal kesintisi
-description: Visual Studio abonelik portalındaki kesinti tamamlanmıştır.
+description: Abonelikler portalında kesintiyi tamamlama.
 ms.topic: include
 ms.assetid: 70cbe98d-bfac-4801-be36-7268990d3870
 author: caitybuschlen
 ms.author: cabuschl
 ms.date: 08/14/2020
-user.type: subscriber
+user.type: subscriber, admin
 tags: portal-error
 subscription.type: vl, cloud, retail, partner
 sap.id: 8250612f-7446-20c5-7473-16d089f2280d
-ms.openlocfilehash: a6db8e365df692a0cfaf9d13203a3b4b6bd5f0ac
-ms.sourcegitcommit: beb16d5cc31b3565ec0c8d69f819a4ec67b45aae
+ms.openlocfilehash: 46efd0042f5a7c598db7c714d47ae39ceacaedc0
+ms.sourcegitcommit: 59613afd06a8f184efab8e108410066824a2b712
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110349777"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "127882012"
 ---
-## <a name="were-sorry-to-hear-that-youre-experiencing-an-issue-with-the-visual-studio-subscriptions-portal"></a>Visual Studio abonelikleri portalında bir sorun yaşadığınızı duyuyoruz. 
+## <a name="were-sorry-to-hear-that-youre-experiencing-an-issue-with-the-portal"></a>Portalda sorun yaşadığınız için üzgünüz. 
 
-Abonelik portalı denetimleri veya düğmeleri çalışmıyorsa, sayfa hatası görüntülenemez veya boş sayfa hatası, sayfa yüklenmiyor veya zaman aşımına uğramış veya başka Portal işlevselliği sorunu olduğunu görürsünüz: 
+Portal denetimleri veya düğmeleri çalışmıyorsa, bir sayfa görüntülenemiyor veya boş bir sayfa hatası, sayfa yüklenmiyor veya zaman out veya başka bir portal işlevi sorunu görüyorsanız şunları deneyin: 
 
-* Tarayıcı önbelleğinizi temizleme ve abonelikler portalında oturum açma 
+* Tarayıcınızın önbelleğini temizleme ve abonelikler portalında yeniden oturum açma 
 * Portalı farklı bir tarayıcıda açma 
-* Portalı bir ınbilito veya InPrivate penceresinde açma 
-* Sayfa yenileniyor  
+* Portalı Gizli veya InPrivate penceresinde açma 
+* Sayfayı yenileme  
 
-Bu basit çözümlerin hiçbiri sorunu çözmezse, yardım almak için "çevrimiçi istek" düğmesine tıklayın.
+Bu basit çözümlerden hiçbiri sorunu çözene kadar yardım almak için "Çevrimiçi istek"e tıklayın.

@@ -1,0 +1,31 @@
+---
+title: Birincil iletişim kişisiyim ama süper yönetici değilim.
+description: Birincil ilgili kişi süper yönetici izinlerine sahip olup olması gerektiğini anlamaya çalışıyor
+ms.topic: include
+ms.assetid: d204a061-9a4e-408c-a967-bf2b815d0bf8
+author: CaityBuschlen
+ms.author: cabuschl
+ms.date: 3/23/2021
+user.type: admin
+tags: manage, agreement, sign in, primary, super
+subscription.type: vl, cloud, retail, partner
+sap.id: 8789faa7-9d29-25d8-018a-4f6ecee827c8
+ms.openlocfilehash: c84bdce868c0e72aa761bbe21be0a2ca512a18f0d080111742fb9ba3e77953b9
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "127892557"
+---
+## <a name="i-am-the-primary-contact-but-im-not-a-super-admin-how-do-i-fix-this"></a>Birincil iletişim kişisiyim ama süper yönetici değilim. Nasıl yaparım? düzeltebilir misiniz?
+
+Kuruluş Toplu Lisanslama sözleşmenizin birincil ilgili kişisiyseniz, sözleşme ayarlanırken size süper yönetici rolü atanır. Abonelikler sayfasından bir karşılama e-postası Visual Studio gerekir.
+
+Süper yönetici rollerinizi görmüyorsanız, ilk adım kurumsal bayiniz tarafından sağlanan e-posta adresiyle oturum asanızdan emin olmaktır. Kurumsal bayinize başvurun ve doğru bilgileri girdiğinizi doğrulayın veya ilk karşılama e-postası içinde hangi e-posta adresinin listelenmiş olduğunu doğrulayın. Herhangi bir hata varsa kurumsal bayiden bilgileri kendi uçlarında güncelleştirmesini ve sistemin güncelleştirmesi için 48 saat beklemesini sorun. 
+
+48 saat sonra hala süper yönetici izinlerine sahip değilseniz destek için bize ulaşarak aşağıdaki bilgilere sahip olun:
+- Anlaşma numarası
+- Atanacak e-posta adresi
+
+
+Sözleşme ayarlandıktan sonra birincil kişi olarak eklendiyseniz, başka bir süper yöneticiden sizi süper yönetici [olarak eklemelerini sorun.](https://docs.microsoft.com/visualstudio/subscriptions/admin-roles#assigning-admins)

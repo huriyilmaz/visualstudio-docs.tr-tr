@@ -23,12 +23,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d7d7a4225c3a2711e238f7100054b1342a65eb
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: f1a49c46c975d37f2b0b43531029b0ae5a28d4f8
+ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725887"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "127890474"
 ---
 # <a name="supported-code-changes-c"></a>Desteklenen Kod Değişiklikleri (C++)
 C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. Ancak, program yürütme sırasında bazı değişiklikler uygulanamaz. Bu değişiklikleri uygulamak için yürütmeyi durdurmalı ve kodun yeni bir sürümünü oluşturmalı.
@@ -86,7 +86,7 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
 
 - /Zo ile derlenmiş yerel uygulamalarda hata [ayıklama (İyileştirilmiş Hata Ayıklamayı geliştirme)](/cpp/build/reference/zo-enhance-optimized-debugging)
 
-- Visual Studio 2015 Güncelleştirme 1 Visual Studio önceki sürümlerde UWP uygulamaları veya bileşenlerinde hata ayıklama. Visual Studio 2015 Güncelleştirme 1'den başlayarak UWP C++ uygulamaları ve DirectX uygulamaları içinde Düzenle ve Devam Git'i kullanabilirsiniz çünkü artık anahtar ile derleyici anahtarını `/ZI` `/bigobj` desteklemektedir. Anahtarıyla derlenmiş ikili dosyalarla Düzenle ve Devam'a da `/FASTLINK` kullanabilirsiniz.
+- Visual Studio 2015 Güncelleştirme 1 Visual Studio önceki sürümlerde UWP uygulamaları veya bileşenlerinde hata ayıklama. Visual Studio 2015 Güncelleştirme 1'den başlayarak UWP C++ uygulamaları ve DirectX uygulamaları içinde Düzenle ve Devam Edin'i kullanabilirsiniz, çünkü artık anahtar ile derleyici anahtarını `/ZI` `/bigobj` desteklemektedir. Anahtarıyla derlenmiş ikili dosyalarla Düzenle ve Devam'a da `/FASTLINK` kullanabilirsiniz.
 
 - 8/8.1 Mağaza Uygulamalarının Hata Ayıklaması. Bu projeler VC 120 araç kümesi ve C/C++ anahtarını `/bigobj` kullanır. Ile Düzenle ve `/bigobj` Devam Edin, yalnızca VC 140 araç kümesinde de destekleni.
 
@@ -112,7 +112,7 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
 
 - FASTBuild derleme sistemi. FASTBuild şu anda "Minimum Yeniden Derlemeyi Etkinleştir ( )" derleyici anahtarıyla uyumlu değildir ve bu nedenle Düzenle ve Devam Et `/Gm` desteklenmiyor.
 
-- Eski Mimariler/VC Araç Kümeleri. VC 140 araç kümesiyle, varsayılan hata ayıklayıcı hem X86 hem de X64 uygulamalarıyla Düzenle ve Devam'ı destekler. Eski araç kümeleri yalnızca X86 uygulamalarını destekler. DÜZENLE ve Devam'ı kullanmak için VC 120'den eski araç kümeleri " Hata Ayıklama _> Seçenekleri > Genel >_ Yerel Uyumluluk Modunu Kullan" denetlenerek eski hata ayıklayıcısını kullan gerekir.
+- Eski Mimariler/VC Araç Kümeleri. VC 140 araç kümesiyle, varsayılan hata ayıklayıcı hem X86 hem de X64 uygulamalarıyla Düzenle ve Devam'ı destekler. Eski araç kümeleri yalnızca X86 uygulamalarını destekler. DÜZENLE ve Devam'ı kullanmak için VC 120'den eski araç kümeleri " Hata Ayıklama _> Seçenekleri > Genel >_ Yerel Uyumluluk Modunu Kullan" seçeneği denetlenerek eski hata ayıklayıcısını kullan gerekir.
 
 ## <a name="linking-limitations"></a><a name="BKMK_Linking_limitations"></a> Bağlama sınırlamaları
 
@@ -161,8 +161,13 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
 ## <a name="diagnosing-issues"></a><a name="BKMK_Diagnosing_issues"></a> Sorunları tanılama
  Senaryonız yukarıda belirtilen koşulların hiçbirine uymuyorsa, aşağıdaki DWORD kayıt defteri değerini ayarerek daha fazla ayrıntı topabilirsiniz:
  1. Bir Geliştirici Komut İstemi.
- 2. Şu komutu çalıştırın:  
+ 2. Şu komutu çalıştırın: 
+    ::: moniker range=">=vs-2022" 
+     `VsRegEdit.exe set “C:\Program Files\Microsoft Visual Studio\[Version]\[YOUR EDITION]” HKCU Debugger NativeEncDiagnosticLoggingLevel DWORD 1`
+    ::: moniker-end
+    ::: moniker range="vs-2019"
      `VsRegEdit.exe set “C:\Program Files (x86)\Microsoft Visual Studio\[Version]\[YOUR EDITION]” HKCU Debugger NativeEncDiagnosticLoggingLevel DWORD 1`
+    ::: moniker-end
 
  Hata ayıklama oturumunun başında bu değerin ayarı, Düzenle ve Devam'ın çeşitli bileşenlerinin hata ayıklama bölmesinde ayrıntılı **günlük Çıkış Penceresi**  >  **neden** olur.
 

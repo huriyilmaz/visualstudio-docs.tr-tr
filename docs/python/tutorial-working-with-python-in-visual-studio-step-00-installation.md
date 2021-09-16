@@ -2,7 +2,7 @@
 title: Visual Studio eğitim adım 0, yükleme
 titleSuffix: ''
 description: Visual Studio 'de Python ile çalışmaya yönelik temel bir izlenecek yolun 0. adımı (yükleme önkoşulları).
-ms.date: 01/28/2019
+ms.date: 09/14/2021
 ms.topic: tutorial
 author: JoshuaPartlow
 ms.author: joshuapa
@@ -12,19 +12,19 @@ ms.custom: vs-acquisition
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ae1ee69e663e96f0456c351cc0446b5ba2bd69ff
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 1e712d5df44dd87f07b50b243e8e63ed9e1ad0bf
+ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628281"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "127890447"
 ---
 # <a name="install-python-support-in-visual-studio"></a>Visual Studio’da Python desteğini yükleme
 
 > [!Note]
-> Python desteği şu anda yalnızca Windows için Visual Studio kullanılabilir; Mac ve Linux 'ta Python desteği [Visual Studio Code](https://code.visualstudio.com/docs/python/python-tutorial)aracılığıyla kullanılabilir.
+> Python desteği şu anda yalnızca Windows için Visual Studio kullanılabilir. Mac ve Linux 'ta Python desteği [Visual Studio Code](https://code.visualstudio.com/docs/python/python-tutorial)aracılığıyla kullanılabilir.
 
-1. Windows için en son Visual Studio yükleyiciyi indirin ve çalıştırın (sürüm 15,2 ve üzeri sürümlerde Python desteği mevcuttur). zaten Visual Studio yüklüyse, Visual Studio yükleyiciyi çalıştırın ve 2. adıma gidin.
+1. Windows için en son Visual Studio yükleyiciyi indirin ve çalıştırın. Sürüm 15,2 ve sonrasında Python desteği mevcuttur. zaten Visual Studio yüklüyse, **araçlar**  >  **araçlar ve özellikler ekle**' yi seçerek Visual Studio açın ve yükleyiciyi çalıştırın.
 
     > [!div class="nextstepaction"]
     > [Visual Studio Community yüklensin](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_gettingstarted)
@@ -34,11 +34,17 @@ ms.locfileid: "126628281"
 
 1. Yükleyici, belirli bir geliştirme alanı için ilgili seçeneklerin grupları olan iş yüklerinin bir listesini sunar. Python için **Python geliştirme** iş yükünü seçin ve **yüklemeyi** seçin:
 
-    ![Visual Studio yükleyicisinde Python geliştirme iş yükü](media/installation-python-workload.png)
+    ![Visual Studio yükleyicisinde seçilen Python geliştirme iş yükünün ekran görüntüsü.](media/installation-python-workload.png)
 
 1. python desteğini hızlıca test etmek için Visual Studio başlatın, **Alt** + **i** tuşlarına basarak **Python etkileşimli** penceresini açın ve girin `2+2` . **4** çıkışını görmüyorsanız, adımlarınızı yeniden denetleyin.
 
-    ![Etkileşimli pencere aracılığıyla Python test etme](media/installation-interactive-test.png)
+    ::: moniker range="<=vs-2019"
+    ![Etkileşimli pencere aracılığıyla Python test etme ekran görüntüsü.](media/installation-interactive-test.png)
+    ::: moniker-end
+
+    ::: moniker range=">=vs-2022"
+    ![Visual Studio 2022 etkileşimli penceresi aracılığıyla Python test etme ekran görüntüsü.](media/vs-2022/python-interactive.png)
+    ::: moniker-end
 
 ## <a name="next-step"></a>Sonraki adım
 

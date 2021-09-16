@@ -1,7 +1,7 @@
 ---
 title: LINQ ifadesini basitleştirme
 description: Bu yeniden düzenleme, Where yöntemi için Numaralanabilir'e yapılan gereksiz çağrıları kaldırmak için kullanılır.
-ms.date: 08/12/2020
+ms.date: 07/05/2021
 ms.topic: reference
 author: m-redding
 ms.author: midumont
@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: dc52c81b8899d5b2d2ef3fb22581d3f7ef6c1a68
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 4d97f56dbf3e8c4e3b198de413f6f4700ea4eb16
+ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122041106"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "127890700"
 ---
 # <a name="simplify-linq-expression"></a>LINQ ifadesini basitleştirme
 
@@ -24,11 +24,11 @@ Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 
 - C#
 
-**Ne:** için örneklerini ve aşağıdaki Numaralanabilir yöntemleri yeniden `SomeEnumerableType.Where(<LambdaExpression>).Single()` sıralar: , , , , , , `SomeEnumerable.Single(<LambdaExpression>)` ve `Enumerable.Single()` `SingleOrDefault()` `Last()` `LastOrDefault()` `Any()` `Count()` `First()` `FirstOrDefault()` .
+**Ne:** için örneklerini ve aşağıdaki Numaralanabilir yöntemleri yeniden `SomeEnumerableType.Where(<LambdaExpression>).Single()` sıralar: , , , , , `SomeEnumerable.Single(<LambdaExpression>)` ve `Enumerable.Single()` `SingleOrDefault()` `Last()` `LastOrDefault()` `Any()` `Count()` `First()` `FirstOrDefault()` .
 
 **Ne zaman:**  yönteminin , ve gibi çağıran tüm örneklerin bağımsız değişkeni yok ve önünde `Single()` `SingleOrDefault()` bir ifade `Where()` var. İfadeye yapılan `Where()` giriş bir ifade ağacı olarak oluşturulur.
 
-**Neden:** yöntemi için Numaralanabilir gereksiz çağrının kaldırılması `.Where()` performansı ve okunabilirliği artırır.
+**Neden:** yöntemi için Numaralanabilir için gereksiz çağrının kaldırılması okunabilirliği artırır ve `.Where()` bazı durumlarda performans için açıklamalara bakın.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
@@ -37,6 +37,10 @@ Bu yeniden düzenleme aşağıdakiler için geçerlidir:
 3. **LINQ ifadesini basitleştir'i seçin**
 
    ![typeof ifadesini nameof ifadesine dönüştürme](media/simplify-linq-expression.png)
+   
+## <a name="remarks"></a>Açıklamalar
+
+Bazı durumlarda bu yeniden düzenleme performansı düşürebilir. ve üzerinde LINQ `List<T>` işlemleri `T[]` bu durumda iyileştirilmiş değildir ve daha düşük performansa neden olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

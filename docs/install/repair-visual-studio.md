@@ -2,7 +2,7 @@
 title: Visual Studio’yu onarın
 titleSuffix: ''
 description: Visual Studio 2017 yüklemesini onarmayı öğrenin
-ms.date: 10/12/2020
+ms.date: 09/14/2021
 ms.custom: vs-acquisition
 ms.topic: how-to
 author: anandmeg
@@ -12,78 +12,109 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 98a7448bc3e257bb8a6f8047bf0e4a878aa41307
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: ca36dbefec8ff61a8ba05286f2dd8aa6593cc13b
+ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126635918"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "127890572"
 ---
 # <a name="repair-visual-studio"></a>Visual Studio’yu onarın
 
-Bazen Visual Studio veya bozuk hale gelir. Onarım, güncelleştirmeler de dahil olmak üzere tüm yükleme işlemleri boyunca yükleme zamanı sorunlarını düzeltmek için kullanışlıdır.
+bazen Visual Studio yüklemeniz hasar görmüşse veya bozulmuş olur. Güncelleştirme sorunları da dahil olmak üzere çok çeşitli yük-zamanlı sorunları düzeltmek için onarım yararlı olur.
 
-## <a name="when-to-use-repair"></a>Onarım ne zaman kullanımlı?
-* Yükleme yüküyle ilgili sorunları varsa. Dosyayı diske yazma işlemi başarılı olmaz ve bozuk dosya silinerek düzeltilenemese de bu durum oluşabilir. Onarım, gerekli dosyaları yeniden edinebilirsiniz. 
-* İstemci tarafı indirme sorunlarıyla karşıdan yüklensin. Tüm bağlantı veya ara sunucu sorunlarını çözmüş olduğunu varsayarak onarım yardımcı olabilir. 
-* Uygulama güncelleştirme sorunlarıyla Visual Studio. Onarım birçok yaygın güncelleştirme sorununa çözüm sağlar. 
+## <a name="when-to-use-repair"></a>Onarma ne zaman kullanılır?
+
+İle ilgili sorun yaşıyorsanız Onar 'ı kullanın:
+
+* Diske bir dosya yazılırken meydana gelebilen yükleme yükü başarısız olur ve dosya bozulur. Onar, gerekli dosyaları yeniden alabilir.
+* İstemci tarafı indirme: herhangi bir internet bağlantısı veya ara sunucu sorununu çözdüyoruz.
+* Visual Studio güncelleştiriliyor. Onarma birçok yaygın güncelleştirme sorununu düzeltir.
 
 > [!TIP] 
-> Yükleme sorunu, Windows Yükleyicisi gibi temel Windows hizmette yer alan bir sorundan kaynaksa, onarım aynı soruna neden olabilir. Sistemik sorunlar, bozuk bir Windows Yükleyicisi veya kararsız İnternet bağlantısı içerebilir. Sistemik bir sorunu kontrol etmek için yükleme işlemiyle oluşturulan hata raporunu kullanın.
+> Windows Installer gibi kararsız bir internet bağlantısı veya Windows hizmetindeki bir sorun, yüklemeye sorun oluşmasına neden olabilir. Bu senaryolarda, onarım de etkilenebilir. temel alınan sorunları denetlemek için Visual Studio Yükleyicisi tarafından oluşturulan hata raporunu gözden geçirin.
 
 > [!NOTE] 
-> Bu Visual Studio, kullanıcı ayarlarını sıfırlar ve zaten sahip olduğunuz derlemeleri yeniden yüklenir. Bir ürün sorunu yaşıyorsanız, onarım sorunu [çöze Visual Studio](https://aka.ms/feedback/suggest?space=8)için bir Geri Bildirim Bileti oluşturun.
+> Visual Studio onarma kullanıcı ayarlarını sıfırlar ve var olan derlemelerinizi yeniden yükler. bir ürün sorunuyla karşılaşıyorsanız ve onarmak sorunu gidermezse, bir [Visual Studio geri bildirim bileti](https://aka.ms/feedback/suggest?space=8)oluşturun. daha fazla bilgi için bkz. [Visual Studio veya Visual Studio Yükleyicisi ile ilgili sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md).
 
-## <a name="how-to-repair"></a>Onarım
+## <a name="how-to-repair"></a>Onarma
 ::: moniker range="vs-2017"
 
-1. Bilgisayarınızda **Visual Studio Yükleyicisi'ı** bulun.
+1. bilgisayarınızda **Visual Studio Yükleyicisi** bulun.
 
-     Örneğin, Yıldönümü Güncelleştirmesi veya Windows 10 çalıştıran bir bilgisayarda Başlat'ı seçin ve ardından V harfine kaydırın ve burada dosya adı **olarak Visual Studio Yükleyicisi.**
+     örneğin, Windows 10 yıldönümü güncelleştirmesi veya sonraki bir sürümünü çalıştıran bir bilgisayarda **başlat**' ı seçin ve sonra da **Visual Studio Yükleyicisi** olarak listelendiği **V** harfine gidin.
 
    > [!NOTE]
-   > Bazı bilgisayarlarda, Visual Studio Yükleyicisi yükleyicisi olarak **"M"** harfi altında **Microsoft Visual Studio olabilir.**
+   > bazı bilgisayarlarda Visual Studio Yükleyicisi, **Microsoft Visual Studio yükleyicisi** olarak **"d"** harfi altında listelenmiş olabilir.
    >
-   > Alternatif olarak, Visual Studio Yükleyicisi aşağıdaki konumda bulabilirsiniz:`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+   > alternatif olarak, Visual Studio Yükleyicisi aşağıdaki konumda bulabilirsiniz:`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-1. Yükleyiciyi açın, **Diğer'i ve** ardından Onar'ı **seçin.**
+1. Yükleyiciyi açın, **daha fazla**' yı seçin ve ardından **Onar**' ı seçin.
 
-    ![Çalışma Visual Studio onarım Visual Studio Yükleyicisi](media/repair-visual-studio.png "Çalışma Visual Studio onarım Visual Studio Yükleyicisi")
+    ![Visual Studio Yükleyicisi daha fazla açılan menüsünde onarma seçeneğinin gösterildiği ekran görüntüsü.](media/repair-visual-studio.png "Visual Studio Yükleyicisi Visual Studio onar")
 
    > [!NOTE]
-   > Bu Visual Studio, ortamı sıfırlar. Yükseltme, kullanıcı ayarları ve profiller olmadan yüklenmiş kullanıcı başına uzantılar gibi yerel özelleştirmeler kaldırılır. Temalar, renkler ve anahtar bağlamaları gibi eşitlenmiş ayarlarınız geri yüklenir.
+   > Visual Studio onarma ortamı sıfırlanır. Yükselme, Kullanıcı ayarları ve profiller olmadan yüklenen Kullanıcı başına uzantılar gibi yerel özelleştirmeler kaldırılır. Temalar, renkler, anahtar bağlamaları gibi eşitlenmiş ayarlarınız geri yüklenecek.
    >
 
    > [!TIP]
-   > Onarım **seçeneği** yalnızca yüklü örnek örnekleri için Visual Studio. Onar seçeneğini görmüyorsanız, "Yüklü" yerine "Kullanılabilir" olarak listelenen bir sürümde Daha fazla seçeneğini Visual Studio Yükleyicisi olabilir.  
+   > **Onarma** seçeneği yalnızca Visual Studio yüklü örnekleri için görünür. **onar** seçeneğini görmüyorsanız, Visual Studio Yükleyicisi listelenen bir sürümde "yüklü" yerine "kullanılabilir" olarak **daha fazla** seçim yapmış olursunuz.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
-1. Bilgisayarınızda **Visual Studio Yükleyicisi'ı** bulun.
+1. bilgisayarınızda **Visual Studio Yükleyicisi** bulun.
 
-     Bu Windows Başlat menüsü "yükleyici" için arama da vesnesini arayabilirsiniz.
+     Windows Başlat menüsü, "yükleyici" için arama yapabilirsiniz.
 
-     ![Visual Studio Yükleyicisi](media/vs-2019/visual-studio-installer.png "Arama Visual Studio Yükleyicisi")
+     ![Visual Studio Yükleyicisi için Başlat menüsü aramasının sonucunu gösteren ekran görüntüsü.](media/vs-2019/visual-studio-installer.png "Visual Studio Yükleyicisi arayın")
 
      > [!NOTE]
-     > Aşağıdaki konumda Visual Studio Yükleyicisi da bulabilirsiniz:
+     > aşağıdaki konumda Visual Studio Yükleyicisi de bulabilirsiniz:
      >
      > `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-    Devam etmeden önce yükleyiciyi güncelleştirmeniz gerekir. Öyleyse, istemleri izleyin.
+    Devam etmeden önce yükleyiciyi güncelleştirmeniz gerekebilir. Bu durumda, istemleri izleyin.
 
-1. Yükleyicide, yüklemiş Visual Studio sürümünü ara. Ardından **Diğer'i ve** ardından Onar'ı **seçin.**
+1. yükleyicide, yüklediğiniz Visual Studio sürümünü arayın. Daha sonra, **daha fazla**' yı ve ardından **Onar**' ı seçin.
 
-     ![Onarım Visual Studio 2019](media/vs-2019/vs-installer-repair.png "Onarım Visual Studio 2019")
+     ![Visual Studio Yükleyicisi daha fazla açılan menüsünde onarma seçeneğinin gösterildiği ekran görüntüsü.](media/vs-2019/vs-installer-repair.png "Visual Studio onar 2019")
 
    > [!NOTE]
-   > Bu Visual Studio, ortamı sıfırlar. Yükseltme, kullanıcı ayarları ve profiller olmadan yüklenmiş kullanıcı başına uzantılar gibi yerel özelleştirmeler kaldırılır. Temalar, renkler ve anahtar bağlamaları gibi eşitlenmiş ayarlarınız geri yüklenir.
+   > Visual Studio onarıldığında ortamı sıfırlanır. Yükselme, Kullanıcı ayarları ve profiller olmadan yüklenen Kullanıcı başına uzantılar gibi yerel özelleştirmeler kaldırılır. Temalar, renkler ve anahtar bağlamaları gibi eşitlenmiş ayarlarınız geri yüklenecek.
    >
 
    > [!TIP]
-   > Onarım **seçeneği** yalnızca yüklü örnek örnekleri için Visual Studio. Onar seçeneğini görmüyorsanız, "Yüklü" yerine "Kullanılabilir" olarak listelenen bir sürümde Daha fazla seçeneğini Visual Studio Yükleyicisi olabilir.  
+   > **Onarma** seçeneği yalnızca Visual Studio yüklü örnekleri için görünür. **onar** seçeneğini görmüyorsanız, Visual Studio Yükleyicisi listelenen bir sürümde "yüklü" yerine "kullanılabilir" olarak **daha fazla** seçim yapmış olursunuz.
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+1. bilgisayarınızda **Visual Studio Yükleyicisi** bulun.
+
+     Windows Başlat menüsü, "yükleyici" araması yapın ve sonra sonuçlardan **Visual Studio Yükleyicisi** ' yı seçin.
+
+     ![Visual Studio Yükleyicisi için Başlat menüsü aramasının sonucunu gösteren ekran görüntüsü.](media/vs-2022/vs-installer-search.png "Visual Studio Yükleyicisi arayın")
+
+     > [!NOTE]
+     > aşağıdaki konumda Visual Studio Yükleyicisi de bulabilirsiniz:
+     >
+     > `C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
+
+    devam etmeden önce Visual Studio Yükleyicisi güncelleştirmeniz istenebilir. Bu durumda, istemleri izleyin.
+
+1. Visual Studio Yükleyicisi, onarmak istediğiniz Visual Studio yüklemeyi bulun. **Daha sonra diğer** açılan menüden **Onar** ' ı seçin.
+
+     ![Visual Studio Yükleyicisi daha fazla açılan menüsünde onarma seçeneğinin gösterildiği ekran görüntüsü.](media/vs-2022/vs-installer-repair.png "Visual Studio onar 2022")
+
+   > [!NOTE]
+   > Visual Studio onarıldığında ortamı sıfırlanır. Yükseltme olmadan yüklenen Kullanıcı başına uzantılar gibi yerel özelleştirmeler, Kullanıcı ayarları ve profiller kaldırılır. Temalar, renkler ve anahtar bağlamaları gibi eşitlenmiş ayarlarınız geri yüklenecek.
+   >
+
+   > [!TIP]
+   > **Onarma** seçeneği Visual Studio yüklü örneklerine uygulanır. **daha fazla** açılan menüde **onar** seçeneğini görmüyorsanız, Visual Studio Yükleyicisi **yüklü** sekmesi yerine **kullanılabilir** sekmeden mutluluk duyuyoruz.
 
 ::: moniker-end
 
@@ -94,4 +125,4 @@ Bazen Visual Studio veya bozuk hale gelir. Onarım, güncelleştirmeler de dahil
 * [Visual Studio'yu yükleme](install-visual-studio.md)
 * [Visual Studio’yu güncelleştirme](update-visual-studio.md)
 * [Visual Studio'yu kaldırma](uninstall-visual-studio.md)
-* [Yükleme Visual Studio yükseltme sorunlarını giderme](troubleshooting-installation-issues.md)
+* [yükleme ve yükseltme sorunlarını giderme Visual Studio](troubleshooting-installation-issues.md)

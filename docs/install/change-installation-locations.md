@@ -1,6 +1,6 @@
 ---
 title: Yükleme konumlarını seçme
-description: İndirme önbelleğinin, paylaşılan bileşenlerin, VISUAL STUDIO ve araçların konumunu farklı sürücülere değiştirerek sistem sürücünize yükleme ayak izini azaltmayı öğrenin. Örneğin, bazı dosyaları C sürücüsünden D sürücüsüne taşı.
+description: indirme önbelleğinin, paylaşılan bileşenlerin, sdk 'ların ve araçların konumunu farklı sürücülere değiştirerek sistem sürücünüzdeki Visual Studio yükleme parmak izini nasıl azaltacağınızı öğrenin. Örneğin, bazı dosyaları C sürücüsünden D sürücüsüne taşıyın.
 ms.date: 09/14/2021
 ms.custom: vs-acquisition
 ms.topic: how-to
@@ -17,36 +17,36 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: be2c18e531af3a0aa6dd059206ce81db7734ab08
-ms.sourcegitcommit: 559c662b2d60048300b76ea6ed3defaa2a259492
+ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "127779589"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "127890604"
 ---
-# <a name="select-the-installation-locations-in-visual-studio"></a>Visual Studio'de yükleme konumlarını seçin
+# <a name="select-the-installation-locations-in-visual-studio"></a>Visual Studio içinde yükleme konumlarını seçin
 
 ::: moniker range=">=vs-2022"
 
-Bazı dosyalarının konumunu değiştirerek Visual Studio disklerin yükleme ayak izini azaltabilirsiniz. Özellikle, indirme önbelleği ve paylaşılan  bileşenler, araçlar ve **SDK'lar için farklı bir konum kullanabilirsiniz.**
+bazı dosyalarının konumunu değiştirerek sistem sürücünüzdeki Visual Studio yükleme parmak izini azaltabilirsiniz. Özellikle, **indirme önbelleği** ve **paylaşılan bileşenler, Araçlar ve SDK**'lar için farklı bir konum kullanabilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Bazı dosyalarının konumunu değiştirerek Visual Studio sürücüye yükleme ayak izini azaltabilirsiniz. Özellikle, indirme önbelleği, paylaşılan bileşenler, SDK'lar ve araç dosyaları için farklı bir konum kullanabilirsiniz.
+bazı dosyalarının konumunu değiştirerek sistem sürücünüzdeki Visual Studio yükleme parmak izini azaltabilirsiniz. Özellikle, indirme önbelleği, paylaşılan bileşenler, SDK 'lar ve araçlar dosyaları için farklı bir konum kullanabilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-**Sürüm 15.7'de** yeni: Bazı dosyalarının konumunu değiştirerek Visual Studio'nin yükleme ayak izini azaltabilirsiniz. Özellikle, indirme önbelleği, paylaşılan bileşenler, SDK'lar ve araç dosyaları için farklı bir konum kullanabilirsiniz.
+**sürüm 15,7 ' deki yenilikler**: bazı dosyalarının konumunu değiştirerek sistem sürücünüzdeki Visual Studio yükleme parmak izini azaltabilirsiniz. Özellikle, indirme önbelleği, paylaşılan bileşenler, SDK 'lar ve araçlar dosyaları için farklı bir konum kullanabilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
    > [!NOTE]
-   > Yüklen onlarda farklı kurallara sahip olan bazı araçlar ve SDK'ler vardır. Başka bir konum seçmenize rağmen bu tür araçlar ve SDK'lar sistem sürücünize yüklenir.
+   > Yüklenebilecekleri farklı kurallara sahip bazı araçlar ve SDK 'lar vardır. Bu tür araçlar ve SDK 'lar, başka bir konum seçseniz bile sistem sürücünüze yüklenir.
 
 ::: moniker-end
 
@@ -54,97 +54,97 @@ Başlamaya hazır mısınız? Aşağıdaki adımları uygulayın:
 
 ::: moniker range="vs-2017"
 
-1. Yükleme konumlarını Visual Studio yükleme **konumları sekmesini** seçin.
+1. Visual Studio yüklediğinizde, **yükleme konumları** sekmesini seçin.
 
-   ![Uygulamanın Yükleme konumları sekmesini gösteren Visual Studio Yükleyicisi.](media/vs-installation-locations.png "Yükleme konumunu seçin.")
+   ![Visual Studio Yükleyicisi yükleme konumları sekmesini gösteren ekran görüntüsü.](media/vs-installation-locations.png "Yükleme konumunu seçin.")
 
-1. IDE **Visual Studio** varsayılanı kabul edin. Visual Studio, temel ürünü yüker ve bu sürümüne özgü dosyaları Visual Studio.
+1. **Visual Studio ıde** bölümünde, varsayılanı kabul edin. Visual Studio çekirdek ürünü yükleyerek Visual Studio bu sürümüne özgü dosyaları içerir.
 
-   ![Uygulamanın Visual Studio yükleme konumları sekmesinin IDE Visual Studio Yükleyicisi.](media/vs-installation-locations-ide.png "Yüklemeler Konumu sekmesinin Visual Studio IDE bölümü için varsayılan değeri kabul edin.")
+   ![Visual Studio Yükleyicisi yükleme konumları sekmesinin Visual Studio ıde bölümünün ekran görüntüsü.](media/vs-installation-locations-ide.png "yükleme konumu sekmesinin Visual Studio ıde bölümü için varsayılanı kabul edin.")
 
    > [!TIP]
-   > Sistem sürücüniz bir katı hal sürücüsü (SSD) ise, sistem sürücüde varsayılan konumu kabul etmenizi öneririz. Bunun nedeni nedir? Yeni bir Visual Studio, birçok dosyadan okuma ve yazma ile disk I/O etkinliğini artırır. En iyisi yükü işlemek için en hızlı sürücüyü seçmektir.
+   > Sistem sürücünüz bir katı hal sürücüsü (SSD) ise, sistem sürücünüzdeki varsayılan konumu kabul etmenizi öneririz. Neden? Visual Studio ile geliştirirken, disk g/ç etkinliğini artıran çok sayıda dosyayı okur ve buradan yazarsınız. Yükü işlemek için en hızlı sürücüyü seçmeniz önerilir.
 
-1. Önbelleği **indir bölümünde,** indirme önbelleğini tutmak istediğinize karar verin ve ardından dosyalarını nerede depolamak istediğinize karar verin.
+1. **Önbelleği indir** bölümünde, indirme önbelleğini tutmak istediğinize karar verin ve sonra dosyalarını nerede saklamak istediğinize karar verin.
 
-     ![Uygulamanın Yükleme konumları sekmesinin Önbelleği indir bölümünün ekran Visual Studio Yükleyicisi.](media/vs-installation-locations-cache.png "Yüklemeden sonra indirme önbelleğinin tut olup olmadığını seçin ve ardından dosyaları depolamak istediğiniz sürücüyü belirtin.")
+     ![Visual Studio Yükleyicisi yükleme konumları sekmesinin indirme önbelleği bölümünün ekran görüntüsü.](media/vs-installation-locations-cache.png "Yükleme sonrasında indirme önbelleğinin tutulup tutulmayacağını seçin ve ardından dosyaları depolamak istediğiniz sürücüyü belirtin.")
 
-    1. Yüklemeden sonra İndirme **önbelleğini tut'un işaretini kaldırın veya işaretleyin.**
+    1. **Yükleme sonrasında indirme önbelleğini koru** veya işaretini kaldır.
 
-       İndirme önbelleğini tutmama kararınız varsa konum yalnızca geçici olarak kullanılır. Bu eylem, önceki yüklemelerden dosyaları etkilemez veya silmez.
+       İndirme önbelleğini tutmamaya karar verirseniz, konum yalnızca geçici olarak kullanılır. Bu eylem önceki yüklemelerin dosyalarını etkilemez veya silmez.
 
-    1. Yükleme dosyalarını ve bildirimlerini indirme önbelleğinden depolamak istediğiniz sürücüyü belirtin.
+    1. Yükleme önbelleğinden yükleme dosyalarını ve bildirimlerini depolamak istediğiniz sürücüyü belirtin.
 
-        Örneğin, "C++ ile masaüstü geliştirme" iş yükünü seçersiniz, sistem sürücünüzde geçici olarak gereken boyut 1,58 GB'tır ve yükleme tamamlandıktan hemen sonra serbest bırak çıkar.
+        Örneğin, "C++ ile masaüstü geliştirme" iş yükünü seçerseniz, geçici olarak gereken boyut sistem sürücünüzde 1,58 GB olur ve bu, yükleme tamamlanır tamamlanmaz serbest bırakılır.
 
        > [!IMPORTANT]
-       > Bu konum ilk yüklemeniz ile ayarlanır ve daha sonra yükleyici kullanıcı arabiriminden değiştirilemez. Bunun yerine, indirme [önbelleğini taşımak için komut](use-command-line-parameters-to-install-visual-studio.md) satırı parametrelerini kullanabilirsiniz.
+       > Bu konum, ilk yüklemenizde ayarlanır ve daha sonra yükleyici kullanıcı arabiriminden değiştirilemez. Bunun yerine, indirme önbelleğini taşımak için [komut satırı parametrelerini kullanmanız](use-command-line-parameters-to-install-visual-studio.md) gerekir.
 
-1. Paylaşılan **bileşenler, araçlar ve SDK'lar** bölümünde, yüklemelerde yan yana paylaşılan dosyaları depolamak istediğiniz sürücüyü Visual Studio belirtin. SDK'ler ve araçlar da bu dizinde depolanır.
+1. **paylaşılan bileşenler, araçlar ve sdk** 'lar bölümünde, yan yana Visual Studio yüklemeleri tarafından paylaşılan dosyaları depolamak istediğiniz sürücüyü belirtin. SDK 'lar ve araçlar bu dizinde da depolanır.
 
-   ![Yükleme konumları sekmesinin Paylaşılan bileşenler, araçlar ve SDK'lar bölümünün ekran Visual Studio Yükleyicisi.](media/vs-installation-locations-shared.png "Paylaşılan bileşenleri, araçları ve SDK'leri depolamak istediğiniz konumu belirtin.")
+   ![Visual Studio Yükleyicisi yükleme konumları sekmesindeki paylaşılan bileşenler, araçlar ve sdk 'lar bölümünün ekran görüntüsü.](media/vs-installation-locations-shared.png "Paylaşılan bileşenleri, araçları ve SDK 'Ları depolamak istediğiniz konumu belirtin.")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. Yükleme konumlarını Visual Studio yükleme **konumları sekmesini** seçin.
+1. Visual Studio yüklediğinizde, **yükleme konumları** sekmesini seçin.
 
-   ![Uygulamanın Yükleme konumları sekmesini gösteren Visual Studio Yükleyicisi.](media/vs-2019/vs-installer-installation-locations.png "Yükleme konumunu seçin.")
+   ![Visual Studio Yükleyicisi yükleme konumları sekmesini gösteren ekran görüntüsü.](media/vs-2019/vs-installer-installation-locations.png "Yükleme konumunu seçin.")
 
-1. IDE **Visual Studio** varsayılanı kabul edin. Visual Studio, temel ürünü yüker ve bu sürümüne özgü dosyaları Visual Studio.
+1. **Visual Studio ıde** bölümünde, varsayılanı kabul edin. Visual Studio çekirdek ürünü yükleyerek Visual Studio bu sürümüne özgü dosyaları içerir.
 
    > [!TIP]
-   > Sistem sürücüniz bir katı hal sürücüsü (SSD) ise, sistem sürücüde varsayılan konumu kabul etmenizi öneririz. Bunun nedeni nedir? Yeni bir Visual Studio, birçok dosyadan okuma ve yazma ile disk I/O etkinliğini artırır. En iyisi yükü işlemek için en hızlı sürücüyü seçmektir.
+   > Sistem sürücünüz bir katı hal sürücüsü (SSD) ise, sistem sürücünüzdeki varsayılan konumu kabul etmenizi öneririz. Neden? Visual Studio ile geliştirirken, disk g/ç etkinliğini artıran çok sayıda dosyayı okur ve buradan yazarsınız. Yükü işlemek için en hızlı sürücüyü seçmeniz önerilir.
 
-1. Önbelleği **indir bölümünde,** indirme önbelleğini tutmak istediğinize karar verin ve ardından dosyalarını nerede depolamak istediğinize karar verin.
+1. **Önbelleği indir** bölümünde, indirme önbelleğini tutmak istediğinize karar verin ve sonra dosyalarını nerede saklamak istediğinize karar verin.
 
-    * Yüklemeden sonra İndirme **önbelleğini tut'un işaretini kaldırın veya işaretleyin.**
+    * **Yükleme sonrasında indirme önbelleğini koru** veya işaretini kaldır.
 
-       İndirme önbelleğini tutmama kararınız varsa konum yalnızca geçici olarak kullanılır. Bu eylem, önceki yüklemelerden dosyaları etkilemez veya silmez.
+       İndirme önbelleğini tutmamaya karar verirseniz, konum yalnızca geçici olarak kullanılır. Bu eylem önceki yüklemelerin dosyalarını etkilemez veya silmez.
 
-    * Yükleme dosyalarını ve bildirimlerini indirme önbelleğinden depolamak istediğiniz sürücüyü belirtin.
+    * Yükleme önbelleğinden yükleme dosyalarını ve bildirimlerini depolamak istediğiniz sürücüyü belirtin.
 
-        Örneğin, "C++ ile masaüstü geliştirme" iş yükünü seçersiniz, sistem sürücünüzde geçici olarak gereken boyut 1,58 GB'tır ve yükleme tamamlandıktan hemen sonra serbest bırak çıkar.
+        Örneğin, "C++ ile masaüstü geliştirme" iş yükünü seçerseniz, geçici olarak gereken boyut sistem sürücünüzde 1,58 GB olur ve bu, yükleme tamamlanır tamamlanmaz serbest bırakılır.
 
        > [!IMPORTANT]
-       > Bu konum ilk yüklemeniz ile ayarlanır ve daha sonra yükleyici kullanıcı arabiriminden değiştirilemez. Bunun yerine, indirme [önbelleğini taşımak için komut](use-command-line-parameters-to-install-visual-studio.md) satırı parametrelerini kullanabilirsiniz.
+       > Bu konum, ilk yüklemenizde ayarlanır ve daha sonra yükleyici kullanıcı arabiriminden değiştirilemez. Bunun yerine, indirme önbelleğini taşımak için [komut satırı parametrelerini kullanmanız](use-command-line-parameters-to-install-visual-studio.md) gerekir.
 
-1. Paylaşılan **bileşenler, araçlar ve SDK'lar** bölümünde, "Önbelleği indir" bölümünde seçtiğiniz sürücüyü kullandığını unutmayın. \Microsoft\VisualStudio\Shared dizini, Visual Studio tarafından paylaşılan dosyaları yüklemelerde yan yana depolar Visual Studio dizindir. SDK'ler ve araçlar da bu dizinde depolanır.
+1. **Paylaşılan bileşenler, Araçlar ve SDK** 'lar bölümünde, "önbelleği indirme" bölümünde seçtiğiniz sürücünün aynısını kullandığını unutmayın. \microsoft\visualstudio\shared directory, Visual Studio yan yana Visual Studio yüklemeleri tarafından paylaşılan dosyaları depoladığını gösterir. SDK 'lar ve araçlar bu dizinde da depolanır.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-1. Yükleme konumlarını Visual Studio yükleme **konumları sekmesini** seçin.
+1. Visual Studio yüklediğinizde, **yükleme konumları** sekmesini seçin.
 
-   :::image type="content" source="media/vs-2022/vs-installer-installation-locations-cplusplus-workload.png" border="false" alt-text="Uygulamanın Yükleme konumları sekmesini gösteren Visual Studio Yükleyicisi.":::
+   :::image type="content" source="media/vs-2022/vs-installer-installation-locations-cplusplus-workload.png" border="false" alt-text="Visual Studio Yükleyicisi yükleme konumları sekmesini gösteren ekran görüntüsü.":::
 
-1. IDE **Visual Studio** varsayılan yolu kabul edin. Visual Studio, temel ürünü ve bu sürümüne özgü dosyaları Visual Studio.
+1. **Visual Studio ıde** bölümünde, varsayılan yolu kabul edin. Visual Studio çekirdek ürünü yüklüyor ve bu Visual Studio sürümüne özgü dosyaları içerir.
 
    > [!TIP]
-   > Sistem sürücüniz bir katı hal sürücüsü (SSD) ise, çekirdek ürünü sistem sürücünde tutmanızı öneririz. Bunun nedeni nedir? Yeni bir Visual Studio, birçok dosyadan okuma ve yazma ile disk I/O etkinliğini artırır. En iyisi yükü işlemek için en hızlı sürücüyü seçmektir.
+   > Sistem sürücünüz bir katı hal sürücüsü (SSD) ise, temel ürünü sistem sürücünüzde tutmanız önerilir. Neden? Visual Studio ile geliştirirken, disk g/ç etkinliğini artıran çok sayıda dosyayı okur ve buradan yazarsınız. Yükü işlemek için en hızlı sürücüyü seçmeniz önerilir.
 
    > [!IMPORTANT]
-   > Farklı bir konum seçerek yalnızca yeni bir konum Visual Studio. Zaten yüklemiş ve konumu değiştirmek istiyorsanız, uygulamayı kaldırıp Visual Studio yüklemeniz gerekir.
+   > Yalnızca Visual Studio ilk kez yüklerken farklı bir konum seçebilirsiniz. zaten yüklediyseniz ve konumu değiştirmek istiyorsanız, Visual Studio kaldırıp yeniden yüklemeniz gerekir.
 
-1. Önbelleği **indir bölümünde,** indirme önbelleğini tutmak isteyip isteyip istemediklerine ve saklamak istediğinize, dosyalarını nerede depolamak istediğinize karar verin.
+1. **Önbelleği indir** bölümünde, indirme önbelleğini tutmak isteyip istemediğinize ve bu durumda dosyalarını depolamak istediğiniz yere karar verin.
 
-    * Yüklemeden sonra İndirme **önbelleğini tut'un işaretini kaldırın veya işaretleyin.**
+    * **Yükleme sonrasında indirme önbelleğini koru** veya işaretini kaldır.
 
-      İndirme önbelleğini tutmama kararınız varsa, indirme önbelleği konumu yalnızca geçici olarak kullanılır. Bu eylem, önceki yüklemelerden dosyaları etkilemez veya silmez.
+      İndirme önbelleğini tutmamaya karar verirseniz, indirme önbelleği konumu yalnızca geçici olarak kullanılır. Bu eylem önceki yüklemelerin dosyalarını etkilemez veya silmez.
 
-      Örneğin, "C++ ile masaüstü geliştirme" iş yükünü seçersiniz, indirme önbelleği konumu için geçici olarak gereken boyut 2,11 GB'tır. Yükleme tamamlandıktan hemen sonra indirilen önbellek dosyaları kaldırılır ve yalnızca paket meta verileri bırakılır.
+      Örneğin, "C++ ile masaüstü geliştirme" iş yükünü seçerseniz, indirme önbelleği konumu için geçici olarak gereken boyut 2,11 GB olur. Yükleme tamamlandıktan hemen sonra indirilen önbellek dosyaları kaldırılır ve yalnızca paket meta verileri bırakılır.
 
-    * Yükleme dosyalarını ve bildirimlerini indirme önbelleğinden depolamak istediğiniz sürücü de dahil olmak üzere klasör yolunu belirtin.
-
-   > [!IMPORTANT]
-   > Farklı bir konum seçerek yalnızca yeni bir konum Visual Studio. Zaten yüklemiş ve konumu değiştirmek istiyorsanız, uygulamayı kaldırıp Visual Studio yüklemeniz gerekir.
-
-1. Paylaşılan **bileşenler, araçlar ve SDK'lar** bölümünde, yüklemelerde yan yana paylaşılan dosyaları depolamak istediğiniz Visual Studio seçin. SDK'ler ve araçlar da bu dizinde depolanır.
+    * Yükleme önbelleğinden yükleme dosyalarını ve bildirimleri depolamak istediğiniz sürücü dahil olmak üzere klasör yolunu belirtin.
 
    > [!IMPORTANT]
-   > Daha önce bilgisayarınızda Visual Studio yüklemiş olursanız Paylaşılan bileşenler, araçlar ve SDK'lar yolunu değiştiremezsiniz ve bu yol gri görünür.
+   > Yalnızca Visual Studio ilk kez yüklerken farklı bir konum seçebilirsiniz. zaten yüklediyseniz ve konumu değiştirmek istiyorsanız, Visual Studio kaldırıp yeniden yüklemeniz gerekir.
+
+1. **paylaşılan bileşenler, araçlar ve sdk** 'lar bölümünde, yan yana Visual Studio yüklemeleri tarafından paylaşılan dosyaları depolamak istediğiniz klasörü seçin. SDK 'lar ve araçlar bu dizinde da depolanır.
+
+   > [!IMPORTANT]
+   > daha önce bilgisayarınıza Visual Studio yüklediyseniz, paylaşılan bileşenleri, araçları ve sdk 'lar yolunu değiştiremeyeceksiniz ve bu işlem gri renkte görünür.
 
 ::: moniker-end
 

@@ -2,7 +2,7 @@
 title: projeler & Visual Studio çözümleri nelerdir?
 description: Visual Studio projeler ve çözümler, bir şablondan yeni projeler oluşturma ve Çözüm Gezgini projeleri görüntüleme & yönetme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020, contperf-fy21q2
-ms.date: 12/31/2020
+ms.date: 09/14/2021
 ms.topic: conceptual
 f1_keywords:
 - vs.openproject
@@ -20,12 +20,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c1f9ca139f60fa5d25874745af0e263af71d717
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 11836eda644bfda367a456751c59e93a8d49af58
+ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122123625"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "127890539"
 ---
 # <a name="what-are-solutions-and-projects-in-visual-studio"></a>Visual Studio çözüm ve projeler nelerdir?
 
@@ -80,7 +80,7 @@ Bir "Çözüm klasörü", yalnızca **Çözüm Gezgini** olan ve bir çözümdek
 
 ## <a name="solution-explorer"></a>Çözüm Gezgini
 
-Yeni bir proje oluşturduktan sonra, projeyi ve çözümü ve ilişkili öğelerini görüntülemek ve yönetmek için **Çözüm Gezgini** kullanabilirsiniz. Aşağıdaki çizimde, iki proje içeren bir C# çözümü ile **Çözüm Gezgini** gösterilmektedir:
+Yeni bir proje oluşturduktan sonra, projeyi ve çözümü ve ilişkili öğelerini görüntülemek ve yönetmek için **[Çözüm Gezgini](use-solution-explorer.md)** kullanabilirsiniz. Aşağıdaki çizimde, iki proje içeren bir C# çözümü ile **Çözüm Gezgini** gösterilmektedir:
 
 ::: moniker range="vs-2017"
 
@@ -98,7 +98,7 @@ Yeni bir proje oluşturduktan sonra, projeyi ve çözümü ve ilişkili öğeler
 
 ::: moniker-end
 
-Birçok menü komutu, **Çözüm Gezgini** çeşitli öğelerde sağ tıklama bağlam menüsünden kullanılabilir. bu komutlar bir proje oluşturma, NuGet paketlerini yönetme, başvuru ekleme, bir dosyayı yeniden adlandırma ve testleri çalıştırma, yalnızca birkaç kez adlandırma içerir.
+Birçok menü komutu, **Çözüm Gezgini** çeşitli öğelerde sağ tıklama bağlam menüsünden kullanılabilir. bu komutlar bir proje oluşturma, NuGet paketlerini yönetme, başvuru ekleme, bir dosyayı yeniden adlandırma ve testleri çalıştırma, yalnızca birkaç kez adlandırma içerir. Daha fazla bilgi için bkz. [Çözüm Gezgini kullanma](use-solution-explorer.md).
 
 ASP.NET Core projeleri için, dosyaların **Çözüm Gezgini** nasıl iç içe yerleşdiğini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [Çözüm Gezgini dosya iç içe geçirmeyi özelleştirme](file-nesting-solution-explorer.md).
 
