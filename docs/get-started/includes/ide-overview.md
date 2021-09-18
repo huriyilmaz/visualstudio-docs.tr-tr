@@ -10,14 +10,14 @@ ms.openlocfilehash: d98812bdba2807038d23f43d07ea48f6d3d43bc0
 ms.sourcegitcommit: 59613afd06a8f184efab8e108410066824a2b712
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "127902219"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "127932609"
 ---
 Tümleşik *geliştirme ortamı* (IDE), yazılım geliştirmenin birçok özelliğini destekleyen zengin bir programdır. IDE Visual Studio düzenleme, hata ayıklama ve kod derleme ve ardından uygulama yayımlamak için kullanabileceğiniz yaratıcı bir başlatma panelidir. Çoğu IDE'nin sağlediği standart düzenleyici ve hata ayıklayıcının üzerinde Visual Studio geliştirme sürecini geliştirmek için derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve daha birçok özellik içerir.
 
 ::: moniker range="vs-2017"
 
-![2017 IDE'Visual Studio gösteren ekran görüntüsü.](../media/visual-studio-ide.png)
+![Visual Studio 2017 IDE'nin ekran görüntüsü.](../media/visual-studio-ide.png)
 
 ::: moniker-end
 
@@ -45,11 +45,11 @@ Yukarıdaki görüntüde, Visual Studio pencerelerini ve işlevlerini gösteren 
 
 ::: moniker-end
 
-- Sağ [altta](/visualstudio/version-control/) yer alan Git Değişiklikleri'nde, Git ve GitHub gibi sürüm denetimi teknolojilerini kullanarak iş öğelerini [izleyebilir](https://git-scm.com/) ve [diğerleriyle kod GitHub.](https://docs.github.com/github)
+- Sağ [altta yer](/visualstudio/version-control/) alan Git Değişiklikleri'nde, Git ve GitHub gibi sürüm denetimi teknolojilerini kullanarak iş öğelerini [izleyebilir](https://git-scm.com/) ve diğerleriyle [kod GitHub.](https://docs.github.com/github)
 
 ## <a name="editions"></a>Sürümler
 
-Visual Studio mac ve Windows kullanılabilir. [Mac için Visual Studio](/visualstudio/mac/) platformlar arası ve mobil Visual Studio geliştirmek için Windows için iyileştirilmiş özelliklere sahiptir. Bu makale, Windows sürümüne Visual Studio.
+Visual Studio mac ve Windows kullanılabilir. [Mac için Visual Studio,](/visualstudio/mac/) Windows için Visual Studio özelliklere sahiptir ve platformlar arası ve mobil uygulamalar geliştirmek için iyileştirilmiştir. Bu makale, Windows sürümüne Visual Studio.
 
 Üç sürüm vardır: Visual Studio, Community, Professional ve Enterprise. Her [sürümde Visual Studio özellikler](https://visualstudio.microsoft.com/vs/compare/) hakkında bilgi edinmek için bkz. Visual Studio sürümleri karşılaştırma.
 
@@ -62,10 +62,10 @@ Yazılım geliştirme Visual Studio üretkenliğinizi geliştiren bazı popüler
    Dalgalı çizgiler, siz yazarak kodundaki hatalara veya olası sorunlara karşı sizi uyaran dalgalı alt çizgilerdir. Bu görsel ipuçları, derleme veya çalışma zamanı sırasında hataları keşfetmeyi beklemeden sorunları hemen düzeltmeye yardımcı olur. Bir geçişin üzerine gelindiğinde hata hakkında daha fazla bilgi alırsınız. Hatayı düzeltmek için gerçekleştirebilir hızlı eylemleri gösteren *sol* kenar boşluğunda bir ampul de görünebilir.
 
    ::: moniker range="<=vs-2019"
-   ![Visual Studio'daki geçişleri gösteren Visual Studio.](../media/squiggles-error.png)
+   ![Visual Studio'daki geçişleri gösteren ekran görüntüsü.](../media/squiggles-error.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Visual Studio'daki geçişleri gösteren Visual Studio.](../media/vs-2022/squiggles-error.png)
+   ![Visual Studio'daki geçişleri gösteren ekran görüntüsü.](../media/vs-2022/squiggles-error.png)
    ::: moniker-end
   
 
@@ -90,10 +90,10 @@ Yazılım geliştirme Visual Studio üretkenliğinizi geliştiren bazı popüler
    Yeniden düzenleme, değişkenlerin akıllı yeniden adı oluşturma, bir veya daha fazla kod satırı ayıklanan yeni bir yöntem ve yöntem parametrelerinin sırası değiştirme gibi işlemleri içerir.
 
    ::: moniker range="<=vs-2019"
-   ![Uygulama içinde Yeniden Düzenlemeyi gösteren Visual Studio.](../media/refactoring-menu.png)
+   ![Örneklerde Yeniden Düzenlemeyi gösteren Visual Studio.](../media/refactoring-menu.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Uygulama içinde Yeniden Düzenlemeyi gösteren Visual Studio.](../media/vs-2022/refactoring-menu.png)
+   ![Örneklerde Yeniden Düzenlemeyi gösteren Visual Studio.](../media/vs-2022/refactoring-menu.png)
    ::: moniker-end
 
 - [Intellisense](../../ide/using-intellisense.md)
@@ -113,7 +113,7 @@ Yazılım geliştirme Visual Studio üretkenliğinizi geliştiren bazı popüler
 
 - [Visual Studio arama](../../ide/visual-studio-search.md)
 
-   Visual Studio menüler, seçenekler ve özellikler bazen aşırı zor görünebilir. Visual Studio veya **Ctrl** Q, IDE özelliklerini ve kodunu tek bir yerde hızlı + bir şekilde bulmanın harika bir yoludur.
+   Visual Studio menüler, seçenekler ve özellikler bazen aşırı zor görünebilir. Visual Studio veya **Ctrl** Q, IDE özelliklerini ve kodunu tek bir yerde hızla + bulmanın harika bir yoludur.
 
    ::: moniker range="vs-2017"
 
@@ -127,15 +127,15 @@ Yazılım geliştirme Visual Studio üretkenliğinizi geliştiren bazı popüler
 
    ![Visual Studio 2019'daki Hızlı Başlat kutusunu gösteren ekran görüntüsü.](../media/vs-2019/quick-launch-nuget.png)
 
-    Bilgi ve üretkenlik ipuçları için [bkz. Arama için Visual Studio kullanma.](../../ide/visual-studio-search.md)
+    Bilgi ve üretkenlik ipuçları için [bkz. Arama Visual Studio kullanma.](../../ide/visual-studio-search.md)
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2022"
 
-   ![Hızlı Başlat'Hızlı Başlat gösteren ekran Visual Studio.](../media/vs-2022/quick-launch-nuget.png)
+   ![Visual Studio'Hızlı Başlat arama kutusunu gösteren ekran Visual Studio.](../media/vs-2022/quick-launch-nuget.png)
 
-    Bilgi ve üretkenlik ipuçları için [bkz. Arama için Visual Studio kullanma.](../../ide/visual-studio-search.md)
+    Bilgi ve üretkenlik ipuçları için [bkz. Arama Visual Studio kullanma.](../../ide/visual-studio-search.md)
 
    ::: moniker-end
 
@@ -189,7 +189,7 @@ Yazılım geliştirme Visual Studio üretkenliğinizi geliştiren bazı popüler
 
 ## <a name="install-visual-studio"></a>Visual Studio'yu yükleme
 
-Bu bölümde, yeni bir uygulamayla yapmak için bazı şeyleri denemek için basit bir proje Visual Studio. [IntelliSense'i](../../ide/using-intellisense.md) kodlama yardımı olarak kullanır, uygulama yürütme sırasında değişken bir değer görmek için uygulamada hata ayıklar ve renk temasını değiştirirsiniz.
+Bu bölümde, yeni bir uygulamayla bazı şeyleri denemek için basit bir proje Visual Studio. [IntelliSense'i](../../ide/using-intellisense.md) kodlama yardımı olarak kullanır, uygulama yürütme sırasında değişken bir değer görmek için uygulamada hata ayıklar ve renk temasını değiştirirsiniz.
 
 ::: moniker range="vs-2017"
 
@@ -225,63 +225,63 @@ Basit bir program oluşturma ve bu programa dalın.
 
 1. Menü çubuğunda Dosya Yeni **Dosya'Project.** >  > 
 
-   ![Menü çubuğundaki Dosya > Yeni Project'i gösteren ekran görüntüsü.](../media/file-new-project-menu.png)
+   ![Menü çubuğundaKimlik > Yeni Project'i gösteren ekran görüntüsü.](../media/file-new-project-menu.png)
 
-   Yeni **Project** iletişim kutusunda birkaç proje *şablonu görüntülenir.* Şablon, belirli bir proje türü için gereken temel dosyaları ve ayarları içerir.
+   Yeni **Project** iletişim kutusunda birkaç proje *şablonu görüntülenir.* Şablon, verilen proje türü için gereken temel dosyaları ve ayarları içerir.
 
-1. **Visual C#** altında **.NET Core** şablon kategorisini seçin ve **konsol uygulaması (.NET Core)** şablonunu seçin. **Ad** metin kutusuna **HelloWorld** yazın ve **Tamam** düğmesini seçin.
+1. Visual C# **altında .NET Core** şablon **kategorisini** seçin ve ardından Konsol Uygulaması **(.NET Core) şablonunu** seçin. Ad **metin** kutusuna **HelloWorld yazın ve** tamam **düğmesini** seçin.
 
    ![.NET Core uygulama şablonunu gösteren ekran görüntüsü.](../media/overview-new-project-dialog.png)
 
    > [!NOTE]
-   > **.NET Core** kategorisini görmüyorsanız **.NET Core platformlar arası geliştirme** iş yükünü yüklemeniz gerekir. bunu yapmak için **yeni Project** iletişim kutusunun sol alt kısmındaki **aç Visual Studio Yükleyicisi** bağlantısını seçin. Visual Studio Yükleyicisi açıldıktan sonra, aşağı kaydırarak **.net Core platformlar arası geliştirme** iş yükünü seçin ve ardından **değiştir**' i seçin.
+   > .NET Core kategorisini **görmüyorsanız.NET Core** platformlar arası geliştirme **iş yükünü yüklemeniz** gerekir. Bunu yapmak için, Yeni **Visual Studio Yükleyicisi** iletişim kutusunun sol alt kısmında bulunan Dosya aç **Project** seçin. Uygulama Visual Studio Yükleyicisi sonra ekranı aşağı kaydırın ve **.NET Core** platformlar arası geliştirme iş yükünü seçin ve ardından Değiştir'i **seçin.**
 
-   Visual Studio projeyi oluşturur. <xref:System.Console.WriteLine?displayProperty=nameWithType>"Merhaba Dünya!" değişmez dizesini göstermek için yöntemini çağıran basit bir "Merhaba Dünya" uygulaması Konsol (program çıktısı) penceresinde.
+   Visual Studio projeyi oluşturur. Bu, "Merhaba Dünya!" değişmez dizesini görüntülemek için yöntemini çağıran basit bir <xref:System.Console.WriteLine?displayProperty=nameWithType> "Merhaba Dünya" uygulamasıdır konsol (program çıkışı) penceresinde.
 
-   Kısa süre içinde aşağıdaki ekrana benzer bir şey görmeniz gerekir:
+   Kısa bir süre sonra aşağıdaki ekrana benzer bir şey görürsünüz:
 
-   ![Visual Studio ıde 'yi gösteren ekran görüntüsü.](../media/overview-ide-console-app.png)
+   ![IDE'nin Visual Studio ekran görüntüsü.](../media/overview-ide-console-app.png)
 
-   Uygulamanızın C# kodu, alanın çoğunu alan düzenleyici penceresinde gösterir. Metnin anahtar sözcükler ve türler gibi farklı parçalarını göstermek için otomatik olarak renklendirildiğine dikkat edin. Ayrıca, koddaki küçük, dikey kesikli çizgiler, hangi küme ayracın birbiriyle eşleştiğini gösterir ve satır numaraları kodu daha sonra bulmanıza yardımcı olur. Kod bloklarını daraltmak veya genişletmek için küçük, kutulu eksi işaretini seçebilirsiniz. Bu kod ana hattı özelliği, ihtiyacınız olmayan kodun gizlenmesini sağlar ve ekran dağınıklığını en aza indirmenize yardımcı olur. Proje dosyaları, **Çözüm Gezgini** adlı bir pencerenin sağ tarafında listelenir.
+   Uygulamanıza göre C# kodu düzenleyici penceresinde gösterilir ve bu da yerlerin çoğunu alır. Metnin, kodun anahtar sözcükler ve türler gibi farklı bölümlerini göstermek için otomatik olarak renklendirmesine dikkat eder. Ayrıca, kodda küçük, dikey kesikli satırlar hangi ayraçların eş olduğunu ve satır numaraları daha sonra kodu bulumanıza yardımcı olur. Kod bloklarını daraltmak veya genişletmek için küçük, kutulu eksi işaretlerini seçebilirsiniz. Bu kod açıklama özelliği, ihtiyacınız olan kodu gizleyerek ekrandaki dağınıklığı en aza indirmenizi sağlar. Proje dosyaları, Çözüm Gezgini adlı bir pencerede **sağ tarafta listelenir.**
 
-   ![kırmızı kutulara Visual Studio ıde 'yi gösteren ekran görüntüsü.](../media/overview-ide-console-app-red-boxes.png)
+   ![IDE'nin kırmızı Visual Studio gösteren ekran görüntüsü.](../media/overview-ide-console-app-red-boxes.png)
 
-   Diğer menüler ve araç pencereleri mevcuttur, ancak şimdilik bu aşamada geçiş yapalım.
+   Başka menüler ve araç pencereleri de vardır, ancak şimdilik devam edin.
 
-1. Şimdi uygulamayı başlatın. Bunu, menü çubuğundaki **hata ayıklama** menüsünden **hata ayıklama olmadan Başlat** ' a tıklayarak yapabilirsiniz. **CTRL** + **F5** tuşuna da basabilirsiniz.
+1. Şimdi uygulamayı başlatabilirsiniz. Bunu yapmak için menü çubuğundaki **Hata Ayıklama menüsünden** Hata **Ayıklama** Olmadan Başlat'ı seçebilirsiniz. **Ctrl** + **F5 tuşlarına da basarak.**
 
-   ![Hata ayıklama > hata ayıklama menüsü olmadan Başlat ' a gösteren ekran görüntüsü.](../media/overview-start-without-debugging.png)
+   ![Hata ayıklama ve hata ayıklama > başlat menüsünü gösteren ekran görüntüsü.](../media/overview-start-without-debugging.png)
 
-   Visual Studio uygulamayı oluşturur ve **Merhaba Dünya!** iletisi ile bir konsol penceresi açılır. Artık çalışan bir uygulamanız var!
+   Visual Studio uygulamayı derler ve şu iletiyle bir konsol penceresi **Merhaba Dünya!**. Artık çalışan bir uygulama var!
 
-   ![' Merhaba Dünya! ' çıkışını gösteren cmd.exe konsol penceresinin ekran görüntüsü ve ' devam etmek için herhangi bir tuşa basın '.](../media/overview-console-window.png)
+   !['cmd.exe!' çıkışını gösteren Merhaba Dünya görüntüsü ve 'Devam etmek için herhangi bir tuşa basın'.](../media/overview-console-window.png)
 
 1. Konsol penceresini kapatmak için klavyenizde herhangi bir tuşa basın.
 
-1. Uygulamaya daha fazla kod ekleyelim. Şu satırı izleyerek aşağıdaki C# kodunu ekleyin `Console.WriteLine("Hello World!");` :
+1. Şimdi uygulamaya biraz daha kod ekleriz. aşağıdaki C# kodunu şu satırdan önce `Console.WriteLine("Hello World!");` ekleyin:
 
    ```csharp
    Console.WriteLine("\nWhat is your name?");
    var name = Console.ReadLine();
    ```
 
-   Bu kod, konsol penceresinde **adınızın ne olduğunu** görüntüler ve ardından **ENTER** tuşuna basarak Kullanıcı bir metin girip girene kadar bekler.
+   Bu **kod, konsol penceresinde Adınız nedir?** metnini görüntüler ve ardından kullanıcının bir metin girmesini ve enter tuşuna kadar **beklemesini** sağlar.
 
-1. Aşağıdaki koda gelen satırı değiştirin `Console.WriteLine("Hello World!");` :
+1. aşağıdaki kodla `Console.WriteLine("Hello World!");` ifade eden satırı değiştirme:
 
    ```csharp
    Console.WriteLine($"\nHello {name}!");
    ```
 
-1. Hata **ayıklama** > **olmadan Başlat** öğesini seçerek veya **CTRL** + **F5** tuşuna basarak uygulamayı yeniden çalıştırın.
+1. Hata Ayıklama Olmadan Başlat'ı **seçerek** veya Ctrl F5 tuşlarına basarak >  **uygulamayı** + **yeniden çalıştırın.**
 
-   Visual Studio uygulamayı yeniden oluşturur ve bir konsol penceresi açılır ve sizden adınızı ister.
+   Visual Studio yeniden yapılandırıyorsanız, bir konsol penceresi açılır ve sizden adınız istenir.
 
-1. Konsol penceresine adınızı girin ve **ENTER**'a basın.
+1. Konsol penceresine adınız girin ve Enter tuşuna **basın.**
 
    ![Konsol penceresi girişini gösteren ekran görüntüsü.](../media/overview-console-input.png)
 
-1. Herhangi bir tuşa basarak konsol penceresini kapatın ve çalışan programı durdurun.
+1. Konsol penceresini kapatmak ve çalışan programı durdurmak için herhangi bir tuşa basın.
 
 ::: moniker-end
 
@@ -289,99 +289,99 @@ Basit bir program oluşturma ve bu programa dalın.
 
 1. Visual Studio'yu açın.
 
-   Başlangıç penceresi, bir depoyu kopyalama, son bir projeyi açma veya yeni bir proje oluşturma seçenekleriyle birlikte görüntülenir.
+   Başlangıç penceresi, bir repo kopyalama, yakın zamanda bir proje açma veya yeni proje oluşturma seçenekleriyle birlikte görüntülenir.
 
-1. **Yeni proje oluştur** öğesini seçin.
+1. Yeni **proje oluştur'a seçin.**
 
-    :::image type="content" source="../media/vs-2019/start-window-create-new-project.png" alt-text="Visual Studio 2019 ' de ' yeni proje oluştur ' penceresinin ekran görüntüsü.":::
+    :::image type="content" source="../media/vs-2019/start-window-create-new-project.png" alt-text="Visual Studio 2019'da 'Yeni proje oluştur' penceresinin ekran görüntüsü.":::
 
-   **Yeni proje oluştur** penceresi açılır ve birçok proje *şablonunu* gösterir. Şablon, belirli bir proje türü için gereken temel dosyaları ve ayarları içerir.
+   Yeni **proje oluştur penceresi** açılır ve birkaç proje şablonu *gösterilir.* Şablon, verilen proje türü için gereken temel dosyaları ve ayarları içerir.
 
-1. İstediğimiz şablonu bulmak için arama kutusuna **.NET Core konsolunu** yazın veya girin. Kullanılabilir şablonların listesi, girdiğiniz anahtar sözcüklere göre otomatik olarak filtrelenir. tüm **diller** açılan listesinden **C#** ' ı seçerek şablon sonuçlarını daha fazla filtreleyebilirsiniz, tüm **platformlar** listesinden ve **tüm proje türleri** listesinden **konsolundan** **Windows** .
+1. Bizim istediğiniz şablonu bulmak için arama kutusuna **.net Core konsolunu** yazın veya girin. Kullanılabilir şablonların listesi, girdiğiniz anahtar sözcüklere göre otomatik olarak filtrelenir. Tüm dil açılan **listesinden C#** dilini  seçerek, Tüm  platformlar listesinden  Windows Ve Tüm  proje türleri listesinden Konsol'a bakarak şablon sonuçlarını daha **fazla filtreleyebilirsiniz.**
 
-    **Konsol uygulaması** şablonunu seçin ve ardından **İleri**' ye tıklayın.
+    Konsol Uygulaması **şablonunu seçin** ve ardından Sonraki'ye **tıklayın.**
 
-    :::image type="content" source="../media/vs-2019/create-new-project.png" alt-text="Visual Studio 2019 ' de, istediğiniz şablonu seçtiğinizde ' yeni proje oluştur ' penceresinin ekran görüntüsü.":::
+    :::image type="content" source="../media/vs-2019/create-new-project.png" alt-text="2019'da istediğiniz şablonu Visual Studio 'Yeni proje oluştur' penceresinin ekran görüntüsü.":::
 
-1. **yeni projenizi yapılandırın** penceresinde, **Project adı** kutusuna **HelloWorld** girin, isteğe bağlı olarak proje dosyalarınız için dizin konumunu değiştirin (varsayılan yerel ayar `C:\Users\<name>\source\repos` ) ve ardından **ileri**' ye tıklayın.
+1. Yeni **projenizi yapılandır** penceresinde, **Project** adı kutusuna **HelloWorld** yazın, isteğe bağlı olarak proje dosyalarınızın dizin konumunu (varsayılan yerel ayardır) ve ardından `C:\Users\<name>\source\repos` Sonraki 'ye **tıklayın.**
 
-    :::image type="content" source="../media/vs-2019/configure-new-project.png" alt-text="Visual Studio 2019 ' de projenin adını girdiğiniz ' yeni projeyi yapılandırma ' penceresinin ekran görüntüsü.":::
+    :::image type="content" source="../media/vs-2019/configure-new-project.png" alt-text="Visual Studio 2019'daki 'Yeni projenizi yapılandır' penceresinin ekran görüntüsü. Burada projenin adını girersiniz.":::
 
-1. **Ek bilgi** penceresinde, **.NET Core 3,1** ' in **hedef çerçeve** açılan menüsünde göründüğünü doğrulayın ve ardından **Oluştur**' a tıklayın.
+1. Ek **bilgiler penceresinde,** Hedef Çerçeve açılan menüsünde **.NET Core 3.1'in** görüntülendiğinden emin olup Oluştur'a **tıklayın.** 
 
-    :::image type="content" source="../media/vs-2019/create-project-additional-info.png" alt-text="Visual Studio 2019 ' de, istediğiniz .net Core Framework sürümünü seçtiğiniz ' ek bilgiler ' penceresinin ekran görüntüsü.":::
+    :::image type="content" source="../media/vs-2019/create-project-additional-info.png" alt-text="Visual Studio 2019'daki 'Ek bilgiler' penceresinin ekran görüntüsü. Burada istediğiniz .NET Core Framework sürümünü seçersiniz.":::
 
-   Visual Studio projeyi oluşturur. <xref:System.Console.WriteLine?displayProperty=nameWithType>"Merhaba Dünya!" değişmez dizesini göstermek için yöntemini çağıran basit bir "Merhaba Dünya" uygulaması Konsol (program çıktısı) penceresinde.
+   Visual Studio projeyi oluşturur. Bu, "Merhaba Dünya!" değişmez dizesini görüntülemek için yöntemini çağıran basit bir <xref:System.Console.WriteLine?displayProperty=nameWithType> "Merhaba Dünya" uygulamasıdır konsol (program çıkışı) penceresinde.
 
-   Kısa süre içinde aşağıdaki ekrana benzer bir şey görmeniz gerekir:
+   Kısa bir süre sonra aşağıdaki ekrana benzer bir şey görürsünüz:
 
-   ![Visual Studio ıde 'yi gösteren ekran görüntüsü.](../media/vs-2019/overview-ide-console-app.png)
+   ![IDE'nin Visual Studio ekran görüntüsü.](../media/vs-2019/overview-ide-console-app.png)
 
-   Uygulamanızın C# kodu, alanın çoğunu alan düzenleyici penceresinde gösterir. Metnin anahtar sözcükler ve türler gibi farklı parçalarını göstermek için otomatik olarak renklendirildiğine dikkat edin. Ayrıca, koddaki küçük, dikey kesikli çizgiler, hangi küme ayracın birbiriyle eşleştiğini gösterir ve satır numaraları kodu daha sonra bulmanıza yardımcı olur. Kod bloklarını daraltmak veya genişletmek için küçük, kutulu eksi işaretini seçebilirsiniz. Bu kod ana hattı özelliği, ihtiyacınız olmayan kodun gizlenmesini sağlar ve ekran dağınıklığını en aza indirmenize yardımcı olur. Proje dosyaları, **Çözüm Gezgini** adlı bir pencerenin sağ tarafında listelenir.
+   Uygulamanıza göre C# kodu düzenleyici penceresinde gösterilir ve bu da yerlerin çoğunu alır. Metnin, kodun anahtar sözcükler ve türler gibi farklı bölümlerini göstermek için otomatik olarak renklendirmesine dikkat eder. Ayrıca, kodda küçük, dikey kesikli satırlar hangi ayraçların eş olduğunu ve satır numaraları daha sonra kodu bulumanıza yardımcı olur. Kod bloklarını daraltmak veya genişletmek için küçük, kutulu eksi işaretlerini seçebilirsiniz. Bu kod açıklama özelliği, ihtiyacınız olan kodu gizleyerek ekrandaki dağınıklığı en aza indirmenizi sağlar. Proje dosyaları, Çözüm Gezgini adlı bir pencerede **sağ tarafta listelenir.**
 
-   ![kırmızı kutulara Visual Studio ıde 'yi gösteren ekran görüntüsü.](../media/vs-2019/overview-ide-console-app-red-boxes.png)
+   ![IDE'nin kırmızı Visual Studio gösteren ekran görüntüsü.](../media/vs-2019/overview-ide-console-app-red-boxes.png)
 
-   Diğer menüler ve araç pencereleri mevcuttur, ancak şimdilik bu aşamada geçiş yapalım.
+   Başka menüler ve araç pencereleri de vardır, ancak şimdilik devam edin.
 
-1. Şimdi uygulamayı başlatın. Bunu, menü çubuğundaki **hata ayıklama** menüsünden **hata ayıklama olmadan Başlat** ' a tıklayarak yapabilirsiniz. **CTRL** + **F5** tuşuna da basabilirsiniz.
+1. Şimdi uygulamayı başlatabilirsiniz. Bunu yapmak için menü çubuğundaki **Hata Ayıklama menüsünden** Hata **Ayıklama** Olmadan Başlat'ı seçebilirsiniz. **Ctrl** + **F5 tuşlarına da basarak.**
 
-   ![Hata ayıklama > hata ayıklama menü öğesi olmadan başlangıcını gösteren ekran görüntüsü.](../media/overview-start-without-debugging.png)
+   ![Hata Ayıklama ve Hata Ayıklama > Başlat menü öğesini gösteren ekran görüntüsü.](../media/overview-start-without-debugging.png)
 
-   Visual Studio uygulamayı oluşturur ve **Merhaba Dünya!** iletisi ile bir konsol penceresi açılır. Artık çalışan bir uygulamanız var!
+   Visual Studio uygulamayı derler ve şu iletiyle bir konsol penceresi **Merhaba Dünya!**. Artık çalışan bir uygulama var!
 
-   ![' Merhaba Dünya! ' çıkışını gösteren Microsoft Visual Studio hata ayıklama konsolu penceresinin ekran görüntüsü ve ' Bu pencereyi kapatmak için herhangi bir tuşa basın '.](../media/vs-2019/overview-console-window.png)
+   !['Microsoft Visual Studio!' çıkışını gösteren Hata Ayıklama Konsolu penceresinin Merhaba Dünya görüntüsü ve 'Bu pencereyi kapatmak için herhangi bir tuşa basın'.](../media/vs-2019/overview-console-window.png)
 
 1. Konsol penceresini kapatmak için klavyenizde herhangi bir tuşa basın.
 
-1. Uygulamaya daha fazla kod ekleyelim. Şu satırı izleyerek aşağıdaki C# kodunu ekleyin `Console.WriteLine("Hello World!");` :
+1. Şimdi uygulamaya biraz daha kod ekleriz. aşağıdaki C# kodunu şu satırdan önce `Console.WriteLine("Hello World!");` ekleyin:
 
    ```csharp
    Console.WriteLine("\nWhat is your name?");
    var name = Console.ReadLine();
    ```
 
-   Bu kod, konsol penceresinde **adınızın ne olduğunu** görüntüler ve ardından **ENTER** tuşuna basarak Kullanıcı bir metin girip girene kadar bekler.
+   Bu **kod, konsol penceresinde Adınız nedir?** metnini görüntüler ve ardından kullanıcının bir metin girmesini ve enter tuşuna kadar **beklemesini** sağlar.
 
-1. Aşağıdaki koda gelen satırı değiştirin `Console.WriteLine("Hello World!");` :
+1. aşağıdaki kodla `Console.WriteLine("Hello World!");` ifade eden satırı değiştirme:
 
    ```csharp
    Console.WriteLine($"\nHello {name}!");
    ```
 
-1. Hata **ayıklama** > **olmadan Başlat** öğesini seçerek veya **CTRL** + **F5** tuşuna basarak uygulamayı yeniden çalıştırın.
+1. Hata Ayıklama Olmadan Başlat'ı **seçerek** veya Ctrl F5 tuşlarına basarak >  **uygulamayı** + **yeniden çalıştırın.**
 
-   Visual Studio uygulamayı yeniden oluşturur ve bir konsol penceresi açılır ve sizden adınızı ister.
+   Visual Studio yeniden yapılandırıyorsanız, bir konsol penceresi açılır ve sizden adınız istenir.
 
-1. Konsol penceresine adınızı girin ve **ENTER**'a basın.
+1. Konsol penceresine adınız girin ve Enter tuşuna **basın.**
 
-   ![bir ada, girişe ve ' Hello georgette! ' çıkışına ilişkin istemi gösteren Microsoft Visual Studio hata ayıklama konsolu penceresinin ekran görüntüsü.](../media/vs-2019/overview-console-input.png)
+   ![Ad, giriş Microsoft Visual Studio çıkışını gösteren Hata Ayıklama Konsolu penceresinin ekran görüntüsü.](../media/vs-2019/overview-console-input.png)
 
-1. Herhangi bir tuşa basarak konsol penceresini kapatın ve çalışan programı durdurun.
+1. Konsol penceresini kapatmak ve çalışan programı durdurmak için herhangi bir tuşa basın.
 
 ::: moniker-end
 ::: moniker range=">=vs-2022"
 
-1. Visual Studio’yu çalıştırın. Başlangıç penceresi, bir depoyu kopyalama, son bir projeyi açma veya yeni bir proje oluşturma seçenekleriyle birlikte görüntülenir.
+1. Visual Studio’yu çalıştırın. Başlangıç penceresi, bir repo kopyalama, yakın zamanda bir proje açma veya yeni proje oluşturma seçenekleriyle birlikte görüntülenir.
 
-1. **Yeni proje oluştur** öğesini seçin.
+1. Yeni **proje oluştur'a seçin.**
 
-   ![yeni proje oluştur seçiliyken Visual Studio başlat menüsünün ekran görüntüsü.](../media/vs-2022/create-new-project.png)
+   ![Yeni proje oluştur Visual Studio başlat menüsünün ekran görüntüsü.](../media/vs-2022/create-new-project.png)
 
-   **Yeni proje oluştur** penceresi açılır ve birçok proje *şablonunu* gösterir. Şablon, belirli bir proje türü için gereken temel dosyaları ve ayarları içerir.
+   Yeni **proje oluştur penceresi** açılır ve birkaç proje şablonu *gösterilir.* Şablon, verilen proje türü için gereken temel dosyaları ve ayarları içerir.
 
-1. Bir şablonu bulmak için arama kutusuna anahtar sözcükleri yazabilir veya girebilirsiniz. Kullanılabilir şablonların listesi, girdiğiniz anahtar sözcüklere göre filtreler. tüm **diller** açılan listesinden **C#** ' ı seçerek şablon sonuçlarını daha fazla filtreleyebilirsiniz, tüm **platformlar** listesinden ve **tüm proje türleri** listesinden **konsolundan** **Windows** .
+1. Şablon bulmak için arama kutusuna anahtar sözcükler yazabilirsiniz veya girebilirsiniz. Kullanılabilir şablonların listesi, girersiniz anahtar sözcüklere göre filtreler. Tüm diller açılan **listesinden C#** dilini  seçerek, Tüm  platformlar listesinden  Windows Ve Tüm  proje türleri listesinden Konsol'a bakarak şablon sonuçlarını daha **fazla filtreleyebilirsiniz.**
 
-    **Konsol uygulaması** şablonunu seçin ve ardından **İleri**' yi seçin.
+    Konsol Uygulaması **şablonunu ve** ardından Sonraki'yi **seçin.**
 
-   ![Konsol uygulaması seçiliyken yeni proje oluştur penceresinin ekran görüntüsü.](../media/vs-2022/start-window-create-new-project.png)
+   ![Konsol Uygulaması'nın seçili olduğu Yeni proje oluştur penceresinin ekran görüntüsü.](../media/vs-2022/start-window-create-new-project.png)
 
-1. **yeni projenizi yapılandırın** penceresinde, **Project adı** kutusuna **HelloWorld** yazın. İsteğe bağlı olarak, proje dizini konumunu *C: \\ Users \\ \<name> \\ kaynak \\ deposunun* varsayılan konumundan değiştirip **İleri**' yi seçin.
+1. Yeni **projenizi yapılandır penceresinde,** Yeni **projenizin** adı **kutusuna HelloWorld Project** girin. İsteğe bağlı olarak, proje dizini konumunu varsayılan C: Kullanıcılar *\\ kaynak \\ \<name> \\ \\ repos'larından değiştirerek* Sonraki'yi **seçin.**
 
-   ![Yeni projenizi, HelloWorld adlı proje adı ile yapılandırın penceresinin ekran görüntüsü.](../media/vs-2022/configure-new-project.png)
+   ![Yeni projenizi yapılandır penceresinin, Proje adı HelloWorld girildi olarak ekran görüntüsü.](../media/vs-2022/configure-new-project.png)
 
-1. **Ek bilgi** penceresinde, **.net 6,0** ' in **hedef Framework** açılan menüsünde göründüğünü doğrulayın ve ardından **Oluştur**' u seçin.
+1. Ek **bilgiler penceresinde** Hedef Çerçeve açılan menüsünde **.NET 6.0'ın** görüntülendiğinden emin olup Oluştur'a **tıklayın.** 
 
-   ![.NET 6,0 seçiliyken ek bilgi penceresinin ekran görüntüsü.](../media/vs-2022/create-project-additional-info.png)
+   ![.NET 6.0'ın seçili olduğu Ek bilgiler penceresinin ekran görüntüsü.](../media/vs-2022/create-project-additional-info.png)
 
    Visual Studio projeyi oluşturur. Program, Hello, World! Merhaba Dünya görüntülemek için yöntemini çağıran <xref:System.Console.WriteLine?displayProperty=nameWithType> basit bir "Merhaba Dünya" **uygulamasıdır.** bir konsol penceresinde.
 
@@ -447,13 +447,13 @@ Yeniden düzenlemenin ve [IntelliSense'in](../../ide/using-intellisense.md) daha
 1. Kullanılabilir Hızlı Eylemler'i göstermek için ampul [simgesini seçin.](../../ide/quick-actions.md) **'name' adını 'username' olarak yeniden adlandır'ı seçin.**
 
    ::: moniker range="vs-2017"
-   ![Uygulamanın içinde Yeniden Adlandır eylemlerini gösteren Visual Studio.](../media/rename-quick-action.png)
+   ![Uygulamanın yeniden adlandırma eylemlerini gösteren Visual Studio.](../media/rename-quick-action.png)
    ::: moniker-end
    ::: moniker range="vs-2019"
-   ![Uygulamanın içinde Yeniden Adlandır eylemlerini gösteren Visual Studio.](../media/vs-2019/rename-quick-action.png)
+   ![Uygulamanın yeniden adlandırma eylemlerini gösteren Visual Studio.](../media/vs-2019/rename-quick-action.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Uygulamanın içinde Yeniden Adlandır eylemlerini gösteren Visual Studio.](../media/vs-2022/rename-quick-action.png)
+   ![Uygulamanın yeniden adlandırma eylemlerini gösteren Visual Studio.](../media/vs-2022/rename-quick-action.png)
    ::: moniker-end
 
    değişkeni proje genelinde yeniden adlandırıldı ve bu bizim durumumuz için yalnızca iki yer.
@@ -489,7 +489,7 @@ Yeniden düzenlemenin ve [IntelliSense'in](../../ide/using-intellisense.md) daha
 
 1. Ardından kodu biraz daha kısa hale gelecek şekilde yeniden düzenlemeyi kullanın. satırda `now` değişkenlerini `DateTime now = DateTime.Now;` seçin. Bu çizginin kenar boşluğunda bir tornavida simgesi görünür.
 
-1. Sürücülerden gelen önerileri görmek için tornavida simgesini Visual Studio. Bu durumda, [genel kod davranışını değiştirmeden](../../ide/reference/inline-temporary-variable.md) bir kod satırı kaldırmak için satır içi geçici değişken yeniden düzenlemesi gösterir.
+1. Aşağıdaki seçeneklerden uygun önerileri görmek için tornavida simgesini Visual Studio. Bu durumda, [genel kod davranışını değiştirmeden](../../ide/reference/inline-temporary-variable.md) bir kod satırı kaldırmak için satır içi geçici değişken yeniden düzenlemesi gösterir.
 
    ::: moniker range="<=vs-2019"
    ![Uygulamanın satır içi geçici değişken önerisini gösteren Visual Studio.](../media/inline-temporary-variable-refactoring.png)

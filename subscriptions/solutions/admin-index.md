@@ -1,6 +1,6 @@
 ---
-title: Abonelik Yöneticisi destek çözümleri
-description: Visual Studio abonelikleri için dosya listesi yönetici pencere öğesi içeriğini içerir
+title: Abonelik yöneticisi destek çözümleri
+description: Abonelikler için INCLUDE dosyalarının listesi Visual Studio yönetici pencere öğesi içeriğini destekler
 ms.topic: conceptual
 ms.assetid: 478648b9-f6f0-4ea3-83b4-5cffa196a496
 robots: noindex, nofollow
@@ -8,13 +8,13 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 08/13/2021
 ms.openlocfilehash: 95a74093477657ec6e550005d8bd5c6a08ea1703
-ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
+ms.sourcegitcommit: c2afe12aaf04456846613550b367cf86eb082f4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "127892620"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "127934104"
 ---
-# <a name="visual-studio-subscriptions-admin-support-widget-content-includes-files"></a>Visual Studio abonelikleri yönetici desteği pencere öğesi içeriği dosyaları içerir
+# <a name="visual-studio-subscriptions-admin-support-widget-content-includes-files"></a>Visual Studio abonelik yöneticisi pencere öğesi içeriğini IÇERIR dosyaları destekler
 
 ## <a name="managing-agreements"></a>Anlaşmaları yönetme
 

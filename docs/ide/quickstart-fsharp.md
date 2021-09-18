@@ -1,7 +1,7 @@
 ---
 title: "Hızlı Başlangıç: F'ASP.NET Core web hizmeti oluşturma #"
 description: F# ile ASP.NET Core adım Visual Studio web hizmeti oluşturma hakkında bilgi edinin.
-ms.date: 08/24/2018
+ms.date: 09/14/2021
 ms.topic: quickstart
 ms.custom: vs-acquisition
 author: anandmeg
@@ -13,32 +13,26 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: df1ea3b5cb57180c8f9fd8402b892594888d3bae
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 17d443c9dac7a37670c65c7fb9c8da8362aa4ab4
+ms.sourcegitcommit: 59613afd06a8f184efab8e108410066824a2b712
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126635974"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "127920048"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-service-in-f"></a>Hızlı Başlangıç: F'Visual Studio web hizmetinizi oluşturmak ASP.NET Core hızlı başlangıç\#
 
-bu 5-10 dakika içinde Visual Studio'da F# ASP.NET Core web uygulaması oluşturabilirsiniz.
+Bu 5-10 dakika içinde Visual Studio F# uygulamasına giriş için bir F# ASP.NET Core oluşturabilirsiniz.
 
 ::: moniker range="vs-2017"
 
-Henüz yüklemedıysanız Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) indirmeler sayfasına gidin.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
-Henüz yüklemedıysanız Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/downloads) indirmeler sayfasına gidin.
-
-::: moniker-end
-
-::: moniker range="vs-2022"
-
-Visual Studio 2022 Preview'Visual Studio [2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) yüklemelerini henüz yüklememişsinizdir.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin.
 
 ::: moniker-end
 
@@ -50,39 +44,37 @@ Visual Studio 2022 Preview'Visual Studio [2022 Preview](https://visualstudio.mic
 
 1. Visual Studio'yu açın.
 
-2. Üst menü çubuğundan Dosya Yeni **Dosya'Project.** >  > 
+1. Üst menü çubuğundan Dosya Yeni **Dosya'Project.** >  > 
 
-3. Yeni uygulama **Project** iletişim kutusunda, sol bölmede Visual F#'yi **genişletin** ve **Web'i seçin.** Orta bölmede Web **Uygulaması'ASP.NET Core ve ardından** Tamam'ı **seçin.**
+1. Yeni uygulama **Project** iletişim kutusunda, sol bölmede Visual F#'yi **genişletin** ve **Web'i seçin.** Orta bölmede Web **Uygulaması'ASP.NET Core ve ardından** Tamam'ı **seçin.**
 
-     **.NET Core** proje şablonu kategorisini görmüyorsanız sol **bölmedeki** Visual Studio Yükleyicisi aç bağlantısını seçin. Uygulama Visual Studio Yükleyicisi başlatıyor. Web geliştirme **ASP.NET iş yükünü ve ardından** Değiştir'i **seçin.**
+   **.NET Core** proje şablonu kategorisini görmüyorsanız sol **bölmedeki** Visual Studio Yükleyicisi aç bağlantısını seçin. Uygulama Visual Studio Yükleyicisi başlatıyor. Web geliştirme **ASP.NET iş yükünü ve ardından** Değiştir'i **seçin.**
 
-     ![ASP.NET Yükleyicisi'ne iş yükü yükleme](../ide/media/quickstart-aspnet-workload.png)
+   ![ASP.NET VS Yükleyicisi'ne iş yükü yükleme](../ide/media/quickstart-aspnet-workload.png)
 
-4.In Web **ASP.NET Core iletişim** kutusunda, üst açılan **menüden ASP.NET Core 2.1'i** seçin. (Listede ASP.NET Core **2.1'i** görmüyorsanız, iletişim kutusunun üst kısmında  sarı bir çubukta görünmesi gereken İndir bağlantısını takip edin.) **Tamam'ı seçin.**
+1. Yeni **Web ASP.NET Core iletişim kutusunda,** üst **açılan menüden ASP.NET Core 2.1'i** seçin. (Listede ASP.NET Core **2.1'i** görmüyorsanız, iletişim kutusunun üst kısmında  sarı bir çubukta görünmesi gereken İndir bağlantısını takip edin.) **Tamam'ı seçin.**
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
 1. Visual Studio'yu açın.
 
-2. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
+1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-3. Yeni **proje oluştur sayfasında,** arama kutusuna **f# web** yazın ve web uygulaması **proje ASP.NET Core** seçin. **İleri**’yi seçin.
+1. Yeni **proje oluştur sayfasında,** arama kutusuna **f# web** yazın ve ASP.NET Core **Web Uygulaması proje şablonunu** seçin. **İleri**’yi seçin.
 
-4. Yeni **projenizi yapılandır sayfasında** bir ad girin ve Oluştur'a **tıklayın.**
+1. Yeni **projenizi yapılandır sayfasında** bir ad girin ve Oluştur'a **tıklayın.**
 
-5. Yeni bir **web uygulaması ASP.NET Core sayfasında,** üst **açılan menüden ASP.NET Core 2.1'i** seçin ve ardından Oluştur'a **tıklayın.**
-
-::: moniker-end
+1. Yeni bir **web uygulaması ASP.NET Core sayfasında,** **üst açılan menüden ASP.NET Core 2.1'i** seçin ve ardından Oluştur'a **tıklayın.**
 
 ## <a name="explore-the-ide"></a>IDE'ye keşfetme
 
-1. Çözüm Gezgini **araç** çubuğunda Denetleyiciler klasörünü **genişletin** ve ardından **ValuesController.fs'yi** seçarak düzenleyicide açın.
+1. Çözüm Gezgini **araç** çubuğunda **Denetleyiciler** klasörünü genişletin, ardından **ValuesController.fs'yi** seçarak düzenleyicide açın.
 
-   ![Çözüm Gezgini F# Web API projesinde genişletilmiş Denetleyiciler klasörüyle birlikte kullanma](../ide/media/hello-world-fs-sln-explorer.png)
+   ![Bir F# Web API Çözüm Gezgini Controllers klasörünün genişlet olduğu uygulamanın ekran görüntüsü.](../ide/media/hello-world-fs-sln-explorer.png)
 
-2. Ardından, `Get()` üyeyi aşağıdaki gibi yapın:
+1. Ardından, `Get()` üyeyi aşağıdaki gibi yapın:
 
    ```fsharp
    [<HttpGet>]
@@ -91,19 +83,65 @@ Visual Studio 2022 Preview'Visual Studio [2022 Preview](https://visualstudio.mic
        ActionResult<string[]>(values)
    ```
 
-Kod basittir. Bir F# değer dizisi, adına bağlı ve ardından `values` MVC çerçevesine ASP.NET Core olarak `ActionResult` geçirildi. ASP.NET Core sizin için diğer tüm işlerini sizin için yaptı.
+Kod basittir. Bir F# değer dizisi, adına bağlı ve ardından bir olarak `values` ASP.NET Core MVC çerçevesine geçirildi. `ActionResult` ASP.NET Core sizin için diğer tüm işlerini sizin için yaptı.
 
 Düzenleyicide aşağıdaki gibi olması gerekir:
 
-![Değiştirilen Üye al](../ide/media/hello-world-fs-get-member.png)
+![ValuesController.fs içinde Üye al için değiştirilen kodu gösteren ekran görüntüsü.](../ide/media/hello-world-fs-get-member.png)
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
 1. Uygulamayı çalıştırmak ve bir web tarayıcısında açmak için **Ctrl** + **F5'e** basın.
 
-2. Sayfa yönlendirmeye `/api/values` gitse de, yönlendirene kadar gitse de `https://localhost:44396/api/values` tarayıcınıza girin.
+1. Sayfa yönlendirmeye `/api/values` gitse de, yönlendirene kadar gitse de `https://localhost:44396/api/values` tarayıcınıza girin.
 
 Web tarayıcısı artık daha önce yazacakları ile eşleşen JSON'u görüntüler.
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+1. Visual Studio'yu açın.
+
+1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
+
+1. Yeni **proje oluştur penceresinde** arama kutusuna **f# web** yazın veya listeyi geliştirmek için dil, platform ve proje türü filtrelerini kullanın. Web **API ASP.NET Core şablonunu** ve ardından Sonraki'yi **seçin.**
+
+1. Yeni **projenizi yapılandır penceresinde,** yeni bir Project **girin ve** ardından Sonraki'yi **seçin.**
+
+1. Ek **bilgiler penceresinde Framework** alanında **.NET 6.0'ın** görüntülendiğinden **emin olup** Oluştur'a **tıklayın.**
+
+## <a name="explore-the-ide"></a>IDE'ye keşfetme
+
+1. Çözüm Gezgini **araç** çubuğunda Denetleyiciler klasörünü  genişletin, ardından **WeatherForecast.fs'yi** seçarak düzenleyicide açın.
+
+   :::image type="content" source="media/vs-2022/hello-world-fs-sln-explorer.png" alt-text="F# Web API Çözüm Gezgini Controllers klasörünün genişletilirken gösterilen ekran görüntüsü.":::
+
+1. Ardından, mevcut üye `Get()` örneğini aşağıdaki kodla eş olacak şekilde değiştirebilirsiniz:
+
+   ```fsharp
+   [<HttpGet>]
+   member this.Get() =
+       let values = [|"Hello"; "World"; "First F#/ASP.NET Core web API!"|]
+       ActionResult<string[]>(values)
+   ```
+
+Kod basittir. Bir F# değer dizisi, adına bağlı ve ardından bir olarak `values` ASP.NET Core MVC çerçevesine geçirildi. `ActionResult` ASP.NET Core sizin için diğer tüm işlerini sizin için yaptı.
+
+Düzenleyicide aşağıdaki gibi olması gerekir:
+
+:::image type="content" source="media/vs-2022//hello-world-fs-get-member.png" alt-text="WeatherForecast.fs'de Üye al için değiştirilen kodu gösteren ekran görüntüsü.":::
+
+## <a name="run-the-application"></a>Uygulamayı çalıştırma
+
+Uygulamayı çalıştırmak ve bir web tarayıcısında açmak için **Ctrl** + **F5'e** basın. 
+
+> [!NOTE]
+> IIS SSL Express sertifikasını kabul etmek istemenizi isteyen bir  ileti alırsanız, kodu bir web  tarayıcısında görüntülemek için Evet'i seçin ve ardından bir güvenlik uyarısı iletisi alırsanız Evet'i seçin.
+
+Visual Studio daha önce eklemış olduğunuz "Merhaba Dünya" iletisiyle eşleşen JSON'u görüntüleyen bir tarayıcı penceresi açar.
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -1,8 +1,8 @@
 ---
 title: MSBuild Hedefler | Microsoft Docs
-description: Görevleri birlikte MSBuild için hedefleri nasıl kullandığını ve derleme işleminin daha küçük birimlere göre nasıl dikkate alınasına izin ver olduğunu öğrenin.
+description: Görevleri birlikte MSBuild için hedefleri nasıl kullandığını ve derleme işleminin daha küçük birimlere göre nasıl dikkate alınarak gerçekleştirilene izin verme hakkında bilgi alın.
 ms.custom: SEO-VS-2020
-ms.date: 06/13/2019
+ms.date: 09/21/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, targets
@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: aa270fae00a66f1ca295949855c7b7ad1a56254b
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 96e9ee12fbe3777e99ca5e4a256c655fda11900e
+ms.sourcegitcommit: 59613afd06a8f184efab8e108410066824a2b712
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628448"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "127920009"
 ---
 # <a name="msbuild-targets"></a>MSBuild hedefleri
 
@@ -73,7 +73,7 @@ Kodda bir işlevi olarak ad olarak da bildiğiniz gibi hedefinize açıklayıcı
 
 - Hedef bağımlılıklar
 
-- `BeforeTargets`and `AfterTargets` (MSBuild 4.0)
+- `BeforeTargets` ve `AfterTargets`
 
 Bir hedef, derlemede sonraki bir hedef buna bağlı olsa bile tek bir derleme sırasında hiçbir zaman iki kez çalışmaz. Hedef çalıştırlandıktan sonra derlemeye olan katkısı tamamlanır.
 
@@ -121,7 +121,7 @@ Reference: 4.0
 
 Aşağıda, Microsoft.Common.CurrentVersion.Targets'daki genel hedefler liste almaktadır.
 
-```
+```xml
 ===================================================
 Build
 The main build entry point.
