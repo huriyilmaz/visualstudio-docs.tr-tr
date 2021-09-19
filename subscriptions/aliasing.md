@@ -1,18 +1,18 @@
 ---
 title: Visual Studio aboneliklerinde oturum açmak, diğer adlar kullanılırken başarısız olabilir | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 97bf7474-c6c2-49b3-b2c9-f1b2808eed1a
 ms.date: 03/19/2021
 ms.topic: conceptual
 description: Diğer adlar veya kolay adlar kullanılıyorsa oturum açma başarısız olabilir
-ms.openlocfilehash: d3a3cd962bafcf6a3e0c5aa20c98128233ace988
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 967c1091d26c99cb5ad4d8fea972e8a500b82ef8
+ms.sourcegitcommit: f07b737f43a29e30d040cc5793437f462fedb595
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725489"
+ms.lasthandoff: 09/19/2021
+ms.locfileid: "127964706"
 ---
 # <a name="signing-into-visual-studio-subscriptions-may-fail-when-using-aliases"></a>diğer adlar kullanılırken Visual Studio aboneliklerinde oturum açma başarısız olabilir
 Oturum açmak için kullanılan hesap türüne bağlı olarak, kullanılabilir abonelikler ' de oturum açarken doğru görüntülenmeyebilir [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Olası bir neden, aboneliğin atandığı oturum açma kimliği yerine "diğer adlar" veya "kolay adlar" in kullanılması olabilir. Bu "diğer ad" olarak adlandırılır.
