@@ -7,167 +7,167 @@ ms.author: meghaanand
 manager: jmartens
 ms.topic: include
 ms.openlocfilehash: d98812bdba2807038d23f43d07ea48f6d3d43bc0
-ms.sourcegitcommit: 59613afd06a8f184efab8e108410066824a2b712
+ms.sourcegitcommit: 559c662b2d60048300b76ea6ed3defaa2a259492
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "127932609"
+ms.lasthandoff: 09/19/2021
+ms.locfileid: "127985481"
 ---
-Tümleşik *geliştirme ortamı* (IDE), yazılım geliştirmenin birçok özelliğini destekleyen zengin bir programdır. IDE Visual Studio düzenleme, hata ayıklama ve kod derleme ve ardından uygulama yayımlamak için kullanabileceğiniz yaratıcı bir başlatma panelidir. Çoğu IDE'nin sağlediği standart düzenleyici ve hata ayıklayıcının üzerinde Visual Studio geliştirme sürecini geliştirmek için derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve daha birçok özellik içerir.
+*Tümleşik geliştirme ortamı* (IDE), yazılım geliştirmenin birçok yönlerini destekleyen özellik açısından zengin bir programdır. Visual Studio ıde, kod düzenlemek, hatalarını ayıklamak ve derlemek ve ardından bir uygulama yayımlamak için kullanabileceğiniz bir yaratıcı başlatma paneliyle bulunur. standart düzenleyicinin ve üzerinde birçok ıdes 'in sağladığı hata ayıklayıcı, Visual Studio derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve yazılım geliştirme sürecini geliştirmeye yönelik daha birçok özellik içerir.
 
 ::: moniker range="vs-2017"
 
-![Visual Studio 2017 IDE'nin ekran görüntüsü.](../media/visual-studio-ide.png)
+![Visual Studio 2017 ıde 'yi gösteren ekran görüntüsü.](../media/visual-studio-ide.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-:::image type="content" source="../media/vs-2019/ide-overview.png" alt-text="Visual Studio 2019 IDE'nin, önemli özelliklerin ve işlevlerin bulunduğu yeri belirten çağrılar içeren ekran görüntüsü." lightbox="../media/vs-2019/ide-overview.png":::
+:::image type="content" source="../media/vs-2019/ide-overview.png" alt-text="anahtar özelliklerinin ve işlevselliğinin nerede bulunduğunu belirten belirtme çizgileri içeren Visual Studio 2019 ıde 'nin ekran görüntüsü." lightbox="../media/vs-2019/ide-overview.png":::
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-[![2022 IDE'Visual Studio gösteren ekran görüntüsü, önemli özelliklerin ve işlevlerin konumunu belirten çağrılar.](../media/vs-2022/ide-overview.png)](../media/vs-2022/ide-overview.png#lightbox)
+[![anahtar özellikleri ve işlevlerinin konumunu belirten belirtme çizgileri ile Visual Studio 2022 ıde 'yi gösteren ekran görüntüsü.](../media/vs-2022/ide-overview.png)](../media/vs-2022/ide-overview.png#lightbox)
 
 ::: moniker-end
 
-Yukarıdaki görüntüde, Visual Studio pencerelerini ve işlevlerini gösteren açık bir projeyle birlikte aşağıdaki özellikler yer aleni şekilde görüntüye sahiptir:
+yukarıdaki görüntüde, önemli pencereleri ve bunların işlevlerini gösteren açık bir proje içeren Visual Studio gösterilmektedir:
 
-- Bu [Çözüm Gezgini](../../ide/use-solution-explorer.md)sağ üst köşedeki kod dosyalarınızı abilir, gezinebilirsiniz ve yönetebilirsiniz. **Çözüm Gezgini,** dosyaları çözümler ve projeler olarak gruplamanıza yardımcı [olabilir.](../../ide/solutions-and-projects-in-visual-studio.md)
+- [Çözüm Gezgini](../../ide/use-solution-explorer.md), sağ üst köşedeki kod dosyalarınızı görüntüleyebilir, gidebilir ve yönetebilirsiniz. **Çözüm Gezgini** , dosyaları [çözümler ve projelerle](../../ide/solutions-and-projects-in-visual-studio.md)gruplayarak kodunuzun düzenlenmesine yardımcı olabilir.
 
-- Büyük [olasılıkla zaman](../../ide/writing-code-in-the-code-and-text-editor.md)harcamanız gereken merkezi düzenleyici penceresi, dosya içeriğini görüntüler. Düzenleyici penceresinde, kodu düzenleyebilir veya düğmeleri ve metin kutuları olan bir pencere gibi bir kullanıcı arabirimi tasarabilirsiniz.
+- Büyük olasılıkla zaman harcamanız gereken Merkezi [Düzenleyici penceresi](../../ide/writing-code-in-the-code-and-text-editor.md), dosya içeriklerini görüntüler. Düzenleyici penceresinde, kod düzenleyebilir veya düğmeler ve metin kutuları içeren pencere gibi bir kullanıcı arabirimini tasarlayabilirsiniz.
 
 ::: moniker range="vs-2017"
 
-- Çıkış [penceresi](../../ide/reference/output-window.md) (alttaki orta), hata ayıklama Visual Studio hata iletileri, derleyici uyarıları, yayımlama durumu iletileri ve daha fazlası gibi bildirimler gönderdiği yerdir. Her ileti kaynağının kendi sekmesi vardır.
+- [çıkış penceresi](../../ide/reference/output-window.md) (alt orta), Visual Studio hata ayıklama ve hata iletileri, derleyici uyarıları, yayımlama durumu iletileri ve daha fazlası gibi bildirimleri gönderir. Her ileti kaynağının kendi sekmesi vardır.
 
 ::: moniker-end
 
-- Sağ [altta yer](/visualstudio/version-control/) alan Git Değişiklikleri'nde, Git ve GitHub gibi sürüm denetimi teknolojilerini kullanarak iş öğelerini [izleyebilir](https://git-scm.com/) ve diğerleriyle [kod GitHub.](https://docs.github.com/github)
+- [Git değişikliklerinde](/visualstudio/version-control/) git ve [GitHub](https://docs.github.com/github) [gibi sürüm](https://git-scm.com/) denetimi teknolojilerini kullanarak iş öğelerini izleyebilir ve kodu başkalarıyla paylaşabilirsiniz.
 
 ## <a name="editions"></a>Sürümler
 
-Visual Studio mac ve Windows kullanılabilir. [Mac için Visual Studio,](/visualstudio/mac/) Windows için Visual Studio özelliklere sahiptir ve platformlar arası ve mobil uygulamalar geliştirmek için iyileştirilmiştir. Bu makale, Windows sürümüne Visual Studio.
+Visual Studio Windows ve Mac için kullanılabilir. [Mac için Visual Studio](/visualstudio/mac/) , Windows için Visual Studio aynı özelliklerin çoğuna sahiptir ve platformlar arası ve mobil uygulamalar geliştirmek için iyileştirilmiştir. bu makale Visual Studio Windows sürümüne odaklanır.
 
-Üç sürüm vardır: Visual Studio, Community, Professional ve Enterprise. Her [sürümde Visual Studio özellikler](https://visualstudio.microsoft.com/vs/compare/) hakkında bilgi edinmek için bkz. Visual Studio sürümleri karşılaştırma.
+Visual Studio üç sürümü vardır: Community, Professional ve Enterprise. her sürümde hangi özelliklerin desteklendiği hakkında bilgi edinmek için bkz. [Compare Visual Studio sürümleri](https://visualstudio.microsoft.com/vs/compare/) .
 
 ## <a name="popular-productivity-features"></a>Popüler üretkenlik özellikleri
 
-Yazılım geliştirme Visual Studio üretkenliğinizi geliştiren bazı popüler özellikler şunlardır:
+yazılım geliştirme sırasında üretkenliğinizi geliştiren Visual Studio popüler bazı özellikler şunlardır:
 
-- Geçişler ve [Hızlı Eylemler](../../ide/quick-actions.md)
+- Dalgalı çizgiler ve [hızlı eylemler](../../ide/quick-actions.md)
 
-   Dalgalı çizgiler, siz yazarak kodundaki hatalara veya olası sorunlara karşı sizi uyaran dalgalı alt çizgilerdir. Bu görsel ipuçları, derleme veya çalışma zamanı sırasında hataları keşfetmeyi beklemeden sorunları hemen düzeltmeye yardımcı olur. Bir geçişin üzerine gelindiğinde hata hakkında daha fazla bilgi alırsınız. Hatayı düzeltmek için gerçekleştirebilir hızlı eylemleri gösteren *sol* kenar boşluğunda bir ampul de görünebilir.
+   Dalgalı çizgiler, siz yazarken kodunuzda hataları veya olası sorunları uyaran dalgalı alt çizgiler. Bu görsel ipuçları, derleme veya çalışma zamanı sırasında hataları bulmayı beklemeden sorunları anında düzeltmenize yardımcı olur. Dalgalı bir çizgi üzerine geldiğinizde, hata hakkında daha fazla bilgi görürsünüz. Ayrıca, hata düzeltmesini gerçekleştirmek için uygulayabileceğiniz *hızlı eylemleri* gösteren bir ampul sol kenar boşluğunda görünebilir.
 
    ::: moniker range="<=vs-2019"
-   ![Visual Studio'daki geçişleri gösteren ekran görüntüsü.](../media/squiggles-error.png)
+   ![Visual Studio 'de dalgalı çizgiler gösteren ekran görüntüsü.](../media/squiggles-error.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Visual Studio'daki geçişleri gösteren ekran görüntüsü.](../media/vs-2022/squiggles-error.png)
+   ![Visual Studio 'de dalgalı çizgiler gösteren ekran görüntüsü.](../media/vs-2022/squiggles-error.png)
    ::: moniker-end
   
 
 ::: moniker range="vs-2019"
-- Kod Temizleme
+- Kod temizleme
 
-   Bir düğmeye tıklayarak kodunuzu biçimlendirebilirsiniz ve kod stili ayarlarınız [,](../../ide/reference/options-text-editor-csharp-formatting.md) [.editorconfig kuralları](../../ide/create-portable-custom-editor-options.md)ve Roslyn çözümleyicileri tarafından önerilen kod [düzeltmelerini uygulayabilirsiniz.](../../code-quality/roslyn-analyzers-overview.md) **Şu anda** yalnızca C# kodu için kullanılabilen Kod Temizleme, kod incelemesine gitmeden önce kodundaki sorunları çözmenize yardımcı olur.
+   Bir düğmeye tıklayarak kodunuzu biçimlendirebilir ve [kod stili ayarlarınız](../../ide/reference/options-text-editor-csharp-formatting.md), [. Editorconfig kuralları](../../ide/create-portable-custom-editor-options.md)ve [Roslyn çözümleyiciler](../../code-quality/roslyn-analyzers-overview.md)tarafından önerilen tüm kod düzeltmelerini uygulayabilirsiniz. Kod **Temizleme**, şu anda yalnızca C# kodu için kullanılabilir, kod incelemeye geçmeden önce kodunuzda sorunları çözmenize yardımcı olur.
 
-   ![Kod Temizleme simgesini ve uygulama menüsündeki menüyü gösteren Visual Studio.](../media/vs-2019/code-cleanup.png)
+   ![Kod temizleme simgesini ve Visual Studio menüsünü gösteren ekran görüntüsü.](../media/vs-2019/code-cleanup.png)
    ::: moniker-end
 
 ::: moniker range=">=vs-2022"
-- Kod Temizleme
+- Kod temizleme
 
-   Bir düğmeye tıklayarak kodunuzu biçimlendirebilirsiniz ve kod stili ayarlarınız [,](../../ide/reference/options-text-editor-csharp-formatting.md) [.editorconfig kuralları](../../ide/create-portable-custom-editor-options.md)ve Roslyn çözümleyicileri tarafından önerilen kod [düzeltmelerini uygulayabilirsiniz.](../../code-quality/roslyn-analyzers-overview.md) **Şu anda** yalnızca C# kodu için kullanılabilen Kod Temizleme, kod incelemesine gitmeden önce kodundaki sorunları çözmenize yardımcı olur.
+   Bir düğmeye tıklayarak kodunuzu biçimlendirebilir ve [kod stili ayarlarınız](../../ide/reference/options-text-editor-csharp-formatting.md), [. Editorconfig kuralları](../../ide/create-portable-custom-editor-options.md)ve [Roslyn çözümleyiciler](../../code-quality/roslyn-analyzers-overview.md)tarafından önerilen tüm kod düzeltmelerini uygulayabilirsiniz. Kod **Temizleme**, şu anda yalnızca C# kodu için kullanılabilir, kod incelemeye geçmeden önce kodunuzda sorunları çözmenize yardımcı olur.
 
-   ![Kod Temizleme simgesini ve uygulama menüsündeki menüyü gösteren Visual Studio.](../media/vs-2022/code-cleanup.png)
+   ![Kod temizleme simgesini ve Visual Studio menüsünü gösteren ekran görüntüsü.](../media/vs-2022/code-cleanup.png)
    ::: moniker-end
 
 - [Yeniden Düzenle](../../ide/refactoring-in-visual-studio.md)
 
-   Yeniden düzenleme, değişkenlerin akıllı yeniden adı oluşturma, bir veya daha fazla kod satırı ayıklanan yeni bir yöntem ve yöntem parametrelerinin sırası değiştirme gibi işlemleri içerir.
+   Yeniden düzenleme, değişkenlerin akıllı yeniden adlandırılması, bir veya daha fazla kod satırını yeni bir yönteme ayıklama ve yöntem parametrelerinin sırasını değiştirme gibi işlemleri içerir.
 
    ::: moniker range="<=vs-2019"
-   ![Örneklerde Yeniden Düzenlemeyi gösteren Visual Studio.](../media/refactoring-menu.png)
+   ![Visual Studio yeniden düzenlemeyi gösteren ekran görüntüsü.](../media/refactoring-menu.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Örneklerde Yeniden Düzenlemeyi gösteren Visual Studio.](../media/vs-2022/refactoring-menu.png)
+   ![Visual Studio yeniden düzenlemeyi gösteren ekran görüntüsü.](../media/vs-2022/refactoring-menu.png)
    ::: moniker-end
 
-- [Intellisense](../../ide/using-intellisense.md)
+- [IntelliSense](../../ide/using-intellisense.md)
 
-   IntelliSense, kodunuzla ilgili bilgileri doğrudan düzenleyicide görüntülemenizi ve bazı durumlarda sizin için küçük kod bitlerini yazmanızı sağlar. Bu, düzenleyicide satır içinde temel belgelere sahip olmak gibi bir şey, bu nedenle başka bir yerde tür bilgilerini aramana gerek kalmadan.
+   IntelliSense, kodunuzla ilgili bilgileri doğrudan düzenleyicide görüntüleyen bir özellikler kümesidir ve bazı durumlarda sizin için küçük bit kod yazın. Temel belgeleri düzenleyicide satır içine almak gibidir, bu nedenle tür bilgilerini başka bir yerde aramak zorunda kalmazsınız.
 
-   Aşağıdaki çizimde, IntelliSense'in bir tür için üye listesini nasıl görüntülesi gösterilmiştir:
+   Aşağıdaki çizimde, IntelliSense 'in bir tür için üye listesini nasıl görüntüleyeceği gösterilmektedir:
 
    ::: moniker range="<=vs-2019"
-   ![IntelliSense üye listesini gösteren ekran görüntüsü.](../media/intellisense-list-members.png)
+   ![Bir IntelliSense üye listesini gösteren ekran görüntüsü.](../media/intellisense-list-members.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![IntelliSense üye listesini gösteren ekran görüntüsü.](../media/vs-2022/intellisense-list-members.png)
+   ![Bir IntelliSense üye listesini gösteren ekran görüntüsü.](../media/vs-2022/intellisense-list-members.png)
    ::: moniker-end
 
-   IntelliSense özellikleri dile göre değişiklik gösterir. Daha fazla bilgi için bkz. [C# IntelliSense](../../ide/visual-csharp-intellisense.md), [Visual C++ IntelliSense](../../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../../ide/javascript-intellisense.md) [ve IntelliSense Visual Basic.](../../ide/visual-basic-specific-intellisense.md)
+   IntelliSense özellikleri dile göre farklılık gösterir. daha fazla bilgi için bkz. [C# ıntellisense](../../ide/visual-csharp-intellisense.md), [Visual C++ ıntellisense](../../ide/visual-cpp-intellisense.md), [JavaScript ıntellisense](../../ide/javascript-intellisense.md)ve [Visual Basic ıntellisense](../../ide/visual-basic-specific-intellisense.md).
 
 - [Visual Studio arama](../../ide/visual-studio-search.md)
 
-   Visual Studio menüler, seçenekler ve özellikler bazen aşırı zor görünebilir. Visual Studio veya **Ctrl** Q, IDE özelliklerini ve kodunu tek bir yerde hızla + bulmanın harika bir yoludur.
+   Visual Studio menüler, seçenekler ve özellikler zaman içinde çok daha fazla görünebilir. Visual Studio arama veya **Ctrl** + **Q**, ıde özelliklerini ve kodu tek bir yerde hızlı bir şekilde bulmanın harika bir yoludur.
 
    ::: moniker range="vs-2017"
 
-   ![2017'Hızlı Başlat arama kutusunu Visual Studio ekran görüntüsü.](../media/quick-launch-nuget.png)
+   ![Visual Studio 2017 ' de hızlı başlatma arama kutusunu gösteren ekran görüntüsü.](../media/quick-launch-nuget.png)
 
-   Daha fazla bilgi için [bkz. Hızlı Başlat.](../../ide/reference/quick-launch-environment-options-dialog-box.md)
+   Daha fazla bilgi için bkz. [Hızlı başlatma](../../ide/reference/quick-launch-environment-options-dialog-box.md).
 
    ::: moniker-end
 
    ::: moniker range="vs-2019"
 
-   ![Visual Studio 2019'daki Hızlı Başlat kutusunu gösteren ekran görüntüsü.](../media/vs-2019/quick-launch-nuget.png)
+   ![Visual Studio 2019 ' de hızlı başlatma arama kutusunu gösteren ekran görüntüsü.](../media/vs-2019/quick-launch-nuget.png)
 
-    Bilgi ve üretkenlik ipuçları için [bkz. Arama Visual Studio kullanma.](../../ide/visual-studio-search.md)
+    bilgi ve üretkenlik ipuçları için bkz. [Visual Studio aramasını kullanma](../../ide/visual-studio-search.md).
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2022"
 
-   ![Visual Studio'Hızlı Başlat arama kutusunu gösteren ekran Visual Studio.](../media/vs-2022/quick-launch-nuget.png)
+   ![Visual Studio 'daki hızlı başlatma arama kutusunu gösteren ekran görüntüsü.](../media/vs-2022/quick-launch-nuget.png)
 
-    Bilgi ve üretkenlik ipuçları için [bkz. Arama Visual Studio kullanma.](../../ide/visual-studio-search.md)
+    bilgi ve üretkenlik ipuçları için bkz. [Visual Studio aramasını kullanma](../../ide/visual-studio-search.md).
 
    ::: moniker-end
 
 - [Live Share](/visualstudio/liveshare/)
 
-   Uygulama türünüz veya programlama diliniz ne olursa olsun, diğerleriyle gerçek zamanlı işbirliği yaparak düzenleme ve hata ayıklama. Projenizi anında ve güvenli bir şekilde paylaşabilirsiniz. Hata ayıklama oturumlarını, terminal örneklerini, localhost web uygulamalarını, sesli çağrıları ve daha fazlasını da paylaşabilirsiniz.
+   Uygulama türü veya programlama diliniz ne olursa olsun, başkalarıyla birlikte düzenleme ve hata ayıklama işlemlerini gerçek zamanlı olarak yapın. Projenizi anında ve güvenli bir şekilde paylaşabilirsiniz. Ayrıca hata ayıklama oturumları, Terminal örnekleri, localhost Web uygulamaları, sesli çağrılar ve daha fazlasını paylaşabilirsiniz.
 
 - [Çağrı Hiyerarşisi](../../ide/reference/call-hierarchy.md)
 
-   Çağrı **Hiyerarşisi** penceresi, seçilen bir yöntemi çağıran yöntemleri gösterir. Bu bilgiler, yöntemi değiştirmeyi veya kaldırmayı düşünürken veya bir hatayı bulmaya çalışırken yararlı olabilir.
+   **Çağrı hiyerarşisi** penceresi, seçilen bir yöntemi çağıran yöntemleri gösterir. Bu bilgiler, yöntemi değiştirme veya kaldırma hakkında düşüntiğinizde veya bir hatayı izlemeye çalışırken yararlı olabilir.
 
    ::: moniker range="<=vs-2019"
-   ![Çağrı Hiyerarşisi penceresini gösteren ekran görüntüsü.](../../ide/reference/media/call-hierarchy-csharp-expanded.png)
+   ![Çağrı hiyerarşisi penceresini gösteren ekran görüntüsü.](../../ide/reference/media/call-hierarchy-csharp-expanded.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Çağrı Hiyerarşisi penceresini gösteren ekran görüntüsü.](../media/vs-2022/call-hierarchy-csharp-expanded.png)
+   ![Çağrı hiyerarşisi penceresini gösteren ekran görüntüsü.](../media/vs-2022/call-hierarchy-csharp-expanded.png)
    ::: moniker-end
 
 - [CodeLens](../../ide/find-code-changes-and-other-history-with-codelens.md)
 
-   CodeLens, düzenleyiciden ayrılmadan kod başvurularını, kod değişikliklerini, bağlantılı hataları, iş öğelerini, kod incelemelerini ve birim testlerini bulumanıza yardımcı olur.
+   CodeLens, Düzenleyiciden çıkmadan kod başvurularını, kod değişikliklerini, bağlantılı hataları, iş öğelerini, kod incelemelerini ve birim testlerini bulmanıza yardımcı olur.
 
    ::: moniker range="<=vs-2019"
-   ![CodeLens'i gösteren ekran görüntüsü.](../media/codelens-overview.png)
+   ![CodeLens 'i gösteren ekran görüntüsü.](../media/codelens-overview.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![CodeLens'i gösteren ekran görüntüsü.](../media/vs-2022/codelens-overview.png)
+   ![CodeLens 'i gösteren ekran görüntüsü.](../media/vs-2022/codelens-overview.png)
    ::: moniker-end
 
 - [Tanıma Git](../../ide/go-to-and-peek-definition.md)
 
-   Tanıma **Git özelliği** sizi doğrudan bir işlevin veya tür tanımının bulunduğu konuma alır.
+   **Tanıma Git** özelliği sizi doğrudan bir işlevin veya tür tanımının konumuna götürür.
 
    ::: moniker range="<=vs-2019"
    ![Tanıma Git menü öğesini gösteren ekran görüntüsü.](../media/go-to-definition-menu.png)
@@ -178,56 +178,56 @@ Yazılım geliştirme Visual Studio üretkenliğinizi geliştiren bazı popüler
 
 - [Tanıma Göz At](../../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
 
-   Tanıma **Göz At** penceresinde ayrı bir dosya açılmadan bir yöntem veya tür tanımı gösterilir.
+   Özet **tanım** penceresi, ayrı bir dosya açmadan bir yöntemi veya tür tanımını gösterir.
 
    ::: moniker range="<=vs-2019"
-   ![Tanıma Göz At penceresini gösteren ekran görüntüsü.](../media/peek-definition.png)
+   ![Bir Özet Tanım penceresini gösteren ekran görüntüsü.](../media/peek-definition.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Tanıma Göz At penceresini gösteren ekran görüntüsü.](../media/vs-2022/peek-definition.png)
+   ![Bir Özet Tanım penceresini gösteren ekran görüntüsü.](../media/vs-2022/peek-definition.png)
    ::: moniker-end
 
 ## <a name="install-visual-studio"></a>Visual Studio'yu yükleme
 
-Bu bölümde, yeni bir uygulamayla bazı şeyleri denemek için basit bir proje Visual Studio. [IntelliSense'i](../../ide/using-intellisense.md) kodlama yardımı olarak kullanır, uygulama yürütme sırasında değişken bir değer görmek için uygulamada hata ayıklar ve renk temasını değiştirirsiniz.
+Bu bölümde, Visual Studio ile yapabileceğiniz bazı şeyleri denemek için basit bir proje oluşturursunuz. [IntelliSense](../../ide/using-intellisense.md) 'i kodlama Yardımcısı olarak kullanır, uygulama yürütmesi sırasında değişken değerini görmek için bir uygulamada hata ayıklayın ve renk temasını değiştirin.
 
 ::: moniker range="vs-2017"
 
-Çalışmaya başlamanız için [Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) indirin ve sisteminize yükleyin. Modüler yükleyici, tercih ettiği programlama dili veya platform için gereken özellik grupları olan iş yüklerini seçmenize ve yüklemenize olanak sağlar. Program oluşturma adımlarını [takip etmek için](#create-a-program)yükleme sırasında .NET Core platformlar arası geliştirme iş yükünü **seçin.**
+başlamak için [Visual Studio indirin](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ve sisteminize yükleyin. Modüler yükleyici, tercih ettiğiniz programlama dili veya platformu için gereken özellik grupları olan *iş yüklerini* seçmenizi ve yüklemenizi sağlar. [Program oluşturma](#create-a-program)adımlarını izlemek için, yükleme sırasında **.NET Core platformlar arası geliştirme** iş yükünü seçtiğinizden emin olun.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Çalışmaya başlamanız için [Visual Studio](https://visualstudio.microsoft.com/downloads) indirin ve sisteminize yükleyin. Modüler yükleyici, istediğiniz programlama dilleri veya *platformlar* için gereken özellik grupları olan iş yüklerini seçmenize ve yüklemenize olanak sağlar. Program oluşturma adımlarını [takip etmek için,](#create-a-program)yükleme sırasında **.NET Core platformlar arası geliştirme iş yükünü seçmeye** emin olun.
+başlamak için [Visual Studio indirin](https://visualstudio.microsoft.com/downloads) ve sisteminize yükleyin. Modüler yükleyici, istediğiniz programlama dilleri veya platformları için gereken özellik grupları olan *iş yüklerini* seçmenizi ve yüklemenizi sağlar. [Program oluşturma](#create-a-program)adımlarını izlemek için, yükleme sırasında **.NET Core platformlar arası geliştirme** iş yükünü seçtiğinizden emin olun.
 
-![.NET Core platformlar arası geliştirme iş yükünün ekran görüntüsü Visual Studio Yükleyicisi.](../media/dotnet-core-cross-platform-workload.png)
+![Visual Studio Yükleyicisi .net Core platformlar arası geliştirme iş yükünün ekran görüntüsü.](../media/dotnet-core-cross-platform-workload.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-Çalışmaya başlamanız için [Visual Studio](https://visualstudio.microsoft.com/downloads) indirin ve sisteminize yükleyin. Modüler yükleyicide, istediğiniz programlama dilleri *veya platformlar* için ihtiyacınız olan özellik grupları olan iş yüklerini seçer ve yükleyebilirsiniz. Bir program oluşturmak üzere aşağıdaki [adımları kullanmak için,](#create-a-program)yükleme sırasında .NET masaüstü geliştirme **iş yükünü seçmeyi** emin olun.
+başlamak için [Visual Studio indirin](https://visualstudio.microsoft.com/downloads) ve sisteminize yükleyin. Modüler yükleyicide, istediğiniz programlama dilleri veya platformları için ihtiyaç duyduğunuz Özellik grupları olan *iş yüklerini* seçer ve yüklersiniz. [Bir program oluşturmak](#create-a-program)için aşağıdaki adımları kullanmak üzere yükleme sırasında **.net masaüstü geliştirme** iş yükünü seçtiğinizden emin olun.
 
-![Uygulamanın içinde seçilen .NET masaüstü geliştirme iş yükünün Visual Studio Yükleyicisi.](../media/vs-2022/dot-net-development-workload.png)
+![Visual Studio Yükleyicisi seçili .net masaüstü geliştirme iş yükünün ekran görüntüsü.](../media/vs-2022/dot-net-development-workload.png)
 
 ::: moniker-end
 
-İlk kez Visual Studio kez oturum asanız, [](../../ide/signing-in-to-visual-studio.md) oturum açmak için Microsoft hesabı veya okul hesabınızla oturum açabilirsiniz.
+Visual Studio ilk kez açtığınızda, Microsoft hesabı veya iş veya okul hesabınızı kullanarak [oturum](../../ide/signing-in-to-visual-studio.md) açabilirsiniz.
 
 ## <a name="create-a-program"></a>Program oluşturma
 
-Basit bir program oluşturma ve bu programa dalın.
+' İ inceleyin ve basit bir program oluşturun.
 
 ::: moniker range="vs-2017"
 
 1. Visual Studio'yu açın.
 
-1. Menü çubuğunda Dosya Yeni **Dosya'Project.** >  > 
+1. menü çubuğunda **dosya** > **yeni** > **Project**' yi seçin.
 
-   ![Menü çubuğundaKimlik > Yeni Project'i gösteren ekran görüntüsü.](../media/file-new-project-menu.png)
+   ![dosya > menü çubuğunda yeni Project gösteren ekran görüntüsü.](../media/file-new-project-menu.png)
 
-   Yeni **Project** iletişim kutusunda birkaç proje *şablonu görüntülenir.* Şablon, verilen proje türü için gereken temel dosyaları ve ayarları içerir.
+   **yeni Project** iletişim kutusunda çeşitli proje *şablonları* gösterilmektedir. Şablon, verilen proje türü için gereken temel dosyaları ve ayarları içerir.
 
 1. Visual C# **altında .NET Core** şablon **kategorisini** seçin ve ardından Konsol Uygulaması **(.NET Core) şablonunu** seçin. Ad **metin** kutusuna **HelloWorld yazın ve** tamam **düğmesini** seçin.
 
@@ -252,7 +252,7 @@ Basit bir program oluşturma ve bu programa dalın.
 
    ![Hata ayıklama ve hata ayıklama > başlat menüsünü gösteren ekran görüntüsü.](../media/overview-start-without-debugging.png)
 
-   Visual Studio uygulamayı derler ve şu iletiyle bir konsol penceresi **Merhaba Dünya!**. Artık çalışan bir uygulama var!
+   Visual Studio, uygulamayı derler ve şu iletiyle bir konsol penceresi **Merhaba Dünya!**. Artık çalışan bir uygulama var!
 
    !['cmd.exe!' çıkışını gösteren Merhaba Dünya görüntüsü ve 'Devam etmek için herhangi bir tuşa basın'.](../media/overview-console-window.png)
 
@@ -293,7 +293,7 @@ Basit bir program oluşturma ve bu programa dalın.
 
 1. Yeni **proje oluştur'a seçin.**
 
-    :::image type="content" source="../media/vs-2019/start-window-create-new-project.png" alt-text="Visual Studio 2019'da 'Yeni proje oluştur' penceresinin ekran görüntüsü.":::
+    :::image type="content" source="../media/vs-2019/start-window-create-new-project.png" alt-text="2019'da 'Yeni proje oluştur' Visual Studio ekran görüntüsü.":::
 
    Yeni **proje oluştur penceresi** açılır ve birkaç proje şablonu *gösterilir.* Şablon, verilen proje türü için gereken temel dosyaları ve ayarları içerir.
 
@@ -309,7 +309,7 @@ Basit bir program oluşturma ve bu programa dalın.
 
 1. Ek **bilgiler penceresinde,** Hedef Çerçeve açılan menüsünde **.NET Core 3.1'in** görüntülendiğinden emin olup Oluştur'a **tıklayın.** 
 
-    :::image type="content" source="../media/vs-2019/create-project-additional-info.png" alt-text="Visual Studio 2019'daki 'Ek bilgiler' penceresinin ekran görüntüsü. Burada istediğiniz .NET Core Framework sürümünü seçersiniz.":::
+    :::image type="content" source="../media/vs-2019/create-project-additional-info.png" alt-text="Visual Studio 2019'da istediğiniz .NET Core Framework sürümünü seçerek 'Ek bilgiler' penceresinin ekran görüntüsü.":::
 
    Visual Studio projeyi oluşturur. Bu, "Merhaba Dünya!" değişmez dizesini görüntülemek için yöntemini çağıran basit bir <xref:System.Console.WriteLine?displayProperty=nameWithType> "Merhaba Dünya" uygulamasıdır konsol (program çıkışı) penceresinde.
 
@@ -327,7 +327,7 @@ Basit bir program oluşturma ve bu programa dalın.
 
    ![Hata Ayıklama ve Hata Ayıklama > Başlat menü öğesini gösteren ekran görüntüsü.](../media/overview-start-without-debugging.png)
 
-   Visual Studio uygulamayı derler ve şu iletiyle bir konsol penceresi **Merhaba Dünya!**. Artık çalışan bir uygulama var!
+   Visual Studio, uygulamayı derler ve şu iletiyle bir konsol penceresi **Merhaba Dünya!**. Artık çalışan bir uygulama var!
 
    !['Microsoft Visual Studio!' çıkışını gösteren Hata Ayıklama Konsolu penceresinin Merhaba Dünya görüntüsü ve 'Bu pencereyi kapatmak için herhangi bir tuşa basın'.](../media/vs-2019/overview-console-window.png)
 
@@ -369,7 +369,7 @@ Basit bir program oluşturma ve bu programa dalın.
 
    Yeni **proje oluştur penceresi** açılır ve birkaç proje şablonu *gösterilir.* Şablon, verilen proje türü için gereken temel dosyaları ve ayarları içerir.
 
-1. Şablon bulmak için arama kutusuna anahtar sözcükler yazabilirsiniz veya girebilirsiniz. Kullanılabilir şablonların listesi, girersiniz anahtar sözcüklere göre filtreler. Tüm diller açılan **listesinden C#** dilini  seçerek, Tüm  platformlar listesinden  Windows Ve Tüm  proje türleri listesinden Konsol'a bakarak şablon sonuçlarını daha **fazla filtreleyebilirsiniz.**
+1. Şablon bulmak için arama kutusuna anahtar sözcükler yazabilirsiniz veya girebilirsiniz. Kullanılabilir şablonların listesi, girersiniz anahtar sözcüklere göre filtreler. Tüm diller açılan **listesinden C#** dilini, Tüm platformlar  listesinden Windows ve  Konsol'dan  Tüm proje türleri listesinden C# seçerek şablon sonuçlarını daha **fazla filtreleyebilirsiniz.** 
 
     Konsol Uygulaması **şablonunu ve** ardından Sonraki'yi **seçin.**
 
@@ -572,13 +572,13 @@ Varsayılan renk temasını Visual Studio kullanıcı arabirimini kişiselleşti
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
-1. Menü çubuğunda, Seçenekler iletişim **kutusunu** > **açmak için** Araçlar Seçenekler'i seçin. 
+1. Menü çubuğunda,  > **Seçenekler** iletişim kutusunu açmak için Araçlar **Seçenekler** ' i seçin.
 
-1. Ortam Genel **seçenekleri** sayfasında Renk Teması seçimini Mavi veya Açık olarak değiştirerek >  Tamam'ı **seçin.**   
+1. **Ortam** > **genel** Seçenekler sayfasında, **renk teması** seçimini **mavi** veya **hafif** olarak değiştirin ve ardından **Tamam**' ı seçin.
 
-   IDE'nin tamamı için renk teması buna göre değişir. Aşağıdaki ekran görüntüsü mavi temayı gösterir:
+   IDE 'nin tamamına yönelik renk teması buna göre değişir. Aşağıdaki ekran görüntüsünde mavi tema gösterilmektedir:
 
-   ![Mavi temada Visual Studio gösteren ekran görüntüsü.](../media/vs-2022/blue-theme.png)
+   ![mavi temada Visual Studio gösteren ekran görüntüsü.](../media/vs-2022/blue-theme.png)
 ::: moniker-end
 
-IDE'nizi kişiselleştirmenin diğer yolları hakkında bilgi edinmek için [bkz. Visual Studio.](../../ide/personalizing-the-visual-studio-ide.md)
+IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bilgi edinmek için bkz. [kişiselleştirme Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
