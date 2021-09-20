@@ -1,36 +1,36 @@
 ---
-title: Abone portalında abonelik yöneticinize başvurun | Microsoft Docs
+title: Abone Portalı sayfasında abonelik yöneticinize | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 05/18/2021
 ms.topic: how-to
-description: Sorular veya sorunlarla ilgili yardım almak için abonelik yöneticinize nasıl başvurabileceğiniz hakkında bilgi edinin.
-ms.openlocfilehash: 343cf2eede966e83390c6f2689d0db840507f827
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+description: Sorular veya sorunlar hakkında yardım almak için abonelik yöneticinize nasıl başvurabilirsiniz?
+ms.openlocfilehash: acfd0a68cc9bbdf8d19c352747d8607bf5e6b6d6
+ms.sourcegitcommit: c2afe12aaf04456846613550b367cf86eb082f4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966274"
+ms.lasthandoff: 09/19/2021
+ms.locfileid: "128002336"
 ---
-# <a name="get-assistance-from-your-subscriptions-admin"></a>Abonelik yöneticinizden yardım alın
-Visual Studio aboneliğiniz iş veya okulunuz tarafından sağlanmışsa, size bir abonelik yöneticisi veya "yönetici" tarafından atanmamıştır.  Yöneticiler abonelikleri atayabilir veya kaldırabilir, oturum açma e-posta adreslerini değiştirebilir, yazılım indirebilme ve aboneliğiniz ile ilgili başka işlevler gerçekleştirmenize izin verebilir.
+# <a name="get-assistance-from-your-subscriptions-admin"></a>Abonelik yöneticinizden yardım edinin
+Abonelik Visual Studio iş veya okulunuz tarafından sağlanıyorsa, bunun size abonelik yöneticisi veya "yönetici" tarafından atanmış olma olasılığı vardır.  Yöneticiler abonelikleri atayıp kaldırabilir, oturum açma e-posta adreslerini değiştirebilir, yazılım indirme olanağına sahip olup olmadığınızı belirleyip aboneliğiniz ile ilgili diğer işlevleri gerçekleştirebilirsiniz.
 
-Birçok kuruluşun boyut ve karmaşıklığı göz önüne alındığında, yöneticinizin kim olduğunu farkında olmayabilirsiniz, bu sayede nereden yardım alınacağını bilmek zor olabilir.  Yönetici ile iletişim kurmaya yardımcı olması için abone portalına yeni bir özellik ekledik.   
+Birçok kuruluşun boyutu ve karmaşıklığı göz göre, yöneticinizin kim olduğunu bilmiyor olabilir, bu nedenle nereden yardım alacazı bilmek zor olabilir.  Yöneticinizle iletişim kurmanıza yardımcı olması için abone portalına yeni bir özellik ekledik.   
 
 ## <a name="how-to-contact-your-admin"></a>Yöneticinizle iletişim kurma
-1. Abone portalında şurada oturum açın: <https://my.visualstudio.com>
-2. **Abonelikler** sekmesini seçin. 
-3. Sağ üst köşedeki **yöneticime başvur** düğmesini seçin. 
+1. üzerinden abone portalında oturum açın <https://my.visualstudio.com>
+2. Abonelikler **sekmesini** seçin. 
+3. Sağ **üstte Yöneticime** başvur düğmesini seçin. 
    > [!div class="mx-imgBorder"]
-   > ![Yöneticime başvur](_img/contact-my-admin/contact-my-admin-button.png "Yöneticime Başvur düğmesini seçin, iletinizi girin ve Gönder ' i seçin.")
-4. Yöneticinizin iletisini girin.
-5. Yöneticinize gönderilen iletinin bir kopyasını almak isterseniz, **bir kopya gönder** onay kutusunu seçin. 
-6. Son olarak, **Gönder**' i seçin.
+   > ![Yöneticime ulaşın](_img/contact-my-admin/contact-my-admin-button.png "Yöneticime Başvur düğmesini seçin, iletinizi girin ve Gönder'i seçin.")
+4. Yöneticinizin iletiyi girin.
+5. Yöneticinize gönderilen iletinin bir kopyasını almak için Bana kopyalama gönder **onay kutusunu** seçin. 
+6. Son olarak **Gönder'i seçin.**
 
 > [!NOTE]
-> **Süper Yöneticiler:**  "Yöneticime başvur" isteklerinin gönderildiği e-posta adresini ayarlamak için, [sözleşme tercihlerinde](admin-preferences.md#contact-email-address)bu adresi belirtin.
+> **Süper yöneticiler:**  "Yöneticime Başvur" isteklerinin gönderildiği e-posta adresini ayarlamak için, bu adresi Sözleşme [Tercihleri içinde belirtin.](admin-preferences.md#contact-email-address)
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio abonelik desteği](https://my.visualstudio.com/gethelp)
@@ -42,9 +42,9 @@ Birçok kuruluşun boyut ve karmaşıklığı göz önüne alındığında, yön
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-daha önce yapmadıysanız, Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu avantajların etkinleştirilmesi önerilir:
+Henüz bunu yapmamışsanız, abonelik aboneliğinizin avantajlarından en iyi şekilde faydalanmanızı Visual Studio öneririz:
 - [Visual Studio IDE](vs-ide-benefit.md)
 - [Azure](vs-azure.md)
 - [Azure DevOps](vs-azure-devops.md)
 
-Bu avantajlar ve daha fazlası, adresinde bulunabilir https://my.visualstudio.com/benefits .
+Bu avantajlar ve daha fazlasını burada https://my.visualstudio.com/benefits bulunabilir.

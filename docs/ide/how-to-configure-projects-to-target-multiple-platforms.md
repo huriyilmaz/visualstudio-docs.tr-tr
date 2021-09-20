@@ -2,7 +2,7 @@
 title: Projeleri birden çok platformu hedefleyecek şekilde yapılandırma
 description: Visual Studio, bir çözümün birçok farklı CPU mimarilerini veya platformunu aynı anda hedeflemesini sağlamak için nasıl bir yol sağladığını öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 09/13/2021
 ms.technology: vs-ide-compile
 ms.topic: how-to
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 151097f9482edb69eb6486e31d1eb9a5cd0740e03586af656ebc1bb01cb83937
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 7b9afd184ac7a0859e8a4a9c68a17ba2737e8a71
+ms.sourcegitcommit: c2afe12aaf04456846613550b367cf86eb082f4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121387543"
+ms.lasthandoff: 09/19/2021
+ms.locfileid: "128002352"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Nasıl yapılır: birden çok platformu hedeflemek için projeleri yapılandırma
 
@@ -68,3 +68,4 @@ Ayarları yapılandırma ve platform ayarlarının birleşimine göre değiştir
 - [Nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md)
 - [Derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md)
 - [Visual Studio projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+- [Nasıl yapılır: aynı anda birden fazla yapılandırma derleme](how-to-build-multiple-configurations-simultaneously.md)

@@ -1,18 +1,18 @@
 ---
 title: Visual Studio aboneliklerde beyaz kaynak sürgüsü | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 5e5d3f1a-533d-42eb-960e-01bb6bc7ca16
 ms.date: 03/17/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen beyaz kaynak sürgüsü aboneliğini nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: def7e206fee75dcc76212df2163e41a8b1a96a83
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: b99f6924ec09a444d3f7b7a2d9b3a4fb6031d6f8
+ms.sourcegitcommit: c2afe12aaf04456846613550b367cf86eb082f4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126625023"
+ms.lasthandoff: 09/19/2021
+ms.locfileid: "128002363"
 ---
 # <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde beyaz kaynak sürgüsü
 
