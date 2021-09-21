@@ -14,11 +14,11 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 71ce14b60b3c935b06a4ea3fbdc1b7765ba3bc0b
-ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
+ms.sourcegitcommit: da19ed1e48259b219c61c4cb9e98b006004a5766
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "127890823"
+ms.lasthandoff: 09/21/2021
+ms.locfileid: "128052982"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>öğretici: Visual Studio Node.js ve React uygulama oluşturma
 
@@ -176,7 +176,7 @@ Bu öğretici Node.js 12.6.2 ile test edilmiştir.
 
     (4) *package.json,* npm tarafından yerel olarak yüklenmiş paketlerin paket bağımlılıklarını ve paket sürümlerini yönetmek için kullanılan bir dosyadır. Daha fazla bilgi için [bkz. Npm paketlerini yönetme.](../javascript/npm-package-management.md)
 
-    (5) Project *gibi* server.jsproje düğümü altında gösterir. *server.js* proje başlangıç dosyasıdır ve bu nedenle kalın olarak **gösterilir.** Proje içinde bir dosyaya sağ tıklar ve Başlangıç dosyası olarak ayarla'Node.js **başlangıç dosyasını ayarlayın.**
+    (5) Project gibi *server.js* proje düğümü altında gösterir. *server.js* proje başlangıç dosyasıdır ve bu nedenle kalın olarak **gösterilir.** Proje içinde bir dosyaya sağ tıklar ve Başlangıç dosyası olarak ayarla'Node.js **başlangıç dosyasını ayarlayın.**
 ::: moniker-end
 
 ## <a name="add-npm-packages"></a>npm paketleri ekleme
@@ -215,7 +215,7 @@ Paket yüklemek için:
 
 Kullanıcı arabirimini kullanarak paketlerin geri kalanını tek tek aramak ve eklemek yerine, gerekli paket kodunu *package.json içine yapıştırabilirsiniz.*
     
-1. bu **Çözüm Gezgini,** **package.json'ı** Visual Studio açın. Dosyanın `dependencies` sonuna aşağıdaki bölümü ekleyin:
+1. bu **Çözüm Gezgini,** **package.json'u** Visual Studio açın. Dosyanın `dependencies` sonuna aşağıdaki bölümü ekleyin:
 
     ```json
     "dependencies": {
@@ -409,7 +409,7 @@ Ardından, webpack yapılandırma kodunu uygulamasına *webpack-config.js.* JSX'
 
 1. *dist klasörünü ve* ardından Klasör **Seç'i seçin.**
 
-    Visual Studio,app-bundle.jsve *app-bundle.js.map*  içeren *dist* klasörünü projeye ekler.
+    Visual Studio,app-bundle.jsve *app-bundle.js.map* içeren  *dist* klasörünü projeye ekler.
 
 1. JavaScript *app-bundle.js* görmek içinapp-bundle.js'yi açın.
 
@@ -435,7 +435,7 @@ Visual Studio 2019 Visual Studio sürümleri için derleme betiği gerekir. Önc
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-1. Hata Ayıklama **araç çubuğunda,** hata ayıklama hedefi **olarak Web Sunucusu (Microsoft Edge)** veya **Web Sunucusu (Google Chrome)** seçin.
+1. Hata Ayıklama **araç çubuğunda,** hata ayıklama hedefi **olarak Web Sunucusu (Microsoft Edge)** veya **Web Sunucusu (Google Chrome)** öğesini seçin.
 
     ::: moniker range=">=vs-2022"
     ![Hata ayıklama hedefi olarak Microsoft Edge seçmeyi gösteren ekran görüntüsü.](media/vs-2022/tutorial-nodejs-react-debug-target.png)
@@ -482,14 +482,14 @@ Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir.
 
 1. Tarayıcıyı ve konsol pencerelerini kapatın.
 
-## <a name="set-and-hit-a-breakpoint-in-the-client-side-react-code"></a>İstemci tarafında kesme noktası ayarlama ve React isabet
+## <a name="set-and-hit-a-breakpoint-in-the-client-side-react-code"></a>İstemci tarafı kodda kesme noktası ayarlama ve React isabet
 
 Önceki bölümde hata ayıklayıcıyı sunucu tarafı koda Node.js. hata ayıklayıcısını istemci tarafı koda eklemek React kesme noktalarına isabet etmek için, hata ayıklayıcıyı doğru işleme eklemeniz gerekir. Burada bir tarayıcıyı etkinleştirmenin ve hata ayıklama işlemi eklemenin bir yolu vardır.
 
 ### <a name="enable-the-browser-for-debugging"></a>Hata ayıklama için tarayıcıyı etkinleştirme
 
 ::: moniker range=">=vs-2019"
-Microsoft Edge veya Google Chrome kullanabilirsiniz. Hedef tarayıcı için tüm pencereleri kapatın. Daha Microsoft Edge chrome'un tüm örneklerini de kapatın. İki tarayıcı da kod Chromium paylaştığı için, her iki tarayıcının da kapatılması en iyi sonuçları verir.
+Microsoft Edge veya Google Chrome kullanabilirsiniz. Hedef tarayıcı için tüm pencereleri kapatın. Daha Microsoft Edge chrome'un tüm örneklerini de kapatın. Her iki tarayıcı da kod Chromium paylaştığı için, her iki tarayıcının da kapatılması en iyi sonuçları verir.
 
 Diğer tarayıcı örnekleri, hata ayıklama etkinleştirildiğinde tarayıcının açılmasını önleyebilirsiniz. Tarayıcı uzantıları tam hata ayıklama modunu önleyebildi. Çalışan tüm Chrome örneklerini bulmak ve sona ererken Görev Yöneticisi'ni kullanabilirsiniz.
 
@@ -525,7 +525,7 @@ Bu senaryo için Chrome kullanın.
 
 2. Hata ayıklama etkinleştirildiğinde tarayıcınızı başlatabilirsiniz.
 
-    Başlat **düğmesinden** Çalıştır Windows **(sağ** tıklayın ve Çalıştır'ı **seçin)** ve aşağıdaki komutu girin:
+    Başlat **düğmesinin** Çalıştır Windows **açın** (sağ tıklayın ve **Çalıştır'ı seçin)** ve aşağıdaki komutu girin:
 
     `chrome.exe --remote-debugging-port=9222`
 ::: moniker-end
@@ -534,7 +534,7 @@ Tarayıcı hata ayıklama etkin olarak başlar. Uygulama henüz çalışmamışt
 
 ### <a name="attach-the-debugger-to-client-side-script"></a>Hata ayıklayıcıyı istemci tarafı betiğine ekleme
 
-1. Visual Studio düzenleyicisinde,app-bundle.js *veya app.tsx* kaynak kodunda bir kesme noktası ayarlayın. 
+1. Visual Studio düzenleyicisinde,app-bundle.js *veya app.tsx kaynak kodunda bir kesme noktası* ayarlayın. 
 
     - Daha *app-bundle.js* için işlevinde kesme noktası `render()` ayarlayın. İşleviapp-bundle.jsbulmak `render()` *için* **Ctrl** F tuşlarına basın veya Bul ve Değiştir Hızlı Bul'ı düzenle'yi seçin ve +  arama   >    >  alanına *işleme* girin.
 
@@ -554,7 +554,7 @@ Tarayıcı hata ayıklama etkin olarak başlar. Uygulama henüz çalışmamışt
       ![Uygulama nokta t s x'te işleme işlevinin dönüş deyiminde ayarlanmış bir kesme noktası gösteren ekran görüntüsü.](media/tutorial-nodejs-react-set-breakpoint-in-tsx-file.png)
       ::: moniker-end
 
-      *app.tsx'te* kesme noktası ayarsanız, aşağıdaki *koduwebpack-config.js* için de güncelleştirme yapın ve değişikliklerinizi kaydedin.
+      *app.tsx'te* kesme noktası ayarlanırsa, aşağıdaki *koduwebpack-config.js* ve değişikliklerinizi kaydetmek için de bu kesme noktası güncelleştirildi.
 
       Bu kodu değiştirin:
 
@@ -573,7 +573,7 @@ Tarayıcı hata ayıklama etkin olarak başlar. Uygulama henüz çalışmamışt
       },
       ```
 
-      Bu yalnızca geliştirme ayarı, hata ayıklamayı Visual Studio. Varsayılan olarak, kaynak eşleme dosyasındaki webpack başvuruları, *webpack:///* *app.tsx* dosyasını bulmasını Visual Studio ön eklerini içerir. Bu ayar, uygulamayı oluşturulurken kaynak eşleme dosyasında oluşturulan *başvuruları (app-bundle.js.map)* geçersiz kılar. Özel olarak, bu ayar kaynak dosyanın başvurus webpack:///./app.tsx *./app.tsx* olarak değiştirir ve bu da hata ayıklamayı etkinleştirir. 
+      Bu yalnızca geliştirme ayarı, hata ayıklamayı Visual Studio. Varsayılan olarak, kaynak eşleme dosyasındaki webpack başvuruları, *webpack:///* *app.tsx* dosyasını bulmasını Visual Studio ön eklerini içerir. Bu ayar, uygulamayı oluşturulurken kaynak eşleme dosyasında oluşturulan *başvuruları (app-bundle.js.map)* geçersiz kılar. Özel olarak, bu ayar kaynak dosyanın başvurus webpack:///./app.tsx hata *ayıklamayı* sağlayan *./app.tsx* olarak değiştirir.
 
 1. Visual Studio'de hata ayıklama hedefi olarak hedef tarayıcınızı seçin ve **ardından Ctrl** F5 tuşlarına basın veya Hata Ayıklama Olmadan Başlat'ı seçerek uygulamayı +    >  tarayıcıda çalıştırın.
 
@@ -591,10 +591,10 @@ Tarayıcı hata ayıklama etkin olarak başlar. Uygulama henüz çalışmamışt
 1. İşleme **Ekle iletişim** kutusunda, ekleyebilirsiniz tarayıcı örneklerinin filtrelenmiş bir listesini elde edin.
 
     ::: moniker range=">=vs-2019"
-    Hedef tarayıcınız, **JavaScript (Chrome)** veya **JavaScript (Microsoft Edge - Chromium) için doğru hata ayıklayıcının,** Ekle alanında **göründüğünden emin** olun. Sonuçları *filtrelemek* *için* filtre kutusuna chrome veya edge yazın.
+    Hedef tarayıcınız, **JavaScript (Chrome)** veya **JavaScript (Microsoft Edge - Chromium) için** doğru hata ayıklayıcının, Ekle alanında **göründüğünden emin** olun. Sonuçları *filtrelemek* *için* filtre kutusuna chrome veya edge yazın.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    2017 Visual Studio de, **Ekle alanında Webkit** **kodu'seçin.** Arama **sonuçlarını** filtrelemek için filtre kutusuna chrome yazın.
+    2017'Visual Studio 2017'de, **Ekle alanında Webkit** **kodunu** seçin. Arama **sonuçlarını** filtrelemek için filtre kutusuna chrome yazın.
     ::: moniker-end
 
 1. Bu örnekte doğru konak bağlantı noktası **localhost olan tarayıcı** işlemini seçin. Doğru işlemi seçmenize yardımcı olmak için Başlık alanında  **1337** veya **localhost** bağlantı noktası da görünebilir.
@@ -609,7 +609,7 @@ Tarayıcı hata ayıklama etkin olarak başlar. Uygulama henüz çalışmamışt
     ::: moniker range="vs-2017"
     ![İşleme ekle iletişim kutusunu gösteren ekran görüntüsü.](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
 
-    Hata ayıklayıcı doğru şekilde ekleniyorsa, DOM Gezgini ve JavaScript Konsolu Visual Studio. Bu hata ayıklama araçları, chrome için Geliştirici Araçları F12 Araçları'Microsoft Edge.
+    Hata ayıklayıcı doğru şekilde ekleniyorsa, DOM Gezgini ve JavaScript Konsolu Visual Studio. Bu hata ayıklama araçları Chrome Geliştirici Araçları ve F12 Tools for Microsoft Edge.
     ::: moniker-end
 
     > [!TIP]
@@ -627,9 +627,9 @@ Tarayıcı hata ayıklama etkin olarak başlar. Uygulama henüz çalışmamışt
 
       - Kaynak eşleme dosyanız için *./app.tsx* başvurusu olduğundan ve *webpack:///./app.tsx'ye* başvuru olduğundan emin olun. Bu, Visual Studio hata ayıklayıcısının *app.tsx dosyasını bulmasını önler.*
 
-     Veya app.tsx içinde deyimini kullanmayı deneyin veya bunun yerine Chrome Geliştirici Araçları veya `debugger;` F12 Tools'ta kesme Microsoft Edge ayarlayın.
+     Veya app.tsx içinde deyimini kullanmayı deneyin veya Bunun yerine Chrome Geliştirici Araçları veya `debugger;` F12 Tools'ta kesme Microsoft Edge ayarlayın.
 
-   - app-bundle.js'de koda ara *ve* *app-bundle.js.map kaynak eşleme dosyasını kaldırın.*
+   - app-bundle.js'de koda *gireapp-bundle.js,* *app-bundle.js.map kaynak eşleme dosyasını kaldırın.*
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

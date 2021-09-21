@@ -1,18 +1,18 @@
 ---
-title: Yönetim Visual Studio portalında abonelikleri | Microsoft Docs
+title: Yönetim Visual Studio sayfasındaki abonelikleri | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 97ac8e4d-7a03-42f8-98cb-15bcaa90ef65
 ms.date: 03/21/2021
 ms.topic: how-to
 description: Yöneticilerin abonelik atamalarını nasıl düzenleyemezlerini öğrenin.
-ms.openlocfilehash: b1779b80cc295e680ff1856181be42a6390fe25b
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: a545a276714c7fb21d9adc966b2ef0c9e250250c
+ms.sourcegitcommit: da19ed1e48259b219c61c4cb9e98b006004a5766
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966279"
+ms.lasthandoff: 09/21/2021
+ms.locfileid: "128052837"
 ---
 # <a name="edit-visual-studio-subscription-assignments"></a>Abonelik Visual Studio düzenleme
 Abonelik yöneticisi olarak, kuruluş içindeki kişilere atanan aboneliklerde değişiklik yapabilirsiniz.  Bu makalede, ne tür değişiklikler yaptığınız ele alınarak gerekli adımlar velanmıştır.
@@ -43,13 +43,13 @@ Toplu düzenleme kullanarak birden çok aboneyi düzenleme hakkında bilgi edinm
 
 1. Aynı anda birden çok aboneyi düzenlemek için Aboneler sekmesine gidin. Üstteki şeritte Toplu **Düzenle'ye tıklayın.**
 
-2. Toplu düzenleme, abone Excel düzenlemek için bir şablon kullanır. Toplu Düzenleme kutusunda Bu Excel'i **dışarı aktar'a** tıklar ve tüm bilgileri dahil olmak üzere geçerli abone listesini indirin.
+2. Toplu düzenleme, abone Excel düzenlemek için bir şablon kullanır. Toplu Düzenleme kutusunda Bu **Excel'i dışarı aktar'a** tıklar ve tüm bilgileri dahil olmak üzere geçerli abone listesini indirin.
    > [!div class="mx-imgBorder"]
    > ![Lisansı Düzenleme - Toplu Düzenleme Listesini Dışarı Aktarma](_img/edit-license/edit-license-bulk-edit-export.png "Geçerli aboneliklerin listesini oluşturmak için Bu Excel'i dışarı aktar'a tıklayın.")
 
 3. Ardından dosyayı kolayca bulmak ve karşıya yüklemeden önce gerekli değişiklikleri yapmak için dosyayı yerel olarak kaydedin. 
 
-4. Visual Studio Abonelikler Yönetim portalına geri dönüp Toplu Düzenle iletişim kutusunda Gözat'a **tıklayın.** Kaydedilen Excel ve Tamam'a **tıklayın.** Karşıya yükleme ilerlemesini ekranda görürsünüz.
+4. Visual Studio Abonelikler Yönetim portalına geri dönüp Toplu Düzenle iletişim kutusunda Gözat'a **tıklayın.** Kaydedtikleri Excel dosyasını seçin ve Tamam'a **tıklayın.** Karşıya yükleme ilerlemesini ekranda görürsünüz.
    > [!div class="mx-imgBorder"]
    > ![Lisansı Düzenleme - Toplu Dosya Upload](_img/edit-license/edit-license-bulk-file-upload1.png "Tamamlanmış dosyanın bulunduğu konuma Excel seçin ve Tamam'a tıklayın.")
 

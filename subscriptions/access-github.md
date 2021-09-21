@@ -1,18 +1,18 @@
 ---
 title: GitHub Enterprise abonelikler Visual Studio | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 2249b32a-46d7-4e29-b543-4769c71ceda6
 ms.date: 03/19/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerinin bir parçası olarak GitHub Enterprise erişme hakkında bilgi edinin
-ms.openlocfilehash: 41cf3779f5572ecd63d11907eb80837e05e176c8
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: c4dfd161aa57653c1892cb38b174e7488cb14167
+ms.sourcegitcommit: da19ed1e48259b219c61c4cb9e98b006004a5766
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966259"
+ms.lasthandoff: 09/21/2021
+ms.locfileid: "128052846"
 ---
 # <a name="visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise abonelikleri Visual Studio 
 
