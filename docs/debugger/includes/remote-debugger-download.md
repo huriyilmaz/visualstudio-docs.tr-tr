@@ -9,11 +9,11 @@ ms.date: 09/10/2021
 ms.author: mikejo
 ms.custom: include file
 ms.openlocfilehash: fe24fbc1a4b9a5ae4cf78549b614a70db3aa1139
-ms.sourcegitcommit: c2afe12aaf04456846613550b367cf86eb082f4b
+ms.sourcegitcommit: f07b737f43a29e30d040cc5793437f462fedb595
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/20/2021
-ms.locfileid: "128006632"
+ms.locfileid: "128036948"
 ---
 Hata ayıklamak istediğiniz uzak cihazda veya sunucuda, Visual Studio makinesi yerine aşağıdaki tabloda yer alan bağlantılardan uzak araçların doğru sürümünü indirip yükleyin.
 
