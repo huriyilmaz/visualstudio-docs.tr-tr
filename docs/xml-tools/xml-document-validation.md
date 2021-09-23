@@ -2,7 +2,7 @@
 title: XML düzenleyicisinde XML belgesi doğrulaması
 description: XML düzenleyicisinde XML belge doğrulaması hakkında bilgi edinin ve XML 1,0 sözdizimini nasıl denetleyeceğinizi ve siz yazarken veri doğrulama işlemini nasıl gerçekleştireceğinizi öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 09/16/2021
 ms.topic: conceptual
 ms.assetid: abb353bd-6c4a-4978-b03b-a8c245bbfb55
 author: TerryGLee
@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-xml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 19585e36094868cedad279f0f7b4d982647da1d7
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 1dc2fcbbac33fe19cd50b44675609f7121c1be69
+ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122091831"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128307057"
 ---
 # <a name="xml-document-validation"></a>XML belgesini doğrulama
 
@@ -45,6 +45,11 @@ XSLT dosyasını düzenlediğinizde, şema önbelleğinde bulunan *XSLT. xsd* do
 
 ## <a name="xml-schema-xsd-files"></a>XML şeması (XSD) dosyaları
 Bir XML şema dosyası düzenlenirken, şema önbelleğinde bulunan *XSDSchema. xsd* dosyası doğrulama için kullanılır. Doğrulama hataları mavi dalgalı alt çizgiler olarak gösterilir. Tüm derleme hataları da kırmızı dalgalı alt çizgilerle gösterilir.
+
+## <a name="entity-reference-limit"></a>Varlık başvuru sınırı
+DTD işleme, varsayılan olarak 10.000 başvuru olarak varlık başvuruları sayısını kısıtlar ve çoğu XML şemasına uyum sağlayabilir.  Visual Studio içindeki hata iletisi "dosya adı için varlık başvuruları sınırı" değerini okuyabilir.
+
+bir XML belgesini işlerken bu kısıtlamayla karşılaşırsanız ve doğrulayıcısı daha büyük bir şemaya genişletmek istiyorsanız, bu, `MaxNumberOfDtdEntityReferences` Visual Studio kayıt defteri anahtarı ile değiştirilebilir. bu değişikliği yapma hakkında daha fazla bilgi için bkz. [Visual Studio örneği için kayıt defterini düzenlemeyle](../install/tools-for-managing-visual-studio-instances.md#editing-the-registry-for-a-visual-studio-instance) . Bunun, bu makinede Kullanıcı tarafından açılan tüm XML belgeleri için geçerli olduğunu lütfen unutmayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -7,46 +7,46 @@ author: TerryGLee
 manager: jmartens
 ms.topic: include
 ms.openlocfilehash: e045d40958e339d497cea8509110618769649182
-ms.sourcegitcommit: 559c662b2d60048300b76ea6ed3defaa2a259492
+ms.sourcegitcommit: 022ac348337f77c899996ac81060a969ebfb64bb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "127833356"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "128302504"
 ---
 ::: moniker range=">=vs-2019"
 
-## <a name="add-git-source-control"></a>Git kaynak denetimi ekleme
+## <a name="add-git-source-control"></a>Git kaynak denetimi Ekle
 
-Artık bir uygulama oluşturduğunuza göre, uygulamayı git deposuna eklemek iyi olabilir. Size yardımcı olabiliriz. Visual Studio doğrudan IDE'den kullanabileceğiniz Git araçlarıyla bu işlemi kolaylaştırır.
+Artık bir uygulama oluşturduğunuza göre, bunu bir git deposuna eklemek isteyebilirsiniz. Size yardımcı olabiliriz. Visual Studio, doğrudan ıde 'den kullanabileceğiniz Git araçlarından daha kolay bir işlem yapar.
 
 > [!TIP]
-> Git en yaygın olarak kullanılan modern sürüm denetimi sistemidir, bu nedenle profesyonel bir geliştirici olun veya kod kodla ilgili bilgi edinseniz de Git çok yararlı olabilir. Git'i yeni başladıysanız, [https://git-scm.com/](https://git-scm.com/) web sitesi başlamak için iyi bir yerdir. Burada bilgi sayfaları, popüler bir çevrimiçi kitap ve Git Temel Bilgileri videoları bulabilirsiniz.
+> Git, en yaygın olarak kullanılan modern sürüm denetim sistemidir. bu nedenle, profesyonel bir geliştirici olun veya nasıl kod kullanacağınızı öğreniyor olun, git çok faydalı olabilir. Git 'e yeni başladıysanız, [https://git-scm.com/](https://git-scm.com/) Web sitesi başlamak için iyi bir yerdir. Buradan, popüler bir çevrimiçi kitap ve git temel bilgileri videoları bulabilirsiniz.
 
-Kodunuzu Git ile ilişkilendirmek için, kodunuzun bulunduğu yeni bir Git deposu oluşturarak başlarsiniz. Aşağıdaki adımları uygulayın:
+Kodunuzu git ile ilişkilendirmek için, kodunuzun bulunduğu yeni bir git deposu oluşturarak başlayın. Aşağıdaki adımları uygulayın:
 
-1. Dosyanın sağ alt köşesindeki durum çubuğunda Kaynak Denetimine Visual Studio'yi ve ardından **Git'i seçin.** 
+1. Visual Studio sağ alt köşesindeki durum çubuğunda **kaynak denetimine ekle**' yi seçin ve **Git**' i seçin.
 
-    :::image type="content" source="../media/vs-2022/git-add-source-control.png" alt-text="Çözüm Gezgini bölmesinin altındaki Git kaynak denetimi düğmelerinin ekran görüntüsü, Kaynak Denetimine Ekle düğmesi vurgulanmış.":::
+    :::image type="content" source="../media/vs-2022/git-add-source-control.png" alt-text="Çözüm Gezgini bölmesinin altındaki git kaynak denetimi düğmelerinin ekran görüntüsü, kaynak denetimi Ekle düğmesi vurgulanır.":::
 
-1. Git **deposu oluştur iletişim kutusunda,** git deposunda GitHub.
+1. **Git deposu oluştur** iletişim kutusunda GitHub ' de oturum açın.
 
-    :::image type="content" source="../media/vs-2022/git-create-repo.png" alt-text="Git Deposunda Oturum Aç iletişim penceresinin ekran görüntüsü. Bu pencerede oturum GitHub.":::
+    :::image type="content" source="../media/vs-2022/git-create-repo.png" alt-text="GitHub 'de oturum açmak için bir git deposu oluştur iletişim penceresinin ekran görüntüsü.":::
 
-    Depo adı, klasör konumunuz temel alarak otomatik olarak tamamlar. Varsayılan olarak, yeni deponuz özeldir, yani depoya yalnızca siz erişesiniz.
+    Depo adı, klasör konumunuza göre otomatik olarak doldurulur. Varsayılan olarak, yeni deponuz özeldir. Bu, kendisine erişebilen tek bir tane olduğu anlamına gelir.
 
     > [!TIP]
-    > Deponun genel veya özel olup olmadığı, kodunuzun uzaktan yedeklerinin depolanmış bir depoda güvenli bir şekilde depolanmış GitHub. Bir ekiple çalışmıyorsanız bile, uzak depo kodunuzu herhangi bir bilgisayardan size sağlar.
+    > Deponuzda genel veya özel olup olmadığı, kodunuzun güvenli bir şekilde bir uzak yedeğinin GitHub. Bir ekip ile çalışmasanız bile, uzak bir depo, kodunuzun herhangi bir bilgisayardan sizin için kullanılabilir olmasını sağlar.
 
-1. Oluştur ve **It'i seçin.**
+1. **Oluştur ve Gönder '** i seçin.
 
-    Depoyu oluşturdukta durum çubuğunda durum ayrıntılarını bulabilirsiniz.
+    Deponuzu oluşturduktan sonra durum çubuğunda durum ayrıntılarını görürsünüz.
 
-    :::image type="content" source="../media/vs-2022/git-new-private-repo-status-details.png" alt-text="Visual Studio'da, Çözüm Gezgini bölmesinin altındaki Visual Studio.":::
+    :::image type="content" source="../media/vs-2022/git-new-private-repo-status-details.png" alt-text="Visual Studio Çözüm Gezgini bölmesinin altında bulunan depo durum çubuğunun ekran görüntüsü.":::
 
-    Okları olan ilk simge, geçerli dalda kaç tane giden/gelen işleme olduğunu gösterir. Bu simgeyi kullanarak tüm gelen işlemeleri çekebilir veya giden işlemeleri gönderebilirsiniz. İlk olarak bu işlemeleri görüntülemeyi de seçebilirsiniz. Bunu yapmak için simgesini seçin ve ardından **Giden/Gelen'i Görüntüle'yi seçin.**
+    Oklara sahip ilk simge, geçerli dalınızda kaç tane giden/gelen işleme olduğunu gösterir. Herhangi bir gelen işlemeyi çekmek veya giden tüm işlemeleri göndermek için bu simgeyi kullanabilirsiniz. Bu yürütmeleri önce da görüntülemeyi seçebilirsiniz. Bunu yapmak için, simgeyi seçin ve ardından **giden/gelen görüntüle**' yi seçin.
 
-    Kalemle birlikte ikinci simge, kodunda yapılan ve işlanmamış değişikliklerin sayısını gösterir. Bu değişiklikleri Git Değişiklikleri penceresinde görüntülemek için bu **simgeyi seçin.**
+    Kalemle ikinci simge, kodunuzda kaydedilmemiş değişiklik sayısını gösterir. **Git değişiklikleri** penceresinde bu değişiklikleri görüntülemek için bu simgeyi seçebilirsiniz.
 
-Git'i uygulamanıza nasıl kullanabileceğiniz hakkında daha fazla bilgi edinmek için Visual Studio [belgelerine bakın.](../../version-control/index.yml)
+Git 'i uygulamanızla birlikte kullanma hakkında daha fazla bilgi için, [Visual Studio sürüm denetimi belgelerine](../../version-control/index.yml)bakın.
 
 ::: moniker-end

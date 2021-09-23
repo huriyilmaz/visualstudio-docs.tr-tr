@@ -1,32 +1,32 @@
 ---
 title: Microsoft 365 aboneliklerde kurumsal Visual Studio uygulamaları | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 03/21/2021
 ms.topic: how-to
 description: Kurumsal uygulamalar hakkında bilgi Microsoft 365 ve yükleme
-ms.openlocfilehash: e1d629aae2d3c9e5d906a5593c287bd0b3250446
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 0ec77f2a5a03e41d9a44bc8cfa7676e289291d2f
+ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725483"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128307114"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Microsoft 365 aboneliklerde kurumsal Visual Studio uygulamaları kullanma
-Microsoft 365 uygulamalar (eski adı Office 365 Pro Plus), seçili Visual Studio kullanılabilir. 
+Microsoft 365 uygulamalar (eski adı Office 365 Pro Plus) seçili Visual Studio kullanılabilir. 
 
-En iyi çalışmanızı oluşturun. Her zaman güncelleştirilen uygulamalarla her yerde çalışma. Microsoft 365 uygulamaları Word, Excel, PowerPoint, OneNote, Outlook, Publisher ve Erişim (Publisher yalnızca PC'de kullanılabilir) gibi premium uygulamalarla birlikte gelen bir aboneliktir. Uygulamalar bilgisayarlar, Mac'ler, iPad'ler, iPhone'lar, Android tabletler ve Android telefonlar dahil olmak üzere birden çok cihaza yüklenebilirsiniz. Abonelikle, uygulamaların en son sürümlerini alır ve güncelleştirmeler olduğunda otomatik olarak alırsınız.
+En iyi çalışmanızı oluşturun. Her zaman güncelleştirilen uygulamalarla her yerde çalışma. Microsoft 365 uygulamaları Word, Excel, PowerPoint, OneNote, Outlook, Publisher ve Access (Publisher ve Access yalnızca PC'de kullanılabilir) gibi premium uygulamalarla birlikte gelen bir aboneliktir. Uygulamalar bilgisayarlar, Mac'ler, iPad'ler, iPhone'lar, Android tabletler ve Android telefonlar dahil olmak üzere birden çok cihaza yüklenebilirsiniz. Abonelikle, uygulamaların en son sürümlerini alır ve güncelleştirmeler olduğunda otomatik olarak alırsınız.
 
 > [!NOTE]
-> Şirket aboneliğinize Visual Studio, kurumsal kullanım için Microsoft 365 uygulamaları kullanma lisansına sahip olur.  
+> Şirket aboneliğinize Visual Studio, kurumsal kullanım için Microsoft 365 uygulamaları kullanma lisansınız vardır.  
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi basittir.  Aboneliğinizi etkinleştirmek ve uygulamalarınızı yüklemek için şu adımları izleyin:
 
 1. Visual Studio aboneliğinde oturum açma[https://my.visualstudio.com](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-1. Kurumsal Microsoft 365 için uygulama kutucuğunu bulun ve **Etkinleştir'i seçin.**
+1. Kurumsal kutucuk için Microsoft 365 uygulama kutucuğunu bulun ve **Etkinleştir'i seçin.**
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 kutucuğu için uygulamaları kullanma](_img/microsoft-365-apps-for-enterprise/tile-activate.png "Aboneliğinizi kullanmak için 'Etkinleştir'i seçin.")
 
@@ -40,13 +40,13 @@ Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi
 
 1. Bundan sonra, robot olmadığını kanıtlamak için bir kod sağlamanız istensin.  Kodun size kısa mesaj olarak göndermesini sebilirsiniz.  Kodu girin ve Sonraki'yi **seçin.** 
    > [!div class="mx-imgBorder"]
-   > ![Microsoft 365 için uygulamalar, robot olmadığınız kanıtlıyor](_img/microsoft-365-apps-for-enterprise/prove-youre-not-a-robot.png "Bir kod isteğide ve devam etmek için kodu girin")
+   > ![Microsoft 365 uygulamalar robot olmadığını kanıtlar](_img/microsoft-365-apps-for-enterprise/prove-youre-not-a-robot.png "Bir kod isteğide ve devam etmek için kodu girin")
 
-1. Hesabınız başarıyla oluşturulduktan sonra, Office portalının oturum açma sayfasını ve yeni kullanıcı kimliğinizi görüntüleyen bir iletişim kutusu görüntülenir.  Bu bilgileri daha sonra kullanmak üzere not edin ve kuruluma **başla'ya** seçerek Microsoft 365 başlatın.
+1. Hesabınız başarıyla oluşturulduktan sonra, Office portalının oturum açma sayfasını ve yeni kullanıcı kimliğinizi görüntüleyen bir iletişim kutusu görüntülenir.  Daha sonra kullanmak üzere bu bilgileri not edin ve kuruluma **başla'ya** seçerek uygulamalarınızı Microsoft 365 olun.
    > [!div class="mx-imgBorder"]
-   > ![Microsoft 365 uygulamaları kullanma Bu bilgileri kaydedin](_img/microsoft-365-apps-for-enterprise/save-this-info.png "Yeni kullanıcı kimliğinizi ve Office portalını kaydedin.")
+   > ![Microsoft 365 uygulamaları kullanma Bu bilgileri kaydedin](_img/microsoft-365-apps-for-enterprise/save-this-info.png "Yeni kullanıcı kimliğinizi ve Office portal bağlantısını kaydedin.")
 
-1. Office portalında otomatik olarak oturum açmış olur ve artık uygulamalarınızı yüklemeye hazırsınız.  Başlamanız **için** Yükle düğmesini seçin.
+1. Portalda otomatik olarak oturum Office ve artık uygulamalarınızı yüklemeye hazırsınız.  Başlamanız **için** Yükle düğmesini seçin.
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 için uygulama yükleme](_img/microsoft-365-apps-for-enterprise/install-your-office-apps.png "Uygulamalarınızı yüklemek için 'yükle' düğmesini seçin.")
 1. Seçilen uygulamalarınızı yüklemek için istemleri izleyin.  
@@ -56,7 +56,7 @@ Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi
 | Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, Perakende| Kullanılabilir       |  Yes          |
-| Visual Studio Enterprise aboneliği GitHub Enterprise  | VL | Kullanılabilir       |  Yes          |
+| Visual Studio Enterprise ile abonelik GitHub Enterprise  | VL | Kullanılabilir       |  Yes          |
 | Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Kullanılamaz       |  Yok          |
 | Visual Studio Professional (Standart) | VL, Azure, Perakende                                       | Kullanılamaz                                                            |  Yok          |
 | Visual Studio Professional ile abonelik GitHub Enterprise | VL | Kullanılamaz         |  Yok          |
