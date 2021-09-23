@@ -2,7 +2,7 @@
 title: "Visual Studio docs: ağustos 2021 ' deki yenilikler"
 titleSuffix: ''
 description: ağustos 2021 için Visual Studio docs yenilikleri.
-ms.date: 09/02/2021
+ms.date: 09/16/2021
 helpviewer_keywords:
 - Visual Studio, what's new, docs
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.prod: visual-studio-windows
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: a34cfe28c3a72414dd120f78505d89b4d7af2b69
-ms.sourcegitcommit: ae1cd196852ce82fe1a80b09947998e07a8336b8
+ms.openlocfilehash: 4ec48a0075e03a430bad1d7f280f11a476aaea5f
+ms.sourcegitcommit: 022ac348337f77c899996ac81060a969ebfb64bb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2021
-ms.locfileid: "123483733"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "128133724"
 ---
 # <a name="visual-studio-docs-whats-new-for-august-2021"></a>Visual Studio docs: ağustos 2021 ' deki yenilikler
 
@@ -66,6 +66,10 @@ ağustos 2021 ' de Visual Studio docs ' daki yenilikler ' e hoş geldiniz. Bu ma
 **Güncelleştirilmiş makaleler**
 - [Nasıl yapılır: başvuru Yöneticisi](./how-to-add-or-remove-references-by-using-the-reference-manager.md) -güncelleştirme ' > başvuru Ekle ' bölümünü kullanarak başvuru ekleme veya kaldırma
 - [Visual Studio 2022 ' deki yenilikler (önizleme)](./whats-new-visual-studio-2022.md) -Visual Studio 2022 Preview 3 ' teki yenilikleri güncelleştirme
+- [6. Adım: git Ile çalışma](../python/tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md) -Python öğreticisine güncelleştirilmiş git kaynak denetimi bilgilerini ekleme
+- [öğretici: Visual Studio (bölüm 1/2) basit bir C# konsol uygulaması oluşturma](../get-started/csharp/tutorial-console.md) -CSharp konsol öğreticisine Git kaynak denetimi bilgilerini ekleme
+- [öğretici: Visual Studio Visual Basic ile çalışmaya başlama](../get-started/visual-basic/tutorial-console.md) -VB konsol öğreticisine Git kaynak denetimi bilgilerini ekleme
+- [C++ ' da konsol Hesaplayıcı oluşturma](/cpp/get-started/tutorial-console-cpp) -C++ konsol Hesaplayıcı öğreticisine git bilgileri ekleme
 
 ## <a name="install"></a>Yükleme
 
@@ -84,7 +88,7 @@ ağustos 2021 ' de Visual Studio docs ' daki yenilikler ' e hoş geldiniz. Bu ma
 
 **Güncelleştirilmiş makaleler**
 - [Visual Studio # için JavaScript ve TypeScript arama sonuçlarında sayfa başlığı görüntülendi. Markasını ekleyin. < 60 karakter.](../javascript/index.yml) -Dizin sayfasını farklı bağlantılarla güncelleştirme
-  
+
 ## <a name="test"></a>Test etme
 
 **Yeni makaleler**
@@ -167,24 +171,24 @@ aşağıdaki bölümler, Visual Studio docs 'taki yenilikleri önceki üç aya s
 - [MSB4094](../msbuild/errors/msb4094.md)
 - [MSB4096: ' item-List ' öğe listesindeki ' öğe ' öğesi ' name ' meta verileri için bir değer tanımlamıyor](../msbuild/errors/msb4096.md)
 - [MSB4166](../msbuild/errors/msb4166.md)
-- [MSB4175: 'task-factory-name' görev fabrikası 'assembly-name' derlemeden yüklenemedi](../msbuild/errors/msb4175.md)
-- [MSB6001: 'tool' için geçersiz komut satırı anahtarı](../msbuild/errors/msb6001.md)
-- [MSB6011: 'task-name' görevine geçersiz parametreler geçirildi](../msbuild/errors/msb6011.md)
-- [MSB3075: 'name' komutundan 'error-code' koduyla çıkıldı. Bu komutu çalıştırmak için yeterli haklara sahip olduğunu doğrulayın](../msbuild/errors/msb3075.md)
-- [MSB3103: Geçersiz Resx dosyası](../msbuild/errors/msb3103.md)
-- [MSB3274: 'name' birincil başvurusu', 'sürüm' çerçevesine göre inşa edilmiş olduğundan çözümlenemedi](../msbuild/errors/msb3274.md)
-- [MSB3552: 'filename' kaynak dosyası bulunamıyor](../msbuild/errors/msb3552.md)
-- [MSB3554: 'filename' çıktı dosyasına yazamıyor](../msbuild/errors/msb3554.md)
-- [MSB3645: .NET Framework v3.5 Service Pack 1 bulunamadı. 'framework-version' sürümünü hedeflemek için .NET Framework v3.5 Service Pack 1 veya sonraki bir sürümü yüklü olması gerekir](../msbuild/errors/msb3645.md)
-- [MSB3822: Dize olmayan kaynaklar çalışma zamanında System.Resources.Extensions derlemesini gerektirir, ancak bu projenin başvurularında bulunamadı](../msbuild/errors/msb3822.md)
-- [MSB3971: 'name' için başvuru derlemeleri bulunamadı](../msbuild/errors/msb3971.md)
-- [MSB4086: 'condition' koşuluyla sayı yerine 'değer' olarak değerlendirilen 'ifade' üzerinde sayısal bir karşılaştırma denendi](../msbuild/errors/msb4086.md)
-- [MSB4236: Belirtilen SDK 'adı' bulunamadı](../msbuild/errors/msb4236.md)
-- [MSB6004: Belirtilen görev yürütülebilir 'path' konumu geçersiz](../msbuild/errors/msb6004.md)
+- [MSB4175: ' görev-Fabrika-adı ' görev Fabrikası ' derleme-adı ' derlemesinden yüklenemedi](../msbuild/errors/msb4175.md)
+- [MSB6001: ' Tool ' için geçersiz komut satırı anahtarı](../msbuild/errors/msb6001.md)
+- [MSB6011: ' görev-adı ' görevine geçersiz parametreler geçirildi](../msbuild/errors/msb6011.md)
+- [MSB3075: ' name ' komutuna ' Error-Code ' koduyla çıkıldı. Lütfen bu komutu çalıştırmak için yeterli haklara sahip olduğunuzu doğrulayın](../msbuild/errors/msb3075.md)
+- [MSB3103: geçersiz resx dosyası](../msbuild/errors/msb3103.md)
+- [MSB3274: birincil başvuru ' name ', ' version ' çerçevesine göre oluşturulduğundan çözümlenemedi](../msbuild/errors/msb3274.md)
+- [MSB3552: ' filename ' kaynak dosyası bulunamıyor](../msbuild/errors/msb3552.md)
+- [MSB3554: ' filename ' çıkış dosyasına yazılamıyor](../msbuild/errors/msb3554.md)
+- [MSB3645: .NET Framework v 3.5 Service Pack 1 bulunamadı. ' framework-version ' hedefini hedeflemek için .NET Framework v 3.5 Service Pack 1 veya üzeri yüklü olmalıdır](../msbuild/errors/msb3645.md)
+- [MSB3822: dize olmayan kaynaklar, çalışma zamanında System. resources. Extensions derlemesini gerektirir, ancak bu projenin başvurularında bulunamadı](../msbuild/errors/msb3822.md)
+- [MSB3971: ' name ' için başvuru derlemeleri bulunamadı](../msbuild/errors/msb3971.md)
+- [MSB4086: ' Condition ' koşulunda sayı yerine ' Value ' olarak değerlendirilen ' expression ' üzerinde sayısal bir karşılaştırma denendi](../msbuild/errors/msb4086.md)
+- [MSB4236: belirtilen SDK ' name ' bulunamadı](../msbuild/errors/msb4236.md)
+- [MSB6004: belirtilen görev çalıştırılabilir konumu ' Path ' geçersiz](../msbuild/errors/msb6004.md)
 
 **Güncelleştirilmiş makaleler**
 
-- [Adım adım kılavuz: MSBUILD](../msbuild/walkthrough-using-msbuild.md) - MSBuild VS 2022 Program Dosyaları'nın nasıl izlenecek yolu kullanma
+- [izlenecek yol: MSBuild](../msbuild/walkthrough-using-msbuild.md) MSBuild izlenecek yol VS 2022 Program dosyalarını kullanma
 
 ### <a name="june-2021"></a>Haziran 2021
 
@@ -192,87 +196,87 @@ aşağıdaki bölümler, Visual Studio docs 'taki yenilikleri önceki üç aya s
 
 **Güncelleştirilmiş makaleler**
 
-- Visual Studio Cloud [Explorer'da Azure hesaplarıyla](../azure/vs-azure-tools-resources-managing-with-cloud-explorer.md) ilişkili kaynakları yönetme - Bulut Gezgini'ni kullanımdan Sunucu Gezgini Azure düğümü ekleme
-- [Azure Sanal Makineler'e Sunucu Gezgini](../azure/vs-azure-tools-virtual-machines-access-from-server-explorer.md) - Bulut Gezgini'nin kullanımdan Sunucu Gezgini Azure düğümü ekleme
+- [Visual Studio cloud explorer 'da Azure hesaplarınızla ilişkili kaynakları yönetme](../azure/vs-azure-tools-resources-managing-with-cloud-explorer.md) -cloud explorer 'ı kullanımdan kaldırma ve Azure node Sunucu Gezgini ekleme
+- [Sunucu Gezgini 'Den Azure sanal makinelerine erişme](../azure/vs-azure-tools-virtual-machines-access-from-server-explorer.md) -Cloud Explorer 'ı kullanımdan kaldırma ve Azure node Sunucu Gezgini ekleme
 
 #### <a name="containers"></a>Kapsayıcılar
 
 **Güncelleştirilmiş makaleler**
 
-- [Hızlı Başlangıç: Visual Studio'da React](../containers/container-tools-react.md) Tek Sayfalı Uygulama ile Docker kullanma - EOL Windows 10, sürüm 1903 başvurularını kaldırma
+- [hızlı başlangıç: Visual Studio React tek sayfalı uygulama ile docker 'ı kullanma](../containers/container-tools-react.md) -eol Windows 10, sürüm 1903 ' e yönelik başvuruları kaldırma
 
 #### <a name="data-tools"></a>Veri araçları
 
 **Güncelleştirilmiş makaleler**
 
-- [Veri aramak Windows form oluşturma](../data-tools/create-a-windows-form-to-search-data.md) - Windows Forms Veri Araçları: .NET Core hakkında güncelleştirme ve not ekleme
+- [veri aramak için bir Windows formu oluşturma](../data-tools/create-a-windows-form-to-search-data.md) -Windows Forms veri araçları: güncelleştirme ve .net Core hakkında notu ekleme
 
 #### <a name="ide"></a>IDE
 
 **Yeni makaleler**
 
-- [Visual Studio'daki bağlı deneyimler](./reference/connected-experiences.md) - Yeni makale eklendi
-- [Çözüm Gezgini](./use-solution-explorer.md) kullanma - Yeni makale eklendi
-- [Kullanılmayan Başvuruları Kaldır](./reference/remove-unused-references.md) - Yeni makale eklendi
+- [Visual Studio bağlı deneyimler](./reference/connected-experiences.md) -yeni makale eklendi
+- [Çözüm Gezgini nasıl kullanılır](./use-solution-explorer.md) -yeni makale eklendi
+- [Kullanılmayan başvuruları kaldır](./reference/remove-unused-references.md) -yeni makale eklendi
 
 **Güncelleştirilmiş makaleler**
 
-- [Seçenekler, Metin Düzenleyici, C#, Gelişmiş](./reference/options-text-editor-csharp-advanced.md) - Bazı yeni 16.10 .NET Üretkenlik Özellikleri için belgeler eklendi
-- [Hızlı Başlangıç: Node.js ile ilk Visual Studio](./quickstart-nodejs.md) oluşturma - Makale güncelleştirildi
+- [Seçenekler, metin düzenleyici, C#, gelişmiş](./reference/options-text-editor-csharp-advanced.md) eklenen bazı yeni 16,10 .net üretkenlik özellikleri için belgeler
+- [hızlı başlangıç: Visual Studio ile ilk Node.js uygulamanızı oluşturma](./quickstart-nodejs.md) -makale güncelleştirildi
 
 #### <a name="install"></a>Yükleme
 
 **Güncelleştirilmiş makaleler**
 
-- [Kapsayıcıya Derleme Araçları yükleme](../install/build-tools-container.md) - VS Derleme Araçları'nın nasıl yük olduğunu güncelleştirme
+- [Derleme araçlarını bir kapsayıcıya yükleme](../install/build-tools-container.md) -vs derleme araçlarının nasıl yüklendiğini güncelleştirme
 
 #### <a name="modeling"></a>Modelleme
 
 **Yeni makaleler**
 
-- [Kod Eşlemesi ve Canlı Bağımlılık Doğrulamasını Yükleme](../modeling/install-architecture-tools.md) - Yeni makale oluşturuldu
+- [Kod haritasını ve canlı bağımlılık doğrulamasını yükler](../modeling/install-architecture-tools.md) -yeni makale oluşturuldu
 
 #### <a name="msbuild"></a>MSBuild
 
 **Yeni makaleler**
 
-- [MSB3270: 'arch'](../msbuild/errors/msb3270.md) olarak oluşturulan projenin işlemci mimarisi ile 'reference', 'arch' başvurusunda işlemci mimarisi arasında bir eşleşme yok - Yeni makale oluşturuldu
-- [MSB3577: Aynı çıkış yoluna çözümlenen](../msbuild/errors/msb3577.md) iki çıkış dosyası adı: yol - Yeni makale oluşturuldu
-- [MSB4181: 'task' görevi yanlış döndürüldü ama](../msbuild/errors/msb4181.md) bir hata günlüğe kaydetti - Yeni makale oluşturuldu
-- [MSB6003: Belirtilen görev yürütülebilir](../msbuild/errors/msb6003.md) dosyası çalıştıramadı - Yeni makale oluşturuldu
+- [MSB3270: ' Arch ' oluşturulan projenin işlemci mimarisi ve ' Reference ', ' Arch ' başvurusunun işlemci mimarisi arasında uyuşmazlık vardı](../msbuild/errors/msb3270.md) -yeni makale oluşturuldu
+- [MSB3577: iki çıkış dosyası adı aynı çıkış yoluna çözümlendi: yol](../msbuild/errors/msb3577.md) -yeni makale oluşturuldu
+- [MSB4181: ' Task ' görevi false döndürdü, ancak günlüğe bir hata](../msbuild/errors/msb4181.md) vermedi-yeni makale oluşturuldu
+- [MSB6003: belirtilen görev yürütülebilir yürütülebilir dosyası çalıştırılamadı](../msbuild/errors/msb6003.md) -yeni makale oluşturuldu
 
 **Güncelleştirilmiş makaleler**
 
-- [MSBuild hedefleri](../msbuild/msbuild-targets.md) - MSBuild: Hedefleri genişletme ve özelleştirmeyi açıklama
-- [Görev toplu işlemesinde öğe meta verileri](../msbuild/item-metadata-in-task-batching.md) - MSBuild: Kimlik meta verileri toplu işleme davranışını netleştirin
+- [MSBuild hedefleri](../msbuild/msbuild-targets.md) -MSBuild: hedefleri genişletmeyi ve özelleştirmeyi açıklayın
+- [görev toplu işleme içindeki öğe meta verileri](../msbuild/item-metadata-in-task-batching.md) -MSBuild: kimlik meta verileri toplu işleme davranışını netleştirmek
 
 #### <a name="python"></a>Python
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio'da Python](../python/managing-python-projects-in-visual-studio.md) projeleri - Python GitHub sorunları giderildi
-- [Python ile çalışma Etkileşimli penceresi](../python/python-interactive-repl-in-visual-studio.md) - Python içeriğinde GitHub sorunları giderildi
-- [Python web uygulaması proje şablonları](../python/python-web-application-project-templates.md) - Python GitHub sorunları giderildi
+- python içeriklerde Visual Studio giderilen GitHub sorunlarında [python projeleri](../python/managing-python-projects-in-visual-studio.md)
+- python içeriklerde GitHub [ile ilgili python etkileşimli penceresiyle çalışma](../python/python-interactive-repl-in-visual-studio.md)
+- python [web uygulaması proje şablonlarına](../python/python-web-application-project-templates.md) yönelik GitHub python içeriğindeki sorunlar
 
 #### <a name="sharepoint"></a>SharePoint
 
 **Güncelleştirilmiş makaleler**
 
-- [Nasıl: Eşlenmiş klasörleri ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md) - sp13'ü kaldırma
-- [Nasıl: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md) - sp13'ü kaldırma
-- [Nasıl kullanılır: Tasarımcı SharePoint Web Bölümü Oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) - Sp13'ü Kaldırma
+- [Nasıl yapılır: eşlenmiş klasörler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md) -sp13 kaldır
+- [Nasıl yapılır: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md) -sp13 kaldır
+- [nasıl yapılır: tasarımcı kullanarak SharePoint Web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) -Remove sp13
 
 #### <a name="vsto"></a>VSTO
 
 **Güncelleştirilmiş makaleler**
 
-- [Office için Visual Studio Araçları çalışma zamanı yükleme senaryoları](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md) - Belge, uygulamanın yeni sürümlerini içerecek şekilde Office
+- [Office için Visual Studio Araçları çalışma zamanı yükleme senaryoları](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md) -belgeyi yeni Office sürümlerini içerecek şekilde güncelleştirildi
 
 #### <a name="xaml-tools"></a>XAML araçları
 
 **Yeni makaleler**
 
-- [Tasarım zamanı örnek verilerini XAML Tasarımcısı ile kullanma Visual Studio](../xaml-tools/xaml-design-time-sample-data.md) - Yeni makale oluşturuldu
+- [Visual Studio XAML Tasarımcısı tasarım zamanı örnek verilerini kullanın](../xaml-tools/xaml-design-time-sample-data.md) -yeni makale oluşturuldu
 
 ### <a name="may-2021"></a>Mayıs 2021
 
@@ -280,81 +284,81 @@ aşağıdaki bölümler, Visual Studio docs 'taki yenilikleri önceki üç aya s
 
 **Yeni makaleler**
 
-- [Kod ölçümleri - Cyclomatic karmaşıklığı](../code-quality/code-metrics-cyclomatic-complexity.md) - Cyclomatic karmaşıklığı ve devralma derinliği için kod ölçümleri güncelleştirmeleri
-- [Kod ölçümleri - Devralma derinliği (DIT)](../code-quality/code-metrics-depth-of-inheritance.md) - Cyclomatic karmaşıklığı ve devralma derinliği için kod ölçümleri güncelleştirmeleri
-- [Kod analizi hakkında SSS](../code-quality/analyzers-faq.yml) - FAQ.md yml'ye dönüştürülür
-- [Eski FxCop ve .NET çözümleyicileri](../code-quality/net-analyzers-faq.yml) hakkında sık sorulan sorular - FAQ.md yml'ye dönüştürülür
+- [Kod ölçümleri-döngüsel karmaşıklığı](../code-quality/code-metrics-cyclomatic-complexity.md) -döngüsel karmaşıklık ve devralma derinliğine yönelik kod ölçümleri güncelleştirmeleri
+- [Kod ölçümleri-devralım (DIT)](../code-quality/code-metrics-depth-of-inheritance.md) -döngüsel karmaşıklığı ve devralma derinliğine yönelik kod ölçümleri güncelleştirmeleri
+- [Kod ANALIZI SSS](../code-quality/analyzers-faq.yml) -FAQ.MD, yıml 'ye dönüştürüldü
+- [Eski FxCop ve .net Çözümleyicileri hakkında sık sorulan sorular](../code-quality/net-analyzers-faq.yml) -FAQ.MD, yıml 'ye dönüştürüldü
 
 **Güncelleştirilmiş makaleler**
 
-- [Kod analizi ihlallerini gizleme](../code-quality/in-source-suppression-overview.md) - CA kurallarının gizlenmesinde belgeleri yeniden düzenleme
+- [Kod Analizi Ihlallerini gösterme](../code-quality/in-source-suppression-overview.md) -CA kurallarının gizlemesi sırasında belgeleri yeniden düzenleme
 
 #### <a name="containers"></a>Kapsayıcılar
 
 **Yeni makaleler**
 
-- [Docker Compose için başlatma profillerini yönetme (Önizleme)](../containers/launch-profiles.md) - Kapsayıcı Araçları - başlatma ayarları
+- [Docker Compose (Önizleme) için başlatma profillerini yönetme](../containers/launch-profiles.md) -kapsayıcı araçları-başlatma ayarları
 
 #### <a name="debugger"></a>Hata Ayıklayıcısı
 
 **Yeni makaleler**
 
-- [Visual Studio'da anlık görüntü hata ayıklaması için sık](../debugger/debug-live-azure-apps-faq.yml) sorulan FAQ.md - FAQ.md yml'ye dönüştürülür
-- [SSS - Ihtiyacınız olan hata ayıklama özelliğini Visual Studio](../debugger/find-your-debugging-task.yml) - FAQ.md yml'ye dönüştürebilirsiniz
+- [Visual Studio-FAQ.md ' de anlık görüntü hata ayıklaması için sık sorulan sorular,](../debugger/debug-live-azure-apps-faq.yml) yıml 'ye dönüştürüldü
+- [sss-Visual Studio-FAQ.md ' de, yıml 'ye dönüştürülmüş hata ayıklama özelliğini bulma](../debugger/find-your-debugging-task.yml)
 
 **Güncelleştirilmiş makaleler**
 
-- [Veri kesme noktası hatalarını giderme](../debugger/troubleshoot-data-breakpoint-errors.md) - Veri kesme noktası hatalarını giderme belgesini güncelleştirme
+- [Veri kesme noktası hatalarını giderme](../debugger/troubleshoot-data-breakpoint-errors.md) -güncelleştirme sorunlarını giderme veri kesme hataları belge
 
 #### <a name="ide"></a>IDE
 
 **Güncelleştirilmiş makaleler**
 
-- [/ResetSettings (devenv.exe)](./reference/resetsettings-devenv-exe.md) - Diğer düzeltmeler
-- [Hızlı Başlangıç: Visual Studio ile ilk Node.js](./quickstart-nodejs.md) uygulama oluşturma - Önerilen düzenlemeler
+- [/ResetSettings (devenv.exe)](./reference/resetsettings-devenv-exe.md) -diğer düzeltmeler
+- [hızlı başlangıç: Visual Studio önerilen düzenlemelerle ilk Node.js uygulamanızı oluşturma](./quickstart-nodejs.md)
 
 #### <a name="install"></a>Yükleme
 
 **Güncelleştirilmiş makaleler**
 
 - [En düşük düzeyde çevrimdışı düzen kullanarak Visual Studio'yu güncelleştirme](../install/update-minimal-layout.md)
-  - MinLayout belgelerine birden çok ürün örneği ekleme
-  - VS 2017 belgelerde ve tüm örneklerde --productId'nin kaldırılmasını yansıtma
-  - MinimalLayout belgelerde '--productIds' seçeneğinin kaldırılmasını yansıtma
-- [İş Visual Studio, bileşenler ve dil paketlerini değiştirme](../install/modify-visual-studio.md) - Performans yönergelerini basitleştirme
+  - Mini düzen belgelerine birden çok ürün örneği ekleme
+  - VS 2017 belgelerinden ve tüm örneklerde--ProductID öğesinin kaldırılmasını yansıtır
+  - En az Allayout belgelerinden '--ProductIDs ' seçeneğinin kaldırılmasını yansıtma
+- [Visual Studio iş yüklerini, bileşenleri ve dil paketlerini değiştirme](../install/modify-visual-studio.md) -performans yönergelerini kolaylaştırma
 
 #### <a name="msbuild"></a>MSBuild
 
 **Yeni makaleler**
 
 - [MSB8006: 'project-name.vcxproj' projesinin Platformu geçersiz.](../msbuild/errors/msb8006.md) - MSB8xxx F1 içeriğini güncelleştirme
-- [MSB8013: Bu proje, belirtilen Yapılandırma ve Platform birleşimini içermemektedir.](../msbuild/errors/msb8013.md) -MSB8xxx F1 içeriğini güncelleştirme
-- [MSB8027: filename adına sahip Iki veya daha fazla dosya aynı konuma çıkış üretir.](../msbuild/errors/msb8027.md) -MSB8xxx F1 içeriğini güncelleştirme
-- [MSB8037: masaüstü C++ uygulamaları için Windows SDK sürümü bulunamadı.](../msbuild/errors/msb8037.md) -MSB8xxx F1 içeriğini güncelleştirme
-- [MSB8042: Bu proje için Spectre azaltmaları olan ATL veya MFC kitaplıkları gereklidir.](../msbuild/errors/msb8042.md) -MSB8xxx F1 içeriğini güncelleştirme
-- [MSB3721: ' komut ' komutuna ' error-code ' kodu ile çıkıldı](../msbuild/errors/msb3721.md) -MSBuild hata sayfaları
-- [MSB3821: ' path ' dosyası, Internet veya kısıtlanmış bölgede olduğu veya dosya MSBuild hata sayfalarında web 'in işaretine sahip olduğundan işlenemedi](../msbuild/errors/msb3821.md)
+- [MSB8013: Bu proje, belirtilen Yapılandırma ve Platform birleşimini içermemektedir.](../msbuild/errors/msb8013.md) - MSB8xxx F1 içeriğini güncelleştirme
+- [MSB8027: Dosya adı adlı iki veya daha fazla dosya aynı konuma çıkışlar üretir.](../msbuild/errors/msb8027.md) - MSB8xxx F1 içeriğini güncelleştirme
+- [MSB8037: Windows C++ Uygulamaları için Windows SDK sürümü bulunamadı.](../msbuild/errors/msb8037.md) - MSB8xxx F1 içeriğini güncelleştirme
+- [MSB8042: Bu proje için Spectre Risk Azaltmaları ile ATL veya MFC kitaplıkları gereklidir.](../msbuild/errors/msb8042.md) - MSB8xxx F1 içeriğini güncelleştirme
+- [MSB3721: 'command' komutundan 'error-code'](../msbuild/errors/msb3721.md) koduyla çıkıldı - MSBuild sayfaları
+- [MSB3821: İnternet'te](../msbuild/errors/msb3821.md) veya Kısıtlanmış bölgede olması veya dosyada web işaretinin olması nedeniyle 'yol' dosyası MSBuild başarısız oldu
 
 **Güncelleştirilmiş makaleler**
 
-- [MSBuild koşulları](../msbuild/msbuild-conditions.md) -MSBuild sürüm karşılaştırmaları
-- [özellik işlevleri](../msbuild/property-functions.md) -MSBuild sürüm karşılaştırmaları
+- [MSBuild koşulları](../msbuild/msbuild-conditions.md) - MSBuild karşılaştırmaları
+- [Özellik işlevleri](../msbuild/property-functions.md) - MSBuild karşılaştırmaları
 
 #### <a name="python"></a>Python
 
 **Güncelleştirilmiş makaleler**
 
-- [2. adım: görünümler ve sayfa şablonları ile ayrılmış Visual Studio 2017 ve 2019 bilgileri ile bir docgo uygulaması oluşturma](../python/learn-django-in-visual-studio-step-02-create-an-app.md)
-- [Python Için C++ uzantısı oluşturma](../python/working-with-c-cpp-python-in-visual-studio.md) -makale incelendi ve güncelleştirildi
+- [2. Adım: Görünümler](../python/learn-django-in-visual-studio-step-02-create-an-app.md) ve sayfa şablonlarıyla Django uygulaması oluşturma - 2017 ve 2019 Visual Studio ayrılmış
+- [Python için C++ uzantısı oluşturma](../python/working-with-c-cpp-python-in-visual-studio.md) - Makale gözden geçirildi ve güncelleştirildi
 
 #### <a name="test"></a>Test etme
 
 **Yeni makaleler**
 
-- [Live Unit Testing sık sorulan sorular](../test/live-unit-testing-faq.yml) -FAQ.MD, yıml 'ye dönüştürüldü
+- [Live Unit Testing sorulan sorular -](../test/live-unit-testing-faq.yml) FAQ.md yml'ye dönüştürülür
 
 #### <a name="xaml-tools"></a>XAML araçları
 
 **Yeni makaleler**
 
-- Visual Studio eklenen XAML tasarım zamanı örnek veri belgelerindeki [XAML Tasarımcısı tasarım zamanı örnek verilerini kullanın](../xaml-tools/xaml-design-time-sample-data.md)
+- [tasarım zamanı örnek verilerini XAML Tasarımcısı'de Visual Studio](../xaml-tools/xaml-design-time-sample-data.md) - XAML Tasarım Zamanı Örnek Veri Belgeleri eklendi

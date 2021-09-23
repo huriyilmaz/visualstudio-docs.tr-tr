@@ -1,7 +1,7 @@
 ---
-title: C# geliştiricileri için genel bakış
-description: Visual Studio tümleşik geliştirme ortamı ve C# geliştiricileri için nasıl uyarlanbildiği hakkında bilgi edinin.
-ms.date: 03/19/2019
+title: C# geliştiricilerine genel bakış
+description: Tümleşik geliştirme Visual Studio ortamı hakkında bilgi edinmek ve C# geliştiricilerine nasıl uyarlanmış olduğunu öğrenin.
+ms.date: 09/14/2021
 ms.technology: vs-ide-general
 ms.custom:
 - vs-acquisition
@@ -15,45 +15,45 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: d4d3d853709a9b818429350728927e57190d15ae
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: e912048e20ec1479eb6d9aa3afe28d63417f40ff
+ms.sourcegitcommit: 022ac348337f77c899996ac81060a969ebfb64bb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122057092"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "128134587"
 ---
-# <a name="welcome-to-the-visual-studio-ide--c"></a>Visual Studio ıde 'ye hoş geldiniz | ,\#
+# <a name="welcome-to-the-visual-studio-ide--c"></a>Visual Studio IDE | C\#
 
 [!INCLUDE [overview-part-1](../includes/ide-overview.md)]
 
-## <a name="select-environment-settings"></a>Ortam ayarlarını seçin
+## <a name="select-environment-settings"></a>Ortam ayarlarını seçme
 
-C# geliştiricileri için uyarlanmış ortam ayarlarını kullanmak üzere Visual Studio yapılandıralim.
+C# Visual Studio ortam ayarlarını kullanmak için aşağıdaki ayarları yapılandırabilirsiniz:
 
-1. menü çubuğunda **araçlar**  >  **içeri aktar ve dışarı aktar Ayarlar**' ı seçin.
+1. Menü çubuğunda Araçlar İçeri ve Dışarı  >  **Aktarma'Ayarlar.**
 
-2. **içeri ve dışarı aktarma Ayarlar sihirbazında**, ilk sayfadaki **tüm ayarları sıfırla** ' yı seçin ve ardından **ileri**' yi seçin.
+1. **İlkeleri İçeri ve Dışarı Ayarlar Sihirbazı'nda** Tüm ayarları **sıfırla'yı ve** ardından Sonraki'yi **seçin.**
 
-3. **geçerli Ayarlar kaydet** sayfasında, geçerli ayarlarınızı kaydetmek için bir seçenek belirleyin ve ardından **ileri**' yi seçin. (Herhangi bir ayarı özelleştirilmediyseniz, **Hayır, geçerli ayarlarım üzerine yazarak ayarları Sıfırla**' yı seçin.)
+1. Geçerli Ayarları **Kaydet Ayarlar,** sıfırlamadan önce geçerli ayarlarınızı kaydedip kaydetmeyebilirsiniz. Herhangi bir ayarı özelleştirmediyebilirsiniz, hayır, yalnızca **ayarları sıfırla'yı seçin ve geçerli ayarlarım'ın üzerine yazmanız gerekir.** Sonra **İleri**’yi seçin.
 
-4. **Ayarlar varsayılan koleksiyonunu seçin** sayfasında, **Visual C#**' yi seçin ve ardından **son**' u seçin.
+1. Varsayılan **Koleksiyon Seçin sayfasında Visual C#** Ayarlar ve ardından Son'a **tıklayın.**
 
-5. **Sıfırlama Tamam** sayfasında **Kapat**' ı seçin.
+1. Sıfırlama Tamamlandı **sayfasında Kapat'ı** **seçin.**
 
-IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bilgi edinmek için bkz. [kişiselleştirme Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
+IDE'nizi kişiselleştirmenin diğer yolları hakkında bilgi edinmek için [bkz. Visual Studio.](../../ide/personalizing-the-visual-studio-ide.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-aşağıdaki tanıtım makaleleriyle birlikte Visual Studio daha fazlasını yapın:
+Aşağıdaki Visual Studio makalelerle birlikte aşağıdaki adımları daha ayrıntılı bir şekilde keşfedin:
 
 > [!div class="nextstepaction"]
 > [Kod düzenleyicisini kullanmayı öğrenin](tutorial-editor.md)
 
 > [!div class="nextstepaction"]
-> [Projeler ve çözümler hakkında bilgi edinin](../tutorial-projects-solutions.md)
+> [Projeler ve çözümler hakkında bilgi](../tutorial-projects-solutions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [daha fazla Visual Studio özellik](../../ide/advanced-feature-overview.md) bul
-- [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/) ziyaret edin
-- [Visual Studio blogunu](https://devblogs.microsoft.com/visualstudio/) okuyun
+- Daha [fazla Visual Studio keşfedin.](../../ide/advanced-feature-overview.md)
+- web [sitesini visualstudio.microsoft.com.](https://visualstudio.microsoft.com/vs/)
+- web [Visual Studio okuyun.](https://devblogs.microsoft.com/visualstudio/)

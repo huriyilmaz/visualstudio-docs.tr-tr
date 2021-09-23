@@ -1,18 +1,18 @@
 ---
 title: Windows Visual Studio aboneliklerde geliştirici hesabı avantajı | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
 ms.date: 03/17/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil Windows geliştirici hesabı hakkında bilgi edinin.
-ms.openlocfilehash: 4ea61f0bdb131c20412c0b99bbd09cbc44777fb7
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 8c2f00b20505241a729833c9d59e1404404ebfd7
+ms.sourcegitcommit: 022ac348337f77c899996ac81060a969ebfb64bb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966359"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "128134046"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Windows Visual Studio aboneliklerde geliştirici hesabı
 seçili Visual Studio aboneliğine dahil Windows geliştirici hesabınız, Windows deposuna ücretsiz ve ücretli Windows uygulamaları göndermenize olanak tanır.

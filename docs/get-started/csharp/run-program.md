@@ -2,7 +2,7 @@
 title: Program çalıştırma (C#)
 description: Acemi kullanıcının Visual Studio bir C# programının nasıl çalıştırılacağını gösteren kılavuz.
 ms.custom: vs-acquisition, get-started
-ms.date: 08/24/2021
+ms.date: 09/14/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -15,113 +15,141 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e2a5e2997a15f3d91c9a12d3aff5c1d1e31aff90
-ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
+ms.openlocfilehash: f68039ca8b1bca3224766f7f2673514e3b6a2e9f
+ms.sourcegitcommit: 022ac348337f77c899996ac81060a969ebfb64bb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "122785929"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "128133796"
 ---
 # <a name="how-to-run-a-c-program-in-visual-studio"></a>Nasıl yapılır: Visual Studio bir C# programı çalıştırma
 
-Bir programı çalıştırmak için yapmanız gerekenler, ne başladığınıza, ne tür bir program, uygulama veya hizmete sahip olduğunu ve hata ayıklayıcı altında çalıştırmak isteyip istemediğinizi belirtir. en basit durumda, Visual Studio ' de bir proje açtığınızda, **Ctrl** + **F5** (**hata ayıklama olmadan başlat**) veya **F5** (**hata ayıklama ile başla**) tuşlarına basarak veya ana Visual Studio araç çubuğunda yeşil oka (**başlat düğmesi**) basın.
+Bir programı çalıştırma, ne başladığınıza, program türüne ve hata ayıklayıcı altında çalıştırmak isteyip istemediğinize bağlıdır. En basit durumda, Visual Studio içinde açık bir proje derlemek ve çalıştırmak için:
 
-![Başlat düğmesini gösteren ekran görüntüsü](media/vs-start-button.png)
+- **F5** tuşuna basın, Visual Studio menüsünde **hata ayıklama**  >  **ile başla** ' yı seçin veya Visual Studio araç çubuğunda yeşil **başlangıç** okunu ve proje adını seçin.
+- ya da hata ayıklamadan çalıştırmak için, Visual Studio menüsünde, **Ctrl** + **F5** tuşuna basın veya **hata ayıklama**  >  **olmadan başlat** ' ı seçin.
 
-## <a name="starting-from-a-project"></a>Bir projeden başlayarak
+::: moniker range="<=vs-2019"
+![Başlat düğmesini gösteren ekran görüntüsü.](media/vs-start-button.png)
+::: moniker-end
+::: moniker range=">=vs-2022"
+:::image type="content" source="media/vs-2022/start-button.png" alt-text="Başlat düğmesini gösteren ekran görüntüsü." border="false":::
+::: moniker-end
 
-Bir C# projeniz (*. csproj* dosyası) varsa, bu bir çalıştırılabilir programdır. Bir proje, yöntemi olan bir C# dosyası içeriyorsa `Main` ve çıktısı bir çalıştırılabilir (exe) ise, büyük olasılıkla başarılı olursa çalışır.
+## <a name="start-from-a-project"></a>Bir projeden başla
 
-programınızın zaten Visual Studio bir projede kodu varsa projeyi açın. projeyi açmak için Windows dosya gezgini 'nden *. csproj* öğesine çift tıklayın veya dokunun ya da Visual Studio, proje **aç**' ı seçin, proje (*. csproj*) dosyasını bulun ve proje dosyasını seçin.
+Bir C# projesi veya *. csproj* dosyası çalıştırılabilir bir programdır. Proje, yöntemi olan bir C# dosyası içeriyorsa `Main` ve çıktısı bir çalıştırılabilir veya *.exe* dosyası ise, büyük olasılıkla başarılı bir şekilde oluşturulmasından sonra çalışır.
 
-projeler Visual Studio yüklendikten sonra **Ctrl** + **F5** tuşuna basın (**hata ayıklama olmadan başlat**) veya programı çalıştırmak için Visual Studio araç çubuğundaki yeşil **başlat** düğmesini kullanın.  Birden çok proje varsa, yöntemi içeren bir `Main` Başlangıç projesi olarak ayarlanmalıdır. Başlangıç projesini ayarlamak için, proje düğümüne sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
+1. program kodunuz zaten bir Visual Studio projesinde ise projeyi açın. bunu yapmak için Windows dosya gezgini ' nde *. csproj* dosyasına çift tıklayabilir veya dokunabilir veya Visual Studio **bir projeyi aç** ' ı seçerek *. csproj* dosyasını bulun ve dosyayı seçin.
 
-![Başlangıç projesini ayarla](media/set-as-startup-project.png)
+1. proje Visual Studio yüklendikten sonra, Visual Studio çözümünüz birden fazla proje içeriyorsa, projeyi `Main` başlangıç projesi olarak yöntemiyle ayarladığınızdan emin olun. başlangıç projesini ayarlamak için **Çözüm Gezgini** proje adına veya düğümüne sağ tıklayın ve bağlam menüsünden **başlangıç Project olarak ayarla** ' yı seçin.
 
-Visual Studio projenizi derleyip çalıştırmaya çalışır.  Yapı hataları varsa, **Çıkış** penceresinde yapı çıkışını ve **hata listesi** penceresindeki hataları görürsünüz.
+   ::: moniker range="<=vs-2019"
+   ![Başlangıç projesinin ayarlanmasını gösteren ekran görüntüsü.](media/set-as-startup-project.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2022"
+   :::image type="content" source="media/vs-2022/set-startup-project.png" alt-text="Başlangıç projesinin ayarlanmasını gösteren ekran görüntüsü." border="false":::
+   ::: moniker-end
 
-Yapı başarılı olursa uygulama, proje türü için uygun bir şekilde çalışır. konsol uygulamaları bir terminal penceresinde çalışır, Windows masaüstü uygulamaları yeni bir pencerede başlar, web uygulamaları tarayıcıda başlar (IIS Express tarafından barındırılır) ve bu şekilde devam eder.
+1. Programı çalıştırmak için **CTRL** + **F5** tuşuna basın, üstteki menüden hata **Ayıkla**  >  **Başlat** ' ı seçin veya yeşil **Başlat** düğmesini seçin. 
 
-## <a name="starting-from-code"></a>Koddan başlayarak
+   Visual Studio projenizi derleyip çalıştırmaya çalışır. Visual Studio ekranının alt tarafında, derleme çıktısı **çıkış** penceresinde görünür ve tüm derleme hataları **Hata Listesi** penceresinde görünür.
 
-Kod listesinden, kod dosyasından veya az sayıda dosyadan başlatıyorsanız, önce çalıştırmak istediğiniz kodun güvenilen bir kaynaktan geldiğinden ve bir çalıştırılabilir program olduğundan emin olun. Bir yöntemi varsa, bu, bir `Main` proje oluşturmak için bir proje oluşturmak üzere konsol uygulaması şablonunu kullanabileceğiniz bir çalıştırılabilir program olarak tasarlanmıştır Visual Studio.
+   Yapı başarılı olursa, uygulama proje türü için uygun şekilde çalışır. konsol uygulamaları, bir terminal penceresinde çalışır Windows masaüstü uygulamaları yeni bir masaüstü penceresinde başlar ve web uygulamaları, IIS Express tarafından barındırılan bir tarayıcıda çalışır.
+
+## <a name="start-from-code"></a>Koddan Başlat
+
+Kod listesinden, kod dosyasından veya az sayıda dosyadan başlatırsanız, önce kodun güvenilen bir kaynaktan çalıştırılabilir program olduğundan emin olun. Yöntemi olan herhangi bir uygulama `Main` , büyük olasılıkla bir çalıştırılabilir programdır. Visual Studio ' de uygulamayla çalışacak bir proje oluşturmak için konsol uygulaması şablonunu kullanabilirsiniz.
 
 ### <a name="code-listing-for-a-single-file"></a>Tek bir dosya için kod Listeleme
 
-Visual Studio başlatın, boş bir C# konsol projesi açın, projede zaten bulunan. cs dosyasındaki tüm kodu seçin ve silin. Daha sonra, kodunuzun içeriğini. cs dosyasına yapıştırın. Kodu yapıştırdığınızda, daha önce yaptığınız kodu üzerine yazın veya silin. Dosyayı özgün kodla eşleşecek şekilde yeniden adlandırın.
+1. Visual Studio başlatın ve boş bir C# konsol uygulaması projesi açın.
+1. Project *. cs* dosyasındaki tüm kodu kod listelemesi veya dosyanızın içeriğiyle değiştirin.
+1. Proje *. cs* dosyasını kod dosyası adınızla eşleşecek şekilde yeniden adlandırın.
 
-### <a name="code-listings-for-a-few-files"></a>Birkaç dosya için kod listeleri
+### <a name="several-code-listings-or-files-on-disk"></a>Disk üzerindeki birçok kod listesi veya dosya
 
-Visual Studio başlatın, boş bir C# konsol projesi açın, projede zaten bulunan. cs dosyasındaki tüm kodu seçin ve silin. Sonra, ilk kod dosyasının içeriğini. cs dosyasına yapıştırın. Dosyayı özgün kodla eşleşecek şekilde yeniden adlandırın. 
+1. Visual Studio başlatın ve uygun türde yeni bir proje oluşturun. Emin değilseniz C# **konsol uygulamasını** kullanın.
+1. Yeni projede, proje kod dosyasındaki tüm kodu ilk kod listelemesi veya dosyanızın içeriğiyle değiştirin.
+1. Proje kodu dosyasını kod dosyası adınızla eşleşecek şekilde yeniden adlandırın.
+1. Kalan her kod dosyası için:
+   1. **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve varolan öğe **Ekle**' yi seçin  >  veya projeyi seçip **SHIFT** + **alt** + **A**'ya basın.
+   1. Projeye içeri aktarmak için kod dosyasına gidin ve dosyayı seçin.
 
-İkinci bir dosya için, proje için kısayol menüsünü açmak üzere **Çözüm Gezgini** içindeki proje düğümüne sağ tıklayın ve **> var olan öğeyi Ekle** ' yi (veya tuş birleşimini **SHIFT** + **alt** + **a**' yı kullanın) seçin ve kod dosyalarını seçin.
+### <a name="several-files-in-a-folder"></a>Bir klasördeki çeşitli dosyalar
 
-### <a name="multiple-files-on-disk"></a>Diskte birden çok dosya
+Çok sayıda dosya içeren bir klasörünüz varsa, önce bir proje veya çözüm dosyası denetleyin. Visual Studio oluşturduğu programlarda proje ve çözüm dosyaları vardır. Windows dosya gezgini ' nde *. csproj* veya *. sln* uzantılı dosyaları arayın. Visual Studio açmak için *. csproj* dosyasına çift tıklayın. bkz. [Visual Studio bir çözümden veya projeden başla](#start-from-a-project).
 
-1. Uygun türde yeni bir proje oluşturun (emin değilseniz C# **konsol uygulamasını** kullanın).
+Kod başka bir geliştirme ortamındaysanız proje dosyası yoktur. Visual Studio **klasörü aç**' a tıklayarak klasörü açın  >   . Bkz. [Proje veya çözüm olmadan kod geliştirme](../../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
-2. Proje düğümüne sağ tıklayın,   >  dosyaları seçmek ve bunları projenize aktarmak için **Mevcut öğeyi** ekleyin.  
+## <a name="start-from-a-github-or-azure-devops-repo"></a>bir GitHub veya Azure DevOps deposundan başla
 
-### <a name="starting-from-a-folder"></a>Bir klasörden başlayarak
-
-Birçok dosyanın bir klasörüyle çalışırken, önce bir proje veya çözüm olup olmadığını görün.  program Visual Studio ile oluşturulduysa bir proje dosyası veya çözüm dosyası bulmanız gerekir. *. csproj* uzantısına veya. sln uzantısına sahip dosyaları arayın ve Windows dosya gezgini ' nde, Visual Studio açmak için bunlardan birine çift tıklayın. bkz. [Visual Studio bir çözümden veya projeden başlatma](#starting-from-a-project).
-
-Bir proje dosyanız yoksa (örneğin, kod başka bir geliştirme ortamında geliştirildiği gibi), en üst düzey klasörü Visual Studio içindeki **klasörü aç** metodunu kullanarak açın. Bkz. [Proje veya çözüm olmadan kod geliştirme](../../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
-
-## <a name="starting-from-a-github-or-azure-devops-repo"></a>bir GitHub veya Azure DevOps deposundan başlayarak
-
-çalıştırmak istediğiniz kod GitHub veya bir Azure DevOps deposunda ise, projeyi doğrudan depodan açmak için Visual Studio kullanabilirsiniz. Bkz. [bir depodan bir proje açma](../tutorial-open-project-from-repo.md).
+çalıştırmak istediğiniz kod bir GitHub veya Azure DevOps deposa, projeyi doğrudan depodan açmak için Visual Studio kullanabilirsiniz. Bkz. [bir depodan bir proje açma](../tutorial-open-project-from-repo.md).
 
 ## <a name="run-the-program"></a>Programı çalıştırma
 
-programı başlatmak için ana Visual Studio araç çubuğunda yeşil oka (**başlat** düğmesi) basın veya **f5** ya da **Ctrl** + **f5** tuşlarına basarak programı çalıştırın. **Başlat** düğmesini kullandığınızda, hata ayıklayıcı altında çalışır.  Visual Studio projenizdeki kodu oluşturmaya ve çalıştırmaya çalışır.  Bu başarılı olursa harika! Aksi halde, başarıyla derlenmeye yönelik bazı fikirler için okumaya devam edin.
+programı oluşturmaya başlamak için Visual Studio araç çubuğundaki yeşil **başlat** düğmesine basın veya **f5** ya da **Ctrl** + **f5** tuşlarına basın. **Başlat** düğmesi veya **F5** kullanımı, programı hata ayıklayıcı altında çalıştırır.
+
+Visual Studio projenizdeki kodu oluşturmaya ve çalıştırmaya çalışır. Bir derleme başarılı olmazsa, projenin başarıyla derlenme hakkında bazı fikirler için aşağıdaki bölümlere bakın.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-kodunuzun hataları olabilir, ancak kod doğru olsa da, diğer derlemelere veya NuGet paketlerine bağlıdır veya .net 'in farklı bir sürümünü hedefleyecek şekilde yazılmışsa, kolayca düzeltemezsiniz.
+Kodunuzun hataları olabilir. ya da kod doğru olabilir, ancak eksik derlemelere veya NuGet paketlerine göre veya .net 'in farklı bir sürümünü hedeflemelidir. Bu durumlarda, derlemeyi kolayca düzelmeyebilirsiniz.
 
 ### <a name="add-references"></a>Başvuru Ekle
 
-Doğru şekilde derlemek için kodun doğru olması ve kitaplıklara veya diğer bağımlılıklara ayarlanmış doğru başvuruların olması gerekir. , Derlemeden ve çalıştırmadan önce, programda hata olup olmadığını görmek için kırmızı dalgalı çizgilere ve **hata listesi** bakabilirsiniz. Çözümlenmemiş adlarla ilgili hatalar görüyorsanız, muhtemelen bir başvuru ya da bir using yönergesi veya her ikisini de eklemeniz gerekir. kod herhangi bir derlemeye veya NuGet pakete başvuruyorsa, bu başvuruları projeye eklemeniz gerekir.
+Doğru şekilde derlemek için kodun doğru olması ve kitaplıklara veya diğer bağımlılıklara doğru başvuruları olması gerekir. **Hata listesi** koddaki veya girdilerindeki kırmızı dalgalı alt çizgiler, programı derleyip çalıştırmadan önce bile hataları gösterir. Hatalar çözümlenmemiş adlarla ilişkilendirilmesiyle muhtemelen bir başvuru veya `using` yönerge eklemeniz ya da her ikisini de yapmanız gerekir. kod, eksik derlemelere veya NuGet paketlerine başvuruyorsa, bu başvuruları projeye eklemeniz gerekir.
 
-Visual Studio eksik başvuruları belirlemenize yardımcı olmaya çalışır. Bir ad çözülmemiş olduğunda, düzenleyicide ampul simgesi görünür. Ampul ' e tıklarsanız, sorunun nasıl düzeltileceğini öğrenmek için bazı öneriler bulabilirsiniz. Düzeltmeler şu şekilde olabilir:
+Visual Studio eksik başvuruları belirlemenize yardımcı olmaya çalışır. Bir ad çözülmemiş olduğunda, düzenleyicide ampul simgesi görünür. Sorunu gidermeye yönelik önerileri görmek için ampulü seçin. Düzeltmeler şu şekilde olabilir:
 
-- using yönergesi ekleme
-- bir derlemeye başvuru ekleyin veya
+- Using yönergesi ekleyin.
+- Bir derlemeye başvuru ekleyin.
 - NuGet paketini yükler.
 
-#### <a name="missing-using-directive"></a>Using yönergesi eksik
+#### <a name="add-a-using-directive"></a>Using yönergesi ekleme
 
-Örneğin, aşağıdaki ekranda, `using System;` çözümlenmemiş adı çözümlemek için kod dosyasının başlangıcına eklemeyi seçebilirsiniz `Console` :
+Eksik yönerge örneği aşağıda verilmiştir `using` . `using System;`Çözümlenmemiş adı çözümlemek için kod dosyasının başlangıcına ekleyebilirsiniz `Console` :
 
-![Using yönergesi eklemek için ampul ekran görüntüsü](media/name-does-not-exist2.png)
+::: moniker range="<=vs-2019"
+![Bir using yönergesi eklemek için ampul ekran görüntüsü.](media/name-does-not-exist2.png)
+::: moniker-end
+::: moniker range=">=vs-2022"
+:::image type="content" source="media/vs-2022/missing-using-directive.png" alt-text="Bir using yönergesi eklemek için ampul ekran görüntüsü." border="false":::
+::: moniker-end
 
-#### <a name="missing-assembly-reference"></a>Eksik bütünleştirilmiş kod başvurusu
+#### <a name="add-an-assembly-reference"></a>Derleme başvurusu ekleme
 
-.net başvuruları derlemeler veya NuGet paketleri biçiminde olabilir. Genellikle, kaynak kodu bulursanız, yayımcı veya yazar hangi derlemelerin gerekli olduğunu ve kodun hangi paketlere bağımlı olduğunu açıklayacak. Bir projeye el ile başvuru eklemek için **Çözüm Gezgini** **Başvurular** düğümüne sağ tıklayın, **Başvuru Ekle**' yi seçin ve gerekli derlemeyi bulun.
+.net başvuruları derlemeler veya NuGet paketleri olabilir. Kaynak kodunda, yayımcı veya yazar genellikle kodun gerektirdiği derlemeleri ve hangi paketlere bağımlı olduğunu açıklar. Bir projeye el ile başvuru eklemek için, **Çözüm Gezgini** ' deki **Başvurular** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin. **Başvuru Yöneticisi**'nde gerekli derlemeyi bulun ve ekleyin.
 
-![Başvuru Ekle menüsünün ekran görüntüsü](media/add-reference.png)
+::: moniker range="<=vs-2019"
+![Başvuru Ekle menüsünün ekran görüntüsü.](media/add-reference.png)
+::: moniker-end
+::: moniker range=">=vs-2022"
+:::image type="content" source="media/vs-2022/add-reference.png" alt-text="Başvuru Ekle menüsünün ekran görüntüsü." border="false":::
+::: moniker-end
 
 [Başvuru Yöneticisi 'ni kullanarak başvuru ekleme veya kaldırma](../../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)bölümündeki yönergeleri izleyerek derlemeleri bulabilir ve başvurular ekleyebilirsiniz.
 
-#### <a name="missing-nuget-package"></a>NuGet paketi eksik
+#### <a name="add-a-nuget-package"></a>NuGet paketi ekleme
 
-Visual Studio eksik bir NuGet paketi algılarsa, bir ampul görünür ve size bunu yüklemenize yönelik bir seçenek sunar:
+Visual Studio eksik bir NuGet paketi algılarsa, bir ampul belirir ve paketi yüklemenize yönelik bir seçenek sunar:
 
-![Paketin yükleneceği ampul ekran görüntüsü](media/lightbulb-add-package.png)
+::: moniker range="<=vs-2019"
+![NuGet paketi yüklemeye yönelik ampul ekran görüntüsü.](media/lightbulb-add-package.png)
+::: moniker-end
+::: moniker range=">=vs-2022"
+:::image type="content" source="media/vs-2022/lightbulb-add-package.png" alt-text="NuGet paketi yüklemeye yönelik ampul ekran görüntüsü." border="false":::
+::: moniker-end
 
-bu sorun çözülmezse ve Visual Studio paketi bulamıyorsa, çevrimiçi aramayı deneyin. bkz. [Visual Studio NuGet paketini yükleyip kullanma](/nuget/quickstart/install-and-use-a-package-in-visual-studio).
+bu sorunu çözmezse veya Visual Studio paketi bulamıyorsa, paketi çevrimiçi aramayı deneyin. bkz. [Visual Studio NuGet paketini yükleyip kullanma](/nuget/quickstart/install-and-use-a-package-in-visual-studio).
 
-## <a name="use-the-right-version-of-net"></a>.NET sürümünün doğru sürümünü kullanın
+### <a name="use-the-right-version-of-net"></a>.NET sürümünün doğru sürümünü kullanın
 
-.NET Framework farklı sürümlerinin geriye dönük uyumluluk olduğu için, daha yeni bir çerçeve, hiçbir değişiklik yapılmadan eski bir çerçeve için yazılmış kodu çalıştırabilir. Ancak bazen belirli bir çerçeveyi hedeflemek zorunda olabilirsiniz. zaten yüklenmemişse, .NET Framework veya .net Core 'un belirli bir sürümünü yüklemeniz gerekebilir. Bkz. [Visual Studio değiştirme](../../install/modify-visual-studio.md).
+.NET Framework farklı sürümlerinin geriye dönük bir uyumluluğu olduğundan, daha yeni bir çerçeve herhangi bir değişiklik yapılmadan eski bir çerçeve için yazılmış kodu çalıştırabilir. Ancak bazen belirli bir .NET Framework sürümünü hedefleyebilirsiniz. .NET Framework veya .net Core 'un belirli bir sürümünü yüklemeniz gerekebilir. Bkz. [Visual Studio değiştirme](../../install/modify-visual-studio.md).
 
-Hedef Framework 'ü değiştirmek için bkz. [hedef Framework 'Ü değiştirme](../../ide/visual-studio-multi-targeting-overview.md#select-a-target-framework-version). daha fazla bilgi için bkz. [.NET Framework hedefleme hatalarını giderme](../../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).
+Hedef .NET Framework sürümünü değiştirmek için bkz. [hedef Framework 'Ü değiştirme](../../ide/visual-studio-multi-targeting-overview.md#select-a-target-framework-version). daha fazla bilgi için bkz. [.NET Framework hedefleme hatalarını giderme](../../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Visual Studio ıde 'ye hoş geldiniz](../visual-studio-ide.md)'i okuyarak Visual Studio geliştirme ortamını keşfedebilirsiniz.
-
-## <a name="see-also"></a>Ayrıca bkz.
-
-[İlk C# uygulamanızı oluşturma](tutorial-console.md)
+- [Visual Studio ıde 'ye hoş geldiniz](../visual-studio-ide.md)'i okuyarak Visual Studio geliştirme ortamını keşfedebilirsiniz.
+- [İlk C# uygulamanızı oluşturun.](tutorial-console.md)

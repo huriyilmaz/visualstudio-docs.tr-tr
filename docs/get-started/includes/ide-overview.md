@@ -7,11 +7,11 @@ ms.author: meghaanand
 manager: jmartens
 ms.topic: include
 ms.openlocfilehash: d98812bdba2807038d23f43d07ea48f6d3d43bc0
-ms.sourcegitcommit: da19ed1e48259b219c61c4cb9e98b006004a5766
+ms.sourcegitcommit: 022ac348337f77c899996ac81060a969ebfb64bb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2021
-ms.locfileid: "128047758"
+ms.lasthandoff: 09/22/2021
+ms.locfileid: "128134696"
 ---
 *Tümleşik geliştirme ortamı* (IDE), yazılım geliştirmenin birçok yönlerini destekleyen özellik açısından zengin bir programdır. Visual Studio ıde, kod düzenlemek, hatalarını ayıklamak ve derlemek ve ardından bir uygulama yayımlamak için kullanabileceğiniz bir yaratıcı başlatma paneliyle bulunur. standart düzenleyicinin ve üzerinde birçok ıdes 'in sağladığı hata ayıklayıcı, Visual Studio derleyiciler, kod tamamlama araçları, grafik tasarımcıları ve yazılım geliştirme sürecini geliştirmeye yönelik daha birçok özellik içerir.
 
@@ -383,97 +383,97 @@ Visual Studio ilk kez açtığınızda, Microsoft hesabı veya iş veya okul hes
 
    ![.NET 6,0 seçiliyken ek bilgi penceresinin ekran görüntüsü.](../media/vs-2022/create-project-additional-info.png)
 
-   Visual Studio projeyi oluşturur. Program <xref:System.Console.WriteLine?displayProperty=nameWithType> **, Hello, World!** dizesini görüntüleyen yöntemi çağıran basit bir "Merhaba Dünya" uygulamasıdır. bir konsol penceresinde.
+   Visual Studio projeyi oluşturur. Program, Hello, World! Merhaba Dünya görüntülemek için yöntemini çağıran <xref:System.Console.WriteLine?displayProperty=nameWithType> basit bir "Merhaba Dünya" **uygulamasıdır.** bir konsol penceresinde.
 
-   proje dosyaları, **Çözüm Gezgini** adlı bir pencerede Visual Studio ıde 'nin sağ tarafında görünür. **Çözüm Gezgini** penceresinde **program. cs** dosyasını seçin. Uygulamanızın C# kodu, alanın çoğunu alan merkezi düzenleyici penceresinde açılır.
+   Proje dosyaları, Visual Studio IDE'nin sağ tarafında, **Çözüm Gezgini.** Yeni **Çözüm Gezgini** **Program.cs dosyasını** seçin. Uygulamanıza uygun C# kodu merkezi düzenleyici penceresinde açılır ve bu da yerlerin çoğunu alır.
 
-   ![düzenleyicide Program. cs kodu ile Visual Studio ıde 'yi gösteren ekran görüntüsü.](../media/vs-2022/overview-ide-console-app.png)
+   ![Düzenleyicide Program.cs Visual Studio IDE'yi gösteren ekran görüntüsü.](../media/vs-2022/overview-ide-console-app.png)
 
-   Kod, anahtar sözcükler ve türler gibi farklı parçaları göstermek için otomatik olarak renklendirilir. Satır numaraları kodu bulmanıza yardımcı olur.
+   Kod, anahtar sözcükler ve türler gibi farklı bölümleri göstermek için otomatik olarak renklenir. Satır numaraları kodu bulumanıza yardımcı olur.
 
-   Koddaki küçük, dikey kesikli çizgiler, hangi küme ayracın birbiriyle eşleştiğini gösterir. Kod bloklarını daraltmak veya genişletmek için küçük, kutulu eksi veya artı işaretlerini de seçebilirsiniz. Bu kod ana hattı özelliği, ekran dağınıklığını en aza indirmeye yardımcı olmak için, görmeniz gerekmeyen kodu gizlemenizi sağlar.
+   Kodda küçük, dikey kesikli satırlar, hangi ayraçların bir diğer küme ayracıyla eş olduğunu gösteriyor. Kod bloklarını daraltmak veya genişletmek için küçük, kutulu eksi veya artı işaretleri de seçebilirsiniz. Bu kod açıklama özelliği, görmenizi gerektir etmeyen kodu gizleyerek ekrandaki dağınıklığı en aza indirmeye yardımcı olur.
 
-   ![kırmızı kutulara Visual Studio ıde 'yi gösteren ekran görüntüsü.](../media/vs-2022/overview-ide-console-app-red-boxes.png)
+   ![IDE'nin kırmızı Visual Studio gösteren ekran görüntüsü.](../media/vs-2022/overview-ide-console-app-red-boxes.png)
 
-   Diğer birçok menü ve araç penceresi mevcuttur.
+   Diğer menüler ve araç pencereleri kullanılabilir.
 
-1. Visual Studio üst menüden **hata ayıklama**  >  **olmadan başlat** öğesini seçerek uygulamayı başlatın. **CTRL** + **F5** tuşuna da basabilirsiniz.
+1. Üst menüden Hata **Ayıklama**  >  **Olmadan Başlat'ı** seçerek Visual Studio başlatabilirsiniz. **Ctrl** + **F5 tuşlarına da basarak.**
 
-   ![Hata ayıklama > hata ayıklama menü öğesi olmadan başlangıcını gösteren ekran görüntüsü.](../media/vs-2022/overview-start-without-debugging.png)
+   ![Hata Ayıklama ve Hata Ayıklama > Başlat menü öğesini gösteren ekran görüntüsü.](../media/vs-2022/overview-start-without-debugging.png)
 
-   Visual Studio uygulamayı oluşturur ve **Hello, World!** iletisi ile bir konsol penceresi açılır. Artık çalışan bir uygulamanız var!
+   Visual Studio uygulamayı derler ve **Hello, World!** iletisiyle bir konsol penceresi açılır. Artık çalışan bir uygulama var!
 
-   ![Hello, World! çıktısını gösteren hata ayıklama konsolu penceresinin ekran görüntüsü ve bu pencereyi kapatmak için herhangi bir tuşa basın.](../media/vs-2022/overview-console-window.png)
+   ![Çıktıyı gösteren Hata Ayıklama Konsolu penceresinin ekran görüntüsü Merhaba Dünya! ve Bu pencereyi kapatmak için herhangi bir tuşa basın.](../media/vs-2022/overview-console-window.png)
 
 1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 
-1. Uygulamaya daha fazla kod ekleyelim. Şu satırı izleyerek aşağıdaki C# kodunu ekleyin `Console.WriteLine("Hello World!");` :
+1. Şimdi uygulamaya biraz daha kod ekleriz. aşağıdaki C# kodunu şu satırdan önce `Console.WriteLine("Hello World!");` ekleyin:
 
    ```csharp
    Console.WriteLine("\nWhat is your name?");
    var name = Console.ReadLine();
    ```
 
-   Bu kod, konsol penceresinde **adınızın ne olduğunu** görüntüler ve ardından Kullanıcı bazı metinleri girene kadar bekler.
+   Bu **kod, konsol penceresinde Adınız nedir?** metnini görüntüler ve kullanıcı metin girene kadar bekler.
 
-1. Aşağıdaki satıra yazan çizgiyi değiştirin `Console.WriteLine("Hello World!");` :
+1. şu satıra `Console.WriteLine("Hello World!");` kadar olan satırı değiştirme:
 
    ```csharp
    Console.WriteLine($"\nHello {name}!");
    ```
 
-1. Hata **ayıklama** > **olmadan Başlat** öğesini seçerek veya **CTRL** + **F5** tuşuna basarak uygulamayı yeniden çalıştırın.
+1. Hata Ayıklama Olmadan Başlat'ı **seçerek veya** >  **Ctrl** F5 tuşlarına basarak + **uygulamayı yeniden çalıştırın.**
 
-   Visual Studio uygulamayı yeniden oluşturur ve bir konsol penceresi açılır ve sizden adınızı ister.
+   Visual Studio yeniden yapılandırıyorsanız, bir konsol penceresi açılır ve sizden adınız istenir.
 
-1. Konsol penceresine adınızı yazın ve **ENTER** tuşuna basın.
+1. Konsol penceresine adınız yazın ve Enter tuşuna **basın.**
 
-   ![Bir ad, giriş ve Hello Georgette! çıkışı için istem gösteren hata ayıklama konsolu penceresinin ekran görüntüsü.](../media/vs-2022/overview-console-input.png)
+   ![Bir ad, giriş ve Çıkış Hello Lynctte! istemini gösteren Hata Ayıklama Konsolu penceresinin ekran görüntüsü.](../media/vs-2022/overview-console-input.png)
 
-1. Herhangi bir tuşa basarak konsol penceresini kapatın ve çalışan programı durdurun.
+1. Konsol penceresini kapatmak ve çalışan programı durdurmak için herhangi bir tuşa basın.
 
 ::: moniker-end
 
 ## <a name="use-refactoring-and-intellisense"></a>Yeniden düzenleme ve IntelliSense kullanma
 
-Yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) ve [IntelliSense](../../ide/using-intellisense.md) 'in daha verimli bir şekilde kodlamasına yardımcı olması için birkaç yol göz atalım.
+Yeniden düzenlemenin ve [IntelliSense'in](../../ide/using-intellisense.md) daha [verimli](../../ide/refactoring-in-visual-studio.md) bir şekilde kodlamanıza yardımcı olmak için birkaç yolu göz atabilirsiniz.
 
-İlk olarak, değişkeni yeniden adlandırın `name` :
+İlk olarak değişkeni yeniden `name` adlandırin:
 
-1. Değişkene çift tıklayın `name` ve değişken için yeni ad, *Kullanıcı* adı yazın.
+1. değişkenine çift `name` tıklayın ve değişkeninin yeni adını (username) *yazın.*
 
-   Değişken etrafında bir kutu belirir ve kenar boşluğunda ampul görünür.
+   Değişkenin etrafında bir kutu, kenar boşluğunda ise bir ampul görünür.
 
-1. Kullanılabilir [hızlı eylemleri](../../ide/quick-actions.md)göstermek için ampul simgesini seçin. ' **Name ' öğesini ' username ' olarak yeniden adlandır**' ı seçin.
+1. Kullanılabilir Hızlı Eylemler'i göstermek için ampul [simgesini seçin.](../../ide/quick-actions.md) **'name' adını 'username' olarak yeniden adlandır'ı seçin.**
 
    ::: moniker range="vs-2017"
-   ![Visual Studio yeniden adlandırma eylemini gösteren ekran görüntüsü.](../media/rename-quick-action.png)
+   ![Uygulamanın yeniden adlandırma eylemlerini gösteren Visual Studio.](../media/rename-quick-action.png)
    ::: moniker-end
    ::: moniker range="vs-2019"
-   ![Visual Studio yeniden adlandırma eylemini gösteren ekran görüntüsü.](../media/vs-2019/rename-quick-action.png)
+   ![Uygulamanın yeniden adlandırma eylemlerini gösteren Visual Studio.](../media/vs-2019/rename-quick-action.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Visual Studio yeniden adlandırma eylemini gösteren ekran görüntüsü.](../media/vs-2022/rename-quick-action.png)
+   ![Uygulamanın yeniden adlandırma eylemlerini gösteren Visual Studio.](../media/vs-2022/rename-quick-action.png)
    ::: moniker-end
 
-   Değişken, proje genelinde yeniden adlandırılır, bu durumda yalnızca iki yer olur.
+   değişkeni proje genelinde yeniden adlandırıldı ve bu bizim durumumuz için yalnızca iki yer.
 
    ::: moniker range="vs-2017"
-   ![Visual Studio yeniden düzenlemeyi yeniden adlandırma gösteren animasyonlu GIF.](../media/rename-refactoring.gif)
+   ![Yeniden adlandırma yeniden düzenlemeyi grafikte gösteren animasyonlu gif Visual Studio.](../media/rename-refactoring.gif)
    ::: moniker-end
 
-1. Şimdi IntelliSense 'e göz atın. Belirten satırın altında `Console.WriteLine($"\nHello {username}!");` yazın `DateTime now = DateTime.` .
+1. Şimdi IntelliSense'e göz at. olan satırın altına `Console.WriteLine($"\nHello {username}!");` `DateTime now = DateTime.` yazın.
 
-   Bir kutu, sınıfının üyelerini görüntüler <xref:System.DateTime> . Şu anda seçili olan üyenin açıklaması ayrı bir kutu içinde de görüntülenir.
+   Sınıfın üyelerini bir kutu <xref:System.DateTime> görüntüler. Seçili olan üyenin açıklaması da ayrı bir kutuda görüntülenir.
 
    ::: moniker range="<=vs-2019"
-   ![Visual Studio 'teki IntelliSense Liste üyelerini gösteren ekran görüntüsü.](../media/intellisense-list-members.png)
+   ![Visual Studio'daki IntelliSense liste üyelerini gösteren Visual Studio.](../media/intellisense-list-members.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Visual Studio 'teki IntelliSense Liste üyelerini gösteren ekran görüntüsü.](../media/vs-2022/intellisense-list-members.png)
+   ![Visual Studio'daki IntelliSense liste üyelerini gösteren Visual Studio.](../media/vs-2022/intellisense-list-members.png)
    ::: moniker-end
 
-1. Sınıfın bir özelliği olan, ' a çift tıklayarak veya **sekme** tuşuna basarak **Şimdi** adlı üyeyi seçin. Satır sonuna noktalı virgül ekleyerek kod satırını doldurun: `DateTime now = DateTime.Now;` .
+1. Çift tıklayarak **veya Tab** tuşuna basarak sınıfının bir özelliği olan Now adlı üyeyi **seçin.** Satırın sonuna noktalı virgül ekleyerek kod satırı tamamlanır: `DateTime now = DateTime.Now;` .
 
 1. Bu satırın altına aşağıdaki kod satırlarını girin:
 
@@ -485,90 +485,90 @@ Yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) ve [IntelliSense
    ```
 
    > [!TIP]
-   > <xref:System.Console.Write%2A?displayProperty=nameWithType> , <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> yazdırıldıktan sonra bir satır Sonlandırıcı eklemediğinden farklıdır. Diğer bir deyişle, çıktıya gönderilen sonraki metin parçası aynı satıra yazdırılır. Açıklamalarını görmek için kodunuzda bu yöntemlerin her birinin üzerine gelebilmeniz gerekir.
+   > <xref:System.Console.Write%2A?displayProperty=nameWithType> , <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> yazdırılırken satır sonlandırıcı eklemeyilmesinden farklıdır. Bu, çıkışa gönderilen sonraki metnin aynı satırda yazdırılacak olduğu anlamına gelir. Açıklamalarını görmek için kodunda bu yöntemlerin her biri üzerine gelin.
 
-1. Daha sonra, yeniden düzenleme kullanarak kodu biraz daha kısa hale getirin. Satırdaki değişkeni seçin `now` `DateTime now = DateTime.Now;` . Bu satırdaki kenar boşluğunda bir screwdriver simgesi görüntülenir.
+1. Ardından kodu biraz daha kısa hale gelecek şekilde yeniden düzenlemeyi kullanın. satırda `now` değişkenlerini `DateTime now = DateTime.Now;` seçin. Bu çizginin kenar boşluğunda bir tornavida simgesi görünür.
 
-1. Visual Studio sunulan önerileri görmek için screwdriver simgesini seçin. Bu durumda, genel kod davranışını değiştirmeden bir kod satırını kaldırmak için [satır içi geçici değişken](../../ide/reference/inline-temporary-variable.md) yeniden düzenlemesi gösterilmektedir.
-
-   ::: moniker range="<=vs-2019"
-   ![Visual Studio 'da satır Içi geçici değişken önerisini gösteren ekran görüntüsü.](../media/inline-temporary-variable-refactoring.png)
-   ::: moniker-end
-   ::: moniker range=">=vs-2022"
-   ![Visual Studio 'da satır Içi geçici değişken önerisini gösteren ekran görüntüsü.](../media/vs-2022/inline-temporary-variable-refactoring.png)
-   ::: moniker-end
-
-1. Kodu yeniden düzenleme için **satır içi geçici değişken** ' i seçin.
-
-1. **CTRL** F5 tuşuna basarak programı yeniden çalıştırın + . Çıktı şuna benzer:
+1. Aşağıdaki seçeneklerden uygun önerileri görmek için tornavida simgesini Visual Studio. Bu durumda, [genel kod davranışını değiştirmeden](../../ide/reference/inline-temporary-variable.md) bir kod satırı kaldırmak için satır içi geçici değişken yeniden düzenlemesi gösterir.
 
    ::: moniker range="<=vs-2019"
-   ![Bir ada, girişe ve ' Hello Georgette! ' çıkışına ilişkin istemi gösteren hata ayıklama konsolu penceresinin ekran görüntüsü Yılın günü: 43 '.](../media/vs-2019/overview-console-final.png)
+   ![Uygulamanın satır içi geçici değişken önerisini gösteren Visual Studio.](../media/inline-temporary-variable-refactoring.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Bir ada, girişe ve ' Hello Georgette! ' çıkışına ilişkin istemi gösteren hata ayıklama konsolu penceresinin ekran görüntüsü Yılın günü: 244 '.](../media/vs-2022/overview-console-final.png)
+   ![Uygulamanın satır içi geçici değişken önerisini gösteren Visual Studio.](../media/vs-2022/inline-temporary-variable-refactoring.png)
+   ::: moniker-end
+
+1. Kodu **yeniden düzenlemek için Satır içi** geçici değişken'i seçin.
+
+1. **Ctrl** F5 tuşlarına basarak + **programı yeniden çalıştırın.** Çıkış aşağıdakine benzer:
+
+   ::: moniker range="<=vs-2019"
+   ![Ad, giriş ve çıkış istemini gösteren Hata Ayıklama Konsolu penceresinin ekran görüntüsü Yılın günü: 43'.](../media/vs-2019/overview-console-final.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2022"
+   ![Ad, giriş ve çıkış istemini gösteren Hata Ayıklama Konsolu penceresinin ekran görüntüsü Yılın günü: 244'.](../media/vs-2022/overview-console-final.png)
    ::: moniker-end
 
 ## <a name="debug-code&quot;></a>Kod hatalarını ayıklama
 
-Kod yazdığınızda çalıştırmanız ve hatalar için test etmeniz gerekir. Visual Studio hata ayıklama sistemi, bir seferde kod tek bir bildirimde ilerlemenizi ve gittiğiniz değişkenleri incelemenizi sağlar. Kodun belirli bir satırda yürütülmesini durduran *kesme noktaları* ayarlayabilir ve kodun çalıştığı şekilde değişken değerinin nasıl değiştiğini gözlemleyebilirsiniz.
+Kod yazarak çalıştırmanız ve hatalara karşı test etmek gerekir. Visual Studio hata ayıklama sistemi, kodda tek tek bir deyimde adım adım ilerler ve değişkenleri ilerlerken incelemenizi sağlar. Belirli bir *satırda kodun* yürütülmesini durduran kesme noktaları ayarlayın ve kod çalıştırıken değişken değerinin nasıl değiştiklerini gözlemlersiniz.
 
-Program çalışırken değişkenin değerini görmek için bir kesme noktası ayarlayın `username` .
+Program çalışırken değişkenin değerini görmek `username` için bir kesme noktası ayarlayın.
 
-1. `Console.WriteLine($&quot;\nHello {username}!");`Satırın yanındaki sol kenar boşluğuna veya cilt payına tıklayarak belirten kod satırında bir kesme noktası ayarlayın. Ayrıca kod satırını seçip **F9** tuşuna basabilirsiniz.
+1. Satırın yanındaki en sol kenar boşluğuna veya boşluka tıklayarak kod satırına bir `Console.WriteLine($&quot;\nHello {username}!");` kesme noktası ayarlayın. Ayrıca kod satırı seçerek F9 tuşuna **da basabilirsiniz.**
 
-   Cilt alanında kırmızı bir daire görünür ve çizgi vurgulanır.
-
-   ::: moniker range="<=vs-2019"
-   ![Visual Studio bir kod satırı üzerinde bir kesme noktası gösteren ekran görüntüsü.](../media/breakpoint.png)
-   ::: moniker-end
-   ::: moniker range=">=vs-2022"
-   ![Visual Studio bir kod satırı üzerinde bir kesme noktası gösteren ekran görüntüsü.](../media/vs-2022/breakpoint.png)
-   ::: moniker-end
-
-1. **Hata ayıklamayı**  >  **Başlat hata ayıklamayı başlatın** veya **F5**'e basın.
-
-1. Konsol penceresi göründüğünde ve adınızı istediğinde adınızı girin.
-
-   odak Visual Studio kod düzenleyicisine geri döner ve kesme noktasıyla birlikte kod satırı sarı renkle vurgulanır. Sarı vurgu, bu kod satırının sonraki yürütüleceği anlamına gelir. Kesme noktası, uygulamanın bu satırda yürütmeyi duraklatmasını sağlar.
-
-1. `username`Değerini görmek için farenizi değişkenin üzerine getirin. Ayrıca, ' ı sağ tıklayıp `username` **izleme Ekle** ' yi seçerek değişkeni **izleme** penceresine ekleyebilirsiniz; burada da bu değeri görebilirsiniz.
+   Oluk içinde kırmızı bir daire görünür ve çizgi vurgulanır.
 
    ::: moniker range="<=vs-2019"
-   ![Visual Studio hata ayıklama sırasında bir değişken değeri gösteren ekran görüntüsü.](../media/debugging-variable-value.png)
+   ![Bir kod satırı üzerinde kesme noktası gösteren ekran görüntüsü Visual Studio.](../media/breakpoint.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![Visual Studio hata ayıklama sırasında bir değişken değeri gösteren ekran görüntüsü.](../media/vs-2022/debugging-variable-value.png)
+   ![Bir kod satırı üzerinde kesme noktası gösteren ekran görüntüsü Visual Studio.](../media/vs-2022/breakpoint.png)
    ::: moniker-end
 
-1. Uygulamayı çalıştırmaya son vermek için **F5** tuşuna basın.
+1. Hata Ayıklamayı Başlat Hata Ayıklamayı **Başlat'ı**  >  **seçerek veya** F5 tuşuna basarak **hata ayıklamayı başlat.**
 
-Visual Studio hata ayıklama hakkında daha fazla bilgi için bkz. [hata ayıklayıcı özellik turu](../../debugger/debugger-feature-tour.md).
+1. Konsol penceresi görüntülendiğinde ve sizden bir ad sorduğunda, adınız girin.
 
-## <a name="customize-visual-studio"></a>Visual Studio özelleştirme
+   Odak, Visual Studio düzenleyicisine geri döner ve kesme noktası olan kod satırı sarıyla vurgulanır. Sarı vurgu, bu kod satırın daha sonra yürütülecek olduğu anlamına gelir. Kesme noktası, uygulamanın bu satırda yürütmeyi duraklatmalarını sağlar.
 
-varsayılan renk temasını değiştirme da dahil olmak üzere Visual Studio kullanıcı arabirimini kişiselleştirebilirsiniz. Renk temasını değiştirmek için:
+1. Değerini görmek için farenizi `username` değişkenin üzerine gelin. Ayrıca sağ tıklar ve İzleme Ekle'yi seçerek değişkeni İzleme penceresine ekleyebilir ve burada `username` değerini de görebilirsiniz.  
+
+   ::: moniker range="<=vs-2019"
+   ![Hata ayıklama sırasında değişken değerini gösteren ekran görüntüsü Visual Studio.](../media/debugging-variable-value.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2022"
+   ![Hata ayıklama sırasında değişken değerini gösteren ekran görüntüsü Visual Studio.](../media/vs-2022/debugging-variable-value.png)
+   ::: moniker-end
+
+1. Uygulamayı **çalıştırmayı tamamlamak** için F5 tuşuna tekrar basın.
+
+Hata ayıklamada hata ayıklama hakkında daha fazla Visual Studio bkz. [Hata Ayıklayıcı özellik turu.](../../debugger/debugger-feature-tour.md)
+
+## <a name="customize-visual-studio"></a>Özelleştirme Visual Studio
+
+Varsayılan renk temasını Visual Studio kullanıcı arabirimini kişiselleştirebilirsiniz. Renk temasını değiştirmek için:
 
 ::: moniker range="vs-2017"
 
-1. Menü çubuğunda,  > **Seçenekler** iletişim kutusunu açmak için Araçlar **Seçenekler** ' i seçin.
+1. Menü çubuğunda, Seçenekler iletişim **kutusunu** > **açmak için** Araçlar Seçenekler'i seçin. 
 
-1. **Ortam** > **genel** seçenekleri sayfasında, **renk teması** seçimini **koyu** olarak değiştirin ve ardından **Tamam**' ı seçin.
+1. Ortam Genel **seçenekleri** > **sayfasında** Renk teması seçimini  **Koyu olarak** ve ardından Tamam'ı **seçin.**
 
-   IDE 'nin tamamına yönelik renk teması **koyu** olarak değişir.
+   IDE'nin tamamı için renk teması Koyu olarak **değişir.**
 
-   ![koyu temada Visual Studio gösteren ekran görüntüsü.](../media/dark-theme.png)
+   ![Koyu temada Visual Studio gösteren ekran görüntüsü.](../media/dark-theme.png)
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-1. Menü çubuğunda,  > **Seçenekler** iletişim kutusunu açmak için Araçlar **Seçenekler** ' i seçin.
+1. Menü çubuğunda, Seçenekler iletişim **kutusunu** > **açmak için** Araçlar Seçenekler'i seçin. 
 
-1. **Ortam** > **genel** seçenekleri sayfasında, **renk teması** seçimini **koyu** olarak değiştirin ve ardından **Tamam**' ı seçin.
+1. Ortam Genel **seçenekleri** > **sayfasında** Renk teması seçimini  **Koyu olarak** ve ardından Tamam'ı **seçin.**
 
-   IDE 'nin tamamına yönelik renk teması **koyu** olarak değişir.
+   IDE'nin tamamı için renk teması Koyu olarak **değişir.**
 
-   ![koyu temada Visual Studio gösteren ekran görüntüsü.](../media/vs-2019/dark-theme.png)
+   ![Koyu temada Visual Studio gösteren ekran görüntüsü.](../media/vs-2019/dark-theme.png)
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
