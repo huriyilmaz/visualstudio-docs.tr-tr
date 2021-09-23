@@ -5,15 +5,15 @@ ms.custom: ''
 ms.date: 04/01/2020
 ms.topic: conceptual
 author: evanwindom
-ms.author: v-evwin
+ms.author: lank
 manager: lank
 ms.assetid: 2dc938b5-37e9-4dfc-8676-5d0a91d366ab
-ms.openlocfilehash: c7276666b5ff02fbee03ebe8f88987257b0e50c1
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: b04a99ffc35a61ecb92ac2401a08669afd84f551
+ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966479"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128309535"
 ---
 # <a name="what39s-new-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerdeki&#39;yenilikler
 

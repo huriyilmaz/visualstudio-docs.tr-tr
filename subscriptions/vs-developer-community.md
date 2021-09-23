@@ -1,18 +1,18 @@
 ---
 title: geliştirici Visual Studio aboneliklerde Community avantaj | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 44a790d1-f37e-4be0-9023-af1b3fdfcd35
 ms.date: 03/17/2021
 ms.topic: conceptual
 description: seçilen Visual Studio aboneliklerine dahil olan geliştirici Community destek avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 68629db57397d42f91c778ee075f3a51ce2a9c78
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: e689fa93f37d2c784b03a7118d84af157e9c1e80
+ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966569"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128307079"
 ---
 # <a name="developer-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde geliştirici Community destek forumu
 geliştirici Community forumlarında sorularınızı gönderin, yanıtlar bulun ve bilgilerinizi paylaşabilirsiniz.
