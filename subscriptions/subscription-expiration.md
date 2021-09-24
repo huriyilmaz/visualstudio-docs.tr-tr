@@ -1,18 +1,18 @@
 ---
 title: Bir Visual Studio aboneliğinin süresi dolduğunda ne | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: b6fbfa3e-654a-462f-8e22-e313b6ea617f
-ms.date: 06/10/2021
+ms.date: 09/20/2021
 ms.topic: conceptual
 description: Aboneliğinizin süresi dolduğunda Visual Studio olduğunu öğrenin
-ms.openlocfilehash: 576be11954a406947d71a60945b7209f7ef6b688
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: abc20ca49b51a2c4eae748bfae1051771a38284d
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725932"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128375678"
 ---
 # <a name="what-happens-when-your-subscription-expires"></a>Aboneliğinizin süresi dolduğunda ne olur?
 Visual Studio belirli sürelere sahip olur ve yenilenmediği sürece aboneliklerin süresi dolar.  Bir aboneliğin süresi dolduğunda, abonelik tarafından sağlanan avantajlar farklı şekillerde etkileyecektir.  Bu makalede, süre sonu bir aboneliğin çeşitli yönlerini nasıl Visual Studio açıklanmıştır. 
@@ -23,7 +23,9 @@ Yeni bir abonelik satın almak için fiyatlandırma sayfamızda satın alma seç
 Ürün indirmeleri sayfası olan , yazılımı indiremeniz için hala kullanılabilir olacak, ancak yeni ürün <https://my.visualstudio.com/downloads> anahtarlarını talep etmek mümkün olmayacaktır.  Güncelleştirmeler, düzeltme ekleri ve diğer araçlar Hala Microsoft İndirme [Merkezi'nde kullanılabilir.](https://www.microsoft.com/downloads)  Aboneliğiniz aracılığıyla daha önce indirdiğiniz ürünler hala geçerlidir.
 
 ## <a name="product-keys"></a>Ürün anahtarları
-Ürün anahtarları sayfası <https://my.visualstudio.com/productkeys> artık kullanılamıyor.  Daha önce talepte bulundurarak tüm ürün anahtarları normalde olduğu gibi işleve devam eder.  Tüm yükleme sınırları etkilenmez.  Aboneliğinizin süresi dolsa da talepte bulunduktan sonra ürün anahtarlarınızı dışarı aktarmanız için lütfen ziyaret edin ve <https://my.visualstudio.com/subscriptions> Tüm anahtarları dışarı aktar **düğmesine** tıklayın.  Aboneliğinizin süresi dolsa da yeni ürün anahtarı talep etmeyebilirsiniz.
+Ürün anahtarları sayfası <https://my.visualstudio.com/productkeys> artık kullanılamıyor.  Daha önce talepte bulundurarak tüm ürün anahtarları normalde olduğu gibi işleve devam eder.  Tüm yükleme sınırları etkilenmez.  
+> [!IMPORTANT]
+> Aboneliğinizin süresi dolmadan sonra ürün anahtarlarınızı kullanılabilir olmasını sağlamak için, bunları aboneliğinizin sona erme tarihinden önce dışarı aktarmanız gerekir. Anahtarlarınızı dışarı aktarın, Ürün Anahtarları [sayfasına bağlanın](https://my.visualstudio.com/productkeys) ve mavi **Tüm anahtarları dışarı aktar" düğmesine tıklayın.  
 
 ## <a name="benefits"></a>Avantajlar 
 Aboneliğin süresi dolduğunda tüm avantajlar aynı şekilde etkilenmez.  Aboneliğinizin süresi dolsa hiçbir avantaj etkinleştirilmez.  Daha önce etkinleştirdikten sonra da avantajlar kullanılabilir durumda olabilir.  
@@ -38,10 +40,10 @@ Azure DevOps aboneliği aracılığıyla Visual Studio abonelik kullanılamaz.
 Aylık Azure kredisi ödemeleri, aboneliğinizin süresinin dolması ardından sınırlı bir süre için devam eder.  Geçerli ay içinde Azure aboneliğinize zaten uygulanmış olan kullanılmayan krediler yine de kullanılabilir durumda olur.  Krediniz tükendikten sonra bu abonelikten Azure kaynaklarını kullanmaya devam [](/azure/azure-resource-manager/management/move-resource-group-and-subscription) etmek isterseniz, bu kaynakları başka bir Azure aboneliğine aktarabilirsiniz veya mevcut aboneliğinizi kullana öde [aboneliğine dönüştürebilirsiniz.](/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit-in-azure-portal)
 
 ### <a name="other-benefits"></a>Diğer avantajlar 
-Aboneliklere dahil edilen avantajların Visual Studio belirli süreler vardır.  Microsoft'un Pluralsight, DataCamp veya WhiteSource gibi iş ortakları tarafından sağlanan avantajlar etkinleştirildikten sonra zaman sınırlarına sahip olur.  Daha önce etkinleştirilen avantajlar, kullanım koşullarının geri kalanında size açık olmaya devam edecektir.  Örneğin, altı aylık LinkedIn Learning aboneliğini etkinleştirmiş ve Visual Studio aboneliğinizin süresi dolduğunda da dört ay daha kaldı ise LinkedIn Learning aboneliğine erişmeye devam edebilirsiniz.  
+Aboneliklere dahil edilen avantajların Visual Studio belirli süreler vardır.  Microsoft'un Pluralsight, DataCamp veya WhiteSource gibi iş ortakları tarafından sağlanan avantajlar etkinleştirildikten sonra zaman sınırlarına sahip olur.  Daha önce etkinleştirilen avantajlar, kullanım koşullarının geri kalanında size açık olmaya devam edecektir.  Örneğin, altı aylık LinkedIn Learning aboneliğini etkinleştirmiş ve Visual Studio aboneliğinizin süresi dolduğunda da dört ay daha kaldı ise LinkedIn Learning aboneliğine dört ay boyunca erişebilirsiniz.  
 
 ## <a name="resources"></a>Kaynaklar
-- Abonelikler için satış, abonelikler, hesaplar ve faturalama konusunda Visual Studio için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama konusunda yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

@@ -9,11 +9,11 @@ ms.author: lank
 manager: lank
 ms.assetid: 2dc938b5-37e9-4dfc-8676-5d0a91d366ab
 ms.openlocfilehash: b04a99ffc35a61ecb92ac2401a08669afd84f551
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128309535"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128375638"
 ---
 # <a name="what39s-new-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerdeki&#39;yenilikler
 

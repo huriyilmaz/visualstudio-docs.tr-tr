@@ -1,18 +1,18 @@
 ---
 title: Visual Studio abonelik düzeylerini değiştirmenin etkileri | Visual Studio 'Nde
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: bb2fa359-8170-4db0-a0c5-d49fc692b0aa
 ms.date: 03/18/2021
 ms.topic: conceptual
 description: Visual Studio abonelik düzeyinizi yükseltmenin veya indirmeyle ilgili etkileri öğrenin.
-ms.openlocfilehash: 93ea729280916cb62ba2b87ff820bb25069369d7
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 9774c4b7d2ad127d606879f1cd40bc88ae3b2c6f
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966524"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128375687"
 ---
 # <a name="what-happens-when-you-change-visual-studio-subscription-levels"></a>Visual Studio abonelik düzeylerini değiştirdiğinizde ne olur?
 Visual Studio abonelikler, yazılım, araçlar, hizmetler ve diğer avantajlar, abonelik düzeyinize göre değişir.  Genellikle abonelik düzeyiniz arttıkça, sağladığı avantajların daha güçlü olması gerekir.  

@@ -13,11 +13,11 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: ca36dbefec8ff61a8ba05286f2dd8aa6593cc13b
-ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "127890572"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128374582"
 ---
 # <a name="repair-visual-studio"></a>Visual Studio’yu onarın
 

@@ -8,11 +8,11 @@ ms.date: 03/17/2021
 ms.topic: how-to
 description: Seçili aboneliklere dahil olan DataCamp eğitim aboneliği hakkında Visual Studio öğrenin.
 ms.openlocfilehash: bfa26eaeb26df833953430a3514cf77e2e7f3e3d
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128307123"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128375714"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde DataCamp eğitim avantajı
 Uygun abonelikler Visual Studio DataCamp aboneliklerini içerir.  DataCamp ile ihtiyacınız olan tüm veri bilimi becerilerini tarayıcınızın rahat bir şekilde öğrenebilirsiniz. Ne zaman ve ne öğreneceğinizi seçebilirsiniz. Yüklenmek için yazılım olmadığı ve özel donanım gereksinimleri olmadığı için veri bilimi her zamankinden daha kolaydır.
@@ -20,7 +20,7 @@ Uygun abonelikler Visual Studio DataCamp aboneliklerini içerir.  DataCamp ile i
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
-2. "Professional Development" kategorisindeki DataCamp avantajı kutucuğunu bulun ve Etkinleştir'e **tıklayın.**
+2. "Professional Geliştirme" kategorisindeki DataCamp avantajı kutucuğunu bulun ve Etkinleştir'e **tıklayın.**
    > [!div class="mx-imgBorder"]
    > ![DataCamp Avantajı Kutucuğu](_img/vs-datacamp/vs-datacamp-tile-2.png "Başlamak için 'Etkinleştir'e tıklayın.")
 
@@ -68,7 +68,7 @@ Herhangi bir noktada durdurabilir ve sonraki oturumda eğitiminizi sürdürebili
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 
-<sup>1</sup>*Şunları içerir: Resale (NFR), FTE, En Değerli Professional (MVP), Bölgesel Direktörü (RD), Microsoft İş Ortağı Ağı (MPN), Visual Studio Sektör Ortağı (VSIP), Microsoft Sertifikalı Eğitimci, BizSpark, Imagine.  Dışlar: NFR Basic*  
+<sup>1</sup>*Şunları içerir: Resale (NFR), FTE, En Değerli Professional (MVP), Bölgesel Direktörü (RD), Microsoft İş Ortağı Ağı (MPN), Visual Studio Endüstri İş Ortağı (VSIP), Microsoft Sertifikalı Eğitimci, BizSpark, Imagine.  Dışlar: NFR Basic*  
 
 > [!NOTE]
 > Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
@@ -80,7 +80,7 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
   - [DataCamp Community,](https://www.datacamp.com/community/tutorials)forumları ve öğreticileri içerir.
   - [DataCamp Yardım Merkezi,](https://support.datacamp.com/hc)burada arama destek konuları ve kullanıcı soruları isteğine bakın.
   - [Destek isteği gönderme](https://support.datacamp.com/hc/requests/new)
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için destek [Visual Studio ile iletişime geçin.](https://my.visualstudio.com/gethelp)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için, [Visual Studio abonelik desteği ile iletişim kurun.](https://my.visualstudio.com/gethelp)
 - IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.

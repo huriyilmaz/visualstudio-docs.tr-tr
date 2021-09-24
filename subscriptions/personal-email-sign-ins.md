@@ -1,18 +1,18 @@
 ---
 title: vlsc 'de Visual Studio abonelikleri için kişisel e-postalar
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
 ms.date: 03/21/2021
 ms.topic: conceptual
 description: 'Visual Studio Abonelikler: neden abonelere yönelik hotmail veya Gmail adreslerini görüyorum?'
-ms.openlocfilehash: 99c22d74a9a6fb57e79f699e548de928ef1ebcb6
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: fe1f9a293109c168c7cfcadda2ca98db3fa9a942
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725937"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128375705"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Visual Studio abonelikler – abonelerimin kişisel hesaplarını neden görüyorum?
 toplu lisanslama hizmeti merkezi 'nden (vlsc) yeni Visual Studio [abonelikleri yönetim portalına](https://manage.visualstudio.com)geçiş yaptıktan sonra yöneticiler, bazı aboneler için "oturum açma e-posta adresinin" Hotmail veya Outlook gibi kişisel bir e-posta adresi gösterdiğini öğrenmektir.  
