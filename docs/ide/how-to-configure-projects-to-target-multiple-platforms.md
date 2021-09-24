@@ -15,11 +15,11 @@ manager: jmartens
 ms.workload:
 - multiple
 ms.openlocfilehash: 7b9afd184ac7a0859e8a4a9c68a17ba2737e8a71
-ms.sourcegitcommit: c2afe12aaf04456846613550b367cf86eb082f4b
+ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2021
-ms.locfileid: "128002352"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128329411"
 ---
 # <a name="how-to-configure-projects-to-target-multiple-platforms"></a>Nasıl yapılır: birden çok platformu hedeflemek için projeleri yapılandırma
 

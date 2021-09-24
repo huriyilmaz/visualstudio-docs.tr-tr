@@ -1,18 +1,18 @@
 ---
 title: Visual Studio aboneliklerini yönetme
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/21/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerinizden en iyi şekilde nasıl yararlanalabileceğinizi öğrenin
-ms.openlocfilehash: fce096a0999fefe16abc009c04f87cf4eff35748
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: ddd49d1725faaeed5b727d782888f94bbd2d107e
+ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966494"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128329438"
 ---
 # <a name="managing-subscriptions"></a>Abonelikleri yönetme
 
@@ -33,7 +33,7 @@ Avantajlar sayfasında, kullanımdaki abonelik mavi başlık başlığında gör
 - Sağ üst köşedeki açılan listeyi seçin ve listeden aboneliği seçin
 - Abonelikler sekmesini seçin ve ardından istediğiniz aboneliği seçin
   > [!div class="mx-imgBorder"]
-  > ![Abonelikleri değiştirme](_img/manage-vs-subscriptions/change-subscription-resized.png "Tüm abonelikleriniz hakkında ayrıntılı bilgileri görmek ve aralarında geçiş yapmak için Abonelikler sekmesini seçin.")
+  > ![Abonelikleri değiştirme](_img/manage-vs-subscriptions/change-subscription-resized.png "Aboneliklerinizin tümü hakkındaki ayrıntılı bilgileri görmek ve bunlar arasında geçiş yapmak için abonelikler sekmesini seçin.")
 
 ### <a name="if-your-subscription-is-not-visible"></a>Aboneliğiniz görünür değilse...
 
@@ -78,7 +78,7 @@ Profilinizdeki iletişim bilgilerini ve tercihlerini kolayca değiştirebilirsin
 aboneliğiniz ve avantajlarınız hakkında aylık Visual Studio abonelikleri bülteni de dahil olmak üzere düzenli güncelleştirmeler almak isterseniz, Visual Studio profilinizde Visual Studio abonelikleri kutusunu işaretleyerek [tercihlerinizi güncelleştirin](https://app.vsaex.visualstudio.com/me?workflowID=devprogram&tab=edit) . Bu tercihleri değiştirebilir ve istediğiniz zaman aboneliğinizi kaldırabilirsiniz. 
 
    > [!div class="mx-imgBorder"]
-   > ![Tercihleri ayarlama](_img/manage-vs-subscriptions/change-prefs.png "Güncelleştirmeleri almak Visual Studio abonelikler programı e-postası onay kutusunu seçin.")
+   > ![Tercihleri ayarlama](_img/manage-vs-subscriptions/change-prefs.png "güncelleştirmeleri almak için Visual Studio abonelikleri program e-postaları onay kutusunu seçin.")
    
 ### <a name="linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions"></a>aboneliğimi mevcut Azure DevOps Services veya Azure aboneliklerine bağlama
 aboneliğinizde kişisel Microsoft hesabı (MSA) kullanarak oturum açarsanız ve Azure tarafından yönetilen iş veya okul hesabını kullanarak Azure DevOps Services veya Microsoft Azure içeren bir aboneliğe sahipseniz, iki aboneliği bağlayabilirsiniz. bu, "alternatif hesap" olarak adlandırılır ve mevcut Azure, Azure DevOps Services veya okulunuzla veya iş hesaplarınızla ilişkili olan ıde kaynaklarına erişim sağlarken, kendi aboneliğinizde oturum açmak için MSA 'u kullanmaya devam etmenizi sağlar.
