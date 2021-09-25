@@ -10,12 +10,12 @@ user.type: admin
 tags: manage, super
 subscription.type: vl, cloud, retail, partner
 sap.id: 8789faa7-9d29-25d8-018a-4f6ecee827c8
-ms.openlocfilehash: 05e73153f63629308aea5a97b45a2724855456af46c20b427dd825c9756d77ed
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: aa8f9d6a4d36202f180b1d57f5b9bc6009d6fe91
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "127892564"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431663"
 ---
 ## <a name="where-can-i-find-the-super-admin-for-an-agreement"></a>Bir sözleşmenin süper yöneticisini nerede bulabilirim?
 1.  [Yönetici portalının aboneler sayfasında](https://manage.visualstudio.com/subscribers) olduğunuzdan emin olun ve sol üst taraftaki açılan kutuda doğru sözleşmeye bakdığınızı kontrol edin.

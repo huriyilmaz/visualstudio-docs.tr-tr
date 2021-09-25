@@ -8,11 +8,11 @@ ms.date: 05/18/2021
 ms.topic: how-to
 description: Sorular veya sorunlarla ilgili yardım almak için abonelik yöneticinize nasıl başvurabileceğiniz hakkında bilgi edinin.
 ms.openlocfilehash: acfd0a68cc9bbdf8d19c352747d8607bf5e6b6d6
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128329420"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128429681"
 ---
 # <a name="get-assistance-from-your-subscriptions-admin"></a>Abonelik yöneticinizden yardım alın
 Visual Studio aboneliğiniz iş veya okulunuz tarafından sağlanmışsa, size bir abonelik yöneticisi veya "yönetici" tarafından atanmamıştır.  Yöneticiler abonelikleri atayabilir veya kaldırabilir, oturum açma e-posta adreslerini değiştirebilir, yazılım indirebilme ve aboneliğiniz ile ilgili başka işlevler gerçekleştirmenize izin verebilir.

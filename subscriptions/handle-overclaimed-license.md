@@ -8,11 +8,11 @@ ms.date: 05/18/2021
 ms.topic: conceptual
 description: Yöneticilerin aşırı yüklenmiş abonelikleri nasıl çözebileceğinizi öğrenin
 ms.openlocfilehash: bb545d6bef8f50e1548e31ad6db73a84e6804f53
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128329429"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128429516"
 ---
 # <a name="over-allocated-subscriptions"></a>Fazla ayrılmış abonelikler
 Bazen abonelik eklendikten sonra siparişler değişir, bu da şirketiniz tarafından sahip olunan lisanslardan daha fazla abonelik olmasına neden olabilir. Bu, "aşırı ayırma" olarak adlandırılır.  

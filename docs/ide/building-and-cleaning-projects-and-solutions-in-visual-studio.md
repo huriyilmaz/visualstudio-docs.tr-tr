@@ -2,7 +2,7 @@
 title: Projeleri ve Çözümleri Oluşturma ve Temizleme
 description: Bir çözümdeki proje veya proje öğelerinden tümünü veya bir kısmını nasıl oluşturabileceğiniz, yeniden oluşturabileceğiniz veya temizleyebileceğinizi öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/04/2016
+ms.date: 09/14/2021
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 f1_keywords:
@@ -25,22 +25,22 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: ba53fefcc5d29cb47bd3a6912ad7af34dd8deabb
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 81bf65489fe97dab1a331b8b7d22f8ac05520312
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99850392"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128427752"
 ---
-# <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme
+# <a name="build-and-clean-projects-and-solutions-in-visual-studio"></a>Visual Studio projeler ve çözümler oluşturma ve Temizleme
 
 Bu konudaki yordamları kullanarak bir çözümde proje veya proje öğelerinden tümünü veya bir kısmını oluşturabilir, yeniden oluşturabilir veya temizleyebilirsiniz. Adım adım bir öğretici için bkz. [Izlenecek yol: uygulama oluşturma](../ide/walkthrough-building-an-application.md).
 
 > [!NOTE]
-> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio içindeki proje ve çözümleri oluşturma ve Temizleme](/visualstudio/mac/building-and-cleaning-projects-and-solutions).
+> bu konu Windows Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio içindeki proje ve çözümleri oluşturma ve temizleme](/visualstudio/mac/building-and-cleaning-projects-and-solutions).
 
 > [!NOTE]
-> Visual Studio sürümünüzde Kullanıcı arabirimi, etkin ayarlarınıza bağlı olarak bu konunun açıklanana kadar farklılık gösterebilir. Ayarlarınızı değiştirmek (örneğin, **genel** veya **Visual C++** ayarları) için **Araçlar**  >  **içeri ve dışarı aktarma ayarları**' nı seçin ve ardından **tüm ayarları Sıfırla**' yı seçin.
+> Visual Studio sürümünüzde kullanıcı arabirimi, etkin ayarlarınıza bağlı olarak bu konunun açıklanana kadar farklılık gösterebilir. ayarlarınızı değiştirmek (örneğin, **genel** veya **Visual C++** ayarları) için **araçlar**  >  **içeri aktar ve dışarı aktar Ayarlar**' ı seçin ve ardından **tüm ayarları sıfırla**' yı seçin.
 
 ## <a name="to-build-rebuild-or-clean-an-entire-solution"></a>Tüm çözümü derlemek, yeniden derlemek veya temizlemek için
 
@@ -48,7 +48,7 @@ Bu konudaki yordamları kullanarak bir çözümde proje veya proje öğelerinden
 
 2. Menü çubuğunda, **Oluştur**' u seçin ve ardından aşağıdaki komutlardan birini seçin:
 
-    - Yalnızca en son derlemeden bu yana değiştirilen proje dosyalarını ve bileşenlerini derlemek için **Build** veya **Build Solution** öğesini seçin.
+    -    +  + Yalnızca en son derlemeden bu yana değiştirilen proje dosyalarını ve bileşenleri derlemek için Build veya Build Solution ' ı seçin ya da CTRL SHIFT **B**' ye basın.
 
         > [!NOTE]
         > Bir çözüm birden fazla proje içerdiğinde **Build** komutu **derleme çözümü** haline gelir.
@@ -83,11 +83,11 @@ Bu konudaki yordamları kullanarak bir çözümde proje veya proje öğelerinden
 
     - Menü **çubuğunda Build**  >  **Build Solution** (**CTRL** + **Shift** + **B**) öğesini seçin.
 
-    Bu onay kutusu Temizlenmişken, önceki komutlardan birini çalıştırdığınızda tüm projeler, bağımlılıkları ve çözüm dosyaları oluşturulur. Varsayılan olarak bu onay kutusu işaretli değildir.
+    Bu onay kutusu Temizlenmişken, önceki komutlardan birini çalıştırdığınızda tüm projeler, bağımlılıkları ve çözüm dosyaları oluşturulur.
 
 ## <a name="to-build-only-the-selected-visual-c-project"></a>Yalnızca seçili Visual C++ projesi oluşturmak için
 
-Bir [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] proje seçin ve ardından menü çubuğunda   >  **yalnızca proje** oluştur ' u ve aşağıdaki komutlardan birini seçin:
+bir C++ projesi seçin ve ardından menü çubuğunda yalnızca **yapı**  >  **Project** oluştur ' u ve aşağıdaki komutlardan birini seçin:
 
 - **Yalnızca** *ProjectName* oluştur
 
@@ -97,11 +97,11 @@ Bir [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] proje seçin ve ar
 
 - **Salt bağlantı yalnızca** *ProjectName*
 
-Bu komutlar [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] , herhangi bir proje bağımlılığı veya çözüm dosyası oluşturmadan, yeniden oluşturmaya, temizlemeye veya bağlamaya gerek kalmadan yalnızca seçtiğiniz proje için geçerlidir. Sürümünüze bağlı olarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , **yalnızca proje** alt menüsünde daha fazla komut bulunabilir.
+Bu komutlar, herhangi bir proje bağımlılığı veya çözüm dosyası oluşturmadan, yeniden oluşturmaya, temizlemeye veya bağlamaya gerek kalmadan yalnızca seçtiğiniz C++ projesi için geçerlidir. Visual Studio sürümünüze bağlı olarak, **yalnızca Project** alt menüsünde daha fazla komut bulunabilir.
 
 ## <a name="to-compile-multiple-c-project-items"></a>Birden çok C++ proje öğesi derlemek için
 
-**Çözüm Gezgini**, derlenebilecek eylemler olabilecek birden çok dosya seçin, bu dosyalardan biri için kısayol menüsünü açın ve **Derle**' yi seçin.
+**Çözüm Gezgini**, derlenebilecek eylemler olabilecek birden çok dosya seçin, bu dosyalardan biri için kısayol menüsünü açın ve **Derle**' yi seçin veya **CTRL**+ + **F7** tuşuna basın.
 
 Dosyaların bağımlılıkları varsa, dosyalar bağımlılık sırasıyla derlenir. Dosyalar derlerken kullanılamayan bir ön derlenmiş üstbilgi gerektiriyorsa, derleme işlemi başarısız olur. Derleme işlemi geçerli etkin çözüm yapılandırmasını kullanır.
 
@@ -123,4 +123,4 @@ Aşağıdaki adımlardan birini gerçekleştirin:
 - [C/C++ oluşturma başvurusu](/cpp/build/reference/c-cpp-building-reference)
 - [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md)
 - [Çözümler ve projeler](../ide/solutions-and-projects-in-visual-studio.md)
-- [Projeleri ve çözümleri oluşturma ve Temizleme (Mac için Visual Studio)](/visualstudio/mac/building-and-cleaning-projects-and-solutions)
+- [projeleri ve çözümleri oluşturma ve temizleme (Mac için Visual Studio)](/visualstudio/mac/building-and-cleaning-projects-and-solutions)

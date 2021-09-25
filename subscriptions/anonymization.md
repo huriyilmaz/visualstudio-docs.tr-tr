@@ -1,18 +1,18 @@
 ---
 title: Abone verilerini Visual Studio anonimleştirme | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: ce5fc8a4-484c-4df6-97c3-cb60174fb66b
 ms.date: 03/11/2021
 ms.topic: conceptual
 description: Aboneliklere erişim kaybedilirken abone verilerini nasıl anonimleştirildiğini öğrenin.
-ms.openlocfilehash: 2a3d55824db1c90ff0868dda6d398e8c0e9a53d7
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 379875dbd7717d33f495f3d42a38facabdb11d81
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966389"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128428110"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Abone bilgilerini Visual Studio anonimleştirme
 Aboneliğin sona ermesi veya abonenin oturum açma hesabının silinmesi gibi abonenin abonelik kullanımını engelleyen bir olay oluştuğunda, kullanıcının ad ve oturum açma hesabı gibi kişisel bilgileri temelde bunları kullanılamaz hale getirebilirsiniz.  Bu, abonenin kişisel bilgilerini korumak için yapılır.
@@ -31,7 +31,7 @@ Aboneliği abone için kullanılamaz hale getiren olaylar anonimleştirmeyi teti
 | Tüm abonelikler                                                                                                                       | Abone, kiracı hesabıyla ilişkili kiracıdan Azure Active Directory kaldırılır                                | Hemen               |
 
 ## <a name="faq"></a>SSS
-### <a name="q--does-the-anonymization-of-the-subscribers-personal-information-cause-them-to-lose-access-to-the-subscription"></a>S: Abonenin kişisel bilgilerini anonimleştirme, aboneliğe erişimi kaybetmelerine neden oluyor mu?
+### <a name="q--does-the-anonymization-of-the-subscribers-personal-information-cause-them-to-lose-access-to-the-subscription"></a>S: Abonenin kişisel bilgilerini anonimleştirme, aboneliğe erişimi kaybetmelerine neden olur mu?
 A: Hayır.  Anonimleştirme, aboneliğe erişim kaybına neden olan ancak erişim eksikliğine neden olmayan bir olayla yanıt olur.
 
 ### <a name="q--im-an-admin-for-my-organizations-subscriptions--if-one-of-my-subscribers-information-is-anonymized-can-that-subscription-be-reassigned-to-another-user"></a>S: Kuruluşum abonelikleri için yöneticiyim.  Abonemin bilgilerinden biri anonimleştirilmişse bu abonelik başka bir kullanıcıya yeniden atanabilir mi?
@@ -45,7 +45,7 @@ A: Sorunu önlemenin iki yolu vardır:
 - AAD ve MSA kimliklerini kiracı aracılığıyla ilişkilendirme. 
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Abonelikler için satış, abonelikler, hesaplar ve faturalama konusunda Visual Studio için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

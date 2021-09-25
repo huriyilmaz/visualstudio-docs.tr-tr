@@ -1,6 +1,6 @@
 ---
 title: MSBuild Hedefler | Microsoft Docs
-description: Görevleri birlikte MSBuild için hedefleri nasıl kullandığını ve derleme işleminin daha küçük birimlere göre nasıl dikkate alınarak gerçekleştirilene izin verme hakkında bilgi alın.
+description: Görevleri MSBuild için hedefleri nasıl kullandığını ve derleme işleminin daha küçük birimlerde dikkate alınarak nasıl izin ver olduğunu öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 09/21/2021
 ms.topic: conceptual
@@ -14,11 +14,11 @@ ms.technology: msbuild
 ms.workload:
 - multiple
 ms.openlocfilehash: 96e9ee12fbe3777e99ca5e4a256c655fda11900e
-ms.sourcegitcommit: 59613afd06a8f184efab8e108410066824a2b712
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "127920009"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128427591"
 ---
 # <a name="msbuild-targets"></a>MSBuild hedefleri
 

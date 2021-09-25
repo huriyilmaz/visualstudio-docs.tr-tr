@@ -18,11 +18,11 @@ author: kendrahavens
 manager: jmartens
 ms.technology: vs-ide-test
 ms.openlocfilehash: fd53079017ebfce2bb2602754a14d3f2e6e5547a
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128307105"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128429088"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio Test Gezgini hakkında SSS
 
@@ -49,7 +49,7 @@ Projenizi derleme ve Araç Seçenekleri Testi'nde  derleme tabanlı bulmanın a�
 ::: moniker range="vs-2017"
 ## <a name="assembly-based-discovery"></a>Derleme tabanlı bulma
 
-**Derleme tabanlı bulma artık projem için çalışmıyor. Nasıl yaparım? açsın mı?**
+**Derleme tabanlı bulma artık projem için çalışmıyor. Nasıl yaparım? açmak mı?**
 
 Araçlar  Seçenekler > **Testi'ne** > **gidin** ve Derlemelerden sonra yerleşik derlemelerden testleri de bulma **kutusunu işaretleyin.**
 
@@ -84,13 +84,13 @@ Uygulama dağıtıldığında UWP testleri farklı bir çalışma zamanının he
 
 **Hiyerarşi görünümünde test sonuçlarını sıralama nasıl çalışır?**
 
-Hiyerarşi görünümü testleri sonuç yerine alfabetik olarak sıralar. Ayarlara göre önceki grup, test sonuçlarını sonuca ve ardından alfabetik olarak sıraladı. Test Gezgini'nde sütun başlığına sağ tıklar, State sütununu etkinleştirir ve ardından State sütun başlığına tıklayarak bu sütuna sıralama uygulamak için sonuca göre sıralamayı etkinleştirebilirsiniz. Bu sorunda tasarım hakkında geri bildirim [GitHub sebilirsiniz.](https://github.com/Microsoft/vstest/issues/1425)
+Hiyerarşi görünümü testleri sonuç yerine alfabetik olarak sıralar. Ayarlara göre önceki grup, test sonuçlarını sonuca ve ardından alfabetik olarak sıraladı. Test Gezgini'nde sütun başlığına sağ tıklar, State sütununu etkinleştirir ve ardından State sütun başlığına tıklayarak bu sütuna sıralama uygulamak için sonuca göre sıralamayı etkinleştirebilirsiniz. Bu sorunda tasarım hakkında geri GitHub [sebilirsiniz.](https://github.com/Microsoft/vstest/issues/1425)
 
 ## <a name="test-explorer-hierarchy-view"></a>Test Gezgini hiyerarşi görünümü
 
 **Hiyerarşi görünümünde, üst düğüm gruplamaları yanında geçirilen, başarısız olan, atlanan ve çalıştıramayan simgeler vardır. Bu simgeler ne anlama geliyor?**
 
-Project, Ad Alanı ve Sınıf gruplamalarının yanındaki simgeler, bu gruplama içindeki testlerin durumunu gösterir. Aşağıdaki tabloya bakın.
+Project, Namespace ve Class gruplamalarının yanındaki simgeler, bu gruplama içindeki testlerin durumunu gösterir. Aşağıdaki tabloya bakın.
 
 ![Test Gezgini Hiyerarşi Simgeleri](media/testex-hierarchy-icons.png)
 
@@ -98,13 +98,13 @@ Project, Ad Alanı ve Sınıf gruplamalarının yanındaki simgeler, bu gruplama
 
 **Test Gezgini arama kutusunda artık "Dosya Yolu" filtresi yoktur.**
 
-**Test** Gezgini arama kutusunda dosya yolu filtresi 2017 Visual Studio 15.7'de kaldırıldı. Bu özelliğin kullanımı düşüktü ve Test Gezgini bu özelliği bırakarak test yöntemlerini daha hızlı alabilir. Bu değişiklik geliştirme akışınızı kesintiye uğratması için Geliştirici geliştirme hakkında geri bildirim göndererek [Community.](https://aka.ms/feedback/suggest?space=8)
+**Test** Gezgini arama kutusunda dosya yolu filtresi, 2017 Visual Studio 15.7'de kaldırıldı. Bu özelliğin kullanımı düşüktü ve Test Gezgini bu özelliği bırakarak test yöntemlerini daha hızlı alabilir. Bu değişiklik geliştirme akışınızı kesintiye uğratması için [](https://aka.ms/feedback/suggest?space=8)Developer Community.
 
 ## <a name="remove-undocumented-interfaces"></a>Belgelenmemiş arabirimleri kaldırma
 
 **Testle ilgili bazı API'ler artık Visual Studio 2019'da mevcut değil. Ne değişti?**
 
-Bu Visual Studio 2019'da daha önce genel olarak işaretlenmiş ancak hiçbir zaman resmi olarak belgelenmiş olan bazı test penceresi API'leri kaldırılacaktır. Uzantı bakımcılara erken uyarı vermek için Visual Studio 2017'de "kullanım dışı" olarak işaretlendi. Bu API'leri çok az sayıda uzantının bulduğu ve bunlara bağımlı olduğu bilgisini edindi. Bunlar , `IGroupByProvider` , , , , ve `IGroupByProvider<T>` `KeyComparer` `ISearchFilter` `ISearchFilterToken` `ISearchToken` 'dır. `SearchFilterTokenType` Bu değişiklik uzantınızı etkiliyorsa, Developer Community üzerinde bir hata [doldurarak bize Community.](https://aka.ms/feedback/suggest?space=8)
+Bu Visual Studio 2019'da, daha önce genel olarak işaretlenmiş ancak hiçbir zaman resmi olarak belgelenmiş olan bazı test penceresi API'leri kaldırılacaktır. Uzantı bakımcılara erken uyarı vermek için Visual Studio 2017'de "kullanım dışı" olarak işaretlendi. Bu API'leri çok az sayıda uzantının bulduğu ve bunlara bağımlı olduğu bilgisini edindi. Bunlar , `IGroupByProvider` , , , , ve `IGroupByProvider<T>` `KeyComparer` `ISearchFilter` `ISearchFilterToken` `ISearchToken` 'dır. `SearchFilterTokenType` Bu değişiklik uzantınızı etkiliyorsa, Developer Community üzerinde bir hata [doldurarak bize Community.](https://aka.ms/feedback/suggest?space=8)
 
 ## <a name="test-adapter-nuget-reference"></a>Test bağdaştırıcısı NuGet başvurusu
 
@@ -129,7 +129,7 @@ Test bağdaştırıcısı uzantılarını kullanmak yerine, projelerin test bağ
 
 Son UWP test projeleri, test uygulamalarını tanımlamak için daha iyi performans sağlayan bir test platformu derleme özelliği belirtir. Sürüm 15.7'den önce başlatılan bir UWP test Visual Studio, Çıktı Testlerinde bu **hatayı**  >  **alabilirsiniz:**
 
-**System.AggregateException: Bir veya daha fazla hata oluştu. ---> System.InvalidOperationException: Aşağıdaki TestContainer {} Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider \<GetTestContainerAsync> d__61.MoveNext() içinde bulunamadı**
+**System.AggregateException: Bir veya daha fazla hata oluştu. ---> System.InvalidOperationException: {} Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider \<GetTestContainerAsync> d__61.MoveNext() içinde aşağıdaki TestContainer bulunamadı**
 
 Bu hatayı düzeltmek için:
 
@@ -147,7 +147,7 @@ Bu hatayı düzeltmek için:
 ::: moniker range=">=vs-2019"
 ## <a name="using-preview-features"></a>Önizleme özelliklerini kullanma
 
-2019'Visual Studio'da Araçlar ve Seçenekler'de önizleme özelliklerini > **Ortam > Önizleme > seçebilirsiniz.**
+2019'Visual Studio'da, Ortam ve Önizleme Özellikleri için Araçlar **> Seçenekler > önizleme > seçebilirsiniz.**
 ::: moniker-end
 ::: moniker range="vs-2017"
 ## <a name="using-feature-flags"></a>Özellik bayraklarını kullanma

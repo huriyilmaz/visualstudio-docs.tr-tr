@@ -224,7 +224,11 @@
               href: troubleshooting-specific-errors-in-clickonce-deployments.md
             - name: System.Deployment.application kullanan ClickOnce uygulamalarında hata ayıklama
               href: debugging-clickonce-applications-that-use-system-deployment-application.md
-    - name: Uygulama dağıtımının önkoşulları
+    - name: Visual Studio Yükleyicisi projeleri
+      items:
+        - name: Visual Studio Yükleyicisi Projeleri Uzantısı ve .NET Core 3.1
+          href: installer-projects-net-core.md
+    - name: Özel önyükleyici
       items:
         - name: Uygulama dağıtımının önkoşulları
           href: application-deployment-prerequisites.md
@@ -308,7 +312,3 @@
               href: customerrorreporting-element-clickonce-deployment.md
         - name: ClickOnce Yönetilmeyen API Başvurusu
           href: clickonce-unmanaged-api-reference.md
-    - name: Visual Studio Yükleyicisi Projeleri Başvurusu
-      items:
-        - name: Visual Studio Yükleyicisi Projeleri Uzantısı ve .NET Core 3.1
-          href: installer-projects-net-core.md

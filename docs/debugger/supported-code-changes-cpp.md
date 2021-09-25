@@ -24,16 +24,16 @@ ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f1a49c46c975d37f2b0b43531029b0ae5a28d4f8
-ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "127890474"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128426783"
 ---
 # <a name="supported-code-changes-c"></a>Desteklenen Kod Değişiklikleri (C++)
 C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. Ancak, program yürütme sırasında bazı değişiklikler uygulanamaz. Bu değişiklikleri uygulamak için yürütmeyi durdurmalı ve kodun yeni bir sürümünü oluşturmalı.
 
- Aşağıdaki [belgelerde C++ için Düzenle](../debugger/edit-and-continue-visual-cpp.md) ve DevamLa ile çalışma hakkında bilgi için bkz. Düzenle ve Devam Visual Studio.
+ Aşağıdaki [belgelerde](../debugger/edit-and-continue-visual-cpp.md) C++ için Düzenle ve DevamLa ile çalışma hakkında bilgi için bkz. Düzenle ve Devam Visual Studio.
 
 ## <a name="requirements"></a><a name="BKMK_Requirements"></a> Gereksinim -leri
 ### <a name="build-settings-project--properties"></a>Derleme ayarları (Project > Özellikleri):
@@ -44,7 +44,7 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
      Uyumsuz tüm bağlantı ayarlarında (, veya `/SAFESEH` ...) derleme `/OPT:` sırasında _LNK4075 uyarısına_ neden olması gerekir.  
      Örnek: `LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/OPT:ICF' specification`
 
-### <a name="debugger-settings-debug--options--general"></a>Hata ayıklayıcı ayarları (Hata ayıklama > Seçenekleri > Genel):
+### <a name="debugger-settings-debug--options--general"></a>Hata ayıklayıcı ayarları (Hata > Seçenekleri > Genel):
   - Yerel Düzenleme ve Devam'a Etkinleştirme
 
      Uyumsuz derleyici veya bağlantıleyici ayarları Düzenle ve Devam Edin sırasında hataya neden olur.  
@@ -86,7 +86,7 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
 
 - /Zo ile derlenmiş yerel uygulamalarda hata [ayıklama (İyileştirilmiş Hata Ayıklamayı geliştirme)](/cpp/build/reference/zo-enhance-optimized-debugging)
 
-- Visual Studio 2015 Güncelleştirme 1 Visual Studio önceki sürümlerde UWP uygulamaları veya bileşenlerinde hata ayıklama. Visual Studio 2015 Güncelleştirme 1'den başlayarak UWP C++ uygulamaları ve DirectX uygulamaları içinde Düzenle ve Devam Edin'i kullanabilirsiniz, çünkü artık anahtar ile derleyici anahtarını `/ZI` `/bigobj` desteklemektedir. Anahtarıyla derlenmiş ikili dosyalarla Düzenle ve Devam'a da `/FASTLINK` kullanabilirsiniz.
+- Visual Studio 2015 Güncelleştirme 1 Visual Studio önceki sürümlerde UWP uygulamaları veya bileşenlerinde hata ayıklama. Visual Studio 2015 Güncelleştirme 1'den başlayarak UWP C++ uygulamaları ve DirectX uygulamaları içinde Düzenle ve Devam Edin'i kullanabilirsiniz çünkü artık anahtar ile derleyici anahtarını `/ZI` `/bigobj` desteklemektedir. Anahtarıyla derlenmiş ikili dosyalarla Düzenle ve Devam'a da `/FASTLINK` kullanabilirsiniz.
 
 - 8/8.1 Mağaza Uygulamalarının Hata Ayıklaması. Bu projeler VC 120 araç kümesi ve C/C++ anahtarını `/bigobj` kullanır. Ile Düzenle ve `/bigobj` Devam Edin, yalnızca VC 140 araç kümesinde de destekleni.
 
@@ -108,7 +108,7 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
 
 - Derleme hataları nedeniyle yeni bir sürüm derleme başarısız olduktan sonra kodunuzun eski bir sürümünde hata ayıklama.
 
-- Özel derleyici kullanma (*cl.exe*) yolu. Güvenlik nedeniyle, Düzenle ve Devam Sırasında bir dosyanın yeniden derlene Visual Studio her zaman yüklü derleyiciyi kullanır. Özel bir derleyici yolu kullanıyorsanız (örneğin, dosyanız içinde özel bir değişken aracılığıyla), bir uyarı görüntülenir ve Visual Studio aynı `$(ExecutablePath)` sürümün/mimarinin yüklü derleyicisi kullanmaya geri `*.props` döner.
+- Özel derleyici kullanma (*cl.exe*) yolu. Dosyanın Düzenle ve Devam Ederken yeniden derlenmiş olması güvenlik nedeniyle Visual Studio her zaman yüklü derleyiciyi kullanır. Özel bir derleyici yolu kullanıyorsanız (örneğin, dosyanız içinde özel bir değişken aracılığıyla), bir uyarı görüntülenir ve Visual Studio aynı `$(ExecutablePath)` sürümün/mimarinin yüklü derleyicisi kullanmaya geri `*.props` döner.
 
 - FASTBuild derleme sistemi. FASTBuild şu anda "Minimum Yeniden Derlemeyi Etkinleştir ( )" derleyici anahtarıyla uyumlu değildir ve bu nedenle Düzenle ve Devam Et `/Gm` desteklenmiyor.
 
@@ -145,7 +145,7 @@ C++ projeleri için Düzenle ve Devam Edin, çoğu kod değişikliğini işler. 
 3. Hata **ayıklamadan sonra kod değişikliklerini yeniden bağlantıla onay** kutusunun işaretini kaldırın.
 
 ## <a name="precompiled-header-limitations"></a><a name="BKMK_Precompiled_header_limitations"></a> Önceden derlemeli üst bilgi sınırlamaları
- Varsayılan olarak Düzenle ve Devam Değiştir, kod değişikliklerini işlemeyi hızlandırmak için arka planda önceden derleme yapılan üst bilgileri yükler ve işler. Önceden derleme yapılan üst bilgileri yükleme, fiziksel bellek ayırmayı gerektirir. Bu, sınırlı RAM'e sahip bir makinede derlemek için sorun olabilir. Hata ayıklama sırasında kullanılabilir fiziksel bellek miktarını belirlemek için Windows Görev Yöneticisi'ni kullanarak bunun bir sorun olup olmadığını anabilirsiniz. Bu miktar önceden derlemeli üst bilgilerinizin boyutundan büyükse Düzenle ve Devam'da sorun olmaz. Miktar önceden derlemeli üst bilgilerinizin boyutundan küçükse Düzenle ve Devam'ın arka planda önceden derlemeli üst bilgileri yüklemesini önleyemezsiniz.
+ Varsayılan olarak Düzenle ve Devam Değiştir, kod değişikliklerini işlemeyi hızlandırmak için arka planda önceden derleme yapılan üst bilgileri yükler ve işler. Önceden derleme yapılan üst bilgileri yükleme, fiziksel bellek ayırmayı gerektirir. Bu, sınırlı RAM'e sahip bir makinede derlemek için sorun olabilir. Hata ayıklama sırasında kullanılabilir fiziksel bellek miktarını belirlemek için Windows Görev Yöneticisi'ni kullanarak bunun bir sorun olup olmadığını tespitebilirsiniz. Bu miktar önceden derlemeli üst bilgilerinizin boyutundan büyükse Düzenle ve Devam'da sorun olmaz. Miktar önceden derlemeli üst bilgilerinizin boyutundan küçükse Düzenle ve Devam'ın arka planda önceden derlemeli üst bilgileri yüklemesini önleyemezsiniz.
 
  **Düzenle ve Devam Etmek için önceden derlemeli üst bilgileri arka plan yüklemesini devre dışı bırakmak için**
 

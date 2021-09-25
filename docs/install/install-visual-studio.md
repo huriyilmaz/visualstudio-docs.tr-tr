@@ -21,11 +21,11 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: e9672bf47f72aed58ec46edddab83fde594a4494
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128329502"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128429172"
 ---
 # <a name="install-visual-studio"></a>Visual Studio'yu yükleme
 
@@ -237,19 +237,19 @@ Visual Studio yüklemenizi özelleştirmek için İş Yükleri özelliğini kull
 
 ::: moniker range="vs-2017"
 
-  ![Uygulamanın Bağımsız bileşenler sekmesini gösteren Visual Studio Yükleyicisi.](media/vs-installer-installing-components.png "Tek Visual Studio yükleme")
+  ![Uygulamanın Bağımsız bileşenler sekmesini gösteren Visual Studio Yükleyicisi.](media/vs-installer-installing-components.png "Tek Visual Studio bileşenleri yükleme")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-  ![Uygulamanın Bağımsız bileşenler sekmesini gösteren Visual Studio Yükleyicisi.](media/vs-2019/vs-installer-individual-components.png "Tek Visual Studio yükleme")
+  ![Uygulamanın Bağımsız bileşenler sekmesini gösteren Visual Studio Yükleyicisi.](media/vs-2019/vs-installer-individual-components.png "Tek Visual Studio bileşenleri yükleme")
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-  ![Uygulamanın Bağımsız bileşenler sekmesini gösteren Visual Studio Yükleyicisi.](media/vs-2022/vs-installer-individual-components.png "Tek Visual Studio yükleme")
+  ![Uygulamanın Bağımsız bileşenler sekmesini gösteren Visual Studio Yükleyicisi.](media/vs-2022/vs-installer-individual-components.png "Tek Visual Studio bileşenleri yükleme")
 
 ::: moniker-end
 
@@ -301,7 +301,7 @@ Varsayılan dili değiştirmenin bir diğer yolu da yükleyiciyi komut satırdan
 
 ::: moniker range="vs-2019"
 
-Sistem sürücünize yükleme ayak izinin Visual Studio ayak izini azaltabilirsiniz. İndirme önbelleğini, paylaşılan bileşenleri, SDK'ları ve araçları farklı sürücülere taşımayı ve Visual Studio sürücüde en hızlı şekilde çalıştırmayı seçebilirsiniz.
+Sistem sürücüde uygulamanın Visual Studio ayak izini azaltabilirsiniz. İndirme önbelleğini, paylaşılan bileşenleri, SDK'ları ve araçları farklı sürücülere taşımayı ve Visual Studio sürücüde en hızlı şekilde çalıştırmayı seçebilirsiniz.
 
   ![Uygulamanın Yükleme konumları sekmesini gösteren Visual Studio Yükleyicisi.](media/vs-2019/vs-installer-installation-locations.png "Yükleme konumunu seçin")
 
@@ -309,7 +309,7 @@ Sistem sürücünize yükleme ayak izinin Visual Studio ayak izini azaltabilirsi
 
 ::: moniker range=">=vs-2022"
 
-Sistem sürücünize yükleme ayak izinin Visual Studio ayak izini azaltabilirsiniz. Daha fazla bilgi için [bkz. Yükleme konumlarını seçme.](change-installation-locations.md)
+Sistem sürücüde uygulamanın Visual Studio ayak izini azaltabilirsiniz. Daha fazla bilgi için [bkz. Yükleme konumlarını seçme.](change-installation-locations.md)
 
   ![Uygulamanın Yükleme konumları sekmesini gösteren Visual Studio Yükleyicisi.](media/vs-2022/vs-installer-installation-locations.png "Yükleme konumunu seçin")
 
@@ -318,19 +318,19 @@ Sistem sürücünize yükleme ayak izinin Visual Studio ayak izini azaltabilirsi
 > [!IMPORTANT]
 > IDE'yi yüklemek için farklı **bir Visual Studio** seçin veya önbelleği **yalnızca** ilk kez Visual Studio. Zaten yüklemiş ve sürücüleri değiştirmek istiyorsanız, sürücülerini kaldırmanız Visual Studio sonra yeniden yüklemeniz gerekir.
 >
-> Daha önce bilgisayarınıza Visual Studio yükleme yaptıysanız Paylaşılan bileşenler, araçlar ve **SDK'lar** yolunu değiştiremezsiniz ve bu yol gri görünür. Bu konum, tüm yüklemeler tarafından Visual Studio.
+> Daha önce bilgisayarınıza Visual Studio yüklemiş olursanız Paylaşılan bileşenler, araçlar ve **SDK'lar** yolunu değiştiremezsiniz ve bu yol gri görünür. Bu konum, tüm yüklemeler tarafından Visual Studio.
 
 ## <a name="step-8---start-developing"></a>8. Adım - Geliştirmeye başlama
 
 ::: moniker range="vs-2017"
 
-1. Yükleme Visual Studio tamamlandıktan sonra başlat **düğmesini** seçerek uygulama ile geliştirmeye Visual Studio.
+1. Yükleme Visual Studio tamamlandıktan sonra başlat **düğmesini** seçerek yeni bir uygulama Visual Studio.
 
 1. **Dosya'ya** ve ardından Yeni **dosya'Project.**
 
 1. Bir proje türü seçin.
 
-   Örneğin, bir [C++](/cpp/get-started/tutorial-console-cpp)uygulaması oluşturmak için Yüklü'leri **seçin,** **Visual C++'yi** genişletin ve ardından oluşturmak istediğiniz C++ proje türünü seçin.
+   Örneğin, bir [C++](/cpp/get-started/tutorial-console-cpp)uygulaması oluşturmak için Yüklü'leri **seçin,** **Visual C++'ı** genişletin ve ardından oluşturmak istediğiniz C++ proje türünü seçin.
 
    Bir [C# uygulaması oluşturmak için](../get-started/csharp/tutorial-console.md)Yüklü'leri seçin, Visual **C#**'yi genişletin ve ardından oluşturmak istediğiniz C# proje türünü seçin. 
 
@@ -344,7 +344,7 @@ Sistem sürücünize yükleme ayak izinin Visual Studio ayak izini azaltabilirsi
 
 1. Arama kutusuna, kullanılabilir şablonların listesini görmek için oluşturmak istediğiniz uygulama türünü girin. Şablon listesi, yükleme sırasında seçtiğiniz iş yüklerini bağlıdır. Farklı şablonları görmek için farklı iş yükleri seçin.
 
-   Dil açılan listesini kullanarak aramanızı belirli bir programlama dili **için de** filtreleebilirsiniz. Platform listesini ve platform **türü** listesini Project **filtreleebilirsiniz.**
+   Dil açılan listesini kullanarak aramanızı belirli bir programlama dili **için de** filtreleebilirsiniz. Platform listesini ve **Project** **filtresini** de seçebilirsiniz.
 
 1. Visual Studio projenizi açar ve koda hazır olur!
 
@@ -358,7 +358,7 @@ Sistem sürücünize yükleme ayak izinin Visual Studio ayak izini azaltabilirsi
 
 1. Şablon arama kutusuna, kullanılabilir şablonların listesini görmek için oluşturmak istediğiniz uygulama türünü girin. Şablon listesi, yükleme sırasında seçtiğiniz iş yüklerini bağlıdır. Farklı şablonları görmek için farklı iş yükleri seçin.
 
-   Dil açılan listesini kullanarak aramanızı belirli bir programlama dili **için de** filtreleebilirsiniz. Platform listesini ve platform **türü** listesini Project **filtreleebilirsiniz.**
+   Dil açılan listesini kullanarak aramanızı belirli bir programlama dili **için de** filtreleebilirsiniz. Platform listesini ve **Project** **filtresini** de seçebilirsiniz.
 
 1. Visual Studio projenizi açar ve koda hazır olur!
 

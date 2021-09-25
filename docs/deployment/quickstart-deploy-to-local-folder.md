@@ -1,8 +1,8 @@
 ---
 title: Yerel klasöre dağıtma
-description: Yayımlama aracını kullanarak ASP.NET, ASP.NET Core, .NET Core ve Python uygulamalarını Visual Studio.
+description: yayımla aracını kullanarak Visual Studio bir klasöre ASP.NET, ASP.NET Core, .net Core ve Python uygulamaları nasıl yayımlayacağınızı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 01/29/2019
+ms.date: 09/23/2021
 ms.topic: quickstart
 helpviewer_keywords:
 - deployment, local folder
@@ -13,94 +13,94 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b74a5e7c8153b7896d5ee59f2284baaa8b11d31
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: c3df338150c4cf4f72aec310084c32f3db16bcd8
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122146270"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128429075"
 ---
-# <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>Visual Studio kullanarak bir uygulamayı klasöre Visual Studio
+# <a name="deploy-an-app-to-a-folder-using-visual-studio"></a>Visual Studio kullanarak bir uygulamayı bir klasöre dağıtma
 
-Yayımlama aracını kullanarak **ASP.NET,** ASP.NET Core, .NET Core ve Python uygulamalarını Visual Studio. Daha Node.js adımlar destekleniyor ancak kullanıcı arabirimi farklıdır.
+**yayımla** aracını, Visual Studio bir klasöre ASP.NET, ASP.NET Core, .net Core ve Python uygulamaları yayımlamak için kullanabilirsiniz. Node.js, adımlar desteklenir, ancak kullanıcı arabirimi farklıdır.
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 ::: moniker range=">=vs-2017"
 > [!NOTE]
-> Bir klasöre bir Windows masaüstü uygulaması yayımlamanız [](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) gerekirse bkz. ClickOnce (C# veya Visual Basic) kullanarak masaüstü uygulaması dağıtma. C++/CLR için bkz. [ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) kullanarak yerel uygulama dağıtma veya C/C++ için bkz. Kurulum projesi kullanarak [yerel uygulama dağıtma.](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project)
+> bir klasöre Windows masaüstü uygulaması yayımlamanız gerekiyorsa, bkz. [ClickOnce kullanarak .net Windows masaüstü uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md), [Windows kullanarak bir .NET Framework ClickOnce masaüstü uygulaması dağıtma](how-to-publish-a-clickonce-application-using-the-publish-wizard.md). C++/clr için bkz. [ClickOnce kullanarak yerel uygulama dağıtma](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) veya C/C++ için bkz. [kurulum projesi kullanarak yerel uygulama dağıtma](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 > [!NOTE]
-> Bir .NET Core 3.1 veya daha yeni bir sürümü, Windows masaüstü uygulamasını bir klasöre yayımlamanız gerekirse, bkz. ClickOnce kullanarak [.NET Windows uygulaması dağıtma.](quickstart-deploy-using-clickonce-folder.md)
+> bir klasöre .net Core 3,1 veya daha yeni bir sürüm Windows yayımlamanız gerekiyorsa, bkz. [ClickOnce kullanarak .net Windows uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md).
 
 ::: moniker-end
 
 ## <a name="deploy-to-a-local-folder"></a>Yerel klasöre dağıtma
 
-1. Bu Çözüm Gezgini projeye sağ tıklayın ve Yayımla'yı **seçin** (veya Yayımla **menü**  >  **öğesini** kullanın).
+1. Çözüm Gezgini, projeye sağ tıklayın ve **Yayımla** ' yı seçin (veya **Yapı**  >  **Yayımla** menü öğesini kullanın).
 
-    ![Çözüm Gezgini'de proje bağlam menüsündeki Yayımla komutu](../deployment/media/quickstart-publish.png "Yayımla'yı seçin")
+    ![Çözüm Gezgini içindeki proje bağlam menüsündeki Yayımla komutu](../deployment/media/quickstart-publish.png "Yayımla ' yı seçin")
 
-1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız **Yayımla** penceresi görüntülenir. **Yeni**'yi seçin.
+1. Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yayımla** penceresi görüntülenir. **Yeni**'yi seçin.
 
-1. Yayımla **penceresinde** Klasör'e **tıklayın.**
+1. **Yayımla** penceresinde **klasör**' ü seçin.
 
-   ![Yayımlama hedefi olarak klasör seçme](../deployment/media/quickstart-publish-folder-new.png "Klasör Seç")
+   ![Yayımla hedefi olarak klasör seçin](../deployment/media/quickstart-publish-folder-new.png "Klasör Seç")
 
    ::: moniker range=">=vs-2019"
 
-   Bir .NET Core 3.1 veya daha yeni bir sürümü dağıtıyorsanız  Windows Uygulama'ya Özel hedef penceresinde **Klasör'ü seçmeniz** gerekir.
+   bir .net Core 3,1 veya daha yeni bir uygulama dağıtıyorsanız, uygulamayı Windows **belirli hedef** pencerede **klasör** seçmeniz gerekebilir.
 
-   ![Klasörü belirli bir hedef olarak seçme](../deployment/media/quickstart-publish-folder-targets.png "Belirli Bir Hedef Seçin")
+   ![Belirli bir hedef olarak klasör seçin](../deployment/media/quickstart-publish-folder-targets.png "Belirli hedef seçin")
 
-   ClickOnce ile bir .NET Core 3.1 veya daha yeni bir Windows uygulaması yayımlamak isterseniz bkz. ClickOnce kullanarak [.NET Windows uygulaması dağıtma.](quickstart-deploy-using-clickonce-folder.md)
+   ClickOnce bir .net Core 3,1 veya daha yeni bir uygulama Windows yayımlamak istiyorsanız, bkz. [ClickOnce kullanarak .net Windows uygulaması dağıtma](quickstart-deploy-using-clickonce-folder.md).
    ::: moniker-end
 
-1. Bir yol girin veya **Gözat'ı** seçerek bir klasör belirtin.
+1. Bir yol girin veya bir klasör belirtmek için **Araştır** ' ı seçin.
 
-   ![Klasörün yolunu belirtme](../deployment/media/quickstart-publish-folder-path.png "Klasör Seç")
+   ![Klasörün yolunu belirtin](../deployment/media/quickstart-publish-folder-path.png "Klasör Seç")
 
    ::: moniker range=">=vs-2019"
-   Profili **kaydetmek** için Son'a tıklayın.
+   Profili kaydetmek için **son** ' a tıklayın.
 
-   ![Profil özetini gösteren Özellik yayımlama bölmesi](../deployment/media/quickstart-publish-folder-summary.png)
+   ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-folder-summary.png)
    ::: moniker-end
 
 1. **Yayımla**’yı seçin. Visual Studio projeyi oluşturur ve belirtilen klasöre yayımlar.
 
    ::: moniker range="vs-2017"
-   Profil özetini **gösteren** Proje özellikleri Yayımla bölmesi görüntülenir.
+   Bir profil Özeti gösteren proje özellikleri **Yayımla** bölmesi görüntülenir.
 
-   ![Profil özetini gösteren Özellik yayımlama bölmesi](../deployment/media/quickstart-publish-folder-summary.png)
+   ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-folder-summary.png)
    ::: moniker-end
 
-1. Dağıtım ayarlarını yapılandırmak için yayımlama **profili özetini** Düzenle'yi seçin ve **Ayarlar** seçin.
+1. dağıtım ayarlarını yapılandırmak için, yayımlama profili özetinde **düzenle** ' yi seçin ve **Ayarlar** sekmesini seçin.
 
-   Gördüğünüz ayarlar uygulama türünüze bağlıdır. Aşağıdaki çizimde, bir uygulamanın ASP.NET Core gösterilmiştir.
+   Gördüğünüz ayarlar uygulama türüne bağlıdır. aşağıdaki çizimde bir ASP.NET Core uygulamasının örnek ayarları gösterilmektedir.
 
     ![Profil ayarları](../deployment/media/quickstart-profile-settings.png "Profil ayarları")
 
-    .NET'te ayarları seçmeye yardımcı olmak için aşağıdakilere bakın:
+    .NET ' te ayarları seçmek için ek yardım için aşağıdakilere bakın:
 
-    - [Çerçeveye bağımlı ve kendi içinde dağıtım karşılaştırması](/dotnet/core/deploying/)
-    - [Hedef çalışma zamanı tanımlayıcıları (taşınabilir RID, ve diğer)](/dotnet/core/rid-catalog)
-    - [Hata ayıklama ve sürüm yapılandırmaları](../ide/understanding-build-configurations.md)
+    - [Çerçeveye bağımlı ve kendinden bağımsız dağıtım](/dotnet/core/deploying/)
+    - [Hedef çalışma zamanı tanımlayıcıları (taşınabilir RID, et)](/dotnet/core/rid-catalog)
+    - [Hata ayıklama ve sürüm yapılandırması](../ide/understanding-build-configurations.md)
 
-1. Hata Ayıklama veya Sürüm yapılandırması dağıtma gibi seçenekleri yapılandırıp Kaydet'i **seçin.**
+1. Bir hata ayıklama veya sürüm yapılandırması dağıtıp dağıtmayacağı gibi seçenekleri yapılandırın ve ardından **Kaydet**' i seçin.
 
-1. Yeniden yayımlamak için Yayımla'yı **seçin.**
+1. Yeniden yayımlamak için **Yayımla**' yı seçin.
 
-Yayımlanan dosyaları, herhangi bir şekilde dağıtın. Örneğin, bunları bir.zip dosyası içinde paketleyebilirsiniz, basit bir kopyalama komutu kullanabilir veya istediğiniz herhangi bir yükleme paketiyle dağıtabilirsiniz.
+Yayınlanan dosyaları dilediğiniz gibi dağıtın. Örneğin, bunları bir *.zip* dosyasında paketleyebilir, basit bir kopyalama komutu kullanabilir veya istediğiniz herhangi bir yükleme paketiyle dağıtabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 .NET uygulamaları için:
 
-- [Yayımla aracıyla bir .NET Core Uygulaması dağıtma](/dotnet/core/deploying/deploy-with-vs)
-- [.NET Core uygulama yayımlama (çerçeveye bağımlı ve kendi içinde dağıtımlar)](/dotnet/core/deploying/)
-- [Uygulama ve .NET Framework dağıtma](/dotnet/framework/deployment/)
+- [Yayımla aracıyla .NET Core uygulaması dağıtma](/dotnet/core/deploying/deploy-with-vs)
+- [.NET Core uygulaması yayımlama (çerçeveye bağlı ve kendinden bağımsız dağıtımlar)](/dotnet/core/deploying/)
+- [.NET Framework ve uygulamaları dağıtma](/dotnet/framework/deployment/)
 ::: moniker range=">=vs-2019"
-- [ClickOnce kullanarak bir .NET Windows uygulaması ClickOnce.](quickstart-deploy-using-clickonce-folder.md)
+- [ClickOnce kullanarak bir .net Windows uygulaması dağıtın](quickstart-deploy-using-clickonce-folder.md).
  ::: moniker-end

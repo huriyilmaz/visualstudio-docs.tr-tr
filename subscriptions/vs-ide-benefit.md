@@ -8,11 +8,11 @@ ms.date: 09/20/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil Visual Studio ıde 'yi indirme ve yükleme hakkında bilgi edinin
 ms.openlocfilehash: 1359523d747b38078db0cbf5e8d75d23c1048ba8
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128329447"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431323"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 avantajı
 
@@ -34,19 +34,19 @@ IDE 'yi indirmek için:
    - Dil tercihinizi seçin.
 5. Mavi İndir düğmesine tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio Enterprise karşıdan yükleme ayrıntıları](_img/vs-ide-experience/vs-ide-download-details.png "İndirmeye başlamak için 'İndir' düğmesine tıklayın.")
+   > ![Visual Studio Enterprise karşıdan yükleme ayrıntıları](_img/vs-ide-experience/vs-ide-download-details.png "İndirmeye başlamak için ' Indir ' düğmesine tıklayın.")
 6. İndirilen yükleyici paketine tıklayın.  Şimdi yüklemek isteyip istemediğiniz sorulursa **Çalıştır**' a tıklayın.
 7. Kullanıcı hesabı denetimi iletişim kutusunda **Evet**' e tıklayın.
 8. Lisans koşullarını kabul etmek için **devam** ' a tıklayın.
 9. Yükleyici başladığında, ilgili sekmelerde seçerek istediğiniz iş yüklerinizi, tek tek bileşenlerinizi ve dil paketlerini seçin.
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio Enterprise özelleştirme](_img/vs-ide-experience/vs-ide-customize-install-cropped.png "İş yükleri ve diğer bileşenler için seçimlerinizi yapma.")
+   > ![Visual Studio Enterprise özelleştirme](_img/vs-ide-experience/vs-ide-customize-install-cropped.png "İş yükleri ve diğer bileşenler için seçimlerinizi yapın.")
 
 10. **Yükle**'ye tıklayın.
 
 11. Yükleme tamamlandığında, yüklemeyi değiştirme veya Visual Studio başlatma seçeneğine sahip olacaksınız.  Başlamak için **Başlat** ' a tıklayın.  Birden çok sürüm yüklüyse, bunlar listelenir.
     > [!div class="mx-imgBorder"]
-    > ![Visual Studio Enterprise Başlat](_img/vs-ide-experience/vs-ide-versions.png "Uygulamayı başlatmak için 'Başlat' Visual Studio.")
+    > ![Visual Studio Enterprise Başlat](_img/vs-ide-experience/vs-ide-versions.png "Visual Studio başlamak için ' Başlat ' seçeneğine tıklayın.")
 
 12. Visual Studio aboneliğinizle ilişkili hesapla oturum açın.
 
@@ -55,7 +55,7 @@ IDE 'yi indirmek için:
 14. Visual Studio açılır. Visual Studio kullanmaya başlamak için hazırsınız!
 
     > [!div class="mx-imgBorder"]
-    > ![Visual Studio Enterprise kullanmaya başlayın](_img/vs-ide-experience/vs-ide-start-cropped.png "Visual Studio!")
+    > ![Visual Studio Enterprise kullanmaya başlayın](_img/vs-ide-experience/vs-ide-start-cropped.png "Visual Studio hoş geldiniz!")
 
 
 ## <a name="eligibility"></a>Önceliği
@@ -99,7 +99,7 @@ Visual Studio Abonelikler desteği Sales, abonelikler, hesaplar ve faturalandır
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Bu Visual Studio sonra, şu diğer önemli avantajları etkinleştirmeyi unutmayın:
+Visual Studio yüklendikten sonra, bu diğer önemli avantajları etkinleştirmeyi unutmayın:
 - [Azure DevOps](vs-azure-devops.md)
 - [Azure DevTest bireysel kredisi](vs-azure.md)
 - [Windows Geliştirici hesabı](vs-windows-dev.md)

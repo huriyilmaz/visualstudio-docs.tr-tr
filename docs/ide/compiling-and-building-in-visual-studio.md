@@ -1,8 +1,8 @@
 ---
 title: Derleme
-description: Visual Studio IDE derleme yöntemini, MSBuild komut satırı araçları derleme yöntemini veya Azure Pipelines derleme yöntemini kullanmayı öğrenin.
+description: Visual Studio IDE derleme yöntemini, MSBuild komut satırı araçları derleme yöntemini veya uygulama derlemek için Azure Pipelines yöntemini kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 07/14/2017
+ms.date: 09/14/2021
 ms.technology: vs-ide-compile
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 61abd28890fe92918c8ee2c9067820a781fac9c4
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: de956cc1405fb3ca2cf32f53fb7951c4ae4a660b
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627237"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431791"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Derleme ve derleme Visual Studio
 
@@ -34,7 +34,7 @@ Uygulama oluşturmak için aşağıdaki yöntemlerden herhangi birini kullanabil
 | MSBuild satırı| - Proje derlemelerini yüklemeden Visual Studio.<br />- Tüm proje türleri için çok işlemcili derlemeler çalıştırın.<br />- Derleme sisteminin çoğu alanlarını özelleştirin.|
 | Azure Pipelines | - Sürekli tümleştirme/sürekli teslim işlem hattının bir parçası olarak derleme sürecinizi otomatikleştirin.<br />- Her derlemeyle otomatikleştirilmiş testler uygulama.<br />- Derleme işlemleri için neredeyse sınırsız bulut tabanlı kaynak kullanın.<br />- Derin özelleştirilmiş görevleri gerçekleştirmek için derleme iş akışını değiştirme ve derleme etkinlikleri oluşturma.|
 
-Bu bölümdeki belgeler, IDE tabanlı derleme işleminin diğer ayrıntılarına gider. Diğer yöntemler hakkında daha fazla bilgi için [sırasıyla MSBuild](../msbuild/msbuild.md) [ve Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)bakın.
+Bu bölümdeki belgeler, IDE tabanlı derleme işleminin diğer ayrıntılarına gider. Diğer yöntemler hakkında daha fazla bilgi için sırasıyla [CMake](/cpp/build/cmake-projects-in-visual-studio), [MSBuild](../msbuild/msbuild.md) [ve Azure Pipelines](/azure/devops/pipelines/index?view=vsts&preserve-view=true)' ye bakın.
 
 > [!NOTE]
 > Bu konu, Visual Studio için Windows. Daha Mac için Visual Studio için [bkz. Derleme ve derleme Mac için Visual Studio.](/visualstudio/mac/compiling-and-building)
@@ -45,7 +45,7 @@ Bir proje oluşturulduğunda, Visual Studio ve projeyi içeren çözüm için va
 
 IDE içinde binaya ilk giriş için bkz. [Adım adım kılavuz: Uygulama bina.](walkthrough-building-an-application.md)
 
-Ardından, [süreçle ilgili olarak farklı özelleştirmeler hakkında Visual Studio](building-and-cleaning-projects-and-solutions-in-visual-studio.md) için bkz. Proje ve çözümler derleme ve temizleme. Özelleştirmeler, [çıkış dizinlerini](how-to-change-the-build-output-directory.md) [değiştirmeyi,](specifying-custom-build-events-in-visual-studio.md)özel derleme olaylarını [belirtmeyi,](how-to-create-and-remove-project-dependencies.md)proje bağımlılıklarını yönetmeyi, [](how-to-view-save-and-configure-build-log-files.md)derleme günlük dosyalarını yönetmeyi ve derleyici [uyarılarını gizlemeyi içerir.](how-to-suppress-compiler-warnings.md)
+Ardından, [süreçle ilgili farklı özelleştirmeler hakkında Visual Studio](building-and-cleaning-projects-and-solutions-in-visual-studio.md) için bkz. Visual Studio proje ve çözümlerini derleme ve temizleme. Özelleştirmeler, [çıkış dizinlerini](how-to-change-the-build-output-directory.md) [değiştirmeyi,](specifying-custom-build-events-in-visual-studio.md)özel derleme olaylarını [belirtmeyi,](how-to-create-and-remove-project-dependencies.md)proje bağımlılıklarını yönetmeyi, [](how-to-view-save-and-configure-build-log-files.md)derleme günlük dosyalarını yönetmeyi ve derleyici [uyarılarını gizlemeyi içerir.](how-to-suppress-compiler-warnings.md)
 
 Buradan, diğer çeşitli görevleri keşfedebilirsiniz:
 - [Derleme yapılandırmalarını anlama](understanding-build-configurations.md)
@@ -59,4 +59,4 @@ Buradan, diğer çeşitli görevleri keşfedebilirsiniz:
 
 - [Web sitesi projeleri derleme (derleme)](/previous-versions/hwxa5aha(v=vs.140))
 - [Derleme ve derleme (Mac için Visual Studio)](/visualstudio/mac/compiling-and-building)
-- [Visual Studio'de CMake projeleri](/cpp/build/cmake-projects-in-visual-studio)
+- [Visual Studio'da CMake projeleri](/cpp/build/cmake-projects-in-visual-studio)

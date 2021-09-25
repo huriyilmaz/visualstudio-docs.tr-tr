@@ -7,15 +7,15 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 06/01/2021
 user.type: admin
-tags: ''
+tags: agreement
 subscription.type: vl, cloud, retail, partner
 sap.id: 4e55abf9-8505-ecdc-c55f-c67a167a357c
-ms.openlocfilehash: 39f5b877c8dc5c6aeb1005e151b2c9bb0f0bace198307aee3af32352d37de43c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: decf72558386708fa0879b226793718b7a97f44f
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "127892550"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431753"
 ---
 ## <a name="im-a-super-admin-or-admin-but-im-not-able-to-manage-my-agreement"></a>Süper yönetici veya yöneticiyim ama sözleşmemi yönete değilim
 

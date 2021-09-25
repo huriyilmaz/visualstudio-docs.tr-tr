@@ -1,8 +1,8 @@
 ---
 title: Hata ayıklayıcısı ile kodda | Microsoft Docs
-description: 'Kodda sorun giderme Visual Studio hata ayıklayıcısını kullanmayı öğrenin. Konu başlıkları şunlardır: kesme moduna alma, kodda adımlama ve hedefe çalıştırma.'
+description: 'Kodda sorun giderme Visual Studio hata ayıklayıcısını nasıl kullanabileceğinizi öğrenin. Konu başlıkları şunlardır: kesme moduna alma, kodda adımlama ve hedefe çalıştırma.'
 ms.custom: SEO-VS-2020
-ms.date: 11/12/2018
+ms.date: 09/23/2021
 ms.topic: how-to
 f1_keywords:
 - vs.debug.execution
@@ -17,16 +17,16 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 90272d2adf2e8a68019c3fff67fc4cd2ee4bd608
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: ab1298a0c6721d4044187e2582c2dbdd5e14326f
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725897"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128427284"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısı ile kodda gezinme
 
-Hata Visual Studio ayıklayıcısı, bir uygulamanın durumunu incelemek ve yürütme akışını göstermek için kodda gezinmenize yardımcı olabilir. Incelemek istediğiniz koda hızlıca gitmek için klavye kısayollarını, hata ayıklama komutlarını, kesme noktaları ve diğer özellikleri kullanabilirsiniz. Hata ayıklayıcı gezinti komutlarını ve kısayollarını tanıma, uygulama sorunlarının daha hızlı ve kolay bir şekilde bulunarak çözülmesini sağlar.
+Hata Visual Studio, uygulamanın durumunu incelemek ve yürütme akışını göstermek için kodda gezinmenize yardımcı olabilir. Incelemek istediğiniz koda hızlıca gitmek için klavye kısayollarını, hata ayıklama komutlarını, kesme noktaları ve diğer özellikleri kullanabilirsiniz. Hata ayıklayıcı gezinti komutlarını ve kısayollarını tanıma, uygulama sorunlarının daha hızlı ve kolay bir şekilde bulunarak çözülmesini sağlar.
 
 > [!NOTE]
 > İlk kez kodda hata ayıklamayı denediyseniz, bu makaleyi [](../debugger/debugging-absolute-beginners.md) okumadan önce yeni [](../debugger/write-better-code-with-visual-studio.md) başlayanlar için Hata Ayıklama ve Hata ayıklama teknikleri ve araçları makaleyi okumak istiyor olabilirsiniz.
@@ -37,9 +37,9 @@ Kesme *modunda,* işlevler, değişkenler ve nesneler bellekte kalırken uygulam
 
 - **F10 veya F11 tuşuna basarak** kod **adımlamaya başlama.** Bu sayede, uygulamanın giriş noktasını hızla bulabilir, ardından kodda gezinmek için adım komutlarına basabilirsiniz.
 
-- [Bir kesme noktası ayarlayarak ve uygulama](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All)başlatarak gibi belirli [bir konuma veya](using-breakpoints.md) işleve çalıştırın.
+- [Bir kesme noktası ayarlayarak ve uygulama](#run-to-a-specific-location-or-function)başlatarak gibi belirli [bir konuma veya](using-breakpoints.md) işleve çalıştırın.
 
-   Örneğin, Visual Studio'daki kod düzenleyicisinden Imleç çalıştır  komutunu kullanarak uygulamayı başlatabilir, hata ayıklayıcısı ekli olabilir ve kesme moduna girer ve **F11 ile** kodda gezinebilirsiniz.
+   Örneğin, Visual Studio'daki kod düzenleyicisinde, uygulamayı başlatmak,  hata ayıklayıcısını eklemek ve kesme moduna almak için **F11'i** kullanarak kodda gezinebilirsiniz.
 
    ![İmleç çalıştırmak için çalıştırın ve koda girin](../debugger/media/navigate-code-code-stepping.gif "İmleç çalıştırmak için çalıştırın ve koda girin")
 
@@ -77,7 +77,7 @@ Ancak, bu satıra adım atarak hata ayıklayıcısı koşulu bir adım olarak, s
 İç içe geçmiş işlev çağrısında, **en derin** iç içe geçmiş işleve adım adım ilerler. Örneğin, gibi bir **çağrıda Adım adım** kullanırsanız hata `Func1(Func2())` ayıklayıcı işlevine adımlar. `Func2`
 
 >[!TIP]
->Her kod satırı yürütülürken değişkenlerin üzerine gelerek değerlerini görebilir veya Değerlerin değişmesini izlemek için [Yerel](autos-and-locals-windows.md) Ayarlar ve İzleme pencerelerini kullanabilirsiniz. [](watch-and-quickwatch-windows.md) İşlevlere adım adım ilerlerken [çağrı yığınını](how-to-use-the-call-stack-window.md) görsel olarak da takip edersiniz. (Yalnızca Visual Studio Enterprise için [bkz. Hata ayıklama sırasında çağrı yığınında yöntemleri eşleme).](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
+>Her kod satırı yürütülürken değişkenlerin üzerine gelerek değerlerini görebilir veya Değerlerin değişmesini izlemek için [Yerel](autos-and-locals-windows.md) Ayarlar ve İzleme pencerelerini kullanabilirsiniz. [](watch-and-quickwatch-windows.md) İşlevlere adım adım ilerlerken [çağrı yığınını](how-to-use-the-call-stack-window.md) görsel olarak da takip edersiniz. (Yalnızca Visual Studio Enterprise için [bkz. Hata ayıklama sırasında çağrı yığınında eşleme yöntemleri).](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 
 ### <a name="step-through-code-and-skip-some-functions"></a><a name="BKMK_Step_over_Step_out"></a> Kodda adım adım ilerler ve bazı işlevleri atlar
 
@@ -88,7 +88,7 @@ Hata ayıklama sırasında bir işlevi önemseyebilirsiniz veya iyi test edilmi�
 |**F10**|**Adım At**|Geçerli satır bir işlev çağrısı içeriyorsa, **Step Over** kodu çalıştırır ve çağrılı işlev döndürdikten sonra ilk kod satırda yürütmeyi askıya alır.|
 |**Shift ile kaydırma** + **F11**|**Dışarı Adımla**|**Step Out kodu** çalıştırmaya devam eder ve geçerli işlev döndür olduğunda yürütmeyi askıya alır. Hata ayıklayıcısı geçerli işlevi atlar.|
 
-## <a name="run-to-a-specific-location-or-function"></a><a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> Belirli bir konuma veya işleve çalıştırma
+## <a name="run-to-a-specific-location-or-function"></a>Belirli bir konuma veya işleve çalıştırma
 
 Tam olarak hangi kodu incelemek istediğinizi veya hata ayıklamayı başlatmak istediğiniz yeri biliyorken doğrudan belirli bir konuma veya işleve çalıştırmayı tercih edersiniz.
 
@@ -166,9 +166,9 @@ Program sayacı doğrudan yeni konuma atlar ve eski ve yeni yürütme noktaları
 
 ## <a name="debug-non-user-code"></a><a name="BKMK_Restrict_stepping_to_Just_My_Code"></a>Kullanıcı olmayan kodda hata ayıklama
 
-Varsayılan olarak, hata ayıklayıcısı Yalnızca kendi kodum adlı ayarı etkinleştirerek yalnızca uygulama kodunuzun *hata Yalnızca kendi kodum.* Bu özelliğin farklı proje türleri ve diller için nasıl çalıştığını ve nasıl özelleştirebileceğiniz hakkında daha fazla bilgi için [bkz. Yalnızca kendi kodum.](../debugger/just-my-code.md).
+Varsayılan olarak, hata ayıklayıcısı Yalnızca kendi kodum adlı ayarı etkinleştirerek yalnızca uygulama kodunuzun *hata Yalnızca kendi kodum.* Bu özelliğin farklı proje türleri ve diller için nasıl çalıştığını ve nasıl özelleştirebileceğiniz hakkında daha fazla bilgi için bkz. [Yalnızca kendi kodum.](../debugger/just-my-code.md).
 
-Hata ayıklama sırasında çerçeve koduna, üçüncü taraf kitaplık koduna veya sistem çağrılarını bakmak için, hata ayıklamayı devre dışı Yalnızca kendi kodum. Araçlar **(veya** **Hata Ayıkla)**> **Seçenekleri** Hata  >  **Ayıklama'da,** Yalnızca kendi kodum **onay** kutusunun işaretini kaldırın. Bu Yalnızca kendi kodum devre dışı bırakılmıştır, hata ayıklayıcı pencerelerde kullanıcı olmayan kod görünür ve hata ayıklayıcı kullanıcı olmayan koda adım atabilir.
+Hata ayıklama sırasında çerçeve koduna, üçüncü taraf kitaplık koduna veya sistem çağrılarını kontrol etmek için bu kodu Yalnızca kendi kodum. Araçlar **(veya** **Hata Ayıkla)**> **Seçenekleri** Hata  >  **Ayıklama'da,** Etkinleştir onay **Yalnızca kendi kodum** temizleyin. Hata Yalnızca kendi kodum devre dışı bırakılmıştır, hata ayıklayıcı pencerelerde kullanıcı olmayan kod görünür ve hata ayıklayıcı kullanıcı olmayan koda adım atabilir.
 
 > [!NOTE]
 > Yalnızca kendi kodum, cihaz projeleri için desteklenmiyor.
@@ -181,7 +181,7 @@ Microsoft simgelerini yüklemek için [bkz. Sembol konumlarını yapılandırma 
 
 **Belirli bir sistem bileşenine ait sembolleri yüklemek için:**
 
-1. Hata ayıklarken Modüller penceresini  açmak için Modüllerde Hata Ayıkla'Windows veya   >    >   **Ctrl** Alt U + **tuşlarına** + **basarak.**
+1. Hata ayıklarken Modüller penceresini  Açmak için Modüllerde Hata Ayıkla'Windows veya   >    >   **Ctrl** Alt U + **tuşlarına** + **basarak.**
 
 1. Modüller **penceresinde,** Sembol Durumu sütununda hangi modüllerin sembollerin yüklü **olduğunu** görebilirsiniz. Sembolleri yüklemek istediğiniz modüle sağ tıklayın ve Sembolleri **Yükle'yi seçin.**
 

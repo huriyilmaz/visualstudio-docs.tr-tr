@@ -1,28 +1,28 @@
 ---
 title: Visual Studio’ya genel bakış
 titleSuffix: ''
-description: Tümleşik geliştirme Visual Studio hakkında bilgi öğrenin.
-ms.date: 06/29/2021
+description: Tümleşik geliştirme Visual Studio hakkında bilgi edinmek.
+ms.date: 09/14/2021
 ms.technology: vs-ide-general
 ms.topic: overview
 ms.custom:
 - vs-acquisition
 - vs-get-started
 - SEO-VS-2020
-author: anandmeg
+author: TerryGLee
 f1_keywords:
 - vs.startpage
 - VS.StartPage.HowDoI
-ms.author: meghaanand
+ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f2c29344f4330c4d81f17b3c99652003fd1c510
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 59c3cab4b51a2eb5b9abc4c74fc96f1d8df6a5f7
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122109883"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128432753"
 ---
 # <a name="welcome-to-the-visual-studio-ide"></a>Visual Studio IDE'ye hoş geldiniz
 
@@ -32,9 +32,9 @@ ms.locfileid: "122109883"
 
 Aşağıdaki Visual Studio makalelerle birlikte aşağıdaki adımları daha ayrıntılı bir şekilde keşfedin:
 
-- Kod düzenleyicisini kullanmayı öğrenme'de [kod düzenleyicisiyle tanışın](../get-started/tutorial-editor.md)
+- Kod düzenleyicisini kullanmayı öğrenin'de [kod düzenleyicisiyle tanışın.](tutorial-editor.md)
 
-- Projeler ve Visual Studio hakkında bilgi edinmek için kodu [nasıl düzenleyebilirsiniz?](../get-started/tutorial-projects-solutions.md)
+- Proje ve Visual Studio hakkında bilgi edinmek için [kodu nasıl düzenleyebilirsiniz?](tutorial-projects-solutions.md)
 
 Daha fazla kodlamayı incelemeye hazırsanız, aşağıdaki dile özgü hızlı başlangıçlardan biri iyi bir sonraki adımdır:
 
@@ -46,10 +46,10 @@ Daha fazla kodlamayı incelemeye hazırsanız, aşağıdaki dile özgü hızlı 
 
 - [İlk Visual Studio oluşturmak için Node.js kullanma](../ide/quickstart-nodejs.md)
 
-- [İlk Visual Studio C++ konsol uygulamanızı oluşturmak için Visual Studio'yi kullanma](/cpp/get-started/tutorial-console-cpp)
+- [İlk Visual Studio C++ konsol uygulamasını oluşturmak için Visual Studio'yi kullanma](/cpp/get-started/tutorial-console-cpp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- Daha [fazla Visual Studio keşfedin](../ide/advanced-feature-overview.md)
-- Visualstudio.microsoft.com [](https://visualstudio.microsoft.com/vs/)
-- Visual Studio [blog'larını okuyun](https://devblogs.microsoft.com/visualstudio/)
+- Daha [fazla Visual Studio keşfedin.](../ide/advanced-feature-overview.md)
+- web sitesini [visualstudio.microsoft.com.](https://visualstudio.microsoft.com/vs/)
+- Visual Studio [okuyun.](https://devblogs.microsoft.com/visualstudio/)

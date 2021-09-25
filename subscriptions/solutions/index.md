@@ -1,31 +1,20 @@
 ---
-title: Abonelik destek çözümleri
-description: Visual Studio abonelikler için dosya içerir pencere öğesi içeriğini destekler
+title: Abonelikler destek çözümleri
+description: Abonelikler için INCLUDE dosyalarının listesi Visual Studio pencere öğesi içeriğini destekler
 ms.topic: conceptual
 ms.assetid: 478648b9-f6f0-4ea3-83b4-5cffa196a496
 robots: noindex, nofollow
-author: evanwindom
-ms.author: v-evwin
-ms.date: 12/07/2020
-ms.openlocfilehash: 85eb4222cf69c678844df34f0b2e2426151211d451ca4191aaffa647c5985e30
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+author: CaityBuschlen
+ms.author: cabuschl
+ms.date: 08/13/2021
+ms.openlocfilehash: fac69c3ea827263f83e91f9e5cdb4cbfb7bac51b
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121241787"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128427703"
 ---
-# <a name="visual-studio-subscriptions-support-widget-content-includes-files"></a>Visual Studio abonelikleri destek pencere öğesi içeriği dosyaları içerir
-
-## <a name="admin-solutions"></a>Yönetici çözümleri
-
-[!INCLUDE [Become a super admin](admin-solutions/includes/become-a-super-admin-managed.md)]
-
-[!INCLUDE [Become an admin](admin-solutions/includes/become-an-admin.md)]
-
-[!INCLUDE [Cannot access subscriptions](admin-solutions/includes/cannot-access-subs.md)]
-
-[!INCLUDE [I only see VSDE](admin-solutions/includes/only-see-vsde.md)]
-
+# <a name="visual-studio-subscriptions-support-widget-content-includes-files"></a>Visual Studio abonelikleri pencere öğesi içeriğinin INCLUDES dosyalarını destekler
 
 ## <a name="benefit-activations"></a>Avantaj etkinleştirmeleri
 
@@ -43,9 +32,9 @@ ms.locfileid: "121241787"
 
 [!INCLUDE [Unable to see Azure monthly credit in Azure portal](benefit-activation/includes/unable-to-see-azure-monthly-credit-in-azure-portal.md)]
 
-## <a name="download-activate-or-use-software"></a>Yazılım indirin, etkinleştirin veya kullanın
+## <a name="download-activate-or-use-software"></a>Yazılımı indirme, etkinleştirme veya kullanma
 
-### <a name="downloads-and-activations"></a>İndirmeler ve etkinleştirmeleri
+### <a name="downloads-and-activations"></a>İndirmeler ve etkinleştirmeler
 [!INCLUDE [Unable to download non-Visual Studio software](downloading-activating-or-using-software/downloading-activating-or-using-software/includes/unable-to-download-software-non-visualstudio.md)]
 
 [!INCLUDE [Unable to download Visual Studio Community](downloading-activating-or-using-software/downloading-activating-or-using-software/includes/unable-to-download-visual-studio-community.md)]
@@ -88,16 +77,18 @@ ms.locfileid: "121241787"
 
 [!INCLUDE [Portal outage](portal-issue/includes/portal-outage.md)]
 
-## <a name="purchase-renew-or-cancel-subscriptions"></a>Abonelikleri satın alma, yenileme veya iptal etme
+[!INCLUDE [Only see VSDE](portal-issue/includes/only-see-vsde.md)]
 
-### <a name="help-with-purchases"></a>Satın alımlarla ilgili yardım
+## <a name="purchase-renew-or-cancel-subscriptions"></a>Abonelik satın alma, yenileme veya iptal etme
+
+### <a name="help-with-purchases"></a>Satın almalarla ilgili yardım
 [!INCLUDE [Help me purchase via Marketplace](renewing-purchasing-or-canceling/help-purchasing/includes/help-me-purchase-marketplace.md)]
 
 [!INCLUDE [Help me purchase via Microsoft Store](renewing-purchasing-or-canceling/help-purchasing/includes/help-me-purchase-microsoft-store.md)]
 
 [!INCLUDE [Where can I purchase](renewing-purchasing-or-canceling/help-purchasing/includes/where-can-i-purchase-from.md)]
 
-### <a name="help-with-renewals"></a>Yenilemeler hakkında yardım
+### <a name="help-with-renewals"></a>Yenilemelerle ilgili yardım
 [!INCLUDE [Help me renew via Marketplace](renewing-purchasing-or-canceling/help-renewing/includes/help-me-renew-marketplace.md)]
 
 [!INCLUDE [Help me renew via Microsoft Store](renewing-purchasing-or-canceling/help-renewing/includes/help-me-renew-microsoft-store.md)]
@@ -119,3 +110,5 @@ ms.locfileid: "121241787"
 [!INCLUDE [How do I change my sign-in email for Retail](signing-in/includes/how-do-i-change-my-sign-in-email-retail.md)]
 
 [!INCLUDE [How do I change my sign-in email for Volume Licensing](signing-in/includes/how-do-i-change-my-sign-in-email-volume-licensing.md)]
+
+[!INCLUDE [How can I become a Visual Studio subscriptions admin](signing-in/includes/become-an-admin-or-super-admin.md)]

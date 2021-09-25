@@ -9,11 +9,11 @@ ms.topic: conceptual
 robots: noindex, nofollow
 description: Bağlı Microsoft hesapları ve kimlikleri ile Azure Active Directory öğrenin
 ms.openlocfilehash: 6c666f50fee33d4277b32cc70ea37db5115dcdf4
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128329398"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128427458"
 ---
 # <a name="how-to-use-connected-identities-in-visual-studio-subscriptions"></a>Aboneliklerde bağlı kimlikleri Visual Studio kullanma
 İş veya okul Visual Studio bir abonelik alırsanız ve oturum açma için Microsoft hesabı 'nizi (MSA) kullanırsanız, abonelik yöneticiniz MSA'nızı kuruluşun Azure Active Directory (Azure AD) kimliğinize bağ kullanabilir.  Bu, aboneliğinize dahil edilen bazı avantajlara erişmenizi değiştirir. 

@@ -1,18 +1,18 @@
 ---
 title: Visual Studio aboneliklerinde ürün anahtarlarını kullanma | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 89e3fcf9-fe5d-4266-8dd7-5567d05fe869
 ms.date: 03/21/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde ürün anahtarlarınızı edinme ve yönetme hakkında bilgi edinin.
-ms.openlocfilehash: ad9672d089c6e50aa879b38841c468f235347963
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 864c59e73df3af3bc5d67068d411640e8b7d95bd
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126625034"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128432693"
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde ürün anahtarlarını kullanma
 

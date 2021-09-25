@@ -2,7 +2,7 @@
 title: "C 'de ASP.NET Core web uygulaması oluşturma #"
 description: C# ve ASP.NET Core, adım adım Visual Studio basit bir Merhaba Dünya web uygulamasının nasıl oluşturulacağını öğrenin.
 ms.custom: vs-acquisition
-ms.date: 11/06/2019
+ms.date: 09/14/2021
 ms.topic: quickstart
 author: anandmeg
 ms.author: meghaanand
@@ -13,12 +13,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 974f6bf70d6866893a61a14f9e2999ba265fb166
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 27386ceb7ec02b2e04a96b125346f9be92e6af68
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126635982"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128432442"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>hızlı başlangıç: ilk ASP.NET Core web uygulamanızı oluşturmak için Visual Studio kullanın
 
@@ -34,21 +34,18 @@ Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visua
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2019"
 
 Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz yükleme yapın.
 
 ::: moniker-end
 
-::: moniker range="vs-2022"
-
-henüz 2022 önizleme Visual Studio yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio 2022 önizleme indirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına gidin.
-
-::: moniker-end
-
+::: moniker range="<=vs-2019"
 ### <a name="choose-your-theme-optional"></a>Temanızı seçin (isteğe bağlı)
 
-Bu Hızlı Başlangıç Öğreticisi, koyu temayı kullanan ekran görüntüleri içerir. koyu tema kullanmıyorsanız, ancak bunu yapmak istiyorsanız, nasıl yapılacağını öğrenmek için [Visual Studio ıde ve düzenleyiciyi kişiselleştirme](quickstart-personalize-the-ide.md) sayfasına bakın.
+Bu Hızlı Başlangıç Öğreticisi, koyu temayı kullanan ekran görüntüleri içerir. koyu temayı kullanmıyorsanız ancak nasıl yapılacağını öğrenmek istiyorsanız, bkz. [nasıl yapılır: Visual Studio ıde ve düzenleyiciyi kişiselleştirme](quickstart-personalize-the-ide.md).
+
+::: moniker-end
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
@@ -86,32 +83,32 @@ yakında Visual Studio, proje dosyanızı açar.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
 1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
 
-   :::image type="content" source="../get-started/media/vs-2019/create-new-project-dark-theme.png" alt-text="' Yeni proje oluştur ' penceresini görüntüleyin":::
+   :::image type="content" source="../get-started/media/vs-2019/create-new-project-dark-theme.png" alt-text="' yeni proje oluştur ' seçeneği vurgulanmış şekilde Visual Studio başlangıç penceresini gösteren ekran görüntüsü.":::
 
 1. **Yeni proje oluştur** penceresinde dil listesinden **C#** ' ı seçin. ardından, Platform listesinden **Windows** ve proje türleri listesinden **Web** ' i seçin.
 
-      dili, platformu ve proje türü filtrelerini uyguladıktan sonra, **ASP.NET Core Web uygulaması** şablonunu seçin ve ardından **ileri**' yi seçin.
+   dili, platformu ve proje türü filtrelerini uyguladıktan sonra, **ASP.NET Core Web uygulaması** şablonunu seçin ve ardından **ileri**' yi seçin.
 
-   :::image type="content" source="../get-started/csharp/media/vs-2019/csharp-create-new-project-aspnet-core.png" alt-text="ASP.NET Core Web uygulaması için C# şablonunu seçin":::
+   :::image type="content" source="../get-started/csharp/media/vs-2019/csharp-create-new-project-aspnet-core.png" alt-text="' C# ', ' Windows ' ve ' Web ' üzerinde filtrelenmiş ' yeni proje oluştur ' penceresini gösteren ekran görüntüsü. ' ASP.NET Core Web uygulaması ' proje şablonu vurgulandı.":::
 
    > [!NOTE]
    > **ASP.NET Core Web uygulaması** şablonunu görmüyorsanız, **yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın.
    >
-   > ![' Yeni proje oluştur ' penceresindeki ' daha fazla araç ve özellik yüklemesi ' ' ne aradığınızı bulma ' iletisi bağlantısı](../get-started/media/vs-2019/not-finding-what-looking-for.png)
+   > ![' Daha fazla araç ve özellik yükler ' bağlantısını gösteren ve ' aradığınızı bulma ' iletisinde vurgulanan ekran görüntüsü.](../get-started/media/vs-2019/not-finding-what-looking-for.png)
    >
    > ardından, Visual Studio Yükleyicisi **ASP.NET ve web geliştirme** iş yükünü seçin.
    >
-   > ![Visual Studio Yükleyicisi .net Core platformlar arası geliştirme iş yükü](../get-started/media/aspnet-core-web-dev-workload.png)
+   > ![Visual Studio Yükleyicisi .net Core platformlar arası geliştirme iş yükünü gösteren ekran görüntüsü.](../get-started/media/aspnet-core-web-dev-workload.png)
    >
    > bundan sonra Visual Studio Yükleyicisi **değiştir** düğmesini seçin. İşinizi kaydetmeniz istenirse, bunu yapın. Sonra, iş yükünü yüklemek için **devam** ' ı seçin. Ardından, bu "[Proje oluşturma](#create-a-project)" yordamında 2. adıma geri dönün.
 
 1. **yeni projeyi yapılandırın** penceresinde, **Project adı** kutusuna *HelloWorld* yazın veya girin. Ardından **İleri**' yi seçin.
 
-    :::image type="content" source="../get-started/csharp/media/vs-2019/csharp-name-your-aspnet-helloworld-project.png" alt-text="' yeni projenizi yapılandırın ' penceresinde, ' MyCoreApp ' projenizi adlandırın":::
+    :::image type="content" source="../get-started/csharp/media/vs-2019/csharp-name-your-aspnet-hello-world-project.png" alt-text="Project adı alanında ' HelloWorld ' ile ' yeni projeyi yapılandır ' penceresini gösteren ekran görüntüsü.":::
 
 1. **Ek bilgi** penceresinde, **.NET Core 3,1** ' ın üst açılan menüde göründüğünü doğrulayın. Kutuyu işaretleyerek Docker desteğini etkinleştirmeyi seçebileceğinizi unutmayın. Kimlik doğrulamasını Değiştir düğmesine tıklayarak da kimlik doğrulama desteği ekleyebilirsiniz. Buradan buradan seçim yapabilirsiniz:
     - Hiçbiri: kimlik doğrulaması yok.
@@ -121,7 +118,49 @@ yakında Visual Studio, proje dosyanızı açar.
     
     **Docker 'ı etkinleştir** kutusunu işaretsiz bırakın ve kimlik doğrulama türü için **hiçbiri** ' ni seçin. Ardından **Oluştur**’u seçin.
 
-   :::image type="content" source="../get-started/csharp/media/vs-2019/aspnet-core-additional-information.png" alt-text="' ek bilgi ' penceresinde, .NET Core 3,1 ' in seçildiğinden emin olun ve tüm varsayılanları bırakın":::
+   :::image type="content" source="../get-started/csharp/media/vs-2019/aspnet-core-additional-information.png" alt-text="Framework alanında ' .NET Core 3,1 ' ile birlikte ek bilgi penceresini gösteren ekran görüntüsü.":::
+
+   Visual Studio, yeni projenizi açacak.
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+1. Başlangıç penceresinde **Yeni proje oluştur**' u seçin.
+
+   :::image type="content" source="media/vs-2022/create-new-project-dark-theme.png" alt-text="' yeni proje oluştur ' seçeneği vurgulanmış şekilde Visual Studio başlangıç penceresini gösteren ekran görüntüsü.":::
+
+1. **Yeni proje oluştur** penceresinde dil listesinden **C#** ' ı seçin. ardından, Platform listesinden **Windows** ve proje türleri listesinden **Web** ' i seçin.
+
+   dili, platformu ve proje türü filtrelerini uyguladıktan sonra, **ASP.NET Core Web uygulaması** şablonunu seçin ve ardından **ileri**' yi seçin.
+
+   :::image type="content" source="media/vs-2022/csharp-create-new-project-aspnet-core.png" alt-text="' C# ', ' Windows ' ve ' Web ' üzerinde filtrelenmiş ' yeni proje oluştur ' penceresini gösteren ekran görüntüsü. ' ASP.NET Core Web uygulaması ' proje şablonu vurgulandı.":::
+
+   > [!NOTE]
+   > **ASP.NET Core Web uygulaması** şablonunu görmüyorsanız, **yeni proje oluştur** penceresinden yükleyebilirsiniz. **Aradığınızı bulamıyor musunuz?** iletisi için **daha fazla araç ve özellik yüklemeyi** seçin bağlantısına tıklayın.
+   >
+   > :::image type="content" source="media/vs-2022/not-finding-what-looking-for.png" alt-text="' Daha fazla araç ve özellik yükler ' bağlantısını gösteren ve ' aradığınızı bulma ' iletisinde vurgulanan ekran görüntüsü.":::
+   >
+   > ardından, Visual Studio Yükleyicisi **ASP.NET ve web geliştirme** iş yükünü seçin.
+   >
+   > :::image type="content" source="media/vs-2022/aspnet-core-web-dev-workload.png" alt-text="Visual Studio Yükleyicisi .net Core platformlar arası geliştirme iş yükünü gösteren ekran görüntüsü.":::
+   >
+   > bundan sonra Visual Studio Yükleyicisi **değiştir** düğmesini seçin. İşinizi kaydetmeniz istenirse, bunu yapın. Sonra, iş yükünü yüklemek için **devam** ' ı seçin. Ardından, bu "[Proje oluşturma](#create-a-project)" yordamında 2. adıma geri dönün.
+
+1. **yeni projeyi yapılandırın** penceresinde, **Project adı** kutusuna *HelloWorld* yazın veya girin. Ardından **İleri**' yi seçin.
+
+    :::image type="content" source="media/vs-2022/csharp-name-your-aspnet-hello-world-project.png" alt-text="Project adı alanında ' HelloWorld ' ile ' yeni projeyi yapılandır ' penceresini gösteren ekran görüntüsü.":::
+
+1. **Ek bilgi** penceresinde, **Framework** alanında **.net 6,0** ' ın göründüğünü doğrulayın. Kutuyu işaretleyerek Docker desteğini etkinleştirmeyi seçebileceğinizi unutmayın. Kimlik doğrulama desteği ' ni, **kimlik doğrulaması türü** açılır listesinden bir değer seçerek de ekleyebilirsiniz. Buradan buradan seçim yapabilirsiniz:
+
+    - Hiçbiri: kimlik doğrulaması yok.
+    - Bireysel hesaplar: Bu kimlik doğrulamaları yerel veya Azure tabanlı bir veritabanında depolanır.
+    - Microsoft kimlik platformu: bu seçenek, kimlik doğrulaması için Active Directory, Azure AD veya Microsoft 365 kullanır.
+    - Windows: intranet uygulamaları için uygun.
+    
+    **Docker 'ı etkinleştir** kutusunu işaretsiz bırakın ve kimlik doğrulama türü için **hiçbiri** ' ni seçin. Ardından **Oluştur**’u seçin.
+
+   :::image type="content" source="media/vs-2022/aspnet-core-additional-information.png" alt-text="Framework alanında ' .NET 6,0 ' ile birlikte ek bilgi penceresini gösteren ekran görüntüsü.":::
 
    Visual Studio, yeni projenizi açacak.
 
@@ -161,7 +200,7 @@ yakında Visual Studio, proje dosyanızı açar.
 
 1. uygulamayı   + çalıştırmak ve bir web tarayıcısında açmak için IIS Express seçin veya Ctrl **F5** tuşuna basın.
 
-   ![Visual Studio IIS Express düğmesini seçin](../ide/media/csharp-aspnet-helloworld-iisbutton.png)
+   ![Visual Studio IIS Express düğmesini seçin](../ide/media/csharp-aspnet-hello-world-iis-button.png)
 
    > [!NOTE]
    > **' IIS Express ' web sunucusuna** veya bir SSL sertifikasıyla ilgili bir hata iletisine bağlanmadığını belirten bir hata iletisi alırsanız, Visual Studio kapatın. sonra, sağ tıklama bağlam menüsünde **yönetici olarak çalıştır** seçeneğini kullanarak Visual Studio açın. Sonra, uygulamayı yeniden çalıştırın.
@@ -178,38 +217,71 @@ yakında Visual Studio, proje dosyanızı açar.
 
   ![içinde basit bir C# ASP.NET Core web uygulamasının nasıl oluşturulacağını ve çalıştırılacağını gösteren animasyonlu .gif dosyasını görüntüleyin Visual Studio](../ide/media/csharp-aspnet-animated-hello-world.gif)
 
-Tebrikler, bu hızlı başlangıcı Tamamlanıyor! C#, ASP.NET Core ve Visual Studio ıde (tümleşik geliştirme ortamı) hakkında biraz bilgi edindiniz.
+Tebrikler, bu hızlı başlangıcı Tamamlanıyor! C#, ASP.NET Core ve Visual Studio ıde (tümleşik geliştirme ortamı) hakkında biraz daha öğrendiklerinizi umuyoruz.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
 1. **Çözüm Gezgini**, **Sayfalar** klasörünü genişletin ve **Index. cshtml**' yi seçin.
 
-   ![Çözüm Gezgini Index. cshtml dosyasını seçin](../ide/media/vs-2019/csharp-aspnet-index-page-cshtml-file.png)
+   ![Çözüm Gezgini genişletilmiş sayfalar klasörü içinde seçilen ' Index. cshtml ' öğesini gösteren ekran görüntüsü.](../ide/media/vs-2019/csharp-aspnet-index-page-cshtml-file.png)
 
    Bu dosya, bir Web tarayıcısında çalışan Web uygulamasında **giriş** adlı bir sayfaya karşılık gelir.
 
-   ![Web uygulamasındaki hakkında sayfası](../ide/media/vs-2019/csharp-aspnet-index-page.png)
+   ![Tarayıcı penceresinde Web uygulamasının giriş sayfasını gösteren ekran görüntüsü.](../ide/media/vs-2019/csharp-aspnet-index-page.png)
 
    Düzenleyicide, **giriş** sayfasında görüntülenen metnin HTML kodunu görürsünüz.
 
-   ![Visual Studio düzenleyicisinde giriş sayfası için Index. cshtml dosyasındaki HTML kodu](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page.png)
+   ![Visual Studio kodu düzenleyicisindeki giriş sayfası için Index. cshtml dosyasını gösteren ekran görüntüsü.](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page.png)
 
 1. "Hoş geldiniz" metnini "**Merhaba Dünya!**" okumak üzere değiştirin.
 
-   ![Visual Studio düzenleyicide, bunun yerine Merhaba Dünya e-Welcome 'a hoş geldiniz varsayılan HTML kodunu değiştirin](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
+   ![Visual Studio kod düzenleyicisinde ' Welcome ' metni ' Merhaba Dünya! ' olarak değiştirilen ' Index. cshtml ' dosyasını gösteren ekran görüntüsü.](../ide/media/vs-2019/csharp-aspnet-index-cshtml-page-hello-world.png)
 
 1. uygulamayı   + çalıştırmak ve bir web tarayıcısında açmak için IIS Express seçin veya Ctrl **F5** tuşuna basın.
 
-   ![Visual Studio IIS Express düğmesini seçin](../ide/media/vs-2019/csharp-aspnet-generic-iisbutton.png)
+   ![Visual Studio vurgulanmış IIS Express düğmesini gösteren ekran görüntüsü.](../ide/media/vs-2019/csharp-aspnet-generic-iis-button.png)
 
    > [!NOTE]
    > **' IIS Express ' web sunucusuna** veya bir SSL sertifikasıyla ilgili bir hata iletisine bağlanmadığını belirten bir hata iletisi alırsanız, Visual Studio kapatın. sonra, sağ tıklama bağlam menüsünde **yönetici olarak çalıştır** seçeneğini kullanarak Visual Studio açın. Sonra, uygulamayı yeniden çalıştırın.
 
 1. Web tarayıcısında, **ana** sayfanın güncelleştirilmiş metninizi içerdiğini doğrulayın.
 
-   ![Yaptığınız değişiklikleri içeren güncelleştirilmiş giriş sayfasını görüntüleyin](../ide/media/vs-2019/csharp-aspnet-index-page-hello-world.png)
+   ![' Merhaba Dünya! ' güncelleştirilmiş iletisiyle tarayıcı penceresinde Web uygulamasının giriş sayfasını gösteren ekran görüntüsü.](../ide/media/vs-2019/csharp-aspnet-index-page-hello-world.png)
+
+1. Web tarayıcısını kapatın.
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+1. **Çözüm Gezgini**, **Sayfalar** klasörünü genişletin ve **Index. cshtml**' yi seçin.
+
+   :::image type="content" source="media/vs-2022/csharp-aspnet-index-page-cshtml-file.png" alt-text="Çözüm Gezgini genişletilmiş sayfalar klasörü içinde seçilen ' Index. cshtml ' öğesini gösteren ekran görüntüsü.":::
+
+   Bu dosya, bir Web tarayıcısında çalışan Web uygulamasında **giriş** adlı bir sayfaya karşılık gelir.
+
+   :::image type="content" source="media/vs-2022/csharp-aspnet-index-page.png" alt-text="Tarayıcı penceresinde Web uygulamasının giriş sayfasını gösteren ekran görüntüsü.":::
+
+   Düzenleyicide, **giriş** sayfasında görüntülenen metnin HTML kodunu görürsünüz.
+
+   :::image type="content" source="media/vs-2022/csharp-aspnet-index-cshtml.png" alt-text="Visual Studio kodu düzenleyicisindeki giriş sayfası için Index. cshtml dosyasını gösteren ekran görüntüsü.":::
+
+1. "Hoş geldiniz" metnini "**Merhaba Dünya!**" okumak üzere değiştirin.
+
+   :::image type="content" source="media/vs-2022/csharp-aspnet-index-cshtml-page-hello-world.png" alt-text="Visual Studio kod düzenleyicisinde ' Welcome ' metni ' Merhaba Dünya! ' olarak değiştirilen ' Index. cshtml ' dosyasını gösteren ekran görüntüsü.":::
+
+1. uygulamayı   + çalıştırmak ve bir web tarayıcısında açmak için IIS Express seçin veya Ctrl **F5** tuşuna basın.
+
+   :::image type="content" source="media/vs-2022/csharp-aspnet-generic-iis-button.png" alt-text="Visual Studio vurgulanmış IIS Express düğmesini gösteren ekran görüntüsü.":::
+
+   > [!NOTE]
+   > **' IIS Express ' web sunucusuna** veya bir SSL sertifikasıyla ilgili bir hata iletisine bağlanmadığını belirten bir hata iletisi alırsanız, Visual Studio kapatın. sonra, sağ tıklama bağlam menüsünde **yönetici olarak çalıştır** seçeneğini kullanarak Visual Studio açın. Sonra, uygulamayı yeniden çalıştırın.
+
+1. Web tarayıcısında, **ana** sayfanın güncelleştirilmiş metninizi içerdiğini doğrulayın.
+
+   :::image type="content" source="media/vs-2022/csharp-aspnet-index-page-hello-world.png" alt-text="' Merhaba Dünya! ' güncelleştirilmiş iletisiyle tarayıcı penceresinde Web uygulamasının giriş sayfasını gösteren ekran görüntüsü.":::
 
 1. Web tarayıcısını kapatın.
 

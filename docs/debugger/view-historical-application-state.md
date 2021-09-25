@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c906c7cc88f2426dfe090d7468cce61c076aa8aa
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 58070781e70c3da977d3d6db5e5e5a6b71f0796b
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122133867"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128426796"
 ---
 # <a name="inspect-previous-app-states-using-intellitrace-step-back-in-visual-studio-visual-studio-enterprise"></a>Visual Studio ıntellitrace adım geri 'yi kullanarak önceki uygulama durumlarını inceleme (Visual Studio Enterprise)
 
@@ -39,7 +39,7 @@ Bu öğreticide şunları yapacaksınız:
 
     Visual Studio 2017 Enterprise sürüm 15,9 Preview 2 ' den başlayarak bu seçenek **ıntellitrace anlık görüntüleridir (yönetilen ve yerel)**.
 
-    ![IntelliTrace olaylarını ve anlık görüntü modunu etkinleştir](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace olaylarını ve anlık görüntü modunu etkinleştir")
+    ![IntelliTrace olaylarını ve anlık görüntü modunu etkinleştir](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace Olayları ve Anlık Görüntüler modunu etkinleştirme")
 
 1. Özel durumların anlık görüntülerini görüntüleme seçeneklerini yapılandırmak istiyorsanız,   >  **Seçenekler** iletişim kutusundan IntelliTrace **Gelişmiş** ' i seçin.
 
@@ -58,7 +58,7 @@ Bu öğreticide şunları yapacaksınız:
 
     Anlık görüntülerin kullanılabildiği olayların yanında bir kamera simgesi görüntülenir.
 
-    ![Anlık görüntülerle olaylar sekmesi](../debugger/media/intellitrace-events-tab-with-snapshots.png "Kesme noktaları ve adımlarda anlık görüntülerle olaylar sekmesi")
+    ![Anlık görüntülerle olaylar sekmesi](../debugger/media/intellitrace-events-tab-with-snapshots.png "Kesme noktalarında ve adımlarda anlık görüntülerin yer alan Olaylar sekmesi")
 
     Performans nedenleriyle, çok hızlı bir şekilde ilerlebilmeniz için anlık görüntüler alınmaz. Adımın yanında kamera simgesi görünürse daha yavaş adımlamayı deneyin.
 
@@ -68,7 +68,7 @@ Bu öğreticide şunları yapacaksınız:
 
     Bu düğmeler **Tanılama araçları penceresindeki** **Olaylar** sekmesinde görüntülenen olaylara gider. Bir olaya geri veya ileri dönmek, seçili olayda [geçmiş hata ayıklamayı](../debugger/historical-debugging.md) otomatik olarak etkinleştirir.
 
-    ![Geri adımla ve Ilet düğmeleri](../debugger/media/intellitrace-step-back-icons-description.png "Geri adımla ve adım Ileri düğmeleri")
+    ![Geri adımla ve Ilet düğmeleri](../debugger/media/intellitrace-step-back-icons-description.png "Geri Adım ve İleri Adım düğmeleri")
 
     geri döndüğünüzde veya ileri adım adım Visual Studio geçmiş hata ayıklama moduna girer. Bu modda, hata ayıklayıcının bağlamı seçili olayın kaydedildiği zamana geçer. Visual Studio ayrıca işaretçiyi kaynak penceredeki ilgili kod satırına da taşımayın.
 
@@ -82,11 +82,11 @@ Bu öğreticide şunları yapacaksınız:
 
 3. Ayrıca, **Olaylar** sekmesinden bir anlık görüntü görüntüleyebilirsiniz. Bunu yapmak için, anlık görüntü içeren bir olay seçin ve **geçmiş hata ayıklamayı etkinleştir**' e tıklayın.
 
-    ![Bir olayda geçmiş hata ayıklamayı etkinleştirin](../debugger/media/intellitrace-activate-historical-debugging.png "Bir olayda geçmiş hata ayıklamayı etkinleştirin")
+    ![Bir olayda geçmiş hata ayıklamayı etkinleştirin](../debugger/media/intellitrace-activate-historical-debugging.png "Bir olayda Geçmiş Hata Ayıklamayı etkinleştirme")
 
     **Sonraki Ifadeyi ayarla** komutundan farklı olarak, anlık görüntüyü görüntülemek kodunuzu yeniden çalıştırmaz; Bu, geçmişte gerçekleştiği zaman bir noktada uygulamanın durumunun statik görünümünü sağlar.
 
-    ![IntelliTrace adım geri 'ye Genel Bakış](../debugger/media/intellitrace-step-back-overview.png "IntelliTrace adım geri 'ye Genel Bakış")
+    ![IntelliTrace adım geri 'ye Genel Bakış](../debugger/media/intellitrace-step-back-overview.png "IntelliTrace Geri Adıma Genel Bakış")
 
     Visual Studio değişkenleri inceleme hakkında daha fazla bilgi edinmek için bkz [. hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 
@@ -113,7 +113,7 @@ Genel Adımlama performansının etkisi uygulamanıza bağlıdır. Anlık görü
     1. Visual Studio yükleyicisinden masaüstü için VC++ 2015.3 v140 araç seti (x86, x64) bileşenini yükleyin.
     2. Hedef uygulamayı derleyin.
     3. Hedef yürütülebilirin bayrağını ayarlamak için komut satırından editbin aracını kullanın `Largeaddressaware` . Örneğin, bu komutu (yolu güncelleştirdikten sonra) kullanabilirsiniz: "C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe"/LARGEADDRESSAWARE "C:\Path\To\Application\app.exe".
-    4. Hata ayıklamayı başlatmak için **F5**'e basın. Şimdi, anlık görüntüler hata ayıklayıcı adımlarında ve kesme noktalarında alınır.
+    1. Hata ayıklamayı başlatmak için **F5**'e basın. Şimdi, anlık görüntüler hata ayıklayıcı adımlarında ve kesme noktalarında alınır.
 
        > [!Note]
        > `Largeaddressaware`Her çalıştırılabilir dosyanın değişikliklerle yeniden oluşturulması durumunda bayrak ayarlanmalıdır.
@@ -129,7 +129,7 @@ Genel Adımlama performansının etkisi uygulamanıza bağlıdır. Anlık görü
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, IntelliTrace adım geri 'yi nasıl kullanacağınızı öğrendiniz. Diğer IntelliTrace özellikleri hakkında daha fazla bilgi edinmek isteyebilirsiniz.
+Bu öğreticide, IntelliTrace adım geri 'yi nasıl kullanacağınızı öğrendiniz. Diğer IntelliTrace özellikleri hakkında daha fazla bilgi edinmek istiyor olabilir.
 
 > [!div class="nextstepaction"]
 > [IntelliTrace özellikleri](../debugger/intellitrace-features.md)

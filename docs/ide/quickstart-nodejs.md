@@ -17,11 +17,11 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: fceecc9110a0ae15edf4d702e5c4db19cf129905
-ms.sourcegitcommit: 559c662b2d60048300b76ea6ed3defaa2a259492
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "127779667"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128430194"
 ---
 # <a name="quickstart-create-your-first-nodejs-app-with-visual-studio"></a>Hızlı başlangıç: Visual Studio ile ilk Node.js uygulamanızı oluşturma
 
@@ -213,8 +213,8 @@ Tebrikler! Visual Studio olan basit bir Node.js uygulaması oluşturdunuz. Daha 
 > [Uygulamayı Linux 'a dağıtma App Service](../javascript/publish-nodejs-app-azure.md)
 
 > [!div class="nextstepaction"]
-> [Node.js express öğreticisi](../javascript/tutorial-nodejs.md)
+> [Node.js ve Express öğreticisi](../javascript/tutorial-nodejs.md)
 
 > [!div class="nextstepaction"]
-> [Öğretici: Node.js ve React](../javascript/tutorial-nodejs-with-react-and-jsx.md)
+> [Node.js ve React öğreticisi](../javascript/tutorial-nodejs-with-react-and-jsx.md)
 

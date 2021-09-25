@@ -2,48 +2,48 @@
 title: Kapsayıcılar için gelişmiş örnek
 description: Docker kapsayıcıları için gelişmiş bir örnek hakkında bilgi edinin. Bu örnek Dockerfile, Microsoft/DotNet-Framework görüntüsünün belirli bir sürüm etiketini kullanır.
 ms.custom: SEO-VS-2020
-ms.date: 03/25/2020
+ms.date: 09/21/2021
 ms.topic: conceptual
 ms.assetid: e03835db-a616-41e6-b339-92b41d0cfc70
-author: j-martens
-ms.author: jmartens
+author: anandmeg
+ms.author: meghaanand
 manager: jmartens
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2860a19592667008f585a4608eab23e0180dd2ac
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 4f8086c72e1a4e16f1a81d3f252f9e66cfc850bf
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307706"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128430630"
 ---
 # <a name="advanced-example-for-containers"></a>Kapsayıcılar için gelişmiş örnek
 
 ::: moniker range="vs-2017"
 
-[Derleme araçlarını bir kapsayıcıya yükleyen](build-tools-container.md) örnek Dockerfile, her zaman en son Microsoft/windowsservercore görüntüsüne ve en son Visual Studio derleme araçları yükleyiciye göre [Microsoft/DotNet-Framework: 4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) görüntüsünü kullanır. Bu görüntüyü başkalarının çekmesini sağlamak için bir [Docker kayıt defterine](https://azure.microsoft.com/services/container-registry) yayımlarsanız, bu görüntü pek çok senaryo için sorunsuz olabilir. Bununla birlikte, uygulamada hangi temel görüntü, hangi ikililerin indirileceği ve hangi araç sürümlerinin yükleneceğini öğrenmek daha yaygındır.
+[derleme araçlarını bir kapsayıcıya yükleyen](build-tools-container.md) örnek dockerfile, her zaman en son microsoft/windowsservercore görüntüsüne ve en son Visual Studio Derleme Araçları yükleyiciye göre [microsoft/dotnet-framework: 4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) görüntüsünü kullanır. Bu görüntüyü başkalarının çekmesini sağlamak için bir [Docker kayıt defterine](https://azure.microsoft.com/services/container-registry) yayımlarsanız, bu görüntü pek çok senaryo için sorunsuz olabilir. Bununla birlikte, uygulamada hangi temel görüntü, hangi ikililerin indirileceği ve hangi araç sürümlerinin yükleneceğini öğrenmek daha yaygındır.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
 >[!IMPORTANT]
-> Visual Studio 2022 Şu anda önizlemededir ve üretim ortamlarında kullanılmak üzere [lisanslanmamaktadır](https://visualstudio.microsoft.com/license-terms/vs2022-prerelease/) .
+> Visual Studio 2022 şu anda önizlemededir ve üretim ortamlarında kullanılmak üzere [lisanslanmamaktadır](https://visualstudio.microsoft.com/license-terms/vs2022-prerelease/) .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-[Derleme araçlarını bir kapsayıcıya yükleyen](build-tools-container.md) örnek Dockerfile, her zaman en son Microsoft/windowsservercore görüntüsüne ve en son Visual Studio derleme araçları yükleyiciye göre [Microsoft/DotNet-Framework: 4.8](https://hub.docker.com/r/microsoft/dotnet-framework) görüntüsünü kullanır. Bu görüntüyü başkalarının çekmesini sağlamak için bir [Docker kayıt defterine](https://azure.microsoft.com/services/container-registry) yayımlarsanız, bu görüntü pek çok senaryo için sorunsuz olabilir. Bununla birlikte, uygulamada hangi temel görüntü, hangi ikililerin indirileceği ve hangi araç sürümlerinin yükleneceğini öğrenmek daha yaygındır.
+[derleme araçlarını bir kapsayıcıya yükleyen](build-tools-container.md) örnek dockerfile, her zaman en son microsoft/windowsservercore görüntüsüne ve en son Visual Studio Derleme Araçları yükleyiciye göre [microsoft/dotnet-framework: 4.8](https://hub.docker.com/r/microsoft/dotnet-framework) görüntüsünü kullanır. Bu görüntüyü başkalarının çekmesini sağlamak için bir [Docker kayıt defterine](https://azure.microsoft.com/services/container-registry) yayımlarsanız, bu görüntü pek çok senaryo için sorunsuz olabilir. Bununla birlikte, uygulamada hangi temel görüntü, hangi ikililerin indirileceği ve hangi araç sürümlerinin yükleneceğini öğrenmek daha yaygındır.
 
 ::: moniker-end
 
 Aşağıdaki örnek Dockerfile, Microsoft/DotNet-Framework görüntüsünün belirli bir sürüm etiketini kullanır. Temel görüntü için belirli bir etiket kullanılması çok önemlidir ve görüntülerin oluşturulması veya yeniden derlenmesi her zaman aynı şekilde olduğunu unutmayı kolaylaştırır.
 
 > [!NOTE]
-> Visual Studio 'Yu Microsoft/windowsservercore: 10.0.14393.1593 veya buna bağlı herhangi bir görüntüye yükleyemezsiniz. Bu, yükleyiciyi bir kapsayıcıda Başlatan bilinen sorunları içerir. Daha fazla bilgi için bkz. [kapsayıcılar Için bilinen sorunlar](build-tools-container-issues.md).
+> Visual Studio microsoft/windowsservercore: 10.0.14393.1593 veya buna bağlı herhangi bir görüntüye yükleyemezsiniz ve bu, yükleyiciyi bir kapsayıcıda başlatan bilinen sorunları içerir. Daha fazla bilgi için bkz. [kapsayıcılar Için bilinen sorunlar](build-tools-container-issues.md).
 
 Aşağıdaki örnek, derleme araçlarının en son sürümünü indirir. Daha sonra bir kapsayıcıya yükleyebileceğiniz derleme araçlarının önceki bir sürümünü kullanmak istiyorsanız, önce bir düzen [oluşturmanız](create-an-offline-installation-of-visual-studio.md) ve [korumanız](update-a-network-installation-of-visual-studio.md) gerekir.
 
@@ -94,17 +94,23 @@ ADD https://aka.ms/vscollect.exe C:\TEMP\collect.exe
 ARG CHANNEL_URL=https://aka.ms/vs/15/release/channel
 ADD ${CHANNEL_URL} C:\TEMP\VisualStudio.chman
 
-# Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
-ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
-RUN C:\TEMP\Install.cmd C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
-    --installPath C:\BuildTools `
-    --channelUri C:\TEMP\VisualStudio.chman `
-    --installChannelUri C:\TEMP\VisualStudio.chman `
-    --add Microsoft.VisualStudio.Workload.AzureBuildTools `
-    --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
-    --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
-    --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
-    --remove Microsoft.VisualStudio.Component.Windows81SDK
+RUN `
+    # Download the Build Tools bootstrapper.
+    curl -SL --output vs_buildtools.exe https://aka.ms/vs/15/release/vs_buildtools.exe `
+    `
+    # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
+    && (start /w C:\TEMP\Install.cmd vs_buildtools.exe --quiet --wait --norestart --nocache `
+        --installPath C:\BuildTools `
+        --channelUri C:\TEMP\VisualStudio.chman `
+        --installChannelUri C:\TEMP\VisualStudio.chman `
+        --add Microsoft.VisualStudio.Workload.AzureBuildTools `
+        --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
+        --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
+        --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
+        --remove Microsoft.VisualStudio.Component.Windows81SDK
+    
+    # Cleanup
+    && del /q vs_buildtools.exe
 
 # Define the entry point for the Docker container.
 # This entry point starts the developer command prompt and launches the PowerShell shell.
@@ -112,7 +118,7 @@ ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.ex
 ```
 
    > [!WARNING]
-   > Visual Studio 2017 sürüm 15,8 veya önceki bir sürümü (herhangi bir ürün), MCR \. Microsoft \. com \/ Windows \/ ServerCore: 1809 veya üzeri üzerine düzgün şekilde yüklemez. Bir hata görüntülenmiyor.
+   > Visual Studio 2017 sürüm 15,8 veya daha önceki bir sürümü (herhangi bir ürün), mcr \. microsoft \. com \/ windows \/ servercore: 1809 veya üzeri üzerine düzgün şekilde yüklemez. Bir hata görüntülenmiyor.
    >
    > Daha fazla bilgi için bkz. [kapsayıcıların bilinen sorunları](build-tools-container-issues.md) .
 
@@ -141,21 +147,27 @@ ADD https://aka.ms/vscollect.exe C:\TEMP\collect.exe
 ARG CHANNEL_URL=https://aka.ms/vs/16/release/channel
 ADD ${CHANNEL_URL} C:\TEMP\VisualStudio.chman
 
-# Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
-ADD https://aka.ms/vs/16/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
-RUN C:\TEMP\Install.cmd C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
-    --installPath C:\BuildTools `
-    --channelUri C:\TEMP\VisualStudio.chman `
-    --installChannelUri C:\TEMP\VisualStudio.chman `
-    --add Microsoft.VisualStudio.Workload.AzureBuildTools `
-    --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
-    --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
-    --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
-    --remove Microsoft.VisualStudio.Component.Windows81SDK
+RUN `
+    # Download the Build Tools bootstrapper.
+    curl -SL --output vs_buildtools.exe https://aka.ms/vs/16/release/vs_buildtools.exe `
+    `
+    # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
+    && (start /w C:\TEMP\Install.cmd vs_buildtools.exe --quiet --wait --norestart --nocache modify `
+        --installPath "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\BuildTools" `
+        --channelUri C:\TEMP\VisualStudio.chman `
+        --installChannelUri C:\TEMP\VisualStudio.chman `
+        --add Microsoft.VisualStudio.Workload.AzureBuildTools `
+        --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
+        --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
+        --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
+        --remove Microsoft.VisualStudio.Component.Windows81SDK
+    
+    # Cleanup
+    && del /q vs_buildtools.exe
 
 # Define the entry point for the Docker container.
 # This entry point starts the developer command prompt and launches the PowerShell shell.
-ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
+ENTRYPOINT ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
 ```
 
 ::: moniker-end
@@ -163,7 +175,7 @@ ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.ex
 ::: moniker range=">=vs-2022"
 
 >[!IMPORTANT]
-> Visual Studio 2022 Şu anda önizlemededir ve üretim ortamlarında kullanılmak üzere [lisanslanmamaktadır](https://visualstudio.microsoft.com/license-terms/vs2022-prerelease/) .
+> Visual Studio 2022 şu anda önizlemededir ve üretim ortamlarında kullanılmak üzere [lisanslanmamaktadır](https://visualstudio.microsoft.com/license-terms/vs2022-prerelease/) .
 
 ```dockerfile
 # escape=`
@@ -186,21 +198,27 @@ ADD https://aka.ms/vscollect.exe C:\TEMP\collect.exe
 ARG CHANNEL_URL=https://aka.ms/vs/17/preview/channel
 ADD ${CHANNEL_URL} C:\TEMP\VisualStudio.chman
 
-# Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
-ADD https://aka.ms/vs/17/preview/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
-RUN C:\TEMP\Install.cmd C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
-    --installPath C:\BuildTools `
-    --channelUri C:\TEMP\VisualStudio.chman `
-    --installChannelUri C:\TEMP\VisualStudio.chman `
-    --add Microsoft.VisualStudio.Workload.AzureBuildTools `
-    --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
-    --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
-    --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
-    --remove Microsoft.VisualStudio.Component.Windows81SDK
+RUN `
+    # Download the Build Tools bootstrapper.
+    curl -SL --output vs_buildtools.exe https://aka.ms/vs/17/pre/vs_buildtools.exe `
+    `
+    # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
+    && (start /w C:\TEMP\Install.cmd vs_buildtools.exe --quiet --wait --norestart --nocache modify `
+        --installPath "%ProgramFiles(x86)%\Microsoft Visual Studio\2022\BuildTools" `
+        --channelUri C:\TEMP\VisualStudio.chman `
+        --installChannelUri C:\TEMP\VisualStudio.chman `
+        --add Microsoft.VisualStudio.Workload.AzureBuildTools `
+        --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
+        --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
+        --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
+        --remove Microsoft.VisualStudio.Component.Windows81SDK
+    
+    # Cleanup
+    && del /q vs_buildtools.exe
 
 # Define the entry point for the Docker container.
 # This entry point starts the developer command prompt and launches the PowerShell shell.
-ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
+ENTRYPOINT ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
 ```
 
 ::: moniker-end
@@ -234,12 +252,12 @@ docker build -t buildtools2022:17.0 -t buildtools2022:latest -m 2GB .
 İsteğe bağlı olarak, `FROM_IMAGE` `CHANNEL_URL` `--build-arg` farklı bir temel görüntü veya sabit bir görüntünün bakımını yapmak için bir iç düzenin konumunu belirtmek üzere komut satırı anahtarını kullanarak ya da her ikisini veya her ikisini de geçirin.
 
 > [!TIP]
-> İş yükleri ve bileşenlerin listesi için [Visual Studio derleme araçları bileşen dizinine](workload-component-id-vs-build-tools.md)bakın.
+> iş yükleri ve bileşenlerin listesi için [Visual Studio Derleme Araçları bileşen dizinine](workload-component-id-vs-build-tools.md)bakın.
 >
 
 ## <a name="diagnosing-install-failures"></a>Yüklemesi başarısızlıklarını tanılama
 
-Bu örnek, belirli araçları indirir ve karmaların eşleştiğini doğrular. Ayrıca en son Visual Studio ve .NET günlük toplama yardımcı programını indirir, böylece bir yüklemesi hatası oluşursa, hatayı çözümlemek için günlükleri ana makinenize kopyalayabilirsiniz.
+Bu örnek, belirli araçları indirir ve karmaların eşleştiğini doğrular. ayrıca en son Visual Studio ve .net günlük toplama yardımcı programını indirir, böylece bir yüklemenin başarısız olması durumunda, hatayı çözümlemek için günlükleri ana makinenize kopyalayabilirsiniz.
 
 ::: moniker range="vs-2017"
 
@@ -289,7 +307,7 @@ The command 'cmd /S /C C:\TEMP\Install.cmd C:\TEMP\vs_buildtools.exe ...' return
 
 ::: moniker-end
 
-Son satır yürütmeyi tamamladıktan sonra makinenizde "% TEMP% \vslogs.zip" öğesini açın veya [Geliştirici topluluğu](https://aka.ms/feedback/suggest?space=8) Web sitesinde bir sorun gönderin.
+son satır yürütmeyi tamamladıktan sonra makinenizde "% TEMP% \vslogs.zip" öğesini açın veya [geliştirici Community](https://aka.ms/feedback/suggest?space=8) web sitesinde bir sorun gönderin.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio abonelikler için CloudPilot avantajı | Microsoft Docs
+title: Visual Studio aboneliklerini | CloudPilot avantajı Microsoft Docs
 author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
@@ -8,17 +8,17 @@ ms.date: 03/18/2021
 ms.topic: conceptual
 description: Seçili aboneliklerde kullanılabilen CloudPilot avantajı hakkında Visual Studio edinin
 ms.openlocfilehash: 0ba0b376c945074f5506d1f70983f91d417305a1
-ms.sourcegitcommit: c2afe12aaf04456846613550b367cf86eb082f4b
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2021
-ms.locfileid: "128002371"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128424644"
 ---
 # <a name="the-cloudpilot-benefit-in-visual-studio-subscriptions"></a>Bulut aboneliğinde CloudPilot Visual Studio avantajı
-Birkaç kolay adımda Microsoft Azure uygulamalarınızı yeni uygulamalara taşıma. Dakikalar içinde, geçişin başarılı olması için gereken tüm kod değişikliklerini kod satırına kadar tanıyın: Kapsayıcılar, VM'ler, App Services, SQL Azure ve/veya MI SQL. Ardından ASR, DMA ve DMS'den yararlanarak sihirbazları kullanarak uygulamaları Azure'a geçirebilirsiniz.
+Birkaç kolay adımda Microsoft Azure uygulamalarınızı yeni uygulamalara taşıma. Dakikalar içinde, geçişin başarılı olması için gereken tüm kod değişikliklerini kod satırına kadar tanıyın: Kapsayıcılar, VM'ler, App Services, SQL Azure ve/veya SQL MI. Ardından ASR, DMA ve DMS'den yararlanarak sihirbazları kullanarak uygulamaları Azure'a geçirebilirsiniz.
 
 ## <a name="overview"></a>Genel Bakış
-UnifyCloud tarafından tasarlanan CloudPilot, geliştiricilerin uygulamaları hızla ve kolayca Azure'a taşıması için tasarlanmıştır.  El ile yapılan bir değerlendirmenin çok kısa bir sürede CloudPilot, Azure PaaS & IaaS geçiş maliyetlerini doğru bir şekilde belirler ve uygulamanın Bulutta çalışması için hangi kod değişikliklerinin gerçek olması gereken kod değişikliklerinin kod satırına kadar ayrıntılı öneriler sağlar. CloudPilot, Buluta geçiş eforu ve geliştirme planlamasının ilk değerlendirmesinde, bulut için ayrıntılı kod düzeyinde değişiklikler sunarak yeniden çarpanlara geçirme sürecinde ve kurumsal teknoloji denetimleri ve ilkelerine karşı son testte yardımcı olur.
+UnifyCloud tarafından tasarlanan CloudPilot, geliştiricilerin uygulamaları hızla ve kolayca Azure'a taşıması için tasarlanmıştır.  El ile yapılan bir değerlendirmenin çok kısa bir sürede CloudPilot, Azure PaaS & IaaS geçiş maliyetlerini doğru bir şekilde belirler ve uygulamanın Bulutta çalışması için hangi kod değişikliklerinin gerçek olması gerekeceğiyle ilgili olarak kod satırına kadar ayrıntılı öneriler sağlar. CloudPilot, Buluta geçiş eforu ve geliştirme planlamasının ilk değerlendirmesinde, bulut için ayrıntılı kod düzeyinde değişiklikler sunarak yeniden çarpanlara geçirme sürecinde ve kurumsal teknoloji denetimleri ve ilkelerine karşı son testte yardımcı olur.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
@@ -41,7 +41,7 @@ UnifyCloud tarafından tasarlanan CloudPilot, geliştiricilerin uygulamaları h�
    > ![CloudPilot Kayıt Sayfası](_img/vs-cloudpilot/vs-cloudpilot-register.png)
 
    > [!NOTE]
-   > CloudPilot avantajının etkinleştirmeleri kuruluş başına on ile sınırlıdır ve bu, abonelikler veya abonelikler Visual Studio Enterprise Visual Studio Professional kullanılır.  Kuruluşta on etkinleştirme zaten kullanılırsa, CloudPilot avantajını etkinleştiremeyebilirsiniz ve UnifyCloud'dan daha fazla bilgi içeren bir e-posta alırsınız.
+   > CloudPilot avantajının etkinleştirmeleri kuruluş başına on ile sınırlıdır ve bu süre, abonelikler veya abonelikler Visual Studio Enterprise Visual Studio Professional kullanılır.  Kuruluşta on etkinleştirme zaten kullanılırsa, CloudPilot avantajını etkinleştiremeyebilirsiniz ve UnifyCloud'dan daha fazla bilgi içeren bir e-posta alırsınız.
 
 0. Daha sonra, CloudPilot hakkında bilgi sahibi olmak için tasarlanmış bir ürün sayfası görüntülenir.  CloudPilot portalına gitmek için sağ üst köşedeki **CloudPilot'a** gidin'e tıklayın.
 
@@ -68,7 +68,7 @@ UnifyCloud tarafından tasarlanan CloudPilot, geliştiricilerin uygulamaları h�
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 
-<sup>1</sup>*Şunları içerir: Resale (NFR), FTE, En Değerli Professional (MVP), Bölgesel Direktörü (RD), Microsoft İş Ortağı Ağı (MPN), Visual Studio Endüstri İş Ortağı (VSIP), Microsoft Sertifikalı Eğitimci, BizSpark, Imagine, NFR Basic* için Değil  
+<sup>1</sup>*Şunları içerir: Resale (NFR), FTE, En Değerli Professional (MVP), Bölgesel Direktörü (RD), Microsoft İş Ortağı Ağı (MPN), Visual Studio Sektör Ortağı (VSIP), Microsoft Sertifikalı Eğitimci, BizSpark, Imagine, NFR Basic* için Değil  
 
 > [!NOTE]
 > Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
@@ -79,8 +79,8 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
 - CloudPilot kullanmayla ilgili yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
   - [UnifyCloud ürünleriyle](https://www.unifycloud.com/contacts/) ilgili sorgular için UnifyCloud ile iletişime geçin.
   - [CloudPilot Kullanıcı Kılavuzu](https://www.cloudatlasinc.com/cloudpilot/doc/CloudPilot-User-Manual.pdf )
-- Abonelikler için satış, abonelikler, hesaplar ve faturalama Visual Studio yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama konusunda yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
+- IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

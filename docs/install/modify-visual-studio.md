@@ -19,11 +19,11 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.openlocfilehash: 692b1aedf5c55d2162a28e96ae9cdbdadd9529e6
-ms.sourcegitcommit: 59613afd06a8f184efab8e108410066824a2b712
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "127920161"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128430281"
 ---
 # <a name="modify-visual-studio-workloads-components-and-language-packs"></a>Visual Studio iş yüklerini, bileşenleri ve dil paketlerini değiştirme
 
@@ -183,7 +183,7 @@ Visual Studio yüklemenizi değiştirmek için önce Visual Studio Yükleyicisi 
 
 1. Bir iş yükü yüklemesine göre daha fazla bileşen eklemek için, **tek tek bileşenler** sekmesini seçin ve istediğiniz bileşenleri seçin veya seçimi kaldırın.
 
-    ![Visual Studio Yükleyicisi bireysel bileşenler sekmesini gösteren ekran görüntüsü.](media/vs-2022/vs-installer-individual-components.png "Tek tek bileşenleri Visual Studio Yükleyicisi")
+    ![Visual Studio Yükleyicisi bireysel bileşenler sekmesini gösteren ekran görüntüsü.](media/vs-2022/vs-installer-individual-components.png "Sistem içinde tek tek bileşenleri Visual Studio Yükleyicisi")
 
 1. Yükleme veya Indirme **sırasında yüklemek** isteyip istemediğinizi seçin **, sonra yükleyin**. **İndirme sırasında** varsayılan seçenek olan yükleme, daha önce yüklemeyi başlatarak genel saati kaydeder.
 

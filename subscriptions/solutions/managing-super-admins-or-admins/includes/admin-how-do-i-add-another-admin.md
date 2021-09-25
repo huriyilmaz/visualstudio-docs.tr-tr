@@ -7,15 +7,15 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 06/01/2021
 user.type: admin
-tags: ''
+tags: super, admin
 subscription.type: vl, cloud, retail, partner
 sap.id: 8789faa7-9d29-25d8-018a-4f6ecee827c8
-ms.openlocfilehash: 4a21039234818132089612456a2cd2063e686fa58e4e47a75711f96e2db69b56
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 935c3907eb6a7187185592e48a275ecb36958fb6
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "127892592"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431716"
 ---
 ## <a name="how-to-add-another-super-admin-or-admin"></a>Başka bir süper yönetici veya yönetici ekleme
 

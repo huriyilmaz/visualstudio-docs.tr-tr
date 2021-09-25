@@ -16,11 +16,11 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: f68039ca8b1bca3224766f7f2673514e3b6a2e9f
-ms.sourcegitcommit: 022ac348337f77c899996ac81060a969ebfb64bb
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "128133796"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128428023"
 ---
 # <a name="how-to-run-a-c-program-in-visual-studio"></a>Nasıl yapılır: Visual Studio bir C# programı çalıştırma
 
@@ -152,4 +152,4 @@ Hedef .NET Framework sürümünü değiştirmek için bkz. [hedef Framework 'Ü 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Visual Studio ıde 'ye hoş geldiniz](../visual-studio-ide.md)'i okuyarak Visual Studio geliştirme ortamını keşfedebilirsiniz.
-- [İlk C# uygulamanızı oluşturun.](tutorial-console.md)
+- [Ilk C# uygulamanızı oluşturun](tutorial-console.md).

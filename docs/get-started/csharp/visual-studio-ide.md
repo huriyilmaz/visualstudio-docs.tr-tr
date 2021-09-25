@@ -1,6 +1,6 @@
 ---
-title: C# geliştiricilerine genel bakış
-description: Tümleşik geliştirme Visual Studio ortamı hakkında bilgi edinmek ve C# geliştiricilerine nasıl uyarlanmış olduğunu öğrenin.
+title: C# geliştiricileri için genel bakış
+description: Visual Studio tümleşik geliştirme ortamı ve C# geliştiricileri için nasıl uyarlanbildiği hakkında bilgi edinin.
 ms.date: 09/14/2021
 ms.technology: vs-ide-general
 ms.custom:
@@ -16,44 +16,44 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: e912048e20ec1479eb6d9aa3afe28d63417f40ff
-ms.sourcegitcommit: 022ac348337f77c899996ac81060a969ebfb64bb
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "128134587"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128430910"
 ---
-# <a name="welcome-to-the-visual-studio-ide--c"></a>Visual Studio IDE | C\#
+# <a name="welcome-to-the-visual-studio-ide--c"></a>Visual Studio ıde 'ye hoş geldiniz | ,\#
 
 [!INCLUDE [overview-part-1](../includes/ide-overview.md)]
 
-## <a name="select-environment-settings"></a>Ortam ayarlarını seçme
+## <a name="select-environment-settings"></a>Ortam ayarlarını seçin
 
-C# Visual Studio ortam ayarlarını kullanmak için aşağıdaki ayarları yapılandırabilirsiniz:
+Visual Studio, C# geliştiricilerine uyarlanmış ortam ayarlarını kullanacak şekilde yapılandırabilirsiniz:
 
-1. Menü çubuğunda Araçlar İçeri ve Dışarı  >  **Aktarma'Ayarlar.**
+1. menü çubuğunda **araçlar**  >  **içeri aktar ve dışarı aktar Ayarlar**' ı seçin.
 
-1. **İlkeleri İçeri ve Dışarı Ayarlar Sihirbazı'nda** Tüm ayarları **sıfırla'yı ve** ardından Sonraki'yi **seçin.**
+1. **Ayarlar içeri ve dışarı aktarma sihirbazında**, **tüm ayarları sıfırla**' yı seçin ve ardından **ileri**' yi seçin.
 
-1. Geçerli Ayarları **Kaydet Ayarlar,** sıfırlamadan önce geçerli ayarlarınızı kaydedip kaydetmeyebilirsiniz. Herhangi bir ayarı özelleştirmediyebilirsiniz, hayır, yalnızca **ayarları sıfırla'yı seçin ve geçerli ayarlarım'ın üzerine yazmanız gerekir.** Sonra **İleri**’yi seçin.
+1. **geçerli Ayarlar kaydet** sayfasında, sıfırlamadan önce geçerli ayarlarınızı kaydedip kaydetmeyeceğinizi seçin. Herhangi bir ayar özelleştirilmediyseniz Hayır ' ı seçin, **geçerli ayarlarım üzerine yazarak ayarları sıfırlayın**. Sonra **İleri**’yi seçin.
 
-1. Varsayılan **Koleksiyon Seçin sayfasında Visual C#** Ayarlar ve ardından Son'a **tıklayın.**
+1. **Ayarlar varsayılan koleksiyonunu seçin** sayfasında, **Visual C#**' yi seçin ve ardından **son**' u seçin.
 
-1. Sıfırlama Tamamlandı **sayfasında Kapat'ı** **seçin.**
+1. **Sıfırlama Tamam** sayfasında **Kapat**' ı seçin.
 
-IDE'nizi kişiselleştirmenin diğer yolları hakkında bilgi edinmek için [bkz. Visual Studio.](../../ide/personalizing-the-visual-studio-ide.md)
+IDE 'yi kişiselleştirmek için kullanabileceğiniz diğer yollar hakkında bilgi edinmek için bkz. [kişiselleştirme Visual Studio](../../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Aşağıdaki Visual Studio makalelerle birlikte aşağıdaki adımları daha ayrıntılı bir şekilde keşfedin:
+aşağıdaki tanıtım makaleleriyle birlikte Visual Studio daha fazlasını yapın:
 
 > [!div class="nextstepaction"]
 > [Kod düzenleyicisini kullanmayı öğrenin](tutorial-editor.md)
 
 > [!div class="nextstepaction"]
-> [Projeler ve çözümler hakkında bilgi](../tutorial-projects-solutions.md)
+> [Projeler ve çözümler hakkında bilgi edinin](../tutorial-projects-solutions.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- Daha [fazla Visual Studio keşfedin.](../../ide/advanced-feature-overview.md)
-- web [sitesini visualstudio.microsoft.com.](https://visualstudio.microsoft.com/vs/)
-- web [Visual Studio okuyun.](https://devblogs.microsoft.com/visualstudio/)
+- [daha fazla Visual Studio özelliği](../../ide/advanced-feature-overview.md)bulun.
+- [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/)adresini ziyaret edin.
+- [Visual Studio blogunu](https://devblogs.microsoft.com/visualstudio/)okuyun.

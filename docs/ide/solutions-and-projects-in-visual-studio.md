@@ -21,11 +21,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 ms.openlocfilehash: 11836eda644bfda367a456751c59e93a8d49af58
-ms.sourcegitcommit: 811e4ee80311433fefbe6d6223bf72c431008403
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "127890539"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128426354"
 ---
 # <a name="what-are-solutions-and-projects-in-visual-studio"></a>Visual Studio çözüm ve projeler nelerdir?
 

@@ -17,7 +17,7 @@ ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/24/2021
-ms.locfileid: "128374582"
+ms.locfileid: "128429062"
 ---
 # <a name="repair-visual-studio"></a>Visual Studio’yu onarın
 

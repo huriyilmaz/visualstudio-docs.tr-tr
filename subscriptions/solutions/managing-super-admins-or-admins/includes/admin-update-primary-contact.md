@@ -7,15 +7,15 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 06/01/2021
 user.type: admin
-tags: ''
+tags: primary, contact
 subscription.type: vl, cloud, retail, partner
 sap.id: 8789faa7-9d29-25d8-018a-4f6ecee827c8
-ms.openlocfilehash: 0f0f501fcbe789b20f8ba9bc3551f5f8c251ffab6e31a04ee0941389860b479c
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: c0f42d89396cc2c61f31ae717274ca5d6d16ddf5
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "127892515"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431709"
 ---
 ## <a name="our-primary-contact-left-and-im-the-new-one-how-can-i-update-the-contact-info"></a>Birincil kişimiz kaldı ve yeni bir tane kullanıyorum. İletişim bilgilerini nasıl güncelleştirebilirim?
 

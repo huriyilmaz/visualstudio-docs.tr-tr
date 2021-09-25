@@ -1,21 +1,21 @@
 ---
 title: Visual Studio aboneliğinde Concierge Sohbet | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: dcd99e32-c9f3-4e19-8428-319dfa220463
 ms.date: 03/18/2021
 ms.topic: how-to
 description: Visual Studio aboneliklerine dahil olan Concierge Sohbet avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 468433ba6cc378fd422f1fee6c806c6a701a9e65
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 9eb845625fab8bf7b41ee216493044be685aecb1
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966619"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128432396"
 ---
 # <a name="concierge-chat-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Concierge Chat
-Concierge Sohbet hizmeti, ürün bilgilerini ve teknik belgeleri bulma konusunda yardım ve abonelik avantajlarınızı kullanma konusunda Visual Studio sağlar.
+Concierge Sohbet hizmeti ürün bilgilerini ve teknik belgeleri bulma konusunda yardım ve abonelik avantajlarınızı kullanma konusunda Visual Studio sağlar.
 
 Hizmet 7/24 kullanılabilir ve şu anda yalnızca İngilizce olarak sunulmaktadır (hesaplar, faturalama ve abonelikler dışında sorular için).
 
@@ -23,7 +23,7 @@ Hizmet 7/24 kullanılabilir ve şu anda yalnızca İngilizce olarak sunulmaktad�
 Concierge Sohbet hizmeti aracılığıyla yardım almak çok kolaydır.
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
-2. Avantajlar sayfasının Destek bölümünde Concierge Sohbet kutucuğunu bulun ve Şimdi **sohbet'e tıklayın.**
+2. Avantajlar sayfasının Destek bölümünde Concierge Sohbeti kutucuğunu bulun ve Şimdi **sohbet'e tıklayın.**
     > [!div class="mx-imgBorder"]
     > ![Concierge Sohbet Kutucuğu](_img/vs-concierge-chat/vs-concierge-chat-tile.png "Yeni bir sohbet oturumu başlatmak için 'Şimdi sohbet'e tıklayın.")
 
@@ -33,7 +33,7 @@ Concierge Sohbet hizmeti aracılığıyla yardım almak çok kolaydır.
 
 5. Bir aracı kullanılabilir olduğunda sohbet başlar.
     > [!div class="mx-imgBorder"]
-    > ![Concierge Sohbet Oturumu](_img/vs-concierge-chat/vs-concierge-chat-session.png "Sohbet oturumu penceresinde bir aracı oturuma ne zaman katılır? gösterilir.")
+    > ![Concierge Sohbet Oturumu](_img/vs-concierge-chat/vs-concierge-chat-session.png "Sohbet oturumu penceresinde, bir aracı oturuma ne zaman katılır? gösterilir.")
 
 ## <a name="eligibility"></a>Uygunluk
 | Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
@@ -58,8 +58,8 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
    A: Hesaplar, faturalama ve abonelik sorunlarıyla ilgili yardım birden çok dilde kullanılabilir.  Ürün bilgilerini ve teknik belgeleri bulma konusunda yardım almak için İngilizce dilinde bilgi edinebilirsiniz.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için Visual Studio [ile iletişime geçin.](https://my.visualstudio.com/gethelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için, [Visual Studio abonelik desteği ile iletişim kurun.](https://my.visualstudio.com/gethelp)
+- IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

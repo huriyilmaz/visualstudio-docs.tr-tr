@@ -1,18 +1,18 @@
 ---
 title: Visual Studio aboneler için Azure DevOps avantajlar | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: lank
 manager: lank
 ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 02/19/2021
 ms.topic: conceptual
 description: Azure DevOps Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
-ms.openlocfilehash: d644842eb5bdf8673a86ab0fbb5ebc579c1a0af5
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 6facb5ed0978c6c4e766db7f16f2796d30436df8
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966294"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128427467"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio aboneler için Azure DevOps avantajları
 etkin bir Visual Studio abonesi olarak, bir avantaj olarak aboneliğinizde yer alan Azure DevOps bir dizi özelliği kullanabilirsiniz. bu özellikleri, bir üyesi olduğunuz her bir kuruluşta, organizasyonu oluşturduğunuz veya başka bir kişi tarafından eklenmiş olan her Azure DevOps kullanabileceksiniz.

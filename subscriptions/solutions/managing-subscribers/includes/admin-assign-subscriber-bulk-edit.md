@@ -7,15 +7,15 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 06/01/2021
 user.type: admin
-tags: ''
+tags: bulk
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: 6b7b5ae726588d19930c267fdd1b31656d5ce5e0de983706cf3d2d49d1b63eb1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 98144f1087314e87f6ec26a0053e1a714caaad65
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "127892578"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431752"
 ---
 ## <a name="how-do-i-assign-subscribers-in-bulk"></a>Nasıl yaparım? aboneler toplu olarak atansın mı?
 

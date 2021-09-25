@@ -1,18 +1,18 @@
 ---
 title: iş veya okul hesaplarıyla Visual Studio abonelikler için oturum açın | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: f39a2672-c283-4755-93d3-31c7c7a032d0
 ms.date: 02/19/2021
 ms.topic: how-to
 description: iş veya okul hesabınızla Visual Studio abonelikleriniz üzerinde nasıl oturum kullanabileceğinizi öğrenin.
-ms.openlocfilehash: effec7889199d4eddc3c149bdd4ded296a50e0b1
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 82ab031d644055148aad2650069a31cd945c55f9
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966444"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128428974"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>iş veya okul hesabınızla abonelikler Visual Studio için oturum açma 
 

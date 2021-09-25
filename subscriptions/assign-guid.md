@@ -1,17 +1,18 @@
 ---
 title: Belirli GUID'leri Visual Studio abonelere | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.date: 03/19/2021
 ms.topic: conceptual
+ms.assetid: f9c82d7d-55bd-4e41-a170-6077b28ba5af
 description: Yöneticilerin abonelere abonelik GUID'lerini nasıl belirliyebilirsiniz?
-ms.openlocfilehash: a0721029186605c6b9a277c9eb95a370a086d7d2
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 7f451473ccee1f6d1a99d1aaa39f1f1817603aaf
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725486"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128428083"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio Abonelikler Yönetim Portalı'Visual Studio belirli abonelikleri atama
 
@@ -43,7 +44,7 @@ Dışarı Aktarma aracını daha önce kullandıysanız, üretilen elektronik ta
 - **Abonelik Durumu:** Bu alan "atanan" veya "atanmamış" durumunu gösterir.  Bir aboneliğin durumu "atandı" ise, abonelikle ilişkili ad, e-posta gibi kullanıcı bilgileri de olur. 
 - **Kullanım Durumu:** Kullanım durumu "yeni", yani bir kullanıcıya atanmadığı anlamına gelir veya belirli bir noktada kullanıcıya atandığı anlamına gelen "kullanıldı" anlamına gelir.  
 
-Tek tek kullanıcılara hangi abonelikleri atamak istediğinizi belirlemek için bu alanlardaki değerleri ve elektronik tabloyu diğer bilgileri kullanabilirsiniz. Listeyi durum, abonelik düzeyi Excel sona erme tarihi gibi ölçütlere göre daraltmaya yardımcı olması için bu filtreyi uygulamanıza yardımcı olabilir. 
+Tek tek kullanıcılara hangi abonelikleri atamak istediğinizi belirlemek için bu alanlardaki değerleri ve elektronik tabloyu diğer bilgileri kullanabilirsiniz. Listeyi durum, abonelik düzeyi Excel sona erme tarihi gibi ölçütlere göre daraltmaya yardımcı olması için bir filtre uygulayabilirsiniz. 
 
 ### <a name="upload-your-new-assignments"></a>Upload atamalarınızı düzenleme
 

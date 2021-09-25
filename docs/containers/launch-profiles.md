@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.date: 05/10/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 3b7872707c450c393c5bbeb654d65c0dbee60052
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 7c6a4137046456321e54a53e58a96d1dbfdf8fe1
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631706"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128427388"
 ---
 # <a name="launch-a-subset-of-compose-services"></a>Oluşturma hizmetleri alt kümesini Başlat
 
@@ -79,7 +79,8 @@ Aşağıdaki örnekte, `web1` Oluştur profili seçilidir ve bu profil, **Hizmet
 
 !["Başlatma ayarları iletişim kutusunun ekran görüntüsü"](media/launch-settings/launch-settings-create-profile.png)
 
-Docker Compose profilleri bölümü yalnızca *Docker-Compose. yıml* dosyalarınızda tanımlanmış profiller varsa görüntülenir.
+>[!NOTE]
+> Docker Compose profilleri bölümü yalnızca *Docker-Compose. yıml* dosyalarınızda tanımlanmış profiller varsa görüntülenir.
 
 Sonraki örnekte, bir oluşturma profilindeki hizmetlere filtre uygulamak yerine bireysel hizmetler arasında seçim gösterilmektedir. Burada, `test2` hata ayıklama ve hata ayıklama olmadan beş hizmetten oluşan iki hizmetten oluşan adlı yeni bir başlatma profili oluşturduysanız, iletişim kutusunun nasıl görünebileceği gösterilmektedir `webapplication1` `webapplication2` .  Bu başlatma profili ayrıca uygulama başlatıldığında bir tarayıcı başlatır ve giriş sayfasında açar `webapplication1` . 
 
@@ -170,9 +171,9 @@ Ayrıca, WebApplication1 eylemini **hata ayıklama olmadan başlayacak** şekild
 |composeProfile-şunları içerir | Bir başlatma profili oluşturan oluşturma profili adlarının listesi.|
 |composeProfile-serviceActions | Her hizmetin seçili oluşturma profillerini, hizmetlerini ve başlatma eylemini listeler|
 |serviceActions | Seçilen hizmetleri ve başlatma eylemini listeler.|
-|composeLaunchServiceName| DockerLaunchAction veya DockerLaunchBrowser belirtilmişse DockerServiceName, başlatılacak hizmetin adıdır. Docker Compose dosyası içinde hangi hizmetin yükleneceğini öğrenmek için bu özelliği kullanın.|
 |composeLaunchAction| **F5** veya **CTRL** F5 üzerinde gerçekleştirilecek başlatma eylemini belirtir + . İzin verilen değerler None, LaunchBrowser ve LaunchWCFTestClient 'Tur.|
 |composeLaunchUrl 'Si| Tarayıcı başlatılırken kullanılacak URL. Geçerli değiştirme belirteçleri şunlardır "{Serviceıpaddress}", "{ServicePort}" ve "{Scheme}". Örneğin: {Scheme}: ı{serviceipaddress}: {ServicePort}|
+|composeLaunchServiceName| ComposeLaunchUrl 'Sindeki belirteçleri değiştirmek için kullanılan hizmeti belirtir.|
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

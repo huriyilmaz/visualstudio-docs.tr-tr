@@ -1,40 +1,40 @@
 ---
 title: Abonelikler için Visual Studio sorumlulukları | Visual Studio Pazar
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: b26b31dc-1eeb-4871-9ce6-2c980e703f1e
 ms.date: 03/19/2021
 ms.topic: conceptual
 description: Abonelik yöneticilerinin sorumlulukları hakkında bilgi edinin.
-ms.openlocfilehash: 5f2aef531aafca6ad319fe69810d00c19e2927fb
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 89da3697482efa3b7ba7f940df00bb1fcdd2559c
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966354"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128428159"
 ---
 # <a name="overview-of-admin-responsibilities"></a>Yönetici sorumluluklarını genel bakış
 Yönetici olarak, kuruluş aboneliklerini yönetebilirsiniz.  Yönetici rolü ayrıca aboneliklerin lisans koşullarına uygun olarak yönetil olduğundan emin olmak için sorumluluklar da taşır. Bu makalede yönetici rolünün sorumlulukları, avantajları ve sınırlamaları açıklanmıştır.
 
 ## <a name="roles--responsibilities"></a>Roller & sorumlulukları
-Bir Visual Studio abonelik yöneticisinin dört temel sorumluluğu vardır:
+Bir Visual Studio abonelik yöneticisinin dört önemli sorumluluğu vardır:
 
 1. **Aboneliklerin avantajlarını ve kısıtlamalarını Visual Studio anlıyoruz.** Avantajlarınızı doğru anlamak, bulut hizmetlerini kullanarak donanım maliyetlerini azaltmanıza ve ön üretim ortamları için kullanıcı başına lisanslarla yazılım maliyetlerini azaltmanıza olanak tanır. 
-2. **Belirli Visual Studio belirli kişilere abonelik attayarak kullanımı teşvik edin.** Sözleşmeniz, Visual Studio belirli, adlandırılmış kişilere atanmanızı gerektirir. Abonelerinizi takip edin ve aboneliklerine erişin ve aboneliklerinde yer alan avantajlardan tam olarak Visual Studio edinin.
-3. **Üretim öncesi ortamınızı doğru bir şekilde envantere alın.** Bu, Visual Studio lisansına sahip yazılımlarla etkileşime geçen tüm kullanıcıların kendi Visual Studio gerekir. 
+2. **Belirli Visual Studio ve kullanımı teşvik eden belirli kişilere abonelik attayabilirsiniz.** Sözleşmeniz, Visual Studio belirli, adlandırılmış bireylere atanmalarını gerektirir. Abonelerinizi takip edin ve aboneliklerine erişin ve aboneliklerine dahil edilen avantajlardan tam olarak Visual Studio edinin.
+3. **Üretim öncesi ortamınızı doğru bir şekilde envantere alın.** Bu, Visual Studio lisansına sahip yazılımlarla etkileşime geçen tüm kullanıcıların kendi Visual Studio olması için gereklidir. 
 4. **Kullanıcı ataması değişikliklerini izleme ve zaman çizelgesinde ek lisanslar edinme.** Microsoft Toplu Lisanslama (VL) Anlaşmaları ve MPSA, abonelikleri kullanma ve atama konusunda Visual Studio sağlar. Buna karşılık, yazılım kullanımı ve kullanıcı atamalarında yapılan değişiklikleri izlemeniz ve sözleşmede özetlenen zaman çizelgesinde ek lisanslar için siparişleri işlemeniz beklenir.  Bu sorumlulukla ilgili yardım almak için Abonelik Yönetim [Portalı'Visual Studio](maximum-usage.md) maksimum kullanım raporu çalıştırabilirsiniz. 
 
 ## <a name="benefits-and-limitations"></a>Avantajlar ve sınırlamalar
-Visual Studio, geliştiricilerin diğer yazılımları tasarlamak, geliştirmek, test etmek, değerlendirmek ve göstermek için yazılım yüklemesine ve kullanmasına olanak sağlar. Visual Studio Abonelik yazılımı üretim ortamları için lisanslanmaz.
+Visual Studio abonelikleri, geliştiricilerin diğer yazılımları tasarlamak, geliştirmek, test etmek, değerlendirmek ve göstermek için yazılım yüklemesine ve kullanmasına olanak sağlar. Visual Studio Abonelik yazılımı üretim ortamları için lisanslanmaz.
 
 | Kategori                                 | Avantaj veya sınırlama |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Kullanıcı tabanlı lisanslama                     | MSDN Platformları ve tüm Visual Studio düzeyi kullanıcı başına lisansa sahiptir. Bu ürün ve hizmetlere dahil edilen yazılımla etkileşim kuracak (yükleme, yapılandırma veya erişim) her geliştirme ekibi üyesi kendi Visual Studio gerektirir.                                                                                                                                                                                                                                                                                                                                  |
 | Sınırsız yükleme                  | Her lisanslı kullanıcı yazılımı tasarlamak, geliştirmek, test etmek, değerlendirmek ve göstermek için herhangi bir sayıda cihaza yazılım yükleyebilir ve kullanabilir. Tek bir Microsoft Office lisansına sahip olan tek bir özel durum vardır. Visual Studio lisansa sahip yazılımlar iş, ev, okul ve müşterinin ofisindeki cihazlarda veya üçüncü taraf tarafından barındırılan ayrılmış donanımlarda yük olabilir ve kullanılabilir.                                                                                                                                                                                                                                  |
-| Üretim ortamları için uygun değildir | Visual Studio abonelikleri yazılımı, kabul testi veya geri bildirim dışında son kullanıcılar tarafından erişilen herhangi bir ortam, üretim veritabanına bağlanan, olağanüstü durum kurtarmayı veya üretim yedeklemeyi destekleyen ya da yoğun etkinlik dönemleri sırasında üretim için kullanılan ortamlar da dahil olmak üzere üretim ortamları için lisanslanmaz. Buna yönelik özel durumlar, lisanslama teknik bilgisinde özetlenen belirli abonelik [düzeylerine Visual Studio avantajları içerir.](https://aka.ms/vslicensing)                                                                                            |
-| Lisans yeniden ataması                     | Bir kullanıcı takımdan ayrıldığında ve artık lisansa ihtiyacı kalmadığı zaman, önceki kullanıcıya atandığı için en az 90 gün geçmişse lisansı başka bir kullanıcıya yeniden atamazsiniz. Bir lisansı yeniden atamanız, zaten kullanılan tüm ürün anahtarları kullanılabilir durumda olur ancak değiştirilemez. Enterprise Sözleşmesi (EA) olan kuruluşlarda, pluralsight eğitimi gibi özgün kullanıcı tarafından kullanılan tüm avantajlar sıfırlanır.                                                                                                                                                                                                                                                 |
-| Son kullanıcılar için özel durum                  | Yazılım geliştirme projesinin sonunda, son kullanıcılar genellikle bir uygulamayı gözden geçirip yayın için gerekli ölçütleri karşılar mı olduğunu belirler. Bu işlem kullanıcı kabul testi (UAT) olarak adlandırılan bir işlemdir. İş sponsoru veya ürün yöneticisi gibi ekip üyeleri, son kullanıcılar için bir yardımcı olarak görevlerde kullanılabilir. Visual Studio aboneliğine sahip Visual Studio son kullanıcılar, yazılımın kullanımı diğer tüm lisans koşullarına uygunsa UAT Visual Studio erişebilirsiniz. Birincil rolü yazılım tasarlama, geliştirme veya test etme aşamasında olan birinin "son kullanıcı" olarak da nitelendirilene sahip olduğu nadir bir durumdur. |
+| Üretim ortamları için uygun değildir | Visual Studio abonelik yazılımı, kabul testi veya geri bildirim dışında son kullanıcılar tarafından erişilen herhangi bir ortam, üretim veritabanına bağlanan, olağanüstü durum kurtarma veya üretim yedeklemeyi destekleyen ya da yoğun etkinlik dönemleri sırasında üretim için kullanılan ortamlar da dahil olmak üzere üretim ortamları için lisanslanmaz. Buna yönelik özel durumlar, Lisanslama Teknik Belgesinde özetlenen belirli abonelik [düzeylerine Visual Studio avantajları içerir.](https://aka.ms/vslicensing)                                                                                            |
+| Lisans yeniden ataması                     | Bir kullanıcı takımdan ayrıldığında ve artık lisansa ihtiyaç kalmadığı zaman, önceki kullanıcıya atandığı için en az 90 gün geçmişse lisansı başka bir kullanıcıya yeniden atamazsiniz. Bir lisansı yeniden atamanız, zaten kullanılan tüm ürün anahtarları kullanılabilir durumda olur ancak değiştirilemez. Enterprise Sözleşmesi (EA) olan kuruluşlarda, Pluralsight eğitimi gibi özgün kullanıcı tarafından kullanılan tüm avantajlar sıfırlanır.                                                                                                                                                                                                                                                 |
+| Son kullanıcılar için özel durum                  | Yazılım geliştirme projesinin sonunda, son kullanıcılar genellikle bir uygulamayı gözden geçirip yayın için gerekli ölçütleri karşılar mı olduğunu belirler. Bu işlem kullanıcı kabul testi (UAT) olarak adlandırılan bir işlemdir. İş sponsoru veya ürün yöneticisi gibi ekip üyeleri, son kullanıcılar için bir yardımcı olarak görevlerde kullanılabilir. Visual Studio aboneliğine sahip olan son kullanıcılar, yazılımın kullanımı diğer tüm lisans koşullarına uygunsa UAT Visual Studio erişebilirsiniz. Birincil rolü yazılım tasarlama, geliştirme veya test etme aşamasında olan birinin "son kullanıcı" olarak da nitelendirilene sahip olduğu nadir bir durumdur. |
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio yönetim ve abonelik desteği](https://aka.ms/vsadminhelp)

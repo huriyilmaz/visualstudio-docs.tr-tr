@@ -8,11 +8,11 @@ ms.date: 03/18/2021
 ms.topic: conceptual
 description: müşterileriniz için Visual Studio bulut aboneliklerinin nasıl satın alınacağı ve yönetileceği konusunda bulut çözümü sağlayıcılarına yönelik bilgiler.
 ms.openlocfilehash: 237cd3673ad558df1fc28be205189b27874496b0
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128309526"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128426284"
 ---
 # <a name="buy-and-manage-visual-studio-cloud-subscriptions-for-your-customers"></a>müşterileriniz için Visual Studio bulut abonelikleri satın alın ve yönetin
 [Bulut Çözümü Sağlayıcısı (CSP)](https://partner.microsoft.com/cloud-solution-provider) programındaki iş ortakları, müşterileri için Visual Studio Enterprise ve Visual Studio Professional bulut abonelikleri satın alabilir.

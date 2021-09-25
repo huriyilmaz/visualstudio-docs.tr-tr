@@ -4,12 +4,12 @@
   items:
     - name: Hata ayıklama nedir?
       href: what-is-debugging.md
+    - name: Hata ayıklayıcıya ilk bakış
+      href: debugger-feature-tour.md
     - name: Hata ayıklama teknikleri ve araçları
       href: write-better-code-with-visual-studio.md
 - name: Hızlı Başlangıçlar
   items:
-    - name: Hata ayıklayıcıya ilk bakış
-      href: debugger-feature-tour.md
     - name: Bir C# veya Visual Basic uygulamasında hata ayıklama
       href: quickstart-debug-with-managed.md
     - name: Bir C++ uygulamasında hata ayıklama

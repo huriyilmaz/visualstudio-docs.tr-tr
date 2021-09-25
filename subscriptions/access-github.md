@@ -8,11 +8,11 @@ ms.date: 03/19/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerinin bir parçası olarak GitHub Enterprise erişme hakkında bilgi edinin
 ms.openlocfilehash: c4dfd161aa57653c1892cb38b174e7488cb14167
-ms.sourcegitcommit: da19ed1e48259b219c61c4cb9e98b006004a5766
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/21/2021
-ms.locfileid: "128052846"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128429010"
 ---
 # <a name="visual-studio-subscriptions-with-github-enterprise"></a>GitHub Enterprise abonelikleri Visual Studio 
 

@@ -8,11 +8,11 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 08/13/2021
 ms.openlocfilehash: 95a74093477657ec6e550005d8bd5c6a08ea1703
-ms.sourcegitcommit: c2afe12aaf04456846613550b367cf86eb082f4b
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "127934104"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431711"
 ---
 # <a name="visual-studio-subscriptions-admin-support-widget-content-includes-files"></a>Visual Studio abonelik yöneticisi pencere öğesi içeriğini IÇERIR dosyaları destekler
 

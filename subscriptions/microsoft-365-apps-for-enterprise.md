@@ -8,25 +8,25 @@ ms.date: 03/21/2021
 ms.topic: how-to
 description: Kurumsal uygulamalar hakkında bilgi Microsoft 365 ve yükleme
 ms.openlocfilehash: 0ec77f2a5a03e41d9a44bc8cfa7676e289291d2f
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128307114"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128432738"
 ---
-# <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Microsoft 365 aboneliklerde kurumsal Visual Studio uygulamaları kullanma
-Microsoft 365 uygulamalar (eski adı Office 365 Pro Plus) seçili Visual Studio kullanılabilir. 
+# <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Microsoft 365 aboneliklerde kurumsal uygulamalar Visual Studio kullanma
+Microsoft 365 uygulamalar (eski adı Office 365 Pro Plus), seçili Visual Studio kullanılabilir. 
 
 En iyi çalışmanızı oluşturun. Her zaman güncelleştirilen uygulamalarla her yerde çalışma. Microsoft 365 uygulamaları Word, Excel, PowerPoint, OneNote, Outlook, Publisher ve Access (Publisher ve Access yalnızca PC'de kullanılabilir) gibi premium uygulamalarla birlikte gelen bir aboneliktir. Uygulamalar bilgisayarlar, Mac'ler, iPad'ler, iPhone'lar, Android tabletler ve Android telefonlar dahil olmak üzere birden çok cihaza yüklenebilirsiniz. Abonelikle, uygulamaların en son sürümlerini alır ve güncelleştirmeler olduğunda otomatik olarak alırsınız.
 
 > [!NOTE]
-> Şirket aboneliğinize Visual Studio, kurumsal kullanım için Microsoft 365 uygulamaları kullanma lisansınız vardır.  
+> Şirket aboneliğinize Visual Studio, kurumsal kullanım için Microsoft 365 uygulamaları kullanma lisansına sahip olur.  
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi basittir.  Aboneliğinizi etkinleştirmek ve uygulamalarınızı yüklemek için şu adımları izleyin:
 
 1. Visual Studio aboneliğinde oturum açma[https://my.visualstudio.com](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-1. Kurumsal kutucuk için Microsoft 365 uygulama kutucuğunu bulun ve **Etkinleştir'i seçin.**
+1. Kurumsal Microsoft 365 için uygulama kutucuğunu bulun ve **Etkinleştir'i seçin.**
    > [!div class="mx-imgBorder"]
    > ![Microsoft 365 kutucuğu için uygulamaları kullanma](_img/microsoft-365-apps-for-enterprise/tile-activate.png "Aboneliğinizi kullanmak için 'Etkinleştir'i seçin.")
 
@@ -87,4 +87,4 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
 Abonelik aboneliğinizin avantajlarından en iyi şekilde faydalanmanızı Visual Studio olun:
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
-- [Azure DevTest bireysel kredisi](vs-azure.md) Office için uygulama geliştirmeyi planlıyorsanız, Office [Geliştirici Aboneliğinizi etkinleştirmeniz gerekir](./vs-m365.md)
+- [Azure DevTest bireysel kredisi](vs-azure.md) Office için uygulama geliştirmeyi planlıyorsanız, Office Geliştirici [Aboneliğinizi etkinleştirmeniz gerekir](./vs-m365.md)

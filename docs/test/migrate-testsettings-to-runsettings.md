@@ -12,16 +12,22 @@ manager: jmartens
 ms.technology: vs-ide-test
 ms.workload:
 - multiple
-ms.openlocfilehash: 749bb5e57770d76dfca69af40913d8d80c006679
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 348de2d34e30c96449dcd2e4c2ba6eb83ed24c4c
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126634222"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128429694"
 ---
-# <a name="upgrade-from--testsettings-to-runsettings"></a>*.testsettings'den* *.runsettings'e yükseltme*
+# <a name="upgrade-from-testsettings-to-runsettings"></a>.testsettings'den .runsettings'e yükseltme
 
-Test yapılandırma *dosyanızı,.testsettings'den .runsettings'e* yükseltmek için, ayarlarla birlikte yüklü olan AyarlarMigrator Visual Studio.  Yükleme konumunuz Visual Studio bağlı olarak, ayarlar aracına aşağıdaki yolda bulabilirsiniz:`C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\TestPlatform\SettingsMigrator.exe`
+Test yapılandırma dosyanızı *,testsettings'den .runsettings'e* yükseltmek için, ayarlarla birlikte yüklemesi yapılan AyarlarMigrator Visual Studio.  Yükleme konumunuz Visual Studio bağlı olarak, ayarlar aracına aşağıdaki yolda bulabilirsiniz:
+::: moniker range=">=vs-2022"
+`C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\TestPlatform\SettingsMigrator.exe`
+::: moniker-end
+::: moniker range="vs-2019"
+`C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Extensions\TestPlatform\SettingsMigrator.exe`
+::: moniker-end
 
 Doğru dizin konumda, aracı aşağıdaki biçimde çalıştırabilirsiniz:
 
@@ -36,7 +42,7 @@ SettingsMigrator.exe E:\MyTest\MyTestSettings.testsettings
 SettingsMigrator.exe E:\MyTest\MyTestSettings.testsettings E:\MyTest\MyNewRunSettings.runsettings
 ```
 
-*.testsettings seçeneklerinin* *.runsettings'e* nasıl dönüştürülmesi hakkında daha fazla bilgi için aşağıdaki açık kaynak [test platformu](https://github.com/microsoft/vstest-docs/blob/master/RFCs/0023-TestSettings-Deprecation.md#migration) deposunda daha fazla uygulama GitHub.
+*.testsettings seçeneklerinin .runsettings'e* nasıl dönüştürülmesiyle ilgili daha fazla bilgi için aşağıdaki açık kaynak [test platformu](https://github.com/microsoft/vstest-docs/blob/master/RFCs/0023-TestSettings-Deprecation.md#migration) deposunda daha fazla uygulama GitHub. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

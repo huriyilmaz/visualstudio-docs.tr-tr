@@ -547,6 +547,8 @@
               href: private-galleries.md
             - name: Özel Bir Galeri için Atom Akışı Oluşturma
               href: how-to-create-an-atom-feed-for-a-private-gallery.md
+            - name: VsixUtil ile Özel Galeri için ATOM akışı (VsixFeed) oluşturma
+              href: how-to-create-vsix-feed-for-private-gallery.md
             - name: Bir Özel Galeriyi Kayıt Defteri Ayarlarını Kullanarak Yönetme
               href: how-to-manage-a-private-gallery-by-using-registry-settings.md
         - name: Visual Studio’nun Birden Çok Sürümünü Destekleme

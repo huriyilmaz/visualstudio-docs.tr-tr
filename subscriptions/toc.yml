@@ -46,7 +46,7 @@
       href: manage-vs-subscriptions.md
     - name: Aboneliklerin süresi dolduğunda
       href: subscription-expiration.md
-    - name: Abonelik düzeyi değişiklikleri
+    - name: Abonelik düzeyindeki değişiklikler
       href: subscription-level-changes.md
     - name: Yöneticiler tarafından kaldırılan abonelikler
       href: subscription-removed.md
@@ -56,9 +56,9 @@
       items:
         - name: Avantajlar hakkında
           href: about-benefits.md
-        - name: Azure geliştirme ve test teklifleri
+        - name: Azure Geliştirme ve Test teklifleri
           items:
-            - name: Bireyler için (krediler)
+            - name: Kişiler için (krediler)
               items:
                 - name: Azure DevTest bireysel kredisi
                   href: vs-azure.md
@@ -180,7 +180,7 @@
               href: assign-license-bulk.md
             - name: Özel abonelikler atama
               href: assign-guid.md
-        - name: Abonelikleri yeni sözleşmelere taşıyın
+        - name: Abonelikleri yeni sözleşmelere taşıma
           href: migrate-subscriptions.md
         - name: Abonelikleri düzenleme
           href: edit-license.md
@@ -194,6 +194,8 @@
           href: handle-overclaimed-license.md
         - name: En fazla kullanım
           href: maximum-usage.md
+        - name: Anlaşmaların süresi dolduğunda ne olur?
+          href: admin-expiration.md
         - name: Süresi dolan abonelikler
           href: handle-expired-license.md
         - name: 'Abone oturum açma senaryoları  '

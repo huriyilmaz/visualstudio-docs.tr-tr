@@ -8,14 +8,14 @@ ms.date: 03/17/2021
 ms.topic: conceptual
 description: Seçili aboneliklere dahil olan Microsoft Q&Forum destek avantajı hakkında Visual Studio öğrenin.
 ms.openlocfilehash: 4e84e31063d315f43cc7bdc13b478e640dbf7e49
-ms.sourcegitcommit: 022ac348337f77c899996ac81060a969ebfb64bb
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "128134037"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128432206"
 ---
-# <a name="microsoft-qa-forum-support-in-visual-studio-subscriptions"></a>&aboneliklerde Microsoft Q Visual Studio forum desteği
-Teknik ürünle ilgili bir sorunun mu var? Microsoft'ta teknik soruların&cevaplarının yer olduğu Microsoft Q&A'da bulabilirsiniz.
+# <a name="microsoft-qa-forum-support-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Microsoft Q&forum desteği
+Teknik ürünle ilgili bir sorunun mu var? Microsoft'un teknik soru ve&için bir ev olan Microsoft Q&A'da bulabilirsiniz.
 
 Desteklenen çok çeşitli ürünlerle ilgili sorular ve yanıtlar, şunları da içeren:
 - .NET
@@ -58,7 +58,7 @@ Azure Community kullanılabilirliği aşağıda gösterildiği gibi abonelik dü
 |                                       MSDN Platformları (Standart)                                       |    VL, Perakende     |   Kullanılabilir    |    Yes     |
 | Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut)|        Tümü        | Kullanılamaz |     No     |
 
-<sup>1</sup>*Şunları içerir: Resale (NFR), Microsoft FTE, En Değerli Professional (MVP), Bölgesel Direktörü (RD), Visual Studio Industry Partner (VSIP), BizSpark, Imagine, Microsoft Certified Trainer (MCT) için değil. Dışlar: NFR Basic.*  
+<sup>1</sup>*Şunları içerir: Resale (NFR), Microsoft FTE, En Değerli Professional (MVP), Bölgesel Direktörü (RD), Visual Studio Endüstri İş Ortağı (VSIP), BizSpark, Imagine, Microsoft Sertifikalı Eğitimci (MCT) için değil. Dışlar: NFR Basic.*  
 
 > [!NOTE]
 > Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
@@ -67,7 +67,7 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
 
 ## <a name="support-resources"></a>Destek Kaynakları
 - Abonelikler için satışlar, abonelikler, hesaplar ve faturalama Visual Studio mı gerekiyor?  Abonelikler [Visual Studio iletişim kurma.](https://my.visualstudio.com/gethelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

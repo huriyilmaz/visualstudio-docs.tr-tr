@@ -7,15 +7,15 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 06/02/2021
 user.type: admin
-tags: ''
+tags: email
 subscription.type: vl, cloud, retail, partner
 sap.id: 17a2bf94-0d03-2629-dfd8-e8935f9126ec
-ms.openlocfilehash: 15ded8eab68626a50bdb4de585f95b17ca324e42e0582224c440269ca5a0bd65
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e39ba4cbf128a7fd94ad79e1490d43e39c648ad9
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "127892543"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431666"
 ---
 ## <a name="how-do-i-update-my-sign-in-email-address-without-losing-permissions"></a>Nasıl yaparım? kaybetmeden oturum açma e-posta adresimi güncelleştirdin mi? 
 Oturum açma e-posta adreslerinde değişiklik yapmaları gereken yöneticilerin süper yöneticilerine başvurarak güncelleştirmeyi sizin için yapmalarını istemeleri gerekir. Sözleşmeniz üzerinde süper yöneticiler, sol tarafta Bulunan Sözleşme ayrıntıları flyout panelinde bulunan süper  yöneticiler listesinde Süper yönetici sütunundaki yeşil onay işaretiyle gösterilir.   

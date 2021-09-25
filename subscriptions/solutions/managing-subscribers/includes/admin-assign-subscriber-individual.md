@@ -10,12 +10,12 @@ user.type: admin
 tags: ''
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: 7451f89a1d9806c7c70ecb6a957dd41e1c189db4069b1ceeca766d1643299042
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fb165a2b09c5c07659b8db1ce0f39d355b2f5696
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "127892613"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431654"
 ---
 ## <a name="how-do-i-add-a-single-user-to-my-agreement"></a>Nasıl yaparım? tek bir kullanıcı eklemek mi gerekiyor?
 

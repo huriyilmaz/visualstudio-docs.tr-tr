@@ -1,6 +1,6 @@
 ---
-title: Yeni sözleşmem eksik, nerede?
-description: Yönetici portalda yeni anlaşmayı bulamıyor
+title: Yeni anlaşmanız eksik, nerede?
+description: Yönetici, portalda yeni sözleşmelerini bulamıyor
 ms.topic: include
 ms.assetid: 3247ca7a-474e-4d9e-86fe-161860f20ceb
 author: CaityBuschlen
@@ -10,18 +10,18 @@ user.type: admin
 tags: manage, agreement, sign in
 subscription.type: vl, cloud, retail, partner
 sap.id: 4e55abf9-8505-ecdc-c55f-c67a167a357c
-ms.openlocfilehash: 40a3b299a8f8fc5b6bad208401c5d7900ed24fe9c0746500ab3b626bd926ccbe
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 72c45f27cda50062f2a2822d435bd392533bc1fc
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "127892585"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431718"
 ---
-## <a name="my-new-agreement-is-missing-where-is-it"></a>Yeni sözleşmem eksik, nerede?
-Yeni sözleşme sisteme eklendikten Visual Studio veya size süper yönetici/yönetici rolü atandığı zaman Abonelikler sayfasından bir e-posta alırsınız. Ardından oturum açma ve bu sözleşme için abonelikleri yönetmeye başlayabilirsiniz. 
+## <a name="my-new-agreement-is-missing-where-is-it"></a>Yeni anlaşmanız eksik, nerede?
+yeni anlaşma sisteme eklendikten sonra veya bir süper yönetici/yönetici rolü atadıktan sonra Visual Studio aboneliklerden bir e-posta alırsınız. Daha sonra oturum açabilir ve bu sözleşme için abonelikleri yönetmeye başlayabilirsiniz. 
 
-Çoğu durumda büyük olasılıkla eski bir sözleşmeyi görüntülmektedir ve atanan aboneliklerin üzerinde ekranın sol tarafındaki açılan listeyi kontrol ederek yeni sözleşmenizi bulabilirsiniz. Bu sözleşmeyi yönetmeye başlamak için anlaşma numarasına tıklayın.
+Çoğu durumda, büyük olasılıkla eski bir sözleşmeyi görüntülüyor ve size atanan aboneliklerinizin üstünde ekranın sol tarafındaki açılan menüyü denetleyerek yeni bir sözleşme bulabilirsiniz. Sözleşmeyi yönetmeye başlamak için anlaşma numarası ' na tıklayın.
 
-İzinlerin verildiği e-posta adresiyle oturum Azure Active Directory emin olun ve şirket bu adresi kullanıyorsa, sağ üst köşede doğru kiracının seçildiğinden emin olun. 
+izinlerin verildiği e-posta adresiyle oturum açarken ve şirketiniz Azure Active Directory kullanıyorsa, sağ üst köşede doğru kiracının seçildiğinden emin olun. 
 
-Anlaşmanızı hala görmüyorsanız, bunun nedeni önbelleğe alma sorunu olabilir. Özel bir tarayıcıda oturum açmayı deneyin.
+Sözleşmenizi hala göremiyorsanız, bu bir önbelleğe alma sorunundan kaynaklanabilir. Özel bir tarayıcıda oturum açmayı deneyin.

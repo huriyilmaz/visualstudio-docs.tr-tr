@@ -2,7 +2,7 @@
   href: index.yml
 - name: Genel Bakış
   items:
-    - name: Profil oluşturmaya ilk bakış
+    - name: Profil oluşturma araçlarına ilk bakış
       href: profiling-feature-tour.md
     - name: Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
       href: running-profiling-tools-with-or-without-the-debugger.md

@@ -8,13 +8,13 @@ ms.date: 03/18/2021
 ms.topic: how-to
 description: Abonelik aboneliğinize dahil olan CODE Magazine avantajı hakkında Visual Studio öğrenin.
 ms.openlocfilehash: 0d3a8b16ff18ef7166a2034fad5e342d6c198cbe
-ms.sourcegitcommit: da19ed1e48259b219c61c4cb9e98b006004a5766
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2021
-ms.locfileid: "128078550"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128427449"
 ---
-# <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Visual Studio code Magazine
+# <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Code Magazine, Visual Studio dahil
 
 CODE Magazine, tüm platformlarda geliştirme teknolojilerini kapsayan lider bağımsız bir yazılım geliştirici dergisidir.  Seçilen Visual Studio abonelikleri, basılı veya dijital yayınlara yönelik bir yıllık abonelik almaya uygundur.
 
@@ -39,7 +39,7 @@ CODE Magazine aboneliğinizi ayarlama işlemi basittir.  Yalnızca şu adımlar�
       > [!div class="mx-imgBorder"]
       > ![CODE Magazine abonelik ayrıntıları](_img/vs-code-magazine/vs-code-magazine-details.png "Abonelik ayrıntıları ve fiyatı")
 6. Ardından abone bilgilerini ve teslimat adresini de sağlayabilirsiniz.  (Teslim adresi, gerçekleştirmeyi, teklif seçimini ve dijital erişim işlemlerini desteklediği için dijital abonelikler için bile gereklidir.)
-7. Birleşik Devletler dışında yaşıyorsanız ve basılı bir maganda aboneliğini almaya başladıysanız, gönderim maliyetlerini kapsayacak bir fatura adresi ve ödeme bilgileri sağlamanız istenebilirsiniz. 
+7. Birleşik Devletler dışında yaşıyorsanız ve basılı bir maganda aboneliğini almaya tercih ediyorsanız, gönderim maliyetlerini kapsayacak bir fatura adresi ve ödeme bilgileri sağlamanız istenebilirsiniz. 
 8. Onay kutusuna tıklayarak CODE HTML Bülten'i kabul edebilirsiniz.
    > [!div class="mx-imgBorder"]
    > ![CODE Magazine abone bilgileri](_img/vs-code-magazine/vs-code-magazine-subscriber-info.png "Abone bilgileri ve teslim adresi")
@@ -50,7 +50,7 @@ Abonelik siparişinizi tamamlandıktan sonra, hangi sorunları alasınız? için
 | Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standart)   | VL, Azure, Perakende| Kullanılabilir       |  No          |
-| Visual Studio Enterprise ile GitHub Enterprise   | VL| Kullanılabilir       |  No          |
+| Visual Studio Enterprise ile abonelik GitHub Enterprise   | VL| Kullanılabilir       |  No          |
 | Visual Studio Professional (Standart) | VL, Azure, Perakende                                       | Kullanılabilir                                                            |  No          |
 | Visual Studio Professional ile abonelik GitHub Enterprise | VL                                      | Kullanılabilir                                                            |  No          |
 | Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | Kullanılabilir                                             |  No          |
@@ -74,8 +74,8 @@ A: CODE Magazine, aboneliğin gerçekleştirmeyi, teklif seçimini ve dijital er
 
 ## <a name="support-resources"></a>Destek kaynakları
 - CODE Magazine aboneliğiniz hakkında sorularınız mı var?  Code [Magazine'ye](https://www.codemag.com/contact) e-posta veya telefon yoluyla başvurun veya çevrimiçi bir destek isteği gönderin.
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için, Visual Studio [abonelik desteği ile iletişim kurun.](https://my.visualstudio.com/gethelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için, [Visual Studio abonelik desteği ile iletişim kurun.](https://my.visualstudio.com/gethelp)
+- IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

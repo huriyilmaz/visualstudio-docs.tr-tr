@@ -8,11 +8,11 @@ ms.date: 03/17/2021
 ms.topic: conceptual
 description: seçilen Visual Studio aboneliklerine dahil olan geliştirici Community destek avantajı hakkında bilgi edinin.
 ms.openlocfilehash: e689fa93f37d2c784b03a7118d84af157e9c1e80
-ms.sourcegitcommit: da5efd7698e357c59ba9b7dbbcaaceb5d1cfade2
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "128307079"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128432646"
 ---
 # <a name="developer-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde geliştirici Community destek forumu
 geliştirici Community forumlarında sorularınızı gönderin, yanıtlar bulun ve bilgilerinizi paylaşabilirsiniz.

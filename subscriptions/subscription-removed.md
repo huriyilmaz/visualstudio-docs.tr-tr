@@ -1,18 +1,18 @@
 ---
 title: Visual Studio aboneliğiniz kaldırıldığında ne olur? | Microsoft Docs
 author: evanwindom
-ms.author: v-evwin
+ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 34eaceda-f5db-41d6-bc23-ecf55fe1768e
 ms.date: 04/22/2021
 ms.topic: conceptual
 description: yöneticiniz Visual Studio aboneliğinizi kaldırdığında ne olacağını öğrenin.
-ms.openlocfilehash: e0f33470092cacc096102cd7b671ddc89c9b0859
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: 38329dacb9e0e16709adc9efacbfeef0582c0709
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966539"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431477"
 ---
 # <a name="what-happens-when-an-admin-removes-my-subscription"></a>Bir yönetici aboneliğimi kaldırdığında ne olur?
 Visual Studio aboneliğiniz, iş veya okul kuruluşunuzda bir yönetici tarafından size atandıysa, bu işlem bir noktada kaldırabilir.  Nedenler, iş rollerine veya kuruluşunuzun satın alma planlarına yapılan değişiklikleri içerebilir.  Bu makale, bir yönetici aboneliğinizi kaldırırsa ne beklendiğini özetler.  

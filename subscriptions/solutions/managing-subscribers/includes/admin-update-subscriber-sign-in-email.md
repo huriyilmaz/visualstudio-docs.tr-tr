@@ -7,15 +7,15 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 06/01/2021
 user.type: admin
-tags: ''
+tags: email
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: 56be529658430875502dc388f462e631fd18dc9cda0196f99ee5c27042653797
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 1618de41aa65a346b7c671aab155df5c9b322ed5
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "127892571"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128431712"
 ---
 ## <a name="update-subscribers-sign-in-email-address"></a>Abonenin oturum açma e-posta adresini güncelleştirme
 
@@ -23,7 +23,7 @@ Abonenin oturum açma e-posta adresini tek tek veya toplu düzenleme kullanarak 
 
 ##  <a name="bulk-edit"></a>Toplu düzenleme
 1. Aboneleri **yönet sayfasında,** güncelleştirilmiş olması gereken sözleşmenin üzerinde olduğundan emin olun.
-2. Toplu **düzenle'yi** seçin, Excel dosyasını dışarı aktarın ve açılır pencerede yönergeleri izleyin.
+2. Toplu **düzenle'yi** seçin, Excel dosyasını dışarı aktarın ve açılan pencerede yönergeleri izleyin.
 3. Dosyada gerekli düzenlemeleri yapacak ve dosyayı kaydeddikten sonra karşıya yükleyin. Düzenlemeleri yapmak için GUID'lerin değiştirilenediğini unutmayın.
 4. Toplu **düzenlemeye** başlamak için Tamam'ı seçin.
 5. Abonelerinize değişiklik hakkında bilgi içeren bir e-posta gönderilir.
@@ -42,7 +42,7 @@ Abonelikleri Azure AD gruplarını kullanarak atarsanız, tüm e-posta adresi ve
 
 ## <a name="impact-of-sign-in-email-updates"></a>Oturum açma e-posta güncelleştirmelerinin etkisi
 Oturum açma e-postasını değiştirmek aboneler için aşağıdakiler gibi olumsuz etkilere neden olabilir:
-- Visual Studio IDE ile oturum açma sorunları.
+- IDE'de oturum Visual Studio sorunları.
 - Oturum açma sorunları Azure DevOps.
 - Aylık Azure geliştirme ve test bireysel kredileriyle ilgili sorunlar.
 

@@ -2,7 +2,7 @@
 title: Uzaktan hata ayıklayıcı bağlantı noktası atamaları | Microsoft Docs
 description: 32 bit işletim sistemlerinde, 64 bit işletim sistemlerinde ve Azure 'da uzaktan hata ayıklayıcı bağlantı noktası atamalarını Visual Studio anlayın. Bulma bağlantı noktası hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 05/18/2018
+ms.date: 09/10/2021
 ms.topic: reference
 ms.assetid: 238bb4ec-bb00-4c2b-986e-18ac278f3959
 author: mikejo5000
@@ -11,16 +11,19 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d07d84ce2d547a5f2910b8afa7ade652d03028c1
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 7b7e446fc0ed9300610ae265ac2aad07039c350a
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627945"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128427219"
 ---
 # <a name="remote-debugger-port-assignments"></a>Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları
 Visual Studio Uzaktan Hata Ayıklayıcı, bir uygulama veya arka plan hizmeti olarak çalıştırılabilir. Uygulama olarak çalıştırıldığında, varsayılan olarak aşağıdaki şekilde atanmış bir bağlantı noktası kullanır:
-::: moniker range=">=vs-2019"
+::: moniker range=">=vs-2022"
+- Visual Studio 2022:4026
+::: moniker-end
+::: moniker range="vs-2019"
 - Visual Studio 2019:4024
 ::: moniker-end
 - Visual Studio 2017:4022
@@ -35,7 +38,10 @@ Diğer bir deyişle, uzaktan hata ayıklayıcıya atanan bağlantı noktasının
 
 ## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>32 bit Işletim sistemlerinde uzaktan hata ayıklayıcı bağlantı noktası
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=vs-2022"
+ TCP 4026 (Visual Studio 2022) ana bağlantı noktasıdır ve tüm senaryolar için gereklidir. Bunu komut satırından ya da uzaktan hata ayıklayıcı penceresinden yapılandırabilirsiniz.
+::: moniker-end
+::: moniker range="vs-2019"
  TCP 4024 (Visual Studio 2019) ana bağlantı noktasıdır ve tüm senaryolar için gereklidir. Bunu komut satırından ya da uzaktan hata ayıklayıcı penceresinden yapılandırabilirsiniz.
 ::: moniker-end
 ::: moniker range="vs-2017"
@@ -49,7 +55,10 @@ Diğer bir deyişle, uzaktan hata ayıklayıcıya atanan bağlantı noktasının
  Uzaktan hata ayıklama yardımında tüm uzaktan hata ayıklayıcı komut satırı anahtarlarını bulabilir (uzaktan hata ayıklayıcı penceresinde **F1** ' e basın veya **Yardım > yardım** ' a tıklayabilirsiniz).
 
 ## <a name="the-remote-debugger-port-on-64-bit-operating-systems"></a>64 bit Işletim sistemlerinde uzaktan hata ayıklayıcı bağlantı noktası
-::: moniker range=">=vs-2019"
+::: moniker range=">=vs-2022"
+ Uzaktan hata ayıklayıcının 64 bit sürümü başlatıldığında, varsayılan olarak ana bağlantı noktasını (4026) kullanır.  32 bitlik bir işlemde hata ayıklaması yaparsanız, uzaktan hata ayıklayıcı 'nın 64 bit sürümü, bağlantı noktası 4025 üzerinde uzaktan hata ayıklayıcı 'nın 32 bit bir sürümünü başlatır. 32 bitlik uzaktan hata ayıklayıcıyı çalıştırırsanız, 4026 kullanır ve 4025 kullanılmaz.
+::: moniker-end
+::: moniker range="vs-2019"
  Uzaktan hata ayıklayıcının 64 bit sürümü başlatıldığında, varsayılan olarak ana bağlantı noktasını (4024) kullanır.  32 bitlik bir işlemde hata ayıklaması yaparsanız, uzaktan hata ayıklayıcı 'nın 64 bit sürümü, bağlantı noktası 4025 (1 ile artırılan ana bağlantı noktası numarası) üzerinde uzaktan hata ayıklayıcı 'nın 32 bit sürümünü başlatır. 32 bitlik uzaktan hata ayıklayıcıyı çalıştırırsanız, 4024 kullanır ve 4025 kullanılmaz.
 ::: moniker-end
 ::: moniker range="vs-2017"

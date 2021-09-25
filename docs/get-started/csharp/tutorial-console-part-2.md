@@ -1,8 +1,8 @@
 ---
 title: 'Öğretici 2: C# konsol uygulamanızı genişletme'
-description: Bir C# konsol uygulaması geliştirmeyi Visual Studio adım adım öğrenin.
+description: adım adım Visual Studio bir C# konsol uygulaması geliştirmeyi öğrenin.
 ms.custom: vs-acquisition, get-started
-ms.date: 04/15/2021
+ms.date: 09/14/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -16,63 +16,75 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2c8e0108a58e6502de9f8a52b7738ea055f6862f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 86649110e83a9bce0768bddc81f148b3c4370793
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122049096"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128430568"
 ---
-# <a name="tutorial-extend-c-console-app-and-debug-in-visual-studio-part-2-of-2"></a>Öğretici: Visual Studio'da C# konsol uygulamasını ve hata ayıklamayı genişletme (2. bölüm)
+# <a name="tutorial-extend-c-console-app-and-debug-in-visual-studio-part-2-of-2"></a>öğretici: Visual Studio 'de C# konsol uygulamasını ve hata ayıklamayı genişletme (bölüm 2/2)
 
-Bu öğretici serisinin 2. bölümünde, Visual Studio'daki birden çok proje yönetme, hata ayıklama ve üçüncü taraf paketlere başvuru gibi günlük geliştirme için ihtiyacınız olacak derleme ve hata ayıklama özelliklerini biraz daha ayrıntılı olarak gözden bulacaksınız. Bu öğreticinin (tutorial-console.md) 1. Bölümünde oluşturduğunuz C# konsol uygulamasını çalıştıracak ve bunu yaparken Visual Studio tümleşik geliştirme ortamının (IDE) bazı özelliklerini keşfedersiniz. Bu öğretici, iki bölümden bir öğretici serisinin 2. bölümü.
+bu öğretici serisinin 2. bölümünde, günlük geliştirme için ihtiyaç duyduğunuz Visual Studio derleme ve hata ayıklama özellikleri hakkında biraz daha ayrıntılı bilgi sahibiz. Bu özellikler birden çok projenin yönetilmesini, hata ayıklamayı ve üçüncü taraf paketlerine başvurmayı içerir. [bu öğreticinin 1. bölümünde](tutorial-console.md)oluşturduğunuz C# konsol uygulamasını çalıştırın ve Visual Studio tümleşik geliştirme ortamının (ıde) bazı özelliklerini keşfedebilirsiniz. Bu öğretici, iki bölümden oluşan bir öğretici serisinin 2. parçasıdır.
 
-Bu öğreticide şunları yapacaksınız:
+Bu öğreticide şunları yaptınız:
 
 > [!div class="checklist"]
-> * İlk projenize başka bir proje ekleyin.
-> * Kitaplıklara başvuru ve paket ekleme.
-> * Daha fazla hata ayıkla.
-> * Kodunuzun tamamını inceleme.
+> * İkinci bir proje ekleyin.
+> * Başvuru kitaplıkları ve paket Ekle.
+> * Daha fazla hata ayıklama yapın.
+> * Tamamlanan kodunuzu inceleyin.
 
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Şunları da gerekir:
-+ Bu öğretici [serisinin 1. bölümünde yer alan Hesaplayıcı konsol uygulamasını kullanın](tutorial-console.md) 
-+ Kullanmaya başlamaya bir repodan açabilirsiniz [vs-tutorial-samples](https://github.com/MicrosoftDocs/vs-tutorial-samples) repo'da C# [Hesaplayıcısı](../tutorial-open-project-from-repo.md) uygulamasını kullanın.
+Bu makalede çalışmak için şu hesap makinesi uygulamalarından birini kullanabilirsiniz:
 
-## <a name="add-another-project"></a>Başka bir proje ekleme
+- [Bu öğreticinin 1. bölümünde hesap makinesi konsol uygulaması](tutorial-console.md).
+- [Vs-öğreticisi-Samples](https://github.com/MicrosoftDocs/vs-tutorial-samples)deposunda C# Hesaplayıcı uygulaması. Başlamak için [depodan uygulamayı açın](../tutorial-open-project-from-repo.md).
 
-Gerçek dünya kodu, bir çözümde birlikte çalışan birçok proje içerir. Şimdi Hesap makinesi uygulamasına başka bir proje ekle bakalım. Bu, hesaplayıcı işlevlerden bazılarını sağlayan bir sınıf kitaplığıdır.
+## <a name="add-another-project"></a>Başka proje ekleme
 
-1. Visual Studio'de, yeni bir proje eklemek için Dosya Ekle Yeni Project üst düzey menü komutunu kullanabilirsiniz, ancak mevcut proje adına sağ tıklar  >    >   ("proje düğümü" olarak adlandırılır) ve projenin kısayol menüsünü (veya bağlam menüsünü) açabilirsiniz. Bu kısayol menüsü, projelerinize işlev eklemek için birçok yol içerir. Bu nedenle, Çözüm Gezgini'de proje **düğüme** sağ tıklayın ve Yeni Ekle'yi **Project.**  >  
+Gerçek dünyada kod, bir çözümde birlikte çalışan projeler içerir. Hesaplayıcı uygulamanıza, bazı Hesaplayıcı işlevleri sağlayan bir sınıf kitaplığı projesi ekleyebilirsiniz.
 
-1. C# proje şablonu Sınıf **kitaplığını (.NET Standard) seçin.**
+Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **yeni Project** ekle ' yi kullanın. Bağlam menüsünden bir proje eklemek için **Çözüm Gezgini** ' de çözüme sağ tıklayabilirsiniz.
 
-   ![Sınıf Kitaplığı proje şablonu seçiminin ekran görüntüsü](media/vs-2019/calculator2-add-project-dark.png)
+::: moniker range="vs-2019"
+1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın ve  > **yeni Project** ekle ' yi seçin.
 
-1. **CalculatorLibrary proje adını yazın ve** Oluştur'a **seçin.** Tekrar sorulsa .NET 3.1'i seçin. Visual Studio yeni projeyi oluşturur ve çözüme ekler.
+1. **Yeni Proje Ekle** penceresinde, arama kutusuna *sınıf kitaplığı* yazın. C# **sınıf kitaplığı** proje şablonunu seçin ve ardından **İleri**' yi seçin.
 
-   ![CalculatorLibrary sınıf Çözüm Gezgini projesinin ekli olduğu uygulamanın ekran görüntüsü](media/vs-2019/calculator2-solution-explorer-with-class-library-dark2.png)
+   ![Sınıf kitaplığı proje şablonu seçiminin ekran görüntüsü.](media/vs-2019/calculator2-add-project-dark.png)
 
-1. *Class1.cs yerine* **CalculatorLibrary.cs dosyasını yeniden adlandırır.** Yeniden adlandırmak için dosyanın **Çözüm Gezgini** tıklar veya sağ tıklar ve Yeniden Adlandır'ı **seçebilir** ya da **F2 tuşuna basın.**
+1. **Yeni projenizi yapılandırın** ekranında, *hesaplatorlibrary* proje adını yazın ve ardından **İleri**' yi seçin.
+   
+1. İstendiğinde .NET 3,1 ' i seçin. Visual Studio yeni projeyi oluşturur ve çözüme ekler.
 
-   Dosyada herhangi bir başvuruyu yeniden adlandırmak istediğiniz `Class1` sorulabilirsiniz. Kodu gelecek bir adımda değiştireceğiz.
+   ![Hesaplatorlibrary sınıf kitaplığı projesi eklenen Çözüm Gezgini ekran görüntüsü.](media/vs-2019/calculator2-solution-explorer-with-class-library-dark2.png)
 
-1. Şimdi, ilk projenin yeni sınıf kitaplığı tarafından ortaya çıkarlan API'leri kullana bir proje başvurusu eklememiz gerekiyor.  İlk projedeki **Bağımlılıklar düğümüne sağ** tıklayın ve Başvuru ekle'Project **seçin.**
+1. *Class1. cs* dosyasını *hesaplatorlibrary. cs* olarak yeniden adlandırın. Dosyayı yeniden adlandırmak için **Çözüm Gezgini** adı ' na sağ tıklayıp **Yeniden Adlandır**' ı seçin, adı seçin ve **F2** tuşuna basabilir ya da adı seçip, ardından yazmak için yeniden tıklayabilirsiniz.
 
-   ![Başvuru ekle menü Project ekran görüntüsü](media/vs-2019/calculator2-add-project-reference-dark.png)
+   Bir ileti, dosyadaki başvuruları yeniden adlandırmak isteyip istemediğinizi sorabilir `Class1` . Daha sonraki bir adımda kodu değiştirdiğinizden, yanıt sizin için önemlidir.
 
-   Başvuru **Yöneticisi iletişim** kutusu görüntülenir. Bu iletişim kutusu, projelerinize gereken derlemelerin ve COM URL'lerinin yanı sıra diğer projelere başvurular eklemenize olanak sağlar.
+1. Şimdi bir proje başvurusu ekleyin, bu nedenle ilk proje yeni sınıf kitaplığının sunduğu API 'Leri kullanabilir. **hesaplayıcı** projesindeki **bağımlılıklar** düğümüne sağ tıklayın ve **Project başvuru ekle**' yi seçin.
 
-   ![Başvuru Yöneticisi iletişim kutusunun ekran görüntüsü](media/vs-2019/calculator2-ref-manager-dark.png)
+   ![Project başvuru ekle menü öğesinin ekran görüntüsü.](media/vs-2019/calculator2-add-project-reference-dark.png)
 
-1. Başvuru **Yöneticisi iletişim** kutusunda **CalculatorLibrary** projesi onay kutusunu seçin ve Tamam'ı **seçin.**  Proje başvurusu, içinde bir **Projeler** düğümü altında **Çözüm Gezgini.**
+   **Başvuru Yöneticisi** iletişim kutusu görüntülenir. Bu iletişim kutusunda, projelerinize gereken diğer projelere, derlemelere ve COM DLL 'Lerine başvurular ekleyebilirsiniz.
 
-   ![Proje başvurusuyla Çözüm Gezgini ekran görüntüsü](media/vs-2019/calculator2-solution-explorer-with-project-reference-dark2.png)
+1. **Başvuru Yöneticisi** iletişim kutusunda, **Hesaplayıt kitaplığı** projesinin onay kutusunu seçin ve ardından **Tamam**' ı seçin.
 
-1. *Program.cs'de* sınıfını ve tüm kodunu `Calculator` seçin ve **CTRL+X** tuşlarına basarak Program.cs'den kesin. Ardından **CalculatorLibrary'de** *CalculatorLibrary.cs* içinde kodu ad alanına `CalculatorLibrary` yapıştırın. Ardından Calculator sınıfını `public` kitaplığın dışında göstermek için kullanın. *CalculatorLibrary.cs'de* yer alan kod artık aşağıdaki koda benzer:
+   ![Başvuru Yöneticisi iletişim kutusunun ekran görüntüsü.](media/vs-2019/calculator2-ref-manager-dark.png)
+
+   Proje başvurusu **Çözüm Gezgini** Içindeki bir **Projeler** düğümü altında görüntülenir.
+
+   ![Proje başvurusuyla Çözüm Gezgini ekran görüntüsü.](media/vs-2019/calculator2-solution-explorer-with-project-reference-dark2.png)
+
+1. *Program. cs*' de, `Calculator` sınıfı ve tüm kodunu seçin ve **CTRL** + **X** tuşlarına basarak kesin. Ardından, *hesap \ kitaplık. cs*' de kodu `CalculatorLibrary` ad alanına yapıştırın.
+   
+   Ayrıca `public` , onu kitaplığın dışına çıkarmak Için Hesaplayıcı sınıfından önce ekleyin.
+
+   *Hesaplatorlibrary. cs* artık aşağıdaki koda benzemelidir:
 
    ```csharp
    using System;
@@ -83,7 +95,7 @@ Gerçek dünya kodu, bir çözümde birlikte çalışan birçok proje içerir. �
         {
             public static double DoOperation(double num1, double num2, string op)
             {
-                double result = double.NaN; // Default value is "not-a-number" which we use if an operation, such as division, could result in an error.
+                double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
 
                 // Use a switch statement to do the math.
                 switch (op)
@@ -114,55 +126,162 @@ Gerçek dünya kodu, bir çözümde birlikte çalışan birçok proje içerir. �
     }
    ```
 
-1. İlk projenin bir başvurusu vardır ancak Calculator.DoOperation çağrısının çözümlenemezse bir hatayla karşılaştınız. Bunun nedeni CalculatorLibrary'nin farklı bir ad alanı içinde yer alan tam başvuru `CalculatorLibrary` için ad alanı eklemesidir.
+1. *Program. cs* de bir başvuruya sahiptir, ancak çağrının çözümlenmediğini bildiren bir hata oluştu `Calculator.DoOperation` . Çünkü bu `CalculatorLibrary` , farklı bir ad alanında yer alan. Tam nitelikli bir başvuru için, bu `CalculatorLibrary` ad alanını `Calculator.DoOperation` çağrıya ekleyebilirsiniz:
 
    ```csharp
    result = CalculatorLibrary.Calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-   Bunun yerine dosyanın başına bir using yönergesi eklemeyi deneyin:
+   Ya da `using` dosyanın başlangıcına bir yönerge eklemeyi deneyebilirsiniz:
 
    ```csharp
    using CalculatorLibrary;
    ```
 
-   Bu değişiklik CalculatorLibrary ad alanını çağrı sitesinden kaldırmanız gerekir, ancak şimdi bir belirsizlik vardır. Sınıf `Calculator` CalculatorLibrary içinde mi yoksa Calculator ad alanı mı?  Belirsizlik sorununu çözmek için ad alanını yeniden `CalculatorProgram` adlandırarak.
+   Yönergesini eklemek, `using` `CalculatorLibrary` çağıran siteden ad alanını kaldırmanızı sağlamalıdır, ancak şimdi bir belirsizlik var. `Calculator`Sınıf `CalculatorLibrary` veya `Calculator` ad alanı mı?
+   
+   Belirsizliği çözümlemek için, ad alanını `Calculator` `CalculatorProgram` hem *program. cs* hem de *hesaplatorlibrary. cs* olarak olarak değiştirin.
 
    ```csharp
    namespace CalculatorProgram
    ```
 
-## <a name="reference-net-libraries-write-to-a-log"></a>Başvuru .NET kitaplıkları: günlüğe yazma
+::: moniker-end
+::: moniker range=">=vs-2022"
+1. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın ve  > **yeni Project** ekle ' yi seçin.
 
-1. Şimdi tüm işlemlerin günlüğünü eklemek ve bir metin dosyasına yazmak istediğinizi varsayalım. .NET `Trace` sınıfı bu işlevselliği sağlar. (Temel yazdırma hata ayıklama teknikleri için de yararlıdır.)  Trace sınıfı System.Diagnostics içindedir ve gibi System.IO sınıflarını kullanmamız gerekir. Bu nedenle başlangıç olarak `StreamWriter` *CalculatorLibrary.cs'nin* en üstüne using yönergelerini ekleyerek başlayalım:
+1. **Yeni Proje Ekle** penceresinde, arama kutusuna *sınıf kitaplığı* yazın. C# **sınıf kitaplığı** proje şablonunu seçin ve ardından **İleri**' yi seçin.
+
+   ![Sınıf kitaplığı proje şablonu seçiminin ekran görüntüsü.](media/vs-2022/calculator-add-project.png)
+
+1. **Yeni projenizi yapılandırın** ekranında, *hesaplatorlibrary* proje adını yazın ve ardından **İleri**' yi seçin.
+   
+1. **Ek bilgi** ekranında, .net 6,0 seçilidir. **Oluştur**’u seçin.
+   
+   Visual Studio yeni projeyi oluşturur ve çözüme ekler.
+   
+   ![Hesaplatorlibrary sınıf kitaplığı projesi eklenen Çözüm Gezgini ekran görüntüsü.](media/vs-2022/calculator-solution-explorer-with-class-library.png)
+
+1. *Class1. cs* dosyasını *hesaplatorlibrary. cs* olarak yeniden adlandırın. Dosyayı yeniden adlandırmak için **Çözüm Gezgini** adı ' na sağ tıklayıp **Yeniden Adlandır**' ı seçin, adı seçin ve **F2** tuşuna basabilir ya da adı seçip, ardından yazmak için yeniden tıklayabilirsiniz.
+
+   Bir ileti, dosyadaki başvuruları yeniden adlandırmak isteyip istemediğinizi sorabilir `Class1` . Daha sonraki bir adımda kodu değiştirdiğinizden, yanıt sizin için önemlidir.
+
+1. Şimdi bir proje başvurusu ekleyin, bu nedenle ilk proje yeni sınıf kitaplığının sunduğu API 'Leri kullanabilir. **hesaplayıcı** projesindeki **bağımlılıklar** düğümüne sağ tıklayın ve **Project başvuru ekle**' yi seçin.
+
+   ![Project başvuru ekle menü öğesinin ekran görüntüsü.](media/vs-2022/calculator-add-project-reference.png)
+
+   **Başvuru Yöneticisi** iletişim kutusu görüntülenir. Bu iletişim kutusunda, projelerinize gereken diğer projelere, derlemelere ve COM DLL 'Lerine başvurular ekleyebilirsiniz.
+
+1. **Başvuru Yöneticisi** iletişim kutusunda, **Hesaplayıt kitaplığı** projesinin onay kutusunu seçin ve ardından **Tamam**' ı seçin.
+
+   ![Başvuru Yöneticisi iletişim kutusunun ekran görüntüsü.](media/vs-2022/calculator-reference-manager.png)
+
+   Proje başvurusu **Çözüm Gezgini** Içindeki bir **Projeler** düğümü altında görüntülenir.
+
+   ![Proje başvurusuyla Çözüm Gezgini ekran görüntüsü.](media/vs-2022/calculator-solution-explorer-with-project-reference.png)
+
+1. *Program. cs*' de, `Calculator` sınıfı ve tüm kodunu seçin ve **CTRL** + **X** tuşlarına basarak kesin. Ardından, *hesap \ kitaplık. cs*' de kodu `CalculatorLibrary` ad alanına yapıştırın.
+   
+   Ayrıca `public` , onu kitaplığın dışına çıkarmak Için Hesaplayıcı sınıfından önce ekleyin.
+
+   *Hesaplatorlibrary. cs* artık aşağıdaki koda benzemelidir:
+
+   ```csharp
+   using System;
+
+    namespace CalculatorLibrary
+    {
+        public class Calculator
+        {
+            public static double DoOperation(double num1, double num2, string op)
+            {
+                double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
+
+                // Use a switch statement to do the math.
+                switch (op)
+                {
+                    case "a":
+                        result = num1 + num2;
+                        break;
+                    case "s":
+                        result = num1 - num2;
+                        break;
+                    case "m":
+                        result = num1 * num2;
+                        break;
+                    case "d":
+                        // Ask the user to enter a non-zero divisor.
+                        if (num2 != 0)
+                        {
+                            result = num1 / num2;
+                        }
+                        break;
+                    // Return text for an incorrect option entry.
+                    default:
+                        break;
+                }
+                return result;
+            }
+        }
+    }
+   ```
+
+1. *Program. cs* de bir başvuruya sahiptir, ancak çağrının çözümlenmediğini bildiren bir hata oluştu `Calculator.DoOperation` . Çünkü bu `CalculatorLibrary` , farklı bir ad alanında yer alan. Tam nitelikli bir başvuru için, bu `CalculatorLibrary` ad alanını `Calculator.DoOperation` çağrıya ekleyebilirsiniz:
+
+   ```csharp
+   result = CalculatorLibrary.Calculator.DoOperation(cleanNum1, cleanNum2, op);
+   ```
+
+   Ya da `using` dosyanın başlangıcına bir yönerge eklemeyi deneyebilirsiniz:
+
+   ```csharp
+   using CalculatorLibrary;
+   ```
+
+   Yönergesini eklemek, `using` `CalculatorLibrary` çağıran siteden ad alanını kaldırmanızı sağlamalıdır, ancak şimdi bir belirsizlik var. `Calculator`Sınıf `CalculatorLibrary` veya `Calculator` ad alanı mı?
+   
+   Belirsizliği çözümlemek için, ad alanını `Calculator` `CalculatorProgram` hem *program. cs* hem de *hesaplatorlibrary. cs* olarak olarak değiştirin.
+
+   ```csharp
+   namespace CalculatorProgram
+   ```
+::: moniker-end
+
+## <a name="reference-net-libraries-write-to-a-log"></a>Başvuru .NET kitaplıkları: bir günlüğe yazma
+
+.NET `Trace` sınıfını, tüm işlemlerin günlüğünü eklemek ve bir metin dosyasına yazmak için kullanabilirsiniz. `Trace`Sınıfı, temel yazdırma hata ayıklama teknikleri için de kullanışlıdır. `Trace`Sınıfı içinde bulunur `System.Diagnostics` ve `System.IO` gibi sınıfları kullanır `StreamWriter` .
+
+1. , `using` *Hesaplakitaplığı. cs*' nin en üstündeki yönergeleri ekleyerek başlayın:
 
    ```csharp
    using System.IO;
    using System.Diagnostics;
    ```
 
-1. Trace sınıfının nasıl kullandığına bakarak, bir dosya akışı ile ilişkili olan sınıfı için bir başvuru üzerinde tutmanız gerekir. Bu da hesaplayıcının bir nesne olarak daha iyi çalışa bir nesne olduğu anlamına gelir. Bu nedenle *CalculatorLibrary.cs'de Calculator* sınıfının başına bir oluşturucu eklesek.
+1. Sınıfının bu kullanımı, `Trace` bir FILESTREAM ile ilişkilenme sınıfı için bir başvuruya sahip olmalıdır. Bu gereksinim, hesap makinesinin bir nesne olarak daha iyi çalışacağı anlamına gelir; bu nedenle, `Calculator` *Hesaplayılibrary. cs* içindeki sınıfın başlangıcına bir Oluşturucu ekleyin.
+
+   `static`Statik `DoOperation` yöntemi bir üye yöntemi olarak değiştirmek için anahtar sözcüğünü de kaldırın.
 
    ```csharp
    public Calculator()
-        {
-            StreamWriter logFile = File.CreateText("calculator.log");
-            Trace.Listeners.Add(new TextWriterTraceListener(logFile));
-            Trace.AutoFlush = true;
-            Trace.WriteLine("Starting Calculator Log");
-            Trace.WriteLine(String.Format("Started {0}", System.DateTime.Now.ToString()));
-        }
+      {
+          StreamWriter logFile = File.CreateText("calculator.log");
+          Trace.Listeners.Add(new TextWriterTraceListener(logFile));
+          Trace.AutoFlush = true;
+          Trace.WriteLine("Starting Calculator Log");
+          Trace.WriteLine(String.Format("Started {0}", System.DateTime.Now.ToString()));
+      }
 
-    public double DoOperation(double num1, double num2, string op)
-        {
+   public double DoOperation(double num1, double num2, string op)
+      {
    ```
 
-1. Statik yöntemi üye yöntemi olarak `DoOperation` değiştirmemiz gerekiyor, bu nedenle anahtar sözcüğünü `static` kaldırın.  DoOperation'ın aşağıdaki koda benzin gibi göründüğünüz için günlük için her hesaplamaya çıkış ek o zaman:
+1. Her hesaplamaya günlük çıktısı ekleyin. `DoOperation` Şimdi aşağıdaki kod gibi görünmelidir:
 
    ```csharp
    public double DoOperation(double num1, double num2, string op)
    {
-        double result = double.NaN; // Default value is "not-a-number" which we use if an operation, such as division, could result in an error.
+        double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
 
         // Use a switch statement to do the math.
         switch (op)
@@ -195,19 +314,21 @@ Gerçek dünya kodu, bir çözümde birlikte çalışan birçok proje içerir. �
     }
    ```
 
-1. Şimdi *Program.cs'ye* geri dön, statik çağrı kırmızı bir bayrakla işaretlenir. Bunu düzeltmek için, `calculator` döngüden hemen önce aşağıdaki satırı ekleyerek bir değişken `while (!endApp)` oluşturun:
+1. *Program. cs*' ye geri döndüğünüzde, kırmızı dalgalı alt çizgi artık statik çağrıyı işaretler. Hatayı onarmak için, `calculator` döngüden hemen önce aşağıdaki kod satırını ekleyerek bir değişken oluşturun `while (!endApp)` :
 
    ```csharp
    Calculator calculator = new Calculator();
    ```
 
-   Ve çağrısı sitesini aşağıdaki gibi değiştirin; böylece bu küçük harfle adlandırılmış nesneye başvurur; böylece statik bir yönteme çağrı yapmak yerine bunu üye çağrısı `DoOperation` `calculator` yapar:
+   Ayrıca, `DoOperation` çağrı sitesini küçük harfli adlı nesneye başvuracak şekilde değiştirin `calculator` . Kod, bir statik yöntem çağrısı yerine artık bir üye çağrıdır.
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-1. Programı yeniden çalıştırın ve bittiğinde proje düğümüne sağ tıklayın ve Klasör aç'ı **Dosya Gezgini** seçin, ardından Dosya Gezgini klasörüne gidin. *bin/Debug/netcoreapp3.1 olabilir* ve *calculator.log dosyasını* açın.
+1. Uygulamayı tekrar çalıştırın. İşiniz bittiğinde, **Hesaplayıcı** proje düğümüne sağ tıklayın ve **klasörü dosya Gezgini 'nde aç**' ı seçin.
+
+1. Dosya Gezgini 'nde, *bin/Debug/* altındaki çıkış klasörüne gidin ve *Hesaplayıcı. log* dosyasını açın. Çıkış aşağıdakine benzer olmalıdır:
 
     ```output
     Starting Calculator Log
@@ -216,7 +337,7 @@ Gerçek dünya kodu, bir çözümde birlikte çalışan birçok proje içerir. �
     3 * 3 = 9
     ```
 
-Bu noktada *CalculatorLibrary.cs* şu şekilde görünüyor olabilir:
+Bu noktada, *Hesaplatorlibrary. cs* şu koda benzemelidir:
 
 ```csharp
 using System;
@@ -240,7 +361,7 @@ namespace CalculatorLibrary
 
         public double DoOperation(double num1, double num2, string op)
         {
-            double result = double.NaN; // Default value is "not-a-number" which we use if an operation, such as division, could result in an error.
+            double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
 
             // Use a switch statement to do the math.
             switch (op)
@@ -275,7 +396,7 @@ namespace CalculatorLibrary
 }
 ```
 
-*Program.cs de* aşağıdakine benzemektedir:
+*Program. cs* aşağıdaki kod gibi görünmelidir:
 
 ```csharp
 using System;
@@ -361,29 +482,46 @@ namespace CalculatorProgram
 }
 ```
 
-## <a name="add-a-nuget-package-write-to-a-json-file"></a>Bir NuGet Paketi ekleme: JSON dosyasına yazma
+## <a name="add-a-nuget-package-write-to-a-json-file"></a>NuGet paketi ekleme: JSON dosyasına yazma
 
-1. Şimdi, işlemleri nesne verilerini depolamak için popüler ve taşınabilir bir biçim olan JSON biçiminde çıkış yapmak istediğinizi varsayalım. Bu işlevi uygulamak için, NuGet paketine Newtonsoft.Jsgerekir. NuGet paketleri, .NET sınıf kitaplıklarının dağıtımı için birincil araçtır. Bu **Çözüm Gezgini** CalculatorLibrary projesinin **Bağımlılıklar** düğümüne sağ tıklayın ve Paket Yönetimi'ni NuGet **seçin.**
+nesne verilerini depolamak için popüler ve taşınabilir bir biçimde JSON 'daki çıkış işlemlerine, *newtonsoft. JSON* NuGet paketine başvurabilirsiniz. NuGet paketler, .net sınıf kitaplıkları için birincil dağıtım yöntemidir.
 
-   ![Kısayol menüsündeki NuGet Paketlerini Yönet ekran görüntüsü](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
+1. **Çözüm Gezgini**' de, **hesaplatorlibrary** projesi için **bağımlılıklar** düğümüne sağ tıklayın ve **NuGet paketlerini yönet**' i seçin.
+
+   ::: moniker range="vs-2019"
+   ![kısayol menüsündeki NuGet paketlerinin yönetme ekran görüntüsü.](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2022"
+   ![kısayol menüsündeki NuGet paketlerinin yönetme ekran görüntüsü.](media/vs-2022/calculator-manage-nuget-packages.png)
+   ::: moniker-end
 
    NuGet Paket Yöneticisi açılır.
 
-   ![Ekran görüntüsü NuGet Paket Yöneticisi](media/vs-2019/calculator2-nuget-package-manager-dark.png)
+   ::: moniker range="vs-2019"
+   ![NuGet Paket Yöneticisi ekran görüntüsü.](media/vs-2019/calculator2-nuget-package-manager-dark.png)
+   ::: moniker-end
 
-1. Pakette Newtonsoft.Jsve Yükle'yi **seçin.**
+1. *Newtonsoft. JSON* paketini arayıp seçin ve ardından **Install**' ı seçin.
 
-   ![Newtonsoft paket NuGet ekran görüntüsü](media/vs-2019/calculator2-nuget-newtonsoft-json-dark2.png)
+   ::: moniker range="vs-2019"
+   ![newtonsoft J SON NuGet paket bilgilerinin NuGet Paket Yöneticisi ekran görüntüsü.](media/vs-2019/calculator2-nuget-newtonsoft-json-dark2.png)
+   
+   Visual Studio paketi indirir ve projeye ekler. **Çözüm Gezgini**' deki başvurular düğümünde yeni bir giriş görüntülenir.
+   ::: moniker-end
+   ::: moniker range=">=vs-2022"
+   ![newtonsoft J SON NuGet paket bilgilerinin NuGet Paket Yöneticisi ekran görüntüsü.](media/vs-2022/calculator-nuget-newtonsoft-json.png)
+   Değişikliklerin kabul edilip edilmeyeceğini onaylamanız istenirse **Tamam**' ı seçin.
+   
+   Visual Studio paketi indirir ve projeye ekler. **Çözüm Gezgini** içindeki **paketler** düğümünde yeni bir giriş görüntülenir.
+   ::: moniker-end
 
-   Paket indirilir ve projenize eklenir ve uygulamanın Başvurular düğümünde yeni bir giriş **Çözüm Gezgini.**
-
-1. *CalculatorLibrary.cs'nin* System.IO ve Newtonsoft.Jsiçin bir using yönergesi ekleyin.
+1. `using` `Newtonsoft.Json` *Hesaplakitaplığı. cs*' nin başlangıcında için bir yönerge ekleyin.
 
    ```csharp
    using Newtonsoft.Json;
    ```
 
-1. Şimdi Hesap makinesi oluşturucus una aşağıdaki kodla değiştirin ve JsonWriter üye nesnesini oluşturun:
+1. `JsonWriter`Üye nesnesini oluşturun ve `Calculator` oluşturucuyu aşağıdaki kodla değiştirin:
 
    ```csharp
         JsonWriter writer;
@@ -400,12 +538,12 @@ namespace CalculatorProgram
         }
    ```
 
-1. `DoOperation`JSON yazıcı kodunu eklemek için yöntemini değiştirme:
+1. `DoOperation`JSON kodunu eklemek için yöntemi değiştirin `writer` :
 
    ```csharp
         public double DoOperation(double num1, double num2, string op)
         {
-            double result = double.NaN; // Default value is "not-a-number" which we use if an operation, such as division, could result in an error.
+            double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
             writer.WriteStartObject();
             writer.WritePropertyName("Operand1");
             writer.WriteValue(num1);
@@ -447,7 +585,7 @@ namespace CalculatorProgram
         }
    ```
 
-1. Kullanıcı işlem verilerini girmeyi bitirip JSON söz dizimini tamamlamak için bir yöntem eklemeniz gerekir.
+1. Kullanıcı işlem verilerini girmeyi tamamladıktan sonra JSON sözdizimini tamamlayacak bir yöntem ekleyin.
 
    ```csharp
     public void Finish()
@@ -458,16 +596,18 @@ namespace CalculatorProgram
     }
    ```
 
-1. *Program.cs'de* sonuna Finish çağrısı ekleyin.
+1. *Program. cs*' nin sonunda, öğesinden önce, `return;` öğesine bir çağrı ekleyin `Finish` :
 
    ```csharp
-            // And call to close the JSON writer before return
+            // Add call to close the JSON writer before return
             calculator.Finish();
             return;
         }
    ```
 
-1. Uygulamayı derleme ve çalıştırma ve birkaç işlem girmeyi bitirdikten sonra 'n' komutunu kullanarak uygulamayı düzgün bir şekilde kapatın.  Şimdi, calculatorlog.jsdosyasını açın ve aşağıdakine benzer bir şey görüyor olun:
+1. Uygulamayı derleyin ve çalıştırın ve birkaç işlem girmeyi tamamladıktan sonra *n* komutunu girerek uygulamayı kapatın.
+   
+1. Dosya Gezgini 'nde *hesaplatorlog. JSON* dosyasını açın. Aşağıdaki içeriğe benzer bir şey görmeniz gerekir:
 
    ```json
    {
@@ -488,113 +628,116 @@ namespace CalculatorProgram
    }
    ```
 
-## <a name="debug-set-and-hit-a-breakpoint"></a>Hata ayıklama: kesme noktası ayarlama ve isabet
+## <a name="debug-set-and-hit-a-breakpoint"></a>Hata Ayıkla: kesme noktası ayarlama ve isabet
 
-Hata Visual Studio hata ayıklayıcısı, programlama hatasının tam olarak hangi noktada olduğunu bulmak için kodunuzu adım adım çalıştırmanıza olanak sağlayan güçlü bir araçtır. Ardından kodunda hangi düzeltmelerin gerekli olduğunu anlarsınız. Visual Studio programı çalıştırmaya devam etmek için geçici değişiklikler yapabilirsiniz.
+Visual Studio hata ayıklayıcı güçlü bir araçtır. Hata ayıklayıcı, programlama hatası olduğunda tam noktayı bulmak için kodunuzda adım adım ileredebilir. Daha sonra yapmanız gereken düzeltmeleri anlayabilir ve uygulamanızı çalıştırmaya devam edebilmeniz için geçici değişiklikler yapmanız yeterlidir.
 
-1. *Program.cs'de,* aşağıdaki kodun sol tarafından kenar boşluğuna tıklayın (veya kısayol menüsünü açın ve **Kesme Noktası** Ekle Kesme Noktası'yı seçin  >  veya **F9 tuşuna basın):**
+1. *Program. cs*' de, aşağıdaki kod satırının solundaki cilt payını tıklatın. Ayrıca, satıra tıklayıp **F9**' i seçebilir ya da satıra sağ **tıklayıp kesme**  >  **noktası Ekle kesme noktası**' nı seçebilirsiniz.
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-   Görüntülenen kırmızı daire bir kesme noktası gösterir. Kesme noktaları kullanarak uygulamanızı duraklatabilir ve kodu inceebilirsiniz. Herhangi bir yürütülebilir kod satırı üzerinde kesme noktası ayarlayın.
+   Görüntülenen kırmızı nokta bir kesme noktasını gösterir. Kesme noktalarını kullanarak uygulamanızı duraklatabilir ve kodu inceleyebilirsiniz. Herhangi bir çalıştırılabilir kod satırında bir kesme noktası ayarlayabilirsiniz.
 
-   ![Kesme noktası ayarlama ekran görüntüsü](media/vs-2019/calculator-2-debug-set-breakpoint.png)
+   ![Kesme noktası ayarlamayı gösteren ekran görüntüsü.](media/vs-2019/calculator-2-debug-set-breakpoint.png)
 
-1. Uygulamayı derleyin ve çalıştırın.
+1. Uygulamayı derleyin ve çalıştırın. Hesaplama için aşağıdaki değerleri girin:
 
-1. Çalışan uygulamada hesaplama için bazı değerler yazın:
+   - İlk numara için *8* girin.
+   - İkinci numara için *0* girin.
+   - İşleci için biraz eğlenceye sahip olalım. *D* girin.
 
-   - İlk sayı için **8 yazın** ve girin.
-   - İkinci sayı için **0 yazın** ve girin.
-   - işleci için biraz eğlenceli bir şeylerelim; **d yazın** ve girin.
-
-   Uygulama, kesme noktası oluşturduğunuz yeri askıya alır. Bu, sol tarafta sarı işaretçi ve vurgulanan kod ile birlikte görünür. Vurgulanan kod henüz yürütülmedi.
+   Uygulama, sol tarafta sarı işaretçiye ve vurgulanan koda göre belirtilen kesme noktasını oluşturduğunuz yeri askıya alır. Vurgulanan kod henüz yürütülmedi.
 
    ![Kesme noktasına vurarak ekran görüntüsü](media/vs-2019/calculator-2-debug-hit-breakpoint.png)
 
-   Şimdi, uygulama askıya alındığında uygulamanızın durumunu inceleyebilirsiniz.
+   Artık uygulama askıya alındığında uygulamanızın durumunu inceleyebilirsiniz.
 
 ## <a name="debug-view-variables"></a>Hata Ayıkla: değişkenleri görüntüle
 
-1. Vurgulanan kodda, ve gibi değişkenlerin üzerine gelin `cleanNum1` `op` . Bu değişkenlerin ( `8` ve `d` sırasıyla) geçerli değerlerini, veri ipuçlarında görünen şekilde görürsünüz.
+1. Vurgulanan kodda, ve gibi değişkenlerin üzerine gelin `cleanNum1` `op` . Bu değişkenlerin geçerli değerleri `8` ve `d` sırasıyla, veri ipuçlarında görünür.
 
-   ![Veri Ipucunu görüntüleme ekran görüntüsü](media/vs-2019/calculator-2-debug-view-datatip.png)
+   ![Bir DataTip görüntülemeyi gösteren ekran görüntüsü.](media/vs-2019/calculator-2-debug-view-datatip.png)
 
-   Hata ayıklarken, değişkenlerin tutmak istediğiniz değerleri içerip içermediğini görmek için genellikle sorunları çözmek için kritik önem taşır.
+   Hata ayıklarken, değişkenlerin beklenen değerleri içerip içermediğini görmek için genellikle sorunları düzeltmek için kritik öneme sahip olup olmadığını kontrol edin.
 
-2. Alt bölmede **Yereller** penceresine bakın. (Kapalıysa, **Hata Ayıkla**  >  ' yı seçin. **Windows**  >  **Yerelleri açmak Için Yereller** .)
+2. Alt bölmede **Yereller** penceresine bakın. kapatılmışsa, açmak için **hata ayıkla**  >  **Windows**  >  **yereller** ' i seçin.
 
-   Yereller penceresinde, şu anda kapsamda olan her bir değişkeni, değeri ve türü ile birlikte görürsünüz.
+   **Yereller** penceresi, şu anda kapsamda olan her bir değişkeni, değeri ve türü ile birlikte gösterir.
 
-   ![Yereller penceresinin ekran görüntüsü](media/vs-2019/calculator-2-debug-locals-window.png)
+   ::: moniker range="vs-2019"
+   ![Yereller penceresinin ekran görüntüsü.](media/vs-2019/calculator-2-debug-locals-window.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2022"
+   ![Yereller penceresinin ekran görüntüsü.](media/vs-2022/calculator-debug-locals-window.png)
+   ::: moniker-end
 
 3. **Oto** penceresine bakın.
 
-   Bu pencere, **Yereller** penceresi ile benzerdir, ancak uygulamanızın duraklatıldığı geçerli kod satırını takip eden ve izleyen değişkenleri gösterir.
+   Bu pencere, **Yereller** penceresi ile benzerdir, ancak uygulamanın duraklatıldığı geçerli kod satırını takip eden ve hemen önceki değişkenleri gösterir.
 
-   Daha sonra, hata ayıklayıcı tek bir ifadede, *Adımlama* olarak adlandırılan kodu yürütecaksınız.
+Daha sonra, hata ayıklayıcı tek bir deyimindeki kodu, *Adımlama* olarak adlandırılan bir kez yürütün.
 
 ## <a name="debug-step-through-code"></a>Hata Ayıkla: kod içinde adımla
 
-1. **F11** tuşuna basın (veya **hata ayıklama**  >  **adımı**).
+1. **F11** tuşuna basın veya **hata ayıklama**  >  **adımı**' nı seçin.
 
-   Step Into komutunu kullanarak, uygulama geçerli ifadeyi yürütür ve sonraki yürütülebilir ifadeye (genellikle bir sonraki kod satırına) ilerler. Sol taraftaki sarı işaretçi her zaman geçerli ifadeyi gösterir.
+   Step Into komutunu kullanarak, uygulama geçerli ifadeyi yürütür ve genellikle sonraki kod satırında bir sonraki yürütülebilir ifadeye ilerler. Sol taraftaki sarı işaretçi her zaman geçerli ifadeyi gösterir.
 
    ![Adımın komut ekran görüntüsü](media/vs-2019/calculator-2-debug-step-into.png)
 
-   Yalnızca sınıfındaki yöntemine bir adım daha gördünüz `DoOperation` `Calculator` .
+   Yalnızca sınıfındaki yöntemine bir adım daha eklemiş olursunuz `DoOperation` `Calculator` .
 
-1. Program akışınız hakkında hiyerarşik bir görünüm almak için **çağrı yığını** penceresine bakın. (Kapalıysa, **Hata Ayıkla**  >  ' yı seçin. **Windows**  >  **Çağrı yığını**.)
+1. Program akışınız hakkında hiyerarşik bir görünüm almak için **çağrı yığını** penceresine bakın. kapalıysa, açmak için **hata ayıkla**  >  **Windows**  >  **çağrı yığını** ' nı seçin.
 
    ![Çağrı yığınının ekran görüntüsü](media/vs-2019/calculator-2-debug-call-stack.png)
 
-   Bu görünüm `Calculator.DoOperation` , sarı işaretçi tarafından gösterilen geçerli yöntemi gösterir ve ikinci satır, `Main` *program. cs* içindeki yöntemden, çağıran işlevi gösterir. Çağrı yığını penceresi, yöntemlerin ve işlevlerin hangi sırada **çağrılacağını** gösterir. Ayrıca, kısayol menüsünden **kaynak koda git** gibi birçok hata ayıklayıcı özelliğine erişim sağlar.
+   Bu görünüm `Calculator.DoOperation` , sarı işaretçiyle belirtilen geçerli yöntemi gösterir. İkinci satır, `Main` *program. cs* dosyasındaki yönteminden yöntemini çağıran işlevi gösterir.
+   
+   Çağrı yığını penceresi, yöntemlerin ve işlevlerin hangi sırada **çağrılacağını** gösterir. Bu pencere Ayrıca, kısayol menüsünden **kaynak koda git** gibi birçok hata ayıklayıcı özelliğine erişim sağlar.
 
-1. Uygulama bildirimde duraklayana kadar, **F10** tuşuna basın (veya **hata ayıklama**  >  **adımından** fazla) `switch` .
+1. Uygulama deyimde duraklayana kadar, **F10** tuşuna basın veya **hata ayıklama**  >  **adımından** daha fazla kez ' yi seçin `switch` .
 
    ```csharp
    switch (op)
    {
    ```
 
-   Step Over komutu, geçerli deyimin bir işlev çağırması durumunda hata ayıklayıcının kodu çağrılan işlev içinde çalıştırmasını ve işlevin dönüşene kadar yürütmeyi askıya almamasının dışında adımla komutuna benzer. Belirli bir işlevle ilgilenmiyorsanız, yukarıdaki adımla kodda gezinmek daha hızlı bir yoldur.
+   Step Over komutu, geçerli ifade bir işlev çağırırsa, hata ayıklayıcı işlev içinde kodu çalıştırırsa ve işlevin dönüşene kadar yürütmeyi askıya almamasının dışında adımla komutuna benzerdir. Belirli bir işlevle ilgilenmiyorsanız, üzerine adımla adımlıdan daha hızlıdır.
 
-1. Uygulamanın aşağıdaki kod satırında duraklaması için bir kez **F10** tuşuna basın.
+1. Uygulamanın aşağıdaki kod satırında duraklaması için **F10** bir kez daha tuşuna basın.
 
    ```csharp
    if (num2 != 0)
    {
    ```
 
-   Bu kod, sıfıra bölme durumunu denetler. Uygulama devam ederse, genel bir özel durum (hata) oluşturur, ancak bunu bir hata olduğunu düşünsün ve konsolda döndürülen gerçek değeri görüntüleme gibi başka bir şey yapmak istediğinizi varsayalım. Bir seçenek, kodda değişiklik yapmak ve sonra hata ayıklamaya devam etmek için Düzenle ve devam et adlı bir hata ayıklayıcı özelliği kullanmaktır. Bununla birlikte, yürütme akışını geçici olarak değiştirmek için size farklı bir eliz gösterilecektir.
+   Bu kod, sıfıra bölme durumunu denetler. Uygulama devam ederse, genel bir özel durum (hata) oluşturur, ancak konsoldaki gerçek döndürülen değeri görüntüleme gibi başka bir şey de denemek isteyebilirsiniz. Bir seçenek, kodda değişiklik yapmak ve sonra hata ayıklamaya devam etmek için *Düzenle ve devam et* adlı bir hata ayıklayıcı özelliği kullanmaktır. Ancak, yürütme akışını geçici olarak değiştirmek için farklı bir püf noktası vardır.
 
 ## <a name="debug-test-a-temporary-change"></a>Hata Ayıkla: geçici bir değişikliği test etme
 
-1. Şu anda deyimde duraklatılmış olan sarı işaretçiyi seçin `if (num2 != 0)` ve aşağıdaki ifadeye sürükleyin.
+1. Şu anda deyimde duraklatılmış olan sarı işaretçiyi seçin `if (num2 != 0)` ve aşağıdaki ifadeye sürükleyin:
 
    ```csharp
    result = num1 / num2;
    ```
 
-   Bunu yaptığınızda, uygulama, `if` sıfıra bölme yaparken ne olacağını görmek için, ifadesini tamamen atlar.
+   İşaretçinin buraya sürüklenmesi, uygulamanın deyimin tamamen atlanmasına neden olur `if` , böylece sıfıra bölene olacağını görebilirsiniz.
 
 1. Kod satırını yürütmek için **F10** tuşuna basın.
 
-1. Değişkenin üzerine gelin `result` ve bir değeri depolayıp depoladığını görürsünüz `Infinity` .
+1. Değişkenin üzerine geldiğinizde `result` , **sonsuz** değerini gösterir. C# ' de, sıfıra böleceği zaman sonsuzluk sonuç olur.
 
-   C# ' de, `Infinity` sıfıra böldüğünüzde sonuç olur.
-
-1. **F5** tuşuna basın (veya hata ayıklama  >  **devam** Ayıkla).
+1. **F5** tuşuna basın veya **hata**  >  **ayıklamayı devam** Ayıkla ' yı seçin.
 
    Sonsuzluk sembolü, matematik işleminin sonucu olarak konsolunda görünür.
 
-1. ' N ' komutunu kullanarak uygulamayı düzgün bir şekilde kapatın.
+1. *N* komutunu girerek uygulamayı düzgün bir şekilde kapatın.
 
 ## <a name="code-complete"></a>Kod Tamam
 
-Tüm adımlar tamamlandıktan sonra *Hesaplamalibrary. cs* dosyasının tüm kodu aşağıda verilmiştir:
+Tüm adımları tamamladıktan sonra, *Hesaplamakitaplığı. cs* dosyasının tüm kodu aşağıda verilmiştir:
 
 ```csharp
 using System;
@@ -622,7 +765,7 @@ namespace CalculatorLibrary
 
         public double DoOperation(double num1, double num2, string op)
         {
-            double result = double.NaN; // Default value is "not-a-number" which we use if an operation, such as division, could result in an error.
+            double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
             writer.WriteStartObject();
             writer.WritePropertyName("Operand1");
             writer.WriteValue(num1);
@@ -764,10 +907,10 @@ namespace CalculatorProgram
 
 Tebrikler, bu öğreticiyi tamamlama! Daha fazla bilgi edinmek için aşağıdaki içerikle devam edin:
 
-- [Daha fazla C# öğreticilerine devam edin](/dotnet/csharp/tutorials/)
-- [hızlı başlangıç: ASP.NET Core web uygulaması oluşturma](../../ide/quickstart-aspnet-core.md)
-- [Visual Studio C# kodunda hata ayıklamayı öğrenin](tutorial-debugger.md)
-- [Birim testleri oluşturma ve çalıştırma](../../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md) hakkında izlenecek yol
-- [C# programı çalıştırma](run-program.md)
-- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
-- [Visual Studio ıde 'ye genel bakış ile devam edin](/../visual-studio-ide.md)
+- [Daha fazla C# öğreticisi ile devam edin.](/dotnet/csharp/tutorials/)
+- [Hızlı Başlangıç: Web ASP.NET Core oluşturma.](../../ide/quickstart-aspnet-core.md)
+- [içinde C# kodunda hata ayıklamayı Visual Studio.](tutorial-debugger.md)
+- [Birim testlerini oluşturma ve çalıştırma adımlarını adım adım takip etmek.](../../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+- [Bir C# programı çalıştırın.](run-program.md)
+- [C# IntelliSense hakkında bilgi edinebilirsiniz.](../../ide/visual-csharp-intellisense.md)
+- [IDE'ye Visual Studio devam eder.](visual-studio-ide.md)

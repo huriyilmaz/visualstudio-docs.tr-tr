@@ -6,13 +6,13 @@ manager: cabuschl
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
 ms.date: 03/17/2021
 ms.topic: how-to
-description: Seçilen aboneliklere dahil edilen Pluralsight eğitim aboneliği hakkında Visual Studio öğrenin.
+description: Seçilen aboneliklere dahil edilen Pluralsight eğitim aboneliği hakkında Visual Studio edinin.
 ms.openlocfilehash: 2b4f1e75a02b766387e30471c5b6caec59d63793
-ms.sourcegitcommit: f07b737f43a29e30d040cc5793437f462fedb595
+ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2021
-ms.locfileid: "127964733"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "128426341"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Aboneliklerde Pluralsight Visual Studio avantajları
 
@@ -20,7 +20,7 @@ Uzman tarafından geliştirilmiş kurslar, öğrenme yolları, uyarlamalı becer
 
 Aşağıdaki tabloda, her bir abonelik türü için hangi Pluralsight abonelik Visual Studio ayrıntıları verilmiştir.  Bazı aboneler, tam katalog erişim aboneliğinin süresi dolsa da sınırlı kurslardan faydalanabilecek. Pluralsight, tam katalog aboneliğinizin süresi dolduğunda bu işlemde size yol sağlar.
 
- Sahip olduğu abonelik türüne bağlı olarak, daha önce bir Visual Studio aboneliği aracılığıyla sağlanan pluralsight aboneliğini kullana tüm aboneler yeni Pluralsight avantajı tekliflerini kullanamayacaktır. Ek Pluralsight eğitim avantajlarından yararlanmaya uygun değilsanız Pluralsight web sitesinde avantajı etkinleştirmeye çalışırken bir bildirim alırsınız.
+ Sahip olduğu abonelik türüne bağlı olarak, daha önce bir Visual Studio aboneliği aracılığıyla sağlanan pluralsight aboneliğini kullana tüm aboneler yeni Pluralsight avantajı tekliflerinden yararlanabilecektir. Ek Pluralsight eğitim avantajlarından yararlanmaya uygun değilsanız Pluralsight web sitesinde avantajı etkinleştirmeye çalışırken bir bildirim alırsınız.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 1. Aboneliğinizi etkinleştirmek için [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) Pluralsight  avantajı kutucuğuna bağlanarak Etkinleştir bağlantısına tıklayın.  Görüntülenen kutucuk listesini daraltmak için bir grup filtresi seçebilirsiniz.  Pluralsight, geliştirme avantajları Professional grubunda bulunur.
@@ -28,7 +28,7 @@ Aşağıdaki tabloda, her bir abonelik türü için hangi Pluralsight abonelik V
    > ![Pluralsight Avantajı Kutucuğu](_img/vs-pluralsight/vs-pluralsight-tile.png "Avantajınızı talep etmek için Etkinleştir'e tıklayın")
 
 (Yukarıdaki kutucuk, bir abonenin göreceği Visual Studio Enterprise örneğidir.  Farklı bir Visual Studio kullanıyorsanız Pluralsight avantajının süresi farklılık gösterir.  Ayrıntılar için Uygunluk tablosuna bakın.)
-1. Aboneliğinize dahil edilen avantaj için Pluralsight sayfasına yeniden Visual Studio.
+1. Abonelik aboneliğinize dahil olan avantaj için Pluralsight sayfasına Visual Studio.
    - Formda istenen iletişim bilgilerini sağlama
    - Kullanım koşullarını kabul etmek için onay kutusuna tıklayın
    - **KULLAN'a tıklayın.**
@@ -50,7 +50,7 @@ Aşağıdaki tabloda, her bir abonelik türü için hangi Pluralsight abonelik V
 1. İşte bu kadar!  Artık binlerce Pluralsight kursuyla öğrenmeye başlayabilirsiniz!
 
 ## <a name="status-of-your-pluralsight-subscription"></a>Pluralsight aboneliğinizin durumu
-Pluralsight avantajınızı etkinleştirdikten sonra, Visual Studio abonelikler portalında kutucuğun görünümü, aboneliğinizin durumunu izlemenize yardımcı olacak şekilde değişir.  
+Pluralsight avantajınızı etkinleştirdikten sonra Visual Studio abonelikler portalında kutucuğun görünümü, aboneliğinizin durumunu izlemenize yardımcı olacak şekilde değişir.  
 
 ### <a name="while-your-subscription-is-active"></a>Aboneliğiniz etkinken
 "Etkinleştir" düğmesinin yerine, tıklarsanız oturum açın ve eğitiminize devam etmek için sizi doğrudan Pluralsight portalına alacak küçük bir dairesel düğmeyle karşınıza çıkarsınız.  
@@ -75,7 +75,7 @@ Pluralsight aboneliğinizin süresi dolduğunda durum "0 gün kaldı" olarak de�
 |          Visual Studio Enterprise (Standart)           | VL, Azure, Perakende |   6 ay    | Evet<sup>2</sup> |
 |          Visual Studio Enterprise ile abonelik GitHub Enterprise          | VL  |   6 ay    | Evet<sup>2</sup> |
 |         Visual Studio Professional (Standart)          | VL, Azure, Perakende |   3 ay    | Evet<sup>2</sup> |
-|         Visual Studio Professional aboneliği GitHub Enterprise          | VL  |   3 ay    | Evet<sup>2</sup> |
+|         Visual Studio Professional ile abonelik GitHub Enterprise          | VL  |   3 ay    | Evet<sup>2</sup> |
 |              Visual Studio Test Professional (Standart)              |    VL, Perakende     |   Kullanılamaz    | NA  |
 |                      MSDN Platformları (Standart)                       |    VL, Perakende     |   Kullanılamaz    | NA  |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) |       Azure       | Kullanılamaz |       NA       |
@@ -84,7 +84,7 @@ Pluralsight aboneliğinizin süresi dolduğunda durum "0 gün kaldı" olarak de�
 
 <sup>1</sup>*Şunları içerir: Resale (NFR), Visual Studio Industry Partner (VSIP), BizSpark, MCT Software & Services Developer, MCT Software & Service, Most Valuable Professional (MVP), Regional Director (RD), Microsoft İş Ortağı Ağı (MPN), FTE, Imagine. Dışlar: NFR Basic.*  
 
-<sup>2</sup>*Aboneliğiniz yenilendikten sonra seçilen Visual Studio pluralsight avantajı. Örneğin, her yıl yenilene bir yıllık aboneliğiniz varsa, bu avantajı yenileye her yıl size kullanılabilir. Çok yıllık bir aboneliğiniz varsa Pluralsight avantajı, abonelik süresi boyunca bir kez kullanılabilir.  Çok yıllık bir aboneliği yenilersanız, yenilemeden sonra avantaj yeniden kullanılabilir.*  
+<sup>2</sup>*Seçilen aboneliklerde Pluralsight Visual Studio aboneliğiniz yenilendikten sonra abonelikler yenilenecektir. Örneğin, her yıl yenilene bir yıllık aboneliğiniz varsa, bu avantajı yenileye her yıl size kullanılabilir. Çok yıllık bir aboneliğiniz varsa Pluralsight avantajı, abonelik süresi boyunca bir kez kullanılabilir.  Çok yıllık bir aboneliği yenilersanız, yenilemeden sonra avantaj yeniden kullanılabilir.*  
 
 > [!NOTE]
 > Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
@@ -100,7 +100,7 @@ A: Tüm Visual Studio Enterprise Pluralsight avantajını içermez.  Aboneliğin
 A: Seçili aboneliklerde Pluralsight avantajı Visual Studio aboneliğiniz yenilendikten sonra aboneliklerin yenilenmesine neden olur. Örneğin, her yıl yenilene bir yıllık aboneliğiniz varsa, bu avantajı yenileye her yıl size kullanılabilir. Çok yıllık bir aboneliğiniz varsa Pluralsight avantajı, abonelik süresi boyunca bir kez kullanılabilir.  Çok yıllık bir aboneliği yenilersanız, yenilemeden sonra avantaj yeniden kullanılabilir.  Yenileme tarihinizi bulmak için Destek <https://my.visualstudio.com/subscriptions> *Bilgileri'ne tıklayın ve* "Geçerlilik tarihi: " tarihini bulun. 
 
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>S: Özelleştirilmiş öğrenme oynatma listelerine veya kanallarına erişimim var mı?
-C: Evet. Bir Visual Studio olarak Pluralsight eğitim avantajınız kapsamında öne çıkan rollere, öğrenme yollarına ve özel kanallara (çalma listeleri) erişebilirsiniz. Öne çıkan içerik, Microsoft ve Pluralsight tarafından özel olarak seçkin bir şekilde ve ilgi alanıyla ilgili önemli alanlarda öğrenmeye yöneliktir. Pluralsight giriş sayfanıza ve diğer içeriğe erişmek için Visual Studio aboneliği portalınız aracılığıyla <https://my.visualstudio.com/benefits> Pluralsight avantajınızı etkinleştirin.
+C: Evet. Bir Visual Studio olarak Pluralsight eğitim avantajınız kapsamında öne çıkan rollere, öğrenme yollarına ve özel kanallara (oynatma listeleri) erişebilirsiniz. Öne çıkan içerik, Microsoft ve Pluralsight tarafından özel olarak seçkin bir şekilde ve ilgi alanıyla ilgili önemli alanlarda öğrenmeye yöneliktir. Pluralsight giriş sayfanıza ve diğer içeriğe erişmek için Visual Studio aboneliği portalınız aracılığıyla <https://my.visualstudio.com/benefits> Pluralsight avantajınızı etkinleştirin.
 
 ### <a name="q-the-pluralsight-tile-doesnt-have-an-activate-link-how-can-i-activate-the-benefit"></a>S: Pluralsight kutucuğunun "Etkinleştir" bağlantısı yok. Avantajı nasıl etkinleştirim?
 A: Pluralsight avantajınızı zaten etkinleştirdikten sonra "Etkinleştir" bağlantısı, pluralsight için oturum açma sayfasına sizi alan bir bağlantıyla değiştirilir.  Ayrıca avantajı etkinleştirilen tarihi ve aboneliğinizin ne kadar süreyle kalarak devam etme hakkında bilgi edinebilirsiniz.  Zaten bir abonelik kullandıysanız başka bir aboneliği etkinleştiresiniz.
@@ -111,7 +111,7 @@ A: Ücretsiz Pluralsight aboneliğinizin sonunda, bir aboneliği doğrudan Plura
 ## <a name="support-resources"></a>Destek kaynakları
 - [Pluralsight Yardım Merkezi,](https://help.pluralsight.com/help) Pluralsight kurslarını alma veya Pluralsight web sitesini kullanma konusunda yardım sağlar.
 - Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için [abonelikler Visual Studio iletişim kurun](https://my.visualstudio.com/gethelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
