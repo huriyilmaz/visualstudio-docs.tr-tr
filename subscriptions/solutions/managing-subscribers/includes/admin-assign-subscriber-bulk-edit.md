@@ -1,6 +1,6 @@
 ---
-title: Nasıl yaparım? aboneler toplu olarak atansın mı?
-description: Süper yönetici veya yönetici, toplu özelliği kullanma hakkında daha fazla ayrıntı sağlar.
+title: Nasıl yaparım? toplu olarak atamak mı?
+description: Süper yönetici veya yönetici toplu özelliği kullanma hakkında daha fazla ayrıntı istiyor.
 ms.topic: include
 ms.assetid: 3b450a79-47d2-4434-899d-bea29a0271e1
 author: CaityBuschlen
@@ -10,32 +10,32 @@ user.type: admin
 tags: bulk
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: 98144f1087314e87f6ec26a0053e1a714caaad65
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: d837b52d57a212f7519adfbc027eadbcf5f45dab
+ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128431752"
+ms.lasthandoff: 09/26/2021
+ms.locfileid: "129013225"
 ---
-## <a name="how-do-i-assign-subscribers-in-bulk"></a>Nasıl yaparım? aboneler toplu olarak atansın mı?
+## <a name="how-do-i-assign-subscribers-in-bulk"></a>Nasıl yaparım? toplu olarak atamak mı?
 
-Aboneler toplu olarak atamak için iki seçeneğiniz vardır.
-- [Excel şablonu kullanarak toplu karşıya yükleme](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-bulk-add-to-assign-subscriptions)yapabilirsiniz.
-- kuruluşunuzun abonelik ata 'dan fazla bir anlaşma türü varsa, [Azure Active Directory (Azure AD) grup atamasını](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-azure-active-directory-groups-to-assign-subscriptions)kullanabilirsiniz.
+Aboneleri toplu olarak atamak için iki seçeneğiniz vardır.
+- Bir şablon [kullanarak toplu Excel.](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-bulk-add-to-assign-subscriptions)
+- Kuruluşta abonelikleri fazla atayamayacak bir sözleşme türü varsa, Azure Active Directory [(Azure AD) grup ataması kullanabilirsiniz.](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-azure-active-directory-groups-to-assign-subscriptions)
 
-## <a name="use-bulk-upload"></a>Toplu karşıya yükleme kullan
-1. Güncelleştirilmesi gereken sözleşmenin anlaşma açılan menüsünde seçili olduğundan emin olun.
-2. **Ekle** ' yi seçin ve açılan menüden **Toplu Düzenle** ' yi seçin. Açılır penceredeki yönergeleri izleyin.
-3. Excel sayfasını dışarı aktardıktan sonra dosyada gerekli düzenlemeleri yapın, sonra dosyayı kaydedip karşıya yükleyin. Düzenlemeleri yaptığınızda, GUID 'lerin değiştirilemeyeceğini aklınızda bulundurun.
-4. Toplu düzenlemeye başlamak için **Tamam ' ı** seçin.
+## <a name="use-bulk-upload"></a>Toplu karşıya yükleme kullanma
+1. Güncelleştirilecek sözleşmenin sözleşme açılan menüsünde seçildiğinden emin olun.
+2. **Ekle'yi** ve ardından **açılan menüde Toplu** düzenleme'yi seçin. Açılır pencere yönergelerini izleyin.
+3. Sayfayı dışarı Excel, dosyada gerekli düzenlemeleri yaptıktan sonra dosyayı kaydedecek ve karşıya yükleyebilirsiniz. Düzenlemeleri yapmak için GUID'lerin değiştirilenediğini unutmayın.
+4. Toplu **düzenlemeye** başlamak için Tamam'ı seçin.
 
-Şablonda hata varsa, yükleme başarısız olur. Hataları göstermekte olduğunuzdan, şablonu düzeltip yeniden deneyebilirsiniz.
+Şablon herhangi bir hata içeriyorsa karşıya yükleme başarısız olur. Hataların gösterildiği için şablonu düzeltin ve yeniden deneyin.
 
 ## <a name="use-azure-ad-groups"></a>Azure AD gruplarını kullanma
-Azure AD 'nin toplu karşıya yükleme işlemi şu anda yalnızca fazla talep veren anlaşmalar içeren kuruluşlarda sunulmaktadır.
-1. Sözleşme açılan menüsünde, güncelleştirilmesi gereken sözleşmenin seçili olduğundan emin olun.
-2. **ekle**' yi seçin ve açılan menüden **Azure Active Directory grubu** ' nu seçin.
-3. Form alanına eklemek istediğiniz Azure AD grubunun adını girin. Adı yazarken, arama, kuruluşunuzda kullanılabilir Azure AD gruplarını göstermek için güncelleştirilir.
-4. Grubu seçtiğinizde, alanı otomatik olarak grup adıyla doldurulur. Değişiklik yapmadan önce bu gruptaki kullanıcıları görüntüleyebilirsiniz.
-5. **Ekle**' yi ve ardından **Onayla**' yı seçin.
-6. Azure AD grubuna eklenen gelecekteki kullanıcılara otomatik olarak bir abonelik verilir. Gruptan kaldırılan herkesin aboneliği kaldırılmıştır.
+Azure AD'nin toplu karşıya yükleme için kullanımı şu anda yalnızca fazla yüklenilen sözleşmelere sahip kuruluşlar tarafından kullanılabilir.
+1. Güncelleştirilmiş olması gereken sözleşmenin sözleşme açılan menüsünde seçildiğinden emin olun.
+2. **Ekle'yi** seçin ve **Azure Active Directory menüden** Grup ekle'yi seçin.
+3. Form alanına eklemek istediğiniz Azure AD grubunun adını girin. Siz adı yazarak arama, kuruluş içindeki kullanılabilir Azure AD gruplarını gösterecek şekilde ler.
+4. Grubu seçerek alan otomatik olarak grup adıyla doldurmaktır. Değişiklik yapmadan önce bu gruptaki kullanıcıları görüntüebilirsiniz.
+5. **Ekle'yi** ve ardından Onayla'ya **tıklayın.**
+6. Gelecekte Azure AD grubuna eklenen tüm kullanıcılara otomatik olarak bir abonelik verilir. Gruptan kaldırılan herkesin aboneliği kaldırılır.

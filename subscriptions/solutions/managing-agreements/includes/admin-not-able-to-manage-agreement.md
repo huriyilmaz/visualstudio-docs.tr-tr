@@ -10,12 +10,12 @@ user.type: admin
 tags: agreement
 subscription.type: vl, cloud, retail, partner
 sap.id: 4e55abf9-8505-ecdc-c55f-c67a167a357c
-ms.openlocfilehash: decf72558386708fa0879b226793718b7a97f44f
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 54d98e72aafa4084f65f3b4262f31ce447dc598d
+ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128431753"
+ms.lasthandoff: 09/26/2021
+ms.locfileid: "129013327"
 ---
 ## <a name="im-a-super-admin-or-admin-but-im-not-able-to-manage-my-agreement"></a>Süper yönetici veya yöneticiyim ama sözleşmemi yönete değilim
 

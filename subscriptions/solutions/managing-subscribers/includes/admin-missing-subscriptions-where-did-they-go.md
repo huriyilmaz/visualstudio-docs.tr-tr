@@ -10,12 +10,12 @@ user.type: admin
 tags: missing
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: f238f497d205f5de071386096c375a4284e180c0
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 1502ea473cde56c0701a87e00c180d2a4f74db41
+ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128431775"
+ms.lasthandoff: 09/26/2021
+ms.locfileid: "129013288"
 ---
 ## <a name="some-subscriptions-are-missing-that-i-didnt-delete-where-did-the-subscriptions-go"></a>Silmediğiniz bazı abonelikler eksik. Abonelikler nerede?
 Süper yönetici veya yönetici olarak, uygun izinlere sahip olduğunuzda her bir anlaşmadan abone ekleyebilir, düzenleyebilir veya kaldırabilirsiniz. 

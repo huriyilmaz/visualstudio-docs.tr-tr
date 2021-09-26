@@ -10,12 +10,12 @@ user.type: admin
 tags: bulk, upload
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: b6840407e8bf14dfa5c0f9db1f06707c4f98ac99
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: a8338378828ad9297004d1bf41ea77346405c39f
+ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128431697"
+ms.lasthandoff: 09/26/2021
+ms.locfileid: "129013343"
 ---
 ## <a name="how-do-i-fix-a-bulk-upload-to-use-the-correct-agreement"></a>Nasıl yaparım? sözleşmeyi kullanmak için toplu karşıya yükleme sorunu mu düzeltildi?
 

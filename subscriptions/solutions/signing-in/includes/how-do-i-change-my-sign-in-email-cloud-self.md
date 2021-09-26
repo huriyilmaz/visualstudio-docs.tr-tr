@@ -8,14 +8,14 @@ ms.author: cabuschl
 ms.date: 06/03/2021
 user.type: subscriber, admin
 tags: sign-in
-subscription.type: cloud,
+subscription.type: cloud
 sap.id: 17a2bf94-0d03-2629-dfd8-e8935f9126ec
-ms.openlocfilehash: 241878803e3252b5b81d6e35b0f7e94711de3709
-ms.sourcegitcommit: a740129796159a69c704d9d372edaa7a7f191d17
+ms.openlocfilehash: 486d784f65263a92997ba180ac4128b7e376fda6
+ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111530461"
+ms.lasthandoff: 09/26/2021
+ms.locfileid: "129013322"
 ---
 ## <a name="how-can-i-change-the-sign-in-email-address-on-my-visual-studio-cloud-subscription"></a>Bulut aboneliğimde oturum açma e-posta adresini Visual Studio değiştirebilirim?
 

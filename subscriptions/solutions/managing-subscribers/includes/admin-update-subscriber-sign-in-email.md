@@ -1,6 +1,6 @@
 ---
-title: Abone oturum açma e-posta adresini güncelleştirme
-description: Süper yönetici veya yönetici aboneler etki alanını toplu olarak güncelleştirmek istiyor.
+title: Abone oturum açma e-posta adresini Güncelleştir
+description: Süper yönetici veya yönetici, aboneler etki alanını toplu olarak güncelleştirmek istiyor.
 ms.topic: include
 ms.assetid: c1220a33-26b0-4bf9-be97-ab2b3055e351
 author: CaityBuschlen
@@ -10,40 +10,40 @@ user.type: admin
 tags: email
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: 1618de41aa65a346b7c671aab155df5c9b322ed5
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: a8a753440cbfff59c656748571a1dbe08dffe3a8
+ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128431712"
+ms.lasthandoff: 09/26/2021
+ms.locfileid: "129013231"
 ---
-## <a name="update-subscribers-sign-in-email-address"></a>Abonenin oturum açma e-posta adresini güncelleştirme
+## <a name="update-subscribers-sign-in-email-address"></a>Abonenin oturum açma e-posta adresini Güncelleştir
 
-Abonenin oturum açma e-posta adresini tek tek veya toplu düzenleme kullanarak güncelleştirebilirsiniz. 
+Abonenin oturum açma e-posta adresini ayrı ayrı veya toplu düzenleme kullanarak güncelleştirebilirsiniz. 
 
 ##  <a name="bulk-edit"></a>Toplu düzenleme
-1. Aboneleri **yönet sayfasında,** güncelleştirilmiş olması gereken sözleşmenin üzerinde olduğundan emin olun.
-2. Toplu **düzenle'yi** seçin, Excel dosyasını dışarı aktarın ve açılan pencerede yönergeleri izleyin.
-3. Dosyada gerekli düzenlemeleri yapacak ve dosyayı kaydeddikten sonra karşıya yükleyin. Düzenlemeleri yapmak için GUID'lerin değiştirilenediğini unutmayın.
-4. Toplu **düzenlemeye** başlamak için Tamam'ı seçin.
-5. Abonelerinize değişiklik hakkında bilgi içeren bir e-posta gönderilir.
+1. **Aboneleri Yönet** sayfasında, güncelleştirilmesi gereken anlaşmada olduğunuzdan emin olun.
+2. **toplu düzenleme**' yi seçin, Excel dosyasını dışarı aktarın ve açılır penceredeki yönergeleri izleyin.
+3. Dosyada gerekli düzenlemeleri yapın, sonra dosyayı kaydedip karşıya yükleyin. Düzenlemeleri yaptığınızda, GUID 'lerin değiştirilemeyeceğini aklınızda bulundurun.
+4. Toplu düzenlemeye başlamak için **Tamam ' ı** seçin.
+5. Abonelere, değişikliği bildiren bir e-posta gönderilir.
 
 ## <a name="individual-edit"></a>Bireysel düzenleme 
-1. Aboneleri **yönet sayfasında,** güncelleştirilmiş olması gereken sözleşmenin üzerinde olduğundan emin olun.
-2. Güncelleştirilen aboneyi seçin ve ardından abone adının yanındaki üç noktayı (...) seçin.
+1. **Aboneleri Yönet** sayfasında, güncelleştirilmesi gereken anlaşmada olduğunuzdan emin olun.
+2. Güncelleştirilecek abone ' i seçin ve ardından abone adının yanındaki üç nokta (...) simgesini seçin.
 3. **Düzenle**'yi seçin.
-4. Fly-out panelinde gerekli düzenlemeleri yapmak ve ardından Kaydet'i **seçin.**
-5. Abonelerinize değişiklik hakkında bilgi içeren bir e-posta gönderilir.
+4. Kullanıma hazır panelinde, gerekli düzenlemeleri yapın ve ardından **Kaydet**' i seçin.
+5. Abonelere, değişikliği bildiren bir e-posta gönderilir.
 
 ## <a name="azure-active-directory-azure-ad"></a>Azure Active Directory (Azure AD) 
-Abonelikleri Azure AD gruplarını kullanarak atarsanız, tüm e-posta adresi veya ad güncelleştirmeleri otomatik olarak [manage.visualstudio.com.](https://manage.visualstudio.com) Değişiklikleri kaydeddikten sonra güncelleştirmelerin 24 saat içinde yönetici portalında yansıtıldı olduğunu görüyor olun. 
+Azure AD gruplarını kullanarak abonelik atarsanız, tüm e-posta adresi veya ad güncelleştirmeleri otomatik olarak [Manage.VisualStudio.com](https://manage.visualstudio.com)' e yansıtılır. Değişiklikleri kaydettikten sonra, yönetim portalı 'nda yansıtılan güncelleştirmeleri 24 saat içinde görmeniz gerekir. 
 1. [Azure portal](https://portal.azure.com) oturum açın.
-2. Gerekli güncelleştirmeleri yapma.
+2. Gerekli güncelleştirmeleri yapın.
 
 ## <a name="impact-of-sign-in-email-updates"></a>Oturum açma e-posta güncelleştirmelerinin etkisi
-Oturum açma e-postasını değiştirmek aboneler için aşağıdakiler gibi olumsuz etkilere neden olabilir:
-- IDE'de oturum Visual Studio sorunları.
-- Oturum açma sorunları Azure DevOps.
-- Aylık Azure geliştirme ve test bireysel kredileriyle ilgili sorunlar.
+Oturum açma e-postasını değiştirmek, aboneler için aşağıdakiler de dahil olmak üzere olumsuz etkileri olabilir:
+- Visual Studio ıde ile oturum açma sorunları.
+- Azure DevOps ile oturum açma sorunları.
+- Aylık Azure geliştirme ve test tek kredisi ile ilgili sorunlar.
 
-[Oturum açma e-postasını değiştirmenin abonenin ilişkili](https://docs.microsoft.com/visualstudio/subscriptions/subscription-level-changes) avantajlarını nasıl etkiley etkileri hakkında daha fazla bilgi edinebilirsiniz.
+[Oturum açma e-postasını değiştirme konusunda daha fazla bilgi için abonenin ilişkili avantajlarından nasıl etkilenirsiniz](https://docs.microsoft.com/visualstudio/subscriptions/subscription-level-changes) .
