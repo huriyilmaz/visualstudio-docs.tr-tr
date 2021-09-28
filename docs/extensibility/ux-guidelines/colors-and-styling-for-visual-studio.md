@@ -11,12 +11,12 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9285e13e2f413ab2cc2e04be11ebe1ece3b04c25
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 121c1410ee98dab0cf3ee51aeb538ffd407f3497
+ms.sourcegitcommit: d3e95f3b21d9cd46dd3d53cf869f74872d5cabdf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122028611"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "129142966"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Visual Studio İçin Renkler ve Stil
 
@@ -175,7 +175,7 @@ uygulamanın öğesine aktarılmış değerler aracılığıyla Visual Studio re
 
 Yönetilen kod için, kabuğun yönetilen paket çerçeve kitaplığı ( `Microsoft.VisualStudio.Shell.12.0.dll` ), temalı renklerin kullanımını kolaylaştırmanın birkaç yardımcı sınıfını içerir.
 
-`Microsoft.VisualStudio.Shell.VsColors`MPF içindeki sınıftaki yardımcı yöntemler `GetThemedGDIColor()` ve içerir `GetThemedWPFColor()` . Bu yardımcı yöntemler, WinForms veya WPF kullanıcı arabiriminde kullanılacak bir tema girişinin renk değerini `System.Drawing.Color` `System.Windows.Media.Color` veya olarak geri verir.
+`Microsoft.VisualStudio.Shell.VsColors`MPF içindeki sınıftaki yardımcı yöntemler `GetThemedGDIColor()` ve içerir `GetThemedWPFColor()` . Bu yardımcı yöntemler `System.Drawing.Color` `System.Windows.Media.Color` , WINFORMS veya WPF Kullanıcı arabiriminde kullanılmak üzere bir tema girişinin renk değerini veya olarak döndürür.
 
 ```csharp
 IVsUIShell5 shell5;
@@ -224,14 +224,14 @@ public static System.Windows.Media.Color GetThemedWPFColor(this IVsUIShell5 vsUI
 }
 ```
 
-sınıfı, belirli bir WPF renk kaynağı anahtarı için VSCOLOR tanımlayıcılarını almak için de kullanılabilir veya tam tersi de kullanılabilir.
+Sınıfı, belirli bir WPF renk kaynak anahtarı için VSCRENGTANıMLAYıCıLARı elde etmek için de kullanılabilir veya tam tersi de geçerlidir.
 
 ```csharp
 public static string GetColorBaseKey(int vsSysColor);
 public static bool TryGetColorIDFromBaseKey(string baseKey, out int vsSysColor);
 ```
 
-sınıf yöntemleri, her çağrıldığında renk `VsColors` değerini geri dönmek için VSColor hizmetini sorgular. olarak bir renk değeri elde etmek için, daha iyi performansa sahip bir alternatif, bunun yerine VSColor hizmetten alınan renk değerlerini önbelleğe alan sınıfının yöntemlerini `System.Drawing.Color` `Microsoft.VisualStudio.PlatformUI.VSThemeColor` kullanmaktır. sınıfı, yayın iletileri olaylarını kabukla birlikte abone olur ve tema değiştirme olayı oluştuğunda önbelleğe alınmış değeri atar. Ayrıca, sınıfı bir sağlar. Tema değişikliklerine abone olmak için kolay etkinlik. Yeni `ThemeChanged` bir işleyici eklemek için olayı kullanın ve ilgili renk `GetThemedColor()` değerlerini almak için yöntemini `ThemeResourceKeys` kullanın. Örnek kod şöyle olabilir:
+Sınıf yöntemleri, `VsColors` her çağrıldığında, Color değerini döndürmek Için Vsccolor hizmetini sorgular. Bir renk değeri elde etmek için `System.Drawing.Color` , daha iyi performansa sahip bir alternatif yerine, `Microsoft.VisualStudio.PlatformUI.VSColorTheme` vsccolor hizmetinden elde edilen renk değerlerini önbelleğe alan sınıfının yöntemlerini kullanmaktır. Sınıfı, Shell yayın iletileri olaylarına dahili olarak abone olur ve bir tema değiştirme olayı gerçekleştiğinde önbelleğe alınmış değeri atar. Ayrıca, sınıfı bir sağlar. Tema değişikliklerine abone olmak için NET kullanımı kolay olay. `ThemeChanged`Yeni bir işleyici eklemek için olayını kullanın ve `GetThemedColor()` ilgilendiğiniz değerin renk değerlerini elde etmek için yöntemini kullanın `ThemeResourceKeys` . Örnek bir kod şöyle görünebilir:
 
 ```csharp
 public MyWindowPanel()
@@ -270,170 +270,170 @@ protected override void Dispose(bool disposing)
 }
 ```
 
-## <a name="choosing-high-contrast-colors"></a><a name="BKMK_ChoosingHighContrastColors"></a> Farklı Yüksek Karşıtlık seçme
+## <a name="choosing-high-contrast-colors"></a><a name="BKMK_ChoosingHighContrastColors"></a> Yüksek Karşıtlık renkleri seçme
 
 ### <a name="overview"></a>Genel Bakış
 
-Windows, metnin, arka planların ve görüntülerin renk karşıtlıklarını artırarak öğelerin ekranda daha belirgin görünmesini sağlar. Erişilebilirlik nedenleriyle, kullanıcılar Visual Studio bir temaya geçişte arabirim öğelerinin doğru yanıt Yüksek Karşıtlık önemlidir.
+Windows, metnin, arka planların ve görüntülerin renk kontrastını artıran çok sayıda yüksek karşıtlıklı sistem düzeyi teması kullanır ve öğelerin ekranda daha belirgin görünmesini sağlama. erişilebilirlik nedenleriyle, kullanıcılar bir Yüksek Karşıtlık temaya geçiş yaparken Visual Studio ınterface öğelerinin doğru bir şekilde yanıt vermesi önemlidir.
 
-Farklı temalarda yalnızca birkaç sistem Yüksek Karşıtlık kullanılabilir. Sistem renk adlarınızı seçerken aşağıdaki ipuçlarını unutmayın:
+Yüksek Karşıtlık temaları için yalnızca el ile sistem renkleri kullanılabilir. Sistem renk adlarınızı seçerken, aşağıdaki ipuçlarını hatırlayın:
 
-- **Renklendirmekte olduğu öğeyle aynı anlamlara** sahip sistem renklerini seçin. Örneğin, bir pencere içindeki metin için yüksek karşıtlıklı bir renk seçiyorsanız ControlText yerine WindowText kullanın.
+- Renklendirçalıştığınız öğeyle **aynı anlam anlamı olan sistem renkleri** ' ni seçin. Örneğin, bir pencere içindeki metin için yüksek karşıtlıklı bir renk tercih ediyorsanız, ControlText değil WindowText komutunu kullanın.
 
-- **Ön plan/arka plan çiftlerini** birlikte seçin, yoksa renk seçiminizin tüm renk temalarında Yüksek Karşıtlık olmaz.
+- **Ön plan/arka plan çiftlerini birlikte seçin** veya renk seçimlerinizin tüm yüksek karşıtlık temalarda çalışmasına emin olmanız gerekir.
 
-- **Kullanıcı arabiriminizin hangi bölümlerinin en önemli olduğunu belirleme ve içerik alanlarının öne çıkarılamayacaklarından emin olmak.** Renk tonları arasındaki küçük farkların normalde ayırt edici olduğu çok fazla ayrıntıyı kaybedersiniz. Bu nedenle farklı içerik alanları için renk çeşitlemeleri olduğundan içerik alanlarını tanımlamak için güçlü kenarlık renklerinin kullanımı yaygındır.
+- **UI 'nizin hangi bölümlerinin en önemlileri olduğunu ve içerik alanlarının kullanıma hazır olduğundan emin olun.** Renk tonuna ilişkin hafif farklılıkların normalde ayırt ettiği çok sayıda ayrıntıyı kaybedersiniz. bu nedenle, farklı içerik alanlarında renk çeşitleri olmadığından, güçlü kenarlık renklerinin, içerik alanlarının tanımlanması yaygındır.
 
 ### <a name="system-color-set"></a>Sistem renk kümesi
 
-WPF Ekip [Blogu: SystemColors Başvurusu'nda](/archive/blogs/wpf/systemcolors-reference) yer alan tablo, tüm sistem renk adlarını ve her temada görüntülenen karşılık gelen tonları gösterir.
+[WPF ekibi blogu 'ndaki tablo: SystemColors başvurusu](/archive/blogs/wpf/systemcolors-reference) , tüm sistem renk adları kümesini ve her Temada görünen ilgili kuları gösterir.
 
-Kullanıcı arabiriminize bu sınırlı renk kümesi uygularken, "normal" temalarında mevcut olan küçük ayrıntıları *kaybetmeniz beklenir.* Burada, bir araç penceresi içindeki alanları ayırt etmek için kullanılan hafif gri renklere sahip bir kullanıcı arabirimi örneği ve bulunmaktadır. Bu modda görüntülenen aynı pencereyle Yüksek Karşıtlık, tüm arka planların aynı ton olduğunu ve bu alanların kenarlıklarının tek başına kenarlıkla işaret olduğunu görebilirsiniz:
+Bu sınırlı renk kümesini Kullanıcı arabirimine uygularken, *"normal" temalarda bulunan hafif ayrıntıları kaybedeceğinizi bekliyorcaksınız*. Bir araç penceresi içindeki alanı ayırt etmek için kullanılan, hafif gri renkler içeren Kullanıcı arabirimine bir örnek aşağıda verilmiştir. Yüksek Karşıtlık modunda görüntülenen aynı pencereyle eşleştirildiği zaman, tüm arka planların aynı ton olduğunu ve bu alanların kenarlıklarının tek başına gösterilerek gösterildiğini görebilirsiniz:
 
-![Bu örnekte ince ayrıntıların nasıl kaybedil Yüksek Karşıtlık](../../extensibility/ux-guidelines/media/030303-a_propertieswindow.png "030303-a_PropertiesWindow")<br />Bu örnekte ince ayrıntıların nasıl kaybedil Yüksek Karşıtlık
+![Hafif ayrıntıların Yüksek Karşıtlık nasıl kaybedildiği hakkında örnek](../../extensibility/ux-guidelines/media/030303-a_propertieswindow.png "030303-a_PropertiesWindow")<br />Hafif ayrıntıların Yüksek Karşıtlık nasıl kaybedildiği hakkında örnek
 
-#### <a name="choosing-text-colors-in-an-editor"></a>Düzenleyicide metin renklerini seçme
+#### <a name="choosing-text-colors-in-an-editor"></a>Düzenleyicide metin renkleri seçme
 
-Renklendirme metni, benzer öğe gruplarının kolayca tanımlanması gibi anlamları belirtmek için bir düzenleyicide veya tasarım yüzeyinde kullanılır. Ancak Yüksek Karşıtlık temada üçten fazla metin rengi arasında ayrım yapma olanağına sahip olmazsiniz. WindowText, GrayText ve HotTrackText, WindowBackground yüzeylerde kullanılabilen tek renklerdir. Üçten fazla renk kullanamayabilirsiniz, çünkü bu moddayken görüntülemek istediğiniz en önemli Yüksek Karşıtlık seçin.
+Renklendirilmiş metin, bir düzenleyicide veya tasarım yüzeyinde, benzer öğe gruplarının kolay tanımlanmasına izin veren gibi anlam göstermek için kullanılır. Ancak Yüksek Karşıtlık temada, üçten fazla metin renginden ayırt etme olanağınız yoktur. WindowText, Gritext ve HotTrackText yalnızca WindowBackground yüzeylerinde kullanılabilen tek renklerdir. Üçten fazla renkten fazlasını kullanmamak için Yüksek Karşıtlık modundayken görüntülenmesini istediğiniz en önemli farklılıkları dikkatle seçin.
 
-Düzenleyici yüzeyinde izin verilen belirteç adlarının her biri için tonlar, her bir temada Yüksek Karşıtlık görünür:
+Her bir Yüksek Karşıtlık Temada göründükleri şekilde, bir düzenleyici yüzeyinde izin verilen her bir belirteç adı için kular:
 
-![Yüksek Karşıtlık düzenleyicisi karşılaştırması](../../extensibility/ux-guidelines/media/030303-b_hceditorcomparison.png "030303-b_HCEditorComparison")<br />Yüksek Karşıtlık düzenleyicisi karşılaştırması
+![Yüksek Karşıtlık Düzenleyicisi karşılaştırması](../../extensibility/ux-guidelines/media/030303-b_hceditorcomparison.png "030303-b_HCEditorComparison")<br />Yüksek Karşıtlık Düzenleyicisi karşılaştırması
 
-Mavi temada düzenleyici yüzeyi örnekleri:
+Mavi temadaki düzenleyici yüzeyine örnek olarak şunlar verilebilir:
 
-![Mavi temada düzenleyici](../../extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />Mavi temada düzenleyici
+![Mavi Temada düzenleyici](../../extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />Mavi Temada düzenleyici
 
-![Yüksek Karşıtlık #1 düzenleyicisi](../../extensibility/ux-guidelines/media/030303-d_editorhc1.png "030303-d_EditorHC1")<br />Yüksek Karşıtlık #1 düzenleyicisi
+![Yüksek Karşıtlık #1 teması içinde düzenleyici](../../extensibility/ux-guidelines/media/030303-d_editorhc1.png "030303-d_EditorHC1")<br />Yüksek Karşıtlık #1 teması içinde düzenleyici
 
 ### <a name="usage-patterns"></a>Kullanım desenleri
 
-Birçok yaygın kullanıcı arabirimi öğelerinin tanımlanmış Yüksek Karşıtlık zaten vardır. Kullanıcı arabirimi öğelerinizin benzer bileşenlerle tutarlı olması için kendi sistem renk adlarınızı seçerken bu kullanım desenlerine başvurabilirsiniz.
+Birçok ortak kullanıcı arabirimi öğesinin tanımlı Yüksek Karşıtlık renkleri zaten var. Kendi sistem renk adlarınızı seçerken bu kullanım desenlerine başvurabilirsiniz, böylece kullanıcı arabirimi öğelerinizin benzer bileşenlerle tutarlı olmasını sağlayabilirsiniz.
 
-| Sistem Rengi | Kullanım |
+| Sistem rengi | Kullanım |
 | --- | --- |
-| ActiveCaption | - Etkin IDE ve sallı pencere düğmesinin üzerine gelin ve üzerine gelin ve düğmesine basın<br />- IDE ve sallı pencereler için başlık çubuğu arka planı<br />- Varsayılan durum çubuğu arka planı |
-| ActiveCaptionText | - Başlık çubuğu ön planı (metin ve yazılar) için etkin IDE ve sallı pencereler<br />- Etkin pencere düğmelerinin üzerine gelindiğinde arka plan ve kenarlık |
-| Denetim | - Açılır kutu, açılan liste ve arama denetimi varsayılan ve açılan düğme de dahil olmak üzere devre dışı bırakılmış arka plan<br />- Hedef düğme arka planını yerleştirme<br />- Komut çubuğu arka planı<br />- Araç penceresi arka planı |
-| ControlDark | - IDE arka planı<br />- Menü ve komut çubuğu ayırıcıları<br />- Komut çubuğu kenarlığı<br />- Menü gölgeleri<br />- Araç penceresi sekmesi varsayılan ve üzerine gelme kenarlığı ve ayırıcısı<br />- Belge iyi taşma düğmesi arka planı<br />- Hedef glyph kenarlığı yerleştirme |
-| ControlDarkDark |- Odaksız, seçili belge sekmesi penceresi |
-| ControlLight |- Sekme kenarlığı otomatik olarak gizle<br />- Birleşik giriş kutusu ve açılan liste kenarlığı<br />- Hedef arka planı ve kenarlığı yerleştirme |
-| ControlLightLight | - Seçili, odaklanmış sağlama kenarlığı |
-| Controltext | - Birleşik giriş kutusu ve açılan liste glyph<br />- Araç penceresi seçimi kaldırılmış sekme metni |
-| GrayText |- Birleşik giriş kutusu ve açılan liste devre dışı bırakılmış kenarlık, açılan menü metni, metin ve menü öğesi metni<br />- Devre dışı menü metni<br />- Arama denetimi 'arama seçenekleri' üst bilgi metni<br />- Arama denetimi bölüm ayırıcısı |
-| Vurgula | - Birleşik giriş kutusu açılan düğmesi arka planı ve belge iyi taşma düğmesi kenarlığı dışında tüm üzerine gelindiğinde ve basılı arka planlarda ve kenarlıklarda<br />- Seçili öğe arka planları |
-| HighlightText | - Tüm üzerine gelindiğinde ve ön plana basıldığında (metin ve yazılar)<br />- Odaklanmış araç penceresi ve belge sekmesi pencere denetimi ön planı<br />- Odaklanmış araç penceresi başlık çubuğu kenarlığı<br />- Odaklı, seçili sağlama sekmesi ön planı<br />- Üzerine gelindiğinde belge iyi taşma düğmesi kenarlığı ve<br />- Seçili simge kenarlığı|
-| HotTrack | - Kaydırma çubuğu parmak arka planı ve kenarlığı<br />- Tuşların üzerinde kaydırma çubuğu ok işareti |
-| InactiveCaption | - Etkin olmayan IDE ve sallı pencere düğmesi, üzerine gelindiğinde<br />- IDE ve sallı pencereler için başlık çubuğu arka planı<br />- Devre dışı arama denetimi arka planı |
-| InactiveCaptionText | - Etkin olmayan IDE ve sallı pencereler başlık çubuğu ön planı (metin ve yazılar)<br />- Etkin olmayan pencere düğmelerinin üzerine gelindiğinde arka plan ve kenarlık<br />- Odaklanmamış araç penceresi düğmesi arka planı ve kenarlığı<br />-Devre dışı arama denetimi ön planı |
-| Menü | -Açılan menü arka planı<br />-İşaretli ve devre dışı onay işareti arka planı |
-| MenuText | -Aşağı açılan menü kenarlığı<br />-Onay işaretleri<br />-Menü glifleri<br />-Açılan menü metni<br />-Seçili simge kenarlığı |
-| Kaydırma çubuğu | -Kaydırma çubuğu ve kaydırma çubuğu ok arka planı, tüm durumlar |
-| Pencere | -Sekme arka planını otomatik gizle<br />-Menü çubuğu ve komut rafı arka planı<br />-Odaklanmış veya seçilmemiş belge penceresi sekmesi arka plan ve belge kenarlığı, hem açık hem de geçici sekmeler için<br />-Odaklanmış araç penceresi başlık çubuğu arka planı<br />-Araç penceresi sekmesi arka planı, hem seçili hem de seçilmemiş |
-| Kere ayarlanabilir | -IDE kenarlığı |
-| WindowText | -Sekme ön planını otomatik gizle<br />-Seçili araç penceresi sekmesi ön planı<br />-Odaklanmış belge pencere sekmesi ve odaklanmış olmayan veya seçilmemiş geçici sekme ön planı<br />-Tree varsayılan ön planı görünümü ve seçilmemiş glifi üzerine gelme<br />-Araç penceresi seçili sekme kenarlığı<br />-Kaydırma çubuğu Thumb arka planı, kenarlık ve karakter |
+| ActiveCaption | -Etkin IDE ve rafted Window düğme glifleri üzerine gelme ve basma<br />-IDE ve rafted Windows için başlık çubuğu arka planı<br />-Varsayılan durum çubuğu arka planı |
+| ActiveCaptionText | -Etkin IDE ve rafted Windows for başlık çubuğu ön planı (metin ve Glifler)<br />-Üzerine gelme ve basma etkin pencere düğmelerinin arka planı ve kenarlığı |
+| Denetim | -Açılan kutusu, açılan liste ve arama denetimi varsayılan ve devre dışı Arkaplan, açılan düğme dahil<br />-Dock hedef düğme arka planı<br />-Komut çubuğu arka planı<br />-Araç penceresi arka planı |
+| Controlkoyu | -IDE arka planı<br />-Menü ve komut çubuğu ayırıcıları<br />-Komut çubuğu kenarlığı<br />-Menü gölgeleri<br />-Araç pencere sekmesi varsayılan ve üzerine gelme kenarlığı ve ayırıcısı<br />-Belge iyi taşma düğmesi arka planı<br />Hedef karakter kenarlığını yerleştir |
+| Controlkoyu koyu |-Odaklanmış, seçili belge sekmesi penceresi |
+| ControlLight |-Sekme kenarlığını otomatik gizle<br />-Birleşik giriş kutusu ve açılan liste kenarlığı<br />-Dock hedef arka planı ve kenarlığı |
+| ControlLightLight | -Seçili, odaklanmış geçici kenarlık |
+| ControlText | -Birleşik giriş kutusu ve açılan liste karakteri<br />-Araç penceresi seçilmemiş sekme metni |
+| Gri metin |-Birleşik giriş kutusu ve açılan liste devre dışı kenarlık, açılan karakter, metin ve menü öğesi metni<br />-Devre dışı menü metni<br />-Arama denetimi ' arama seçenekleri ' başlık metni<br />-Arama denetimi bölüm ayırıcısı |
+| Vurgula | -Birleşik giriş kutusu açılan düğme arka planı ve belge iyi taşma düğmesi kenarlığı hariç tüm üzerine gelme ve basılan arka planlar ve Kenarlıklar<br />-Seçili öğe arka planları |
+| HighlightText | -Tüm üzerine gelin ve basılı basılabilir (metin ve Glifler)<br />Odaklı araç penceresi ve belge sekmesi pencere denetim ön planı<br />-Odaklı araç penceresi başlık çubuğu kenarlığı<br />-Odaklanmış, seçili geçici sekme ön planı<br />-Vurgu ve basma üzerinde belge iyi taşma düğmesi kenarlığı<br />-Seçili simge kenarlığı|
+| HotTrack | -Kaydırma çubuğu parmak izi ve basılacak kenarlık<br />-Bas kaydırma çubuğu ok karakteri |
+| InactiveCaption | -Etkin olmayan IDE ve rafted Window düğme glifleri üzerine gidilme<br />-IDE ve rafted Windows için başlık çubuğu arka planı<br />-Devre dışı arama denetimi arka planı |
+| InactiveCaptionText | -Etkin olmayan IDE ve rafted Windows başlık çubuğu ön planı (metin ve Glifler)<br />-Etkin olmayan pencere düğmelerinin arka planı ve üzerine gelme kenarlığı<br />-Odaklanmış araç penceresi düğmesi arka planı ve kenarlık<br />- Devre dışı arama denetimi ön planı |
+| Menü | - Açılan menü arka planı<br />- İşaretli ve devre dışı onay işareti arka planı |
+| MenuText | - Açılan menü kenarlığı<br />- Onay işaretleri<br />- Menü öğeleri<br />- Açılan menü metni<br />- Seçili simge kenarlığı |
+| Scrollbar | - Kaydırma çubuğu ve kaydırma çubuğu ok arka planı, tüm eyaletler |
+| Pencere | - Sekme arka planını otomatik gizle<br />- Menü çubuğu ve komut rafı arka planı<br />- Hem açık hem de sağlama sekmeleri için odaklanmamış veya seçilmemiş belge penceresi sekmesi arka planı ve belge kenarlığı<br />- Odaklanmamış araç penceresi başlık çubuğu arka planı<br />- Hem seçili hem de seçilmemiş araç penceresi sekmesi arka planı |
+| Windowframe | - IDE kenarlığı |
+| WindowText | - Sekme ön planlarını otomatik gizle<br />- Seçili araç penceresi sekme ön planı<br />- Odaksız belge penceresi sekmesi ve odaklanmamış veya seçilmemiş sağlama sekmesi ön planı<br />- Ağaç görünümü varsayılan ön plan ve seçili olmayan karakterin üzerine gelin<br />- Araç penceresi seçili sekme kenarlığı<br />- Kaydırma çubuğu parmak arka planı, kenarlık ve glyph |
 
-## <a name="exposing-colors-for-end-users"></a><a name="BKMK_ExposingColorsForEndUsers"></a> Son kullanıcılar için renkleri gösterme
+## <a name="exposing-colors-for-end-users"></a><a name="BKMK_ExposingColorsForEndUsers"></a> Son kullanıcılar için renkleri açığa çıkararak
 
 ### <a name="overview"></a>Genel Bakış
 
-Bazen, bir kod Düzenleyicisi veya tasarım yüzeyi oluştururken olduğu gibi son kullanıcının Kullanıcı arabirimini özelleştirmesine izin vermek isteyebilirsiniz. Bunu yapmanın en yaygın yolu, **Araçlar &gt; Seçenekler** iletişim kutusunu kullanmaktır. Özel denetimler gerektiren çok özelleştirilmiş bir kullanıcı arabirimi yoksa, özelleştirmeyi kullanmanın en kolay yolu, iletişim kutusunun **ortam** bölümündeki **yazı tipi ve renkler** sayfasıdır. Özelleştirme için sergilek ettiğiniz her öğe için, Kullanıcı ön plan rengini, arka plan rengini veya her ikisini de değiştirmeyi seçebilir.
+Bazen kod düzenleyicisi veya tasarım yüzeyi oluştururken olduğu gibi son kullanıcının kullanıcı arabiriminizi özelleştirmesine izin vermek istemeniz gerekir. Bunu yapmak için en yaygın yol Araçlar Seçenekleri iletişim **kutusunu &gt; kullanmaktır.** Özel denetim gerektiren son derece özelleştirilmiş bir kullanıcı arabirimine sahip değilsanız özelleştirmeyi göstermenin en kolay yolu iletişim kutusunun Ortam bölümündeki Yazı Tipleri ve Renkler sayfasıdır.   Özelleştirme için açığa çıkarmak istediğiniz her öğe için kullanıcı ön plan rengini, arka plan rengini veya her ikisini birden değiştirebilir.
 
-### <a name="building-a-vspackage-for-your-customizable-colors"></a>Özelleştirilebilir renklerinizi için VSPackage oluşturma
+### <a name="building-a-vspackage-for-your-customizable-colors"></a>Özelleştirilebilir renkleriniz için VSPackage oluşturma
 
-VSPackage, yazı tiplerini ve renkleri özel kategoriler aracılığıyla denetleyebilir ve yazı tipleri ve renkler Özellik sayfasında öğeleri görüntüler. Bu mekanizmayı kullanırken VSPackages [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) arabirimini ve ilişkili arabirimlerini uygulamalıdır.
+VSPackage, yazı tiplerini ve renkleri özel kategoriler aracılığıyla kontrol etmek ve Yazı Tipleri ve Renkler özellik sayfasında öğeleri görüntülemek için kullanılabilir. Bu mekanizma kullanılırken VSPackage'ların [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) arabirimini ve ilişkili arabirimlerini uygulaması gerekir.
 
-Bu mekanizma, var olan tüm görüntüleme öğelerini ve bunları içeren kategorileri değiştirmek için kullanılabilir. Ancak, metin düzenleyici kategorisini veya görüntüleme öğelerini değiştirmek için kullanılmamalıdır. Metin düzenleyici kategorisi hakkında daha fazla bilgi için bkz. [yazı tipi ve renge genel bakış](/previous-versions/visualstudio/visual-studio-2015/extensibility/font-and-color-overview?preserve-view=true&view=vs-2015).
+Prensipte bu mekanizma, mevcut tüm görüntüleme öğelerini ve bunları içeren kategorileri değiştirmek için kullanılabilir. Ancak, Metin Düzenleyici kategorisini veya görüntüleme öğelerini değiştirmek için kullanılmamalı. Metin Düzenleyici kategorisi hakkında daha fazla bilgi için bkz. [Yazı Tipi ve Renge Genel Bakış.](/previous-versions/visualstudio/visual-studio-2015/extensibility/font-and-color-overview?preserve-view=true&view=vs-2015)
 
-Özel kategoriler uygulamak veya öğeleri göstermek için bir VSPackage gerekir:
+Özel kategoriler uygulamak veya Öğeleri görüntülemek için VSPackage'ın:
 
-- **Kayıt defterinde kategoriler oluşturun veya bunları tespit edin.** IDE 'nin **yazı tipleri ve renkler** Özellik sayfasının uygulanması, belirli bir kategoriyi destekleyen hizmeti doğru şekilde sorgulamak için bu bilgileri kullanır.
+- **Kayıt defterinde kategorileri oluşturun veya tanımlayabilirsiniz.** IDE'nin Yazı Tipleri ve **Renkler** özellik sayfası, bu bilgileri, verilen bir kategoriyi destekleyen hizmeti doğru şekilde sorgulamak için kullanır.
 
-- **Kayıt defterindeki grupları oluşturun veya TANIIN (isteğe bağlı).** İki veya daha fazla kategorinin birleşimini temsil eden bir grup tanımlamak faydalı olabilir. Bir grup tanımlanmışsa, IDE otomatik olarak alt kategorileri birleştirir ve görüntüleme öğelerini grup içinde dağıtır.
+- **Kayıt defterinde grupları oluşturun veya tanımlayabilirsiniz (isteğe bağlı).** İki veya daha fazla kategorinin birlemlerini temsil eden bir grup tanımlamak yararlı olabilir. Bir grup tanımlanırsa, IDE alt kategoriler otomatik olarak birlenir ve grup içindeki görüntüleme öğelerini dağıtır.
 
-- **IDE desteği uygulayın.**
+- **IDE desteğini uygulama.**
 
-- **Yazı tipi ve renk değişikliklerini işleyin.**
+- **Yazı tipi ve renk değişikliklerini işleme.**
 
-#### <a name="to-create-or-identify-categories"></a>Kategori oluşturmak veya tanımlamak için
+#### <a name="to-create-or-identify-categories"></a>Kategorileri oluşturmak veya tanımlamak için
 
-Altında `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<Category\>]` `<Category>` kategorinin yerelleştirilmemiş adı olduğu, altında özel bir kategori kayıt defteri girişi türü oluşturun.
+altında kategorinin yerelleştirilmiş olmayan adı olan özel `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<Category\>]` türde bir kategori kayıt defteri girişi `<Category>` oluşturun.
 
-Kayıt defterini iki değerle doldurun:
+Kayıt defterini iki değerle doldurmak:
 
 | Ad | Tür | Veriler | Açıklama |
 | --- | --- | --- | --- |
-| Kategori | REG_SZ | GUID | Kategoriyi tanımlamak için oluşturulmuş bir GUID |
-| Paket | REG_SZ | GUID | Kategoriyi destekleyen VSPackage hizmetinin GUID 'SI |
+| Kategori | REG_SZ | GUID | Kategoriyi tanımlamak için oluşturulan GUID |
+| Paket | REG_SZ | GUID | Kategoriyi destekleyen VSPackage hizmetinin GUID'si |
 
- Kayıt defterinde belirtilen hizmetin karşılık gelen kategori için bir [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) uygulaması sağlaması gerekir.
+ Kayıt defterinde belirtilen hizmet, ilgili kategori için [bir IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) uygulaması sağlamış olması gerekir.
 
 #### <a name="to-create-or-identify-groups"></a>Grupları oluşturmak veya tanımlamak için
 
-`[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<group\>]`Grubun yerelleştirilmiş olmayan adı altında, kategori kayıt defteri girdisinin özel bir türünü oluşturun `<group>` .
+altında grubun yerelleştirilmiş olmayan adı `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<group\>]` olan özel bir kategori kayıt defteri girişi türü `<group>` oluşturun.
 
-Kayıt defterini iki değerle doldurun:
+Kayıt defterini iki değerle doldurmak:
 
 | Ad | Tür | Veriler | Açıklama |
 |--- | --- | --- | --- |
-| Kategori | REG_SZ | GUID | Kategoriyi tanımlamak için oluşturulmuş bir GUID |
-| Paket | REG_SZ | GUID | Kategoriyi destekleyen VSPackage hizmetinin GUID 'SI |
+| Kategori | REG_SZ | GUID | Kategoriyi tanımlamak için oluşturulan GUID |
+| Paket | REG_SZ | GUID | Kategoriyi destekleyen VSPackage hizmetinin GUID'si |
 
-Kayıt defterinde belirtilen hizmetin, <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> karşılık gelen grup için bir uygulamasını sağlaması gerekir.
+Kayıt defterinde belirtilen hizmet, karşılık gelen grup için <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> uygulamasının belirtilmelidir.
 
-![IVsFontAndColorGroup uygulaması](../../extensibility/ux-guidelines/media/0304-a_fontandcolorgroup.png "0304-a_FontAndColorGroup")<br />Uygulama `IVsFontAndColorGroup`
+![IVsFontAndColorGroup Uygulaması](../../extensibility/ux-guidelines/media/0304-a_fontandcolorgroup.png "0304-a_FontAndColorGroup")<br />Uygulama `IVsFontAndColorGroup`
 
 ### <a name="to-implement-ide-support"></a>IDE desteğini uygulamak için
 
-Bir [](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject) [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) arabirimini veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> sağlanan her bir kategori ya da grup GUID 'Si için bir arabirim döndüren GetObject 'i uygulayın.
+Sağlanan her kategori veya grup GUID'si için IDE'ye bir arabirim ya da [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) arabirimi döndüren [GetObject'i](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject) <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> uygulama.
 
-Desteklediği her kategori için, VSPackage [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) arabiriminin ayrı bir örneğini uygular.
+Desteklediği her kategori için VSPackage, [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) arabiriminin ayrı bir örneğini uygulamaya almaktadır.
 
-[IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) aracılığıyla uygulanan yöntemler IDE 'yi ile sağlamalıdır:
+[IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) aracılığıyla uygulanan yöntemlerin IDE'ye şunları sağlaması gerekir:
 
-- Kategorideki görüntüleme öğelerinin listeleri
+- Kategorideki görüntüleme öğelerinin listesi
 
-- Görüntüleme öğeleri için yerelleştirilebilir adlar
+- Görünen öğeler için yerelleştirilebilir adlar
 
-- Kategorinin her üyesi için bilgi görüntüle
+- Kategorinin her üyesi için bilgileri görüntüleme
 
 > [!NOTE]
-> Her kategori en az bir görüntüleme öğesi içermelidir.
+> Her kategori en az bir görüntüleme öğesi içermeli.
 
-IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> birkaç kategorinin birleşimini tanımlamak için arabirimini kullanır.
+IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> arabirimini kullanarak birkaç kategorinin bir birliktelik tanımlaması sağlar.
 
-Uygulama, IDE 'yi şunları sağlar:
+Uygulaması IDE'ye şunları sağlar:
 
-- Belirli bir grubu oluşturan kategorilerin listesi
+- Bir grubu bulan kategorilerin listesi
 
-- Grup içindeki her kategoriyi destekleyen [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) örneklerine erişim
+- Grup içindeki her Kategoriyi [destekleyen IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) örneklerine erişim
 
 - Yerelleştirilebilir grup adları
 
-#### <a name="updating-the-ide"></a>IDE 'yi güncelleştirme
+#### <a name="updating-the-ide"></a>IDE'nin güncelleştiriliyor
 
-IDE, yazı tipi ve renk ayarları hakkındaki bilgileri önbelleğe alır. Bu nedenle, IDE yazı tipi ve renk yapılandırmasının herhangi bir değişikliği yapıldıktan sonra, önbelleğin güncel olduğundan emin olmak en iyi uygulamadır.
+IDE, Yazı Tipi ve Renk ayarlarıyla ilgili bilgileri önbelleğe almaktadır. Bu nedenle, IDE Yazı Tipi ve Renk yapılandırmasında yapılan değişikliklerden sonra önbelleğin güncel olmasını sağlamak en iyi uygulamadır.
 
-Önbelleğin güncelleştirilmesi [ıvsfontandcolorcacheınterface](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) arabirimi aracılığıyla yapılır ve küresel olarak veya yalnızca seçili öğeler üzerinde gerçekleştirilebilir.
+Önbelleğin güncelleştirilması [IvsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) arabirimi aracılığıyla gerçekleştirilir ve genel olarak veya yalnızca seçili öğeler üzerinde yapılabilir.
 
 ### <a name="handling-font-and-color-changes"></a>Yazı tipi ve renk değişikliklerini işleme
 
-VSPackage 'ın görüntülediği metnin renklendirmesi düzgün şekilde desteklemek için, VSPackage 'ı destekleyen renklendirme hizmeti, yazı tipleri ve renkler Özellikler sayfasından yapılan Kullanıcı tarafından başlatılan değişikliklere yanıt vermelidir.
+BIR VSPackage'ın görüntü yaptığı metin renklendirmesini düzgün bir şekilde desteklemek için VSPackage'i destekleyen renklendirme hizmetinin Yazı Tipleri ve Renkler özellikleri sayfasından kullanıcı tarafından başlatılan değişikliklere yanıt vermesi gerekir.
 
-Bunu yapmak için bir VSPackage gerekir:
+Bunu yapmak için VSPackage'ın şunları yapmaları gerekir:
 
-- [IVsFontAndColorEvents](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents) ARABIRIMINI uygulayarak **IDE tarafından oluşturulan olayları işleyin** . IDE, yazı tipleri ve renkler sayfasındaki Kullanıcı değişikliklerinin ardından uygun yöntemi çağırır. Örneğin, yeni bir yazı tipi seçilirse [OnFontChanged](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged) yöntemini çağırır.
+- [IVsFontAndColorEvents](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents) arabirimini kullanarak **IDE** tarafından oluşturulan olayları işleme. IDE, Yazı Tipleri ve Renkler sayfasında yapılan kullanıcı değişikliklerini takip eden uygun yöntemi çağırıyor. Örneğin, yeni bir yazı [tipi seçilirse OnFontChanged](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged) yöntemini çağıran bir yöntemdir.
 
   **OR**
 
-- **IDE 'yi değişiklikler için yoklayın**. Bu işlem, sistem tarafından uygulanan [IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) arabirimi aracılığıyla yapılabilir. Birincil olarak kalıcılık desteği için, [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) yöntemi görüntüleme öğeleri için yazı tipi ve renk bilgilerini alabilir. yazı tipi ve renk ayarları hakkında daha fazla bilgi için, [depolanan yazı tipi ve renk Ayarlar erişme](/previous-versions/visualstudio/visual-studio-2015/extensibility/accessing-stored-font-and-color-settings?preserve-view=true&view=vs-2015)MSDN makalesine bakın.
+- **değişiklikleri için IDE'ye yoklama.** Bu, sistem tarafından uygulanan [IVsFontAndColorStorage arabirimi aracılığıyla](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) yapılabilir. Öncelikli olarak kalıcılık desteği için olsa da [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) yöntemi, Görünen Öğeler için yazı tipi ve renk bilgilerini edinebilirsiniz. Yazı tipi ve renk ayarları hakkında daha fazla bilgi için Depolanan Yazı Tipi ve Renk Ayarlarına Erişme MSDN [makalesine Ayarlar.](/previous-versions/visualstudio/visual-studio-2015/extensibility/accessing-stored-font-and-color-settings?preserve-view=true&view=vs-2015)
 
 > [!NOTE]
-> Yoklama sonuçlarının doğru olduğundan emin olmak için [ıvsfontandcolorcachestorage Manager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) arabirimini kullanarak [IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) arabiriminin alma yöntemleri çağrılmadan önce bir önbellek temizleme ve güncelleştirme gerekip gerekmediğini saptayın.
+> Yoklama sonuçlarının doğru olduğundan emin olmak için [IVsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) arabirimini kullanarak [IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) arabiriminin alma yöntemlerini çağırmadan önce bir önbellek boşaltma ve güncelleştirme gerekli olup olmadığını denetleyin.
 
-#### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>Arabirimleri uygulamadan özel yazı tipi ve renk kategorisini kaydetme
+#### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>Arabirimleri uygulamadan özel yazı tipi ve renk Kategorisini kaydetme
 
-Aşağıdaki kod örneği, arabirimler uygulamadan özel yazı tipi ve renk kategorisinin nasıl kaydedileceği gösterilmektedir:
+Aşağıdaki kod örneği, arabirimleri uygulamadan özel yazı tipi ve renk Kategorisini kaydetmeyi gösterir:
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp Tool Window]
@@ -446,13 +446,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp T
 
 Bu kod örneği için:
 
-- `"NameID"` = paketinizdeki yerelleştirilmiş kategori adının kaynak KIMLIĞI
-- `"ToolWindowPackage"` = Paket GUID 'SI
-- `"Category"="{9FF46859-A47E-47bf-8AC5-EC3DBE69D1FE}"` yalnızca bir örnektir ve asıl değer uygulayıcısı tarafından sağlanmış yeni bir GUID olabilir.
+- `"NameID"` = paketinizin yerelleştirilmiş kategori adının kaynak kimliği
+- `"ToolWindowPackage"` = Paket GUID'si
+- `"Category"="{9FF46859-A47E-47bf-8AC5-EC3DBE69D1FE}"` yalnızca bir örnektir ve gerçek değer, uygulamacı tarafından sağlanan yeni bir GUID olabilir.
 
-### <a name="set-the-font-and-color-property-category-guid"></a>Yazı tipi ve renk özelliği kategori GUID 'INI ayarla
+### <a name="set-the-font-and-color-property-category-guid"></a>Yazı tipi ve Renk özellik kategorisi GUID'sini ayarlama
 
-Aşağıdaki kod örneği, kategori GUID 'Lerinin ayarlanmasını gösterir.
+Aşağıdaki kod örneğinde Kategori GUID'lerini ayarlama gösterilmiştir.
 
 ```csharp
 // m_pView is your IVsTextView
