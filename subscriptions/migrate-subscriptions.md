@@ -4,18 +4,18 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 80e3b300-f2fc-40d4-bbb2-c831a2fa5d34
-ms.date: 09/09/2021
+ms.date: 09/28/2021
 ms.topic: how-to
 description: Bu makalede, yöneticilerin atanmış abonelikleri bir sözleşmeden diğerine nasıl geçirebilirsiniz?
-ms.openlocfilehash: c92cf112607211c5ad998a26ca5722e8207aea49
-ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
+ms.openlocfilehash: 74be7f7913dcfbf41c447721e6d5d4c283ba9c88
+ms.sourcegitcommit: 50b0db7f38c8eded41c6bca83ebe71ee5d74afe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2021
-ms.locfileid: "129013187"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "129206878"
 ---
 # <a name="migrate-subscriptions-from-one-agreement-to-another"></a>Abonelikleri bir sözleşmeden diğerine geçirme
-Abonelere Visual Studio bir sözleşmenin parçası olarak atanmış bir aboneliğiniz varsa ve şirketiniz yeni bir sözleşme satın aldısa, aboneleri geçerli sözleşmeden yeni sözleşmeye geçirmeniz gerekir. Bu makalede, atanan aboneliklerinizi yeni sözleşmeye taşıma açıklanmıştır.  
+Bir sözleşmenin Visual Studio abonelere atanmış abonelikler varsa ve şirketiniz yeni bir sözleşme satın aldısa, aboneleri geçerli sözleşmeden yeni sözleşmeye geçirmeniz gerekir. Bu makalede, atanan aboneliklerinizi yeni sözleşmeye taşıma açıklanmıştır.  
 
 Abonelerinizi yeni sözleşmeye taşımıştınız, şöyle olur:
 - Yeni bir abonelik GUID'si elde etme.
@@ -29,11 +29,11 @@ Aboneleri yeni sözleşmeye taşıma işlemi üç adımdan oluşur:
 
 > [!IMPORTANT]
 > Bu işlemi başlatmadan önce aşağıdaki noktalara dikkat edilmesi gerekir:
-> - Satıcınız, satın alınan aboneleri yeni sözleşmeye otomatik olarak aktarma seçeneğini seçtiyse, anlaşma gönderildikten 48-72 saat sonrasına kadar değişiklikleri görene kadar bu değişiklikleri göreyemebilirsiniz. Abonelerinizi el ile taşıma işlemine devam etmek için satıcınıza başvurun.  
+> - Kurumsal bayiniz, satın alınan aboneleri yeni sözleşmeye otomatik olarak aktarma seçeneğini seçtiyse, anlaşma gönderildikten 48-72 saat sonrasına kadar değişiklikleri görene kadar bu değişiklikleri göreyemebilirsiniz. Abonelerinizi el ile taşıma işlemine devam etmek için satıcınıza başvurun.  
 > - Aboneleri yeni Azure Active Directory taşıma işlemini basitleştirmek için Azure Active Directory (Azure AD) gruplarını kullanabilirsiniz. Daha fazla bilgi için [bkz. Azure AD gruplarını kullanarak abonelik atama.](assign-azure-ad.md)
 
 ## <a name="export-your-current-subscription-assignments"></a>Geçerli abonelik atamalarınızı dışarı aktarma
-Atanan aboneliklerinizi bir sözleşmeden diğerine geçirmenin ilk adımı, geçerli abonelik atamalarınızı CSV dosyası olarak dışarı aktarmadır. Visual Studio Abonelikler yönetim portalında abonelerin listesini ve atamalarıyla ilgili ayrıntıları dışarı aktarabilirsiniz. 
+Atanan aboneliklerinizi bir sözleşmeden diğerine geçirmenin ilk adımı, geçerli abonelik atamalarınızı CSV dosyası olarak dışarı aktarmadır. Abonelikler Visual Studio portalında abonelerin listesini ve atamalarıyla ilgili ayrıntıları dışarı aktarabilirsiniz. 
 
 Bu bilgiler arasında şunlar yer alır: 
 - Abone adı.
@@ -96,7 +96,7 @@ Dışarı aktarılan abonelikler listenizi açmak ve ilgili verileri yeni sözle
 
 3. Hem dışarı aktaran abone listesini hem de boş toplu ekleme şablonunu açın. Dışarı aktarıldı listesinden abonelik verilerinizi el ile kopyalayın ve şablona yapıştırın. 
 
-    Dışarı aktaran abone listesinde yer alan sütunların sırası, şablonda yer alan siparişten farklıdır. Sütunların adları da biraz farklılık gösterir. Aşağıdaki tabloda her iki elektronik tabloda da ortak olan alanların adları gösterir:
+    Dışarı aktaran abone listesinde sütunların sırası, şablonda yer alan siparişten farklıdır. Sütunların adları da biraz farklılık gösterir. Aşağıdaki tabloda her iki elektronik tabloda da ortak olan alanların adları yer almaktadır:
 
    | Listeyi dışarı aktarma                | Toplu şablon ekleme  |
    |----------------------------|--------------------|
@@ -116,7 +116,7 @@ Dışarı aktarılan abonelikler listenizi açmak ve ilgili verileri yeni sözle
 4. Tüm verileriniz toplu ekleme şablonuna taşındığında şablonu kaydedin ve kapatın. Bu liste, yeni sözleşmenize yükley istediğiniz abonelik listesidir.
 
 ## <a name="upload-your-subscription-list-to-the-new-agreement"></a>Upload aboneliğinizin listesini yeni sözleşmeye ekleme
-1.  Yönetici [portalında](https://manage.visualstudio.com)birden çok **Upload iletişim kutusu** hala açıksa Gözat **düğmesini** seçin. Abonelik listenizi kaydeden konuma gidin, seçin ve ardından Aç'ı **seçin.**  
+1.  Yönetici [portalında](https://manage.visualstudio.com)birden çok **Upload iletişim kutusu** hala açıksa Gözat **düğmesini** seçin. Abonelik listenizi kaydeden konuma gidin, seçin ve ardından Aç'ı **seçin.** (İletişim kutusu açık değilse Ekle'yi **ve** ardından Toplu **ekle'yi seçin.)**
     > [!div class="mx-imgBorder"]
     > ![Şablona göz atma](_img/migrate-subscriptions/browse-template.png "Birden çok abone iletişim kutusundaki Gözat düğmesini Upload ekran görüntüsü.")
 1. Abonelik listenizin adı birden çok **abonenin Upload görünür.** Dosyayı **karşıya yüklemek** için Tamam'ı seçin. 
