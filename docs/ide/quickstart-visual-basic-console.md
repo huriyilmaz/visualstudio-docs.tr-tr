@@ -186,11 +186,11 @@ Artık uygulamanız konsolunda çalışır ve konsol penceresini kapatmak için 
 
 Visual Basic proje şablonunuzu seçip projenizi adlandırın Visual Studio basit bir &quot;Merhaba Dünya!&quot; oluşturur sizin için uygulama. **Program. vb** dosyası <xref:System.Console.WriteLine%2A> &quot;Merhaba Dünya!&quot; değişmez dizesini göstermek için yöntemini çağıran varsayılan kodu içerir Konsol penceresinde.
 
-:::image type=&quot;content&quot; source=&quot;media/vs-2022/vb-console-hello-world-template.png&quot; alt-text=&quot;Program. vb dosyasında varsayılan ' Merhaba Dünya ' kodunu gösteren ekran görüntüsü.&quot;:::
+:::image type="content" source="media/vs-2022/vb-console-hello-world-template.png" alt-text="Program. vb dosyasında varsayılan ' Merhaba Dünya ' kodunu gösteren ekran görüntüsü.":::
 
 Varsayılan &quot;   + HelloWorld&quot; kodunu hata ayıklama modunda çalıştırmak için HelloWorld düğmesini seçin veya CTRL **F5** tuşuna basın.
 
-:::image type=&quot;content&quot; source=&quot;media/vs-2022/vb-console-hello-world-button.png&quot; alt-text=&quot;Visual Studio araç çubuğunda vurgulanan ' HelloWorld ' düğmesini gösteren ekran görüntüsü.&quot;:::
+:::image type="content" source="media/vs-2022/vb-console-hello-world-button.png" alt-text="Visual Studio araç çubuğunda vurgulanan ' HelloWorld ' düğmesini gösteren ekran görüntüsü.":::
 
 Uygulama hata ayıklama konsolunda Microsoft Visual Studio, siz bir tuşa basana kadar konsol penceresi açık kalır. 
 
