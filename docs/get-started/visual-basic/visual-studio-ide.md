@@ -511,7 +511,7 @@ Basit bir program oluşturma ve bu programa dalın.
 
 1. Visual Studio menü çubuğunda **dosya**  >  **yeni**  >  **Project**' ni seçin. **CTRL** + **SHIFT** + **N** tuşlarına da basabilirsiniz.
 
-   :::image type=&quot;content&quot; source=&quot;media/vs-2022/file-new-project.png&quot; alt-text=&quot;Visual Studio menü çubuğundan > yeni Project > dosyanın ekran görüntüsü.&quot; border=&quot;false&quot;:::
+   :::image type="content" source="media/vs-2022/file-new-project.png" alt-text="Visual Studio menü çubuğundan > yeni Project > dosyanın ekran görüntüsü." border="false":::
 
    **Yeni proje oluştur** penceresi açılır ve birçok proje *şablonunu* gösterir. Şablon, belirli bir proje türünün gerektirdiği temel dosyaları ve ayarları içerir.
 
@@ -519,37 +519,37 @@ Basit bir program oluşturma ve bu programa dalın.
 
    Visual Basic **konsol uygulaması** şablonunu seçin ve ardından **ileri**' yi seçin.
 
-   :::image type=&quot;content&quot; source=&quot;media/vs-2022/create-project.png&quot; alt-text=&quot;Visual Basic konsol uygulaması seçiliyken yeni proje oluştur penceresinin ekran görüntüsü.&quot; border=&quot;false&quot;:::
+   :::image type="content" source="media/vs-2022/create-project.png" alt-text="Visual Basic konsol uygulaması seçiliyken yeni proje oluştur penceresinin ekran görüntüsü." border="false":::
 
 1. **yeni projenizi yapılandırın** penceresinde, **Project adı** kutusuna **HelloWorld** yazın. İsteğe bağlı olarak, proje dizini konumunu *C: \\ Users \\ \<name> \\ kaynak \\ deposunun* varsayılan konumundan değiştirip **İleri**' yi seçin.
 
-   :::image type=&quot;content&quot; source=&quot;media/vs-2022/configure.png&quot; alt-text=&quot;Yeni projenizi, HelloWorld adlı proje adı ile yapılandırın penceresinin ekran görüntüsü.&quot; border=&quot;false&quot;:::
+   :::image type="content" source="media/vs-2022/configure.png" alt-text="Yeni projenizi, HelloWorld adlı proje adı ile yapılandırın penceresinin ekran görüntüsü." border="false":::
 
 1. **Ek bilgi** penceresinde, **.net 6,0** ' in **hedef Framework** açılan menüsünde göründüğünü doğrulayın ve ardından **Oluştur**' u seçin.
 
-   :::image type=&quot;content&quot; source=&quot;media/vs-2022/additional-information.png&quot; alt-text=&quot;Dot NET 6,0 seçiliyken ek bilgi penceresinin ekran görüntüsü.&quot; border=&quot;false&quot;:::
+   :::image type="content" source="media/vs-2022/additional-information.png" alt-text="Dot NET 6,0 seçiliyken ek bilgi penceresinin ekran görüntüsü." border="false":::
 
    Visual Studio projeyi oluşturur. Program <xref:System.Console.WriteLine?displayProperty=nameWithType> **, Hello, World!** dizesini görüntüleyen yöntemi çağıran basit bir &quot;Merhaba Dünya&quot; uygulamasıdır. bir konsol penceresinde.
 
    proje dosyaları, **Çözüm Gezgini** adlı bir pencerede Visual Studio ıde 'nin sağ tarafında görünür. **Çözüm Gezgini** penceresinde **program. vb** dosyasını seçin. uygulamanın Visual Basic kodu, alanın çoğunu alan merkezi düzenleyici penceresinde açılır.
 
-   :::image type=&quot;content&quot; source=&quot;media/vs-2022/open-program.png&quot; alt-text=&quot;düzenleyicide Program nokta V b kodunu gösteren Visual Studio g/ç ekran görüntüsü.&quot; border=&quot;false&quot;:::
+   :::image type="content" source="media/vs-2022/open-program.png" alt-text="düzenleyicide Program nokta V b kodunu gösteren Visual Studio g/ç ekran görüntüsü." border="false":::
 
    Kod, anahtar sözcükler ve türler gibi farklı parçaları göstermek için otomatik olarak renklendirilir. Satır numaraları kodu bulmanıza yardımcı olur.
 
    Koddaki küçük, dikey kesikli çizgiler kod yapısını veya birlikte gelen kod bloklarını gösterir. Kod bloklarını daraltmak veya genişletmek için küçük, kutulu eksi veya artı işaretlerini de seçebilirsiniz. Bu kod ana hattı özelliği, ekran dağınıklığını en aza indirmeye yardımcı olmak için, görmeniz gerekmeyen kodu gizlemenizi sağlar.
 
-   :::image type=&quot;content&quot; source=&quot;media/vs-2022/editor-features.png&quot; alt-text=&quot;kırmızı kutulara Visual Studio ı D E r 'yi gösteren ekran görüntüsü.&quot; border=&quot;false&quot;:::
+   :::image type="content" source="media/vs-2022/editor-features.png" alt-text="kırmızı kutulara Visual Studio ı D E r 'yi gösteren ekran görüntüsü." border="false":::
 
    Diğer birçok menü ve araç penceresi mevcuttur.
 
 1. Visual Studio üst menüden **hata ayıklama**  >  **olmadan başlat** öğesini seçerek uygulamayı başlatın. **CTRL** + **F5** tuşuna da basabilirsiniz.
 
-   :::image type=&quot;content&quot; source=&quot;media/vs-2022/start-without-debugging.png&quot; alt-text=&quot;Hata ayıklama > hata ayıklama menü öğesi olmadan başlangıcını gösteren ekran görüntüsü.&quot; border=&quot;false&quot;:::
+   :::image type="content" source="media/vs-2022/start-without-debugging.png" alt-text="Hata ayıklama > hata ayıklama menü öğesi olmadan başlangıcını gösteren ekran görüntüsü." border="false":::
 
    Visual Studio uygulamayı oluşturur ve **Merhaba Dünya!** iletisi ile bir konsol penceresi açılır. Artık çalışan bir uygulamanız var!
 
-   :::image type=&quot;content&quot; source=&quot;../media/vs-2019/overview-console-window.png&quot; alt-text=&quot;Çıktı Merhaba Dünya gösteren hata ayıklama konsolu penceresinin ekran görüntüsü ve bu pencereyi kapatmak için herhangi bir tuşa basın.&quot; border=&quot;false&quot;:::
+   :::image type="content" source="../media/vs-2019/overview-console-window.png" alt-text="Çıktı Merhaba Dünya gösteren hata ayıklama konsolu penceresinin ekran görüntüsü ve bu pencereyi kapatmak için herhangi bir tuşa basın." border="false":::
 
 1. Konsol penceresini kapatmak için herhangi bir tuşa basın.
 
@@ -596,7 +596,7 @@ Yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) ve [IntelliSense
    ![Visual Studio yeniden adlandırma eylemini gösteren ekran görüntüsü.](media/rename-quick-action.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022&quot;
-   :::image type=&quot;content&quot; source=&quot;media/vs-2022/rename.png&quot; alt-text=&quot;Visual Studio yeniden adlandırma eylemini gösteren ekran görüntüsü.&quot; border=&quot;false&quot;:::
+   :::image type="content" source="media/vs-2022/rename.png" alt-text="Visual Studio yeniden adlandırma eylemini gösteren ekran görüntüsü." border="false":::
    ::: moniker-end
 
    Değişken, proje genelinde yeniden adlandırılır, bu durumda yalnızca iki yer vardır.
@@ -615,7 +615,7 @@ Yeniden [düzenleme](../../ide/refactoring-in-visual-studio.md) ve [IntelliSense
    ![Visual Studio 'teki IntelliSense Liste üyelerini gösteren ekran görüntüsü.](media/intellisense-list-members.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022&quot;
-   :::image type=&quot;content&quot; source=&quot;media/vs-2022/intellisense-list-members.png&quot; alt-text=&quot;Visual Studio 'teki IntelliSense Liste üyelerini gösteren ekran görüntüsü.&quot; border=&quot;false&quot;:::
+   :::image type="content" source="media/vs-2022/intellisense-list-members.png" alt-text="Visual Studio 'teki IntelliSense Liste üyelerini gösteren ekran görüntüsü." border="false":::
    ::: moniker-end
 
 1. Sınıfın bir özelliği olan **Şimdi** adlı üyeyi seçin. **Şimdi** üzerine çift tıklayın veya seçin ve **Tab** tuşuna basın.
