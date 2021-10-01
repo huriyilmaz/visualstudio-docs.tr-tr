@@ -198,6 +198,8 @@
           href: admin-expiration.md
         - name: Süresi dolan abonelikler
           href: handle-expired-license.md
+        - name: Microsoft tarafından kaldırılan abonelikler
+          href: account-removed.md
         - name: 'Abone oturum açma senaryoları  '
           href: aliasing.md
         - name: Kişisel e-posta ile oturum açan aboneler

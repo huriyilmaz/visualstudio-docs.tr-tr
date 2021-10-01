@@ -1,5 +1,5 @@
 ---
-title: Nasıl yaparım? sözleşmeye tek bir Kullanıcı eklensin mi?
+title: Nasıl yaparım? abonelik atamak istiyor musunuz?
 description: Süper yönetici veya yönetici, tek bir kullanıcı ekleme hakkında yardım arıyor.
 ms.topic: include
 ms.assetid: bd97b69d-f07e-43aa-b6a0-82c4633b8d88
@@ -10,14 +10,14 @@ user.type: admin
 tags: assign
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: f421b4c8045e62d52222b368c0aa46f72ca21ecf
-ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
+ms.openlocfilehash: 9982fa1a042eee846844b34601347d99be60ca61
+ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2021
-ms.locfileid: "129013374"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "129339820"
 ---
-## <a name="how-do-i-add-a-single-user-to-my-agreement"></a>Nasıl yaparım? anlaşmadan tek bir Kullanıcı eklensin mi?
+## <a name="how-do-i-assign-a-subscription"></a>Nasıl yaparım? abonelik atamak istiyor musunuz?
 
 Süper yönetici veya yönetici olarak, aşağıdaki adımları izleyerek bireysel bir abone atayabilirsiniz: 
 1. Abone kılavuzunun yukarısında kalan doğru sözleşmeye baktığınızdan emin olun.
@@ -26,7 +26,7 @@ Süper yönetici veya yönetici olarak, aşağıdaki adımları izleyerek bireys
 
 ## <a name="azure-active-directory-azure-ad"></a>Azure Active Directory (Azure AD) 
 
-Bu yöntemi kullanmak için yöneticinin Azure AZ Tenant üyesi olması gerekir.
+Bu yöntemi kullanmak için yöneticinin Azure AD kiracısı 'nin bir üyesi olması gerekir.
 
 1. Sağ üst köşede doğru kiracının seçili olduğunu onaylayın.
 2. Abone kılavuzunun yukarısında kalan doğru sözleşmeye baktığınızdan emin olun.

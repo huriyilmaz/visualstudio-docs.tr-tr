@@ -7,12 +7,12 @@ robots: noindex, nofollow
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 08/13/2021
-ms.openlocfilehash: a0010067e1b3c8b6d7b3984853d06a7f6af5480e
-ms.sourcegitcommit: 50b0db7f38c8eded41c6bca83ebe71ee5d74afe9
+ms.openlocfilehash: 1290121bf975b48943b77e3207ac1c3bd2b4e71f
+ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/29/2021
-ms.locfileid: "129206896"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "129339832"
 ---
 # <a name="visual-studio-subscriptions-admin-support-widget-content-includes-files"></a>Visual Studio abonelikleri yönetici desteği pencere öğesi içeriği dosyaları içerir
 
@@ -23,6 +23,10 @@ ms.locfileid: "129206896"
 [!INCLUDE [admin-new-agreement-missing](managing-agreements/includes/admin-new-agreement-missing.md)]
 
 [!INCLUDE [admin-not-able-to-manage-agreement](managing-agreements/includes/admin-not-able-to-manage-agreement.md)]
+
+[!INCLUDE [admin-old-end-date-after-renewal](managing-agreements/includes/admin-old-end-date-after-renewal.md)]
+
+[!INCLUDE [admin-status-of-agreement](managing-agreements/includes/admin-status-of-agreement.md)]
 
 ## <a name="managing-super-admins-or-admins"></a>Süper yöneticileri veya yöneticileri yönetme
 
@@ -46,6 +50,7 @@ ms.locfileid: "129206896"
 
 [!INCLUDE [admin-update-subscriber-sign-in-email](managing-subscribers/includes/admin-update-subscriber-sign-in-email.md)]
 
+[!INCLUDE [admin-help-transferring-subscribers-after-renewal](managing-subscribers/includes/admin-help-transferring-subscribers-after-renewal.md)]
 
 ## <a name="signing-in"></a>Oturum açma
 
@@ -55,3 +60,20 @@ ms.locfileid: "129206896"
 
 [!INCLUDE [admin-when-i-sign-in-there-is-no-agreement](signing-in/includes/admin-when-i-sign-in-there-is-no-agreement.md)]
 
+## <a name="purchase-renew-or-cancel-subscriptions"></a>Abonelikleri satın alma, yenileme veya iptal etme
+
+### <a name="help-with-purchases"></a>Satın alımlarla ilgili yardım
+
+[!INCLUDE [admin-how-can-i-purchase-more-subscriptions](renewing-purchasing-or-canceling/help-purchasing/includes/admin-how-can-i-purchase-more-subscriptions.md)]
+
+### <a name="help-with-renewals"></a>Yenilemeler hakkında yardım
+
+[!INCLUDE [admin-help-me-renew-subscriptions](renewing-purchasing-or-canceling/help-renewing/includes/admin-help-me-renew-subscriptions.md)]
+
+### <a name="help-with-canceling"></a>İptal etme yardımı
+
+[!INCLUDE [admin-help-me-cancel-monthly-annual](renewing-purchasing-or-canceling/help-canceling/includes/admin-help-me-cancel-monthly-annual.md)]
+
+### <a name="order-or-purchase-status"></a>Sipariş veya satın alma durumu
+
+[!INCLUDE [admin-view-invoice](renewing-purchasing-or-canceling/order-or-purchase-status/includes/admin-view-invoice.md)]

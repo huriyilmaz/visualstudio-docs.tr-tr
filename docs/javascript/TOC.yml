@@ -2,6 +2,8 @@
   href: index.yml
 - name: Genel Bakış
   items:
+    - name: Visual Studio 2022 ' de JavaScript
+      href: javascript-in-vs-2022.md
     - name: Visual Studio 2019’de JavaScript
       href: javascript-in-vs-2019.md
     - name: Visual Studio 2017’de JavaScript
@@ -14,11 +16,11 @@
       href: ../ide/quickstart-nodejs.md?toc=%252fvisualstudio%252fjavascript%252ftoc.json
     - name: Vue.js projesi oluşturma
       href: quickstart-vuejs-with-nodejs.md
-    - name: React oluşturma
+    - name: React uygulaması oluşturma
       href: tutorial-create-react-app.md
-    - name: Angular oluşturma
+    - name: Angular uygulaması oluşturma
       href: tutorial-create-angular-app.md
-    - name: Vue.js oluşturma
+    - name: Vue.js uygulaması oluşturma
       href: tutorial-create-vue-app.md
 - name: Öğreticiler
   items:
@@ -30,7 +32,7 @@
       href: tutorial-asp-net-core-with-react.md
     - name: Angular ASP.NET Core uygulama oluşturma
       href: tutorial-asp-net-core-with-angular.md
-    - name: Vue ile ASP.NET Core uygulama oluşturma
+    - name: vue ile ASP.NET Core uygulaması oluşturma
       href: tutorial-asp-net-core-with-vue.md
     - name: TypeScript ile ASP.NET Core uygulaması oluşturma
       href: tutorial-aspnet-with-typescript.md

@@ -1,28 +1,28 @@
 ---
 title: Tasarım Zamanı Verilerini XAML Tasarımcısı ile Visual Studio
 description: XAML'de tasarım zamanı verilerini kullanmayı öğrenin.
-ms.date: 04/22/2021
+ms.date: 09/30/2021
 ms.topic: overview
 author: alihamie
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-xaml-tools
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 3867c12dddd57403bc744711a75f31866f0aec90
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 83846eb0e37adb925c09cf31ebb46c8a50e2d143
+ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122045625"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "129339918"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Tasarım Zamanı Verilerini XAML Tasarımcısı ile Visual Studio
 
-Bazı düzenleri veri olmadan görselleştirmek zordur. Bu belgede, masaüstü projelerinde çalışan geliştiricilerin XAML tasarımcısında sahte veriler için kullanabileceği yaklaşımlardan birini gözden geçireceğiz. Bu yaklaşım, var olan Ignorable "d:" ad alanı kullanılarak yapılır. Bu yaklaşımla, tam bir sahte ViewModel oluşturmanıza gerek kalmadan sayfalarınıza veya denetimlerinize tasarım zamanı verilerini hızla ekleyebilir veya bu değişikliklerin yayın derlemelerinizi etkileyeceğini düşünmeden özellik değişikliğinin uygulamanızı nasıl etkileyeyeceğini test edersiniz. Tüm d: veriler yalnızca XAML Tasarımcısı tarafından kullanılır ve yalıtılamaz ad alanı değerleri uygulamaya derlenmiş olmaz.
+Bazı düzenleri veri olmadan görselleştirmek zordur. Bu belgede, masaüstü projelerinde çalışan geliştiricilerin XAML tasarımcısında sahte veriler için kullanabileceği yaklaşımlardan birini gözden geçireceğiz. Bu yaklaşım, var olan Ignorable "d:" ad alanı kullanılarak yapılır. Bu yaklaşımla, tam bir sahte ViewModel oluşturmanıza gerek kalmadan sayfalarınıza veya denetimlerinize tasarım zamanı verilerini hızla ekleyebilir veya bu değişikliklerin yayın derlemelerinizi etkileyeceğini düşünmeden özellik değişikliğinin uygulamanızı nasıl etkileyeyeceğini test edersiniz. Tüm d: veriler yalnızca XAML Tasarımcısı tarafından kullanılır ve hiçbir ad alanı değeri uygulamada derlenmiş olmaz.
 
 > [!NOTE]
 > Xamarin.Forms kullanıyorsanız bkz. [Xamarin.Forms Tasarım Zamanı Verileri](/xamarin/xamarin-forms/xaml/xaml-previewer/design-time-data)
 
-## <a name="design-time-data-basics"></a>Tasarım Zamanı Verileri temel bilgileri
+## <a name="design-time-data-basics"></a>Tasarım Zamanı Verileri temelleri
 
 Tasarım zamanı verileri, denetimlerinizi veri kümesinde görselleştirmeyi kolaylaştırmak için ayar XAML Tasarımcısı. Çalışmaya başlamanız için, henüz mevcut olmayan XAML belgenizin üst bilgisinde aşağıdaki kod satırlarını ekleyin:
 
@@ -32,7 +32,7 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
 ```
 
-Ad alanlarını ekledikten sonra, herhangi bir özniteliğin veya denetimin önüne koyarak yalnızca çalışma `d:` zamanında değil XAML Tasarımcısı içinde gösterebilirsiniz.
+Ad alanlarını ekledikten sonra, herhangi bir özniteliğin veya denetimin önüne koyarak yalnızca çalışma `d:` zamanında XAML Tasarımcısı içinde gösterebilirsiniz.
 
 Örneğin, genellikle buna bağlı verileri olan bir TextBlock'a metin eklersiniz.
 
@@ -93,7 +93,7 @@ system:String türünü kullanmak için XAML üst bilginize `xmlns:system="clr-n
 
 [![ListView ile tasarım zamanı verileri](media\xaml-design-time-listview-strings.png "ListView ile tasarım zamanı verileri")](media\xaml-design-time-listview-strings.png#lightbox)
 
-Bu önceki örnekte, önceki örnekte üç TextBlocks'a sahip bir ListView XAML Tasarımcısı.
+Önceki örnekte, bir listview içinde üç TextBlocks olan bir ListView XAML Tasarımcısı.
 
 Ayrıca bir veri nesnesi dizisi de oluşturabilirsiniz. Örneğin, bir veri nesnesinin `City` genel özellikleri tasarım zamanı verileri olarak oluşturulur.
 
@@ -201,9 +201,9 @@ Bu bölümde listelenmiyor olan bir sorunla karşı karşısanız lütfen Sorun 
 
 - Tasarım zamanı verileri için 2019 Visual Studio [16.7 veya sonraki bir sürümü](/visualstudio/releases/2019/release-notes-v16.7) gerekir.
 
-- .NET Core Windows UWP için Windows Presentation Foundation (WPF) hedef alan masaüstü projelerini destekler. Bu özellik, Önizleme kanalında .NET Framework için [de kullanılabilir.](/visualstudio/releases/2019/release-notes-preview) Etkinleştirmek için Araçlar Seçenekler Ortam Önizleme **Özellikleri'ne** gidin, Yeni  >    >    >   **WPF XAML Tasarımcısı'.NET Framework'ı** seçin ve Visual Studio.
+- .NET Core Windows UWP için Windows Presentation Foundation (WPF) hedef alan masaüstü projelerini destekler. Bu özellik, Önizleme kanalında .NET Framework için [de kullanılabilir.](/visualstudio/releases/2019/release-notes-preview) Etkinleştirmek için Araçlar Seçenekler Ortam Önizleme **Özellikleri'ne** gidin, Yeni  >  WPF  >    >  özellikleri'XAML Tasarımcısı'i **seçin .NET Framework** yeniden başlatın ve Visual Studio.
 
-- 2019 Visual Studio 16.7 sürümünden başlayarak, bu özellik WPF ve UWP çerçevelerinden gelen tüm in-the-box denetimleriyle çalışır. Üçüncü taraf denetimleri için destek artık [16.8 yayında kullanılabilir.](/visualstudio/releases/2019/release-notes/)
+- 2019 Visual Studio 16.7 sürümünden itibaren, bu özellik WPF ve UWP çerçevelerinden gelen tüm in-the-box denetimleriyle çalışır. Üçüncü taraf denetimleri için destek artık [16.8 yayında kullanılabilir.](/visualstudio/releases/2019/release-notes/)
 
 ### <a name="the-xaml-designer-stopped-working"></a>XAML Tasarımcısı çalışmayı durdurdu
 

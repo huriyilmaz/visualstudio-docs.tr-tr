@@ -1,7 +1,7 @@
 ---
 title: vue ile ASP.NET Core uygulaması oluşturma
 description: bu öğreticide, ASP.NET Core ve vue kullanarak bir uygulama oluşturacaksınız
-ms.date: 08/09/2021
+ms.date: 09/28/2021
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -13,12 +13,12 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 50ee00867e6729c269753edeb0cdfa44f3215c3f
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 1a6c2fed5fdcbb10c186bc8f2d20b6e68e0a2c29
+ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126625755"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "129339620"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-vue-in-visual-studio"></a>öğretici: Visual Studio vue ile ASP.NET Core uygulama oluşturma
 
@@ -76,6 +76,21 @@ Proje oluşturulduktan sonra bazı yeni ve değiştirilmiş dosyalar görürsün
    Proje oluşturulduktan sonra Çözüm Gezgini şöyle görünmelidir:
 
    :::image type="content" source="media/vs-2022/asp-net-core-with-vue-solution-explorer.png" alt-text="Çözüm Gezgini göz atın":::
+
+1. `launchSettings.json` **Özellikler** klasöründen açın ve arka uç uygulamasının profiller bölümünün altında, varsayılan bağlantı noktalarını 5001 ve 5003 olarak değiştirin.
+
+   ```json
+   "profiles": {
+     "yourbackendapp": {
+       "commandName": "Project",
+       "launchUrl": "swagger",
+       "environmentVariables": {
+         "ASPNETCORE_ENVIRONMENT": "Development"
+       },
+       "applicationUrl": "https://localhost:5001;http://localhost:5003",
+       "dotnetRunMessages": true
+     },
+   ```
 
 ## <a name="set-the-project-properties"></a>Proje özelliklerini ayarlama
 

@@ -10,18 +10,20 @@ metadata:
   ms.author: mikejo
   manager: jmartens
   ms.date: 10/15/2019
-  ms.openlocfilehash: 31db0087a3261a39c344a26784eb33cf550e6623
-  ms.sourcegitcommit: aef3e3f99e022675d339b7fe381cb37202be5be2
+  ms.openlocfilehash: bd85f7e864a5901eed51989ee51fc55eea521ccc
+  ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/24/2021
-  ms.locfileid: "122785653"
+  ms.lasthandoff: 10/01/2021
+  ms.locfileid: "129339887"
 landingContent:
 - title: Kullanmaya başlayın
   linkLists:
   - linkListType: overview
     links:
-    - text: Visual Studio’da JavaScript ve TypeScript
+    - text: Visual Studio 2022'de JavaScript ve TypeScript
+      url: javascript-in-vs-2022.md
+    - text: Visual Studio 2019'da JavaScript ve TypeScript
       url: javascript-in-vs-2019.md
   - linkListType: how-to-guide
     links:
@@ -35,8 +37,8 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Angular Uygulaması Oluşturma
-      url: tutorial-create-angular-app.md?view=vs-2022
+    - text: Angular Oluşturma
+      url: tutorial-create-angular-app.md
     - text: React Oluşturma
       url: tutorial-create-react-app.md
     - text: Vue Uygulaması oluşturma
@@ -46,9 +48,9 @@ landingContent:
   - linkListType: tutorial
     links:
     - text: Angular ve ASP.NET Core
-      url: tutorial-asp-net-core-with-angular.md?view=vs-2022
+      url: tutorial-asp-net-core-with-angular.md
     - text: React ve ASP.NET Core
-      url: tutorial-asp-net-core-with-react.md?view=vs-2022
+      url: tutorial-asp-net-core-with-react.md
     - text: Node.js ve Express ile web uygulaması oluşturma
       url: tutorial-nodejs.md
     - text: Node.js ve React ile web uygulaması oluşturma

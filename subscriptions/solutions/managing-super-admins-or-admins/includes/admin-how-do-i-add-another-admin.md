@@ -10,12 +10,12 @@ user.type: admin
 tags: super, admin
 subscription.type: vl, cloud, retail, partner
 sap.id: 8789faa7-9d29-25d8-018a-4f6ecee827c8
-ms.openlocfilehash: 7d42752f831da42dd1e377c27529e65546233692
-ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
+ms.openlocfilehash: ad46fe4b77cd6d96d329ea0eb9dab01284852cd7
+ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2021
-ms.locfileid: "129013334"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "129339829"
 ---
 ## <a name="how-to-add-another-super-admin-or-admin"></a>Başka bir süper yönetici veya yönetici ekleme
 
@@ -27,8 +27,10 @@ Başka bir yönetici eklemek için aşağıdaki adımları izleyin:
 2. Yönetim portalının üst kısmında, **yöneticileri Yönet** sayfasına gidin ve ardından açılan menüden uygun sözleşmeyi seçin.
 3. **Add (Ekle)** seçeneğini belirleyin.
 4. Gerekli alanları doldurun.
-    > [!Note]
-    > Süper yönetici rolü için, kutuyu kontrol ettiğinizden emin olun.
+
+> [!NOTE]
+> 
+> Süper yönetici rolü için, kutuyu kontrol ettiğinizden emin olun.
 
 ## <a name="more-information"></a>Daha Fazla Bilgi
 

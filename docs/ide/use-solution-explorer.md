@@ -1,7 +1,7 @@
 ---
 title: Çözüm Gezgini hakkında bilgi edinin
 description: dosyalarınızı, projelerinizi ve çözümlerinizi oluşturmak & yönetmek için Visual Studio Çözüm Gezgini araç penceresini nasıl kullanabileceğinizi öğrenin.
-ms.date: 09/23/2021
+ms.date: 09/30/2021
 ms.topic: conceptual
 ms.custom: contperf-fy22q1
 f1_keywords:
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3daeaa66024db2b3053dd81b205e48b0e215e310
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: a68e4a5bf7b46c45aaf7061e1b994621d975a371
+ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128429346"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "129339580"
 ---
 # <a name="learn-about-solution-explorer"></a>Çözüm Gezgini hakkında bilgi edinin
 
@@ -59,7 +59,7 @@ Menü çubuğu, soldan sağa aşağıdaki UI öğelerini içerir:
 - **Geri** düğmesi, arama sonuçları arasında geçiş yapmak için
 - **İleri** düğmesi, arama sonuçları arasında geçiş yapmak için
 - **Ana** düğme, varsayılan görünüme geri dönmek için
-- **Değiştir** düğmesi, çözümler ve kullanılabilir görünümler arasında geçiş yapmak için
+- **Görünümleri Değiştir** düğmesi, çözümler ve kullanılabilir görünümler arasında geçiş yapmak için
 - Bekleyen değişiklikler içeren açık dosyaları veya dosyaları görüntülemek için, **bekleyen değişiklikler filtre** düğmesi & açılan menü
 - Kod düzenleyicisinden bir dosya bulmak için **etkin belge Ile Eşitle** düğmesi
 - Yalnızca bir işlev veya paket gibi bir bağımlılık seçtiğinizde görüntülenen **Yenile** düğmesi

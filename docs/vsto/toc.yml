@@ -38,6 +38,8 @@
               href: common-tasks-in-office-programming.md
             - name: Office Çözümleri Geliştirmek için Ek Kaynaklar
               href: additional-resources-for-developing-office-solutions.md
+            - name: Office için Visual Studio Araçları Çalışma Zamanı Yaşam Döngüsü İlkesi
+              href: visual-studio-tools-for-office-runtime.md
         - name: Office Çözümlerini Yükseltme ve Geçirme
           items:
             - name: Office Çözümlerini Yükseltme ve Geçirme
