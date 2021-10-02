@@ -1,28 +1,30 @@
 ---
-title: Aylık veya yıllık abonelikleri iptal etme yardımı
-description: Marketplace.visualstudio.com 'den Visual Studio aboneliklerini iptal edememe yardımcı olun
+title: Aylık veya yıllık abonelikleri iptal etmeme yardımcı olur
+description: Abonelikleri iptal Visual Studio yardım marketplace.visualstudio.com
 ms.topic: include
 ms.assetid: 99f61e19-8251-4f91-b496-3faba77cad4e
 author: caitycherniak
 ms.author: cabuschl
-ms.date: 01/07/2021
-user.type: subscriber, admin
+ms.date: 09/29/2021
+user.type: subscriber
 tags: canceling
 subscription.type: cloud
 sap.id: cf10d424-47bb-7ca2-7d89-113949101f6f
-ms.openlocfilehash: ba3d98bdbd76ee08302178c05f32bbf7ec7d2edb
-ms.sourcegitcommit: cfc984316ded3396db6722ad90f9378dfb7661ff
+ms.openlocfilehash: e2d2a63dbc64cc33af3fd90234d9bceeb4ab0f0f
+ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98031072"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "129378101"
 ---
 ## <a name="canceling-monthly-and-annual-subscriptions"></a>Aylık ve yıllık abonelikleri iptal etme
 
-Azure aboneliği kullanarak marketplace.visualstudio.com adresinde satın alınan abonelikleri iptal etmek için anlaşmanızın abonelik sayısını sıfır (0) olarak ayarlamanız gerekir. Abonelik sayısını azaltmak için aşağıdaki adımları izleyin: 
+Şirket abonelikleri satın aldı ise yöneticinize başvurabilirsiniz.
 
-1. Oturum açmak içinhttps://manage.visualstudio.com
-2. Birden fazla anlaşmada yönetici değilseniz, açılan listeden istediğiniz sözleşmeyi seçin. 
-3. Aboneliklerinizle ilgili bilgileri göstermek için sol üstteki genel bakış simgesini seçin. 
-4. İptal etmek istediğiniz abonelikler için girişi bulun ve miktarı değiştir ' i seçin. Bu size, satın alma miktarınızın güncelleşolacağı Visual Studio Market götürür.  
-5. Miktarı sıfır (0) olarak ayarlayın. Abonelikleriniz, zamanlanan faturalandırma tarihine kadar yerinde kalır, ancak faturalandırma tarihine ulaşıldığında yenilemeyecektir.
+Satın aldığınız abonelikleri (Azure marketplace.visualstudio.com kullanarak) iptal etmek için sözleşmenizin abonelik sayısını sıfır (0) olarak ayarlamanız gerekir. Abonelik sayısını azaltmak için şu adımları izleyin: 
+
+1. sayfasından yönetici portalında oturum açın [https://manage.visualstudio.com](https://manage.visualstudio.com)
+2. Birden çok sözleşmeniz varsa, açılan listeden uygun sözleşmeyi seçtiğinizden emin olun
+3. Sol üst tarafta "Genel Bakış"ı seçin 
+4. İptal etmek istediğiniz abonelik düzeyini bulun ve "Miktarı değiştir"i seçin. Satın alma miktarınızı güncelleştiren Visual Studio Market'e götürüleceğiz
+5. Miktarı sıfır (0) olarak ayarlayın. Abonelikleriniz zamanlanan faturalama tarihine kadar yerinde kalır, ancak faturalama tarihine ulaşıldıklarında yenilenmez.

@@ -1,6 +1,6 @@
 ---
-title: Abonelik lisans hüküm ve koşulları nelerdir?
-description: Visual Studio abonelikleri için lisans hüküm ve koşulları
+title: Abonelik lisanslama hüküm ve koşulları nedir?
+description: Abonelikler için lisanslama Visual Studio koşulları
 ms.topic: include
 ms.assetid: 96c05bd0-044c-4791-9c33-6b89a0e6b087
 author: caitybuschlen
@@ -10,19 +10,19 @@ user.type: subscriber, admin
 tags: licensing-terms
 subscription.type: vl, cloud, retail, partner
 sap.id: 95b201e2-f079-cb93-1693-3d40ee05b552
-ms.openlocfilehash: 790b9ec682cdd1d27b1caad509f170a3f653a8d2
-ms.sourcegitcommit: c5f2a142ebf9f00808314f79a4508a82e6df1198
+ms.openlocfilehash: ff85a0f77517414c1feaf5e738785106ba001487
+ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111430419"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "129378604"
 ---
-## <a name="what-are-the-subscription-licensing-terms-and-conditions"></a>Abonelik lisans hüküm ve koşulları nelerdir? 
+## <a name="what-are-the-subscription-licensing-terms-and-conditions"></a>Abonelik lisanslama hüküm ve koşulları nedir? 
 
-Tüm Visual Studio abonelikleri Kullanıcı bazında lisanslanır. Her Lisanslı Kullanıcı, programlarını tasarlamak, geliştirmek, test etmek ve göstermek için herhangi bir sayıda cihazda yazılım yükleyip kullanabilir. Visual Studio abonelikleri, lisanslı kullanıcının yazılımı değerlendirmesi ve programlarınızla ilgili sorunları tanılamak üzere müşteri ortamlarının benzetimini yapmak için de sağlar. Yazılımı bu şekilde kullanan her ek kişinin da Lisansı olmalıdır. 
+Tüm Visual Studio abonelikler kullanıcı başına lisansa sahip olur. Her lisanslı kullanıcı, programlarını tasarlamak, geliştirmek, test etmek ve göstermek için yazılımı herhangi bir sayıda cihaza yükleyebilir ve kullanabilir. Visual Studio abonelikleri, lisanslı kullanıcının yazılımı değerlendirmesine ve programlarla ilgili sorunları tanılamak için müşteri ortamlarının benzetimini de sağlar. Yazılımı bu şekilde kullanan her ek kişinin de lisansı olması gerekir. 
 
-Daha fazla ayrıntı için [Microsoft Visual Studio lisanslama teknik incelemesini görüntüleyin](https://visualstudio.microsoft.com/wp-content/uploads/2020/03/Visual-Studio-Licensing-Whitepaper-Mar-2020.pdf). 
+Diğer ayrıntılar için [lisanslama Microsoft Visual Studio bakın.](https://aka.ms/VSLicensingPaper) 
 
-Aboneler, [abonelikler portalındaki avantajlar sayfasındaki](https://my.visualstudio.com/benefits)açılan kutuyu işaretleyerek, bunlara sunulan abonelikleri görüntüleyebilir. 
+Aboneler, abonelikler portalında avantajlar sayfasındaki açılan listeyi kontrol ederek [kullanılabilir abonelikleri görüntüleyebilirsiniz.](https://my.visualstudio.com/benefits) 
 
-[Avantajlar hakkında daha fazla bilgi edinin](https://visualstudio.microsoft.com/vs/benefits/) veya Visual Studio aboneliklerinde bulunan [fiyatlandırma ve özellikleri karşılaştırın](https://visualstudio.microsoft.com/vs/pricing/) .
+[Aboneliklere dahil edilen fiyatlandırma ve](https://visualstudio.microsoft.com/vs/benefits/) özellikleri karşılaştırma hakkında [daha](https://visualstudio.microsoft.com/vs/pricing/) fazla bilgi Visual Studio okuyun.
