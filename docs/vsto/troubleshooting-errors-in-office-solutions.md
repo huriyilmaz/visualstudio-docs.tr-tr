@@ -23,12 +23,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: d5959df0d24db2807bead8331d04befb7f769ae8
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 7b1059f1771445aba63de0d461a453dfe26a32c0
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126633793"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129431152"
 ---
 # <a name="troubleshoot-errors-in-office-solutions"></a>Office çözümlerinde hata giderme
   Visual Studio Office çözüm geliştirirken aşağıdaki görevleri gerçekleştirirken sorunlarla karşılaşabilirsiniz:
@@ -83,7 +83,7 @@ ms.locfileid: "126633793"
  alternatif olarak, geçirilen projelerin yalnızca Microsoft Office 2010 zaten yüklü olan geliştirme bilgisayarlarında açıldığından emin olun.
 
 ### <a name="errors-in-upgraded-office-2003-document-level-projects-that-contain-windows-forms-controls"></a>yükseltilen Office 2003 Windows Forms denetimleri içeren belge düzeyi projelerdeki hatalar
- bir Microsoft Office 2003 belge düzeyi projesi yükseltirseniz ve belge Windows Forms denetimleri içeriyorsa, yükseltilen proje derleme veya çalışma zamanı hatalarına sahip olabilir. bu sorundan kaçınmak için, projeyi yükseltmeden önce geliştirme bilgisayarında Office ikinci sürüm çalışma zamanı için Visual Studio 2005 araçlarını yükleyin. çalışma zamanının bu sürümü, [Office ikinci sürüm çalışma zamanı (VSTO 2005 SE) (x86) için Microsoft Visual Studio 2005 araçlarında](https://www.microsoft.com/download/details.aspx?id=2392)Microsoft indirme merkezi 'nden yeniden dağıtılabilir bir paket olarak sunulmaktadır.
+ bir Microsoft Office 2003 belge düzeyi projesi yükseltirseniz ve belge Windows Forms denetimleri içeriyorsa, yükseltilen proje derleme veya çalışma zamanı hatalarına sahip olabilir. bu sorundan kaçınmak için, projeyi yükseltmeden önce geliştirme bilgisayarında Office ikinci sürüm çalışma zamanı için Visual Studio 2005 araçlarını yükleyin. çalışma zamanının bu sürümü, Office ikinci sürüm çalışma zamanı (VSTO 2005 SE) (x86) için Microsoft Visual Studio 2005 araçlarında Microsoft indirme merkezi 'nden yeniden dağıtılabilir bir paket olarak sunulmaktadır.
 
  projeyi yükseltmeyi tamamladıktan sonra, başka bir Office çözümü tarafından kullanılmıyorsa, Office ikinci sürüm çalışma zamanı için Visual Studio 2005 araçlarını geliştirme bilgisayarından kaldırabilirsiniz.
 
@@ -161,7 +161,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs" id="Snippet2":::
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb" id="Snippet2":::
 
- deyimini kullanan İçeri Aktarmalar'ın bu kullanımı, word veya Office niteleyicisi ile Excel  /  ayırmanızı gerektirir, örneğin:
+ deyimini kullanarak İçeri Aktarmalar'ın bu kullanımı, word veya Office niteleyicisi ile Excel  /  ayırmanızı gerektirir, örneğin:
 
  :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_VstcoreTroubleshootingWordCS/ThisDocument.cs" id="Snippet3":::
  :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_VstcoreTroubleshootingWordVB/ThisDocument.vb" id="Snippet3":::
@@ -177,7 +177,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
  Yeni projeler derleme sırasında aşağıdaki hatalarla Office karşılaşabilirsiniz.
 
 ### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>Kısıtlı izinlere sahip bir belgeyi temel alan belge düzeyinde proje derleme
- Visual Studio kısıtlı izinlere sahipse, belge düzeyinde projeler derlemez. Projeniz kısıtlı izinlere sahip bir belge içeriyorsa proje derlanmaz ve Hata Listesi penceresinde aşağıdaki **iletiyi alırsınız.**
+ Visual Studio kısıtlı izinlere sahipse belge düzeyinde projeler derlemez. Projeniz kısıtlı izinlere sahip bir belge içeriyorsa proje derlanmaz ve Hata Listesi penceresinde aşağıdaki **iletiyi alırsınız.**
 
  "Özelleştirme eklenemedi."
 
@@ -196,18 +196,18 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 
  Bu hata, geliştirme bilgisayarınızda daha önce Office çözümü yayımlamış ve yüklemiş olduğunu gösterir. İletinin görünmesini önlemek için, çözümde hata ayıklamadan önce çözümü bilgisayarda yüklü programlar listesinden kaldırın. Alternatif olarak, yayımlanan çözümün yüklemesini test etmek için geliştirme bilgisayarınızda başka bir kullanıcı hesabı oluşturabilirsiniz.
 
-### <a name="document-level-projects-created-at-unc-network-locations-do-not-run-from-visual-studio"></a>UNC ağ konumlarında oluşturulan belge düzeyi projeler ağ bağlantılarından Visual Studio
- Excel veya Word için UNC ağ konumu için belge düzeyi bir proje oluşturmanız gerekirse, belgenin konumunu Excel veya Word'de güvenilen konumlar listesine eklemeniz gerekir. Aksi takdirde, projenizi farklı bir yerde çalıştırmaya veya projede hata ayıklamaya Visual Studio. Güvenilen konumlar hakkında daha fazla bilgi için [bkz. Belgelere güven izni ver.](../vsto/granting-trust-to-documents.md)
+### <a name="document-level-projects-created-at-unc-network-locations-do-not-run-from-visual-studio"></a>UNC ağ konumlarında oluşturulan belge düzeyi projeler ağdan Visual Studio
+ Excel veya Word için UNC ağ konumu için belge düzeyinde bir proje oluşturmanız gerekirse, belgenin konumunu Excel veya Word'de güvenilen konumlar listesine eklemeniz gerekir. Aksi takdirde, Visual Studio'da projeyi çalıştırmaya veya projenin hata ayıklaması yapmaya çalışsanız özelleştirme Visual Studio. Güvenilen konumlar hakkında daha fazla bilgi için [bkz. Belgelere güven izni ver.](../vsto/granting-trust-to-documents.md)
 
 ### <a name="threads-are-not-stopped-correctly-after-debugging"></a>Hata ayıklamadan sonra iş parçacıkları doğru durdurulamıyor
- Office projelerini Visual Studio hata ayıklayıcının programı doğru kapatmasını sağlayan bir iş parçacığı adlandırma kuralını izleyin. Çözümünüzde iş parçacıkları sanız, hata ayıklamayı durdursanız bu iş VSTA_ doğru iş parçacıklarının iş olduğundan emin olmak için her bir iş parçacığını ön eke sahip olarak adlandırabilirsiniz. Örneğin, bir ağ olayı için beklemesi gereken bir iş parçacığının `Name` özelliğini VSTA_NetworkListener. 
+ Office projelerini Visual Studio hata ayıklayıcının programı doğru kapatmasını sağlayan bir iş parçacığı adlandırma kuralını izleyin. Çözümünüzde iş parçacıkları sanız, hata ayıklamayı durdursanız bu iş VSTA_ doğru iş parçacıklarının iş olduğundan emin olmak için her bir iş parçacığını ön ekini kullanarak adlandırabilirsiniz. Örneğin, bir ağ olayı için beklemesi gereken bir iş parçacığının `Name` özelliğini VSTA_NetworkListener. 
 
-### <a name="cannot-run-or-debug-any-office-solution-on-the-development-computer"></a>Geliştirme bilgisayarında herhangi bir Office çözümü çalıştıramaz veya hata ayıklayamaz
+### <a name="cannot-run-or-debug-any-office-solution-on-the-development-computer"></a>Geliştirme bilgisayarda herhangi bir Office çözümü çalıştıramaz veya hata ayıklayamaz
  Geliştirme bilgisayarınızda bir Office proje çalıştıramaz veya geliştireyebilirsiniz, aşağıdaki hata iletisini alabilirsiniz.
 
  "Uygulama etki alanı oluşturulamay olduğundan özelleştirme yüklenemedi."
 
- Visual Studio çözümlerini yüklemeden önce derlemeleri önbelleğe .NET Framework için Fusion'Office kullanır. Bu Visual Studio Fusion önbelleğine yazamaya devam etmek ve yeniden denemek. Daha fazla bilgi için [bkz. Gölge kopya derlemeleri.](/dotnet/framework/app-domains/shadow-copy-assemblies)
+ Visual Studio çözümlerini yüklemeden önce derlemeleri önbelleğe .NET Framework derleme yükleyicisi Fusion'Office kullanır. Fusion önbelleğine Visual Studio emin olmak ve yeniden denemek. Daha fazla bilgi için [bkz. Gölge kopya derlemeleri.](/dotnet/framework/app-domains/shadow-copy-assemblies)
 
 ### <a name="error-when-stopping-the-debugger-in-a-document-level-project-after-using-edit-and-continue"></a>Düzenle ve Devam'ı kullanmanın ardından belge düzeyi projesinde hata ayıklayıcı durduruluyorken hata oluştu
  Proje kesme **modundayken** Excel veya Word'e yönelik belge düzeyi projelerde kodda değişiklik yapmak için Düzenle ve Devam'ı kullanırsanız, hata ayıklayıcıyı daha sonra durdurursanız aşağıdaki hata iletisinin yer alan bir iletişim kutusuyla karşılaşabilirsiniz. 
@@ -217,7 +217,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
  İletişim kutusunda **Evet veya** **Hayır'a** tıklar Visual Studio, Excel veya Word işlemini sonlandırılır ve hata ayıklayıcıyı durdurur. Bu iletişim kutusunu görüntülemeden projede hata ayıklamayı durdurmak için, Excel veya Word'den çıkış yapmak yerine doğrudan hata ayıklayıcıyı Visual Studio.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office sorunlarını giderme](../vsto/troubleshooting-office-solutions.md)
+- [Sorun Office giderme](../vsto/troubleshooting-office-solutions.md)
 - [Çözüm Office sorunlarını giderme](../vsto/troubleshooting-office-solution-security.md)
 - [Çözüm Office sorunlarını giderme](../vsto/troubleshooting-office-solution-deployment.md)
 - [Visual Studio giderme](/troubleshoot/visualstudio/welcome-visual-studio/)

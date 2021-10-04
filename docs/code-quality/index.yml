@@ -10,12 +10,12 @@ metadata:
   author: Mikejo5000
   ms.author: mikejo
   ms.date: 10/15/2019
-  ms.openlocfilehash: fd843690d5eb2f792bb8e671162e7c150bea2750
-  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+  ms.openlocfilehash: 3e99965101966aa2caef8b9c7331440fd0af2a50
+  ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/13/2021
-  ms.locfileid: "126631911"
+  ms.lasthandoff: 10/04/2021
+  ms.locfileid: "129430670"
 landingContent:
 - title: .NET kod analizini yapılandırma
   linkLists:
@@ -48,9 +48,9 @@ landingContent:
   - linkListType: reference
     links:
     - text: .NET kod kalitesi kuralları
-      url: /dotnet/fundamentals/productivity/code-analysis/quality-rules/index
+      url: /dotnet/fundamentals/code-analysis/quality-rules/
     - text: .NET kod stili kuralları
-      url: /dotnet/fundamentals/productivity/code-analysis/style-rules/index
+      url: /dotnet/fundamentals/code-analysis/style-rules/
 - title: C++ kod analizi
   linkLists:
   - linkListType: overview

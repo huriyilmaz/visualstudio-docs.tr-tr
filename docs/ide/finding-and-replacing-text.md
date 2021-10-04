@@ -2,7 +2,7 @@
 title: Metin bul ve Değiştir ve çok şapka seçimi
 description: Bul ve Değiştir özelliği ve bir düzenin örneklerini bulmak ve değiştirmek için nasıl kullanılacağı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 10/17/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.find
@@ -33,12 +33,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: f12d801fc54088c79d22a3c69cd27206a8b667e8
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 796ccada43eed1363b80422eab03e6237a8893e1
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126625905"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129431165"
 ---
 # <a name="find-and-replace-text"></a>Metin bulma ve değiştirme
 

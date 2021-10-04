@@ -1,8 +1,8 @@
 ---
 title: Normal ifadeler kullanma
-description: Visual Studio için kullanabileceğiniz bazı normal ifade karakterleri, işleçler, yapılar ve model örnekleri hakkında bilgi edinin.
+description: Örneklerde kullanabileceğiniz bazı normal ifade karakterleri, işleçler, yapılar ve desen örnekleri hakkında Visual Studio.
 ms.custom: SEO-VS-2020
-ms.date: 09/13/2019
+ms.date: 12/01/2020
 ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
@@ -19,62 +19,62 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e024dbebaa0c1efef096f8d9b594971a6af8047
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 8825efcb35bd36d2165ad9abe490ad67ad58beb5
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122078043"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129431113"
 ---
-# <a name="use-regular-expressions-in-visual-studio"></a>Visual Studio içindeki normal ifadeleri kullanma
+# <a name="use-regular-expressions-in-visual-studio"></a>Normal ifadeleri Visual Studio
 
-Visual Studio, metni bulmak ve değiştirmek için [.net normal ifadelerini](/dotnet/standard/base-types/regular-expressions) kullanır.
+Visual Studio bulmak [ve değiştirmek için .NET](/dotnet/standard/base-types/regular-expressions) normal ifadelerini kullanır.
 
 ## <a name="regular-expression-examples"></a>Normal ifade örnekleri
 
-Aşağıdaki tabloda bazı normal ifade karakterleri, işleçler, yapılar ve model örnekleri yer almaktadır. Daha kapsamlı bir başvuru için bkz. [normal ifade dili](/dotnet/standard/base-types/regular-expression-language-quick-reference).
+Aşağıdaki tabloda bazı normal ifade karakterleri, işleçler, yapılar ve desen örnekleri yer almaktadır. Daha eksiksiz bir başvuru için bkz. [Normal ifade dili.](/dotnet/standard/base-types/regular-expression-language-quick-reference)
 
 |Amaç|Expression|Örnek|
 |-------------|----------------|-------------|
-|Tek bir karakterle Eşleştir (satır sonu hariç). Daha fazla bilgi için, bkz. [herhangi bir karakter](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-).|.|`a.o` "About" içinde "Acro" ve "" değil "About" ve "ABO" içinde "Aro" ile eşleşir|
-|Önceki ifadenin sıfır veya daha fazla tekrarlamalarını eşleştirin (mümkün olduğunca çok karakterle Eşleştir). Daha fazla bilgi için bkz. [sıfır veya daha fazla kez eşleşme](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-zero-or-more-times-).|*|`a*r` "bin", "ark" içinde "ar" ve "aardvark" içinde "aar" içinde "r" ile eşleşir|
-|Herhangi bir karakteri sıfır veya daha fazla kez eşleştirin.|.*|`c.*e` "Code" içinde "ractus", "Not" ve "Code" içinde "CKE" ile eşleşir|
-|Önceki ifadenin bir veya daha çok tekrarı ile Eşleştir (mümkün olduğu kadar çok karakterle Eşleştir). Daha fazla bilgi için bkz. [bir veya daha fazla kez eşleşme](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-one-or-more-times-).|+|`e+d` "faed" içinde "besleyici" ve "Ed" içinde "eed" ile eşleşir|
-|Karakterleri bir veya daha fazla kez eşleştirin.|.+|`e.+e` "besleyici" içinde "eleştirme" ile eşleşir, ancak "Feed" içinde eşleşme buluyor|
-|Önceki ifadenin sıfır veya daha fazla tekrarlamalarını eşleştirin (mümkün olduğunca az karakter eşleştirin). Daha fazla bilgi için bkz. [sıfır veya daha fazla kez eşleşme (geç eşleşme)](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-zero-or-more-times-lazy-match-).|*?|`\w*?d` "faed" içinde "FAD" ve "Ed" ile eşleşir, ancak geç eşleşme nedeniyle "Faded" sözcüğünün tamamını kullanmaz|
-|Önceki ifadenin bir veya daha çok tekrarı ile Eşleştir (mümkün olduğu kadar az karakterle Eşleştir). Daha fazla bilgi için bkz. [bir veya daha fazla kez eşleşme (geç eşleşme)](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-one-or-more-times-lazy-match-).|+?|`e\w+?` "faed" içinde "Ee" ve "Ed" içinde "Ee" ile eşleşir, ancak "Soldur" içinde hiçbir eşleşme bulmazlar|
-|Eşleşme dizesini [bir satırın veya dizenin başına](/dotnet/standard/base-types/anchors-in-regular-expressions#start-of-string-or-line-) bağla|^|`^car` "otomobil" sözcüğüyle yalnızca bir satırın başlangıcında göründüğünde eşleşir|
-|Eşleşme dizesini [bir satırın sonuna](/dotnet/standard/base-types/anchors-in-regular-expressions#end-of-string-or-line-) bağla|\r? $|`car\r?$` "otomobil" ifadesi yalnızca bir satırın sonunda göründüğünde eşleşir|
-|Eşleşme dizesini dosyanın sonuna bağla|$|`car$` Yalnızca dosyanın sonunda göründüğünde "otomobil" ile eşleşir|
-|Bir küme içinde herhangi bir tek karakterle Eşleştir|ABC|`b[abc]` "ba", "BB" ve "BC" ile eşleşir|
-|Karakter aralığındaki herhangi bir karakterle Eşleştir|[a-f]|`be[n-t]` "sonra", "in" içinde "", "ve" bes "içinde" Bet "ile eşleşir, ancak" aşağıda "içinde eşleşme yok buluyor|
-|Parantez içinde bulunan ifadeyi yakala ve örtülü olarak sayı|()|`([a-z])X\1` "aXa" ve "bXb" ile eşleşir, ancak "aXb" ile eşleşmez. "\ 1", ilk ifade grubu "[a-z]" anlamına gelir. Daha fazla bilgi için bkz. [yakalama grupları ve değiştirme desenleri](#capture-groups-and-replacement-patterns). |
-|Eşleşmeyi geçersiz kıl|(?! ABC|`real(?!ity)` "Realty" ve "gerçekten" içinde "gerçek" ile eşleşir ancak "gerçeklik" içinde değildir. Ayrıca "realityreal" içinde ikinci "Real" (ilk "Real" değil) değerini bulur.|
-|Belirli bir karakter kümesinde olmayan herhangi bir karakterle eşleştirin. Daha fazla bilgi için bkz. [negatif karakter grubu](/dotnet/standard/base-types/character-classes-in-regular-expressions#negative-character-group-).|[^ abc]|`be[^n-t]` "önceki" içinde "BEF", "arkasında" ve "Bel" içinde "ın" içinde "Bel" eşleşir, ancak "aşağıda" içinde eşleşme yok buluyor|
-|Simgeden önceki veya bir ifadeden sonraki ifadeyle Eşleştir|&#124;|`(sponge|mud) bath` "sünge banyo" ve "Mud banyo" ile eşleşir|
-|Ters eğik çizgiden sonraki [karakteri kaçış](/dotnet/standard/base-types/character-escapes-in-regular-expressions)| \\ |`\^` ^ karakteriyle eşleşir|
-|Önceki karakterin veya grubun oluşum sayısını belirtin. Daha fazla bilgi için bkz. [tam n kez eşleşme](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-exactly-n-times-n).|{n}, burada ' n ' oluşum sayısıdır|`x(ab){2}x` "xabex" ile eşleşir<br/>`x(ab){2,3}x` "xabex" ve "xabababx" ile eşleşir ancak "xababababx" olarak eşleşmez|
-|[Unicode kategorisindeki metni eşleştirin](/dotnet/standard/base-types/character-classes-in-regular-expressions#unicode-category-or-unicode-block-p). Unicode karakter sınıfları hakkında daha fazla bilgi için bkz. [Unicode standart 5,2 karakter özellikleri](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf).|\p{X}, burada "X" Unicode sayıdır.|`\p{Lu}` "Thomas tikan" içinde "T" ve "D" ile eşleşir|
-|[Sözcük sınırını Eşleştir](/dotnet/standard/base-types/anchors-in-regular-expressions#word-boundary-b)|\b (bir karakter sınıfı dışında `\b` bir sözcük sınırı belirtir ve bir karakter sınıfı içinde `\b` geri alma belirtilir.)|`\bin` "iç" içinde "içinde" eşleşir, ancak "Pinto" içinde eşleşme yok|
-|Satır sonuyla eşleştir (diğer bir deyişle, satır başı, izleyen yeni bir satır)|\r? \n|`End\r?\nBegin` "End" ve "Begin" ile yalnızca "End" satırdaki son dize olduğunda ve "Begin" bir sonraki satırdaki ilk dizeyse|
-|Herhangi bir [sözcük karakteri](/dotnet/standard/base-types/character-classes-in-regular-expressions#word-character-w) Eşleştir|\w|`a\wd` "Add" ve "A1D" ile eşleşir, ancak "a d" eşleşmez|
-|Herhangi bir [boşluk karakteriyle](/dotnet/standard/base-types/character-classes-in-regular-expressions#whitespace-character-s) Eşleştir|\s|`Public\sInterface` "ortak arabirim" ifadesi ile eşleşir|
-|Herhangi bir [ondalık basamak karakteriyle](/dotnet/standard/base-types/character-classes-in-regular-expressions#decimal-digit-character-d) Eşleştir|\d|`\d` "WD40" içinde "4" ve "0" ile eşleşir|
+|Herhangi bir tek karakteri (satır sonu dışında) eşler. Daha fazla bilgi için bkz. [Herhangi bir karakter.](/dotnet/standard/base-types/character-classes-in-regular-expressions#any-character-)|.|`a.o` "about" içinde "around" ve "abo" içinde "aro" ile eşler, ancak "across" içinde "acro" ile eşleşmez|
+|Önceki ifadenin sıfır veya daha fazla oluşumunu eşle (mümkün olduğunca çok karakterle eşle). Daha fazla bilgi için [bkz. Sıfır veya daha fazla kez eşleşme.](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-zero-or-more-times-)|*|`a*r` "raf" içinde "r", "ark" içinde "ar" ve "aardvark" içinde "aar" ile eşler|
+|Herhangi bir karakteri sıfır veya daha fazla kez eşler.|.*|`c.*e` "comment" içinde "cke", "comme" ile ve "code" içinde "code" ile eşler|
+|Önceki ifadenin bir veya daha fazla oluşumunu eşle (mümkün olduğunca çok karakterle eşle). Daha fazla bilgi için [bkz. Bir veya daha fazla kez eşleşme.](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-one-or-more-times-)|+|`e+d` "akış" içinde "eed" ve "soluk" içinde "ed" ile eşler|
+|Herhangi bir karakteri bir veya daha fazla kez eşler.|.+|`e.+e` "akış" içinde "eede" ile eşler ancak "akışta" eşleşme bulur|
+|Önceki ifadenin sıfır veya daha fazla oluşumunu eşler (mümkün olduğunca az karakterle eşler). Daha fazla bilgi için [bkz. Sıfır veya daha fazla kez eşleşme (geç eşleşme)](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-zero-or-more-times-lazy-match-).|*?|`\w*?d` yavaş eşleşme nedeniyle "soluk" sözcüğünde "fad" ve "ed" ile eşleşti, ancak "soluk" sözcüğün tamamını eşleşmez|
+|Önceki ifadenin bir veya daha fazla oluşumunu eşler (mümkün olduğunca az karakterle eşler). Daha fazla bilgi için [bkz. Bir veya daha fazla kez eşle (geç eşleşme)](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-one-or-more-times-lazy-match-).|+?|`e\w+?` "soluk" ifadesinde "uykuda" ve "ed" içinde "ee" ile eşler, ancak "soluk" içinde hiçbir eşleşme bulmaz|
+|Eşleşme dizesini bir [satırın veya dizenin başına sabitle](/dotnet/standard/base-types/anchors-in-regular-expressions#start-of-string-or-line-)|^|`^car` yalnızca bir satırın başında göründüğünde "araba" sözcüğüyle eş görünür|
+|Eşleşme dizesini bir [satırın sonuna sabitle](/dotnet/standard/base-types/anchors-in-regular-expressions#end-of-string-or-line-)|\r?$|`car\r?$` yalnızca bir satırın sonunda göründüğünde "araba" ile eş görünür|
+|Eşleşme dizesini dosyanın sonuna sabitle|$|`car$` yalnızca dosyanın sonunda göründüğünde "araba" ile eşler|
+|Kümedeki tek bir karakterle eşleşme|[abc]|`b[abc]` "ba", "bb" ve "bc" ile eşlenir|
+|Bir karakter aralığındaki herhangi bir karakterle eşleşme|[a-f]|`be[n-t]` "between" içinde "bet", "below" içinde "ben" ve "beside" içinde "bes" ile eşler, ancak "aşağıdaki" içinde hiçbir eşleşme bulmaz|
+|Parantez içinde bulunan ifadeyi yakalama ve örtülü olarak sayma|()|`([a-z])X\1` "aXa" ve "bXb" ile eştir, ancak "aXb" ile eşleşmez. "\1", "[a-z]" ilk ifade grubunu ifade eder. Daha fazla bilgi için [bkz. Yakalama grupları ve değiştirme desenleri.](#capture-groups-and-replacement-patterns) |
+|Eşleşmeyi geçersiz kılın|(?! abc)|`real(?!ity)` "realty" ve "really" ile "real" (gerçek) eşleşmesi ancak "gerçeklik" ile eşleşmez. Ayrıca "realityreal" içinde ikinci "gerçek" (ancak ilk "gerçek" değil) bulur.|
+|Verilen karakter kümesinde yer alan herhangi bir karakterle eşle. Daha fazla bilgi için [bkz. Negatif karakter grubu.](/dotnet/standard/base-types/character-classes-in-regular-expressions#negative-character-group-)|[^abc]|`be[^n-t]` "before", "beh" içinde "bef" ile "behind" ve "below" içinde "bel" ile eşler, ancak "altta" içinde hiçbir eşleşme bulur|
+|İfadeyi sembolden önce veya simgeden sonra gelen ifadeyle eşle|&#124;|`(sponge|mud) bath` "maça" ve "maça" ile eştir|
+|[Ters eğik çizginin](/dotnet/standard/base-types/character-escapes-in-regular-expressions) ardından karakterin kaçış karakteri| \\ |`\^` ^ karakteriyle eşler|
+|Önceki karakterin veya grubun oluşum sayısını belirtin. Daha fazla bilgi için bkz. [Tam olarak n kez eşle.](/dotnet/standard/base-types/quantifiers-in-regular-expressions#match-exactly-n-times-n)|{n}, burada 'n', oluşum sayısıdır|`x(ab){2}x` "xababx" ile eşler<br/>`x(ab){2,3}x` "xababx" ve "xabababx" ile eştir, ancak "xaba akabx" ile eşleşmez|
+|[Unicode kategorisindeki metinleri eşler.](/dotnet/standard/base-types/character-classes-in-regular-expressions#unicode-category-or-unicode-block-p) Unicode karakter sınıfları hakkında daha fazla bilgi için [bkz. Unicode Standart 5.2 Karakter Özellikleri.](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)|\p{X}, burada "X", Unicode sayısıdır.|`\p{Lu}` "Thomas Doe" içinde "T" ve "D" ile eşler|
+|[Bir sözcük sınırını eşleşme](/dotnet/standard/base-types/anchors-in-regular-expressions#word-boundary-b)|\b (Bir karakter sınıfı dışında bir sözcük sınırı ve bir `\b` karakter sınıfının içinde bir geri alanı `\b` belirtir.)|`\bin` "inside" içinde "in" ile eştir, ancak "pinto" içinde hiçbir eşleşme bulmaz|
+|Satır sonu eşleşmesi (başka bir ifadeyle satır başı ve ardından yeni bir satır)|\r?\n|`End\r?\nBegin` yalnızca "End" bir satırda son dize olduğunda ve "Begin" sonraki satırda ilk dize olduğunda "End" ve "Begin" ile eşler|
+|Herhangi bir sözcük [karakteriyle eşleşme](/dotnet/standard/base-types/character-classes-in-regular-expressions#word-character-w)|\w|`a\wd` "add" ve "a1d" ile eştir, ancak "a d" ile eşleşmez|
+|Herhangi bir [boşluk karakteriyle eşleşme](/dotnet/standard/base-types/character-classes-in-regular-expressions#whitespace-character-s)|\s|`Public\sInterface` "Genel Arabirim" tümceciğiyle eş|
+|Herhangi bir ondalık [basamak karakteriyle eşleşme](/dotnet/standard/base-types/character-classes-in-regular-expressions#decimal-digit-character-d)|\d|`\d` "wd40" içinde "4" ve "0" ile eşler|
 
-Bazı işleçleri ve yapıları bir onaltılık sayıyla eşleşecek şekilde birleştiren örnek bir normal ifade `\b0[xX]([0-9a-fA-F]+)\b` . Bu ifade "0xc67f" ile eşleşir ancak "0xc67g" olarak eşleşmez.
+Onaltılık bir sayıyla eşleşmesi için bazı işleçleri ve yapıları birleştiren örnek bir normal ifade `\b0[xX]([0-9a-fA-F]+)\b` şeklindedir. Bu ifade "0xc67f" ile eştir ancak "0xc67g" ile eşleşmez.
 
 > [!TIP]
-> Windows işletim sistemlerinde, çoğu satır "\r\n" içinde (bir satır başı, ardından yeni bir satır) biter. Bu karakterler görünmez, ancak düzenleyicide bulunur ve .NET normal ifade hizmetine geçirilir.
+> İşletim Windows çoğu satırın sonunda "\r\n" (bir satır başı ve ardından yeni bir satır) gelir. Bu karakterler görünür değildir, ancak düzenleyicide mevcuttur ve .NET normal ifade hizmetine geçirebilirsiniz.
 
-## <a name="capture-groups-and-replacement-patterns"></a>Yakalama grupları ve değiştirme desenleri
+## <a name="capture-groups-and-replacement-patterns"></a>Grupları ve değiştirme desenlerini yakalama
 
-Yakalama grubu, normal bir ifadenin alt ifadesini toplar ve bir giriş dizesinin alt dizesini yakalar. Normal ifadenin içinde yakalanan grupları kullanabilirsiniz (örneğin, yinelenen bir sözcüğe bakmak için) veya değiştirme düzeninde. Ayrıntılı bilgi için bkz. [normal ifadelerde yapıları gruplandırma](/dotnet/standard/base-types/grouping-constructs-in-regular-expressions).
+Yakalama grubu, bir normal ifadenin alt ifadesini satıra alır ve bir giriş dizesinin alt dizesini yakalar. Yakalanan grupları normal ifadenin içinde (örneğin, yinelenen bir sözcük için) veya değiştirme düzeninde kullanabilirsiniz. Ayrıntılı bilgi için [bkz. Normal ifadelerde yapıları gruplama.](/dotnet/standard/base-types/grouping-constructs-in-regular-expressions)
 
-Numaralandırılmış bir yakalama grubu oluşturmak için, alt ifadeyi normal ifade deseninin parantezleri ile çevreleyin. Yakalamaları, normal ifadede açma parantezinin konumuna göre otomatik olarak soldan sağa numaralandırılır. Yakalanan gruba erişmek için:
+Numaralı bir yakalama grubu oluşturmak için, alt ifadeyi normal ifade desende parantezlerle çevreler. Yakalamalar, normal ifadede açma parantezlerinin konumu temel alarak otomatik olarak soldan sağa doğru numaralenir. Yakalanan gruba erişmek için:
 
-- **normal ifade içinde**: kullanın `\number` . Örneğin, `\1` normal ifadede `(\w+)\s\1` ilk yakalama grubuna başvuru yapılır `(\w+)` .
+- **normal ifadenin içinde:** `\number` kullanın. Örneğin, `\1` normal ifadede ilk `(\w+)\s\1` yakalama grubuna `(\w+)` başvurur.
 
-- **değiştirme** düzeninde: kullanın `$number` . Örneğin, gruplanmış normal ifade `(\d)([a-z])` iki grup tanımlar: ilk grup tek bir ondalık basamak içerir ve ikinci grup, ve **z** arasında tek bir karakter içerir.  ifadesi şu dizede dört eşleşme bulur: **1a 2b 3c 4d.** Değiştirme dizesi yalnızca `z$1` ilk gruba ( ) `$1` başvurur ve dizeyi **z1 z2 z3 z4'e dönüştürür.**
+- **değiştirme desenini kullanın:** `$number` kullanın. Örneğin, gruplu normal ifade iki grup tanımlar: ilk grup tek bir ondalık basamak içerir ve ikinci grup ile z arasında tek `(\d)([a-z])` **bir karakter** **içerir.** ifadesi şu dizede dört eşleşme bulur: **1a 2b 3c 4d.** Değiştirme dizesi yalnızca `z$1` ilk gruba () başvurur ve `$1` dizeyi **z1 z2 z3 z4'e dönüştürür.**
 
 Aşağıdaki görüntüde normal bir ifade ve `(\w+)\s\1` yerine bir dize yer `$1` alır. Hem normal ifade hem de değiştirme deseni, otomatik olarak 1 numaralı ilk yakalama grubuna başvurur. Hızlı Değiştir **iletişim kutusundaki** Tüm sözcükleri **değiştir'i** Visual Studio yinelenen sözcükler metinden kaldırılır.
 
@@ -100,7 +100,7 @@ Numaralı yakalama grupları gibi adlandırılmış yakalama grupları normal if
 > [!TIP]
 > Hızlı Değiştir **iletişim kutusunda Normal** İfadeleri Kullan düğmesinin seçili **olduğundan** emin olun.
 
-Adlandırılmış yakalama grupları hakkında daha fazla bilgi için [bkz. Adlandırılmış eşleşmeli alt ifadeler.](/dotnet/standard/base-types/grouping-constructs-in-regular-expressions#named-matched-subexpressions) Değiştirme desenlerinde kullanılan normal ifadeler hakkında daha fazla bilgi için [bkz. Normal ifadelerde Değiştirmeler.](/dotnet/standard/base-types/substitutions-in-regular-expressions)
+Adlandırılmış yakalama grupları hakkında daha fazla bilgi için [bkz. Adlandırılmış eşdükey alt ifadeleri.](/dotnet/standard/base-types/grouping-constructs-in-regular-expressions#named-matched-subexpressions) Değiştirme desenlerinde kullanılan normal ifadeler hakkında daha fazla bilgi için [bkz. Normal ifadelerde Değiştirmeler.](/dotnet/standard/base-types/substitutions-in-regular-expressions)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

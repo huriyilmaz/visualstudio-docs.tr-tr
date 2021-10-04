@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 93ce719b8db2280029ad4302adb2afc1e08140de
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 3bad3a0de3d63ff911818e885ad5bb7bf697ca43
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122106347"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129430847"
 ---
 # <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme
   Bir Şeritteki özel sekmelerin sırasını **sekme koleksiyonu düzenleyicisini** kullanarak değiştirebilirsiniz. Şeritteki yerleşik bir sekmeden önce veya sonra özel sekmeler yerleştirebilirsiniz. yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir. Örneğin, **veri** sekmesi Excel yerleşik bir sekmedir.
@@ -57,7 +57,7 @@ ms.locfileid: "122106347"
 
 5. **OfficeId** özelliğini yerleşik bir SEKMENIN denetim kimliği olarak ayarlayın.
 
-     denetim kimliklerinin bir listesi için bkz. [Office 2010 yardım dosyaları: Office floent kullanıcı arabirimi denetim tanımlayıcıları](https://www.microsoft.com/download/details.aspx?id=6627).
+     denetim kimliklerinin bir listesi için bkz. [Office 2010 yardım dosyaları: Office floent kullanıcı arabirimi denetim tanımlayıcıları](https://www.microsoft.com/download/details.aspx?id=50745).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Şerite genel bakış](../vsto/ribbon-overview.md)

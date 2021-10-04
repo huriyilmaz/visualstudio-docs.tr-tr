@@ -7,12 +7,12 @@ ms.assetid: f38092ba-051c-4e58-97f5-4255dbe873ba
 ms.date: 09/13/2021
 ms.topic: conceptual
 description: Anlaşmanın süresi dolarsa Yöneticiler için ne olacağını öğrenin
-ms.openlocfilehash: 719b05adb1c3aff4e981a051d547129f441e75c9
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 2fddcc8468276d3b033a7573bce5bc5fac8546fa
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428992"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129430657"
 ---
 # <a name="admin-portal-changes-for-expired-agreements"></a>Vadesi geçen anlaşmalar için Yönetici portalı değişiklikleri
 Visual Studio aboneliklerin satın alınması için kullanılan sözleşmenin süresi dolarsa, sözleşme ve içinde atanan abonelikler sınırlı bir süre için kullanılabilir olmaya devam eder.  Bu dönem tüm anlaşmalarda aynı olmayabilir ve e-posta ve yönetim portalı aracılığıyla aldığınız iletişimlerdeki bu dönemin uzunluğu hakkında daha ayrıntılı bilgi sağlanacaktır.  Şirketinizin planlarına bağlı olarak, abonelere yardımcı olan veya önemli bilgilerin kaybını önleyen bir işlem gerçekleştirmeniz gerekebilir.
@@ -36,7 +36,7 @@ Bu aşamada, hem Yöneticiler hem de aboneler ilgili portallarına erişime sahi
 
 ### <a name="disabled"></a>Devre dışı
 Sözleşmeniz süre sonu döneminin sonuna ulaştığında:
-- Yöneticiler ve süper Yöneticiler, [yönetim portalındaki](https://manage.visualstudio.com)vadesi geçen sözleşmeye erişimi kaybedecektir.  Sözleşme dahilindeki aboneliklerde herhangi bir değişiklik yapamazlar.  (Yönetim portalındaki diğer geçerli sözleşmelere erişim etkilenmeyecektir.  [Yardım al](https://manage.visualstudio.com.gethelp) sayfasına erişim de kullanılabilir olmaya devam edecektir.)
+- Yöneticiler ve süper Yöneticiler, [yönetim portalındaki](https://manage.visualstudio.com)vadesi geçen sözleşmeye erişimi kaybedecektir.  Sözleşme dahilindeki aboneliklerde herhangi bir değişiklik yapamazlar.  (Yönetim portalındaki diğer geçerli sözleşmelere erişim etkilenmeyecektir.  [Yardım al](https://manage.visualstudio.com/gethelp) sayfasına erişim de kullanılabilir olmaya devam edecektir.)
 - Aboneler [abone portalındaki](https://my.visualstudio.com)vadesi geçen aboneliğe erişimi kaybedecektir.  Başka bir sözleşmenin parçası olarak bunlara atanmış başka abonelikler varsa, bu abonelikler etkilenmez. Visual Studio aboneliği devre dışı bırakıldıktan sonra otuz gün sonra, Visual Studio aboneliğine bağlı olan tüm azure abonelikleri de kaldırılır ve bu sayede abonelerin, azure varlıklarını, onları sürdürmek istediklerinde başka bir geçerli aboneliğe taşımasını çok önemli hale gelir.  Azure 'un bu durumda abonelere kılavuzluk edecek kendi bildirim süreci vardır.  
 
 ## <a name="preserving-your-information"></a>Bilgilerinizi koruma

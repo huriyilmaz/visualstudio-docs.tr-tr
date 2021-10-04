@@ -39,7 +39,7 @@
         - name: Yayımlama ayarlarını içeri aktarma ve Azure’a dağıtma
           href: tutorial-import-publish-settings-azure.md
         - name: Git ile Azure’a sürekli ASP.NET Core dağıtımı >>
-          href: /aspnet/core/publishing/azure-continuous-deployment
+          href: /azure/app-service/deploy-continuous-deployment
     - name: C++
       items:
         - name: Yükleyici paketi oluşturma

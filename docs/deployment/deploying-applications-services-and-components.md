@@ -24,12 +24,12 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 0981518581f7948db8297959ffb0816f2df34333
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: ace4dd25eb82d8e1aaf96b40ada6308d6e90fbf7
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128426588"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129431659"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>Visual Studio ' de dağıtıma ilk bakış
 
@@ -70,7 +70,7 @@ Yerel bir klasöre dağıtım, genellikle son dağıtım için başka bir aracı
 
   Python uygulamaları için Ayrıca, [Azure App Service Için Python-yayımlama](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)konusuna bakın.
 
-  Hızlı bir giriş için bkz. [Azure 'Da yayımlama](quickstart-deploy-to-azure.md) ve [Linux 'ta yayımlama](quickstart-deploy-to-linux.md). ayrıca bkz. [Azure 'da ASP.NET Core uygulama yayımlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs). git kullanarak dağıtım için bkz. [git ile Azure 'a sürekli ASP.NET Core dağıtımı](/aspnet/core/publishing/azure-continuous-deployment).
+  Hızlı bir giriş için bkz. [Azure 'Da yayımlama](quickstart-deploy-to-azure.md) ve [Linux 'ta yayımlama](quickstart-deploy-to-linux.md). ayrıca bkz. [Azure 'da ASP.NET Core uygulama yayımlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs). git kullanarak dağıtım için bkz. [git ile Azure 'a sürekli ASP.NET Core dağıtımı](/azure/app-service/deploy-continuous-deployment).
 
   > [!NOTE]
   > Henüz bir Azure hesabınız yoksa, [buradan kaydolabilirsiniz](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio).
@@ -85,7 +85,7 @@ Yerel bir klasöre dağıtım, genellikle son dağıtım için başka bir aracı
 
     Visual Studio bir yayımlama profilini içeri aktarma hakkında bilgi için bkz. [yayımlama ayarlarını içeri aktarma ve ııs 'e dağıtma](../deployment/tutorial-import-publish-settings-iis.md).
 
-    ayrıca, ASP.NET uygulamaları ve hizmetleri çeşitli yollarla dağıtabilirsiniz. daha fazla bilgi için bkz. [web uygulamaları ve hizmetleri dağıtma ASP.NET](/aspnet/overview/deployment).
+    ayrıca, ASP.NET uygulamaları ve hizmetleri çeşitli yollarla dağıtabilirsiniz. daha fazla bilgi için bkz. [web uygulamaları ve hizmetleri dağıtma ASP.NET](/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/).
 
 - **masaüstü Windows**: ClickOnce dağıtımı kullanarak bir web sunucusuna veya ağ dosya paylaşımında Windows masaüstü uygulaması yayımlayabilirsiniz. Kullanıcılar, daha sonra uygulamayı tek bir tıklamayla yükleyebilir. Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
@@ -143,7 +143,7 @@ uygulamanızın sürekli dağıtımını etkinleştirmek için Azure Pipelines k
 
 | Uygulama türü | Dağıtım senaryosu | Bağlantı |
 | --- | --- | --- |
-| **Office uygulaması** | Visual Studio Office için bir eklenti yayımlayabilirsiniz. | [Office eklentisini dağıtın ve yayımlayın](https://dev.office.com/docs/add-ins/publish/publish) |
+| **Office uygulaması** | Visual Studio Office için bir eklenti yayımlayabilirsiniz. | [Office eklentisini dağıtın ve yayımlayın](/office/dev/add-ins/publish/publish) |
 | **WCF veya OData hizmeti** | Diğer uygulamalar, bir Web sunucusuna dağıttığınız WCF RıA hizmetlerini kullanabilir. | [WCF Veri Hizmetleri geliştirme ve dağıtma](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
 | **LightSwitch** | LightSwitch artık Visual Studio 2017 ' den itibaren desteklenmiyor, ancak yine de Visual Studio 2015 ve daha önceki bir sürümden dağıtılabilecek. | [LightSwitch uygulamalarını dağıtma](/previous-versions/ff872288(v=vs.140)) |
 

@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jmartens
 ms.technology: vs-xaml-tools
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 83846eb0e37adb925c09cf31ebb46c8a50e2d143
-ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
+ms.openlocfilehash: dda0a61a0c634a227222a23176154ba6a9b2c77e
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129339918"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129431399"
 ---
 # <a name="use-design-time-data-with-the-xaml-designer-in-visual-studio"></a>Tasarım Zamanı Verilerini XAML Tasarımcısı ile Visual Studio
 
@@ -44,7 +44,7 @@ Ad alanlarını ekledikten sonra, herhangi bir özniteliğin veya denetimin ön�
 
 Bu örnekte, `d:Text` olmadan, XAML Tasarımcısı TextBlock için hiçbir şey göstermez. Bunun yerine , "Name!" Burada TextBlock çalışma zamanında gerçek verilere sahip olur.
 
-Herhangi bir UWP veya WPF .NET Core denetimi için renkler, yazı tipi boyutları ve boşluk gibi `d:` özniteliklerle kullanabilirsiniz. Hatta denetimin kendisine de eklersiniz.
+Herhangi bir UWP veya WPF .NET Core denetimi için renkler, yazı tipi boyutları ve boşluk `d:` gibi özniteliklerle kullanabilirsiniz. Hatta denetimin kendisine de eklersiniz.
 
 ```xml
 <d:Button Content="Design Time Button" />
@@ -211,7 +211,7 @@ XAML dosyasını kapatıp yeniden açmayı ve projenizi temizlemeyi ve yeniden o
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Xamarin.Forms Önizicisi ile Zaman Verileri Tasarlama](/xamarin/xamarin-forms/xaml/xaml-Designer/design-time-data/)
+- [Xamarin.Forms Önizicisi ile Zaman Verileri Tasarlama](/xamarin/xamarin-forms/xaml/xaml-previewer/design-time-data)
 - [WPF uygulamalarında XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)
 - [UWP uygulamalarında XAML](/windows/uwp/xaml-platform/xaml-overview)
 - [Xamarin.Forms uygulamaları içinde XAML](/xamarin/xamarin-forms/xaml/)

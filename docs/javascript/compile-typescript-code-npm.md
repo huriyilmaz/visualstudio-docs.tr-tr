@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 1a3426b4e8d7dae3b7585a47dca9e98a8cbc14a6
-ms.sourcegitcommit: 409a750a944a72c5931f6094deb4dc9a2635a984
+ms.openlocfilehash: be5ce6757a5261d5ebde5676f2c82ae727b74ada
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "123262094"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129430527"
 ---
 # <a name="compile-typescript-code-nodejs"></a>TypeScript kodunu derle (Node.js)
 
@@ -34,7 +34,7 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
 
 1. Projeniz zaten içermiyorsa, [TypeScript NPM paketini](https://www.npmjs.com/package/typescript)yükledikten sonra.
 
-   Çözüm Gezgini (sağ bölme) menüsünde, proje kökünde *package.js* açın. Listelenen paketler, Çözüm Gezgini NPM düğümü altındaki paketlere karşılık gelir. Daha fazla bilgi için bkz. [NPM paketlerini yönetme](../javascript/npm-package-management.md).
+   Çözüm Gezgini (sağ bölme) menüsünde, proje kökünde *Package. JSON* öğesini açın. Listelenen paketler, Çözüm Gezgini NPM düğümü altındaki paketlere karşılık gelir. Daha fazla bilgi için bkz. [NPM paketlerini yönetme](../javascript/npm-package-management.md).
 
    Node.js bir proje için, komut satırını veya IDE 'yi kullanarak TypeScript NPM paketini yükleyebilirsiniz. IDE kullanarak yüklemek için Çözüm Gezgini NPM düğümüne sağ tıklayın, **Yeni NPM paketi yüklensin**' i seçin, **TypeScript** için arama yapın ve paketi yüklemek için.
 
@@ -42,11 +42,11 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
 
 1. Projeniz zaten içermiyorsa, proje köküne bir *. tsconfig* dosyası ekleyin. Dosyayı eklemek için, proje düğümüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TYPESCRIPT JSON yapılandırma dosyasını** seçin ve ardından **Ekle**' ye tıklayın.
 
-   Visual Studio dosya *tsconfig.js* proje köküne ekler. TypeScript derleyicisi [seçeneklerini yapılandırmak](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) için bu dosyayı kullanabilirsiniz.
+   Visual Studio *tsconfig. json* dosyasını proje köküne ekler. TypeScript derleyicisi [seçeneklerini yapılandırmak](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) için bu dosyayı kullanabilirsiniz.
 
-1. İstediğiniz derleyici seçeneklerini ayarlamak için *tsconfig.json* ve Update ' i açın.
+1. İstediğiniz derleyici seçeneklerini ayarlamak için *tsconfig. JSON* ve Update 'i açın.
 
-   Aşağıda bir basit *tsconfig.js* dosyası örneği verilmiştir.
+   Aşağıda bir basit *tsconfig. JSON* dosyası örneği verilmiştir.
 
    ```json
    {
@@ -69,7 +69,7 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
    - *OutDir* seçeneği, TypeScript derleyicisi tarafından transpiled olan düz JavaScript dosyaları için çıkış klasörünü belirtir.
    - *sourcemap* seçeneği derleyicinin *sourcemap* dosyaları oluşturup oluşturmayacağını belirtir.
 
-   Önceki yapılandırma TypeScript 'i yapılandırmaya yönelik temel bir giriş sağlar. Diğer seçeneklerle ilgili daha fazla bilgi için bkz. [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+   Önceki yapılandırma TypeScript 'i yapılandırmaya yönelik temel bir giriş sağlar. Diğer seçenekler hakkında daha fazla bilgi için bkz. [tsconfig. JSON](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
 
 ## <a name="build-the-application"></a>Uygulama oluşturma
 
@@ -80,7 +80,7 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
    console.log(message);
    ```
 
-1. *package.js*, aşağıdaki komut dosyalarını kullanarak Visual Studio derleme ve temizleme komutları için destek ekleyin.
+1. *package. json*' da aşağıdaki komut dosyalarını kullanarak Visual Studio derleme ve temizleme komutları için destek ekleyin.
 
    ```json
    "scripts": {
@@ -89,7 +89,7 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
    },
    ```
 
-   WebPack gibi üçüncü taraf bir araç kullanarak derlemeniz gerekiyorsa, dosyanıza *package.js* bir komut satırı derleme betiği ekleyebilirsiniz:
+   WebPack gibi üçüncü taraf bir araç kullanarak derlemeniz gerekiyorsa, *Package. JSON* dosyanıza bir komut satırı derleme betiği ekleyebilirsiniz:
 
    ```json
    "scripts": {
@@ -99,7 +99,7 @@ ASP.NET Core projeleri için, bunun yerine [NuGet paketini](../javascript/compil
 
    webpack 'i React ve bir webpack yapılandırma dosyası ile kullanmayla ilgili bir örnek için bkz. [Node.js ve React ile web uygulaması oluşturma](../javascript/tutorial-nodejs-with-react-and-jsx.md).
 
-   TypeScript ile Vue.js kullanmayla ilgili bir örnek için bkz. [Vue.js uygulaması oluşturma](/javascript/create-application-with-vuejs).
+   TypeScript ile Vue.js kullanmayla ilgili bir örnek için bkz. [Vue.js uygulaması oluşturma](/visualstudio/javascript/create-application-with-vuejs).
 
 1. Başlangıç sayfası, Node.js çalışma zamanı, uygulama bağlantı noktası veya çalışma zamanı bağımsız değişkenlerinin yolu gibi seçenekleri yapılandırmanız gerekirse, Çözüm Gezgini proje düğümüne sağ tıklayın ve **Özellikler**' i seçin.
 
@@ -122,5 +122,5 @@ Derlemeden sonra uygulamayı çalıştırma yönergeleri için, bkz. [ilk Node.j
 
 npm ve webpack gibi üçüncü taraf araçlara yönelik görevleri otomatikleştirmeye yardımcı olması için Visual Studio ' de görev çalıştırıcısı gezginini kullanabilirsiniz.
 
-- [NPM görev Çalıştırıcısı](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.NPMTaskRunner) - *package.jsüzerinde* tanımlanan NPM betikleri için destek ekler. Yarn 'yi destekler.
+- [NPM görev Çalıştırıcısı](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.NPMTaskRunner) - *Package. JSON* içinde tanımlanan NPM betikleri için destek ekler. Yarn 'yi destekler.
 - [WebPack görev Çalıştırıcısı](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner) -WebPack için destek ekler.

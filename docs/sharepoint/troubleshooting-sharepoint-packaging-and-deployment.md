@@ -26,12 +26,12 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 6d02271664f9a259754c19c9ae90612b76e1645c
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: dc7da6f7ea260caa0aeb996acb40698ef65e39a6
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126636822"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129431295"
 ---
 # <a name="troubleshoot-sharepoint-packaging-and-deployment"></a>paketleme ve dağıtım SharePoint sorunlarını giderme
   bu konuda SharePoint çözümlerini paketleyip dağıtırken karşılaşabileceğiniz çeşitli sorunlar ele alınmaktadır.
@@ -76,7 +76,7 @@ ms.locfileid: "126636822"
 ### <a name="resolution"></a>Çözüm
  Bu sorunu geçici olarak çözmek için aşağıdaki adımları uygulayın:
 
-1. güncelleştirme KB967535, Microsoft Desteği makalesinde açıklandığı şekilde yüklenir [: Windows Vista ve Windows Server 2008 için ııs 7,0 ' de ASP.NET iki sorunu gidermeye yönelik bir düzeltme sunulmaktadır](https://support.microsoft.com/help/967535).
+1. güncelleştirme KB967535, Microsoft Desteği makalesinde açıklandığı şekilde yüklenir: Windows Vista ve Windows Server 2008 için ııs 7,0 ' de ASP.NET iki sorunu gidermeye yönelik bir düzeltme sunulmaktadır.
 
 2. Aşağıdaki satırı Web.config dosyasına ekleyin:
 

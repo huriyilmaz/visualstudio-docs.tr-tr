@@ -1,6 +1,6 @@
 ---
-title: Programınızın hangi DLL 'de kilitlendiğini bulun | Microsoft Docs
-description: Uygulamanız kilitlenirse hangi dış DLL 'nin etkin olduğunu belirlemek için modüller penceresini kullanın. Bunu bir sistem DLL 'i veya başka birinin kodu için yapabilirsiniz.
+title: "|'de Programınız Hangi DLL'nin | Microsoft Docs"
+description: Modüller penceresini kullanarak, uygulamanın kilitlenmesi nedeniyle hangi dış DLL'nin etkin olduğunu belirleme. Bunu bir sistem DLL'si veya başka birinin kodu için de yapabiliriz.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
@@ -25,32 +25,32 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: d4336c741aac8eded2ce529f5a3fa57dd5abf1d6
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: a1a76976dc630074768bb14bc39fc480278962fa
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122128370"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129431360"
 ---
-# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>nasıl yapılır: programınızın hangi DLL 'de kilitlendiğini bulma (C#, C++, Visual Basic, F #)
+# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Nasıl: Programınız Hangi DLL'de Kilitlenmeli Olduğunu Bulma (C#, C++, Visual Basic, F#)
 
- Uygulamanız bir sistem DLL 'SI veya başka birinin kodu çağrısı sırasında kilitlenirse, kilitlenme oluştuğunda hangi DLL 'nin etkin olduğunu bulmanız gerekir. Kendi programınızın dışında bir DLL 'de kilitlenmeyle karşılaşırsanız, bu konumu **modüller** penceresini kullanarak belirleyebilirsiniz.
+ Bir sistem DLL'sinde veya başka birinin kodunda bir çağrı sırasında uygulama kilitleniyorsa, kilitlenmenin meydana geldiği zaman hangi DLL'nin etkin olduğunu bulmanız gerekir. Kendi programınız dışındaki bir DLL'de kilitlenmeyle karşınıza çıkarsanız, Modüller penceresini kullanarak **konumu tanımlayabilirsiniz.**
 
-### <a name="to-find-where-a-crash-occurred-using-the-modules-window"></a>Modüller penceresini kullanarak bir kilitlenmenin nerede oluştuğunu bulmak için
+### <a name="to-find-where-a-crash-occurred-using-the-modules-window"></a>Modüller penceresini kullanarak kilitlenmenin nerede olduğunu bulmak için
 
-1. Çökmenin gerçekleştiği adresi aklınızda edin.
+1. Kilitlenmenin meydana geldiği adresi not olun.
 
-    Adres hata iletisinde gösterilmiyorsa, DLL 'yi tanımlamak için alternatif yöntemler kullanmanız gerekebilir. Bir sistem DLL 'inin şüpheli olması halinde, hata ayıklama sırasında Microsoft sembol sunucularından [sembolleri](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) yükleyebilirsiniz. Aksi takdirde, bunun yerine yığın bilgileriyle [bir döküm dosyası oluşturmanız](../debugger/using-dump-files.md) gerekebilir. Döküm dosyaları oluşturmak için çeşitli [Araçlar](https://blogs.msdn.microsoft.com/andrehal/2009/12/31/what-is-a-dump-and-how-do-i-create-one/) mevcuttur.
+    Adres hata iletisinde gösterilmezse, DLL'i tanımlamak için alternatif yöntemlerden birini kullanabilirsiniz. Bir sistem DLL'lerinden şüpheleniyorsanız, hata [ayıklama sırasında](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) Microsoft Sembol Sunucularından semboller yükleyebilirsiniz. Aksi takdirde, bunun yerine [yığın bilgileriyle bir döküm](../debugger/using-dump-files.md) dosyası oluşturmanız gerekir. Döküm dosyaları oluşturmak için çeşitli araçlar kullanılabilir.
 
-2. **hata ayıkla** menüsünde, **Windows** öğesini seçin ve **modüller**' e tıklayın.
+2. Hata **Ayıkla menüsünde,** **Windows'ı seçin** ve **Modüller'e tıklayın.**
 
-3. **Modüller** penceresinde **Adres** sütununu bulun. Bunu görmek için kaydırma çubuğunu kullanmanız gerekebilir.
+3. Modüller **penceresinde** Adres **sütununu** bulun. Bunu görmek için kaydırma çubuğunu kullanmanız gerekir.
 
-4. Dll 'Leri adrese göre sıralamak için sütunun en üstündeki **Adres** düğmesine tıklayın.
+4. **URL'leri** adrese göre sıralamak için sütunun en üstünde yer alan Adres düğmesine tıklayın.
 
-5. Adres aralığı kilitlenme konumunu içeren DLL 'yi bulmak için sıralanmış listeyi tarayın.
+5. Adres aralığı kilitlenme konumunu içeren DLL'i bulmak için sıralanmış listeyi tarayın.
 
-6. DLL adını ve yolunu görmek için **ad** ve **yol** sütunlarına bakın.
+6. DLL adını **ve yolunu** **görmek** için Ad ve Yol sütunlarına bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [DLL Projelerinde Hata Ayıklama](../debugger/debugging-dll-projects.md)

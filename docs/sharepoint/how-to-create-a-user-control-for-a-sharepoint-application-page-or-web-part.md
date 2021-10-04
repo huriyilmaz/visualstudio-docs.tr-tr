@@ -17,15 +17,15 @@ manager: jmartens
 ms.technology: sharepoint-development
 ms.workload:
 - office
-ms.openlocfilehash: 9a622fa1d85ed916a393d7ea4cac56a335d550f3
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 891f68a44087506ad2d61c3db7ead70d5a01ae70
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126726771"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129430795"
 ---
 # <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>Nasıl SharePoint uygulama sayfası veya web bölümü için kullanıcı denetimi oluşturma
-  SharePoint çözümünüz için özel işlevsellik sağlayan özel kullanıcı denetimleri oluşturabilir ve bu işlevi projenizin içinde yeniden kullanabilirsiniz. Kullanıcı denetimlerini bir web parçasına veya uygulama sayfasına ekleyebilir, diğer ASP.NET denetimlerini ve SharePoint denetim özelliklerini ve yöntemlerini tanımlayabilirsiniz. Kullanıcı denetimleri hakkında daha fazla bilgi için [bkz. Web](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma ve [SharePoint.](https://blogs.msdn.microsoft.com/kaevans/2011/04/28/user-controls-and-server-controls-in-sharepoint/)
+  SharePoint çözümünüz için özel işlevsellik sağlayan özel kullanıcı denetimleri oluşturabilir ve bu işlevi projeniz içinde yeniden kullanabilirsiniz. Kullanıcı denetimlerini bir web bölümü veya uygulama sayfasına ekleyebilir, diğer ASP.NET denetimlerini ve SharePoint denetim özelliklerini ve yöntemlerini tanımlayabilirsiniz. Kullanıcı denetimleri hakkında daha fazla bilgi için bkz. [Web](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma ve Web'de Kullanıcı Denetimleri ve SharePoint.
 
 ### <a name="to-create-a-user-control-for-sharepoint"></a>SharePoint için kullanıcı denetimi oluşturmak SharePoint
 

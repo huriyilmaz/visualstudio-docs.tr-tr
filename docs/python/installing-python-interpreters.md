@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4ab809ea4aced244ecccd2ba04e7e3f0dbbda162
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: ca3ba908b8127c92d181276c7d3b0ff6cb5fc72d
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122106880"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129430502"
 ---
 # <a name="install-python-interpreters"></a>Python yorumlayıcılarını yükleme
 
@@ -28,9 +28,14 @@ Alternatif olarak, **ortam ekle** iletişim kutusundan standart Python yorumlay�
 
 ayrıca, aşağıdaki tabloda listelenen yorumlayıcıları Visual Studio yükleyicinin dışında el ile yükleyebilirsiniz. örneğin, Visual Studio yüklemeden önce anaconda 3 ' ü yüklediyseniz, Visual Studio yükleyicisi aracılığıyla yeniden yüklemeniz gerekmez. örneğin, daha önce Visual Studio yükleyicisinde görünmeyen daha yeni bir sürümü olan bir yorumlayıcı el ile de yükleyebilirsiniz.
 
-::: moniker range=">=vs-2019"
+::: moniker range="<=vs-2017"
 > [!Note]
 > Visual Studio Python sürüm 2,7 ' i ve sürümüne 3,7 3,5 sürümünü destekler. Python 'un diğer sürümlerinde yazılmış kodu düzenlemek için Visual Studio kullanmak mümkün olsa da, bu sürümler resmi olarak desteklenmez ve ıntellisense ve hata ayıklama gibi özellikler çalışmayabilir.
+::: moniker-end
+
+::: moniker range=">vs-2017"
+> [!Note]
+> Visual Studio Python sürüm 3,7 ' ü destekler. Python 'un diğer sürümlerinde yazılmış kodu düzenlemek için Visual Studio kullanmak mümkün olsa da, bu sürümler resmi olarak desteklenmez ve ıntellisense ve hata ayıklama gibi özellikler çalışmayabilir.
 ::: moniker-end
 
 **Visual Studio 2015 ve önceki sürümlerde**, yorumlayıcıdan birini el ile yüklemelisiniz.
@@ -44,7 +49,7 @@ Visual Studio yüklü bir ortamı algılamazsa, bkz. [var olan bir ortamı el il
 
 Visual Studio, [**Python ortamları**](managing-python-environments-in-visual-studio.md#the-python-environments-window) penceresinde bilinen tüm ortamları gösterir ve mevcut yorumlayıcılara yönelik güncelleştirmeleri otomatik olarak algılar.
 
-| Sından | Açıklama |
+| Sından | Description |
 | --- | --- |
 | [CPython](https://www.python.org/) | 32-bit ve 64 bit sürümlerde kullanılabilen "yerel" ve en yaygın olarak kullanılan yorumlayıcı (32-bit önerilir). En son dil özelliklerini, en yüksek Python paketi uyumluluğunu, tam hata ayıklama desteğini ve [IPython](https://ipython.org/)ile birlikte çalışabilirliği içerir. Ayrıca bkz: [Python 2 veya Python 3 mi kullanmalıyım?](https://wiki.python.org/moin/Python2orPython3). Visual Studio 2015 ve önceki sürümleri Python 3.6 + ' yı desteklemediğine ve **desteklenmeyen Python sürümü 3,6** gibi hatalara sahip olabileceğini unutmayın. Bunun yerine Python 3,5 veya önceki bir sürümünü kullanın. |
 | [IronPython](https://github.com/IronLanguages/ironpython2) | 32 bit ve 64 bit sürümlerde kullanılabilen, .net apı 'leri, standart Python hata ayıklama (ancak C++ karışık mod hata ayıklama) ve karışık ıronpython/C# hata ayıklama Visual Basic sağlayan bir Python .net uygulamasıdır. Ancak IronPython, sanal ortamları desteklemez. |

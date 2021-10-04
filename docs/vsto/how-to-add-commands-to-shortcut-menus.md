@@ -1,6 +1,6 @@
 ---
-title: 'Nasıl kullanılır: Kısayol menülerine Komut Ekleme'
-description: VSTO Eklentiyi kullanarak Office uygulamanın kısayol menüsüne komutlar ekleyebilirsiniz.
+title: 'Nasıl yapılır: Kısayol menülerine komut ekleme'
+description: VSTO eklentisini kullanarak bir Office uygulamasındaki kısayol menüsüne nasıl komut ekleyebileceğiniz hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
@@ -16,42 +16,42 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 4694ca84475aa569b047e8de818613fe30d04c29
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 2aa878bc6cec65b05e18156e52e5c19a1dcf6354
+ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725591"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129431191"
 ---
-# <a name="how-to-add-commands-to-shortcut-menus"></a>Nasıl kullanılır: Kısayol menülerine komut ekleme
-  Bu konuda, VSTO Eklenti kullanarak bir Office uygulamanın kısayol menüsüne komutlar ekleme açıklanmıştır.
+# <a name="how-to-add-commands-to-shortcut-menus"></a>Nasıl yapılır: Kısayol menülerine komut ekleme
+  bu konu başlığı altında, bir VSTO eklentisi kullanarak bir Office uygulamasındaki kısayol menüsüne nasıl komut ekleyeceğiniz gösterilmektedir.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-### <a name="to-add-commands-to-shortcut-menus-in-office"></a>Kısayol menülerine komut eklemek için Office
+### <a name="to-add-commands-to-shortcut-menus-in-office"></a>Office içindeki Kısayol menülerine komut eklemek için
 
-1. Belge **düzeyine veya** Eklenti projesine Şerit XML VSTO ekleyin. Daha fazla bilgi için [bkz. Nasıl Kullanmaya başlayın şerit özelleştirme.](../vsto/how-to-get-started-customizing-the-ribbon.md) İçinde
+1. belge düzeyi veya VSTO eklentisi projesine **şerit XML** öğesi ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md). İçinde
 
-2. **Çözüm Gezgini** **ThisAddin.cs veya** **ThisAddin.vb öğesini seçin.**
+2. **Çözüm Gezgini**, **ThisAddIn. cs** veya **ThisAddIn. vb** öğesini seçin.
 
-3. Menü çubuğunda Kodu **Görüntüle'yi**  >  **seçin.**
+3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
-     **ThisAddin sınıf** dosyası Kod Düzenleyicisi'nde açılır.
+     **ThisAddIn** sınıfı dosyası kod düzenleyicisinde açılır.
 
-4. **ThisAddin sınıfına aşağıdaki kodu** ekleyin. Bu kod yöntemini geçersiz `CreateRibbonExtensibilityObject` kılar ve Ribbon XML sınıfını Office döndürür.
+4. Aşağıdaki kodu **ThisAddIn** sınıfına ekleyin. bu kod, yöntemini geçersiz kılar `CreateRibbonExtensibilityObject` ve şerit XML sınıfını Office uygulamasına döndürür.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs" id="Snippet1":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb" id="Snippet1":::
 
-5. Bu **Çözüm Gezgini** Şerit XML dosyasını seçin. Varsayılan olarak, Şerit XML dosyası *Ribbon1.xml.*
+5. **Çözüm Gezgini**, Şerit XML dosyasını seçin. Varsayılan olarak, Şerit XML dosyası *Ribbon1.xml* olarak adlandırılır.
 
-6. Menü çubuğunda Kodu **Görüntüle'yi**  >  **seçin.**
+6. Menü çubuğunda kodu **görüntüle**' yi seçin  >  .
 
-     Şerit xml dosyası Kod Düzenleyicisi'nde açılır.
+     Şerit XML dosyası kod düzenleyicisinde açılır.
 
-7. Kod Düzenleyicisi'nde kısayol menüsünü ve kısayol menüsüne eklemek istediğiniz denetimi açıklayan XML ekleyin.
+7. Kod Düzenleyicisi 'nde, kısayol menüsünü ve kısayol menüsüne eklemek istediğiniz denetimi tanımlayan XML ekleyin.
 
-     Aşağıdaki örnek, bir sözcük belgesi için kısayol menüsüne düğme, menü ve galeri denetimi ekler. Bu kısayol menüsünün denetim kimliği ContextMenuText'tir. 2010 kısayol Office kimliklerinin tam listesi için [bkz. Office 2010](https://www.microsoft.com/download/details.aspx?id=6627)yardım dosyaları: Office fluent kullanıcı arabirimi denetim tanımlayıcıları.
+     Aşağıdaki örnek bir Word belgesi için kısayol menüsüne bir düğme, menü ve bir galeri denetimi ekler. Bu kısayol menüsünün denetim KIMLIĞI ContextMenuText ' dir. Office 2010 kısayol control ıd 'nin tüm listesi için bkz. [Office 2010 yardım dosyaları: Office akıcı kullanıcı arabirimi denetim tanımlayıcıları](https://www.microsoft.com/download/details.aspx?id=50745).
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -73,17 +73,17 @@ ms.locfileid: "126725591"
     </customUI>
     ```
 
-8. Bu **Çözüm Gezgini** **MyRibbon.cs** veya **MyRibbon.vb'yi seçin.**
+8. **Çözüm Gezgini**, **MyRibbon. cs** veya **MyRibbon. vb** öğesini seçin.
 
-9. Işlemek istediğiniz her denetim için `Ribbon1` sınıfına bir geri çağırma yöntemi ekleyin.
+9. `Ribbon1`İşlemek istediğiniz her denetim için sınıfa bir geri çağırma yöntemi ekleyin.
 
-     Aşağıdaki geri çağırma yöntemi Düğmem **düğmesini** işler. Bu kod, etkin belgeye, büyüleyicinin geçerli yerinde bir dize ekler.
+     Aşağıdaki geri çağırma yöntemi **düğme** düğmesini işler. Bu kod, etkin belgeye curser 'ın geçerli konumundaki bir dize ekler.
 
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/ribbon1.vb" id="Snippet2":::
      :::code language="csharp" source="../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/ribbon1.cs" id="Snippet2":::
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office Kullanıcı arabirimi özelleştirmesi](../vsto/office-ui-customization.md)
-- [Adım adım kılavuz: Yer işaretleri için Kısayol menüleri oluşturma](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
+- [Office UI özelleştirmesi](../vsto/office-ui-customization.md)
+- [İzlenecek yol: yer işaretleri için kısayol menüleri oluşturma](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)
-- [Office 2010'da bağlam menülerini özelleştirme](/previous-versions/office/developer/office-2010/ee691832(v=office.14))
+- [Office 2010 ' de bağlam menülerini özelleştirme](/previous-versions/office/developer/office-2010/ee691832(v=office.14))
