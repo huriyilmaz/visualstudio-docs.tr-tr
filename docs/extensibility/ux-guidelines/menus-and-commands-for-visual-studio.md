@@ -1,6 +1,6 @@
 ---
-title: Visual Studio | için Menüler ve Komutlar Microsoft Docs
-description: Komut çubuklarının kullanıcı arabiriminde esneklik sağlamak için yeni özellikler oluşturmanızı nasıl Visual Studio.
+title: Visual Studio için menüler ve komutlar | Microsoft Docs
+description: Visual Studio için yeni özellikler oluşturduğunuzda komut çubuklarının Kullanıcı arabirimindeki esnekliğe nasıl izin vereceğinizi öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,72 +11,72 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: e786e9557a0a2188d6a220e5aaccd943cad8cd5c
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5568205f0d8632942275816d130cfef6695bb779
+ms.sourcegitcommit: 2eb12954b7b0ac9508fff11a86c54e880f3d104f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122028481"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129439749"
 ---
 # <a name="menus-and-commands-for-visual-studio"></a>Visual Studio İçin Menüler ve Komutlar
 ## <a name="command-usage"></a>Komut kullanımı
 
 ### <a name="overview"></a>Genel Bakış
- Birçok Microsoft Office üründen oluşan bir paket olan Visual Studio'den farklı olarak, her biri komut kümelerinin genel IDE'ye Visual Studio içerir. IDE, kullanıcıya kullanılabilir olan işlevleri bağlama göre filtreleerek binlerce komutun karmaşıklığını yönetir.
+ birçok ayrı ürünü kapsayan Microsoft Office aksine Visual Studio, her biri kendi komut kümelerinin genel Visual Studio ıde 'sine katkıda bulunduğu birçok ürün içerir. IDE, içeriğe göre Kullanıcı tarafından kullanılabilen işlevselliği filtreleyerek binlerce komutun karmaşıklığını yönetir.
 
- Kullanıcının bağlamı değişerek tasarım penceresinden kod düzenleme penceresine geçme gibi yeni bağlamla ilgili olmayan işlevler kaybolur. Aynı zamanda yeni işlevler Özellikler ve Araç Kutusu seçenekleri gibi ilgili dinamik bilgilerle birlikte ortaya çıkar. Kullanıcı kullanılabilir komut kümesi değiştirme fark etmez. Kullanıcının dikkati dağılırsa veya komutlar görüntüden kaybolursa kullanıcı arabirimi tasarımının ayarlanması gerekir. Kullanıcının geçerli bağlamı her zaman bir veya daha fazla şekilde (örneğin, IDE başlık çubuğunda, Özellikler penceresi veya Özellik Sayfaları iletişim kutusunda) belirtilmiştir.
+ Bir kullanıcının bağlam değişiklikleri (bir tasarım penceresinden kod düzenlemesi penceresine geçiş gibi), yeni bağlamla ilgisi olmayan işlevler kaybolur. Aynı zamanda yeni işlevsellik, Özellikler ve araç kutusu seçenekleri gibi ilgili dinamik bilgilerle birlikte yüzeylerdir. Kullanıcı, kullanılabilir komut kümesinin takas durumunu fark etmez. Kullanıcı, görüntülenen veya görünmeyen komutlar tarafından boşlandığında veya karıştırılandığında, Kullanıcı arabirimi tasarımının ayarlanması gerekir. Kullanıcının geçerli bağlamı her zaman IDE başlık çubuğu, Özellikler penceresi veya özellik sayfaları iletişim kutusu gibi bir veya daha fazla şekilde belirtilir.
 
- Komut çubukları, kullanıcı arabiriminde esneklik sağlar. Visual Studio ortamının yapısına Visual Studio komut yapıları ana menü ve ana komut çubuğudur. Bunlar hem özelleştirilebilir hem de gizlenir. Uygulamanın durumuna bağlı olarak diğer komut çubukları görünür ve kaybolur. Araç pencereleri ve belge düzenleyicileri, pencere kenarlarının içine eklenmiş araç çubukları da içerebilir.
+ Komut çubukları Kullanıcı arabiriminde esneklik sağlar. Visual Studio ortamına ait tek komut yapıları ana menü ve ana komut çubuğudur ve bu, her ikisi de özelleştirilebilir ve hatta gizli olabilir. Diğer komut çubukları, uygulamanın durumuna göre görünür ve kaybolur. Araç pencereleri ve belge düzenleyicileri, pencere kenarları içinde katıştırılmış araç çubukları da içerebilir.
 
 #### <a name="basic-guidelines"></a>Temel yönergeler
 
 ##### <a name="use-existing-shared-commands-command-groups-and-menus-whenever-possible"></a>Mümkün olduğunda mevcut paylaşılan komutları, komut gruplarını ve menüleri kullanın.
- Komutlar genellikle bağlama göre gösterildiği için mevcut paylaşılan menülerin ve komut gruplarının kullanılması, komut yapısının bağlam değişiklikleri arasında görece kararlı kalmasını sağlar. Paylaşılan komutları yeniden kullanarak ve yeni komutları ilgili paylaşılan komutlara yakın bir şekilde yerleştirmek de IDE karmaşıklığını azaltır ve daha kullanıcı dostu bir deneyim oluşturur. Yeni bir komutun tanımlanmış olması gerekirse mevcut paylaşılan bir komut grubuna yer düzenlemeyi deneyin. Yeni bir grup tanımlanmalıdır, yeni bir üst düzey menü oluşturmadan önce ilgili bir komut grubunun yakınında mevcut paylaşılan bir menüye yer açın.
+ Komutlar genellikle bağlam temelinde gösterildiğinden, var olan paylaşılan menülerin ve komut gruplarının kullanılması, komut yapısının bağlamdaki değişiklikler arasında görece tutarlı kalmasını sağlar. Paylaşılan komutları yeniden kullanmak ve ilgili paylaşılan komutlara yakın yeni komutların yerleştirilmesi, IDE karmaşıklığını da azaltır ve Kullanıcı dostu bir deneyim oluşturur. Yeni bir komutun tanımlanması gerekiyorsa, var olan bir paylaşılan komut grubuna yerleştirmeyi deneyin. Yeni bir grubun tanımlanması gerekiyorsa, yeni bir üst düzey menü oluşturmadan önce, mevcut bir paylaşılan menüye ilgili bir komut grubuna yakın bir yere yerleştirin.
 
-##### <a name="do-not-create-icons-for-every-command"></a>Her komut için simge oluşturma.
- Komut simgesi oluşturmadan önce dikkatli bir şekilde düşünebilirsiniz. Simgeler yalnızca şu komutlar için oluşturulacak:
+##### <a name="do-not-create-icons-for-every-command"></a>Her komut için simgeler oluşturmayın.
+ Komut simgesini oluşturmadan önce dikkatlice düşünün. Simgeler yalnızca şu komutlar için oluşturulmalıdır:
 
-- varsayılan araç çubuğunda görünür.
+- Varsayılan bir araç çubuğunda görüntülenir.
 
-- kullanıcılar tarafından Özelleştir... iletişim kutusu aracılığıyla bir araç **çubuğuna eklenme olasılığı** vardır.
+- Kullanıcı tarafından bir araç çubuğuna **Özelleştirme...** iletişim kutusu aracılığıyla eklenebilir.
 
 - başka bir Microsoft ürününde aynı eylemle ilişkili bir simgeye sahip.
 
-##### <a name="limit-the-addition-of-keyboard-shortcuts"></a>Klavye kısayollarının ekini sınırlama
- Kullanıcıların büyük çoğunluğu, tüm kullanılabilir kısayolların çok küçük bir bölümünü çalıştırdı. Emin değilken özelliğinizi bir klavye kısayolu ile bağlamayın. Yeni kısayollar eklemeden önce kullanıcı deneyimi takımıyla birlikte çalışma.
+##### <a name="limit-the-addition-of-keyboard-shortcuts"></a>Klavye kısayollarının eklenmesini sınırlayın
+ Kullanıcıların büyük çoğunluğu, tüm kullanılabilir kısayolların küçük bir kısmını daha fazla kullanabilir. Şüpheli olduğunda, özelliği klavye kısayoluna bağlamayın. Yeni kısayollar eklemeden önce Kullanıcı deneyimi ekibinizle birlikte çalışın.
 
-##### <a name="give-commands-a-default-menu-placement"></a>Komutlara varsayılan menü yerleşimi verme.
- Komutlarınızı başkaları tarafından özelleştirecek ve uygun şekilde tasarlaycaz. Gizli komut diye bir şey yoktur. Tüm Visual Studio komutları **Araçlar >** Özelleştir iletişim kutusunda, Komut Penceresi, otomatik tamamlama, Araçlar > Seçenekleri **> Klavye** iletişim kutusunda ve Geliştirme Araçları Ortamı'na (DTE) görünür. Komutlarınızı kullanıcıların kolayca bulmaları için .ctc dosyanıza bir ad ve araç ipucu veriniz.
+##### <a name="give-commands-a-default-menu-placement"></a>Komutlara varsayılan bir menü yerleşimi verin.
+ Komutlarınızın başkaları tarafından özelleştirildiğini ve bunları uygun şekilde tasarlayacağına dikkat edin. Gizli komut olarak böyle bir şey yoktur. tüm Visual Studio komutları **araçlar > özelleştir** iletişim kutusunda, komut penceresinde, otomatik olarak, **araçlar > seçenekler > klavye** iletişim kutusunda ve geliştirme araçları ortamında (DTE) görünür. Kullanıcılarınızın bunları kolayca bulabilmesi için. CTC dosyanızda bir ad ve araç ipucu verdiğinizden emin olun.
 
-##### <a name="do-not-duplicate-shared-commands-on-an-embedded-toolbar"></a>Eklenmiş araç çubuğunda paylaşılan komutları yineleme.
- Komutları kullanıcının odağının yakınına yakın bir yere yer yapmak yararlıdır. Bunu yapmak için araç pencerenizin veya belge düzenleyicinizin üst kısmında ekli bir araç çubuğu oluşturabilirsiniz. Araç çubuğuna yerleştirilen komutlar, pencere içindeki içerik bölgeye özgü olması gerekir. Paylaşılan komutları bu araç çubukları üzerinde çoğaltamazsınız. Örneğin, hiçbir zaman ekli araç çubuğunun içine bir "Kaydet" simgesi ekleme.
+##### <a name="do-not-duplicate-shared-commands-on-an-embedded-toolbar"></a>Gömülü bir araç çubuğunda paylaşılan komutları çoğaltmayın.
+ Komutları kullanıcının odağının alanına yakın bir yere yerleştirmek yararlı olur. Bunu yapmanın bir yolu, araç pencerenizin veya belge düzenleyicisinin en üstünde gömülü bir araç çubuğu oluşturmaktır. Araç çubuğuna yerleştirilmiş komutlar, pencere içindeki içerik bölgesine özgü olmalıdır. Bu araç çubuklarında paylaşılan komutları çoğaltmayın. Örneğin, gömülü bir araç çubuğuna hiçbir yerde "Kaydet" simgesi yerleştirmeyin.
 
 ### <a name="content-and-command-visibility"></a>İçerik ve komut görünürlüğü
- Komutlar şu kapsamlarda bulunur: **Ortam,** **Hiyerarşi** ve **Belge.** Komut yerleştirmeye güveni olmak için her kapsamı bilmek.
+ Aşağıdaki kapsamlarda komutlar var: **ortam**, **hiyerarşi** ve **belge**. Her kapsamı, komut yerleşimine güven sağlamak için öğrenin.
 
- Ortam kapsamındaki **komutlar** birincil bağlamı sağlar ve birden çok bağlam arasında paylaşılır. Belgelerin ve araç pencerelerinin görünürlüğünü veya düzenlemesini değiştirebilirler. Ortam kapsamındaki komutlar arasında **New Project**, Bağlan **To Server**, Attach **Process**, **Cut**, **Copy**, **Paste**, **Find**, **Options**, **Customize**, **New Window** ve View Help komutları **yer aldı.**
+ **Ortam** kapsamındaki komutlar birincil bağlam oluştururlar ve birden çok bağlam arasında paylaşılır. Belgeler ve araç pencerelerinin görünürlüğünü veya düzenlemesini değiştirir. ortam kapsamındaki komutlar arasında **yeni Project**, **sunucu Bağlan**, **işlem**, **kesme**, **kopyalama**, **yapıştırma**, **bulma**, **seçenekler**, **özelleştirme**, **yeni pencere** ve **yardım görüntüleme**.
 
- Hiyerarşi kapsamındaki **komutlar,** Project , Team ve Data gibi **Visual Studio** **hiyerarşileri** **yönetir.** Projenin alt metniyle ilgilidir; **örneğin,** Hata **Ayıklama,** Derleme, **Test** Etme, **Mimari** veya Analiz **Etme.** Hiyerarşi kapsamındaki komutlar arasında Yeni Öğe **Ekle,** **Yeni** Sorgu , **Project Ayarlar,** Yeni Veri Kaynağı **Ekle,** Performans Başlatma Sihirbazı **ve** Yeni Diyagram **yer alır.**
+ **hiyerarşi** kapsamındaki komutlar, **Project**, **ekip** ve **verileri** de içeren Visual Studio hiyerarşileri yönetir. Bunlar, bir projenin alt içeriğiyle ilgilidir; Örneğin, **hata ayıklama**, **derleme**, **Test**, **mimari** veya **analiz**. hiyerarşi kapsamındaki komutlar arasında **yeni öğe ekleme**, **yeni sorgu**, **Project Ayarlar**, **yeni veri kaynağı ekleme**, **performansı başlatma sihirbazı** ve **yeni diyagram** bulunur.
 
- Belge **kapsamındaki komutlar,** kod, tasarım veya iş öğesi sorgusu (WIQ) gibi bir belgenin içeriğine göre hareket ederler. Ayrıca, bir araç penceresinin görünümüne göre hareket veya bu araç penceresine özgü de olabilir. Belge kapsamı komutları ayrıca hiyerarşiye özgü dosya nesneleri üzerinde de hareket eder. Örneğin, Dosyadan kaldır **Project.** Belge kapsamındaki komutlar arasında Yeniden Düzenleme ve **yeniden düzenleme >,** İş Öğesinin Kopyasını **Oluştur,** Tüm Öğesini **Genişlet,** Tümleri Daralt **ve** Kullanıcı Görevi **Oluştur'lar yer alan komutlar vardır.**
+ **Belge** kapsamındaki komutlar, kod, tasarım veya iş öğesi sorgusu (WIQ) gibi bir belgenin içeriğine göre davranır. Ayrıca araç penceresinin görünümü üzerinde çalışır veya başka bir araç penceresine özgü değildir. Belge kapsamı komutları Ayrıca, kendi hiyerarşilerine özgü olan dosya nesnelerini de ( **Project kaldır** gibi) de çalışır. Belge kapsamındaki komutlar arasında **yeniden düzenleme >**, **iş öğesinin kopyasını oluştur**, **Tümünü Genişlet**, **Tümünü Daralt** ve **Kullanıcı oluştur görevi**.
 
 ### <a name="command-placement-decisions"></a>Komut yerleştirme kararları
- Komut oluşturmaya karar verdiktan sonra, bunun uygun yerleşimini ve klavye kısayolu oluşturulıp oluşturula olmadığını belirlemeniz gerekir. Komutun nereye kurulacaklarını kurmak için bu karar yolunu izleyin:
+ Bir komut oluşturmaya karar verdikten sonra, uygun yerleştirmesini ve klavye kısayolunun oluşturulup oluşturulmayacağını belirlemeniz gerekir. Komutun nereye yerleştirileceğini belirlemek için bu karar yolunu izleyin:
 
  ![Komut yerleştirme karar grafiği](../../extensibility/ux-guidelines/media/0501-a_commandplacement.png "0501-a_CommandPlacement")
 
- **Visual Studio'de komut yerleştirme için karar Visual Studio**
+ **Visual Studio 'de komut yerleştirme için karar yolu**
 
-### <a name="command-placement-in-menus"></a>Menülerde komut yerleştirme
+### <a name="command-placement-in-menus"></a>Menülerde komut yerleşimi
 
 #### <a name="main-menu-bar"></a>Ana menü çubuğu
- Ana menü çubuğu, kullanıcı arabirimine katkıda bulunan bağlama özgü menü paketlerinin komutları için standart konum olabilir. Ana menü çubuğu, ortamın hangi komutların görünür olduğunu kontrol etmek için kullandığı diğer komut yapılarından farklıdır. Diğer tüm komut çubukları, bir menüye veya araç çubuğuna yerleştirilseler de bağlam dışında olan komutları devre dışı bırakmalarıdır.
+ Ana menü çubuğu, Kullanıcı arabirimine katkıda bulunan tüm içeriğe özgü menü paketlerinin komutları için standart konum olmalıdır. Ana menü çubuğu, ortamın hangi komutların görünür olduğunu denetlemek için kullandığı diğer komut yapılarından farklıdır. Diğer tüm komut çubukları, bir menü veya bir araç çubuğunda yerleştirilmiş olan komutları yalnızca bağlamdan devre dışı bırakır.
 
- Ortam, ana menü çubuğunda yerleşik olarak yer alan ve IDE'nin tamamında ve birden çok görev etki alanı arasında ortak olan bir komut kümesi tanımlar. Bu komutlar ortama hangi VSPackage'ların yüklendiğinden bağımsız olarak her zaman görünür. VSPackage'lar bu komut dizisini genişletese de, her üründen gelen komut kümesi ve komutlarının yerleştirilmesi her ekibin sorumluluğundadır.
+ Ortam, ana menü çubuğunun tamamında yerleşik olarak bulunan ve IDE ve birden çok görev etki alanı üzerinde ortak olan bir komutlar kümesi tanımlar. Bu komutlar, ortama hangi VSPackages yüklendiğine bakılmaksızın her zaman görünür. VSPackages bu komut kümesini genişletebilse de, her üründen ve komutlarının yerleştirilmesi her ekibin sorumluluğundadır.
 
- Ana men Visual Studio aşağıdaki menü kategorilerine ayrılır:
+ Visual Studio ana menünün yapısı aşağıdaki menü kategorilerine ayrılabilir:
 
-##### <a name="core-menus"></a>Çekirdek menüler
+##### <a name="core-menus"></a>Temel menüler
 
 - Dosya
 
@@ -90,7 +90,7 @@ ms.locfileid: "122028481"
 
 - Help
 
-##### <a name="project-specific-menus"></a>Project menüler
+##### <a name="project-specific-menus"></a>Project özgü menüler
 
 - Project
 
@@ -98,7 +98,7 @@ ms.locfileid: "122028481"
 
 - Hata Ayıklama
 
-##### <a name="context-specific-menus"></a>Bağlama özgü menüler
+##### <a name="context-specific-menus"></a>İçeriğe özgü menüler
 
 - Takım
 
@@ -116,23 +116,23 @@ ms.locfileid: "122028481"
 
 - Tablo
 
-##### <a name="when-designing-main-menus-adhere-to-these-rules"></a>Ana menüleri tasarlarken şu kurallara uyun:
+##### <a name="when-designing-main-menus-adhere-to-these-rules"></a>Ana menüleri tasarlarken, bu kurallara bağlı olarak:
 
-- Verilen bağlamda en üst düzey 25 öğeyi aşma
+- Belirli bir bağlamda 25 üst düzey öğeyi aşmayın
 
-- Menülerin yüksekliği hiçbir zaman 600 pikseli aşmamalı.
+- Menüler, yüksekliği asla 600 piksel aşmamalıdır.
 
-- Ultimate SKU'su ve Genel Profil gibi birden çok bağlamda bir ana menüyü değerlendirin.
+- Ana menüyü, en son SKU ve genel profilde olduğu gibi birden çok bağlamda değerlendirin.
 
-- Flyout menüleri kabul edilebilir.
+- Açılır menüler kabul edilebilir.
 
-- Flyout menüleri en az üç öğe ve en fazla yedi öğe içermeli.
+- Açılır menüler en az üç öğe içermeli ve en fazla yedi tane olmalıdır.
 
-- Açılır menüler yalnızca bir düzey derine Visual Studio menü öğelerinin basamaklı alt menüleri vardır, ancak bu düzen teşvik değildir.
+- açılır menüler yalnızca bir düzey derinlikte olmalıdır; bazı Visual Studio menü öğelerinde basamaklı alt menüler var, ancak bu model teşvik edilmez.
 
-- En fazla altı ayırıcı kullanın. Gruplamalar aşağıdaki çizime bağlı kalmalı:
+- Altıdan fazla ayırıcı kullanın. Gruplandırmalar aşağıdaki çizime uymalıdır:
 
-     ![Ana menü gruplama yönergeleri](../../extensibility/ux-guidelines/media/0501-b_mainmenus.png "0501-b_MainMenus")
+     ![Ana menü gruplandırması için yönergeler](../../extensibility/ux-guidelines/media/0501-b_mainmenus.png "0501-b_MainMenus")
 
 - Her gruplandırmanın gruplandırılmasına gerek duyulmadığından, ek gruplandırmaları eklemek kısıtlıdır.
 
@@ -260,12 +260,12 @@ ms.locfileid: "122028481"
 
 - **Erişim anahtarları** (Hızlandırıcılar olarak da bilinir), komut için menüler ve iletişim kutusu kullanıcı arabirimindeki her bir etikete aracılığıyla klavye erişimine izin verir. Erişim tuşları çoğunlukla erişilebilirlik amaçlıdır, tüm menülere ve çoğu iletişim kutusu denetimine atanır, bu, yalnızca geçerli pencereyi etkiler ve yerelleştirilir.
 
-- **Kısayol tuşları** çoğunlukla Denetim (Ctrl) ve İşlev (Fn) anahtar dizilerini kullanır. Bunlar daha ileri düzey kullanıcılar için tasarlanmıştır ve üretkenlikte yardımcı olur. Bunlar yalnızca en sık kullanılan komutlara atanır ve ana menü atlanırken hızlı erişime izin verir. Kısayol anahtarlarının ezberleneme amacı vardır ve bu nedenle profil şemasıyla tutarlı bir şekilde atanmaları gerekir. Kısayol anahtarı düzenleri profilden profile farklılık gösterebilir. Kullanıcı, Araçlar ve Seçenekler ve Klavye **> kısayol tuşlarını > özelleştirilebilir.**
+- **Kısayol tuşları** çoğunlukla Denetim (Ctrl) ve İşlev (Fn) anahtar dizilerini kullanır. Bunlar daha ileri düzey kullanıcılar için tasarlanmıştır ve üretkenlikte yardımcı olur. Bunlar yalnızca en sık kullanılan komutlara atanır ve ana menü atlanırken hızlı erişime izin verir. Kısayol anahtarlarının ezberleneme amacı vardır ve bu nedenle profil şemasıyla tutarlı bir şekilde atanmaları gerekir. Kısayol anahtarı düzenleri profilden profile farklılık gösterebilir. Bir kullanıcı, Araçlar ve Seçenekler ve **Klavye > kısayol > özelleştirilebilir.**
 
 ### <a name="assigning-access-keys"></a>Erişim anahtarları atama
- Erişim anahtarları Alt artı alfasayısal anahtarlardan oluşur. Özel durum olmadan her menü öğesinin erişim anahtarını attayabilirsiniz. Erişim Windows atamak için genel kuralları ve yönergeleri izleyin. Örneğin, Yeni Dosya > **için erişim** anahtarı her zaman **Alt, F, N olabilir.**
+ Erişim anahtarları Alt artı alfasayısal anahtarlardan oluşur. Özel durum olmadan her menü öğesinin erişim anahtarını attayabilirsiniz. Erişim Windows atamak için aşağıdaki adımları ve yaygın kuralları izleyin. Örneğin, Yeni Dosya > **için erişim** anahtarı her zaman **Alt, F, N olabilir.**
 
- Ayırt etmek zor olduğu için 'i' (büyük veya küçük harf) veya küçük harf 'l' gibi tek piksel genişlikli harfler kullanmayın ve karakterleri alt karakterlerle (g, j, p, q ve y) kullanmaktan kaçının.
+ Ayırt etmek zor olduğu için 'i' (büyük veya küçük harfle) veya küçük harf 'l' gibi tek piksel genişlikli harfler kullanmayın ve karakterleri alt karakterlerle (g, j, p, q ve y) kullanmaktan kaçının.
 
  Mümkün olduğunda yinelenen anahtarlar kullanmaktan kaçının. Yinelemenin kaçınılmaz olduğu durumlarda, menü sistemi çakışmaları anahtarı kullanan tüm komutlar üzerinden sızarak işlemeye devam ediyor. Örneğin, Dosya menüsünün altındaki "N" erişim anahtarını çoğaltan varsayımsal bir "Sayı" komutu için **Alt, F, N** yeni bir dosya oluşturabilir ve **Alt, F, N, N** "Sayı" komutunu gerçekleştirecek.
 
@@ -278,16 +278,16 @@ ms.locfileid: "122028481"
 
 - **Sık kullanılan kısayolları koruma.** En popüler kısayolları koruma.
 
-- **Düzenleyici kısayollarını kolayca yazabilirsiniz.** Geliştiricilerin kod yazarken en çok ihtiyaçları olan komutlara türü kolay kısayollar bağlayın. Örneğin, **Edit.InvokeSmartTag'ın** Alt+Shift+F10 değil Ctrl+/ gibi bir hızlı kısayol tuşu olması gerekir.
+- **Düzenleyici kısayollarını kolayca yazın.** Geliştiricilerin kod yazarken en çok ihtiyaçları olan komutlara türü kolay kısayollar bağlayın. Örneğin, **Edit.InvokeSmartTag'ın** Alt+Shift+F10 değil Ctrl+/ gibi bir hızlı kısayol tuşu olması gerekir.
 
 - **Tutarlı bir şekilde thema kısayollar elde edebilirsiniz.**
 
 - **Hangi Windows anahtarlarını belirlemek için aşağıdaki yönergeleri izleyin.** Belgenin tamamı için geçerli olan komutlar gibi büyük ölçekli etkileri olan komutlar için Ctrl tuş birleşimlerini kullanın. Standart kısayol tuşunun eylemlerini genişleten veya tamamlayan komutlar için Shift tuş birleşimlerini kullanın. Ctrl+Alt birleşimleri kullanma.
 
-- **Fazlalık kısayolları kaldırın.** Eski bir özelliğiniz varsa, erişim anahtarı aynı komuta hızlı erişim sağlarsa, aşırı seyrek (CEIP verilerinden 10 kat daha az) veya orta seyreklik (CEIP verilerinden 100'den az) ile kullanılan kısayolları kaldırmayı göz önünde bulundurabilirsiniz. Örneğin: Alt, H, C Yardım/İçerik'i açar.
+- **Fazlalık kısayolları kaldırın.** Eski bir özelliğiniz varsa, erişim anahtarı aynı komuta hızlı erişim sağlarsa, aşırı seyrek (CEIP verilerinden 10 kat daha az) veya orta seyreklik (CEIP verilerinden 100'den az) ile kullanılan kısayolları kaldırmayı göz önünde bulundurabilirsiniz. Örneğin: Alt, H, C, Yardım/İçerik'i açar.
 
   Kısayol kullanılabilirliğini denetlemenin basit bir yolu yok. Kısayol eklemek için şu adımları izleyin:
 
-1. Kullanıcılarınızı grup [Visual Studio 2013 benzer](http://visualstudioshortcuts.com/2013/) komutlar olup olmadığını belirlemek için bu kısayollar listesini kontrol edin.
+1. Kullanıcılarınızı grup [Visual Studio 2013 benzer](/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio) komutlar olup olmadığını belirlemek için bu kısayollar listesini kontrol edin.
 
-2. Tools **> Options > > >'a gidin ve** kısayolunu test edin. "Aşağıdaki ek klavye eşleme düzenini uygula" altında listelenen her klavye eşleme düzenini kontrol edin. Genel, C#, VB ve C++ profillerini kontrol edin çünkü bunlar benzersiz kısayolları paylaşır. Kısayol, bu yerlerin hiçbirsinde eşlenmemişse kullanılabilir.
+2. Araçlar ve **> Seçenekleri'ne > Klavye > kısayolunu** test edin. "Aşağıdaki ek klavye eşleme düzenini uygula" altında listelenen her klavye eşleme düzenini kontrol edin. Genel, C#, VB ve C++ profillerini kontrol edin çünkü bunlar benzersiz kısayolları paylaşır. Kısayol, bu yerlerin hiçbirsinde eşlenmemişse kullanılabilir.

@@ -4,14 +4,14 @@ description: docker kapsayıcılarıyla çalışmak için Visual Studio bulunan 
 author: ghogen
 ms.author: ghogen
 ms.topic: how-to
-ms.date: 03/20/2019
+ms.date: 09/17/2021
 ms.technology: vs-container-tools
-ms.openlocfilehash: 91ed17af9900c068af7e81ce3902e68063814d82
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: abe4eea99bbf2920e65e03655d7203409743ac53
+ms.sourcegitcommit: 2eb12954b7b0ac9508fff11a86c54e880f3d104f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631760"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129439736"
 ---
 # <a name="how-to-configure-visual-studio-container-tools"></a>Visual Studio kapsayıcı araçlarını yapılandırma
 
@@ -45,7 +45,7 @@ Aşağıdaki tablo, bu seçeneklerin nasıl ayarlanacağına karar vermenize yar
 | Gerekli Docker görüntülerini proje yüküne otomatik olarak çekme | Açık | Docker Compose | projeleri yüklerken daha yüksek performans için Visual Studio arka planda bir docker çekme işlemi başlatacak, böylece kodunuzu çalıştırmaya hazırsanız görüntünün zaten indirilmesi veya indirme sürecinde olması gerekir. Yalnızca projeler ve tarama kodu yüklüyorsanız, gerek duymadığınız kapsayıcı görüntülerini indirmeyi önlemek için bunu kapatabilirsiniz. |
 | Kapsayıcıları arka planda otomatik olarak Başlat | Açık | Docker Compose | daha yüksek performans için, Visual Studio kapsayıcınızı oluşturup çalıştırdığınızda, toplu bağlama için hazırlama ile bir kapsayıcı oluşturur. Kapsayıcının ne zaman oluşturulduğunu denetlemek isterseniz, bunu kapatın. |
 | Çözüm kapatıldığında kapsayıcıları otomatik olarak Sonlandır | Açık | Docker Compose | Çözümünüze yönelik kapsayıcıların çözümü kapattıktan veya Visual Studio kapattıktan sonra çalışmaya devam etmesini istiyorsanız bunu devre dışı bırakın. |
-| Localhost SSL sertifikası için güvenme isteme | Kapalı | ASP.NET Core 2,1 projeleri | localhost SSL sertifikası güvenilir değilse, bu onay kutusu işaretlenmediği takdirde Visual Studio projenizi her çalıştırdığınızda uyarır. |
+| Localhost SSL sertifikası için güvenme isteme | Kapalı | ASP.NET Core 2,1 projeleri | localhost SSL sertifikası güvenilir değilse, bu onay kutusu işaretlenmediği veya sertifika zaten güvenilir olmadığı takdirde, bir ASP.NET Core 2. x projesi çalıştırdığınızda Visual Studio sorar. |
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
@@ -55,7 +55,7 @@ Aşağıdaki tabloda **genel** ayarları açıklanmaktadır:
 | Name | Varsayılan ayar | Uygulanan Öğe | Description |
 | -----|:---------------:|:----------:| ----------- |
 | Gerekirse Docker Desktop 'ı yükler | Bana sor | tek Project, Docker Compose | Docker Desktop yüklü değilse isteyip istemediğinizi seçin. |
-| SSL sertifikası ASP.NET Core güven | Bana sor | ASP.NET Core 2. x projeleri | **bana sor** olarak ayarlandığında, localhost SSL sertifikası güvenilir değilse, projenizi her çalıştırışınızda Visual Studio istenir. |
+| SSL sertifikası ASP.NET Core güven | Bana sor | ASP.NET Core 2. x projeleri | **bana sor** olarak ayarlandığında, localhost SSL sertifikası güvenilir değilse, ASP.NET Core 2. x projesi her çalıştırdığınızda Visual Studio istenir. |
 
 aşağıdaki tabloda, **tek Project** ve **Docker Compose** ayarları açıklanmaktadır:
 
