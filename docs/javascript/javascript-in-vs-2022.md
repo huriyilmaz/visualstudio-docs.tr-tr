@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 2022'de JavaScript ve TypeScript
-description: Visual Studio 2022'nin hem Doğrudan JavaScript kullanarak hem de TypeScript programlama dilini kullanarak JavaScript geliştirmesi için nasıl zengin destek sağladığını öğrenin.
+title: Visual Studio 2022 ' de JavaScript ve TypeScript
+description: Visual Studio 2022 'nin javascript geliştirme için nasıl zengin destek sağladığını, hem doğrudan javascript 'i hem de TypeScript programlama dilini kullanarak nasıl kullandığını öğrenin.
 titleSuffix: ''
 ms.date: 09/27/2021
 ms.technology: vs-javascript
@@ -13,42 +13,42 @@ author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 9aa0c1166de701f5885b25391a42b82b9c670919
-ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
+ms.openlocfilehash: 9b4ff4d4f0e345cd9cb69c98355d929f6209da09
+ms.sourcegitcommit: d63ba1eff845d41ca095efb14b499ea96c4b6eba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129366338"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "129561080"
 ---
-# <a name="javascript-and-typescript-in-visual-studio-2022"></a>Visual Studio 2022'de JavaScript ve TypeScript
+# <a name="javascript-and-typescript-in-visual-studio-2022"></a>Visual Studio 2022 ' de JavaScript ve TypeScript
 
 ## <a name="overview"></a>Genel Bakış
 
-Visual Studio 2022, javaScript geliştirmesi için hem doğrudan JavaScript kullanarak hem de özellikle büyük ölçekte projeler geliştirme aşamasında daha üretken ve eğlenceli bir JavaScript geliştirme deneyimi sağlamak için geliştirilmiş [TypeScript](http://www.typescriptlang.org/)programlama dilini kullanarak zengin destek sağlar. Birçok uygulama türü ve hizmeti için JavaScript veya TypeScript Visual Studio kod yazabilirsiniz. 
+Visual Studio 2022, javascript geliştirme için hem doğrudan javascript hem de daha üretken ve keyifli bir javascript geliştirme deneyimi sağlamak amacıyla geliştirilen [TypeScript programlama dilini](http://www.typescriptlang.org/)kullanarak, özellikle de proje ölçeğinde bir şekilde zengin destek sunar. birçok uygulama türü ve hizmeti için Visual Studio JavaScript veya TypeScript kodu yazabilirsiniz. 
 
 ## <a name="javascript-language-service"></a>JavaScript Dil Servisi 
 
-Visual Studio 2022'de JavaScript deneyimi, TypeScript desteği sağlayan altyapıyla güçlendirilmiştir. Bu altyapı size en kısa zamanda daha iyi özellik desteği, zenginlik ve tümleştirme sağlar. 
+Visual Studio 2022 ' deki JavaScript deneyimi, TypeScript desteği sağlayan altyapıda desteklenir. Bu altyapı, daha iyi özellik desteği, zenginliği ve tümleştirme özelliklerinin hemen kullanıma hazır olmasını sağlar. 
 
-Eski JavaScript dil hizmetine geri yükleme seçeneği artık kullanılamaz. Kullanıcılar yeni JavaScript dil hizmetine ilk olarak sahip olur. Yeni dil hizmeti yalnızca statik analizle desteklenen TypeScript dil hizmetini temel alan bir hizmettir. Bu hizmet size daha iyi bir araç sağlamamıza olanak sağlar, böylece JavaScript kodunuz tür tanımlarına göre daha zengin IntelliSense'den yararlanabilir. Yeni hizmet hafiftir ve eski hizmetten daha az bellek tüketir ve kodunuz ölçeklendirildikleriyle daha iyi performans sağlar. Daha büyük projeleri işlemek için dil hizmetinin performansını da iyileştirildik. 
+Eski JavaScript dil hizmetine geri yükleme seçeneği artık kullanılamıyor. Kullanıcıların yeni JavaScript dil hizmeti kullanıma hazır. Yeni dil hizmeti yalnızca, statik analizler tarafından desteklenen TypeScript dil hizmetini temel alır. Bu hizmet daha iyi araçlar sağlamanıza olanak tanıdığından, JavaScript kodunuzun tür tanımlarına göre daha zengin IntelliSense 'den faydalanabilir. Yeni hizmet hafif ve eski hizmetten daha az bellek tüketir ve bu da kodunuzun ölçeklendirilmesine göre daha iyi performans sağlar. Ayrıca, daha büyük projeleri işlemek için dil hizmetinin performansını de geliştirdik. 
 
 ## <a name="typescript-support"></a>TypeScript desteği 
 
-Varsayılan olarak, Visual Studio 2022, Belirli bir proje yapılandırması olmadan IntelliSense'i desteklemek için JavaScript ve TypeScript dosyaları için dil desteği sağlar.  
+varsayılan olarak, Visual Studio 2022, JavaScript ve TypeScript dosyaları için belirli bir proje yapılandırması olmadan power ıntellisense 'e dil desteği sağlar.  
 
-TypeScript'i derlemek Visual Studio, proje başına hangi TypeScript sürümünü kullanabileceğinizi seçme esnekliği sağlar. 
+Visual Studio typescript 'i derlemek için, bir proje temelinde hangi TypeScript sürümünü kullanacağınızı seçme esnekliği sunar. 
 
-Derleme MSBuild, [TypeScript NuGet](https://www.nuget.org/packages/Microsoft.TypeScript.MSBuild) paketi projenize TypeScript derleme desteği eklemenin önerilen yöntemidir. Visual Studio, projenize ilk kez TypeScript dosyası ekleyseniz bu paketi ekleme seçeneği sunar. Bu paket, paket yöneticisi aracılığıyla da NuGet kullanılabilir. Uygulama NuGet, projenizin dil desteği için karşılık gelen dil hizmeti sürümü kullanılır. Not: Bu paketin desteklenen en düşük sürümü 3.6'dır. 
+MSBuild derleme senaryolarında [typescript NuGet paketi](https://www.nuget.org/packages/Microsoft.TypeScript.MSBuild) projenize typescript derleme desteği eklemenin önerilen yöntemidir. Visual Studio projenize bir TypeScript dosyası ilk kez eklediğinizde bu paketi ekleme seçeneği sağlayacaktır. bu paket, NuGet paket yöneticisi aracılığıyla istediğiniz zaman da kullanılabilir. NuGet paketi kullanıldığında, projenizde dil desteği için ilgili dil hizmeti sürümü kullanılacaktır. Note: Bu paketin desteklenen en düşük sürümü 3,6 ' dir. 
 
-npm için yapılandırılan projeler, TypeScript npm paketini ekleyerek TypeScript dil hizmetinin [kendi sürümünü belirterek.](https://www.npmjs.com/package/typescript) Desteklenen projelerde npm yöneticisini kullanarak sürümü belirtsiniz. Not: Bu paketin desteklenen en düşük sürümü 2.1'tir.
+NPM için yapılandırılmış projeler [TypeScript NPM paketini](https://www.npmjs.com/package/typescript)ekleyerek TypeScript dil hizmetinin kendi sürümünü belirtebilir. Desteklenen projelerde NPM yöneticisini kullanarak sürümü belirtebilirsiniz. Note: Bu paketin desteklenen en düşük sürümü 2,1 ' dir.
 
-TypeScript SDK 2022'de Visual Studio kullanım dışıdır. SDK'yı kullanan mevcut projeler, NuGet kullanılarak NuGet gerekir. Hemen yükseltil hazırılana projeler için SDK, [Visual Studio Market'te](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-442) ve Visual Studio yükleyicisinde isteğe bağlı bir bileşen olarak kullanılabilir. 
+TypeScript SDK Visual Studio 2022 ' de kullanımdan kaldırılmıştır. SDK 'yı kullanan mevcut projeler, NuGet paketi kullanılarak sürümüne yükseltilmelidir. hemen yükseltilemeyen projeler için, SDK [Visual Studio marketi](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-442) 'nde ve Visual Studio yükleyicisindeki isteğe bağlı bir bileşen olarak kullanılmaya devam etmektedir. 
 
 > [!TIP] 
-> Visual Studio 2022'de geliştirilen projeler için, farklı platformlar ve ortamlar arasında daha fazla taşınabilirlik için TypeScript NuGet veya TypeScript npm paketini kullanın. Daha fazla bilgi için [bkz. NuGet kullanarak TypeScript kodunu derleme ve](../javascript/compile-typescript-code-nuget.md)    [tsc kullanarak TypeScript kodunu derleme.](../javascript/compile-typescript-code-npm.md) 
+> Visual Studio 2022 ' de geliştirilen projeler için, farklı platformlar ve ortamlarda daha fazla taşınabilirlik sağlamak üzere typescript NuGet veya typescript npm paketini kullanmanızı öneririz. daha fazla bilgi için bkz. [NuGet kullanarak typescript kodunu derleme](../javascript/compile-typescript-code-nuget.md)   ve [tsc kullanarak typescript kodunu derleme](../javascript/compile-typescript-code-npm.md). 
 
-## <a name="project-templates"></a>Project Şablon 
+## <a name="project-templates"></a>Project Şablondan 
 
-Visual Studio 2022'den başlayarak, Visual Studio'de tek başına Angular, React ve Vue projeleri oluşturmanıza olanak sağlayan yeni bir JavaScript/TypeScript proje türü (.esproj) Visual Studio. Projeler, yerel makinenize yüklemiş olduğu framework CLI araçları kullanılarak oluşturulur, bu nedenle şablonun sürümü size bağlı olur.  
+Visual Studio 2022 ' den başlayarak, Visual Studio ' de tek başına Angular, React ve vue projeleri oluşturmanıza olanak sağlayan yeni bir JavaScript/TypeScript proje türü (. esproj) vardır. Bu ön uç projeleri, yerel makinenize yüklediğiniz Framework CLı araçları kullanılarak oluşturulur, bu nedenle şablonun sürümü size bağlıdır.  
 
-Bu yeni projelerde JavaScript ve TypeScript birim testlerini çalıştırabilecek, npm yöneticisini kullanarak ASP.NET Core API projelerini kolayca ekp bağabilecek ve npm modüllerinizi indirebilirsiniz. Başlangıç için bazı hızlı başlangıçlara ve öğreticilere göz at. Daha fazla bilgi almak için bu blog gönderisinde bunlar hakkında [bilgi edinebilirsiniz.](https://devblogs.microsoft.com/visualstudio/the-new-javascript-typescript-experience-in-vs-2022-preview-3/)
+bu yeni projelerde, JavaScript ve TypeScript birim testlerini çalıştırabilir, ASP.NET Core apı projelerini kolayca ekleyip bağlanabilir ve npm yöneticisini kullanarak npm modüllerinizi indirebilirsiniz. Kullanmaya başlamak için hızlı başlangıç ve öğreticilerden bazılarına göz atın. Daha fazla bilgi edinmek istiyorsanız, bu [blog gönderisini](https://devblogs.microsoft.com/visualstudio/the-new-javascript-typescript-experience-in-vs-2022-preview-3/)okuyun.

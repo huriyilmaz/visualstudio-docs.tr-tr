@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: ca274240c7482b911997470ddaf042158dbecd9d
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: c2a11d163416febf50bb1c4947a069733dd8ae21
+ms.sourcegitcommit: d63ba1eff845d41ca095efb14b499ea96c4b6eba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128432728"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "129560886"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Visual Studio 'de birim testi JavaScript ve TypeScript
 
@@ -33,6 +33,16 @@ Desteklenen çerçeveler şunlardır:
 ASP.NET Core ve JavaScript ya da TypeScript için bkz. [ASP.NET Core için birim testleri yazma ](#write-unit-tests-for-aspnet-core).
 
 En sevdiğiniz çerçeve desteklenmiyorsa, destek ekleme hakkında bilgi için bkz. [birim test çerçevesi için destek ekleme](#addingFramework) .
+
+::: moniker range=">=vs-2022"
+## <a name="write-unit-tests-for-a-cli-based-project-esproj"></a>CLı tabanlı bir proje (. esproj) için birim testleri yazma
+
+Visual Studio 2022 ' de desteklenen clı tabanlı projeler Test gezgini ile çalışır. jest, React ve vue projeleri için yerleşik test çerçevesidir ve Angular projeler için Karma ve jasmine kullanılır. Varsayılan olarak, her bir çerçeve tarafından sunulan varsayılan testleri, ayrıca yazdığınız ek testleri çalıştırabileceksiniz.  Yalnızca test Gezgini 'nde **Çalıştır** düğmesine basın. Test Gezgini zaten açık değilse, menü çubuğunda **Test**  >  **Test Gezgini** ' ni seçerek bunu bulabilirsiniz.
+
+Node.js geliştirme iş yükü, CLı tabanlı projelere yönelik birim testini desteklemek için gereklidir.
+
+Mocha ve bant test kitaplıkları da desteklenir. Bunlardan birini kullanmak için Package. json ' daki varsayılan test kitaplığını uygun test kitaplığının paketine değiştirmeniz yeterlidir.
+::: moniker-end
 
 ## <a name="write-unit-tests-in-a-nodejs-project"></a>Node.js projesindeki birim testlerini yazma
 
@@ -248,18 +258,18 @@ Test execution time: 1.5731 Seconds
 Testleri test Gezgini içindeki **Tümünü Çalıştır** bağlantısına tıklayarak çalıştırabilirsiniz. Ya da bir veya daha fazla test veya grup seçerek, sağ tıklayıp ve kısayol menüsünden **Çalıştır** ' ı seçerek testleri çalıştırabilirsiniz. Testler arka planda çalışır ve test Gezgini sonuçları otomatik olarak güncelleştirir ve gösterir. Ayrıca, sağ tıklayıp **Hata Ayıkla**' yı seçerek seçili testlerde hata ayıklaması de yapabilirsiniz.
 ::: moniker-end
 ::: moniker range="vs-2017"
-Testleri test Gezgini içindeki **Tümünü Çalıştır** bağlantısına tıklayarak çalıştırabilirsiniz. Ya da, bir veya daha fazla test veya grup seçerek, sağ tıklayıp ve **Seçilen testleri** kısayol menüsünden Çalıştır ' ı seçerek testleri çalıştırabilirsiniz. Testler arka planda çalışır ve test Gezgini sonuçları otomatik olarak güncelleştirir ve gösterir. Ayrıca, seçili testlerde hata **Ayıkla seçili testleri** seçerek de hata ayıklaması yapabilirsiniz.
+Testleri test Gezgini içindeki **Tümünü Çalıştır** bağlantısına tıklayarak çalıştırabilirsiniz. Ya da bir veya daha fazla test veya grup seçerek, sağ  tıklar ve kısayol menüsünden Seçili Testleri Çalıştır'ı seçerek testleri çalıştırabilirsiniz. Testler arka planda çalışır ve Test Gezgini otomatik olarak güncelleştirmesi ve sonuçları gösterir. Ayrıca Seçili Testlerde Hata Ayıkla seçeneğini kullanarak seçili **testlerde de hata ayıklandırıcısı.**
 ::: moniker-end
 
-TypeScript için, birim testleri oluşturulan JavaScript koduna karşı çalıştırılır.
+TypeScript için birim testleri, oluşturulan JavaScript kodunda çalışır.
 
 ![Test Gezgini sonuçları](../javascript/media/unit-tests-aspnet-core-run.png)
 
 > [!NOTE]
-> Çoğu TypeScript senaryosunda, TypeScript kodunda bir kesme noktası ayarlayarak, test Gezgini 'nde bir teste sağ tıklayıp **Hata Ayıkla**' yı seçerek bir birim testinde hata ayıklaması yapabilirsiniz. Kaynak haritaları kullanan bazı senaryolar gibi daha karmaşık senaryolarda, TypeScript kodunda kesme noktalarına vurmadan zorluk yaşayabilirsiniz. Geçici bir çözüm olarak, `debugger` anahtar sözcüğünü kullanmayı deneyin.
+> Çoğu TypeScript senaryosunda, TypeScript kodunda bir kesme noktası ayarp Test Gezgini'nde bir teste sağ tıklar ve Hata ayıkla'ya tıklayarak birim testinde **hata ayıkabilirsiniz.** Kaynak eşlemeleri kullanan bazı senaryolar gibi daha karmaşık senaryolarda TypeScript kodunda kesme noktalarına inebilirsiniz. Geçici bir çözüm olarak anahtar sözcüğünü kullanmayı `debugger` deneyin.
 
 > [!NOTE]
-> Profil oluşturma testlerini veya kod kapsamını Şu anda desteklemiyoruz.
+> Şu anda profil oluşturma testlerini veya kod kapsamayı desteklemez.
 
 ## <a name="add-support-for-a-unit-test-framework"></a><a name="addingFramework"></a>Birim testi çerçevesi için destek ekleme
 
@@ -272,7 +282,7 @@ Bunu yapmak için aşağıdakiler altında test çerçevesinin adına sahip bir 
 
 `<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter\TestFrameworks`
 
-Klasörü bir ASP.NET Core projesinde görmüyorsanız, Node.js kullanarak `NodeJsTools` Visual Studio Yükleyicisi. Bu iş yükü, JavaScript ve TypeScript birim testi desteği içerir.
+Klasörü bir ASP.NET Core `NodeJsTools` projesinde görmüyorsanız, Node.js kullanarak Visual Studio Yükleyicisi. Bu iş yükü, JavaScript ve TypeScript birim testi desteği içerir.
 
 Bu klasörün, aşağıdaki iki işlevi dışarı aktaran aynı adla bir JavaScript dosyası içermesi gerekir:
 
@@ -283,13 +293,13 @@ ve uygulamalarına iyi bir örnek için, içinde Mocha birim testi `find_tests` 
 
 `<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter\TestFrameworks\mocha\mocha.js`
 
-Kullanılabilir test çerçevelerinin bulunması en Visual Studio gerçekleşir. Çerçeve çalışırken bir çerçeve Visual Studio çerçeveyi algılamak için Visual Studio yeniden başlatın. Ancak uygulamada değişiklik yaparken yeniden başlatmanız gerek değildir.
+Kullanılabilir test çerçevelerinin bulunması en Visual Studio gerçekleşir. Çerçeve çalışırken bir çerçeve Visual Studio, çerçeveyi algılamak Visual Studio yeniden başlatın. Ancak uygulamada değişiklik yaparken yeniden başlatmanız gerek değildir.
 
 ## <a name="unit-tests-in-net-framework"></a>.NET Framework'da birim testleri
 
 Yalnızca kendi proje ve projelerinde birim testleri yazmakla Node.js ASP.NET Core olmaz. TestFramework ve TestRoot özelliklerini herhangi bir C# veya Visual Basic projesine eklerken, bu testler numaralara eklir ve Test Gezgini penceresini kullanarak bunları çalıştırabilirsiniz.
 
-Bunu etkinleştirmek için, proje düğümünde proje düğümüne sağ tıklayın, Çözüm Gezgini **kaldır'ı Project'yi** seçin ve ardından **Düzenle'yi Project.** Ardından proje dosyasında, bir özellik grubuna aşağıdaki iki öğeyi ekleyin.
+Bunu etkinleştirmek için, proje düğümünde proje düğümüne sağ tıklayın, Çözüm Gezgini kaldır'ı  **Project'yi** seçin ve sonra da Project. Ardından proje dosyasında, bir özellik grubuna aşağıdaki iki öğeyi ekleyin.
 
 > [!IMPORTANT]
 > Öğeleri eklemekte olduğunu özellik grubunun belirtilen bir koşula sahip olduğundan emin olun.

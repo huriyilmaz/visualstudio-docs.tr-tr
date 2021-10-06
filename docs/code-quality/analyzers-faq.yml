@@ -1,8 +1,8 @@
 ### YamlMime:FAQ
 metadata:
-  title: EditorConfig ile çözümleyiciler karşılaştırması
-  ms.date: 03/11/2019
-  description: .NET Compiler Platform tabanlı kod analizi hakkında Visual Studio. EditorConfig dosyaları, kural kümeleri ve diğer konularla ilgili soruların yanıtlarına bakın.
+  title: EditorConfig ve çözümleyiciler karşılaştırması
+  ms.date: 10/05/2021
+  description: .NET Compiler Platform tabanlı kod analizi hakkında bilgi Visual Studio. EditorConfig dosyaları, kural kümeleri ve diğer konularla ilgili soruların yanıtlarına bakın.
   ms.custom: SEO-VS-2020
   ms.topic: conceptual
   helpviewer_keywords:
@@ -12,21 +12,21 @@ metadata:
   manager: jmartens
   ms.workload:
   - multiple
-  ms.openlocfilehash: a9ff57daf22d61758b3bbc7d99beb6d2555b7e18
-  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+  ms.openlocfilehash: 6e93f704bc792f2c8eb3b0ede8d12e8274ea0d45
+  ms.sourcegitcommit: d63ba1eff845d41ca095efb14b499ea96c4b6eba
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/13/2021
-  ms.locfileid: "126632985"
-title: Kod analizi hakkında SSS
-summary: Bu sayfa, .NET Compiler Platform tabanlı kod analizi hakkında sık sorulan soruların yanıtlarını Visual Studio.
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "129561093"
+title: Visual Studio'de kod analizi hakkında SSS
+summary: Bu sayfa, verilerde kod tabanlı kod analizi hakkında .NET Compiler Platform sık sorulan soruların yanıtlarını Visual Studio.
 sections:
 - name: Kod analizi ve EditorConfig karşılaştırması
   questions:
   - question: >
       Kod stilini kontrol etmek için kod analizini veya EditorConfig'i kullanmalı musunuz?
     answer: >
-      Kod analizi ve EditorConfig dosyaları el ile çalışır. Kod stillerini [editorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options) dosyasında veya metin düzenleyicisi [Seçenekler](../ide/code-styles-and-code-cleanup.md) sayfasında tanımladığınız zaman, kod çözümleyicilerini Visual Studio. EditorConfig dosyaları çözümleyici kurallarını etkinleştirmek veya devre dışı bırakmak ve çözümleyici paketlerini yapılandırmak NuGet kullanılabilir.
+      Kod analizi ve EditorConfig dosyaları el ile çalışır. Kod stillerini [bir EditorConfig](/dotnet/fundamentals/code-analysis/code-style-rule-options) dosyasında veya metin düzenleyicisi [Seçenekler](../ide/code-styles-and-code-cleanup.md) sayfasında tanımladığınız zaman, kod çözümleyicilerini Visual Studio. EditorConfig dosyaları çözümleyici kurallarını etkinleştirmek veya devre dışı bırakmak ve çözümleyici paketlerini yapılandırmak NuGet kullanılabilir.
 - name: EditorConfig ve kural kümeleri karşılaştırması
   questions:
   - question: >
@@ -40,7 +40,7 @@ sections:
 
       - .NET kod kalitesi çözümleyicileri için EditorConfig dosyaları, analiz etmeniz gereken [kod türlerini tanımlamanıza izin sağlar.](/dotnet/fundamentals/code-analysis/code-quality-rule-options)
 
-      - düzenleyicide yerleşik olarak yer alan .NET kod stili çözümleyicileri Visual Studio EditorConfig dosyaları, bir kod temeli için tercih edilen [kod](/dotnet/fundamentals/code-analysis/code-style-rule-options) stillerini tanımlamanıza izin sağlar.
+      - DüzenleyiciConfig dosyaları, yerleşik olarak yerleşik olarak Visual Studio .NET kod stili çözümleyicileri için bir kod temeli için tercih edilen kod [stillerini](/dotnet/fundamentals/code-analysis/code-style-rule-options) tanımlamaya izin sağlar.
 
 
       Kural kümeleri ve EditorConfig dosyalarına ek olarak, bazı çözümleyiciler C# ve VB derleyicileri için ek dosya olarak işaretlenmiş metin dosyalarının kullanımıyla yapılandırılır. [](../ide/build-actions.md#build-action-values)
@@ -54,7 +54,7 @@ sections:
 - name: CI derlemeleri içinde kod analizi
   questions:
   - question: >
-      Sürekli .NET Compiler Platform (CI) derlemeleri üzerinde çalışma yapmak için .NET Compiler Platform tabanlı kod analizi çalışıyor mu?
+      Bu .NET Compiler Platform tabanlı kod analizi sürekli tümleştirme (CI) derlemeleri üzerinde çalışıyor mu?
     answer: >
       Evet. Bir NuGet paketinden yüklenmiş çözümleyiciler için, bu [](roslyn-analyzers-overview.md#build-errors)kurallar CI derlemesi sırasında dahil olmak üzere derleme zamanında uygulanır. CI derlemesinde kullanılan çözümleyiciler, hem kural kümelerinden hem de EditorConfig dosyalarından kural yapılandırmasına saygı gösterir. Şu anda, Visual Studio yerleşik kod çözümleyicileri bir NuGet paketi olarak kullanılamaz ve bu nedenle bu kurallar CI derlemesinde zorlanmaz.
 - name: IDE çözümleyicileri ile StyleCop karşılaştırması
@@ -69,7 +69,7 @@ sections:
 - name: Kod çözümleyicileri ile eski analiz karşılaştırması
   questions:
   - question: >
-      Eski analizle .NET Compiler Platform arasındaki fark nedir?
+      Eski analiz ile .NET Compiler Platform tabanlı kod analizi arasındaki fark nedir?
     answer: >
       .NET Compiler Platform tabanlı kod analizi, kaynak kodu gerçek zamanlı olarak ve derleme sırasında analiz ederken, eski analiz derleme tamamlandıktan sonra ikili dosyaları analiz eder. Daha fazla bilgi için [bkz. .NET Compiler Platform tabanlı analiz ile eski analiz karşılaştırması.](../code-quality/net-analyzers-faq.yml#what-s-the-difference-between-legacy-fxcop-and--net-analyzers-)
 - name: FxCop çözümleyicileri ile .NET çözümleyicileri karşılaştırması
@@ -77,7 +77,7 @@ sections:
   - question: >
       FxCop çözümleyicileri ile .NET çözümleyicileri arasındaki fark nedir?
     answer: >
-      FxCop çözümleyicileri ve .NET çözümleyicileri, FxCop CA kurallarının .NET Compiler Platform ("Roslyn") çözümleyicisi uygulamalarına başvurur. 2019 16.8 ve .NET 5.0 Visual Studio önce, bu çözümleyiciler NuGet `Microsoft.CodeAnalysis.FxCopAnalyzers` [olarak gönderildi.](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) 2019 Visual Studio 16.8 ve .NET 5.0'dan başlayarak, bu çözümleyiciler [.NET SDK'sı ile birlikte gelir.](/dotnet/fundamentals/code-analysis/overview) Bunlar, bir paket `Microsoft.CodeAnalysis.NetAnalyzers` [NuGet kullanılabilir.](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) Lütfen [FxCop çözümleyicilerinden .NET çözümleyicileri'ne kullanmayı göz önünde bulundurarak.](migrate-from-fxcop-analyzers-to-net-analyzers.md)
+      FxCop çözümleyicileri ve .NET çözümleyicileri, FxCop CA kurallarının .NET Compiler Platform ("Roslyn") çözümleyicisi uygulamalarını ifade eder. 2019 Visual Studio 16.8 ve .NET 5.0'dan önce, bu çözümleyiciler NuGet `Microsoft.CodeAnalysis.FxCopAnalyzers` [olarak gönderildi.](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) 2019 Visual Studio 16.8 ve .NET 5.0'dan başlayarak, bu çözümleyiciler [.NET SDK'sı ile birlikte gelir.](/dotnet/fundamentals/code-analysis/overview) Bunlar, paket NuGet `Microsoft.CodeAnalysis.NetAnalyzers` [kullanılabilir.](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers) Lütfen [FxCop çözümleyicilerinden .NET çözümleyicileri'ne kullanmayı göz önünde bulundurarak.](migrate-from-fxcop-analyzers-to-net-analyzers.md)
 - name: Uyarıları hata olarak davran
   questions:
   - question: >
@@ -108,5 +108,5 @@ sections:
   - question: >
       Çözümün Code Analysis özelliği sayfası nerede?
     answer: >
-      Çözüm Code Analysis özellik sayfası, daha güvenilir paylaşılan özellik grubu için kaldırıldı. Proje düzeyinde Code Analysis için, Code Analysis özellik sayfası hala kullanılabilir. (Yönetilen projeler için kural yapılandırma için kural kümeleri'den EditorConfig'e de öneririz.)  Bir çözüm veya bir repo içinde birden çok/tüm projelerde kural kümeleri paylaşmak için, paylaşılan bir props/targets dosyasında veya *Directory.props/Directory.targets* dosyasında [CodeAnalysisRuleSet](../code-quality/using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) özelliğine sahip bir özellik grubu tanımlamanız önerilir. Tüm projelerinizi içeri aktaracak böyle bir ortak teklifiniz veya hedefiniz yoksa, böyle bir özellik grubunu dizinde veya onun alt dizinlerinde tanımlanan tüm proje dosyalarında otomatik olarak içeri aktarılan bir üst düzey çözüm dizininde [Directory.props veya Directory.targets](../msbuild/customize-your-build.md) dosyasına eklemeyi düşünebilirsiniz.
+      Çözüm Code Analysis özellik sayfası, daha güvenilir paylaşılan özellik grubu için kaldırıldı. Proje düzeyinde Code Analysis için Code Analysis özellik sayfası hala kullanılabilir. (Yönetilen projeler için kural yapılandırma için kural kümeleri'den EditorConfig'e de öneririz.)  Bir çözüm veya bir repo içinde birden çok/tüm projelerde kural kümeleri paylaşmak için, paylaşılan bir props/targets dosyasında veya *Directory.props/Directory.targets* dosyasında [CodeAnalysisRuleSet](../code-quality/using-rule-sets-to-group-code-analysis-rules.md#specify-a-rule-set-for-a-project) özelliğine sahip bir özellik grubu tanımlamanız önerilir. Tüm projelerinizi içeri aktaracak böyle bir ortak teklifiniz veya hedefiniz yoksa, böyle bir özellik grubunu dizinde veya onun alt dizinlerinde tanımlanan tüm proje dosyalarında otomatik olarak içeri aktarılan bir üst düzey çözüm dizininde [Directory.props veya Directory.targets](../msbuild/customize-your-build.md) dosyasına eklemeyi düşünebilirsiniz.
 additionalContent: "\n## <a name=\"see-also\"></a>Ayrıca bkz.\n   - [Çözümleyicilere genel bakış](roslyn-analyzers-overview.md)\n   - [EditorConfig için .NET kodlama kuralı ayarları](/dotnet/fundamentals/code-analysis/code-style-rule-options)"

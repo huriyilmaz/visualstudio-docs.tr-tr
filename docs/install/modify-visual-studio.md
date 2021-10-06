@@ -18,12 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 692b1aedf5c55d2162a28e96ae9cdbdadd9529e6
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 0e679e903c797d78403d2123ddecee5d8bc22fda
+ms.sourcegitcommit: d63ba1eff845d41ca095efb14b499ea96c4b6eba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128430281"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "129561119"
 ---
 # <a name="modify-visual-studio-workloads-components-and-language-packs"></a>Visual Studio iş yüklerini, bileşenleri ve dil paketlerini değiştirme
 
@@ -55,7 +55,7 @@ Visual Studio yüklemenizi değiştirmek için önce Visual Studio Yükleyicisi 
 
 1. bilgisayarınızda Visual Studio Yükleyicisi bulun.
 
-     örneğin, Windows 10 çalıştıran bir bilgisayarda **başlat**' ı seçin ve sonra da **Visual Studio Yükleyicisi** olarak listelendiği **V** harfine gidin.
+     örneğin, Windows 10 veya üzeri çalıştıran bir bilgisayarda **başlat**' ı seçin ve sonra da **Visual Studio Yükleyicisi** olarak listelendiği **V** harfine gidin.
 
      ![Windows 10 Başlat menüsü Visual Studio Yükleyicisi girişi gösteren ekran görüntüsü.](media/locate-the-visual-studio-installer.png "Microsoft Visual Studio yükleyicisini bulun")
 
@@ -79,7 +79,7 @@ Visual Studio yüklemenizi değiştirmek için önce Visual Studio Yükleyicisi 
 
      Windows Başlat menüsü, "yükleyici" için arama yapabilirsiniz.
 
-     ![Visual Studio Yükleyicisi için Başlat menüsü aramasının sonucunu gösteren ekran görüntüsü.](media/vs-2019/visual-studio-installer.png "Arama Visual Studio Yükleyicisi")
+     ![Visual Studio Yükleyicisi için Başlat menüsü aramasının sonucunu gösteren ekran görüntüsü.](media/vs-2019/visual-studio-installer.png "Visual Studio Yükleyicisi arayın")
 
      > [!NOTE]
      > aşağıdaki konumda Visual Studio Yükleyicisi de bulabilirsiniz:
@@ -90,12 +90,12 @@ Visual Studio yüklemenizi değiştirmek için önce Visual Studio Yükleyicisi 
 
 1. yükleyicide, yüklediğiniz Visual Studio sürümünü bulun ve ardından **değiştir**' i seçin.
 
-     ![Visual Studio Yükleyicisi Visual Studio yüklemelerinin listesini gösteren ekran görüntüsü.](media/vs-2019/vs-installer-modify.png "2019 Visual Studio'ı seçin ve ardından değiştir")
+     ![Visual Studio Yükleyicisi Visual Studio yüklemelerinin listesini gösteren ekran görüntüsü.](media/vs-2019/vs-installer-modify.png "Visual Studio 2019 sürümünü seçin ve ardından değiştirin")
 
      > [!IMPORTANT]
      > Bekleyen bir güncelleştirmeniz varsa Değiştir düğmesi farklı bir yerdir. bu şekilde, Visual Studio güncelleştirmek zorunda kalmadan değişiklik yapabilirsiniz. **Daha fazla**' yı seçin ve ardından **Değiştir**' i seçin.
      >
-     > ![bir güncelleştirme beklendiğinde daha fazla açılan menüde bulunan Visual Studio Yükleyicisi değiştir düğmesini gösteren ekran görüntüsü.](media/vs-2019/modify-update-visual-studio.png "2019'Visual Studio güncelleştirme veya değiştirme")
+     > ![bir güncelleştirme beklendiğinde daha fazla açılan menüde bulunan Visual Studio Yükleyicisi değiştir düğmesini gösteren ekran görüntüsü.](media/vs-2019/modify-update-visual-studio.png "Visual Studio güncelleştirin veya değiştirin 2019")
 
 ::: moniker-end
 
@@ -105,19 +105,19 @@ Visual Studio yüklemenizi değiştirmek için önce Visual Studio Yükleyicisi 
 
    - Windows Başlat menüsü, "yükleyici" araması yapabilir ve sonra sonuçlardan **Visual Studio Yükleyicisi** ' u seçebilirsiniz.
 
-     ![Visual Studio Yükleyicisi için Başlat menüsü aramasının sonucunu gösteren ekran görüntüsü.](media/vs-2022/vs-installer.png "Arama Visual Studio Yükleyicisi")
+     ![Visual Studio Yükleyicisi için Başlat menüsü aramasının sonucunu gösteren ekran görüntüsü.](media/vs-2022/vs-installer.png "Visual Studio Yükleyicisi arayın")
 
    - bu yolda bulunan Visual Studio Yükleyicisi çalıştırılabilir dosyasını çalıştırın:`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
    - Visual Studio açıksa **araçlar** > **ve özellikler al**' ı seçin. Visual Studio Yükleyicisi açan araçlar... seçeneğini belirleyin.
 
-     ![Visual Studio 2022 araçlar menüsünü gösteren ekran görüntüsü.](media/vs-2022/vs-tools-menu.png "Visual Studio 2022 araçları menüsü")
+     ![Visual Studio 2022 araçlar menüsünü gösteren ekran görüntüsü.](media/vs-2022/vs-tools-menu.png "Visual Studio 2022 araçlar menüsü")
 
    devam etmeden önce Visual Studio Yükleyicisi güncelleştirmeniz istenebilir. Bu durumda, istemleri izleyin.
 
 1. Visual Studio Yükleyicisi, değiştirmek istediğiniz Visual Studio yüklemeyi bulun ve **değiştir** düğmesini seçin.
 
-     ![Visual Studio Yükleyicisi Visual Studio yüklemelerinin listesini gösteren ekran görüntüsü.](media/vs-2022/vs-installer-modify.png "Değiştirecek Visual Studio bir yükleme seçin")
+     ![Visual Studio Yükleyicisi Visual Studio yüklemelerinin listesini gösteren ekran görüntüsü.](media/vs-2022/vs-installer-modify.png "değiştirilecek Visual Studio yükleme seçin")
 
 ::: moniker-end
 
@@ -131,11 +131,11 @@ Visual Studio yüklemenizi değiştirmek için önce Visual Studio Yükleyicisi 
 
    alternatif olarak, Visual Studio yüklemenizi özelleştirmek için iş yüklerini kullanmak istemiyorsanız, **tek tek bileşenler** sekmesini seçin ve istediğiniz bileşenleri seçin ve ardından istemleri izleyin.
 
-    ![Visual Studio Yükleyicisi iş yükleri sekmesini gösteren ekran görüntüsü.](media/modify-workloads.png "Visual Studio 2017'de iş yükü seçme")
+    ![Visual Studio Yükleyicisi iş yükleri sekmesini gösteren ekran görüntüsü.](media/modify-workloads.png "Visual Studio 2017 ' de bir iş yükü seçin")
 
 1. **İndirme sırasında varsayılan yüklemeyi** kabul etmek mi yoksa **Tümünü indir ve yükle** seçeneğini belirleyin.
 
-    ![Visual Studio Yükleyicisi indirme ve yükleme seçeneklerini gösteren ekran görüntüsü.](media/vs-2019/vs-installer-choose-install-or-download.png "İndirme sırasında yükleme veya ilk olarak indirmeyi ve daha sonra yüklemeyi seçin")
+    ![Visual Studio Yükleyicisi indirme ve yükleme seçeneklerini gösteren ekran görüntüsü.](media/vs-2019/vs-installer-choose-install-or-download.png "İlk kez karşıdan yükleme veya indirme sırasında yüklemeyi seçin ve daha sonra yükleyin")
 
     Önce indirmek ve sonra yüklemek istiyorsanız "tümünü Indir ve Yükle" seçeneği kullanışlıdır.
 
@@ -156,11 +156,11 @@ Visual Studio yüklemenizi değiştirmek için önce Visual Studio Yükleyicisi 
 
 1. Visual Studio Yükleyicisi, **iş yükleri** sekmesini seçin ve ardından istediğiniz iş yüklerini seçin veya seçimini kaldırın.
 
-    ![Visual Studio Yükleyicisi iş yükleri sekmesini gösteren ekran görüntüsü.](media/vs-2019/vs-installer-modify-workloads.png "Visual Studio 2019'da iş yükü seçme")
+    ![Visual Studio Yükleyicisi iş yükleri sekmesini gösteren ekran görüntüsü.](media/vs-2019/vs-installer-modify-workloads.png "Visual Studio 2019 ' de bir iş yükü seçin")
 
 1. **İndirme sırasında varsayılan yüklemeyi** kabul etmek mi yoksa **Tümünü indir ve yükle** seçeneğini belirleyin.
 
-    ![Visual Studio Yükleyicisi indirme ve yükleme seçeneklerini gösteren ekran görüntüsü.](media/vs-2019/vs-installer-choose-install-or-download.png "İndirme sırasında yükleme veya ilk olarak indirmeyi ve daha sonra yüklemeyi seçin")
+    ![Visual Studio Yükleyicisi indirme ve yükleme seçeneklerini gösteren ekran görüntüsü.](media/vs-2019/vs-installer-choose-install-or-download.png "İlk kez karşıdan yükleme veya indirme sırasında yüklemeyi seçin ve daha sonra yükleyin")
 
     Önce indirmek ve sonra yüklemek istiyorsanız "tümünü Indir ve Yükle" seçeneği kullanışlıdır.
 
@@ -179,15 +179,15 @@ Visual Studio yüklemenizi değiştirmek için önce Visual Studio Yükleyicisi 
 
 1. Visual Studio Yükleyicisi, **iş yükleri** sekmesini seçin ve ardından istediğiniz iş yüklerini seçin veya seçimini kaldırın.
 
-    ![Visual Studio Yükleyicisi iş yükleri sekmesini gösteren ekran görüntüsü.](media/vs-2022/vs-installer-modify-workloads.png "İş yüklerini Visual Studio Yükleyicisi")
+    ![Visual Studio Yükleyicisi iş yükleri sekmesini gösteren ekran görüntüsü.](media/vs-2022/vs-installer-modify-workloads.png "Visual Studio Yükleyicisi iş yüklerini seçin")
 
 1. Bir iş yükü yüklemesine göre daha fazla bileşen eklemek için, **tek tek bileşenler** sekmesini seçin ve istediğiniz bileşenleri seçin veya seçimi kaldırın.
 
-    ![Visual Studio Yükleyicisi bireysel bileşenler sekmesini gösteren ekran görüntüsü.](media/vs-2022/vs-installer-individual-components.png "Sistem içinde tek tek bileşenleri Visual Studio Yükleyicisi")
+    ![Visual Studio Yükleyicisi bireysel bileşenler sekmesini gösteren ekran görüntüsü.](media/vs-2022/vs-installer-individual-components.png "Visual Studio Yükleyicisi bireysel bileşenleri seçin")
 
 1. Yükleme veya Indirme **sırasında yüklemek** isteyip istemediğinizi seçin **, sonra yükleyin**. **İndirme sırasında** varsayılan seçenek olan yükleme, daha önce yüklemeyi başlatarak genel saati kaydeder.
 
-    ![Visual Studio Yükleyicisi indirme ve yükleme seçeneklerini gösteren ekran görüntüsü.](media/vs-2022/vs-installer-choose-install-or-download.png "Uygulamanın içinde sıra seçeneklerini indirme ve Visual Studio Yükleyicisi")
+    ![Visual Studio Yükleyicisi indirme ve yükleme seçeneklerini gösteren ekran görüntüsü.](media/vs-2022/vs-installer-choose-install-or-download.png "Visual Studio Yükleyicisi dizi seçeneklerini indirin ve yükleyin")
 
 1. **Değiştir**'i seçin.
 

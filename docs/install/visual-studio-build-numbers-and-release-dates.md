@@ -1,23 +1,23 @@
 ---
 title: Visual Studio derleme numaraları ve yayın tarihleri
 titleSuffix: ''
-description: Tarihe göre sıralanmış şekilde, Visual Studio sürümlerin ve derleme numaralarının listesi.
+description: Sürümler için yayımlanan sürümlerin ve derleme numaralarının Visual Studio göre sıralanmış listesi.
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.date: 09/20/2021
+ms.date: 10/05/2021
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: b5477e4e961bb23a1d5f10b5c123ade4d3772a54
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 106025cb29a3b1a753fbe4b6f3b2e04f31f1ecd8
+ms.sourcegitcommit: d63ba1eff845d41ca095efb14b499ea96c4b6eba
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128429746"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "129560860"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio derleme numaraları ve yayın tarihleri
 
@@ -25,7 +25,7 @@ ms.locfileid: "128429746"
 
 ## <a name="visual-studio-2022-preview"></a>Visual Studio 2022 Preview
 
-Aşağıdaki tabloda, 2022 Preview sürümü için Visual Studio numaraları ve yayın tarihleri listelemektedir.
+Aşağıdaki tabloda, 2022 Preview sürümüne Visual Studio numaraları ve yayın tarihleri listelemektedir.
 
 | **Sürüm**| **Kanal** | **Sürüm tarihi** | **Derleme sürümü** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
@@ -51,6 +51,7 @@ Aşağıdaki tabloda, 2019'dan bugüne kadar Visual Studio numaraları ve yayın
 
 | **Sürüm**| **Kanal** | **Sürüm tarihi** | **Derleme sürümü** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.11.4 | Yayınla | 5 Ekim 2021 | 16.11.31727.386 |
 | 16.11.3 | Yayınla | 14 Eylül 2021 | 16.11.31702.278 |
 | 16.9.11 | Yayınla | 14 Eylül 2021 | 16.9.31702.126 |
 | 16.7.19 | Yayınla | 14 Eylül 2021 | 16.7.31701.349 |
@@ -171,7 +172,7 @@ Aşağıdaki tabloda, 2019'dan bugüne kadar Visual Studio numaraları ve yayın
 | 16.4.7 | Yayınla | 14 Nisan 2020 | 16.4.30011.19 |
 | 16.5.4 | Yayınla | 14 Nisan 2020 | 16.5.30011.22 |
 | 16.5.3 | Yayınla | 7 Nisan 2020 | 16.5.30002.166 |
-| 16.6.0 | Önizleme 2,1 | 2 Nisan 2020 | 16.6.30001.183 |
+| 16.6.0 | Önizleme 2.1 | 2 Nisan 2020 | 16.6.30001.183 |
 | 16.5.2 | Yayınla | 31 Mart 2020 | 16.5.29926.136 |
 | 16.6.0 | Önizleme 2 | 26 Mart 2020 | 16.6.29924.181 |
 | 16.5.1 | Yayınla | 24 Mart 2020 | 16.5.29920.165 |
@@ -245,29 +246,29 @@ Aşağıdaki tabloda, 2019'dan bugüne kadar Visual Studio numaraları ve yayın
 | 16.0.1 | Önizleme 1 | 9 Nisan 2019 | 16.0.28803.156 |
 | 16.0.0 | Yayınla | 2 Nisan 2019 | 16.0.28729.10 |
 | 16.0.0 | Preview 5 | 2 Nisan 2019 | 16.0.28729.10 |
-| 16.0.0 | Sürüm Adayı 4 (RC.4) | 26 Mart 2019 | 16.0.28721.148 |
-| 16.0.0 | Önizleme 4.4 | 26 Mart 2019 | 16.0.28721.148 |
-| 16.0.0 | Sürüm Adayı 3 (RC.3) | 19 Mart 2019 | 16.0.28714.193 |
-| 16.0.0 | Önizleme 4.3 | 19 Mart 2019 | 16.0.28714.193 |
-| 16.0.0 | Sürüm Adayı 2 (RC.2) | 12 Mart 2019 | 16.0.28711.60 |
-| 16.0.0 | Önizleme 4.2 | 12 Mart 2019 | 16.0.28711.60 |
-| 16.0.0 | Sürüm Adayı 1 Svc1 (RC.1 Svc1) | 6 Mart 2019 | 16.0.28705.295 |
-| 16.0.0 | Önizleme 4.1 Svc1 | 6 Mart 2019 | 16.0.28705.295 |
-| 16.0.0 | Sürüm Adayı 1 (RC.1) | 5 Mart 2019 | 16.0.28701.123 |
-| 16.0.0 | Önizleme 4.1 | 5 Mart 2019 | 16.0.28701.123 |
-| 16.0.0 | Sürüm Adayı (RC) | 27 Şubat 2019 | 16.0.28625.133 |
+| 16.0.0 | Sürüm adayı 4 (RC. 4) | 26 Mart 2019 | 16.0.28721.148 |
+| 16.0.0 | Önizleme 4,4 | 26 Mart 2019 | 16.0.28721.148 |
+| 16.0.0 | Sürüm adayı 3 (RC. 3) | 19 Mart 2019 | 16.0.28714.193 |
+| 16.0.0 | Önizleme 4,3 | 19 Mart 2019 | 16.0.28714.193 |
+| 16.0.0 | Sürüm adayı 2 (RC. 2) | 12 Mart 2019 | 16.0.28711.60 |
+| 16.0.0 | Önizleme 4,2 | 12 Mart 2019 | 16.0.28711.60 |
+| 16.0.0 | Release Candidate 1 Svc1 (RC. 1 Svc1) | 6 Mart 2019 | 16.0.28705.295 |
+| 16.0.0 | Önizleme 4,1 Svc1 | 6 Mart 2019 | 16.0.28705.295 |
+| 16.0.0 | Sürüm adayı 1 (RC. 1) | 5 Mart 2019 | 16.0.28701.123 |
+| 16.0.0 | Önizleme 4,1 | 5 Mart 2019 | 16.0.28701.123 |
+| 16.0.0 | Sürüm adayı (RC) | 27 Şubat 2019 | 16.0.28625.133 |
 | 16.0.0 | Preview 4 | 27 Şubat 2019 | 16.0.28625.133 |
 | 16.0.0 | Preview 3 | 13 Şubat 2019 | 16.0.28608.199 |
-| 16.0.0 | Önizleme 2.2 | 5 Şubat 2019 | 16.0.28602.52 |
-| 16.0.0 | Önizleme 2.1 | 31 Ocak 2019 | 16.0.28529.54 |
+| 16.0.0 | Önizleme 2,2 | 5 Şubat 2019 | 16.0.28602.52 |
+| 16.0.0 | Önizleme 2,1 | 31 Ocak 2019 | 16.0.28529.54 |
 | 16.0.0 | Önizleme 2 | 23 Ocak 2019 | 16.0.28522.59 |
-| 16.0.0 | Önizleme 1.1 | 10 Aralık 2018 | 16.0.28408.50 |
+| 16.0.0 | Önizleme 1,1 | 10 Aralık 2018 | 16.0.28408.50 |
 | 16.0.0 | Önizleme 1 | 4 Aralık 2018 | 16.0.28329.73 |
 
 > [!NOTE]
-> Önceki sürüme göre verileri *görüntülemek* için [bkz. Visual Studio 2017 derleme numaraları ve yayın tarihleri.](visual-studio-build-numbers-and-release-dates.md?view=vs-2017&preserve-view=true)
+> *önceki* sürümün verilerini görüntülemek için, bkz. [Visual Studio 2017 derleme numaraları ve sürüm tarihleri](visual-studio-build-numbers-and-release-dates.md?view=vs-2017&preserve-view=true).
 >
->Sonraki sürüme göre verileri *görüntülemek* için [bkz. Visual Studio 2022 derleme numaraları ve yayın tarihleri.](visual-studio-build-numbers-and-release-dates.md?view=vs-2022&preserve-view=true)
+>*sonraki* sürümün verilerini görüntülemek için, bkz. [Visual Studio 2022 derleme numaraları ve sürüm tarihleri](visual-studio-build-numbers-and-release-dates.md?view=vs-2022&preserve-view=true).
 
 ::: moniker-end
 
@@ -275,9 +276,9 @@ Aşağıdaki tabloda, 2019'dan bugüne kadar Visual Studio numaraları ve yayın
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-Aşağıdaki tabloda, 2017'den bugüne kadar Visual Studio numaraları ve yayın tarihleri listelemektedir.
+aşağıdaki tabloda Visual Studio 2017 için derleme numaraları ve sürüm tarihleri listelenmektedir.
 
-| **Sürüm**      | **Kanal** | **Sürüm tarihi**   | **Derleme sürümü** |
+| **Sürüm**      | **Kanal** | **Yayın tarihi**   | **Derleme sürümü** |
 |------------------|-------------|--------------------|-------------------|
 | 15.9.39          | Yayınla     | 14 Eylül 2021 | 15.9.28307.1684   |
 | 15.9.38          | Yayınla     | 10 Ağustos 2021    | 15.9.28307.1622   |
@@ -328,7 +329,7 @@ Aşağıdaki tabloda, 2017'den bugüne kadar Visual Studio numaraları ve yayın
 | 15.9.2           | Yayınla     | 19 Kasım 2018  | 15.9.28307.108    |
 | 15.9.1           | Yayınla     | 15 Kasım 2018  | 15.9.28307.105    |
 | 15.9.0           | Yayınla     | 13 Kasım 2018  | 15.9.28307.53     |
-| 15.9.0 Önizleme 6 | Önizleme     | 13 Kasım 2018  | 15.9.28307.53     |
+| 15.9.0 Preview 6 | Önizleme     | 13 Kasım 2018  | 15.9.28307.53     |
 | 15.9.0 Önizleme 5 | Önizleme     | 6 Kasım 2018   | 15.9.28302.56     |
 | 15.8.9           | Yayınla     | 2 Kasım 2018   | 15.8.28010.2050   |
 | 15.8.8           | Yayınla     | 24 Ekim 2018   | 15.8.28010.2048   |
