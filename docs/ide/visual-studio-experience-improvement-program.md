@@ -9,12 +9,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: a70cc43572d912c0d948a8853ab6cb695a6451ff
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 251b440853520bc18e918082cc9607ed2a15ebec
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122150826"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635626"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Visual Studio Müşteri Deneyimini Geliştirme Programı
 
@@ -73,7 +73,6 @@ VSCEıP tarafından toplanan, işlenen veya aktarılan bilgiler hakkında daha f
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio tarafından toplanan tanılama bilgileri](diagnostic-data-collection.md)
-* [Visual Studio geri bildirim seçenekleri](../ide/feedback-options.md)
 * [Visual Studio sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md)
-* [Visual Studio Geliştirici Community](https://aka.ms/feedback/suggest?space=8)
+* [Visual Studio Geliştirici Community](https://developercommunity.visualstudio.com/home)
 * [Microsoft Gizlilik Bildirimi](https://privacy.microsoft.com/privacystatement)

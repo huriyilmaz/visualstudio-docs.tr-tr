@@ -13,12 +13,12 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: 9a89f83ecaa4545eb6151c7a92e76a08708c3855
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 4f02ad6afae0ba53fdc0776ce4093db37ae24493
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725504"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635743"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları’nı Kullanma
 
@@ -172,7 +172,7 @@ Mac için Visual Studio **durdur** düğmesine tıklayın veya **shıft + Comman
 
 :::zone-end
 
-Visual Studio 'de hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio hata ayıklayıcısına](/debugger/debugger-feature-tour.md)bakın.
+Visual Studio 'de hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio hata ayıklayıcısına](/visualstudio/debugger/debugger-feature-tour)bakın.
 
 #### <a name="attach-to-unity-and-play"></a>Unity 'ye Ekle ve Yürüt
 
@@ -230,76 +230,76 @@ Visual Studio Unity oynatıcıların geliştirme Derlemeleriyle ilgili hata ayı
    **Bağlantı noktası** Bu Unity örneğinin iletişim kurduğu UDP yuvasının bağlantı noktası numarası.
 
 > [!IMPORTANT]
-> Ağ Unity için Visual Studio Araçları Unity örneği bir UDP ağ yuvası üzerinden iletişim kurduğundan, güvenlik duvarınıza izin vermek için kural gerekebilir. Gerekirse, VSTU ve Unity'nin iletişim kura çalışması için bağlantıyı yetkilendirmek için bir istemle karşılaşmanız gerekir.
+> Unity için Visual Studio Araçları ve Unity örneği bir UDP ağ yuvası üzerinden iletişim kurduğundan, güvenlik duvarınız buna izin vermek için kural gerekebilir. Gerekirse, bir istem görebilirsiniz, bu durumda, VSTU ve Unity 'nin iletişim kurabilmesi için bağlantıyı yetkilendirmeniz gerekir.
 
 :::zone-end
 :::zone pivot="macos"
 
-- Bu Mac için Visual Studio üst menüde Çalıştır'ı seçin **ve > Ekle'yi seçin.** 
-- İşleme **Ekle iletişim kutusunda,** alttaki **Hata Ayıklayıcı** açılan menüsünde Unity Hata Ayıklayıcısı seçeneğini belirleyin.
-- Listeden bir Unity örneği seçin ve Ekle **düğmesine** tıklayın.
+- Mac için Visual Studio, üstteki menüden, **işlemek için > çalıştır**' ı seçin. 
+- **Işleme İliştir** iletişim kutusunda, alt kısımdaki hata ayıklayıcı açılan menüsünde **Unity hata ayıklayıcı** seçeneğini belirleyin.
+- Listeden bir Unity örneği seçin ve **Ekle** düğmesine tıklayın.
 
 :::zone-end
 
-### <a name="debug-a-dll-in-your-unity-project"></a>Unity projenizin DLL'sinde hata ayıklama
+### <a name="debug-a-dll-in-your-unity-project"></a>Unity projenizde DLL hatalarını ayıklama
 
-Birçok Unity geliştiricisi, geliştirecekleri işlevselliğin diğer projelerle kolayca paylaşılamalarını sağlamak için kod bileşenlerini dış URL'ler olarak yazıyor. Unity için Visual Studio Araçları, Unity projenizin diğer kodlarla bu URL'lerde hata ayıklamayı kolaylaştırır.
-
-> [!NOTE]
-> Şu anda, Unity için Visual Studio Araçları yönetilen URL'leri destekler. C++ ile yazılanlar gibi yerel kod URL'lerinde hata ayıklamayı desteklemez.
-
-Burada açıklanan senaryoda kaynak kodunuz olduğu varsayılır; yani kendi birinci taraf kodunuzu geliştiriyor veya yeniden kullanıyorsanız ya da kaynak kodunuz üçüncü taraf bir kitapliğe sahipse ve bunu Unity projenize DLL olarak dağıtmayı planlasanız. Bu senaryo, kaynak koduna sahip olmadığınız bir DLL'de hata ayıklamayı açıklamaz.
-
-#### <a name="to-debug-a-managed-dll-project-used-in-your-unity-project"></a>Unity projesinde kullanılan yönetilen DLL projesinde hata ayıklamak için
-
-1. Mevcut DLL projenizi, Visual Studio tarafından oluşturulan çözüme Unity için Visual Studio Araçları. Daha az yaygın olarak, Unity projenize kod bileşenlerini içeren yeni bir yönetilen DLL projesi başlatıyor olabilir; Bu durumda, bunun yerine yeni bir yönetilen DLL projesini Visual Studio eklersiniz.
-
-   ![Mevcut DLL projenizi çözüme ekleyin.](../media/vs/vstu-debugging-dll-add-existing.png "vstu_debugging_dll_add_existing")
-
-   Her iki Unity için Visual Studio Araçları proje ve çözüm dosyalarını yeniden oluşturması gerekse bile proje başvurularını korumanız gerekir, bu nedenle bu adımları yalnızca bir kez gerçekleştirmeniz gerekir.
-
-2. DLL projesinde doğru Unity framework profiline bakın. Bu Visual Studio DLL projesinin özelliklerinde **Target framework** özelliğini kullanmakta olan Unity framework sürümüne ayarlayın. Bu, Unity tam, mikro veya web temel sınıf kitaplıkları gibi projenizin hedefle olduğu API uyumluluğuyla eşleşen Unity Temel Sınıf Kitaplığı'dır. Bu, DLL'nizin diğer çerçevelerde veya uyumluluk düzeylerinde mevcut olan ancak kullanmakta olan Unity framework sürümünde mevcut olmayan çerçeve yöntemlerini çağırmasına engel olur.
+Birçok Unity geliştiricisi, geliştirme işlevlerinin diğer projelerle kolayca paylaşılması için kod bileşenlerini dış dll 'Ler olarak yazıyor. Unity için Visual Studio Araçları, bu dll 'lerdeki kodun, Unity projenizdeki diğer kodla sorunsuz bir şekilde ayıklanabilmesini kolaylaştırır.
 
 > [!NOTE]
-> Aşağıdakiler yalnızca Unity'nin eski çalışma zamanı kullanıyorsanız gereklidir. Yeni Unity çalışma zamanı kullanıyorsanız, artık bu ayrılmış 3.5 profillerini kullanmana gerek yoktur. Unity sürümünüzle uyumlu bir .NET 4.x profili kullanın.
+> şu anda Unity için Visual Studio Araçları yalnızca yönetilen dll 'leri destekler. C++ dilinde yazılmış olanlar gibi yerel kod dll 'Lerinde hata ayıklamayı desteklemez.
 
-   ![DLL'nin hedef çerçevesini Unity çerçevesi olarak ayarlayın.](../media/vs/vstu-debugging-dll-target-framework.png "vstu_debugging_dll_target_framework")
+Burada açıklanan senaryo kaynak koda sahip olduğunuzu varsayar. Yani, kendi birinci taraf kodunuzu geliştirdiğinizi veya yeniden kullandığınızı veya bir üçüncü taraf kitaplığına kaynak kodu kullandığınızı ve bunu bir DLL olarak Unity projenizde dağıtmayı planladığınızı unutmayın. Bu senaryo, kaynak kodu olmayan bir DLL 'nin hata ayıklamasını tanımlamaz.
 
-3. DLL'i Unity projenizin Varlık klasörüne kopyalayın. Unity'de varlıklar, çalışma zamanında yüklensin diye Unity uygulamanız ile birlikte paketlenmiş ve dağıtılan dosyalardır. URL'ler çalışma zamanında bağlı olduğu için, URL'lerin varlıklar olarak dağıtılması gerekir. Unity Düzenleyicisi' nin varlık olarak dağıtılması için, UNITY'lerin Unity projenizin Assets klasörüne konmalarını gerektirir. Bunu iki şekilde yapabilirsiniz:
+#### <a name="to-debug-a-managed-dll-project-used-in-your-unity-project"></a>Unity projenizde kullanılan bir yönetilen DLL projesinde hata ayıklamak için
 
-   - DLL projenizin derleme ayarlarını, çıkış klasöründeki çıkış DLL'sini ve PDB dosyalarını Unity projenizin **Assets** klasörüne kopyalanan bir post-built görevi içerecek şekilde değiştirin.
+1. mevcut DLL projenizi Unity için Visual Studio Araçları tarafından oluşturulan Visual Studio çözümüne ekleyin. Daha az yaygın olarak, Unity projenizde kod bileşenleri içeren yeni bir yönetilen DLL projesi başlatıyorsunuz olabilirsiniz; bu durumda, bunun yerine Visual Studio çözümüne yeni bir yönetilen DLL projesi ekleyebilirsiniz.
 
-   - DLL projenizin derleme ayarlarını değiştirerek çıkış klasörünü Unity projenizin **Assets** klasörü olarak ayarlayın. Hem DLL hem de PDB dosyaları **Varlıklar klasörüne yerleştirilir.**
+   ![Varolan DLL projenizi çözüme ekleyin.](../media/vs/vstu-debugging-dll-add-existing.png "vstu_debugging_dll_add_existing")
 
-   DLL'nin hata ayıklama sembollerini içerdiği ve DLL kodunu kaynak kod formuyla eşleyebilecekleri için PDB dosyaları hata ayıklama için gereklidir. Eski çalışma zamanının hedefini kullanıyorsanız, Unity için Visual Studio Araçları DLL ve PDB'den bilgileri kullanarak eski Unity betik altyapısı tarafından kullanılan hata ayıklama sembol biçimi olan DLL.MDB dosyasını oluşturur. Yeni çalışma zamanının hedefini kullanıyorsanız ve Taşınabilir PDB kullanıyorsanız, yeni Unity çalışma zamanı Taşınabilir PDB'leri yerel olarak kullanamayacagın Unity için Visual Studio Araçları herhangi bir sembol dönüştürmesi yapmaya çalışmaz.
+   her iki Unity için Visual Studio Araçları durumda da, proje başvurusunu ve çözüm dosyalarını yeniden oluşturmak zorunda olsa bile, bu adımları yalnızca bir kez gerçekleştirmeniz gerekir.
 
-   PDB oluşturma hakkında daha fazla bilgi için buraya [bakın.](/debugger/how-to-set-debug-and-release-configurations.md) Yeni çalışma zamanının hedefini kullanıyorsanız, Taşınabilir PDB'nin düzgün bir şekilde oluşturularak "Hata Ayıklama Bilgileri"nin "Taşınabilir" olarak ayarlanmış olduğundan emin olun. Eski çalışma zamanının hedefini kullanıyorsanız "Tam" kullansanız iyi olur.
+2. DLL projesinde doğru Unity Framework profiline başvurun. Visual Studio ' de, DLL projesinin özelliklerinde, **hedef framework** özelliğini, kullanmakta olduğunuz Unity çerçevesi sürümüne ayarlayın. Bu, projenizin hedeflediği, Unity Full, mikro veya Web temel sınıf kitaplıkları gibi API uyumluluğuyla eşleşen Unity temel sınıf kitaplığıdır. Bu, DLL 'nizin diğer çerçeveler veya uyumluluk düzeylerinde bulunan ancak kullanmakta olduğunuz Unity çerçevesi sürümünde mevcut olmayan çerçeve yöntemlerini aramasını engeller.
 
-4. Kodunuzun hata ayıklaması. Artık UNITY projenizin kaynak koduyla birlikte DLL kaynak kodunuzun hatasını ayıkabilir ve kesme noktaları ve kodda adımlama gibi kullanılan tüm hata ayıklama özelliklerini kullanabilirsiniz.
+> [!NOTE]
+> Yalnızca Unity 'nin eski çalışma zamanını kullanıyorsanız, şunlar gereklidir. Yeni Unity çalışma zamanını kullanıyorsanız, bu adanmış 3,5 profillerini artık kullanmanız gerekmez. Unity sürümünüz ile uyumlu bir .NET 4. x profili kullanın.
+
+   ![DLL 'nin hedef çerçevesini Unity çerçevesi olarak ayarlayın.](../media/vs/vstu-debugging-dll-target-framework.png "vstu_debugging_dll_target_framework")
+
+3. DLL 'yi Unity projenizin varlık klasörüne kopyalayın. Unity 'de varlıklar, çalışma zamanında yüklenebilmeleri için paketlenmiş ve Unity uygulamanız ile birlikte dağıtılan dosyalardır. Dll 'Ler çalışma zamanında bağlı olduğundan, dll 'Ler varlık olarak dağıtılmalıdır. Bir varlık olarak dağıtılması için Unity Düzenleyicisi, dll 'Lerin Unity projenizdeki varlıklar klasörünün içine yerleştirilmesi gerekir. Bunu iki şekilde yapabilirsiniz:
+
+   - DLL projenizin derleme ayarlarını, çıkış DLL ve PDB dosyalarını, çıktı klasöründen Unity projenizin **varlıklar** klasörüne kopyalayan bir oluşturma sonrası görevi içerecek şekilde değiştirin.
+
+   - Çıkış klasörünü Unity projenizin **varlıklar** klasörü olacak şekilde ayarlamak için dll projenizin derleme ayarlarını değiştirin. Hem DLL hem de PDB dosyaları **varlıklar** klasörüne yerleştirilir.
+
+   DLL 'nin hata ayıklama sembollerini içerdiğinden ve DLL kodunu kaynak kodu formuyla eşlediklerinden, PDB dosyaları hata ayıklama için gereklidir. eski çalışma zamanını hedefliyorsanız Unity için Visual Studio Araçları, eski Unity betik altyapısı tarafından kullanılan hata ayıklama sembol biçimi olan dll. MDB dosyasını oluşturmak için dll ve PDB 'den bilgi kullanacaktır. yeni bir çalışma zamanını hedefliyorsanız ve taşınabilir-PDB kullanıyorsanız, yeni Unity çalışma zamanı yerel olarak taşınabilir-pdb 'leri tüketebileceği için Unity için Visual Studio Araçları herhangi bir sembol dönüştürmesi yapmayı denemeyecektir.
+
+   PDB oluşturma hakkında daha fazla bilgiyi [burada](/visualstudio/debugger/how-to-set-debug-and-release-configurations)bulabilirsiniz. Yeni çalışma zamanını hedefliyorsanız, taşınabilir-PDB ' yi düzgün bir şekilde oluşturmak için "hata ayıklama bilgileri" ın "taşınabilir" olarak ayarlandığından emin olun. Eski çalışma zamanını hedefliyorsanız, "Full" kullanmanız gerekir.
+
+4. Kodunuzda hata ayıklayın. Artık DLL kaynak kodunuzda, Unity projenizin kaynak kodu ile birlikte hata ayıklama yapabilir ve kesme noktaları ve kod üzerinden atlama gibi tüm hata ayıklama özelliklerini kullanabilirsiniz.
 
 ## <a name="keyboard-shortcuts"></a>Klavye kısayolları
 
-Klavye kısayollarını kullanarak unity Visual Studio hızlı bir şekilde erişebilirsiniz. Burada, kullanılabilen kısayolların özeti ve bulunmaktadır.
+Visual Studio işlevselliği için Unity araçlarına, klavye kısayollarını kullanarak hızlı bir şekilde erişebilirsiniz. Mevcut kısayolların özeti aşağıda verilmiştir.
 
 :::zone pivot="windows"
 
 |Komut|Kısayol|Kısayol komutu adı|
 |-------------|--------------|---------------------------|
-|MonoBehavior Sihirbazı'nı açın|**Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **M**|**EditorContextMenus.CodeWindow.ImplementMonoBehaviours**|
-|Unity Project Explorer'ı açın|**Alt** + **Shift ile kaydırma** + **E**|**View.UnityProjectExplorer**|
-|Unity belgelerine erişme|**Ctrl tuşunu basılı tutarak** + **Alt** + **M, Ctrl** + **H**|**Help.UnityAPIReference**|
-|Unity hata ayıklayıcısına ekleme (oynatıcı veya düzenleyici)|**_varsayılan yok_**|**Debug.AttachUnityDebugger**|
+|MonoBehavior sihirbazını açın|**CTRL** + **SHIFT** + **A**|**EditorContextMenus. CodeWindow. ImplementMonoBehaviours**|
+|Unity Project gezginini açın|**Alt** + **SHIFT** + **E**|**View. Unityprojecbir**|
+|Unity belgelerine erişin|**CTRL** + **Alt** + **A, CTRL** + **H**|**Help. UnityAPIReference**|
+|Unity hata ayıklayıcıya (oynatıcı veya düzenleyici) iliştirme|**_Varsayılan değer yok_**|**Debug. AttachUnityDebugger**|
 
-Varsayılanı 100'den fazla 300'e kadar olan tüm kısayol tuş bileşimlerini değiştirebilirsiniz. Nasıl değiştirebileceğiniz hakkında bilgi için bkz. Visual Studio' içinde [klavye kısayollarını tanımlama ve özelleştirme.](/docs/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
+Varsayılan ' i beğenmezseniz kısayol tuşu kombinasyonlarını değiştirebilirsiniz. Nasıl değiştirileceği hakkında bilgi için bkz. [Visual Studio klavye kısayollarını belirleme ve özelleştirme](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 :::zone-end
 :::zone pivot="macos"
 
 |Komut|Kısayol|Kısayol komutu adı|
 |-------------|--------------|---------------------------|
-|MonoBehavior Sihirbazı'nı açın|**Cmd** + **Shift ile kaydırma** + **M**|**EditorContextMenus.CodeWindow.ImplementMonoBehaviours**|
-|Unity belgelerine erişme|**Cmd+'**|**Help.UnityAPIReference**|
+|MonoBehavior sihirbazını açın|**Cmd** + **SHIFT** + **A**|**EditorContextMenus. CodeWindow. ImplementMonoBehaviours**|
+|Unity belgelerine erişin|**Cmd + '**|**Help. UnityAPIReference**|
 
-Varsayılanı 100'den fazla 300'e kadar olan tüm kısayol tuş bileşimlerini değiştirebilirsiniz. Bunu değiştirme hakkında bilgi için bkz. [IDE'i Özelleştirme.](/mac/customizing-the-ide#key-bingings)
+Varsayılan ' i beğenmezseniz kısayol tuşu kombinasyonlarını değiştirebilirsiniz. Nasıl değiştirileceği hakkında bilgi için bkz. IDE 'yi [Özelleştirme](/visualstudio/mac/customizing-the-ide#key-bingings).
 
 :::zone-end

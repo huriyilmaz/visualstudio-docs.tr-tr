@@ -18,12 +18,12 @@ ms.topic: conceptual
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: a489aaef94f77fcca53402100ef4372c73fa6d00
-ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
+ms.openlocfilehash: bd8558309ac9c389c0254d21339fab4f9029ef51
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129430899"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635756"
 ---
 # <a name="whats-new-in-visual-studio-2017"></a>Visual Studio 2017’deki yenilikler
 
@@ -38,17 +38,17 @@ ms.locfileid: "129430899"
 
 * **[Temelleri yeniden tanımlandı.](#redefined-fundamentals)** Yeni bir kurulum deneyimi, daha hızlı yükleyebilirsiniz ve ihtiyacınız olduğunda istediğiniz şeyi yükleyebilirsiniz.
 * **[Performans ve üretkenlik.](#performance-and-productivity)** Yeni ve modern mobil, bulut ve masaüstü geliştirme özelliklerine odaklandım. Ayrıca Visual Studio, daha hızlı yanıt verir ve öncekinden daha az bellek kullanır.
-* **[Azure ile bulut uygulaması geliştirme.](#cloud-app-development-with-azure)** Yerleşik Bir Azure araçları paketi, buluta özel bir uygulama tarafından desteklenen buluta ilk uygulamaları kolayca Microsoft Azure. Visual Studio, Azure'da uygulama ve hizmetleri yapılandırmayı, derlemeyi, hata ayıklamayı, paketle ve dağıtmayı kolaylaştırır.
-* **[Windows geliştirmeyi seçin.](#windows-app-development)** Pc, tablet, telefon, Xbox, HoloLens, Surface Hub ve daha fazlası için tek bir proje oluşturmak üzere Windows 10 Visual Studio 2017'de UWP şablonlarını &ndash; kullanın.
+* **[Azure ile bulut uygulaması geliştirme.](#cloud-app-development-with-azure)** Azure araçlarının yerleşik bir paketi sayesinde buluta özel uygulamalar oluşturmak için Microsoft Azure. Visual Studio, Azure'da uygulama ve hizmetleri yapılandırmayı, derlemeyi, hata ayıklamayı, paketle ve dağıtmayı kolaylaştırır.
+* **[Windows geliştirmeyi seçin.](#windows-app-development)** Pc, tablet, telefon, Xbox, HoloLens, Surface Hub ve daha fazlası için tüm Windows 10 cihazları için tek bir proje oluşturmak üzere Visual Studio 2017'de UWP &ndash; şablonlarını kullanın.
 * **[Mobil uygulama geliştirme.](#mobile-app-development)** Xamarin ile yenilik yapın ve sonuçları hızla elde edin. Bu, çok platformlu mobil gereksinimlerinizi tek bir çekirdek kod tabanına ve beceri kümesine birler.
-* **[Platformlar arası geliştirme.](#cross-platform-development)** Hedeflenen platformlara sorunsuz bir şekilde yazılım teslimi. Redgate DevOps Araçları aracılığıyla SQL Server işlemlerin süresini uzatarak veritabanı dağıtımlarını güvenli bir şekilde Visual Studio. Veya .NET Core'u kullanarak Windows, Linux ve macOS işletim sistemlerinde değiştirilmeden çalışan uygulamalar ve kitaplıklar yazabilirsiniz.
+* **[Platformlar arası geliştirme.](#cross-platform-development)** Hedeflenen platformlara sorunsuz bir şekilde yazılım teslimi. Redgate DevOps Araçları aracılığıyla SQL Server ve veri kümelerinden veritabanı dağıtımlarını güvenli bir şekilde otomatik hale Visual Studio. Veya .NET Core'u kullanarak Windows, Linux ve macOS işletim sistemlerinde değiştirilmemiş olarak çalışan uygulamalar ve kitaplıklar yazın.
 * **[Oyun geliştirme.](#games-development)** Unity için Visual Studio Araçları (VSTU) ile C# Visual Studio oyun ve düzenleyici betikleri yazmak ve ardından güçlü hata ayıklayıcısını kullanarak hataları bulup düzeltin.
-* **[AI geliştirme.](#ai-development)** AI Visual Studio Araçları özellikleriyle, AI yeniliklerini hızlandırmak için Visual Studio özelliklerini kullanabilirsiniz. Sağlam deneme özellikleri için Learning ile sorunsuz bir şekilde tümleştirin, derin Azure Machine Learning/ AI çözümleri geliştirin, test edin ve dağıtın.
+* **[AI geliştirme.](#ai-development)** AI Visual Studio Araçları özellikleriyle, AI yeniliklerini hızlandırmak için Visual Studio özelliklerini kullanabilirsiniz. Sağlam deneme özellikleri için Learning ile sorunsuz bir şekilde tümleştirin ve Derin Azure Machine Learning/ AI çözümleri geliştirin, test edin ve dağıtın.
 
 > [!NOTE]
-> Visual Studio 2017'de yeni özelliklerin ve işlevlerin tam listesi için [bkz. Geçerli sürüm notları.](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017) Gelecekteki özellik tekliflerini görmek için önizleme sürüm [notlarına bakın.](/visualstudio/releasenotes/vs2017-preview-relnotes?context=visualstudio/default&contextView=vs-2017)
+> 2017'de yeni özelliklerin ve işlevlerin tam Visual Studio için bkz. [Geçerli sürüm notları.](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default&contextView=vs-2017) Gelecekteki özellik tekliflerini görmek için önizleme sürüm [notlarına bakın.](/visualstudio/releasenotes/vs2017-preview-relnotes?context=visualstudio/default&contextView=vs-2017)
 
-Aşağıda, 2017'de yapılan en önemli geliştirmelerden ve yeni özelliklerden bazıları hakkında daha ayrıntılı Visual Studio ve edinebilirsiniz.
+Aşağıda, 2017'de yapılan en önemli geliştirmelerden ve yeni özelliklerden bazıları hakkında Visual Studio ayrıntılı bilgiler ve ardından ve ardından bu Visual Studio edinebilirsiniz.
 
 ## <a name="redefined-fundamentals"></a>Yeniden tanımlanmamış temeller
 
@@ -56,7 +56,7 @@ Aşağıda, 2017'de yapılan en önemli geliştirmelerden ve yeni özelliklerden
 
 Visual Studio, ihtiyacınız olduğunda yalnızca ihtiyacınız olan özellikleri yüklemeyi daha kolay ve daha hızlı hale getirir. Ayrıca temiz bir şekilde de kaldırılır.
 
-Yükleme sırasında dikkat edilen en önemli değişiklik, Visual Studio kurulum deneyimidir. İş **Yükleri sekmesinde** ortak çerçeveleri, dilleri ve platformları temsil edecek şekilde gruplanan yükleme seçeneklerini görebilirsiniz. .NET masaüstü geliştirmeden Windows, Linux ve iOS'ta C++ uygulama geliştirmeye kadar her şeyi kapsar.
+Yükleme sırasında dikkat edilen en önemli değişiklik, Visual Studio deneyimidir. İş **Yükleri sekmesinde** ortak çerçeveleri, dilleri ve platformları temsil edecek şekilde gruplanan yükleme seçeneklerini görebilirsiniz. .NET masaüstü geliştirmeden Windows, Linux ve iOS'ta C++ uygulama geliştirmeye kadar her şeyi kapsar.
 
 Size gereken iş yüklerini seçin ve ihtiyacınız olduğunda bunları değiştirebilirsiniz.
 
@@ -72,15 +72,15 @@ Yeni yükleme deneyimi hakkında daha fazla bilgi edinmek ve bu deneyimi adım a
 
 ### <a name="a-focus-on-accessibility"></a>Erişilebilirlik odaklı
 
-**15.3'te** yeni olan, Visual Studio ve birçok müşteri tarafından kullanılan yardımcı teknolojiler arasındaki uyumluluğu geliştirmek için 1.700'den fazla hedeflenen düzeltme yaptık. Ekran okuyucular, yüksek karşıtlık temaları ve diğer yardımcı teknolojilerle her geçen gün daha uyumlu olan onlarca senaryo vardır. Hata ayıklayıcısı, düzenleyici ve kabukta da önemli geliştirmeler oldu.
+**15.3'te** yeni olan, Visual Studio ve birçok müşteri tarafından kullanılan yardımcı teknolojiler arasındaki uyumluluğu geliştirmek için 1.700'den fazla hedeflenen düzeltme yaptık. Ekran okuyucular, yüksek karşıtlık temaları ve diğer yardımcı teknolojilerle her geçen gün daha uyumlu olan onlarca senaryo vardır. Hata ayıklayıcısı, düzenleyici ve kabukta da önemli iyileştirmeler oldu.
 
-Daha fazla bilgi için Visual Studio [2017 sürüm 15.3'te](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) erişilebilirlik geliştirmeleri blog gönderisi'ne bakın.
+Daha fazla bilgi için Visual Studio [2017 sürüm 15.3'te erişilebilirlik geliştirmeleri blog gönderisi'ne](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) bakın.
 
 ## <a name="performance-and-productivity"></a>Performans ve üretkenlik
 
 ### <a name="sign-in-across-multiple-accounts"></a>Birden çok hesapta oturum açma
 
-Visual Studio, Azure Araçları ve daha birçok Takım Gezgini paylaşmaya olanak sağlayan yeni bir kimlik Microsoft Store hizmeti tanıttık.
+Visual Studio, Azure Araçları ve daha birçok Takım Gezgini paylaşmaya olanak sağlayan yeni bir kimlik Microsoft Store hizmetine yer verdik.
 
 Oturumları daha uzun süreyle de 3.000'e kadar uzamaz. Visual Studio 12 saatte bir yeniden oturum açmanız sorulmaz. Daha fazla bilgi edinmek için [Daha az Visual Studio oturum açma istemleri](https://devblogs.microsoft.com/visualstudio/fewer-visual-studio-sign-in-prompts/) blog gönderisi.
 
@@ -90,13 +90,13 @@ Yeni Visual Studio Merkezi, IDE başlangıç sürenizi iyileştirmenize yardımc
 
 ### <a name="faster-on-demand-loading-of-extensions"></a>Uzantıların isteğe bağlı olarak daha hızlı yüklenmesi
 
-Visual Studio, IDE başlangıcında değil isteğe bağlı olarak yüklensin diye uzantılarını (ve üçüncü taraf uzantılarla çalışmayı) de taşımaya devam ediyor. Başlangıç, çözüm yükü ve yazma performansını etkileyen uzantılar hakkında merak mı ediyor musunuz? Bu bilgileri Performans yönetimine yardımcı  >  **Visual Studio.**
+Visual Studio, IDE başlangıcında değil isteğe bağlı olarak yüklensin diye uzantılarını (ve üçüncü taraf uzantılarla çalışmayı) de taşımasını sağlar. Başlangıç, çözüm yükü ve yazma performansını etkileyen uzantılar hakkında merak mı ediyor musunuz? Bu bilgileri Performans yönetimine yardımcı  >  **Visual Studio.**
 
   ![Visual Studio 2017'de Seçenekler iletişim kutusu](media/vs2017ide-manage-vs-perf.png)
 
 #### <a name="manage-your-extensions-with-roaming-extensions-manager"></a>Dolaşım Uzantıları Yöneticisi ile uzantılarınızı yönetme
 
-Her geliştirme ortamını, sık kullanılan uzantılarınıza sahip olacak şekilde ayarlamak daha Visual Studio. Yeni Dolaşım Uzantısı Yöneticisi, bulutta eşitlenmiş bir liste oluşturarak sık kullanılan tüm uzantılarınızı takip ediyor.
+Her geliştirme ortamını, sık kullanılan uzantılarınız ile birlikte ayarlamak daha kolay bir Visual Studio. Yeni Dolaşım Uzantısı Yöneticisi, bulutta eşitlenmiş bir liste oluşturarak sık kullanılan tüm uzantılarınızı takip ediyor.
 
 Uzantılar'daki uzantıların listesini görmek Visual Studio, Araçlar Uzantıları & Güncelleştirmeler'e ve ardından Gezici Uzantı  >   **Yöneticisi'ne tıklayın.**
 
@@ -110,20 +110,20 @@ Dolaşım Uzantısı Yöneticisi'ni kullanıyorsanız, listeniz üç simge tür�
 
 * ![Dolaşıma alındı ](media/vs2017ide-roamedicon.png) **_simgesi Dolaşıma alındı:_** Bu Dolaşım Listesinin parçası olan ancak makinenize yüklenmemiş bir uzantı.
   (İndir düğmesini kullanarak bunları  yükleyebilirsiniz.)
-* ![Dolaşıma & Simgesi Dolaşıma Alındı & Yüklendi: Bu Dolaşım Listesinin parçası olan ve geliştirme ortamınıza yüklenmiş ](media/vs2017ide-roamedinstalledicon.png) **** tüm uzantılar.
+* ![Dolaşıma & Simgesi ](media/vs2017ide-roamedinstalledicon.png) **_Dolaşıma Alındı & Yüklendi:_** Bu Dolaşım Listesinin parçası olan ve geliştirme ortamınıza yüklenmiş tüm uzantılar.
   (Dolaşıma devam etmek istemiyorsanız, Dolaşımı Durdur düğmesini kullanarak  bunları kaldırabilirsiniz.)
 * ![Yüklü simgesi Yüklü: Bu ortamda yüklü olan ancak Dolaşım Listeniz kapsamında yer alan ](media/vs2017ide-installedicon.png) **** tüm uzantılar.
   (Dolaşımı Başlat düğmesini kullanarak Dolaşım Listesine  uzantı ekleyebilirsiniz.)
 
-Oturum asanız indirmiş olursanız, listeniz dolaştı ve yüklendi **& eklenir.** Uzantı daha sonra Dolaşım listenizin bir parçası olur ve bu da herhangi bir makineden erişmenizi sağlar.
+Oturum alırken indirmiş olduğunuz uzantılar, Dolaştı olarak **listenize** eklenir & yüklenir. Uzantı daha sonra Dolaşım listenizin bir parçası olur ve bu da herhangi bir makineden erişmenizi sağlar.
 
 ### <a name="experience-live-unit-testing"></a>Canlı birim testi deneyimi
 
-2017 Visual Studio Enterprise de canlı birim testi, kod yazma sırasında düzenleyicide canlı birim testi sonuçları ve kod kapsamı sağlar. Hem .NET Framework hem de .NET Core için C# ve Visual Basic projeleriyle çalışır ve MSTest, xUnit ve NUnit'in üç test çerçevesini destekler.
+2017 Visual Studio Enterprise de canlı birim testi, siz kodlama yaparken düzenleyicide canlı birim testi sonuçları ve kod kapsamı sağlar. Hem .NET Framework hem de .NET Core için C# ve Visual Basic projeleriyle çalışır ve MSTest, xUnit ve NUnit'in üç test çerçevesini destekler.
 
 ![Live Unit Testing](media/lut-codewindow.png)
 
-Daha fazla bilgi için [bkz. Live Unit Testing.](../test/live-unit-testing-intro.md) Visual Studio Enterprise 2017'nin her sürümüne eklenen yeni özelliklerin listesi [](../test/live-unit-testing-whats-new.md)için bkz. Live Unit Testing.
+Daha fazla bilgi için bkz. [Live Unit Testing.](../test/live-unit-testing-intro.md) Visual Studio Enterprise 2017'nin her sürümüne eklenen yeni özelliklerin listesi için bkz. [Live Unit Testing.](../test/live-unit-testing-whats-new.md)
 
 ### <a name="set-up-a-cicd-pipeline"></a>CI/CD işlem hattı ayarlama
 
@@ -131,257 +131,257 @@ Daha fazla bilgi için [bkz. Live Unit Testing.](../test/live-unit-testing-intro
 
 Otomatikleştirilmiş test, herhangi bir işlem hattının DevOps bir parçasıdır. Çözümlerinizi tutarlı ve güvenilir bir şekilde test etmek ve daha kısa döngüler halinde serbest bırakmanızı sağlar. CI/CD (Sürekli Tümleştirme ve Sürekli Teslim) akışları, işlemi daha verimli hale getirir.
 
-otomatikleştirilmiş testler hakkında daha fazla bilgi için DevOps blog gönderisine [yönelik otomatik testler için cı/CD ardışık düzenine](/archive/blogs/visualstudioalmrangers/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently) bakın.
+Otomatikleştirilmiş testler hakkında daha fazla bilgi için blog gönderisinde otomatikleştirilmiş testler için [CI/CD DevOps](/archive/blogs/visualstudioalmrangers/set-up-a-cicd-pipeline-to-run-automated-tests-efficiently) bakın.
 
-ayrıca, Visual Studio devlabs uzantısı [için sürekli teslim araçlarındaki](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) yenilikler hakkında daha fazla bilgi için bkz. [güvenle yürüt: kayıt zaman kodu kalitesi](https://devblogs.microsoft.com/visualstudio/committing-with-confidence-getting-code-quality-information-at-commit-time/) blog gönderisi.
+Ayrıca DevLabs uzantısı için sürekli teslim araçlarındaki [Visual Studio](https://marketplace.visualstudio.com/items?itemName=VSIDEDevOpsMSFT.ContinuousDeliveryToolsforVisualStudio) daha fazla bilgi için Commit [with confidence: Commit time code quality](https://devblogs.microsoft.com/visualstudio/committing-with-confidence-getting-code-quality-information-at-commit-time/) blog gönderisi'ne bakın.
 
 ### <a name="visual-studio-ide-enhancements"></a>Visual Studio IDE geliştirmeleri
 
 #### <a name="multi-caret-editing"></a>Çoklu giriş işareti düzenleme
 
-**15,8 ' de yeni**: aynı anda bir dosyadaki birden çok konumu düzenlemeyle artık kolay bir işlemdir. Bir dosyada birden çok konumda ekleme noktaları ve seçimler oluşturarak başlayın. Daha sonra, aynı anda iki veya daha fazla yerde aynı düzenleme yapmak için çoklu giriş işareti düzenleme özelliğini kullanın.
+**15.8'de yenisi:** Bir dosyada aynı anda birden çok konumu düzenlemek artık kolaydır. Bir dosyada birden çok konumda ekleme noktaları ve seçimler oluşturarak başlayabilirsiniz. Ardından, aynı anda iki veya daha fazla yerde aynı düzenlemeyi yapmak için çoklu imtiyazlı düzenleme özelliğini kullanın.
 
-Daha fazla bilgi için [metin bul ve Değiştir](finding-and-replacing-text.md) sayfasının [Çoklu şapka seçimi](finding-and-replacing-text.md#multi-caret-selection) bölümüne bakın.
+Daha fazla bilgi [için, Metin bul ve değiştir](finding-and-replacing-text.md#multi-caret-selection) sayfasının Çoklu [giriş-giriş-girişlerini](finding-and-replacing-text.md) seçme bölümüne bakın.
 
-#### <a name="keep-keybinding-profiles-consistent"></a>KeyBinding profillerini tutarlı tut
+#### <a name="keep-keybinding-profiles-consistent"></a>Tuş bağlama profillerini tutarlı tutma
 
-**15,8 ' de yeni**: şu anda, anahtar bağlamalarınızı iki yeni klavye profili ile araçlar arasında tutarlı tutabilirsiniz: Visual Studio Code ve ReSharper (Visual Studio). Bu düzenleri **Araçlar**  >  **Seçenekler**  >  **genel**  >  **klavye** ve üst açılan menü altında bulabilirsiniz.
+**15.8'de** yeni: Artık iki yeni klavye profiliyle araçlar arasında tuş bağlamalarınızı tutarlı tutabilirsiniz: Visual Studio Code ve ReSharper (Visual Studio). Bu düzenleri Araçlar Seçenekleri **Genel**  >  **Klavye ve** üst açılan menü altında  >    >   bulabilirsiniz.
 
-  ![Visual Studio Code ve ReSharper için yeni keybinding profilleri](media/vs-keyboard-mappings-code-resharper.png)
+  ![Visual Studio Code ve ReSharper için yeni tuş bağlama profilleri](media/vs-keyboard-mappings-code-resharper.png)
 
-#### <a name="use-new-refactorings"></a>Yeni yeniden düzenlemeler kullan
+#### <a name="use-new-refactorings"></a>Yeni yeniden düzenleme kullanma
 
-Yeniden düzenleme, kodunuzun yazıldıktan sonra geliştirilmesi işlemidir. Yeniden düzenleme, kodun davranışını değiştirmeden kodun iç yapısını değiştirir. Yeni yeniden düzenlemeler sıklıkla ekleyeceğiz. İşte yalnızca birkaç:
+Yeniden düzenleme, kodunuzu yazdıktan sonra geliştirme işlemidir. Yeniden düzenleme, davranışını değiştirmeden kodun iç yapısını değiştirir. Yeni yeniden düzenlemelerini sıklıkla ekleriz; yalnızca birkaçı:
 
-* Parametre Ekle (Callsitesinden)
-* Geçersiz kılmalar oluştur
-* Adlandırılmış bağımsız değişken Ekle
-* Parametreler için null denetimi Ekle
-* Sabit değerlere basamak ayırıcıları ekleyin
-* Sayısal değişmez değerler için tabanı Değiştir (örneğin, onaltılı-ikili)
-* Geçiş için Dönüştür
-* Kullanılmayan değişkeni kaldır
+* Parametre ekleme (CallSite'dan)
+* Geçersiz kılmalar oluşturma
+* Adlandırılmış bağımsız değişken ekleme
+* Parametreler için null denetimi ekleme
+* Değişmez değerlerin içine basamak ayırıcıları ekleme
+* Sayısal değişmez değerler için taban değerini değiştirme (örneğin, hex ile ikili)
+* Anahtara dönüştürme
+* Kullanılmayan değişkeni kaldırma
 
-Daha fazla bilgi için bkz. [hızlı eylemler](common-quick-actions.md).
+Daha fazla bilgi için [bkz. Hızlı Eylemler.](common-quick-actions.md)
 
 #### <a name="interact-with-git"></a>Git ile etkileşim kurma
 
-Visual Studio bir projeyle çalışırken, kodunuzu ayarlayıp hızlı bir şekilde kaydedebilir ve bir Git hizmetine yayımlayabilirsiniz. Git depolarınızı, IDE 'nin sağ alt köşesindeki düğmelerden menü tıklamalarını kullanarak da yönetebilirsiniz.
+Visual Studio'da bir projeyle çalışırken, kodunuzu hızlıca ayarlayacak ve bir Git hizmetine yayımlayacak şekilde işebilirsiniz. Git depolarınızı IDE'nin sağ alt köşesindeki menü tıklamalarını kullanarak da yönetebilirsiniz.
 
-![Visual Studio 2017 Git iletişim kutusuyla etkileşime girer](media/vsIDE-GitInteraction.png)
+![Visual Studio 2017'nin Git iletişim kutusuyla etkileşim kurması](media/vsIDE-GitInteraction.png)
 
-#### <a name="experience-improved-navigation-controls"></a>Gelişmiş gezinti denetimleri deneyimi
+#### <a name="experience-improved-navigation-controls"></a>Geliştirilmiş gezinti denetimlerini deneyimle
 
-Büyük ve daha az sayıda güvenle, A 'dan B 'ye başlamanıza yardımcı olacak gezinti deneyimini yeniledi.
+A'dan B'ye daha fazla güvenle ve daha az dikkat dağıtarak aya A'dan A'ya alacazmanıza yardımcı olmak için gezinti deneyimini yenileladık.
 
-* **15,4 sürümündeki yenilikler**: **Tanıma Git** (**CTRL** + **tıklaması** veya **F12**) &ndash; fare kullanıcıları, **CTRL** tuşuna basarak ve ardından üyeye tıklayarak bir üyenin tanımına gitmek için daha kolay bir yoldur. **CTRL** tuşuna basmak ve bir kod sembolünün üzerine gelindiğinde, bunun üzerine gelin ve bir bağlantıya dönüşür. Daha fazla bilgi için bkz. [Tanıma Git ve açıklama tanımı](go-to-and-peek-definition.md) .
+* **15.4'te** yeni: Tanıma Git **(** Ctrl tıklaması veya +  **F12**) &ndash; Fare **kullanıcıları, Ctrl** tuşuna basarak ve üyeye tıklayarak üyenin tanımına gitmek için daha kolay bir yol sağlar. **Ctrl tuşlarına** basılarak bir kod simgesinin üzerine gelindiğinde, simgenin altı çizili olur ve bir bağlantıya döner. Daha [fazla bilgi için bkz. Tanıma Git ve Tanıma](go-to-and-peek-definition.md) Göz At.
 
-* **Uygulamaya git** (**CTRL** + **F12**) &ndash; herhangi bir temel türden veya Üyeden çeşitli uygulamalarına gidin.
+* **Uygulamaya Git** (**Ctrl** + **F12**) Herhangi bir temel tür veya &ndash; üyeden çeşitli uygulamalarına gidin.
 
-* **Tümüne git** (**CTRL** + **T** veya **CTRL** + ) &ndash; herhangi bir dosya/tür/üye/sembol bildirimine doğrudan gider. Sonuç listenizi filtreleyebilir veya sorgu sözdizimini kullanabilirsiniz (örneğin, dosyalar için "f searchTerm", türler için "t searchTerm" vb.).
+* **Hepsi'ne Git** (**Ctrl** + **T** veya **Ctrl** + **,**) doğrudan herhangi bir &ndash; dosyaya/tür/üye/sembol bildirimine gidin. Sonuç listenizi filtrenin veya sorgu söz dizimini kullanabilirsiniz (örneğin, dosyalar için "f searchTerm", türler için "t searchTerm" vb.).
 
-  ![Gelişmiş tümüne git](media/vs2017ide-navigation-go-to.png)
+  ![Gelişmiş Tüm Git](media/vs2017ide-navigation-go-to.png)
 
-* **Tüm başvuruları bul** (**Shift** + **F12**) &ndash; sözdizimi renklendirme ile, tüm başvuru sonuçlarını proje, tanım ve yol birleşimine göre bul ' u gruplandırabilirsiniz. Ayrıca, özgün sonuçlarınızı kaybetmeden diğer başvuruları bulmaya devam edebilmeniz için "kilitle" sonuçlarını da kullanabilirsiniz.
+* **Tüm Başvuruları Bul** (**Shift** F12 ) Söz dizimi renklendirmesi ile Tüm Başvuruları Bul sonuçlarını proje, tanım ve yol birleşimiyle +  &ndash; gruplandırebilirsiniz. Ayrıca, özgün sonuçlarınızı kaybetmeden diğer başvuruları bulmaya devam etmek için sonuçları "kilitler"siniz.
 
-  ![Yeni tüm başvuruları bul aracı](media/vs2017ide-find-all-references.png)
+  ![Yeni Tüm Başvuruları Bul aracı](media/vs2017ide-find-all-references.png)
 
-* **Yapı görselleştiricisi** &ndash; Noktalı, gri dikey çizgiler (girinti kılavuzlarından biri), görünüm çerçevmenizde bağlam sağlamak için kodda yer işareti işlevi görür. Bunları popüler üretkenlik güç araçlarından de tanıyabilirsiniz. Bu özellikleri, herhangi bir zamanda kaydırma yapmak zorunda kalmadan istediğiniz zaman kod bloğunu görselleştirmek ve keşfedebilmeniz için kullanabilirsiniz. Satırların üzerine gelindiğinde, bu bloğun ve üst öğelerinin açılmasını gösteren bir araç ipucu görüntülenir. textmate dilmars aracılığıyla desteklenen tüm diller, ayrıca C#, Visual Basic ve XAML ile kullanılabilir.
+* **Yapı Görselleştirici** &ndash; Noktalı, gri dikey çizgiler (girinti kılavuzları), görünüm çerçeveniz içinde bağlam sağlamak için kodda yer işaretleri olarak davranır. Bunları popüler Productivity Power Tools'tan tanıyabilirsiniz. Herhangi bir zamanda kaydırmaya gerek kalmadan hangi kod bloğunda olduğunu görselleştirin ve keşfedin. Satırların üzerine gelindiğinde, bu bloğun ve onun ebeveynlerinin açılmasını gösteren bir araç ipucu görüntülenir. TextMate dil bilgisi aracılığıyla desteklenen tüm dillerin yanı sıra C#, Visual Basic ve XAML ile kullanılabilir.
 
   ![Visual Studio 2017 yapı görselleştiricisi](media/vsIDE-StructureVisualizer.png)
 
-yeni üretkenlik özellikleri hakkında daha fazla bilgi için [Visual Studio 2017: üretkenlik, performans ve iş ortakları](https://devblogs.microsoft.com/visualstudio/visual-studio-2017-productivity-performance-and-partners/) blog gönderisine bakın.
+Yeni üretkenlik özellikleri hakkında daha fazla bilgi için [Visual Studio 2017: Üretkenlik,](https://devblogs.microsoft.com/visualstudio/visual-studio-2017-productivity-performance-and-partners/) Performans ve İş Ortakları blog gönderisi'ne bakın.
 
 ### <a name="visual-c"></a>Visual C++
 
-Visual Studio, Visual Studio C++ Temel Yönergeleri dağıtma, c++ 11 ve c++ özellikleri için gelişmiş destek ekleyerek ve c++ kitaplıklarına işlevsellik ekleme ve güncelleştirme gibi birçok geliştirme görürsünüz. Ayrıca, C++ IDE, yükleme iş yükleri ve daha birçok performansı geliştirdik.
+Visual Studio'de C++ Temel Yönergeleri'yi Visual Studio ile dağıtma, C++11 ve C++ özellikleri için gelişmiş destek ekleyerek derleyiciyi güncelleştirme ve C++ kitaplıklarında işlev ekleme ve güncelleştirme gibi çeşitli geliştirmeler görüyorsunuz. Ayrıca C++ IDE'nin, yükleme iş yüklerinin ve daha fazlasının performansını da iyileştirildi.
 
-ayrıca, [C++ için geliştirici Community](https://aka.ms/feedback/report?space=62 "C++ Community geliştirici hesabı")aracılığıyla müşteriler tarafından gönderilen, derleyici ve araçlar üzerinde 250 hata ve bildirilen sorunları düzelttik.
+Ayrıca, derleyicide ve araçlarda 250'den fazla hata ve bildirilen sorun düzeltildi ve çoğu C++ için Geliştirici Community [müşteriler tarafından gönderildi.](https://aka.ms/feedback/report?space=62 "C++ Community geliştirici hesabı")
 
-Tüm ayrıntılar için bkz. [Visual C++ yenilikler for Visual 2017](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio) Page.
+Tüm ayrıntılar için [Visual 2017'de Visual C++' sayfasına](/cpp/top/what-s-new-for-visual-cpp-in-visual-studio) bakın.
 
 ### <a name="debugging-and-diagnostics"></a>Hata ayıklama ve tanılama
 
 #### <a name="run-to-click"></a>Tıklanan Satıra Kadar Çalıştır
 
-Şimdi, istediğiniz satırda durmak üzere bir kesme noktası ayarlamadan hata ayıklama sırasında daha kolay bir şekilde atlayabilirsiniz. Hata ayıklayıcıda durdurulduğunda, kod satırının yanında görünen simgeye tıklamanız yeterlidir. Kodunuz, kod yolunuzda bir sonraki isabet edildiğinde çalışır ve bu satırda durdurulur.
+Artık istediğiniz satırda durdurmak için kesme noktası ayarlamadan hata ayıklama sırasında daha kolay bir şekilde atlayabilirsiniz. Hata ayıklayıcıda durdurulurken, kod satırı yanında görünen simgeye tıklamak gerekir. Kodunuz, kod yolunuzda bir sonraki isabeti üzerine çalıştıracak ve bu satırda duracak.
 
-![Visual Studio 2017 hata ayıklama-tıklamada çalıştır](media/vs2017ide-RunToClick.png)
+![Visual Studio 2017 hata ayıklama - Tıklamak için Çalıştır](media/vs2017ide-RunToClick.png)
 
-#### <a name="the-new-exception-helper"></a>Yeni özel durum Yardımcısı
+#### <a name="the-new-exception-helper"></a>Yeni Özel Durum Yardımcı
 
-Yeni özel durum Yardımcısı, özel durum bilgilerinizi bir bakışta görüntülemenize yardımcı olur. Bilgiler, iç özel durumlara anında erişimli bir kompakt biçimde sunulur. Bir NullReferenceException 'yi tanılarken, özel durum Yardımcısı içinde neyin null olduğunu hızla görebilirsiniz.
+Yeni Özel Durum Yardımcı, özel durum bilgilerini bir bakışta görüntülemenize yardımcı olur. Bilgiler, iç özel durumlara anında erişimle birlikte sıkıştırılmış bir şekilde sunulmaktadır. NullReferenceException tanılarken, Özel Durum Yardımcı'nın içinde null değerinin ne olduğunu hızlı bir şekilde öğrenilir.
 
-![Visual Studio yeni özel durum Yardımcısı iletişim kutusu](media/vs2017ide-ExceptionHelper.png)
+![Visual Studio'daki Yeni Özel Durum Visual Studio](media/vs2017ide-ExceptionHelper.png)
 
-daha fazla bilgi için Visual Studio blog gönderisine [yeni özel durum yardımcısını kullanma](https://devblogs.microsoft.com/devops/using-the-new-exception-helper-in-visual-studio-15-preview/) bölümüne bakın.
+Daha fazla bilgi için [bkz. Yeni Özel Durum Yardımcı'sı kullanma Visual Studio](https://devblogs.microsoft.com/devops/using-the-new-exception-helper-in-visual-studio-15-preview/) blog gönderisi.
 
-#### <a name="snapshots-and-intellitrace-step-back"></a>Anlık görüntüler ve IntelliTrace adım geri
+#### <a name="snapshots-and-intellitrace-step-back"></a>Anlık görüntüler ve IntelliTrace geri adımı
 
-**15,5 sürümündeki yenilikler**: IntelliTrace adım geri alma, her kesme noktası ve hata ayıklayıcı adım olayında uygulamanızın bir anlık görüntüsünü otomatik olarak alır. Kaydedilen anlık görüntüler, önceki kesme noktalarına veya adımlara geri dönmenize ve uygulamanın geçmişte olduğu gibi durumunu görüntülemenize imkan tanır. IntelliTrace adım geri dönüş, önceki uygulama durumunu görmek istediğinizde, ancak hata ayıklamayı yeniden başlatmak veya istenen uygulama durumunu yeniden oluşturmak istemediğinizde size zaman kazandırabilir.
+**15.5'te** yenisi: IntelliTrace geri adım geri adımı, her kesme noktası ve hata ayıklayıcı adımı olayında otomatik olarak uygulamanın anlık görüntüsünü alır. Kaydedilen anlık görüntüler, önceki kesme noktalarına veya adımlara geri dönmenizin yanı sıra uygulamanın geçmişte olduğu gibi durumunu görüntülemeye olanak sağlar. IntelliTrace geri adımı önceki uygulama durumunu görmek istediğiniz ancak hata ayıklamayı yeniden başlatmak veya istenen uygulama durumunu yeniden oluşturmak istemeyebilirsiniz.
 
-**Hata ayıklama** araç çubuğundaki **geri** ve **adım ileri** düğmelerini kullanarak anlık görüntülerle gezinerek görüntüleyebilirsiniz. Bu düğmeler **Tanılama araçları** penceresindeki **Olaylar** sekmesinde görüntülenen olaylara gider. Bir olaya geri veya ileri dönmek, seçili olayda geçmiş hata ayıklamayı otomatik olarak etkinleştirir.
+Hata Ayıklama araç çubuğundaki Geri Adım ve İleri **Adım** düğmelerini **kullanarak** anlık görüntülerde gezinebilirsiniz ve **görüntüleyebilirsiniz.** Bu düğmeler, Tanılama Araçları **penceresindeki** Olaylar **sekmesinde görünen Tanılama Araçları** gezinebilirsiniz. Bir olayda geri veya ileri adımlama, seçili olayda geçmiş hata ayıklamayı otomatik olarak etkinleştirir.
 
-![Visual Studio IntelliTrace adım geri örneği](../debugger/media/intellitrace-step-back-icons-description.png  "Geri ve İleri Adım düğmeleri")
+![Şirket içinde IntelliTrace geri adım Visual Studio](../debugger/media/intellitrace-step-back-icons-description.png  "Geri ve İleri Adım düğmeleri")
 
-Daha fazla bilgi için [IntelliTrace adım geri 'yi kullanarak anlık görüntüleri görüntüleme](../debugger/view-historical-application-state.md) sayfasına bakın.
+Daha fazla bilgi için [IntelliTrace kullanarak anlık görüntüleri görüntüleme geri adım sayfasına](../debugger/view-historical-application-state.md) bakın.
 
 ### <a name="containerization"></a>Kapsayıcıyla taşıma
 
-kapsayıcılar, geliştirilmiş üretkenlik ve DevOps çevikleriyle birlikte daha fazla uygulama yoğunluğu ve daha düşük dağıtım maliyeti sağlar.
+Kapsayıcılar size daha fazla uygulama yoğunluğu ve daha düşük dağıtım maliyeti, gelişmiş üretkenlik ve DevOps sağlar.
 
 #### <a name="docker-container-tooling"></a>Docker Kapsayıcısı Araçları
 
-**15,5 sürümündeki yenilikler**:
+**15.5'te yeni:**
 
-* Visual Studio, artık çok aşamalı dockerfiles 'ı destekleyen, iyileştirilmiş kapsayıcı görüntüleri oluşturmayı kolaylaştıran docker kapsayıcıları için araçlar içerir.
+* Visual Studio, artık iyileştirilmiş kapsayıcı görüntüleri oluşturmayı kolaylaştıran çok aşamalı Dockerfile'ları destekleyen Docker kapsayıcıları için araçlar içerir.
 * Varsayılan olarak Visual Studio, Docker desteği olan bir projeyi açtığınızda gerekli kapsayıcı görüntülerini otomatik olarak çeker, derler ve arka planda çalıştırır. Bunu, Visual Studio'da **Kapsayıcıları arka planda otomatik olarak başlat** ayarı ile devre dışı bırakabilirsiniz.
 
 ## <a name="cloud-app-development-with-azure"></a>Azure ile bulut uygulaması geliştirme
 
-### <a name="azure-functions-tools"></a>Azure Işlevleri araçları
+### <a name="azure-functions-tools"></a>Azure İşlevleri araçları
 
-"Azure geliştirme" iş yükünün parçası olarak, önceden derlenmiş C# sınıf kitaplıklarını kullanarak Azure işlevleri geliştirmenize yardımcı olacak araçlar sunuyoruz. Artık yerel geliştirme makinenizde derleme, çalıştırma ve hata ayıklama yapabilir, ardından Visual Studio 'ten Azure 'da doğrudan yayımlayabilirsiniz.
+"Azure geliştirme" iş yükünün bir parçası olarak, önceden derlenmiş C# sınıf kitaplıklarını kullanarak Azure işlevleri geliştirmeye yardımcı olacak araçlar ekledik. Artık yerel geliştirme makineniz üzerinde derleme, çalıştırma ve hata ayıklama ve ardından doğrudan azure'da yayımlama Visual Studio.
 
-daha fazla bilgi için bkz. [Azure işlevleri araçları Visual Studio](/azure/azure-functions/functions-develop-vs) sayfası.
+Daha fazla bilgi için Azure İşlevleri [için Visual Studio](/azure/azure-functions/functions-develop-vs) sayfasına bakın.
 
-### <a name="debug-live-aspnet-apps-using-snappoints-and-logpoints-in-live-azure-applications"></a>canlı Azure uygulamalarında anlık görüntü noktalarını ve günlüğe kaydetme noktalarını kullanarak canlı ASP.NET uygulamalarda hata ayıklayın
+### <a name="debug-live-aspnet-apps-using-snappoints-and-logpoints-in-live-azure-applications"></a>Canlı Azure uygulamalarında ASP.NET noktaları ve günlük noktaları kullanarak canlı uygulamalarda hata ayıklama
 
-**15,5 ' de yeni**: Snapshot Debugger, çalıştırırken ilgilendiğiniz kod olduğunda üretim içi uygulamalarınızın anlık görüntüsünü alır. Hata ayıklayıcıya bir anlık görüntü almasını söylemek için kodunuzda anlık görüntü noktaları ve günlüğe kaydetme noktaları ayarlarsınız. Hata ayıklayıcı, üretim uygulamanızın trafiğini etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için geçen süreyi önemli ölçüde düşürmeye yardımcı olabilir.
+**15.5'te** yeni: Snapshot Debugger, yürütmekle ilgilendiğiniz kodlar üretim uygulamalarınıza anlık görüntü alır. Hata ayıklayıcıya anlık görüntü alma talimatı için kodunda anlık görüntü noktaları ve günlük noktaları ayarlayın. Hata ayıklayıcısı, üretim uygulama trafiğinizi etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Bu Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için gereken zamanı önemli ölçüde azaltmanıza yardımcı olabilir.
 
-Anlık görüntü koleksiyonu, Azure App Service çalıştıran aşağıdaki Web uygulamaları için kullanılabilir:
+Anlık görüntü koleksiyonu, aşağıdaki web uygulamaları için kullanılabilir ve Azure App Service:
 
-* .NET Framework 4.6.1 veya sonraki sürümlerde çalışan uygulamalar ASP.NET.
-* Windows ASP.NET Core .net Core 2,0 veya üzeri sürümlerde çalışan uygulamalar.
+* ASP.NET 4.6.1 veya .NET Framework üzerinde çalışan uygulamalar.
+* ASP.NET Core .NET Core 2.0 veya sonraki bir üzerinde çalışan uygulamaları Windows.
 
-daha fazla bilgi için bkz. anlık görüntü [noktalarını ve günlüğe kaydetme noktaları kullanarak canlı ASP.NET uygulamalarda hata ayıklama](../debugger/debug-live-azure-applications.md).
+Daha fazla bilgi için bkz. Anlık ASP.NET ve günlük noktaları kullanarak canlı [uygulamalarda hata ayıklama.](../debugger/debug-live-azure-applications.md)
 
 ## <a name="windows-app-development"></a>Windows uygulaması geliştirme
 
 ### <a name="universal-windows-platform"></a>Evrensel Windows Platformu
 
-Evrensel Windows Platformu (UWP), Windows 10 için uygulama platformudur. yalnızca bir apı kümesi, bir uygulama paketi ve tek bir mağaza ile UWP için, tüm Windows 10 cihazları &ndash; PC, tablet, telefon, Xbox, HoloLens, Surface Hub ve daha fazlasına ulaşmak üzere uygulamalar geliştirebilirsiniz. UWP, dokunmatik, fare ve klavye, oyun denetleyicisi veya kalem gibi farklı ekran boyutlarını ve çeşitli etkileşim modellerini destekler. UWP uygulamalarının temel tarafında, kullanıcıların deneyimlerinin tüm cihazlarında mobil olmasını istediği ve her zaman en uygun veya üretken olan her türlü görev için hangi cihazdan yararlandıkları konusunda fikir sahibi olduğu düşüncedir.
+Universal Windows Platformu (UWP), Windows 10. Pc, tablet, telefon, Xbox, HoloLens, Surface Hub ve diğer tüm Windows 10 cihazlarına ulaşmak için yalnızca bir API kümesi, bir uygulama paketi ve bir mağaza ile UWP için &ndash; uygulamalar geliştirebilirsiniz. UWP dokunmatik, fare ve klavye, oyun denetleyicisi veya kalem gibi farklı ekran boyutlarını ve çeşitli etkileşim modellerini destekler. UWP uygulamalarının özünde, kullanıcıların deneyimlerinin TÜM cihazlarında mobil olarak hareket etmek ve sahip olduğu görev için en kullanışlı veya üretken olan cihazı kullanmak istemeleri fikridir.
 
 ![Evrensel Windows Platformu](../cross-platform/media/uwp_coreextensions.png)
 
-&mdash; &mdash; Windows 10 cihazlara yönelik bir Evrensel Windows Platformu uygulaması oluşturmak için C#, Visual Basic, C++ veya JavaScript 'te tercih ettiğiniz geliştirme dilini seçin. Visual Studio 2017 her dil için tüm cihazlar için tek bir proje oluşturmanıza olanak sağlayan UWP uygulama şablonu sağlar. işiniz bittiğinde, uygulamanızı herhangi bir Windows 10 cihazdaki müşterilere almak için bir uygulama paketi oluşturabilir ve Visual Studio içinden Microsoft Store gönderebilirsiniz.
+C#, Visual Basic, C++ veya JavaScript'te tercih ettiğiniz geliştirme dilini seçen bir Evrensel &mdash; Windows Platform uygulaması Windows 10 &mdash; oluşturun. Visual Studio 2017,tüm cihazlar için tek bir proje oluşturmanıza olanak sağlayan her dil için bir UWP uygulama şablonu sağlar. Çalışmanız bittiğinde bir uygulama paketi üretebilir ve herhangi bir Microsoft Store cihazdan Visual Studio müşterilerinize sunmak için Windows 10 gönderebilirsiniz.
 
-**15,5 sürümündeki yenilikler**: Visual Studio 2017 sürüm 15,5 Windows 10 Fall Creators Update SDK (10.0.16299.0) için en iyi desteği sağlar. Windows 10 Fall Creators Update, UWP geliştiricileri için birçok geliştirme da getirir. En büyük değişikliklerden bazıları şunlardır: 
+**15.5 sürümündeki** yeni sürüm: Visual Studio 2017 sürüm 15.5, Windows 10 Fall Creators Update SDK (10.0.16299.0) için en iyi desteği sağlar. Bu Windows 10 Fall Creators Update, UWP geliştiricileri için birçok geliştirme de sağlar. En büyük değişikliklerden bazıları: 
 
-* **.NET Standard 2,0 desteği**<br/>Windows 10 Fall Creators Update, kolaylaştırılmış uygulama dağıtımına ek olarak, .NET Standard 2,0 desteğinin sağlanması için Windows 10 ilk sürümüdür. Etkin olarak, [.NET Standard](https://devblogs.microsoft.com/dotnet/introducing-net-standard/) herhangi bir .NET platformunun uygulayabildikleri temel sınıf kitaplığının başvuru uygulamasıdır. .NET Standard amacı, .NET geliştiricilerin üzerinde çalışmak üzere seçtikleri herhangi bir .NET platformunda kod paylaşması mümkün olduğunca kolay hale gelidir.
-* **Hem UWP hem de Win32 için en iyi**<br/>geçerli odağın UWP, WPF, Windows Forms veya Xamarin üzerinde olup olmamasına bakılmaksızın tüm .net geliştiricileri için Windows 10 daha iyi hale getirmek için [Masaüstü Köprüsü](/windows/uwp/porting/desktop-to-uwp-root) sahip Windows 10 platformunu geliştirdik. Visual Studio 2017 sürüm 15,5 ' deki yeni uygulama paketleme projesi türü ile, tıpkı UWP projeleri için de olduğu gibi, WPF veya Windows Forms projeleriniz için Windows uygulama paketleri oluşturabilirsiniz. uygulamanızı paketledikten sonra, tüm Windows 10 uygulama dağıtımı avantajlarına sahip olursunuz ve Microsoft Store (tüketici uygulamaları için) veya İş İçin Microsoft Store ve eğitim aracılığıyla dağıtım seçeneğiniz vardır. paketlenmiş uygulamaların hem tam UWP apı yüzeyine hem de masaüstündeki Win32 apı 'lerine erişimi olduğundan, artık WPF ve Windows Forms uygulamalarınızı UWP apı 'leri ve Windows 10 özellikleriyle birlikte yavaş bir şekilde modernleştirin edebilirsiniz. Üstelik, Win32 bileşenlerinizi, tüm Win32 özellikleri ile masaüstüne açık olan UWP uygulamalarınıza ekleyebilirsiniz.
+* **.NET Standard 2.0 desteği**<br/>Kolaylaştırılmış uygulama dağıtımına ek olarak Windows 10 Fall Creators Update, Windows 10 2.0 desteği .NET Standard ilk sürümü. Bu, [.NET Standard](https://devblogs.microsoft.com/dotnet/introducing-net-standard/) herhangi bir .NET platformunun uygulaya bir temel sınıf kitaplığı başvuru uygulamasıdır. Bu .NET Standard amacı, .NET geliştiricilerinin üzerinde çalışmak için seçtileri herhangi bir .NET platformunda kod paylaşmalarını mümkün olduğunca kolay hale getirin.
+* **Hem UWP hem de Win32'nin en iyisi**<br/>Windows 10 Platformunu tüm .NET geliştiricileri [Masaüstü Köprüsü](/windows/uwp/porting/desktop-to-uwp-root) daha iyi hale Windows 10 için (şu anda UWP, WPF, Windows Forms veya Xamarin'e odaklanarak) Windows 10 Platformunu iyileştirdik. Visual Studio 2017 sürüm 15.5'te yeni Uygulama Paketleme proje türüyle, UWP projelerinde olduğu gibi WPF veya Windows Forms projeleriniz için Windows Uygulama Paketleri oluşturabilirsiniz. Uygulamanızı paketledikten sonra tüm Windows 10 avantajlarını elde edin ve Microsoft Store (tüketici uygulamaları için) veya İş İçin Microsoft Store ve Education aracılığıyla dağıtma seçeneğiniz vardır. Paketlenmiş uygulamaların masaüstünde hem tam UWP API yüzeyine hem de Win32 API'lerine erişimi olduğundan, artık WPF ve Windows Forms uygulamalarınızı UWP API'leri ve Windows 10 özellikleriyle kademeli olarak modernleştirebilirsiniz. Ayrıca, tüm Win32 özellikleriyle masaüstünde ışık alan UWP uygulamalarınıza Win32 bileşenlerinizi dahil edin.
 
-UWP hakkında daha fazla bilgi için bkz. [Evrensel Windows Platformu uygulamalar geliştirme (uwp)](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md) sayfası.
+UWP hakkında daha fazla bilgi için Evrensel Windows [Platformu (UWP) için uygulama geliştirme sayfasına](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md) bakın.
 
 ## <a name="mobile-app-development"></a>Mobil uygulama geliştirme
 
 ### <a name="xamarin"></a>Xamarin
 
-".net ile mobil geliştirme" iş yükü kapsamında, C#, .net ve Visual Studio tanıdık geliştiriciler Xamarin kullanarak yerel Android, iOS ve Windows uygulamaları sunabilir. geliştiriciler, Android, iOS ve Windows cihazlarda uzaktan hata ayıklama da dahil olmak üzere, &mdash; hedef-C veya Java gibi yerel kodlama dillerini öğrenmeden, mobil uygulamalar için Xamarin ile çalışırken aynı güç ve verimliliğin avantajlarından yararlanabilir.
+".NET ile mobil geliştirme" iş yükünün bir parçası olarak, C#, .NET ve Visual Studio tanımaya sahip geliştiriciler Xamarin kullanarak yerel Android, iOS ve Windows uygulamaları teslim edilebilir. Geliştiriciler, Objective-C veya Java gibi yerel kodlama dillerini öğrenmek zorunda kalmadan Android, iOS ve Windows cihazlarda uzaktan hata ayıklama da dahil olmak üzere mobil uygulamalar için Xamarin ile çalışırken aynı gücü ve üretkenliği &mdash; kullanabilir.
 
-daha fazla bilgi için [Visual Studio ve Xamarin](/xamarin/) sayfasına bakın.
+Daha fazla bilgi için Visual Studio [Xamarin sayfasına](/xamarin/) bakın.
 
-### <a name="entitlements-editor"></a>Yetkilendirmeler Düzenleyicisi
+### <a name="entitlements-editor"></a>Yetkilendirmeler düzenleyicisi
 
-**15,3 sürümündeki yenilikler**: iOS geliştirme gereksinimleriniz için tek başına yetkilendirmeler Düzenleyicisi ekledik. Kolayca gözatılabilir, Kullanıcı dostu bir kullanıcı ARABIRIMI içerir. Başlatmak için *yetkilendirmeler. plist* dosyasına çift tıklayın.
+**15.3'te** yeni eklendi: iOS geliştirme ihtiyaçlarınız için tek başına Yetkilendirmeler düzenleyicisi ekledik. Kolayca göz atabilirsiniz kullanıcı dostu bir kullanıcı arabirimi içerir. Başlatmak için *entitlements.plist dosyanıza çift* tıklayın.
 
-![Xamarin için yetkilendirme Düzenleyicisi](media/xamarin-entitlements-editor.png)
+![Xamarin için yetkilendirme düzenleyicisi](media/xamarin-entitlements-editor.png)
 
 ### <a name="visual-studio-tools-for-xamarin"></a>Xamarin için Visual Studio Araçları
 
-**15,4 sürümündeki yenilikler**: Xamarin Live, geliştiricilerin uygulamalarını doğrudan IOS ve Android cihazlarında sürekli olarak dağıtmalarını, test etmesini ve hatalarını ayıklamasını sağlar. &mdash;uygulama mağazasındaki veya Google Play kullanılabilir Xamarin Live Player indirdikten sonra, &mdash; cihazınızı Visual Studio ve mobil uygulamalar oluşturma şeklini eşleyebilir ile eşleştirmenizi sağlayabilirsiniz. Bu işlevsellik artık Visual Studio’ya eklenmiştir ve **Araçlar** > **Seçenekler** > **Xamarin** > **Diğer** > **Xamarin Live Player’ı Etkinleştir** seçeneği kullanılarak etkinleştirilebilir.
+**15.4'te** yeni sürümü: Xamarin Live, geliştiricilerin uygulamalarını doğrudan iOS ve Android cihazlarında sürekli olarak dağıtmasına, test sınamasına ve hata ayıklamasına olanak tanır. Xamarin Live Player'da veya App Store'Google Play indirdikten sonra cihazınızı Visual Studio ile eşleştirebilirsiniz ve mobil uygulama oluşturma yolunda &mdash; &mdash; devrimler atabilirsiniz. Bu işlevsellik artık Visual Studio’ya eklenmiştir ve **Araçlar** > **Seçenekler** > **Xamarin** > **Diğer** > **Xamarin Live Player’ı Etkinleştir** seçeneği kullanılarak etkinleştirilebilir.
 
-![Xamarin Live Player çiftinin, dağıtımın ve canlı düzenleme modlarının animasyonu](media/xamarinliveplayer.gif)
+![Xamarin Live Player, dağıtım ve canlı düzenleme modlarının animasyonu](media/xamarinliveplayer.gif)
 
 ### <a name="support-for-google-android-emulator"></a>Google Android Emulator desteği
 
-**15,8 ' de yeni**: hyper-v kullandığınızda, artık Google 'ın Android Emulator hyper-v sanal makineleri, docker araçları, HoloLens öykünücü ve daha fazlası gibi hyper-v ' d i temel alan diğer teknolojilerle yan yana kullanabilirsiniz. (bu özellik Windows 10 nisan 2018 güncelleştirmesi veya sonraki bir sürümünü gerektirir.)
+**15.8'de** yeni sürümü: Hyper-V'nin yeni sürümü: Artık Hyper-V sanal makineleri, Docker aracı, HoloLens öykünücüsü ve daha fazlasını temel alan diğer teknolojilerle Google Android Emulator'i yan yana kullanabilirsiniz. (Bu özellik için Windows 10 2018 Güncelleştirmesi veya sonrası gerekir.)
 
-![Hyper-V teknolojilerinde Google Android öykünücüsü](media/xamarin-hyperv-android-emulator.png)
+![Hyper-V teknolojilerine google Android öykünücüsü](media/xamarin-hyperv-android-emulator.png)
 
-#### <a name="xamarinandroid-designer-split-view-editor"></a>Xamarin. Android Designer bölünmüş görünüm Düzenleyicisi
+#### <a name="xamarinandroid-designer-split-view-editor"></a>Xamarin.Android Designer bölünmüş görünüm düzenleyicisi
 
-**15,8 ' de de yenidir**: Xamarin. Android için tasarımcı deneyiminde önemli geliştirmeler yaptık. Bir vurgulama, düzenlerinizi aynı anda oluşturmanıza, düzenlemenize ve önizlemenize olanak tanıyan yeni bölünmüş görünüm düzenleyicidir.
+**Ayrıca 15.8'deki** yeni sürümü: Xamarin.Android için tasarımcı deneyiminde önemli geliştirmeler yaptık. Vurgulama, aynı anda düzenlerinizi oluşturmanıza, düzenlemenize ve önizlemenize olanak sağlayan yeni bölünmüş görünüm düzenleyicisidir.
 
-![Xamarin. Adroıd tasarımcı bölünmüş görünüm Düzenleyicisi](media/android-designer-split-view.png)
+![Xamarin.Adroid Designer bölünmüş görünüm düzenleyicisi](media/android-designer-split-view.png)
 
-Daha fazla bilgi için bkz. [öykünücü performansı Için donanım hızlandırma](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin)
+Daha fazla bilgi için [bkz. Öykünücü performansı için donanım hızlandırma](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin)
 
 ### <a name="visual-studio-app-center"></a>Visual Studio App Center
 
-**15,5 ' de yeni** eklendi: &mdash; Android, iOS, macos ve Windows uygulamalarında artık genel olarak kullanılabilen Visual Studio App Center, &mdash; otomatik derlemeler, buluttaki gerçek cihazların test edilmesi, beta sınayıcılara ve uygulama depolarına dağıtılması ve kilitlenme ve analiz verileri aracılığıyla gerçek dünyanın kullanımını izleme dahil olmak üzere uygulamalarınızın yaşam döngüsünü yönetmeniz için gereken her şeyi içerir. amaç-C, Swift, Java, C#, Xamarin ve React Native yazılmış uygulamalar tüm özellikler genelinde desteklenir.
+**15.5** sürümündeki yeni sürüm: Android, iOS, macOS ve Windows uygulamaları için genel kullanıma sunulmuş olan Visual Studio App Center uygulamaları otomatik derlemeler, buluttaki gerçek cihazlarda test etme, beta test aracılarına ve uygulama mağazalarına dağıtım, kilitlenme ve analiz verileri aracılığıyla gerçek dünya kullanımını izleme dahil olmak üzere uygulama yaşam döngüsünü yönetmek için ihtiyacınız olan her şeye &mdash; &mdash; sahiptir. Objective-C, Swift, Java, C#, Xamarin ve React Native yazılan uygulamalar tüm özelliklerde de kullanılabilir.
 
-  ![Visual Studio Test ortamı App Center](media/app-center-test-env.png)
+  ![Visual Studio App Center test ortamı](media/app-center-test-env.png)
 
-Daha fazla bilgi için bkz. [tanıtma App Center: bulut blog gönderisinde uygulama oluşturma, test etme, dağıtma ve izleme](https://blogs.msdn.microsoft.com/vsappcenter/introducing-visual-studio-app-center/) .
+Daha fazla bilgi için [Bkz. App Center: Bulutta uygulama derleme, test,](https://blogs.msdn.microsoft.com/vsappcenter/introducing-visual-studio-app-center/) dağıtma ve izleme blog gönderisi.
 
 ## <a name="cross-platform-development"></a>Platformlar arası geliştirme
 
 ### <a name="redgate-data-tools"></a> Redgate Veri Araçları
 
-DevOps yeteneklerini SQL Server veritabanı geliştirmeye genişletmek için, redgate veri araçları artık Visual Studio sunulmaktadır.
+Redgate DevOps geliştirmeyi daha SQL Server için Redgate Veri Araçları artık Visual Studio.
 
-Visual Studio 2017 Enterprise eklendi:
+Visual Studio 2017'ye Enterprise:
 
-* [redgate readyroll Core](https://www.red-gate.com/products/sql-development/sql-change-automation/?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs) , geçiş betikleri geliştirmenize, kaynak denetimini kullanarak veritabanı değişikliklerini yönetmenize ve uygulamalar değiştikçe SQL Server veritabanı değişikliklerinin dağıtımlarını güvenle otomatikleştirmenize yardımcı olur.
-* [redgate SQL Prompt Core](https://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs) , akıllı kod tamamlama yardımıyla SQL daha hızlı ve doğru bir şekilde yazmanıza yardımcı olur. SQL Prompt, veritabanı ve sistem nesnelerinin yanı sıra anahtar sözcükleri de otomatik olarak tamamlar ve yazdığınız sırada sütun önerileri sunar. Bu, tüm sütun adlarını veya diğer adları hatırlamanız gerekmiyorsa Temizleyici kod ve daha az hata oluşmasına neden olur.
+* [Redgate ReadyRoll Core,](https://www.red-gate.com/products/sql-development/sql-change-automation/?utm_source=microsoft&utm_medium=link&utm_campaign=readyroll&utm_term=docs-newinvs) geçiş betikleri geliştirmenize, kaynak denetimi kullanarak veritabanı değişikliklerini yönetmenize ve uygulama değişiklikleriyle birlikte veritabanı SQL Server dağıtımlarını güvenli bir şekilde otomatikleştirmenize yardımcı olur.
+* [Redgate SQL Prompt Core,](https://www.red-gate.com/products/sql-development/sql-prompt/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlprompt&utm_term=docs-newinvs) akıllı kod SQL daha hızlı ve doğru bir şekilde yazmanıza yardımcı olur. SQL Prompt, veritabanı ve sistem nesnelerinin yanı sıra anahtar sözcükleri de otomatik olarak tamamlar ve yazdığınız sırada sütun önerileri sunar. Bunun sonucunda daha temiz kodlar ve daha az hatayla sonuçlandı çünkü her sütun adını veya diğer adını hatırlamaya gerek yok.
 
-Visual Studio 2017 ' nin tüm sürümlerine dahildir:
+Visual Studio 2017'nin tüm sürümlerine dahildir:
 
-* [redgate SQL arama](https://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs) , birden çok veritabanında SQL parçaları ve nesneleri hızlı bir şekilde bulmanıza yardımcı olarak üretkenliğinizi artırır.
+* [Redgate SQL Search,](https://www.red-gate.com/products/sql-development/sql-search/?utm_source=microsoft&utm_medium=link&utm_campaign=sqlsearch&utm_term=docs-newinvs) birden çok veritabanındaki parçaları ve nesneleri hızla bu SQL üretkenliğinizi artırır.
 
-daha fazla bilgi edinmek için Visual Studio 2017 blog gönderisine yönelik [redgate veri araçlarına](https://devblogs.microsoft.com/visualstudio/redgate-data-tools-in-visual-studio-2017/) bakın.
+Daha fazla bilgi edinmek için bkz. [Visual Studio 2017'de Redgate Veri](https://devblogs.microsoft.com/visualstudio/redgate-data-tools-in-visual-studio-2017/) Araçları blog gönderisi.
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core, .NET Standard genel amaçlı, modüler, platformlar arası ve açık kaynaklı bir uygulamadır ve .NET Framework aynı API 'lerin çoğunu içerir.
+.NET Core, .NET Standard'nin genel amaçlı, modüler, platformlar arası ve açık kaynak bir uygulamasıdır ve .NET Framework.
 
-.NET Core platformu, yönetilen derleyiciler, çalışma zamanı, temel sınıf kitaplıkları ve ASP.NET Core gibi çok sayıda uygulama modeli dahil olmak üzere birkaç bileşenden oluşur. .net Core üç ana işletim sistemini destekler: Windows, Linux ve macos. .NET Core 'u cihaz, bulut ve katıştırılmış/IoT senaryolarında kullanabilirsiniz.
+.NET Core platformu yönetilen derleyiciler, çalışma zamanı, temel sınıf kitaplıkları ve yönetilen derleyiciler gibi çok sayıda uygulama modeli gibi çeşitli bileşenlerden ASP.NET Core. .NET Core üç ana işletim sistemini destekler: Windows, Linux ve macOS. Cihaz, bulut ve katıştırılmış/IoT senaryolarında .NET Core kullanabilirsiniz.
 
-Artık Docker desteği de içerir.
+Artık Docker desteği de buna dahildir.
 
-**15,3 ' deki yenilikler**: Visual Studio 2017 sürüm 15,3 .net Core 2,0 geliştirmesini destekler. .NET Core 2,0 kullanılması için .NET Core 2,0 SDK 'sını ayrı olarak indirip yüklemeniz gerekir.
+**15.3 sürümündeki** yeni sürüm: Visual Studio 2017 sürüm 15.3, .NET Core 2.0 geliştirmesini destekler. .NET Core 2.0'ın kullanımı için .NET Core 2.0 SDK'sı ayrı ayrı indirilir ve yüklenebilir.
 
-Daha fazla bilgi için bkz. [.NET Core Guide](/dotnet/core/index) sayfası.
+Daha fazla bilgi için [.NET Core kılavuz sayfasına](/dotnet/core/index) bakın.
 
 ## <a name="games-development"></a>Oyun geliştirme
 
 ### <a name="visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları
 
-"Unity için oyun geliştirme" iş yükü kapsamında, 2B ve 3B oyunlar ve etkileşimli içerik oluşturmak için platformlar arası geliştirme yapmanıza yardımcı olacak araçlar sunuyoruz. bir kez oluşturun ve tüm mobil platformlar, webgl, Mac, PC ve Linux masaüstü, web veya konsollarda Visual Studio 2017 ve Unity 5,6 kullanarak, 21 platformda yayımlayın.
+"Unity için oyun geliştirme" iş yükünün bir parçası olarak, 2D ve 3D oyunlar ve etkileşimli içerik oluşturmak için platformlar arası geliştirmenizi yardımcı olacak araçlar dahil edildi. bir kez oluşturun ve Visual Studio 2017 ve Unity 5.6 kullanarak tüm mobil platformlar, WebGL, Mac, PC ve Linux masaüstü, web veya konsollar dahil olmak üzere 21 platformda yayımlayın.
 
-daha fazla bilgi için [Unity için Visual Studio Araçları](/visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity) sayfasına bakın.
+Daha fazla bilgi için Unity için Visual Studio Araçları [bakın.](/visualstudio/gamedev/unity/get-started/visual-studio-tools-for-unity)
 
 ## <a name="ai-development"></a>AI geliştirme
 
 ### <a name="visual-studio-tools-for-ai"></a>AI için Visual Studio Araçları
 
-**15,5 ' de yeni**: aı yeniliği bugün hızlandırmak için Visual Studio üretkenlik özelliklerini kullanın. Sözdizimi vurgulama, IntelliSense ve metin otomatik biçimlendirme gibi yerleşik kod düzenleyici özelliklerini kullanın. Yerel değişkenlerde ve modellerde adım adım hata ayıklamayı kullanarak derin öğrenme uygulamanızı yerel ortamınızda etkileşimli bir şekilde test edebilirsiniz.
+**15.5'te yeni** özellikler: Günümüzün Visual Studio yeniliklerini hızlandırmak için Visual Studio özelliklerini kullanın. Söz dizimi vurgulama, IntelliSense ve metin otomatik biçimlendirme gibi yerleşik kod düzenleyicisi özelliklerini kullanın. Yerel değişkenler ve modellerde adım adım hata ayıklamayı kullanarak derin öğrenme uygulamanızı yerel ortamınıza etkileşimli olarak test edin.
 
-  ![derin Learning ıde](../ai/media/about/ide.png)
+  ![Derin Learning IDE](../ai/media/about/ide.png)
 
-daha fazla bilgi için bkz. [aı için Visual Studio Araçları](../ai/about-ai-tools.md) sayfası.
+Daha fazla bilgi için Visual Studio Araçları [sayfasına](../ai/about-ai-tools.md) bakın.
 
 ## <a name="whats-next"></a>Sırada ne var?
 
-geliştirme deneyiminizi daha da iyi hale getirebileceğiniz yeni özelliklerle Visual Studio 2017 ' i güncelleştiririz. Deneysel Önizlemedeki en önemli güncelleştirmelerimizden bazıları aşağıda verilmiştir:
+2017'Visual Studio geliştirme deneyiminizi daha da iyi hale Visual Studio yeni özelliklerle güncelleştirin. Deneysel önizleme aşamasındaki en önemli güncelleştirmelerden bazılarının bir özeti aşağıda ve özetle ve hatta şu şekildedir:
 
-* **[Live Share](https://visualstudio.microsoft.com/services/live-share/)**, bir kod temeli ve bağlamını bir ekiple paylaşmanıza ve doğrudan Visual Studio içinden doğrudan çift yönlü işbirliği yapmanıza olanak tanıyan yeni bir araç. Live Share, bir ekip mate kendileriyle paylaştığınız bir projeyi okuyabilir, gezinmiş, düzenleyebilir ve hata ayıklamanızı ve sorunsuz ve güvenli bir şekilde yapabilmesini sağlayabilir.<br><br>daha fazla bilgi için [Live Share sss](/visualstudio/liveshare/faq)bölümüne bakın.<br><br>
-* **[Intellicode](https://visualstudio.microsoft.com/services/intellicode/)**, daha iyi bağlama duyarlı kod tamamlama sağlamak IÇIN geliştiricilere AI kullanarak yazılım geliştirmeyi geliştiren yeni bir özelliktir, geliştiricilerin takımlarının desenlerine ve stillerine kod oluşturmasını, daha fazla catch kodu sorunlarını bulmasını ve gerçekten de önem verdiği alanlara kod incelemelerini odaklamasını sağlar. <br><br>Daha fazla bilgi için bkz. [ıntellicode SSS](/visualstudio/intellicode/faq).
+* **[Live Share,](https://visualstudio.microsoft.com/services/live-share/)** bir kod tabanını ve bağlamını bir ekip arkadaşı ile paylaşmaya ve doğrudan iş arkadaşlarınızdan anında çift yönlü işbirliği elde etmenizi sağlayan yeni Visual Studio. Ekip Live Share ekip arkadaşlarınız, kendileriyle paylaştığım bir projeyi okuyabilir, gezin, düzenleyebilir ve hata ayıklar ve bunu sorunsuz ve güvenli bir şekilde yapar.<br><br>Daha fazla bilgi için bkz. [SSS Live Share bakın.](/visualstudio/liveshare/faq)<br><br>
+* **[IntelliCode,](https://visualstudio.microsoft.com/services/intellicode/)** daha iyi bağlam kullanan kod tamamlamaları sunmak için AI kullanarak yazılım geliştirmeyi geliştiren yeni bir özelliktir, geliştiricilere ekiplerinin desenlerini ve stillerini kodlamaya, kod sorunlarını yakalama zorluğu bulmaya ve gerçekten önemli alanlara kod incelemelerine odaklanmaya yardımcı olur. <br><br>Daha fazla bilgi için bkz. [IntelliCode SSS](/visualstudio/intellicode/faq).
 
-Visual Studio 2017 için çalışmadaki diğer özellikler hakkında daha fazla bilgi edinmek istiyor musunuz? [Visual Studio yol haritası](/visualstudio/productinfo/vs2018-roadmap) sayfasına bakın.
+Visual Studio 2017 için çalışmalarda başka nelerin olduğunu bilmek ister misiniz? Yol [Haritası Visual Studio bakın.](/visualstudio/productinfo/vs2018-roadmap)
 
-ve [Visual Studio 2019](whats-new-visual-studio-2019.md)' i en yeni sürümümüzü kullanıma almayı unutmayın.
+Ayrıca [2019'un](whats-new-visual-studio-2019.md)en yeni sürümü olan Visual Studio unutmayın.
 
 ## <a name="contact-us"></a>Bizimle iletişim kurun
 
-Visual Studio ekibine neden geri bildirim gönderilsin? Müşteri geri bildirimlerine önem veriyoruz. Yaptığımız kadar çok şey vardır.
+Neden Visual Studio ekibine geri bildirim gönderebilirsiniz? Çünkü müşteri geri bildirimlerini ciddiye alıyoruz. Bu, yapacaklarının büyük bir fazlasını yapar.
 
-Visual Studio nasıl geliştirebileceğimizi ve ürün desteği seçenekleri hakkında daha fazla bilgi edinmek istiyorsanız lütfen [bize geri bildirim gönder](feedback-options.md) sayfasına bakın.
+Ürün destek seçeneklerini nasıl geliştirebilirsiniz konusunda bir öneride Visual Studio veya ürün desteği seçenekleri hakkında daha fazla bilgi edinmek için lütfen [Geliştirici](https://developercommunity.visualstudio.com/home) Community bakın.
 
 ### <a name="report-a-problem"></a>Sorun bildirin
 
-Bazen, karşılaştığınız bir sorunun tam etkisini iletmek için bir ileti yeterli değildir. Visual Studio yanıt vermeyi, kilitlenmeleri veya diğer performans sorunlarını durdurduğu bir sorunla karşılaşırsanız **sorun bildir** aracını kullanarak, yeniden üretme adımlarını ve destekleyici dosyaları (ekran görüntüleri ve izleme ve yığın dökümü dosyaları) bizimle paylaşabilirsiniz. Bu aracın nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [sorun bildirme](how-to-report-a-problem-with-visual-studio.md) sayfası.
+Bazen, karşılaştığınız bir sorunun tam etkisini iletmek için bir ileti yeterli olmaz. Visual Studio yanıt vermesine, kilitlenmesine veya başka bir performans sorunuyla karşımıza çıkarılırsa, Sorun Bildir aracını kullanarak yeniden verme adımlarını ve destek dosyalarını (ekran görüntüleri ve izleme ve yığın döküm dosyaları gibi) bizimle kolayca **paylaşabilirsiniz.** Bu aracın kullanımı hakkında daha fazla bilgi için Sorun [bildirme sayfasına](how-to-report-a-problem-with-visual-studio.md) bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -13,20 +13,20 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f06bb143bfb10940d107dccc038dc852b54efb2e
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: b81a480a89f3c5fbc5be3fa5efbabcfd66ff5e4c
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126626564"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635652"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio'de anlık görüntü hata ayıklama için sorun giderme ve bilinen Visual Studio
 
-Bu makalede açıklanan adımlar sorununuzu çözmezse Geliştirici Hesabı'Community sorununuzu arayın veya Visual Studio'de Geri Bildirim Raporu Sorun [](https://aka.ms/feedback/suggest?space=8)   >    >   Bildirin'i seçerek yeni bir sorun bildirin.
+Bu makalede açıklanan adımlar sorununuzu çözmezse Geliştirici hesabı'Community sorun için arama yapma veya Sorun Bildirmede Geri Bildirim Gönder'i seçerek yeni bir [](https://aka.ms/feedback/suggest?space=8)  >    >   sorun Visual Studio.
 
 ## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Sorun: "Snapshot Debugger ekle" http durum kodu hatasıyla karşılaşıyor
 
-Ekleme girişimi sırasında Çıkış  penceresinde aşağıdaki hatayı görüyorsanız, bu aşağıda listelenen bilinen bir sorun olabilir. Önerilen çözümleri deneyin ve sorun devam ederse önceki diğer adla iletişime geçin.
+Ekleme girişimi sırasında Çıkış penceresinde **aşağıdaki** hatayı görüyorsanız, bu aşağıda listelenen bilinen bir sorun olabilir. Önerilen çözümleri deneyin ve sorun devam ederse önceki diğer adla iletişime geçin.
 
 `[TIMESTAMP] Error --- Unable to Start Snapshot Debugger - Attach Snapshot Debugger failed: System.Net.WebException: The remote server returned an error: (###) XXXXXX`
 
@@ -36,7 +36,7 @@ Bu hata, Azure'a Visual Studio rest çağrısının geçersiz bir kimlik bilgisi
 
 Şu adımları uygulayın:
 
-* Kullanıcı kişiselleştirme Visual Studio, iliştirilen Azure aboneliği ve kaynağı üzerinde izinlere sahip olduğundan emin olun. Bunu belirlemenin hızlı bir yolu, Kaynağın Hata Ayıklama Ekle iletişim kutusunda kullanılabilir olup  >  **olmadığını Snapshot Debugger...**  >  **Azure Kaynağı**  >  **Bulut Gezgini'nde** Veya Var Olan'ı seçin.
+* Kullanıcı kişiselleştirme Visual Studio, iliştirilen Azure aboneliği ve kaynağı üzerinde izinlere sahip olduğundan emin olun. Bunu belirlemenin hızlı bir yolu, Kaynağın Hata Ayıklama Ekle... iletişim kutusunda kullanılabilir olup  >  **Snapshot Debugger.**  >  **Azure Kaynağı**  >  **Bulut Gezgini'nde** Veya Var Olan'ı seçin.
 * Bu hata devam ederse, bu makalenin başında açıklanan geri bildirim kanallarından birini kullanın.
 
 Kimlik Doğrulama/Yetkilendirme (EasyAuth) App Service, çağrı yığını hata iletisinde LaunchAgentAsync ile 401 hatasıyla karşılaşabilirsiniz. İsteğin **kimliği doğrulanmamış** olduğunda lütfen Eylem'in Azure portal'de Anonim isteklere izin ver **(eylem yok)** olarak ayarlanmış olduğundan emin olun ve bunun yerine aşağıdaki içeriğe sahip D:\Home\sites\wwwroot dizininde authorization.json ifadesini iletin. 
@@ -61,7 +61,7 @@ Kimlik Doğrulama/Yetkilendirme (EasyAuth) App Service, çağrı yığını hata
 }
 ```
 
-İlk yol, **[IdentityProvider]** ile oturum açma gibi uygulama etki alanınızı etkili bir şekilde güvenli hale sağlar. İkinci yol, snapshotDebugger agentLaunch uç noktasını kimlik doğrulamasının dışında gösterir. Bu uç nokta,  snapshotDebugger tanılama aracısını başlatma işlemini yalnızca SnapshotDebugger önceden yüklenmiş site uzantısı uygulama hizmetiniz için etkinleştirildiğinde gerçekleştirir. authorization.json yapılandırması hakkında daha fazla bilgi için bkz. [URL yetkilendirme kuralları.](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html)
+İlk yol, **[IdentityProvider]** ile oturum açma gibi uygulama etki alanınızı etkili bir şekilde güvenli hale sağlar. İkinci yol, snapshotDebugger agentLaunch uç noktasını kimlik doğrulamasının dışında gösterir. Bu uç nokta,  snapshotDebugger tanılama aracısını başlatma işlemini yalnızca SnapshotDebugger önceden yüklenmiş site uzantısı uygulama hizmetiniz için etkinleştirildiğinde gerçekleştirir. authorization.json yapılandırması hakkında daha fazla bilgi için bkz. [URL yetkilendirme kuralları.](https://azure.microsoft.com/updates/url-authorization-rules-in-app-service/)
 
 ### <a name="403-forbidden"></a>(403) Yasak
 
@@ -69,7 +69,7 @@ Bu hata iznin reddedilir olduğunu gösterir. Bunun nedeni birçok farklı sorun
 
 Şu adımları uygulayın:
 
-* Kaynak için gerekli Visual Studio (RBAC) izinlerine sahip geçerli bir Azure Role-Based Access Control olduğunu doğrulayın. AppService için, App Service [Plan'da sorgu](/rest/api/appservice/appserviceplans/get) oluşturma App Service olup denetleyin.
+* Kaynak için gerekli Visual Studio (RBAC) izinlerine sahip geçerli bir Azure Role-Based Access Control olduğunu doğrulayın. AppService için, App Service [Plan'da](/rest/api/appservice/appserviceplans/get) sorgu App Service izinlere sahip olup olamayabilirsiniz.
 * İstemci makinenizin zaman damgasının doğru ve güncel olduğunu doğrulayın. İstek zaman damgasının 15 dakikadan uzun bir süre kapalı olduğu sunucular genellikle bu hatayı üretir.
 * Bu hata devam ederse, bu makalenin başında açıklanan geri bildirim kanallarından birini kullanın.
 
@@ -79,7 +79,7 @@ Bu hata web sitesinin sunucuda buluna olmadığını gösterir.
 
 Şu adımları uygulayın:
 
-* Web sitenizin dağıtıldığından ve bu kaynakta App Service kaynakta çalıştırıldığından emin olun.
+* Web sitenizin dağıtıldığından ve bağlı App Service kaynakta çalıştırıldığından emin olun.
 * Sitenin \<resource\> .https://.azurewebsites.net
 * Düzgün çalışan özel web uygulamanıza .https:// .azurewebsites.net üzerinden erişilirken 404 durum kodu azurewebsites.net \<resource\>
 * Bu hata devam ederse, bu makalenin başında açıklanan geri bildirim kanallarından birini kullanın.
@@ -90,15 +90,15 @@ Bu hata, sunucunun isteğin Accept üst bilgisinde ayarlanmış türe yanıt ver
 
 Şu adımları uygulayın:
 
-* .azurewebsites.net'de https:// \<resource\> doğrulayın
-* Sitenizin yeni örneklere geçiri olmadığını doğrulayın. Snapshot Debugger aralıklı olarak bu hatayı üretecek belirli örneklere yönlendirme istekleri için ARRAffinity olarak kabul edilmektedir.
+* Sitenizin \<resource\> .https://.azurewebsites.net
+* Sitenizin yeni örneklere geçirilmez olduğunu doğrulayın. Snapshot Debugger aralıklı olarak bu hatayı üretecek belirli örneklere yönlendirme istekleri için ARRAffinity olarak kullanılır.
 * Bu hata devam ederse, bu makalenin başında açıklanan geri bildirim kanallarından birini kullanın.
 
 ### <a name="409-conflict"></a>(409) Çakışma
 
 Bu hata, isteğin geçerli sunucu durumuyla çakışıyor olduğunu gösterir.
 
-Bu, bir kullanıcı ApplicationInsights'ı etkinleştirmiş bir AppService'e Snapshot Debugger eklemeye çalışan bilinen bir sorundur. ApplicationInsights, AppSettings'i farklı bir büyük/küçük Visual Studio ayarlar ve bu soruna neden olur.
+Bu, kullanıcı ApplicationInsights'ı etkinleştirmiş bir AppService'e Snapshot Debugger eklemeye çalışması bilinen bir sorundur. ApplicationInsights, AppSettings'i farklı bir büyük/küçük Visual Studio ayarlar ve bu soruna neden olur.
 
 ::: moniker range=">= vs-2019"
 Bu sorunu 2019'Visual Studio çözdük.
@@ -108,7 +108,7 @@ Bu sorunu 2019'Visual Studio çözdük.
 
 ::: moniker range="vs-2017"
 
-* Azure portal SnapshotDebugger (SNAPSHOTDEBUGGER_EXTENSION_VERSION) ve InstrumentationEngine (INSTRUMENTATIONENGINE_EXTENSION_VERSION) için AppSettings'in büyük harf olduğunu doğrulayın. Yoksa, ayarları el ile güncelleştirin ve bu da sitenin yeniden başlatılmasını gerektirir.
+* Bu dosyada Azure portal SnapshotDebugger (SNAPSHOTDEBUGGER_EXTENSION_VERSION) ve InstrumentationEngine (INSTRUMENTATIONENGINE_EXTENSION_VERSION) için AppSettings'in büyük harf olduğunu doğrulayın. Yoksa, ayarları el ile güncelleştirin ve bu da sitenin yeniden başlatılmasını gerektirir.
 ::: moniker-end
 * Bu hata devam ederse, bu makalenin başında açıklanan geri bildirim kanallarından birini kullanın.
 
@@ -122,7 +122,7 @@ Bu hata bir sunucu tarafı ağ sorunu olduğunu gösterir ve geçici olabilir.
 
 Şu adımları uygulayın:
 
-* Dosyayı yeniden eklemeden önce birkaç dakika Snapshot Debugger deneyin.
+* Yeniden eklemeden önce birkaç dakika Snapshot Debugger deneyin.
 * Bu hata devam ederse, bu makalenin başında açıklanan geri bildirim kanallarından birini kullanın.
 
 ## <a name="issue-snappoint-does-not-turn-on"></a>Sorun: Anlık bileşen aç değil
@@ -135,7 +135,7 @@ Normal ek bileşen simgesi yerine anlık görüntü ![noktanız](../debugger/med
 
 1. Uygulamanızı derlemek ve dağıtmak için kullanılan kaynak kodun aynı sürümüne sahip olduğundan emin olun. Dağıtımınız için doğru sembolleri yüklerken emin olun. Bunu yapmak için,  Anlık Görüntü Hata Ayıklama sırasında Modüller penceresini açın ve Sembol Dosyası sütununda hata ayıklaması yapılan modül için yüklenmiş bir .pdb dosyası olduğunu doğrulayın. Bu Snapshot Debugger, dağıtımınız için sembolleri otomatik olarak indirmeyi ve kullanmayı dener.
 
-## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>Sorun: Anlık görüntü açken semboller yüklenemedi
+## <a name="issue-symbols-do-not-load-when-i-open-a-snapshot"></a>Sorun: Anlık görüntü aç karşıdan yüklenemedi
 
 Aşağıdaki pencereyi görüyorsanız simgeler yüklenmedi.
 
@@ -143,9 +143,9 @@ Aşağıdaki pencereyi görüyorsanız simgeler yüklenmedi.
 
 Şu adımları uygulayın:
 
-- Sembol **Değiştir...'e Ayarlar** bağlantısına tıklayın. Hata Ayıklama **> Simgesi** ayarlarında bir sembol önbellek dizini ekleyin. Sembol yolu ayardikten sonra anlık görüntü hata ayıklamayı yeniden başlatın.
+- Sembol **Değiştir...'e Ayarlar** bağlantısına tıklayın. Hata Ayıklama **> Simgesi** ayarlarına bir sembol önbellek dizini ekleyin. Sembol yolu ayar başlatıldıktan sonra anlık görüntü hata ayıklamasını yeniden başlatın.
 
-   Projeniz içinde kullanılabilir olan simgeler veya .pdb dosyaları, dağıtım sırasındaki App Service eşleşmeli. Çoğu dağıtım (Visual Studio, Azure Pipelines veya Kudu ile CI/CD vb.) sembol dosyalarınızı kendi dosyanıza App Service. Sembol önbelleği dizinini ayarlama, Visual Studio bu sembolleri kullanmalarını sağlar.
+   Projeniz içinde kullanılabilir olan simgeler veya .pdb dosyaları, dağıtım sırasında App Service gerekir. Çoğu dağıtım (Visual Studio, Azure Pipelines veya Kudu ile CI/CD vb.) sembol dosyalarınızı kendi dosyanıza App Service. Sembol önbelleği dizinini ayarlama, Visual Studio bu sembolleri kullanmalarını sağlar.
 
    ![Sembol ayarları](../debugger/media/snapshot-troubleshooting-symbol-settings.png "Sembol ayarları")
 
@@ -155,22 +155,22 @@ Aşağıdaki pencereyi görüyorsanız simgeler yüklenmedi.
 
 Şu adımları uygulayın:
 
-- Uygulama bileşeninin Snapshot Debugger emin olun. Visual Studio Yükleyicisi açın ve Azure **Snapshot Debugger** bileşenine göz açın.
+- Uygulama bileşeninin Snapshot Debugger emin olun. Azure Visual Studio Yükleyicisi açın ve Azure **Snapshot Debugger** bileşenine göz açın.
 ::: moniker range="< vs-2019"
 - Uygulamanın desteklene olduğundan emin olun. Şu anda yalnızca ASP.NET (4.6.1+) ve ASP.NET Core (2.0+) uygulamaları Azure App Services'e dağıtılmıştır.
 ::: moniker-end
 ::: moniker range=">= vs-2019"
 - Uygulamanın desteklene olduğundan emin olun:
-  - Azure App Services : ASP.NET 4.6.1 veya .NET Framework çalışan uygulamaları içerir.
+  - Azure App Services : ASP.NET 4.6.1 veya .NET Framework üzerinde çalışan uygulamaları içerir.
   - Azure App Services : ASP.NET Core .NET Core 2.0 veya sonraki bir üzerinde çalışan uygulamaları Windows.
   - Azure Sanal Makineler (ve sanal makine ölçek kümesi) - ASP.NET 4.6.1 veya .NET Framework çalışan uygulamalar.
   - Azure Sanal Makineler (ve sanal makine ölçek kümesi) - ASP.NET Core .NET Core 2.0 veya sonraki bir üzerinde çalışan uygulamaları Windows.
-  - Azure Kubernetes Services : Debian 9'ASP.NET Core .NET Core 2.2 veya sonraki bir sürümü üzerinde çalışan uygulamaları içerir.
+  - Azure Kubernetes Services : Debian 9 ASP.NET Core .NET Core 2.2 veya sonraki bir sürümü üzerinde çalışan uygulamaları içerir.
   - Azure Kubernetes Services : Alpine 3.8'de .NET Core 2.2 veya sonraki bir ASP.NET Core üzerinde çalışan uygulamalara yöneliktir.
-  - Azure Kubernetes Services : Ubuntu 18.04'te .NET Core 2.2 veya sonraki bir ASP.NET Core üzerinde çalışan uygulamaları içerir.
+  - Azure Kubernetes Services : Ubuntu 18.04'te .NET Core 2.2 veya sonraki bir ASP.NET Core üzerinde çalışan uygulamalara yöneliktir.
 ::: moniker-end
 
-## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>Sorun: Yalnızca Azaltmalı Anlık Görüntüleri Tanılama Araçları
+## <a name="issue-i-only-see-throttled-snapshots-in-the-diagnostic-tools"></a>Sorun: Yalnızca AzaltmaLı Anlık Görüntüleri Tanılama Araçları
 
 ![Kısıtlandı ek bileşen noktası](../debugger/media/snapshot-troubleshooting-throttled-snapshots.png "Kısıtlanmış anlık görüntü noktası")
 

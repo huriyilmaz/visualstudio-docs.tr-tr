@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: d3902d8119b8de8eba49cf28a7730cc41d505438
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 1450cea98601c551545fb74f7aa925701f43068f
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122107075"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635847"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c-visual-basic"></a>hızlı başlangıç: Visual Studio CPU kullanım verilerini çözümleme (C#, Visual Basic)
 
@@ -53,7 +53,7 @@ hata ayıklayıcı (**Tanılama Araçları** penceresi) ile profil oluşturma ar
 
    **yeni projeyi yapılandırın** penceresinde, **Project adı** kutusuna *myprofilerapp* yazın veya girin. Ardından **İleri**' yi seçin.
 
-   Önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
+   Önerilen hedef Framework veya .NET 6 ' ı seçin ve ardından **Oluştur**' u seçin.
 
    ::: moniker-end
 

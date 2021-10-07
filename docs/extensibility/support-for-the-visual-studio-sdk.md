@@ -1,6 +1,6 @@
 ---
-title: Visual Studio SDK 'sı için destek | Microsoft Docs
-description: Visual Studio ıde 'nin nasıl genişletileceği hakkında müşteriler için kullanılabilen destek seçenekleri hakkında bilgi edinin.
+title: Visual Studio SDK | Microsoft Docs
+description: Müşteriler için kullanılabilir olan destek seçenekleri hakkında bilgi edinmek için IDE'nin Visual Studio öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,54 +17,54 @@ manager: jmartens
 ms.technology: vs-ide-sdk
 ms.workload:
 - vssdk
-ms.openlocfilehash: 396325196a4989d89d179fb92f5bffff7419d3ef
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: b7841743e7f2c29c3283f80b1d1eaa37e8836899
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122049408"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635587"
 ---
 # <a name="support-for-the-visual-studio-sdk"></a>Visual Studio SDK Desteği
-Visual Studio tümleşik geliştirme ortamının (ıde) nasıl genişletileceği hakkında sorularınız olan müşteriler için çeşitli destek seçenekleri mevcuttur.
+Tümleşik geliştirme ortamını (IDE) genişletme hakkında soruları Visual Studio müşteriler için çeşitli destek seçenekleri mevcuttur.
 
-## <a name="free-support"></a>Ücretsiz destek
+## <a name="free-support"></a>Ücretsiz Destek
 
-### <a name="microsoft-newsgroups"></a>Microsoft haber grupları
- Visual Studio geliştirme ekibinin ve Visual Studio genişleten diğer geliştiricilerin üyeleri genellikle microsoft. public. vstudio. extensibility haber grubuna katılıyorsa. Bu haber grubu, yönetilen bir haber grubundayken. MSDN Universal abonesi değilseniz Microsoft 'un yanıt vermesini sağlamak için istenmeyen posta olmayan bir diğer ad kaydettiğinizden emin olun.
+### <a name="microsoft-newsgroups"></a>Microsoft Vezneler
+ Geliştirme ekibinin Visual Studio diğer geliştiriciler genellikle Visual Studio microsoft.public.vstudio.genişletilebilirlik serisine katılabilir. Bu yer, yönetilen bir yerdir. MSDN Evrensel Abonesiyseniz, Microsoft'un yanıt vermesine yardımcı olmak için istenmeyen posta olmayan bir diğer ad kaydettirin.
 
 ### <a name="msdn-forums"></a>MSDN Forumları
- [MSDN forumları](https://social.msdn.microsoft.com/Forums/en-US/home) , eşler ve uzmanlar ile sohbet etmek için başka bir yol sağlar. Forumlardan oluşan grafik kullanıcı arabirimi (UI), haber gruplarından daha kolay kullanılmasını sağlamak için tasarlanmıştır. [Visual Studio genişletilebilirlik forumu](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts&preserve-view=true) , genişletilebilirlik sorularına yanıt aramaya başlamak için iyi bir yerdir. Bir soru sormadan önce her zaman, başka biri de zaten bir soru sorabileceğinden arama yapın.
+ [MSDN Forumları, iş](https://social.msdn.microsoft.com/Forums/en-US/home) arkadaşlarınızla ve uzmanlarla sohbet etmek için başka bir yol sağlar. Forumların grafik kullanıcı arabirimi (UI), bunları daha kolay bir şekilde kullanmak için tasarlanmıştır. [Genişletilebilirlik Visual Studio Genişletilebilirlik Forumu,](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts&preserve-view=true) genişletilebilirlik sorularının yanıtlarını aramaya başlamak için iyi bir yerdir. Soru sormadan önce her zaman ara'nın nedeni, aynı soruyu zaten başka birisi sormış olabilir.
 
-### <a name="visual-studio-gallery"></a>Visual Studio 'Ndeki
- [Visual Studio marketi](https://marketplace.visualstudio.com/) , uzantıların ve örnek kodun yer aldığı yerdir. Visual Studio ile üretkenliğinizi ve kullanıcı deneyiminizi geliştiren araçları, vspackages ve Managed Extensibility Framework (MEF) ve diğer örnek türlerini nasıl kullanacağınızı gösteren örnek uygulamalar bulabilirsiniz.
+### <a name="visual-studio-gallery"></a>Visual Studio Galerisi
+ Visual Studio [Market,](https://marketplace.visualstudio.com/) uzantıların ve örnek kodun yeridir. Visual Studio ile üretkenliğinizi ve kullanıcı deneyiminizi geliştiren araçları, VSPackage'ların ve Managed Extensibility Framework (MEF) ve diğer örnek türlerin nasıl kullanılllarını gösterir örnek uygulamalar bulabilirsiniz.
 
-### <a name="visual-studio-sdk-samples"></a>Visual Studio SDK örnekleri
+### <a name="visual-studio-sdk-samples"></a>Visual Studio SDK Örnekleri
 
-GitHub vs SDK uzantılarının açık kaynak örneklerini [Visual Studio](https://github.com/Microsoft/VSSDK-Extensibility-Samples)örneklerde bulabilirsiniz. bu GitHub deposu, Visual Studio çeşitli genişletilebilir özellikleri gösteren örnekler içerir.
+VS SDK uzantılarının açık kaynak örneklerini GitHub Visual Studio [bulabilirsiniz.](https://github.com/Microsoft/VSSDK-Extensibility-Samples) Bu GitHub, veri deposundaki çeşitli genişletilebilir özellikleri gösteren örnekler Visual Studio.
 
-## <a name="included-support"></a>Dahil edilen destek
+## <a name="included-support"></a>Dahil Edilen Destek
 
-### <a name="visual-studio-product-support"></a>Visual Studio Ürün desteği
- Ürünlerin satın alınması için bazı destek dahildir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . daha fazla bilgi için bkz. [Visual Studio desteği](https://msdn.microsoft.com/vstudio/cc136615.aspx). Microsoft, genişletilebilirlik hakkında soruları yanıtlamak için adanmış bir destek ekibi sağlar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
+### <a name="visual-studio-product-support"></a>Visual Studio Ürün Desteği
+ Ürünlerin satın alımına bazı destekler [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dahildir. Daha fazla bilgi için [bkz. Visual Studio Desteği.](https://msdn.microsoft.com/vstudio/cc136615.aspx) Microsoft, genişletilebilirlik ile ilgili soruları yanıtlamak için ayrılmış [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir destek ekibine sahip olur.
 
-### <a name="msdn-subscription-support"></a>MSDN abonelik desteği
- MSDN abonelik paketleri de bazı destek içerebilir. Daha fazla bilgi için bkz. [MSDN abone desteği](https://msdn.microsoft.com/subscriptions/aa718661.aspx).
+### <a name="msdn-subscription-support"></a>MSDN Abonelik Desteği
+ MSDN abonelik paketleri bazı destek de içerebilir. Daha fazla bilgi için bkz. [MSDN Abone Desteği.](https://msdn.microsoft.com/subscriptions/aa718661.aspx)
 
-## <a name="paid-support"></a>Ücretli destek
+## <a name="paid-support"></a>Ücretli Destek
 
-### <a name="developer-tools-support"></a>Geliştirici Araçları desteği
+### <a name="developer-tools-support"></a>Geliştirici Araçları Desteği
 
-Destek de satın alınabilir. [Microsoft Yardım ve destek merkezlerindeki](https://support.microsoft.com/supportforbusiness/productselection?fltadd=sps-business-1&sapId=4fd4947b-15ea-ce01-080f-97f2ca3c76e8)geliştirici araçları kategorisi altında çeşitli destek teklifleri mevcuttur.
+Destek de satın alınabilir. Microsoft Yardım ve Destek Merkezleri'nde Geliştirici Araçları altında çeşitli [destek teklifleri mevcuttur.](https://support.microsoft.com/supportforbusiness/productselection?fltadd=sps-business-1&sapId=4fd4947b-15ea-ce01-080f-97f2ca3c76e8)
 
-[!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)]Karmaşık paketler geliştirmek için kullanmak isteyen müşteriler, Microsoft ile bir Premier destek sözleşmesi satın almayı düşünebilirler. Daha fazla bilgi için bkz. [Microsoft Premier destek](https://support.microsoft.com/premier). Küçük şirketler için, [Iş ortakları Için gelişmiş destek](https://partner.microsoft.com/support/advanced-cloud-support) , geleneksel bir Premier destek teklifiyle ilgili etkileyici bir alternatif olabilir.
+karmaşık paketler geliştirmek için kullanmak [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] isteyen müşteriler, Microsoft ile Premier Destek satın almayı göz önünde bulundurabilirsiniz. Daha fazla bilgi için [bkz. Microsoft Premier Destek.](https://support.microsoft.com/premier) Küçük şirketler için, [İş Ortakları için Gelişmiş](https://partner.microsoft.com/support/advanced-cloud-support) Destek, geleneksel bir iş ortağı teklifine Premier Destek olabilir.
 
 > [!NOTE]
-> Standart destek, danışmanını veya önerileri almak için kullanılamaz.
+> Standart destek danışmanlık veya öneri almak için kullanılamaz.
 
-VSıP programıyla birlikte Premier Destek teklifleriyle ilgili sorularınızı gönderebilirsiniz [vsipsvs@microsoft.com](mailto:vsipsvs@microsoft.com) . Yeni Iş ortağı avantajı programı hakkında sorularınızı gönderebilirsiniz [advantg@microsoft.com](mailto:advantg@microsoft.com) .
+VSIP programıyla Premier Destek teklifleriyle ilgili sorular ile ilgili sorular ' e [vsipsvs@microsoft.com](mailto:vsipsvs@microsoft.com) gönderlanabilir. Yeni İş Ortağı Avantajı programıyla ilgili sorular 'a gönder [advantg@microsoft.com](mailto:advantg@microsoft.com) olabilir.
 
-Bireysel destek istekleri hakkında bilgi, [bireysel destek isteklerinde](https://support.microsoft.com/supportforbusiness/productselection)bulunabilir.
+Tek tek destek istekleriyle ilgili bilgiler Bireysel Destek [İstekleri altında bulunabilir.](https://support.microsoft.com/supportforbusiness/productselection)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bizimle iletişime geçin](../ide/feedback-options.md)
+- [Visual Studio Geliştirici Community](https://developercommunity.visualstudio.com/home)

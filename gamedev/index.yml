@@ -54,9 +54,9 @@ productDirectory:
       links:
         - url: 'https://www.unrealengine.com/features'
           text: Unreal Engine 'e genel bakış
-        - url: 'https://docs.unrealengine.com/GettingStarted/index.html'
+        - url: 'https://docs.unrealengine.com/4.27/en-US/Basics/GettingStarted/'
           text: Unreal Engine ile çalışmaya başlama
-        - url: 'https://docs.unrealengine.com/Programming/Development/VisualStudioSetup/index.html'
+        - url: 'https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/'
           text: unreal Engine için Visual Studio ayarlama
 conceptualContent:
   title: Visual Studio düzeyini artırma
@@ -65,14 +65,14 @@ conceptualContent:
     - title: Visual Studio’yu kullanmayı öğrenin
       links:
         - text: Kılavuzlu turu başlat
-          url: /docs/get-started/visual-studio-ide.md
+          url: /visualstudio/get-started/visual-studio-ide
           itemType: overview
         - text: Kodu yazma ve düzenleme
-          url: /docs/ide/index-writing-code.yml
+          url: /visualstudio/ide/index-writing-code
           itemType: tutorial
         - text: Genel hata ayıklama özellikleri
           itemType: tutorial
-          url: /docs/debugger/debugger-feature-tour.md
+          url: /visualstudio/debugger/debugger-feature-tour
     - title: Öğreticiyi izleyin
       links:
         - text: Unity ile ilk oyununuzu

@@ -96,12 +96,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: d332963ca50cd711400a19d935b4d810e755daab
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 95a263e0c54a268755522e735552a80cd5f3a9eb
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627159"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635320"
 ---
 # <a name="resources-for-troubleshooting-ide-errors"></a>IDE hataları için sorun giderme kaynakları
 
@@ -127,7 +127,7 @@ Forum kaynaklarının listesi aşağıdadır:
 
 ## <a name="product-support"></a>Ürün desteği
 
-Diğer kaynakları denedikten sonra hala sorularınız varsa, [Microsoft desteği](https://support.microsoft.com/en-us) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. bölgenizdeki ürün desteği hakkında daha fazla bilgi için [Visual Studio geri bildirim seçenekleri](../../ide/feedback-options.md) sayfasına bakın.
+Diğer kaynakları denedikten sonra hala sorularınız varsa, [Microsoft desteği](https://support.microsoft.com/en-us) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. bölgenizdeki ürün desteği hakkında daha fazla bilgi için bkz. [geliştirici Community](https://developercommunity.visualstudio.com/home) sayfası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

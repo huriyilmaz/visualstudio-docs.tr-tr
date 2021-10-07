@@ -1070,7 +1070,7 @@
       items:
         - name: Çağrı Hiyerarşisi
           href: ide/reference/call-hierarchy.md
-        - name: Geliştirici Komut İstemi & geliştirici PowerShell
+        - name: Geliştirici Komut İstemi & Geliştirici PowerShell
           href: ide/reference/command-prompt-powershell.md
         - name: Değişiklikleri Önizleme
           href: ide/preview-changes.md
@@ -1449,21 +1449,19 @@
       href: 'https://visualstudio.microsoft.com/license-terms/'
     - name: Destek yaşam döngüsü ve bakım
       href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Müşteri deneyimini geliştirme
+    - name: Müşteri Deneyimini Geliştirme
       items:
         - name: Program hakkında
           displayName: Customer Experience Improvement Program
           href: ide/visual-studio-experience-improvement-program.md
         - name: Sistem tarafından oluşturulan günlükler
           href: ide/diagnostic-data-collection.md
-    - name: Visual Studio bağlı deneyimler
+    - name: Visual Studio'da bağlantılı deneyimler
       href: ide/reference/connected-experiences.md
-    - name: IDE hatalarında sorun giderme
+    - name: IDE hatalarını giderme
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
 - name: Geri bildirim gönder
   items:
-    - name: Genel Bakış
-      href: ide/feedback-options.md
     - name: Sorun bildirin
       items:
         - name: Sorun bildirin

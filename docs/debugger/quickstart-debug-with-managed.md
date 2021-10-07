@@ -1,5 +1,5 @@
 ---
-title: Yönetilen kod hata ayıklaması | Microsoft Docs
+title: Yönetilen kod hata ayıklama | Microsoft Docs
 description: Visual Studio hata ayıklayıcısını kullanarak C# Visual Basic hata ayıklama
 ms.custom: mvc
 ms.date: 03/18/2018
@@ -13,20 +13,20 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6b1bf99c7961c2ca8a9d162e2de173a9dd0a41c
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 9387d4a7ef763357d79b9d185e79de9229735afb
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627963"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635977"
 ---
-# <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>Hızlı Başlangıç: Visual Studio hata Visual Basic ayıklayıcısını kullanarak C# veya Visual Studio ayıklama
+# <a name="quickstart-debug-with-c-or-visual-basic-using-the-visual-studio-debugger"></a>Hızlı Başlangıç: Visual Studio hata ayıklayıcısını kullanarak C# veya Visual Basic hata ayıklama
 
-Bu Visual Studio hata ayıklayıcısı, uygulamalarınızı hata ayıklamanıza yardımcı olacak birçok güçlü özellik sağlar. Bu konu, bazı temel özellikleri öğrenmenin hızlı bir yolunu sağlar.
+Hata Visual Studio hata ayıklayıcısı, uygulamalarınızı hata ayıklamanıza yardımcı olacak birçok güçlü özellik sağlar. Bu konu, bazı temel özellikleri öğrenmenin hızlı bir yolunu sağlar.
 
 ## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
-1. Yeni Visual Studio açın ve yeni bir proje oluşturun.
+1. Yeni Visual Studio ve yeni bir proje oluşturun.
 
     ::: moniker range=">=vs-2019"
     Başlangıç penceresi açık değilse Dosya Başlangıç **Penceresi'ne**  >  **tıklayın.** Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
@@ -35,12 +35,12 @@ Bu Visual Studio hata ayıklayıcısı, uygulamalarınızı hata ayıklamanıza 
 
     Dil ve platform filtrelerini uygulayan .NET Core **için Konsol** Uygulaması şablonunu ve ardından Sonraki'yi **seçin.**
 
-    Önerilen hedef çerçeveyi (.NET Core 3.1) veya .NET 5'i seçin ve ardından Oluştur'a **seçin.**
+    Önerilen hedef çerçeveyi veya .NET 6'yi seçin ve ardından **Oluştur'a seçin.**
 
-    .NET Core için Konsol Uygulaması **proje** şablonunu görmüyorsanız Araçlar Araçları ve Özellikleri Al... 'a gidin ve bu işlem  >  Visual Studio Yükleyicisi. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
+    .NET Core için  Konsol Uygulaması proje şablonunu görmüyorsanız Araçlar Araçları ve Özellikleri Al... 'a gidin ve bu işlem  >  Visual Studio Yükleyicisi. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üst menü çubuğundan Dosya Yeni **dosya'Project.**  >    >   Yeni proje iletişim  kutusunun sol bölmesinde, **Visual C#** altında **.NET Core'ı** seçin ve orta bölmede Konsol Uygulaması **(.NET Core) öğesini seçin.** Ardından **MyDbgApp** gibi bir ad yazın ve Tamam'a **tıklayın.**
+    Üst menü çubuğundan Dosya Yeni **Dosya'Project.**  >    >   Yeni proje iletişim  kutusunun sol bölmesinde, **Visual C#** altında **.NET Core'ı** seçin ve orta bölmede Konsol Uygulaması **(.NET Core) öğesini seçin.** Ardından **MyDbgApp** gibi bir ad yazın ve Tamam'a **tıklayın.**
 
     Konsol Uygulaması **(.NET Core)** proje şablonunu görmüyorsanız Araçlar Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
     ::: moniker-end
@@ -133,7 +133,7 @@ Bu Visual Studio hata ayıklayıcısı, uygulamalarınızı hata ayıklamanıza 
     ```
 
     > [!NOTE]
-    > Bu Visual Basic, başlangıç nesnesinin ( Uygulama Uygulama Nesnesinde Özellikler `Sub Main` > > ) olarak >**olun.**
+    > Bu Visual Basic, başlangıç nesnesinin ( Uygulama Ve Başlangıç Nesnesi) `Sub Main` > özellikler > emin **olun.**
 
 ## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
 
@@ -150,7 +150,7 @@ Kesme *noktası,* değişkenlerin değerlerine Visual Studio veya bellek davran�
     Hata ayıklayıcısı kesme noktası ayarlayıcıyı duraklatıyor. Hata ayıklayıcısı ve uygulama yürütmenin duraklatılmış olduğu deyim sarı okla işaret ediyor. İşlev `doWork` çağrısına sahip satır henüz yürütülmedi.
 
     > [!TIP]
-    > Döngüde veya yeniden çalışmada kesme noktanız varsa veya sık sık adım attığınız çok sayıda [](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) kesme noktanız varsa, kodunuzun YALNIZCA belirli koşullar karşılandı olduğunda askıya alındıktan emin olmak için koşullu kesme noktası kullanın. Koşullu kesme noktası zamandan tasarruf sağlar ve yeniden oluşturması zor olan sorunlarda hata ayıklamayı da kolaylaştırır.
+    > Döngüde veya yeniden çalışmada kesme noktanız varsa veya sık sık adım attığınız çok sayıda [](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) kesme noktanız varsa, kodunuzun YALNIZCA belirli koşullar karşılandı olduğunda askıya alındıktan emin olmak için koşullu kesme noktası kullanın. Koşullu kesme noktası zamandan tasarruf sağlar ve yeniden üretile zor olan sorunlarda hata ayıklamayı da kolaylaştırır.
 
 ## <a name="navigate-code"></a>Kodda gezinme
 
@@ -160,7 +160,7 @@ Kesme noktası duraklatılırken, yeşil renkli Çalıştır düğmesine tıklar
 
 ![Tıklamak için çalıştır](../debugger/media/dbg-qs-run-to-click-csharp.png "Tıklamak için çalıştır")
 
-Uygulama, çağrısıyla `doWork` yürütmeye devam eder ve düğmesine tıklamış olduğu kod satırı üzerinde duraklatılır.
+Uygulama, çağrısıyla `doWork` yürütmeye devam eder ve düğmesine tıklamış kod satırı üzerinde duraklatılır.
 
 Kodda adım adım gezinmek için kullanılan yaygın klavye komutları **F10** ve **F11'tir.** Daha ayrıntılı yönergeler için bkz. [Hata ayıklayıcıya ilk bakış.](../debugger/debugger-feature-tour.md)
 
@@ -182,7 +182,7 @@ Hata ayıklama oturumunun ortasındayken kodunda test etmek istediğiniz bir de�
 
 1. İkinci örneğine tıklayın `c2.First.Value` ve olarak `c2.First.Value` `c2.Last.Value` değişir.
 
-2. Hata ayıklayıcıyı ilerletin ve **düzenlenen kodu yürütmek >** **F10** 'a (veya Hata Ayıkla veya AdımLa) birkaç kez basın.
+2. Hata ayıklayıcıyı ilerlemek ve **düzenlenen kodu yürütmek >** **F10** 'a (veya Hata Ayıkla veya Adımla) birkaç kez basın.
 
     ![Düzenle ve devam](../debugger/media/dbg-qs-edit-and-continue-csharp.gif "Düzenle ve devam")
 

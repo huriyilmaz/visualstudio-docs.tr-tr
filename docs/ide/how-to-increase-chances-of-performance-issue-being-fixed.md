@@ -8,12 +8,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: d51c04cc579433f3f6e72c55a60529088d724237
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: c37f98198e999b1ab31bb6e371ca5b8700037736
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126724932"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635333"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Bir performans sorununun düzeltilme olasılığını artırma
 
@@ -170,7 +170,7 @@ Bir performans izlemesini kaydederken, raporlama yaptığınız yavaş işlem ve
 geliştirici Community web sitesindeki mevcut geri bildirim öğelerine doğrudan performans izlemeleri eklemeyin. ek bilgi isteme/sağlama, Visual Studio yerleşik bir sorun aracında desteklenen bir iş akışıdır. Önceki bir geri bildirim öğesini çözümlemek için bir performans izlemesi gerekliyse, geri bildirim öğesinin durumunu "daha fazla bilgi gerekiyor" olarak ayarlayacağız, bu da yeni bir sorunu raporlama ile aynı şekilde yanıt verebilir. Ayrıntılı yönerge için lütfen Sorun Bildir [aracının belgesinde "Daha](./how-to-report-a-problem-with-visual-studio.md#when-further-information-is-needed) Fazla Bilgi Gerekiyor" bölümüne bakın.
 
 > [!NOTE]
-> **En değerli geri bildirim:** Neredeyse tüm yavaşlık/yüksek CPU sorunları için en değerli geri bildirim, yapmaya çalıştığınız şeyi üst düzey bir açıklamanın yanı sıra bu süre boyunca davranışı yakalayan performans izlemesi \* (.etl.zip) ile birliktedir.
+> **En değerli geri bildirim:** Neredeyse tüm yavaşlık/yüksek CPU sorunları için en değerli geri bildirim, o sırada davranışı yakalayan performans izlemesi ( .etl.zip) ile birlikte yapmaya çalıştığınız şeyi üst düzey bir \* açıklamadır.
 
 **Gelişmiş Performans İzlemeleri**
 
@@ -182,7 +182,7 @@ Sorun bildir aracında izleme toplama özellikleri çoğu senaryo için yeterlid
 > 2019 Visual Studio 16.3 sürümünden itibaren, işlem yapılmamış günlükler Sorun Bildir aracı kullanılarak gönderilen geri bildirime otomatik olarak eklenir.
 Ancak, sorun doğrudan yeniden tekrarlanabilirse, aşağıdaki adımların ardından sorun daha iyi tanılamaya yardımcı olacak ek bilgiler eklemeye yardımcı olabilir.
 
-Temel işlemle paralel olarak çalıştıran ve ana Visual Studio dışından çeşitli özellikler sağlayan bir dizi uydu Visual Studio vardır. Bu uydu işlemlerden biri hata oluşursa genellikle Visual Studio tarafında 'StreamJsonRpc.RemoteInvocationException' veya 'StreamJsonRpc.ConnectionLostException' olarak görülür.
+Bu işlemle paralel olarak çalıştıran ve ana Visual Studio dışından çeşitli özellikler sağlayan bir dizi uydu Visual Studio vardır. Bu uydu işlemlerden biri hata oluşursa genellikle Visual Studio tarafında 'StreamJsonRpc.RemoteInvocationException' veya 'StreamJsonRpc.ConnectionLostException' olarak görülür.
 
 Bu tür sorunları en çok eyleme değiştirilebilir yapan şey, aşağıdaki adımların ardından toplanabilir ek günlükler sağlamaktır:
 
@@ -191,13 +191,12 @@ Bu tür sorunları en çok eyleme değiştirilebilir yapan şey, aşağıdaki ad
     - **ServiceHubTraceLevel genel ortam değişkenlerini All** olarak **ayarlayın**
     - Sorunu yeniden üretin.
 
-2. Günlük Toplama Microsoft Visual Studio ve .NET Framework dosyasını buradan [indirin.](https://www.microsoft.com/download/details.aspx?id=12493)
+2. Günlük Toplama Microsoft Visual Studio .NET Framework'nı buradan [indirin.](https://www.microsoft.com/download/details.aspx?id=12493)
 3. Aracı çalıştırın. Bu, **%temp%/vslogs.zip**. Lütfen bu dosyayı geri bildiriminize iliştirin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio geri bildirim seçenekleri](../ide/feedback-options.md)
 * [Sorun bildirme Mac için Visual Studio](/visualstudio/mac/report-a-problem)
 * [C++ ile ilgili bir sorun bildirme](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset)
-* [Visual Studio Geliştirici Community](https://aka.ms/feedback/suggest?space=8)
+* [Visual Studio Geliştirici Community](https://developercommunity.visualstudio.com/home)
 * [Geliştirici Topluluğu veri gizliliği](developer-community-privacy.md)

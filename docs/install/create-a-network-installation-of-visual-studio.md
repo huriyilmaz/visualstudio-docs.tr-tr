@@ -15,19 +15,19 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 6f7d0db6d1e8e526f7906ff940c07788fd4bd1b6
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 978a6676acc32336646140ee38e75d499697a457
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627086"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635613"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Ağ yüklemesi oluşturma Visual Studio
 
-Bazen kuruluş yöneticisi, istemci iş istasyonlarına dağıtılabilir Visual Studio içeren bir ağ yükleme noktası oluşturmak ister. Bu, istemci makinelerinin sınırlı izinlere veya sınırlı İnternet erişimine sahip olduğu ya da şirket içi ekiplerin geliştirici araç kümesine belirli bir sürümü standart hale getirmeden önce uyumluluk testi yapmak istemesi senaryolarını kolaylaştırmaktır. Bir yöneticinin Visual Studio temel olarak hem  ilk yükleme hem de gelecekteki tüm ürün güncelleştirmeleri için tüm Visual Studio dosyalarını içeren bir iç statik ağ paylaşımında bulunan bir dosya önbelleğini oluşturacak bir ağ düzeni oluşturacak şekilde tasarlayacağız.
+Bazen kuruluş yöneticisi, istemci iş istasyonlarına dağıtılabilir Visual Studio içeren bir ağ yükleme noktası oluşturmak ister. Bu, istemci makinelerinin sınırlı izinlere veya sınırlı İnternet erişimine sahip olduğu ya da şirket içi ekiplerin geliştirici araç kümesine belirli bir sürümü standart hale getirmeden önce uyumluluk testi yapmak istemesi senaryolarını kolaylaştırmaktır. Bir yöneticinin Visual Studio hem ilk yükleme  hem de gelecekteki tüm ürün güncelleştirmeleri için tüm Visual Studio dosyalarını içeren bir iç statik ağ paylaşımında bulunan bir dosya önbelleğini oluşturacak bir ağ düzeni oluşturacak şekilde tasarlayacağız.
 
  > [!NOTE]
- >  - Kurum içinde birden çok Visual Studio sürümünüz varsa (örneğin, hem Visual Studio 2019 Professional hem de Visual Studio 2019 Enterprise), her sürüm için ayrı bir ağ yükleme paylaşımı oluşturmanız gerekir.
+ >  - Kurum içinde birden fazla Visual Studio sürümünüz varsa (örneğin, hem Visual Studio 2019 Professional hem de Visual Studio 2019 Enterprise), her sürüm için ayrı bir ağ yükleme paylaşımı oluşturmanız gerekir.
  >  - İlk istemci yüklemesini öncesinde istemcilerin ürün güncelleştirmelerini nasıl _almalarını istediğinize_ karar vermenizi öneririz.  Bu, yapılandırma seçeneklerinizin doğru şekilde ayar olduğundan emin olunmasınızı kolaylaştırır. Seçenekleriniz, istemcilerin güncelleştirmeleri ağ düzeni konumdan veya İnternet'den aldırmalarını içerir. 
  >  - Özgün Visual Studio yükleme düzeni ve sonraki tüm ürün güncelleştirmelerinin, onarım ve kaldırma işlevlerinin düzgün şekilde çalışması için aynı ağ dizininde yer alıyor olması gerekir.
 
@@ -51,7 +51,7 @@ Desteklenen diğer önyükleyiciler vs_feedbackclient.exe, vs_teamexplorer.exe, 
 
 ::: moniker range="vs-2019"
 
-başlangıç olarak Visual Studio 2019 önyükleyiciyi [Visual Studio indirmeleri sayfasından](https://visualstudio.microsoft.com/downloads) veya seçtiğiniz sürüm ve sürüm için [Visual Studio 2019](/visualstudio/releases/2019/history#installing-an-earlier-release) Sürümler sayfasından Visual Studio.  Kurulum yürütülebilir dosyanız veya daha belirli olması için, önyükleyici dosyası aşağıdakilerden &mdash; &mdash; biri ile eşler veya benzer olur:
+Visual Studio indirmeleri sayfasından veya seçtiğiniz sürüm ve sürüm için [Visual Studio](https://visualstudio.microsoft.com/downloads) 2019 Sürümler sayfasından [Visual Studio 2019](/visualstudio/releases/2019/history#installing-an-earlier-release) önyükleyicisi'Visual Studio.  Kurulum yürütülebilir dosyanız veya daha belirli olması için, önyükleyici dosyası aşağıdakilerden &mdash; &mdash; biri ile eşler veya benzer olur:
 
 | Sürüm                    | İndir                                                                                                                                                                                                                           |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -59,7 +59,7 @@ başlangıç olarak Visual Studio 2019 önyükleyiciyi [Visual Studio indirmeler
 | Visual Studio Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
 | Visual Studio Derleme Araçları  | [vs_buildtools.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
 
-Desteklenen diğer önyükleyiciler arasında [vs_teamexplorer.exe, ](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/4026077127d25d33789f3882998266946608d8ada378b6ed7c8fff8c07f3dde2/vs_TeamExplorer.exe) [vs_testagent.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/1383bf8bcda3d0e986a2e42c14114aaea8a7b085d31aa0623c9f70b2bad130e4/vs_TestAgent.exe)ve [vs_testcontroller.exe. ](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/54dcf24b76e7cd9fb8be0ac518a9dfba6daf18fe9b2aa1543411b1cda8820918/vs_TestController.exe)
+Desteklenen diğer önyükleyiciler arasında [vs_teamexplorer.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/4026077127d25d33789f3882998266946608d8ada378b6ed7c8fff8c07f3dde2/vs_TeamExplorer.exe), [vs_testagent.exe](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/1383bf8bcda3d0e986a2e42c14114aaea8a7b085d31aa0623c9f70b2bad130e4/vs_TestAgent.exe)ve [vs_testcontroller.exe. ](https://download.visualstudio.microsoft.com/download/pr/f6473c9f-a5f6-4249-af28-c2fd14b6a0fb/54dcf24b76e7cd9fb8be0ac518a9dfba6daf18fe9b2aa1543411b1cda8820918/vs_TestController.exe)
 
 ::: moniker-end
 
@@ -79,7 +79,7 @@ Visual Studio indirme sayfasından Visual Studio 2022 [önyükleyicisi'Visual St
 ::: moniker range="vs-2017"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki şekilde devam edin. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini** seçin ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu slanın bir yayın sürümüyle eşleşmesi Visual Studio için [bkz. Visual Studio numaraları ve yayın tarihleri.](visual-studio-build-numbers-and-release-dates.md)
+>Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki şekilde devam edin. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini** seçin ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu slanı bir yayın sürümüyle Visual Studio için [bkz. Visual Studio ve yayın tarihleri.](visual-studio-build-numbers-and-release-dates.md)
 
 ::: moniker-end
 
@@ -93,7 +93,7 @@ Visual Studio indirme sayfasından Visual Studio 2022 [önyükleyicisi'Visual St
 ::: moniker range=">=vs-2022"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki şekilde devam edin. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini** seçin ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu slayla Visual Studio eşleşmesi için [bkz. Visual Studio 2022 Yayınları.](/visualstudio/releases/2022/history)
+>Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki şekilde devam edin. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini** seçin ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu slası bir sürümle Visual Studio için [bkz. Visual Studio 2022 Yayınları.](/visualstudio/releases/2022/history)
 
 ::: moniker-end
 
@@ -118,7 +118,7 @@ Bir komut istemi açın, önyükleyiciyi indirdiğiniz dizine gidin ve ağ yükl
 
 Kurulum çalıştır olduğunda `response.json` kullanılan varsayılan değerleri ayarlamak için dosyasını değiştirebilirsiniz.  Örneğin, dosyayı otomatik olarak `response.json` seçilecek belirli bir iş yükü kümesi seçecek şekilde yapılandırabilirsiniz. ayrıca istemcinin ağ `response.json` düzeni konumdan yalnızca güncelleştirilmiş dosyaları alacak olup olamayacaklarını belirtmek için de yapılandırabilirsiniz. Daha fazla bilgi için [bkz. Yanıt Visual Studio yüklemesini otomatikleştirme.](../install/automated-installation-with-response-file.md) 
 
-Visual Studio önyükleyicisi bir dosyayla eşleştirilirken hata verirken bir sorunla karşılaştınız, daha fazla bilgi için bkz. Visual Studio yükleme veya kullanma sırasında ağ ile `response.json` [ilgili](../install/troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process) hataları giderme.
+Visual Studio önyükleyicisi bir dosyayla eşleştirilirken hata verirken bir sorunla karşılaştınız, daha fazla bilgi için bkz. Visual Studio'i yükleme veya kullanma sırasında ağ ile ilgili `response.json` hataları giderme. [](../install/troubleshooting-network-related-errors-in-visual-studio.md#error-failed-to-parse-id-from-parent-process)
 
 ## <a name="copy-the-layout-to-a-network-share"></a>Düzeni bir ağ paylaşımına kopyalama
 
@@ -230,7 +230,7 @@ vs_enterprise.exe --layout c:\VSLayout --all
 
 ## <a name="deploy-from-a-network-installation"></a>Ağ yüklemeden dağıtma
 
-Yöneticiler bir yükleme Visual Studio parçası olarak istemci iş istasyonlarına sanal ağ dağıtarak iş istasyonlarına dağıtın. Ya da yönetici haklarına sahip kullanıcılar doğrudan paylaşımdan kurulumu çalıştırarak makinelerine Visual Studio yükleyebilir.
+Yöneticiler, bir Visual Studio parçası olarak istemci iş istasyonlarına sanal ağ dağıtarak iş istasyonlarına dağıtın. Ya da yönetici haklarına sahip kullanıcılar doğrudan paylaşımdan kurulumu çalıştırarak makinelerine Visual Studio yükleyebilir.
 
 * Kullanıcılar aşağıdaki komutu çalıştırarak yükleyebilir: <br>
 
@@ -267,7 +267,7 @@ Bir düzenden yüklemeniz, yüklü olan içerik düzenden edinilen içeriktir. A
 > İnternet'e bağlı olmayan bir bilgisayara çevrimdışı bir kaynaktan yüklemek istiyorsanız, hem hem de `--noWeb` seçeneklerini `--noUpdateInstaller` belirtin. Önceki, güncelleştirilmiş iş yüklerinin, bileşenlerin ve diğer bileşenlerin indir indirebilirsiniz. İkincisi, yükleyicinin web'den kendi kendine güncelleştirmesini önler.
 
 > [!IMPORTANT]
-> seçeneği, `--noWeb` İnternet'e Visual Studio bir bilgisayarda kurulumun güncelleştirmeleri denetlemesi için bu ayarı durdurmaz. Daha fazla bilgi için Ağ [tabanlı dağıtımlarda güncelleştirmeleri denetleme Visual Studio bakın.](controlling-updates-to-visual-studio-deployments.md)
+> seçeneği, `--noWeb` İnternet'e Visual Studio bir bilgisayarda kurulumun güncelleştirmeleri denetlemesi için bu ayarı durdurmaz. Daha fazla bilgi için Ağ [tabanlı dağıtımlarda güncelleştirmeleri Visual Studio sayfasına](controlling-updates-to-visual-studio-deployments.md) bakın.
 
 ### <a name="error-codes"></a>Hata kodları
 
@@ -281,13 +281,13 @@ parametresini `--wait` kullandıysanız, işlem sonucuna bağlı olarak ortam `%
 
 ## <a name="how-to-create-a-layout-for-a-previous-visual-studio-release"></a>Önceki bir sürüm için düzen Visual Studio oluşturma
 
-İlk olarak, "latest", "current", "evergreen" ve "tip" sözcükleriyle nitelendirilen ve temelde "sabit sürüm" anlamına gelen iki tür Visual Studio önyükleyicisi olduğunu anlamalısınız. Her iki önyükleyici dosyası türü de tam olarak aynı adla aynıdır ve türü ayırt etmek için en iyi yol, nereden bu türe sahip olduğunuz yere dikkat etmektir. [Visual Studio](https://visualstudio.microsoft.com/downloads) indirmeleri sayfasında bulunan Visual Studio önyükleyicileri her zaman yeşil Visual Studio önyükleyici olarak kabul edilir ve önyükleyici çalıştırıldıklarında kanalda mevcut olan en son sürümü her zaman yüklenir (veya güncelleştirmeyi). [Visual Studio Visual Studio 2019](/visualstudio/releases/2019/history) Sürümler Visual Studio [2022](/visualstudio/releases/2022/history) Sürümler sayfasında bulunan veya Microsoft Update Kataloğu'daki yönetici güncelleştirmesinde eklenmiş olan önyükleyiciler ürünün belirli bir sabit sürümünü yükleyin.
+İlk olarak, "latest", "current", "evergreen" ve "tip" sözcükleriyle nitelendirilen ve temelde "sabit sürüm" anlamına gelen iki tür Visual Studio önyükleyicisi olduğunu anlamalısınız. Her iki önyükleyici dosyası türü de tam olarak aynı adla aynıdır ve türü ayırt etmek için en iyi yol, nereden bu türe sahip olduğunuz yere dikkat etmektir. [Visual Studio](https://visualstudio.microsoft.com/downloads) indirmeleri sayfasında bulunan Visual Studio önyükleyicileri her zaman yeşil Visual Studio önyükleyici olarak kabul edilir ve önyükleyici çalıştırıldıklarında kanalda mevcut olan en son sürümü her zaman yüklenir (veya güncelleştirmeyi). [Visual Studio Visual Studio 2019 Sürümler Visual Studio 2022](/visualstudio/releases/2019/history) [](/visualstudio/releases/2022/history) Sürümler sayfasında bulunan veya Microsoft Update Kataloğu'daki yönetici güncelleştirmesinde eklenmiş olan Microsoft Update önyükleyicileri ürünün belirli bir sabit sürümünü yükleyin.
 
-Bu nedenle, bugün hiç yeşil Visual Studio önyükleyici indirip bundan altı ay sonra çalıştıracak olursanız, önyükleyici çalıştırıldıklarında geçerli olan Visual Studio sürümü yüklenir. Her zaman en son bitleri yüklemek ve güncel tutmak için tasarlanmıştır.
+Bu nedenle, bugün hiç yeşil Visual Studio önyükleyici indirip bundan altı ay sonra çalıştırırsanız, önyükleyici çalıştırıldıklarında geçerli olan Visual Studio sürümü yüklenir. Her zaman en son bitleri yüklemek ve güncel tutmak için tasarlanmıştır.
 
-Sabit bağlantı önyükleyicisini indirirseniz veya Microsoft Kataloğu'dan indirdiğiniz bir yönetici güncelleştirmesi çalıştırırsanız, ne zaman çalıştır olursa olsun her zaman ürünün belirli bir sürümünü yüklenir.
+Sabit bağlantı önyükleyicisini indirirseniz veya Microsoft Kataloğu'dan indirdiğiniz bir yönetici güncelleştirmesi çalıştırırsanız, ne zaman çalıştırnsa çalıştırsın her zaman ürünün belirli bir sürümünü yüklenir.
 
-Son olarak, bu önyükleyicilerden herhangi birini kullanarak bir ağ düzeni oluşturabilirsiniz ve düzende oluşturulacak sürüm kullandığınız önyükleyiciye bağlıdır, örneğin sabit bir sürüm veya geçerli olur. Daha sonra ağ düzenini daha sonraki bir önyükleyiciyi kullanarak güncelleştirebilirsiniz veya Katalog'dan yönetici güncelleştirme paketini Microsoft Update kullanabilirsiniz. Düzeni nasıl güncelleştirmiş olursanız olun, sonuçta elde edilen güncelleştirilmiş düzen ürünün belirli bir sürümünü içeren bir paket önbelleği olur ve ardından sabit bir bağlantı önyükleyicisi gibi davranır. Bu nedenle, istemci düzenden her yüklense, istemci düzende mevcut olan Visual Studio (daha yeni bir sürüm çevrimiçi olsa bile) belirli bir sürümünü yükleyebiliyor.
+Son olarak, bu önyükleyicilerden herhangi birini kullanarak bir ağ düzeni oluşturabilirsiniz ve düzende oluşturulacak sürüm kullandığınız önyükleyiciye bağlıdır, örneğin sabit bir sürüm veya geçerli olur. Daha sonra ağ düzenini daha sonra herhangi bir önyükleyici kullanarak güncelleştirebilirsiniz veya Katalog'dan yönetici güncelleştirme paketini Microsoft Update kullanabilirsiniz. Düzeni nasıl güncelleştirmiş olursanız olun, sonuçta elde edilen güncelleştirilmiş düzen ürünün belirli bir sürümünü içeren bir paket önbelleği olur ve ardından sabit bir bağlantı önyükleyicisi gibi davranır. Bu nedenle, istemci düzenden her yüklense, istemci düzende mevcut olan Visual Studio (daha yeni bir sürüm çevrimiçi olsa bile) belirli bir sürümünü yükleyebiliyor.
 
 ### <a name="how-to-get-support-for-your-offline-installer"></a>Çevrimdışı yükleyiciniz için destek nasıl elde edebilirsiniz?
 
@@ -295,16 +295,16 @@ Son olarak, bu önyükleyicilerden herhangi birini kullanarak bir ağ düzeni ol
 
 Ayrıca yüklemeyle ilgili [**sorunlar için bir**](https://visualstudio.microsoft.com/vs/support/#talktous) yükleme sohbeti (yalnızca İngilizce) destek seçeneği sunuyoruz.
 
-Başka destek seçenekleri de mevcuttur. Liste için Geri Bildirim [sayfamıza](../ide/feedback-options.md) bakın.
+Başka destek seçenekleri de mevcuttur. Geliştirici [hesabımıza Community.](https://developercommunity.visualstudio.com/home)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
 - [Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme](update-a-network-installation-of-visual-studio.md)
-- [Ağ ile ilgili sorunları gidermek için ağ Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)
+- [Visual Studio'i yükleme veya kullanma sırasında ağ ile ilgili Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md)
 - [Ağ tabanlı dağıtımlarda güncelleştirmeleri Visual Studio denetleme](controlling-updates-to-visual-studio-deployments.md)
 - [Visual Studio yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)
 - [Bakım temeli sırasında Visual Studio’yu güncelleştirme](update-servicing-baseline.md)
 - [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 - [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
-- [Çevrimdışı yükleme için gereken Visual Studio sertifikaları yükleme](install-certificates-for-visual-studio-offline.md)
+- [Çevrimdışı yükleme için Visual Studio sertifikaları yükleme](install-certificates-for-visual-studio-offline.md)

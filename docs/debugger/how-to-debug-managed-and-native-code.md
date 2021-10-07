@@ -16,12 +16,12 @@ ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: a3d3591fab5eaed2d1051212dae5c626c0f501e3
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 1b2b4419afdd6f44f9d70a3f3ab23c9ce75c86bb
+ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627999"
+ms.lasthandoff: 10/07/2021
+ms.locfileid: "129635379"
 ---
 # <a name="tutorial-debug-c-and-c-in-the-same-debugging-session"></a>Öğretici: aynı hata ayıklama oturumunda C# ve C++ hatalarını ayıklama
 
@@ -131,7 +131,7 @@ Visual Studio yüklüyse ancak ihtiyacınız olan iş yükleri yoksa, **yeni Pro
 
     Ardından, **Mixed_Mode_Calling_App** gibi bir ad yazın ve **İleri** veya **Oluştur**' a tıklayın, hangisi kullanılabilir seçeneği vardır.
 
-    .NET Core için, önerilen hedef Framework 'ü (.NET Core 3,1) veya .NET 5 ' i seçin ve ardından **Oluştur**' u seçin.
+    .NET Core için, önerilen hedef Framework veya .NET 6 ' ı seçin ve ardından **Oluştur**' u seçin.
     ::: moniker-end
     ::: moniker range="vs-2017"
     üstteki menü çubuğundan **dosya**  >  **yeni**  >  **Project** öğesini seçin. **yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında, **masaüstü Windows**' yi seçin ve ardından ortadaki bölmede **konsol uygulaması (.NET Framework)** veya **konsol uygulaması (.net Core)** seçeneğini belirleyin.
