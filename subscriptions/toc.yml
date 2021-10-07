@@ -24,7 +24,7 @@
                   href: manage-mpn-subscriptions.md
             - name: Startup’lar için Microsoft
               href: program-startups.md
-    - name: Abone portalında oturum açın
+    - name: Abone portalında oturum açma
       items:
         - name: Microsoft Hesaplarıyla oturum açma
           href: sign-in-msa.md
@@ -46,12 +46,16 @@
       href: manage-vs-subscriptions.md
     - name: Aboneliklerin süresi dolduğunda
       href: subscription-expiration.md
-    - name: Abonelik düzeyi değişiklikleri
+    - name: Abonelik düzeyindeki değişiklikler
       href: subscription-level-changes.md
-    - name: Kaldırılan abonelikler
+    - name: Abonelikler kaldırıldı
       href: subscription-removed.md
 - name: Abonelikler yöneticinize başvurma
   href: contact-my-admin.md
+- name: GitHub Enterprise
+  href: access-github.md
+- name: Visual Studio IDE
+  href: vs-ide-benefit.md
 - name: Azure avantajları
   items:
     - name: Azure DevTest bireysel kredisi
@@ -62,10 +66,6 @@
       href: azure-ea-devtest.md
     - name: Azure DevOps
       href: vs-azure-devops.md
-- name: GitHub Enterprise
-  href: access-github.md
-- name: Visual Studio IDE
-  href: vs-ide-benefit.md
 - name: Diğer avantajlar
   items:
     - name: Avantajlar hakkında
@@ -130,7 +130,7 @@
       href: product-keys.md
     - name: Anahtar bulma ve isteme
       href: find-keys.md
-    - name: Internet gösterileri ve RDS 'yi sunma
+    - name: İnternet tanıtımları ve RDS teklifi
       href: internet-demos.md
 - name: Yönetici sorumlulukları
   items:
@@ -172,7 +172,7 @@
           href: assign-license-bulk.md
         - name: Özel abonelikler atama
           href: assign-guid.md
-    - name: Abonelikleri yeni sözleşmelere taşıyın
+    - name: Abonelikleri yeni sözleşmelere taşıma
       href: migrate-subscriptions.md
     - name: Abonelikleri düzenleme
       href: edit-license.md
@@ -186,7 +186,7 @@
       href: handle-overclaimed-license.md
     - name: En fazla kullanım
       href: maximum-usage.md
-    - name: Sözleşmelerin süreleri dolduğunda ne olur?
+    - name: Anlaşmaların süresi dolduğunda ne olur?
       href: admin-expiration.md
     - name: Süresi dolan abonelikler
       href: handle-expired-license.md

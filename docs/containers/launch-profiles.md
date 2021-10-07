@@ -1,5 +1,5 @@
 ---
-title: Docker Compose projeleri için başlatma profillerini yönetme
+title: Docker Compose hizmetlerinin bir alt kümesini başlatın
 description: Docker Compose başlatma profillerinin nasıl kullanılacağını ve Visual Studio Docker Compose kullandığınızda hangi hizmetlerin başlatılabildiğini nasıl denetleyeceğinizi öğrenin.
 author: ghogen
 manager: jmartens
@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.date: 05/10/2021
 ms.author: ghogen
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 7c6a4137046456321e54a53e58a96d1dbfdf8fe1
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: d91e58a554847fa5a713b120d2896c2e8120b2a8
+ms.sourcegitcommit: ff81d69902e869b227d9ceb6e95023d1c63425b1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128427388"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "129595150"
 ---
 # <a name="launch-a-subset-of-compose-services"></a>Oluşturma hizmetleri alt kümesini Başlat
 
