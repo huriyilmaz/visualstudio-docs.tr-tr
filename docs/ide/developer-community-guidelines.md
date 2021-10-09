@@ -1,6 +1,6 @@
 ---
 title: Geliştirici Topluluğu yönergeleri
-description: Visual Studio Developer Community.
+description: Visual Studio Developer Community ile çalışmaya Community.
 ms.date: 6/30/2020
 ms.topic: conceptual
 author: madskristensen
@@ -9,12 +9,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e007c87a855ae5c05cce1b48e36edb166cd9762
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 5c641b9b3fb307b262e8f594a949729c603d346d
+ms.sourcegitcommit: 5f1e0171626e13bb2c5a6825e28dde48061208a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126726888"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "129704566"
 ---
 # <a name="developer-community-guidelines"></a>Geliştirici Topluluğu yönergeleri
 
@@ -22,13 +22,13 @@ Geliştirici Community, sorun ve özellik önerileri Visual Studio.
 
 ## <a name="submitting-problems-and-suggestions"></a>Sorunları ve önerileri gönderme
 
-Geliştirici [Visual Studio, Community](https://aka.ms/feedback/suggest?space=8) için sorunları ve özellik önerilerini Visual Studio.
+Geliştirici [Visual Studio Community,](https://aka.ms/feedback/suggest?space=8) sorun ve özellik önerileri Visual Studio.
 
 ### <a name="before-submitting-an-issue"></a>Sorun göndermeden önce
 
-Henüz mevcut Visual Studio için Community Geliştirici Hesabı'Community sorunlarınızı arama. Sorun zaten varsa, ilgili yorumlarda bulun ve oylarınızı atarak.
+Henüz mevcut Visual Studio emin olmak Community Geliştirici Hesabı'Community sorunlarınızı arama. Sorun zaten varsa, ilgili yorumlarda bulun ve oylarınızı atarak.
 
-Sorun bir soru ise, visual-studio [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio?tab=Newest) _topluluka sorun._ Bu etiketi takip edecek ve soruları yanıtlamaya yardımcı olacak müşteri destek personelimiz var.
+Sorun bir soru ise, _visual-studio Stack Overflow topluluka sorun._ [](https://stackoverflow.com/questions/tagged/visual-studio?tab=Newest) Bu etiketi takip edecek ve soruları yanıtlamaya yardımcı olacak müşteri destek personelimiz var.
 
 Hatanızı veya özelliğinizi açıklayan mevcut bir sorun bulamazsanız, aşağıdaki yönergeleri kullanarak bir sorun gönderin.
 
@@ -42,8 +42,8 @@ Hatanızı veya özelliğinizi açıklayan mevcut bir sorun bulamazsanız, aşa�
 - Ne kadar fazla bilgi sağlarsa sorunlarınızı yeniden oluşturmamız ve düzeltmemiz o kadar kolay olur.
 - Her soruna aşağıdaki adımları dahil edin.
 
-  - Yenidenlanabilir adımlar (1... 2... 3...) ve neyle karşı karşıya olduğunu ve neyle karşı karşıya olduğunu.
-  - Görüntüler, animasyonlar veya video bağlantısı. Görüntüler ve animasyonlar yeniden adımlarını gösterir _ancak bunları değiştirmez._
+  - Yenidenlanabilir adımlar (1... 2... 3...) ve neyle karşı karşıya olduğunu tahmin ettiy ve neyle karşı karşıya olduğunu.
+  - Görüntüler, animasyonlar veya video bağlantısı. Görüntüler ve animasyonlar yeniden adımlarını gösterir _ancak bunları_ değiştirmez.
   - Uygun şekilde, sorunu gösteren bir kod parçacığı veya sorunu yeniden oluşturmak için makinemize kolayca çekebiliyoruz bir kod deposu bağlantısı.
 
 - Aşağıdaki adımları gerçekleştirin:
@@ -56,9 +56,9 @@ Zengin ayrıntıları içeren sorunlarda bile sorunu yeniden oluşturamayabilirs
 
 ## <a name="managing-problem-reports"></a>Sorun raporlarını yönetme
 
-Bir sorunu triyaklama, özellik ekibi içinde işbirliğine dayalı olarak yapılan çok adımlı bir işlemdir. Triyazma genellikle bir hafta sürer, ancak daha uzun sürebilir. Öncellemenin amacı, soruna ne olacağını net bir şekilde anlamanızı sağlamaktır. Örneğin, değerlendirme sonrasında sorunlarınızı düzeltmeyi mi yoksa daha fazla topluluk geri bildirimi mi beklemeyi planlıyoruz?
+Bir sorunu triyaklama, özellik ekibi içinde işbirliğine dayalı olarak yapılan çok adımlı bir işlemdir. Triyazma genellikle bir hafta sürer, ancak daha uzun sürebilir. Bu konudaki amaç, soruna ne olacağını net bir şekilde anlamanızı sağlamaktır. Örneğin, değerlendirme sonrasında sorunlarınızı düzeltmeyi mi yoksa daha fazla topluluk geri bildirimi mi beklemeyi planlıyoruz?
 
-Bir sorun bildirdikten sonra, eyaletler gönderimlerinizi yaşam döngüsünde nerede olduğunu gösteriyor. Ürün Visual Studio ekipler geri bildiriminizi gözden geçirsin ve uygun bir durumla ayarlayın. Sorun durumları ve SSS bölümüne başvurarak [sorun raporlarınızı takip edin.](./report-a-problem.yml)
+Bir sorun bildirdikten sonra, eyaletler gönderimlerinizi yaşam döngüsünde nerede olduğunu gösteriyor. Ürün Visual Studio ekipler geri bildiriminizi gözden geçirsin ve uygun bir durumla ayarlayın. Sorun durumları ve SSS bölümüne başvurarak [sorun raporlarınızı takip edin.](./how-to-report-a-problem-with-visual-studio.md)
 
 ### <a name="prioritizing-which-issues-to-fix"></a>Düzeltilen sorunları önceliklendirme
 
@@ -70,7 +70,7 @@ Bir sorunda önemli bilgiler eksik olduğunda, Daha Fazla Bilgi Gerekiyor _durum
 
 ### <a name="other-product"></a>Diğer ürün
 
-Bazen bir sorun bildirerek sorunun başka bir üründen kaynaklanmasına neden olduğu Visual Studio. Başka bir ilgili uygulama veya uzantı olabilir. 
+Bazen bir sorun bildiriyor, bunun nedeni başka bir ürün olabilir ve bu durum Visual Studio. Başka bir ilgili uygulama veya uzantı olabilir. 
 
 Böyle bir durumda sorunu kapatıp diğer ürünle birlikte açmanız gerekir. Bu sorunları dosyalanan bazı yaygın yerler:
 
@@ -81,14 +81,14 @@ Böyle bir durumda sorunu kapatıp diğer ürünle birlikte açmanız gerekir. B
 
 #### <a name="additional-information"></a>Ek bilgiler
 
-- [Bir performans sorununa neden olan sorunun düzelt olma ihtimalini artırma](./how-to-increase-chances-of-performance-issue-being-fixed.md)
+- [Bir performans sorunu düzeltilen olasılığı artırma](./how-to-increase-chances-of-performance-issue-being-fixed.md)
 - [Sorun giderme ve günlük oluşturma MSBuild oluşturma](./msbuild-logs.md)
 
 ## <a name="managing-feature-suggestions"></a>Özellik önerilerini yönetme
 
-Özellik önerileri, bizimle geliştirici topluluğu üyeleri arasındaki iletişimin bir aracıdır. Teknik olarak, tüm özellik isteklerini sonsuza kadar açık tutabilirsiniz. Ancak sorunları açık tutmak, bir özelliğin gerçek durumuna ilişkin topluluk görünürlüğünü azaltır. Bu nedenle, ele almayacak özellik isteklerini kapatıyor ve ele atayarak Gözden Geçir etiketine _atayabilirsiniz._
+Özellik önerileri, bizimle geliştirici topluluğu üyeleri arasındaki iletişimin bir aracıdır. Teknik olarak, tüm özellik isteklerini sonsuza kadar açık tutabilirsiniz. Ancak sorunları açık tutmak, bir özelliğin gerçek durumuna ilişkin topluluk görünürlüğünü azaltır. Bu nedenle, ele almayacak özellik isteklerini kapatacak ve ele atayacak özellikleri Gözden Geçir altında _etiketine atadık._
 
-Bir özellik öneriniz varsa isteğinizi ele alamayacaksınız. Bunu anlıyoruz. Bu projede veya katkıda bulunan diğer projelerde hepimiz orada bulunduk. Bu nedenle tüm girişlerinizi çok seviyorum. Önerinize Gözden Geçir etiketini kapatırken veya atarken _kişisel_ bir suç atmayın. Özellik önerinizin açık kalmasını öneren bir fikir varsa, kullanım örneklerinizi netleştirin ve bizimle iletişime geçin veya daha fazla oy toplayın.
+Bir özellik öneriniz varsa isteğinizi ele alamayacaksınız. Bunu anlıyoruz. Bu projede veya katkıda bulunan diğer projelerde hepimiz orada bulunduk. Bu nedenle tüm girişlerinizi çok seviyorum. Önerinize Gözden Geçir etiketini kapatırken veya atarken _kişisel_ bir suç atmayın. Özellik önerinizin açık kalmanın uygun olduğunu hissedecek olursanız, kullanım örneklerinizi netleştirin ve bizimle iletişime geçin veya daha fazla oy toplayın.
 
 Karar verme sürecimizde, özellik önerisiyle ilgili olarak aşağıdaki özelliklere göz atacağız:
 
@@ -100,7 +100,7 @@ Karar verme sürecimizde, özellik önerisiyle ilgili olarak aşağıdaki özell
 
 Bu sorulardan herhangi birini "evet" olarak yanıtlayamayarak kapatırız. Ancak daha fazla topluluk geri bildirimi toplamak için öneri _genellikle Gözden Geçirildi_ olarak açık kalır.
 
-Bir öneri genel ürün yönümüzle eşleşmezse, bunu Kapsam Dışında *olarak kapatırız.* Örneğin, ürün ailesinin diğer üyelerine benzer yatırımlar Visual Studio olabilir. Veya önerilen özellik yalnızca birkaç kişi için uygun olabilir ve bu da uzantıyı sağlamak için daha uygun bir uzantı olabilir.
+Bir öneri genel ürün yönüyle eşleşmezse kapsamı dışında olarak *kapatırız.* Örneğin, ürün ailesinin diğer üyelerine benzer yatırımlar Visual Studio olabilir. Veya önerilen özellik yalnızca birkaç kişi için uygun olabilir ve bu da uzantıyı sağlamak için daha uygun olabilir.
 
 Öneri durumları ve SSS bölümüne başvurarak özellik [önerinizin ilerlemesini takip edin.](./report-a-problem.yml)
 
@@ -114,8 +114,8 @@ Tartışma kurallarına yönelik tüm ihlaller, açıklamanın kaldırılmasına
 
 ## <a name="data-privacy"></a>Veri gizliliği
 
-Açıklamalar ve yanıtlar genel olarak görünür, ancak eklenen tüm dosyalar yalnızca Microsoft ile özel olarak paylaşılır. Bu görünürlük, topluluğun tamamının diğer kullanıcıların bulduğu sorunları ve çözümleri görmesini sağlar. Verilerinizin veya kimliğinizin gizliliği konusunda endişeleriniz varsa seçenekleriniz vardır. Geliştirici veri gizliliği [hakkında daha Community okuyun.](./developer-community-privacy.md)
+Açıklamalar ve yanıtlar genel olarak görünür, ancak eklenen tüm dosyalar yalnızca Microsoft ile özel olarak paylaşılır. Bu görünürlük, topluluğun tamamının diğer kullanıcıların bulduğu sorunları ve çözümleri görmesini sağlar. Verilerinizin veya kimliğinizin gizliliği konusunda endişeleriniz varsa seçenekleriniz vardır. Developer [Community veri gizliliği hakkında daha fazla bilgi edinebilirsiniz.](./developer-community-privacy.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Sorunları rapor etmek, [Visual Studio Community](https://aka.ms/feedback/suggest?space=8) veya mevcut biletlere göz atmak için Visual Studio Developer Community'a gidin. Keyfini çıkarın!
+Sorunları rapor etmek, [Visual Studio önermek Community](https://aka.ms/feedback/suggest?space=8) mevcut biletlere göz atmak için Visual Studio Developer Community'ye gidin. Keyfini çıkarın!

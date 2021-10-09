@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: f38092ba-051c-4e58-97f5-4255dbe873ba
-ms.date: 09/13/2021
+ms.date: 10/08/2021
 ms.topic: conceptual
 description: Anlaşmanın süresi dolarsa Yöneticiler için ne olacağını öğrenin
-ms.openlocfilehash: 2fddcc8468276d3b033a7573bce5bc5fac8546fa
-ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
+ms.openlocfilehash: fc7513e09323d82af531ec58684909c09cd6b636
+ms.sourcegitcommit: 5f1e0171626e13bb2c5a6825e28dde48061208a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129430657"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "129704732"
 ---
 # <a name="admin-portal-changes-for-expired-agreements"></a>Vadesi geçen anlaşmalar için Yönetici portalı değişiklikleri
 Visual Studio aboneliklerin satın alınması için kullanılan sözleşmenin süresi dolarsa, sözleşme ve içinde atanan abonelikler sınırlı bir süre için kullanılabilir olmaya devam eder.  Bu dönem tüm anlaşmalarda aynı olmayabilir ve e-posta ve yönetim portalı aracılığıyla aldığınız iletişimlerdeki bu dönemin uzunluğu hakkında daha ayrıntılı bilgi sağlanacaktır.  Şirketinizin planlarına bağlı olarak, abonelere yardımcı olan veya önemli bilgilerin kaybını önleyen bir işlem gerçekleştirmeniz gerekebilir.
@@ -27,7 +27,7 @@ Sözleşme süre sonu için zaman çizelgesi üç aşamadan oluşur:
 Sözleşmenizin süresi dolmadan yaklaşık 120 gün önce, yönetici ve süper yöneticilere bildirim göndermeye başlayacağız ve şirketinizin anlaşmasını yenilemeyi planlıyor olmanıza bağlı olarak yapmanız gerekebilecek adımlar. 
 
 ### <a name="expired"></a>Süresi doldu
-Sözleşmeniz sona erme tarihine ulaştığında, Yöneticiler ve aboneler hala sınırlı bir süre için erişime sahip olur.  Bu işlem, şirketinizin devam eden satın alma işlemlerini tamamlaması için bir fırsat sağlamak ve hem Yöneticiler hem de aboneler sağlamak, şirketinizin anlaşmasını yenilemediğini veya yeni bir tane satın almayı seçtiği olaydaki önemli verileri korumak için uygun adımları alma fırsatına sahip olur.  Yöneticiler, bu süre boyunca, daha sonra kullanılmak üzere abone listeleri gibi bilgileri korumanıza yardımcı olmak için belirli bilgilerin bağlantılarıyla birlikte bildirim almaya devam edecektir.  Aboneler Ayrıca, mevcut Azure aboneliklerinde oluşturmuş olabileceği varlıklar gibi bilgileri koruma konusunda rehberlik sunarak bu bildirimleri almaya başlar.  
+Sözleşmeniz sona erme tarihine ulaştığında, Yöneticiler ve aboneler hala sınırlı bir süre için erişime sahip olur.  Bu işlem, şirketinizin anlaşmayı yenilemeyen veya yeni bir tane satın almayı seçtiği olaydaki önemli verileri korumak üzere her iki yönetici ve abonelik sağlamak için bir fırsat sağlamak üzere yapılır.  Yöneticiler, bu süre boyunca, daha sonra kullanılmak üzere abone listeleri gibi bilgileri korumanıza yardımcı olmak için belirli bilgilerin bağlantılarıyla birlikte bildirim almaya devam edecektir.  Aboneler Ayrıca, mevcut Azure aboneliklerinde oluşturmuş olabileceği varlıklar gibi bilgileri koruma konusunda rehberlik sunarak bu bildirimleri almaya başlar.  
 
 Bu aşamada, hem Yöneticiler hem de aboneler ilgili portallarına erişime sahip olmaya devam edecektir.  Yöneticiler, abonelik yönetim görevlerinin tam aralığını yine de çalıştırabilecektir.  Aboneler abonelik avantajlarına Kısıtlanmamış erişime sahip olmaya devam edecektir.  
 
@@ -35,8 +35,8 @@ Bu aşamada, hem Yöneticiler hem de aboneler ilgili portallarına erişime sahi
 > Yöneticiler ve aboneler ilgili kaynaklarına erişmeye devam edecekken, önemli verilerin bu süre dolmadan önce kullanılması ve bilgilere erişmesi kaybedilmesi için eylemin hızla alınması önemlidir.
 
 ### <a name="disabled"></a>Devre dışı
-Sözleşmeniz süre sonu döneminin sonuna ulaştığında:
-- Yöneticiler ve süper Yöneticiler, [yönetim portalındaki](https://manage.visualstudio.com)vadesi geçen sözleşmeye erişimi kaybedecektir.  Sözleşme dahilindeki aboneliklerde herhangi bir değişiklik yapamazlar.  (Yönetim portalındaki diğer geçerli sözleşmelere erişim etkilenmeyecektir.  [Yardım al](https://manage.visualstudio.com/gethelp) sayfasına erişim de kullanılabilir olmaya devam edecektir.)
+Sözleşmeniz süresi geçen sürenin sonuna ulaştığında:
+- Yöneticiler ve süper Yöneticiler, [yönetim portalındaki](https://manage.visualstudio.com)vadesi geçen sözleşmeye erişimi kaybedecektir.  Sözleşme dahilindeki aboneliklerde herhangi bir değişiklik yapamazlar.  (Yönetim portalındaki diğer geçerli sözleşmelere erişim etkilenmeyecektir.  [Yardım al](https://manage.visualstudio.com/gethelp) sayfası da kullanılabilir olmaya devam edecektir.)
 - Aboneler [abone portalındaki](https://my.visualstudio.com)vadesi geçen aboneliğe erişimi kaybedecektir.  Başka bir sözleşmenin parçası olarak bunlara atanmış başka abonelikler varsa, bu abonelikler etkilenmez. Visual Studio aboneliği devre dışı bırakıldıktan sonra otuz gün sonra, Visual Studio aboneliğine bağlı olan tüm azure abonelikleri de kaldırılır ve bu sayede abonelerin, azure varlıklarını, onları sürdürmek istediklerinde başka bir geçerli aboneliğe taşımasını çok önemli hale gelir.  Azure 'un bu durumda abonelere kılavuzluk edecek kendi bildirim süreci vardır.  
 
 ## <a name="preserving-your-information"></a>Bilgilerinizi koruma

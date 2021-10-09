@@ -10,16 +10,16 @@ ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 0ce798b3264eedea5826df0ca2076c7fbc6ee4c6
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 71d478dcd7d6656fcd80af1c69bab25058872f8a
+ms.sourcegitcommit: 5f1e0171626e13bb2c5a6825e28dde48061208a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126633454"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "129704407"
 ---
 # <a name="update-the-app"></a>Uygulamayı güncelleştirme
 
-Küçük bir özellik isteği olarak, herhangi bir todo listesi öğeniz olduğunda ürün ekibi tarafından "boş metni" değiştirmeniz istendi. Bunu aşağıdakine geçiş yapmak için:
+Küçük bir özellik isteği olarak, herhangi bir todo listesi öğeniz olmadığınız zaman ürün ekibi tarafından "boş metni" değiştirmeniz istendi. Bunu aşağıdakine geçiş yapmak için:
 
 > Henüz todo öğelerine sahip değilsiniz! Yukarıya bir tane ekleyin!
 
@@ -57,7 +57,7 @@ Peki ne oldu? Eski kapsayıcınız hala çalışıyor olduğundan yeni kapsayıc
 
 ## <a name="replace-the-old-container"></a>Eski kapsayıcıyı değiştirme
 
-Bir kapsayıcıyı kaldırmak için önce durdurulmuş olması gerekir. Durdurulduktan sonra kaldırılabilir. Eski kapsayıcıyı kaldırmanın iki yolu vardır. En rahat yolunu seçebilirsiniz.
+Bir kapsayıcıyı kaldırmak için önce durdurulmuş olması gerekir. Durdurulduktan sonra kaldırılabilir. Eski kapsayıcıyı kaldırmanın iki yolu vardır. En rahat yolunu seçmekten rahat olun.
 
 ### <a name="remove-a-container-using-the-cli"></a>CLI kullanarak kapsayıcıyı kaldırma
 
@@ -103,7 +103,7 @@ uzantı uzantısını VS Code, iki tıklamayla kapsayıcıyı kaldırabilirsiniz
     docker run -dp 3000:3000 getting-started
     ```
 
-1. Tarayıcınızı [http://localhost:3000](http://localhost:3000) yenileyin; güncelleştirilmiş yardım metninizi görüyor olun!
+1. Tarayıcınızı `http://localhost:3000` yenileyin; güncelleştirilmiş yardım metninizi görüyor olun!
 
 ![Güncelleştirilmiş boş metinle güncelleştirilmiş uygulama](media/todo-list-updated-empty-text.png)
 

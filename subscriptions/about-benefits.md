@@ -4,20 +4,20 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 0a02232c-437f-4c48-85c1-93ca7887236b
-ms.date: 03/19/2021
+ms.date: 10/08/2021
 ms.topic: how-to
 description: Aboneliklerde nelerin dahil olduğu ve bunların nasıl etkinleştirileceği hakkında bilgi edinin.
-ms.openlocfilehash: 2574ecf1612fc82093f9c9a7d1dbf2cd0366382c
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 1943fc0f4b10fa6fcdc4e9dcfb464febce23f2d9
+ms.sourcegitcommit: 5f1e0171626e13bb2c5a6825e28dde48061208a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128430497"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "129704719"
 ---
 # <a name="about-your-subscription-benefits"></a>Abonelik avantajlarınız hakkında
 Visual Studio abone olarak abonelik düzeyinize bağlı olarak çeşitli avantajlara erişebilirsiniz. Avantajlar hakkında dikkat etmeniz gereken birkaç önemli nokta vardır.
 
-## <a name="benefits-that-vary-based-on-your-subscription"></a>Aboneliğinize göre farklılık gösteren avantajlar 
+## <a name="benefits-vary-based-on-your-subscription"></a>Avantajlar aboneliğinize göre farklılık gösterir 
 Aboneliğinize dahil edilen avantajlar, sahip olduğunuz abonelik türüne göre farklılık gösterir. çeşitli aboneliklerde hangi avantajların dahil edildiğini görmek için lütfen [Visual Studio abonelik avantajları sayfasını](https://visualstudio.microsoft.com/vs/benefits/)ziyaret edin. İhtiyaç duyduğunuz belirli bilgilere ulaşmak için görünümü abonelik düzeyine ve avantaj kategorisine göre filtreleyebilirsiniz. 
 
 Ayrıca, bu sitedeki makaleleri aboneliğinizde belirli bir avantajın dahil olup olmadığını anlamak için de kullanabilirsiniz. Avantaja sahip olan her makale, hangi aboneliklerin dahil edileceğini gösteren bir "uygunluk" bölümü içerir.

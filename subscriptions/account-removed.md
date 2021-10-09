@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: f853ed9d-3543-4f5f-a754-92381ee03523
-ms.date: 09/30/2021
+ms.date: 10/08/2021
 ms.topic: how-to
 description: Microsoft 'un bir aboneliği sildiği bir bildirim gördüğünüzde ne anlama geldiğini öğrenin.
-ms.openlocfilehash: 8257c93eefe6bd72ec38e98b7978c475bb3e997f
-ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
+ms.openlocfilehash: 2d19598081b2aa27eb9f3666348e9732a67773ad
+ms.sourcegitcommit: 5f1e0171626e13bb2c5a6825e28dde48061208a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129366330"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "129704683"
 ---
 # <a name="why-does-my-dashboard-shows-microsoft-removed-a-subscriber"></a>Panom neden Microsoft 'un abonesini kaldırdı? 
 [Yönetici portalındaki](https://manage.visualstudio.com)panonun **son değişiklikler** bölümünde, aboneliklerin kaldırıldığını ve nedenin "hesap kapatıldı" olarak gösterildiğini görebilirsiniz.  Bunun iki nedeni olabilir.  

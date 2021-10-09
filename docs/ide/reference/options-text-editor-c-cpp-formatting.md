@@ -2,7 +2,7 @@
 title: Seçenekler, Metin Düzenleyici, C/C++, Biçimlendirme
 description: C ve C++ ile programlama yapmak için kod düzenleyicisinde kod biçimlendirme seçeneklerini ayarlamak için Biçimlendirme seçenekleri sayfasını ve alt sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 04/30/2018
+ms.date: 10/08/2021
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C/C++.Formatting.General
@@ -18,12 +18,12 @@ ms.author: tglee
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 264485fd8f20ee31046035dba7b208795d0d91b0
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: b89e3949a5002d7194939f4edc1bd5c185e145d1
+ms.sourcegitcommit: 5f1e0171626e13bb2c5a6825e28dde48061208a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126724918"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "129704693"
 ---
 # <a name="options-text-editor-cc-formatting"></a>Seçenekler, Metin Düzenleyici, C/C++, Biçimlendirme
 
@@ -46,7 +46,7 @@ Bu sayfada, siz bunları yazarak deyimleri ve blokları biçimlendirme seçenekl
 
 ::: moniker-end
 
-Sayfada [Ayrıca ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) sürüm 5.0 için destek yapılandırma seçenekleri de vardır. ClangFormat, kodunuzu .clang biçiminde veya bir dosya biçiminde yapılandırılan kurallara göre biçimlendirmeyi ve stil _clang kolaylaştıran bir yardımcı programdır.
+Sayfada [Ayrıca ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) sürüm 5.0 için destek yapılandırma seçenekleri de vardır. ClangFormat, kodunuzu .clang biçiminde veya bir .clang biçiminde ya da farklı biçimli bir dosyada yapılandırılan bir kural kümesine göre stil ve biçim _clang kolaylaştıran bir yardımcı programdır.
 
 ### <a name="configuring-clangformat-options"></a>ClangFormat seçeneklerini yapılandırma
 
@@ -56,11 +56,11 @@ Sayfada [Ayrıca ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) sür
 
 ::: moniker-end
 
-ClangFormat desteği varsayılan olarak etkindir. Tüm projeleriniz için geçerli olan bu yaygın biçimlendirme kuralları arasında hangilerini seçebilirsiniz: LLVM, Google, Chromium, Mozilla veya WebKit. Ayrıca özel bir biçim tanımı .clang-format veya _clang biçimi dosyası da oluşturabilirsiniz. Böyle bir dosya bir proje klasöründe varsa, Visual Studio klasördeki ve alt klasördeki tüm kaynak kod dosyalarını biçimlendirmek için bu dosyayı kullanır.
+ClangFormat desteği varsayılan olarak etkindir. Tüm projelerinize uygulanacak yaygın biçimlendirme kuralları arasında hangilerini seçebilirsiniz: LLVM, Google, Chromium, Mozilla veya WebKit. Ayrıca özel bir biçim tanımı .clang-format veya _clang biçimi dosyası oluşturabilirsiniz. Böyle bir dosya bir proje klasöründe varsa, Visual Studio klasördeki ve alt klasördeki tüm kaynak kod dosyalarını biçimlendirmek için bu dosyayı kullanır.
 
-Varsayılan olarak, Visual Studio arka clangformat.exe, siz yazarak biçimlendirmeyi uygular. Ayrıca, yalnızca el ile çağrılan biçimlendirme komutları için çalıştırmayı belirtebilirsiniz Belgeyi **Biçimlendir (Ctrl+K, Ctrl+D)** veya Biçim Seçimi **(Ctrl + K, Ctrl + F)**.
+Varsayılan olarak, Visual Studio arka clangformat.exe siz yazarak biçimlendirmeyi uygular. Ayrıca, yalnızca el ile çağrılan biçimlendirme komutları için çalıştırmayı belirtebilirsiniz Belgeyi **Biçimlendir (Ctrl+K, Ctrl+D)** veya Biçim Seçimi **(Ctrl + K, Ctrl + F)**.
 
-## <a name="indentation-new-lines-spacing-wrapping-pages"></a>Girintileme, Yeni Satırlar, Aralık kaydırma sayfaları
+## <a name="indentation-new-lines-spacing-wrapping-pages"></a>Girintileme, Yeni Satırlar, Aralıklar, Kaydırma sayfaları
 
 Bu sayfalar çeşitli biçimlendirme özelleştirmelerini etkinleştirir, ancak ClangFormat etkinse yoksayılır.
 

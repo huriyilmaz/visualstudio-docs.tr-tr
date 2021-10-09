@@ -15,12 +15,12 @@ ms.prod: visual-studio-windows
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ea712fa37a79542f26f110c0aa60ca45a6ebaab
-ms.sourcegitcommit: 92be6860ccffc03799833c76084d85f67efe5c57
+ms.openlocfilehash: 1fa5515ea3c103579ca2df8de954e88a07cbbe29
+ms.sourcegitcommit: 5f1e0171626e13bb2c5a6825e28dde48061208a4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "129527409"
+ms.lasthandoff: 10/09/2021
+ms.locfileid: "129704578"
 ---
 # <a name="visual-studio-docs-whats-new-for-september-2021"></a>Visual Studio belgeleri: eylül 2021 ' deki yenilikler
 
@@ -236,7 +236,7 @@ aşağıdaki bölümler, Visual Studio docs 'taki yenilikleri önceki üç aya s
 **Yeni makaleler**
 
 - [Visual Studio 2022 ' deki yenilikler (önizleme)](./whats-new-visual-studio-2022.md)
-- [Sorun bildirin: durumlar ve SSS](./report-a-problem.yml)
+- [Sorun bildirin: durumlar ve SSS](./how-to-report-a-problem-with-visual-studio.md)
 
 **Güncelleştirilmiş makaleler**
 - [Dosyalarda bul](./find-in-files.md) -birden çok arama bölümü ve genel güncelleştirmeler eklendi
@@ -327,52 +327,52 @@ aşağıdaki bölümler, Visual Studio docs 'taki yenilikleri önceki üç aya s
 
 **Güncelleştirilmiş makaleler**
 
-- [Derleme araçlarını bir kapsayıcıya yükleme](../install/build-tools-container.md) -vs derleme araçlarının nasıl yüklendiğini güncelleştirme
+- [Kapsayıcıya Derleme Araçları yükleme](../install/build-tools-container.md) - VS Derleme Araçları'nın nasıl yük olduğunu güncelleştirme
 
 #### <a name="modeling"></a>Modelleme
 
 **Yeni makaleler**
 
-- [Kod haritasını ve canlı bağımlılık doğrulamasını yükler](../modeling/install-architecture-tools.md) -yeni makale oluşturuldu
+- [Kod Eşlemesi ve Canlı Bağımlılık Doğrulamasını Yükleme](../modeling/install-architecture-tools.md) - Yeni makale oluşturuldu
 
 #### <a name="msbuild"></a>MSBuild
 
 **Yeni makaleler**
 
-- [MSB3270: ' Arch ' oluşturulan projenin işlemci mimarisi ve ' Reference ', ' Arch ' başvurusunun işlemci mimarisi arasında uyuşmazlık vardı](../msbuild/errors/msb3270.md) -yeni makale oluşturuldu
-- [MSB3577: iki çıkış dosyası adı aynı çıkış yoluna çözümlendi: yol](../msbuild/errors/msb3577.md) -yeni makale oluşturuldu
-- [MSB4181: ' Task ' görevi false döndürdü, ancak günlüğe bir hata](../msbuild/errors/msb4181.md) vermedi-yeni makale oluşturuldu
-- [MSB6003: belirtilen görev yürütülebilir yürütülebilir dosyası çalıştırılamadı](../msbuild/errors/msb6003.md) -yeni makale oluşturuldu
+- [MSB3270: 'arch'](../msbuild/errors/msb3270.md) olarak oluşturulan projenin işlemci mimarisi ile 'reference', 'arch' başvurusunda işlemci mimarisi arasında bir eşleşme yok - Yeni makale oluşturuldu
+- [MSB3577: Aynı çıkış yoluna çözümlenen](../msbuild/errors/msb3577.md) iki çıkış dosyası adı: yol - Yeni makale oluşturuldu
+- [MSB4181: 'task' görevi yanlış döndürüldü ama bir](../msbuild/errors/msb4181.md) hata günlüğe kaydetti - Yeni makale oluşturuldu
+- [MSB6003: Belirtilen görev yürütülebilir](../msbuild/errors/msb6003.md) dosyası çalıştıramadı - Yeni makale oluşturuldu
 
 **Güncelleştirilmiş makaleler**
 
-- [MSBuild hedefleri](../msbuild/msbuild-targets.md) -MSBuild: hedefleri genişletmeyi ve özelleştirmeyi açıklayın
-- [görev toplu işleme içindeki öğe meta verileri](../msbuild/item-metadata-in-task-batching.md) -MSBuild: kimlik meta verileri toplu işleme davranışını netleştirmek
+- [MSBuild hedefleri](../msbuild/msbuild-targets.md) - MSBuild: Hedefleri genişletme ve özelleştirmeyi açıklama
+- [Görev toplu işlemesinde öğe meta verileri](../msbuild/item-metadata-in-task-batching.md) - MSBuild: Kimlik meta verileri toplu işleme davranışını netleştirin
 
 #### <a name="python"></a>Python
 
 **Güncelleştirilmiş makaleler**
 
-- python içeriklerde Visual Studio giderilen GitHub sorunlarında [python projeleri](../python/managing-python-projects-in-visual-studio.md)
-- python içeriklerde GitHub [ile ilgili python etkileşimli penceresiyle çalışma](../python/python-interactive-repl-in-visual-studio.md)
-- python [web uygulaması proje şablonlarına](../python/python-web-application-project-templates.md) yönelik GitHub python içeriğindeki sorunlar
+- [Visual Studio'da Python](../python/managing-python-projects-in-visual-studio.md) projeleri - Python GitHub sorunları giderildi
+- [Python içeriğiyle çalışma Etkileşimli penceresi](../python/python-interactive-repl-in-visual-studio.md) - Python GitHub sorunları giderildi
+- [Python web uygulaması proje şablonları](../python/python-web-application-project-templates.md) - Python GitHub sorunları giderildi
 
 #### <a name="sharepoint"></a>SharePoint
 
 **Güncelleştirilmiş makaleler**
 
-- [Nasıl yapılır: eşlenmiş klasörler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md) -sp13 kaldır
-- [Nasıl yapılır: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md) -sp13 kaldır
-- [nasıl yapılır: tasarımcı kullanarak SharePoint Web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) -Remove sp13
+- [Nasıl: Eşlenmiş klasörleri ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md) - sp13'ü kaldırma
+- [Nasıl: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md) - sp13'ü kaldırma
+- [Nasıl kullanılır: Tasarımcı kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) - sp13'ü kaldırma
 
 #### <a name="vsto"></a>VSTO
 
 **Güncelleştirilmiş makaleler**
 
-- [Office için Visual Studio Araçları çalışma zamanı yükleme senaryoları](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md) -belgeyi yeni Office sürümlerini içerecek şekilde güncelleştirildi
+- [Office için Visual Studio Araçları çalışma zamanı yükleme senaryoları](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md) - Belge, uygulamanın yeni sürümlerini içerecek şekilde Office
 
 #### <a name="xaml-tools"></a>XAML araçları
 
 **Yeni makaleler**
 
-- [Visual Studio XAML Tasarımcısı tasarım zamanı örnek verilerini kullanın](../xaml-tools/xaml-design-time-sample-data.md) -yeni makale oluşturuldu
+- [Tasarım zamanı örnek verilerini XAML Tasarımcısı Visual Studio](../xaml-tools/xaml-design-time-sample-data.md) - Yeni makale oluşturuldu
