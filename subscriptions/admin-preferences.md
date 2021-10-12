@@ -4,24 +4,24 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
-ms.date: 05/18/2021
+ms.date: 10/08/2021
 ms.topic: conceptual
 description: Yönetim Portalı'nın dil, kişiler, abonelik düzeyi ve diğer dil tercihlerini ayarlamayı öğrenin
-ms.openlocfilehash: 09ab16b077ac92fccc2f939a36a31136b11e7e1b
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: f80321b8413551618a32b40bf10402fbd3c06562
+ms.sourcegitcommit: 7b2b00da38905c4560f823090c3140be77803711
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128429001"
+ms.lasthandoff: 10/12/2021
+ms.locfileid: "129813110"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-admin-portal"></a>Yönetim portalında sözleşmeleriniz için tercihleri ayarlama
-Süper yöneticiler, Yönetim Portalı'nın (yönetim portalı) her sözleşme için genel olarak uygulanacak belirli tercihlerini ayarlayabilecek.  Bu tercihler, abone eklerken yöneticileriniz için abonelik ayrıntılarını otomatik olarak doldurmakta ve yalnızca süper yöneticiler tarafından genel olarak değiştirilebilir.  
+Süper yöneticiler, Yönetim portalında (yönetim portalı) her sözleşme için genel olarak uygulanacak belirli tercihler ayarlayabilecek.  Bu tercihler, abone eklerken yöneticileriniz için abonelik ayrıntılarını otomatik olarak doldurmakta ve yalnızca süper yöneticiler tarafından genel olarak değiştirilebilir.  
 
 ## <a name="access-preferences"></a>Erişim tercihleri
-Tercihleri görüntülemek veya değiştirmek [için sözleşmede](https://manage.visualstudio.com) süper yönetici haklarına sahip bir oturum açma kimliği kullanarak yönetici portalında oturum açmanız gerekir.  
+Tercihleri görüntülemek veya değiştirmek için sözleşmede süper yönetici haklarına sahip bir oturum açma kimliği kullanarak yönetici [portalında](https://manage.visualstudio.com) oturum açmanız gerekir.  
 
 Tercihlerinizi ayarlamak için:
-1. Süper yönetici ayrıcalıklarına sahip bir kimlikle yönetici portalında oturum açın.
+1. Yönetici portalında süper yönetici ayrıcalıklarına sahip bir kimlikle oturum açın.
 2. Sol bölmede ayar simgesine tıklayın.
    > [!div class="mx-imgBorder"]
    > ![Yönetici Tercihleri düğmesi](_img/admin-preferences/admin-preferences-button.png "Tercihleri görüntülemek için Yöneticileri Yönet'e ve ardından Sözleşme Tercihleri'ne tıklayın")
@@ -44,7 +44,7 @@ Oturum a0 için kullanılan e-posta adresiyle ilişkilendirilmiş yalnızca bir 
 Bu tercih, abone portalının abonelikler sayfasındaki Yöneticime Başvur  düğmesini kullanarak aboneleriniz için yöneticilere [ulaşmanın](https://my.visualstudio.com/subscriptions) bir yolunu sağlar.  Bu tercih boş bırakılırsa, abone iletileri sözleşmede tüm yöneticilere ve süper yöneticilere ilettir.  Hedef kitlenizi bu iletişim e-postası için uyarlamak için bir grup e-posta diğer adı veya güvenlik grubu kullanılması önerilir. Ayrıca isterseniz bir kişinin e-posta adresini de girebilirsiniz.
 
 > [!NOTE]
-> Burada listeleyseniz e-posta adresi abonelere SAĞLANMAZ.  Bir abone, abone  portalında Yöneticime Başvur isteği göndererek, ileti aboneye ifşa etmeden diğer ada iletiliyor. 
+> Burada listeleyseniz e-posta adresi abonelere SAĞLANMAZ.  Abone, abone portalında Yöneticime Başvur isteği göndererek diğer adla iletişime geçerek aboneye iletecek.  
 
 ### <a name="default-subscription-level"></a>Varsayılan abonelik düzeyi
 Bir kullanıcıya abonelik atandığı zaman, sözleşmenize dahil olan abonelik düzeylerden hangilerinin varsayılan olarak seçileceklerini belirlemek için bu ayarı kullanabilirsiniz.  Yöneticiler bu ayarı sözleşmenizin herhangi bir abonelik düzeyiyle değiştirebilir. Bu, en yaygın seçiminizi tekrar tekrar yapmak zorunda kalmanızı önler. 
@@ -72,7 +72,7 @@ A: Yanıtınız, kullanmakta olduğunuz e-posta istemcilerinden gelecektir. Abon
 ### <a name="q-where-can-i-find-out-more-about-the-contact-my-admin-feature-in-the-subscriber-portal"></a>S: Abone portalında Yöneticime **Başvur özelliği hakkında daha** fazla bilgi nereden edinebilirsiniz?
 C: Yöneticime başvur [makalemize göz](contact-my-admin.md) atabilirsiniz. 
 
-### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>S: kişi e-posta adresini tamamlamazsanız **ve** abone Yöneticime Başvur özelliğini **kullanırsa,** isteğini kim alır?
+### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>S: Kişi e-posta adresini tamamlamazsanız **ve** abone Yöneticime Başvur özelliğini **kullanırsa,** isteğini kim alır?
 A: İletişim e-posta adresi tercihi'ne belirli bir **e-posta** adresi ayarlanmayacaksa, sözleşmede yer alan tüm yöneticiler isteği alır. 
 
 ## <a name="resources"></a>Kaynaklar
@@ -85,8 +85,8 @@ A: İletişim e-posta adresi tercihi'ne belirli bir **e-posta** adresi ayarlanma
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Abonelikleri yönetme hakkında daha fazla Visual Studio edinin.
-- [Bireysel abonelikleri atama](assign-license.md)
+Abonelikleri yönetme hakkında daha Visual Studio bilgi edinin.
+- [Bireysel abonelik atama](assign-license.md)
 - [Birden çok abonelik atama](assign-license-bulk.md)
 - [Abonelikleri düzenleme](edit-license.md)
 - [En fazla kullanımı belirleme](maximum-usage.md)
