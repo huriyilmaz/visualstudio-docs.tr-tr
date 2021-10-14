@@ -1,7 +1,6 @@
 ---
 title: Hata ayıklayıcıda çağrı yığınını görüntüle | Microsoft Docs
 description: Şu anda Visual Studio yığında olan işlev veya yordam çağrılarını görüntülemek için çağrı yığını penceresini kullanın.
-ms.custom: SEO-VS-2020
 ms.date: 10/29/2018
 ms.topic: how-to
 f1_keywords:
@@ -31,12 +30,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: c8c4044e88150aa40b5ae9fe89c43b3a4d8eaddc
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: b3b3efff430c65bbcade01926c3a5de0d1594d07
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122154063"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971744"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>Çağrı yığınını görüntüleyin ve hata ayıklayıcıda çağrı yığını penceresini kullanın
 

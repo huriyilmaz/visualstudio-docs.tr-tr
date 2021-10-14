@@ -1,7 +1,6 @@
 ---
 title: Dağıtıma ilk bakış
 description: Visual Studio 'dan uygulama dağıtma seçenekleriniz hakkında bilgi edinin.
-ms.custom: mvc
 ms.date: 09/23/2021
 ms.topic: conceptual
 dev_langs:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - deploying applications [Visual Studio]
 - deploying applications [Visual Studio], about deploying applications
 - components [.NET Framework], deploying
-ms.assetid: 63fcdd5b-2e54-4210-9038-65bc23167725
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: ace4dd25eb82d8e1aaf96b40ada6308d6e90fbf7
-ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
+ms.openlocfilehash: 195a0c94a920f21d1accc412bbd64c4c81c3c0e8
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129431659"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129967905"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>Visual Studio ' de dağıtıma ilk bakış
 
@@ -64,7 +62,7 @@ Yerel bir klasöre dağıtım, genellikle son dağıtım için başka bir aracı
 
   **Yayımla** aracını kullanmak için Çözüm Gezgini ' de projeye sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırdıysanız, **Yeni Profil oluştur**' u seçmeniz gerekir.) **Yayımla** iletişim kutusunda **App Service** veya **Azure sanal makineler**' i seçin ve ardından yapılandırma adımlarını izleyin.
 
-  ![Azure App Service seçmeyi gösteren ekran görüntüsü.](../deployment/media/quickstart-publish-azure-new.png "Yeni bir Azure App Service")
+  ![Azure App Service seçmeyi gösteren ekran görüntüsü.](../deployment/media/quickstart-publish-azure-new.png "Azure App Service seçin")
 
   Visual Studio 2017 sürüm 15,7 ' den başlayarak, Linux üzerinde App Service ASP.NET Core uygulamaları dağıtabilirsiniz.
 
@@ -149,7 +147,7 @@ uygulamanızın sürekli dağıtımını etkinleştirmek için Azure Pipelines k
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, farklı uygulamalar için dağıtım seçeneklerine hızlı bir bakış attırdınız.
+Bu öğreticide, farklı uygulamalar için Dağıtım seçeneklerine hızlı bir bakış gerçekleşecektir.
 
 > [!div class="nextstepaction"]
-> [Hangi yayımlama seçenekleri benim için uygun?](deploying-applications-services-and-components-resources.md#what-publishing-options-are-right-for-me)
+> [Benim için hangi yayımlama seçenekleri uygun?](deploying-applications-services-and-components-resources.md#what-publishing-options-are-right-for-me)

@@ -1,125 +1,124 @@
 ---
 title: Python kodunda hata ayıklama
-description: Visual Studio, kesme noktaları ayarlama, adımlama, değerleri inceleme, özel durumlara bakma ve etkileşimli pencerede hata ayıklama da dahil olmak üzere Python kodu için zengin hata ayıklama sağlar.
+description: Visual Studio noktaları ayarlama, değerleri inceleme, özel durumlara bakma ve etkileşimli pencerede hata ayıklama da dahil olmak üzere Python kodu için zengin hata ayıklama sağlar.
 ms.date: 05/12/2020
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3ef8fc7ef3de032d4c4fba25e0e3b64a47b76ac1
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: a0233c23973517203fd4a7af0e530c77fa2c1c38
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126636982"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971497"
 ---
-# <a name="debug-your-python-code"></a>Python kodunuzda hata ayıklama
+# <a name="debug-your-python-code"></a>Python kodunuzun hata ayıklaması
 
-Visual Studio, çalışan işlemlere ekleme, **izleme** ve **anında** windows 'da ifadeleri değerlendirme, yerel değişkenleri belirleme, kesme noktaları, step ın/out/over deyimleri, **sonraki deyimi** ve daha fazlasını belirleme dahil olmak üzere Python için kapsamlı bir hata ayıklama deneyimi sağlar.
+Visual Studio, çalışan işlemlere ekleme, İzleme ve Anında pencerelerde ifadeleri değerlendirme, yerel değişkenleri  inceleme, kesme noktaları, adım adım/dışarı/dışarı deyimleri, Sonraki Deyimi Ayarla ve daha fazlası dahil olmak üzere Python için kapsamlı bir hata ayıklama deneyimi sağlar. 
 
-Ayrıca, senaryoya özgü aşağıdaki hata ayıklama makalelerine bakın:
+Ayrıca aşağıdaki senaryoya özgü hata ayıklama makalelerini de okuyun:
 
 - [Linux uzaktan hata ayıklama](debugging-python-code-on-remote-linux-machines.md)
-- [Karma mod Python/C++ hata ayıklaması](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)
+- [Karma mod Python/C++ hata ayıklama](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)
 - [Karışık mod hata ayıklaması için semboller](debugging-symbols-for-mixed-mode-c-cpp-python.md)
 
 <a name="debugging-without-a-project"></a>
 
 > [!Tip]
-> Visual Studio Python, proje olmadan hata ayıklamayı destekler. tek başına bir Python dosyası açıkken, düzenleyicide sağ tıklayın, **hata ayıklamaya başla**' yı seçin ve betiği genel varsayılan ortamla (bkz. [Python ortamları](managing-python-environments-in-visual-studio.md)) ve bağımsız değişken olmadan başlatır Visual Studio. Ancak bundan sonra tam hata ayıklama desteğiniz vardır.
+> Visual Studio Python, proje olmadan hata ayıklamayı destekler. Tek başına bir Python dosyası açıkken düzenleyicide sağ tıklayın, Hata Ayıklama ile Başla'yı seçin ve Visual Studio betiği genel varsayılan ortamla (bkz. [Python](managing-python-environments-in-visual-studio.md)ortamları) başlatıyor ve bağımsız değişken yok. Ancak bundan sonra tam hata ayıklama desteğine sahip oldu.
 >
-> Ortamı ve bağımsız değişkenleri denetlemek için, kod için bir proje oluşturun, bu, [var olan Python kodu](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) proje şablonuyla kolayca yapılır.
+> Ortamı ve bağımsız değişkenleri kontrol etmek için kod için bir proje oluşturun. Bu proje, Mevcut Python kodundan [proje şablonuyla](managing-python-projects-in-visual-studio.md#create-a-project-from-existing-files) kolayca yapılabilir.
 
 <a name="debugging-with-a-project"></a>
 
 ## <a name="basic-debugging"></a>Temel hata ayıklama
 
-Temel hata ayıklama iş akışı, ayarlar kesme noktaları, kod üzerinden atlama, değerleri İnceleme ve aşağıdaki bölümlerde açıklandığı gibi özel durumları işleme içerir.
+Temel hata ayıklama iş akışı, aşağıdaki bölümlerde açıklandığı gibi ayarlar kesme noktaları, kodda adım adım ilerler, değerleri inceler ve özel durumları işlemeyi içerir.
 
-Hata ayıklama **Oturumu hata ayıklama**  >  **başlatma hata ayıklama** komutu, araç çubuğundaki **Başlat** düğmesi veya **F5** tuşu ile başlar. bu eylemler, projenin etkin ortamı ve **Project özelliklerinde** belirtilmiş olan tüm komut satırı bağımsız değişkenleri veya arama yolları (bkz. [Project hata ayıklama seçenekleri](#project-debugging-options)) ile projenizin başlangıç dosyasını ( **Çözüm Gezgini** kalın olarak gösterilir) başlatır. Visual Studio 2017 sürüm 15,6 ve üzeri bir başlangıç dosyası ayarlanmamışsa sizi uyarır; önceki sürümler, Python yorumlayıcı çalıştıran bir çıkış penceresi açabilir veya çıkış penceresi kısa bir süre görünür ve kaybolur. Herhangi bir durumda, uygun dosyaya sağ tıklayın ve **başlangıç dosyası olarak ayarla**' yı seçin.
+Hata ayıklama oturumu Hata AyıklamaYı **Başlat**  >  **komutuyla,** araç **çubuğundaki Başlat** düğmesiyle veya **F5 tuşuyla** başlar. Bu eylemler, projenizin başlangıç dosyasını **(Çözüm Gezgini** kalın olarak gösterilir) projenin etkin ortamı ve **Project** Özellikleri'ne belirtilmiş komut satırı bağımsız değişkenleri veya arama yolları ile başlatmaktadır (bkz. Project hata ayıklama [seçenekleri).](#project-debugging-options) Visual Studio 2017 sürüm 15.6 ve sonraki sürümler, başlangıç dosya kümemiz yoksa sizi uyarır; önceki sürümler Python yorumlayıcısını çalıştıran bir çıkış penceresi açabilir veya çıkış penceresi kısa bir süre görünür ve kaybolur. Her durumda, uygun dosyaya sağ tıklayın ve Başlangıç Dosyası Olarak **Ayarla'yı seçin.**
 
 > [!Note]
-> Hata ayıklayıcı her zaman proje için etkin Python ortamıyla başlar. Ortamı değiştirmek için, [bir proje Için Python ortamı seçme](selecting-a-python-environment-for-a-project.md)konusunda açıklandığı gibi farklı bir tane etkin yapın.
+> Hata ayıklayıcısı her zaman proje için etkin Python ortamıyla başlar. Ortamı değiştirmek için, Proje için Python ortamı seçme konusunda [açıklandığı gibi farklı bir ortamı etkin hale seçin.](selecting-a-python-environment-for-a-project.md)
 
 ### <a name="breakpoints"></a>Kesme noktaları
 
-Kesme noktaları, program durumunu incelemenize olanak sağlamak için işaretli bir noktada kodun yürütülmesini durdurur. Kod Düzenleyicisi 'nin sol kenar boşluğuna tıklayarak veya bir kod satırına sağ **tıklayıp kesme**  >  **noktası Ekle kesme noktası**' nı seçerek kesme noktaları ayarlayın. Her satırda bir kesme noktasıyla kırmızı bir nokta görünür.
+Kesme noktaları, program durumunu incelerken işaretlenmiş bir noktada kodun yürütülmesini durdurur. Kod düzenleyicisinin sol kenar boşluğuna tıklayarak veya bir kod satırına sağ tıklar ve Kesme Noktası Ekle Kesme Noktası seçeneğini   >  **kullanarak kesme noktaları ayarlayın.** Her satırda kesme noktası olan kırmızı bir nokta görünür.
 
-![Visual Studio görünen kesme noktaları](media/debugging-breakpoints.png)
+![Kesme noktaları Visual Studio](media/debugging-breakpoints.png)
 
-Kırmızı noktayı tıklatmak veya kod satırına sağ tıklayıp **kesme** noktası silme kesme noktası ' nı seçmek  >   , kesme noktasını kaldırır. **Kesme**  >  **noktasını devre dışı bırak** komutunu kullanarak kaldırmadan de devre dışı bırakabilirsiniz.
+Kırmızı noktaya tıklar veya kod satırına sağ tıklar ve Kesme Noktası Silme Kesme  >  **Noktası'nın seçimi** kesme noktası kaldırır. Kesme Noktası Kesme Noktası Devre Dışı Bırak komutunu kullanarak **kaldırmadan da**  >  **devre dışı abilirsiniz.**
 
 > [!Note]
-> Python 'daki bazı kesme noktaları, diğer programlama dilleri ile çalışan geliştiriciler için de şaşırtıcı olabilir. Python 'da tüm dosya yürütülebilir koddur, bu nedenle Python, herhangi bir üst düzey sınıfı veya işlev tanımını işlemek üzere yüklendiğinde dosyayı çalıştırır. Bir kesme noktası ayarlandıysa, bir sınıf bildirimi aracılığıyla hata ayıklayıcıyı parçalı bir şekilde bulabilirsiniz. Bu davranış, bazen ortaya çıkmış olsa da doğrudur.
+> Python'daki bazı kesme noktaları, diğer programlama dilleriyle çalışan geliştiriciler için şaşırtıcı olabilir. Python'da dosyanın tamamı yürütülebilir koddur; bu nedenle Python, herhangi bir üst düzey sınıf veya işlev tanımlarını işlemeye yüklendiğinde dosyayı çalıştırır. Bir kesme noktası ayarlanmışsa, hata ayıklayıcının bir sınıf bildirimi aracılığıyla parça parça hatasını bulabilirsiniz. Bazen şaşırtıcı olsa da bu davranış doğrudur.
 
-Yalnızca bir değişken belirli bir değere veya değer aralığına ayarlandığında bölme gibi, bir kesme noktasının tetiklendiği koşulları özelleştirebilirsiniz. Koşulları belirlemek için kesme noktasının kırmızı noktasına sağ tıklayın, **koşul**' ı seçin ve Python kodu kullanarak ifadeler oluşturun. Visual Studio bu özellik hakkında tam ayrıntılar için bkz. [kesme noktası koşulları](../debugger/using-breakpoints.md#breakpoint-conditions).
+Yalnızca bir değişken belirli bir değere veya değer aralığına ayarlanırken kesme noktası tetiklenen koşulları özelleştirebilirsiniz. Koşulları ayarlamak için kesme noktası kırmızı noktaya sağ tıklayın, Koşul'u **seçin** ve Python kodunu kullanarak ifadeler oluşturun. Bu özellik hakkında ayrıntılı bilgi için Visual Studio kesme [noktası koşullarına bakın.](../debugger/using-breakpoints.md#breakpoint-conditions)
 
-Koşulları ayarlarken, Ayrıca, isteğe bağlı olarak yürütmeye devam etmek için **eylem** ayarlayabilir ve çıkış penceresinde oturum açmak üzere bir ileti oluşturabilirsiniz. İleti günlüğe kaydetme, uygulamanıza doğrudan günlük kodu eklemeden *izleme noktası* olarak adlandırılan öğeleri oluşturur:
+Koşulları ayarlarken Eylem'i de **ayarp** çıkış penceresinde oturum açmak için bir ileti oluşturabilir ve isteğe bağlı olarak yürütmeyi otomatik olarak devam ettirebilirsiniz. İletiyi günlüğe kaydetme, doğrudan *uygulamanıza günlük kodu* eklemeden izleme noktası olarak adlandırılan şeyi oluşturur:
 
-![Kesme noktasıyla izleme noktası oluşturma](media/debugging-tracepoint.png)
+![Kesme noktası ile izleme noktası oluşturma](media/debugging-tracepoint.png)
 
-### <a name="step-through-code"></a>Kod üzerinden adımla
+### <a name="step-through-code"></a>Kodda adım adım ilerler
 
-Bir kesme noktasında durdurulduktan sonra, yeniden kesmeden önce kod veya kod blokları çalıştırmak için çeşitli yöntemlere sahip olursunuz. Bu komutlar, en üstteki hata ayıklama araç çubuğu, **hata ayıklama** menüsü, kod düzenleyicisinde sağ tıklama bağlam menüsünde ve klavye kısayolları (tüm komutlar tüm yerlerde olmasa da) dahil olmak üzere birkaç yerde mevcuttur:
+Kesme noktası durdurulduktan sonra, yeniden kesmeden önce kodda adım adım veya kod bloklarını çalıştırmanın çeşitli yolları vardır. Bu komutlar, üst hata ayıklama araç çubuğu, Hata  Ayıklama menüsü, kod düzenleyicisinde sağ tıklama bağlam menüsü ve klavye kısayolları aracılığıyla (tüm komutlar her yerde yer alamasa da) gibi çeşitli yerlerde kullanılabilir:
 
-| Özellik | U | Description |
+| Özellik | Tuş | Description |
 | --- | --- | --- |
-| **Devam et** | **F5** | Sonraki kesme noktasına ulaşılana kadar kodu çalıştırır. |
-| **Adımla** | **F11** | Sonraki ifadeyi çalıştırır ve duraklar. Next ifadesinde bir işlev çağrısı varsa, hata ayıklayıcı çağrılan işlevin ilk satırında duraklar. |
-| **Adımla** | **F10** | Bir işleve çağrı yapma (tüm kodunu çalıştırma) ve herhangi bir dönüş değeri uygulama dahil olmak üzere sonraki ifadeyi çalıştırır. Adımlama, hata ayıklamanıza gerek olmayan işlevleri kolayca atlamanızı sağlar. |
-| **Dışarı adımla** | **SHIFT** + **F11** | Geçerli işlevin sonuna kadar kodu çalıştırır ve ardından çağıran ifadeye adımları uygulayın.  Bu komut, geçerli işlevin geri kalanında hata ayıklamanıza gerek olmadığında yararlıdır. |
-| **Imlece kadar Çalıştır** | **CTRL** + **F10** | Düzenleyicideki giriş işaretinin konumuna kadar kodu çalıştırır. Bu komut, hata ayıklamanıza gerek olmayan bir kod segmentinin üzerinde kolayca atlama yapmanıza olanak sağlar. |
-| **Sonraki Deyimi Belirle** | **CTRL** + **SHIFT** + **F10** | Koddaki geçerli çalışma noktasını, giriş işaretinin konumuyla değiştirir. Bu komut, kodun hatalı olduğunu bildiğiniz veya istenmeyen yan etkisi üreten bir kod segmentini atlamanızı sağlar. |
-| **Sonraki Ifadeyi göster** | **Alt** +  **&#42;** NUM| Çalıştırmak için sizi bir sonraki ifadeye döndürür. Bu komut, kodunuzda arama yaptıysanız ve hata ayıklayıcının durdurulduğu yeri anımsamıyorsanız yararlı olur. |
+| **Devam et** | **F5** | Sonraki kesme noktası ulaşıncaya kadar kodu çalıştırır. |
+| **Adımla** | **F11** | Sonraki deyimi çalıştırır ve durur. Sonraki deyim bir işlev çağrısı ise, hata ayıklayıcı çağrılan işlevin ilk satırına durur. |
+| **Adım At** | **F10** | Bir işleve çağrı yapma (tüm kodunu çalıştırma) ve herhangi bir dönüş değerini uygulama da dahil olmak üzere sonraki deyimi çalıştırır. Üzerine adımlama, hata ayıklamak zorunda olmadığınız işlevleri kolayca atlamanizi sağlar. |
+| **Dışarı Adımla** | **Shift ile kaydırma** + **F11** | Geçerli işlevin sonuna kadar kodu çalıştırır ve ardından çağırma deyimine doğru adımlar.  Bu komut, geçerli işlevin geri kalanında hata ayıklamaya gerek olmadığınız zaman kullanışlıdır. |
+| **İmleç'e Çalıştır** | **Ctrl tuşunu basılı tutarak** + **F10** | Kodu düzenleyicide caret'in bulunduğu konuma kadar çalıştırır. Bu komut, hata ayıklamak zorunda olmadığınız bir kod kesimini kolayca atlayabilirsiniz. |
+| **Sonraki Deyimi Belirle** | **Ctrl tuşunu basılı tutarak** + **Shift ile kaydırma** + **F10** | Kodda geçerli çalışma noktasını, dikkat noktasının konumu olarak değiştirir. Bu komut, kodun hatalı olduğunu bildiğiniz veya istenmeyen bir yan etki ürettiğinde kod parçasının hiç çalıştırılamamalarını sağlar. |
+| **Sonraki Deyimi Göster** | **Alt** + **Num** **&#42;**| Sizi çalıştıracak sonraki deyime döndürür. Bu komut, kodunuza bakıyorsanız ve hata ayıklayıcının nerede durdurulmuş olduğunu anımsamasanız yararlıdır. |
 
-### <a name="inspect-and-modify-values"></a>Değerleri İnceleme ve değiştirme
+### <a name="inspect-and-modify-values"></a>Değerleri inceleme ve değiştirme
 
-Hata ayıklayıcıda durdurulduğunda, değişkenlerin değerlerini inceleyebilir ve değiştirebilirsiniz. Ayrıca, tek tek değişkenleri ve özel ifadeleri izlemek için **Gözcü** penceresini de kullanabilirsiniz. (Bkz. Genel Ayrıntılar için [değişkenleri İnceleme](../debugger/debugger-feature-tour.md#inspect-variables-with-the-autos-and-locals-windows) .)
+Hata ayıklayıcıda durdurulurken değişkenlerin değerlerini inceleyebilirsiniz ve değiştirebilirsiniz. İzleme penceresini ayrıca tek **tek** değişkenleri ve özel ifadeleri izlemek için de kullanabilirsiniz. (Genel [ayrıntılar için bkz.](../debugger/debugger-feature-tour.md#inspect-variables-with-the-autos-and-locals-windows) Değişkenleri inceleme.)
 
-**DataTips** kullanarak bir değeri görüntülemek için, fareyi düzenleyicideki herhangi bir değişkenin üzerine getirin. Değiştirmek için değere tıklayabilirsiniz:
+**DataTips** kullanarak bir değeri görüntülemek için fareyi düzenleyicide herhangi bir değişkenin üzerine gelmeniz gerekir. Değiştirmek için değere tıklarsiniz:
 
-![Visual Studio hata ayıklayıcısında gösterilen datatips](media/debugging-quick-tips.png)
+![Visual Studio hata ayıklayıcısında gösterilen DataTips](media/debugging-quick-tips.png)
 
-**oto** penceresi (**hata ayıklama**  >  **Windows**  >  **oto**), geçerli ifadeye yakın olan değişkenleri ve ifadeleri içerir. Değer sütununa çift tıklayabilir veya seçin ve **F2** tuşuna basarak değeri düzenleyin:
+Otomatikler **penceresi** (**Hata**  >  **Windows**  >  **Otomatikler)** geçerli deyime yakın değişkenleri ve ifadeleri içerir. Değer sütununa çift tıklar veya F2 tuşuna **basarak** değeri düzenleyebilirsiniz:
 
-![Visual Studio hata ayıklayıcısındaki oto penceresi](media/debugging-autos-window.png)
+![Hata ayıklayıcısında otomatik Visual Studio penceresi](media/debugging-autos-window.png)
 
-**yereller** penceresi (**hata ayıklama**  >  **Windows**  >  **yereller**) geçerli kapsamda olan tüm değişkenleri görüntüler, bu da yeniden düzenlenebilir:
+Yereller **penceresi** (**Hata**  >  **Windows**  >  **Yereller)** geçerli kapsamda bulunan ve yeniden düzenlenebilir tüm değişkenleri görüntüler:
 
 ![Visual Studio hata ayıklayıcısında yereller penceresi](media/debugging-locals-window.png)
 
-**Oto ve yerelleri** kullanma hakkında daha fazla bilgi için bkz. [oto ve Yereller pencerelerinde değişkenleri İnceleme](../debugger/autos-and-locals-windows.md).
+Otomatikler ve **Yereller kullanma hakkında** daha fazla bilgi **için,** [Otomatikler ve Yereller pencerelerinde değişkenleri inceleme.](../debugger/autos-and-locals-windows.md)
 
-**gözcü** pencereleri (**hata ayıklama**  >  **Windows**  >  **izleme**  >  **izleme 1-4**), rastgele Python ifadeleri girmenize ve sonuçları görüntülemenize izin verir. İfadeler her adım için yeniden değerlendirilerek:
+İzleme **pencereleri** (**İzleme**  >  **1-4 Windows** hata ayıkla ) rastgele Python ifadeleri girmenize ve sonuçları  >    >  görüntülemenize olanak sağlar. İfadeler her adım için yeniden değerlendirildi:
 
-![Visual Studio hata ayıklayıcıda izleme penceresi](media/debugging-watch-window.png)
+![izleme penceresi hata ayıklayıcısında Visual Studio hata ayıklayıcısı](media/debugging-watch-window.png)
 
-**İzleme** kullanımı hakkında daha fazla bilgi için bkz. [Izleme ve hızlı gözcü pencerelerini kullanarak değişkenlerde izleme ayarlama](../debugger/watch-and-quickwatch-windows.md).
+İzleme kullanma hakkında daha **fazla bilgi** için bkz. Watch ve QuickWatch pencerelerini kullanarak değişkenler üzerinde [izleme ayarlama.](../debugger/watch-and-quickwatch-windows.md)
 
-Bir dize değeri incelenirken (, `str` , `unicode` `bytes` ve `bytearray` tüm dizeler bu amaçla kabul edildiğinde), değerin sağ tarafında bir büyüteç simgesi görüntülenir. Simgeye tıkladığınızda, bir açılan iletişim kutusunda tırnak işareti olmayan dize değeri görünür ve bu, uzun dizeler için yararlı olan sarmalama ve kaydırma sağlar. Ayrıca, simgenin üzerindeki açılan oku seçmek düz metin, HTML, XML ve JSON görselleştirmelerini seçmenizi sağlar:
+Bir dize değerini ( , , ve bu amaçla dize olarak kabul edilir) incelerken değerin sağ tarafında bir `str` `unicode` `bytes` `bytearray` büyüteç simgesi görünür. Simgeye tıklarsanız, uzun dizeler için yararlı olan sarmalama ve kaydırma ile birlikte bir açılan iletişim kutusunda yer alan, irdesiz dize değeri görüntülenir. Ayrıca simgede açılan oku seçerek düz metin, HTML, XML ve JSON görselleştirmelerini de seçmenize olanak sağlar:
 
-![Visual Studio hata ayıklayıcısında dize görselleştiriciler](media/debugging-string-visualizers.png)
+![Visual Studio hata ayıklayıcısında dize görselleştiricileri](media/debugging-string-visualizers.png)
 
-HTML, XML ve JSON görselleştirmeleri, sözdizimi vurgulaması ve ağaç görünümleri olan ayrı açılan pencereler halinde görünür.
+HTML, XML ve JSON görselleştirmeleri, söz dizimi vurgulama ve ağaç görünümleri ile ayrı açılan pencerelerde görünür.
 
 ### <a name="exceptions"></a>Özel durumlar
 
-Programınızda hata ayıklama sırasında bir hata oluşursa, ancak bunun için bir özel durum işleyiciniz yoksa, hata ayıklayıcı özel durum noktasında kesilir:
+Hata ayıklama sırasında programda bir hata oluşursa ama bunun için bir özel durum işleyiciniz yoksa, hata ayıklayıcı özel durumun noktasında bozar:
 
-![Visual Studio hata ayıklayıcısında özel durum açılan penceresi](media/debugging-exception-popup.png)
+![Visual Studio hata ayıklayıcısında özel durum açılır](media/debugging-exception-popup.png)
 
-Bu noktada, çağrı yığını da dahil olmak üzere program durumunu inceleyebilirsiniz. Ancak, kodda adım adım ilerlemeye çalışırsanız, özel durum işlenene veya programınız çıkıncaya kadar bu durum oluşturulur.
+Bu noktada, çağrı yığını dahil olmak üzere program durumunu incelersiniz. Ancak, kodda adım adım ilerlersanız, özel durum işilene veya programınız çıkana kadar özel durum atmaya devam eder.
 
-**hata ayıklama**  >  **Windows**  >  **özel durum Ayarlar** menü komutu, **Python özel durumlarını** genişletebileceğiniz bir pencere getirir:
+Hata **ayıklama**  >  **Windows** Özel Ayarlar menü komutu, Python Özel Durumları'na  >   **genişletebilirsiniz:**
 
-![Visual Studio hata ayıklayıcısındaki özel durumlar penceresi](media/debugging-exception-settings.png)
+![Hata ayıklayıcısında özel Visual Studio penceresi](media/debugging-exception-settings.png)
 
-Her bir özel durum için onay kutusu *, hata ayıklayıcının ne zaman harekete* geçirilip bölünemediğini denetler. Belirli bir özel durum için daha sık daha fazla bölmek istiyorsanız bu kutuyu işaretleyin.
+Her özel durum için onay kutusu, hata ayıklayıcının *her zaman ortaya çıkarılırken* boz olup olmadığını kontrol eder. Belirli bir özel durum için daha sık daha fazla bölmek istiyorsanız bu kutuyu işaretleyin.
 
 Varsayılan olarak, bir özel durum işleyicisi kaynak kodunda bulunamadığında, en çok özel durumlar kesilir. Bu davranışı değiştirmek için herhangi bir özel duruma sağ tıklayın ve **Kullanıcı kodunda Işlenmediğinde devam et** seçeneğini değiştirin. Bir özel durum için daha az sıklıkta bölmek istediğinizde bu kutuyu temizleyin.
 

@@ -1,8 +1,8 @@
 ---
 title: Visual Studio Tümleştirmesi (MSBuild)
 titleSuffix: ''
-description: Farklı Visual Studio özelleştirilmiş derleme işlemlerine sahip olsalar MSBuild bir biçimde nasıl proje barındıracaklarını öğrenin.
-ms.custom: seodec18, SEO-VS-2020
+description: Farklı Visual Studio ve özelleştirilmiş derleme işlemlerine sahip olsalar MSBuild bir biçimde nasıl barındıracaklarını öğrenin.
+ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,18 +22,18 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 39be49e26329e60e7c75f2c3b52d35e366d2266a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 8c2ea012fecdc5d97c69da09969d0c29b4b93503
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122108206"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970509"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio tümleştirmesi (MSBuild)
 
 Visual Studio projeleri MSBuild derlemek için konakları barındıracak. MSBuild projeden sorumlu olduğundan, proje farklı bir araç tarafından yazılsa ve özelleştirilmiş bir derleme işlemi olsa bile MSBuild biçimindeki neredeyse tüm proje Visual Studio'de başarıyla kullanılabilir.
 
- Bu makalede, Visual Studio'nin MSBuild ve *.targets* dosyaları özelleştirilebilirken dikkate alınacak belirli özellikleri açıklanmıştır. Bu, Visual Studio. Bunlar IntelliSense ve hata ayıklama Visual Studio özel projeniz için çalışmanızı sağlar.
+ Bu makalede, Visual Studio'nin MSBuild ve *.targets* dosyaları özelleştirilebilirken dikkate alınacak belirli özellikleri açık Visual Studio. Bunlar IntelliSense ve hata ayıklama Visual Studio özel projeniz için çalışmanızı sağlar.
 
  C++ projeleri hakkında bilgi için [bkz. Project dosyaları.](/cpp/build/reference/project-files)
 
@@ -41,11 +41,11 @@ Visual Studio projeleri MSBuild derlemek için konakları barındıracak. MSBuil
 
  *MSBuild.exe* desenle eşleşen tüm proje dosya adı uzantılarını *tanır. \* proj*. Ancak Visual Studio, projeyi yükecek dile özgü proje sistemini belirleyen bu proje dosya adı uzantılarının yalnızca bir alt kümesini tanır. Visual Studio, dilden bağımsız bir MSBuild tabanlı proje sistemine sahip değildir.
 
- Örneğin, C# proje sistemi *.csproj* dosyalarını yükler, Visual Studio *bir .xxproj dosyası yükleyemedi.* Rastgele bir dil içinde kaynak dosyalar için bir proje dosyası, Visual Basic veya C# proje dosyalarının Visual Studio.
+ Örneğin, C# proje sistemi *.csproj* dosyalarını yükler, Visual Studio *bir .xxproj dosyası yükleyemedi.* Rastgele bir dil içinde kaynak dosyalar için bir proje dosyası, Visual Basic C# proje dosyalarının Visual Studio.
 
 ## <a name="well-known-target-names"></a>İyi bilinen hedef adları
 
- Visual Studio'Visual Studio projesinde varsayılan hedef yürütülür.  Bu hedef genellikle olarak da adlandırılmış `Build` olur. Yeniden Oluştur **veya** **Temizle** komutu seçerek projede aynı adı alan bir hedef yürütmeye çalışabilirsiniz. **Yayımla'ya** tıklar, projede `PublishOnly` adlı bir hedef yürütür.
+ Visual Studio'da Derleme komutuna tıklar, projede varsayılan hedefi yürütür.  Bu hedef genellikle olarak da adlandırılmış `Build` olur. Yeniden Oluştur **veya** **Temizle** komutu seçerek projede aynı adı alan bir hedef yürütmeye çalışabilirsiniz. **Yayımla'ya** tıklar, projede `PublishOnly` adlı bir hedef yürütür.
 
 ## <a name="configurations-and-platforms"></a>Yapılandırmalar ve platformlar
 
@@ -61,7 +61,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="additional-build-actions"></a>Ek derleme eylemleri
 
- Visual Studio, proje içinde dosyanın öğe türü adını Dosya özellikleri penceresinin **Derleme Eylemi** özelliğiyle **değiştirmenizi** sağlar. **Derleme,** **EmbeddedResource,** **İçerik** ve Hiçbiri öğe türü adları her zaman bu menüde ve projeniz içinde zaten bulunan diğer öğe türü adlarına ek olarak listelenir.  Özel öğe türü adlarının bu menüde her zaman kullanılabilir olmasını sağlamak için adları adlı bir öğe türüne `AvailableItemName` ekleyebilirsiniz. Örneğin, proje dosyanıza aşağıdakini eklemek, özel türü **JScript** içeri aktaran tüm projeler için bu menüye ekler:
+ Visual Studio projesinde dosyanın öğe türü adını Dosya özellikleri penceresinin **Derleme Eylemi** özelliğiyle **değiştirmenizi** sağlar. **Derleme,** **EmbeddedResource,** **İçerik** ve Hiçbiri öğe türü adları her zaman bu menüde ve projeniz içinde zaten bulunan diğer öğe türü adlarına ek olarak listelenir.  Özel öğe türü adlarının bu menüde her zaman kullanılabilir olmasını sağlamak için adları adlı bir öğe türüne `AvailableItemName` ekleyebilirsiniz. Örneğin, proje dosyanıza aşağıdakiler ekleyen özel tür **JScript** içeri aktaran tüm projeler için bu menüye özel türü ekler:
 
 ```xml
 <ItemGroup>
@@ -72,11 +72,11 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 Öğe türüne öğe türü `AvailableItemName` adları eklemek, bu türdeki öğelerin öğesinde Çözüm Gezgini.
 
 > [!NOTE]
-> Bazı öğe türü adları, Visual Studio için özeldir ancak bu açılan listede listelenmiyor.
+> Bazı öğe türü adları bu Visual Studio için özeldir ancak bu açılan listede listelenmiyor.
 
 ## <a name="in-process-compilers"></a>İşlem içinde derleyiciler
 
- Mümkün olduğunda Visual Studio performansın artması için Visual Basic derlemenin işlem içinde sürümünü kullanmaya çalışabilirsiniz. (C# için geçerli değildir.) Bunun düzgün çalışması için aşağıdaki koşulların karşı olması gerekir:
+ Mümkün olduğunda Visual Studio performansın artması için Visual Basic derlemenin işlem içinde sürümünü kullanmayı denemeniz gerekir. (C# için geçerli değildir.) Bunun düzgün çalışması için aşağıdaki koşulların karşı olması gerekir:
 
 - Projenin hedeflerinde, proje için adlandırılmış bir görev `Vbc` Visual Basic gerekir.
 
@@ -96,13 +96,13 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="build-solutions"></a>Çözüm oluşturma
 
- Bu Visual Studio çözüm dosyası ve proje derlemesi kendi kendine Visual Studio denetleniyor. Komut satırına *msbuild.exe* çözüm derlemek için MSBuild ayrıştırır ve projenin derlemesini siparişler. Her iki durumda da projeler bağımlılık sırasına göre ayrı ayrı, projeden projeye başvurular ise çapraz geçiş olmaz. Buna karşılık, tek tek projelermsbuild.exe *projeden* projeye başvurular çapraz geçiştir.
+ Bu Visual Studio çözüm dosyası ve proje derlemesi kendi kendine Visual Studio denetlenmektedir. Komut satırına *msbuild.exe* bir çözüm MSBuild çözüm dosyasını ayrıştırır ve projenin derlemesini siparişler. Her iki durumda da projeler bağımlılık sırasına göre ayrı ayrı, projeden projeye başvurular ise çapraz geçiş olmaz. Buna karşılık, tek tek projelermsbuild.exe *projeden* projeye başvurular çapraz geçiştir.
 
  İç Visual Studio özelliği `$(BuildingInsideVisualStudio)` olarak `true` ayarlanır. Bu, derlemenin farklı davranmasına neden olmak için proje veya *.targets* dosyalarında kullanılabilir.
 
 ## <a name="display-properties-and-items"></a>Özellikleri ve öğeleri görüntüleme
 
- Visual Studio özellik adlarını ve değerlerini tanır. Örneğin, bir projede aşağıdaki özellik, **Windows Application'ın** Project  Tasarımcısı'nda **görünmesine neden olur.**
+ Visual Studio özellik adlarını ve değerlerini tanır. Örneğin, bir projede aşağıdaki özellik, **Windows Application'ın** Project  Tasarımcısı'nda Uygulama Türü **kutusunda görünmesine neden olur.**
 
 ```xml
 <OutputType>WinExe</OutputType>
@@ -112,9 +112,9 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
  Visual Studio özelliklerin varsayılanlarını anlar. Bu özellikler varsayılan olmayan değerlere sahip olmadığı sürece proje dosyasında kalıcı olmaz.
 
- Rastgele adlara sahip özellikler, Visual Studio. Bu dosyada rastgele Visual Studio değiştirmek için proje dosyasını XML düzenleyicisinde açıp el ile düzenlemeniz gerekir. Daha fazla bilgi için bu konunun [devam Visual Studio](#edit-project-files-in-visual-studio) Proje dosyalarını düzenleme bölümüne bakın.
+ Rastgele adlara sahip özellikler, Visual Studio. Bu dosyada rastgele Visual Studio değiştirmek için proje dosyasını XML düzenleyicisinde açıp el ile düzenlemeniz gerekir. Daha fazla bilgi için bu [konunun devam Visual Studio](#edit-project-files-in-visual-studio) Proje dosyalarını düzenleme bölümüne bakın.
 
- Projede rastgele öğe türü adlarıyla tanımlanan öğeler varsayılan olarak proje düğümlerinin **Çözüm Gezgini** öğesinde görüntülenir. Bir öğeyi görüntüden gizlemek için meta verileri `Visible` olarak `false` ayarlayın. Örneğin, aşağıdaki öğe derleme sürecine katılacaktır, ancak öğesinde **Çözüm Gezgini.**
+ Projede rastgele öğe türü adlarıyla tanımlanan öğeler varsayılan olarak proje düğümlerinin **Çözüm Gezgini** öğesinde görüntülenir. Bir öğeyi görüntüden gizlemek için meta verileri `Visible` olarak `false` ayarlayın. Örneğin, aşağıdaki öğe derleme sürecine katılacak ancak öğesinde **Çözüm Gezgini.**
 
 ```xml
 <ItemGroup>
@@ -133,9 +133,9 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
  Derleme sırasında tüm koşullar tam olarak kabul edildi.
 
- Görüntülenecek özellik değerleri belirlenirken, yapılandırmaya bağımlı Visual Studio dikkate alan özellikler, yapılandırmadan bağımsız olarak değerlendirilen özelliklerden farklı değerlendirilir. Yapılandırmaya bağımlı olarak kabul Visual Studio özellikleri uygun şekilde ayarlar ve MSBuild yeniden `Configuration` `Platform` değerlendirmesini sağlar. Yapılandırmadan bağımsız olarak değerlendiren özellikler için koşulların nasıl değerlendirileceğini belirsizdir.
+ Görüntülenecek özellik değerlerini belirlerken, yapılandırmaya bağımlı Visual Studio dikkate alan özellikler, yapılandırmadan bağımsız olarak değerlendirilen özelliklerden farklı değerlendirilir. Yapılandırmaya bağımlı olarak kabul Visual Studio özellikleri uygun şekilde ayarlar ve MSBuild yeniden `Configuration` `Platform` değerlendirmesini sağlar. Yapılandırmadan bağımsız olarak değerlendiren özellikler için koşulların nasıl değerlendirileceğini belirsizdir.
 
- Öğelerdeki koşullu ifadeler, öğenin öğesinde görüntülendiğinden **Çözüm Gezgini.**
+ Öğelerdeki koşullu ifadeler, öğenin öğesinde görüntülendiğinden karar verme amacıyla her zaman **yoksayılır** Çözüm Gezgini.
 
 ## <a name="debugging"></a>Hata Ayıklama
 
@@ -143,7 +143,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="design-time-target-execution"></a>Tasarım zamanı hedef yürütme
 
- Visual Studio projeyi yüklerken belirli adlarla hedef yürütmeyi denemez. Bu hedefler arasında `Compile` , , , ve yer `ResolveAssemblyReferences` `ResolveCOMReferences` `GetFrameworkPaths` `CopyRunEnvironmentFiles` almaktadır. Visual Studio bu hedefleri çalıştırarak derleyicinin IntelliSense sağlamak için başlatılana, hata ayıklayıcı başlatılana ve bu hedeflerde görüntülenen Çözüm Gezgini çözümlenebilirsiniz. Bu hedefler yoksa proje doğru şekilde yük binecek ve derlemesini tamamlar ancak Visual Studio tasarım zamanı deneyimi tam olarak işlevsel olmayacaktır.
+ Visual Studio projeyi yüklerken belirli adlarla hedefleri yürütmeye çalışır. Bu hedefler arasında `Compile` , , , ve yer `ResolveAssemblyReferences` `ResolveCOMReferences` `GetFrameworkPaths` `CopyRunEnvironmentFiles` almaktadır. Visual Studio bu hedefleri çalıştırarak derleyicinin IntelliSense sağlamak için başlatılana, hata ayıklayıcı başlatılana ve bu hedeflerde görüntülenen Çözüm Gezgini çözümlenebilirsiniz. Bu hedefler yoksa proje doğru şekilde yük binecek ve derlemesini tamamlar, ancak Visual Studio tasarım zamanı deneyimi tam olarak işlevsel olmayacaktır.
 
 ## <a name="edit-project-files-in-visual-studio"></a>Proje dosyalarını Visual Studio
 
@@ -151,7 +151,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 #### <a name="to-unload-and-edit-a-project-file-in-visual-studio"></a>Visual Studio'da bir proje dosyasının yüklemesini kaldırmak ve düzenlemek için
 
-1. Bu **Çözüm Gezgini** proje kısayol menüsünü açın ve Sonra Yüklemeden kaldır'ı **Project.**
+1. Bu **Çözüm Gezgini** proje için kısayol menüsünü açın ve Sonra Yüklemeden kaldır'ı **Project.**
 
      Proje işaretlenmiş **(kullanılamıyor)**.
 
@@ -171,7 +171,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="edit-loaded-project-files"></a>Yüklenen proje dosyalarını düzenleme
 
- Visual Studio dosyaları ve proje dosyaları tarafından içe aktarılan dosyaların içeriğini önbelleğe alınır. Yüklenen bir proje dosyasını düzenlersiniz, Visual Studio değişikliklerin etkili olmak için projeyi yeniden yüklemenizi otomatik olarak istenir. Ancak, yüklenen bir proje tarafından içe aktarılan bir dosyayı düzenlersiniz, yeniden yükleme istemi olmaz ve değişikliklerin etkili olması için projeyi el ile kaldırmanız ve yeniden yüklemeniz gerekir.
+ Visual Studio, proje dosyaları tarafından içe aktarılan proje dosyalarının ve dosyaların içeriğini önbelleğe alınır. Yüklenen bir proje dosyasını düzenlersiniz, Visual Studio değişikliklerin etkili olmak için projeyi yeniden yüklemenizi otomatik olarak istenir. Ancak yüklenen bir proje tarafından içe aktarılan bir dosyayı düzenlersiniz, yeniden yükleme istemi olmaz ve değişikliklerin etkili olması için projeyi el ile kaldırmanız ve yeniden yüklemeniz gerekir.
 
 ## <a name="output-groups"></a>Çıkış grupları
 

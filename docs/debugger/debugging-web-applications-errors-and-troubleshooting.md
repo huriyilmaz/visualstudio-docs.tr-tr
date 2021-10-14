@@ -1,7 +1,6 @@
 ---
 title: Web uygulamalarının hatalarını ayıklama - hatalar ve sorun giderme
 description: Sorun giderme sayfası ve karşılaşabilirsiniz her hatayı açıklayan sayfalar gibi web uygulamalarında hata ayıklamaya yardımcı olmak için başvuru sayfalarının bağlantılarını bulun.
-ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -29,12 +28,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6401be18025597b64d46824ee224ade232e9dbe2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 0af68b458c037858cd4fd0251f37ea063b50d584
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122113019"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129969820"
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>Web Uygulamalarında Hata Ayıklama: Hatalar ve Sorun Giderme
 Web uygulamalarında hata ayıklamaya çalışırken aşağıdaki hatalarla karşılaşabilirsiniz.
@@ -43,7 +42,7 @@ Web uygulamalarında hata ayıklamaya çalışırken aşağıdaki hatalarla kar�
 
 - [Hata: Site IP Adresi Kullanıyor](../debugger/error-site-uses-ip-address.md)
 
-- [Hata: IIS Yönetici Hizmeti Yanıt Vermey olduğundan Bir Güvenlik Denetimi Başarısız Oldu](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)
+- [Hata: IIS Yönetici Hizmeti Yanıt Vermeyiş nedeniyle güvenlik denetimi başarısız oldu](../debugger/error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md)
 
 - [Hata: ASP.NET Yüklü Değil](../debugger/error-aspnet-not-installed.md)
 

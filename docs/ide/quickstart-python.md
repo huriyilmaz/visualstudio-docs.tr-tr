@@ -5,43 +5,42 @@ description: Bu hızlı başlangıçta, Python'Visual Studio basit bir web uygul
 ms.date: 09/14/2021
 ms.technology: vs-python
 ms.topic: quickstart
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.custom:
 - vs-acquisition
-- SEO-VS-2020
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 817a7fed100c9095468c3c481417a3f53104c3ee
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: beb86c395735c2015eae64866aaf36aefbf9a507
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128429476"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971627"
 ---
 # <a name="quickstart-create-your-first-python-web-app-using-visual-studio"></a>Hızlı Başlangıç: Visual Studio kullanarak ilk Python web Visual Studio
 
-Python IDE olarak Visual Studio bu 5-10 dakikalık tanıtımda Flask çerçevesini temel alan basit bir Python web uygulaması oluşturabilirsiniz. Projenin temel özellikleri hakkında bilgi edinerek projeyi Visual Studio adımlarla oluşturabilirsiniz.
+Python IDE olarak Visual Studio 5-10 dakikalık bir tanıtımda Flask çerçevesini temel alan basit bir Python web uygulaması oluşturabilirsiniz. Projenin temel özellikleri hakkında bilgi edinerek projeyi Visual Studio adımlarla oluşturabilirsiniz.
 
 ::: moniker range="vs-2017"
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) ücretsiz olarak yükleyin. Yükleyicide Python geliştirme iş yükünün seçili **olduğundan emin** olun.
+Henüz yüklemedıysanız, Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) indirmeler sayfasına gidin. Yükleyicide Python geliştirme iş yükünün seçili **olduğundan emin** olun.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin. Yükleyicide Python geliştirme iş yükünün seçili **olduğundan emin** olun.
+Henüz yüklemedıysanız, Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/downloads) indirmeler sayfasına gidin. Yükleyicide Python geliştirme iş yükünün seçili **olduğundan emin** olun.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin. Uygulama Visual Studio Yükleyicisi Python geliştirme iş **yükünü** seçin ve yükleme ayrıntılarında Python **web desteği'ne tıklayın.**
+Henüz yüklemedıysanız, Visual Studio yüklemek [için Visual Studio](https://visualstudio.microsoft.com/downloads) indirmeler sayfasına gidin. Uygulama Visual Studio Yükleyicisi Python geliştirme iş **yükünü** seçin ve yükleme ayrıntılarında Python **web desteği'ne tıklayın.**
 
-![Python geliştirme Visual Studio Yükleyicisi Python web desteğinin seçili olduğu uygulamanın ekran görüntüsü.](media/vs-2022/python-web.png)
+![Python geliştirme iş Visual Studio Yükleyicisi Python web desteğinin seçili olduğu uygulamanın ekran görüntüsü.](media/vs-2022/python-web.png)
 
 ::: moniker-end
 
@@ -52,9 +51,9 @@ Aşağıdaki adımlarda uygulama için kapsayıcı olarak görev alan boş bir p
 ::: moniker range="vs-2017"
 1. Visual Studio 2017'yi açın.
 
-2. Üst menü çubuğundan Dosya **adı'> Yeni > Project.**
+2. Üst menü çubuğundan Dosya'> **Yeni > Project.**
 
-3. Yeni **Project** iletişim kutusunda, sağ üst kısımdaki arama alanına "Python Web Project" yazın, ortadaki **listede Web** projesi'ne tıklayın, projeye "HelloPython" gibi bir ad girin ve Tamam'ı **seçin.**
+3. Yeni **Project** iletişim kutusunda, sağ üstteki arama alanına "Python Web Project" yazın, ortadaki **listede Web** projesi'ne tıklayın, projeye "HelloPython" gibi bir ad girin ve Tamam'ı **seçin.**
 
     ![Python Web Uygulaması'nın seçili olduğu Project iletişim kutusu](media/quickstart-python-00-web-project.png)
 
@@ -68,15 +67,15 @@ Aşağıdaki adımlarda uygulama için kapsayıcı olarak görev alan boş bir p
 ::: moniker-end
 
 ::: moniker range="vs-2019"
-1. 2019 Visual Studio açın.
+1. 2019 Visual Studio'i açın.
 2. Başlangıç ekranında Yeni proje **oluştur'a tıklayın.**
-3. Yeni proje **oluştur iletişim kutusunda,** üst sıradaki arama alanına "Python web" yazın, ortadaki **listede Web Project'yi** seçin ve ardından **Sonraki:**
+3. Yeni proje **oluştur iletişim** kutusunda, üst sıradaki arama alanına "Python web" yazın, ortadaki **listede Web** Project'yi seçin ve ardından Sonraki:
 
-    ![Python Web Project seçili yeni bir proje ekranı oluşturun Python proje şablonlarını görmüyorsanız Visual Studio Yükleyicisi'yi çalıştırın, Diğer Değiştir'i seçin, Python geliştirme iş yükünü seçin ve ardından ](media/quickstart-python-00-web-project-2019a.png)   > Değiştir'i **seçin.** 
+    ![Python Web uygulaması seçiliyken yeni bir proje ekranı Project Python proje şablonlarını görmüyorsanız Visual Studio Yükleyicisi'yi çalıştırın, Diğer Değiştir'i seçin, Python geliştirme iş yükünü seçin ve ardından ](media/quickstart-python-00-web-project-2019a.png)   > Değiştir'i **seçin.** 
 
     ![Visual Studio yükleyicisinde Python geliştirme iş yükü](../python/media/installation-python-workload.png)
 
-4. Aşağıdaki **Yeni projenizi yapılandır iletişim** kutusunda, ad olarak "HelloPython" **Project,** bir konum belirtin ve Oluştur'a **basın.** (Çözüm **adı,** Project adıyla **eş Project ayarlanır.)**
+4. Aşağıdaki **Yeni projenizi yapılandır iletişim** kutusunda, ad olarak "HelloPython" **Project,** bir konum belirtin ve Oluştur'a **basın.** (Çözüm **adı,** otomatik olarak Project **ayarlanır.)**
 
     ![Yeni projenizi yapılandırma iletişim kutusu](media/quickstart-python-00-web-project-2019b.png)
 
@@ -95,7 +94,7 @@ Aşağıdaki adımlarda uygulama için kapsayıcı olarak görev alan boş bir p
    
    Python web projesi şablonlarını görmüyorsanız araçları çalıştırmak için Araçlar Araçları ve Özellikleri  >   Al'ı Visual Studio Yükleyicisi. Yükleyici'de Python geliştirme iş **yükünü seçin** ve Yükleme **ayrıntıları'nın altında** Python web **desteği'ne tıklayın.** Ardından **Değiştir'i seçin.**
 
-1. Yeni **projenizi yapılandır iletişim kutusunda,** yeni bir ad için "HelloPython" **Project,** bir konum belirtin ve oluştur'a **tıklayın.** Çözüm **adı otomatik** olarak adı ile eş Project **lar.**
+1. Yeni **projenizi yapılandır iletişim kutusunda,** ad olarak "HelloPython" **Project,** bir konum belirtin ve oluştur'a **tıklayın.** Çözüm **adı otomatik** olarak adı ile eş Project **uzer.**
 
    ![Yeni projenizi yapılandır iletişim kutusunu gösteren ekran görüntüsü.](media/vs-2022/configure-project.png)
 
@@ -106,19 +105,19 @@ Yeni proje, **Çözüm Gezgini** bölmede açılır. Proje başka dosya içerdi�
 
 **Soru: Python uygulaması için Visual Studio oluşturmanın avantajı nedir?**
 
-**Cevap:** Python uygulamaları genellikle yalnızca klasörler ve dosyalar kullanılarak tanımlanır, ancak uygulamalar büyüdükçe bu basit yapı zahmetli hale gelebilir. Uygulamalar otomatik olarak oluşturulan dosyaları, web uygulamaları için JavaScript'i ve diğer bileşenleri içerir. Bir Visual Studio projesi bu karmaşıklığın yönetimine yardımcı olur.
+**Cevap:** Python uygulamaları genellikle yalnızca klasörler ve dosyalar kullanılarak tanımlanır, ancak uygulamalar büyüdükçe bu basit yapı zahmetli hale gelebilir. Uygulamalar otomatik olarak oluşturulan dosyaları, web uygulamaları için JavaScript'i ve diğer bileşenleri içerir. Bir Visual Studio projesi bu karmaşıklığı yönetmeye yardımcı olur.
 
 *.pyproj dosyası olan* proje, projeniz ile ilişkili tüm kaynak ve içerik dosyalarını tanımlar. *.pyproj dosyası* her dosya için derleme bilgileri içerir, kaynak denetim sistemleriyle tümleştirileyecek bilgileri sürdürür ve uygulamanın mantıksal bileşenlerde düzenlenmesine yardımcı olur.
 
-**Soru: Bu soruda gösterilen "çözüm" Çözüm Gezgini?**
+**Soru: Çözüm Gezgini'da gösterilen "çözüm" Çözüm Gezgini?**
 
-**Cevap:** Visual Studio çözümü, bir veya daha fazla ilgili projeyi grup olarak yönetmenize yardımcı olan bir kapsayıcıdır. Çözüm, bir projeye özgü olmayan yapılandırma ayarlarını depolar. Bir çözümdeki projeler de diğerine başvurur. Örneğin, bir Python uygulama projesi çalıştırılırken, Python uygulamasının kullandığı C++ uzantısı gibi ikinci bir proje otomatik olarak derlenir.
+**Cevap:** Visual Studio çözüm, bir veya daha fazla ilgili projeyi grup olarak yönetmenize yardımcı olan bir kapsayıcıdır. Çözüm, bir projeye özgü olmayan yapılandırma ayarlarını depolar. Bir çözümdeki projeler de diğerine başvurur. Örneğin, bir Python uygulama projesi çalıştırılırken, Python uygulamasının kullandığı C++ uzantısı gibi ikinci bir proje otomatik olarak derlenir.
 
 ## <a name="install-the-flask-library"></a>Flask kitaplığını yükleme
 
-Python'daki web uygulamaları, web isteklerini yönlendirme ve yanıtları şekillendirme gibi alt düzey ayrıntıları işlemek için neredeyse her zaman birçok kullanılabilir Python kitaplığını kullanır. Visual Studio web uygulamaları için birçok şablon sağlar. Bu şablonlardan birini daha sonra bu Hızlı Başlangıç'ta kullanacağız.
+Python'daki web uygulamaları, web isteklerini yönlendirme ve yanıtları şekillendirme gibi alt düzey ayrıntıları işlemek için neredeyse her zaman kullanılabilir python kitaplıklarından birini kullanır. Visual Studio web uygulamaları için birçok şablon sağlar. Bu şablonlardan birini daha sonra bu Hızlı Başlangıç'ta kullanacağız.
 
-Flask kitaplığını bu proje için kullanabileceğiniz *varsayılan* genel ortama yüklemek Visual Studio adımları kullanın.
+Flask kitaplığını bu proje için kullanabileceğiniz varsayılan *genel Visual Studio* yüklemek için aşağıdaki adımları kullanın.
 
 ::: moniker range="vs-2017"
 1. Projenin **varsayılan ortamını** görmek için projedeki Python Ortamları düğümünü genişletin.
@@ -127,7 +126,7 @@ Flask kitaplığını bu proje için kullanabileceğiniz *varsayılan* genel ort
 
 2. Ortama sağ tıklayın ve Python Paketini **Yükle'yi seçin.** Bu komut, **Paketler sekmesinde Python** Ortamları **penceresini** açar.
 
-3. Arama alanına "flask" girin ve **PyPI'den pip install flask öğesini seçin.** Yönetici ayrıcalıkları istemlerini kabul et ve devam etmek **için** Visual Studio penceresini gözlemle. (Genel ortamın packages klasörü *C:\Program Files* gibi korumalı bir alanda yer alıyorsa yükseltme istemi gerçekleşir.)
+3. Arama alanına "flask" girin ve **PyPI'den pip install flask öğesini seçin.** Yönetici ayrıcalıkları istemlerini kabul et ve devam etmek **için** Visual Studio penceresini gözlemler. (Genel ortamın packages klasörü *C:\Program Files* gibi korumalı bir alanda yer alıyorsa yükseltme istemi gerçekleşir.)
 
     ![Pip install kullanarak Flask kitaplığını yükleme](media/quickstart-python-03-install-package.png)
 ::: moniker-end
@@ -138,7 +137,7 @@ Flask kitaplığını bu proje için kullanabileceğiniz *varsayılan* genel ort
 
 2. Ortama sağ tıklayın ve Python Paketlerini **Yönet... öğesini seçin.** Bu komut, **Paketler** **(PyPI) sekmesinde Python Ortamları penceresini** açar.
 
-3. Arama alanına "flask" girin. Arama **kutusunun altında Flask** görünürse bu adımı atlayabilirsiniz. Aksi takdirde **Çalıştır komutu: pip install flask öğesini seçin.** Yönetici ayrıcalıkları istemlerini kabul et ve devam etmek **için** Visual Studio penceresini gözlemle. (Genel ortamın packages klasörü *C:\Program Files* gibi korumalı bir alanda yer alıyorsa yükseltme istemi gerçekleşir.)
+3. Arama alanına "flask" girin. Arama **kutusunun altında Flask** görünürse bu adımı atlayabilirsiniz. Aksi takdirde **Çalıştır komutu: pip install flask öğesini seçin.** Yönetici ayrıcalıkları istemlerini kabul et ve devam etmek **için** Visual Studio penceresini gözlemler. (Genel ortamın packages klasörü *C:\Program Files* gibi korumalı bir alanda yer alıyorsa yükseltme istemi gerçekleşir.)
 
     ![Pip install kullanarak Flask kitaplığını yükleme](media/quickstart-python-03-install-package-2019.png)
 ::: moniker-end
@@ -146,7 +145,7 @@ Flask kitaplığını bu proje için kullanabileceğiniz *varsayılan* genel ort
 ::: moniker range=">=vs-2022"
 1. Projenin **varsayılan ortamını** görmek için projedeki Python Ortamları düğümünü genişletin.
 
-    ![Çalışma alanı içinde varsayılan ortamı gösteren Çözüm Gezgini.](media/vs-2022/python-environment.png)
+    ![Çözüm Gezgini'da varsayılan ortamı gösteren ekran görüntüsü.](media/vs-2022/python-environment.png)
 
 1. Ortama sağ tıklayın ve Python Paketlerini **Yönet'i seçin.** Bu komut, **Paketler** **(PyPI) sekmesinde Python Ortamları penceresini** açar.
 
@@ -161,17 +160,17 @@ Flask kitaplığını bu proje için kullanabileceğiniz *varsayılan* genel ort
 Yüklendikten sonra kitaplık, python kodunda **kullanabileceğiniz Çözüm Gezgini** ortamında görüntülenir.
 
 ::: moniker range="vs-2017"
-![Flask kitaplığı yüklü ve Çözüm Gezgini](media/quickstart-python-04-package-installed.png)
+![Flask kitaplığı yüklü ve bu kitaplıkta Çözüm Gezgini](media/quickstart-python-04-package-installed.png)
 ::: moniker-end
 ::: moniker range="vs-2019"
-![Flask kitaplığı yüklü ve Çözüm Gezgini](media/quickstart-python-04-package-installed-2019.png)
+![Flask kitaplığı yüklü ve bu kitaplıkta Çözüm Gezgini](media/quickstart-python-04-package-installed-2019.png)
 ::: moniker-end
 ::: moniker range=">=vs-2022"
 ![Flask kitaplığının yüklü olduğunu ve bu kitaplıkta görüntü Çözüm Gezgini.](media/vs-2022/flask-installed.png)
 ::: moniker-end
 
 > [!Note]
-> Geliştiriciler, kitaplıkları genel ortama yüklemek yerine genellikle belirli bir proje için kitaplıkların yüklerinin yüklln bir "sanal ortam" oluşturması gerekir. Visual Studio şablonları genellikle Hızlı Başlangıç - Şablon kullanarak Python projesi oluşturma konularında da [ele alınarak bu seçeneği sağlar.](../python/quickstart-02-python-in-visual-studio-project-from-template.md)
+> Geliştiriciler, kitaplıkları genel ortama yüklemek yerine, genellikle belirli bir proje için kitaplıkların yük devredilen bir "sanal ortam" oluşturması gerekir. Visual Studio şablonları genellikle Hızlı Başlangıç - Şablon kullanarak Python projesi oluşturma konularında da [ele alınarak bu seçeneği sağlar.](../python/quickstart-02-python-in-visual-studio-project-from-template.md)
 
 **Soru: Diğer kullanılabilir Python paketleri hakkında nereden daha fazla bilgi öğrenebilirim?**
 

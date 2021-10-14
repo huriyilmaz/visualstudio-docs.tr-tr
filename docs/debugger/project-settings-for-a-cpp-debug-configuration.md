@@ -1,7 +1,6 @@
 ---
 title: C++ hata ayıklama yapılandırması için Project ayarları
 description: Özellik sayfalarında C ve C++ hata ayıklamayı yapılandırın. Bu makale, ayarları açıklar ve kategorilerini size bildirir.
-ms.custom: SEO-VS-2020
 ms.date: 11/26/2018
 ms.topic: reference
 f1_keywords:
@@ -114,12 +113,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44285acc479fc9fb60caa1f9f82e12796f609012
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 18afa2696d911f8b967099a886f718456a20ae03
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725404"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129972407"
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>C++ hata ayıklama yapılandırması proje ayarları
 **Özellik sayfaları** iletişim kutusunda bir C veya C++ hata ayıklama yapılandırması için proje ayarlarını, [nasıl yapılır: ayarlama hata ayıklama ve yayın yapılandırmalarını](../debugger/how-to-set-debug-and-release-configurations.md)açıklandığı gibi değiştirebilirsiniz. Aşağıdaki tablolarda, **Özellik sayfaları** iletişim kutusunda hata ayıklayıcı ile ilgili ayarların nerede bulunacağı gösterilmektedir.

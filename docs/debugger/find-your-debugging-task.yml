@@ -2,7 +2,6 @@
 metadata:
   title: SSS - Hata ayıklama özelliğinizi bulma
   description: Uygulama hata ayıklamanıza yardımcı olacak hata ayıklayıcı özelliğini tanımlamanıza yardımcı olacak sık sorulan sorular
-  ms.custom: ''
   ms.date: 10/01/2019
   ms.topic: conceptual
   helpviewer_keywords:
@@ -12,15 +11,15 @@ metadata:
   manager: jmartens
   ms.workload:
   - multiple
-  ms.openlocfilehash: be2f8aa5e625015aec444a76d71433d02da578df
-  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+  ms.openlocfilehash: 52bd15e9e39a4aea52df83dda267e207fa4ddd41
+  ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/13/2021
-  ms.locfileid: "126626487"
+  ms.lasthandoff: 10/13/2021
+  ms.locfileid: "129969612"
 title: SSS - Ihtiyacınız olan hata ayıklama özelliğini Visual Studio
 summary: >
-  Hata ayıklama görevinizi ilgili Visual Studio hata ayıklayıcısının doğru özelliğiyle eşlemek için yardıma ihtiyacınız varsa, bu makalede sağlanan bağlantıları kullanın. Buradaki görevlerin listesi hata ayıklamak için kodu duraklatma, değişkenleri inceleme ve Çıkış penceresine ileti gönderme gibi yaygın **görevleri** içerir. Hata ayıklayıcı özelliklerine genel bir bakışa ihtiyacınız varsa [bkz. Bunun yerine hata ayıklayıcıya ilk bakış.](debugger-feature-tour.md)
+  Hata ayıklama görevinizi ilgili hata ayıklayıcının Visual Studio eşlemek için yardıma ihtiyacınız varsa, bu makalede sağlanan bağlantıları kullanın. Buradaki görevlerin listesi hata ayıklamak için kodu duraklatma, değişkenleri inceleme ve Çıkış penceresine ileti gönderme gibi yaygın **görevleri** içerir. Hata ayıklayıcı özelliklerine genel bir bakışa ihtiyacınız varsa [bkz. Bunun yerine hata ayıklayıcıya ilk bakış.](debugger-feature-tour.md)
 sections:
 - name: Yoksayıldı
   questions:
@@ -30,11 +29,11 @@ sections:
       - Bkz. [Özel durumu düzeltme.](write-better-code-with-visual-studio.md#fix-an-exception)
   - question: >
       Çalışan kodu duraklatma
-    answer: "- **Hata içere bir kod satırı incelemek için çalışan kodu duraklatma**\n\n  Bir kesme noktası ayarlayın. Daha fazla bilgi için [bkz. Kesme noktaları kullanma.](using-breakpoints.md)\n\n- **Belirli bir durumuna ulaştığında uygulamayı duraklatma ve inceleme**\n\n  Koşullu mantık kullanılarak bir kesme noktası nerede ve ne zaman etkinleştirildikten sonra bunu kontrol etmek için koşullu kesme noktası deneyin. Daha fazla bilgi için [bkz. Kesme noktası koşulları.](using-breakpoints.md#breakpoint-conditions)\n\n- **Kodu yalnızca belirli bir nesnenin özelliği veya değeri değişirken duraklatma**\n\n  C++ için bir veri [kesme noktası ayarlayın.](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus) \n  ::: moniker range=\">= vs-2019\"\n  .NET Core 3 kullanan uygulamalar için bir veri kesme [noktası da ayarlayın.](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed)\n  ::: moniker-end\n\n  Aksi takdirde, yalnızca C# ve F# için koşullu kesme noktası [ile bir nesne kimliğini izleyebilirsiniz.](using-breakpoints.md#using-object-ids-in-breakpoint-conditions-c-and-f)\n\n- **Belirli bir yinelemede döngü içindeki kodu duraklatma**\n\n  Koşul olarak Hit count **kullanarak bir** kesme noktası ayarlayın. Daha fazla bilgi için bkz. [Hit count](using-breakpoints.md#set-a-hit-count-condition).\n\n- **İşlev adını biliyor ancak konumunu bilmiyorken işlevin başındaki kodu duraklatma**\n\n  Bunu bir işlev kesme noktasıyla da yapabiliriz. Daha fazla bilgi için [bkz. İşlev kesme noktaları ayarlama.](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)\n\n- **Aynı adla birden çok işlevin başında kodu duraklatma**\n\n  Aynı adla birden çok işleviniz (farklı projelerde aşırı yüklenmiş işlevler veya işlevler) varsa işlev kesme [noktası kullanabilirsiniz.](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)\n\n- **Kesme noktalarınızı yönetme ve izleme**\n\n  Kesme **Noktaları penceresini** kullanın. Daha fazla bilgi için [bkz. Kesme noktaları yönetme.](using-breakpoints.md#BKMK_Specify_advanced_properties_of_a_breakpoint_)\n\n- **Kod duraklatma ve belirli bir iş işleme veya işlanmamış özel durum 3.**\n\n  Özel Durum Yardımcısı size bir hatanın nerede olduğunu gösteriyor olsa da, belirli bir hatayı duraklatmak ve hata ayıklamak için hata ayıklayıcıya bir özel durum [sanız kesmesi söylemek için kullanabilirsiniz.](managing-exceptions-with-the-debugger.md#tell-the-debugger-to-break-when-an-exception-is-thrown)\n\n- **Çağrı yığınından bir kesme noktası ayarlama**\n\n  Yürütme akışını incelerken veya Çağrı Yığını pencerelerde işlevleri görüntülerken kodu duraklatmak ve hata ayıklamak **için** bkz. Çağrı Yığını penceresinde [bir kesme noktası ayarlama.](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)\n\n- **Belirli bir derleme yönergesi sırasında kodu duraklatma**\n\n  Bunu yapmak için [Disassembly penceresinden bir kesme noktası ayarlarsınız.](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)\n"
+    answer: "- **Hata içere bir kod satırı incelemek için çalışan kodu duraklatma**\n\n  Bir kesme noktası ayarlayın. Daha fazla bilgi için [bkz. Kesme noktaları kullanma.](using-breakpoints.md)\n\n- **Belirli bir durumuna ulaştığında uygulamayı duraklatma ve inceleme**\n\n  Koşullu mantık kullanılarak bir kesme noktası nerede ve ne zaman etkinleştirildikten sonra bunu kontrol etmek için koşullu kesme noktası deneyin. Daha fazla bilgi için [bkz. Kesme noktası koşulları.](using-breakpoints.md#breakpoint-conditions)\n\n- **Kodu yalnızca belirli bir nesnenin özelliği veya değeri değişirken duraklatma**\n\n  C++ için bir veri [kesme noktası ayarlayın.](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus) \n  ::: moniker range=\">= vs-2019\"\n  .NET Core 3 kullanan uygulamalar için bir veri kesme [noktası da ayarlayın.](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed)\n  ::: moniker-end\n\n  Aksi takdirde, yalnızca C# ve F# için koşullu kesme noktası [ile bir nesne kimliğini izleyebilirsiniz.](using-breakpoints.md#using-object-ids-in-breakpoint-conditions-c-and-f)\n\n- **Belirli bir yinelemede döngü içindeki kodu duraklatma**\n\n  Koşul olarak Hit count **kullanarak bir** kesme noktası ayarlayın. Daha fazla bilgi için bkz. [Hit count](using-breakpoints.md#set-a-hit-count-condition).\n\n- **İşlev adını biliyor ancak konumunu bilmiyorken işlevin başındaki kodu duraklatma**\n\n  Bunu bir işlev kesme noktasıyla da yapabiliriz. Daha fazla bilgi için [bkz. İşlev kesme noktaları ayarlama.](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)\n\n- **Aynı adla birden çok işlevin başında kodu duraklatma**\n\n  Aynı adla birden çok işleviniz (farklı projelerde aşırı yüklenmiş işlevler veya işlevler) varsa işlev kesme [noktası kullanabilirsiniz.](using-breakpoints.md#BKMK_Set_a_breakpoint_in_a_source_file)\n\n- **Kesme noktalarınızı yönetme ve izleme**\n\n  Kesme **Noktaları penceresini** kullanın. Daha fazla bilgi için [bkz. Kesme noktaları yönetme.](using-breakpoints.md#BKMK_Specify_advanced_properties_of_a_breakpoint_)\n\n- **Kod duraklatma ve belirli bir iş işleme veya işlanmamış özel durum olduğunda hata ayıklama**\n\n  Özel Durum Yardımcısı size bir hatanın nerede olduğunu gösteriyor olsa da, belirli bir hatayı duraklatmak ve hata ayıklamak için hata ayıklayıcısına bir özel durum [sanız kesmesi söylemek için kullanabilirsiniz.](managing-exceptions-with-the-debugger.md#tell-the-debugger-to-break-when-an-exception-is-thrown)\n\n- **Çağrı yığınından bir kesme noktası ayarlama**\n\n  Yürütme akışını incelerken veya Çağrı Yığını pencerelerde işlevleri görüntülerken kodu duraklatmak ve hata ayıklamak **için** bkz. Çağrı Yığını penceresinde [bir kesme noktası ayarlama.](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)\n\n- **Belirli bir derleme yönergesi sırasında kodu duraklatma**\n\n  Bunu yapmak için [Disassembly penceresinden bir kesme noktası ayarlarsınız.](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)\n"
   - question: >
       Kodu yürütme
     answer: >
-      - **Hata ayıklarken kodunuz boyunca adım adım atma komutlarını öğrenin**
+      - **Hata ayıklama sırasında kodunuz boyunca adım adım atma komutlarını öğrenin**
 
         Daha fazla bilgi için [bkz. Hata ayıklayıcı ile kodda gezinme.](navigating-through-code-with-the-debugger.md)
   - question: >
@@ -64,7 +63,7 @@ sections:
     answer: >
       - **Hata ayıklayıcı ayarlarını yapılandırma**
 
-        Hata ayıklayıcı seçeneklerini ve hata ayıklayıcı proje ayarlarını yapılandırmak için bkz. [Hata ayıklayıcı ayarları ve hazırlığı.](debugger-settings-and-preparation.md)
+        Hata ayıklayıcı seçeneklerini ve hata ayıklayıcı proje ayarlarını yapılandırmak için bkz. [Hata ayıklayıcı ayarları ve hazırlama.](debugger-settings-and-preparation.md)
 
       - **Hata ayıklayıcıda gösterilen bilgileri özelleştirme**
 

@@ -3,20 +3,19 @@ title: Python projeleri için özel menü komutlarını tanımlama
 description: proje ve hedef dosyalarını düzenleyerek yürütülebilir programları, betikleri, modülleri, satır içi kod parçacıklarını ve pıp 'yi çağırmak için Visual Studio ' deki Python projesi bağlam menüsüne özel komutlar ekleyebilirsiniz.
 ms.date: 11/12/2018
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 63679d590e341cce8f5ee76d4b359821b3f213b0
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 859741e98ce0350d6c2665cde5c9dd3e697affe7
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628323"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129968728"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>Python projeleri için özel komutlar tanımlama
 
@@ -146,43 +145,43 @@ Tüm öznitelik değerleri büyük/küçük harfe duyarlıdır.
 | --- | --- | --- |
 | Öğesi | Yes | Target özniteliğinin neleri içerdiğini ve bağımsız değişkenler özniteliğiyle birlikte nasıl kullanıldığını belirtir:<ul><li>**yürütülebilir**: hedef içinde adlı yürütülebilir dosyayı, doğrudan komut satırına girildiği gibi bağımsız değişkenlerde değeri ekleyerek çalıştırın. Değer yalnızca bağımsız değişken içermeyen bir program adı içermelidir.</li><li>**betik**: *python.exe* , hedefte dosya adı Ile ve ardından bağımsız değişkenlerdeki değerle çalıştırın.</li><li>**Modül**: `python -m` sonra, hedefteki modül adı ve ardından bağımsız değişkenlerde değeri ile çalıştırın.</li><li>**kod**: hedefte bulunan satır içi kodu çalıştırın. Bağımsız değişkenler değeri yok sayılır.</li><li>**PIP**: `pip` target içindeki komutla, sonra bağımsız değişkenler Ile çalıştırın; executeın "output" olarak ayarlanır, ancak, PIP komutu kabul eder `install` ve paket adı olarak hedefi kullanır.</li></ul> |
 | Hedef | Yes | TargetType öğesine bağlı olarak kullanılacak dosya adı, modül adı, kod veya PIP komutu. |
-| Bağımsız değişkenler | İsteğe Bağlı | Hedefe verilecek bağımsız değişkenlerin (varsa) bir dizesini belirtir. TargetType olduğunda bağımsız değişkenlerin python programına verildiğini ve bu programa `script`python.exe. ** TargetType için `code` yoksayıldı. |
-| ExecuteIn | Yes | Komutunun çalıştır çalıştırıla ortamlarını belirtir:<ul><li>**console**: (Varsayılan) Target ve bağımsız değişkenleri doğrudan komut satırına girilir gibi çalıştırır. Hedef çalışırken bir komut penceresi görüntülenir, ardından otomatik olarak kapatılır.</li><li>**consolepause:** Konsolla aynıdır, ancak pencereyi kapatmadan önce bir tuşa basın.</li><li>**output:** Target'i çalıştırır ve sonuçlarını çıkış **penceresinde** Visual Studio. TargetType "pip" ise, Visual Studio adı olarak Target'ı kullanır ve Bağımsız Değişkenleri ekler.</li><li>**repl:** Python Etkileşimli [penceresinde Hedefi](python-interactive-repl-in-visual-studio.md) çalıştırır; isteğe bağlı görünen ad, pencerenin başlığı için kullanılır.</li><li>**none:** konsol ile aynı şekilde davranır.</li></ul>|
-| Başlangıç | İsteğe Bağlı | Komutunun çalıştırılalacak klasör. |
-| ErrorRegex<br>WarningRegEx | İsteğe Bağlı | Yalnızca ExecuteIn olduğunda `output` kullanılır. Her iki değer de Hata Listesi penceresinde Visual Studio ve uyarıları göstermek için komut çıkışını ayrıştıran normal **bir ifade belirtir.** Belirtilmezse, komut Hata Listesi **penceresini etkilemez.** Neler beklediğiniz hakkında daha fazla Visual Studio için bkz. [Adlandırılmış yakalama grupları.](#named-capture-groups-for-regular-expressions) |
-| RequiredPackages | İsteğe Bağlı | Komutla aynı biçimi kullanan komutun paket [](https://pip.pypa.io/en/stable/user_guide/#requirements-files) gereksinimlerinin listesirequirements.txt(pip.readthedocs.io). Run **PyLint** komutu, örneğin `pylint>=1.0.0` belirtir. komutunu çalıştırmadan önce Visual Studio tüm paketlerin yüklü olduğunu denetler. Visual Studio eksik paketleri yüklemek için pip kullanır. |
-| Ortam | İsteğe Bağlı | Komutu çalıştırmadan önce tanımladığınız ortam değişkenleri dizesi. Her değişken, noktalı \<NAME> = \<VALUE> virgülle ayrılmış birden çok değişken içeren formu kullanır. Birden çok değere sahip bir değişken, 'NAME=VALUE1' gibi tek veya çift tırnak içinde yer alınarak; VALUE2'. |
+| Bağımsız değişkenler | İsteğe Bağlı | Hedefe verilecek bağımsız değişkenlerin (varsa) bir dizesini belirtir. TargetType olduğunda `script` , bağımsız değişkenlerin *python.exe* değil Python programına verildiğini unutmayın. TargetType için yok sayıldı `code` . |
+| Executeın | Yes | Komutun çalıştırılacağı ortamı belirtir:<ul><li>**konsol**: (varsayılan) hedefi ve bağımsız değişkenleri doğrudan komut satırına girilmiş gibi çalıştırır. Hedef çalışırken bir komut penceresi görünür, sonra otomatik olarak kapatılır.</li><li>**consolepause**: konsol ile aynı, ancak pencereyi kapatmadan önce bir KeyPress için bekler.</li><li>**Çıkış**: hedefi çalıştırır ve sonuçları Visual Studio **çıktı** penceresinde görüntüler. TargetType, "pıp" ise, Visual Studio paket adı olarak hedefi kullanır ve bağımsız değişkenleri ekler.</li><li>**REPL**: [Python etkileşimli](python-interactive-repl-in-visual-studio.md) penceresinde hedefi çalıştırır; Pencerenin başlığı için isteğe bağlı görünen ad kullanılır.</li><li>**hiçbiri**: konsoluyla aynı şekilde davranır.</li></ul>|
+| Başlangıç | İsteğe Bağlı | Komutun çalıştırılacağı klasör. |
+| ErrorRegex<br>WarningRegEx | İsteğe Bağlı | Yalnızca ExecuteIn olduğunda kullanılır `output` . her iki değer de, **Hata Listesi** penceresinde hata ve uyarıları göstermek için komut çıkışını Visual Studio çözümleyen bir normal ifade belirtir. Belirtilmemişse, komut **hata listesi** penceresini etkilemez. Visual Studio beklediği hakkında daha fazla bilgi için bkz. [adlandırılmış yakalama grupları](#named-capture-groups-for-regular-expressions). |
+| RequiredPackages | İsteğe Bağlı | [*requirements.txt*](https://pip.pypa.io/en/stable/user_guide/#requirements-files) (Pip.readthedocs.io) ile aynı biçimi kullanan komuta ait paket gereksinimlerinin bir listesi. Örneğin, **Pylınt komutunu çalıştırın** , örneğin belirtir `pylint>=1.0.0` . komutu çalıştırmadan önce, Visual Studio listedeki tüm paketlerin yüklendiğini denetler. Visual Studio eksik paketleri yüklemek için pıp kullanır. |
+| Ortam | İsteğe Bağlı | Komutu çalıştırmadan önce tanımlanacak ortam değişkenleri dizesi. Her değişken, formunu \<NAME> = \<VALUE> noktalı virgülle ayırarak birden çok değişken ile kullanır. Birden çok değeri olan bir değişken, ' NAME = DEĞER1; içinde olduğu gibi tek veya çift tırnak içinde bulunmalıdır. DEĞER2 '. |
 
 #### <a name="named-capture-groups-for-regular-expressions"></a>Normal ifadeler için adlandırılmış yakalama grupları
 
-Bir komutun çıkışından hata ve uyarıları ayrıştırıyorsanız, Visual Studio ve değerlerinde normal ifadelerin aşağıdaki adlandırılmış grupları `ErrorRegex` `WarningRegex` kullanmasını bekler:
+bir komutun çıktısından hata ve uyarı ayrıştırılırken Visual Studio, `ErrorRegex` ve değerlerindeki normal ifadelerin `WarningRegex` aşağıdaki adlandırılmış grupları kullanmasını bekliyor:
 
 - `(?<message>...)`: Hatanın metni
 - `(?<code>...)`: Hata kodu
-- `(?<filename>...)`: Hatanın raporlandığı dosyanın adı
-- `(?<line>...)`: Hatanın raporlandığı dosya konumun satır numarası.
-- `(?<column>...)`: Hatanın raporlandığı dosyadaki konumun sütun numarası.
+- `(?<filename>...)`: Hatanın bildirildiği dosyanın adı
+- `(?<line>...)`: Dosyadaki hatanın bildirildiği konumun satır numarası.
+- `(?<column>...)`: Dosyadaki hatanın bildirildiği konumun sütun numarası.
 
-Örneğin, PyLint aşağıdaki forma uyarı üretir:
+Örneğin, PyLint aşağıdaki biçimde uyarılar üretir:
 
 ```output
 ************* Module hello
 C:  1, 0: Missing module docstring (missing-docstring)
 ```
 
-Bu Visual Studio doğru bilgileri ayıklamasına ve Bunları Hata Listesi  penceresinde göstermesine izin vermek `WarningRegex` **için, Pylint** Komutunu Çalıştır komutunun değeri aşağıdaki gibidir:
+Visual Studio, bu uyarılardan doğru bilgileri ayıklamasını ve **Hata Listesi** penceresinde göstermesini sağlamak için, `WarningRegex` **pylınt komutunu çalıştır** komutunun değeri aşağıdaki gibidir:
 
 ```regex
 ^(?<filename>.+?)\((?<line>\d+),(?<column>\d+)\): warning (?<msg_id>.+?): (?<message>.+?)$]]
 ```
 
-(Değerde `msg_id` aslında olması gerektiğini `code` unutmayın, [bkz. Sorun 3680](https://github.com/Microsoft/PTVS/issues/3680).)
+( `msg_id` Değerde gerçekten olması gerektiğini unutmayın `code` , bkz. [sorun 3680](https://github.com/Microsoft/PTVS/issues/3680).)
 
-## <a name="create-a-targets-file-with-custom-commands"></a>Özel komutlarla bir .targets dosyası oluşturma
+## <a name="create-a-targets-file-with-custom-commands"></a>Özel komutlarla bir. targets dosyası oluşturma
 
-Bir proje dosyasında özel komutlar tanımlayarak bunları yalnızca bu proje dosyasında kullanabilirsiniz. Komutları birden çok proje dosyasında kullanmak için, bunun yerine özellik grubunu ve bir .targets dosyasındaki `<PythonCommands>` `<Target>` tüm *öğelerinizi tanımlarsınız.* Ardından bu dosyayı tek tek proje dosyalarına içeri aktarabilirsiniz.
+Bir proje dosyasında özel komutların tanımlanması, bunları yalnızca o proje dosyası için kullanılabilir hale getirir. Komutları birden fazla proje dosyasında kullanmak için, bunun yerine `<PythonCommands>` özellik grubunu ve tüm `<Target>` öğelerinizi bir *. targets* dosyasında tanımlarsınız. Daha sonra bu dosyayı tekil proje dosyalarına aktarırsınız.
 
-*.targets* dosyası aşağıdaki gibi biçimlendirildi:
+*. Targets* dosyası şu şekilde biçimlendirilir:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -201,20 +200,20 @@ Bir proje dosyasında özel komutlar tanımlayarak bunları yalnızca bu proje d
 </Project>
 ```
 
-Projeye *bir .targets* dosyası yüklemek için öğenin herhangi `<Import Project="(path)">` bir yerine bir öğe `<Project>` yer. Örneğin, projenizin *targets* alt klasörü içinde *CustomCommands.targets* adlı bir dosyanız varsa aşağıdaki kodu kullanın:
+Bir *. targets* dosyasını bir projeye yüklemek için, öğesini `<Import Project="(path)">` öğesi içinde bir yere yerleştirin `<Project>` . Örneğin, projenizdeki bir *hedef* alt klasörde *customcommands. targets* adlı bir dosyanız varsa, aşağıdaki kodu kullanın:
 
 ```xml
 <Import Project="targets/CustomCommands.targets"/>
 ```
 
 > [!Note]
-> *.targets dosyasını her* değiştiriyorsanız, yalnızca  projenin kendisini değil, bir projeyi içeren çözümü yeniden yükleyebilirsiniz.
+> *. Targets* dosyasını her değiştirdiğinizde yalnızca projenin kendisini değil, bir projeyi içeren *çözümü* yeniden yüklemeniz gerekir.
 
 ## <a name="example-commands"></a>Örnek komutlar
 
-### <a name="run-pylint-module-target"></a>PyLint'i çalıştırma (modül hedefi)
+### <a name="run-pylint-module-target"></a>PyLint (modül hedefi) Çalıştır
 
-Aşağıdaki kod *Microsoft.PythonTools.targets dosyasında* görünür:
+Aşağıdaki kod, *Microsoft. PythonTools. targets* dosyasında görünür:
 
 ```xml
 <PropertyGroup>
@@ -239,9 +238,9 @@ Aşağıdaki kod *Microsoft.PythonTools.targets dosyasında* görünür:
 </Target>
 ```
 
-### <a name="run-pip-install-with-a-specific-package-pip-target"></a>Belirli bir paketle pip yüklemesi çalıştırma (pip hedefi)
+### <a name="run-pip-install-with-a-specific-package-pip-target"></a>Belirli bir paket (PIP hedefi) ile PIP yüklemeyi Çalıştır
 
-Aşağıdaki komut Çıktı `pip install my-package` penceresinde çalışır.  Paket geliştirerek yüklemesini test etmek için böyle bir komut kullanabilirsiniz. Target komutunun yerine paket adını içerdiğini ve bu ad, kullanırken `install` `ExecuteIn="output"` varsayılır.
+Aşağıdaki komut `pip install my-package` **Çıkış** penceresinde çalışır. Bir paket geliştirirken ve yüklemesini sınarken bu tür bir komutu kullanabilirsiniz. Hedefin, kullanırken kabul edilen komutu yerine paket adını içerdiğini unutmayın `install` `ExecuteIn="output"` .
 
 ```xml
 <PropertyGroup>
@@ -256,7 +255,7 @@ Aşağıdaki komut Çıktı `pip install my-package` penceresinde çalışır.  
 </Target>
 ```
 
-### <a name="show-outdated-pip-packages-pip-target"></a>Outdated pip packages (pip target) gösterme
+### <a name="show-outdated-pip-packages-pip-target"></a>Eski PIP paketlerini göster (PIP hedefi)
 
 ```xml
 <PropertyGroup>
@@ -271,9 +270,9 @@ Aşağıdaki komut Çıktı `pip install my-package` penceresinde çalışır.  
 </Target>
 ```
 
-### <a name="run-an-executable-with-consolepause"></a>Konsolpause ile yürütülebilir dosya çalıştırma
+### <a name="run-an-executable-with-consolepause"></a>Consolepause ile yürütülebilir dosya çalıştırma
 
-Aşağıdaki komut yalnızca proje `where` klasöründen başlayarak Python dosyalarını göstermek için çalışır:
+Aşağıdaki komut, yalnızca `where` proje klasöründen başlayarak Python dosyalarını göstermek için çalışır:
 
 ```xml
 <PropertyGroup>
@@ -288,11 +287,11 @@ Aşağıdaki komut yalnızca proje `where` klasöründen başlayarak Python dosy
 </Target>
 ```
 
-### <a name="run-server-and-run-debug-server-commands"></a>Sunucuyu çalıştırma ve hata ayıklama sunucusu komutlarını çalıştırma
+### <a name="run-server-and-run-debug-server-commands"></a>Sunucu Çalıştır ve hata ayıklama sunucusu komutlarını çalıştır
 
-Web projeleri için **Sunucuyu başlat ve** Hata ayıklama **sunucusu** komutlarını başlat komutlarının nasıl tanımlandığı hakkında bilgi için [Microsoft.PythonTools.Web.targets](https://github.com/Microsoft/PTVS/blob/master/Python/Product/BuildTasks/Microsoft.PythonTools.Web.targets) (GitHub).
+Web projeleri için **sunucu Başlat** ve **hata ayıklama sunucu** komutlarının nasıl tanımlandığını araştırmak için [Microsoft. PythonTools. Web. targets](https://github.com/Microsoft/PTVS/blob/master/Python/Product/BuildTasks/Microsoft.PythonTools.Web.targets) (GitHub) inceleyin.
 
-### <a name="install-package-for-development"></a>Geliştirme paketi yükleme
+### <a name="install-package-for-development"></a>Geliştirme için paketi yükler
 
 ```xml
 <PropertyGroup>
@@ -307,9 +306,9 @@ Web projeleri için **Sunucuyu başlat ve** Hata ayıklama **sunucusu** komutlar
   </Target>
 ```
 
-*[fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), izinle birlikte kullanılır.*
+*[fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub) öğesinden, izin ile birlikte kullanılır.*
 
-### <a name="generate-windows-installer"></a>Yükleyiciyi Windows oluşturma
+### <a name="generate-windows-installer"></a>Windows yükleyicisi oluştur
 
 ```xml
 <PropertyGroup>
@@ -326,9 +325,9 @@ Web projeleri için **Sunucuyu başlat ve** Hata ayıklama **sunucusu** komutlar
   </Target>
 ```
 
-*[fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), izinle birlikte kullanılır.*
+*[fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub) öğesinden, izin ile birlikte kullanılır.*
 
-### <a name="generate-wheel-package"></a>Tekerlek paketi oluşturma
+### <a name="generate-wheel-package"></a>Tekerlek paketi oluştur
 
 ```xml
 <PropertyGroup>
@@ -346,23 +345,23 @@ Web projeleri için **Sunucuyu başlat ve** Hata ayıklama **sunucusu** komutlar
 </Target>
 ```
 
-*[fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), izinle birlikte kullanılır.*
+*[fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub) öğesinden, izin ile birlikte kullanılır.*
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-### <a name="message-the-project-file-could-not-be-loaded"></a>İleti: "Proje dosyası yüklenemedi"
+### <a name="message-the-project-file-could-not-be-loaded"></a>İleti: "proje dosyası yüklenemedi"
 
-Proje dosyasında söz dizimi hataları olduğunu gösterir. İleti, satır numarası ve karakter konumu ile belirli bir hatayı içerir.
+Proje dosyasında söz dizimi hatalarının olduğunu gösterir. İleti, satır numarası ve karakter konumu ile belirli bir hatayı içerir.
 
-### <a name="console-window-closes-immediately-after-command-is-run"></a>Komut çalıştır alındıktan hemen sonra konsol penceresi kapanır
+### <a name="console-window-closes-immediately-after-command-is-run"></a>Konsol penceresi komut çalıştırıldıktan sonra hemen kapanır
 
-yerine `ExecuteIn="consolepause"` `ExecuteIn="console"` kullanın.
+`ExecuteIn="consolepause"`Yerine kullanın `ExecuteIn="console"` .
 
 ### <a name="command-does-not-appear-on-the-menu"></a>Komut menüde görünmüyor
 
-Komutun özellik grubuna dahil olduğunu ve komut listesinde yer alan adın öğesinde belirtilen `<PythonCommands>` adla eşle eşle eşle olduğunu `<Target>` kontrol edin.
+Komutun özellik grubuna dahil edilip edilmediğini `<PythonCommands>` ve komut listesindeki adın öğesinde belirtilen adla eşleşip eşleşmediğini denetleyin `<Target>` .
 
-Örneğin, aşağıdaki öğelerde, özellik grubunda yer alan "Örnek" adı hedefte "ExampleCommand" adıyla eşleşmez. Visual Studio "Example" adlı bir komut bulamadı, bu nedenle hiçbir komut yok. Komut listesinde "ExampleCommand" kullanın veya hedefin adını yalnızca "Örnek" olarak değiştirebilirsiniz.
+Örneğin, aşağıdaki öğelerde, özellik grubundaki "örnek" adı, hedefteki "ExampleCommand" adıyla eşleşmez. Visual Studio "Example" adlı bir komut bulmadığından hiçbir komut görüntülenmez. Komut listesindeki "ExampleCommand" komutunu kullanın ya da hedefin adını yalnızca "örnek" olarak değiştirin.
 
 ```xml
   <PropertyGroup>
@@ -373,22 +372,22 @@ Komutun özellik grubuna dahil olduğunu ve komut listesinde yer alan adın öğ
   </Target>
 ```
 
-### <a name="message-an-error-occurred-while-running-command-name-failed-to-get-command-target-name-from-project"></a>İleti: "çalışırken bir hata \<command name> oluştu. Projeden komut \<target-name> alanamadı."
+### <a name="message-an-error-occurred-while-running-command-name-failed-to-get-command-target-name-from-project"></a>İleti: "çalışırken bir hata oluştu \<command name> . Komut \<target-name> projeden alınamadı. "
 
-veya öğelerinin `<Target>` içeriğinin `<CreatePythonCommandItem>` yanlış olduğunu gösterir. Olası nedenler şunlardır:
+Veya öğelerinin içeriğinin yanlış olduğunu gösterir `<Target>` `<CreatePythonCommandItem>` . Olası nedenler şunlardır:
 
 - Gerekli `Target` öznitelik boş.
 - Gerekli `TargetType` öznitelik boş veya tanınmayan bir değer içeriyor.
 - Gerekli `ExecuteIn` öznitelik boş veya tanınmayan bir değer içeriyor.
-- `ErrorRegex` veya `WarningRegex` ayarı olmadan `ExecuteIn="output"` belirtilir.
-- Tanınmayan öznitelikler öğesinde mevcuttur. Örneğin yerine kullanılmış `Argumnets` (yanlış yazılmış) `Arguments` olabilir.
+- `ErrorRegex` veya `WarningRegex` ayarı olmadan belirtilir `ExecuteIn="output"` .
+- Öğesinde tanınmayan öznitelikler var. Örneğin, `Argumnets` yerine (yanlış yazılmış) kullanmış olabilirsiniz `Arguments` .
 
-Tanımlanmamış bir özelliğe başvurursanız öznitelik değerleri boş olabilir. Örneğin, belirteci kullanırsanız ancak projede hiçbir başlangıç dosyası tanımlanmamışsa, `$(StartupFile)` belirteç boş bir dizeye çözümler. Böyle durumlarda, varsayılan bir değer tanımlamak istiyor olabilir. Örneğin, Bottle, Flask ve Django proje şablonlarında tanımlanan Sunucu çalıştır ve Hata ayıklamayı çalıştır sunucu komutları, proje özelliklerinde başka bir sunucu başlangıç dosyası belirtilmemişse varsayılan olarak *manage.py* olarak kullanılır.  
+Tanımlı olmayan bir özelliğe başvurursanız, öznitelik değerleri boş olabilir. Örneğin, belirtecini kullanırsanız `$(StartupFile)` ancak projede hiç başlangıç dosyası tanımlanmamışsa, belirteç boş bir dizeye dönüşür. Böyle durumlarda, varsayılan bir değer tanımlamak isteyebilirsiniz. Örneğin, proje özelliklerinde bir sunucu başlangıç dosyası belirtmediyse, **Sunucu Çalıştır** ve **hata ayıklama sunucusu Çalıştır** , *Manage.py* , Flask ve docgo proje şablonlarında varsayılan olarak
 
-### <a name="visual-studio-stops-responding-and-crashes-when-running-the-command"></a>Visual Studio yanıt vermiyor ve komutu çalıştırıyorsa kilitleniyor
+### <a name="visual-studio-stops-responding-and-crashes-when-running-the-command"></a>Visual Studio, komutu çalıştırırken yanıt vermeyi ve kilitlenmeleri durduruyor
 
-büyük olasılıkla ile bir konsol komutu çalıştırmaya çalışıyorsanız, `ExecuteIn="output"` bu durumda Visual Studio ayrıştırmaya çalışırken başarısız olabilir. Bunun yerine `ExecuteIn="console"` kullanın. [(Bkz. Sorun 3682](https://github.com/Microsoft/PTVS/issues/3681).)
+büyük olasılıkla, ile bir konsol komutu çalıştırmaya çalışıyoruz `ExecuteIn="output"` , bu durumda Visual Studio çıktıyı ayrıştırmaya çalışırken kilitlenme olabilir. Bunun yerine `ExecuteIn="console"` kullanın. (Bkz. [sorun 3682](https://github.com/Microsoft/PTVS/issues/3681).)
 
 ### <a name="executable-command-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Yürütülebilir komut "iç veya dış komut, çalıştırılabilir program veya toplu iş dosyası olarak tanınmıyor"
 
-kullanırken, içinde değeri python veya yalnızca python gibi bağımsız değişkenler olmadan `TargetType="executable"` `Target` program adı *python.exe* gerekir.   Tüm bağımsız değişkenleri özniteliğe taşıyın `Arguments` .
+Kullanırken `TargetType="executable"` , içindeki değeri `Target` *yalnızca* *Python* veya *python.exe* gibi herhangi bir bağımsız değişken olmadan program adı olmalıdır. Tüm bağımsız değişkenleri özniteliğe taşıyın `Arguments` .

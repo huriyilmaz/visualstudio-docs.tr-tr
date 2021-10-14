@@ -3,20 +3,19 @@ title: Python kodunun performans ölçümü
 description: cpyıthon tabanlı yorumlayıcıları kullanırken Python kodunun performansını denetlemek için Visual Studio profiler 'ı kullanın.
 ms.date: 11/12/2018
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4d849a046e993c52c49c369e1eeffcb46ba87b0c
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: efc6ddd0915109f3876757a0f8e4f5092cda496b
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126634321"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129972212"
 ---
 # <a name="profile-python-code"></a>Profil Python kodu
 

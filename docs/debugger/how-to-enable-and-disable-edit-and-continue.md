@@ -1,7 +1,6 @@
 ---
 title: Düzenle ve devam et 'i etkinleştir ve devre dışı bırak | Microsoft Docs
 description: tasarım zamanında Visual Studio seçeneklerinde düzenle ve devam et seçeneklerini devre dışı bırakmayı ve etkinleştirmeyi öğrenin. Düzenle ve devam et yalnızca hata ayıklama yapılarında geçerlidir.
-ms.custom: SEO-VS-2020
 ms.date: 10/04/2018
 ms.topic: how-to
 dev_langs:
@@ -28,12 +27,12 @@ ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 8e01926f5ec245fe611e72f9f15b8da780d9423e38e568e2992869ebd9a55db1
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: bbdf7536fa08ab10c841989572c919cfed591cc7
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121379288"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129968988"
 ---
 # <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>Nasıl yapılır: Düzenle ve devam et 'i etkinleştirme ve devre dışı bırakma (C#, VB, C++)
 

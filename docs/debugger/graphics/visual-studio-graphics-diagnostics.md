@@ -1,7 +1,6 @@
 ---
 title: Grafik tanılama | Microsoft Docs
 description: Visual Studio Grafik Tanılama, Direct3D etkinliğini günlüğe kaydetmeye ve çözümlemeye yönelik bir araç kümesidir. İşleme ve performans sorunlarını gidermek için bunları kullanın.
-ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,22 +12,22 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 04cc77650572f5e3539d4b53e4602e4c16259b61
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 2b109a01795a48e48d2062df318e4c3d0cd0a638
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122090843"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970743"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama
 >[!NOTE]
 > Visual Studio DirectX 12 Windows için PIX önerilir. [Windows PIX,](https://aka.ms/PIXonWindows) DirectX 12'i tam olarak destekleyen bir performans ayarlama ve hata ayıklama aracıdır. [Daha fazla bilgi için buraya bakın](visual-studio-graphics-diagnostics-directx-12.md) veya [indirin.](https://aka.ms/downloadPIX)
 
-Visual Studio *Grafik Tanılama,* Direct3D uygulamaları içinde işleme ve performans sorunlarını kaydetmeye ve analize yönelik bir araç kümesidir. Grafik Tanılama, yerel olarak Windows bilgisayarınızda, Windows cihaz öykünücüsünü veya uzak bir pc ya da cihazda çalışan uygulamalarda kullanılabilir.
+Visual Studio *Grafik Tanılama,* Direct3D uygulamaları içinde işleme ve performans sorunlarını kaydetmeye ve analize yönelik bir araç kümesidir. Grafik Tanılama, Windows bilgisayarınızda yerel olarak çalışan uygulamalarda, Windows cihaz öykünücüsünün içinde veya uzak bir bilgisayarda veya cihazda kullanılabilir.
 
- Bu Grafik Tanılama iş akışı, davranışının hemen analiz, paylaşılan veya daha sonra kaydedilebilir olması için, uygulamanın Direct3D'yi nasıl kullandığının (canlı, çalışırken) bir kaydını yakalayarak başlar. Yakalama oturumları, Visual Studio'den veya komut satırı yakalama aracı ile el ile başlatılabilir ve **dxcap.exe.** Yakalama oturumları, yakalama API'leri kullanılarak program aracılığıyla başlat Grafik Tanılama denetlenerek de olabilir.
+ Bu Grafik Tanılama iş akışı, davranışının hemen analiz, paylaşılan veya daha sonra kaydedilebilir olması için, uygulamanın Direct3D'yi (canlı, çalışırken) nasıl kullandığının bir kaydını yakalayarak başlar. Yakalama oturumları, Visual Studio'dan veya komut satırı yakalama aracı ile el ile başlatılabilir ve **dxcap.exe.** Yakalama oturumları, yakalama API'leri kullanılarak program aracılığıyla başlat Grafik Tanılama denetlenerek de olabilir.
 
- Bir yakalama oturumu kaydedildikten sonra içeriği Visual Studio *Grafik* Çözümleyicisi tarafından herhangi bir zamanda geri çalınarak, yakalanan kareler tam olarak aynı kaynaklar kullanılarak yeniden görüntülenebilir ve uygulamanın kullandığı komutlar işilebilir. Ardından, Grafik Çözümleyicisi penceresinde sağlanan araçlar kullanılarak yakalanan çerçevelerden herhangi biri ayrıntılı olarak analiz edilir. Bu araçlar herhangi bir Direct3D API çağrısını, kaynağı, işlem hattı durumu nesnesini, işlem hattı aşamasını ve hatta yakalanan çerçevede herhangi bir pikselin tüm geçmişini incelemek için kullanılabilir. Bu araçlar birlikte kullanılarak, yakalanan bir çerçevede nasıl göründüğüne bakarak ve uygulamanın kaynak kodunda, gölgelendiricilerde veya grafik varlıklarında kök nedenine kadar inerek işleme sorunu sezgisel bir şekilde keşfedebilirsiniz.
+ Bir yakalama oturumu kaydedildikten sonra içeriği Visual Studio *Graphics Analyzer* tarafından herhangi bir zamanda geri çalınarak, yakalanan kareler tam olarak aynı kaynaklar kullanılarak yeniden oluşturma ve uygulamanın kullandığı komutları işleme. Ardından, Grafik Çözümleyicisi penceresinde sağlanan araçlar kullanılarak yakalanan çerçevelerden herhangi biri ayrıntılı olarak analiz edilir. Bu araçlar herhangi bir Direct3D API çağrısını, kaynağı, işlem hattı durumu nesnesini, işlem hattı aşamasını ve hatta yakalanan çerçevede herhangi bir pikselin tüm geçmişini incelemek için kullanılabilir. Bu araçlar birlikte kullanılarak, yakalanan bir çerçevede nasıl göründüğüne bakarak ve uygulamanın kaynak kodunda, gölgelendiricilerde veya grafik varlıklarında kök nedenine kadar inerek işleme sorunu sezgisel bir şekilde keşfedebilirsiniz.
 
  Performans sorunlarını tanılamak için, yakalanan bir çerçeve Çerçeve Analizi aracı *kullanılarak analiz* edilir. Bu araç, uygulamanın Direct3D kullanma yolunu otomatik olarak değiştirerek ve tüm varyasyonları sizin için kıyaslaarak olası performans iyileştirmelerini keşfeder. Geçmişte, yalnızca hangilerinin fark yaratmış olduğunu bulmak için bu tür değişiklikleri el ile yapmış ve kıyaslamış olabilirsiniz. Çerçeve Analizi ile yalnızca ödemesi olduğunu zaten biliyor olduğunu yaptığınız değişiklikleri yapmak gerekir.
 
@@ -39,7 +38,7 @@ Visual Studio *Grafik Tanılama,* Direct3D uygulamaları içinde işleme ve perf
 ## <a name="in-this-section"></a>Bu Bölümde
  [Genel Bakış](overview-of-visual-studio-graphics-diagnostics.md) İş akışı Grafik Tanılama araçları hakkında bilgi sağlar.
 
- [Başlarken](getting-started-with-visual-studio-graphics-diagnostics.md) Bu bölümde, direct3D uygulamanıza yükleme Visual Studio Grafik Tanılama ve direct3D Grafik Tanılama kullanmaya nasıl başlayacağınızı öğrenirsiniz.
+ [Başlarken](getting-started-with-visual-studio-graphics-diagnostics.md) Bu bölümde, Direct3D uygulamanıza Visual Studio Grafik Tanılama ve Grafik Tanılama kullanmaya nasıl başlayacağınızı öğrenirsiniz.
 
  [Grafik Bilgilerini Yakalama](capturing-graphics-information.md) Uygulama Grafik Tanılama işleme sorununu incelemek için ilk olarak uygulamanın DirectX'i nasıl kullandığıyla ilgili bilgileri kaydetmeniz gerekir. Kayıt oturumu sırasında, uygulamanız normal şekilde  çalıştırılana kadar ilgilendiğiniz kareleri yakalar (başka bir ifadeyle seçin). Yakalamalar, karelerin nasıl işlenecekleri hakkında ayrıntılı bilgiler içerir. Yakalanan bilgileri daha sonra incelemek veya takımınız diğer üyeleriyle paylaşmak için grafik günlüğü belgesi olarak kaydedebilirsiniz.
 
@@ -47,13 +46,13 @@ Visual Studio *Grafik Tanılama,* Direct3D uygulamaları içinde işleme ve perf
 
  [Grafik Günlüğü Belgesi](graphics-log-document.md) Kayıtlı grafik günlüğünü incelemeye başlamak için Grafik Günlüğü belge penceresini kullanarak yakalanan bir çerçeveyi ve hatta belirli bir  pikseli seçersiniz. Böylece, onu etkileyen olayları (DirectX API çağrıları) ayrıntılı olarak incelersiniz.
 
- [Çerçeve Analizi](graphics-frame-analysis.md) Bir çerçeveyi seçmenizin ardından işleme performansınızı Grafik Çerçeve Çözümlemesi ayarlamak için çerçeveyi kullanırsiniz.
+ [Çerçeve Analizi](graphics-frame-analysis.md) Bir çerçeveyi seçmenizin ardından, işleme performansınızı Grafik Çerçeve Çözümlemesi ayarlamak için çerçeveyi kullanırsiniz.
 
  [Olay Listesi](graphics-event-list.md) Bir çerçeveyi seçmenizin ardından  Grafik Olay Listesi'ne bakarak olayları inceler ve bunların işleme sorunuyla ilgili olup olmadığını belirlersiniz.
 
  [Durum](graphics-state.md) Durum penceresi, geçerli olay sırasında etkin olan grafik durumunu anlamanıza yardımcı olur.
 
- [İşlem Hattı Aşamaları](graphics-pipeline-stages.md) Grafik İşlem **Hattı Aşamaları** penceresinde, işleme sorununun ilk olarak nerede görüntülendiğinden emin olmak için seçili durumdaki olayın grafik işlem hattının her aşaması tarafından nasıl işlendiğinden araştırabilirsiniz. İşlem hattı aşamalarını incelemeniz, hatalı bir dönüştürme nedeniyle bir nesne görünmese veya aşamalardan biri bir sonraki aşamanın beklense bile çıkışını ürettiği zaman özellikle yararlı olur.
+ [İşlem Hattı Aşamaları](graphics-pipeline-stages.md) Grafik İşlem **Hattı Aşamaları** penceresinde, işleme sorununun ilk olarak nerede görüntülendiğinden emin olmak için seçili durumdaki olayın grafik işlem hattının her aşaması tarafından nasıl işlendiğinden araştırabilirsiniz. İşlem hattı aşamalarını incelemeniz, hatalı bir dönüştürme nedeniyle bir nesne görünmeyse veya aşamalardan biri bir sonraki aşamanın beklense bile çıkışını ürettiği zaman özellikle yararlı olur.
 
  [Olay Çağrı Yığını](graphics-event-call-stack.md) İşleme **sorunuyla ilgili uygulama koduna** gitmek üzere seçili durumdaki olayın çağrı yığınını incelemek için Grafik Olay Çağrı Yığını'yı kullanırsanız.
 
@@ -65,7 +64,7 @@ Visual Studio *Grafik Tanılama,* Direct3D uygulamaları içinde işleme ve perf
 
  [Komut Satırı Yakalama Aracı](command-line-capture-tool.md) Komut satırı yakalama aracını kullanarak grafik bilgilerini yakalama veya program aracılığıyla yakalama Visual Studio hızlı bir şekilde oynatın. Özellikle, otomasyon için veya bir test ortamında komut satırı yakalama aracını kullanabilirsiniz.
 
- [Örnekler](graphics-diagnostics-examples.md) Çeşitli örnekler, farklı türlerde işleme Grafik Tanılama tanılamak için Grafik Tanılama birlikte nasıl kullanabileceğini gösteriyor.
+ [Örnekler](graphics-diagnostics-examples.md) Farklı tür işleme sorunlarını tanılamak için Grafik Tanılama araçları birlikte kullanmayı gösteren çeşitli örnekler.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
@@ -73,4 +72,4 @@ Visual Studio *Grafik Tanılama,* Direct3D uygulamaları içinde işleme ve perf
 | - | - |
 | [Hata Ayıklayıcısı Özellik Turu](../debugger-feature-tour.md) | içinde hata ayıklama işlevini [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tanıtıyor. |
 | [DirectX Grafik ve Oyun](/windows/win32/directx) | DirectX grafik teknolojilerini tartışan makaleler sağlar. |
-| [Visual Studio'de DirectX 12 Desteği](visual-studio-graphics-diagnostics-directx-12.md) | Visual Studio'da DirectX 12 desteği hakkında Visual Studio |
+| [Visual Studio'de DirectX 12 Desteği](visual-studio-graphics-diagnostics-directx-12.md) | Visual Studio'da DirectX 12 desteği hakkında bilgi Visual Studio |

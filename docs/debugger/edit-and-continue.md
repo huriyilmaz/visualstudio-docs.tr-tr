@@ -1,7 +1,6 @@
 ---
 title: Kodu Düzenle ve hata ayıklamaya devam et | Microsoft Docs
 description: programınız kesme modundayken kaynak kodunuzda değişiklik yapabilmeniz için Visual Studio hata ayıklarken düzenle ve devam et komutunu kullanın.
-ms.custom: SEO-VS-2020
 ms.date: 05/31/2018
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +22,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: f6bcb5f655b055e36a55694ba0134a7320795d8d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 963e8ae6c7b37301add303abe6de4091ab29a693
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122112834"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129969001"
 ---
 # <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Visual Studio (C#, VB, C++) kodu düzenle ve hata ayıklamaya devam et
 Düzenle ve devam et, programınız kesme modundayken kaynak kodunuzda değişiklik yapmanızı sağlayan bir zaman tasarrufu özelliğidir. **Devam et** veya **adım** gibi bir yürütme komutu seçerek program yürütmeye devam ettiğinizde, Düzenle ve devam et, kod değişikliklerini bazı sınırlamalara göre otomatik olarak uygular. Bu, hata ayıklama oturumu sırasında kodunuzda değişiklik yapmanıza, tüm programınızı yeniden derlemenize ve hata ayıklama oturumunu yeniden başlatmanıza olanak tanır.

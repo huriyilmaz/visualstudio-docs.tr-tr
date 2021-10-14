@@ -1,7 +1,6 @@
 ---
 title: 'Hızlı Başlangıç: İlk Vue.js oluşturma'
-description: Bu hızlı başlangıçta, Node.js Tools for Visual Studio kullanarak Vue.js bir Visual Studio
-ms.custom: ''
+description: Bu hızlı başlangıçta, Visual Studio tools for Vue.js kullanarak Node.js bir Visual Studio
 ms.date: 10/31/2019
 ms.topic: quickstart
 ms.devlang: javascript
@@ -14,12 +13,12 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: <= vs-2019
-ms.openlocfilehash: c008c1e251eb8e0f1a3440469a63f63060b3ec6e
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 54752b44463b14ee0619300277bfc388abfd4203
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126625766"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970860"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>Hızlı Başlangıç: Visual Studio uygulama oluşturmak için Vue.js kullanma
 
@@ -30,24 +29,24 @@ Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişt
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* Uygulamanın yüklü Visual Studio geliştirme iş yükünün Node.js gerekir.
+* Uygulama ve Visual Studio iş yükünün yüklü Node.js gerekir.
 
     ::: moniker range=">=vs-2019"
     Visual Studio 2019'Visual Studio yüklemediyebilirsiniz. [](https://visualstudio.microsoft.com/downloads/)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Visual Studio 2017'de henüz yüklememişsinizdir, ücretsiz Visual Studio [](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
+    Visual Studio 2017'de henüz yüklememişsinizdir, ücretsiz Visual Studio [indirmeler](https://visualstudio.microsoft.com/downloads/) sayfasına gidin.
     ::: moniker-end
 
-    İş yükünü yüklemeniz gerekse ama zaten yüklüyse Visual Studio Araçları ve Özellikleri Al... 'a  >  **gidin.** Bu işlem Visual Studio Yükleyicisi. Geliştirme iş **Node.js seçin** ve ardından Değiştir'i **seçin.**
+    İş yükünü yüklemeniz gerekse ama zaten Visual Studio Araçları ve Özellikleri Al... 'a  >  **gidin.** Bu işlem Visual Studio Yükleyicisi. Geliştirme iş **Node.js seçin** ve ardından Değiştir'i **seçin.**
 
-    ![VS YükleyicisiNode.js de iş yükü yükleme](../ide/media/quickstart-nodejs-workload.png)
+    ![Node.js Yükleyicisi'ne iş yükü yükleme](../ide/media/quickstart-nodejs-workload.png)
 
 * Node.js çalışma Node.js gerekir.
 
-    Yüklü yoksa, dış çerçeveler ve kitaplıklarla en iyi uyumluluk için [ LTS ](https://nodejs.org/en/download/) sürümünüNode.jsweb sitesinden yüklemenizi öneririz. Node.js 32 bit ve 64 bit mimariler için tasarlanmıştır. Node.js iş yüküne dahil Visual Studio araçları her iki sürümü Node.js destekler. Yalnızca bir tane gereklidir ve Node.js yükleyicisi aynı anda yalnızca birinin yüklü olduğunu destekler.
+    Yüklü yoksa, dış çerçeveler ve kitaplıklarla en iyi uyumluluk için [ LTS ](https://nodejs.org/en/download/) sürümünüNode.jsweb sitesinden yüklemenizi öneririz. Node.js 32 bit ve 64 bit mimariler için tasarlanmıştır. Node.js iş yüküne dahil Visual Studio tüm Node.js iki sürümü de destekler. Yalnızca bir tane gereklidir ve Node.js yükleyicisi aynı anda yalnızca birinin yüklü olduğunu destekler.
     
-    Genel olarak, Visual Studio çalışma zamanı otomatik olarak Node.js algılar. Yüklü bir çalışma zamanı algılanmazsa, projenizi özellikler sayfasında yüklü çalışma zamanının başvurusu için yapılandırabilirsiniz (proje oluşturduk sonra proje düğümüne sağ tıklayın, Özellikler'i seçin veNode.exe **yolunu ayarlayın).** Bir yerel yorumlayıcının Node.js yüklemesini kullanabilir veya her bir yerel yorumlayıcının yolunu Node.js belirtebilirsiniz. 
+    Genel olarak, Visual Studio çalışma zamanı otomatik olarak Node.js algılar. Yüklü bir çalışma zamanı algılanmazsa, projenizi özellikler sayfasında yüklü çalışma zamanının başvurusu için yapılandırabilirsiniz (bir proje oluşturduk sonra proje düğümüne sağ tıklayın, Özellikler'i seçin veNode.exe **yolunu ayarlayın).** Bir uygulamanın genel yüklemesini Node.js veya her bir yerel yorumlayıcının yolunu belirterek Node.js belirtebilirsiniz. 
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
@@ -55,23 +54,23 @@ Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişt
 
 1. Node.js çalışma zamanı yüklü değilse,Node.jsweb [ sitesinden ](https://nodejs.org/en/download/) LTS sürümünü yükleyin.
 
-    Daha fazla bilgi için bkz. önkoşullar.
+    Daha fazla bilgi için önkoşullara bakın.
 
 1. Visual Studio'yu açın.
 
 1. Yeni bir proje oluşturma.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresini kapatmak için **Esc** tuşuna basın. Arama **kutusunu açmak için Ctrl + Q** tuşlarına basın, Temel **Vue.js** yazın ve temel web uygulaması (JavaScript **Vue.js** TypeScript) seçin. Görüntülenen iletişim kutusuna **basic-vuejs** adını yazın ve oluştur'u **seçin.**
+    Başlangıç penceresini kapatmak için **Esc** tuşuna basın. Arama **kutusunu açmak için Ctrl + Q** tuşlarına basın, Temel **Vue.js** yazın ve temel web uygulaması (JavaScript Vue.js TypeScript) seçin.  Görüntülenen iletişim kutusuna **basic-vuejs** adını yazın ve Oluştur'u **seçin.**
 
     ![Vue.js şablonu](../javascript/media/vs-2019/vuejs-template.png)
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üst menü çubuğundan Dosya Yeni **Dosya'Project.**  >    >   Yeni uygulama iletişim kutusunun sol **bölmesinde JavaScript**  Project **TypeScript'i** genişletin ve ardından yeni **bir** Node.js. Orta bölmede Temel web **uygulaması'Vue.js seçin,** **basic-vuejs** adını yazın ve tamam'ı **seçin.**
+    Üst menü çubuğundan Dosya Yeni **Dosya'Project.**  >    >   Yeni Giriş iletişim kutusunun sol **bölmesinde JavaScript**  Project **TypeScript'i** genişletin ve ardından Yeni'yi **Node.js.** Orta bölmede Temel web **uygulaması'Vue.js seçin,** **basic-vuejs** adını yazın ve tamam'ı **seçin.**
 
     ![Vue.js şablonu](../javascript/media/vuejs-template.png)
     ::: moniker-end
-    Temel Web uygulaması proje şablonunu **Vue.js,** geliştirme iş yükünüNode.js **gerekir.** Ayrıntılı yönergeler için bkz. [Önkoşullar.](#prerequisites)
+    Temel Web uygulaması Vue.js **proje şablonunu** görmüyorsanız, uygulama geliştirme iş yükünüNode.js **eklemeniz** gerekir. Ayrıntılı yönergeler için bkz. [Önkoşullar.](#prerequisites)
 
     Visual Studio yeni projeyi oluşturur. Yeni proje bir Çözüm Gezgini (sağ bölme) açılır.
 
@@ -87,13 +86,13 @@ Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişt
 
      ![Vue.js çözümü](../javascript/media/vuejs-solution.png)
 
-   - Yeni Çalışma Alanı iletişim kutusunda verdiği ad kullanılarak projeniz **kalın** Project vurgulanır. Diskte, bu proje bir ile temsil edildi. *proje klasörünüzdeki njsproj* dosyasını seçin.
+   - Yeni Çalışma Alanı iletişim kutusunda verdiği ad kullanılarak projeniz **kalın Project** vurgulanır. Diskte, bu proje bir ile temsil edildi. *proje klasörünüzdeki njsproj* dosyası.
 
    - En üst düzeyde, varsayılan olarak projenizin adıyla aynı adı alan bir çözümdür. bir ile temsil edilen bir çözüm. *diskte sln* dosyası, bir veya daha fazla ilgili proje için bir kapsayıcıdır.
 
    - npm **düğümü** yüklü npm paketlerini gösterir. npm düğümünü sağ tıklar ve bir iletişim kutusu kullanarak npm paketlerini arayabilir ve yükleyebilirsiniz.
 
-2. npm paketlerini yüklemek veya komut Node.js komutlarını çalıştırmak için proje düğümüne sağ tıklayın ve Komut İstemi'ne Buradan **Aç'ı seçin.**
+2. npm paketlerini yüklemek veya komut Node.js komutlarını çalıştırmak için proje düğümüne sağ tıklayın ve Komut İstemi'ne **Buradan Aç'ı seçin.**
 
 ## <a name="add-a-vue-file-to-the-project"></a>Projeye bir .vue dosyası ekleme
 
@@ -118,7 +117,7 @@ Visual Studio tümleşik geliştirme ortamına (IDE) 5-10 dakikalık bir girişt
 1. Derleme sonuçlarını **görmek** için Çıkış penceresini kontrol edin ve **Çıktıyı** göster **listesinden Derleme'yi** seçin.
 ::: moniker-end
 
-JavaScript Vue.js proje şablonu (ve TypeScript şablonunun eski sürümleri) derleme sonrası olayı yapılandırarak `build` npm betiği kullanır. Bu ayarı değiştirmek için Proje Gezgini'nde proje dosyasını (*\<projectname\> .njsproj*) Windows ve şu kod satırı bulun:
+JavaScript Vue.js proje şablonu (ve TypeScript şablonunun eski sürümleri) derleme sonrası olayı yapılandırarak `build` npm betiği kullanır. Bu ayarı değiştirmek istediğiniz proje dosyasını (*\<projectname\> .njsproj*) Windows Explorer'dan açın ve şu kod satırı bulun:
 
 ```xml
 <PostBuildEvent>npm run build</PostBuildEvent>
@@ -126,7 +125,7 @@ JavaScript Vue.js proje şablonu (ve TypeScript şablonunun eski sürümleri) de
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. Uygulamayı **çalıştırmak için Ctrl** + **F5** **(veya > Hata Ayıklama** Olmadan Başlat) tuşlarına basın.
+1. Uygulamayı **çalıştırmak için Ctrl** + **F5** **(veya > Hata** Ayıklama Olmadan Başlat) tuşlarına basın.
 
    konsolunda, Geliştirme Sunucusunu Başlatan *bir ileti görüyorsunuz.*
 
@@ -138,7 +137,7 @@ JavaScript Vue.js proje şablonu (ve TypeScript şablonunun eski sürümleri) de
 
 1. Web tarayıcısını kapatın.
 
-Tebrikler, bu Hızlı Başlangıç'a devam ediyoruz! Visual Studio IDE'leri Vue.js. Özelliklerini daha derinlemesine öğrenmek için içindekiler tablosundaki Öğreticiler **bölümünde** yer alan öğreticiye devam edin.
+Tebrikler, bu Hızlı Başlangıç'a devam ediyoruz! Visual Studio IDE'nin Vue.js. Özelliklerini daha derinlemesine öğrenmek için içindekiler tablosundaki Öğreticiler **bölümünde** yer alan öğreticiye devam edin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -146,4 +145,4 @@ Tebrikler, bu Hızlı Başlangıç'a devam ediyoruz! Visual Studio IDE'leri Vue.
 > [Vue.js oluşturma](create-application-with-vuejs.md)
 
 > [!div class="nextstepaction"]
-> [Uygulamayı Linux App Service](../javascript/publish-nodejs-app-azure.md)
+> [Uygulamayı Linux App Service'a dağıtma](../javascript/publish-nodejs-app-azure.md)

@@ -1,41 +1,40 @@
 ---
 title: IPython REPL (etkileşimli pencere)
-description: etkileşimli paralel bilgi işlem özellikleriyle kullanıcı dostu etkileşimli bir geliştirme ortamı için ıpython modunda Visual Studio etkileşimli penceresini kullanın.
+description: Etkileşimli Paralel Visual Studio özelliklerine sahip kullanıcı dostu bir etkileşimli geliştirme ortamı için IPython modundaki yeni etkileşimli pencereyi kullanın.
 ms.date: 07/28/2021
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a03216c2fbbc83af1f4a995b43ed4576716e1eb9
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: dd68ee68c17842ee8812a524043251c974a1877f
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126726798"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129968637"
 ---
-# <a name="use-ipython-in-the-interactive-window"></a>Etkileşimli pencerede IPython kullanın
+# <a name="use-ipython-in-the-interactive-window"></a>IPython'un Etkileşimli penceresi
 
-ıpython modunda Visual Studio **etkileşimli** pencere, etkileşimli paralel bilgi işlem özelliklerine sahip, gelişmiş, ancak kullanıcı dostu bir etkileşimli geliştirme ortamıdır. bu makalede, tüm normal [etkileşimli pencere](python-interactive-repl-in-visual-studio.md) özelliklerinin de kullanılabildiği Visual Studio **etkileşimli** penceresinde ıpython kullanımı gösterilmektedir.
+IPython **modundaki** Visual Studio Etkileşimli penceresi, Etkileşimli Paralel Bilgi İşlem özelliklerine sahip gelişmiş ancak kullanıcı dostu bir etkileşimli geliştirme ortamıdır. Bu makalede, Visual Studio **Interactive** penceresinde IPython'un nasıl Etkileşimli penceresi [açıklanmıştır.](python-interactive-repl-in-visual-studio.md)
 
-Bu kılavuzda, IPython, sayısal tuş a y ve Matplotlib yüklü olmalıdır. Anaconda kullanıyorsanız bu kitaplıklar zaten yüklüdür. İzlenecek yolun geri kalanı, Anaconda kullandığınızı varsayar.
+Bu kılavuz için IPython, numpy ve matplotlib'i yüklemiş olması gerekir. Anaconda kullanıyorsanız, bu kitaplıklar zaten yüklü. Gözden geçirmenin geri kalanında Anaconda'yı kullanmakta olduğunu varsayabilirsiniz.
 
 > [!Note]
-> IronPython, bunu **Etkileşimli Seçenekler** formunda seçebileceğiniz Için IPython 'u desteklemez. Daha fazla bilgi için bkz. [özellik isteği](https://github.com/Microsoft/PTVS/issues/84).
+> IronPython, Etkileşimli Seçenekler formunda seçmenize rağmen IPython'ı **desteklemez.** Daha fazla bilgi için özellik [isteğine bakın.](https://github.com/Microsoft/PTVS/issues/84)
 
-1. Visual Studio açın, **python ortamları** penceresine geçin (  >  **diğer Windows**  >  **Python ortamlarını** görüntüleyin) ve bir anaconda ortamı seçin.
+1. Yeni Visual Studio açın, Python Ortamları penceresine **(** **Python** Ortamlarını  >  **Windows)** ve bir  >  Anaconda ortamı seçin.
 
-2. Ve ' nin listelendiğinden emin olmak için, bu ortam için **paketler (Conda)** sekmesini ( **PIP** veya paket olarak görünebilir) inceleyin `ipython` `matplotlib` . Aksi takdirde, bunları buraya yüklersiniz. (Bkz. [Python ortamları Windows-paketler sekmesi](python-environments-window-tab-reference.md).)
+2. ve'nin listelendiğinden emin olmak için bu ortam için Paketler **(Conda)** sekmesini **(pip** veya Paketler olarak **görünebilir)** `ipython` `matplotlib` inceleyebilirsiniz. Yüklü değilse, bunları buraya yükleyin. [(Bkz. Python Ortamları pencereleri - Paketler sekmesi](python-environments-window-tab-reference.md).)
 
-3. **Genel bakış** sekmesini seçin ve **IPython etkileşimli modunu kullan**' ı seçin. (Visual Studio 2015 ' de, **seçenekler** iletişim kutusunu açmak için **etkileşimli seçenekleri yapılandır** ' ı seçin, sonra **etkileşimli modu** **ipython** olarak ayarlayın ve **tamam**' ı seçin.
+3. Genel Bakış **sekmesini seçin** ve **IPython etkileşimli modunu kullan'ı seçin.** (2015 Visual Studio de, Seçenekler iletişim kutusunu açmak  için Etkileşimli  seçenekleri yapılandır'ı seçin, ardından Etkileşimli Mod'ı **IPython** olarak ayarlayın ve Tamam'ı **seçin).** 
 
-4. **Etkileşimli pencereyi** IPython modunda görüntülemek için **etkileşimli pencereyi aç** ' ı seçin. Etkileşimli modu az önce değiştirdiyseniz pencereyi sıfırlamanız gerekebilir; Ayrıca, **[2] içinde** bir istem almanızı sağlamak üzere yalnızca bir >>> Istemi görünürse **ENTER** tuşuna basmanız gerekebilir.
+4. Etkileşimli **pencereyi** IPython modunda **açmak** için Etkileşimli pencereyi aç'ı seçin. Etkileşimli modu yeni değiştirdiyebilirsiniz; Yalnızca bir komut istemi görüntülenirse **Enter** tuşuna >>> , böylece [2] içinde gibi bir istem **alasanız da gerekir.**
 
-    ![IPython modundaki etkileşimli pencere](media/ipython-repl-03.png)
+    ![IPython modunda etkileşimli pencere](media/ipython-repl-03.png)
 
 5. Aşağıdaki kodu girin:
 
@@ -48,11 +47,11 @@ Bu kılavuzda, IPython, sayısal tuş a y ve Matplotlib yüklü olmalıdır. Ana
    plt.plot(x, y, 'r', x, x ** 3, 'g', x, x ** 4, 'b')
    ```
 
-6. Son satırı girdikten sonra, satır içi bir grafik görmeniz gerekir (isterseniz sağ alt köşeye sürükleyerek yeniden boyutlandırabilirsiniz).
+6. Son satırı girdikten sonra bir satır içi graf (istenirse sağ alt köşede sürükleyerek yeniden boyutlandırabilirsiniz) görüyorsanız.
 
     ![Etkileşimli pencerede satır içi grafik](media/ipython-repl-04.png)
 
-7. REPL ' ı yazmak yerine düzenleyicide kod yazabilir, seçin, sağ tıklayın ve **etkileşimli olarak gönder** komutuna tıklayabilir (veya **CTRL** + **ENTER** tuşuna basın). Aşağıdaki kodu düzenleyicide yeni bir dosyaya yapıştırmayı, **CTRL** + **a** ile seçip **etkileşimli** pencereye göndermeyi deneyin. (Visual Studio, kodu, ara veya kısmi grafikler vermekten kaçınmak için tek bir birim olarak gönderir. farklı bir ortam seçiliyken açık bir python projeniz yoksa Visual Studio, **python ortamları** penceresinde varsayılan olarak hangi ortamın seçildiği için **etkileşimli** bir pencere açar.)
+7. REPL'ye yazmak yerine düzenleyicide kod yazabilir, bunu seçin, sağ tıklayın  ve Etkileşimli Gönder komutunu seçin (veya Ctrl Enter **tuşlarına** + **basın).** Aşağıdaki kodu düzenleyicide yeni bir dosyaya yapıştırmayı, **Ctrl** A ile seçmeyi ve etkileşimli + pencereye **göndermeyi** deneyin. (Visual Studio veya kısmi graflar vermemek için kodu tek bir birim olarak gönderir. Farklı bir ortam seçiliyken açık bir Python projeniz yoksa Visual Studio Python  Ortamları penceresinde varsayılan olarak seçtiğiniz ortamlar için etkileşimli bir **pencere** açar.)
 
     ```python
     from mpl_toolkits.mplot3d import Axes3D
@@ -77,10 +76,10 @@ Bu kılavuzda, IPython, sayısal tuş a y ve Matplotlib yüklü olmalıdır. Ana
 
     ![Düzenleyiciden etkileşimli pencereye kod gönderme](media/ipython-repl-05.png)
 
-8. **Etkileşimli** pencerenin dışındaki grafikleri görmek için, hata ayıklama başlangıcı komutuyla **Hata Ayıkla** komutunu kullanarak kodu çalıştırın  >   .
+8. Grafikleri Etkileşimli pencerenin dışında  görmek için Hata Ayıklama Olmadan Başlat komutunu kullanarak  >  **kodu** çalıştırın.
 
-IPython, sistem kabuğu, değişken değiştirme, çıkış yakalama vb. gibi diğer birçok yararlı özelliğe sahiptir. Daha fazla bilgi için [IPython belgelerine](https://ipython.org/documentation.html) bakın.
+IPython'un sistem kabuğuna kaçış, değişken değiştirme, çıkışı yakalama gibi birçok yararlı özelliği vardır. Daha fazla bilgi [için IPython belgelerine](https://ipython.org/documentation.html) bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Azure veri bilimi sanal makinesi](/azure/machine-learning/data-science-virtual-machine/overview) , Jupyıter not defterlerini çok çeşitli veri bilimi araçlarıyla birlikte çalıştırmak için önceden yapılandırılmıştır.
+- [Azure Veri Bilimi Sanal Makinesi,](/azure/machine-learning/data-science-virtual-machine/overview) birçok farklı veri bilimi aracıyla birlikte Jupyter not defterlerini çalıştırmak için önceden yapılandırılmıştır.

@@ -4,20 +4,19 @@ titleSuffix: ''
 description: daha önce statik dosyalar sunma, uygulamaya sayfa ekleme ve şablon devralmayı kullanma gibi Visual Studio projeler bağlamında docgo hakkında bir adım adım yönergeler
 ms.date: 11/19/2018
 ms.topic: tutorial
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 286f32477e67013b9766eba18b7ae0325e905d84
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 7b1a46d85ca320c8bc87a619e759d0b12bf24a80
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122038519"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129968624"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance-with-django-app"></a>3. Adım: statik dosyaları sunma, sayfa ekleme ve Docgo uygulamasıyla şablon devralmayı kullanma
 
@@ -79,7 +78,7 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
     }
     ```
 
-1. Uygulamanın *Templates/Hellodocgoapp/index.html* dosyasının içeriğini aşağıdaki kodla değiştirin `<strong>` . Bu, adım 2 ' de kullanılan öğenin `<span>` Stil sınıfına başvuran bir ile değiştirilir `message` . Bu şekilde bir stil sınıfı kullanmak, öğe stillendirme konusunda çok daha fazla esneklik sağlar. (VS 2017 15,7 ve daha önceki bir sürümü kullanırken *index.html* 'yi *şablonlarda* bir alt klasöre taşımadığınız takdirde, adım 2-4 ' de [Template namespacing](learn-django-in-visual-studio-step-02-create-an-app.md#template-namespacing) ' e bakın.)
+1. Uygulamanın *Templates/Hellodocgoapp/index.html* dosyasının içeriğini aşağıdaki kodla değiştirin `<strong>` . Bu, adım 2 ' de kullanılan öğenin `<span>` Stil sınıfına başvuran bir ile değiştirilir `message` . Bu şekilde bir stil sınıfı kullanmak, öğe stillendirme konusunda çok daha fazla esneklik sağlar. (VS 2017 15,7 ve öncesini kullanırken *index.html* *şablonlarda* bir alt klasöre taşıdıysanız, adım 2-4 ' de [şablon namespacing](learn-django-in-visual-studio-step-02-create-an-app.md#template-namespacing) bakın.)
 
     ```html
     <html>
@@ -135,7 +134,7 @@ Aşağıdaki adımlarda "Hellodocgoapp" projesine bir "hakkında" sayfası ve bu
     > [!Tip]
     > **yeni öğe** komutu **ekle** menüsünde görünmezse, Visual Studio hata ayıklama modundan çıkmaması için sunucuyu durdurduğunuzdan emin olun.
 
-1. *about.html* öğesinin içeriğini aşağıdaki biçimlendirmeyle değiştirin (adım 3-4 ' de basit bir gezinti çubuğu ile giriş sayfasına yönelik açık bağlantıyı değiştirirsiniz):
+1. *about.html* içeriğini aşağıdaki biçimlendirmeyle değiştirin (adım 3-4 ' de, ana sayfanın açık bağlantısını basit bir gezinti çubuğuyla değiştirirsiniz):
 
     ```html
     <html>
@@ -171,7 +170,7 @@ Aşağıdaki adımlarda "Hellodocgoapp" projesine bir "hakkında" sayfası ve bu
     url(r'^about$', HelloDjangoApp.views.about, name='about'),
     ```
 
-1. *Templates/Hellodocgoapp/index.html* dosyasını açın ve ilgili sayfanın altına aşağıdaki satırı ekleyin `<body>` (Bu bağlantıyı, adım 3-4 ' de bir gezinti çubuğu ile değiştirirsiniz):
+1. *Templates/Hellodocgoapp/index.html* dosyasını açın ve ilgili sayfanın altına aşağıdaki satırı ekleyin `<body>` (yine de bu bağlantıyı adım 3-4 ' de bir gezinti çubuğu ile değiştirin):
 
     ```html
     <div><a href="about">About</a></div>
@@ -185,7 +184,7 @@ Aşağıdaki adımlarda "Hellodocgoapp" projesine bir "hakkında" sayfası ve bu
 
 Cevap: *views.py* içindeki görüntüleme Işlevi adlandırılmış olsa da `index` , docgo PROJESININ *URLs.py* dosyasındaki URL yönlendirme desenleri "index" dizesiyle eşleşen bir normal ifade içermez. Bu dizeyi eşleştirmek için, model için başka bir girdi eklemeniz gerekir `^index$` .
 
-Sonraki bölümde gösterildiği gibi, `{% url '<pattern_name>' %}` bir düzenin *adına* başvurmak için sayfa şablonundaki etiketinin kullanılması çok daha iyidir. Bu durumda, docgo sızın için uygun URL 'yi oluşturur. Örneğin, `<div><a href="home">Home</a></div>` *about.html* ' de ile değiştirin `<div><a href="{% url 'index' %}">Home</a></div>` . *URLs.py* ' DEKI ilk URL deseninin, aslında ' index ' adlı (bağımsız değişkenin virtuale tarafından) olduğu için ' index ' kullanımı burada çalışıyor `name='index'` . İkinci düzene başvurmak için ' Home ' öğesini de kullanabilirsiniz.
+Sonraki bölümde gösterildiği gibi, `{% url '<pattern_name>' %}` bir düzenin *adına* başvurmak için sayfa şablonundaki etiketinin kullanılması çok daha iyidir. Bu durumda, docgo sızın için uygun URL 'yi oluşturur. Örneğin, `<div><a href="home">Home</a></div>` *about.html* ile değiştirin `<div><a href="{% url 'index' %}">Home</a></div>` . *URLs.py* ' DEKI ilk URL deseninin, aslında ' index ' adlı (bağımsız değişkenin virtuale tarafından) olduğu için ' index ' kullanımı burada çalışıyor `name='index'` . İkinci düzene başvurmak için ' Home ' öğesini de kullanabilirsiniz.
 
 ## <a name="step-3-4-use-template-inheritance-to-create-a-header-and-nav-bar"></a>Adım 3-4: başlık ve gezinti çubuğu oluşturmak için şablon devralmayı kullanma
 
@@ -203,7 +202,7 @@ Bir temel şablon `{% block <block_name> %}` , ve etiketlerini kullanarak blokla
 
 Aşağıdaki adımlarda devralma gösterilmektedir:
 
-1. Uygulamanın *Templates/hellodocgoapp* klasöründe yeni bir HTML dosyası oluşturun (   >  **Yeni öğe** Ekle bağlam menüsünü kullanarak veya   >  **HTML sayfası** Ekle ' yi kullanarak) *layout.html* adlı adı ve içeriğini aşağıdaki biçimlendirmeyle değiştirin. Bu şablonun, başvuran sayfaların yerini almak için gereken "içerik" adlı bir blok içerdiğini görebilirsiniz:
+1. Uygulamanın *Templates/hellodocgoapp* klasöründelayout.htmladlı yeni bir HTML dosyası oluşturun (   >  **Yeni öğe** Ekle bağlam menüsünü veya   >  **HTML sayfası** Ekle ' yi kullanarak) ve içeriğini ** aşağıdaki biçimlendirme ile değiştirin. Bu şablonun, başvuran sayfaların yerini almak için gereken "içerik" adlı bir blok içerdiğini görebilirsiniz:
 
     ```html
     <!DOCTYPE html>
@@ -265,7 +264,7 @@ Aşağıdaki adımlarda devralma gösterilmektedir:
     }
     ```
 
-1. *Şablonları/Hellodocgoapp/index.html* 'yi, temel şablona başvuracak ve içerik bloğunu geçersiz kılacak şekilde değiştirin. Devralma kullanarak bu şablonu basit hale getirebilirsiniz:
+1. *Şablonları/Hellodocgoapp/index.html* öğesini temel şablona başvuracak ve içerik bloğunu geçersiz kılacak şekilde değiştirin. Devralma kullanarak bu şablonu basit hale getirebilirsiniz:
 
     ```html
     {% extends "HelloDjangoApp/layout.html" %}
@@ -274,7 +273,7 @@ Aşağıdaki adımlarda devralma gösterilmektedir:
     {% endblock %}
     ```
 
-1. *Şablonları/Hellodocgoapp/about.html ' y* i aynı zamanda temel şablona başvuracak ve içerik bloğunu geçersiz kılacak şekilde değiştirin:
+1. *Şablonları/Hellodocgoapp/about.html* öğesini Ayrıca temel şablona başvuracak ve içerik bloğunu geçersiz kılacak şekilde değiştirin:
 
     ```html
     {% extends "HelloDjangoApp/layout.html" %}

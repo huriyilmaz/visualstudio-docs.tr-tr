@@ -1,7 +1,6 @@
 ---
 title: C# dilinde bir Görselleştirici Yazma | Microsoft Docs
 description: C# dilinde basit Görselleştirici oluşturmak için bir yönergeyi izleyin. Görselleştirici öğe şablonu kullanılmadan, ve ile gereken adımları gösterir.
-ms.custom: SEO-VS-2020
 ms.date: 07/02/2021
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6534f9c5c6d1fe4f5911358a425073426caa83bd
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 75a7032185a7ed9db6fd2f11b28c597ab6c9dfbe
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122035923"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129968169"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>İzlenecek yol: C 'de Görselleştirici Yazma\#
 
@@ -191,77 +190,77 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
    Şimdi, MyTestConsole Myfirstgörselleştirici çağırabilmesi için gerekli başvuruları eklemeniz gerekir.
 
-### <a name="to-add-necessary-references-to-mytestconsole"></a>MyTestConsole'a gerekli başvuruları eklemek için
+### <a name="to-add-necessary-references-to-mytestconsole"></a>MyTestConsole 'a gerekli başvuruları eklemek için
 
-1. Bu **Çözüm Gezgini,** **MyTestConsole'a** sağ tıklayın ve kısayol **menüsünde Başvuru** Ekle'yi seçin.
+1. **Çözüm Gezgini**' de, **MyTestConsole** ' a sağ tıklayın ve kısayol menüsünde **Başvuru Ekle** ' yi seçin.
 
-2. Başvuru Ekle **iletişim kutusunda** Gözat sekmesinde **Ekle'yi** Microsoft.VisualStudio.DebuggerVisualizers.DLL.
+2. **Başvuru Ekle** iletişim kutusunda, sekme sekmesine **gidip** Microsoft.VisualStudio.DebuggerVisualizers.DLL öğesini seçin.
 
 3. **Tamam**'a tıklayın.
 
-4. **MyTestConsole'a sağ tıklayın ve** yeniden Başvuru **Ekle'yi** seçin.
+4. **MyTestConsole** ' a sağ tıklayın ve **Başvuru Ekle** ' yi seçin.
 
-5. Başvuru Ekle **iletişim kutusunda** Projeler sekmesine **ve** ardından MyFirstVisualizer'a tıklayın.
+5. **Başvuru Ekle** iletişim kutusunda, **Projeler** sekmesine tıklayın ve ardından myfirstgörselleştiricisi ' e tıklayın.
 
 6. **Tamam**'a tıklayın.
 
-   Şimdi testi tamamlamak için kodu eksersiniz.
+   Şimdi, test bandı sona ermesini sağlayacak kodu ekleyeceksiniz.
 
-### <a name="to-add-code-to-mytestconsole"></a>MyTestConsole'a kod eklemek için
+### <a name="to-add-code-to-mytestconsole"></a>MyTestConsole 'a kod eklemek için
 
-1. Bu **Çözüm Gezgini** Program.cs'ye sağ tıklayın ve kısayol menüsünde **Yeniden** Adlandır'ı seçin.
+1. **Çözüm Gezgini**, program. cs öğesine sağ tıklayın ve kısayol menüsünde **Yeniden Adlandır** ' ı seçin.
 
-2. Program.cs'den adı TestConsole.cs gibi daha anlamlı bir adla düzenleyin.
+2. Program. cs içindeki adı TestConsole. cs gibi daha anlamlı bir değere düzenleyin.
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] TestConsole.cs dosyasındaki sınıf bildirimini otomatik olarak yeni dosya adıyla eş olacak şekilde değiştirir.
+    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] TestConsole. cs içindeki sınıf bildirimini yeni dosya adıyla eşleşecek şekilde otomatik olarak değiştirir.
 
-3. TestConsole.cs içinde yönergelerine aşağıdaki `using` kodu ekleyin:
+3. TestConsole. cs dosyasında aşağıdaki kodu `using` yönergelere ekleyin:
 
    ```csharp
    using MyFirstVisualizer;
    ```
 
-4. yönteminde `Main` aşağıdaki kodu ekleyin:
+4. Yönteminde `Main` aşağıdaki kodu ekleyin:
 
    ```csharp
    String myString = "Hello, World";
    DebuggerSide.TestShowVisualizer(myString);
    ```
 
-   Artık ilk görselleştiricinizi test etmeye hazır oluruz.
+   Şimdi ilk Görselleştiriciyi test etmeye hazırsınız.
 
 ### <a name="to-test-the-visualizer"></a>Görselleştiriciyi test etmek için
 
-1. Bu **Çözüm Gezgini,** **MyTestConsole'a** sağ tıklayın ve kısayol menüsünde **Başlangıç** Project Olarak Ayarla'yı seçin.
+1. **Çözüm Gezgini**' de, **mytestconsole** ' a sağ tıklayın ve kısayol menüsünde **başlangıç Project olarak ayarla** ' yı seçin.
 
-2. Hata **Ayıkla menüsünde** Başlat'ı **seçin.**
+2. **Hata Ayıkla** menüsünde **Başlat**' ı seçin.
 
-    Konsol uygulaması başlatılır ve Görselleştirici görünür ve "Hello, World" dizesini görüntüler.
+    Konsol uygulaması başlar ve Görselleştirici görüntülenir ve "Hello, World" dizesini görüntüler.
 
-   Tebrikler. İlk görselleştiricinizi yeni derler ve test ederiz!
+   Tebrikler. İlk görselleştirmeniz oluşturmuş ve test edilmiştir!
 
-   Görselleştiricinizi yalnızca test donanımından aramak yerine içinde kullanmak için [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] yüklemeniz gerekir. Daha fazla bilgi için, [bkz. How to: Install a Visualizer](../debugger/how-to-install-a-visualizer.md).
+   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Yalnızca test bandı aracılığıyla çağırmak yerine Görselleştiriciyi kullanmak istiyorsanız, onu yüklemelisiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md).
 
 ::: moniker range=">=vs-2019"
-## <a name="add-a-debuggee-side-data-object"></a>Hata ayıklama tarafı veri nesnesi ekleme
+## <a name="add-a-debuggee-side-data-object"></a>Hata ayıklanan tarafı veri nesnesi Ekle
 
-Bu bölümde, veri nesnesinden `System.String` özel bir veri nesnesine geçebilirsiniz.  
+Bu bölümde, `System.String` veri nesnesinden özel bir veri nesnesine geçiş yapabilirsiniz.  
 
-1. Bu Çözüm Gezgini, çözüme sağ tıklayın, Ekle'yi **seçin** ve ardından Yeni **Project.** Dil açılan listesinde **C# seçin.** Arama kutusuna sınıf kitaplığı yazın ve **ardından** sınıf kitaplığı **(.NET Framework)** veya Sınıf Kitaplığı'.NET Standard. 
+1. Çözüm Gezgini, çözüme sağ tıklayın, **Ekle**' yi seçin ve ardından **yeni Project**' ye tıklayın. Dil açılır penceresinde **C#**' ı seçin. arama kutusuna **sınıf kitaplığı** yazın ve ardından .NET Standard için sınıf **kitaplığı (.NET Framework)** veya **sınıf kitaplığı** ' nı seçin.
 
    >[!NOTE]
-   >Bir test konsolu .NET Framework kullanıyorsanız, bir sınıf kitaplığı projesi .NET Framework emin olun.
+   >bir .NET Framework test konsolu uygulaması kullanıyorsanız, bir .NET Framework sınıf kitaplığı projesi oluşturduğunuzdan emin olun.
 
-1. **İleri**’ye tıklayın. Görüntülenen iletişim kutusuna adını yazın ve `MyDataObject` Oluştur'a **tıklayın.**
+1. **İleri**’ye tıklayın. Görüntülenen iletişim kutusunda adı yazın `MyDataObject` ve ardından **Oluştur**' a tıklayın.
 
-1. (.NET Standard sınıf kitaplığı) Bu Çözüm Gezgini projeye sağ tıklayın ve Dosyada **Düzenle'Project seçin.** değerini `<TargetFramework>` olarak `netstandard2.0` değiştirme.
+1. (Yalnızca .NET Standard sınıf kitaplığı) Çözüm Gezgini, projeye sağ tıklayın ve **Project dosyayı düzenle**' yi seçin. `<TargetFramework>`Değerini olarak değiştirin `netstandard2.0` .
 
    ```xml
    <TargetFramework>netstandard2.0</TargetFramework>
    ```
 
-1. Ad `MyDataObject` alanının içinde varsayılan kodu aşağıdaki kodla değiştirin.
+1. `MyDataObject`Ad alanı içinde, varsayılan kodu aşağıdaki kodla değiştirin.
 
    ```csharp
    [Serializable] 
@@ -275,21 +274,21 @@ Bu bölümde, veri nesnesinden `System.String` özel bir veri nesnesine geçebil
    }
    ```
 
-   Bu örnekte olduğu gibi salt okunur bir görselleştirici için [VisualizerObjectSource yöntemlerinin uygulanması gerekmez.](/dotnet/api/microsoft.visualstudio.debuggervisualizers.visualizerobjectsource)
+   Bu örnekte olduğu gibi, salt okunurdur bir Görselleştirici için, [VisualizerObjectSource](/dotnet/api/microsoft.visualstudio.debuggervisualizers.visualizerobjectsource)yöntemlerinin uygulanması gerekli değildir.
 
-   Ardından MyFirstVisualizer projesini yeni veri nesnesini kullanmak üzere güncelleştirin.
+   Sonra, Myfirstgörselleştiricisi projesini yeni veri nesnesini kullanacak şekilde güncelleştirin.
 
-1. MyFirstVisualizer Çözüm Gezgini altında BulunanLar'da Başvurular  düğümüne sağ tıklayın ve Başvuru Ekle'yi **seçin.**
+1. Myfirstgörselleştiricisi projesi altındaki Çözüm Gezgini, **Başvurular** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
 
-1. Projeler **altında** **MyDataObject projesini** seçin.
+1. **Projeler** altında, **myDataObject** projesini seçin.
 
-1. DebuggerSide.cs öznitelik kodunda Hedef değerini olarak değiştirerek `System.String` `MyDataObject.CustomDataObject` güncelleştirin.
+1. DebuggerSide. cs öznitelik kodunda, hedef değeri güncelleştirin, `System.String` olarak değiştirme `MyDataObject.CustomDataObject` .
 
    ```csharp
    Target = typeof(MyDataObject.CustomDataObject),
    ```
 
-1. MyFirstVisualizer projesinde yönteminin kodunu `Show` aşağıdaki kodla değiştirin.
+1. Myfirstgörselleştiricisi projesinde, yöntemi için kodu `Show` aşağıdaki kodla değiştirin.
 
    ```csharp
    var data = objectProvider.GetObject() as MyDataObject.CustomDataObject;
@@ -300,13 +299,13 @@ Bu bölümde, veri nesnesinden `System.String` özel bir veri nesnesine geçebil
    windowService.ShowDialog(displayForm);
    ```
 
-   Yukarıdaki kod, Form başlığında göstermek için veri nesnesinin bir özelliğini kullanır.
+   Önceki kod, form başlığında göstermek için veri nesnesinin bir özelliğini kullanır.
 
-   Ardından, özel veri nesnesini kullanmak için konsol uygulamasını güncelleştirin.
+   Ardından, konsol uygulamasını özel veri nesnesini kullanacak şekilde güncelleştirin.
 
-1. MyTestConsole Çözüm Gezgini altında, Başvurular veya Bağımlılıklar  düğümüne sağ **tıklayın** ve için bir proje başvurusu `MyDataObject` ekleyin.
+1. MyTestConsole projesi altında Çözüm Gezgini, **Başvurular** veya **Bağımlılıklar** düğümüne sağ tıklayın ve öğesine bir proje başvurusu ekleyin `MyDataObject` .
 
-1. Program.cs'de yönteminde yer `Main` alan kodu aşağıdaki kodla değiştirin.
+1. Program. cs ' de, `Main` yöntemindeki kodu aşağıdaki kodla değiştirin.
 
    ```csharp
    // String myString = "Hello, World";
@@ -315,7 +314,7 @@ Bu bölümde, veri nesnesinden `System.String` özel bir veri nesnesine geçebil
    DebuggerSide.TestShowVisualizer(customDataObject.MyData);
    ```
 
-1. (.NET konsol uygulaması) test sıyrı `TestShowVisualizer` desteklenmeyen bir try-catch deyiminde çağrısının içine.
+1. (.NET konsol uygulaması) `TestShowVisualizer` Test bandı desteklenmediğinden, çağrıyı bir try-catch ifadesinde içine alın.
 
    ```csharp
    try
@@ -326,63 +325,63 @@ Bu bölümde, veri nesnesinden `System.String` özel bir veri nesnesine geçebil
    }
    ```
 
-   Konsol uygulamasının görselleştiriciye bir çalışma zamanı başvurusuna ihtiyacı vardır. Açıklama yapmak yerine önceki kodu koruyarak başvuruya devam ettirebilirsiniz.
+   Konsol uygulamasının Görselleştirici için bir çalışma zamanı başvurusu olması gerekir. Önceki kodu, açıklama eklemek yerine tutarak başvuruyu koruyabilirsiniz.
 
-1. Bir .NET Framework konsolu uygulaması için, test uzmunu çalıştırabilirsiniz **(F5** tuşuna basın) veya Nasıl yapılır: Görselleştirici [yükleme yönergelerini takip edin.](../debugger/how-to-install-a-visualizer.md)
+1. .NET Framework konsol uygulaması için, test bandı çalıştırabilirsiniz ( **F5** tuşuna basın) veya [nasıl yapılır: görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)konusundaki yönergeleri izleyebilirsiniz.
 
-   Uygulamayı test harness kullanarak çalıştırdıysanız uygulama, Windows Form'Windows gösterir.
+   uygulamayı test bandı kullanarak çalıştırırsanız, uygulama Windows formunu gösterir.
 
-1. Bir .NET konsol uygulaması için, ve 'yi Nasıl Musunuz? Görselleştirici yükleme `MyFirstVisualizer.dll` `MyDataObject.dll` konusunda açıklanan [klasörlere kopyalayın.](../debugger/how-to-install-a-visualizer.md)
+1. Bir .NET konsol uygulaması için ve öğesini, `MyFirstVisualizer.dll` `MyDataObject.dll` [nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)bölümünde açıklanan klasörlere kopyalayın.
 
-1. Görselleştiriciyi yükledikten sonra bir kesme noktası ayarlayın, konsol uygulamasını çalıştırın ve üzerine `customDataObject` gelin. Her şey doğru şekilde ayarlanmışsa büyüteç simgesini ![VisualizerIcon olarak görüyor olun.](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi")
+1. Görselleştiriciyi yükledikten sonra bir kesme noktası ayarlayın, konsol uygulamasını çalıştırın ve üzerine gelin `customDataObject` . Her şey doğru şekilde ayarlandıysa, büyüteç simgesini ![Visualizersimgesini](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi")görmeniz gerekir.
 
-   :::image type="content" source="../debugger/media/vs-2019/visualizer-csharp-data-object.png" alt-text="Görselleştirici büyüteç simgesi.":::
+   :::image type="content" source="../debugger/media/vs-2019/visualizer-csharp-data-object.png" alt-text="Görselleştirici Büyüteç simgesi.":::
 
-   **Büyüteçten MyFirstVisualizer'ı** seçtiğiniz zaman başlıkta veri nesnesi metninin yer alan Form' olduğunu görüyorsunuz.
+   Büyüteç Camı ' ndan **Myfirstgörselleştirici** ' ı seçtiğinizde, başlığında veri nesne metniyle birlikte görüntülenir.
 
-   ![Windows Formunu gösteren görselleştirici](../debugger/media/vs-2019/visualizer-csharp-windows-form.png)
+   ![bir Windows formu gösteren görselleştirici](../debugger/media/vs-2019/visualizer-csharp-windows-form.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>Görselleştirici öğe şablonunu kullanarak görselleştirici oluşturma
+## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>Görselleştiricisi öğesi şablonunu kullanarak Görselleştirici oluşturma
 
-Şimdiye kadar bu kılavuzda görselleştiriciyi el ile nasıl oluşturabilirsiniz? Bu bir öğrenme alıştırması olarak yapıldı. Artık basit bir görselleştiricinin nasıl çalıştığını biliyorsunuz. Görselleştirici öğesi şablonunu kullanarak bir görselleştirici oluşturmanın daha kolay bir yolu vardır.
+Şimdiye kadar, Bu anlatım el ile Görselleştirici oluşturmayı göstermiştir. Bu bir öğrenme alıştırması olarak gerçekleştirildi. Basit bir Görselleştirici nasıl çalıştığını bildiğinize göre, bir tane oluşturmak için daha kolay bir yol vardır: görselleştiricisi öğesi şablonu.
 
 İlk olarak, yeni bir sınıf kitaplığı projesi oluşturmanız gerekir.
 
 ### <a name="to-create-a-new-class-library"></a>Yeni bir sınıf kitaplığı oluşturmak için
 
-1. Dosya menüsünde **Yeni** **dosya'> Project.**
+1. **Dosya** menüsünde **Yeni > Project**' ni seçin.
 
-2. Yeni **Project** iletişim kutusunda, Visual **C#** altında, **.NET Framework.**
+2. **yeni Project** iletişim kutusunda, **Visual C#** altında **.NET Framework**' ı seçin.
 
-3. Orta bölmede Sınıf **Kitaplığı'ı seçin.**
+3. Orta bölmede **sınıf kitaplığı**' nı seçin.
 
-4. Ad **kutusuna** sınıf kitaplığı için MySecondVisualizer gibi uygun bir ad yazın.
+4. **Ad** kutusuna, sınıf kitaplığı Için MySecondVisualizer gibi uygun bir ad yazın.
 
 5. **Tamam**'a tıklayın.
 
-   Şimdi görselleştirici öğesini ekebilirsiniz:
+   Şimdi, buna bir Görselleştirici öğesi ekleyebilirsiniz:
 
-### <a name="to-add-a-visualizer-item"></a>Görselleştirici öğesi eklemek için
+### <a name="to-add-a-visualizer-item"></a>Bir Görselleştirici öğesi eklemek için
 
-1. Bu **Çözüm Gezgini,** MySecondVisualizer'a sağ tıklayın.
+1. **Çözüm Gezgini**, Mysecondgörselleştirici öğesine sağ tıklayın.
 
-2. Kısayol menüsünde Ekle'yi seçin **ve** ardından Yeni **Öğe'ye tıklayın.**
+2. Kısayol menüsünde **Ekle** ' yi ve ardından **Yeni öğe**' yi seçin.
 
-3. Yeni Öğe **Ekle iletişim kutusundaki** Visual C# Öğeleri altında Hata **Ayıklayıcı** Görselleştiricisi'ne **tıklayın.**
+3. **Yeni öğe Ekle** iletişim kutusunda, **Visual C# öğeleri** altında, **hata ayıklayıcı görselleştiricisi**' ı seçin.
 
-4. Ad **kutusuna** SecondVisualizer.cs gibi uygun bir ad yazın.
+4. **Ad** kutusuna, SecondVisualizer. cs gibi uygun bir ad yazın.
 
 5. **Ekle**'ye tıklayın.
 
-   İşte bu kadar. SecondVisualizer.cs dosyasına bakın ve şablon tarafından sizin için eklenen kodu görüntüleniyor. Devam edin ve kodla denemeler yapalım. Temel bilgileri artık biliyorsunuz, artık kendi karmaşık ve kullanışlı görselleştiricilerinizi oluşturma yolundadır.
+   Bu, hepsi bu kadar. SecondVisualizer. cs dosyasına bakın ve şablonun sizin için eklediği kodu görüntüleyin. Devam edin ve kodu deneyin. Temel bilgileri öğrenmiş olduğunuza göre, size ait daha karmaşık ve yararlı Görselleştiriciler oluşturma yönteminiz vardır.
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görselleştirici Mimarisi](../debugger/visualizer-architecture.md)
-- [Nasıl kurulur: Görselleştirici Yükleme](../debugger/how-to-install-a-visualizer.md)
+- [Görselleştiricisi mimarisi](../debugger/visualizer-architecture.md)
+- [Nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)

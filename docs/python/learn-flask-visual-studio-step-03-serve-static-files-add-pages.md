@@ -1,23 +1,22 @@
 ---
 title: 3. adım, statik Visual Studio sayfalarda Flask öğreticisini öğrenin
 titleSuffix: ''
-description: Visual Studio projeleri bağlamında Flask ile ilgili temel bilgiler, özellikle statik dosyaların nasıl hizmet ve uygulama sayfaları ekleneceklerini ve şablon devralmayı nasıl kullanabileceğini gösteren kılavuz
+description: Visual Studio projeleri bağlamında Flask ile ilgili temel bilgiler, özellikle statik dosyaların nasıl hizmet ve uygulama sayfaları ekleneceklerini ve şablon devralmanın nasıl kullanılacalarını gösteren kılavuz
 ms.date: 01/07/2019
 ms.topic: tutorial
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6be7781323dcff005f85ab17c492570d1f7ce705
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: ade4401c22decb840c5c263198574c435ebe6da4
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126625376"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129968442"
 ---
 # <a name="step-3-serve-static-files-add-pages-and-use-template-inheritance-with-flask-app"></a>3. Adım: Flask uygulamasıyla statik dosyaları hizmet etme, sayfa ekleme ve şablon devralma kullanma
 
@@ -28,20 +27,20 @@ Bu öğreticinin önceki adımlarında, tek sayfalık kendi içinde HTML ile min
 Bu adımda şunların nasıl olduğunu öğreniriz:
 
 > [!div class="checklist"]
-> - Kolay Visual Studio farklı türlerde yeni dosyaları hızla eklemek için yeni öğe şablonları kullanma (3-1. adım)
+> - Kolay Visual Studio ile farklı türlerde yeni dosyaları hızla eklemek için yeni öğe şablonları kullanma (3-1. adım)
 > - Koddan statik dosyaları hizmet etme (3-2. adım, isteğe bağlı)
-> - Uygulamaya ek sayfalar ekleme (3-3. adım)
+> - Uygulamaya başka sayfalar ekleme (3-3. adım)
 > - Sayfalar arasında kullanılan bir üst bilgi ve gezinti çubuğu oluşturmak için şablon devralmayı kullanma (3-4. adım)
 
 ## <a name="step-3-1-become-familiar-with-item-templates"></a>3.-1. Adım: Öğe şablonları hakkında bilgi sahibi olma
 
-Flask uygulaması geliştirirken genellikle çok daha fazla Python, HTML, CSS ve JavaScript dosyası eklersiniz. Her dosya türü (dağıtım için ihtiyaçweb.configdiğer dosyalar *gibi),* Visual Studio başlamanız [](python-item-templates.md) için kullanışlı öğe şablonları sağlar.
+Flask uygulaması geliştirirken genellikle çok daha fazla Python, HTML, CSS ve JavaScript dosyası eklersiniz. Her dosya türü için (dağıtım için ihtiyaçweb.configdiğer *dosyalar gibi),* Visual Studio [](python-item-templates.md) başlamanız için kullanışlı öğe şablonları sağlar.
 
-Kullanılabilir şablonları görmek için Çözüm Gezgini'a **gidin,** öğeyi oluşturmak istediğiniz klasöre sağ tıklayın ve Yeni Öğe **Ekle'yi**  >  **seçin:**
+Kullanılabilir şablonları görmek için Çözüm Gezgini'ye **gidin,** öğeyi oluşturmak istediğiniz klasöre sağ tıklayın ve Yeni Öğe **Ekle'yi**  >  **seçin:**
 
 ![Yeni öğe ekle iletişim kutusu Visual Studio](media/flask/step03-add-new-item-dialog.png)
 
-Şablon kullanmak için istenen şablonu seçin, dosya için bir ad belirtin ve Tamam'ı **seçin.** Bu şekilde bir öğe eklemek dosyayı otomatik olarak Visual Studio projenize ekler ve değişiklikleri kaynak denetimi için işaretler.
+Şablon kullanmak için istenen şablonu seçin, dosya için bir ad belirtin ve Tamam'ı **seçin.** Bu şekilde bir öğe eklemek, dosyayı otomatik olarak Visual Studio projenize ekler ve değişiklikleri kaynak denetimi için işaretler.
 
 ### <a name="question-how-does-visual-studio-know-which-item-templates-to-offer"></a>Soru: Hangi Visual Studio şablonlarını nasıl bilebilirsiniz?
 
@@ -49,15 +48,15 @@ Cevap: Visual Studio dosyası (*.pyproj*), bunu Python projesi olarak işaret al
 
 ## <a name="step-3-2-serve-static-files-from-your-app"></a>3-2. Adım: Uygulamanıza statik dosyaları hizmet etme
 
-Python ile derlen bir web uygulamasında (herhangi bir çerçeve kullanılarak), Python dosyalarınız her zaman web ana bilgisayarının sunucusunda çalıştırıldı ve hiçbir zaman kullanıcının bilgisayarına aktarıldı. Ancak CSS ve JavaScript gibi diğer dosyalar yalnızca tarayıcı tarafından kullanılır, bu nedenle ana bilgisayar sunucusu isten her istene olduğu gibi bunları gönderir. Bu tür dosyalar "statik" dosyalar olarak adlandırılır ve Flask herhangi bir kod yazmanız gerekmeden bunları otomatik olarak teslim eder. Örneğin, HTML dosyaları içinde, projesinde göreli bir yol kullanarak statik dosyalara başvurabilirsiniz. Bu adımın ilk bölümü, mevcut sayfa şablonunuz için bir CSS dosyası ekler.
+Python ile derlen bir web uygulamasında (herhangi bir çerçeve kullanılarak), Python dosyalarınız her zaman web ana bilgisayarının sunucusunda çalıştırıldı ve hiçbir zaman kullanıcının bilgisayarına aktarıldı. Ancak CSS ve JavaScript gibi diğer dosyalar yalnızca tarayıcı tarafından kullanılır, bu nedenle ana bilgisayar sunucusu isten her istene olduğu gibi bunları gönderir. Bu tür dosyalar "statik" dosyalar olarak adlandırılır ve Flask bunları kod yazmanız gerekmeden otomatik olarak teslim eder. Örneğin, HTML dosyaları içinde, projesinde göreli bir yol kullanarak statik dosyalara başvurabilirsiniz. Bu adımın ilk bölümü, mevcut sayfa şablonunuz için bir CSS dosyası ekler.
 
-Bir API uç noktası uygulaması aracılığıyla koddan statik bir dosya teslim etmek için Flask, statik *adlı* bir klasördeki göreli yolları (proje kökünde) kullanarak dosyalara başvurarak kullanışlı bir yöntem sağlar. Bu adımın ikinci bölümü, basit bir statik veri dosyası kullanarak bu yöntemi gösteriyor.
+Bir API uç noktası uygulaması aracılığıyla koddan statik bir dosya teslim etmek için Flask, statik *adlı* bir klasördeki göreli yolları (proje kökünde) kullanarak dosyalara başvurarak kullanışlı bir yöntem sağlar. Bu adımın ikinci bölümünde, basit bir statik veri dosyası kullanılarak bu yöntem gösterildi.
 
 Her iki durumda da dosyaları statik olarak *düzenleyebilirsiniz.*
 
 ### <a name="use-a-static-file-in-a-template"></a>Şablonda statik dosya kullanma
 
-1. Yeni **Çözüm Gezgini** projesinde **HelloFlask** klasörüne sağ tıklayın, Visual Studio Klasörü   >  Ekle'yi **seçin** ve klasöre adını `static` girin.
+1. Bu **Çözüm Gezgini,** Visual Studio projesinde **HelloFlask** klasörüne sağ tıklayın, Yeni klasör Ekle'yi  >  **seçin** ve klasöre adını `static` girin.
 
 1. Statik klasöre sağ **tıklayın ve** Yeni öğe **Ekle'yi**  >  **seçin.** Görüntülenen iletişim kutusunda Stil Sayfası şablonunu seçin, dosyaya **adını** ve `site.css` Tamam'ı **seçin.** **Site.css** dosyası projede görünür ve düzenleyicide açılır. Klasör yapınız aşağıdaki görüntüye benzer görünse:
 
@@ -72,7 +71,7 @@ Her iki durumda da dosyaları statik olarak *düzenleyebilirsiniz.*
     }
     ```
 
-1. Uygulamanın *templates/index.html* dosyasının içeriğini aşağıdaki kodla değiştirin. Bu kod, 2. adımda kullanılan öğesini stil sınıfına başvurulan bir `<strong>` `<span>` ile `message` değiştirir. Stil sınıfını bu şekilde kullanmak, öğenin stilini oluşturma konusunda çok daha fazla esneklik sağlar.
+1. Uygulamanın *şablonlarının/index.html* dosyasının içeriğini aşağıdaki kodla değiştirin. Bu kod, 2. adımda kullanılan öğesini stil sınıfına başvurulan bir `<strong>` `<span>` ile `message` değiştirir. Stil sınıfını bu şekilde kullanmak, öğenin stilini oluşturma konusunda çok daha fazla esneklik sağlar.
 
     ```html
     <html>
@@ -90,11 +89,11 @@ Her iki durumda da dosyaları statik olarak *düzenleyebilirsiniz.*
 
 ### <a name="serve-a-static-file-from-code"></a>Koddan statik dosya hizmet etme
 
-Flask, projenin statik klasöründeki herhangi bir dosyaya başvurmak için koddan çağırabilirsiniz adlı `serve_static_file` bir *işlev* sağlar. Aşağıdaki işlem statik veri dosyası döndüren basit bir API uç noktası oluşturur.
+Flask, projenin statik klasöründeki herhangi bir dosyaya başvurmak için koddan `serve_static_file` çağırabilirsiniz adlı bir *işlev* sağlar. Aşağıdaki işlem statik veri dosyası döndüren basit bir API uç noktası oluşturur.
 
-1. Henüz bunu yapmadıysanız, statik  bir klasör oluşturun: Çözüm Gezgini 'de, **Visual Studio** projesinde **HelloFlask** klasörüne sağ tıklayın, Yeni klasör Ekle'yi seçin ve  >  klasörünü olarak ad `static` girin.
+1. Henüz bunu yapmadıysanız, statik  bir klasör oluşturun: Çözüm Gezgini 'de, **Visual Studio** projesinde **HelloFlask** klasörüne sağ tıklayın, Yeni klasör Ekle'yi seçin ve   >  klasöre adını `static` girin.
 
-1. Statik *klasörde,* aşağıdaki içeriklerle *data.json* adlı bir statik JSON veri dosyası oluşturun (bu, anlamsız örnek verilerdir):
+1. Statik *klasörde,* aşağıdaki içeriklere sahip *data.json* adlı bir statik JSON veri dosyası oluşturun (bu, anlamsız örnek verilerdir):
 
     ```json
     {
@@ -132,10 +131,10 @@ Uygulamaya başka bir sayfa eklemek şu anlama gelir:
 
 Aşağıdaki adımlar "HelloFlask" projesine bir "Hakkında" sayfası ve giriş sayfasından bu sayfaya bağlantılar ekler:
 
-1. Bu **Çözüm Gezgini** şablonlar klasörüne  sağ tıklayın, Yeni öğe Ekle'yi seçin, HTML Sayfası öğesi şablonunu seçin, dosyaya adını ve  >    `about.html` Tamam'ı **seçin.**
+1. Bu **Çözüm Gezgini** şablonlar klasörüne  sağ tıklayın, Yeni öğe Ekle'yi seçin, HTML Sayfası öğesi şablonunu seçin, dosyayı olarak adlar ve  >    `about.html` Tamam'ı **seçin.**
 
     > [!Tip]
-    > Ekle **menüsünde Yeni** Öğe komutu görünmüyorsa, hata ayıklama modundan çıkmak için uygulamayı Visual Studio emin olun. 
+    > Ekle **menüsünde Yeni** Öğe komutu görünmüyorsa, uygulamanın hata ayıklama modundan çıka Visual Studio emin olun. 
 
 1. Giriş sayfasının *about.html* aşağıdaki işaretlemeyle değiştirin (giriş sayfasının açık bağlantısını 3-4. adımda basit bir gezinti çubuğuyla değiştirirsiniz):
 
@@ -163,13 +162,13 @@ Aşağıdaki adımlar "HelloFlask" projesine bir "Hakkında" sayfası ve giriş 
             content = "Example app page for Flask.")
     ```
 
-1. *Templates/index.html* dosyasını açın ve öğenin hemen içinde aşağıdaki satırı ekleyen Hakkında sayfasına bağlantı verin (bu bağlantıyı 3-4 arası adımlarda bir gezinti çubuğuyla `<body>` değiştirirsiniz):
+1. *Templates/index.html* dosyasını açın ve öğenin hemen içinde aşağıdaki satırı ekleyen Hakkında sayfasına (yine bu bağlantıyı 3-4. adımda bir gezinti çubuğuyla `<body>` değiştirirsiniz):
 
     ```html
     <div><a href="about">About</a></div>
     ```
 
-1. Dosya Tüm Dosyaları Kaydet menü **komutunu kullanarak**  >  **tüm dosyaları** kaydedin veya Ctrl Shift S  + **tuşlarına** + **basın.** (Teknik olarak, bu adım projeyi otomatik olarak kaydederken Visual Studio gerekli değildir. Yine de bu, hakkında bilgili olmak için iyi bir komut!)
+1. Dosya Tüm Dosyaları Kaydet menü **komutunu kullanarak**  >  **tüm dosyaları** kaydedin veya Ctrl Shift S  + **tuşlarına** + **basın.** (Teknik olarak, bu adım projeyi proje içinde çalıştırarak dosyaları otomatik Visual Studio gerekli değildir. Yine de bu, hakkında bilgili olmak için iyi bir komut!)
 
 1. Sonuçları gözlemlemek ve sayfalar arasındaki gezintiyi kontrol etmek için projeyi çalıştırın. Bittiğinde uygulamayı durdurun.
 
@@ -185,9 +184,9 @@ Flask'in şablon oluşturma sistemi (varsayılan olarak Jinja), belirli öğeler
 
 - *Eklemeler,* söz dizimi kullanarak başvuran şablonda belirli bir yere ekley istediğiniz diğer sayfa `{% include <template_path> %}` şablonlarıdır. Yolu kodda dinamik olarak değiştirmek için değişken de kullanabilirsiniz. Eklemeler genellikle bir sayfanın gövdesinde, paylaşılan şablonu sayfada belirli bir konuma çekmek için kullanılır.
 
-- *Devralma,* başvuran şablonun daha sonra üzerinde derlemesi yapılan paylaşılan bir temel şablonu belirtmek için sayfa şablonunun başında `{% extends <template_path> %}` kullanır. Devralma genellikle bir uygulamanın sayfaları için paylaşılan düzen, gezinti çubuğu ve diğer yapıları tanımlamak için kullanılır. Bu şekilde başvuran şablonların yalnızca bloklar olarak adlandırılan temel şablonun belirli alanlarını eklemesi veya değiştirmesi *gerekir.*
+- *Devralma,* başvuran şablonun daha sonra üzerinde derlemesi yapılan paylaşılan bir temel şablon belirtmek için sayfa şablonunun başında `{% extends <template_path> %}` kullanır. Devralma genellikle bir uygulamanın sayfaları için paylaşılan düzen, gezinti çubuğu ve diğer yapıları tanımlamak için kullanılır. Bu şekilde başvuran şablonların yalnızca bloklar olarak adlandırılan temel şablonun belirli alanlarını eklemesi veya değiştirmesi *gerekir.*
 
-Her iki durumda `<template_path>` da, uygulamanın *templates klasörüne göredir* `../` (veya `./` buna da izin verilir).
+Her iki durumda `<template_path>` da, uygulamanın *templates klasörüne göredir* ( `../` veya buna da izin `./` verilir).
 
 Temel şablon, ve etiketlerini *kullanarak blokların* `{% block <block_name> %}` çizgilerini `{% endblock %}` oluşturur. Başvuran bir şablon aynı blok adına sahip etiketleri kullanıyorsa, blok içeriği temel şablonun içeriğini geçersiz kılar.
 
@@ -264,7 +263,7 @@ Aşağıdaki adımlar devralmayı gösterir:
     {% endblock %}
     ```
 
-1. *Şablonları/about.html* şablonu da ifade etmek ve içerik bloğuna geçersiz kılmak için değiştirme:
+1. Temel şablona da başvurmak about.htmlve içerik bloğuna geçersiz kılmak için *şablonları/şablonları* değiştirme:
 
     ```html
     {% extends "layout.html" %}
@@ -281,9 +280,9 @@ Aşağıdaki adımlar devralmayı gösterir:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu kaynaklarla daha derine gidebilirsiniz:
+Şu kaynaklarla daha derin gidebilirsiniz:
 
-- [Web uygulamasını Azure App Service](publishing-python-web-applications-to-azure-from-visual-studio.md)
-- Jinja şablonlarının denetim akışı gibi daha fazla özelliği için bkz. [Jinja Şablon Tasarımcısı Belgeleri](http://jinja.palletsprojects.com/en/2.10.x/templates/) (jinja.pocoo.org)
-- kullanma hakkında ayrıntılı bilgi `url_for` için [Flask Uygulaması](https://flask.palletsprojects.com/en/1.0.x/api/#flask.url_for) url_for belgelerinde yer alan belgeye bakın (flask.pocoo.org)
-- GitHub öğreticisi: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)
+- [Web uygulamasını Azure App Service dağıtma](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- Denetim akışı gibi Jınja şablonlarının daha fazla özelliği için bkz. [Jınja Template Designer belgeleri](http://jinja.palletsprojects.com/en/2.10.x/templates/) (Jinja.pocoo.org)
+- Kullanımıyla ilgili ayrıntılar için `url_for` , bkz. Flask uygulama nesnesi belgeleri içindeki [url_for](https://flask.palletsprojects.com/en/1.0.x/api/#flask.url_for) (Flask.pocoo.org)
+- GitHub eğitim kaynak kodu: [Microsoft/python-sample-vs-learning-flask](https://github.com/Microsoft/python-sample-vs-learning-flask)

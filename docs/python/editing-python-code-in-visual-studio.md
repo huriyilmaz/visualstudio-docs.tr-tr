@@ -3,20 +3,19 @@ title: Python kodunu düzenleme
 description: Python için Visual Studio, biçimlendirme, kodlama ve yeniden düzenleme özellikleriyle zengin ıntellisense, kod parçacıkları ve gezinti özellikleri sağlar.
 ms.date: 03/13/2019
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1ba70337e5ac7ae511fefa609c73b0efba414152
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 7f615d41e3eaa34a6f06a18034927d172721d687
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628322"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129972420"
 ---
 # <a name="edit-python-code"></a>Python kodunu düzenleme
 
@@ -155,23 +154,23 @@ Renkleri özelleştirmek için, **Araçlar**  >  **Seçenekler**  >  **ortam**  
 
 ## <a name="code-snippets"></a>Kod parçacıkları
 
-Kod parçacıkları, bir kısayol yazarak ve **Sekme** tuşuna basarak veya IntelliSense Kod Parçacığını Düzenle ve Komutlarla Çevrele komutlarını  >    >    **kullanarak, Python'ı** seçerek ve ardından istenen kod parçacığını seçerek dosyalarınıza eklenebiliyor kod parçalarıdır.
+Kod parçacıkları, bir kısayol yazıp **Tab** tuşuna basarak veya IntelliSense **düzenleme**  >    >  **kodu kod parçacığını** ve komutlarla **çevrelemeyi** , **Python**'u seçip istenen kod parçacığını seçerek dosyalarınıza eklenebilen kod parçacıklarında yer alabilir.
 
-Örneğin, `class` bir sınıf tanımı ekser kod parçacığı için bir kısayoldur. kod parçacığını, yazarak otomatik tamamlama listesinde `class` görüntülebilirsiniz:
+Örneğin, bir `class` sınıf tanımı ekleyen kod parçacığına yönelik bir kısayoldur. Kod parçacığının, şunu yazdığınızda otomatik tamamlama listesinde göründüğünü görürsünüz `class` :
 
 ![Sınıf kısayolu için kod parçacığı](media/code-editing-code-snippet-class.png)
 
-Tab **tuşuna** basılarak sınıfın geri kalanı oluşturulur. Ardından Sekme ile vurgulanan alanlar arasında hareket eden ad ve temeller  listesinin üzerine yazarak **Enter** tuşuna basarak gövdeyi yazmaya başlayabilirsiniz.
+**Tab** tuşuna basıldığında sınıfın geri kalanı oluşturulur. Daha sonra ad ve temellerin listesini yazabilir, vurgulanan alanlar arasında **sekme** ile hareket edebilir ve ardından gövde yazmaya başlamak için **ENTER** tuşuna basabilirsiniz.
 
-![Tamamlamanız için kod parçacığının alanlarını vurgular](media/code-editing-code-snippets.png)
+![Doldurmanız için bir kod parçacığı alanlarının üzerinde vurgular](media/code-editing-code-snippets.png)
 
 ### <a name="menu-commands"></a>Menü komutları
 
-IntelliSense **Kod Parçacığı Ekle** menü komutunu kullanarak Python'ı ve ardından bir kod  >    >   parçacığını seçersiniz: 
+IntelliSense 'i **Düzenle**  >    >  **kod parçacığı Ekle** menü komutunu kullandığınızda, önce **Python**' ı, sonra da bir kod parçacığını seçin:
 
-![Kod Parçacığı Ekle komutuyla kod parçacığı seçme](media/code-editing-code-snippet-insert.png)
+![Kod parçacığı Ekle komutuyla kod parçacığı seçme](media/code-editing-code-snippet-insert.png)
 
-Benzer **şekilde**  >  **IntelliSense** Surround'i Düzenle komutu, geçerli seçimi seçilen yapısal  >   öğenin içine metin düzenleyicisine yer verir. Örneğin, aşağıdakine benzer bir kodun olduğunu varsayalım:
+  >    >  Benzer şekilde IntelliSense **ile çevreleyin** komutu, geçerli seçimi seçili yapısal öğenin içine metin düzenleyicisine koyar. Örneğin, aşağıdaki gibi bir kod biraz daha olduğunu varsayalım:
 
 ```python
 sum = 0
@@ -179,55 +178,55 @@ for x in range(1, 100):
     sum = sum + x
 ```
 
-Bu kodun ve Surround **With komutunun seçiminde** kullanılabilir kod parçacıklarının listesi görüntülenir. Listeden **def** seçildiğinde seçilen kod bir işlev tanımına eklenir  ve Sekme tuşuyla vurgulanan işlev adı ve bağımsız değişkenler arasında gezinebilirsiniz:
+Bu kodun seçilmesi ve **birlikte surround** komutuyla seçilmesi, kullanılabilir kod parçacıklarının bir listesini görüntüler. Listeden **def** seçilmesi, seçilen kodu bir işlev tanımına koyar ve vurgulanan işlev adı ile bağımsız değişkenler arasında gezinmek için **Tab** tuşunu kullanabilirsiniz:
 
-![Kod parçacıkları için Surround With komutunu kullanma](media/code-editing-code-snippet-surround-with.png)
+![Kod parçacıkları için WITH komutuyla surround kullanma](media/code-editing-code-snippet-surround-with.png)
 
-### <a name="examine-available-snippets"></a>Kullanılabilir kod parçacıklarını inceleme
+### <a name="examine-available-snippets"></a>Kullanılabilir parçacıkları İncele
 
-Kullanılabilir kod parçacıklarını Kod Parçacıkları Yöneticisi'nde, Araçlar Kod Parçacıkları Yöneticisi menü komutu kullanılarak açılan ve dil olarak  >   **Python'ı** seçerek açabilirsiniz:
+Kullanılabilir kod parçacıklarını, **Araçlar** kod parçacıkları Yöneticisi menü komutu kullanılarak açılan ve dil olarak Python seçeneğini belirleyerek **kod parçacıkları yöneticisinde** görebilirsiniz  >    :
 
-![Visual Studio'de Kod Parçacıkları Yöneticisi](media/code-editing-code-snippets-manager.png)
+![Visual Studio 'de kod parçacıkları Yöneticisi](media/code-editing-code-snippets-manager.png)
 
-Kendi kod parçacıklarınızı oluşturmak için bkz. [Kılavuz: Kod parçacığı oluşturma.](../ide/walkthrough-creating-a-code-snippet.md)
+Kendi kod parçacıklarınızı oluşturmak için bkz. [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md).
 
-Paylaşmak için harika bir kod parçacığı yazarsanız bunu bir gist'e yazıp bize [haber veabilirsiniz.](https://github.com/Microsoft/PTVS/issues) Bunu gelecekteki bir sürümde de dahil Visual Studio.
+Paylaşmak istediğiniz harika bir kod parçacığı yazarsanız, bunu bir GİST içinde göndermekten ve [bize bildirelim](https://github.com/Microsoft/PTVS/issues). Visual Studio gelecek bir sürümüne dahil edebiliriz.
 
 ## <a name="navigate-your-code"></a>Kodunuzda gezinme
 
-Visual Studio'da Python desteği, kaynak kodunun kullanılabilir olduğu kitaplıklar da dahil olmak üzere kodunuz içinde hızla gezinmek için çeşitli yol sağlar: gezinti [çubuğu,](#navigation-bar)Tanıma [**Git,**](#go-to-definition) [**Git**](#navigate-to)ve Tüm [**Başvuruları Bul.**](#find-all-references) Visual Studio [**Object Browser'Visual Studio kullanabilirsiniz.**](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser)
+Visual Studio 'de Python desteği; kaynak kodun kullanılabildiği kitaplıklar da dahil olmak üzere kodunuzda hızlı bir şekilde gezinmek için birkaç yol sağlar: [gezinti çubuğu](#navigation-bar), [**tanıma git**](#go-to-definition), [**öğesine**](#navigate-to)git ve [**tüm başvuruları bul**](#find-all-references). Visual Studio [**Nesne Tarayıcısı**](../ide/viewing-the-structure-of-code.md#BKMK_ObjectBrowser)de kullanabilirsiniz.
 
 ### <a name="navigation-bar"></a>Gezinti çubuğu
 
-Gezinti çubuğu her düzenleyici penceresinin en üstünde görüntülenir ve iki düzeyli tanım listesi içerir. Sol açılan liste, geçerli dosyada üst düzey sınıf ve işlev tanımlarını içerir; sağ açılan listede, sol tarafta gösterilen kapsam içindeki tanımların listesi görüntülenir. Düzenleyicide ilerlerken listeler geçerli bağlamınızı gösterecek şekilde güncelleştirmesinin yanı sıra doğrudan atlamak için bu listelerden bir giriş de seçersiniz.
+Gezinti çubuğu her bir düzenleyici penceresinin üst kısmında görüntülenir ve iki düzeyli bir tanım listesi içerir. Sol açılan liste, geçerli dosyadaki en üst düzey sınıfı ve işlev tanımlarını içerir; Sağ açılan listede, sol tarafta gösterilen kapsam içindeki tanımların bir listesi görüntülenir. Düzenleyicide hareket ettirmek için, listeler geçerli bağlamınızı gösterecek şekilde güncelleştirir ve bu listelerden doğrudan gitmek için bir giriş de seçebilirsiniz.
 
-![Visual Studio düzenleyicisinde Gezinti Çubuğu](media/code-editing-navigation-bar.png)
+![Visual Studio düzenleyicisinde gezinti çubuğu](media/code-editing-navigation-bar.png)
 
 > [!Tip]
-> Gezinti çubuğunu gizlemek için Araçlar Seçenekler Metin **Düzenleyici**  >    >  Python **Genel'e gidin** ve Gezinti  >    >   **çubuğundan Ayarlar** için  >  **temizlemeniz gerekir.**
+> gezinti çubuğunu gizlemek için, **araçlar**  >  **seçenekler**  >  **metin düzenleyicisi**  >  **Python**  >  **genel** ' e gidin ve   >  **gezinti çubuğunu** Ayarlar temizleyin.
 
 ### <a name="go-to-definition"></a>Tanıma Git
 
-**Tanıma Git,** tanımlayıcının kullanımından (işlev adı, sınıf veya değişken gibi) tanımlandığı kaynak koda hızla atlar. Bir tanımlayıcıya sağ tıklar ve  Tanıma Git'i seçerek veya caret'i tanımlayıcıya yerleştirerek ve F12 tuşuna basarak **çağırabilirsiniz.** Kaynak kodun kullanılabilir olması şartıyla, kodunuz ve dış kitaplıklar genelinde çalışır. Kitaplık kaynak kodu kullanılamıyorsa **Tanıma** Git modül başvurusu için ilgili `import` deyime atlar veya bir hata görüntüler.
+**Tanıma Git** , bir tanımlayıcının (bir işlev adı, sınıf veya değişken) tanımlandıkları kaynak koda hızlı bir şekilde atlanacaktır. Bir tanımlayıcıya sağ tıklayıp **Tanıma Git** ' i seçerek ve giriş işaretini tanımlayıcıya yerleştirip **F12** tuşuna basarak bu seçeneği çağırın. Bu, kodunuz ve harici kitaplıklarınızda çalışarak kaynak kodunun kullanılabilir olmasını sağladı. Kitaplık kaynak kodu kullanılabilir değilse, **tanım** ' `import` a bir modül başvurusu için ilgili ifadeye atlar veya bir hata görüntüler.
 
-![Visual Studio'da Tanıma Git komutu](media/code-editing-go-to-definition.png)
+![Visual Studio tanım komutuna git](media/code-editing-go-to-definition.png)
 
-### <a name="navigate-to"></a>Şu sayfaya gidin:
+### <a name="navigate-to"></a>Şuraya gidin
 
-Git **Komutunu** Düzenle (  >   **Ctrl**, ), düzenleyicide herhangi bir dize yazarak kodunda bu dizeyi içeren bir işlev, sınıf veya değişken tanımlayan olası eşleşmeleri gördüğünüz bir arama kutusu + görüntüler. Bu özellik Tanıma Git ile benzer **bir özellik sağlar** ancak tanımlayıcının kullanımını bulmak zorunda kalmadan kullanılabilir.
+  >  **Git** komutuna Düzenle (**CTRL** + ), düzenleyicide herhangi bir dize yazabileceğiniz ve kodunuzda, sınıfta veya bu dizeyi içeren değişkeni tanımlayan olası eşleşmeleri görebileceğiniz bir arama kutusu görüntüler. Bu özellik, **Tanıma Git** , ancak tanımlayıcı kullanımını bulmaya gerek kalmadan, benzer bir yetenek sağlar.
 
-Herhangi bir ada çift tıklayın veya ok tuşlarıyla ve **Enter** tuşlarıyla öğesini seçerek bu tanımlayıcının tanımına gidin.
+Herhangi bir ada çift tıklayın veya ok tuşlarıyla ve **ENTER** ile seçip, Bu tanımlayıcının tanımına gider.
 
-![Visual Studio'da Git komutu](media/code-editing-navigate-to.png)
+![Visual Studio komutuna git](media/code-editing-navigate-to.png)
 
 ### <a name="find-all-references"></a>Tüm Başvuruları Bul
 
-**Tüm Başvuruları Bul,** içeri aktarmalar ve atamalar dahil olmak üzere belirli bir tanımlayıcının tanımlandığı ve kullanılan yeri bulmanın yararlı bir yolu olur. Bir tanımlayıcıya sağ tıklar ve Tüm Başvuruları Bul'ı seçerek veya caret'i tanımlayıcıya yerleştirerek ve **Shift** F12 tuşuna basarak + **çağırabilirsiniz.** Listede bir öğeye çift tıklar ve bu öğenin bulunduğu konuma giditir.
+**Tüm başvuruları bul** , içeri aktarmalar ve atamalar dahil olmak üzere, verilen her bir tanımlayıcının hem tanımlanmış hem de kullanıldığı yerleri bulmanın yararlı bir yoludur. Bir tanımlayıcıya sağ tıklayıp **tüm başvuruları bul**' u seçerek veya giriş işaretini tanımlayıcıya yerleştirip **SHIFT** + **F12** tuşlarına basarak çağırabilirsiniz. Listedeki bir öğeye çift tıklamak, konumuna gider.
 
-![Tüm Başvuruları Bul sonuçları](media/code-editing-find-all-references.png)
+![Tüm başvuruları bul sonuçları](media/code-editing-find-all-references.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Biçimlendirme](formatting-python-code.md)
 - [Yeniden Düzenle](refactoring-python-code.md)
-- [Linter kullanma](linting-python-code.md)
+- [Bir Inter kullanın](linting-python-code.md)

@@ -1,7 +1,6 @@
 ---
 title: Hata ayıklama C++
 description: Visual Studio hata ayıklayıcısını kullanarak yerel kodun hatalarını ayıklama
-ms.custom: mvc
 ms.date: 08/06/2018
 ms.topic: quickstart
 helpviewer_keywords:
@@ -13,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0292e73f952a05652142b8e146d21915af73bde2
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 0efe8b1806602ffa977a860fd5954c6cd24763e7
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627962"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970054"
 ---
 # <a name="quickstart-debug-with-c-using-the-visual-studio-debugger"></a>hızlı başlangıç: Visual Studio hata ayıklayıcısını kullanarak C++ ile hata ayıklama
 

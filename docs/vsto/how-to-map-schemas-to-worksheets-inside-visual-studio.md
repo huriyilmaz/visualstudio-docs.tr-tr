@@ -2,7 +2,6 @@
 title: 'Nasıl ekleyebilirsiniz: Şemaları çalışma sayfalarıyla eşleme Visual Studio'
 description: Çalışma sayfası bir çalışma sayfasında açıkken xml Microsoft Office Excel çalışma sayfasına nasıl eşleyebilirsiniz Visual Studio.
 titleSuffix: ''
-ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -19,15 +18,15 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: a2d82c4b55fbc037843f80fef113ba2f7a3e1502
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 0ce52089a8ae859f2ef41fb3f1a46df3f95d2c48
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122100016"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129969014"
 ---
 # <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>Nasıl ekleyebilirsiniz: Şemaları çalışma sayfalarıyla eşleme Visual Studio
-  Bir XML şemasını çalışma sayfası açıkken çalışma sayfasına eşleyebilirsiniz Visual Studio. Çalışma kitabı, Microsoft Office Excel dışında açık olduğunda kullanılan aynı Visual Studio. Bu Office proje, şemayı çalışma sayfasıyla eşledikten önce veya sonra aynı nesneleri oluşturur ve Excel oluşturur.
+  Çalışma sayfası açıkken bir XML şemasını çalışma sayfasına eşleyebilirsiniz Visual Studio. Çalışma kitabı, Microsoft Office Excel dışında açık olduğunda kullanılan aynı Visual Studio. Bu Office proje, şemayı çalışma sayfasıyla eşlemeden önce veya sonra aynı nesneleri oluşturur ve Excel oluşturur.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
@@ -36,7 +35,7 @@ ms.locfileid: "122100016"
 
 ## <a name="to-map-an-xml-schema-to-an-excel-worksheet-in-visual-studio"></a>Xml şemasını Excel çalışma Visual Studio
 
-1. Çalışma kitabı Excel şablon projesini Visual Studio.
+1. Excel çalışma kitabını veya şablon projesini Visual Studio.
 
 2. Odağı tasarımcıya taşımak için çalışma sayfasına tıklayın.
 
@@ -49,7 +48,7 @@ ms.locfileid: "122100016"
 
      **XML Kaynağı** penceresi açılır.
 
-5. XML Kaynağı **penceresinde XML** **kaynağı'Haritalar.**
+5. XML Kaynağı **penceresinde XML** **kaynağına Haritalar.**
 
      **XML Haritalar** iletişim kutusu açılır.
 
@@ -63,7 +62,7 @@ ms.locfileid: "122100016"
 
 9. XML Kaynağı **penceresindeki öğeleri** çalışma sayfanızda karşılık gelen denetimlerin oluşturulacak yerlere sürükleyin.
 
-     Yinelenen olmayan bir şema öğesini sürüklersanız, Office projesi otomatik olarak öğesine <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> bağlı bir denetim <xref:System.Windows.Forms.BindingSource> üretir.
+     Yinelenen olmayan bir şema öğesini sürüklersanız, Office projesi otomatik olarak öğesine bağlı <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> bir denetim <xref:System.Windows.Forms.BindingSource> üretir.
 
      Yinelenen bir şema öğesini sürüklersanız, Office projesi otomatik olarak bir veri kaynağına <xref:Microsoft.Office.Tools.Excel.ListObject> bağlı olan bir denetim üretir. Daha fazla bilgi için [bkz. Belge düzeyinde özelleştirmelerde XML şemaları ve verileri.](../vsto/xml-schemas-and-data-in-document-level-customizations.md)
 

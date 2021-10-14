@@ -1,86 +1,85 @@
 ---
-title: Hızlı başlangıç-Python kod klasörünü açma
-description: bu hızlı başlangıçta, Visual Studio projesi kullanmadan bir klasörden Python kodu açar ve çalıştırırsınız (yalnızca Visual Studio 2019).
+title: Hızlı Başlangıç - Python kod klasörü açma
+description: Bu hızlı başlangıçta, bir Visual Studio projesi (yalnızca 2019'da) kullanmadan bir klasörden Python Visual Studio çalıştırabilirsiniz.
 ms.date: 03/12/2019
 ms.topic: quickstart
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 6553ffcc80dbe650b3b1775292599bc20d67cbfd
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: ed6ccd85c03b7cd512d0751fd44f42191724adf7
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126726787"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971367"
 ---
-# <a name="quickstart-open-and-run-python-code-in-a-folder"></a>Hızlı başlangıç: bir klasörde Python kodunu açma ve çalıştırma
+# <a name="quickstart-open-and-run-python-code-in-a-folder"></a>Hızlı Başlangıç: Python kodunu bir klasörde açma ve çalıştırma
 
-[Visual Studio 2019 ' de Python desteğini](installing-python-support-in-visual-studio.md)yükledikten sonra, Visual Studio proje oluşturmadan Visual Studio 2019 ' de var olan python kodunu çalıştırmak kolaydır.
+[Visual Studio 2019'da Python](installing-python-support-in-visual-studio.md)desteğini yüklediniz mi, mevcut Python kodunu Visual Studio 2019'da bir Visual Studio projesi oluşturmadan kolayca çalıştırabilirsiniz.
 
 > [!Note]
-> Visual Studio 2017 ve önceki sürümlerde, Python kodunu çalıştırmak için bir Visual Studio projesi oluşturmanız gerekir ve bu, kolayca yerleşik bir proje şablonu kullanarak yapabilirsiniz. Bkz [. hızlı başlangıç: mevcut koddan Python projesi oluşturma](quickstart-01-python-in-visual-studio-project-from-existing-code.md)
+> Visual Studio 2017 ve önceki sürümlerde, Python kodunu çalıştırmak için bir Visual Studio projesi oluşturmanız gerekir ve bunu yerleşik proje şablonunu kullanarak kolayca yapabilirsiniz. Bkz. [Hızlı Başlangıç: Mevcut koddan Python projesi oluşturma](quickstart-01-python-in-visual-studio-project-from-existing-code.md)
 
-1. Bu izlenecek yol için, istediğiniz Python kodu ile herhangi bir klasörü kullanabilirsiniz. burada gösterilen örnekle birlikte izlemek için, uygun bir klasörde komutunu kullanarak gregmalcola/python_koans GitHub deposunu bilgisayarınıza kopyalayın `git clone https://github.com/gregmalcolm/python_koans` .
+1. Bu kılavuzda, Python koduyla istediğiniz klasörü kullanabilirsiniz. Burada gösterilen örneği takip etmek için uygun bir klasördeki komutunu kullanarak gregmalcolm/python_koans GitHub deposunu `git clone https://github.com/gregmalcolm/python_koans` bilgisayarınıza kopyalayın.
 
-1. Visual Studio 2019 ' u başlatın ve başlangıç penceresinde, **başlarken** sütununun altında **aç** ' ı seçin. alternatif olarak, zaten çalışan Visual Studio **varsa,**  >    >  bunun yerine **klasörü** aç komutunu seçin.
+1. 2019'Visual Studio başlat ve başlangıç penceresinde,  2019'un en **altındaki Aç'ı Kullanmaya başlayın** seçin. Alternatif olarak, zaten Visual Studio Dosya Klasör **Aç**  >    >  **komutunu** seçin.
 
     ![Visual Studio başlangıç ekranı](media/quickstart-open-folder/01-open-local-folder.png)
 
-1. Python kodunuzu içeren klasöre gidin ve ardından **Klasör Seç**' i seçin. Python_koans kodu kullanıyorsanız, `python3` kopya klasörü içindeki klasörü seçtiğinizden emin olun.
+1. Python kodunuzu içeren klasöre gidin ve Klasör **Seç'i seçin.** Python_koans kodunu kullanıyorsanız, kopyalama klasörünün `python3` içindeki klasörü seçin.
 
-    ![Klasörü aç komutundan Klasör Seç iletişim kutusu](media/quickstart-open-folder/02-select-folder.png)
+    ![Klasör Aç komutundan Klasör Seç iletişim kutusu](media/quickstart-open-folder/02-select-folder.png)
 
-1. Visual Studio klasör **görünümü** olarak adlandırılan **Çözüm Gezgini** klasörü görüntüler. Klasör adlarının sol kenarlarındaki okları kullanarak klasörleri genişletebilir ve daraltabilirsiniz:
+1. Visual Studio klasör, **Çözüm Gezgini** Görünümü'ne göre **görüntülenir.** Klasör adlarının sol kenarlarında bulunan okları kullanarak klasörleri genişletebilirsiniz ve daraltabilirsiniz:
 
-    ![Çözüm Gezgini klasörleri genişletme ve daraltma denetimleri](media/quickstart-open-folder/03-expand-collapse-folders.png)
+    ![Dosyalarda klasörleri genişletme ve daraltma denetimleri Çözüm Gezgini](media/quickstart-open-folder/03-expand-collapse-folders.png)
 
-1. bir Python klasörü açılırken Visual Studio, projeyle ilgili ayarları yönetmek için birkaç gizli klasör oluşturur. Bu klasörleri (ve *. git* klasörü gibi diğer gizli dosya ve klasörleri) görmek Için **tüm dosyaları göster** araç çubuğu düğmesini seçin:
+1. Bir Python klasörü Visual Studio, projeyle ilgili ayarları yönetmek için birkaç gizli klasör oluşturur. Bu klasörleri (ve *.git* klasörü gibi diğer gizli dosyaları ve klasörleri) görmek için Tüm Dosyaları **Göster araç çubuğu düğmesini** seçin:
 
-    ![Çözüm Gezgini içindeki gizli klasörlerin görünümü](media/quickstart-open-folder/05-view-hidden-folders.png)
+    ![Çözüm Gezgini'daki gizli klasörlerin görünümü](media/quickstart-open-folder/05-view-hidden-folders.png)
 
-1. Kodu çalıştırmak için öncelikle başlangıç veya birincil program dosyasını belirlemeniz gerekir. Burada gösterilen örnekte, *Contemplate-koans.py* başlangıç dosyası. Bu dosyaya sağ tıklayın ve **Başlangıç öğesi olarak ayarla**' yı seçin.
+1. Kodu çalıştırmak için öncelikle başlangıç veya birincil program dosyasını tanımlamanız gerekir. Burada gösterilen örnekte, başlangıç dosyası *contemplate-koans.py.* Bu dosyaya sağ tıklayın ve Başlangıç Öğesi Olarak **Ayarla'yı seçin.**
 
-    ![Çözüm Gezgini bir başlangıç öğesi ayarlama](media/quickstart-open-folder/06-set-as-startup-item-command.png)
+    ![Çözüm Gezgini'de bir başlangıç öğesi ayarlama](media/quickstart-open-folder/06-set-as-startup-item-command.png)
 
     > [!Important]
-    > Başlangıç öğesi açtığınız klasörün kökünde bulunmuyorsa, [çalışma dizini ayarlama](#set-a-working-directory)bölümünde açıklandığı gibi başlatma yapılandırma JSON dosyasına bir satır da eklemeniz gerekir.
+    > Başlangıç öğeniz açtığınız klasörün kökünde yer alıyorsa, Çalışma dizini ayarlama bölümünde açıklandığı gibi başlatma yapılandırması JSON dosyasına da bir satır [eklemeniz gerekir.](#set-a-working-directory)
 
-1. Kodu **CTRL** + **F5** tuşuna basarak veya **hata ayıklama**  >  **başlatma hatası olmadan Başlat**' a seçerek çalıştırın. ayrıca, Visual Studio hata ayıklayıcısında kod çalıştıran bir play düğmesine sahip başlangıç öğesini gösteren araç çubuğu düğmesini seçebilirsiniz. her durumda Visual Studio, başlangıç öğesinin bir python dosyası olduğunu algılar, bu yüzden kodu varsayılan python ortamında otomatik olarak çalıştırır. (Bu ortam, araç çubuğundaki başlangıç öğesinin sağında gösterilir.)
+1. **Ctrl** F5 tuşlarına basarak veya Hata Ayıklama Olmadan Başlat'ı +    >  **seçerek kodu çalıştırın.** Ayrıca, bir oynatma düğmesiyle başlangıç öğesini gösteren araç çubuğu düğmesini de seçerek hata ayıklayıcısında Visual Studio çalıştırabilirsiniz. Her durumda, Visual Studio öğenizin bir Python dosyası olduğunu algılar, bu nedenle varsayılan Python ortamında kodu otomatik olarak çalıştırır. (Bu ortam, araç çubuğunda başlangıç öğesinin sağ tarafından gösterilir.)
 
-    ![Hata ayıklayıcı araç çubuğu düğmesi Başlat](media/quickstart-open-folder/07-start-debug-toolbar.png)
+    ![Hata ayıklayıcısını başlat araç çubuğu düğmesi](media/quickstart-open-folder/07-start-debug-toolbar.png)
 
-1. Programın çıktısı ayrı bir komut penceresinde görünür:
+1. Programın çıkışı ayrı bir komut penceresinde görüntülenir:
 
-    ![Python kodu çalıştırmak için çıkış penceresi](media/quickstart-open-folder/08-result-window.png)
+    ![Python kodunu çalıştırmaya ait çıkış penceresi](media/quickstart-open-folder/08-result-window.png)
 
-1. Kodu farklı bir ortamda çalıştırmak için, araç çubuğundaki açılan denetimden bu ortamı seçin, sonra başlangıç öğesini yeniden başlatın.
+1. Kodu farklı bir ortamda çalıştırmak için araç çubuğundaki açılan denetimden bu ortamı seçin ve ardından başlangıç öğesini yeniden çalıştırın.
 
-1. Visual Studio klasörü kapatmak için **dosya**  >  **klasörü kapat** menü komutunu seçin.
+1. Klasördeki klasörü kapatmak Visual Studio Dosya Klasörü **Kapat**  >  **menü** komutunu seçin.
 
 ## <a name="set-a-working-directory"></a>Çalışma dizini ayarlama
 
-varsayılan olarak Visual Studio, aynı klasörün kökünde bir klasör olarak açılan bir Python projesi çalıştırır. Ancak projenizdeki kod, Python 'un bir alt klasörde çalıştırıldığını varsayabilir. Örneğin, python_koans deposunun kök klasörünü açıp *python3/Contemplate-koans. Kopyala* dosyasını başlangıç öğesi olarak ayarladığınızı varsayalım. Daha sonra kodu çalıştırırsanız *koans.txt* dosyanın bulunamadığını belirten bir hata görürsünüz. Bu hata, *Contemplate-koans.py* Python 'un depo kökü yerine *python3* klasöründe çalıştırıldığını varsaydığı için oluşur.
+Varsayılan olarak Visual Studio, aynı klasörün kökünde klasör olarak açılan bir Python projesi çalıştırır. Ancak projenizin kodu, Python'ın bir alt klasör içinde çalıştırılı olduğunu varsayabilir. Örneğin, python_koans deposunun kök klasörünü açıp *python3/yer-koans.py* dosyasını başlangıç öğesi olarak ayarlayabilirsiniz. Ardından kodu çalıştırırsanız, dosyanın *bulunakoans.txt* hatasını alırsınız. Bu hatanın *nedeni contemplate-koans.py* Python'ın depo kökü yerine *python3* klasöründe çalıştırıldıklarını varsayıyor olmasıdır.
 
-Bu gibi durumlarda, çalışma dizinini belirtmek için başlatma yapılandırma JSON dosyasına bir satır da eklemeniz gerekir:
+Böyle durumlarda, çalışma dizinini belirtmek için başlatma yapılandırması JSON dosyasına da bir satır eklemeniz gerekir:
 
-1. **Çözüm Gezgini** ' de Python (*. kopyala*) başlangıç dosyasına sağ tıklayın ve **hata ayıkla ve Ayarlar başlat**' ı seçin.
+1. içinde Python (*.py*) başlangıç dosyasına sağ tıklayın Çözüm Gezgini Hata **Ayıkla** ve **Başlat'ı Ayarlar.**
 
-    ![contemplate-koans.py dosyası seçili olan Çözüm Gezgini klasör görünümünün ekran görüntüsü ve bağlam menüsünde hata ayıklama ve başlatma Ayarlar seçildi.](media/quickstart-open-folder/09-debug-launch-settings-menu-command.png)
+    ![contemplate-koans.py dosyasının seçili olduğu Çözüm Gezgini Klasör Görünümü'Ayarlar ve bağlam menüsünde Hata Ayıkla ve Başlat seçeneğinin ekran görüntüsü.](media/quickstart-open-folder/09-debug-launch-settings-menu-command.png)
 
-1. Görüntülenen **hata ayıklayıcı Seç** iletişim kutusunda, **varsayılan** ' ı seçin ve ardından **Seç**' i seçin.
+1. Görüntülenen Hata **ayıklayıcı seç** iletişim kutusunda Varsayılan'ı **ve ardından** Seç'i **seçin.**
 
-    ![Varsayılan hata ayıklayıcı seçiliyken hata ayıklayıcı Seç iletişim kutusunun ekran görüntüsü ve Seç düğmesi seçili.](media/quickstart-open-folder/10-select-debugger.png)
+    ![Varsayılan hata ayıklayıcının seçili olduğu ve Seç düğmesinin seçili olduğu Hata Ayıklayıcısı Seç iletişim kutusunun ekran görüntüsü.](media/quickstart-open-folder/10-select-debugger.png)
 
     > [!Note]
-    > **varsayılan** bir seçenek olarak görmüyorsanız, **Debug ve Launch Ayarlar** komutunu seçerken bir Python *. kopyala* dosyası seçtiğinizden emin olun. Visual Studio, görüntülenecek hata ayıklayıcı seçeneklerini belirleyen dosya türünü kullanır.
+    > Varsayılan'ı seçenek olarak **görmüyorsanız** Hata Ayıkla ve Başlat komutlarını seçerek Python *.py* dosyasını **Ayarlar** olun. Visual Studio, hangi hata ayıklayıcısı seçeneklerinin görüntülen olduğunu belirlemek için dosya türünü kullanır.
 
-1. Visual Studio *, hidden. vs klasöründe* bulunan *launch. vs. json* adlı bir dosya açar. Bu dosya, projenin hata ayıklama bağlamını açıklar. Çalışma dizini belirtmek için, `"workingDirectory"`  `"workingDirectory": "python3"` Python-koans örneğinde olduğu gibi için bir değer ekleyin:
+1. Visual Studio, gizli .vs klasöründe bulunan *launch.vs.json* adlı *bir dosya* açar. Bu dosya, proje için hata ayıklama bağlamını açıklar. Çalışma dizini belirtmek için, `"workingDirectory"` python-koans örneğinde olduğu  `"workingDirectory": "python3"` gibi için bir değer ekleyin:
 
     ```json
     {
@@ -103,15 +102,15 @@ Bu gibi durumlarda, çalışma dizinini belirtmek için başlatma yapılandırma
     }
     ```
 
-1. Dosyayı kaydedin ve şimdi belirtilen klasörde çalışan programı yeniden başlatın.
+1. Dosyayı kaydedin ve programı yeniden açın; bu program artık belirtilen klasörde çalışır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Öğretici: Visual Studio 'de Python ile çalışma](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
+> [Öğretici: Python ile Visual Studio](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı başlangıç: mevcut koddan bir Python projesi oluşturma](quickstart-01-python-in-visual-studio-project-from-existing-code.md)
-- [Hızlı başlangıç: bir depodan Python projesi oluşturma](quickstart-03-python-in-visual-studio-project-from-repository.md)
-- [Mevcut bir Python yorumlayıcısını el ile tanımla](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)
+- [Hızlı Başlangıç: Mevcut koddan Python projesi oluşturma](quickstart-01-python-in-visual-studio-project-from-existing-code.md)
+- [Hızlı Başlangıç: Depodan Python projesi oluşturma](quickstart-03-python-in-visual-studio-project-from-repository.md)
+- [Mevcut Python yorumlayıcıyı el ile tanımlama](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)

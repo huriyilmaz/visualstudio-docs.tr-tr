@@ -3,20 +3,19 @@ title: Python kodu için PyLint kullanma
 description: eklentileri özelleştirmek için komut satırı seçenekleri de dahil olmak üzere Python kodundaki sorunları denetlemek için Visual Studio pylint ' i çalıştırın.
 ms.date: 03/13/2019
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c87ae1484b3c868b7f633c2550587ae0ff980c69
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 101c9614af4a78a7e2b4f3037e1e93d9b388786f
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126625371"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129972199"
 ---
 # <a name="use-pylint-to-check-python-code"></a>Python kodunu denetlemek için PyLint kullanın
 

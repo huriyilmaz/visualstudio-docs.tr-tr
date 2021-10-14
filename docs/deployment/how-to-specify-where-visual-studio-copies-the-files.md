@@ -1,9 +1,8 @@
 ---
-title: Dosyaların kopyalanacağı yeri belirtin | Microsoft Docs
-description: uygulama dosyalarının ve bildiriminin bulunacağı konumu belirten ClickOnce bir uygulama için yayımlama konumu özelliğini ayarlamayı öğrenin.
+title: Dosyaların nereye kopyalayıp kopyalan | Microsoft Docs
+description: Uygulama dosyalarının ve bildirimin bulunduğu konumu belirten ClickOnce Yayımlama Konumu özelliğini ayarlamayı öğrenin.
 ms.custom:
 - SEO-VS-2020
-- seodec18
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,35 +19,35 @@ manager: jmartens
 ms.technology: vs-ide-deployment
 ms.workload:
 - multiple
-ms.openlocfilehash: 2425f428f5252c574eacb17c1c404bf06f80279e
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: aa2e67f29c087b33a9614fab7b851de884034e9e
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122080448"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970886"
 ---
-# <a name="how-to-specify-where-visual-studio-copies-the-files"></a>nasıl yapılır: dosyaları Visual Studio nereye kopyaladığını belirtme
-ClickOnce kullanarak bir uygulamayı yayımladığınızda, `Publish Location` özelliği uygulama dosyalarının ve bildiriminin bulunduğu konumu belirtir. Bu bir dosya yolu veya bir FTP sunucusunun yolu olabilir.
+# <a name="how-to-specify-where-visual-studio-copies-the-files"></a>Nasıl kullanılır: Dosyaların Visual Studio nerede kopyalay olduğunu belirtme
+Uygulama yayımlamak için ClickOnce `Publish Location` özelliği, uygulama dosyalarının ve bildirimin bulunduğu konumu belirtir. Bu bir dosya yolu veya FTP sunucusunun yolu olabilir.
 
- `Publish Location`özelliği, **Project tasarımcısının** **yayımla** sayfasında veya yayımla sihirbazı ' nı kullanarak belirtebilirsiniz. daha fazla bilgi için bkz. [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulama yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
+ Özelliğini, Project `Publish Location` **Tasarımcısı'nın** **Yayımla sayfasında veya** Yayımlama Sihirbazı'nı kullanarak belirtebilirsiniz. Daha fazla bilgi için [bkz. Yayımlama Sihirbazı'nı ClickOnce Uygulama Yayımlama.](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
 
 > [!NOTE]
-> ClickOnce kullanarak bir uygulamanın birden fazla sürümünü yüklediğinizde yükleme, uygulamanın önceki sürümlerini belirttiğiniz yayımla konumundaki arşiv adlı bir klasöre taşır. Önceki sürümlerin bu şekilde arşivlenmesi, yükleme dizinini önceki sürümden klasörlerin temizlenmesini önler.
+> ClickOnce kullanarak bir uygulamanın birden fazla sürümünü yükleyebilirsiniz. Yükleme, uygulamanın önceki sürümlerini belirttiğiniz yayımlama konumu olan Arşiv adlı bir klasöre taşır. Önceki sürümlerin bu şekilde arşivlenmesi, yükleme dizinini önceki sürümden klasörlerden uzak tutar.
 
 ### <a name="to-specify-a-publishing-location"></a>Yayımlama konumu belirtmek için
 
-1. **Çözüm Gezgini**' de bir proje seçiliyken, **Project** menüsünde **özellikler**' e tıklayın.
+1. içinde bir proje **seçiliyken Çözüm Gezgini** menüsünde **Project'a** **tıklayın.**
 
-2. **Yayımla** sekmesine tıklayın.
+2. Yayımla **sekmesine** tıklayın.
 
-3. **Yayımlama konumu** alanına, aşağıdaki biçimlerden birini kullanarak yayımlama konumu girin:
+3. Yayımlama **Konumu alanına** aşağıdaki biçimlerden birini kullanarak yayımlama konumunu girin:
 
-   - Bir dosya paylaşımında veya disk yolunda yayımlamak için, yolu bir UNC yolu (*\\ \server\applicationname*) veya bir dosya yolu (*c:\Deploy\ApplicationName*) kullanarak girin.
+   - Bir dosya paylaşımına veya disk yoluna yayımlamak için unc yolu (*\\ \Server\ApplicationName*) veya bir dosya yolu (*C:\Deploy\ApplicationName*) kullanarak yolu girin.
 
-   - Bir FTP sunucusuna yayımlamak için, <em>FTP://FTP.Microsoft.com/ \<ApplicationName> </em>biçimini kullanarak yolu girin.
+   - Bir FTP sunucusunda yayımlamak için, ftp://ftp.microsoft.com/ <em>biçimini kullanarak \<ApplicationName> yolu girin.</em>
 
-     Göz at (**...**) düğmesinin çalışması Için **Yayımlama konumu** kutusunda metnin mevcut olması gerektiğini unutmayın.
+     Gözat ( ... ) düğmesinin **çalışması için** Yayımlama Konumu kutusunda **metin** olması gerektiğini unutmayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
-- [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Uygulama ClickOnce yayımlama](../deployment/publishing-clickonce-applications.md)
+- [Nasıl ClickOnce: ClickOnce Sihirbazı'nı kullanarak bir uygulama yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

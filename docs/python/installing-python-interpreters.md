@@ -3,20 +3,19 @@ title: Python yorumlayıcıları seçme ve bunları yüklemesi
 description: Visual Studio sürümünde desteklenen Python yorumlayıcıları 'nın, yükleyicilerinin nerede bulabilecekleri hakkında kısa yönergeler içeren, kapsamlı bir listesi.
 ms.date: 07/28/2021
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ca3ba908b8127c92d181276c7d3b0ff6cb5fc72d
-ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
+ms.openlocfilehash: ceebaea84f13bb5656162d350ef4bc0566954f6e
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129430502"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129968663"
 ---
 # <a name="install-python-interpreters"></a>Python yorumlayıcılarını yükleme
 

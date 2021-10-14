@@ -1,7 +1,6 @@
 ---
 title: Hata ayıklayıcıda kayıt değerlerini görüntüle | Microsoft Docs
 description: Kayıt değerlerini Visual Studio kayıtları penceresinde görüntüleyin. Hata ayıklama sırasında, uygulamanızda kod yürütme olarak değişiklik kaydeder.
-ms.custom: SEO-VS-2020
 ms.date: 11/19/2018
 ms.topic: how-to
 f1_keywords:
@@ -26,12 +25,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 94048bef497f21a77e3e94d583f26d65ceef53553725195ea1100ab5313b9887
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: e97efdac07efd7df06b242d783a87c2961297fa7
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121453246"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970600"
 ---
 # <a name="view-register-values-in-the-registers-window-c-c-visual-basic-f"></a>kayıt değerlerini yazmaçları penceresinde görüntüleme (C#, C++, Visual Basic, F #)
 

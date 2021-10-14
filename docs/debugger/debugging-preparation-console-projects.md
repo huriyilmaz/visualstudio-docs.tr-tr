@@ -1,7 +1,6 @@
 ---
 title: Konsol projelerinde hata ayıklama hazırlığı | Microsoft Docs
 description: 'Visual Studio içindeki konsol projelerinde hata ayıklama hazırlığı (C#, C++, Visual Basic, F #) hakkında bilgi alın.'
-ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -20,12 +19,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: e627e88eb1dbfefe710233eb0136bbe650c782e8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 8b4cdaa8eeb6a9f08d6ea706104b7cc20d1e6bcd
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122097421"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971861"
 ---
 # <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>hata ayıklama hazırlığı: konsol projeleri (C#, C++, Visual Basic, F #)
 

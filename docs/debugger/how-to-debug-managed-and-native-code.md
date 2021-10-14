@@ -1,7 +1,6 @@
 ---
 title: 'Öğretici: C# ve C++ kodunda hata ayıklama (karma mod)'
 description: karma modda hata ayıklama kullanarak bir .net Core veya .NET Framework uygulamasından yerel DLL hatalarını ayıklamayı öğrenin
-ms.custom: seodec18
 ms.date: 11/02/2018
 ms.topic: tutorial
 dev_langs:
@@ -16,12 +15,12 @@ ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 1b2b4419afdd6f44f9d70a3f3ab23c9ce75c86bb
-ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
+ms.openlocfilehash: ceeee6374a2d82b70d6aa9b8fe936c0434e36e12
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "129635379"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971757"
 ---
 # <a name="tutorial-debug-c-and-c-in-the-same-debugging-session"></a>Öğretici: aynı hata ayıklama oturumunda C# ve C++ hatalarını ayıklama
 
@@ -216,17 +215,17 @@ Visual Studio yüklüyse ancak ihtiyacınız olan iş yükleri yoksa, **yeni Pro
 
    - Hata ayıklayıcıda duraklalarken, **Gözcü** pencereleri ve **çağrı yığını** penceresini de kullanabilirsiniz.
 
-1. Hata ayıklayıcısını bir satır ilerlemek için **F11'e** tekrar basın.
+1. Hata ayıklayıcıyı bir satır ilerlemek için **F11** tuşuna basın.
 
-1. Yürütmeye **devam** etmek ve yönetilen uygulamada yeniden duraklatmak için Shift F11 tuşuna basın veya Hata +    >   Ayıkla AdımLa'ya basın.
+1.  + Yürütmeye devam etmek için SHIFT **F11** tuşuna basın veya **hata ayıklama**  >  **adımını** seçin seçeneğini belirleyin.
 
-1. Uygulamada **hata ayıklamaya** devam etmek için F5 tuşuna basın veya yeşil oku seçin.
+1. Uygulamada hata ayıklamaya devam etmek için **F5** tuşuna basın veya yeşil oku seçin.
 
-Tebrikler! Karma mod hata ayıklama öğreticisi tamamlanmıştır.
+Tebrikler! Karışık modda hata ayıklama öğreticisini tamamladınız.
 
 ## <a name="next-step"></a>Sonraki adım
 
-Bu öğreticide, karma mod hata ayıklamayı etkinleştirerek yönetilen bir uygulamanın yerel kodunda hata ayıklamayı öğrendinsiniz. Diğer hata ayıklayıcı özelliklerine genel bakış için bkz:
+Bu öğreticide, karışık modda hata ayıklamayı etkinleştirerek, yönetilen bir uygulamadaki yerel kodun hatalarını ayıklamanın nasıl yapılacağını öğrendiniz. Diğer hata ayıklayıcı özelliklerine genel bakış için bkz.:
 
 > [!div class="nextstepaction"]
 > [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

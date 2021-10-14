@@ -1,7 +1,6 @@
 ---
 title: Node.js kullanarak Vue.js uygulaması oluşturma
 description: Vue.js çerçevesini kullanarak Visual Studio Node.js uygulamalar oluşturabilirsiniz
-ms.custom: seodec18
 ms.date: 07/06/2018
 ms.topic: how-to
 ms.devlang: javascript
@@ -14,12 +13,12 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: <= vs-2019
-ms.openlocfilehash: 3865c3fabbede28e3a6c701229518ce2a7f6e716
-ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
+ms.openlocfilehash: 25498ab872ed679013316765234eb87afd8cc7ed
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "129635600"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129967632"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Visual Studio için Node.js araçları kullanarak Vue.js uygulaması oluşturma
 

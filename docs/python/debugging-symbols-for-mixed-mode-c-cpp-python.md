@@ -1,70 +1,70 @@
 ---
 title: Karışık mod Python/C++ hata ayıklama sembolleri
-description: Nasıl Visual Studio, tam karma mod C++ ve Python hata ayıklaması için sembolleri yükleme olanağı sağlar.
+description: Visual Studio, tam karışık mod C++ ve Python hata ayıklama için sembolleri yükleme yeteneği sağlar.
 ms.date: 11/12/2018
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: aaf6fd34544714444afef5d4a9bea8d4aa827afd
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 373834f7fc8b7e73fa58c71e6bbb0b41f6ca2455
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126636977"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971393"
 ---
-# <a name="install-debugging-symbols-for-python-interpreters"></a>Python yorumlayıcıları için hata ayıklama sembollerini yükleme
+# <a name="install-debugging-symbols-for-python-interpreters"></a>Python yorumlayıcıları için hata ayıklama sembolleri yükler
 
-Tam hata ayıklama deneyimi sağlamak için, Visual Studio [modundaki Python](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) hata ayıklayıcısının çok sayıda iç veri yapısını ayrıştırmak için kullanılan Python yorumlayıcısı için hata ayıklama sembollerine ihtiyacı vardır. *Örneğinpython27.dll* ilgili sembol dosyası *python27.pdb şeklindedir;* için *python36.dll,* sembol dosyası *python36.pdb'dir.* Yorumlayıcının her sürümü ayrıca çeşitli modüller için sembol dosyaları sağlar.
+tam bir hata ayıklama deneyimi sağlamak için Visual Studio içindeki [karma mod Python hata ayıklayıcısı](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) , çok sayıda iç veri yapısını ayrıştırmak için kullanılan Python yorumlayıcısı için hata ayıklama sembollerine ihtiyaç duyuyor. Örneğin, *python27.dll* için, karşılık gelen sembol dosyası *python27. pdb*; *python36.dll* için, sembol dosyası *python36. pdb*' dir. Yorumlayıcı 'nın her sürümü, çeşitli modüller için sembol dosyaları da sağlar.
 
-Visual Studio 2017 ve sonraki bir sürümü ile Python 3 ve Anaconda 3 yorumlayıcıları ilgili sembolleri otomatik olarak yük Visual Studio bu sembolleri otomatik olarak bulur. 2015 Visual Studio önceki sürümler için veya diğer yorumlayıcıları kullanırken, simgeleri ayrı olarak indirmeniz ve ardından Hata Ayıklama Sembolleri sekmesindeki Araçlar Seçenekler iletişim kutusu aracılığıyla Visual Studio üzerine  >     >   gelin. Bu adımlar aşağıdaki bölümlerde ayrıntılı olarak açıklanmıştır.
+Visual Studio 2017 ve sonrasında Python 3 ve anaconda 3 yorumlayıcıları ilgili sembolleri otomatik olarak yükler ve Visual Studio bu sembolleri otomatik olarak bulur. Visual Studio 2015 ve önceki sürümlerde veya diğer yorumlayıcıları kullanırken, sembolleri ayrı olarak indirmeniz ve sonra   >  **hata ayıklama** sembolleri sekmesindeki araçlar **seçenekleri** iletişim kutusunda Visual Studio işaret etmeniz gerekir  >   . Bu adımlar aşağıdaki bölümlerde ayrıntılı olarak verilmiştir.
 
-Visual Studio, genellikle karma mod hata ayıklama oturumu başlatma sırasında sembollere ihtiyaç olduğunda size sorabilirsiniz. Bu durumda, iki seçeneği olan bir iletişim kutusu görüntüler:
+Visual Studio, genellikle karışık modda bir hata ayıklama oturumu başlatırken semboller gerektiğinde size sorabilir. Bu durumda, iki seçenekten oluşan bir iletişim kutusu görüntülenir:
 
-- **Sembol ayarlarını aç iletişim kutusu,** **Hata Ayıklama** Sembolleri **sekmesinin Seçenekler iletişim**  >  **kutusunu** açar.
-- **Yorumlayıcım için sembolleri** indir bu mevcut belge sayfası açılır. Bu durumda Araçlar Seçenekleri'ne tıklayın ve devam etmek için  >   **Hata Ayıklama**  >  **Sembolleri sekmesine** gidin.
+- **Sembol ayarlarını Aç iletişim kutusu** ,  **hata ayıklama**  >  **sembolleri** sekmesindeki Seçenekler iletişim kutusunu açar.
+- **Yorumlayıcı için sembolleri indir** bu mevcut belge sayfasını açar, bu durumda **Araçlar**  >  **Seçenekler** ' i seçin ve devam etmek için **hata ayıklama**  >  **sembolleri** sekmesine gidin.
 
-    ![Karma mod hata ayıklayıcısı sembolleri istemi](media/mixed-mode-debugging-symbols-required.png)
+    ![Karışık mod hata ayıklayıcısı sembolleri istemi](media/mixed-mode-debugging-symbols-required.png)
 
-## <a name="download-symbols"></a>Sembolleri indirme
+## <a name="download-symbols"></a>Sembolleri indir
 
-- Python 3.5 ve sonraki sürümler: Python yükleyicisi aracılığıyla hata ayıklama sembolleri alın. Özel **yükleme'yi** seçin, **İleri'yi** seçerek Gelişmiş  Seçenekler'e **bakın,** ardından Hata ayıklama sembollerini indir ve Hata ayıklama ikililerini indir **kutularını seçin:**
+- Python 3,5 ve üzeri: Python yükleyicisi aracılığıyla hata ayıklama sembolleri alın. **Özel yükleme**' yi seçin **, ileri** ' yi seçerek **Gelişmiş seçeneklere** ulaşın ve **hata ayıklama sembollerini indir** ve **hata ayıklama ikililerini indir**' i seçin:
 
-    ![Hata ayıklama sembolleri içeren Python 3.x yükleyicisi](media/mixed-mode-debugging-symbols-installer35.png)
+    ![Hata ayıklama sembolleri dahil Python 3. x yükleyicisi](media/mixed-mode-debugging-symbols-installer35.png)
 
-    Sembol dosyaları (*.pdb*) daha sonra kök yükleme klasöründe bulunur (tek tek modüller için sembol dosyaları *da URL'ler* klasöründe bulunur). Bu nedenle, Visual Studio otomatik olarak bulur ve başka bir adım gerekmez.
+    Sembol dosyaları (*. pdb*) daha sonra kök yükleme klasöründe bulunur (ayrı modüller için sembol dosyaları da *DLL* klasöründedir). bu nedenle, Visual Studio onları otomatik olarak bulur ve başka bir adım gerekmez.
 
-- Python 3.4.x ve önceki sürümler: semboller, resmi *dağıtımlardan veya* [Enthought Canopy'den](#enthought-canopy)indirilebilir.zipdosyaları olarak kullanılabilir. [](#official-distributions) İndirdikten sonra, python klasörünün içindeki Semboller klasörü gibi devam etmek *için* dosyaları yerel bir klasöre ayıkla.
+- Python 3.4. x ve önceki sürümler: semboller, [resmi dağıtımlarından](#official-distributions) indirilebilir *.zip* dosyaları olarak kullanılabilir ve [Canopy olarak düşünülebilir](#enthought-canopy). İndirdikten sonra, Python klasörü içindeki *semboller* klasörü gibi devam etmek için dosyaları yerel bir klasöre ayıklayın.
 
     > [!Important]
-    > Simgeler, Python'ın küçük derlemeleri ile 32 bit ile 64 bit derlemeler arasında farklılık gösterir, bu nedenle tam olarak sürümleriyle eşleşmesi gerekir. Kullanılan yorumlayıcıyı kontrol etmek için projenizin altındaki **Python Ortamları**  düğümünü genişletin **Çözüm Gezgini** adını not edin. Ardından Python Ortamları **penceresine geçebilirsiniz**  ve yükleme konumunu not edersiniz. Ardından bu konumda bir komut penceresi açın *vepython.exe* sürümünü ve 32 bit mi 64 bit mi olduğunu gösteren komutunu açın.
+    > Semboller, Python 'un küçük derlemeleri ve 32-bit ve 64 bit derlemeler arasında farklılık gösterir, bu nedenle sürümleri tam olarak eşleştirmek istersiniz. Kullanılan yorumlayıcı 'yı denetlemek için **Çözüm Gezgini** ' de projenizin altındaki **Python ortamları** *düğümünü* genişletin ve ortam adını aklınızda yapın. Daha sonra **Python ortamları** *penceresine* geçin ve yüklemenin konumunu aklınızda yapın. Ardından, bu konumda bir komut penceresi açın ve *python.exe* başlatın, bu sürüm tam sürümü ve 32 bit mi yoksa 64 bit mi olduğunu gösterir.
 
-- ActiveState Python gibi diğer tüm üçüncü taraf Python dağıtımları için: bu dağıtımın yazarlarına ulaşın ve size semboller sağlamalarını talepte bulunanlar. WinPython, standart Python yorumlayıcısını değişiklik yapmadan içerir, bu nedenle ilgili sürüm numarası için resmi dağıtımdan sembolleri kullanın.
+- ActiveState Python gibi diğer üçüncü taraf Python dağıtımı için: Bu dağıtımın yazarlarıyla iletişim kurun ve size sembolleri sağlamak üzere isteyin. WinPython, bölümü için standart Python yorumlayıcı 'yı değişiklik yapmadan birleştirir, bu nedenle söz konusu sürüm numarası için resmi dağılıcınızdan sembolleri kullanın.
 
-## <a name="point-visual-studio-to-the-symbols"></a>Simgeleri Visual Studio işaret etmek
+## <a name="point-visual-studio-to-the-symbols"></a>simgelere Visual Studio nokta
 
-Sembolleri ayrı olarak indirdiysanız, bunları daha iyi Visual Studio aşağıdaki adımları izleyin. Python 3.5 veya sonraki bir sürümü yükleyicisi aracılığıyla semboller yüklemiş Visual Studio otomatik olarak bulur.
+sembolleri ayrı olarak indirdiyseniz, Visual Studio farkında olmak için aşağıdaki adımları izleyin. sembolleri Python 3,5 veya sonraki bir yükleyici aracılığıyla yüklediyseniz Visual Studio onları otomatik olarak bulur.
 
-1. Araçlar Seçenekler **menüsünü**  >  **seçin** ve Hata Ayıklama **Sembolleri'ne**  >  **gidin.**
+1. **Araç**  >  **seçenekleri** menüsünü seçin ve **hata ayıklama**  >  **sembolleri**' ne gidin.
 
-1. Araç **çubuğundaki** Ekle düğmesini seçin (aşağıda özetlenmiştir), indirilen sembolleri genişletdiğiniz klasörü girin (aşağıda gösterilen *c:\python34\Symbols* gibi *python.pdb'nin* bulunduğu yer) ve Tamam'ı **seçin.**
+1. Araç çubuğunda **Ekle** düğmesini (aşağıda özetlenmiştir) seçin, indirilen sembolleri genişletmiş olduğunuz klasörü (aşağıda gösterildiği *gibi,* *Python. pdb* 'Nin bulunduğu yer) girin ve **Tamam**' ı seçin.
 
-    ![Karma mod hata ayıklayıcısı sembolleri seçenekleri](media/mixed-mode-debugging-symbols.png)
+    ![Karışık mod hata ayıklayıcısı sembolleri seçenekleri](media/mixed-mode-debugging-symbols.png)
 
-1. Hata ayıklama oturumu sırasında Visual Studio Python yorumlayıcısı için kaynak dosyanın konumunu da sorabilirsiniz. Kaynak dosyaları indirdiyebilirsiniz [(örneğin python.org/downloads/),](https://www.python.org/downloads/)bunları da işaret ediyor olabilir.
+1. bir hata ayıklama oturumu sırasında, Visual Studio Python yorumlayıcı için bir kaynak dosyasının konumunu da isteyebilir. Kaynak dosyaları (örneğin, [Python.org/downloads/](https://www.python.org/downloads/)adresinden) indirdiyseniz kurs da bunlara işaret edebilir.
 
 > [!Note]
-> İletişim kutusunda gösterilen sembol önbelleğe alma özellikleri, çevrimiçi bir kaynaktan alınan simgelerin yerel önbelleğini oluşturmak için kullanılır. Semboller zaten yerel olarak mevcut olduğu için Python yorumlayıcı sembolleriyle bu özellikler gerekli değildir. Her durumda, ayrıntılar için bkz. Hata [ayıklayıcısında Visual Studio ve](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) kaynak dosyaları belirtme.
+> İletişim kutusunda gösterilen sembol önbelleğe alma özellikleri, çevrimiçi bir kaynaktan alınan bir sembol yerel önbelleği oluşturmak için kullanılır. Semboller zaten yerel olarak mevcut olduğundan, bu özellikler Python yorumlayıcı sembollerinde gerekli değildir. herhangi bir durumda, ayrıntılar için [Visual Studio hata ayıklayıcısında sembolleri ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) bölümüne bakın.
 
 ## <a name="official-distributions"></a>Resmi dağıtımlar
 
 | Python sürümü | İndirmeler |
 | --- | --- |
-| 3.5 ve sonrası | Python yükleyicisi aracılığıyla sembolleri yükleyin. |
+| 3,5 ve üzeri | Python yükleyicisi aracılığıyla sembolleri yükleme. |
 | 3.4.4 | [32 bit](https://www.python.org/ftp/python/3.4.4/python-3.4.4-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64-pdb.zip) |
 | 3.4.3 | [32 bit](https://www.python.org/ftp/python/3.4.3/python-3.4.3-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/3.4.3/python-3.4.3.amd64-pdb.zip) |
 | 3.4.2 | [32 bit](https://www.python.org/ftp/python/3.4.2/python-3.4.2-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/3.4.2/python-3.4.2.amd64-pdb.zip) |
@@ -83,7 +83,7 @@ Sembolleri ayrı olarak indirdiysanız, bunları daha iyi Visual Studio aşağı
 | 2.7.14 | [32 bit](https://www.python.org/ftp/python/2.7.14/python-2.7.14-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/2.7.14/python-2.7.14.amd64-pdb.zip) |
 | 2.7.13 | [32 bit](https://www.python.org/ftp/python/2.7.13/python-2.7.13-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/2.7.13/python-2.7.13.amd64-pdb.zip) |
 | 2.7.12 | [32 bit](https://www.python.org/ftp/python/2.7.12/python-2.7.12-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/2.7.12/python-2.7.12.amd64-pdb.zip) |
-| 2.7.11 | [32 bit](https://www.python.org/ftp/python/2.7.11/python-2.7.11-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/2.7.11/python-2.7.11.amd64-pdb.zip) |
+| 2.7.11 'i özelleştirme | [32 bit](https://www.python.org/ftp/python/2.7.11/python-2.7.11-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/2.7.11/python-2.7.11.amd64-pdb.zip) |
 | 2.7.10 | [32 bit](https://www.python.org/ftp/python/2.7.10/python-2.7.10-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/2.7.10/python-2.7.10.amd64-pdb.zip) |
 | 2.7.9 | [32 bit](https://www.python.org/ftp/python/2.7.9/python-2.7.9-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/2.7.9/python-2.7.9.amd64-pdb.zip) |
 | 2.7.8 | [32 bit](https://www.python.org/ftp/python/2.7.8/python-2.7.8-pdb.zip)  -  [64 bit](https://www.python.org/ftp/python/2.7.8/python-2.7.8.amd64-pdb.zip) |

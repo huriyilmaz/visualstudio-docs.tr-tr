@@ -3,20 +3,19 @@ title: Uzak Linux bilgisayarlarda Python kodunda hata ayıklama
 description: gerekli yapılandırma adımları, güvenlik ve sorun giderme dahil olmak üzere uzak Linux bilgisayarlarda çalışan Python kodunda hata ayıklamak için Visual Studio kullanın.
 ms.date: 12/06/2018
 ms.topic: how-to
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7d625edfafbbf0f7cf1bdbfbf16697d401c8ec63
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: e8fd26b710481ada2bf43ca80990d6a31aec0876
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122140544"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970427"
 ---
 Visual Studio, Python uygulamalarını yerel olarak ve Windows bilgisayarda uzaktan başlatabilir ve hata ayıklayabilir (bkz. [uzaktan hata ayıklama](../../../debugger/remote-debugging.md)). Ayrıca, [ptvsd kitaplığını](https://pypi.python.org/pypi/ptvsd)kullanarak, Cpıthon dışında farklı bir işletim sisteminde, cihazda veya Python uygulamasında uzaktan hata ayıklaması yapabilir.
 

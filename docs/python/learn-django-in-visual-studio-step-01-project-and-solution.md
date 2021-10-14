@@ -4,20 +4,19 @@ titleSuffix: ''
 description: Visual Studio projeler bağlamında, destek Visual Studio docgo geliştirme için sağladığı desteği gösteren docgo hakkında bir yönergeler
 ms.date: 11/19/2018
 ms.topic: tutorial
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bd3bb5bd5b9ac4864c9eb38f290d34d7cdd7fc1f
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 2900e9bd4228d6cc45bdaec05db33d4dbbd0e4ab
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126625394"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129972277"
 ---
 # <a name="tutorial-get-started-with-the-django-web-framework-in-visual-studio"></a>Öğretici: Visual Studio 'da Docgo Web çerçevesini kullanmaya başlama
 
@@ -141,84 +140,84 @@ Projeniz için kaynak denetimini yapılandırdığınıza göre, proje için ger
 
 1. Varsayılanları kabul etmek için **Oluştur** ' u seçin. (İsterseniz sanal ortamın adını değiştirebilirsiniz, bu, yalnızca alt klasörünün adını değiştirir ancak `env` Standart bir kuraldır.)
 
-1. istenirse, yönetici ayrıcalıklarına onay vermeniz gerekirse birkaç Visual Studio dakika bekleyin. bu, docgo için birkaç bin dosyanın çok sayıda alt klasörde genişletilmesi anlamına gelir. İlerlemeyi Çıkış penceresinde Visual Studio **görebilirsiniz.** Beklerken, aşağıdaki Soru bölümlerine daha fazla bakın.
+1. istenirse, yönetici ayrıcalıklarına onay vermeniz gerekirse birkaç Visual Studio dakika bekleyin. bu, docgo için birkaç bin dosyanın çok sayıda alt klasörde genişletilmesi anlamına gelir. ilerlemeyi Visual Studio **çıkış** penceresinde görebilirsiniz. Beklerken, aşağıdaki soru bölümlerini izleyin.
 
-1. Git Visual Studio (durum çubuğunda) değişiklik göstergesini **(99**&#42;gösterir) seçin. Bu durumda,  **Takım Gezgini.**
+1. Git denetimlerinde Visual Studio (durum çubuğunda), **Takım Gezgini** **değişiklikler** sayfasını açan değişiklikler göstergesini ( **99&#42;**) seçin.
 
-    Sanal ortamı oluşturmak binlerce değişiklik getirse de, siz (veya projeyi başka herhangi biri) ortamı her zamanrequirements.txt'den yeniden ** oluşturasınız.
+    Sanal ortam, binlerce değişikliğe göre oluşturulur, ancak siz (ya da projeyi Klonladığınız herkes) her zaman ortamı *requirements.txt* yeniden oluşturabileceğinden kaynak denetimine bunlardan herhangi birini eklemeniz gerekmez.
 
-    Sanal ortamı dışlamak için **env** klasörüne sağ tıklayın ve Bu yerel öğeleri **yoksay'ı seçin.**
+    Sanal ortamı dışlamak için **env** klasörüne sağ tıklayın ve **Bu yerel öğeleri yoksay**' ı seçin.
 
-    ![Kaynak denetimi değişikliklerinde sanal ortamı yoksayma](media/django/step01-ignore-local-items.png)
+    ![Kaynak denetimi değişikliklerinde sanal ortam yok sayılıyor](media/django/step01-ignore-local-items.png)
 
-1. Sanal ortamı dışlamanın ardından, kalan tek değişiklik proje dosyasında ve *.gitignore dosyasındadır.* *.gitignore dosyası,* sanal ortam klasörü için ek bir girdi içerir. Bir fark görmek için dosyaya çift tıkabilirsiniz.
+1. Sanal ortamı dışladıktan sonra, kalan değişiklikler proje dosyası ve *. gitignore*' dir. *. Gitignore* dosyası, sanal ortam klasörü için eklenen bir giriş içerir. Bir farkı görmek için dosyaya çift tıklayabilirsiniz.
 
-1. Bir işleme iletisi girin ve Hepsini İşle **düğmesini** seçin, ardından işlemeleri uzak depoya gönderin.
+1. Bir işleme iletisi girin ve **Tümünü Kaydet** düğmesini seçin, ardından istediğiniz değişiklikleri uzak deponuza gönderin.
 
-### <a name="question-why-do-i-want-to-create-a-virtual-environment"></a>Soru: Neden sanal ortam oluşturmak istiyorum?
+### <a name="question-why-do-i-want-to-create-a-virtual-environment"></a>Soru: neden sanal ortam oluşturmak istiyorum?
 
-Cevap: Sanal ortam, uygulama bağımlılıklarınızı tam olarak yalıtmak için harika bir yol sağlar. Bu tür bir yalıtım, genel bir Python ortamındaki çakışmaları önler ve hem test hem de işbirliğine yardımcı olur. Zaman içinde, bir uygulama geliştirirken, sürekli olarak birçok yararlı Python paketi getirirsiniz. Paketleri projeye özgü bir sanal ortamda tutarak, projenin kaynak denetimine dahil edilen ortamı *requirements.txt* dosyasını kolayca güncelleştirebilirsiniz. Proje derleme sunucuları, dağıtım sunucuları ve diğer geliştirme bilgisayarları da dahil olmak üzere başka bir bilgisayarlara kopyalanırsa, yalnızca *requirements.txt* kullanarak ortamı kolayca yeniden oluşturabilirsiniz (bu nedenle ortamın kaynak denetiminde olması gerekmektedir). Daha fazla bilgi için [bkz. Sanal ortamları kullanma.](selecting-a-python-environment-for-a-project.md#use-virtual-environments)
+Cevap: sanal bir ortam, uygulamanızın tam bağımlılıklarını yalıtmak için harika bir yoldur. Bu tür yalıtımlara genel bir Python ortamında çakışmalar önlenir ve hem test hem de işbirliği yardımcı olur. Zaman içinde, bir uygulama geliştirirken, çok sayıda faydalı Python paketini de bir araya getirebilirsiniz. Paketleri projeye özgü bir sanal ortamda tutarak, projenin kaynak denetimine dahil olan bu ortamı açıklayan *requirements.txt* dosyasını kolayca güncelleştirebilirsiniz. Proje, derleme sunucuları, dağıtım sunucuları ve diğer geliştirme bilgisayarları dahil olmak üzere başka bir bilgisayara kopyalandığında, ortamı yalnızca *requirements.txt* (ortamın kaynak denetiminde olması gerekmez) kullanarak yeniden oluşturmak kolaydır. Daha fazla bilgi için bkz. [sanal ortamları kullanma](selecting-a-python-environment-for-a-project.md#use-virtual-environments).
 
-### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>Soru: Nasıl yaparım? denetimine zaten bağlı olan bir sanal ortamı kaldırmak mı gerekiyor?
+### <a name="question-how-do-i-remove-a-virtual-environment-thats-already-committed-to-source-control"></a>Soru: kaynak denetimine zaten kaydedilmiş bir sanal ortamı kaldırmak Nasıl yaparım? mı?
 
-Cevap: İlk *olarak, .gitignore* dosyanızı düzenleyemez ve klasörü dışlamak için en sonundaki bölümünü açıklamayla bulun ve gibi sanal ortam klasörü için yeni `# Python Tools for Visual Studio (PTVS)` bir satır `/BasicProject/env` ekleyin. (Visual Studio dosya dosyada **Çözüm Gezgini,** dosyayı doğrudan Dosya kullanarak **açın**  >  **Aç**  >  **Dosya** menüsü komutu. Dosyayı  Takım Gezgini **sayfasından** da açabilirsiniz: Ayarlar sayfasında Depo **Ayarlar'ı** seçin, **&** Öznitelik Dosyalarını Yoksay bölümüne gidin ve **.gitignore öğesinin** yanındaki Düzenle bağlantısını seçin.) 
+Cevap: Ilk olarak, klasörü hariç tutmak için *. gitignore* dosyanızı düzenleyin: ile birlikte, açıklama ile sonundaki bölümü bulun `# Python Tools for Visual Studio (PTVS)` ve sanal ortam klasörü için gibi yeni bir satır ekleyin `/BasicProject/env` . (Visual Studio dosyayı **Çözüm Gezgini** göstermediğinden, **dosyayı**  >  doğrudan kullanarak açın **Açık**  >  **Dosya** menü komutu. dosyayı **Takım Gezgini** içinden de açabilirsiniz: **Ayarlar** sayfasında **depo Ayarlar**' yı seçin, **& öznitelikleri dosyalarını yoksay** bölümüne gidin ve sonra **. gitignore**' in yanındaki **düzenle** bağlantısını seçin.
 
-İkinci olarak, bir komut penceresi açın, env gibi sanal ortam klasörünü içeren *BasicProject* gibi *klasöre* gidin ve komutunu `git rm -r env` çalıştırın. Ardından bu değişiklikleri komut satırı ( `git commit -m 'Remove venv'` ) veya **Takım Gezgini'nin Değişiklikler** **sayfasından işleyebilirsiniz.**
+İkinci olarak, bir komut penceresi açın, *env* ve çalıştırmak gibi sanal ortam klasörünü Içeren *BasicProject* gibi bir klasöre gidin `git rm -r env` . Sonra bu değişiklikleri komut satırından ( `git commit -m 'Remove venv'` ) işleyin veya **Takım Gezgini** **değişiklikler** sayfasından işleyin.
 
-## <a name="step-1-4-examine-the-boilerplate-code"></a>1-4. Adım: Ortak kodu inceleme
+## <a name="step-1-4-examine-the-boilerplate-code"></a>Adım 1-4: ortak kodu Inceleme
 
-Proje oluşturma işlemi tamamlandıktan sonra, ortak Django proje kodunu (CLI komutu tarafından oluşturulanla aynı şekilde) `django-admin startproject <project_name>` incelersiniz.
+Proje oluşturma işlemi tamamlandıktan sonra, ortak Docgo proje kodunu inceleyin (CLı komutu tarafından oluşturulan ile aynı `django-admin startproject <project_name>` ).
 
-1. Proje kök dosyanız *manage.py,* proje başlangıç dosyası olarak otomatik olarak Visual Studio Django komut satırı yönetim yardımcı programıdır. yardımcı programını kullanarak komut satırı üzerinde `python manage.py <command> [options]` çalıştırabilirsiniz. Yaygın Django görevleri için, Visual Studio menü komutları sağlar. Aşağıdaki listede projeye sağ **Çözüm Gezgini** **Python'ı** seçerek listeyi göreceksiniz. Bu öğretici sırasında bu komutlardan bazılarla karşılaşırsınız.
+1. proje kökünde *manage.py*, Visual Studio otomatik olarak proje başlangıç dosyası olarak ayarlayan docgo komut satırı yönetim yardımcı programıdır. Yardımcı programını kullanarak komut satırından çalıştırırsınız `python manage.py <command> [options]` . ortak docgo görevleri için Visual Studio kullanışlı menü komutları sağlar. **Çözüm Gezgini** içinde projeye sağ tıklayın ve listeyi görmek için **Python** ' ı seçin. Bu öğreticinin kursunda bu komutlardan bazılarını karşılaşıyorsunuz.
 
-    ![Python projesi bağlam menüsündeki Django komutları](media/django/step01-django-commands-menu.png)
+    ![Python projesi bağlam menüsünde docgo komutları](media/django/step01-django-commands-menu.png)
 
-2. Projeniz, projeyle aynı adlı bir klasördür. Temel Django proje dosyalarını içerir:
+2. Projenizde proje ile aynı adlı bir klasör. Temel Docgo proje dosyalarını içerir:
 
-   - *__init.py:* Python'a bu klasörün bir Python paketi olduğunu söyleyen boş bir dosya.
-   - *wsgi.py:* WSGI uyumlu web sunucularının projenize hizmet vermek için bir giriş noktası. Üretim web sunucularına kanca sağladığı için bu dosyayı genellikle olduğu gibi bırakırsanız.
-   - *settings.py:* Bir web uygulaması geliştirme kursunda değiştirerek Django projesinin ayarlarını içerir.
-   - *urls.py:* Django projesi için bir içindekiler tablosu içerir ve bu tabloyu geliştirme aşamasında da değiştirebilirsiniz.
+   - *__init. Kopyala*: Python 'a bu klasörün bir Python paketi olduğunu belirten boş bir dosya.
+   - *wsgi.py*: wsgi uyumlu Web sunucularının projenize sunması için bir giriş noktası. Bu dosyayı genellikle üretim Web sunucuları için kancalar sağladığından olduğu gibi bırakın.
+   - *Settings.py*: Docgo projesi için bir Web uygulaması geliştirme sürecinde değişiklik yaptığınız ayarları içerir.
+   - *URLs.py*: Docgo projesi için bir içindekiler tablosu içerir ve bu, geliştirme sürecinde de değişiklik yapabilirsiniz.
 
-     ![Çözüm Gezgini'daki Django proje Çözüm Gezgini](media/django/step01-django-project-in-solution-explorer.png)
+     ![Çözüm Gezgini içindeki docgo proje dosyaları](media/django/step01-django-project-in-solution-explorer.png)
 
-3. Daha önce belirtildiği gibi, Visual Studio şablonu *projenize* Django paketi bağımlılığını belirten birrequirements.txtdosyası da ekler. Bu dosyanın varlığı, projeyi ilk oluştururken sizi sanal ortam oluşturmaya davet eder.
+3. daha önce belirtildiği gibi, Visual Studio şablonu projenize docgo paket bağımlılığını belirten bir *requirements.txt* dosyası da ekler. Bu dosyanın varlığı, projeyi ilk oluştururken sanal ortam oluşturmak için sizi davet eder.
 
-### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>Soru: Visual Studio paketleri yükledikten requirements.txt bir sanal ortamdan bir dosya oluşturamıyor musunuz?
+### <a name="question-can-visual-studio-generate-a-requirementstxt-file-from-a-virtual-environment-after-i-install-other-packages"></a>soru: diğer paketleri yükledikten sonra sanal ortamdan bir requirements.txt dosyası Visual Studio verebilir misiniz?
 
-Yanıt: Evet. Python Ortamları **düğümünü** genişletin, sanal ortamınıza sağ tıklayın ve Sanal makine oluştur **requirements.txt** seçin. Ortamı değiştirirken bu komutu düzenli aralıklarla kullanmak ve değişiklikleri  kaynak denetiminerequirements.txtdiğer kod değişiklikleriyle birlikte bu ortama işlemek iyi olur. Derleme sunucusunda sürekli tümleştirmeyi ayar ediyorsanız, ortamı her değiştirerek dosyayı oluşturmalı ve değişiklikleri işlemelisiniz.
+Yanıt: Evet. **Python ortamları** düğümünü genişletin, sanal ortamınıza sağ tıklayıp **requirements.txtoluştur** komutunu seçin. Ortamı değiştirirken bu komutun düzenli aralıklarla kullanılması ve bu ortama bağlı diğer kod değişiklikleriyle birlikte kaynak denetimine *requirements.txt* değişiklikler yürütmesi yararlı olur. Bir yapı sunucusunda sürekli tümleştirme ayarlarsanız, ortamı her değiştirdiğinizde dosyayı oluşturmanız ve değişiklikleri uygulamanız gerekir.
 
-## <a name="step-1-5-run-the-empty-django-project"></a>1-5. Adım: Boş Django projesini çalıştırma
+## <a name="step-1-5-run-the-empty-django-project"></a>Adım 1-5: boş Docgo projesini çalıştırma
 
-1. Bu Visual Studio Hata AyıklamaYı Başlat ( F5 ) öğesini seçin veya araç çubuğundaki Web Sunucusu düğmesini kullanın  >  (gördüğünüz tarayıcı farklılık gösterebilir):  
+1. Visual Studio **, hata**  >  **ayıklamayı başlat** (**F5**) seçeneğini belirleyin veya araç çubuğunda **Web sunucusu** düğmesini kullanın (gördüğünüz tarayıcı farklılık gösterebilir):
 
-    ![Web sunucusu araç çubuğu düğmesini Visual Studio](media/django/run-web-server-toolbar-button.png)
+    ![Visual Studio Web sunucusu araç çubuğu düğmesini Çalıştır](media/django/run-web-server-toolbar-button.png)
 
-1. Sunucuyu çalıştırma, `manage.py runserver <port>` Django'nun yerleşik geliştirme sunucusunu başlatan komutunu çalıştırma anlamına gelir. Bir Visual Studio **dosyası** olmadığını iletiyle hata ayıklayıcısı başlatılamadı iletisiyle belirtiyorsa, manage.py'e sağ tıklayın ve Çözüm Gezgini Dosyası **Olarak** **Ayarla'yı seçin.** 
+1. Sunucuyu çalıştırmak `manage.py runserver <port>` , Docgo 'nun yerleşik geliştirme sunucusunu Başlatan komutunu çalıştırmanın anlamına gelir. Visual Studio **hata ayıklayıcıyı** başlatma dosyası olmayan bir iletiyle başlatmazsa, **Çözüm Gezgini** **' a sağ tıklayıp** **başlangıç dosyası olarak ayarla**' yı seçin.
 
-1. Sunucuyu başlatınca, sunucu günlüğünü de görüntüleyen bir konsol penceresi açılır. Visual Studio tarayıcıyı otomatik olarak `http://localhost:<port>` açar. Ancak Django projesinin hiç uygulaması yoktur, ancak Django şu ana kadarkilerin iyi çalıştığını kabul etmek için yalnızca varsayılan bir sayfa gösterir:
+1. Sunucuyu başlattığınızda, sunucu günlüğünü de görüntüleyen bir konsol penceresi açık görürsünüz. Visual Studio otomatik olarak bir tarayıcı açar `http://localhost:<port>` . Docgo projesinde hiç uygulama olmadığından, en fazla ne kadar iyi çalıştığını bildirmek için Docgo yalnızca bir varsayılan sayfa gösterir:
 
-    ![Django projesi varsayılan görünümü](media/django/step01-first-run-success.png)
+    ![Docgo proje varsayılan görünümü](media/django/step01-first-run-success.png)
 
-1. Bitirin, konsol penceresini kapatarak veya hata ayıklamada hata ayıklamayı durdur komutunu kullanarak  >   sunucuyu Visual Studio.
+1. işiniz bittiğinde, konsol penceresini kapatarak veya Visual Studio **hata**  >  **ayıklamayı durdur** komutunu kullanarak sunucuyu durdurun.
 
-### <a name="question-is-django-a-web-server-as-well-as-a-framework"></a>Soru: Django hem web sunucusu hem de çerçeve mi?
+### <a name="question-is-django-a-web-server-as-well-as-a-framework"></a>Soru: bir Web sunucusunun yanı sıra bir çerçeve mi?
 
-Cevap: Evet ve hayır. Django'nun geliştirme amacıyla kullanılan yerleşik bir web sunucusu vardır. Bu web sunucusu, web uygulamasını yerel olarak çalıştırarak hata ayıklama gibi durumlarda Visual Studio. Ancak Django, bir web ana bilgisayar için dağıtım yapmak yerine ana bilgisayarının web sunucusunu kullanır. Django *wsgi.py* modülünün üretim sunucularına bağlanarak ilgilenmesi gerekir.
+Cevap: Evet ve hayır. Docgo 'ın geliştirme amacıyla kullanılan yerleşik bir Web sunucusu vardır. Bu Web sunucusu, Web uygulamasını yerel olarak çalıştırdığınızda (Visual Studio hata ayıklaması yaparken) kullanılır. Ancak, bir Web ana bilgisayarına dağıtırken, Docgo bunun yerine konağın Web sunucusunu kullanır. Docgo projesindeki *wsgi.py* modülü, üretim sunucularına çağrı gerçekleştirir.
 
-### <a name="question-whats-the-difference-between-using-the-debug-menu-commands-and-the-server-commands-on-the-projects-python-submenu"></a>Soru: Projenin Python alt menüsünde Hata Ayıklama menü komutlarını ve sunucu komutlarını kullanma arasındaki fark nedir?
+### <a name="question-whats-the-difference-between-using-the-debug-menu-commands-and-the-server-commands-on-the-projects-python-submenu"></a>Soru: Hata Ayıkla menü komutlarının ve proje Python alt menüsünde sunucu komutlarının kullanımı arasındaki fark nedir?
 
-Cevap: Hata ayıklama  menü komutları ve araç çubuğu düğmelerine ek olarak, projenin bağlam **menüsündeki Python** Çalıştırma sunucusu veya Python Çalıştırma hata ayıklama sunucusu komutlarını kullanarak da  >     >   sunucuyu başlatabilirsiniz. Her iki komut da çalışan sunucunun yerel URL'sini (localhost:port) gördüğünüz bir konsol penceresi açar. Ancak, bu URL'ye sahip bir tarayıcıyı el ile açmalısınız ve hata ayıklama sunucusunun çalıştır olması hata ayıklayıcının Visual Studio başlatmaz. Hata Ayıkla İşleme Ekle komutunu kullanarak daha sonra, daha sonra, çalışan işleme **bir hata**  >  **ayıklayıcı** iliştirebilirsiniz.
+Cevap: **hata ayıklama** menü komutları ve araç çubuğu düğmelerine ek olarak,   >  projenin bağlam menüsündeki Python **çalıştırma sunucusu** veya **Python**  >  **çalıştırma hata ayıklama sunucusu** komutlarını kullanarak sunucuyu da başlatabilirsiniz. Her iki komut de çalışan sunucu için yerel URL 'YI (localhost: bağlantı noktası) görebileceğiniz bir konsol penceresi açar. ancak, bu URL ile bir tarayıcıyı el ile açmanız gerekir ve hata ayıklama sunucusunu çalıştırmak Visual Studio hata ayıklayıcıyı otomatik olarak başlatmamalıdır. Çalıştırmak istiyorsanız,   >  **işlemek için** hata ayıkla komutunu kullanarak, çalışan işleme daha sonra bir hata ayıklayıcı ekleyebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu noktada, temel Django projesi hiçbir uygulama içermez. Bir sonraki adımda bir uygulama oluşturabilirsiniz. Normalde Django uygulamalarıyla Django projesinde olduğundan, şu anda ortak dosyalar hakkında çok daha fazla bilginiz olmayacaktır.
+Bu noktada, temel Docgo projesi herhangi bir uygulama içermez. Bir sonraki adımda bir uygulama oluşturursunuz. Genellikle docgo projesiyle daha fazla docgo uygulamalarıyla çalıştığınız için, mevcut olan ortak dosyalar hakkında daha fazla bilgi sahibi olmanız gerekmez.
 
 > [!div class="nextstepaction"]
-> [Görünümler ve sayfa şablonlarıyla Django uygulaması oluşturma](learn-django-in-visual-studio-step-02-create-an-app.md)
+> [Görünümler ve sayfa şablonlarıyla bir Docgo uygulaması oluşturma](learn-django-in-visual-studio-step-02-create-an-app.md)
 
-## <a name="go-deeper"></a>Daha derine gitme
+## <a name="go-deeper"></a>Daha derin git
 
-- Django proje kodu: [İlk Django uygulamanızı yazma, bölüm 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) (docs.djangoproject.com)
-- Yönetim yardımcı programı: [django-admin ve manage.py](https://docs.djangoproject.com/en/2.0/ref/django-admin/) (docs.djangoproject.com)
-- GitHub öğreticisi: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- Docgo proje kodu: [Ilk Docgo uygulamanızı yazma, Bölüm 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) (docs.djangoproject.com)
+- Yönetim yardımcı programı: [docgo-admin ve Manage.py](https://docs.djangoproject.com/en/2.0/ref/django-admin/) (docs.djangoproject.com)
+- GitHub eğitim kaynak kodu: [Microsoft/python-sample-vs-learning-docgo](https://github.com/Microsoft/python-sample-vs-learning-django)

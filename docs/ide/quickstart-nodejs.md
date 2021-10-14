@@ -2,7 +2,6 @@
 title: İlk Node.js uygulamanızı oluşturma
 ms.custom:
 - vs-acquisition
-- SEO-VS-2020
 description: Bu hızlı başlangıçta, Visual Studio Node.js bir uygulama oluşturacaksınız
 ms.date: 09/14/2021
 ms.technology: vs-javascript
@@ -16,12 +15,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: fceecc9110a0ae15edf4d702e5c4db19cf129905
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: c95e8aa7daa93fee7c2cc4e27ed21c377d62afbf
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128430194"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971614"
 ---
 # <a name="quickstart-create-your-first-nodejs-app-with-visual-studio"></a>Hızlı başlangıç: Visual Studio ile ilk Node.js uygulamanızı oluşturma
 

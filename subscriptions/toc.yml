@@ -188,6 +188,8 @@
       href: maximum-usage.md
     - name: Anlaşmaların süresi dolduğunda ne olur?
       href: admin-expiration.md
+    - name: Microsoft tarafından kaldırılan hesaplar
+      href: account-removed.md
     - name: Süresi dolan abonelikler
       href: handle-expired-license.md
     - name: 'Abone oturum açma senaryoları '

@@ -1,7 +1,6 @@
 ---
 title: Hata ayıklayıcı Windows kullanarak verileri İnceleme | Microsoft Docs
 description: Size bilgi sağlayan birçok hata ayıklayıcı penceresi vardır. Bu makale, türlerin bir listesini sağlar. Her biri için daha fazla bilgi bağlantısı vardır.
-ms.custom: SEO-VS-2020
 ms.date: 04/25/2018
 ms.topic: conceptual
 ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
@@ -11,12 +10,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 52093660a867ddac2080c68480d1138bbb6ecf12
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: c4d8f0999a415efe09e1486f0a2816efa950e63f
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122080945"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970639"
 ---
 # <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>Visual Studio 'de hata ayıklayıcı pencerelerini kullanarak verileri inceleyin
 

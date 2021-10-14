@@ -2,7 +2,6 @@
 title: 'Nasıl yapılır: Visual Studio içindeki Word belgeleriyle şemaları eşleme'
 description: belge Visual Studio açıkken bir XML şemasını Microsoft Office Word belgesiyle nasıl eşleyeceğinizi öğrenin.
 titleSuffix: ''
-ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: how-to
 dev_langs:
@@ -18,15 +17,15 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: e14283c61480796e58cd2f5df0b055fb66ce2ac5
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 68cc1c0dde7e4d6b161e0fcca3086eb3f603ebef
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122083446"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971900"
 ---
 # <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>Nasıl yapılır: Visual Studio içindeki Word belgeleriyle şemaları eşleme
-  **Önemli** bu konu başlığı altında Microsoft Word, microsoft, Microsoft Word 'den özel XML ile ilgili belirli işlevlerin bir uygulamasını kaldırdıkları zaman, Birleşik Devletler ve bölgeleri dışında bulunan Microsoft Word veya 2010 microsoft tarafından lisanslanan ürünlerin ve kuruluşların kullanımı ve kullanımı için özel olarak sunulur. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler veya şirket içinde çalışan ya da şirket içinde çalışan veya Microsoft tarafından lisanslanan Microsoft Word, 10 ocak 2010 ' den sonra lisanslı ürünleri kullanan bireyler veya kuruluşlar tarafından okunamaz veya kullanılmıyor olabilir. Bu ürünler, bu tarihten önce lisanslanan ürünlerle aynı veya satın alınmadan ve Birleşik Devletler dışında kullanılmak üzere lisanslanmaz.
+  **Önemli** bu konu başlığı altında Microsoft Word, microsoft 'un belirli bir işlevselliğin bir uygulamasını kaldırmasıyla ilgili olarak, Birleşik Devletler ve bölgeleri dışında bulunan ya da microsoft tarafından lisanslanan ürünler Microsoft Word 2010 ocak 'tan önce lisanslı olan bireyler ve kuruluşların avantajı ve kullanımı için özel olarak sunulmaktadır.  Microsoft Word özel XML ile ilgili. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler veya şirket içinde çalışan ya da şirket içinde çalışan veya Microsoft tarafından lisanslanan Microsoft Word, 10 ocak 2010 ' den sonra lisanslı ürünleri kullanan bireyler veya kuruluşlar tarafından okunamaz veya kullanılmıyor olabilir. Bu ürünler, bu tarihten önce lisanslanan ürünlerle aynı veya satın alınmadan ve Birleşik Devletler dışında kullanılmak üzere lisanslanmaz.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 

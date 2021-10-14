@@ -1,7 +1,6 @@
 ---
 title: UWP uygulamalarında ağ kullanımını analiz etme
-description: Visual Studio Tanılama aracının ağ tanılama aracı kullanılarak gerçekleştirilen ağ işlemleri hakkında nasıl veri top Windows. Web.Http API'si.
-ms.custom: seodec18
+description: Visual Studio Tanılama aracının, ağ tanılama aracı kullanılarak gerçekleştirilen ağ işlemleri hakkında nasıl veri top Windows. Web.Http API'si.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 45fa397d-d7a1-4c4c-9c97-ede6c21643bd
@@ -12,15 +11,15 @@ ms.technology: vs-ide-debug
 ms.workload:
 - multiple
 monikerRange: vs-2017
-ms.openlocfilehash: ed223022d9d9d8033f854247815f44cb3531df83
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: acd3bd7d11235f772768ae78e680638544f6cd19
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122141655"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129967671"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP uygulamalarında ağ kullanımını analiz etme
-Ağ Visual Studio **aracı,** ağ tanılama aracı kullanılarak gerçekleştirilen ağ işlemleriyle ilgili [Windows. Web.Http API'si](/uwp/api/windows.web.http). Verileri analiz etmek, erişim ve kimlik doğrulaması sorunları, yanlış önbellek kullanımı, düşük görüntü ve indirme performansı gibi sorunları çözmenize yardımcı olabilir.
+Ağ Visual Studio **aracı,** ağ tanılama aracı kullanılarak gerçekleştirilen ağ işlemleri hakkında [Windows. Web.Http API'si](/uwp/api/windows.web.http). Verileri analiz etmek, erişim ve kimlik doğrulaması sorunları, yanlış önbellek kullanımı, düşük görüntü ve indirme performansı gibi sorunları çözmenize yardımcı olabilir.
 
  Ağ aracı yalnızca UWP uygulamalarını destekler. Diğer platformlar şu anda desteklenmiyor.
 
@@ -28,11 +27,11 @@ Ağ Visual Studio **aracı,** ağ tanılama aracı kullanılarak gerçekleştiri
 > Ağ aracının daha eksiksiz bir açıklaması için [bkz. Visual Studio'nin ağ aracına tanıtma.](https://devblogs.microsoft.com/visualstudio/introducing-visual-studios-network-tool/)
 
 ## <a name="collect-network-tool-data"></a>Ağ aracı verilerini toplama
- Ağ aracını, **Visual Studio** bilgisayarda açık bir Visual Studio projesiyle Visual Studio gerekir.
+ Ağ aracını, **ağ** bilgisayarda açık bir Visual Studio projesiyle Visual Studio gerekir.
 
 1. Projeyi Visual Studio'da açın.
 
-2. Menüde Hata Ayıkla **/Hata Ayıkla'ya Performans Profili Oluşturucu.** **Ağ'ı** ve ardından Başlat'ı **seçin.**
+2. Menüde Hata Ayıkla **/ Hata Ayıkla'ya Performans Profili Oluşturucu.** **Ağ'ı** ve ardından Başlat'ı **seçin.**
 
 3. Ağ aracı, uygulamanın HTTP trafiğini toplamaya başlar.
 
@@ -70,7 +69,7 @@ Ağ Visual Studio **aracı,** ağ tanılama aracı kullanılarak gerçekleştiri
 
 1. Önbellekten tam olarak sunulan istekler, Alınan sütununda **(önbellekten)** **olarak** gösterilir. Bu, kullanıcı bant genişliğinden tasarruf etmek için önbelleği etkili bir şekilde mi, yoksa yanıtları yanlışlıkla önbelleğe mi asanız ve son kullanıcıya uygulamanın son kullanıcıya süresiz veriler mi sağlıyorsanız belirlemenize yardımcı olabilir.
 
-2. Hata yanıtları (4xx veya 5xx),  Sonuçlar sütununda kırmızı durum koduyla görüntülenir ve özet çubuğunda da vurgulanır. Bu, uygulamanıza yapılan çok sayıda olası istek arasında hataların tespitini kolaylaştırır.
+2. Hata yanıtları (4xx veya 5xx),  Sonuçlar sütununda kırmızı durum koduyla görüntülenir ve özet çubuğunda da vurgulanır. Bu, uygulamanıza yapılan çok sayıda olası istek arasında hataları tespit etmek için kolay bir uygulamadır.
 
 3. Yanıt düzgün yazdırma düğmesi (gövde sekmesinin içinde) içeriğin okunabilirliğini artırarak JSON, XML, HTML, CSS, JavaScript ve TypeScript yanıt yüklerini ayrıştırmanıza yardımcı olabilir.
 
@@ -79,5 +78,5 @@ Ağ Visual Studio **aracı,** ağ tanılama aracı kullanılarak gerçekleştiri
 - [Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
 - [Visual Studio blog: Visual Studio'nin ağ denetçisi ile tanışma](https://devblogs.microsoft.com/visualstudio/)
 - [Channel 9 Video: VS tanılama araçları - yeni Ağ Profili Oluşturma](https://channel9.msdn.com/Series/ConnectOn-Demand/206)
-- [Visual Studio'de profil oluşturma](../profiling/index.yml)
+- [Visual Studio'de profil Visual Studio](../profiling/index.yml)
 - [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

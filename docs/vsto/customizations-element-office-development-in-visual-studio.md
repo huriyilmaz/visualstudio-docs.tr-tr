@@ -2,7 +2,6 @@
 title: '&lt;customizations &gt; öğesi (Office geliştirme Visual Studio)'
 description: vstov4 ad alanının özelleştirmeler öğesinin her bir çözümü yükleme ve yükleme hakkında tüm Office öğrenin.
 titleSuffix: ''
-ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +17,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: e9548c0cb730f9386a8a167e403161850a082e4a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: bc059992ca0f704125feb9e01c4f46f441ed145d
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122026531"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129967853"
 ---
 # <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;customizations &gt; öğesi (Office geliştirme Visual Studio)
   Ad `customizations` alanının `vstov4` öğesi, her bir çözüm için yükleme ve yükleme Office içerir.
@@ -70,11 +69,11 @@ ms.locfileid: "122026531"
 
 ## <a name="example-of-a-document-level-customization"></a>Belge düzeyinde özelleştirme örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki kod örneği, belge `customizations` düzeyinde özelleştirme için öğesini gösterir.
 
 > [!NOTE]
-> Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
+> Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir örneğin Office yer almaktadır.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
@@ -90,8 +89,8 @@ ms.locfileid: "122026531"
 
 ## <a name="example-of-a-vsto-add-in"></a>VSTO Örneği
 
-### <a name="description"></a>Açıklama
- Aşağıdaki kod örneği, bir `customizations` eklentinin VSTO göstermektedir. Bu, form Outlook VSTO içeren bir eklentidir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office bir bölümüdur.](../vsto/application-manifests-for-office-solutions.md)
+### <a name="description"></a>Description
+ Aşağıdaki kod örneği, bir `customizations` eklentinin VSTO göstermektedir. Bu, form Outlook VSTO içeren bir eklentidir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir örneğin Office yer almaktadır.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 

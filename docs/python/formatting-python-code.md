@@ -3,20 +3,19 @@ title: Python kodunu biçimlendirme
 description: Visual Studio, boşluk, deyimler, kaydırma ve açıklamalar dahil Python kodunu otomatik olarak yeniden biçimlendirebilir.
 ms.date: 03/13/2019
 ms.topic: conceptual
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 55e8812004cb652512eb946218a969679ad399bc
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 3bc8c0a537c8068100c959980d7b34f1bddd30b4
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628293"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129968715"
 ---
 # <a name="format-python-code"></a>Python kodunu biçimlendirme
 
@@ -112,7 +111,7 @@ Biçimlendirme seçenekleri varsayılan olarak [Pep 8 stil kılavuzunun](https:/
 
 **Düzenle**  >  **Gelişmiş**  >  **Açıklama paragrafını doldur** (**CTRL** + **E**  >  **P**) Açıklama metnini yeniden akıtır ve biçimlendirir, kısa çizgileri birleştirerek ve uzun olanları parçalayabilirsiniz.
 
-Örnek:
+Örneğin:
 
 ```python
 # foo

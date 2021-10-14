@@ -4,20 +4,19 @@ titleSuffix: ''
 description: bir python ortamında paketlerin yönetilmesi için Visual Studio özelliklerini gösteren, Visual Studio python özelliklerine yönelik temel bir izlenecek yolun 5. adımı.
 ms.date: 03/09/2020
 ms.topic: tutorial
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: be201d5d9897dd803f9eac3c012d3124c141c26e
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: df5f7a4bff771b271b3916974e29e07c934adac3
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126726776"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129969119"
 ---
 # <a name="step-5-install-packages-in-your-python-environment"></a>5. Adım: Python ortamınıza paket yüklemeyi
 

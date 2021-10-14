@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 08/13/2020
 ms.author: ghogen
-ms.openlocfilehash: 8b371a8132e7de05bef68cc8ff67d0951ce67d8f
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 995c4dc42de396dc9945aa553210c52e3c3cd661
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126633158"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129969976"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetleri kullanarak Azure storage ekleme
 
@@ -88,7 +88,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
     ![Azure Depolama ekleme](./media/vs-azure-tools-connected-services-storage/vs-2019/add-azure-storage.png)
 
-    Henüz oturum açmadıysanız Azure hesabınızda oturum açın. Bir Azure hesabınız yoksa, [ücretsiz deneme](https://azure.microsoft.com/account/free)için kaydolabilirsiniz.
+    Henüz oturum açmadıysanız Azure hesabınızda oturum açın. Bir Azure hesabınız yoksa, [ücretsiz deneme](https://azure.microsoft.com/free/)için kaydolabilirsiniz.
 
 1. **Azure Depolama yapılandır** ekranında, var olan bir depolama hesabını seçin ve **ileri**' yi seçin.
 

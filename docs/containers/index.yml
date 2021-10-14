@@ -9,12 +9,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 11/25/2019
   ms.author: ghogen
-  ms.openlocfilehash: d5a3f01af79b41ec219fd0ff959933e2798f1cfd
-  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+  ms.openlocfilehash: 8e1fcd00afd4e759f650a03214312e4f08c02fdf
+  ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/13/2021
-  ms.locfileid: "126631712"
+  ms.lasthandoff: 10/13/2021
+  ms.locfileid: "129969638"
 landingContent:
 - title: Kapsayıcı Araçları
   linkLists:
@@ -56,7 +56,7 @@ landingContent:
     links:
     - text: Kapsayıcılar penceresini kullanma
       url: view-and-diagnose-containers.md
-    - text: Compose hizmetlerinizin bir alt kümesini başlatma
+    - text: Oluşturma hizmetlerinizin bir alt kümesini başlatın
       url: launch-profiles.md
     - text: Derleme ve hata ayıklama ortamını yapılandırma
       url: container-build.md
@@ -79,7 +79,7 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: Visual Studio ile Bridge to Kubernetes kullanma
-      url: /visualstudio/bridge/bridge-to-kubernetes
+      url: /visualstudio/bridge/overview-bridge-to-kubernetes
   - linkListType: overview
     links:
     - text: Bridge to Kubernetes’in işleyiş biçimi

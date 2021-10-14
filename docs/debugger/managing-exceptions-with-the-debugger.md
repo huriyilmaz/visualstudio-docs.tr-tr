@@ -1,7 +1,6 @@
 ---
 title: Hata ayıklayıcı ile özel durumları yönetme | Microsoft Docs
 description: Hata ayıklayıcının hangi özel durumları, hangi noktada kesilmesini istediğinizi ve kesilmelerinin nasıl işleneceğini nasıl belirteceğinizi öğrenin.
-ms.custom: SEO-VS-2020
 ms.date: 10/09/2018
 ms.topic: how-to
 f1_keywords:
@@ -35,12 +34,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: a9816262561a461e925939c8e15b1394e58d6c7f
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 806c597a3112352d89ef2abd22de34414bb91a04
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122105315"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970236"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Visual Studio hata ayıklayıcı ile özel durumları yönetme
 
@@ -149,13 +148,13 @@ Hata ayıklayıcı, bir özel durumun oluşturulduğu noktada yürütmeyi böleb
 
 1. **özel durum Ayarlar** penceresinde, bir sütun etiketine sağ tıklayarak kısayol menüsünü açın ve sonra **ek eylemler > sütunları göster**' i seçin. ( **Yalnızca kendi kodum** kapalıysa, bu komutu görmezsiniz.) **Ek eylemler** adlı üçüncü bir sütun görüntülenir.
 
-   ![Ek eylemler sütunu](../debugger/media/additionalactionscolumn.png "AdditionalActionsColumn")
+   ![Ek eylemler sütunu](../debugger/media/additionalactionscolumn.png "Adtionalactionscolumn")
 
    Bu sütundaki **Kullanıcı kodunda işlenmemiş olduğunda devam** eden bir özel durum için, bu özel durum Kullanıcı kodunda işlenmediğinde ancak dışarıdan işlenirse hata ayıklayıcı devam eder.
 
 2. Belirli bir özel durum için bu ayarı değiştirmek için, özel durumu seçin, kısayol menüsünü görüntülemek için sağ tıklayın ve **Kullanıcı kodunda Işlenmemiş olduğunda devam**' ı seçin. Ayrıca, tüm ortak dil çalışma zamanı özel durumları gibi tüm özel durumlar kategorisi için ayarı da değiştirebilirsiniz.
 
-   ![* * Kullanıcı kodunda işlenmediğinde devam et * * ayarı](../debugger/media/continuewhenunhandledinusercodesetting.png "ContinueWhenUnhandledInUserCodeSetting")
+   ![* * Kullanıcı kodunda işlenmediğinde devam et * * ayarı](../debugger/media/continuewhenunhandledinusercodesetting.png "Devam Whenunhandledınusercodesetting")
 
 örneğin, ASP.NET web uygulamaları, özel durumun kaynağını belirlemenize yardımcı olmayan bir HTTP 500 durum koduna ([ASP.NET web apı 'sinde özel durum işleme](/aspnet/web-api/overview/error-handling/exception-handling)) dönüştürerek özel durumları işler. Aşağıdaki örnekte, Kullanıcı kodu öğesine bir çağrısı yapar `String.Format()` <xref:System.FormatException> . Yürütme sonları aşağıdaki gibidir:
 

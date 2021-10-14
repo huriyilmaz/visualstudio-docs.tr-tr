@@ -1,7 +1,6 @@
 ---
 title: Unity için Visual Studio Araçları kullanma | Microsoft Docs
 description: Unity için Visual Studio Araçları tümleştirme ve üretkenlik özelliklerini kullanmayı öğrenin. ayrıca, Unity geliştirmesi için Visual Studio hata ayıklayıcıyı kullanın.
-ms.custom: ''
 ms.date: 07/03/2018
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
@@ -13,12 +12,12 @@ manager: crdun
 ms.workload:
 - unity
 zone_pivot_groups: platform
-ms.openlocfilehash: 4f02ad6afae0ba53fdc0776ce4093db37ae24493
-ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
+ms.openlocfilehash: 08ad9bb1161b12ecc5cb588e3e37d0b9d318cacd
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "129635743"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129967697"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları’nı Kullanma
 

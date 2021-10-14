@@ -10,12 +10,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 12/05/2019
   ms.author: ghogen
-  ms.openlocfilehash: c0edb595d8e03495c43c76cd191dcf3ab01c4341
-  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+  ms.openlocfilehash: b7d3357b71dfdc255f5038259e2db74ec41e1798
+  ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/13/2021
-  ms.locfileid: "126633238"
+  ms.lasthandoff: 10/13/2021
+  ms.locfileid: "129969937"
 landingContent:
 - title: Azure App Service'e dağıtma
   linkLists:
@@ -26,11 +26,9 @@ landingContent:
     - text: Azure’a ASP.NET Web Uygulaması dağıtma
       url: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs
     - text: Visual Studio ve Git ile Azure’a sürekli dağıtım
-      url: /aspnet/core/host-and-deploy/azure-apps/azure-continuous-deployment
+      url: /azure/app-service/deploy-continuous-deployment
     - text: Azure Pipelines ile Azure'a sürekli dağıtım
       url: /azure/devops/pipelines/get-started-yaml
-    - text: Azure VM’ye ASP.NET Web Uygulaması dağıtma
-      url: /azure/virtual-machines/windows/publish-web-app-from-visual-studio
 - title: Azure Uygulama Hizmetleri, Logic Apps ve Azure İşlevleri
   linkLists:
   - linkListType: tutorial
@@ -54,7 +52,7 @@ landingContent:
     - text: Visual Studio’da kapsayıcı araçları
       url: ../containers/overview.md
     - text: Kubernetes araçları
-      url: /visualstudio/bridge/bridge-to-kubernetes
+      url: /visualstudio/bridge/overview-bridge-to-kubernetes
 - title: Azure hizmetlerinde hata ayıklama ve performans analizi
   linkLists:
   - linkListType: tutorial

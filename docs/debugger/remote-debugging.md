@@ -1,9 +1,8 @@
 ---
 title: Uzaktan hata ayıklama | Microsoft Docs
-description: Visual Studio uzaktan hata ayıklayıcı kullanılarak farklı bir bilgisayara dağıtılan Visual Studio bir uygulamada hata ayıklayın.
+description: Uzak hata Visual Studio kullanarak farklı bir bilgisayara dağıtılmış bir uygulamanın Visual Studio ayıkla.
 ms.custom:
 - remotedebugging
-- seodec18
 - SEO-VS-2020
 ms.date: 09/10/2021
 ms.topic: conceptual
@@ -24,127 +23,127 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c1e1f0cca6fc29f3dfc29e87d10c5ee324700f6
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: ddae69c5261b63ef0e62fded1f94de448f82b984
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128427157"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129972394"
 ---
 # <a name="remote-debugging"></a>Uzaktan Hata Ayıklama
-farklı bir bilgisayara dağıtılan Visual Studio bir uygulamada hata ayıklaması yapabilirsiniz. bunu yapmak için uzaktan hata ayıklayıcı Visual Studio kullanırsınız.
+Farklı bir bilgisayarda Visual Studio bir uygulamanın hata ayıklaması. Bunu yapmak için uzak hata ayıklayıcısını Visual Studio kullanın.
 
 Uzaktan hata ayıklama hakkında ayrıntılı yönergeler için bu konulara bakın.
 
 |Senaryo|Bağlantı|
 |-|-|-|
-|Azure App Service|[uzaktan hata ayıklama ASP.NET Azure 'da](../debugger/remote-debugging-azure.md) veya Visual Studio Enterprise için [Snapshot Debugger](../debugger/debug-live-azure-applications.md)|
+|Azure App Service|[Azure'ASP.NET uzaktan hata](../debugger/remote-debugging-azure.md) ayıklama veya Visual Studio Enterprise [için](../debugger/debug-live-azure-applications.md) Snapshot Debugger|
 |Azure VM|[Azure’da ASP.NET hatalarını uzaktan ayıklama](../debugger/remote-debugging-azure.md)|
 |Azure Service Fabric|[Azure Service Fabric uygulamasında hata ayıklama](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)|
-|ASP.NET|[uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) veya [uzaktan hata ayıklama ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
+|ASP.NET|[Uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) [veya Uzaktan Hata Ayıklama ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
 |C# veya Visual Basic|[Uzaktan C# veya Visual Basic projesi hatası ayıklama](../debugger/remote-debugging-csharp.md)|
 |C++|[C++ projesinin hatalarını uzaktan ayıklama](../debugger/remote-debugging-cpp.md)|
-|evrensel Windows uygulamaları (UWP)|[UWP uygulamalarını uzak bir makinede çalıştırma](../debugger/run-windows-store-apps-on-a-remote-machine.md) veya [yüklü bir uygulama paketinin hatalarını ayıklama](../debugger/debug-installed-app-package.md)|
+|Universal Windows Apps (UWP)|[Uzak makinede UWP uygulamaları çalıştırma veya](../debugger/run-windows-store-apps-on-a-remote-machine.md) [Yüklü uygulama paketinde hata ayıklama](../debugger/debug-installed-app-package.md)|
 
-Yalnızca uzaktan hata ayıklayıcıyı indirip yüklemek istiyorsanız ve senaryonuz için ek yönergeler gerekmiyorsa, bu makaledeki adımları izleyin.
+Yalnızca uzaktan hata ayıklayıcısını indirip yüklemek ve senaryo için ek yönergelere ihtiyacınız yoksa, bu makaledeki adımları izleyin.
 
 ## <a name="download-and-install-the-remote-tools"></a>Uzak araçları indirme ve yükleme
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
-## <a name="requirements"></a><a name="requirements_msvsmon"></a> Gereklilik
+## <a name="requirements"></a><a name="requirements_msvsmon"></a> Gereksinim -leri
 
 [!INCLUDE [remote-debugger-requirements](../debugger/includes/remote-debugger-requirements.md)]
 
-## <a name="optional-to-run-the-remote-debugger-from-a-file-share"></a><a name="fileshare_msvsmon"></a> Seçim Uzaktan hata ayıklayıcıyı bir dosya paylaşımından çalıştırmak için
+## <a name="optional-to-run-the-remote-debugger-from-a-file-share"></a><a name="fileshare_msvsmon"></a> (İsteğe bağlı) Uzaktan hata ayıklayıcıyı bir dosya paylaşımından çalıştırmak için
 
-uzaktan hata ayıklayıcıyı (*msvsmon.exe*) Visual Studio Community, Professional veya Enterprise zaten yüklü bir bilgisayara bulabilirsiniz. Bazı senaryolarda, uzaktan hata ayıklamayı ayarlamanın en kolay yolu, uzaktan hata ayıklayıcıyı (msvsmon.exe) bir dosya paylaşımından çalıştırmalıdır. Kullanım sınırlamaları için, uzaktan hata ayıklayıcının yardım sayfasına bakın (uzaktan hata ayıklayıcı 'da **yardım > kullanımı** ).
+Uzaktan hata ayıklayıcısını (*msvsmon.exe*) Visual Studio Community, Professional veya yüklü Enterprise bulabilirsiniz. Bazı senaryolarda uzaktan hata ayıklamayı ayarlamanın en kolay yolu, uzak hata ayıklayıcıyı (msvsmon.exe) bir dosya paylaşımından çalıştırmaktır. Kullanım sınırlamaları için uzaktan hata ayıklayıcının Yardım sayfasına ( Uzaktan **hata ayıklayıcıda > Yardım** sayfasına bakın).
 
-1. Visual Studio sürümünüzle eşleşen dizinde *msvsmon.exe* bulun:
+1. Dizinde *msvsmon.exe* sürümünüzle eşleşen Visual Studio:
 
    ::: moniker range=">=vs-2022"
 
-   *Program dosyaları \ Microsoft Visual Studio \ 2022 \ Enterprise \Common7\IDE\Remote Debugger\x64\msvsmon.exe*
+   *Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe*
 
-   *Program dosyaları \ Microsoft Visual Studio \ 2022 \ Enterprise \Common7\IDE\Remote Debugger\x86\msvsmon.exe*
+   *Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe*
 
    ::: moniker-end
    ::: moniker range="vs-2019"
 
-   *Program dosyaları (x86) \ Microsoft Visual Studio \ 2019 \ Enterprise \Common7\IDE\Remote Debugger\x64\msvsmon.exe*
+   *Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe*
 
-   *Program dosyaları (x86) \ Microsoft Visual Studio \ 2019 \ Enterprise \Common7\IDE\Remote Debugger\x86\msvsmon.exe*
+   *Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe*
 
    ::: moniker-end
    ::: moniker range="vs-2017"
 
-   *Program dosyaları (x86) \ Microsoft Visual Studio \ 2017 \ Enterprise \Common7\IDE\Remote Debugger\x86\msvsmon.exe*
+   *Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe*
 
-   *Program dosyaları (x86) \ Microsoft Visual Studio \ 2017 \ Enterprise \Common7\IDE\Remote Debugger\x64\msvsmon.exe*
+   *Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe*
 
    ::: moniker-end
 
-2. Visual Studio bilgisayarda **uzaktan hata ayıklayıcı** klasörünü paylaşma.
+2. Uzak Hata **Ayıklayıcı klasörünü** Visual Studio paylaşın.
 
-3. Uzak bilgisayarda, paylaşılan klasörden *msvsmon.exe* ' yi çalıştırın. [Kurulum yönergelerini](#bkmk_setup)izleyin.
+3. Uzak bilgisayarda, paylaşılan *msvsmon.exe'i* çalıştırın. Kurulum [yönergelerini izleyin.](#bkmk_setup)
 
 > [!TIP]
-> komut satırı yüklemesi ve komut satırı başvurusu için, Visual Studio yüklü olan bilgisayardaki komut satırına yazarak *msvsmon.exe* için yardım sayfasına bakın ``msvsmon.exe /?`` (veya uzaktan hata ayıklayıcıda **yardım > kullanımı** ' na gidin).
+> Komut satırı yüklemesi ve komut satırı başvurusu *için,msvsmon.exe'nin* yüklü olduğu bilgisayardaki komut satırına yazarak Visual Studio yardım sayfasına bakın (veya uzak hata ayıklayıcıda Yardım ``msvsmon.exe /?`` > **Kullanımı'na** gidin).
 
 ## <a name="set-up-the-remote-debugger"></a><a name="bkmk_setup"></a> Uzaktan hata ayıklayıcıyı ayarlama
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 ### <a name="configure-the-remote-debugger"></a><a name="configure_msvsmon"></a> Uzaktan hata ayıklayıcıyı yapılandırma
-Uzaktan hata ayıklayıcı yapılandırmasının bazı yönlerini ilk kez başlattıktan sonra değiştirebilirsiniz.
+Uzaktan hata ayıklayıcıyı ilk kez başlattıktan sonra yapılandırmanın bazı yönlerini değiştirebilirsiniz.
 
-- Diğer kullanıcıların uzaktan hata ayıklayıcıya bağlanması için izinler eklemeniz gerekiyorsa, **araçlar > izinler**' i seçin. İzinleri vermek veya reddetmek için yönetici ayrıcalıklarınızın olması gerekir.
+- Diğer kullanıcıların uzaktan hata ayıklayıcısına bağlanması için izinler eklemeniz gerekirse Araçlar ve **İzinler'> seçin.** İzinleri vermek veya reddetmek için yönetici ayrıcalıklarınızın olması gerekir.
 
      > [!IMPORTANT]
-     > uzaktan hata ayıklayıcıyı, Visual Studio bilgisayarda kullandığınız kullanıcı hesabından farklı bir kullanıcı hesabı altında çalıştırabilirsiniz, ancak uzak hata ayıklayıcının izinlerine farklı kullanıcı hesabı eklemeniz gerekir.
+     > Uzak hata ayıklayıcıyı, Visual Studio bilgisayarda kullanmakta olan kullanıcı hesabından farklı bir kullanıcı hesabı altında çalıştırabilirsiniz, ancak uzak hata ayıklayıcının izinlerine farklı kullanıcı hesabını eklemeniz gerekir.
 
-     Alternatif olarak, uzaktan hata ayıklayıcıyı **/Allow \<username>** parametresi: **\<username@computer> msvsmon/Allow** ile komut satırından başlatabilirsiniz.
+     Alternatif olarak, uzak hata ayıklayıcısını komut satırına **/allow \<username>** parametresiyle **başlatabilirsiniz: msvsmon /allow \<username@computer>**.
 
-- Kimlik doğrulama modunu veya bağlantı noktası numarasını değiştirmeniz veya uzak Araçlar için bir zaman aşımı değeri belirtmeniz gerekiyorsa: **araçlar > seçenekler**' i seçin.
+- Kimlik Doğrulama modunu veya bağlantı noktası numarasını değiştirmeniz veya uzak araçlar için bir zaman aşımı değeri belirtmeniz gerekirse: Araçlar ve **Seçenekler'i > seçin.**
 
-     Varsayılan olarak kullanılan bağlantı noktası numaralarının listesi için bkz. [Uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md).
+     Varsayılan olarak kullanılan bağlantı noktası numaralarının listesi için bkz. [Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları.](../debugger/remote-debugger-port-assignments.md)
 
      > [!WARNING]
-     > Uzak araçları Kimlik Doğrulaması Yok modunda çalıştırmayı seçebilirsiniz, fakat bu mod kesinlikle önerilmez. Bu modda çalıştırdığınızda, ağ güvenliği yoktur. Yalnızca ağın kötü amaçlı veya tehlikeli trafikten risk altında olmadığından eminseniz kimlik doğrulaması yok modunu seçin.
+     > Uzak araçları Kimlik Doğrulaması Yok modunda çalıştırmayı seçebilirsiniz, fakat bu mod kesinlikle önerilmez. Bu modda çalıştırdığınızda, ağ güvenliği yoktur. Kimlik Doğrulaması Yok modunu yalnızca ağın kötü amaçlı veya saldırgan trafik riski altında olduğundan emin değilken seçin.
 
-## <a name="optional-configure-the-remote-debugger-as-a-service"></a><a name="bkmk_configureService"></a> Seçim Uzaktan hata ayıklayıcıyı bir hizmet olarak yapılandırma
-ASP.NET ve diğer sunucu ortamlarında hata ayıklama için, uzaktan hata ayıklayıcıyı yönetici olarak çalıştırmanız veya her zaman çalışmasını istiyorsanız, uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırmanız gerekir.
+## <a name="optional-configure-the-remote-debugger-as-a-service"></a><a name="bkmk_configureService"></a> (İsteğe bağlı) Uzak hata ayıklayıcıyı hizmet olarak yapılandırma
+ASP.NET ve diğer sunucu ortamlarında hata ayıklama için, uzak hata ayıklayıcıyı yönetici olarak çalıştırmanız veya her zaman çalıştırmak için uzak hata ayıklayıcıyı bir hizmet olarak çalıştırmanız gerekir.
 
- Uzaktan hata ayıklayıcıyı bir hizmet olarak yapılandırmak istiyorsanız, bu adımları izleyin.
+ Uzak hata ayıklayıcıyı bir hizmet olarak yapılandırmak için aşağıdaki adımları izleyin.
 
-1. **Uzaktan hata ayıklayıcı yapılandırma Sihirbazı 'nı** (rdbgwiz.exe) bulun. (Bu, uzaktan hata ayıklayıcı 'dan ayrı bir uygulamadır.) Yalnızca uzak araçları yüklediğinizde kullanılabilir. Visual Studio ile yüklenmez.
+1. Uzaktan Hata **Ayıklayıcı Yapılandırma Sihirbazı'nı (rdbgwiz.exe).** (Bu, Uzaktan Hata Ayıklayıcı'dan ayrı bir uygulamadır.) Yalnızca uzak araçları yüklemenizde kullanılabilir. Bu, Visual Studio.
 
-2. Yapılandırma sihirbazını çalıştırmaya başlayın. İlk sayfa geldiğinde **İleri**' ye tıklayın.
+2. Yapılandırma sihirbazını çalıştırmaya başlama. İlk sayfa geldiğinde, Sonraki'ne **tıklayın.**
 
-3. **Visual Studio 2015 uzaktan hata ayıklayıcı bir hizmet olarak çalıştır** onay kutusunu işaretleyin.
+3. Visual Studio **2015** Uzaktan Hata Ayıklayıcısını hizmet olarak çalıştır onay kutusunu işaretleyin.
 
 4. Kullanıcı hesabının adını ve parolasını ekleyin.
 
-    Bu hesaba (veya bir komut isteminde **secpol** yazın) **bir hizmet olarak oturum aç** kullanıcısı eklemek için ( **Başlangıç** sayfası veya penceresinde **yerel güvenlik ilkesini** (secpol. msc) bulun. Pencere göründüğünde, **Kullanıcı hakları ataması**' na çift tıklayın ve ardından sağ bölmede **hizmet olarak oturum aç** ' ı bulun. Çift tıklayın. Kullanıcı hesabını **Özellikler** penceresine ekleyin ve **Tamam**' a tıklayın. **İleri**’ye tıklayın.
+    Bu hesaba hizmet  olarak oturum açma kullanıcı hakkı eklemeniz (Başlangıç sayfasında veya penceresinde Yerel Güvenlik  İlkesini **Bul** (secpol.msc) veya bir komut isteminde **secpol** yazmanız gerekir. Pencere görüntülendiğinde Kullanıcı Hakları **Ataması'ne çift tıklayın** ve ardından sağ **bölmede** Hizmet olarak oturum aç'ı bulun. Çift tıklayın. Kullanıcı hesabını Özellikler penceresine ekleyin **ve Tamam'a** **tıklayın.** **İleri**’ye tıklayın.
 
-5. Uzak araçların iletişim kurmasını istediğiniz ağ türünü seçin. En az bir ağ türü seçilmelidir. Bilgisayarlar bir etki alanı üzerinden bağlandıysa, ilk öğeyi seçmeniz gerekir. Bilgisayarlar bir çalışma grubu veya ev grubu üzerinden bağlandıysa, ikinci veya üçüncü öğeleri seçmeniz gerekir. **İleri**’ye tıklayın.
+5. Uzak araçların iletişim kurması istediğiniz ağ türünü seçin. En az bir ağ türü seçilmelidir. Bilgisayarlar bir etki alanı üzerinden bağlı ise, ilk öğeyi seçmeniz gerekir. Bilgisayarlar bir çalışma grubu veya ev grubu üzerinden bağlıysa, ikinci veya üçüncü öğeleri seçmeniz gerekir. **İleri**’ye tıklayın.
 
-6. hizmet başlatılabiliyorsanız, **Visual Studio Uzaktan Hata Ayıklayıcı yapılandırma sihirbazı 'nı başarıyla tamamladınız** görürsünüz. hizmet başlatılmazsa, **Visual Studio Uzaktan Hata Ayıklayıcı yapılandırma sihirbazı 'nı tamamlamadığına** ilişkin bir hata görürsünüz. Bu sayfa, hizmetin başlamasını sağlamak için izlenecek bazı ipuçları da sunar.
+6. Hizmet başlatlanıyorsa, Yapılandırma **Sihirbazı'nı başarıyla tamamladınız Visual Studio Uzaktan Hata Ayıklayıcı görüntülenir.** Hizmet başlatılamayacaksa, Yapılandırma **Sihirbazı'nda Visual Studio Uzaktan Hata Ayıklayıcı görüntülenir.** Sayfa ayrıca hizmeti başlatmaya yardımcı olmak için takip edecek bazı ipuçları da sağlar.
 
 7. **Finish (Son)** düğmesine tıklayın.
 
-   Bu noktada, uzaktan hata ayıklayıcı bir hizmet olarak çalışır. bunu, **denetim masası > hizmetleri** ' ne giderek ve **Visual Studio 2015 uzaktan hata ayıklayıcı**' yı arayarak doğrulayabilirsiniz.
+   Bu noktada uzak hata ayıklayıcı bir hizmet olarak çalışıyor. Denetim Masası > **Services'e gidip Visual Studio** **2015 Uzaktan Hata Ayıklayıcı'ya bakarak bunu doğruabilirsiniz.**
 
-   Uzaktan hata ayıklayıcı hizmetini **Denetim masası > Hizmetleri**'nden durdurabilir ve başlatabilirsiniz.
+   uzaktan hata ayıklayıcı hizmetini Denetim Masası > **başlatabilirsiniz.**
 
-## <a name="set-up-debugging-with-remote-symbols"></a>Uzak simgelerle hata ayıklamayı ayarlama
+## <a name="set-up-debugging-with-remote-symbols"></a>Uzak sembollerle hata ayıklamayı ayarlama
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
-- [uzaktan hata ayıklama için Windows güvenlik duvarını yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
+- [Uzaktan Hata Windows Güvenlik Duvarı'nı yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları](../debugger/remote-debugger-port-assignments.md)
-- [uzak ııs bilgisayarında uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)
-- [Uzaktan hata ayıklama hataları ve sorun giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
+- [Uzak IIS ASP.NET Core Uzaktan Hata Ayıklama](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)
+- [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)

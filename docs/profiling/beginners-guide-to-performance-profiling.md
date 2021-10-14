@@ -1,7 +1,6 @@
 ---
 title: Uygulamalarınızda CPU kullanımını ölçme
 description: Hata ayıklayıcı ile tümleşik tanılama araçlarını kullanarak uygulamanızdaki CPU performans sorunlarını çözümleyin.
-ms.custom: seodec18
 ms.date: 04/03/2021
 ms.topic: tutorial
 f1_keywords:
@@ -18,12 +17,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 349d4c076c820c6f75291b8048617216cc73717c
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 77186503ad40a5aed3d95e276d58be0b407e1692
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628395"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129968845"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>CPU kullanımını çözümleyerek uygulama performansını ölçme
 

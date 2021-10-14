@@ -4,20 +4,19 @@ titleSuffix: ''
 description: python etkileşimli REPL penceresini kapsayan Visual Studio python özelliklerine yönelik temel bir izlenecek adım 3.
 ms.date: 01/28/2019
 ms.topic: tutorial
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
-ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7d2d8684759b56b577402840ee4a748e618e6a39
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: c18d6df21cd64c23a29499358a3303637666c4c0
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628275"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129967931"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>3. Adım: etkileşimli REPL penceresini kullanma
 

@@ -1,7 +1,6 @@
 ---
-title: 'adım adım kılavuz: Gölgelendirme Hataları Nedeniyle Hata Ayıklama | Microsoft Docs'
-description: Gölgelendirici hatası bulan bir araştırmayı izleyin. Grafik Piksel Geçmişi ve HLSL Visual Studio Grafik Tanılama dahil olmak üzere uygulamanın kullanımını gösterir.
-ms.custom: SEO-VS-2020
+title: 'İzlenecek yol: gölgeleme nedeniyle Işleme hatalarını ayıklama | Microsoft Docs'
+description: Gölgelendirici hatası bulan bir araştırmayı izleyin. grafik piksel geçmişi ve hlsl hata ayıklayıcısı dahil Visual Studio Grafik Tanılama kullanımını gösterir.
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 01875b05-cc7b-4add-afba-f2b776f86974
@@ -11,85 +10,85 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f359715bebdab4323bba21637f8a3f4be0f98f1
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 9ac57e78d1aef378be3e262731e3c0bdf50ad41f
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122133919"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971328"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama
-Bu kılavuzda gölgelendirici hatası Grafik Tanılama yanlış renklendirilmiş bir nesneyi araştırmak için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Grafik Tanılama'nin nasıl kullanıldığı açıklandı.
+Bu izlenecek yol [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , gölgelendirici hatası nedeniyle yanlış renkli bir nesneyi araştırmak için grafik tanılama nasıl kullanacağınızı gösterir.
 
- Bu izlenecek yol şunların nasıl olduğunu gösteriyor:
+ Bu izlenecek yol, nasıl yapılacağını göstermektedir:
 
-- Sorunu gösterecek pikselleri belirlemek için grafik günlüğü belgesini inceleme.
+- Sorunu gösteren pikselleri belirlemek için grafik günlüğü belgesini inceleyin.
 
-- Piksel durumunu **daha yakından incelemek** için Grafik Piksel Geçmişi penceresini kullanın.
+- Piksel durumunu daha yakından incelemek için **Grafik piksel geçmişi** penceresini kullanın.
 
-- Piksel ve **köşe gölgelendiricilerini incelemek için HLSL** Hata Ayıklayıcısını kullanın.
+- Piksel ve Köşe Gölgelendiricileri incelemek için **HLSL hata ayıklayıcısını** kullanın.
 
 ## <a name="scenario"></a>Senaryo
- Bir köşe gölgelendiricisi piksel gölgelendiricisi yanlış veya tamamlanmamış bilgileri geçtiğinde, nesnelerde yanlış renklendirme yaygın olarak oluşur.
+ Bir köşe gölgelendiricisi, bir piksel gölgelendiricisi yanlış veya eksik bilgileri geçtiğinde nesneler üzerinde yanlış renklendirme oluşur.
 
- Bu senaryoda, yakın zamanda uygulamanıza bir nesnesi eklediniz. Ayrıca nesneyi dönüştürmek ve benzersiz bir görünüm vermek için yeni bir köşe ve piksel gölgelendiricileri ekledik. Bir test sırasında uygulamayı çalıştırsanız, nesne düz siyah olarak işlenir. Bu Grafik Tanılama kullanarak, uygulamanın hata ayıklaması için sorunu bir grafik günlüğüne yakalarsanız. Sorun uygulamada şu görüntüye benzer:
+ Bu senaryoda, son zamanlarda uygulamanıza bir nesne eklediniz. Ayrıca, nesneyi dönüştürmek ve benzersiz bir görünüm vermek için yeni bir köşe ve Piksel gölgelendiricileri eklemiş olursunuz. Uygulamayı bir test sırasında çalıştırdığınızda, nesne düz siyah olarak işlenir. Grafik Tanılama kullanarak, uygulamanın hatalarını ayıklayabilmeniz için sorunu bir grafik günlüğüne yakalarsınız. Sorun, uygulamada bu görüntüde olduğu gibi görünür:
 
- ![Nesnesi yanlış renklerle işlenir.](media/gfx_diag_demo_render_error_shader_problem.png "gfx_diag_demo_render_error_shader_problem")
+ ![Nesne yanlış renklerle işlenir.](media/gfx_diag_demo_render_error_shader_problem.png "gfx_diag_demo_render_error_shader_problem")
 
 ## <a name="investigation"></a>Araştırma
- Test Grafik Tanılama kullanarak, test sırasında yakalanan kareleri incelemek için grafik günlüğü belgesini yükleyebilirsiniz.
+ Grafik Tanılama araçlarını kullanarak, test sırasında yakalanan çerçeveleri incelemek için grafik günlüğü belgesini yükleyebilirsiniz.
 
-#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Grafik günlüğünde bir çerçeveyi incelemek için
+#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Grafik günlüğündeki bir çerçeveyi incelemek için
 
-1. içinde, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] eksik modeli gösteren bir çerçeveye sahip bir grafik günlüğü yükleme. içinde yeni bir grafik günlüğü belge penceresi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] görüntülenir. Bu pencerenin üst kısmında, seçilen çerçevenin işleme hedefi çıkışı yer atır. Alt kısım, yakalanan her **kareyi küçük** resim görüntüsü olarak görüntüleyen Çerçeve Listesi'dir.
+1. İçinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , eksik modeli gösteren bir çerçeveye sahip bir grafik günlüğü yükleyin. İçinde yeni bir grafik günlüğü belgesi penceresi görüntülenir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu pencerenin üst kısmında, seçili karenin işleme hedefi çıkışı bulunur. Alt kısımda, yakalanan her çerçeveyi bir küçük resim olarak görüntüleyen **çerçeve listesidir**.
 
-2. Çerçeve **Listesi'nin** içinde nesnenin doğru görünüme sahip olmadığını bir çerçeve seçin. İşleme hedefi, seçilen çerçeveyi yansıtacak şekilde güncelleştirilir. Bu senaryoda grafik günlüğü belge penceresi şu görüntüye benzer:
+2. **Çerçeve listesinde** nesnenin doğru görünümü olmayan bir çerçeve seçin. Oluşturma hedefi seçili çerçeveyi yansıtacak şekilde güncelleştirilir. Bu senaryoda, grafik günlük belgesi penceresi şu resme benzer şekilde görünür:
 
-    ![Grafik günlüğü belgesi Visual Studio.](media/gfx_diag_demo_render_error_shader_step_1.png "gfx_diag_demo_render_error_shader_step_1")
+    ![Visual Studio içindeki grafik günlük belgesi.](media/gfx_diag_demo_render_error_shader_step_1.png "gfx_diag_demo_render_error_shader_step_1")
 
-   Sorunu gösteren bir çerçeveyi seçdikten sonra, tanılamak için **Grafik Piksel Geçmişi** penceresini kullanabilirsiniz. Grafik **Piksel Geçmişi penceresi** belirli bir pikseli, gölgelendiricilerini ve işleme hedefi üzerindeki etkilerini kronolojik olarak etkilemiş olan temelleri gösterir.
+   Sorunu gösteren bir çerçeve seçtikten sonra, bunu tanılamak için **Grafik piksel geçmişi** penceresini kullanabilirsiniz. **Grafik piksel geçmişi** penceresi, belirli bir piksel, gölgelendiriciler ve işleme hedefi üzerindeki etkileri, kronolojik sırada olan temel öğeleri gösterir.
 
-#### <a name="to-examine-a-pixel"></a>Pikseli incelemek için
+#### <a name="to-examine-a-pixel"></a>Bir pikseli incelemek için
 
-1. Grafik Piksel **Geçmişi penceresini** açın. Yeni araç **Grafik Tanılama** Piksel **Geçmişi'ne tıklayın.**
+1. **Grafik piksel geçmişi** penceresini açın. **Grafik tanılama** araç çubuğunda **piksel geçmişi**' ni seçin.
 
-2. İncelenecek pikseli seçin. Grafik günlüğü belge penceresinde, nesnesinde yanlış renklendirilmiş piksellerden birini seçin:
+2. İncelenecek bir piksel seçin. Grafik günlüğü Belgesi penceresinde, nesne üzerindeki yanlış renkli olan piksellerden birini seçin:
 
-    ![Piksel seçiminde geçmişiyle ilgili bilgiler görüntülenir.](media/gfx_diag_demo_render_error_shader_step_2.png "gfx_diag_demo_render_error_shader_step_2")
+    ![Bir pikselin seçilmesi geçmişiyle ilgili bilgileri görüntüler.](media/gfx_diag_demo_render_error_shader_step_2.png "gfx_diag_demo_render_error_shader_step_2")
 
-    Grafik **Piksel Geçmişi penceresi,** seçilen pikseli yansıtacak şekilde güncelleştirilir. Bu senaryoda Grafik Piksel **Geçmişi penceresi** şu şekilde görünür:
+    **Grafik piksel geçmişi** penceresi seçili pikseli yansıtacak şekilde güncelleştirilir. Bu senaryoda **Grafik piksel geçmişi** penceresi şöyle görünür:
 
-    ![Piksel geçmişinde bir DrawIndexed olayı görünür.](media/gfx_diag_demo_render_error_shader_step_3.png "gfx_diag_demo_render_error_shader_step_3")
+    ![Piksel geçmişi bir DrawIndexed olayını gösterir.](media/gfx_diag_demo_render_error_shader_step_3.png "gfx_diag_demo_render_error_shader_step_3")
 
-    Piksel gölgelendiricinin sonucu tamamen siyah (0, 0, 0, 0, 1) opak ve **Output Merger'ın** bu piksel gölgelendiriciyi  Pikselin Önceki rengiyle birleştirmiş olduğunu ve Sonuç'un tamamen opak siyah olduğunu fark eder. 
+    Piksel gölgelendiricisinin sonucunun tamamen donuk (0, 0, 0, 1) olduğuna ve **çıktının birleştiğinde** , bu piksel gölgelendiricinin pikselin bir **önceki** rengiyle, **sonucun** aynı zamanda tamamen opak bir şekilde birleştirildiğine dikkat edin.
 
-   Yanlış renklendirilmiş bir pikseli inceledikten ve piksel gölgelendiricisi çıktısını beklenen renk olmadığını fark ettikten sonra, piksel gölgelendiriciyi incelemek ve nesnenin rengine ne olduğunu bulmak için HLSL Hata Ayıklayıcı'sını kullanabilirsiniz. Yürütme sırasında HLSL değişkenlerinin durumunu incelemek, HLSL kodunda adım adım incelemek ve sorunu tanılamanıza yardımcı olacak kesme noktaları ayarlamak için HLSL Hata Ayıklayıcı'sını kullanabilirsiniz.
+   Yanlış renkli bir piksel inceledikten ve piksel gölgelendirici çıkışının beklenen rengi bulduktan sonra, HLSL hata ayıklayıcısını kullanarak piksel gölgelendiriciyi inceleyebilir ve nesnenin rengine ne olduğunu bulabilirsiniz. HLSL hata ayıklayıcısını kullanarak yürütme sırasında HLSL değişkenlerinin durumunu inceleyebilir, HLSL kodunda adım adım ilerleyin ve sorunu tanılamanıza yardımcı olması için kesme noktaları ayarlayabilirsiniz.
 
 #### <a name="to-examine-the-pixel-shader"></a>Piksel gölgelendiriciyi incelemek için
 
-1. Piksel gölgelendiricisinde hata ayıklamaya başlama. Grafik Piksel **Geçmişi penceresinde,** nesnenin temel öğenin altında, **Piksel Gölgelendiricisi'nin yanındaki** Hata **Ayıklamayı Başlat düğmesini** seçin.
+1. Piksel Gölgelendiricisinde hata ayıklamayı başlatın. **Grafik piksel geçmişi** penceresinde, nesnenin ilkel öğesi, **piksel gölgelendiricisi**' nin yanında, **hata ayıklamayı Başlat** düğmesini seçin.
 
-2. Bu senaryoda, piksel gölgelendiricisi yalnızca köşe gölgelendiricisi üzerinden rengi geçtiğinden, piksel gölgelendiricinin sorunun kaynağı olmadığını gözlemlemek kolaydır.
+2. Bu senaryoda, piksel gölgelendiricisi yalnızca köşeyi köşe gölgelendiriciden geçirdiğinden, piksel gölgelendiricisinin sorunun kaynağı olmadığı gözlemleyebilirsiniz.
 
-3. İşaretçiyi üzerinde geri `input.color` kalanı. Değerinin tamamen opak siyah (0, 0, 0, 1) olduğunu farkedin.
+3. İşaretçiyi üzerinde bekletin `input.color` . Değerin tamamen opak siyah (0, 0, 0, 1) olduğuna dikkat edin.
 
-    !["input" girişinin "color" üyesi siyahtır.](media/gfx_diag_demo_render_error_shader_step_5.png "gfx_diag_demo_render_error_shader_step_5")
+    !["İnput" öğesinin "Color" üyesi siyah.](media/gfx_diag_demo_render_error_shader_step_5.png "gfx_diag_demo_render_error_shader_step_5")
 
-    Bu senaryoda inceleme, yanlış rengin büyük olasılıkla piksel gölgelendiricisi üzerinde çalışacak doğru renk bilgilerini sağlamadan köşe gölgelendiricisi sonucu olduğunu ortaya koyacaktır.
+    Bu senaryoda İnceleme, yanlış rengin büyük olasılıkla, piksel gölgelendiricisinin üzerinde çalışacağı doğru renk bilgilerini sağlamayan bir Köşe gölgelendiricisinin sonucu olduğunu gösterir.
 
-   Köşe gölgelendiricisi büyük olasılıkla piksel gölgelendiricisi için doğru bilgileri sağlamadı belirledikten sonra, sonraki adım köşe gölgelendiriciyi incelemektir.
+   Köşe gölgelendiricisinin piksel gölgelendiricisine doğru bilgileri sağlamadığınızı belirledikten sonra, bir sonraki adım köşe gölgelendiriciyi incelemektir.
 
 #### <a name="to-examine-the-vertex-shader"></a>Köşe gölgelendiriciyi incelemek için
 
-1. Köşe gölgelendiricisinde hata ayıklamaya başlama. Grafik Piksel **Geçmişi penceresinde,** nesnenin temel öğenin altında, Köşe Gölgelendiricisi'nin yanındaki Hata  **Ayıklamayı Başlat düğmesini** seçin.
+1. Köşe Gölgelendiricisinde hata ayıklamayı başlatın. **Grafik piksel geçmişi** penceresinde, nesnenin ilkel öğesi altında, **köşe gölgelendirici**' nin yanında, **hata ayıklamayı Başlat** düğmesini seçin.
 
-2. Köşe gölgelendiricinin çıkış yapısını bulun; bu piksel gölgelendiricisi girişidir. Bu senaryoda bu yapının adı `output` olur. Köşe gölgelendiricisi kodunu inceler ve yapı üyesinin açıkça tamamen opak siyah olarak ayarlanmış olduğunu farkedin( belki de birinin hata ayıklama `color` `output` çalışmaları sonucunda).
+2. Köşe gölgelendiricisinin çıkış yapısını bulun — bu, piksel gölgelendiricisine giriştir. Bu senaryoda, bu yapının adı `output` . Köşe gölgelendirici kodunu inceleyin ve `color` `output` birisinin hata ayıklama çabalarının bir sonucu olarak, yapının üyesinin açıkça tamamen opak siyah olarak ayarlandığını unutmayın.
 
-3. Renk üyesinin giriş yapısından hiçbir zaman kopyalanmaz. değeri yapı döndürülmeden hemen önce tamamen opak siyah olarak ayarlansa da değerinin önceki satırda doğru şekilde başlatılmamış olduğundan emin olmak iyi bir `output.color` `output` `output` fikirdir. değerini izlerken siyah olarak ayar alan satıra ulaşana kadar köşe `output.color` gölgelendiricisi kodunda adım adım `output.color` inin. değerinin siyah `output.color` olarak ayarlanıncaya kadar başlatılmamış olduğunu fark etmek. Bu, siyah olarak ayarlayan kod satırı `output.color` silinmek yerine değiştirilmeleri gerektiğini onaylar.
+3. Renk üyesinin giriş yapısından hiçbir şekilde kopyalanmadığını doğrulayın. Değeri, `output.color` Yapı döndürülmeden hemen önce tamamen opak siyah olarak ayarlandığından `output` , değerinin `output` önceki bir satırda doğru bir şekilde başlatılmamış olduğundan emin olmak iyi bir fikir olabilir. Değerini izlerken siyah olarak ayarlayan çizgiye ulaşana kadar köşe gölgelendirici kodunda ilerleyin `output.color` `output.color` . Değerinin, `output.color` siyah olarak ayarlanana kadar başlatıldığına dikkat edin. Bu `output.color` , siyah olarak ayarlayan kod satırının silinmeden değil, değiştirilmesi gerektiğini doğrular.
 
-    !["output.color" değeri siyahtır.](media/gfx_diag_demo_render_error_shader_step_7.png "gfx_diag_demo_render_error_shader_step_7")
+    !["Output. Color" değeri siyah.](media/gfx_diag_demo_render_error_shader_step_7.png "gfx_diag_demo_render_error_shader_step_7")
 
-   İşleme sorununun nedeninin köşe gölgelendiricisi piksel gölgelendiricisi için doğru renk değerini sağlamama olduğunu belirleydikten sonra, sorunu çözmek için bu bilgileri kullanabilirsiniz. Bu senaryoda, köşe gölgelendiricisinde aşağıdaki kodu değiştirerek bunu düzeltebilirsiniz
+   İşleme sorununun nedeninin Köşe gölgelendiricisinin piksel gölgelendiriciye doğru renk değeri sağlamamasını belirledikten sonra, bu bilgileri sorunu gidermek için kullanabilirsiniz. Bu senaryoda, köşe gölgelendiricide aşağıdaki kodu değiştirerek çözümü çözebilirsiniz
 
 ```hlsl
 output.color = float3(0.0f, 0.0f, 0.0f);
@@ -101,10 +100,10 @@ output.color = float3(0.0f, 0.0f, 0.0f);
 output.color = input.color;
 ```
 
- Bu kod, köşe rengini nesnenin değiştirilmeden köşelerinden geçer; daha karmaşık köşe gölgelendiricileri, geçirmeden önce rengi değiştirebilir. Düzeltilmiş köşe gölgelendiricisi kodu şu şekildedir:
+ Bu kod yalnızca nesnenin köşelerine göre Köşe rengini geçirir; daha karmaşık Köşe Gölgelendiricileri, üzerinden geçirmeden önce rengi değiştirebilir. Düzeltilen köşe gölgelendirici kodu şuna benzemelidir:
 
- ![Düzeltilmiş köşe gölgelendiricisi kodu.](media/gfx_diag_demo_render_error_shader_step_8.png "gfx_diag_demo_render_error_shader_step_8")
+ ![Düzeltilen köşe gölgelendirici kodu.](media/gfx_diag_demo_render_error_shader_step_8.png "gfx_diag_demo_render_error_shader_step_8")
 
- Kodu düzeltdikten sonra yeniden yapılandırarak uygulamayı yeniden çalıştırarak işleme sorununun çözüldüğünü keşfedin.
+ Kodu düzelttikten sonra, oluşturma sorununun çözümlenme sorununu saptamak için yeniden derleyin ve uygulamayı yeniden çalıştırın.
 
  ![Nesnesi doğru renklerle işlenir.](media/gfx_diag_demo_render_error_shader_resolution.png "gfx_diag_demo_render_error_shader_resolution")

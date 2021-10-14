@@ -1,7 +1,6 @@
 ---
-title: Çalışma zamanı hata raporlama işlevi yazma | Microsoft Docs
-description: Özel çalışma zamanı hata raporlama işlevi yazma örnekleri için bkz. Visual Studio. Bu, 1 değeri _CrtDbgReportW ile aynı bildirimine sahip olması gerekir.
-ms.custom: SEO-VS-2020
+title: Çalışma zamanı hata raporlama işlevi | Microsoft Docs
+description: Çalışma alanı içinde özel çalışma zamanı hata raporlama işlevi yazma örneklerine Visual Studio. Bu, 1 değeri _CrtDbgReportW ile aynı bildirime sahip olması gerekir.
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -20,17 +19,17 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f4131f5bea3f3c1a2c880c64302fd44ab5a3535
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: d62b7502f1742da57dbb2d25eb4912adcb8d19a2
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725409"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129972563"
 ---
 # <a name="how-to-write-a-run-time-error-reporting-function-c"></a>Nasıl kullanılır: Hata Run-Time İşlevi Yazma (C++)
 Çalışma zamanı hataları için özel raporlama işlevinin bildirimi ile aynı olması `_CrtDbgReportW` gerekir. Hata ayıklayıcısına 1 değerinin dönmesini sağlar.
 
-Aşağıdaki örnekte, özel raporlama işlevinin nasıl tanımlanmasına yer ve ardından bir örnek ve daha fazla bilgi ve bilgiler
+Aşağıdaki örnekte, özel raporlama işlevinin nasıl tanımlanmasına yer ve ardından bir örnek ve daha fazla bilgi ve açıklama yer amektedir.
 
 ## <a name="example-1"></a>Örnek 1
 

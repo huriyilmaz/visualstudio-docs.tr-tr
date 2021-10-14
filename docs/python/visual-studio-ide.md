@@ -4,8 +4,8 @@ title: Python geliştiricileri için Visual Studio genel bakış
 titleSuffix: ''
 ms.date: 03/13/2019
 ms.topic: overview
-author: JoshuaPartlow
-ms.author: joshuapa
+author: rjmolyneaux
+ms.author: rmolyneaux
 manager: jmartens
 ms.technology: vs-python
 dev_langs:
@@ -13,12 +13,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a81616e50cc4f7a3aab5fc4ccfa52d378eeb34d5
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: f58b8409e846521b2590720911047d0d6702c107
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126625328"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971380"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>Visual Studio ıde 'ye hoş geldiniz | Python
 

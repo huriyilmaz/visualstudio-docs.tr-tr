@@ -2,7 +2,6 @@
 description: Vstov4 ad alanının friendlyName öğesi, yüklü programlar listesinde görüntülenen adı depolar.
 title: '&lt;friendlyName &gt; öğesi (Visual Studio Office geliştirme)'
 titleSuffix: ''
-ms.custom: seodec18
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -16,12 +15,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 887c28cdd81f4f3176dcf29804fa9f6ec4b27123
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 8a2eba3e89c59b231d87351014d459dd0051d486
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126634081"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970288"
 ---
 # <a name="ltfriendlynamegt-element-office-development-in-visual-studio"></a>&lt;friendlyName &gt; öğesi (Visual Studio Office geliştirme)
   `friendlyName`Ad alanı öğesi, `vstov4` yüklü programlar listesinde görünen adı depolar.

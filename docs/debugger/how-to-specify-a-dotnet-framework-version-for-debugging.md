@@ -1,7 +1,6 @@
 ---
 title: hata ayıklama için bir .NET Framework sürümü belirtin | Microsoft Docs
 description: hata ayıklama için eski bir .NET Framework sürümü belirtin. Visual Studio hata ayıklayıcı, eski .NET Framework sürümlerinin yanı sıra geçerli sürümü de hata ayıklamayı destekler.
-ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: how-to
 dev_langs:
@@ -19,12 +18,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: b434116a835f5e86e1e579a2e6fb4d4c9be1452e
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 9cfa2b42aed6d0ade01918c0d719e17fb4ac5350
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126635329"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971237"
 ---
 # <a name="specify-an-older-net-framework-version-for-debugging-c-visual-basic-f"></a>hata ayıklama için eski bir .NET Framework sürümü belirtin (C#, Visual Basic, F #)
 

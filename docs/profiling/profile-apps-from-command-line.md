@@ -1,8 +1,7 @@
 ---
 title: Komut satırından performans ölçme
-description: Komut satırıyla uygulamanıza CPU performansını ve yönetilen bellek kullanımını ölçün.
-ms.custom: ''
-ms.date: 09/13/2021
+description: Komut satırından uygulamanızdaki CPU performansını ve yönetilen bellek kullanımını ölçün.
+ms.date: 9/13/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiling Tools, command-line
@@ -15,34 +14,34 @@ ms.technology: vs-ide-debug
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ebc503d8b1733968b94f09256b139b84296c708
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: b3a39afabf3b33b148c90c7a4e7c9f03955cacde
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428717"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129973070"
 ---
-# <a name="measure-application-performance-from-the-command-line"></a>Komut satırıyla uygulama performansını ölçme
+# <a name="measure-application-performance-from-the-command-line"></a>Komut satırından uygulama performansını ölçme
 
-Komut satırı araçlarını kullanarak bir uygulama hakkında performans bilgileri toplayabilirsiniz.
+Komut satırı araçlarını kullanarak bir uygulamayla ilgili performans bilgilerini toplayabilirsiniz.
 
-Bu makalede açıklanan örnekte, Microsoft Not Defteri için performans bilgilerini toplayabilirsiniz, ancak herhangi bir işlem profili oluşturmak için aynı yöntem kullanılabilir.
+bu makalede açıklanan örnekte, Microsoft Not Defteri için performans bilgilerini topladığınızda, ancak aynı yöntem herhangi bir işlemi profili için de kullanılabilir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 * Visual Studio 2019 veya sonraki sürümler
 
-* Komut satırı araçları hakkında bilgi
+* Komut satırı araçlarıyla benzerlik
 
-* Yüklü olmayan bir uzak makinede performans bilgilerini Visual Studio için uzak [makineye Visual Studio için Uzak Araçlar](https://visualstudio.microsoft.com/downloads#remote-tools-for-visual-studio-2019) yükleyin. Araçların sürümü, Visual Studio.
+* Visual Studio yüklü olmayan bir uzak makinede performans bilgilerini toplamak için, [Visual Studio için Uzak Araçlar](https://visualstudio.microsoft.com/downloads#remote-tools-for-visual-studio-2019) uzak makineye yükleme. Araçların sürümü Visual Studio sürümünüzle aynı olmalıdır.
 
-## <a name="collect-performance-data"></a>Performans verilerini toplama
+## <a name="collect-performance-data"></a>Performans verilerini topla
 
-Visual Studio Tanılama CLI araçlarını kullanarak profil oluşturma işlemi, profil oluşturma aracını toplayıcı aracılarından biri ile birlikte bir işleme iliştirerek çalışır. Profil oluşturma aracını iliştirerek, profil oluşturma verilerini yakalayan ve araç durdurulana kadar depolayan bir tanılama oturumu başlar ve bu noktada veriler *bir .diagsession* dosyasına dışarı aktarılıyor. Ardından sonuçları analiz etmek için bu Visual Studio içinde açabilirsiniz.
+Visual Studio tanılama clı araçlarını kullanarak profil oluşturma işlemi, toplayıcı aracılarından biri ile birlikte profil oluşturma aracını bir işleme ekleyerek işe yarar. Profil oluşturma aracını eklediğinizde, araç durduruluncaya kadar profil oluşturma verilerini yakalayan ve depolayan bir tanılama oturumuna başlarsınız ve bu, verilerin bir *. diagsession* dosyasına aktarılmasıdır. daha sonra, sonuçları çözümlemek için bu dosyayı Visual Studio açabilirsiniz.
 
-1. Görev Not Defteri'ı ve ardından işlem kimliğini (PID) almak için Görev Yöneticisi'ni açın. Görev Yöneticisi'nde, Ayrıntılar sekmesinde **PID'i** bulun.
+1. Not Defteri başlatın ve sonra işlem kimliğini (pıd) almak için görev yöneticisi 'ni açın. Görev Yöneticisi 'nde, **Ayrıntılar** sekmesinde PID 'yi bulun.
 
-1. Bir komut istemi açın ve genellikle burada (örneğin, koleksiyon aracısı yürütülebilir dosyası) dizinine Visual Studio Enterprise.
+1. Bir komut istemi açın ve genellikle burada (Visual Studio Enterprise için) koleksiyon Aracısı yürütülebiliri ile dizinde geçiş yapın.
 
    ::: moniker range=">= vs-2022"
    ```<Visual Studio installation folder>\2022\Enterprise\Team Tools\DiagnosticsHub\Collector\```
@@ -51,25 +50,25 @@ Visual Studio Tanılama CLI araçlarını kullanarak profil oluşturma işlemi, 
    ```<Visual Studio installation folder>\2019\Enterprise\Team Tools\DiagnosticsHub\Collector\```
    ::: moniker-end
 
-1. Aşağıdaki *VSDiagnostics.exe* yazarak başlangıç yapın.
+1. Aşağıdaki komutu yazarak *VSDiagnostics.exe* başlatın.
 
    ```cmd
    VSDiagnostics.exe start <id> /attach:<pid> /loadConfig:<configFile>
    ```
 
-   Dahil edilecek bağımsız değişkenler:
+   Dahil olması gereken bağımsız değişkenler şunlardır:
 
-   * \<*id*> Koleksiyon oturumunu tanımlar. Kimlik, 1-255 arasında bir sayı olabilir.
-   * \<*pid*>, profilini oluşturmak istediğiniz sürecin PID'i, bu durumda 1. adımda bulunan PID.
-   * \<*configFile*>, başlatmak istediğiniz koleksiyon aracısı için yapılandırma dosyası. Daha fazla bilgi için [bkz. Aracılar için yapılandırma dosyaları.](#config_file)
+   * \<*id*> Koleksiyon oturumunu tanımlar. KIMLIK 1-255 arasında bir sayı olmalıdır.
+   * \<*pid*>, Bu durumda, profil atamak istediğiniz işlemin PID 'si, 1. adımda bulduğunuz PID.
+   * \<*configFile*>, başlatmak istediğiniz koleksiyon aracısının yapılandırma dosyası. Daha fazla bilgi için bkz. [aracılar Için yapılandırma dosyaları](#config_file).
 
-   Örneğin, daha önce açıklandığı gibi *pid'i* değiştirerek CPUUsageBase aracısı için aşağıdaki komutu kullanabilirsiniz.
+   Örneğin, daha önce açıklandığı gibi, *PID* 'Yi değiştirerek CPUUsageBase Aracısı için aşağıdaki komutu kullanabilirsiniz.
 
    ```cmd
    VSDiagnostics.exe start 1 /attach:<pid> /loadConfig:AgentConfigs\CPUUsageLow.json
    ```
 
-1. Bazı Not Defteri bilgileri toplanmış olduğundan emin olmak için yeniden boyutlandırabilir veya bir şeyler yazabilirsiniz.
+1. Not Defteri yeniden boyutlandırın veya bazı ilgi çekici profil oluşturma bilgilerinin toplandığından emin olmak için buna bir değer yazın.
 
 1. Aşağıdaki komutu yazarak koleksiyon oturumunu durdurun ve çıktıyı bir dosyaya gönderin.
 
@@ -77,15 +76,15 @@ Visual Studio Tanılama CLI araçlarını kullanarak profil oluşturma işlemi, 
    VSDiagnostics.exe stop <id> /output:<path to file>
    ```
 
-1. Önceki *komuttan .diagsession* dosyası çıktısını bulun ve toplanan bilgileri incelemek için Visual Studio **(** Dosya  >  **Aç**) içinde açın.
+1. önceki komuttan *. diagsession* dosyası çıkışını bulun ve toplanan bilgileri incelemek için Visual Studio (**dosya**  >  **aç**) içinde açın.
 
-   Sonuçları analiz etmek için ilgili performans aracının belgelerine bakın. Örneğin, bu [CPU](../profiling/cpu-usage.md)Kullanımı , [.NET Nesne Ayırma aracı](../profiling/dotnet-alloc-tool.md)veya Veritabanı [aracı](../profiling/analyze-database.md) olabilir.
+   Sonuçları çözümlemek için, ilgili performans aracına yönelik belgelere bakın. Örneğin, bu [CPU kullanımı](../profiling/cpu-usage.md), [.NET nesne ayırma aracı](../profiling/dotnet-alloc-tool.md)veya [veritabanı](../profiling/analyze-database.md) aracı olabilir.
 
 ## <a name="agent-configuration-files"></a><a name="config_file"></a> Aracı yapılandırma dosyaları
 
-Toplama Aracıları, neyi ölçmeye çalıştığınıza bağlı olarak farklı veri türlerini toplayan değiştirilebilir bileşenlerdir.
+Koleksiyon aracıları, ölçmeye çalıştığınız seçeneğe bağlı olarak farklı veri türlerini toplamanızı sağlayan, değiştirilebilir bileşenlerdir.
 
-Kolaylık olması için bu bilgileri bir aracı yapılandırma dosyasında depolamanız önerilir. Yapılandırma dosyası, en azından dosyanın adını ve COM CLSID'sini *.dll* *bir .json* dosyasıdır. Aşağıdaki klasörde aşağıdaki örnek yapılandırma dosyalarını bulabilirsiniz:
+Kolaylık olması için, bu bilgileri bir aracı yapılandırma dosyasında depolamanızı öneririz. Yapılandırma dosyası, en az *.dll* adı ve com CLSID 'si içeren bir *. JSON* dosyasıdır. Aşağıdaki klasörde bulabileceğiniz örnek yapılandırma dosyaları aşağıda verilmiştir:
 
 ```<Visual Studio installation folder>Team Tools\DiagnosticsHub\Collector\AgentConfigs\```
 
@@ -100,13 +99,13 @@ Aracı yapılandırma dosyalarını indirmek ve görüntülemek için lütfen a�
 - https://aka.ms/vs/diaghub/agentconfig/dotnetalloclow
 - https://aka.ms/vs/diaghub/agentconfig/dotnetcountersbase
 
-CpuUsage yapılandırmaları (Temel/Yüksek/Düşük), CPU Kullanımı profil [oluşturma aracı için toplanan verilere](../profiling/cpu-usage.md) karşılık gelir.
-DotNetObjectAlloc yapılandırmaları (Temel/Düşük), .NET Nesne Ayırma aracı [için toplanan verilere karşılık gelir.](../profiling/dotnet-alloc-tool.md)
+CpuUsage yapılandırması (taban/yüksek/düşük), [CPU kullanımı](../profiling/cpu-usage.md) profil oluşturma aracı için toplanan verilere karşılık gelir.
+DotNetObjectAlloc yapılandırması (taban/düşük), [.NET nesne ayırma aracı](../profiling/dotnet-alloc-tool.md)için toplanan verilere karşılık gelir.
 
-Temel/Düşük/Yüksek yapılandırmalar örnekleme oranına başvurur. Örneğin, Düşük 100 örnek/saniye, Yüksek ise 4000 örnek/saniyedir.
+Taban/düşük/yüksek yapılandırma örnekleme hızına başvurur. Örneğin, düşük değer 100 örnek/saniye ve yüksek 4000 örnek/saniye.
 
-Bir *VSDiagnostics.exe* aracının bir koleksiyon aracısı ile çalışması için, uygun aracı için hem DLL hem de COM CLSID gerekir. Aracının ek yapılandırma seçenekleri de olabilir. Bu, yapılandırma dosyasında belirtilen ve düzgün bir şekilde kaçarak JSON olarak biçimlendirilmiş seçenekler olabilir.
+*VSDiagnostics.exe* aracının bir koleksiyon aracısıyla çalışması için, uygun aracı IÇIN hem dll hem de com CLSID gerektirir. Aracı, uygun yapılandırma seçeneklerine da sahip olabilir. Bu, yapılandırma dosyasında belirtilen herhangi bir seçenek olacak şekilde, düzgün bir şekilde kaçış JSON olarak biçimlendirilir.
 
 ## <a name="permissions"></a>İzinler
 
-Yükseltilmiş izinler gerektiren bir uygulamanın profilini oluşturmak için, bunu yükseltilmiş bir komut isteminden yapmak gerekir.
+Yükseltilmiş izinler gerektiren bir uygulamayı profil oluşturma için, bunu yükseltilmiş bir komut isteminden yapmanız gerekir.

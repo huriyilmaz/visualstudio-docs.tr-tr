@@ -3,7 +3,6 @@ title: Visual Studio kaldır
 titleSuffix: ''
 description: Visual Studio bilgisayarınızdan tamamen kaldırmayı öğrenin, adım adım.
 ms.date: 08/24/2021
-ms.custom: seodec18
 ms.topic: how-to
 f1_keywords:
 - uninstall
@@ -22,12 +21,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4662eb0470811e3cf4047e1d51106734369ddf34
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 5a7a3f39a9981f3f02c3788ad3ac4dfd67ebefd3
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628467"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129969391"
 ---
 # <a name="remove-visual-studio"></a>Visual Studio kaldır
 

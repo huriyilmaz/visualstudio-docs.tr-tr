@@ -8,15 +8,15 @@ metadata:
   ms.technology: vs-python
   ms.topic: landing-page
   ms.collection: collection
-  author: JoshuaPartlow
-  ms.author: joshuapa
+  author: rjmolyneaux
+  ms.author: rmolyneaux
   ms.date: 09/23/2019
-  ms.openlocfilehash: e85bdedfc91c949213528718d147a7f1890964ce
-  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+  ms.openlocfilehash: b021fd52bd3431184a0b4117689eee1280d31799
+  ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/13/2021
-  ms.locfileid: "126625395"
+  ms.lasthandoff: 10/13/2021
+  ms.locfileid: "129968689"
 landingContent:
 - title: Visual Studio’da Python desteği hakkında
   linkLists:

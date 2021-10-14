@@ -2,7 +2,6 @@
 title: Visual Studio Profil Oluşturucu API Başvurusu (Yerel)
 description: Profil profil Visual Studio API'lerinin toplanan veri miktarını program aracılığıyla denetleme ve profil oluşturma sırasında hem zaman damgası hem de profil işareti ekleme hakkında bilgi alın.
 titleSuffix: ''
-ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +15,15 @@ ms.technology: vs-ide-debug
 monikerRange: vs-2017
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e782ced3a2760af780f70f586fb79329da68394c
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: edcc3bb968504d63b18adad2217f23c5a8bb5889
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725659"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129973044"
 ---
 # <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio profil oluşturma API başvurusu (yerel)
-Visual Studio profil oluşturma API'leri toplanan veri miktarını program aracılığıyla denetlemeye ve profil oluşturma sırasında hem zaman damgası hem de profil işareti eklemeye olanak sağlar. Yerel API'leri kullanmak için *VSPerf.h üst bilgi* dosyasını ekleyin ve *VSPerf.lib'i projenize* ekleyin.
+Visual Studio profil oluşturma API'leri toplanan veri miktarını program aracılığıyla denetlemeye ve profil oluşturma sırasında hem zaman damgası hem de profil işareti eklemeye olanak sağlar. Yerel API'leri kullanmak için *VSPerf.h üst bilgi* dosyasını ekler ve *VSPerf.lib'yi projenize* eklersiniz.
 
 > [!NOTE]
 > Profil oluşturma araçlarının yolunu almak için [bkz. Komut satırı araçlarının yolunu belirtme.](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)

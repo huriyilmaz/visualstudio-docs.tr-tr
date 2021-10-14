@@ -2,7 +2,6 @@
 title: Paket önbelleğini devre dışı bırakma veya taşıma
 description: Dağıtımlar için paket önbelleğini devre dışı bırakmayı, etkinleştirmeyi veya taşımayı Visual Studio öğrenin.
 ms.date: 04/14/2017
-ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - cache
@@ -18,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 8a16be51c603befac88f1576a2cd42fed5b75d3c
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: eef24b5a4d9968ba6eb9a3e79f599b4052b4dc7f
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627075"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129969372"
 ---
 # <a name="disable-or-move-the-package-cache"></a>Paket önbelleğini devre dışı bırakma veya taşıma
 
@@ -32,27 +31,27 @@ Yükleyici gerektiğinde bunları indirir, bu nedenle disk alanını kaydetmek v
 
 ## <a name="disable-the-package-cache"></a>Paket önbelleğini devre dışı bırakma
 
-Yükleme, değiştirme veya Visual Studio veya diğer ürünleri yeni yükleyiciyle onarmadan önce yükleyiciyi yükleyiciye geçiş `--nocache` ile başlatabilirsiniz.
+Yeni yükleyici ile bir ürünü veya Visual Studio yüklemeden, değiştirmeden veya onarmadan önce yükleyiciyi `--nocache` yükleyiciye geçiş ile başlatabilirsiniz.
 
 ```shell
 "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vs_installer.exe" --nocache
 ```
 
-Herhangi bir üründe yapılan tüm işlem, bu ürün için mevcut paketleri kaldırır ve yüklendikten sonra paketlerden tasarruf etmekten kaçınacak. Gerekli olan tüm Visual Studio ve paketleri değiştirir veya onarsanız, bunlar yüklendikten sonra otomatik olarak indirilir ve kaldırılır.
+Herhangi bir üründe yapılan tüm işlem, bu ürün için mevcut paketleri kaldırır ve yüklendikten sonra paket kaydetmeyi önler. Uygulama ve paketleri Visual Studio değiştirir veya onarsanız, bunlar yüklendikten sonra otomatik olarak indirilir ve kaldırılır.
 
-Önbelleği yeniden etkinleştirmek için bunun yerine `--cache` geçişlerini kullanın. Yalnızca gerekli olan paketler önbelleğe alınacak, bu nedenle tüm paketleri geri yüklemeniz gerekirse ağ bağlantısını Visual Studio önce bu paketleri onarmanız gerekir.
+Önbelleği yeniden etkinleştirmek için bunun yerine `--cache` geçişlerini kullanın. Yalnızca gerekli olan paketler önbelleğe alınacak, bu nedenle tüm paketleri geri yüklemeniz gerekirse, ağınız bağlantısını Visual Studio önce bu paketleri onarmanız gerekir.
 
 ```shell
 "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vs_installer.exe" repair --passive --norestart --cache
 ```
 
-Ayrıca kayıt defteri ilkesi' `KeepDownloadedPayloads` [ni, verileri yüklemeden,](set-defaults-for-enterprise-deployments.md) değiştirmeden veya onarmadan önce önbelleği devre dışı Visual Studio.
+Ayrıca kayıt defteri `KeepDownloadedPayloads` [ilkesini, verileri yüklemeden,](set-defaults-for-enterprise-deployments.md) değiştirmeden veya onarmadan önce önbelleği devre dışı Visual Studio.
 
 ## <a name="move-the-package-cache"></a>Paket önbelleğini taşıma
 
-Yaygın bir sistem yapılandırması, Windows, program ikili dosyaları ve daha fazlası gibi geliştirme ihtiyaçları için daha büyük bir sabit diske (veya daha fazla) sahip bir SSD'ye yüklenmiş bir diske sahip olmaktır. Çevrimdışı çalışmak istiyorsanız, bunun yerine paket önbelleğini taşıyabilirsiniz.
+Yaygın bir sistem yapılandırması, Windows, program ikili dosyaları ve daha fazlası gibi geliştirme ihtiyaçları için daha büyük bir sabit diske (veya daha fazla) sahip bir SSD'ye yüklü olmasıdır. Çevrimdışı çalışmak istiyorsanız, bunun yerine paket önbelleğini taşıyabilirsiniz.
 
-Şu anda bunu yalnızca kayıt defteri ilkenizi yüklemeden, değiştirmeden veya onarmadan önce `CachePath` [](set-defaults-for-enterprise-deployments.md) Visual Studio.
+Şu anda bunu yalnızca kayıt defteri ilkenizi yüklemeden, değiştirmeden veya onarmadan `CachePath` [](set-defaults-for-enterprise-deployments.md) önce Visual Studio.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

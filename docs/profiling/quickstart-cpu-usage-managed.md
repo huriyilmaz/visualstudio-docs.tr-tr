@@ -1,7 +1,6 @@
 ---
 title: CPU kullanım verilerini çözümleme (C#, Visual Basic)
 description: CPU kullanımı tanılama aracını kullanarak C# ve Visual Basic uygulama performansını ölçme
-ms.custom: mvc
 ms.date: 02/14/2020
 ms.topic: quickstart
 helpviewer_keywords:
@@ -13,12 +12,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1450cea98601c551545fb74f7aa925701f43068f
-ms.sourcegitcommit: aaa3146356421d921714c29ffd586083570ade3d
+ms.openlocfilehash: e3bfc29b25a57229a2848b568a11cf864e49a853
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2021
-ms.locfileid: "129635847"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129972303"
 ---
 # <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c-visual-basic"></a>hızlı başlangıç: Visual Studio CPU kullanım verilerini çözümleme (C#, Visual Basic)
 

@@ -4,19 +4,18 @@ description: Visual Studio kullanarak Windows docker 'a web uygulamaları oluşt
 ms.technology: vs-container-tools
 author: ghogen
 manager: jmartens
-ms.custom: seodec18
 ms.assetid: 346f70b9-7b52-4688-a8e8-8f53869618d3
 ms.devlang: dotnet
 ms.topic: troubleshooting
 ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: 760fd0c4d3a9593dbfcc4f78e3279a1ba7e2570f
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 5bead44960453af7410d89cea4b5eca05945a6fb
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631695"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970223"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Docker ile Visual Studio geliştirme sorunlarını giderme
 

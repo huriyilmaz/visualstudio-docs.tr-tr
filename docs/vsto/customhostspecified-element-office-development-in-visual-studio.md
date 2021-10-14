@@ -2,7 +2,6 @@
 title: '&lt;customhostbelirtilen &gt; öğesi (Visual Studio Office geliştirme)'
 description: Customhostbelirtilen öğesinin, bu çözümün tek başına bir uygulama olmadığını nasıl gösterir olduğunu öğrenin.
 titleSuffix: ''
-ms.custom: seodec18, SEO-VS-2020
 ms.date: 02/02/2017
 ms.topic: reference
 dev_langs:
@@ -18,12 +17,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 9c2e9595b3ff10c1769aa1546637fd6743b27358
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 37d9d81fefe29f9830c4fd0581c3df77aeca28ee
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126726717"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129969235"
 ---
 # <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;customhostbelirtilen &gt; öğesi (Visual Studio Office geliştirme)
   `customHostSpecified`Öğesi bu çözümün tek başına bir uygulama olmadığını gösterir. Office çözümleri, Microsoft Office uygulamalar içinde barındırılan bileşenleri içerir.
