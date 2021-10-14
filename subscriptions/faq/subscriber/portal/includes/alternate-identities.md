@@ -3,7 +3,6 @@ title: Aboneliğime alternatif kimlikleri nasıl ekleyebilirim ve bu durum Azure
 description: Visual Studio aboneliğinize alternatif hesap eklemek, aboneliğin atandığı kimlikten farklı bir kimlikle Azure DevOps ve Azure gibi abonelik...
 ms.topic: include
 ms.prod: ''
-ms.custom: ''
 ms.assetid: c41fbf02-a623-43b4-9aa7-0c1c51fbda2a
 ms.technology: ''
 author: CaityBuschlen
@@ -12,16 +11,16 @@ manager: ''
 robots: ''
 ms.date: 04/20/2020
 ms.faqid: q1_5
-ms.openlocfilehash: 87d2633cb76a92c9a1c73651f3f57b2a139240f1
-ms.sourcegitcommit: 367a2d9df789aa617abaa09b0cd0a18db7357d0c
+ms.openlocfilehash: 3e58da3dcb713e44bc2850445ef70b024a55e817
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2021
-ms.locfileid: "107820960"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129980735"
 ---
 ## <a name="how-do-i-add-alternate-identities-to-my-subscription-and-how-does-this-impact-my-azure-credits-and-azure-devops"></a>Aboneliğime alternatif kimlikleri nasıl ekleyebilirim ve bu durum Azure kredilerimi ve Azure DevOps’umu nasıl etkiler?
 
-Visual Studio aboneliğinize alternatif hesap eklemek, aboneliğin atandığı kimlikten farklı bir kimlikle Azure DevOps ve Azure gibi abonelik avantajlarına erişebilmenizi sağlar. Geçmişte, bu işlev yalnızca Visual Studio (VS) aboneliğiniz bir Microsoft hesabına (MSA) atanmışsa kullanılabilir.  Azure Active Directory (Azure AD) içinde iş veya okul hesapları için bu işlevselliği genişlettik.
+Visual Studio aboneliğinize alternatif hesap eklemek, aboneliğin atandığı kimlikten farklı bir kimlikle Azure DevOps ve Azure gibi abonelik avantajlarına erişebilmenizi sağlar. Geçmişte bu işlev yalnızca Visual Studio (VS) aboneliğiniz bir Microsoft Hesabına (MSA) atanmışsa kullanılabilirdi.  Azure AD'de iş veya okul hesapları için bu Azure Active Directory genişletildi.
 
 Bu yolla diğer hesaba aboneliğin bir kopyası sağlanmaz; yalnızca alternatif hesapla iki avantaja erişim olanağı sağlar.
 

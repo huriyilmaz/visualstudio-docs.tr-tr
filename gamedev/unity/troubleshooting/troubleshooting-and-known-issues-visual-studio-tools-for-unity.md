@@ -1,7 +1,6 @@
 ---
 title: Sorun giderme ve bilinen sorunlar (Unity için VS Araçları)
-description: Unity için Visual Studio Araçları sorun giderme hakkında bilgi edinin. Bilinen sorunların açıklamalarını inceleyin ve bu sorunların çözümleri hakkında bilgi edinin.
-ms.custom: ''
+description: Sorun giderme hakkında daha fazla bilgi Unity için Visual Studio Araçları. Bilinen sorunların açıklamalarını öğrenin ve bu sorunların çözümleri hakkında bilgi öğrenin.
 ms.date: 04/15/2021
 ms.technology: vs-unity-tools
 ms.prod: visual-studio-dev16
@@ -12,146 +11,146 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: a824c945bfc32e4d00b3573e3284a759b7797dcc53552dd99ae6bd276310f572
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: 196d4e8604e736440be365c9d10a4ce9f2701fba
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121313776"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129970925"
 ---
-# <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>sorun giderme ve bilinen sorunlar (Unity için Visual Studio Araçları)
+# <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Sorun giderme ve bilinen sorunlar (Unity için Visual Studio Araçları)
 
-bu bölümde, Unity için Visual Studio Araçları, bilinen sorunların açıklamalarıyla ilgili sık karşılaşılan sorunlara çözümler bulacaksınız ve hataları bildirerek Unity için Visual Studio Araçları nasıl iyileştirebileceğinizi öğreneceksiniz.
+Bu bölümde, Unity için Visual Studio Araçları ile ilgili yaygın sorunların çözümlerini, bilinen sorunların açıklamalarını ve hataları bildirerek sorunları Unity için Visual Studio Araçları nasıl yardımcı olamayabilirsiniz.
 
-## <a name="troubleshooting-the-connection-between-unity-and-visual-studio"></a>Unity ve Visual Studio arasında bağlantı sorunlarını giderme
+## <a name="troubleshooting-the-connection-between-unity-and-visual-studio"></a>Unity ile Visual Studio arasındaki bağlantı sorunlarını giderme
 
-### <a name="confirm-editor-attaching-is-enabled-or-code-optimization-on-startup-is-set-to-debug"></a>Onaylama `Editor Attaching` etkin veya `Code Optimization On Startup` olarak ayarlandı `Debug`
+### <a name="confirm-editor-attaching-is-enabled-or-code-optimization-on-startup-is-set-to-debug"></a>`Editor Attaching`Etkinleştirildiğinden veya olarak ayarlanmış olduğunu `Code Optimization On Startup` onaylayın`Debug`
 
-Unity menüsünde, öğesini seçin `Edit / Preferences` .
+Unity Menüsünde öğesini `Edit / Preferences` seçin.
 
 Kullanılan Unity sürümüne bağlı olarak:
-- ' `Code Optimization On Startup` Nin olarak ayarlandığını doğrulayın `Debug` .
-- Veya sekmeyi seçin `External Tools` . `Editor Attaching` onay kutusunun etkin olduğunu onaylayın. 
+- 'nin `Code Optimization On Startup` olarak ayar olduğunu onaylayın. `Debug`
+- Veya sekmesini `External Tools` seçin. Onay kutusunun `Editor Attaching` etkinleştirildiğinden onaylayın. 
 
-Daha fazla bilgi için [Unity tercihleri belgelerine](https://docs.unity3d.com/Manual/Preferences.html)bakın.
+Daha fazla bilgi için [Unity Tercihleri belgelerine bakın.](https://docs.unity3d.com/Manual/Preferences.html)
 
-### <a name="unable-to-attach"></a>İliştirilemiyor
+### <a name="unable-to-attach"></a>Eklenemiyor
 
-- Virüsten koruma için geçici olarak devre dışı bırakmayı veya hem VS hem de Unity için dışlama kuralları oluşturmayı deneyin.
-- Güvenlik duvarınızı geçici olarak devre dışı bırakmayı deneyin veya VS ile Unity arasında TCP/UDP ağlarına izin vermek için kurallar oluşturun.
-- Takım Görüntüleyicisi gibi bazı programlar, işlem algılamayı kesintiye uğratabilirler. Herhangi bir değişiklik olup olmadığını görmek için ek yazılımları geçici olarak durdurmayı deneyebilirsiniz.
-- VSTU yalnızca "Unity.exe" süreçlerini izlerken ana Unity yürütülebilirini yeniden adlandırmayın.
+- Virüsten koruma yazılımınızı geçici olarak devre dışı bırakmayı deneyin veya hem VS hem de Unity için dışlama kuralları oluşturun.
+- GÜVENLIK duvarınızı geçici olarak devre dışı bırakmayı deneyin veya VS ile Unity arasında TCP/UDP aliğine izin veren kurallar oluşturun.
+- Team Viewer gibi bazı programlar işlem algılamayı etkileyene kadar devam ediyor olabilir. Bir şeyi değiştirir mi diye görmek için ek yazılımları geçici olarak durdurmayı denemeniz gerekir.
+- ANA Unity yürütülebilir dosyasını yeniden adlandırın, VSTU yalnızca "Unity.exe" işlemlerini izliyor.
 
 ## <a name="visual-studio-crashes"></a>Visual Studio kilitleniyor
 
-bu sorunun nedeni Visual Studio MEF önbelleğinin bozulması olabilir.
+Bu sorun MEF önbelleğinin Visual Studio nedeniyle olabilir.
 
-MEF önbelleğini sıfırlamak için aşağıdaki klasörü kaldırmayı deneyin (bunu yapmadan önce Visual Studio kapatın):
+MEF önbelleğini sıfırlamak için aşağıdaki klasörü kaldırmayı deneyin (Visual Studio önce kapatın):
 
 ```batch
 %localappdata%\Microsoft\VisualStudio\<version>\ComponentModelCache
 ```
 
-Bu, sorununuzu çözmelidir. sorunu yaşamaya devam ederseniz, yönetici olarak bir Visual Studio Geliştirici Komut İstemi çalıştırın ve aşağıdaki komutu kullanın:
+Bu, sorunlarınızı çözecek. Sorun hala devam ediyorsa, Yönetici olarak Geliştirici Komut İstemi için Visual Studio bir komut çalıştırın ve aşağıdaki komutu kullanın:
 
 ```batch
  devenv /setup
 ```
 
-## <a name="visual-studio-stops-responding"></a>Visual Studio yanıt vermeyi durduruyor
+## <a name="visual-studio-stops-responding"></a>Visual Studio yanıt vermiyor
 
-Parse, FMOD, UMP (Evrensel Media Player), ZFBrowser veya katıştırılmış tarayıcı gibi çeşitli Unity eklentileri yerel iş parçacıklarını kullanıyor. Bir eklenti çalışma zamanına yerel bir iş parçacığı iliştirirken, daha sonra işletim sistemine çağrıları engelleyen bir sorundur. Bu, Unity 'nin hata ayıklayıcı (veya etki alanı yeniden yükleme) için bu iş parçacığını kesintiye uğramayacağı ve yanıt vermemesine
+Parse, FMOD, UMP (Universal Media Player), ZFBrowser veya Embedded Browser gibi çeşitli Unity eklentileri yerel iş parçacıklarını kullanıyor. Eklentinin çalışma zamanının yerel iş parçacığını eklemesi ve ardından işletim sistemi çağrılarını engellemesi sorunudur. Bu, Unity'nin hata ayıklayıcı (veya etki alanı yeniden yükleme) için bu iş parçacığını kesintiye uğratması ve yanıt vermeyemiyor olduğu anlamına gelir.
 
-FMOD için, bir geçici çözüm vardır, `FMOD_STUDIO_INIT_SYNCHRONOUS_UPDATE` zaman uyumsuz işlemeyi devre dışı bırakmak ve ana iş parçacığında tüm işlemleri gerçekleştirmek için başlatma [bayrağını](https://www.fmod.com/resources/documentation-studio?version=2.0&page=https://fmod.com/resources/documentation-api?version=2.0&page=studio-api-system.html#fmod_studio_initflags) geçirebilirsiniz.
+FMOD için geçici bir çözüm vardır; zaman uyumsuz işlemeyi devre dışı bırakmak ve ana iş parçacığında tüm işlemleri gerçekleştirmek için başlatma `FMOD_STUDIO_INIT_SYNCHRONOUS_UPDATE` bayrağını geçebilirsiniz. [](https://www.fmod.com/resources/documentation-studio?version=2.0&page=https://fmod.com/resources/documentation-api?version=2.0&page=studio-api-system.html#fmod_studio_initflags)
 
-## <a name="incompatible-project-in-visual-studio"></a>Visual Studio uyumsuz proje
+## <a name="incompatible-project-in-visual-studio"></a>Visual Studio'de uyumsuz proje
 
-bilmeniz gereken çok önemli şey, Visual Studio, proje ayarlarında "uyumsuz" durumunun kaydedilemediğinden ve açık bir şekilde kullanana kadar bir projeyi yeniden yüklemeyi denemez `Reload Project` . Bu nedenle, her bir sorun giderme adımından sonra çözümü yeniden açmayı denediğinizden emin olun ve tüm uyumsuz projelere sağ tıklayıp öğesini seçin `Reload Project` .
+Burada önemli olan şey, Visual Studio ayarlarında "Uyumsuz" durumu kaydederek açıkça kullanana kadar projeyi yeniden yüklemenin denemeyecek `Reload Project` olduğudur. Bu nedenle, her sorun giderme adımından sonra çözümü yeniden açmayı denedikten ve uyumsuz tüm projelere sağ tıklar ve öğesini `Reload Project` seçin.
 
-1. Visual Studio, kullanarak Unity 'de dış betik düzenleyiciniz olarak ayarlandığından emin olun `Edit / Preferences / External Tools` .
+1. kullanarak Visual Studio Unity'de dış betik düzenleyiciniz olarak ayarlanacak şekilde `Edit / Preferences / External Tools` ayarlanacak.
 2. Unity sürümünüze bağlı olarak:
-   - Visual Studio eklentisinin Unity 'de yüklü olduğundan emin olun. `Help / About`en altta Unity için Microsoft Visual Studio araçları 'nın etkin olduğu gibi bir ileti görüntülenmelidir.
-   - Unity 2020. x +: ' de en son Visual Studio düzenleyici paketini kullandığınızı denetleyin `Window / Package Manager` .
-3. Tüm projeleri/çözüm dosyalarını ve `.vs` projenizdeki klasörü silmeyi deneyin.
-4. Veya kullanarak projeleri/çözümü yeniden oluşturmayı deneyin `Open C# Project` `Edit / Preferences / External tools / Regenerate Project files` .
-5. Visual Studio oyun/Unity iş yükünü yüklediğinizden emin olun.
-6. [Burada](#visual-studio-crashes)AÇıKLANDıĞı gibi MEF önbelleğini temizlemeyi deneyin.
-7. Visual Studio yeniden yüklemeyi deneyin (oyun/Unity iş yükünü yalnızca başlangıç için kullanarak).
-8. İçinde Unity uzantısını kesintiye uğratabilmeleri durumunda üçüncü taraf uzantılarını devre dışı bırakmayı deneyin `Tools / Extensions` .
+   - Visual Studio eklentisinin Unity'de yüklü olup değildir. `Help / About`en altta Unity için Microsoft Visual Studio'nin etkinleştirilmesi gibi bir ileti görüntülemesi gerekir.
+   - Unity 2020.x+: 'de en son Visual Studio Düzenleyicisi paketini kullanarak kontrol `Window / Package Manager` edin.
+3. Projenizin tüm projelerini/çözüm dosyalarını `.vs` ve klasörünü silmeyi deneyin.
+4. veya kullanarak projeleri/çözümü yeniden kullanmayı `Open C# Project` `Edit / Preferences / External tools / Regenerate Project files` deneyin.
+5. Oyun/Unity iş yükünü Visual Studio.
+6. MeF önbelleğini burada açıklanan şekilde temizlemeyi [deneyin.](#visual-studio-crashes)
+7. Uygulama yüklemelerini yeniden Visual Studio deneyin (yalnızca başlamak için Game/Unity iş yükünü kullanarak).
+8. içinde Unity uzantısına müdahale etmeleri durumunda üçüncü taraf uzantıları devre dışı bırakmayı `Tools / Extensions` deneyin.
 
-## <a name="extra-reloads-or-visual-studio-losing-all-open-windows"></a>ek yeniden yükler veya Visual Studio tüm açık pencereleri kaybetme
+## <a name="extra-reloads-or-visual-studio-losing-all-open-windows"></a>Ek yeniden yüklemeler veya Visual Studio açık pencerelerin kaybı
 
-Proje dosyalarına hiçbir şekilde doğrudan bir varlık işlemcisinden veya başka bir araçla dokunduğunuzdan emin olun. Proje dosyasını gerçekten değiştirmeniz gerekiyorsa, bunun için bir API kullanıma sunuyoruz. Lütfen [derleme başvuru sorunları bölümüne](#assembly-reference-or-project-property-issues)bakın.
+Proje dosyalarına hiçbir zaman doğrudan bir varlık işlemcisi veya başka bir araçtan dokunmayın. Proje dosyasını gerçekten işlemeniz gerekirse bunun için bir API'yi kullanırsınız. Lütfen Derleme [başvuruları sorunları bölümünü kontrol edin.](#assembly-reference-or-project-property-issues)
 
-ek yeniden yükleme deneyimliyorsanız veya Visual Studio, tüm açık Windows geri yükleme sırasında kaybediliyorsa, doğru .net hedefleme paketlerinin yüklü olduğundan emin olun. Daha fazla bilgi için aşağıdaki çerçeveler hakkında bölümüne bakın.
+Ek yeniden yüklemelerle veya yeniden yükleme Visual Studio tüm açık Windows kaybıyla karşıdan yüklense, düzgün .NET hedefleme paketlerinin yüklü olduğundan emin olun. Daha fazla bilgi için çerçeveler hakkında aşağıdaki bölüme bakın.
 
-## <a name="the-debugger-does-not-break-on-exceptions"></a>Hata ayıklayıcı özel durumlara uymuyor
+## <a name="the-debugger-does-not-break-on-exceptions"></a>Hata ayıklayıcısı özel durumlarda kesmez
 
-Eski Unity çalışma zamanını (.NET 3,5 eşdeğerini) kullanırken hata ayıklayıcı her zaman bir özel durum işlenmemiş olduğunda (= try/catch bloğunun dışında) kesilir. özel durum işlenirse, hata ayıklayıcı bir kesme gerekip gerekmediğini öğrenmek için özel durum Ayarlar penceresini kullanır.
+Eski Unity çalışma zamanı (.NET 3.5 eşdeğeri) kullanılırken, bir özel durum işlenmiş (=try/catch bloğu dışında) olduğunda hata ayıklayıcı her zaman bozulur. Özel durum işlandı ise, hata ayıklayıcı bir kesme gerekli olup olmadığını belirlemek için Özel Durum Ayarlar Penceresi kullanır.
 
-Yeni çalışma zamanı (.NET 4,6 eşdeğeri) ile, Unity Kullanıcı özel durumlarını yönetmek için yeni bir yol getirdi ve sonuç olarak, bir try/catch bloğunun dışında olsalar bile tüm özel durumlar "Kullanıcı tarafından işlendi" olarak görülür. bunun nedeni, hata ayıklayıcının kesilmesini istiyorsanız özel durum Ayarlar penceresinde açıkça bunları denetlemeniz gerekir.
+Yeni çalışma zamanı (.NET 4.6 eşdeğeri) ile Unity, kullanıcı özel durumlarını yönetmek için yeni bir yol başlattı ve sonuç olarak, bir try/catch bloğu dışında olsalar bile tüm özel durumlar "kullanıcı tarafından işlenmiş" olarak görülür. Bu nedenle, hata ayıklayıcının kesmesi için özel durum Ayarlar Penceresinde bunları açıkça denetlemenizi gerekir.
 
-özel durum Ayarlar penceresinde (hata ayıkla > Windows > özel durum Ayarlar), bir özel durum kategorisi (örneğin, ortak dil çalışma zamanı özel durumları, yani .net özel durumları) için düğümünü genişletin ve bu kategoride yakalamak istediğiniz özel durumun onay kutusunu seçin (örneğin, System. NullReferenceException). Tüm özel durumlar kategorisini de seçebilirsiniz.
+Özel Durum Ayarlar penceresinde (Hata Ayıklama > Windows > Özel Durum Ayarlar), bir özel durum kategorisinin düğümünü genişletin (örneğin, Ortak Dil Çalışma Zamanı Özel Durumları, yani .NET özel durumları) ve bu kategori içinde yakalamak istediğiniz özel durumun onay kutusunu seçin (örneğin System.NullReferenceException). Ayrıca bir özel durum kategorisinin tamamını da seçin.
 
-## <a name="on-windows-visual-studio-asks-to-download-the-unity-target-framework"></a>Windows, Visual Studio Unity hedef çerçevesini indirmeyi ister
+## <a name="on-windows-visual-studio-asks-to-download-the-unity-target-framework"></a>Bu Windows, Visual Studio Unity hedef çerçevesini indirmeyi sorar
 
-eski Unity çalışma zamanı (.net 3,5 eşdeğeri) kullanılırken, Unity için Visual Studio Araçları Windows 8 veya 10 ' da varsayılan olarak yüklü olmayan .net framework 3,5 gerektirir. Bu sorunu gidermek için, .NET Framework 3,5 'yi indirme ve yükleme yönergelerini izleyin.
+Eski Unity çalışma zamanı (.NET 3.5 eşdeğeri) kullanılırken, Unity için Visual Studio Araçları için .NET Framework 3.5 gerekir. Bu, Windows 8 veya 10'da varsayılan olarak yüklenmez. Bu sorunu düzeltmek için yönergeleri izleyerek .NET Framework 3.5'i indirin ve yükleyin.
 
-Yeni Unity çalışma zamanını kullanırken, Unity sürümüne bağlı olarak .NET hedefleme paketleri sürüm 4,6 veya 4.7.1 de gereklidir. Visual Studio yükleyicisini kullanarak bunları hızlıca yüklersiniz (yüklemenizi, tek tek bileşenlerinizi, .net kategorisini değiştirin, tüm 4. x hedefleme paketlerini seçin).
+Yeni Unity çalışma zamanı kullanılırken, Unity sürümüne bağlı olarak .NET hedefleme paketleri sürüm 4.6 veya 4.7.1 de gereklidir. Bunları hızlı bir şekilde yüklemek Visual Studio (yüklemenizi, tek tek bileşenlerinizi, .NET kategorisini değiştirmek, tüm 4.x hedefleme paketlerini seçmek) için Visual Studio yükleyicisini kullanabilirsiniz.
 
 ## <a name="assembly-reference-or-project-property-issues"></a>Derleme başvurusu veya proje özelliği sorunları
 
-Projeniz karmaşık başvuru temelinde veya bu oluşturma adımını daha iyi denetlemek isterseniz, oluşturulan projeyi veya çözüm içeriğini yönetmek için [API](../extensibility/customize-project-files-created-by-vstu.md) 'imizi kullanabilirsiniz. Ayrıca, Unity projenizdeki [Yanıt dosyalarını](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) da kullanabilirsiniz.
+Projeniz karmaşık başvuru açısından ise veya bu oluşturma adımını daha iyi [](../extensibility/customize-project-files-created-by-vstu.md) kontrol etmek için API'mizi kullanarak oluşturulan proje veya çözüm içeriğini işebilirsiniz. Unity projenizin [yanıt dosyalarını](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) da kullanabilirsiniz, biz de bunları işleeceğiz.
 
-son Visual Studio ve Unity sürümlerinde, en iyi yaklaşım, `Directory.Build.props` oluşturulan projelerinizle birlikte özel bir dosya kullanma gibi görünür. Daha sonra, oluşturma süreciyle kesintiye uğramadan proje yapısına katkıda bulunabileceksiniz. [Burada](https://docs.microsoft.com/visualstudio/msbuild/customize-your-build#directorybuildprops-and-directorybuildtargets) daha fazla bilgi bulabilirsiniz.
+Son Visual Studio unity sürümleriyle birlikte en iyi yaklaşım, oluşturulan projeleriniz ile birlikte özel `Directory.Build.props` bir dosya kullanmak gibi görünüyor. Ardından, oluşturma sürecine müdahale etmeden proje yapısına katkıda bulunabileceksiniz.
 
-## <a name="breakpoints-with-a-warning"></a>Uyarı içeren kesme noktaları
+## <a name="breakpoints-with-a-warning"></a>Uyarı ile kesme noktaları
 
-Visual Studio belirli bir kesme noktası için kaynak konumu bulamazsa, kesme noktası etrafında bir uyarı görürsünüz. Kullanmakta olduğunuz betiğin geçerli Unity sahnede düzgün bir şekilde yüklendiğini/kullanıldığını denetleyin.
+Belirli Visual Studio bir kesme noktası için kaynak konumu bulamazsanız kesme noktanız etrafında bir uyarıyla karşınıza gelir. Kullanmakta olduğu betiğin geçerli Unity sahnesinde düzgün şekilde yükleniyor/kullanılıyor olduğunu denetleyin.
 
-## <a name="breakpoints-not-hit"></a>Kesme noktaları isabet etmez
+## <a name="breakpoints-not-hit"></a>Kesme noktaları isabet değil
 
-Kullanmakta olduğunuz betiğin geçerli Unity sahnede düzgün bir şekilde yüklendiğini/kullanıldığını denetleyin. hem Visual Studio hem de Unity 'den çıkıp tüm oluşturulan dosyaları ( \* . csproj, \* . sln), `.vs` klasörü ve tüm kitaplık klasörünü silin. Unity [Web sitesinde](https://docs.unity3d.com/Manual/ManagedCodeDebugging.html)C# hata ayıklaması hakkında daha fazla bilgi edinebilirsiniz.
+Kullanmakta olduğu betiğin geçerli Unity sahnesinde düzgün şekilde yükleniyor/kullanılıyor olduğunu denetleyin. Hem Visual Studio Unity'den çıkın, ardından oluşturulan tüm dosyaları ( \* .csproj, \* .sln), klasörü ve `.vs` Kitaplık klasörünün tamamını silin. Unity web sitesinde C# hata ayıklaması hakkında daha fazla bilgi [bulabilirsiniz.](https://docs.unity3d.com/Manual/ManagedCodeDebugging.html)
 
-## <a name="unable-to-debug-android-players"></a>Android oynatıcılarda hata ayıklaması yapılamıyor
+## <a name="unable-to-debug-android-players"></a>Android oyuncularda hata ayıklaması kurulamadı
 
-Player algılaması için çok noktaya yayın kullanıyoruz (Unity tarafından kullanılan varsayılan mekanizma), ancak bundan sonra hata ayıklayıcıyı eklemek için normal bir TCP bağlantısı kullanıyoruz. Algılama aşaması, Android cihazlar için ana sorundur.
+Oynatıcı algılama için çok noktaya yayın (Unity tarafından kullanılan varsayılan mekanizmadır) kullanılır, ancak bundan sonra hata ayıklayıcıyı eklemek için normal bir TCP bağlantısı kullanıruz. Algılama aşaması, Android cihazlar için ana sorundur.
 
-WiFi, gecikme nedeniyle USB ile karşılaştırıldığında çok yönlüdür ancak süper yavaştır. Bazı yönlendiriciler veya cihazlar için uygun çok noktaya yayın desteğinin eksik olduğunu gördük (Nexus serisi bunun için iyi bilinmektedir).
+Wifi çok yönlüdür ancak gecikme süresi nedeniyle USB'ye kıyasla çok yavaştır. Bazı yönlendiriciler veya cihazlar için uygun çok noktaya yayın desteğinin eksik olduğunu gördük (Nexus serisi bunun için iyi bilinir).
 
-usb, hata ayıklama için süper hızlıdır ve Unity için Visual Studio Araçları artık usb cihazlarını algılayabilir ve hata ayıklama için bağlantı noktalarını doğru bir şekilde iletmek üzere adb sunucusuyla iletişim kurabilir.
+USB hata ayıklama için süper hızlıdır ve Unity için Visual Studio Araçları artık USB cihazlarını algılanabilir ve hata ayıklama için bağlantı noktalarını düzgün bir şekilde iletmesi için adb sunucusuyla iletişimde bulunur.
 
 ## <a name="issues-with-intellisense-or-code-coloration"></a>IntelliSense veya kod renklendirme sorunları
 
-Visual Studio en son sürüme yükseltmeyi deneyin. [Uyumsuz projeler](#incompatible-project-in-visual-studio)için aynı sorun giderme adımlarını deneyin.
+Güncelleştirmenizi en Visual Studio sürümüne yükseltmeyi deneyin. Uyumsuz projeler için ile aynı sorun [giderme adımlarını deneyin.](#incompatible-project-in-visual-studio)
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-Unity için Visual Studio Araçları hata ayıklayıcının, C# derleyicisinin daha eski sürümü ile nasıl etkileşime gireceğini belirten bilinen sorunlar vardır. Bu sorunları gidermeye yardımcı olmak için çalışıyoruz, ancak bu sırada aşağıdaki sorunlarla karşılaşabilirsiniz:
+Hata ayıklayıcının Unity'nin Unity için Visual Studio Araçları C# derleyicisi sürümüyle etkileşim kurması sonucunda ortaya çıkan bilinen sorunlar vardır. Bu sorunları düzeltmeye yardımcı olmak için çalışıyoruz, ancak bu arada aşağıdaki sorunlarıyla da karşınıza olabilir:
 
-- Hata ayıklarken Unity bazen kilitleniyor.
+- Hata ayıklama sırasında Unity bazen kilitleniyor.
 
 - Hata ayıklama sırasında Unity bazen donuyor.
 
-- Yöntemlerin içine ve dışına adımla bazen, özellikle yineleyiciler içinde veya switch deyimlerinde yanlış bir şekilde davranır.
+- Yöntemlerin içine veya dışından adımlama bazen, özellikle de iterators'da veya switch deyimlerinde yanlış davranır.
 
-## <a name="report-errors"></a>Hataları raporla
+## <a name="report-errors"></a>Hataları bildirme
 
-kilitlenme, dondurur veya diğer hatalarla karşılaşdığınızda hata raporları göndererek Unity için Visual Studio Araçları kalitesini iyileştirmemize yardımcı olun. bu, Unity için Visual Studio Araçları sorunları araştırmamıza ve gidermenize yardımcı olur. Teşekkür ederiz!
+Kilitlenme, donma veya diğer Unity için Visual Studio Araçları hatalarla ilgili hata raporları göndererek bu hizmet kalitesini artırmamıza yardımcı olun. Bu, uygulamayla ilgili sorunları araştırmamıza ve düzeltmeme Unity için Visual Studio Araçları. Teşekkür ederiz!
 
-### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Visual Studio donuyor olduğunda hata bildirme
+### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Uygulama donuyorsa hata Visual Studio bildirme
 
-Unity için Visual Studio Araçları ile hata ayıklarken Visual Studio bazen donuyor olan raporlar var, ancak bu sorunu anlamak için daha fazla veri gerekir. Aşağıdaki adımları izleyerek araştırmamıza yardımcı olabilirsiniz.
+Hata ayıklama sırasında Visual Studio bazen donan raporlar Unity için Visual Studio Araçları ama bu sorunu anlamak için daha fazla veriye ihtiyacımız var. Aşağıdaki adımları takip edin ve araştırmamıza yardımcı olabilir.
 
-##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları ile hata ayıklarken Visual Studio donuyor olarak bildirmek için
+##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>Hata ayıklama sırasında Visual Studio hata ayıklama sırasında bu hatanın donup Unity için Visual Studio Araçları
 
 *Windows:*
 
-1. Visual Studio yeni bir örneğini açın.
+1. Yeni bir örnek Visual Studio.
 
-1. Işleme Iliştir iletişim kutusunu açın. yeni Visual Studio örneğinde, ana menüdeki **hata ayıkla**, **işleme iliştir**' i seçin.
+1. İşleme Ekle iletişim kutusunu açın. Uygulamanın yeni Visual Studio menüsünde Hata Ayıkla, İşleme **Ekle'yi seçin.** 
 
-1. Hata ayıklayıcıyı dondurulmuş Visual Studio örneğine iliştirin. **işleme iliştir** iletişim kutusunda, **kullanılabilir işlemler** tablosundan Visual Studio dondurulmuş örneğini seçin, sonra **ekle** düğmesini seçin.
+1. Hata ayıklayıcıyı uygulamanın donmuş örneğine Visual Studio. **işleme iliştir** iletişim kutusunda, **kullanılabilir işlemler** tablosundan Visual Studio dondurulmuş örneğini seçin, sonra **ekle** düğmesini seçin.
 
 1. Hata ayıklayıcıyı duraklatın. yeni Visual Studio örneğinde, ana menüdeki **hata ayıkla**, **tümünü kes**' i seçin veya **Ctrl + Alt + Break** tuşlarına basın.
 

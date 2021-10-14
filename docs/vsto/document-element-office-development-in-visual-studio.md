@@ -2,7 +2,6 @@
 description: vstov4 ad alanının belge öğesi, belge düzeyinde özelleştirmeler için özelleştirmeye özgü bilgileri depolar.
 title: '&lt;document &gt; öğesi (Office geliştirme Visual Studio)'
 titleSuffix: ''
-ms.custom: seodec18
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,12 +17,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: 66ef774db63c01a1b622c6ea937bd29444bc3d71
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 66506aeb6b65050738c4d7a4a37ac0e4caf0ed1e
+ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126634142"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129971068"
 ---
 # <a name="ltdocumentgt-element-office-development-in-visual-studio"></a>&lt;document &gt; öğesi (Office geliştirme Visual Studio)
   Ad `document` alanının `vstov4` öğesi, belge düzeyinde özelleştirmeler için özelleştirmeye özgü bilgileri depolar.
@@ -46,7 +45,7 @@ ms.locfileid: "126634142"
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirme örneği
 
 ### <a name="description"></a>Description
- Aşağıdaki kod örneği, kullanılarak `document` dağıtılan bir belge düzeyi Office çözümünde öğesini [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir Office içerir.](../vsto/application-manifests-for-office-solutions.md)
+ Aşağıdaki kod örneği, kullanılarak `document` dağıtılan belge düzeyinde bir Office çözümünde öğesini [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] gösterir. Bu kod örneği, uygulama çözümleri için Uygulama bildirimleri [bölümünde sağlanan daha büyük bir örneğin Office yer almaktadır.](../vsto/application-manifests-for-office-solutions.md)
 
 ### <a name="code"></a>Kod
 
