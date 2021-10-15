@@ -4,25 +4,23 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: f39a2672-c283-4755-93d3-31c7c7a032d0
-ms.date: 02/19/2021
+ms.date: 10/13/2021
 ms.topic: how-to
 description: iş veya okul hesabınızla Visual Studio abonelikleriniz üzerinde nasıl oturum kullanabileceğinizi öğrenin.
-ms.openlocfilehash: 82ab031d644055148aad2650069a31cd945c55f9
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 827176cd4ca8d3dd6c7df84b9bba57948778c8d1
+ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428974"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130010853"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-work-or-school-account"></a>iş veya okul hesabınızla abonelikler Visual Studio için oturum açma 
-
 Visual Studio aboneliğinizde oturum açma adımları, kullanmakta olduğunuz hesap türüne bağlıdır.  Örneğin, bir Microsoft hesabı (MSA) veya işvereniniz veya okulunuz tarafından sağlanan bir e-posta adresi kullanıyor olabilirsiniz.  2019 ocak itibariyle artık bazı aboneliklerde oturum açmak için GitHub hesabınızı da kullanabilirsiniz. 
 
 Bu makalede, çalışmanız veya okulunuz tarafından sağlanmış bir e-posta adresiyle oturum açma adımları sağlanacaktır.
 
 ## <a name="signing-in-with-your-work-or-school-account"></a>İş veya okul hesabınızla oturum açma
-
-1. Lütfen adresini ziyaret edin [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) .
+1. Adresini ziyaret edin [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) .
 2. yeni Visual Studio aboneliğinin atandığı e-posta adresini girin.
 
    > [!NOTE]
@@ -39,7 +37,6 @@ Bu makalede, çalışmanız veya okulunuz tarafından sağlanmış bir e-posta a
 Ayrıca, şu anda seçili aboneliğinizi sağ üst köşede, Kullanıcı adınız altında görebilirsiniz.  "Gösteriliyor:" ve ardından abonelik gelir.  Birden fazla aboneliğiniz varsa, açılan oka tıklayıp kullanmak istediğiniz aboneliği seçebilirsiniz.
 
 ## <a name="using-your-microsoft-account-msa-to-sign-in-to-a-work-or-school-account"></a>Microsoft hesabınızı (MSA) kullanarak bir iş veya okul hesabında oturum açın
-
 1. Adresine gidin [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) .
 2. yeni Visual Studio aboneliğinin atandığı e-posta adresini girin
 
@@ -48,7 +45,7 @@ Ayrıca, şu anda seçili aboneliğinizi sağ üst köşede, Kullanıcı adını
 
 3. **Devam**’a tıklayın.
 4. Bir karar sayfasına yönlendirilirsiniz.
-    - abonelik, bir Azure Active Directory (AAD) kiracısıyla ilişkili bir "iş veya okul) hesabıyla ilişkiliyse **iş veya okul hesabı** ' nı seçin.
+    - abonelik bir Azure Active Directory (AAD) kiracısıyla ilişkili bir "iş veya okul" hesabıyla ilişkiliyse **iş veya okul hesabı** ' nı seçin.
     - Abonelik bir "Kurumsal" e-posta adresiyle ilişkiliyse, ancak aynı zamanda bir "kişisel" Microsoft hesabına (MSA) dönüştürülmüşse **Kişisel** ' i seçin.
 
         > [!NOTE]

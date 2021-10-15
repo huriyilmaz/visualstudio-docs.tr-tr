@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 1bdcb3c9-bba1-4e25-a609-9d7e539d78e0
-ms.date: 03/08/2021
+ms.date: 10/13/2021
 ms.topic: conceptual
 description: GitHub hesabınızla Visual Studio abonelikleriniz üzerinde nasıl oturum kullanabileceğinizi öğrenin.
-ms.openlocfilehash: d57eb9c68a21fd7e68eda23efa3b194f8f0fb203
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: a1108bbacde08a08da7e744095b8acabb147c24c
+ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428252"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130011373"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-with-your-github-account"></a>GitHub hesabınızla abonelikler Visual Studio için oturum açma 
 Visual Studio aboneliğinizde oturum açma adımları, kullanmakta olduğunuz hesap türüne bağlıdır. Örneğin, bir Microsoft hesabı (MSA) veya işvereniniz veya okulunuz tarafından sağlanan bir e-posta adresi kullanıyor olabilirsiniz. 2019 ocak itibariyle artık bazı aboneliklerde oturum açmak için GitHub hesabınızı da kullanabilirsiniz. 
@@ -20,7 +20,6 @@ Visual Studio aboneliğinizde oturum açma adımları, kullanmakta olduğunuz he
 bu makale GitHub hesabınızla oturum açmak için gereken adımları sağlar.
 
 ## <a name="signing-in-with-your-github-account"></a>GitHub hesabınızla oturum açma
-
 GitHub kimlik desteği, mevcut GitHub hesabınızı yeni veya mevcut bir Microsoft hesabı kimlik bilgisi olarak kullanmanıza olanak tanır ve GitHub hesabınızı Microsoft hesabı ile bağlantılandırın. 
 
 GitHub ile oturum açtığınızda, Microsoft, GitHub hesabınızla ilişkili herhangi bir e-posta adresinin mevcut bir kişisel veya kurumsal Microsoft hesabı eşleşip eşleşmediğini denetler. Adres kurumsal hesabınızla eşleşiyorsa bunun yerine bu hesapta oturum açmanız istenir. adres bir kişisel hesapla eşleşiyorsa, bu kişisel hesaba bir oturum açma yöntemi olarak GitHub hesabınızı ekleyeceğiz.
@@ -73,4 +72,4 @@ y: GitHub hesabınızda bir Azure Active Directory e-posta adresiniz varsa, Azur
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Abonelikler portalında başarıyla oturum açtıktan sonra avantajlar sayfasını ziyaret etmenizi https://my.visualstudio.com/benefits ve size sunulan harika araçları, hizmetleri ve teklifleri keşfetmenizi öneririz.
+Abonelikler portalında başarıyla oturum açtıktan sonra, [avantajlar sayfasını](https://my.visualstudio.com/benefits) ziyaret etmenizi ve size sunulan harika araçları, hizmetleri ve teklifleri keşfetmenizi öneririz.

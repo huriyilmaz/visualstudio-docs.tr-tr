@@ -13,12 +13,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b0f9c7ebcdf89ae193118afa5f90af4efb1f4b5
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 282dd4fb2fc1f3f68d3f4c4b6b5d5d0b17f5e947
+ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428743"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130011425"
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-c"></a>C ile Visual Studio Windows Forms uygulama oluşturma\#
 
@@ -41,7 +41,7 @@ Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visua
 
 ::: moniker range="vs-2022"
 
-Visual Studio henüz yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio 2022 önizleme indirmeleri](https://visualstudio.microsoft.com/vs/preview/vs2022) sayfasına gidin.
+Visual Studio henüz yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio 2022 önizleme indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına gidin.
 
 > [!NOTE]
 > Bu öğreticideki ekran görüntülerinin bazıları koyu temayı kullanır. koyu tema kullanmıyorsanız, ancak bunu yapmak istiyorsanız, nasıl yapılacağını öğrenmek için [Visual Studio ıde ve düzenleyiciyi kişiselleştirme](../ide/quickstart-personalize-the-ide.md) sayfasına bakın.

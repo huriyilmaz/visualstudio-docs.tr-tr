@@ -15,12 +15,12 @@ ms.prod: visual-studio-windows
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fa5515ea3c103579ca2df8de954e88a07cbbe29
-ms.sourcegitcommit: 5f1e0171626e13bb2c5a6825e28dde48061208a4
+ms.openlocfilehash: 684b2c97885daee160ff8f539a65c501acded7fa
+ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/09/2021
-ms.locfileid: "129704578"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130011529"
 ---
 # <a name="visual-studio-docs-whats-new-for-september-2021"></a>Visual Studio belgeleri: eylül 2021 ' deki yenilikler
 
@@ -80,7 +80,7 @@ eylül 2021 ' de Visual Studio docs ' deki yenilikler ' e hoş geldiniz. Bu maka
 - [Nasıl yapılır: derleme çıkış dizinini değiştirme](./how-to-change-the-build-output-directory.md)
   - Visual Studio 2022 önizlemesi için gerekenleri gözden geçirin ve güncelleştirin
   - Dev17 için derleme yapılandırma makalesini Güncelleştir
-- [nasıl yapılır: projeleri hedef platformları için yapılandırma](./how-to-configure-projects-to-target-platforms.md) -Visual Studio 2022 Preview için gereken şekilde gözden geçirin ve güncelleştirin
+- [nasıl yapılır: projeleri hedef platformlar için yapılandırma](./how-to-configure-projects-to-target-platforms.md) -Visual Studio 2022 RC için gerekenleri gözden geçirin ve güncelleştirin
 - [Çözüm Gezgini hakkında bilgi edinin](./use-solution-explorer.md) Çözüm Gezgini bağlam menüsü bilgilerini ekleyin
 
 ## <a name="install"></a>Yükleme
@@ -177,117 +177,117 @@ aşağıdaki bölümler, Visual Studio docs 'taki yenilikleri önceki üç aya s
 
 **Yeni makaleler**
 
-- [dotfuscator Community kaydet](./dotfuscator/register.md) -yeni makale oluşturuldu
-- [dotfuscator Community 5 ' ten yükseltme](./dotfuscator/upgrade-from-5.md) -yeni makale oluşturuldu
+- [Dotfuscator'Community](./dotfuscator/register.md) kaydetme - Yeni makale oluşturuldu
+- [Dotfuscator'dan yükseltme Community 5](./dotfuscator/upgrade-from-5.md) - Yeni makale oluşturuldu
 
 **Güncelleştirilmiş makaleler**
-- [Nasıl yapılır: başvuru Yöneticisi](./how-to-add-or-remove-references-by-using-the-reference-manager.md) -güncelleştirme ' > başvuru Ekle ' bölümünü kullanarak başvuru ekleme veya kaldırma
-- [Visual Studio 2022 ' deki yenilikler (önizleme)](./whats-new-visual-studio-2022.md) -Visual Studio 2022 Preview 3 ' teki yenilikleri güncelleştirme
-- [6. Adım: git Ile çalışma](../python/tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md) -Python öğreticisine güncelleştirilmiş git kaynak denetimi bilgilerini ekleme
-- [öğretici: Visual Studio (bölüm 1/2) basit bir C# konsol uygulaması oluşturma](../get-started/csharp/tutorial-console.md) -CSharp konsol öğreticisine Git kaynak denetimi bilgilerini ekleme
-- [öğretici: Visual Studio Visual Basic ile çalışmaya başlama](../get-started/visual-basic/tutorial-console.md) -VB konsol öğreticisine Git kaynak denetimi bilgilerini ekleme
-- [C++ ' da konsol Hesaplayıcı oluşturma](/cpp/get-started/tutorial-console-cpp) -C++ konsol Hesaplayıcı öğreticisine git bilgileri ekleme
+- [Nasıllı: Başvuru Yöneticisi'ni kullanarak başvuru ekleme veya kaldırma](./how-to-add-or-remove-references-by-using-the-reference-manager.md) - 'Başvuru Ekle' > güncelleştirme
+- [Visual Studio 2022 (Önizleme)](./whats-new-visual-studio-2022.md) - Visual Studio 2022 Preview 3'te Yapılan Güncelleştirmeler
+- [6. Adım: Git ile çalışma](../python/tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md) - Python öğreticisi için güncelleştirilmiş Git kaynak denetimi bilgileri ekleme
+- Öğretici: Visual Studio'de basit bir C# konsol uygulaması [oluşturma (bölüm 1/2)](../get-started/csharp/tutorial-console.md) - CSharp konsol öğreticisi'ne Git kaynak denetimi bilgileri ekleme
+- [Öğretici: Kullanmaya başlayın Visual Basic](../get-started/visual-basic/tutorial-console.md) ile Visual Studio - VB konsolu öğreticisi'ne Git kaynak denetimi bilgileri ekleme
+- [C++ içinde konsol hesaplayıcısı oluşturma](/cpp/get-started/tutorial-console-cpp) - C++ Konsol Hesaplayıcısı öğreticisi'ne Git bilgisi ekleme
 
 #### <a name="install"></a>Yükleme
 
 **Güncelleştirilmiş makaleler**
 
-- [derleme araçlarını bir kapsayıcıya yükler](../install/build-tools-container.md) -Visual Studio 2022 için güncelleştirmeler
+- [Kapsayıcıya Derleme Araçları Yükleme](../install/build-tools-container.md) - Visual Studio 2022 güncelleştirmeleri
 
 #### <a name="javascript"></a>JavaScript
 
 **Yeni makaleler**
 
-- [öğretici: Visual Studio vue ile ASP.NET Core uygulama oluşturma](../javascript/tutorial-asp-net-core-with-vue.md) -yeni makale oluşturuldu
-- [Angular uygulaması oluşturma](../javascript/tutorial-create-angular-app.md) -yeni makale oluşturuldu
-- [React uygulaması oluşturma](../javascript/tutorial-create-react-app.md) -yeni makale oluşturuldu
-- [Vue.js uygulaması oluşturma](../javascript/tutorial-create-vue-app.md) -yeni makale oluşturuldu
+- [Öğretici: Visual Studio'de Vue ile ASP.NET Core](../javascript/tutorial-asp-net-core-with-vue.md) uygulaması oluşturma - Yeni makale oluşturuldu
+- [Yeni Angular oluşturma](../javascript/tutorial-create-angular-app.md) - Yeni makale oluşturuldu
+- [Yeni React oluşturma](../javascript/tutorial-create-react-app.md) - Yeni makale oluşturuldu
+- [Yeni Vue.js oluşturma](../javascript/tutorial-create-vue-app.md) - Yeni makale oluşturuldu
 
 **Güncelleştirilmiş makaleler**
-- [Visual Studio # için JavaScript ve TypeScript arama sonuçlarında sayfa başlığı görüntülendi. Markasını ekleyin. < 60 karakter.](../javascript/index.yml) -Dizin sayfasını farklı bağlantılarla güncelleştirme
+- [Visual Studio #Required içinde JavaScript ve TypeScript; arama sonuçlarında görüntülenen sayfa başlığı. Markayı dahil etmek. < 60 karakter.](../javascript/index.yml) - Dizin sayfasını farklı bağlantılarla güncelleştirme
 
 #### <a name="test"></a>Test etme
 
 **Yeni makaleler**
 
-- [Uzaktan test (deneysel Önizleme)](../test/remote-testing.md) -yeni makale oluşturuldu
+- [Uzaktan Test (deneysel önizleme)](../test/remote-testing.md) - Yeni makale oluşturuldu
 
 **Güncelleştirilmiş makaleler**
 
-- [Birim testi ile çalışmaya başlama](../test/getting-started-with-unit-testing.md) -C++ desteği ekleme & birim testi iyileştirmeleri
+- [Kullanmaya başlayın testi ile ilgili geliştirmeler](../test/getting-started-with-unit-testing.md) - Öğreticiye birim testi & C++ desteği ekleme
 
-### <a name="july-2021"></a>2021 Temmuz
+### <a name="july-2021"></a>Temmuz 2021
 
 #### <a name="debugger"></a>Hata Ayıklayıcısı
 
 **Güncelleştirilmiş makaleler**
 
-- [Özel veri görselleştiricileri oluşturma](../debugger/create-custom-visualizers-of-data.md) -Görselleştiriciler belgelerini .NET 5,0 senaryolarına yönelik olmaları durumunda ek adımlar ile güncelleştirme
-- [Izlenecek yol: C \# 'de Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md) -.NET 5 için Görselleştirici içeriği ve özel veri nesneleri için yeni içerik
+- [Özel veri görselleştiricileri oluşturma](../debugger/create-custom-visualizers-of-data.md) - .NET 5.0 senaryolarına yönelik olması durumunda ek adımlarla Görselleştiricileri Güncelleştir Belgeleri
+- [Kılavuz: C'de Görselleştirici \# Yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md) - .NET 5 için görselleştirici içeriği ve özel veri nesneleri için yeni içerik
 
 #### <a name="extensibility"></a>Genişletilebilirlik
 
 **Yeni makaleler**
 
-- [Visual Studio 2017 genişletilebilirliği hakkında sss](../extensibility/faq-2017.yml)
+- [2017 genişletilebilirliği Visual Studio hakkında SSS](../extensibility/faq-2017.yml)
 
 #### <a name="ide"></a>IDE
 
 **Yeni makaleler**
 
-- [Visual Studio 2022 ' deki yenilikler (önizleme)](./whats-new-visual-studio-2022.md)
-- [Sorun bildirin: durumlar ve SSS](./how-to-report-a-problem-with-visual-studio.md)
+- [Visual Studio 2022 'de (Önizleme) yapılan yeniler](./whats-new-visual-studio-2022.md)
+- [Sorun bildirme: Eyaletler ve SSS](./how-to-report-a-problem-with-visual-studio.md)
 
 **Güncelleştirilmiş makaleler**
-- [Dosyalarda bul](./find-in-files.md) -birden çok arama bölümü ve genel güncelleştirmeler eklendi
-- [dosyalar ve klasörler için güven ayarlarını yapılandırma](./reference/trust-settings.md) -VS2022 içinde yeni güven Ayarlar bilgi eklendi
-- klavye kısayollarına Visual Studio eklenen açıklamalarda [varsayılan klavye kısayolları](./default-keyboard-shortcuts-in-visual-studio.md)
+- [Dosyalarda Bul](./find-in-files.md) - Birden Çok Arama bölümü ve genel güncelleştirmeler eklendi
+- [Dosya ve klasörler için güven ayarlarını yapılandırma](./reference/trust-settings.md) - VS2022'de yeni Güven Ayarlar bilgileri eklendi
+- [Visual Studio'da](./default-keyboard-shortcuts-in-visual-studio.md) varsayılan klavye kısayolları - Klavye kısayollarına açıklamalar eklendi
 
 #### <a name="javascript"></a>JavaScript
 
 **Yeni makaleler**
 
-- [öğretici: Visual Studio Angular ile ASP.NET Core uygulama oluşturma](../javascript/tutorial-asp-net-core-with-angular.md)
-- [öğretici: Visual Studio React ile ASP.NET Core uygulama oluşturma](../javascript/tutorial-asp-net-core-with-react.md)
+- [Öğretici: ASP.NET Core'da Angular uygulama Visual Studio](../javascript/tutorial-asp-net-core-with-angular.md)
+- [Öğretici: ASP.NET Core'de React uygulama Visual Studio](../javascript/tutorial-asp-net-core-with-react.md)
 
 #### <a name="msbuild"></a>MSBuild
 
 **Yeni makaleler**
 
-- [MSB3027: ' kaynak ' ' hedef ' öğesine kopyalanamadı. ' Number ' yeniden deneme sayısı aşıldı. Başaramadı](../msbuild/errors/msb3027.md)
+- [MSB3027: 'source' 'dest' olarak kopyalandı. 'number' yeniden deneme sayısı aşıldı. Başarısız](../msbuild/errors/msb3027.md)
 - [MSB3086](../msbuild/errors/msb3086.md)
-- [MSB3190: ClickOnce, ' level ' istek yürütme düzeyini desteklemiyor](../msbuild/errors/msb3190.md)
+- [MSB3190: ClickOnce 'level' istek yürütme düzeyini desteklemez](../msbuild/errors/msb3190.md)
 - [MSB3275](../msbuild/errors/msb3275.md)
-- [MSB3303: COM başvurusu ' başvuru ' sürümü ' version ' çözümlenemedi](../msbuild/errors/msb3303.md)
-- [MSB3304: COM başvurusunun ' Reference ' bağımlılıkları belirlenemedi](../msbuild/errors/msb3304.md)
-- [MSB3305: ' Path ' yolundan ' Reference ' COM başvurusunu Işleme](../msbuild/errors/msb3305.md)
-- [MSB3325: aşağıdaki anahtar dosyası içeri aktarılamıyor](../msbuild/errors/msb3325.md)
-- [MSB3326: aşağıdaki anahtar dosyası içeri aktarılamıyor](../msbuild/errors/msb3326.md)
+- [MSB3303: COM başvurusu 'başvuru' sürümü 'sürüm' çözümlenemdi](../msbuild/errors/msb3303.md)
+- [MSB3304: 'başvuru' COM başvurusu bağımlılıkları belirlendi](../msbuild/errors/msb3304.md)
+- [MSB3305: 'path' yolundan 'başvuru' COM başvurusu iş](../msbuild/errors/msb3305.md)
+- [MSB3325: Aşağıdaki anahtar dosyası içeri aktaramıyor](../msbuild/errors/msb3325.md)
+- [MSB3326: Aşağıdaki anahtar dosyası içeri aktaramıyor](../msbuild/errors/msb3326.md)
 - [MSB3327](../msbuild/errors/msb3327.md)
-- [' Name ' kaynak dosyasının adı geçersiz](../msbuild/errors/msb3553.md)
+- ['name' kaynak dosyasının adı geçersiz](../msbuild/errors/msb3553.md)
 - [MSB3836](../msbuild/errors/msb3836.md)
-- [MSB3884: ' filename ' kural kümesi dosyası bulunamadı](../msbuild/errors/msb3884.md)
+- [MSB3884: 'filename' kural kümesi dosyası bulunamıyor](../msbuild/errors/msb3884.md)
 - [MSB4094](../msbuild/errors/msb4094.md)
-- [MSB4096: ' item-List ' öğe listesindeki ' öğe ' öğesi ' name ' meta verileri için bir değer tanımlamıyor](../msbuild/errors/msb4096.md)
+- [MSB4096: 'item-list' öğe listesinde 'item' öğesi, 'name' meta verileri için bir değer tanımlamaz](../msbuild/errors/msb4096.md)
 - [MSB4166](../msbuild/errors/msb4166.md)
-- [MSB4175: ' görev-Fabrika-adı ' görev Fabrikası ' derleme-adı ' derlemesinden yüklenemedi](../msbuild/errors/msb4175.md)
-- [MSB6001: ' Tool ' için geçersiz komut satırı anahtarı](../msbuild/errors/msb6001.md)
-- [MSB6011: ' görev-adı ' görevine geçersiz parametreler geçirildi](../msbuild/errors/msb6011.md)
-- [MSB3075: ' name ' komutuna ' Error-Code ' koduyla çıkıldı. Lütfen bu komutu çalıştırmak için yeterli haklara sahip olduğunuzu doğrulayın](../msbuild/errors/msb3075.md)
-- [MSB3103: geçersiz resx dosyası](../msbuild/errors/msb3103.md)
-- [MSB3274: birincil başvuru ' name ', ' version ' çerçevesine göre oluşturulduğundan çözümlenemedi](../msbuild/errors/msb3274.md)
-- [MSB3552: ' filename ' kaynak dosyası bulunamıyor](../msbuild/errors/msb3552.md)
-- [MSB3554: ' filename ' çıkış dosyasına yazılamıyor](../msbuild/errors/msb3554.md)
-- [MSB3645: .NET Framework v 3.5 Service Pack 1 bulunamadı. ' framework-version ' hedefini hedeflemek için .NET Framework v 3.5 Service Pack 1 veya üzeri yüklü olmalıdır](../msbuild/errors/msb3645.md)
-- [MSB3822: dize olmayan kaynaklar, çalışma zamanında System. resources. Extensions derlemesini gerektirir, ancak bu projenin başvurularında bulunamadı](../msbuild/errors/msb3822.md)
-- [MSB3971: ' name ' için başvuru derlemeleri bulunamadı](../msbuild/errors/msb3971.md)
-- [MSB4086: ' Condition ' koşulunda sayı yerine ' Value ' olarak değerlendirilen ' expression ' üzerinde sayısal bir karşılaştırma denendi](../msbuild/errors/msb4086.md)
-- [MSB4236: belirtilen SDK ' name ' bulunamadı](../msbuild/errors/msb4236.md)
-- [MSB6004: belirtilen görev çalıştırılabilir konumu ' Path ' geçersiz](../msbuild/errors/msb6004.md)
+- [MSB4175: 'task-factory-name' görev fabrikası 'assembly-name' derlemeden yüklenemedi](../msbuild/errors/msb4175.md)
+- [MSB6001: 'tool' için geçersiz komut satırı anahtarı](../msbuild/errors/msb6001.md)
+- [MSB6011: 'task-name' görevine geçersiz parametreler geçirildi](../msbuild/errors/msb6011.md)
+- [MSB3075: 'name' komutundan 'error-code' koduyla çıkıldı. Bu komutu çalıştırmak için yeterli haklara sahip olduğunu doğrulayın](../msbuild/errors/msb3075.md)
+- [MSB3103: Geçersiz Resx dosyası](../msbuild/errors/msb3103.md)
+- [MSB3274: 'name' birincil başvurusu', 'sürüm' çerçevesine göre inşa edilmiş olduğundan çözümlenemedi](../msbuild/errors/msb3274.md)
+- [MSB3552: 'filename' kaynak dosyası bulunamıyor](../msbuild/errors/msb3552.md)
+- [MSB3554: 'filename' çıktı dosyasına yazamıyor](../msbuild/errors/msb3554.md)
+- [MSB3645: .NET Framework v3.5 Service Pack 1 bulunamadı. 'framework-version' sürümünü hedeflemek için .NET Framework v3.5 Service Pack 1 veya sonraki bir sürümü yüklü olması gerekir](../msbuild/errors/msb3645.md)
+- [MSB3822: Dize olmayan kaynaklar çalışma zamanında System.Resources.Extensions derlemesini gerektirir, ancak bu projenin başvurularında bulunamadı](../msbuild/errors/msb3822.md)
+- [MSB3971: 'name' için başvuru derlemeleri bulunamadı](../msbuild/errors/msb3971.md)
+- [MSB4086: 'condition' koşuluyla sayı yerine 'değer' olarak değerlendirilen 'ifade' üzerinde sayısal bir karşılaştırma denendi](../msbuild/errors/msb4086.md)
+- [MSB4236: Belirtilen SDK 'adı' bulunamadı](../msbuild/errors/msb4236.md)
+- [MSB6004: Belirtilen görev yürütülebilir 'path' konumu geçersiz](../msbuild/errors/msb6004.md)
 
 **Güncelleştirilmiş makaleler**
 
-- [izlenecek yol: MSBuild](../msbuild/walkthrough-using-msbuild.md) MSBuild izlenecek yol VS 2022 Program dosyalarını kullanma
+- [Adım adım kılavuz: MSBUILD](../msbuild/walkthrough-using-msbuild.md) - MSBuild VS 2022 Program Dosyaları'nın nasıl izlenecek yolu kullanma
 
 ### <a name="june-2021"></a>Haziran 2021
 
@@ -295,84 +295,84 @@ aşağıdaki bölümler, Visual Studio docs 'taki yenilikleri önceki üç aya s
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio cloud explorer 'da Azure hesaplarınızla ilişkili kaynakları yönetme](../azure/vs-azure-tools-resources-managing-with-cloud-explorer.md) -cloud explorer 'ı kullanımdan kaldırma ve Azure node Sunucu Gezgini ekleme
-- [Sunucu Gezgini 'Den Azure sanal makinelerine erişme](../azure/vs-azure-tools-virtual-machines-access-from-server-explorer.md) -Cloud Explorer 'ı kullanımdan kaldırma ve Azure node Sunucu Gezgini ekleme
+- [Visual Studio Cloud Explorer'da Azure](../azure/vs-azure-tools-resources-managing-with-cloud-explorer.md) hesaplarıyla ilişkili kaynakları yönetme - Bulut Gezgini'nin kullanımdan Sunucu Gezgini Azure düğümü ekleme
+- [Azure Sanal Makineler'e Sunucu Gezgini](../azure/vs-azure-tools-virtual-machines-access-from-server-explorer.md) - Bulut Gezgini'nin kullanımdan Sunucu Gezgini Azure düğümü ekleme
 
 #### <a name="containers"></a>Kapsayıcılar
 
 **Güncelleştirilmiş makaleler**
 
-- [hızlı başlangıç: Visual Studio React tek sayfalı uygulama ile docker 'ı kullanma](../containers/container-tools-react.md) -eol Windows 10, sürüm 1903 ' e yönelik başvuruları kaldırma
+- [Hızlı Başlangıç: Visual Studio'da React](../containers/container-tools-react.md) Tek Sayfalı Uygulama ile Docker kullanma - EOL Windows 10, sürüm 1903 başvurularını kaldırma
 
 #### <a name="data-tools"></a>Veri araçları
 
 **Güncelleştirilmiş makaleler**
 
-- [veri aramak için bir Windows formu oluşturma](../data-tools/create-a-windows-form-to-search-data.md) -Windows Forms veri araçları: güncelleştirme ve .net Core hakkında notu ekleme
+- [Veri aramak Windows form oluşturma](../data-tools/create-a-windows-form-to-search-data.md) - Windows Forms Veri Araçları: .NET Core hakkında güncelleştirme ve not ekleme
 
 #### <a name="ide"></a>IDE
 
 **Yeni makaleler**
 
-- [Visual Studio bağlı deneyimler](./reference/connected-experiences.md) -yeni makale eklendi
-- [Çözüm Gezgini nasıl kullanılır](./use-solution-explorer.md) -yeni makale eklendi
-- [Kullanılmayan başvuruları kaldır](./reference/remove-unused-references.md) -yeni makale eklendi
+- [Visual Studio'daki bağlı](./reference/connected-experiences.md) deneyimler - Yeni makale eklendi
+- [Çözüm Gezgini](./use-solution-explorer.md) kullanma - Yeni makale eklendi
+- [Kullanılmayan Başvuruları Kaldır](./reference/remove-unused-references.md) - Yeni makale eklendi
 
 **Güncelleştirilmiş makaleler**
 
-- [Seçenekler, metin düzenleyici, C#, gelişmiş](./reference/options-text-editor-csharp-advanced.md) eklenen bazı yeni 16,10 .net üretkenlik özellikleri için belgeler
-- [hızlı başlangıç: Visual Studio ile ilk Node.js uygulamanızı oluşturma](./quickstart-nodejs.md) -makale güncelleştirildi
+- [Seçenekler, Metin Düzenleyici, C#, Gelişmiş](./reference/options-text-editor-csharp-advanced.md) - Bazı yeni 16.10 .NET Üretkenlik Özellikleri için belgeler eklendi
+- [Hızlı Başlangıç: Visual Studio ile Node.js uygulama oluşturma](./quickstart-nodejs.md) - Makale güncelleştirildi
 
 #### <a name="install"></a>Yükleme
 
 **Güncelleştirilmiş makaleler**
 
-- [Kapsayıcıya Derleme Araçları yükleme](../install/build-tools-container.md) - VS Derleme Araçları'nın nasıl yük olduğunu güncelleştirme
+- [Derleme araçlarını bir kapsayıcıya yükleme](../install/build-tools-container.md) -vs derleme araçlarının nasıl yüklendiğini güncelleştirme
 
 #### <a name="modeling"></a>Modelleme
 
 **Yeni makaleler**
 
-- [Kod Eşlemesi ve Canlı Bağımlılık Doğrulamasını Yükleme](../modeling/install-architecture-tools.md) - Yeni makale oluşturuldu
+- [Kod haritasını ve canlı bağımlılık doğrulamasını yükler](../modeling/install-architecture-tools.md) -yeni makale oluşturuldu
 
 #### <a name="msbuild"></a>MSBuild
 
 **Yeni makaleler**
 
-- [MSB3270: 'arch'](../msbuild/errors/msb3270.md) olarak oluşturulan projenin işlemci mimarisi ile 'reference', 'arch' başvurusunda işlemci mimarisi arasında bir eşleşme yok - Yeni makale oluşturuldu
-- [MSB3577: Aynı çıkış yoluna çözümlenen](../msbuild/errors/msb3577.md) iki çıkış dosyası adı: yol - Yeni makale oluşturuldu
-- [MSB4181: 'task' görevi yanlış döndürüldü ama bir](../msbuild/errors/msb4181.md) hata günlüğe kaydetti - Yeni makale oluşturuldu
-- [MSB6003: Belirtilen görev yürütülebilir](../msbuild/errors/msb6003.md) dosyası çalıştıramadı - Yeni makale oluşturuldu
+- [MSB3270: ' Arch ' oluşturulan projenin işlemci mimarisi ve ' Reference ', ' Arch ' başvurusunun işlemci mimarisi arasında uyuşmazlık vardı](../msbuild/errors/msb3270.md) -yeni makale oluşturuldu
+- [MSB3577: iki çıkış dosyası adı aynı çıkış yoluna çözümlendi: yol](../msbuild/errors/msb3577.md) -yeni makale oluşturuldu
+- [MSB4181: ' Task ' görevi false döndürdü, ancak günlüğe bir hata](../msbuild/errors/msb4181.md) vermedi-yeni makale oluşturuldu
+- [MSB6003: belirtilen görev yürütülebilir yürütülebilir dosyası çalıştırılamadı](../msbuild/errors/msb6003.md) -yeni makale oluşturuldu
 
 **Güncelleştirilmiş makaleler**
 
-- [MSBuild hedefleri](../msbuild/msbuild-targets.md) - MSBuild: Hedefleri genişletme ve özelleştirmeyi açıklama
-- [Görev toplu işlemesinde öğe meta verileri](../msbuild/item-metadata-in-task-batching.md) - MSBuild: Kimlik meta verileri toplu işleme davranışını netleştirin
+- [MSBuild hedefleri](../msbuild/msbuild-targets.md) -MSBuild: hedefleri genişletmeyi ve özelleştirmeyi açıklayın
+- [görev toplu işleme içindeki öğe meta verileri](../msbuild/item-metadata-in-task-batching.md) -MSBuild: kimlik meta verileri toplu işleme davranışını netleştirmek
 
 #### <a name="python"></a>Python
 
 **Güncelleştirilmiş makaleler**
 
-- [Visual Studio'da Python](../python/managing-python-projects-in-visual-studio.md) projeleri - Python GitHub sorunları giderildi
-- [Python içeriğiyle çalışma Etkileşimli penceresi](../python/python-interactive-repl-in-visual-studio.md) - Python GitHub sorunları giderildi
-- [Python web uygulaması proje şablonları](../python/python-web-application-project-templates.md) - Python GitHub sorunları giderildi
+- python içeriklerde Visual Studio giderilen GitHub sorunlarında [python projeleri](../python/managing-python-projects-in-visual-studio.md)
+- python içeriklerde GitHub [ile ilgili python etkileşimli penceresiyle çalışma](../python/python-interactive-repl-in-visual-studio.md)
+- python [web uygulaması proje şablonlarına](../python/python-web-application-project-templates.md) yönelik GitHub python içeriğindeki sorunlar
 
 #### <a name="sharepoint"></a>SharePoint
 
 **Güncelleştirilmiş makaleler**
 
-- [Nasıl: Eşlenmiş klasörleri ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md) - sp13'ü kaldırma
-- [Nasıl: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md) - sp13'ü kaldırma
-- [Nasıl kullanılır: Tasarımcı kullanarak SharePoint Web Bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) - sp13'ü kaldırma
+- [Nasıl yapılır: eşlenmiş klasörler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md) -sp13 kaldır
+- [Nasıl yapılır: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md) -sp13 kaldır
+- [nasıl yapılır: tasarımcı kullanarak SharePoint Web bölümü oluşturma](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) -Remove sp13
 
 #### <a name="vsto"></a>VSTO
 
 **Güncelleştirilmiş makaleler**
 
-- [Office için Visual Studio Araçları çalışma zamanı yükleme senaryoları](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md) - Belge, uygulamanın yeni sürümlerini içerecek şekilde Office
+- [Office için Visual Studio Araçları çalışma zamanı yükleme senaryoları](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md) -belgeyi yeni Office sürümlerini içerecek şekilde güncelleştirildi
 
 #### <a name="xaml-tools"></a>XAML araçları
 
 **Yeni makaleler**
 
-- [Tasarım zamanı örnek verilerini XAML Tasarımcısı Visual Studio](../xaml-tools/xaml-design-time-sample-data.md) - Yeni makale oluşturuldu
+- [Visual Studio XAML Tasarımcısı tasarım zamanı örnek verilerini kullanın](../xaml-tools/xaml-design-time-sample-data.md) -yeni makale oluşturuldu

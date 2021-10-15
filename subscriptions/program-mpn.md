@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 7f4399d8-41da-41e5-a666-acc34958b8c0
-ms.date: 03/21/2021
+ms.date: 10/13/2021
 ms.topic: conceptual
 description: Hangi aboneliklerin sunulmakta olduğuna, hangi kuralların uygulanacağını ve MPN ' de kaç abonelik sunulacağı hakkında ayrıntılar.
-ms.openlocfilehash: 6d069f7c0baca595033d03a9181dec9a67e42e5a
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 87559a98a5648ccb449db065dcac3ba450500360
+ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128427498"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130011438"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft İş Ortağı Ağı (mpn) iş ortaklarına sunulan Visual Studio abonelikler
 

@@ -7,12 +7,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: q2_3
-ms.openlocfilehash: 32c295a236b3221636b241c1fa806bbdd93d3c15
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
-ms.translationtype: HT
+ms.openlocfilehash: b06b19744b990cc3b7c104a88136a9043a567bec1be51a1dbf1ffed5a406c166
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "81386484"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121381272"
 ---
 ## <a name="how-do-i-access-my-product-keys-when-my-subscription-expires"></a>Aboneliğimin süresi dolduğunda ürün anahtarlarıma nasıl erişebilirim?
 

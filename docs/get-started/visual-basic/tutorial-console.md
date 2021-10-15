@@ -45,9 +45,9 @@ Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](http
 
 1. Visual Studio 2017'yi açın.
 
-2. Üst menü çubuğundan Dosya Yeni **dosya'Project.** >  > 
+2. Üst menü çubuğundan Dosya Yeni **Dosya'Project.** >  > 
 
-3. Sol **bölmede yeni Project** iletişim kutusunda, Visual Basic'yi **genişletin** ve **.NET Core'ı seçin.** Orta bölmede Konsol Uygulaması **(.NET Core) 'ı seçin.** Ardından projeye *WhatIsYourName adını girin.*
+3. Sol **bölmede yeni Project** iletişim kutusunda, Visual Basic genişletin ve **.NET Core'ı seçin.** Orta bölmede Konsol Uygulaması **(.NET Core) 'ı seçin.** Ardından projeye *WhatIsYourName adını girin.*
 
    ![Visual Studio IDE'de Yeni Project iletişim kutusundaki Konsol Uygulaması (.NET Core) Visual Studio şablonu](media/new-project-vb-dotnetcore-whatisyourname-console-app.png)
 
@@ -59,17 +59,17 @@ Konsol Uygulaması **(.NET Core)** proje şablonunu görmüyorsanız,.NET Core p
 
 1. Yeni **Visual Studio Yükleyicisi** iletişim kutusunun sol bölmesindeKimlik aç **Project** tıklayın.
 
-   ![Yeni Dosya iletişim Visual Studio Yükleyicisi Aç bağlantısına Project tıklayın](../media/vs-open-visual-studio-installer-generic.png)
+   ![Yeni Visual Studio Yükleyicisi iletişim kutusundan Dosya aç Project tıklayın](../media/vs-open-visual-studio-installer-generic.png)
 
-1. Uygulama Visual Studio Yükleyicisi başlatıyor. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
+1. Visual Studio Yükleyicisi başlatıyor. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
 
    ![.NET Core platformlar arası geliştirme iş yükü Visual Studio Yükleyicisi](../media/tutorial-aspnet-workload.png)
 
 #### <a name="option-2-use-the-tools-menu-bar"></a>2. Seçenek: Araçlar menü çubuğunu kullanma
 
-1. Yeni Görünüm iletişim **kutusundan Project** ve üst menü çubuğunda Araçlar Araçları ve **Özellikleri** > **Al'ı seçin.**
+1. Yeni Görünüm iletişim **kutusundan Project** ve üst menü çubuğunda Araçlar Araçları **ve** Özellikleri > **Al'ı seçin.**
 
-1. Uygulama Visual Studio Yükleyicisi başlatıyor. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
+1. Visual Studio Yükleyicisi başlatıyor. **.NET Core platformlar arası geliştirme iş yükünü ve** ardından Değiştir'i **seçin.**
 
 ::: moniker-end
 
@@ -82,13 +82,13 @@ Konsol Uygulaması **(.NET Core)** proje şablonunu görmüyorsanız,.NET Core p
 
 1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-   !['Yeni Visual Studio oluştur' seçiliyken başlangıç penceresini gösteren ekran görüntüsü.](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
+   !['Yeni proje Visual Studio' seçili olarak başlangıç penceresini gösteren ekran görüntüsü.](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. Yeni **proje oluştur penceresinde,** Dil **listesinden Visual Basic'yi** seçin. Ardından, **Windows** listesinden Platform listesinden **Ve Konsol'dan** Seç'i seçin.
+1. Yeni **proje oluştur penceresinde,** Dil **listesinden Visual Basic'yi** seçin. Ardından, **Windows** listesinden Platform **listesinden Ve Konsol'dan** Seç'i seçin.
 
    Dil, platform ve proje türü filtrelerini uygulayan Konsol Uygulaması şablonunu **ve** ardından Sonraki'yi **seçin.**
 
-   :::image type="content" source="./media/vs-2019/vb-create-new-project-console-net-core.png" alt-text="Dil, Platform ve Project Tür filtrelerinde 'Visual Basic', 'Windows' ve 'Konsol' seçiliyken 'Yeni proje oluştur' penceresini ve Konsol Uygulaması proje şablonunun seçili olduğunu gösteren ekran görüntüsü.":::
+   :::image type="content" source="./media/vs-2019/vb-create-new-project-console-net-core.png" alt-text="Dil, Platform ve Project Tür filtrelerinde 'Visual Basic', 'Windows', 'Konsol' ve 'Konsol' seçiliyken 'Yeni proje oluştur' penceresini gösteren ekran görüntüsü.":::
 
    > [!NOTE]
    > Konsol Uygulaması şablonunu **görmüyorsanız,** Yeni proje oluştur **penceresinden yükleyebilirsiniz.** Neyi **bulasınız? iletisinde** Daha fazla araç ve **özellik yükle bağlantısını** seçin.
@@ -119,20 +119,20 @@ Konsol Uygulaması **(.NET Core)** proje şablonunu görmüyorsanız,.NET Core p
 
 1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-   :::image type="content" source="media/vs-2022/create-new-project-dark-theme.png" alt-text="'Yeni Visual Studio oluştur' seçiliyken başlangıç penceresini gösteren ekran görüntüsü.":::
+   :::image type="content" source="media/vs-2022/create-new-project-dark-theme.png" alt-text="'Yeni proje Visual Studio' seçili olarak başlangıç penceresini gösteren ekran görüntüsü.":::
 
 1. Yeni **proje oluştur penceresinde,** Dil **listesinden Visual Basic'yi** seçin. Ardından, **Windows** türleri listesinden Platform **listesinden** ve Konsol'dan Project seçin.
 
    Dil, platform ve proje türü filtrelerini uygulayan Konsol Uygulaması şablonunu **ve** ardından Sonraki'yi **seçin.**
 
-   :::image type="content" source="media/vs-2022/vb-create-new-project-console-net-core.png" alt-text="Dil, Platform ve Project Tür filtrelerinde 'Visual Basic', 'Windows' ve 'Konsol' seçiliyken 'Yeni proje oluştur' penceresini ve Konsol Uygulaması proje şablonunun seçili olduğunu gösteren ekran görüntüsü.":::
+   :::image type="content" source="media/vs-2022/vb-create-new-project-console-net-core.png" alt-text="Dil, Platform ve Project Tür filtrelerinde 'Visual Basic', 'Windows', 'Konsol' ve 'Konsol' seçiliyken 'Yeni proje oluştur' penceresini gösteren ekran görüntüsü.":::
 
    > [!NOTE]
    > Konsol Uygulaması şablonunu **görmüyorsanız,** Yeni proje oluştur **penceresinden yükleyebilirsiniz.** Neyi **bulasınız? iletisinde** Daha fazla araç ve **özellik yükle bağlantısını** seçin.
    >
    > :::image type="content" source="media/vs-2022/not-finding-what-looking-for.png" alt-text="'Yeni proje oluştur' penceresindeki 'Ne arıyorsanız bu değil' iletisinden 'Daha fazla araç ve özellik yükle' bağlantısını gösteren ekran görüntüsü.":::
    >
-   > Ardından, Visual Studio Yükleyicisi **.NET** masaüstü geliştirme iş yükünü seçin.
+   > Ardından, Visual Studio Yükleyicisi .NET masaüstü **geliştirme iş yükünü** seçin.
    >
    > :::image type="content" source="media/vs-2022/dot-net-core-xplat-dev-workload.png" alt-text="Uygulamanın .NET masaüstü geliştirme iş yükünü gösteren Visual Studio Yükleyicisi.":::
    >
@@ -158,7 +158,7 @@ Konsol Uygulaması **(.NET Core)** proje şablonunu görmüyorsanız,.NET Core p
 
 1. Henüz açık değilse *WhatIsYourName projenizi* açın.
 
-1. Aşağıdaki kodu Visual Basic sonra, satırı takip eden köşeli ayraç ve `Sub Main(args As String())` satırdan önce `End Sub` girin:
+1. Satırı takip eden Visual Basic hemen sonra ve satırdan önce aşağıdaki kodu `Sub Main(args As String())` `End Sub` girin:
 
      ```vb
      Console.WriteLine(vbCrLf + "What is your name? ")
@@ -185,7 +185,7 @@ Konsol Uygulaması **(.NET Core)** proje şablonunu görmüyorsanız,.NET Core p
 
 ::: moniker range="vs-2019"
 
-1. *WhatIsYourName projesine,* satırı izleyen açma Visual Basic hemen sonra ve satırdan önce aşağıdaki kod `Sub Main(args As String())` kodunu `End Sub` girin:
+1. *WhatIsYourName projesine,* satırı izleyen açma Visual Basic hemen sonra ve satırdan önce aşağıdaki kodu `Sub Main(args As String())` `End Sub` girin:
 
      ```vb
      Console.WriteLine(vbCrLf + "What is your name? ")

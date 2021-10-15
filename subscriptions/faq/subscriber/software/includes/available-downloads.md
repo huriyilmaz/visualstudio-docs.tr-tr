@@ -8,12 +8,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: q2_1
-ms.openlocfilehash: e8e7d1f5667b5acd183017ce6e17818b73cade2c
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
-ms.translationtype: HT
+ms.openlocfilehash: 249c5b8ca545973c4f06a6117d6d65b62657998b3e19caa501f3635258b30c6a
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "91838233"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121381279"
 ---
 ## <a name="what-software-downloads-are-available"></a>Hangi yazılım indirmeleri kullanılabilir?
 

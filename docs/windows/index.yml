@@ -23,7 +23,7 @@ highlightedContent:
     - title: Visual Studio IDE'ye hoş geldiniz
       itemType: overview
       url: ../get-started/visual-studio-ide.md
-    - title: Visual Studio 2022 Preview
+    - title: Visual Studio 2022 RC
       itemType: whats-new
       url: /visualstudio/releases/2022/release-notes-preview
     - title: Visual Studio becerilerinizi geliştirin
@@ -183,7 +183,7 @@ additionalContent:
           summary: 'Web Dağıtımı, InstallShield, NuGet ve Sürekli Tümleştirme gibi özellikleri kullanarak uygulamalarınızı ve kodunuzu paylaşın.'
           url: ../deployment/index.yml
         - title: Sürüm denetimi
-          summary: Git ve GitHub gibi sürüm denetimi teknolojilerini kullanarak kodu paylaşabilirsiniz.
+          summary: Git ve git gibi sürüm denetimi teknolojilerini kullanarak kod GitHub.
           url: ../version-control/index.yml
         - title: DevOps
           summary: 'Azure DevOps Services ile bulutta uygulamalarınızı sürekli derleyin, yayımlayın ve Çevik uygulamalar gerçekleştirin.'

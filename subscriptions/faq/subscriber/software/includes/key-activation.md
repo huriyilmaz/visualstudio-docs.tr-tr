@@ -7,12 +7,12 @@ author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 4/3/2020
 ms.faqid: q2_2
-ms.openlocfilehash: d214130bfdc2832ad540fa6fac274e4f52cced5f
-ms.sourcegitcommit: 967c2f8c1b3f805cf42c0246389517689d971b53
-ms.translationtype: HT
+ms.openlocfilehash: c549396bdb1ca4919e3e2e67ca3003f64ede733969b251b0d28d1851bad81030
+ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "91838279"
+ms.lasthandoff: 08/12/2021
+ms.locfileid: "121381278"
 ---
 ## <a name="how-do-i-activate-the-software-i-just-downloaded-using-product-keys"></a>Yeni indirdiğim yazılımı ürün anahtarlarını kullanarak nasıl etkinleştirebilirim?
 

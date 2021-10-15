@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 22224b405f8e6cce41b99e36936bb2449f7827ea
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 1ccbcddfaff619a56299279583fe14a0326519dc
+ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128426497"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130011516"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Öğretici: Visual Studio kullanarak C# kodunun hatalarını ayıklamayı öğrenin
 
@@ -40,7 +40,7 @@ Bu öğreticide şunları yapacaksınız:
 
 ::: moniker range=">=vs-2022"
 
-Visual Studio 2022 önizlemesinin yüklü olması ve **.net masaüstü geliştirme** iş yüküne sahip olmanız gerekir.
+Visual Studio 2022 RC yüklü ve **.net masaüstü geliştirme** iş yüküne sahip olmanız gerekir.
 
 ::: moniker-end
 
@@ -250,7 +250,7 @@ Genellikle, burada klavye kısayollarını kullanıyoruz. Bu, hata ayıklayıcı
 
     Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliklerinden biridir. bir kesme noktası Visual Studio, çalışan kodunuzun nerede askıya alınacağını gösterir; böylece değişkenlerin değerlerine veya bellek davranışına ya da kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
 
-1. **F5** tuşuna basın veya ![' hata ayıklamayı Başlat ' düğmesinin ekran görüntüsünü](../../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") **başlatın** ., uygulama başlar ve hata ayıklayıcı, kesme noktasını ayarladığınız kod satırına çalışır.
+1. **F5** tuşuna basın veya ![' hata ayıklamayı Başlat ' düğmesinin ekran görüntüsünü](../../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklamayı Başlat") **başlatın** ., uygulama başlar ve hata ayıklayıcı, kesme noktasını ayarladığınız kod satırına çalışır.
 
     ![Kesme noktası ayarlama ve isabet](../csharp/media/get-started-set-breakpoint.gif)
 
@@ -272,7 +272,7 @@ Genellikle, burada klavye kısayollarını kullanıyoruz. Bu, hata ayıklayıcı
 
     :::image type="content" source="media/vs-2022/dbg-tour-breakpoint.png" alt-text="Visual Studio 2022'de kesme noktası ekran görüntüsü."::: 
 
-    Kesme noktaları, güvenilir hata ayıklamanın temel bir özelliğidir. Değişkenlerin değerlerine veya bellek davranışına bakarak veya bir kod dalını çalıştırıp çalıştırmama konusunda bilgi almak için, çalışan kodunuzu duraklatmak için Visual Studio istediğiniz kesme noktaları ayarlayın.
+    Kesme noktaları, güvenilir hata ayıklamanın temel bir özelliğidir. Değişkenlerin değerlerine veya bellek davranışına bakarak Visual Studio ya da bir kod dalını çalıştırıp çalıştırmama konusunda bilgi almak için, çalışan kodunuzu duraklatmak istediğiniz kesme noktaları ayarlayın.
 
 1. Hata ayıklamayı başlatmak için **F5'i** seçin veya Standart araç çubuğunda  Hata Ayıklama Hedefi düğmesini seçin ya da Hata Ayıklama araç çubuğunda Hata Ayıklamayı Başlat düğmesini seçin veya menü çubuğundan Hata AyıklamaYı Başlat'ı   >   seçin. Uygulama başlatılır ve hata ayıklayıcı, kesme noktası ayarlayıcının ayar bulunduğu kod satırına çalışır.
 
@@ -302,13 +302,13 @@ Genellikle burada klavye kısayollarını kullanırız çünkü bu, uygulamanız
 
 1. Ardından değişkeninin `name` üzerine gelin ve geçerli değerinin boş bir dize olduğunu görüyorsunuz.
 
-1. Yöntem **çağrısına ilerlemek için F10** **tuşuna basın (veya >** Adım At) hata ayıkla'ya basın ve ardından `SendMessage` **F10'a** bir kez daha basın.
+1. Yöntem **çağrısına ilerlemek için F10** **tuşuna basın**(veya > Adım At) hata ayıkla'ya basın ve `SendMessage` ardından **F10'a** bir kez daha basın.
 
      F10, uygulama kodundaki işlevlere veya yöntemlere adımlamadan hata ayıklayıcıyı bir sonraki deyime ilerletmektedir (kod yürütülmektedir). Yöntem çağrısında F10'a basarak, uygulama kodunu atlamıştık (şu anda `SendMessage` `SendMessage` ilgilenmediğimiz bir şey olabilir).
 
 1. Döngüde birkaç kez  tekrarlama, kesme noktası üzerinde tekrar duraklatma ve değerini kontrol etmek için her zaman değişkenin üzerine gelme için **F10'a** (veya Hata Ayıklama Adımında Hata Ayıkla) birkaç kez >  `for` `name` basın.
 
-     ![Hata Ayıklayıcısı'Visual Studio F10'a "AdımLa" tuşuna basmanın ve hata ayıklama sırasında döngüde tekrarlamanın etkisini gösteren animasyonlu ekran görüntüsü.](../csharp/media/get-started-data-tip.gif)
+     ![Hata Ayıklayıcısı'Visual Studio F10'a "Adım At" tuşuna basmanın ve hata ayıklama sırasında döngüde tekrarlamanın etkisini gösteren animasyonlu ekran görüntüsü.](../csharp/media/get-started-data-tip.gif)
 
      Değişkenin değeri döngüde her yineleme ile birlikte değişir ve ardından `for` , ve gibi değerleri `f` `fr` `fre` gösterir. Bu senaryoda hata ayıklayıcıyı döngüde daha hızlı ilerlemek için  **F5** tuşuna basabilirsiniz (veya Devam Et'i seçerek) bir sonraki deyim yerine kesme noktası  >  üzerinden ilerleyin.
 
@@ -324,13 +324,13 @@ Genellikle burada klavye kısayollarını kullanırız çünkü bu, uygulamanız
 
      Sarı işaretçi yöntemine `SendMessage` ilerler.
 
-     !['SendMessage' yönteminde yürütme işaretçisinin ekran görüntüsü.](../csharp/media/get-started-f11.png "F10 adımla")
+     !['SendMessage' yönteminde yürütme işaretçisinin ekran görüntüsü.](../csharp/media/get-started-f11.png "F10 Içine Adımla")
 
      F11, **Adımla komutudır** ve uygulama yürütmeyi tek tek bir deyimle ilerleter. F11, yürütme akışını en ayrıntılı şekilde incelemek için iyi bir yol sağlar. Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan kodu atlar (daha fazla ayrıntı için bkz. [Yalnızca kendi kodum).](../../debugger/just-my-code.md)
 
      Yöntemini incelemeyi tamamlayanın ve yöntemin dışında kalmak ancak hata `SendMessage` ayıklayıcısında kalmak istediğinizi diyelim. Bunu Yapmak için Dışarı **Adımla komutunu kullanın.**
 
-1. Shift  + **F11 tuşuna** basın (veya **> AdımLa) tuşlarına basın.**
+1. Shift  + **F11 tuşuna** basın (veya **> AdımLa) hata ayıkla'ya basın.**
 
      Bu komut, geçerli yöntem veya işlev döndürene kadar uygulama yürütmeyi sürdürür (ve hata ayıklayıcıyı ilerleter).
 
@@ -373,7 +373,7 @@ Genellikle burada klavye kısayollarını kullanırız çünkü bu, uygulamanız
 
      :::image type="content" source="media/vs-2022/get-started-f11.png" alt-text="'SendMessage' yönteminde hata ayıklayıcının yürütme işaretçisini gösteren ekran görüntüsü.":::
 
-     **F11,** kodunuzun yürütme akışını daha ayrıntılı incelemenize yardımcı olur. Yöntem çağrısından bir yönteme adım eklemek için **F11'i seçin.** Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan yöntemlere adımlamayı atlar. Kullanıcı olmayan kodda hata ayıklama hakkında bilgi edinmek için [bkz. Yalnızca kendi kodum.](../../debugger/just-my-code.md)
+     **F11,** kodunuzun yürütme akışını daha ayrıntılı incelemenize yardımcı olur. Yöntem çağrısından bir yönteme adım eklemek için **F11'i seçin.** Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan yöntemlere adımlamayı atlar. Kullanıcı olmayan kodda hata ayıklama hakkında bilgi edinmek için bkz. [Yalnızca kendi kodum.](../../debugger/just-my-code.md).
 
      Yöntemin hata ayıklamasını `SendMessage` tamamladikten sonra yöntemin döngüsüne `for` geri dönmek için hazır `main` oluruz.
 
@@ -438,7 +438,7 @@ Hata ayıklayıcı, daha önce döngü içinde ayaranı kesme noktası sırasın
 
 Hata ayıklayıcısında en baştan uygulamayı yeniden çalıştırmak için **Ctrl+Shift+F5** tuşlarını veya Hata Ayıkla  araç çubuğunda Yeniden Başlat düğmesini seçin veya menü çubuğundan Yeniden Başlatmada Hata Ayıkla'ya  >  tıklayın.
 
-:::image type="content" source="media/vs-2022/dbg-tour-restart-debugging.png" alt-text="Visual Studio 2022'nin Hata Ayıklama araç çubuğundaki 'Yeniden Başlat' düğmesinin ekran görüntüsü.":::
+:::image type="content" source="media/vs-2022/dbg-tour-restart-debugging.png" alt-text="Visual Studio 2022'de hata ayıkla araç çubuğundaki 'Yeniden Başlat' düğmesinin ekran görüntüsü.":::
 
 **Yeniden** başlatma, hata ayıklayıcıyı durdurur ve ardından tek adımda yeniden başlatın. Hata ayıklayıcı yeniden başlatıldığında, döngü içinde daha önce ayar istediğiniz kesme noktası olan ilk kesme noktasıyla `for` çalışır ve ardından duraklatılır.
 
@@ -450,7 +450,7 @@ Hata ayıklayıcısında en baştan uygulamayı yeniden çalıştırmak için **
 
 1. Kod **düzenleyicisinin en** altındaki Otomatikler penceresine bakın.
 
-    Kapalı ise Hata Ayıkla'ya ve Otomatikler'e seçerek hata **ayıklayıcıda** > **duraklatılmış Windows** > **açın.**
+    Kapalı ise Hata Ayıkla'ya veya Otomatikler'e göre hata ayıkla'Windows  >  > **ayıklayıcıda duraklatılmış olarak açın.**
 
     Otomatikler **penceresinde** değişkenleri ve bunların geçerli değerini görebilirsiniz. Otomatikler **penceresinde** geçerli satırda veya önceki satırda kullanılan tüm değişkenler gösterilir (Dile özgü davranış için belgeleri kontrol edin).
 
@@ -458,7 +458,7 @@ Hata ayıklayıcısında en baştan uygulamayı yeniden çalıştırmak için **
 
 1. Içerdiği `letters` öğeleri göstermek için değişkeni genişletin.
 
-     ![Visual Studio'de Yereller Penceresinin ekran görüntüsü.](../csharp/media/get-started-locals-window.png "Yereller penceresi")
+     ![Visual Studio'da Yereller Penceresinin ekran görüntüsü.](../csharp/media/get-started-locals-window.png "YerelLer Penceresi")
 
     **YerelLer** penceresi, geçerli kapsamda olan, yani [geçerli](https://www.wikipedia.org/wiki/Scope_(computer_science))yürütme bağlamındaki değişkenleri gösterir.
 
@@ -474,11 +474,11 @@ Otomatikler **ve** **Yereller** pencereleri, hata ayıklama sırasında değişk
 
 1. Hata ayıklayıcı duraklatılmış şekilde, **Otomatikler** penceresinin yanındaki sekmede Yereller **penceresini** görüntüleyin.
 
-    Yereller **penceresi kapalı** ise **Ctrl+D, L** veya YerelLer'de Hata **Ayıkla'Windows** >  > **seçin.**
+    Yereller **penceresi kapalı** ise **Ctrl+D, L** veya  YerelLer'de Hata > **Ayıkla'Windows** > **seçin.**
 
 1. Yereller **penceresinde,** dizi öğelerini `letters` ve değerlerini görmek için değişkeni genişletin.
 
-     :::image type="content" source="media/vs-2022/get-started-locals-window.png" alt-text="Visual Studio 2022'de 'letters' dizi değişkeni genişletilmiş olarak Yereller penceresinin ekran görüntüsü.":::
+     :::image type="content" source="media/vs-2022/get-started-locals-window.png" alt-text="2022'de yereller penceresinin ekran Visual Studio ve 'letters' dizisi değişkeni genişletilmiş.":::
 
 Otomatikler ve **Yereller pencereleri** hakkında **daha fazla bilgi için** [Bkz. Otomatikler ve Yereller pencerelerinde değişkenleri inceleme.](/visualstudio/debugger/autos-and-locals-windows?view=vs-2022&preserve-view=true)
 
