@@ -63,7 +63,7 @@
                   href: install/troubleshooting-network-related-errors-in-visual-studio.md
         - name: Bir kurumda dağıtma
           items:
-            - name: Yönetici güncelleştirmeleri uygulanıyor
+            - name: Yönetici güncelleştirmelerini uygulama
               href: install/applying-administrator-updates.md
             - name: Yönetici güncelleştirmelerini etkinleştirme
               href: install/enabling-administrator-updates.md
@@ -168,7 +168,7 @@
   items:
     - name: C++ >>
       href: /cpp/get-started/tutorial-console-cpp
-    - name: C#   >>
+    - name: C#  >>
       href: get-started/csharp/
     - name: Visual Basic  >>
       href: get-started/visual-basic/
@@ -176,7 +176,7 @@
       href: javascript/
     - name: Python  >>
       href: python/
-    - name: 'F #   >>'
+    - name: F#  >>
       href: /dotnet/fsharp/
 - name: Geliştirme
   items:
@@ -198,7 +198,7 @@
           href: get-started/tutorial-open-project-from-repo.md
         - name: 'Projeleri taşıma, geçirme ve yükseltme'
           href: porting/port-migrate-and-upgrade-visual-studio-projects.md
-        - name: Çözüm Gezgini hakkında bilgi edinin
+        - name: Çözüm Gezgini hakkında bilgi Çözüm Gezgini
           href: ide/use-solution-explorer.md
         - name: Proje ve çözüm özelliklerini yönetme
           href: ide/managing-project-and-solution-properties.md
@@ -444,7 +444,7 @@
                   href: ide/reference/regex-completion-through-intellisense.md
                 - name: Erişilemeyen kodları kaldırma
                   href: ide/reference/remove-unreachable-code.md
-                - name: Kullanılmayan başvuruları kaldırma
+                - name: Kullanılmayan başvuruları kaldır
                   href: ide/reference/remove-unused-references.md
                 - name: Rename
                   href: ide/reference/rename.md
@@ -1424,20 +1424,20 @@
           href: ide/dotfuscator/capabilities.md
         - name: Dotfuscator Community’yi yükleme
           href: ide/dotfuscator/install.md
-        - name: Dotfuscator Community
+        - name: Dotfuscator Community Kaydet
           href: ide/dotfuscator/register.md
         - name: Dotfuscator Community’yi yükseltme
           href: ide/dotfuscator/upgrades.md
-        - name: Dotfuscator 5'Community yükseltme
+        - name: dotfuscator Community 5 ' ten yükseltme
           href: ide/dotfuscator/upgrade-from-5.md
 - name: Kaynaklar
   expanded: true
   items:
-    - name: 'Visual Studio 2022: What''s new'
+    - name: 'Visual Studio 2022: yenilikler'
       href: ide/whats-new-visual-studio-2022.md
-    - name: 'Visual Studio 2019: What''s new'
+    - name: 'Visual Studio 2019: yenilikler'
       href: ide/whats-new-visual-studio-2019.md
-    - name: 'Visual Studio 2017: What''s new'
+    - name: 'Visual Studio 2017: yenilikler'
       href: ide/whats-new-visual-studio-2017.md
     - name: Docs’taki Yenilikler
       href: ide/whats-new-visual-studio-docs.md
@@ -1462,18 +1462,16 @@
       href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
 - name: Geri bildirim gönder
   items:
-    - name: Sorun bildirin
-      items:
-        - name: Sorun bildirin
-          href: ide/how-to-report-a-problem-with-visual-studio.md
-        - name: Performans sorunlarının daha hızlı şekilde düzeltilmesini sağlama
-          href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
-        - name: MSBuild sorunları için günlükler oluşturma
-          href: ide/msbuild-logs.md
-        - name: ETL izlemesi toplama ve minidumps oluşturma
-          href: ide/report-a-problem-perfview-minidumps.md
     - name: Bir özellik önerin
       href: ide/suggest-a-feature.md
+    - name: Sorun bildirin
+      href: ide/how-to-report-a-problem-with-visual-studio.md
+    - name: Performans sorunlarının daha hızlı şekilde düzeltilmesini sağlama
+      href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
+    - name: MSBuild sorunları için günlükler oluşturma
+      href: ide/msbuild-logs.md
+    - name: ETL izlemesi toplama ve minidumps oluşturma
+      href: ide/report-a-problem-perfview-minidumps.md
     - name: Geliştirici Topluluğu yönergeleri
       href: ide/developer-community-guidelines.md
     - name: Geliştirici Topluluğu veri gizliliği

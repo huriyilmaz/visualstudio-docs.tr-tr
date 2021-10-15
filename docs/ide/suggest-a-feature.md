@@ -1,7 +1,7 @@
 ---
 title: Bir özellik önerin
-description: geliştirici Community hangi önerilerin olduğunu, bir önerinizin nasıl yapılacağını ve önerilerin Microsoft tarafından Visual Studio yol eşlemesinde nasıl kullanıldığını açıklar.
-ms.date: 12/17/2018
+description: Geliştirici Hizmetleri'Community, öneride nasıl öneride bulunduruldu ve microsoft tarafından bu yol haritasında önerilerin Visual Studio açıklandı.
+ms.date: 10/13/2021
 ms.topic: conceptual
 author: madskristensen
 ms.author: madsk
@@ -9,94 +9,45 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 01d9332486aa3a8d02de14d79474c395733f39ba0c7968da2265366574327a1c
-ms.sourcegitcommit: 29a893fb8639ee1d64922e99bf424e10ecce30d5
+ms.openlocfilehash: d2571174a98c2e8e915239d7f6e1de988788da8d
+ms.sourcegitcommit: a8e6a8c6ca36dc76cdc44d1db934eae43470b5fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121465115"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "130030225"
 ---
 # <a name="suggest-a-feature-for-visual-studio"></a>Visual Studio için özellik önerin
 
-[Visual Studio geliştirici Community](https://aka.ms/feedback/suggest?space=8)ilgili sorunları bildirme özelliği hakkında yeni bir deneyim sunuyoruz. bu, Visual Studio mühendislik iş akışıyla doğrudan etkileşim kurmak için daha yeni bir yoldur.
+Visual Studio Developer Community. ile ilgili sorunları bildirme becerisinin yanı sıra yeni bir özellik önerme [deneyimi Community.](https://aka.ms/feedback/suggest?space=8) Bu, iş akışının mühendislik iş akışıyla doğrudan etkileşim kurmanızı Visual Studio yeni bir yol sağlar.
 
-![Geliştirici Community bir özellik düğmesi önerin](media/suggest-a-feature/suggest-feature-button.png)
+![Developer Community'da Özellik önerin düğmesi](media/suggest-a-feature/suggest-feature-button.png)
 
-ayrıca, ana Visual Studio penceresinin sağ üst köşesindeki **geri bildirim sağla** simgesini **seçerek doğrudan Visual Studio bir özellik** önerisi başlatabilirsiniz:
+Ayrıca, ana dosya penceresinin sağ Visual Studio  sağ üst köşesindeki Geri Bildirim Sağla simgesinden Öneride Bulunana kadar doğrudan Visual Studio başlatabilirsiniz: 
 
-![Visual Studio bir öneri menüsü sağlayın](media/suggest-a-feature/provide-suggestion.png)
+![Visual Studio'de Bir Öneri menüsü Visual Studio](media/suggest-a-feature/provide-suggestion.png)
 
-**öneri sağla** ' yı seçtiğinizde, önerinizi girebileceğiniz [geliştirici Community](https://aka.ms/feedback/suggest?space=8)gidersiniz.
+**ÖneriDele'nin** seçimi sizi [Geliştirici](https://aka.ms/feedback/suggest?space=8)Community'ye alır ve burada önerinizi girsiniz.
 
 ## <a name="suggestion-status"></a>Öneri durumu
 
-Bir özellik önerisi gönderdikten sonra durumlar, özellik gönderiminizin yaşam döngüsünün nerede olduğunu gösterir. Geribildiriminizi göz önünde bulundurarak ve iş akışı sırasında taşırken, bunu ilgili durumla etiketliyoruz. Özellik önerileri ile ilişkili çeşitli durumlar, anlamları ve renk göstergelerinin açıklamasıyla birlikte burada listelenir.
-
-![Geliştirici Community önerilerin yeni durumu](../ide/media/SuggestStates/New.jpg)
-
-**Yeni** , önerinizin sizin veya başka bir kişiden yeni bildirildiği anlamına gelir. Henüz hiçbir eylemde bulunulmadı. Ön çizgi, daha fazla ilerleyebilmemiz için bazı ön denetimler yapar. Sonraki adımlarımızla yaklaşık beş iş günü içinde bize bekliyoruz.
+Bir özellik önerisi gönderdikten sonra, eyaletler özellik gönderimi yaşam döngüsünde nerede olduğunu gösteriyor. Geri bildiriminizi göz önünde bulundurarak iş akışında taşımaya devam etti olarak ilgili durumla etiketlemektedir. Özellik önerileriyle ilişkili çeşitli eyaletler burada listelenmiştir ve bunların anlamları ve renk göstergelerinin açıklaması yer almaktadır.
 
 - - -
-
-![Geliştirici Community öneriler için Inceleme durumu altında](../ide/media/SuggestStates/UnderReview.jpg)
-
-**Gözden geçirme bölümünde** Özellik önermesinin öncelik sırasına göre sıraya alındığı gösterilmektedir. Daha geniş geliştirici topluluğumuzu en iyi şekilde getiren ve ayrıca ürün yol haritasını göz önünde bulundurarak özellikleri önceliklendiririz.
-
-Yeni özellik önerinizi hemen takip edemediğimiz halde, 90 gün boyunca fikrinizi izlemeye devam edeceğiz, bu da topluluğun bir süre içinde olmasını sağlar ve ardından sonraki adımlarda bir karar verir.
-
-- - -
-
-![Geliştirici Community öneriler için yol haritası durumunda](../ide/media/SuggestStates/OnRoadmap.jpg)
-
-**Yol haritası** , özellik önerinizin büyük bir topluluk etkisine sahip olması ve ürün deneyimini iyileştirmesine yardımcı olacaktır. Yol haritasında bu süre için zaman ayırdık. İlerleme durumunda sizi güncelleştireceğiz.
-
-- - -
-
-![Geliştirici Community öneriler için daha fazla bilgi durumu gerekir](../ide/media/SuggestStates/NeedMoreInfo.jpg)
-
-**Daha fazla bilgi gerekiyor** olarak işaretlenen bir özellik önerisi, önerinizi daha iyi anlayabilmemiz için daha fazla ayrıntıya ihtiyacımız olması anlamına gelir. Daha ayrıntılı bilgi edinmek için ek bilgiler isteytiğimiz açıklamaları kontrol edin.
-
-- - -
-
-![Kapalı-geliştirici önerileri için diğer ürün durumu Community](../ide/media/SuggestStates/ClosedOtherProduct.jpg)
-
-**Kapalı-diğer ürün** , bildirilen ürüne uygun olmadığından, özellik önerinizi Şu anda ele amayacağız. Bununla birlikte, ilgili ürün için yeni özellik önerinizi nerede paylaşabileceğiniz hakkında ayrıntılı bilgiler sağlıyoruz.
-
-- - -
-
-![Community geliştirici önerileri için kapalı-yinelenen durum](../ide/media/SuggestStates/ClosedDuplicate.jpg)
-
-**Kapalı-yinelenen** , başka birisinin aynı özelliği zaten önerdiğini gösterir. Mevcut Özellik önerisine yönelik bağlantıyı bulmak için açıklamaları gözden geçirin. Oylar ve açıklamalar orijinal öneriye göre birleştirildi. Özgün öneriyi izleyin.
-
-- - -
-
-![Kapatıldı-geliştirici Community öneriler için yeterli bilgi durumu yok](../ide/media/SuggestStates/ClosedNotEnoughInfo.jpg)
-
-**Kapalı-yeterli bilgi yok** , birkaç denemeden sonra özellik önerinizi tam olarak anlamak için yeterli bilgi almadık. Bu aşamada başka bir işlem yaptığımız için yeni özellik önerisini kapattık.
-
-Bakdığımız bilgiler bulundu mu? Ek bilgilere sahip olduğunuzda bileti yeniden etkinleştirmeyi isteyebilirsiniz.
-
-- - -
-
-![Geliştirici Community önerilerin kapsam durumu kapalı](../ide/media/SuggestStates/closed-out-of-scope.png)
-
-**Kapalı kapsam dışı** Bir öneri genel ürün yönümüzle eşleşmezse, bunu *kapsam dışı* olarak kapalarız. örneğin, Visual Studio ürün ailesinin diğer üyelerinde benzer yatırımları olabilir. Ya da önerilen özellik yalnızca birkaç kişiyle ilgili olabilir, bu da uzantının sağlanması daha uygun hale gelir.
-
-
-- - -
-
-![Tamamlandı-geliştirici Community öneriler için Önizleme durumu](../ide/media/SuggestStates/CompletedPreview.jpg)
-
-**Tamamlandı-önizleme** , önerdiğiniz özelliği uyguladığımızda olduğunu gösterir. açıklamalarınız içeren Visual Studio önizleme sürümünü, açıklamalarda belirtilen bağlantıyı kullanarak indirebilirsiniz.
-
-- - -
-
-![Tamamlandı-geliştirici Community öneriler için yayın durumu](../ide/media/SuggestStates/CompletedRelease.jpg)
-
-**Tamamlandı-sürüm** , yeni özellik önerinizin en son ürün güncelleştirmesinde yayımlanmış olduğunu gösterir. Visual Studio güncelleştirme, açıklamalarda belirtilen bağlantı kullanılarak indirilebilir.
+| **Durum** | **Açıklama**                                                                                                         |
+|-------------|-------------------------------------------------------------------------------------------------------------------------|
+|  ![Geliştirici Hesabı'nın önerileri için yeni Community](../ide/media/SuggestStates/New.jpg)          | **Yeni,** önerinin sizin veya başka bir kişi tarafından yeni bildiriliyor olduğu anlamına gelir. Henüz herhangi bir işlem yapılmadı. Ön satır, devam etmek için bazı ön denetimler yapar. Sonraki adımlarla yaklaşık beş iş günü içinde bizimle bilgi edinebilirsiniz.                    |
+|  ![Geliştirici hesabıyla ilgili öneriler için Durumu gözden Community](../ide/media/SuggestStates/UnderReview.jpg)           | **Gözden Geçir'in** altında özellik önerisinin öncelik belirleme için kuyruğa alınana kadar olduğu gösterir. Daha geniş geliştirici topluluğumuza en iyi değeri getirmek için özelliklere öncelik veririz ve ürün yol haritasını da dikkate alacağız. Yeni özellik önerinizi hemen takip emiyor olsak bile yaklaşık 90 gün boyunca fikirlerinizi izlemeye devam edeceğiz, topluluğun da buna ağırlık vermesine ve sonraki adımlarda bir karar vermesine izin vereceksiniz.                    |
+|  ![Geliştirici Hesabı önerileri için Yol Haritası Community](../ide/media/SuggestStates/OnRoadmap.jpg)       | **Yol Haritası'nın,** özellik önerinizin geniş bir topluluk etkisine sahip olduğu ve ürün deneyimini geliştirmeye yardımcı olduğu anlamına gelir. Yol haritamızda bunun için zaman ayırdık. İlerleme durumu hakkında sizi güncelleştiriyoruz.                   |
+|  ![Geliştirici Hesabı önerileri için Daha Fazla Bilgi durumu Community](../ide/media/SuggestStates/NeedMoreInfo.jpg)          | Daha Fazla Bilgi Gerekiyor **olarak işaretlenmiş bir özellik önerisi,** önerinizi daha iyi anlamamız için daha fazla ayrıntıya ihtiyacımız olduğu anlamına gelir. Daha derin bir anlayış elde etmek için ek bilgi talep edeceğimiz yorumları kontrol edin.                    |
+|  ![Kapalı - Geliştirici Hesabı önerileri için diğer ürün Community](../ide/media/SuggestStates/ClosedOtherProduct.jpg)          | **Kapalı - Diğer** Ürün, özellik önerinizi şu anda ele alamayamadığımız anlamına gelir çünkü bu öneri raporlandığı ürün için geçerli değildir. Bununla birlikte, uygun ürün için yeni özellik önerinizi nerede paylaşabilirsiniz hakkında ayrıntılı bilgi sağlarız.                    |
+|  ![Kapalı - Geliştirici Hesabı önerileri için yinelenen Community](../ide/media/SuggestStates/ClosedDuplicate.jpg)          | **Kapalı - Yinelenen,** başka birinin zaten aynı özelliği önerdiğini gösterir. Mevcut özellik önerisinin bağlantısını bulmak için yorumları gözden geçirme. Oylar ve yorumlar özgün öneride birleştirilmiştir. Özgün öneriyi izleyin.                    |
+|  ![Kapalı - Geliştirici Hesabı önerileri için Yeterli Bilgi Community](../ide/media/SuggestStates/ClosedNotEnoughInfo.jpg)          | **Kapalı - Yeterli Bilgi Yok,** birkaç denemeden sonra özellik önerinizi tam olarak anlamak için yeterli bilgi alamamıştı. Bu aşamada başka bir eylemde yer alamayamadığımız için yeni özellik önerisini kapatmamız gerekiyor. Şu anda aramız olan bilgileri bulduk mu? Ek bilgilere sahipken bileti yeniden etkinleştirmek için istekte bulundurebilirsiniz.                    |
+|  ![Kapalı - Geliştirici Hesabı önerileri için Kapsam dışında Community](../ide/media/SuggestStates/closed-out-of-scope.png)           | **Kapalı - Kapsam Dışında** Bir öneri genel ürün yönümüzle eşleşmezse, bunu Kapsam Dışında *olarak kapatırız.* Örneğin, ürün ailesinin diğer üyelerine benzer Visual Studio olabiliriz. Veya önerilen özellik yalnızca birkaç kişi için uygun olabilir ve bu da uzantıyı sağlamak için daha uygun bir uzantı olabilir.                    |
+|  ![Tamamlandı - Geliştirici Hesabı önerileri için önizleme Community](../ide/media/SuggestStates/CompletedPreview.jpg)           | **Tamamlandı - Önizleme,** önerdiğimiz özelliği uygulamamız olduğunu gösterir. Yorumlarda sağlanan bağlantıyı kullanarak Visual Studio içeren bir önizleme sürümünü indirebilirsiniz.                    |
+|  ![Tamamlandı - Geliştirici Hesabı önerileri için yayın Community](../ide/media/SuggestStates/CompletedRelease.jpg)           | **Tamamlandı - Sürüm,** yeni özellik önerinizin en son ürün güncelleştirmesinde yayımlandı olduğunu gösterir. Bu Visual Studio, açıklamalarda sağlanan bağlantı kullanılarak indirilebilir.                        |
 
 - - -
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [geliştirici Community (Visual Studio blogu) ' bir özellik önerme ' tanıtımı](https://devblogs.microsoft.com/visualstudio/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)
+- [Geliştirici Community'da 'Özellik Önerin' tanıtımı (Visual Studio blog)](https://devblogs.microsoft.com/visualstudio/introducing-suggest-a-feature-in-developer-community/?utm_source=vs_developer_news&utm_medium=referral)

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 08/20/2021
+ms.date: 10/14/2021
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen Azure devtest bireysel kredi avantajını nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: a783d0b95c8b64474e19bfae412378c17583a633
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: b76d87792fc96021206552e14c78634b546f55f0
+ms.sourcegitcommit: a8e6a8c6ca36dc76cdc44d1db934eae43470b5fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123966324"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "130030290"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Microsoft Azure kullanma
 Visual Studio abone olarak, ek ücret ödemeden Microsoft Azure kullanabilirsiniz.  [Aylık Azure DevTest krediniz](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)sayesinde Azure, geliştirme ve test için kişisel korumalı alanınız.  Sanal makineleri, bulut hizmetlerini ve diğer Azure kaynaklarını sağlayabilirsiniz.  Kredi tutarları abonelik düzeyine göre farklılık gösterir.
@@ -22,23 +22,23 @@ Visual Studio abone olarak, ek ücret ödemeden Microsoft Azure kullanabilirsini
 
 2. Avantajlar sayfasında Araçlar bölümünde Azure kutucuğunu bulun ve avantaj kutucuğunun altındaki bağlantıyı **Etkinleştir** ' i seçin.
    > [!div class="mx-imgBorder"]
-   > ![Azure kutucuğu](_img/vs-azure/vs-azure-tile.png "Azure kutucuğunun 'Etkinleştir' düğmesine tıklayarak çalışmaya başlamanız gerekir.")
+   > ![Azure kutucuğu](_img/vs-azure/vs-azure-tile.png "Başlamak için Azure kutucuğunda ' etkinleştir ' düğmesine tıklayın.")
 
 3. Mevcut bir Azure aboneliğiniz yoksa, Azure aboneliğinizi oluşturmak için gerekli bilgileri doldurmanız istenir.  İlk adım, kişisel bilgilerinizin sağlanması ve sonra **İleri**' yi seçsağlamaktır.
    > [!div class="mx-imgBorder"]
-   > ![Azure kaydolma](_img/vs-azure/vs-azure-about-you.png "Kişisel iletişim bilgilerinizi Azure aboneliğinize ekleyin.")
+   > ![Azure kaydolma](_img/vs-azure/vs-azure-about-you.png "Azure aboneliğinize kişisel iletişim bilgilerinizi ekleyin.")
 
 4. Daha sonra, kimliğinizi basit bir doğrulama kodu kullanarak doğrulamanız gerekir. Telefon numaranızı girin ve kodu metin veya telefona göre almak isteyip istemediğinizi seçin.  Aldığınız kodu girin ve **kodu doğrula**' yı seçin.   
    > [!div class="mx-imgBorder"]
-   > ![Azure hazırlanıyor](_img/vs-azure/vs-azure-identity.png "Bir doğrulama kodu talep edin ve devam etmek için kodu girin.")
+   > ![Azure hazırlanıyor](_img/vs-azure/vs-azure-identity.png "Bir doğrulama kodu isteyin ve devam etmek için girin.")
 
 5. Son adım için, koşulları kabul etmek için onay kutusunu işaretleyin ve ardından **Kaydol**' u seçin.  İşte bu kadar!
    > [!div class="mx-imgBorder"]
-   > ![Azure kaydolma](_img/vs-azure/vs-azure-agreement.png "Azure aboneliğinizin oluşturulmasını tamamlamak için 'Kaydol' düğmesine tıklayın.")
+   > ![Azure kaydolma](_img/vs-azure/vs-azure-agreement.png "Azure aboneliğinizin oluşturulmasını tamamladıktan sonra ' kaydolun ' düğmesine tıklayın.")
 
 0. Azure panosu hızlı başlangıç merkezi yüklenir.  
    > [!div class="mx-imgBorder"]
-   > ![Azure panosu](_img/vs-azure/vs-azure-quick-start.png "Azure aboneliğiniz oluşturulduktan sonra Azure portal.") 
+   > ![Azure panosu](_img/vs-azure/vs-azure-quick-start.png "Azure aboneliğiniz oluşturulduktan sonra Azure portal yönlendirilirsiniz.") 
 
 0. Gelecekte kolay erişim için [Azure Portal](https://portal.azure.com) yer işareti ekleyin.
 
@@ -61,7 +61,6 @@ Her abonelik türüne kaç kredi ekleneceğini öğrenmek için aşağıdaki Uyg
 
 
 ## <a name="convert-your-azure-subscription-to-pay-as-you-go"></a>Azure aboneliğinizi Kullandıkça Öde için dönüştürün
-
 artık bir Visual Studio aboneliğine veya kredisine ihtiyacınız yoksa ancak azure kaynaklarınızı kullanmaya devam etmek, kaynaklarınızı başka bir Azure aboneliğine [aktarmak](/azure/azure-resource-manager/management/move-resource-group-and-subscription) veya [harcama sınırınızı kaldırarak](/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit-in-azure-portal)azure aboneliğinizi kullandıkça öde fiyatlandırmasına dönüştürmek istiyorsanız. 
 
 Bu eylemlerden birini yapmazsanız, Azure aboneliğiniz e-posta bildiriinizden belirtilen zamanda devre dışı bırakılır.  Abonelik devre dışıysa, [Bu adımları](https://docs.microsoft.com/azure/cost-management-billing/manage/switch-azure-offer)izleyerek bir Kullandıkça Öde aboneliği olarak yeniden etkinleştirebilirsiniz.
@@ -98,26 +97,26 @@ Kaynakları aktarma, harcama limitlerini kaldırma veya diğer Azure konuların�
 Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)e-posta adresinize atanan tüm abonelikleri görmek için Bağlan. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-### <a name="q-how-do-i-submit-a-technical-support-incident-from-within-the-azure-portal"></a>S: Nasıl yaparım? içinde bir teknik destek olayı Azure portal?
-A: Olaydan destek olayı Azure portal üç adımlı bir işlemdir.
-1. Teknik destek avantajınızı etkinleştirin ve Sözleşme Kimliği Erişim Kimliğinizi alın.
-2. Destek sözleşmenizi Azure aboneliğinize bağlama.
-3. Destek olayı gönderin.
+### <a name="q-how-do-i-submit-a-technical-support-incident-from-within-the-azure-portal"></a>S: Azure portal içinden bir teknik destek olayı Nasıl yaparım? gönder?
+Y: Azure portal bir destek olayı göndermek, üç adımlı bir işlemdir.
+1. Teknik destek avantajınızı etkinleştirin ve sözleşme KIMLIĞI erişim KIMLIĞINIZI alın.
+2. Destek sözleşmenizi Azure aboneliğinize bağlayın.
+3. Destek olayı gönderme.
 
-Tüm ayrıntılar için [lütfen Teknik destek](vs-tech-support.md) belgelerini ziyaret edin.
+Tüm ayrıntılar için lütfen [Teknik destek](vs-tech-support.md) belgelerini ziyaret edin.
 
-### <a name="q-who-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>S: Who Azure DevTest bireysel kredimi kullanarak oluşturmam fikri mülkiyete sahip mi?
-A: Bu şirket tarafından sağlanan kaynaklar üzerinde oluşturulan bir çalışan tarafından üretilen fikri mülkiyet, kaynağı sağlayan şirketin fikri mülkiyetidir. Bu nedenle, işvereniniz aracılığıyla Visual Studio aboneliğinizi aldıysanız, fikri mülkiyet ilkeleri geçerli olur. 
+### <a name="q-who-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>s: Azure devtest bireysel kredimi kullanarak oluşturduğum fikri mülkiyet özelliğine sahip Who.
+Y: Bu şirket tarafından sağlanan kaynaklar üzerinde oluşturulan bir çalışan tarafından üretilen fikri mülkiyet özelliği, bu nedenle kaynağı sağlayan şirketin fikri mülkiyet özelliğidir. bu nedenle, Visual Studio aboneliğinizi işvereniniz aracılığıyla aldıysanız fikri mülkiyet ilkeleri uygulanır. 
 
-### <a name="q-how-can-i-find-out-what-my-azure-credit-balance-is"></a>S: Azure kredi bakiyemin ne olduğunu nasıl bulamıyorum?
-A: Bakiyenizi izlemek ve Azure kredileri hakkında diğer yararlı bilgileri öğrenmek için Azure kredi [bakiyenizi izleme Microsoft Müşteri Sözleşmesi göz atabilirsiniz.](https://docs.microsoft.com/azure/cost-management-billing/manage/mca-check-azure-credits-balance?tabs=portal)
+### <a name="q-how-can-i-find-out-what-my-azure-credit-balance-is"></a>S: Azure kredi bakiyimin ne olduğunu nasıl öğrenebilirim?
+Y: bakiyenizi izlemek ve Azure kredileriniz hakkında diğer yararlı bilgileri öğrenmek Için, [Microsoft Müşteri Sözleşmesi Azure kredi bakiyesine](https://docs.microsoft.com/azure/cost-management-billing/manage/mca-check-azure-credits-balance?tabs=portal)göz atın.
 
 ## <a name="support-resources"></a>Destek kaynakları
 - Azure ile ilgili yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
-  - Teknik Destek: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
-  - [Azure İpuçları & Püf Noktaları](https://microsoft.github.io/AzureTipsAndTricks/ "Azure İpuçları & Püf Noktaları") 
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için abonelikler Visual Studio [ile iletişim kurun.](https://aka.ms/vssubscriberhelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+  - Teknik destek: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
+  - [Azure İpuçları & püf noktaları](https://microsoft.github.io/AzureTipsAndTricks/ "Azure İpuçları & püf noktaları") 
+- Visual Studio abonelikleriyle ilgili satış, abonelik, hesap ve faturalandırma konusunda yardım için, Visual Studio [abonelik desteğiyle](https://aka.ms/vssubscriberhelp)iletişim kurun.
+- Visual Studio ıde, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -126,7 +125,7 @@ A: Bakiyenizi izlemek ve Azure kredileri hakkında diğer yararlı bilgileri ö�
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Microsoft araçları ve hizmetleri hakkında daha fazla bilgi için şu belgelere bakın:
+Microsoft araçları ve hizmetleri hakkında daha fazla bilgi için belgelere bakın:
 - [Azure](/azure/)
 - [Azure DevOps](/azure/devops/)
 - [Visual Studio IDE](/visualstudio/)

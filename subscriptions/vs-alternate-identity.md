@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 86f2856c-8adf-4085-9962-f4136679e5ed
-ms.date: 02/19/2021
+ms.date: 10/14/2021
 ms.topic: conceptual
 description: Azure DevOps ve Azure için kullanmak üzere Visual Studio aboneliğiniz için alternatif bir kimlik ekleme
-ms.openlocfilehash: 956d891712a6dcc6ad350b618008a735ca1bd4b2
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 0b23ec3e6b65beb801660cf47ee88bb0dec7a28d
+ms.sourcegitcommit: a8e6a8c6ca36dc76cdc44d1db934eae43470b5fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128431009"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "130030251"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Visual Studio aboneleri için kimlikler
 Visual Studio aboneliğinizi etkinleştirdiğinizde, etkinleştirme sırasında kullandığınız kimliği (veya oturum açma) Visual Studio abonelikle bağlantılandırtık. bu şekilde, sizi [Visual Studio abone portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs), Azure DevOps ve Azure 'da tanıyabiliriz.
@@ -52,7 +52,7 @@ y: birincil veya alternatif kimliğinizi kullanarak oturum açtığınızda Azur
 
 * avantaj olarak [Azure DevOps](vs-azure-devops.md#eligibility) içeren etkin bir Visual Studio aboneliğine sahip olup olmadığınızı kontrol edin.
 
-* Visual Studio aboneliğiniz için birincil ya da alternatif kimlik olan bir oturum açma/kimlik kullandığınızı onaylayın.
+* Visual Studio aboneliğiniz için birincil ya da alternatif kimlik olan bir oturum açma/kimlik kullandığınızı onaylayın.  örneğin, birçok kişinin farklı bir oturum açma kimliğiyle ilişkili bir Visual Studio Dev Essentials üyeliği de olur.  Bu abonelikler bu e-posta adresiyle ilişkilendirilmediği takdirde, bu KIMLIĞE sahip diğer aboneliklerde oturum açma girişimi başarısız olur.
 
 * Azure DevOps oturum açmadan önce [Visual Studio abone portalını](https://my.visualstudio.com?wt.mc_id=o~msft~docs) en az bir kez ziyaret edin.
 
