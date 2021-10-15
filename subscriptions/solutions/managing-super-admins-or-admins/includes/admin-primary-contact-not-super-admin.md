@@ -1,6 +1,6 @@
 ---
-title: Birincil kişiyim, ancak süper yönetici değilim.
-description: Birincil ilgili kişi, süper yönetici izinlerine sahip olmaları gerekip gerekmediğini belirlemeye çalışıyor
+title: Nasıl yaparım? kişi olursam süper yönetici mi olurum?
+description: Birincil ilgili kişi süper yönetici izinlerine sahip olup olması gerektiğini anlamaya çalışıyor
 ms.topic: include
 ms.assetid: d204a061-9a4e-408c-a967-bf2b815d0bf8
 author: CaityBuschlen
@@ -10,21 +10,21 @@ user.type: admin
 tags: manage, agreement, sign in, primary, super
 subscription.type: vl, cloud, retail, partner
 sap.id: 8789faa7-9d29-25d8-018a-4f6ecee827c8
-ms.openlocfilehash: 3ef7df69b30eba13e1a4c70e10de2d86cfb42fc6
-ms.sourcegitcommit: 65a1b6aae8387735f05a83b45e1a6865e9805e1f
+ms.openlocfilehash: 165b48c194e72df3063fa075a89e7ee9bd5f7b21
+ms.sourcegitcommit: 485f0f6f578568ee31b2ac093e32a6d01dc9c1c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129339825"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130019245"
 ---
-## <a name="im-the-primary-contact-but-im-not-a-super-admin-how-do-i-fix-this"></a>Birincil kişiyim, ancak süper yönetici değilim. Bu Nasıl yaparım? düzeltilsin mi?
+## <a name="im-the-primary-contact-but-im-not-a-super-admin-how-do-i-fix-this"></a>Birincil iletişim kişisiyim ama süper yönetici değilim. Nasıl yaparım? düzeltebilir misiniz?
 
-Kuruluşunuzun toplu lisanslama anlaşmasındaki birincil kişiniz varsa, anlaşma ayarlandığında süper yönetici rolü atanır. Visual Studio aboneliklerinden bir hoş geldiniz e-postası gönderilir.
+Kuruluş Toplu Lisanslama sözleşmenizin birincil ilgili kişisiyseniz, sözleşme ayarlanırken size süper yönetici rolü atanır. Abonelikler sayfasından bir karşılama Visual Studio gönderilir.
 
-Süper yönetici rolünüzü görmüyorsanız ilk adım, satıcınız tarafından sunulan e-posta adresiyle oturum açarak emin olmak için kullanılır. Satıcınızla iletişim kurun ve doğru bilgilerinizi girdiğinizden emin olun veya ilk hoş geldiniz e-postasında hangi e-posta adresinin listelendiğini doğrulayın. Herhangi bir hata varsa, satıcıdan bilgileri güncelleştirmek ve sistemin güncelleştirmesi için 48 saat bekleyin. 
+Süper yönetici rollerinizi görmüyorsanız, ilk adım kurumsal bayiniz tarafından sağlanan e-posta adresiyle oturum asanızdan emin olmaktır. Satıcınıza başvurun ve doğru bilgileri girdiğinizi doğrulayın veya ilk karşılama e-postası içinde hangi e-posta adresinin listelenmiş olduğunu doğrulayın. Herhangi bir hata varsa kurumsal bayiden bilgileri kendi uçlarında güncelleştirmesini ve sistemin güncelleştirmesi için 48 saat beklemesini sorun. 
 
-48 saat sonra hala süper yönetici izinleriniz yoksa, aşağıda çevrimiçi bir istek göndererek desteğe ulaşın ve aşağıdaki bilgileri hazır hale getirin:
+48 saat sonra hala süper yönetici izinlerine sahip değilseniz, aşağıdaki çevrimiçi isteği göndererek destan edinin ve aşağıdaki bilgilere sahip olun:
 - Anlaşma numarası
 - Atanacak e-posta adresi
 
-Sözleşme ayarlandıktan sonra birincil kişi olarak eklendiniz, başka bir süper yöneticiye [sizi süper yönetici olarak eklemesini](https://docs.microsoft.com/visualstudio/subscriptions/admin-roles#assigning-admins)isteyin.
+Sözleşme ayarlandıktan sonra birincil kişi olarak eklendiyseniz, başka bir süper yöneticiden sizi süper yönetici [olarak eklemelerini sorun.](https://docs.microsoft.com/visualstudio/subscriptions/admin-roles#assigning-admins)

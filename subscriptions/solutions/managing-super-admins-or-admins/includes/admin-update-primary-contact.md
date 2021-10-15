@@ -1,6 +1,6 @@
 ---
-title: Birincil kişimiz kaldı ve yeni bir bağlantı. İletişim bilgilerini nasıl güncelleştirebilirim?
-description: Yeni birincil kişi, birincil ilgili kişiyi veya süper yönetici rolünü güncelleştirmek istiyor.
+title: Yeni birincil kişi ben olursam kişi bilgilerini nasıl güncelleştirerim?
+description: Yeni birincil kişi, birincil ilgili kişi veya süper yönetici rolünü güncelleştirmek istiyor.
 ms.topic: include
 ms.assetid: 1c123f81-325d-4f0b-a2b5-23f4cf263db1
 author: CaityBuschlen
@@ -10,22 +10,22 @@ user.type: admin
 tags: primary, contact
 subscription.type: vl, cloud, retail, partner
 sap.id: 8789faa7-9d29-25d8-018a-4f6ecee827c8
-ms.openlocfilehash: 4d672d099f95d054cdd2bfc1f1184afc1ff10fac
-ms.sourcegitcommit: d63ba1eff845d41ca095efb14b499ea96c4b6eba
+ms.openlocfilehash: 1f47ce345e5d1dfee56fdf6d13e1565cc5fdeb54
+ms.sourcegitcommit: 485f0f6f578568ee31b2ac093e32a6d01dc9c1c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "129584947"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130019111"
 ---
-## <a name="our-primary-contact-left-and-im-the-new-one-how-can-i-update-the-contact-info"></a>Birincil kişimiz kaldı ve yeni bir tane kullanıyorum. İletişim bilgilerini nasıl güncelleştirebilirim?
+## <a name="our-primary-contact-left-and-im-the-new-one-how-can-i-update-the-contact-info"></a>Birincil iletişim kişimiz ayrıldı ve yeni kişi benim. Kişi bilgilerini nasıl güncelleştirerim?
 
-Yeni birincil kişi olarak, bilgilerinizi güncelleştirmek için birkaç adım gerçekleştirmeniz gerekir.
+Yeni birincil kişi olarak, bilginizi güncelleştirmek için tamamlamanız gereken birkaç adım var.
 
-1. Satıcınızla iletişim kurun ve yeni birincil ilgili kişi olduğunuzu haberdar edin. Bu bilgilerin sözleşmede güncelleştirilmesi gerekir.
-2. Portalın güncelleştirilmesi ve size uygun izinleri vermesi için 48 saat bekleyin.
-3. 48 saat sonra, süper yönetici izinlerinizi görmüyorsanız, aşağıdaki **çevrimiçi istek** ' ı seçerek desteğe başvurun ve bir bilet iletin. Atanacak anlaşma numarasını ve e-posta adresini ekleyin.
+1. Kurumsal bayinize başvurun ve yeni birincil iletişim kişisi olduğunu onlara haber ver. Anlaşmayla ilgili bilgileri güncelleştirmeleri gerekir.
+2. Portalın güncelleştirilip size uygun izinleri verilmesi için 48 saat bekleyin.
+3. 48 saat sonra süper yönetici izinlerinizi görmüyorsanız aşağıdaki **Çevrimiçi** istek'i seçerek de destekle iletişime geçin ve bir bilet gönderin. Atanacak anlaşma numarasını ve e-posta adresini dahil edin.
     
-## <a name="how-can-i-update-the-primary-contact-on-the-admin-portal"></a>Yönetici portalındaki birincil kişiyi nasıl güncelleştirebilirim?
-Birincil iletişim bilgilerinizi güncelleştirdikten sonra, yönetici portalında oturum açın ve önceki birincil ilgili kişinin artık listelenmediğinden emin olun. Kalan birincil kişiyi kaldırabilen en az iki güncel süper yönetici bulunduğundan emin olun.
+## <a name="how-can-i-update-the-primary-contact-on-the-admin-portal"></a>Yönetici portalında birincil ilgili kişiyi nasıl güncelleştirebilirsiniz?
+Birincil iletişim bilgilerini güncelleştirdikten sonra yönetici portalında oturum açın ve önceki birincil ilgili kişinin artık listelenmiyor olduğunu onaylayın. Birincil ilgili kişinin ayrıldığını kaldıran en az iki mevcut süper yöneticinizin olduğundan emin olmak.
 
-Note: tasarıma göre her zaman sözleşmede **iki** süper yönetici olmalıdır.
+Not: Tasarıma göre sözleşmede **her zaman** iki süper yönetici olması gerekir.

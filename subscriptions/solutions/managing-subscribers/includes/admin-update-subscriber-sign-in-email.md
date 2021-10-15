@@ -1,5 +1,5 @@
 ---
-title: Abone oturum açma e-posta adresini Güncelleştir
+title: Nasıl yaparım? abonenin oturum açma e-posta adresi güncelleştirilsin mi?
 description: Süper yönetici veya yönetici, aboneler etki alanını toplu olarak güncelleştirmek istiyor.
 ms.topic: include
 ms.assetid: c1220a33-26b0-4bf9-be97-ab2b3055e351
@@ -10,12 +10,12 @@ user.type: admin
 tags: email
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: a8a753440cbfff59c656748571a1dbe08dffe3a8
-ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
+ms.openlocfilehash: 56ba89a2546c384835addb05574c3280fed500e6
+ms.sourcegitcommit: 485f0f6f578568ee31b2ac093e32a6d01dc9c1c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2021
-ms.locfileid: "129013231"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130019319"
 ---
 ## <a name="update-subscribers-sign-in-email-address"></a>Abonenin oturum açma e-posta adresini Güncelleştir
 

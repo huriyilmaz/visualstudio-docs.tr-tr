@@ -1,5 +1,5 @@
 ---
-title: Sözleşmemi yönetemiyor
+title: Sözleşmemi neden yönete bilmiyorum?
 description: Süper yönetici veya yönetici, sözleşmeyi yönetmek için sözleşmeye izinlere sahipti, ancak sözleşmenin süresi dolduğundan artık bu yöneticiye erişemeyecek.
 ms.topic: include
 ms.assetid: 1e42ee75-fbf6-4dce-b844-44f94efb80d6
@@ -10,12 +10,12 @@ user.type: admin
 tags: agreement
 subscription.type: vl, cloud, retail, partner
 sap.id: 4e55abf9-8505-ecdc-c55f-c67a167a357c
-ms.openlocfilehash: 54d98e72aafa4084f65f3b4262f31ce447dc598d
-ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
+ms.openlocfilehash: 56592e2b79a30daa0f59b8b72131c9ad76ea24e9
+ms.sourcegitcommit: 485f0f6f578568ee31b2ac093e32a6d01dc9c1c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2021
-ms.locfileid: "129013327"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130019084"
 ---
 ## <a name="im-a-super-admin-or-admin-but-im-not-able-to-manage-my-agreement"></a>Süper yönetici veya yöneticiyim ama sözleşmemi yönete değilim
 

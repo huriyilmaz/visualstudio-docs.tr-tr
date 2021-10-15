@@ -1,5 +1,5 @@
 ---
-title: Eksik abonelikler
+title: Aboneliklerim eksik. Nereye gitmiyor?
 description: Süper yönetici veya yönetici bazı aboneliklerin kaldırıldığını algıladı, ancak onları kimin kaldırmış olduğunu bilmez.
 ms.topic: include
 ms.assetid: 002442ae-e4c0-4a05-853b-fb32516b1bbc
@@ -10,12 +10,12 @@ user.type: admin
 tags: missing
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: 1502ea473cde56c0701a87e00c180d2a4f74db41
-ms.sourcegitcommit: 364e106fcbf4fb6af534e81d8b700901f79f4ec8
+ms.openlocfilehash: 44bee19b1f076ae1f2f6609e6a4ee82f7232982c
+ms.sourcegitcommit: 485f0f6f578568ee31b2ac093e32a6d01dc9c1c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2021
-ms.locfileid: "129013288"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130019218"
 ---
 ## <a name="some-subscriptions-are-missing-that-i-didnt-delete-where-did-the-subscriptions-go"></a>Silmediğiniz bazı abonelikler eksik. Abonelikler nerede?
 Süper yönetici veya yönetici olarak, uygun izinlere sahip olduğunuzda her bir anlaşmadan abone ekleyebilir, düzenleyebilir veya kaldırabilirsiniz. 

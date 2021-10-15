@@ -1,5 +1,5 @@
 ---
-title: Sözleşmem yenilendi ama aboneler aktarmdı
+title: Nasıl yaparım? sözleşmeye nasıl geçsin?
 description: Süper yönetici veya yönetici yeni sözleşmede aboneleri bekledi ama orada yansıtmıyor
 ms.assetid: a95181b0-b64c-4c29-a90e-928962c06d81
 author: CaityBuschlen
@@ -9,12 +9,12 @@ user.type: admin
 tags: renewal, transfer
 subscription.type: vl, cloud, retail, partner
 sap.id: b84fffb5-3363-eb7d-224e-1c63faf4067b
-ms.openlocfilehash: bc7646ecf7a2a057aac625177a25bc2c779ab63b
-ms.sourcegitcommit: d63ba1eff845d41ca095efb14b499ea96c4b6eba
+ms.openlocfilehash: ec9b31ceac0b83d1e749e22762ecd6e7be51da5d
+ms.sourcegitcommit: 485f0f6f578568ee31b2ac093e32a6d01dc9c1c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "129585123"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "130019253"
 ---
 ## <a name="my-agreement-was-renewed-but-the-subscribers-didnt-transfer-over-from-the-old-agreement"></a>Sözleşmem yenilendi ama aboneler eski sözleşmeden aktarmadı
 
