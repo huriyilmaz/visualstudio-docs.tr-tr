@@ -15,16 +15,35 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b8280c29649a792839e2bc18a409e76f276b71e4
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 108e7b78319cc11ab9600017fd84990ec6c7265d
+ms.sourcegitcommit: 3cfe24a74b611440b831d9591e067874c51a3bfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631539"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "130087468"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Bir Access veritabanındaki verilere bağlanma
 
 Visual Studio kullanarak bir Access veritabanına (bir *. mdb* dosyası ya da *. accdb* dosyası) bağlanabilirsiniz. Bağlantıyı tanımladıktan sonra veriler **veri kaynakları** penceresinde görünür. Buradan, tasarım yüzeyiniz üzerine tabloları veya görünümleri sürükleyebilirsiniz.
+::: moniker range=">=vs-2017"
+> [!NOTE]
+> Access veritabanlarına bağlanmak için Visual Studio kullanıyorsanız, Visual Studio 2022 ' den önceki Visual Studio sürümlerinin tüm 32-bit süreçler olduğunu bilmeniz gerekir.
+>
+> bu, Visual Studio ' deki bazı veri araçlarının yalnızca 32 bit veri sağlayıcıları kullanarak veritabanlarına erişim sağlayamayacağı anlamına gelir.
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+> [!NOTE]
+> Access veritabanlarına bağlanmak için Visual Studio 2022 kullanıyorsanız, Visual Studio 2022 ' nin artık 64-bit işlemi olduğunu bilmeniz gerekir.
+>
+> bu, Visual Studio ' deki bazı veri araçlarının, 32 bit veri sağlayıcıları kullanarak veritabanlarına erişim sağlayamayacağı anlamına gelir.
+>
+>Access veritabanlarına bağlanan 32 bitlik uygulamaları korumanız gerekiyorsa, uygulamayı yine de Visual Studio 2022 ile derleyip çalıştırabilirsiniz. ancak, Sunucu Gezgini, veri kaynağı sihirbazı veya veri kümesi tasarımcısı gibi Visual Studio veri araçlarından birini kullanmanız gerekiyorsa, hala 32 bitlik bir işlem olan Visual Studio önceki bir sürümünü kullanmanız gerekir. 32 bitlik bir işlem olan Visual Studio son sürümü 2019 Visual Studio.
+>
+>Projeyi 64 bitlik bir işlem olarak dönüştürmeyi planlıyorsanız, erişim bağlantı altyapısı (ACE) olarak da adlandırılan 64 bit Microsoft Access veritabanı altyapısını kullanmanız önerilir. Lütfen bkz. [Jet için OLE DB sağlayıcısı ve ODBC sürücüsü yalnızca](/office/troubleshoot/access/jet-odbc-driver-available-32-bit-version) daha fazla bilgi için 32 bitlik sürümleridir.
+
+::: moniker-end
 
 ## <a name="prerequisites"></a>Önkoşullar
 
