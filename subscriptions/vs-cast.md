@@ -1,18 +1,18 @@
 ---
-title: Abonelikleri ve abonelikleri Visual Studio IÇIN CAST | Microsoft Docs
+title: Visual Studio abonelikleri için CAST Vurgulama avantajı| Microsoft Docs
 author: evanwindom
-ms.author: lank
-manager: lank
+ms.author: cabuschl
+manager: cabuschl
 ms.assetid: 92e8957f-c690-46bd-a812-3efd06a2bc6b
-ms.date: 03/18/2021
+ms.date: 10/18/2021
 ms.topic: how-to
 description: Seçili aboneliklerde kullanılabilen CAST Vurgulama avantajı hakkında Visual Studio öğrenin
-ms.openlocfilehash: 5087873d6ec0ef23dd012c4ef5fbb50b24fd616b
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 1891fd1fff4a30481809a3293162144f713a97ef
+ms.sourcegitcommit: 6c847aedf0f943e253a4c2f0e4b516b953168bc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428261"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "130151837"
 ---
 # <a name="the-cast-highlight-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde CAST Vurgulama avantajı
 Geliştiriciler buluta geçiken yazılımlarıyla ilgili kritik içgörülere ihtiyaç var. CAST Highlight ile Visual Studio aboneler uygulamalarının Azure'a geçiş için buluta hazır olma durumunu belirlemek ve geçiş sırasında ve sonrasında uygulamalarının ilerleme durumunu izlemek için uygulama kaynak kodunu hızla tarayabiliyor.
@@ -26,14 +26,14 @@ Geliştiriciler buluta geçiken yazılımlarıyla ilgili kritik içgörülere ih
 2. "Araçlar" kategorisindeKI CAST Vurgusu avantajı kutucuğunu bulun ve Kod **Al'a tıklayın.**
 
    > [!div class="mx-imgBorder"]
-   > ![CAST Vurgu Avantajı Kutucuğu](_img/vs-cast-highlight/vs-cast-highlight-tile.png "Başlamak için atama vurgu avantajı kutucuğunda ' kodu al ' düğmesine tıklayın.")
+   > ![CAST Vurgu Avantajı Kutucuğu](_img/vs-cast-highlight/vs-cast-highlight-tile.png "Başlamak için CAST Vurgu avantajı kutucuğunun 'Kod Al'a tıklayın.")
 
 0. Kodunuzun başarıyla alınmıştır.  **Etkinleştir'e tıklayın.** (Şimdi etkinleştirmeyi seç seçerseniz, abonelik portalında her zaman CAST Vurgulama kutucuğuna geri dönebilirsiniz.  "Kod Al" bağlantısı "Etkinleştir" olarak değişir ve bu bağlantıya tıklarsa etkinleştirme işlemi devam eder.)
 
 0. Aboneliğinizin özelliklerini keşfedebilirsiniz.  Hesabınız oluşturmak için hazırsanız, iletişim bilgilerini web formunda s sağlamanız ve Gönder'e tıklamanız **gerekir.**
 
     > [!div class="mx-imgBorder"]
-    > ![CAST Vurgu Giriş Sayfası](_img/vs-cast-highlight/vs-cast-highlight-landing.png "Kişisel bilgilerinizi, atama aboneliğinizi etkinleştirme ' ye girin.")
+    > ![CAST Vurgu Giriş Sayfası](_img/vs-cast-highlight/vs-cast-highlight-landing.png "CAST aboneliğinizi etkinleştirmek için kişisel bilgilerinizi sağlama.")
 
    > [!NOTE]
    > CAST Vurgusu avantajının etkinleştirmeleri kuruluş başına on ile sınırlıdır.  Kuruluşta on etkinleştirme zaten kullanılırsa CAST Vurgula avantajını etkinleştiremeyebilirsiniz ve daha fazla bilgi içeren bir e-posta alırsınız.
@@ -44,7 +44,7 @@ Geliştiriciler buluta geçiken yazılımlarıyla ilgili kritik içgörülere ih
 
 0. İsteğinizin alınarak onaylayan aşağıdaki e-postayı CAST'den de alırsınız.  (Bu örnek, aboneler tarafından alınan e-Enterprise gösterir.)
 
-   > *30 günlük CAST Highlight erişimini etkinleştirme isteğiniz için teşekkür ederiz. Bu, müşteriler için özel Microsoft Visual Studio Enterprise sunar!*
+   > *Tüm müşteriler için özel bir teklif olan CAST Highlight'a 30 günlük erişimi etkinleştirme isteğiniz için Microsoft Visual Studio Enterprise teşekkür ederiz!*
    >
    > *Şu anda CAST Vurgulama'ya yönelik etkinleştirme ve erişim isteğinizi gözden geçirerek. En fazla 48 saat içinde geri döneceksiniz.*
    >
@@ -86,7 +86,7 @@ Geliştiriciler buluta geçiken yazılımlarıyla ilgili kritik içgörülere ih
 | Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
 
-<sup>1</sup>*Şunları içerir: Resale (NFR), FTE, En Değerli Professional (MVP), Bölgesel Direktörü (RD), Microsoft İş Ortağı Ağı (MPN), Visual Studio Sektör Ortağı (VSIP), Microsoft Sertifikalı Eğitimci, BizSpark, Imagine, NFR Basic* için Değil  
+<sup>1</sup>*Şunları içerir: Resale (NFR), FTE, En Değerli Professional (MVP), Bölgesel Direktörü (RD), Microsoft İş Ortağı Ağı (MPN), Visual Studio Endüstri İş Ortağı (VSIP), Microsoft Sertifikalı Eğitimci, BizSpark, Imagine, NFR Basic* için Değil  
 
 > [!NOTE]
 > Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
@@ -98,8 +98,8 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
   - [Destek isteği gönderme](https://casthighlight.com/support/)
   - [Başlarken Kılavuzu (PDF)](https://casthighlight.com/Getting-Started-Guide.pdf)
 
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama konusunda yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
-- IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Abonelikler için satış, abonelikler, hesaplar ve faturalama Visual Studio yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
+- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -108,6 +108,6 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını henüz etkinleştirmediyseniz, [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) Azure aboneliğinizi kurmak ve Azure DevTest bireysel kredilerinizi kullanmak Için Araçlar kategorisindeki Azure kutucuğuna gidin ve tıklayın.
+Aboneliğiniz ile birlikte gelen Azure DevTest bireysel kredi avantajını henüz etkinleştirildikten sonra Azure aboneliğinizi ayarlamak ve Azure DevTest bireysel kredinizi kullanmak için Araçlar kategorisindeki Azure kutucuğuna [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) tıklayın.
 
-Ve Greg 'in e-postasında bahsedilen tanıtım, Kullanıcı Kılavuzu ve öğretici videolarını kullanıma almayı unutmayın.
+Ayrıca Greg'in e-postası ile bahsedilen tanıtım, kullanıcı kılavuzu ve öğretici videolarını da gözden unutmayın.

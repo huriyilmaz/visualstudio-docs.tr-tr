@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 44a790d1-f37e-4be0-9023-af1b3fdfcd35
-ms.date: 03/17/2021
+ms.date: 10/18/2021
 ms.topic: conceptual
 description: seçilen Visual Studio aboneliklerine dahil olan geliştirici Community destek avantajı hakkında bilgi edinin.
-ms.openlocfilehash: e689fa93f37d2c784b03a7118d84af157e9c1e80
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 57dab07086eed8ad42ef118b4e0db86842929c8f
+ms.sourcegitcommit: 6c847aedf0f943e253a4c2f0e4b516b953168bc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128432646"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "130152085"
 ---
 # <a name="developer-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde geliştirici Community destek forumu
 geliştirici Community forumlarında sorularınızı gönderin, yanıtlar bulun ve bilgilerinizi paylaşabilirsiniz.
@@ -21,6 +21,7 @@ geliştirici Community forumlarında sorularınızı gönderin, yanıtlar bulun 
 geliştirici Community bağlanma basittir.
 1. Visual Studio abonelik portalında oturum açın<https://my.visualstudio.com/benefits>
 0. destek bölümünde **geliştirici Community** bulun ve **yardım al**' a tıklayın.
+(Ayrıca tarayıcınıza doğrudan de işaret edebilirsiniz <https://developercommunity.visualstudio.com/> .)
 
    > [!div class="mx-imgBorder"]
    > ![geliştirici Community kutucuğu](_img/vs-developer-community/vs-developer-community-tile.png "Geliştiriciye bağlanmak için ' yardım al 'a tıklayın Community")
@@ -47,7 +48,7 @@ Azure Community avantajı 'nın kullanılabilirliği, aşağıda gösterildiği 
 |                          GitHub Enterprise aboneliği Visual Studio Professional                          | VL, Azure, perakende |   Kullanılabilir    |    Yes     |
 |                              Visual Studio Test Professional (standart)                               |    VL, perakende     |   Kullanılabilir    |    Yes     |
 |                                       MSDN Platformları (Standart)                                       |    VL, perakende     |   Kullanılabilir    |    Yes     |
-| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut)|        Tümü        | Kullanılamaz |     No     |
+| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut)|        Tümü        | Kullanılamaz |     Hayır     |
 
 <sup>1</sup>*şunları içerir: için değil (nfr), Microsoft fte, en değerli Professional (MVP), bölgesel müdürü (RD), Visual Studio sektör ortağı (vsıp), BizSpark, Imagine, Microsoft sertifikalı trainer (mct).  Dışlar: NFR Basic*  
 

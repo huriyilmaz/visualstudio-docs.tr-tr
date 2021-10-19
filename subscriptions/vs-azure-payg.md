@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 5dc7f57e-883a-4cc1-a914-06245a8cb1ff
-ms.date: 02/19/2021
+ms.date: 10/14/2021
 ms.topic: how-to
 description: Azure Pay-As-You-Go hesabını ayarlamayı öğrenin.
-ms.openlocfilehash: a9b94313a82c075ede602233da00313b851b47a0
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 0eae5898e5ae09d887183021ee3ce03f79c59c07
+ms.sourcegitcommit: 6c847aedf0f943e253a4c2f0e4b516b953168bc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428190"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "130152119"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Azure DevTest-As-You-Go abonelikleri
 Bulutta takımınız ile işbirliği yapın.  Birden çok Geliştirme ve Test As-You-Go aboneliği oluşturun, diğer abonelerle işbirliğine olanak tanırken ekipler ve ortamlar arasında yalıtım da sağlar.  Azure'da abonelik yazılımınız için geliştirme/test ve bulut kullanım hakları için özel indirimli saatlik fiyatlar alırsınız.
@@ -22,13 +22,13 @@ Bulutta takımınız ile işbirliği yapın.  Birden çok Geliştirme ve Test As
    > [!div class="mx-imgBorder"]
    > ![Azure PAYG Kutucuğu](_img/vs-azure-payg/vs-azure-payg-tile.png "Çalışmaya başlamanız için DevTest As-You-Go abonelik kutucuğunun 'Etkinleştir'e tıklayın.")
 
-2. Abonelik avantajlarınız kapsamında zaten bir Azure hesabı etkinleştirildikten sonra (örneğin, bir Enterprise aboneliğiniz varsa ve 150 ABD doları aylık Azure DevTest bireysel kredinizi etkinleştirdiyebilirsiniz), 5. adıma geçin.
+2. Abonelik avantajlarınız kapsamında zaten bir Azure hesabı etkinleştirildikten sonra (örneğin, Enterprise aboneliğiniz varsa ve 150 ABD doları aylık Azure DevTest bireysel kredinizi etkinleştirdikten sonra), 5. adıma geçin.
 
 3. Microsoft Azure Sayfasında, Kullandıkça Öde Geliştirme ve Test teklifini (PAYG) ayarlama veya Visual Studio Enterprise yükseltme seçeneğiniz vardır.  Yükseltmek **için geçerli teklifle devam Kullandıkça Öde Geliştirme ve Test** (geçerli teklif) seçeneğini tıklayın.
 
 4. Kimliğinizi doğrulamak için bir telefon numarası girin ve "Kısa mesaj gönder" veya "Beni ara" seçin.  Size gelen kodu girin.  Kodu **doğrula'ya tıklayın.**
 
-5. Ardından, lütfen hesabınız için faturalama bilgilerini stikten sonra Sonraki 'ye **tıklayın.**  (Bu, tüm Azure satın almaları için ücret alınan kredi kartıdır.)
+5. Ardından, hesabınız için faturalama bilgilerini sildiniz ve Sonraki'ye **tıklayın.**  (Bu, tüm Azure satın almaları için ücret alınan kredi kartıdır.)
 
 6. Anlaşma bölümünde, abonelik anlaşmasını, teklif ayrıntılarını ve gizlilik bildirimini kabul etmek için onay kutusuna tıklayın ve ardından Satın Alın'a **tıklayın.**
 
@@ -45,7 +45,7 @@ A: Azure abonelikleri üzerinde değişiklik yapmak için:
 4. Artık aboneliği yönetme veya iptal etme, yeniden adlandırma, dizini değiştirme veya faturalama sahipliğini aktarma seçeneklerine sahipsiniz.
 
 ## <a name="resources"></a>Kaynaklar
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama konusunda yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
+- Abonelikler için satış, abonelikler, hesaplar ve faturalama Visual Studio yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

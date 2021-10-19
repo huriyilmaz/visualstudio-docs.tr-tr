@@ -1,80 +1,80 @@
 ### YamlMime:FAQ
 metadata:
-  title: Visual Cloud abonelikleri Visual Studio için faturalama hakkında SSS | Microsoft Docs
+  title: Visual cloud abonelikleri Visual Studio için faturalandırma sss | Microsoft Docs
   author: evanwindom
   ms.author: cabuschl
   manager: cabuschl
   ms.assetid: 21e0471d-ad59-4d21-9c6f-13f7147569af
-  ms.date: 03/05/2021
+  ms.date: 10/18/2021
   ms.topic: conceptual
-  description: Bulut abonelikleri için faturalama soruları.
-  ms.openlocfilehash: 1cdbedf7abe29ab63143e8b9f5567c11b818dbcd
-  ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+  description: Bulut abonelikleri için faturalandırma soruları.
+  ms.openlocfilehash: 40bd954902a7fbd31dcf403d17fa2f6778d8c5e6
+  ms.sourcegitcommit: 6c847aedf0f943e253a4c2f0e4b516b953168bc7
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/24/2021
-  ms.locfileid: "128428791"
-title: Visual Studio abonelikleri faturalama hakkında SSS
+  ms.lasthandoff: 10/19/2021
+  ms.locfileid: "130151885"
+title: Visual Studio bulut abonelikleri faturalandırma hakkında sss
 summary: >
-  Bulut aboneliği [avantajlarını](https://visualstudio.microsoft.com/vs/pricing/) ve fiyatlandırmayı karşılaştırarak bulut ve standart Visual Studio abonelikleri Visual Studio arasındaki karşılaştırmalar, abone avantajlarıyla ilgili ayrıntılar ve daha fazlasını öğrenin.
+  bulut ve standart Visual Studio abonelikleri arasındaki karşılaştırmalar, abone avantajları hakkındaki ayrıntılar ve daha fazlası ile her Visual Studio aboneliğin avantajlarını anlamak için [bulut aboneliği avantajlarını ve fiyatlandırmasını karşılaştırdığınızdan](https://visualstudio.microsoft.com/vs/pricing/) emin olun.
 sections:
 - name: Genel satın alma soruları
   questions:
   - question: >
-      Satın Alma Siparişi Visual Studio bulut abonelikleri satın alabilir miyim?
+      satın alma siparişi kullanarak Visual Studio bulut abonelikleri satın alabilir miyim?
     answer: >
-      Hayır. Tüm Visual Studio azure aboneliği kullanılarak satın alın gerekir. (Bunu Azure ödeme hesabınız olarak düşünebilirsiniz.)
+      Hayır. tüm Visual Studio bulut abonelikleri, bir Azure aboneliği kullanılarak satın alınmalıdır. (Bunu Azure Faturalandırma hesabınız olarak düşünebilirsiniz.)
   - question: >
-      Bulut abonelikleri satın almak için hangi Azure Visual Studio kullanılabilir?
+      Visual Studio bulut abonelikleri satın almak için hangi türlerdeki Azure abonelikleri kullanılabilir?
     answer: >
-      Çoğu Azure aboneliği kullanılabilir; Kurumsal Anlaşma (EA) aboneliğinize bağlı Azure aboneliklerini, Bulut Çözümü Sağlayıcıları [(CSP)](https://azure.microsoft.com/pricing/enterprise-agreement/)tarafından ayarlanmış Azure aboneliklerini, Microsoft Open License kurumsal bayileri aracılığıyla ayarlanmış Azure aboneliklerini ve Kullanila Öde Azure aboneliklerini destekliyoruz.
+      azure aboneliklerinin çoğu kullanılabilir-- [Kurumsal Anlaşma (EA)](https://azure.microsoft.com/pricing/enterprise-agreement/)bağlı azure aboneliklerini, bulut çözümü sağlayıcıları (csp) tarafından ayarlanan azure abonelikleri, Microsoft Open lisans satıcıları aracılığıyla ayarlanan azure abonelikleri ve kullandıkça öde azure abonelikleri ' ni destekliyoruz.
 
 
-      Azure Ücretsiz Deneme dahil olmak üzere [bazı Azure abonelik türleri](https://azure.microsoft.com/pricing/free-trial/) ve aboneliklere abone avantajları olarak dahil Visual Studio abonelikler kullanılamaz.
+      [azure ücretsiz deneme](https://azure.microsoft.com/pricing/free-trial/) sürümü ve Visual Studio aboneliklerde abone avantajları olarak dahil edilen abonelikler dahil bazı azure abonelikleri türleri kullanılamaz.
   - question: >
       Diğer Azure hizmetlerini satın almam gerekiyor mu?
     answer: >
-      Kesinlikle hayır. Yalnızca Azure aracılığıyla bulut Visual Studio satın almak için bunu kullanabilirsiniz.
+      Kesinlikle hayır. Azure aracılığıyla yalnızca Visual Studio bulut abonelikleri satın almak istiyorsanız bunu yapabilirsiniz.
   - question: >
-      Faturalama ve kullanım verilerimi nerede görüntülebilirsiniz?
+      Faturalandırma ve kullanım verilerimi nereden görüntüleyebilirim?
     answer: >
-      Faturanızı ve [kullanımınızı görüntüleme hakkında bilgi alın.](https://docs.microsoft.com/azure/cost-management-billing/manage/download-azure-invoice-daily-usage-date)
+      [Faturanızı ve kullanımınızı görüntüleme](https://docs.microsoft.com/azure/cost-management-billing/manage/download-azure-invoice-daily-usage-date)hakkında bilgi alın.
 - name: Kurumsal Anlaşma (EA) müşterileri
   questions:
   - question: >
-      Bulut abonelikleri satın Kurumsal Anlaşma bir Visual Studio kullanabilir miyim?
+      Visual Studio bulut abonelikleri satın almak için bir Kurumsal Anlaşma kullanabilir miyim?
     answer: >
-      Evet, yazabilirsiniz. EA'nız için oluşturulmuş bir Azure aboneliğinde katkıda bulunan veya daha yüksek bir rol rolünüz olması gerekir. Bulut abonelikleri için satın alma işlemlerinizi doğrudan Visual Studio Market'te Visual Studio olun. Satın Alma Siparişi Visual Studio bulut abonelikleri satın aamazsınız.
+      Evet, yazabilirsiniz. EA 'niz için oluşturulmuş bir Azure aboneliğine katkıda bulunan veya daha yüksek bir rol olmanız gerekir. lütfen satın alımlarınızı doğrudan Visual Studio market 'te Visual Studio bulut abonelikleriyle gerçekleştirdiğinizden emin olun. satın alma siparişi kullanarak Visual Studio bulut abonelikleri satın alamaz.
   - question: >
-      Visual Studio Market'te kuruluşum tarafından satın almak için gerekli ayrıcalıklara sahip olup olmadığımı nasıl Kurumsal Anlaşma?
+      kuruluşun Kurumsal Anlaşma aracılığıyla Visual Studio marketi 'nde hizmetleri satın almak için gerekli ayrıcalıklara sahip olup olmadığını nasıl anlayabilirim?
     answer: >
-      Doğru ayrıcalıklara sahip olup olmadığını belirlemenin en  kolay yaklaşımı, Market'te sunulan bir hizmet için Satın al Visual Studio seçmektir.
+      doğru ayrıcalıklara sahip olup olmadığınızı belirlemek için en kolay yaklaşım, Visual Studio marketi 'nde sunulan bir hizmetin **satın alma** düğmesini seçmektir.
 
-      Şu anda oturum açma bilgilerinize bağlı olan Azure aboneliklerinin yer alan listesinden bir Azure aboneliği (ödeme hesabı) seçmeniz gerekir.
+      Şu anda oturum açınızdan bağlantılı olan sunulan Azure abonelikleri listesinden bir Azure aboneliği (faturalandırma hesabı) seçmeniz gerekir.
 
-      Azure aboneliğinin adı varsayılan olarak ödeme hesabı türü ("Öde", "Kurumsal Anlaşma" vb.) olduğundan, Azure aboneliğinin sizin aboneliğinizin bir parçası olup Kurumsal Anlaşma.
+      azure aboneliğinin adı faturalandırma hesabı türü ("kullandıkça öde", "Kurumsal Anlaşma" vb.) için varsayılan olarak, azure aboneliği Kurumsal Anlaşma bir parçasıysa, genellikle net değildir.
 
 
-      Bir diğer yaklaşım da Azure Enterprise [Portal'ı ziyaret etmektir.](https://ea.azure.com)  Başarıyla ulaşabilirsiniz, o zaman zaten Enterprise Yöneticisi veya Hesap Sahibi rolüne sahipsinizdir. Yalnızca Hesap Sahipleri bir hesapta yeni Azure faturalama Kurumsal Anlaşma. Azure Enterprise Portal'a erişe değilseniz, lütfen Enterprise Yöneticinizin kim olduğunu bulmak için lütfen kuruluş içinde bilgi edinin ve bu kişiden sizi Azure Enterprise Portalı'nın içinde Hesap Sahibi olarak eklemelerini iste.  Bu kişiyi bulamazsanız bir destek bileti [gönderebilirsiniz ve iletişim](https://support.microsoft.com/supportrequestform/cf791efa-485b-95a3-6fad-3daf9cd4027c) bilgilerini talep edin.  Destek bileti için, kuruluş adına ve Kurumsal Anlaşma kayıt numaranıza ihtiyacınız var.
+      başka bir yaklaşım de [Azure Enterprise Portal](https://ea.azure.com)ziyaret etmeye çalışır.  başarılı bir şekilde ulaşabilseniz, Enterprise yöneticisi veya hesap sahibi rolüne zaten sahipsiniz. yalnızca hesap sahipleri yeni Azure faturalandırma hesaplarını bir Kurumsal Anlaşma ayarlayabilir. Azure Enterprise Portal 'a erişemiyorsanız, Enterprise yöneticinizin kim olduğunu öğrenmek için lütfen kuruluşunuzun içinde sorgulama yapın ve bu kişiden sizi Azure Enterprise Portal içinde hesap sahibi olarak eklemesini isteyin.  Bu kişiyi bulamıyorsanız, [bir destek bileti gönderebilir](https://support.microsoft.com/supportrequestform/cf791efa-485b-95a3-6fad-3daf9cd4027c) ve iletişim bilgilerini isteyebilirsiniz.  destek bileti için kuruluşunuzun adı ve Kurumsal Anlaşma kayıt numaranız olması gerekir.
   - question: >
-      Bulut abonelikleri satın almak için my Kurumsal Anlaşma Azure Parasal Taahhüt Visual Studio kullanabilir miyim?
+      Kurumsal Anlaşma Azure parasal taahhüt fonlarını kullanarak Visual Studio bulut abonelikleri satın alabilir miyim?
     answer: >
-      Hayır, bu ön ödemeli fonlar bulut aboneliklerini satın Visual Studio uygun değildir. EA'nız için bulut abonelikleri satın almak Visual Studio bir Azure aboneliğini seçerseniz, ücretler sonraki "fazla kullanım" faturanıza görünür. Bu genellikle aylık olarak gerçekleşir, ancak bazı EA müşterileri için geçmiş kurallar nedeniyle birkaç ay boyunca fazla kullanılan fatura düzenlemesi yapılamayabiliyor. Fazla kullanım faturasını tetikleyen ek satın alma miktarı (Azure Parasal Taahhüt fonlarında uygun olmayan satın almalar) hakkında bilginiz olması gerekirse lütfen EA'nız için bir lisanslama uzmanına danışın.
-- name: Ücretler nasıl işlenir?
+      hayır, bu ön ödemeli fon Visual Studio bulut aboneliklerinin satın alınması için uygun değildir. EA 'niz için Visual Studio bulut abonelikleri satın almak üzere oluşturulan bir Azure aboneliğini seçtiğinizde, ücretler sonraki "fazla kullanım" faturanızda görünür. Genellikle bu ayda bir gerçekleşir ancak bazı EA müşterilerinin geçmiş kuralları nedeniyle, bir fazla ay için fazla kullanım faturası verilmeyebilir. Ek satın alma miktarı (Azure parasal taahhüt fonları için uygun olmayan Satınalmalar) için bir fazla kullanım faturası tetiklemeniz gerekiyorsa lütfen EA 'nizin lisanslama uzmanına başvurun.
+- name: Ücretler nasıl işlenir
   questions:
   - question: >
       Aylık bulut aboneliği ücretleri nasıl işlenir?
     answer: >
-      İlk satın almada, geçerli aydaki kalan günleri kapsayacak şekilde, proratılmış bir miktarı faturalandırmış oluruz. Örneğin, 15 Nisan'da 10 Visual Studio Professional aylık bulut aboneliği satın aldıysanız, ayın %50'si (30 günlük bir ayın 15 günü) kalması nedeniyle 5 birim ücret ödememiz gerekir.
+      İlk satınalmada, geçerli aydaki kalan günleri kapsayacak şekilde eşit olarak dağıtılmış bir miktar faturalandırırız. örneğin, 15 nisan 'da 10 Visual Studio Professional aylık bir satın alma işlemi yapılmışsa, ayın %50 ' unun kaldığı, 5 birim ücretlendiriyoruz (30 günlük ayın 15 günü).
 
-      Mayıs 2018'de ve iptal edinceye kadar her ay 10 birimin tamamını faturalandırmış oluruz.
+      İlk olarak, her ay ve siz de iptal edilene kadar, tam 10 birim faturalandırılır.
 
 
-      Ücretli miktarı daha sonra artırarak, geçerli aydaki kalan günleri kapsayacak şekilde artan birimlere de provokasyona geçeceğiz. Bu nedenle 10 Mayıs'ta 1 Visual Studio Professional bulut aboneliği daha satın aldıysanız kabaca 0,677 birim (31 günlük Mayıs ayında kalan 21 gün) faturalandıracağız.
+      Daha sonra ücretli miktarı artırdığınızda, geçerli ay içindeki kalan günleri kapsayacak şekilde artan birimleri de eşit bir şekilde çıkardık. 10 mayıs 'ta 1 daha fazla Visual Studio Professional aylık bulut aboneliği satın aldıysanız, kabaca 0,677 birim faturalandırırız (mayıs ayının 31 gün içinde kalan 21 gün).
   - question: >
       Yıllık bulut aboneliği ücretleri nasıl işlenir?
     answer: >
-      Her satın almada hemen satın alınan miktarın tamamını faturalandırın. Ücretler yıla yayılmaz ve bir proratasyon yoktur. Yıllık bulut aboneliklerini yılın farklı zamanlarında satın alırsanız abonelikleri farklı aylarda yenilersiniz. Microsoft toplu lisans sözleşmesi satın almada olduğu gibi, müşterinin yıllık bulut aboneliklerinin hepsini ortak olarak kabul etmek mümkün değildir.
+      Her satınalmada, hemen satın alınan miktarın tamamını faturalandırırız. Ücretler yıla yayılmış değildir ve eşit değildir. Yıllık bulut aboneliklerini yılda farklı zamanlarda satın alırsanız farklı aylarda aboneliklerin yenilenmesi gerekir. Müşterinin yıllık bulut aboneliklerinin tümünü Microsoft toplu lisanslama sözleşmesi satın alma ile yaygın olarak sunmuyoruz.
   - question: >
       İptaller nasıl çalışır?
     answer: >
@@ -88,9 +88,9 @@ sections:
 
       Yıllık bulut aboneliği için, ilk satın almayı izleyen 12 aydan sonraki veya son yıllık yenileme ücretinin ödenmesini izleyen 12 aydan sonraki ayın ilk günü geçerlilik kazanır. Örneğin Visual Studio Professional yıllık bulut aboneliğini 3 Ocak 2018’de satın aldıysanız, abonelik bir yıl için daha otomatik olarak yenilendiği 1 Şubat 2019’da kadar etkin kalır. O tarihten 1 Şubat 2020’ye kadar herhangi bir anda iptal edersiniz, 1 Şubat 2020’de aboneliğin süresi dolacaktır. Yıllık bulut aboneliklerinde abonelik yılı dolmadan önce iptal etmek indirime hak kazandırmaz.
   - question: >
-      Abonelikler için ne tür toplu indirimler Visual Studio kullanılabilir?
+      Visual Studio abonelikler için ne tür bir birim indirimi mevcuttur?
     answer: >
-      Her abonelik türü içindeki 6. ve sonraki tüm aboneliklerde %5 *indirim* elde edebilirsiniz:
+      Her bir abonelik *türü içinde* 6. ve sonraki tüm abonelikler için %5 indirim elde edersiniz:
 
 
       * Visual Studio Professional aylık
@@ -102,39 +102,39 @@ sections:
       * Visual Studio Enterprise yıllık
 
 
-      Örneğin, 6 Visual Studio Professional aylık abonelik ve 5 Visual Studio Enterprise aylık abonelik satın alırsanız, normal fiyatı 5 Professional'da öder, 6. Professional'da %5 indirim alır ve 5 Enterprise aboneliğin tamamda normal fiyat ödersiniz.
+      örneğin, 6 Visual Studio Professional aylık abonelik ve 5 Visual Studio Enterprise aylık abonelik satın aldıysanız, Professional 5 ' teki normal fiyatı ödeyin, 6. Professional oranında %5 indirim elde edersiniz ve tüm 5 Enterprise aboneliklerde normal fiyat ödetireceksiniz.
 
 
-      Ayrıca indirim yalnızca belirli bir aylık faturalama dönemindeki ücretler için geçerlidir. Bu nedenle bir ay içinde 5 Visual Studio Professional abonelik satın alıp sonraki ay 5 abonelik daha satın alırsanız, 10 aboneliğin tamamlarında normal fiyatı ödersiniz.
+      Ayrıca, indirim yalnızca belirli bir aylık fatura döneminde ücretler için geçerlidir. bu nedenle, bir ayda 5 Visual Studio Professional yıllık abonelik satın alırsanız ve sonraki ay 5 ' i daha fazla satın alırsanız, tüm 10 aboneliklerde normal fiyata ödeme yaparsınız.
 
 
       > [!NOTE]
 
-      > Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
+      > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)Visual Studio satın alma konusunda farklı seçenekleri araştırmak için yeni müşterilerin ' e gitmesi önerilir.
 - name: Diğer sorular
   questions:
   - question: >
-      Aylık Azure DevTest bireysel kredilerini bulut abonelikleri için daha fazla Visual Studio abone olarak Visual Studio kullanabilir miyim?
+      aylık Azure devtest kredilerini bir Visual Studio abonesi olarak kullanabilir miyim Visual Studio daha fazla bulut aboneliği satın alabilir miyim?
     answer: >
-      Hayır, market satın almaları için aylık [Azure DevTest](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) bireysel kredinizi Visual Studio abone olarak Visual Studio kullanaabilirsiniz. Bulut Visual Studio satın almaları kredi kartınıza faturalandır.
+      hayır, Visual Studio market satın alımlarınızı ödemek için [aylık Azure devtest bireysel kredilerinizi](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) Visual Studio abonesi olarak kullanamazsınız. Visual Studio bulut aboneliği satın alma işlemleri kredi kartınıza faturalandırılır.
 
-      Satın almalar öncesinde harcama [limitini kaldırmanız gerekir.](https://azure.microsoft.com/pricing/spending-limits/)
+      Satın alma işlemleri yapmadan önce [harcama limitini kaldırmanız](https://azure.microsoft.com/pricing/spending-limits/)gerekir.
   - question: >
       Yıllık ve aylık bulut abonelikleri arasındaki fark nedir?
     answer: >
-      Aylık bulut abonelikleri, Visual Studio ve TFS Azure DevOps Services kullanımını içerir. Yıllık bulut aboneliklerinin de buna ek olarak, geliştirme ve test için yükp çalıştıracak Windows ve diğer Microsoft yazılımlarının kullanımı, Azure hizmetleriyle deneme yapmak ve bulutta geliştirme ve test yapmak, eğitim, destek ve çok daha fazlası için aylık Azure DevTest bireysel kredisi dahil olmak üzere abone avantajları da vardır.
+      aylık bulut abonelikleri, Azure DevOps Services ve TFS 'nin Visual Studio ayrıca kullanımını içerir. yıllık bulut abonelikleri buna da sahiptir, ancak geliştirme ve test için yüklemek ve çalıştırmak üzere Windows ve diğer Microsoft yazılımlarının kullanımı dahil olmak üzere abone avantajlarının yanı sıra azure hizmetleri 'ni denemek ve bulut, eğitim, destek ve çok daha fazlasıyla geliştirme ve test işlemleri yapmak için kullanabileceğiniz aylık bir azure devtest kredisi içerir.
 
-      [Bulut aboneliği avantajlarını ve fiyatlandırmayı karşılaştırma](https://visualstudio.microsoft.com/vs/pricing/)
+      [Bulut aboneliği avantajlarını ve fiyatlandırmasını karşılaştırın](https://visualstudio.microsoft.com/vs/pricing/)
   - question: >
-      Bulut aboneliği satın Visual Studio yeni sürümler Visual Studio miyim?
+      Visual Studio bulut aboneliği satın aldığımda Visual Studio yeni sürümlerini aldım?
     answer: >
-      Evet. Yeni sürümler yayımlana kadar bunları indirip çalıştırebilirsiniz. Ayrıca önceki sürümleri de çalıştırmaya devam edersiniz.
+      Evet. Yeni sürümler yayınlanma sırasında onları indirebilir ve çalıştırabilirsiniz. Ayrıca önceki sürümleri de çalıştırmaya devam edebilirsiniz.
   - question: >
-      Yazılım satıcımdan Visual Studio bulut abonelikleri satın alabilir miyim?
+      yazılım satıcımda Visual Studio bulut abonelikleri satın alabilir miyim?
     answer: >
-      Evet, kurumsal bayiniz Bulut Çözümü Sağlayıcısı (CSP) programına katabilirsiniz. Yalnızca sorun.
+      evet, satıcınız Bulut Çözümü Sağlayıcısı (CSP) programına katılıyorsa, bunu yapabilirsiniz. Yalnızca sorun.
   - question: >
-      Azure faturaları hakkında nereden bilgi bulamıyorum?
+      Azure faturalarıyla ilgili bilgileri nereden bulabilirim?
     answer: >
-      Azure [belgelerinde Azure faturanızı](https://docs.microsoft.com/azure/cost-management-billing/understand/understand-invoice) anlama [makalesine göz atabilirsiniz.](/azure/)
-additionalContent: "\n## <a name=\"related-resources\"></a>İlgili kaynaklar          \n   - [Visual Studio Abonelikler Yönetim portalı](https://manage.visualstudio.com/)\n   - [VISUAL STUDIO için bulut aboneliği satın alma](vscloud-csp.md)\n   - Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama konusunda yardım için bkz. Visual Studio [Abonelikler desteği.](https://aka.ms/vssubscriberhelp)\n        \n## <a name=\"see-also\"></a>Ayrıca bkz.\n   - [Visual Studio belgeleri](/visualstudio/)\n   - [Azure DevOps belgeleri](/azure/devops/)\n   - [Azure belgeleri](/azure/)\n   - [Microsoft 365 belgeleri](/microsoft-365/)\n        \n## <a name=\"next-steps\"></a>Sonraki adımlar\n   Şimdi bulut abonelikleri satın alın\n   - [Visual Studio Professional aylık](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-monthly)\n   - [Visual Studio Enterprise aylık](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-monthly)"
+      [Azure belgelerindeki](/azure/) [Azure Faturanızı Anlama](https://docs.microsoft.com/azure/cost-management-billing/understand/understand-invoice) makalesini inceleyin.
+additionalContent: "\n## <a name=\"related-resources\"></a>İlgili kaynaklar          \n   - [Visual Studio Abonelikler Yönetici portalı](https://manage.visualstudio.com/)\n   - [csp 'ler için Visual Studio bulut aboneliği satın alma](vscloud-csp.md)\n   - Visual Studio abonelikleriyle ilgili satış, abonelik, hesap ve faturalandırma konusunda yardım için bkz. Visual Studio [abonelikleri desteği](https://aka.ms/vssubscriberhelp).\n        \n## <a name=\"see-also\"></a>Ayrıca bkz.\n   - [Visual Studio belgeleri](/visualstudio/)\n   - [Azure DevOps belgeleri](/azure/devops/)\n   - [Azure belgeleri](/azure/)\n   - [Microsoft 365 belgeleri](/microsoft-365/)\n        \n## <a name=\"next-steps\"></a>Sonraki adımlar\n   Bulut aboneliklerini şimdi satın alın\n   - [Visual Studio Professional aylık](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-monthly)\n   - [Visual Studio Enterprise aylık](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-monthly)"

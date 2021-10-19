@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
-ms.date: 03/17/2021
+ms.date: 10/18/2021
 ms.topic: how-to
 description: Seçili aboneliklere dahil olan DataCamp eğitim aboneliği hakkında Visual Studio öğrenin.
-ms.openlocfilehash: bfa26eaeb26df833953430a3514cf77e2e7f3e3d
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 94861eedcc0db99cf69d9ca44926ce036567398e
+ms.sourcegitcommit: 6c847aedf0f943e253a4c2f0e4b516b953168bc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128375714"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "130152104"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde DataCamp eğitim avantajı
 Uygun abonelikler Visual Studio DataCamp aboneliklerini içerir.  DataCamp ile ihtiyacınız olan tüm veri bilimi becerilerini tarayıcınızın rahat bir şekilde öğrenebilirsiniz. Ne zaman ve ne öğreneceğinizi seçebilirsiniz. Yüklenmek için yazılım olmadığı ve özel donanım gereksinimleri olmadığı için veri bilimi her zamankinden daha kolaydır.
@@ -20,7 +20,7 @@ Uygun abonelikler Visual Studio DataCamp aboneliklerini içerir.  DataCamp ile i
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
-2. "Professional Geliştirme" kategorisindeki DataCamp avantajı kutucuğunu bulun ve Etkinleştir'e **tıklayın.**
+2. "Professional Development" kategorisinde DataCamp avantajı kutucuğunu bulun ve Etkinleştir'e **tıklayın.**
    > [!div class="mx-imgBorder"]
    > ![DataCamp Avantajı Kutucuğu](_img/vs-datacamp/vs-datacamp-tile-2.png "Başlamak için 'Etkinleştir'e tıklayın.")
 
@@ -77,11 +77,11 @@ Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://
 
 ## <a name="support-resources"></a>Destek kaynakları
 - DataCamp kullanımıyla ilgili yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
-  - [DataCamp Community,](https://www.datacamp.com/community/tutorials)forumları ve öğreticileri içerir.
+  - [DataCamp Community](https://www.datacamp.com/community/tutorials)forumları ve öğreticileri içeren bir uygulamadır.
   - [DataCamp Yardım Merkezi,](https://support.datacamp.com/hc)burada arama destek konuları ve kullanıcı soruları isteğine bakın.
   - [Destek isteği gönderme](https://support.datacamp.com/hc/requests/new)
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için, [Visual Studio abonelik desteği ile iletişim kurun.](https://my.visualstudio.com/gethelp)
-- IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için destek [Visual Studio ile iletişime geçin.](https://my.visualstudio.com/gethelp)
+- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

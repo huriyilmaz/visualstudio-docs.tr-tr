@@ -1,104 +1,104 @@
 ---
-title: linkedın Learning Visual Studio aboneliklerinde avantaj | Microsoft Docs
+title: Abonelikler Learning LinkedIn Visual Studio avantajı | Microsoft Docs
 author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 03/17/2021
+ms.date: 10/18/2021
 ms.topic: how-to
-description: seçili Visual Studio aboneliklerine dahil olan linkedın Premium aboneliğinin bir parçası olarak dahil olan linkedın Learning avantajı hakkında bilgi edinin.
-ms.openlocfilehash: c56b00e078e014060570fcf4ab3f06220ab889c2
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+description: Seçili aboneliklere dahil Learning LinkedIn Premium linkedIn Visual Studio hakkında bilgi edinin.
+ms.openlocfilehash: 335a8c3b1014d1d13816d39b4fbcbc015e889e78
+ms.sourcegitcommit: 6c847aedf0f943e253a4c2f0e4b516b953168bc7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128375696"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "130151875"
 ---
-# <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde linkedın Learning avantajı
+# <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Aboneliklerde LinkedIn Learning avantajı Visual Studio avantajı
+Kariyerinizi geliştirmek için ihtiyacınız olan insanlara, içgörülere ve becerilere erişimle LinkedIn'in gücünü ortaya açın.  Sektör uzmanlarından en çok talep alan işletme, teknoloji ve yaratıcı becerileri öğrenin.
 
-İçgörülerinizi ilerletmek için ihtiyaç duyduğunuz kişilere, öngörülere ve yeteneklere erişimi olan LinkedIn 'in gücünden yararlanın.  Endüstri uzmanlarından en çok talep edilen iş, teknoloji ve yaratıcı becerileri öğrenin.
+Seçilen Visual Studio, LinkedIn aboneliğini içeren LinkedIn Premium aboneliğini Learning.  Premium aboneliğinizin uzunluğu, sahip Visual Studio türüne bağlıdır.
 
-seçili Visual Studio abonelikleri, linkedın Learning dahil olmak üzere linkedın Premium aboneliğini içerir.  Premium aboneliğinizin uzunluğu sahip olduğunuz Visual Studio aboneliğinin türüne bağlıdır.
-linkedın Learning avantajdan yararlanmak için bir linkedın hesabınız olması gerekir.  henüz bir hesabınız yoksa, Premium aboneliğinizi etkinleştirmeden önce bir tane oluşturma şansınız olur.
+LinkedIn hizmet avantajından yararlanmak için LinkedIn hesabınız Learning gerekir.  Henüz bir aboneliğiniz yoksa, Premium aboneliğinizi etkinleştirmeden önce bir tane oluşturabilirsiniz.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
-linkedın Premium aboneliğinizi ve linkedın Learning avantajını etkinleştirmek için:
+LinkedIn aboneliğinizi ve LinkedIn Premium avantajını etkinleştirmek Learning için:
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
-2. eğitim kategorisinde linkedın Learning kutucuğunu bulun ve **kodu al** bağlantısına tıklayın.
+2. Eğitim kategorisinde LinkedIn Learning kutucuğunu bulun ve Kod al **bağlantısına** tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![linkedın Learning avantajı kutucuğu](_img/vs-linkedin/vs-linkedin-6-month-tile.png "Kodunuzu talep etmek ve çalışmaya başlamak için 'Kod al'a tıklayın.")
+   > ![LinkedIn Learning Avantajı Kutucuğu](_img/vs-linkedin/vs-linkedin-6-month-tile.png "Kodunuzu talep etmek ve başlamak için ' kodu al ' seçeneğine tıklayın.")
 
-3. zaten bir linkedın hesabınız varsa ve otomatik olarak oturum açtıysanız, linkedın Learning avantajı etkinleştirme sayfasına hemen yönlendirilirsiniz.  LinkedIn hesabınız varsa ancak otomatik olarak oturum açmadıysanız, Kullanıcı adınızı ve parolanızı girip **oturum aç**' a tıklayın.  Teklifinizi etkinleştirmek için lütfen [Bu adıma](#activate-your-offer) atlayın.
+3. Zaten bir LinkedIn hesabınız varsa ve otomatik olarak oturum asanız, linkedIn Learning etkinleştirme sayfasına alınırsınız.  LinkedIn hesabınız varsa ancak otomatik olarak oturum açmadıysanız kullanıcı adınızı ve parolanızı girin ve ardından Oturum **açın'a tıklayın.**  Teklifinizi etkinleştirmek [için lütfen](#activate-your-offer) bu adıma geçin.
 
 ### <a name="create-a-linkedin-account"></a>LinkedIn hesabı oluşturma
-4. Henüz bir LinkedIn hesabınız yoksa **Şimdi Birleştir**' e tıklayın.
+4. LinkedIn hesabınız yoksa Şimdi katıl'a **tıklayın.**
 
-5. Kişisel bilgilerinizi girin, bir Kullanıcı adı ve parola seçin ve **Şimdi Birleştir**' e tıklayın.
+5. Kişisel bilgilerinizi girin, kullanıcı adı ve parola seçin ve Şimdi **katıl'a tıklayın.**
 
-6. Ülkenizi/bölgenizi ve ZIP kodunuzu belirtip **İleri**' ye tıklayın.
+6. Ülkenizi/bölgenizi ve ZIP kodunuzu belirtin ve ardından Sonraki'ye **tıklayın.**
 
-7. Bundan sonra, profiliniz için kendinize ilişkin bazı bilgiler sağlarsınız.  Öğrenci olup olmadığını ve en son iş unvanlarınızı, şirketinizi ve sektörünü sağlayıp sağlamadığınızı belirtin.
+7. Ardından profiliniz için kendinizle ilgili bazı bilgiler sağlayacaksınız.  Öğrenci olup olmadığınızı belirtip en son iş unvanınızı, şirketinizi ve sektörlerinizi sağlar.
 
-8. Bu adımda, ilgilendiğiniz alanları belirlemek için bir şansına sahip olacaksınız.  Hesap oluşturma işlemini hızlandırmak için, **henüz emin değil ' e tıklayın.  Ben açık!**  (İlgilendiğiniz alanları daha sonra belirleyebilirsiniz.)
+8. Bu adımda, ilgi alanları tanımlama fırsatına sahip oluruz.  Hesap oluşturma işlemini hızlandırmak için Henüz emin **değilim'e tıklayın.  Açık!**  (İlgi alanlarını daha sonra tanımlayabilirsiniz.)
 
-9. E-posta adresinizi sağladığınızda, onay kodu içeren bir ileti gönderdiniz.  İleti "LinkedIn Iletileri" dir.  Bunu gelen kutunuzda bulamazsanız lütfen gereksiz posta klasörlerinizi kontrol edin.  İletiden kodu girip **Doğrula**' ya tıklayın.
+9. E-posta adresinizi sağladınız, size onay kodu içeren bir ileti gönderildi.  İleti "Linkedin İletileri" içindedir.  Bunu gelen kutunuzda bulamazsanız, lütfen gereksiz posta klasörlerinizi kontrol edin.  İletiden kodu girin ve Doğrula'ya **tıklayın.**
 
-10. Daha önce girdiğiniz e-posta hesabından kişilerinizi içeri aktarmak isterseniz, bunu şimdi yapabilirsiniz.  Aksi halde **Atla**' ya tıklayın. (Bu adımı atlamayı seçerseniz, seçiminizi onaylamanız istenir.  **Evet**' e tıklayın.)
+10. Kişilerinizi daha önce girdiğiniz e-posta hesabından içeri aktarabilirsiniz.  Aksi takdirde Atla'ya **tıklayın.** (Bu adımı atlamayı seçerseniz, seçiminizi onaylamanız istenecek.  **Evet'e** tıklayın.)
 
-11. İş uyarıları, bölgenizdeki sizin için uygun olabilecek işlerin size bildirilmesini sağlar.  Şimdi bir iş uyarısı ayarlamayı seçebilir veya hesabınızı oluşturmaya devam etmek için bu adımı atlayabilirsiniz.
+11. İş uyarıları, bölgenize uygun olan işler hakkında bilgi alamanıza olanak sağlar.  Şimdi bir iş uyarısı ayarlamayı seçebilir veya hesabı oluşturmaya devam etmek için bu adımı atlayabilirsiniz.
 
-12. Şimdiye kadar sağladığınız tercihleri ve kişisel bilgileri temel alarak ağınızı oluşturmaya başlamak için önerilen bağlantıların bir seçimini görürsünüz.  Bağlantı eklemeyi seçebilir veya bu adımı atlayabilirsiniz.
+12. Şu ana kadar sağladığınız tercihlere ve kişisel bilgilere bağlı olarak, anızı oluşturmaya başlamak için önerilen bağlantılardan bir seçimle karşınıza çıktı.  Bağlantı ekleyebilir veya bu adımı atlayabilirsiniz.
 
-13. profilinize fotoğraf eklemek için **Upload fotoğraf**' a tıklayın.  Aksi takdirde, bu adımı atlayabilirsiniz.  (Daha sonra her zaman fotoğraf ekleyebilirsiniz.)
+13. Profilinize fotoğraf eklemek için Upload **tıklayın.**  Aksi takdirde bu adımı atlayabilirsiniz.  (Daha sonra istediğiniz zaman fotoğraf abilirsiniz.)
 
-14. Her yerden ağınıza erişebilmek için LinkedIn uygulamasını telefonunuza indirebilirsiniz.  Telefonunuza bir bağlantı gönderebilir veya doğrudan uygulama mağazasından veya Google Play indirebilirsiniz.  Şimdi bu adımı atlayıp uygulamayı daha sonra indirmek için **İleri** ' ye tıklayabilirsiniz.
+14. Ağınıza her yerden erişmek için LinkedIn Uygulamasını telefonunuza indirebilirsiniz.  Telefonunuza bir bağlantı gönderebilir veya doğrudan App Store veya Google Play.  Bu adımı şimdi atlamak **ve** uygulamayı daha sonra indirmek için İleri'ye de tıklayabilirsiniz.
 
-### <a name="activate-your-offer"></a>Teklifinizi etkinleştirin
-15. linkedın hesabınızda oturum açmış olduğunuza veya yeni bir tane oluşturduğumıza göre Premium aboneliğinizi etkinleştirmeye ve linkedın Learning yararlanmaya başlamaya hazırsınız.  **Teklifinizi etkinleştir**' e tıklayın.
+### <a name="activate-your-offer"></a>Teklifinizi etkinleştirme
+15. LinkedIn hesabınızla oturum açın veya yeni bir tane oluşturduğunuza göre, Premium aboneliğinizi etkinleştirmeye ve LinkedIn aboneliğinizin keyfini Learning.  Teklifinizi **etkinleştir'e tıklayın.**
    > [!div class="mx-imgBorder"]
-   > ![linkedın Learning etkinleştir](_img/vs-linkedin/vs-linkedin-Activate1.png "Öğrenmeye başlamak için 'Teklifinizi etkinleştirin'e tıklayın.")
+   > ![LinkedIn Learning Etkinleştirme](_img/vs-linkedin/vs-linkedin-Activate1.png "Öğrenmeye başlamak için ' teklifinizi etkinleştirin ' seçeneğine tıklayın.")
 
-16. İlginizi çeken becerileri keşfetmeye başlayabilirsiniz.  Öneriler listesinden seçim yapın, diğer becerileri arayın veya yetenekler ' i seçmeden devam etmek için **Atla** ' yı tıklatın.
+16. İlginizi alan becerileri keşfetmeye başlayabilirsiniz.  Öneriler listesinden seçim yapmak, diğer becerileri aramak veya Becerileri seçmeden devam etmek **için** Atla'ya tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![linkedın Learning becerileri](_img/vs-linkedin/vs-linkedin-skills.png "Keşfetmek istediğiniz becerileri seçin.")
+   > ![LinkedIn Learning Becerileri](_img/vs-linkedin/vs-linkedin-skills.png "Araştırmak istediğiniz becerileri seçin.")
 
-17. Premium abonelik teklifinizi başarıyla etkinleştirdiniz ve bundan böyle Premium linkedın Learning ve tüm diğer avantajları kullanmaya başlayabilirsiniz!
+17. Premium aboneliği teklifinizi başarıyla etkinleştirdikten sonra LinkedIn Learning'ı ve diğer tüm avantajları Premium!
    > [!div class="mx-imgBorder"]
-   > ![linkedın Learning giriş](_img/vs-linkedin/vs-linkedin-learning-home.png "LinkedIn Premium LinkedIn Learning!")
+   > ![LinkedIn Learning Giriş](_img/vs-linkedin/vs-linkedin-learning-home.png "linkedın Learning ile linkedın Premium hoş geldiniz!")
 
 > [!NOTE]
-> bu teklif Visual Studio Dev Essentials üyeliklerine dahil değildir.
+> Bu teklif, herhangi bir Visual Studio Dev Essentials dahil değildir.
 
-## <a name="eligibility"></a>Önceliği
+## <a name="eligibility"></a>Uygunluk
 
-| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
+| Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standart)   | VL, Azure, perakende<sup>1</sup> | 6 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
-| GitHub Enterprise aboneliği Visual Studio Enterprise   | VL | 6 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
-| Visual Studio Professional (standart) | VL, Azure, perakende                                       | 3 ay                                                            |Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
-| GitHub Enterprise aboneliği Visual Studio Professional | VL | 3 ay      | Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
-| Visual Studio Test Professional (standart)                         | VL, perakende                                              | Kullanılamaz                                            |  NA         |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              | NA         |
+| Visual Studio Enterprise (Standart)   | VL, Azure, Perakende<sup>1</sup> | 6 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| Visual Studio Enterprise ile abonelik GitHub Enterprise   | VL | 6 ay       |  Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir          |
+| Visual Studio Professional (Standart) | VL, Azure, Perakende                                       | 3 ay                                                            |Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
+| Visual Studio Professional ile abonelik GitHub Enterprise | VL | 3 ay      | Hayır.  Yalnızca yeni aboneler tarafından kullanılabilir         |
+| Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | Kullanılamaz                                            |  NA         |
+| MSDN Platformları (Standart)                                          | VL, Perakende                                              | Kullanılamaz                                              | NA         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 
-<sup>1</sup>*dışları: Visual Studio Dev Essentials, nfr, nfr Basic, Visual Studio sektör ortağı, Microsoft İş Ortağı Ağı (mpn), fte, mct Software & Services geliştirici, BizSpark, Imagine, en değerli Professional (MVP), bölgesel yönetmen (RD).  MCT Software & Hizmetleri.*  
+<sup>1</sup>*Dışlar: Visual Studio Dev Essentials, NFR, NFR Basic, Visual Studio Industry Partner, Microsoft İş Ortağı Ağı (MPN), FTE, MCT Software & Services Developer, BizSpark, Imagine, Most Valuable Professional (MVP), Regional Director (RD).  MCT Software & Services.*  
 
 > [!NOTE]
-> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)Visual Studio satın alma konusunda farklı seçenekleri araştırmak için yeni müşterilerin ' e gitmesi önerilir.
+> Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
 
-Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)e-posta adresinize atanan tüm abonelikleri görmek için Bağlan. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) e-posta adresinize atanan tüm abonelikleri görmek için adresine tıklayın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla aboneliğiniz olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-### <a name="q-if-i-renew-my-subscription-does-my-linkedin-learning-benefit-also-renew"></a>S: Aboneliğimi yenilerse LinkedIn aboneliğim Learning da yenilenecek mi?
-A: Hayır, LinkedIn Learning teklifi yalnızca yeni aboneler tarafından kullanılabilir.
+### <a name="q-if-i-renew-my-subscription-does-my-linkedin-learning-benefit-also-renew"></a>s: aboneliğimi yenilediğimde linkedın Learning avantajı da yenilensin mi?
+y: hayır, linkedın Learning teklifi yalnızca yeni aboneler tarafından kullanılabilir.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- LinkedIn ile ilgili yardıma ihtiyacınız Learning?  Aşağıdaki kaynakları inceleyin:
-  - [LinkedIn'i Learning.](https://www.linkedin.com/help/learning)
-  - LinkedIn hakkında hesap ve [profil](https://www.linkedin.com/help/linkedin) oluşturma ve ağın bakımını sağlama gibi genel sorularla ilgili yardım.
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için [abonelikler Visual Studio ile iletişim kurun.](https://my.visualstudio.com/gethelp)
-- IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- LinkedIn Learning yardım mı gerekiyor?  Aşağıdaki kaynakları inceleyin:
+  - [Linkedın Learning kullanmayla](https://www.linkedin.com/help/learning)ilgili yardım.
+  - Hesaplar ve profiller oluşturma ve ağınızı sürdürme gibi [LinkedIn](https://www.linkedin.com/help/linkedin) hakkında genel sorularla yardım edin.
+- Visual Studio abonelikleriyle ilgili satış, abonelik, hesap ve faturalandırma konusunda yardım için, [Visual Studio abonelik desteğiyle](https://my.visualstudio.com/gethelp)iletişim kurun.
+- Visual Studio ıde, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -107,6 +107,6 @@ A: Hayır, LinkedIn Learning teklifi yalnızca yeni aboneler tarafından kullan�
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Aboneliğinize dahil edilen diğer harika avantajlara göz atabilirsiniz. ziyaret [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) edin.
+Aboneliğinize dahil olan harika avantajların geri kalanında göz atın. Adresini ziyaret edin [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
 
-Aboneliğiniz ile birlikte gelen Azure DevTest bireysel kredi avantajını henüz etkinleştirildikten sonra Azure aboneliğinizi ayarlamak ve Azure DevTest bireysel kredinizi kullanmak için Araçlar kategorisindeki Azure kutucuğuna [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) tıklayın.
+Aboneliğinizle birlikte gelen Azure DevTest bireysel kredi avantajını henüz etkinleştirmediyseniz, [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) Azure aboneliğinizi kurmak ve Azure DevTest bireysel kredilerinizi kullanmak Için Araçlar kategorisindeki Azure kutucuğuna gidin ve tıklayın.
