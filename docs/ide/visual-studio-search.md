@@ -1,6 +1,6 @@
 ---
 title: Visual Studio Aramasını kullanma
-description: Ayarları, menüleri Visual Studio kodu bulmak için arama yapmayı öğrenin.
+description: ayarları, menüleri ve kodu bulmak için Visual Studio aramasını kullanmayı öğrenin.
 ms.date: 10/08/2020
 ms.topic: how-to
 helpviewer_keywords:
@@ -20,52 +20,60 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 1299810fa015f9e54d418209e13d366ff47bfb33
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: be24337741ef3efede47b76fd1bb3a618ce358c1
+ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126628472"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "130211499"
 ---
-# <a name="use-visual-studio-search"></a>Arama Visual Studio kullanma
+# <a name="use-visual-studio-search"></a>Visual Studio arama kullan
 
-Tümleşik Visual Studio ortamı (IDE) birçok menüye, seçeneke ve özeliklere sahiptir ve bunu hatırlamak zor olabilir. Tek Visual Studio özelliği, geliştiricilerin kodunuzu ararken IDE menülerini ve seçeneklerini bulmalarına yardımcı olan tek bir arama kutusudur. Yeni bir geliştirici veya Visual Studio yeniyseniz de, bu özellik IDE özellikleri ve kodunuz arasında arama yapmak için hızlı bir yol sunar.
+Visual Studio tümleşik geliştirme ortamı (ıde), anımsanması zor olabilecek birçok menü, seçenek ve özelliğe sahiptir. Visual Studio arama özelliği, geliştiricilerin ıde menülerini ve seçeneklerini bulmasına yardımcı olan tek bir arama kutusudur ve ayrıca kodunuzda arama yapmanıza yardımcı olur. Visual Studio veya deneyimli bir geliştirici için yeni bir özelliktir, bu özellik ıde özellikleri ve kodunuz arasında arama yapmanın hızlı bir yolunu sunar.
 
-Arama kutusuna **erişmek için Ctrl** Q klavye kısayolunu kullanın veya varsayılan Visual Studio menü çubuğunun yanında bulunan Arama giriş +  kutusuna tıklayın:
+ + arama kutusuna erişmek için Ctrl **Q** klavye kısayolunu kullanın veya varsayılan olarak menü çubuğunun yanında bulunan Visual Studio arama giriş kutusuna tıklayın:
 
 :::image type="content" source="media/visual-studio-search-cropped.png" alt-text="Visual Studio arama kutusu" lightbox="media/visual-studio-search.png":::
 
 > [!NOTE]
-> Bu arama tarafından Visual Studio komutu şu şekildedir ve bu özelliğin hızlı arama veya hızlı başlatma `Window.QuickLaunch` olarak anılan bir özellik olduğunu görebilirsiniz.
+> Visual Studio arama tarafından yürütülen komut, `Window.QuickLaunch` bu özelliğin hızlı arama veya hızlı başlatma olarak adlandırılmasından daha fazla bilgi alabilirsiniz.
 
-Dosyalarda Bul veya Arama Çözüm Gezgini gibi diğer arama özelliklerinden Visual Studio IDE özellikleri, menü seçenekleri, dosya adları ve daha fazlasını içerir. Aşağıdaki bölümlerde, aramanın buluna Visual Studio sonuçları açıklanmaktadır.
+dosyalarda bul veya arama Çözüm Gezgini gibi diğer arama özelliklerinden farklı olarak, Visual Studio sonuçlarında arama yapın ıde özellikleri, menü seçenekleri, dosya adları ve daha fazlasını içerir. aşağıdaki bölümler, Visual Studio aramanın bulabileceği farklı sonuç türlerini tartışır.
 
-## <a name="search-menus-options-and-windows"></a>Arama menüleri, seçenekler ve pencereler
+## <a name="search-menus-options-and-windows"></a>Menülerde, seçeneklerde ve Windows 'ta arama yapın
 
-Ayarları, seçenekleri Visual Studio benzer yapılandırma öğelerini bulmak için Visual Studio arama kutusunu kullanabilirsiniz. Örneğin, aşağıdaki ekran *görüntüsünde gösterildiği* gibi, değişiklik temasını hızlı bir şekilde bulmak ve Visual Studio iletişim kutusunu açmak için değişiklik temasını arayabilirsiniz:
+ayarları, seçenekleri ve benzer yapılandırma öğelerini bulmak için Visual Studio arama kutusunu kullanabilirsiniz. örneğin, aşağıdaki ekran görüntüsünde gösterildiği gibi Visual Studio color temasını değiştirmenize olanak sağlayan iletişim kutusunu hızlıca bulup açmak için *değişiklik temasını* arayın:
 
-:::image type="content" source="media/visual-studio-search-options.png" alt-text="Arama Visual Studio ayarları ve seçenekleri":::
+:::image type="content" source="media/visual-studio-search-options.png" alt-text="arama Visual Studio ayarları ve seçenekleri":::
 
 > [!TIP]
-> Çoğu durumda Visual Studio arama sonuçların menü, kısayol tuşları ve her bir öğenin konumunu size anımsatır.
+> çoğu durumda Visual Studio arama, sonuçlarda her öğenin menü, kısayol tuşu ve konumunu da hatırlatacaktır.
 
-Menü öğelerini ve Visual Studio için arama kutusunu kullanabilirsiniz. Örneğin, Clean Solution *komutunu hızla bulmak* ve yürütmek için clean sol araması gerçekleştirin. Arama sonuçları, aşağıdaki ekran görüntüsünde gösterildiği gibi menülerde bu komutun nerede bulunarak ilgili bir anımsatıcı da sunar:
+menü öğelerini ve komutları bulmak için Visual Studio arama kutusunu kullanabilirsiniz. Örneğin, Clean Solution komutunu hızlıca bulup yürütmek için *Clean Nuevo* araması yapın. Arama sonuçları Ayrıca, aşağıdaki ekran görüntüsünde gösterildiği gibi menülerde bu komutun nerede bulunacağı hakkında bir anımsatıcı sunar:
 
-:::image type="content" source="media/visual-studio-search-menu.png" alt-text="Menü Visual Studio komutlarını arama":::
+:::image type="content" source="media/visual-studio-search-menu.png" alt-text="Visual Studio menü öğelerini ve komutları arayın":::
 
-Son olarak yanlışlıkla kapatmış olduğunuz pencereleri veya panelleri arayabilirsiniz. Örneğin, test araması *yapmak için Test* Gezgini penceresini bulun ve açın:
+Son olarak, yanlışlıkla kapattığınız Windows veya panellerde arama yapabilirsiniz. Örneğin, test Gezgini penceresini bulmak ve açmak için *Test* araması yapın:
 
-:::image type="content" source="media/visual-studio-search-window.png" alt-text="Pencerelerde Visual Studio panellerde arama":::
+:::image type="content" source="media/visual-studio-search-window.png" alt-text="Visual Studio pencereleri ve panelleri arayın":::
 
-## <a name="search-files-and-code"></a>Dosya ve kod arama
+## <a name="search-files-and-code"></a>Dosya ve kod ara
 
-Visual Studio ayrıca çözüm öğelerinizi dosya adı, kod, yöntem ve diğer eşleşmeler için arar. Aşağıdaki ekran görüntüsünde *markdown* araması çözüm içinde MarkdownMetaExtractor.cs dosyasını, sınıfını ve `MarkdownMetaExtractor` iki yöntemi buldu:
+Visual Studio arama, çözüm öğelerinizi dosya adı, kod, yöntem ve diğer eşleşmeler için de arar. Aşağıdaki ekran görüntüsünde *markaşağı* araması, MarkdownMetaExtractor. cs dosyasını, `MarkdownMetaExtractor` sınıfını ve çözüm içinde iki yöntemi buldu:
 
-:::image type="content" source="media/visual-studio-search-files.png" alt-text="Dosyalarda arama Visual Studio arama":::
+:::image type="content" source="media/visual-studio-search-files.png" alt-text="Visual Studio aramayla dosya ara":::
 
-Ayrıca bir "büyük/küçük harf" araması da yapmak için. Aşağıdaki ekran görüntüsünde, *FSS* araması F eski **bir Size****S** canner dosyası, sınıfı ve yöntemi buldu:
+"Camel Case" araması da yapabilirsiniz. Aşağıdaki ekran görüntüsünde, *FSS* araması bir **F** daha eski **s****canner** dosyası, sınıfı ve yöntemi buldu:
 
-:::image type="content" source="media/visual-studio-search-camel.png" alt-text="Büyük arama ile Visual Studio arama":::
+:::image type="content" source="media/visual-studio-search-camel.png" alt-text="Visual Studio arama ile camel hump araması":::
+
+## <a name="keyboard-shortcuts"></a>Klavye kısayolları
+
+arama sonuçları, **tüm**, **kod**, **Visual Studio** için sekmeler içerir. Farklı türlerde aramalar için aşağıdaki klavye kısayollarını kullanarak zamandan tasarruf edebilirsiniz:
+
+- **CTRL** + **S**,  + dosyalar, türler ve Üyeler için CTRL **T**
+- **CTRL** +   +  Visual Studio menüleri, seçenekleri, bileşenleri ve şablonları için soru-cevap
+- **CTRL** + **S**, **CTRL** + **E** , her ikisi için de **Tüm** sekmeye git
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

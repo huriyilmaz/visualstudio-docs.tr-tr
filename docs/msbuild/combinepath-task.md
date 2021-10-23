@@ -1,6 +1,6 @@
 ---
-title: CombinePath Görev | Microsoft Docs
-description: Belirtilen yolları tek bir yolda birleştirmek MSBuild CombinePath görevini nasıl kullanabileceğiniz hakkında bilgi alın.
+title: CombinePath görevi | Microsoft Docs
+description: MSBuild CombinePath görevinin, belirtilen yolları tek bir yolda birleştirmek için nasıl kullanılacağını öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
@@ -19,38 +19,39 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 2461186e9ebe79cbdc1a5677f5fbf85baad11b6a
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: d9466fef40d7b77ff2cd5e58f1fac11ea2207d08
+ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122077666"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "130211980"
 ---
 # <a name="combinepath-task"></a>CombinePath görevi
 
-Belirtilen yolları tek bir yolda birleştirir.
+Belirtilen yolları tek bir yol olarak birleştirir.
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki tabloda CombinePath görevinin [parametreleri açık almaktadır.](../msbuild/combinepath-task.md)
+ Aşağıdaki tabloda [CombinePath görevinin](../msbuild/combinepath-task.md)parametreleri açıklanmaktadır.
 
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`BasePath`|Gerekli `String` parametre.<br /><br /> Diğer yollarla birleştirilen temel yol. Göreli yol, mutlak yol veya boş olabilir.|
-|`Paths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Birleştirilmiş yolu oluşturmak için BasePath ile birleştirilen tek tek yolların listesi. Yollar göreli veya mutlak olabilir.|
-|`CombinedPaths`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Bu görev tarafından oluşturulan birleşik yol.|
+|`BasePath`|Gerekli `String` parametre.<br /><br /> Diğer yollarla birleştirilecek temel yol. Göreli yol, mutlak yol veya boş olabilir.|
+|`Paths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Birleşik yolu oluşturmak için BasePath ile birleştirilecek bağımsız yolların listesi. Yollar göreli veya mutlak olabilir.|
+|`CombinedPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Bu görev tarafından oluşturulan Birleşik yol.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Bu görev, yukarıda listelenen parametrelere ek olarak, sınıfından devralınan parametreleri de <xref:Microsoft.Build.Tasks.TaskExtension> sınıfından <xref:Microsoft.Build.Utilities.Task> devralınır. Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı.](../msbuild/taskextension-base-class.md)
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
- Aşağıdaki örnekte, ile birleşen bir kök yolu ve bir alt klasör listesi birleştirerek özelliğini oluşturmak için kullanarak bir çıkış klasörü `CombinePath` `$(OutputDirectory)` `$(PublishRoot)` `$(ReleaseDirectory)` yapısının nasıl oluşturul `$(LangDirectories)` açıklandı.
+ Aşağıdaki örnek, `CombinePath` `$(OutputDirectory)` ile birleştirilmiş bir kök yolu `$(PublishRoot)` `$(ReleaseDirectory)` ve bir alt klasör listesi birleştirerek özelliği oluşturmak için kullanarak bir çıktı klasörü yapısının nasıl oluşturulacağını gösterir `@(LangDirectories)` .
 
  ```xml
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PublishRoot>C:\Site1\Release</PublishRoot>
+    <PublishRoot>C:\Site1\</PublishRoot>
+    <ReleaseDirectory>Release\</ReleaseDirectory>
   </PropertyGroup>
 
   <ItemGroup>
@@ -58,14 +59,14 @@ Belirtilen yolları tek bir yolda birleştirir.
   </ItemGroup>
 
   <Target Name="CreateOutputDirectories" AfterTargets="Build">
-    <CombinePath BasePath="$(PublishRoot)" Paths="@(LangDirectories)" >
+    <CombinePath BasePath="$(PublishRoot)$(ReleaseDirectory)" Paths="@(LangDirectories)" >
       <Output TaskParameter="CombinedPaths" ItemName="OutputDirectories"/>
     </CombinePath>
     <MakeDir Directories="@(OutputDirectories)" />
   </Target>
 ```
 
-Liste olması için `CombinePath` izin veren tek `Paths` özelliktir; bu durumda çıkış da bir listedir. Bu `$(PublishRoot)` *nedenle, \\ C:\Site1* ise ve Sürüm `$(ReleaseDirectory)` *\\* ise ve `@(LangDirectories)` *en-us \; fr-fr \\* ise, bu örnek klasörleri oluşturur:
+`CombinePath`Bir liste olmasına izin veren tek özellik `Paths` , bu durumda çıktının de bir listesidir. Bu nedenle, `$(PublishRoot)` *\\ C:\site1* ise ve `$(ReleaseDirectory)` *\\ sürümüdür* ve `@(LangDirectories)` *en-US \; fr-fr \\* ise, bu örnekler klasörleri oluşturur:
 
 - C:\Site1\Release\en-us\
 - C:\Site1\Release\fr-fr\

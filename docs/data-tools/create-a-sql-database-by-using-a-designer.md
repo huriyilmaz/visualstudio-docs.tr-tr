@@ -1,7 +1,7 @@
 ---
-title: Veritabanı dosyası oluşturma ve tablo tasarımcısını kullanma
-description: Veritabanına tablo ve yabancı anahtar eklemek için veritabanına tablo ekleme hakkında bilgi Tablo Tasarımcısı öğretici Visual Studio. Ayrıca grafik arabirimi aracılığıyla veri eklemeyi de gösterir.
-ms.date: 09/19/2019
+title: Veritabanı oluşturma ve tablo ekleme
+description: Veritabanına tablo ve yabancı anahtar eklemek için veritabanına tablo ekleme hakkında bilgi Tablo Tasarımcısı Visual Studio. Ayrıca grafik arabirimi aracılığıyla veri eklemeyi de gösterir.
+ms.date: 10/15/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - database tables, creating
@@ -14,20 +14,20 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: cecf47d023b98ce8ad3cf67799e4bdfff66f45fa
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 65ba75b40ca2f82422a520f6082b8a1c04f47d43
+ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631509"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "130212111"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>Veritabanı oluşturma ve veritabanına tablo Visual Studio
 
-LocalDB'Visual Studio yerel veritabanı dosyası oluşturmak ve güncelleştirmek için SQL Server Express kullanabilirsiniz. Veritabanı oluşturmak için transact-SQL deyimlerini SQL Server Nesne Gezgini **araç** penceresinde Visual Studio. Bu konu başlığında, bir *.mdf* dosyası oluşturarak tablo ve anahtar eklemek için Tablo Tasarımcısı.
+LocalDB'Visual Studio yerel veritabanı dosyası oluşturmak ve güncelleştirmek için SQL Server Express kullanabilirsiniz. Veritabanı oluşturmak için, SQL Server Nesne Gezgini araç penceresinde Transact-SQL **deyimlerini** Visual Studio. Bu konu başlığında, bir *.mdf* dosyası oluşturarak tablo ve anahtar eklemek için Tablo Tasarımcısı.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Bu izlenecek yolu tamamlamak için.NET masaüstü geliştirme  ve Veri depolama ile işleme iş yüklerinin Visual Studio.  Bunları yüklemek için, **Visual Studio Yükleyicisi** **ve** değiştirmek istediğiniz uygulamanın sürümünün yanındaki Değiştir (veya Daha  >  Fazla Değiştir) Visual Studio 'yi seçin.
+Bu izlenecek yolu tamamlamak için.NET masaüstü geliştirme  ve Veri depolama ile işleme iş yüklerinin Visual Studio.  Bunları yüklemek için, **Visual Studio Yükleyicisi** ve **değiştirmek** istediğiniz uygulamanın sürümünün yanındaki Değiştir (veya Daha  >  Fazla Değiştir) Visual Studio 'yi seçin.
 
 > [!NOTE]
 > Bu makaledeki yordamlar yalnızca .NET Framework Windows Forms projeleri için geçerlidir; .NET Core Windows Forms projeleri için geçerli değildir.
@@ -40,17 +40,27 @@ Bu izlenecek yolu tamamlamak için.NET masaüstü geliştirme  ve Veri depolama 
 
 3. Öğe şablonları listesinde aşağı kaydırın ve Hizmet tabanlı **Veritabanı'ı seçin.**
 
-   ![Öğe Şablonları iletişim kutusu](../data-tools/media/raddata-vsitemtemplates.png)
+   :::moniker range=">=vs-2022"
+   ![Hizmet tabanlı > yeni öğe ekleme](media/vs-2022/visual-studio-add-service-database.png)
+   :::moniker-end
+   :::moniker range="<=vs-2019"
+   ![Hizmet tabanlı > yeni öğe ekleme](media/raddata-vsitemtemplates.png)
+   :::moniker-end
 
 4. Veritabanına **SampleDatabase adını ve** ardından Ekle'ye **tıklayın.**
 
 ### <a name="add-a-data-source"></a>Veri kaynağı ekleme
 
-1. Veri **Kaynakları penceresi açık** değilse, **Shift** Alt D tuşuna basarak veya menü çubuğunda Diğer Veri +  +    >    >  **Windows'yi** seçerek açın.
+1. Veri **Kaynakları penceresi açık** değilse, **Shift** Alt D tuşuna basarak veya menü çubuğunda Diğer Veri +  +    >    >  **Windows'ı** seçerek açın.
 
 1. Veri Kaynakları **penceresinde Yeni** Veri Kaynağı **Ekle'yi seçin.**
 
+   :::moniker range=">=vs-2022"
+   ![Visual Studio'a yeni veri kaynağı ekleme](media/vs-2022/add-new-data-source.png)
+   :::moniker-end
+   :::moniker range="<=vs-2019"
    ![Visual Studio'a yeni veri kaynağı ekleme](media/add-new-data-source.png)
+   :::moniker-end
 
    Veri **Kaynağı Yapılandırma Sihirbazı** açılır.
 
@@ -70,10 +80,10 @@ Bu izlenecek yolu tamamlamak için.NET masaüstü geliştirme  ve Veri depolama 
 
 - Görünüm **penceresini**  >  **SQL Server Nesne Gezgini'ı** **SQL Server Nesne Gezgini** seçin. **(localdb)\MSSQLLocalDB** Veritabanları'ı  >  **genişletin** ve *SampleDatabase.mdf'ye* sağ tıklayın ve Özellikler'i **seçin.**
 
-- Alternatif olarak, pencere **henüz**  >  **Sunucu Gezgini** görünümü'ne de bakabilirsiniz. Veri Özellikler penceresi genişleterek, *SampleDatabase.mdf'ye* sağ tıklar ve ardından Özellikler'i seçerek veri sayfasını **açın.** 
+- Alternatif olarak, bu **pencere**  >  **Sunucu Gezgini** görünümü'ne de bakabilirsiniz. Veri Özellikler penceresi *genişleterek, SampleDatabase.mdf'ye* sağ tıklar ve ardından Özellikler'i seçerek veri sayfasını **açın.** 
 
   > [!TIP]
-  > Veri Bağlantıları düğümünü genişletemediyebilirsiniz veya SampleDatabase.mdf bağlantısı listelenmiyorsa, Bağlan araç çubuğundan Veritabanına Sunucu Gezgini seçin.  Bağlantı Ekle **iletişim kutusunda,** Veri kaynağı **altında Microsoft SQL Server** Veritabanı Dosyası'nın seçili olduğundan emin olun ve sampleDatabase.mdf dosyasına gidin ve dosyayı seçin. Tamam'ı seçerek bağlantıyı eklemeyi **bitirin.**
+  > Veri Bağlantıları düğümünü genişlete değilken SampleDatabase.mdf bağlantısı listelenmiyorsa,  Bağlan araç çubuğunda veritabanına Sunucu Gezgini seçin. Bağlantı Ekle **iletişim kutusunda,** Veri kaynağı **altında Microsoft SQL Server** Veritabanı Dosyası'nın seçili olduğundan emin olun ve sampleDatabase.mdf dosyasına gidin ve dosyayı seçin. Tamam'ı seçerek bağlantıyı eklemeyi **bitirin.**
 
 ## <a name="create-tables-and-keys-by-using-table-designer"></a>Tablo ve anahtar oluşturmak için Tablo Tasarımcısı
 
@@ -83,11 +93,11 @@ Bu bölümde, her tabloda bir birincil anahtar ve birkaç örnek veri satırı o
 
 1. Bu **Sunucu Gezgini,** Veri **Bağlantıları düğümünü** ve ardından **SampleDatabase.mdf düğümünü** genişletin.
 
-   Veri Bağlantıları düğümünü genişletemediyebilirsiniz veya SampleDatabase.mdf bağlantısı listelenmiyorsa, Bağlan araç çubuğundan Veritabanına Sunucu Gezgini seçin.  Bağlantı Ekle **iletişim kutusunda,** Veri kaynağı **altında Microsoft SQL Server** Veritabanı Dosyası'nın seçili olduğundan emin olun ve sampleDatabase.mdf dosyasına gidin ve dosyayı seçin. Tamam'ı seçerek bağlantıyı eklemeyi **bitirin.**
+   Veri Bağlantıları düğümünü genişlete değilken SampleDatabase.mdf bağlantısı listelenmiyorsa,  Bağlan araç çubuğunda veritabanına Sunucu Gezgini seçin. Bağlantı Ekle **iletişim kutusunda,** Veri kaynağı **altında Microsoft SQL Server** Veritabanı Dosyası'nın seçili olduğundan emin olun ve sampleDatabase.mdf dosyasına gidin ve dosyayı seçin. Tamam'ı seçerek bağlantıyı eklemeyi **bitirin.**
 
 2. Tablolar'a sağ **tıklayın ve** Yeni Tablo **Ekle'yi seçin.**
 
-   Bu Tablo Tasarımcısı açılır ve oluşturmakta olduğu tablodaki tek bir sütunu temsil eden bir varsayılan satıra sahip bir kılavuz gösterir. Kılavuza satırlar ekleyerek, tabloda sütunlar ekleyeceksiniz.
+   Bu Tablo Tasarımcısı açılır ve oluşturmakta olan tabloda tek bir sütunu temsil eden bir varsayılan satıra sahip bir kılavuz görüntülenir. Kılavuza satırlar ekleyerek, tabloda sütunlar ekleyeceksiniz.
 
 3. Kılavuzda, aşağıdaki girişlerin her biri için bir satır ekleyin:
 
@@ -110,9 +120,14 @@ Bu bölümde, her tabloda bir birincil anahtar ve birkaç örnek veri satırı o
 
    Şuna benzer bir şey görmeniz gerekir:
 
-   ![Tablo Tasarımcısı](../data-tools/media/table-designer.png)
+   :::moniker range=">=vs-2022"
+   ![Tablo Tasarımcısı tablosuyla ilgili sorun](media/vs-2022/table-designer.png)
+   :::moniker-end
+   :::moniker range="<=vs-2019"
+   ![Tablo Tasarımcısı tablosuyla ilgili sorun](media/table-designer.png)
+   :::moniker-end
 
-7. Öğesinin sol üst köşesinde **güncelleştir'Tablo Tasarımcısı** **seçin.**
+7. öğesinin sol üst köşesinde **Güncelleştir'Tablo Tasarımcısı seçin** **veya** Shift Alt U  + **tuşlarına** + **basın.**
 
 8. Veritabanı **Güncelleştirmelerini Önizle** iletişim kutusunda Veritabanını **Güncelleştir'i seçin.**
 
@@ -137,19 +152,26 @@ Bu bölümde, her tabloda bir birincil anahtar ve birkaç örnek veri satırı o
    CREATE TABLE [dbo].[Orders]
    ```
 
-4. Dosyanın sol üst köşesinde **güncelleştir'Tablo Tasarımcısı** **seçin.**
+4. Dosyanın sol üst köşesinde Güncelleştir'i **Tablo Tasarımcısı** veya **Shift** Alt U  +  + **tuşlarına basın.**
 
 5. Veritabanı **Güncelleştirmelerini Önizle** iletişim kutusunda Veritabanını **Güncelleştir'i seçin.**
 
-   Orders tablosu yerel veritabanı dosyasında oluşturulur. Tablolarda Tablolar **düğümünü** genişlet Sunucu Gezgini iki tablo olduğunu görüyorsunuz:
+   Orders tablosu yerel veritabanı dosyasında oluşturulur. Tablo kümesinde **Tablolar** düğümünü genişlet Sunucu Gezgini iki tabloyla karşı karşıdan bağlantı noktası oluşturursanız:
 
+   :::moniker range=">=vs-2022"
+   ![Tablolarda genişletilmiş tablolar Sunucu Gezgini](media/vs-2022/server-explorer-tables-node.png)
+   :::moniker-end
+   :::moniker range="<=vs-2019"
    ![Tablolarda genişletilmiş tablolar Sunucu Gezgini](media/server-explorer-tables-node.png)
+   :::moniker-end
+
+   Bunu görmüyorsanız Yenile araç çubuğu **düğmesine** basın.
 
 ### <a name="create-a-foreign-key"></a>Yabancı anahtar oluşturma
 
-1. Orders tablosu için Tablo Tasarımcısı kılavuzun sağ tarafındaki bağlam bölmesinde Yabancı Anahtarlar'a  sağ tıklayın ve Yeni Yabancı Anahtar **Ekle'yi seçin.**
+1. Siparişler tablosu için Tablo Tasarımcısı kılavuzun sağ tarafındaki bağlam bölmesinde Yabancı Anahtarlar'a sağ tıklayın ve Yeni Yabancı Anahtar **Ekle'yi seçin.** 
 
-   ![Tablo Tasarımcısı'de Tablo Tasarımcısı anahtarı Visual Studio](../data-tools/media/add-foreign-key.png)
+   ![Tablo Tasarımcısı'de Visual Studio](../data-tools/media/add-foreign-key.png)
 
 2. Görüntülenen metin kutusunda **ToTable** metnini Customers ile **değiştirin.**
 
@@ -159,7 +181,7 @@ Bu bölümde, her tabloda bir birincil anahtar ve birkaç örnek veri satırı o
    CONSTRAINT [FK_Orders_Customers] FOREIGN KEY ([CustomerID]) REFERENCES [Customers]([CustomerID])
    ```
 
-4. Dosyanın sol üst köşesinde **güncelleştir'Tablo Tasarımcısı** **seçin.**
+4. üst köşesindeki sol üst köşede güncelleştir  **( Shift** + **Alt** + **U)** seçeneğini Tablo Tasarımcısı seçin.
 
 5. Veritabanı **Güncelleştirmelerini Önizle** iletişim kutusunda Veritabanını **Güncelleştir'i seçin.**
 
@@ -171,20 +193,20 @@ Bu bölümde, her tabloda bir birincil anahtar ve birkaç örnek veri satırı o
 
 2. Tablolar düğümü kısayol menüsünü açın, **Yenile'yi seçin** ve tablolar **düğümünü** genişletin. 
 
-3. Customers tablosu için kısayol menüsünü açın ve Tablo Verilerini **Göster'i seçin.**
+3. Müşteriler tablosu için kısayol menüsünü açın ve Verileri **Görüntüle'yi seçin.**
 
 4. Bazı müşteriler için istediğiniz verileri ekleyin.
 
     Müşteri kimliklerini beş karakterli olarak istediğiniz gibi belirtebilirsiniz, ancak en azından bu yordamda daha sonra kullanmak üzere hatırlayabileceğiniz bir kimlik olmalıdır.
 
-5. Orders tablosu kısayol menüsünü açın ve Tablo Verilerini **Göster'i seçin.**
+5. Orders tablosu için kısayol menüsünü açın ve Tablo Verilerini **Göster'i seçin.**
 
-6. Bazı siparişler için veri ekleme.
+6. Bazı siparişler için veri ekleyin. Her satırı girerken, veritabanına kaydedilir.
 
     > [!IMPORTANT]
-    > Tüm sipariş kimliklerinin ve sipariş miktarlarının tamsayı olduğundan ve her müşteri kimliğinin Customers tablosunda **CustomerID** sütununda belirttiğiniz bir değerle eş olduğundan emin olun.
+    > Tüm sipariş kimlikleri ve sipariş miktarları ' nın tamsayılar olduğundan ve her müşteri KIMLIĞININ Customers tablosunun **CustomerID** sütununda belirtilen bir değerle eşleştiğinden emin olun.
 
-7. Menü çubuğunda Dosya Hepsini **Kaydet'i**  >  **seçin.**
+Tebrikler! Artık tablo oluşturmayı, bunları bir yabancı anahtarla bağlamayı ve veri eklemeyi öğrenirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

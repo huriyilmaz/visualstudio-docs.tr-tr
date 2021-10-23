@@ -4,19 +4,18 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 8fccb5f6-ff61-488f-a91e-447faeda798d
-ms.date: 03/17/2021
+ms.date: 10/21/2021
 ms.topic: conceptual
 description: seçili Visual Studio aboneliklerine dahil edilen Microsoft Tech Community forum desteği avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 36badd050fdd11bd1e361300ef1824775ab04d97
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 17084b2cdf9521b7dd2b429e00173b885d053371
+ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428800"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "130211681"
 ---
 # <a name="microsoft-tech-community-forum-support-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Microsoft Tech Community forum desteği
 Bağlan ve en iyi uygulamalar, tasarım mimarisi ve en son güncelleştirmeler hakkında daha fazla kullanıcı ve Microsoft teknik uzmanlarıyla etkileşim kurun.
-
 
 ## <a name="access-the-microsoft-tech-community"></a>Microsoft Tech Community erişin 
 Topluluk forumuna erişim basittir.  
@@ -39,24 +38,7 @@ Topluluk forumuna erişim basittir.
 İşte bu kadar kolay.  Artık topluluk portalını kullanmaya hazırsınız.  Giriş sayfasında, topluluk hakkında haberler bulunur.  katılmakta olduğunuz topluluklara özgü içeriği görmek için sayfanın üst kısmındaki **Community hub** açılır listesine tıklayın ve listenizden bir topluluk seçin.  her zaman, istediğiniz hub 'a ve ardından **birleştir** düğmesine tıklayarak **tüm Community hub 'lara gözatıp** ' ye tıklayarak toplulukları listeye ekleyebilirsiniz. 
 
 ## <a name="eligibility"></a>Önceliği
-Azure Community avantajı 'nın kullanılabilirliği, aşağıda gösterildiği gibi abonelik düzeyinize bağlıdır:
-
-|                                          Abonelik düzeyi                                           |     Kanallar      |    Avantaj    | Yenilenebilir? |
-|-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
-|                           Visual Studio Enterprise (standart), nfr<sup>1</sup>                            | VL, Azure, perakende |   Kullanılabilir    |    Yes     |
-|                           GitHub Enterprise aboneliği Visual Studio Enterprise                           | VL, Azure, perakende |   Kullanılabilir    |    Yes     |
-|                          Visual Studio Professional (standart)                          | VL, Azure, perakende |   Kullanılabilir    |    Yes     |
-|                          GitHub Enterprise aboneliği Visual Studio Professional                          | VL, Azure, perakende |   Kullanılabilir    |    Yes     |
-|                              Visual Studio Test Professional (standart)                               |    VL, perakende     |   Kullanılabilir    |    Yes     |
-|                                       MSDN Platformları (Standart)                                       |    VL, perakende     |   Kullanılabilir    |    Yes     |
-| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut)|        Tümü        | Kullanılamaz |     No     |
-
-<sup>1</sup>*şunları içerir: için değil (nfr), Microsoft fte, en değerli Professional (MVP), bölgesel müdürü (RD), Visual Studio sektör ortağı (vsıp), BizSpark, Imagine, Microsoft sertifikalı trainer (mct). NFR Basic 'i dışlar.*  
-
-> [!NOTE]
-> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)Visual Studio satın alma konusunda farklı seçenekleri araştırmak için yeni müşterilerin ' e gitmesi önerilir.
-
-Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)e-posta adresinize atanan tüm abonelikleri görmek için Bağlan. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Microsoft Tech Community, ücretsiz olarak kullanılabilir.  Abonelik gerekli değildir. 
 
 ## <a name="support-resources"></a>Destek kaynakları
 - Visual Studio abonelikleriniz için satış, abonelik, hesap ve faturalandırma konusunda yardım mı gerekiyor?  [Visual Studio abonelik desteğiyle](https://my.visualstudio.com/gethelp)iletişim kurun.

@@ -3,15 +3,15 @@ title: birden çok kullanıcıya Visual Studio abonelikleri atama | Microsoft Do
 author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
-ms.date: 03/19/2021
+ms.date: 10/21/2021
 ms.topic: conceptual
 description: Yöneticilerin tek seferde birden çok aboneliği nasıl atayabileceği hakkında bilgi edinin.
-ms.openlocfilehash: 813c2caecb5e54ba0ed0a4f4196be84105aa3722
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: df25e417910a2916c864e9b00b92dd61a567e08c
+ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725484"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "130211821"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler yönetim portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Bireysel kullanıcı eklemek için bkz. [tek kullanıcı ekleme](assign-license.md).
@@ -81,7 +81,7 @@ Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını 
 > [!IMPORTANT]
 >
 > Aboneler eklemek için Azure AD gruplarının kullanımı için aşağıdaki sınırlamalar geçerlidir:
-> - Yönetici, başlangıçta yönetici portalına bir grup eklerken AAD kiracısının bir üyesi olmalıdır.  Grup eklendikten sonra, grupların üyeliğinde yapılan değişiklikler yönetici katılımı gerektirmez. 
+> - Yönetici, başlangıçta yönetici portalına bir grup eklerken Azure AD kiracının bir üyesi olmalıdır.  Grup eklendikten sonra, grupların üyeliğinde yapılan değişiklikler yönetici katılımı gerektirmez. 
 > - Grupların en az bir üye içermesi gerekir.  Boş gruplar desteklenmiyor.
 > - Tüm kullanıcılar grubun en üst düzeyinde olmalıdır.  İç içe gruplar desteklenmiyor.
 > - Yalnızca güvenilen anlaşmalar desteklenir. (Yalnızca ' fazla ayırabilecek ' abonelikler olan anlaşmalar güvenilirdir.)
@@ -100,9 +100,9 @@ Azure Active Directory grubu özelliğini kullanarak abone ekleme hakkında daha
 3. **ekle** sekmesini ve ardından açılan kutuda **Azure Active Directory grubu** ' nu seçin.  
 
    > [!div class="mx-imgBorder"]
-   > ![Azure AD 'yi kullanarak toplu ekleme 'yi seçin](_img/assign-license-bulk/bulk-add-aad.png "Azure AD'yi kullanarak toplu ekleme özelliğini seçen ve Azure Active Directory seçin.")
+   > ![Azure AD 'yi kullanarak toplu ekleme 'yi seçin](_img/assign-license-bulk/bulk-add-aad.png "Azure AD kullanarak toplu ekleme özelliğini seçen aboneleri Azure Active Directory seçin.")
 
-4. Form alanına eklemek istediğiniz Azure AD grubunun adını girmeye başlayın. Bu işlem, kuruluşunuzda kullanılabilir Azure AD gruplarını arayacak. 
+4. Sağ tarafta bir anında çıkış penceresi görünür.  Form alanına eklemek istediğiniz Azure AD grubunun adını girmeye başlayın. Bu işlem, kuruluşunuzda kullanılabilir Azure AD gruplarını arayacak. 
 
 5. Grubu seçtiğinizde, alanı otomatik olarak grup adıyla doldurulur. Bu gruptaki kullanıcıları eklemeden önce görüntüleme seçeneğine sahip olursunuz. Daha sonra, grup için abonelik düzeyini, indirme haklarını ve iletişim tercihlerini seçebilirsiniz. İsterseniz başvuru alanına ayrıntılar ekleyebilirsiniz. 
 

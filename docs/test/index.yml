@@ -10,12 +10,12 @@ metadata:
   ms.author: mikejo
   manager: jmartens
   ms.date: 08/19/2021
-  ms.openlocfilehash: ad333784e6f19ba025c3c44141bb78823f910093
-  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+  ms.openlocfilehash: 0d9adf972aacec0d59583a31027d73f1dcedd532
+  ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/13/2021
-  ms.locfileid: "126635502"
+  ms.lasthandoff: 10/22/2021
+  ms.locfileid: "130211720"
 landingContent:
 - title: Test araçları hakkında
   linkLists:
@@ -23,7 +23,7 @@ landingContent:
     links:
     - text: Test araçlarına ilk bakış
       url: improve-code-quality.md
-    - text: Birim testi araçları & görevleri
+    - text: Birim testi araçları & görevler
       url: unit-test-your-code.md
     - text: Birim testi temel bilgileri
       url: unit-test-basics.md
@@ -51,6 +51,8 @@ landingContent:
       url: live-unit-testing-start.md
     - text: Birim testleri oluşturma (IntelliTest)
       url: generate-unit-tests-for-your-code-with-intellitest.md
+    - text: Çalışırken Yeniden Yükleme ile yürütmeyi test Çalışırken Yeniden Yükleme
+      url: test-execution-with-hot-reload.md
   - linkListType: how-to-guide
     links:
     - text: Microsoft Fakes - Kodu test altında yalıtma

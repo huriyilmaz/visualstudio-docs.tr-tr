@@ -2,7 +2,7 @@
 title: Özellik Işlevleri | Microsoft Docs
 description: MSBuild özellik tanımlarında görüntülenen .NET Framework yöntemlerine yapılan çağrılar olan özellik işlevlerini nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 02/21/2017
+ms.date: 10/20/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, property functions
@@ -13,16 +13,16 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: d45b3b46558abf4d16d651d97af1bc722e908a7f
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 0ccca084f783e9f436ba3f701501c7c3fbf36b2b
+ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128429707"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "130208337"
 ---
 # <a name="property-functions"></a>Özellik işlevleri
 
-özellik işlevleri, MSBuild özellik tanımlarında görüntülenen .NET Framework yöntemlerine yapılan çağrılardır. Görevlerin aksine, özellik işlevleri hedeflerin dışında kullanılabilir ve herhangi bir hedef çalışmadan önce değerlendirilir.
+özellik işlevleri, MSBuild özellik tanımlarında görüntülenen .NET Framework yöntemlerine yapılan çağrılardır. Görevlerin aksine, özellik işlevleri hedeflerin dışında kullanılabilir. Özellik işlevleri, her bir hedefin dışındaki özellikler ve öğeler için herhangi bir hedef çalıştırılmadan önce ya da hedef değerlendirildiği zaman içindeki Özellik grupları ve öğe grupları için herhangi bir hedefin her genişletilmesinden önce olan özellikler veya öğeler her genişletildiğinde değerlendirilir.
 
 MSBuild görevleri kullanmadan, sistem saatini okuyabilir, dizeleri karşılaştırabilir, normal ifadelerle eşleştirebilir ve derleme betiğinizdeki diğer işlemleri gerçekleştirebilirsiniz. MSBuild, dizeyi sayı ve sayı olarak dizeye dönüştürmeye ve diğer dönüştürmeleri gerekli olarak yapmaya çalışacaktır.
 
@@ -176,7 +176,7 @@ MSBuild özellik işlevlerinin bir listesi aşağıdadır:
 |bool ıosunixlike ()|Geçerli işletim sistemi bir UNIX sistemse true.|
 |String NormalizePath (params String [] yol)|Belirtilen yolun kurallı tam yolunu alır ve geçerli işletim sistemi için doğru dizin ayırıcı karakterlerini içerdiğinden emin olur.|
 |String NormalizeDirectory (params String [] yol)|Belirtilen dizinin kurallı tam yolunu alır ve sonunda eğik çizgi olduğundan emin olarak geçerli işletim sistemi için doğru dizin ayırıcı karakterlerini içerir.|
-|dize Ensugeri çekme bölgesi (dize yolu)|Verilen yolun sonunda eğik çizgi yoksa bir tane ekleyin. Yol boş bir dize ise, onu değiştirmez.|
+|dize Ensugeri çekme bölgesi (dize yolu)|Verilen yolun sonunda eğik çizgi yoksa bir tane ekleyin. Yol boş bir dize ise, bunu değiştirmez.|
 |string GetPathOfFileAbove(dize dosyası, string startingDirectory)|için arama ve geçerli derleme dosyasının konumunun üzerindeki dizin yapısındaki bir dosyanın tam yolunu veya belirtilmişse dosyasını `startingDirectory` temel alarak döndürür.|
 |GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|Belirtilen dizinde veya dizinin üzerindeki dizin yapısında bir dosyanın dizinini bulun ve geri dönüş.|
 |string MakeRelative(string basePath, string path)|ile `path` ilgili `basePath` yapar. `basePath` mutlak bir dizin olmalıdır. Göreli `path` olarak bulunamazsa, tam olarak döndürülür. benzer `Uri.MakeRelativeUri` şekilde.|
@@ -206,7 +206,7 @@ $([MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture))
 
 ## <a name="msbuild-ensuretrailingslash"></a>MSBuild EnsureTrailingSlash
 
-MSBuild işlevi, henüz yoksa sonda `EnsureTrailingSlash` bir eğik çizgi ekler.
+MSBuild özelliği işlevi, henüz yoksa `EnsureTrailingSlash` sonda bir eğik çizgi ekler.
 
 Bu özellik işlevi aşağıdaki söz dizimlerini içerir:
 
@@ -216,7 +216,7 @@ $([MSBuild]::EnsureTrailingSlash('$(PathProperty)'))
 
 ## <a name="msbuild-getdirectorynameoffileabove"></a>MSBuild GetDirectoryNameOfFileAbove
 
-Aşağıdaki MSBuild özelliği işlevi, belirtilen dizinden başerek (ve dahil) belirtilen dosyayı içeren `GetDirectoryNameOfFileAbove` bir dizini yukarı doğru arar. Bulunursa dosyayı içeren en yakın dizinin tam yolunu, aksi takdirde boş bir dize döndürür.
+MSBuild özelliği işlevi, belirtilen dizinden başerek (ve dahil) belirtilen dosyayı içeren `GetDirectoryNameOfFileAbove` bir dizini yukarı doğru arar. Bulunursa dosyayı içeren en yakın dizinin tam yolunu, aksi takdirde boş bir dize döndürür.
 
 Bu özellik işlevi aşağıdaki söz dizimlerini içerir:
 
@@ -238,7 +238,7 @@ Bunun yerine bu örneğin daha kısa bir şekilde yazıldığına dikkat `GetPat
 
 ## <a name="msbuild-getpathoffileabove"></a>MSBuild GetPathOfFileAbove
 
-Aşağıdaki MSBuild özelliği işlevi, belirtilen dizinden başerek (ve dahil) belirtilen dosyayı içeren `GetPathOfFileAbove` bir dizini yukarı doğru arar. Bulunursa en yakın eşleşen dosyanın tam yolunu, aksi takdirde boş bir dize döndürür.
+MSBuild özelliği işlevi, belirtilen dizinden başerek (ve dahil) belirtilen dosyayı içeren `GetPathOfFileAbove` bir dizini yukarı doğru arar. Bulunursa en yakın eşleşen dosyanın tam yolunu, aksi takdirde boş bir dize döndürür.
 
 Bu özellik işlevi aşağıdaki söz dizimlerini içerir:
 
@@ -260,7 +260,7 @@ bu, işlevsel olarak ile eşdeğerdir
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" Condition=" '$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))' != '' " />
 ```
 
-Ancak, geçerli dosyayla eşleşmemek için bazen üst dizinde arama başlatmanız gerekir. Bu örnek, *bir Directory.Build.props* dosyasının kendisini tekrar tekrar içeri aktarmadan en yakın *Directory.Build.props* dosyasını ağacın kesinlikle daha yüksek bir düzeyinde nasıl içeri aktara olduğunu gösterir:
+Ancak bazen geçerli dosyayla eşleşmemek için üst dizinde arama başlatmanız gerekir. Bu örnek, *bir Directory.Build.props* dosyasının kendisini tekrar tekrar içeri aktarmadan en yakın *Directory.Build.props* dosyasını ağacın kesinlikle daha yüksek bir düzeyinde nasıl içeri aktara olduğunu gösterir:
 
 ```xml
 <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
@@ -283,6 +283,9 @@ $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio
 $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, `SymbolCacheDir`))
 $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(SampleValue)`))             // parens in name and value
 ```
+
+> [!WARNING]
+> MSBuild () .NET SDK sürümünde `dotnet build` bu işlev desteklenmiyor.
 
 ## <a name="msbuild-getregistryvaluefromview"></a>MSBuild GetRegistryValueFromView
 
@@ -313,6 +316,9 @@ $([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Mic
 ```
 
 , önce 64 bit kayıt defteri görünümünde ve ardından 32 bit kayıt defteri görünümünde bakarak **ReferenceAssemblies** anahtarının **SLRuntimeInstallPath** verilerini alır.
+
+> [!WARNING]
+> MSBuild () .NET SDK sürümünde `dotnet build` bu işlev desteklenmiyor.
 
 ## <a name="msbuild-makerelative"></a>MSBuild Makerelative
 
@@ -375,7 +381,7 @@ Output:
 
 ## <a name="msbuild-targetframework-and-targetplatform-functions"></a>MSBuild TargetFramework ve TargetPlatform işlevleri
 
-MSBuild 16.7 ve üst, [TargetFramework ve TargetPlatform özelliklerini işlemeye yönelik çeşitli işlevler tanımlar.](msbuild-target-framework-and-target-platform.md)
+MSBuild 16.7 ve üzerinde [TargetFramework ve TargetPlatform özelliklerini işlemeye yönelik çeşitli işlevler tanımlayın.](msbuild-target-framework-and-target-platform.md)
 
 |İşlev imzası|Description|
 |------------------------|-----------------|
@@ -416,7 +422,7 @@ Value4 = 7.0
 Value5 = True
 ```
 
-## <a name="msbuild-version-comparison-functions"></a>MSBuild karşılaştırma işlevlerini kullanın
+## <a name="msbuild-version-comparison-functions"></a>MSBuild karşılaştırma işlevleri
 
 MSBuild 16.5 ve üst sürümleri temsil eden dizeleri karşılaştırmak için çeşitli işlevler tanımlar.
 
@@ -427,8 +433,8 @@ MSBuild 16.5 ve üst sürümleri temsil eden dizeleri karşılaştırmak için �
 |------------------------|-----------------|
 |VersionEquals(string a, string b)|ve `true` sürümleri aşağıdaki `a` `b` kurallara göre eşdeğerse dönüş.|
 |VersionGreaterThan(string a, string b)|Sürüm, `true` aşağıdaki `a` kurallara göre daha `b` büyükse geri döner.|
-|VersionGreaterThanOrEquals(string a, string b)|Sürüm `true` aşağıdaki `a` kurallara göre büyüktür veya buna `b` eşitse dönüş.|
-|VersionLessThan(string a, string b)|`true`Sürüm `a` `b` aşağıdaki kurallara göre daha küçükse döndürün.|
+|VersionGreaterThanOrEquals (dize a, dize b)|`true`Sürüm `a` aşağıdaki kurallara göre daha büyükse veya eşitse döndürün `b` .|
+|VersionLessThan (dize a, dize b)|`true`Sürüm `a` `b` aşağıdaki kurallara göre daha küçükse döndürün.|
 |Versionlessals Okoşulları (dize a, dize b)|`true`Sürüm `a` aşağıdaki kurallara göre daha küçük veya ona eşitse döndürün `b` .|
 |Versionnot Quals (dize a, dize b)|`false`Sürümler `a` ve `b` aşağıdaki kurallara göre eşdeğer olursa döndürün.|
 

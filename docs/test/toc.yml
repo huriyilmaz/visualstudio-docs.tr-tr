@@ -54,13 +54,15 @@
       href: run-a-unit-test-as-a-64-bit-process.md
     - name: .runsettings dosyasını kullanarak birim testlerini yapılandırma
       href: configure-unit-tests-by-using-a-dot-runsettings-file.md
+    - name: Çalışırken Yeniden Yükleme ile Yürütmeyi Test Çalışırken Yeniden Yükleme
+      href: test-execution-with-hot-reload.md
     - name: Yönetilen kod için birim testleri yazma
       items:
         - name: 'İzlenecek yol: Yönetilen kod için birim testleri oluşturma ve çalıştırma'
           href: walkthrough-creating-and-running-unit-tests-for-managed-code.md
         - name: 'İzlenecek yol: Testi güdümlü geliştirme'
           href: quick-start-test-driven-development-with-test-explorer.md
-        - name: Birim testlerinde MSTest API’yi kullanma
+        - name: Birim testlerinde MSTest çerçevesini kullanma
           href: using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md
         - name: Onay sınıflarını kullanma
           href: using-the-assert-classes.md
@@ -121,9 +123,9 @@
           href: troubleshooting-code-coverage.md
     - name: Geçiş
       items:
-        - name: MSTestV1 'den MSTestV2 'ye yükseltme
+        - name: MSTestV1'den MSTestV2'ye yükseltme
           href: mstest-update-to-mstestv2.md
-        - name: Testsettings 'ı runsettings 'e geçirin
+        - name: Testsetting'leri runsetting'lere geçirme
           href: migrate-testsettings-to-runsettings.md
 - name: Live Unit Testing
   items:
@@ -402,5 +404,5 @@
       href: lab-management/use-build-or-rm-instead-of-lab-management.md
     - name: Test aracılarını ve test denetleyicilerini yükleme
       href: lab-management/install-configure-test-agents.md
-- name: Visual Studio'da uzaktan test
+- name: Visual Studio uzaktan test
   href: remote-testing.md

@@ -4,37 +4,33 @@ author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 9c0b9a4f-b9a3-491c-a68f-6e4bac7f7b3d
-ms.date: 03/21/2021
+ms.date: 10/21/2021
 ms.topic: how-to
 description: Yöneticilerin Yönetim Portalı'nde tek tek aboneleri veya grupları nasıl bularak bulunalarını öğrenin.
-ms.openlocfilehash: 96a78c0487711b8e67a75ea04c00096bf741c6a9
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 888090c218b4f57173414552c03b2d391fe0aa57
+ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128427489"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "130212019"
 ---
 # <a name="search-and-filter-subscribers-in-visual-studio-subscriptions"></a>Aboneliklerde aboneleri arama Visual Studio filtreleme
-Visual Studio Abonelikler Yönetim Portalı, çeşitli ölçütlere göre belirli bir abone alt kümesini bulmanıza olanak sağlar. Abone listesini ad, e-posta adresi, abonelik düzeyi ve diğer bilgilere göre filtre edebilirsiniz.
+Abonelikler Visual Studio Portalı, çeşitli ölçütlere göre belirli bir abone alt kümesini bulmanıza olanak sağlar. Abone listesini ad, e-posta adresi veya başvuruya göre filtreleebilirsiniz.
 
 ## <a name="to-filter-the-subscriber-list"></a>Abone listesini filtrelemek için
-1. Belirli bir abone grubunu aramak için Filtre **sekmesini** seçin.
+1. Belirli bir abone grubunu aramak için" "Aboneleri yönet" sayfasının hemen altındaki **Ad,** e-posta veya başvuruya göre filtrele kutusuna tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Abone listesinde arama yapmak için Filtre'yi seçin](_img/search-filter/filter-list.png "Görüntülenen abonelikleri sınırlama ölçütlerini girmek için Filtre'ye tıklayın.")
+   > ![Abone listesinde arama yapmak için Filtre'yi seçin](_img/search-filter/filter-list.png "Görüntülenen abonelikleri sınırlama ölçütlerini girmek için 'filtre' kutusuna tıklayın.")
 
-2. Aramanıza temel olarak kullanmak istediğiniz ölçütleri girin ve filtrele'yi **yeniden** seçin.
+2. Arama ölçütlerinizi girin.  Siz yazarak listenin dinamik olarak güncelleştirilmiş olduğunu fark edersiniz.  
+Örnek: Outlook e-posta adreslerini kullanan tüm aboneleri bulmak için " " yazabilirsiniz ve liste yalnızca @outlook Outlook.com adreslerine sahip olan abonelerle sınırlı olacaktır.  
+
+> [!TIP]
+> Arama, Azure Active Directory gruplarının üyesi olan aboneleri içerir. Bu nedenle, grupta detaya gitmedikçe aboneler listeniz üzerinde görüntülenmese bile, bunlar arama sonuçlarında tek tek listelenir.  
+
+3. Filtreyi temizlemek ve filtrelenmemiş listeyi geri yüklemek için filtre kutusunun sağ en sağ tarafından **X'e** tıklayın. 
    > [!div class="mx-imgBorder"]
-   > ![Abone verilerini filtrelemek için kullanılabilir alanları kullanma](media/filter-subscribers.png "Arama sonuçlarını sınırlamak için çeşitli alanlara değer girin. Örneğin, @contoso.com e-posta adreslerine sahip tüm abonelerin listesini geri almak için '@contoso.com' araması contoso.com ekleyebilirsiniz.")
-
-   Ardından abone listeniz seçtiğiniz ölçütle eş görünür.  Filtrelenmiş sonuçların başlıklarına tıklar ve her alanın sıralama sıralamalarını değiştirebilirsiniz.  
-   > [!NOTE]
-   > Ad **alanı** ada göre sıralanmış.
-
-   Filtre **simgesinin vurgulanmış** ve bir filtre uygulandığını belirtebilirsiniz.  Filtreyi **temizle** seçeneği de görüntülenir. Bu örnekte, e-posta adresleri olan aboneleri bulmak için abone listemizi @outlook.com filtreledik. 
-
-3. Filtreyi temizlemek ve filtrelenmemiş listeyi geri yüklemek için sağ **üstte yer alan Filtreyi** temizle sekmesine tıklayın. 
-   > [!div class="mx-imgBorder"]
-   > ![Abone listesinden filtreyi temizleme](_img/search-filter/clear-filter.png "Filtreyi kaldırmak ve atanan aboneliklerinizi görüntülemeye devam etmek için Filtreyi Temizle'ye tıklayın.")
+   > ![Abone listesinden filtreyi temizleme](_img/search-filter/clear-filter.png "Ölçütleri temizlemek ve atanan aboneliklerinizi görüntülemeye devam etmek için filtre kutusunun sağ tarafından büyük 'X'e tıklayın.")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)

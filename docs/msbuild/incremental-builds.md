@@ -1,6 +1,6 @@
 ---
-title: Artımlı Derlemeler | Microsoft Docs
-description: Güncel MSBuild yürütülmez şekilde iyileştirilmiş artımlı derlemeler hakkında bilgi öğrenin.
+title: Artımlı derlemeler | Microsoft Docs
+description: güncel çıkış dosyalarının yürütülmemesi için optimize edilmiş MSBuild artımlı derlemeler hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -13,25 +13,25 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 9535d77469277f7b9133a8ee68950164c308193d
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: dfd4c4677b122a93319363d60bf9cc848b40e3af
+ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122143267"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "130212253"
 ---
 # <a name="incremental-builds"></a>Artımlı derlemeler
 
-Artımlı derlemeler, karşılık gelen giriş dosyalarına göre güncel çıkış dosyalarına sahip hedeflerin yürütülmey için iyileştirilmiş derlemelerdir. Hedef öğenin hem hedefin giriş olarak hangi öğeleri beklediğinizi belirten bir özniteliği ve çıkış olarak hangi öğeleri ürettiğini belirten `Inputs` `Outputs` bir özniteliği olabilir. MSBuild özniteliklerin değerleri arasında 1'e 1 eşleme bulmaya çalışır. 1-1 eşlemesi varsa, MSBuild giriş öğesinin zaman damgasını karşılık gelen çıkış öğesinin zaman damgasıyla karşılaştırıldığında. 1-1 eşlemesi olmayan çıkış dosyaları, tüm giriş dosyalarıyla karşılaştırıldı. Çıkış dosyası, giriş dosyasından veya dosyalardan aynı yaş veya daha yeni ise bir öğe güncel olarak kabul edilir.
+Artımlı derlemeler, en iyileştirilmiş derlemelerdir, böylece ilgili giriş dosyalarına göre güncel çıkış dosyaları olan hedefler yürütülmez. Hedef öğe, her iki özniteliğe de sahip olabilir, bu da `Inputs` hedefin girdi olarak beklediği öğeleri ve bir `Outputs` özniteliği, çıktı olarak ürettiği öğeleri gösterir. MSBuild, bu özniteliklerin değerleri arasında 1 ila 1 eşleme bulmaya çalışır. 1-1 eşleme varsa MSBuild, her giriş öğesinin zaman damgasını karşılık gelen çıkış öğesinin zaman damgasıyla karşılaştırır. 1--1 eşleştirmesi olmayan çıkış dosyaları tüm giriş dosyalarıyla karşılaştırılır. Çıkış dosyası, giriş dosyası veya dosyalarından aynı yaş veya daha yeniyse bir öğe güncel olarak değerlendirilir.
 
 > [!NOTE]
-> Bu MSBuild dosyaları değerlendirirken, yalnızca geçerli yürütmede listenin içeriği dikkate alınır. Son derlemeden gelen listede yapılan değişiklikler otomatik olarak bir hedefin güncel olmadığını ortaya çıkar.
+> MSBuild giriş dosyalarını değerlendirirken, yalnızca geçerli yürütmede listenin içeriği göz önünde bulundurululur. Son derlemeden listedeki değişiklikler otomatik olarak bir hedef güncel değildir.
 
-Tüm çıkış öğeleri güncelse, MSBuild atlar. Hedefin *bu* artımlı derlemesi, derleme hızını önemli ölçüde geliştirabilir. Yalnızca bazı dosyalar güncelse, MSBuild hedefi yürütür, ancak güncel öğeleri atlar ve böylece tüm öğeleri güncel getirir. Bu işlem kısmi artımlı *derleme olarak bilinir.*
+tüm çıkış öğeleri güncel ise MSBuild hedefi atlar. Hedefin bu *artımlı derlemesi* , derleme hızını önemli ölçüde iyileştirebilir. yalnızca bazı dosyalar güncel ise, MSBuild hedefi yürütür, ancak güncellik öğelerini atlar ve böylece tüm öğeleri güncel hale getirir. Bu işlem *kısmi Artımlı derleme* olarak bilinir.
 
-1'den 1'e eşlemeler genellikle öğe dönüştürmeleri tarafından üretir. Daha fazla bilgi için bkz. [Dönüşümler.](../msbuild/msbuild-transforms.md)
+1--1 eşlemeleri genellikle öğe dönüştürmeleri tarafından üretilir. Daha fazla bilgi için bkz. [dönüşümler](../msbuild/msbuild-transforms.md).
 
- Aşağıdaki hedefi göz önünde bulundurarak.
+ Aşağıdaki hedefi göz önünde bulundurun.
 
 ```xml
 <Target Name="Backup" Inputs="@(Compile)"
@@ -41,21 +41,21 @@ Tüm çıkış öğeleri güncelse, MSBuild atlar. Hedefin *bu* artımlı derlem
 </Target>
 ```
 
-Öğe türüyle temsil edilen `Compile` dosya kümesi bir yedekleme dizinine kopyalanır. Yedekleme dosyaları *.bak dosya adı* uzantısına sahip. Öğe türüyle temsil edilen dosyalar veya karşılık gelen yedekleme dosyaları, Yedekleme hedefi çalıştırıldıktan sonra silinmez veya değiştirilmezse, sonraki derlemelerde Yedekleme `Compile` hedefi atlanır.
+Öğe türü tarafından temsil edilen dosya kümesi `Compile` bir yedekleme dizinine kopyalanır. Yedekleme dosyaları *. bak* dosya adı uzantısına sahiptir. Öğe türü tarafından temsil edilen dosyalar `Compile` veya buna karşılık gelen yedekleme dosyaları, yedekleme hedefi çalıştıktan sonra silinmez veya değiştirilmez, sonraki derlemelerde yedekleme hedefi atlanır.
 
-## <a name="output-inference"></a>Çıkış çıkarı
+## <a name="output-inference"></a>Çıkış çıkarımı
 
-MSBuild, hedefin `Inputs` `Outputs` yürütülecek olup olmadığını belirlemek için hedefin ve özniteliklerini karşılar. İdeal olarak, artımlı derleme tamamlandıktan sonra mevcut olan dosya kümesi, ilişkili hedeflerin yürütülse de yürütülse de aynı kalması gerekir. Görevler tarafından oluşturulan veya değişen özellikler ve öğeler derlemeyi etkileyene MSBuild onları etkileyen hedef atlanmış olsa bile değerlerini çıkaramaz. Bu işlem çıkış *çıkarı olarak bilinir.*
+MSBuild, hedefin `Inputs` `Outputs` yürütülüp yürütülmeyeceğini tespit etmek için bir hedefin ve özniteliklerini karşılaştırır. İdeal olarak, bir artımlı derleme tamamlandıktan sonra var olan dosyalar kümesi, ilişkili hedeflerin yürütülüp yürütülmediği gibi aynı kalacaktır. görevler tarafından oluşturulan veya değiştirilen özellikler ve öğeler derlemeyi etkileyebileceğinden, bunları etkileyen hedef atlansa bile, MSBuild değerlerini çıkarmalıdır. Bu işlem *Çıkış çıkarımı* olarak bilinir.
 
 Üç durum vardır:
 
-- Hedef, olarak `Condition` değerlendirilen bir özniteliğine `false` sahip. Bu durumda hedef çalıştırlanmaz ve derleme üzerinde hiçbir etkisi yoktur.
+- Hedefte `Condition` değerlendirilen bir özniteliği vardır `false` . Bu durumda, hedef çalıştırılmaz ve derleme üzerinde hiçbir etkisi yoktur.
 
-- Hedef güncel olmayan çıkışlara sahip ve bunları güncel getirmek için çalıştır.
+- Hedefte güncel olmayan çıkışlar vardır ve bunları güncel hale getirmek için çalıştırılır.
 
-- Hedefte güncel olmayan çıkışlar yoktur ve atlanır. MSBuild, hedefi değerlendirir ve hedef çalıştırıIıyor gibi öğelerde ve özelliklerde değişiklikler yapar.
+- Hedefte güncel olmayan çıkışlar yok ve atlandı. MSBuild hedefi değerlendirir ve hedef çalıştırılmışsınız gibi öğe ve özelliklerde değişiklikler yapar.
 
-Artımlı derlemeyi desteklemek için, görevlerin herhangi bir öğenin öznitelik değerinin bir görev `TaskParameter` `Output` giriş parametresine eşit olduğundan emin olması gerekir. İşte bazı örnekler:
+Artımlı derlemeyi desteklemek için, görevler `TaskParameter` herhangi `Output` bir öğenin öznitelik değerinin bir görev giriş parametresine eşit olduğundan emin olmalıdır. İşte bazı örnekler:
 
 ```xml
 <CreateProperty Value="123">
@@ -63,15 +63,15 @@ Artımlı derlemeyi desteklemek için, görevlerin herhangi bir öğenin öznite
 </CreateProperty>
 ```
 
-Bu kod, hedefin yürütülse de atlansa da atlanmasa da "123" değerine sahip olan Easy özelliğini oluşturur.
+Bu kod, hedefin yürütülüp yürütülmediğini veya atlanmadığını "123" değerine sahip kolay özelliğini oluşturur.
 
-3.5 MSBuild başlayarak, çıkış çıkarı bir hedefte öğe ve özellik gruplarında otomatik olarak gerçekleştirilir. `CreateItem` görevleri bir hedefte gerekli değildir ve kaçınılmalıdır. Ayrıca, `CreateProperty` görevler yalnızca bir hedefin yürütülebilir olup olmadığını belirlemek için bir hedefte kullanılmalıdır.
+MSBuild 3,5 ' den başlayarak, bir hedefteki öğe ve özellik grupları üzerinde çıkış çıkarımı otomatik olarak gerçekleştirilir. `CreateItem` görevler bir hedefte gerekli değildir ve kaçınılmalıdır. Ayrıca, `CreateProperty` Görevler bir hedefte yalnızca bir hedefin yürütülüp yürütülmediğini anlamak için kullanılmalıdır.
 
-3.5 MSBuild önce [CreateItem görevini kullanabilirsiniz.](../msbuild/createitem-task.md)
+MSBuild 3,5 ' dan önce [createıtem](../msbuild/createitem-task.md) görevini kullanabilirsiniz.
 
-## <a name="determine-whether-a-target-has-been-run"></a>Bir hedefin çalıştır olup olmadığını belirleme
+## <a name="determine-whether-a-target-has-been-run"></a>Bir hedefin çalıştırılıp çalıştırılmadığını belirleme
 
-Çıkış çıkarı nedeniyle, hedefin yürütülüp yürütül olmadığını belirlemek üzere özellikleri ve öğeleri incelemek için bir hedefe `CreateProperty` görev eklemeniz gerekir. Görevi `CreateProperty` hedefe ekleyin ve `Output` `TaskParameter` "ValueSetByTask" olan bir öğe ekleyin.
+Çıkış çıkarımı nedeniyle, `CreateProperty` hedefin yürütülüp yürütülmediğini belirleyebilmeniz için özellikleri ve öğeleri incelemek üzere bir hedefe görev eklemeniz gerekir. `CreateProperty`Görevi hedefe ekleyin ve `Output` `TaskParameter` "ValueSetByTask" olan bir öğe verin.
 
 ```xml
 <CreateProperty Value="true">
@@ -79,8 +79,9 @@ Bu kod, hedefin yürütülse de atlansa da atlanmasa da "123" değerine sahip ol
 </CreateProperty>
 ```
 
-Bu kod CompileRan özelliğini oluşturur ve yalnızca hedef `true` yürütülürse değerini verir. Hedef atlanırsa CompileRan oluşturulmaz.
+Bu kod, Compilera özelliğini oluşturur ve `true` yalnızca hedef yürütülürse değeri verir. Hedef atlandıysa, Compilera oluşturulmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Targets](../msbuild/msbuild-targets.md)
+- [Nasıl Yapılır: Artımlı Olarak Derleme](../msbuild/how-to-build-incrementally.md)
