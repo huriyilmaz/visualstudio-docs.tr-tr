@@ -6,16 +6,16 @@ ms.author: ghogen
 ms.date: 03/15/2021
 ms.technology: vs-container-tools
 ms.topic: conceptual
-ms.openlocfilehash: 80b7cbbb70cea593d770017bb50f8a69eeb13c38
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 3b5ed42542348d0697160c01837d4daf75079908
+ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631790"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "130211668"
 ---
 # <a name="how-visual-studio-builds-containerized-apps"></a>Visual Studio’nun kapsayıcılı uygulama oluşturma şekli
 
-Visual Studio IDE'den derleme yapmak veya bir komut satırı derlemesi oluşturmak Visual Studio projelerinizi derlemek için Dockerfile'ı nasıl kullandığını bilmek gerekir.  Performans nedenleriyle, Visual Studio uygulamalar için özel bir işlem izlersiniz. Dockerfile Visual Studio ı değiştirerek derleme işleminizi özelleştirerek projelerinizi nasıl derlemeniz konusunda özellikle önemlidir.
+Visual Studio IDE'den derleme veya komut satırı derlemesi kurmadan önce, projelerinizi derlemek için Visual Studio Dockerfile'ı nasıl kullandığını biliyor olmak gerekir.  Performans nedenleriyle, Visual Studio uygulamalar için özel bir işlem izlersiniz. Dockerfile Visual Studio ı değiştirerek derleme işleminizi özelleştirerek projelerinizi nasıl derlemenin önemli olduğunu anlamanız özellikle önemlidir.
 
 Visual Studio Docker kapsayıcılarını kullanmayan bir proje derlemesi, yerel makinede MSBuild'i çağırır ve çıkış dosyalarını yerel çözüm klasörünüz altındaki bir klasörde (genellikle `bin` ) oluşturur. Ancak kapsayıcılı bir proje için derleme işlemi, Dockerfile'ın kapsayıcılı uygulamayı derleme yönergelerini dikkate alır. Uygulama tarafından Visual Studio Dockerfile birden çok aşamaya ayrılır. Bu işlem Docker'ın çok yönlü *derleme özelliğine* dayandırır.
 
@@ -32,7 +32,7 @@ EXPOSE 80
 EXPOSE 443
 ```
 
-Dockerfile'daki satırlar, Microsoft Container Registry'den (mcr.microsoft.com) Debian görüntüsüyle başlar ve 80 ve 443 bağlantı noktalarını ortaya çıkararak çalışma dizinini olarak ayaran bir ara görüntü `base` `/app` oluşturun.
+Dockerfile'daki satırlar Microsoft Container Registry 'den (mcr.microsoft.com) ASP.NET görüntüsüyle başlar ve 80 ve 443 bağlantı noktalarını ortaya çıkararak çalışma dizinini olarak `base` `/app` ayarlar.
 
 Sonraki aşama, `build` aşağıdaki gibi görünen aşamasıdır:
 
@@ -74,15 +74,15 @@ docker build -f Dockerfile ..
 
 ### <a name="msbuild"></a>MSBuild
 
-Visual Studio projeleri (.NET Framework 2017 Güncelleştirme 4'den önceki Visual Studio sürümleriyle oluşturulan .NET Core projeleri için) Visual Studio tarafından oluşturulan Dockerfile'lar çok yönlü Dockerfiles değildir.  Bu Dockerfile'larda yer alan adımlar kodunuzu derlemez.  Bunun yerine, Visual Studio dockerfile .NET Framework, önce projenizi derlemek için MSBuild.  Bu başarılı olduğunda, Visual Studio dockerfile'ı oluşturur ve bu da yalnızca MSBuild docker görüntüsüne kopyalar.  Kodunuzu derleme adımları Dockerfile içinde yer alamaysa da, komut .NET Framework kullanarak Dockerfiles'ı `docker build` derleyemezsiniz. Bu projeleri derlemek MSBuild için MSBuild gerekir.
+.NET Framework projeleri için Visual Studio tarafından oluşturulan Dockerfile'lar (ve Visual Studio 2017 Güncelleştirme 4'den önceki Visual Studio sürümleriyle oluşturulan .NET Core projeleri için) çok yönlü Dockerfiles değildir.  Bu Dockerfile'larda yer alan adımlar kodunuzu derlemez.  Bunun yerine, Visual Studio dockerfile .NET Framework, önce projenizi derlemek için MSBuild.  Bu başarılı olduğunda, Visual Studio dockerfile'ı oluşturur ve bu da yalnızca MSBuild docker görüntüsüne kopyalar.  Kodunuzu derleme adımları Dockerfile içinde yer alamaysa da, komut .NET Framework kullanarak dockerfile'lar `docker build` derleyemezsiniz. Bu projeleri derlemek MSBuild için MSBuild gerekir.
 
-Tek docker kapsayıcı projesine bir görüntü oluşturmak için MSBuild komutunu `/t:ContainerBuild` kullanabilirsiniz. Örnek:
+Tek docker kapsayıcı projesine bir görüntü oluşturmak için MSBuild komutunu `/t:ContainerBuild` kullanabilirsiniz. Örneğin:
 
 ```cmd
 MSBuild MyProject.csproj /t:ContainerBuild /p:Configuration=Release
 ```
 
-Çözümlerinizi IDE'den derlemek için **Çıkış** penceresinde gördüğünüze benzer bir Visual Studio görebilirsiniz. Her zaman kullanın çünkü çok Visual Studio derleme iyileştirmesi kullandığı durumlarda Hata Ayıklama yapılandırması oluşturma sonuçları `/p:Configuration=Release` beklendiği gibi  olmayacaktır. Bkz. [Hata Ayıklama.](#debugging)
+Çözümlerinizi IDE'den derlemek için **Çıkış** penceresinde gördüğünüze benzer bir Visual Studio görebilirsiniz. Her zaman kullanın çünkü çok Visual Studio derleme iyileştirmesi kullandığı durumlarda Hata Ayıklama yapılandırması oluşturma sonuçları `/p:Configuration=Release` beklendiği gibi olabilir.  Bkz. [Hata Ayıklama.](#debugging)
 
 Docker Compose projesini kullanıyorsanız, görüntü oluşturmak için şu komutu kullanın:
 
@@ -90,9 +90,9 @@ Docker Compose projesini kullanıyorsanız, görüntü oluşturmak için şu kom
 msbuild /p:SolutionPath=<solution-name>.sln /p:Configuration=Release docker-compose.dcproj
 ```
 
-## <a name="project-warmup"></a>Project sıcaklığı
+## <a name="project-warmup"></a>Project için
 
-*Project bir* proje için Docker profili seçildiğinde (bir proje yüklendiğinde veya Docker desteği ekleniyorsa) sonraki çalıştırmaların performansını geliştirmek için 2018'de 100'e kadar olan bir dizi adımı ifade eder (**F5** veya **Ctrl** + **F5**). Bu, Araçlar Seçenekler Kapsayıcı **Araçları**  >    >  **altında yapılandırılabilir.** Arka planda çalıştıracak görevler şu şekildedir:
+*Project,* sonraki çalıştırmaların performansını geliştirmek için bir proje için Docker profili seçildiğinde (yani bir proje yüklendiğinde veya Docker desteği ekleniyorsa) bir dizi adımı ifade eder (**F5** veya **Ctrl** + **F5**). Bu, Araçlar Seçenekler Kapsayıcı **Araçları**  >    >  **altında yapılandırılabilir.** Arka planda çalıştıracak görevler şu şekildedir:
 
 - Docker Desktop'ın yüklü ve çalışıyor olup olduğunu kontrol edin.
 - Docker Desktop'ın projeyle aynı işletim sistemine ayarlanmış olduğundan emin olmak.
@@ -103,13 +103,13 @@ Isınma yalnızca Hızlı **modda** gerçekleşecektir, bu nedenle çalışan ka
 
 ## <a name="volume-mapping"></a>Birim eşleme
 
-Hata ayıklamanın kapsayıcılarda çalışması için Visual Studio makineden hata ayıklayıcıyı eşlemek ve NuGet klasörlerini eşlemek için birim eşlemesi kullanır. Birim eşlemesi buradaki Docker belgelerinde [açıklanmıştır.](https://docs.docker.com/storage/volumes/) Kapsayıcılar penceresini kullanarak kapsayıcının birim eşlemelerini görüntü [Visual Studio.](view-and-diagnose-containers.md)
+Hata ayıklamanın kapsayıcılarda çalışması için Visual Studio makinedeki hata ayıklayıcıyı eşlemek ve NuGet klasörlerini eşlemek için birim eşlemesi kullanır. Birim eşlemesi buradaki Docker belgelerinde [açıklanmıştır.](https://docs.docker.com/storage/volumes/) Kapsayıcılar penceresini kullanarak kapsayıcının birim eşlemelerini [görüntü Visual Studio.](view-and-diagnose-containers.md)
 
 Kapsayıcınıza bağlanan birimler şu şekildedir:
 
 |Birim|Description|
 |-|-|
-| **Uzaktan hata ayıklayıcı** | Proje türüne bağlı olarak kapsayıcıda hata ayıklayıcısını çalıştırmak için gereken bitleri içerir. Bu, Hata Ayıklama bölümünde daha ayrıntılı [olarak açıklanmıştır.](#debugging)|
+| **Uzaktan hata ayıklayıcı** | Proje türüne bağlı olarak kapsayıcıda hata ayıklayıcısını çalıştırmak için gereken bitleri içerir. Bu, Hata Ayıklama bölümünde daha [ayrıntılı olarak açıklanmıştır.](#debugging)|
 | **Uygulama klasörü** | Dockerfile dosyasının bulunduğu proje klasörünü içerir.|
 | **Kaynak klasör** | Docker komutlarına geçirilen derleme bağlamını içerir.|
 | **NuGet klasörlerini oluşturma** | Projedeki NuGet *\{ proje}.csproj.nuget.g.props* dosyasından okunan uygulama paketlerini ve geri dönüş klasörlerini içerir. |
@@ -118,7 +118,7 @@ Temel ASP.NET web uygulamaları için SSL sertifikası ve kullanıcı gizli dizi
 
 ## <a name="ssl-enabled-aspnet-core-apps"></a>SSL özellikli ASP.NET Core uygulamalar
 
-Visual Studio'daki kapsayıcı araçları, ssl özellikli bir ASP.NET çekirdek uygulamasında, kapsayıcılar olmadan çalışması için beklediğiniz gibi geliştirme sertifikasıyla hata ayıklamayı destekler. Bunu yapmak için Visual Studio, sertifikayı dışarı aktarmaya ve kapsayıcının kullanılabilir olmasını silen birkaç adım daha ekler. Kapsayıcıda hata Visual Studio sizin için işleyen akış şu şekildedir:
+Visual Studio kapsayıcı araçları, ssl özellikli bir ASP.NET çekirdek uygulamasında geliştirme sertifikasıyla hata ayıklamayı destekler. Bu, kapsayıcılar olmadan da çalışır durumda olmasını beklediğiniz şekildedir. Bunu yapmak için Visual Studio, sertifikayı dışarı aktarmaya ve kapsayıcının kullanılabilir olmasını silen birkaç adım daha ekler. Kapsayıcıda hata Visual Studio sizin için işleyen akış şu şekildedir:
 
 1. Yerel geliştirme sertifikasının araç aracılığıyla konak makinede mevcut ve güvenilir olduğunu `dev-certs` sağlar.
 2. Sertifikayı bu uygulama için kullanıcı gizli dizileri depolamada depolanan güvenli bir parolayla %APPDATA%\ASP.NET\Https klasörüne dışarı aktarıyor.
@@ -127,7 +127,7 @@ Visual Studio'daki kapsayıcı araçları, ssl özellikli bir ASP.NET çekirdek 
    - *%APPDATA%\Microsoft\UserSecrets*
    - *%APPDATA%\ASP.NET\Https*
 
-ASP.NET Core *Https* klasörünün altındaki derleme adıyla eşleşen bir sertifikayı aramanın nedeni bu yoldeki kapsayıcıyla eşlenmiş olmasıdır. Sertifika yolu ve parola alternatif olarak ortam değişkenleri (ve ) kullanılarak veya kullanıcı gizli `ASPNETCORE_Kestrel__Certificates__Default__Path` `ASPNETCORE_Kestrel__Certificates__Default__Password` dizileri json dosyasında tanımlanabilir, örneğin:
+ASP.NET Core *Https* klasörünün altındaki derleme adıyla eşleşen bir sertifikayı aramanın nedeni, bu yoldeki kapsayıcıyla eşlenmiş olmasıdır. Sertifika yolu ve parola alternatif olarak ortam değişkenleri (ve ) kullanılarak veya kullanıcı gizli `ASPNETCORE_Kestrel__Certificates__Default__Path` `ASPNETCORE_Kestrel__Certificates__Default__Password` dizileri json dosyasında tanımlanabilir, örneğin:
 
 ```json
 {
@@ -144,13 +144,13 @@ ASP.NET Core *Https* klasörünün altındaki derleme adıyla eşleşen bir sert
 
 Yapılandırmanız hem kapsayıcılı hem de kapsayıcılı olmayan derlemeleri destekliyorsa, yollar kapsayıcı ortamına özgü olduğundan ortam değişkenlerini kullanmalıdır.
 
-Kapsayıcılarda uygulamalarınızı kullanarak SSL ASP.NET Core daha fazla bilgi için bkz. [HTTPS üzerinden Docker ile](/aspnet/core/security/docker-https)ASP.NET Core görüntüleri barındırma).
+Kapsayıcılarda uygulamalarla SSL kullanma hakkında ASP.NET Core için bkz. [HTTPS üzerinden Docker ile](/aspnet/core/security/docker-https)ASP.NET Core görüntüleri barındırma ).
 
 ## <a name="debugging"></a>Hata Ayıklama
 
-Hata ayıklama **yapılandırmasında derleme** sırasında, kapsayıcılı projeler Visual Studio derleme işleminin performansına yardımcı olacak çeşitli iyileştirmeler vardır. Kapsayıcılı uygulamalar için derleme işlemi, Dockerfile dosyasında özetlenen adımları takip etmek kadar kolay değildir. Kapsayıcıda bina, yerel makinede yapılandan çok daha yavaştır.  Bu nedenle Hata Ayıklama  yapılandırmasında derleme Visual Studio projelerinizi yerel makinede oluşturur ve ardından birim bağlamayı kullanarak çıkış klasörünü kapsayıcıyla paylaştırır. Bu iyileştirme etkin bir derlemeye Hızlı mod *derlemesi* denir.
+Hata ayıklama **yapılandırmasında derleme** sırasında, kapsayıcılı projeler Visual Studio derleme işleminin performansına yardımcı olacak çeşitli iyileştirmeler vardır. Kapsayıcılı uygulamalar için derleme işlemi, Dockerfile'da açıklanan adımları takip etmek kadar kolay değildir. Kapsayıcıda bina, yerel makinede yapılandan çok daha yavaştır.  Bu nedenle Hata Ayıklama  yapılandırmasında derleme Visual Studio projelerinizi yerel makinede oluşturur ve ardından birim bağlamayı kullanarak çıkış klasörünü kapsayıcıyla paylaştırır. Bu iyileştirme etkin bir derlemeye Hızlı mod *derlemesi* denir.
 
-Hızlı **modda,** Visual Studio `docker build` Docker'a yalnızca aşamayı oluşturmasını söyleyen bir bağımsız değişkenle `base` çağrılar yapar.  Visual Studio, Dockerfile'ın içeriğine bakılmaksızın sürecin geri kalanını halleder. Bu nedenle, kapsayıcı ortamını özelleştirmek veya ek bağımlılıklar yüklemek gibi Dockerfile dosyanızı değiştirerek değişikliklerinizi ilk aşamaya koymanız gerekir.  Dockerfile'ın , veya aşamalarına `build` `publish` yerleştirilen özel adımlar `final` yürütülmez.
+Hızlı **modda,** Visual Studio `docker build` Docker'a yalnızca aşamayı oluşturmasını söyleyen bir bağımsız değişkenle `base` çağrılar yapar.  Visual Studio Dockerfile'ın içeriğine bakılmaksızın sürecin geri kalanını işlemektedir. Bu nedenle, kapsayıcı ortamını özelleştirmek veya ek bağımlılıklar yüklemek gibi Dockerfile dosyanızı değiştirerek değişikliklerinizi ilk aşamaya koymanız gerekir.  Dockerfile'ın , veya aşamalarına `build` `publish` yerleştirilen özel adımlar `final` yürütülmez.
 
 Bu performans iyileştirmesi yalnızca Hata Ayıklama yapılandırmasında **derlemeniz sırasında** gerçekleşir. Yayın **yapılandırmasında** derleme, Dockerfile dosyasında belirtildiği gibi kapsayıcıda gerçekleşir.
 
@@ -170,15 +170,15 @@ Hata ayıklayıcısını çalıştırma işlemi, proje türüne ve kapsayıcı i
 
 |Senaryo|Hata ayıklayıcı işlemi|
 |-|-|
-| **.NET Core uygulamaları (Linux kapsayıcıları)**| Visual Studio kapsayıcıya indirilir ve eşler, ardından programınız ve bağımsız değişkenleriniz (yani) ile çağrılır ve ardından hata ayıklayıcı işleme `vsdbg` `dotnet webapp.dll` iliştirilir. |
+| **.NET Core uygulamaları (Linux kapsayıcıları)**| Visual Studio kapsayıcıya indirilir ve eşler, ardından programınız ve bağımsız değişkenleriniz (yani) ile çağrılır ve hata ayıklayıcı `vsdbg` `dotnet webapp.dll` işleme iliştirilir. |
 | **.NET Core uygulamaları (Windows kapsayıcıları)**| Visual Studio kapsayıcıyı kullanır ve kapsayıcıyla eşler, giriş noktası olarak çalıştırır ve Visual Studio bağlanarak `onecoremsvsmon` programınıza bağlar. Bu, normalde başka bir bilgisayarda veya sanal makinede uzaktan hata ayıklamayı ayarlamaya benzer.|
-| **.NET Framework uygulamaları kullanma** | Visual Studio kapsayıcıyı kullanır ve kapsayıcıyla eşler, kapsayıcıya bağlanacak Visual Studio bir parçası olarak çalıştırır ve `msvsmon` programınıza iliştirer.|
+| **.NET Framework uygulamaları** | Visual Studio kapsayıcıyı kullanır ve kapsayıcıyla eşler, kapsayıcıya bağlanacak Visual Studio bir parçası olarak çalıştırır ve `msvsmon` programınıza iliştirer.|
 
-hakkında daha fazla bilgi için bkz. Linux ve `vsdbg.exe` [OSX üzerinde .NET Core'un](https://github.com/Microsoft/MIEngine/wiki/Offroad-Debugging-of-.NET-Core-on-Linux---OSX-from-Visual-Studio)hata ayıklamasını Visual Studio.
+hakkında bilgi için `vsdbg.exe` bkz. [Linux ve OSX üzerinde .NET Core'un](https://github.com/Microsoft/MIEngine/wiki/Offroad-Debugging-of-.NET-Core-on-Linux---OSX-from-Visual-Studio)hata ayıklamasını Visual Studio.
 
 ## <a name="container-entry-point"></a>Kapsayıcı giriş noktası
 
-Visual Studio türüne ve kapsayıcı işletim sistemine bağlı olarak özel bir kapsayıcı giriş noktası kullanıyorsa, farklı bileşimler aşağıdaki gibidir:
+Visual Studio türüne ve kapsayıcı işletim sistemine bağlı olarak özel bir kapsayıcı giriş noktası kullanıyorsa, farklı bileşimler şu şekildedir:
 
 |Kapsayıcı türü|Giriş noktası|
 |-|-|

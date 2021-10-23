@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: f649e6c58960dc1e6d32701e54b8f3b84217e025
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 6f91e85f0a7274692168e726983fa9ae09ba9333
+ms.sourcegitcommit: 0257750be796cc46e01cebd8976f637743d29417
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129967879"
+ms.lasthandoff: 10/23/2021
+ms.locfileid: "130290791"
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio"></a>Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme
 
@@ -88,7 +88,7 @@ Visual Studio 2019 önyükleyici [Visual Studio indirmeleri sayfasından](https:
 ::: moniker range=">=vs-2022"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiyseniz ve sürümünü doğrulamak istiyorsanız, bunun nasıl yapıldığını burada bulabilirsiniz. Windows, dosya gezgini 'ni açın, önyükleyici dosyasına sağ tıklayın, **özellikler**' i seçin, **ayrıntılar** sekmesini seçin ve ardından **ürün sürümü** numarasını görüntüleyin. bu sayıyı Visual Studio bir sürümüyle eşleştirmek için, [Visual Studio 2022 yayınları](/visualstudio/releases/2022/release-notes-history) sayfasına bakın.
+>Daha önce bir önyükleyici dosyası indirdiyseniz ve sürümünü doğrulamak istiyorsanız, bunun nasıl yapıldığını burada bulabilirsiniz. Windows, dosya gezgini 'ni açın, önyükleyici dosyasına sağ tıklayın, **özellikler**' i seçin, **ayrıntılar** sekmesini seçin ve ardından **ürün sürümü** numarasını görüntüleyin. bu sayıyı Visual Studio bir sürümüyle eşleştirmek için, [Visual Studio 2022 yayınları](/visualstudio/releases/2022/release-notes) sayfasına bakın.
 
 ::: moniker-end
 
@@ -179,47 +179,47 @@ Tüm yönetici güncelleştirme parametrelerinin "Güncelleştir" bağlamında �
 
 | **Yönetici güncelleştirme parametreleri**           | **Açıklama**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--installerUpdateArgs [optional parameters]` | Bu parametre, yönetici güncelleştirme senaryolarıyla ilgili belirli parametrelerin "doğrudan geçiş dizisi" olarak çalışır. Bu amaçla etkinleştirilen isteğe bağlı parametreler şunlardır: <br/><br/> `--quiet`: Bu, yönetici güncelleştirmeleri için varsayılan deneyimdir ve bu, tamamlanma açısından burada listelenmiştir. <br/> `--passive`: Bu parametre, parametresini geçersiz kılar `--quiet` .  Kullanıcı arabiriminin etkileşimli olmayan bir şekilde görünmesine neden olur. <br/>`--norestart`: Bu parametre veya ile birlikte kullanılmalıdır ve gerekli `--quiet` `--passive` tüm yeniden başlatmaların gecikmeye neden olur. <br/>`--noWeb`: Bu parametre, Visual Studio güncelleştirmeleri için İnternet'i denetlemesini önler. <br/>`--force`: Bu parametre Visual Studio olsa bile, Visual Studio kapanmaya devam etmek zorunda. İş kaybına neden olabilir ve bu parametreyi dikkatli kullanın. Bu parametre kullanıcı bağlamında kullanılmalıdır. <br/>`--installWhileDownloading`: Bu parametre, Visual Studio paralel olarak indirip yüklemelerini sağlar. Yönetici güncelleştirmeleri için varsayılan deneyimdir ve tamlık için burada listelenmiştir. <br/>`--downloadThenInstall`: Bu parametre, Visual Studio yüklemeden önce tüm dosyaları indirmeye güç sağlar. Bu, parametresinden birbirini `--installWhileDownloading` dışlar. |
-| `--checkPendingReboot`                        | Makinede bekleyen bir yeniden başlatma varsa, hangi uygulamanın neden olduğuna bakılmaksızın güncelleştirme durdurulacak. Varsayılan değer bekleyen yeniden başlatmaları denetlemez.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `--installerUpdateArgs [optional parameters]` | Bu parametre, yönetici güncelleştirme senaryolarıyla ilgili belirli parametrelerin "doğrudan geçiş dizisi" olarak çalışır. Bu amaçla etkinleştirilen isteğe bağlı parametreler şunlardır: <br/><br/> `--quiet`: Bu, yönetici güncelleştirmeleri için varsayılan deneyimdir ve bu, tamamlanma açısından burada listelenmiştir. <br/> `--passive`: Bu parametre, parametresini geçersiz kılar `--quiet` .  Bu, Kullanıcı arabiriminin etkileşimli olmayan bir şekilde görünmesine neden olur. <br/>`--norestart`: Bu parametrenin veya ile birlikte kullanılması gerekir `--quiet` `--passive` ve gerekli yeniden başlatmaların gecikmesine neden olur. <br/>`--noWeb`: bu parametre, Visual Studio ürüne yönelik güncelleştirmeler için internet 'i denetlemesini engeller. <br/>`--force`: bu parametre, Visual Studio kullanımda olsa bile Visual Studio kapanmaya zorlar. İş kaybına neden olabileceğinden bu parametreyi dikkatli kullanın. Bu parametrenin kullanıcı bağlamında kullanılması gerekir. <br/>`--installWhileDownloading`: bu parametre, Visual Studio hem hem de ürünü paralel olarak indirip yüklemeye olanak tanır. Bu, yönetici güncelleştirmeleri için varsayılan deneyimdir ve bu, tamamlanma açısından burada listelenmiştir. <br/>`--downloadThenInstall`: bu parametre, yüklemeden önce tüm dosyaları indirmeye Visual Studio zorlar. Parametresinden birbirini dışlamalı `--installWhileDownloading` . |
+| `--checkPendingReboot`                        | Makinede hangi uygulamanın neden olmuş olabileceğinden bağımsız olarak, makinede bekleyen bir yeniden başlatma varsa bu güncelleştirme iptal edilir. Varsayılan değer, bekleyen yeniden başlatmaları denetmemelidir.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 Söz dizimi örneği: `visualstudioupdate-16.9.0to16.9.4.exe --installerUpdateArgs=--force,--noWeb --checkPendingReboot`
 
 ## <a name="list-of-workload-ids-and-component-ids"></a>İş yükü kimliklerinin ve bileşen kimliklerinin listesi
 
-Ürüne göre sıralanmış iş yükü ve bileşen Visual Studio listesi için Visual Studio iş yükü ve [bileşen kimlikleri sayfasına](workload-and-component-ids.md) bakın.
+Visual Studio ürüne göre sıralanan iş yükünün ve bileşen kimliklerinin bir listesi için, bkz. [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md) sayfası.
 
-## <a name="list-of-language-locales"></a>Dil yerellerinin listesi
+## <a name="list-of-language-locales"></a>Dil yerel ayarları listesi
 
-| **Dil yereli** | **Dil**          |
+| **Dil yerel ayarı** | **Dil**          |
 |---------------------|-----------------------|
-| Cs-cz               | Çekçe                 |
+| CS-CZ               | Çekçe                 |
 | De-de               | Almanca                |
-| En-us               | İngilizce               |
+| En-US               | İngilizce               |
 | Es-es               | İspanyolca               |
 | Fr-fr               | Fransızca                |
-| Bu-it               | İtalyanca               |
-| Ja-jp               | Japonca              |
-| Ko-kr               | Korece                |
+| BT BT               | İtalyanca               |
+| Ja-JP               | Japonca              |
+| Ko-KR               | Korece                |
 | Pl-pl               | Lehçe                |
 | Pt-br               | Portekizce - Brezilya   |
 | Ru-ru               | Rusça               |
 | Tr-tr               | Türkçe               |
 | Zh-cn               | Basitleştirilmiş Çince  |
-| Zh-tw               | Geleneksel Çince |
+| Zh-TW               | Geleneksel Çince |
 
 ## <a name="error-codes"></a>Hata kodları
 
-İşlem sonucuna bağlı olarak ortam `%ERRORLEVEL%` değişkeni aşağıdaki değerlerden biri olarak ayarlanır:
+İşlemin sonucuna bağlı olarak, `%ERRORLEVEL%` ortam değişkeni aşağıdaki değerlerden birine ayarlanır:
 
 [!INCLUDE[install-error-codes-md](includes/install-error-codes-md.md)]
 
-Her işlem, dizininde yüklemenin `%TEMP%` ilerlemesini belirten birkaç günlük dosyası üretir. Klasörü tarihe göre sırala ve sırasıyla önyükleyici, yükleyici uygulaması ve kurulum altyapısı için , ve ile `dd_bootstrapper` `dd_client` başlayan dosyaları `dd_setup` ara.
+Her işlem, `%TEMP%` dizinde yüklemenin ilerlemesini gösteren birkaç günlük dosyası oluşturur. Klasörü tarihe göre sıralayın ve `dd_bootstrapper` `dd_client` `dd_setup` Önyükleyici, yükleyici uygulaması ve kurulum altyapısı için sırasıyla,, ve ile başlayan dosyaları arayın.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama yüklemesi için komut Visual Studio örnekleri](command-line-parameter-examples.md)
+- [Visual Studio yükleme için komut satırı parametresi örnekleri](command-line-parameter-examples.md)
 - [Visual Studio’nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)
 - [Yanıt dosyası ile Visual Studio yüklemesini otomatikleştirme](automated-installation-with-response-file.md)
 - [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)

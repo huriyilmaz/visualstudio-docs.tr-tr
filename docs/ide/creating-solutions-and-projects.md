@@ -15,12 +15,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: fba43be5a5b48e39df48d7d0316dfe650e0be2f8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5d40a2d76b13517ba2fba7de807e141fe9846574
+ms.sourcegitcommit: 0257750be796cc46e01cebd8976f637743d29417
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122109454"
+ms.lasthandoff: 10/23/2021
+ms.locfileid: "130290687"
 ---
 # <a name="create-work-with-and-delete-visual-studio-projects-and-solutions"></a>Visual Studio projeleri ve çözümleri oluşturun, bunlarla çalışın ve silin
 
@@ -158,4 +158,3 @@ Windows dosya gezginine, Visual Studio Çözüm Gezgini kullanarak erişebilirsi
 - [Visual Studio filtrelenmiş çözümler](filtered-solutions.md)
 - [GitHub Microsoft 'un açık kaynak depoları](https://github.com/Microsoft)
 - [Geliştirici kodu örnekleri](https://code.msdn.microsoft.com/)
-- [Visual Studio ıde hatalarında sorun giderme kaynakları](./reference/resources-for-troubleshooting-integrated-development-environment-errors.md)

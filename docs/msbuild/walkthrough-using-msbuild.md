@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 1fdd31e296050585044186e31158f893a45b095b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: d97ac42b6df32fb045ca846295d1dfeea9ef166a
+ms.sourcegitcommit: 0257750be796cc46e01cebd8976f637743d29417
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122040066"
+ms.lasthandoff: 10/23/2021
+ms.locfileid: "130290700"
 ---
 # <a name="walkthrough-use-msbuild"></a>Adım adım kılavuz: MSBuild
 
@@ -36,17 +36,26 @@ komutlarını MSBuild veya Visual Studio Penceresinden **çalıştırabilirsiniz
 
 ::: moniker range="vs-2017"
 
-Başka bir Visual Studio zaten yüklü MSBuild. MSBuild 15'i Visual Studio olmayan bir sisteme yüklemek için Visual Studio eski indirmeler'e [gidin,](https://visualstudio.microsoft.com/vs/older-downloads/) **Visual Studio 2017'yi** genişletin ve **İndir düğmesini** seçin. Visual Studio aboneliğiniz varsa, oturum açma ve **Visual Studio 2017** için Derleme Araçları'nın en son sürümünü indirme bağlantısını bulun. Visual Studio aboneliğiniz yoksa derleme araçlarının en son sürümünü yükleyebilirsiniz. Bu sayfada, sayfanın 2019 sürümüne geçmek için sürüm seçiciyi kullanın ve yükleme yönergelerini izleyin.
+Başka bir Visual Studio zaten yüklü MSBuild. MSBuild 15'i Visual Studio olmayan bir sisteme yüklemek için Visual Studio eski indirmeler'e [gidin,](https://visualstudio.microsoft.com/vs/older-downloads/) **Visual Studio 2017'yi** genişletin ve **İndir düğmesini** seçin. Visual Studio aboneliğiniz varsa oturum açma ve Visual Studio **2017** için Derleme Araçları'nın en son sürümünü indirme bağlantısını bulun. Visual Studio aboneliğiniz yoksa derleme araçlarının en son sürümünü yükleyebilirsiniz. Bu sayfada, sayfanın 2019 sürümüne geçmek için sürüm seçiciyi kullanın ve yükleme yönergelerini izleyin.
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
-Başka bir Visual Studio zaten yüklü MSBuild. Visual Studio 2019 ve sonraki bir sürümü ile, Visual Studio klasörüne yüklenir. Windows 10 üzerinde tipik bir varsayılan yükleme MSBuild.exe, *MSBuild\Current\Bin* konumundaki yükleme klasörünün altındadır.
+::: moniker range="vs-2019"
+Başka bir Visual Studio zaten yüklü MSBuild. Visual Studio 2019 ve sonraki bir sürümü ile, Visual Studio klasörüne yüklenir. Windows 10 üzerinde tipik bir varsayılan yükleme MSBuild.exe, *MSBuild\Current\Bin konumundaki yükleme klasörünün altındadır.*
 
-MSBuild olmayan bir sisteme yüklemek için Visual Studio indirmeler'e [Visual Studio'a](https://visualstudio.microsoft.com/downloads/) gidin ve Tüm İndirmeler'e inin **ve** ardından Visual Studio **2019** için Araçlar'ı genişletin. **MSBuild içeren Visual Studio 2019** için Derleme Araçları'.NET Core SDK. [](/dotnet/core/sdk#acquiring-the-net-core-sdk)
-
-Yükleyicide, kullanmakta MSBuild iş yüklerinin seçili olduğundan emin olun ve Yükle'yi **seçin.**
+Yükleyicide, MSBuild iş yükleri için gerekli araçların seçildiğinden emin olun ve Yükle'yi **seçin.**
 
 ![Yükleme MSBuild](media/walkthrough-using-msbuild/installation-msbuild-tools.png)
+
+Bu MSBuild sahip olmayan bir sisteme yüklemek Visual Studio için Derleme Araçları'Visual Studio [2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)'a gidin veya [.NET SDK'sı yükleyin.](/dotnet/core/sdk#acquiring-the-net-sdk)
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+Başka bir Visual Studio zaten yüklü MSBuild. Visual Studio 2022 ile, Visual Studio yükleme klasörünün altına yüklenir. Windows 10 üzerinde tipik bir varsayılan yükleme MSBuild.exe, *MSBuild\Current\Bin konumundaki yükleme klasörünün altındadır.*
+
+Uygulama yükleyicisinde Visual Studio Bağımsız **Bileşenler'e gidin** ve **MSBuild.** Yükilecek diğer iş yüklerini seçtiğiniz zaman otomatik olarak seçilir.
+
+Bu MSBuild sahip olmayan bir sisteme yüklemek Visual Studio, Visual Studio [2022 RC](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022-rc)için Derleme Araçları'Visual Studio gidin. Bir diğer MSBuild [.NET SDK'sı yüklemektir.](/dotnet/core/sdk#acquiring-the-net-sdk)
 
 ::: moniker-end
 
@@ -64,7 +73,7 @@ Yükleyicide, kullanmakta MSBuild iş yüklerinin seçili olduğundan emin olun 
     Yeni **Project** kutusuna `BuildApp` yazın. Çözüm **için** bir Konum girin, örneğin *D: \\*.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üst menü çubuğundan Dosya Yeni **dosya'Project.**  >    >   Yeni Project iletişim kutusunun **sol** bölmesinde **Visual C#** Windows Desktop'ı genişletin ve Windows Forms Uygulaması  >   **(.NET Framework) öğesini seçin.** Ardından **Tamam'ı seçin.**
+    Üst menü çubuğundan Dosya Yeni **Dosya'Project.**  >    >   Yeni Project iletişim kutusunun sol **bölmesinde** **Visual C#** Windows Desktop'ı genişletin ve ardından  >  Windows Forms Uygulaması **(.NET Framework) öğesini seçin.** Ardından **Tamam'ı seçin.**
 
     **Ad** kutusuna `BuildApp` yazın. Çözüm **için** bir Konum girin, örneğin *D: \\*. Çözüm için dizin oluştur **(seçili),** Kaynak Denetimine Ekle (seçili **değil)** ve Çözüm Adı ( BuildApp ) için **varsayılan** **değerleri kabul eder.**
     ::: moniker-end
@@ -73,13 +82,13 @@ Yükleyicide, kullanmakta MSBuild iş yüklerinin seçili olduğundan emin olun 
 
 ## <a name="examine-the-project-file"></a>Proje dosyasını inceleme
 
- Önceki bölümde, bir Visual C# proje dosyası oluşturmak için Visual Studio'yu kullandınız. Proje dosyası, BuildApp **Çözüm Gezgini** proje düğümü tarafından temsil edilen dosyadır. Proje dosyasını incelemek için Visual Studio kod düzenleyicisini kullanabilirsiniz.
+ Önceki bölümde, bir Visual C# proje dosyası oluşturmak için Visual Studio'yu kullandınız. Proje dosyası BuildApp adlı **Çözüm Gezgini** proje düğümü tarafından temsil edildi. Proje dosyasını incelemek için Visual Studio kod düzenleyicisini kullanabilirsiniz.
 
 **Projeyi dosyasını incelemek için**
 
-1. Içinde **Çözüm Gezgini** proje düğümü **BuildApp 'e tıklayın.**
+1. Bu **Çözüm Gezgini,** BuildApp proje **düğümüne tıklayın.**
 
-1. Özellikler **tarayıcısında,** Dosya Project *BuildApp.csproj* olduğunu unutmayın.  Tüm proje dosyaları proj soneki *ile adlandırılmıştır.* Yeni bir proje Visual Basic proje dosyası adı *BuildApp.vbproj olur.*
+1. Özellikler **tarayıcısında,** Project **File özelliğinin** *BuildApp.csproj olduğunu unutmayın.* Tüm proje dosyaları proj soneki *ile adlandırılmıştır.* Yeni bir proje Visual Basic proje dosyası adı *BuildApp.vbproj olur.*
 
 1. Proje düğümüne yeniden sağ tıklayın ve ardından **BuildApp.csproj'u Düzenle'ye tıklayın.** 
 
@@ -97,7 +106,7 @@ Project, xml biçimli dosyalardır ve kök düğümü [Project.](../msbuild/proj
 <Project ToolsVersion="15.0"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 ```
 
-Daha yeni .NET Core (SDK stili) projelerin bir özniteliği `Sdk` vardır.
+Daha yeni .NET Core (SDK stili) projeleri bir `Sdk` özniteliğine sahiptir.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -109,14 +118,14 @@ Proje SDK stilinde bir proje yoksa, xmlns ad alanını Project belirtebilirsiniz
 MSBuild -ver
 ```
 
-Uygulama bina işi Hedef ve Görev [öğeleriyle](../msbuild/target-element-msbuild.md) [yapılır.](../msbuild/task-element-msbuild.md)
+Uygulamanın inşası, Hedef ve Görev [öğeleriyle](../msbuild/target-element-msbuild.md) [yapılır.](../msbuild/task-element-msbuild.md)
 
 - Görev, işin en küçük birimdir; başka bir deyişle yapının "atom" öğesidir. Görevler, girdileri ve çıktıları olabilen bağımsız yürütülebilir bileşenlerdir. Şu anda proje dosyasında başvurulan veya tanımlanan görev yoktur. Aşağıdaki bölümlerde proje dosyasına görevler ekleyin. Daha fazla bilgi için Görevler [konu başlığına](../msbuild/msbuild-tasks.md) bakın.
 
 - Hedef, görevlerin adlandırılmış bir dizisidir. Daha fazla bilgi için Hedefler [konu başlığına](../msbuild/msbuild-targets.md) bakın.
 - [Bu, adlandırılmış bir görev dizisi olabilir, ancak kritik olarak, yapılması veya yapılması gereken bir şeyi temsil eder, bu nedenle hedef odaklı bir şekilde tanımlanmalıdır]
 
-Varsayılan hedef proje dosyasında tanımlanmamıştır. Bunun yerine, içe aktarılan projelerde belirtilir. İçeri [Aktarma](../msbuild/import-element-msbuild.md) öğesi içeri aktarılan projeleri belirtir. Örneğin, bir C# projesinde varsayılan hedef *Microsoft.CSharp.targets dosyasından içe aktarılır.*
+Varsayılan hedef proje dosyasında tanımlanmamıştır. Bunun yerine, içe aktarılan projelerde belirtilir. İçeri [Aktarma](../msbuild/import-element-msbuild.md) öğesi, içeri aktarılan projeleri belirtir. Örneğin, bir C# projesinde varsayılan hedef *Microsoft.CSharp.targets dosyasından içe aktarılır.*
 
 ```xml
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -159,30 +168,30 @@ MSBuild, bir yapının hedeflerini izler ve her bir hedefin birden kereden fazla
 
 ## <a name="build-the-target"></a>Hedefi oluşturma
 
-Bu projeyi bir Visual Studio, tanımlandığı hedefi oluşturmaz. Bunun nedeni Visual Studio varsayılan hedefi seçmesidir. Bu, yine de içe aktarılan *.targets dosyasındaki hedeftir.*
+Bu projeyi Visual Studio derlemeyi denersiniz, tanımlandığı hedefi oluşturmaz. Bunun nedeni Visual Studio varsayılan hedefi seçmesidir. Bu, yine de içe aktarılan *.targets dosyasındaki hedeftir.*
 
-Yukarıda MSBuild HelloWorld **Geliştirici Komut İstemi** oluşturmak Visual Studio için Visual Studio hedeften aşağıdakini çalıştırın. Hedefi seçmek için -target veya -t komut satırı anahtarını kullanın.
+yukarıda tanımlanan HelloWorld hedefini derlemek için Visual Studio **Geliştirici Komut İstemi** MSBuild çalıştırın. Hedefi seçmek için-Target veya-t komut satırı anahtarını kullanın.
 
 > [!NOTE]
-> Aşağıdaki bölümlerde Geliştirici Komut İstemi  **Penceresi olarak** başvurabilirsiniz.
+> Aşağıdaki bölümlerde **komut penceresi** olarak **Geliştirici komut istemi** başvuracağız.
 
 **Hedefi oluşturmak için:**
 
-1. Komut **Penceresini açın.**
+1. **Komut penceresini** açın.
 
-   (Windows 10) Görev çubuğundaki arama kutusuna veya gibi aracın adını yazmaya `dev` `developer command prompt` başlayın. Bu, arama deseninize uyan yüklü uygulamaların listesini getirir.
+   (Windows 10) Görev çubuğundaki arama kutusuna, veya gibi aracın adını yazmaya başlayın `dev` `developer command prompt` . Bu, arama örüntüsiyle eşleşen yüklü uygulamaların bir listesini getirir.
 
-   Dosyayı el ile bulmanız gerekirse,  dosya *visualstudioLaunchDevCmd.bat\> \Common7\Tools<* klasöründe bulunur.
+   El ile bulmanız gerekiyorsa, dosya *<VisualStudio yükleme klasörü \> \Common7\Tools* klasöründe *LaunchDevCmd.bat* .
 
-2. Komut penceresinden proje dosyasını içeren klasöre (bu durumda *D:\BuildApp\BuildApp) gidin.*
+2. Komut penceresinden, proje dosyasını içeren klasöre gidin, bu durumda *D:\BuildApp\BuildApp*.
 
-3. komut anahtarıyla msbuild'i `-t:HelloWorld` çalıştırın. Bu, HelloWorld hedefini seçer ve oluşturur:
+3. MSBuild 'i komut anahtarıyla çalıştırın `-t:HelloWorld` . Bu, HelloWorld hedefini seçer ve oluşturur:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
     ```
 
-4. çıkışını **Komut penceresi.** "Hello" ve "World" satırlarını görmeniz gerekir:
+4. **Komut penceresi** çıktıyı inceleyin. "Hello" ve "World" satırlarını görmeniz gerekir:
 
     ```output
     Hello
@@ -190,7 +199,7 @@ Yukarıda MSBuild HelloWorld **Geliştirici Komut İstemi** oluşturmak Visual S
     ```
 
 > [!NOTE]
-> Bunun yerine büyük `The target "HelloWorld" does not exist in the project` olasılıkla proje dosyasını kod düzenleyicisine kaydetmeyi unuttuyabilirsiniz. Dosyayı kaydedin ve yeniden deneyin.
+> Bunun yerine, `The target "HelloWorld" does not exist in the project` büyük olasılıkla proje dosyasını kod düzenleyicisinde kaydetmeyi unuttunuz demektir. Dosyayı kaydedin ve yeniden deneyin.
 
  Kod düzenleyicisi ve komut penceresi arasında değişerek proje dosyasını değiştirebilir ve sonuçları hızlı bir şekilde görebilirsiniz.
 
@@ -215,7 +224,7 @@ Yukarıda MSBuild HelloWorld **Geliştirici Komut İstemi** oluşturmak Visual S
 <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
 ```
 
- TargetFrameworkVersion adlı özelliği tanımlar ve "v4.5" dize değerini verir.
+ TargetFrameworkVersion adlı özelliği tanımlar ve "v 4.5" dize değerini verir.
 
  Yapı özellikleri herhangi bir zamanda yeniden tanımlanabilir. Eğer
 
@@ -225,9 +234,9 @@ Yukarıda MSBuild HelloWorld **Geliştirici Komut İstemi** oluşturmak Visual S
 
  Daha sonra proje dosyasında veya proje dosyasında daha sonra içe aktarılan dosyada görünür, ardından TargetFrameworkVersion "v3.5" yeni değerini alır.
 
-## <a name="examine-a-property-value"></a>Özellik değerini inceleme
+## <a name="examine-a-property-value"></a>Özellik değerini İnceleme
 
- Bir özelliğin değerini almak için, özelliğin adı olan `PropertyName` aşağıdaki sözdizimini kullanın:
+ Bir özelliğin değerini almak için aşağıdaki sözdizimini kullanın; burada `PropertyName` özelliğin adıdır:
 
 ```xml
 $(PropertyName)
@@ -248,13 +257,13 @@ Proje dosyasındaki bazı özellikleri incelemek için şu söz dizimini kullan�
 
 1. Proje dosyasını kaydedin.
 
-1. Komut Penceresinde **şu** satırı girin ve yürütün:
+1. **Komut penceresinden** şu satırı girin ve yürütün:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
     ```
 
-1. Çıkışı inceleyin. Bu iki satırı görüyor gerekir (çıkışınız farklı olabilir):
+1. Çıkışı inceleyin. Bu iki satırı görmeniz gerekir (çıktlarınız farklılık gösterebilir):
 
     ::: moniker range="=vs-2022"
 
@@ -282,9 +291,9 @@ Proje dosyasındaki bazı özellikleri incelemek için şu söz dizimini kullan�
 
     ::: moniker-end
 
-### <a name="conditional-properties"></a>Koşullu özellikler
+### <a name="conditional-properties"></a>Koşullu Özellikler
 
-gibi birçok `Configuration` özellik koşullu olarak tanımlanır, yani özniteliği özellik `Condition` öğesinde görünür. Koşullu özellikler, yalnızca koşul "doğru" olarak değerlendirilirse tanımlanır veya yeniden tanımlanır. Tanımlanmamış özelliklere boş bir dizenin varsayılan değeri verildiğini unutmayın. Örneğin,
+Benzer birçok özellik `Configuration` koşullu olarak tanımlanmıştır, diğer bir deyişle, `Condition` özniteliği Özellik öğesinde görünür. Koşullu özellikler, yalnızca koşul "doğru" olarak değerlendirilirse tanımlanır veya yeniden tanımlanır. Tanımlanmamış özelliklere boş bir dizenin varsayılan değeri verildiğini unutmayın. Örneğin,
 
 ```xml
 <Configuration   Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -292,23 +301,23 @@ gibi birçok `Configuration` özellik koşullu olarak tanımlanır, yani öznite
 
 "Yapılandırma Özelliği henüz tanımlanmamış ise tanımlayın ve 'Hata Ayıkla' değerini verin" anlamına gelir.
 
-Neredeyse tüm MSBuild öğeleri bir Koşul özniteliğine sahiptir. Condition özniteliğini kullanma hakkında daha fazla tartışma için bkz. [Koşullar.](../msbuild/msbuild-conditions.md)
+Neredeyse tüm MSBuild öğeleri bir Koşul özniteliğine sahiptir. Koşul özniteliğini kullanma hakkında daha fazla tartışma için bkz. [koşullar](../msbuild/msbuild-conditions.md).
 
-### <a name="reserved-properties"></a>Ayrılmış özellikler
+### <a name="reserved-properties"></a>Ayrılmış Özellikler
 
-MSBuild, proje dosyası ve MSBuild ikili dosyaları hakkındaki bilgileri depolamak için bazı özellik adlarını saklar. MSBuildToolsPath ayrılmış bir özellik örneğidir. Ayrılmış özelliklere, diğer tüm özellikler gibi $ gösterimi ile başvurulur. Daha fazla bilgi için [bkz. Nasıl kullanılır: Proje](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md) dosyasının adına veya konumuna başvurun ve MSBuild iyi [bilinen özelliklere bakın.](../msbuild/msbuild-reserved-and-well-known-properties.md)
+MSBuild, proje dosyası ve MSBuild ikili dosyaları hakkındaki bilgileri depolamak için bazı özellik adlarını saklar. MSBuildToolsPath ayrılmış bir özellik örneğidir. Ayrılmış özelliklere, diğer tüm özellikler gibi $ gösterimi ile başvurulur. daha fazla bilgi için bkz. [nasıl yapılır: proje dosyasının adına veya konumuna başvurma](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md) ve [ayrılmış ve iyi bilinen özellikler MSBuild](../msbuild/msbuild-reserved-and-well-known-properties.md).
 
 ### <a name="environment-variables"></a>Ortam değişkenleri
 
-Proje dosyalarındaki ortam değişkenlerine yapı özellikleriyle aynı şekilde başvurabilirsiniz. Örneğin, proje dosyanızda PATH ortam değişkenini kullanmak için $(Yol) işaretini kullanın. Proje, ortam değişkeniyle ile aynı ada sahip bir özellik tanımı içeriyorsa projedeki özellik, ortam değişkeninin değerini geçersiz kılar. Daha fazla bilgi için, [bkz. How to: Use environment variables in a build](../msbuild/how-to-use-environment-variables-in-a-build.md).
+Proje dosyalarındaki ortam değişkenlerine yapı özellikleriyle aynı şekilde başvurabilirsiniz. Örneğin, proje dosyanızda PATH ortam değişkenini kullanmak için $(Yol) işaretini kullanın. Proje, ortam değişkeniyle ile aynı ada sahip bir özellik tanımı içeriyorsa projedeki özellik, ortam değişkeninin değerini geçersiz kılar. Daha fazla bilgi için bkz. [nasıl yapılır: bir derlemede ortam değişkenlerini kullanma](../msbuild/how-to-use-environment-variables-in-a-build.md).
 
-## <a name="set-properties-from-the-command-line"></a>Komut satırı özelliklerini ayarlama
+## <a name="set-properties-from-the-command-line"></a>Komut satırındaki Özellikleri ayarla
 
-Özellikler, -property veya -p komut satırı anahtarı kullanılarak komut satırı üzerinde tanımlanabilir. Komut satırından alınan özellik değerleri, proje dosyasında ve ortam değişkenlerinde ayarlanan özellik değerlerini geçersiz kılar.
+Özellikler,-Property veya-p komut satırı anahtarı kullanılarak komut satırında tanımlanabilir. Komut satırından alınan özellik değerleri, proje dosyasında ve ortam değişkenlerinde ayarlanan özellik değerlerini geçersiz kılar.
 
-**Komut satırına bir özellik değeri ayarlamak için:**
+**Komut satırından bir özellik değeri ayarlamak için:**
 
-1. Komut Penceresinde **şu** satırı girin ve yürütün:
+1. **Komut penceresinden** şu satırı girin ve yürütün:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld -p:Configuration=Release
@@ -324,11 +333,11 @@ MSBuild, Yapılandırma özelliğini oluşturur ve bu özelliğe "Yayın" değer
 
 ## <a name="special-characters"></a>Özel karakterler
 
-Belirli karakterlerin MSBuild proje dosyalarında özel anlamı vardır. Bu karakterler örnekleri noktalı virgülleri (;) ve yıldız işaretlerini (*) içerir. Bu özel karakterleri bir proje dosyasında değişmez değer olarak kullanmak için , karakterin ASCII onaltılık değerini temsil eden % söz dizimi kullanılarak \<xx> \<xx> belirtilmelidir.
+Belirli karakterlerin MSBuild proje dosyalarında özel anlamı vardır. Bu karakterler örnekleri noktalı virgülleri (;) ve yıldız işaretlerini (*) içerir. Bu özel karakterleri bir proje dosyasında değişmez değer olarak kullanmak için, \<xx> \<xx> karakterin ASCII onaltılık değerini temsil eden% sözdizimi kullanılarak belirtilmelidir.
 
 İleti görevini, Yapılandırma özelliğinin değerini daha okunabilir yapmak için özel karakterlerle gösterecek şekilde değiştirin.
 
-**İleti görevsinde özel karakterler kullanmak için:**
+**Ileti görevinde özel karakterler kullanmak için:**
 
 1. Kod düzenleyicisinden her iki İleti görevini şu satır ile değiştirin:
 
@@ -338,7 +347,7 @@ Belirli karakterlerin MSBuild proje dosyalarında özel anlamı vardır. Bu kara
 
 1. Proje dosyasını kaydedin.
 
-1. Komut Penceresinde **şu** satırı girin ve yürütün:
+1. **Komut penceresinden** şu satırı girin ve yürütün:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -350,7 +359,7 @@ Belirli karakterlerin MSBuild proje dosyalarında özel anlamı vardır. Bu kara
     $(Configuration) is "Debug"
     ```
 
-Daha fazla bilgi için [bkz. MSBuild karakterleri.](../msbuild/msbuild-special-characters.md)
+daha fazla bilgi için bkz. [MSBuild özel karakterler](../msbuild/msbuild-special-characters.md).
 
 ## <a name="build-items"></a>Derleme öğeleri
 
@@ -365,7 +374,7 @@ Tüm öğeler ItemGroup öğelerinin alt öğeleridir. Öğe adı alt öğenin a
 </ItemGroup>
 ```
 
-iki öğe içeren bir öğe grubunu tanımlar. Derleme öğe türünün iki değeri vardır: *Program.cs* ve *Properties\AssemblyInfo.cs*.
+iki öğe içeren bir öğe grubunu tanımlar. Öğe türü derlemesi iki değere sahiptir: *program. cs* ve *Properties\AssemblyInfo.cs*.
 
 Aşağıdaki kod, virgülle ayrılmış şekilde her iki dosyayı tek bir Dahil Etme özniteliğinde bildirerek aynı öğe türünü oluşturur.
 
@@ -375,12 +384,12 @@ Aşağıdaki kod, virgülle ayrılmış şekilde her iki dosyayı tek bir Dahil 
 </ItemGroup>
 ```
 
-Daha fazla bilgi için bkz. [Öğeler.](../msbuild/msbuild-items.md)
+Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).
 
 > [!NOTE]
-> Dosya yolları, proje dosyası içe aktarılan bir proje MSBuild bile dosya yollarını içeren klasöre göredir. Bunun için import ve [UsingTask](usingtask-element-msbuild.md) öğelerini kullanma gibi [bazı](import-element-msbuild.md) özel durumlar vardır.
+> dosya yolları, proje dosyası içeri aktarılmış bir proje dosyası olsa bile, MSBuild proje dosyasını içeren klasöre görelidir. Bunun için, [Import](import-element-msbuild.md) ve [UsingTask](usingtask-element-msbuild.md) öğelerini kullanırken olduğu gibi birkaç istisna vardır.
 
-## <a name="examine-item-type-values"></a>Öğe türü değerlerini inceleme
+## <a name="examine-item-type-values"></a>Öğe türü değerlerini İncele
 
  Bir öğe türünün değerlerini almak için, ItemType'ın öğe türünün adı olduğu aşağıdaki söz dizimini kullanın:
 
@@ -402,7 +411,7 @@ Proje dosyasındaki Derleme öğe türünü incelemek için şu söz dizimini ku
 
 1. Proje dosyasını kaydedin.
 
-1. Komut Penceresinde **şu** satırı girin ve yürütün:
+1. **Komut penceresinden** şu satırı girin ve yürütün:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -434,7 +443,7 @@ Her satırda bir tane Derleme öğesi görüntülemek için taşıma dönüşler
 
 2. Proje dosyasını kaydedin.
 
-3. Komut Penceresinde **şu** satırı girin ve yürütün:
+3. **Komut penceresinden** şu satırı girin ve yürütün:
 
     ```cmd
     msbuild buildapp.csproj -t:HelloWorld
@@ -451,9 +460,9 @@ Her satırda bir tane Derleme öğesi görüntülemek için taşıma dönüşler
     Properties\Settings.Designer.cs
     ```
 
-### <a name="include-exclude-and-wildcards"></a>Dahil, Dışla ve joker karakterler
+### <a name="include-exclude-and-wildcards"></a>Dahil etme, dışlama ve joker karakterler
 
- Öğe türüne öğe eklemek için Include özniteliğiyle "*", " " " ve "?" joker \* \* karakterlerini kullanabilirsiniz. Örneğin,
+ \* \* Öğe türüne öğe eklemek için Include özniteliğiyle birlikte "*", "" ve "?" joker karakterlerini kullanabilirsiniz. Örneğin,
 
 ```xml
 <Photos Include="images\*.jpeg" />

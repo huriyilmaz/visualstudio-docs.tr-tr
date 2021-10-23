@@ -1,6 +1,6 @@
 ---
-title: Dinamik yeniden yükleme ile test yürütmesi
-description: Visual Studio 'de test Gezgini ile Hot Reload 'i nasıl kullanacağınızı öğrenin. Bu konu, dinamik olarak yeniden yüklenmiş test yürütmenin nasıl etkinleştirileceğini ve nerede desteklendiğini ve ne zaman beklendiğini anlatmaktadır.
+title: Çalışırken Yeniden Yükleme ile Yürütmeyi Test Çalışırken Yeniden Yükleme
+description: Visual Studio'da Test Gezgini ile sık Visual Studio. Bu konu, etkin yeniden yüklenen test yürütmeyi etkinleştirmeyi, nerede destekleniyorsa ve kullanırken neler beklemeniz gerekir? konusunu kapsar.
 ms.date: 10/15/2021
 ms.topic: how-to
 author: vritant24
@@ -10,61 +10,61 @@ ms.technology: vs-ide-test
 ms.workload:
 - VB
 - CSharp
-ms.openlocfilehash: 920c11d759ef73d8a9c83053120a1cbf5ca6201b
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
+ms.openlocfilehash: 358f55acf7bc54059a2f21624b26c45021815c64
+ms.sourcegitcommit: 0257750be796cc46e01cebd8976f637743d29417
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130212817"
+ms.lasthandoff: 10/23/2021
+ms.locfileid: "130290609"
 ---
-# <a name="test-execution-with-hot-reload"></a>Dinamik yeniden yükleme ile test yürütmesi
+# <a name="test-execution-with-hot-reload"></a>Çalışırken Yeniden Yükleme ile Yürütmeyi Test Çalışırken Yeniden Yükleme
 
-Visual Studio test çalıştırmaları, testlerinizi yürütmek için [test platformunu](https://github.com/microsoft/vstest/) kullanmadan önce diskteki ikilileri güncelleştirmek üzere projeyi oluşturmayı içerir. Visual Studio içindeki derleme süresi, kodda yapılan [değişikliklerin türüne](https://github.com/dotnet/roslyn/blob/296e0fada42f241d338b169c3c6c6189101ef0b7/docs/wiki/EnC-Supported-Edits.md) göre değişiklik gösterebilir. Daha büyük çözümler için, derlemeler Test çalıştırmasının en pahalı parçası olabilir. Visual Studio 2022 ve sonrasında, dinamik yeniden yükleme ile test yürütmesi, desteklenen senaryolar için yapıları atlayarak test yürütmeyi hızlandırmak için etkinleştirilebilir.
+Test çalıştırmaları Visual Studio testlerinizi yürütmek için [Test](https://github.com/microsoft/vstest/) Platformunu kullanmadan önce diskte ikili dosyaları güncelleştirmek için projeyi oluşturmanızı içerir. Derlemenin içindeki Visual Studio, kodda yapılan [değişikliklerin türüne](https://github.com/dotnet/roslyn/blob/296e0fada42f241d338b169c3c6c6189101ef0b7/docs/wiki/EnC-Supported-Edits.md) bağlı olarak değişebilir. Daha büyük çözümler için derlemeler test çalıştırması için en pahalı bölüm olabilir. 2022 Visual Studio sonraki bir senaryoda, desteklenen senaryolar için derlemeleri atlayarak test yürütmeyi hızlandırmak için, etkin yeniden yükleme ile test yürütme etkinleştirilebilir.
 
 ## <a name="what-is-supported"></a>Desteklenen nedir?
-- .NET 6,0 ve üstünü hedefleyen C# ve VB projeleri
-- Hata ayıklama yapılandırması için oluşturulan test projeleri
-- Visual Studio 2022 ve üzeri
+- .NET 6.0 ve üstlerini hedef alan C# ve VB projeleri
+- DEBUG yapılandırması için yerleşik test projeleri
+- Visual Studio 2022 ve üzerinde
 
-## <a name="enable-test-execution-with-hot-reload"></a>Dinamik yeniden yükleme ile test yürütmeyi etkinleştir
-Bu özelliği   >    >  **, .net 6 ve üzeri hedeflenen C# ve vb test projeleri için test seçenekleri "(deneysel) etkin yeniden yüklenmiş test çalıştırmalarını etkinleştir ' i** seçerek etkinleştirin.
-![Visul Studio test seçenekleri sayfasındaki etkin yeniden yüklenmiş test çalıştırmalarını etkinleştir düğmesinin ekran görüntüsü. Bu seçildiğinde, testlerin yürütülmesi desteklenen senaryolar için sık yeniden yükleme kullanır](./media/test-execution-hot-reload-option.png)
+## <a name="enable-test-execution-with-hot-reload"></a>Çalışırken Yeniden Yükleme ile Test Yürütmeyi Etkinleştirme
+  >    >  **"(Deneysel) .NET 6** ve üstlerini hedef alan C# ve VB test projeleri için Test Seçenekleri "(Deneysel) Etkin Yeniden Yüklenen Test Çalıştırmalarını Etkinleştir" seçeneklerini kullanarak bu özelliği etkinleştirin.
+![Test Seçenekleri sayfasındaki Etkin Yeniden Yüklenen Test Çalıştırmalarını Etkinleştir düğmesinin Visual Studio görüntüsü. Bu seçildiğinde, testler yürütmesi desteklenen senaryolar için hot reload kullanır](./media/test-execution-hot-reload-option.png)
 
-## <a name="why-is-it-experimental"></a>Neden deneysel?
-Bu, kod doğrulama için yaygın olarak kullanılan bir yolu değiştirdiğimiz test yürütmesinin yeni bir yoludur. Ayrıca, kullanıcılardan daha fazla geri bildirim aldığımızda bu özelliğin etrafındaki Kullanıcı deneyimini de bekletireceğiz. Bu iki nedenle, şu anda bu özelliği "deneysel" olarak etiketliyoruz.
+## <a name="why-is-it-experimental"></a>Neden Deneyseldir?
+Bu, yaygın olarak kullanılan kod doğrulama yolunu değiştirerek test yürütmenin yeni bir yoludur. Ayrıca kullanıcılardan daha fazla geri bildirim aldıklarından bu özellikle ilgili kullanıcı deneyiminin değişmesini bekliyoruz. Bu iki nedenle bu özelliği şu anda "deneysel" olarak etiketlemiştik.
 
 ## <a name="how-it-works"></a>Nasıl çalışır?
-Seçenek etkinleştirildikten sonra test Gezgini, mümkün olduğunda otomatik olarak test yürütmesi kullanır. Etkin bir yeniden yükleme mümkün değilse, testlerin oluşturulması ve çalıştırılması için normal davranışa geri döner. Testleri çalıştıran bir kullanıcı olarak, iş akışınızda herhangi bir değişiklik yapmanız gerekmez (diğer bir deyişle, kodu düzenlemeye ve testleri çalıştırmaya devam edebilirsiniz).
+Seçenek etkinleştirildikten sonra, Test Gezgini mümkün olduğunda test yürütmeyi otomatik olarak etkin yeniden yükleme ile kullanır. Sık sık yeniden yükleme yapılamayacaksa, testlerin yapılma ve çalıştırmanın normal davranışına geri döner. Testleri çalıştıran bir kullanıcı olarak iş akışınız üzerinde herhangi bir değişiklik yapmak zorunda olmazsınız (yani kodu düzenlemeye ve testleri çalıştırmaya devam edebilirsiniz).
 
-Bu arada, yapılan değişikliklerin belirlenmesi için [çalışma zamanında C#/vb kodunu düzenlemeye yönelik yeni kullanıma sunulan etkin yeniden yükleme deneyiminde](https://devblogs.microsoft.com/dotnet/introducing-net-hot-reload/) aynı [Düzenle ve devam et](../debugger/edit-and-continue.md) altyapısını kullanıyoruz. Bu nedenle, yalnızca bir "Rude düzenleme" olmadığında, bu durumda testlerinizi yürütmeden önce testlerinizi oluşturmaya geri dönediğimiz bir şekilde yeniden yükleme yaptık. Desteklenen düzenlemeler hakkında daha fazla ayrıntı için [Düzenle ve devam et belgelerini](https://github.com/dotnet/roslyn/blob/296e0fada42f241d338b169c3c6c6189101ef0b7/docs/wiki/EnC-Supported-Edits.md) okuyun
+Daha sonra, yapılan değişiklikleri [](../debugger/edit-and-continue.md) belirlemek için çalışma zamanında [C#/VB](https://devblogs.microsoft.com/dotnet/introducing-net-hot-reload/) kodunu düzenlemeye Çalışırken Yeniden Yükleme yeni yayınlanan Çalışırken Yeniden Yükleme düzenle ve Devam Edin altyapısını kullanıyoruz. Bu nedenle, yalnızca "kaba düzenlemeler" olmadan yeniden yükleme gerçekleştirebilir ve bu durumda testlerinizi yürütmeden önce yeniden oluşturmamız gerekir. Desteklenen düzenlemeler hakkında daha fazla bilgi için Düzenle ve Devam [Edin belgelerini okuyun](https://github.com/dotnet/roslyn/blob/296e0fada42f241d338b169c3c6c6189101ef0b7/docs/wiki/EnC-Supported-Edits.md)
 
-## <a name="how-much-faster-will-the-test-execution-be"></a>Test yürütmesi ne kadar hızlı olacaktır?
-Bu özelliğin sizi ne kadar zaman kaydedebileceği tahmin edildiğinde yürütmeye gelen birçok değişken vardır. Örneğin:
-- Proje derlemesi ne kadar sürer.
-- Ne tür bir düzenleme yapılmıştır.
-- Dosyanın, düzenlemenin yapıldığı yere ne kadar büyük olduğu.
-- Düzenlemenin yapıldığı yer (bir yaprak projem ise).
+## <a name="how-much-faster-will-the-test-execution-be"></a>Test yürütmesi ne kadar hızlı olacak?
+Bu özelliğin ne kadar zaman tasarrufuna sahip olduğunu tahmin etmek için birçok değişken vardır. Örneğin:
+- Proje derlemesi ne kadar sürer?
+- Ne tür bir düzenleme yapıldı?
+- Dosyanın düzenlemenin ne kadar büyük olduğu.
+- Düzenlemenin nerede yapılmış olduğu (yaprak proje olup olmadığını).
 
-Son olarak, Hız iyileştirmeleri bu belirli test çalıştırmasında gerçekleşen derleme süresi ile doğrudan ilgilidir.
+Sonuç olarak, hız geliştirmeleri doğrudan ilgili test çalıştırması sırasında meydana gelecek derleme süresiyle ilgili olur.
 
 ### <a name="notes"></a>Notlar
-- seçeneği etkinleştirdikten sonra ilk test çalıştırması veya Visual Studio açmak bir proje derlemesi olur.
-- Testler çalıştırıldığında düzenleyicideki dosyalar kaydedilemez. Bunları çözümlemek ve iade etmeden önce, tam derleme yaptığınızdan emin olun (Ctrl + Shift + B).
-- Etkin yeniden yüklenmiş test yürütmesi gerçekleştiğinde diskteki ikili dosyalar güncellenmez.
-- Dinamik yeniden yüklenmiş test yürütmesi, test Gezgini 'nde **"test**  >  **çalıştırması tüm testler**", "**görünümdeki tüm Testleri Çalıştır**" ile çalışmaz ve Çözüm Gezgini çözüm düğümünden **Tüm Testleri Çalıştır** ile birlikte çalışır. Bu özellik, şu anda çözümün tamamını oluşturmayı garanti ettiğinden, bu komutlarla birlikte çalışmaz.
-- Desteklenmeyen hedef çerçeveleri olan testler (.NET 6,0 ' den düşük) çalıştırıldığında bir proje derlemesi oluşur.
-- Diskte bulunan ve test Gezgini 'nin gösterdiği herhangi bir tutarsızlık görürseniz, lütfen **CTRL + SHIFT + B** kullanarak bir çözüm/proje derlemesi değerlendirin ve ardından testleri çalıştırın. Herhangi bir açık derleme, dinamik yeniden yükleme testi sonuçlarını düzenli tam yapı testi sonuçlarıyla değiştirir.
+- seçeneği etkinleştirdikten veya bir proje derlemesi Visual Studio ilk test çalıştırması.
+- Testler çalıştırıldıklarında düzenleyicide dosyalar kaydedilemiyor olabilir. Bu sorunları çözmek ve iade etmek için tam derlemeyi (Ctrl+Shift+B) tamamlayasınız.
+- Sık sık yeniden yüklenen test yürütmesi oluştuğunda diskte ikili dosyalar güncelleştirilmez.
+- Sık yüklenmiş test yürütmesi, Test Gezgini'nde "**Test** Çalıştırma Tüm Testleri ", " Görünümde Tüm Testleri Çalıştır" ile çalışmıyor ve test gezgininde çözüm düğümünden Tüm Testleri  >  Çalıştır ile Çözüm Gezgini.  Özellik, şu anda çözümün tamamının üretile bir bütün olduğunu garantileyene kadar bu komutlarla birlikte çalışmaz.
+- Desteklenmeyen hedef çerçeveler (.NET 6.0'dan düşük) ile testler çalıştırıldıklarında, bir proje derlemesi oluşur.
+- Diskte neler olduğu ve Test Gezgini'nin neleri göreceği arasında tutarsızlıklar görüyorsanız lütfen **Ctrl+Shift+B** tuşlarını kullanarak bir çözüm/proje derlemesi düşünün ve ardından testleri çalıştırın. Herhangi bir açık derleme, sık yapılan yeniden yükleme test sonuçlarını normal tam derleme test sonuçlarıyla değiştirir.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
-- Dinamik yeniden yükleme ile test yürütmesi aşağıdaki senaryolarda oluşmaz:
+- Sık sık yeniden yükleme ile test yürütmesi aşağıdaki senaryolarda oluşmaz:
   - Kod Kapsamı
   - Live Unit Testing
   - Profil Oluşturma
   - Hata Ayıklama
-- Yığın izlemeleri okunamaz belirteçlerin varlığı ile okunabilir olmayabilir. Bu sorun [burada](https://github.com/dotnet/runtime/issues/56335) izleniyor ve .net 7,0 ' de bir düzeltilmesi planlanmaktadır
-  - Bu durumda önerilen geçici çözüm, projenizi derleyip testi yeniden çalıştırmaya yönelik bir çözümdür.
+- Yığın izlemeleri okunamaz belirteçler olduğu için okunamaz olabilir. Bu sorun burada izlanıyor [ve](https://github.com/dotnet/runtime/issues/56335) .NET 7.0'da düzeltme yapılması planlanıyor
+  - Bu durumda önerilen geçici çözüm, projenizi derlemek ve testi yeniden çalıştırmaktır.
 
-## <a name="your-feedback-matters"></a>Geri bildiriminiz önemli
-Daha önce belirtildiği gibi, bu deneysel özelliğin tamamlanabilmesi için geri bildiriminiz gerekir. Deneyimin nasıl olması gerektiğine yönelik bir öneriniz varsa veya herhangi bir sorunla karşılaşırsanız, lütfen bize sorun bildirmek için bir dakikanızı ayırın. Yalnızca geri bildiriminiz, kritik sorunların çözümlendiğini ve gelecekteki kararların sizin girişinizi temel alarak önceliklendirildiğini güvence altına alabilir.
+## <a name="your-feedback-matters"></a>Geri bildiriminiz önemlidir
+Daha önce de olduğu gibi, bu deneysel özelliğin tamamlanması için geri bildiriminize ihtiyaç vardır. Deneyimin nasıl olması gerektiğiyle ilgili bir öneriniz varsa veya herhangi bir sorunla karşılaşırsanız lütfen sorunları bize bildirebilirsiniz. Yalnızca geri bildiriminiz sayesinde kritik sorunların çözüme kavuşturulması ve gelecekteki kararların girişe göre önceliklendirmesi sağlandı.
 
-bize ulaşmak için lütfen [Visual Studio geri bildirim mekanizmasını](https://developercommunity.visualstudio.com/home)kullanın.
+Bize ulaşmak için lütfen geri [bildirim Visual Studio kullanın.](https://developercommunity.visualstudio.com/home)

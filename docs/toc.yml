@@ -1424,20 +1424,20 @@
           href: ide/dotfuscator/capabilities.md
         - name: Dotfuscator Community’yi yükleme
           href: ide/dotfuscator/install.md
-        - name: Dotfuscator Community Kaydet
+        - name: Dotfuscator Community
           href: ide/dotfuscator/register.md
         - name: Dotfuscator Community’yi yükseltme
           href: ide/dotfuscator/upgrades.md
-        - name: dotfuscator Community 5 ' ten yükseltme
+        - name: Dotfuscator 5'Community yükseltme
           href: ide/dotfuscator/upgrade-from-5.md
 - name: Kaynaklar
   expanded: true
   items:
-    - name: 'Visual Studio 2022: yenilikler'
+    - name: 'Visual Studio 2022: What''s new'
       href: ide/whats-new-visual-studio-2022.md
-    - name: 'Visual Studio 2019: yenilikler'
+    - name: 'Visual Studio 2019: What''s new'
       href: ide/whats-new-visual-studio-2019.md
-    - name: 'Visual Studio 2017: yenilikler'
+    - name: 'Visual Studio 2017: What''s new'
       href: ide/whats-new-visual-studio-2017.md
     - name: Docs’taki Yenilikler
       href: ide/whats-new-visual-studio-docs.md
@@ -1449,12 +1449,10 @@
       href: 'https://visualstudio.microsoft.com/license-terms/'
     - name: Destek yaşam döngüsü ve bakım
       href: /visualstudio/productinfo/vs-servicing-vs/
-    - name: Müşteri deneyimini geliştirme
+    - name: Müşteri Deneyimini Geliştirme
       href: ide/visual-studio-experience-improvement-program.md
-    - name: Visual Studio bağlı deneyimler
+    - name: Visual Studio'de bağlantılı deneyimler
       href: ide/reference/connected-experiences.md
-    - name: IDE hatalarında sorun giderme
-      href: ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md
 - name: Geri bildirim gönder
   items:
     - name: Bir özellik önerin
@@ -1465,7 +1463,7 @@
       href: ide/how-to-increase-chances-of-performance-issue-being-fixed.md
     - name: MSBuild sorunları için günlükler oluşturma
       href: ide/msbuild-logs.md
-    - name: Bir ETL izlemesi toplayın ve mini döküm oluşturun
+    - name: ETL izlemesi toplama ve minidumps oluşturma
       href: ide/report-a-problem-perfview-minidumps.md
     - name: Geliştirici Topluluğu yönergeleri
       href: ide/developer-community-guidelines.md
