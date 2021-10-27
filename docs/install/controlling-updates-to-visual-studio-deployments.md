@@ -14,12 +14,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: cfade1d9f357eda4a741726e65ca02f2b8f6ccc3
-ms.sourcegitcommit: 0257750be796cc46e01cebd8976f637743d29417
+ms.openlocfilehash: f5e602aa4b338df167308a46b4fe3ef1fee268fa
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2021
-ms.locfileid: "130290622"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130351008"
 ---
 # <a name="control-updates-to-network-based-visual-studio-deployments"></a>ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme
 

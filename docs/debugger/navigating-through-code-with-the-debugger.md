@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 10682e086b705c3e311affe417ddd670fb8eb8ba
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: f06f65afc75297ed191d6b5d1de8af26e0a78a22
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129973161"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130351184"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcı ile kod arasında gezinme
 
@@ -129,6 +129,11 @@ Hata ayıklayıcıyı, belirtilen işleve ulaşıncaya kadar çalıştırmayı s
 
 İmleç konumunu, kaynak kodu veya **çağrı yığını** penceresinde çalıştırmak için, kesmek istediğiniz çizgiyi seçin, sağ tıklayın ve **imlece Çalıştır**' ı seçin veya **CTRL** + **F10** tuşuna basın. **Imlece Çalıştır** ' ın seçilmesi geçici bir kesme noktası ayarlamaya benzer.
 
+::: moniker range=">= vs-2022"
+### <a name="force-run-to-a-cursor-location"></a>Bir imleç konumuna çalıştırmayı zorla
+
+İmleç konumunu, kaynak kodu veya **çağrı yığını** penceresinde çalıştırmak için, kesmek istediğiniz çizgiyi seçin, sağ tıklayın ve **çalıştırmayı zorla imlece** seçin. **İmlecin Imlece çalıştırılmasını zorla** seçeneği belirlendiğinde, hata ayıklayıcı imlece kod satırına ulaşıncaya kadar tüm kesme noktalarını ve ilk şans özel durumlarını atlar.
+::: moniker-end
 ### <a name="run-to-click"></a>Tıklanan Satıra Kadar Çalıştır
 
 Hata ayıklayıcıda duraklalarken, kaynak kodda veya **ayrıştırma** penceresinde bir deyimin üzerine geldiğinizde, **yürütmeyi buraya kadar Çalıştır** yeşil ok simgesine seçebilirsiniz. **Çalıştırmak Için Çalıştır ' ı** kullanmak, geçici bir kesme noktası ayarlama gereksinimini ortadan kaldırır.
@@ -138,6 +143,16 @@ Hata ayıklayıcıda duraklalarken, kaynak kodda veya **ayrıştırma** penceres
 > [!NOTE]
 > **' İ tıklama ' de başlangıç Için çalıştırın** [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] .
 
+::: moniker range=">= vs-2022"
+### <a name="force-run-to-click"></a>Çalıştırmayı zorla tıklama 
+
+Hata ayıklayıcıda duraklalarken, kaynak kodundaki bir deyimin üzerine geldiğinizde, SHIFT tuşunu basılı tutarken **yürütmeyi çalıştırmaya zorla**  (çift yeşil ok simgesi) seçeneğini belirleyebilirsiniz. bu seçeneği belirlediğinizde, uygulama Visual Studio hata ayıklayıcıyı iliştirir ve imleç konumunda duraklar ve yürütme sırasında karşılaşılan tüm kesme noktaları ve birinci şans özel durumları geçici olarak devre dışı bırakılır.
+
+![Çalıştırmayı zorla tıklama](../debugger/media/dbg_force-run-to-cursor.png "Çalıştırmayı zorla tıklama")
+
+> [!NOTE]
+> **' İ tıklamaya zorla '** dan itibaren kullanılabilir [!include[vs_dev17](../misc/includes/vs_dev17_md.md)] .
+::: moniker-end
 ### <a name="manually-break-into-code"></a>Koda el ile bölme
 
 Çalışan bir uygulamadaki bir sonraki kullanılabilir kod satırını kesmek için,   >  **Tümünü kes** Hata Ayıkla ' yı seçin veya **CTRL** + **alt** + **Kes**' e basın.

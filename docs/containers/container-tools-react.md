@@ -1,166 +1,245 @@
 ---
-title: Visual Studio ASP.NET Core ve React.js ile Kapsayıcı Araçları
+title: Visual Studio ASP.NET Core ve React.js kapsayıcı araçları
 titleSuffix: ''
 ms.custom: SEO-VS-2020
 author: ghogen
-description: Visual Studio Container Tools ve Docker ile kapsayıcılı bir React SPA uygulaması oluşturma
+description: Visual Studio kapsayıcı araçları ve docker ile kapsayıcılı React SPA uygulaması oluşturmayı öğrenin
 ms.author: ghogen
-ms.date: 02/21/2021
+ms.date: 10/25/2021
 ms.technology: vs-container-tools
 ms.topic: quickstart
-ms.openlocfilehash: 4c1bc184b2244de0babfd368e22de3bda3af808a
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 353324f24dc60db5b727eef8dc266a6dc1719876
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631761"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130351384"
 ---
-# <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Hızlı Başlangıç: Docker'ı React tek sayfalı bir uygulamayla Visual Studio
+# <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>hızlı başlangıç: Visual Studio React tek sayfalı bir uygulamayla docker kullanın
 
-Visual Studio ile, React.js tek sayfalı uygulama gibi istemci tarafı JavaScript'e sahip olanlar da dahil olmak üzere kapsayıcılı ASP.NET Core uygulamalarını kolayca derleme, hata ayıklama ve çalıştırmanın yanı sıra bunları Azure Container Registry (ACR), Docker Hub, Azure App Service veya kendi kapsayıcı kayıt defterinize yayımlayabilirsiniz. Bu makalede, ACR'de yayımlayız.
+Visual Studio ile, React.js tek sayfalı uygulama gibi istemci tarafı JavaScript ve bunları Azure Container Registry, docker Hub 'ı, Azure App Service veya kendi kapsayıcı kayıt defterinizde yayımlamak gibi kapsayıcılı ASP.NET Core uygulamalarını kolayca oluşturabilir, ayıklayabilir ve çalıştırabilirsiniz. Bu makalede, Azure Container Registry yayımlanacak.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range="vs-2017"
-* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* Visual Studio Geliştirme, **Azure** Araçları iş yükü ve/veya **.NET Core platformlar** arası geliştirme iş yükünün yüklü olduğu [2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sürümü
-* Bir Azure Azure Container Registry yayımlamak için. [Ücretsiz deneme sürümüne kaydolma.](https://azure.microsoft.com/offers/ms-azr-0044p/)
+* [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+* **Web geliştirme**, **Azure araçları** iş yükü ve/veya **.net Core platformlar arası geliştirme** iş yükü yüklü [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
+* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
 * [Node.js](https://nodejs.org/en/download/)
-* Bu Windows docker görüntülerini kullanmak için Windows 10 1809 veya sonraki bir sürümü kullanın.
+* Windows kapsayıcılar için, Windows 10 sürüm 1809 veya üzeri için, bu makalede başvurulan docker görüntülerini kullanın.
 ::: moniker-end
-::: moniker range=">=vs-2019"
-* [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* Visual Studio Geliştirme, **Azure** Araçları iş yükü ve/veya **.NET Core** platformlar arası geliştirme iş yükünün yüklü olduğu [2019](https://visualstudio.microsoft.com/downloads) sürümü
-* [.NET Core 3.1 ile geliştirme](https://dotnet.microsoft.com/download/dotnet-core/3.1) için .NET Core 3.1 Geliştirme Araçları.
-* Bir Azure Azure Container Registry yayımlamak için. [Ücretsiz deneme sürümüne kaydolma.](https://azure.microsoft.com/offers/ms-azr-0044p/)
+::: moniker range="vs-2019"
+* [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+* **Web geliştirme**, **Azure araçları** iş yükü ve/veya **.net Core platformlar arası geliştirme** iş yükü yüklü [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
+* .NET Core 3,1 ile geliştirme için [.net core 3,1 geliştirme araçları](https://dotnet.microsoft.com/download/dotnet-core/3.1) .
+* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
 * [Node.js](https://nodejs.org/en/download/)
-* Bu Windows docker görüntülerini kullanmak için Windows 10 1809 veya sonraki bir sürümü kullanın.
+* Windows kapsayıcılar için, Windows 10 sürüm 1809 veya üzeri için, bu makalede başvurulan docker görüntülerini kullanın.
+::: moniker-end
+::: moniker range=">=vs-2022"
+* [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+* **Web geliştirme**, **Azure araçları** iş yükü ve/veya **.net Core platformlar arası geliştirme** iş yükü yüklü [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/vs/preview)
+* Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
+* [Node.js](https://nodejs.org/en/download/)
+* Windows kapsayıcılar için, Windows 10 sürüm 1809 veya üzeri için, bu makalede başvurulan docker görüntülerini kullanın.
+
 ::: moniker-end
 
 ## <a name="installation-and-setup"></a>Yükleme ve kurulum
 
-Docker yüklemesi için önce [Docker Desktop for Windows: Yüklemeden önce neleri bilmek gerekir? bağlantısına bakın.](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) Ardından [Docker Desktop'ı yükleyin.](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+docker yüklemesi için önce docker Desktop 'taki bilgileri gözden geçirin [Windows: yüklemeden önce bilmeniz gerekenler](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install). Sonra [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)'ı yükler.
 
-## <a name="create-a-project-and-add-docker-support"></a>Proje oluşturma ve Docker desteği ekleme
+## <a name="create-a-project-and-add-docker-support"></a>Proje oluşturun ve Docker desteği ekleyin
 
 ::: moniker range="vs-2017"
-1. ASP.NET Core Web Uygulaması **şablonunu kullanarak yeni bir proje** oluşturun.
-1. Öğesini **React.js.** Docker Desteğini **Etkinleştir'i** seçesiniz, ancak endişelenmeyin, projeyi oluşturduk sonra bu desteği ekleyin.
 
-   ![Yeni React.js görüntüsü](media/container-tools-react/vs-2017/new-react-project.png)
+1. **ASP.NET Core Web uygulaması** şablonunu kullanarak yeni bir proje oluşturun.
 
-1. Proje düğümüne sağ tıklayın ve  Projenize bir > **Dockerfile** eklemek için Docker Desteği Ekle'yi seçin.
+1. **React.js** seçin. **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, projeyi oluşturduktan sonra bu desteği ekleyebilirsiniz.
 
-   ![Docker desteği ekleme](media/container-tools-react/vs-2017/add-docker-support.png)
+   ![Yeni React.js projesinin ekran görüntüsü.](media/container-tools-react/vs-2017/new-react-project.png)
 
-1. Kapsayıcı türünü seçin ve Tamam'a **tıklayın.**
+1. Proje düğümüne sağ tıklayın ve  > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
+
+   ![Docker desteği Ekle menü öğesinin ekran görüntüsü.](media/container-tools-react/vs-2017/add-docker-support.png)
+
+1. Kapsayıcı türünü seçin ve **Tamam**' ı tıklatın.
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
-1. React.js **şablonuyla ASP.NET Core yeni bir proje** oluşturun.
+1. **React.jsşablonuyla ASP.NET Core** kullanarak yeni bir proje oluşturun.
 
-   ![Yeni bir React.js oluşturma ekran görüntüsü](media/container-tools-react/vs-2019/create-reactjs-project.png)
+   ![Yeni React.js projesi oluşturma ekranının ekran görüntüsü.](media/container-tools-react/vs-2019/create-reactjs-project.png)
 
-1. Ek **bilgiler ekranında** **Docker** Desteğini Etkinleştir'i seçesiniz, ancak endişelenmeyin, bu desteği daha sonra ekebilirsiniz.
+1. **Ek bilgi** ekranında **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, daha sonra bu desteği ekleyebilirsiniz.
 
-   ![Yeni bir React.js projesi oluşturma ekran görüntüsü - Ek bilgi ekranı](media/container-tools-react/vs-2019/new-react-project-additional-information.png)
+   ![Yeni React.js projesi oluşturma için ekran görüntüsü-ek bilgi ekranı.](media/container-tools-react/vs-2019/new-react-project-additional-information.png)
 
-1. Proje düğümüne sağ tıklayın ve  Projenize bir > **Dockerfile** eklemek için Docker Desteği Ekle'yi seçin.
+1. Proje düğümüne sağ tıklayın ve  > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
 
-   ![Docker desteği ekleme](media/container-tools-react/vs-2017/add-docker-support.png)
+   ![Docker desteği Ekle menü öğesinin ekran görüntüsü.](media/container-tools-react/vs-2017/add-docker-support.png)
 
 1. Kapsayıcı türünü seçin.
 ::: moniker-end
+::: moniker range=">=vs-2022"
 
-Sonraki adım, Linux kapsayıcıları mı yoksa linux kapsayıcıları mı kullandığınıza bağlı olarak Windows farklıdır.
+1. **React.jsşablonuyla ASP.NET Core** kullanarak yeni bir proje oluşturun.
 
-## <a name="modify-the-dockerfile-linux-containers"></a>Dockerfile'ı (Linux kapsayıcıları) değiştirme
+   ![Yeni React.js projesi oluşturma ekranının ekran görüntüsü.](media/container-tools-react/vs-2022/create-reactjs-project.png)
 
-Projede son bir Docker görüntüsü oluşturma tarifi olan *Dockerfile* oluşturulur. Içindeki komutları [anlamak için Dockerfile](https://docs.docker.com/engine/reference/builder/) başvurusuna bakın.
+1. **Ek bilgi** ekranında **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, daha sonra bu desteği ekleyebilirsiniz.
 
-Projede *Dockerfile dosyasını* açın ve kapsayıcıya 10.x Node.js aşağıdaki satırları ekleyin. Hem temel görüntüye hem de bölümüne Node paket yöneticisinin yüklemesini eklemek *npm.exe* bu satırları ilk bölüme de eklemeniz `build` gerekir.
+   ![Yeni React.js projesi oluşturma için ekran görüntüsü-ek bilgi ekranı.](media/container-tools-react/vs-2022/react-project-additional-information.png)
+
+1. Proje düğümüne sağ tıklayın ve  > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
+
+   ![Docker desteği Ekle menü öğesinin ekran görüntüsü.](media/container-tools-react/vs-2022/add-docker-support.png)
+
+1. Kapsayıcı türünü seçin.
+:::moniker-end
+
+bir sonraki adım, Linux kapsayıcıları veya Windows kapsayıcıları kullanıp kullanmayacağınızı bağlı olarak farklılık görür.
+
+## <a name="modify-the-dockerfile-linux-containers"></a>Dockerfile 'ı (Linux kapsayıcıları) değiştirme
+
+Bir *Dockerfile*, son bir Docker görüntüsü oluşturmaya yönelik tarif, projede oluşturulur. İçindeki komutları anlamak için [Dockerfile başvurusuna](https://docs.docker.com/engine/reference/builder/) bakın.
+
+Projede *Dockerfile dosyasını* açın ve aşağıdaki satırları, kapsayıcıya, Node.js 14. x ve belirli gerekli düğüm kitaplıklarını yüklemek için ekleyin. Düğüm paketi Yöneticisi *npm.exe* yüklemesini temel görüntüye ve bölümüne eklemek için, bu satırları her ikisi de ilk bölüme eklediğinizden emin olun `build` .
 
 ```Dockerfile
-RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+RUN apt-get update
+RUN apt-get install -y curl
+RUN apt-get install -y libpng-dev libjpeg-dev curl libxi6 build-essential libgl1-mesa-glx
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 ```
 
-*Dockerfile şimdi* şuna benzer şekilde görünüyor:
+*Dockerfile* artık şuna benzer görünmelidir:
+
+:::moniker range="<=vs-2019"
 
 ```Dockerfile
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
-RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+RUN apt-get update
+RUN apt-get install -y curl
+RUN apt-get install -y libpng-dev libjpeg-dev curl libxi6 build-essential libgl1-mesa-glx
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
-RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+RUN apt-get update
+RUN apt-get install -y curl
+RUN apt-get install -y libpng-dev libjpeg-dev curl libxi6 build-essential libgl1-mesa-glx
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install -y nodejs
 WORKDIR /src
-COPY ["WebApplication-ReactSPA/WebApplication-ReactSPA.csproj", "WebApplication-ReactSPA/"]
-RUN dotnet restore "WebApplication-ReactSPA/WebApplication-ReactSPA.csproj"
+COPY ["ReactSPA/ReactSPA.csproj", "ReactSPA/"]
+RUN dotnet restore "ReactSPA/ReactSPA.csproj"
 COPY . .
-WORKDIR "/src/WebApplication-ReactSPA"
-RUN dotnet build "WebApplication-ReactSPA.csproj" -c Release -o /app/build
+WORKDIR "/src/ReactSPA"
+RUN dotnet build "ReactSPA.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication-ReactSPA.csproj" -c Release -o /app/publish
+RUN dotnet publish "ReactSPA.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "WebApplication-ReactSPA.dll"]
+ENTRYPOINT ["dotnet", "ReactSPA.dll"]
 ```
 
-Yukarıdaki *Dockerfile,* mcr.microsoft.com/dotnet/core/aspnet [](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) görüntüsünü temel almaktadır ve projenizi oluşturma ve kapsayıcıya ekleyerek temel görüntüyü değiştirme yönergelerini içerir.
+:::moniker-end
+:::moniker range=">=vs-2022"
 
-Yeni proje iletişim kutusunun HTTPS için **yapılandır onay** kutusu işaretlendiğinde *Dockerfile iki bağlantı* noktasını kullanıma sağlar. HTTP trafiği için bir bağlantı noktası kullanılır; diğer bağlantı noktası HTTPS için kullanılır. Onay kutusu işaretli değilse, HTTP trafiği için tek bir bağlantı noktası (80) kullanıma hazır olur.
+```Dockerfile
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-## <a name="modify-the-dockerfile-windows-containers"></a>Dockerfile'ı değiştirme (Windows kapsayıcıları)
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+RUN apt-get update
+RUN apt-get install -y curl
+RUN apt-get install -y libpng-dev libjpeg-dev curl libxi6 build-essential libgl1-mesa-glx
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN apt-get install -y nodejs
 
-Proje düğümüne çift tıklayarak proje dosyasını açın ve aşağıdaki özelliği öğenin alt öğesi olarak ekleyerek proje dosyasını (*.csproj) `<PropertyGroup>` güncelleştirin:
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+RUN apt-get update
+RUN apt-get install -y curl
+RUN apt-get install -y libpng-dev libjpeg-dev curl libxi6 build-essential libgl1-mesa-glx
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN apt-get install -y nodejs
+WORKDIR /src
+COPY ["ReactSPA/ReactSPA.csproj", "ReactSPA/"]
+RUN dotnet restore "ReactSPA/ReactSPA.csproj"
+COPY . .
+WORKDIR "/src/ReactSPA"
+RUN dotnet build "ReactSPA.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "ReactSPA.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "ReactSPA.dll"]
+```
+
+:::moniker-end
+
+Önceki *Dockerfile* , [MCR.Microsoft.com/DotNet/Core/ASPNET](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) görüntüsünü temel alır ve projenizi oluşturup kapsayıcıya ekleyerek temel görüntüyü değiştirmeye yönelik yönergeler içerir.
+
+Yeni proje iletişim kutusunun **https Için Yapılandır** onay kutusu Işaretlendiğinde, *dockerfile* iki bağlantı noktasını kullanıma sunar. HTTP trafiği için bir bağlantı noktası kullanılır; diğer bağlantı noktası HTTPS için kullanılır. Onay kutusu işaretli değilse, HTTP trafiği için tek bir bağlantı noktası (80) gösterilir.
+
+## <a name="modify-the-dockerfile-windows-containers"></a>dockerfile 'ı (Windows kapsayıcıları) değiştirme
+
+Proje düğümüne çift tıklayarak proje dosyasını açın ve aşağıdaki özelliği öğesinin bir alt öğesi olarak ekleyerek proje dosyasını (*. csproj) güncelleştirin `<PropertyGroup>` :
 
    ```xml
     <DockerfileFastModeStage>base</DockerfileFastModeStage>
    ```
 
-Aşağıdaki satırları ekleyerek Dockerfile dosyasını güncelleştirin. Bu, node ve npm'yi kapsayıcıya kopyalar.
+Dockerfile dosyasını aşağıdaki satırları ekleyerek güncelleştirin. Bu, düğümü ve NPM 'yi kapsayıcıya kopyalayacak.
 
-   1. ``# escape=` ``Dockerfile dosyasının ilk satırına ekleyin
+   1. ``# escape=` ``Dockerfile 'ın ilk satırına Ekle
    1. Önce aşağıdaki satırları ekleyin `FROM … base`
 
       ```Dockerfile
       FROM mcr.microsoft.com/powershell AS downloadnodejs
+      ENV NODE_VERSION=14.16.0
       SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop';$ProgressPreference='silentlyContinue';"]
-      RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip"; `
-      Expand-Archive nodejs.zip -DestinationPath C:\; `
-      Rename-Item "C:\node-v10.16.3-win-x64" c:\nodejs
+      RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v$($env:NODE_VERSION)/node-v$($env:NODE_VERSION)-win-x64.zip"; `
+          Expand-Archive nodejs.zip -DestinationPath C:\; `
+          Rename-Item "C:\node-v$($env:NODE_VERSION)-win-x64" c:\nodejs
       ```
 
-   2. Önce ve sonra aşağıdaki satırı ekleyin `FROM … build`
+   1. Aşağıdaki satırı önce ve sonra ekleyin `FROM … build`
 
       ```Dockerfile
       COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
       ```
 
-   3. Dockerfile dosyasının tam olarak şöyle olması gerekir:
+   1. Tüm Dockerfile artık şuna benzer görünmelidir:
+
+      :::moniker range="<=vs-2019"
 
       ```Dockerfile
       # escape=`
       #Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
       #For more information, please see https://aka.ms/containercompat
       FROM mcr.microsoft.com/powershell AS downloadnodejs
-      RUN mkdir -p C:\nodejsfolder
-      WORKDIR C:\nodejsfolder
+      ENV NODE_VERSION=14.16.0
       SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop';$ProgressPreference='silentlyContinue';"]
-      RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip"; `
-      Expand-Archive nodejs.zip -DestinationPath C:\; `
-      Rename-Item "C:\node-v10.16.3-win-x64" c:\nodejs
+      RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v$($env:NODE_VERSION)/node-v$($env:NODE_VERSION)-win-x64.zip"; \
+          Expand-Archive nodejs.zip -DestinationPath C:\; \
+          Rename-Item "C:\node-v$($env:NODE_VERSION)-win-x64" c:\nodejs
 
       FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
       WORKDIR /app
@@ -186,28 +265,75 @@ Aşağıdaki satırları ekleyerek Dockerfile dosyasını güncelleştirin. Bu, 
       ENTRYPOINT ["dotnet", "WebApplicationReact1.dll"]
       ```
 
-   4. .dockerignore dosyasını kaldırarak `**/bin` güncelleştirin.
+      :::moniker-end
+      :::moniker range=">=vs-2022"
+      ```Dockerfile
+      # escape=`
+      #Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
+      #For more information, please see https://aka.ms/containercompat
+      FROM mcr.microsoft.com/powershell AS downloadnodejs
+      ENV NODE_VERSION=14.16.0
+      SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop';$ProgressPreference='silentlyContinue';"]
+      RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v$($env:NODE_VERSION)/node-v$($env:NODE_VERSION)-win-x64.zip"; \
+          Expand-Archive nodejs.zip -DestinationPath C:\; \
+          Rename-Item "C:\node-v$($env:NODE_VERSION)-win-x64" c:\nodejs
+
+      FROM mcr.microsoft.com/dotnet/core/aspnet:6.0 AS base
+      WORKDIR /app
+      EXPOSE 80
+      EXPOSE 443
+      COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
+
+      FROM mcr.microsoft.com/dotnet/core/sdk:6.0 AS build
+      COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
+      WORKDIR /src
+      COPY ["WebApplicationReact1/WebApplicationReact1.csproj", "WebApplicationReact1/"]
+      RUN dotnet restore "WebApplicationReact1/WebApplicationReact1.csproj"
+      COPY . .
+      WORKDIR "/src/WebApplicationReact1"
+      RUN dotnet build "WebApplicationReact1.csproj" -c Release -o /app/build
+
+      FROM build AS publish
+      RUN dotnet publish "WebApplicationReact1.csproj" -c Release -o /app/publish
+
+      FROM base AS final
+      WORKDIR /app
+      COPY --from=publish /app/publish .
+      ENTRYPOINT ["dotnet", "WebApplicationReact1.dll"]
+      ```
+
+      ::: moniker-end
+
+   1. Öğesini kaldırarak. dockerıgnore dosyasını güncelleştirin `**/bin` .
 
 ## <a name="debug"></a>Hata Ayıklama
 
-Araç çubuğundaki hata ayıklama açılan **menüsünden Docker'ı** seçin ve uygulamada hata ayıklamaya başlayabilirsiniz. Bir sertifikaya güvenme hakkında bir istem ile bir ileti alabilirsiniz; devam etmek için sertifikaya güvenmeyi seçin.  docker, ilk kez temel görüntüleri indirdiği için biraz daha uzun sürebilir.
+:::moniker range=">=vs-2022"
+Hata ayıklama için varsayılan URL 'YI ayarlayın. Başlat düğmesinin yanındaki açılan menüyü kullanabilir ve **hata ayıklama özellikleri**' ni seçebilirsiniz. **Profili Başlat** iletişim kutusunda, **Docker** ' ı seçin ve daha `/weatherforecast` önce var olan özellikleri eklemek için URL 'yi düzenleyin.
+:::moniker-end
 
-Çıkış **penceresindeki** Kapsayıcı **Araçları seçeneği** hangi eylemlerin gerçekleştir olduğunu gösterir. ile ilişkili yükleme adımlarını *npm.exe.*
+Araç çubuğundaki hata ayıklama açılır listesinden **Docker** ' ı seçin ve uygulamada hata ayıklamayı başlatın. Bir sertifikaya güvenmek üzere bir istem içeren bir ileti görebilirsiniz. devam etmek için sertifikaya güvenmeyi seçin.  İlk kez oluşturduğunuzda Docker temel görüntüleri indirir, bu nedenle biraz daha uzun sürebilir.
+
+**Çıkış** penceresinde **kapsayıcı araçları** seçeneği hangi eylemlerin gerçekleştireceğinizi gösterir. *npm.exe* ilişkili yükleme adımlarını görmeniz gerekir.
 
 Tarayıcı, uygulamanın giriş sayfasını gösterir.
 
-::: moniker range="vs-2017"
-   ![Çalışan uygulamanın ekran görüntüsü](media/container-tools-react/vs-2017/running-app.png)
-::: moniker-end
-::: moniker range=">=vs-2019"
-   ![Çalışan uygulamanın ekran görüntüsü](media/container-tools-react/vs-2019/running-app.png)
-::: moniker-end
+   ::: moniker range="vs-2017"
+   ![Çalışan uygulamanın ekran görüntüsü.](media/container-tools-react/vs-2017/running-app.png)
+   ::: moniker-end
+   ::: moniker range="vs-2019"
+   ![Çalışan uygulamanın ekran görüntüsü.](media/container-tools-react/vs-2019/running-app.png)
+   ::: moniker-end
+   ::: moniker range=">=vs-2022"
+   ![Çalışan uygulamanın ekran görüntüsü.](media/container-tools-react/vs-2022/running-app.png)
+   ::: moniker-end
 
-Sayaç sayfasına gidin ve *Artır* düğmesine tıklayarak sayaç için istemci tarafı kodunu test **edin.**
+:::moniker range="<=vs-2019"
+*Sayaç* sayfasına gidip **artırma** düğmesine tıklayarak sayaç için istemci tarafı kodunu test edin.
 
-Araçlar **Paket Yöneticisi Konsolu'nu** (PMC) açın ve **> NuGet Paket Yöneticisi'Paket Yöneticisi** **seçin.**
+menü **araçları**> NuGet Paket Yöneticisi, **Paket Yöneticisi konsolundan** **Paket Yöneticisi konsolunu** (PMC) açın.
 
-Uygulamanın sonuçta elde edilen Docker görüntüsü geliştirme olarak *etiketlenir.* Görüntü, *dotnet/core/aspnet* temel görüntüsünün *3.1* etiketine dayalıdır. Paket Yöneticisi `docker images` **Console** (PMC) penceresinde komutunu çalıştırın. Makinede görüntüler görüntülenir:
+Uygulamanın elde edilen Docker görüntüsü *dev* olarak etiketlendi. Görüntü, *DotNet/Core/ASPNET* temel görüntüsünün *3,1* etiketine dayalıdır. `docker images` **Paket Yöneticisi konsolu** (PMC) penceresinde komutu çalıştırın. Makinedeki görüntüler görüntülenir:
 
 ```console
 REPOSITORY                             TAG                 IMAGE ID            CREATED             SIZE
@@ -216,14 +342,35 @@ mcr.microsoft.com/dotnet/core/aspnet   3.1                 e3559b2d50bb        1
 ```
 
 > [!NOTE]
-> Geliştirme **görüntüsü** uygulama ikililerini ve diğer içeriği içermez çünkü **Hata** ayıklama yapılandırmaları, birim bağlamayı kullanarak yeniden düzenleme ve hata ayıklama deneyimi sağlar. Tüm içerikleri içeren bir üretim görüntüsü oluşturmak için Yayın **yapılandırmasını** kullanın.
+> **Geliştirme** görüntüsü, uygulama ikililerini ve diğer içerikleri Içermez. **hata ayıklama** yapılandırmalarında, yinelemeli düzenleme ve hata ayıklama deneyimi sağlamak için birim bağlama kullanılır. Tüm içerikleri içeren bir üretim görüntüsü oluşturmak için **yayın** yapılandırmasını kullanın.
 
-`docker ps`PMC'de komutunu çalıştırın. Uygulamanın kapsayıcıyı kullanarak çalıştır):
+`docker ps`Komutu PMC 'de çalıştırın. Uygulamanın, kapsayıcıyı kullanarak çalıştığını unutmayın:
 
 ```console
 CONTAINER ID        IMAGE                      COMMAND               CREATED             STATUS              PORTS                                           NAMES
-56d1b1008c89        webapplicationreact1:dev   "tail -f /dev/null"   2 hours ago         Up 2 hours          0.0.0.0:32771->80/tcp, 0.0.0.0:32770->443/tcp   WebApplication-React1
+56d1b1008c89        webapplicationreact1:dev   "tail -f /dev/null"   2 hours ago         Up 2 hours          0.0.0.0:32771->80/tcp, 0.0.0.0:32770->443/tcp   WebApplication-ReactSPA
 ```
+
+:::moniker-end
+
+:::moniker range=">=vs-2022"
+
+**Kapsayıcılar** araç penceresini açın.   >  daha sonra **diğer Windows** kapsayıcıları görüntüle ' nin altındaki menüde bulunabilir  >  veya **Ctrl** + **Q** tuşlarına basabilir ve `containers` arama kutusuna yazmaya başlayabilir, sonra da sonuçlardan **kapsayıcılar** penceresi ' ni seçin. Pencere geldiğinde, düzenleyiciyi düzenleyici bölmesinin altındaki en alta yerleştirin.
+
+**Kapsayıcılar** penceresi, çalışan kapsayıcıları gösterir ve bunlarla ilgili bilgileri görüntülemenize olanak sağlar. Ortam değişkenlerini, etiketleri, bağlantı noktalarını, birimleri, dosya sistemini ve günlükleri görüntüleyebilirsiniz. Araç çubuğu düğmeleri kapsayıcı içinde bir Terminal (kabuk istemi) oluşturmanıza, hata ayıklayıcıyı iliştirmenizi veya kullanılmayan kapsayıcıları ayıklamaya olanak sağlar. Bkz. [kapsayıcılar penceresini kullanma](view-and-diagnose-containers.md).
+
+![Kapsayıcılar penceresinin ekran görüntüsü.](media/container-tools-react/vs-2022/container-tools-window.png)
+
+Dosyalar **sekmesine tıklayın** ve yayımlanan uygulama `app` dosyalarınızı görmek için klasörü genişletin.
+
+Ayrıca görüntüleri görüntüp bu görüntülerle ilgili bilgileri incelersiniz. Görüntüler **sekmesini** seçin, projeniz için bir tane  bulun ve ardından Ayrıntılar sekmesini seçen bir görüntü hakkında bilgi içeren bir json dosyasını görüntüleyin.
+
+![Görüntüleri ve ayrıntıları gösteren Kapsayıcılar penceresinin ekran görüntüsü.](media/container-tools-react/vs-2022/container-tools-window-images-details.png)
+
+> [!NOTE]
+> Geliştirme **görüntüsü** uygulama ikililerini ve diğer içeriği içermez çünkü **Hata** ayıklama yapılandırmaları, birim bağlamayı kullanarak yeniden düzenleme ve hata ayıklama deneyimi sağlar. Tüm içerikleri içeren bir üretim görüntüsü oluşturmak için Yayın **yapılandırmasını** kullanın.
+
+:::moniker-end
 
 ## <a name="publish-docker-images"></a>Docker görüntülerini yayımlama
 
@@ -232,9 +379,9 @@ Uygulamanın geliştirme ve hata ayıklama döngüsü tamamlandıktan sonra, uyg
 :::moniker range="vs-2017"
 
 1. Yapılandırma açılan listesinde Yayın'a **ve** uygulamayı derlemeye devam edin.
-1. Dosya menüsünde projenize sağ tıklayın **Çözüm Gezgini'yi** **seçin.**
+1. **Çözüm Gezgini'da projenize sağ tıklayın ve** Yayımla'yı **seçin.**
 1. Hedefi yayımla iletişim kutusunda **Container Registry.**
-1. Yeni **Oluştur'u Azure Container Registry** yayımla'ya **tıklayın.**
+1. Yeni **Uygulama Oluştur'Azure Container Registry** yayımla'ya **tıklayın.**
 1. Yeni bir dosya oluştur içinde **istediğiniz değerleri Azure Container Registry.**
 
     | Ayar      | Önerilen değer  | Açıklama                                |
@@ -245,27 +392,27 @@ Uygulamanın geliştirme ve hata ayıklama döngüsü tamamlandıktan sonra, uyg
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
     | **Kayıt Defteri Konumu** | Size yakın bir konum | Size veya kapsayıcı kayıt [defterinizi](https://azure.microsoft.com/regions/) kullanan diğer hizmetlere yakın bir bölgede konum seçin. |
 
-    ![Visual Studio oluştur iletişim Azure Container Registry oluştur](media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog.png)
+    ![Visual Studio oluştur iletişim kutusunun Azure Container Registry görüntüsü.](media/hosting-web-apps-in-docker/vs-azure-container-registry-provisioning-dialog.png)
 
 1. **Oluştur**’u seçin.
 
-   ![Başarılı yayımlamayı gösteren ekran görüntüsü](media/container-tools/publish-succeeded.png)
+   ![Başarılı yayımlama işlemini gösteren ekran görüntüsü.](media/container-tools/publish-succeeded.png)
 :::moniker-end
 
-:::moniker range=">=vs-2019"
+:::moniker range="vs-2019"
 
 1. Yapılandırma açılan listesinde Yayın'a **ve** uygulamayı derlemeye devam edin.
-1. Içinde projenize sağ tıklayın ve **Çözüm Gezgini'yi** **seçin.**
+1. **Çözüm Gezgini'da projenize sağ tıklayın ve** Yayımla'yı **seçin.**
 1. Yayımlama hedefi iletişim kutusunda **Docker Container Registry.**
 
-   ![Choose Docker Container Registry](media/container-tools-react/vs-2019/publish-dialog1.png)
+   ![Choose Docker Container Registry.](media/container-tools-react/vs-2019/publish-dialog1.png)
 
 1. Ardından, **Azure Container Registry.**
 
-   ![Yeni bir Azure Container Registry](media/container-tools-react/vs-2019/publish-dialog-acr.png)
+   ![Yeni bir Azure Container Registry.](media/container-tools-react/vs-2019/publish-dialog-azure-container-registry.png)
 
 1. Yeni **bir dosya oluştur'Azure Container Registry.**
-1. Yeni veri oluştur ekranında **istediğiniz değerleri Azure Container Registry.**
+1. yeni veri oluştur ekranında **istediğiniz değerleri Azure Container Registry.**
 
     | Ayar      | Önerilen değer  | Açıklama                                |
     | ------------ |  ------- | -------------------------------------------------- |
@@ -275,26 +422,62 @@ Uygulamanın geliştirme ve hata ayıklama döngüsü tamamlandıktan sonra, uyg
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
     | **Kayıt Defteri Konumu** | Size yakın bir konum | Size veya kapsayıcı kayıt [defterinizi](https://azure.microsoft.com/regions/) kullanan diğer hizmetlere yakın bir bölgede konum seçin. |
 
-    ![Visual Studio oluştur iletişim Azure Container Registry oluştur](media/container-tools-react/vs-2019/azure-container-registry-details.png)
+    ![Visual Studio oluştur iletişim kutusunun Azure Container Registry görüntüsü.](media/container-tools-react/vs-2019/azure-container-registry-details.png)
 
 1. **Oluştur'a** ve ardından Son'a **seçin.**
 
-   ![Yeni ACR seçme veya oluşturma](media/container-tools-react/vs-2019/publish-dialog2.png)
+   ![Yeni bir hesap seçin veya oluşturun seçeneğini gösteren Azure Container Registry.](media/container-tools-react/vs-2019/publish-dialog2.png)
 
    Yayımlama işlemi sona erdiğinde yayımlama ayarlarını gözden geçirebilirsiniz ve gerektiğinde bunları düzenleyebilir veya Yayımla düğmesini kullanarak görüntüyü yeniden **yayımlayabilirsiniz.**
 
-   ![Başarılı yayımlamayı gösteren ekran görüntüsü](media/container-tools-react/vs-2019/publish-finished.png)
+   ![Başarılı yayımlama işlemini gösteren ekran görüntüsü.](media/container-tools-react/vs-2019/publish-finished.png)
 
    Yayımla iletişim kutusunu kullanarak **yeniden** başlamak için, bu sayfanın Sil bağlantısını kullanarak **yayımlama** profilini silin ve ardından Yayımla'yı **yeniden** seçin.
 :::moniker-end
 
+:::moniker range=">=vs-2022"
+
+1. Yapılandırma açılan listesinde Yayın'a **ve** uygulamayı derlemeye devam edin.
+1. **Çözüm Gezgini'da projenize sağ tıklayın ve** Yayımla'yı **seçin.**
+1. Yayımlama hedefi iletişim kutusunda **Docker Container Registry.**
+
+   ![Docker Seçme'yi gösteren ekran Container Registry.](media/container-tools-react/vs-2022/publish-dialog-1.png)
+
+1. Ardından, **Azure Container Registry.**
+
+   ![Seç'i gösteren ekran Azure Container Registry.](media/container-tools-react/vs-2022/publish-dialog-azure-container-registry.png)
+
+1. Yeni **bir dosya oluştur'Azure Container Registry.**
+1. yeni veri oluştur ekranında **istediğiniz değerleri Azure Container Registry.**
+
+    | Ayar      | Önerilen değer  | Açıklama                                |
+    | ------------ |  ------- | -------------------------------------------------- |
+    | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz olarak tanımlayan ad. |
+    | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
+    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacak kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
+    | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
+    | **Kayıt Defteri Konumu** | Size yakın bir konum | Size veya kapsayıcı kayıt [defterinizi](https://azure.microsoft.com/regions/) kullanan diğer hizmetlere yakın bir bölgede konum seçin. |
+
+    ![Visual Studio oluştur iletişim kutusunun Azure Container Registry görüntüsü.](media/container-tools-react/vs-2022/azure-container-registry-details.png)
+
+1. **Oluştur'a** ve ardından Son'a **seçin.**
+
+   ![Yeni bir hesap seçin veya oluşturun seçeneğini gösteren Azure Container Registry.](media/container-tools-react/vs-2022/publish-dialog-2.png)
+
+   Yayımlama işlemi sona erdiğinde yayımlama ayarlarını gözden geçirebilirsiniz ve gerektiğinde bunları düzenleyebilir veya Yayımla düğmesini kullanarak görüntüyü yeniden **yayımlayabilirsiniz.**
+
+   :::image type="content" alt-text="Başarılı yayımlamayı gösteren ekran görüntüsü" source="media/container-tools-react/vs-2022/publish-succeeded.png" lightbox="media/container-tools-react/vs-2022/publish-succeeded.png":::
+
+   **Yayımla** iletişim kutusunu kullanarak yeniden başlamak için, bu sayfadaki **Sil** bağlantısını kullanarak yayımlama profilini silin ve sonra yeniden **Yayımla** ' yı seçin.
+:::moniker-end
+
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık kapsayıcıyı kayıt defterinden Docker görüntülerini çalıştırabilen herhangi bir ana bilgisayar örneğine [Azure Container Instances.](/azure/container-instances/container-instances-tutorial-deploy-app)
+Artık kapsayıcıyı, kayıt defterinden Docker görüntülerini çalıştırabilen herhangi bir konağa çekebilirsiniz, örneğin [Azure Container Instances](/azure/container-instances/container-instances-tutorial-deploy-app).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [Visual Studio ile kapsayıcı geliştirme](./index.yml)
 * [Docker ile Visual Studio geliştirme sorunlarını giderme](troubleshooting-docker-errors.md)
-* [Visual Studio Kapsayıcı Araçları GitHub deposu](https://github.com/Microsoft/DockerTools)
+* [Visual Studio kapsayıcı araçları GitHub deposu](https://github.com/Microsoft/DockerTools)
 

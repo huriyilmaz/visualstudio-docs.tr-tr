@@ -1,5 +1,5 @@
 ---
-title: Docker ASP.NET ACR kayıt defterine dağıtma
+title: Docker ASP.NET'ı Azure Container Registry
 description: Visual Studio Container Tools'ASP.NET veya web ASP.NET Core kapsayıcı kayıt defterine dağıtmayı öğrenin
 author: ghogen
 manager: jmartens
@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.technology: vs-container-tools
 ms.date: 03/15/2021
 ms.author: ghogen
-ms.openlocfilehash: eb1b22273a3fe946d7760bccae9583c4b1d6726c
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 5990f438e7c7f5043fc79154eb1546ed3bc3f740
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631713"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130351138"
 ---
 # <a name="deploy-an-aspnet-container-to-a-container-registry-using-visual-studio"></a>Visual Studio kullanarak kapsayıcı kayıt defterine ASP.NET kapsayıcısı dağıtma
 
@@ -30,12 +30,12 @@ Azure aboneliğiniz yoksa başlamadan önce [ücretsiz bir hesap](https://azure.
 Bu öğreticiyi tamamlamak için:
 
 ::: moniker range="vs-2017"
-* "ASP.NET ve web geliştirme" [iş yüküyle Visual Studio 2017'nin](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)en son sürümünü yükleyin
+* "ASP.NET ve web geliştirme" iş [yüküyle Visual Studio 2017'nin](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)en son sürümünü yükleyin
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-* "ASP.NET ve web geliştirme" [iş yüküyle Visual Studio 2019'un](https://visualstudio.microsoft.com/downloads) en son sürümünü yükleyin
+* "ASP.NET ve web geliştirme" iş yüküyle [Visual Studio 2019'un](https://visualstudio.microsoft.com/downloads) en son sürümünü yükleyin
 ::: moniker-end
-* [Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
+* [Windows için Docker'ı yükleme](https://docs.docker.com/docker-for-windows/install/)
 
 ## <a name="create-an-aspnet-core-web-app"></a>ASP.NET Core web uygulaması oluşturma
 
@@ -53,8 +53,8 @@ Aşağıdaki adımlar, bu öğreticide kullanılacak temel ASP.NET Core uygulama
 ## <a name="publish-your-container-to-azure-container-registry"></a>Kapsayıcınızı Azure Container Registry
 
 1. Içinde projenize sağ tıklayın ve **Çözüm Gezgini'yi** **seçin.**
-2. Hedefi **yayımla iletişim kutusunda** Hedef'i **Container Registry.**
-3. Yeni **Dosya'Azure Container Registry'yi** seçin ve Yayımla'ya **tıklayın.**
+2. Hedefi **yayımla iletişim** kutusunda Hedef'i **Container Registry.**
+3. Yeni **Giriş'Azure Container Registry'yi** seçin ve Yayımla'ya **tıklayın.**
 4. Yeni bir dosya oluştur içinde **istediğiniz değerleri Azure Container Registry.**
 
     | Ayar      | Önerilen değer  | Açıklama                                |
@@ -65,7 +65,7 @@ Aşağıdaki adımlar, bu öğreticide kullanılacak temel ASP.NET Core uygulama
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
     | **Kayıt Defteri Konumu** | Size yakın bir konum | Size veya kapsayıcı kayıt [defterinizi](https://azure.microsoft.com/regions/) kullanan diğer hizmetlere yakın bir bölgede konum seçin. |
 
-    ![Visual Studio oluştur iletişim Azure Container Registry oluştur](media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog.png)
+    ![Visual Studio oluştur iletişim kutusunu Azure Container Registry ekran görüntüsü.](media/hosting-web-apps-in-docker/vs-azure-container-registry-provisioning-dialog.png)
 
 5. **Oluştur** seçeneğine tıklayın
 ::: moniker-end
@@ -75,11 +75,11 @@ Aşağıdaki adımlar, bu öğreticide kullanılacak temel ASP.NET Core uygulama
 1. Içinde projenize sağ tıklayın ve **Çözüm Gezgini'yi** **seçin.**
 2. Yayımla **iletişim kutusunda** **Docker Container Registry.**
 
-   ![Yayımla iletişim kutusunun ekran görüntüsü - Docker'ı Container Registry](media/container-tools/vs-2019/docker-container-registry.png)
+   ![Yayımla iletişim kutusunun ekran görüntüsü - Docker Container Registry.](media/container-tools/vs-2019/docker-container-registry.png)
 
 3. Yeni **Oluştur'Azure Container Registry.**
  
-   ![Yayımla iletişim kutusunun ekran görüntüsü - Yeni Oluştur'Azure Container Registry](media/container-tools/vs-2019/select-existing-or-create-new-azure-container-registry.png)
+   ![Yayımla iletişim kutusunun ekran görüntüsü - Yeni Oluştur'Azure Container Registry.](media/container-tools/vs-2019/select-existing-or-create-new-azure-container-registry.png)
 
 4. İstediğiniz değerleri Azure Container Registry. 
 
@@ -91,7 +91,7 @@ Aşağıdaki adımlar, bu öğreticide kullanılacak temel ASP.NET Core uygulama
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
     | **Kayıt Defteri Konumu** | Size yakın bir konum | Size veya kapsayıcı kayıt [defterinizi](https://azure.microsoft.com/regions/) kullanan diğer hizmetlere yakın bir bölgede konum seçin. |
 
-    ![Visual Studio oluştur iletişim Azure Container Registry oluştur](media/hosting-web-apps-in-docker/vs-acr-provisioning-dialog-2019.png)
+    ![Visual Studio oluştur iletişim kutusunun Azure Container Registry görüntüsü.](media/hosting-web-apps-in-docker/vs-azure-container-registry-provisioning-dialog-2019.png)
 
 5. **Oluştur**’a tıklayın.
 

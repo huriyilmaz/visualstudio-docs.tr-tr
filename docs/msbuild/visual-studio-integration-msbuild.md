@@ -22,26 +22,26 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: e060bdeb6c648ba1cd3e753eb431588ab5550a05
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
+ms.openlocfilehash: f38f26bba5311f8077f537edc318f4885cf895ce
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130208324"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130350956"
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio tümleştirmesi (MSBuild)
 
 Visual Studio, yönetilen projeleri yüklemek ve derlemek için MSBuild barındırır. MSBuild projeden sorumlu olduğundan, proje farklı bir araç tarafından yazılmış ve özelleştirilmiş bir yapı işlemine sahip olsa bile, MSBuild biçimindeki neredeyse tüm projeler Visual Studio başarılı bir şekilde kullanılabilir.
 
- bu makalede, Visual Studio yüklemek ve derlemek istediğiniz projeleri ve *. targets* dosyalarını özelleştirirken göz önünde bulundurmanız gereken Visual Studio MSBuild barındırmanın belirli yönleri açıklanmaktadır. bunlar, ıntellisense ve hata ayıklama gibi özelliklerin özel projeniz için çalışması için Visual Studio emin olmanıza yardımcı olur.
+bu makalede, Visual Studio yüklemek ve derlemek istediğiniz projeleri ve *. targets* dosyalarını özelleştirirken göz önünde bulundurmanız gereken Visual Studio MSBuild barındırmanın belirli yönleri açıklanmaktadır. bunlar, ıntellisense ve hata ayıklama gibi özelliklerin özel projeniz için çalışması için Visual Studio emin olmanıza yardımcı olur.
 
- C++ projeleri hakkında daha fazla bilgi için bkz. [Project dosyaları](/cpp/build/reference/project-files).
+C++ projeleri hakkında daha fazla bilgi için bkz. [Project dosyaları](/cpp/build/reference/project-files).
 
 ## <a name="project-file-name-extensions"></a>Project dosya adı uzantıları
 
- *MSBuild.exe* , düzeniyle eşleşen herhangi bir proje dosya adı uzantısını tanır *. \* PROJ*. ancak Visual Studio, bu proje dosya adı uzantılarının yalnızca projeyi yükleyecek dile özgü proje sistemini belirleyen bir alt kümesini tanır. Visual Studio, dilden bağımsız MSBuild tabanlı proje sistemine sahip değildir.
+*MSBuild.exe* , düzeniyle eşleşen herhangi bir proje dosya adı uzantısını tanır *. \* PROJ*. ancak Visual Studio, bu proje dosya adı uzantılarının yalnızca projeyi yükleyecek dile özgü proje sistemini belirleyen bir alt kümesini tanır. Visual Studio, dilden bağımsız MSBuild tabanlı proje sistemine sahip değildir.
 
- örneğin, C# proje sistemi *. csproj* dosyalarını yükler, ancak Visual Studio *. xxproj* dosyasını yükleyemez. rastgele bir dildeki kaynak dosyaları için bir proje dosyası, Visual Studio yüklenecek Visual Basic veya C# proje dosyaları ile aynı uzantıyı kullanmalıdır.
+örneğin, C# proje sistemi *. csproj* dosyalarını yükler, ancak Visual Studio *. xxproj* dosyasını yükleyemez. rastgele bir dildeki kaynak dosyaları için bir proje dosyası, Visual Studio yüklenecek Visual Basic veya C# proje dosyaları ile aynı uzantıyı kullanmalıdır.
 
 ## <a name="well-known-target-names"></a>İyi bilinen hedef adları
 
@@ -175,11 +175,11 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="output-groups"></a>Çıkış grupları
 
- *Microsoft.Common.targets içinde tanımlanan birkaç hedefin* veya ile biten adları `OutputGroups` `OutputGroupDependencies` vardır. Visual Studio, proje çıkışlarının belirli listelerini almak için bu hedefleri çağırıyor. Örneğin hedef, `SatelliteDllsProjectOutputGroup` bir derlemenin oluşturacakları tüm uydu derlemelerinin listesini oluşturur. Bu çıkış grupları yayımlama, dağıtım ve projeden projeye başvurular gibi özellikler tarafından kullanılır. Bunları tanımlamadan projeler Visual Studio yük Visual Studio ancak bazı özellikler düzgün çalışmayabilir.
+ *Microsoft.Common.targets içinde tanımlanan birkaç hedefin* veya ile biten adları `OutputGroups` `OutputGroupDependencies` vardır. Visual Studio belirli proje çıkışlarının listelerini almak için bu hedefleri çağırıyor. Örneğin hedef, `SatelliteDllsProjectOutputGroup` bir derlemenin oluşturacakları tüm uydu derlemelerinin listesini oluşturur. Bu çıkış grupları yayımlama, dağıtım ve projeden projeye başvurular gibi özellikler tarafından kullanılır. Bunları tanımlamadan projeler, Visual Studio'de yük Visual Studio ancak bazı özellikler düzgün çalışmayabilir.
 
 ## <a name="reference-resolution"></a>Başvuru çözümlemesi
 
- Başvuru çözümlemesi, gerçek derlemeleri bulmak için bir proje dosyasında depolanan başvuru öğelerini kullanma işlemidir. Visual Studio, Özellikler penceresinde her başvuru için ayrıntılı özellikleri göstermek için başvuru çözümlemesi **tetiklemesi** gerekir. Aşağıdaki listede üç başvuru türü ve bunların nasıl çözümlenleri açıkmektedir.
+ Başvuru çözümlemesi, gerçek derlemeleri bulmak için bir proje dosyasında depolanan başvuru öğelerini kullanma işlemidir. Visual Studio penceresinde her başvuru için ayrıntılı özellikleri göstermek için başvuru çözümlemesi **tetiklenin.** Aşağıdaki listede üç başvuru türü ve bunların nasıl çözümlenleri açıkmektedir.
 
 - Derleme başvuruları:
 
@@ -201,11 +201,11 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 
 ## <a name="performance-shortcuts"></a>Performans kısayolları
 
- Hata ayıklamaya başlamak için Visual Studio IDE'yi kullanırsanız (F5 anahtarını seçerek veya menü çubuğunda Hata AyıklamaYı Başlat'ı seçerek) veya projenizi derlemek (Derleme Çözümü Derleme gibi), derleme işlemi performansı geliştirmek için hızlı bir güncelleştirme denetimi  >     >  kullanır. Özelleştirilmiş derlemelerin sırasıyla dosya oluşturması bazı durumlarda hızlı güncelleştirme denetimi değiştirilen dosyaları doğru şekilde tanımlamaz. Daha kapsamlı güncelleştirme denetimlerine ihtiyaç olan projeler, ortam değişkenlerini ayarerek hızlı denetimi devre dışı `DISABLEFASTUPTODATECHECK=1` bırakır. Alternatif olarak, projeler bunu proje içinde bir MSBuild veya projenin içeri aktar olduğu bir dosyada bir dosya olarak ayarlayarak.
+ Hata ayıklamaya başlamak için Visual Studio IDE'yi kullanırsanız (F5 anahtarını seçerek veya menü çubuğunda Hata Ayıklamayı Başlat'ı seçerek) veya projenizi derlemek (derleme çözümü gibi), derleme işlemi performansı geliştirmek için hızlı bir güncelleştirme denetimi  >     >  kullanır. Özelleştirilmiş derlemelerin sırasıyla dosya oluşturması durumlarında hızlı güncelleştirme denetimi değiştirilen dosyaları doğru şekilde tanımlamaz. Daha kapsamlı güncelleştirme denetimlerine ihtiyaç olan projeler, ortam değişkenlerini ayarerek hızlı denetimi devre dışı `DISABLEFASTUPTODATECHECK=1` bırakır. Alternatif olarak, projeler bunu projede bir MSBuild veya projenin içeri aktaran bir dosyada bir dosya olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapı Visual Studio genişletme](../msbuild/how-to-extend-the-visual-studio-build-process.md)
+- [Nasıl Visual Studio: Visual Studio genişletme](../msbuild/how-to-extend-the-visual-studio-build-process.md)
 - [IDE'den derleme başlatma](../msbuild/starting-a-build-from-within-the-ide.md)
 - [Dosyanın uzantılarını .NET Framework](../msbuild/registering-extensions-of-the-dotnet-framework.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)

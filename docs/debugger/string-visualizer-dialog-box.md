@@ -1,7 +1,7 @@
 ---
-title: Dize Görselleştirici iletişim kutusu | Microsoft Docs
-description: Hata ayıklama sırasında yerleşik Dize Görselleştirici iletişim kutusuyla dizeleri Visual Studio.
-ms.date: 10/10/2018
+title: Dize görselleştiricisi (metin, XML, HTML, JSON)
+description: Visual Studio 'de hata ayıklarken yerleşik dize görselleştiricisi iletişim kutusuyla dizeleri görüntüleyin.
+ms.date: 10/10/2021
 ms.custom: contperf-fy21q4
 ms.topic: reference
 f1_keywords:
@@ -22,55 +22,60 @@ manager: jmartens
 ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 52d50d7e2bf204de7907f568318b100aa53349d6
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: da842df7f92bdcdbd5463755a9c56b5d42613778
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627855"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130350813"
 ---
-# <a name="string-visualizer-dialog-box"></a>Dize Görselleştirici iletişim kutusu
+# <a name="view-text-xml-html-json-strings-in-the-string-visualizer"></a>String Visualizer 'da metin, XML, HTML, JSON dizelerini görüntüleme
 
-Hata ayıklama sırasında Visual Studio yerleşik dize görselleştiricisi ile dizeleri görüntüabilirsiniz. Dize görselleştiricisi, bir veri ipucu veya hata ayıklayıcısı penceresi için çok uzun olan dizeleri gösterir. Ayrıca hatalı biçimlendirilmiş dizeleri tanımlamanıza da yardımcı olabilir.
+Visual Studio hata ayıklaması yaparken, dizeleri yerleşik dize görselleştiricisi ile görüntüleyebilirsiniz. Dize görselleştiricisi bir veri ipucu veya hata ayıklayıcı penceresi için çok uzun olan dizeleri gösterir. Hatalı biçimlendirilmiş dizeleri belirlemenize de yardımcı olabilir.
 
-Yerleşik dize görselleştiricileri [Metin,](#text-string-data) [XML,](#xml-string-data) [HTML](#html-string-data)ve [JSON seçeneklerini](#json-string-data) içerir. Yerleşik görselleştiricileri [DataSet, DataTable](../debugger/dataset-visualizer-dialog-box.md) ve DataView nesneleri gibi diğer birkaç tür için  Otomatikler veya diğer hata ayıklayıcı pencerelerinden de açabilirsiniz.
+Yerleşik dize Görselleştiriciler [metin](#text-string-data), [XML](#xml-string-data), [HTML](#html-string-data)ve [JSON](#json-string-data) seçeneklerini içerir. Ayrıca, **oto** veya diğer hata ayıklayıcı pencerelerinin [veri kümesi, DataTable ve DataView](../debugger/dataset-visualizer-dialog-box.md) nesneleri gibi diğer diğer türler için de yerleşik Görselleştiriciler açabilirsiniz.
 
 > [!NOTE]
-> Bir görselleştiricide XAML veya WPF UI öğelerini incelemeniz gerekirse, hata ayıklarken [XAML](../xaml-tools/inspect-xaml-properties-while-debugging.md) özelliklerini inceleme veya WPF ağaç [görselleştiriciyi kullanma.](../debugger/how-to-use-the-wpf-tree-visualizer.md)
+> Görselleştirici içinde XAML veya WPF Kullanıcı arabirimi öğelerini incelemeniz gerekiyorsa, [hata ayıklama SıRASıNDA xaml özelliklerini](../xaml-tools/inspect-xaml-properties-while-debugging.md) görüntüleyin veya inceleyin ya da [WPF Ağacı Görselleştiricisini Kullanma](../debugger/how-to-use-the-wpf-tree-visualizer.md).
 
-Dize görselleştiricisini açmak için hata ayıklama sırasında duraklatılmış olması gerekir. Düz metin, XML, HTML veya JSON dize değerine sahip bir değişkenin üzerine gelin ve büyüteç simgesini ![VisualizerIcon olarak seçin.](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi")
+## <a name="open-the-visualizer"></a>Görselleştiriciyi açın
+
+Dize Görselleştiricisini açmak için:
+1. Hata ayıklama sırasında duraklatın. 
+2. Düz metin, XML, HTML veya JSON dize değerine sahip bir değişkenin üzerine gelin.
+3. Büyüteç simgesini ![Visualizersimgesini](../debugger/media/dbg-tips-visualizer-icon.png "Görselleştirici simgesi")seçin.
 
 ## <a name="uielement-list"></a>UIElement listesi
 
-**İfade** alanı, üzerine gelinen değişkeni veya ifadeyi gösterir.
+**İfade** alanı, üzerine geldiğinizde bulunan değişkeni veya ifadeyi gösterir.
 
-**Değer** alanı dize değerini gösterir. Boş bir **Değer,** seçilen görselleştiricinin dizeyi tanıyamay olduğu anlamına gelir. Örneğin XML **Görselleştiricisi,** XML  etiketi veya JSON dizesine sahip bir metin dizesi için boş bir Değer gösterir. Seçilen görselleştiricinin tanıyamıyorum dizelerini görüntülemek için bunun yerine **Metin Görselleştirici'yi** seçin. Metin **Görselleştiricisi düz** metin gösterir.
+**Değer** alanı dize değerini gösterir. Boş **değer** , seçilen Görselleştirici dizeyi tanıyamayacağı anlamına gelir. Örneğin, **XML GÖRSELLEŞTIRICISI** XML etıketı veya JSON dizesi olmayan bir metin dizesi için boş bir **değer** gösterir. Seçilen Görselleştirici tanıyamayacağı dizeleri görüntülemek için, bunun yerine **metin Görselleştirici** ' ı seçin. **Metin görselleştiricisi** düz metin gösterir.
 
 ### <a name="text-string-data"></a>Metin dizesi verileri
 
-Metin **Görselleştiricisi düz** metin gösterir. Bir C++ dizesi için özel biçimlendirmeye ihtiyacınız varsa, bir [Natvis görselleştirmesi oluşturun.](../debugger/create-custom-views-of-native-objects.md)
+**Metin görselleştiricisi** düz metin gösterir. C++ dizesi için özel biçimlendirmeye ihtiyacınız varsa, [Natvis görselleştirmesi](../debugger/create-custom-views-of-native-objects.md)oluşturun.
 
 ![Metin dizesi görselleştiricisi](../debugger/media/dbg-string-visualizer-text.png "Metin dizesi görselleştiricisi")
 
 ### <a name="json-string-data"></a>JSON dize verileri
 
-JSON görselleştiricisinde aşağıdaki çizime benzer şekilde iyi leştirilmiş bir JSON dizesi görünür. Yanlış biçimlendirilmiş JSON bir hata simgesi (veya tanınmıyorsa boş) biçimlendirilmiş olabilir. JSON hatasını belirlemek için dizeyi kopyalayıp [JSLint](https://www.jslint.com/)gibi bir JSON lint aracına yapıştırın.
+Doğru biçimlendirilmiş bir JSON dizesi, JSON Görselleştirici içindeki aşağıdaki çizime benzer şekilde görünür. Hatalı biçimlendirilmiş JSON bir hata simgesi gösterebilir (veya tanınmazsa boş). JSON hatasını belirlemek için, dizeyi kopyalayıp [JSLint](https://www.jslint.com/)gıbı bir JSON oluşturma aracına yapıştırın.
 
 ![JSON dize görselleştiricisi](../debugger/media/dbg-tips-string-visualizer-json.png "JSON dize görselleştiricisi")
 
-### <a name="xml-string-data"></a>XML dizesi verileri
+### <a name="xml-string-data"></a>XML dize verileri
 
-XML görselleştiricisinde aşağıdaki çizime benzer şekilde iyi leştirilmiş bir XML dizesi görünür. Yanlış biçimlendirilmiş XML, XML etiketleri olmadan veya tanınmazsa boş biçimlendirilmiş olabilir.
+Doğru biçimlendirilmiş bir XML dizesi, XML Görselleştiricisinin aşağıdaki çizimine benzer şekilde görünür. Hatalı biçimlendirilmiş XML, XML etiketleri olmadan veya tanınmazsa boş olarak görüntülenebilir.
 
-![XML Dize Görselleştiricisi](../debugger/media/dbg-string-visualizers-xml.png "XML Dize Görselleştiricisi")
+![XML dize görselleştiricisi](../debugger/media/dbg-string-visualizers-xml.png "XML dize görselleştiricisi")
 
-### <a name="html-string-data"></a>HTML dizesi verileri
+### <a name="html-string-data"></a>HTML dize verileri
 
-Aşağıdaki çizimde gösterildiği gibi, iyi oluşturulmuş bir HTML dizesi bir tarayıcıda işlenmiş gibi görünür. Yanlış biçimlendirilmiş HTML düz metin olarak biçimlendirilmiş olabilir.
+İyi biçimlendirilmiş bir HTML dizesi, aşağıdaki çizimde gösterildiği gibi, bir tarayıcıda işlenmiş gibi görünür. Hatalı biçimlendirilmiş HTML düz metin olarak görüntülenebilir.
 
-![HTML dize görselleştiricisi](../debugger/media/dbg-string-visualizers-html.png "HTML Dizesi Görselleştiricisi")
+![HTML dize görselleştiricisi](../debugger/media/dbg-string-visualizers-html.png "HTML dize görselleştiricisi")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel görselleştiriciler oluşturma (C#, Visual Basic)](../debugger/create-custom-visualizers-of-data.md)
-- [Mac için Visual Studio'daki veri görselleştirmeleri](/visualstudio/mac/data-visualizations)
+- [Özel Görselleştiriciler oluşturma (C#, Visual Basic)](../debugger/create-custom-visualizers-of-data.md)
+- [Mac için Visual Studio veri görselleştirmeleri](/visualstudio/mac/data-visualizations)

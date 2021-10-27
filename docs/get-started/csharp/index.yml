@@ -6,7 +6,7 @@ metadata:
   description: Visual Studio kullanarak C# uygulamaları oluşturun.
   ms.custom: vs-acquisition
   ms.topic: landing-page
-  ms.date: 06/19/2021
+  ms.date: 10/25/2021
   author: ghogen
   ms.author: ghogen
   manager: jmartens
@@ -14,12 +14,12 @@ metadata:
   ms.technology: vs-acquisition
   dev_langs:
   - CSharp
-  ms.openlocfilehash: ff25c69e47d8345fb44713e24eeed03cb7d5ff69
-  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+  ms.openlocfilehash: 622f09d75b34bb15a40f40f680b6f606f70b53c8
+  ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/13/2021
-  ms.locfileid: "126724935"
+  ms.lasthandoff: 10/26/2021
+  ms.locfileid: "130351489"
 landingContent:
 - title: Kullanmaya başlayın
   linkLists:

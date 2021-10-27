@@ -1,18 +1,18 @@
 ---
 title: Kapsayıcılar penceresini Visual Studio
-description: Ortam değişkenlerini, dosyaları, günlükleri, bağlantı noktalarını ve daha fazlasını hem de yerel olarak kullanılabilir Docker görüntülerini görmek için Kapsayıcılar araç penceresini kullanarak Visual Studio'de kapsayıcı tabanlı uygulamalarınızı hata ayıklama ve tanılama becerinizi geliştirmeyi açıklar.
+description: Ortam değişkenlerini, dosyaları, günlükleri, bağlantı noktalarını ve daha fazla kapsayıcıyı ve yerel olarak kullanılabilir Docker görüntülerini görmek için Kapsayıcılar araç penceresini kullanarak Visual Studio'de kapsayıcı tabanlı uygulamalarınızı ayıklama ve tanılama becerinizi geliştirmeyi açıklar.
 author: ghogen
 ms.author: ghogen
 ms.topic: how-to
 ms.date: 01/20/2020
 ms.technology: vs-container-tools
-monikerRange: vs-2019
-ms.openlocfilehash: d6e4ce1e92afea971d02242c03595020d27c23e3
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+monikerRange: '>=vs-2019'
+ms.openlocfilehash: f33f0e86fff98d670d964766fcbedfca319b1780
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631682"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130350800"
 ---
 # <a name="use-the-containers-window"></a>Kapsayıcılar penceresini kullanma
 
@@ -34,16 +34,16 @@ Kapsayıcılar penceresini kullanarak kapsayıcı görüntüleriyle ilgili bilgi
 Sol tarafta yerel makinenizin kapsayıcı listesini görüyorsunuz. Çözümünüzle ilişkili kapsayıcılar Çözüm Kapsayıcıları **altında gösterilir.** Sağ bölmede Ortam, **Etiketler,** Bağlantı **Noktaları,** **Birimler,** Günlükler ve Dosyalar **sekmelerini** **içeren** bir bölme **görüntülenir.**
 
 > [!TIP]
-> Kapsayıcılar araç **penceresinin, Kapsayıcılar** araç penceresinin bulunduğu yeri kolayca Visual Studio. Bkz. [Visual Studio'de pencere düzenlerini özelleştirme.](../ide/customizing-window-layouts-in-visual-studio.md) Varsayılan olarak, **hata ayıklayıcı** çalıştırıldıklarında **Kapsayıcılar** penceresi İzleme penceresiyle birlikte yerleştirildi.
+> Kapsayıcılar araç **penceresinin, Kapsayıcılar** araç penceresinin bulunduğu yeri kolayca Visual Studio. Bkz. ['de pencere düzenlerini Visual Studio.](../ide/customizing-window-layouts-in-visual-studio.md) Varsayılan olarak, **hata ayıklayıcı** çalıştırıldıklarında **Kapsayıcılar** penceresi İzleme penceresiyle birlikte yerleştirildi.
 
 ## <a name="view-environment-variables"></a>Ortam değişkenlerini görüntüleme
 
 Ortam **sekmesi** kapsayıcıda ortam değişkenlerini gösterir. Uygulama kapsayıcısı için bu değişkenleri dockerfile içinde, bir .env dosyasında veya docker komutu kullanarak bir kapsayıcıyı başlatmanız için -e seçeneğini kullanarak birçok şekilde ayarlayın.
 
-![Kapsayıcılar penceresinin ekran görüntüsü Visual Studio kapsayıcının Ortam değişkenlerini gösterir.](media/view-and-diagnose-containers/containers-environment-vars.png)
+![Kapsayıcılar penceresinin ekran Visual Studio kapsayıcının Ortam değişkenlerini gösteren ekran görüntüsü.](media/view-and-diagnose-containers/containers-environment-vars.png)
 
 > [!NOTE]
-> Ortam değişkenlerinin herhangi bir değişikliği gerçek zamanlı olarak yansıtılamamaktadır. Ayrıca, bu sekmede yer alan ortam değişkenleri kapsayıcının sistem ortamı değişkenleridir ve uygulamaya yerel kullanıcı ortam değişkenlerini yansıtmaz.
+> Ortam değişkenlerinin herhangi bir değişikliği gerçek zamanlı olarak yansıt yansıtıcı değildir. Ayrıca, bu sekmede yer alan ortam değişkenleri kapsayıcının sistem ortamı değişkenleridir ve uygulamaya yerel kullanıcı ortam değişkenlerini yansıtmaz.
 
 ## <a name="view-labels"></a>Etiketleri görüntüleme
 
@@ -61,7 +61,7 @@ Bağlantı **Noktaları** sekmesinde, kapsayıcınız için geçerli olan bağla
 
 ## <a name="view-volumes"></a>Birimleri görüntüleme
 
-Birimler **sekmesi** kapsayıcı üzerindeki birimleri (bağlı dosya sistemi düğümleri) gösterir.
+Birimler **sekmesinde** kapsayıcı üzerindeki birimler (bağlı dosya sistemi düğümleri) görüntülenir.
 
 ![Kapsayıcılar penceresinde birimler sekmesinin ekran görüntüsü](media/view-and-diagnose-containers/containers-volumes.png)
 
@@ -74,7 +74,7 @@ Birimler **sekmesi** kapsayıcı üzerindeki birimleri (bağlı dosya sistemi d�
 Günlükleri temizlemek için Günlükler **sekmesindeki** Temizle **düğmesini** kullanın.  Tüm günlükleri almak için Yenile **düğmesini** kullanın.
 
 > [!NOTE]
-> Visual Studio, Windows kapsayıcıları ile hata ayıklama yapmadan  çalıştırarak stdout ve stderr'i otomatik olarak Çıkış penceresine yeniden yönlendiriyor. Bu **nedenle, Visual Studio'den Ctrl** + **F5** kullanılarak başlayan Windows kapsayıcıları bu sekmede günlükleri görüntülemez; bunun yerine Çıkış penceresini kullanın. 
+> Visual Studio, Windows kapsayıcıları ile hata ayıklama olmadan  çalıştırarak stdout ve stderr'i otomatik olarak Çıkış penceresine yeniden yönlendiriyor Windows. Bu nedenle **Visual Studio'den Ctrl** + **F5** ile başlayan kapsayıcılar bu sekmede günlükleri görüntülemez; bunun yerine Çıkış penceresini kullanın. 
 
 ## <a name="view-the-filesystem"></a>Dosya sistemi görüntüleme
 
@@ -82,7 +82,7 @@ Dosyalar **sekmesinde,** projenizi içeren uygulama klasörü de dahil olmak üz
 
 ![Kapsayıcılar penceresindeki Dosyalar sekmesinin ekran görüntüsü](media/view-and-diagnose-containers/container-filesystem.png)
 
-Dosyaları dosya Visual Studio, dosyaya göz atarak çift tıklayın veya sağ tıklar ve Aç'ı **seçin.** Visual Studio salt okunur modda açılır.
+Dosyaları dosya Visual Studio, dosyaya göz atarak çift tıklayın veya sağ tıklar ve Aç'ı **seçin.** Visual Studio dosyaları salt okunur modda açar.
 
 ![Dosyanın açık olduğu dosyanın ekran görüntüsü Visual Studio](media/view-and-diagnose-containers/container-file-open.png)
 
@@ -100,7 +100,7 @@ Kapsayıcı penceresindeki Terminal Penceresini Aç düğmesini kullanarak kapsa
 
 ![Kapsayıcılar penceresinde Terminal Penceresini Açma ekran görüntüsü](media/view-and-diagnose-containers/containers-open-terminal-window.png)
 
-Kapsayıcılar Windows, Windows istemi açılır. Linux kapsayıcıları için bash kabuğunu kullanarak bir pencere açar.
+Kapsayıcıları Windows için Windows istemi açılır. Linux kapsayıcıları için bash kabuğunu kullanarak bir pencere açar.
 
 ![Bash penceresinin ekran görüntüsü](media/view-and-diagnose-containers/container-bash-window.png)
 
@@ -108,7 +108,7 @@ Normalde terminal penceresi, ayrı bir Visual Studio dışında açılır. Visua
 
 ## <a name="attach-the-debugger-to-a-process"></a>Hata ayıklayıcıyı bir işleme ekleme
 
-Kapsayıcılar penceresi araç çubuğundaki İşleme Ekle düğmesini kullanarak  hata ayıklayıcıyı kapsayıcıda çalışan bir işleme ekleyebilirsiniz. Bu düğmeyi kullanırken İşleme **Ekle** iletişim kutusu görünür ve kapsayıcıda çalışan kullanılabilir işlemleri gösterir.  
+Kapsayıcılar penceresi araç çubuğundaki İşleme Ekle düğmesini kullanarak hata ayıklayıcıyı kapsayıcıda **çalışan** bir işleme ekleyebilirsiniz. Bu düğmeyi kullanırken İşleme **Ekle** iletişim kutusu görünür ve kapsayıcıda çalışan kullanılabilir işlemleri gösterir.  
 
 ![İşleme Ekle iletişim kutusunun ekran görüntüsü](media/view-and-diagnose-containers/containers-attach-to-process.jpg)
 
@@ -122,19 +122,19 @@ Kapsayıcılar penceresindeki Görüntüler sekmesini kullanarak da **görüntü
 
 Pencerede yalnızca görüntüler için geçerli olan sekmeler vardır: **Etiketler ve** **Ayrıntılar.** Ayrıntılar **sekmesi,** görüntünün yapılandırma ayrıntılarını JSON biçiminde gösterir.
 
-![Kapsayıcılar penceresinin > Görüntüler ve Ayrıntılar sekmesini gösteren ekran görüntüsü](media/view-and-diagnose-containers/containers-images-details.png)
+![Kapsayıcılar penceresinin > Ayrıntılar sekmesini gösteren ekran görüntüsü](media/view-and-diagnose-containers/containers-images-details.png)
 
 Bir görüntüyü kaldırmak için ağaç görünümde görüntüye sağ tıklayın ve Kaldır'ı seçin veya görüntüyü seçin ve araç **çubuğundaki Kaldır** düğmesini kullanın.
 
 ## <a name="prune-containers-and-images"></a>Kapsayıcıları ve görüntüleri ayıklama
 
-Kapsayıcılar penceresi araç çubuğundaki Ayıklama düğmesini kullanarak artık kullanmamanız **durumdaki** kapsayıcıları ve **görüntüleri kolayca** kaldırabilirsiniz.
+Kapsayıcılar penceresi araç çubuğundaki Ayıklama düğmesini kullanarak artık kullanmamış **olduğunuz** kapsayıcıları ve **görüntüleri kolayca** kaldırabilirsiniz.
 
 ![Ayıklama düğmesini gösteren ekran görüntüsü](media/view-and-diagnose-containers/container-window-prune.png)
 
 Kullanılmayan tüm kapsayıcılarınızı kaldırmak istediğinizden emin olmak istemeniz istensin.
 
-Görüntüler **sekmesi** seçildiğinde, **Buda düğmesi** tüm dalgalı görüntüleri kaldırmak isterken sorar. Dalgalı görüntüler, artık etiketli görüntüyle ilişkilendirilen katmanlardan oluşan görüntülerdir. Bunları kaldırmak bazen disk alanı tasarrufu sağlar.
+Görüntüler **sekmesi** seçildiğinde, **Buda düğmesi** tüm dalgalı görüntüleri kaldırmak isterken sorar. Dalgalı görüntüler artık etiketli görüntüyle ilişkilendirilen katmanlardan oluşan görüntülerdir. Bunları kaldırmak bazen disk alanı tasarrufu sağlar.
 
 ## <a name="configuration-options"></a>Yapılandırma seçenekleri
 
@@ -142,7 +142,7 @@ Kapsayıcıları ve görüntüleri kaldırma veya aynı anda 10'dan fazla kapsay
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Visual Studio'da bulunan Kapsayıcı Araçları hakkında daha fazla bilgi Visual Studio Için [Bkz. Kapsayıcı Araçlarına Genel Bakış.](overview.md)
+Visual Studio'de bulunan Kapsayıcı Araçları hakkında daha fazla Visual Studio Için [Bkz. Kapsayıcı Araçlarına Genel Bakış.](overview.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: e0ae068ad1137ff83b77839fe09b2baa6cccbefe
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: a69e474f3710accf73e308dcf2cb83de89321a5e
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122108726"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130351502"
 ---
 # <a name="item-element-msbuild"></a>Öğe öğesi (MSBuild)
 
@@ -79,6 +79,8 @@ Ancak, `Version` meta verileri aşağıdaki sözdiziminde olduğu gibi bir özni
 |`Exclude`|İsteğe bağlı öznitelik.<br /><br /> Öğe listesinden dışlanacak dosya veya joker karakter.|
 |`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
 |`Remove`|İsteğe bağlı öznitelik.<br /><br /> Öğe listesinden kaldırılacak dosya veya joker karakter.<br /><br />|
+|`MatchOnMetadata`|İsteğe bağlı öznitelik.<br /><br /> `Remove`Diğer öğelere başvuran öznitelikleri, başvurulan öğelerin değerleriyle eşleştirmek yerine, belirtilen meta veri adlarıyla eşleşecek şekilde değiştirir. <br /><br /> Bu öznitelik yalnızca `Remove` diğer öğelere başvurular içeren bir öznitelikle birlikte belirtilirse geçerlidir (örneğin, `Remove="@(Compile);@(Content)"` ). [Öğelerde](../msbuild/msbuild-items.md)daha fazla ayrıntı.
+|`MatchOnMetadataOptions`|İsteğe bağlı öznitelik.<br /><br /> Tarafından kullanılan dize eşleştirme stratejisini belirtir `MatchOnMetadata` . Olası değerler `CaseSensitive` , `CaseInsensitive` , veya `PathLike` . `CaseInsensitive` varsayılan değerdir. |  
 |`KeepDuplicates`|İsteğe bağlı öznitelik.<br /><br /> Bir öğenin, var olan bir öğenin tam yinelemesi olması halinde, hedef gruba eklenip eklenmeyeceğini belirtir. Kaynak ve hedef öğe aynı `Include` değere ancak farklı meta verilere sahip ise, olarak ayarlanmış olsa bile öğe eklenir `KeepDuplicates` `false` . Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).<br /><br /> Bu öznitelik yalnızca içindeki bir öğesi için belirtilmişse geçerlidir `ItemGroup` `Target` .|
 |`KeepMetadata`|İsteğe bağlı öznitelik.<br /><br /> Hedef öğelere eklenecek kaynak öğelerinin meta verileri. Yalnızca adları noktalı virgülle ayrılmış listede belirtilen meta veriler bir kaynak öğeden hedef öğeye aktarılır. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).<br /><br /> Bu öznitelik yalnızca içindeki bir öğesi için belirtilmişse geçerlidir `ItemGroup` `Target` .|
 |`RemoveMetadata`|İsteğe bağlı öznitelik.<br /><br /> Hedef öğelere aktarılamayan kaynak öğelerinin meta verileri. Tüm meta veriler, adları noktalı virgülle ayrılmış ad listesinde yer alan meta veriler hariç bir kaynak öğeden hedef öğeye aktarılır. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).<br /><br /> Bu öznitelik yalnızca içindeki bir öğesi için belirtilmişse geçerlidir `ItemGroup` `Target` .|

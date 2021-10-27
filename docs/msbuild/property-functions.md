@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ccca084f783e9f436ba3f701501c7c3fbf36b2b
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
+ms.openlocfilehash: 268c0b2030b39ff512aa74fc7ea84c185331e0a2
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130208337"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130350696"
 ---
 # <a name="property-functions"></a>Özellik işlevleri
 
@@ -176,97 +176,103 @@ MSBuild özellik işlevlerinin bir listesi aşağıdadır:
 |bool ıosunixlike ()|Geçerli işletim sistemi bir UNIX sistemse true.|
 |String NormalizePath (params String [] yol)|Belirtilen yolun kurallı tam yolunu alır ve geçerli işletim sistemi için doğru dizin ayırıcı karakterlerini içerdiğinden emin olur.|
 |String NormalizeDirectory (params String [] yol)|Belirtilen dizinin kurallı tam yolunu alır ve sonunda eğik çizgi olduğundan emin olarak geçerli işletim sistemi için doğru dizin ayırıcı karakterlerini içerir.|
-|dize Ensugeri çekme bölgesi (dize yolu)|Verilen yolun sonunda eğik çizgi yoksa bir tane ekleyin. Yol boş bir dize ise, bunu değiştirmez.|
-|string GetPathOfFileAbove(dize dosyası, string startingDirectory)|için arama ve geçerli derleme dosyasının konumunun üzerindeki dizin yapısındaki bir dosyanın tam yolunu veya belirtilmişse dosyasını `startingDirectory` temel alarak döndürür.|
-|GetDirectoryNameOfFileAbove(string startingDirectory, string fileName)|Belirtilen dizinde veya dizinin üzerindeki dizin yapısında bir dosyanın dizinini bulun ve geri dönüş.|
-|string MakeRelative(string basePath, string path)|ile `path` ilgili `basePath` yapar. `basePath` mutlak bir dizin olmalıdır. Göreli `path` olarak bulunamazsa, tam olarak döndürülür. benzer `Uri.MakeRelativeUri` şekilde.|
-|string ValueOrDefault(string conditionValue, string defaultValue)|'defaultValue' parametresinde dizeyi yalnızca 'conditionValue' parametresi boşsa, yoksa conditionValue değerini döndürür.|
+|dize Ensugeri çekme bölgesi (dize yolu)|Verilen yolun sonunda eğik çizgi yoksa bir tane ekleyin. Yol boş bir dize ise, onu değiştirmez.|
+|String Getpathoffileyukarıdaki (dize dosyası, dize startingDirectory)|, İçin arama yapar ve geçerli derleme dosyasının konumunun üzerindeki dizin yapısındaki bir dosyanın tam yolunu ya da belirtilmişse öğesine göre döndürür `startingDirectory` .|
+|Getdirectorynameoffileyukarıdaki (dize startingDirectory, dize fileName)|Belirtilen dizinde ya da bu dizinin üzerindeki dizin yapısındaki bir konumda bulunan bir dosyanın dizinini bulun ve döndürün.|
+|String MakeRelative (dize basePath, dize yolu)|`path`Göreli hale getirir `basePath` . `basePath` mutlak bir dizin olmalıdır. `path`Göreli hale getirilmezse, harfine döndürülür. Benzer `Uri.MakeRelativeUri` .|
+|dize ValueOrDefault (dize conditionValue, String defaultValue)|' DefaultValue ' parametresindeki dizeyi yalnızca ' conditionValue ' parametresi boşsa, Else değerini döndürün.|
 
 ## <a name="nested-property-functions"></a>İç içe özellik işlevleri
 
-Aşağıdaki örnekte de olduğu gibi, daha karmaşık işlevler oluşturmak için özellik işlevlerini birleştirebilirsiniz.
+Aşağıdaki örnekte gösterildiği gibi daha karmaşık işlevler oluşturmak için özellik işlevlerini birleştirebilirsiniz.
 
 ```
 $([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))
 ```
 
-Bu örnek, yolu tarafından <xref:System.IO.FileAttributes> `Archive` verilen dosyanın bit değerini (32 veya 0) `tempFile` döndürür. Numaralandı veri değerlerinin özellik işlevlerinde adına göre görüneyr. Bunun yerine sayısal değer (32) kullanılmalıdır.
+Bu örnek, değerini döndürür <xref:System.IO.FileAttributes> .`Archive` yol tarafından verilen dosyanın bit (32 veya 0) `tempFile` . Numaralandırılmış veri değerlerinin bazı bağlamlarda ada göre görünmediğine dikkat edin. Önceki örnekte, bunun yerine sayısal değer (32) kullanılmalıdır. Diğer durumlarda, çağrılan yöntemin beklentilerine bağlı olarak, enum veri değeri kullanılmalıdır. Aşağıdaki örnekte, Enum değeri <xref:System.Text.RegularExpressions.RegexOptions> .`ECMAScript` Bu yöntemin beklediği için sayısal bir değer dönüştürülemediğinden kullanılmalıdır.
 
-Meta veriler iç içe özellik işlevlerinde de görünebilir. Daha fazla bilgi için bkz. [Toplu İşlem.](../msbuild/msbuild-batching.md)
+```xml
+<PropertyGroup>
+    <GitVersionHeightWithOffset>$([System.Text.RegularExpressions.Regex]::Replace("$(PrereleaseVersion)", "^.*?(\d+)$", "$1", "System.Text.RegularExpressions.RegexOptions.ECMAScript"))</GitVersionHeightWithOffset>
+</PropertyGroup>
+```
 
-## <a name="msbuild-doestaskhostexist"></a>MSBuild DoesTaskHostExist
+Meta veriler, iç içe geçmiş Özellik işlevlerinde de görünebilir. Daha fazla bilgi için bkz. [toplu](../msbuild/msbuild-batching.md)işlem.
 
-MSBuild özelliği işlevi, belirtilen çalışma zamanı ve mimari değerleri için bir görev ana bilgisayarının yüklü `DoesTaskHostExist` olup olmadığını döndürür.
+## <a name="msbuild-doestaskhostexist"></a>MSBuild Yok Tasmi Hostexist
 
-Bu özellik işlevi aşağıdaki söz dizimlerini içerir:
+`DoesTaskHostExist`MSBuild özellik işlevi, belirtilen çalışma zamanı ve mimari değerleri için bir görev konağının şu anda yüklü olup olmadığını döndürür.
+
+Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 
 ```
 $([MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture))
 ```
 
-## <a name="msbuild-ensuretrailingslash"></a>MSBuild EnsureTrailingSlash
+## <a name="msbuild-ensuretrailingslash"></a>MSBuild Ensugeri çekme
 
-MSBuild özelliği işlevi, henüz yoksa `EnsureTrailingSlash` sonda bir eğik çizgi ekler.
+`EnsureTrailingSlash`MSBuild özellik işlevi, zaten mevcut değilse sondaki eğik çizgi ekler.
 
-Bu özellik işlevi aşağıdaki söz dizimlerini içerir:
+Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 
 ```
 $([MSBuild]::EnsureTrailingSlash('$(PathProperty)'))
 ```
 
-## <a name="msbuild-getdirectorynameoffileabove"></a>MSBuild GetDirectoryNameOfFileAbove
+## <a name="msbuild-getdirectorynameoffileabove"></a>MSBuild Getdirectorynameoffileyukarıdaki
 
-MSBuild özelliği işlevi, belirtilen dizinden başerek (ve dahil) belirtilen dosyayı içeren `GetDirectoryNameOfFileAbove` bir dizini yukarı doğru arar. Bulunursa dosyayı içeren en yakın dizinin tam yolunu, aksi takdirde boş bir dize döndürür.
+MSBuild `GetDirectoryNameOfFileAbove` property işlevi, belirtilen dosyayı (ve dahil) başlayarak belirtilen dizini içeren bir dizin için yukarı doğru arar. Bulunursa dosyayı içeren en yakın dizinin tam yolunu, aksi takdirde boş bir dize döndürür.
 
-Bu özellik işlevi aşağıdaki söz dizimlerini içerir:
+Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 
 ```
 $([MSBuild]::GetDirectoryNameOfFileAbove(string startingDirectory, string fileName))
 ```
 
-Bu örnekte, yalnızca bir eşleşme bulunursa geçerli klasörün içinde veya üzerinde en yakın *EnlistmentInfo.props* dosyasını içeri aktarma işlemi gösterir:
+Bu örnek, yalnızca bir eşleşme bulunursa geçerli klasörün içinde veya üzerinde en yakın *EnlistmentInfo. props* dosyasının nasıl içeri aktarılacağını gösterir:
 
 ```xml
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))\EnlistmentInfo.props" Condition=" '$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))' != '' " />
 ```
 
-Bunun yerine bu örneğin daha kısa bir şekilde yazıldığına dikkat `GetPathOfFileAbove` etmek gerekir:
+Bunun yerine işlevi kullanılarak bu örneğin daha öz yazılabilir yazıldığını unutmayın `GetPathOfFileAbove` :
 
 ```xml
 <Import Project="$([MSBuild]::GetPathOfFileAbove(EnlistmentInfo.props))" Condition=" '$([MSBuild]::GetPathOfFileAbove(EnlistmentInfo.props))' != '' " />
 ```
 
-## <a name="msbuild-getpathoffileabove"></a>MSBuild GetPathOfFileAbove
+## <a name="msbuild-getpathoffileabove"></a>MSBuild Getpathoffileyukarıdaki
 
-MSBuild özelliği işlevi, belirtilen dizinden başerek (ve dahil) belirtilen dosyayı içeren `GetPathOfFileAbove` bir dizini yukarı doğru arar. Bulunursa en yakın eşleşen dosyanın tam yolunu, aksi takdirde boş bir dize döndürür.
+MSBuild `GetPathOfFileAbove` property işlevi, belirtilen dosyayı (ve dahil) başlayarak belirtilen dizini içeren bir dizin için yukarı doğru arar. Bulunursa, en yakın eşleşen dosyanın tam yolunu, yoksa boş bir dize döndürür.
 
-Bu özellik işlevi aşağıdaki söz dizimlerini içerir:
+Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 
 ```
 $([MSBuild]::GetDirectoryNameOfFileAbove(string file, [string startingDirectory]))
 ```
 
-burada, `file` aranan dosyanın adıdır ve `startingDirectory` aramanın başlatıla isteğe bağlı bir dizinidir. Varsayılan olarak, arama geçerli dosyanın kendi dizininde başlar.
+Burada arama `file` yapılacak dosyanın adıdır ve `startingDirectory` içinde aramayı başlatmak için isteğe bağlı bir dizindir. Varsayılan olarak, arama geçerli dosyanın kendi dizininde başlar.
  
-Bu örnekte, geçerli dizinin içinde veya üzerinde *dir.props* adlı bir dosyanın nasıl içeri aktarnacakları yalnızca eşleşme bulunursa nasıl içeri aktaracakları açıklanır:
+Bu örnek, yalnızca bir eşleşme bulunursa geçerli dizinin içinde veya üzerinde *dir. props* adlı bir dosyanın nasıl içeri aktarılacağını gösterir:
 
 ```xml
 <Import Project="$([MSBuild]::GetPathOfFileAbove(dir.props))" Condition=" '$([MSBuild]::GetPathOfFileAbove(dir.props))' != '' " />
 ```
 
-bu, işlevsel olarak ile eşdeğerdir
+işlevsel olarak eşdeğer
 
 ```xml
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" Condition=" '$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))' != '' " />
 ```
 
-Ancak bazen geçerli dosyayla eşleşmemek için üst dizinde arama başlatmanız gerekir. Bu örnek, *bir Directory.Build.props* dosyasının kendisini tekrar tekrar içeri aktarmadan en yakın *Directory.Build.props* dosyasını ağacın kesinlikle daha yüksek bir düzeyinde nasıl içeri aktara olduğunu gösterir:
+Ancak, bazı durumlarda, geçerli dosyanın eşleşmesini önlemek için aramayı ana dizinde başlatmanız gerekebilir. Bu örnek, bir *Directory. Build. props* dosyasının en yakın *Dizin. Build. props* dosyasını, yinelemeli olarak içeri aktarmadan, ağacın tamamen daha yüksek bir düzeyinde nasıl içeri aktaragösterdiğini gösterir:
 
 ```xml
 <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
 ```
 
-bu, işlevsel olarak ile eşdeğerdir
+işlevsel olarak eşdeğer
 
 ```xml
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove('$(MSBuildThisFileDirectory)../', 'Directory.Build.props'))/Directory.Build.props" />
@@ -274,9 +280,9 @@ bu, işlevsel olarak ile eşdeğerdir
 
 ## <a name="msbuild-getregistryvalue"></a>MSBuild GetRegistryValue
 
-MSBuild `GetRegistryValue` özelliği işlevi bir kayıt defteri anahtarının değerini döndürür. Bu işlev anahtar adı ve değer adı olmak kaydından iki bağımsız değişken alır ve değeri kayıt defterinden döndürür. Bir değer adı belirtmezseniz varsayılan değer döndürülür.
+MSBuild `GetRegistryValue` property işlevi bir kayıt defteri anahtarının değerini döndürür. Bu işlev iki bağımsız değişken alır, anahtar adı ve değer adı ve kayıt defterindeki değeri döndürür. Bir değer adı belirtmezseniz, varsayılan değer döndürülür.
 
-Aşağıdaki örneklerde bu işlevin nasıl kullanıldıkları verilmiştir:
+Aşağıdaki örneklerde bu işlevin nasıl kullanıldığı gösterilmektedir:
 
 ```
 $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, ``))                                  // default value
@@ -285,29 +291,29 @@ $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(Samp
 ```
 
 > [!WARNING]
-> MSBuild () .NET SDK sürümünde `dotnet build` bu işlev desteklenmiyor.
+> MSBuild () .net SDK sürümünde `dotnet build` bu işlev desteklenmez.
 
 ## <a name="msbuild-getregistryvaluefromview"></a>MSBuild GetRegistryValueFromView
 
-Bu MSBuild işlevi kayıt defteri anahtarı, değeri ve bir veya daha fazla sıralı kayıt defteri görünümlerini kullanarak `GetRegistryValueFromView` sistem kayıt defteri verilerini alır. Anahtar ve değer, bulunana kadar her kayıt defteri görünümünde sırayla aranır.
+MSBuild `GetRegistryValueFromView` property işlevi, kayıt defteri anahtarı, değeri ve bir veya daha fazla sıralanmış kayıt defteri görünümü verilen sistem kayıt defteri verilerini alır. Anahtar ve değer, her kayıt defteri görünümünde, bulunana kadar sırayla aranır.
 
-Bu özellik işlevinin söz dizimi şöyledir:
+Bu özellik işlevinin sözdizimi şöyledir:
 
 ```
 [MSBuild]::GetRegistryValueFromView(string keyName, string valueName, object defaultValue, params object[] views)
 ```
 
-64 bit Windows sistemi, 32 bit **uygulamalar içinHKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node** kayıt defteri görünümü sunan bir **HKEY_LOCAL_MACHINE\SOFTWARE** kayıt defteri anahtarını sürdürür.
+Windows 64-bit işletim sistemi, 32 bit uygulamalar için **HKEY_LOCAL_MACHINE\SOFTWARE** kayıt defteri görünümü sunan **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node** bir kayıt defteri anahtarı tutar.
 
-Wow64 üzerinde çalışan 32 bitlik bir uygulama varsayılan olarak 32 bit kayıt defteri görünümüne, 64 bit uygulama ise 64 bit kayıt defteri görünümüne erişmektedir.
+Varsayılan olarak, WOW64 üzerinde çalışan 32 bitlik bir uygulama 32 bit kayıt defteri görünümüne erişir ve 64 bit uygulama, 64 bit kayıt defteri görünümüne erişir.
 
 Aşağıdaki kayıt defteri görünümleri kullanılabilir:
 
 |Kayıt defteri görünümü|Tanım|
 |-------------------|----------------|
-|RegistryView.Registry32|32 bit uygulama kayıt defteri görünümü.|
-|RegistryView.Registry64|64 bit uygulama kayıt defteri görünümü.|
-|RegistryView.Default|Uygulamanın üzerinde çalıştır olduğu işlemle eşleşen kayıt defteri görünümü.|
+|RegistryView. Registry32|32 bit uygulama kayıt defteri görünümü.|
+|RegistryView. Registry64|64 bit uygulama kayıt defteri görünümü.|
+|RegistryView. Default|Uygulamanın üzerinde çalıştığı işlemle eşleşen kayıt defteri görünümü.|
 
 Bir örnek verilmiştir.
 
@@ -315,22 +321,22 @@ Bir örnek verilmiştir.
 $([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Silverlight\v3.0\ReferenceAssemblies', 'SLRuntimeInstallPath', null, RegistryView.Registry64, RegistryView.Registry32))
 ```
 
-, önce 64 bit kayıt defteri görünümünde ve ardından 32 bit kayıt defteri görünümünde bakarak **ReferenceAssemblies** anahtarının **SLRuntimeInstallPath** verilerini alır.
+önce 64 bit kayıt defteri görünümüne, sonra da 32 bit kayıt defteri görünümünde arayarak **ReferenceAssemblies** anahtarının **SLRuntimeInstallPath** verilerini alır.
 
 > [!WARNING]
-> MSBuild () .NET SDK sürümünde `dotnet build` bu işlev desteklenmiyor.
+> MSBuild () .net SDK sürümünde `dotnet build` bu işlev desteklenmez.
 
-## <a name="msbuild-makerelative"></a>MSBuild Makerelative
+## <a name="msbuild-makerelative"></a>MSBuild MakeRelative
 
-MSBuild `MakeRelative` özelliği işlevi, birinci yola göre ikinci yolun göreli yolunu döndürür. Her yol bir dosya veya klasör olabilir.
+MSBuild `MakeRelative` property işlevi, ilk yola göre ikinci yolun göreli yolunu döndürür. Her yol bir dosya veya klasör olabilir.
 
-Bu özellik işlevi aşağıdaki söz dizimlerini içerir:
+Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 
 ```
 $([MSBuild]::MakeRelative($(FileOrFolderPath1), $(FileOrFolderPath2)))
 ```
 
-Aşağıdaki kod, bu söz dizimlerinin bir örneğidir.
+Aşağıdaki kod bu sözdizimine bir örnektir.
 
 ```xml
 <PropertyGroup>
@@ -352,9 +358,9 @@ Output:
 
 ## <a name="msbuild-valueordefault"></a>MSBuild ValueOrDefault
 
-MSBuild `ValueOrDefault` özelliği işlevi, null veya boş olmadığı sürece ilk bağımsız değişkeni döndürür. İlk bağımsız değişken null veya boşsa işlev ikinci bağımsız değişkeni döndürür.
+MSBuild `ValueOrDefault` property işlevi, null veya boş olmadığı takdirde ilk bağımsız değişkeni döndürür. İlk bağımsız değişken null veya boşsa, işlev ikinci bağımsız değişkeni döndürür.
 
-Aşağıdaki örnekte bu işlevin nasıl kullanıldıkları gösterir.
+Aşağıdaki örnek, bu işlevin nasıl kullanıldığını gösterir.
 
 ```xml
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -381,17 +387,19 @@ Output:
 
 ## <a name="msbuild-targetframework-and-targetplatform-functions"></a>MSBuild TargetFramework ve TargetPlatform işlevleri
 
-MSBuild 16.7 ve üzerinde [TargetFramework ve TargetPlatform özelliklerini işlemeye yönelik çeşitli işlevler tanımlayın.](msbuild-target-framework-and-target-platform.md)
+MSBuild 16,7 ve üzeri, [targetframework ve TargetPlatform özelliklerini](msbuild-target-framework-and-target-platform.md)işlemek için birkaç işlevi tanımlar.
 
 |İşlev imzası|Description|
 |------------------------|-----------------|
-|GetTargetFrameworkIdentifier(string targetFramework)|TargetFramework'den TargetFrameworkIdentifier'i ayrıştır.|
-|GetTargetFrameworkVersion(string targetFramework)|TargetFrameworkVersion'i TargetFramework'den ayrıştırın.|
-|GetTargetPlatformIdentifier(string targetFramework)|TargetPlatformIdentifier'i TargetFramework'den ayrıştır.|
-|GetTargetPlatformVersion(string targetFramework)|TargetPlatformVersion'i TargetFramework'den ayrıştırın.|
-|IsTargetFrameworkCompatible(string targetFrameworkTarget, string targetFrameworkCandidate)|Aday hedef çerçeve bu hedef çerçeveyle uyumluysa 'True', aksi takdirde false döndürür.|
+|Gettargetframeworkıdentifier (dize targetFramework)|Targetframeworkıdentifier 'ı TargetFramework 'ten ayrıştırın.|
+|GetTargetFrameworkVersion (dize targetFramework, int versionPartCount)|TargetFrameworkVersion 'ı TargetFramework 'ten ayrıştırın.|
+|Gettargetplatformıdentifier (dize targetFramework)|Targetplatformformıdentifier 'ı TargetFramework 'ten ayrıştırın.|
+|GetTargetPlatformVersion (dize targetFramework, int versionPartCount)|Targetplatformden TargetPlatformVersion 'ı ayrıştırın.|
+|Itargetframeworkcompatible (dize targetFrameworkTarget, String targetFrameworkCandidate)|Aday hedef çerçevesi bu hedef Framework ile uyumluysa ' true ', aksi takdirde false döndürün.|
 
-Aşağıdaki örnekte, bu işlevlerin nasıl kullanıldıkları gösterir. 
+`versionPartCount` `GetTargetFrameworkVersion` Ve parametresinin `GetTargetPlatformVersion` varsayılan değeri 2 ' dir.
+
+Aşağıdaki örnek, bu işlevlerin nasıl kullanıldığını gösterir. 
 
 ```xml
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -422,17 +430,17 @@ Value4 = 7.0
 Value5 = True
 ```
 
-## <a name="msbuild-version-comparison-functions"></a>MSBuild karşılaştırma işlevleri
+## <a name="msbuild-version-comparison-functions"></a>MSBuild sürümü-karşılaştırma işlevleri
 
-MSBuild 16.5 ve üst sürümleri temsil eden dizeleri karşılaştırmak için çeşitli işlevler tanımlar.
+MSBuild 16,5 ve üzeri sürümleri temsil eden dizeleri karşılaştırmak için birkaç işlevi tanımlar.
 
 > [!Note]
-> Koşullardaki karşılaştırma [işleçleri nesne olarak ayrıştırılana dizeleri `System.Version` karşılaştırabilirsiniz,](msbuild-conditions.md#comparing-versions)ancak karşılaştırma beklenmeyen sonuçlar üretebilir. Özellik işlevlerini tercih eder.
+> Koşullarda karşılaştırma işleçleri, [ `System.Version` nesne olarak ayrıştırılabilecek dizeleri karşılaştırabilir](msbuild-conditions.md#comparing-versions), ancak karşılaştırma beklenmeyen sonuçlar üretebilir. Özellik işlevlerini tercih edin.
 
 |İşlev imzası|Description|
 |------------------------|-----------------|
-|VersionEquals(string a, string b)|ve `true` sürümleri aşağıdaki `a` `b` kurallara göre eşdeğerse dönüş.|
-|VersionGreaterThan(string a, string b)|Sürüm, `true` aşağıdaki `a` kurallara göre daha `b` büyükse geri döner.|
+|VersionEquals (dize a, dize b)|`true`Sürümler `a` ve `b` aşağıdaki kurallara göre eşdeğer olursa döndürün.|
+|VersionGreaterThan (dize a, dize b)|`true`Sürüm `a` `b` aşağıdaki kurallara göre daha büyükse döndürün.|
 |VersionGreaterThanOrEquals (dize a, dize b)|`true`Sürüm `a` aşağıdaki kurallara göre daha büyükse veya eşitse döndürün `b` .|
 |VersionLessThan (dize a, dize b)|`true`Sürüm `a` `b` aşağıdaki kurallara göre daha küçükse döndürün.|
 |Versionlessals Okoşulları (dize a, dize b)|`true`Sürüm `a` aşağıdaki kurallara göre daha küçük veya ona eşitse döndürün `b` .|

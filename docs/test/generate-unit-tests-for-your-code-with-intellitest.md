@@ -1,6 +1,6 @@
 ---
 title: IntelliTest ile kodunuz için birim testleri oluşturma
-description: IntelliTest, test verileri ve birim testleri paketi oluşturmak için .NET kodunuzu araştırır. Hangi testlerin başarısız olduğunu görmek ve bunları onarmak için IntelliTest çalıştırmayı öğrenin.
+description: IntelliTest, test verileri ve birim testleri paketi oluşturmak için .NET kodunuzu araştırır. Tüm mantıksal Dallarınızı kapsayan, hangi testlerin başarısız olduğunu görmek ve bunları onarmak için IntelliTest çalıştırmayı öğrenin.
 ms.custom: SEO-VS-2020
 ms.date: 10/05/2015
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.technology: vs-ide-test
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: dba46c3b111f82bdb6e03eca5442b2f497e8ad3e
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 317cd50c9c6854ea683e7b40d55821ac2a197054
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126634241"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130351515"
 ---
-# <a name="how-to-generate-unit-tests-by-using-intellitest"></a>Nasıl yapılır: IntelliTest kullanarak birim testleri oluşturma
+# <a name="generate-unit-tests-for-fuzz-testing-by-using-intellitest"></a>IntelliTest kullanarak belirsizlik testi için birim testleri oluşturma
 
-IntelliTest, test verileri ve birim testleri paketi oluşturmak için .NET kodunuzu araştırır. Koddaki her deyimin için, bu ifadeyi yürütecek bir test girişi oluşturulur. Koddaki her koşullu dal için bir olay Analizi gerçekleştirilir. Örneğin, `if` deyimler, Onaylamalar ve özel durum oluşturabilecek tüm işlemler çözümlenir. Bu analiz, metotlarınızın her biri için parametreli birim testi için test verileri oluşturmak üzere kullanılır ve yüksek kod kapsamı ile birim testleri oluşturur.
+IntelliTest, test verileri ve birim testleri paketi oluşturmak için .NET kodunuzu araştırır. Koddaki her deyimin için, bu ifadeyi yürütecek bir test girişi oluşturulur. Koddaki her koşullu dal için bir olay Analizi gerçekleştirilir. Örneğin, `if` deyimler, Onaylamalar ve özel durum oluşturabilecek tüm işlemler çözümlenir. Bu analiz, metotlarınızın her biri için parametreli birim testi için test verileri oluşturmak üzere kullanılır ve yüksek kod kapsamı ile birim testleri oluşturur. Tüm mantıksal Dallarınızı yürüten ve özel durumları kontrol eden girişleri ve test çalışmalarını kırpan akıllı bir belirsizlik testi olarak düşünün.
 
 IntelliTest çalıştırdığınızda, hangi testlerin başarısız olduğunu kolayca görebilir ve bunları onarmak için gerekli kodu ekleyebilirsiniz. Bir gerileme paketi sağlamak için test projesine kaydetmek üzere oluşturulan testlerin hangisi olduğunu seçebilirsiniz. Kodunuzu değiştirirken, oluşturulan testleri kod değişiklikleriyle eşitlenmiş halde tutmak için IntelliTest 'i yeniden çalıştırın.
 

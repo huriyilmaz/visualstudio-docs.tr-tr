@@ -12,12 +12,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 520349f829a696e2b34aef262efd01e937ad1998
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: de25a3d1433a067869a5725ec725d8d20d174e32
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126627062"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130350709"
 ---
 # <a name="msbuild-items"></a>MSBuild öğeleri
 
@@ -206,11 +206,66 @@ Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluş
 </Target>
 ```
 
+#### <a name="matchonmetadata-attribute"></a>MatchOnMetadata özniteliği
+
+`MatchOnMetadata`Özniteliği yalnızca `Remove` diğer öğelere başvuran öznitelikler için geçerlidir (örneğin, `Remove="@(Compile);@(Content)"` ) ve Remove işleminin, öğe değerlerine göre eşleştirmek yerine, belirtilen meta veri adlarının değerlerine göre öğeleri eşleşecek şekilde yönlendirir.
+
+İçin eşleşen kural: meta verileri olan `B Remove="@(A)" MatchOnMetadata="M"` tüm öğeleri, meta veri `B` `M` değeri, `V` `M` `A` değeri meta verileri ile eşleşen herhangi bir öğeyle eşleşir `M` `V` .
+
+```xml
+<Project>
+  <ItemGroup>
+    <A Include='a1' M1='1' M2='a' M3="e"/>
+    <A Include='b1' M1='2' M2='x' M3="f"/>
+    <A Include='c1' M1='3' M2='y' M3="g"/>
+    <A Include='d1' M1='4' M2='b' M3="h"/>
+
+    <B Include='a2' M1='x' m2='c' M3="m"/>
+    <B Include='b2' M1='2' m2='x' M3="n"/>
+    <B Include='c2' M1='2' m2='x' M3="o"/>
+    <B Include='d2' M1='3' m2='y' M3="p"/>
+    <B Include='e2' M1='3' m2='Y' M3="p"/>
+    <B Include='f2' M1='4'        M3="r"/>
+    <B Include='g2'               M3="s"/>
+
+    <B Remove='@(A)' MatchOnMetadata='M1;M2'/>
+  </ItemGroup>
+
+  <Target Name="PrintEvaluation">
+    <Message Text="%(B.Identity) M1='%(B.M1)' M2='%(B.M2)' M3='%(B.M3)'" />
+  </Target>
+</Project>
+```
+
+Yukarıdaki örnekte, öğe değerleri `b2` , `c2` ve `d2` Şu nedenle öğesinden kaldırılır `B` :
+ - `b2` ve `c2` ile `B` `b1` arasında `A` `M1=2` ve arasında `M2=x`
+ - `d2``B` `c1` `A` , ve üzerindeki ile arasında `M1=3``M2=y`
+
+`Message`Görev aşağıdakileri çıktı:
+```
+  a2 M1='x' M2='c' M3='m'
+  e2 M1='3' M2='Y' M3='p'
+  f2 M1='4' M2='' M3='r'
+  g2 M1='' M2='' M3='s'
+```
+
+`MatchOnMetadata` [MSBuild ortak SDK](https://github.com/dotnet/msbuild/blob/808b2ae2a176679d15f8c3299e551a63cb55b799/src/Tasks/Microsoft.Common.CurrentVersion.targets#L5019)'dan örnek kullanım:
+```xml
+      <_TransitiveItemsToCopyToOutputDirectory Remove="@(_ThisProjectItemsToCopyToOutputDirectory)" MatchOnMetadata="TargetPath" MatchOnMetadataOptions="PathLike" />
+```
+Yukarıdaki satır, `_TransitiveItemsToCopyToOutputDirectory` `TargetPath` içindeki öğelerden aynı meta veri değerlerine sahip olan öğeleri kaldırır `_ThisProjectItemsToCopyToOutputDirectory`
+
+#### <a name="matchonmetadataoptions-attribute"></a>MatchOnMetadataOptions özniteliği
+
+Öğeler arasında meta veri değerlerini eşleştirmek için tarafından kullanılan dize eşleştirme stratejisini belirtir (meta veri adları her zaman `MatchOnMetadata` büyük/büyük/büyük harfe duyarlı değildir). Olası değerler `CaseSensitive` , `CaseInsensitive` veya `PathLike` değerleridir. `CaseSensitive` varsayılan değerdir.
+
+`PathLike` , eğik çizgi yönlendirmelerini normalleştirme, sondaki eğik çizgileri yoksayma, ve 'yi ortadan kaldırma ve tüm göreli yolları geçerli dizinde mutlak hale gelme gibi değerlere yol farkında `.` `..` normalleştirme uygular.
+
 ### <a name="keepmetadata-attribute"></a><a name="BKMK_KeepMetadata"></a> KeepMetadata özniteliği
 
- Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `KeepMetadata` özniteliğini içerebilir. Bu öznitelik belirtilmişse, yalnızca noktalı virgülle ayrılmış ad listesinde belirtilen meta veriler, kaynak öğeden hedef öğeye aktarılır. Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. `KeepMetadata`öznitelik .NET Framework 4,5 ' de tanıtılmıştı.
+ Bir öğe hedef içinde oluşturulursa öğe öğesi özniteliğini `KeepMetadata` içerebilir. Bu öznitelik belirtilirse, yalnızca noktalı virgülle ayrılmış ad listesinde belirtilen meta veriler kaynak öğeden hedef öğeye aktarılır. Bu öznitelik için boş bir değer belirtmeye eşdeğerdir. özniteliği `KeepMetadata` 4.5 .NET Framework tanıtıldı.
 
- Aşağıdaki örnek, özniteliğini nasıl kullanacağınızı gösterir `KeepMetadata` .
+ Aşağıdaki örnek özniteliğinin nasıl kullanılageldi? `KeepMetadata`
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
@@ -251,7 +306,7 @@ Output:
 
 ### <a name="removemetadata-attribute"></a><a name="BKMK_RemoveMetadata"></a> RemoveMetadata özniteliği
 
- Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `RemoveMetadata` özniteliğini içerebilir. Bu öznitelik belirtilmişse, tüm meta veriler kaynak öğeden, adları noktalı virgülle ayrılmış ad listesinde yer alan meta veriler hariç hedef öğeye aktarılır. Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. özniteliği, `RemoveMetadata` 4.5 .NET Framework tanıtıldı.
+ Bir öğe hedef içinde oluşturulursa öğe öğesi özniteliğini `RemoveMetadata` içerebilir. Bu öznitelik belirtilirse, adları noktalı virgülle ayrılmış ad listesinde yer alan meta veriler dışında tüm meta veriler kaynak öğeden hedef öğeye aktarılır. Bu öznitelik için boş bir değer belirtmeye eşdeğerdir. özniteliği `RemoveMetadata` 4.5 .NET Framework tanıtıldı.
 
  Aşağıdaki örnek özniteliğinin nasıl kullanılageldi? `RemoveMetadata`
 
@@ -303,7 +358,7 @@ Output:
 
  Bir öğe hedef içinde oluşturulursa öğe öğesi özniteliğini `KeepDuplicates` içerebilir. `KeepDuplicates` , bir öğenin var olan bir öğenin tam olarak yineleniyorsa hedef gruba ekli olup olmadığını `Boolean` belirten bir özniteliktir.
 
- Kaynak ve hedef öğe aynı Include değerine ancak farklı meta verilere sahipse, öğesi olarak ayarlanmış `KeepDuplicates` olsa bile `false` eklenir. Bu öznitelik için boş bir değer belirtmeye eşdeğerdir. özniteliği, `KeepDuplicates` 4.5 .NET Framework tanıtıldı.
+ Kaynak ve hedef öğe aynı Include değerine ancak farklı meta verilere sahipse, öğesi olarak ayarlanmış `KeepDuplicates` olsa bile `false` eklenir. Bu öznitelik için boş bir değer belirtmeye eşdeğerdir. özniteliği `KeepDuplicates` 4.5 .NET Framework tanıtıldı.
 
  Aşağıdaki örnek özniteliğinin nasıl kullanılageldi? `KeepDuplicates`
 
@@ -414,7 +469,7 @@ Item1: notebook
 ```
 
 :::moniker range=">=vs-2019"
-Sürüm MSBuild 16.6 ve sonraki sürümlerde özniteliği, iki veya daha fazla öğeden meta verileri içeri aktarmayı kolaylaştırmak için tam meta `Update` veri başvurularını destekler.
+Sürüm MSBuild 16.6 ve sonraki sürümlerde özniteliği, iki veya daha fazla öğeden meta verileri içeri aktarmayı kolaylaştırmak için tam meta veri `Update` başvurularını destekler.
 
 ```xml
 <Project>
@@ -498,7 +553,7 @@ Item1: notebook
 ```
 
 Açıklamalar:
-- Tam olmayan meta veriler (%(M)) güncelleştirilen öğe türüne (yukarıdaki `Item1` örnekte) bağlar. Nitelikli meta veriler ( `%(Item2.Color)` ) Update ifadesinde yakalanan eşleşen öğe türleri kümesi içinde bağlar.
+- Tam olmayan meta veriler (%(M)) güncelleştirilen öğe türüne `Item1` (yukarıdaki örnekte) bağlar. Nitelikli meta veriler ( `%(Item2.Color)` ) Update ifadesinde yakalanan eşleşen öğe türleri kümesi içinde bağlar.
 - Bir öğe birden çok başvurulan öğenin içinde ve arasında birden çok kez eşlese:
   - Başvurulan her öğe türünden son oluşum yakalanır (bu nedenle her öğe türü için bir yakalanan öğe).
   - Bu, hedef altında toplu iş işleme görev öğesinin davranışıyla eşler.

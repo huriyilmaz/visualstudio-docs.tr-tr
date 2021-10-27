@@ -3,14 +3,14 @@ title: Windows kullanıcılar için Mac için Visual Studio
 description: Windows işletim sisteminde Visual Studio kullanmayla ilgili tanıdık geliştiriciler için Mac için Visual Studio tanıtım.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 11/09/2020
+ms.date: 11/09/2021
 ms.assetid: 61CB6883-08CE-470F-8599-6F7570DB756E
-ms.openlocfilehash: 880811c675aac34a18a65c6eccb8ee10f3347d4c
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: c6a98e8314bfdb9c838db3dc36afbec004755d2b
+ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725947"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130350995"
 ---
 # <a name="visual-studio-for-mac-for-windows-users"></a>Windows kullanıcılar için Mac için Visual Studio
 
