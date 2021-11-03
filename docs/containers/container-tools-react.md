@@ -8,12 +8,12 @@ ms.author: ghogen
 ms.date: 10/25/2021
 ms.technology: vs-container-tools
 ms.topic: quickstart
-ms.openlocfilehash: 353324f24dc60db5b727eef8dc266a6dc1719876
-ms.sourcegitcommit: 4efdab6a579b31927c42531bb3f7fdd92890e4ac
+ms.openlocfilehash: 0476cbe027b43e1c9f3be7f26a1b039de3a01319
+ms.sourcegitcommit: 141efad8a6a303737bdc563a4f48964411f342eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/26/2021
-ms.locfileid: "130351384"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131249692"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>hızlı başlangıç: Visual Studio React tek sayfalı bir uygulamayla docker kullanın
 
@@ -38,7 +38,7 @@ Visual Studio ile, React.js tek sayfalı uygulama gibi istemci tarafı JavaScrip
 ::: moniker-end
 ::: moniker range=">=vs-2022"
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* **Web geliştirme**, **Azure araçları** iş yükü ve/veya **.net Core platformlar arası geliştirme** iş yükü yüklü [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/vs/preview)
+* **Web geliştirme**, **Azure araçları** iş yükü ve/veya **.net Core platformlar arası geliştirme** iş yükü yüklü [Visual Studio 2022](https://visualstudio.microsoft.com/vs/preview/)
 * Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
 * [Node.js](https://nodejs.org/en/download/)
 * Windows kapsayıcılar için, Windows 10 sürüm 1809 veya üzeri için, bu makalede başvurulan docker görüntülerini kullanın.
@@ -361,38 +361,38 @@ CONTAINER ID        IMAGE                      COMMAND               CREATED    
 
 ![Kapsayıcılar penceresinin ekran görüntüsü.](media/container-tools-react/vs-2022/container-tools-window.png)
 
-Dosyalar **sekmesine tıklayın** ve yayımlanan uygulama `app` dosyalarınızı görmek için klasörü genişletin.
+**Dosyalar** sekmesine tıklayın ve `app` yayımlanan uygulama dosyalarınızı görmek için klasörü genişletin.
 
-Ayrıca görüntüleri görüntüp bu görüntülerle ilgili bilgileri incelersiniz. Görüntüler **sekmesini** seçin, projeniz için bir tane  bulun ve ardından Ayrıntılar sekmesini seçen bir görüntü hakkında bilgi içeren bir json dosyasını görüntüleyin.
+Ayrıca, görüntüleri görüntüleyebilir ve bunlarla ilgili bilgileri inceleyebilirsiniz. **Görüntüler** sekmesini seçin, projeniz için bir tane bulun ve ardından bir görüntüyle ilgili bilgileri içeren bir JSON dosyasını görüntülemek için **Ayrıntılar** sekmesini seçin.
 
-![Görüntüleri ve ayrıntıları gösteren Kapsayıcılar penceresinin ekran görüntüsü.](media/container-tools-react/vs-2022/container-tools-window-images-details.png)
+![Resimleri ve ayrıntıları gösteren kapsayıcılar penceresinin ekran görüntüsü.](media/container-tools-react/vs-2022/container-tools-window-images-details.png)
 
 > [!NOTE]
-> Geliştirme **görüntüsü** uygulama ikililerini ve diğer içeriği içermez çünkü **Hata** ayıklama yapılandırmaları, birim bağlamayı kullanarak yeniden düzenleme ve hata ayıklama deneyimi sağlar. Tüm içerikleri içeren bir üretim görüntüsü oluşturmak için Yayın **yapılandırmasını** kullanın.
+> **Geliştirme** görüntüsü, uygulama ikililerini ve diğer içerikleri Içermez. **hata ayıklama** yapılandırmalarında, yinelemeli düzenleme ve hata ayıklama deneyimi sağlamak için birim bağlama kullanılır. Tüm içerikleri içeren bir üretim görüntüsü oluşturmak için **yayın** yapılandırmasını kullanın.
 
 :::moniker-end
 
 ## <a name="publish-docker-images"></a>Docker görüntülerini yayımlama
 
-Uygulamanın geliştirme ve hata ayıklama döngüsü tamamlandıktan sonra, uygulamanın üretim görüntüsünü oluşturabilirsiniz.
+Uygulamanın geliştirme ve hata ayıklama döngüsünü tamamladıktan sonra uygulamanın üretim görüntüsünü oluşturabilirsiniz.
 
 :::moniker range="vs-2017"
 
-1. Yapılandırma açılan listesinde Yayın'a **ve** uygulamayı derlemeye devam edin.
-1. **Çözüm Gezgini'da projenize sağ tıklayın ve** Yayımla'yı **seçin.**
-1. Hedefi yayımla iletişim kutusunda **Container Registry.**
-1. Yeni **Uygulama Oluştur'Azure Container Registry** yayımla'ya **tıklayın.**
-1. Yeni bir dosya oluştur içinde **istediğiniz değerleri Azure Container Registry.**
+1. Yapılandırma açılır öğesini değiştirerek uygulamayı **serbest bırakın** ve oluşturun.
+1. **Çözüm Gezgini** ' de projenize sağ tıklayın ve **Yayımla**' yı seçin.
+1. Hedefi Yayımla iletişim kutusunda **Container Registry**' yi seçin.
+1. **Yeni Azure Container Registry oluştur** ' u seçin ve **Yayımla**' ya tıklayın.
+1. **Yeni Azure Container Registry oluştur ' a** istediğiniz değerleri girin.
 
     | Ayar      | Önerilen değer  | Açıklama                                |
     | ------------ |  ------- | -------------------------------------------------- |
-    | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz olarak tanımlayan ad. |
+    | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
     | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
-    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacak kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
+    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
-    | **Kayıt Defteri Konumu** | Size yakın bir konum | Size veya kapsayıcı kayıt [defterinizi](https://azure.microsoft.com/regions/) kullanan diğer hizmetlere yakın bir bölgede konum seçin. |
+    | **Kayıt Defteri Konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
 
-    ![Visual Studio oluştur iletişim kutusunun Azure Container Registry görüntüsü.](media/hosting-web-apps-in-docker/vs-azure-container-registry-provisioning-dialog.png)
+    ![Visual Studio Azure Container Registry oluştur iletişim kutusunun ekran görüntüsü.](media/hosting-web-apps-in-docker/vs-azure-container-registry-provisioning-dialog.png)
 
 1. **Oluştur**’u seçin.
 
@@ -401,70 +401,70 @@ Uygulamanın geliştirme ve hata ayıklama döngüsü tamamlandıktan sonra, uyg
 
 :::moniker range="vs-2019"
 
-1. Yapılandırma açılan listesinde Yayın'a **ve** uygulamayı derlemeye devam edin.
-1. **Çözüm Gezgini'da projenize sağ tıklayın ve** Yayımla'yı **seçin.**
-1. Yayımlama hedefi iletişim kutusunda **Docker Container Registry.**
+1. Yapılandırma açılır öğesini değiştirerek uygulamayı **serbest bırakın** ve oluşturun.
+1. **Çözüm Gezgini** ' de projenize sağ tıklayın ve **Yayımla**' yı seçin.
+1. Hedefi Yayımla iletişim kutusunda **Docker Container Registry** öğesini seçin.
 
-   ![Choose Docker Container Registry.](media/container-tools-react/vs-2019/publish-dialog1.png)
+   ![Docker Container Registry seçin.](media/container-tools-react/vs-2019/publish-dialog1.png)
 
-1. Ardından, **Azure Container Registry.**
+1. Sonra **Azure Container Registry** öğesini seçin.
 
-   ![Yeni bir Azure Container Registry.](media/container-tools-react/vs-2019/publish-dialog-azure-container-registry.png)
+   ![Azure Container Registry seçin.](media/container-tools-react/vs-2019/publish-dialog-azure-container-registry.png)
 
-1. Yeni **bir dosya oluştur'Azure Container Registry.**
-1. yeni veri oluştur ekranında **istediğiniz değerleri Azure Container Registry.**
+1. **Yeni Azure Container Registry oluştur ' a** tıklayın.
+1. **Yeni Azure Container Registry oluştur** ekranında istediğiniz değerleri girin.
 
     | Ayar      | Önerilen değer  | Açıklama                                |
     | ------------ |  ------- | -------------------------------------------------- |
-    | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz olarak tanımlayan ad. |
+    | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
     | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
-    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacak kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
+    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
-    | **Kayıt Defteri Konumu** | Size yakın bir konum | Size veya kapsayıcı kayıt [defterinizi](https://azure.microsoft.com/regions/) kullanan diğer hizmetlere yakın bir bölgede konum seçin. |
+    | **Kayıt Defteri Konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
 
-    ![Visual Studio oluştur iletişim kutusunun Azure Container Registry görüntüsü.](media/container-tools-react/vs-2019/azure-container-registry-details.png)
+    ![Visual Studio Azure Container Registry oluştur iletişim kutusunun ekran görüntüsü.](media/container-tools-react/vs-2019/azure-container-registry-details.png)
 
-1. **Oluştur'a** ve ardından Son'a **seçin.**
+1. **Oluştur**' u ve ardından **son**' u seçin.
 
-   ![Yeni bir hesap seçin veya oluşturun seçeneğini gösteren Azure Container Registry.](media/container-tools-react/vs-2019/publish-dialog2.png)
+   ![Seç veya yeni Azure Container Registry oluştur ' u gösteren ekran görüntüsü.](media/container-tools-react/vs-2019/publish-dialog2.png)
 
-   Yayımlama işlemi sona erdiğinde yayımlama ayarlarını gözden geçirebilirsiniz ve gerektiğinde bunları düzenleyebilir veya Yayımla düğmesini kullanarak görüntüyü yeniden **yayımlayabilirsiniz.**
+   Yayımlama işlemi sona erdiğinde, yayınlama ayarlarını gözden geçirebilir ve gerektiğinde düzenleyebilir veya **Yayımla** düğmesini kullanarak görüntüyü yeniden yayımlayabilirsiniz.
 
    ![Başarılı yayımlama işlemini gösteren ekran görüntüsü.](media/container-tools-react/vs-2019/publish-finished.png)
 
-   Yayımla iletişim kutusunu kullanarak **yeniden** başlamak için, bu sayfanın Sil bağlantısını kullanarak **yayımlama** profilini silin ve ardından Yayımla'yı **yeniden** seçin.
+   **Yayımla** iletişim kutusunu kullanarak yeniden başlamak için, bu sayfadaki **Sil** bağlantısını kullanarak yayımlama profilini silin ve sonra yeniden **Yayımla** ' yı seçin.
 :::moniker-end
 
 :::moniker range=">=vs-2022"
 
-1. Yapılandırma açılan listesinde Yayın'a **ve** uygulamayı derlemeye devam edin.
-1. **Çözüm Gezgini'da projenize sağ tıklayın ve** Yayımla'yı **seçin.**
-1. Yayımlama hedefi iletişim kutusunda **Docker Container Registry.**
+1. Yapılandırma açılır öğesini değiştirerek uygulamayı **serbest bırakın** ve oluşturun.
+1. **Çözüm Gezgini** ' de projenize sağ tıklayın ve **Yayımla**' yı seçin.
+1. Hedefi Yayımla iletişim kutusunda **Docker Container Registry** öğesini seçin.
 
-   ![Docker Seçme'yi gösteren ekran Container Registry.](media/container-tools-react/vs-2022/publish-dialog-1.png)
+   ![Docker Container Registry seçin seçeneğini gösteren ekran görüntüsü.](media/container-tools-react/vs-2022/publish-dialog-1.png)
 
-1. Ardından, **Azure Container Registry.**
+1. Sonra **Azure Container Registry** öğesini seçin.
 
-   ![Seç'i gösteren ekran Azure Container Registry.](media/container-tools-react/vs-2022/publish-dialog-azure-container-registry.png)
+   ![Azure Container Registry seçin seçeneğini gösteren ekran görüntüsü.](media/container-tools-react/vs-2022/publish-dialog-azure-container-registry.png)
 
-1. Yeni **bir dosya oluştur'Azure Container Registry.**
-1. yeni veri oluştur ekranında **istediğiniz değerleri Azure Container Registry.**
+1. **Yeni Azure Container Registry oluştur ' a** tıklayın.
+1. **Yeni Azure Container Registry oluştur** ekranında istediğiniz değerleri girin.
 
     | Ayar      | Önerilen değer  | Açıklama                                |
     | ------------ |  ------- | -------------------------------------------------- |
-    | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz olarak tanımlayan ad. |
+    | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
     | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
-    | **[Kaynak Grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacak kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
+    | **[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
     | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
-    | **Kayıt Defteri Konumu** | Size yakın bir konum | Size veya kapsayıcı kayıt [defterinizi](https://azure.microsoft.com/regions/) kullanan diğer hizmetlere yakın bir bölgede konum seçin. |
+    | **Kayıt Defteri Konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
 
-    ![Visual Studio oluştur iletişim kutusunun Azure Container Registry görüntüsü.](media/container-tools-react/vs-2022/azure-container-registry-details.png)
+    ![Visual Studio Azure Container Registry oluştur iletişim kutusunun ekran görüntüsü.](media/container-tools-react/vs-2022/azure-container-registry-details.png)
 
-1. **Oluştur'a** ve ardından Son'a **seçin.**
+1. **Oluştur**' u ve ardından **son**' u seçin.
 
-   ![Yeni bir hesap seçin veya oluşturun seçeneğini gösteren Azure Container Registry.](media/container-tools-react/vs-2022/publish-dialog-2.png)
+   ![Seç veya yeni Azure Container Registry oluştur ' u gösteren ekran görüntüsü.](media/container-tools-react/vs-2022/publish-dialog-2.png)
 
-   Yayımlama işlemi sona erdiğinde yayımlama ayarlarını gözden geçirebilirsiniz ve gerektiğinde bunları düzenleyebilir veya Yayımla düğmesini kullanarak görüntüyü yeniden **yayımlayabilirsiniz.**
+   Yayımlama işlemi sona erdiğinde, yayınlama ayarlarını gözden geçirebilir ve gerektiğinde düzenleyebilir veya **Yayımla** düğmesini kullanarak görüntüyü yeniden yayımlayabilirsiniz.
 
    :::image type="content" alt-text="Başarılı yayımlamayı gösteren ekran görüntüsü" source="media/container-tools-react/vs-2022/publish-succeeded.png" lightbox="media/container-tools-react/vs-2022/publish-succeeded.png":::
 

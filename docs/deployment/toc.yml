@@ -41,7 +41,7 @@
         - name: Yükleyici paketi oluşturma
           href: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
         - name: Bir masaüstü uygulamasını Microsoft Store için paketleme >>
-          href: /windows/msix/desktop/packaging-uwp-apps
+          href: /windows/msix/package/packaging-uwp-apps
         - name: ClickOnce kullanarak C++/CLR uygulaması dağıtma >>
           href: /cpp/windows/clickonce-deployment-for-visual-cpp-applications
     - name: Node.js

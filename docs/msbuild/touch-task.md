@@ -21,12 +21,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d67ea85f396baa45e1a8da2f2cf6898d02b4e01
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 5fbc6924cf53d72dbbd92679008039c7df6bd1f4
+ms.sourcegitcommit: 141efad8a6a303737bdc563a4f48964411f342eb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122108199"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "131249679"
 ---
 # <a name="touch-task"></a>Dokunma görevi
 
@@ -39,9 +39,9 @@ Dosyaların erişim ve değişiklik zamanlarını ayarlar.
 |Parametre|Açıklama|
 |---------------|-----------------|
 |`AlwaysCreate`|İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `true` zaten mevcut olmayan herhangi bir dosya oluşturur.|
-|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Dokunacak dosya koleksiyonunu belirtir.|
+|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Dokunacak dosyaların koleksiyonunu belirtir.|
 |`ForceTouch`|İsteğe `Boolean` bağlı parametre.<br /><br /> ise, `true` dosyalar salt okunur olsa bile bir dosya dokunmaya neden olur.|
-|`Time`|İsteğe `String` bağlı parametre.<br /><br /> Geçerli saat dışında bir saat belirtir. Biçimin yöntemi için kabul edilebilir bir biçim olması <xref:System.DateTime.Parse%2A> gerekir.|
+|`Time`|İsteğe `String` bağlı parametre.<br /><br /> Bir saat belirtir. Varsayılan olarak geçerli saat `Now` ( ). biçimi kullanılarak yöntemi tarafından <xref:System.DateTime.Parse%2A> ayrıştırılabilir `DateTimeFormatInfo.InvariantInfo` olmalıdır.|
 |`TouchedFiles`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Başarıyla dokunan öğelerin koleksiyonunu içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
