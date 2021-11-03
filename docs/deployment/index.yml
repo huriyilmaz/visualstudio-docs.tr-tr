@@ -10,12 +10,12 @@ metadata:
   ms.author: mikejo
   manager: jmartens
   ms.date: 09/17/2019
-  ms.openlocfilehash: a85f501dd6a5c74acc18b50bc926e4518a0561d7
-  ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
+  ms.openlocfilehash: 2d326eef85ab2ebdfe274941f945de118480d1f7
+  ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/04/2021
-  ms.locfileid: "129431646"
+  ms.lasthandoff: 11/02/2021
+  ms.locfileid: "131127253"
 landingContent:
 - title: Dağıtım hakkında
   linkLists:
@@ -23,25 +23,27 @@ landingContent:
     links:
     - text: Dağıtıma ilk bakış
       url: deploying-applications-services-and-components.md
-- title: Kullanmaya başlama (.NET Core, Python)
+    - text: Yayımlamaya genel bakış
+      url: publish-overview.md
+- title: Kullanmaya başlayın (.NET)
   linkLists:
-  - linkListType: overview
-    links:
-    - text: Klasör, IIS ya da Azure’a dağıtma
-      url: deploying-applications-services-and-components-resources.md
   - linkListType: quickstart
     links:
-    - text: Azure App Service’e yayımlama
-      url: quickstart-deploy-to-azure.md
-    - text: Linux için App Service’e Yayımlama
-      url: quickstart-deploy-to-linux.md
-    - text: Web sitesine yayımlama
-      url: quickstart-deploy-to-a-web-site.md
-    - text: Klasöre yayımlama
-      url: quickstart-deploy-to-local-folder.md
+    - text: ASP.NET web uygulaması dağıtma
+      url: quickstart-deploy-aspnet-web-app.md
     - text: ClickOnce kullanarak .NET Core uygulaması dağıtma
       url: quickstart-deploy-using-clickonce-folder.md
-- title: .NET uygulamaları dağıtma
+- title: ASP.NET web uygulamaları dağıtma
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: ASP.NET Core’u Azure’a yayımlama
+      url: /azure/app-service/quickstart-dotnetcore?tabs=netcore31&pivots=development-environment-vs#publish-your-web-app
+    - text: IIS 'den yayımlama ayarları al
+      url: tutorial-import-publish-settings-iis.md
+    - text: Git ile yayımlama
+      url: /azure/app-service/deploy-continuous-deployment
+- title: .NET masaüstü uygulamaları dağıtma
   linkLists:
   - linkListType: tutorial
     links:
@@ -61,18 +63,6 @@ landingContent:
     links:
     - text: Yükleyici paketi kullanarak dağıtma
       url: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
-    - text: Windows Store için bir masaüstü uygulamasını paketleme
-      url: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
-- title: ASP.NET Core uygulamalarını dağıtma
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: ASP.NET Core’u Azure’a yayımlama
-      url: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs
-    - text: Yayımlama ayarlarını içeri aktarma ve IIS’ye dağıtma
-      url: tutorial-import-publish-settings-iis.md
-    - text: Git ile yayımlama
-      url: /azure/app-service/deploy-continuous-deployment
 - title: Diğer dağıtım türleri
   linkLists:
   - linkListType: how-to-guide

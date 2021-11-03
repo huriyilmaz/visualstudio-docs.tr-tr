@@ -6,16 +6,16 @@ manager: cabuschl
 ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
 ms.date: 10/13/2021
 ms.topic: conceptual
-description: Microsoft yazılım başlıklarını bulma ve indirme hakkında bilgi edinin Visual Studio edinin
-ms.openlocfilehash: 4ee58e67e94979562736c920087d4d1e18d40ec3
-ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
+description: Aboneliklerde Microsoft yazılım başlıklarını bulma ve indirmeyi Visual Studio öğrenin
+ms.openlocfilehash: f1ecef8f831ac4cc5e06250e9d0b1eb8f37f937a
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "130011581"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131128046"
 ---
-# <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Yazılım başlıklarını aboneliklere Visual Studio indirme
-Sahip olduğunuz Visual Studio bağlı olarak, çok çeşitli Microsoft yazılım başlıklarını kullanabilirsiniz.  Bu makalede, aboneliğinizi en iyi şekilde elde etmek için ihtiyacınız olan yazılımı nasıl bulup indiryebilirsiniz? 
+# <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Yazılım başlıklarını Visual Studio indirme
+Sahip Visual Studio bağlı olarak, çok çeşitli Microsoft yazılım başlıklarını kullanabilirsiniz.  Bu makalede, aboneliğinizi en iyi şekilde elde etmek için ihtiyacınız olan yazılımı nasıl bulup indiryebilirsiniz? 
 
 İndirmeler sayfasında yalnızca aboneliğinize dahil edilen indirmeler [görüntülenir.](https://my.visualstudio.com/downloads/featured)  Birden fazla aboneliğiniz veya program üyeliğiniz varsa, gösterilen  indirmeler şu anda farklı bir abonelik görüntülese bile en yüksek aboneliğiniz için gösterilir.  Örneğin, hem Visual Studio Enterprise aboneliğiniz hem de aynı oturum açma kimliğiyle ilişkilendirilmiş bir Visual Studio Professional aboneliğiniz varsa, gösterilen indirmeler şu anda aboneliğinizi görüntülse bile Enterprise aboneliğine dahil edilenler Professional abonelik avantajları.  
 
@@ -29,7 +29,7 @@ Aboneliğiniz iş veya okulunuz tarafından sağlanıyorsa, indirmelere erişimi
 > [!div class="mx-imgBorder"]
 > ![Abone indirmeleri sayfası](_img/subscriber-downloads/subscriber-downloads-resized.png "en popüler indirmeler, İndirmeler dikey penceresi seçerek görüntülenir.")
 
-Örneğin, Geliştirici Araçları **listesinden Visual Studio 2019'Visual Studio** seçerseniz, 2019 indirmeleri için kullanılabilir Visual Studio görüntülenir.
+Örneğin, Geliştirici Araçları **listesinden Visual Studio 2019'Visual Studio** seçerseniz, 2019 indirmeleri için kullanılabilir Visual Studio listesi görüntülenir.
 > [!div class="mx-imgBorder"]
 > ![Visual Studio 2019 indirmeleri](_img/subscriber-downloads/vs2019-product-list.png "Bir ürün seçerek kullanılabilir sürümlerin listesi görüntülenir.")
 
@@ -67,6 +67,6 @@ Ayrıntılar bölmesinde Anahtarlar sekmesini seçerek **ürün** anahtarların�
 - [Anahtarları bulma ve talepte bulun](find-keys.md)
 
 Şunların gibi diğer harika avantajlardan yararlanmayı öğrenin:
-- [Azure DevTest bireysel kredisi](vs-azure.md)
+- [Azure DevTest teklifi/kredileri](/azure/devtest/offer/)
 - [Azure DevOps](vs-azure-devops.md)
 - [Visual Studio IDE](vs-ide-benefit.md)

@@ -13,12 +13,12 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 4d6fefdda40e550a62616a82734a84037c0c10b0
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 0a6a9ee668cddd6830f7631b5170a0c0fdd9ddcf
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725716"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127461"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-react-in-visual-studio"></a>öğretici: Visual Studio React ile ASP.NET Core uygulama oluşturma
 
@@ -102,7 +102,11 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
 ## <a name="start-the-project"></a>Projeyi başlatma
 
-**F5** tuşuna basın veya pencerenin üst kısmındaki **Başlat** düğmesini seçin. İki komut isteminin göründüğünü göreceksiniz:
+Projeye başlamadan önce, bağlantı noktası numaralarının eşleştiğinden emin olun. ASP.NET Core projenizdeki *launchsettings. json* dosyasına gidin ( *özellikler* klasöründe). Özellikten bağlantı noktası numarasını alın `applicationUrl` . (Şuna benzer görünmelidir `https://localhost:7049` .)
+
+sonra, React projeniz için *setupProxy.js* dosyasına gidin ( *src* klasörüne bakın). `applicationUrl` *Launchsettings. JSON* içindeki özellik ile eşleşecek şekilde Target özelliğini güncelleştirin.
+
+Projeyi başlatmak için **F5** tuşuna basın veya pencerenin üst kısmındaki **Başlat** düğmesini seçin. İki komut isteminin göründüğünü göreceksiniz:
 
 - çalıştıran ASP.NET Core apı projesi
 - Yanıt verme betikleri başlangıç komutunu çalıştıran NPM

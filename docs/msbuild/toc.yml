@@ -1,595 +1,644 @@
-- name: MSBuild
-  href: msbuild.md
-  items:
-    - name: MSBuild 16.0 sürümündeki yenilikler
-      href: whats-new-msbuild-16-0.md
-    - name: MSBuild 15.0 sürümündeki yenilikler
-      href: what-s-new-in-msbuild-15-0.md
-    - name: Dalgaları değiştirme
-      href: change-waves.md
-    - name: MSBuild kavramları
-      items:
-        - name: Genel Bakış
-          displayName: msbuild concepts
-          href: msbuild-concepts.md
-        - name: MSBuild nasıl proje oluşturur
-          href: build-process-overview.md
-        - name: Özellikler
-          items:
-            - name: MSBuild özellikleri
-              href: msbuild-properties.md
-            - name: Derlemede ortam değişkenleri kullanma
-              href: how-to-use-environment-variables-in-a-build.md
-            - name: Proje dosyasının adına veya konumuna başvurma
-              href: how-to-reference-the-name-or-location-of-the-project-file.md
-            - name: Aynı kaynak dosyalarını farklı seçeneklerle derleme
-              href: how-to-build-the-same-source-files-with-different-options.md
-            - name: Özellik işlevleri
-              href: property-functions.md
-        - name: Öğeler
-          items:
-            - name: MSBuild öğeleri
-              href: msbuild-items.md
-            - name: Derlenecek dosyaları seçme
-              href: how-to-select-the-files-to-build.md
-            - name: Dosyaları derlemeden çıkarma
-              href: how-to-exclude-files-from-the-build.md
-            - name: Virgülle ayrılmış öğe listesi görüntüleme
-              href: how-to-display-an-item-list-separated-with-commas.md
-            - name: Öğe tanımları
-              href: item-definitions.md
-            - name: Öğe işlevleri
-              href: item-functions.md
-        - name: Hedefler
-          items:
-            - name: MSBuild hedefleri
-              href: msbuild-targets.md
-            - name: Hedef derleme sırası
-              href: target-build-order.md
-            - name: Artımlı derlemeler
-              href: incremental-builds.md
-            - name: Önce hangi hedefin derleneceğini belirtme
-              href: how-to-specify-which-target-to-build-first.md
-            - name: Birden çok proje dosyasında aynı hedefi kullanma
-              href: how-to-use-the-same-target-in-multiple-project-files.md
-            - name: MSBuild.exe kullanarak çözümlerde belirli hedefler derleme
-              href: how-to-build-specific-targets-in-solutions-by-using-msbuild-exe.md
-            - name: Artımlı olarak derleme
-              href: how-to-build-incrementally.md
-            - name: Derlemeyi temizleme
-              href: how-to-clean-a-build.md
-            - name: MSBuild proje SDK’sına başvurma
-              href: how-to-use-project-sdk.md
-        - name: Görevler
-          items:
-            - name: MSBuild görevleri
-              href: msbuild-tasks.md
-            - name: Görev yazma
-              href: task-writing.md
-            - name: Görevlerdeki hataları yoksayma
-              href: how-to-ignore-errors-in-tasks.md
-            - name: Kaynaklara sahip olan proje derleme
-              href: how-to-build-a-project-that-has-resources.md
-            - name: Satır içi görevleri
-              items:
-                - name: MSBuild satır içi görevleri
-                  href: msbuild-inline-tasks.md
-                - name: 'İzlenecek yol: Satır içi görev oluşturma'
-                  href: walkthrough-creating-an-inline-task.md
-            - name: RoslynCodeTaskFactory ile MSBuild satır içi görevleri
-              href: msbuild-roslyncodetaskfactory.md
-        - name: Özellikleri ve öğeleri karşılaştırma
-          href: comparing-properties-and-items.md
-        - name: Özel karakterler
-          items:
-            - name: MSBuild özel karakterleri
-              href: msbuild-special-characters.md
-            - name: MSBuild’deki kaçış özel karakterleri
-              href: how-to-escape-special-characters-in-msbuild.md
-            - name: Proje dosyalarında ayrılmış XML karakterlerini kullanma
-              href: how-to-use-reserved-xml-characters-in-project-files.md
-    - name: Gelişmiş kavramlar
-      items:
-        - name: MSBuild gelişmiş kavramları
-          href: msbuild-advanced-concepts.md
-        - name: Toplu İşleme
-          items:
-            - name: MSBuild toplu işleme
-              href: msbuild-batching.md
-            - name: Toplu görev işlemede öğe meta verileri
-              href: item-metadata-in-task-batching.md
-            - name: Toplu hedef işlemede öğe meta verileri
-              href: item-metadata-in-target-batching.md
-        - name: MSBuild dönüşümleri
-          href: msbuild-transforms.md
-        - name: Visual Studio tümleştirmesi
-          items:
-            - name: Visual Studio tümleştirmesi (MSBuild)
-              href: visual-studio-integration-msbuild.md
-            - name: Visual Studio derleme işlemini genişletme
-              href: how-to-extend-the-visual-studio-build-process.md
-            - name: IDE içinden derleme başlatma
-              href: starting-a-build-from-within-the-ide.md
-            - name: .NET Framework uzantılarını kaydetme
-              href: registering-extensions-of-the-dotnet-framework.md
-        - name: Paralel olarak birden çok proje derleme
-          items:
-            - name: MSBuild ile paralel olarak birden çok proje derleme
-              href: building-multiple-projects-in-parallel-with-msbuild.md
-            - name: Projeleri derlemek için birden çok işlemci kullanma
-              href: using-multiple-processors-to-build-projects.md
-            - name: Büyük projeler derlerken belleği verimli şekilde kullanma
-              href: using-memory-efficiently-when-you-build-large-projects.md
-        - name: Çoklu Sürüm Desteği
-          items:
-            - name: MSBuild çoklu sürüm desteğine genel bakış
-              href: msbuild-multitargeting-overview.md
-            - name: Araç Takımı (ToolsVersion)
-              items:
-                - name: MSBuild araç takımı (ToolsVersion)
-                  href: msbuild-toolset-toolsversion.md
-                - name: Standart ve özel araç takımı yapılandırmaları
-                  href: standard-and-custom-toolset-configurations.md
-                - name: ToolsVersion ayarlarını geçersiz kılma
-                  href: overriding-toolsversion-settings.md
-            - name: MSBuild hedef çerçevesi ve hedef platformu
-              href: msbuild-target-framework-and-target-platform.md
-            - name: Tasarım zamanında derlemeleri çözme
-              href: resolving-assemblies-at-design-time.md
-            - name: Görev yapılandırması
-              items:
-                - name: Genel Bakış
-                  href: configure-tasks.md
-                - name: Hedefleri ve görevleri yapılandırma
-                  href: how-to-configure-targets-and-tasks.md
-            - name: .NET Framework hedefleme hatalarıyla ilgili sorunları giderme
-              href: troubleshooting-dotnet-framework-targeting-errors.md
-        - name: Dosya izleme
-          items:
-            - name: Genel Bakış
-              displayName: file tracking
-              href: file-tracking.md
-            - name: EndTrackingContext
-              href: endtrackingcontext.md
-            - name: ResumeTracking
-              href: resumetracking.md
-            - name: SetThreadCount
-              href: setthreadcount.md
-            - name: StartTrackingContext
-              href: starttrackingcontext.md
-            - name: StartTrackingContextWithRoot
-              href: starttrackingcontextwithroot.md
-            - name: StopTrackingAndCleanup
-              href: stoptrackingandcleanup.md
-            - name: SuspendTracking
-              href: suspendtracking.md
-            - name: WriteAllTLogs
-              href: writealltlogs.md
-            - name: WriteContextTLogs
-              href: writecontexttlogs.md
-        - name: Derlemenizi özelleştirme
-          href: customize-your-build.md
-        - name: MSBuild en iyi yöntemleri
-          href: msbuild-best-practices.md
-    - name: Günlüğe Kaydetme
-      items:
-        - name: Genel Bakış
-          displayName: logging
-          href: logging-in-msbuild.md
-        - name: MSBuild ile yapı günlükleri alma
-          href: obtaining-build-logs-with-msbuild.md
-        - name: Günlükçüleri derleme
-          href: build-loggers.md
-        - name: Birden çok işlemcili ortamda oturum açma
-          href: logging-in-a-multi-processor-environment.md
-        - name: Birden çok işlemciye duyarlı günlükçüler yazılıyor
-          href: writing-multi-processor-aware-loggers.md
-        - name: İletme günlükçüleri oluşturma
-          href: creating-forwarding-loggers.md
-    - name: 'İzlenecek yol: MSBuild Kullanma'
-      href: walkthrough-using-msbuild.md
-    - name: 'İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma'
-      href: walkthrough-creating-an-msbuild-project-file-from-scratch.md
-    - name: MSBuild başvurusu
-      items:
-        - name: Genel Bakış
-          displayName: msbuild reference
-          href: msbuild-reference.md
-        - name: MSBuild proje dosyası şema başvurusu
-          items:
-            - name: Genel Bakış
-              displayName: Project File Schema Reference
-              href: msbuild-project-file-schema-reference.md
-            - name: Choose öğesi
-              href: choose-element-msbuild.md
-            - name: Import öğesi
-              href: import-element-msbuild.md
-            - name: ImportGroup öğesi
-              href: importgroup-element.md
-            - name: Item öğesi
-              href: item-element-msbuild.md
-            - name: ItemDefinitionGroup öğesi
-              href: itemdefinitiongroup-element-msbuild.md
-            - name: ItemGroup öğesi
-              href: itemgroup-element-msbuild.md
-            - name: ItemMetadata öğesi
-              href: itemmetadata-element-msbuild.md
-            - name: OnError öğesi
-              href: onerror-element-msbuild.md
-            - name: Otherwise öğesi
-              href: otherwise-element-msbuild.md
-            - name: Output öğesi
-              href: output-element-msbuild.md
-            - name: Parameter öğesi
-              href: parameter-element.md
-            - name: ParameterGroup öğesi
-              href: parametergroup-element.md
-            - name: Project öğesi
-              href: project-element-msbuild.md
-            - name: ProjectExtensions öğesi
-              href: projectextensions-element-msbuild.md
-            - name: Property öğesi
-              href: property-element-msbuild.md
-            - name: PropertyGroup öğesi
-              href: propertygroup-element-msbuild.md
-            - name: Sdk öğesi
-              href: sdk-element-msbuild.md
-            - name: Target öğesi
-              href: target-element-msbuild.md
-            - name: Target’ın görev öğesi
-              href: task-element-msbuild.md
-            - name: UsingTask’in görev öğesi
-              href: taskbody-element-msbuild.md
-            - name: UsingTask öğesi
-              href: usingtask-element-msbuild.md
-            - name: When öğesi
-              href: when-element-msbuild.md
-        - name: Görev başvurusu
-          items:
-            - name: Genel Bakış
-              displayName: task reference
-              href: msbuild-task-reference.md
-            - name: Visual C++’a özgü görevler
-              items:
-                - name: Genel Bakış
-                  displayName: C++ tasks
-                  href: msbuild-tasks-specific-to-visual-cpp.md
-                - name: BscMake görevi
-                  href: bscmake-task.md
-                - name: CL görevi
-                  href: cl-task.md
-                - name: CPPClean görevi
-                  href: cppclean-task.md
-                - name: ClangCompile görevi
-                  href: clangcompile-task.md
-                - name: CustomBuild görevi
-                  href: custombuild-task.md
-                - name: FXC görevi
-                  href: fxc-task.md
-                - name: GetOutOfDateItems görevi
-                  href: getoutofdateitems-task.md
-                - name: GetOutputFileName görevi
-                  href: getoutputfilename-task.md
-                - name: LIB görevi
-                  href: lib-task.md
-                - name: Bağlantı görevi
-                  href: link-task.md
-                - name: MIDL görevi
-                  href: midl-task.md
-                - name: MT görevi
-                  href: mt-task.md
-                - name: MultiTool görevi
-                  href: multitooltask-task.md
-                - name: ParallelCustomBuild görevi
-                  href: parallelcustombuild-task.md
-                - name: RC görevi
-                  href: rc-task.md
-                - name: SetEnv görevi
-                  href: setenv-task.md
-                - name: TrackedVCToolTask temel sınıfı
-                  href: trackedvctooltask-base-class.md
-                - name: VCMessage görevi
-                  href: vcmessage-task.md
-                - name: VCToolTask temel sınıfı
-                  href: vctooltask-base-class.md
-                - name: XDCMake görevi
-                  href: xdcmake-task.md
-                - name: XSD görevi
-                  href: xsd-task.md
-            - name: Görev temel sınıfı
-              href: task-base-class.md
-            - name: TaskExtension temel sınıfı
-              href: taskextension-base-class.md
-            - name: ToolTaskExtension temel sınıfı
-              href: tooltaskextension-base-class.md
-            - name: Görev başarısızlıklarını tanılama
-              href: diagnosing-task-failures.md
-            - name: AL (Derleme Bağlayıcı) görevi
-              href: al-assembly-linker-task.md
-            - name: AspNetCompiler görevi
-              href: aspnetcompiler-task.md
-            - name: AssignCulture görevi
-              href: assignculture-task.md
-            - name: AssignProjectConfiguration görevi
-              href: assignprojectconfiguration-task.md
-            - name: AssignTargetPath görevi
-              href: assigntargetpath-task.md
-            - name: CallTarget görevi
-              href: calltarget-task.md
-            - name: CombinePath görevi
-              href: combinepath-task.md
-            - name: ConvertToAbsolutePath görevi
-              href: converttoabsolutepath-task.md
-            - name: Kopyalama görevi
-              href: copy-task.md
-            - name: CreateCSharpManifestResourceName görevi
-              href: createcsharpmanifestresourcename-task.md
-            - name: CreateItem görevi
-              href: createitem-task.md
-            - name: CreateProperty görevi
-              href: createproperty-task.md
-            - name: CreateVisualBasicManifestResourceName görevi
-              href: createvisualbasicmanifestresourcename-task.md
-            - name: Csc görevi
-              href: csc-task.md
-            - name: Silme görevi
-              href: delete-task.md
-            - name: DownloadFile görevi
-              href: downloadfile-task.md
-            - name: Hata görevi
-              href: error-task.md
-            - name: Yürütme görevi
-              href: exec-task.md
-            - name: FindAppConfigFile görevi
-              href: findappconfigfile-task.md
-            - name: FindInList görevi
-              href: findinlist-task.md
-            - name: FindUnderPath görevi
-              href: findunderpath-task.md
-            - name: FormatUrl görevi
-              href: formaturl-task.md
-            - name: FormatVersion görevi
-              href: formatversion-task.md
-            - name: GenerateApplicationManifest görevi
-              href: generateapplicationmanifest-task.md
-            - name: GenerateBootstrapper görevi
-              href: generatebootstrapper-task.md
-            - name: GenerateDeploymentManifest görevi
-              href: generatedeploymentmanifest-task.md
-            - name: GenerateResource görevi
-              href: generateresource-task.md
-            - name: GenerateTrustInfo görevi
-              href: generatetrustinfo-task.md
-            - name: GetAssemblyIdentity görevi
-              href: getassemblyidentity-task.md
-            - name: GetFileHash görevi
-              href: getfilehash-task.md
-            - name: GetFrameworkPath görevi
-              href: getframeworkpath-task.md
-            - name: GetFrameworkSdkPath görevi
-              href: getframeworksdkpath-task.md
-            - name: GetReferenceAssemblyPaths görevi
-              href: getreferenceassemblypaths-task.md
-            - name: LC görevi
-              href: lc-task.md
-            - name: MakeDir görevi
-              href: makedir-task.md
-            - name: İleti görevi
-              href: message-task.md
-            - name: Taşıma görevi
-              href: move-task.md
-            - name: MSBuild görevi
-              href: msbuild-task.md
-            - name: ReadLinesFromFile görevi
-              href: readlinesfromfile-task.md
-            - name: RegisterAssembly görevi
-              href: registerassembly-task.md
-            - name: RemoveDir görevi
-              href: removedir-task.md
-            - name: RemoveDuplicates görevi
-              href: removeduplicates-task.md
-            - name: RequiresFramework35SP1Assembly görevi
-              href: requiresframework35sp1assembly-task.md
-            - name: ResolveAssemblyReference görevi
-              href: resolveassemblyreference-task.md
-            - name: ResolveComReference görevi
-              href: resolvecomreference-task.md
-            - name: ResolveKeySource görevi
-              href: resolvekeysource-task.md
-            - name: ResolveManifestFiles görevi
-              href: resolvemanifestfiles-task.md
-            - name: ResolveNativeReference görevi
-              href: resolvenativereference-task.md
-            - name: ResolveNonMSBuildProjectOutput görevi
-              href: resolvenonmsbuildprojectoutput-task.md
-            - name: SGen görevi
-              href: sgen-task.md
-            - name: SignFile görevi
-              href: signfile-task.md
-            - name: Dokunma görevi
-              href: touch-task.md
-            - name: UnregisterAssembly görevi
-              href: unregisterassembly-task.md
-            - name: Unzip görevi
-              href: unzip-task.md
-            - name: UpdateManifest görevi
-              href: updatemanifest-task.md
-            - name: Vbc görevi
-              href: vbc-task.md
-            - name: VerifyFileHash görevi
-              href: verifyfilehash-task.md
-            - name: Uyarı görevi
-              href: warning-task.md
-            - name: WriteCodeFragment görevi
-              href: writecodefragment-task.md
-            - name: WriteLinesToFile görevi
-              href: writelinestofile-task.md
-            - name: XmlPeek görevi
-              href: xmlpeek-task.md
-            - name: XmlPoke görevi
-              href: xmlpoke-task.md
-            - name: XslTransformation görevi
-              href: xsltransformation-task.md
-            - name: ZipDirectory görevi
-              href: zipdirectory-task.md
-        - name: MSBuild koşulları
-          href: msbuild-conditions.md
-        - name: MSBuild koşullu yapıları
-          href: msbuild-conditional-constructs.md
-        - name: MSBuild ayrılmış ve tanınmış özellikleri
-          href: msbuild-reserved-and-well-known-properties.md
-        - name: Yaygın MSBuild proje özellikleri
-          href: common-msbuild-project-properties.md
-        - name: Yaygın MSBuild proje öğeleri
-          href: common-msbuild-project-items.md
-        - name: Yaygın MSBuild öğesi meta verileri
-          href: common-msbuild-item-metadata.md
-        - name: MSBuild komut satırı başvurusu
-          href: msbuild-command-line-reference.md
-        - name: MSBuild .targets dosyaları
-          href: msbuild-dot-targets-files.md
-        - name: MSBuild tanınmış öğe meta verileri
-          href: msbuild-well-known-item-metadata.md
-        - name: MSBuild yanıt dosyaları
-          href: msbuild-response-files.md
-        - name: MSBuild’da çözüm filtreleri
-          href: solution-filters.md
-        - name: WPF başvurusu
-          items:
-            - name: Genel Bakış
-              displayName: WPF MSBuild reference
-              href: wpf-msbuild-reference.md
-            - name: WPF .targets dosyaları
-              href: wpf-dot-targets-files.md
-            - name: WPF görev başvurusu
-              items:
-                - name: Genel Bakış
-                  displayName: WPF MSBuild task reference
-                  href: wpf-msbuild-task-reference.md
-                - name: FileClassifier görevi
-                  href: fileclassifier-task.md
-                - name: GenerateTemporaryTargetAssembly görevi
-                  href: generatetemporarytargetassembly-task.md
-                - name: GetWinFXPath görevi
-                  href: getwinfxpath-task.md
-                - name: MarkupCompilePass1 görevi
-                  href: markupcompilepass1-task.md
-                - name: MarkupCompilePass2 görevi
-                  href: markupcompilepass2-task.md
-                - name: MergeLocalizationDirectives görevi
-                  href: mergelocalizationdirectives-task.md
-                - name: ResourcesGenerator görevi
-                  href: resourcesgenerator-task.md
-                - name: UidManager görevi
-                  href: uidmanager-task.md
-                - name: UpdateManifestForBrowserApplication görevi
-                  href: updatemanifestforbrowserapplication-task.md
-        - name: Kaçış için özel karakterler
-          href: special-characters-to-escape.md
-        - name: Hata iletileri
-          items:
-            - name: MSB3027
-              href: errors/msb3027.md
-            - name: MSB3075
-              href: errors/msb3075.md
-            - name: MSB3086
-              href: errors/msb3086.md
-            - name: MSB3103
-              href: errors/msb3103.md
-            - name: MSB3190
-              href: errors/msb3190.md
-            - name: MSB3270
-              href: errors/msb3270.md
-            - name: MSB3274
-              href: errors/msb3274.md
-            - name: MSB3275
-              href: errors/msb3275.md
-            - name: MSB3277
-              href: errors/msb3277.md
-            - name: MSB3303
-              href: errors/msb3303.md
-            - name: MSB3304
-              href: errors/msb3304.md
-            - name: MSB3305
-              href: errors/msb3305.md
-            - name: MSB3325
-              href: errors/msb3325.md
-            - name: MSB3326
-              href: errors/msb3326.md
-            - name: MSB3327
-              href: errors/msb3327.md
-            - name: MSB3552
-              href: errors/msb3552.md
-            - name: MSB3553
-              href: errors/msb3553.md
-            - name: MSB3554
-              href: errors/msb3554.md
-            - name: MSB3577
-              href: errors/msb3577.md
-            - name: MSB3644
-              href: errors/msb3644.md
-            - name: MSB3645
-              href: errors/msb3645.md
-            - name: MSB3721
-              href: errors/msb3721.md
-            - name: MSB3821
-              href: errors/msb3821.md
-            - name: MSB3822
-              href: errors/msb3822.md
-            - name: MSB3836
-              href: errors/msb3836.md
-            - name: MSB3884
-              href: errors/msb3884.md
-            - name: MSB3971
-              href: errors/msb3971.md
-            - name: MSB4018
-              href: errors/msb4018.md
-            - name: MSB4062
-              href: errors/msb4062.md
-            - name: MSB4086
-              href: errors/msb4086.md
-            - name: MSB4094
-              href: errors/msb4094.md
-            - name: MSB4096
-              href: errors/msb4096.md
-            - name: MSB4166
-              href: errors/msb4166.md
-            - name: MSB4175
-              href: errors/msb4175.md
-            - name: MSB4181
-              href: errors/msb4181.md
-            - name: MSB6001
-              href: errors/msb6001.md
-            - name: MSB6003
-              href: errors/msb6003.md
-            - name: MSB6004
-              href: errors/msb6004.md
-            - name: MSB8006
-              href: errors/msb8006.md
-            - name: MSB6011
-              href: errors/msb6011.md
-            - name: MSB8013
-              href: errors/msb8013.md
-            - name: MSB8027
-              href: errors/msb8027.md
-            - name: MSB8036
-              href: errors/msb8036.md
-            - name: MSB8037
-              href: errors/msb8037.md
-            - name: MSB8040
-              href: errors/msb8040.md
-            - name: MSB8041
-              href: errors/msb8041.md
-            - name: MSB8042
-              href: errors/msb8042.md
-            - name: MSB8066
-              href: errors/msb8066.md
-    - name: MSBuild’ı programlama yoluyla kullanma
-      items:
-        - name: Genel Bakış
-          displayName: Use MSBuild programmatically
-          href: msbuild-api.md
-        - name: MSBuild 15’e Güncelleştirme
-          href: updating-an-existing-application.md
-    - name: MSBuild sözlüğü
-      href: msbuild-glossary.md
+items:
+  - name: MSBuild
+    href: msbuild.md
+    items:
+      - name: MSBuild 16.0 sürümündeki yenilikler
+        href: whats-new-msbuild-16-0.md
+      - name: MSBuild 15.0 sürümündeki yenilikler
+        href: what-s-new-in-msbuild-15-0.md
+      - name: Dalgaları değiştirme
+        href: change-waves.md
+      - name: MSBuild kavramları
+        items:
+          - name: Genel Bakış
+            displayName: msbuild concepts
+            href: msbuild-concepts.md
+          - name: MSBuild nasıl proje oluşturur
+            href: build-process-overview.md
+          - name: Özellikler
+            items:
+              - name: MSBuild özellikleri
+                href: msbuild-properties.md
+              - name: Derlemede ortam değişkenleri kullanma
+                href: how-to-use-environment-variables-in-a-build.md
+              - name: Proje dosyasının adına veya konumuna başvurma
+                href: how-to-reference-the-name-or-location-of-the-project-file.md
+              - name: Aynı kaynak dosyalarını farklı seçeneklerle derleme
+                href: how-to-build-the-same-source-files-with-different-options.md
+              - name: Özellik işlevleri
+                href: property-functions.md
+          - name: Öğeler
+            items:
+              - name: MSBuild öğeleri
+                href: msbuild-items.md
+              - name: Derlenecek dosyaları seçme
+                href: how-to-select-the-files-to-build.md
+              - name: Dosyaları derlemeden çıkarma
+                href: how-to-exclude-files-from-the-build.md
+              - name: Virgülle ayrılmış öğe listesi görüntüleme
+                href: how-to-display-an-item-list-separated-with-commas.md
+              - name: Öğe tanımları
+                href: item-definitions.md
+              - name: Öğe işlevleri
+                href: item-functions.md
+          - name: Hedefler
+            items:
+              - name: MSBuild hedefleri
+                href: msbuild-targets.md
+              - name: Hedef derleme sırası
+                href: target-build-order.md
+              - name: Artımlı derlemeler
+                href: incremental-builds.md
+              - name: Önce hangi hedefin derleneceğini belirtme
+                href: how-to-specify-which-target-to-build-first.md
+              - name: Birden çok proje dosyasında aynı hedefi kullanma
+                href: how-to-use-the-same-target-in-multiple-project-files.md
+              - name: MSBuild.exe kullanarak çözümlerde belirli hedefler derleme
+                href: how-to-build-specific-targets-in-solutions-by-using-msbuild-exe.md
+              - name: Artımlı olarak derleme
+                href: how-to-build-incrementally.md
+              - name: Derlemeyi temizleme
+                href: how-to-clean-a-build.md
+              - name: MSBuild proje SDK’sına başvurma
+                href: how-to-use-project-sdk.md
+          - name: Görevler
+            items:
+              - name: MSBuild görevleri
+                href: msbuild-tasks.md
+              - name: Görev yazma
+                href: task-writing.md
+              - name: Görevlerdeki hataları yoksayma
+                href: how-to-ignore-errors-in-tasks.md
+              - name: Kaynaklara sahip olan proje derleme
+                href: how-to-build-a-project-that-has-resources.md
+              - name: Satır içi görevleri
+                items:
+                  - name: MSBuild satır içi görevleri
+                    href: msbuild-inline-tasks.md
+                  - name: 'İzlenecek yol: Satır içi görev oluşturma'
+                    href: walkthrough-creating-an-inline-task.md
+              - name: RoslynCodeTaskFactory ile MSBuild satır içi görevleri
+                href: msbuild-roslyncodetaskfactory.md
+          - name: Özellikleri ve öğeleri karşılaştırma
+            href: comparing-properties-and-items.md
+          - name: Özel karakterler
+            items:
+              - name: MSBuild özel karakterleri
+                href: msbuild-special-characters.md
+              - name: MSBuild’deki kaçış özel karakterleri
+                href: how-to-escape-special-characters-in-msbuild.md
+              - name: Proje dosyalarında ayrılmış XML karakterlerini kullanma
+                href: how-to-use-reserved-xml-characters-in-project-files.md
+      - name: Gelişmiş kavramlar
+        items:
+          - name: MSBuild gelişmiş kavramları
+            href: msbuild-advanced-concepts.md
+          - name: Toplu İşleme
+            items:
+              - name: MSBuild toplu işleme
+                href: msbuild-batching.md
+              - name: Toplu görev işlemede öğe meta verileri
+                href: item-metadata-in-task-batching.md
+              - name: Toplu hedef işlemede öğe meta verileri
+                href: item-metadata-in-target-batching.md
+          - name: MSBuild dönüşümleri
+            href: msbuild-transforms.md
+          - name: Visual Studio tümleştirmesi
+            items:
+              - name: Visual Studio tümleştirmesi (MSBuild)
+                href: visual-studio-integration-msbuild.md
+              - name: Visual Studio derleme işlemini genişletme
+                href: how-to-extend-the-visual-studio-build-process.md
+              - name: IDE içinden derleme başlatma
+                href: starting-a-build-from-within-the-ide.md
+              - name: .NET Framework uzantılarını kaydetme
+                href: registering-extensions-of-the-dotnet-framework.md
+          - name: Paralel olarak birden çok proje derleme
+            items:
+              - name: MSBuild ile paralel olarak birden çok proje derleme
+                href: building-multiple-projects-in-parallel-with-msbuild.md
+              - name: Projeleri derlemek için birden çok işlemci kullanma
+                href: using-multiple-processors-to-build-projects.md
+              - name: Büyük projeler derlerken belleği verimli şekilde kullanma
+                href: using-memory-efficiently-when-you-build-large-projects.md
+          - name: Çoklu Sürüm Desteği
+            items:
+              - name: MSBuild çoklu sürüm desteğine genel bakış
+                href: msbuild-multitargeting-overview.md
+              - name: Araç Takımı (ToolsVersion)
+                items:
+                  - name: MSBuild araç takımı (ToolsVersion)
+                    href: msbuild-toolset-toolsversion.md
+                  - name: Standart ve özel araç takımı yapılandırmaları
+                    href: standard-and-custom-toolset-configurations.md
+                  - name: ToolsVersion ayarlarını geçersiz kılma
+                    href: overriding-toolsversion-settings.md
+              - name: MSBuild hedef çerçevesi ve hedef platformu
+                href: msbuild-target-framework-and-target-platform.md
+              - name: Tasarım zamanında derlemeleri çözme
+                href: resolving-assemblies-at-design-time.md
+              - name: Görev yapılandırması
+                items:
+                  - name: Genel Bakış
+                    href: configure-tasks.md
+                  - name: Hedefleri ve görevleri yapılandırma
+                    href: how-to-configure-targets-and-tasks.md
+              - name: .NET Framework hedefleme hatalarıyla ilgili sorunları giderme
+                href: troubleshooting-dotnet-framework-targeting-errors.md
+          - name: Dosya izleme
+            items:
+              - name: Genel Bakış
+                displayName: file tracking
+                href: file-tracking.md
+              - name: EndTrackingContext
+                href: endtrackingcontext.md
+              - name: ResumeTracking
+                href: resumetracking.md
+              - name: SetThreadCount
+                href: setthreadcount.md
+              - name: StartTrackingContext
+                href: starttrackingcontext.md
+              - name: StartTrackingContextWithRoot
+                href: starttrackingcontextwithroot.md
+              - name: StopTrackingAndCleanup
+                href: stoptrackingandcleanup.md
+              - name: SuspendTracking
+                href: suspendtracking.md
+              - name: WriteAllTLogs
+                href: writealltlogs.md
+              - name: WriteContextTLogs
+                href: writecontexttlogs.md
+          - name: Derlemenizi özelleştirme
+            href: customize-your-build.md
+          - name: MSBuild en iyi yöntemleri
+            href: msbuild-best-practices.md
+      - name: Günlüğe Kaydetme
+        items:
+          - name: Genel Bakış
+            displayName: logging
+            href: logging-in-msbuild.md
+          - name: MSBuild ile yapı günlükleri alma
+            href: obtaining-build-logs-with-msbuild.md
+          - name: Günlükçüleri derleme
+            href: build-loggers.md
+          - name: Birden çok işlemcili ortamda oturum açma
+            href: logging-in-a-multi-processor-environment.md
+          - name: Birden çok işlemciye duyarlı günlükçüler yazılıyor
+            href: writing-multi-processor-aware-loggers.md
+          - name: İletme günlükçüleri oluşturma
+            href: creating-forwarding-loggers.md
+      - name: 'İzlenecek yol: MSBuild Kullanma'
+        href: walkthrough-using-msbuild.md
+      - name: 'İzlenecek yol: Sıfırdan MSBuild proje dosyası oluşturma'
+        href: walkthrough-creating-an-msbuild-project-file-from-scratch.md
+      - name: MSBuild başvurusu
+        items:
+          - name: Genel Bakış
+            displayName: msbuild reference
+            href: msbuild-reference.md
+          - name: MSBuild proje dosyası şema başvurusu
+            items:
+              - name: Genel Bakış
+                displayName: Project File Schema Reference
+                href: msbuild-project-file-schema-reference.md
+              - name: Choose öğesi
+                href: choose-element-msbuild.md
+              - name: Import öğesi
+                href: import-element-msbuild.md
+              - name: ImportGroup öğesi
+                href: importgroup-element.md
+              - name: Item öğesi
+                href: item-element-msbuild.md
+              - name: ItemDefinitionGroup öğesi
+                href: itemdefinitiongroup-element-msbuild.md
+              - name: ItemGroup öğesi
+                href: itemgroup-element-msbuild.md
+              - name: ItemMetadata öğesi
+                href: itemmetadata-element-msbuild.md
+              - name: OnError öğesi
+                href: onerror-element-msbuild.md
+              - name: Otherwise öğesi
+                href: otherwise-element-msbuild.md
+              - name: Output öğesi
+                href: output-element-msbuild.md
+              - name: Parameter öğesi
+                href: parameter-element.md
+              - name: ParameterGroup öğesi
+                href: parametergroup-element.md
+              - name: Project öğesi
+                href: project-element-msbuild.md
+              - name: ProjectExtensions öğesi
+                href: projectextensions-element-msbuild.md
+              - name: Property öğesi
+                href: property-element-msbuild.md
+              - name: PropertyGroup öğesi
+                href: propertygroup-element-msbuild.md
+              - name: Sdk öğesi
+                href: sdk-element-msbuild.md
+              - name: Target öğesi
+                href: target-element-msbuild.md
+              - name: Target’ın görev öğesi
+                href: task-element-msbuild.md
+              - name: UsingTask’in görev öğesi
+                href: taskbody-element-msbuild.md
+              - name: UsingTask öğesi
+                href: usingtask-element-msbuild.md
+              - name: When öğesi
+                href: when-element-msbuild.md
+          - name: Görev başvurusu
+            items:
+              - name: Genel Bakış
+                displayName: task reference
+                href: msbuild-task-reference.md
+              - name: Visual C++’a özgü görevler
+                items:
+                  - name: Genel Bakış
+                    displayName: C++ tasks
+                    href: msbuild-tasks-specific-to-visual-cpp.md
+                  - name: BscMake görevi
+                    href: bscmake-task.md
+                  - name: CL görevi
+                    href: cl-task.md
+                  - name: CPPClean görevi
+                    href: cppclean-task.md
+                  - name: ClangCompile görevi
+                    href: clangcompile-task.md
+                  - name: CustomBuild görevi
+                    href: custombuild-task.md
+                  - name: FXC görevi
+                    href: fxc-task.md
+                  - name: GetOutOfDateItems görevi
+                    href: getoutofdateitems-task.md
+                  - name: GetOutputFileName görevi
+                    href: getoutputfilename-task.md
+                  - name: LIB görevi
+                    href: lib-task.md
+                  - name: Bağlantı görevi
+                    href: link-task.md
+                  - name: MIDL görevi
+                    href: midl-task.md
+                  - name: MT görevi
+                    href: mt-task.md
+                  - name: MultiTool görevi
+                    href: multitooltask-task.md
+                  - name: ParallelCustomBuild görevi
+                    href: parallelcustombuild-task.md
+                  - name: RC görevi
+                    href: rc-task.md
+                  - name: SetEnv görevi
+                    href: setenv-task.md
+                  - name: TrackedVCToolTask temel sınıfı
+                    href: trackedvctooltask-base-class.md
+                  - name: VCMessage görevi
+                    href: vcmessage-task.md
+                  - name: VCToolTask temel sınıfı
+                    href: vctooltask-base-class.md
+                  - name: XDCMake görevi
+                    href: xdcmake-task.md
+                  - name: XSD görevi
+                    href: xsd-task.md
+              - name: Görev temel sınıfı
+                href: task-base-class.md
+              - name: TaskExtension temel sınıfı
+                href: taskextension-base-class.md
+              - name: ToolTaskExtension temel sınıfı
+                href: tooltaskextension-base-class.md
+              - name: Görev başarısızlıklarını tanılama
+                href: diagnosing-task-failures.md
+              - name: AL (Derleme Bağlayıcı) görevi
+                href: al-assembly-linker-task.md
+              - name: AspNetCompiler görevi
+                href: aspnetcompiler-task.md
+              - name: AssignCulture görevi
+                href: assignculture-task.md
+              - name: AssignProjectConfiguration görevi
+                href: assignprojectconfiguration-task.md
+              - name: AssignTargetPath görevi
+                href: assigntargetpath-task.md
+              - name: CallTarget görevi
+                href: calltarget-task.md
+              - name: CombinePath görevi
+                href: combinepath-task.md
+              - name: ConvertToAbsolutePath görevi
+                href: converttoabsolutepath-task.md
+              - name: Kopyalama görevi
+                href: copy-task.md
+              - name: CreateCSharpManifestResourceName görevi
+                href: createcsharpmanifestresourcename-task.md
+              - name: CreateItem görevi
+                href: createitem-task.md
+              - name: CreateProperty görevi
+                href: createproperty-task.md
+              - name: CreateVisualBasicManifestResourceName görevi
+                href: createvisualbasicmanifestresourcename-task.md
+              - name: Csc görevi
+                href: csc-task.md
+              - name: Silme görevi
+                href: delete-task.md
+              - name: DownloadFile görevi
+                href: downloadfile-task.md
+              - name: Hata görevi
+                href: error-task.md
+              - name: Yürütme görevi
+                href: exec-task.md
+              - name: FindAppConfigFile görevi
+                href: findappconfigfile-task.md
+              - name: FindInList görevi
+                href: findinlist-task.md
+              - name: FindUnderPath görevi
+                href: findunderpath-task.md
+              - name: FormatUrl görevi
+                href: formaturl-task.md
+              - name: FormatVersion görevi
+                href: formatversion-task.md
+              - name: GenerateApplicationManifest görevi
+                href: generateapplicationmanifest-task.md
+              - name: GenerateBootstrapper görevi
+                href: generatebootstrapper-task.md
+              - name: GenerateDeploymentManifest görevi
+                href: generatedeploymentmanifest-task.md
+              - name: GenerateResource görevi
+                href: generateresource-task.md
+              - name: GenerateTrustInfo görevi
+                href: generatetrustinfo-task.md
+              - name: GetAssemblyIdentity görevi
+                href: getassemblyidentity-task.md
+              - name: GetFileHash görevi
+                href: getfilehash-task.md
+              - name: GetFrameworkPath görevi
+                href: getframeworkpath-task.md
+              - name: GetFrameworkSdkPath görevi
+                href: getframeworksdkpath-task.md
+              - name: GetReferenceAssemblyPaths görevi
+                href: getreferenceassemblypaths-task.md
+              - name: LC görevi
+                href: lc-task.md
+              - name: MakeDir görevi
+                href: makedir-task.md
+              - name: İleti görevi
+                href: message-task.md
+              - name: Taşıma görevi
+                href: move-task.md
+              - name: MSBuild görevi
+                href: msbuild-task.md
+              - name: ReadLinesFromFile görevi
+                href: readlinesfromfile-task.md
+              - name: RegisterAssembly görevi
+                href: registerassembly-task.md
+              - name: RemoveDir görevi
+                href: removedir-task.md
+              - name: RemoveDuplicates görevi
+                href: removeduplicates-task.md
+              - name: RequiresFramework35SP1Assembly görevi
+                href: requiresframework35sp1assembly-task.md
+              - name: ResolveAssemblyReference görevi
+                href: resolveassemblyreference-task.md
+              - name: ResolveComReference görevi
+                href: resolvecomreference-task.md
+              - name: ResolveKeySource görevi
+                href: resolvekeysource-task.md
+              - name: ResolveManifestFiles görevi
+                href: resolvemanifestfiles-task.md
+              - name: ResolveNativeReference görevi
+                href: resolvenativereference-task.md
+              - name: ResolveNonMSBuildProjectOutput görevi
+                href: resolvenonmsbuildprojectoutput-task.md
+              - name: SGen görevi
+                href: sgen-task.md
+              - name: SignFile görevi
+                href: signfile-task.md
+              - name: Dokunma görevi
+                href: touch-task.md
+              - name: UnregisterAssembly görevi
+                href: unregisterassembly-task.md
+              - name: Unzip görevi
+                href: unzip-task.md
+              - name: UpdateManifest görevi
+                href: updatemanifest-task.md
+              - name: Vbc görevi
+                href: vbc-task.md
+              - name: VerifyFileHash görevi
+                href: verifyfilehash-task.md
+              - name: Uyarı görevi
+                href: warning-task.md
+              - name: WriteCodeFragment görevi
+                href: writecodefragment-task.md
+              - name: WriteLinesToFile görevi
+                href: writelinestofile-task.md
+              - name: XmlPeek görevi
+                href: xmlpeek-task.md
+              - name: XmlPoke görevi
+                href: xmlpoke-task.md
+              - name: XslTransformation görevi
+                href: xsltransformation-task.md
+              - name: ZipDirectory görevi
+                href: zipdirectory-task.md
+          - name: MSBuild koşulları
+            href: msbuild-conditions.md
+          - name: MSBuild koşullu yapıları
+            href: msbuild-conditional-constructs.md
+          - name: MSBuild ayrılmış ve tanınmış özellikleri
+            href: msbuild-reserved-and-well-known-properties.md
+          - name: Yaygın MSBuild proje özellikleri
+            href: common-msbuild-project-properties.md
+          - name: Yaygın MSBuild proje öğeleri
+            href: common-msbuild-project-items.md
+          - name: Yaygın MSBuild öğesi meta verileri
+            href: common-msbuild-item-metadata.md
+          - name: MSBuild komut satırı başvurusu
+            href: msbuild-command-line-reference.md
+          - name: MSBuild .targets dosyaları
+            href: msbuild-dot-targets-files.md
+          - name: MSBuild tanınmış öğe meta verileri
+            href: msbuild-well-known-item-metadata.md
+          - name: MSBuild yanıt dosyaları
+            href: msbuild-response-files.md
+          - name: MSBuild’da çözüm filtreleri
+            href: solution-filters.md
+          - name: WPF başvurusu
+            items:
+              - name: Genel Bakış
+                displayName: WPF MSBuild reference
+                href: wpf-msbuild-reference.md
+              - name: WPF .targets dosyaları
+                href: wpf-dot-targets-files.md
+              - name: WPF görev başvurusu
+                items:
+                  - name: Genel Bakış
+                    displayName: WPF MSBuild task reference
+                    href: wpf-msbuild-task-reference.md
+                  - name: FileClassifier görevi
+                    href: fileclassifier-task.md
+                  - name: GenerateTemporaryTargetAssembly görevi
+                    href: generatetemporarytargetassembly-task.md
+                  - name: GetWinFXPath görevi
+                    href: getwinfxpath-task.md
+                  - name: MarkupCompilePass1 görevi
+                    href: markupcompilepass1-task.md
+                  - name: MarkupCompilePass2 görevi
+                    href: markupcompilepass2-task.md
+                  - name: MergeLocalizationDirectives görevi
+                    href: mergelocalizationdirectives-task.md
+                  - name: ResourcesGenerator görevi
+                    href: resourcesgenerator-task.md
+                  - name: UidManager görevi
+                    href: uidmanager-task.md
+                  - name: UpdateManifestForBrowserApplication görevi
+                    href: updatemanifestforbrowserapplication-task.md
+          - name: Kaçış için özel karakterler
+            href: special-characters-to-escape.md
+          - name: Hata iletileri
+            items:
+              - name: MSB3027
+                href: errors/msb3027.md
+              - name: MSB3075
+                href: errors/msb3075.md
+              - name: MSB3086
+                href: errors/msb3086.md
+              - name: MSB3103
+                href: errors/msb3103.md
+              - name: MSB3190
+                href: errors/msb3190.md
+              - name: MSB3270
+                href: errors/msb3270.md
+              - name: MSB3274
+                href: errors/msb3274.md
+              - name: MSB3275
+                href: errors/msb3275.md
+              - name: MSB3277
+                href: errors/msb3277.md
+              - name: MSB3303
+                href: errors/msb3303.md
+              - name: MSB3304
+                href: errors/msb3304.md
+              - name: MSB3305
+                href: errors/msb3305.md
+              - name: MSB3325
+                href: errors/msb3325.md
+              - name: MSB3326
+                href: errors/msb3326.md
+              - name: MSB3327
+                href: errors/msb3327.md
+              - name: MSB3552
+                href: errors/msb3552.md
+              - name: MSB3553
+                href: errors/msb3553.md
+              - name: MSB3554
+                href: errors/msb3554.md
+              - name: MSB3577
+                href: errors/msb3577.md
+              - name: MSB3644
+                href: errors/msb3644.md
+              - name: MSB3645
+                href: errors/msb3645.md
+              - name: MSB3721
+                href: errors/msb3721.md
+              - name: MSB3821
+                href: errors/msb3821.md
+              - name: MSB3822
+                href: errors/msb3822.md
+              - name: MSB3836
+                href: errors/msb3836.md
+              - name: MSB3884
+                href: errors/msb3884.md
+              - name: MSB3971
+                href: errors/msb3971.md
+              - name: MSB4018
+                href: errors/msb4018.md
+              - name: MSB4062
+                href: errors/msb4062.md
+              - name: MSB4086
+                href: errors/msb4086.md
+              - name: MSB4094
+                href: errors/msb4094.md
+              - name: MSB4096
+                href: errors/msb4096.md
+              - name: MSB4166
+                href: errors/msb4166.md
+              - name: MSB4175
+                href: errors/msb4175.md
+              - name: MSB4181
+                href: errors/msb4181.md
+              - name: MSB6001
+                href: errors/msb6001.md
+              - name: MSB6003
+                href: errors/msb6003.md
+              - name: MSB6004
+                href: errors/msb6004.md
+              - name: MSB6011
+                href: errors/msb6011.md
+              - name: MSB8000
+                href: errors/msb8000.md
+              - name: MSB8001
+                href: errors/msb8001.md
+              - name: MSB8002
+                href: errors/msb8002.md
+              - name: MSB8003
+                href: errors/msb8003.md
+              - name: MSB8004
+                href: errors/msb8004.md
+              - name: MSB8005
+                href: errors/msb8005.md
+              - name: MSB8006
+                href: errors/msb8006.md
+              - name: MSB8007
+                href: errors/msb8007.md
+              - name: MSB8009
+                href: errors/msb8009.md
+              - name: MSB8010
+                href: errors/msb8010.md
+              - name: MSB8011
+                href: errors/msb8011.md
+              - name: MSB8012
+                href: errors/msb8012.md
+              - name: MSB8013
+                href: errors/msb8013.md
+              - name: MSB8016
+                href: errors/msb8016.md
+              - name: MSB8019
+                href: errors/msb8019.md
+              - name: MSB8020
+                href: errors/msb8020.md
+              - name: MSB8021
+                href: errors/msb8021.md
+              - name: MSB8024
+                href: errors/msb8024.md
+              - name: MSB8025
+                href: errors/msb8025.md
+              - name: MSB8027
+                href: errors/msb8027.md
+              - name: MSB8028
+                href: errors/msb8028.md
+              - name: MSB8029
+                href: errors/msb8029.md
+              - name: MSB8030
+                href: errors/msb8030.md
+              - name: MSB8032
+                href: errors/msb8032.md
+              - name: MSB8036
+                href: errors/msb8036.md
+              - name: MSB8037
+                href: errors/msb8037.md
+              - name: MSB8038
+                href: errors/msb8038.md
+              - name: MSB8040
+                href: errors/msb8040.md
+              - name: MSB8041
+                href: errors/msb8041.md
+              - name: MSB8042
+                href: errors/msb8042.md
+              - name: MSB8060
+                href: errors/msb8060.md
+              - name: MSB8061
+                href: errors/msb8061.md
+              - name: MSB8066
+                href: errors/msb8066.md
+      - name: MSBuild’ı programlama yoluyla kullanma
+        items:
+          - name: Genel Bakış
+            displayName: Use MSBuild programmatically
+            href: msbuild-api.md
+          - name: MSBuild 15’e Güncelleştirme
+            href: updating-an-existing-application.md
+      - name: MSBuild sözlüğü
+        href: msbuild-glossary.md

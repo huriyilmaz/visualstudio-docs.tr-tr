@@ -1,117 +1,117 @@
 ---
-title: Visual Studio aboneliklerde Pluralsight avantajı | Microsoft Docs
+title: Visual Studio aboneliklerde pluralali avantajı | Microsoft Docs
 author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
 ms.date: 03/17/2021
 ms.topic: how-to
-description: Seçilen aboneliklere dahil edilen Pluralsight eğitim aboneliği hakkında Visual Studio edinin.
-ms.openlocfilehash: 2b4f1e75a02b766387e30471c5b6caec59d63793
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+description: seçili Visual Studio abonelikleriyle birlikte sunulan pluralaltim eğitimi aboneliği hakkında bilgi edinin.
+ms.openlocfilehash: 5873394cf0a13cf6a29b0ff57f347142985f3aa9
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128426341"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131126252"
 ---
-# <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Aboneliklerde Pluralsight Visual Studio avantajları
+# <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde pluralali eğitim avantajları
 
-Uzman tarafından geliştirilmiş kurslar, öğrenme yolları, uyarlamalı beceri ölçümü ve daha fazlası ile becerilerinizi geliştirin!  Hangi abonelik Visual Studio program üyeliğine sahip olduğunu bağlı olarak, pluralsight kataloğun tamamına altı aya kadar ücretsiz ve sınırsız erişim için uygun olabilirsiniz.
+Uzman tarafından yazılan kurslar, öğrenme yolları, uyarlamalı yetenek ölçümü ve daha fazlasını içeren becerilerinizi geliştirin!  hangi Visual Studio aboneliğine veya program üyeliğine bağlı olarak, en fazla altı aylık ücretsiz, tüm plurali kataloğuna sınırsız erişim için uygun olabilirsiniz.
 
-Aşağıdaki tabloda, her bir abonelik türü için hangi Pluralsight abonelik Visual Studio ayrıntıları verilmiştir.  Bazı aboneler, tam katalog erişim aboneliğinin süresi dolsa da sınırlı kurslardan faydalanabilecek. Pluralsight, tam katalog aboneliğinizin süresi dolduğunda bu işlemde size yol sağlar.
+aşağıdaki tabloda, her bir Visual Studio abonelik türü için pluralalalalalalaldiksiz abonelik avantajlarının  Ayrıca, bazı aboneler, tam Katalog erişimi aboneliğinin süresi dolduktan sonra sınırlı kurslardan faydalanabilir. Tam Katalog aboneliğinizin süresi dolduğunda pluraltarın bu süreç boyunca size rehberlik eder.
 
- Sahip olduğu abonelik türüne bağlı olarak, daha önce bir Visual Studio aboneliği aracılığıyla sağlanan pluralsight aboneliğini kullana tüm aboneler yeni Pluralsight avantajı tekliflerinden yararlanabilecektir. Ek Pluralsight eğitim avantajlarından yararlanmaya uygun değilsanız Pluralsight web sitesinde avantajı etkinleştirmeye çalışırken bir bildirim alırsınız.
+ sahip oldukları aboneliğin türüne bağlı olarak, daha önce bir Visual Studio aboneliği aracılığıyla sunulan bir pluralaltim aboneliğini kullanan tüm aboneler, yeni pluralalalalalalalalalalalalalalalalalal Ek Plurun eğitim avantajını kullanmaya uygun değilseniz, pluralali Web sitesinde avantajı etkinleştirmeye çalıştığınızda bir bildirim alırsınız.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
-1. Aboneliğinizi etkinleştirmek için [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) Pluralsight  avantajı kutucuğuna bağlanarak Etkinleştir bağlantısına tıklayın.  Görüntülenen kutucuk listesini daraltmak için bir grup filtresi seçebilirsiniz.  Pluralsight, geliştirme avantajları Professional grubunda bulunur.
+1. Aboneliğinizi etkinleştirmek için, ' a bağlanın [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) ve Plurun avantajı kutucuğunda **Etkinleştir** bağlantısına tıklayın.  Görüntülenecek kutucukların listesini daraltmak için bir grup filtresi seçebilirsiniz.  pluraltarın Professional geliştirme avantajları grubunda bulunur.
    > [!div class="mx-imgBorder"]
-   > ![Pluralsight Avantajı Kutucuğu](_img/vs-pluralsight/vs-pluralsight-tile.png "Avantajınızı talep etmek için Etkinleştir'e tıklayın")
+   > ![Pluralaltim avantajı kutucuğu](_img/vs-pluralsight/vs-pluralsight-tile.png "Avantajınızı talep etmek için etkinleştir 'e tıklayın")
 
-(Yukarıdaki kutucuk, bir abonenin göreceği Visual Studio Enterprise örneğidir.  Farklı bir Visual Studio kullanıyorsanız Pluralsight avantajının süresi farklılık gösterir.  Ayrıntılar için Uygunluk tablosuna bakın.)
-1. Abonelik aboneliğinize dahil olan avantaj için Pluralsight sayfasına Visual Studio.
-   - Formda istenen iletişim bilgilerini sağlama
+(yukarıdaki kutucuk, Visual Studio Enterprise abonenin neleri görebileceğini bir örnektir.  farklı bir Visual Studio aboneliği kullanıyorsanız, pluralmize avantajınız süresi farklılık gösterir.  Ayrıntılar için uygunluk tablosuna bakın.)
+1. Visual Studio aboneliğinizle birlikte sunulan avantaja yönelik olarak, pluralalalala sayfasına yönlendirilirsiniz.
+   - Formda istenen iletişim bilgilerini sağlayın
    - Kullanım koşullarını kabul etmek için onay kutusuna tıklayın
-   - **KULLAN'a tıklayın.**
+   - Kullan **' a** tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Pluralsight kaydı](_img/vs-pluralsight/vs-pluralsight-registration.png "Kayıt formunu doldurun, koşulları kabul etmek için onay kutusuna tıklayın ve Kullan'a tıklayın")
+   > ![Pluralali kaydı](_img/vs-pluralsight/vs-pluralsight-registration.png "Kayıt formunu doldurun, koşulları kabul etmek için onay kutusuna tıklayın ve ardından kullan ' a tıklayın.")
 
    > [!NOTE]
-   > Kayıt sayfasının süresi birkaç dakika sonra dolar.  Sayfanın süresi dolmadan önce kayıt işlemini tamamlamazsanız, sayfada Pluralsight kutucuğuna geri dönüp <https://my.visualstudio.com/benefits> yeniden **Etkinleştir'e** tıklayın. 
+   > Kayıt sayfası birkaç dakika sonra dolar.  Sayfa süresi dolmadan önce kayıt işlemini tamamlamazsanız, sayfada Pluralalaltim kutucuğuna dönün <https://my.visualstudio.com/benefits> ve yeniden **Etkinleştir** ' e tıklayın. 
 
-1. Hesabınız birkaç dakika içinde ayarlanır.  Bu tamamlandıktan sonra sayfada bir onay görüntülenir ve oturum açma bilgilerinizi içeren bir e-posta gönderilir.  E-posta, hesabı oluşturulduğunda belirttiğiniz diğer ada gönderilir.  İletiyi bulma konusunda sorun varsa istenmeyen posta veya istenmeyen posta klasörlerinizi kontrol edin.
+1. Hesabınızı kurmak biraz zaman alabilir.  Bu işlem tamamlandıktan sonra sayfada bir onay görürsünüz ve oturum açma bilgilerinizi içeren bir e-posta alırsınız.  E-posta, hesabı oluştururken belirttiğiniz diğer ada gönderilir.  İletiyi bulmakta sorun yaşıyorsanız, önemsiz veya istenmeyen posta klasörlerinizi denetlediğinizden emin olun.
 
    > [!NOTE]
-   > Hesabınız yeni teklifleri kullanmak için uygun değilse, gelen e-posta, uygun olmadığını için hesabınız oluşturulurken bir sorun olduğunu açıklar.  Ayrıca Pluralsight'ın destek ekibiyle iletişime geçebilirsiniz. Hesabınızla ilgili sorularınıza yanıt verebilirsiniz.
+   > Hesabınız yeni teklifleri kullanmaya uygun değilse, aldığınız e-posta uygun olmadığından hesabınızı oluştururken bir sorun olduğunu açıklacaktır.  Ayrıca, Pluraltarın destek ekibine başvurabileceğiniz, hesabınız hakkında sahip olduğunuz soruları yanıtlayabilen bilgiler de içerir.
 
-1. PAROLA **AYARLA'ya tıklayın.**
+1. **Parolayı ayarla**' ya tıklayın.
 
-1. İstediğiniz parolayı Yeni parola **alanına girin,** Parolayı onayla alanına yeniden **girin ve** Kaydet'e **tıklayın.**
+1. **Yeni parola** alanına istediğiniz parolayı girin, **Parolayı Onayla** alanına bir kez daha girin ve **Kaydet**' e tıklayın.
 
-1. İşte bu kadar!  Artık binlerce Pluralsight kursuyla öğrenmeye başlayabilirsiniz!
+1. İşte bu kadar!  Artık binlerce Pluralaltim kursu ile öğrenmeye başlamaya hazırsınız!
 
-## <a name="status-of-your-pluralsight-subscription"></a>Pluralsight aboneliğinizin durumu
-Pluralsight avantajınızı etkinleştirdikten sonra Visual Studio abonelikler portalında kutucuğun görünümü, aboneliğinizin durumunu izlemenize yardımcı olacak şekilde değişir.  
+## <a name="status-of-your-pluralsight-subscription"></a>Pluralalaltim aboneliğinizin durumu
+pluralalsiz avantajınızı etkinleştirdikten sonra, aboneliğinizin durumunu izlemenize yardımcı olmak için Visual Studio abonelikleri portalındaki kutucuğun görünümü değişecektir.  
 
-### <a name="while-your-subscription-is-active"></a>Aboneliğiniz etkinken
-"Etkinleştir" düğmesinin yerine, tıklarsanız oturum açın ve eğitiminize devam etmek için sizi doğrudan Pluralsight portalına alacak küçük bir dairesel düğmeyle karşınıza çıkarsınız.  
+### <a name="while-your-subscription-is-active"></a>Aboneliğiniz etkin olsa da
+"Etkinleştir" düğmesi yerine artık, tıklandıklarında, oturum açabilmeniz ve eğitimle devam edebilmeniz için doğrudan Pluralsel portala doğrudan götürecektir.  
 
-Kutucuğun üst kısmında pluralsight başlığının altında, Pluralsight aboneliğinize ne kadar süre kalan sürenin görüntüleniyor olduğunu gösteren bir metin görüntülenir.  Aboneliğinizin süresi dolsa bile 60 gün içinde metin, ay yerine kalan gün sayısını görüntülemeye geçiş olur.  
+Kutucuğun en üstündeki plurali başlığı altında, Pluralalmi aboneliğinizde ne kadar zaman kaldığını görüntüleyen bir metin görürsünüz.  Aboneliğiniz süresi dolan 60 gün içinde olduğunda, metin aylar yerine kalan gün sayısını görüntüleyecek şekilde değişir.  
 
-Kutucuğun en altında, Pluralsight aboneliğinizin etkinleştirme tarihini ve sona erme tarihini gösteren metinler yer almaktadır.
+Kutucuğun en altında, Pluralsyon aboneliğinizin hem etkinleştirme tarihini hem de sona erme tarihini gösteren bir metin görürsünüz.
 
    > [!div class="mx-imgBorder"]
-   > ![Etkinleştirmeden sonra Pluralsight kutucuğu](_img/vs-pluralsight/vs-pluralsight-activated.png "Etkinleştirmeden sonra kutucuk, aboneliğiniz üzerinde kalan gün sayısını ve sona erme tarihini ve Pluralsight portalı bağlantısını görüntüler.")
+   > ![Etkinleştirmeden sonra pluralalaltim kutucuğu](_img/vs-pluralsight/vs-pluralsight-activated.png "Etkinleştirmede sonra kutucuk, aboneliğinizdeki kalan gün sayısını, sona erme tarihi ve Pluralaltim portalının bağlantısını görüntüler.")
 
-### <a name="when-your-subscription-expires"></a>Aboneliğinizin süresi dolduğunda
-Pluralsight aboneliğinizin süresi dolduğunda durum "0 gün kaldı" olarak değişir ve Pluralsight portalı bağlantısı kaldırılır. Aboneliği etkinleştirmiş olacağınız tarihi ve süresinin dolma tarihini görmeye devam edebilirsiniz.  
+### <a name="when-your-subscription-expires"></a>Aboneliğinizin süresi dolarsa
+Pluraltarın aboneliğinizin süresi dolarsa, durum "0 gün kaldı" olarak değişir ve Pluralali portalının bağlantısı kaldırılır. Ayrıca, aboneliğin etkinleştirildiği tarihi ve zaman aşımına uğradığı tarihi görmeye devam edersiniz.  
    > [!div class="mx-imgBorder"]
-   > ![Süre sonu sonrasında Pluralsight kutucuğu](_img/vs-pluralsight/vs-pluralsight-expired.png "Süre sonunda Pluralsight bağlantısı kaldırılır ve aboneliğin etkin olduğu tarihler kutucuğun alt kısmında görünür.")
+   > ![Süre sonundan sonra pluralalaltim kutucuğu](_img/vs-pluralsight/vs-pluralsight-expired.png "Süre dolduktan sonra, Pluralaltarın bağlantısı kaldırılır ve aboneliğin etkin olduğu tarihler kutucuğun altında görünür.")
 
 
-## <a name="eligibility"></a>Uygunluk
+## <a name="eligibility"></a>Önceliği
 
-|                          Abonelik Düzeyi                          |     Kanallar      |    Avantaj    |   Yenilen -ebilir?   |
+|                          Abonelik düzeyi                          |     Kanallar      |    Avantaj    |   Yenilenebilir?   |
 |----------------------------------------------------------------------|-------------------|---------------|----------------|
-|          Visual Studio Enterprise (Standart)           | VL, Azure, Perakende |   6 ay    | Evet<sup>2</sup> |
-|          Visual Studio Enterprise ile abonelik GitHub Enterprise          | VL  |   6 ay    | Evet<sup>2</sup> |
-|         Visual Studio Professional (Standart)          | VL, Azure, Perakende |   3 ay    | Evet<sup>2</sup> |
-|         Visual Studio Professional ile abonelik GitHub Enterprise          | VL  |   3 ay    | Evet<sup>2</sup> |
-|              Visual Studio Test Professional (Standart)              |    VL, Perakende     |   Kullanılamaz    | NA  |
-|                      MSDN Platformları (Standart)                       |    VL, Perakende     |   Kullanılamaz    | NA  |
+|          Visual Studio Enterprise (standart)           | VL, Azure, perakende |   6 ay    | Evet<sup>2</sup> |
+|          GitHub Enterprise aboneliği Visual Studio Enterprise          | VL  |   6 ay    | Evet<sup>2</sup> |
+|         Visual Studio Professional (standart)          | VL, Azure, perakende |   3 ay    | Evet<sup>2</sup> |
+|         GitHub Enterprise aboneliği Visual Studio Professional          | VL  |   3 ay    | Evet<sup>2</sup> |
+|              Visual Studio Test Professional (standart)              |    VL, perakende     |   Kullanılamaz    | NA  |
+|                      MSDN Platformları (Standart)                       |    VL, perakende     |   Kullanılamaz    | NA  |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) |       Azure       | Kullanılamaz |       NA       |
-|             Visual Studio Enterprise (NFR<sup>1</sup> )              |      Program      | Kullanılamaz |       NA       |
+|             Visual Studio Enterprise (nfr<sup>1</sup> )              |      Program      | Kullanılamaz |       NA       |
 ||
 
-<sup>1</sup>*Şunları içerir: Resale (NFR), Visual Studio Industry Partner (VSIP), BizSpark, MCT Software & Services Developer, MCT Software & Service, Most Valuable Professional (MVP), Regional Director (RD), Microsoft İş Ortağı Ağı (MPN), FTE, Imagine. Dışlar: NFR Basic.*  
+<sup>1</sup>*şunları içerir: for satıl (nfr), Visual Studio sektör ortağı (vsıp), BizSpark, mct software & Services geliştiricisi, mct software & Service, en değerli Professional (MVP), bölgesel yönetmen (RD), Microsoft İş Ortağı Ağı (mpn), fte, Imagine. Dışlar: NFR Basic.*  
 
-<sup>2</sup>*Seçilen aboneliklerde Pluralsight Visual Studio aboneliğiniz yenilendikten sonra abonelikler yenilenecektir. Örneğin, her yıl yenilene bir yıllık aboneliğiniz varsa, bu avantajı yenileye her yıl size kullanılabilir. Çok yıllık bir aboneliğiniz varsa Pluralsight avantajı, abonelik süresi boyunca bir kez kullanılabilir.  Çok yıllık bir aboneliği yenilersanız, yenilemeden sonra avantaj yeniden kullanılabilir.*  
+<sup>2</sup>*seçili Visual Studio aboneliklerdeki pluralalalalalalalalali avantajı aboneliğiniz yenilendiğinde yenilenir Örneğin, her yıl yenilemenizi sağlayan yıllık bir aboneliğiniz varsa, bu avantaj her yıl yenilemenizi sağlar. Çok yıllı bir aboneliğiniz varsa, bir abonelik dönemi boyunca Pluralalalalalalalalalalalalalalalalali avantajı  Çok yıllık bir aboneliği yenilediğinizde, bu, yenileme sonrasında yeniden kullanılabilir olacaktır.*  
 
 > [!NOTE]
-> Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
+> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)Visual Studio satın alma konusunda farklı seçenekleri araştırmak için yeni müşterilerin ' e gitmesi önerilir.
 
-Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) e-posta adresinize atanan tüm abonelikleri görmek için adresine tıklayın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla aboneliğiniz olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)e-posta adresinize atanan tüm abonelikleri görmek için Bağlan. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>S: Visual Studio Enterprise aboneliğim var ama Avantajlar sayfasında Pluralsight kutucuğunu göremiyorum. Ne oldu?
-A: Tüm Visual Studio Enterprise Pluralsight avantajını içermez.  Aboneliğinizin [uygun olup](#eligibility) olmadığını görmek için uygunluk tablosuna bakın.
+### <a name="q-i-have-a-visual-studio-enterprise-subscription-but-i-dont-see-the-pluralsight-tile-on-the-benefits-page-whats-wrong"></a>s: Visual Studio Enterprise aboneliğim var, ancak avantajlar sayfasında pluralalm kutucuğunu görmüyorum. Ne oldu?
+y: tüm Visual Studio Enterprise abonelikler, pluralalalalalalalalalal  Aboneliğinizin uygun olup olmadığını görmek için [uygunluk tablosuna](#eligibility) bakın.
 
-### <a name="q-can-i-use-the-pluralsight-benefit-more-than-once"></a>S: Pluralsight avantajını birden çok kez kullanabilir miyim?  
-A: Seçili aboneliklerde Pluralsight avantajı Visual Studio aboneliğiniz yenilendikten sonra aboneliklerin yenilenmesine neden olur. Örneğin, her yıl yenilene bir yıllık aboneliğiniz varsa, bu avantajı yenileye her yıl size kullanılabilir. Çok yıllık bir aboneliğiniz varsa Pluralsight avantajı, abonelik süresi boyunca bir kez kullanılabilir.  Çok yıllık bir aboneliği yenilersanız, yenilemeden sonra avantaj yeniden kullanılabilir.  Yenileme tarihinizi bulmak için Destek <https://my.visualstudio.com/subscriptions> *Bilgileri'ne tıklayın ve* "Geçerlilik tarihi: " tarihini bulun. 
+### <a name="q-can-i-use-the-pluralsight-benefit-more-than-once"></a>S: Pluralm avantajını birden çok kez kullanabilir miyim?  
+y: seçili Visual Studio aboneliklerdeki pluralalalalalalalalalalalalalal Örneğin, her yıl yenilemenizi sağlayan yıllık bir aboneliğiniz varsa, bu avantaj her yıl yenilemenizi sağlar. Çok yıllı bir aboneliğiniz varsa, bir abonelik dönemi boyunca Pluralalalalalalalalalalalalalalalalali avantajı  Çok yıllık bir aboneliği yenilediğinizde, bu, yenileme sonrasında yeniden kullanılabilir olacaktır.  Yenileme tarihini bulmak için <https://my.visualstudio.com/subscriptions> *destek bilgileri* ' ne gidin ve "geçerlilik tarihi:" tarihini bulun. 
 
-### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>S: Özelleştirilmiş öğrenme oynatma listelerine veya kanallarına erişimim var mı?
-C: Evet. Bir Visual Studio olarak Pluralsight eğitim avantajınız kapsamında öne çıkan rollere, öğrenme yollarına ve özel kanallara (oynatma listeleri) erişebilirsiniz. Öne çıkan içerik, Microsoft ve Pluralsight tarafından özel olarak seçkin bir şekilde ve ilgi alanıyla ilgili önemli alanlarda öğrenmeye yöneliktir. Pluralsight giriş sayfanıza ve diğer içeriğe erişmek için Visual Studio aboneliği portalınız aracılığıyla <https://my.visualstudio.com/benefits> Pluralsight avantajınızı etkinleştirin.
+### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>S: özelleştirilmiş bir öğrenme çalma listelerine veya kanala erişimim var mı?
+C: Evet. Visual Studio bir abone olarak, pluralalmalımın eğitim avantajının bir parçası olarak öne çıkan roller, öğrenme yolları ve özel kanallar (çalma listeleri) erişimi elde edersiniz. Öne çıkan içerikler Microsoft ve Plurali tarafından özel olarak kaldırılmıştır ve ilgilendiğiniz önemli alanlarda öğrenmeye yöneliktir. <https://my.visualstudio.com/benefits>bu ve diğer içeriklere de pluralali giriş sayfanızda erişebilmek için, Visual Studio abonelik portalınız aracılığıyla pluralaltarınızı etkinleştirin.
 
-### <a name="q-the-pluralsight-tile-doesnt-have-an-activate-link-how-can-i-activate-the-benefit"></a>S: Pluralsight kutucuğunun "Etkinleştir" bağlantısı yok. Avantajı nasıl etkinleştirim?
-A: Pluralsight avantajınızı zaten etkinleştirdikten sonra "Etkinleştir" bağlantısı, pluralsight için oturum açma sayfasına sizi alan bir bağlantıyla değiştirilir.  Ayrıca avantajı etkinleştirilen tarihi ve aboneliğinizin ne kadar süreyle kalarak devam etme hakkında bilgi edinebilirsiniz.  Zaten bir abonelik kullandıysanız başka bir aboneliği etkinleştiresiniz.
+### <a name="q-the-pluralsight-tile-doesnt-have-an-activate-link-how-can-i-activate-the-benefit"></a>S: Pluralalaltim kutucuğunda "etkinleştir" bağlantısı yoktur. Avantajı nasıl etkinleştirebilirim?
+Y: tam görüş avantajınızı zaten etkinleştirdiyseniz, "etkinleştir" bağlantısının, sizi Pluralali için oturum açma sayfasına götüren bir bağlantıyla değiştirirsiniz.  Ayrıca, avantajın etkinleştirildiği tarihi ve aboneliğinizde ne kadar zaman kaldığını gösteren bilgileri de görürsünüz.  Zaten bir abonelik kullandıysanız, başka birini etkinleştiremeyeceksiniz.
 
-### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>S: Pluralsight aboneliğim biterse ne olur?
-A: Ücretsiz Pluralsight aboneliğinizin sonunda, bir aboneliği doğrudan Pluralsight'tan satın almayı seçebilirsiniz.  Tüm ayrıntılar [için pluralsight](https://www.pluralsight.com) ile iletişime geçin.
+### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>S: Pluralm aboneliğim çalıştırıldığında ne olur?
+Y: ücretsiz çoğul aboneliğin sonunda, doğrudan Pluraldan bir abonelik satın almayı tercih edebilirsiniz.  Tam Ayrıntılar için lütfen [Pluralali](https://www.pluralsight.com) ile iletişime geçin.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- [Pluralsight Yardım Merkezi,](https://help.pluralsight.com/help) Pluralsight kurslarını alma veya Pluralsight web sitesini kullanma konusunda yardım sağlar.
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için [abonelikler Visual Studio iletişim kurun](https://my.visualstudio.com/gethelp)
-- IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- [Pluraltarın yardım merkezi](https://help.pluralsight.com/help) , pluralaltim kurslarını alma veya plurali Web sitesini kullanma konusunda yardım sağlar.
+- Visual Studio abonelikler için satış, abonelik, hesap ve faturalandırma konusunda yardım için, [Visual Studio abonelik desteğiyle](https://my.visualstudio.com/gethelp) iletişim kurun
+- Visual Studio ıde, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -120,6 +120,6 @@ A: Ücretsiz Pluralsight aboneliğinizin sonunda, bir aboneliği doğrudan Plura
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Hesabınız oluşturulduktan sonra eğitime başlayabilirsiniz.  Yeni bir kurs başlatmak veya devam eden bir kursa dönmek için sayfanın sağ üst köşesinde oturum [https://www.pluralsight.com](https://www.pluralsight.com) aç'ı ziyaret edin  ve dokunun.
+Hesabınızı oluşturduktan sonra eğitime başlamaya hazırsınız demektir.  [https://www.pluralsight.com](https://www.pluralsight.com)Yeni bir kurs başlatmak veya sürmekte olan bir kursa geri dönmek için sayfanın sağ üst köşesindeki **oturum aç** ' ı ziyaret edin ve dokunun.
 
-Azure DevTest bireysel kredinizi etkinleştirerek kendi geliştirme [korumalı alanınızı kullanın.](vs-azure.md)
+[Azure DevTest bireysel kredilerinizi](/azure/devtest/offer/quickstart-individual-credit)etkinleştirerek kendi geliştirme korumalı ağınızın avantajlarından yararlanın.

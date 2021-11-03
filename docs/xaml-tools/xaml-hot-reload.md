@@ -1,7 +1,7 @@
 ---
 title: XAML kullanarak XAML kodu yazma ve hata ayıklama XAML kodu yükleme
 description: XAML çalışırken yeniden yükleme veya XAML düzenleme ve devam etme, uygulamaları çalıştırırken XAML kodunuzda değişiklik yapmanıza olanak sağlar
-ms.date: 09/22/2021
+ms.date: 10/26/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - xaml edit and continue
@@ -13,12 +13,12 @@ ms.custom: contperf-fy22q1
 ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: b1f7e3703bd3bb7fa907c926f62fa9b82ad2ce96
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 5bd1b7c07d4a467c886b2846b8504d8c47f87684
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128430620"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131128020"
 ---
 # <a name="xaml-hot-reload-write-and-debug-your-wpf-and-uwp-apps-while-theyre-running"></a>XAML Hot Reload: çalışırken WPF ve UWP uygulamalarınızı yazma ve hatalarını ayıklama
 
@@ -36,7 +36,7 @@ hem Visual Studio hem de Visual Studio için Blend kullanılabilir, XAML etkin y
 |Desteklenen uygulama türleri|İşletim sistemi ve araçlar|
 |-|-|-|
 |Windows Presentation Foundation (WPF) |.NET Framework 4.6 + ve .net Core</br>Windows 7 ve üzeri |
-|evrensel Windows uygulamaları (UWP)| [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) 14393 + ile Windows 10 ve üzeri |
+|evrensel Windows uygulamaları (UWP)| [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) 14393 + ve üzeri ile Windows 10 ve üzeri|
 
 > [!NOTE]
 > Xamarin. Forms kullanıyorsanız, bkz. [Xamarin. Forms Için xaml etkin yeniden yükleme](/xamarin/xamarin-forms/xaml/hot-reload).
@@ -55,10 +55,10 @@ XAML sık yeniden yükleme 'nin bilinen kısıtlamaları aşağıda verilmiştir
 |Sınırlama|WPF|UWP|Notlar|
 |-|-|-|-|
 |Uygulama çalışırken denetimlere yönelik bağlantı olayları|Desteklenmiyor|Desteklenmez|Bkz. hata: *olayın başarısız olduğundan emin olun*. WPF 'de, var olan bir olay işleyicisine başvurabilirsiniz. UWP uygulamalarında, var olan bir olay işleyicisine başvurulması desteklenmez.|
-|Uygulamanızın sayfa/pencere veya *app. xaml* gibi bir kaynak sözlüğünde kaynak nesneleri oluşturma|Visual Studio 2019 [sürüm 16,2](/visualstudio/releases/2019/release-notes-v16.2) ve üzeri sürümlerde başlatılıyor|Desteklenir|Örnekler: <br>- `SolidColorBrush` Olarak kullanmak için bir kaynak sözlüğüne ekleme `StaticResource` .</br>Note: statik kaynaklar, stil dönüştürücüler ve bir kaynak sözlüğüne yazılan diğer öğeler XAML etkin yeniden yükleme kullanılırken uygulanabilir/kullanılabilir. Yalnızca kaynağın oluşturulması desteklenmez.</br> -Kaynak sözlüğü Özelliği değiştiriliyor `Source` .|
+|Uygulamanızın sayfa/pencere veya *app. xaml* gibi bir kaynak sözlüğünde kaynak nesneleri oluşturma|Visual Studio 2019 [sürüm 16,2](/visualstudio/releases/2019/release-notes-v16.2) ve üzeri sürümlerde başlatılıyor|Destekleniyor|Örnekler: <br>- `SolidColorBrush` Olarak kullanmak için bir kaynak sözlüğüne ekleme `StaticResource` .</br>Note: statik kaynaklar, stil dönüştürücüler ve bir kaynak sözlüğüne yazılan diğer öğeler XAML etkin yeniden yükleme kullanılırken uygulanabilir/kullanılabilir. Yalnızca kaynağın oluşturulması desteklenmez.</br> -Kaynak sözlüğü Özelliği değiştiriliyor `Source` .|
 |Uygulama çalışırken projenize yeni denetimler, sınıflar, pencereler veya diğer dosyalar ekleme|Desteklenmiyor|Desteklenmiyor|Hiçbiri|
 |NuGet paketlerini yönetme (paket ekleme/kaldırma/güncelleştirme)|Desteklenmiyor|Desteklenmiyor|Hiçbiri|
-|{X:Bind} biçimlendirme uzantısını kullanan veri bağlamasını değiştirme|Yok|Visual Studio 2019 ' den itibaren desteklenir|bunun için Windows 10 sürüm 1809 (derleme 10.0.17763) gerekir. Visual Studio 2017 veya önceki sürümlerde desteklenmez.|
+|{X:Bind} biçimlendirme uzantısını kullanan veri bağlamasını değiştirme|Yok|Visual Studio 2019 ' den itibaren desteklenir|bunun için Windows 10 sürüm 1809 (build 10.0.17763) ve üzeri gerekir. Visual Studio 2017 veya önceki sürümlerde desteklenmez.|
 |X:Uid yönergelerinin değiştirilmesi desteklenmiyor|Yok|Desteklenmiyor|Hiçbiri|
 |Birden çok işlem kullanma | Desteklenir | Desteklenir | Visual Studio 2019 [sürüm 16,6](/visualstudio/releases/2019/release-notes-v16.6) ve sonraki sürümlerde desteklenir. |
 

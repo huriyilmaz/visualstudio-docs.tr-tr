@@ -1,8 +1,8 @@
 ---
-title: Kod için satır numaralarını görüntüle
-description: Kodunuzda satır numaralandırmayı görüntülemeyi veya gizlemeyi öğrenin.
+title: Kod için satır numaralarını görüntüleme
+description: Kodda satır numarası görüntülemeyi veya gizlemeyi öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 08/28/2020
+ms.date: 08/05/2021
 ms.topic: how-to
 helpviewer_keywords:
 - line numbers, displaying
@@ -16,27 +16,27 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: db27e2ab1b3abdd67abb8330b45dd872dc35558052e8fb7741c763ee9f8ec352
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: da6b06f17b5d053e953c23b6e9924685380fa350
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "121429373"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131126837"
 ---
-# <a name="how-to-display-line-numbers-in-the-editor"></a>Nasıl yapılır: düzenleyicide satır numaralarını görüntüleme
+# <a name="how-to-display-line-numbers-in-the-editor"></a>Nasıl gösterilir: Düzenleyicide satır numaralarını görüntüleme
 
-Kodunuzda satır numaralandırmayı gösterebilir veya gizleyebilirsiniz.
+Kodda satır numarası görüntüleme veya gizleme.
 
-## <a name="display-line-numbers-in-code"></a>Koddaki satır numaralarını görüntüle
+## <a name="display-line-numbers-in-code"></a>Kodda satır numaralarını görüntüleme
 
-1. Menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin. **Metin düzenleyici** düğümünü genişletin ve ardından kullandığınız dil ya da tüm dillerde satır numaralarını açmak Için **tüm diller** ' i seçin. (Veya, arama kutusuna **satır numarasını** yazın ve sonuçlardan **satır numaralarını aç veya kapat** ' ı seçin.)
+1. Menü çubuğunda Araçlar **Seçenekleri'ne**  >  **tıklayın.** Metin **Düzenleyici düğümünü** genişletin ve ardından tüm dillerde  satır numaralarını açmak için kullanmakta olduğu dili veya Tüm Diller'i seçin. (Veya arama **kutusuna satır numarası** yazın ve sonuçlardan Satır numaralarını aç veya **kapat'ı** seçin.)
 
-2. **Satır numaraları** onay kutusunu seçin.
+2. Satır numaraları **onay** kutusunu seçin.
 
    ![VS düzenleyicisinde satır numaralarını görüntüleme seçeneği](../../ide/reference/media/line-numbers-option.png)
 
 > [!NOTE]
-> Satır numaraları kodunuza eklenmez; yalnızca başvuruya yöneliktir.
+> Satır numaraları kodunuza eklenmez; Bunlar yalnızca başvuru için.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

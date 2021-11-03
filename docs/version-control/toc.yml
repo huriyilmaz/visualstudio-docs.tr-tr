@@ -2,25 +2,31 @@
   href: index.yml
 - name: Genel Bakış
   items:
-    - name: Visual Studio'de Git deneyimi
+    - name: Git deneyimi Visual Studio
       href: git-with-visual-studio.md
     - name: Git ayarları ve tercihleri
       href: git-settings.md
-    - name: Kaynak Visual Studio denetimi nasıl kolaylaştırır?
+    - name: Visual Studio kaynak denetimini nasıl kolaylaştırdı
       href: git-visual-studio-source-control.md
+    - name: Git ve Takım Gezgini yan yana karşılaştırın
+      href: git-team-explorer-feature-comparison.md
 - name: başlarken
   items:
-    - name: Kullanmaya başlayın Git ve GitHub ile Visual Studio
+    - name: GitHub hesabı oluşturma
+      href: git-create-github-account.md
+    - name: Depoyu kopyalama
+      href: git-clone-repository.md
+    - name: Depo oluşturma
+      href: git-create-repository.md
+    - name: Git & kullanmaya başlama GitHub
       href: /learn/modules/visual-studio-github-push/
-    - name: Git ile Takım Gezgini yan yana karşılaştırma
-      href: git-team-explorer-feature-comparison.md
 - name: Yenilikler
   items:
-    - name: Visual Studio 2022'de çoklu repo desteği (Önizleme)
+    - name: Visual Studio 2022 ' de çok depoyu destekler
       href: 'https://devblogs.microsoft.com/visualstudio/multi-repo-support-in-visual-studio/'
-    - name: Visual Studio 2022 (Önizleme) sürüm notları
+    - name: Visual Studio 2022 sürüm notları
       href: /visualstudio/releases/2022/release-notes-preview
-    - name: Visual Studio 2019'da Git ile gelişmiş üretkenlik
+    - name: Visual Studio 2019 ' de Git ile geliştirilmiş üretkenlik
       href: 'https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/'
     - name: Visual Studio 2019 sürüm notları
       href: /visualstudio/releases/2019/release-notes/

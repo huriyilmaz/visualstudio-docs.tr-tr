@@ -4,12 +4,12 @@ summary: 'Visual Studio aboneliklerinin sunduğu avantajlar, geliştirme ve test
 brand: visual-studio
 metadata:
   title: Visual Studio Abonelikleri
-  description: 'Visual Studio abonelikleri, Windows, iOS, Android ve Linux gibi tercih ettiğiniz platform ve cihazlarda harika uygulamalar oluşturmanız, dağıtmanız ve uygulamalarınızı yönetmeniz için sunulan kapsamlı bir kaynak kümesidir. Aboneliklerin sunduğu avantajlar, geliştirme ve test ihtiyaçlarınıza yönelik geliştirici araçlarına, bulut hizmetlerine, yazılıma, eğitimlere ve desteğe erişimi içerir.'
+  description: 'Visual Studio abonelikler, Windows, iOS, Android ve Linux gibi tercih ettiğiniz platformlarınızda ve cihazlarınızda uygulamalar oluşturmanız, dağıtmanız ve yönetmeniz için kapsamlı bir kaynak kümesi sunar. Avantajlar, geliştirme ve test gereksinimleriniz için geliştirici araçlarına, bulut hizmetlerine ve yazılıma, eğitimlere ve desteğe erişim sağlar.'
   ms.topic: hub-page
   author: evanwindom
   ms.author: lank
   manager: lank
-  ms.date: 10/09/2020
+  ms.date: 10/09/2021
 highlightedContent:
   items:
     - title: Visual Studio Aboneliklerindeki yenilikler
@@ -27,13 +27,13 @@ conceptualContent:
     - title: Avantajları kullanma
       links:
         - text: Azure kredisi
-          url: ~/vs-azure.md
+          url: /azure/devtest/offer/quickstart-individual-credit
           itemType: get-started
         - text: Yazılım indirmeleri
           url: ~/software-download-list.md
           itemType: get-started
       footerLink:
-        url: ~/vs-azure.md
+        url: ~/about-benefits.md
         text: Daha fazla göster
     - title: Popüler kaynaklar
       links:
@@ -53,7 +53,7 @@ conceptualContent:
           itemType: get-started
 tools:
   title: Kullanılabilir olan ürünler
-  summary: 'Bunlar, Visual Studio Abonelikleri aracılığıyla sunulan ürünlerin bazılarıdır'
+  summary: Visual Studio abonelikleri aracılığıyla kullanılabilen ürün & hizmetleri
   items:
     - title: Azure
       imageSrc: 'https://docs.microsoft.com/media/logos/logo_azure.svg'
@@ -86,7 +86,7 @@ additionalContent:
         - title: Bulut hizmetleri
           links:
             - text: Azure Geliştirme ve Test
-              url: ~/vs-azure-payg.md
+              url: /azure/devtest/offer/
             - text: Visual Studio App Center
               url: ~/vs-visual-studio-app-center.md
             - text: Azure DevOps Server ve CAL

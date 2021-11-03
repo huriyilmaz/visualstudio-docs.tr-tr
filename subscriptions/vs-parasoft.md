@@ -1,98 +1,98 @@
 ---
-title: Visual Studio aboneliklerde Parasoft Virtualize/SOA Professional test | Microsoft Docs
+title: Visual Studio aboneliklerde parasoft virtualınitialize/soatest Professional | Microsoft Docs
 author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
 ms.date: 03/17/2021
 ms.topic: how-to
-description: Visual Studio aboneliğinize dahil olan Parasoft Virtualize/SOA Test Professional etkinleştirmeyi öğrenin.
-ms.openlocfilehash: 122aff032ced21c6235df3727e77b70200fc3563
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+description: Visual Studio aboneliğinize dahil edilen parasoft virtualınitialize/SOA Test Professional aboneliğini nasıl etkinleştireceğinizi öğrenin.
+ms.openlocfilehash: 706d3c13cdfcc36c031d768321d4cc074015fa6a
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128432046"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127487"
 ---
-# <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio Aboneliklerde Parasoft Virtualize/SOAtest Professional Desktop
+# <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde parasoft virtualınitialize/soatest Professional masaüstü
 
-Daha önce ve daha sık test.  Kullanılamayan gelişen uygulamaların ve sistemlerin davranışını simüle etmek ve test etmek.  Avantajınız altı aylık ücretsiz bir abonelik içerir.  Altı aylık aboneliğinizin sonunda, yıllık aboneliğin fiyatında %25 indirime hak kazanabilirsiniz.
+Daha önce ve daha sık test edin.  Kullanılamayan gelişen uygulamalar ve sistemler davranışını benzetir ve test edin.  Avantajınız ücretsiz bir altı aylık abonelik içerir.  Altı aylık aboneliğinizin sonunda, bir yıllık aboneliğin fiyatı üzerinde %25 indirim elde edersiniz.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 
-1. Parasoft Virtualize/SOAtest Professional Desktop avantajınızı kullanmak için oturum [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) açın.
+1. parasoft virtualınitialize/soatest Professional masaüstü avantajınızı kullanmak için oturum açın [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
 
-2. Araçlar bölümünde Parasoft kutucuğunu bulun  ve avantaj kutucuğunun altındaki Kod Al bağlantısına tıklayın.   Kodun başarıyla alınmıştır bildirimi alırsınız.  **Etkinleştir'e tıklayın.**
+2. Araçlar bölümünde parasoft kutucuğunu bulun ve avantaj kutucuğunun altındaki **kodu al** bağlantısına tıklayın.   Kodun başarıyla alındığını belirten bir bildirim alırsınız.  **Etkinleştir**' e tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft Avantajı Kutucuğu](_img/vs-parasoft/vs-parasoft-tile.png "Parasoft kutucuğunun 'Kod Al'a tıklayın ve ardından 'Etkinleştir'e tıklayın.")
+   > ![Parasoft avantajı kutucuğu](_img/vs-parasoft/vs-parasoft-tile.png "Parasoft kutucuğunda ' kodu al ' düğmesine tıklayın ve ardından başlamak için ' etkinleştir 'e tıklayın.")
 
-3. Parasoft web sitesine yönlendirilen bir hesap oluşturabilirsiniz.  İletişim bilgilerini sağlamanız ve Gönder'e **tıklamanız gerekir.**
+3. Hesap oluşturacağınız parasoft Web sitesine yönlendirilirsiniz.  İletişim bilgilerinizi girmeniz yeterlidir ve **Gönder**' e tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft Avantajı Hesap Oluşturma](_img/vs-parasoft/vs-parasoft-new-account.png "İletişim bilgilerinizi stiktan sonra 'Gönder'e tıklar ve ardından hesabınız oluşturun.")
+   > ![Parasoft avantajı hesap oluşturma](_img/vs-parasoft/vs-parasoft-new-account.png "İletişim bilgilerinizi girip, hesabınızı oluşturmak için ' Gönder 'e tıklayın.")
 
    > [!Note]
-   > Sayfada yer alan tabloda tam yılın fiyatlandırması ve indirim Visual Studio yer alır. Altı aylık aboneliğinizi kullandıktan sonra bu fiyatlandırma geçerli olur.  
+   > sayfadaki tablo, tam yıl için fiyatlandırmayı, artı bir Visual Studio indirimi gösterir. Altı aylık aboneliğinizi kullandıktan sonra bu fiyatlandırma geçerli olacaktır.  
 
-4. Hesabınız oluşturulduktan sonra indirme yönergelerini içeren bir e-posta gönderildiğini içeren bir bildirim alırsınız.  (Gelen kutunuzda e-posta görmüyorsanız istenmeyen posta veya istenmeyen posta klasörlerinizi denetlemeyi unutmayın.)
+4. Hesabınızı oluşturduktan sonra, indirme yönergelerine sahip bir e-posta gönderildiğini belirten bir bildirim görürsünüz.  (E-postayı gelen kutunuzda görmüyorsanız, istenmeyen posta veya istenmeyen posta klasörlerinizi denetlemeyi unutmayın.)
 
-5. E-postayı açın ve **Etkinleştirme Kodunu panoya** kopyalayın.
+5. E-postayı açın ve **etkinleştirme kodunu** panonuza kopyalayın.
 
 6. İşletim sisteminize karşılık gelen bağlantıya tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Parasoft Avantajı Hoş Geldiniz E-postası](_img/vs-parasoft/vs-parasoft-email.png "İşletim sisteminize uygun indirme bağlantısını seçin.")
+   > ![Parasoft avantajı hoş geldiniz e-postası](_img/vs-parasoft/vs-parasoft-email.png "İşletim sisteminizle eşleşen indirme bağlantısını seçin.")
 
-7. Hangi tarayıcıyı kullandığınıza bağlı olarak, yükleyiciyi çalıştırma fırsatı sağlayan farklı iletişim kutularıyla karşınız olabilir.  Örneğin Internet Explorer, en son indirmelerin listesini ve en parasoft_soavirt_9.10.2_win32_x86_64.exe listesini bulabilirsiniz. Yükleyiciyi **başlatmak** için Çalıştır'a tıklayın.
+7. Kullandığınız tarayıcıya bağlı olarak, yükleyiciyi çalıştırma fırsatını sağlayan farklı iletişim kutuları görebilirsiniz.  Örneğin, Internet Explorer 'da, en üstte listelenen parasoft_soavirt_9.10.2_win32_x86_64.exe son karşıdan yüklemelerin bir listesini görürsünüz. Yükleyiciyi başlatmak için **Çalıştır** ' a tıklayın.
 
-8. Kullanıcı Hesabı Denetimi iletişim kutusu açıldığında Evet'e **tıklayın.**
+8. Kullanıcı hesabı denetimi iletişim kutusu açıldığında **Evet**' e tıklayın.
 
-9. İstediğiniz dili seçin ve Tamam'a **tıklayın.**
+9. İstediğiniz dili seçin ve **Tamam**' ı tıklatın.
 
-10. Parasoft SOAtest & Sanallaştır Kurulum Sihirbazı başlar.  **İleri**’ye tıklayın.
+10. Parasoft SOAtest & Sanallaşmayı ayarla Sihirbazı başlatılır.  **İleri**’ye tıklayın.
     > [!div class="mx-imgBorder"]
-    > ![Parasoft Avantajı Yükleme Başlangıcı](_img/vs-parasoft/vs-parasoft-start-install.png "Parasoft SOAtest ve Virtualize'ı yüklemeye başlamak için '&'a tıklayın.")
+    > ![Parasoft avantajı yükleme başlangıcı](_img/vs-parasoft/vs-parasoft-start-install.png "Parasoft SOAtest & Sanallaşmayı yüklemeye başlamak için ' Ileri ' seçeneğine tıklayın.")
 
-11. Sözleşmeyi **kabul ediyorum'a ve** ardından Sonraki'ye **tıklayın.**
+11. **Sözleşmeyi kabul ediyorum**' a tıklayın ve ardından **İleri**' ye tıklayın.
 
-12. Dosyaları yüklemek istediğiniz yeri seçin ve Ardından'ya **tıklayın.**
+12. Dosyaları yüklemek istediğiniz yeri seçin ve **İleri**' ye tıklayın.
 
-13. Daha sonra, hangi bileşenlerin yüklerini seçebilirsiniz veya bunların hepsini yükleyebilirsiniz (varsayılan).  Seçimlerinizi yapın ve Sonraki 'ye **tıklayın.**
+13. Sonra, yüklenecek bileşenleri seçebilir veya tümünü yükleyebilirsiniz (varsayılan).  Seçimlerinizi yapın ve **İleri**' ye tıklayın.
 
-14. Uygulamanın kısayolunu yüklemek istediğiniz yeri belirtin ve Ardından'ya **tıklayın.**
+14. Uygulamanın kısayolunun nereye yükleneceğini seçin ve **İleri**' ye tıklayın.
 
-15. HTTPS sitelerinde belirli işlev testleri için SOAtest Web Kök Sertifika Yetkilisi sertifikası gereklidir.  Kök CA sertifikasının yük isteyip olmadığını seçin ve Ardından'ya **tıklayın.**
+15. SOAtest Web kök sertifika yetkilisi sertifikası, HTTPS sitelerindeki belirli işlevsel testler için gereklidir.  Kök CA sertifikasını yüklemeyi seçip **İleri**' ye tıklayın.
     > [!NOTE]
-    > Parasoft, sertifikayı yüklemenizi kesinlikle önermektedir.
+    > Parasoft, sertifikayı yüklemeyi seçmenizi önerir.
 
-16. Yükleme sırasında masaüstü ve hızlı başlatma simgelerinin oluşturulacak olup olmadığını seçin ve Ardından'ya **tıklayın.**
+16. Yükleme sırasında Masaüstü ve hızlı başlatma simgelerinin oluşturulmasını isteyip istemediğinizi seçin ve **İleri**' ye tıklayın.
 
-17. Seçtiğiniz seçenekleri onaylayın ve yazılımı yüklemeye başlamak **için Yükle'ye** tıklayın.
+17. Seçtiğiniz seçenekleri onaylayın ve yazılımı yüklemeye başlamak için **yükleme** ' ye tıklayın.
 
-18. Kurulum tamamlandığında Son'a **tıklayın.** Artık Parasoft Virtualize/SOAtest Professional Desktop avantajınızı kullanmaya başlayabilirsiniz!
+18. Kurulum tamamlandığında **son**' a tıklayın. artık parasoft virtualınitialize/soatest Professional masaüstü avantajınızı kullanmaya başlamaya hazırsınız!
 
-## <a name="eligibility"></a>Uygunluk
+## <a name="eligibility"></a>Önceliği
 
-| Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
+| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, Perakende, seçili NFR<sup>1</sup> | 6 ay       |  Yes       |
-| Visual Studio Enterprise aboneliği GitHub Enterprise | VL | 6 ay       |  Yes       |
-| Visual Studio Professional (Standart) | VL, Azure, Perakende                                       | Kullanılamaz                                                           |NA         |
-| Visual Studio Professional aboneliği GitHub Enterprise | VL                                      | Kullanılamaz                                                           |NA         |
-| Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | Kullanılamaz                                                           |NA         |
-| MSDN Platformları (Standart)                                          | VL, Perakende                                              | Kullanılamaz                                                           |NA         |
+| Visual Studio Enterprise (standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Yes       |
+| GitHub Enterprise aboneliği Visual Studio Enterprise | VL | 6 ay       |  Yes       |
+| Visual Studio Professional (standart) | VL, Azure, perakende                                       | Kullanılamaz                                                           |NA         |
+| GitHub Enterprise aboneliği Visual Studio Professional | VL                                      | Kullanılamaz                                                           |NA         |
+| Visual Studio Test Professional (standart)                         | VL, perakende                                              | Kullanılamaz                                                           |NA         |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                                           |NA         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 ||
 
-<sup>1</sup>*Şunları içerir: Microsoft İş Ortağı Ağı (Enterprise). Dışlar: Resale (NFR), Visual Studio Industry Partner (VSIP), FTE, MCT Software & Services Developer, BizSpark, Imagine, Most Valuable Professional (MVP), Regional Director (RD) için değil.  MCT Software & Services, NFR Basic*  
+<sup>1</sup>*şunları içerir: Microsoft iş ortağı ağı (Enterprise). hariç tutar: satılamaz (nfr), Visual Studio sektör ortağı (vsıp), fte, mct Software & Services geliştirici, BizSpark, Imagine, en değerli Professional (MVP), bölgesel yönetmen (RD).  MCT Software & Hizmetleri, NFR temel*  
 
 > [!NOTE]
-> Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
+> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)Visual Studio satın alma konusunda farklı seçenekleri araştırmak için yeni müşterilerin ' e gitmesi önerilir.
 
 ## <a name="support-resources"></a>Destek kaynakları
 - Parasoft ürünleriyle ilgili yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
-  - Teknik Destek:  https://www.parasoft.com/support/
+  - Teknik destek:  https://www.parasoft.com/support/
   - Parasoft Kaynak Merkezi:  https://www.parasoft.com/resources/
-- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için [abonelikler Visual Studio ile iletişim kurun.](https://my.visualstudio.com/gethelp)
-- IDE, Azure DevOps Services veya Visual Studio ilgili bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Visual Studio abonelikleriyle ilgili satış, abonelik, hesap ve faturalandırma konusunda yardım için, [Visual Studio abonelik desteğiyle](https://my.visualstudio.com/gethelp)iletişim kurun.
+- Visual Studio ıde, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -101,4 +101,4 @@ Daha önce ve daha sık test.  Kullanılamayan gelişen uygulamaların ve sistem
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Azure DevTest bireysel kredinizi etkinleştirerek kendi geliştirme [korumalı alanınızı kullanın.](vs-azure.md)
+[Azure DevTest bireysel kredilerinizi](/azure/devtest/offer/quickstart-individual-credit)etkinleştirerek kendi geliştirme korumalı ağınızın avantajlarından yararlanın.

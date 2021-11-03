@@ -7,12 +7,12 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 10/18/2021
 ms.topic: conceptual
 description: Visual Studio aboneliğiniz aracılığıyla Microsoft Windows sanal masaüstünden nasıl yararlanalabileceğinizi öğrenin
-ms.openlocfilehash: f413efe09ad3466fe3341602a7637faba6d2aa33
-ms.sourcegitcommit: 6c847aedf0f943e253a4c2f0e4b516b953168bc7
+ms.openlocfilehash: 9202de0d906621a70dd1171facfc6dcb1cda87d0
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "130152169"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127058"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>aboneliklerde sanal masaüstü Windows erişim 
 Visual Studio aboneler artık Microsoft Windows sanal masaüstü hizmetleri için Azure geliştirme ve test kredilerini kullanabilir.  
@@ -29,9 +29,9 @@ Azure 'da Windows sanal masaüstü çalıştırdığınızda şunları yapabilir
 
 ## <a name="use-windows-virtual-desktop-with-azure"></a>Azure ile Windows sanal masaüstü 'nü kullanma 
 Visual Studio aboneler artık Windows sanal masaüstü hizmetleri için ödeme yapmak üzere Azure aboneliklerini kullanmanın birkaç yolu vardır:
-- [Azure DevTest bireysel kredileri](vs-azure.md).  aboneliklerinin bir parçası olarak Azure devtest bireysel kredileri alan aboneler, bu kredilerin Windows sanal masaüstü hizmetleri için ödeme yapmak için kullanabilir.  Aylık kredi miktarı abonelik düzeyine bağlıdır.
-- [Azure DevTest Kullandıkça Öde abonelikleri](vs-azure-payg.md).  Azure abonelikleri oluşturabilir ve bir ödeme aracı ekleyebilirsiniz ve bu sayede Windows sanal masaüstü kullanımınız için sorunsuz bir şekilde ödeme yapabilirsiniz. 
-- [Azure Kurumsal Anlaşma devtest teklifi](azure-ea-devtest.md).  bu teklifle, Enterprise sözleşmeleri olan aboneler Azure ile Windows sanal masaüstü için indirimli fiyatlandırmadan ödeme yapabilir. 
+- [Azure DevTest bireysel kredileri](/azure/devtest/offer/quickstart-individual-credit).  aboneliklerinin bir parçası olarak Azure devtest bireysel kredileri alan aboneler, bu kredilerin Windows sanal masaüstü hizmetleri için ödeme yapmak için kullanabilir.  Aylık kredi miktarı abonelik düzeyine bağlıdır.
+- [Azure DevTest Kullandıkça Öde abonelikleri](https://azure.microsoft.com/offers/ms-azr-0023p/).  Azure abonelikleri oluşturabilir ve bir ödeme aracı ekleyebilirsiniz ve bu sayede Windows sanal masaüstü kullanımınız için sorunsuz bir şekilde ödeme yapabilirsiniz. 
+- [Azure Kurumsal Anlaşma devtest teklifi](/azure/devtest/offer/quickstart-create-enterprise-devtest-subscriptions).  bu teklifle, Enterprise sözleşmeleri olan aboneler Azure ile Windows sanal masaüstü için indirimli fiyatlandırmadan ödeme yapabilir. 
 
 ## <a name="requirements"></a>Gereksinimler
 Windows sanal masaüstü, vm 'lerin katılacağını Azure Active Directory (Azure AD) gerektirir.  Kullanıcılar bu Azure AD 'nin üyesi olmalıdır.  Azure AD 'yi uygulamak için iki seçenek vardır:

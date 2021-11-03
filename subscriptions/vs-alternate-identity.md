@@ -7,12 +7,12 @@ ms.assetid: 86f2856c-8adf-4085-9962-f4136679e5ed
 ms.date: 10/14/2021
 ms.topic: conceptual
 description: Azure DevOps ve Azure için kullanmak üzere Visual Studio aboneliğiniz için alternatif bir kimlik ekleme
-ms.openlocfilehash: 0b23ec3e6b65beb801660cf47ee88bb0dec7a28d
-ms.sourcegitcommit: a8e6a8c6ca36dc76cdc44d1db934eae43470b5fa
+ms.openlocfilehash: 84ab48b377f55ea772253beb75aed6abee19927e
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130030251"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127110"
 ---
 # <a name="identities-for-visual-studio-subscribers"></a>Visual Studio aboneleri için kimlikler
 Visual Studio aboneliğinizi etkinleştirdiğinizde, etkinleştirme sırasında kullandığınız kimliği (veya oturum açma) Visual Studio abonelikle bağlantılandırtık. bu şekilde, sizi [Visual Studio abone portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs), Azure DevOps ve Azure 'da tanıyabiliriz.
@@ -69,6 +69,6 @@ aboneliğinizi hala tanımıyorsa, [Azure DevOps desteğe](https://azure.microso
 
 ## <a name="next-steps"></a>Sonraki adımlar 
 Azure 'u Azure DevOps veya Visual Studio ıde 'yi kullanma hakkında daha fazla bilgi için şu kaynaklara göz atın:
-- [Azure](vs-azure.md)
+- [Azure DevTest teklifi/Kredileri](/azure/devtest/offer/)
 - [Azure DevOps](vs-azure-devops.md)
 - [Visual Studio](vs-ide-benefit.md)

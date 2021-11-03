@@ -18,12 +18,12 @@ manager: jmartens
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c0913e3d4f54f312e7d706ec6ab9771732e7b85c
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 7f1188df1a13d83964f455738250544149d7044e
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126631587"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127435"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>Bir veri kümesine WPF denetimleri bağlama
 
@@ -47,7 +47,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 - Visual Studio
 
-- çalışan bir SQL Server veya SQL Server Express, kendisine eklenmiş olan AdventureWorks Light (AdventureWorksLT) örnek veritabanının bulunduğu bir örneğe erişim. AdventureWorksLT veritabanını [CodePlex Arşivi](https://archive.codeplex.com/?p=awlt2008dbscript)' nden indirebilirsiniz.
+- çalışan bir SQL Server veya SQL Server Express, kendisine eklenmiş olan AdventureWorks Light (AdventureWorksLT) örnek veritabanının bulunduğu bir örneğe erişim. Veritabanını indirmek için bkz. [AdventureWorks örnek veritabanları](/sql/samples/adventureworks-install-configure?tabs=ssms).
 
 Aşağıdaki kavramların önceki bilgileri de yararlı olmakla kalmaz, izlenecek yolu tamamlamak için gerekli değildir:
 
@@ -223,7 +223,7 @@ Kullanıcıların, düğmeleri kullanarak ürün kayıtları arasında gezinmele
 
 1. Tasarımcıda **Değişiklikleri Kaydet** düğmesine çift tıklayın.
 
-     Visual Studio arka kod dosyasını açar ve olay için yeni `saveButton_Click` bir olay <xref:System.Windows.Controls.Primitives.ButtonBase.Click> işleyicisi oluşturur.
+     Visual Studio arka kapı kod dosyasını açar ve olay için yeni `saveButton_Click` bir olay <xref:System.Windows.Controls.Primitives.ButtonBase.Click> işleyicisi oluşturur.
 
 2. Olay işleyiciye aşağıdaki `saveButton_Click` kodu ekleyin:
 
@@ -245,9 +245,9 @@ Uygulamayı derleyin ve çalıştırın. Ürün kayıtlarını görüntüleye ve
 
     - Veya düğmelerine **>** **<** tıklar ve diğer ürün kayıtları arasında gezinebilirsiniz.
 
-2. Ürün kayıtlarından birsinde Boyut değerini ve **ardından Değişiklikleri** kaydet'e **tıklayın.**
+2. Ürün kayıtlarından birinin Boyut değerini ve ardından **Değişiklikleri** kaydet'e **tıklayın.**
 
-3. Uygulamayı kapatın ve ardından **F5** tuşuna basarak uygulamayı yeniden Visual Studio.
+3. Uygulamayı kapatın ve sonra uygulamanın içinde **F5** tuşuna basarak uygulamayı Visual Studio.
 
 4. Değiştirmiş olduğunu ürün kaydına gidin ve değişikliğin kalıcı olduğunu doğrulayın.
 

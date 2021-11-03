@@ -7,18 +7,18 @@ ms.assetid: 34eaceda-f5db-41d6-bc23-ecf55fe1768e
 ms.date: 10/13/2021
 ms.topic: conceptual
 description: Yöneticiniz aboneliğinizi kaldırırsa ne olacağını Visual Studio öğrenin.
-ms.openlocfilehash: 731992def5e44aebb07d95d26b4a3b40e585c166
-ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
+ms.openlocfilehash: ccf02e271ed0f8a125cb2cb5b4f99497e8b37ad3
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "130010723"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127292"
 ---
 # <a name="what-happens-when-an-admin-removes-my-subscription"></a>Yönetici aboneliğimi kaldırsa ne olur?
 Visual Studio aboneliğiniz iş veya okul kuruluşta bir yönetici tarafından atanmışsa, bu aboneliği bir noktada kaldırabilirler.  Bunun nedenleri iş rollerinde veya kuruluş satın alma planlarında yapılan değişiklikleri içerebilir.  Bu makalede, bir yönetici aboneliğinizi kaldırırsa neler beklediğiniz açıklanmıştır.  
 
 > [!TIP]
-> Yöneticiniz aboneliğinizi kaldırırsa, size farklı bir abonelik yapmayı planlıyor olabilir.  Aboneliğinizin kaldırıldığına bir bildirim alırsanız, başka bir aboneliğin kullanılabilir olup olduğunu görmek için yöneticinize ulaşmanız iyi olabilir. Abone [portalını ziyaret](https://my.visualstudio.com) edin ve sağ **üstte Yöneticime** başvur düğmesine tıklayın. 
+> Yöneticiniz aboneliğinizi kaldırırsa, size farklı bir abonelik yapmayı planlıyor olabilir.  Aboneliğinizin kaldırıldığına ilgili bir bildirim alırsanız, başka bir aboneliğin kullanılabilir olup olduğunu görmek için yöneticinize ulaşmanız iyi olabilir. Abone [portalını ziyaret](https://my.visualstudio.com) edin ve sağ **üstte Yöneticime** başvur düğmesine tıklayın. 
 
 ## <a name="how-do-my-benefits-change"></a>Avantajlarım nasıl değişiyor?
 Belirli bir avantaj için göreceğiniz değişiklikler, avantajın kendisine bağlıdır.  Bazı örneklere göz atacak ve Azure varlıklarınız gibi şeylere erişiminiz olduğundan emin olmak için atılması gereken adımları ele aacağız. 
@@ -30,8 +30,8 @@ Visual Studio IDE lisansı, size atanan aboneliğe bağlıdır.  Aboneliğiniz k
 Aboneliğiniz kaldırıldığı zaman artık bireysel Azure kredileri tahakkuk etmeyebilirsiniz.  Zaten tahakkuk eden krediler 30 gün boyunca kullanılabilir durumda kalır.  Bu noktada, varlıklarınız artık kullanılamaz. 
 
 Varlıklarınızı kaybetmemek için aboneliğiniz kaldırılırsa lütfen aşağıdakilerden birini gerçekleştirin:
-- Aboneliği, her zaman öde aboneliğine dönüştürebilirsiniz.  Ayrıntılar için [Azure DevTest-As-You-Go abonelikleri makalemizi ziyaret edin.](vs-azure-payg.md)  Bu aboneliğe kredi kartı gibi bir ödeme aracı eklemeniz gerekir. 
-- Varsa varlıklarınızı başka bir Azure aboneliğine taşıma.  Örneğin, farklı bir azure aboneliğinin parçası olarak bir Azure aboneliğiniz Visual Studio olabilir.  Kaynakları [yeni bir aboneliğe taşıma yönergeleri](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription) Azure'ın belgelerinde yer almaktadır.  
+- Aboneliği, git-öde aboneliğine dönüştürebilirsiniz.  Ayrıntılar için [Azure DevTest-As-You-Go abonelikleri sayfamızı ziyaret edin.](https://azure.microsoft.com/offers/ms-azr-0023p/)  Bu aboneliğe kredi kartı gibi bir ödeme aracı eklemeniz gerekir. 
+- Varsa varlıklarınızı başka bir Azure aboneliğine taşıma.  Örneğin, farklı bir azure aboneliğinin parçası olarak bir Azure aboneliğiniz Visual Studio olabilir.  Kaynakları [yeni bir aboneliğe taşıma yönergeleri](/azure/devtest/offer/how-to-change-directory-tenants-visual-studio-azure) Azure'ın belgelerinde yer almaktadır.  
 
   > [!IMPORTANT]
   > Mevcut Azure varlıklarınızı kaybetmemek için Azure varlıklarınızı başka bir Azure aboneliğine taşımanız veya mevcut Azure aboneliğini, mevcut Azure aboneliğinizi olduğu gibi öde olarak değiştirmeniz önemlidir. 
@@ -49,8 +49,8 @@ Aboneliğin kaldırılmasının etkileri farklılık gösterir.
 - Daha önce etkinleştirilmeen avantajlar: Aboneliğinizi kaldıran ek avantajları etkinleştirme olanağını kaybedersiniz.  
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Abonelikler için satış, abonelikler, hesaplar ve faturalama konusunda yardım Visual Studio abonelik [desteği için Visual Studio iletişim kurun.](https://my.visualstudio.com/gethelp)
-- IDE, Visual Studio veya diğer Azure DevOps ürünler veya hizmetler hakkında Visual Studio bir soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için destek [Visual Studio ile iletişime geçin.](https://my.visualstudio.com/gethelp)
+- IDE, Visual Studio veya diğer Azure DevOps ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -59,5 +59,5 @@ Aboneliğin kaldırılmasının etkileri farklılık gösterir.
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Azure DevOps [öğrenin](https://azure.microsoft.com/services/devops/)
+- Azure DevOps hakkında [bilgi](https://azure.microsoft.com/services/devops/)
 - Sürüme [Visual Studio IDE özellikleri hakkında bilgi alın](https://visualstudio.microsoft.com/vs/compare/)

@@ -58,12 +58,8 @@
   href: vs-ide-benefit.md
 - name: Azure avantajları
   items:
-    - name: Azure DevTest bireysel kredisi
-      href: vs-azure.md
-    - name: Azure DevTest Kullandıkça Öde
-      href: vs-azure-payg.md
-    - name: Azure EA Geliştirme ve Test
-      href: azure-ea-devtest.md
+    - name: Azure DevTest teklifi
+      href: /azure/devtest/offer/
     - name: Azure DevOps
       href: vs-azure-devops.md
 - name: Diğer avantajlar

@@ -1,8 +1,7 @@
 ---
 title: Düzenleyici yazı tiplerini ve renklerini değiştirme
 description: Varsayılan yazı tipi yüzdesini değiştirme, yazı tipi boyutunu ayarlama ve kod düzenleyicisinde çeşitli metin görüntüleme öğeleri için ön plan ve arka plan renklerini değiştirme hakkında bilgi edinebilirsiniz.
-ms.custom: SEO-VS-2020
-ms.date: 06/01/2020
+ms.date: 10/31/2021
 ms.topic: how-to
 helpviewer_keywords:
 - editors, fonts
@@ -17,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: edd93e4326fe44f1447e589dbfd303e97b775cb8
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 6663b44ce89e3a47ae55f97f740bc8c2092f1c2d
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122117351"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127669"
 ---
 # <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>Nasıl yapabilirsiniz: Düzenleyicinin yazı tiplerini ve renklerini Visual Studio
 
@@ -39,11 +38,32 @@ Varsayılan yazı tipi yüzdesini değiştirebilir, yazı tipi boyutunu ayarlaya
 
 ## <a name="change-the-default-font-face-size-and-colors"></a>Varsayılan yazı tipi yüzünü, boyutunu ve renklerini değiştirme
 
+::: moniker range=">=vs-2022"
+
 1. Araçlar **menüsünden** **Seçenekler'i** seçin. Ortam **altında Yazı** Tipleri ve **Renkler'i seçin.**
 
 1. Için **ayarları göster'de** Metin **Düzenleyici'yi seçin.**
 
-   ![Düzenleyicide yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü](../../ide/media/fonts-colors-text-editor.png "Düzenleyicide yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü")
+   ![Düzenleyicide yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü](../../ide/media/vs-2022/fonts-colors-text-editor.png "Düzenleyicide yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü")
+
+1. Yazı tipi **ve** Boyut **seçeneklerini** değiştirerek tüm düzenleyicilerde tüm metin öğeleri için yazı tipi yüz ve boyutunu değiştirebilirsiniz.
+
+1. Öğeleri görüntüle'de **uygun öğeyi seçin** ve ardından Öğe ön plan ve Öğe arka **plan** **seçeneklerini** değiştirebilirsiniz.
+
+    > [!TIP]
+    > Varsayılan **ayarlara sıfırlamak** için Varsayılanları Kullan'a tıklayın.
+
+1. **Tamam**’ı seçin.
+
+::: moniker-end
+
+::: moniker range="<=vs-2019"
+
+1. Araçlar **menüsünden** **Seçenekler'i** seçin. Ortam **altında Yazı** Tipleri ve **Renkler'i seçin.**
+
+1. Için **ayarları göster'de** Metin **Düzenleyici'yi seçin.**
+
+   ![Düzenleyicide yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü](../../ide/media/fonts-colors-text-editor.png "Düzenleyicide yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü.")
 
 1. Yazı tipi **ve** Boyut **seçeneklerini** değiştirerek tüm düzenleyicilerde tüm metin öğeleri için yazı tipi yüz ve boyutunu değiştirebilirsiniz.
 
@@ -53,6 +73,8 @@ Varsayılan yazı tipi yüzdesini değiştirebilir, yazı tipi boyutunu ayarlaya
     > Varsayılan **ayarlara sıfırlamak** için Varsayılanları Kullan'a tıklayın.
 
 1. **Tamam**'a tıklayın.
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -1,7 +1,7 @@
 ---
 title: Müşteri Deneyimi Geliştirme Programı
-description: Visual Studio gizlilik ayarlarını yönetmeyi öğrenin ve sistem tarafından oluşturulan günlükler, toplanan veri türleri ve sorunların giderilmesi ve ürün kalitesini geliştirmek için nasıl kullanıldığı Visual Studio hakkında bilgi edinin.
-ms.date: 10/18/2021
+description: Visual Studio'de gizlilik ayarlarını yönetmeyi öğrenin ve Visual Studio sistem tarafından oluşturulan günlükler, toplanan veri türleri ve sorunları düzeltmek ve ürün kalitesini geliştirmek için nasıl kullanıldıklarını öğrenin.
+ms.date: 10/28/2021
 ms.topic: conceptual
 author: anandmeg
 ms.author: meghaanand
@@ -9,85 +9,109 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d2148ee4629e8d43edf60ab855dfe0d38eabae5
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
+ms.openlocfilehash: b5f8991deec8543cd0ce6bf1d134318996bdfc22
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130211473"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127642"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Visual Studio Müşteri Deneyimini Geliştirme Programı
 
-Visual Studio Müşteri Deneyimini Geliştirme Programı (vsceıp), Microsoft 'un zaman içinde Visual Studio iyileştirilmesine yardımcı olmak için tasarlanmıştır. bu program hatalar, bilgisayar donanımı ve kişilerin bilgisayardaki görevlerinde kullanıcıları kesintiye uğramadan Visual Studio nasıl kullandıkları [hakkında bilgi toplar](../ide/visual-studio-experience-improvement-program.md#types-of-collected-data). Toplanan bilgiler Microsoft 'un hangi özellikleri iyileştirebileceğinizi belirlemesine yardımcı olur. Bu belgede, VSCEıP 'i [kabul etme veya devre dışı](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) bırakma konuları ele alınmaktadır ve topladığımız veri türleri ve bunu nasıl kullanıyoruz hakkında bazı bilgiler sağlanmaktadır. Uzantı yazarlarının kişisel veya hassas bilgilerin yanlışlıkla açıklanmasının nasıl önleneceğini gösteren ipuçları da sağlar.
+Bu Visual Studio Müşteri Deneyimini Geliştirme Programı (VSCEIP), Microsoft'un zaman içinde Visual Studio yardımcı olmak için tasarlanmıştır. Bu [program, hatalara,](../ide/visual-studio-experience-improvement-program.md#types-of-collected-data)bilgisayar donanımına ve kullanıcıların bilgisayar Visual Studio kesintiye uğratmadan nasıl kullanımları hakkında bilgi toplar. Toplanan bilgiler, Microsoft'un hangi özellikleri geliştirmesi için yardımcı olduğunu belirlemeye yardımcı olur. Bu belge VSCEIP'i [nasıl](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) kabul etmek veya devre dışı bırakmayı kapsar ve topladığımız veri türleri ve bunları nasıl kullanabileceğimiz hakkında bazı bilgiler sağlar. Ayrıca, uzantı yazarlarının kişisel veya hassas bilgilerin yanlışlıkla açıklanmasından nasıl kaçınılması konusunda ipuçları sağlar.
 
-## <a name="opt-out-of-diagnostic-data-collection"></a>Tanılama veri toplamayı geri çevirme
-topladığımız verilerin amacı ve erişim ve bekletme kısıtlamaları verildiğinde, Visual Studio ve Windows için varsayılan gizlilik ayarlarını kullanmanızı öneririz. ancak, Visual Studio deneyimi geliştirme programını [devre dışı](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) bırakabilirsiniz. Bunu devre dışı bırakırsanız, **isteğe bağlı** tanılama veri toplamayı devre dışı olursunuz. Visual Studio güvenli, güncel ve beklendiği gibi gerçekleştirerek emin olmak için bazı tanılama verileri koleksiyonu **gerekir** . Gerekli tanılama veri toplama, VSCEıP 'i devre dışı bırakmak için seçiminizden etkilenmeyecektir.
+## <a name="opt-out-of-diagnostic-data-collection"></a>Tanılama verileri toplamayı geri almayı geri bırakma
+Topladığımız verilerin amacı ve erişim ve elde tutma kısıtlamaları nedeniyle, veri koruma ve saklama için varsayılan gizlilik ayarlarını Visual Studio Windows. Bununla birlikte, [Visual Studio](../ide/visual-studio-experience-improvement-program.md#opt-in-or-out) Geliştirme Programı'Visual Studio geridildi. Bu seçeneği devre dışı bırakmanız, isteğe bağlı tanılama verileri **toplamayı** geri kabul etmek değildir. Verilerin güvenli, güncel **ve** beklendiği gibi Visual Studio emin olmak için bazı tanılama verileri toplaması gerekir. Gerekli tanılama verileri toplama, VSCEIP'yi geri almayı geri almak sizin seçiminiz tarafından etkilenmez.
 
 [!INCLUDE [gdpr-hybrid-note](../misc/includes/gdpr-hybrid-note.md)]
 > [!NOTE]
-> VSCEıP telemetri kabul etme veya çıkış ayarları, Visual Studio ' bir sorun bildir ' için uygulanmaz. Bir sorun günlüğü raporlarken, yalnızca ' Gönder ' seçeneğine tıklayarak izin sağladığınızda Microsoft 'a gönderilir. Günlükleri ' bir sorun bildir ' e göndermeden önce yönetmek istiyorsanız lütfen daha fazla ayrıntı için [geri bildirim veri gizliliği](./developer-community-privacy.md) ' ne bakın.
+> VSCEIP telemetri kabul veya devre dışı bırakma ayarları, uygulamanın 'Sorun Bildir' Visual Studio. Sorun günlüklerini rapor edince toplanır ve yalnızca 'Gönder' seçeneğine tıklayarak izin sağlarken Microsoft'a gönderilir. 'Sorun Bildirin' durumuna göndermeden önce günlükleri yönetmekle ilgileniyorsanız daha fazla ayrıntı için lütfen [Geri Bildirim Veri Gizliliği'ne](./developer-community-privacy.md) bakın.
 
-### <a name="opt-in-or-out"></a>Kabul etme veya kapatma
+### <a name="opt-in-or-out"></a>Kabul veya devre dışı bırakma
 
-VSCEıP varsayılan olarak açıktır. Bu yönergeleri izleyerek devre dışı bırakabilirsiniz veya tekrar tekrar açabilirsiniz:
-
-1. Visual Studio, **yardım**  >  **geri bildirimi gönder**' i ve sonra **Ayarlar**' ı seçin.
-
-   **Visual Studio deneyimi geliştirme programı** iletişim kutusu açılır.
-
-1. Devre dışı bırakmak için **Hayır, katılmak istemiyorum**' u seçin ve ardından **Tamam**' ı seçin. Kabul etmek için **Evet, katılmak istiyorum**' u seçin ve ardından **Tamam**' ı seçin.
-
-   ![Visual Studio Deneyim geliştirme programı iletişim kutusu](media/experience-improvement-program.png)
-
-#### <a name="registry-settings"></a>Kayıt Defteri ayarları
-
-[Visual Studio için derleme araçlarını](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)yüklerseniz, vsceıp 'yi yapılandırmak için kayıt defterini güncelleştirmeniz gerekir. Enterprise müşteriler, kayıt defteri tabanlı bir ilke ayarlayarak vsceıp 'i kabul etmek veya kapatmak için bir grup ilkesi oluşturabilir.
-
-İlgili kayıt defteri anahtarı ve ayarları aşağıdaki gibidir:
+VSCEIP varsayılan olarak açıktır. Aşağıdaki yönergeleri izleyerek bu sayfayı kapatarak veya yeniden açarak yeniden açamazsınız:
 
 ::: moniker range="vs-2017"
 
-- 64 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM**
-- 32 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM**
-- Grup ilkesi etkinleştirildiğinde anahtar = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
+1. Bu Visual Studio Geri Bildirim **Gönder'> Yardım'ı seçin** ve sonra da **Ayarlar.**
+
+   Visual Studio **Deneyimi Geliştirme Programı** iletişim kutusu açılır.
+
+1. Geri almak için **Hayır, Katılmak istiyorum'ı ve ardından** Tamam'ı **seçin.** Kabul etmek için **Evet, Katılmak istiyorum'ı ve ardından** Tamam'ı **seçin.**
+
+   ![Visual Studio Deneyim Geliştirme Programı iletişim kutusu](media/experience-improvement-program.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- 64 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM**
-- 32 bitlik bir IŞLETIM sisteminde anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM**
-- Grup ilkesi etkinleştirildiğinde anahtar = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
+1. Bu Visual Studio Gizlilik **Gizliliğine Yardım'ı** >  > **Ayarlar.**
+
+   Visual Studio **Deneyimi Geliştirme Programı** iletişim kutusu açılır.
+
+1. Geri almak için **Hayır, Katılmak istiyorum'ı ve ardından** Tamam'ı **seçin.** Kabul etmek için **Evet, Katılmak istiyorum (Önerilen)** seçeneğini ve ardından Tamam'ı **seçin.**
+
+   ![Visual Studio Deneyim Geliştirme Programı iletişim kutusu](media/vs-2022/experience-improvement-program.png)
 
 ::: moniker-end
 
-Entry = **OptIn**
+#### <a name="registry-settings"></a>Kayıt Defteri ayarları
+
+Visual Studio için [Derleme Araçları'Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)VSCEIP'yi yapılandırmak için kayıt defterini güncelleştirmeniz gerekir. Enterprise, kayıt defteri tabanlı bir ilke ayarerek VSCEIP'i kabul etmek veya devre dışı bırakmak için bir grup ilkesi yapılandırabilirsiniz.
+
+İlgili kayıt defteri anahtarı ve ayarları aşağıdaki gibidir:
+
+::: moniker range="vs-2017"
+
+- 64 bit işletim sistemi üzerinde Anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM**
+- 32 bit işletim sistemi üzerinde Anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM**
+- Bu grup ilkesi etkinleştirildiğinde Key = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+- 64 bit işletim sistemi üzerinde Anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM**
+- 32 bit işletim sistemi üzerinde Anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM**
+- Bu grup ilkesi etkinleştirildiğinde Key = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
+
+::: moniker-end
+
+::: moniker range=">=vs-2022"
+
+- 64 bit işletim sistemi üzerinde Anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\17.0\SQM**
+- 32 bit işletim sistemi üzerinde Anahtar = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\17.0\SQM**
+- Bu grup ilkesi etkinleştirildiğinde Key = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
+
+::: moniker-end
+
+Giriş = **OptIn**
 
 Değer = (DWORD)
 
-- **0** kabul EDILDI (vsceıp 'i kapatın)
-- **1** kabul EDILDI (vsceıp 'i açın)
+- **0** devre dışı (VSCEIP'yi kapatma)
+- **1** kabul edildi (VSCEIP'yi açma)
 
 > [!CAUTION]
-> Kayıt defterinin hatalı düzenlenmesi sisteminize ciddi şekilde zarar verebilir. Kayıt defterinde değişiklik yapmadan önce, bilgisayarınızdaki tüm değerli verileri yedeklemelisiniz. Ayrıca, el ile yapılan değişiklikler uygulandıktan sonra sorunlarla karşılaşırsanız **bilinen son Iyi yapılandırma** başlatma seçeneğini de kullanabilirsiniz.
+> Kayıt defterinin hatalı düzenlenmesi sisteminize ciddi şekilde zarar verebilir. Kayıt defterinde değişiklik yapmadan önce, bilgisayarınızdaki tüm değerli verileri yedeklemelisiniz. El ile değişiklikler **uygulandıktan sonra sorunlarla karşılaşırsanız** Bilinen Son İyi Yapılandırma başlatma seçeneğini de kullanabilirsiniz.
 
-VSCEıP tarafından toplanan, işlenen veya aktarılan bilgiler hakkında daha fazla bilgi için [Microsoft gizlilik bildirimi](https://privacy.microsoft.com/privacystatement)' ne bakın.
+VSCEIP tarafından toplanan, işlenen veya iletilen bilgiler hakkında daha fazla bilgi için [bkz. Microsoft Gizlilik Bildirimi.](https://privacy.microsoft.com/privacystatement)
 
-## <a name="system-generated-logs-collected-by-visual-studio"></a>Visual Studio tarafından toplanan sistem tarafından oluşturulan Günlükler
+## <a name="system-generated-logs-collected-by-visual-studio"></a>Sistem tarafından oluşturulan günlükler Visual Studio
 
-Visual Studio sorunları gidermeye ve ürünün kalitesini artırmaya yönelik sistem tarafından oluşturulan günlükleri toplar. Topladığımız veri türleri ve bunu nasıl kullandığımızda aşağıda verilmiştir. Uzantı yazarlarının kişisel veya hassas bilgilerin yanlışlıkla açıklanmasının nasıl önleneceğini gösteren ipuçları da sağlar.
+Visual Studio sorunları düzeltmek ve ürünün kalitesini geliştirmek için sistem tarafından oluşturulan günlükleri toplar. Burada, topladığımız veri türleri ve bunları nasıl kullanabileceğimiz hakkında bazı bilgiler veserde veserde yer alan bilgileri içerir. Ayrıca, uzantı yazarlarının kişisel veya hassas bilgilerin yanlışlıkla açıklanmasından nasıl kaçınılması konusunda ipuçları sağlar.
 
 ### <a name="types-of-collected-data"></a>Toplanan veri türleri
 
-Visual Studio kilitlenmeler, uı 'nin yanıt verme süresi ve yüksek CPU veya bellek kullanımı için sistem tarafından oluşturulan günlükleri toplar. Ayrıca ürün yüklemesi veya kullanımı sırasında karşılaşılan hatalarla ilgili bilgiler topladık. Toplanan veriler hataya göre farklılık gösterir ve yığın izlemeleri, bellek dökümleri ve özel durum bilgileri içerebilir:
+Visual Studio kilitlenmeler, kullanıcı arabirimi yanıt vermiyor ve yüksek CPU veya bellek kullanımı için sistem tarafından oluşturulan günlükleri toplar. Ayrıca ürün yüklemesi veya kullanımı sırasında karşılaşılan hatalar hakkında da bilgi toplarız. Toplanan veriler hataya göre değişir ve yığın izlemeleri, bellek dökümleri ve özel durum bilgilerini içerebilir:
 
-- yüksek CPU kullanımı ve yanıt verme için, ilgili Visual Studio iş parçacıklarının yığın izlemeleri toplanır.
+- Yüksek CPU kullanımı ve yanıt vermemeye karşı ilgili iş parçacıklarının Visual Studio izlemeleri toplanır.
 
-- Bazı iş parçacıklarının yığın izlemelerinin, sorunun kök nedenini (örneğin kilitlenmeler, yanıt verme veya yüksek bellek kullanımı) belirlemede yeterli olmadığı durumlarda bir bellek *dökümü* topladık. Döküm, hata oluştuğunda işlemin durumunu temsil eder.
+- Kilitlenme, yanıt vermemeye veya yüksek bellek kullanımı gibi bazı iş parçacıklarının yığın izlemelerinin sorunun kök nedenini belirlemek için yeterli olmayan durumlar için bir bellek dökümünü *toplarız.* Döküm, hatanın meydana geldiği sürecin durumunu temsil eder.
 
-- Beklenmeyen hata koşulları için örneğin, diskteki bir dosyaya yazmaya çalışırken özel durum hakkında bilgi topladık. Bu bilgiler, özel durumun adını, özel durumun oluştuğu iş parçacığının yığın izlemesini, özel durumla ilişkili iletiyi ve belirli özel durumla ilgili diğer bilgileri içerir.
+- Örneğin, diskte bir dosyaya yazmaya çalışırken özel durum gibi beklenmeyen hata koşulları için, özel durum hakkında bilgi topluyoruz. Bilgiler özel durumun adını, özel durumun meydana geldiği iş parçacığının yığın izlemesini, özel durumla ilişkili iletiyi ve belirli özel durumla ilgili diğer bilgileri içerir.
 
-   Aşağıdaki toplanmış veri örneği bir özel durum adı, yığın izlemesi ve özel durum iletisi gösterir:
+   Aşağıdaki toplanan veri örneği bir özel durum adı, yığın izlemesi ve özel durum iletisi gösterir:
 
    ```text
    "Reserved.DataModel.Fault.Exception.TypeString": "System.IO.IOException",
@@ -107,27 +131,27 @@ Visual Studio kilitlenmeler, uı 'nin yanıt verme süresi ve yüksek CPU veya b
 
 ### <a name="how-we-use-system-generated-logs"></a>Sistem tarafından oluşturulan günlükleri kullanma
 
-Hatanın kök nedenini belirleme iş akışı, hatanın türüne ve önem derecesine bağlı olarak değişir.
+Hatanın kök nedenini belirleyen iş akışı, hatanın türüne ve önem derecesine bağlı olarak değişir.
 
 #### <a name="error-classification"></a>Hata sınıflandırması
 
-Günlüklere göre, hatalar sınıflandırılır ve bunların araştırılması için sayılır. Örneğin, "System.IO" öğesini keşfedebiliriz. \_ _Error. Winıoerror "konumundaki" System. ıO. FILESTREAM. Init ", ürünün sürümünde 500 kez oluştu \<x> ve bu sürümde en yüksek düzeyde oluşuma sahip.
+Günlüklere göre hatalar sınıflandırılır ve araştırma önceliklerini belirlemek için sayılır. Örneğin , "System.IO. \_ "System.IO.FileStream.Init" dosyasındaki _Error.WinIOError" ürünün sürümünde 500 kez oluştu ve bu sürümde en yüksek oluşum \<x> oranına sahip.
 
 #### <a name="work-items-for-tracking"></a>İzleme için iş öğeleri
 
-Bireysel olarak iş öğeleri, öncelikli hatalar oluşturulur ve araştırma için mühendislere atanır. Bu iş öğeleri genellikle hata türüyle ilgili sınıflandırma, öncelik ve tanılama bilgilerini içerir. Bu bilgiler, hata için toplanan sistem tarafından oluşturulan günlüklerden türetilir. Örneğin, kilitlenme için bir iş öğesi kilitlenmenin gerçekleştiği yığın izlemesini içerebilir.
+Tek tek, öncelik sırasına göre hataların iş öğeleri oluşturulur ve araştırma için mühendislere atanır. Bu iş öğeleri genellikle hata türüyle ilgili sınıflandırma, öncelik ve tanılama bilgilerini içerir. Bu bilgiler hata için toplanan sistem tarafından oluşturulan günlüklerden türetildi. Örneğin, bir kilitlenme için iş öğesi, kilitlenmenin oluştuğu yığın izlemesini içerebilir.
 
 #### <a name="error-investigation"></a>Hata araştırma
 
-Mühendisler bir hatanın kök nedenini belirlemede bir iş öğesinde bulunan bilgileri kullanır. Bazı durumlarda, iş öğesinde mevcut olandan daha fazla bilgiye gereksinim duyar ve bu durumda, toplanan özgün sistem tarafından oluşturulan günlüğe başvururlar. Örneğin, bir mühendis bir ürün kilitlenmesinin anlaşılması için bir bellek dökümünü inceleyebilir.
+Mühendisler, bir hatanın kök nedenini belirlemek için iş öğesinde bulunan bilgileri kullanır. Bazı durumlarda, iş öğesinde mevcut olandan daha fazla bilgiye ihtiyaç vardır ve bu durumda toplanmış olan sistem tarafından oluşturulan özgün günlüğe başvururlar. Örneğin, bir mühendis bir ürün kilitlenmesi anlamak için bellek dökümlerini inceler.
 
-### <a name="tips-for-extension-authors"></a>uzantı yazarları için İpuçları
+### <a name="tips-for-extension-authors"></a>İpuçları yazarları için İpuçları
 
-Uzantı yazarları, kişisel bilgilerin görünürlüğünü, modülleri, türleri ve yöntemleri adlarında kişisel veya diğer gizli bilgileri kullanmadan sınırlandırmalıdır. Yığında bu kodla bir kilitlenme veya benzer bir hata durumu oluşursa, bu bilgiler sistem tarafından oluşturulan günlüklerin bir parçası olarak toplanır.
+Uzantı yazarları, modülleri, türleri ve yöntemleri adlarında kişisel veya diğer hassas bilgileri kullanmaarak kişisel bilgilerin açıklarını sınırlamalı. Yığında bu kodda kilitlenme veya benzer bir hata koşulu oluşursa, bu bilgiler sistem tarafından oluşturulan günlüklerin bir parçası olarak toplanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md)
+* [Visual Studio ile ilgili bir sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md)
 * [Visual Studio Geliştirici Community](https://developercommunity.visualstudio.com/home)
 * [Microsoft Gizlilik Bildirimi](https://privacy.microsoft.com/privacystatement)
-* [Windows 10 'de tanılama, geri bildirim ve Gizlilik](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy)
+* [Windows 10'de tanılama, geri bildirim ve gizlilik](https://privacy.microsoft.com/windows-10-feedback-diagnostics-and-privacy)

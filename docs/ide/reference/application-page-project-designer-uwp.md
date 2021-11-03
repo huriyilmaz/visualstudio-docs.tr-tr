@@ -1,8 +1,8 @@
 ---
 title: UWP uygulamaları için uygulama özellik sayfası
-description: Evrensel Platform (UWP) projesinin derleme ve paket bilgilerini ve hedef Windows belirtmek için Uygulama sayfasını kullanmayı Windows 10 öğrenin.
+description: Evrensel Platform (UWP) projesinin derleme Windows ve paket bilgilerini ve hedef Windows 10 belirtmek için Uygulama sayfasını kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 01/23/2018
+ms.date: 10/26/2021
 ms.topic: reference
 f1_keywords:
 - AppPackage.Properties.Application
@@ -14,20 +14,20 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - uwp
-ms.openlocfilehash: 298ccbb112d373255feadfad136255bf367df350
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: bb77479468c10e55eb15986caf6c402a80fdeff4
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122094301"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127617"
 ---
 # <a name="application-property-page-uwp-projects"></a>Uygulama özellik sayfası (UWP projeleri)
 
-Evrensel **Platform** (UWP) projesinin derleme ve paket bilgilerini ve hedef Windows sürümünü belirtmek için Uygulama özellik Windows 10 kullanın.
+Evrensel **Platform** (UWP) projesinin derleme ve paket bilgilerini belirtmek ve uygulama ve Windows ve sonrakini hedeflemek için Uygulama Windows 10 sayfasını kullanın.
 
 ![Uygulama özellik sayfası](media/application-page-uwp.png)
 
-Uygulama sayfasına **erişmek** için uygulama sayfasındaki proje **Çözüm Gezgini.** Ardından **menü Project**  >  **Özellikler'i** seçin. Özellik sayfaları Uygulama **sekmesinde** açılır.
+Uygulama sayfasına **erişmek** için uygulama sayfasındaki proje **Çözüm Gezgini.** Ardından menü **Project**  >  **Özellikler'i** seçin. Özellik sayfaları Uygulama **sekmesinde** açılır.
 
 ## <a name="general-section"></a>Genel bölümü
 
@@ -35,7 +35,7 @@ Uygulama sayfasına **erişmek** için uygulama sayfasındaki proje **Çözüm G
 
 Bu özelle program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.AssemblyName%2A> .
 
-**Varsayılan ad alanı** &mdash; Projeye eklenen dosyalar için temel ad alanını belirtir. Ad alanları hakkında daha fazla bilgi için bkz. [Ad Alanları (C# programlama kılavuzu)](/dotnet/csharp/programming-guide/namespaces/), Ad Alanları [(Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)veya [Ad Alanları (C++)](/cpp/cpp/namespaces-cpp).
+**Varsayılan ad alanı** &mdash; Projeye eklenen dosyalar için temel ad alanını belirtir. Ad alanları hakkında daha fazla bilgi için bkz. Ad Alanları [(C# programlama kılavuzu)](/dotnet/csharp/programming-guide/namespaces/), [Ad Alanları (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces)veya [Ad Alanları (C++)](/cpp/cpp/namespaces-cpp).
 
 Bu özelle program aracılığıyla erişmek için bkz. <xref:VSLangProj.ProjectProperties.RootNamespace%2A> .
 
@@ -45,9 +45,25 @@ Bu özelle program aracılığıyla erişmek için bkz. <xref:VSLangProj.Project
 
 ## <a name="targeting-section"></a>Hedefleme bölümü
 
-Bu bölümdeki açılan listeleri kullanarak uygulamanıza yönelik Windows 10 sürümünü ve en düşük sürümünü ayarlayın. Windows 10'nin en son sürümünü hedeflemeniz ve bir kurumsal uygulama geliştiriyorsanız eski bir en düşük sürümü de desteklemeniz önerilir. Hangi sürümde hangi Windows 10 daha fazla bilgi için [bkz. UWP sürümü seçme.](/windows/uwp/updates-and-versions/choose-a-uwp-version)
+Bu bölümdeki açılan listeleri kullanarak uygulamanıza yönelik Windows 10 sürümünü ve en düşük sürümünü ayarlayın. Windows 10'nin en son sürümünü hedeflemeniz ve bir kurumsal uygulama geliştiriyorsanız eski bir en düşük sürümü de desteklemeniz önerilir. Hangi sürümler ve sonraki Windows 10 hakkında daha fazla bilgi için [bkz. UWP sürümü seçme.](/windows/uwp/updates-and-versions/choose-a-uwp-version)
 
-Platform hedefleme hakkında daha fazla bilgi Visual Studio bkz. [Platform hedefleme.](/visualstudio/productinfo/vs2017-compatibility-vs#platform-targeting)
+::: moniker range="vs-2017"
+
+Platform hedefleme hakkında daha fazla bilgi Visual Studio bkz. [Platform hedefleme.](/visualstudio/releases/2017/vs2017-compatibility-vs#platform-targeting)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Platform hedefleme hakkında daha fazla bilgi Visual Studio bkz. [Platform hedefleme.](/visualstudio/releases/2019/compatibility#platform-targeting)
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+Platform hedefleme hakkında daha fazla bilgi Visual Studio bkz. [Platform hedefleme.](/visualstudio/releases/2022/compatibility#platform-targeting)
+
+::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

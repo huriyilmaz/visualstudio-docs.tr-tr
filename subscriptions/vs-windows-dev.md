@@ -1,72 +1,72 @@
 ---
-title: Windows Visual Studio aboneliklerde geliştirici hesabı avantajı | Microsoft Docs
+title: Windows Visual Studio abonelik | Microsoft Docs
 author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
 ms.date: 10/18/2021
 ms.topic: how-to
-description: Visual Studio aboneliğinize dahil Windows geliştirici hesabı hakkında bilgi edinin.
-ms.openlocfilehash: 2bdd688e0f3b62291d03e4fc6360a39d461fe5de
-ms.sourcegitcommit: 6c847aedf0f943e253a4c2f0e4b516b953168bc7
+description: Windows aboneliğinize dahil olan Visual Studio öğrenin.
+ms.openlocfilehash: e813d20b0e8010191d24c5531989b622fb446922
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "130151847"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127266"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Windows Visual Studio aboneliklerde geliştirici hesabı
-seçili Visual Studio aboneliğine dahil Windows geliştirici hesabınız, Windows deposuna ücretsiz ve ücretli Windows uygulamaları göndermenize olanak tanır.
+Seçilen Windows aboneliğine dahil olan Windows Geliştirici Visual Studio Hesabınız, Windows Mağazası'Windows ücretsiz ve ücretli uygulama göndermenize olanak sağlar.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
-Windows geliştirici hesabınızı kullanmak için, bir hesap ayarlamanız veya mevcut bir hesabı kullanarak oturum açmanız gerekir.
+Windows Geliştirici Hesabı'nızı kullanmak için bir hesap ayarlamanız veya mevcut bir hesabı kullanarak oturum açmanız gerekir.
 
 > [!IMPORTANT]
-> Windows geliştirici hesabının oluşturulması için bir Microsoft hesabı (MSA) kullanılması gerekir.  Azure Active Directory hesaplarının kullanımı desteklenmez.  
+> Windows Geliştirici hesabı oluşturmak için Bir Microsoft Hesabı (MSA) kullanmak gerekir.  Azure Active Directory hesaplarının kullanımı desteklenmiyor.  
 
-Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Örneğin, Google Chrome 'da yeni bir "ınbilito" penceresi oluşturun.  Internet Explorer 'da yeni bir "InPrivate" penceresi oluşturun.
+Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Örneğin, Google Chrome'da yeni bir "gizli" pencere oluşturun.  Bu Internet Explorer yeni bir "InPrivate" penceresi oluşturun.
 
 1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
-2. araçlar bölümünde Windows geliştirici hesabı kutucuğunu bulun ve avantaj kutucuğunun altındaki **kodu al** bağlantısına tıklayın.  Kodu panonuza kopyalayın ve ardından **Etkinleştir**' e tıklayın.
+2. Araçlar Windows Geliştirici Hesabı kutucuğunu bulun ve avantaj  kutucuğunun altındaki Kod Al bağlantısına tıklayın.  Kodu panoya kopyalayın ve etkinleştir'e **tıklayın.**
    > [!div class="mx-imgBorder"]
-   > ![Windows Geliştirici avantajı kutucuğu](_img/vs-windows-dev/vs-windows-dev-tile.png "Windows geliştirici hesabı kutucuğunda ' kodu al ' düğmesine tıklayın ve ardından ' etkinleştir ' seçeneğine tıklayın.")
-3. [https://developer.microsoft.com/store/register/](https://developer.microsoft.com/store/register/)Sitesinde kayıt işlemini başlatabilirsiniz.  Devam etmek için **Kaydol** ' a tıklayın.
+   > ![Windows Geliştirici Avantajı Kutucuğu](_img/vs-windows-dev/vs-windows-dev-tile.png "Windows Geliştirici Hesabı kutucuğunun 'Kod Al'a tıklayın ve ardından 'Etkinleştir'e tıklayın.")
+3. Sitede [https://developer.microsoft.com/store/register/](https://developer.microsoft.com/store/register/) kayıt işlemini başlatabilirsiniz.  Devam etmek **için Kaydol'a** tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Windows Geliştirici avantajı kaydı](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png "Hesabınızı oluşturmak için ' kaydolun ' seçeneğine tıklayın.")
-4. Aboneliğinizde oturum açın.  birden çok hesabınız varsa Enterprise aboneliğinizle ilişkili olanı seçin.
-0. E-posta adresinizi girin, tercih ettiğiniz dili seçin ve **Kaydet**' e tıklayın.
-5. Sonraki sayfada, yaşadığınız ülke veya bölgeyi seçin ve ardından **İleri**' ye tıklayın.
-6. Hesap türü olarak **bireysel** ' i seçin.
-7. Yayımcının görünen adını oluşturun.  Bu, müşterilerinizin uygulamalarınız, eklentiler ve hizmetlerinize ilişkin göreceği benzersiz addır.
-8. İletişim bilgilerinizi ve tercih edilen e-posta dilinizi girip **İleri**' ye tıklayın.
-9. Parolanızı doğrulamanız istenebilir.  Girin ve **oturum aç**' a tıklayın.
-10. Kayıt – ödeme sayfasında, daha önce kopyaladığınız kodu promosyon kodu alanına yapıştırın.  Sayfa, *ödeme gerekmediğini* göstermek için güncelleştirilecek.  **İleri**’ye tıklayın.
-11. Hesap bilgilerinizi gözden geçirin, uygulama geliştirici sözleşmesini gözden geçirin ve hüküm ve koşulları kabul edip etmenizin kabul edildiğini göstermek için onay kutusuna tıklayın.  Ardından, **Son**'a tıklayın.
-12. Windows geliştirici hesabınızı kullanmaya başlamak için **panoya git** ' e tıklayın!
+   > ![Windows Geliştirici Avantajı Kaydı](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png "Hesabı oluşturmak için 'Kaydol'a tıklayın.")
+4. Aboneliğiniz için oturum açma.  Birden çok hesabınız varsa, abonelikle ilişkilendirilmiş hesabı Enterprise seçin.
+0. E-posta adresinizi girin, tercih ettiğiniz dili seçin ve Kaydet'e **tıklayın.**
+5. Sonraki sayfada, canlı veya işletmenizin bulunduğu ülkeyi veya bölgeyi seçin ve ardından Sonraki 'ye **tıklayın.**
+6. Hesap **türünüz** olarak Bireysel'i seçin.
+7. Yayımcı görünen adını oluşturun.  Bu, müşterileriniz tarafından uygulamalarınız, eklentileriniz ve hizmetleriniz ile ilişkili olarak göreceği benzersiz addır.
+8. İletişim bilginizi ve tercih edilen e-posta dilini girin ve ardından, Sonraki'ye **tıklayın.**
+9. Parolanızı doğrulamanız istenebilirsiniz.  Bunu girin ve **Oturum'a tıklayın.**
+10. Kayıt – Ödeme sayfasında, daha önce kopyalayıp promosyon kodu alanına yapıştırın.  Sayfa, ödeme gerek olmadığını *gösterecek şekilde güncelleştirmesi gerekir.*  **İleri**’ye tıklayın.
+11. Hesap bilgilerinizi gözden geçirin, Uygulama Geliştiricisi Sözleşmesi gözden geçirin ve hüküm ve koşulları kabul ettiğinize ilişkin onay kutusuna tıklayın.  Ardından, **Son**'a tıklayın.
+12. Panoya **git'e** tıklarsanız Geliştirici Windows kullanmaya başlayabilirsiniz!
 
-## <a name="eligibility"></a>Önceliği
-| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
+## <a name="eligibility"></a>Uygunluk
+| Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Dahil       |  Yes|
-| GitHub Enterprise aboneliği Visual Studio Enterprise   | VL  | Dahil       |  Yes|
-| Visual Studio Professional (standart) | VL, Azure, perakende                                       | Dahil                                                            |Yes|
-| GitHub Enterprise aboneliği Visual Studio Professional | VL                                        | Dahil                                                            |Yes|
-| Visual Studio Test Professional (standart)                         | VL, perakende                                              | Kullanılamaz                                            |  NA|
-| MSDN Platformları (Standart)                                          | VL, perakende                                              |  Kullanılamaz                                            |  NA|
+| Visual Studio Enterprise (Standart)   | VL, Azure, Perakende, seçili NFR<sup>1</sup> | Dahil       |  Yes|
+| Visual Studio Enterprise ile abonelik GitHub Enterprise   | VL  | Dahil       |  Yes|
+| Visual Studio Professional (Standart) | VL, Azure, Perakende                                       | Dahil                                                            |Yes|
+| Visual Studio Professional ile abonelik GitHub Enterprise | VL                                        | Dahil                                                            |Yes|
+| Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | Kullanılamaz                                            |  NA|
+| MSDN Platformları (Standart)                                          | VL, Perakende                                              |  Kullanılamaz                                            |  NA|
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 ||
 
-<sup>1</sup>*şunları içerir: for satım (nfr), fte, Visual Studio sektör ortağı (vsıp), BizSpark, mct Software & Services geliştiricisi, en değerli Professional (MVP), bölgesel yönetmen (RD). dışlar: Microsoft İş Ortağı Ağı (mpn), Imagine, mct Software & Services, nfr Basic.*  
+<sup>1</sup>*Şunları içerir: Resale (NFR), FTE, Visual Studio Industry Partner (VSIP), BizSpark, MCT Software & Services Developer, Most Valuable Professional (MVP), Regional Director (RD). Dışlar: Microsoft İş Ortağı Ağı (MPN), Imagine, MCT Software & Services, NFR Basic.*  
 
 > [!NOTE]
-> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/)Visual Studio satın alma konusunda farklı seçenekleri araştırmak için yeni müşterilerin ' e gitmesi önerilir.
+> Microsoft artık Bulut Abonelikleri'Visual Studio Professional yıllık abonelikler Visual Studio Enterprise yıllık abonelikler sunmaktadır. Mevcut müşterilerin deneyimi ve aboneliklerini yenileme, artırma, azaltma veya iptal etme becerilerinde bir değişiklik olmayacaktır. Yeni müşterilerin satın almak için farklı seçenekleri [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) keşfetmeye gitmeleri Visual Studio.
 
-Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)e-posta adresinize atanan tüm abonelikleri görmek için Bağlan. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla sahip olabilirsiniz.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
+Hangi aboneliği kullanmakta olduğundan emin değil misiniz?  Bağlan [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) e-posta adresinize atanan tüm abonelikleri görmek için adresine tıklayın. Tüm aboneliklerinizi görmüyorsanız, farklı bir e-posta adresine atanmış bir veya daha fazla aboneliğiniz olabilir.  Bu abonelikleri görmek için bu e-posta adresiyle oturum açmanız gerekir.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- Windows geliştirici hesabınızı kullanmakla ilgili yardıma mı ihtiyacınız var?  [Windows Geliştirme Merkezi](https://developer.microsoft.com/windows) [destek](https://developer.microsoft.com/windows/support) kaynaklarına göz atın.
+- Windows Developer hesabınızla ilgili yardıma mı ihtiyacınız var?  Windows Geliştirme Merkezi'da [](https://developer.microsoft.com/windows/support) destek [kaynaklarına göz Windows Geliştirme Merkezi.](https://developer.microsoft.com/windows)
 - [Windows Geliştirme](/windows/)
-- Visual Studio abonelikleriyle ilgili satış, abonelik, hesap ve faturalandırma konusunda yardım için, Visual Studio [Visual Studio abonelikleri desteğiyle](https://my.visualstudio.com/gethelp)iletişim kurun.
-- Visual Studio ıde, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama ile ilgili yardım için Visual Studio [Visual Studio ile iletişim kurun.](https://my.visualstudio.com/gethelp)
+- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -75,7 +75,7 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu harika avantajları etkinleştirdiğinizden emin olun:
+Abonelik aboneliğinizin avantajlarından en iyi şekilde faydalanmanızı Visual Studio olun:
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
-- [Azure DevTest bireysel kredisi](vs-azure.md)
+- [Azure DevTest teklifi/kredileri](/azure/devtest/offer/)

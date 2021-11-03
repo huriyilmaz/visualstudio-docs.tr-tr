@@ -4,54 +4,46 @@
   items:
     - name: Dağıtıma ilk bakış
       href: deploying-applications-services-and-components.md
-    - name: 'Klasör, IIS ya da Azure’a dağıtma'
-      href: deploying-applications-services-and-components-resources.md
+    - name: Yayımlamaya Genel Bakış
+      href: publish-overview.md
 - name: Hızlı Başlangıçlar
   items:
-    - name: Azure App Service'e dağıtma
-      href: quickstart-deploy-to-azure.md
-    - name: Linux için App Service’e Dağıtma
-      href: quickstart-deploy-to-linux.md
-    - name: Web sitesine dağıtma
-      href: quickstart-deploy-to-a-web-site.md
-    - name: Klasöre dağıtma
-      href: quickstart-deploy-to-local-folder.md
+    - name: Web ASP.NET dağıtma
+      href: quickstart-deploy-aspnet-web-app.md
 - name: Öğreticiler
   items:
     - name: .NET
       items:
-        - name: ClickOnce kullanarak .NET Windows uygulaması dağıtma
-          href: quickstart-deploy-using-clickonce-folder.md
-        - name: ClickOnce kullanarak .NET Framework masaüstü uygulaması dağıtma
-          href: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
-        - name: Yükleyici paketi oluşturma (Windows masaüstü)
-          href: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
-        - name: Bir masaüstü uygulamasını Microsoft Store için paketleme >>
-          href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
-        - name: Komut Satırından ClickOnce uygulamalarını derleme
-          href: building-clickonce-applications-from-the-command-line.md
-    - name: ASP.NET
-      items:
-        - name: Azure’a ASP.NET Core uygulaması yayımlama >>
-          href: /aspnet/core/tutorials/publish-to-azure-webapp-using-vs
-        - name: Yayımlama ayarlarını içeri aktarma ve IIS’ye dağıtma
-          href: tutorial-import-publish-settings-iis.md
-        - name: Yayımlama ayarlarını içeri aktarma ve Azure’a dağıtma
-          href: tutorial-import-publish-settings-azure.md
-        - name: Git ile Azure’a sürekli ASP.NET Core dağıtımı >>
-          href: /azure/app-service/deploy-continuous-deployment
+        - name: ASP.NET
+          items:
+            - name: Azure’a ASP.NET Core uygulaması yayımlama >>
+              href: /azure/app-service/quickstart-dotnetcore?tabs=netcore31&pivots=development-environment-vs#publish-your-web-app
+            - name: IIS'den yayımlama ayarlarını al
+              href: tutorial-import-publish-settings-iis.md
+            - name: Azure'dan yayımlama ayarlarını edinin
+              href: tutorial-import-publish-settings-azure.md
+            - name: Git ile Azure’a sürekli ASP.NET Core dağıtımı >>
+              href: /azure/app-service/deploy-continuous-deployment
+        - name: Masaüstü
+          items:
+            - name: ClickOnce kullanarak .NET Windows uygulaması dağıtma
+              href: quickstart-deploy-using-clickonce-folder.md
+            - name: ClickOnce kullanarak .NET Framework masaüstü uygulaması dağıtma
+              href: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
+            - name: Yükleyici paketi oluşturma (Windows masaüstü)
+              href: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
+            - name: Bir masaüstü uygulamasını Microsoft Store için paketleme >>
+              href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
+            - name: Komut Satırından ClickOnce uygulamalarını derleme
+              href: building-clickonce-applications-from-the-command-line.md
     - name: C++
       items:
         - name: Yükleyici paketi oluşturma
           href: deploying-applications-services-and-components.md#create-an-installer-package-windows-desktop
         - name: Bir masaüstü uygulamasını Microsoft Store için paketleme >>
-          href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
+          href: /windows/msix/desktop/packaging-uwp-apps
         - name: ClickOnce kullanarak C++/CLR uygulaması dağıtma >>
           href: /cpp/windows/clickonce-deployment-for-visual-cpp-applications
-    - name: UWP
-      items:
-        - name: Visual Studio kullanarak UWP uygulaması paketleme >>
-          href: /windows/uwp/packaging/packaging-uwp-apps
     - name: Node.js
       items:
         - name: Linux App Service’e yayımlama >>
@@ -62,9 +54,9 @@
           href: ../python/publishing-python-web-applications-to-azure-from-visual-studio.md
 - name: Nasıl yapılır kılavuzları
   items:
-    - name: GitHub Eylemler CI/CD yayımlama
+    - name: GitHub Eylemler CI/CD Yayımlama
       items:
-        - name: GitHub eylemleri kullanarak Azure 'a dağıtma
+        - name: GitHub Actions kullanarak Azure'a dağıtma
           href: azure-deployment-using-github-actions.md
     - name: ClickOnce güvenliği ve dağıtımı
       items:
@@ -266,6 +258,8 @@
               href: schedules-element-bootstrapper.md
 - name: Başvuru
   items:
+    - name: 'Klasör, IIS ya da Azure’a dağıtma'
+      href: deploying-applications-services-and-components-resources.md
     - name: ClickOnce Başvurusu
       items:
         - name: ClickOnce Başvurusuna Genel Bakış

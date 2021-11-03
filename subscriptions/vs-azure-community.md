@@ -1,21 +1,21 @@
 ---
-title: Visual Studio Aboneliği Community Azure | Microsoft Docs
+title: Visual Studio Aboneliği aboneliğinde Azure Community Desteği | Microsoft Docs
 author: evanwindom
 ms.author: cabuschl
 manager: cabuschl
 ms.assetid: c15f7e18-b280-4902-a60d-2c2598653207
 ms.date: 10/14/2021
 ms.topic: conceptual
-description: Seçili aboneliklere dahil olan Azure Community Desteği avantajı hakkında Visual Studio öğrenin.
-ms.openlocfilehash: db288ec998376a0dfc432dc7893c17eaec203c35
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
+description: Seçili aboneliklere dahil edilen Azure Community Desteği avantajı hakkında Visual Studio öğrenin.
+ms.openlocfilehash: 6204bae1727238853fbc8c3363b1621658469ded
+ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130211655"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "131127097"
 ---
-# <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerde Azure Community Desteği forumu
-Doğrudan Azure hizmetleri aracılığıyla belirli destek forumları içinde Azure ekibinden yardım Community.  Azure Community avantajı, Azure ile ilgili konulara odaklanan bir forum koleksiyonuna erişmeniz için size erişim sağlar.
+# <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Community aboneliklerde Azure Visual Studio Desteği forumu
+Azure destek forumları aracılığıyla doğrudan Azure ekibinden yardım Community.  Azure Community avantajı, Azure ile ilgili konulara odaklanan bir forum koleksiyonuna erişmeniz için size erişim sağlar.
 
 ## <a name="available-topics"></a>Kullanılabilir konular
 
@@ -69,10 +69,10 @@ Azure Community'i kolayca kullanabilirsiniz.
 Azure topluluğu ücretsiz olarak kullanılabilir.  Abonelik gerekmez. 
 
 ## <a name="support-resources"></a>Destek Kaynakları
-- Diğer Azure Community için lütfen Azure Community [Destek sayfasını ziyaret edin.](https://azure.microsoft.com/support/forums/)
+- Diğer Azure Community için lütfen Azure Community Destek [sayfasını ziyaret edin.](https://azure.microsoft.com/support/forums/)
 - [Azure belgeleri.](/azure/)
-- Visual Studio Abonelikleri için satışlar, abonelikler, hesaplar ve faturalama konusunda yardıma mı ihtiyacınız var?  Abonelikler Visual Studio [ile iletişime geçin.](https://aka.ms/vssubscriberhelp)
-- IDE, Visual Studio veya diğer Azure DevOps Services ürünler veya hizmetler hakkında Visual Studio bir soru var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Visual Studio Abonelikleri için satış, abonelikler, hesaplar ve faturalama konusunda yardıma mı ihtiyacınız var?  Abonelikler Visual Studio [ile iletişime geçin.](https://aka.ms/vssubscriberhelp)
+- IDE, Visual Studio veya diğer Azure DevOps Services ürün veya Visual Studio hakkında bir Visual Studio var mı?  Destek [Visual Studio ziyaret edin.](https://visualstudio.microsoft.com/support/)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -81,4 +81,4 @@ Azure topluluğu ücretsiz olarak kullanılabilir.  Abonelik gerekmez.
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Azure DevTest bireysel kredisi Visual Studio çok sayıda abonelik olduğunu biliyor mmusunuz?  Kendi kullanıcılarınızı [etkinleştirmeyi](vs-azure.md) öğrenin.
+Azure DevTest bireysel kredisi Visual Studio çok sayıda abonelik olduğunu biliyor mmusunuz?  Kendi kullanıcılarınızı [etkinleştirmeyi](/azure/devtest/offer/) öğrenin.
