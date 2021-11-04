@@ -1,6 +1,6 @@
 ---
-title: Visual Studio'de Uzaktan Test
-description: Kapsayıcılar, WSL2 veya SSH bağlantıları Visual Studio uzak ortamlardan testleri çalıştırmak için Test Gezgini'nde uzaktan testi kullanmayı öğrenin. Bu konu, yerel kapsayıcılar, WSL2 veya SSH bağlantıları testenvironments.jsuzaktan test yapılandırmayı kapsar.
+title: Visual Studio uzaktan test
+description: Visual Studio Test gezgini 'nde kapsayıcılar, WSL2 veya SSH bağlantıları üzerinden uzak ortamlardan testleri çalıştırmak için uzaktan test etmeyi nasıl kullanacağınızı öğrenin. Bu konu, yerel kapsayıcılar, WSL2 veya SSH bağlantıları için testortamlarını. JSON ile uzaktan testi yapılandırmayı ele alır.
 ms.date: 08/26/2021
 ms.topic: how-to
 author: mikejo5000
@@ -10,27 +10,28 @@ ms.technology: vs-ide-test
 monikerRange: '>= vs-2022'
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ca874c4f1f3fb8942d8a09789000edf0cd7c040
-ms.sourcegitcommit: 3d1143b007bf0ead80bf4cb3867bf89ab0ab5b53
+ms.openlocfilehash: 9e4094864c92ac95f879ff67023ee63c4b5c6c6d
+ms.sourcegitcommit: d3ce2900d838d1fb509df51bda9a9a8b72dfd880
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "123397771"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "131521643"
 ---
-# <a name="remote-testing-experimental-preview"></a>Uzaktan Test (deneysel önizleme)
+# <a name="remote-testing-experimental-preview"></a>Uzaktan test (deneysel Önizleme)
 
-Uzaktan test, geliştiricilerin 2022 Visual Studio ve hata ayıklama testleri için uzak ortamlara bağlanmasına olanak tanır. Bu işlevsellik, farklı işletim sistemleri veya Linux işletim sistemleri gibi birden çok farklı hedef ortamına kod dağıtan platformlar Windows geliştiriciler için yararlıdır. Örneğin, normalde bir geliştiricinin Linux üzerinde çalışan bir testten geri bildirim almak için değişiklikleri CI işlem hattına göndermesi gerekir. Bu özellik sayesinde Test Gezgini'ni uzak bir ortama Visual Studio Linux testlerini çalıştırabilirsiniz.
+uzaktan test, geliştiricilerin çalışan ve hata ayıklama testleri için uzak ortamlara 2022 Visual Studio bağlanmasına olanak sağlar. bu işlevsellik, farklı Windows veya Linux işletim sistemleri gibi birden çok farklı hedef ortama kod dağıtan platformlar arası geliştiriciler için yararlıdır. Örneğin, normalde bir geliştiricinin Linux üzerinde çalışan bir testten geri bildirim almak için değişiklikleri bir CI ardışık düzenine göndermek zorunda olması gerekir. bu özellikle, Test gezginini uzak bir ortama bağlayarak Visual Studio Linux testlerini doğrudan çalıştırabilirsiniz.
 
-Uzaktan testin bu deneysel sürümünü kullanma gereksinimleri:
-* Visual Studio 2022 Güncelleştirme 17.0 Önizleme 3 veya sonraki bir sürümü
-* Yalnızca .NET testlerinde kullanılabilir.
-  * Diğer diller için uzaktan test desteğiyle ilgileniyorsanız lütfen bir [öneri kaydedin](/visualstudio/ide/suggest-a-feature) veya mevcut öneriyi oy kullanın. [C++ uzaktan test desteği.](https://developercommunity.visualstudio.com/t/run-c-unit-tests-on-linux-with-visual-studio/1403357)
-* Şu anda ortamın sağlanmasının büyük bir kısmını kullanıcının belirtimleri bırakmaktadır. Kullanıcının hedef ortamınıza gerekli bağımlılıkları yüklemesi gerekir. Örneğin, testleriniz .NET 5.0'ı hedeflese kapsayıcıda Dockerfile dosyanız aracılığıyla .NET 5.0 yüklü olduğundan emin olun. Testleri uzaktan çalıştırmak ve bulmak için gereken uzak ortama .NET Core yüklemek için bir istem olabilir. 
-* Çıkış Ve Testler bölmesini kullanarak uzak ortama bağlantı durumunu > plan olun. Örneğin, kapsayıcı durdurulmuşsa Çıkış ve Testler bölmesinde > görünür. Tüm senaryoları algılamayabilirsiniz, bu nedenle bağlantının kaybedildi gibi görünüyorsa çıkışınızı denetlemeyi planla. Özellikle, Çıkış bölmesi "Test" olarak ayarlanmasa, iletiyi hemen görenemebilirsiniz. Bağlantı kaybolursa, bağlantıyı yerel ortamınıza geri ayarlamak için Test Gezgini'nde ortam açılır öğesini kullanabilir ve bağlantıyı yeniden başlatacak uzak ortamı yeniden seçin.
+Uzaktan test 'in bu deneysel sürümünü kullanma gereksinimleri:
+* Visual Studio 2022 güncelleştirme 17,0 Preview 3 veya üzeri
+* Yalnızca .NET testleri için kullanılabilir.
+  * Diğer diller için uzaktan test desteğiyle ilgileniyorsanız lütfen [bir öneri](/visualstudio/ide/suggest-a-feature) gönderin veya mevcut bir öneriyi oylayın. [C++ uzaktan sınamasını destekleme](https://developercommunity.visualstudio.com/t/run-c-unit-tests-on-linux-with-visual-studio/1403357).
+* şu anda, uzak ortamda yalnızca Windows, ubuntu ve de, görüntülerini destekliyoruz. 
+* Şu anda ortamın sağlanması, kullanıcının belirtimine ayrılmakta. Kullanıcının hedef ortamınıza gerekli bağımlılıkları yüklemesi gerekir. Örneğin, testleriniz .NET 5,0 ' i hedefliyorsanız, kapsayıcının Dockerfile ile .NET 5,0 yüklendiğinden emin olmanız gerekir. Uzak ortama .NET Core yüklemek için bir istem olabilir. Bu, testleri uzaktan çalıştırmak ve saptamak için gereklidir. 
+* Çıkış > testleri bölmesini kullanarak bağlantı durumunuzu uzak ortama izlemeyi planlayın. Örneğin, kapsayıcı durdurulmuşsa çıktı > testleri bölmesinde bir ileti görüntülenir. Tüm senaryoları algılayamıyoruz, bu nedenle bağlantı kaybedildiği gibi görünüyorsa çıktınızdan emin olun. Özellikle, çıkış bölmesi "test" olarak ayarlanmamışsa iletiyi hemen görmeyebilirsiniz. Bağlantı kaybolursa, bağlantıyı yerel ortamınıza geri ayarlamak için test Gezgini 'ndeki ortam açılır öğesini kullanabilir ve sonra bağlantıyı yeniden başlatmak için uzak ortamı yeniden seçebilirsiniz.
 
 ## <a name="set-up-the-remote-testing-environment"></a>Uzaktan test ortamını ayarlama
 
-Ortamlar, `testenvironments.json` çözümünün kökünde kullanılarak belirtilir. JSON dosya yapısı burada açıklanan şemaya uyar:
+Ortamlar `testenvironments.json` , çözümünüzün kökünde kullanılarak belirtilir. JSON dosya yapısı, burada açıklanan şemayı izler:
 ```json
 {
     "version": "1", // value must be 1
@@ -43,9 +44,9 @@ Ortamlar, `testenvironments.json` çözümünün kökünde kullanılarak belirti
 
 ### <a name="local-container-connections"></a>Yerel kapsayıcı bağlantıları
 
-Yerel olarak çalışan bir kapsayıcıya bağlanmak için yerel makinede [Docker](https://www.docker.com/products/docker-desktop) Desktop'ınız olması gerekir. İsteğe bağlı olarak, [daha iyi performans için WSL2](/windows/wsl/install-win10) tümleştirmeyi etkinleştirin.
+Yerel olarak çalışan bir kapsayıcıya bağlanmak için yerel makinenizde [Docker Desktop](https://www.docker.com/products/docker-desktop) 'a sahip olmanız gerekir. İsteğe bağlı olarak, daha iyi performans için [WSL2 tümleştirmesini etkinleştirin](/windows/wsl/install-win10) .
 
-Dockerfile için, ortamı çözümünün `testEnvironments.json` kökünde belirtilebilir. Burada açıklanan özellikleri kullanır.
+Dockerfile için, ortam `testEnvironments.json` çözümünüzün kökünde içinde belirtilebilir. Burada açıklanan özellikleri kullanır.
 ```json
     {
     "name": "<name>",
@@ -55,7 +56,7 @@ Dockerfile için, ortamı çözümünün `testEnvironments.json` kökünde belir
     }
 ```
 
-Aşağıdaki örnek adlı yerel `testenvironments.json` bir kapsayıcı görüntüsü için \<mcr.microsoft.com/dotnet/core/sdk\> gösterir.
+Aşağıdaki örnekte `testenvironments.json` adlı yerel bir kapsayıcı görüntüsü gösterilmektedir \<mcr.microsoft.com/dotnet/core/sdk\> .
 ```json
 {
 "version": "1",
@@ -69,7 +70,7 @@ Aşağıdaki örnek adlı yerel `testenvironments.json` bir kapsayıcı görünt
 }
 ```
 
-Aşağıdaki örnekte. .NET 5.0'ı hedef alan testleri çalıştırmaya yönelik bir Dockerfile yer a gösterir. İkinci satır, hata ayıklayıcının kapsayıcınıza bağlana ve kapsayıcıda çalıştırana kadar devamını sağlar.
+Aşağıdaki örnekte, .NET 5,0 ' i hedefleyen testlerin çalıştırılması için bir Dockerfile gösterilmektedir. İkinci satır, hata ayıklayıcının kapsayıcınıza bağlanıp çalıştırmasına emin olur.
 ```
 FROM mcr.microsoft.com/dotnet/core/sdk:5.0
 
@@ -77,12 +78,12 @@ RUN wget https://aka.ms/getvsdbgsh && \
     sh getvsdbgsh -v latest  -l /vsdbg
 ```
 
-Kapsayıcının yerel makineniz üzerinde yerleşik bir görüntüsü olması gerekir. Aşağıdaki komutu kullanarak (sonundaki "." dahil) bir kapsayıcıyı derlemek için: `docker build -t <docker image name> -f <path to Dockerfile> .`
+Kapsayıcının yerel makinenizde oluşturulmuş bir görüntüsü olmalıdır. Aşağıdaki komutu kullanarak bir kapsayıcı oluşturabilirsiniz (sonunda "." de dahil): `docker build -t <docker image name> -f <path to Dockerfile> .`
 
 ### <a name="local-wsl2-connections"></a>Yerel WSL2 bağlantıları
-WSL2'de testleri uzaktan çalıştırmak için yerel [makineniz üzerinde WSL2 tümleştirmeyi](/windows/wsl/install-win10) etkinleştirmeniz gerekir.
+Testleri WSL2 üzerinde uzaktan çalıştırmak için yerel makinenizde [WSL2 tümleştirmesini etkinleştirmeniz](/windows/wsl/install-win10) gerekir.
 
-Ortam, aşağıdaki şema kullanılarak çözümünün kökünde belirtilebilir ve yerine yüklemiş `testEnvironments.json` \<Ubuntu\> olduğunuz WSL2 Dağıtımını kullanabilirsiniz.
+Ortam, `testEnvironments.json` çözümünüzün kökünde, aşağıdaki şemayı kullanarak ve \<Ubuntu\> yüklemiş olduğunuz HERHANGI bir WSL2 dağıtımı ile değiştirilerek belirlenebilir.
 ```json
 {
 "version": "1",
@@ -97,9 +98,9 @@ Ortam, aşağıdaki şema kullanılarak çözümünün kökünde belirtilebilir 
 ```
 
 ### <a name="ssh-connections"></a>SSH bağlantıları
- Araçlar ve Seçenekler'de Platformlar Arası > SSH **> ekleyebilir veya kaldırabilirsiniz > Bağlantı Yöneticisi.** "Ekle"yi seçmek konak adını, bağlantı noktasını ve ihtiyacınız olan kimlik bilgilerini girmenize olanak sağlar.
+ **Araçlar > seçeneklerinde, platformlar arası > bağlantı yöneticisi >** SSH bağlantıları ekleyebilir veya kaldırabilirsiniz. "Ekle" seçeneğinin belirlenmesi, ana bilgisayar adı, bağlantı noktası ve ihtiyacınız olan tüm kimlik bilgilerini girmenize olanak sağlar.
 
-Ortam, aşağıdaki şema kullanılarak çözümünün kökünde belirtilebilir ve yerine `testEnvironments.json` `\<ssh://user@hostname:22\>` SSH remoteUri'nizi kullanabilirsiniz.
+Ortam, `testEnvironments.json` çözümünüzün kökünde, aşağıdaki şemayı kullanarak belirtilebilir ve bunu `\<ssh://user@hostname:22\>` SSH remoteUri 'niz ile değiştirerek.
 ```json
 {
 "version": "1",
@@ -113,20 +114,43 @@ Ortam, aşağıdaki şema kullanılarak çözümünün kökünde belirtilebilir 
 }
 ```
 
-## <a name="use-the-test-explorer-to-run-and-debug-remote-tests"></a>Uzak testleri çalıştırmak ve hata ayıklamak için Test Gezgini'ni kullanma
-* Etkin ortam, Test Gezgini araç çubuğundaki bir açılan liste aracılığıyla seçilir. Şu anda aynı anda yalnızca bir test ortamı etkin olabilir.
+#### <a name="prerequisites-for-a-remote-windows-environment"></a>uzak Windows ortamı önkoşulları
+1. [Windows tasarlanan dosya sisteminin](/windows/win32/projfs/enabling-windows-projected-file-system) etkinleştirildiğinden emin olun. Bunu etkinleştirmek için bir yönetici PowerShell penceresinden şunları çalıştırabilirsiniz:
 
-  ![Test Gezgini'nde uzaktan test ortamı açılan listesinde](media/remote-test-drop-down.png)
+   ```powershell
+    Enable-WindowsOptionalFeature -Online -FeatureName Client-ProjFS -NoRestart
+   ```
 
-* Ortam seçildikten sonra testler yeni ortamda keşfedilecek ve çalıştırilecek.
+   Gerekirse, lütfen ortamı yeniden başlatın.
+2. SSH ayarının ayarlandığından emin olun. [OpenSSH 'Yi Install](/windows-server/administration/openssh/openssh_install_firstuse#install-openssh-using-powershell)adımlarını gözden geçirebilirsiniz. Bir yönetici PowerShell penceresinde aşağıdaki komutu çalıştırarak SSH sunucusunu başlatın:
+   ```powershell
+   Start-Service sshd
+   ```
 
-  ![Testler uzak ortamlarda keşfedildi ve yürütülür](media/remote-test-linux-discovery.png)
+3. Testleriniz için gerekli olan uygun .NET çalışma zamanının yüklü olduğundan emin olun. İndirilenler [burada](https://dotnet.microsoft.com/download)bulunabilir.
+4. Testlerin hata ayıklaması için:
+   1. Uzak [Araçlar SKU](/visualstudio/debugger/remote-debugging?view=vs-2022&preserve-view=true) 'sunu uzak ortama lütfen yüklersiniz. 
+   2. Uzaktan hata ayıklayıcıyı yönetici olarak başlatın ve VS kullanıcısının bağlanma izinlerine sahip olduğundan emin olun.
 
-* Artık testlerinizi uzak ortamda çalıştırabilir ve ortamlarda testlerinizi ayıkabilirsiniz!
+#### <a name="prerequisites-for-a-remote-linux-environment"></a>Uzak Linux ortamı için Önkoşullar
+1. SSH 'nin yapılandırıldığından ve çalıştığından emin olun.
+2. `fuse3`Paket Yöneticisi kullanarak yükler.
+3. Testlerinizin gerektirdiği uygun .NET çalışma zamanının uzak ortamda yüklü olduğundan emin olun.
 
-  ![Test gezgininde uzak ortamdan test sonuçlarını görüntüleme](media/remote-test-linux-passing.png)
+## <a name="use-the-test-explorer-to-run-and-debug-remote-tests"></a>Test Gezginini kullanarak uzak testleri çalıştırma ve hatalarını ayıklama
+* Etkin ortam, test Gezgini araç çubuğunda açılan bir açılır pencere aracılığıyla seçilir. Şu anda tek seferde yalnızca bir test ortamı etkin olabilir.
 
-* Test Gezgini bazı eksik ortam önkoşullarını yükleme ve eksik bağımlılıkları yükleme denemesi istendiğinde. Ancak, uzak ortamın sağlanmasının büyük bir kısmını kullanıcının belirtimleri sağlar.
+  ![Test Gezgini 'nde uzaktan test ortamı açılır](media/remote-test-drop-down.png)
+
+* Bir ortam seçildikten sonra, testler yeni ortamda keşfedilir ve çalıştırılır.
+
+  ![Testler uzak ortamlarda keşfedilir ve yürütülür](media/remote-test-linux-discovery.png)
+
+* Artık testlerinizi uzak ortamda çalıştırabilir ve testlerde ortamınızda hata ayıklaması yapabilirsiniz!
+
+  ![Test Gezgini 'nde uzak ortamdan test sonuçlarını görüntüleme](media/remote-test-linux-passing.png)
+
+* Test Gezgini, bazı eksik ortam önkoşullarını yüklemenizi ve eksik bağımlılıkları yüklemeyi denemesini isteyebilir. Ancak, uzak ortamı sağlamanın toplu işlemi, kullanıcının belirtimine göre yapılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
