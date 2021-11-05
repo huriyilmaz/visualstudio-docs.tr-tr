@@ -1,6 +1,6 @@
 ---
-title: Erişilebilirlik için temaları, yazı tiplerini, metni ve karşıtlığı değiştirme
-description: kullanım kolaylığı ve erişilebilirlik sorunları için Visual Studio renk temalarını, yazı tipi renklerini, metin boyutlarını ve çok karşıtlıklı renkleri değiştirmeyi öğrenin.
+title: Erişilebilirlik için temaları, yazı tiplerini, metinleri ve karşıtlığı değiştirme
+description: Kullanım kolaylığı ve erişilebilirlik Visual Studio renk temalarını, yazı tipi renklerini, metin boyutlarını ve fazla karşıtlık renklerini nasıl değiştiryebilirsiniz?
 ms.date: 10/31/2021
 ms.topic: how-to
 ms.custom: contperf-fy21q1
@@ -14,188 +14,188 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e80fd9d1606b31fc964e3666ac5b5c65ed504eb
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+ms.openlocfilehash: ef8beedeee3b8ff71a1b7298df1fd7dd4267e35e
+ms.sourcegitcommit: aff49629012f4d5fa07c75ea0ca5bf53d28aa173
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131126702"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "131662825"
 ---
-# <a name="how-to-change-fonts-colors-and-themes-in-visual-studio"></a>Nasıl yapılır: Visual Studio yazı tiplerini, renkleri ve temaları değiştirme
+# <a name="how-to-change-fonts-colors-and-themes-in-visual-studio"></a>Nasıl yapabilirsiniz: Visual Studio'da yazı tiplerini, renkleri ve temaları değiştirme
 
 ::: moniker range=">=vs-2022"
 
-Visual Studio yazı tiplerini ve renkleri çeşitli yollarla değiştirebilirsiniz. Örneğin, varsayılan koyu temayı ("koyu mod" olarak da bilinir) bir açık temaya, mavi temaya, çok karşıtlıklı temaya veya sistem ayarlarınızla eşleşen bir temaya değiştirebilirsiniz. Ayrıca, hem IDE hem de kod düzenleyicisinde varsayılan yazı tipini ve metin boyutunu değiştirebilirsiniz.
+Yazı tiplerini ve renkleri farklı Visual Studio değiştirebilirsiniz. Örneğin, varsayılan koyu temayı ("koyu mod" olarak da adlandırılır) açık tema, mavi tema, ek karşıtlık teması veya sistem ayarlarınıza uygun bir tema olarak değiştirebilirsiniz. Ayrıca hem IDE'de hem de kod düzenleyicisinde varsayılan yazı tipi ve metin boyutunu değiştirebilirsiniz.
 
 > [!TIP]
-> hafif renk karşıtlığı oranı ayarlamaları hakkında daha fazla bilgi edinmek için [**Visual Studio 2022 blog postasında kullanıcı arabirimini yükselttik**](https://devblogs.microsoft.com/visualstudio/weve-upgraded-the-ui-in-visual-studio-2022/) ve Visual Studio herkes için daha erişilebilir hale getirmek üzere eklediğimiz yeni bir basamaklı dia kodu yazı tipi hakkında daha fazla bilgi edinmek için bkz..
+> Renk karşıtlığı oranı ayarlamaları ve daha kolay erişilebilir hale Visual Studio cascadia Code yazı tipi hakkında daha fazla bilgi edinmek için Visual Studio [**2022'de**](https://devblogs.microsoft.com/visualstudio/weve-upgraded-the-ui-in-visual-studio-2022/) kullanıcı arabirimini yükselttik blog gönderisi'ne bakın.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2019"
 
-Visual Studio yazı tiplerini ve renkleri birçok şekilde değiştirebilirsiniz. Örneğin, varsayılan mavi renk temasını koyu Tema ("koyu mod" olarak da adlandırılır) olarak değiştirebilirsiniz. Gereksinimlerinize en uygun olan bir ek kontrast teması da seçebilirsiniz. Hem IDE hem de kod düzenleyicisinde varsayılan yazı tipini ve metin boyutunu değiştirebilirsiniz.
+Yazı tiplerini ve renkleri birçok Visual Studio değiştirebilirsiniz. Örneğin, varsayılan mavi renk temasını koyu temayla ("koyu mod" olarak da adlandırılır) değiştirebilirsiniz. İhtiyaçlarınızı en iyi şekilde karşılamak için ek karşıtlıklı bir tema da seçebilirsiniz. Ayrıca hem IDE hem de kod düzenleyicisinde varsayılan yazı tipi ve metin boyutunu değiştirebilirsiniz.
 
 ::: moniker-end
 
 ## <a name="change-the-color-theme"></a>Renk temasını değiştirme
 
-Visual Studio içindeki IDE çerçevesinin ve araç pencerelerinin renk temasını değiştirme.
+IDE çerçevesinin renk temasını ve araç pencerelerini aşağıdaki gibi Visual Studio.
 
 ::: moniker range=">=vs-2022"
 
-1. Menü çubuğunda **Araçlar** > **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekleri'ne** > **tıklayın.**
 
-1. Seçenekler listesinde **ortam** > **genel**' i seçin.
+1. Seçenekler listesinde Ortam **Genel'i** > **seçin.**
 
-1. **Renk teması** listesinde, varsayılan **koyu** temayı, **ışık** temasını, **mavi** temayı veya **mavi (ekstra Karşıtlık)** temasını seçin.
+1. Renk **teması listesinde** varsayılan Koyu temayı,  Açık **temayı,** Mavi temayı veya Mavi (Ek Karşıtlık) **temasını** seçin. 
 
-   Windows, **sistem ayarını kullan**' ı seçerek, kullandığı temayı kullanmayı da tercih edebilirsiniz.
+   Ayrıca Sistem ayarını kullan'ı seçerek Windows **temayı da kullanabilirsiniz.**
 
-   :::image type="content" source="media/vs-2022/fonts-colors-theme.png" alt-text="Renk temasını değiştirebileceğiniz Seçenekler iletişim kutusunun ekran görüntüsü.":::
+   :::image type="content" source="media/vs-2022/fonts-colors-theme.png" alt-text="Renk temasını değiştirebilirsiniz Seçenekler iletişim kutusunun ekran görüntüsü.":::
 
    > [!NOTE]
-   > Bir renk temasını değiştirdiğinizde, IDE 'deki metin, bu temanın varsayılan veya daha önce özelleştirilmiş yazı tiplerine ve boyutlarına geri döner.
+   > Bir renk temasını değiştirseniz, IDE'de metin bu tema için varsayılan veya daha önce özelleştirilmiş yazı tiplerini ve boyutlarını geri döner.
 
     > [!TIP]
-    > Daha da fazla tema seçeistiyor musunuz? [**Visual Studio market**](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Themes&sortBy=Installs)'teki özel temaların geniş yelpazesini inceleyin. ayrıca, VS Code tabanlı yeni Visual Studio 2022 özel temalarının örneklerini görmek için, [**yeni Visual Studio temalarının bir koleksiyonunu tanıtma**](https://devblogs.microsoft.com/visualstudio/custom-themes/) blog gönderisine bakın.
+    > Daha fazla tema seçmek ister misiniz? Visual Studio Market'te çok çeşitli [**özel temalara göz atabilirsiniz.**](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Themes&sortBy=Installs) VS Code tabanlı yeni Visual Studio 2022 özel temalarının örneklerini görmek için Yeni Visual Studio temaları koleksiyonuna tanıtma blog [**gönderisi'ne**](https://devblogs.microsoft.com/visualstudio/custom-themes/) göz atabilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2019"
 
-1. Menü çubuğunda **Araçlar** > **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekleri'ne** > **tıklayın.**
 
-1. Seçenekler listesinde **ortam** > **genel**' i seçin.
+1. Seçenekler listesinde Ortam **Genel'i** > **seçin.**
 
-1. **Renk teması** listesinde, varsayılan **mavi** temayı, **ışık** temasını, **koyu** temayı veya **mavi (ekstra Karşıtlık)** temasını seçin.
+1. Renk **teması listesinde** varsayılan Mavi  temayı,  Açık temayı, Koyu temayı veya Mavi (Ek Karşıtlık) **temasını** seçin. 
 
-   ![Renk temasını değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü](media/fonts-colors-theme.png "Renk temasını değiştirmek için kullanabileceğiniz seçenekler iletişim kutusunun ekran görüntüsü.")
+   ![Renk temasını değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü](media/fonts-colors-theme.png "Renk temasını değiştirmek için kullanabileceğiniz Seçenekler iletişim kutusunun ekran görüntüsü.")
 
    > [!NOTE]
-   > Bir renk temasını değiştirdiğinizde, IDE 'deki metin, bu temanın varsayılan veya daha önce özelleştirilmiş yazı tiplerine ve boyutlarına geri döner.
+   > Bir renk temasını değiştirseniz, IDE'de metin bu tema için varsayılan veya daha önce özelleştirilmiş yazı tiplerini ve boyutlarını geri döner.
 
     > [!TIP]
-    > bir uzantıyı kullanarak kendi Visual Studio temalarınızı oluşturabilir ve düzenleyebilirsiniz. kullanmakta olduğunuz Visual Studio sürümüne bağlı olarak aşağıdaki iki seçenekten birini seçin:
-    > - [Visual Studio 2019 için renk teması tasarımcısı](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner).
-    > - [Visual Studio 2017 için renk teması düzenleyicisi](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)
+    > Bir uzantı kullanarak kendi temalarınızı Visual Studio temalarınızı oluşturabilir ve düzenleyebilirsiniz. Kullandığınız uygulamanın sürümüne bağlı olarak aşağıdaki iki seçenekten birini Visual Studio birini seçin:
+    > - [Visual Studio 2019 için Renk Teması Tasarımcısı.](https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner)
+    > - [Visual Studio 2017 için Renk Teması Düzenleyicisi](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)
 
 ::: moniker-end
 
 ## <a name="change-fonts-and-text-size"></a>Yazı tiplerini ve metin boyutunu değiştirme
 
-Tüm IDE çerçevesi ve araç pencereleri için ya da yalnızca belirli pencereler veya metin öğeleri için yazı tipi ve metin boyutunu değiştirebilirsiniz. Ayrıca, düzenleyicideki yazı tipini ve metin boyutunu da değiştirebilirsiniz.
+Tüm IDE çerçeve ve araç pencerelerinde veya yalnızca belirli pencereler veya metin öğeleri için yazı tipi ve metin boyutunu değiştirebilirsiniz. Ayrıca düzenleyicide yazı tipini ve metin boyutunu da değiştirebilirsiniz.
 
-### <a name="to-change-the-font-and-text-size-in-the-ide"></a>IDE 'deki yazı tipini ve metin boyutunu değiştirmek için
+### <a name="to-change-the-font-and-text-size-in-the-ide"></a>IDE'de yazı tipini ve metin boyutunu değiştirmek için
 
 ::: moniker range=">=vs-2022"
 
-1. Menü çubuğunda **Araçlar** > **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekleri'ne** > **tıklayın.**
 
-1. Seçenekler listesinde **ortam** > **yazı tipleri ve renkler**' i seçin.
+1. Seçenekler listesinde Ortam  Yazı Tipleri ve > **Renkler'i seçin.**
 
-1. **Ayarları göster** listesinde **ortam**' ı seçin.
+1. Ayarları **göster listesinde Ortam'ı** **seçin.**
 
-   ![IDE 'de yazı tipini ve metin boyutunu değiştirdiğiniz Seçenekler iletişim kutusunun ekran görüntüsü](media/vs-2022/fonts-colors-text-environment.png "IDE 'deki yazı tipini ve metin boyutunu değiştirdiğiniz Seçenekler iletişim kutusunun ekran görüntüsü.")
+   ![IDE'de yazı tipi ve metin boyutunu değiştirerek Seçenekler iletişim kutusunun ekran görüntüsü](media/vs-2022/fonts-colors-text-environment.png "IDE'de yazı tipi ve metin boyutunu değiştirerek Seçenekler iletişim kutusunun ekran görüntüsü.")
 
     > [!NOTE]
-    > Yalnızca araç pencerelerinin yazı tipini değiştirmek istiyorsanız, **ayarları göster** listesinde, **tüm metin aracı Windows**' ni seçin.
+    > Yalnızca araç pencereleri için yazı tipini değiştirmek için, Show **settings for list** (Ayarları göster) listesinde Tüm Metin Aracı'nı **Windows.**
 
-1. **Yazı** tipi ve **Boyut** seçeneklerini değiştirerek IDE için yazı tipini ve metin boyutunu değiştirin.
+1. **IDE'nin** **yazı tipini** ve metin boyutunu değiştirmek için Yazı Tipi ve Boyut seçeneklerini değiştirme.
 
-1. **Görüntüleme öğelerinde** uygun öğeyi seçin ve ardından **öğe ön** planı ve **öğe arka plan** seçeneklerini değiştirin.
+1. Öğeleri görüntüle'de **uygun öğeyi seçin** ve ardından Öğe ön plan ve Öğe arka **plan** **seçeneklerini** değiştirebilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2019"
 
-1. Menü çubuğunda **Araçlar** > **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekleri'ne** > **tıklayın.**
 
-1. Seçenekler listesinde **ortam** > **yazı tipleri ve renkler**' i seçin.
+1. Seçenekler listesinde Ortam  Yazı Tipleri ve > **Renkler'i seçin.**
 
-1. **Ayarları göster** listesinde **ortam**' ı seçin.
+1. Ayarları **göster listesinde Ortam'ı** **seçin.**
 
-   ![IDE 'deki yazı tiplerini ve renkleri değiştirme seçenekleri iletişim kutusunun ekran görüntüsü](media/fonts-colors-environment.png "IDE 'deki yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü.")
+   ![IDE'de yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü](media/fonts-colors-environment.png "IDE'de yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü.")
 
     > [!NOTE]
-    > Yalnızca araç pencerelerinin yazı tipini değiştirmek istiyorsanız, **ayarları göster** listesinde, **tüm metin aracı Windows**' ni seçin.
+    > Yalnızca araç pencereleri için yazı tipini değiştirmek için, Show **settings for list** (Ayarları göster) listesinde Tüm Metin Aracı'nı **Windows.**
 
-1. **Yazı** tipi ve **Boyut** seçeneklerini değiştirerek IDE için yazı tipini ve metin boyutunu değiştirin.
+1. **IDE'nin** **yazı tipini** ve metin boyutunu değiştirmek için Yazı Tipi ve Boyut seçeneklerini değiştirme.
 
-1. **Görüntüleme öğelerinde** uygun öğeyi seçin ve ardından **öğe ön** planı ve **öğe arka plan** seçeneklerini değiştirin.
+1. Öğeleri görüntüle'de **uygun öğeyi seçin** ve ardından Öğe ön plan ve Öğe arka **plan** **seçeneklerini** değiştirebilirsiniz.
 
 ::: moniker-end
 
-### <a name="to-change-the-font-and-text-size-in-the-editor"></a>Düzenleyicideki yazı tipini ve metin boyutunu değiştirmek için
+### <a name="to-change-the-font-and-text-size-in-the-editor"></a>Düzenleyicide yazı tipini ve metin boyutunu değiştirmek için
 
 ::: moniker range=">=vs-2022"
 
-1. Menü çubuğunda **Araçlar** > **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekleri'ne** > **tıklayın.**
 
-1. Seçenekler listesinde **ortam** > **yazı tipleri ve renkler**' i seçin.
+1. Seçenekler listesinde Ortam  Yazı Tipleri ve > **Renkler'i seçin.**
 
-1. **Ayarları göster** listesinde, **metin düzenleyici**' yi seçin.
+1. Liste **ayarlarını göster'de** Metin Düzenleyici'yi **seçin.**
 
-   ![Düzenleyicide yazı tipini ve metin boyutunu değiştirdiğiniz Seçenekler iletişim kutusunun ekran görüntüsü](media/vs-2022/fonts-colors-text-editor.png "Düzenleyicide yazı tipini ve metin boyutunu değiştirdiğiniz Seçenekler iletişim kutusunun ekran görüntüsü.")
+   ![Düzenleyicide yazı tipini ve metin boyutunu değiştirerek Seçenekler iletişim kutusunun ekran görüntüsü](media/vs-2022/fonts-colors-text-editor.png "Düzenleyicide yazı tipini ve metin boyutunu değiştirerek Seçenekler iletişim kutusunun ekran görüntüsü.")
 
-1. Düzenleyicinin yazı tipini ve metin boyutunu değiştirmek için **yazı tipi** ve **Boyut** seçeneklerini değiştirin.
+1. Yazı tipi **ve** **Boyut seçeneklerini** değiştirerek düzenleyicinin yazı tipini ve metin boyutunu değiştirebilirsiniz.
 
-1. **Görüntüleme öğelerinde** uygun öğeyi seçin ve ardından **öğe ön** planı ve **öğe arka plan** seçeneklerini değiştirin.
+1. Öğeleri görüntüle'de **uygun öğeyi seçin** ve ardından Öğe ön plan ve Öğe arka **plan** **seçeneklerini** değiştirebilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2019"
 
-1. Menü çubuğunda **Araçlar** > **Seçenekler**' i seçin.
+1. Menü çubuğunda Araçlar **Seçenekleri'ne** > **tıklayın.**
 
-1. Seçenekler listesinde **ortam** > **yazı tipleri ve renkler**' i seçin.
+1. Seçenekler listesinde Ortam  Yazı Tipleri ve > **Renkler'i seçin.**
 
-1. **Ayarları göster** listesinde, **metin düzenleyici**' yi seçin.
+1. Liste **ayarlarını göster'de** Metin Düzenleyici'yi **seçin.**
 
-   ![Düzenleyicideki yazı tiplerini ve renkleri değiştirme seçenekleri iletişim kutusunun ekran görüntüsü](media/fonts-colors-text-editor.png "Düzenleyicideki yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü.")
+   ![Düzenleyicide yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü](media/fonts-colors-text-editor.png "Düzenleyicide yazı tiplerini ve renkleri değiştirmek için Seçenekler iletişim kutusunun ekran görüntüsü.")
 
-1. Düzenleyicinin yazı tipini ve metin boyutunu değiştirmek için **yazı tipi** ve **Boyut** seçeneklerini değiştirin.
+1. Yazı tipi **ve** **Boyut seçeneklerini** değiştirerek düzenleyicinin yazı tipini ve metin boyutunu değiştirebilirsiniz.
 
-1. **Görüntüleme öğelerinde** uygun öğeyi seçin ve ardından **öğe ön** planı ve **öğe arka plan** seçeneklerini değiştirin.
+1. Öğeleri görüntüle'de **uygun öğeyi seçin** ve ardından Öğe ön plan ve Öğe arka **plan** **seçeneklerini** değiştirebilirsiniz.
 
 ::: moniker-end
 
-Daha fazla bilgi için bkz. [Düzenleyici için yazı tiplerini ve renkleri değiştirme](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md) sayfası.
+Daha fazla bilgi için [düzenleyicinin yazı tiplerini ve renklerini değiştirme sayfasına](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md) bakın.
 
 ## <a name="accessibility-options"></a>Erişilebilirlik seçenekleri
 
-Görme zorluğu yaşıyorsanız, sizin için renk teması seçenekleri vardır. bir bilgisayardaki *tüm* uygulamalar ve kullanıcı arabirimi veya yalnızca Visual Studio için ek karşıtlık seçeneği için yüksek karşıtlıklı bir seçenek kullanabilirsiniz.
+Görme güç bir deneyim yaşamanın renk teması seçenekleri vardır. Bir bilgisayarda tüm uygulamalar ve kullanıcı arabirimi için *yüksek* karşıtlıklı bir seçenek veya yalnızca bir veya daha fazla karşıtlık seçeneği Visual Studio kullanabilirsiniz.
 
-### <a name="use-windows-high-contrast"></a>Windows yüksek karşıtlık kullanın
+### <a name="use-windows-high-contrast"></a>Yüksek karşıtlık Windows kullanın
 
-Windows yüksek karşıtlık seçeneğini değiştirmek için aşağıdaki yordamlardan birini kullanın:
+Yüksek karşıtlıklı seçeneğin iki durumlu seçeneğini Windows yordamlardan birini kullanın:
 
-- Windows veya herhangi bir Microsoft uygulamasında **sol Alt** + **sol shıft** + **PrtScn** tuşlarına basın.
+- Bu Windows herhangi bir Microsoft uygulamasında, Sol **Alt Sol Shift** +  + **PrtScn tuşlarına** basın.
 
-- Windows ' de, **başlat**  >  **Ayarlar**  >  **erişim kolaylığı**' nı seçin. ardından, Windows 10 ve sonraki bölümlerinde bulunan **vizyon** bölümünde **yüksek karşıtlık**' ı seçin.
+- Bu Windows Başlat'ı **Ayarlar**  >    >  **Erişim Kolaylığı.** Ardından, sonraki ve **sonraki** Windows 10 görüntü bölümünde Yüksek karşıtlık'ı **seçin.**
 
     > [!WARNING]
-    > Windows yüksek karşıtlık ayarı, bilgisayardaki tüm uygulamaları ve kullanıcı arabirimini etkiler.
+    > Yüksek Windows ayarı, bilgisayarda tüm uygulamaları ve kullanıcı arabirimini etkiler.
 
-### <a name="use-visual-studio-extra-contrast"></a>Visual Studio daha fazla karşıtlık kullanın
+### <a name="use-visual-studio-extra-contrast"></a>Daha Visual Studio karşıtlığı kullanma
 
-Visual Studio ekstra karşıtlık seçeneğini değiştirmek için aşağıdaki yordamları kullanın:
+Ek karşıtlık seçeneğinin iki durumlu Visual Studio yordamları kullanın:
 
-1. Visual Studio menü çubuğunda **araçlar**  >  **seçenekler**' i seçin ve ardından seçenekler listesinde **ortam**  >  **genel**' i seçin.
+1. Araç çubuğundaki menü Visual Studio Araçlar Seçenekleri'ne tıklayın  >  ve ardından, seçenekler listesinde Ortam **Genel'i**  >  **seçin.**
 
-1. **Renk teması** açılan listesinde **mavi (ekstra kontrast)** temasını seçin ve ardından **Tamam**' ı seçin.
+1. Renk **teması açılan** listesinde Mavi (Ek Karşıtlık) **temasını** ve ardından Tamam'ı **seçin.**
 
-kullanabileceğiniz diğer Visual Studio erişilebilirlik seçenekleri hakkında daha fazla bilgi edinmek için [Visual Studio sayfasının erişilebilirlik özelliklerine](../ide/reference/accessibility-features-of-visual-studio.md) bakın.
+Diğer erişilebilirlik seçenekleri hakkında Visual Studio daha fazla bilgi edinmek için Visual Studio sayfasındaki Erişilebilirlik [özelliklerine](../ide/reference/accessibility-features-of-visual-studio.md) bakın.
 
 > [!TIP]
-> istediğiniz renk veya yazı tipi için erişilebilirlik seçeneği varsa, ancak şu anda Visual Studio kullanılabilir değil, lütfen [Visual Studio geliştirici Community](https://aka.ms/feedback/suggest?space=8) **bir özellik öner** ' i seçerek bize bildirin. Bu forum ve nasıl çalıştığı hakkında daha fazla bilgi için, [özellik önerme](../ide/suggest-a-feature.md) sayfasına bakın.
+> Yararlı olabileceğini düşünebilirsiniz ancak şu anda Visual Studio'da mevcut olmayan renkler veya yazı tipleri için erişilebilirlik seçeneği  varsa lütfen [Visual Studio Developer](https://aka.ms/feedback/suggest?space=8)Community . Bu forum ve nasıl çalıştığını görmek için Özellik [önerin sayfasına](../ide/suggest-a-feature.md) bakın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Yazı tipi ve renk düzenlerini değiştirebileceğiniz tüm Kullanıcı arabirimi (UI) öğeleri hakkında daha fazla bilgi edinmek için, bkz. [yazı tipleri ve renkler, ortam, Seçenekler Iletişim kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) sayfası.
+Yazı tipi ve renk düzenlerini değiştirebilirsiniz tüm kullanıcı arabirimi (UI) öğeleri hakkında daha fazla bilgi edinmek için Yazı Tipleri ve [Renkler, Ortam,](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) Seçenekler İletişim Kutusu sayfasına bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Visual Studio düzenleyicide düzenleyici için yazı tiplerini ve renkleri değiştirme](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
-- [Visual Studio kodu düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
-- [Visual Studio ıde ve düzenleyiciyi kişiselleştirin](../ide/quickstart-personalize-the-ide.md)
+- [Nasıl yapabilirsiniz: Düzenleyicinin yazı tiplerini ve renklerini Visual Studio](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+- [Visual Studio kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [IDE'Visual Studio düzenleyiciyi kişiselleştirme](../ide/quickstart-personalize-the-ide.md)
