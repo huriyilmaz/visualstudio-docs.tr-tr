@@ -8,17 +8,21 @@ metadata:
   ms.prod: visual-studio-windows
   ms.technology: vs-azure
   ms.topic: landing-page
-  ms.date: 12/05/2019
+  ms.date: 10/27/2021
   ms.author: ghogen
-  ms.openlocfilehash: b7d3357b71dfdc255f5038259e2db74ec41e1798
-  ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+  ms.openlocfilehash: 3b659fc37824d15aed1db63e413133bf10c5eaca
+  ms.sourcegitcommit: 32fa8ec0b469a7a9a87de25ff769d8d21d9f30d2
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 10/13/2021
-  ms.locfileid: "129969937"
+  ms.lasthandoff: 11/06/2021
+  ms.locfileid: "131897820"
 landingContent:
-- title: Azure App Service'e dağıtma
+- title: Azure’a dağıtın
   linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure tümleştirmesine genel bakış
+      url: overview-azure-integration.md
   - linkListType: tutorial
     links:
     - text: Azure’a ASP.NET Core uygulaması dağıtma
@@ -67,6 +71,10 @@ landingContent:
       url: vs-azure-tools-performance-profiling-cloud-services.md
 - title: Bağlı Hizmetler
   linkLists:
+  - linkListType: overview
+    links:
+    - text: Genel Bakış
+      url: overview-connected-services.md
   - linkListType: tutorial
     links:
     - text: Azure Active Directory
@@ -81,7 +89,7 @@ landingContent:
       url: azure-signalr-add-connected-service.md
     - text: Azure SQL Veritabanı
       url: azure-sql-database-add-connected-service.md
-    - text: Azure Depolama
+    - text: Azure Storage
       url: vs-azure-tools-connected-services-storage.md
 - title: Azure Cloud Services
   linkLists:

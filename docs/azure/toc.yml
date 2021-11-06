@@ -1,6 +1,8 @@
 - name: Visual Studio ile Azure Geliştirme
   href: index.yml
   expanded: true
+- name: Genel Bakış
+  href: overview-azure-integration.md
 - name: Azure App Service'e dağıtma
   expanded: true
   items:
@@ -17,6 +19,8 @@
 - name: Azure hizmetlerine bağlanma
   expanded: false
   items:
+    - name: Bağlı hizmetlere genel bakış
+      href: overview-connected-services.md
     - name: Azure Active Directory (AD) ekleme
       href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
     - name: Azure Uygulaması İçgörüleri ekleme
@@ -35,12 +39,20 @@
       href: vs-azure-tools-connected-services-storage.md
     - name: Azure Uygulama Yapılandırması ekleme
       href: vs-azure-tools-connected-services-app-configuration.md
+- name: GitHub eylemleri
+  href: overview-github-actions.md
+- name: Nasıl yapılır
+  items:
+    - name: Azure App Service yayımlama profili al
+      href: how-to-get-publish-profile-from-azure-app-service.md
+    - name: Azure aboneliğinizle oturum açın
+      href: how-to-sign-in-with-azure-subscription.md
 - name: Azure Cloud Services geliştirme
   expanded: false
   items:
     - name: Bulut hizmeti projeleriyle çalışma
       items:
-        - name: Cloud Services (genişletilmiş destek) kullanma
+        - name: Cloud Services kullan (genişletilmiş destek)
           href: cloud-services-extended-support.md
         - name: Azure bulut hizmeti projesi oluşturma
           href: vs-azure-tools-azure-project-create.md

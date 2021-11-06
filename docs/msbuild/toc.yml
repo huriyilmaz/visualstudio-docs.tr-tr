@@ -2,6 +2,8 @@ items:
   - name: MSBuild
     href: msbuild.md
     items:
+      - name: 'MSBuild 17,0 '' deki yenilikler'
+        href: whats-new-msbuild-17-0.md
       - name: MSBuild 16.0 sürümündeki yenilikler
         href: whats-new-msbuild-16-0.md
       - name: MSBuild 15.0 sürümündeki yenilikler
