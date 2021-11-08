@@ -1,6 +1,6 @@
 ---
 title: VS SDK NuGet paketleri
-description: bir Visual Studio uzantısını Visual Studio 2022 RC 'ye geçirirken ihtiyacınız olabilecek VS SDK metapackage ve diğer NuGet paketleri hakkında bilgi edinin.
+description: VS SDK metapackage ve bir Visual Studio uzantısını Visual Studio 2022 ' e geçirirken ihtiyacınız olabilecek diğer NuGet paketleri hakkında bilgi edinin.
 ms.date: 06/08/2021
 ms.topic: conceptual
 author: leslierichardson95
@@ -11,12 +11,12 @@ monikerRange: vs-2022
 ms.workload:
 - vssdk
 feedback_system: GitHub
-ms.openlocfilehash: 35e707295f38897411e5d213ec0e92b2a15a67d1
-ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
+ms.openlocfilehash: a7ddc0502310098c6076076fdcabf623f3aaf466
+ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "130010671"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132001497"
 ---
 # <a name="sdk-reference-packages"></a>SDK başvuru paketleri
 

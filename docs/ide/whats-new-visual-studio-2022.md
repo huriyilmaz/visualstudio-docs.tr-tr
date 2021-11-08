@@ -2,7 +2,7 @@
 title: Visual Studio 2022 ' deki yenilikler
 titleSuffix: ''
 description: Visual Studio 2022 ' nin önizleme sürümündeki yeni özellikler hakkında bilgi edinin.
-ms.date: 11/04/2021
+ms.date: 11/08/2021
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -14,21 +14,25 @@ ms.prod: visual-studio-dev17
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: bd86bebeb4256a5bce645aa88123ad6444fcea57
-ms.sourcegitcommit: aff49629012f4d5fa07c75ea0ca5bf53d28aa173
+ms.openlocfilehash: 5547e3d7bc204827a55633f91fc30153929d054e
+ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "131662602"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132001046"
 ---
 # <a name="whats-new-in-visual-studio-2022"></a>Visual Studio 2022 ' deki yenilikler
 
-**17,0 Preview 5/sürüm adayı (RC) için güncelleştirildi.** Bkz. [tam sürüm notları](/visualstudio/releases/2022/release-notes-preview/) | [Ürün yol haritasını](/visualstudio/productinfo/vs-roadmap/) görüntüle
+**17,0 GA (genel kullanılabilirlik) sürümü için güncelleştirildi.** Bkz. [tam sürüm notları](/visualstudio/releases/2022/release-notes) | [Ürün yol haritasını](/visualstudio/productinfo/vs-roadmap/) görüntüle
 
 >[!div class="button"]
->[Visual Studio 2022 RC 'yi indirin](https://visualstudio.microsoft.com/downloads/)
+>[2022 Visual Studio indirin](https://visualstudio.microsoft.com/downloads/)
 
-[Visual Studio 2022 RC](https://visualstudio.microsoft.com/vs/preview/)ile herhangi bir geliştirici, uygulama ve herhangi bir platformda sunulan en iyi sınıf araçları ve hizmetleri her zaman elde edersiniz. Visual Studio ilk kez mi kullanıyorsunuz, yoksa yıllarca mi kullanıyorsunuz, en yeni sürümümüzü beğendiniz!
+[Visual Studio 2022](/visualstudio/releases/2022/release-notes)ile her zaman geliştirici, herhangi bir uygulama ve herhangi bir platform için sunulan en iyi sınıf araçları ve hizmetleri elde edersiniz. Visual Studio ilk kez mi kullanıyorsunuz, yoksa yıllarca mi kullanıyorsunuz, en yeni sürümümüzü beğendiniz!
+
+> [!TIP]
+> **Visual Studio 2022 başlatma olayımızı** inceleyin. Bugün 8:30 saat Pasifik. [Launch.VisualStudio.com](https://launch.visualstudio.com/) veya [Twitch kanalımızda](https://www.twitch.tv/visualstudio)canlı olarak yakalayabilirsiniz. Bu, daha sonra [YouTube kanalımızda](https://www.youtube.com/visualstudio) , canlı olarak izleyebilmeniz için kullanılabilir olacaktır.
+
 
 ## <a name="performance-improvements"></a>Performans geliştirmeleri
 
@@ -88,7 +92,7 @@ anahtar odak alanlarımızdan biri, ıde 'yi kendi kendinize yapabilmeniz için 
 
 ## <a name="whats-next"></a>Sırada ne var?
 
-Visual Studio 2022 planlaması yaptığımız hakkında daha fazla bilgi edinmek mi istiyorsunuz? ayrıntılar için [**yol haritası**](/visualstudio/productinfo/vs-roadmap/) sayfasına ve [**Visual Studio 2022 vision**](https://devblogs.microsoft.com/visualstudio/visual-studio-2022/) blog gönderisine bakın.
+Visual Studio 2022 planlaması yaptığımız hakkında daha fazla bilgi edinmek mi istiyorsunuz? ayrıntılar için bkz. [**yol haritası**](/visualstudio/productinfo/vs-roadmap/) sayfası ve [**Visual Studio 2022 Preview**](/visualstudio/releases/2022/release-notes-preview/) sürüm notları.
 
 ## <a name="give-us-feedback"></a>Geri bildirimde bulunun
 
@@ -100,7 +104,7 @@ Visual Studio ekibine neden geri bildirim gönderilsin? Müşteri geri bildiriml
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio 2022 GA (genel kullanılabilirlik)](https://devblogs.microsoft.com/visualstudio/join-us-november-8th-for-the-launch-of-visual-studio-2022/)
+* [başlatma: Visual Studio 2022 GA (genel kullanılabilirlik)](https://devblogs.microsoft.com/visualstudio/join-us-november-8th-for-the-launch-of-visual-studio-2022/)
 * [Visual Studio 2022 RC (sürüm adayı)](https://devblogs.microsoft.com/visualstudio/join-us-november-8th-for-the-launch-of-visual-studio-2022/)
 * [Visual Studio 2022 Preview 4](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-4-is-now-available/)
 * [Visual Studio 2022 Preview 3](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-preview-3-now-available/)

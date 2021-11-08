@@ -20,18 +20,18 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 260eac52276ba460ad909a2f8dff06964938f01d
-ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
+ms.openlocfilehash: 7db6278bd563295ef2e82cd014fa47ceb2062a55
+ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "130011126"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132001471"
 ---
 # <a name="install-visual-studio"></a>Visual Studio'yu yükleme
 
 ::: moniker range="vs-2017"
 
-Visual Studio'i yüklemenin yeni bir Visual Studio! Bu sürümde, yalnızca ihtiyacınız olan özellikleri seçmenizi ve yüklemenizi kolaylaştırdı. Ayrıca daha hızlı ve sistem etkisi hiç Visual Studio şekilde yüklemesi için en düşük ayak izini de azaltmış olduk.
+Visual Studio'i yüklemenin yeni bir Visual Studio! Bu sürümde, yalnızca ihtiyacınız olan özellikleri seçmenizi ve yüklemenizi kolaylaştırdı. Ayrıca daha hızlı ve sistem etkisi hiç Visual Studio şekilde yüklerini azaltmak için en düşük ayak izini de azaltmış olduk.
 
 ::: moniker-end
 
@@ -43,7 +43,7 @@ Visual Studio'i yüklemenin yeni bir Visual Studio! Bu sürümde, yalnızca ihti
 
 ::: moniker range=">=vs-2022"
 
-2022 RC Visual Studio ye hoş geldiniz! Bu sürümde, yalnızca ihtiyacınız olan özellikleri seçmek ve yüklemek kolaydır.
+2022'Visual Studio hoş geldiniz! Bu sürümde, yalnızca ihtiyacınız olan özellikleri seçmek ve yüklemek kolaydır.
 
 ::: moniker-end
 
@@ -68,9 +68,9 @@ Bu RC sürümündeki diğer yeni neler hakkında daha fazla bilgi almak ister mi
 
 ::: moniker-end
 
-Yükleme için hazır mısınız? Size adım adım yoleceğiz.
+Yüklenmeye hazır mısınız? Size adım adım yoleceğiz.
 
-## <a name="step-1---make-sure-your-computer-is-ready-for-visual-studio"></a>1. Adım: Bilgisayarınızın hazır olduğundan emin Visual Studio
+## <a name="step-1---make-sure-your-computer-is-ready-for-visual-studio"></a>1. Adım: Bilgisayarınızın kullanıma hazır olduğundan emin Visual Studio
 
 Yüklemeye başlamadan önce Visual Studio:
 
@@ -118,7 +118,7 @@ Yüklemeye başlamadan önce Visual Studio:
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 ile Visual Studio önceki sürümlerini çalıştırma hakkında sorular için bkz. [Visual Studio 2019 Platform](/visualstudio/releases/2019/compatibility/)Hedefleme ve Uyumluluk.
+Visual Studio 2019 ile önceki Visual Studio çalıştırma hakkında sorular için bkz. [Visual Studio 2019 Platform](/visualstudio/releases/2019/compatibility/)Hedefleme ve Uyumluluk.
 
 ::: moniker-end
 
@@ -140,7 +140,7 @@ Visual Studio 2017 için önyükleyici almak için [](https://visualstudio.micro
 
 ::: moniker range="vs-2019"
 
-Bunu yapmak için aşağıdaki düğmeyi seçin, istediğiniz Visual Studio sürümünü seçin, Kaydet'i ve ardından Klasör aç'ı **seçin.** 
+Bunu yapmak için aşağıdaki düğmeyi seçin, istediğiniz Visual Studio sürümünü seçin, Kaydet'i ve ardından Klasör aç'ı **seçin.**
 
  > [!div class="button"]
  > [Visual Studio’yu indirin](https://visualstudio.microsoft.com/downloads)
@@ -152,7 +152,7 @@ Bunu yapmak için aşağıdaki düğmeyi seçin, istediğiniz Visual Studio sür
 Bunu yapmak için aşağıdaki düğmeyi seçin, istediğiniz Visual Studio sürümünü seçin ve ardından İndirilenler **klasörünüze** kaydedin.
 
  > [!div class="button"]
- > [Visual Studio’yu indirin](https://visualstudio.microsoft.com/vs/preview/#download-preview)
+ > [Visual Studio’yu indirin](https://visualstudio.microsoft.com/downloads)
 
 ::: moniker-end
 
@@ -206,7 +206,7 @@ Yükleyici yüklendikten sonra, istediğiniz özellik kümelerini veya iş yükl
 
    ![Uygulamanın İş Yükleri sekmesini gösteren Visual Studio Yükleyicisi.](../install/media/vs-2019/vs-installer-workloads.png)
 
-     Örneğin, "web geliştirme ASP.NET&quot; iş yükünü seçin. 20'den fazla dil için temel kod düzenleme desteği, proje gerektirmeden herhangi bir klasörden kod açma ve düzenleme özelliği ve tümleşik kaynak kodu denetimi içeren varsayılan çekirdek düzenleyiciyle birlikte gelir.
+     Örneğin, "web geliştirme ASP.NET" iş yükünü seçin. 20'den fazla dil için temel kod düzenleme desteği, proje gerektirmeden herhangi bir klasörden kod açma ve düzenleme özelliği ve tümleşik kaynak kodu denetimi içeren varsayılan çekirdek düzenleyiciyle birlikte gelir.
 
 1. istediğiniz iş yüklerini seçtikten sonra Yükle'yi **seçin.**
 
@@ -214,11 +214,11 @@ Yükleyici yüklendikten sonra, istediğiniz özellik kümelerini veya iş yükl
 
 ::: moniker-end
 
-::: moniker range=&quot;>=vs-2022&quot;
+::: moniker range=">=vs-2022"
 
 1. içinde istediğiniz iş yükünü **Visual Studio Yükleyicisi.**
 
-   ![Uygulamanın İş Yükleri sekmesini gösteren Visual Studio Yükleyicisi.](../install/media/vs-2022/vs-installer-workloads.png &quot;Visual Studio iş yüklerini yükler")
+   ![Uygulamanın İş Yükleri sekmesini gösteren Visual Studio Yükleyicisi.](../install/media/vs-2022/vs-installer-workloads.png "Visual Studio iş yüklerini yükler")
 
      Hangi iş yükünün ihtiyacınız olan özellikleri desteklediğine karar vermek için iş yükü özetlerini gözden geçirme. Örneğin, Web Live Preview ile ASP.NET Web sayfalarını düzenlemek veya Blazor ile hızlı yanıt veren web uygulamaları oluşturmak için ASP.NET ve **web** geliştirme iş yükünü seçin ya da C# ile platformlar arası uygulamalar geliştirmek için Desktop **& Mobile** iş yükleri veya C++20'yi hedef alan C++ projeleri geliştirin.
 
@@ -229,11 +229,11 @@ Yükleyici yüklendikten sonra, istediğiniz özellik kümelerini veya iş yükl
 ::: moniker-end
 
 > [!TIP]
-> Yüklemeden sonra herhangi bir zamanda, başlangıçta yüklememiş olduğu iş yüklerini veya bileşenleri yükleyebilirsiniz. Açık olan Visual Studio Araçlar Araçları **ve** Özellikleri  >  **Al... 'a gidin ve** Visual Studio Yükleyicisi. Veya dosyadan **Visual Studio Yükleyicisi** açın Başlat menüsü. Buradan, yüklemek istediğiniz iş yüklerini veya bileşenleri seçebilirsiniz. Ardından **Değiştir'i seçin.**
+> Yüklemeden sonra herhangi bir zamanda, başlangıçta yüklememiş olduğu iş yüklerini veya bileşenleri yükleyebilirsiniz. Açık olan Visual Studio Araçları Al ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. Veya dosyadan **Visual Studio Yükleyicisi** açın Başlat menüsü. Buradan, yüklemek istediğiniz iş yüklerini veya bileşenleri seçebilirsiniz. Ardından **Değiştir'i seçin.**
 
 ## <a name="step-5---choose-individual-components-optional"></a>5. Adım - Tek tek bileşenleri seçme (isteğe bağlı)
 
-Visual Studio yüklemenizi özelleştirmek için İş Yükleri özelliğini kullanmak istemiyorsanız veya bir iş yükü yüklemelerinden daha fazla bileşen eklemek istemiyorsanız, Tek bileşenler  sekmesinden tek tek bileşenleri yükleyerek veya ekleyerek bunu yapabiliriz. Ne istediğinize seçin ve ardından istemleri izleyin.
+Visual Studio yüklemenizi özelleştirmek için İş Yükleri özelliğini kullanmak istemiyorsanız veya bir iş yükü yüklemelerinden daha fazla bileşen eklemek istemiyorsanız, Tek bileşenler  sekmesinden tek tek bileşenleri yükleyerek veya ekleyerek bunu yapabiliriz. Ne istediğinize seçin ve ardından yönergeleri izleyin.
 
 ::: moniker range="vs-2017"
 

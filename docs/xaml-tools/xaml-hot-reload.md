@@ -1,7 +1,7 @@
 ---
 title: XAML kullanarak XAML kodu yazma ve hata ayıklama XAML kodu yükleme
 description: XAML çalışırken yeniden yükleme veya XAML düzenleme ve devam etme, uygulamaları çalıştırırken XAML kodunuzda değişiklik yapmanıza olanak sağlar
-ms.date: 10/26/2021
+ms.date: 11/08/2021
 ms.topic: conceptual
 helpviewer_keywords:
 - xaml edit and continue
@@ -13,19 +13,21 @@ ms.custom: contperf-fy22q1
 ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bd1b7c07d4a467c886b2846b8504d8c47f87684
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+ms.openlocfilehash: b85d91752f666bf540f6d74e899c5eb4093144f8
+ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131128020"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132001793"
 ---
 # <a name="xaml-hot-reload-write-and-debug-your-wpf-and-uwp-apps-while-theyre-running"></a>XAML Hot Reload: çalışırken WPF ve UWP uygulamalarınızı yazma ve hatalarını ayıklama
 
 XAML Hot Reload ile, çalışan uygulamanın veri bağlamı, kimlik doğrulama durumu ve tasarım zamanı için benzetim yapmak zor olan diğer gerçek karmaşıklığın avantajıyla XAML kodu artımlı olarak oluşturup test edebilirsiniz.
 
 > [!TIP]
-> Buraya XAML etkin yeniden yükleme kullanıcı arabirimi (UI) yoluyla ulaşdıysanız, hoş geldiniz! XAML sık yükleme hakkında daha fazla bilgi edinmek için doğru yerdir. Ancak XAML dinamik yeniden yükleme sorunlarını gidermek için yardıma ihtiyacınız varsa bkz. bunun yerine [xaml etkin yeniden yükleme sorunlarını giderme](xaml-hot-reload-troubleshooting.md) .
+> Buraya XAML etkin yeniden yükleme kullanıcı arabirimi (UI) yoluyla ulaşdıysanız, hoş geldiniz! XAML sık yükleme hakkında daha fazla bilgi edinmek için doğru yerdir.
+>
+> Ancak, XAML dinamik yeniden yükleme sorunlarını gidermeye yardımcı olmak istiyorsanız, bkz. [xaml sık yeniden yükleme sorunlarını giderme](xaml-hot-reload-troubleshooting.md) .
 
 hem Visual Studio hem de Visual Studio için Blend kullanılabilir, XAML etkin yeniden yükleme özellikle bu senaryolarda yararlı olur:
 
@@ -43,7 +45,7 @@ hem Visual Studio hem de Visual Studio için Blend kullanılabilir, XAML etkin y
 
 Aşağıdaki animasyon, bazı kaynak kodları açmak için canlı görsel ağaç kullanmanın bir örneğini gösterir ve ardından bir düğmenin metin ve rengini değiştirmek için XAML etkin yeniden yükleme ' yi kullanmaktır.
 
-:::image type="content" source="../debugger/media/xaml-hot-reload-using.gif" alt-text="Kaynak kodu açan canlı görsel ağaç animasyonu ve Kullanıcı arabirimi öğelerini değiştirmek için XAML Hot Reload kullanma.":::
+:::image type="content" source="media/vs-2022/xaml-hot-reload-live-visual-tree.gif" alt-text="Kaynak kodu açan canlı görsel ağaç animasyonu ve Kullanıcı arabirimi öğelerini değiştirmek için XAML Hot Reload kullanma.":::
 
 > [!NOTE]
 > Visual Studio XAML etkin yeniden yüklemesi şu anda yalnızca Visual Studio ' de bir uygulama çalıştırdığınız veya hata ayıklayıcı ekli olan Visual Studio için Blend (**F5** ya da **hata ayıklamayı başlatma**) destekleniyor. [Bir ortam değişkenini el ile](xaml-hot-reload-troubleshooting.md#verify-that-you-use-start-debugging-rather-than-attach-to-process)ayarlamadığınız sürece, [İşleme İliştir](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) ' i kullanarak bu deneyimi etkinleştiremezsiniz.
@@ -68,8 +70,8 @@ XAML sık yükleme 'yi kullanırken aşağıdaki hatalar arasında gelemeyebilir
 
 |Hata iletisi|Description|
 |-|-|
-|Olayın başarısız olduğundan emin olun|Hata, sizin uygulamanız çalışırken desteklenmeyen denetimlerinizin birine bir olay gönderilmeye çalıştığınız anlamına gelir.|
-|Bu değişiklik XAML Hot Reload tarafından desteklenmiyor ve hata ayıklama oturumu sırasında uygulanmayacak.|Hata, denediğiniz değişikliğin XAML etkin yeniden yükleme tarafından desteklenmediğini gösterir. Hata ayıklama oturumunu durdurun, değişikliği yapın ve hata ayıklama oturumunu yeniden başlatın.  |
+|Olayın başarısız olduğundan emin olun|Hata, sizin uygulamanızın çalışırken desteklenmeyen denetimlerinizin birine bir olay ile bağlantı kurmaya çalıştığın olduğunu gösterir.|
+|Bu değişiklik XAML Hot Reload tarafından desteklenmez ve hata ayıklama oturumu sırasında uygulanmaz.|Hata, denediğiniz değişikliğin XAML etkin yeniden yükleme tarafından desteklenmediğini gösterir. Hata ayıklama oturumunu durdurun, değişikliği yapın ve hata ayıklama oturumunu yeniden başlatın.  |
 
 Desteklendiğini görmek istediğiniz desteklenmeyen bir senaryo bulursanız [bir özellik önerme](../ide/suggest-a-feature.md) seçeneğini kullanarak bize bilgi verin.
 

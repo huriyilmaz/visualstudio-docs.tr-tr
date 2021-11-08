@@ -8,7 +8,7 @@ metadata:
   description: 'Visual Studio’yu kullanarak herhangi bir platform veya cihaz için seçtiğiniz dilde uygulamalar, hizmetler ve araçlar geliştirebilirsiniz.'
   ms.topic: hub-page
   ms.custom: contperf-fy21q1
-  ms.date: 07/16/2021
+  ms.date: 11/08/2021
   ms.author: jmartens
   author: j-martens
   monikerRange: '>=vs-2017'
@@ -23,9 +23,9 @@ highlightedContent:
     - title: Visual Studio IDE'ye hoş geldiniz
       itemType: overview
       url: ../get-started/visual-studio-ide.md
-    - title: Visual Studio 2022 RC
+    - title: Visual Studio 2022
       itemType: whats-new
-      url: /visualstudio/releases/2022/release-notes-preview
+      url: ../ide/whats-new-visual-studio-2022.md
     - title: Visual Studio becerilerinizi geliştirin
       itemType: learn
       url: /learn/browse/?products=vs
@@ -183,7 +183,7 @@ additionalContent:
           summary: 'Web Dağıtımı, InstallShield, NuGet ve Sürekli Tümleştirme gibi özellikleri kullanarak uygulamalarınızı ve kodunuzu paylaşın.'
           url: ../deployment/index.yml
         - title: Sürüm denetimi
-          summary: Git ve git gibi sürüm denetimi teknolojilerini kullanarak kod GitHub.
+          summary: Git ve GitHub gibi sürüm denetimi teknolojilerini kullanarak kodu paylaşabilirsiniz.
           url: ../version-control/index.yml
         - title: DevOps
           summary: 'Azure DevOps Services ile bulutta uygulamalarınızı sürekli derleyin, yayımlayın ve Çevik uygulamalar gerçekleştirin.'

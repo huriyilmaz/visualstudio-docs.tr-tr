@@ -7,15 +7,16 @@ metadata:
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-designers
   ms.topic: landing-page
-  author: jillre
-  ms.author: jillfra
-  ms.date: 10/10/2019
-  ms.openlocfilehash: 3240241636ff81804fed17a39045bae3518ee628
-  ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+  author: TerryGLee
+  ms.author: tglee
+  manager: jmartens
+  ms.date: 11/02/2021
+  ms.openlocfilehash: 8a68c606d172cb53c268fcea5c6c265581e527ee
+  ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/13/2021
-  ms.locfileid: "126726047"
+  ms.lasthandoff: 11/08/2021
+  ms.locfileid: "132001266"
 landingContent:
 - title: XAML hakkında bilgi edinin
   linkLists:
@@ -33,14 +34,16 @@ landingContent:
       url: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
     - text: XAML Tasarım Zamanı Verileri
       url: xaml-designtime-data.md
-    - text: XAML Tasarım Zamanı Örnek Verileri
+    - text: XAML tasarım zamanı örnek verileri
       url: xaml-design-time-sample-data.md
 - title: XAML hatalarını ayıklama
   linkLists:
   - linkListType: overview
     links:
-    - text: XAML kodu çalıştırarak yazma ve hata ayıklama
+    - text: Çalışan XAML kodunu dinamik yeniden yükleme ile yazma ve hata ayıklama
       url: xaml-hot-reload.md
+    - text: Canlı önizleme ile uygulama kullanıcı arabirimini anında yakalama ve düzenleme
+      url: xaml-live-preview.md
     - text: XAML özelliklerini inceleme
       url: inspect-xaml-properties-while-debugging.md
     - text: WPF uygulamalarında hata ayıklama

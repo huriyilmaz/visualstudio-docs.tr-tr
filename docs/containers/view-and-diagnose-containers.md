@@ -7,12 +7,12 @@ ms.topic: how-to
 ms.date: 10/27/2021
 ms.technology: vs-container-tools
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 994804c897165cd5fb0b658163ead79396d3c530
-ms.sourcegitcommit: aff49629012f4d5fa07c75ea0ca5bf53d28aa173
+ms.openlocfilehash: 0170d7e1e84cb5d2a6e37eca271866187f599d58
+ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "131662340"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132002087"
 ---
 # <a name="use-the-containers-window"></a>Kapsayıcılar penceresini kullanma
 
@@ -29,7 +29,7 @@ Kapsayıcılar penceresini kullanarak kapsayıcı görüntüleriyle ilgili bilgi
 :::moniker-end
 :::moniker range=">=vs-2022"
 - [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-- [Visual Studio 2022 RC](https://visualstudio.microsoft.com/downloads) veya [Visual Studio 2019 sürüm 16.4](https://visualstudio.microsoft.com/downloads) veya sonraki bir sürümü.
+- [Visual Studio 2022](https://visualstudio.microsoft.com/downloads) veya [Visual Studio 2019 sürüm 16.4](https://visualstudio.microsoft.com/downloads) veya sonrası.
 
 :::moniker-end
 
@@ -202,24 +202,24 @@ Bir görüntüyü kaldırmak için ağaç görünümde görüntüye sağ tıklay
 Kapsayıcılar penceresi araç çubuğundaki Ayıklama düğmesini kullanarak artık kullanmamanız **durumdaki** kapsayıcıları ve **görüntüleri kolayca** kaldırabilirsiniz.
 
 :::moniker range="vs-2019"
-![Ayıklama düğmesini gösteren ekran görüntüsü.](media/view-and-diagnose-containers/container-window-prune.png)
+![Ayıkla düğmesini gösteren ekran görüntüsü.](media/view-and-diagnose-containers/container-window-prune.png)
 :::moniker-end
 :::moniker range=">=vs-2022"
-![Ayıklama düğmesini gösteren ekran görüntüsü.](media/view-and-diagnose-containers/vs-2022/containers-prune.png)
+![Ayıkla düğmesini gösteren ekran görüntüsü.](media/view-and-diagnose-containers/vs-2022/containers-prune.png)
 :::moniker-end
 
-Kullanılmayan tüm kapsayıcılarınızı kaldırmak istediğinizden emin olmak istemeniz istensin.
+Kullanılmayan kapsayıcılarınızın tümünü kaldırmak istediğinizi onaylamanız istenir.
 
-Görüntüler **sekmesi** seçildiğinde, **Buda düğmesi** tüm dalgalı görüntüleri kaldırmak ister mi diye sorar. Dalgalı görüntüler artık etiketli görüntüyle ilişkilendirilen katmanlardan oluşan görüntülerdir. Bunları kaldırmak bazen disk alanı tasarrufu sağlar.
+**Görüntüler** sekmesi **seçildiğinde, tüm** salgze görüntülerini kaldırmak isteyip istemediğinizi sorar. Salgze görüntüleri, artık etiketli bir görüntüyle ilişkili olmayan katmanların görüntüleridir. Bunların kaldırılması, disk alanının korunmasına yardımcı olur.
 
 ## <a name="configuration-options"></a>Yapılandırma seçenekleri
 
-Kapsayıcıları ve görüntüleri kaldırma veya aynı anda 10'dan fazla kapsayıcı başlatma gibi çeşitli görevler için onay iletişim kutuları yalıtabilirsiniz. İletişim kutusundaki onay kutusunu kullanarak her istemi devre dışı abilirsiniz. Araç Seçenekleri Kapsayıcı Araçları Kapsayıcıları Araç Penceresi'nde bulunan ayarları kullanarak da  >  **bu**  >  **seçenekleri etkinleştirebilirsiniz**  >  **veya devre dışı abilirsiniz.** Bkz. [Kapsayıcı Araçlarını Yapılandırma.](container-tools-configure.md)
+Kapsayıcıları ve görüntüleri kaldırma veya aynı anda 10 ' dan fazla kapsayıcı başlatma gibi çeşitli görevler için onay iletişim kutuları yapılandırılabilir. İletişim kutusunda onay kutusunu kullanarak her bir istemi devre dışı bırakabilirsiniz. Ayrıca, **Araçlar**  >  **Seçenekler**  >  **kapsayıcı araç**  >  **kapsayıcıları araç penceresinde** ayarlar ' da bu seçenekleri etkinleştirebilir veya devre dışı bırakabilirsiniz. Bkz. [kapsayıcı araçlarını yapılandırma](container-tools-configure.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Kapsayıcı Araçlarına Genel Bakış'Visual Studio'da bulunan Kapsayıcı Araçları hakkında [daha fazla bilgi edinebilirsiniz.](overview.md)
+[kapsayıcı araçlarına genel bakış ' ı](overview.md)okuyarak Visual Studio bulunan kapsayıcı araçları hakkında daha fazla bilgi edinin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Visual Studio'de Kapsayıcı Geliştirme](./index.yml)
+[Visual Studio 'da kapsayıcı geliştirme](./index.yml)

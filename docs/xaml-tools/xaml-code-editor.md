@@ -5,18 +5,18 @@ ms.date: 06/16/2020
 ms.topic: overview
 f1_keywords:
 - VS.XamlEditor
-monikerRange: vs-2019
+monikerRange: '>=vs-2019'
 ms.custom: contperf-fy21q4
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-xaml-tools
-ms.openlocfilehash: b99a75dd6c03183b49154a6c3ea4d68edc7130b2
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 92b95174862d7d0a601c4083347ef44d2203ec8e
+ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122130357"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132001344"
 ---
 # <a name="xaml-code-editor"></a>XAML kod düzenleyici
 
@@ -161,13 +161,13 @@ Her bir özelliğin ne olduğu ve nasıl yararlı olduğu aşağıda verilmişti
 
 ### <a name="middle-pane-scroll-bar"></a>Orta bölme, kaydırma çubuğu
 
-Kaydırma çubuğu, kodunda kaydırmadan daha fazlasını yapar. Başka bir kod düzenleyicisi bölmesini açmak için de kullanabilirsiniz. Ayrıca kaydırma çubuğunu kullanarak ek açıklamalar ekleyerek veya farklı görüntü modları kullanarak daha verimli kodlar kodlayabilirsiniz.
+Kaydırma çubuğu, kodunuzu kaydırmaktan daha fazlasını yapar. Başka bir kod düzenleyicisi bölmesini açmak için de kullanabilirsiniz. Ayrıca kaydırma çubuğunu kullanarak ek açıklamalar ekleyerek veya farklı görüntü modları kullanarak daha verimli kodlar kodlayabilirsiniz.
 
 #### <a name="split-the-code-window"></a>Kod penceresini bölme
 
 Kod düzenleyicisinin kaydırma çubuğunda sağ üstte bir **Böl** düğmesi vardır. Bunu seçtiğiniz zaman başka bir kod düzenleyicisi bölmesi açabilirsiniz. Bu, birbirinden bağımsız olarak çalıştırılaları için yararlıdır, bu nedenle bunları farklı konumlarda kod üzerinde çalışmak için kullanabilirsiniz.
 
-![Visual Studio 2019'da bölmenin sağ üst kısmında Böl düğmesi vurgulanmış şekilde XAML kod düzenleyicisinin orta bölmesini gösteren ekran görüntüsü.](media/code-editor-split-window-button.png)
+![Visual Studio 2019'da bölmenin sağ üst kısmında Böl düğmesi vurgulanmış şekilde XAML kod düzenleyicisinin ortadaki bölmesini gösteren ekran görüntüsü.](media/code-editor-split-window-button.png)
 
 Düzenleyici penceresini bölme hakkında daha fazla bilgi için Düzenleyici pencerelerini [yönetme sayfasına](../ide/how-to-manage-editor-windows.md) bakın.
 
@@ -185,7 +185,7 @@ Aşağıdaki özelliklerin çoğu Visual Studio IDE'de evrensel olarak kullanıl
 
 ### <a name="xaml-code-snippets"></a>XAML kod parçacıkları
 
-Kod parçacıkları, sağ tıklama bağlam menüsü komutu Kod parçacığı ekle veya klavye kısayollarının birleşimini (**Ctrl** K ,  Ctrl X ) kullanarak bir kod dosyasına ek olarak yeniden kullanılabilir kodun küçük +   + **bloklarıdır.** [IntelliSense'i,](../ide/using-intellisense.md) hem yerleşik kod parçacıklarında hem de el ile ekleyilen özel kod parçacıklarında çalışacak şekilde XAML kod parçacıklarını göstermeyi desteklemektedir. Bazı ilk gelen XAML kod parçacıkları arasında `#region` , , , ve yer `Column definition` `Row definition` `Setter` `Tag` almaktadır.
+Kod parçacıkları, sağ tıklama bağlam menüsü komutu Kod parçacığı ekle veya klavye kısayollarının birleşimini (**Ctrl** K ,  Ctrl X ) kullanarak kod dosyasına ek olarak yeniden kullanılabilir kodun küçük +   + **bloklarıdır.** [IntelliSense'i,](../ide/using-intellisense.md) hem yerleşik kod parçacıklarında hem de el ile ekleyilen özel kod parçacıklarında çalışacak şekilde XAML kod parçacıklarını göstermeyi desteklemektedir. Bazı ilk gelen XAML kod parçacıkları arasında `#region` , , , ve yer `Column definition` `Row definition` `Setter` `Tag` almaktadır.
 
 ![IntelliSense'te gösterilen XAML kod parçacığı seçenekleriyle XAML kod düzenleyicisi](media/xaml-code-snippets.png "IntelliSense 'de gösterilen XAML kod parçacığı seçenekleri ile XAML kod Düzenleyicisi ekran görüntüsü")
 
@@ -193,7 +193,7 @@ Daha fazla bilgi için Kod parçacıkları [ve](../ide/code-snippets.md) [C# kod
 
 ### <a name="xaml-region-support"></a>XAML #region desteği
 
-2015'Visual Studio başlayarak WPF ve UWP'de XAML geliştiricileri için #region desteği ve daha yakın zamanda [Xamarin.Forms'da](/xamarin/xamarin-forms/user-interface/text/editor/)da kullanılabilir hale getirildi. 2019 Visual Studio'de, destek için artımlı geliştirmeler #region devam edeceğiz. Örneğin, sürüm [16.4](/visualstudio/releases/2019/release-notes-v16.4/) ve #region, siz yazarak başlarken seçenekleri `<!` gösterir.
+2015'Visual Studio başlayarak WPF ve UWP'de XAML geliştiricileri için #region desteği ve daha yakın zamanda [Xamarin.Forms'da](/xamarin/xamarin-forms/user-interface/text/editor/)da kullanılabilir hale getirildi. 2019 Visual Studio'da, destek için artımlı geliştirmeler #region devam edeceğiz. Örneğin, sürüm [16.4](/visualstudio/releases/2019/release-notes-v16.4/) ve #region, siz yazmaya başlanacak şekilde seçenekleri `<!` gösterir.
 
 ![IntelliSense'te gösterilen #region XAML kod düzenleyicisi](media/code-editor-xaml-region.png "IntelliSense 'de gösterilen #region seçenekleri olan XAML kod düzenleyicisinin ekran görüntüsü")
 
@@ -205,7 +205,7 @@ Kodunuzun genişletmek veya daraltmak istediğiniz bölümlerini grup olarak kul
     <!--#endregion-->
 ```
 
-Bölgeler hakkında daha fazla bilgi için #region [(C# Başvurusu) sayfasına](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region/) bakın. Ayrıca kodun bölümlerini genişletme ve daraltma hakkında daha fazla bilgi için, [Bkz. Outlining](../ide/outlining.md) sayfası.
+Bölgeler hakkında daha fazla bilgi için #region [(C# Başvurusu) sayfasına](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region/) bakın. Ayrıca kodun bölümlerini genişletme ve daraltma hakkında daha fazla bilgi için [Bkz. Ana SatırLama](../ide/outlining.md) sayfası.
 
 ### <a name="xaml-comments"></a>XAML yorumları
 
@@ -230,7 +230,7 @@ XAML kodunda görünen ampul simgeleri, kodu [](../ide/quick-actions.md) yeniden
 
 Aşağıda, XAML kodlama deneyiminize nasıl fayda sabilecekleri hakkında birkaç örnek verilmiştir:
 
-- **Gereksiz ad alanlarını kaldırın.** XAML kod düzenleyicisinde gereksiz ad alanları soluk metin olarak görünür. kullanarak imlecinizi gereksiz bir üzerine alırsanız bir ampul görünür. Açılan listeden **Gereksiz Ad** Alanlarını Kaldır seçeneğini tercih ettiyseniz, kaldırabilirsiniz seçeneğinin bir önizlemesini görebilirsiniz.
+- **Gereksiz ad alanlarını kaldırın.** XAML kod düzenleyicisinde gereksiz ad alanları soluk metin olarak görünür. kullanarak imlecinizi gereksiz bir üzerine alırsanız bir ampul görünür. Açılan listeden **Gereksiz Ad** Alanlarını Kaldır seçeneğini tercih ettiyseniz, kaldırabilirsiniz seçeneğinin önizlemesini görebilirsiniz.
 
   ![Hızlı Eylemler ampulden XAML kod düzenleyicisinin Gereksiz Ad Alanlarını Kaldır seçeneği](media/xaml-code-editor-dimmed-namespaces-preview.png "Hızlı eylem ampul kullanılarak görüntülenen XAML kod düzenleyicisinin gereksiz ad alanlarını kaldır seçeneğinin ekran görüntüsü")
 
@@ -244,7 +244,7 @@ Aşağıda, XAML kodlama deneyiminize nasıl fayda sabilecekleri hakkında birka
 
 Koşullu XAML, XAML işaretlemesinde [ApiInformation.IsApiContractPresent](/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent/) yöntemini kullanmanın bir yolunu sağlar. Bu, arkadaki kodu kullanmaya gerek kalmadan bir API'nin varlığına göre özellikleri ayarlamaya ve işaretlemedeki nesnelerin örneğini oluşturmana olanak sağlar.
 
-Daha fazla bilgi için Masaüstü uygulamaları [(XAML](/windows/uwp/debug-test-perf/conditional-xaml/) Adaları) sayfasında Koşullu XAML sayfasına ve Konak [UWP XAML denetimlerine](/windows/apps/desktop/modernize/xaml-islands/) bakın.
+Daha fazla bilgi için Bkz. [Koşullu XAML](/windows/uwp/debug-test-perf/conditional-xaml/) sayfası ve Masaüstü uygulamalarında [Konak UWP XAML denetimleri (XAML Adaları)](/windows/apps/desktop/modernize/xaml-islands/) sayfası.
 
 ### <a name="xaml-structure-visualizer"></a>XAML Yapı Görselleştiricisi
 
@@ -279,7 +279,7 @@ XAML [kod düzenleyicisinin](../ide/reference/options-dialog-box-visual-studio.m
 
 ### <a name="universal-text-editor-options"></a>Evrensel metin düzenleyici seçenekleri
 
-XAML [için](../ide/reference/options-text-editor-xaml-formatting.md) Seçenekler iletişim kutusunda, aşağıdaki ilk üç öğe IDE'nin desteklediği tüm programlama dillerinde Visual Studio evrenseldir. Bu seçenekler ve bunların kullanımı hakkında daha fazla bilgi edinmek için aşağıdaki tabloda yer alan bağlantılı bilgileri ziyaret edin.
+XAML [için](../ide/reference/options-text-editor-xaml-formatting.md) Seçenekler iletişim kutusunda, aşağıdaki ilk üç öğe, IDE'nin desteklediği tüm programlama dillerinde Visual Studio evrenseldir. Bu seçenekler ve bunların kullanımı hakkında daha fazla bilgi edinmek için aşağıdaki tabloda yer alan bağlantılı bilgileri ziyaret edin.
 
 |Name  |Daha fazla bilgi  |
 |---------|---------|
@@ -308,5 +308,3 @@ Uygulamanızı hata ayıklama modunda çalıştırırken kodunuzun gerçek zaman
 - [Visual Studio kod düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
 - [UWP uygulamalarında XAML](/windows/uwp/xaml-platform/xaml-overview/)
 - [Xamarin. Forms uygulamalarındaki XAML](/xamarin/xamarin-forms/xaml/)
-- [Xamarin mobil uygulama geliştirme (Mac)](/visualstudio/mac/xamarin/)
-- [mac için Visual Studio 2019-ıde turu (Mac)](/visualstudio/mac/ide-tour/)

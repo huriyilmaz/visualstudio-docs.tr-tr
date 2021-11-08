@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.topic: overview
 ms.date: 10/27/2021
 ms.technology: vs-container-tools
-ms.openlocfilehash: 4b9e4925334c80e8ba1b62a8dafe5eb84e756d9b
-ms.sourcegitcommit: aff49629012f4d5fa07c75ea0ca5bf53d28aa173
+ms.openlocfilehash: dccb2e4aab4dff6af5b27404e91bca6124ed3785
+ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "131662102"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132001370"
 ---
 # <a name="visual-studio-container-tools-for-docker"></a>Visual Studio Docker için kapsayıcı araçları
 
@@ -67,7 +67,7 @@ Visual Studio 2019 sürüm 16,4 ve sonraki sürümlerde **kapsayıcılar** pence
 ## <a name="prerequisites"></a>Önkoşullar
 
 * [Docker Masaüstü](https://www.docker.com/get-docker)
-* **Web geliştirme**, **Azure araçları** iş yükü ve/veya **.net masaüstü geliştirme** iş yükü yüklü olan [2022 RC Visual Studio](https://visualstudio.microsoft.com/downloads)
+* **Web geliştirme**, **Azure araçları** iş yükü ve/veya **.net masaüstü geliştirme** iş yükü yüklü [Visual Studio 2022](https://visualstudio.microsoft.com/downloads)
 * Bir Azure aboneliği Azure Container Registry yayımlamak için. [Ücretsiz deneme Için kaydolun](https://azure.microsoft.com/offers/ms-azr-0044p/).
 
 ## <a name="docker-support-in-visual-studio"></a>Visual Studio Docker desteği

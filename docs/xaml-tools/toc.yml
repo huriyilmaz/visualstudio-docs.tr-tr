@@ -22,7 +22,7 @@
       href: debugging-or-disabling-project-code-in-xaml-designer.md
     - name: XAML Tasarım Zamanı Verileri
       href: xaml-designtime-data.md
-    - name: XAML Tasarım Zamanı Örnek Verileri
+    - name: XAML tasarım zamanı örnek verileri
       href: xaml-design-time-sample-data.md
     - name: Visual Studio için Blend
       items:
@@ -60,6 +60,8 @@
           href: xaml-hot-reload.md
         - name: Sorun giderme
           href: xaml-hot-reload-troubleshooting.md
+    - name: XAML canlı önizlemesi
+      href: xaml-live-preview.md
     - name: Blend'de XAML hatalarını ayıklama
       href: debug-xaml-in-blend.md
     - name: UWP uygulamalarında hata ayıklama >>

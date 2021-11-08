@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 10/27/2021
 ms.technology: vs-container-tools
 ms.topic: quickstart
-ms.openlocfilehash: 99696d6c0a3b5603ce173a6e2c7a3171aac76a4b
-ms.sourcegitcommit: aff49629012f4d5fa07c75ea0ca5bf53d28aa173
+ms.openlocfilehash: d38bb81b1f46c4f97b02507a13431cf02b8391e2
+ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "131662580"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132001331"
 ---
 # <a name="quickstart-docker-in-visual-studio"></a>Hızlı Başlangıç: Visual Studio'da Docker
 
@@ -33,7 +33,7 @@ Visual Studio ile kapsayıcılı .NET, ASP.NET ve ASP.NET Core uygulamalarını 
 ## <a name="prerequisites"></a>Önkoşullar
 
 * [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-* Visual Studio Geliştirme, **Azure** Araçları iş yükü ve/veya **.NET Core platformlar** arası geliştirme iş yükü yüklü [2022 RC](https://visualstudio.microsoft.com/downloads)
+* Visual Studio Geliştirme, **Azure** Araçları iş yükü ve/veya **.NET Core** platformlar arası geliştirme iş yükü yüklü olarak [2022'ye](https://visualstudio.microsoft.com/downloads) geçiş
 * [.NET Core ile geliştirme](https://dotnet.microsoft.com/download/dotnet-core/) için .NET Core Geliştirme Araçları
 * Azure aboneliği olan Azure Container Registry yayımlamak için. [Ücretsiz deneme sürümüne kaydolma.](https://azure.microsoft.com/free/dotnet/)
 
@@ -81,7 +81,7 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 ```
 
-Yukarıdaki *Dockerfile,* Microsoft Container Registry [(MCR)](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) .NET 6 görüntü görüntüsünü temel almaktadır ve projenizi oluşturma ve kapsayıcıya ekleyerek temel görüntüyü değiştirme yönergelerini içerir. Temel görüntüyü .NET Framework görüntü farklı olur.
+Yukarıdaki *Dockerfile,* Microsoft Container Registry [(MCR)](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) .NET 6 görüntü görüntüsünü temel almaktadır ve projenizi oluşturma ve kapsayıcıya ekleyerek temel görüntüyü değiştirme yönergelerini içerir. .NET Framework kullanıyorsanız temel görüntü farklı olur.
 
 Yeni proje iletişim kutusunun HTTPS için **yapılandır onay** kutusu işaretlendiğinde *Dockerfile iki bağlantı* noktasını kullanıma sağlar. HTTP trafiği için bir bağlantı noktası kullanılır; diğer bağlantı noktası HTTPS için kullanılır. Onay kutusu işaretli değilse, HTTP trafiği için tek bir bağlantı noktası (80) kullanıma hazır olur.
 
@@ -115,7 +115,7 @@ Daha fazla bilgi için [bkz. Kapsayıcılar penceresini kullanma.](view-and-diag
 Uygulamanın geliştirme ve hata ayıklama döngüsü tamamlandıktan sonra, uygulamanın üretim görüntüsünü oluşturabilirsiniz.
 
 1. Yapılandırma açılan listesinde Yayın'a **ve** uygulamayı derlemeye devam edin.
-1. Içinde projenize sağ tıklayın ve **Çözüm Gezgini'yi** **seçin.**
+1. Çözüm Gezgini'da **projenize sağ tıklayın ve** Yayımla'yı **seçin.**
 1. Yayımla **iletişim** kutusunda **Docker Container Registry** seçin.
 
    ![Yayımla iletişim kutusunun ekran görüntüsü - Docker Container Registry.](media/container-tools/vs-2022/docker-container-registry.png)
@@ -136,17 +136,17 @@ Uygulamanın geliştirme ve hata ayıklama döngüsü tamamlandıktan sonra, uyg
 
     ![Visual Studio oluştur iletişim kutusunun Azure Container Registry görüntüsü.](media/container-tools/vs-2022/vs-azure-container-registry-provisioning-dialog.png)
 
-1. **Oluştur**’a tıklayın. Yayımla **iletişim** kutusunda artık oluşturulan kayıt defteri görüntülenir.
+1. **Oluştur**’a tıklayın. **Yayımla** iletişim kutusunda artık oluşturulan kayıt defteri görüntülenir.
 
    ![Oluşturulan ayarları gösteren Yayımla iletişim Azure Container Registry görüntüsü.](media/container-tools/vs-2022/created-azure-container-registry.png)
 
-1. Kapsayıcı **görüntülerinizi** Azure'da yeni oluşturulan kayıt defterinde yayımlama işlemini tamamlamak için Son'a tıklayın.
+1. Kapsayıcı **görüntülerinizi** Azure'da yeni oluşturulan kayıt defterine yayımlama işlemini tamamlamak için Son'a tıklayın.
 
    :::image type="content" source="media/container-tools/vs-2022/publish-succeeded.png" alt-text="Başarılı yayımlama işlemini gösteren ekran görüntüsü." lightbox="media/container-tools/vs-2022/publish-succeeded.png" :::
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık kapsayıcıyı kayıt defterinden Docker görüntülerini çalıştırabilen herhangi bir ana bilgisayar [örneğine](/azure/container-instances/container-instances-tutorial-deploy-app)Azure Container Instances.
+Artık kapsayıcıyı kayıt defterinden Docker görüntülerini çalıştırabilen herhangi bir ana bilgisayar örneğine [Azure Container Instances.](/azure/container-instances/container-instances-tutorial-deploy-app)
 
 ::: moniker-end
 

@@ -104,6 +104,16 @@
           href: mixed-code-and-missing-information-in-the-call-stack-window.md
     - name: Kodu duraklatma ve devam ettirme
       items:
+        - name: Çalışırken Yeniden Yükleme
+          href: hot-reload.md
+        - name: XAML Çalışırken Yeniden Yükleme
+          items:
+            - name: XAML kodu çalıştırarak yazma ve hata ayıklama
+              href: ../xaml-tools/xaml-hot-reload.md?toc=/visualstudio/debugger/toc.json
+            - name: XAML Çalışırken Yeniden Yükleme ile ilgili sorunları giderme
+              href: ../xaml-tools/xaml-hot-reload-troubleshooting.md?toc=/visualstudio/debugger/toc.json
+        - name: F# için Düzenle ve Devam Et desteklenmez
+          href: edit-and-continue-not-supported-for-f-hash.md
         - name: Kodu düzenleme ve hata ayıklamaya devam etme
           href: edit-and-continue.md
         - name: Düzenle ve Devam Et'i etkinleştirme veya devre dışı bırakma
@@ -130,14 +140,6 @@
               href: edit-and-continue-visual-basic.md
             - name: Düzenle ve Devam Et ile kesme modunda düzenleme uygulama
               href: how-to-apply-edits-in-break-mode-with-edit-and-continue.md
-        - name: XAML Çalışırken Yeniden Yükleme
-          items:
-            - name: XAML kodu çalıştırarak yazma ve hata ayıklama
-              href: ../xaml-tools/xaml-hot-reload.md?toc=/visualstudio/debugger/toc.json
-            - name: XAML Çalışırken Yeniden Yükleme ile ilgili sorunları giderme
-              href: ../xaml-tools/xaml-hot-reload-troubleshooting.md?toc=/visualstudio/debugger/toc.json
-        - name: F# için Düzenle ve Devam Et desteklenmez
-          href: edit-and-continue-not-supported-for-f-hash.md
     - name: Çıkış penceresine kaydetme
       href: using-tracepoints.md
     - name: Hata ayıklayıcısı verilerini görüntüleme

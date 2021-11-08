@@ -10,19 +10,19 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b016a52efaf247f2556c44905a81cd5af00a525
-ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
+ms.openlocfilehash: b45b1baa351014d5ebe410e3154fc784c4e50b78
+ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "130011451"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132001536"
 ---
 # <a name="manage-project-and-solution-properties"></a>Proje ve çözüm özelliklerini yönetme
 
 Projelerin, derleme, hata ayıklama, test ve dağıtmanın birçok yönünü yöneten özellikleri vardır. Bazı özellikler tüm proje türleri arasında ortaktır ve bazıları belirli diller veya platformlar için benzersizdir.
 
 > [!TIP]
-> [Visual Studio 2022 RC](/visualstudio/releases/2022/release-notes-preview)'de, proje özelliklerine yeni işlevler ekledik ve kullanıcı arabirimini yeniledi. daha fazla bilgi edinmek için bkz. [**revaed Project Properties uı**](https://devblogs.microsoft.com/visualstudio/revamped-project-properties-ui/) blog gönderisi.
+> [Visual Studio 2022](/visualstudio/releases/2022/release-notes)' de, proje özelliklerine yeni işlevler ekledik ve kullanıcı arabirimini yeniledi. daha fazla bilgi edinmek için bkz. [**revaed Project Properties uı**](https://devblogs.microsoft.com/visualstudio/revamped-project-properties-ui/) blog gönderisi.
 
 **Çözüm Gezgini** ' de proje düğümüne sağ tıklayıp **Özellikler**' i seçerek veya menü çubuğundaki arama kutusuna **Özellikler** yazarak ve sonuçlardan **Özellikler penceresi** ' ni seçerek Proje özelliklerine erişirsiniz.
 

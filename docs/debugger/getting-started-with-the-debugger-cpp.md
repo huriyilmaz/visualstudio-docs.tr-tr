@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: c1a469e303ec112cd0a025edb87587bf0816ff99
-ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
+ms.openlocfilehash: 7b0c724c226d516c3c27996844bd986b9f34eb59
+ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "130011503"
+ms.lasthandoff: 11/08/2021
+ms.locfileid: "132001869"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Öğretici: Visual Studio kullanarak C++ kodunun hatalarını ayıklamayı öğrenin
 
@@ -62,7 +62,7 @@ Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visua
 
 ::: moniker range="vs-2022"
 
-zaten 2022 RC Visual Studio yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio 2022 önizleme indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına gidin.
+zaten 2022 Visual Studio yüklemediyseniz, ücretsiz olarak yüklemek için [Visual Studio 2022 indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına gidin.
 
 ::: moniker-end
 
@@ -145,7 +145,7 @@ iş yükünü yüklemeniz gerekir, ancak zaten Visual Studio sahipseniz **araçl
 
 ## <a name="start-the-debugger"></a>Hata ayıklayıcıyı başlatın!
 
-1. Hata ayıklama araç çubuğunda **F5** tuşuna basın (hata **Ayıkla > Başlat**) ![veya hata](../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") **ayıklamayı** Başlat düğmesine basın.
+1. Hata ayıklama araç çubuğunda **F5** tuşuna basın (hata **Ayıkla > Başlat**) ![veya hata](../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklamayı Başlat") **ayıklamayı** Başlat düğmesine basın.
 
      **F5** uygulama işlemine eklenen hata ayıklayıcı ile uygulamayı başlatır, ancak şimdi kodu incelemek için özel bir şey yapmadık. Bu nedenle uygulama yalnızca konsol çıkışını görür ve görürsünüz.
 
@@ -164,7 +164,7 @@ iş yükünü yüklemeniz gerekir, ancak zaten Visual Studio sahipseniz **araçl
 
      Bu öğreticide, hata ayıklayıcıyı kullanarak bu uygulamaya daha yakından bakacağız ve hata ayıklayıcı özelliklerine göz atalım.
 
-2. Kırmızı durma ![hata ayıklamayı Durdur](../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") düğmesine (**SHIFT**  +  **F5**) basarak hata ayıklayıcıyı durdurun.
+2. Kırmızı durma ![hata ayıklamayı Durdur](../debugger/media/dbg-tour-stop-debugging.png "Hata Ayıklamayı Durdurma") düğmesine (**SHIFT**  +  **F5**) basarak hata ayıklayıcıyı durdurun.
 
 3. Konsol penceresinde, bir tuşa basarak konsol penceresini kapatmak için **ENTER** tuşuna basın.
 
@@ -174,11 +174,11 @@ iş yükünü yüklemeniz gerekir, ancak zaten Visual Studio sahipseniz **araçl
 
     `name += letters[i];`
 
-    Kesme noktasını ayarladığınız yerde kırmızı bir daire ![kesme noktası](../debugger/media/dbg-breakpoint.png "Ilı") belirir.
+    Kesme noktasını ayarladığınız yerde kırmızı bir daire ![kesme noktası](../debugger/media/dbg-breakpoint.png "Kesme noktası") belirir.
 
     Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliklerinden biridir. bir kesme noktası Visual Studio, çalışan kodunuzun nerede askıya alınacağını gösterir; böylece değişkenlerin değerlerine veya bellek davranışına ya da kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
 
-2. **F5** tuşuna basın veya hata **ayıklamayı Başlat** ![düğmesine basın](../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat"), uygulama başlar ve hata ayıklayıcı, kesme noktasını ayarladığınız kod satırına çalışır.
+2. **F5** tuşuna basın veya hata **ayıklamayı Başlat** ![düğmesine basın](../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklamayı Başlat"), uygulama başlar ve hata ayıklayıcı, kesme noktasını ayarladığınız kod satırına çalışır.
 
     ![Kesme noktası ayarlama ve isabet](../debugger/media/get-started-set-breakpoint-cpp.png)
 
@@ -202,7 +202,7 @@ iş yükünü yüklemeniz gerekir, ancak zaten Visual Studio sahipseniz **araçl
 
      Sarı işaretçi `SendMessage` yöntemine ilerler.
 
-     ![Koda geçmek için F11 kullanın](../debugger/media/get-started-f11-cpp.png "F10 adımla")
+     ![Koda geçmek için F11 kullanın](../debugger/media/get-started-f11-cpp.png "F10 Içine Adımla")
 
      F11, **adımla** komutuna ve aynı anda uygulama yürütmeyi tek bir ifadeye ilerletir. F11, yürütme akışını en ayrıntılı incelemek için iyi bir yoldur. (Kod aracılığıyla daha hızlı hareket etmek için diğer bazı seçenekleri de göstereceğiz.) Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan koddan atlar (daha fazla ayrıntı istiyorsanız, bkz. [yalnızca kendi kodum](../debugger/just-my-code.md)).
 
@@ -218,7 +218,7 @@ iş yükünü yüklemeniz gerekir, ancak zaten Visual Studio sahipseniz **araçl
 
 1. Yöntem çağrısında duraklalarken **F10** tuşuna basın (veya bir kez **Hata Ayıkla > adımla**).
 
-     ![Kod üzerinde adımla F10 kullanın](../debugger/media/get-started-step-over-cpp.png "F10 adımla")
+     ![Kod üzerinde adımla F10 kullanın](../debugger/media/get-started-step-over-cpp.png "F10 Adım At")
 
      Hata ayıklayıcının yönteme adımla ilgili bu zamana dikkat edin `SendMessage` . **F10** uygulama kodunuzda işlevlere veya yöntemlere adımla hata ayıklayıcıyı ilerletir (kod yine de çalıştırılır). Yöntem çağrısında **F10** tuşuna basarak `SendMessage` ( **F11** yerine), için uygulama kodu atlandık `SendMessage` (Bu, şu anda ilgilenmiyor olabilir). Kodunuzda taşımanın farklı yolları hakkında daha fazla bilgi için bkz. [hata ayıklayıcıdaki koda gitme](../debugger/navigating-through-code-with-the-debugger.md).
 
@@ -231,107 +231,107 @@ iş yükünü yüklemeniz gerekir, ancak zaten Visual Studio sahipseniz **araçl
      ![Tıklama için Çalıştır özelliğini kullanın](../debugger/media/get-started-run-to-click-cpp.png "Tıklanan Satıra Kadar Çalıştır")
 
    > [!NOTE]
-   > **Tıklama Için Çalıştır düğmesi '** de yenidir [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] . (Yeşil ok düğmesini görmüyorsanız, hata ayıklayıcıyı doğru yere ilerletmek için bu örnekte **F11** kullanın.)
+   > Tıklayarak **Çalıştır düğmesi** içinde [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] yenidir. (Yeşil ok düğmesini görmüyorsanız hata ayıklayıcıyı doğru yere ilerlemek için bu örnekte **F11** kullanın.)
 
-2. **Tıklama düğmesine tıklayarak** ![' ye tıklayın.](../debugger/media/dbg-tour-run-to-click.png "RunToClick")
+2. **Tıklarken Çalıştır düğmesine Tıklayarak** ![Çalıştır'a tıklayın.](../debugger/media/dbg-tour-run-to-click.png "RunToClick")
 
-    Hata ayıklayıcı `std::wcout` işlevine ilerler.
+    Hata ayıklayıcısı işlevine `std::wcout` ilerler.
 
-    Bu düğme kullanıldığında geçici bir kesme noktası ayarlamaya benzer. **' I tıklatarak** , uygulama kodunun görünür bir bölgesi içinde hızlıca elde etmek için kullanışlıdır (herhangi bir açık dosyaya tıklayabilirsiniz).
+    Bu düğmeyi kullanmak, geçici bir kesme noktası ayarlamaya benzer. **Tıklamak için** Çalıştır, uygulama kodunun görünür bir bölgesi içinde hızlıca dolaşarak (herhangi bir açık dosyaya tıklarsınız) kullanışlıdır.
 
-## <a name="restart-your-app-quickly"></a>Uygulamanızı hızlıca yeniden başlatın
+## <a name="restart-your-app-quickly"></a>Hızlı bir şekilde uygulamayı yeniden başlatın
 
-Hata ayıklama araç çubuğundaki uygulamayı **yeniden** ![Başlat](../debugger/media/dbg-tour-restart.png "RestartApp") (**CTRL**  +  **SHIFT**  +  **F5**) düğmesine tıklayın.
+Hata Ayıklama **Araç Çubuğunda** ![Uygulamayı Yeniden](../debugger/media/dbg-tour-restart.png "RestartApp") Başlat düğmesine tıklayın (**Ctrl**  +  **Shift**  +  **F5**).
 
-**Yeniden Başlat**'a bastığınızda, uygulamanın durdurulması ve hata ayıklayıcının yeniden başlatılması ile zaman kazandırır. Hata ayıklayıcı, kodu yürüterek vuran ilk kesme noktasında duraklatılır.
+Yeniden **Başlat'a bassanız,** uygulamayı durdurmak ve hata ayıklayıcıyı yeniden başlatmak yerine zamandan tasarruf sağlar. Hata ayıklayıcısı, kod yürüterek isabet alan ilk kesme noktası üzerinde duraklatılır.
 
-Hata ayıklayıcı daha önce döngü içinde ayarladığınız kesme noktasında yeniden durmaktadır `for` .
+Hata ayıklayıcı, daha önce döngü içinde ayaranı kesme noktası sırasında yeniden `for` durur.
 
-## <a name="inspect-variables-with-data-tips"></a>Veri ipuçları ile değişkenleri inceleyin
+## <a name="inspect-variables-with-data-tips"></a>Veri ipuçlarıyla değişkenleri inceleme
 
-Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en yararlı özelliklerinden biridir ve bunu yapmak için farklı yollar vardır. Genellikle, bir sorunu ayıklamaya çalıştığınızda, değişkenlerin belirli bir zamanda sahip olmalarını istediğiniz değerleri depolayıp depoladığını bulmaya çalışıyorsunuz.
+Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en kullanışlı özelliklerindendir ve bunu yapmak için farklı yollar vardır. Genellikle, bir sorunda hata ayıklamaya çalışırken değişkenlerin belirli bir zamanda sahip olmasını beklediğiniz değerleri depolayarak depolamaya çalışmaya çalıştığınız olur.
 
-1. İfadede duraklalarken `name += letters[i]` , değişkenin üzerine gelin `letters` ve varsayılan değerini görürsünüz `size={10}` .
+1. deyimini `name += letters[i]` duraklatırken değişkeninin üzerine `letters` gelin ve varsayılan değeri olduğunu `size={10}` görüyorsunuz.
 
 1. Değişkenin `letters` içerdiği tüm öğeleri içeren özelliklerini görmek için değişkeni genişletin.
 
-1. Sonra, değişkenin üzerine gelin `name` ve geçerli değerini boş bir dize olarak görürsünüz.
+1. Ardından değişkeninin `name` üzerine gelin ve geçerli değerinin boş bir dize olduğunu görüyorsunuz.
 
-1. Her seferinde birkaç kez yinelemek için **F5** tuşuna basın (veya **hata ayıklama**  >  **devam** edin) `for` , kesme noktasında tekrar duraklamanın ve `name` değeri her seferinde, değişkenin üzerine gelindiğinde.
+1. Döngüde birkaç kez tekrarlama, kesme noktası üzerinde yeniden duraklatma ve değerini kontrol etmek için her zaman değişkenin üzerine gelme için **F5** 'e (veya Devam Et)'e birkaç kez  >   `for` `name` basın.
 
-     ![Veri ipucunu görüntüleme](../debugger/media/get-started-data-tip-cpp.png "Veri Ipucunu görüntüleme")
+     ![Veri ipucu görüntüleme](../debugger/media/get-started-data-tip-cpp.png "Veri İpucu Görüntüleme")
 
-     Değişkenin değeri, döngü her tekrarında değişir ve `for` değerlerini, sonra, vb. gösterir `f` `fr` `fre` .
+     Değişkenin değeri, döngüde her yineleme ile birlikte değişir ve ardından `for` , ve gibi değerleri `f` `fr` `fre` gösterir.
 
-     Genellikle, hata ayıklarken, değişkenleri üzerinde özellik değerlerini denetlemeye yönelik hızlı bir yol isteyeceksiniz ve bu değerlerin depolanmasını beklediğinizi ve veri ipuçları bunu yapmanın iyi bir yoludur.
+     Hata ayıklama sırasında genellikle değişkenlerde özellik değerlerini denetlemenin hızlı bir yolunu, depolamasını beklediğiniz değerleri depolayarak depolamalarını isteyip istemediklerini ve veri ipuçlarının bunu yapmak için iyi bir yol olup olmadığını görmek istersiniz.
 
-## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Oto ve Yereller pencerelerinde değişkenleri İnceleme
+## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Otomatikler ve Yereller pencereleriyle değişkenleri inceleme
 
-1. Kod düzenleyicisinin alt kısmındaki **oto** penceresine bakın.
+1. Kod **düzenleyicisinin en** altındaki Otomatikler penceresine bakın.
 
-    kapatılmışsa, **hata ayıklayıcıda hata ayıkla**  >  **Windows**  >  **oto**' yi seçerek açın.
+    Kapalı ise Hata Ayıkla'ya veya Otomatikler'e göre hata ayıkla'Windows   >    >  **ayıklayıcıda duraklatılmış olarak açın.**
 
-    **Oto** penceresinde, değişkenleri ve bunların geçerli değerlerini görürsünüz. **Oto** penceresi, geçerli satırda veya önceki satırda kullanılan tüm değişkenleri gösterir (dile özgü davranışa yönelik belgelere bakın).
+    Otomatikler **penceresinde** değişkenleri ve bunların geçerli değerini görebilirsiniz. Otomatikler **penceresinde** geçerli satırda veya önceki satırda kullanılan tüm değişkenler gösterilir (Dile özgü davranış için belgeleri kontrol edin).
 
-1. Ardından, **Yereller** penceresinin yanındaki bir sekmede **Locals** penceresine bakın.
+1. Ardından, Otomatikler **penceresinin** yanındaki sekmede Yereller **penceresine** bakın.
 
-1. Değişkenini, `letters` içerdiği öğeleri göstermek için genişletin.
+1. Içerdiği `letters` öğeleri göstermek için değişkeni genişletin.
 
-     ![Locals penceresinde değişkenleri İnceleme](../debugger/media/get-started-locals-window-cpp.png "Yereller penceresi")
+     ![YerelLer Penceresinde değişkenleri inceleme](../debugger/media/get-started-locals-window-cpp.png "YerelLer Penceresi")
 
-    **Yereller** penceresi, geçerli yürütme bağlamı olan geçerli [kapsamda](https://www.wikipedia.org/wiki/Scope_(computer_science))olan değişkenleri gösterir.
+    **YerelLer** penceresi, geçerli kapsamda olan, yani [geçerli](https://www.wikipedia.org/wiki/Scope_(computer_science))yürütme bağlamındaki değişkenleri gösterir.
 
-## <a name="set-a-watch"></a>İzleme ayarlama
+## <a name="set-a-watch"></a>Saat ayarlama
 
-1. Ana kod Düzenleyicisi penceresinde değişkene sağ tıklayın `name` ve **Gözcü Ekle**' yi seçin.
+1. Ana kod düzenleyicisi penceresinde değişkenine sağ tıklayın ve İzleme `name` **Ekle'yi seçin.**
 
-    **İzleme** penceresi, kod düzenleyicisinin en altında açılır. Bir gözü tutmak istediğiniz bir değişken (veya bir ifade) belirtmek için bir **Gözcü** penceresi kullanabilirsiniz.
+    Kod  düzenleyicisinin alt kısmında İzleme penceresi açılır. İzleme penceresi **kullanarak** göz tutmak istediğiniz bir değişken (veya ifade) belirtebilirsiniz.
 
-    Artık değişkende bir izleme kümesi vardır `name` ve hata ayıklayıcıda geçiş yaparken değer değişikliğini görebilirsiniz. Diğer değişken pencerelerinin aksine, **Gözcü** penceresi her zaman izlemekte olduğunuz değişkenleri gösterir (kapsam dışında gri renkte gösterilir).
+    Artık değişkende bir izleme kümemiz var ve hata ayıklayıcıda ilerlerken `name` değerinin değişti olduğunu görüyorsunuz. Diğer değişken pencerelerinin aksine, **İzle** penceresi her zaman izlediğiniz değişkenleri gösterir (kapsam dışındayken bunlar gri renkte olur).
 
-## <a name="examine-the-call-stack"></a>Çağrı yığınını inceleyin
+## <a name="examine-the-call-stack"></a>Çağrı yığınını inceleme
 
-1. Döngüde durakladığında `for` , varsayılan olarak sağ alt bölmede açık olan **çağrı yığını** penceresine tıklayın.
+1. Döngüde duraklatılmışken, varsayılan olarak sağ alt bölmede açık `for` olan Çağrı Yığını penceresine tıklayın. 
 
-    kapalıysa, **hata** ayıklayıcı  >  **Windows**  >  **çağrı yığını**' nı seçerek hata ayıklayıcıda duraklalarken açın.
+    Kapalı ise, Çağrı Yığınında Hata Ayıkla'yı seçerek hata **ayıklayıcıda**  >  **duraklatılmış Windows**  >  **açın.**
 
-2. Yöntemde hata ayıklayıcı duraklatıldığını görene kadar birkaç kez **F11** ' e tıklayın `SendMessage` . **Çağrı yığını** penceresine bakın.
+2. Yönteminde hata ayıklayıcının duraklatılmış olduğunu görene kadar **F11'e** birkaç kez `SendMessage` tıklayın. Çağrı Yığını **penceresine** bakın.
 
-    ![Çağrı yığınını inceleyin](../debugger/media/get-started-call-stack-cpp.png "ExamineCallStack")
+    ![Çağrı yığınını inceleme](../debugger/media/get-started-call-stack-cpp.png "ExamineCallStack")
 
-    Çağrı yığını penceresi, yöntemlerin ve işlevlerin hangi sırada **çağrılacağını** gösterir. Üstteki satırda geçerli işlev ( `SendMessage` Bu uygulamadaki yöntemi) gösterilir. İkinci satır, `SendMessage` `main` yönteminden çağrılan ve bu şekilde devam eden gösterir.
+    Çağrı **Yığını** penceresi, yöntemlerin ve işlevlerin çağrıldığı sırayı gösterir. Üst satır geçerli işlevi (bu `SendMessage` uygulamanın yöntemi) gösterir. İkinci satır, `SendMessage` yönteminin çağrıl `main` olduğunu gösterir ve bu şekilde devam etti.
 
    > [!NOTE]
-   > **Çağrı yığını** penceresi, tutulma gibi bazı NDES 'Teki hata ayıklama perspektifine benzer.
+   > Çağrı **Yığını penceresi,** Eclipse gibi bazı IDE'lerde Hata Ayıklama perspektifi ile benzerdir.
 
-    Çağrı yığını, bir uygulamanın yürütme akışını incelemek ve anlamak için iyi bir yoldur.
+    Çağrı yığını, bir uygulamanın yürütme akışını incelemek ve anlamak için iyi bir yol sağlar.
 
-    Bir kod satırına çift tıklayarak bu kaynak koda bakabilir ve ayrıca hata ayıklayıcı tarafından incelenen geçerli kapsamı da değiştirebilirsiniz. Bu eylem, hata ayıklayıcıyı ilerlemez.
+    Bir kod satırına çift tıklar ve bu koda göz atabilir ve hata ayıklayıcı tarafından denetlenen geçerli kapsamı da değiştirir. Bu eylem hata ayıklayıcıyı ilerleten bir eylem değildir.
 
-    Ayrıca, **çağrı yığını** penceresindeki diğer işlemleri yapmak için sağ tıklama menülerini de kullanabilirsiniz. Örneğin, belirtilen işlevlere kesme noktaları ekleyebilir, çalışma hata ayıklayıcıyı kullanarak Imleç ' i **Imlece** ilerletebilirsiniz ve kaynak kodu İnceleme ' ye gidebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: çağrı yığınını İnceleme](../debugger/how-to-use-the-call-stack-window.md).
+    Başka şeyler yapmak için Çağrı Yığını penceresinden sağ **tıklama** menülerini de kullanabilirsiniz. Örneğin, belirtilen işlevlere kesme noktaları eklemek, İmleçte Çalıştır'ı kullanarak hata ayıklayıcıyı **ilerletin** ve kaynak kodu incelemeye gidebilirsiniz. Daha fazla bilgi için, [bkz. How to: Examine the Call Stack](../debugger/how-to-use-the-call-stack-window.md).
 
 ## <a name="change-the-execution-flow"></a>Yürütme akışını değiştirme
 
-1. İşlevi çalıştırmak için **F11** tuşuna iki kez basın `std::wcout` .
+1. İşlevi **çalıştırmak için F11'e** iki kez `std::wcout` basın.
 
-1. Yöntem çağrısında hata ayıklayıcı duraklatıldığında `SendMessage` , sol taraftaki sarı oku (yürütme işaretçisi) almak için fareyi kullanın ve sarı oku bir satır yukarı doğru aşağı taşıyın `std::wcout` .
+1. Hata ayıklayıcı yöntem çağrısında duraklatılmış şekilde, fareyle sol tarafta sarı oku (yürütme işaretçisi) alıp sarı oku bir satır yukarı, geri `SendMessage` doğru hareket `std::wcout` ettirin.
 
-1. **F11** tuşuna basın.
+1. **F11 tuşuna basın.**
 
-    Hata ayıklayıcı işlevi yeniden çalıştırır `std::wcout` (bunu konsol penceresi çıktısında görürsünüz).
+    Hata ayıklayıcısı işlevi yeniden `std::wcout` çalıştırıyor (konsol penceresi çıkışında bunu görüyorsunuz).
 
-    Yürütme akışını değiştirerek, farklı kod yürütme yollarını test etme veya hata ayıklayıcıyı yeniden başlatmanıza gerek kalmadan kodu yeniden çalıştırma gibi işlemleri yapabilirsiniz.
+    Yürütme akışını değiştirerek, farklı kod yürütme yollarını test etmek veya hata ayıklayıcıyı yeniden başlatmadan kodu yeniden çalıştırma gibi şeyler yapabiliriz.
 
     > [!WARNING]
-    > Genellikle bu özellikle dikkatli olmanız ve araç ipucunda bir uyarı görmeniz gerekir. Diğer uyarıları da görebilirsiniz. İşaretçinin taşınması uygulamanızı önceki bir uygulama durumuna döndüremezsiniz.
+    > Genellikle bu özellikle dikkatli olmalısınız ve araç ipucunda bir uyarı görüyorsunuz. Başka uyarılar da görebilir. İşaretçiyi hareket ettiren uygulama önceki bir uygulama durumuna geri döndürülebilir.
 
-1. Uygulamayı çalıştırmaya devam etmek için **F5** tuşuna basın.
+1. Uygulamayı **çalıştırmaya devam** etmek için F5 tuşuna basın.
 
-    Tebrikler, bu öğreticiyi tamamlama!
+    Tebrikler, bu öğreticiyi tamamladıktan sonra!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, hata ayıklayıcıyı başlatma, kod adım adım ve değişkenleri İnceleme hakkında öğrendiniz. Hata ayıklayıcı özelliklerine ve daha fazla bilgi için bağlantılarla birlikte yüksek düzeyde bir görünüm sağlamak isteyebilirsiniz.
+Bu öğreticide hata ayıklayıcıyı başlatmayı, kodu adım adım incelemeyi ve değişkenleri incelemeyi öğrendiniz. Daha fazla bilgi için bağlantılarla birlikte hata ayıklayıcı özelliklerine üst düzey bir bakış elde etmek iyi olabilir.
 
 > [!div class="nextstepaction"]
 > [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

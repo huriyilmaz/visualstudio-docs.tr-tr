@@ -7,7 +7,7 @@ metadata:
   description: 'Windows ve Mac için Visual Studio IDE''leri, Visual Studio Code, Visual Studio App Center, GitHub Codespaces ve Visual Studio Abonelikleri''ni içeren Visual Studio ürün ailesine yönelik belgeleri inceleyin.'
   ms.topic: hub-page
   ms.custom: 'contperf-fy21q1, contperf-fy21q3'
-  ms.date: 08/23/2021
+  ms.date: 11/08/2021
   searchScope: []
   titleSuffix: ''
   ms.author: ghogen
@@ -21,14 +21,14 @@ productDirectory:
       imageSrc: ./media/vs-ide-2019.svg
       links:
         - url: ./windows/index.yml?view=vs-2022&preserve-view=true
-          text: Visual Studio 2022 (önizleme)
+          text: Visual Studio 2022 (geçerli)
         - url: ./windows/index.yml?view=vs-2019&preserve-view=true
-          text: Visual Studio 2019 (geçerli)
+          text: Visual Studio 2019
         - url: ./windows/index.yml?view=vs-2017&preserve-view=true
           text: Visual Studio 2017
         - url: /previous-versions/visualstudio/
           text: Önceki sürümler
-        - url: /visualstudio/releases/2019/release-notes
+        - url: /visualstudio/releases/2022/release-notes
           text: Sürüm notları
         - url: 'https://visualstudio.microsoft.com/'
           text: Ürün sayfası

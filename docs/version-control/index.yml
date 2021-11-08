@@ -1,60 +1,80 @@
 ### YamlMime:Landing
-title: sürüm denetimi belgelerini Visual Studio
-summary: Git ve GitHub gibi kaynak denetimi teknolojilerini kullanarak kodunuzu Visual Studio içinden paylaşabilirsiniz.
+title: Visual Studio denetimi belgeleri
+summary: Git ve Visual Studio gibi kaynak denetimi teknolojilerini kullanarak kodunuzu kendi içinde GitHub.
 metadata:
-  title: Visual Studio git ile sürüm denetimi & kaynak denetimi
-  description: Visual Studio sürümünde sürüm/kaynak denetimi teknolojilerini kullanın. kod yayınlarınızı kod tabanınızdan çıkmadan Git & GitHub paylaşabilir, tümleştirebilirsiniz ve yönetebilirsiniz.
+  title: Sürüm denetimi & Git ile kaynak denetimi Visual Studio
+  description: Kaynaklarda sürüm/kaynak denetimi Visual Studio. Kod tabanınızı terk etmeden Git'te kod yayınlarınızı paylaşabilir, & GitHub ve yönetebilirsiniz.
   ms.topic: landing-page
-  ms.date: 10/28/2021
+  ms.date: 11/08/2021
   author: TerryGLee
   ms.author: tglee
   manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: 33468cac8b7f9c72afb1854cc29bfc9a09834a01
-  ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+  ms.openlocfilehash: 159b03a46287e09cf1035ab4fd3b72f1b1adca77
+  ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/02/2021
-  ms.locfileid: "131126473"
+  ms.lasthandoff: 11/08/2021
+  ms.locfileid: "132001279"
 landingContent:
 - title: Genel Bakış
   linkLists:
   - linkListType: overview
     links:
-    - text: Git deneyimi Visual Studio
+    - text: Visual Studio'da Git deneyimi
       url: git-with-visual-studio.md
-  - linkListType: concept
-    links:
-    - text: Visual Studio kaynak denetimini nasıl kolaylaştırdı
-      url: git-visual-studio-source-control.md
-    - text: Git ve Takım Gezgini yan yana karşılaştırın
-      url: git-team-explorer-feature-comparison.md
-    - text: Git ayarları ve tercihleri
-      url: git-settings.md
 - title: başlarken
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: GitHub hesabı oluşturma
       url: git-create-github-account.md
-    - text: Depoyu kopyalama
+    - text: Bir repo kopyalama
       url: git-clone-repository.md
     - text: Yeni depo oluşturma
       url: git-create-repository.md
-  - linkListType: learn
+- title: Günlük iş akışı
+  linkLists:
+  - linkListType: how-to-guide
     links:
-    - text: Visual Studio 2019 Git ve GitHub ile çalışmaya başlama
-      url: /learn/modules/visual-studio-github-push/
+    - text: Yeni dal oluşturma
+      url: git-create-branch.md
+    - text: Commit yapma
+      url: git-make-commit.md
+    - text: Uzak sunucuya itme
+      url: git-push-remote.md
+    - text: Getirme, çekme ve eşitleme
+      url: git-fetch-pull-sync.md
+- title: Repo'larınızı yönetme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Bir repoya göz atma
+      url: git-browse-repository.md
+    - text: Bir repo yönetme
+      url: git-manage-repository.md
+    - text: Birleştirme çakışmalarını çözümleme
+      url: git-resolve-conflicts.md
+- title: Başvuru
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Git ayarları ve tercihleri
+      url: git-settings.md
+    - text: Kaynak Visual Studio denetimi nasıl kolaylaştırır?
+      url: git-visual-studio-source-control.md
+    - text: Git ile Takım Gezgini yan yana karşılaştırma
+      url: git-team-explorer-feature-comparison.md
 - title: Yenilikler
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Visual Studio 2022 ' de çok depoyu destekler
+    - text: Visual Studio 2022'de çok repo desteği
       url: https://devblogs.microsoft.com/visualstudio/multi-repo-support-in-visual-studio/
     - text: Visual Studio 2022 sürüm notları
       url: /visualstudio/releases/2022/release-notes-preview/
-    - text: Visual Studio 2019 ' de Git ile geliştirilmiş üretkenlik
+    - text: Visual Studio 2019'da Git ile gelişmiş üretkenlik
       url: https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/
     - text: Visual Studio 2019 sürüm notları
       url: /visualstudio/releases/2019/release-notes/
