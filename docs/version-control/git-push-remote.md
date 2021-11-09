@@ -9,12 +9,12 @@ ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: ce1094dc28c1ca8d8d939df4bfde2f3149d45dcd
-ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+ms.openlocfilehash: 08aff69e0ced7390b35670a54cf32d004e7232b3
+ms.sourcegitcommit: ac681e983f3b217c3fd9d2a31e3a3ddcc4dd3546
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132002516"
+ms.lasthandoff: 11/09/2021
+ms.locfileid: "132041913"
 ---
 # <a name="push-to-a-remote-in-visual-studio"></a>Visual Studio bir uzak öğesine gönder
 
@@ -25,8 +25,6 @@ Uzak bir, kodunuzun buluta depolanması için güvenli bir yerdir. Genellikle **
 Visual Studio ' de uzak bir uzaktan nasıl gönderirsiniz.
 
 1. Daha önce [oluşturulmuş](git-create-repository.md) veya [kopyalanmış](git-clone-repository.md) depoda üzerinde çalışmak üzere bir dosyanın açık olduğundan emin olun.
-
-1. **Git** menüsünde, şunu seçin
 
 1. Dosyada bir değişiklik yapın, kaydedin, **Git değişiklikler** sekmesini seçin ve ardından değişikliği [uygulayın](git-make-commit.md) .
 

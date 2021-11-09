@@ -102,9 +102,9 @@
           href: map-methods-on-the-call-stack-while-debugging-in-visual-studio.md
         - name: Çağrı Yığını penceresinde karışık kod ve eksik bilgiler
           href: mixed-code-and-missing-information-in-the-call-stack-window.md
-    - name: Kodu duraklatma ve devam ettirme
+    - name: Canlı kod düzenlemesi
       items:
-        - name: Çalışırken Yeniden Yükleme
+        - name: Dinamik yeniden yükleme (.NET/C++)
           href: hot-reload.md
         - name: XAML Çalışırken Yeniden Yükleme
           items:
@@ -422,13 +422,13 @@
           href: debug-live-azure-apps-troubleshooting.md
         - name: Canlı Azure sanal makine uygulamasında Zaman Atlatma Hata Ayıklaması
           href: debug-live-azure-virtual-machines-time-travel-debugging.md
-    - name: Linux hata ayıklama
+    - name: Linux hata ayıklaması
       items:
-        - name: WSL 2'de .NET Core uygulamalarının hata ayıklaması
+        - name: WSL 2 ' de .NET Core uygulamalarında hata ayıklama
           href: debug-dotnet-core-in-wsl-2.md
-        - name: Linux'ta SSH kullanarak .NET Core'da hata ayıklama
+        - name: Linux üzerinde SSH kullanarak .NET Core hatalarını ayıklama
           href: remote-debugging-dotnet-core-linux-with-ssh.md
-        - name: Container Tools >> ile hata ayıklama
+        - name: Kapsayıcı araçlarıyla hata ayıklama >>
           href: ../containers/edit-and-refresh.md
     - name: Uygulama türleri
       items:

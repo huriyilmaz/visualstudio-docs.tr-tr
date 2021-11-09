@@ -14,12 +14,12 @@ ms.prod: visual-studio-dev17
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: d022138786cbf18a158d224e57e53b8b8e91bb05
-ms.sourcegitcommit: 846c131897fc827d6feab2ce765d9f777a58d976
+ms.openlocfilehash: ba5d202809bf6bb7b5587406332902842f30440a
+ms.sourcegitcommit: ac681e983f3b217c3fd9d2a31e3a3ddcc4dd3546
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132010866"
+ms.lasthandoff: 11/09/2021
+ms.locfileid: "132041926"
 ---
 # <a name="whats-new-in-visual-studio-2022"></a>Visual Studio 2022 ' deki yenilikler
 
@@ -31,7 +31,7 @@ ms.locfileid: "132010866"
 [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)ile her zaman geliştirici, herhangi bir uygulama ve herhangi bir platform için sunulan en iyi sınıf araçları ve hizmetleri elde edersiniz. Visual Studio ilk kez mi kullanıyorsunuz, yoksa yıllarca mi kullanıyorsunuz, en yeni sürümümüzü beğendiniz!
 
 > [!TIP]
-> **Visual Studio 2022 başlatma olayımızı** inceleyin. Bugün 8:30 saat Pasifik. [Launch.VisualStudio.com](https://launch.visualstudio.com/) veya [Twitch kanalımızda](https://www.twitch.tv/visualstudio)canlı olarak yakalayabilirsiniz. Bu, daha sonra [YouTube kanalımızda](https://www.youtube.com/visualstudio) , canlı olarak izleyebilmeniz için kullanılabilir olacaktır.
+> [YouTube kanalımızda](https://www.youtube.com/visualstudio) [**Visual Studio 2022 başlatma olayına**](https://www.youtube.com/watch?v=f8jXO946eDw) göz atın. Ayrıca, [Twitch kanalımızda](https://www.twitch.tv/visualstudio)de yakalayabilirsiniz.
 
 ## <a name="performance-improvements"></a>Performans geliştirmeleri
 

@@ -2,7 +2,7 @@
   href: index.yml
 - name: Genel Bakış
   items:
-    - name: Visual Studio'de Git deneyimi
+    - name: Visual Studio'da Git deneyimi
       href: git-with-visual-studio.md
 - name: başlarken
   items:
@@ -22,7 +22,7 @@
       href: git-push-remote.md
     - name: 'Getirme, çekme ve eşitleme'
       href: git-fetch-pull-sync.md
-- name: Bir repo yönetme
+- name: Repo yönetimi
   items:
     - name: Bir repoya göz atma
       href: git-browse-repository.md

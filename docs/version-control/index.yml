@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Visual Studio denetimi belgeleri
-summary: Git ve Visual Studio gibi kaynak denetimi teknolojilerini kullanarak kodunuzu kendi içinde GitHub.
+summary: Git ve Visual Studio gibi kaynak denetimi teknolojilerini kullanarak kodunuzu GitHub.
 metadata:
   title: Sürüm denetimi & Git ile kaynak denetimi Visual Studio
   description: Kaynaklarda sürüm/kaynak denetimi Visual Studio. Kod tabanınızı terk etmeden Git'te kod yayınlarınızı paylaşabilir, & GitHub ve yönetebilirsiniz.
@@ -11,12 +11,12 @@ metadata:
   manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: 159b03a46287e09cf1035ab4fd3b72f1b1adca77
-  ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+  ms.openlocfilehash: 7bdfffd4e33732298e54e4ccc291a90ce37762d0
+  ms.sourcegitcommit: ac681e983f3b217c3fd9d2a31e3a3ddcc4dd3546
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/08/2021
-  ms.locfileid: "132001279"
+  ms.lasthandoff: 11/09/2021
+  ms.locfileid: "132041880"
 landingContent:
 - title: Genel Bakış
   linkLists:
@@ -46,7 +46,7 @@ landingContent:
       url: git-push-remote.md
     - text: Getirme, çekme ve eşitleme
       url: git-fetch-pull-sync.md
-- title: Repo'larınızı yönetme
+- title: Repo yönetimi
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -73,7 +73,7 @@ landingContent:
     - text: Visual Studio 2022'de çok repo desteği
       url: https://devblogs.microsoft.com/visualstudio/multi-repo-support-in-visual-studio/
     - text: Visual Studio 2022 sürüm notları
-      url: /visualstudio/releases/2022/release-notes-preview/
+      url: /visualstudio/releases/2022/release-notes/
     - text: Visual Studio 2019'da Git ile gelişmiş üretkenlik
       url: https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/
     - text: Visual Studio 2019 sürüm notları

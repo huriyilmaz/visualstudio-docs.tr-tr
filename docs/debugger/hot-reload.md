@@ -1,6 +1,6 @@
 ---
-title: Sık yeniden yükleme kullanarak kodu yazma ve hata ayıklama
-description: Düzenle ve devam et gibi sık yeniden yükleme, uygulamaları çalıştırırken kodunuzda değişiklik yapmanıza olanak tanır
+title: Kod yazmak ve hata ayıklamak için Çalışırken Yeniden Yükleme
+description: Çalışırken Yeniden Yükleme ve devam ederken olduğu gibi, uygulamaları çalıştırarak kodunuz üzerinde değişiklik yapabilirsiniz
 ms.date: 11/05/2021
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,75 +13,75 @@ ms.technology: vs-ide-debug
 monikerRange: '>= vs-2022'
 ms.workload:
 - multiple
-ms.openlocfilehash: 34d866c3f704472972d1be61863d8f586df44fe3
-ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+ms.openlocfilehash: 7ac42fe3706034c1b527ab45f89ca2c9a8092275
+ms.sourcegitcommit: ac681e983f3b217c3fd9d2a31e3a3ddcc4dd3546
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132002651"
+ms.lasthandoff: 11/09/2021
+ms.locfileid: "132041939"
 ---
-# <a name="write-and-debug-running-code-with-hot-reload-in-visual-studio-c-c-visual-basic"></a>Visual Studio çalışırken çalışan kodu yazma ve hata ayıklama (C#, C++, Visual Basic)
+# <a name="write-and-debug-running-code-with-hot-reload-in-visual-studio-c-c-visual-basic"></a>Visual Studio 'de Çalışırken Yeniden Yükleme ile kod yazma ve hata ayıklama (C#, C++, Visual Basic)
 
-Visual Studio 2022 ' den başlayarak, Visual Studio ' deki etkin yeniden yükleme deneyimi hem yönetilen .net hem de yerel C++ uygulamaları için çalışır. Üzerinde çalıştığınız uygulamanın türü ne olursa olsun, sık yeniden yükleme işleminin amacı, düzenlemeler arasında çok sayıda uygulama yeniden başlatmasının mümkün olduğunca tasarruf etmesi ve uygulamaların yeniden oluşturulmasını, yeniden başlamasını, uygulamanın kendisinde olduğunuz önceki konuma yeniden gitmesini ve Al seçeneğini azaltarak daha üretken olmasını sağlar.
+2022'Visual Studio başlayarak, Çalışırken Yeniden Yükleme'daki Visual Studio deneyimi hem yönetilen .NET hem de yerel C++ uygulamaları için çalışır. Üzerinde çalıştığınız uygulamanın türü ne olursa olsun, Çalışırken Yeniden Yükleme'ın amacı düzenlemeler arasında mümkün olduğunca çok uygulama yeniden başlatma işlemi kaydetmenizi sağlamaktır. Böylece, uygulamaların yeniden oluşturmasını, yeniden başlatmasını, uygulamanın içinde bulunduğu önceki konuma yeniden gezinmeyi beklerken harcadığınız zamanı azaltarak daha üretken bir hale gelirsiniz.
 
-Bunu, uygulamanızın kod dosyalarını düzenlemenizi ve kod değişikliklerini, *sık yükleme* olarak da bilinen çalışan uygulamaya hemen uygulamanızı sağlamak için kullanırız. Değişiklikleriniz uygulandıktan sonra, uygulamanın kendisinde bir eylem gerçekleştirerek (ya da bazı zamanlayıcı, vb.) kodunuzu yeniden yürütün ve değişiklikleri hemen görüntüleyin; uygulamanın kesme noktaları aracılığıyla duraklatılması gerekmez!
+Bunu, uygulamanın kod dosyalarını düzenlemenizi ve kod değişikliklerini çalışan uygulamaya hemen uygulamanıza (uygulama adı da bilinir) mümkün hale *Çalışırken Yeniden Yükleme.* Değişiklikleriniz uygulandıktan sonra, uygulamanın kendisinde bir eylem gerçekleştirerek (veya bir tür zamanlayıcı aracılığıyla vb.) kodunuzu yeniden yürütün ve değişiklikleri hemen bakın; kesme noktaları aracılığıyla uygulama duraklatma gerekmez!
 
-## <a name="update-running-code-with-hot-reload"></a>Çalışan kodu çalışırken yeniden yükleme ile Güncelleştir
+## <a name="update-running-code-with-hot-reload"></a>Çalışan kodu Çalışırken Yeniden Yükleme
 
-1. Desteklenen bir uygulama türüne göre bir proje açın. .NET hakkında daha fazla bilgi için bkz. [.NET uygulama desteği](#supported-net-app-frameworks-and-scenarios).
+1. Desteklenen bir uygulama türüne göre bir proje açın. .NET hakkında daha fazla bilgi için bkz. [.NET uygulama desteği.](#supported-net-app-frameworks-and-scenarios)
 
-1. Hata ayıklama ayarları veya hata ayıklama başlatma profilinde **yerel kod hata ayıklamayı etkinleştir** ' in devre dışı bırakıldığından emin olun.
+1. Hata ayıklayıcısı **ayarlarında veya hata ayıklama** başlatma profilinde Yerel kod hata ayıklamayı etkinleştir'in devre dışı bırakıldı olduğundan emin olun.
 
-1. Uygulamayı, **F5** veya [uygulamanız için destekleniyorsa](#supported-net-app-frameworks-and-scenarios), **CTRL + F5** kullanılarak eklenmiş hata ayıklayıcı ile başlatın.
+1. Uygulamayı F5 kullanarak veya uygulamanız için destekliyorsa **Ctrl+F5** kullanarak hata ayıklayıcısı eklenmiş olarak başlatabilirsiniz.  [](#supported-net-app-frameworks-and-scenarios)
 
-1. çalışan uygulamalar kullanıcı arabirimi (örneğin, bir düğme veya viewmodel için arka plan kodu) veya bir süre ölçer aracılığıyla tetiklenen bir işlem veya kodu değiştirme gibi bir kod ile C#, C++ veya Visual Basic kod dosyası açın.
+1. Bir C#, C++ veya Visual Basic kod dosyasını, çalışan uygulamalar kullanıcı arabirimi (örneğin, bir düğmenin veya viewmodel komutunun ardındaki kod) ya da zamanlayıcı aracılığıyla bir aralıkta tetiklenen bir kodla yeniden yürütülerek kodu değiştirebilirsiniz.
 
-1. **Etkin yeniden yükle** düğmesini kullanarak kod değişikliklerini uygulayın veya **alt + F10** tuşlarına basın.
+1. Çalışırken Yeniden Yükleme düğmesini kullanarak **kod değişikliklerini** uygulama veya **ALT+F10 tuşlarına basın.**
 
-   ![Hot Reload Button 'ın ekran görüntüsü.](../debugger/media/vs-2022/dotnet-hot-reload.gif)
+   ![Çalışırken Yeniden Yükleme ekran görüntüsü.](../debugger/media/vs-2022/dotnet-hot-reload.gif)
 
 ## <a name="supported-net-app-frameworks-and-scenarios"></a>Desteklenen .NET uygulama çerçeveleri ve senaryoları
 
-* **Visual Studio 2022 kullanırken ve uygulamanızı hata ayıklayıcıyla başlattığınızda**, temel sık yükleme deneyimi çoğu .net uygulaması ve framework sürümü ile çalışır. bu destek .NET Framework, .net Core ve .net 5 + ' u (uygun olarak C# ve Visual Basic için) içerir. Desteklenen uygulamaların türü Web (arka plan kod değişiklikleri), Masaüstü, mobil, bulut ve diğer proje türlerini içerir. Bu senaryodaki beklenki, hata ayıklayıcıyı kullanıyorsanız, etkin yeniden yükleme ' nin sizin için kullanılabilir olduğunu varsayabilir ve bir deneme sunabilirsiniz!
-* **Visual Studio 2022 kullanılırken** (örneğin, uygulamayı başlatmak için CTRL-F5 ' i kullanarak), .net 6 uygulamalarının çoğu için hedefleme sırasında bile sık yeniden yükleme kullanılabilir. Bu, .NET 6 ' i (.NET 5 veya daha önceki bir sürüm) hedeflenmediği uygulamaların "hata ayıklayıcı yok" senaryosunu desteklemedikleri ve etkin yeniden yükleme desteğini almak için hata ayıklayıcıyı kullanması gerektiği anlamına gelir.
-* **.net 6 uygulamasıyla Visual Studio 2022 kullanırken, çoğu senaryo desteklenir.** Bu, yukarıda bahsedilen yeni "hata ayıklayıcı yok" özelliği ile sınırlı değildir. ayrıca, dinamik yeniden yükleme Blazor projelerine yönelik destek, daha fazla genel, ASP.NET Core uygulamalarda Razor dosyalarını düzenlemeyle ve CSS hot Reload gibi diğer yeni özellikleri de içerir. hem Visual Studio 2022 hem de .net 6 ' yı hedefleyen uygulamaların kullanılması en güçlü etkin yeniden yükleme deneyimi sağlar.
+* **Visual Studio 2022** kullanırken ve hata ayıklayıcı ile uygulamanıza başlarken, temel Çalışırken Yeniden Yükleme deneyimi çoğu .NET uygulaması ve çerçeve sürümü türüyle çalışır. Bu destek .NET Framework, .NET Core ve .NET 5+ (hem C# hem de Visual Basic için) içerir. Desteklenen uygulamaların türü web (arka planında kod değişiklikleri), masaüstü, mobil, bulut ve diğer proje türleridir. Bu senaryoda beklenti, hata ayıklayıcıyı kullanıyorsanız, Çalışırken Yeniden Yükleme olduğunu varsayalım ve bunu deneyin!
+* **Visual Studio 2022** kullanırken ancak hata ayıklayıcıyı kullanmazken (örneğin, uygulamayı başlatmak için CTRL-F5 kullanarak) Çalışırken Yeniden Yükleme.NET 6 uygulamalarının çoğu türü hedeflese bile kullanılabilir. Bu, .NET 6'ı (.NET 5 veya altı) hedeflemeen uygulamaların "hata ayıklayıcısı yok" senaryosunu desteklemeyecek ve hata ayıklayıcıyı kullanarak destek almak Çalışırken Yeniden Yükleme anlamına gelir.
+* **.NET 6 Visual Studio 2022'de en fazla senaryo desteklene.** Bu, yukarıda bahsedilen yeni "hata ayıklayıcısı yok" özelliğiyle sınırlı değildir. Ayrıca Blazor projelerini hızlı bir şekilde yeniden yükleme ve daha genel olarak tüm ASP.NET Core uygulamaları ve CSS dosyalarını düzenleme desteği gibi yeni Çalışırken Yeniden Yükleme. Hem Visual Studio 2022 hem de .NET 6'ya yönelik uygulamaları birlikte kullanmak size en güçlü Çalışırken Yeniden Yükleme sunar.
 
-Aşağıdaki tabloda, hangi uygulama türlerinin hata ayıklayıcı ekli (F5) ve hata ayıklayıcı ekli (CTRL + F5) ve .NET 6 ' nın en düşük destek (yani, F5) için gerekli olup olmadığı gösterilmektedir. .NET 6, her zaman CTRL + F5 desteği için gereklidir. ayrıca, özelliği destekleyen en düşük Visual Studio sürümüdür.
+Aşağıdaki tabloda, hata ayıklayıcı ekli (F5) ve hata ayıklayıcı ekli (Ctrl+F5) olmadan .NET Çalışırken Yeniden Yükleme'yi destekleyen uygulama türleri ve en düşük destek için .NET 6'nın gerekli olup olmadığı (yani F5) gösterir. Ctrl+F5 desteği için her zaman .NET 6 gereklidir. Ayrıca, özelliği destekleyen en Visual Studio sürümü de gösterilir.
 
 |Uygulama türü|.NET 6 gerekli (F5)|F5|Ctrl+F5|
 |-|-|-|-|
-|arka plan kodu ASP.NET|Hayır|16,11|17.0|
-|ASP.NET Razor (Blazor sunucusu ve ASP.NET Core)|Yes|17.0|17.0|
-|ASP.NET Razor (Blazor te)|Yes|Hayır|17.0|
-|WPF|Hayır|16,11|17.0|
-|WinUI3|Hayır|16,11|Hayır|
-|WinForms|Hayır|16,11|17.0|
-|Konsol|Hayır|16,11|17.0|
-|XAML .NET MAUı WinUI|Yes|17,1 Preview 1|Hayır|
-|XAML .NET MAUı Android|Yes|17,1 Preview 1|Hayır|
-|XAML .NET MAUı iOS|Yes|17,1 Preview 1|Hayır|
-|XAML + Blazor .NET MAUı WinUI|Yes|17,1 Preview 1|Hayır|
-|XAML + Blazor .NET MAUı Android|Yes|17,1 Preview 1|Hayır|
-|XAML + Blazor .NET MAUı iOS|Yes|17,1 Preview 1|Hayır|
+|ASP.NET kodu geriden seçin|Hayır|16.11|17.0|
+|ASP.NET Razor (Blazor Server ve ASP.NET Core)|Yes|17.0|17.0|
+|ASP.NET Razor (Blazor WASM)|Yes|Hayır|17.0|
+|WPF|Hayır|16.11|17.0|
+|WinUI3|Hayır|16.11|Hayır|
+|WinForms|Hayır|16.11|17.0|
+|Konsol|Hayır|16.11|17.0|
+|XAML .NET MAUI WinUI|Yes|17.1 Önizleme 1|Hayır|
+|XAML .NET MAUI Android|Yes|17.1 Önizleme 1|Hayır|
+|iOS için XAML .NET MAUI|Yes|17.1 Önizleme 1|Hayır|
+|XAML + Blazor .NET MAUI WinUI|Yes|17.1 Önizleme 1|Hayır|
+|XAML + Blazor .NET MAUI Android|Yes|17.1 Önizleme 1|Hayır|
+|xAML + Blazor .NET MAUI iOS|Yes|17.1 Önizleme 1|Hayır|
 
-Etkin yeniden yükleme ile yapabileceğiniz düzenleme türleri, uygulamayı başlatmak için kullandığınız yönteme göre değil, çalışma zamanına göre belirlenir (F5 veya CTRL + F5).
+Bu tür düzenlemelerle Çalışırken Yeniden Yükleme, uygulamayı başlatmak için kullanılan yöntem (F5 veya Ctrl+F5) tarafından değil çalışma zamanı tarafından belirlenir.
 
-Aşağıdaki bölümlerde, yukarıdaki Özet üzerinde geniştireceğiz ve daha fazla ayrıntıya değineceğiz.
+Aşağıdaki bölümlerde, yukarıdaki özeti genişletecek ve daha fazla ayrıntıya ineceğiz.
 
-## <a name="support-for-c-apps"></a>C++ uygulamaları için destek
+## <a name="support-for-c-apps"></a>C++ uygulamaları desteği
 
-Visual Studio 2022 kullanırken ve uygulamanızı hata ayıklayıcıyla başlattığınızda, **etkin yeniden yükle** düğmesini kullanarak, hata ayıklayıcı (F5) altında çalışırken yerel C++ uygulamasını anında yeniden yükleyebilirsiniz. Etkin yeniden yükleme, CMake ve OpenFolder projeleri kullanılarak oluşturulan uygulamalar için de desteklenir.
+Visual Studio 2022'yi kullanırken ve hata ayıklayıcı ile uygulamanıza başlarken, hata ayıklayıcı (F5) altında Çalışırken Yeniden Yükleme çalıştırıldığında yerel bir C++ uygulamasını **sık sık yeniden Çalışırken Yeniden Yükleme.** Çalışırken Yeniden Yükleme, CMake ve OpenFolder projeleri kullanılarak yerleşik uygulamalar için de de kullanılabilir.
 
-Bu deneyim yerel Düzenle ve devam et ile desteklenir. Desteklenen düzenlemeler için bkz. [Düzenle ve devam et](../debugger/edit-and-continue-visual-cpp.md).
+Bu deneyim yerel Düzenle ve Devam Ile güçlendirilmiştir. Desteklenen düzenlemeler için bkz. [Düzenle ve Devam.](../debugger/edit-and-continue-visual-cpp.md)
 
-## <a name="visual-studio-2022-with-a-net-app-when-using-the-debugger"></a>hata ayıklayıcı kullanılırken bir .net uygulaması ile 2022 Visual Studio
+## <a name="visual-studio-2022-with-a-net-app-when-using-the-debugger"></a>Visual Studio 2022'de bir .NET uygulamasıyla birlikte kullanın
 
-Visual Studio 2022 kullanırken ve uygulamayı hata ayıklayıcıyla başlattığınızda, sık yeniden yükleme, konsol, Windows Forms (WinForms), WPF, UWP, winuı 3 (bkz. note) gibi tipik uygulama türleri ve ASP.NET MVC, web apı 'si ve hatta daha eski Web Forms projeler dahil olmak üzere çoğu ASP.NET web projesi türü dahil olmak üzere çoğu app framework ile çalışır. Örnekler aşağıda verilmiştir. .net kullandığınız her yerde ve Visual Studio yönetilen hata ayıklayıcı kullanıyorsanız, temel sık yükleme desteğini almanız gerekir. Bu olgu, Azure Işlevleri gibi projelerin bu senaryoda harika çalıştığı anlamına gelir.
+Visual Studio 2022'yi kullanırken ve uygulamayı hata ayıklayıcısıyla başlatıyorsanız, Çalışırken Yeniden Yükleme Konsol, Windows Forms (WinForms), WPF, UWP, WinUI 3 (nota bakın ASP.NET) ve ASP.NET MVC, Web API'si ve hatta daha eski Web Forms projeleri gibi tipik uygulama türleri de dahil olmak üzere çoğu uygulama çerçevesiyle çalışır. Bunlar örnektir. .NET'e sahip ve yönetilen hata ayıklayıcısını Visual Studio her yerde temel destek Çalışırken Yeniden Yükleme gerekir. Bu durum, Azure İşlevleri gibi projelerin bile bu senaryoda harika bir şekilde çalışması anlamına gelir.
 
 > [!NOTE]
-> WinUI 3, varsayılan olarak, dinamik yeniden yüklemeyi desteklemeyen karma mod hata ayıklamayı kullanır. Bu projeyi, dinamik yeniden yükleme 'nin düzgün çalışmasını sağlayan yönetilen hata ayıklayıcıyı etkinleştirerek proje ayarlarında değiştirebilirsiniz.
+> WinUI 3 varsayılan olarak karma mod hata ayıklaması kullanır ve bu, Çalışırken Yeniden Yükleme. Yönetilen Hata Ayıklayıcı'nın düzgün çalışmasına olanak sağlayan Yönetilen Hata Ayıklayıcı'Çalışırken Yeniden Yükleme proje ayarlarında bunu değiştirebilirsiniz.
 
-.net mauı uygulamaları Visual Studio 2022 sürüm 17,1 Preview 1 ' den başlayarak desteklenir.
+.NET MAUI uygulamaları, 2022 Visual Studio 17.1 Önizleme 1 sürümünden itibaren de destekleni.
 
 ## <a name="visual-studio-2022-with-a-net-app-but-not-using-the-debugger"></a>Visual Studio 2022'ye bir .NET uygulamasıyla birlikte gelir, ancak hata ayıklayıcıyı kullanmaz
 
@@ -127,7 +127,7 @@ Temel Çalışırken Yeniden Yükleme deneyimi birçok farklı senaryo için ASP
 
 ## <a name="supported-net-edits"></a>Desteklenen .NET Düzenlemeleri
 
-.NET Çalışırken Yeniden Yükleme deneyimi Düzenle ve Devam [Mekanizması ile güçlendirilmiştir.](../debugger/edit-and-continue-visual-csharp.md) Geliştirmeler arasında, önceki sürümlerde mümkün olanın ötesinde ek düzenleme türleri için destek Visual Studio. Geliştirmeler şunlardır:
+.NET Çalışırken Yeniden Yükleme deneyimi Düzenle ve Devam [Edin mekanizmasıyla güçlendirilmiştir.](../debugger/edit-and-continue-visual-csharp.md) Geliştirmeler arasında, önceki sürümlerde mümkün olanın ötesinde ek düzenleme türleri için destek Visual Studio. Geliştirmeler şunlardır:
 
 * Özel Öznitelik ekleme, güncelleştirme veya silme
 * Kayıt yapılarını ekleme veya güncelleştirme
@@ -141,17 +141,27 @@ Temel Çalışırken Yeniden Yükleme deneyimi birçok farklı senaryo için ASP
 
 Yukarıdaki geliştirmeler hem Çalışırken Yeniden Yükleme ve Devam Edin deneyimleri için kullanılabilir.
 
-## <a name="unsupported-net-scenarios"></a>Desteklenmeyen .NET Senaryoları
+## <a name="unsupported-net-scenarios"></a>Desteklenmeyen .NET senaryoları
 
 Desteklenmeyen senaryolar:
 
-* Xamarin.Forms uygulamaları, iOS ve Android Çalışırken Yeniden Yükleme .NET uygulamalarını desteklemez. UWP uygulamasını hedeflerken Çalışırken Yeniden Yükleme kısmi destek elde edin. Bu, tasarıma göredir ve başka geliştirmeler de görmeyi bekleyeceğiz. (Not: XAML Çalışırken Yeniden Yükleme sdk'da Xamarin.Forms müşterileri için kullanılabilir ve desteklene devam edecek.)
-* .NET MAUI 2022 sürüm 17.1 Önizleme 1'den önce Visual Studio uygulamaları desteklenmiyor. 17.1 Preview 1'den başlayarak, .NET MAUI yalnızca hata ayıklayıcı ekli olarak de destekleni.
+* Xamarin.Forms uygulamaları, iOS ve Android Çalışırken Yeniden Yükleme .NET uygulamalarını desteklemez. UWP uygulamasını hedeflerken Çalışırken Yeniden Yükleme kısmi destek elde edin. Bu, tasarıma göredir ve başka geliştirmeler de görmeyi bekleyeceğiz. (Not: XAML Çalışırken Yeniden Yükleme, en son SDK'da Xamarin.Forms müşterileri için kullanılabilir ve desteklene devam edecek.)
+* .NET MAUI 2022 sürüm 17.1 Önizleme 1'den önce Visual Studio uygulamaları desteklenmiyor. 17.1 Önizleme 1'den başlayarak .NET MAUI, ancak yalnızca hata ayıklayıcı ekli olarak de destekleni.
 * F# veya hedef kitle kullanılarak .NET Native uygulamalar bu uygulamaları Çalışırken Yeniden Yükleme.
+
+Hata ayıklayıcı olmadan Visual Studio kullanıyorsanız. NET Çalışırken Yeniden Yükleme yalnızca .NET 6'ya yönelik uygulamalar için çalışır.
+
+Ayrıca, Çalışırken Yeniden Yükleme bazı proje yapılandırmalarında kullanılamaz:
+
+* Visual Studio hata ayıklayıcısını kullanarak uygulamayı çalıştırdı ancak ayarlarda devre `Edit and Continue` dışı Çalışırken Yeniden Yükleme desteklenmiyor.
+* Yayın veya özel derleme yapılandırmaları desteklenmiyor. Projenizin Hata ayıklama derleme yapılandırmasını kullanması gerekir.
+* .NET'te bazı başlatma veya derleme iyileştirmeleri Çalışırken Yeniden Yükleme. Örneğin, projenizin hata ayıklama profili aşağıdaki yollarla yapılandırılmışsa, .NET Çalışırken Yeniden Yükleme desteklenmiyor:
+  * [Projeniz](/dotnet/core/deploying/trimming/trimming-options) için kırpma etkindir. Örneğin, hata ayıklama profili için proje dosyanız içinde `PublishTrimmed` True olarak ayarlanırsa bu destek desteklanmaz.
+  * [Projeniz için ReadyToRun](/dotnet/core/deploying/ready-to-run) etkinleştirilir. Örneğin, hata ayıklama profili için proje dosyanız içinde `PublishReadyToRun` True olarak ayarlanırsa bu destek desteklanmaz.
 
 ## <a name="configure-hot-reload"></a>Yapılandırma Çalışırken Yeniden Yükleme
 
-Açılan Çalışırken Yeniden Yükleme düğmeden **Ayarlar** seçerek **Çalışırken Yeniden Yükleme** yapılandırabilirsiniz.
+Açılan Çalışırken Yeniden Yükleme düğmesinden **Ayarlar** **seçerek Çalışırken Yeniden Yükleme** yapılandırabilirsiniz.
 
 ![Yapılandırma ekran Çalışırken Yeniden Yükleme](../debugger/media/vs-2022/dotnet-hot-reload-configure.png)
 
