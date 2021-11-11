@@ -5,18 +5,18 @@ metadata:
   title: Sürüm denetimi & Git ile kaynak denetimi Visual Studio
   description: Kaynaklarda sürüm/kaynak denetimi Visual Studio. Kod tabanınızı terk etmeden Git'te kod yayınlarınızı paylaşabilir, & GitHub ve yönetebilirsiniz.
   ms.topic: landing-page
-  ms.date: 11/08/2021
+  ms.date: 11/09/2021
   author: TerryGLee
   ms.author: tglee
   manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: 7bdfffd4e33732298e54e4ccc291a90ce37762d0
-  ms.sourcegitcommit: ac681e983f3b217c3fd9d2a31e3a3ddcc4dd3546
+  ms.openlocfilehash: 86d083ef0088b53d5c5290ec245b11ae8cc860ac
+  ms.sourcegitcommit: abfcccf63234819c75a61bf2c4c7f710a9d23cdb
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/09/2021
-  ms.locfileid: "132041880"
+  ms.lasthandoff: 11/11/2021
+  ms.locfileid: "132250575"
 landingContent:
 - title: Genel Bakış
   linkLists:
@@ -24,16 +24,8 @@ landingContent:
     links:
     - text: Visual Studio'da Git deneyimi
       url: git-with-visual-studio.md
-- title: başlarken
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: GitHub hesabı oluşturma
-      url: git-create-github-account.md
-    - text: Bir repo kopyalama
-      url: git-clone-repository.md
-    - text: Yeni depo oluşturma
-      url: git-create-repository.md
+    - text: 'Visual Studio & GitHub: Birlikte daha iyi'
+      url: https://visualstudio.microsoft.com/vs/github/
 - title: Günlük iş akışı
   linkLists:
   - linkListType: how-to-guide
@@ -46,6 +38,24 @@ landingContent:
       url: git-push-remote.md
     - text: Getirme, çekme ve eşitleme
       url: git-fetch-pull-sync.md
+- title: Yenilikler
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Visual Studio 2022'de çok repo desteği
+      url: https://devblogs.microsoft.com/visualstudio/multi-repo-support-in-visual-studio/
+    - text: Visual Studio 2022 sürüm notları
+      url: /visualstudio/releases/2022/release-notes/
+- title: başlarken
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: GitHub hesabı oluşturma
+      url: git-create-github-account.md
+    - text: Bir repo kopyalama
+      url: git-clone-repository.md
+    - text: Yeni depo oluşturma
+      url: git-create-repository.md
 - title: Repo yönetimi
   linkLists:
   - linkListType: how-to-guide
@@ -66,15 +76,3 @@ landingContent:
       url: git-visual-studio-source-control.md
     - text: Git ile Takım Gezgini yan yana karşılaştırma
       url: git-team-explorer-feature-comparison.md
-- title: Yenilikler
-  linkLists:
-  - linkListType: whats-new
-    links:
-    - text: Visual Studio 2022'de çok repo desteği
-      url: https://devblogs.microsoft.com/visualstudio/multi-repo-support-in-visual-studio/
-    - text: Visual Studio 2022 sürüm notları
-      url: /visualstudio/releases/2022/release-notes/
-    - text: Visual Studio 2019'da Git ile gelişmiş üretkenlik
-      url: https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/
-    - text: Visual Studio 2019 sürüm notları
-      url: /visualstudio/releases/2019/release-notes/

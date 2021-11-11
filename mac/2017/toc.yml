@@ -5,8 +5,6 @@
   items:
     - name: Bir güvenlik duvarı veya ara sunucunun arkasına yükleme ve burada kullanma
       href: ./install-behind-a-firewall-or-proxy-server.md
-    - name: Bir önizleme sürümünü yükleme
-      href: ./install-preview.md
     - name: Güncelleştirme
       href: ./update.md
     - name: Mac için Visual Studio 2019 Güncelleştirmesi
@@ -21,128 +19,31 @@
     - name: Aboneliği Etkinleştirme
       href: ./enable-subscription.md
 - name: IDE’yi Özelleştirme
-  href: ./customizing-the-ide.md
   items:
     - name: Mac için Visual Studio’yu Genişletme
       href: ./extending-visual-studio-mac.md
 - name: Projeler ve Çözümler
   href: ./projects-and-solutions.md
   items:
-    - name: Yeni Projeler oluşturma
-      href: ./create-new-projects.md
-    - name: Proje öğeleri ekleme ve kaldırma
-      href: ./add-and-remove-project-items.md
-    - name: Çözümleri ve Proje özelliklerini yönetme
-      href: ./managing-solutions-and-project-properties.md
-    - name: Bir projedeki başvuruları yönetme
-      href: ./managing-references-in-a-project.md
-      items:
-        - name: İzlenecek yol - Projenize NuGet paketi ekleme
-          href: ./nuget-walkthrough.md
-    - name: Uygulama Kaynaklarını Yönetme
-      href: ./managing-app-resources.md
-    - name: 'Nasıl yapılır: Birden çok çözüm veya örneği açma'
-      href: ./open-multiple-solutions.md
+    - name: İzlenecek yol - Projenize NuGet paketi ekleme
+      href: ./nuget-walkthrough.md
 - name: Kaynak Düzenleyicisi
-  href: ./source-editor.md
   items:
-    - name: Yeniden Düzenle
-      href: ./refactoring.md
-    - name: Açıklamalar
-      href: ./comments.md
-    - name: Düzenleyici Davranışı
-      href: ./editor-behavior.md
-    - name: Görev Açıklamaları
-      href: ./task-comments.md
-    - name: Kod Parçacıkları
-      href: ./snippets.md
-    - name: Blok Seçimi
-      href: ./block-selection.md
-    - name: Düzenleyici Temaları
-      href: ./editor-themes.md
-    - name: EditorConfig
-      href: ./editorconfig.md
     - name: Ortak Klavye Kısayolları
       href: ./keyboard-shortcuts.md
-- name: Hata Ayıklama
-  href: ./debugging.md
-  items:
-    - name: Veri Görselleştirmeleri
-      href: ./data-visualizations.md
-- name: Derleme ve Oluşturma
-  href: ./compiling-and-building.md
-  items:
-    - name: Projeleri ve Çözümleri Oluşturma ve Temizleme
-      href: ./building-and-cleaning-projects-and-solutions.md
-    - name: Derleme Eylemleri
-      href: ./build-actions.md
-    - name: Derleme Sistemini Özelleştirme
-      href: ./customizing-build-system.md
-    - name: Yapılandırmalar
-      href: ./configurations.md
-      items:
-        - name: Yapılandırmaları Oluşturma ve Düzenleme
-          href: ./create-and-edit-configurations.md
-- name: Sürüm Denetimi
-  href: ./version-control.md
-  items:
-    - name: TF Sürüm Denetimi
-      href: ./tf-version-control.md
-    - name: Git Deposu Ayarlama
-      href: ./set-up-git-repository.md
-    - name: Git ile çalışma
-      href: ./working-with-git.md
-    - name: Subversion Deposu Ayarlama
-      href: ./set-up-subversion-repository.md
-    - name: Subversion ile çalışma
-      href: ./working-with-subversion.md
-- name: Web Uygulaması Dağıtımı
-  href: ./web-app-deployment.md
-  items:
-    - name: Azure App Service’e yayımlama
-      href: ./publish-app-svc.md
-    - name: Klasöre Yayımlama
-      href: ./publish-folder.md
 - name: İş yükleri
   href: ./workloads.md
   items:
     - name: ASP.NET Core
       href: ./asp-net-core.md
       items:
-        - name: Razor
-          href: ./razor.md
         - name: Javascript
           href: ./javascript.md
-    - name: Azure
-      href: ./azure-workload.md
-      items:
-        - name: Azure İşlevleri’ne Giriş
-          href: ./azure-functions.md
-        - name: 'Öğretici: Azure İşlevleri'
-          href: ./azure-functions-lab.md
-        - name: Bağlı Hizmetler
-          href: ./connected-services.md
     - name: Unity Oyun Geliştirme
-      href: ./unity-tools.md
       items:
-        - name: Kurulum
-          href: ./setup-vsmac-tools-unity.md
-        - name: Unity Araçlarını Kullanma
-          href: ./using-vsmac-tools-unity.md
         - name: Unity’de .NET 4.x kullanma
           href: /visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context
         - name: Değişiklik Günlüğü
           href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context
-    - name: Xamarin ile mobil uygulamalar
-      href: ./xamarin.md
 - name: Erişilebilirlik
   href: ./accessibility.md
-- name: Sorun giderme
-  href: ./troubleshooting.md
-  items:
-    - name: Visual Studio Müşteri Deneyimini Geliştirme Programı
-      href: ./visual-studio-experience-improvement-program.md
-    - name: Sorun Bildirme
-      href: ./report-a-problem.md
-    - name: 'Sorun Giderme: Güncelleştirici, bilgileri alırken hatalarla karşılaşıyor'
-      href: updater-troubleshooting.md

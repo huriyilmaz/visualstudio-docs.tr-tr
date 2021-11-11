@@ -40,18 +40,6 @@ sections:
               src: 'https://docs.microsoft.com/media/logos/logo_NETcore.svg'
             text: ASP.NET Core
             href: asp-net-core.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_azure.svg'
-            text: Azure
-            href: azure-workload.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_unity.svg'
-            text: Unity
-            href: unity-tools.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_xamarin.svg'
-            text: Xamarin
-            href: xamarin.md
   - title: Hangi dilleri kullanabilirim?
     items:
       - type: paragraph
@@ -75,36 +63,3 @@ sections:
               src: 'https://docs.microsoft.com/media/logos/logo_TS.svg'
             text: TypeScript
             href: javascript.md
-          - image:
-              src: 'https://docs.microsoft.com/media/logos/logo_html5.svg'
-            text: HTML/Razor
-            href: razor.md
-  - title: Mac için Visual Studio ile kod yazma
-    items:
-      - type: paragraph
-        text: 'Kod yazmak, derlemek, hata ayıklamak ve depolamak için Visual Studio kullanma hakkında daha fazla bilgi edinin.'
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: source-editor.md
-            html: '<p>IntelliSense, yeniden düzenleme ve en sık kullandığınız dil için söz dizimi vurgulama.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-            title: Kod yazma
-          - href: compiling-and-building.md
-            html: <p>Derleyicinizi yapılandırıp uygulamanızı oluşturun.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_build.svg'
-            title: Derleme ve oluşturma
-          - href: debugging.md
-            html: <p>Sorunları araştırmak için uygulamanızı hata ayıklayıcısında çalıştırın.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-            title: Hata Ayıklama
-          - href: version-control.md
-            html: '<p>Azure DevOps, Git veya Subversion kaynak depolarına erişin.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_pull-request.svg'
-            title: Sürüm Denetimi

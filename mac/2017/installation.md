@@ -3,17 +3,17 @@ title: Mac için Visual Studio 2017 'yi yükler
 description: platformlar arası geliştirme için gereken Mac için Visual Studio ve ek bileşenlerin nasıl yükleneceğine ilişkin yönergeler.
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 11/03/2018
+ms.date: 11/10/2021
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
 ms.custom: video
 ms.topic: how-to
-ms.openlocfilehash: be799764c3d6913cd2a13c6d631fc3450f8875a0
-ms.sourcegitcommit: 0841d3f610bd2af4af1cf07dd9d31d1e0629b193
+ms.openlocfilehash: a1a6c7760d32801a41dd13d78143ad4674eedf7c
+ms.sourcegitcommit: abfcccf63234819c75a61bf2c4c7f710a9d23cdb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "123962212"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132250627"
 ---
 # <a name="install-visual-studio-2017-for-mac"></a>Mac için Visual Studio 2017 'yi yükler
 
@@ -22,7 +22,7 @@ ms.locfileid: "123962212"
 
 ## <a name="downgrading-from-visual-studio-2019-for-mac"></a>Mac için Visual Studio 2019 ' den eski sürüme düşürme mi?
 
-en iyi deneyim için, önce, Mac için Visual Studio 2019 ' yi [kaldırmanızı](uninstall.md) öneririz. İndirmenizi sağlayan sorunlar yaşıyorsanız, [bir sorun bildirerek](report-a-problem.md)bize bilgi verdiğinizden emin olun.
+en iyi deneyim için, önce, Mac için Visual Studio 2019 ' yi [kaldırmanızı](uninstall.md) öneririz.
  
 ## <a name="requirements"></a>Gereksinimler
 
@@ -68,7 +68,7 @@ Visual Studio ' de iOS ile çalışma için aşağıdaki parçalara ihtiyacını
       - Tam platformlar arası Xamarin uygulamaları – **Android**, **IOS** ve **MacOS** platformları ' nı seçin.
    * **.NET Core uygulamaları** – **.NET Core** platformunu seçin.
    * **Web uygulamalarını ASP.NET Core** – **.net Core** platformunu seçin.
-   * **platformlar arası Unity oyun geliştirme** – Mac için Visual Studio dışında hiçbir ek platform yüklenmesi gerekmez. Unity uzantısını yükleme hakkında daha fazla bilgi için [Unity kurulum kılavuzuna](./setup-vsmac-tools-unity.md) bakın.
+   * **platformlar arası Unity oyun geliştirme** – Mac için Visual Studio dışında hiçbir ek platform yüklenmesi gerekmez.
 
    Bu yükleme ekranında her bir bileşenin sürümü ve boyutu görüntülenir. Her bir bileşene tıklayarak bu bileşene ait bağımlılıkların bir listesini görüntüleyebilirsiniz (Android için), indirdiği ek paketler (.NET Core için) veya gerekli olan tüm ek uygulamaları (iOS ve macOS için) görüntüleyebilirsiniz:
 
@@ -120,7 +120,7 @@ Mac için Visual Studio yükleme, uygulamalarınız için kod yazmaya başlayabi
 
 ### <a name="net-core-apps-aspnet-core-web-apps-unity-game-development"></a>.net Core uygulamaları, ASP.NET Core web apps, Unity oyun geliştirme
 
-Diğer Iş yükleri için [Iş yükleri](./workloads.md) sayfasına bakın.
+Diğer Iş yükleri için [Iş yükleri](./asp-net-core.md) bölümüne bakın.
 
 ## <a name="related-video"></a>İlgili video
 
