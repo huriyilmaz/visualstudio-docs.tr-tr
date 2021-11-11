@@ -1,7 +1,7 @@
 ---
-title: GitHub kullanmak için bir hesap Visual Studio
+title: Visual Studio ile kullanmak için bir GitHub hesabı oluşturun
 titleSuffix: ''
-description: Kodunuzu yönet GitHub takımınız ile işbirliği Visual Studio bir hesap oluşturun.
+description: kodunuzu yönetebilmeniz ve ekibinizle işbirliği yapabilmeniz için Visual Studio ile birlikte kullanmak üzere bir GitHub hesabı oluşturun.
 ms.date: 10/29/2021
 ms.topic: how-to
 author: TerryGLee
@@ -9,59 +9,60 @@ ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 08e7eaa4fd19df01a8d4f372db9e71ae9f321739
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+ms.openlocfilehash: 958e5f9eb6eaff6a4a28183cae4ebe0afe210e72
+ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131130628"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132264227"
 ---
-# <a name="create-a-github-account-to-use-with-visual-studio"></a>GitHub kullanmak için bir hesap Visual Studio
+# <a name="create-a-github-account-to-use-with-visual-studio"></a>Visual Studio ile kullanmak için bir GitHub hesabı oluşturun
 
-Bir GitHub hesabıyla, hem [kodunuzu yönetmek GitHub](https://visualstudio.microsoft.com/vs/github/) geliştirme projelerinde başkalarıyla işbirliği yapmak için [Visual Studio IDE'den](../get-started/visual-studio-ide.md) tam destek alısınız.
+GitHub hesabıyla, hem kodunuzu yönetmek hem de geliştirme projelerinde diğer kişilerle işbirliği yapmak için [Visual Studio ıde](../get-started/visual-studio-ide.md) 'nin içinden [tam GitHub destek](https://visualstudio.microsoft.com/vs/github/) alırsınız.
 
-Henüz bir GitHub hesabınız yoksa, hesap oluşturmak için şu şekilde bir hesap oluşturabilirsiniz.
+zaten bir GitHub hesabınız yoksa, bir hesap oluşturmak için aşağıdaki adımları uygulayın.
 
-1. Bir [https://github.com](https://github.com) web tarayıcısında açın ve Kaydol'a **tıklayın.**
+1. [https://github.com](https://github.com)Bir Web tarayıcısında açın ve ardından **Kaydol**' u seçin.
 
-    :::image type="content" source="media/vs-2022/welcome-sign-up-github-account.png" alt-text="GitHub için kaydol sayfasının ekran görüntüsü.":::
+    :::image type="content" source="media/vs-2022/welcome-sign-up-github-account.png" alt-text="GitHub için kaydolun sayfasının ekran görüntüsü.":::
 
-1. **E-posta adresinizi** girin.
+1. **E-posta adresinizi girin** .
 
-    :::image type="content" source="media/vs-2022/welcome-github-enter-email.png" alt-text="E-postanızı Girin iletişim kutusunun ekran görüntüsü.":::
+    :::image type="content" source="media/vs-2022/welcome-github-enter-email.png" alt-text="E-postanızı girin iletişim kutusunun ekran görüntüsü.":::
 
-1. **Yeni hesap hesabınız** için bir parola GitHub ve **Kullanıcı adı da** girin. Ardından, güncelleştirmeleri ve duyuruları e-postayla almak isteyip istemediklerini seçin ve ardından Devam'ı **seçin.**
+1. yeni GitHub hesabınız için **bir parola oluşturun** ve **bir kullanıcı adı girin**. Sonra, e-posta aracılığıyla güncelleştirmeler ve Duyurular alıp almamanız gerekip gerekmediğini seçin ve ardından **devam**' ı seçin.
 
-    :::image type="content" source="media/vs-2022/welcome-github-create-password-enter-username.png" alt-text="Parola Oluştur ve Kullanıcı Adı Gir iletişim kutusunun ekran görüntüsü.":::
+    :::image type="content" source="media/vs-2022/welcome-github-create-password-enter-username.png" alt-text="Parola oluştur ve Kullanıcı adı girin iletişim kutusunun ekran görüntüsü.":::
 
-1. **Bir yapboz** çözerek hesabınızı doğrulayın. Bunu **yapmak için Yapboz** Başlat düğmesini seçin ve yönergeleri izleyin.
+1. Bir bulmayı çözerek **Hesabınızı doğrulayın** . Bunu yapmak için **bulmaca Başlat** düğmesini seçin ve ardından istemleri izleyin.
 
-1. Hesabınızı doğruladikten sonra Hesap oluştur **düğmesini** seçin.
+1. Hesabınızı doğruladıktan sonra **Hesap oluştur** düğmesini seçin.
 
-1. Ardından GitHub e-posta adresinize bir başlatma kodu gönderebilirsiniz. Kodu girin iletişim kutusuna kodu **başlatan kodu** yazın ve Enter tuşuna **basın.**
+1. sonra GitHub e-posta adresinize bir başlatma kodu gönderir. **Kodu gir** iletişim kutusunda kodu Başlatan yazın ve ardından **ENTER** tuşuna basın.
 
-    :::image type="content" source="media/vs-2022/welcome-github-enter-launch-code.png" alt-text="Başlatma Kodunuzu Girin iletişim kutusunun ekran görüntüsü.":::
+    :::image type="content" source="media/vs-2022/welcome-github-enter-launch-code.png" alt-text="Başlatma kodunu girin iletişim kutusunun ekran görüntüsü.":::
 
-1. GitHub uyarlamak için size bazı sorular sorar. Aşağıdaki iletişim kutularına sizin için geçerli olan yanıtları seçin:
+1. GitHub deneyiminizi uyarlamanıza yardımcı olacak bazı sorular ister. Aşağıdaki iletişim kutularında size uygulanan yanıtları seçin:
 
-   - **Kaç ekip üyesiyle birlikte çalışıyor olacak?**
-   - **Hangi özellikleri kullanmakla ilgileniyorsunuz?**
+   - **Sizinle kaç ekip üyesi çalışacak?**
+   - **Hangi belirli özellikleri kullanarak ilgilendiğiniz?**
 
-1. Takımların **işbirliği yaptığı ve göndert** olduğu ekranda Ücretsiz hesabı mı yoksa Takım hesabını mı kullanmak istediğinize karar veabilirsiniz. Ücretsiz hesabı **seçmek** için Kişiselleştirmeyi **atla düğmesini** seçin.
+1. **Ekipler işbirliği ve** gönderme ekranında, ücretsiz hesabı mı yoksa ekip hesabını mı kullanmak istediğinizi seçebilirsiniz. **Ücretsiz** hesabı seçmek Için **kişiselleştirmeyi atla** düğmesini seçin.
 
     > [!TIP]
-    > Daha sonra her zaman hesabı yükseltebilirsiniz. Daha fazla [**bilgi GitHub hesap**](https://docs.github.com/get-started/learning-about-github/types-of-github-accounts) türleri sayfasına bakın.
+    > Hesabınızı daha sonra dilediğiniz zaman yükseltebilirsiniz. daha fazla bilgi edinmek için [**GitHub hesabı türleri**](https://docs.github.com/get-started/learning-about-github/types-of-github-accounts) sayfasına bakın.
 
     GitHub tarayıcınızda kişiselleştirilmiş bir sayfa açar.
 
-    :::image type="content" source="media/vs-2022/welcome-github-new-user-page.png" alt-text="Yeni kullanıcı sayfanız.":::
+    :::image type="content" source="media/vs-2022/welcome-github-new-user-page.png" alt-text="Yeni Kullanıcı sayfanız.":::
 
-Tebrikler! GitHub hesabınız başarıyla oluşturuldu.
+Tebrikler! GitHub hesabınızı başarıyla oluşturdunuz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Yolculuğunuza devam etmek için [Bir repo kopyalama sayfasını ziyaret](git-clone-repository.md) edin.
+Yolculuğa devam etmek için depoyu [Kopyala](git-clone-repository.md) sayfasını ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Öğretici: Bir repodan proje açma](../get-started/tutorial-open-project-from-repo.md)
+- [Öğretici: bir depodan bir proje açın](../get-started/tutorial-open-project-from-repo.md)
+- [Visual Studio & GitHub: birlikte daha iyi](https://visualstudio.microsoft.com/vs/github/)

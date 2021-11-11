@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86649110e83a9bce0768bddc81f148b3c4370793
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: b4b323611897a7977d906eb585f49006b54e5b9e
+ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128430568"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132264154"
 ---
 # <a name="tutorial-extend-c-console-app-and-debug-in-visual-studio-part-2-of-2"></a>öğretici: Visual Studio 'de C# konsol uygulamasını ve hata ayıklamayı genişletme (bölüm 2/2)
 
@@ -140,7 +140,7 @@ Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **
 
    Yönergesini eklemek, `using` `CalculatorLibrary` çağıran siteden ad alanını kaldırmanızı sağlamalıdır, ancak şimdi bir belirsizlik var. `Calculator`Sınıf `CalculatorLibrary` veya `Calculator` ad alanı mı?
    
-   Belirsizliği çözümlemek için, ad alanını `Calculator` `CalculatorProgram` hem *program. cs* hem de *hesaplatorlibrary. cs* olarak olarak değiştirin.
+   Belirsizliği çözmek için, ad alanını `Calculator` `CalculatorProgram` *program. cs* içinde olarak değiştirin.
 
    ```csharp
    namespace CalculatorProgram
@@ -320,15 +320,15 @@ Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **
    Calculator calculator = new Calculator();
    ```
 
-   Ayrıca, `DoOperation` çağrı sitesini küçük harfli adlı nesneye başvuracak şekilde değiştirin `calculator` . Kod, bir statik yöntem çağrısı yerine artık bir üye çağrıdır.
+   Ayrıca, `DoOperation` çağrı sitesini küçük harfli adlı nesneye başvuracak şekilde değiştirin `calculator` . Kod artık statik yönteme yapılan bir çağrı yerine üye çağrısıdır.
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-1. Uygulamayı tekrar çalıştırın. İşiniz bittiğinde, **Hesaplayıcı** proje düğümüne sağ tıklayın ve **klasörü dosya Gezgini 'nde aç**' ı seçin.
+1. Uygulamayı tekrar çalıştırın. Bitirin, Hesap makinesi proje  düğümüne sağ tıklayın ve hesaplayıcıda Klasör **Aç'ı Dosya Gezgini.**
 
-1. Dosya Gezgini 'nde, *bin/Debug/* altındaki çıkış klasörüne gidin ve *Hesaplayıcı. log* dosyasını açın. Çıkış aşağıdakine benzer olmalıdır:
+1. Bu Dosya Gezgini *bin/Debug/* altındaki çıkış klasörüne gidin ve *calculator.log dosyasını* açın. Çıkış aşağıdakine benzer olmalıdır:
 
     ```output
     Starting Calculator Log
@@ -337,7 +337,7 @@ Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **
     3 * 3 = 9
     ```
 
-Bu noktada, *Hesaplatorlibrary. cs* şu koda benzemelidir:
+Bu noktada *CalculatorLibrary.cs* şu koda benzer:
 
 ```csharp
 using System;
@@ -396,7 +396,7 @@ namespace CalculatorLibrary
 }
 ```
 
-*Program. cs* aşağıdaki kod gibi görünmelidir:
+*Program.cs* aşağıdaki kod gibi görünüyor olmalı:
 
 ```csharp
 using System;
@@ -482,46 +482,46 @@ namespace CalculatorProgram
 }
 ```
 
-## <a name="add-a-nuget-package-write-to-a-json-file"></a>NuGet paketi ekleme: JSON dosyasına yazma
+## <a name="add-a-nuget-package-write-to-a-json-file"></a>Bir NuGet Paketi Ekleme: JSON dosyasına yazma
 
-nesne verilerini depolamak için popüler ve taşınabilir bir biçimde JSON 'daki çıkış işlemlerine, *newtonsoft. JSON* NuGet paketine başvurabilirsiniz. NuGet paketler, .net sınıf kitaplıkları için birincil dağıtım yöntemidir.
+Nesne verilerini depolamaya yönelik popüler ve taşınabilir bir biçim olan JSON'daki işlemlerin çıkışını yapmak *için, Newtonsoft.Json* NuGet başvurabilirsiniz. NuGet paketleri . NET sınıf kitaplıkları için birincil dağıtım yöntemidir.
 
-1. **Çözüm Gezgini**' de, **hesaplatorlibrary** projesi için **bağımlılıklar** düğümüne sağ tıklayın ve **NuGet paketlerini yönet**' i seçin.
+1. Bu **Çözüm Gezgini** **CalculatorLibrary** projesi **için Bağımlılıklar** düğümüne sağ tıklayın ve Paket Paketlerini **Yönet'NuGet seçin.**
 
    ::: moniker range="vs-2019"
-   ![kısayol menüsündeki NuGet paketlerinin yönetme ekran görüntüsü.](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
+   ![Kısayol menüsündeki NuGet Paketlerini Yönet'in ekran görüntüsü.](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![kısayol menüsündeki NuGet paketlerinin yönetme ekran görüntüsü.](media/vs-2022/calculator-manage-nuget-packages.png)
+   ![Kısayol menüsündeki NuGet Paketlerini Yönet'in ekran görüntüsü.](media/vs-2022/calculator-manage-nuget-packages.png)
    ::: moniker-end
 
    NuGet Paket Yöneticisi açılır.
 
    ::: moniker range="vs-2019"
-   ![NuGet Paket Yöneticisi ekran görüntüsü.](media/vs-2019/calculator2-nuget-package-manager-dark.png)
+   ![Uygulamanın ekran NuGet Paket Yöneticisi.](media/vs-2019/calculator2-nuget-package-manager-dark.png)
    ::: moniker-end
 
-1. *Newtonsoft. JSON* paketini arayıp seçin ve ardından **Install**' ı seçin.
+1. *Newtonsoft.Json paketini arayın ve seçin* ve Yükle'yi **seçin.**
 
    ::: moniker range="vs-2019"
-   ![newtonsoft J SON NuGet paket bilgilerinin NuGet Paket Yöneticisi ekran görüntüsü.](media/vs-2019/calculator2-nuget-newtonsoft-json-dark2.png)
+   ![NuGet Paket Yöneticisi'de Yer alan NuGet bilgileri içeren Newtonsoft J SON NuGet Paket Yöneticisi.](media/vs-2019/calculator2-nuget-newtonsoft-json-dark2.png)
    
-   Visual Studio paketi indirir ve projeye ekler. **Çözüm Gezgini**' deki başvurular düğümünde yeni bir giriş görüntülenir.
+   Visual Studio paketi indirir ve projeye ekler. içinde Başvurular düğümünde yeni bir giriş **Çözüm Gezgini.**
    ::: moniker-end
    ::: moniker range=">=vs-2022"
-   ![newtonsoft J SON NuGet paket bilgilerinin NuGet Paket Yöneticisi ekran görüntüsü.](media/vs-2022/calculator-nuget-newtonsoft-json.png)
-   Değişikliklerin kabul edilip edilmeyeceğini onaylamanız istenirse **Tamam**' ı seçin.
+   ![NuGet Paket Yöneticisi'daki NuGet bilgileri içeren Newtonsoft J SON NuGet Paket Yöneticisi.](media/vs-2022/calculator-nuget-newtonsoft-json.png)
+   Değişiklikleri kabul edip etmeyip kabul et istemiyle karşılanmazsanız Tamam'ı **seçin.**
    
-   Visual Studio paketi indirir ve projeye ekler. **Çözüm Gezgini** içindeki **paketler** düğümünde yeni bir giriş görüntülenir.
+   Visual Studio paketi indirir ve projeye ekler. içinde paketler düğümünde yeni **bir** giriş **Çözüm Gezgini.**
    ::: moniker-end
 
-1. `using` `Newtonsoft.Json` *Hesaplakitaplığı. cs*' nin başlangıcında için bir yönerge ekleyin.
+1. `using` `Newtonsoft.Json` *CalculatorLibrary.cs'nin* başına için bir yönerge ekleyin.
 
    ```csharp
    using Newtonsoft.Json;
    ```
 
-1. `JsonWriter`Üye nesnesini oluşturun ve `Calculator` oluşturucuyu aşağıdaki kodla değiştirin:
+1. Üye `JsonWriter` nesnesini oluşturun ve oluşturucusu `Calculator` aşağıdaki kodla değiştirin:
 
    ```csharp
         JsonWriter writer;
@@ -538,7 +538,7 @@ nesne verilerini depolamak için popüler ve taşınabilir bir biçimde JSON 'da
         }
    ```
 
-1. `DoOperation`JSON kodunu eklemek için yöntemi değiştirin `writer` :
+1. `DoOperation`JSON kodunu eklemek için yöntemini `writer` değiştirme:
 
    ```csharp
         public double DoOperation(double num1, double num2, string op)
@@ -585,7 +585,7 @@ nesne verilerini depolamak için popüler ve taşınabilir bir biçimde JSON 'da
         }
    ```
 
-1. Kullanıcı işlem verilerini girmeyi tamamladıktan sonra JSON sözdizimini tamamlayacak bir yöntem ekleyin.
+1. Kullanıcı işlem verilerini girmeyi bitirip JSON söz dizimini tamamlamak için bir yöntem ekleyin.
 
    ```csharp
     public void Finish()
@@ -596,7 +596,7 @@ nesne verilerini depolamak için popüler ve taşınabilir bir biçimde JSON 'da
     }
    ```
 
-1. *Program. cs*' nin sonunda, öğesinden önce, `return;` öğesine bir çağrı ekleyin `Finish` :
+1. *Program.cs'nin sonunda,*'den `return;` önce için bir çağrı `Finish` ekleyin:
 
    ```csharp
             // Add call to close the JSON writer before return
@@ -605,9 +605,9 @@ nesne verilerini depolamak için popüler ve taşınabilir bir biçimde JSON 'da
         }
    ```
 
-1. Uygulamayı derleyin ve çalıştırın ve birkaç işlem girmeyi tamamladıktan sonra *n* komutunu girerek uygulamayı kapatın.
+1. Uygulamayı derleme ve çalıştırma ve birkaç işlem girmeyi bitirdikten sonra *n* komutunu girerek uygulamayı kapatın.
    
-1. Dosya Gezgini 'nde *hesaplatorlog. JSON* dosyasını açın. Aşağıdaki içeriğe benzer bir şey görmeniz gerekir:
+1. *calculatorlog.json dosyasını Dosya Gezgini.* Aşağıdaki içeriğe benzer bir şey görüyor gerekir:
 
    ```json
    {
@@ -628,43 +628,43 @@ nesne verilerini depolamak için popüler ve taşınabilir bir biçimde JSON 'da
    }
    ```
 
-## <a name="debug-set-and-hit-a-breakpoint"></a>Hata Ayıkla: kesme noktası ayarlama ve isabet
+## <a name="debug-set-and-hit-a-breakpoint"></a>Hata ayıklama: Kesme noktası ayarlama ve isabet
 
-Visual Studio hata ayıklayıcı güçlü bir araçtır. Hata ayıklayıcı, programlama hatası olduğunda tam noktayı bulmak için kodunuzda adım adım ileredebilir. Daha sonra yapmanız gereken düzeltmeleri anlayabilir ve uygulamanızı çalıştırmaya devam edebilmeniz için geçici değişiklikler yapmanız yeterlidir.
+Hata Visual Studio aracı güçlü bir araçtır. Hata ayıklayıcı, programlama hatasının tam olarak hangi noktada olduğunu bulmak için kodunuz boyunca adım adım yol kullanabilir. Ardından, hangi düzeltmeler yapmak zorunda olduğunu anlıyabilirsiniz ve uygulama çalıştırmaya devam etmek için geçici değişiklikler yapabilirsiniz.
 
-1. *Program. cs*' de, aşağıdaki kod satırının solundaki cilt payını tıklatın. Ayrıca, satıra tıklayıp **F9**' i seçebilir ya da satıra sağ **tıklayıp kesme**  >  **noktası Ekle kesme noktası**' nı seçebilirsiniz.
+1. *Program.cs'de,* aşağıdaki kod satırına sol tarafta yer alan oluk içinde tıklayın. Ayrıca satıra tıklar, **F9'u** seçer veya satıra sağ tıklar ve Kesme Noktası Ekle **Kesme Noktası** seçeneğini  >  **de seçersiniz.**
 
    ```csharp
    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
    ```
 
-   Görüntülenen kırmızı nokta bir kesme noktasını gösterir. Kesme noktalarını kullanarak uygulamanızı duraklatabilir ve kodu inceleyebilirsiniz. Herhangi bir çalıştırılabilir kod satırında bir kesme noktası ayarlayabilirsiniz.
+   Görüntülenen kırmızı nokta bir kesme noktası gösterir. Kesme noktaları kullanarak uygulamanızı duraklatabilir ve kodu inceebilirsiniz. Herhangi bir yürütülebilir kod satırı üzerinde kesme noktası ayarlayın.
 
    ![Kesme noktası ayarlamayı gösteren ekran görüntüsü.](media/vs-2019/calculator-2-debug-set-breakpoint.png)
 
 1. Uygulamayı derleyin ve çalıştırın. Hesaplama için aşağıdaki değerleri girin:
 
-   - İlk numara için *8* girin.
-   - İkinci numara için *0* girin.
-   - İşleci için biraz eğlenceye sahip olalım. *D* girin.
+   - İlk sayı için *8 girin.*
+   - İkinci sayı için *0 girin.*
+   - işleci için biraz eğlenceli bir şeyler bakalım. *d girin.*
 
-   Uygulama, sol tarafta sarı işaretçiye ve vurgulanan koda göre belirtilen kesme noktasını oluşturduğunuz yeri askıya alır. Vurgulanan kod henüz yürütülmedi.
+   Uygulama, kesme noktası oluşturduğunuz yeri askıya alır. Bu, sol tarafta sarı işaretçi ve vurgulanan kod ile birlikte görünür. Vurgulanan kod henüz yürütülmedi.
 
-   ![Kesme noktasına vurarak ekran görüntüsü](media/vs-2019/calculator-2-debug-hit-breakpoint.png)
+   ![Kesme noktasıyla ilgili ekran görüntüsü](media/vs-2019/calculator-2-debug-hit-breakpoint.png)
 
-   Artık uygulama askıya alındığında uygulamanızın durumunu inceleyebilirsiniz.
+   Artık uygulama askıya alındı ve uygulama durumunu inceebilirsiniz.
 
-## <a name="debug-view-variables"></a>Hata Ayıkla: değişkenleri görüntüle
+## <a name="debug-view-variables"></a>Hata ayıklama: Değişkenleri görüntüleme
 
-1. Vurgulanan kodda, ve gibi değişkenlerin üzerine gelin `cleanNum1` `op` . Bu değişkenlerin geçerli değerleri `8` ve `d` sırasıyla, veri ipuçlarında görünür.
+1. Vurgulanan kodda ve gibi değişkenlerin üzerine `cleanNum1` `op` gelin. Bu değişkenlerin geçerli değerleri ve `8` `d` sırasıyla DataTips içinde görünür.
 
-   ![Bir DataTip görüntülemeyi gösteren ekran görüntüsü.](media/vs-2019/calculator-2-debug-view-datatip.png)
+   ![DataTip görüntülemeyi gösteren ekran görüntüsü.](media/vs-2019/calculator-2-debug-view-datatip.png)
 
-   Hata ayıklarken, değişkenlerin beklenen değerleri içerip içermediğini görmek için genellikle sorunları düzeltmek için kritik öneme sahip olup olmadığını kontrol edin.
+   Hata ayıklama sırasında değişkenlerin beklediğiniz değerleri tutıp tutmay olmadığını kontrol etmek genellikle sorunları düzeltmek için kritik öneme sahiptir.
 
-2. Alt bölmede **Yereller** penceresine bakın. kapatılmışsa, açmak için **hata ayıkla**  >  **Windows**  >  **yereller** ' i seçin.
+2. Alt bölmede YerelLer **penceresine** bakın. Kapalı ise YerelLer'de **hata**  >  **ayıkla'Windows'ı**  >   seçerek açın.
 
-   **Yereller** penceresi, şu anda kapsamda olan her bir değişkeni, değeri ve türü ile birlikte gösterir.
+   **YerelLer** penceresinde, şu anda kapsamda olan her değişken, değeri ve türüyle birlikte gösterilir.
 
    ::: moniker range="vs-2019"
    ![Yereller penceresinin ekran görüntüsü.](media/vs-2019/calculator-2-debug-locals-window.png)
@@ -673,71 +673,71 @@ Visual Studio hata ayıklayıcı güçlü bir araçtır. Hata ayıklayıcı, pro
    ![Yereller penceresinin ekran görüntüsü.](media/vs-2022/calculator-debug-locals-window.png)
    ::: moniker-end
 
-3. **Oto** penceresine bakın.
+3. Otomatikler **penceresine** bakın.
 
-   Bu pencere, **Yereller** penceresi ile benzerdir, ancak uygulamanın duraklatıldığı geçerli kod satırını takip eden ve hemen önceki değişkenleri gösterir.
+   Otomatikler penceresi Yerel öğeler  penceresine benzer, ancak uygulamanın duraklatılmış olduğu geçerli kod satırına hemen önce ve sonra gelen değişkenleri gösterir.
 
-Daha sonra, hata ayıklayıcı tek bir deyimindeki kodu, *Adımlama* olarak adlandırılan bir kez yürütün.
+Ardından, hata ayıklayıcısında her bir deyimde adımlama olarak adlandırılan bir kod *yürütün.*
 
-## <a name="debug-step-through-code"></a>Hata Ayıkla: kod içinde adımla
+## <a name="debug-step-through-code"></a>Hata ayıklama: Kodda adım adım ilerler
 
-1. **F11** tuşuna basın veya **hata ayıklama**  >  **adımı**' nı seçin.
+1. **F11 tuşuna basın** veya Hata **Ayıkla**  >  **adımını seçin.**
 
-   Step Into komutunu kullanarak, uygulama geçerli ifadeyi yürütür ve genellikle sonraki kod satırında bir sonraki yürütülebilir ifadeye ilerler. Sol taraftaki sarı işaretçi her zaman geçerli ifadeyi gösterir.
+   Uygulama, Adımla komutunu kullanarak geçerli deyimi yürütür ve genellikle bir sonraki kod satırı olan sonraki yürütülebilir deyime ilerler. Sol tarafta sarı işaretçi her zaman geçerli deyimi gösterir.
 
-   ![Adımın komut ekran görüntüsü](media/vs-2019/calculator-2-debug-step-into.png)
+   ![Komutun içine adımla ekran görüntüsü](media/vs-2019/calculator-2-debug-step-into.png)
 
-   Yalnızca sınıfındaki yöntemine bir adım daha eklemiş olursunuz `DoOperation` `Calculator` .
+   sınıfındaki `DoOperation` yöntemine `Calculator` girdiniz.
 
-1. Program akışınız hakkında hiyerarşik bir görünüm almak için **çağrı yığını** penceresine bakın. kapalıysa, açmak için **hata ayıkla**  >  **Windows**  >  **çağrı yığını** ' nı seçin.
+1. Program akışınıza hiyerarşik bir bakış elde etmek için Çağrı Yığını **penceresine** bakın. Kapalı ise Çağrı Yığınında **Hata Ayıkla'Windows'ı**  >    >   seçerek açın.
 
    ![Çağrı yığınının ekran görüntüsü](media/vs-2019/calculator-2-debug-call-stack.png)
 
-   Bu görünüm `Calculator.DoOperation` , sarı işaretçiyle belirtilen geçerli yöntemi gösterir. İkinci satır, `Main` *program. cs* dosyasındaki yönteminden yöntemini çağıran işlevi gösterir.
+   Bu görünüm, sarı `Calculator.DoOperation` işaretçiyle gösterilen geçerli yöntemi gösterir. İkinci satır, `Main` *Program.cs'de* yönteminden yöntemini çağıran işlevi gösterir.
    
-   Çağrı yığını penceresi, yöntemlerin ve işlevlerin hangi sırada **çağrılacağını** gösterir. Bu pencere Ayrıca, kısayol menüsünden **kaynak koda git** gibi birçok hata ayıklayıcı özelliğine erişim sağlar.
+   Çağrı **Yığını** penceresi, yöntemlerin ve işlevlerin çağrıldığı sırayı gösterir. Bu pencere, kısayol menüsünden Kaynak Koda Git gibi birçok **hata ayıklayıcısı** özelliğine de erişim sağlar.
 
-1. Uygulama deyimde duraklayana kadar, **F10** tuşuna basın veya **hata ayıklama**  >  **adımından** daha fazla kez ' yi seçin `switch` .
+1. **F10 tuşuna** basın veya **uygulama deyimde** duraklatana kadar birkaç kez Hata  >  Ayıkla Adımını `switch` Seçin.
 
    ```csharp
    switch (op)
    {
    ```
 
-   Step Over komutu, geçerli ifade bir işlev çağırırsa, hata ayıklayıcı işlev içinde kodu çalıştırırsa ve işlevin dönüşene kadar yürütmeyi askıya almamasının dışında adımla komutuna benzerdir. Belirli bir işlevle ilgilenmiyorsanız, üzerine adımla adımlıdan daha hızlıdır.
+   Üzerinden Adımla komutu, Geçerli deyim bir işlev çağırsa, hata ayıklayıcının işlevinde kodu çalıştırması ve işlev dönene kadar yürütmeyi askıya almama durumu dışında, Adımla komutuna benzer. Belirli bir işlevle ilgilenmezsiniz, Adım At'dan daha hızlıdır.
 
-1. Uygulamanın aşağıdaki kod satırında duraklaması için **F10** bir kez daha tuşuna basın.
+1. **F10'a** bir kez daha basın, böylece uygulama aşağıdaki kod satırı üzerinde duraklatılır.
 
    ```csharp
    if (num2 != 0)
    {
    ```
 
-   Bu kod, sıfıra bölme durumunu denetler. Uygulama devam ederse, genel bir özel durum (hata) oluşturur, ancak konsoldaki gerçek döndürülen değeri görüntüleme gibi başka bir şey de denemek isteyebilirsiniz. Bir seçenek, kodda değişiklik yapmak ve sonra hata ayıklamaya devam etmek için *Düzenle ve devam et* adlı bir hata ayıklayıcı özelliği kullanmaktır. Ancak, yürütme akışını geçici olarak değiştirmek için farklı bir püf noktası vardır.
+   Bu kod, sıfıra bölme büyük/küçük harflerini denetler. Uygulama devam ederse, genel bir özel durum (hata) oluşturur, ancak konsolda döndürülen gerçek değeri görüntüleme gibi başka bir şey denemek de iyi olabilir. Seçeneklerden biri, kodda değişiklik yapmak ve ardından hata ayıklamaya devam etmek için *edit-and-continue* adlı bir hata ayıklayıcı özelliği kullanmaktır. Ancak, yürütme akışını geçici olarak değiştirmek farklı bir numaradır.
 
-## <a name="debug-test-a-temporary-change"></a>Hata Ayıkla: geçici bir değişikliği test etme
+## <a name="debug-test-a-temporary-change"></a>Hata ayıklama: Geçici bir değişikliği test etmek
 
-1. Şu anda deyimde duraklatılmış olan sarı işaretçiyi seçin `if (num2 != 0)` ve aşağıdaki ifadeye sürükleyin:
+1. Deyimde duraklatılmış olan sarı `if (num2 != 0)` işaretçiyi seçin ve aşağıdaki deyime sürükleyin:
 
    ```csharp
    result = num1 / num2;
    ```
 
-   İşaretçinin buraya sürüklenmesi, uygulamanın deyimin tamamen atlanmasına neden olur `if` , böylece sıfıra bölene olacağını görebilirsiniz.
+   İşaretçiyi buraya sürüklemek uygulamanın deyimi tamamen atlamasına neden olur, böylece sıfıra `if` böldükte ne olacağını görebilirsiniz.
 
-1. Kod satırını yürütmek için **F10** tuşuna basın.
+1. Kod **satırı yürütmek için F10** tuşuna basın.
 
-1. Değişkenin üzerine geldiğinizde `result` , **sonsuz** değerini gösterir. C# ' de, sıfıra böleceği zaman sonsuzluk sonuç olur.
+1. Değişkenin üzerine `result` gelirsiniz, Infinity değerini **gösterir.** C# ile Infinity, sıfıra bölmenin sonucu olur.
 
-1. **F5** tuşuna basın veya **hata**  >  **ayıklamayı devam** Ayıkla ' yı seçin.
+1. **F5 tuşuna basın** veya Hata Ayıklama **Devam Hata**  >  **Ayıklama'ya basın.**
 
-   Sonsuzluk sembolü, matematik işleminin sonucu olarak konsolunda görünür.
+   Matematik işlemi sonucunda konsolda sonsuz simgesi görünür.
 
-1. *N* komutunu girerek uygulamayı düzgün bir şekilde kapatın.
+1. n komutunu girerek uygulamayı düzgün *bir şekilde* kapatın.
 
-## <a name="code-complete"></a>Kod Tamam
+## <a name="code-complete"></a>Kod tamamlandı
 
-Tüm adımları tamamladıktan sonra, *Hesaplamakitaplığı. cs* dosyasının tüm kodu aşağıda verilmiştir:
+Tüm adımları tamamlandıktan sonra *CalculatorLibrary.cs* dosyasının tam kodu şu şekildedir:
 
 ```csharp
 using System;
@@ -816,7 +816,7 @@ namespace CalculatorLibrary
 }
 ```
 
-*Program. cs* kodu aşağıda verilmiştir: 
+Program.cs için kod *şu şekildedir:* 
 
 ```csharp
 using System;
@@ -905,12 +905,12 @@ namespace CalculatorProgram
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler, bu öğreticiyi tamamlama! Daha fazla bilgi edinmek için aşağıdaki içerikle devam edin:
+Tebrikler, bu öğreticiyi tamamladıktan sonra! Daha fazla bilgi edinmek için aşağıdaki içeriğe devam etmek için:
 
-- [Daha fazla C# öğreticisi ile devam edin.](/dotnet/csharp/tutorials/)
-- [Hızlı Başlangıç: Web ASP.NET Core oluşturma.](../../ide/quickstart-aspnet-core.md)
-- [içinde C# kodunda hata ayıklamayı Visual Studio.](tutorial-debugger.md)
-- [Birim testlerini oluşturma ve çalıştırma adımlarını adım adım takip etmek.](../../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
-- [Bir C# programı çalıştırın.](run-program.md)
-- [C# IntelliSense hakkında bilgi edinebilirsiniz.](../../ide/visual-csharp-intellisense.md)
-- [IDE'ye Visual Studio devam eder.](visual-studio-ide.md)
+- [Daha fazla C# öğreticiyle devam edin](/dotnet/csharp/tutorials/).
+- [hızlı başlangıç: ASP.NET Core bir web uygulaması oluşturun](../../ide/quickstart-aspnet-core.md).
+- [Visual Studio C# kodunda hata ayıklamayı öğrenin](tutorial-debugger.md).
+- [Birim testlerini oluşturmayı ve çalıştırmayı adım adım](../../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)inceleyin.
+- [Bir C# programı çalıştırın](run-program.md).
+- [C# IntelliSense hakkında bilgi edinin](../../ide/visual-csharp-intellisense.md).
+- [Visual Studio ıde 'ye genel bakış ile devam edin](visual-studio-ide.md).

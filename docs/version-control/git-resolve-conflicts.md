@@ -2,19 +2,19 @@
 title: Visual Studio birleştirme çakışmalarını çözün
 titleSuffix: ''
 description: Visual Studio birleştirme çakışmalarını anlama, önlemek ve çözmek.
-ms.date: 11/08/2021
+ms.date: 11/10/2021
 ms.topic: how-to
 author: Taysser-Gherfal
 ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: e6de198dc0e29fd2a44cc6a50aece22f3d9b28d8
-ms.sourcegitcommit: 5f60dd61e7f281db7892118dbed6387c4903701f
+ms.openlocfilehash: c088e526f4a999f0637068322c4a26f4900f3f81
+ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2021
-ms.locfileid: "132079627"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132264035"
 ---
 # <a name="resolve-merge-conflicts-in-visual-studio"></a>Visual Studio birleştirme çakışmalarını çözün
 
@@ -51,13 +51,14 @@ Dosya içerikleri işlemeler arasında önemli ölçüde değişmiyorsa, git pek
 
 - Bu, uzak depoya getirilen değişiklikleri dahil **etmek için göndermeyi** ve göndermeyi seçelim. değişiklikleri çekilirken veya iki dalı birleştirmeye çalışırken herhangi bir birleştirme çakışması varsa, Visual Studio git değişiklikleri penceresinde, git deposu penceresinde ve çakışmalar içeren tüm belgelerde bize bilgi verir.
 
-    :::image type="content" source="media/vs-2022/git-conflicts-notification-ui.png" alt-text="Birleştirme çakışması bildiriminin ekran görüntüsü." lightbox="media/vs-2022/git-conflicts-notification-ui.png":::
+    :::image type="content" source="media/vs-2022/git-conflicts-notification-ui.png" alt-text="Birleştirme çakışması bildiriminin ekran görüntüsü.":::
 
 - **Git değişiklikleri** penceresinde, birleştirilmemiş değişiklikler altında çakışmalar bulunan belgelerin bir listesi gösterilir. Çakışmaları çözmeye başlamak için, çözümlemek istediğiniz belgeye çift tıklayabilirsiniz veya düzenleyicide açık çakışmalar içeren bir belgeniz varsa, birleştirme düzenleyicisini aç ' ı seçebilirsiniz.
 
     :::image type="content" source="media/vs-2022/git-conflicts-status-ui.png" alt-text="Git değişiklikleri penceresinde birleştirme çakışması durumunun ekran görüntüsü." lightbox="media/vs-2022/git-conflicts-status-ui.png":::
 
-- **Birleştirme düzenleyicisini** açtıktan sonra, aşağıdaki yöntemlerden herhangi birini kullanarak çakışmayı çözmeye başlayabilirsiniz:
+- **Birleştirme düzenleyicisini** açtıktan sonra, aşağıdaki yöntemlerden herhangi birini kullanarak (numaralandırılmış ekran görüntüsünde gösterildiği gibi) çakışmayı çözmeye başlayabilirsiniz.
+
     1. Çakışmalar satırını satıra göre ilerleyin ve onay kutularını işaretleyerek sağ veya sol tarafı tutarak seçin.
     1. Çakışan değişikliklerinizin tümünü tutun veya yoksayın.
     1. Kodunuzu, sonuç penceresinde el ile düzenleyin.
@@ -66,6 +67,7 @@ Dosya içerikleri işlemeler arasında önemli ölçüde değişmiyorsa, git pek
 
     > [!TIP]
     > Birleştirme Düzenleyicisi varsayılan yerleşimini beğenmezseniz, dişli açılan menüsünü kullanarak bunu değiştirebilirsiniz.
+    >
     > :::image type="content" source="media/vs-2022/git-conflicts-layout-options.png" alt-text="Birleştirme Düzenleyicisi Düzen seçeneklerinin ekran görüntüsü.":::
     >
     >Örneğin, aşağıdaki ekran görüntüsünde dikey görünümün nasıl göründüğü gösterilmektedir:
@@ -92,3 +94,4 @@ Yolculuğa devam etmek için aşağıdaki bağlantıyı kullanarak birleştirme 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio git deneyimi](../ide/git-with-visual-studio.md)
+- [Visual Studio & GitHub: birlikte daha iyi](https://visualstudio.microsoft.com/vs/github/)

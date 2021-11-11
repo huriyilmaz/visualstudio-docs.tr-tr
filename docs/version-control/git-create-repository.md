@@ -1,77 +1,78 @@
 ---
-title: Visual Studio için depo oluşturma
+title: Visual Studio'de bir Visual Studio
 titleSuffix: ''
-description: Git kullanarak Visual Studio bir depo oluşturun veya bir Azure DevOps depoya gidin.
-ms.date: 11/08/2021
+description: Git kullanarak Visual Studio depo oluşturun veya bir depoya Azure DevOps gidin.
+ms.date: 11/10/2021
 ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 652d1c374f078fae73c7ba157ddaadce02695a41
-ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+ms.openlocfilehash: 3ef08c327e7fb0945338477f2a971a0decb364eb
+ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132001732"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132264164"
 ---
-# <a name="create-a-repo-in-visual-studio"></a>Visual Studio için depo oluşturma
+# <a name="create-a-repo-in-visual-studio"></a>Visual Studio'de bir Visual Studio
 
-Visual Studio, bir depoyu doğrudan ıde 'den klonlamanızı kolaylaştırır. Aşağıdaki adımları uygulayın:
+Visual Studio, IDE'den bir repo kopyalamayı kolaylaştırır. Aşağıdaki adımları uygulayın:
 
-## <a name="create-a-github-repo"></a>GitHub deposu oluşturma
+## <a name="create-a-github-repo"></a>Bir GitHub oluşturma
 
-1. Visual Studio açın ve sonra **yeni proje oluştur**' u seçin.
-
-    > [!TIP]
-    > bir depoya eklemek için Visual Studio ' de zaten bir projeniz yoksa, hızlıca [yeni bir C# konsol uygulaması oluşturabilir](../get-started/csharp/tutorial-console.md#create-a-project) ve bunu **mynewapp** olarak adlandırın. Visual Studio yeni uygulamanızı varsayılan "*Hello, World!*" ile doldurur kodudur.
-
-1. **Git** menüsünde **Git deposu oluştur**' u seçin.
-
-    :::image type="content" source="media/vs-2022/git-menu-create-git-repository.png" alt-text="Visual Studio git menüsündeki git deposu oluşturma seçeneğinin ekran görüntüsü.":::
-
-1. **Git deposu oluştur** iletişim kutusunda, **Yeni bir uzaktan gönder** bölümünde **GitHub**' yi seçin.
-
-    :::image type="content" source="media/vs-2022/git-menu-create-github-repo-dialog.png" alt-text="git menüsünden git deposu oluşturma seçeneğinin ekran görüntüsü, GitHub seçimi vurgulanmış şekilde Visual Studio.":::
-
-1. **Git deposu oluştur** iletişim kutusunun **yeni bir GitHub deposu oluştur** bölümünde, oluşturmak istediğiniz deponun adını girin.
+1. Yeni Visual Studio'yi açın ve Yeni **proje oluştur'a seçin.**
 
     > [!TIP]
-    > GitHub hesabınızda henüz oturum açmadıysanız, bu ekrandan de yapabilirsiniz.
+    > Henüz bir repoya eklemek Visual Studio projeniz yoksa, hızla yeni bir [C#](../get-started/csharp/tutorial-console.md#create-a-project) konsol uygulaması oluşturabilir ve **Bunu MyNewApp olarak adlandırabilirsiniz.** Visual Studio yeni uygulamanıza varsayılan "*Hello, World!*" Kod.
 
-1. Oturum açtıktan sonra depo bilgilerinizi girdikten sonra, deponuzu oluşturmak ve uygulamanızı eklemek için **Oluştur ve Gönder** düğmesini seçin.
+1. Git **menüsünden Git** Deposu **Oluştur'a tıklayın.**
 
-    :::image type="content" source="media/vs-2022/git-menu-create-git-repo-push-code.png" alt-text="Git deposu oluştur penceresi kullanılarak girilen kullanıcının GitHub bilgisinin ekran görüntüsü.":::
+    :::image type="content" source="media/vs-2022/git-menu-create-git-repository.png" alt-text="Visual Studio'daki Git menüsünden Git Deposu Oluştur seçeneğinin ekran Visual Studio.":::
 
-### <a name="open-an-existing-local-repository"></a>Mevcut bir yerel depoyu aç
+1. Git **deposu oluştur iletişim kutusunun Yeni** bir uzak **bölüme itme bölümünde Git'e** GitHub. 
 
-bir depoyu oluşturduktan veya [klonladıktan](git-clone-repository.md)sonra, Visual Studio git deposunu algılar ve git menüsündeki **yerel depolar** listenize ekler. Buradan git depolarınız arasında hızlı bir şekilde erişebilir ve geçiş yapabilirsiniz.
+    :::image type="content" source="media/vs-2022/git-menu-create-github-repo-dialog.png" alt-text="Uygulama seçiminin vurgulanmış olduğu git menüsündeki Git Visual Studio Git Deposu GitHub ekran görüntüsü.":::
 
-## <a name="create-an-azure-devops-repo"></a>Azure DevOps deposu oluşturma
-
-1. Visual Studio açın ve sonra **yeni proje oluştur**' u seçin.
+1. **Git** **deposu oluştur iletişim GitHub** yeni bir depo oluştur bölümünde oluşturmak istediğiniz deponun adını girin.
 
     > [!TIP]
-    > bir depoya eklemek için Visual Studio ' de zaten bir projeniz yoksa, hızlıca [yeni bir C# konsol uygulaması oluşturabilir](../get-started/csharp/tutorial-console.md#create-a-project) ve bunu **mynewapp** olarak adlandırın. Visual Studio yeni uygulamanızı varsayılan "*Hello, World!*" ile doldurur kodudur.
+    > Henüz GitHub oturum GitHub bu ekrandan da oturum açın.
 
-1. **Git** menüsünde **Git deposu oluştur**' u seçin.
+1. Oturum açın ve repo bilgilerinizi girdikten  sonra, oluştur ve Itme düğmesini seçerek kendiponuz oluşturun ve uygulamanızı ekleyin.
 
-1. **Git deposu oluştur** iletişim kutusunda, **Yeni bir uzaktan gönder** bölümünde **Azure DevOps**' yi seçin.
+    :::image type="content" source="media/vs-2022/git-menu-create-git-repo-push-code.png" alt-text="Git Deposu Oluştur penceresini kullanarak GitHub bilgileri ekran görüntüsü.":::
 
-1. **yeni bir Azure DevOps deposu oluştur** bölümünde Azure hesabınızda oturum açın ve sonra **Project** açılır listesinden bir proje seçin.
+### <a name="open-an-existing-local-repository"></a>Mevcut bir yerel depoyu açma
 
-1. Depoyu oluşturmak ve uygulamanızı eklemek için **Oluştur ve Gönder** düğmesini seçin.
+Depoyu oluşturduktan veya klonladikten sonra [Visual Studio](git-clone-repository.md)Git deposunu algılar ve Git menüsündeki  Yerel Depolar listenize ekler. Buradan Git depolarına hızlıca erişin ve bu depolar arasında geçişe geçin.
 
-    :::image type="content" source="media/vs-2022/git-menu-publish-azure-devops.png" alt-text="Bir git deposu oluştur iletişim kutusunun oluşturma ve gönderme işlevinin, tek bir eylemle kod yayımlamak için kullanabileceğiniz ekran görüntüsü.":::
+## <a name="create-an-azure-devops-repo"></a>Bir Azure DevOps oluşturma
+
+1. Yeni Visual Studio'yi açın ve Yeni **proje oluştur'a seçin.**
+
+    > [!TIP]
+    > Henüz bir repoya eklemek Visual Studio projeniz yoksa, hızla yeni bir [C#](../get-started/csharp/tutorial-console.md#create-a-project) konsol uygulaması oluşturabilir ve **Bunu MyNewApp olarak adlandırabilirsiniz.** Visual Studio yeni uygulamanıza varsayılan "*Hello, World!*" Kod.
+
+1. Git **menüsünden Git** Deposu **Oluştur'a tıklayın.**
+
+1. Git **deposu oluştur iletişim kutusunun Yeni** bir uzak **bölüme itme bölümünde** Yeni bir uzak depoya Azure DevOps. 
+
+1. Yeni **bir depolama Azure DevOps bölümünde** Azure hesabınızla oturum açın ve açılan listeden bir **Project** seçin.
+
+1. Oluştur **ve Itme düğmesini** seçerek bir repo oluşturun ve uygulama ekleyin.
+
+    :::image type="content" source="media/vs-2022/git-menu-publish-azure-devops.png" alt-text="Tek bir eylemle kod yayımlamak için kullanabileceğiniz Git deposu oluştur iletişim kutusunun Create and Push işlevinin ekran görüntüsü.":::
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Yolculuğa devam etmek için [dal oluştur](git-create-branch.md) sayfasını ziyaret edin.
+Yolculuğunuza devam etmek için Dal [oluşturma sayfasını ziyaret](git-create-branch.md) edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: bir depodan bir proje açın](../get-started/tutorial-open-project-from-repo.md)
+- [Öğretici: Bir repodan proje açma](../get-started/tutorial-open-project-from-repo.md)
 - [Visual Studio’da GitHub hesaplarıyla çalışma](../ide/work-with-github-accounts.md)
 - [Birden çok kullanıcı hesabıyla çalışma](../ide/work-with-multiple-user-accounts.md)
 - [Visual Studio’da oturum açma](../ide/signing-in-to-visual-studio.md)
+- [Visual Studio & GitHub: Birlikte daha iyi](https://visualstudio.microsoft.com/vs/github/)

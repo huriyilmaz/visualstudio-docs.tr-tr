@@ -1,61 +1,63 @@
 ---
-title: Visual Studio bir depoya git
+title: Visual Studio'de bir Visual Studio
 titleSuffix: ''
-description: git deposu penceresini kullanarak Visual Studio git deposuna gözatamazsınız.
-ms.date: 11/05/2021
+description: Git Deposu penceresini kullanarak Visual Studio herhangi bir Git deposuna göz atma.
+ms.date: 11/10/2021
 ms.topic: how-to
 author: Taysser-Gherfal
 ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: ad071fefa6d6069f35401ca777cdad07eb74ff36
-ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+ms.openlocfilehash: 729667f27e9cbe95e9fe6990916ce7c11bd1f22d
+ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132002563"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132264015"
 ---
-# <a name="browse-git-repositories-in-visual-studio"></a>Visual Studio git depolarına gözatmaya
+# <a name="browse-git-repositories-in-visual-studio"></a>Visual Studio'da Git depolarına göz atma
 
-Git değişiklikleri penceresi, kodunuzun dışında geçiş yapmak zorunda kalmadan, kodlarken git ile etkileşimde bulunmak için sorunsuz bir yol sağlar; Ancak, git deponuza odaklanmak için daha mantıklı bir zaman vardır. Örneğin, takımınızın üzerinde ne kadar çalıştığı hakkında iyi bir resim almanız veya bir hatayı araştırmak için iki işlemeyi karşılaştırmanız gerekebilir.
+Git Değişiklikleri penceresi, kodunuzdan geçiş yapmak zorunda kalmadan kod yazma sırasında Git ile etkileşim kurmanın sorunsuz bir yolunu sağlar; ancak bazen Git depona odaklanmanın daha anlamlı olduğu zamanlar olur. Örneğin, takımınız üzerinde çalıştığı şeyi iyi bir şekilde incelemeniz veya bir hatayı araştırmak için iki işlemeyi karşılaştırmanız gerekir.
 
-## <a name="browse-local-and-remote-branches"></a>Yerel ve uzak dallara gözatmaya
+## <a name="browse-local-and-remote-branches"></a>Yerel ve uzak dallara göz atma
 
-Başlamak için, Görünüm menüsünde **Git deposu** ' na tıklayarak git deposu penceresini açın. Git değişiklikleri penceresinde ve durum çubuğunda **giden/gelen** bağlantılara tıklayarak git deposu penceresine de erişebilirsiniz.
+Çalışmaya başlama için Görünüm menüsünde Git Deposu'na **tıklayarak Git Deposu** penceresini açın. Git değişiklikleri penceresindeki **giden/gelen** bağlantılara ve durum çubuğuna tıklayarak Git Deposu penceresine de erişebilirsiniz.
 
-:::image type="content" source="media/vs-2022/git-repository-browse-ui.png" alt-text="Git deposu penceresinin anatomumu gösteren ekran görüntüsü":::
+:::image type="content" source="media/vs-2022/git-repository-browse-ui.png" alt-text="Git Deposu penceresinin anatomisini gösteren ekran görüntüsü." lightbox="media/vs-2022/git-repository-browse-ui.png":::
 
-Git deposu penceresi, önceki ekran görüntüsünde gösterilen 3 ana bölüm içerir:
-1. **Dallar:** Git, kullanıcıları birden çok görevle güçlendirmenize ve bunların dallarına göre kendi kodlarını denemenize olanak sağlar. Aynı anda birden çok özellik üzerinde çalışıyorsanız veya çalışma kodunuzu etkilemeden fikirleri araştırmak isterseniz, dallandırma çok faydalı olabilir.
-1. **Git Graph:** Git Graph bölümü, dalınızın durumunu görselleştirir. Üç farklı bölüme sahiptir: gelen, giden ve yerel geçmişi. Gelen bölümünde, takımınızın katkıda bulunduğu gelen işlemeler gösterilir, giden bölümünde henüz gönderilmemiş olan yerel yürütmeleriniz gösterilir ve yerel geçmiş, yerel havuzunuz tarafından izlenen işlemelerin geri kalanını gösterir.
-1. **işleme ayrıntıları:** Git Graph bölümünde herhangi bir işlemeyi tıklatmak, işlemelerin ayrıntılarını gösteren işleme ayrıntıları kullanıcı arabirimini açar. İşlemeler tarafından tanıtılan değişiklikleri, bunlara tıklayarak, fark gösterecek şekilde denetleyebilirsiniz. Örneğin, önceki ekran görüntüsünde, tek bir kaydın dosyalar. csproj dosyasına tanıtılan değişiklikleri görüntülediğimiz hakkında bilgi alabilirsiniz.
+Git deposu penceresi, önceki ekran görüntüsünde numara olarak yer alan üç ana bölüm içerir:
 
-Dalınızı değiştirmek zorunda kalmadan herhangi bir yerel veya uzak dala gözatabilir ve odaklanmak istediğiniz bir kayıt bulduğunuzda, farklı **bir sekmede kaydet** ' e tıklayarak veya burada gösterildiği gibi farklı bir ekranda ekranı kaplamasını sağlayabilirsiniz.
+1. **Dallar:** Git, kullanıcılara birden çok görev için destek sağlar ve dallar aracılığıyla kodlarıyla denemeler sağlar. Aynı anda birden çok özellik üzerinde çalışıyorsanız veya çalışma kodunuzu etkileyemeden fikirleri keşfetmek için çalışıyorsanız, dallama çok yararlı olabilir.
+1. **Git Graph:** Git grafiği bölümü dalnizin durumunu görselleştirin. Üç farklı bölümden oluşur: gelen, giden ve yerel geçmiş. Gelen bölümde, takımınız tarafından katkıda bulunan gelen işlemeler, giden bölümde hala gönderip uygulamamış olmadığınız yerel işlemeler ve yerel geçmiş yerel depo tarafından izleniyor olan diğer işlemeler de yer almaktadır.
+1. **Commit Details:** Git Graph bölümünde herhangi bir işlemeye tıklanmışsa, işlemelerin ayrıntılarını gösteren işleme ayrıntıları kullanıcı arabirimi açılır. Fark gösterecek olan işlemelere tıklayarak değişiklikleri kontrol edin. Örneğin, önceki ekran görüntüsünde, bir işlemenin Files.csproj dosyasına tanıtan değişikliklerini görüntüleyemizi görebilirsiniz.
 
-:::image type="content" source="media/vs-2022/git-repository-open-new-tab.png" alt-text="Yeni sekmede nasıl açılacağı ekran görüntüsü":::
+Dalını değiştirmek zorunda kalmadan herhangi bir yerel veya uzak dala göz atabilirsiniz ve odaklanmak  istediğiniz bir işlemeyi bulurken, işlemeyi farklı bir sekmede açmak veya burada gösterildiği gibi farklı bir ekranda ekranı kaplamak için Yeni Sekmede Aç düğmesine tıklamanız gerekir.
 
-:::image type="content" source="media/vs-2022/git-repository-details-tab.png" alt-text="Kayıt ayrıntıları sekmesinin ekran görüntüsü":::
+:::image type="content" source="media/vs-2022/git-repository-open-new-tab.png" alt-text="Yeni sekmede açma ekran görüntüsü." lightbox="media/vs-2022/git-repository-open-new-tab.png":::
 
-> [!TIP]
-> Çalışmanızı tam ekranda göstermek için, tamamlama sekmelerinizi ayırın ve **en üst düzeye çıkarma düğmesini** kullanarak tamamlama penceresini en üst düzeye çıkarın. **Fark yapılandırması dişli**' ye tıklayarak en sevdiğiniz fark yapılandırmasını da seçebilirsiniz.
->:::image type="content" source="media/vs-2022/git-repository-commit-details-full-screen.png" alt-text="Fark yapılandırmalarına sahip tam ekran tamamlama ayrıntılarının ekran görüntüsü":::
-
-## <a name="compare-commits"></a>İşlemeleri Karşılaştır
-
-Dalınızdaki iki yürütme arasında karşılaştırmak için, karşılaştırmak istediğiniz iki işlemeyi seçmek üzere klavyenizdeki **CTRL tuşunu** kullanın. Ardından, bunlardan birine sağ tıklayıp **Işlemeleri Karşılaştır** seçeneğini tercih edin.
-
-:::image type="content" source="media/vs-2022/git-repository-compare-commits-option.png" alt-text="İki işleme arasında nasıl karşılaştırılacağı ekran görüntüsü":::
-
-:::image type="content" source="media/vs-2022/git-repository-compare-commits-ui.png" alt-text="İşleme işlemlerini karşılaştırma Kullanıcı arabiriminin ekran görüntüsü":::
+:::image type="content" source="media/vs-2022/git-repository-details-tab.png" alt-text="Commit details (işleme ayrıntıları) sekmesinin ekran görüntüsü." lightbox="media/vs-2022/git-repository-details-tab.png":::
 
 > [!TIP]
->Kayıt ayrıntılarına benzer şekilde, farklı bir sekmede Compare COMMIT ARABIRIMINI açmak veya farklı bir ekranda en üst düzeye çıkarmak için **Yeni sekme aç** düğmesini kullanabilirsiniz.
+> Commit'inizi tam ekranda görüntülemek için işleme sekmenizi ayırın ve ekranı kapla düğmesini kullanarak işleme penceresini ekranı **kaplayın.** Ayrıca, Fark Yapılandırma Dişlisi'ne tıklayarak sık kullanılan **fark yapılandırmanızı da seçin.**
+>:::image type="content" source="media/vs-2022/git-repository-commit-details-full-screen.png" alt-text="Fark yapılandırmaları içeren tam ekran Commit Details ekran görüntüsü." lightbox="media/vs-2022/git-repository-commit-details-full-screen.png":::
+
+## <a name="compare-commits"></a>Commit'leri karşılaştırma
+
+Dalınıza yapılan iki işlemeyi karşılaştırmak için klavyenizde **Ctrl** tuşunu kullanarak karşılaştırmak istediğiniz iki işlemeyi seçin. Ardından bunlardan bir tanesine sağ tıklayın ve **Commit'leri Karşılaştır seçeneğini** belirleyin.
+
+:::image type="content" source="media/vs-2022/git-repository-compare-commits-option.png" alt-text="İki işleme arasında karşılaştırmanın ekran görüntüsü." lightbox="media/vs-2022/git-repository-compare-commits-option.png":::
+
+:::image type="content" source="media/vs-2022/git-repository-compare-commits-ui.png" alt-text="Yürütmeleri karşılaştır kullanıcı arabiriminin ekran görüntüsü." lightbox="media/vs-2022/git-repository-compare-commits-ui.png":::
+
+> [!TIP]
+>Commit Details'e benzer şekilde, Commit Kullanıcı Arabirimini Farklı bir sekmede karşılaştırmak veya farklı bir ekranda ekranı kapla'ya çıkarmak için Yeni Sekmede Aç düğmesini kullanabilirsiniz. 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-yolculuğa devam etmek için [Visual Studio Git depolarını yönet](git-manage-repository.md) sayfasını ziyaret edin.
+Yolculuğunuza devam etmek için Git [Depolarını Yönetme sayfasında Visual Studio](git-manage-repository.md) ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio git deneyimi](../ide/git-with-visual-studio.md)
+- [Visual Studio'da Git deneyimi](../ide/git-with-visual-studio.md)
+- [Visual Studio & GitHub: Birlikte daha iyi](https://visualstudio.microsoft.com/vs/github/)

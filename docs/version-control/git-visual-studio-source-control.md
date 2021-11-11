@@ -1,57 +1,57 @@
 ---
-title: Kaynak Visual Studio denetimi nasıl kolaylaştırır?
+title: Visual Studio kaynak denetimini nasıl kolaylaştırdı
 titleSuffix: ''
-description: Kod değişikliklerinizi izlemek & GitHub ve gerekirse geri Visual Studio git'i nasıl kullanabileceğinizi öğrenin.
+description: kodunuzda yapılan değişiklikleri izlemek ve gerekirse onları dönüştürmek için Git & GitHub Visual Studio nasıl kullanacağınızı öğrenin.
 ms.date: 11/08/2021
 ms.topic: conceptual
+author: Taysser-Gherfal
 ms.author: tglee
-author: TerryGLee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: a32ef55b8f14da7931557b533464804672de1b49
-ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+ms.openlocfilehash: 6d7d3d5e78cd16cf10bfb982bac866a2d9baf759
+ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132001923"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132264065"
 ---
-# <a name="how-visual-studio-makes-source-control-easy"></a>Kaynak Visual Studio denetimi nasıl kolaylaştırır?
+# <a name="how-visual-studio-makes-source-control-easy"></a>Visual Studio kaynak denetimini nasıl kolaylaştırdı
 
-Kodunuzun daha önce çalışan bir sürümüne dönmek istediğiniz oldu mu? Kodunuzun kopyalarını yedekleme olarak farklı konumlarda el ile depolar musunuz? Kaynak denetimi, hem ilerlemenizi izlemek hem de belirli sürümlere geri dönmek için kodunda zaman içinde yaptığınız değişiklikleri izlemenizi mümkün hale gelir. Visual Studio, en yaygın kullanılan modern sürüm denetim sistemi olan Git ile çalışmayı kolaylaştırır.
+Kodunuzun daha önce çalışan bir sürümüne geri dönebilirsiniz misiniz? Kodunuzun kopyalarını farklı konumlarda yedekleme olarak el ile depolamanızı ister misiniz? Kaynak denetimi, zaman içinde kodunuzda yaptığınız değişiklikleri izlemenizi mümkün kılar, böylece hem ilerlemenizi izleyip belirli sürümlere döndürebilirsiniz. Visual Studio, en yaygın olarak kullanılan modern sürüm denetim sistemi olan Git ile çalışmayı kolaylaştırır.
 
-## <a name="a-great-place-to-start-with-git--github"></a>Git ile başlamak için harika bir & GitHub
+## <a name="a-great-place-to-start-with-git--github"></a>Git & kullanmaya başlamak için harika bir yer GitHub
 
-GitHub, kodunuzu depolar ve her yerden herhangi bir cihazdan erişebilirsiniz ücretsiz ve güvenli bulut kodu depolama alanı sunar. Visual Studio, kodunuzu yönetmek ve başkalarıyla işbirliği GitHub için kaynak denetimi kullanmayı kolaylaştıran birinci sınıf Git ve GitHub işlevleriyle birlikte gelir. Kullanmaya başlayın Git deposu oluşturma iletişim & GitHub git **deposuna kodunuzu ekleyerek** bunu yapabilirsiniz. Bunu yapmak için menü  >  **çubuğundan Git Git deposu oluştur'a** tıklayın.
+GitHub, kodunuzu depolayabileceğiniz ve dilediğiniz cihazdan her yerden erişebileceğiniz ücretsiz ve güvenli bulut kodu depolaması sunar. Visual Studio, birinci sınıf Git ve GitHub işlevselliğiyle birlikte gelir ve kodunuzu yönetmek ve başkalarıyla işbirliği yapmak için kaynak denetimini kullanmayı kolaylaştırır. aşağıdaki **git deposu oluştur** iletişim kutusuyla kodunuzu git & GitHub ekleyerek başlayın. Bunu yapmak için, **Git**' i seçerek  >  menü çubuğundan git **deposu oluşturun** .
 
-:::image type="content" source="media/git-source-control-create-repository.png" alt-text="Git Deposu Oluştur iletişim kutusu Visual Studio.":::
+:::image type="content" source="media/git-source-control-create-repository.png" alt-text="Visual Studio git deposu oluştur iletişim kutusu.":::
 
-Ayrıca çok sayıda GitHub depoyu keşfetmek ve buradan öğrenmek için de GitHub'i kullanabilirsiniz. Visual Studio, mevcut depoları kopyalamayı ve GitHub kolaylaştırır, bu nedenle harika bir öğrenme ortamıdır.
+ayrıca, çok sayıda açık kaynaklı depolardan keşfetmeye ve öğrenmeniz için GitHub de kullanabilirsiniz. Visual Studio, mevcut GitHub depoların kopyalanması ve gözatmasını kolaylaştırarak harika bir öğrenme ortamıdır.
 
-## <a name="streamlined-and-intuitive-inner-loop-git-experience"></a>Kolaylaştırılmış ve sezgisel iç döngü Git deneyimi
+## <a name="streamlined-and-intuitive-inner-loop-git-experience"></a>Kolaylaştırılmış ve sezgisel iç döngü git deneyimi
 
-Visual Studio iş akışınızı (iç döngü) en üst düzeye çıkarma odaklı, keşfedilebilir ve sezgisel Git özellikleri sağlar. Artık değişikliklerinizi işlemek için kodunuzdan taşınmanız gerekmeyecek. Bu özellikler arasında en üst düzey Git menüsü, Git Değişiklikleri penceresi ve Git odaklı Durum çubuğu yer alan özellikler vardır. Git bütünsel bir Visual Studio olarak tümleştirilmiştir; Örneğin, hem Çözüm Gezgini hem de Kod Düzenleyicisi'nin birinci sınıf Git tümleştirmesi vardır.
+Visual Studio, günlük iş akışınızın (iç döngülük) üretkenliğini en üst düzeye çıkarmak için, keşfedilebilir ve sezgisel Git özellikleri sağlar. Artık yaptığınız değişiklikleri uygulamak için kodunuzun dışında geçiş yapmanız gerekmez. Bu özellikler, üst düzey Git menüsünü, git değişiklikleri penceresini ve git odaklı durum çubuğunu içerir. Git, Visual Studio bir bütünsel deneyimi olarak tümleştirilir; Örneğin, hem Çözüm Gezgini hem de kod düzenleyicisinin birinci sınıf git tümleştirmesi vardır.
 
-:::image type="content" source="media/git-source-control-inner-loop.png" alt-text="IDE Visual Studio git menüsünün ve git değişiklikleri sekmesinin yer Çözüm Gezgini görüntülenir.":::
+:::image type="content" source="media/git-source-control-inner-loop.png" alt-text="git menüsüyle ıde Visual Studio ve Çözüm Gezgini göstermek için git değişiklikleri sekmesi.":::
 
-## <a name="first-class-repository-management--collaboration"></a>İşbirliği için birinci sınıf depo & yönetimi
+## <a name="first-class-repository-management--collaboration"></a>Birinci sınıf depo yönetimi & işbirliği
 
-Visual Studio araçları kullanma ihtiyacı ortadan kaldıran güçlü depo tarama ve işbirliği özellikleri içerir. Gelen/giden işlemelerinizi, dalların önizlemesini ve işlemeleri karşılaştırarak depoyu takip edin. Ayrıca dallarınızı yöneterek depoyu yönetin, işlemeleri yalıtarak ve tek tek seçerek.
+Visual Studio, diğer araçları kullanma gereksinimini ortadan kaldıran güçlü depo göz atma ve işbirliği özellikleri içerir. Gelen/giden yürütmelerinizi gözden geçirerek, Dallarınızı önizleyerek ve işlemelerin karşılaştırılmasıyla, deponuzda güncel kalın. Ve Dallarınızı yöneterek ve tek yapmanız gereken işlemeleri ve tek tek seçme yürütmelerinin yönetimini yaparak deponuzu yönetin.
 
-:::image type="content" source="media/git-source-control-repository-management.png" alt-text="Bu Visual Studio Git menüsünü ve git değişiklikleri sekmesini vurgulayan IDE Çözüm Gezgini.":::
+:::image type="content" source="media/git-source-control-repository-management.png" alt-text="git menüsünü ve Çözüm Gezgini git değişiklikleri sekmesini vurgulayan ıde Visual Studio.":::
 
-## <a name="interactive--smart-git-functionality"></a>Etkileşimli & akıllı Git işlevselliği
+## <a name="interactive--smart-git-functionality"></a>Etkileşimli & akıllı git işlevselliği
 
-Visual Studio git tümleştirmesi, bağlamsal yardım sağlayarak ve doğru şeyi sizden sorarak güven ve güveni teşvik ediyor. Ayrıca sözcük farklarını gösterip gizleyen ve çakışmalar ile farklar arasında gezinen bir çakışma çözümleme deneyimi de içerir.
+Visual Studio Git tümleştirmesi, bağlamsal yardım sunarak ve doğru şeyi yapmanız istenerek güveni ve güvenilirliği yükseltir. Ayrıca, sözcük farklılıklarını gösterip gizleyebilecekleri ve çakışmalar ve farklılıklar arasında gezinebilir bir çakışma çözümü deneyimi de içerir.
 
-:::image type="content" source="media/git-source-control-interactive-functionality.png" alt-text="Git Visual Studio yardım ve çakışma çözümlemesi gösteren IDE'nin içeriği.":::
+:::image type="content" source="media/git-source-control-interactive-functionality.png" alt-text="Git bağlamsal yardımını ve çakışma çözümünü gösteren Visual Studio ıde.":::
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Visual Studio 2019'da Git ve GitHub kullanma hakkında daha fazla bilgi edinmek için şu YouTube videosunu [izleyin:](https://www.youtube.com/watch?v=GCZ9x3yqkyc&list=PLReL099Y5nRc-zbaFbf0aNcIamBQujOxP) Visual Studio
+git ve GitHub Visual Studio 2019 ' de kullanma hakkında daha fazla bilgi edinmek için şu YouTube videosunu izleyin: [Visual Studio Git ile çalışmaya](https://www.youtube.com/watch?v=GCZ9x3yqkyc&list=PLReL099Y5nRc-zbaFbf0aNcIamBQujOxP) başlama
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlarken 2019'GitHub Git ve Visual Studio ile birlikte](/learn/modules/visual-studio-github-push/)
-- [Visual Studio 2019'daki yeni Git deneyimi](git-with-visual-studio.md?view=vs-2019&preserve-view=true)
-- [2019 Takım Gezgini Git ve Visual Studio karşılaştırma](git-team-explorer-feature-comparison.md?view=vs-2019&preserve-view=true)
+- [Visual Studio 2019 Git ve GitHub ile Başlarken](/learn/modules/visual-studio-github-push/)
+- [Visual Studio 2019 ' deki yeni Git deneyimi](git-with-visual-studio.md?view=vs-2019&preserve-view=true)
+- [Git ve Takım Gezgini Visual Studio 2019 ' de yan yana karşılaştırın](git-team-explorer-feature-comparison.md?view=vs-2019&preserve-view=true)

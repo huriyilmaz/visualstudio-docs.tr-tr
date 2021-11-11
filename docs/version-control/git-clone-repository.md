@@ -2,19 +2,19 @@
 title: Visual Studio bir depoyu kopyalama
 titleSuffix: ''
 description: Git veya Azure DevOps kullanarak Visual Studio bir depoyu kopyalayın.
-ms.date: 11/08/2021
+ms.date: 11/10/2021
 ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 ms.manager: jmartens
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.openlocfilehash: 5fc34f78236b3f79f44e80a8be8faef66e235a58
-ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+ms.openlocfilehash: 15c5bc68302006e314219a3d7fcf3381d441eb50
+ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132001755"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132264045"
 ---
 # <a name="clone-a-repo-in-visual-studio"></a>Visual Studio bir depoyu kopyalama
 
@@ -93,6 +93,7 @@ Yolculuğa devam etmek için [depo oluşturma](git-create-repository.md) sayfas�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio git deneyimi](../ide/git-with-visual-studio.md)
+- [Visual Studio & GitHub: birlikte daha iyi](https://visualstudio.microsoft.com/vs/github/)
 - [Öğretici: bir depodan bir proje açın](../get-started/tutorial-open-project-from-repo.md)
 - [Visual Studio’da GitHub hesaplarıyla çalışma](../ide/work-with-github-accounts.md)
 - [Birden çok kullanıcı hesabıyla çalışma](../ide/work-with-multiple-user-accounts.md)
