@@ -1,8 +1,8 @@
 ---
-title: 'Öğretici: Visual Studio bir depoyu bir proje açın'
-description: Visual Studio ile bir Git veya Azure DevOps deposundaki bir projeyi açmayı öğrenin.
+title: "Öğretici: Visual Studio'da bir repodan proje açma"
+description: Git ile git veya Azure DevOps deposunda proje açmayı Visual Studio.
 ms.custom: vs-acquisition, get-started
-ms.date: 11/05/2021
+ms.date: 11/11/2021
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -14,203 +14,203 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fc69410334c4c9bdf8c3538f9aa9f34a1d2f1e1a
-ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+ms.openlocfilehash: a71c87c29e7ec6a10eeb551bc1989e4621bbe0cb
+ms.sourcegitcommit: 00451b7258ab86e259d0fe787669330b61efa8e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132001406"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "132365001"
 ---
-# <a name="tutorial-open-a-project-from-a-repo"></a>Öğretici: bir depodan bir proje açın
-F bu öğreticide, bir depoya ilk kez bağlanmak ve ardından bir projeyi açmak için Visual Studio kullanacaksınız.
+# <a name="tutorial-open-a-project-from-a-repo"></a>Öğretici: Bir repodan proje açma
+F Bu öğreticide, Visual Studio bir depoya ilk kez bağlanacak ve ardından bu depodan bir proje açabilirsiniz.
 
-Visual Studio henüz yüklemediyseniz, [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz yükleme yapın.
+Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads) ücretsiz olarak yükleyin.
 
 ::: moniker range="vs-2022"
 
-## <a name="open-a-project-from-a-github-repo"></a>GitHub deposundan proje açma
+## <a name="open-a-project-from-a-github-repo"></a>GitHub bir GitHub açma
 
-Visual Studio, bir deponun bir projeyi açmayı kolaylaştırır. Visual Studio başlattığınızda bunu yapabilirsiniz veya doğrudan [Visual Studio ıde](visual-studio-ide.md?view=vs-2022&preserve-view=true)içinden yapabilirsiniz.
+Visual Studio, bir projenin bir repodan açılmasını kolaylaştırır. Bunu, Visual Studio veya doğrudan [IDE'nin](visual-studio-ide.md?view=vs-2022&preserve-view=true)içinde Visual Studio.
 
 Aşağıdaki adımları uygulayın:
 
-### <a name="use-the-start-window"></a>Başlangıç penceresini kullanın
+### <a name="use-the-start-window"></a>Başlangıç penceresini kullanma
 
 1. Visual Studio'yu açın.
 
-1. Başlangıç penceresinde **depoyu Kopyala**' yı seçin.
+1. Başlangıç penceresinde Depoyu **klonla'ya tıklayın.**
 
-    :::image type="content" source="../ide/media/vs-2022/clone-repository.png" alt-text="Visual Studio bir depoyu Kopyala iletişim kutusunun ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/clone-repository.png" alt-text="Visual Studio'de Depo Klonla iletişim kutusunun ekran görüntüsü.":::
 
-1. Depo konumunu girin veya yazın ve ardından **Kopyala** düğmesini seçin.
+1. Depo konumunu girin veya yazın ve ardından Kopyala **düğmesini** seçin.
 
-    :::image type="content" source="../ide/media/vs-2022/clone-repository-enter-location.png" alt-text="[bir Git deposu URL 'si girdiğiniz Visual Studio depo kopyalama iletişim kutusunun ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/clone-repository-enter-location.png" alt-text="[Git deposu URL'si girersiniz Visual Studio Depo Klonla iletişim kutusunun ekran görüntüsü.":::
 
-1. Kullanıcı oturum açma bilgileriniz, **Git Kullanıcı bilgileri** iletişim kutusunda istenebilir. Bilgilerinizi ekleyebilir ya da sağladığı varsayılan bilgileri düzenleyebilirsiniz.
+1. Git Kullanıcı Bilgileri iletişim kutusunda kullanıcı oturum açma bilgileri **istenebilirsiniz.** Bilgileri ekleyebilir veya sağladığı varsayılan bilgileri düzenleyebilirsiniz.
 
-    :::image type="content" source="../ide/media/vs-2022/git-user-information-dialog.png" alt-text="Visual Studio 2022 ' de hesap bilgilerinizi girdiğiniz veya düzenlediğiniz Git kullanıcı bilgileri iletişim kutusunun ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/git-user-information-dialog.png" alt-text="2022'de hesap bilgilerinizi girmeniz veya düzenlemeniz gereken Git Kullanıcı Bilgileri Visual Studio ekran görüntüsü.":::
 
-    Bilgileri Global. gitconfig 'de ayarla dosyanıza eklemek için **Kaydet** ' i seçin. (Veya daha sonra **iptal**' i seçerek bunu yapmayı seçebilirsiniz.)
+    Bilgileri **genel** .gitconfig dosyanıza eklemek için Kaydet'i seçin. (Veya daha sonra İptal'i seçerek bunu seçebilirsiniz.)
 
     > [!TIP]
-    > Visual Studio 'de oturum açma hakkında daha fazla bilgi için [**Visual Studio oturum açma**](../ide/signing-in-to-visual-studio.md?view=vs-2022&preserve-view=true) sayfasına bakın. GitHub hesabınızı kullanarak oturum açmak için nasıl kullanılacağına ilişkin belirli bilgiler için [**Visual Studio sayfasındaki GitHub hesaplarıyla çalışma**](../ide/work-with-github-accounts.md?view=vs-2022&preserve-view=true) bölümüne bakın. Bir güven bildirimi alırsanız ve bunun hakkında daha fazla bilgi edinmek istiyorsanız [Dosyalar ve klasörler için güven ayarlarını yapılandırma](../ide/reference/trust-settings.md?view=vs-2022&preserve-view=true) sayfasına bakın.
+    > Visual Studio'da oturum açma hakkında daha fazla bilgi [**için**](../ide/signing-in-to-visual-studio.md?view=vs-2022&preserve-view=true) Visual Studio bakın. GitHub hesabınızla oturum açma hakkında daha fazla bilgi için GitHub [**hesabıyla**](../ide/work-with-github-accounts.md?view=vs-2022&preserve-view=true) çalışma Visual Studio bakın. Bir güven bildirimi alırsanız ve bu bildirim hakkında daha fazla bilgi almak için Dosya ve klasörler [için güven ayarlarını yapılandırma sayfasına](../ide/reference/trust-settings.md?view=vs-2022&preserve-view=true) bakın.
 
-### <a name="view-files-in-solution-explorer"></a>Çözüm Gezgini dosyaları görüntüleme
+### <a name="view-files-in-solution-explorer"></a>Dosyaları Çözüm Gezgini
 
-1. sonra, Visual Studio [**Çözüm Gezgini**](../ide/use-solution-explorer.md?view=vs-2022&preserve-view=true)içindeki **klasör görünümünü** kullanarak, çözümü depodan yükler.
+1. Daha Visual Studio, Çözüm Gezgini'de Klasör Görünümü'ne kullanarak **depodan** [**Çözüm Gezgini.**](../ide/use-solution-explorer.md?view=vs-2022&preserve-view=true)
 
-    :::image type="content" source="../ide/media/vs-2022/git-solution-explorer-folder-view.png" alt-text="Visual Studio 2022 ' de Çözüm Gezgini klasör görünümünün ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/git-solution-explorer-folder-view.png" alt-text="Visual Studio 2022'de Çözüm Gezgini Görünümü'nin ekran görüntüsü.":::
 
-    Çözüm **görünümünde** bir çözümü,. sln dosyasına çift tıklayarak görüntüleyebilirsiniz.
+    Çözüm Görünümü'ne bir **çözümü .sln** dosyasına çift tıklayarak görüntüebilirsiniz.
 
-    Ya da, **görünümleri Değiştir** düğmesini seçip bir çözümün kodunu görüntülemek için **program. cs** ' yi seçebilirsiniz.
+    Ya da Görünümleri Değiştir düğmesini **ve** ardından **Program.cs'yi** seçerek bir çözümün kodunu görüntülayabilirsiniz.
 
-    :::image type="content" source="../ide/media/vs-2022/git-solution-explorer-switch-views.png" alt-text="Git 'te Çözüm Gezgini açık olan ve Visual Studio 2022 ' de görünümleri değiştir düğmesi vurgulanmış olan Git 'teki projenin ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/git-solution-explorer-switch-views.png" alt-text="Git'te 2022'de Çözüm Gezgini Değiştir düğmesi vurgulanmış şekilde, git'te Visual Studio ekran görüntüsü.":::
 
 > [!TIP]
-> Varsayılan görünüm, klasör görünümü olarak ayarlanır. **Git** menüsünde çözüm görünümü olarak değiştirebilirsiniz. **Ayarlar**  >  **kaynak denetimi**  >  **git genel Ayarlar**  >  **bir git deposu açarken çözümü otomatik olarak yükle** ' yi seçin.
+> Varsayılan görünüm Klasör Görünümü olarak ayarlanır. Git menüsünden Çözüm Görünümü olarak **değiştirebilirsiniz.** Kaynak **Ayarlar** Git Genel  >  **Denetimi'Ayarlar** git deposu açılırken çözümü otomatik  >    >  **olarak yükle'yi** seçin.
 
-#### <a name="open-a-project-locally-from-a-previously-cloned-github-repo"></a>önceden kopyalanmış GitHub deposundan yerel olarak bir proje açın
+#### <a name="open-a-project-locally-from-a-previously-cloned-github-repo"></a>Daha önce kopyalanmış bir GitHub açma
 
 1. Visual Studio'yu açın.
 
-1. Başlangıç penceresinde, **Proje veya çözüm aç**' ı seçin.
+1. Başlangıç penceresinde Proje veya çözüm **aç'ı seçin.**
 
-    Visual Studio, çözüm veya projenize gözatabileceğiniz bir dosya gezgini örneğini açar ve ardından onu seçerek açabilirsiniz.
+    Visual Studio çözüm veya Dosya Gezgini göz atabilir ve ardından açmak için seçerek bir Dosya Gezgini örneği açılır.
 
-    :::image type="content" source="../ide/media/vs-2022/open-local-project-from-cloned-repo.png" alt-text="Visual Studio 2022 ' de ' proje veya çözüm aç ' penceresinin ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/open-local-project-from-cloned-repo.png" alt-text="Visual Studio 2022'de 'Proje veya çözüm aç' penceresinin ekran görüntüsü.":::
 
     > [!TIP]
-    > Projeyi veya çözümü kısa süre önce açtıysanız, bunu tekrar **açmak için son** görüntülenen bölümden birini seçin.
+    > Projeyi veya çözümü yakın zamanda açtıysanız Son kullanılanları aç bölümünden **seçerek** hızlı bir şekilde yeniden açın.
 
-    Kodlamaya başlayın!
+    Kodlamaya başlama!
 
-### <a name="use-the-ide"></a>IDE 'yi kullanma
+### <a name="use-the-ide"></a>IDE kullanma
 
-ayrıca, bir deponun klasör ve dosyalarıyla etkileşim kurmak için Visual Studio ıde 'de **Git** menüsünü veya **Select Repository** denetimini de kullanabilirsiniz.
+Deponun klasörleri ve dosyalarıyla  etkileşim kurmak için Visual Studio IDE'de **Git** menüsünü veya Depo Seç denetimi de kullanabilirsiniz.
 
 Aşağıdaki adımları uygulayın:
 
-#### <a name="to-clone-a-repo-and-open-a-project"></a>Depoyu kopyalamak ve bir projeyi açmak için
+#### <a name="to-clone-a-repo-and-open-a-project"></a>Bir repo klonlamak ve bir projeyi açmak için
 
-1. Visual Studio ıde 'de **Git** menüsünü ve ardından **depoyu kopyala**' yı seçin.
+1. IDE'Visual Studio Git **menüsünü** ve ardından Depoyu **Klonla'ya tıklayın.**
 
-    :::image type="content" source="../ide/media/vs-2022/git-menu-clone-repository.png" alt-text="kopya deposu seçiliyken Visual Studio 2022 ' deki Git menüsünün ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/git-menu-clone-repository.png" alt-text="'Depoyu Kopyala'nın seçili olduğu 2022'Visual Studio Git menüsünün ekran görüntüsü.":::
 
-1. Aradığınız dosyaları içeren git deposuna bağlanmak için istemleri izleyin.
+1. İstemleri takip edin ve arayabilirsiniz dosyaları içeren Git deposuna bağlanabilirsiniz.
 
 #### <a name="to-open-local-folders-and-files"></a>Yerel klasörleri ve dosyaları açmak için
 
-1. Visual Studio ıde 'de **Git** menüsünü seçin, **yerel depolar**' ı seçin ve ardından **yerel depoyu aç**' ı seçin.
+1. IDE'Visual Studio Git menüsünü seçin,  Yerel **Depolar'ı ve** ardından Yerel Depoyu **Aç'ı seçin.**
 
-    :::image type="content" source="../ide/media/vs-2022/git-menu-local-repositories.png" alt-text="yerel depoyla Visual Studio 2022 ' deki Git menüsünün ekran görüntüsü ve açık yerel depoyu gösterir.":::
+    :::image type="content" source="../ide/media/vs-2022/git-menu-local-repositories.png" alt-text="2022'de Yerel Depo ve Visual Studio Yerel Depoyu Aç'ın görüntü olduğu 'Git menüsünün ekran görüntüsü.":::
 
-    Alternatif olarak, **Çözüm Gezgini** aynı görevi gerçekleştirebilirsiniz. Bunu yapmak için **Depo denetimi Seç** ' i seçin, **depoları filtrele** kutusunun yanındaki **üç nokta** simgesini seçin ve ardından **yerel depoyu aç**' ı seçin.
+    Alternatif olarak, aynı görevi **Çözüm Gezgini.** Bunu yapmak için Depo **Seç** denetimine  tıklayın, Depoları filtrele kutusunun  yanındaki üç nokta simgesini seçin ve ardından Yerel Depoyu **Aç'ı seçin.**
 
-    :::image type="content" source="../ide/media/vs-2022/select-repository-filter-ellipsis.png" alt-text="Dizi Seç denetiminin, üç nokta simgesiyle seçili olduğu ve yerel depoyu aç seçeneğinin ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/select-repository-filter-ellipsis.png" alt-text="Üç nokta simgesinin seçili olduğu ve Yerel Depoyu Aç seçeneğinin görüntü olduğu Depo Seç denetimi ekran görüntüsü.":::
 
-1. Aradığınız dosyaları içeren git deposuna bağlanmak için istemleri izleyin.
+1. İstemleri takip edin ve arayabilirsiniz dosyaları olan Git deposuna bağlanabilirsiniz.
 
-## <a name="browse-to-an-azure-devops-server"></a>Bir Azure DevOps Server gidin
+## <a name="browse-to-an-azure-devops-repo"></a>Bir Azure DevOps göz atma
 
-Visual Studio kullanarak Azure DevOps Server nasıl gözataöğreneceksiniz.
+Burada, Azure DevOps kullanarak bir Azure DevOps'a göz atma ve kopyalama Visual Studio.
 
 1. Visual Studio'yu açın.
 
-1. Başlangıç penceresinde **depoyu Kopyala**' yı seçin.
+1. Başlangıç penceresinde Depoyu **klonla'ya tıklayın.**
 
-    :::image type="content" source="../ide/media/vs-2022/clone-repository.png" alt-text="Azure DevOps için Visual Studio bir depoyu kopyala iletişim kutusunun ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/clone-repository.png" alt-text="Visual Studio'da Depo Klonla iletişim kutusunun ekran Azure DevOps.":::
 
-1. **Bir depoya gözatıp** bölümünde **Azure DevOps**' yi seçin.
+1. Bir **depoya gözat bölümünde Depo'ya** **Azure DevOps.**
 
-    :::image type="content" source="../ide/media/vs-2022/browse-repository-azure-devops.png" alt-text="Visual Studio Azure DevOps vurgulanmış olan ' depoyu kopyala ' iletişim kutusunun ' bir depoya gözatatıon ' bölümünün ekran görüntüsü.":::
+    :::image type="content" source="../ide/media/vs-2022/browse-repository-azure-devops.png" alt-text="Visual Studio'de 'Depoyu klonla' iletişim kutusunun 'Depoya gözat' bölümünün Azure DevOps görüntüsü.":::
 
-1. aradığınız dosyaları barındıran bir Azure DevOps Server bağlanmak için istemleri izleyin.
+1. İstemleri takip edin ve Azure DevOps dosyalarını içeren bir veri Azure DevOps kopyasını açın ve ardından projenizi açın.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-## <a name="open-a-project-from-a-github-repo-with-visual-studio-2019"></a>Visual Studio 2019 ile GitHub deposundan proje açma
+## <a name="open-a-project-from-a-github-repo-with-visual-studio-2019"></a>Visual Studio 2019 ile GitHub bir Visual Studio açma
 
-Visual Studio kullanarak bir projeyi GitHub deposundan açtığınızda, sahip olduğunuz sürüme göre değişir. özellikle, sürüm Visual Studio 2019 [**sürüm 16,8**](/visualstudio/releases/2019/release-notes-history) veya sonraki bir sürümünü yüklediyseniz, Visual Studio kullanabileceğiniz yeni, daha kapsamlı bir tam olarak tümleşik [Git deneyimi](../ide/git-with-visual-studio.md) mevcuttur.
+GitHub kullanarak bir GitHub açma Visual Studio hangi sürüme sahip olduğunuz bağlıdır. Özellikle, Visual Studio 2019 sürüm [**16.8**](/visualstudio/releases/2019/release-notes-history) veya sonraki bir sürümü yüklemiş olursanız, size yeni, daha tam olarak [tümleşik git Visual Studio](../ide/git-with-visual-studio.md) kullanılabilir.
 
-ancak, hangi sürümü yüklediğinizden bağımsız olarak bir projeyi Visual Studio GitHub deposundan her zaman açabilirsiniz.
+Ancak, hangi sürümü yüklemiş olur olur olun, bir projeyi her zaman GitHub bir Visual Studio.
 
-### <a name="168-and-later"></a>16,8 ve üzeri
+### <a name="visual-studio-2019-version-168-and-later"></a>Visual Studio 2019 sürüm 16.8 ve sonrası
 
-işte Visual Studio 2019 [**sürüm 16,8**](/visualstudio/releases/2019/release-notes-history) veya sonraki sürümlerde Git 'i kullanma.
+Visual Studio 2019 sürüm [**16.8**](/visualstudio/releases/2019/release-notes-history) veya sonraki sürümlerde Git'i nasıl kullanabileceğiniz burada açık ve açık bir şekilde açıklandı.
 
-#### <a name="clone-a-github-repo-and-then-open-a-project"></a>GitHub depoyu kopyalayın ve ardından bir proje açın
+#### <a name="clone-a-github-repo-and-then-open-a-project"></a>Bir GitHub kopyalama ve ardından projeyi açma
 
-1. Visual Studio 2019 ' i açın.
+1. 2019 Visual Studio açın.
 
-1. Başlangıç penceresinde **depoyu Kopyala**' yı seçin.
+1. Başlangıç penceresinde Depoyu **klonla'ya tıklayın.**
 
-   ![Visual Studio 2019 sürüm 16,8 ve üzeri bir depoyu kopyala iletişim kutusunun ekran görüntüsü](../ide/media/vs-2019/clone-repository.png)
+   ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerde Depo Klonla iletişim kutusunun ekran görüntüsü](../ide/media/vs-2019/clone-repository.png)
 
-1. Depo konumunu girin veya yazın ve ardından **Kopyala**' yı seçin.
+1. Depo konumunu girin veya yazın ve ardından Kopyala'ya **basın.**
 
-   ![Visual Studio 2019 sürüm 16,8 ve sonraki bir Git deposu URL 'si girdiğiniz bir depoyu kopyala iletişim kutusunun ekran görüntüsü.](../ide/media/vs-2019/clone-repository-enter-location.png)
+   ![Visual Studio 2019 sürüm 16.8 ve sonraki bir sürüme Git deposu URL'si girmenizi istediğiniz Depoyu Klonla iletişim kutusunun ekran görüntüsü.](../ide/media/vs-2019/clone-repository-enter-location.png)
 
-1. Kullanıcı oturum açma bilgileriniz, **Git Kullanıcı bilgileri** iletişim kutusunda istenebilir. Bilgilerinizi ekleyebilir ya da sağladığı varsayılan bilgileri düzenleyebilirsiniz.
+1. Git Kullanıcı Bilgileri iletişim kutusunda kullanıcı oturum açma bilgileri **istenebilirsiniz.** Bilgileri ekleyebilir veya sağladığı varsayılan bilgileri düzenleyebilirsiniz.
 
-   ![Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerde hesap bilgilerinizi girdiğiniz veya düzenlediğiniz Git kullanıcı bilgileri iletişim kutusunun ekran görüntüsü.](../ide/media/vs-2019/git-user-information-dialog.png)
+   ![2019 sürüm 16.8 ve sonraki bir sürüme hesap bilgilerinizi Visual Studio veya düzenley istediğiniz Git Kullanıcı Bilgileri iletişim kutusunun ekran görüntüsü.](../ide/media/vs-2019/git-user-information-dialog.png)
 
-    Bilgileri Global. gitconfig 'de ayarla dosyanıza eklemek için **Kaydet** ' i seçin. (Veya daha sonra **iptal**' i seçerek bunu yapmayı seçebilirsiniz.)
-
-    > [!TIP]
-    > Visual Studio 'de oturum açma hakkında daha fazla bilgi için [Visual Studio oturum açma](../ide/signing-in-to-visual-studio.md?view=vs-2019&preserve-view=true) sayfasına bakın. GitHub hesabınızı kullanarak oturum açmak için nasıl kullanılacağına ilişkin belirli bilgiler için, [Visual Studio sayfasındaki GitHub hesaplarıyla çalışma](../ide/work-with-github-accounts.md?view=vs-2019&preserve-view=true) bölümüne bakın.
-
-    sonra, Visual Studio çözümü otomatik olarak yükler ve depodan açar.
-
-   ![Git 'teki projenin, Visual Studio 2019 sürüm 16,8 ve sonrasında Çözüm Gezgini açık olan ekran görüntüsü.](../ide/media/vs-2019/git-solution-explorer.png )
-
-1. Deponuz birden çok çözüm içeriyorsa, bunları Çözüm Gezgini görürsünüz. Çözüm Gezgini ' de **görünümleri Değiştir** düğmesini seçerek çözümlerin listesini görüntüleyebilirsiniz.
-
-   ![Git 'te Çözüm Gezgini açık olan, Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerde görünümleri değiştir düğmesi vurgulanmış olan Git 'teki projenin ekran görüntüsü.](../ide/media/vs-2019/git-solution-explorer-switch-views.png)
-
-   Çözüm Gezgini, **klasör görünümünde** kök klasörü açma veya açılacak bir çözüm dosyası seçme seçeneği sunar.
-
-   ![Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerde görünümleri değiştir düğmesini seçtikten sonra Çözüm Gezgini açık olan Git 'teki. sln dosyasının ekran görüntüsü.](../ide/media/vs-2019/git-solution-explorer-view-solution.png)
-
-    Görünümü değiştirmek için **görünümleri Değiştir** düğmesini yeniden seçin.
+    Bilgileri **genel** .gitconfig dosyanıza eklemek için Kaydet'i seçin. (Veya daha sonra İptal'i seçerek bunu seçebilirsiniz.)
 
     > [!TIP]
-    > ayrıca, bir depoyu kopyalamak ve bir projeyi açmak için Visual Studio ıde 'deki **Git** menüsünü de kullanabilirsiniz.
+    > Visual Studio'da oturum açma hakkında daha fazla bilgi [için](../ide/signing-in-to-visual-studio.md?view=vs-2019&preserve-view=true) Visual Studio bakın. Oturum a açma için GitHub hesabı kullanma hakkında daha fazla bilgi için GitHub [hesabıyla](../ide/work-with-github-accounts.md?view=vs-2019&preserve-view=true) çalışma Visual Studio bakın.
+
+    Ardından Visual Studio otomatik olarak yüklenir ve çözüm depodan açılır.
+
+   ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerde Çözüm Gezgini Git'te açık olan projenin ekran görüntüsü.](../ide/media/vs-2019/git-solution-explorer.png )
+
+1. Depoda birden çok çözüm varsa bunları Çözüm Gezgini. Görünüm değiştir düğmesini seçerek çözüm  listesini görüntü Çözüm Gezgini.
+
+   ![Çözüm Gezgini 2019 sürüm 16.8 ve sonraki sürümlerde Visual Studio Görünüm değiştir düğmesi vurgulanmış şekilde Git'te açık olan bir projenin ekran görüntüsü.](../ide/media/vs-2019/git-solution-explorer-switch-views.png)
+
+   Çözüm Gezgini, klasör görünümü'ne kök klasörü açma **veya** açılacak bir çözüm dosyası seçme seçeneği sunar.
+
+   ![Visual Studio 2019 sürüm 16.8 ve sonraki bir sürümde Görünümleri Değiştir düğmesini seçtikten sonra, Çözüm Gezgini'da açık olan Git'te .sln dosyasının ekran görüntüsü.](../ide/media/vs-2019/git-solution-explorer-view-solution.png)
+
+    Görünümü değiştirmek için Görünümleri Değiştir **düğmesini yeniden** seçin.
+
+    > [!TIP]
+    > Depo klonlamak ve bir projeyi açmak için Visual Studio IDE'de **Git** menüsünü de kullanabilirsiniz.
     >
-    > ![Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerde Git menüsünün ekran görüntüsü.](../ide/media/vs-2019/git-menu-clone-create-git-repository.png)
+    > ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerde Git menüsünün ekran görüntüsü.](../ide/media/vs-2019/git-menu-clone-create-git-repository.png)
 
-#### <a name="open-a-project-locally-from-a-previously-cloned-github-repo"></a>önceden kopyalanmış GitHub deposundan yerel olarak bir proje açın
+#### <a name="open-a-project-locally-from-a-previously-cloned-github-repo"></a>Daha önce kopyalanmış bir GitHub açma
 
-1. Visual Studio 2019 sürüm 16,8 veya üstünü açın.
+1. 2019 Visual Studio 16.8 veya sonraki bir sürümü açın.
 
-1. Başlangıç penceresinde, **Proje veya çözüm aç**' ı seçin.
+1. Başlangıç penceresinde Proje veya çözüm **aç'ı seçin.**
 
-    Visual Studio, çözüm veya projenize gözatabileceğiniz bir dosya gezgini örneğini açar ve ardından onu seçerek açabilirsiniz.
+    Visual Studio çözüm veya Dosya Gezgini göz atabilir ve ardından açmak için seçerek bir Dosya Gezgini örneği açılır.
 
-   ![Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerde ' proje veya çözüm aç ' penceresinin ekran görüntüsü.](../ide/media/vs-2019/open-local-project-from-cloned-repo.png)
+   ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerde 'Proje veya çözüm aç' penceresinin ekran görüntüsü.](../ide/media/vs-2019/open-local-project-from-cloned-repo.png)
 
-    Projeyi veya çözümü kısa süre önce açtıysanız, bunu tekrar **açmak için son** görüntülenen bölümden birini seçin.
+    Projeyi veya çözümü yakın zamanda açtıysanız Son kullanılanları aç bölümünden **seçerek** hızlı bir şekilde yeniden açın.
 
     > [!TIP]
-    > ayrıca, daha önce klonladığınız bir depodan yerel klasörleri ve dosyaları açmak için Visual Studio ıde 'deki **Git** menüsünü de kullanabilirsiniz.
+    > Daha önce kopyalanmış bir depodan yerel Visual Studio ve dosyaları açmak için IDE'de **Git** menüsünü de kullanabilirsiniz.
     >
-    > ![Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerde Git menüsünün ekran görüntüsü, yerel depolar seçeneği genişletilir.](../ide/media/vs-2019/git-menu-local-repositories.png)
+    > ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerde Yerel Depolar seçeneği genişletilmiş git menüsünün ekran görüntüsü.](../ide/media/vs-2019/git-menu-local-repositories.png)
 
-    Kodlamaya başlayın!
+    Kodlamaya başlama!
 
-### <a name="167-and-earlier"></a>16,7 ve öncesi
+### <a name="visual-studio-2019-version-167-and-earlier"></a>Visual Studio 2019 sürüm 16.7 ve önceki sürümler
 
-Visual Studio 2019 sürüm [**16.7**](/visualstudio/releases/2019/release-notes-history) veya önceki bir sürümde Git'i nasıl kullanabileceğiniz burada açık ve açık bir şekilde açıklandı.
+Visual Studio 2019 sürüm [**16.7**](/visualstudio/releases/2019/release-notes-history) veya önceki bir sürümde Git'i nasıl kullanabileceğiniz burada açıklandı.
 
 #### <a name="clone-a-github-repo-and-then-open-a-project"></a>Bir GitHub kopyalama ve sonra bir proje açma
 
 1. 2019 Visual Studio 16.7 veya önceki bir sürümü açın.
 
-1. Başlangıç penceresinde Kopyala'ya tıklayın **veya kodu kontrol edin.**
+1. Başlangıç penceresinde Kopyala'ya **tıklayın veya kodu kontrol edin.**
 
-   ![2019 sürüm 16.7 ve Visual Studio 'Yeni proje oluştur' penceresinin ekran görüntüsü.](../get-started/media/vs-2019/clone-checkout-code-dark.png)
+   ![Visual Studio 2019 sürüm 16.7 ve önceki sürümlerde 'Yeni proje oluştur' penceresinin ekran görüntüsü.](../get-started/media/vs-2019/clone-checkout-code-dark.png)
 
 1. Depo konumunu girin veya yazın ve ardından Kopyala'ya **basın.**
 
@@ -226,13 +226,13 @@ Visual Studio 2019 sürüm [**16.7**](/visualstudio/releases/2019/release-notes-
 
     Kodlamaya başlama!
 
-## <a name="connect-to-an-azure-devops-server-with-visual-studio-2019"></a>Bağlan 2019 Azure DevOps Server bir Visual Studio'a
+## <a name="browse-to-an-azure-devops-repo-with-visual-studio-2019"></a>Visual Studio 2019 ile Azure DevOps bir Visual Studio göz atma
 
-Visual Studio 2019 kullanarak bir Azure DevOps Server bağlanarak ne göreceğiniz, sahip olduğunuz sürüme bağlıdır. Özellikle, [**sürüm 16.8**](/visualstudio/releases/2019/release-notes-history) veya sonraki bir sürümü yüklemişsanız, kullanıcı arabirimini Visual Studio'de yeni ve daha tam olarak tümleştirilmiş bir Git deneyimine uyum [sağlayacak şekilde](../ide/git-with-visual-studio.md) Visual Studio.
+Azure DevOps 2019'da Azure DevOps depoya göz atarak Visual Studio gördüğünüz sürüme bağlıdır. Özellikle, [**sürüm 16.8**](/visualstudio/releases/2019/release-notes-history) veya sonraki bir sürümü yüklemişsanız, kullanıcı arabirimini Visual Studio'daki Visual Studio'de yeni, tam olarak tümleştirilmiş [bir Git](../ide/git-with-visual-studio.md) deneyimine uyum sağlayacak şekilde Visual Studio.
 
-Ancak, hangi sürümü yüklemiş olur olun, her zaman Azure DevOps Server bir Visual Studio.
+Ancak, hangi sürümü yüklemiş olur olun, her zaman bir Azure DevOps ile Visual Studio.
 
-### <a name="168-and-later"></a>16.8 ve sonrası
+### <a name="visual-studio-2019-version-168-and-later"></a>Visual Studio 2019 sürüm 16.8 ve sonrası
 
 1. 2019 Visual Studio [**16.8 veya sonraki bir sürümü**](/visualstudio/releases/2019/release-notes-history) açın.
 
@@ -240,36 +240,36 @@ Ancak, hangi sürümü yüklemiş olur olun, her zaman Azure DevOps Server bir V
 
    ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerde depo kopyalama iletişim kutusunun ekran Azure DevOps.](../ide/media/vs-2019/clone-repository.png)
 
-1. Bir **depoya gözat bölümünde Depo'ya** **Azure DevOps.**
+1. Bir **depoya gözat bölümünde Depo'ya** Azure DevOps.
 
-    ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerde 'Project'a Bağlan' iletişim kutusunun 'Depoya gözat' bölümünün ekran görüntüsü.](../ide/media/vs-2019/browse-repository-azure-devops.png)
+    ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerde 'Bağlan Project' iletişim kutusunun 'Depoya gözat' bölümünün ekran görüntüsü.](../ide/media/vs-2019/browse-repository-azure-devops.png)
 
 1. Oturum açma penceresi görüyorsanız, hesabınızla oturum açın.
 
 1. Bir **Bağlan iletişim Project** kutusunda, bağlanmak istediğiniz repo'ya tıklayın ve ardından Kopyala'ya **tıklayın.**
 
-      ![Visual Studio 2019 Bağlan 16.8 ve sonraki sürümlerden oluşturulan 'Project'a ekle' iletişim kutusunun ekran görüntüsü.](../ide/media/vs-2019/connect-project-azure-devops.png)
+      ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerden oluşturulan 'Bağlan bir Project' iletişim kutusunun ekran görüntüsü.](../ide/media/vs-2019/connect-project-azure-devops.png)
 
       > [!TIP]
-      > Bağlanmak için önceden doldurulmuş bir repos listesi görmüyorsanız,  sunucu URL'si girmek için Azure DevOps Server Ekle'yi seçin. (Alternatif olarak, mevcut bir hesap eklemek veya bir Azure DevOps Server hesabı oluşturmak için bağlantılar içeren bir "Sunucu bulunamadı" Azure DevOps olabilir.)
+      > Bağlanmak için önceden doldurulmuş bir repos listesi görmüyorsanız,  sunucu URL'si girmek için Azure DevOps Server Ekle'yi seçin. (Alternatif olarak, mevcut bir sunucu ekleme veya bir Azure DevOps Server hesabı oluşturma bağlantılarını içeren bir "Sunucu Azure DevOps" istemini de görebilirsiniz.)
 
    Ardından Visual Studio ve **Çözüm Gezgini** gösteren bir dosya açılır.
 
 1. Takım Gezgini **eylemlerini** görüntülemek için Azure DevOps seçin.
 
-      ![2019 Takım Gezgini 16.8 ve sonraki sürümlerden oluşturulan 'Visual Studio Takım Gezgini' iletişim kutusunun ekran görüntüsü.](../ide/media/vs-2019/team-explorer-azure-devops.png)
+      ![Visual Studio 2019 sürüm 16.8 ve sonraki sürümlerden oluşturulan 'Takım Gezgini' iletişim kutusunun ekran görüntüsü.](../ide/media/vs-2019/team-explorer-azure-devops.png)
 
-#### <a name="167-and-earlier"></a>16.7 ve önceki sürümler
+#### <a name="visual-studio-2019-version-167-and-earlier"></a>Visual Studio 2019 sürüm 16.7 ve önceki sürümler
 
 1. 2019 Visual Studio [**16.7 veya önceki bir sürümü**](/visualstudio/releases/2019/release-notes-history) açın.
 
-1. Başlangıç penceresinde Kopyala'ya tıklayın **veya kodu kontrol edin.**
+1. Başlangıç penceresinde Kopyala'ya **tıklayın veya kodu kontrol edin.**
 
-   ![2019 sürüm 16.7 ve Visual Studio 'Yeni proje oluştur' penceresinin ekran görüntüsü.](../get-started/media/vs-2019/clone-checkout-code-dark.png)
+   ![Visual Studio 2019 sürüm 16.7 ve önceki sürümlerde 'Yeni proje oluştur' penceresinin ekran görüntüsü.](../get-started/media/vs-2019/clone-checkout-code-dark.png)
 
-1. Bir **depoya gözat bölümünde Depo'ya** **Azure DevOps.**
+1. Bir **depoya gözat bölümünde Depo'ya** Azure DevOps.
 
-   ![Visual Studio 2019 sürüm 16.7 ve önceki sürümlerde yer alan 'Depoya göz atma Azure DevOps' bölümünün yer Visual Studio ekran görüntüsü.](../get-started/media/vs-2019/clone-checkout-code-git-repo-dark.png)
+   ![Visual Studio 2019 sürüm 16.7 ve önceki sürümlerde liste Azure DevOps 'Depoya göz at' bölümünün yer alan 'Kodu kopyala veya iade edin' penceresinin ekran görüntüsü.](../get-started/media/vs-2019/clone-checkout-code-git-repo-dark.png)
 
    Oturum açma penceresi görüyorsanız, hesabınızla oturum açın.
 
@@ -286,7 +286,7 @@ Ancak, hangi sürümü yüklemiş olur olun, her zaman Azure DevOps Server bir V
 
 1. Klasörlerinizi ve dosyalarınızı görüntülemek için Klasör Görünümünü **Göster bağlantısını** seçin.
 
-     ![Kopyalama tamamlandıktan sonra Takım Gezgini 2019 Visual Studio 16.7 ve önceki bir sürümde yer alan Çözümler bölümünün ekran görüntüsü.](./media/vs-2019/show-folder-view-azure-devops.png)
+     ![Kopyalama tamamlandıktan sonra Takım Gezgini 2019 Visual Studio 16.7 ve önceki sürümlerindeki Çözümler bölümünün ekran görüntüsü.](./media/vs-2019/show-folder-view-azure-devops.png)
 
      Visual Studio **,** Çözüm Gezgini.
 
@@ -300,7 +300,7 @@ Ancak, hangi sürümü yüklemiş olur olun, her zaman Azure DevOps Server bir V
 
 ::: moniker range="vs-2017"
 
-## <a name="open-a-project-from-a-github-repo-with-visual-studio-2017"></a>Visual Studio 2017 ile GitHub bir proje açma
+## <a name="open-a-project-from-a-github-repo-with-visual-studio-2017"></a>2017'de GitHub bir Visual Studio açma
 
 1. Visual Studio 2017'yi açın.
 
@@ -330,7 +330,7 @@ Ancak, hangi sürümü yüklemiş olur olun, her zaman Azure DevOps Server bir V
 
 Önceki bölümde tamamlamış olduğunu işi kontrol etmek için aşağıdaki animasyonu görüntüebilirsiniz.
 
-   ![Visual Studio 2017'GitHub bir Visual Studio açma animasyonu.](./media/open-project-from-github.gif)
+   ![Visual Studio 2017'GitHub bir GitHub açma animasyonu.](./media/open-project-from-github.gif)
 
 ## <a name="open-a-project-from-an-azure-devops-repo-with-visual-studio-2017"></a>2017'de Azure DevOps bir Visual Studio açma
 
@@ -342,11 +342,11 @@ Ancak, hangi sürümü yüklemiş olur olun, her zaman Azure DevOps Server bir V
 
     ![Takım Gezgini IDE içindeki Visual Studio penceresi.](./media/open-proj-repo-team-explorer.png)
 
-1. Veri Azure DevOps bağlanmanın iki yolu vardır:
+1. Azure DevOps Azure DevOps:
 
-      - Barındırılan **Hizmet Sağlayıcıları bölümünde Bağlan...** öğesini **seçin.**
+      - Barındırılan **Hizmet Sağlayıcıları bölümünde** **Bağlan... öğesini seçin.**
 
-        ![Takım Gezgini IDE'nin Takım Gezgini Barındırıla Visual Studio n Hizmet Sağlayıcıları bölümü.](./media/open-proj-repo-azure-devops.png)
+        ![Visual Studio IDE içindeki Takım Gezgini penceresinin Barındırılan Hizmet Sağlayıcıları bölümü.](./media/open-proj-repo-azure-devops.png)
 
       - Bağlantıları **Yönet açılan** listesinde Bir **Bağlan... seçeneğini Project.**
 
@@ -381,8 +381,18 @@ Aşağıdaki dile özgü öğreticilerden herhangi birini öğrenmekten bağıms
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'de Git deneyimi](../ide/git-with-visual-studio.md)
-- [Git ile Takım Gezgini yan yana karşılaştırma](../ide/git-team-explorer-feature-comparison.md)
-- [Microsoft Learn: Kullanmaya başlayın Git ve GitHub ile Visual Studio](/learn/modules/visual-studio-github-push/)
-- [Microsoft Learn: Kullanmaya başlayın ile Azure DevOps](/learn/modules/get-started-with-devops/)
-- [Azure DevOps Services: Kullanmaya başlayın ve Azure Repos ile Visual Studio](/azure/devops/repos/git/gitquickstart/)
+::: moniker range="<=vs-2019"
+
+- [Visual Studio git deneyimi](../ide/git-with-visual-studio.md)
+- [Git ve Takım Gezgini yan yana karşılaştırın](../ide/git-team-explorer-feature-comparison.md)
+- [Microsoft Learn: Visual Studio Git ve GitHub kullanmaya başlama](/learn/modules/visual-studio-github-push/)
+- [Microsoft Learn: Azure DevOps kullanmaya başlama](/learn/modules/get-started-with-devops/)
+- [Azure DevOps Services: Azure Repos ve Visual Studio kullanmaya başlayın](/azure/devops/repos/git/gitquickstart/)
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+[sürüm denetimi belgelerini Visual Studio](../version-control/index.yml)
+
+::: moniker-end

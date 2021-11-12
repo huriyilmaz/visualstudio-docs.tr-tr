@@ -168,8 +168,12 @@
           href: assign-license-bulk.md
         - name: Özel abonelikler atama
           href: assign-guid.md
+    - name: Yeni sözleşmelere erişme
+      href: agreement-renewals.md
     - name: Abonelikleri yeni sözleşmelere taşıma
       href: migrate-subscriptions.md
+    - name: Sözleşmeler yenilendi mi ne olur?
+      href: agreement-renewals.md
     - name: Abonelikleri düzenleme
       href: edit-license.md
     - name: Abonelikleri silme

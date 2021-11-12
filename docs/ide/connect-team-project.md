@@ -2,18 +2,18 @@
 title: Ekip Gezgini'nde projelere bağlanma
 description: projeleri geliştirmek ve yönetmek üzere takım üyeleriyle çalışmak için Visual Studio Takım Gezgini nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/05/2021
+ms.date: 11/11/2021
 ms.topic: conceptual
 ms.author: tglee
 author: TerryGLee
 ms.manager: jmartens
 monikerRange: <=vs-2019
-ms.openlocfilehash: 0110246e3295149bd11fbfd570589d7f9d289070
-ms.sourcegitcommit: 32fa8ec0b469a7a9a87de25ff769d8d21d9f30d2
+ms.openlocfilehash: a318f033d010d50fb379e3d1ca8cec34d6cb2fbc
+ms.sourcegitcommit: 00451b7258ab86e259d0fe787669330b61efa8e5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2021
-ms.locfileid: "131897859"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "132364962"
 ---
 # <a name="connect-to-projects-in-team-explorer"></a>Ekip Gezgini'nde projelere bağlanma
 
@@ -34,7 +34,7 @@ Takım Gezgini, Team Foundation sürüm denetimi (tfvc) depolarında ve [Azure D
 
 bir projeye bağlanmak için Takım Gezgini kullandığınızda, kullanmakta olduğunuz Visual Studio 2019 sürümüne göre değişir.
 
-## <a name="in-version-168-and-later"></a>Sürüm 16,8 ve üzeri sürümlerde
+## <a name="in-visual-studio-2019-version-168-and-later"></a>Visual Studio 2019 sürüm 16,8 ve sonraki sürümlerde
 
 1. Visual Studio 2019 ' i açın.
 
@@ -61,7 +61,7 @@ bir projeye bağlanmak için Takım Gezgini kullandığınızda, kullanmakta old
 
       ![Visual Studio 2019 sürüm 16,8 ve sonrasında oluşturulan ' Takım Gezgini ' iletişim kutusunun ekran görüntüsü](../ide/media/vs-2019/team-explorer-azure-devops.png)
 
-## <a name="in-version-167-and-earlier"></a>Sürüm 16,7 ve önceki sürümlerde
+## <a name="in-visual-studio-2019-version-167-and-earlier"></a>Visual Studio 2019 sürüm 16,7 ve önceki sürümlerde
 
 1. Visual Studio 2019 ' i açın.
 
@@ -131,7 +131,7 @@ Bir projeye bağlanmak için:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Git ve Takım Gezgini yan yana karşılaştırın](git-team-explorer-feature-comparison.md)
-- [Visual Studio yeni git deneyimi](git-with-visual-studio.md)
+- [sürüm denetimi belgelerini Visual Studio](../version-control/index.yml)
 - [Takım Gezgini başvurusu](reference/team-explorer-reference.md)
 - [bir projeye Bağlan (Azure DevOps)](/azure/devops/organizations/projects/connect-to-projects)
 - [Bir projeye bağlanma sorunlarını giderme](/azure/devops/user-guide/troubleshoot-connection?view=azure-devops&preserve-view=true)
