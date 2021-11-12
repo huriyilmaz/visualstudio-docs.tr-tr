@@ -1,25 +1,25 @@
 ---
-title: Microsoft Mağazası 'ndan mi yenilememe yardım edin
-description: Microsoft Mağazası 'ndan satın alınan Visual Studio aboneliklerimi yenilememe yardımcı olun.
+title: Microsoft mağazası aracılığıyla Visual Studio aboneliğimi yenilememe yardımcı olun
+description: Microsoft mağazası 'ndan satın alınan Visual Studio aboneliğimi yenilememe yardımcı olun.
 ms.topic: include
 ms.assetid: 3b36270b-aa3b-4c05-b12e-4df8d6f823c1
-author: caitybuschlen
-ms.author: cabuschl
-ms.date: 08/14/2020
+author: rigel512
+ms.author: amast
+ms.date: 11/10/2021
 user.type: subscriber
 tags: renewing
 subscription.type: retail
 sap.id: b324c31f-5d44-4cc2-537a-9c354bc5fbfc
-ms.openlocfilehash: e337fc3df5b930dc09f9d3b13be3f64efc7dd749
-ms.sourcegitcommit: 645303f47a5258d4b65cc56bf9e2303865587e1e
+ms.openlocfilehash: 530f60660b27fbbf8cbf8ac1ab38664586bb3ca3
+ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99541112"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "132353971"
 ---
 ## <a name="renewing-subscriptions-through-microsoft-store"></a>Microsoft Store aracılığıyla abonelikleri yenileme 
 
-Dahil edilen geliştirici araçlarına ve yazılımına erişimi sağlamak için aboneliğinizin sona erme tarihinden önce yenilenmesi gerekir. Yenileme fiyatlandırması yalnızca, geçmişte Microsoft Mağazası 'ndan satın almış olan mevcut Visual Studio abonelikleri müşterileri için kullanılabilir ve sona erme tarihinin beş ayı dahilinde olur. Aboneliğinizin süresi beş aydan uzun süre dolmuşsa yenileme fiyatlandırması için uygun değildir. 
+Dahil edilen geliştirici araçlarına ve yazılımına erişimi sağlamak için aboneliğinizin sona erme tarihinden önce yenilenmesi gerekir. yenileme fiyatlandırması yalnızca, geçmişte Microsoft Store satın almış olan mevcut Visual Studio abonelikleri müşterileri için kullanılabilir ve süresi sona erme tarihinin beş ayı dahilinde olur. Aboneliğinizin süresi beş aydan uzun süre dolmuşsa yenileme fiyatlandırması için uygun değildir. 
 
 Aboneliğinizin süresi dolmamışsa, aboneliklerinizi [abonelikler portalındaki](https://my.visualstudio.com/subscriptions)görüntüleyerek zaman aşımı tarihi bulacaksınız. 
 
@@ -31,11 +31,11 @@ Microsoft Store aracılığıyla yenilemek için kullanılabilen perakende Visua
 * [Visual Studio Professional](https://www.microsoft.com/p/visual-studio-professional-subscription/dg7gmgf0dst3?activetab=pivot%3aoverviewtab) 
 * [Visual Studio Test Professional](https://www.microsoft.com/p/visual-studio-test-professional-subscription/dg7gmgf0dst6?activetab=pivot%3aoverviewtab) 
 
-Bu aboneliğin her biri, ilk satın alma veya mevcut bir aboneliği yenileme seçeneği sunar. Yenileme fiyatlandırması önemli miktarda indirime sahiptir ve yalnızca mevcut aboneliklerde kullanılabilir.  
+Bu aboneliklerden her biri, ilk satın alma veya var olan bir aboneliği yenileme seçeneği sunar. Yenileme fiyatlandırması önemli miktarda indirime sahiptir ve yalnızca mevcut aboneliklerde kullanılabilir.  
 
 ## <a name="how-to-renew"></a>Yenileme 
 
-Standart bir perakende aboneliğiniz varsa, bu abonelik [Microsoft Store](https://www.microsoft.com/store) satın alındı ve orada yenilenmelidir.  
+standart bir perakende aboneliğiniz varsa, bu abonelik [Microsoft Store](https://www.microsoft.com/store) satın alındı ve orada yenilenmelidir.  
 
 1. Mağazayı ziyaret edin ve şu anda sahip olduğunuz abonelik düzeyini bulun (yalnızca aynı abonelik düzeyini yenileyebilirsiniz). 
 1. "Karşıdan yükleme – yenileme" seçeneğine tıklayın ve sepete ekleyin. Abonelik düzeyinizi değiştirmek istiyorsanız, "Indir – yeni" seçeneğine tıklamanız gerekir.  
@@ -43,7 +43,7 @@ Standart bir perakende aboneliğiniz varsa, bu abonelik [Microsoft Store](http
 
 ## <a name="how-to-activate"></a>Etkinleştirme  
 
-Microsoft Store aracılığıyla bir Visual Studio aboneliğini yeniledikten sonra, satın alma sürecinizden sonra aldığınız ödeme onayı sayfasından veya onay e-postalarından etkinleştirme işlemini başlatabilirsiniz. 
+Microsoft Store aracılığıyla bir Visual Studio aboneliğini yeniledikten sonra, ödeme onayı sayfasından veya satın alımınızdan sonra aldığınız onay e-postalarından etkinleştirme işlemini başlatabilirsiniz. 
 
 1. [Abonelikler portalı etkinleştirme sayfasına](https://my.visualstudio.com/subscriptions/activate)gidin. 
 1. Visual Studio aboneliğine erişim gerektiren e-postayla oturum açın. 
