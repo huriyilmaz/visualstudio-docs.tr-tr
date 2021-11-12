@@ -1,5 +1,5 @@
 ---
-title: F1 eşleşmeme geri dönüş yardımı
+title: F1 Yardım olmayan geri dönüş
 description: Eyvah! F1 eşleşmesi bulunamadı.
 ms.prod: visual-studio
 ms.technology: ''
@@ -111,55 +111,46 @@ f1_keywords:
 manager: jmartens
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: b5d893b0cc2aa33415a109c406a636ee78be970f
-ms.sourcegitcommit: 0257750be796cc46e01cebd8976f637743d29417
+ms.openlocfilehash: 98b8b0b5c03e3f5bad36a396bc355b73c451acb1
+ms.sourcegitcommit: cc8b4e96ec49a8045b6c31a9cdce1caa30c3ab54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2021
-ms.locfileid: "130290635"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "132387268"
 ---
-# <a name="oops-no-f1-help-match-was-found"></a>Eyvah! Yardım `F1` eşleşmesi bulunamadı
+# <a name="oops-no-f1-help-match-was-found"></a>Eyvah! Hiçbir `F1` Yardım eşleşmesi bulunamadı
 
 ## <a name="now-what"></a>Şimdi ne yapacağız?
 
-Üzgünüz! Görünüşe göre arayamadım. 
+Ne yazık ki! Aradığınızı bulamadık gibi görünüyor. 
 
-**Pencere, `F1` anahtar sözcük veya API adı ile ilgili yardım mı arıyorsunuz?**
-- **Sık kullanılan arama altyapınızı deneme [Önerilen]**
-- Arama yapmak [docs.microsoft.com](/) araç çubuğunu kullanma 
-- [.NET API tarayıcısında arama yapın veya](/dotnet/api/) metin kodu [düzenleyicisine genel bakış sayfamızı okuyun](../../ide/writing-code-in-the-code-and-text-editor.md)
-- Sorun giderme Bilgi Bankası için [Visual Studio göz atma](/troubleshoot/visualstudio/welcome-visual-studio/)
+**`F1`Bir pencere, anahtar sözcük veya API adı hakkında yardım mı arıyorsunuz?**
+- **En sevdiğiniz arama altyapısını deneyin [önerilir]**
+- Aramak için [docs.Microsoft.com](/) araç çubuğunu kullanın 
+- [.NET API tarayıcısı](/dotnet/api/) 'nda arama yapın veya [metin kodu düzenleyicimize genel bakış](../../ide/writing-code-in-the-code-and-text-editor.md) konusunu okuyun
+- [Visual Studio sorun giderme](/troubleshoot/visualstudio/welcome-visual-studio/) için bilgi bankasına bakın
 
 ## <a name="developer-forums"></a>Geliştirici forumları
 
-Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Başkalarının aynı sorun hakkında yayında olup olmadığını görmek için forumlarda arama da bulabilirsiniz.
+Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, diğer kişilerin aynı sorun hakkında nakledilip nakledilmediğini görmek için forumlarda arama yapabilirsiniz.
 
-Forum kaynaklarının listesi:
+Forum kaynaklarının listesi aşağıdadır:
 
-- [Visual Studio A&da](/answers/products/vs/)
-- [Visual Studio MSDN Forumu](https://social.msdn.microsoft.com/Forums/vstudio)
+- [soru-cevap&Visual Studio](/answers/products/vs/)
+- [Visual Studio MSDN forumu](https://social.msdn.microsoft.com/Forums/vstudio)
 - [Stack Overflow](https://stackoverflow.com/search?q=%22visual+studio%22)
 - [Reddit](https://www.reddit.com/r/VisualStudio)
 
-## <a name="product-support"></a>Ürün desteği
+##  <a name="feedback-and-additional-support"></a>Geri bildirim ve ek destek
 
-Diğer kaynakları denemenin ardından hala sorularınız varsa, web sitesini ziyaret ederek Microsoft destek [hizmetleriyle Microsoft Desteği](https://support.microsoft.com/en-us) edebilirsiniz. Alanınıza uygun ürün desteği hakkında daha fazla bilgi için geliştirici [Community](https://developercommunity.visualstudio.com/home) bakın.
+Diğer kaynakları denedikten sonra hala sorularınız varsa, 
+- [Microsoft desteği](https://support.microsoft.com/en-us) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurun. 
+- bölgenizde sunulan ürün desteği için bkz. [geliştirici Community](https://developercommunity.visualstudio.com/home) sayfası.
 
-
-**Tıklamak istemediniz mi?** [Yardım anahtarını yeniden eşleme veya `F1` devre dışı bırakma](../not-in-toc/change-f1-help-key.md)
-
-
-## <a name="help-us-serve-you-better"></a>Size daha iyi hizmet vermek için bize yardımcı olur
-
-Size gereken yardımı sağlama hakkında geri bildirimlerinizi almak istiyorum.
-
-> [!div class="nextstepaction"]
-> [Geri bildiriminizi paylaşın (5 dakikalık anket)](https://www.surveymonkey.com/r/F1_Help_Visual_Studio)
-
-:::image type="content" source="../media/search-error-page-sm.png" alt-text="Ne üzgünüz eşleşme bulamıyorum" border="false":::
+**Ne tıkladım?** [Yardım anahtarını yeniden eşleyin veya devre dışı bırakın `F1`](../not-in-toc/change-f1-help-key.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Ağ ile ilgili veya ara sunucu hatalarını giderme](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
-* [Sorun giderme (Visual Studio için Windows)](/troubleshoot/visualstudio/welcome-visual-studio/)
-* [Sorun giderme (Mac için Visual Studio)](/visualstudio/mac/troubleshooting)
+* [Ağla ilgili veya ara sunucu hatalarıyla ilgili sorunları giderme](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
+* [sorun giderme (Windows için Visual Studio)](/troubleshoot/visualstudio/welcome-visual-studio/)
+* [sorun giderme (Mac için Visual Studio)](/visualstudio/mac/troubleshooting)

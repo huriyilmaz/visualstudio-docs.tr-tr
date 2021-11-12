@@ -2,7 +2,7 @@
 title: Projelere sınıf diyagramları ekleme (Sınıf Tasarımcısı)
 description: sınıfları ve diğer türleri tasarlama, düzenleme ve yeniden düzenleme, C#, Visual Basic veya C++ projenize bir sınıf diyagramı ekleme hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 05/08/2018
+ms.date: 11/11/2021
 ms.topic: how-to
 helpviewer_keywords:
 - class diagrams, creating
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 539c3f9bbd59de6bc1df1bf60f39d96b1b1f439b
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: d8677fea9668269f2440d2bc2745d837808f2fa1
+ms.sourcegitcommit: cc8b4e96ec49a8045b6c31a9cdce1caa30c3ab54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122069514"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "132387329"
 ---
 # <a name="how-to-add-class-diagrams-to-projects"></a>Nasıl yapılır: projelere sınıf diyagramları ekleme
 
@@ -39,7 +39,15 @@ Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları o
 
 1. **Sınıf Tasarımcısı** seçin ve ardından **Değiştir**' i seçin.
 
-   ![Sınıf Tasarımcısı bileşeni Visual Studio Yükleyicisi](media/class-designer-component.png)
+    ::: moniker range="vs-2017"
+   ![Visual Studio Yükleyicisi Sınıf Tasarımcısı bileşeninin ekran görüntüsü](media/class-designer-component.png)
+   ::: moniker-end
+   ::: moniker range="vs-2019"
+   :::image type="content" source="media/vs-2019/class-designer-component.png" alt-text="Visual Studio Yükleyicisi Sınıf Tasarımcısı bileşeninin ekran görüntüsü." lightbox="media/vs-2019/class-designer-component.png":::
+   ::: moniker-end
+   ::: moniker range="vs-2022"
+   :::image type="content" source="media/vs-2022/class-designer-component.png" alt-text="Visual Studio Yükleyicisi Sınıf Tasarımcısı bileşeninin ekran görüntüsü." lightbox="media/vs-2022/class-designer-component.png":::
+   ::: moniker-end
 
    **Sınıf Tasarımcısı** bileşen yüklenmeye başlıyor.
 
@@ -75,7 +83,7 @@ Birden fazla sınıf diyagramı eklemek için bu yordamdaki adımları yineleyin
 
 Otomatik doldurulmuş bir sınıf diyagramı oluşturulur.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Sınıf Tasarımcısı .NET Core projelerinde kullanılamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
