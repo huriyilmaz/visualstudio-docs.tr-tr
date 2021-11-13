@@ -6,21 +6,18 @@ ms.date: 03/23/2020
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: bd07fa561562a5bc92bafa114e3fe3be539c8a338966408421e347e7d0d82493
-ms.sourcegitcommit: c72b2f603e1eb3a4157f00926df2e263831ea472
+ms.openlocfilehash: fd6879ac7b9088edcfc6ec8102928cef7c6b5b35
+ms.sourcegitcommit: cc8b4e96ec49a8045b6c31a9cdce1caa30c3ab54
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2021
-ms.locfileid: "122028134"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "132430031"
 ---
 ## <a name="get-support"></a>Destek alın
 
-Bazen, şeyler yanlış olabilir. Visual Studio yüklemeniz başarısız olursa, adım adım yönergeler için bkz. [Visual Studio yükleme ve yükseltme sorunlarını giderme](../troubleshooting-installation-issues.md) .
+Bazen işler ters gidebilir. Yükleme Visual Studio başarısız olursa, adım [adım Visual Studio](../troubleshooting-installation-issues.md) yükleme ve yükseltme sorunlarını giderme.
 
-Ayrıca, yükleme ile ilgili sorunlar için bir [**yükleme sohbeti**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) için destek seçeneği sunuyoruz.
-
-İşte daha fazla destek seçeneği aşağıda verilmiştir:
-
-* hem Visual Studio Yükleyicisi hem de Visual Studio ıde 'de görüntülenen [sorun bildir](../../ide/how-to-report-a-problem-with-visual-studio.md) aracını kullanarak ürün sorunlarını bize bildirin.
-* [Visual Studio geliştirici Community](https://aka.ms/feedback/suggest?space=8)bir özellik önerin, ürün sorunlarını izleyin ve yanıtları bulun.
-* [Gitter community 'de Visual Studio görüşmesinde](https://gitter.im/Microsoft/VisualStudio)bizimle ve diğer Visual Studio geliştiricilerle konuşmak için [GitHub](https://github.com/) hesabınızı kullanın.
+İşte birkaç destek seçeneği daha:
+* Ayrıca yüklemeyle ilgili [sorunlar için bir](https://visualstudio.microsoft.com/vs/support/#talktous) yükleme sohbeti (yalnızca İngilizce) destek seçeneği sunuyoruz.
+* Ürün sorunlarını, hem [](../../ide/how-to-report-a-problem-with-visual-studio.md) Visual Studio Yükleyicisi hem de Visual Studio IDE'de görünen Sorun Bildir aracı aracılığıyla bize rapor edin. BIR IT Yöneticisiyseniz ve yüklü bir Visual Studio yoksa, BURADA IT Yöneticisi geri [bildirimi gönderebilirsiniz.](https://aka.ms/vs/admin/feedback) 
+* Bir özellik önerin, ürün sorunlarını izlenin ve geliştirici Visual Studio [yanıt Community.](https://aka.ms/feedback/suggest?space=8)
