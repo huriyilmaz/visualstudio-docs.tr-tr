@@ -1,7 +1,8 @@
 ---
 title: Visual Studio Enterprise kılavuzu
-description: Kurumsal bir ortamda Visual Studio ayarlama ve sorun giderme.
+description: Kurumsal bir ortamda Visual Studio ve sorunlarını giderin.
 ms.date: 04/06/2021
+ms.custom: vs-acquisition
 ms.topic: overview
 helpviewer_keywords:
 - network installation, Visual Studio
@@ -15,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 39acfccc16472215a368594b7562bb9eefa724cd
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 455be234d82354be68afde3704c87776f347abc6
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129969378"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132453989"
 ---
 # <a name="visual-studio-enterprise-guide"></a>Visual Studio Enterprise kılavuzu
 Şirketinizi şirket içinde çalıştırmaya başlarken zaman kazanmak Visual Studio buradan başlayabilirsiniz. Bu kurumsal kılavuz, yaygın kurumsal senaryolarda Visual Studio güncelleştirme, sorun yaşamanıza engeli kaldırma ve daha fazla yardıma ihtiyacınız olursa sorun bildirme hakkında bilgi edinme konusunda size yardımcı olacak ipuçları içerir. 
@@ -38,7 +39,7 @@ Ağa bağlı ve Visual Studio ortamlarda işletmenize sanal ağ dağıtımı yap
 
 - **[Önyükleyici paketleri oluşturun.](../deployment/creating-bootstrapper-packages.md)** Ürün ve paket bildirimleri oluşturarak özel önyükleyici paketleri oluşturmayı öğrenin. 
 
-- **[ürününü dağıtırken ürün anahtarlarını otomatik Visual Studio.](automatically-apply-product-keys-when-deploying-visual-studio.md)** Ürün anahtarınızı program aracılığıyla, ürün anahtarı dağıtımını otomatikleştirmek için kullanılan bir betiğin parçası olarak Visual Studio. Ürün anahtarını, cihaz yüklemesi sırasında veya yükleme tamamlandıktan Visual Studio bir cihaza program aracılığıyla kurabilirsiniz. 
+- **[ürününü dağıtırken ürün anahtarlarını otomatik Visual Studio.](automatically-apply-product-keys-when-deploying-visual-studio.md)** Ürün anahtarınızı program aracılığıyla, ürün anahtarı dağıtımını otomatikleştirmek için kullanılan bir betiğin parçası olarak Visual Studio. Ürün anahtarını, cihaz yüklemesi sırasında veya yükleme tamamlandıktan Visual Studio program aracılığıyla ayarlayın. 
 
 ## <a name="install-visual-studio"></a>Visual Studio'yu yükleme 
 
@@ -48,7 +49,7 @@ Yaygın kurumsal senaryolarda Visual Studio yükleme hakkında bilgi.
 
 - **[Visual Studio.](create-a-network-installation-of-visual-studio.md)** İlk yükleme için dosyaları ve tüm ürün güncelleştirmelerini tek bir klasöre önbelleğe alın. 
 
-- **[Bir güvenlik duvarı Visual Studio proxy sunucusunun arkasında azure hizmetlerini ve Azure Hizmetlerini yükleyin ve kullanın.](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)** Kuruluşta güvenlik duvarı veya ara sunucu gibi güvenlik önlemleri kullanıyorsa, Visual Studio ve Azure Hizmetleri'nin yükleme ve kullanma deneyimine sahip olmak için açmak istediğiniz bir "izin verme listesine" ve bağlantı noktalarına ve protokollere eklemek istediğiniz etki alanı URL'leri vardır. 
+- **[Bir güvenlik duvarının Visual Studio ara sunucunun arkasında Azure Hizmetleri'nin ve](install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)** Azure Hizmetlerinin yükleme ve kullanma. Kuruluşta güvenlik duvarı veya ara sunucu gibi güvenlik önlemleri kullanıyorsa, Visual Studio ve Azure Hizmetleri'nin yükleme ve kullanma deneyimine sahip olmak için açmak istediğiniz bir "izin verme listesine" ve bağlantı noktalarına ve protokollere eklemek istediğiniz etki alanı URL'leri vardır. 
 
 - **[Çevrimdışı yükleme için gerekli sertifikaları yükleyin.](../install/install-certificates-for-visual-studio-offline.md)** İstemci makinesinin İnternet bağlantısı tamamen kesiliyorsa gerekli sertifikaları yükleyin.
 
@@ -58,13 +59,13 @@ Güncelleştirme sorunlarını başarıyla Visual Studio ve düzeltmeyi öğreni
 
 - **[Microsoft Endpoint Configuration Manager (SCCM) kullanarak Yönetici Güncelleştirmelerini uygulama.](../install/applying-administrator-updates.md)** SCCM aracılığıyla Visual Studio, güvenlik ve kalite güncelleştirmelerini dağıtma hakkında bilgi alın. 
 
-- **[Visual Studio'nin ağ tabanlı yüklemesini Visual Studio.](update-a-network-installation-of-visual-studio.md)** Visual Studio'nin ağ yükleme düzenini en son ürün güncelleştirmeleriyle güncelleştirin; böylece hem Visual Studio'nin en son güncelleştirmesi için bir yükleme noktası olarak hem de istemci iş istasyonlarına zaten dağıtılmış olan yüklemeleri korumak için kullanılabilir.
+- **[Visual Studio'nin ağ tabanlı yüklemesini Visual Studio.](update-a-network-installation-of-visual-studio.md)** Visual Studio'nin ağ yükleme düzenini en son ürün güncelleştirmeleriyle güncelleştirin; böylece hem Visual Studio'nin en son güncelleştirmesi için bir yükleme noktası olarak hem de istemci iş istasyonlarına zaten dağıtılmış yüklemeleri korumak için kullanılabilir.
 
 - **[Bakım Visual Studio sırasında güncelleştirme.](update-servicing-baseline.md)** Taban çizgisi üzerinde güncelleştirmenin değerini anlama ve ikincil sürümler ile bakım güncelleştirmeleri arasındaki farkı öğrenin. 
 
-- **[En Visual Studio bir çevrimdışı düzen kullanarak güncelleştirme.](update-minimal-layout.md)** İnternet'e bağlı olan bilgisayarlar için en az düzen oluşturmak, çevrimdışı örneklerinizi güncelleştirmenin en kolay ve en Visual Studio yoludur.
+- **[En Visual Studio bir çevrimdışı düzen kullanarak güncelleştirme.](update-minimal-layout.md)** İnternet'e bağlı olan bilgisayarlar için en az düzen oluşturmak, çevrimdışı örneklerinizi güncelleştirmenin en kolay ve en Visual Studio yöntemdir.
 
-- **[Güncelleştirme Visual Studio](repair-visual-studio.md) düzeltmek için güncelleştirmeleri onarın.** Bazen Visual Studio veya bozuk hale gelir. Onarım, güncelleştirmeler de dahil olmak üzere tüm yükleme işlemleri boyunca yükleme zamanı sorunlarını düzeltmek için kullanışlıdır. 
+- **[Güncelleştirme Visual Studio](repair-visual-studio.md) düzeltmek için aracıyı onarın.** Bazen Visual Studio veya bozuk hale gelir. Onarım, güncelleştirmeler de dahil olmak üzere tüm yükleme işlemleri boyunca yükleme zamanı sorunlarını düzeltmek için kullanışlıdır. 
 
 - **Güvenlik [Windows temellerini izleyin.](/windows/security/threat-protection/windows-security-baselines)** Microsoft, müşterilerine Windows 10 ve Windows Server gibi güvenli işletim sistemleri ve Microsoft Edge gibi güvenli uygulamalar sağlamayı Microsoft Edge. Microsoft, ürünlerinin güvenlik güvencesine ek olarak çeşitli yapılandırma özellikleri sağlayarak ortamlar üzerinde ince denetime sahip olur. 
 

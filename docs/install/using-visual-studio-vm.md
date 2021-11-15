@@ -1,7 +1,7 @@
 ---
 title: Azure Visual Studio Makinede sanal makine kullanma
 titleSuffix: ''
-description: Azure Sanal Makinesi'Visual Studio sanal makine kullanmayı öğrenin
+description: Azure Sanal Makinesi'Visual Studio sanal makine kullanma hakkında bilgi edinin
 ms.date: 11/17/2020
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,22 +16,22 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: cff02fe30a029e4c3a5ef5d9f08bd4ab2686dcb2
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 06b61908e18f37244852c84ba82abf899a7b77ae
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129973135"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132453405"
 ---
 # <a name="visual-studio-images-on-azure"></a>Visual Studio Azure'da depolama
 
-Önceden Visual Studio Bir Azure sanal makinesinde (VM) sanal makine kullanmak, hiçbir şeyden çalışan bir geliştirme ortamına gitmek için hızlı ve kolay bir yol sağlar. Farklı yapılandırmaları Visual Studio sistem görüntüleri, [Azure Market.](https://azuremarketplace.microsoft.com/marketplace/apps/category/compute?filters=virtual-machine-images%3Bmicrosoft%3Bwindows&page=1&subcategories=application-infrastructure)
+Önceden Visual Studio Bir Azure sanal makinesinde (VM) sanal makine kullanmak, hiçbir şeyden çalışan bir geliştirme ortamına gitmek için hızlı ve kolay bir yol sağlar. Farklı yapılandırma yapılandırmaları Visual Studio sistem görüntüleri, [Azure Market.](https://azuremarketplace.microsoft.com/marketplace/apps/category/compute?filters=virtual-machine-images%3Bmicrosoft%3Bwindows&page=1&subcategories=application-infrastructure)
 
 Azure’da yeni misiniz? [Ücretsiz bir Azure hesabı oluşturun.](https://azure.microsoft.com/free)
 
 ## <a name="what-configurations-and-versions-are-available"></a>Hangi yapılandırmalar ve sürümler kullanılabilir?
 
-En son ana sürümler (Visual Studio 2019, Visual Studio 2017 ve Visual Studio 2015) için görüntüler Azure Market.  Bu sürümlerin her biri, Visual Studio Enterprise ve Visual Studio Community sunar.  Bu görüntüler en az her ay en son güncelleştirmeleri ve Visual Studio Windows güncelleştirilir.  Görüntülerin adları aynı kalırken, her görüntünün açıklaması yüklü ürün sürümünü ve görüntünün "başlangıç" tarihini içerir.
+En son ana sürümler (Visual Studio 2019, Visual Studio 2017 ve Visual Studio 2015) için görüntüler Azure Market.  Bu sürümlerin her biri Visual Studio Enterprise ve Visual Studio Community sunar.  Bu görüntüler en son güncelleştirmeleri ve güncelleştirmeleri dahil etmek için Visual Studio Windows güncelleştirilir.  Görüntülerin adları aynı kalırken, her görüntünün açıklaması yüklü ürün sürümünü ve görüntünün "başlangıç" tarihini içerir.
 
 | Yayın sürümü                                                                                                                                                | Sürümler              | Ürün sürümü       |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|-----------------------|
@@ -54,7 +54,7 @@ Her görüntü, bu sürüm için önerilen özellik Visual Studio içerir. Genel
 * Visual Studio için GitHub Uzantısı
 * LINQ to SQL Araçları
 
-Görüntülerin nasıl Visual Studio yüklemek Visual Studio komut satırı kullanıyoruz:
+Görüntülerin ne zaman Visual Studio yüklemek için aşağıdaki komut satırı kullanıyoruz:
 
 ```shell
     vs_enterprise.exe --allWorkloads --includeRecommended --passive ^
@@ -68,7 +68,7 @@ Görüntülerin nasıl Visual Studio yüklemek Visual Studio komut satırı kull
        --add Microsoft.VisualStudio.Component.LinqToSql
 ```
 
-Görüntülerde ihtiyaç Visual Studio özelliği yoksa, sayfanın sağ üst köşesindeki geri bildirim aracı aracılığıyla geri bildirim gönderin.
+Görüntülerde ihtiyaç Visual Studio bir özellik yoksa, sayfanın sağ üst köşesindeki geri bildirim aracı aracılığıyla geri bildirim gönderin.
 
 ## <a name="what-size-vm-should-i-choose"></a>Hangi boyutta VM seçmem gerekir?
 
@@ -97,13 +97,13 @@ Daha fazla bilgi için [bkz. Visual Studio'da oturum açma](../ide/signing-in-to
 
 ## <a name="how-do-i-save-the-development-vm-for-future-or-team-use"></a>Nasıl yaparım? vm'yi gelecekte veya takım kullanımı için kaydedecek misiniz?
 
-Geliştirme ortamlarının yelpazesi çok büyük ve daha karmaşık ortamların geliştirilmesiyle ilişkili gerçek bir maliyet vardır. Ortamınız yapılandırmasına bakılmaksızın, yapılandırılan VM'nizi gelecekteki kullanımlar veya takımınız için "temel görüntü" olarak kaydedebilir veya yakalayabilirsiniz. Ardından yeni bir VM'yi önyüklerken, vm'yi Azure Market sağlar.
+Geliştirme ortamlarının yelpazesi çok büyük ve daha karmaşık ortamların geliştirilmesiyle ilişkili gerçek bir maliyet vardır. Ortamınız yapılandırmasına bakılmaksızın, yapılandırılan VM'nizi gelecekteki kullanımlar veya takımınız için "temel görüntü" olarak kaydedebilir veya yakaabilirsiniz. Ardından yeni bir VM'yi önyüklerken, vm'yi Azure Market sağlar.
 
 Hızlı bir özet: Sistem Hazırlama aracını (Sysprep) kullanın, çalışan  VM'yi kapatın ve ardından vm'yi kullanıcı arabirimi üzerinden görüntü olarak Azure portal. Azure, `.vhd` görüntüyü içeren dosyayı seçtiğiniz depolama hesabına kaydeder. Yeni görüntü daha sonra aboneliğinizin kaynak listesinde Görüntü kaynağı olarak görünür.
 
-![Kullanıcı arabirimi aracılığıyla Azure portal yakalama](media/capture-vm.png)
+![Azure portal kullanıcı arabirimi aracılığıyla görüntü yakalama](media/capture-vm.png)
 
-*(Şekil 1) Kullanıcı arabirimi üzerinden Azure portal yakalama.*
+*(Şekil 1) Kullanıcı arabirimi aracılığıyla Azure portal yakalama.*
 
 Daha fazla bilgi için [bkz. Azure'da genelleştirilmiş bir VM'nin yönetilen görüntüsünü oluşturma.](/azure/virtual-machines/windows/capture-image-resource)
 
@@ -113,11 +113,11 @@ Daha fazla bilgi için [bkz. Azure'da genelleştirilmiş bir VM'nin yönetilen g
 > [!NOTE]
 > Görüntülerin depolanması için yine de bazı maliyetler tabi olur ancak bu artımlı maliyet, vm'yi ihtiyacı olan her ekip üyesi için sıfırdan yeniden oluşturmak için gereken ek yük maliyetlerine kıyasla önemli olabilir. Örneğin, bir ay boyunca 127 GB'lık bir görüntü oluşturmak ve depolamak, tüm takımınız tarafından yeniden kullanılabilir. Ancak bu maliyetler, her çalışanın bireysel kullanım için düzgün yapılandırılmış bir geliştirme kutusu oluşturmak ve doğrulamak için yatırım yaptıkları saatlerle karşılaştırıldığında önemsizdir.
 
-Ayrıca, geliştirme görevleriniz veya teknolojileriniz, geliştirme yapılandırmaları ve birden çok makine yapılandırması gibi daha fazla ölçek gerektirebilir. "Altın Azure DevTest Labs" oluşturma _işlemini otomatikleştiren_ tarifler oluşturmak için Azure DevTest Labs'i kullanabilirsiniz. DevTest Labs'i, takımınız tarafından çalıştırilen VM'lere yönelik ilkeleri yönetmek için de kullanabilirsiniz. [Geliştiriciler Azure DevTest Labs devtest labs](/azure/devtest-labs/devtest-lab-developer-lab) hakkında daha fazla bilgi için en iyi kaynaktır.
+Buna ek olarak, geliştirme görevleriniz veya teknolojileriniz geliştirme yapılandırmaları ve birden çok makine yapılandırması gibi daha fazla ölçek gerektirebilir. "Altın Azure DevTest Labs" oluşturma _işlemini otomatikleştiren_ tarifler oluşturmak için Azure DevTest Labs'i kullanabilirsiniz. DevTest Labs'i, takımınız tarafından çalıştırilen VM'lere yönelik ilkeleri yönetmek için de kullanabilirsiniz. [DevTest](/azure/devtest-labs/devtest-lab-developer-lab) Labs Azure DevTest Labs için en iyi kaynak, geliştiriciler için Azure DevTest Labs'ı kullanmaktır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Önceden yapılandırılmış sanal makine görüntüleri hakkında bilgi Visual Studio bir sonraki adım yeni bir VM oluşturmaktır:
+Önceden yapılandırılmış sanal makine görüntüleri hakkında bilgi Visual Studio, sonraki adım yeni bir VM oluşturmaktır:
 
 * [Sanal makine aracılığıyla VM Azure portal](/azure/virtual-machines/windows/quick-create-portal)
 * [Windows Sanal Makinelere genel bakış](/azure/virtual-machines/windows/overview)

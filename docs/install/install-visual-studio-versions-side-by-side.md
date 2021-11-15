@@ -1,7 +1,7 @@
 ---
 title: Visual Studio sürümlerini yan yana yükleme
 description: daha önceki veya daha sonraki bir Visual Studio zaten yüklü bir bilgisayara Visual Studio yüklemeyi öğrenin.
-ms.custom: SEO-VS-2020
+ms.custom: vs-acquisition, SEO-VS-2020
 ms.date: 03/29/2021
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: anandmeg
 ms.author: meghaanand
 manager: jmartens
-ms.openlocfilehash: a4df127d6131f6121c68f9900f2af8a3f66da811
-ms.sourcegitcommit: 0257750be796cc46e01cebd8976f637743d29417
+ms.openlocfilehash: ecfeeaa5dd4e0b9cab4363381a1ff564cd6a10b7
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/23/2021
-ms.locfileid: "130290648"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132453821"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Visual Studio sürümlerini yan yana yükleme
 

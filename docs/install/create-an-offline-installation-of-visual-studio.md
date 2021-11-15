@@ -1,6 +1,6 @@
 ---
 title: Çevrimdışı yükleme oluşturma
-description: Güvenilir olmayan bir İnternet bağlantınız Visual Studio bant genişliğiniz olduğunda çevrimdışı bir sunucu yükleme hakkında bilgi alın.
+description: güvenilir olmayan bir internet bağlantınız veya düşük bant genişliğiniz olduğunda Visual Studio çevrimdışı olarak yüklemeyi öğrenin.
 ms.date: 4/16/2021
 ms.topic: conceptual
 f1_keywords:
@@ -15,209 +15,201 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 42f9524ba62ee73f2ef630c7c0c1bb7839a663dd
-ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+ms.openlocfilehash: 8ca9b7b669c99e1d3ea35476bf661af902ef6963
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132002061"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132453418"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio’nun çevrimdışı yüklemesini oluşturma
 
-::: moniker range="vs-2017"
-
-2017'Visual Studio çeşitli ağ ve bilgisayar yapılandırmalarında iyi çalışacak şekilde tasarladık. Mümkün olmadığını anlıyoruz [tüm son düzeltmeler](https://visualstudio.microsoft.com/vs/older-downloads)ve özelliklerle güncel kalmanız için küçük bir dosya olan Visual Studio web yükleyicisini &mdash; &mdash; denemenizi öneririz.
-
-::: moniker-end
-
-::: moniker range=">=vs-2019"
-
-Çeşitli Visual Studio ve bilgisayar yapılandırmalarında iyi çalışacak şekilde tasarlanmıştır. Mümkün olmadığını anlıyoruz [tüm son düzeltmeler](https://visualstudio.microsoft.com/downloads)ve özelliklerle güncel kalmanız için küçük bir dosya olan Visual Studio web yükleyicisini &mdash; &mdash; denemenizi öneririz.
-
-::: moniker-end
-
-Örneğin, güvenilir olmayan bir İnternet bağlantınız veya düşük bant genişliğine sahip bir bağlantınız olabilir. Öyleyse, birkaç seçeneğiniz vardır: Yüklemeden önce dosyaları indirmek için yeni "Hepsini indir, sonra yükle" özelliğini kullanabilir veya komut satırıyla dosyaların yerel önbelleğini oluşturabilirsiniz.
+çeşitli ağ ve bilgisayar yapılandırmalarında iyi şekilde çalışacak Visual Studio tasarlıyoruz. düzenli aralıklarla çevrimiçi güncelleştirmeleri denetleyen küçük bir dosya olan [Visual Studio Yükleyicisi](https://visualstudio.microsoft.com/downloads)kullanmanızı öneririz ve en son düzeltmeler ve özelliklerle güncel kalabilmenizi sağlar. Ancak, bazen çevrimiçi erişim sorunlu olur. Örneğin, güvenilir olmayan bir internet bağlantınız olabilir veya internet bağlantınızın bant genişliği düşük olabilir. Bunlar gibi durumlarda, Visual Studio almak için kullanabileceğiniz birkaç farklı yöntem yaptık. yüklemeden önce dosyaları yerel makinede yerel bir önbelleğe indirmek için Visual Studio Yükleyicisi **tümünü indir, sonra yükle** özelliğini kullanabilir veya daha sonra yüklenecek dosyaların yerel bir önbelleğini oluşturmak için komut satırını kullanabilirsiniz.
 
 > [!NOTE]
-> Visual Studio'nin İnternet'den güvenlik duvarı olan bir istemci iş istasyonları ağına dağıtımını gerçekleştirmek isteyen bir kuruluş yöneticisiyseniz, [Visual Studio'nin](../install/create-a-network-installation-of-visual-studio.md) ağ yüklemesi oluşturma ve Visual Studio çevrimdışı yükleme sayfaları için gereken sertifikaları yükleme [sayfamıza](../install/install-certificates-for-visual-studio-offline.md) bakın.
+> istemci iş istasyonları ağına Visual Studio dağıtımı gerçekleştirmek isteyen bir kurumsal bt yöneticisiyseniz, [Visual Studio yöneticileri kılavuzumuzu](https://aka.ms/vs/admin/guide)inceleyin.
 
-## <a name="use-the-download-all-then-install-feature"></a>"Hepsini indir, sonra yükle" özelliğini kullanın
+## <a name="use-the-download-all-then-install-feature"></a>"Tümünü Indir, sonra Yükle" özelliğini kullanın
 
-::: moniker range="vs-2017"
+Visual Studio Yükleyicisi, **iş yükleri** sekmesinde, iletişim kutusunun alt kısmındaki açılan menüde **tümünü indir ve yükle** seçeneğini belirleyebilirsiniz. bu özelliğin amacı, Visual Studio paketlerinin indirilmesini, sonunda Visual Studio yüklerken planladığınız aynı bilgisayara yüklemek için önde gelecektir. Paketleri önce yerel bir önbelleğe indirerek, Visual Studio yüklemeden önce internet bağlantısını güvenle kesebilirsiniz.
 
-[**Sürüm 15.8'de**](/visualstudio/releasenotes/vs2017-relnotes-v15.8#install)yeni: Web yükleyicisini indirdikten sonra yeni Hepsini indir'i seçin **ve** ardından yükleme Visual Studio Yükleyicisi. Ardından, yüklemenize devam edin.
-
-   !["Hepsini indir, sonra yükle" seçeneği](media/download-all-then-install.png)
-
-::: moniker-end
-
-::: moniker range=">=vs-2019"
-
-Web yükleyicisini indirdikten sonra, yeni Hepsini **indir'i seçin ve ardından yükleme** Visual Studio Yükleyicisi. Ardından, yüklemenize devam edin.
-
-   !["Hepsini indir, sonra yükle" seçeneği](media/vs-2019/download-all-then-install-from-installer.png)
-
-::: moniker-end
-
-"Hepsini indir, sonra yükle" özelliğini tasarladık, böylece Visual Studio indirdiğiniz bilgisayar için tek bir yükleme olarak indirebilirsiniz. Bu şekilde, yüklemeden önce web bağlantısını güvenli bir şekilde Visual Studio.
+   !["Tümünü Indir, sonra Yükle" seçeneği](media/vs-2019/download-all-then-install-from-installer.png)
 
 > [!IMPORTANT]
-> Başka bir bilgisayara aktarmayı niyetli bir çevrimdışı önbellek oluşturmak için "Hepsini indir, sonra yükle" özelliğini kullanmayın. Bu şekilde çalışacak şekilde tasarlanmaz. <br><br>Yerel bilgisayarda çevrimdışı önbellek oluşturmak istiyorsanız, daha sonra yerel bir önbellek Visual Studio yüklemek için kullanabilirsiniz, aşağıdaki Yerel önbellek oluşturmak [için komut satırı](#use-the-command-line-to-create-a-local-cache) kullanma bölümüne bakın.  Alternatif olarak, [Ağ yüklemesi oluşturma Visual Studio](../install/create-a-network-installation-of-visual-studio.md) sayfasında, ağ üzerinde önbellek oluşturma hakkında bilgi sağlar.
+> Başka bir bilgisayara aktarmak istediğiniz yerel bir önbellek oluşturmak için **Tümünü indir ve yükle** özelliğini kullanmayın. Bu şekilde çalışacak şekilde tasarlanmamıştır. 
 
-## <a name="use-the-command-line-to-create-a-local-cache"></a>Yerel önbellek oluşturmak için komut satırı kullanma
-::: moniker range="vs-2017"
+Ayrıca güncelleştirmelerinizi **, tümünü indir ve sonra Yükle** davranışı açısından yapılandırabilirsiniz. Daha fazla bilgi için [güncelleştirme ayarlarını özelleştirme](/visualstudio/install/update-visual-studio?#installation-and-download-behaviors-1) belgelerine bakın.
 
-Küçük bir önyükleyici indirdikten sonra, yerel önbellek oluşturmak için komut satırı kullanın. Ardından, yerel önbelleği kullanarak Visual Studio. (Bu işlem, önceki sürümlerde kullanılabilen ISO dosyalarının yerini alır). 
+## <a name="use-the-command-line-to-create-a-local-cache"></a>Yerel önbellek oluşturmak için komut satırını kullanın
 
-::: moniker-end
+Küçük bir önyükleyici dosyası indirebilir ve ardından komut satırını kullanarak yerel bir önbellek oluşturabilirsiniz. Önbellek oluşturulduktan sonra, Visual Studio yüklemek için kullanabilirsiniz. 
 
-::: moniker range=">=vs-2019"
+### <a name="step-1---download-the-visual-studio-bootstrapper"></a>1. adım-Visual Studio bootstrapper yükleme
 
-Küçük bir önyükleyici dosyasını indirdikten sonra, yerel önbellek oluşturmak için komut satırı kullanın. Ardından, yerel önbelleği kullanarak Visual Studio.
-
-::: moniker-end
-
-### <a name="step-1---download-the-visual-studio-bootstrapper"></a>1. Adım - Visual Studio önyükleyiciyi indirme
-
-Bu adımı tamamlamak için bir İnternet bağlantınız olması gerekir.
+Bu adımı tamamlayabilmeniz için bir internet bağlantınızın olması gerekir.
 
 ::: moniker range="vs-2017"
 
-Visual Studio 2017 sürüm 15.9 için en son önyükleyiciyi [](https://visualstudio.microsoft.com/vs/older-downloads/) almak için önceki sürümler sayfasına Visual Studio ve aşağıdaki önyükleyici dosyalarından birini indirin:
+Visual Studio 2017 sürüm 15,9 için en son bootstrap'yi almak için aşağıdaki dosyalardan birini indirin. bu bootstrap, çalıştırdığınızda Visual Studio 2017 ' nin en son sürümünü her zaman yükler.
 
-| Sürüm                                      | Dosyaadı            |
+| Sürüm                                      | Önyükleyici            |
 |----------------------------------------------|---------------------|
-| Visual Studio Professional 2017 sürüm 15.9 | vs_professional.exe |
-| Visual Studio Enterprise 2017 sürüm 15.9   | vs_enterprise.exe   |
-| Visual Studio Derleme Araçları 2017 sürüm 15.9  | vs_buildtools.exe   |
+| Visual Studio 2017 Professional sürüm 15,9 | [vs_professional.exe](https://aka.ms/vs/15/release/vs_professional.exe) |
+| Visual Studio 2017 Enterprise sürüm 15,9   | [vs_enterprise.exe](https://aka.ms/vs/15/release/vs_enterprise.exe)   |
+| Visual Studio 2017 derleme araçları sürüm 15,9  | [vs_buildtools.exe](https://aka.ms/vs/15/release/vs_buildtools.exe)   |
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-başlangıç olarak Visual Studio indirmeleri sayfasından [Visual Studio](https://visualstudio.microsoft.com/downloads) 2019 önyükleyicisi veya seçtiğiniz sürüm ve sürüm için [Visual Studio 2019](/visualstudio/releases/2019/history#installing-an-earlier-release) Sürümler Visual Studio. Kurulum dosyanız &mdash; veya önyükleyiciniz &mdash; aşağıdakilere benzer veya eşler:
+her zaman 16,11 ' nin en son sürümünü yükleyecek Visual Studio 2019 için en son bootstrap'ı almak için aşağıdaki dosyalardan birini indirin. alternatif olarak, Visual Studio 2019 ' nin belirli bir sürümünü yüklemek istiyorsanız, her bakım sürümü için sabit sürüm bootstrapbağlantıları olan [Visual Studio 2019 yayınlar](/visualstudio/releases/2019/history#installing-an-earlier-release) sayfasına gidin. 
 
-| Sürüm                         | Dosya                                                                                                                                                                                                                               |
-|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Visual Studio 2019 Community    | [vs_community.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)       |
-| Visual Studio 2019 Professional | [vs_professional.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
-| Visual Studio 2019 Enterprise   | [vs_enterprise.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
-| Visual Studio 2019 Derleme Araçları  | [vs_buildtools.exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
+| Sürüm                         | Önyükleyici                                                                    |
+|---------------------------------|-------------------------------------------------------------------------|
+| Visual Studio 2019 Professional sürüm 16,11 | [vs_professional.exe](https://aka.ms/vs/16/release/vs_professional.exe) |
+| Visual Studio 2019 Enterprise sürüm 16,11 | [vs_enterprise.exe](https://aka.ms/vs/16/release/vs_enterprise.exe) |
+| Visual Studio 2019 derleme araçları sürüm 16,11 | [vs_buildtools.exe](https://aka.ms/vs/16/release/vs_buildtools.exe) |
 
 ::: moniker-end
 
-::: moniker range=">=vs-2022"
+::: moniker range="vs-2022"
 
->[!TIP]
-> Visual Studio 2022'nin yayımlanan sürümleri henüz kullanılamıyor, aşağıdaki önyükleyiciler Visual Studio 2022'nin önizleme sürümü için.
->Visual Studio indirme sayfasından Visual Studio 2022 [önyükleyicisi'ne indirin.](https://aka.ms/vs2022preview)
+geçerli kanalın en son sürümünü her zaman yükleyecek Visual Studio 2022 için en son bootstrap'ı almak için aşağıdaki dosyalardan birini indirin. alternatif olarak, belirli bir sürümü veya Visual Studio 2022 ' nin belirli bir kanalını yüklemek isterseniz, her bir bakım sürümü için sabit sürüm bootstrapbağlantılarına bağlantıları olan [Visual Studio 2022 yayın geçmişi](/visualstudio/releases/2022/release-history#release-dates-and-build-numbers) sayfasına gidin. 
 
-| Sürüm                         | İndir                                                            |
+| Sürüm                         | Önyükleyici                                                            |
 |---------------------------------|---------------------------------------------------------------------|
+| Visual Studio 2022 Community | [vs_community.exe](https://aka.ms/vs/17/release/vs_community.exe) |
 | Visual Studio 2022 Professional | [vs_professional.exe](https://aka.ms/vs/17/pre/vs_professional.exe) |
-| Visual Studio 2022 Enterprise   | [vs_enterprise.exe](https://aka.ms/vs/17/pre/vs_enterprise.exe)     |
-
-::: moniker-end
-
-::: moniker range="vs-2017"
-
->[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün olduğunu doğrulamak için aşağıdaki şekilde devam edin. İlk Windows'Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini seçin** ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu slanın bir yayın sürümüyle Visual Studio için Visual Studio [numaraları ve yayın tarihleri sayfasına](/visualstudio/releasenotes/vs2017-relnotes-history) bakın.
+| Visual Studio 2022 Enterprise | [vs_enterprise.exe](https://aka.ms/vs/17/pre/vs_enterprise.exe)     |
+| Visual Studio 2022 Professional | [vs_buildtools.exe](https://aka.ms/vs/17/pre/vs_buildtools.exe) |
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve sürümünü doğrulamak için aşağıdaki şekilde devam edin. İlk Windows'Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini seçin** ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu slayla bir Visual Studio eşleşmesi için [Visual Studio 2019 Sürümler sayfasına](/visualstudio/releases/2019/history) bakın.
+>[Visual Studio 2019 yayınları](/visualstudio/releases/2019/history#release-dates-and-build-numbers) sayfasından belirli bir önyükleyici dosyasını daha önce indirdiyseniz ve hangi sürümün yükleneceğini doğrulamak istiyorsanız, şu şekilde olur. Windows, dosya gezgini 'ni açın, önyükleyici dosyasına sağ tıklayın, **özellikler**' i seçin, **ayrıntılar** sekmesini seçin ve ardından **ürün sürümü** numarasını görüntüleyin. bu numarayı bir Visual Studio sürümüyle eşleştirmek için, bu sayfanın en altındaki tabloya bakın.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve sürümünü doğrulamak için aşağıdaki şekilde devam edin. İlk Windows'Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i **seçin,** **Ayrıntılar sekmesini seçin** ve ardından Ürün sürüm **numarasını** görüntüleyin. Bu sayıyla bir Visual Studio eşleşmesi için Visual Studio [2022 Yayın sayfasına](/visualstudio/releases/2022/release-notes) bakın.
+>Daha önce bir önyükleyici dosyası indirdiyseniz ve hangi sürümün yükleneceğini doğrulamak istiyorsanız, şöyle olur. Windows, dosya gezgini 'ni açın, önyükleyici dosyasına sağ tıklayın, **özellikler** ' i seçin ve **ayrıntılar** sekmesini seçin. **Ürün sürümü** alanı, önyükleyicinin yükleneceği [kanalı ve sürümü](/visualstudio/releases/2022/vs2022-release-rhythm) anlatmaktadır. Sürüm numarası her zaman "belirtilen sayının en son bakım sürümü" olarak okunmalı ve açıkça belirtilmediği sürece kanal geçerli olur. Bu nedenle, LTSC 17,0 ürün sürümüne sahip bir önyükleyici, 17,0 LTSC kanalında bulunan en son 17.0. x bakım sürümünü yükler. yalnızca Visual Studio 2022 ' i belirten ürün sürümüne sahip bir önyükleyici, geçerli kanala Visual Studio 2022 ' nin en son sürümünü yükler.
 
 ::: moniker-end
 
-### <a name="step-2---create-a-local-install-cache"></a>2. Adım - Yerel yükleme önbelleği oluşturma
+### <a name="step-2---create-a-local-install-cache"></a>2. adım-yerel bir yüklemesi önbelleği oluşturma
 
-Bu adımı tamamlamak için bir İnternet bağlantınız olması gerekir.
+Bu adımı tamamlayabilmeniz için bir internet bağlantınızın olması gerekir.
 
-Bir komut istemi açın ve önyükleyicinin parametrelerini Yerel yükleme önbelleğinizi oluşturmak için [Visual Studio](use-command-line-parameters-to-install-visual-studio.md) yüklemek için komut satırı parametrelerini kullanma sayfasında tanımlandığı gibi kullanın. Önyükleyici Enterprise yaygın örnekler aşağıda ve komut satırı parametre [örnekleri sayfasında gösterilmiştir.](command-line-parameter-examples.md) Dil yerel ayarları listesinden bir yerele değiştirerek İngilizce dışında bir dil yükleyebilir ve önbelleğinizi daha fazla özelleştirmek için bileşen ve iş yükleri `en-US` listesini kullanabilirsiniz. [](#list-of-language-locales) [](workload-and-component-ids.md)
+bir komut istemi açın ve önyükleyici parametrelerini kullanarak, yerel yükleme önbelleğinizi oluşturmak için [Visual Studio sayfasını yüklemek üzere komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md) bölümünde tanımlandığı şekilde kullanın. Enterprise önyükleyici kullanan ortak örnekler aşağıda ve [komut satırı parametre örnekleri](command-line-parameter-examples.md) sayfasında gösterilmektedir. `en-US`Yerel önbelleğinizi daha fazla özelleştirmek için, İngilizce dışında [bir dil yükleyebilirsiniz](#list-of-language-locales)ve [bileşen ve iş yüklerinin listesini](workload-and-component-ids.md) kullanabilirsiniz.
 
 > [!TIP]
-> Bir hatayı önlemek için tam yükleme yol 80 karakterden az olduğundan emin olun.
+> Bir hatayı engellemek için, tam yükleme yolunuz 80 karakterden az olduğundan emin olun.
 
-- .NET web ve .NET masaüstü geliştirme için şu çalıştırın:
+::: moniker range="<=vs-2019"
+
+- .NET Web ve .NET masaüstü geliştirme için şunu çalıştırın:
 
    ```shell
-    vs_enterprise.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
+    vs_enterprise.exe --layout c:\localVScache --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
     ```
 
-- .NET masaüstü ve Office için şu çalıştırın:
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+- .NET Web ve .NET masaüstü geliştirme için şunu çalıştırın:
 
    ```shell
-    vs_enterprise.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Office --includeOptional --lang en-US
+    vs_enterprise.exe --layout c:\localVScache --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --includeOptional --lang en-US
     ```
 
-- C++ masaüstü geliştirme için şu çalıştırın:
+::: moniker-end
+
+- .net masaüstü ve Office geliştirme için şunu çalıştırın:
 
    ```shell
-    vs_enterprise.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
+    vs_enterprise.exe --layout c:\localVScache --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Office --includeOptional --lang en-US
     ```
 
-- Tüm özelliklerle (çok sayıda özelliğimiz uzun sürer!) yalnızca İngilizce olmak üzere eksiksiz bir yerel düzen oluşturmak için &mdash; şu işlemi çalıştırın: 
+- C++ masaüstü geliştirme için şunu çalıştırın:
 
    ```shell
-    vs_enterprise.exe --layout c:\vslayout --lang en-US
+    vs_enterprise.exe --layout c:\localVScache --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
+    ```
+
+- Tam bir yerel önbellek oluşturmak için, tüm özelliklerle birlikte yalnızca Ingilizce ( &mdash; _çok fazla_ özellik olması uzun sürer!), şunu çalıştırın:
+
+   ```shell
+    vs_enterprise.exe --layout c:\localVScache --lang en-US
     ```
 
 ::: moniker range="vs-2017"
 
    > [!NOTE]
-   > Tam bir Visual Studio düzeni için en az 35 GB disk alanı gerekir. Daha fazla bilgi için [bkz. Sistem gereksinimleri.](/visualstudio/productinfo/vs2017-system-requirements-vs/) 
+   > Visual Studio 'ın tamamen yerel önbelleği, en az 35 GB disk alanı gerektirir. Daha fazla bilgi için bkz. [sistem gereksinimleri](/visualstudio/productinfo/vs2017-system-requirements-vs/). 
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
    > [!NOTE]
-   > Tam bir Visual Studio düzeni için en az 41 GB disk alanı gerekir. Daha fazla bilgi için [bkz. Sistem gereksinimleri.](/visualstudio/releases/2019/system-requirements/)
+   > Visual Studio 'ın tamamen yerel önbelleği, en az 41 GB disk alanı gerektirir. Daha fazla bilgi için bkz. [sistem gereksinimleri](/visualstudio/releases/2019/system-requirements/).
 
 ::: moniker-end
 
+::: moniker range="vs-2022"
 
-### <a name="step-3---install-visual-studio-from-the-local-cache"></a>3. Adım : Visual Studio önbellekten yükleme
-Yerel yükleme Visual Studio yükleme önbelleğinden yükleme, Visual Studio yükleyicisi dosyaların yerel önbelleğe alınmış sürümlerini kullanır. Ancak, yükleme sırasında önbellekte olmayan bileşenleri seçersiniz, Visual Studio yükleyici bunları internetten indirmeyi denemez. Yalnızca daha önce indirdiğiniz dosyaları yükledikten emin olmak için, düzen önbelleğini oluşturmak için kullanılan komut satırı seçeneklerini kullanın. [](use-command-line-parameters-to-install-visual-studio.md) 
+   > [!NOTE]
+   > Visual Studio 'ın tamamen yerel önbelleği, en az 45 GB disk alanı gerektirir. Daha fazla bilgi için bkz. [sistem gereksinimleri](/visualstudio/releases/2022/system-requirements/).
+
+::: moniker-end
+
+### <a name="step-3---install-visual-studio-from-the-local-cache"></a>3. adım-yerel önbellekten Visual Studio yüklemesi
+bir yerel yükleme önbelleğinden Visual Studio yüklediğinizde, Visual Studio yükleyicisi dosyaların yerel önbelleğe alınmış sürümlerini kullanır. ancak, yükleme sırasında önbellekte olmayan bileşenler ' i seçerseniz Visual Studio yükleyicisi bunları internetten indirmeyi dener. Yalnızca daha önce indirdiğiniz dosyaları yüklediğinizden emin olmak için, yerel önbellek oluşturmak için kullandığınız [komut satırı seçeneklerini](use-command-line-parameters-to-install-visual-studio.md) kullanın. Yükleyicinizin internet 'e erişmeyi denemediğinden emin olmak için `--noweb` anahtarını kullanın.
 
 Örneğin, aşağıdaki komutla bir yerel yükleme önbelleği oluşturduysanız:
 
-```shell
-vs_enterprise.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
-```
-
-Ardından bu komutu kullanarak yükleme işlemini çalıştırın:
+::: moniker range="<=vs-2019"
 
 ```shell
-c:\vslayout\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional
+vs_enterprise.exe --layout c:\localVScache --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional --lang en-US
 ```
 
-> [!IMPORTANT]
-> Visual Studio Community kullanıyorsanız, yüklemeden sonra 30 gün içinde üründe oturum açmak için etkinleştirmeniz gerekir. Etkinleştirme için bir İnternet bağlantısı gerekir.
+Yüklemeyi çalıştırmak için bu komutu kullanın:
 
-> [!NOTE]
-> İmzanın geçersiz olduğuyla ilgili bir hata alırsanız, güncelleştirilmiş [sertifikaları yüklemeniz gerekir.](install-certificates-for-visual-studio-offline.md) Çevrimdışı önbelleğinizin Sertifikalar klasörünü açın. Sertifika dosyalarının her biri için çift tıklayın ve ardından Sertifika Yöneticisi sihirbazına tıklayın. Parola istenirse boş bırakın.
-
-::: moniker range=">=vs-2019"
-> [!TIP]
-> Çevrimdışı yüklemeler için "Aşağıdaki parametrelerle eşleşen bir ürün bulunamadı" hata iletisini alırsanız, 16.3.5 veya sonraki bir sürüme sahip anahtarı kullanırkenn `--noweb` emin olun.
+```shell
+c:\localVScache\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional
+```
 
 ::: moniker-end
 
-### <a name="list-of-language-locales"></a>Dil yerellerinin listesi
+::: moniker range="vs-2022"
 
-| **Dil yereli** | **Dil**          |
+```shell
+vs_enterprise.exe --layout c:\localVScache --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --includeOptional --lang en-US
+```
+
+Yüklemeyi çalıştırmak için bu komutu kullanın:
+
+```shell
+c:\localVScache\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --includeOptional
+```
+
+::: moniker-end
+
+> [!IMPORTANT]
+> Visual Studio Community kullanıyorsanız, yükleme 30 gün içinde üründe oturum açarak etkinleştirmeniz gerekir. Etkinleştirme bir internet bağlantısı gerektirir.
+
+> [!NOTE]
+> İmzanın geçersiz olduğunu belirten bir hata alırsanız, [güncelleştirilmiş sertifikaları yüklemelisiniz](install-certificates-for-visual-studio-offline.md). Yerel önbelleğinizin Sertifikalar klasörünü açın. Sertifika dosyalarının her birine çift tıklayın ve ardından Sertifika Yöneticisi Sihirbazı ' na tıklayın. Parola istenirse boş bırakın.
+
+
+### <a name="list-of-language-locales"></a>Dil yerel ayarları listesi
+
+| **Dil yerel ayarı** | **Dil**          |
 |---------------------|-----------------------|
 | cs-CZ               | Çekçe                 |
 | de-DE               | Almanca                |
@@ -238,8 +230,7 @@ c:\vslayout\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.Mana
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio ağ yüklemesi oluşturma](../install/create-a-network-installation-of-visual-studio.md)
-- [Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme](update-a-network-installation-of-visual-studio.md)
+- [Visual Studio yöneticileri kılavuzu](https://aka.ms/vs/admin/guide)
 - [Visual Studio çevrimdışı yükleme için gerekli sertifikaları yükleme](../install/install-certificates-for-visual-studio-offline.md)
 - [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 - [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)

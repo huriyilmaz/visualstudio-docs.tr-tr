@@ -1,8 +1,9 @@
 ---
-title: Visual Studio kaldır
+title: Kaldırma Visual Studio
 titleSuffix: ''
-description: Visual Studio bilgisayarınızdan tamamen kaldırmayı öğrenin, adım adım.
+description: Adım adım bilgisayarınızdan Visual Studio kaldırmayı öğrenin.
 ms.date: 08/24/2021
+ms.custom: vs-acquisition
 ms.topic: how-to
 f1_keywords:
 - uninstall
@@ -21,43 +22,43 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 5a7a3f39a9981f3f02c3788ad3ac4dfd67ebefd3
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 360124f0e831233728ba8b4c222e6ad2106ef098
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129969391"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132453587"
 ---
-# <a name="remove-visual-studio"></a>Visual Studio kaldır
+# <a name="remove-visual-studio"></a>Kaldırma Visual Studio
 
-Visual Studio çok önemli bir hatayla karşılaşırsanız ve `InstallCleanup.exe` Visual Studio 2017, Visual Studio 2019 veya Visual Studio 2022 yüklü tüm örnekleri için yükleme dosyalarını ve ürün bilgilerini kaldırmak üzere aracı çalıştırabilirsiniz.
+Yıkıcı bir hatayla karşılaştınız ve Visual Studio'ı onaramaz veya kaldıramazsanız, `InstallCleanup.exe` Visual Studio 2017, Visual Studio 2019 veya Visual Studio 2022'nin tüm yüklü örnekleri için yükleme dosyalarını ve ürün bilgilerini kaldırmak için aracı çalıştırabilirsiniz.
 
 > [!WARNING]
-> Yalnızca onarma veya kaldırma başarısız olursa, ınstallcleanup aracını **yalnızca son çare olarak** kullanın. bu araç diğer Visual Studio yüklemelerinden veya diğer ürünlerden özellikleri kaldırabilir, bu da onarılması veya yeniden yüklenmesi gerekebilir.
+> Onarım veya kaldırma başarısız olursa **InstallCleanup aracını yalnızca** son çözüm olarak kullanın. Bu araç, özellikleri diğer Visual Studio yüklemelerinden veya diğer ürünlerden kaldırarak onarılması veya yeniden yüklenmesi gerekebilir.
 
-## <a name="run-installcleanupexe"></a>InstallCleanup.exe Çalıştır
+## <a name="run-installcleanupexe"></a>Çalıştırma InstallCleanup.exe
 
-Araçla aşağıdaki komut satırı anahtarlarından birini kullanabilirsiniz `InstallCleanup.exe` :
+Araçla aşağıdaki komut satırı anahtarlardan birini `InstallCleanup.exe` kullanabilirsiniz:
 
 | Anahtar | Davranış |
 |-----------------|--------------------|
-|  `-i [version]`   | Başka bir anahtar geçirilmezse bu anahtar varsayılandır. Yalnızca ana yükleme dizinini ve ürün bilgilerini kaldırır. aracı çalıştırdıktan sonra aynı Visual Studio sürümünü yeniden yüklemek istiyorsanız bu anahtarı kullanın `InstallCleanup.exe` . Bir `[version]` değer belirtilmişse, yalnızca bu dize değeriyle başlayan bir sürümü olan ürünler kaldırılır. |
-|   `-f`           | bu anahtar, ana yükleme dizinini, ürün bilgilerini ve yükleme dizini dışında yüklenen diğer birçok özelliği kaldırır, diğer Visual Studio yüklemeleri veya diğer ürünlerle de paylaşılabilir. daha sonra yeniden yüklemeden Visual Studio kaldırmak istiyorsanız bu anahtarı kullanın. |
+|  `-i [version]`   | Bu anahtar, başka bir anahtar geçirilamazsa varsayılan değerdir. Yalnızca ana yükleme dizinini ve ürün bilgilerini kaldırır. Aracı çalıştırdikten sonra aynı sürümü yeniden yüklemek Visual Studio bu anahtarı `InstallCleanup.exe` kullanın. Bir değer `[version]` belirtilirse, yalnızca bu dize değeriyle başlangıç sürümüne sahip ürünler kaldırılır. |
+|   `-f`           | Bu anahtar ana yükleme dizinini, ürün bilgilerini ve yükleme dizininin dışında yüklü olan ve diğer yüklemeler veya diğer ürünlerle Visual Studio diğer özellikleri kaldırır. Daha sonra yeniden yüklemeden bu anahtarı Visual Studio bu anahtarı kullanın. |
 
-Aracın nasıl çalıştırılacağı aşağıda verilmiştir `InstallCleanup.exe` :
+Aracı şu şekilde `InstallCleanup.exe` çalıştırabilirsiniz:
 
 1. Visual Studio Yükleyicisi’ni kapatın.
-1. Bir yönetici komut istemi açın. Bir yönetici komut istemi açmak için şu adımları izleyin:
+1. Yönetici komut istemini açın. Yönetici komut istemini açmak için şu adımları izleyin:
    * "Aramak için buraya yazın" kutusuna **cmd** yazın.
-   * **Komut istemi**' ne sağ tıklayın ve ardından **yönetici olarak çalıştır**' ı seçin.
-1. Aracın tam yolunu girin `InstallCleanup.exe` ve tercih ettiğiniz komut satırı anahtarını ekleyin. Varsayılan olarak, aracın yolu aşağıdaki gibidir. Çift tırnak işaretleri, boşluk içeren bir komutu kapsar:
+   * Komut **İstemi'ne sağ tıklayın** ve ardından Yönetici olarak **çalıştır'ı seçin.**
+1. Aracın tam yolunu `InstallCleanup.exe` girin ve istediğiniz komut satırı anahtarını ekleyin. Varsayılan olarak, aracın yolu aşağıdaki gibidir. Çift tırnak, boşluk içeren bir komutu içerir:
 
    ```shell
    "C:\Program Files (x86)\Microsoft Visual Studio\Installer\InstallCleanup.exe"
    ```
 
    > [!NOTE]
-   > `InstallCleanup.exe`her zaman içinde bulunan Visual Studio Yükleyicisi dizin altında bulamazsanız `%ProgramFiles(x86)%\Microsoft Visual Studio` , daha sonra yapmanız gerekenler aşağıda verilmiştir. [Visual Studio yüklemek](install-visual-studio.md)için yönergeleri izleyin. Sonra, iş yükü seçim ekranı görüntülendiğinde, pencereyi kapatın ve bu sayfadaki adımları yeniden izleyin.
+   > Her zaman dizininde bulunan Visual Studio Yükleyicisi dizininde `InstallCleanup.exe` bulamazsanız, `%ProgramFiles(x86)%\Microsoft Visual Studio` bundan sonra yapacaklar şu şekildedir. 'i yüklemek için [yönergeleri Visual Studio.](install-visual-studio.md) Ardından iş yükü seçim ekranı görüntülendiğinde pencereyi kapatın ve bu sayfada yer alan adımları tekrar izleyin.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

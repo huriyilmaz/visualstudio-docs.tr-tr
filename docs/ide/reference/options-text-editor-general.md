@@ -2,7 +2,7 @@
 title: Seçenekler, Metin Düzenleyici, Genel
 description: Kod ve metin düzenleyicisi için genel ayarları değiştirmek üzere Genel Visual Studio kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 01/18/2019
+ms.date: 11/12/2021
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor
@@ -37,22 +37,50 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cfd0ef18f85511d23825468f1b208c34bc7e209
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: dbeffd70a4a11ed8e89388a3e558f14c2a54247c
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126724894"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132453480"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>Seçenekler iletişim kutusu: Metin Düzenleyici \> Genel
 
-Bu iletişim kutusu, uygulama kodunun ve metin düzenleyicisinin Visual Studio ayarlarını değiştirmenizi sağlar. Bu iletişim kutusunu görüntülemek için Araçlar **menüsünde** **Seçenekler'i** seçin, Metin Düzenleyici **klasörünü** genişletin ve ardından Genel'i **seçin.**
+Bu iletişim kutusu, uygulama kodunun ve metin düzenleyicisinin Visual Studio ayarlarını değiştirmenizi sağlar. Bu iletişim kutusunu görüntülemek için Araçlar **menüsünde Seçenekler'i** seçin, Metin Düzenleyici **klasörünü** genişletin ve ardından Genel'i **seçin.** 
+
+::: moniker range="vs-2022"
+
+:::image type="content" source="media/vs-2022/tools-options-text-editor-general.png" alt-text="Seçenekler iletişim kutusundaki metin düzenleyicisinin genel ayarlarının ekran görüntüsü.":::
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+:::image type="content" source="media/vs-2019/tools-options-text-editor-general.png" alt-text="Seçenekler iletişim kutusundaki metin düzenleyicisinin genel ayarlarının ekran görüntüsü.":::
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+:::image type="content" source="media/tools-options-text-editor-general.png" alt-text="Seçenekler iletişim kutusundaki metin düzenleyicisinin genel ayarlarının ekran görüntüsü.":::
+
+::: moniker-end
 
 ## <a name="settings"></a>Ayarlar
 
+Araçlar Ayarlar Düzenleyicisi   >  **Genel'in**  >  **Aşağıdaki Seçenekler**  >  **bölümünde** aşağıdaki seçenekler yer almaktadır.
+
 ### <a name="drag-and-drop-text-editing"></a>Metin düzenlemeyi sürükleyip bırakma
 
-Seçildiğinde, metni seçerek ve fareyle geçerli belge içinde başka bir konuma veya başka bir açık belgeye sürükleyerek taşımayı sağlar.
+Bu ayar seçildiğinde, metni seçerek ve fareyle geçerli belge içindeki başka bir konuma veya başka bir açık belgeye sürükleyerek taşımayı sağlar.
+
+::: moniker range="vs-2022"
+
+### <a name="select-subword-on-double-click"></a>Çift tıklamada alt sözcük seçme
+
+Bu ayarı değiştirerek çift tıklarsanız, tam sözcük yerine yalnızca bir alt sözcük seçer. (Örnek olarak camelCase metni kullanırken bu yararlı olabilir.)
+
+::: moniker-end
 
 ### <a name="automatic-delimiter-highlighting"></a>Otomatik sınırlayıcı vurgulama
 
@@ -64,23 +92,35 @@ Kod düzenleyicisi seçildiğinde, dosya en son kaydedildikten sonra değiştiri
 
 ### <a name="auto-detect-utf-8-encoding-without-signature"></a>İmza olmadan UTF-8 kodlamasını otomatik algılama
 
-Düzenleyici varsayılan olarak, bayt sırası işaretlerini veya karakter kümesi etiketlerini arayarak kodlamayı algılar. Geçerli belgede hiçbiri bulunamasa, kod düzenleyicisi byte dizilerini taraarak UTF-8 kodlamasını otomatik olarak algılamaya çalışır. Kodlamanın otomatik algılamasını devre dışı bırakmak için bu seçeneğin temizlemesini seçin.
+Düzenleyici varsayılan olarak, bayt sırası işaretlerini veya karakter kümesi etiketlerini arayarak kodlamayı algılar. Geçerli belgede hiçbiri bulunamasa, kod düzenleyicisi byte dizilerini taraarak UTF-8 kodlamasını otomatik olarak algılamaya çalışır. Kodlamanın otomatik algılamasını devre dışı bırakmak için bu seçeneğin temizlerini kullanın.
 
 ### <a name="follow-project-coding-conventions"></a>Proje kodlama kurallarına uyma
 
-Bu seçildiğinde, projenin belirtilen kodlama kuralları, kişisel projeleriniz üzerinde kullanmakta olduğunu tüm kodlama kuralları geçersiz kılar.
+Bu seçildiğinde, projenin belirtilen kodlama kuralları, kişisel projeleriniz üzerinde kullanabileceğiniz kodlama kurallarına geçersiz kılar.
 
 ### <a name="enable-mouse-click-to-perform-go-to-definition"></a>Tanıma Git gerçekleştirmek için fare tıklamayı etkinleştirme
 
 Seçildiğinde, Ctrl tuşuna **basarak** fareye tıklarken bir öğenin üzerine gelin. Bunu yapmak sizi seçili öğenin tanımına alır. Değiştirici tuş kullan açılan **menüsünden Alt** veya **Ctrl**  +  **Alt** **tuşlarını da** seçebilirsiniz.
 
-Öğenin **tanımını kod düzenleyicisinde** geçerli konumunuzdan uzak kalmadan bir pencerede görüntülemek için Tanımı göz atma görünümünde aç onay kutusunu seçin.
+#### <a name="open-definition-in-peek-view"></a>Tanıma göz atma görünümünde açma
+
+Öğenin tanımını kod düzenleyicisinde geçerli konumunuzdan uzak kalmadan bir pencerede görüntülemek için bu onay kutusunu seçin. Daha fazla bilgi için, [bkz. How to: View and edit code by using Peek Definition](../how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md).
 
 ## <a name="display"></a>Göster
 
+Araçlar **Seçeneği'nin Metin**  >  > **Genel'in**  >  **Görüntüleme bölümünde** aşağıdaki seçenekler yer almaktadır.
+
+::: moniker range=">=vs-2019"
+
+### <a name="view-whitespace"></a>Boşluğu görüntüleme
+
+Seçildiğinde, boşlukları ve sekmeleri görselleştirebilirsiniz.
+
+::: moniker-end
+
 ### <a name="selection-margin"></a>Seçim kenar boşluğu
 
-Seçildiğinde, düzenleyicinin metin alanı sol kenarı boyunca dikey kenar boşluğu görüntüler. Bir metin satırın tamamını seçmek için bu kenar boşluğuna tıklar veya tıklar ve sürükleyerek ardışık metin satırları seçersiniz.
+Seçildiğinde, düzenleyicinin metin alanı sol kenarı boyunca dikey bir kenar boşluğu görüntüler. Bir metin satırın tamamını seçmek için bu kenar boşluğuna tıklar veya tıklar ve sürükleyerek ardışık metin satırları seçersiniz.
 
 |Seçim Kenar Boşluğu açık|Seçim Kenar Boşluğu kapalı|
 | - | - |
@@ -96,11 +136,33 @@ Seçildiğinde, imlecin bulunduğu kod çizgisinin etrafında gri bir kutu gör�
 
 ### <a name="show-structure-guide-lines"></a>Yapı kılavuz çizgilerini göster
 
-Seçildiğinde düzenleyicide dikey çizgiler, tek tek kod bloklarını kolayca tanımlamanıza olanak sağlayan yapılandırılmış kod blokları ile birlikte görünür.
+Seçildiğinde düzenleyicide, tek tek kod bloklarını kolayca tanımlamanıza olanak sağlayan yapılandırılmış kod blokları ile birlikte dikey çizgiler görünür.
+
+::: moniker range=">=vs-2019"
+
+### <a name="show-error-squiggles"></a>Hata geçişlerini göster
+
+Seçildiğinde, dalgalı çizgiler olarak bilinen farklı renkli dalgalı alt çizgiler kodunda görünür. (Kırmızı geçişler söz dizimi hatalarını, mavi derleyici hatalarını, yeşil uyarıları ve mor da diğer hata türlerini gösterir.)
 
 ### <a name="show-file-health-indicator"></a>Dosya durumu göstergesini göster
 
-Seçildiğinde, düzenleyicinin sol alt köşesinde kod temizleme seçenekleriyle birlikte bir dosya durumu gösterge durumu (hatalar, uyarılar) çubuğu görüntülenir.
+Seçildiğinde, düzenleyicinin sol alt köşesinde kod temizleme seçeneklerine sahip bir dosya durumu gösterge durumu (hatalar, uyarılar) çubuğu görüntülenir.
+
+### <a name="line-spacing"></a>Satır aralığı
+
+1,0 olan varsayılan satır aralığını istediğiniz artışla değiştirmek için bu denetimi kullanarak 1,15, 1,5, 2,0, 2,5 ve 3,0 değerini dahil edin.
+
+### <a name="show-editing-context-in-the-editor"></a>Düzenleme bağlamını düzenleyicide gösterme
+
+Bağlam ayarlarını düzenlemeyi tamamen değiştirmek veya aşağıdaki ayarlardan birini seçerek tercihinizi kişiselleştirmek için bu denetimi kullanın:
+
+- Çizgi/Sütun
+- Seçim
+- Ekle/Üzerine Yaz
+- Sekme/Boşluk
+- Satır bitişleri
+
+::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

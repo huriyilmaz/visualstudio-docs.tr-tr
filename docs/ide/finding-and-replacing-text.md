@@ -2,7 +2,7 @@
 title: Metin bul ve Değiştir ve çok şapka seçimi
 description: Bul ve Değiştir özelliği ve bir düzenin örneklerini bulmak ve değiştirmek için nasıl kullanılacağı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 11/19/2020
+ms.date: 11/15/2021
 ms.topic: conceptual
 f1_keywords:
 - vs.find
@@ -33,12 +33,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 796ccada43eed1363b80422eab03e6237a8893e1
-ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
+ms.openlocfilehash: 5abfbcc906cd64e63bce545bb71167439dc69d9f
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129431165"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132453221"
 ---
 # <a name="find-and-replace-text"></a>Metin bulma ve değiştirme
 
@@ -102,9 +102,36 @@ Arama **yeri** kutusunun yanındaki **özel bileşen kümesini Düzenle** düğm
 > [!NOTE]
 > bu bölüm Windows Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [blok seçimi](/visualstudio/mac/block-selection).
 
+::: moniker range="vs-2017"
+
 **Visual Studio 2017 sürüm 15,8 ' de kullanıma sunuldu**
 
+::: moniker-end
+
 Aynı düzenlemeyi aynı anda iki veya daha fazla yerde yapmak için *Çoklu giriş işareti seçimini* kullanın. Örneğin, aynı metni ekleyebilir veya aynı anda birden fazla konumda varolan metni değiştirebilirsiniz.
+
+::: moniker range="vs-2022"
+
+Visual Studio 2022 ' de, çoklu giriş işareti kopyalama ve yapıştırma deneyimini geliştirdik. Daha önce, birden çok satırı birden çok çizgiye yapıştırmak, her bir şapka durumunda tüm panonun yinelenmesiyle sonuçlandı. Şimdi, birden fazla satırı aynı sepetlere yapıştırmak her satırı ilgili bir giriş işaretine ekleyecektir.
+
+Çoklu giriş işaretini kullanmak için, **alt** + **SHIFT** + **fare tıklaması** veya **alt** + **SHIFT** tuşuna basın + **.** ardından  +  + seçimleri genişletmek için CTRL SHIFT **ok tuşunu** kullanın. Sonra,  + metni birden çok seçimlerde kopyalamak için CTRL **C** tuşuna basın.  +  + Her satır için istediğiniz yere yapıştırmak üzere birden çok Evcil hayvan oluşturmak için alt Shift **fare tıklamasını** kullanın. Son olarak, **CTRL** + **V** tuşlarına basarak her satırı kendi giriş işaretine yapıştırın.
+
+:::image type="content" source="media/vs-2022/multi-caret-copy-paste.gif" alt-text="Visual Studio içindeki çoklu giriş işareti seçim eyleminin animasyonu.":::
+
+:::image-end:::
+
+Ayrıca, **alt** + **Shift** + **yukarı ok tuşunu** (veya **aşağı ok tuşunu**) veya **alt** + **SHIFT tuşuna basarak** +  birden çok Evcil hayvan seçebilirsiniz. Daha önce bu hareketler bir kutu seçimi oluşturdu. Şimdi, bir kutu seçimi birden çok kutucuya dönüştürülüyor. Bu yöntem, tek tek evcil hayvan eklemek için kesin konumlara tıklamaktan daha kolay ve hızlıdır.
+
+> [!TIP]
+> **Alt** SHIFT ok tuşlarıyla bir kutu seçimi kullanmaya devam etmek isterseniz +  +  ve  +  + bir çoklu giriş işaretini genişlettiğinizde, alt SHIFT **fare sürükleme** ' a gidin, **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **Gelişmiş** ' e gidin ve **kutu seçimini kullan**' ı seçin.
+
+Çoklu şapka seçimine,  > **birden çok Evcil hayvan** 'yi Düzenle ' yi seçip istediğiniz eylemi seçerek de erişebilirsiniz.
+
+:::image type="content" source="media/vs-2022/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio 2022 ' deki çoklu evcil hayvan açılan menüsünün ekran görüntüsü.":::
+
+::: moniker-end
+
+::: moniker range="<=vs-2019"
 
 Aşağıdaki ekran görüntüsünde, `-0000` üç konumda seçilidir; Kullanıcı **Sil**' i basarsa, üç seçim de silinir:
 
@@ -131,12 +158,14 @@ Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tık
 |**Alt** + tıklama|Kutu seçimi Ekle|
 |**ESC** veya tıklama|Tüm Seçimleri Temizle|
 
-Bazı komutlardan biri de **düzenleme** menüsünde, **birden çok sepetin** altında bulunur:
+Komutlardan bazıları Düzenle menüsünde, Birden **Çok** **Carets altında da kullanılabilir:**
 
-:::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio içindeki çoklu Evcil hayvan açılan menüsünün ekran görüntüsü":::
+:::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio'daki Birden Çok Carets açılır menüsünün ekran Visual Studio":::
+
+::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio içindeki normal ifadeleri kullanma](../ide/using-regular-expressions-in-visual-studio.md)
-- [Visual Studio kodu yeniden düzenleme](../ide/refactoring-in-visual-studio.md)
-- [seçimi engelle (Mac için Visual Studio)](/visualstudio/mac/block-selection)
+- [Normal ifadeleri Visual Studio](../ide/using-regular-expressions-in-visual-studio.md)
+- [Kodda yeniden düzenleme Visual Studio](../ide/refactoring-in-visual-studio.md)
+- [Seçimi engelle (Mac için Visual Studio)](/visualstudio/mac/block-selection)

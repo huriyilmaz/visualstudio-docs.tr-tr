@@ -1,6 +1,6 @@
 ---
 title: Ağ tabanlı bir yüklemeyi güncelleştirme
-description: --layout komutunu kullanarak ağ tabanlı Visual Studio güncelleştirmeyi öğrenin
+description: --layout komutunu kullanarak ağ tabanlı bir Visual Studio güncelleştirmeyi öğrenin
 ms.date: 05/26/2021
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,21 +14,21 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: bf6a4957d09c797a80aff746456b2288a3187967
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 2ee79274c6203f0de7217dbe058edb0b62a78a88
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129970873"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132453808"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme
 
-Visual Studio'nin ağ yükleme düzenini en son ürün güncelleştirmeleriyle güncelleştirebilirsiniz; böylece hem Visual Studio'nin en son güncelleştirmesi için bir yükleme noktası olarak hem de istemci iş istasyonlarına dağıtılmış olan yüklemeleri korumak için kullanılabilir.
+Visual Studio'nin ağ yükleme düzenini en son ürün güncelleştirmeleriyle güncelleştirebilirsiniz; böylece hem Visual Studio'nin en son güncelleştirmesi için bir yükleme noktası olarak hem de istemci iş istasyonlarına dağıtılmış olan yüklemelerin bakımını yapmak için kullanılabilir.
 
 ## <a name="how-to-update-a-network-layout"></a>Ağ düzenini güncelleştirme
 
 > [!IMPORTANT]
-> Bu yönergelerde, daha önce bir ağ yükleme düzeni oluşturduğunuz ve istemcinin güncelleştirmeleri nasıl aldıracakları hakkında bazı kararlar alasınız. Bunun nasıl olduğu hakkında daha fazla bilgi için Ağ yüklemesi oluşturma [Visual Studio](create-a-network-installation-of-visual-studio.md) dağıtımları için [güncelleştirmeleri Visual Studio sayfasına](../install/controlling-updates-to-visual-studio-deployments.md) bakın.
+> Bu yönergeler, daha önce bir ağ yükleme düzeni oluşturduğunuz ve istemcinin güncelleştirmeleri nasıl aldırması gerektiğinin bazı kararlarını aldığı varsayılan bir uygulamadır. Bunun nasıl olduğu hakkında daha fazla bilgi için Ağ yüklemesi oluşturma [ve Visual Studio](create-a-network-installation-of-visual-studio.md) dağıtımları için [güncelleştirmeleri Visual Studio sayfasına](../install/controlling-updates-to-visual-studio-deployments.md) bakın.
 
 Ağ yükleme paylaşımınızı en son güncelleştirmeleri içeren şekilde yenilemek için, güncelleştirilmiş paketleri indirmek için parametresini `--layout` kullanarak önyükleyiciyi çalıştırın.
 
@@ -77,7 +77,7 @@ Bir dosya paylaşımında düzen barındırırsanız, düzenin özel bir kopyas�
 
 Ağ ortamının nasıl yapılandırıldığına bağlı olarak, bir güncelleştirme bir kuruluş yöneticisi tarafından dağıtılabilir veya bir istemci makineden başlatılabilir.
 
-* Kullanıcılar, çevrimdışı Visual Studio bir yükleme klasöründen yüklenmiş bir uygulama örneğini güncelleştirebilirsiniz:
+* Kullanıcılar çevrimdışı bir Visual Studio klasöründen yüklenmiş bir örnek örneğini güncelleştirebilirsiniz:
   * Aşağıdaki Visual Studio Yükleyicisi.
   * Ardından **Güncelleştir'e tıklayın.**
 
@@ -109,7 +109,7 @@ Ağ ortamının nasıl yapılandırıldığına bağlı olarak, bir güncelleşt
 > İstemci [vswhere.exe var](tools-for-managing-visual-studio-instances.md) olan bir istemci örneğinin yükleme yolunu belirlemek için Visual Studio komutunu kullanın.
 >
 > [!TIP]
-> Güncelleştirme bildirimlerinin kullanıcılara ne zaman sun alınarak kontrol edilecekleri hakkında ayrıntılı bilgi için bkz. Ağ tabanlı [güncelleştirmeler ve dağıtımlar için Visual Studio denetleme.](controlling-updates-to-visual-studio-deployments.md)
+> Güncelleştirme bildirimlerinin kullanıcılara ne zaman sun alınarak kontrol edilecekleri hakkında ayrıntılı bilgi için bkz. Ağ tabanlı [güncelleştirmeler ve dağıtımlar Visual Studio denetleme.](controlling-updates-to-visual-studio-deployments.md)
 
 ## <a name="verify-a-layout"></a>Düzeni doğrulama
 
@@ -131,7 +131,7 @@ Microsoft, güncelleştirmeleri Visual Studio düzenli aralıklarla yayına ilet
 
 ## <a name="fix-a-layout"></a>Düzeni düzeltme
 
-ile `--fix` aynı doğrulamayı gerçekleştirmek ve `--verify` ayrıca tanımlanan sorunları düzeltmeyi denemek için kullanın. İşlem için bir İnternet bağlantısı olması gerekir, bu nedenle çağırmadan `--fix` önce makinenizin İnternet'e bağlı olduğundan emin `--fix` olun.
+ile `--fix` aynı doğrulamayı gerçekleştirmek için `--verify` kullanın ve ayrıca tanımlanan sorunları düzeltmeyi deneyin. İşlem için bir İnternet bağlantısı olması gerekir, bu nedenle çağırmadan `--fix` önce makinenizin İnternet'e bağlı olduğundan emin `--fix` olun.
 
 ```shell
 vs_enterprise.exe --layout <layoutDir> --fix
@@ -179,5 +179,5 @@ Başka destek seçenekleri de mevcuttur. Geliştirici [hesabımıza Community.](
 * [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
 * [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 * [Visual Studio örneklerini algılamaya ve yönetmeye yönelik araçlar](tools-for-managing-visual-studio-instances.md)
-* [ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
-* [ürün yaşam döngüsü ve bakım Visual Studio](/visualstudio/releases/2019/servicing/)
+* [Ağ tabanlı dağıtımlarda güncelleştirmeleri Visual Studio denetleme](controlling-updates-to-visual-studio-deployments.md)
+* [Visual Studio yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)

@@ -2,7 +2,7 @@
 title: C# proje özelliklerinin uygulama sayfası
 description: projenin uygulama ayarlarını ve özelliklerini belirtmek için C# Project tasarımcısı 'nın uygulama sayfasını nasıl kullanacağınızı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 10/30/2018
+ms.date: 11/12/2021
 ms.topic: reference
 f1_keywords:
 - cs.ProjectPropertiesApplicationWPF
@@ -16,12 +16,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: e32aec81f3d931c52426d04c2592b38a4ffe6865
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 66b882c90343910836295923e7ec5efd73f67eeb
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122062361"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132454041"
 ---
 # <a name="application-page-project-designer-c"></a>Uygulama Sayfası, Proje Tasarımcısı (C#)
 
@@ -59,7 +59,17 @@ Uygulamanın hedeflediği .NET sürümünü belirtir. Bu seçenek, bilgisayarın
 
 .NET Core 'u hedefleyen bir proje için, kullanılabilir sürümler şu şekilde görünebilir:
 
+::: moniker range="vs-2022"
+
+:::image type="content" source="../media/vs-2022/application-target-framework.png" alt-text="Visual Studio 2022 ' de .net Core projesi için hedef framework sürümlerinin ekran görüntüsü.":::
+
+::: moniker-end
+
+::: moniker range="<=vs-2019"
+
 ![.NET Core projesi için hedef çerçeve sürümleri](../media/application-target-framework.png)
+
+::: moniker-end
 
 > [!NOTE]
 > [Önkoşullar Iletişim kutusunda](../../ide/reference/prerequisites-dialog-box.md) listelenen önkoşul paketleri, iletişim kutusunu ilk açışınızda otomatik olarak ayarlanır. Projenin hedef çerçevesini daha sonra değiştirirseniz, yeni hedef Framework 'ü eşleştirmek için önkoşulları el ile seçmeniz gerekir.
@@ -127,3 +137,7 @@ Proje için bir kaynak dosyası sağlıyorsanız bu radyo düğmesini seçin. Bu
 Bir yol adı girin veya projeye bir Win32 kaynak dosyası eklemek için (**...**) düğmesini kullanın.
 
 Daha fazla bilgi için bkz. [.NET uygulamaları için kaynak dosyaları oluşturma](/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+[Project özellikleri kullanıcı arabirimini yeniden oluşturma](https://devblogs.microsoft.com/visualstudio/revamped-project-properties-ui/)

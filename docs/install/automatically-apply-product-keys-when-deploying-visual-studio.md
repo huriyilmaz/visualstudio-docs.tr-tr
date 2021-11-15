@@ -11,12 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: c296bc417fb29f85f149868ff1cb0c2ad32d6f12
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 3f3930744ad99f301660ddb8e395fa61f4ea79fd
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129969495"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132453431"
 ---
 # <a name="automatically-apply-product-keys-when-deploying-visual-studio"></a>Visual Studio’yu dağıtırken ürün anahtarlarını otomatik olarak uygulama
 
@@ -95,7 +95,7 @@ aşağıdaki örnek, mpc/09260, ürün anahtarı `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEE
 
  Aşağıdaki tabloda her bir Visual Studio sürümü için MPC kodları listelenmektedir:
 
-| Visual Studio Edition                | MPC   |
+| Visual Studio sürümü                | MPC   |
 |--------------------------------------|-------|
 | Visual Studio Enterprise 2017        | 08860 |
 | Visual Studio Professional 2017      | 08862 |
@@ -105,7 +105,7 @@ aşağıdaki örnek, mpc/09260, ürün anahtarı `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEE
 
 ::: moniker range="vs-2019"
 
-| Visual Studio Edition                | MPC   |
+| Visual Studio sürümü                | MPC   |
 |--------------------------------------|-------|
 | Visual Studio Enterprise 2019        | 09260 |
 | Visual Studio Professional 2019      | 09262 |

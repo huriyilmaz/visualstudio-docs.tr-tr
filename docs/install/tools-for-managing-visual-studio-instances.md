@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2865d117d3379f0d07b8bb6fb4c7631e51059b70
-ms.sourcegitcommit: 8fae163333e22a673fd119e1d2da8a1ebfe0e51a
+ms.openlocfilehash: 7aa673805e437ec36e06944bc66178177c4a882e
+ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129972316"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "132453795"
 ---
 # <a name="tools-for-detecting-and-managing-visual-studio-instances"></a>Visual Studio örneklerini algılamaya ve yönetmeye yönelik araçlar
 
@@ -30,11 +30,11 @@ ms.locfileid: "129972316"
 
 Aşağıdaki araçlar ve yardımcı programlar, istemci makinelerde yüklü Visual Studio ve yönetmenize yardımcı olur:
 
-* [**vswhere**](https://github.com/microsoft/vswhere): belirli bir makinede Visual Studio veya ayrı dağıtım için kullanılabilir olan, yerleşik olarak bulunan ve tüm Visual Studio bir yürütülebilir dosyadır.
-* [**VSSetup.PowerShell:**](https://github.com/microsoft/vssetup.powershell)Kurulum Yapılandırma API'sini kullanan PowerShell betikleri, uygulamanın yüklü Visual Studio.
+* [**vswhere**](https://github.com/microsoft/vswhere): belirli bir makinede Visual Studio veya ayrı dağıtım için kullanılabilir olan, yerleşik yürütülebilir Visual Studio bir dosyadır.
+* [**VSSetup.PowerShell:**](https://github.com/microsoft/vssetup.powershell)Yüklü uygulama örneklerini tanımlamak için Kurulum Yapılandırma API'sini kullanan PowerShell Visual Studio.
 * [**VS-Setup-Samples:**](https://github.com/microsoft/vs-setup-samples)Mevcut bir yüklemeyi sorgulamak için Kurulum Yapılandırma API'sini kullanmayı gösteren C# ve C++ örnekleri.
 * [**Windows Yönetim Araçları (WMI)**](/windows/win32/wmisdk/wmi-start-page): Visual Studio bilgileri, Visual Studio sınıfı MSFT_VSInstance.
-* Kurulum [**Yapılandırma API'si,**](<xref:Microsoft.VisualStudio.Setup.Configuration>) örnekleri sorgulamak için kendi yardımcı programlarını oluşturmak isteyen geliştiricilere Visual Studio sağlar.
+* Kurulum [**Yapılandırma API'si,**](<xref:Microsoft.VisualStudio.Setup.Configuration>) uygulama örneklerini sorgulamak için kendi yardımcı programlarını oluşturmak isteyen Visual Studio sağlar.
 * [**Microsoft Endpoint Configuration Manager envanteri:**](/mem/configmgr/core/clients/manage/inventory/introduction-to-software-inventory)istemci cihazlardaki örnek Visual Studio bilgi toplamak için kullanılabilir.
 
 ## <a name="using-vswhereexe"></a>vswhere.exe
@@ -47,13 +47,13 @@ C:\Program Files (x86)\Microsoft Visual Studio\Installer> vswhere.exe -legacy -p
 
 ## <a name="using-windows-management-instrumentation-wmi"></a>Windows Yönetim Araçları'nın (WMI) kullanımı
 
-Makinede Visual Studio İstemci Algılayıcısı Yardımcı Programı yüklüyse, WMI kullanarak Visual Studio örnek bilgilerini sorguabilirsiniz. Visual Studio Client Detector Utility varsayılan olarak 12 Mayıs 2020 veya sonrasında yayımlanan tüm Visual Studio 2017, Visual Studio 2019 ve Visual Studio 2022 güncelleştirmeleriyle birlikte yüklenir. Ayrıca, bağımsız olarak [yüklemek Microsoft Update Katalog'da](https://catalog.update.microsoft.com/) da kullanılabilir.  Örnek bilgilerini geri almak için yardımcı programını kullanma Visual Studio, PowerShell'i istemci makinede yönetici olarak açın ve aşağıdaki komutu yazın:
+Makinede Visual Studio İstemci Algılayıcısı Yardımcı Programı yüklüyse, WMI kullanarak Visual Studio örnek bilgilerini sorguabilirsiniz. Visual Studio İstemci Algılayıcısı Yardımcı Programı, 12 Mayıs 2020 veya sonrasında yayımlanan tüm Visual Studio 2017, Visual Studio 2019 ve Visual Studio 2022 güncelleştirmeleriyle varsayılan olarak yüklenir. Ayrıca, bağımsız olarak [yüklemek Microsoft Update Katalog'da](https://catalog.update.microsoft.com/) da kullanılabilir.  Örnek bilgilerini geri almak için yardımcı programını kullanma Visual Studio, PowerShell'i istemci makinede yönetici olarak açın ve aşağıdaki komutu yazın:
 
 ```shell
 Get-CimInstance MSFT_VSInstance
 ```
 
-## <a name="using-microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager kullanma
+## <a name="using-microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager
 
 [Microsoft Endpoint Configuration Manager envanteri özellikleri,](/mem/configmgr/core/clients/manage/inventory/introduction-to-software-inventory) istemci cihazlardaki örnek örnekleri hakkında Visual Studio ve toplamak için kullanılabilir. Örneğin, aşağıdaki sorgu tüm yüklü Visual Studio 2017 ve 2019 örnekleri için görünen adı, sürümü ve Visual Studio adını verir:
 
@@ -70,7 +70,7 @@ select distinct SMS_G_System_COMPUTER_SYSTEM.Name, SMS_G_System_ADD_REMOVE_PROGR
 
 ## <a name="editing-the-registry-for-a-visual-studio-instance"></a>Bir örnek için kayıt Visual Studio düzenleme
 
-Bu Visual Studio kayıt defteri ayarları, aynı makinede aynı sürümün birden çok yan yana örneğini sağlayan Visual Studio bir konumda depolanır.
+Bu Visual Studio kayıt defteri ayarları, aynı makinede aynı sürümün birden çok yan yana örneğini sağlayan özel Visual Studio depolanır.
 
 Bu girişler genel kayıt defterinde depolanmaz, kayıt defteri ayarlarında değişiklik yapmak için Kayıt Defteri Düzenleyicisi'ni kullanmaya ilişkin özel yönergeler vardır:
 
@@ -80,7 +80,7 @@ Bu girişler genel kayıt defterinde depolanmaz, kayıt defteri ayarlarında de�
 
 1. Düğümü `HKEY_LOCAL_MACHINE` seçin.
 
-1. Regedit ana menüsünden Dosya **Yükleme**  >  **Kovanı...** öğesini ve ardından **AppData\Local** klasöründe depolanan özel kayıt defteri dosyasını seçin. Örneğin:
+1. Regedit ana menüsünden Dosya **Yükleme**  >  **Kovanı...** öğesini ve ardından **AppData\Local** klasöründe depolanan özel kayıt defteri dosyasını seçin. Örnek:
 
    ```shell
    %localappdata%\Microsoft\VisualStudio\<config>\privateregistry.bin
