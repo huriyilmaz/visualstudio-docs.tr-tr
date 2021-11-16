@@ -1,8 +1,9 @@
 ---
-title: Multi-Factor Authentication gerektiren hesapları kullanma
+title: Visual Studio oturum açma bilgileriyle çok faktörlü kimlik doğrulaması
+titleSuffix: ''
 ms.date: 05/27/2020
 ms.custom: SEO-VS-2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Visual Studio multi-factor authentication gerektiren hesaplarla nasıl kullanacağınızı öğrenin.
 author: anandmeg
 ms.author: meghaanand
@@ -11,14 +12,14 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 2788894a98dd0433fcc191a37665dd1df0333c3e
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 9f67ee7b1c9237dd056a29abd2097d9b13eeeee7
+ms.sourcegitcommit: bfae1f88c278835e26f3200cfced769be3191fc4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128432659"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132535119"
 ---
-# <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>multi-factor authentication gerektiren hesaplarla Visual Studio kullanma
+# <a name="use-visual-studio-with-accounts-that-require-multi-factor-authentication-mfa"></a>multi-factor authentication (MFA) gerektiren hesaplarla Visual Studio kullanma
 
 Dış Konuk kullanıcılarıyla işbirliği yaparken, **çok faktörlü kimlik doğrulaması (MFA)** gibi **koşullu erişim (CA)** ilkeleriyle uygulamalarınızı ve verilerinizi korumak iyi bir fikirdir.  
 

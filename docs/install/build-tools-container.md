@@ -1,7 +1,7 @@
 ---
-title: Kapsayıcıya Visual Studio Derleme Araçları yükleme
+title: Visual Studio Derleme Araçları bir kapsayıcıya yükler
 titleSuffix: ''
-description: Sürekli tümleştirme ve sürekli Visual Studio Derleme Araçları (CI/CD) iş akışlarını desteklemek için Windows kapsayıcıya yükleme hakkında bilgi alın.
+description: sürekli tümleştirme ve sürekli teslim (cı/CD) iş akışlarını desteklemek için Visual Studio Derleme Araçları bir Windows kapsayıcısına yüklemeyi öğrenin.
 ms.date: 06/09/2021
 ms.topic: conceptual
 author: anandmeg
@@ -11,49 +11,49 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: d6208ae736b01c13a9666b67fe694743d2421d1e
-ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
+ms.openlocfilehash: 1dc974ec108aac9e93b26dbdf38dd2ba641264f3
+ms.sourcegitcommit: bfae1f88c278835e26f3200cfced769be3191fc4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129430566"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132535080"
 ---
-# <a name="install-build-tools-into-a-container"></a>Kapsayıcıya Derleme Araçları yükleme
+# <a name="install-build-tools-into-a-container"></a>Derleme araçlarını bir kapsayıcıya yükler
 
-Sürekli tümleştirme ve Visual Studio Derleme Araçları (CI/CD) iş akışlarını desteklemek için bir Windows kapsayıcıya uygulama yükleyebilirsiniz. Bu makalede, hangi Docker yapılandırma değişikliklerinin gerekli olduğu ve bir kapsayıcıya yükleyebilirsiniz iş [yüklerinin](workload-component-id-vs-build-tools.md) ve bileşenlerin yanı sıra size yol gösterir.
+sürekli tümleştirme ve sürekli teslim (cı/CD) iş akışlarını desteklemek için Visual Studio Derleme Araçları bir Windows kapsayıcısına yükleyebilirsiniz. Bu makalede, Docker yapılandırma değişikliklerinin yanı sıra bir kapsayıcıya yükleyebileceğiniz [iş yüklerini ve bileşenleri](workload-component-id-vs-build-tools.md) de size kılavuzluk eder.
 
-[Kapsayıcılar,](https://www.docker.com/what-container) yalnızca CI/CD sunucusu ortamında değil geliştirme ortamları için de kullanabileceğiniz tutarlı bir derleme sistemini paketleyenin harika bir yoludur. Örneğin, kodunuzu yazmak için Visual Studio veya diğer araçları kullanmaya devam ederken, özelleştirilmiş bir ortam tarafından Visual Studio kapsayıcıya bağlamanız gerekir. CI/CD iş akışınız aynı kapsayıcı görüntüsünü kullanıyorsa kodunuzun tutarlı bir şekilde derlemesi konusunda emin olabilirsiniz. Çalışma zamanı tutarlılığı için kapsayıcıları da kullanabilirsiniz. Bu, bir düzenleme sistemiyle birden çok kapsayıcı kullanan mikro hizmetler için yaygındır; ancak, bu makalenin kapsamının dışındadır.
+[Kapsayıcılar](https://www.docker.com/what-container) , yalnızca bir CI/CD sunucu ortamında değil, ancak geliştirme ortamları için de kullanabileceğiniz tutarlı bir yapı sistemini paketlemenize yönelik harika bir yoldur. örneğin, kodunuzu yazmak için Visual Studio veya diğer araçları kullanmaya devam ederken, kaynak kodunuzu özelleştirilmiş bir ortam tarafından oluşturulacak bir kapsayıcıya bağlayabilirsiniz. CI/CD iş akışınız aynı kapsayıcı görüntüsünü kullanıyorsa, kodunuzun tutarlı bir şekilde derlemeinden emin olabilirsiniz. Kapsayıcıları, bir Orchestration sistemiyle birden çok kapsayıcı kullanan mikro hizmetler için ortak olan çalışma zamanı tutarlılığı için de kullanabilirsiniz; Ancak, bu makalenin kapsamı dışındadır.
 
-Kaynak Visual Studio Derleme Araçları oluşturmak için gerekenler yoksa, aynı adımlar diğer ürün ve ürünler için Visual Studio kullanılabilir. Ancak kapsayıcılar etkileşimli Windows desteklemez, bu nedenle tüm komutların otomatik olması gerekir.
+kaynak kodunuzu derlemek için ihtiyaç duyduğunuz Visual Studio Derleme Araçları yoksa, bu adımlar diğer Visual Studio ürünleri için de kullanılabilir. ancak, Windows kapsayıcıları etkileşimli bir kullanıcı arabirimini desteklemediğine ve tüm komutların otomatik hale gelmelidir.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Docker ile ilgili [bazı bilindikler](https://www.docker.com/what-docker) aşağıda varsayılır. Windows üzerinde Docker çalıştırma hakkında bilgi sahibi değil Windows' da Docker altyapısını yükleme ve [yapılandırma hakkında Windows.](/virtualization/windowscontainers/manage-docker/configure-docker-daemon)
+[Docker](https://www.docker.com/what-docker) ile ilgili bazı benzerlik aşağıdaki gibi kabul edilir. Windows çalışmakta olan docker 'ı zaten bilmiyorsanız, [Windows üzerine docker motorunu yüklemek ve yapılandırmak](/virtualization/windowscontainers/manage-docker/configure-docker-daemon)hakkında bilgi edinin.
 
-Aşağıdaki temel görüntü bir örnektir ve sisteminiz için çalışmayabilirsiniz. Ortamınız [Windows temel görüntüyü belirlemek](/virtualization/windowscontainers/deploy-containers/version-compatibility) için kapsayıcı sürümü uyumluluğunu okuyun.
+Aşağıdaki temel görüntü bir örnektir ve sisteminiz için çalışmayabilir. ortamınız için hangi temel görüntünün kullanılması gerektiğini öğrenmek için [Windows kapsayıcı sürümü uyumluluğunu](/virtualization/windowscontainers/deploy-containers/version-compatibility) okuyun.
 
 ## <a name="create-and-build-the-dockerfile"></a>Dockerfile oluşturma ve derleme
 
-Aşağıdaki örnek Dockerfile dosyasını diskiniz üzerinde yeni bir dosyaya kaydedin. Dosya yalnızca "Dockerfile" olarak adlandırılmışsa varsayılan olarak tanınır.
+Aşağıdaki örnek Dockerfile dosyasını diskinizdeki yeni bir dosyaya kaydedin. Dosya yalnızca "Dockerfile" olarak adlandırılmışsa varsayılan olarak tanınır.
 
 > [!WARNING]
-> Bu örnek Dockerfile, kapsayıcılara yüklen Windows daha önceki tüm SDK'ları dışlar. Önceki sürümler derleme komutunun başarısız olmasına neden olur.
+> bu örnek dockerfile yalnızca kapsayıcılara yüklenemez olan sdk 'ların Windows hariç tutar. Önceki sürümler derleme komutunun başarısız olmasına neden olur.
 
 1. Bir komut istemi açın.
 
-1. Yeni dizin oluşturma (önerilir):
+1. Yeni dizin oluştur (önerilir):
 
    ```shell
    mkdir C:\BuildTools
    ```
 
-1. Dizinleri şu yeni dizinle değiştir:
+1. Dizinleri bu yeni dizine Değiştir:
 
    ```shell
    cd C:\BuildTools
    ```
 
-1. Aşağıdaki içeriği C:\BuildTools\Dockerfile dizinine kaydedin.
+1. Aşağıdaki içeriği C:\buildtools\dockerfiledizinine kaydedin.
  
    ::: moniker range="vs-2017"
 
@@ -89,15 +89,15 @@ Aşağıdaki örnek Dockerfile dosyasını diskiniz üzerinde yeni bir dosyaya k
    ```
 
    > [!TIP]
-   > İş yüklerinin ve bileşenlerin listesi için bkz. [Visual Studio Derleme Araçları dizini.](workload-component-id-vs-build-tools.md)
+   > iş yükleri ve bileşenlerin listesi için [Visual Studio Derleme Araçları bileşen dizinine](workload-component-id-vs-build-tools.md)bakın.
    >
 
    > [!WARNING]
-   > Görüntülerinizi doğrudan microsoft/windowsservercore veya mcr.microsoft.com/windows/servercore temel alırsanız (bkz. [Microsoft syndicates kapsayıcı](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)kataloğu), .NET Framework düzgün yüklenmeyebilir ve yükleme hatası belirtemeyebilir. Yükleme tamamlandıktan sonra yönetilen kod çalıştırılamayabilirsiniz. Bunun yerine görüntülerinizi [microsoft/dotnet-framework:4.7.2 veya sonraki bir sürümü](https://hub.docker.com/r/microsoft/dotnet-framework) temel edin. Ayrıca, sürüm 4.7.2 veya sonraki sürümlerde etiketlenen görüntülerin varsayılan olarak PowerShell kullanabileceğini ve yönergelerinin başarısız olmasına `SHELL` `RUN` neden olabileceğini `ENTRYPOINT` unutmayın.
+   > görüntünüzü doğrudan microsoft/windowsservercore veya mcr.microsoft.com/windows/servercore (bkz. [microsoft syndicates container catalog](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/)) üzerine temellendiriyor, .NET Framework düzgün şekilde yüklenemeyebilir ve hiçbir yüklemesi hatası belirtilmez. Yönetilen kod, yüklemesi tamamlandıktan sonra çalışmayabilir. Bunun yerine, görüntünüzü [Microsoft/DotNet-Framework: 4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) veya üzeri bir sürüme dayandırın. Ayrıca, 4.7.2 veya üzeri etiketli görüntülerin PowerShell 'i varsayılan olarak kullanabileceğini unutmayın ve bu da `SHELL` `RUN` `ENTRYPOINT` yönergelerin başarısız olmasına neden olur.
    >
-   > Visual Studio 2017 sürüm 15.8 veya önceki sürümler (herhangi bir ürün) mcr.microsoft.com/windows/servercore:1809 yüklemez. Hiçbir hata görüntülenmez.
+   > Visual Studio 2017 sürüm 15,8 veya önceki bir sürümü (herhangi bir ürün) mcr.microsoft.com/windows/servercore:1809 veya sonraki bir sürüme düzgün şekilde yüklemez. Bir hata görüntülenmiyor.
    >
-   > Hangi [Windows sürümlerinin](/virtualization/windowscontainers/deploy-containers/version-compatibility) hangi konak işletim sistemi sürümlerinde destek olduğunu ve bilinen sorunlar [](build-tools-container-issues.md) için kapsayıcılar için bilinen sorunlar hakkında bilgi için bkz. kapsayıcı sürümü uyumluluğu.
+   > hangi kapsayıcı işletim sistemi sürümlerinin hangi işletim sistemi sürümlerinde desteklendiğini ve bilinen sorunların [kapsayıcılarına yönelik bilinen sorunları](build-tools-container-issues.md) görmek için bkz. [Windows kapsayıcı sürümü uyumluluğu](/virtualization/windowscontainers/deploy-containers/version-compatibility) .
    
    ::: moniker-end
 
@@ -135,13 +135,13 @@ Aşağıdaki örnek Dockerfile dosyasını diskiniz üzerinde yeni bir dosyaya k
    ```
 
    > [!TIP]
-   > İş yüklerinin ve bileşenlerin listesi için bkz. [Visual Studio Derleme Araçları dizini.](workload-component-id-vs-build-tools.md)
+   > iş yükleri ve bileşenlerin listesi için [Visual Studio Derleme Araçları bileşen dizinine](workload-component-id-vs-build-tools.md)bakın.
    >
 
    > [!WARNING]
-   > Görüntülerinizi doğrudan microsoft/windowsservercore'a temel alırsanız, .NET Framework düzgün yüklenmeyebilir ve yükleme hatası belirtemeyebilir. Yükleme tamamlandıktan sonra yönetilen kod çalıştırılamayabilirsiniz. Bunun yerine görüntülerinizi [microsoft/dotnet-framework:4.8 veya sonraki bir sürümü temel](https://hub.docker.com/r/microsoft/dotnet-framework) edin. Ayrıca, sürüm 4.8 veya sonraki sürümlerde etiketlenen görüntülerin varsayılan olarak PowerShell kullanabileceğini ve yönergelerinin başarısız `SHELL` `RUN` `ENTRYPOINT` olmasına neden olabileceğini unutmayın.
+   > görüntünüzü doğrudan microsoft/windowsservercore 'a dayandırırsanız .NET Framework düzgün şekilde yüklenemeyebilir ve hiçbir yüklemesi hatası belirtilmez. Yönetilen kod, yüklemesi tamamlandıktan sonra çalışmayabilir. Bunun yerine, görüntünüzü [Microsoft/DotNet-Framework: 4.8](https://hub.docker.com/r/microsoft/dotnet-framework) veya üzeri bir sürüme dayandırın. Ayrıca, 4,8 veya üzeri etiketli görüntülerin PowerShell 'i varsayılan olarak kullanabileceğini unutmayın. Bu, `SHELL` `RUN` ve yönergelerinin başarısız olmasına neden olur `ENTRYPOINT` .
    >
-   > Hangi [Windows sürümlerinin](/virtualization/windowscontainers/deploy-containers/version-compatibility) hangi konak işletim sistemi sürümlerinde destek olduğunu ve bilinen sorunlar [](build-tools-container-issues.md) için kapsayıcılar için bilinen sorunlar hakkında bilgi için bkz. kapsayıcı sürümü uyumluluğu.
+   > hangi kapsayıcı işletim sistemi sürümlerinin hangi işletim sistemi sürümlerinde desteklendiğini ve bilinen sorunların [kapsayıcılarına yönelik bilinen sorunları](build-tools-container-issues.md) görmek için bkz. [Windows kapsayıcı sürümü uyumluluğu](/virtualization/windowscontainers/deploy-containers/version-compatibility) .
 
    ::: moniker-end
    
@@ -158,7 +158,7 @@ Aşağıdaki örnek Dockerfile dosyasını diskiniz üzerinde yeni bir dosyaya k
 
    RUN `
        # Download the Build Tools bootstrapper.
-       curl -SL --output vs_buildtools.exe https://aka.ms/vs/17/pre/vs_buildtools.exe `
+       curl -SL --output vs_buildtools.exe https://aka.ms/vs/17/release/vs_buildtools.exe `
        `
        # Install Build Tools with the Microsoft.VisualStudio.Workload.AzureBuildTools workload, excluding workloads and components with known issues.
        && (start /w vs_buildtools.exe --quiet --wait --norestart --nocache modify `
@@ -179,19 +179,19 @@ Aşağıdaki örnek Dockerfile dosyasını diskiniz üzerinde yeni bir dosyaya k
    ```
 
    > [!TIP]
-   > İş yüklerinin ve bileşenlerin listesi için bkz. [Visual Studio Derleme Araçları dizini.](workload-component-id-vs-build-tools.md)
+   > iş yükleri ve bileşenlerin listesi için [Visual Studio Derleme Araçları bileşen dizinine](workload-component-id-vs-build-tools.md)bakın.
    >
 
    > [!WARNING]
-   > Görüntülerinizi doğrudan microsoft/windowsservercore'a temel alırsanız, .NET Framework düzgün yüklenmeyebilir ve yükleme hatası belirtemeyebilir. Yükleme tamamlandıktan sonra yönetilen kod çalıştırılamayabilirsiniz. Bunun yerine görüntülerinizi [microsoft/dotnet-framework:4.8 veya sonraki bir sürümü temel](https://hub.docker.com/r/microsoft/dotnet-framework) edin. Ayrıca, sürüm 4.8 veya sonraki sürümlerde etiketlenen görüntülerin varsayılan olarak PowerShell kullanabileceğini ve yönergelerinin başarısız `SHELL` `RUN` `ENTRYPOINT` olmasına neden olabileceğini unutmayın.
+   > görüntünüzü doğrudan microsoft/windowsservercore 'a dayandırırsanız .NET Framework düzgün şekilde yüklenemeyebilir ve hiçbir yüklemesi hatası belirtilmez. Yönetilen kod, yüklemesi tamamlandıktan sonra çalışmayabilir. Bunun yerine, görüntünüzü [Microsoft/DotNet-Framework: 4.8](https://hub.docker.com/r/microsoft/dotnet-framework) veya üzeri bir sürüme dayandırın. Ayrıca, 4,8 veya üzeri etiketli görüntülerin PowerShell 'i varsayılan olarak kullanabileceğini unutmayın. Bu, `SHELL` `RUN` ve yönergelerinin başarısız olmasına neden olur `ENTRYPOINT` .
    >
-   > Hangi [Windows sürümlerinin](/virtualization/windowscontainers/deploy-containers/version-compatibility) hangi konak işletim sistemi sürümlerinde destek olduğunu ve bilinen sorunlar [](build-tools-container-issues.md) için kapsayıcılar için bilinen sorunlar hakkında bilgi için bkz. kapsayıcı sürümü uyumluluğu.
+   > hangi kapsayıcı işletim sistemi sürümlerinin hangi işletim sistemi sürümlerinde desteklendiğini ve bilinen sorunların [kapsayıcılarına yönelik bilinen sorunları](build-tools-container-issues.md) görmek için bkz. [Windows kapsayıcı sürümü uyumluluğu](/virtualization/windowscontainers/deploy-containers/version-compatibility) .
 
    ::: moniker-end
    > [!NOTE]
-   > Hata `3010` kodu, yeniden başlatma gerektiğinde başarılı olduğunu belirtmek için kullanılır. Daha [ fazla bilgiMsiExec.exe hata iletilerine](/windows/win32/msi/error-codes) bakın.
+   > Hata kodu `3010` , yeniden başlatma gerektiren başarıyı göstermek için kullanılır. daha fazla bilgi için bkz. [MsiExec.exe hata iletileri](/windows/win32/msi/error-codes) .
 
-1. Bu dizinde aşağıdaki komutu çalıştırın.
+1. Bu dizin içinde aşağıdaki komutu çalıştırın.
 
    ::: moniker range="vs-2017"
 
@@ -199,9 +199,9 @@ Aşağıdaki örnek Dockerfile dosyasını diskiniz üzerinde yeni bir dosyaya k
    docker build -t buildtools2017:latest -m 2GB .
    ```
 
-   Bu komut, 2 GB bellek kullanarak geçerli dizinde Dockerfile'ı derlemek için kullanılır. Bazı iş yükleri yüklenirken varsayılan 1 GB yeterli değildir; ancak, derleme gereksinimlerinize bağlı olarak yalnızca 1 GB bellekle derleme yapabiliyorsunuz.
+   Bu komut, Dockerfile 'ı geçerli dizinde 2 GB bellek kullanarak oluşturur. Bazı iş yükleri yüklendiğinde varsayılan 1 GB yeterli değildir; Ancak, yapı gereksinimlerinize bağlı olarak yalnızca 1 GB bellek oluşturabilirsiniz.
 
-   Son görüntü "buildtools2017:latest" olarak etiketlenir; böylece bir kapsayıcıda "buildtools2017" olarak kolayca çalıştırabilirsiniz çünkü etiket belirtilmezse "latest" etiketi varsayılandır. Daha gelişmiş bir senaryoda Visual Studio Derleme Araçları 2017'nin belirli bir sürümünü kullanmak için [kapsayıcıyı](advanced-build-tools-container.md)belirli bir Visual Studio derleme numarasıyla ve "en son" sayıyla etiketleyebilirsiniz.
+   Son görüntü "buildtools2017: latest" olarak etiketlendi, bu nedenle "en son" etiketi, hiçbir etiket belirtilmemişse varsayılan değer olan "buildtools2017" olarak bir kapsayıcıda kolayca çalıştırabilirsiniz. daha [gelişmiş bir senaryoda](advanced-build-tools-container.md)Visual Studio Derleme Araçları 2017 ' nin belirli bir sürümünü kullanmak istiyorsanız, kapsayıcının belirli bir sürümü tutarlı bir şekilde kullanabilmesi için kapsayıcıyı belirli bir Visual Studio derleme numarasıyla ve "en son" ile etiketleyebilirsiniz.
 
    ::: moniker-end
 
@@ -211,9 +211,9 @@ Aşağıdaki örnek Dockerfile dosyasını diskiniz üzerinde yeni bir dosyaya k
    docker build -t buildtools2019:latest -m 2GB .
    ```
 
-   Bu komut, 2 GB bellek kullanarak geçerli dizinde Dockerfile'ı derlemek için kullanılır. Bazı iş yükleri yüklenirken varsayılan 1 GB yeterli değildir; ancak, derleme gereksinimlerinize bağlı olarak yalnızca 1 GB bellekle derleme yapabiliyorsunuz.
+   Bu komut, Dockerfile 'ı geçerli dizinde 2 GB bellek kullanarak oluşturur. Bazı iş yükleri yüklendiğinde varsayılan 1 GB yeterli değildir; Ancak, yapı gereksinimlerinize bağlı olarak yalnızca 1 GB bellek oluşturabilirsiniz.
 
-   Son görüntü "buildtools2019:latest" olarak etiketlenir; böylece bir kapsayıcıda "buildtools2019" olarak kolayca çalıştırabilirsiniz çünkü etiket belirtilmezse "latest" etiketi varsayılandır. Daha gelişmiş bir senaryoda Visual Studio Derleme Araçları 2019'un belirli bir sürümünü kullanmak için [kapsayıcıyı](advanced-build-tools-container.md)belirli bir Visual Studio derleme numarasıyla ve "en son" olarak etiketleyebilirsiniz.
+   Son görüntü "buildtools2019: latest" olarak etiketlendi, bu nedenle "en son" etiketi, hiçbir etiket belirtilmemişse varsayılan değer olan "buildtools2019" olarak bir kapsayıcıda kolayca çalıştırabilirsiniz. daha [gelişmiş bir senaryoda](advanced-build-tools-container.md)Visual Studio Derleme Araçları 2019 ' nin belirli bir sürümünü kullanmak istiyorsanız, kapsayıcının belirli bir sürümü tutarlı bir şekilde kullanabilmesi için kapsayıcıyı belirli bir Visual Studio derleme numarasıyla ve "en son" ile etiketleyebilirsiniz.
 
    ::: moniker-end
 
@@ -223,15 +223,15 @@ Aşağıdaki örnek Dockerfile dosyasını diskiniz üzerinde yeni bir dosyaya k
    docker build -t buildtools:latest -m 2GB .
    ```
 
-   Bu komut, 2 GB bellek kullanarak geçerli dizinde Dockerfile'ı derlemek için kullanılır. Bazı iş yükleri yüklenirken varsayılan 1 GB yeterli değildir; ancak, derleme gereksinimlerinize bağlı olarak yalnızca 1 GB bellekle derleme yapabiliyorsunuz.
+   Bu komut, Dockerfile 'ı geçerli dizinde 2 GB bellek kullanarak oluşturur. Bazı iş yükleri yüklendiğinde varsayılan 1 GB yeterli değildir; Ancak, yapı gereksinimlerinize bağlı olarak yalnızca 1 GB bellek oluşturabilirsiniz.
 
-   Son görüntü "buildtools:latest" olarak etiketlenir, bu nedenle bir kapsayıcıda "buildtools" olarak kolayca çalıştırabilirsiniz çünkü etiket belirtilmezse "latest" etiketi varsayılandır. Daha gelişmiş bir senaryoda Visual Studio Derleme Araçları'nin belirli bir sürümünü kullanmak için [kapsayıcıyı](advanced-build-tools-container.md)belirli bir Visual Studio derleme numarasıyla ve kapsayıcıların belirli bir sürümü tutarlı bir şekilde kullanaması için "en son" ile etiketleyebilirsiniz.
+   Son görüntü "buildtools: latest" olarak etiketlendiği için "en son" etiketi, hiçbir etiket belirtilmemişse varsayılan değer olan "buildtools" olarak bir kapsayıcıda kolayca çalıştırabilirsiniz. daha [gelişmiş bir senaryoda](advanced-build-tools-container.md)Visual Studio Derleme Araçları belirli bir sürümünü kullanmak istiyorsanız, kapsayıcının belirli bir sürümü tutarlı bir şekilde kullanabilmesi için kapsayıcıyı belirli bir Visual Studio derleme numarasıyla ve "en son" ile etiketleyebilirsiniz.
 
    ::: moniker-end
 
-## <a name="using-the-built-image"></a>Yerleşik görüntüyü kullanma
+## <a name="using-the-built-image"></a>Oluşturulan görüntüyü kullanma
 
-Artık bir görüntü oluşturduğunuza göre, hem etkileşimli hem de otomatik derlemeler yapmak için görüntüyü bir kapsayıcıda çalıştırabilirsiniz. Örnek, Geliştirici Komut İstemi kullanır, bu nedenle PATH ve diğer ortam değişkenleriniz zaten yapılandırılmıştır.
+Artık bir görüntü oluşturduğunuza göre, hem etkileşimli hem de otomatik derlemeler yapmak için bunu bir kapsayıcıda çalıştırabilirsiniz. Örnek Geliştirici Komut İstemi kullanır, bu nedenle yolunuza ve diğer ortam değişkenleriniz zaten yapılandırılmıştır.
 
 1. Bir komut istemi açın.
 
@@ -261,16 +261,16 @@ Artık bir görüntü oluşturduğunuza göre, hem etkileşimli hem de otomatik 
 
    ::: moniker-end
 
-Bu görüntüyü CI/CD iş akışınız için kullanmak üzere, sunucuların yalnızca çekmesi [Azure Container Registry](https://azure.microsoft.com/services/container-registry) docker kayıt defterinize veya diğer iç [Docker](https://docs.docker.com/registry/deploying) kayıt defterinize yayımlayın.
+Bu görüntüyü CI/CD iş akışınız için kullanmak üzere, sunucuların yalnızca çekmesini gerektiren [Azure Container Registry](https://azure.microsoft.com/services/container-registry) veya diğer Iç [Docker kayıt defterinizde](https://docs.docker.com/registry/deploying) yayımlayabilirsiniz.
 
    > [!NOTE]
-   > Docker kapsayıcısı başlatılamezse büyük olasılıkla bir Visual Studio sorunu vardır. Visual Studio batch komutunu çağıran adımı kaldırmak için Dockerfile'ı güncelleştirebilirsiniz. Bu, Docker kapsayıcısını başlatmaya ve yükleme hata günlüklerini okumaya olanak sağlar.
+   > docker kapsayıcısı başlatılamazsa, büyük olasılıkla bir Visual Studio yükleme sorunu vardır. Visual Studio batch komutunu çağıran adımı kaldırmak için dockerfile 'ı güncelleştirebilirsiniz. Bu, Docker kapsayıcısını başlatıp yükleme hata günlüklerini okumanızı sağlar.
    >
-   > Dockerfile dosyanıza komutundan `C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat` `&&` ve parametrelerini `ENTRYPOINT` kaldırın. Komutun artık olması `ENTRYPOINT ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]` gerekir. Ardından Dockerfile dosyasını yeniden oluşturarak kapsayıcı `run` dosyalarına erişmek için komutunu yürütün. Yükleme hata günlüklerini bulmak için dizinine `$env:TEMP` gidin ve dosyayı `dd_setup_<timestamp>_errors.log` bulun.
+   > Dockerfile dosyanızda, `C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat` ve `&&` parametrelerini `ENTRYPOINT` komutunu komuttan kaldırın. Komut şu anda olmalıdır `ENTRYPOINT ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]` . Sonra, Dockerfile dosyasını yeniden derleyin ve `run` kapsayıcı dosyalarına erişmek için komutunu yürütün. Yükleme hata günlüklerini bulmak için `$env:TEMP` dizine gidin ve `dd_setup_<timestamp>_errors.log` dosyayı bulun.
    >
-   > Yükleme sorunu tanımdan ve düzeltdikten sonra, komutuna ve parametrelerini ekleyebilir ve Dockerfile dosyanızı `C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat` `&&` yeniden `ENTRYPOINT` yapılandırabilirsiniz.
+   > Yükleme sorununu tanımlayıp düzelttikten sonra, `C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat` ve `&&` parametrelerini komuta geri ekleyebilir `ENTRYPOINT` ve dockerfile dosyanızı yeniden oluşturabilirsiniz.
    >
-   > Daha fazla bilgi için [bkz. Kapsayıcılar için bilinen sorunlar.](build-tools-container-issues.md)
+   > Daha fazla bilgi için bkz. [kapsayıcılar Için bilinen sorunlar](build-tools-container-issues.md).
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

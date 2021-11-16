@@ -2,7 +2,7 @@
 title: Seçenekler, Metin Düzenleyici, Genel
 description: Kod ve metin düzenleyicisi için genel ayarları değiştirmek üzere Genel Visual Studio kullanmayı öğrenin.
 ms.custom: SEO-VS-2020
-ms.date: 11/12/2021
+ms.date: 11/15/2021
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor
@@ -37,12 +37,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: dbeffd70a4a11ed8e89388a3e558f14c2a54247c
-ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
+ms.openlocfilehash: 58b6a63d1dd668df5febd9372c8c2acd8b72d8c6
+ms.sourcegitcommit: bfae1f88c278835e26f3200cfced769be3191fc4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "132453480"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132535054"
 ---
 # <a name="options-dialog-box-text-editor--general"></a>Seçenekler iletişim kutusu: Metin Düzenleyici \> Genel
 
@@ -68,7 +68,7 @@ Bu iletişim kutusu, uygulama kodunun ve metin düzenleyicisinin Visual Studio a
 
 ## <a name="settings"></a>Ayarlar
 
-Araçlar Ayarlar Düzenleyicisi   >  **Genel'in**  >  **Aşağıdaki Seçenekler**  >  **bölümünde** aşağıdaki seçenekler yer almaktadır.
+Araçlar Ayarlar Düzenleyicisi   >    >  **Genel'in Aşağıdaki Seçenekler**  >  **bölümünde** aşağıdaki seçenekler yer almaktadır.
 
 ### <a name="drag-and-drop-text-editing"></a>Metin düzenlemeyi sürükleyip bırakma
 
@@ -78,7 +78,7 @@ Bu ayar seçildiğinde, metni seçerek ve fareyle geçerli belge içindeki başk
 
 ### <a name="select-subword-on-double-click"></a>Çift tıklamada alt sözcük seçme
 
-Bu ayarı değiştirerek çift tıklarsanız, tam sözcük yerine yalnızca bir alt sözcük seçer. (Örnek olarak camelCase metni kullanırken bu yararlı olabilir.)
+Bu ayarı değiştirerek çift tıklarsanız, tam sözcük yerine yalnızca bir alt sözcük seçer. (Örnek olarak medial büyük harflerini kullanırken bu yararlı olabilir.)
 
 ::: moniker-end
 

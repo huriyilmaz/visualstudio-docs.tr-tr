@@ -14,16 +14,16 @@ ms.author: meghaanand
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7627c96851133ba14f5fd3a2b59e3ca3f4e7e567
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 4f878fa8dead7599f025c72b4000549e4ab89806
+ms.sourcegitcommit: bfae1f88c278835e26f3200cfced769be3191fc4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428557"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132535220"
 ---
 # <a name="tutorial-create-a-simple-application-with-c"></a>Öğretici: C ile basit bir uygulama oluşturma\#
 
-Bu öğreticiyi tamamlayarak, bu öğreticiyle uygulama geliştirirken kullanabileceğiniz birçok araç, iletişim kutusu ve tasarımcı hakkında bilgi Visual Studio. Tümleşik geliştirme ortamında ([IDE)](visual-studio-ide.md)çalışma hakkında bilgi edinirken bir "Merhaba Dünya" uygulaması oluşturacak, kullanıcı arabirimini tasarlar, kod ekler ve hata ayıklarsınız.
+Bu öğreticiyi tamamlayarak, bu öğreticiyle uygulama geliştirirken kullanabileceğiniz birçok araç, iletişim kutusu ve tasarımcı hakkında bilgi Visual Studio. Tümleşik geliştirme ortamında[(IDE)](visual-studio-ide.md)çalışma hakkında bilgi edinirken bir "Merhaba Dünya" uygulaması oluşturacak, kullanıcı arabirimini tasarlar, kod ekler ve hata ayıklarsınız.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -33,7 +33,7 @@ Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](http
 ::: moniker range=">=vs-2019"
 
 - Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](https://visualstudio.microsoft.com/downloads/) ücretsiz olarak yükleyin.
-- Bu öğretici için .NET Framework .NET Core kullanabilirsiniz. .NET Core, daha yeni ve daha modern bir çerçevedir. .NET Core için 2019 Visual Studio 16.3 veya sonraki bir sürümü gerekir.
+- Bu öğretici için .NET Framework veya .NET Core kullanabilirsiniz. .NET Core, daha yeni ve daha modern bir çerçevedir. .NET Core için 2019 Visual Studio 16.3 veya sonraki bir sürümü gerekir.
 ::: moniker-end
 
 ## <a name="configure-the-ide"></a>IDE'yi yapılandırma
@@ -44,7 +44,7 @@ Daha önce yüklememiş Visual Studio indirmeler [sayfasına Visual Studio](http
 
 ![Ayarları seç iletişim kutusu](../media/exploreide-settings.png)
 
-Bu Visual Studio sonra araç pencerelerini, menüleri ve araç çubuklarını ve ana pencere boşluklarını görebilirsiniz. Araç pencereleri, uygulama penceresinin sol ve sağ kenarlarında, **Hızlı Başlat,** menü çubuğu ve standart araç çubuğu en üstte olacak şekilde yerleştirildi. Uygulama penceresinin merkezinde Başlangıç Sayfası **yer almaktadır.** Bir çözümü veya projeyi yükleyebilirsiniz. Düzenleyiciler ve tasarımcılar, Başlangıç Sayfasının bulunduğu **alanda** görünür. Bir uygulama geliştirirken, zaman çoğunu bu merkezi alanda geçireceksiniz.
+Bu Visual Studio sonra araç pencerelerini, menüleri ve araç çubuklarını ve ana pencere boşluklarını görebilirsiniz. Araç pencereleri, uygulama penceresinin sol ve sağ kenarlarında, **Hızlı Başlat,** menü çubuğu ve standart araç çubuğu üstte olacak şekilde yerleştirildi. Uygulama penceresinin merkezinde Başlangıç Sayfası **yer almaktadır.** Bir çözümü veya projeyi yükleyebilirsiniz. Düzenleyiciler ve tasarımcılar, Başlangıç Sayfasının bulunduğu **alanda** görünür. Bir uygulama geliştirirken, zaman çoğunu bu merkezi alanda geçireceksiniz.
 
 ![Visual Studio 2017 IDE genel Ayarlar uygulandı](../media/exploreide-idewithgeneralsettings.png "Visual Studio 2017 IDE'nin Genel Ayarlar ekran görüntüsü")
 
@@ -52,13 +52,13 @@ Bu Visual Studio sonra araç pencerelerini, menüleri ve araç çubuklarını ve
 
 ::: moniker range=">=vs-2019"
 
-Uygulamayı Visual Studio önce başlangıç penceresi açılır. Geliştirme **ortamını açmak için Kod** olmadan devam'ı seçin. Araç pencerelerini, menüleri ve araç çubuklarını ve ana pencere boşluklarını görebilirsiniz. Araç pencereleri, uygulama penceresinin sol ve sağ tarafına yerleştirildi. Arama kutusu, menü çubuğu ve standart araç çubuğu en üstte bulunur. Bir çözümü veya projeyi yükleyemediniz mi, düzenleyiciler ve tasarımcılar uygulama penceresinin merkezi alanda görünür. Bir uygulama geliştirirken, zaman çoğunu bu merkezi alanda geçireceksiniz.
+Uygulamayı Visual Studio önce başlangıç penceresi açılır. Geliştirme **ortamını açmak için Kod** olmadan devam'ı seçin. Araç pencerelerini, menüleri ve araç çubuklarını ve ana pencere boşluklarını görebilirsiniz. Araç pencereleri, uygulama penceresinin sol ve sağ tarafına yerleştirildi. Arama kutusu, menü çubuğu ve standart araç çubuğu en üstte bulunur. Bir çözümü veya projeyi yükleyemediniz mi, düzenleyiciler ve tasarımcılar uygulama penceresinin orta alanda görünür. Bir uygulama geliştirirken, zaman çoğunu bu merkezi alanda geçireceksiniz.
 
 ::: moniker-end
 
 ## <a name="create-the-project"></a>Proje oluşturma
 
-Visual Studio'da bir uygulama oluştururken önce bir proje ve bir çözüm oluşturursunuz. Bu örnekte, bir Windows Presentation Foundation (WPF) projesi oluşturabilirsiniz.
+Visual Studio'da bir uygulama oluştururken önce bir proje ve bir çözüm oluşturursunuz. Bu örnekte bir Windows Presentation Foundation (WPF) projesi oluşturabilirsiniz.
 
 ::: moniker range="vs-2017"
 
@@ -66,7 +66,7 @@ Visual Studio'da bir uygulama oluştururken önce bir proje ve bir çözüm olu�
 
      ![Menü çubuğunda Dosya, Yeni ve Yeni'yi Project](../media/exploreide-filenewproject.png "Dosya, Yeni Visual Studio'yi seçtiğiniz menü çubuğunu gösteren ekran Project.")
 
-1. Yeni **Project** iletişim kutusunda Yüklü Visual C# Windows Masaüstü kategorisini ve ardından WPF Uygulaması  >    >   **(.NET Framework) şablonunu** seçin. Projeye **HelloWPFApp adını girin ve** Tamam'ı **seçin.**
+1. Yeni **Project** iletişim kutusunda Yüklü Visual C# Windows Masaüstü kategorisini ve ardından WPF Uygulaması  >    >   **(.NET Framework) şablonunu** seçin. Projeyi **HelloWPFApp olarak adlandırarak** Tamam'ı **seçin.**
 
      ![Yeni uygulama iletişim kutusundaki Visual Studio WPF Project şablonu](media/exploreide-newprojectcsharp.png "Yeni Uygulama iletişim kutusundaki WPF Uygulaması şablonunun Project görüntüsü.")
 
@@ -78,11 +78,11 @@ Visual Studio'da bir uygulama oluştururken önce bir proje ve bir çözüm olu�
 
 1. Başlangıç penceresinde Yeni proje **oluştur'a tıklayın.**
 
-   !['Yeni proje oluştur' penceresini görüntüleme](../../get-started/media/vs-2019/start-window-create-new-project.png "'Yeni proje oluştur' Visual Studio 2022'de başlangıç penceresinin ekran görüntüsü.")
+   !['Yeni proje oluştur' penceresini görüntüleme](../../get-started/media/vs-2019/start-window-create-new-project.png "Visual Studio 2019'da 'Yeni proje oluştur' seçeneğinin vurgulanmış olduğu başlangıç penceresinin ekran görüntüsü.")
 
-1. Yeni proje **oluştur ekranında** "WPF" araması ve **WPF Uygulaması'nın ardından** Sonraki'yi **seçin.**
+1. Yeni proje **oluştur ekranında** "WPF" ifadesini arayın, **WPF Uygulaması'ı seçin ve** ardından Sonraki'yi **seçin.**
 
-   :::image type="content" source="media/vs-2019/explore-ide-new-project-csharp-vs-2019.png" alt-text="Arama kutusuna 'WPF' girildi ve 'WPF Uygulaması' proje şablonu vurgulanmış 'Yeni proje oluştur' iletişim kutusunun ekran görüntüsü.":::
+   :::image type="content" source="media/vs-2019/explore-ide-new-project-csharp-vs-2019.png" alt-text="Arama kutusuna 'WPF' girildi ve 'WPF Uygulaması' proje şablonunun vurgulanmış olduğu 'Yeni proje oluştur' iletişim kutusunun ekran görüntüsü.":::
 
 1. Sonraki ekranda projeye **HelloWPFApp** adını girin ve Sonraki'yi **seçin.**
 
@@ -113,17 +113,17 @@ Projeyi oluşturduktan sonra özelleştirebilirsiniz. Bunu yapmak için Görün�
 
    :::image type="content" source="media/vs-2022/start-window-create-new-project.png" alt-text="'Yeni proje oluştur' Visual Studio 2022'de başlangıç penceresinin ekran görüntüsü.":::
 
-1. Yeni proje **oluştur ekranında** "WPF" araması ve **WPF Uygulaması'nın ardından** Sonraki'yi **seçin.**
+1. Yeni proje **oluştur ekranında** "WPF" ifadesini arayın, **WPF Uygulaması'ı seçin ve** ardından Sonraki'yi **seçin.**
 
-   :::image type="content" source="media/vs-2022/explore-ide-new-project-csharp-wpf-vs-2022.png" alt-text="Arama kutusuna 'WPF' girildi ve 'WPF Uygulaması' proje şablonu vurgulanmış 'Yeni proje oluştur' iletişim kutusunun ekran görüntüsü.":::
+   :::image type="content" source="media/vs-2022/explore-ide-new-project-csharp-wpf-vs-2022.png" alt-text="Arama kutusuna 'WPF' girildi ve 'WPF Uygulaması' proje şablonunun vurgulanmış olduğu 'Yeni proje oluştur' iletişim kutusunun ekran görüntüsü.":::
 
 1. Sonraki ekranda projeye **HelloWPFApp** adını girin ve Sonraki'yi **seçin.**
 
    :::image type="content" source="media/vs-2022/explore-ide-name-project.png" alt-text="Uygulama adı alanına 'HelloWPFApp' girildi ve 'Yeni projenizi yapılandır' iletişim kutusunun Project görüntüsü.":::
 
-1. Ek **bilgiler penceresinde** hedef **çerçeveniz için .NET 6.0** zaten seçilmiş olması gerekir. Yoksa **.NET 6.0'ı seçin.** Ardından **Oluştur'a seçin.**
+1. Ek **bilgiler penceresinde** hedef **çerçeveniz için .NET 6.0 (Uzun** süreli destek) zaten seçilmiş olması gerekir. Yoksa **.NET 6.0 (Uzun süreli destek) seçeneğini seçin.** Ardından **Oluştur'a seçin.**
 
-   :::image type="content" source="media/vs-2022/wpf-target-framework.png" alt-text="Çerçeve alanında '.NET 6.0'ın seçili olduğu Ek bilgiler penceresinin ekran görüntüsü.":::
+   :::image type="content" source="media/vs-2022/wpf-target-framework.png" alt-text="Çerçeve alanında '.NET 6.0 (Uzun süreli destek)' seçili ek bilgiler penceresinin ekran görüntüsü.":::
 
 Visual Studio HelloWPFApp projesini ve çözümünü oluşturur **ve Çözüm Gezgini** dosyaları gösterir. **WPF Tasarımcısı,** bölünmüş görünümde *MainWindow.xaml'in* bir tasarım görünümünü ve XAML görünümünü gösterir. Görünümlerden birini daha fazla veya daha az göstermek için böleni kaydırabilirsiniz. Yalnızca görsel görünümünü veya yalnızca XAML görünümünü görüntülemeyi seçebilirsiniz.
 
@@ -140,7 +140,7 @@ Projeyi oluşturduktan sonra özelleştirebilirsiniz. Bunu yapmak için Görün�
 
 ### <a name="change-the-name-of-mainwindowxaml"></a>MainWindow.xaml adını değiştirme
 
-MainWindow'a daha belirli bir ad vealım. Bu **Çözüm Gezgini** *MainWindow.xaml'e sağ tıklayın ve* Yeniden Adlandır'ı **seçin.** Dosyayı *Greetings.xaml olarak yeniden adlandırır.*
+MainWindow'a daha belirli bir ad vealım. Bu **Çözüm Gezgini** *MainWindow.xaml'e sağ tıklayın* ve Yeniden Adlandır'ı **seçin.** Dosyayı *Greetings.xaml olarak yeniden adlandırır.*
 
 ## <a name="design-the-user-interface-ui"></a>Kullanıcı arabirimini (UI) tasarlama
 
@@ -158,7 +158,7 @@ Bu uygulamaya üç denetim türü ekleyebilirsiniz: <xref:System.Windows.Control
 
      ![TextBlock denetimi vurgulanmış araç kutusu](../media/exploreide-textblocktoolbox.png "Ortak WPF Denetimleri listesinde TextBlock denetimi seçiliyken Araç Kutusu penceresinin ekran görüntüsü.")
 
-1. TextBlock öğesini seçerek ve tasarım yüzeyinde pencereye sürükleyerek tasarım yüzeyine bir **TextBlock** denetimi ekleyin. Denetimi pencerenin üst kısmında ortalar. 2019 Visual Studio sonraki bir yıl içinde kırmızı yönergeleri kullanarak denetimi ortalayabilirsiniz.
+1. TextBlock öğesini seçerek ve tasarım yüzeyinde pencereye sürükleyerek tasarım yüzeyine bir **TextBlock** denetimi ekleyin. Denetimi pencerenin üst kısmında ortalar. 2019 Visual Studio sonraki bir yıl içinde denetimi ortalarken kırmızı yönergeleri kullanabilirsiniz.
 
     Pencereniz aşağıdaki gösterime benzemelidir:
 
@@ -176,19 +176,19 @@ Bu uygulamaya üç denetim türü ekleyebilirsiniz: <xref:System.Windows.Control
 
 ::: moniker range=">=vs-2022"
 
-1. Arama **kutusunu etkinleştirmek için Ctrl** + **Q** tuşlarına basın ve Araç Kutusu **yazın.** Sonuçlar **listesinden > Araç Kutusu'nı** seçin.
+1. Arama **kutusunu etkinleştirmek için Ctrl** + **Q** tuşlarına basın ve Araç Kutusu **yazın.** Sonuçlar listesinden **> araç kutusunu görüntüle** ' yi seçin.
 
-1. Araç **Kutusunda,** Ortak **WPF Denetimleri düğümünü genişletarak** TextBlock denetimine bakın.
+1. **Araç kutusunda**, TextBlock denetimini görmek IÇIN **ortak WPF denetimleri** düğümünü genişletin.
 
-    :::image type="content" source="media/vs-2022/explore-ide-textblock-toolbox.png" alt-text="Ortak WPF Denetimleri listesinde TextBlock denetimi seçiliyken Araç Kutusu penceresinin ekran görüntüsü.":::
+    :::image type="content" source="media/vs-2022/explore-ide-textblock-toolbox.png" alt-text="Ortak WPF denetimleri listesinde, TextBlock denetimiyle seçili olan araç kutusu penceresinin ekran görüntüsü.":::
 
-1. TextBlock öğesini seçerek ve tasarım yüzeyinde pencereye sürükleyerek tasarım yüzeyine bir **TextBlock** denetimi ekleyin. Denetimi pencerenin üst kısmında ortalar. Denetimi merkezi yapmak için yönergeleri kullanabilirsiniz.
+1. **TextBlock** öğesini seçerek ve tasarım yüzeyinde pencereye sürükleyerek tasarım yüzeyine bir TextBlock denetimi ekleyin. Pencerenin üst kısmına yakın olan denetimi ortalayın. Denetimi ortalamak için yönergeleri kullanabilirsiniz.
 
-    Pencereniz aşağıdaki görüntüye benzer:
+    Pencereniz aşağıdaki görüntüye benzemelidir:
 
-    :::image type="content" source="media/vs-2022/explore-ide-greetings-with-textblock-only.png" alt-text="Tasarım yüzeyindeki TextBlock denetimi ekran görüntüsü. Denetimi konumlandırma ve yeniden boyutlandırma yönergeleri gösterilir.":::
+    :::image type="content" source="media/vs-2022/explore-ide-greetings-with-textblock-only.png" alt-text="Tasarım yüzeyinde TextBlock denetiminin ekran görüntüsü. Denetimi konumlandırmak ve yeniden boyutlandırmak için yönergeler gösterilir.":::
 
-   XAML işaretlemesi aşağıdaki örnekteki gibi gösterilsin:
+   XAML işaretlemesi aşağıdaki örnekteki gibi görünmelidir:
 
     ```xaml
     <Grid>
@@ -198,11 +198,11 @@ Bu uygulamaya üç denetim türü ekleyebilirsiniz: <xref:System.Windows.Control
 
 ::: moniker-end
 
-### <a name="customize-the-text-in-the-text-block"></a>Metin bloğunda metni özelleştirme
+### <a name="customize-the-text-in-the-text-block"></a>Metin bloğundaki metni özelleştirme
 
-1. XAML görünümünde **TextBlock** işaretlemesini bulun ve Text **özniteliğini** olarak `TextBox` olarak değiştirme `Select a message option and then choose the Display button.`
+1. XAML görünümünde **TextBlock** için biçimlendirmeyi bulun ve **metin** özniteliğini ' den ' a değiştirin. `TextBox``Select a message option and then choose the Display button.`
 
-   XAML işaretlemesi aşağıdaki örnekteki gibi gösterilsin:
+   XAML işaretlemesi aşağıdaki örnekteki gibi görünmelidir:
 
    ```xaml
    <Grid>
@@ -210,59 +210,59 @@ Bu uygulamaya üç denetim türü ekleyebilirsiniz: <xref:System.Windows.Control
    </Grid>
    ```
 
-1. **Ctrl+S** tuşlarına basarak veya Dosya menü öğesini kullanarak TextBlock'un ortalarını yeniden açın ve **değişikliklerinizi** kaydedin.
+1. Gerekirse, daha sonra **CTRL + S** tuşlarına basarak veya **Dosya** menü öğesini kullanarak değişikliklerinizi yeniden ortalayın.
 
-Ardından forma iki [RadioButton](/dotnet/framework/wpf/controls/radiobutton) denetimi eksersiniz.
+Ardından, forma iki [RadioButton](/dotnet/framework/wpf/controls/radiobutton) denetimi ekleyeceksiniz.
 
 ### <a name="add-radio-buttons"></a>Radyo düğmesi ekleme
 
 ::: moniker range="vs-2019"
 
-1. Araç **Kutusunda** **RadioButton denetimi bulun.**
+1. **Araç kutusunda** **RadioButton** denetimini bulun.
 
-     ![RadioButton denetimi seçili araç kutusu penceresi](../media/exploreide-radiobuttontoolbox.png "Ortak WPF Denetimleri listesinde RadioButton denetimi seçiliyken Araç Kutusu penceresinin ekran görüntüsü.")
+     ![RadioButton denetimi seçiliyken araç kutusu penceresi](../media/exploreide-radiobuttontoolbox.png "Ortak WPF Denetimleri listesinde RadioButton denetimi seçiliyken Araç Kutusu penceresinin ekran görüntüsü.")
 
-1. **RadioButton** öğesini seçerek ve tasarım yüzeyindeki pencereye sürükleyerek tasarım yüzeyine iki RadioButton denetimi ekleyin. Düğmelerin TextBlock denetimi altında yan yana görünmesi için düğmeleri (seçerek ve ok tuşlarını kullanarak) hareket ettirin. Denetimleri hizalamak için kırmızı yönergeleri kullanın.
+1. **RadioButton** öğesini seçerek ve tasarım yüzeyinde pencereye sürükleyerek tasarım yüzeyine iki RadioButton denetimi ekleyin. Düğmeleri TextBlock denetimi altında yan yana görünecek şekilde düğmeleri (onları seçerek ve ok tuşlarını kullanarak) taşıyın. Denetimleri hizalamak için kırmızı yönergeleri kullanın.
 
    Pencerenizin şuna benzemesi gerekir:
 
-   ![TextBlock ve iki radyo düğmesiyle karşılama formu](../media/exploreide-greetingswithradiobuttons.png "Tasarım yüzeyinde bir TextBlock denetimi ve iki RadioButton denetimi gösteren Greetings.xaml için Tasarım penceresinin ekran görüntüsü.")
+   ![TextBlock ve iki radyo düğmesi içeren Tebrikler formu](../media/exploreide-greetingswithradiobuttons.png "Tasarım yüzeyinde bir TextBlock denetimi ve iki RadioButton denetimi gösteren Greetings.xaml için Tasarım penceresinin ekran görüntüsü.")
 
-1. Sol  RadioButton denetimine ait Özellikler penceresinde **Name** özelliğini (Özellikler penceresinin en üstünde yer alan **özellik) olarak** `HelloButton` değiştirin.
+1. Sol RadioButton denetimi için **Özellikler** penceresinde, **ad** özelliğini ( **Özellikler** penceresinin üst kısmındaki özellik) olarak değiştirin `HelloButton` .
 
-    ![RadioButton özellikleri penceresi](../media/exploreide-buttonproperties.png "RadioButton denetimi Özellikler penceresi ekran görüntüsü. Name özelliğinin değeri 'HelloButton' olarak değiştirildi.")
+    ![RadioButton Özellikler penceresi](../media/exploreide-buttonproperties.png "RadioButton Özellikler penceresi ekran görüntüsü. Name özelliğinin değeri 'HelloButton' olarak değiştirildi.")
 
-1. Sağ  RadioButton denetimi için Özellikler penceresinde Name özelliğini olarak **değiştirin** ve `GoodbyeButton` ardından değişikliklerinizi kaydedin.
+1. Sağ RadioButton denetimi için **Özellikler** penceresinde, **ad** özelliğini olarak değiştirin `GoodbyeButton` ve ardından değişikliklerinizi kaydedin.
 
-Ardından, her RadioButton denetimi için görüntüleme metni eksersiniz. Aşağıdaki yordam, RadioButton denetimi için **Content** özelliğini günceller.
+Ardından, her RadioButton denetimi için görüntü metni ekleyeceksiniz. Aşağıdaki yordam bir RadioButton denetimi için **içerik** özelliğini güncelleştirir.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-1. Araç **Kutusunda** **RadioButton denetimi bulun.**
+1. **Araç kutusunda** **RadioButton** denetimini bulun.
 
-   :::image type="content" source="media/vs-2022/explore-ide-radiobutton-toolbox.png" alt-text="Ortak WPF Denetimleri listesinde RadioButton denetimi seçiliyken Araç Kutusu penceresinin ekran görüntüsü.":::
+   :::image type="content" source="media/vs-2022/explore-ide-radiobutton-toolbox.png" alt-text="Ortak WPF denetimleri listesinde seçilmiş RadioButton denetimiyle araç kutusu penceresinin ekran görüntüsü.":::
 
-1. **RadioButton** öğesini seçerek ve tasarım yüzeyindeki pencereye sürükleyerek tasarım yüzeyine iki RadioButton denetimi ekleyin. Düğmelerin TextBlock denetimi altında yan yana görünmesi için düğmeleri (seçerek ve ok tuşlarını kullanarak) hareket ettirin. Denetimleri hizalamak için yönergeleri kullanabilirsiniz.
+1. **RadioButton** öğesini seçerek ve tasarım yüzeyinde pencereye sürükleyerek tasarım yüzeyine iki RadioButton denetimi ekleyin. Düğmeleri TextBlock denetimi altında yan yana görünecek şekilde düğmeleri (onları seçerek ve ok tuşlarını kullanarak) taşıyın. Denetimleri hizalamak için kılavuzları kullanabilirsiniz.
 
    Pencerenizin şuna benzemesi gerekir:
 
-   :::image type="content" source="media/vs-2022/explore-ide-greetings-with-radiobuttons.png" alt-text="Tasarım yüzeyinde bir TextBlock denetimi ve iki RadioButton denetimi gösteren Greetings.xaml için Tasarım penceresinin ekran görüntüsü.":::
+   :::image type="content" source="media/vs-2022/explore-ide-greetings-with-radiobuttons.png" alt-text="Bir TextBlock denetimi ve tasarım yüzeyinde konumlandırılmış iki RadioButton denetimi gösteren Greetings. xaml için tasarım penceresinin ekran görüntüsü.":::
 
-1. Sol  RadioButton denetimine ait Özellikler penceresinde **Name** özelliğini (Özellikler penceresinin en üstünde yer alan **özellik) olarak** `HelloButton` değiştirin.
+1. Sol RadioButton denetimi için **Özellikler** penceresinde, **ad** özelliğini ( **Özellikler** penceresinin üst kısmındaki özellik) olarak değiştirin `HelloButton` .
 
-   :::image type="content" source="media/vs-2022/explore-ide-button-properties.png" alt-text="RadioButton denetimi Özellikler penceresi ekran görüntüsü. Name özelliğinin değeri 'HelloButton' olarak değiştirildi.":::
+   :::image type="content" source="media/vs-2022/explore-ide-button-properties.png" alt-text="Bir RadioButton denetimi için Özellikler penceresi ekran görüntüsü. Name özelliğinin değeri ' HelloButton ' olarak değiştirildi.":::
 
-1. Sağ  RadioButton denetimi için Özellikler penceresinde Name özelliğini olarak **değiştirin** ve `GoodbyeButton` ardından değişikliklerinizi kaydedin.
+1. Sağ RadioButton denetimi için **Özellikler** penceresinde, **ad** özelliğini olarak değiştirin `GoodbyeButton` ve ardından değişikliklerinizi kaydedin.
 
-Ardından, her RadioButton denetimi için görüntüleme metni eksersiniz. Aşağıdaki yordam, RadioButton denetimi için **Content** özelliğini günceller.
+Ardından, her RadioButton denetimi için görüntü metni ekleyeceksiniz. Aşağıdaki yordam bir RadioButton denetimi için **içerik** özelliğini güncelleştirir.
 
 ::: moniker-end
 
-### <a name="add-display-text-for-each-radio-button"></a>Her radyo düğmesi için görüntüleme metni ekleme
+### <a name="add-display-text-for-each-radio-button"></a>Her radyo düğmesi için görüntü metni Ekle
 
-1. XAML'de ve için **Content** `HelloButton` `GoodbyeButton` `"Hello"` `"Goodbye"` özniteliğini güncelleştirin. XAML işaretlemesi artık aşağıdaki örnekteki gibi görünüyor olabilir:
+1. XAML içinde ve için **içerik** özniteliğini `HelloButton` güncelleştirin `GoodbyeButton` `"Hello"` `"Goodbye"` . XAML işaretlemesi artık aşağıdaki örneğe benzer şekilde görünmelidir:
 
    ```xaml
    <Grid>
@@ -272,15 +272,15 @@ Ardından, her RadioButton denetimi için görüntüleme metni eksersiniz. Aşa�
    </Grid>
    ```
 
-### <a name="set-a-radio-button-to-be-checked-by-default"></a>Radyo düğmesini varsayılan olarak denetlenir olarak ayarlayın
+### <a name="set-a-radio-button-to-be-checked-by-default"></a>Radyo düğmesini varsayılan olarak denetlenecek şekilde ayarla
 
-Bu adımda, iki radyo düğmesiden birinin her zaman seçili olması için HelloButton'ın varsayılan olarak denetlenmesi için ayarlayıyoruz.
+Bu adımda, her zaman iki radyo düğmelerinden biri seçili olacak şekilde, Merhaba düğmesini varsayılan olarak denetlenecek şekilde ayarlayacağız.
 
-1. XAML görünümünde HelloButton işaretlemesi bulun.
+1. XAML görünümünde, Merhaba düğmesine yönelik biçimlendirmeyi bulun.
 
-1. **IsChecked özniteliğini** ekleyin ve True olarak **ayarlayın.** Özellikle `IsChecked="True"` ekleyin.
+1. Bir **IsChecked** özniteliği ekleyin ve bunu **true** olarak ayarlayın. Özellikle, ekleyin `IsChecked="True"` .
 
-   XAML işaretlemesi artık aşağıdaki örnekteki gibi görünüyor olabilir:
+   XAML işaretlemesi artık aşağıdaki örneğe benzer şekilde görünmelidir:
 
    ```xaml
    <Grid>
@@ -290,21 +290,21 @@ Bu adımda, iki radyo düğmesiden birinin her zaman seçili olması için Hello
    </Grid>
    ```
 
-Ekley istediğiniz son kullanıcı arabirimi öğesi düğme [denetimidir.](/dotnet/framework/wpf/controls/button)
+Ekleyeceğiniz son UI öğesi bir [düğme](/dotnet/framework/wpf/controls/button) denetimidir.
 
-### <a name="add-the-button-control"></a>Düğme denetimi ekleme
+### <a name="add-the-button-control"></a>Düğme denetimini ekleme
 
 ::: moniker range="vs-2019"
 
-1. Araç **Kutusunda Düğme** **denetimi'ne** tıklayın ve ardından tasarım görünümünde forma sürükleyerek RadioButton denetimlerinin altındaki tasarım yüzeyine ekleyin. Visual Studio 2019 veya sonraki bir 2019 veya sonraki bir 2019 kullanıyorsanız kırmızı çizgi denetimi ortalar.
+1. **Araç kutusunda** **düğme** denetimini bulun ve ardından Tasarım görünümündeki forma sürükleyerek RadioButton denetimlerinin altındaki tasarım yüzeyine ekleyin. Visual Studio 2019 veya sonraki bir sürümü kullanıyorsanız, kırmızı bir çizgi denetimi ortalemenize yardımcı olur.
 
-1. XAML görünümünde, Düğme denetimi **için İçerik** değerini olarak olarak `Content="Button"` `Content="Display"` değiştirerek değişiklikleri kaydedin.
+1. XAML görünümünde düğme denetimi için **içerik** değerini `Content="Button"` olarak değiştirin `Content="Display"` ve ardından değişiklikleri kaydedin.
 
      Pencereniz aşağıdaki gösterime benzemelidir.
 
-     ![Denetim etiketleri içeren Greetings formu](media/exploreide-greetingswithcontrollabels-cs.png "TextBlock denetimi, 'Hello' ve 'Goodbye' etiketli iki RadioButton denetimi ve 'Display' etiketli bir düğmeyi gösteren Greetings.xaml için Tasarım penceresinin ekran görüntüsü.")
+     ![Denetim etiketleriyle Greetings formu](media/exploreide-greetingswithcontrollabels-cs.png "TextBlock denetimi, 'Hello' ve 'Goodbye' etiketli iki RadioButton denetimi ve 'Display' etiketli bir düğmeyi gösteren Greetings.xaml için Tasarım penceresinin ekran görüntüsü.")
 
-   XAML işaretlemesi artık aşağıdaki örnekteki gibi görünüyor olabilir:
+   XAML işaretlemesi artık aşağıdaki örneğe benzer şekilde görünmelidir:
 
    ```xaml
    <Grid>
@@ -319,15 +319,15 @@ Ekley istediğiniz son kullanıcı arabirimi öğesi düğme [denetimidir.](/dot
 
 ::: moniker range=">=vs-2022"
 
-1. Araç **Kutusunda Düğme** **denetimi'ne** tıklayın ve ardından tasarım görünümünde forma sürükleyerek RadioButton denetimlerinin altındaki tasarım yüzeyine ekleyin. Yönergeler, denetimi merkezi bir şekilde ele alamanıza yardımcı olabilir.
+1. **Araç kutusunda** **düğme** denetimini bulun ve ardından Tasarım görünümündeki forma sürükleyerek RadioButton denetimlerinin altındaki tasarım yüzeyine ekleyin. Yönergeler, denetimi ortaetmenize yardımcı olabilir.
 
-1. XAML görünümünde, Düğme denetimi **için İçerik** değerini olarak olarak `Content="Button"` `Content="Display"` değiştirerek değişiklikleri kaydedin.
+1. XAML görünümünde düğme denetimi için **içerik** değerini `Content="Button"` olarak değiştirin `Content="Display"` ve ardından değişiklikleri kaydedin.
 
-     Pencereniz aşağıdaki ekran görüntüsüne benzer.
+     Pencereniz aşağıdaki ekran görüntüsüne benzemelidir.
 
-     :::image type="content" source="media/vs-2022/explore-ide-greetings-with-control-labels-cs.png" alt-text="TextBlock denetimi, 'Hello' ve 'Goodbye' etiketli iki RadioButton denetimi ve 'Display' etiketli bir düğmeyi gösteren Greetings.xaml için Tasarım penceresinin ekran görüntüsü.":::
+     :::image type="content" source="media/vs-2022/explore-ide-greetings-with-control-labels-cs.png" alt-text="Bir TextBlock denetimini gösteren Greetings. xaml için tasarım penceresinin ekran görüntüsü, ' Merhaba ' ve ' güle ' etiketli iki RadioButton denetimi ve ' Display ' etiketli bir düğme.":::
 
-   XAML işaretlemesi artık aşağıdaki örnekteki gibi görünüyor olabilir:
+   XAML işaretlemesi artık aşağıdaki örneğe benzer şekilde görünmelidir:
 
    ```xaml
    <Grid>
@@ -344,11 +344,11 @@ Ekley istediğiniz son kullanıcı arabirimi öğesi düğme [denetimidir.](/dot
 
 ::: moniker range="vs-2019"
 
-Bu uygulama çalıştırıldığında, kullanıcı bir radyo düğmesi seçtikten sonra ve ardından Görüntüle düğmesini seçtikten sonra bir ileti **kutusu** görüntülenir. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings.xaml.cs içinde olayına kod eksersiniz.*
+Bu uygulama çalıştığında, bir Kullanıcı radyo düğmesini seçtikten sonra **görüntüle** düğmesini seçtiğinde bir ileti kutusu görünür. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings. xaml. cs* içindeki olaya kod ekleyeceksiniz.
 
-1. Tasarım yüzeyinde Görüntüle düğmesine **çift** tıklayın.
+1. Tasarım yüzeyinde **görüntüle** düğmesine çift tıklayın.
 
-     *Greetings.xaml.cs* açılır ve olayda imleci `Button_Click` yer alır.
+     *Greetings. xaml. cs* , olayında imleç ile açılır `Button_Click` .
 
     ```csharp
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -376,11 +376,11 @@ Bu uygulama çalıştırıldığında, kullanıcı bir radyo düğmesi seçtikte
 
 ::: moniker range=">=vs-2022"
 
-Bu uygulama çalıştırıldığında, kullanıcı bir radyo düğmesi seçtikten sonra ve ardından Görüntüle düğmesini seçtikten sonra bir ileti **kutusu** görüntülenir. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings.xaml.cs içinde olayına kod eksersiniz.*
+Bu uygulama çalıştığında, bir Kullanıcı radyo düğmesini seçtikten sonra **görüntüle** düğmesini seçtiğinde bir ileti kutusu görünür. Merhaba için bir ileti kutusu ve Güle Güle için bir diğer ileti kutusu görünecektir. Bu davranışı oluşturmak için `Button_Click` *Greetings. xaml. cs* içindeki olaya kod ekleyeceksiniz.
 
-1. Tasarım yüzeyinde Görüntüle düğmesine **çift** tıklayın.
+1. Tasarım yüzeyinde **görüntüle** düğmesine çift tıklayın.
 
-     *Greetings.xaml.cs* açılır ve olayda imleci `Button_Click` yer alır.
+     *Greetings. xaml. cs* , olayında imleç ile açılır `Button_Click` .
 
     ```csharp
     private void Button_Click(object sender, RoutedEventArgs e)
@@ -408,54 +408,54 @@ Bu uygulama çalıştırıldığında, kullanıcı bir radyo düğmesi seçtikte
 
 ## <a name="debug-and-test-the-application"></a>Uygulamanın hatalarını ayıklama ve test etme
 
-Ardından, hataları araması ve her iki ileti kutusuyla da doğru şekilde görünp görünmey olmadığını test etmek için uygulamada hata ayıklayabilirsiniz. Aşağıdaki yönergeler hata ayıklayıcıyı derlemeyi ve başlatmayı söyler, ancak daha sonra daha fazla bilgi için WPF uygulaması [oluşturma (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf) ve [WPF'de](../../debugger/debugging-wpf.md) Hata Ayıklama makalelerini okuyabilirsiniz.
+Sonra, hataları bulmak ve her iki ileti kutusunun doğru şekilde göründüğünü sınamak için uygulamada hata ayıklaması yapacaksınız. Aşağıdaki yönergelerde hata ayıklayıcıyı nasıl derleyip başlatacağınız, ancak daha sonra daha fazla bilgi için WPF [uygulaması (WPF) oluşturma](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf) ve [WPF hata ayıklama](../../debugger/debugging-wpf.md) işlemlerini okuyabilirsiniz.
 
 ### <a name="find-and-fix-errors"></a>Hataları bulma ve düzeltme
 
-Bu adımda, *MainWindow.xaml* dosyasının adını değiştirerek daha önce neden olduğu hatayı bulabilirsiniz.
+Bu adımda, daha önce *MainWindow. xaml* dosyasının adını değiştirerek neden olduğumuz hatayı bulacaksınız.
 
 #### <a name="start-debugging-and-find-the-error"></a>Hata ayıklamayı başlatma ve hatayı bulma
 
 ::: moniker range="vs-2019"
 
-1. F5 tuşuna basarak veya **Hata Ayıkla'ya** ve ardından **Hata Ayıklamayı** **Başlat'ı seçerek hata ayıklayıcıyı başlatma.**
+1. **F5** tuşuna basarak veya **Hata Ayıkla**' yı seçerek hata ayıklayıcıyı başlatın ve ardından **hata ayıklamayı başlatın**.
 
-   Kesme **Modu penceresi** görüntülenir  ve Çıkış penceresi bir IOException olduğunu gösterir: 'mainwindow.xaml' kaynağı bulunamaz.
+   **Kesme modu** penceresi görünür ve **Çıkış** penceresi bir IOException oluştuğunu belirtir: ' MainWindow. xaml ' kaynağı bulunamıyor.
 
    ![IOException iletisi](../media/exploreide-ioexception.png "'Mainwindow.xaml kaynağı bulunamaz' iletisiyle System.IO.IOException'ı gösteren Çıkış penceresinin ekran görüntüsü.")
 
-1. Hata Ayıklama Hata Ayıklamayı **Durdur'u** > **seçerek hata ayıklayıcıyı durdurun.**
+1. Hata ayıklamayı Durdur hata ayıklamayı **Durdur seçeneğini belirleyerek** durdurun > .
 
-Bu öğreticinin başında *MainWindow.xaml* adını *Greetings.xaml* olarak yeniden adlandırıldık, ancak kod yine de *mainWindow.xaml'i* uygulamanın başlangıç URI'si olarak ifade eder ve bu nedenle proje başlatılamaz.
+Bu öğreticinin başlangıcında *MainWindow. xaml* ' i *Greetings. xaml* olarak yeniden adlandırdık, ancak kod yine de uygulama için başlangıç URI 'si olarak *MainWindow. xaml* 'e başvuruyor, bu nedenle proje başlatılamıyor.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2022"
 
-1. F5 tuşuna basarak veya **Hata Ayıkla'ya** ve ardından **Hata Ayıklamayı** **Başlat'ı seçerek hata ayıklayıcıyı başlatma.**
+1. **F5** tuşuna basarak veya **Hata Ayıkla**' yı seçerek hata ayıklayıcıyı başlatın ve ardından **hata ayıklamayı başlatın**.
 
-   Kesme **Modu penceresi** görüntülenir  ve Çıkış penceresi bir IOException olduğunu gösterir: 'mainwindow.xaml' kaynağı bulunamaz.
+   **Kesme modu** penceresi görünür ve **Çıkış** penceresi bir IOException oluştuğunu belirtir: ' MainWindow. xaml ' kaynağı bulunamıyor.
 
-   :::image type="content" source="media/vs-2022/explore-ide-ioexception.png" alt-text="'Mainwindow.xaml kaynağı bulunamaz' iletisiyle System.IO.IOException'ı gösteren Çıkış penceresinin ekran görüntüsü.":::
+   :::image type="content" source="media/vs-2022/explore-ide-ioexception.png" alt-text="System. ıO. IOException ' iletisini gösteren ve ' ' MainWindow. xaml ' kaynağı bulunamıyor.":::
 
-1. Hata Ayıklama Hata Ayıklamayı **Durdur'u** > **seçerek hata ayıklayıcıyı durdurun.**
+1. Hata ayıklamayı Durdur hata ayıklamayı **Durdur seçeneğini belirleyerek** durdurun > .
 
-Bu öğreticinin başında *MainWindow.xaml* adını *Greetings.xaml* olarak yeniden adlandırıldık, ancak kod yine de *mainWindow.xaml'i* uygulamanın başlangıç URI'si olarak ifade eder ve bu nedenle proje başlatılamaz.
+Bu öğreticinin başlangıcında *MainWindow. xaml* ' i *Greetings. xaml* olarak yeniden adlandırdık, ancak kod yine de uygulama için başlangıç URI 'si olarak *MainWindow. xaml* 'e başvuruyor, bu nedenle proje başlatılamıyor.
 
 ::: moniker-end
-#### <a name="specify-greetingsxaml-as-the-startup-uri"></a>Başlangıç URI'si olarak Greetings.xaml belirtin
+#### <a name="specify-greetingsxaml-as-the-startup-uri"></a>Başlangıç URI 'SI olarak Greetings. xaml belirtin
 
-1. Uygulama **Çözüm Gezgini** *App.xaml dosyasını* açın.
+1. **Çözüm Gezgini**' de *app. xaml* dosyasını açın.
 
-1. olarak `StartupUri="MainWindow.xaml"` `StartupUri="Greetings.xaml"` değişiklik yapın ve değişiklikleri kaydedin.
+1. `StartupUri="MainWindow.xaml"`Olarak değiştirin `StartupUri="Greetings.xaml"` ve değişiklikleri kaydedin.
 
-İsteğe bağlı bir adım olarak, uygulama pencerenizin başlığını bu yeni adla eş değiştirecek şekilde değiştirmek karışıklığı önlemektedir.
+İsteğe bağlı bir adım olarak, uygulama pencerenizin başlığını bu yeni adla eşleşecek şekilde değiştirecek karışıklıklara engel olur.
 
-1. Bu **Çözüm Gezgini,** yeni yeniden *adlandırdınız Greetings.xaml* dosyasını açın.
+1. **Çözüm Gezgini**' de, az önce yeniden adlandırdığınız *Greetings. xaml* dosyasını açın.
 
-1. **Window.Title özelliğinin değerini** olarak `Title="MainWindow"` değiştirebilir ve değişiklikleri `Title="Greetings"` kaydedebilirsiniz.
+1. **Window. title** özelliğinin değerini `Title="MainWindow"` olarak değiştirin `Title="Greetings"` ve değişiklikleri kaydedin.
 
-Hata ayıklayıcıyı yeniden başlatma **(F5 tuşuna basın).** Şimdi, uygulamanın **Greetings** penceresini görüyor gerekir.
+Hata ayıklayıcıyı yeniden başlatın ( **F5** tuşuna basın). Şimdi, uygulamanın **Greetings** penceresini görüyor gerekir.
 
 ::: moniker range="vs-2017"
 ![Çalışan uygulamanın ekran görüntüsü](media/exploreide-wpf-running-app.png "TextBlock, RadioButtons ve Button denetimlerinin görünür olduğu Greetings penceresinin ekran görüntüsü. 'Hello' radyo düğmesi seçilidir.")
@@ -491,13 +491,13 @@ Bazı kesme noktaları ekleyerek hata ayıklama sırasında kodu test etmek içi
 
 1. Selamlama **penceresinde** Hello radyo **düğmesini** ve ardından Görüntüle **düğmesini** seçin.
 
-    Satır `MessageBox.Show("Hello.")` sarıyla vurgulanır. IDE'nin alt kısmında, Sol tarafta Otomatikler, Yereller ve İzleme pencereleri bir araya, Çağrı Yığını, Kesme Noktaları, Özel Durum Ayarlar, Komut, Anlık ve Çıkış pencereleri de sağ tarafta bir araya yerleştirildi.
+    Satır `MessageBox.Show("Hello.")` sarıyla vurgulanır. IDE'nin alt kısmında, Sol tarafta Otomatikler, Yereller ve İzleme pencereleri bir araya, Çağrı Yığını, Kesme Noktaları, Özel Durum Ayarlar, Komut, Anlık ve Çıkış pencereleri de sağ tarafta birlikte yer almaktadır.
 
     ![Hata ayıklayıcıda kesme noktası](media/exploreide-debugbreakpoint.png "Visual Studio'da hata ayıklama oturumunun ekran görüntüsü. Greetings.xaml.cs için kod penceresi, yürütmenin bir kesme noktası sırasında durdurulmuş olduğunu ve sarıyla vurgulanmış bir satır olduğunu gösterir.")
 
-1. Menü çubuğunda Hata Ayıkla **Adım Dışarı seçeneğini** > **belirleyin.**
+1. Menü çubuğunda Hata Ayıkla **Adım At'ı** > **seçin.**
 
-     Uygulama yürütmeyi sürdürür ve "Hello" sözcüğüyle bir ileti kutusu görüntülenir.
+     Uygulama yürütmeyi sürdürür ve "Hello" sözcüğüne sahip bir ileti kutusu görüntülenir.
 
 1. kapatmak **için** ileti kutusunda Tamam düğmesini seçin.
 
@@ -509,7 +509,7 @@ Bazı kesme noktaları ekleyerek hata ayıklama sırasında kodu test etmek içi
 
 1. Hata ayıklamayı durdurmak için uygulama penceresini kapatın.
 
-1. Menü çubuğunda Hata Ayıkla Tüm **Kesme Noktaları'nın** > **Devre Dışı Bırak'ı seçin.**
+1. Menü çubuğunda Hata Ayıkla Tüm **Kesme Noktalarında** > **Hata Ayıkla'ya tıklayın.**
 
 ::: moniker-end
 
@@ -527,13 +527,13 @@ Bazı kesme noktaları ekleyerek hata ayıklama sırasında kodu test etmek içi
 
 1. Selamlama **penceresinde** Hello radyo **düğmesini** ve ardından Görüntüle **düğmesini** seçin.
     
-    Satır `MessageBox.Show("Hello.")` sarıyla vurgulanır. IDE'nin alt kısmında, Sol tarafta Otomatikler, Yereller ve İzleme pencereleri bir araya, Çağrı Yığını, Kesme Noktaları, Özel Durum Ayarlar, Komut, Anlık ve Çıkış pencereleri de sağ tarafta bir araya yerleştirildi.
+    Satır `MessageBox.Show("Hello.")` sarıyla vurgulanır. IDE'nin alt kısmında, Sol tarafta Otomatikler, Yereller ve İzleme pencereleri bir araya, Çağrı Yığını, Kesme Noktaları, Özel Durum Ayarlar, Komut, Anlık ve Çıkış pencereleri de sağ tarafta birlikte yer almaktadır.
 
     :::image type="content" source="media/vs-2022/explore-ide-debug-breakpoint.png" alt-text="Visual Studio'da hata ayıklama oturumunun ekran görüntüsü. Greetings.xaml.cs için kod penceresi, yürütmenin bir kesme noktası sırasında durdurulmuş olduğunu ve sarıyla vurgulanmış bir satır olduğunu gösterir.":::
 
-1. Menü çubuğunda Hata Ayıkla **Adım Dışarı seçeneğini** > **belirleyin.**
+1. Menü çubuğunda Hata Ayıkla **Adım At'ı** > **seçin.**
 
-     Uygulama yürütmeyi sürdürür ve "Hello" sözcüğüyle bir ileti kutusu görüntülenir.
+     Uygulama yürütmeyi sürdürür ve "Hello" sözcüğüne sahip bir ileti kutusu görüntülenir.
 
 1. kapatmak **için** ileti kutusunda Tamam düğmesini seçin.
 
@@ -545,7 +545,7 @@ Bazı kesme noktaları ekleyerek hata ayıklama sırasında kodu test etmek içi
 
 1. Hata ayıklamayı durdurmak için uygulama penceresini kapatın.
 
-1. Menü çubuğunda Hata Ayıkla Tüm **Kesme Noktaları'nın** > **Devre Dışı Bırak'ı seçin.**
+1. Menü çubuğunda Hata Ayıkla Tüm **Kesme Noktalarında** > **Hata Ayıkla'ya tıklayın.**
 
 ::: moniker-end
 
@@ -565,11 +565,11 @@ Bazı kesme noktaları ekleyerek hata ayıklama sırasında kodu test etmek içi
 
 Her şeyin çalıştığını doğruladıktan sonra uygulamanın yayın derlemesi hazırlanabilir.
 
-1. Ana menüde, önceki **derlemeler sırasında** oluşturulan ara dosyaları ve çıkış dosyalarını silmek için Derleme Temizleme  >   çözümü'ne tıklayın. Bu adım gerekli değildir, ancak hata ayıklama derleme çıkışlarını temizler.
+1. Ana menüde, önceki **derlemeler sırasında** oluşturulan ara dosyaları ve çıkış dosyalarını silmek için Build  >  **Clean** solution 'ı seçin. Bu adım gerekli değildir, ancak hata ayıklama derleme çıkışlarını temizler.
 
-1. Araç çubuğundaki açılır menü denetimiyle HelloWPFApp derleme yapılandırmasını Hata Ayıklama'dan Sürüm'e (şu anda "Hata Ayıkla" olarak görünür) değiştirebilirsiniz.  
+1. Araç çubuğundaki açılan menü denetimiyle HelloWPFApp derleme yapılandırmasını Hata Ayıklama'dan Sürüm'e (şu anda "Hata Ayıkla" olarak görünür) değiştirebilirsiniz.  
 
-1. Çözümü Derleme **Çözümü'dür'dür'**  >  **seçerek çözümü derleme.**
+1. Çözümü derlemek için Derleme **Çözümü'dür.**  >  
 
 Tebrikler, bu öğreticiyi tamamladıktan sonra! Çözüm ve proje *.exe* (*...\HelloWPFApp\HelloWPFApp\bin\Release*) altında kendi.exedizininizi bulabilirsiniz.
 

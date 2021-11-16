@@ -2,7 +2,7 @@
 title: Visual Studio’da GitHub hesaplarıyla çalışma
 ms.date: 11/16/2020
 ms.custom: ''
-ms.topic: conceptual
+ms.topic: how-to
 description: Visual Studio GitHub hesaplarıyla nasıl kullanacağınızı öğrenin.
 author: anandmeg
 ms.author: meghaanand
@@ -11,12 +11,12 @@ ms.technology: vs-ide-general
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 8d175297f866ed09c00fcc38b635ab1c071f4284
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 9c1926921d6a757933c491765381aa2865f51b11
+ms.sourcegitcommit: bfae1f88c278835e26f3200cfced769be3191fc4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122077939"
+ms.lasthandoff: 11/16/2021
+ms.locfileid: "132535132"
 ---
 # <a name="work-with-github-accounts-in-visual-studio"></a>Visual Studio’da GitHub hesaplarıyla çalışma
 
