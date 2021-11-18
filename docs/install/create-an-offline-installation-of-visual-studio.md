@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 51ba8207b2357681ce92e89c9a51b47cffbcf690
-ms.sourcegitcommit: 76541583274c4af4218ac2a8ab4308077a7e340e
+ms.openlocfilehash: 5cad03cae4baed3aff150b9af613de432f6df87c
+ms.sourcegitcommit: a98fa8a8362525f67824ce52b7e71757f10f1362
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "132733224"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "132736687"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio’nun çevrimdışı yüklemesini oluşturma
 
@@ -95,7 +95,7 @@ Her zaman Geçerli kanalın en son sürümünü yükecek Visual Studio 2022 içi
 ::: moniker range=">=vs-2022"
 
 >[!TIP]
->Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün yüklen kuracaklarını doğrulamak için aşağıdaki şekilde devam edin. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın,  Özellikler'i seçin ve ardından Ayrıntılar **sekmesini** seçin. Ürün **sürümü** alanı, [önyükleyicinin](/visualstudio/releases/2022/vs2022-release-rhythm) yükleyecek kanalı ve sürümü açıklar. Sürüm numarası her zaman "belirtilenin en son bakım sürümü" olarak okunması ve kanal açıkça belirtilmemişse Geçerli olması gerekir. Bu nedenle, LTSC 17.0 Ürün sürümüne sahip bir önyükleyici, 17.0 LTSC kanalında kullanılabilen en son 17.0.x bakım sürümünü yükleyecek. Yalnızca Visual Studio 2022 sürümünün Geçerli kanala Visual Studio 2022'nin en son sürümünü yükley olduğunu söyleyen bir Ürün sürümüne sahip bir önyükleyici.
+>Daha önce bir önyükleyici dosyası indirdiy ve hangi sürümün yüklen kuracaklarını doğrulamak için aşağıdaki şekilde devam edin. Bu Windows' Dosya Gezgini açın, önyükleyici dosyasına sağ tıklayın, Özellikler'i ve ardından Ayrıntılar **sekmesini** seçin.  Ürün **sürümü** alanı, [önyükleyicinin](/visualstudio/releases/2022/vs2022-release-rhythm) yükleyecek kanalı ve sürümü açıklar. Sürüm numarası her zaman "belirtilenin en son bakım sürümü" olarak okunması ve kanal açıkça belirtilmemişse Geçerli olması gerekir. Bu nedenle, LTSC 17.0 Ürün sürümüne sahip bir önyükleyici, 17.0 LTSC kanalında kullanılabilen en son 17.0.x bakım sürümünü yükleyecek. Yalnızca Visual Studio 2022 sürümünün Geçerli kanala Visual Studio 2022'nin en son sürümünü yükley olduğunu söyleyen bir Ürün sürümüne sahip bir önyükleyici.
 
 ::: moniker-end
 
@@ -107,8 +107,6 @@ Bir komut istemi açın ve önyükleyicinin parametrelerini Yerel yükleme önbe
 
 > [!TIP]
 > Bir hatayı önlemek için tam yükleme yol 80 karakterden az olduğundan emin olun.
-
-::: moniker range="<=vs-2019"
 
 - .NET web ve .NET masaüstü geliştirme için şunları çalıştırın:
 ::: moniker range="<=vs-2019"
@@ -237,7 +235,7 @@ c:\localVScache\vs_enterprise.exe --noweb --add Microsoft.VisualStudio.Workload.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Yöneticileri Kılavuzu](https://aka.ms/vs/admin/guide)
-- [Çevrimdışı yükleme için Visual Studio sertifikaları yükleme](../install/install-certificates-for-visual-studio-offline.md)
+- [Visual Studio yöneticileri kılavuzu](https://aka.ms/vs/admin/guide)
+- [Visual Studio çevrimdışı yükleme için gerekli sertifikaları yükleme](../install/install-certificates-for-visual-studio-offline.md)
 - [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 - [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
