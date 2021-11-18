@@ -2,7 +2,7 @@
 title: Metin bul ve Değiştir ve çok şapka seçimi
 description: Bul ve Değiştir özelliği ve bir düzenin örneklerini bulmak ve değiştirmek için nasıl kullanılacağı hakkında bilgi edinin.
 ms.custom: SEO-VS-2020
-ms.date: 11/15/2021
+ms.date: 11/17/2021
 ms.topic: conceptual
 f1_keywords:
 - vs.find
@@ -33,12 +33,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: c0a2abfcca5eca9c3974e3d8fe736f3d8fda7632
-ms.sourcegitcommit: bfae1f88c278835e26f3200cfced769be3191fc4
+ms.openlocfilehash: 01641d8c0680d2245b60c35710ddda42aa6f1ff9
+ms.sourcegitcommit: 76541583274c4af4218ac2a8ab4308077a7e340e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "132535157"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "132733237"
 ---
 # <a name="find-and-replace-text"></a>Metin bulma ve değiştirme
 
@@ -75,7 +75,7 @@ Aramaları geçerli belge, geçerli çözüm veya özel bir klasör kümesiyle k
 
 **Bul** metin kutusunun yanındaki düğmeyi seçerek değiştirme seçeneklerine erişebilirsiniz. Tek seferde bir değiştirme yapmak için, **Değiştir** metin kutusunun yanındaki **Sonrakini Değiştir** düğmesini seçin. Tüm eşleşmeleri değiştirmek için **Tümünü Değiştir** düğmesini seçin.
 
-Eşleşmelerin vurgu rengini değiştirmek için, **Araçlar** menüsünü seçin, **Seçenekler**' i seçin ve ardından **ortam**' ı seçin ve **yazı tipleri ve renkler**' i seçin. **Ayarları göster** listesinde, **metin düzenleyici**' yi seçin ve ardından **öğeleri görüntüle** listesinde, **vurgu bul (uzantı)** öğesini seçin.
+Eşleşmelerin vurgu rengini değiştirmek için, **Araçlar** menüsünü seçin, **Seçenekler**' i seçin ve ardından **ortam**' ı seçin ve **yazı tipleri ve renkler**' i seçin. **Ayarları göster** listesinde, **metin düzenleyici**' yi seçin ve ardından **görüntüleme öğeleri** listesinde, **eşleşen vurgu bul**' u seçin.
 
 ### <a name="search-tool-windows"></a>Arama aracı pencereleri
 
@@ -181,18 +181,18 @@ Birden çok Evcil hayvan seçmek için her zamanki gibi ilk metin seçimini tık
 |**SHIFT** + **Alt** + **.**|Sonraki eşleşen metni seçim olarak ekle|
 |**SHIFT** + **Alt** + **;**|Tüm eşleşen metni seçimler olarak ekle|
 |**SHIFT** + **Alt** + **,**|Son seçili oluşumu kaldır|
-|**SHIFT** + **Alt**+**/**|Sonraki eşleşen oluşumu atla|
-|**Alt** + tıklama|Kutu seçimi Ekle|
-|**ESC** veya tıklama|Tüm Seçimleri Temizle|
+|**SHIFT** + **Alt**+**/**|Sonraki eşleştirme oluşumunu atla|
+|**Alt** + tıklama|Kutu seçimi ekleme|
+|**Esc tuşuna** basın veya tıklayın|Tüm seçimleri temizle|
 
-Bazı komutlardan biri de **düzenleme** menüsünde, **birden çok sepetin** altında bulunur:
+Komutlardan bazıları Düzenle menüsünde, Birden **Çok** **Carets altında da kullanılabilir:**
 
-:::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio içindeki çoklu Evcil hayvan açılan menüsünün ekran görüntüsü":::
+:::image type="content" source="media/edit-menu-multiple-carets-find-replace.png" alt-text="Visual Studio'daki Birden Çok Carets açılır menüsünün ekran Visual Studio":::
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio içindeki normal ifadeleri kullanma](../ide/using-regular-expressions-in-visual-studio.md)
-- [Visual Studio kodu yeniden düzenleme](../ide/refactoring-in-visual-studio.md)
-- [seçimi engelle (Mac için Visual Studio)](/visualstudio/mac/block-selection)
+- [Normal ifadeleri Visual Studio](../ide/using-regular-expressions-in-visual-studio.md)
+- [Kodda yeniden düzenleme Visual Studio](../ide/refactoring-in-visual-studio.md)
+- [Seçimi engelle (Mac için Visual Studio)](/visualstudio/mac/block-selection)

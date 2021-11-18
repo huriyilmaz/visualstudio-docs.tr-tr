@@ -5,12 +5,12 @@ author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 11/08/2021
 ms.assetid: db2dc420-63d2-44ef-bdda-a351561dc900
-ms.openlocfilehash: 387f914bb0294a22fa0e23159206ebab8d8f0ec5
-ms.sourcegitcommit: ac681e983f3b217c3fd9d2a31e3a3ddcc4dd3546
+ms.openlocfilehash: 333f6cb27ef7a3f94556f1e7a7b1caae514292ef
+ms.sourcegitcommit: 76541583274c4af4218ac2a8ab4308077a7e340e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2021
-ms.locfileid: "132042054"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "132733198"
 ---
 # <a name="visual-studio-for-mac-810-and-net-on-apple-silicon-machines"></a>Apple Silicon machines üzerinde 8,10 ve .net Mac için Visual Studio
 
@@ -31,7 +31,7 @@ Apple Silicon machines 'de (M1 veya ARM olarak da bilinir) Mac için Visual Stud
 
     ```bash
     chmod +x dotnet-uninstall-pkgs.sh 
-    sudo ./ dotnet-uninstall-pkgs.sh
+    sudo ./dotnet-uninstall-pkgs.sh
     sudo rm -r /etc/dotnet
     ```  
 

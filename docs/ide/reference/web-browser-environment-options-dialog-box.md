@@ -24,22 +24,27 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e6c44f1a341d6a07691540060e50c2b0c867ae9
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 527163959146545fcf1e8d371bd13804e33d6610
+ms.sourcegitcommit: 76541583274c4af4218ac2a8ab4308077a7e340e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126724887"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "132733172"
 ---
 # <a name="options-dialog-box-environment--web-browser"></a>Seçenekler iletişim kutusu: ortam \> Web tarayıcısı
 
 Hem iç Web tarayıcısı hem de Internet Explorer seçeneklerini ayarlar. Bu iletişim kutusuna erişmek için, **Araçlar** menüsünde **Seçenekler** ' e tıklayın, **ortam** klasörünü genişletin ve **Web tarayıcısı**' nı seçin.
 
-> [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. ayarlarınızı değiştirmek için **araçlar** menüsünden **içeri aktar ve dışarı aktar Ayarlar** seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
+> [!Important]
+> bu özellik Visual Studio 2022 ' de kullanımdan kaldırılmıştır ve ileride desteklenmez.
+>
+> Visual Studio 2022 hakkında daha fazla bilgi için [sürüm notlarımızı]( /visualstudio/releases/2022/release-notes) ve Visual Studio [yol haritasını](/visualstudio/productinfo/vs-roadmap/)inceleyin.
 
 > [!IMPORTANT]
 > Web 'den belirli dosyaları veya bileşenleri açmak, bilgisayarınızda kod yürütebilir.
+
+> [!NOTE]
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. ayarlarınızı değiştirmek için **araçlar** menüsünden **içeri aktar ve dışarı aktar Ayarlar** seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
 
 ## <a name="home-page"></a>Giriş sayfası
 

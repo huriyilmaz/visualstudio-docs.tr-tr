@@ -19,12 +19,12 @@ manager: jmartens
 ms.technology: msbuild
 ms.workload:
 - multiple
-ms.openlocfilehash: f50c3a96b3d2b7ff4d18e28b74ace5f9cd31f522
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: 09390421bbf4a64486ffa59ab91bf361f0227b2b
+ms.sourcegitcommit: 76541583274c4af4218ac2a8ab4308077a7e340e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122069323"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "132733146"
 ---
 # <a name="findinlist-task"></a>FindInList görevi
 
@@ -36,7 +36,7 @@ Belirtilen listede, eşleşen itemspec 'e sahip bir öğe bulur.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`CaseSensitive`|İsteğe bağlı `Boolean` parametre.<br /><br /> `true`Arama büyük/küçük harfe duyarlıdır; Aksi takdirde, değildir. Varsayılan değer `true` olarak belirlenmiştir.|
+|`CaseSensitive`|İsteğe bağlı `Boolean` parametre.<br /><br /> `true`Arama büyük/küçük harfe duyarlıdır; Aksi takdirde, değildir. Varsayılan değer `false` olarak belirlenmiştir.|
 |`FindLastMatch`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer `true` , son eşleşmeyi döndürür; Aksi takdirde, ilk eşleşmeyi döndürün. Varsayılan değer `false` olarak belirlenmiştir.|
 |`ItemFound`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` salt okunurdur çıkış parametresi.<br /><br /> Listede bulunan ilk eşleşen öğe (varsa).|
 |`ItemSpecToFind`|Gerekli `String` parametre.<br /><br /> Arama yapılacak itemspec.|
