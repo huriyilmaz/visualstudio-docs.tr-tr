@@ -3,16 +3,16 @@ title: Team Foundation Sürüm Denetimi (tfvc)
 description: TFVC ve macOS hakkında sorun giderme kılavuzu.
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 09/02/2019
+ms.date: 11/18/2021
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
 ms.topic: troubleshooting
-ms.openlocfilehash: 11b0788317cd0a20dd27159aa241db32e3818daf
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: a477ebf36d3ddb9463de60cbec603d0e39631a12
+ms.sourcegitcommit: a98fa8a8362525f67824ce52b7e71757f10f1362
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725971"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "132736454"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Mac için Visual Studio, Team Foundation Sürüm Denetimi’ni destekler mi?
 

@@ -10,12 +10,12 @@ ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 870bc951d9f05c0075140cca22481685dc88ed01
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: b06a95dba6eed625faa1a7d9343c471423fb25db
+ms.sourcegitcommit: a98fa8a8362525f67824ce52b7e71757f10f1362
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126633449"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "132736545"
 ---
 # <a name="use-bind-mounts"></a>BIND bağlama kullanma
 
@@ -46,14 +46,13 @@ Bir geliştirme iş akışını desteklemek üzere kapsayıcınızı çalıştı
 
 1. Çalışan bir önceki Kapsayıcınız olmadığından emin olun `getting-started` .
 
-1. `getting-started`Klasöründe, aşağıdaki komutu çalıştırın ( ` \ ` karakterleri Windows PowerShell ile değiştirin `` ` `` ). Daha sonra neler olduğunu öğreneceksiniz:
+1. `app`Klasöründe, aşağıdaki komutu çalıştırın ( ` \ ` karakterleri Windows PowerShell ile değiştirin `` ` `` ). Daha sonra neler olduğunu öğreneceksiniz:
 
     ```bash
-    docker run -dp 3000:3000 -w /app -v ${PWD}:/app node:12-alpine sh -c "yarn install && yarn run dev"
+    docker run -dp 3000:3000 -v ${PWD}:/app node:12-alpine sh -c "yarn install && yarn run dev"
     ```
 
     - `-dp 3000:3000` -daha önce olduğu gibi. Ayrılmış (arka plan) modda çalıştır ve bir bağlantı noktası eşlemesi oluştur
-    - `-w /app` -"çalışma dizini" veya komutun çalıştırılacağı geçerli dizini ayarlar
     - `-v ${PWD}:/app"` -Geçerli dizini kapsayıcıdaki konaktan `/app` dizine bağlayın
     - `node:12-alpine` -kullanılacak resim. Bunun, Dockerfile 'dan uygulamanız için temel görüntü olduğunu unutmayın.
     - `sh -c "yarn install && yarn run dev"` -komutu. `sh`(Alçam yok) kullanarak bir kabuk başlatıyoruz `bash` ve `yarn install` *Tüm* bağımlılıkları yüklemek ve ardından çalıştırmak için çalışıyor `yarn run dev` . ' A bakarsanız, `package.json` `dev` betiğin başlatıldığını görüyoruz `nodemon` .

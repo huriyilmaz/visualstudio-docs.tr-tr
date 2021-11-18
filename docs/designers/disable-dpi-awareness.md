@@ -1,30 +1,34 @@
 ---
-title: Visual Studio DPı tanımayı devre dışı bırak
-description: hdpı izleyicilerinde Windows Form Tasarımcısı sınırlamaları ve Visual Studio dpı kullanmayan bir işlem olarak nasıl çalıştıracağınızı açıklar.
-ms.date: 08/30/2021
+title: Formlarda ölçekleme için DPı tanımayı devre dışı bırak
+description: hdpı izleyicilerinde Windows Form Tasarımcısı ölçeklendirme sorunlarını giderin.
+ms.date: 11/30/2021
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
 ms.technology: vs-ide-designers
-ms.topic: conceptual
-ms.openlocfilehash: d56a3650f2dd8df2b314bd80b27b321a68a92a2e
-ms.sourcegitcommit: 0c6cecf1b973a33003d924abeb382f23e62c134d
+ms.topic: how-to
+ms.openlocfilehash: 9dbe397ad9453c834b2614b326d2c4965f3fac34
+ms.sourcegitcommit: a98fa8a8362525f67824ce52b7e71757f10f1362
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "123230384"
+ms.lasthandoff: 11/18/2021
+ms.locfileid: "132736493"
 ---
-# <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio DPı tanımayı devre dışı bırak
+# <a name="disable-dpi-awareness-to-address-scaling-issues-with-windows-forms-designer-in-visual-studio"></a>Visual Studio Windows Form Tasarımcısı ölçeklendirme sorunlarını gidermek için dpı tanımayı devre dışı bırakın
+
+bu makalede, hdpı izleyicilerinde Windows Form Tasarımcısı sınırlamaları ve [Visual Studio dpı kullanmayan bir işlem olarak nasıl çalıştıracağınızı](#resolve-hdpi-display-problems)öğreneceksiniz.
 
 Visual Studio, ekran tarafından otomatik olarak ölçeklendirilirken, inç başına nokta (dpı) kullanan bir uygulamadır. Bir uygulama DPı uyumlu değilse, işletim sistemi uygulamayı bir bit eşlem olarak ölçeklendirir. Bu davranışa Ayrıca DPı Sanallaştırması da denir. Uygulama hala %100 ölçeklendirme veya 96 DPI ' da çalıştığını düşünüyor.
 
-bu makalede, hdpı izleyicilerinde Windows Form Tasarımcısı sınırlamaları ve Visual Studio dpı kullanmayan bir işlem olarak nasıl çalıştırılacağı açıklanmaktadır.
+Aşağıdakileri de yapabilirsiniz:
++ [Windows Forms otomatik olarak ölçeklendir](/dotnet/framework/winforms/automatic-scaling-in-windows-forms) 
++ [Farklı pikseller içeren ekranlar için Işlemeyi en iyileştirme seçeneğini belirleyin (yeniden başlatma gerektirir)](../ide/reference/general-environment-options-dialog-box.md#visual-experience)
 
-## <a name="windows-forms-designer-on-hdpi-monitors"></a>Windows HDPı izleyicilerinde form Tasarımcısı
+## <a name="scaling-windows-forms-designer-on-hdpi-monitors"></a>ölçeklendirme: hdpı izleyicilerinde Windows Form Tasarımcısı
 
 Visual Studio **Windows Form Tasarımcısı** ölçeklendirme desteği yok. bu, yüksek nokta başına (hdpi) izleyicilerinde **Windows Form Tasarımcısı** bazı formları açtığınızda sorunları görüntüler. Örnekler için aşağıdaki görüntüde gösterildiği gibi denetimler örtüşme gibi görünebilir:
 
-![Windows HDPı izleyici üzerinde form Tasarımcısı](./media/win-forms-designer-hdpi.png)
+![hdpı izleyici üzerinde Windows Form Tasarımcısı](./media/win-forms-designer-hdpi.png)
 
 bir hdpı izleyicisinde Visual Studio **Windows Form Tasarımcısı** bir form açtığınızda Visual Studio tasarımcının en üstünde sarı bir bilgi çubuğu görüntüler:
 
@@ -35,9 +39,9 @@ bir hdpı izleyicisinde Visual Studio **Windows Form Tasarımcısı** bir form a
 > [!NOTE]
 > bu bilgi çubuğu Visual Studio 2017 sürüm 15,8 ' de kullanıma sunulmuştur.
 
-Tasarımcıda çalışmıyorsanız ve formunuzun yerleşimini ayarlamanız gerekmiyorsa, bilgi çubuğunu yoksayabilirsiniz ve kod düzenleyicisinde veya diğer tasarımcı türlerinde çalışmaya devam edebilirsiniz. (Bilgi çubuğu görünmeye devam etmeden de [bildirimleri devre dışı](#disable-notifications) bırakabilirsiniz.) yalnızca **Windows Form Tasarımcısı** etkilenir. **Windows Form Tasarımcısı** çalışmanız gerekiyorsa, sonraki bölümde [sorunu çözmenize](#to-resolve-the-display-problem)yardımcı olur.
+Tasarımcıda çalışmıyorsanız ve formunuzun yerleşimini ayarlamanız gerekmiyorsa, bilgi çubuğunu yoksayabilirsiniz ve kod düzenleyicisinde veya diğer tasarımcı türlerinde çalışmaya devam edebilirsiniz. (Bilgi çubuğu görünmeye devam etmeden de [bildirimleri devre dışı](#disable-notifications) bırakabilirsiniz.) yalnızca **Windows Form Tasarımcısı** etkilenir. **Windows Form Tasarımcısı** çalışmanız gerekiyorsa, sonraki bölümde [sorunu çözmenize](#resolve-hdpi-display-problems)yardımcı olur.
 
-## <a name="to-resolve-the-display-problem"></a>Görüntü sorununu çözmek için
+## <a name="resolve-hdpi-display-problems"></a>HDPı görüntüleme sorunlarını çözme
 
 Görüntü sorununu çözmek için üç seçenek vardır:
 
@@ -64,16 +68,16 @@ Visual Studio, dpı kullanmayan bir işlem olarak çalıştığında, tasarımc�
 
 kayıt defterini değiştirerek Visual Studio dpı duyarsız olarak işaretleyebilirsiniz. **Kayıt defteri Düzenleyicisi 'ni** açın ve **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** alt anahtarına bir giriş ekleyin:
 
-**giriş**: Visual Studio 2017 veya 2019 ' i kullanıp kullanmayacağınızı bağlı olarak, şu değerlerden birini kullanın:
+**giriş**: Visual Studio 2017, 2019 veya 2022 ' ı kullanıp kullanmayacağınızı bağlı olarak, şu değerlerden birini kullanın:
 
 - C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 - C:\Program Files (x86) \Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+- C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe
 
 > [!NOTE]
 > Visual Studio Professional veya Enterprise sürümünü kullanıyorsanız, **Community** , girişte **Professional** veya **Enterprise** ile değiştirin. Ayrıca, sürücü harfini gereken şekilde değiştirin.
 
-**Tür**: REG_SZ
-
+**Tür**: REG_SZ <br>
 **Değer**: dpiduyarsız
 
 > [!NOTE]
@@ -89,7 +93,9 @@ Ekran ölçeklendirmesinin %100 olarak ayarlanması, Kullanıcı arabirimini kul
 
 Visual Studio DPı ölçeklendirme sorunları hakkında bildirim almak zorunda değilsiniz seçeneğini belirleyebilirsiniz. Örneğin, tasarımcıda çalışmıyorsanız bildirimleri devre dışı bırakmak isteyebilirsiniz.
 
-Bildirimleri devre dışı bırakmak için   >  **Seçenekler** iletişim kutusunu açmak üzere Araçlar **Seçenekler** ' i seçin. ardından **Windows Form Tasarımcısı**  >  **genel**' i seçin ve **dpı ölçeklendirme bildirimleri** ' ni **False** olarak ayarlayın.
+Bildirimleri devre dışı bırakmak için:
+1.   >  **Seçenekler** iletişim kutusunu açmak için Araçlar **Seçenekler** ' i seçin. 
+2. **Windows Form Tasarımcısı**  >  **genel**' i seçin ve **dpı ölçeklendirme bildirimleri** ' ni **False** olarak ayarlayın.
 
 ![Visual Studio DPı ölçeklendirme bildirimleri seçeneği](./media/notifications-option.png)
 
@@ -98,8 +104,3 @@ Bildirimleri devre dışı bırakmak için   >  **Seçenekler** iletişim kutusu
 ## <a name="troubleshoot"></a>Sorun giderme
 
 dpı tanıma geçişi Visual Studio beklendiği gibi çalışmıyorsa, `dpiAwareness` kayıt defteri düzenleyicisi 'nde **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe** alt anahtarında değerin olup olmadığını denetleyin. Varsa değeri silin.
-
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Windows Forms otomatik ölçeklendirme](/dotnet/framework/winforms/automatic-scaling-in-windows-forms)
-- [Visual Studio ile daha iyi bir Çoklu izleme deneyimi](https://devblogs.microsoft.com/visualstudio/a-better-multi-monitor-experience-with-visual-studio-2019/)
