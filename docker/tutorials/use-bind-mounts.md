@@ -10,12 +10,12 @@ ms.custom: contperf-fy22q1
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: b06a95dba6eed625faa1a7d9343c471423fb25db
-ms.sourcegitcommit: a98fa8a8362525f67824ce52b7e71757f10f1362
+ms.openlocfilehash: 1d6d3ea6217b49b9a4fc0c8be96718b12163da4c
+ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/18/2021
-ms.locfileid: "132736545"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132879777"
 ---
 # <a name="use-bind-mounts"></a>BIND bağlama kullanma
 

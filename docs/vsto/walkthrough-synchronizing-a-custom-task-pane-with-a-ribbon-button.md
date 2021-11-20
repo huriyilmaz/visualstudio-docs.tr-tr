@@ -26,12 +26,12 @@ manager: jmartens
 ms.technology: office-development
 ms.workload:
 - office
-ms.openlocfilehash: e76b25516001143842422481eb6055be95a99178
-ms.sourcegitcommit: 68897da7d74c31ae1ebf5d47c7b5ddc9b108265b
+ms.openlocfilehash: b193e89001e0359f5cbf820f05dd3d72fc5ee9c1
+ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "122135591"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132879980"
 ---
 # <a name="walkthrough-synchronize-a-custom-task-pane-with-a-ribbon-button"></a>İzlenecek yol: özel görev bölmesini Şerit düğmesi ile senkronize etme
   Bu izlenecek yol, Şeritteki iki durumlu düğmeye tıklayarak kullanıcıların gizleyebileceğiniz veya görüntüleyeceği özel bir görev bölmesi oluşturmayı gösterir. Microsoft Office uygulamalar, kullanıcıların özel görev bölmelerini göstermek veya gizlemek için varsayılan bir yol sağlamadığından, bir düğme gibi her zaman bir kullanıcı arabirimi (uı) öğesi oluşturmalısınız.
@@ -127,7 +127,7 @@ ms.locfileid: "122135591"
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet3":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet3":::
 
-6. Sınıfına aşağıdaki özelliği ekleyin `ThisAddIn` . Bu özellik özel `myCustomTaskPane1` nesneyi diğer sınıflara gösterir. Bu izlenecek yolda daha sonra `MyRibbon` Bu özelliği kullanan sınıfa kod ekleyeceksiniz.
+6. Sınıfına aşağıdaki özelliği ekleyin `ThisAddIn` . Bu özellik özel `taskPaneValue` nesneyi diğer sınıflara gösterir. Bu izlenecek yolda daha sonra `MyRibbon` Bu özelliği kullanan sınıfa kod ekleyeceksiniz.
 
      :::code language="csharp" source="../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs" id="Snippet4":::
      :::code language="vb" source="../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb" id="Snippet4":::

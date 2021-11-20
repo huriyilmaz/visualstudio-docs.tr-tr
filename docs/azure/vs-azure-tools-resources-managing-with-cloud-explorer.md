@@ -8,25 +8,25 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: eba0fbc1dc2cb6feced3e52f3f4b6dfbce1fa1d4
-ms.sourcegitcommit: 7a820b7698a8dcf076eb36e3d766fb0751f56bb1
+ms.openlocfilehash: bd80d022a71e1c5a13d084c477458537bc2330b6
+ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "131126538"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132879803"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Visual Studio Cloud Explorer'da Azure hizmetlerinizle ilişkilendirilmiş kaynakları yönetme
 
 ::: moniker range=">=vs-2022"
 > [!Important]
 > Cloud Explorer, 2022'Visual Studio kaldırıldı. Bunun yerine aşağıdaki alternatifleri kullanabilirsiniz:
-> - [Microsoft Microsoft Azure Depolama Gezgini](/azure/vs-azure-tools-storage-manage-with-storage-explorer) ücretsiz ve tek başına bir uygulama olan bu uygulamayı kullanın. Azure, macOS ve Linux'ta azure Depolama verileriyle Windows için kullanabilirsiniz.
-> - Azure İşlevi uygulamasında Azure App Service ayıklamak için Bağlı Hizmetler'i veya tüm projelerde kullanılabilen Yayımla özelliğini kullanabilirsiniz. Yayımlama için Visual Studio bağlıysanız, bu seçenek barındırma bölümündeki ek seçeneklerin altında kullanılabilir. Yayımlama özelliğini kullanamıyorsanız Bağlı Hizmet sekmesinden herhangi bir Azure App Service veya Azure İşlevi uygulamasına bağlanabilir ve uzaktan hata ayıklama, uzak profil, siteyi başlatma/durdurma, akış günlüklerini görüntüleme gibi çeşitli işlemleri çağırabilirsiniz. 
+> - [Microsoft Microsoft Azure Depolama Gezgini](/azure/vs-azure-tools-storage-manage-with-storage-explorer) ücretsiz ve tek başına bir uygulama olan bu uygulamayı kullanın. Azure, macOS ve Linux'ta azure Depolama verileriyle görsel Windows için kullanabilirsiniz.
+> - Azure İşlevi uygulamasında Azure App Service ayıklamak için Bağlı Hizmetler'i veya tüm projelerde kullanılabilen Yayımla özelliğini kullanabilirsiniz. Yayımlama için Visual Studio bağlıysanız, bu seçenek barındırma bölümündeki ek seçenekler altında kullanılabilir. Yayımlama özelliğini kullanamıyorsanız, Bağlı Hizmet sekmesinden herhangi bir Azure App Service veya Azure İşlevi uygulamasına bağlanabilir ve uzaktan hata ayıklama, uzak profil, siteyi başlatma/durdurma, akış günlüklerini görüntüleme gibi çeşitli işlemleri çağırabilirsiniz. 
 > - [Kudu konsolu,](https://github.com/projectkudu/kudu/wiki/Kudu-console) App Service sunucusuna ve dosya sistemine doğrudan, yükseltilmiş komut satırı erişimi verir. Bu hem değerli bir hata ayıklama aracıdır hem de paketleri yükleme gibi CLI işlemlerine olanak sağlar.
 >
-> Gerekirse, Azure Portalı'Sunucu Gezgini önceki sürümlerde azure düğümünü kullanmaya devam Visual Studio.
+> Gerekirse, Azure Portalını kullanabilir veya önceki sürümlerde Sunucu Gezgini Azure düğümünü kullanmaya Visual Studio.
 >
-> 2022'Visual Studio daha fazla bilgi için sürüm [notlarımıza bakın.](/visualstudio/releases/2022/release-notes-preview/)
+> 2022'Visual Studio daha fazla bilgi için sürüm [notlarımıza bakın.](/visualstudio/releases/2022/release-notes/)
 
 ::: moniker-end
 
@@ -86,14 +86,14 @@ Azure kaynaklarınızı görüntülemek için Kaynak Türleri veya **Kaynak Grup
 
 1. Bulut **Gezgini'nde** kaynak görünümü açılan listesinden öğesini seçin.
 
-   ![İstenen kaynaklar görünümünü seçmek için Bulut Gezgini açılan listesi](./media/vs-azure-tools-resources-managing-with-cloud-explorer/resources-view-dropdown.png)
+   ![İstenen kaynaklar görünümünü seçmek için Cloud Explorer açılan listesi](./media/vs-azure-tools-resources-managing-with-cloud-explorer/resources-view-dropdown.png)
 
 1. Bağlam menüsünden istediğiniz görünümü seçin:
 
    * **Kaynak Türleri** görünümü - Azure portal'da kullanılan genel görünüm, Azure kaynaklarınızı web uygulamaları, depolama hesapları ve sanal makineler gibi türlerine göre kategorilere ayrılmış şekilde gösterir. [](https://portal.azure.com)
-   * **Kaynak Grupları** görünümü - Azure kaynaklarını ilişkili olduğu Azure kaynak grubuna göre kategorilere ayrılmıştır. Kaynak grubu, genellikle belirli bir uygulama tarafından kullanılan bir Azure kaynakları paketidir. Azure kaynak grupları hakkında daha fazla bilgi edinmek için bkz. [Azure Resource Manager Genel Bakış.](/azure/azure-resource-manager/resource-group-overview)
+   * **Kaynak Grupları** görünümü - Azure kaynaklarını ilişkili olduğu Azure kaynak grubuna göre kategorilere ayrılmıştır. Kaynak grubu, genellikle belirli bir uygulama tarafından kullanılan bir Azure kaynakları paketidir. Azure kaynak grupları hakkında daha fazla bilgi edinmek için [bkz. Azure Resource Manager Genel Bakış.](/azure/azure-resource-manager/resource-group-overview)
 
-   Aşağıdaki görüntüde, iki kaynak görüntüsünün karşılaştırması ve bir karşılaştırması bulunmaktadır:
+   Aşağıdaki görüntüde iki kaynak görüntüsünün karşılaştırması yer alenidir:
 
    ![Cloud Explorer kaynak görünümlerini karşılaştırma](./media/vs-azure-tools-resources-managing-with-cloud-explorer/resource-views-comparison.png)
 
@@ -109,7 +109,7 @@ Aşağıdaki görüntüde, bir uygulama için her sekmede gördüğünüzlerin �
 
   ![Bulut Gezgini'nin ekran görüntüsü](./media/vs-azure-tools-resources-managing-with-cloud-explorer/actions-and-properties.png)
 
-Her kaynağın **Portalda aç eylemi vardır.** Bu eylemi seçtiğiniz zaman, Bulut Gezgini seçilen kaynağı [Azure portal.](https://portal.azure.com) Portalda **aç** özelliği, iç içe geçmiş kaynaklara gezinmek için kullanışlıdır.
+Her kaynağın **Portalda aç eylemi vardır.** Bu eylemi seçtiğiniz zaman, Cloud Explorer seçilen kaynağı [Azure portal.](https://portal.azure.com) Portalda **aç** özelliği, iç içe geçmiş kaynaklara gezinmek için kullanışlıdır.
 
 Azure kaynağına bağlı olarak ek eylemler ve özellik değerleri de görünebilir. Örneğin, web uygulamaları ve mantıksal uygulamalarda  Portalda  aç'a ek olarak Tarayıcıda aç ve Hata ayıklayıcı ekle **eylemleri de vardır.** Bir depolama hesabı blobu, kuyruğu veya tablosu seçtiğiniz zaman düzenleyicileri açma eylemleri görüntülenir. Azure uygulamaları **URL ve** Durum **özelliklerine** sahipken depolama kaynakları anahtar ve bağlantı dizesi özelliklerine sahiptir.
 

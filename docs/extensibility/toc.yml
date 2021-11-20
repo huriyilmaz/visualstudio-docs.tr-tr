@@ -9,7 +9,7 @@
       href: starting-to-develop-visual-studio-extensions.md
     - name: 'İlk Uzantınızı Oluşturma: Merhaba Dünya'
       href: extensibility-hello-world.md
-    - name: Visual Studio 2022 uzantıları güncelleştirme (önizleme)
+    - name: Visual Studio 2022 uzantıları güncelleştirme
       items:
         - name: Uzantıyı güncelleştirme
           href: migration/update-visual-studio-extension.md
@@ -65,7 +65,7 @@
           href: workspace-indexing.md
         - name: Dil hizmetleri
           href: workspace-language-services.md
-        - name: Oluşturma
+        - name: Derleme
           href: workspace-build.md
     - name: Menüleri ve Komutları Genişletme
       items:
@@ -547,7 +547,7 @@
               href: private-galleries.md
             - name: Özel Bir Galeri için Atom Akışı Oluşturma
               href: how-to-create-an-atom-feed-for-a-private-gallery.md
-            - name: VsixUtil ile Özel Galeri için ATOM akışı (VsixFeed) oluşturma
+            - name: Valtutil ile özel galeri için bir ATOM akışı (Valtfeed) oluşturma
               href: how-to-create-vsix-feed-for-private-gallery.md
             - name: Bir Özel Galeriyi Kayıt Defteri Ayarlarını Kullanarak Yönetme
               href: how-to-manage-a-private-gallery-by-using-registry-settings.md

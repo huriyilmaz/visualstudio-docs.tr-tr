@@ -11,16 +11,14 @@ monikerRange: vs-2022
 ms.workload:
 - vssdk
 feedback_system: GitHub
-ms.openlocfilehash: a7ddc0502310098c6076076fdcabf623f3aaf466
-ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+ms.openlocfilehash: 79ab6bca8437017a2a1ec781407e89a343527050
+ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132001497"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132880050"
 ---
 # <a name="sdk-reference-packages"></a>SDK başvuru paketleri
-
-[!INCLUDE [preview-note](../includes/preview-note.md)]
 
 Visual Studio uzantıları yazmak için en kolay yol, [ `Microsoft.VisualStudio.Sdk` NuGet paketine](https://www.nuget.org/packages/microsoft.visualstudio.sdk)yönelik bir başvurudur.
 bu paket, Visual Studio 2017 (15,0), Visual Studio 2019 (16,0, 16,9) ve artık Visual Studio 2022 hedefleyecek şekilde kullanılabilir.

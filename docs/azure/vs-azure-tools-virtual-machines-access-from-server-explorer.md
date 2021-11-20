@@ -8,12 +8,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: 689317f3789188a4551aaee588d7f0c006bcb4f7
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 30a89415c082d4b2c1a7e2922fa964595b67ebe3
+ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126632997"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132879856"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>Sunucu Gezgini'nden Azure Sanal Makineler'e erişme
 
@@ -23,7 +23,7 @@ ms.locfileid: "126632997"
 >
 > ayrıca, Microsoft 'tan ücretsiz ve tek başına bir uygulama [Microsoft Azure Depolama Gezgini](/azure/vs-azure-tools-storage-manage-with-storage-explorer) . Windows, macos ve Linux 'ta Azure Depolama verileriyle görsel olarak çalışmak için bu uygulamayı kullanabilirsiniz.
 >
-> Visual Studio 2022 hakkında daha fazla bilgi için [sürüm notlarımıza](/visualstudio/releases/2022/release-notes-preview/)bakın.
+> Visual Studio 2022 hakkında daha fazla bilgi için [sürüm notlarımıza](/visualstudio/releases/2022/release-notes/)bakın.
 
 ::: moniker-end
 

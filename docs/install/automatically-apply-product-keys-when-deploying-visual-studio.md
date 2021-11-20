@@ -11,23 +11,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 3f3930744ad99f301660ddb8e395fa61f4ea79fd
-ms.sourcegitcommit: 215680b355cf613bfa125cf6b864c8bb5f2c71a5
+ms.openlocfilehash: 55e1b6c502b574dd647ef7718eb9cb861d20c3f6
+ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "132453431"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132879711"
 ---
 # <a name="automatically-apply-product-keys-when-deploying-visual-studio"></a>Visual Studio’yu dağıtırken ürün anahtarlarını otomatik olarak uygulama
 
 Visual Studio dağıtımını otomatik hale getirmek için kullanılan bir betiğin parçası olarak ürün anahtarınızı programlı bir şekilde uygulayabilirsiniz. bir Visual Studio yüklemesi sırasında veya bir yükleme tamamlandıktan sonra, bir cihazda bir ürün anahtarı programlama yoluyla ayarlayabilirsiniz.
-
-::: moniker range=">=vs-2022"
-
-> [!IMPORTANT]
-> Visual Studio 2022 şu anda önizlemededir ve önizleme dönemi boyunca 2022 Visual Studio ürün anahtarının uygulanmasını gerektirmeyen bir değerlendirme lisansında kullanılabilir.
-
-::: moniker-end
 
 ::: moniker range="vs-2017"
 
@@ -70,6 +63,26 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE
  ```
 
 ::: moniker-end
+:::moniker range="vs-2022"
+
+## <a name="apply-the-license-after-installation"></a>Yüklemeden sonra lisansı Uygula
+
+bir Visual Studio yüklü sürümünü `StorePID.exe` , hedef makinelerdeki yardımcı programını sessiz modda kullanarak bir ürün anahtarıyla etkinleştirebilirsiniz. `StorePID.exe`, aşağıdaki varsayılan konumda Visual Studio 2022 ile yüklenen bir yardımcı programdır:
+
+```shell
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE
+```
+
+ `StorePID.exe`System Center aracısı veya yükseltilmiş bir komut istemi kullanarak yükseltilmiş ayrıcalıklarla çalıştırın. Ürün anahtarı ve Microsoft ürün kodu (MPC) ile birlikte izleyin.
+
+>[!IMPORTANT]
+> Ana çizgileri ürün anahtarına eklediğinizden emin olun.
+
+ ```shell
+ StorePID.exe [product key including the dashes] [MPC]
+ ```
+
+::: moniker-end
 
 ::: moniker range="vs-2017"
 
@@ -77,6 +90,16 @@ aşağıdaki örnek, mpc/08860, ürün anahtarı `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEE
 
 ```shell
 "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\StorePID.exe" AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 08860
+```
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+aşağıdaki örnek, mpc/09660, ürün anahtarı `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE` ve varsayılan yükleme konumunu varsayan Visual Studio 2022 Enterprise için lisans uygulamak için bir komut satırı gösterir:
+
+```shell
+"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\StorePID.exe" AAAAA-BBBBB-CCCCC-DDDDDD-EEEEEE 09660
 ```
 
 ::: moniker-end
@@ -100,6 +123,15 @@ aşağıdaki örnek, mpc/09260, ürün anahtarı `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEE
 | Visual Studio Enterprise 2017        | 08860 |
 | Visual Studio Professional 2017      | 08862 |
 | Visual Studio Test Uzmanı 2017 | 08866 |
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+| Visual Studio sürümü                | MPC   |
+|--------------------------------------|-------|
+| Visual Studio Enterprise 2022        | 09660 |
+| Visual Studio Professional 2022      | 09662 |
 
 ::: moniker-end
 
@@ -132,6 +164,25 @@ aşağıdaki örnek, mpc/09260, ürün anahtarı `AAAAA-BBBBB-CCCCC-DDDDDD-EEEEE
 ::: moniker-end
 
 ::: moniker range="vs-2019"
+
+`StorePID.exe`Ürün anahtarı başarıyla geçerliyse, 0 değerini döndürür `%ERRORLEVEL%` . Hatalarla karşılaşırsa, hata koşuluna bağlı olarak aşağıdaki kodlardan birini döndürür:
+
+| Hata                     | Kod |
+|---------------------------|------|
+| `PID_ACTION_SUCCESS`      | 0    |
+| `PID_ACTION_NOTINSTALLED` | 1    |
+| `PID_ACTION_INVALID`      | 2    |
+| `PID_ACTION_EXPIRED`      | 3    |
+| `PID_ACTION_INUSE`        | 4    |
+| `PID_ACTION_FAILURE`      | 5    |
+| `PID_ACTION_NOUPGRADE`    | 6    |
+
+> [!NOTE]
+> bir Visual Studio sanal örneğini çalıştırdığınızda, yerel AppData klasörünü ve kayıt defterini de sanallaştırdığınızdan emin olun. Sanal örneklerin sorunlarını gidermek için, öğesini çalıştırın `<Visual Studio installation directory>\Common7\IDE\DDConfigCA.exe` .  
+
+::: moniker-end
+
+::: moniker range="vs-2022"
 
 `StorePID.exe`Ürün anahtarı başarıyla geçerliyse, 0 değerini döndürür `%ERRORLEVEL%` . Hatalarla karşılaşırsa, hata koşuluna bağlı olarak aşağıdaki kodlardan birini döndürür:
 

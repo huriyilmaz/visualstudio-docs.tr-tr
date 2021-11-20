@@ -13,12 +13,12 @@ ms.technology: vs-xaml-tools
 ms.workload:
 - multiple
 monikerRange: vs-2022
-ms.openlocfilehash: 0f5839bc7f05afb4f4e91db4608a9b30687aca8d
-ms.sourcegitcommit: 67dc39e93c86ba50eb5ca877b0471fb8ab8475ac
+ms.openlocfilehash: ba6d69f631c89d933633a7b1262cd3081002b54b
+ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132002620"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132879745"
 ---
 # <a name="xaml-live-preview-capture-and-edit-desktop-app-ui"></a>XAML canlı önizlemesi: masaüstü uygulaması kullanıcı arabirimini yakalama ve düzenleme
 
@@ -106,8 +106,8 @@ Visual Studio 2022 ' nin ilk sürümü aşağıdaki platformları ve hata ayıkl
 |WPF      |Yes         |Yes         |
 |UWP      |Yes         |Yes         |
 |WinUI3 Masaüstü     |Hayır         |Yes         |
-|MAUı (Android Emulator)     |Hayır         |Evet (px *)         |
-|Xamarin 5.0 + (Android Emulator)     |Hayır          |Evet (px *)         |
+|MAUı (Android Emulator)     |No         |Evet (px *)         |
+|Xamarin 5.0 + (Android Emulator)     |No          |Evet (px *)         |
 
 > [!NOTE]
 > Yukarıdaki tabloda, (* * px * * *) piksel cinsinden görüntülenen cetvelleri belirtir; diğer tüm platformlar, bir izleyicinin DPI 'sını temel alan platform birimlerinde bilgi görüntüler.
@@ -125,4 +125,4 @@ Xaml canlı önizleme ile yakından birlikte bulunan [xaml dinamik yeniden yükl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Visual Studio 2022 sürüm notları](/visualstudio/releases/2022/release-notes-preview)
+[Visual Studio 2022 sürüm notları](/visualstudio/releases/2022/release-notes)

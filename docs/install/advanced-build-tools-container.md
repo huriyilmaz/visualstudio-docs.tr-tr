@@ -1,6 +1,6 @@
 ---
 title: Kapsayıcılar için gelişmiş örnek
-description: Docker kapsayıcıları için gelişmiş bir örnek hakkında bilgi edinin. Bu örnek Dockerfile, microsoft/dotnet-framework görüntüsünün belirli bir sürüm etiketini kullanır.
+description: Docker kapsayıcıları için gelişmiş bir örnek hakkında bilgi edinin. Bu örnek Dockerfile, Microsoft/DotNet-Framework görüntüsünün belirli bir sürüm etiketini kullanır.
 ms.custom: SEO-VS-2020
 ms.date: 09/21/2021
 ms.topic: conceptual
@@ -12,44 +12,37 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 4b418277dbac0ba6d61b7c426139f74b62f66f0e
-ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
+ms.openlocfilehash: 0584944c49fa143803f463f49d8f6381a4f04bfa
+ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "132264197"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132880088"
 ---
 # <a name="advanced-example-for-containers"></a>Kapsayıcılar için gelişmiş örnek
 
 ::: moniker range="vs-2017"
 
-Kapsayıcıya Derleme Araçları [](build-tools-container.md) Yükleme'de örnek Dockerfile her zaman en son microsoft/windowsservercore görüntüsünü ve en son Visual Studio Derleme Araçları yükleyicisini temel alan [microsoft/dotnet-framework:4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) görüntüsünü kullanır. Bu görüntüyü başkalarının çekmesi için [bir Docker](https://azure.microsoft.com/services/container-registry) kayıt defterine yayımlarsanız, bu görüntü birçok senaryoda uygun olabilir. Ancak uygulamada, hangi temel görüntüyü kullanmakta olduğunu, hangi ikili dosyaları indirtiğiniz ve hangi araç sürümlerini yükleytiğiniz hakkında daha yaygın bir şekilde bilgi edinebilirsiniz.
-
-::: moniker-end
-
-::: moniker range=">=vs-2022"
-
->[!IMPORTANT]
-> Visual Studio 2022 şu anda önizlemededir ve [üretim ortamlarında](https://visualstudio.microsoft.com/license-terms/vs2022-prerelease/) kullanım için lisanslı değildir.
+[derleme araçlarını bir kapsayıcıya yükleyen](build-tools-container.md) örnek dockerfile, her zaman en son microsoft/windowsservercore görüntüsüne ve en son Visual Studio Derleme Araçları yükleyiciye göre [microsoft/dotnet-framework: 4.7.2](https://hub.docker.com/r/microsoft/dotnet-framework) görüntüsünü kullanır. Bu görüntüyü başkalarının çekmesini sağlamak için bir [Docker kayıt defterine](https://azure.microsoft.com/services/container-registry) yayımlarsanız, bu görüntü pek çok senaryo için sorunsuz olabilir. Bununla birlikte, uygulamada hangi temel görüntü, hangi ikililerin indirileceği ve hangi araç sürümlerinin yükleneceğini öğrenmek daha yaygındır.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Kapsayıcıya Derleme Araçları [](build-tools-container.md) Yükleme'de örnek Dockerfile her zaman en son microsoft/windowsservercore görüntüsünü ve en son Visual Studio Derleme Araçları yükleyicisini temel alan [microsoft/dotnet-framework:4.8](https://hub.docker.com/r/microsoft/dotnet-framework) görüntüsünü kullanır. Bu görüntüyü başkalarının çekmesi için [bir Docker](https://azure.microsoft.com/services/container-registry) kayıt defterine yayımlarsanız, bu görüntü birçok senaryoda uygun olabilir. Ancak uygulamada, hangi temel görüntüyü kullanmakta olduğunu, hangi ikili dosyaları indirtiğiniz ve hangi araç sürümlerini yükleytiğiniz hakkında daha yaygın bir şekilde bilgi edinebilirsiniz.
+[derleme araçlarını bir kapsayıcıya yükleyen](build-tools-container.md) örnek dockerfile, her zaman en son microsoft/windowsservercore görüntüsüne ve en son Visual Studio Derleme Araçları yükleyiciye göre [microsoft/dotnet-framework: 4.8](https://hub.docker.com/r/microsoft/dotnet-framework) görüntüsünü kullanır. Bu görüntüyü başkalarının çekmesini sağlamak için bir [Docker kayıt defterine](https://azure.microsoft.com/services/container-registry) yayımlarsanız, bu görüntü pek çok senaryo için sorunsuz olabilir. Bununla birlikte, uygulamada hangi temel görüntü, hangi ikililerin indirileceği ve hangi araç sürümlerinin yükleneceğini öğrenmek daha yaygındır.
 
 ::: moniker-end
 
-Aşağıdaki örnek Dockerfile, microsoft/dotnet-framework görüntüsünün belirli bir sürüm etiketini kullanır. Temel görüntü için belirli bir etiketin kullanımı yaygın bir durum değildir ve görüntüleri oluşturmanın veya yeniden oluşturmanın her zaman aynı temele sahip olduğunu hatırlamayı kolaylaştırır.
+Aşağıdaki örnek Dockerfile, Microsoft/DotNet-Framework görüntüsünün belirli bir sürüm etiketini kullanır. Temel görüntü için belirli bir etiket kullanılması çok önemlidir ve görüntülerin oluşturulması veya yeniden derlenmesi her zaman aynı şekilde olduğunu unutmayı kolaylaştırır.
 
 > [!NOTE]
-> Microsoft/windowsservercore:10.0.14393.1593'e Visual Studio'ı veya buna dayalı herhangi bir görüntüye yük devredebilirsiniz. Bu görüntüde yükleyiciyi bir kapsayıcıda başlatmayla ilgili bilinen sorunlar vardır. Daha fazla bilgi için [bkz. Kapsayıcılar için bilinen sorunlar.](build-tools-container-issues.md)
+> Visual Studio microsoft/windowsservercore: 10.0.14393.1593 veya buna bağlı herhangi bir görüntüye yükleyemezsiniz ve bu, yükleyiciyi bir kapsayıcıda başlatan bilinen sorunları içerir. Daha fazla bilgi için bkz. [kapsayıcılar Için bilinen sorunlar](build-tools-container-issues.md).
 
-Aşağıdaki örnek Derleme Araçları'nın en son sürümünü indirir. Derleme Araçları'nın daha sonra bir kapsayıcıya yükleyebilirsiniz önceki bir sürümünü kullanmak için öncelikle bir [düzen oluşturmanız ve](create-an-offline-installation-of-visual-studio.md) [korumaniz](update-a-network-installation-of-visual-studio.md) gerekir.
+Aşağıdaki örnek, derleme araçlarının en son sürümünü indirir. Daha sonra bir kapsayıcıya yükleyebileceğiniz derleme araçlarının önceki bir sürümünü kullanmak istiyorsanız, önce bir düzen [oluşturmanız](create-an-offline-installation-of-visual-studio.md) ve [korumanız](update-a-network-installation-of-visual-studio.md) gerekir.
 
-## <a name="install-script"></a>Betiği yükleme
+## <a name="install-script"></a>Betiği yükler
 
-Yükleme hatası oluştuğunda günlükleri toplamak için, çalışma dizininde aşağıdaki içeriği içeren "Install.cmd" adlı bir toplu iş betiği oluşturun:
+Bir Install hatası oluştuğunda günlükleri toplamak için, çalışma dizinine aşağıdaki içeriği içeren "Install. cmd" adlı bir Batch betiği oluşturun:
 
 ```shell
 @if not defined _echo echo off
@@ -70,7 +63,7 @@ if "%ERRORLEVEL%"=="3010" (
 
 ## <a name="dockerfile"></a>Dockerfile
 
-Çalışma dizininde aşağıdaki içeriğe sahip "Dockerfile" dosyasını oluşturun:
+Çalışma dizininde, "Dockerfile" öğesini aşağıdaki içerikle oluşturun:
 
 ::: moniker range="vs-2017"
 
@@ -118,9 +111,9 @@ ENTRYPOINT ["C:\\BuildTools\\Common7\\Tools\\VsDevCmd.bat", "&&", "powershell.ex
 ```
 
    > [!WARNING]
-   > Visual Studio 2017 sürüm 15.8 veya önceki sürümler (herhangi bir ürün), mcr \. microsoft \. com windows \/ \/ servercore:1809 veya sonraki sürümlere düzgün yüklenmez. Hiçbir hata görüntülenmez.
+   > Visual Studio 2017 sürüm 15,8 veya daha önceki bir sürümü (herhangi bir ürün), mcr \. microsoft \. com \/ windows \/ servercore: 1809 veya üzeri üzerine düzgün şekilde yüklemez. Bir hata görüntülenmiyor.
    >
-   > Daha [fazla bilgi için bkz. Kapsayıcılar](build-tools-container-issues.md) için bilinen sorunlar.
+   > Daha fazla bilgi için bkz. [kapsayıcıların bilinen sorunları](build-tools-container-issues.md) .
 
 ::: moniker-end
 
@@ -174,9 +167,6 @@ ENTRYPOINT ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\
 
 ::: moniker range=">=vs-2022"
 
->[!IMPORTANT]
-> Visual Studio 2022 şu anda önizlemededir ve [üretim ortamlarında](https://visualstudio.microsoft.com/license-terms/vs2022-prerelease/) kullanım için lisanslı değildir.
-
 ```dockerfile
 # escape=`
 
@@ -223,7 +213,7 @@ ENTRYPOINT ["C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\
 
 ::: moniker-end
 
-Görüntüyü geçerli çalışma dizininde oluşturmak için aşağıdaki komutu çalıştırın:
+Görüntüyü geçerli çalışma dizininde derlemek için aşağıdaki komutu çalıştırın:
 
 ::: moniker range="vs-2017"
 
@@ -249,15 +239,15 @@ docker build -t buildtools2022:17.0 -t buildtools2022:latest -m 2GB .
 
 ::: moniker-end
 
-İsteğe bağlı olarak, sabit bir görüntüyü korumak için farklı bir temel görüntü veya iç düzenin konumunu belirtmek için komut satırı anahtarını kullanarak ya da her ikisini ya da `FROM_IMAGE` `CHANNEL_URL` bağımsız `--build-arg` değişkenlerini iletir.
+İsteğe bağlı olarak, `FROM_IMAGE` `CHANNEL_URL` `--build-arg` farklı bir temel görüntü veya sabit bir görüntünün bakımını yapmak için bir iç düzenin konumunu belirtmek üzere komut satırı anahtarını kullanarak ya da her ikisini veya her ikisini de geçirin.
 
 > [!TIP]
-> İş yüklerinin ve bileşenlerin listesi için bkz. [Visual Studio Derleme Araçları dizini.](workload-component-id-vs-build-tools.md)
+> iş yükleri ve bileşenlerin listesi için [Visual Studio Derleme Araçları bileşen dizinine](workload-component-id-vs-build-tools.md)bakın.
 >
 
-## <a name="diagnosing-install-failures"></a>Yükleme hatalarını tanılama
+## <a name="diagnosing-install-failures"></a>Yüklemesi başarısızlıklarını tanılama
 
-Bu örnek belirli araçları indirir ve karmaların eş olduğunu doğrular. Ayrıca, bir yükleme Visual Studio olması durumunda hataları analiz etmek için günlükleri konak makinenize kopyalamanız için en son Visual Studio ve .NET günlük toplama yardımcı programını indirir.
+Bu örnek, belirli araçları indirir ve karmaların eşleştiğini doğrular. ayrıca en son Visual Studio ve .net günlük toplama yardımcı programını indirir, böylece bir yüklemenin başarısız olması durumunda, hatayı çözümlemek için günlükleri ana makinenize kopyalayabilirsiniz.
 
 ::: moniker range="vs-2017"
 
@@ -307,7 +297,7 @@ The command 'cmd /S /C C:\TEMP\Install.cmd C:\TEMP\vs_buildtools.exe ...' return
 
 ::: moniker-end
 
-Son satır yürütücü tamam olduktan sonra makinenize "%TEMP%\vslogs.zip" ifadesini açın veya Developer Community web [sitesine bir sorun](https://aka.ms/feedback/suggest?space=8) gönderin.
+son satır yürütmeyi tamamladıktan sonra makinenizde "% TEMP% \vslogs.zip" öğesini açın veya [geliştirici Community](https://aka.ms/feedback/suggest?space=8) web sitesinde bir sorun gönderin.
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 

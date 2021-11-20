@@ -7,19 +7,20 @@ ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
 ms.topic: how-to
-ms.openlocfilehash: 518dd80d230e3d2518ae69520781818826363ecc
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: e278741e48bbacc314ba27c182204b6fced2149f
+ms.sourcegitcommit: 932cf0f653c6258b73f42102d134cbaf50b8f20c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126725958"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132880119"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Mac için Visual Studio kaldırılıyor
 
 ilgili bölüme giderek Mac için Visual Studio her bileşeni tek tek kaldırmak için bu kılavuzu kullanabilirsiniz veya [kaldırma betiği](#uninstall-script) bölümünde sunulan betikleri kullanarak her şeyi kaldırabilirsiniz.
 
 > [!NOTE]
-> bu bilgiler, yalnızca makinenizden Mac için Visual Studio 2019 veya 2017 ' i kaldırır. Visual Studio Code kaldırmak için, ayrıntılar için [bu soruna](https://github.com/Microsoft/vscode/issues/52151) bakın.
+> Mac için Visual Studio neden kaldırdığımızda daha fazla bilgi edinmek istiyoruz. bu sayede daha iyi hale getirebiliriz. Birkaç dakikanız varsa [lütfen geri bildiriminizi paylaşabilirsiniz](https://aka.ms/vs/mac/uninstallsurvey). Teşekkür ederiz!
+
 
 ## <a name="uninstall-script"></a>Betiği kaldır
 
@@ -243,3 +244,4 @@ rm -rf ~/Library/Preferences/com.microsoft.visual-studio-preview.plist
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio kaldır (Windows)](/visualstudio/install/uninstall-visual-studio)
+- [Visual Studio Code kaldır](https://github.com/Microsoft/vscode/issues/52151)
