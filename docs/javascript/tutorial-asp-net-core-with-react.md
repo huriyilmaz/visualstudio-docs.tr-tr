@@ -13,23 +13,23 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: 3f0f083bebee0ba8b9a38c06496d540868719001
-ms.sourcegitcommit: ac681e983f3b217c3fd9d2a31e3a3ddcc4dd3546
+ms.openlocfilehash: d9de8cfcb3227c1ae60cda9df6c1f416a6bac3b5
+ms.sourcegitcommit: 8b44ba7864f67afa476708d5092729345e689f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2021
-ms.locfileid: "132041952"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132861646"
 ---
-# <a name="tutorial-create-an-aspnet-core-app-with-react-in-visual-studio"></a>Öğretici: ASP.NET Core'da React uygulama Visual Studio
+# <a name="tutorial-create-an-aspnet-core-app-with-react-in-visual-studio"></a>Öğretici: React ASP.NET Core Visual Studio
 
-Bu makalede, API arka ucu olarak davranacak bir ASP.NET Core projesi ve kullanıcı arabirimi olarak React bir React projesi derlemeyi öğrenirsiniz.
+Bu makalede API arka ucu olarak davranacak bir ASP.NET Core projesi ve kullanıcı arabirimi olarak React bir React projesi derlemeyi öğrenirsiniz.
 
-Şu anda Visual Studio ve ASP.NET Core destekleyen Tek Sayfalı Uygulama (SPA) Angular (SPA) React. Şablonlar, her çerçevenin temel dosyalarını ve klasörlerini içeren ASP.NET Core projelerinde yerleşik bir İstemci Uygulaması klasörü sağlar.
+Şu anda Visual Studio uygulama ve ASP.NET Core destekleyen tek sayfalı uygulama (SPA) Angular React. Şablonlar, her çerçevenin temel dosyalarını ve klasörlerini içeren ASP.NET Core projelerinde yerleşik bir İstemci Uygulaması klasörü sağlar.
 
-2022 Preview 2 Visual Studio den başlayarak, aşağıdaki tek sayfalı uygulamaları oluşturmak için ASP.NET Core makalede açıklanan yöntemi kullanabilirsiniz:
+2022 Visual Studio 2022 Preview 2'den başlayarak, tek sayfalı uygulamalar oluşturmak için bu ASP.NET Core açıklanan yöntemi kullanabilirsiniz:
 
-- İstemci uygulamasını, istemci projesinin dışında ayrı bir ASP.NET Core koyma
-- Bilgisayarınızda yüklü olan çerçeve CLI'sini temel alarak istemci projesini oluşturun
+- İstemci uygulamasını ASP.NET Core projesinin dışında ayrı bir projeye koyma
+- Bilgisayarınızda yüklü olan çerçeve CLI'sini temel alarak istemci projesini oluşturma
 
 > [!NOTE]
 > Şu anda ön uç projesinin el ile yayımlanır (şu anda Yayımla aracıyla desteklenmiyor). Daha fazla bilgi için [https://github.com/MicrosoftDocs/visualstudio-docs/issues/7135](https://github.com/MicrosoftDocs/visualstudio-docs/issues/7135) bkz. .
@@ -38,8 +38,8 @@ Bu makalede, API arka ucu olarak davranacak bir ASP.NET Core projesi ve kullanı
 
 Aşağıdakilerin yüklü olduğundan emin olun:
 
-- Visual Studio ve web geliştirme iş yükünün yüklü olduğu 2022 **Preview 2 ASP.NET** veya sonraki bir sürümü yükleyin. Ücretsiz yüklemek [Visual Studio](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
-  İş yükünü yüklemeniz gerekirse ve önceden Visual Studio Araçları ve Özellikleri Al... 'a  >  **gidin.** Bu işlem Visual Studio Yükleyicisi. Web geliştirme **ASP.NET iş yükünü ve ardından** Değiştir'i **seçin.**
+- Visual Studio ve web geliştirme iş yükünün yüklü olduğu 2022 **Preview 2 ASP.NET veya** sonraki bir sürümü yükleyin. Ücretsiz yüklemek [Visual Studio](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
+  İş yükünü yüklemeniz ve önceden yüklemeniz gerekirse Visual Studio Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. Web geliştirme **ASP.NET iş yükünü ve ardından** Değiştir'i **seçin.**
 - npm ( [https://www.npmjs.com/](https://www.npmjs.com/) ) 
 - npx ( [https://www.npmjs.com/package/npx](https://www.npmjs.com/package/npx) )
 
@@ -53,7 +53,7 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
    :::image type="content" source="media/vs-2022/react-choose-template.png" alt-text="Şablon seçme":::
 
-1. Projenize ve çözümünüze bir ad girin. Ek bilgiler penceresine **bakarak** Boş web API'si ASP.NET **tümleştirmesi** ekle seçeneğini Project olun. Bu seçenek, daha sonra React projenize bağlanacak şekilde dosya şablonunuz ASP.NET Core ekler.
+1. Projenize ve çözümünüze bir ad girin. Ek bilgiler penceresine **bakarak** Boş web API'si ASP.NET **tümleştirmesi** ekle seçeneğini Project olun. Bu seçenek, daha sonra React projeyle bağlanacak şekilde dosya şablonunuz ASP.NET Core ekler.
 
    :::image type="content" source="media/vs-2022/asp-net-core-with-react-additional-info.png" alt-text="Ek bilgi":::
 
@@ -67,7 +67,7 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
 ## <a name="create-the-backend-app"></a>Arka uç uygulamasını oluşturma
 
-1. Çözüm gezgininde çözüm adına sağ tıklayın, Ekle'nin üzerine **gelin ve** Ardından Yeni Giriş'i **Project.** 
+1. Çözüm gezgininde çözüm adına sağ tıklayın, Ekle'nin üzerine **gelin ve** Ardından Yeni **girişler'i Project.** 
 
    :::image type="content" source="media/vs-2022/asp-net-core-add-project.png" alt-text="Yeni proje ekleme":::
 
@@ -87,11 +87,11 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
    :::image type="content" source="media/vs-2022/asp-net-core-project-properties.png" alt-text="Proje özelliklerini açma"::: 
  
-1. Hata ayıklama menüsüne gidin ve Hata ayıklama **başlatma profilleri kullanıcı arabirimini aç seçeneğini** belirleyin. Tarayıcıyı Başlat **seçeneğinin işaretini** kaldırın.
+1. Hata ayıkla menüsüne gidin ve Hata ayıklama **başlatma profilleri kullanıcı arabirimini aç seçeneğini** belirleyin. Tarayıcıyı Başlat **seçeneğinin işaretini** kaldırın.
 
    :::image type="content" source="media/vs-2022/asp-net-core-with-react-deselect-launch-browser.png" alt-text="Hata ayıklama başlatma profilleri kullanıcı arabirimini açma"::: 
 
-1. Ardından, React projesine sağ tıklayın, Özellikler **menüsünü seçin** ve Hata Ayıklama **bölümüne** gidin. Debugger'ı **launch.json seçeneğiyle değiştirebilirsiniz.**
+1. Ardından, React projesine sağ tıklayın, **Özellikler menüsünü seçin** ve Hata Ayıklama **bölümüne** gidin. Debugger'ı **launch.json seçeneğiyle değiştirebilirsiniz.**
  
    :::image type="content" source="media/vs-2022/asp-net-core-with-react-choose-debugger.png" alt-text="Hata ayıklayıcısını (launch.json) seçin":::
 
@@ -105,11 +105,13 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
 ## <a name="start-the-project"></a>Projeyi başlatma
 
-Projeyi başlatmadan önce bağlantı noktası numaralarının eş olduğundan emin olun. ASP.NET Core *projenizin launchSettings.json* dosyasına gidin *(Özellikler klasöründe).* özelliğinden bağlantı noktası numarasını `applicationUrl` almak. (Şuna benzer şekilde `https://localhost:7049` görünüyor: .)
+1. Projeyi başlatmadan önce bağlantı noktası numaralarının eş olduğundan emin olun. ASP.NET Core *projenizin launchSettings.json* dosyasına gidin *(Özellikler klasöründe).* özelliğinden bağlantı noktası numarasını `applicationUrl` almak.
 
-Ardından,setupProxy.js *projenizin* React *(src klasörüne* bakın) gidin. `applicationUrl` *launchSettings.json'daki özelliğiyle eşleşmesi için hedef özelliği güncelleştirin.*
+   Birden çok özellik `applicationUrl` varsa, uç nokta kullanarak bir tane `https` olup bakabilirsiniz. şuna benzer şekilde görünüyor `https://localhost:7049` olabilir: .
 
-Projeyi başlatmak için **F5 tuşuna** basın veya **pencerenin** üst kısmından Başlat düğmesini seçin. İki komut istemi görüntülenir:
+1. Ardından,setupProxy.js *projenizin* React *(src klasörüne* bakın) gidin. `applicationUrl` *launchSettings.json'daki özelliğiyle eşleşmesi için hedef özelliği güncelleştirin.*
+
+1. Projeyi başlatmak için **F5 tuşuna** basın veya **pencerenin** üst kısmından Başlat düğmesini seçin. İki komut istemi görüntülenir:
 
 - Çalışan ASP.NET Core API projesi
 - react-scripts start komutunu çalıştıran npm
@@ -124,4 +126,4 @@ Aşağıdaki hatayı alabilirsiniz:
 [HPM] Error occurred while trying to proxy request /weatherforecast from localhost:4200 to https://localhost:5001 (ECONNREFUSED) (https://nodejs.org/api/errors.html#errors_common_system_errors)
 ```
 
-Bu sorunu görüyorsanız, ön uç büyük olasılıkla arka uç öncesinde başlamıştır. Arka uç komut istemini çalışır şekilde gördüğünüzde, tarayıcıda React App'i yenilemeniz gerekir.
+Bu sorunu görüyorsanız, büyük olasılıkla ön uç arka uç öncesinde başlamıştır. Arka uç komut isteminin çalışır olduğunu gördüğünüzde, tarayıcıda React App'i yenilemeniz gerekir.

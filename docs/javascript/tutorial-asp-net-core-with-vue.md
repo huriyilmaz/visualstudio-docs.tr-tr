@@ -1,6 +1,6 @@
 ---
 title: Vue ile ASP.NET Core uygulama oluşturma
-description: Bu öğreticide, ASP.NET Core vue kullanarak bir uygulama oluştur
+description: Bu öğreticide, ASP.NET Core vue kullanarak bir uygulama oluşturabilirsiniz
 ms.date: 11/08/2021
 ms.topic: tutorial
 ms.devlang: javascript
@@ -13,23 +13,23 @@ dev_langs:
 ms.workload:
 - nodejs
 monikerRange: '>= vs-2022'
-ms.openlocfilehash: e87572bdff6d2fae8a2ffdbce844af3d8a85472b
-ms.sourcegitcommit: ac681e983f3b217c3fd9d2a31e3a3ddcc4dd3546
+ms.openlocfilehash: 05c47320efe74f186786954bc608b445255f150a
+ms.sourcegitcommit: 8b44ba7864f67afa476708d5092729345e689f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/09/2021
-ms.locfileid: "132041978"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132861516"
 ---
-# <a name="tutorial-create-an-aspnet-core-app-with-vue-in-visual-studio"></a>Öğretici: Visual Studio'de Vue ile ASP.NET Core uygulama oluşturma
+# <a name="tutorial-create-an-aspnet-core-app-with-vue-in-visual-studio"></a>Öğretici: Visual Studio'ASP.NET Core Vue ile bir Visual Studio
 
-Bu makalede API arka ucu gibi davranacak bir ASP.NET Core projesi ve kullanıcı arabirimi olarak hareket etmek için vue projesi derlemeyi öğrenirsiniz.
+Bu makalede API arka ucu olarak davranacak bir ASP.NET Core projesi ve kullanıcı arabirimi olarak hareket etmek için vue projesi derlemeyi öğrenirsiniz.
 
-Şu anda Visual Studio, ASP.NET Core, uygulama ve Vue'Angular tek sayfalı uygulama (SPA) React şablonlarını içerir. Şablonlar, her çerçevenin temel dosyalarını ve klasörlerini içeren ASP.NET Core projelerinde yerleşik bir İstemci Uygulaması klasörü sağlar.
+Şu anda Visual Studio, ASP.NET Core ve Vue'Angular destekleyen tek sayfalı uygulama (SPA) React şablonlarını içerir. Şablonlar, her çerçevenin temel dosyalarını ve klasörlerini içeren ASP.NET Core projelerinde yerleşik bir İstemci Uygulaması klasörü sağlar.
 
-2022 Preview 2 Visual Studio den başlayarak, aşağıdaki tek sayfalı uygulamaları oluşturmak için ASP.NET Core makalede açıklanan yöntemi kullanabilirsiniz:
+2022 Visual Studio 2022 Preview 2'den başlayarak, tek sayfalı uygulamalar oluşturmak için bu ASP.NET Core açıklanan yöntemi kullanabilirsiniz:
 
-- İstemci uygulamasını, istemci projesinin dışında ayrı bir ASP.NET Core koyma
-- Bilgisayarınızda yüklü olan çerçeve CLI'sini temel alarak istemci projesini oluşturun
+- İstemci uygulamasını ASP.NET Core projesinin dışında ayrı bir projeye koyma
+- Bilgisayarınızda yüklü olan çerçeve CLI'sini temel alarak istemci projesini oluşturma
 
 > [!NOTE]
 > Şu anda ön uç projesinin el ile yayımlanır (şu anda Yayımla aracıyla desteklenmiyor). Daha fazla bilgi için [https://github.com/MicrosoftDocs/visualstudio-docs/issues/7135](https://github.com/MicrosoftDocs/visualstudio-docs/issues/7135) bkz. .
@@ -38,8 +38,8 @@ Bu makalede API arka ucu gibi davranacak bir ASP.NET Core projesi ve kullanıcı
 
 Aşağıdakilerin yüklü olduğundan emin olun:
 
-- Visual Studio ve web geliştirme iş yükünün yüklü olduğu 2022 **Preview 2 ASP.NET** veya sonraki bir sürümü yükleyin. Ücretsiz yüklemek [Visual Studio](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
-  İş yükünü yüklemeniz gerekirse ve önceden Visual Studio Araçları ve Özellikleri Al... 'a  >  **gidin.** Bu işlem Visual Studio Yükleyicisi. Web geliştirme **ASP.NET iş yükünü ve ardından** Değiştir'i **seçin.**
+- Visual Studio ve web geliştirme iş yükünün yüklü olduğu 2022 **Preview 2 ASP.NET veya** sonraki bir sürümü yükleyin. Ücretsiz yüklemek [Visual Studio](https://visualstudio.microsoft.com/downloads/) indirmeler sayfasına gidin.
+  İş yükünü yüklemeniz ve önceden yüklemeniz gerekirse Visual Studio Araçları ve Özellikleri Al... 'a gidin  >  **ve** Visual Studio Yükleyicisi. Web geliştirme **ASP.NET iş yükünü ve ardından** Değiştir'i **seçin.**
 - npm ( [https://www.npmjs.com/](https://www.npmjs.com/) ) 
 - Vue CLI ( [https://cli.vuejs.org/](https://cli.vuejs.org/) )  
 
@@ -49,7 +49,7 @@ Aşağıdakilerin yüklü olduğundan emin olun:
 
    :::image type="content" source="media/vs-2022/create-new-project.png" alt-text="Yeni proje oluşturma":::
 
-1. Üst çubuktaki arama çubuğunda Vue'yi aratın ve Ardından Tek Başına **JavaScript Vue Şablonu** veya **Tek Başına TypeScript Vue Şablonu'nda öğesini seçin.**
+1. Üst çubuktaki arama çubuğunda Vue'yi aratın ve Ardından Tek Başına **JavaScript Vue Şablonu** veya **Tek Başına TypeScript Vue** Şablonu seçeneğini seçin.
 
    :::image type="content" source="media/vs-2022/vue-choose-template.png" alt-text="Şablon seçme":::
 
@@ -66,7 +66,7 @@ Proje oluşturulduktan sonra bazı yeni ve değiştirilmiş dosyalar görüyorsu
 
 ## <a name="create-the-backend-app"></a>Arka uç uygulamasını oluşturma
 
-1. Bu Çözüm Gezgini, çözüm adına sağ tıklayın, Ekle'nin üzerine **gelin** ve yeni **girişler'Project.** 
+1. Bu Çözüm Gezgini, çözüm adına sağ tıklayın, Ekle'nin üzerine **gelin ve** yeni **girişler'i Project.** 
 
    :::image type="content" source="media/vs-2022/asp-net-core-add-project.png" alt-text="Yeni proje ekleme":::
 
@@ -97,11 +97,11 @@ Proje oluşturulduktan sonra bazı yeni ve değiştirilmiş dosyalar görüyorsu
 
 ## <a name="set-the-project-properties"></a>Proje özelliklerini ayarlama
 
-1. Bu Çözüm Gezgini, ASP.NET Core projesine sağ tıklayın ve Özellikler'i **seçin.**
+1. Bu Çözüm Gezgini projesini sağ tıklatın ASP.NET Core özellikler'i **seçin.**
 
    :::image type="content" source="media/vs-2022/asp-net-core-project-properties.png" alt-text="Proje özelliklerini açma"::: 
  
-1. Hata ayıklama menüsüne gidin ve Hata ayıklama **başlatma profilleri kullanıcı arabirimini aç seçeneğini** belirleyin. Tarayıcıyı **başlat seçeneğinin temizleme.**
+1. Hata ayıkla menüsüne gidin ve Hata ayıklama **başlatma profilleri kullanıcı arabirimini aç seçeneğini** belirleyin. Tarayıcıyı **başlat seçeneğinin temizleme.**
 
    :::image type="content" source="media/vs-2022/asp-net-core-with-vue-deselect-launch-browser.png" alt-text="Hata ayıklama başlatma profilleri kullanıcı arabirimini açma"::: 
 
@@ -119,16 +119,18 @@ Proje oluşturulduktan sonra bazı yeni ve değiştirilmiş dosyalar görüyorsu
 
 ## <a name="start-the-project"></a>Projeyi başlatma
 
-Projeyi başlatmadan önce bağlantı noktası numaralarının eş olduğundan emin olun. ASP.NET Core *projenizin launchSettings.json* dosyasına gidin *(Özellikler klasöründe).* özelliğinden bağlantı noktası numarasını `applicationUrl` almak. (Şuna benzer şekilde `https://localhost:7049` görünüyor: .)
+1. Projeyi başlatmadan önce bağlantı noktası numaralarının eş olduğundan emin olun. ASP.NET Core *projenizin launchSettings.json* dosyasına gidin *(Özellikler klasöründe).* özelliğinden bağlantı noktası numarasını `applicationUrl` almak.
 
-Ardından Vue *projenizinvue.config.js* dosyanıza gidin. `applicationUrl` *launchSettings.json'daki özelliğiyle eşleşmesi için hedef özelliği güncelleştirin.*
+   Birden çok özellik `applicationUrl` varsa, uç nokta kullanarak bir tane `https` olup bakabilirsiniz. şuna benzer şekilde görünüyor `https://localhost:7049` olabilir: .
 
-Projeyi başlatmak için **F5 tuşuna** basın veya **pencerenin** üst kısmından Başlat düğmesini seçin. İki komut istemi görüntülenir:
+1. Ardından Vue *projenizinvue.config.js* dosyanıza gidin. `applicationUrl` *launchSettings.json'daki özelliğiyle eşleşmesi için hedef özelliği güncelleştirin.*
 
-- Çalışan ASP.NET Core API projesi
-- vue-cli-service service komutunu çalıştıran Vue CLI
+1. Projeyi başlatmak için **F5 tuşuna** basın veya **pencerenin** üst kısmından Başlat düğmesini seçin. İki komut istemi görüntülenir:
 
-API aracılığıyla doldurulan bir Vue uygulamasının görüntü olduğunu görüyorsanız.
+   - Çalışan ASP.NET Core API projesi
+   - vue-cli-service service komutunu çalıştıran Vue CLI
+
+API aracılığıyla doldurulan Vue uygulamasının görüntü olduğunu görüyorsanız.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
@@ -138,4 +140,4 @@ Aşağıdaki hatayı alabilirsiniz:
 [HPM] Error occurred while trying to proxy request /weatherforecast from localhost:4200 to https://localhost:5001 (ECONNREFUSED) (https://nodejs.org/api/errors.html#errors_common_system_errors)
 ```
 
-Bu sorunu görüyorsanız, ön uç büyük olasılıkla arka uç öncesinde başlamıştır. Arka uç komut isteminin çalışır olduğunu gördüğünüzde, tarayıcıda Vue uygulamasını yenilemeniz gerekir.
+Bu sorunu görüyorsanız, büyük olasılıkla ön uç arka uç öncesinde başlamıştır. Arka uç komut isteminin çalışır olduğunu gördüğünüzde, tarayıcıda Vue uygulamasını yenilemeniz gerekir.

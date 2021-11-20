@@ -1,7 +1,7 @@
 ---
 title: Hedeflenen .NET çerçeveleri
 description: uygulamanın yalnızca belirtilen sürümde kullanılabilen işlevselliği kullanabilmesi için, projenizin hedeflemesini istediğiniz .NET Framework sürümünü belirtmeyi öğrenin.
-ms.date: 12/01/2020
+ms.date: 11/19/2021
 ms.topic: overview
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
@@ -13,12 +13,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7c61cca91c712825596b02cae6481492eecd824e
-ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
+ms.openlocfilehash: 7e6dba5216784cf8db45f7063e88b2a000cdc527
+ms.sourcegitcommit: 8b44ba7864f67afa476708d5092729345e689f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129431178"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132861631"
 ---
 # <a name="framework-targeting-overview"></a>Çerçeve hedefleme genel bakış
 
@@ -73,9 +73,15 @@ bir .NET Framework projesi oluşturduğunuzda, bir proje şablonu seçtikten son
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
 ![VS 2019 ' de çerçeve açılan kutusu](media/vs-2019/configure-new-project-framework.png)
+
+::: moniker-end
+
+::: moniker range="vs-2022"
+
+:::image type="content" source="media/vs-2022/configure-new-project-framework.png" alt-text="Visual Studio 2022 ' deki çerçeve açılan listesinin ekran görüntüsü.":::
 
 ::: moniker-end
 
@@ -83,7 +89,8 @@ bir .NET Framework projesi oluşturduğunuzda, bir proje şablonu seçtikten son
 
 mevcut bir Visual Basic, C# veya F # projesinde, proje özellikleri iletişim kutusunda hedef .net sürümünü değiştirirsiniz. C++ projelerinin hedef sürümünü değiştirme hakkında daha fazla bilgi için, bkz. [hedef Framework ve platform araç takımını değiştirme](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset) .
 
-1. **Çözüm Gezgini**, değiştirmek istediğiniz proje için sağ tıklama menüsünü açın ve ardından **Özellikler**' i seçin.
+::: moniker range="<=vs-2019"
+1. **Çözüm Gezgini**, değiştirmek istediğiniz proje için sağ tıklama bağlam menüsünü açın ve ardından **Özellikler**' i seçin.
 
 1. **Özellikler** penceresinin sol sütununda **uygulama** sekmesini seçin.
 
@@ -97,6 +104,24 @@ mevcut bir Visual Basic, C# veya F # projesinde, proje özellikleri iletişim ku
 1. Görüntülenen doğrulama iletişim kutusunda **Evet** düğmesini seçin.
 
    Projenin yüklemesi kaldırılır. Yeniden yüklediğinde, yeni seçtiğiniz .NET sürümünü hedefler.
+::: moniker-end
+
+::: moniker range="vs-2022"
+1. **Çözüm Gezgini**, değiştirmek istediğiniz proje için sağ tıklama bağlam menüsünü açın ve ardından **Özellikler**' i seçin.
+
+1. **Özellikler** penceresinin sol sütununda **uygulama** sekmesini seçin.
+
+   > [!NOTE]
+   > UWP uygulaması oluşturduktan sonra, Windows veya .net 'in hedeflenen sürümünü değiştiremezsiniz.
+
+1. **Hedef çerçeve** listesinde, istediğiniz sürümü seçin.
+
+   :::image type="content" source="media/vs-2022/project-properties-application-tab-framework.png" alt-text=".NET Framework seçenekleri vurgulanmış Project özellikleri iletişim kutusunun ekran görüntüsü.":::
+
+1. Görüntülenen doğrulama iletişim kutusunda **Evet** düğmesini seçin.
+
+   Projenin yüklemesi kaldırılır. Yeniden yüklediğinde, yeni seçtiğiniz .NET sürümünü hedefler.
+::: moniker-end
 
 > [!NOTE]
 > Kodunuz, hedeflenmeden farklı bir .NET sürümüne başvurular içeriyorsa, kodu derlerken veya çalıştırdığınızda hata iletileri görünebilir. Bu hataları gidermek için başvuruları değiştirin. Bkz. [.net hedefleme hatalarında sorun giderme](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).

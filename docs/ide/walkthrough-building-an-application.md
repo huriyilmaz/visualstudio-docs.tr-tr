@@ -10,16 +10,15 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: f7fe40f78b8a8447c1ae784e33a25e905e368118
-ms.sourcegitcommit: b12a38744db371d2894769ecf305585f9577792f
+ms.openlocfilehash: 07128c06a7602685e4944cd0fd947886eb73c8f9
+ms.sourcegitcommit: 8b44ba7864f67afa476708d5092729345e689f93
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126635937"
+ms.lasthandoff: 11/20/2021
+ms.locfileid: "132861672"
 ---
 # <a name="walkthrough-build-an-application"></a>İzlenecek yol: Uygulama oluşturma
-
-Bu yönergeyi tamamlayarak, Visual Studio ile uygulama oluştururken yapılandırabileceğiniz çeşitli seçeneklerle daha tanıdık geleceksiniz. Özel bir yapı yapılandırması oluşturacak, belirli uyarı iletilerini gizleyecek ve örnek bir uygulama için derleme çıkış bilgilerini artıracaksınız.
+Bu makalede, Visual Studio ile uygulama oluştururken yapılandırabileceğiniz çeşitli seçenekler hakkında daha fazla bilgi edineceksiniz. Özel bir yapı yapılandırması oluşturacak, belirli uyarı iletilerini gizleyecek ve örnek bir uygulama için derleme çıkış bilgilerini artıracaksınız.
 
 ## <a name="install-the-sample-application"></a>Örnek uygulamayı yükler
 
@@ -77,7 +76,7 @@ Ardından, derleyici tarafından bir uyarının oluşturulmasına neden olan baz
 
 1. C# projesinde *ExpenseReportPage. xaml. cs* dosyasını açın. **ExpenseReportPage** yönteminde aşağıdaki kodu ekleyin: `int i;` .
 
-    OR
+    VEYA
 
     Visual Basic projesinde *ExpenseReportPage. xaml. vb* dosyasını açın. Özel Oluşturucu **genel Sub New...**' da şu kodu ekleyin: `Dim i` .
 
@@ -183,48 +182,48 @@ Daha fazla bilgi için bkz. [nasıl yapılır: derleme çıkış dizinini deği�
 
 1. **Platform** listesinde, **x86**' yı seçin.
 
-1. Derleme **çıkış yolu kutusunda** bir ağ yolu belirtin.
+1. **Yapı çıkış yolu** kutusunda bir ağ yolu belirtin.
 
-     Örneğin, `\\myserver\builds` belirtesiniz.
+     Örneğin, belirtebilirsiniz `\\myserver\builds` .
 
     > [!IMPORTANT]
-    > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmadığını belirten bir ileti kutusu görünebilir. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
+    > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
 
 1. Uygulamayı derleyin.
 
-     ![Derleme menüsünde Çözümü Derleme komutu](../ide/media/exploreide-buildsolution.png)
+     ![Build menüsünde çözüm komutu oluştur](../ide/media/exploreide-buildsolution.png)
 
-### <a name="specify-a-release-build-for-c"></a>C için yayın derlemesi belirtme\#
+### <a name="specify-a-release-build-for-c"></a>C için bir yayın derlemesi belirtin\#
 
-1. Project **Designer'Project açın.**
+1. **Project tasarımcısını** açın.
 
-     ![Görünüm menüsü, Özellik Sayfaları komutu](../ide/media/buildwalk_viewpropertypages.png)
+     ![Görünüm menüsü, özellik sayfaları komutu](../ide/media/buildwalk_viewpropertypages.png)
 
-1. Derleme **sayfasını** seçin.
+1. **Yapı** sayfasını seçin.
 
-1. Yapılandırma listesinde **Yayın'ı** **seçin.**
+1. **Yapılandırma** listesinde **yayın**' ı seçin.
 
-1. Platform **listesinde** **x86'yi seçin.**
+1. **Platform** listesinde, **x86**' yı seçin.
 
-1. Çıkış **yolu kutusunda** bir ağ yolu belirtin.
+1. **Çıkış yolu** kutusunda bir ağ yolu belirtin.
 
-     Örneğin, `\\myserver\builds` belirtesiniz.
+     Örneğin, belirtebilirsiniz `\\myserver\builds` .
 
     > [!IMPORTANT]
-    > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmadığını belirten bir ileti kutusu görünebilir. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
+    > Belirttiğiniz ağ paylaşımının güvenilir bir konum olmayabilir uyarısı veren bir ileti kutusu görünür. Belirttiğiniz konuma güveniyorsanız ileti kutusunda **Tamam** düğmesini seçin.
 
-1. Standart araç **çubuğunda Çözüm** Yapılandırmaları'nın Yayın ve **Çözüm** Platformları'nın **x86 olarak ayarlayın.**
+1. **Standart araç çubuğunda** çözüm konfigürasyonlarını **Sürüm** ve çözüm platformlarını **x86** olarak ayarlayın.
 
 1. Uygulamayı derleyin.
 
-     ![Derleme menüsünde Çözümü Derleme komutu](../ide/media/exploreide-buildsolution.png)
+     ![Build menüsünde çözüm komutu oluştur](../ide/media/exploreide-buildsolution.png)
 
-   Yürütülebilir dosya, belirttiğiniz ağ yoluna kopyalanır. Yolu `\\myserver\builds\\FileName.exe` olur.
+   Yürütülebilir dosya, belirttiğiniz ağ yoluna kopyalanır. Yolu şöyle olur `\\myserver\builds\\FileName.exe` .
 
-Tebrikler! Bu izlenecek yolu başarıyla tamamladın.
+Tebrikler! Bu yönergeyi başarıyla tamamladınız.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Adım adım kılavuz: Proje derleme (C++)](/cpp/ide/walkthrough-building-a-project-cpp)
-- [ASP.NET web uygulaması proje ön derlemeye genel bakış](/previous-versions/aspnet/aa983464\(v\=vs.110\))
-- [Adım adım kılavuz: MSBuild](../msbuild/walkthrough-using-msbuild.md)
+- [İzlenecek yol: proje derleme (C++)](/cpp/ide/walkthrough-building-a-project-cpp)
+- [ASP.NET web uygulaması projesi ön derlemesine genel bakış](/previous-versions/aspnet/aa983464\(v\=vs.110\))
+- [İzlenecek yol: MSBuild kullanma](../msbuild/walkthrough-using-msbuild.md)
