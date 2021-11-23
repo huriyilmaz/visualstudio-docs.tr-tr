@@ -1,6 +1,6 @@
 ---
-title: Bağlı Hizmetler'i kullanarak Azure CosmosDB'yi | Microsoft Docs
-description: Bağlı hizmet eklemek için azure Visual Studio kullanarak uygulamanıza Azure CosmosDB desteği ekleme
+title: Bağlı Hizmetler Cosmos kullanarak Azure Cosmos DB'yi | Microsoft Docs
+description: Bağlı Cosmos eklemek için azure Cosmos DB desteğini Visual Studio uygulamanıza ekleme
 author: AngelosP
 manager: jmartens
 ms.technology: vs-azure
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.date: 08/17/2020
 ms.author: angelpe
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: 10271830f3b46633138ef1d9a3e9b6c84e8b89f5
-ms.sourcegitcommit: 541871db9065c4fb1b21c24f980c563991b183c7
+ms.openlocfilehash: 69e6fa19c1f89f5756096cfd41e533857df47476
+ms.sourcegitcommit: 8671132ee0425b273b060fa35c75657e7ae02583
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129430753"
+ms.lasthandoff: 11/23/2021
+ms.locfileid: "132924179"
 ---
-# <a name="add-azure-cosmos-db-to-your-app-by-using-visual-studio-connected-services"></a>Azure Cosmos DB'yi Bağlı Hizmetler'i Visual Studio uygulamanıza ekleme
+# <a name="add-azure-cosmos-db-to-your-app-by-using-visual-studio-connected-services"></a>Bağlı Cosmos kullanarak Uygulamanıza Azure Visual Studio DB ekleme
 
 Bu Visual Studio Bağlı Hizmetler özelliğini kullanarak azure Cosmos DB'ye **bağlanabilirsiniz:**
 
@@ -43,7 +43,7 @@ Bağlı hizmet işlevi, projenize gereken tüm başvuruları ve bağlantı kodun
 
 1. Projenizi Visual Studio’da açın.
 
-1. Bu **Çözüm Gezgini** Bağlı Hizmetler düğümüne **sağ** tıklayın ve bağlam menüsünde Bağlı Hizmet **Ekle'yi seçin.**
+1. Bu **Çözüm Gezgini** Bağlı Hizmetler **düğümüne sağ** tıklayın ve bağlam menüsünde Bağlı Hizmet **Ekle'yi seçin.**
 
 1. Bağlı **Hizmetler sekmesinde** Hizmet Bağımlılıkları için + **simgesini seçin.**
 
@@ -55,7 +55,7 @@ Bağlı hizmet işlevi, projenize gereken tüm başvuruları ve bağlantı kodun
 
     Henüz oturum açmadıysanız Azure hesabınızla oturum açın. Azure hesabınız yoksa ücretsiz deneme sürümüne [kaydolabilirsiniz.](https://azure.microsoft.com/free/)
 
-1. Azure veritabanı **Cosmos, mevcut** bir Azure veritabanı veritabanı Cosmos ve ardından Sonraki'yi **seçin.**
+1. Azure Cosmos **DB ekranında,** mevcut bir Azure Cosmos DB'yi ve ardından Sonraki'yi **seçin.**
 
     Veritabanı oluşturmanız gerekirse sonraki adıma geçin. Aksi takdirde 7. adıma geçin.
 
@@ -63,7 +63,7 @@ Bağlı hizmet işlevi, projenize gereken tüm başvuruları ve bağlantı kodun
 
 1. Azure Cosmos DB oluşturmak için:
 
-   1. Ekranın **alt kısmından Yeni Cosmos Veritabanı** oluştur'a tıklayın.
+   1. Ekranın **alt kısmından Yeni Cosmos veritabanı** oluştur'a tıklayın.
 
    1. **Azure Cosmos DB: Yeni oluştur ekranı'ı doldurun** ve Oluştur'a **tıklayın.**
 
@@ -71,7 +71,7 @@ Bağlı hizmet işlevi, projenize gereken tüm başvuruları ve bağlantı kodun
 
    1. Azure **Veritabanı Cosmos iletişim** kutusu görüntülendiğinde, yeni veritabanı listede görünür. Listeden yeni veritabanını ve ardından Sonraki'yi **seçin.**
 
-1. Bir bağlantı dizesi adı girin ve bağlantı dizesinin yerel bir gizli dizi dosyasında mı yoksa dosyasında mı depo [Azure Key Vault.](/azure/key-vault)
+1. Bir bağlantı dizesi adı girin ve bağlantı dizesinin yerel bir gizli dizi dosyasında mı yoksa yerel bir gizli dizi dosyasında mı depo [Azure Key Vault.](/azure/key-vault)
 
    ![Bağlantı dizesini belirtme](./media/azure-cosmosdb-add-connected-service/connection-string.png)
 
