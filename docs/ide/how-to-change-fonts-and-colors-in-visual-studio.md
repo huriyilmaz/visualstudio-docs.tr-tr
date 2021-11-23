@@ -1,7 +1,7 @@
 ---
 title: Erişilebilirlik için temaları, yazı tiplerini, metinleri ve karşıtlığı değiştirme
-description: Kullanım kolaylığı ve erişilebilirlik Visual Studio renk temalarını, yazı tipi renklerini, metin boyutlarını ve fazla karşıtlık renklerini nasıl değiştiryebilirsiniz?
-ms.date: 10/31/2021
+description: Kullanım kolaylığı ve erişilebilirlik Visual Studio renk temalarını, yazı tipi renklerini, metin boyutlarını ve ek karşıtlık renklerini nasıl değiştiryebilirsiniz?
+ms.date: 11/19/2021
 ms.topic: how-to
 ms.custom: contperf-fy21q1
 helpviewer_keywords:
@@ -14,12 +14,12 @@ manager: jmartens
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ef8beedeee3b8ff71a1b7298df1fd7dd4267e35e
-ms.sourcegitcommit: aff49629012f4d5fa07c75ea0ca5bf53d28aa173
+ms.openlocfilehash: 3bba9cf88014935db69a07ec0e16f0b16eea1a62
+ms.sourcegitcommit: e0a642bbd0a74c292b3b1d8046733cfdf93af70e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "131662825"
+ms.lasthandoff: 11/22/2021
+ms.locfileid: "132918918"
 ---
 # <a name="how-to-change-fonts-colors-and-themes-in-visual-studio"></a>Nasıl yapabilirsiniz: Visual Studio'da yazı tiplerini, renkleri ve temaları değiştirme
 
@@ -28,7 +28,7 @@ ms.locfileid: "131662825"
 Yazı tiplerini ve renkleri farklı Visual Studio değiştirebilirsiniz. Örneğin, varsayılan koyu temayı ("koyu mod" olarak da adlandırılır) açık tema, mavi tema, ek karşıtlık teması veya sistem ayarlarınıza uygun bir tema olarak değiştirebilirsiniz. Ayrıca hem IDE'de hem de kod düzenleyicisinde varsayılan yazı tipi ve metin boyutunu değiştirebilirsiniz.
 
 > [!TIP]
-> Renk karşıtlığı oranı ayarlamaları ve daha kolay erişilebilir hale Visual Studio cascadia Code yazı tipi hakkında daha fazla bilgi edinmek için Visual Studio [**2022'de**](https://devblogs.microsoft.com/visualstudio/weve-upgraded-the-ui-in-visual-studio-2022/) kullanıcı arabirimini yükselttik blog gönderisi'ne bakın.
+> Renk karşıtlığı oranı ayarlamaları ve yeni Cascadia Code yazı tipi hakkında daha fazla bilgi edinmek için kullanıcı arabirimini [**Visual Studio 2022'de**](https://devblogs.microsoft.com/visualstudio/weve-upgraded-the-ui-in-visual-studio-2022/) yükselttik blog gönderisi ve daha kolay erişilebilir hale Visual Studio cascadia Code yazı tipine bakın.
 
 ::: moniker-end
 
@@ -50,7 +50,7 @@ IDE çerçevesinin renk temasını ve araç pencerelerini aşağıdaki gibi Visu
 
 1. Renk **teması listesinde** varsayılan Koyu temayı,  Açık **temayı,** Mavi temayı veya Mavi (Ek Karşıtlık) **temasını** seçin. 
 
-   Ayrıca Sistem ayarını kullan'ı seçerek Windows **temayı da kullanabilirsiniz.**
+   Ayrıca Sistem ayarını kullan'ı seçerek Windows **temayı kullanmayı da seçebilirsiniz.**
 
    :::image type="content" source="media/vs-2022/fonts-colors-theme.png" alt-text="Renk temasını değiştirebilirsiniz Seçenekler iletişim kutusunun ekran görüntüsü.":::
 
@@ -160,19 +160,54 @@ Tüm IDE çerçeve ve araç pencerelerinde veya yalnızca belirli pencereler vey
 
 ::: moniker-end
 
-Daha fazla bilgi için [düzenleyicinin yazı tiplerini ve renklerini değiştirme sayfasına](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md) bakın.
+Daha fazla bilgi için düzenleyicinin [yazı tiplerini ve renklerini değiştirme sayfasına](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md) bakın.
 
 ## <a name="accessibility-options"></a>Erişilebilirlik seçenekleri
 
-Görme güç bir deneyim yaşamanın renk teması seçenekleri vardır. Bir bilgisayarda tüm uygulamalar ve kullanıcı arabirimi için *yüksek* karşıtlıklı bir seçenek veya yalnızca bir veya daha fazla karşıtlık seçeneği Visual Studio kullanabilirsiniz.
+::: moniker range="vs-2022"
+
+Görme azı ile karşılanıyorsanız yazı tipi seçenekleri ve renk temaları şunlardır:
+
+- Harflerin, rakamların ve karakterlerin oranına daha fazla ağırlık ekleyen [Cascadia Code](#use-the-cascadia-code-font) yazı tipini kullanarak bu yazı tipini kullanabilirsiniz.
+- Ayrıca, bir bilgisayarda tüm uygulamalar [ve](#use-windows-high-contrast)  kullanıcı arabirimi için yüksek karşıtlıklı bir renk teması veya yalnızca uygulamalar için fazladan karşıtlıklı bir Visual Studio seçebilirsiniz. [](#use-visual-studio-extra-contrast)
+
+### <a name="use-the-cascadia-code-font"></a>Cascadia Code yazı tipini kullanma
+
+Yeni [**Cascadia Code yazı**](https://github.com/microsoft/cascadia-code#welcome) tipi, 2022 yılındaki varsayılan yazı tipi olan **Cascade Mono'Visual Studio** içerir. Bu yazı tiplerinin her ikisinin de okunma kolay olduğu gibi Cascadia Code yazı tipi de bir karakter dizisini karakter karakterine dönüştüren kodlama özelikleri içerir. Kodlama ve glyph'ler, insanların arkalarında yer alan anlamı bilişsel olarak ilişkilendirmesini kolaylaştırır.
+
+Aşağıdaki ekran görüntüsünde varsayılan Cascadia Mono yazı tipi örneği ve siz kod kullanırken kullanarak bul olabileceğiniz matematiksel sembolleri içeren bir karakter dizisi yer almaktadır.
+
+:::image type="content" source="media/vs-2022/cascadia-mono-font.png" alt-text="Düzenleyicide Cascadia Mono yazı tipi örneği ekran görüntüsü.":::
+
+Aşağıdaki ekran görüntüsünde, daha önce gösterilen aynı karakter serisinin artık kod yazma özelikleri veya karakter karakterlerine dönüştürülmesiyle ilgili bir Cascadia Code yazı tipi örneği gösterilmektedir.
+
+:::image type="content" source="media/vs-2022/cascadia-code-font.png" alt-text="Düzenleyicide Cascadia Code yazı tipi örneği ekran görüntüsü.":::
+
+Cascadia Code ekran görüntüsünde yer alan son metin satırı, yinelenen karakterler arasındaki boşluğun nasıl azaltılmış olduğunu gösterir ve bu da okunmalarını kolaylaştırır.
+
+Cascadia yazı tipleri arasında geçiş yapmak için aşağıdakiler kullanılabilir:
+
+1. Araçlar Seçenekler **Ortam** > **Yazı Tipleri** > **ve** > **renkleri'ne gidin.**
+
+1. Yazı tipi **açılan** listesinden **Cascadia Code** yazı tipini veya istediğiniz **Cascadia Mono** yazı tipini ve ardından Tamam'ı **seçin.**
+
+    :::image type="content" source="media/vs-2022/cascadia-font-options.png" alt-text="Seçenekler iletişim kutusunda bulunan Cascadia yazı tiplerinin ekran görüntüsü.":::
+
+::: moniker-end
+
+::: moniker range="<=vs-2019"
+
+Görme güç bir deneyim yaşamanın renk teması seçenekleri vardır. Bir bilgisayarda tüm uygulamalar ve kullanıcı arabirimi için *yüksek* karşıtlıklı bir seçenek veya yalnızca diğer uygulamalar için ek bir karşıtlık Visual Studio kullanabilirsiniz.
+
+::: moniker-end
 
 ### <a name="use-windows-high-contrast"></a>Yüksek karşıtlık Windows kullanın
 
 Yüksek karşıtlıklı seçeneğin iki durumlu seçeneğini Windows yordamlardan birini kullanın:
 
-- Bu Windows herhangi bir Microsoft uygulamasında, Sol **Alt Sol Shift** +  + **PrtScn tuşlarına** basın.
+- Bu Windows veya herhangi bir Microsoft uygulamasında, Sol **Alt Sol** + **Shift** + **PrtScn tuşlarına** basın.
 
-- Bu Windows Başlat'ı **Ayarlar**  >    >  **Erişim Kolaylığı.** Ardından, sonraki ve **sonraki** Windows 10 görüntü bölümünde Yüksek karşıtlık'ı **seçin.**
+- Bu Windows **Başlat'ı Ayarlar**  >    >  **Erişim Kolaylığı.** Daha sonra, görüntü **ve** sonraki Windows 10 Bölümünde Yüksek karşıtlık'ı **seçin.**
 
     > [!WARNING]
     > Yüksek Windows ayarı, bilgisayarda tüm uygulamaları ve kullanıcı arabirimini etkiler.
@@ -185,7 +220,7 @@ Ek karşıtlık seçeneğinin iki durumlu Visual Studio yordamları kullanın:
 
 1. Renk **teması açılan** listesinde Mavi (Ek Karşıtlık) **temasını** ve ardından Tamam'ı **seçin.**
 
-Diğer erişilebilirlik seçenekleri hakkında Visual Studio daha fazla bilgi edinmek için Visual Studio sayfasındaki Erişilebilirlik [özelliklerine](../ide/reference/accessibility-features-of-visual-studio.md) bakın.
+Diğer erişilebilirlik seçenekleri hakkında Visual Studio fazla bilgi edinmek için Visual Studio sayfasındaki Erişilebilirlik [özelliklerine](../ide/reference/accessibility-features-of-visual-studio.md) bakın.
 
 > [!TIP]
 > Yararlı olabileceğini düşünebilirsiniz ancak şu anda Visual Studio'da mevcut olmayan renkler veya yazı tipleri için erişilebilirlik seçeneği  varsa lütfen [Visual Studio Developer](https://aka.ms/feedback/suggest?space=8)Community . Bu forum ve nasıl çalıştığını görmek için Özellik [önerin sayfasına](../ide/suggest-a-feature.md) bakın.
@@ -197,5 +232,5 @@ Yazı tipi ve renk düzenlerini değiştirebilirsiniz tüm kullanıcı arabirimi
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapabilirsiniz: Düzenleyicinin yazı tiplerini ve renklerini Visual Studio](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
-- [Visual Studio kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Visual Studio düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
 - [IDE'Visual Studio düzenleyiciyi kişiselleştirme](../ide/quickstart-personalize-the-ide.md)
