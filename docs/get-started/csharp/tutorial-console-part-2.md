@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b4b323611897a7977d906eb585f49006b54e5b9e
-ms.sourcegitcommit: dc12d3d0ca2ec3601cb9de7c22e61ecf22c7c514
+ms.openlocfilehash: aba8cfeabad2bec1dbcc2b6c4ae5447b0eedec76
+ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "132264154"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "132995152"
 ---
 # <a name="tutorial-extend-c-console-app-and-debug-in-visual-studio-part-2-of-2"></a>öğretici: Visual Studio 'de C# konsol uygulamasını ve hata ayıklamayı genişletme (bölüm 2/2)
 
@@ -328,7 +328,7 @@ Visual Studio,   >    >  yeni bir proje eklemek için menü komut dosyasını **
 
 1. Uygulamayı tekrar çalıştırın. Bitirin, Hesap makinesi proje  düğümüne sağ tıklayın ve hesaplayıcıda Klasör **Aç'ı Dosya Gezgini.**
 
-1. Bu Dosya Gezgini *bin/Debug/* altındaki çıkış klasörüne gidin ve *calculator.log dosyasını* açın. Çıkış aşağıdakine benzer olmalıdır:
+1. Bu Dosya Gezgini *bin/Debug/* altındaki output klasörüne gidin ve *calculator.log dosyasını* açın. Çıkış aşağıdakine benzer olmalıdır:
 
     ```output
     Starting Calculator Log
@@ -484,9 +484,9 @@ namespace CalculatorProgram
 
 ## <a name="add-a-nuget-package-write-to-a-json-file"></a>Bir NuGet Paketi Ekleme: JSON dosyasına yazma
 
-Nesne verilerini depolamaya yönelik popüler ve taşınabilir bir biçim olan JSON'daki işlemlerin çıkışını yapmak *için, Newtonsoft.Json* NuGet başvurabilirsiniz. NuGet paketleri . NET sınıf kitaplıkları için birincil dağıtım yöntemidir.
+Nesne verilerini depolamaya yönelik popüler ve taşınabilir bir biçim olan JSON'daki işlemlerin çıkışını yapmak *için, Newtonsoft.Json* NuGet başvurabilirsiniz. NuGet paketleri.NET sınıf kitaplıkları için birincil dağıtım yöntemidir.
 
-1. Bu **Çözüm Gezgini** **CalculatorLibrary** projesi **için Bağımlılıklar** düğümüne sağ tıklayın ve Paket Paketlerini **Yönet'NuGet seçin.**
+1. Bu **Çözüm Gezgini** **CalculatorLibrary** projesi için **Bağımlılıklar** düğümüne sağ tıklayın ve Paket **Yönetimi'ni NuGet seçin.**
 
    ::: moniker range="vs-2019"
    ![Kısayol menüsündeki NuGet Paketlerini Yönet'in ekran görüntüsü.](media/vs-2019/calculator2-manage-nuget-packages-dark2.png)
@@ -504,7 +504,7 @@ Nesne verilerini depolamaya yönelik popüler ve taşınabilir bir biçim olan J
 1. *Newtonsoft.Json paketini arayın ve seçin* ve Yükle'yi **seçin.**
 
    ::: moniker range="vs-2019"
-   ![NuGet Paket Yöneticisi'de Yer alan NuGet bilgileri içeren Newtonsoft J SON NuGet Paket Yöneticisi.](media/vs-2019/calculator2-nuget-newtonsoft-json-dark2.png)
+   ![NuGet Paket Yöneticisi'daki NuGet bilgileri içeren Newtonsoft J SON NuGet Paket Yöneticisi.](media/vs-2019/calculator2-nuget-newtonsoft-json-dark2.png)
    
    Visual Studio paketi indirir ve projeye ekler. içinde Başvurular düğümünde yeni bir giriş **Çözüm Gezgini.**
    ::: moniker-end
@@ -570,8 +570,8 @@ Nesne verilerini depolamaya yönelik popüler ve taşınabilir bir biçim olan J
                     if (num2 != 0)
                     {
                         result = num1 / num2;
-                        writer.WriteValue("Divide");
                     }
+                    writer.WriteValue("Divide");
                     break;
                 // Return text for an incorrect option entry.
                 default:
@@ -689,7 +689,7 @@ Ardından, hata ayıklayıcısında her bir deyimde adımlama olarak adlandırı
 
    sınıfındaki `DoOperation` yöntemine `Calculator` girdiniz.
 
-1. Program akışınıza hiyerarşik bir bakış elde etmek için Çağrı Yığını **penceresine** bakın. Kapalı ise Çağrı Yığınında **Hata Ayıkla'Windows'ı**  >    >   seçerek açın.
+1. Program akışınıza hiyerarşik bir bakış elde etmek için Çağrı Yığını **penceresine** bakın. Kapalı ise Çağrı Yığınında **Hata Ayıkla'Windows'yi**  >    >   seçerek açın.
 
    ![Çağrı yığınının ekran görüntüsü](media/vs-2019/calculator-2-debug-call-stack.png)
 
@@ -792,8 +792,8 @@ namespace CalculatorLibrary
                     if (num2 != 0)
                     {
                         result = num1 / num2;
-                        writer.WriteValue("Divide");
                     }
+                    writer.WriteValue("Divide");
                     break;
                 // Return text for an incorrect option entry.
                 default:

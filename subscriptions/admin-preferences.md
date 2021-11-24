@@ -1,18 +1,18 @@
 ---
 title: Abonelikler yönetici Visual Studio tercihleri ayarlama
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: amast
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
 ms.date: 10/08/2021
 ms.topic: conceptual
-description: Yönetim Portalı'nın dil, kişiler, abonelik düzeyi ve diğer dil tercihlerini ayarlamayı öğrenin
-ms.openlocfilehash: f80321b8413551618a32b40bf10402fbd3c06562
-ms.sourcegitcommit: 7b2b00da38905c4560f823090c3140be77803711
+description: Yönetim Portalı'nın dil, kişiler, abonelik düzeyi ve diğerleri için tercihleri ayarlamayı öğrenin
+ms.openlocfilehash: b246eda712c3ca7fce24b54fe5f6659112db7213
+ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2021
-ms.locfileid: "129813110"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "132995513"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-admin-portal"></a>Yönetim portalında sözleşmeleriniz için tercihleri ayarlama
 Süper yöneticiler, Yönetim portalında (yönetim portalı) her sözleşme için genel olarak uygulanacak belirli tercihler ayarlayabilecek.  Bu tercihler, abone eklerken yöneticileriniz için abonelik ayrıntılarını otomatik olarak doldurmakta ve yalnızca süper yöneticiler tarafından genel olarak değiştirilebilir.  
@@ -38,7 +38,7 @@ Sol tarafta bir panel açılır ve kullanılabilir tercihleriniz görüntülenir
 ### <a name="agreement"></a>Sözleşme
 Süper yönetici olarak birden fazla sözleşmeniz varsa, genişletilmiş ayarlar panelinin sağ üst açılan menüsünden istediğiniz sözleşmeyi seçebilirsiniz.  Ayar aşağıdaki tercihler yalnızca bu sözleşme için geçerlidir.  Bireysel yöneticiler, abonelikleri atarken bu tercihlerden bazılarını büyük/küçük harf temelinde geçersiz kabilirsiniz. 
 
-Oturum a0 için kullanılan e-posta adresiyle ilişkilendirilmiş yalnızca bir sözleşme varsa, genişletilmiş ayarlar panelinin sağ tarafından görüntülenir ve açılan liste devre dışı bırakılır. 
+Oturum a0 için kullanılan e-posta adresiyle ilişkili yalnızca bir sözleşme varsa, genişletilmiş ayarlar panelinin sağ tarafından görüntülenir ve açılan liste devre dışı bırakılır. 
 
 ### <a name="contact-email-address"></a>İletişim e-posta adresi
 Bu tercih, abone portalının abonelikler sayfasındaki Yöneticime Başvur  düğmesini kullanarak aboneleriniz için yöneticilere [ulaşmanın](https://my.visualstudio.com/subscriptions) bir yolunu sağlar.  Bu tercih boş bırakılırsa, abone iletileri sözleşmede tüm yöneticilere ve süper yöneticilere ilettir.  Hedef kitlenizi bu iletişim e-postası için uyarlamak için bir grup e-posta diğer adı veya güvenlik grubu kullanılması önerilir. Ayrıca isterseniz bir kişinin e-posta adresini de girebilirsiniz.
@@ -50,10 +50,10 @@ Bu tercih, abone portalının abonelikler sayfasındaki Yöneticime Başvur  dü
 Bir kullanıcıya abonelik atandığı zaman, sözleşmenize dahil olan abonelik düzeylerden hangilerinin varsayılan olarak seçileceklerini belirlemek için bu ayarı kullanabilirsiniz.  Yöneticiler bu ayarı sözleşmenizin herhangi bir abonelik düzeyiyle değiştirebilir. Bu, en yaygın seçiminizi tekrar tekrar yapmak zorunda kalmanızı önler. 
 
 ### <a name="default-communication-preferences"></a>Varsayılan iletişim tercihleri
-Varsayılan iletişim dilini ve yerel ayarı, abonelik atama sürecini kolaylaştırabilirsiniz.  Örneğin, geliştirme takımınız yönetim takımınıza göre farklı bir ülkede yer aldısa, abonelerin konumu için en uygun tercihleri seçebilirsiniz. Bu ayarlar yine de tek tek aboneler için tüm yöneticiler tarafından değiştirilebilir. 
+Varsayılan iletişim dili ve yerel ayarı, abonelik atama sürecini kolaylaştırabilirsiniz.  Örneğin, geliştirme takımınız yönetim takımınıza göre farklı bir ülkede yer aldısa, abonelerin konumu için en uygun tercihleri seçebilirsiniz. Bu ayarlar yine de tek tek aboneler için tüm yöneticiler tarafından değiştirilebilir. 
 
 ### <a name="default-external-subscribers-setting"></a>Varsayılan dış aboneler ayarı
-Bu tercih, yöneticilerin, kuruluşun kiracısı/dizini dışından abone ekp ekley olup olmadığını karar vermenizi sağlar.  Bunu kapatıyorsanız, dış abonelere izin verilmez.  Bunu etkinleştirirseniz ve bir yönetici dış abone eklemeye çalışırsa, tercihlerini onaylaması ve aboneliği atamasına izin verilir. Yöneticiler bu ayarı geçersiz kamaz. 
+Bu tercih, yöneticilerin, kuruluşun kiracısı/dizini dışından abone ekp ekley karar vermenizi sağlar.  Bunu kapatsanız, dış abonelere izin verilmez.  Bunu etkinleştirirseniz ve bir yönetici dış abone eklemeye çalışırsa, bu kullanıcılardan kendi seçimlerini onaylamaları ve aboneliği atamasına izin verilir. Yöneticiler bu ayarı geçersiz kamaz. 
 
 ### <a name="default-downloads-setting"></a>Varsayılan indirmeler ayarı
 Varsayılan olarak etkin olan bu ayarın etkinleştirilmesi, yöneticiler yeni abonelikler oluşturdukları zaman abonelerin indirmelere erişmesini sağlar.  Yöneticiler, indirmeleri tek tek abonelik temelinde devre dışı bırakabilirsiniz.  İndirmelere erişimi devre dışı bırakmak ürün anahtarlarına erişimi de devre dışı bıraktır.  
@@ -73,7 +73,7 @@ A: Yanıtınız, kullanmakta olduğunuz e-posta istemcilerinden gelecektir. Abon
 C: Yöneticime başvur [makalemize göz](contact-my-admin.md) atabilirsiniz. 
 
 ### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>S: Kişi e-posta adresini tamamlamazsanız **ve** abone Yöneticime Başvur özelliğini **kullanırsa,** isteğini kim alır?
-A: İletişim e-posta adresi tercihi'ne belirli bir **e-posta** adresi ayarlanmayacaksa, sözleşmede yer alan tüm yöneticiler isteği alır. 
+A: İlgili kişinin e-posta adresi tercihi içinde belirli bir **e-posta** adresi ayarlanmayacaksa, sözleşmede yer alan tüm yöneticiler isteği alır. 
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio yönetim ve abonelik desteği](https://aka.ms/vsadminhelp)

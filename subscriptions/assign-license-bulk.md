@@ -1,17 +1,17 @@
 ---
 title: birden çok kullanıcıya Visual Studio abonelikleri atama | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: amast
 ms.date: 10/21/2021
 ms.topic: conceptual
 description: Yöneticilerin tek seferde birden çok aboneliği nasıl atayabileceği hakkında bilgi edinin.
-ms.openlocfilehash: df25e417910a2916c864e9b00b92dd61a567e08c
-ms.sourcegitcommit: efe1d737fd660cc9183177914c18b0fd4e39ba8b
+ms.openlocfilehash: a78a57690761501c1edea2e993bd8d6a83bc1554
+ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130211821"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "132995082"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler yönetim portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Bireysel kullanıcı eklemek için bkz. [tek kullanıcı ekleme](assign-license.md).
@@ -49,7 +49,7 @@ büyük kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullana
 
 1. Visual Studio abonelikleri yönetim portalına geri dönün. **birden çok abone Upload** iletişim kutusunda, **araştır**' ı seçin.
    > [!div class="mx-imgBorder"]
-   > ![Birden çok aboneyi karşıya yüklemek için kaydedilmiş şablonunuz 'na gidin](media/bulk-add-browse-saved-template.png "Dosya konuma göz atabilir veya bu iletişim kutusuna sürükleyip bırakın.")
+   > ![Birden çok aboneyi karşıya yüklemek için kaydedilmiş şablonunuz 'na gidin](media/bulk-add-browse-saved-template.png "Dosya konuma göz atabilir veya sürükleyip bu iletişim kutusuna ebilirsiniz.")
 
 1. kaydettiğiniz Excel dosyasına gidin ve ardından **tamam**' ı seçin.
    > [!div class="mx-imgBorder"]
@@ -100,7 +100,7 @@ Azure Active Directory grubu özelliğini kullanarak abone ekleme hakkında daha
 3. **ekle** sekmesini ve ardından açılan kutuda **Azure Active Directory grubu** ' nu seçin.  
 
    > [!div class="mx-imgBorder"]
-   > ![Azure AD 'yi kullanarak toplu ekleme 'yi seçin](_img/assign-license-bulk/bulk-add-aad.png "Azure AD kullanarak toplu ekleme özelliğini seçen aboneleri Azure Active Directory seçin.")
+   > ![Azure AD 'yi kullanarak toplu ekleme 'yi seçin](_img/assign-license-bulk/bulk-add-aad.png "Azure AD kullanarak toplu ekleme özelliğini seçen aboneleri Azure Active Directory çekin.")
 
 4. Sağ tarafta bir anında çıkış penceresi görünür.  Form alanına eklemek istediğiniz Azure AD grubunun adını girmeye başlayın. Bu işlem, kuruluşunuzda kullanılabilir Azure AD gruplarını arayacak. 
 

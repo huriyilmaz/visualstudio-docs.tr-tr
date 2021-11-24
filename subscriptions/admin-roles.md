@@ -1,18 +1,18 @@
 ---
 title: Visual Studio abonelikleri için süper yönetici ve yönetici rolleri
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: amast
 ms.assetid: 6601c395-f778-48c1-ab76-cf454b9193e4
 ms.date: 03/19/2021
 ms.topic: conceptual
 description: Süper yönetici ve yönetici rolleri ve yöneticiler atama hakkında bilgi edinin.
-ms.openlocfilehash: 7d034dca2895fcf4660266f97b92b4d9cad82520
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: b47b6f2beef816acb6e67d4e0b53137c6de45eba
+ms.sourcegitcommit: a1c18c491e310b00a43e76a911f778e643cd8f8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428150"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "132995030"
 ---
 # <a name="super-admins-and-admins-for-visual-studio-subscription-agreements"></a>Visual Studio abonelik sözleşmeleri için süper yöneticiler ve yöneticiler
 
