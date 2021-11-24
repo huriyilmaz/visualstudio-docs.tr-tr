@@ -1,18 +1,18 @@
 ---
 title: Visual Studio aboneliklerinde ürün anahtarlarını bulma ve oluşturma | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: amast
 ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
 ms.date: 10/13/2021
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde ürün anahtarlarını bulmayı, talep etmek ve dışa aktarmak hakkında bilgi edinin
-ms.openlocfilehash: 4c2ab908466275d9427b7e6a1aa9ed4b35c4b7df
-ms.sourcegitcommit: 72f8ce4992cc62c4833e6dcb0f79febb328c44be
+ms.openlocfilehash: ea171a80af46ee3c77fc2a821704d24bc7a0a90d
+ms.sourcegitcommit: 17202f3ac3f7f17ce3756b57dd56321f7254d1dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "130011568"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "133092937"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ürün anahtarlarını bulma ve oluşturma
 Bu makalede ürün anahtarlarının ' den nasıl bulunduğu, talep verilmesi ve dışarı aktarılacağı açıklanmaktadır https://my.visualstudio.com/productkeys .  Bir ürünü anahtar, perakende ve toplu lisans sürümleriyle ve günlük ürün anahtarı talep limitlerine göre etkinleştirme hakkında daha fazla bilgi için [ürün anahtarlarına genel bakış](product-keys.md)' ı ziyaret edin.

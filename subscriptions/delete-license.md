@@ -1,21 +1,21 @@
 ---
 title: Abonelikler Visual Studio Portal sayfasındaki abonelik atamalarını | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: amast
 ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
 ms.date: 03/21/2021
 ms.topic: how-to
 description: Yöneticilerin abonelik atamalarını nasıl sileceklerini Visual Studio Abonelikler Yönetim Portalı'Visual Studio öğrenin
-ms.openlocfilehash: 6963d3b6f3cc478eaa80672499a28bf42d094264
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: 7526ddd33c76343e672dbc4a473e38874365b535
+ms.sourcegitcommit: 17202f3ac3f7f17ce3756b57dd56321f7254d1dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128428074"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "133092859"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>Aboneliklerde atamaları Visual Studio silme
-Abonenin şirketten ayrılmaları, bir projeyi tamamlamaları veya yeni bir iş rolüne geçmeleri gibi bir abonelik Visual Studio aboneliğe ihtiyaç kalmadan aboneliğini kaldırabilir ve başka birine atabilirsiniz. Aboneliği yeniden asanız tüm abone avantajlarının sıfırlanmayacak olduğunu lütfen unutmayın.  Yeni kullanıcı, sahipsiz anahtarları talep etmek ve önceden talep edilen anahtarları görüntülemek mümkün olacak ancak talep sınırları **sıfırlanmaz.**  Enterprise Sözleşmesi (EA) olan kuruluşlarda, Pluralsight eğitimi gibi özgün kullanıcı tarafından kullanılan tüm avantajlar sıfırlanır. 
+Abonenin şirketten ayrılmaları, bir projeyi tamamlamaları veya yeni bir iş rolüne geçmeleri gibi bir abonelik Visual Studio aboneliğe ihtiyaç kalmadan aboneliğini kaldırabilir ve başka birine atabilirsiniz. Aboneliği yeniden asanız tüm abone avantajlarının sıfırlanmayacak olduğunu lütfen unutmayın.  Yeni kullanıcı, sahipsiz anahtarları talep etmek ve önceden talep edilen anahtarları görüntülemek mümkün olacak ancak talep sınırları **sıfırlanmaz.**  Enterprise Sözleşmesi (EA) olan kuruluşlarda, pluralsight eğitimi gibi özgün kullanıcı tarafından kullanılan tüm avantajlar sıfırlanır. 
 > [!Important]
 > Abonelikler yalnızca aboneliğin son atandığı zamandan bu yana en az 90 gün geçmişse farklı kullanıcılara atanabilir.  Örneğin, bir abonelik 1 Haziran'da aboneye atanmışsa, en az 30 Ağustos'a kadar yeni aboneye atanamaz. 
 
@@ -24,16 +24,16 @@ Atamaları silmeyi öğrenmek için bu videoyu izleyin veya okumaya devam etmeyi
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4yG2q]
 
 ## <a name="delete-a-subscription-assignment"></a>Abonelik ataması silme
-1. Kaldırmak istediğiniz abonenin adına tıklayın. Kaldırma için birden çok abone seçmek için abone adının sol tarafından daireye tıklar ve her birini seçersiniz.  Alternatif olarak, **CTRL** tuşunu basılı tutabilir ve kaldırmak istediğiniz abonelere tıklarsiniz. Bir abone aralığını kaldırmak için ilk aboneye tıklayın, **Shift** tuşuna basın ve son aboneye tıklayın.  Tüm **aboneleri seçmek ve kaldırmak** için CTRL + A tuşlarına basın. Bu örnekte üç abone (Kai, Kai ve Kai) silinecektir. 
+1. Kaldırmak istediğiniz abonenin adına tıklayın. Kaldırma için birden çok abone seçmek için abone adının sol tarafından daireye tıklar ve her birini seçersiniz.  Alternatif olarak, **CTRL** tuşunu basılı tutabilir ve kaldırmak istediğiniz abonelere tıklar. Bir abone aralığını kaldırmak için ilk aboneye tıklayın, **Shift** tuşuna basın ve son aboneye tıklayın.  Tüm **aboneleri seçmek ve kaldırmak** için CTRL + A tuşlarına basın. Bu örnekte üç abone (Kai, Kai ve Kai) silinecektir. 
 2. Seçili aboneleri silmek için Sil'e **tıklayın.**
 3. Silme işlemini onaylamanızı isteyen ileti göründüğünde Tamam'a **tıklayın.**
    > [!div class="mx-imgBorder"]
-   > ![Aboneleri silme](_img/delete-license/delete-subscribers.png "Silmek istediğiniz kullanıcı veya kullanıcılarını seçin ve Sil'e tıklayın. Birden çok aboneyi seçmek için CTRL ve Shift tuşlarını kullanabilirsiniz.")
+   > ![Aboneleri silme](_img/delete-license/delete-subscribers.png "Silmek istediğiniz kullanıcı veya kullanıcılarını seçin ve Sil'e tıklayın. Birden çok abone seçmek için CTRL ve Shift tuşlarını kullanabilirsiniz.")
 
    > [!NOTE]
    > Şablon kullanarak toplu silme kullanılamaz. 
    >
-   > Azure Active Directory Güvenlik Grupları aracılığıyla abonelik atamaları eklediyseniz, silme işleminin yönetici portalında güncelleştirilmiş olması 24 saate kadar sürebilir.  Abonelikleri [yönetmek için](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) kaynak grupları kullanma hakkında daha Azure Active Directory makalemize bakın. 
+   > Azure Active Directory Güvenlik Grupları aracılığıyla abonelik atamaları eklediyseniz, silme işleminin yönetici portalında güncelleştirilmiş olması 24 saate kadar sürebilir.  Abonelikleri [yönetmek için](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) kaynak gruplarını kullanma hakkında daha Azure Active Directory makalemize bakın. 
 
 ## <a name="resources"></a>Kaynaklar
 - [Abonelik desteği](https://aka.ms/vsadminhelp)

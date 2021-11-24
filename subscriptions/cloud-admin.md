@@ -1,18 +1,18 @@
 ---
 title: aylık Visual Studio abonelikleri için yöneticileri ayarlama | Microsoft Docs
 author: evanwindom
-ms.author: cabuschl
-manager: cabuschl
+ms.author: amast
+manager: amast
 ms.assetid: 8b30e2bc-2ac3-4fcc-b296-128731471032
 ms.date: 03/21/2021
 ms.topic: how-to
 description: Aylık abonelikler için yöneticileri ayarlama
-ms.openlocfilehash: aaa847aab4b56591d2fdd070192d14c62c33d96c
-ms.sourcegitcommit: 8e74969ff61b609c89b3139434dff5a742c18ff4
+ms.openlocfilehash: d316344d633d8ea328d13860235fe221e7476754
+ms.sourcegitcommit: 17202f3ac3f7f17ce3756b57dd56321f7254d1dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2021
-ms.locfileid: "128427578"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "133092898"
 ---
 # <a name="set-up-admins-for-visual-studio-monthly-subscriptions"></a>Visual Studio aylık abonelikler için yöneticileri ayarlama
 
